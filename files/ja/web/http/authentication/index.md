@@ -1,6 +1,8 @@
 ---
 title: HTTP 認証
 slug: Web/HTTP/Authentication
+l10n:
+  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
 
 {{HTTPSidebar}}
@@ -23,7 +25,8 @@ HTTP はアクセス制御と認証の基本的な枠組みを提供していま
 上記の全体的なメッセージの流れは、（すべてではありませんが）多くの[認証方式](#認証方式)で同じです。
 ヘッダーに含まれる実際の情報とそのエンコード方法は変わります。
 
-> **警告:** 上記の図で使用されている "Basic" 認証方式は、資格情報をエンコードしますが暗号化はしません。
+> [!WARNING]
+> 上記の図で使用されている "Basic" 認証方式は、資格情報をエンコードしますが暗号化はしません。
 > これは安全な接続 (HTTPS/TLS) を介して行わなければ完全に安全ではありません。
 
 ### プロキシー認証
@@ -42,13 +45,13 @@ HTTP はアクセス制御と認証の基本的な枠組みを提供していま
 ### オリジン間の画像の認証
 
 （ブラウザーで修正された）潜在的なセキュリティホールとして、サイトをまたいだ画像の認証があります。
-[Firefox 59](/ja/docs/Mozilla/Firefox/Releases/59) 以降、異なるオリジンから現在の文書に読み込まれる画像リソースは、 HTTP 認証ダイアログを起動することができなくなり ({{bug(1423146)}})、攻撃者が任意の画像をサードパーティ製のページに埋め込んでユーザーの認証情報を盗むことを防ぎます。
+[Firefox 59](/ja/docs/Mozilla/Firefox/Releases/59) 以降、異なるオリジンから現在の文書に読み込まれる画像リソースは、 HTTP 認証ダイアログを起動することができなくなり ([Firefox バグ 1423146](https://bugzil.la/1423146))、攻撃者が任意の画像をサードパーティ製のページに埋め込んでユーザーの認証情報を盗むことを防ぎます。
 
 ### HTTP 認証の文字エンコーディング
 
 ブラウザーはユーザー名とパスワードに `utf-8` エンコーディングを使用します。
 
-Firefox は `ISO-8859-1` を使用していましたが、他のブラウザーとの互換性のために `utf-8` に変更され、 {{bug(1419658)}} で説明されているような潜在的な問題を回避します。
+Firefox は `ISO-8859-1` を使用していましたが、他のブラウザーとの互換性のために `utf-8` に変更され、 [Firefox バグ 1419658](https://bugzil.la/1419658) で説明されているような潜在的な問題を回避します。
 
 ### WWW-Authenticate および Proxy-Authenticate ヘッダー
 
@@ -61,7 +64,7 @@ WWW-Authenticate: <type> realm=<realm>
 Proxy-Authenticate: <type> realm=<realm>
 ```
 
-ここで、 `<type>` は認証方式です ("Basic" は最も一般的な方式であり、[以下で紹介](#basic_認証方式)します)。 *realm* は保護された領域を説明するため、または保護の範囲を示すために使用されます。これは、「ステージングサイトへのアクセス」などのようなメッセージにすることができ、それによってユーザーが、どの領域にアクセスしようとしているかを知ることができます。
+ここで、 `<type>` は認証方式です ("Basic" は最も一般的な方式であり、[以下で紹介](#basic_認証方式)します)。 _realm_ は保護された領域を説明するため、または保護の範囲を示すために使用されます。これは、「ステージングサイトへのアクセス」などのようなメッセージにすることができ、それによってユーザーが、どの領域にアクセスしようとしているかを知ることができます。
 
 ### Authorization および Proxy-Authorization ヘッダー
 
@@ -85,7 +88,7 @@ IANA は[認証方式の一覧](https://www.iana.org/assignments/http-authscheme
 - **Bearer**
   - : {{rfc(6750)}} を参照。 OAuth 2.0 で保護されたリソースにアクセスするベアラートークンです。
 - **Digest**
-  - : {{rfc(7616)}} を参照。 Firefox 93 以降は SHA-256 暗号化に対応しています。以前のバージョンでは MD5 ハッシュだけに対応していまました（非推奨）。
+  - : {{rfc(7616)}} を参照。 Firefox 93 以降は SHA-256 アルゴリズムに対応しています。以前のバージョンでは MD5 ハッシュだけに対応していまました（非推奨）。
 - **HOBA**
   - : {{rfc(7486)}} 3 章を参照、 HTTP オリジン認証 (**H**TTP **O**rigin-**B**ound **A**uthentication)、電子署名ベース
 - **Mutual**
@@ -118,7 +121,7 @@ Apache サーバー上のディレクトリをパスワードで保護するに�
 
 `.htaccess` ファイルは通常、次のようになります。
 
-```
+```apacheconf
 AuthType Basic
 AuthName "Access to the staging site"
 AuthUserFile /path/to/.htpasswd
@@ -127,7 +130,7 @@ Require valid-user
 
 `.htaccess` ファイルは `.htpasswd` ファイルを参照しており、このファイルの各行にはユーザー名とパスワードをコロン (`:`) で区切って記述されています。実際のパスワードは（この場合は MD5 ベースのハッシュを使用して）[ハッシュ化されている](https://httpd.apache.org/docs/2.4/misc/password_encryptions.html)ので表示できません。なお、必要に応じて `.htpasswd` ファイルの名前を変更することができますが、このファイルには誰にもアクセスできないようにしてください。（Apache は通常 `.ht*` ファイルへのアクセスを禁止するように構成されています）。
 
-```
+```apacheconf
 aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
 user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 ```
@@ -136,7 +139,7 @@ user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 
 nginx の場合は、保護する場所とパスワードで保護された領域に名前を指定する `auth_basic` ディレクティブを指定する必要があります。`auth_basic_user_file` ディレクティブは上の Apache の例のように、暗号化されたユーザー資格情報を含む `.htpasswd` ファイルを指します。
 
-```
+```apacheconf
 location /status {
     auth_basic           "Access to the staging site";
     auth_basic_user_file /etc/apache2/.htpasswd;
@@ -147,12 +150,12 @@ location /status {
 
 多くのクライアントでは次のように、ユーザー名とパスワードを含むエンコードされた URL を使用してログインプロンプトを回避できます。
 
-```example-bad
+```plain example-bad
 https://username:password@www.example.com/
 ```
 
 **これらの URL の使用は推奨されていません。**
-Chrome ではセキュリティ上の理由から、URL の `username:password@` 部分が[削除されます](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7)。 Firefox ではサイトが実際に認証を要求するかどうかをチェックし、そうでない場合 Firefox はユーザーに「“www\.example\.com” というサイトに “username” というユーザー名でログインしようとしていますが、このウェブサイトは認証を必要としません。これはあなたを騙そうとしている可能性があります。」と警告します。
+Chrome ではセキュリティ上の理由から、URL の `username:password@` 部分が[削除されます](https://crbug.com/82250#c7)。 Firefox ではサイトが実際に認証を要求するかどうかをチェックし、そうでない場合 Firefox はユーザーに「`www.example.com` というサイトに `username` というユーザー名でログインしようとしていますが、このウェブサイトは認証を必要としません。これはあなたを騙そうとしている可能性があります。」と警告します。
 
 ## 関連情報
 

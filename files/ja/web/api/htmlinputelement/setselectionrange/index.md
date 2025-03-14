@@ -1,6 +1,9 @@
 ---
-title: HTMLInputElement.setSelectionRange()
+title: "HTMLInputElement: setSelectionRange() メソッド"
+short-title: setSelectionRange()
 slug: Web/API/HTMLInputElement/setSelectionRange
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
@@ -17,8 +20,9 @@ input 要素の**すべて**のテキストを選択したい場合は、代わ�
 
 ## 構文
 
-```js
-element.setSelectionRange(selectionStart, selectionEnd [, selectionDirection]);
+```js-nolint
+setSelectionRange(selectionStart, selectionEnd)
+setSelectionRange(selectionStart, selectionEnd, selectionDirection)
 ```
 
 ### 引数
@@ -37,6 +41,10 @@ element.setSelectionRange(selectionStart, selectionEnd [, selectionDirection]);
     - `"backward"`
     - `"none"` 選択方向が不明または無関係な場合です。既定値です。
 
+### 返値
+
+なし ({{jsxref("undefined")}})。
+
 ## 例
 
 この例の中のボタンをクリックすると、テキストボックスの 3、4、5 番目の文字（"Mozilla" の "zil"）が選択状態になります。
@@ -44,7 +52,7 @@ element.setSelectionRange(selectionStart, selectionEnd [, selectionDirection]);
 ### HTML
 
 ```html
-<input type="text" id="text-box" size="20" value="Mozilla">
+<input type="text" id="text-box" size="20" value="Mozilla" />
 <button onclick="selectText()">テキストを選択</button>
 ```
 
@@ -52,7 +60,7 @@ element.setSelectionRange(selectionStart, selectionEnd [, selectionDirection]);
 
 ```js
 function selectText() {
-  const input = document.getElementById('text-box');
+  const input = document.getElementById("text-box");
   input.focus();
   input.setSelectionRange(2, 5);
 }
@@ -60,7 +68,7 @@ function selectText() {
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## 仕様書
 

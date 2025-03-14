@@ -1,20 +1,16 @@
 ---
-title: ':in-range'
+title: :in-range
 slug: Web/CSS/:in-range
-tags:
-  - CSS
-  - Псевдоклассы
-  - Руководство
-translation_of: Web/CSS/:in-range
 ---
 
 {{CSSRef}}
 
 ## Описание
 
-CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:in-range` находит элементы, значение которых соответствует указанному для них диапазону ограничений. Он позволяет странице показывать, когда значение элемента находится в допустимом диапазоне.
+CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:in-range` находит элементы, значение которых соответствует указанному для них диапазону ограничений. Он позволяет странице показывать, когда значение элемента находится в допустимом диапазоне.
 
-> **Примечание:** **Замечание:** этот псевдокласс применяется только к элементам с заданным диапазоном ограничений. При отсутствии такого ограничения, элемент не может быть ни "в зоне допустимых значений", ни "вне диапазона".
+> [!NOTE]
+> Этот псевдокласс применяется только к элементам с заданным диапазоном ограничений. При отсутствии такого ограничения, элемент не может быть ни "в зоне допустимых значений", ни "вне диапазона".
 
 ## Пример
 
@@ -34,24 +30,24 @@ CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:in-ra
 
 ```css
 li {
-    list-style: none;
-    margin-bottom: 1em;
+  list-style: none;
+  margin-bottom: 1em;
 }
 input {
-    border: 1px solid black;
+  border: 1px solid black;
 }
 input:in-range {
-    background-color: rgba(0, 255, 0, 0.25);
+  background-color: rgba(0, 255, 0, 0.25);
 }
 input:out-of-range {
-    background-color: rgba(255, 0, 0, 0.25);
-    border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.25);
+  border: 2px solid red;
 }
 input:in-range + label::after {
-    content:' НОРМАЛЬНОЕ';
+  content: " НОРМАЛЬНОЕ";
 }
 input:out-of-range + label::after {
-    content:'вне диапазона!';
+  content: "вне диапазона!";
 }
 ```
 
@@ -61,11 +57,11 @@ input:out-of-range + label::after {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - {{cssxref(":out-of-range")}}
-- [Руководство валидации данных в формах](/ru/docs/Web/Guide/HTML/Forms/Data_form_validation)
+- [Руководство валидации данных в формах](/ru/docs/Learn/Forms/Form_validation)

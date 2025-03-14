@@ -1,34 +1,22 @@
 ---
 title: bookmarks.search()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/search
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Recherche
-  - Reference
-  - Search
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/search
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`bookmarks.search()`** recherche les nœuds d'arborescence de signets correspondant à la requête donnée.
 
-Cette fonction déclenche une exception si l'un des paramètres d'entrée n'est pas valide ou n'est pas d'un type approprié ; regardez dans la [console](/fr/Add-ons/WebExtensions/Debugging) pour le message d'erreur. Les exceptions n'ont pas d'ID d'erreur et les messages eux-mêmes peuvent changer, donc n'écrivez pas de code qui essaie de les interpréter.
+Cette fonction déclenche une exception si l'un des paramètres d'entrée n'est pas valide ou n'est pas d'un type approprié ; regardez dans la [console](/fr/docs/Mozilla/Add-ons/WebExtensions/Debugging) pour le message d'erreur. Les exceptions n'ont pas d'ID d'erreur et les messages eux-mêmes peuvent changer, donc n'écrivez pas de code qui essaie de les interpréter.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var searching = browser.bookmarks.search(
-  query                  // string or object
-)
+  query, // string or object
+);
 ```
 
 ### Paramètres
@@ -50,7 +38,7 @@ var searching = browser.bookmarks.search(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera accompli avec un tableau d'objets {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}, chacun représentant un seul nœud d'arbre de signet correspondant. Les résultats sont renvoyés dans l'ordre de création des nœuds. Le tableau est vide si aucun résultat n'a été trouvé.Le [`BookmarkTreeNodes`](/fr/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode)—même du type `"folder"` — renvoyé par `bookmarks.search()` ne contiennent pas la propriété children. Pour obtenir un `BookmarkTreeNode` utilisez [`bookmarks.getSubTree()`](/fr/Add-ons/WebExtensions/API/bookmarks/getSubTree).
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera accompli avec un tableau d'objets {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}, chacun représentant un seul nœud d'arbre de signet correspondant. Les résultats sont renvoyés dans l'ordre de création des nœuds. Le tableau est vide si aucun résultat n'a été trouvé.Le [`BookmarkTreeNodes`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode)—même du type `"folder"` — renvoyé par `bookmarks.search()` ne contiennent pas la propriété children. Pour obtenir un `BookmarkTreeNode` utilisez [`bookmarks.getSubTree()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree).
 
 ## Exemple
 
@@ -88,7 +76,7 @@ function onRejected(error) {
 }
 
 function checkActiveTab(tab) {
-  var searching = browser.bookmarks.search({url: tab.url});
+  var searching = browser.bookmarks.search({ url: tab.url });
   searching.then(onFulfilled, onRejected);
 }
 
@@ -97,13 +85,13 @@ browser.browserAction.onClicked.addListener(checkActiveTab);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.search")}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

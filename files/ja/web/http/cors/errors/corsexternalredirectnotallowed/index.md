@@ -1,17 +1,19 @@
 ---
-title: 'Reason: CORS request external redirect not allowed'
+title: "Reason: CORS request external redirect not allowed"
 slug: Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
 ## 理由
 
-```
+```plain
 Reason: CORS request external redirect not allowed
 ```
 
-## 何が悪いのか
+## エラーの原因
 
 {{Glossary("CORS")}} リクエストに対して、サーバーが元のリクエストとは異なるオリジンの URL へのリダイレクトを返答しましたが、これは CORS リクエストでは許可されていません。
 

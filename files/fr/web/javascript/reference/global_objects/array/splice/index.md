@@ -1,21 +1,26 @@
 ---
 title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/splice
 ---
 
 {{JSRef}}
 
 La méthode **`splice()`** modifie le contenu d'un tableau en retirant des éléments et/ou en ajoutant de nouveaux éléments [à même le tableau](https://en.wikipedia.org/wiki/In-place_algorithm).On peut ainsi vider ou remplacer une partie d'un tableau.
 
-{{EmbedInteractiveExample("pages/js/array-splice.html")}}
+{{InteractiveExample("JavaScript Demo: Array.splice()")}}
+
+```js interactive-example
+const months = ["Jan", "March", "April", "June"];
+months.splice(1, 0, "Feb");
+// Inserts at index 1
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+months.splice(4, 1, "May");
+// Replaces 1 element at index 4
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+```
 
 ## Syntaxe
 
@@ -48,7 +53,7 @@ Si vous spécifiez un nombre différent d'éléments à insérer et d'éléments
 Le script suivant illustre l'utilisation de `splice` :
 
 ```js
-var mesPoissons  = ["scalaire", "clown", "mandarin", "chirurgien"];
+var mesPoissons = ["scalaire", "clown", "mandarin", "chirurgien"];
 
 // supprime 0 élément à partir de l'index 2, et insère "tambour"
 var enleves = mesPoissons.splice(2, 0, "tambour");

@@ -1,11 +1,6 @@
 ---
-title: ':active'
+title: :active
 slug: Web/CSS/:active
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:active
 ---
 
 {{CSSRef}}
@@ -24,7 +19,8 @@ La pseudo-classe `:active` est également activée lorsque l'utilisateur emploie
 
 La mise en forme associée peut être surchargée par les autres pseudo-classes pour les liens : {{cssxref(":link")}}, {{cssxref(":hover")}} et {{cssxref(":visited")}} lorsqu'elles sont utilisées dans des règles qui suivent. Afin de mettre en forme les liens de façon correcte, la règle avec `:active` doit être écrite après les autres : `:link` — `:visited` — `:hover` — `:active`.
 
-> **Note :** Pour les systèmes qui utilisent une souris avec plusieurs boutons, CSS 3 spécifie que la pseudo-classe `:active` ne doit s'appliquer qu'au bouton principal. Pour les souris de droitiers, c'est généralement le bouton le plus à gauche.
+> [!NOTE]
+> Pour les systèmes qui utilisent une souris avec plusieurs boutons, CSS 3 spécifie que la pseudo-classe `:active` ne doit s'appliquer qu'au bouton principal. Pour les souris de droitiers, c'est généralement le bouton le plus à gauche.
 
 ## Syntaxe
 
@@ -37,21 +33,32 @@ La mise en forme associée peut être surchargée par les autres pseudo-classes 
 #### CSS
 
 ```css
-a:link { color: blue; }          /* Liens non visités */
-a:visited { color: purple; }     /* Liens visités */
-a:hover { background: yellow; }  /* Liens survolés */
-a:active { color: red; }         /* Liens actifs */
+a:link {
+  color: blue;
+} /* Liens non visités */
+a:visited {
+  color: purple;
+} /* Liens visités */
+a:hover {
+  background: yellow;
+} /* Liens survolés */
+a:active {
+  color: red;
+} /* Liens actifs */
 
-p:active { background: #eee; }   /* Paragraphes actifs */
+p:active {
+  background: #eee;
+} /* Paragraphes actifs */
 ```
 
 #### HTML
 
 ```html
-<p>Ce paragraphe contient un lien :
+<p>
+  Ce paragraphe contient un lien :
   <a href="#">Ce lien devient rouge quand vous cliquez dessus.</a>
-  Le paragraphe sera sur un fond gris quand vous cliquerez dessus
-  ou sur le lien.
+  Le paragraphe sera sur un fond gris quand vous cliquerez dessus ou sur le
+  lien.
 </p>
 ```
 
@@ -78,7 +85,9 @@ form button {
 ```html
 <form>
   <label for="mon-button">Un bouton :</label>
-  <button id="mon-button" type="button">Cliquez sur moi ou sur mon libellé !</button>
+  <button id="mon-button" type="button">
+    Cliquez sur moi ou sur mon libellé !
+  </button>
 </form>
 ```
 

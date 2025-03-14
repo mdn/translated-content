@@ -1,5 +1,5 @@
 ---
-title: 'Window: beforeunload イベント'
+title: "Window: beforeunload イベント"
 slug: Web/API/Window/beforeunload_event
 ---
 
@@ -43,7 +43,7 @@ slug: Web/API/Window/beforeunload_event
 
 望ましくないポップアップに対処するために、ブラウザーはページが操作されていない限り、 `beforeunload` のイベントハンドラーで生成したプロンプトを表示しなかったり、全くプロンプトを表示しなかったりする可能性があります。
 
-イベントハンドラー/リスナーを `window` または`document` の `beforeunload` イベントに割り当てると、ブラウザーはメモリ内のページナビゲーションキャッシュ、例えば [Firefox の Back-Forward キャッシュ](/ja/docs/Using_Firefox_1.5_caching)や [WebKit のページキャッシュ](https://webkit.org/blog/516/webkit-page-cache-ii-the-unload-event/)などを使用することを防ぎます。
+イベントハンドラー/リスナーを `window` または`document` の `beforeunload` イベントに割り当てると、ブラウザーはメモリ内のページナビゲーションキャッシュ、例えば [Firefox の Back-Forward キャッシュ](/ja/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching)や [WebKit のページキャッシュ](https://webkit.org/blog/516/webkit-page-cache-ii-the-unload-event/)などを使用することを防ぎます。
 
 HTML 仕様書は {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, {{domxref("window.prompt()")}} などのメソッドが、このイベントの実行中には無視されることがあることを示しています。詳しくは、 [HTML 仕様書](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#user-prompts)をご覧ください。
 
@@ -52,24 +52,21 @@ HTML 仕様書は {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}
 HTML の仕様では、 {{domxref("Event.returnValue")}} を使用する代わりに {{domxref("Event.preventDefault()")}} メソッドを使用する必要があります。ただし、これはすべてのブラウザーで対応しているわけではありません。
 
 ```js
-window.addEventListener('beforeunload', (event) => {
+window.addEventListener("beforeunload", (event) => {
   // Cancel the event as stated by the standard.
   event.preventDefault();
   // Chrome requires returnValue to be set.
-  event.returnValue = '';
+  event.returnValue = "";
 });
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("HTML WHATWG", "indices.html#event-beforeunload", "beforeunload")}} | {{Spec2("HTML WHATWG")}} |          |
-| {{SpecName("HTML5 W3C", "browsers.html#unloading-documents", "beforeunload")}} | {{Spec2("HTML5 W3C")}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.beforeunload_event")}}
+{{Compat}}
 
 ## 関連情報
 

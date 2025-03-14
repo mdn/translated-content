@@ -7,13 +7,99 @@ slug: Web/CSS/perspective
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`perspective`** 指定了观察者与 z=0 平面的距离，使具有三维位置变换的元素产生透视效果。z>0 的三维元素比正常大，而 z<0 时则比正常小，大小程度由该属性的值决定。
 
-{{EmbedInteractiveExample("pages/css/perspective.html")}}
+{{InteractiveExample("CSS Demo: perspective")}}
+
+```css interactive-example-choice
+perspective: none;
+```
+
+```css interactive-example-choice
+perspective: 800px;
+```
+
+```css interactive-example-choice
+perspective: 23rem;
+```
+
+```css interactive-example-choice
+perspective: 5.5cm;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+  perspective: 800px;
+  perspective-origin: 150% 150%;
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  perspective: 550px;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgba(210, 0, 0, 0.7);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+  background: rgba(0, 0, 210, 0.7);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+  background: rgba(210, 210, 0, 0.7);
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgba(210, 0, 210, 0.7);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+```
 
 三维元素在观察者后面的部分不会绘制出来，即 z 轴坐标值大于 `perspective` 属性值的部分。
 
 默认情况下，*消失点*位于元素的中心，但是可以通过设置 {{cssxref("perspective-origin")}} 属性来改变其位置。
 
-当该属性值不为 `0` 和 `none` 时，会创建新的 [层叠上下文](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)。在这种情况下，容器内元素的层叠关系像是使用了 `position: fixed` 一样。
+当该属性值不为 `0` 和 `none` 时，会创建新的 [层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。在这种情况下，容器内元素的层叠关系像是使用了 `position: fixed` 一样。
 
 ## 语法
 
@@ -60,10 +146,8 @@ perspective: unset;
 <table>
   <tbody>
     <tr>
-      <th><code>perspective: 250px;</code>
-      </th>
-      <th><code>perspective: 350px;</code>
-      </th>
+      <th><code>perspective: 250px;</code></th>
+      <th><code>perspective: 350px;</code></th>
     </tr>
     <tr>
       <td>
@@ -92,10 +176,8 @@ perspective: unset;
       </td>
     </tr>
     <tr>
-      <th><code>perspective: 500px;</code>
-      </th>
-      <th><code>perspective: 650px;</code>
-      </th>
+      <th><code>perspective: 500px;</code></th>
+      <th><code>perspective: 650px;</code></th>
     </tr>
     <tr>
       <td>
@@ -211,8 +293,10 @@ CSS 建立了不同透视距离的 class，还包括容器盒、立方体本身�
 }
 
 /* Make the table a little nicer */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   padding: 10px;
   font-family: sans-serif;
   text-align: left;
@@ -231,4 +315,4 @@ th, p, td {
 
 ## 相关连接
 
-- [Using CSS Transforms](/zh-CN/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Using CSS Transforms](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

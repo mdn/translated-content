@@ -5,59 +5,49 @@ slug: Web/JavaScript/Reference/Global_Objects/EvalError
 
 {{JSRef}}
 
-本对象代表了一个关于 [eval](/zh-CN/Core_JavaScript_1.5_Reference/Global_Functions/eval) 函数的错误。此异常不再会被 JavaScript 抛出，但是 EvalError 对象仍然保持兼容性。
+本对象代表了一个关于 {{jsxref("Global_Objects/eval", "eval()")}} 全局函数的错误。此异常不再会被 JavaScript 抛出，但是 EvalError 对象仍然存在，以保持兼容性。
 
-## 语法
+`EvalError` 是一个{{Glossary("serializable object", "可序列化对象")}}，所以可以使用 {{DOMxRef("Window.structuredClone", "structuredClone()")}} 对它进行克隆，也可以使用 {{domxref("Worker/postMessage()", "postMessage()")}} 在 [Worker](/zh-CN/docs/Web/API/Worker) 之间拷贝它。
 
-```plain
-new EvalError([message[, fileName[, lineNumber]]])
-```
+## 构造函数
 
-### 参数
+- {{jsxref("EvalError/EvalError", "EvalError()")}}
+  - : 创建一个新的 `EvalError` 对象。
 
-- message
-  - : 可选参数：可阅读的关于错误的描述。
-- fileName (非标准)
-  - : 可选参数：代码中导致异常的文件的文件名。
-- lineNumber (非标准)
-  - : 可选参数：代码中导致异常的代码的行号。
+## 实例属性
 
-## 属性
+- {{jsxref("Error.prototype.message")}}
+  - : 错误消息。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.name")}}
+  - : 错误名称。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.cause")}}
+  - : 表示导致当前错误被抛出的原因。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
+  - : 引发此错误的文件的路径。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
+  - : 引发此错误的代码所在的文件的行号。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
+  - : 引发此错误的代码在文件中所在行的列号。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
+  - : 堆栈跟踪。继承自 {{jsxref("Error")}}。
 
-- [prototype](/zh-CN/Core_JavaScript_1.5_Reference/Global_Objects/EvalError/prototype)
-  - : 允许向 EvalError 对象中添加自定义属性。
+## 示例
 
-## 方法
+`EvalError` 不在当前的 ECMAScript 规范中使用，因此不会被运行时抛出。但是对象本身仍然与规范的早期版本向后兼容。
 
-全局的 EvalError 对象本身不包含任何方法，然而它通过原型链继承了一些方法。
+### 创建 EvalError
 
-## `EvalError` 实例
-
-### 属性
-
-{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Properties')}}
-
-### 方法
-
-{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Methods')}}
-
-## 例子
-
-`EvalError` 不在当前 ECMAScript 规范中使用，因此不会被运行时抛出。但是对象本身仍然与规范的早期版本向后兼容。
-
-### 创建 `EvalError`
-
-```plain
+```js
 try {
-  throw new EvalError('Hello', 'someFile.js', 10);
+  throw new EvalError("Hello", "someFile.js", 10);
 } catch (e) {
   console.log(e instanceof EvalError); // true
-  console.log(e.message);              // "Hello"
-  console.log(e.name);                 // "EvalError"
-  console.log(e.fileName);             // "someFile.js"
-  console.log(e.lineNumber);           // 10
-  console.log(e.columnNumber);         // 0
-  console.log(e.stack);                // "@Scratchpad/2:2:9\n"
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "EvalError"
+  console.log(e.fileName); // "someFile.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 
@@ -69,8 +59,7 @@ try {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [Error](/zh-CN/Core_JavaScript_1.5_Reference/Global_Objects/Error)
-- [eval](/zh-CN/Core_JavaScript_1.5_Reference/Global_Functions/eval)
-- [EvalError.prototype](/zh-CN/Core_JavaScript_1.5_Reference/Global_Objects/EvalError/prototype)
+- {{jsxref("Error")}}
+- {{jsxref("Global_Objects/eval", "eval()")}}

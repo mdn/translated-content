@@ -13,7 +13,46 @@ slug: Web/CSS/max-block-size
 
 ふつう `max-height` または `max-width` を使用する場面でいつでも、代わりに `max-block-size` をコンテンツの最大の「高さ」を設定するために使用し (これは垂直の値ではない可能性がありますが)、 `max-inline-size`をコンテンツの最大の「幅」を設定するために使用してください (これが横書きではなく縦書きである場合であっても)。様々な書字方向を表す {{cssxref("writing-mode")}} の [例](/ja/docs/Web/CSS/writing-mode#例)をご覧ください。
 
-{{EmbedInteractiveExample("pages/css/max-block-size.html")}}
+{{InteractiveExample("CSS Demo: max-block-size")}}
+
+```css interactive-example-choice
+max-block-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-block-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+max-block-size: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-block-size: 75%;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the maximum block size. <br />This will
+    limit the size in the block dimension, potentially causing an overflow.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## 構文
 
@@ -60,14 +99,15 @@ max-block-size: unset;
 
 `writing-mode` の値は次のように `max-block-size` から `max-width` または `max-height` への対応付けに影響します。
 
-| `writing-mode` の値                                                                                                                                                                              | `max-block-size` が等価になるもの |
+| `writing-mode` の値                                                                                                                                                   | `max-block-size` が等価になるもの |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
-| `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}  | {{cssxref("max-height")}}  |
-| `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | {{cssxref("max-width")}}  |
+| `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}     | {{cssxref("max-height")}}         |
+| `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | {{cssxref("max-width")}}          |
 
 > **メモ:** `writing-mode` の値のうち `sideways-lr` および `sideways-rl` は設計プロセスの後期に CSS 書字方向s Level 3 仕様書から削除されました。これらは Level 4 で復活する可能性があります。
 
-> **メモ:** 書字方向の `lr`, `lr-tb`, `rl`, `rb`, `rb-tl` は {{Glossary("HTML")}} のコンテキストでは許可されなくなりました。 {{Glossary("SVG")}} 1.x コンテキストでのみ利用できる可能性があります。
+> [!NOTE]
+> 書字方向の `lr`, `lr-tb`, `rl`, `rb`, `rb-tl` は {{Glossary("HTML")}} のコンテキストでは許可されなくなりました。 {{Glossary("SVG")}} 1.x コンテキストでのみ利用できる可能性があります。
 
 ## 公式定義
 
@@ -118,7 +158,11 @@ max-block-size: unset;
   padding: 4px;
   background-color: #abcdef;
   color: #000;
-  font: 16px "Open Sans", "Helvetica", "Arial", sans-serif;
+  font:
+    16px "Open Sans",
+    "Helvetica",
+    "Arial",
+    sans-serif;
   max-block-size: 160px;
   min-block-size: 100px;
 }

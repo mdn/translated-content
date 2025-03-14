@@ -63,7 +63,7 @@ var foo = { baz: "bar" };
 当使用 in 操作符来对 {{jsxref("Array")}} 对象进行检索的时候一定要特别小心，因为它检测的是索引值而不是位于索引位置的值。
 
 ```js
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+var trees = ["redwood", "bay", "cedar", "oak", "maple"];
 3 in trees; // true
 "oak" in trees; // false
 ```

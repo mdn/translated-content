@@ -1,17 +1,6 @@
 ---
 title: Méthodes de mises en page traditionnelles
 slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
-tags:
-  - Apprendre
-  - Boîtes flottantes
-  - CSS
-  - Disposition
-  - Débutant
-  - Guide
-  - Héritage
-  - systèmes de trames
-translation_of: Learn/CSS/CSS_layout/Legacy_Layout_Methods
-original_slug: Apprendre/CSS/CSS_layout/Legacy_Layout_Methods
 ---
 
 {{LearnSidebar}}
@@ -63,12 +52,31 @@ Tout d'abord, nous avons besoin de contenu à mettre dans nos colonnes. Remplace
 <h1>Exemple de disposition sur 2 colonnes</h1>
 <div>
   <h2>Première colonne</h2>
-  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer
+    ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur
+    vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
+    Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus
+    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus.
+    Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+    eget fermentum sapien.
+  </p>
 </div>
 
 <div>
   <h2>Seconde colonne</h2>
-  <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+  <p>
+    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+    est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+    tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+    lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+    vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  </p>
 </div>
 ```
 
@@ -84,7 +92,7 @@ body {
 }
 ```
 
-Le corps du document prendra 90% de la largeur de fenêtre de la vue jusqu'à atteindre 900px de large&nbsp;; au delà, il restera fixe à cette largeur et se centrera lui-même dans la fenêtre. Par défaut, ses enfants (les éléments {{htmlelement("h1")}}} et les deux {{htmlelement("div")}}) prenent 100% de la largeur du corps. Si nous voulons que les deux {{htmlelement("div")}} flottent l'un à côté de l'autre, nous devons fixer la somme de leur largeurs à 100% de la largeur totale de leur parent ou moins pour qu'ils puissent se placer l'un à côté de l'autre. Ajoutez ceci au bas de la CSS :
+Le corps du document prendra 90% de la largeur de fenêtre de la vue jusqu'à atteindre 900px de large&nbsp;; au delà, il restera fixe à cette largeur et se centrera lui-même dans la fenêtre. Par défaut, ses enfants (les éléments {{htmlelement("h1")}} et les deux {{htmlelement("div")}}) prenent 100% de la largeur du corps. Si nous voulons que les deux {{htmlelement("div")}} flottent l'un à côté de l'autre, nous devons fixer la somme de leur largeurs à 100% de la largeur totale de leur parent ou moins pour qu'ils puissent se placer l'un à côté de l'autre. Ajoutez ceci au bas de la CSS :
 
 ```css
 div:nth-of-type(1) {
@@ -119,12 +127,31 @@ En mettant tout ensemble, voici le résultat&nbsp;:
 
 <div>
   <h2>Première colonne</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer
+    ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur
+    vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
+    Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus
+    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus.
+    Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+    eget fermentum sapien.
+  </p>
 </div>
 
 <div>
   <h2>Seconde colonne</h2>
-  <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+  <p>
+    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+    est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+    tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+    lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+    vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  </p>
 </div>
 ```
 
@@ -150,7 +177,8 @@ div:nth-of-type(2) {
 
 Notez que nous avons utilisé des pourcentages pour définir les largeurs — c'est la bonne stratégie, cela crée une **disposition fluide**, s'ajustant à diverses tailles d'écran et gardant les mêmes proportions pour les tailles d'écran plus petites. Modifiez la taille de la fenêtre du navigateur pour voir par vous‑même. C'est un outil adapté au désign web adaptatif.
 
-> **Note :** Vous pouvez voir cet exemple en cours à la page [0_two-column-layout.html](http://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html) (voyez aussi son [code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/0_two-column-layout.html)).
+> [!NOTE]
+> Vous pouvez voir cet exemple en cours à la page [0_two-column-layout.html](https://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html) (voyez aussi son [code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/0_two-column-layout.html)).
 
 ## Ancienne création d'un cadre de trames
 
@@ -239,7 +267,8 @@ L'étape suivante consiste à créer un règle pour la classe `.col` la faisant 
 
 La ligne supérieure des colonnes unitaires est maintenant disposées en tant que trame.
 
-> **Note :** Nous avons aussi donné à chaque colonne une couleur légèrement rosée pour que vous puissiez voir exactement l'espace pris par chacune.
+> [!NOTE]
+> Nous avons aussi donné à chaque colonne une couleur légèrement rosée pour que vous puissiez voir exactement l'espace pris par chacune.
 
 Les conteneurs destinés à accueillir plusieurs colonnes doivent être d'une classe spéciale pour pouvoir ajuster leurs valeurs {{cssxref("width")}} en fonction du nombre de colonnes requis (plus les gouttières intermédiaires). Nous devons créer une classe supplémentaire pour permettre aux conteneurs de s'étendre de 2 à 12 colonnes. Cette largeur est le résultat de l'addition de la largeur de toutes les colonnes plus les largeurs des gouttières dont le nombre est toujours inférieur de 1 au nombre de colonnes.
 
@@ -247,24 +276,47 @@ Ajoutez ce qui suit en bas de la CSS&nbsp;:
 
 ```css
 /* Deux largeurs de colonnes (120px) plus une largeur de gouttière (20px) */
-.col.span2 { width: 140px; }
+.col.span2 {
+  width: 140px;
+}
 /* Trois largeurs de colonnes (180px) plus deux largeurs de gouttières (40px) */
-.col.span3 { width: 220px; }
+.col.span3 {
+  width: 220px;
+}
 /* et ainsi de suite... */
-.col.span4 { width: 300px; }
-.col.span5 { width: 380px; }
-.col.span6 { width: 460px; }
-.col.span7 { width: 540px; }
-.col.span8 { width: 620px; }
-.col.span9 { width: 700px; }
-.col.span10 { width: 780px; }
-.col.span11 { width: 860px; }
-.col.span12 { width: 940px; }
+.col.span4 {
+  width: 300px;
+}
+.col.span5 {
+  width: 380px;
+}
+.col.span6 {
+  width: 460px;
+}
+.col.span7 {
+  width: 540px;
+}
+.col.span8 {
+  width: 620px;
+}
+.col.span9 {
+  width: 700px;
+}
+.col.span10 {
+  width: 780px;
+}
+.col.span11 {
+  width: 860px;
+}
+.col.span12 {
+  width: 940px;
+}
 ```
 
 Une fois ces classes crées, nous pouvons disposer des colonnes de largeur différentes sur la trame. Enregistrez et chargez cette page dans le navigateur pour voir l'effet.
 
-> **Note :** Si vous avez du mal à faire fonctionner cet exemple, comparez‑le avec notre [version terminée](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html) sur GitHub (la voir aussi [en fonctionnement direct](http://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html)).
+> [!NOTE]
+> Si vous avez du mal à faire fonctionner cet exemple, comparez‑le avec notre [version terminée](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html) sur GitHub (la voir aussi [en fonctionnement direct](https://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html)).
 
 Modifiez les classes de vos éléments soit en ajoutant ou retirant certains conteneurs, pour voir comment faire varier la disposition. Par exemple, vous pouvez faire en sorte que la deuxième ligne ressemble à ceci&nbsp;:
 
@@ -340,24 +392,47 @@ Mettez à jour le bloc bas des règles CSS avec ce qui suit&nbsp;:
 
 ```css
 /* Deux largeurs de colonnes (12.5%) plus une largeur de gouttière (2.08333333%) */
-.col.span2 { width: 14.58333333%; }
+.col.span2 {
+  width: 14.58333333%;
+}
 /* Trois largeurs de colonnes (18.75%) plus deux largeurs de gouttière (4.1666666%) */
-.col.span3 { width: 22.91666666%; }
+.col.span3 {
+  width: 22.91666666%;
+}
 /* Et ainsi de suite... */
-.col.span4 { width: 31.24999999%; }
-.col.span5 { width: 39.58333332%; }
-.col.span6 { width: 47.91666665%; }
-.col.span7 { width: 56.24999998%; }
-.col.span8 { width: 64.58333331%; }
-.col.span9 { width: 72.91666664%; }
-.col.span10 { width: 81.24999997%; }
-.col.span11 { width: 89.5833333%; }
-.col.span12 { width: 97.91666663%; }
+.col.span4 {
+  width: 31.24999999%;
+}
+.col.span5 {
+  width: 39.58333332%;
+}
+.col.span6 {
+  width: 47.91666665%;
+}
+.col.span7 {
+  width: 56.24999998%;
+}
+.col.span8 {
+  width: 64.58333331%;
+}
+.col.span9 {
+  width: 72.91666664%;
+}
+.col.span10 {
+  width: 81.24999997%;
+}
+.col.span11 {
+  width: 89.5833333%;
+}
+.col.span12 {
+  width: 97.91666663%;
+}
 ```
 
 Maintenant enregistrez le code, chargez le dans le navigateur et modifiez la largeur de vue — vous devez constater que la largeur des colonnes s'ajuste comme il convient.
 
-> **Note :** Si vous avez du mal à faire fonctionner l'exemple ci‑dessus, comparez‑le avec notre [version terminée sur GitHub](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid.html) (voir aussi celle [s'exécutant en direct](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html)).
+> [!NOTE]
+> Si vous avez du mal à faire fonctionner l'exemple ci‑dessus, comparez‑le avec notre [version terminée sur GitHub](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid.html) (voir aussi celle [s'exécutant en direct](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html)).
 
 ### Faciliter les calculs avec la fonction calc()
 
@@ -367,29 +442,53 @@ Revenon à nos trames&nbsp;! Toute colonne se développant au delà de la premi�
 
 ```css
 .col.span4 {
-  width: calc((6.25%*4) + (2.08333333%*3));
+  width: calc((6.25% * 4) + (2.08333333% * 3));
 }
 ```
 
 Remplacez le bloc de règles le plus bas par le suivant, puis actualisez le navigateur pour constater que vous obtenez un résultat identique&nbsp;:
 
 ```css
-.col.span2 { width: calc((6.25%*2) + 2.08333333%); }
-.col.span3 { width: calc((6.25%*3) + (2.08333333%*2)); }
-.col.span4 { width: calc((6.25%*4) + (2.08333333%*3)); }
-.col.span5 { width: calc((6.25%*5) + (2.08333333%*4)); }
-.col.span6 { width: calc((6.25%*6) + (2.08333333%*5)); }
-.col.span7 { width: calc((6.25%*7) + (2.08333333%*6)); }
-.col.span8 { width: calc((6.25%*8) + (2.08333333%*7)); }
-.col.span9 { width: calc((6.25%*9) + (2.08333333%*8)); }
-.col.span10 { width: calc((6.25%*10) + (2.08333333%*9)); }
-.col.span11 { width: calc((6.25%*11) + (2.08333333%*10)); }
-.col.span12 { width: calc((6.25%*12) + (2.08333333%*11)); }
+.col.span2 {
+  width: calc((6.25% * 2) + 2.08333333%);
+}
+.col.span3 {
+  width: calc((6.25% * 3) + (2.08333333% * 2));
+}
+.col.span4 {
+  width: calc((6.25% * 4) + (2.08333333% * 3));
+}
+.col.span5 {
+  width: calc((6.25% * 5) + (2.08333333% * 4));
+}
+.col.span6 {
+  width: calc((6.25% * 6) + (2.08333333% * 5));
+}
+.col.span7 {
+  width: calc((6.25% * 7) + (2.08333333% * 6));
+}
+.col.span8 {
+  width: calc((6.25% * 8) + (2.08333333% * 7));
+}
+.col.span9 {
+  width: calc((6.25% * 9) + (2.08333333% * 8));
+}
+.col.span10 {
+  width: calc((6.25% * 10) + (2.08333333% * 9));
+}
+.col.span11 {
+  width: calc((6.25% * 11) + (2.08333333% * 10));
+}
+.col.span12 {
+  width: calc((6.25% * 12) + (2.08333333% * 11));
+}
 ```
 
-> **Note :** Vous pouvez voir la version terminée dans [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-calc.html) (la voir aussi [en direct](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)).
+> [!NOTE]
+> Vous pouvez voir la version terminée dans [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-calc.html) (la voir aussi [en direct](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)).
 
-> **Note :** Si vous n'arrivez pas à faire fonctionner ce qui précède, cela peut être dû au fait que votre navigateur ne prend pas en charge la fonction `calc()`, même si elle est assez bien prise en charge parmi les navigateurs — au‑delà de IE9.
+> [!NOTE]
+> Si vous n'arrivez pas à faire fonctionner ce qui précède, cela peut être dû au fait que votre navigateur ne prend pas en charge la fonction `calc()`, même si elle est assez bien prise en charge parmi les navigateurs — au‑delà de IE9.
 
 ### Systèmes de trames «&nbsp;sémantiques&nbsp;» vs. «&nbsp;non sémantiques&nbsp;»
 
@@ -399,11 +498,12 @@ Ce n'est pas la seule approche. À la place, vous pouvez décider de la trame, p
 
 ```css
 .content {
-  width: calc((6.25%*8) + (2.08333333%*7));
+  width: calc((6.25% * 8) + (2.08333333% * 7));
 }
 ```
 
-> **Note :** Si vous deviez utiliser un préprocesseur tel que [Sass](http://sass-lang.com/), vous pourriez créer un simple mixage pour qu'il insère cette valeur pour vous.
+> [!NOTE]
+> Si vous deviez utiliser un préprocesseur tel que [Sass](https://sass-lang.com/), vous pourriez créer un simple mixage pour qu'il insère cette valeur pour vous.
 
 ### Décalage du conteneur d'une trame
 
@@ -417,7 +517,7 @@ Créons dans la CSS une classe qui décale un élément de conteneur d'une larga
 
 ```css
 .offset-by-one {
-  margin-left: calc(6.25% + (2.08333333%*2));
+  margin-left: calc(6.25% + (2.08333333% * 2));
 }
 ```
 
@@ -441,13 +541,15 @@ remplacez‑le par&nbsp;:
 <div class="col span5 offset-by-one">14</div>
 ```
 
-> **Note :** Notez que vous devez réduire le nombre de colonnes réparties pour faire de la place au décalage&nbsp;!
+> [!NOTE]
+> Notez que vous devez réduire le nombre de colonnes réparties pour faire de la place au décalage&nbsp;!
 
-Chargez et actualisez pour voir la différence, ou bien vérifiez avec l'exemple [fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-offset.html) (voir aussi [l'exécution directement](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html)). L'exemple terminé doit ressembler à ceci&nbsp;:
+Chargez et actualisez pour voir la différence, ou bien vérifiez avec l'exemple [fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-offset.html) (voir aussi [l'exécution directement](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html)). L'exemple terminé doit ressembler à ceci&nbsp;:
 
 ![](offset-grid-finished.png)
 
-> **Note :** Comme exercice supplémentaire, pouvez‑vous implémenter une classe `offset-by-two`&nbsp;?
+> [!NOTE]
+> Comme exercice supplémentaire, pouvez‑vous implémenter une classe `offset-by-two`&nbsp;?
 
 ### Limitations des trames de boîtes flottantes
 
@@ -474,7 +576,6 @@ body {
   padding-right: 2.08333333%;
 }
 
-
 .row {
   display: flex;
 }
@@ -484,11 +585,11 @@ body {
   margin-bottom: 1em;
   width: 6.25%;
   flex: 1 1 auto;
-  background: rgb(255,150,150);
+  background: rgb(255, 150, 150);
 }
 ```
 
-Faites ces remplacements dans votre exemple, ou regardez l'exemeple de code [flexbox-grid.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/flexbox-grid.html) (voir aussi en [exécution directe](http://mdn.github.io/learning-area/css/css-layout/grids/flexbox-grid.html)).
+Faites ces remplacements dans votre exemple, ou regardez l'exemeple de code [flexbox-grid.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/flexbox-grid.html) (voir aussi en [exécution directe](https://mdn.github.io/learning-area/css/css-layout/grids/flexbox-grid.html)).
 
 Ici, nous transformons chaque rangée en conteneur flexible. Avec une trame fondée sur Flexbox, nous avons encore besoin de rangées pour avoir des éléments tant que leur somme est inférieure à 100%. Nous avons réglé ce conteneur à `display : flex`.
 
@@ -519,13 +620,13 @@ Faites une copie de [html-skeleton.html](https://github.com/mdn/learning-area/bl
 Incorporez les .css _skeleton_ et _normalize_ dans la page HTML, en ajoutant ce qui suit dans `head`&nbsp;:
 
 ```html
-<link href="normalize.css" rel="stylesheet">
-<link href="skeleton.css" rel="stylesheet">
+<link href="normalize.css" rel="stylesheet" />
+<link href="skeleton.css" rel="stylesheet" />
 ```
 
 Skeleton inclut plus qu'un système de grille — il contient aussi des CSS pour la typographie et autres éléments de page que vous pouvez utiliser comme point de départ. Toutefois nous les laisserons de côté pour l'instant — c'est la trame qui nous interesse pour le moment.
 
-> **Note :** [Normalize](/fr/docs/) est une petite bibliothèque réellement utile écrite par Nicolas Gallagher, bibliothèque qui fait automatiquement quelques corrections sur les dispositions de base et rend le style des éléments par défaut plus conhérent entre les divers navigateurs.
+> **Note :** [Normalize](/fr/docs/Web) est une petite bibliothèque réellement utile écrite par Nicolas Gallagher, bibliothèque qui fait automatiquement quelques corrections sur les dispositions de base et rend le style des éléments par défaut plus conhérent entre les divers navigateurs.
 
 Nous utiliserons un HTML similaire à celui de notre dernier exemple. Ajoutez ce qui suit dans le corps du HTML&nbsp;:
 
@@ -599,12 +700,15 @@ Ensuite, indiquez les conteneurs sur la deuxième ligne en précisant le nombre 
 
 Enregistrez le fichier HTML et chargez‑le dans le navigateur pour voir ce que cela donne.
 
-> **Note :** Si vous éprouvez des difficulatés à faire fonctionner cet exemple, comparez votre code avec le fichier [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html) (à voir aussi [en exécution directe](http://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)).
+> [!NOTE]
+> Si vous éprouvez des difficulatés à faire fonctionner cet exemple, comparez votre code avec le fichier [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html) (à voir aussi [en exécution directe](https://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)).
 
 Si vous regardez dans le fichier _skeleton.css_ vous verrez comment cela fonctionne. Par exemple, Skeleton prédéfinit ce qui suit pour styler des éléments de la classe «&nbsp;three columns&nbsp;» que l'on ajouterait.
 
 ```css
-.three.columns { width: 22%; }
+.three.columns {
+  width: 22%;
+}
 ```
 
 Tout Skeleton (ou n'importe quel autre canevas) paramètre des classes prédéfinies qu'il est possible d'utiliser en les ajoutant à votre balisage. Vous avez fait exactement la même chose en calculant ces pourcentages vous même.
@@ -616,16 +720,3 @@ Comme vous le voyez, vous n'avez besoin d'écrire que peu de CSS en utilisant Sk
 Vous savez maintenant comment les divers systèmes de trames sont créés. La connaissance de ces processus est utile dans le cadre d'un travail sur des sites anciens, ainsi que pour la compréhension des différences entre les trames natives de «&nbsp;CSS Grid Layout&nbsp;» et celles des anciens systèmes.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-Column_Layout", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
-
-## Dans ce module
-
-- [Introduction to CSS layout](/fr/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal Flow](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/fr/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/fr/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/fr/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column Layout](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Legacy Layout Methods](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental Layout Comprehension Assessment](/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

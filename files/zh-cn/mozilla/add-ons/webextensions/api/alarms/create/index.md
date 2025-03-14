@@ -1,57 +1,61 @@
 ---
 title: alarms.create()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/create
+l10n:
+  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-创建一个新的 alarm.
+为当前浏览器会话创建一个新的闹钟。一个闹钟可以触发一次或多次。闹钟在最后一次触发后会被清除。
 
-## 使用语法
+## 语法
 
-```js
+```js-nolint
 browser.alarms.create(
-  name,              // 可选的字符串 (string) 类型
-  alarmInfo          // 可选的对象 (object) 类型
-)
+  name, // 可选的字符串（string）类型
+  alarmInfo, // 可选的对象（object）类型
+);
 ```
 
-### 参数介绍
+### 参数
 
 - `name`{{optional_inline}}
-  - : 字符串类型。alarm 的名称。默认为空的字符串。alarm 的名称可以在{{WebExtAPIRef('alarms.get()')}}方法和{{WebExtAPIRef('alarms.clear()')}}方法中引用。同时它也可以通过{{WebExtAPIRef('alarms.onAlarm')}}监听方法传入的参数对象{{WebExtAPIRef('alarms.Alarm')}}的 name 属性访问到。Alarm 的名称是唯一的 (在单个附件范围内). 如果传入了已经在这个附件存在的名称，原来的同名 alarm 会被移除并且没有警告。
+
+  - : 字符串类型。闹钟的名称。默认为空的字符串。
+
+    闹钟的名称可用于 {{WebExtAPIRef('alarms.get()')}} 方法和 {{WebExtAPIRef('alarms.clear()')}} 方法来引用特定闹钟。同时也可以通过 {{WebExtAPIRef('alarms.onAlarm')}} 监听函数传入的 {{WebExtAPIRef('alarms.Alarm')}} 对象的 `name` 属性访问到它。
+
+    闹钟的名称是唯一的（在单个扩展的作用域内）。如果传入了已经在这个扩展中存在的名称，原来的同名闹钟会被移除并使用正在创建的闹钟替换。
+
 - `alarmInfo`{{optional_inline}}
 
-  - : `object`（对象）类型。你可以对过它来指定什么时间 alarm 会开始触发，其值可以是一个具体的时间值或者是一个延时（从 alarm 设置开始）。为了让 alarm 能复现，需要指定 `periodInMinutes`。
+  - : `object`（对象）类型。你可以使用它来指定闹钟开始触发的时间，其值可以是一个绝对值（`when`），或相对于闹钟设置时间的相对值（`delayInMinutes`）。要让闹钟能够重复，需要指定 `periodInMinutes`。
 
-    在 Chrome 浏览器上，除非附件以非打包 (unpackaged) 方式加载，alarm 的创建每分钟不允许超过一次。如果附件尝试设置 `delayInMinutes` 为小于 1 的值，alarm 只能在到达 1 分钟之后才会触发，并且会变成每分钟触发一次。
+    在 Chrome 浏览器上，除非附件以非打包（unpackaged）方式加载，创建的闹钟的触发频率不能超过每分钟一次。如果扩展尝试将 `delayInMinutes` 设置为小于 1 的值，或 `when` 设置为在未来的 1 分钟之内的值，则闹钟只能在到达 1 分钟之后才会触发。如果扩展尝试将 `periodInMinutes` 设置为小于 1 的之，则闹钟会变成每分钟触发一次。
 
     `alarmInfo` 对象可以设置以下属性：
 
     - `when`{{optional_inline}}
-      - : `double` 类型。alarm 第一次触发的时间，值为自 1970-01-01 00:00:00 UTC 过去的毫秒数。请使用 [`Date.now()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/now) 来获取 `1970-01-01 00:00:00 UTC` 到当前时间过去的毫秒数。如果你设置了 when 属性，请不要设置 delayInMinutes 属性。
+      - : `double` 类型。闹钟首次触发的时间，以[自纪元以来的毫秒数表示](https://zh.wikipedia.org/wiki/UNIX时间)。要获取从纪元到当前时间的毫秒数，请使用 [`Date.now()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/now)。如果指定了 `when`，则不要指定 `delayInMinutes`。
     - `delayInMinutes`{{optional_inline}}
-      - : `double` 类型。alarm 设置好到第一次触发之间的分钟数。如果你设置了 `delayInMinutes` 属性，请不要设置 when 属性。
+      - : `double` 类型。闹钟设置好到第一次触发之间的分钟数。如果你设置了 `delayInMinutes` 属性，请不要设置 `when` 属性。
     - `periodInMinutes`{{optional_inline}}
-      - : `double` 类型。如果设置此属性，alarm 会从第一次触发开始每隔 `periodInMinutes` 分钟再次触发。如果你没有设置 when 及 delayInMinutes 属性，alarm 会在 alarm 设置好之后 periodInMinutes 分钟第一次触发。如果 periodInMinutes 属性没有设置，则 alarm 只会触发一次。
-
-## 浏览器兼容性
-
-{{Compat}}
+      - : `double` 类型。如果设置此属性，闹钟会从第一次触发开始每隔 `periodInMinutes` 分钟再次触发。如果你没有设置 `when` 及 `delayInMinutes` 属性，闹钟会在其被设置好之后的 `periodInMinutes` 分钟第一次触发。如果没有设置 `periodInMinutes` 属性，则闹钟只会触发一次。
 
 ## 示例
 
-Create a one-time delay-based alarm with "" for the name:
+创建一个名称为 `""` 的基于延迟的一次性闹钟：
 
 ```js
 const delayInMinutes = 5;
 
 browser.alarms.create({
-  delayInMinutes
+  delayInMinutes,
 });
 ```
 
-Create a periodic delay-based alarm named "my-periodic-alarm":
+创建一个名为“my-periodic-alarm”的基于延迟的周期性闹钟：
 
 ```js
 const delayInMinutes = 5;
@@ -59,11 +63,11 @@ const periodInMinutes = 2;
 
 browser.alarms.create("my-periodic-alarm", {
   delayInMinutes,
-  periodInMinutes
+  periodInMinutes,
 });
 ```
 
-Create a periodic absolute alarm named "my-periodic-alarm":
+创建一个名为“my-periodic-alarm”的基于绝对时间的周期性闹钟：
 
 ```js
 const when = 1545696000;
@@ -71,13 +75,16 @@ const periodInMinutes = 2;
 
 browser.alarms.create("my-periodic-alarm", {
   when,
-  periodInMinutes
+  periodInMinutes,
 });
 ```
 
-> **备注：** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+## 浏览器兼容性
+
+{{Compat}}
+
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.alarms`](https://developer.chrome.google.cn/docs/extensions/reference/api/alarms) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

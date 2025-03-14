@@ -1,12 +1,6 @@
 ---
-title: 'SyntaxError: missing variable name'
+title: "SyntaxError: missing variable name"
 slug: Web/JavaScript/Reference/Errors/No_variable_name
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/No_variable_name
-original_slug: Web/JavaScript/Reference/Erreurs/No_variable_name
 ---
 
 {{jsSidebar("Errors")}}
@@ -42,7 +36,7 @@ var àDéfautDeMieux = "toto";
 
 ### Les mots-clés réservés ne peuvent pas être utilisés comme noms de variables
 
-Quelques mots-clés sont [réservés](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Mots-clés) et ne peuvent pas être utilisés comme noms de variable :
+Quelques mots-clés sont [réservés](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#mots-clés) et ne peuvent pas être utilisés comme noms de variable :
 
 ```js example-bad
 var debugger = "zuuuuut";
@@ -66,11 +60,12 @@ var deux = document.getElementById('deux'),
 Voici une version corrigée :
 
 ```js example-good
-var x, y = "toto";
+var x,
+  y = "toto";
 var x = "toto";
 
-var un = document.getElementById('un');
-var deux = document.getElementById('deux');
+var un = document.getElementById("un");
+var deux = document.getElementById("deux");
 ```
 
 ### Tableaux
@@ -85,11 +80,11 @@ var arr = 1,2,3,4,5;
 Voici la forme équivalente correcte :
 
 ```js example-good
-var arr = [1,2,3,4,5];
+var arr = [1, 2, 3, 4, 5];
 ```
 
 ## Voir aussi
 
-- [Choisir de bons noms de variable (en anglais)](http://wiki.c2.com/?GoodVariableNames)
-- [`var`](/fr/docs/Web/JavaScript/Reference/Instructions/var)
-- [Guide JavaScript : Les déclarations de variable](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Déclarations)
+- [Choisir de bons noms de variable (en anglais)](https://wiki.c2.com/?GoodVariableNames)
+- [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var)
+- [Guide JavaScript : Les déclarations de variable](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#déclarations)

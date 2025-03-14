@@ -1,7 +1,6 @@
 ---
 title: animation-play-state
 slug: Web/CSS/animation-play-state
-translation_of: Web/CSS/animation-play-state
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -24,7 +23,7 @@ animation-play-state: paused;
 /* Несколько анимаций */
 animation-play-state: paused, running, running;
 
-/* Глобальный значения */
+/* Глобальные значения */
 animation-play-state: inherited;
 animation-play-state: initial;
 animation-play-state: unset;
@@ -43,7 +42,7 @@ animation-play-state: unset;
 
 ## Примеры
 
-См. [CSS animations](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations).
+См. [CSS animations](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations).
 
 ## Спецификации
 
@@ -55,5 +54,5 @@ animation-play-state: unset;
 
 ## Смотрите также
 
-- [Использование CSS-анимаций](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Использование CSS-анимаций](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

@@ -1,18 +1,11 @@
 ---
 title: WebGLRenderingContext.getError()
 slug: Web/API/WebGLRenderingContext/getError
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/getError
 ---
 
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.getError()`** de l'[API WebGL](/fr-Fr/docs/Web/API/WebGL_API) retourne des informations d'erreur.
+La méthode **`WebGLRenderingContext.getError()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) retourne des informations d'erreur.
 
 ## Syntaxe
 

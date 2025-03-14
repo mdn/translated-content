@@ -1,20 +1,51 @@
 ---
 title: <gradient>
 slug: Web/CSS/gradient
-original_slug: Web/CSS/Gradiente
 ---
 
 {{CSSRef}}
 
 ## Resumen
 
-El tipo de datos [CSS](/es/docs/CSS) `<gradient>` indica un tipo de {{cssxref("&lt;image&gt;")}} que consiste de una transición progresiva entre dos o más colores (Degradado).
+El tipo de datos [CSS](/es/docs/Web/CSS) `<gradient>` indica un tipo de {{cssxref("&lt;image&gt;")}} que consiste de una transición progresiva entre dos o más colores (Degradado).
 
-{{EmbedInteractiveExample("pages/css/type-gradient.html")}}
+{{InteractiveExample("CSS Demo: &amp;lt;gradient&amp;gt;")}}
+
+```css interactive-example-choice
+background: linear-gradient(#f69d3c, #3f87a6);
+```
+
+```css interactive-example-choice
+background: radial-gradient(#f69d3c, #3f87a6);
+```
+
+```css interactive-example-choice
+background: repeating-linear-gradient(#f69d3c, #3f87a6 50px);
+```
+
+```css interactive-example-choice
+background: repeating-radial-gradient(#f69d3c, #3f87a6 50px);
+```
+
+```css interactive-example-choice
+background: conic-gradient(#f69d3c, #3f87a6);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 Un gradiente de CSS no es un {{cssxref("&lt;color&gt;")}} pero tampoco es una imagen con [dimensiones intrínsecas](/es/docs/Web/CSS/image#no_intrinsic); es decir, que no tiene tamaño natural o preferido, ni una relación preferida. Su tamaño concreto coincidirá con los elementos a los que se aplica.
 
-**Funciones de las Gradientes**
+## Funciones de las Gradientes
 
 Hay tres tipos de gradientes de color:
 
@@ -28,11 +59,56 @@ A rainbow made from a gradient
 
 ```css
 body {
-background: -moz-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
-background: -webkit-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
-background: -ms-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
-background: -o-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
-background: linear-gradient(to right,red,orange,yellow, green, blue,indigo,violet);
+  background: -moz-linear-gradient(
+    left,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background: -webkit-linear-gradient(
+    left,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background: -ms-linear-gradient(
+    left,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background: -o-linear-gradient(
+    left,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
 }
 ```
 
@@ -44,13 +120,13 @@ Generados por la función {{cssxref("radial-gradient", "radial-gradient()")}}. C
 
 ```html
 Radial gradient
-
 ```
 
 ```css
 body {
-background: -moz-radial-gradient(red, yellow, rgb(30, 144, 255)) repeat scroll 0% 0% transparent;
-background: radial-gradient(red, yellow, rgb(30, 144, 255));
+  background: -moz-radial-gradient(red, yellow, rgb(30, 144, 255)) repeat scroll
+    0% 0% transparent;
+  background: radial-gradient(red, yellow, rgb(30, 144, 255));
 }
 ```
 
@@ -66,8 +142,20 @@ Repeating gradient
 
 ```css
 body {
-background: -moz-repeating-linear-gradient(top left -45deg, red, red 5px, white 5px, white 10px);
-background: repeating-linear-gradient(to top left, red, red 5px, white 5px, white 10px);
+  background: -moz-repeating-linear-gradient(
+    top left -45deg,
+    red,
+    red 5px,
+    white 5px,
+    white 10px
+  );
+  background: repeating-linear-gradient(
+    to top left,
+    red,
+    red 5px,
+    white 5px,
+    white 10px
+  );
 }
 ```
 
@@ -87,4 +175,4 @@ Cada tipo de gradiente tiene una matriz de compatibilidad diferente. Por favor, 
 
 ## Ver también
 
-- [Usando Gradientes CSS](/es/docs/CSS/Using_CSS_gradients), {{cssxref("&lt;gradient&gt;")}}, {{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}
+- [Usando Gradientes CSS](/es/docs/Web/CSS/CSS_images/Using_CSS_gradients), {{cssxref("&lt;gradient&gt;")}}, {{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}

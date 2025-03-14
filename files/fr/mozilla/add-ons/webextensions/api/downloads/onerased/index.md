@@ -1,20 +1,9 @@
 ---
 title: downloads.onErased
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onErased
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - onErased
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/onErased
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 L'événement **`onErased()`** de l'API {{WebExtAPIRef("downloads")}} se déclenche lorsqu'un téléchargement est effacé de l'historique du navigateur.
 
@@ -23,9 +12,9 @@ L'écouteur reçoit le paramètre `downloadId` de l'objet {{WebExtAPIRef('downlo
 ## Syntaxe
 
 ```js
-browser.downloads.onErased.addListener(listener)
-browser.downloads.onErased.removeListener(listener)
-browser.downloads.onErased.hasListener(listener)
+browser.downloads.onErased.addListener(listener);
+browser.downloads.onErased.removeListener(listener);
+browser.downloads.onErased.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -48,9 +37,9 @@ Les événements ont trois fonctions :
     - `downloadId`
       - : Un `integer` représentant l'`id` du {{WebExtAPIRef('downloads.DownloadItem')}} qui a été effacé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.onErased")}}
+{{Compat}}
 
 ## Exemples
 
@@ -65,15 +54,15 @@ browser.downloads.onErased.addListener(handleErased);
 
 var erasing = browser.downloads.erase({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

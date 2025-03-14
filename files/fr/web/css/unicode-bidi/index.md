@@ -1,11 +1,6 @@
 ---
 title: unicode-bidi
 slug: Web/CSS/unicode-bidi
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/unicode-bidi
 ---
 
 {{CSSRef}}
@@ -14,7 +9,8 @@ La propriété **`unicode-bidi`**, associée à la propriété {{cssxref("direct
 
 Les propriétés `unicode-bidi` et {{cssxref("direction")}} sont les deux seules propriétés qui ne sont pas impactées par {{cssxref("all")}}.
 
-> **Note :** Cette propriété est d'abord destinée aux concepteurs de DTD, les auteurs Web ne devraient pas surcharger sa valeur.
+> [!NOTE]
+> Cette propriété est d'abord destinée aux concepteurs de DTD, les auteurs Web ne devraient pas surcharger sa valeur.
 
 ```css
 /* Avec un mot-clé */

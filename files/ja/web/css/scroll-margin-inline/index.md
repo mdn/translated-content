@@ -7,6 +7,75 @@ slug: Web/CSS/scroll-margin-inline
 
 `scroll-margin-inline` は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、インライン方向のスクロールマージンを設定します。
 
+{{InteractiveExample("CSS Demo: scroll-margin-inline")}}
+
+```css interactive-example-choice
+scroll-margin-inline: 0;
+```
+
+```css interactive-example-choice
+scroll-margin-inline: 40px 20px;
+```
+
+```css interactive-example-choice
+scroll-margin-inline: 4em 0;
+```
+
+```css interactive-example-choice
+scroll-margin-inline: 0px 3em;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="scroller">
+    <div>1</div>
+    <div id="example-element">2</div>
+    <div>3</div>
+  </div>
+  <div class="info">Scroll »</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  flex-wrap: wrap;
+}
+
+.default-example .info {
+  width: 100%;
+  padding: 0.5em 0;
+  font-size: 90%;
+}
+
+.scroller {
+  text-align: left;
+  width: 250px;
+  height: 250px;
+  overflow-x: scroll;
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid black;
+  scroll-snap-type: x mandatory;
+}
+
+.scroller > div {
+  flex: 0 0 250px;
+  width: 250px;
+  background-color: rebeccapurple;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: end;
+}
+
+.scroller > div:nth-child(even) {
+  background-color: #fff;
+  color: rebeccapurple;
+}
+```
+
 ## 構成要素のプロパティ
 
 このプロパティは以下の CSS プロパティの一括指定です。
@@ -19,7 +88,7 @@ slug: Web/CSS/scroll-margin-inline
 ```css
 /* <length> 値 */
 scroll-margin-inline: 10px;
-scroll-margin-inline: 1em .5em ;
+scroll-margin-inline: 1em 0.5em;
 
 /* グローバル値 */
 scroll-margin-inline: inherit;
@@ -122,7 +191,8 @@ scroll-margin 系のプロパティは、このボックスをスナップポー
 
 つまり、真ん中の子要素を過ぎてスクロールした場合、2 番目の `<div>` のインラインの末尾から `1rem`、3 番目の `<div>` のインラインの末尾から `2rem` のところでスナップすることになります。
 
-> **メモ:** ここでは `scroll-margin` をインライン軸 (この場合は X 軸) の先頭*と*末尾に一度に設定していますが、実際に関係するのは末尾側だけです。例えば `scroll-margin-inline: 0 1rem` や `scroll-margin-inline-end: 1rem` などのように、一辺のみにスクロールマージンを設定しても同様に機能します。
+> [!NOTE]
+> ここでは `scroll-margin` をインライン軸 (この場合は X 軸) の先頭*と*末尾に一度に設定していますが、実際に関係するのは末尾側だけです。例えば `scroll-margin-inline: 0 1rem` や `scroll-margin-inline-end: 1rem` などのように、一辺のみにスクロールマージンを設定しても同様に機能します。
 
 #### 結果
 
@@ -140,5 +210,5 @@ scroll-margin 系のプロパティは、このボックスをスナップポー
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_Scroll_Snap)
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
 - [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)

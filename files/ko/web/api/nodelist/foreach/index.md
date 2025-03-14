@@ -1,7 +1,6 @@
 ---
 title: NodeList.prototype.forEach()
 slug: Web/API/NodeList/forEach
-translation_of: Web/API/NodeList/forEach
 ---
 
 {{APIRef("DOM")}}
@@ -48,12 +47,9 @@ node.appendChild(kid3);
 
 var list = node.childNodes;
 
-list.forEach(
-  function(currentValue, currentIndex, listObj) {
-    console.log(currentValue + ', ' + currentIndex + ', ' + this);
-  },
-  'myThisArg'
-);
+list.forEach(function (currentValue, currentIndex, listObj) {
+  console.log(currentValue + ", " + currentIndex + ", " + this);
+}, "myThisArg");
 ```
 
 결과는 다음과 같습니다.
@@ -70,12 +66,12 @@ list.forEach(
 
 ```js
 if (window.NodeList && !NodeList.prototype.forEach) {
-    NodeList.prototype.forEach = function (callback, thisArg) {
-        thisArg = thisArg || window;
-        for (var i = 0; i < this.length; i++) {
-            callback.call(thisArg, this[i], i, this);
-        }
-    };
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) {
+      callback.call(thisArg, this[i], i, this);
+    }
+  };
 }
 ```
 
@@ -83,17 +79,17 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 ```js
 if (window.NodeList && !NodeList.prototype.forEach) {
-    NodeList.prototype.forEach = Array.prototype.forEach;
+  NodeList.prototype.forEach = Array.prototype.forEach;
 }
 ```
 
 The above behavior is how many browsers actually implement NodeList.prototype.forEach (Chrome, for example).
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser Compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

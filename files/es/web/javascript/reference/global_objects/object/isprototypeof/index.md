@@ -1,8 +1,6 @@
 ---
 title: Object.prototype.isPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/isPrototypeOf
 ---
 
 {{JSRef}}
@@ -70,7 +68,7 @@ Esto, junto con el operador {{jsxref("Operators/instanceof", "instanceof")}} res
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.isPrototypeOf")}}
+{{Compat}}
 
 ## Ver también
 

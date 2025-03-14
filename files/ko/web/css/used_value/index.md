@@ -1,10 +1,6 @@
 ---
 title: 사용값
 slug: Web/CSS/used_value
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/used_value
 ---
 
 {{cssref}}
@@ -65,7 +61,7 @@ div {
 ```js
 function updateUsedWidth(id) {
   var div = document.querySelector(`#${id}`);
-  var par = div.querySelector('.show-used-width');
+  var par = div.querySelector(".show-used-width");
   var wid = window.getComputedStyle(div)["width"];
   par.textContent = `Used width: ${wid}.`;
 }
@@ -77,7 +73,7 @@ function updateAllUsedWidths() {
 }
 
 updateAllUsedWidths();
-window.addEventListener('resize', updateAllUsedWidths);
+window.addEventListener("resize", updateAllUsedWidths);
 ```
 
 ### 결과
@@ -109,11 +105,11 @@ CSS 2.0은 속성의 계산에서 마지막 단계로 [계산값](/ko/docs/Web/C
   - [@규칙](/ko/docs/Web/CSS/At-rule)
   - [주석](/ko/docs/Web/CSS/Comments)
   - [명시도](/ko/docs/Web/CSS/Specificity)
-  - [상속](/ko/docs/Web/CSS/inheritance)
-  - [박스 모델](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [상속](/ko/docs/Web/CSS/Inheritance)
+  - [박스 모델](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [레이아웃 모드](/ko/docs/Web/CSS/Layout_mode)
   - [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)
-  - [마진 중첩](/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [마진 중첩](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 값
 
     - [초깃값](/ko/docs/Web/CSS/initial_value)

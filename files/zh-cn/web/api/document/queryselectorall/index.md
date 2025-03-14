@@ -9,33 +9,36 @@ slug: Web/API/Document/querySelectorAll
 
 返回与指定的选择器组匹配的文档中的元素列表 (使用深度优先的先序遍历文档的节点)。返回的对象是 {{domxref("NodeList")}} 。
 
-> **备注：** 此方法基于{{domxref("ParentNode")}} mixin 的{{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} 实现。
+> [!NOTE]
+> 此方法基于{{domxref("ParentNode")}} mixin 的{{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} 实现。
 
-## Syntax
+## 语法
 
+```js-nolint
+querySelectorAll(selectors)
 ```
-elementList = parentNode.querySelectorAll(selectors);
-```
 
-### Parameters
+### 参数
 
 - `selectors`
-  - : 一个 {{domxref("DOMString")}} 包含一个或多个匹配的选择器。这个字符串必须是一个合法的 [CSS selector](/zh-CN/docs/Web/CSS/CSS_Selectors) 如果不是，会抛出一个 `SyntaxError` 错误。有关使用选择器标识元素的更多信息，请参阅 [Locating DOM elements using selectors](/zh-CN/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) 可以通过使用逗号分隔多个选择器来指定它们。
+  - : 一个包含一个或多个匹配的选择器的字符串。其必须是一个有效的 [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)字符串，如果不是，会抛出 `SyntaxError` 异常。有关使用选择器标识元素的更多信息，请参阅[使用选择器定位 DOM 元素](/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)，可以通过使用逗号分隔多个选择器来指定它们。
 
-> **备注：** 必须使用反斜杠字符转义不属于标准 CSS 语法的字符。由于 JavaScript 也使用反斜杠转义，因此在使用这些字符编写字符串文字时必须特别小心。有关详细信息，请参阅[转义特殊字符](/zh-CN/docs/Web/API/Document/querySelector#转义特殊字符)
+> [!NOTE]
+> 必须使用反斜杠字符转义不属于标准 CSS 语法的字符。由于 JavaScript 也使用反斜杠转义，因此在使用这些字符编写字符串文字时必须特别小心。有关详细信息，请参阅[转义特殊字符](/zh-CN/docs/Web/API/Document/querySelector#转义特殊字符)
 
 ### 返回值
 
 一个静态 {{domxref("NodeList")}}，包含一个与至少一个指定选择器匹配的元素的{{domxref("Element")}}对象，或者在没有匹配的情况下为空{{domxref("NodeList")}}
 
-> **备注：** 如果 `selectors` 参数中包含 [CSS 伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)，则返回的列表始终为空。
+> [!NOTE]
+> 如果 `selectors` 参数中包含 [CSS 伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)，则返回的列表始终为空。
 
-### 另外
+### 异常
 
 - `SyntaxError`
   - : 如果指定的 `选择器` 不合法，会抛出错误。如$("##div")
 
-## 例子
+## 示例
 
 ### 获取匹配列表
 
@@ -75,12 +78,12 @@ var matches = container.querySelectorAll("li[data-active='1']");
 
 一旦返回匹配元素的{{domxref("NodeList")}}，就可以像任何数组一样检查它。如果数组为空（即，其`length`属性为 0），则找不到匹配项。
 
-否则，您只需使用标准数组方法来访问列表的内容。您可以使用任何常见的循环语句，例如：
+否则，你只需使用标准数组方法来访问列表的内容。你可以使用任何常见的循环语句，例如：
 
 ```js
 var highlightedItems = userList.querySelectorAll(".highlighted");
 
-highlightedItems.forEach(function(userItem) {
+highlightedItems.forEach(function (userItem) {
   deleteUser(userItem);
 });
 ```
@@ -96,8 +99,7 @@ highlightedItems.forEach(function(userItem) {
 ```html
 <div class="outer">
   <div class="select">
-    <div class="inner">
-    </div>
+    <div class="inner"></div>
   </div>
 </div>
 ```
@@ -105,8 +107,8 @@ highlightedItems.forEach(function(userItem) {
 ### JavaScript
 
 ```js
-var select = document.querySelector('.select');
-var inner = select.querySelectorAll('.outer .inner');
+var select = document.querySelector(".select");
+var inner = select.querySelectorAll(".outer .inner");
 inner.length; // 1, not 0!
 ```
 
@@ -115,8 +117,8 @@ inner.length; // 1, not 0!
 {{cssxref(":scope")}} 伪类符合预期的行为，只匹配基本元素后代的选择器：
 
 ```js
-var select = document.querySelector('.select');
-var inner = select.querySelectorAll(':scope .outer .inner');
+var select = document.querySelector(".select");
+var inner = select.querySelectorAll(":scope .outer .inner");
 inner.length; // 0
 ```
 
@@ -128,11 +130,11 @@ inner.length; // 0
 
 {{Compat}}
 
-## 相关连接
+## 参见
 
-- [Locating DOM elements using selectors](/zh-CN/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Locating DOM elements using selectors](/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - [Attribute selectors](/zh-CN/docs/Web/CSS/Attribute_selectors) in the CSS Guide
-- [Attribute selectors](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors) in the MDN Learning Area
+- [Attribute selectors](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors) in the MDN Learning Area
 - {{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}}
 - {{domxref("DocumentFragment.querySelector()")}} and {{domxref("DocumentFragment.querySelectorAll()")}}

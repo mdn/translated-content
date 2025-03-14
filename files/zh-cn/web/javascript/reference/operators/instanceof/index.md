@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/instanceof
 
 **`instanceof`** **运算符**用于检测构造函数的 `prototype` 属性是否出现在某个实例对象的原型链上。
 
-{{EmbedInteractiveExample("pages/js/expressions-instanceof.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - instanceof")}}
+
+```js interactive-example
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+const auto = new Car("Honda", "Accord", 1998);
+
+console.log(auto instanceof Car);
+// Expected output: true
+
+console.log(auto instanceof Object);
+// Expected output: true
+```
 
 ## 语法
 
@@ -28,19 +43,17 @@ object instanceof constructor
 
 ```js
 // 定义构造函数
-function C(){}
-function D(){}
+function C() {}
+function D() {}
 
 var o = new C();
 
-
 o instanceof C; // true，因为 Object.getPrototypeOf(o) === C.prototype
-
 
 o instanceof D; // false，因为 D.prototype 不在 o 的原型链上
 
 o instanceof Object; // true，因为 Object.prototype.isPrototypeOf(o) 返回 true
-C.prototype instanceof Object // true，同上
+C.prototype instanceof Object; // true，同上
 
 C.prototype = {};
 var o2 = new C();
@@ -65,7 +78,8 @@ o3 instanceof C; // true 因为 C.prototype 现在在 o3 的原型链上
 
 比如检测一个 `Nodes` 在另一个窗口中是不是 `SVGElement`，你可以使用`myNode instanceof myNode.ownerDocument.defaultView.SVGElement`
 
-> **备注：** 在代码中使用 XPCOM `instanceof` 有特殊影响：如果查询接口成功执行后，`obj instanceof` _`xpcomInterface`_ (e.g. `Components.interfaces.nsIFile`) 调用`obj.QueryInterface(xpcomInterface)` 并且返回 `true` 。这种调用的副作用是在一次成功的 `instanceof` 测试后，你可以在 `obj` 上使用`xpcomInterface` 的属性。这与标准的 `JavaScript` 全局变量不同，即使 `obj` 来自不同的作用域，`obj instanceof xpcomInterface` 也可以按预期产生作用。
+> [!NOTE]
+> 在代码中使用 XPCOM `instanceof` 有特殊影响：如果查询接口成功执行后，`obj instanceof` _`xpcomInterface`_ (e.g. `Components.interfaces.nsIFile`) 调用`obj.QueryInterface(xpcomInterface)` 并且返回 `true` 。这种调用的副作用是在一次成功的 `instanceof` 测试后，你可以在 `obj` 上使用`xpcomInterface` 的属性。这与标准的 `JavaScript` 全局变量不同，即使 `obj` 来自不同的作用域，`obj instanceof xpcomInterface` 也可以按预期产生作用。
 
 ## 示例
 
@@ -77,26 +91,26 @@ o3 instanceof C; // true 因为 C.prototype 现在在 o3 的原型链上
 
 ```js
 var simpleStr = "This is a simple string";
-var myString  = new String();
-var newStr    = new String("String created with constructor");
-var myDate    = new Date();
-var myObj     = {};
-var myNonObj  = Object.create(null);
+var myString = new String();
+var newStr = new String("String created with constructor");
+var myDate = new Date();
+var myObj = {};
+var myNonObj = Object.create(null);
 
 simpleStr instanceof String; // 返回 false，非对象实例，因此返回 false
-myString  instanceof String; // 返回 true
-newStr    instanceof String; // 返回 true
-myString  instanceof Object; // 返回 true
+myString instanceof String; // 返回 true
+newStr instanceof String; // 返回 true
+myString instanceof Object; // 返回 true
 
-myObj instanceof Object;    // 返回 true，尽管原型没有定义
-({})  instanceof Object;    // 返回 true，同上
+myObj instanceof Object; // 返回 true，尽管原型没有定义
+({}) instanceof Object; // 返回 true，同上
 myNonObj instanceof Object; // 返回 false，一种创建非 Object 实例的对象的方法
 
 myString instanceof Date; //返回 false
 
-myDate instanceof Date;     // 返回 true
-myDate instanceof Object;   // 返回 true
-myDate instanceof String;   // 返回 false
+myDate instanceof Date; // 返回 true
+myDate instanceof Object; // 返回 true
+myDate instanceof String; // 返回 false
 ```
 
 ### 演示 `mycar` 属于 `Car` 类型的同时又属于 `Object` 类型
@@ -110,7 +124,7 @@ function Car(make, model, year) {
   this.year = year;
 }
 var mycar = new Car("Honda", "Accord", 1998);
-var a = mycar instanceof Car;    // 返回 true
+var a = mycar instanceof Car; // 返回 true
 var b = mycar instanceof Object; // 返回 true
 ```
 
@@ -140,7 +154,8 @@ if (!mycar instanceof Car)
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [typeof](/zh-CN/docs/JavaScript/Reference/Operators/typeof)
+- [typeof](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof)
 - {{jsxref("Symbol.hasInstance")}}
+- {{jsxref("Object.prototype.isPrototypeOf")}}

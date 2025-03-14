@@ -1,7 +1,6 @@
 ---
 title: Firefox 61 for developers
 slug: Mozilla/Firefox/Releases/61
-translation_of: Mozilla/Firefox/Releases/61
 ---
 
 {{FirefoxSidebar}}
@@ -24,13 +23,13 @@ _No hay cambios._
 
 ### SVG
 
-- Las propiedades `ping`, `rel`, `referrerPolicy`, `relList`, `hreflang`, `type` y `text` han sido añadidas al elemento {{SVGElement("a")}} ({{domxref("SVGAElement")}}) para ser consistente con el elemento HTML {{HTMLElement("a")}} ({{bug("1451823")}}).
-- El elemento {{SVGElement("textPath")}}({{domxref("SVGTextPathElement")}}) ahora soporta el `path` SVG2 y los atributos `side` ({{bug("1446617")}} y {{bug("1446650")}}).
-- La interfaz {{domxref("SVGGeometryElement")}} ahora es soportada por más elementos y no solo para el elemento {{SVGElement("path")}} ({{bug("1325320")}}).
+- Las propiedades `ping`, `rel`, `referrerPolicy`, `relList`, `hreflang`, `type` y `text` han sido añadidas al elemento {{SVGElement("a")}} ({{domxref("SVGAElement")}}) para ser consistente con el elemento HTML {{HTMLElement("a")}} ([Error 1451823 en Firefox](https://bugzil.la/1451823)).
+- El elemento {{SVGElement("textPath")}}({{domxref("SVGTextPathElement")}}) ahora soporta el `path` SVG2 y los atributos `side` ([Error 1446617 en Firefox](https://bugzil.la/1446617) y [Error 1446650 en Firefox](https://bugzil.la/1446650)).
+- La interfaz {{domxref("SVGGeometryElement")}} ahora es soportada por más elementos y no solo para el elemento {{SVGElement("path")}} ([Error 1325320 en Firefox](https://bugzil.la/1325320)).
 
 ### JavaScript
 
-- Los metodos {{jsxref("String.prototype.trimStart()")}} y {{jsxref("String.prototype.trimEnd()")}} han sido implementados (mira {{bug(1434007)}}). `trimLeft` y `trimRight` permanecen como alias por razones de compatibilidad web.
+- Los metodos {{jsxref("String.prototype.trimStart()")}} y {{jsxref("String.prototype.trimEnd()")}} han sido implementados (mira [Error 1434007 en Firefox](https://bugzil.la/1434007)). `trimLeft` y `trimRight` permanecen como alias por razones de compatibilidad web.
 
 ### APIs
 
@@ -64,7 +63,7 @@ _No hay cambios._
 
 ### HTTP
 
-- La cookie **`SameSite`** ha sido implementada. Mira [Set-Cookie](/es/docs/Web/HTTP/Headers/Set-Cookie) y [HTTP cookies](/es/docs/Web/HTTP/Cookies) ({{bug(795346)}}).
+- La cookie **`SameSite`** ha sido implementada. Mira [Set-Cookie](/es/docs/Web/HTTP/Headers/Set-Cookie) y [HTTP cookies](/es/docs/Web/HTTP/Cookies) ([Error 795346 en Firefox](https://bugzil.la/795346)).
 
 ### Seguridad
 
@@ -94,15 +93,15 @@ _No hay cambios._
 
 ### SVG
 
-- La obsoleta (y nunca implementada correctamente) propiedad {{domxref("SVGViewElement")}}`.viewTarget` ha sido eliminada ({{bug(1455763)}}).
-- Las siguientes propiedades obsoletas han sido eliminadas de {{domxref("SVGSVGElement")}} ({{bug(1133172)}}):
+- La obsoleta (y nunca implementada correctamente) propiedad {{domxref("SVGViewElement")}}`.viewTarget` ha sido eliminada ([Error 1455763 en Firefox](https://bugzil.la/1455763)).
+- Las siguientes propiedades obsoletas han sido eliminadas de {{domxref("SVGSVGElement")}} ([Error 1133172 en Firefox](https://bugzil.la/1133172)):
 
   - `pixelUnitToMillimeterX`
   - `pixelUnitToMillimeterY`
   - `screenPixelToMillimeterX`
   - `screenPixelToMillimeterY`
 
-- El constructor no-estandar `SVGNumber()` ha sido eliminado ({{bug("1455940")}}).
+- El constructor no-estandar `SVGNumber()` ha sido eliminado ([Error 1455940 en Firefox](https://bugzil.la/1455940)).
 
 ### Otros
 

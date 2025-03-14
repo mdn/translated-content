@@ -1,12 +1,6 @@
 ---
 title: <pattern>
 slug: Web/SVG/Element/pattern
-tags:
-  - Element
-  - SVG
-  - SVG Container
-translation_of: Web/SVG/Element/pattern
-browser-compat: svg.elements.pattern
 ---
 
 {{SVGRef}}
@@ -18,19 +12,29 @@ Le **`<pattern>`** est référéne par les attributs {{SVGAttr("fill")}} et {{SV
 ## Exemple
 
 ```css hidden
-html, body, svg { height: 100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 230 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <pattern id="star" viewBox="0,0,10,10" width="10%" height="10%">
-      <polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2"/>
+      <polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2" />
     </pattern>
   </defs>
 
-  <circle cx="50"  cy="50" r="50" fill="url(#star)"/>
-  <circle cx="180" cy="50" r="40" fill="none" stroke-width="20" stroke="url(#star)"/>
+  <circle cx="50" cy="50" r="50" fill="url(#star)" />
+  <circle
+    cx="180"
+    cy="50"
+    r="40"
+    fill="none"
+    stroke-width="20"
+    stroke="url(#star)" />
 </svg>
 ```
 
@@ -48,7 +52,8 @@ html, body, svg { height: 100% }
 
   - : Cet attribut définit le système de coordonnées pour le contenu de {{SVGElement("pattern")}}. _Type de valeur_ : `userSpaceOnUse`|`objectBoundingBox`; _Valeur par défaut_ : `userSpaceOnUse`; _Animable_: **yes**
 
-    > **Note :** Cet attribut n'a pas d'effet si l'attribut `viewBox` est définit sur l'élément `<pattern>`.
+    > [!NOTE]
+    > Cet attribut n'a pas d'effet si l'attribut `viewBox` est définit sur l'élément `<pattern>`.
 
 - {{SVGAttr("patternTransform")}}
   - : Cet attribut contient la définition d'une transformation optionnelle supplémentaire du système de coordonnées du motif vers celui de la cible. _Type de valeur_ : **[\<transform-list>](/fr/docs/Web/SVG/Content_type#Transform-list)**; _Valeur par défaut_ : _none_; _Animatable_: **yes**
@@ -64,25 +69,26 @@ html, body, svg { height: 100% }
     _Type de valeur_ : [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_ : `0`; _Animable_: **yes**
 - {{SVGAttr("x")}}
   - : Cet attribut détermine le déplacement en coordonnée x du motif de mosaïque._Type de valeur_ : [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_ : `0`; _Animatable_: **yes**
-- {{SVGAttr("xlink:href")}} {{deprecated_inline("SVG2")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
   - : Cet attribut référence un patron de motif qui fournit des valeurs par défaut pour les attributs du `<pattern>`.
     _Type de valeur_ : [**\<URL>**](/fr/docs/Web/SVG/Content_type#URL); _Valeur par défaut_ : _none_; _Animable_: **yes**
 
-    > **Note :** Pour les navigateurs implémentant `href`, si à la fois `href` et `xlink:href` sont définis, `xlink:href` sera ignoré et seulement `href` sera utilisé.
+    > [!NOTE]
+    > Pour les navigateurs implémentant `href`, si à la fois `href` et `xlink:href` sont définis, `xlink:href` sera ignoré et seulement `href` sera utilisé.
 
 - {{SVGAttr("y")}}
   - : Cet attribut détermine le déplacement en coordonnée y du motif de mosaïque. _Type de valeur_ : [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_ : `0`; _Animable_: **yes**
 
 ### Attributs globaux
 
-- [Attributs principaux](/fr/docs/Web/SVG/Attribute/Core)
+- [Attributs principaux](/fr/docs/Web/SVG/Attribute)
   - : Plus notamment : {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
-- [Attributs de style](/fr/docs/Web/SVG/Attribute/Styling)
+- [Attributs de style](/fr/docs/Web/SVG/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute/Conditional_Processing)
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute)
   - : Plus notamment : {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute/Presentation)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute)
   - : Plus notamment : {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 - Attributs XLink
   - : Plus notamment : {{SVGAttr("xlink:title")}}

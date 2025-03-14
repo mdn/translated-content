@@ -1,12 +1,6 @@
 ---
 title: Gestes pincer et zoomer
 slug: Web/API/Pointer_events/Pinch_zoom_gestures
-tags:
-  - Guide
-  - PointerEvent
-  - touch
-translation_of: Web/API/Pointer_events/Pinch_zoom_gestures
-original_slug: Web/API/Pointer_events/gestes_pincer_zoom
 ---
 
 {{DefaultAPISidebar("Pointer Events")}}
@@ -15,7 +9,8 @@ Ajouter la gestion des _gestes_ à une application peut améliorer de manière s
 
 Cet exemple montre comment détecter les gestes de _pinch/zoom_ (pincer/zoomer), en utilisant les {{domxref("Pointer_events","événements de pointeur")}} pour détecter si l'utilisateur bouge deux pointeurs plus proches ou plus loin l'un de l'autre.
 
-> **Note :** Une version _en direct_ de cette application est disponible sur [Github](https://mdn.github.io/dom-examples/pointerevents/Pinch_zoom_gestures.html). Le [code source est également disponible sur Github](https://github.com/mdn/dom-examples/blob/master/pointerevents/Pinch_zoom_gestures.html); les pull requests et [bug reports](https://github.com/mdn/dom-examples/issues) sont les bienvenus.
+> [!NOTE]
+> Une version _en direct_ de cette application est disponible sur [Github](https://mdn.github.io/dom-examples/pointerevents/Pinch_zoom_gestures.html). Le [code source est également disponible sur Github](https://github.com/mdn/dom-examples/blob/master/pointerevents/Pinch_zoom_gestures.html); les pull requests et [bug reports](https://github.com/mdn/dom-examples/issues) sont les bienvenus.
 
 ## Exemple
 
@@ -54,17 +49,17 @@ Les gestionnaires d'événement sont enregistrés pour les événements de point
 
 ```js
 function init() {
- // Ajoute les gestionnaires d'événements pour la cible du pointeur
- var el=document.getElementById("target");
- el.onpointerdown = pointerdown_handler;
- el.onpointermove = pointermove_handler;
+  // Ajoute les gestionnaires d'événements pour la cible du pointeur
+  var el = document.getElementById("target");
+  el.onpointerdown = pointerdown_handler;
+  el.onpointermove = pointermove_handler;
 
- // Même chose pour les événements pointer{up,cancel,out,leave} puisque
- // la sémantique pour ces événements - dans cette appli - est identique.
- el.onpointerup = pointerup_handler;
- el.onpointercancel = pointerup_handler;
- el.onpointerout = pointerup_handler;
- el.onpointerleave = pointerup_handler;
+  // Même chose pour les événements pointer{up,cancel,out,leave} puisque
+  // la sémantique pour ces événements - dans cette appli - est identique.
+  el.onpointerup = pointerup_handler;
+  el.onpointercancel = pointerup_handler;
+  el.onpointerout = pointerup_handler;
+  el.onpointerleave = pointerup_handler;
 }
 ```
 
@@ -74,10 +69,10 @@ L'événement [`pointerdown`](/fr/docs/Web/API/Element/pointerdown_event) est d�
 
 ```js
 function pointerdown_handler(ev) {
- // L'événement pointerdown signale le début d'une interraction de toucher.
- // L'événement est mis en cache pour prendre en charge les gestes à 2 doigts
- evCache.push(ev);
- log("pointerDown", ev);
+  // L'événement pointerdown signale le début d'une interraction de toucher.
+  // L'événement est mis en cache pour prendre en charge les gestes à 2 doigts
+  evCache.push(ev);
+  log("pointerDown", ev);
 }
 ```
 
@@ -89,46 +84,46 @@ Quand cet événement est traité, la bordure de la cible est définie à `dashe
 
 ```js
 function pointermove_handler(ev) {
- // Cette fonction implémente la détection du mouvement horizontal pincer/zoomer.
- //
- // Si la distance entre les deux pointeurs augmente (zoomer),
- // l'arrière-plan de l'élément cible est changé en "pink" et si la
- // distance diminue (dezoomer), la couleur est changée en "lightblue".
- //
- // Cette fonctionne définie la bordure de l'élément cible à "dashed" pour indiquer
- // visuellement que la cible du pointeur a reçu un événement de déplacement.
- log("pointerMove", ev);
- ev.target.style.border = "dashed";
+  // Cette fonction implémente la détection du mouvement horizontal pincer/zoomer.
+  //
+  // Si la distance entre les deux pointeurs augmente (zoomer),
+  // l'arrière-plan de l'élément cible est changé en "pink" et si la
+  // distance diminue (dezoomer), la couleur est changée en "lightblue".
+  //
+  // Cette fonctionne définie la bordure de l'élément cible à "dashed" pour indiquer
+  // visuellement que la cible du pointeur a reçu un événement de déplacement.
+  log("pointerMove", ev);
+  ev.target.style.border = "dashed";
 
- // Trouve le pointeur en cours dans le cache et le met à jour avec cet événement
- for (var i = 0; i < evCache.length; i++) {
-   if (ev.pointerId == evCache[i].pointerId) {
+  // Trouve le pointeur en cours dans le cache et le met à jour avec cet événement
+  for (var i = 0; i < evCache.length; i++) {
+    if (ev.pointerId == evCache[i].pointerId) {
       evCache[i] = ev;
       break;
-   }
- }
+    }
+  }
 
- // Si deux pointeurs sont utilisés, vérifie le geste de pincement
- if (evCache.length == 2) {
-   // Calcule la distance entre les deux pointeurs
-   var curDiff = Math.abs(evCache[0].clientX - evCache[1].clientX);
+  // Si deux pointeurs sont utilisés, vérifie le geste de pincement
+  if (evCache.length == 2) {
+    // Calcule la distance entre les deux pointeurs
+    var curDiff = Math.abs(evCache[0].clientX - evCache[1].clientX);
 
-   if (prevDiff > 0) {
-     if (curDiff > prevDiff) {
-       // La distance entre les deux pointeurs a augmenté
-       log("Pinch moving OUT -> Zoom in", ev);
-       ev.target.style.background = "pink";
-     }
-     if (curDiff < prevDiff) {
-       // La distance entre les deux pointeurs a diminué
-       log("Pinch moving IN -> Zoom out",ev);
-       ev.target.style.background = "lightblue";
-     }
-   }
+    if (prevDiff > 0) {
+      if (curDiff > prevDiff) {
+        // La distance entre les deux pointeurs a augmenté
+        log("Pinch moving OUT -> Zoom in", ev);
+        ev.target.style.background = "pink";
+      }
+      if (curDiff < prevDiff) {
+        // La distance entre les deux pointeurs a diminué
+        log("Pinch moving IN -> Zoom out", ev);
+        ev.target.style.background = "lightblue";
+      }
+    }
 
-   // Met en cache la distance pour les événements suivants
-   prevDiff = curDiff;
- }
+    // Met en cache la distance pour les événements suivants
+    prevDiff = curDiff;
+  }
 }
 ```
 
@@ -156,18 +151,23 @@ function pointerup_handler(ev) {
 
 Cette application utilise un élément {{HTMLElement("div")}} comme zone de toucher et fournit des boutons pour activer et nettoyer les logs.
 
-> **Note :** Pour empêcher que le comportement par défaut du navigateur au toucher surcharge le gestionnaire de l'application, la propriété {{cssxref("touch-action")}} est appliquée à l'élément {{HTMLElement("body")}}.
+> [!NOTE]
+> Pour empêcher que le comportement par défaut du navigateur au toucher surcharge le gestionnaire de l'application, la propriété {{cssxref("touch-action")}} est appliquée à l'élément {{HTMLElement("body")}}.
 
 ```html
 <body onload="init();" style="touch-action:none">
- <div id="target">Touchez l'écran avec deux pointeurs, puis pincez ou étirez.<br/>
-    La couleur d'arrière-plan changera en rose au pincement (Zoomer)
-    ou en bleu clair à l'étirement (Dézoomer).</div>
- <!-- UI pour log/debug -->
- <button id="log" onclick="enableLog(event);">Démarrer/Stopper les logs</button>
- <button id="clearlog" onclick="clearLog(event);">Nettoyer les logs</button>
- <p></p>
- <output></output>
+  <div id="target">
+    Touchez l'écran avec deux pointeurs, puis pincez ou étirez.<br />
+    La couleur d'arrière-plan changera en rose au pincement (Zoomer) ou en bleu
+    clair à l'étirement (Dézoomer).
+  </div>
+  <!-- UI pour log/debug -->
+  <button id="log" onclick="enableLog(event);">
+    Démarrer/Stopper les logs
+  </button>
+  <button id="clearlog" onclick="clearLog(event);">Nettoyer les logs</button>
+  <p></p>
+  <output></output>
 </body>
 ```
 
@@ -181,13 +181,13 @@ Cette fonction aide à gérer le cache global des événements, `evCache`.
 
 ```js
 function remove_event(ev) {
- // Supprime l'événement du cache
- for (var i = 0; i < evCache.length; i++) {
-   if (evCache[i].pointerId == ev.pointerId) {
-     evCache.splice(i, 1);
-     break;
-   }
- }
+  // Supprime l'événement du cache
+  for (var i = 0; i < evCache.length; i++) {
+    if (evCache[i].pointerId == ev.pointerId) {
+      evCache.splice(i, 1);
+      break;
+    }
+  }
 }
 ```
 
@@ -224,4 +224,4 @@ function clearLog(event) {
 
 - [Pointer Events now in Firefox Nightly](https://hacks.mozilla.org/2015/08/pointer-events-now-in-firefox-nightly/); Mozilla Hacks; by Matt Brubeck and Jason Weathersby; 2015-Aug-04
 - [jQuery Pointer Events Polyfill](https://github.com/jquery/PEP)
-- [Gestures](http://www.google.com/design/spec/patterns/gestures.html); Google Design Patterns
+- [Gestures](https://www.google.com/design/spec/patterns/gestures.html); Google Design Patterns

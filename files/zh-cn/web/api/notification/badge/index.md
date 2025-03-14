@@ -1,21 +1,17 @@
 ---
-title: Notification.badge
-slug: Web/API/notification/badge
+title: Notification：badge 属性
+slug: Web/API/Notification/badge
+l10n:
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{SeeCompatTable}}{{APIRef("Notifications API")}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-当没有足够的空间来显示通知本身时，{{domxref("Notification")}}接口的 **`badge`** 属性返回用于表示通知的图像 URL。
+{{domxref("Notification")}} 接口的 **`badge`** 只读属性返回一个包含图像 URL 的字符串，在没有足够的空间来显示通知本身（例如 Android 通知栏）时表示通知。在 Android 设备上，徽章应适应高达 4 倍分辨率（约 96 x 96 像素）的设备，并且图像将自动屏蔽。
 
-## 语法
+## 值
 
-```plain
-var url = Notification.badge
-```
-
-### 值
-
-包含一个 URL 的 {{domxref('USVString')}} 。
+一个包含 URL 的字符串。
 
 ## 规范
 

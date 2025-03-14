@@ -1,5 +1,5 @@
 ---
-title: ':only-child'
+title: :only-child
 slug: Web/CSS/:only-child
 ---
 
@@ -14,7 +14,36 @@ p:only-child {
 }
 ```
 
-> **メモ:** 最初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。
+{{InteractiveExample("CSS Demo: :only-child", "tabbed-shorter")}}
+
+```css interactive-example
+li:only-child {
+  color: fuchsia;
+}
+
+b:only-child {
+  text-decoration: underline;
+}
+```
+
+```html interactive-example
+<p>Stars expected to attend:</p>
+<ol>
+  <li>Robert Downey, Jr.</li>
+</ol>
+
+<p>Stars yet to confirm:</p>
+<ol>
+  <li>Scarlett Johansson</li>
+  <li>Samuel L. Jackson</li>
+  <li>Chris Pratt</li>
+</ol>
+
+<p>The ceremony is going to be held in <b>The Dolby Theatre</b>.</p>
+```
+
+> [!NOTE]
+> 最初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。
 
 ## 構文
 
@@ -36,7 +65,10 @@ p:only-child {
 <div>
   <div>I am the 1st sibling.</div>
   <div>I am the 2nd sibling.</div>
-  <div>I am the 3rd sibling, <div>but this is an only child.</div></div>
+  <div>
+    I am the 3rd sibling,
+    <div>but this is an only child.</div>
+  </div>
 </div>
 ```
 
@@ -64,12 +96,14 @@ div {
 
 ```html
 <ol>
-  <li>First
+  <li>
+    First
     <ul>
       <li>This list has just one element.</li>
     </ul>
   </li>
-  <li>Second
+  <li>
+    Second
     <ul>
       <li>This list has three elements.</li>
       <li>This list has three elements.</li>

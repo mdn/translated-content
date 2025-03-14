@@ -1,13 +1,56 @@
 ---
 title: border-image-slice
 slug: Web/CSS/border-image-slice
+l10n:
+  sourceCommit: 9416f9b9db835dc3cc9a4f628d3bd34cdf494bc1
 ---
 
 {{CSSRef}}
 
 **`border-image-slice`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("border-image-source")}} で指定された画像を複数の領域に分割します。これらの領域は[境界画像](/ja/docs/Web/CSS/border-image)の部品を構成します。
 
-{{EmbedInteractiveExample("pages/css/border-image-slice.html")}}
+{{InteractiveExample("CSS Demo: border-image-slice")}}
+
+```css interactive-example-choice
+border-image-slice: 30;
+```
+
+```css interactive-example-choice
+border-image-slice: 30 fill;
+```
+
+```css interactive-example-choice
+border-image-slice: 44;
+```
+
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-florid.svg") round;
+border-image-slice: calc(50 / 184 * 100%) calc(80 / 284 * 100%) fill;
+border-image-width: 30px 48px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 分割する過程で、4 つの角、4 つの辺、それに中央領域の計 9 つの領域を作成します。それぞれの辺からの距離で設定される 4 本の分割線が、領域の寸法を制御します。
 
@@ -37,7 +80,8 @@ border-image-slice: 30 30% 45;
 border-image-slice: 7 12 14 5;
 
 /* `fill` キーワードの使用 */
-border-image-slice: 10% fill 7 12;
+border-image-slice: 10% fill;
+border-image-slice: fill 10%;
 
 /* グローバル値 */
 border-image-slice: inherit;
@@ -74,7 +118,7 @@ border-image-slice: unset;
 
 ## 例
 
-<h3 id="Adjustable_border_width_and_slice">調整のできる境界の幅とスライス</h3>
+### 調整のできる境界の幅とスライス
 
 次の例は、シンプルな `<div>` に境界画像を設定したものです。境界のソース画像は以下の通りです。
 
@@ -103,12 +147,14 @@ border-image-slice: 30;
 <ul>
   <li>
     <label for="width">スライドして <code>border-width</code> を調整</label>
-    <input type="range" min="10" max="45" id="width">
+    <input type="range" min="10" max="45" id="width" />
     <output id="width-output">30px</output>
   </li>
   <li>
-    <label for="slice">スライドして <code>border-image-slice</code> を調整</label>
-    <input type="range" min="10" max="45" id="slice">
+    <label for="slice"
+      >スライドして <code>border-image-slice</code> を調整</label
+    >
+    <input type="range" min="10" max="45" id="slice" />
     <output id="slice-output">30</output>
   </li>
 </ul>
@@ -141,23 +187,23 @@ li {
 #### JavaScript
 
 ```js
-const widthSlider = document.getElementById('width');
-const sliceSlider = document.getElementById('slice');
-const widthOutput = document.getElementById('width-output');
-const sliceOutput = document.getElementById('slice-output');
-const divElem = document.querySelector('div > div');
+const widthSlider = document.getElementById("width");
+const sliceSlider = document.getElementById("slice");
+const widthOutput = document.getElementById("width-output");
+const sliceOutput = document.getElementById("slice-output");
+const divElem = document.querySelector("div > div");
 
-widthSlider.addEventListener('input', () => {
-  const newValue = widthSlider.value + 'px';
+widthSlider.addEventListener("input", () => {
+  const newValue = `${widthSlider.value}px`;
   divElem.style.borderWidth = newValue;
   widthOutput.textContent = newValue;
-})
+});
 
-sliceSlider.addEventListener('input', () => {
+sliceSlider.addEventListener("input", () => {
   const newValue = sliceSlider.value;
   divElem.style.borderImageSlice = newValue;
   sliceOutput.textContent = newValue;
-})
+});
 ```
 
 #### 結果

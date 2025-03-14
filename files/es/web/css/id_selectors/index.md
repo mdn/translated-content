@@ -5,7 +5,7 @@ slug: Web/CSS/ID_selectors
 
 {{CSSRef}}
 
-En un documento HTML, los **selectores de ID** de CSS buscan un elemento basado en el contenido del atributo {{htmlattrxref("ID")}}. El atributo `ID` del elemento seleccionado debe coincidir exactamente con el valor dado en el selector.
+En un documento HTML, los **selectores de ID** de CSS buscan un elemento basado en el contenido del atributo [`ID`](/es/docs/Web/HTML/Global_attributes#id). El atributo `ID` del elemento seleccionado debe coincidir exactamente con el valor dado en el selector.
 
 ```css
 /* El elemento con id="demo" */
@@ -53,4 +53,4 @@ Nótese que esto es equivalente al siguiente {{Cssxref("Attribute_selectors", "a
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.id")}}
+{{Compat}}

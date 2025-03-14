@@ -24,7 +24,8 @@ var promise = navigator.mediaDevices.getDisplayMedia(constraints);
 
 一个被解析为 {{domxref("MediaStream")}} 的 {{jsxref("Promise")}}，其中包含一个视频轨道。视频轨道的内容来自用户选择的屏幕区域以及一个可选的音频轨道。
 
-> **备注：** 浏览器对音频的支持程度各不相同，既取决于是否支持，也取决于音频源。点击 [浏览器兼容性](#浏览器兼容性) 来查看各个浏览器的支持性。
+> [!NOTE]
+> 浏览器对音频的支持程度各不相同，既取决于是否支持，也取决于音频源。点击 [浏览器兼容性](#浏览器兼容性) 来查看各个浏览器的支持性。
 
 ### 异常
 
@@ -54,8 +55,9 @@ async function startCapture(displayMediaOptions) {
   let captureStream = null;
 
   try {
-    captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-  } catch(err) {
+    captureStream =
+      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+  } catch (err) {
     console.error("Error: " + err);
   }
   return captureStream;
@@ -76,6 +78,6 @@ async function startCapture(displayMediaOptions) {
 
 - [Screen Capture API](/zh-CN/docs/Web/API/Screen_Capture_API)
 - [Using the Screen Capture API](/zh-CN/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- [Media Capture and Streams API](/zh-CN/docs/Web/API/Media_Streams_API)
+- [媒体捕捉与媒体流 API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}: Capturing media from a camera and/or microphone

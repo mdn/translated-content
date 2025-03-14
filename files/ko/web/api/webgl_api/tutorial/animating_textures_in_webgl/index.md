@@ -1,19 +1,9 @@
 ---
 title: WebGL에서의 텍스쳐 애니메이션
 slug: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
-tags:
-  - Animation
-  - HTML5
-  - Texture
-  - Video
-  - WebGL
-  - 애니메이션
-  - 웹지엘
-  - 텍스쳐
-translation_of: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 ---
 
-{{WebGLSidebar("Tutorial") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 앞 단원에서는 정적인 텍스쳐를 사용한 예제를 만들어 봤었는데, 이번에는 Ogg 비디오 파일을 이용해서 텍스쳐에 애니메이션 효과를 적용해 보겠습니다. 사실 만들기 상당히 쉽지만, 그래도 보는 재미는 쏠쏠하니까 한 번 만들어 보겠습니다. 텍스쳐를 구성할 소스로 어떤 종류의 데이터(예를 들면 {{ HTMLElement("canvas") }}와 같은)를 쓰더라도 코드는 비슷할 것입니다.
 
@@ -23,7 +13,8 @@ translation_of: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 
 ```js
 <video id="video">
-  Your browser doesn't appear to support the HTML5 <code>&lt;video&gt;</code> element.
+  Your browser doesn't appear to support the HTML5 <code>&lt;video&gt;</code>{" "}
+  element.
 </video>
 ```
 
@@ -31,7 +22,8 @@ translation_of: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 >
 > ```js
 > <video id="video" src="Firefox.ogv" autoplay>
->   Your browser doesn't appear to support the HTML5 <code>&lt;video&gt;</code> element.
+>   Your browser doesn't appear to support the HTML5 <code>&lt;video&gt;</code>{" "}
+>   element.
 > </video>
 > ```
 
@@ -43,7 +35,7 @@ video {
 }
 ```
 
-이제 자바스크립트 코드를 살펴보겠습니다. `start()` 함수에 비디오 요소에 대한 참조를 가져오는 코드를 추가합니다:
+이제 JavaScript 코드를 살펴보겠습니다. `start()` 함수에 비디오 요소에 대한 참조를 가져오는 코드를 추가합니다:
 
 ```js
 videoElement = document.getElementById("video");
@@ -56,9 +48,9 @@ videoElement.addEventListener("canplaythrough", startVideo, true);
 videoElement.addEventListener("ended", videoDone, true);
 ```
 
-비디오 요소의 src 속성으로 비디오 파일의 위치를 지정해서 비디오 로딩을 시작합니다. FIXME (이 글의 작성자의 한 사람인 bjacob에게) : `preload="auto"`를 여기에서 명시하지 않으면 파이어폭스에서는 `canplaythrough` 이벤트가 발생되지 않음. 크롬에서는 `preload="auto"` 지정 여부와 관계없이 비디오 로딩 시작.
+비디오 요소의 src 속성으로 비디오 파일의 위치를 지정해서 비디오 로딩을 시작합니다. FIXME (이 글의 작성자의 한 사람인 bjacob에게) : `preload="auto"`를 여기에서 명시하지 않으면 Firefox에서는 `canplaythrough` 이벤트가 발생되지 않음. 크롬에서는 `preload="auto"` 지정 여부와 관계없이 비디오 로딩 시작.
 
-> 역자 주 : 예제에 보면 아래와 같이 자바스크립트에서 preload나 src를 명시하지 않고, 위의 역자 주에 있는 것처럼 비디오 태그 내에 속성값으로 기술하고 있으므로, 바로 위 문단과 아래의 코드는 무시해도 좋을 것 같습니다.
+> 역자 주 : 예제에 보면 아래와 같이 JavaScript에서 preload나 src를 명시하지 않고, 위의 역자 주에 있는 것처럼 비디오 태그 내에 속성값으로 기술하고 있으므로, 바로 위 문단과 아래의 코드는 무시해도 좋을 것 같습니다.
 
 ```js
 video.preload = "auto";
@@ -107,7 +99,14 @@ function initTextures() {
 function updateTexture() {
   gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
   gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
-  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, videoElement);
+  gl.texImage2D(
+    gl.TEXTURE_2D,
+    0,
+    gl.RGBA,
+    gl.RGBA,
+    gl.UNSIGNED_BYTE,
+    videoElement,
+  );
 }
 ```
 
@@ -115,10 +114,10 @@ function updateTexture() {
 
 `drawScene()` 함수에는 맨 앞에 updateTexture()를 추가합니다. `drawScene()` 함수에 의해 장면을 다시 그릴 때마다 `updateTexture()` 이 호출됩니다.
 
-이제 완성입니다! WebGL을 지원하는 브라우저라면 [여기](/samples/webgl/sample8/index.html)에서 실제 작동하는 예제를 확인할 수 있습니다.
+이제 완성입니다! WebGL을 지원하는 브라우저라면 [여기](http://mdn.github.io/webgl-examples/tutorial/sample8/index.html)에서 실제 작동하는 예제를 확인할 수 있습니다.
 
 ## 참고 자료
 
-- [파이어폭스에서 audio와 video 사용하기](/ko/docs/Web/Guide/HTML/Using_HTML5_audio_and_video)
+- [Firefox에서 audio와 video 사용하기](/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 
 {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

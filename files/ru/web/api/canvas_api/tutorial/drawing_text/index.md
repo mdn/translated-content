@@ -1,17 +1,9 @@
 ---
 title: Рисование текста
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
-tags:
-  - Canvas
-  - Графика
-  - Примеры
-  - Руководство
-  - мануал
-translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
-original_slug: Web/API/Canvas_API/Tutorial/Рисование_текста
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
 После того, как мы увидели в предыдущей главе, как [применять стили и цвета](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors), взглянем на написание текста в canvas.
 
@@ -30,7 +22,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_текста
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.font = "48px serif";
   ctx.fillText("Hello world", 10, 50);
 }
@@ -52,7 +44,7 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.font = "48px serif";
   ctx.strokeText("Hello world", 10, 50);
 }
@@ -83,7 +75,7 @@ draw();
 
 Эти свойства могут быть вам знакомы если вы работали с CSS.
 
-Изображение от [WHATWG](http://www.whatwg.org/) ниже показывает различные варианты свойства `textBaseline`.![The top of the em square is
+Изображение от [WHATWG](https://www.whatwg.org/) ниже показывает различные варианты свойства `textBaseline`.![The top of the em square is
 roughly at the top of the glyphs in a font, the hanging baseline is
 where some glyphs like आ are anchored, the middle is half-way
 between the top of the em square and the bottom of the em square,
@@ -113,7 +105,8 @@ ctx.strokeText("Hello world!", 0, 100);
 <textarea id="code" class="playable-code">
 ctx.font = "48px serif";
 ctx.textBaseline = "hanging";
-ctx.strokeText("Hello world", 0, 100);</textarea>
+ctx.strokeText("Hello world", 0, 100);</textarea
+>
 ```
 
 ```js hidden
@@ -129,14 +122,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -155,7 +148,7 @@ window.addEventListener("load", drawCanvas);
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   var text = ctx.measureText("foo"); // TextMetrics object
   text.width; // 16;
 }
@@ -163,6 +156,6 @@ function draw() {
 
 ## Примечания
 
-В ранних версиях Gecko (движок рендеринга в Firefox, Firefox OS и других приложениях Mozilla) были реализованы [методы API с префиксами](/ru/docs/Web/API/CanvasRenderingContext2D#Prefixed_APIs) для рисования текста на canvas. На данный момент они устарели и уже, возможно, удалены, поэтому их правильная работа не гарантируется.
+В ранних версиях Gecko (движок рендеринга в Firefox, Firefox OS и других приложениях Mozilla) были реализованы [методы API с префиксами](/ru/docs/Web/API/CanvasRenderingContext2D#prefixed_apis) для рисования текста на canvas. На данный момент они устарели и уже, возможно, удалены, поэтому их правильная работа не гарантируется.
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}

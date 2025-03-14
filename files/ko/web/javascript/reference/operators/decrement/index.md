@@ -1,0 +1,85 @@
+---
+title: 감소 연산자 (--)
+slug: Web/JavaScript/Reference/Operators/Decrement
+---
+
+{{jsSidebar("Operators")}}
+
+**감소(`--`) 연산자** 는 피연산자를 감소(1을 뺌)시키고 연산자의 위치에 따라 감소하기 전이나 후의 값을 반환합니다.
+
+{{InteractiveExample("JavaScript Demo: Expressions - Decrement operator")}}
+
+```js interactive-example
+let x = 3;
+const y = x--;
+
+console.log(`x:${x}, y:${y}`);
+// Expected output: "x:2, y:3"
+
+let a = 3;
+const b = --a;
+
+console.log(`a:${a}, b:${b}`);
+// Expected output: "a:2, b:2"
+```
+
+## 구문
+
+```js-nolint
+x--
+--x
+```
+
+## 설명
+
+만약 피연산자 뒤에 연산자를 붙여서 사용한다면 (예를 들어 `x--`) 감소 연산자는 수를 감소시키고 감소하기 전 값을 반환합니다.
+
+만약 피연산자 앞에 연산자를 붙여서 사용한다면(예를 들어 `--x`) 감소 연산자는 수를 감소시키고 감소 후 값을 반환합니다.
+
+감소 연산자는 참조인 피연산자(변수 및 객체 속성, 다시 말해 유효한
+[할당 대상](/ko/docs/Web/JavaScript/Reference/Operators/Assignment)에만 적용할 수 있습니다.
+`--x` 자체는 참조가 아닌 값으로 평가되기 때문에 여러 감소 연산자를 연속적으로 사용할 수 없습니다.
+
+```js example-bad
+--(--x); // SyntaxError: Invalid left-hand side expression in prefix operation
+```
+
+## 예제
+
+### 후위 감소
+
+```js
+let x = 3;
+const y = x--;
+// x = 2
+// y = 3
+```
+
+### 전위 감소
+
+```js
+let x = 3;
+const y = --x;
+// x = 2
+// y = 2
+```
+
+## 명세
+
+{{Specifications}}
+
+## 브라우저 호환성
+
+{{Compat}}
+
+## 같이 보기
+
+- [더하기 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Addition)
+- [빼기 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [나누기 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Division)
+- [곱하기 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [나머지 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [거듭제곱 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [증가 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Increment)
+- [단항 부정 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [단항 더하기 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Unary_plus)

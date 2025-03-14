@@ -7,15 +7,10 @@ slug: Web/API/Element/localName
 
 **`Element.localName`** 只读属性，返回本地名称的。
 
-> **备注：** 在 DOM4 之前这个 API 定义在{{domxref("Node")}}接口。
+> [!NOTE]
+> 在 DOM4 之前这个 API 定义在{{domxref("Node")}}接口。
 
-## 语法
-
-```
-name = element.localName
-```
-
-### 返回值
+## 值
 
 {{domxref("DOMString")}} 返回元素限定名的本地部分。
 
@@ -62,7 +57,8 @@ name = element.localName
 </ecomm:business>
 ```
 
-> **备注：** 在 {{Gecko("1.9.2")}} 之前，此属性返回 HTML DOM 的 HTML 元素本地名称的大写版本 (而不是 XML DOM 的 HTML 元素). 在最后一个版本，符合 HTML5 规范下，当 HTML DOM 的 HTML 或 XML DOMs 的 XHTML 的小写元素时此属性返回内部 DOM storage。{{domxref("element.tagName","tagName")}} 属性仍然返回 HTML DOM 的 HTML 元素本地名称的大写版本。
+> [!NOTE]
+> 在 Gecko 1.9.2 之前，此属性返回 HTML DOM 的 HTML 元素本地名称的大写版本 (而不是 XML DOM 的 HTML 元素). 在最后一个版本，符合 HTML5 规范下，当 HTML DOM 的 HTML 或 XML DOMs 的 XHTML 的小写元素时此属性返回内部 DOM storage。{{domxref("element.tagName","tagName")}} 属性仍然返回 HTML DOM 的 HTML 元素本地名称的大写版本。
 
 ## 规范
 
@@ -72,7 +68,7 @@ name = element.localName
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("Element.namespaceURI")}}
 - {{domxref("Element.prefix")}}

@@ -3,7 +3,7 @@ title: RegExp.prototype.ignoreCase
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 ---
 
-{{JSRef("Global_Objects", "RegExp")}}
+{{JSRef}}
 
 ## 概述
 
@@ -19,12 +19,12 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 
 ## 示例
 
-### 例子：使用 `ignoreCase`
+### 示例：使用 `ignoreCase`
 
 ```js
-var regex = new RegExp("foo", "i")
+var regex = new RegExp("foo", "i");
 
-console.log(regex.ignoreCase) // true
+console.log(regex.ignoreCase); // true
 ```
 
 ## 规范
@@ -35,7 +35,7 @@ console.log(regex.ignoreCase) // true
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("RegExp.prototype.global")}}
 - {{jsxref("RegExp.prototype.lastIndex")}}

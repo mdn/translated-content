@@ -23,7 +23,7 @@ slug: Web/API/OffscreenCanvas
 
 - {{domxref("OffscreenCanvas.getContext()")}}
   - : 为 offscreen canvas 对象返回一个渲染画布。
-- {{domxref("OffscreenCanvas.toBlob()")}}
+- {{domxref("OffscreenCanvas.convertToBlob()")}}
   - : 创建一个代表 canvas 中的图像的{{domxref("Blob")}}对象。
 - {{domxref("OffscreenCanvas.transferToImageBitmap()")}}
   - : 从 `OffscreenCanvas` 最近渲染的图像创建一个 {{domxref("ImageBitmap")}} 对象。
@@ -39,8 +39,7 @@ slug: Web/API/OffscreenCanvas
 提供两个 {{HTMLElement("canvas")}} 元素
 
 ```html
-<canvas id="one"></canvas>
-<canvas id="two"></canvas>
+<canvas id="one"></canvas> <canvas id="two"></canvas>
 ```
 
 下面的代码会用 `OffscreenCanvas` 提供渲染结果，就像上面描述的一样。
@@ -50,7 +49,7 @@ var one = document.getElementById("one").getContext("bitmaprenderer");
 var two = document.getElementById("two").getContext("bitmaprenderer");
 
 var offscreen = new OffscreenCanvas(256, 256);
-var gl = offscreen.getContext('webgl');
+var gl = offscreen.getContext("webgl");
 
 // ... some drawing for the first canvas using the gl context ...
 
@@ -76,14 +75,14 @@ var htmlCanvas = document.getElementById("canvas");
 var offscreen = htmlCanvas.transferControlToOffscreen();
 
 var worker = new Worker("offscreencanvas.js");
-worker.postMessage({canvas: offscreen}, [offscreen]);
+worker.postMessage({ canvas: offscreen }, [offscreen]);
 ```
 
 offscreencanvas.js (web work 代码):
 
 ```js
-onmessage = function(evt) {
-  var canvas = evt.data.canvas.
+onmessage = function (evt) {
+  var canvas = evt.data.canvas;
   var gl = canvas.getContext("webgl");
 
   // ... some drawing using the gl context ...
@@ -96,7 +95,7 @@ onmessage = function(evt) {
 也可以在 worker 中使用 requestAnimationFrame
 
 ```js
-onmessage = function(evt) {
+onmessage = function (evt) {
   const canvas = evt.data.canvas;
   const gl = canvas.getContext("webgl");
 

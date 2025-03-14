@@ -1,8 +1,9 @@
 ---
 title: SVG
 slug: Glossary/SVG
-translation_of: Glossary/SVG
 ---
+
+{{GlossarySidebar}}
 
 Gráficos vectoriales escalables (del inglés _**S**calable **V**ector **G**raphics_) o **SVG** es un formato de imagen vectorial 2D basado en una sintaxis de {{Glossary("XML")}} .
 
@@ -25,4 +26,4 @@ Como [formato de imagen vectorial](http://en.wikipedia.org/wiki/Vector_graphics)
 ### Información técnica
 
 - [Documentación de SVG en MDN](/es/docs/Web/SVG)
-- [Última especificación SVG](http://www.w3.org/TR/SVG/)
+- [Última especificación SVG](https://www.w3.org/TR/SVG/)

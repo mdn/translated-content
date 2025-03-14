@@ -1,5 +1,5 @@
 ---
-title: '-moz-image-region'
+title: -moz-image-region
 slug: Web/CSS/-moz-image-region
 ---
 
@@ -22,7 +22,8 @@ slug: Web/CSS/-moz-image-region
 
 構文は {{CSSxRef("clip")}} プロパティと似ています。4 つの値はすべて、画像の左上隅を基準にしています。
 
-> **メモ:** 背景画像で動作する仕組みについては、 {{CSSxRef("-moz-image-rect")}} を参照してください。
+> [!NOTE]
+> 背景画像で動作する仕組みについては、 {{CSSxRef("-moz-image-rect")}} を参照してください。
 
 ## 構文
 

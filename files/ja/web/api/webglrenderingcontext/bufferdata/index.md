@@ -1,110 +1,139 @@
 ---
-title: WebGLRenderingContext.bufferData()
+title: "WebGLRenderingContext: bufferData() メソッド"
+short-title: bufferData()
 slug: Web/API/WebGLRenderingContext/bufferData
+l10n:
+  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
 {{APIRef("WebGL")}}
 
-[WebGL API](/ja/docs/Web/API/WebGL_API) **`WebGLRenderingContext.bufferData()`** メソッドは、バッファーオブジェクトのデータストアを初期化、作成します。
+**`WebGLRenderingContext.bufferData()`** は [WebGL API](/ja/docs/Web/API/WebGL_API) のメソッドで、バッファーオブジェクトのデータストアを初期化、作成します。
 
 ## 構文
 
-```
-// WebGL1:
-void gl.bufferData(target, size, usage);
-void gl.bufferData(target, ArrayBuffer? srcData, usage);
-void gl.bufferData(target, ArrayBufferView srcData, usage);
+```js-nolint
+// WebGL1
+bufferData(target, usage)
+bufferData(target, size, usage)
+bufferData(target, srcData, usage)
 
-// WebGL2:
-void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
+// WebGL2
+bufferData(target, usage, srcOffset)
+bufferData(target, srcData, usage, srcOffset)
+bufferData(target, srcData, usage, srcOffset, length)
 ```
 
 ### 引数
 
-- target
+- `target`
 
-  - : 結合する場所 (ターゲット) を指定する {{domxref("GLenum")}}。以下の値を取ることができます。
+  - : {{domxref("WebGL_API/Types", "GLenum")}} で、結合する場所（ターゲット）を指定します。以下の値を取ることができます。
 
-    - `gl.ARRAY_BUFFER`: 頂点の属性を含むバッファーで、頂点座標、テクスチャ座標データや、頂点色データのようなものです。
-    - `gl.ELEMENT_ARRAY_BUFFER`: 要素の位置指定に使用されるバッファーです。
-    - {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} を使用している場合は、更にに以下の値を利用できます。
+    - `gl.ARRAY_BUFFER`
+      - : 頂点の属性を含むバッファーで、頂点座標、テクスチャ座標データや、頂点色データのようなものです。
+    - `gl.ELEMENT_ARRAY_BUFFER`
+      - : 要素の位置指定に使われるバッファーです。
 
-      - `gl.COPY_READ_BUFFER`: バッファーオブジェクトを他へコピーするためのバッファーです。
-      - `gl.COPY_WRITE_BUFFER`: バッファーオブジェクトを他へコピーするためのバッファーです。
-      - `gl.TRANSFORM_FEEDBACK_BUFFER`: 書き戻し操作を変換するバッファーです。
-      - `gl.UNIFORM_BUFFER`: ユニフォームブロックの格納に使われるバッファーです。
-      - `gl.PIXEL_PACK_BUFFER`: ピクセル移動操作に使われるバッファーです。
-      - `gl.PIXEL_UNPACK_BUFFER`: ピクセル移動操作に使われるバッファーです。
+    {{domxref("WebGL2RenderingContext", "WebGL 2 のコンテキスト", "", 1)}}を使用している場合は、更に以下の値を利用することができます。
 
-- size
-  - : {{domxref("GLsizeiptr")}} のバッファーオブジェクトのデータストアのサイズ。
-- srcData {{optional_inline}}
-  - : {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}} か {{domxref("ArrayBufferView")}} の型付き配列型の一つで、データストアへ格納されます。`null` の場合、データストアは作成されますが、内容は初期化されず未定義です。
-- usage
+    - `gl.COPY_READ_BUFFER`
+      - : バッファーオブジェクトを他へコピーするためのバッファーです。
+    - `gl.COPY_WRITE_BUFFER`
+      - : バッファーオブジェクトを他へコピーするためのバッファーです。
+    - `gl.TRANSFORM_FEEDBACK_BUFFER`
+      - : 書き戻し操作を変換するバッファーです。
+    - `gl.UNIFORM_BUFFER`
+      - : ユニフォームブロックの格納に使われるバッファーです。
+    - `gl.PIXEL_PACK_BUFFER`
+      - : ピクセル移動操作に使われるバッファーです。
+    - `gl.PIXEL_UNPACK_BUFFER`
+      - : ピクセル移動操作に使われるバッファーです。
 
-  - : データストアの用途を指定する {{domxref("GLenum")}}。以下の値を取ることができます。
+- `size`
+  - : {{domxref("WebGL_API/Types", "GLsizeiptr")}} で、バッファーオブジェクトのデータストアのサイズを設定します。
+- `srcData` {{optional_inline}}
+  - : {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}} のいずれかで、データストアへ格納されます。
+    `null` にした場合、データストアは作成されますが、内容は初期化されず未定義です。
+- `usage`
 
-    - `gl.STATIC_DRAW`: バッファーの内容は、何度か使用されてあまり変更されません。バッファーへ書き込まれますが、読み出せません。
-    - `gl.DYNAMIC_DRAW`: バッファーの内容は、よく使用されて何度か変更されます。バッファーへ書き込まれますが、読み出せません。
-    - `gl.STREAM_DRAW`: バッファーの内容は、よく使用され変更されます。バッファーへ書き込まれますが、読み出せません。
-    - {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} を使用している場合、さらに以下の値を取ることができます。
+  - : {{domxref("WebGL_API/Types", "GLenum")}} で、データストアの最適化目的での用途を指定します。以下の値を取ることができます。
 
-      - `gl.STATIC_READ`: バッファーの内容は、何度か使用されてあまり変更されません。バッファーから読み出されますが、書き込めません。
-      - `gl.DYNAMIC_READ`: バッファーの内容は、よく使用されて何度か変更されます。バッファーから読み出されますが、書き込めません。
-      - `gl.STREAM_READ`: バッファーの内容は、よく使用され変更されます。バッファーから読み出されますが、書き込めません。
-      - `gl.STATIC_COPY`: バッファーの内容は、何度か使用されてあまり変更されません。ユーザーによる書き込みや読み出しはできません。
-      - `gl.DYNAMIC_COPY`: バッファーの内容は、よく使用されて何度か変更されます。ユーザーによる書き込みや読み出しはできません。
-      - `gl.STREAM_COPY`: バッファーの内容は、よく使用され変更されます。ユーザーによる書き込みや読み出しはできません。
+    - `gl.STATIC_DRAW`
+      - : 内容は、アプリケーションによって一度に指定され、 WebGL 描画および画像指定コマンドのソースとして何度も使用されることを意図しています。
+    - `gl.DYNAMIC_DRAW`
+      - : 内容は、アプリケーションによって繰り返し再指定され、 WebGL 描画コマンドや画像指定コマンドのソースとして何度も使用されることを意図しています。
+    - `gl.STREAM_DRAW`
+      - : この内容は、アプリケーションによって一度だけ指定され、 WebGL 描画および画像指定コマンドのソースとして多くても数回使用されることを意図しています。
+    - {{domxref("WebGL2RenderingContext", "WebGL 2 コンテキスト", "", 1)}}を使用している場合、さらに以下の値を取ることができます。
 
-- srcOffset
-  - : バッファー読み出しを開始する要素の位置のオフセットを指定する {{domxref("GLuint")}}。
+      - `gl.STATIC_READ`
+        - : 内容は、 WebGLからデータを読み込んで一度に指定し、アプリケーションから何度も問い合わせることを想定しています。
+      - `gl.DYNAMIC_READ`
+        - : 内容は、 WebGL からデータを読み込むことによって繰り返し再定義され、アプリケーションによって何度も照会されることを意図しています。
+      - `gl.STREAM_READ`
+        - : 内容は、 WebGL からデータを読み込んで一度に指定し、アプリケーションから最大数回問い合わせることを想定しています。
+      - `gl.STATIC_COPY`
+        - : このコンテンツは、 WebGL からデータを読み込んで一度だけ指定し、 WebGL の描画や画像指定コマンドのソースとして何度も使用することを意図しています。
+      - `gl.DYNAMIC_COPY`
+        - : このコンテンツは、 WebGL からデータを読み込むことで繰り返し再指定され、 WebGL の描画コマンドや画像指定コマンドのソースとして何度も使用されることを意図しています。
+      - `gl.STREAM_COPY`
+        - : 内容は WebGL からデータを読み込んで一度指定し、 WebGL の描画コマンドや画像指定コマンドのソースとしてせいぜい数回使うことを想定しています。
+
+- `srcOffset`
+  - : {{domxref("WebGL_API/Types", "GLuint")}} で、バッファー読み出しを開始する要素の位置のオフセットを指定します。
 - `length` {{optional_inline}}
-  - : {{domxref("GLuint")}}。既定値は 0 です。
+  - : {{domxref("WebGL_API/Types", "GLuint")}} で、既定値は 0 です。
 
-### 返り値
+### 返値
 
-ありません。
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
-- 与えられた `size` でデータストアを作成できない場合、`gl.OUT_OF_MEMORY` エラーをスローします。
-- `size` が負数の場合、`gl.INVALID_VALUE` エラーをスローします。
-- `target` や `usage` が許可された列挙のものでない場合、`gl.INVALID_ENUM` エラーをスローします。
+- 与えられた `size` でデータストアを作成できない場合、`gl.OUT_OF_MEMORY` エラーが発生します。
+- `size` が負数の場合、`gl.INVALID_VALUE` エラーが発生します。
+- `target` や `usage` が許可された列挙のものでない場合、`gl.INVALID_ENUM` エラーが発生します。
 
 ## 例
 
-### `bufferData` の使用
+### bufferData の使用
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var buffer = gl.createBuffer();
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
+const buffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 gl.bufferData(gl.ARRAY_BUFFER, 1024, gl.STATIC_DRAW);
 ```
 
 ### バッファー情報の取得
 
-現在のバッファーの用途やサイズを確認するには、{{domxref("WebGLRenderingContext.getBufferParameter()")}} メソッドを使用します。
+現在のバッファーの用途やサイズを確認するには、 {{domxref("WebGLRenderingContext.getBufferParameter()")}} メソッドを使用してください。
 
 ```js
 gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_SIZE);
 gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_USAGE);
 ```
 
-## 仕様策定状況
+### 型付き配列のサイズの取得
 
-| 仕様                                                                                     | 策定状況                             | コメント                                                                                                                                                                                                                                                                                                                                                                                      |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('WebGL', "#5.14.5", "bufferData")}}                             | {{Spec2('WebGL')}}             | 初回定義。                                                                                                                                                                                                                                                                                                                                                                                    |
-| {{SpecName('OpenGL ES 2.0', "glBufferData.xml", "glBufferData")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API のマニュアルページ。                                                                                                                                                                                                                                                                                                                                                               |
-| {{SpecName('OpenGL ES 3.0', "glBufferData.xhtml", "glBufferData")}} | {{Spec2('OpenGL ES 3.0')}} | OpenGL ES 3 API (と同様の) マニュアルページ。 以下の新しい `target` バッファーを追加。 `gl.COPY_READ_BUFFER`, `gl.COPY_WRITE_BUFFER`, `gl.TRANSFORM_FEEDBACK_BUFFER`, `gl.UNIFORM_BUFFER`, `gl.PIXEL_PACK_BUFFER`, `gl.PIXEL_UNPACK_BUFFER` 以下の新しい `usage` ヒントを追加。 `gl.STATIC_READ`, `gl.DYNAMIC_READ`, `gl.STREAM_READ`, `gl.STATIC_COPY`, `gl.DYNAMIC_COPY`, `gl.STREAM_COPY`. |
+型付き配列のサイズ引数を計算します。
 
-## ブラウザーの対応
+```js
+const dataArray = new Float32Array([1, 2, 3, 4]);
+const sizeInBytes = dataArray.length * dataArray.BYTES_PER_ELEMENT;
+```
 
-{{Compat("api.WebGLRenderingContext.bufferData")}}
+## 仕様書
 
-## 関連項目
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
 
 - {{domxref("WebGLRenderingContext.createBuffer()")}}
 - {{domxref("WebGLRenderingContext.bufferSubData()")}}

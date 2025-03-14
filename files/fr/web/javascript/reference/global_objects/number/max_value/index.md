@@ -1,20 +1,30 @@
 ---
 title: Number.MAX_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
-tags:
-  - JavaScript
-  - Number
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/MAX_VALUE
 ---
 
 {{JSRef}}
 
 La propriété **`Number.MAX_VALUE`** représente la valeur maximale qui peut être représentée par un nombre en JavaScript.
 
-{{EmbedInteractiveExample("pages/js/number-maxvalue.html")}}{{js_property_attributes(0,0,0)}}
+{{InteractiveExample("JavaScript Demo: Number.MAX_VALUE")}}
+
+```js interactive-example
+function multiply(x, y) {
+  if (x * y > Number.MAX_VALUE) {
+    return "Process as Infinity";
+  }
+  return x * y;
+}
+
+console.log(multiply(1.7976931348623157e308, 1));
+// Expected output: 1.7976931348623157e+308
+
+console.log(multiply(1.7976931348623157e308, 2));
+// Expected output: "Process as Infinity"
+```
+
+{{js_property_attributes(0,0,0)}}
 
 ## Description
 
@@ -28,9 +38,9 @@ Le code suivant teste si le produit de deux nombres est inférieur ou égal à `
 
 ```js
 if (num1 * num2 <= Number.MAX_VALUE) {
-   func1();
+  func1();
 } else {
-   func2();
+  func2();
 }
 ```
 

@@ -1,14 +1,6 @@
 ---
 title: form
 slug: Web/API/HTMLFormElement
-tags:
-  - API
-  - Contrôles
-  - DOM
-  - Formulaire
-  - HTML
-  - Interface
-translation_of: Web/API/HTMLFormElement
 ---
 
 {{APIRef("HTML DOM")}}
@@ -26,23 +18,23 @@ _Cette interface hérite aussi des propriétés de son parent {{domxref("HTMLEle
 - {{domxref("HTMLFormElement.length")}}{{ReadOnlyInline}}
   - : Une valeur de type `long` indiquant le nombre de contrôles dans le formulaire.
 - {{domxref("HTMLFormElement.name")}}
-  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML {{htmlattrxref("name", "form")}} pour ce formulaire et qui correspond au nom du formulaire.
+  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`name`](/fr/docs/Web/HTML/Element/form#name) pour ce formulaire et qui correspond au nom du formulaire.
 - {{domxref("HTMLFormElement.method")}}
-  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML {{htmlattrxref("method", "form")}} pour ce formulaire et qui correspond à la méthode HTTP utilisée pour envoyer le formulaires. Seules certaines valeurs peuvent être utilisées avec cette propriété.
+  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`method`](/fr/docs/Web/HTML/Element/form#method) pour ce formulaire et qui correspond à la méthode HTTP utilisée pour envoyer le formulaires. Seules certaines valeurs peuvent être utilisées avec cette propriété.
 - {{domxref("HTMLFormElement.target")}}
-  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML {{htmlattrxref("target", "form")}} pour ce formulaire et qui indique l'emplacement où seront affichées les résultats après envoi du formulaire.
+  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`target`](/fr/docs/Web/HTML/Element/form#target) pour ce formulaire et qui indique l'emplacement où seront affichées les résultats après envoi du formulaire.
 - {{domxref("HTMLFormElement.action")}}
-  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML {{htmlattrxref("action", "form")}} pour ce formulaire et qui contient l'URI d'un programme traitant les informations transmises via le formulaire.
+  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`action`](/fr/docs/Web/HTML/Element/form#action) pour ce formulaire et qui contient l'URI d'un programme traitant les informations transmises via le formulaire.
 - {{domxref("HTMLFormElement.encoding")}} ou {{domxref("HTMLFormElement.enctype")}}
-  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML {{htmlattrxref("enctype", "form")}} pour ce formulaire et qui correspond au type de contenu utilisé pour transmettre les données du formulaire vers le serveur. Seules certaines valeurs peuvent être utilisées pour cette propriété. Les deux noms indiqués pour la méthode sont synonymes.
+  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`enctype`](/fr/docs/Web/HTML/Element/form#enctype) pour ce formulaire et qui correspond au type de contenu utilisé pour transmettre les données du formulaire vers le serveur. Seules certaines valeurs peuvent être utilisées pour cette propriété. Les deux noms indiqués pour la méthode sont synonymes.
 - {{domxref("HTMLFormElement.acceptCharset")}}
-  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML {{htmlattrxref("accept-charset", "form")}} pour ce formulaire et qui correspond au jeu de caractères / à l'encodage pris en charge par le serveur.
+  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`accept-charset`](/fr/docs/Web/HTML/Element/form#accept-charset) pour ce formulaire et qui correspond au jeu de caractères / à l'encodage pris en charge par le serveur.
 - {{domxref("HTMLFormElement.autocomplete")}}
-  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML {{htmlattrxref("autocomplete", "form")}} pour ce formulaire et qui indique si les contrôles du formulaire sont automatiquement renseignés par le navigateur.
+  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`autocomplete`](/fr/docs/Web/HTML/Element/form#autocomplete) pour ce formulaire et qui indique si les contrôles du formulaire sont automatiquement renseignés par le navigateur.
 - {{domxref("HTMLFormElement.noValidate")}}
-  - : Un booléen indiquant la valeur de l'attribut HTML {{htmlattrxref("novalidate", "form")}} pour ce formulaire et qui indique si le formulaire ne devrait pas être validé.
+  - : Un booléen indiquant la valeur de l'attribut HTML [`novalidate`](/fr/docs/Web/HTML/Element/form#novalidate) pour ce formulaire et qui indique si le formulaire ne devrait pas être validé.
 
-Les champs de saisie nommés sont ajoutés comme propriétés sur leurs formulaires associés. Ces propriétés peuvent surcharger les propriétés natives si elles utilisent le même nom ! Par exemple, un formulaire disposant d'un {{HTMLElement("&lt;input&gt;")}} nommé `action` surchargera la propriété native `action` et tout appel renverra le champ `input` plutôt que la valeur de l'attribut HTML {{htmlattrxref("action", "form")}}.
+Les champs de saisie nommés sont ajoutés comme propriétés sur leurs formulaires associés. Ces propriétés peuvent surcharger les propriétés natives si elles utilisent le même nom ! Par exemple, un formulaire disposant d'un {{HTMLElement("&lt;input&gt;")}} nommé `action` surchargera la propriété native `action` et tout appel renverra le champ `input` plutôt que la valeur de l'attribut HTML [`action`](/fr/docs/Web/HTML/Element/form#action).
 
 ## Méthodes
 
@@ -61,7 +53,7 @@ _Cette interface hérite aussi des méthodes de son parent {{domxref("HTMLElemen
 
 ### Obtention d'un objet élément de formulaire
 
-Pour obtenir un objet `HTMLFormElement`, vous pouvez utiliser un [sélecteur CSS](/fr/docs/Web/CSS/S%C3%A9lecteurs_CSS) avec {{domxref("ParentNode.querySelector", "querySelector()")}} ou vous pouvez obtenir une liste de tous les formulaires du document utilisant sa propriété {{domxref("Document.forms", "forms")}}.
+Pour obtenir un objet `HTMLFormElement`, vous pouvez utiliser un [sélecteur CSS](/fr/docs/Web/CSS/CSS_selectors) avec {{domxref("ParentNode.querySelector", "querySelector()")}} ou vous pouvez obtenir une liste de tous les formulaires du document utilisant sa propriété {{domxref("Document.forms", "forms")}}.
 
 {{domxref("Document.forms")}} renvoie un tableau des objets `HTMLFormElement` listant chacun des formulaires de la page. Vous pouvez utiliser alors l'une des syntaxes suivantes pour obtenir un formulaire individuel :
 
@@ -82,7 +74,7 @@ Les éléments qui sont inclus par `HTMLFormElement.elements` et `HTMLFormElemen
 
 - {{HTMLElement("button")}} (_bouton_)
 - {{HTMLElement("fieldset")}} (*champ*s)
-- {{HTMLElement("input")}} (_entrée_) (à l'exception de ceux dont {{htmlattrxref("type", "input")}} est `"image"` omis pour des raisons historiques)
+- {{HTMLElement("input")}} (_entrée_) (à l'exception de ceux dont [`type`](/fr/docs/Web/HTML/Element/input#type) est `"image"` omis pour des raisons historiques)
 - {{HTMLElement("object")}} (_objet_)
 - {{HTMLElement("output")}} (_sortie_)
 - {{HTMLElement("select")}} (_sélection_)
@@ -94,42 +86,61 @@ Crée un nouvel élément de formulaire, modifie ses attributs et l'envoie :
 
 ```js
 var f = document.createElement("form"); // On crée un formulaire
-document.body.appendChild(f);           // On l'ajoute au corps du document
-f.action = "/cgi-bin/some.cgi";         // On y ajoute des attributs action et method
-f.method = "POST"
-f.submit();                             // On appelle la méhtode submit pour l'envoyer
+document.body.appendChild(f); // On l'ajoute au corps du document
+f.action = "/cgi-bin/some.cgi"; // On y ajoute des attributs action et method
+f.method = "POST";
+f.submit(); // On appelle la méhtode submit pour l'envoyer
 ```
 
 Extrait des informations d'un élément de formulaire et définit quelques uns de ses attributs :
 
 ```html
 <form name="formA" action="/cgi-bin/test" method="post">
- <p>Appuyez sur "Info" pour les détails du formulaire, ou "Définir" pour modifier ces détails.</p>
- <p>
-  <button type="button" onclick="getFormInfo();">Info</button>
-  <button type="button" onclick="setFormInfo(this.form);">Set</button>
-  <button type="reset">Reset</button>
- </p>
+  <p>
+    Appuyez sur "Info" pour les détails du formulaire, ou "Définir" pour
+    modifier ces détails.
+  </p>
+  <p>
+    <button type="button" onclick="getFormInfo();">Info</button>
+    <button type="button" onclick="setFormInfo(this.form);">Set</button>
+    <button type="reset">Reset</button>
+  </p>
 
- <textarea id="form-info" rows="15" cols="20"></textarea>
+  <textarea id="form-info" rows="15" cols="20"></textarea>
 </form>
 
 <script>
-  function getFormInfo(){
+  function getFormInfo() {
     // Obtenir une référence au formulaire par son nom
     var f = document.forms["formA"];
     // Les propriétés du formulaire qui nous intéressent
-    var properties = [ 'elements', 'length', 'name', 'charset', 'action', 'acceptCharset', 'action', 'enctype', 'method', 'target' ];
+    var properties = [
+      "elements",
+      "length",
+      "name",
+      "charset",
+      "action",
+      "acceptCharset",
+      "action",
+      "enctype",
+      "method",
+      "target",
+    ];
     // Itérer sur les propriétés en les transformant en une chaîne que nous pouvons afficher à l'utilisateur
-    var info = properties.reduce(function(property) { return property + ": " + f[property] }, "").join("\n");
+    var info = properties
+      .reduce(function (property) {
+        return property + ": " + f[property];
+      }, "")
+      .join("\n");
 
     // Définir les <textarea> du formulaire pour en afficher les propriétés
-    document.forms["formA"].elements['form-info'].value = info;
+    document.forms["formA"].elements["form-info"].value = info;
   }
 
-  function setFormInfo(f){ //L'argument doit être une référence d'élément de formulaire.
+  function setFormInfo(f) {
+    //L'argument doit être une référence d'élément de formulaire.
     f.action = "a-different-url.cgi";
-    f.name   = "a-different-name";
+    f.name = "a-different-name";
   }
 </script>
 ```
@@ -139,40 +150,58 @@ Envoi d'un formulaire dans une nouvelle fenêtre :
 ```html
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Example new-window form submission</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Example new-window form submission</title>
+  </head>
+  <body>
+    <form action="test.php" target="_blank">
+      <p>
+        <label>First name: <input type="text" name="firstname" /></label>
+      </p>
+      <p>
+        <label>Last name: <input type="text" name="lastname" /></label>
+      </p>
+      <p>
+        <label><input type="password" name="pwd" /></label>
+      </p>
 
-<form action="test.php" target="_blank">
-  <p><label>First name: <input type="text" name="firstname"></label></p>
-  <p><label>Last name: <input type="text" name="lastname"></label></p>
-  <p><label><input type="password" name="pwd"></label></p>
+      <fieldset>
+        <legend>Pet preference</legend>
+        <p>
+          <label><input type="radio" name="pet" value="cat" /> Cat</label>
+        </p>
+        <p>
+          <label><input type="radio" name="pet" value="dog" /> Dog</label>
+        </p>
+      </fieldset>
 
-  <fieldset>
-   <legend>Pet preference</legend>
-    <p><label><input type="radio" name="pet" value="cat"> Cat</label></p>
-    <p><label><input type="radio" name="pet" value="dog"> Dog</label></p>
-  </fieldset>
+      <fieldset>
+        <legend>Owned vehicles</legend>
 
-  <fieldset>
-    <legend>Owned vehicles</legend>
+        <p>
+          <label
+            ><input type="checkbox" name="vehicle" value="Bike" />I have a
+            bike</label
+          >
+        </p>
+        <p>
+          <label
+            ><input type="checkbox" name="vehicle" value="Car" />I have a
+            car</label
+          >
+        </p>
+      </fieldset>
 
-    <p><label><input type="checkbox" name="vehicle" value="Bike">I have a bike</label></p>
-    <p><label><input type="checkbox" name="vehicle" value="Car">I have a car</label></p>
-  </fieldset>
-
-  <p><button>Submit</button></p>
-</form>
-
-</body>
+      <p><button>Submit</button></p>
+    </form>
+  </body>
 </html>
 ```
 
 ### Envoi de formulaires et téléchargement de fichiers en utilisant `XMLHttpRequest`
 
-Vous pouvez consulter [ce paragraphe](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest#Submitting_forms_and_uploading_files) si vous souhaitez en savoir plus pour sérialiser et envoyer un formulaire grâce à l'API {{domxref("XMLHttpRequest")}}.
+Vous pouvez consulter [ce paragraphe](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#submitting_forms_and_uploading_files) si vous souhaitez en savoir plus pour sérialiser et envoyer un formulaire grâce à l'API {{domxref("XMLHttpRequest")}}.
 
 ## Spécifications
 

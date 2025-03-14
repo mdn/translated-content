@@ -32,9 +32,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Math
 
 ## 方法
 
-> **備註：** 三角函數 (`sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`) 的參數或回傳值的角度皆以弧度為單位。把角度乘上 `(Math.PI / 180)` 會得到弧度單位，將弧度除以該數則會轉換回一般所用的角度單位。
+> [!NOTE]
+> 三角函數 (`sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`) 的參數或回傳值的角度皆以弧度為單位。把角度乘上 `(Math.PI / 180)` 會得到弧度單位，將弧度除以該數則會轉換回一般所用的角度單位。
 
-> **備註：** 許多數學方法的精度是取決於實作方式的。這意味著不同的瀏覽器可能會得到不同的結果，甚至同一個 JS 引擎在不同的作業系統或架構上所得到的結果都有可能相異。
+> [!NOTE]
+> 許多數學方法的精度是取決於實作方式的。這意味著不同的瀏覽器可能會得到不同的結果，甚至同一個 JS 引擎在不同的作業系統或架構上所得到的結果都有可能相異。
 
 - {{jsxref("Global_Objects/Math/abs", "Math.abs(x)")}}
   - : 回傳 x 的絕對值。
@@ -69,7 +71,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math
 - {{jsxref("Global_Objects/Math/floor", "Math.floor(x)")}}
   - : 回傳不大於 x 的最大整數值。
 - {{jsxref("Global_Objects/Math/fround", "Math.fround(x)")}}
-  - : Returns the nearest [single precision](http://en.wikipedia.org/wiki/Single-precision_floating-point_format) float representation of a number.
+  - : Returns the nearest [single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) float representation of a number.
 - {{jsxref("Global_Objects/Math/hypot", "Math.hypot([x[, y[, …]]])")}}
   - : 回傳參數平方之和的平方根。
 - {{jsxref("Global_Objects/Math/imul", "Math.imul(x, y)")}}
@@ -122,18 +124,16 @@ For instance, the following example adds a method to the `Math` object for calcu
 
 ```js
 /* Variadic function -- Returns the greatest common divisor of a list of arguments */
-Math.gcd = function() {
-    if (arguments.length == 2) {
-        if (arguments[1] == 0)
-            return arguments[0];
-        else
-            return Math.gcd(arguments[1], arguments[0] % arguments[1]);
-    } else if (arguments.length > 2) {
-        var result = Math.gcd(arguments[0], arguments[1]);
-        for (var i = 2; i < arguments.length; i++)
-            result = Math.gcd(result, arguments[i]);
-        return result;
-    }
+Math.gcd = function () {
+  if (arguments.length == 2) {
+    if (arguments[1] == 0) return arguments[0];
+    else return Math.gcd(arguments[1], arguments[0] % arguments[1]);
+  } else if (arguments.length > 2) {
+    var result = Math.gcd(arguments[0], arguments[1]);
+    for (var i = 2; i < arguments.length; i++)
+      result = Math.gcd(result, arguments[i]);
+    return result;
+  }
 };
 ```
 

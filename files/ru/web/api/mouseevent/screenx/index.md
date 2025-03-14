@@ -1,10 +1,9 @@
 ---
 title: MouseEvent.screenX
 slug: Web/API/MouseEvent/screenX
-translation_of: Web/API/MouseEvent/screenX
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`screenX`** - read-only свойство интерфейса события {{domxref("MouseEvent")}}, соответствующее горизонтальной координате (смещению) указателя мыши в глобальных (экранных) координатах.
 
@@ -20,7 +19,7 @@ var x = instanceOfMouseEvent.screenX
 
 ## Пример
 
-Этом примере демонстрирует координаты вашей мыши в случае получения события {{Event("mousemove")}}.
+Этом примере демонстрирует координаты вашей мыши в случае получения события [`mousemove`](/ru/docs/Web/API/Element/mousemove_event).
 
 #### HTML
 
@@ -32,8 +31,8 @@ var x = instanceOfMouseEvent.screenX
 #### JavaScript
 
 ```js
-let screenLog = document.querySelector('#screen-log');
-document.addEventListener('mousemove', logKey);
+let screenLog = document.querySelector("#screen-log");
+document.addEventListener("mousemove", logKey);
 
 function logKey(e) {
   screenLog.innerText = `

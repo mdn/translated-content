@@ -1,92 +1,90 @@
 ---
-title: Column layouts
+title: 列布局
 slug: Web/CSS/Layout_cookbook/Column_layouts
+l10n:
+  sourceCommit: d4a09bb1d0d466e0f31d1c15d1bc0d908b5d70ea
 ---
 
-{{CSSRef}}你可能经常需要创建一个包含几个栏目的布局，css 提供了几个方法来实现它。使用 Grid, Flexbox 或者 Multi-column layout 都取决于你想要实现什么目标，在这篇 recipe 中我们会探讨这些内容![three different styles of layouts which have two columns in the container.](cookbook-multiple-columns.png)
+{{CSSRef}}
 
-## Requirements
+你经常需要创建具有多列的布局，而 CSS 提供了多种方法来实现这一目的。使用[多列](/zh-CN/docs/Web/CSS/CSS_multicol_layout)、[弹性盒](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)还是使用[网格](/zh-CN/docs/Web/CSS/CSS_grid_layout)布局，取决于你想要实现的目标，在本指南中，我们将探讨这些选项。
+
+![三种不同风格的布局，在容器中分为两列](cookbook-multiple-columns.png)
+
+## 需求
 
 你也许会为你的栏目实现多种设计样式：
 
-- 连续的内容线，分成报纸式的专栏
-- 被划分成几个高度相等的栏目的一行
-- 按行和列排列的多行列
+- [将连续的内容分割成报纸风格的列](#连贯的内容——多列布局)。
+- [单行项目按列排列，所有内容高度相等](#高度相等的单行项目——弹性盒)。
+- [按行和列排列的多行列](#按行和列排列项目——网格布局)。
 
-## The recipes
+## 指南
 
-为了达到你的需要你需要选择不同的布局方式
+为了达到你的需求，你需要选择不同的布局方式。
 
-### A continuous thread of content — multi-column layout
+### 连贯的内容——多列布局
 
-If you create columns using multi-column layout your text will remain as a continuous stream filling each column in turn. The columns must all be the same size, and you are unable to target an individual column or the content of an individual column.
+如果你使用多列布局来创建列，则文本会以连续流的形式依次填满每个列。这些列必须大小相同，并且你不能单独指定列或者列的内容的样式。
 
-如果你使用多列布局来创建列，则文本会以连续流的形式依次填满每个列。这些列必须大小相同，并且你不能够针对单个列或者单个列的内容
-
-You can control the gaps between columns with the {{cssxref("column-gap")}} property, and add a rule between columns using {{cssxref("column-rule")}}.
-
-你可以使用{{cssxref("column-gap")}} 控制列之间的距离，并且使用{{cssxref("column-rule")}}.增加列之间的规则
+你可以使用 {{cssxref("column-gap")}} 或 {{cssxref("gap")}} 属性控制列之间的距离，并且使用 {{cssxref("column-rule")}} 为列之间添加分割线。
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-multicol.html", '100%', 720)}}
 
-> **备注：** [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-multicol--download.html)
+> [!CALLOUT]
+>
+> [下载这份示例](https://github.com/mdn/css-examples/blob/main/css-cookbook/columns-multicol--download.html)
 
 在以下情况使用多列布局：
 
 - 你想要你的文本看起来想报纸那种排版布局。
-- 您有一组要分成列的小项目。
+- 你有一组要分成列的小项目。
 - 你不需要单独为指定的列写样式。
 
-### A single row of items with equal heights — flexbox
+### 高度相等的单行项目——弹性盒
 
-Flexbox can be used to break content into columns by setting {{cssxref("flex-direction")}} to `row`, however flexbox targets the elements inside the flex container and will place each direct child into a new column. This is a different behavior to what you saw with multicol.
+通过设置 {{cssxref("display", "display: flex;")}}，使父元素成为一个弹性容器，就可以使用弹性盒布局法将内容分成几列。只需添加这一个属性，就能将所有子元素（子元素、伪元素和文本节点）变成单行的弹性项。用单一数值设置相同的 {{cssxref("flex")}} 简写属性，可以平均分配所有可用空间，一般来说，只要没有非包裹内容迫使项目变大，所有弹性项目的大小都是一样的。
 
-Flexbox 通过设置 row 的{{cssxref("flex-direction")}} ，可以用于将内容分成列，然而，flexbox 的目标是 flex 容器内的元素，并将把每个直接的子元素放到一个新列中，这是与 multicol 不同的地方。
-
-There is currently no way to add a rule between flex items, and browser support for the {{cssxref("column-gap")}} and {{cssxref("row-gap")}} properties is limited. Therefore to create gaps between items use a margin.
-
-目前没有办法可以在 flex 的 item 中添加规则，而且浏览器对{{cssxref("column-gap")}} 和 {{cssxref("row-gap")}}的支持是有限的，因此使用 margin 属性来创建 item 之间的间距
+外边距或 `gap` 属性可用于在项目之间创建间隙，但目前还没有在弹性项目之间添加分割线的 CSS 属性。
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox.html", '100%', 720)}}
 
-> **备注：** [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-flexbox--download.html)
+> [!CALLOUT]
+>
+> [下载这份示例](https://github.com/mdn/css-examples/blob/main/css-cookbook/columns-flexbox--download.html)
 
-Flexbox can also be used to create layouts where the flex items wrap onto new rows, by setting the {{cssxref("flex-wrap")}} property on the container to `wrap`. These new flex lines will distribute space along that line only — the items in the new line will not line up with items in the line above, as you'll see in the example below. This is why flexbox is described as one-dimensional. It is designed for controlling layout as a row or a column, but not both at the same time.
-
-Flexbox 还可以被用来创建 flex items 自动换行的布局，通过给 flex container 设置 {{cssxref("flex-wrap")}} 属性为 wrap. 这些新的 flex 行只会沿该行分配空间——新行中的项不会与上面行中的项对齐，你可以在下面的例子中看到。这就是为什么 flexbox 被描述为一维。他是为了将布局控制为行或列，但不是同时控制行和列。
+要创建一个布局，其中的弹性项可以换行，请将容器上的 {{cssxref("flex-wrap")}} 属性设置为 `wrap`。请注意，每个弹性行只为该行分配空间。一行中的项目不一定会与其他行中的项目对齐，正如你在下面的示例中看到的那样。这就是为什么弹性盒布局被描述为一维布局法的原因。它设计用于控制一行或一列的布局，但不能同时控制这两种布局。
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox-wrapping.html", '100%', 720)}}
 
-> **备注：** [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-flexbox-wrapping--download.html)
+> [!CALLOUT]
+>
+> [下载这份示例](https://github.com/mdn/css-examples/blob/main/css-cookbook/columns-flexbox-wrapping--download.html)
 
-Use flexbox:
+在以下情况使用弹性盒布局：
 
-- For single rows or columns of items. 设置一行或者一列中的 items
-- When you want to do alignment on the cross axis after laying out your items. 当你想在横轴上对齐您的 items
-- When you are happy for wrapped items to share out space along their line only and not line up with items in other lines.
+- 用于单行或单列项目。
+- 希望在摆放好项目后在横轴上对齐时。
+- 希望封装好的项目只在其所在行内共享空间，而不与其他行内的项目对齐时。
 
-### Lining items up in rows and columns — grid layout
+### 按行和列排列项目——网格布局
 
-If what you want is a layout where items line up in rows and columns then you should choose CSS Grid Layout. Grid Layout works on the direct children of the grid container in a similar way to the manner in which flexbox works on the direct children of the flex container, however with CSS Grid you can line your items up in rows and columns — it is described as two-dimensional.
-
-如果你想要 items 在行和列进行布局，你应该选择 Grid Layout. Grid Layout 作用于 grid container 的 直接子元素类似于 flexbox。但是你可以在行和列两方面来控制他（flex 只能在行或者列）。
+如果你想要一个二维网格，让项目按行和列排列，那么你应该选择 CSS 网格布局。与弹性盒适用于弹性容器的直接子代类似，网格布局也适用于网格容器的直接子代。只需在容器上设置 {{cssxref("display", "display: grid;")}} 即可。在该容器上设置的属性，如 {{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-rows")}}——定义了项目如何沿行和列分布。
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-grid.html", '100%', 720)}}
 
-> **备注：** [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-grid--download.html)
+> [!CALLOUT]
+>
+> [下载这份示例](https://github.com/mdn/css-examples/blob/main/css-cookbook/columns-grid--download.html)
 
-Use Grid:
+在以下情况使用网格布局：
 
-- For multiple rows or columns of items.
-- When you want to be able to align the items on the block and inline axes.
-- When you want items to line up in rows and columns.
+- 用于多行或多列项目。
+- 希望项目在区块轴和内联轴上对齐时。
+- 希望项目在行和列中对齐时。
 
-## 浏览器兼容性
+## MDN 上的资源
 
-{{Compat}}
-
-## Resources on MDN
-
-- [Guide to Multi-column Layout](/zh-CN/docs/Web/CSS/CSS_Columns)
-- [Guide to Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/)
-- [Guide to CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
+- [多列布局指南](/zh-CN/docs/Web/CSS/CSS_multicol_layout)
+- [弹性盒布局指南](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)
+- [CSS 网格布局指南](/zh-CN/docs/Web/CSS/CSS_grid_layout)

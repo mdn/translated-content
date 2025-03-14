@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.compileShader()
 slug: Web/API/WebGLRenderingContext/compileShader
-translation_of: Web/API/WebGLRenderingContext/compileShader
 ---
 
 {{APIRef("WebGL")}}
@@ -27,7 +26,7 @@ gl.shaderSource(shader, shaderSource);
 gl.compileShader(shader);
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

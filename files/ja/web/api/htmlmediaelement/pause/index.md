@@ -1,6 +1,9 @@
 ---
-title: HTMLMediaElement.pause()
+title: "HTMLMediaElement: pause() メソッド"
+short-title: pause()
 slug: Web/API/HTMLMediaElement/pause
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,7 +12,7 @@ slug: Web/API/HTMLMediaElement/pause
 
 ## 構文
 
-```js
+```js-nolint
 pause()
 ```
 

@@ -1,8 +1,9 @@
 ---
-title: 'WorkerGlobalScope: online イベント'
+title: "WorkerGlobalScope: online イベント"
+short-title: online
 slug: Web/API/WorkerGlobalScope/online_event
 l10n:
-  sourceCommit: 6d697b8a86ea3ce1bf82615c5dc006aeaa22d90b
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef("Web Workers API")}}
@@ -14,9 +15,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('online', (event) => { });
+addEventListener("online", (event) => {});
 
-ononline = (event) => { };
+ononline = (event) => {};
 ```
 
 ## イベント型
@@ -29,15 +30,15 @@ ononline = (event) => { };
 
 ```js
 self.ononline = () => {
-  console.log('Your worker is now online');
-}
+  console.log("Your worker is now online");
+};
 ```
 
 同じスニペットですが、 `addEventListener()` を使用したものです。
 
 ```js
-self.addEventListener('online', () => {
-  console.log('Your worker is now online');
+self.addEventListener("online", () => {
+  console.log("Your worker is now online");
 });
 ```
 

@@ -1,23 +1,32 @@
 ---
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/for...in
 ---
 
 {{jsSidebar("Statements")}}
 
-`for...in`문은 상속된 열거 가능한 속성들을 포함하여 객체에서 문자열로 키가 지정된 모든 열거 가능한 속성에 대해 반복합니다. ([Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)로 키가 지정된 속성은 무시합니다.)
+**`for...in` 문**은 상속된 열거 가능한 속성들을 포함하여 객체에서 문자열로 키가 지정된 모든 열거 가능한 속성에 대해 반복합니다. ([Symbol](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol)로 키가 지정된 속성은 무시합니다.)
 
-{{EmbedInteractiveExample("pages/js/statement-forin.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For...In")}}
+
+```js interactive-example
+const object = { a: 1, b: 2, c: 3 };
+
+for (const property in object) {
+  console.log(`${property}: ${object[property]}`);
+}
+
+// Expected output:
+// "a: 1"
+// "b: 2"
+// "c: 3"
+```
 
 ## 문법
 
 ```js
 for (const variable in object) {
-  statement
+  statement;
 }
 ```
 
@@ -32,7 +41,7 @@ for (const variable in object) {
 
 `for...in`문은 열거 가능한 non-Symbol 속성에 대해서만 반복합니다.
 
- `Array`나 `Object` 등 내장 constructor를 통해 만들어진 객체는 {{jsxref("String")}}의 {{jsxref("String.indexOf", "indexOf()")}}, {{jsxref("Object")}}의 {{jsxref("Object.toString", "toString()")}}와 같이 `Object.prototype`, `String.prototype` 로부터 열거가 가능하지 않은 속성들을 상속해왔습니다. `for...in`문은 객체 자체의 모든 열거 가능한 속성들과 프로토타입 체인으로부터 상속받은 속성들에 대해 반복할 것입니다. (더 가까운 프로토타입의 속성들이 프로토타입 체인 객체로부터 더 멀리 떨어진 프로토 타입의 속성보다 더 우선합니다.)
+`Array`나 `Object` 등 내장 constructor를 통해 만들어진 객체는 {{jsxref("String")}}의 {{jsxref("String.indexOf", "indexOf()")}}, {{jsxref("Object")}}의 {{jsxref("Object.toString", "toString()")}}와 같이 `Object.prototype`, `String.prototype` 로부터 열거가 가능하지 않은 속성들을 상속해왔습니다. `for...in`문은 객체 자체의 모든 열거 가능한 속성들과 프로토타입 체인으로부터 상속받은 속성들에 대해 반복할 것입니다. (더 가까운 프로토타입의 속성들이 프로토타입 체인 객체로부터 더 멀리 떨어진 프로토 타입의 속성보다 더 우선합니다.)
 
 ### 속성의 삭제, 추가, 수정
 
@@ -67,7 +76,7 @@ for (const variable in object) {
 아래의 예는 열거 가능한 non-Symbol속성들을 반복해서 속성의 이름과 그 값을 기록합니다.
 
 ```js
-var obj = {a: 1, b: 2, c: 3};
+var obj = { a: 1, b: 2, c: 3 };
 
 for (const prop in obj) {
   console.log(`obj.${prop} = ${obj[prop]}`);
@@ -84,7 +93,7 @@ for (const prop in obj) {
 아래는 {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} 를 사용하는 예를 보여주고 있습니다. 상속된 속성은 표시되지 않습니다.
 
 ```js
-var triangle = {a:1, b:2, c:3};
+var triangle = { a: 1, b: 2, c: 3 };
 
 function ColoredTriangle() {
   this.color = "red";
@@ -96,7 +105,7 @@ function show_own_props(obj, objName) {
   var result = "";
 
   for (var prop in obj) {
-    if( obj.hasOwnProperty( prop ) ) {
+    if (obj.hasOwnProperty(prop)) {
       result += objName + "." + prop + " = " + obj[prop] + "\n";
     }
   }
@@ -121,7 +130,7 @@ alert(show_own_props(o, "o")); /* alerts: o.color = red */
 Prior to Firefox 40, it was possible to use an initializer expression
 (`i=0`) in a `for...in` loop:
 
-```js example-bad
+```js-nolint example-bad
 const obj = { a: 1, b: 2, c: 3 };
 for (var i = 0 in obj) {
   console.log(obj[i]);
@@ -131,7 +140,7 @@ for (var i = 0 in obj) {
 // 3
 ```
 
-This nonstandard behavior is now ignored in version 40 and later, and will present a {{jsxref("SyntaxError")}} ("[for-in loop head declarations may not have initializers](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer)") error in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) ([bug 748550](https://bugzilla.mozilla.org/show_bug.cgi?id=748550) and [bug 1164741](https://bugzilla.mozilla.org/show_bug.cgi?id=1164741)).
+This nonstandard behavior is now ignored in version 40 and later, and will present a {{jsxref("SyntaxError")}} ("[for-in loop head declarations may not have initializers](/ko/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer)") error in [strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode) ([bug 748550](https://bugzilla.mozilla.org/show_bug.cgi?id=748550) and [bug 1164741](https://bugzilla.mozilla.org/show_bug.cgi?id=1164741)).
 
 Other engines such as v8 (Chrome), Chakra (IE/Edge), and JSC (WebKit/Safari) are
 investigating whether to remove the nonstandard behavior as well.
@@ -141,8 +150,8 @@ investigating whether to remove the nonstandard behavior as well.
 - {{jsxref("Statements/for...of", "for...of")}} – a similar statement that iterates
   over the property _values_
 - {{jsxref("Statements/for", "for")}}
-- [Iterators and Generator functions](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) (usable with `for...of` syntax)
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Iterators and Generator functions](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators) (usable with `for...of` syntax)
+- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Array.prototype.forEach()")}}

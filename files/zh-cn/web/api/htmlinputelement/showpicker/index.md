@@ -47,7 +47,7 @@ showPicker()
 以下代码展示了如何检查 `showPicker()` 是否被支持：
 
 ```js
-if ('showPicker' in HTMLInputElement.prototype) {
+if ("showPicker" in HTMLInputElement.prototype) {
   // showPicker() is supported.
 }
 ```
@@ -118,16 +118,16 @@ document.querySelectorAll("button").forEach((button) => {
 以下代码增加了一个事件监听器，当按钮被点击时，调用 `showPicker()`。
 
 ```js
-  const button = document.querySelector("button");
-  const browserInput = document.querySelector("input");
+const button = document.querySelector("button");
+const browserInput = document.querySelector("input");
 
-  button.addEventListener("click", () => {
-    try {
-      browserInput.showPicker();
-    } catch (error) {
-      // Fall back to another picker mechanism
-    }
-  });
+button.addEventListener("click", () => {
+  try {
+    browserInput.showPicker();
+  } catch (error) {
+    // Fall back to another picker mechanism
+  }
+});
 ```
 
 ### showPicker() 用于 autocomplete
@@ -143,16 +143,16 @@ document.querySelectorAll("button").forEach((button) => {
 以下代码展示了当按钮被点击时，input 展示的选择器。
 
 ```js
-  const button = document.querySelector("button");
-  const browserInput = document.querySelector("input");
+const button = document.querySelector("button");
+const browserInput = document.querySelector("input");
 
-  button.addEventListener("click", () => {
-    try {
-      browserInput.showPicker();
-    } catch (error) {
-      // Fall back to another picker mechanism
-    }
-  });
+button.addEventListener("click", () => {
+  try {
+    browserInput.showPicker();
+  } catch (error) {
+    // Fall back to another picker mechanism
+  }
+});
 ```
 
 ## 规范

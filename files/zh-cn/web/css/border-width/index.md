@@ -1,101 +1,171 @@
 ---
 title: border-width
 slug: Web/CSS/border-width
+l10n:
+  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
 {{CSSRef}}
 
-## 概要
+**`border-width`** [CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)用于设置元素边框的宽度。
 
-**`border-width`** 属性可以设置盒子模型的边框宽度。
+{{InteractiveExample("CSS Demo: border-width")}}
 
-{{EmbedInteractiveExample("pages/css/border-width.html")}}
+```css interactive-example-choice
+border-width: thick;
+```
 
-它是{{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}} 和 {{cssxref("border-left-width")}}的简写;
+```css interactive-example-choice
+border-width: 1em;
+```
+
+```css interactive-example-choice
+border-width: 4px 1.25em;
+```
+
+```css interactive-example-choice
+border-width: 2ex 1.25ex 0.5ex;
+```
+
+```css interactive-example-choice
+border-width: 0 4px 8px 12px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
+
+## 构成属性
+
+此属性是以下 CSS 属性的简写：
+
+- [`border-bottom-width`](/zh-CN/docs/Web/CSS/border-bottom-width)
+- [`border-left-width`](/zh-CN/docs/Web/CSS/border-left-width)
+- [`border-right-width`](/zh-CN/docs/Web/CSS/border-right-width)
+- [`border-top-width`](/zh-CN/docs/Web/CSS/border-top-width)
 
 ## 语法
 
 ```css
-/* 用法一：明确指定宽度值 */
-/* 当给定一个宽度时，该宽度作用于选定元素的所有边框 */
-border-width: 5px;
-/* 当给定两个宽度时，该宽度分别依次作用于选定元素的横边与纵边 */
-border-width: 2px 1.5em;
-/* 当给定三个宽度时，该宽度分别依次作用于选定元素的上横边、纵边、下横边 */
-border-width: 1px 2em 1.5cm;
-/* 当给定四个宽度时，该宽度分别依次作用于选定元素的上横边、右纵边、下横边、左纵边（即按顺时针依次作用） */
-border-width: 1px 2em 0 4rem;
-
-/* 用法二：使用全局关键字 */
-/* 可以使用的全局关键字有：inherit(继承),initial（初始值）,unset（不设置） */
-border-width: inherit;
-
-/* 用法三：使用作用于 border-width 的关键字 */
+/* 关键字值 */
 border-width: thin;
 border-width: medium;
 border-width: thick;
+
+/* <length> 值 */
+border-width: 4px;
+border-width: 1.2rem;
+
+/* 顶部和底部 | 左侧和右侧 */
+border-width: 2px 1.5em;
+
+/* 顶部 | 左侧和右侧 | 底部 */
+border-width: 1px 2em 1.5cm;
+
+/* 顶部 | 右侧 | 底部 | 左侧 */
+border-width: 1px 2em 0 4rem;
+
+/* 全局值 */
+border-width: inherit;
+border-width: initial;
+border-width: revert;
+border-width: revert-layer;
+border-width: unset;
 ```
 
-### 正式语法
+`border-width` 属性可以通过一个、两个、三个或四个值来指定。
+
+- 当指定**一个**值时，该宽度将应用于**四条边**。
+- 当指定**两个**值时，第一个宽度应用于**顶部和底部**，第二个宽度应用于**左侧和右侧**。
+- 当指定**三个**值时，第一个宽度应用于**顶部**, 第二个宽度应用于**左侧和右侧**, 第三个宽度应用于**底部**.
+- 当指定**四个**值时，这些宽度按照**顶部**、**右侧**、**底部**和**左侧**的顺序（顺时针）进行应用。
+
+### 值
+
+- `<line-width>`
+
+  - : 定义边框的宽度，可以是明确的非负数 {{cssxref("&lt;length&gt;")}} 或关键字。如果是关键字，则必须是以下值之一：
+
+    - `thin`
+    - `medium`
+    - `thick`
+
+> [!NOTE]
+> 由于规范中没有明确定义每个关键字所表示的确切厚度，因此使用其中一个关键字的确切结果取决于具体实现。尽管如此，它们始终遵循 `thin ≤ medium ≤ thick` 这一模式，并且这些值在同一文档中是恒定的。
+
+## 形式定义
+
+{{CSSInfo}}
+
+## 形式语法
 
 {{csssyntax}}
 
-| 关键字   | 实例 | 说明     |
-| -------- | ---- | -------- |
-| `thin`   |      | 细边线   |
-| `medium` |      | 中等边线 |
-| `thick`  |      | 宽边线   |
-
-> **备注：** 规范并没有规定关键字的实际值故在不同浏览器效果是不一样的，但显然 thin≤medium≤thick，并且值在单个文档中是恒定的
-
 ## 示例
 
-### A mix of values and lengths
+### 值与 length 的混合
 
-HTML
+#### HTML
 
 ```html
-<p id="sval">
-    one value: 6px wide border on all 4 sides</p>
-<p id="bival">
-    two different values: 2px wide top and bottom border, 10px wide right and left border</p>
-<p id="treval">
-    three different values: 0.3em top, 9px bottom, and zero width right and left</p>
-<p id="fourval">
-    four different values: "thin" top, "medium" right, "thick" bottom, and 1em right</p>
+<p id="one-value">一个值：四边均有 6px 的边框宽度。</p>
+<p id="two-values">
+  两个不同的值：顶部和底部边框宽 2px，右侧和左侧边框宽 10px。
+</p>
+<p id="three-values">
+  三个不同的值：顶部为 0.3em，底部为 9px，右侧和左侧的宽度为零。
+</p>
+<p id="four-values">
+  四个不同的值：顶部为“thin”，右侧为“medium”，底部为“thick”，左侧为 1em。
+</p>
 ```
 
 #### CSS
 
 ```css
-#sval {
-    border: ridge #ccc;
-    border-width: 6px;
+#one-value {
+  border: ridge #ccc;
+  border-width: 6px;
 }
-#bival {
-    border: solid red;
-    border-width: 2px 10px;
+#two-values {
+  border: solid red;
+  border-width: 2px 10px;
 }
-#treval {
-    border: dotted orange;
-    border-width: 0.3em 0 9px;
+#three-values {
+  border: dotted orange;
+  border-width: 0.3em 0 9px;
 }
-#fourval {
-    border: solid lightgreen;
-    border-width: thin medium thick 1em;
+#four-values {
+  border: solid lightgreen;
+  border-width: thin medium thick 1em;
 }
 p {
-    width: auto;
-    margin: 0.25em;
-    padding: 0.25em;
+  width: auto;
+  margin: 0.25em;
+  padding: 0.25em;
 }
 ```
 
-#### 运行结果
+#### 结果
 
-{{ EmbedLiveSample('A_mix_of_values_and_lengths', 300, 180) }}
+{{ EmbedLiveSample('值与 length 的组合', 320, 320) }}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
@@ -103,7 +173,7 @@ p {
 
 {{Compat}}
 
-## 参考
+## 参见
 
-- The border-related shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}
-- The border-width-related properties: {{Cssxref("border-bottom-width")}}, {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}
+- 与边框相关的简写属性：{{Cssxref("border")}}、{{Cssxref("border-style")}}、{{Cssxref("border-color")}}
+- 与边框宽度相关的属性：{{Cssxref("border-bottom-width")}}、{{Cssxref("border-left-width")}}、{{Cssxref("border-right-width")}}、{{Cssxref("border-top-width")}}

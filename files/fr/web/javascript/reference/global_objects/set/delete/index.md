@@ -1,22 +1,28 @@
 ---
 title: Set.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/delete
-original_slug: Web/JavaScript/Reference/Objets_globaux/Set/delete
 ---
 
 {{JSRef}}
 
 La méthode **`delete()`** permet de retirer un élément donné d'un objet `Set`.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-delete.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.delete()")}}
+
+```js interactive-example
+const set1 = new Set();
+set1.add({ x: 10, y: 20 }).add({ x: 20, y: 30 });
+
+// Delete any point with `x > 10`.
+set1.forEach((point) => {
+  if (point.x > 10) {
+    set1.delete(point);
+  }
+});
+
+console.log(set1.size);
+// Expected output: 1
+```
 
 ## Syntaxe
 
@@ -44,20 +50,20 @@ monSet.add("toto");
 monSet.delete("truc"); // Renvoie false. Aucun élément "truc" n'a pu être supprimé.
 monSet.delete("toto"); // Renvoie true.  L'élément a pu être supprimé.
 
-monSet.has("toto");    // Renvoie false. L'élément "toto" ne fait plus partie de l'ensemble.
+monSet.has("toto"); // Renvoie false. L'élément "toto" ne fait plus partie de l'ensemble.
 ```
 
 ### Utiliser `delete()` avec `forEach()`
 
 ```js
 var objetSet = new Set();
-objetSet.add({x: 10, y: 20}); // On ajoute un nouvel objet dans l'ensemble
-objetSet.add({x: 20, y: 30}); // On ajoute un nouvel objet dans l'ensemble
+objetSet.add({ x: 10, y: 20 }); // On ajoute un nouvel objet dans l'ensemble
+objetSet.add({ x: 20, y: 30 }); // On ajoute un nouvel objet dans l'ensemble
 
 // On supprime les points de l'ensemble pour lesquels
 // x est supérieur à 10
-objetSet.forEach(function(point){
-  if(point.x > 10){
+objetSet.forEach(function (point) {
+  if (point.x > 10) {
     objetSet.delete(point);
   }
 });

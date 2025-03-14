@@ -1,15 +1,27 @@
 ---
 title: Adición (+)
 slug: Web/JavaScript/Reference/Operators/Addition
-translation_of: Web/JavaScript/Reference/Operators/Addition
-original_slug: Web/JavaScript/Referencia/Operadores/Adición
 ---
 
 {{jsSidebar("Operators")}}
 
 El operador de adición (`+`) produce la suma de operandos numéricos o la concatenación de (cadenas) string.
 
-{{EmbedInteractiveExample("pages/js/expressions-addition.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Addition operator")}}
+
+```js interactive-example
+console.log(2 + 2);
+// Expected output: 4
+
+console.log(2 + true);
+// Expected output: 3
+
+console.log("hello " + "everyone");
+// Expected output: "hello everyone"
+
+console.log(2001 + ": A Space Odyssey");
+// Expected output: "2001: A Space Odyssey"
+```
 
 La fuente para este ejemplo interactivo está almacenado en un repositorio Github. Si te gustaría contribuir al proyecto de ejemplos interactivos, por favor clona <https://github.com/mdn/interactive-examples> y envianos una pull-request.
 
@@ -25,37 +37,35 @@ Operator: x + y
 
 ```js
 // Número + Número -> adición
-1 + 2 // 3
+1 + 2; // 3
 
 // Booleano + Número -> adición
-true + 1 // 2
+true + 1; // 2
 
 // Booleano + Booleano -> adición
-false + false // 0
+false + false; // 0
 ```
 
 ### Concatenación de (cadenas) String
 
 ```js
 // String + String -> concatenación
-'fut' + 'bol' // "futbol"
+"fut" + "bol"; // "futbol"
 
 // Número + String -> concatenación
-5 + 'oh' // "5oh"
+5 + "oh"; // "5oh"
 
 // String + Booleano -> concatenación
-'fut' + false // "futfalse"
+"fut" + false; // "futfalse"
 ```
 
-## Especificación
+## Especificaciones
 
-| Specification                                                                                        |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-addition-operator-plus', 'Addition operator')}} |
+{{Specifications}}
 
-## Compatibilidad de Explorador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.addition")}}
+{{Compat}}
 
 ## También revisa
 

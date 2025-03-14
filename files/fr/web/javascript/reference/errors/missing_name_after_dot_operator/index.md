@@ -1,12 +1,6 @@
 ---
-title: 'SyntaxError: missing name after . operator'
+title: "SyntaxError: missing name after . operator"
 slug: Web/JavaScript/Reference/Errors/Missing_name_after_dot_operator
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_name_after_dot_operator
-original_slug: Web/JavaScript/Reference/Erreurs/Missing_name_after_dot_operator
 ---
 
 {{jsSidebar("Errors")}}
@@ -23,13 +17,13 @@ SyntaxError: missing name after . operator
 
 ## Quel est le problème ?
 
-L'opérateur `.` (le point) est utilisé pour [accéder aux propriétés d'un objet](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres). Il est nécessaire d'indiquer le nom de la propriété à laquelle on souhaite accéder. Pour les propriétés dont le nom est calculé, il est préférable d'utiliser les crochets pour encadrer le nom. Cela permet de calculer une expression dont le résultat sera le nom de la propriété recherchée. Peut-être cherchiez-vous à utiliser l'opérateur de concaténation ? C'est l'opérateur `+` qu'il faut utiliser dans ce cas. Pour plus de détails, voir les exemples ci-après.
+L'opérateur `.` (le point) est utilisé pour [accéder aux propriétés d'un objet](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors). Il est nécessaire d'indiquer le nom de la propriété à laquelle on souhaite accéder. Pour les propriétés dont le nom est calculé, il est préférable d'utiliser les crochets pour encadrer le nom. Cela permet de calculer une expression dont le résultat sera le nom de la propriété recherchée. Peut-être cherchiez-vous à utiliser l'opérateur de concaténation ? C'est l'opérateur `+` qu'il faut utiliser dans ce cas. Pour plus de détails, voir les exemples ci-après.
 
 ## Exemples
 
 ### Accéder à une propriété
 
-[Pour accéder à une propriété](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres) en JavaScript, on utilise le point (.) ou les crochets (`[]`) mais pas une combinaison des deux. Les crochets sont notamment utiles lorsqu'on souhaite accéder à des propriétés dont le nom est calculé.
+[Pour accéder à une propriété](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors) en JavaScript, on utilise le point (.) ou les crochets (`[]`) mais pas une combinaison des deux. Les crochets sont notamment utiles lorsqu'on souhaite accéder à des propriétés dont le nom est calculé.
 
 ```js example-bad
 var obj = { toto: { truc: "bidule", machin2: "bidule2" } };
@@ -73,4 +67,4 @@ console.log("Coucou " + "monde");
 
 ## Voir aussi
 
-- [Les accesseurs de propriété](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres)
+- [Les accesseurs de propriété](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors)

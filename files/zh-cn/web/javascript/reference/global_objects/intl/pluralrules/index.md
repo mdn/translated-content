@@ -5,114 +5,46 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 
 {{JSRef}}
 
-该 **`Intl.PluralRules`** 对象是用于启用多种敏感格式和多种语言规则的构造函数。
+**`Intl.PluralRules`** 对象是用于复数敏感的格式化和复数相关的语言规则。
 
-## 句法
+## 构造函数
 
-```plain
-new Intl.PluralRules([locales[, options]]) Intl.PluralRules.call(this[, locales[, options]])
-```
+- {{jsxref("Intl/PluralRules/PluralRules", "Intl.PluralRules()")}}
+  - : 创建一个新的 `Intl.PluralRules` 对象。
 
-### 参数>
+## 静态方法
 
-- `locales`
-  - : 可选的。一个带有 BCP 47 语言标签的字符串或这种字符串的数组。有关参数的一般形式和解释`locales`，请参阅{{jsxref("Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}。
-- `options`
+- {{jsxref("Intl/PluralRules/supportedLocalesOf", "Intl.PluralRules.supportedLocalesOf()")}}
+  - : 返回一个数组，其中包含提供的区域（locale）中被运行时所支持的，而不必回退到运行时的默认区域。
 
-  - : 可选的，具有部分或全部以下属性的对象：
+## 实例方法
 
-    - `localeMatcher`
-      - : 要使用的语言环境匹配算法。可能的值是`"lookup"`和`"best fit"`; 默认是`"best fit"`。有关此选项的信息，请参阅{{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}。
-    - `type`
+- {{jsxref("Intl/PluralRules/resolvedOptions", "Intl.PluralRules.prototype.resolvedOptions()")}}
+  - : 返回一个新的对象，其属性反映了在对象初始化期间计算所得的区域和一系列选项。
+- {{jsxref("Intl/PluralRules/select", "Intl.PluralRules.prototype.select()")}}
+  - : 返回一个字符串，指示用于区域敏感的格式化的复数类别。
+- {{jsxref("Intl/PluralRules/selectRange", "Intl.PluralRules.prototype.selectRange()")}}
+  - : 此方法接收两个值并返回一个字符串，指示用于区域敏感的格式化的复数类别。
 
-      - : 要使用的类型。可能的值是：
+## 示例
 
-        - `"cardinal"`对于基数（指的是事物的数量）。这是默认值。
-        - `"ordinal"` 对于序号（指的是事物的排序或排名，例如英文中的“1st”，“2nd”，“3rd”）。
+### 使用 locales
 
-## 描述
-
-### 属性
-
-- {{jsxref("PluralRules.prototype", "Intl.PluralRules.prototype")}}
-  - : 允许为所有对象添加属性。
-
-### 方法
-
-- {{jsxref("PluralRules.supportedLocalesOf", "Intl.PluralRules.supportedLocalesOf()")}}
-  - : 返回一个数组，其中包含提供的语言环境的支持，而不必回退到运行时的默认语言环境。
-
-## `PluralRules` 实例
-
-### 属性
-
-`PluralRules` 实例从其原型继承了以下属性：
-
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules/prototype', 'Properties')}}
-
-### 方法>
-
-`PluralRules` 实例从它们的原型继承了以下方法：
-
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules/prototype', 'Methods')}}
-
-## 例子
-
-### 基本用法
-
-在没有指定语言环境的基本使用中，返回默认语言环境中的格式化字符串和默认选项。这有助于区分单数和复数形式，例如“dog”和“dogs”。
+此示例显示本地化复数类别的一些值。为了获得应用程序用户界面中使用的语言格式，请确保使用 `locales` 参数指定了语言（可能还有一些回退语言）：
 
 ```js
-var pr = new Intl.PluralRules();
+// 阿拉伯语有不同的复数类别
 
-pr.select(0);
-// → 'other' if in US English locale
-
-pr.select(1);
-// → 'one' if in US English locale
-
-pr.select(2);
-// → 'other' if in US English locale
-```
-
-### 运用 `locales`
-
-这个例子展示了局部复数规则的一些变化。为了获得应用程序用户界面中使用的语言格式，请确保使用`locales`参数指定该语言（可能还有一些备用语言）>
-
-```js
-// Arabic has different plural rules
-
-new Intl.PluralRules('ar-EG').select(0);
+new Intl.PluralRules("ar-EG").select(0);
 // → 'zero'
-new Intl.PluralRules('ar-EG').select(1);
+new Intl.PluralRules("ar-EG").select(1);
 // → 'one'
-new Intl.PluralRules('ar-EG').select(2);
+new Intl.PluralRules("ar-EG").select(2);
 // → 'two'
-new Intl.PluralRules('ar-EG').select(6);
+new Intl.PluralRules("ar-EG").select(6);
 // → 'few'
-new Intl.PluralRules('ar-EG').select(18);
+new Intl.PluralRules("ar-EG").select(18);
 // → 'many'
-```
-
-### 运用
-
-可以查询查询结果使用>`options`参数进行自定义，该参数具有一个`type`您可以设置的属性`ordinal`。这对计算序数指标很有用，例如“第一”，“第二”，“第三”，“第四”，“42”等。
-
-```js
-var pr = new Intl.PluralRules('en-US', { type: 'ordinal' });
-
-pr.select(0);
-// → 'other'
-pr.select(1);
-// → 'one'
-pr.select(2);
-// → 'two'
-pr.select(3);
-// → 'few'
-pr.select(4);
-// → 'other'
-pr.select(42);
-// → 'two'
 ```
 
 ## 规范
@@ -123,6 +55,7 @@ pr.select(42);
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'See_also')}}
+- {{jsxref("Intl")}}
+- [FormatJS 中 `Intl.PluralRules` 的 polyfill](https://formatjs.io/docs/polyfills/intl-pluralrules/)

@@ -1,12 +1,8 @@
 ---
 title: CustomEvent
 slug: Web/API/CustomEvent
-tags:
-  - Interface
-  - Reference
-browser-compat: api.CustomEvent
-translation_of: Web/API/CustomEvent
 ---
+
 {{APIRef("DOM")}}
 
 **`CustomEvent`** 인터페이스는 어떤 목적이든간에 애플리케이션이 초기화한 이벤트를 나타냅니다.
@@ -34,7 +30,7 @@ translation_of: Web/API/CustomEvent
 - {{domxref("CustomEvent.initCustomEvent()")}} {{deprecated_inline}}
   - : `CustomEvent` 객체를 초기화합니다. 이미 발송한 이벤트에서는 아무 동작도 하지 않습니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

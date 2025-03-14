@@ -1,13 +1,6 @@
 ---
 title: PerformanceMeasure
 slug: Web/API/PerformanceMeasure
-tags:
-  - API
-  - Interface
-  - Performance Timeline API
-  - Reference
-  - Performance Web
-translation_of: Web/API/PerformanceMeasure
 ---
 
 {{APIRef("User Timing API")}}
@@ -37,7 +30,7 @@ Cette interface n'a pas de méthode.
 
 ## Exemple
 
-Voir l'exemple dans : [Utilisation de l'API _User Timing_](/fr/docs/Web/API/User_Timing_API/Using_the_User_Timing_API).
+Voir l'exemple dans : [Utilisation de l'API _User Timing_](/fr/docs/Web/API/Performance_API/User_timing).
 
 ## Spécifications
 
@@ -49,5 +42,5 @@ Voir l'exemple dans : [Utilisation de l'API _User Timing_](/fr/docs/Web/API/User
 
 ## Voir aussi
 
-- [API _User Timing_](/fr/docs/Web/API/User_Timing_API)
-- [Utilisation de l'API _User Timing_](/fr/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
+- [API _User Timing_](/fr/docs/Web/API/Performance_API/User_timing)
+- [Utilisation de l'API _User Timing_](/fr/docs/Web/API/Performance_API/User_timing)

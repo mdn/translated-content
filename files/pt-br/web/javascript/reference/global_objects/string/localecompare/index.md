@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 
 O método `localeCompare()` retorna um número que indica se uma string de referência vem antes ou depois, ou é a mesma que a string fornecida na ordem de classificação.
 
-{{EmbedInteractiveExample("pages/js/string-localecompare.html")}}
+{{InteractiveExample("JavaScript Demo: String.localeCompare()")}}
+
+```js interactive-example
+const a = "réservé"; // With accents, lowercase
+const b = "RESERVE"; // No accents, uppercase
+
+console.log(a.localeCompare(b));
+// Expected output: 1
+console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
+// Expected output: 0
+```
 
 Os novos argumentos _`locales`_ e _`options`_ permitem que os aplicativos especifiquem o idioma cuja ordem da ordenação deve ser usada e personalizem o comportamento da função. Em implementações mais antigas, que ignoram os argumentos _`locales`_ e _`options`_, a localidade e a ordem de classificação usadas são totalmente dependentes da implementação.
 
@@ -53,13 +63,13 @@ Ao comparar um grande número de strings, como na classificação de grandes arr
 
 ```js
 // A letra "a" está antes de "c" produzindo um valor negativo
-'a'.localeCompare('c'); // -2 ou -1 (ou algum outro valor negativo)
+"a".localeCompare("c"); // -2 ou -1 (ou algum outro valor negativo)
 
 // Alfabeticamente, a palavra "verificar" vem depois de "contra", produzindo um valor positivo
-'verificar'.localeCompare('contra'); // 2 ou 1 (ou algum outro valor positivo)
+"verificar".localeCompare("contra"); // 2 ou 1 (ou algum outro valor positivo)
 
 // "a" e "a" são equivalentes, resultando em um valor neutro de zero
-'a'.localeCompare('a'); // 0
+"a".localeCompare("a"); // 0
 ```
 
 ### Ordenar um array
@@ -67,8 +77,8 @@ Ao comparar um grande número de strings, como na classificação de grandes arr
 `localeCompare()` permite a ordenação sem distinção entre maiúsculas e minúsculas em um array.
 
 ```js
-let items = ['réservé', 'Premier', 'Cliché', 'communiqué', 'café', 'Adieu'];
-items.sort( (a, b) => a.localeCompare(b, 'fr', {ignorePunctuation: true}));
+let items = ["réservé", "Premier", "Cliché", "communiqué", "café", "Adieu"];
+items.sort((a, b) => a.localeCompare(b, "fr", { ignorePunctuation: true }));
 // ['Adieu', 'café', 'Cliché', 'communiqué', 'Premier', 'réservé']
 ```
 
@@ -81,9 +91,9 @@ Para verificar se uma implementação os suporta, use o argumento `"i"` (um requ
 ```js
 function localeCompareSupportsLocales() {
   try {
-    'foo'.localeCompare('bar', 'i');
+    "foo".localeCompare("bar", "i");
   } catch (e) {
-    return e.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
@@ -94,8 +104,8 @@ function localeCompareSupportsLocales() {
 Os resultados fornecidos por `localeCompare()` variam entre os idiomas. Para obter a ordem de classificação do idioma usado na interface do usuário de seu aplicativo, certifique-se de especificar esse idioma (e possivelmente alguns idiomas substitutos) usando o argumento _`locales`_:
 
 ```js
-console.log('ä'.localeCompare('z', 'de')); // um valor negativo: em alemão, ä é classificado antes de z
-console.log('ä'.localeCompare('z', 'sv')); // um valor positivo: em sueco, ä é classificado após z
+console.log("ä".localeCompare("z", "de")); // um valor negativo: em alemão, ä é classificado antes de z
+console.log("ä".localeCompare("z", "sv")); // um valor positivo: em sueco, ä é classificado após z
 ```
 
 ### Usando `options`
@@ -104,10 +114,10 @@ Os resultados fornecidos por `localeCompare()` podem ser personalizados usando o
 
 ```js
 // em alemão, ä tem a como letra base
-console.log('ä'.localeCompare('a', 'de', { sensitivity: 'base' })); // 0
+console.log("ä".localeCompare("a", "de", { sensitivity: "base" })); // 0
 
 // em sueco, ä e a são letras de base separadas
-console.log('ä'.localeCompare('a', 'sv', { sensitivity: 'base' })); // um valor positivo
+console.log("ä".localeCompare("a", "sv", { sensitivity: "base" })); // um valor positivo
 ```
 
 ### Ordenação numérica
@@ -117,7 +127,7 @@ console.log('ä'.localeCompare('a', 'sv', { sensitivity: 'base' })); // um valor
 console.log("2".localeCompare("10")); // 1
 
 // numeric using options:
-console.log("2".localeCompare("10", undefined, {numeric: true})); // -1
+console.log("2".localeCompare("10", undefined, { numeric: true })); // -1
 
 // numeric using locales tag:
 console.log("2".localeCompare("10", "en-u-kn-true")); // -1
@@ -125,14 +135,11 @@ console.log("2".localeCompare("10", "en-u-kn-true")); // -1
 
 ## Especificações
 
-| Especificação                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.localecompare', 'String.prototype.localeCompare')}}         |
-| {{SpecName('ES Int Draft', '#sup-String.prototype.localeCompare', 'String.prototype.localeCompare')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.localeCompare")}}
+{{Compat}}
 
 ## Veja também
 

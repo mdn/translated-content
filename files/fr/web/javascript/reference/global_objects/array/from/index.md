@@ -1,22 +1,21 @@
 ---
 title: Array.from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/from
 ---
 
 {{JSRef}}
 
 La méthode **`Array.from()`** permet de créer une nouvelle instance d'`Array` (une copie superficielle) à partir d'un objet itérable ou semblable à un tableau.
 
-{{EmbedInteractiveExample("pages/js/array-from.html")}}
+{{InteractiveExample("JavaScript Demo: Array.from()")}}
+
+```js interactive-example
+console.log(Array.from("foo"));
+// Expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], (x) => x + x));
+// Expected output: Array [2, 4, 6]
+```
 
 ## Syntaxe
 
@@ -42,9 +41,9 @@ Une nouvelle instance de {{jsxref("Array")}}.
 `Array.from()` permet de créer des instances d'`Array` à partir :
 
 - d'objets semblables à des tableaux (qui disposent d'une propriété `length` et d'éléments indexés) ou
-- [d'objets itérables](/fr/docs/Web/JavaScript/Guide/iterable) (des objets dont on peut avoir les éléments comme {{jsxref("Map")}} et {{jsxref("Set")}}).
+- [d'objets itérables](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) (des objets dont on peut avoir les éléments comme {{jsxref("Map")}} et {{jsxref("Set")}}).
 
-`Array.from()` possède un paramètre optionnel `fonctionMap`, qui permet d'exécuter une fonction {{jsxref("Array.prototype.map", "map")}} sur chacun des éléments du tableau (ou de l'instance de la classe fille) qui est créé. Autrement dit `Array.from(obj, mapFn, thisArg)` correspond exactement à `Array.from(obj).map(mapFn, thisArg)`, sauf qu'il n'y a pas de tableau intermédiaire de créé. Cet aspect est notamment important pour certaines classes filles, comme les [tableaux typés](/fr/docs/JavaScript/Tableaux_typ%C3%A9s) (en effet, un tableau intermédiaire aurait eu ses valeurs tronquées pour qu'elles soient du type approprié).
+`Array.from()` possède un paramètre optionnel `fonctionMap`, qui permet d'exécuter une fonction {{jsxref("Array.prototype.map", "map")}} sur chacun des éléments du tableau (ou de l'instance de la classe fille) qui est créé. Autrement dit `Array.from(obj, mapFn, thisArg)` correspond exactement à `Array.from(obj).map(mapFn, thisArg)`, sauf qu'il n'y a pas de tableau intermédiaire de créé. Cet aspect est notamment important pour certaines classes filles, comme les [tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays) (en effet, un tableau intermédiaire aurait eu ses valeurs tronquées pour qu'elles soient du type approprié).
 
 La propriété `length` de la méthode `from()` est 1.
 
@@ -61,20 +60,25 @@ function f() {
 f(1, 2, 3);
 // [1, 2, 3]
 
-
 // Ça fonctionne avec tous les objets itérables...
 // Set
 const s = new Set(["toto", "truc", "truc", "bidule"]);
 Array.from(s);
 // ["toto", "truc", "bidule"]
 
-
 // Map
-const m = new Map([[1, 2], [2, 4], [4, 8]]);
+const m = new Map([
+  [1, 2],
+  [2, 4],
+  [4, 8],
+]);
 Array.from(m);
 // [[1, 2], [2, 4], [4, 8]]
 
-const mapper = new Map([["1", "a"], ["2", "b"]]);
+const mapper = new Map([
+  ["1", "a"],
+  ["2", "b"],
+]);
 Array.from(mapper.values());
 // ["a", "b"]
 
@@ -85,15 +89,13 @@ Array.from(mapper.keys());
 Array.from("toto");
 // ["t", "o", "t", "o"]
 
-
 // En utilisant une fonction fléchée pour remplacer map
 // et manipuler des éléments
-Array.from([1, 2, 3], x => x + x);
+Array.from([1, 2, 3], (x) => x + x);
 // [2, 4, 6]
 
-
 // Pour générer une séquence de nombres
-Array.from({length: 5}, (v, k) => k);
+Array.from({ length: 5 }, (v, k) => k);
 // [0, 1, 2, 3, 4]
 ```
 

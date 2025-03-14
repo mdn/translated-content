@@ -1,7 +1,9 @@
 ---
-title: HTMLAnchorElement.host
+title: "HTMLAnchorElement: host プロパティ"
+short-title: host
 slug: Web/API/HTMLAnchorElement/host
-original_slug: Web/API/HTMLHyperlinkElementUtils/host
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -17,15 +19,15 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/host
 ```js
 const anchor = document.createElement("a");
 
-anchor.href = "https://developer.mozilla.org/en-US/HTMLAnchorElement"
-anchor.host == "developer.mozilla.org"
+anchor.href = "https://developer.mozilla.org/ja/HTMLAnchorElement";
+anchor.host === "developer.mozilla.org";
 
-anchor.href = "https://developer.mozilla.org:443/en-US/HTMLAnchorElement"
-anchor.host == "developer.mozilla.org"
+anchor.href = "https://developer.mozilla.org:443/ja/HTMLAnchorElement";
+anchor.host === "developer.mozilla.org";
 // The port number is not included because 443 is the scheme's default port
 
-anchor.href = "https://developer.mozilla.org:4097/en-US/HTMLAnchorElement"
-anchor.host == "developer.mozilla.org:4097"
+anchor.href = "https://developer.mozilla.org:4097/ja/HTMLAnchorElement";
+anchor.host === "developer.mozilla.org:4097";
 ```
 
 ## 仕様書

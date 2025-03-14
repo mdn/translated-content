@@ -1,18 +1,9 @@
 ---
 title: String.prototype.italics()
 slug: Web/JavaScript/Reference/Global_Objects/String/italics
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/italics
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/italics
 ---
 
-{{JSRef("Objetos_globales", "String")}}
+{{JSRef}}
 
 {{deprecated_header}}
 
@@ -37,7 +28,7 @@ Usa el método `italics` para formatear y mostrar una cadena en un documento.
 El siguiente ejemplo usa métodos de `string` para cambiar el formateado de una cadena:
 
 ```js
-var cadenaMundo="¡Hola mundo!";
+var cadenaMundo = "¡Hola mundo!";
 
 console.log(cadenaMundo.blink());
 console.log(cadenaMundo.bold());

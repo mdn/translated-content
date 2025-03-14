@@ -1,13 +1,6 @@
 ---
 title: Math.asin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asin
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/asin
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/asin
 ---
 
 {{JSRef}}
@@ -16,12 +9,25 @@ La fonction **`Math.asin()`** renvoie l'arc sinus d'un nombre (en radians). Elle
 
 <math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mo stretchy="false">[</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo>;</mo><mn>1</mn><mo stretchy="false">]</mo><mo>,</mo><mspace width="thickmathspace"></mspace><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.asin</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">arcsin</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> le seul </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>∊</mo><mrow><mo>[</mo><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>;</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>]</mo></mrow><mspace width="thinmathspace"></mspace><mtext>tel que</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in [{-1};1],\;\mathtt{\operatorname{Math.asin}(x)} = \arcsin(x) = \text{ the unique } \; y \in \left[-\frac{\pi}{2}; \frac{\pi}{2}\right] \, \text{such that} \; \sin(y) = x</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-asin.html")}}
+{{InteractiveExample("JavaScript Demo: Math.asin()")}}
+
+```js interactive-example
+// Calculates angle of a right-angle triangle in radians
+function calcAngle(opposite, hypotenuse) {
+  return Math.asin(opposite / hypotenuse);
+}
+
+console.log(calcAngle(6, 10));
+// Expected output: 0.6435011087932844
+
+console.log(calcAngle(5, 3));
+// Expected output: NaN
+```
 
 ## Syntaxe
 
 ```js
-Math.asin(x)
+Math.asin(x);
 ```
 
 ### Paramètres
@@ -44,12 +50,12 @@ La méthode `Math.asin()` renvoie une valeur numérique comprise entre <math><se
 ### Utiliser `Math.asin()`
 
 ```js
-Math.asin(-2);  // NaN
-Math.asin(-1);  // -1.570796326794897 (-pi/2)
-Math.asin(0);   // 0
+Math.asin(-2); // NaN
+Math.asin(-1); // -1.570796326794897 (-pi/2)
+Math.asin(0); // 0
 Math.asin(0.5); // 0.5235987755982989
-Math.asin(1);   // 1.570796326794897 (pi/2)
-Math.asin(2);   // NaN
+Math.asin(1); // 1.570796326794897 (pi/2)
+Math.asin(2); // NaN
 ```
 
 Pour les valeurs (strictement) inférieures à -1 ou supérieures à 1, `Math.asin()` renvoie {{jsxref("NaN")}}.

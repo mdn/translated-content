@@ -1,14 +1,6 @@
 ---
 title: Créer des formes à partir des boîtes
-slug: Web/CSS/CSS_Shapes/From_box_values
-tags:
-  - Boîtes
-  - CSS
-  - CSS Shapes
-  - Formes CSS
-  - Guide
-translation_of: Web/CSS/CSS_Shapes/From_box_values
-original_slug: Web/CSS/CSS_Shapes/Créer_formes_boîtes
+slug: Web/CSS/CSS_shapes/From_box_values
 ---
 
 {{CSSRef}}
@@ -60,7 +52,8 @@ La valeur `content-box` correspond à la forme définie par le bord extérieur d
 
 {{EmbedGHLiveSample("css-examples/shapes/box/content-box.html", '100%', 800)}}
 
-> **Note :** Pour en savoir plus sur le modèle de boîte CSS, voir [cet article](/fr/docs/Learn/CSS/Building_blocks/The_box_model).
+> [!NOTE]
+> Pour en savoir plus sur le modèle de boîte CSS, voir [cet article](/fr/docs/Learn/CSS/Building_blocks/The_box_model).
 
 ## Quand utiliser les valeurs de boîte
 
@@ -70,4 +63,4 @@ Malgré cela, il est possible de créer des effets intéressants en n'utilisant 
 
 {{EmbedGHLiveSample("css-examples/shapes/box/bottom-margin-box.html", '100%', 800)}}
 
-Pour obtenir des formes plus complexes, il faudra utiliser les valeurs de [type `<basic-shape>` (les formes simples)](/fr/docs/Web/CSS/CSS_Shapes/Basic_Shapes) ou [définir une forme à partir d'une image](/fr/docs/Web/CSS/CSS_Shapes/Shapes_From_Images), tel que nous le verrons dans les autres guides de cette section.
+Pour obtenir des formes plus complexes, il faudra utiliser les valeurs de [type `<basic-shape>` (les formes simples)](/fr/docs/Web/CSS/CSS_shapes/Basic_shapes) ou [définir une forme à partir d'une image](/fr/docs/Web/CSS/CSS_shapes/Shapes_from_images), tel que nous le verrons dans les autres guides de cette section.

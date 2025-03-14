@@ -1,15 +1,6 @@
 ---
 title: HTMLFormElement.elements
 slug: Web/API/HTMLFormElement/elements
-tags:
-  - API
-  - Elements
-  - HTML DOM
-  - HTMLFormControlsCollection
-  - HTMLFormElement
-  - Property
-  - Reference
-translation_of: Web/API/HTMLFormElement/elements
 ---
 
 {{APIRef("HTML DOM")}}
@@ -22,7 +13,8 @@ translation_of: Web/API/HTMLFormElement/elements
 
 HTML 5 이전에는 `HTMLFormControlsCollection`을 기반으로 하는 {{domxref("HTMLCollection")}}을 반환하였습니다.
 
-> **참고:** 문서의 {{HTMLElement("form")}} 속성을 사용해도 마찬가지로 주어진 문서에 포함된 모든 컨트롤 폼의 목록을 얻을 수 있습니다.
+> [!NOTE]
+> 문서의 {{HTMLElement("form")}} 속성을 사용해도 마찬가지로 주어진 문서에 포함된 모든 컨트롤 폼의 목록을 얻을 수 있습니다.
 
 {{InheritanceDiagram(600,120)}}
 
@@ -36,7 +28,7 @@ HTML 5 이전에는 `HTMLFormControlsCollection`을 기반으로 하는 {{domxre
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
-- {{HTMLElement("input")}} (단, {{htmlattrxref("type", "input")}}이 `"image"`인 경우는 역사적으로 다른 기능을 위해 작동했기 때문에 생략됩니다.)
+- {{HTMLElement("input")}} (단, [`type`](/ko/docs/Web/HTML/Element/input#type)이 `"image"`인 경우는 역사적으로 다른 기능을 위해 작동했기 때문에 생략됩니다.)
 - {{HTMLElement("object")}}
 - {{HTMLElement("output")}}
 - {{HTMLElement("select")}}
@@ -50,9 +42,9 @@ HTML 5 이전에는 `HTMLFormControlsCollection`을 기반으로 하는 {{domxre
 
 ```html
 <form id="my-form">
-  <input type="text" name="username">
-  <input type="text" name="full-name">
-  <input type="password" name="password">
+  <input type="text" name="username" />
+  <input type="text" name="full-name" />
+  <input type="password" name="password" />
 </form>
 ```
 

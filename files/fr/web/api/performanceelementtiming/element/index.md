@@ -1,14 +1,6 @@
 ---
 title: PerformanceElementTiming.element
 slug: Web/API/PerformanceElementTiming/element
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - element
-  - PerformanceElementTiming
-translation_of: Web/API/PerformanceElementTiming/element
 ---
 
 {{APIRef("Element Timing API")}}
@@ -30,7 +22,7 @@ Un objet de type [`Element`](/fr/docs/Web/API/Element).
 Dans cet exemple, l'appel à `entry.element` va enregistrer dans la console `<img src="image.jpg" alt="une belle image" elementtiming="big-image">`.
 
 ```html
-<img src="image.jpg" alt="une belle image" elementtiming="big-image">
+<img src="image.jpg" alt="une belle image" elementtiming="big-image" />
 ```
 
 ```js
@@ -44,7 +36,8 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ entryTypes: ["element"] });
 ```
 
-> **Note :** Cet exemple utilise l'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) afin d'utiliser l'interface `PerformanceElementTiming`.
+> [!NOTE]
+> Cet exemple utilise l'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) afin d'utiliser l'interface `PerformanceElementTiming`.
 
 ## Spécifications
 

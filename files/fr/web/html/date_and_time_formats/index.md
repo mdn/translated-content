@@ -1,40 +1,20 @@
 ---
 title: Formats de date et d'heure utilisés en HTML
 slug: Web/HTML/Date_and_time_formats
-tags:
-  - Date
-  - Element
-  - Format
-  - HTML
-  - ISO 8601
-  - Input
-  - Reference
-  - String
-  - Time
-  - Week
-  - datetime
-  - datetime-local
-  - del
-  - ins
-  - month
-  - month-year
-  - week-year
-translation_of: Web/HTML/Date_and_time_formats
-original_slug: Web/HTML/Formats_date_heure_HTML
 ---
 
 {{HTMLSidebar}}
 
-Certains éléments HTML manipulent des valeurs temporelles pour des dates ou des heures. Les formats utilisés pour les chaînes de caractères qui définissent ces valeurs sont décrits dans cet article. Les éléments qui utilisent ces données sont notamment les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) qui permettent de choisir une date, une heure ou les deux, les éléments [`<ins>`](/fr/docs/Web/HTML/Element/ins) et [`<del>`](/fr/docs/Web/HTML/Element/del) dont l'attribut [`ins`](/fr/docs/Web/HTML/Element/ins#attr-datetime) indique la date (ou la date et l'heure) à laquelle l'ajout ou la suppression de contenu a eu lieu.
+Certains éléments HTML manipulent des valeurs temporelles pour des dates ou des heures. Les formats utilisés pour les chaînes de caractères qui définissent ces valeurs sont décrits dans cet article. Les éléments qui utilisent ces données sont notamment les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) qui permettent de choisir une date, une heure ou les deux, les éléments [`<ins>`](/fr/docs/Web/HTML/Element/ins) et [`<del>`](/fr/docs/Web/HTML/Element/del) dont l'attribut [`ins`](/fr/docs/Web/HTML/Element/ins#attr-datetime) indique la date (ou la date et l'heure) à laquelle l'ajout ou la suppression de contenu a eu lieu.
 
-Pour les éléments `<input>`, voici les différents type (cf. [`input`](/fr/docs/Web/HTML/Element/Input#attr-type)) pour lesquels l'attribut [`value`](/fr/docs/Web/HTML/Global_attributes#attr-value) contient une chaîne de caractères représentant une date ou une heure :
+Pour les éléments `<input>`, voici les différents type (cf. [`input`](/fr/docs/Web/HTML/Element/input#attr-type)) pour lesquels l'attribut [`value`](/fr/docs/Web/HTML/Global_attributes#attr-value) contient une chaîne de caractères représentant une date ou une heure :
 
-- [`date`](/fr/docs/Web/HTML/Element/Input/date)
-- [`datetime`](/fr/docs/Web/HTML/Element/Input/datetime) {{deprecated_inline}}
-- [`datetime-local`](/fr/docs/Web/HTML/Element/Input/datetime-local)
-- [`month`](/fr/docs/Web/HTML/Element/Input/month)
-- [`time`](/fr/docs/Web/HTML/Element/Input/time)
-- [`week`](/fr/docs/Web/HTML/Element/Input/week)
+- [`date`](/fr/docs/Web/HTML/Element/input/date)
+- [`datetime`](/fr/docs/Web/HTML/Element/input/datetime-local) {{deprecated_inline}}
+- [`datetime-local`](/fr/docs/Web/HTML/Element/input/datetime-local)
+- [`month`](/fr/docs/Web/HTML/Element/input/month)
+- [`time`](/fr/docs/Web/HTML/Element/input/time)
+- [`week`](/fr/docs/Web/HTML/Element/input/week)
 
 ## Exemples
 
@@ -135,7 +115,7 @@ En HTML, les chaînes qui représentent des dates et des heures manipulent uniqu
 
 ### Numérotation des années
 
-La spécification HTML indique que les années doivent être exprimées selon le [calendrier grégorien](https://fr.wikipedia.org/wiki/Calendrier_gr%C3%A9gorien). Bien que les interfaces utilisateur permettent éventuellement de saisir des dates grâce à d'autres calendriers, la valeur sous-jacente est toujours représentée à l'aide du calendrier grégorien.
+La spécification HTML indique que les années doivent être exprimées selon le [calendrier grégorien](https://fr.wikipedia.org/wiki/Calendrier_grégorien). Bien que les interfaces utilisateur permettent éventuellement de saisir des dates grâce à d'autres calendriers, la valeur sous-jacente est toujours représentée à l'aide du calendrier grégorien.
 
 Bien que le calendrier grégorien ait été créé en 1582 afin de remplacer le calendrier julien, la notation grégorienne est « étendue » en HTML jusqu'à 1 après J.C. Aussi, si vous manipulez des dates antérieures à 1582, assurez-vous qu'elles soient bien exprimées selon le calendrier grégorien.
 
@@ -311,9 +291,9 @@ Voici quelques règles supplémentaires :
 
 ## Représentation des dates et heures locales
 
-Une chaîne de caractères valide pour un élément de saisie [`datetime-local`](/fr/docs/Web/HTML/Element/Input/datetime-local) se compose d'une chaîne de caractères représentant une date, suivie de la lettre "`T`" ou d'une espace puis d'une chaîne de caractères représentant une heure. La représentation ne contient aucune information quant au fuseau horaire dont il est question et on présume que la valeur temporelle indiquée est relative au fuseau horaire de l'utilisateur.
+Une chaîne de caractères valide pour un élément de saisie [`datetime-local`](/fr/docs/Web/HTML/Element/input/datetime-local) se compose d'une chaîne de caractères représentant une date, suivie de la lettre "`T`" ou d'une espace puis d'une chaîne de caractères représentant une heure. La représentation ne contient aucune information quant au fuseau horaire dont il est question et on présume que la valeur temporelle indiquée est relative au fuseau horaire de l'utilisateur.
 
-Lorsqu'on définit la valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value) d'un champ `<input>` de type `datetime-local`, la chaîne de caractères est normalisée. Les formes normalisées utilisent toujours la lettre T comme séparateur entre la date et l'heure. De plus, les formes normalisées utilisent toujours la forme la plus courte pour exprimer l'heure (les secondes sont omises si leur valeur est `:00`).
+Lorsqu'on définit la valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value) d'un champ `<input>` de type `datetime-local`, la chaîne de caractères est normalisée. Les formes normalisées utilisent toujours la lettre T comme séparateur entre la date et l'heure. De plus, les formes normalisées utilisent toujours la forme la plus courte pour exprimer l'heure (les secondes sont omises si leur valeur est `:00`).
 
 | Chaîne de caractères      | Version normalisée       | Date et heure correspondantes                                         |
 | ------------------------- | ------------------------ | --------------------------------------------------------------------- |
@@ -352,7 +332,7 @@ Bien que ces règles permettent d'exprimer des fuseaux horaires entre -23:59 et 
 
 ## Voir aussi
 
-- [`<input>`](/fr/docs/Web/HTML/Element/Input)
+- [`<input>`](/fr/docs/Web/HTML/Element/input)
 - Les éléments [`<ins>`](/fr/docs/Web/HTML/Element/ins) et [`<del>`](/fr/docs/Web/HTML/Element/del) qui possèdent l'attribut `datetime` qui permet de définir une date ou une date et une heure locales pour indiquer le moment où le contenu a été inséré ou supprimé
 - [La spécification ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)
 - [Le chapitre sur les nombres et les dates](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates) dans le [Guide JavaScript](/fr/docs/Web/JavaScript/Guide)

@@ -1,15 +1,16 @@
 ---
-title: '-webkit-transition'
+title: -webkit-transition
 slug: Web/CSS/@media/-webkit-transition
 ---
 
 {{ CSSRef }} {{deprecated_header}} {{ Non-standard_header }}
 
-**`-webkit-transition`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、閲覧コンテキストが [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions)に対応していれば値が `true` になります。 WebKit または Blink 以外を使用したブラウザーでは対応していません。
+**`-webkit-transition`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、閲覧コンテキストが [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)に対応していれば値が `true` になります。 WebKit または Blink 以外を使用したブラウザーでは対応していません。
 
 Apple には [Safari CSS リファレンス](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3)に説明があります。ここでは `transition` と呼ばれるようになりました。
 
-> **メモ:** このメディア特性は使用しないでください。これは仕様化されておらず、広く実装されておらず、すべてのブラウザーから削除されています。代わりに {{cssxref("@supports")}} 特性クエリーを使用してください。
+> [!NOTE]
+> このメディア特性は使用しないでください。これは仕様化されておらず、広く実装されておらず、すべてのブラウザーから削除されています。代わりに {{cssxref("@supports")}} 特性クエリーを使用してください。
 
 ## 構文
 
@@ -51,7 +52,7 @@ Apple には [Safari CSS リファレンス](https://developer.apple.com/library
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{cssxref("@supports")}}
 - {{cssxref("transition")}}

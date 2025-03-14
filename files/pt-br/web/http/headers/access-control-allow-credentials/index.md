@@ -51,7 +51,7 @@ Usando [XHR](/pt-BR/docs/Web/API/XMLHttpRequest) com credenciais:
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://example.com/', true);
+xhr.open("GET", "http://example.com/", true);
 xhr.withCredentials = true;
 xhr.send(null);
 ```
@@ -60,19 +60,17 @@ Usando [Fetch](/pt-BR/docs/Web/API/Fetch_API) com credenciais:
 
 ```js
 fetch(url, {
-  credentials: 'include'
-})
+  credentials: "include",
+});
 ```
 
 ## Especificações
 
-| Especificação                                                                                                                        | Status                   | Comentário        |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ----------------- |
-| {{SpecName('Fetch','#http-access-control-allow-credentials', 'Access-Control-Allow-Credentials')}} | {{Spec2("Fetch")}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Access-Control-Allow-Credentials")}}
+{{Compat}}
 
 ## Veja também
 

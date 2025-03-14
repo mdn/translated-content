@@ -1,7 +1,6 @@
 ---
 title: Int8Array
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Int8Array
 ---
 
 {{JSRef}}
@@ -18,7 +17,7 @@ new Int8Array(object);
 new Int8Array(buffer [, byteOffset [, length]]);
 ```
 
-Для более детальной информации о синтаксисе конструктора смотрите _[TypedArray](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+Для более детальной информации о синтаксисе конструктора смотрите _[TypedArray](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntax)_.
 
 ## Properties
 
@@ -85,8 +84,6 @@ All `Int8Array` objects inherit from {{jsxref("TypedArray.prototype", "%TypedArr
   - : Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found. See also {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Int8Array.prototype.map()")}}
   - : Creates a new array with the results of calling a provided function on every element in this array. See also {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Int8Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
-  - : Former non-standard version of {{jsxref("TypedArray.copyWithin", "Int8Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.reduce", "Int8Array.prototype.reduce()")}}
   - : Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value. See also {{jsxref("Array.prototype.reduce()")}}.
 - {{jsxref("TypedArray.reduceRight", "Int8Array.prototype.reduceRight()")}}
@@ -125,7 +122,7 @@ console.log(int8.length); // 2
 console.log(int8.BYTES_PER_ELEMENT); // 1
 
 // From an array
-var arr = new Int8Array([21,31]);
+var arr = new Int8Array([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
@@ -138,20 +135,18 @@ var buffer = new ArrayBuffer(8);
 var z = new Int8Array(buffer, 1, 4);
 
 // From an iterable
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var int8 = new Int8Array(iterable);
 // Int8Array[1, 2, 3]
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                        | Status                           | Comment                                                                                                                       |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Superseded by ECMAScript 2015.                                                                                                |
-| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}} | {{Spec2('ES2015')}}         | Initial definition in an ECMA standard. Specified that `new` is required.                                                     |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 changed the `Int8Array` constructor to use the `ToIndex` operation and allows constructors with no arguments. |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -169,8 +164,8 @@ var dv = Int8Array([1, 2, 3]);
 var dv = new Int8Array([1, 2, 3]);
 ```
 
-## See also
+## Смотрите также
 
-- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

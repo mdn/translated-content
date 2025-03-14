@@ -1,29 +1,72 @@
 ---
 title: flex-wrap
 slug: Web/CSS/flex-wrap
-translation_of: Web/CSS/flex-wrap
 ---
 
-{{ CSSRef}}
+{{CSSRef}}
 
-Свойство [CSS](/ru/docs/CSS) **`flex-wrap`** задаёт правила вывода flex-элементов — в одну строку или в несколько, с переносом блоков. Если перенос разрешён, то возможно задать направление, в котором выводятся блоки.
+Свойство [CSS](/ru/docs/Web/CSS) **`flex-wrap`** задаёт правила вывода flex-элементов — в одну строку или в несколько, с переносом блоков. Если перенос разрешён, то возможно задать направление, в котором выводятся блоки.
 
-```css
+{{InteractiveExample("CSS Demo: flex-wrap")}}
+
+```css interactive-example-choice
 flex-wrap: nowrap;
-flex-wrap: wrap;
-flex-wrap: wrap-reverse;
+```
 
-/* Global values */
-flex-wrap: inherit;
-flex-wrap: initial;
-flex-wrap: unset;
+```css interactive-example-choice
+flex-wrap: wrap;
+```
+
+```css interactive-example-choice
+flex-wrap: wrap-reverse;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div>Item One</div>
+    <div>Item Two</div>
+    <div>Item Three</div>
+    <div>Item Four</div>
+    <div>Item Five</div>
+    <div>Item Six</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 80%;
+  display: flex;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  width: 60px;
+  margin: 10px;
+}
 ```
 
 {{cssinfo}}
 
-Подробнее по свойствам и общей информации смотрите [Using CSS flexible boxes](/en/CSS/Using_CSS_flexible_boxes).
+Подробнее о свойствах и дополнительную информацию смотрите [Основные понятия Flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
 
-## Syntax
+## Синтаксис
+
+```css
+flex-wrap: nowrap; /* Default value */
+flex-wrap: wrap;
+flex-wrap: wrap-reverse;
+
+/* Глобальные значения */
+flex-wrap: inherit;
+flex-wrap: initial;
+flex-wrap: revert;
+flex-wrap: revert-layer;
+flex-wrap: unset;
+```
 
 Свойство `flex-wrap` может содержать одно из следующих ниже значений.
 
@@ -36,30 +79,30 @@ flex-wrap: unset;
 - `wrap`
   - : Расположение в несколько линий. Свойство **cross-start** эквивалентно **start** или **before** в зависимости от значения `flex-direction` и свойство **cross-end** противоположно **cross-start**.
 - `wrap-reverse`
-  - : Ведёт себя так же, как и `wrap` но **cross-start** и **cross-end** инвертированы.
+  - : Ведёт себя так же, как и `wrap`, но **cross-start** и **cross-end** инвертированы.
 
-### Formal syntax
+### Формальный синтаксис
 
 {{csssyntax}}
 
-## Examples
+## Примеры
 
 ### HTML
 
 ```html
-<h4>This is an example for flex-wrap:wrap </h4>
+<h4>This is an example for flex-wrap:wrap</h4>
 <div class="content">
   <div class="red">1</div>
   <div class="green">2</div>
   <div class="blue">3</div>
 </div>
-<h4>This is an example for flex-wrap:nowrap </h4>
+<h4>This is an example for flex-wrap:nowrap</h4>
 <div class="content1">
   <div class="red">1</div>
   <div class="green">2</div>
   <div class="blue">3</div>
 </div>
-<h4>This is an example for flex-wrap:wrap-reverse </h4>
+<h4>This is an example for flex-wrap:wrap-reverse</h4>
 <div class="content2">
   <div class="red">1</div>
   <div class="green">2</div>
@@ -74,57 +117,55 @@ flex-wrap: unset;
 .content,
 .content1,
 .content2 {
-    color: #fff;
-    font: 100 24px/100px sans-serif;
-    height: 150px;
-    text-align: center;
+  color: #fff;
+  font: 100 24px/100px sans-serif;
+  height: 150px;
+  text-align: center;
 }
 
 .content div,
 .content1 div,
 .content2 div {
-    height: 50%;
-    width: 50%;
+  height: 50%;
+  width: 50%;
 }
 .red {
-    background: orangered;
+  background: orangered;
 }
 .green {
-    background: yellowgreen;
+  background: yellowgreen;
 }
 .blue {
-    background: steelblue;
+  background: steelblue;
 }
 
 /* Flexbox Styles */
 .content {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .content1 {
-    display: flex;
-    flex-wrap: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
 }
 .content2 {
-    display: flex;
-    flex-wrap: wrap-reverse;
+  display: flex;
+  flex-wrap: wrap-reverse;
 }
 ```
 
-### Results
+### Результат
 
-{{ EmbedLiveSample('Examples', '700px', '700px', '', 'Web/CSS/flex-wrap') }}
+{{EmbedLiveSample('Examples', '100%', '700')}}
 
-## Specifications
+## Спецификации
 
-| Specification                                                                            | Status                               | Comment |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{ SpecName('CSS3 Flexbox', '#flex-wrap-property', 'flex-wrap') }} | {{ Spec2('CSS3 Flexbox') }} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [Using CSS flexible boxes](/ru/docs/CSS/Using_CSS_flexible_boxes)
+- [Using CSS flexible boxes](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)

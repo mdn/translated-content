@@ -3,17 +3,21 @@ title: 坐标定位
 slug: Web/SVG/Tutorial/Positions
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
 
 ## 网格
 
-![](/@api/deki/files/78/=Canvas_default_grid.png) 对于所有元素，SVG 使用的坐标系统或者说网格系统，和[Canvas](/zh-CN/HTML/Canvas)用的差不多（所有计算机绘图都差不多）。这种坐标系统是：以页面的左上角为 (0,0) 坐标点，坐标以像素为单位，x 轴正方向是向右，y 轴正方向是向下。注意，这和你小时候所教的绘图方式是相反的。但是在 HTML 文档中，元素都是用这种方式定位的。
+对于所有元素，SVG 使用的坐标系统或者说网格系统，和 [Canvas](/zh-CN/docs/Web/API/Canvas_API) 用的差不多（所有计算机绘图都差不多）。这种坐标系统是：以页面的左上角为 (0,0) 坐标点，坐标以像素为单位，x 轴正方向是向右，y 轴正方向是向下。注意，这和你小时候所教的绘图方式是相反的。但是在 HTML 文档中，元素都是用这种方式定位的。
 
-#### 示例：
+![](canvas_default_grid.png)
+
+### 示例
 
 元素
 
-```plain
+```html
 <rect x="0" y="0" width="100" height="100" />
 ```
 
@@ -25,14 +29,14 @@ slug: Web/SVG/Tutorial/Positions
 
 在没有进一步规范说明的情况下，1 个用户单位等同于 1 个屏幕单位。要明确改变这种设定，SVG 里有多种方法。我们从`svg`根元素开始：
 
-```plain
-<svg width="100" height="100">
+```html
+<svg width="100" height="100">…</svg>
 ```
 
 上面的元素定义了一个 100\*100px 的 SVG 画布，这里 1 用户单位等同于 1 屏幕单位。
 
-```plain
-<svg width="200" height="200" viewBox="0 0 100 100">
+```html
+<svg width="200" height="200" viewBox="0 0 100 100">…</svg>
 ```
 
 这里定义的画布尺寸是 200\*200px。但是，viewBox 属性定义了画布上可以显示的区域：从 (0,0) 点开始，100 宽\*100 高的区域。这个 100\*100 的区域，会放到 200\*200 的画布上显示。于是就形成了放大两倍的效果。

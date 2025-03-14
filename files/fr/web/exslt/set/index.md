@@ -1,7 +1,6 @@
 ---
 title: Sets (set)
 slug: Web/EXSLT/set
-translation_of: Web/EXSLT/set
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
@@ -12,4 +11,4 @@ Le paquet EXSLT <i lang="en">Sets</i> fournit des fonctions pour manipuler des e
 
 ## Compatibilité des navigateurs
 
-{{Compat("xslt.exslt.set")}}
+{{Compat}}

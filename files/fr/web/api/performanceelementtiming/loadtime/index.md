@@ -1,14 +1,6 @@
 ---
 title: PerformanceElementTiming.loadTime
 slug: Web/API/PerformanceElementTiming/loadTime
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - loadTime
-  - PerformanceElementTiming
-translation_of: Web/API/PerformanceElementTiming/loadTime
 ---
 
 {{APIRef("Element Timing API")}}
@@ -30,7 +22,11 @@ Un objet [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) avec le t
 Dans cet exemple, l'appel à `entry.loadTime` renvoie le temps de chargement de l'image.
 
 ```html
-<img src="image.jpg" alt="une belle image" elementtiming="big-image" id="myImage">
+<img
+  src="image.jpg"
+  alt="une belle image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js
@@ -44,7 +40,8 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ entryTypes: ["element"] });
 ```
 
-> **Note :** Cet exemple utilise l'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) afin d'utiliser l'interface `PerformanceElementTiming`.
+> [!NOTE]
+> Cet exemple utilise l'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) afin d'utiliser l'interface `PerformanceElementTiming`.
 
 ## Spécifications
 

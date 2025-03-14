@@ -28,8 +28,8 @@ El evento `DeviceMotionEvent` proporciona a los desarrolladores información ace
 ## Ejemplo
 
 ```js
-window.addEventListener('devicemotion', function(event) {
-  console.log(event.acceleration.x + ' m/s2');
+window.addEventListener("devicemotion", function (event) {
+  console.log(event.acceleration.x + " m/s2");
 });
 ```
 
@@ -37,14 +37,14 @@ window.addEventListener('devicemotion', function(event) {
 
 {{Specifications}}
 
-## Compativilidad con los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.DeviceMotionEvent")}}
+{{Compat}}
 
 ## Ver también
 
-- [`deviceorientation`](/es/docs/Web/Reference/Events/deviceorientation)
+- [`deviceorientation`](/es/docs/Web/API/Window/deviceorientation_event)
 - {{DOMxRef("DeviceOrientationEvent")}}
-- [`devicemotion`](/es/docs/Web/Reference/Events/devicemotion)
-- [Detecting device orientation](/es/docs/WebAPI/Detecting_device_orientation)
-- [Orientation and motion data explained](/es/DOM/Orientation_and_motion_data_explained)
+- [`devicemotion`](/es/docs/Web/API/Window/devicemotion_event)
+- [Detecting device orientation](/es/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- [Orientation and motion data explained](/es/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)

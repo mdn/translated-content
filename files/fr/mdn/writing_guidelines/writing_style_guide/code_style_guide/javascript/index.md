@@ -1,14 +1,6 @@
 ---
 title: Lignes directrices pour JavaScript
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
-tags:
-  - Code
-  - Guide
-  - Directives
-  - JavaScript
-  - MDN Meta
-translation_of: MDN/Guidelines/Code_guidelines/JavaScript
-original_slug: MDN/Guidelines/Code_guidelines/JavaScript
 ---
 
 {{MDNSidebar}}
@@ -72,13 +64,13 @@ Faites ceci
 
 ```js example-good
 function myFunc() {
-  console.log('Hello!');
-};
+  console.log("Hello!");
+}
 ```
 
 Évitez cela
 
-```js example-bad
+```js-nolint example-bad
 function myFunc() { console.log('Hello!'); };
 ```
 
@@ -87,14 +79,18 @@ Nous avons également quelques règles spécifiques concernant l'espacement à l
 C'est plus lisible
 
 ```js example-good
-if(dayOfWeek === 7 && weather === 'soleil') {
-  goOnTrip('plage', 'voiture', ['crême glacée', 'pelle et sceau', 'serviette de plage']);
+if (dayOfWeek === 7 && weather === "soleil") {
+  goOnTrip("plage", "voiture", [
+    "crême glacée",
+    "pelle et sceau",
+    "serviette de plage",
+  ]);
 }
 ```
 
 que ceci
 
-```js example-bad
+```js-nolint example-bad
 if(dayOfWeek===7&&weather==='soleil'){
   goOnTrip('plage','voiture',['crême glacée','pelle et sceau','serviette de plage']);
 }
@@ -121,10 +117,10 @@ Mettez vos commentaires sur des lignes séparées précédant le code auquel ils
 ```js example-good
 function myFunc() {
   // Affiche la chaîne de caractères "Bonjour" dans la console JS du navigateur.
-  console.log('Bonjour');
+  console.log("Bonjour");
   // Crée un nouveau paragraphe, le remplit de contenu et l'ajoute au <body>
-  let para = document.createElement('p');
-  para.textContent = 'Mon nouveau paragraphe';
+  let para = document.createElement("p");
+  para.textContent = "Mon nouveau paragraphe";
   document.body.appendChild(para);
 }
 ```
@@ -137,7 +133,8 @@ Pour un usage général\*, vous pouvez utiliser les fonctionnalités ES6 courant
 
 Cependant, nous ne recommandons pas encore l'utilisation générale des nouvelles fonctionnalités ES telles que [async](/fr/docs/Web/JavaScript/Reference/Statements/async_function)/[await](/fr/docs/Web/JavaScript/Reference/Operators/await), les virgules de fin sur les listes d'arguments, etc. Nous préférerions que vous ne les utilisiez pas, sauf si cela est strictement nécessaire, et si vous les utilisez, incluez une explication dans votre exemple pour dire ce qu'ils font, avec un lien vers le matériel de référence approprié.
 
-> **Note :** Par "usage général", nous entendons la rédaction d'exemples généraux. Les pages de référence couvrant des fonctionnalités spécifiques de l'ES moderne doivent évidemment utiliser les fonctionnalités qu'elles documentent !
+> [!NOTE]
+> Par "usage général", nous entendons la rédaction d'exemples généraux. Les pages de référence couvrant des fonctionnalités spécifiques de l'ES moderne doivent évidemment utiliser les fonctionnalités qu'elles documentent !
 
 ## Variables
 
@@ -158,10 +155,11 @@ let speed = distance / time;
 ```js example-bad
 let thisIsaveryLONGVariableThatRecordsPlayerscore345654 = 0;
 
-let s = d/t;
+let s = d / t;
 ```
 
-> **Note :** The only place where it is OK to not use human-readable semantic names is where a very common recognized convention exists, such as using `i`, `j`, etc. for loop iterators.
+> [!NOTE]
+> The only place where it is OK to not use human-readable semantic names is where a very common recognized convention exists, such as using `i`, `j`, etc. for loop iterators.
 
 ### Déclaration des variables
 
@@ -170,38 +168,38 @@ Lorsque vous déclarez des variables et des constantes, utilisez les mots-clés 
 Si une variable ne sera pas réaffectée, préférez `const` :
 
 ```js example-good
-const myName = 'Chris';
+const myName = "Chris";
 console.log(myName);
 ```
 
 Sinon, utilisez `let` :
 
 ```js example-good
-let myAge = '40';
+let myAge = "40";
 myAge++;
-console.log('Happy birthday!');
+console.log("Happy birthday!");
 ```
 
 Cet exemple utilise `let` là où il devrait préférer `const`. Il fonctionnera mais devrait être évité dans les exemples de code MDN :
 
 ```js example-bad
-let myName = 'Chris';
+let myName = "Chris";
 console.log(myName);
 ```
 
 Cet exemple utilise `const` pour une variable qui est réaffectée. La réaffectation entraînera une erreur :
 
 ```js example-bad
-const myAge = '40';
+const myAge = "40";
 myAge++;
-console.log('Happy birthday!');
+console.log("Happy birthday!");
 ```
 
 Cet exemple utilise `var`, ce qui doit être évité dans les exemples de code MDN, sauf si cela est vraiment nécessaire :
 
 ```js example-bad
-var myAge = '40';
-var myName = 'Chris';
+var myAge = "40";
+var myName = "Chris";
 ```
 
 ## Opérateurs et comparaison
@@ -211,13 +209,13 @@ var myName = 'Chris';
 Les opérateurs ternaires doivent être placés sur une seule ligne :
 
 ```js example-good
-let status = (age >= 18) ? 'adult' : 'minor';
+let status = age >= 18 ? "adult" : "minor";
 ```
 
 Pas emboîtés :
 
-```js example-bad
-let status = (age >= 18)
+```js-nolint example-bad
+let status = age >= 18
   ? 'adult'
   : 'minor';
 ```
@@ -231,14 +229,14 @@ Utilisez toujours une égalité et une inégalité strictes.
 Comme ceci :
 
 ```js example-good
-name === 'Chris';
+name === "Chris";
 age !== 25;
 ```
 
 N'écrivez pas comme ça :
 
 ```js example-bad
-name == 'Chris';
+name == "Chris";
 age != 25;
 ```
 
@@ -251,17 +249,15 @@ Utilisez des raccourcis pour les tests booléens - utilisez `x` et `!x`, et non 
 Écrivez des instructions de contrôle comme ceci :
 
 ```js example-good
-if(iceCream) {
-  alert('Woo hoo!');
+if (iceCream) {
+  alert("Woo hoo!");
 }
 ```
 
 Pas comme cela :
 
-```js example-bad
-if (iceCream){
-  alert('Woo hoo!');
-}
+```js-nolint example-bad
+if(iceCream){ alert("Woo hoo!"); }
 ```
 
 N'oubliez pas non plus :
@@ -278,13 +274,13 @@ Pour insérer des valeurs dans des chaînes de caractères, utilisez des chaîne
 Comme suit :
 
 ```js example-good
-let myName = 'Chris';
+let myName = "Chris";
 console.log(`Hi! I'm ${myName}!`);
 ```
 
 En évitant d'écrire :
 
-```js example-bad
+```js-nolint example-bad
 let myName = 'Chris';
 console.log('Hi! I\'m' + myName + '!');
 ```
@@ -294,16 +290,16 @@ console.log('Hi! I\'m' + myName + '!');
 Lorsque vous insérez des chaînes de caractères dans les nœuds du DOM, utilisez la fonction [`Node.textContent`](/fr/docs/Web/API/Node/textContent):
 
 ```js example-good
-let text = 'Bonjour à vous tous, braves gens';
-const para = document.createElement('p');
+let text = "Bonjour à vous tous, braves gens";
+const para = document.createElement("p");
 para.textContent = text;
 ```
 
 Et pas [`Element.innerHTML`](/fr/docs/Web/API/Element/innerHTML):
 
 ```js example-bad
-let text = 'Bonjour à vous tous, braves gens';
-const para = document.createElement('p');
+let text = "Bonjour à vous tous, braves gens";
+const para = document.createElement("p");
 para.innerHTML = text;
 ```
 
@@ -318,8 +314,8 @@ When [loops](/fr/docs/Learn/JavaScript/Building_blocks/Looping_code) are require
 Lorsque vous utilisez des boucles `for`/`for...of`, veillez à définir correctement l'initialisateur, avec un mot clé `let` :
 
 ```js example-good
-let cats = ['Athena', 'Luna'];
-for(let i of cats) {
+let cats = ["Athena", "Luna"];
+for (let i of cats) {
   console.log(i);
 }
 ```
@@ -327,8 +323,8 @@ for(let i of cats) {
 Pas
 
 ```js example-bad
-let cats = ['Athena', 'Luna'];
-for(i of cats) {
+let cats = ["Athena", "Luna"];
+for (i of cats) {
   console.log(i);
 }
 ```
@@ -343,17 +339,17 @@ Gardez également à l'esprit :
 Formatez les instructions `switch` comme suit :
 
 ```js example-good
-let expr = 'Papayes';
-switch(expr) {
-  case 'Oranges':
-    console.log('Les oranges sont à 1,10 € le kilo.');
+let expr = "Papayes";
+switch (expr) {
+  case "Oranges":
+    console.log("Les oranges sont à 1,10 € le kilo.");
     break;
-  case 'Papayes':
-    console.log('Les mangues et les papayes sont à 5,24 € le kilo.');
+  case "Papayes":
+    console.log("Les mangues et les papayes sont à 5,24 € le kilo.");
     // résultat attendu : "Les mangues et les papayes sont à 5,24 € le kilo."
     break;
   default:
-    console.log('Désolé, nous n'avons plus de ' + expr + '.');
+    console.log(`Désolé, nous n'avons plus de ${expr}.`);
 }
 ```
 
@@ -367,23 +363,24 @@ Par exemple :
 
 ```js example-good
 function sayHello() {
-  alert('Bonjour !');
-};
+  alert("Bonjour !");
+}
 ```
 
 En évitant de faire :
 
 ```js example-bad
 function SayHello() {
-  alert('Bonjour !');
-};
+  alert("Bonjour !");
+}
 
 function notVeryObviousName() {
-  alert('Bonjour !');
-};
+  alert("Bonjour !");
+}
 ```
 
-> **Note :** Le seul endroit où il est acceptable de ne pas utiliser des noms sémantiques lisibles par l'homme est lorsqu'une convention reconnue très courante existe, comme l'utilisation de `i`, `j`, etc. pour les itérateurs de boucle.
+> [!NOTE]
+> Le seul endroit où il est acceptable de ne pas utiliser des noms sémantiques lisibles par l'homme est lorsqu'une convention reconnue très courante existe, comme l'utilisation de `i`, `j`, etc. pour les itérateurs de boucle.
 
 ### Définition des fonctions
 
@@ -400,9 +397,9 @@ function sum(a, b) {
 Pas comme ça :
 
 ```js example-bad
-let sum = function(a, b) {
+let sum = function (a, b) {
   return a + b;
-}
+};
 ```
 
 Lorsque vous utilisez des fonctions anonymes à l'intérieur d'une méthode qui requiert une fonction comme paramètre, il est acceptable (mais pas obligatoire) d'utiliser une fonction flèche pour rendre le code plus court et plus propre.
@@ -411,7 +408,7 @@ Donc, au lieu de ça :
 
 ```js example-good
 const array1 = [1, 2, 3, 4];
-let sum = array.reduce(function(a, b) {
+let sum = array.reduce(function (a, b) {
   return a + b;
 });
 ```
@@ -420,9 +417,7 @@ vous pourriez écrire ceci :
 
 ```js example-good
 const array = [1, 2, 3, 4];
-let sum = array.reduce((a, b) =>
-  a + b
-);
+let sum = array.reduce((a, b) => a + b);
 ```
 
 N'oubliez pas non plus :
@@ -437,7 +432,7 @@ Utilisez des littéraux - et non des constructeurs - pour créer des objets gén
 Par exemple :
 
 ```js example-good
-let myObject = { };
+let myObject = {};
 ```
 
 Et pas :
@@ -462,7 +457,7 @@ class Person {
 
   greeting() {
     console.log(`Salut ! Je m'appelle ${this.name}`);
-  };
+  }
 }
 ```
 
@@ -481,13 +476,13 @@ Lorsque vous définissez une classe d'objets (comme ci-dessus), utilisez l'écri
 Lors de la définition d'une instance d'objet, qu'il s'agisse d'un littéral ou d'un constructeur, utilisez le lowerCamelCase pour le nom de l'instance :
 
 ```js example-good
-let hanSolo = new Person('Han Solo', 25, 'male');
+let hanSolo = new Person("Han Solo", 25, "male");
 
 let hanSolo = {
-  name: 'Han Solo',
+  name: "Han Solo",
   age: 25,
-  gender: 'male'
-}
+  gender: "male",
+};
 ```
 
 ## Tableaux
@@ -499,7 +494,7 @@ Utilisez des littéraux - et non des constructeurs - pour créer des tableaux :
 Comme ceci :
 
 ```js example-good
-let myArray = [ ];
+let myArray = [];
 ```
 
 Pas comme ça :
@@ -519,13 +514,13 @@ const pets = [];
 faites ça :
 
 ```js example-good
-pets.push('cat');
+pets.push("cat");
 ```
 
 et pas ça :
 
 ```js example-bad
-pets[pets.length] = 'cat';
+pets[pets.length] = "cat";
 ```
 
 ## Traitement des erreurs
@@ -535,8 +530,7 @@ Si certains états de votre programme lancent des erreurs non attrapées, ils in
 ```js example-good
 try {
   console.log(results);
-}
-catch(e) {
+} catch (e) {
   console.error(e);
 }
 ```
@@ -549,7 +543,7 @@ Nos exemples interactifs (et autres) sont généralement rédigés de manière �
 
 En ce qui concerne les exemples d'API, nous aimerions mettre en avant quelques exemples qui nous semblent bons :
 
-- [Exemples de `fetch()`](/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch#examples)
+- [Exemples de `fetch()`](/fr/docs/Web/API/Window/fetch#examples)
 - [Exemples de `fillRect()`](/fr/docs/Web/API/CanvasRenderingContext2D/fillRect#examples) (les exemples de Canvas 2D sont généralement bons, bien qu'ils utilisent toujours l'ancienne déclaration `var`).
 - [Payment Request API `show()`](/fr/docs/Web/API/PaymentRequest/show) (Les exemples de [`PaymentRequest`](/fr/docs/Web/API/PaymentRequest) sont généralement assez bons).
 - [Utilisations de l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API) (les bonnes pratiques générales en matière de HTML, CSS et JavaScript, ainsi qu'une bonne démonstration de l'utilisation des extraits et des liens vers des exemples complets ailleurs).

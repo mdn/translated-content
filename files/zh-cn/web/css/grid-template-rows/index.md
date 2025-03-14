@@ -1,12 +1,58 @@
 ---
 title: grid-template-rows
 slug: Web/CSS/grid-template-rows
-original_slug: Web/CSS/网格-模板-列
 ---
+
+{{CSSRef}}
 
 `grid-template-rows` 该属性是基于 {{glossary("grid rows", "网格行")}} 的维度，去定义网格线的名称和网格轨道的尺寸大小。
 
-{{EmbedInteractiveExample("pages/css/grid-template-rows.html")}}
+{{InteractiveExample("CSS Demo: grid-template-rows")}}
+
+```css interactive-example-choice
+grid-template-rows: auto;
+```
+
+```css interactive-example-choice
+grid-template-rows: 40px 4em 40px;
+```
+
+```css interactive-example-choice
+grid-template-rows: 1fr 2fr 1fr;
+```
+
+```css interactive-example-choice
+grid-template-rows: 3ch auto minmax(10px, 60px);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  width: 200px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## 语法
 
@@ -24,13 +70,16 @@ grid-template-rows: repeat(3, 200px);
 
 /* <auto-track-list> values */
 grid-template-rows: 200px repeat(auto-fill, 100px) 300px;
-grid-template-rows: minmax(100px, max-content)
-                       repeat(auto-fill, 200px) 20%;
-grid-template-rows: [linename1] 100px [linename2]
-                       repeat(auto-fit, [linename3 linename4] 300px)
-                       100px;
-grid-template-rows: [linename1 linename2] 100px
-                       repeat(auto-fit, [linename1] 300px) [linename3];
+grid-template-rows:
+  minmax(100px, max-content)
+  repeat(auto-fill, 200px) 20%;
+grid-template-rows:
+  [linename1] 100px [linename2]
+  repeat(auto-fit, [linename3 linename4] 300px)
+  100px;
+grid-template-rows:
+  [linename1 linename2] 100px
+  repeat(auto-fit, [linename1] 300px) [linename3];
 
 /* Global values */
 grid-template-rows: inherit;
@@ -126,53 +175,5 @@ grid-template-rows: unset;
 ## 参见
 
 - 相关 CSS 属性：{{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
-- 网格布局指南：_[Basic concepts of grid layout - Grid Tracks](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Grid_Tracks)_
-- 视频教程：_[Defining a Grid](http://gridbyexample.com/video/series-define-a-grid/)_
-
-1. [**CSS**](/zh-CN/docs/Web/CSS)
-2. [**CSS Reference**](/zh-CN/docs/Web/CSS/Reference)
-3. [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
-4. **Guides**
-
-    1. [Basics concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-    2. [Relationship to other layout methods](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-    3. [Line-based placement](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-    4. [Grid template areas](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-    5. [Layout using named grid lines](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-    6. [Auto-placement in grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7. [Box alignment in grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8. [Grids, logical values and writing modes](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9. [CSS Grid Layout and Accessibility](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-    10. [CSS Grid Layout and Progressive Enhancement](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-    11. [Realizing common layouts using grids](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
-
-5. **Properties**
-
-    1. [grid](/zh-CN/docs/Web/CSS/grid)
-    2. [grid-area](/zh-CN/docs/Web/CSS/grid-area)
-    3. [grid-auto-columns](/zh-CN/docs/Web/CSS/grid-auto-columns)
-    4. [grid-auto-flow](/zh-CN/docs/Web/CSS/grid-auto-flow)
-    5. [grid-auto-rows](/zh-CN/docs/Web/CSS/grid-auto-rows)
-    6. [grid-column](/zh-CN/docs/Web/CSS/grid-column)
-    7. [grid-column-end](/zh-CN/docs/Web/CSS/grid-column-end)
-    8. [grid-column-gap](/zh-CN/docs/Web/CSS/grid-column-gap)
-    9. [grid-column-start](/zh-CN/docs/Web/CSS/grid-column-start)
-    10. [grid-gap](/zh-CN/docs/Web/CSS/grid-gap)
-    11. [grid-row](/zh-CN/docs/Web/CSS/grid-row)
-    12. [grid-row-end](/zh-CN/docs/Web/CSS/grid-row-end)
-    13. [grid-row-gap](/zh-CN/docs/Web/CSS/grid-row-gap)
-    14. [grid-row-start](/zh-CN/docs/Web/CSS/grid-row-start)
-    15. [grid-template](/zh-CN/docs/Web/CSS/grid-template)
-    16. [grid-template-areas](/zh-CN/docs/Web/CSS/grid-template-areas)
-    17. [grid-template-columns](/zh-CN/docs/Web/CSS/grid-template-columns)
-    18. [grid-template-rows](/zh-CN/docs/Web/CSS/grid-template-rows)
-
-6. **Glossary**
-
-    1. [Grid lines](/zh-CN/docs/Glossary/Grid_lines)
-    2. [Grid tracks](/zh-CN/docs/Glossary/Grid_tracks)
-    3. [Grid cell](/zh-CN/docs/Glossary/Grid_cell)
-    4. [Grid areas](/zh-CN/docs/Glossary/Grid_areas)
-    5. [Gutters](/zh-CN/docs/Glossary/Gutters)
-    6. [Grid row](/zh-CN/docs/Glossary/Grid_rows)
-    7. [Grid column](/zh-CN/docs/Glossary/Grid_column)
+- 网格布局指南：_[Basic concepts of grid layout - Grid Tracks](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#grid_tracks)_
+- 视频教程：_[Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)_

@@ -1,5 +1,5 @@
 ---
-title: '<code>: O Elemento Inline Code'
+title: "<code>: O Elemento Inline Code"
 slug: Web/HTML/Element/code
 ---
 
@@ -7,7 +7,23 @@ slug: Web/HTML/Element/code
 
 O **elemento** **HTML `<code>` **apresenta seu conteúdo estilizado de maneira a indicar que o texto é um pequeno fragmento de código. Por padrão, o conteúdo é exibido utilizando a fonte monoespaçada padrão do {{Glossary("user agent", "user agent's")}}.
 
-{{EmbedInteractiveExample("pages/tabbed/code.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;code&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The <code>push()</code> method adds one or more elements to the end of an
+  array and returns the new length of the array.
+</p>
+```
+
+```css interactive-example
+code {
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 3px;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -34,7 +50,7 @@ O **elemento** **HTML `<code>` **apresenta seu conteúdo estilizado de maneira a
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -69,11 +85,13 @@ Esse elemento inclui apenas os [global attributes](/pt-BR/docs/Web/HTML/Global_a
 Um parágrafo que inlcui `<code>`:
 
 ```html
-<p>A função <code>selectAll()</code> destaca todo o texto no
-campo de entrada então o usuário pode, por exemplo, copiar ou deletar o texto.</p>
+<p>
+  A função <code>selectAll()</code> destaca todo o texto no campo de entrada
+  então o usuário pode, por exemplo, copiar ou deletar o texto.
+</p>
 ```
 
-A sainda gerada por esse trecho HTML se parece com isso:
+A saída gerada por esse trecho HTML se parece com isso:
 
 {{EmbedLiveSample("Example", 640, 70)}}
 
@@ -85,15 +103,11 @@ Uma regra CSS pode ser definida para o seletor `code` para sobrescrever a fonte 
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                           | Comentário |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-code-element', '&lt;code&gt;')}}             | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-code-element', '&lt;code&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;code&gt;')}}                         | {{Spec2('HTML4.01')}}     |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.code")}}
+{{Compat}}
 
 ## Veja também
 

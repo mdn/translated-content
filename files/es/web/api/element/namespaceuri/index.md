@@ -7,12 +7,13 @@ slug: Web/API/Element/namespaceURI
 
 La propiedad `Element.namespaceURI` unicamente de lectura devuelve la URI namespace de el elemento, `o la anula si el elemento no está en un` namespace.
 
-> **Nota:** Antes de DOM4 esta API fué definida dentro de la interfaz {{domxref("Node")}}.
+> [!NOTE]
+> Antes de DOM4 esta API fué definida dentro de la interfaz {{domxref("Node")}}.
 
 ## Síntaxis
 
 ```js
-namespace = element.namespaceURI
+namespace = element.namespaceURI;
 ```
 
 ## Ejemplo
@@ -20,8 +21,11 @@ namespace = element.namespaceURI
 En este snippet, un elemento está siendo examinado por su {{domxref("localName")}} y su `namespaceURI`. Si el `namespaceURI` devuelve el XUL namespace y el `localName` devuelve "browser", entonces se entiende que el nodo es XUL `<browser/>`.
 
 ```js
-if (element.localName == "browser" &&
-    element.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
+if (
+  element.localName == "browser" &&
+  element.namespaceURI ==
+    "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+) {
   // this is a XUL browser
 }
 ```

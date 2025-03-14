@@ -1,19 +1,21 @@
 ---
 title: Bitwise AND (&)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND
-tags:
-  - JavaScript
-  - Оператор
-  - По
-  - Побитовые операторы
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_AND
 ---
 
 {{jsSidebar("Operators")}}
 
 Побитовый оператор И (`&`) возвращает `1` в каждой битовой позиции, для которой соответствующие биты обоих операндов равны `1`.
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-and.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise AND")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = 3; // 00000000000000000000000000000011
+
+console.log(a & b); // 00000000000000000000000000000001
+// Expected output: 1
+```
 
 ## Синтаксис
 
@@ -25,7 +27,7 @@ a & b
 
 Операнды преобразуются в 32-битные целые числа и выражаются серией битов (нулей and единиц). Числа с более чем 32 битами отбрасывают старшие разряды. Например, следующее целое число с более чем 32 битами будет преобразовано в 32-битное целое:
 
-```js
+```plain
 До: 11100110111110100000000000000110000000000001
 После:          10100000000000000110000000000001
 ```
@@ -66,11 +68,11 @@ a & b
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Bitwise operators in the JS guide](/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
+- [Bitwise operators in the JS guide](/ru/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise)
 - [Bitwise AND assignment operator](/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)

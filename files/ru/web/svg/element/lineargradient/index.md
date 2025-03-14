@@ -1,30 +1,33 @@
 ---
 title: <linearGradient>
 slug: Web/SVG/Element/linearGradient
-tags:
-  - SVG
-  - SVG градиент
-  - Элемент
-translation_of: Web/SVG/Element/linearGradient
-original_slug: Web/SVG/Элемент/linearGradient
 ---
 
 {{SVGRef}}
 
 **`<linearGradient>`** позволяет определять линейные градиенты для заполнения или изменения графических элементов.
 
-> **Примечание:** Не путайте с CSS {{cssxref('linear-gradient()')}}, CSS-градиенты могут быть применены только к HTML-элементам, тогда как SVG-градиент применим только к SVG-элементам.
+> [!NOTE]
+> Не путайте с CSS {{cssxref('linear-gradient()')}}, CSS-градиенты могут быть применены только к HTML-элементам, тогда как SVG-градиент применим только к SVG-элементам.
+
+## Пример
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  viewBox="0 0 10 10"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <linearGradient id="myGradient" gradientTransform="rotate(90)">
-      <stop offset="5%"  stop-color="gold" />
+      <stop offset="5%" stop-color="gold" />
       <stop offset="95%" stop-color="red" />
     </linearGradient>
   </defs>
@@ -34,7 +37,7 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 150, '100%')}}
+{{EmbedLiveSample("Пример", 150, '100%')}}
 
 ## Атрибуты
 
@@ -65,19 +68,6 @@ html,body,svg { height:100% }
 - {{SVGAttr("y2")}}
   - : Этот атрибут определяет координату y конечной точки векторного градиента, вдоль которой рисуется линейный градиент.
     _Тип значения_: [**\<length>**](/ru/docs/Web/SVG/Content_type#length) ; _Значение по умолчанию_: `0%`; _Анимируемый_: **да**
-
-### Глобальные атрибуты
-
-- [Основные атрибуты](/ru/docs/Web/SVG/Attribute/Core)
-  - : Прежде всего: {{SVGAttr('id')}}
-- [Атрибуты стилизации](/ru/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- Атрибуты событий
-  - : [Глобальные атрибуты событий](/ru/docs/Web/SVG/Attribute/Events#global_event_attributes), [Атрибуты событий элементов документа](/ru/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
-- [Атрибуты презентации](/ru/docs/Web/SVG/Attribute/Presentation)
-  - : Прежде всего: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
-- XLink атрибуты
-  - : {{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:title")}}
 
 ## Примечания по использованию
 

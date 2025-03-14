@@ -1,11 +1,6 @@
 ---
 title: grid-auto-flow
 slug: Web/CSS/grid-auto-flow
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/grid-auto-flow
 ---
 
 {{CSSRef}}
@@ -66,7 +61,7 @@ Cette propriété peut prendre deux formes :
   display: grid;
   grid-gap: 10px;
   grid-template: repeat(4, 1fr) / repeat(2, 1fr);
-  grid-auto-flow: column;  /* ou 'row', 'row dense', 'column dense' */
+  grid-auto-flow: column; /* ou 'row', 'row dense', 'column dense' */
 }
 
 #item1 {
@@ -106,7 +101,7 @@ Cette propriété peut prendre deux formes :
   <option value="column">column</option>
   <option value="row">row</option>
 </select>
-<input id="dense" type="checkbox" onchange="changeGridAutoFlow()">
+<input id="dense" type="checkbox" onchange="changeGridAutoFlow()" />
 <label for="dense">dense</label>
 ```
 
@@ -144,5 +139,5 @@ function changeGridAutoFlow() {
 - {{cssxref("grid-auto-rows")}}
 - {{cssxref("grid-auto-columns")}}
 - {{cssxref("grid")}}
-- [Guide : le placement automatique sur la grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS)
-- Tutoriel vidéo : [Introduction au placement automatique sur la grille et à l'ordre des éléments (en anglais)](http://gridbyexample.com/video/series-auto-placement-order/)
+- [Guide : le placement automatique sur la grille](/fr/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+- Tutoriel vidéo : [Introduction au placement automatique sur la grille et à l'ordre des éléments (en anglais)](https://gridbyexample.com/video/series-auto-placement-order/)

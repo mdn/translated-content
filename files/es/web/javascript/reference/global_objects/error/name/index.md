@@ -1,13 +1,6 @@
 ---
 title: Error.prototype.name
 slug: Web/JavaScript/Reference/Global_Objects/Error/name
-tags:
-  - Error
-  - JavaScript
-  - Propiedad
-  - Prototipo
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/name
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/name
 ---
 
 {{JSRef}}
@@ -23,22 +16,20 @@ De forma predeterminada, las instancias {{JSxRef("Error")}} reciben el nombre "E
 ### Lanzar un error personalizado
 
 ```js
-var e = new Error('Entrada mal formada'); // e.name es 'Error'
+var e = new Error("Entrada mal formada"); // e.name es 'Error'
 
-e.name = 'ParseError';
+e.name = "ParseError";
 throw e;
 // e.toString() devolverá 'ParseError: Entrada mal formada'
 ```
 
 ## Especificaciones
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-error.prototype.name', 'Error.prototype.name')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Error.name")}}
+{{Compat}}
 
 ## Ve también
 

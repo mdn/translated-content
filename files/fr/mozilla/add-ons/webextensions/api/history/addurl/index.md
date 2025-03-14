@@ -1,31 +1,20 @@
 ---
 title: history.addUrl()
 slug: Mozilla/Add-ons/WebExtensions/API/history/addUrl
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - addUrl
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/addUrl
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Ajoute un enregistrement à l'historique du navigateur d'une visite à l'URL donnée. L'heure de la visite est enregistrée comme l'heure de l'appel, et le {{WebExtAPIRef("history.TransitionType", "TransitionType")}} est enregistré comme "liens".
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var addingUrl = browser.history.addUrl(
-  details         // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -45,11 +34,11 @@ var addingUrl = browser.history.addUrl(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera rempli sans paramètres lorsque l'élément a été ajouté.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera rempli sans paramètres lorsque l'élément a été ajouté.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.addUrl")}}
+{{Compat}}
 
 ## Exemples
 
@@ -67,19 +56,19 @@ function onAdded() {
   var searching = browser.history.search({
     text: "https://example.org/",
     startTime: 0,
-    maxResults: 1
+    maxResults: 1,
   });
   searching.then(onGot);
 }
 
-var addingUrl = browser.history.addUrl({url: "https://example.org/"});
+var addingUrl = browser.history.addUrl({ url: "https://example.org/" });
 addingUrl.then(onAdded);
 ```
 
-Ajouter un enregistrement d'une visite à "https\://example.org", mais lui donner une `visitTime` de 24 heures dans le passé, et une `transition`  "typed":
+Ajouter un enregistrement d'une visite à "https\://example.org", mais lui donner une `visitTime` de 24 heures dans le passé, et une `transition` "typed":
 
 ```js
-const DAY = 24 * 60* 60 * 1000;
+const DAY = 24 * 60 * 60 * 1000;
 
 function oneDayAgo() {
   return Date.now() - DAY;
@@ -94,7 +83,7 @@ function onGot(visits) {
 
 function onAdded() {
   var gettingVisits = browser.history.getVisits({
-    url: "https://example.org/"
+    url: "https://example.org/",
   });
 
   gettingVisits.then(onGot);
@@ -103,7 +92,7 @@ function onAdded() {
 var addingUrl = browser.history.addUrl({
   url: "https://example.org/",
   visitTime: oneDayAgo(),
-  transition: "typed"
+  transition: "typed",
 });
 
 addingUrl.then(onAdded);
@@ -111,9 +100,9 @@ addingUrl.then(onAdded);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/extensions/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

@@ -3,7 +3,7 @@ title: runtime.MessageSender
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 メッセージや接続要求の送信元に関する情報を持つオブジェクトです。このオブジェクトは、{{WebExtAPIRef("runtime.onMessage()")}} リスナーに渡されます。
 
@@ -18,24 +18,26 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
 - `frameId`{{optional_inline}}
   - : `integer` 型。接続を開いたフレームです。0 は最上位のフレームを、正の数値は子フレームを表します。このプロパティが存在するのは、`tab` が設定されるときだけです。
 - `id`{{optional_inline}}
-  - : `string` 型。メッセージが拡張機能から送信された場合は、その拡張機能の ID が設定されます。送信側の manifest.json で [applications](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) キーを使って明示的に ID が設定されている場合は、`id` にはその値が使われます。そうでない場合は、送信側の自動生成された ID が使われます。
+  - : `string` 型。メッセージが拡張機能から送信された場合は、その拡張機能の ID が設定されます。送信側の manifest.json で [applications](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーを使って明示的に ID が設定されている場合は、`id` にはその値が使われます。そうでない場合は、送信側の自動生成された ID が使われます。
     バージョン 54 より前の Firefox では、この値には拡張機能の内部 ID が使われることに注意してください (つまり、拡張機能の URL に含まれる [UUID](https://ja.wikipedia.org/wiki/UUID) です)。
 - `url`{{optional_inline}}
   - : `string` 型。メッセージを送信したスクリプトを持つページやフレームの URL です。
-    送信側が拡張機能のページ (例えば、[バックグラウンド ページ](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts)、[オプションページ](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Sidebars_popups_options_pages)、 [ブラウザーアクション](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2) や [ページアクション](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Page_actions) のポップアップ) に含まれるスクリプトである場合、URL は `"moz-extension://<拡張機能の内部 ID>/path/to/page.html"` という形式が使われます。送信側がバックグラウンドスクリプトであって、バックグラウンド ページを使っていない場合、URL は `"moz-extension://<拡張機能の内部 ID>/_generated_background_page.html"` という形式が使われます。
+    送信側が拡張機能のページ (例えば、[バックグラウンド ページ](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)、[オプションページ](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#sidebars_popups_options_pages)、 [ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) や [ページアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#page_actions) のポップアップ) に含まれるスクリプトである場合、URL は `"moz-extension://<拡張機能の内部 ID>/path/to/page.html"` という形式が使われます。送信側がバックグラウンドスクリプトであって、バックグラウンド ページを使っていない場合、URL は `"moz-extension://<拡張機能の内部 ID>/_generated_background_page.html"` という形式が使われます。
     送信側がウェブページ内のスクリプト (ページに含まれる通常のスクリプトだけでなく、コンテンツスクリプトも含みます) である場合、`url` はそのウェブページの URL が使われます。スクリプトがフレーム内で動作している場合、`url` はそのフレームの URL です。
 - `tlsChannelId`{{optional_inline}}
   - : `string` 型。接続を開いたページまたはフレームの TLS チャンネルの ID です。拡張機能によって要求され、可能である場合にのみ設定されます。
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.runtime.MessageSender")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#type-MessageSender) API に基づいています。このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!NOTE]
+> この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#type-MessageSender) API に基づいています。このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -62,4 +64,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

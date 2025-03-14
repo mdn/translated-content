@@ -1,6 +1,9 @@
 ---
-title: DOMPoint.y
+title: "DOMPoint: y プロパティ"
+short-title: y
 slug: Web/API/DOMPoint/y
+l10n:
+  sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
 ---
 
 {{APIRef("DOM")}}
@@ -24,5 +27,4 @@ slug: Web/API/DOMPoint/y
 ## 関連情報
 
 - その他の座標プロパティ: {{domxref("DOMPoint.x", "x")}},
-  {{domxref("DOMPoint.z", "z")}}, および視点位置である {{domxref("DOMPoint.w",
-    "w")}}
+  {{domxref("DOMPoint.z", "z")}}, および視点位置である {{domxref("DOMPoint.w", "w")}}

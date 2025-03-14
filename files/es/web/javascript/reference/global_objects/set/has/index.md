@@ -1,13 +1,6 @@
 ---
 title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Prototype
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/has
 ---
 
 {{JSRef}}
@@ -38,17 +31,17 @@ mySet.has(value);
 var mySet = new Set();
 mySet.add("foo");
 
-mySet.has("foo");  // retorna true
-mySet.has("bar");  // retorna false
+mySet.has("foo"); // retorna true
+mySet.has("bar"); // retorna false
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Set.has")}}
+{{Compat}}
 
 ## Ver también
 

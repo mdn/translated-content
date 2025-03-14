@@ -1,71 +1,69 @@
 ---
 title: String.prototype.padEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/padEnd
-tags:
-  - JavaScript
-  - Method
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/padEnd
+l10n:
+  sourceCommit: b7ca46c94631967ecd9ce0fe36579be334a01275
 ---
+
 {{JSRef}}
 
-**`padEnd()`** 메서드는 현재 문자열에 다른 문자열을 채워, 주어진 길이를 만족하는 새로운 문자열을 반환합니다. 채워넣기는 대상 문자열의 끝(우측)부터 적용됩니다.
+{{jsxref("String")}} 값의 **`padEnd()`** 메서드는
+이 문자열을 주어진 문자열(필요한 경우 반복됨)로 채워서 결과 문자열이 지정된 길이에 도달하도록 합니다.
+패딩은 이 문자열의 끝에서부터 적용됩니다.
 
-{{EmbedInteractiveExample("pages/js/string-padend.html")}}
+{{InteractiveExample("JavaScript Demo: String.padEnd()")}}
+
+```js interactive-example
+const str1 = "Breaded Mushrooms";
+
+console.log(str1.padEnd(25, "."));
+// Expected output: "Breaded Mushrooms........"
+
+const str2 = "200";
+
+console.log(str2.padEnd(5));
+// Expected output: "200  "
+```
 
 ## 구문
 
-```js
-str.padEnd(targetLength [, padString])
+```js-nolint
+padEnd(targetLength)
+padEnd(targetLength, padString)
 ```
 
 ### 매개변수
 
 - `targetLength`
-  - : 목표 문자열 길이. 현재 문자열의 길이보다 작다면 채워넣지 않고 그대로 반환.
+  - : 현재 `str`이 패딩된 후의 결과 문자열의 길이입니다.
+    이 값이 `str.length`보다 작거나 같으면
+    현재 문자열이 그대로 반환됩니다.
 - `padString` {{optional_inline}}
-  - : 현재 문자열에 채워넣을 다른 문자열. 문자열이 너무 길어 목표 문자열 길이를 초과한다면 좌측 일부를 잘라서 넣음. 기본값은 " ". (U+0020)
+  - : 현재 `str`을 채우는 데 사용할 문자열입니다.
+    `padString`이 `targetLength` 내에 맞지 않을 정도로 길면 잘립니다.
+    왼쪽에서 오른쪽으로 쓰는 언어의 경우 가장 왼쪽 부분이,
+    오른쪽에서 왼쪽으로 쓰는 언어의 경우 가장 오른쪽 부분이 적용됩니다.
+    이 매개변수의 기본값은
+    " " (U+0020)입니다.
 
 ### 반환값
 
-끝부터 주어진 문자열로 채워 목표 길이를 만족하는 {{jsxref("String")}}
+반환값은 지정된 `targetLength`를 가진
+{{jsxref("String")}}으로, 현재 `str`의 끝에
+`padString`이 적용된 상태입니다.
 
-## 예시
+## 예제
 
-```js
-'abc'.padEnd(10);          // "abc       "
-'abc'.padEnd(10, "foo");   // "abcfoofoof"
-'abc'.padEnd(6, "123456"); // "abc123"
-'abc'.padEnd(1);           // "abc"
-```
-
-## 폴리필
-
-다른 모든 코드 이전에 아래 코드를 포함하면 지원하지 않는 플랫폼에서도 `String.prototype.padStart()` 메서드를 사용할 수 있습니다.
+### padEnd 사용하기
 
 ```js
-// https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd
-if (!String.prototype.padEnd) {
-    String.prototype.padEnd = function padEnd(targetLength,padString) {
-        targetLength = targetLength>>0; //floor if number or convert non-number to 0;
-        padString = String((typeof padString !== 'undefined' ? padString : ' '));
-        if (this.length > targetLength) {
-            return String(this);
-        }
-        else {
-            targetLength = targetLength-this.length;
-            if (targetLength > padString.length) {
-                padString += padString.repeat(targetLength/padString.length); //append to original to ensure we are longer than needed
-            }
-            return String(this) + padString.slice(0,targetLength);
-        }
-    };
-}
+"abc".padEnd(10); // "abc       "
+"abc".padEnd(10, "foo"); // "abcfoofoof"
+"abc".padEnd(6, "123456"); // "abc123"
+"abc".padEnd(1); // "abc"
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
@@ -73,6 +71,7 @@ if (!String.prototype.padEnd) {
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
+- [`core-js`에서의 `String.prototype.padEnd` 폴리필](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.padStart()")}}

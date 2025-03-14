@@ -1,9 +1,11 @@
 ---
 title: ServiceWorkerRegistration.index
 slug: Web/API/ServiceWorkerRegistration/index
+l10n:
+  sourceCommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 **`index`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、オフラインコンテンツの索引付けができる {{domxref('ContentIndex')}} インターフェイスへの参照を返します。
 
@@ -22,11 +24,9 @@ slug: Web/API/ServiceWorkerRegistration/index
 const registration = await navigator.serviceWorker.ready;
 
 // feature detection
-if ('index' in registration) {
-
+if ("index" in registration) {
   // Content Index API functionality
   const contentIndex = registration.index;
-
 }
 ```
 
@@ -48,6 +48,6 @@ const contentIndex = self.registration.index;
 
 ## 関連情報
 
-- {{domxref("Content Index API")}}
+- {{domxref("Content Index API", "コンテンツインデックス API", "", 1)}}
 - [An introductory article on the Content Index API](https://web.dev/content-indexing-api/) (英語)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/) (英語)

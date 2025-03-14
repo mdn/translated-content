@@ -1,16 +1,6 @@
 ---
 title: Travailler avec des identités contextuelles
 slug: Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities
-tags:
-  - Add-ons
-  - Comment
-  - Contextual identities
-  - Débutant
-  - Extensions
-  - Hox-to
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities
-original_slug: Mozilla/Add-ons/WebExtensions/travailler_avec_des_identites_contextuelles
 ---
 
 {{AddonSidebar}}
@@ -34,7 +24,7 @@ Pour utiliser les fonctionnalités d'identité contextuelle dans les extensions,
 
 ## Permissions
 
-Pour utiliser l'API {{WebExtAPIRef("contextualIdentities")}} vous devez inclure la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "contextualIdentities" dans votre fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json). Vous n'avez pas besoin de la permission "tabs" pour utiliser {{WebExtAPIRef("tabs.create")}} ; vous avez besoin de la permission "cookies" pour spécifier le conteneur de cookies que vous souhaitez utiliser.
+Pour utiliser l'API {{WebExtAPIRef("contextualIdentities")}} vous devez inclure la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "contextualIdentities" dans votre fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json). Vous n'avez pas besoin de la permission "tabs" pour utiliser {{WebExtAPIRef("tabs.create")}} ; vous avez besoin de la permission "cookies" pour spécifier le conteneur de cookies que vous souhaitez utiliser.
 
 ## Exemple de procédure pas à pas
 
@@ -74,12 +64,12 @@ Les principales caractéristiques du fichier [manifest.json](https://github.com/
 Une fenêtre contextuelle sur le bouton de la barre d'outils fournit l'interface utilisateur de l'extension. [context.html](https://github.com/mdn/webextensions-examples/blob/master/contextual-identities/context.html) implémente ce popup, mais c'est juste un shell dans lequel le script context.js écrit la liste des identités contextuelles et leurs options associées.
 
 ```html
-  <body>
-    <div class="panel">
-      <div id="identity-list"></div>
-    </div>
+<body>
+  <div class="panel">
+    <div id="identity-list"></div>
+  </div>
   <script src="context.js"></script>
-  </body>
+</body>
 ```
 
 ## context.js
@@ -113,7 +103,7 @@ Le script utilise maintenant contextualIdentities.query pour déterminer s'il ex
       }
 ```
 
-Si des identités contextuelles sont présentes — Firefox a quatre identités par défaut — le script parcourt chacune d'elles en ajoutant son nom, stylisé dans la couleur choisie, à l'élément \<div>. La fonction `createOptions()` ajoute ensuite les options à “create” ou “close all” à la \<div> avant qu'elle ne soit ajoutée au popup.
+Si des identités contextuelles sont présentes — Firefox a quatre identités par défaut — le script parcourt chacune d'elles en ajoutant son nom, stylisé dans la couleur choisie, à l'élément \<div>. La fonction `createOptions()` ajoute ensuite les options à "create" ou "close all" à la \<div> avant qu'elle ne soit ajoutée au popup.
 
 ```json
      for (let identity of identities) {
@@ -178,8 +168,8 @@ Si l'utilisateur sélectionne l'option permettant de fermer tous les onglets pou
 
 Si vous voulez en savoir plus sur l'API contextualIdentities, consultez :
 
-- [contextualIdentities API reference](/fr/Add-ons/WebExtensions/API/contextualIdentities).
-- code source de l'extension [Multi-Account Containers](https://github.com/mozilla/multi-account-containers/#readme). C'est le code pour l'extension [Firefox Multi-Account Containers](/fr/firefox/addon/multi-account-containers/).
+- [contextualIdentities API reference](/fr/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities).
+- code source de l'extension [Multi-Account Containers](https://github.com/mozilla/multi-account-containers/#readme). C'est le code pour l'extension [Firefox Multi-Account Containers](/fr/docs/Mozilla/Firefox/addon/multi-account-containers/).
 
   Cette extension fournit aux utilisateurs des fonctionnalités améliorées pour les identités contextuelles, telles que la possibilité de cliquer longuement sur le nouveau bouton de l'onglet, puis de sélectionner l'identité à utiliser dans le nouvel onglet. Il met vraiment en valeur les capacités offertes par les identités contextuelles et vaut le détour.
 

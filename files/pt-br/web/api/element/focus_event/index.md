@@ -1,10 +1,9 @@
 ---
 title: focus
 slug: Web/API/Element/focus_event
-original_slug: Web/Events/focus
 ---
 
-O evento `focus` é acionado assim que um elemento recebe um foco. O grande diferencial entre este evento e o evento [`focusin`](/pt-BR/docs/Mozilla_event_reference/focusin), é que esse segundo "borbulha".
+O evento `focus` é acionado assim que um elemento recebe um foco. O grande diferencial entre este evento e o evento [`focusin`](/pt-BR/docs/Web/API/Element/focusin_event), é que esse segundo "borbulha".
 
 ## Informações Gerais
 
@@ -21,33 +20,38 @@ O evento `focus` é acionado assim que um elemento recebe um foco. O grande dife
 - Ação Padrão
   - : Nenhuma.
 
-> **Nota:** Note: The interface was {{ domxref("Event") }} prior to Gecko 24 {{ geckoRelease(24) }}. ({{ bug(855741) }})
+> [!NOTE]
+> Note: The interface was {{ domxref("Event") }} prior to Gecko 24. ([Firefox bug 855741](https://bugzil.la/855741))
 
 ## Propriedades
 
-| Property                                 | Type                                               | Description                                |
-| ---------------------------------------- | -------------------------------------------------- | ------------------------------------------ |
+| Property                           | Type                                     | Description                                |
+| ---------------------------------- | ---------------------------------------- | ------------------------------------------ |
 | `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Event target (DOM element)                 |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                   | The type of event.                         |
-| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                       | Whether the event normally bubbles or not. |
-| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                       | Whether the event is cancellable or not.   |
+| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                 | The type of event.                         |
+| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                    | Whether the event normally bubbles or not. |
+| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Whether the event is cancellable or not.   |
 | `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | null                                       |
 
 ## Eventos Delegados
 
-Existem 2 maneiras diferentes de implementações delegados a partir de um evento: por meio da utilização do evento `focusin` que todos os browsers atuais suportam tão tecnologia (todos exceto o Firefox), ou por setando o parâmetro "useCapture" do elemento [`addEventListener`](/pt-BR/docs/DOM/element.addEventListener) como `true`:
+Existem 2 maneiras diferentes de implementações delegados a partir de um evento: por meio da utilização do evento `focusin` que todos os browsers atuais suportam tão tecnologia (todos exceto o Firefox), ou por setando o parâmetro "useCapture" do elemento [`addEventListener`](/pt-BR/docs/Web/API/EventTarget/addEventListener) como `true`:
 
-{{ EmbedLiveSample('Event_delegation', '', '', '', 'Web/Events/blur') }}
+\{\{ EmbedLiveSample('Event_delegation', '', '', '', 'Web/Events/blur') }}
 
-(Exemplo de codigo do evento [blur (event)](/pt-BR/docs/Web/Events/blur))
+(Exemplo de codigo do evento [blur (event)](/pt-BR/docs/Web/API/Element/blur_event))
+
+## Especificações
+
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Element.focus_event")}}
+{{Compat}}
 
 ## Eventos Relacionais
 
-- {{event("focus")}}
-- {{event("blur")}}
-- {{event("focusin")}}
-- {{event("focusout")}}
+- [`focus`](/pt-BR/docs/Web/API/Element/focus_event)
+- [`blur`](/pt-BR/docs/Web/API/Element/blur_event)
+- [`focusin`](/pt-BR/docs/Web/API/Element/focusin_event)
+- [`focusout`](/pt-BR/docs/Web/API/Element/focusout_event)

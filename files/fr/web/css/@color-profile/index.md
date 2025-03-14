@@ -1,8 +1,6 @@
 ---
-title: '@color-profile'
+title: "@color-profile"
 slug: Web/CSS/@color-profile
-translation_of: Web/CSS/@color-profile
-browser-compat: css.at-rules.color-profile
 ---
 
 {{CSSRef}}
@@ -13,7 +11,7 @@ La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@color-profil
 
 ```css
 @color-profile --swop5c {
-  src: url('https://example.org/SWOP2006_Coated5v2.icc');
+  src: url("https://example.org/SWOP2006_Coated5v2.icc");
 }
 ```
 
@@ -23,7 +21,7 @@ La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@color-profil
   - : Indique l'URL où sont situées les informations sur le profil de couleur.
 - `rendering-intent`
 
-  - : Si le profil de couleur contient plusieurs indications de rendu, ce descripteur permet de sélectionner celui à utiliser pour définir la correspondance de la couleur sur [les gamuts](/fr/docs/Glossary/gamut) plus petits pour lesquels ce profil est défini.
+  - : Si le profil de couleur contient plusieurs indications de rendu, ce descripteur permet de sélectionner celui à utiliser pour définir la correspondance de la couleur sur [les gamuts](/fr/docs/Glossary/Gamut) plus petits pour lesquels ce profil est défini.
 
     Si ce descripteur est utilisé, sa valeur doit être l'un des mots-clés suivants&nbsp;:
 
@@ -40,7 +38,7 @@ La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@color-profil
 
 ```css
 @color-profile --swop5c {
-  src: url('https://example.org/SWOP2006_Coated5v2.icc');
+  src: url("https://example.org/SWOP2006_Coated5v2.icc");
 }
 
 .header {

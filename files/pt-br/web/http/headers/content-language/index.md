@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/Content-Language
 
 {{HTTPSidebar}}
 
-O [cabeçalho de entidade](/pt-BR/docs/Glossario/Entity_header) **`Content-Language`** é usado para descrever a língua(s) destinada para a audiência, para que isto permita um usuário de se diferenciar de acordo com a língua preferida do usuário.
+O [cabeçalho de entidade](/pt-BR/docs/Glossary/Entity_header) **`Content-Language`** é usado para descrever a língua(s) destinada para a audiência, para que isto permita um usuário de se diferenciar de acordo com a língua preferida do usuário.
 
 Por exemplo, se "`Content-Language: de-DE`" está selecionado, você diz que o documento é destinado para quem fala Alemão (no entanto, não indica que o documento é escrito em Alemão. Por exemplo, pode ser escrito em Inglês como parte de um curso de línguas para fluentes em Alemão).
 
@@ -49,7 +49,8 @@ Content-Language: de-DE, en-CA
 - `language-tag`
   - : Múltiplas tags de línguas são separadas por uma vírgula. Cada tag de língua é uma sequencia de uma ou mais subtags insensitíveis, cada uma separada por um hífen ("`-`", `%x2D`). Na maioria dos casos, uma tag de língua consiste de uma tag de língua primária que identifica uma família ampla de outras línguas (ex., "`en`" = English), que é opcionalmente seguida por uma série de subtags que refinam ou restringem aquele alcance da língua (ex., "`en-CA`" = variedade de Inglês como comunicado no Canadá).
 
-> **Nota:** Tags de língua são formalmente deifnidas em [RFC 5646](https://tools.ietf.org/html/rfc5646), que depende do padrão [ISO 639](https://en.wikipedia.org/wiki/ISO_639) (muitas vezes o [ISO 639-1 code list](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) para [language codes](https://en.wikipedia.org/wiki/Language_code) serem usados.
+> [!NOTE]
+> Tags de língua são formalmente deifnidas em [RFC 5646](https://tools.ietf.org/html/rfc5646), que depende do padrão [ISO 639](https://en.wikipedia.org/wiki/ISO_639) (muitas vezes o [ISO 639-1 code list](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) para [language codes](https://en.wikipedia.org/wiki/Language_code) serem usados.
 
 ## Exemplos
 
@@ -58,14 +59,14 @@ Content-Language: de-DE, en-CA
 O atributo global [`lang`](/pt-BR/docs/Web/HTML/Global_attributes/lang) é usado em elementos HTML para indicar a língua de um documento [HTML](/pt-BR/docs/Web/HTML) ou partes dele.
 
 ```html
-<html lang="de">
+<html lang="de"></html>
 ```
 
 Não use este elemento meta como o abaixo para definir a língua de um documento:
 
 ```html example-bad
 <!-- /!\ Esta prática é ruim -->
-<meta http-equiv="content-language" content="de">
+<meta http-equiv="content-language" content="de" />
 ```
 
 ### Indicando uma audiência destinada para um documento
@@ -78,13 +79,13 @@ Content-Language: de, en
 
 ## Especificações
 
-| Specification                                                | Title                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
+| Specification                                  | Title                                                         |
+| ---------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Content-Language", "3.1.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Content-Language")}}
+{{Compat}}
 
 ## Veja também
 

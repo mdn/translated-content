@@ -1,8 +1,8 @@
 ---
 title: 'TypeError: can''t assign to property "x" on "y": not an object'
 slug: Web/JavaScript/Reference/Errors/Cant_assign_to_property
-translation_of: Web/JavaScript/Reference/Errors/Cant_assign_to_property
 ---
+
 {{jsSidebar("Errors")}}Ошибка строгого режима JavaScript "can't assign to property" ("невозможно присвоить свойство") происходит в тот момент, когда вы пытаетесь создать свойство примитивного типа данных (такого как символ, строка, число или булевое значение). Примитивные типы данных не могут содержать никаких свойств.
 
 ## Message
@@ -18,7 +18,7 @@ TypeError: Cannot create property 'x' on {y} (Chrome)
 
 ## What went wrong?
 
-In {{jsxref("Strict_mode")}}, a {{jsxref("TypeError")}} is raised when attempting to create a property on [primitive](/ru/docs/Glossary/primitive) value such as a [symbol](/ru/docs/Glossary/symbol), a [string](/ru/docs/Glossary/string), a [number](/ru/docs/Glossary/number) or a [boolean](/ru/docs/Glossary/boolean). [Primitive](/ru/docs/Glossary/Primitive) values cannot hold any [property](/ru/docs/Glossary/property/JavaScript).
+In {{jsxref("Strict_mode")}}, a {{jsxref("TypeError")}} is raised when attempting to create a property on [primitive](/ru/docs/Glossary/Primitive) value such as a [symbol](/ru/docs/Glossary/symbol), a [string](/ru/docs/Glossary/String), a [number](/ru/docs/Glossary/Number) or a [boolean](/ru/docs/Glossary/Boolean). [Primitive](/ru/docs/Glossary/Primitive) values cannot hold any [property](/ru/docs/Glossary/property/JavaScript).
 
 The problem might be that an unexpected value is flowing at an unexpected place, or that an object variant of a {{jsxref("String")}} or a {{jsxref("Number")}} is expected.
 
@@ -27,7 +27,7 @@ The problem might be that an unexpected value is flowing at an unexpected place,
 ### Invalid cases
 
 ```js example-bad
-'use strict';
+"use strict";
 
 var foo = "my string";
 // The following line does nothing if not in strict mode.
@@ -36,16 +36,16 @@ foo.bar = {}; // TypeError: can't assign to property "bar" on "my string": not a
 
 ### Fixing the issue
 
-Either fix the code to prevent the [primitive](/ru/docs/Glossary/primitive) from being used in such places, or fix the issue is to create the object equivalent {{jsxref("Object")}}.
+Either fix the code to prevent the [primitive](/ru/docs/Glossary/Primitive) from being used in such places, or fix the issue is to create the object equivalent {{jsxref("Object")}}.
 
 ```js example-good
-'use strict';
+"use strict";
 
 var foo = new String("my string");
 foo.bar = {};
 ```
 
-## See also
+## Смотрите также
 
 - {{jsxref("Strict_mode")}}
-- [primitive](/ru/docs/Glossary/primitive)
+- [primitive](/ru/docs/Glossary/Primitive)

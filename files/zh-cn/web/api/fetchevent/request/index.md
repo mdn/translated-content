@@ -7,7 +7,7 @@ slug: Web/API/FetchEvent/request
 
 {{domxref("FetchEvent")}} 接口的只读属性 **`request`** 返回触发事件处理程序的 {{domxref("Request")}}。
 
-这个属性是非空的（自从 Firefox 46 版本开始）。如果一个请求不是由其它方式提供的，构造函数的 `options` 对象必须包含一个请求（request）（参见 {{domxref("FetchEvent.FetchEvent", "FetchEvent()")}}）。
+这个属性是非空的（自从 Firefox 46 版本开始）。如果一个请求不是由其他方式提供的，构造函数的 `options` 对象必须包含一个请求（request）（参见 {{domxref("FetchEvent.FetchEvent", "FetchEvent()")}}）。
 
 ## 值
 
@@ -43,7 +43,7 @@ self.addEventListener("fetch", (event) => {
 
           throw error;
         });
-    })
+    }),
   );
 });
 ```

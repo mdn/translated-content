@@ -1,20 +1,24 @@
 ---
 title: Date.UTC()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/UTC
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/UTC
 ---
 
 {{JSRef}}
 
 La méthode **`Date.UTC()`** accepte des paramètres similaires à ceux du constructeur {{jsxref("Date")}} et renvoie le nombre de millièmes de seconde depuis le 1er janvier 1970, 00:00:00, temps universel. Autrement dit, elle renvoie la date en UTC.
 
-{{EmbedInteractiveExample("pages/js/date-utc.html")}}
+{{InteractiveExample("JavaScript Demo: Date.UTC()")}}
+
+```js interactive-example
+const utcDate1 = new Date(Date.UTC(96, 1, 2, 3, 4, 5));
+const utcDate2 = new Date(Date.UTC(0, 0, 0, 0, 0, 0));
+
+console.log(utcDate1.toUTCString());
+// Expected output: "Fri, 02 Feb 1996 03:04:05 GMT"
+
+console.log(utcDate2.toUTCString());
+// Expected output: "Sun, 31 Dec 1899 00:00:00 GMT"
+```
 
 ## Syntaxe
 
@@ -30,7 +34,8 @@ Date.UTC(année[,mois[,jour[,heures[,minutes[,secondes[,ms]]]]]])
 
   - : Un entier entre 0 (janvier) et 11 (décembre) représentant le mois.
 
-    > **Note :** Cet argument est optionnel depuis ECMAScript 2017.
+    > [!NOTE]
+    > Cet argument est optionnel depuis ECMAScript 2017.
 
 - `jour`{{optional_inline}}
   - : Un entier entre 1 et 31 représentant le jour du mois. La valeur par défaut vaut 1.

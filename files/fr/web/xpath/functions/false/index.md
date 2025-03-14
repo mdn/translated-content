@@ -1,13 +1,9 @@
 ---
-title: 'false'
+title: "false"
 slug: Web/XPath/Functions/false
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/false
-original_slug: Web/XPath/Fonctions/false
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `false` retourne le booléen `false`.
 
@@ -33,7 +29,7 @@ Cette fonction est utile dans les comparaisons&nbsp;:
 
 ### Définition
 
-[XPath 1.0, section 4.3](http://www.w3.org/TR/xpath#function-false).
+[XPath 1.0, section 4.3](https://www.w3.org/TR/xpath#function-false).
 
 ### Support Gecko
 

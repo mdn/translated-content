@@ -1,22 +1,27 @@
 ---
 title: WeakSet.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - WeakSet
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/has
-original_slug: Web/JavaScript/Reference/Objets_globaux/WeakSet/has
 ---
 
 {{JSRef}}
 
 La méthode **`has()`** renvoie un booléen indiquant si un objet donné est contenu dans l'ensemble `WeakSet`.
 
-{{EmbedInteractiveExample("pages/js/weakset-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.has()")}}
+
+```js interactive-example
+const weakset1 = new WeakSet();
+const object1 = {};
+const object2 = {};
+
+weakset1.add(object1);
+
+console.log(weakset1.has(object1));
+// Expected output: true
+
+console.log(weakset1.has(object2));
+// Expected output: false
+```
 
 ## Syntaxe
 
@@ -41,8 +46,8 @@ var ws = new WeakSet();
 var obj = {};
 ws.add(window);
 
-mySet.has(window);  // renvoie true
-mySet.has(obj);     // renvoie false
+mySet.has(window); // renvoie true
+mySet.has(obj); // renvoie false
 ```
 
 ## Spécifications

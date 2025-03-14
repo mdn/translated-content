@@ -1,21 +1,26 @@
 ---
 title: String.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/includes
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/includes
 ---
 
 {{JSRef}}
 
 La méthode **`includes()`** détermine si une chaîne de caractères est contenue dans une autre et renvoie `true` ou `false` selon le cas de figure.
 
-{{EmbedInteractiveExample("pages/js/string-includes.html")}}
+{{InteractiveExample("JavaScript Demo: String.includes()")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const word = "fox";
+
+console.log(
+  `The word "${word}" ${
+    sentence.includes(word) ? "is" : "is not"
+  } in the sentence`,
+);
+// Expected output: "The word "fox" is in the sentence"
+```
 
 ## Syntaxe
 
@@ -44,7 +49,7 @@ Cette méthode détermine si une chaîne de caractères est contenue dans une au
 `includes()` est sensible à la casse. Par exemple, l'expression suivante nous retournera `false` :
 
 ```js
-'Baleine bleue'.includes('baleine'); // false
+"Baleine bleue".includes("baleine"); // false
 ```
 
 ## Exemples
@@ -54,12 +59,12 @@ Cette méthode détermine si une chaîne de caractères est contenue dans une au
 ```js
 const str = "Être ou ne pas être, telle est la question.";
 
-console.log(str.includes("Être"));       // true
-console.log(str.includes("question"));   // true
-console.log(str.includes("pléonasme"));  // false
-console.log(str.includes("Être", 1));    // false
-console.log(str.includes("ÊTRE"));       // false
-console.log(str.includes(""));       // true
+console.log(str.includes("Être")); // true
+console.log(str.includes("question")); // true
+console.log(str.includes("pléonasme")); // false
+console.log(str.includes("Être", 1)); // false
+console.log(str.includes("ÊTRE")); // false
+console.log(str.includes("")); // true
 ```
 
 ## Prothèse d'émulation (_polyfill_)
@@ -70,13 +75,15 @@ Cependant, vous pouvez facilement {{Glossary('polyfill')}} cette méthode pour d
 
 ```js
 if (!String.prototype.includes) {
-  String.prototype.includes = function(search, start) {
-    'use strict';
+  String.prototype.includes = function (search, start) {
+    "use strict";
 
     if (search instanceof RegExp) {
-      throw TypeError('first argument must not be a RegExp');
+      throw TypeError("first argument must not be a RegExp");
     }
-    if (start === undefined) { start = 0; }
+    if (start === undefined) {
+      start = 0;
+    }
     return this.indexOf(search, start) !== -1;
   };
 }

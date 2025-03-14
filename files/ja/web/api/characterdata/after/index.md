@@ -1,18 +1,20 @@
 ---
-title: CharacterData.after()
+title: "CharacterData: after() メソッド"
 slug: Web/API/CharacterData/after
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef("DOM")}}
 
-**`after()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、一連の {{domxref("Node")}} オブジェクトまたは文字列を、この `CharacterData` の親ノードの子リストの、この `CharacterData` の直後に挿入します。
+**`after()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、一連の {{domxref("Node")}} オブジェクトまたは文字列を、このオブジェクトの親ノードの子リスト内の、このオブジェクト自身の直後に挿入します。
 
 文字列は {{domxref("Text")}} ノードとして挿入されます。文字列は {{domxref("Text/Text", "Text()")}} コンストラクターの引数として挿入されます。
 
 ## 構文
 
-```js
-after(... nodes)
+```js-nolint
+after(...nodes)
 ```
 
 ### 引数
@@ -34,17 +36,18 @@ after(... nodes)
 `after()` メソッドを使うと、新しいノードをこの `CharacterData` ノードの後に挿入することができます。
 
 ```js
-const h1TextNode = document.getElementsByTagName('h1')[0].firstChild;
+const h1TextNode = document.querySelector("h1").firstChild;
 h1TextNode.after(" #h1");
 
-h1TextNode.parentElement.childNodes
+h1TextNode.parentElement.childNodes;
 // NodeList [#text "CharacterData.after()", #text " #h1"]
 
 h1TextNode.data;
 // "CharacterData.after()"
 ```
 
-> **メモ:** 現在のノードにテキストを追加したい場合は、 [`appendData()`](/ja/docs/Web/API/CharacterData/appendData) メソッドを使用すると現在のノードにデータを追加することができます。
+> [!NOTE]
+> 現在のノードにテキストを追加したい場合は、 [`appendData()`](/ja/docs/Web/API/CharacterData/appendData) メソッドを使用すると現在のノードにデータを追加することができます。
 
 ## 仕様書
 

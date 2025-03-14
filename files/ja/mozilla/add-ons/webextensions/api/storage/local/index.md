@@ -3,20 +3,20 @@ title: storage.local
 slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 `local` ストレージ領域を指します。`local`ストレージ内のアイテムはその拡張機能がインストールされたマシン内で利用できます。
 
 ブラウザーは拡張機能がローカルストレージエリアに保存できるデータ量を制限します。
 
-- Chrome では、この API を使用して、["unlimitedStorage"](/ja/Add-ons/WebExtensions/manifest.json/permissions#Unlimited_storage)パーミッションを許可しない場合は 5MB まで保存できます。
+- Chrome では、この API を使用して、["unlimitedStorage"](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#unlimited_storage)パーミッションを許可しない場合は 5MB まで保存できます。
 - Firefox ではバージョン 56 以降で"unlimitedStorage"パーミッションを利用できます。保存できるデータ量は現在では制限していませんが、将来的には制限するため、もし大きなデータ量を保存するのであれば"unlimitedStorage"パーミッションを今から使用するとよいでしょう。
 
 拡張機能をアンインストールすると、関連するローカルストレージは削除されます。
 
 また Firefox では、"about:config"で"keepUuidOnUninstall"と"keepStorageOnUninstall"の設定を`true`にすることで、アンインストール時にデータが削除されることを防ぐことができます。 この機能は拡張機能開発のテストのために提供されています。拡張機能自身ではこれらの設定を変更できません。
 
-この API は {{domxref("Window.localStorage")}}に似ていますが、拡張機能のコード内で`Window.localStorage`を使用することは推奨されません。これはユーザがプライバシーのために履歴とデータを削除するなど、Firefox は localStorage API を用いて拡張機能が保存したデータを削除することがあるためです。
+この API は {{domxref("Window.localStorage")}}に似ていますが、拡張機能のコード内で`Window.localStorage`を使用することは推奨されません。これはユーザーがプライバシーのために履歴とデータを削除するなど、Firefox は localStorage API を用いて拡張機能が保存したデータを削除することがあるためです。
 
 ## 関数
 
@@ -33,15 +33,17 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 - {{WebExtAPIRef("storage.StorageArea.clear()")}}
   - : ストレージ領域内の全てのアイテムを削除します。
 
-## ブラウザ互換状況
+## ブラウザーの互換性
 
-{{Compat("webextensions.api.storage.local")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.storage`](https://developer.chrome.com/extensions/storage#property-local) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json)における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!NOTE]
+> この API は Chromium の [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#property-local) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json)における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -68,4 +70,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

@@ -1,83 +1,80 @@
 ---
-title: document.anchors
+title: Document：anchors 属性
 slug: Web/API/Document/anchors
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}} {{Deprecated_Header}}
 
-{{deprecated_header()}}
+{{domxref("Document")}} 接口的 **`anchors`** 只读属性返回文档中所有锚点的列表。
 
-### 概述
+## 值
 
-`anchors`属性返回当前文档中的所有锚点元素。
+{{domxref("HTMLCollection")}}。
 
-### 语法
-
-```plain
-nodeList = document.anchors
-```
-
-### 例子
+## 示例
 
 ```js
-if ( document.anchors.length >= 5 ) {
-    dump("dump found too many anchors");
-    window.location = "http://www.google.com";
+if (document.anchors.length >= 5) {
+  dump("发现了许多锚点");
 }
 ```
 
-下例自动生成一个目录列表，包含了到每个段落的锚点。
+以下是一个示例，它可以自动将页面上的每个锚点填充到目录中：
 
-```js
-<!DOCTYPE HTML>
-<html>
-<head>
-    <script type="text/javascript" charset="utf-8">
-    function init() {
-        var toc = document.getElementById("toc");
-        var i, li, newAnchor;
-        for (i = 0; i < document.anchors.length; i++) {
-            li = document.createElement("li");
-            newAnchor = document.createElement('a');
-            newAnchor.href = "#" + document.anchors[i].name;
-            newAnchor.innerHTML = document.anchors[i].text;
-            li.appendChild(newAnchor);
-            toc.appendChild(li);
+```html
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>测试</title>
+    <script>
+      function init() {
+        const toc = document.getElementById("toc");
+        for (const anchor of document.anchors) {
+          const li = document.createElement("li");
+          const newAnchor = document.createElement("a");
+          newAnchor.href = "#" + anchor.name;
+          newAnchor.textContent = anchor.text;
+          li.appendChild(newAnchor);
+          toc.appendChild(li);
         }
-    }
-
+      }
     </script>
-</head>
-<body onload="init()">
+  </head>
+  <body onload="init()">
+    <h1>标题</h1>
+    <h2><a name="contents">内容</a></h2>
+    <ul id="toc"></ul>
 
-<h1>Title</h1>
-<a name="contents"><h2>Contents</h2></a>
-<ul id="toc"></ul>
+    <h2><a name="plants">植物</a></h2>
+    <ol>
+      <li>苹果</li>
+      <li>橙子</li>
+      <li>梨</li>
+    </ol>
 
-<a name="plants"><h2>Plants</h2></a>
-<ol>
-    <li>Apples</li>
-    <li>Oranges</li>
-    <li>Pears</li>
-</ol>
-
-<a name="veggies"><h2>Veggies</h2></a>
-<ol>
-    <li>Carrots</li>
-    <li>Celery</li>
-    <li>Beats</li>
-</ol>
-
-</body>
+    <h2><a name="veggies">蔬菜</a></h2>
+    <ol>
+      <li>胡萝卜</li>
+      <li>西芹</li>
+      <li>节奏</li>
+    </ol>
+  </body>
 </html>
 ```
 
 [在 JSFiddle 中查看](https://jsfiddle.net/S4yNp)
 
-### 备注
+## 备注
 
-由于向后兼容的原因，该属性只返回那些拥有 `name` 属性的 `a` 元素，而不是那些拥有 `id` 属性的 `a` 元素。
+出于向后兼容性的原因，返回的锚点集合只包含使用 `name` 属性创建的锚点，而不包含使用 `id` 属性创建的锚点。
 
-### 规范
+## 规范
 
-[DOM Level 2 HTML: anchors](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7577272)
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}

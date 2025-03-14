@@ -1,25 +1,23 @@
 ---
 title: String.prototype.startsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototipo
-  - Prototype
-  - Reference
-  - Referencia
-  - String
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/startsWith
 ---
 
 {{JSRef}}
 
 El método **`startsWith()`** indica si una cadena de texto comienza con los caracteres de una cadena de texto concreta, devolviendo `true` o `false` según corresponda.
 
-{{EmbedInteractiveExample("pages/js/string-startswith.html")}}
+{{InteractiveExample("JavaScript Demo: String.startsWith()")}}
+
+```js interactive-example
+const str1 = "Saturday night plans";
+
+console.log(str1.startsWith("Sat"));
+// Expected output: true
+
+console.log(str1.startsWith("Sat", 3));
+// Expected output: false
+```
 
 ## Sintaxis
 
@@ -48,12 +46,12 @@ Este método se ha añadido a la especificación ECMAScript 2015 y podría no es
 
 ```js
 if (!String.prototype.startsWith) {
-    Object.defineProperty(String.prototype, 'startsWith', {
-        value: function(search, rawPos) {
-            var pos = rawPos > 0 ? rawPos|0 : 0;
-            return this.substring(pos, pos + search.length) === search;
-        }
-    });
+  Object.defineProperty(String.prototype, "startsWith", {
+    value: function (search, rawPos) {
+      var pos = rawPos > 0 ? rawPos | 0 : 0;
+      return this.substring(pos, pos + search.length) === search;
+    },
+  });
 }
 ```
 
@@ -65,22 +63,20 @@ Un _polyfill_ más robusto (totalmente compatible con la especificación ES2015)
 
 ```js
 //startswith
-var str = 'Ser, o no ser. ¡Esa es la cuestión!';
+var str = "Ser, o no ser. ¡Esa es la cuestión!";
 
-console.log(str.startsWith('Ser'));           // true
-console.log(str.startsWith('no ser'));        // false
-console.log(str.startsWith('Esa es la', 16)); // true
+console.log(str.startsWith("Ser")); // true
+console.log(str.startsWith("no ser")); // false
+console.log(str.startsWith("Esa es la", 16)); // true
 ```
 
 ## Especificaciones
 
-| Especificación                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.startswith', 'String.prototype.startsWith')}} |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.startsWith")}}
+{{Compat}}
 
 ## Ver también
 

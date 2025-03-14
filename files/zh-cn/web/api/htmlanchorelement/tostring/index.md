@@ -1,29 +1,36 @@
 ---
-title: HTMLHyperlinkElementUtils.toString()
+title: HTMLAnchorElement：toString() 方法
 slug: Web/API/HTMLAnchorElement/toString
+l10n:
+  sourceCommit: b829b2fae917b5b931011ddeb6a0d1b2d2b81c54
 ---
 
 {{ApiRef("URL API")}}
 
-**`HTMLHyperlinkElementUtils.toString()`** 方法返回一个包含整个 URL 的 {{domxref("USVString")}} 。它是{{domxref("HTMLHyperlinkElementUtils.href")}} 的一个只读版本。
+**`HTMLAnchorElement.toString()`** {{Glossary("stringifier", "字符串化器")}}方法返回一个包含完整 URL 的字符串。它是 {{domxref("HTMLAnchorElement.href")}} 的只读版本。
 
-## 句法
+## 语法
 
-```plain
-string = object.toString();
+```js-nolint
+toString()
 ```
 
-## 范例
+### 参数
+
+无。
+
+### 返回值
+
+一个包含元素完整 URL 的字符串。
+
+## 示例
+
+### 在锚点元素上调用 toString
 
 ```js
-/*
-Let's imagine an
-<a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils/toString">
- element is in the document
-*/
-var anchor = document.getElementById("myAnchor");
-var result = anchor.toString();
-// Returns: 'https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils/toString'
+// 文档中有一个 <a id="myAnchor" href="/zh-CN/docs/HTMLAnchorElement"> 元素
+const anchor = document.getElementById("myAnchor");
+anchor.toString(); // 返回“https://developer.mozilla.org/zh-CN/docs/HTMLAnchorElement”
 ```
 
 ## 规范
@@ -34,6 +41,6 @@ var result = anchor.toString();
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
-- The {{domxref("HTMLHyperlinkElementUtils")}} mixin it belongs to.
+- 所属接口 {{domxref("HTMLAnchorElement")}}。

@@ -1,19 +1,34 @@
 ---
 title: hidden
 slug: Web/HTML/Global_attributes/hidden
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/hidden
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`hidden`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 해당 요소가 아직, 또는 더 이상 관련이 없음을 나타내는 불리언 특성입니다. 브라우저는 `hidden` 속성을 설정한 요소를 렌더링 하지 않습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-hidden.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: hidden", "tabbed-shorter")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
+```html interactive-example
+<p>
+  This content should be read right now, as it is important. I am so glad you
+  are able to find it!
+</p>
+
+<p hidden>
+  This content is not relevant to this page right now, so should not be seen.
+  Nothing to see here. Nada.
+</p>
+```
+
+```css interactive-example
+p {
+  background: #ffe8d4;
+  border: 1px solid #f69d3c;
+  padding: 5px;
+  border-radius: 5px;
+}
+```
 
 하나의 표시 방식에서만 숨기려 할 땐 `hidden` 특성이 적합하지 않습니다. 임의의 요소에 `hidden`을 추가하면, 그 요소는 시각적 방식 외에도 스크린 리더 등 다른 모든 표시 방식에서 숨겨집니다.
 
@@ -33,7 +48,7 @@ translation_of: Web/HTML/Global_attributes/hidden
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.hidden")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -7,11 +7,11 @@ slug: Web/HTTP/Headers/Content-Location
 
 La cabecera **`Content-Location`** indica una ubicación alternativa para los datos devueltos. Su principal uso es indicar la URL de un recurso transmitido y que ha resultado de una [negociación de contenido](/es/docs/Web/HTTP/Content_negotiation).
 
-Las cabeceras {{HTTPHeader("Location")}} y `Content-Location` son diferentes. `Location` indica la URL de una redirección, mientras que `Content-Location` indica la URL directa a ser utilizada para acceder al recurso, sin necesidad de realizar [negociación de contenido](/es/docs/Web/HTTP/Content_negotiation) en el futuro. Mientras que `Location` es una cabecera asociada con la respuesta, `Content-Location` está asociada con los datos devueltos. Esta distinción puede parecer abstracta sin ver algunos [ejemplos](#Examples).
+Las cabeceras {{HTTPHeader("Location")}} y `Content-Location` son diferentes. `Location` indica la URL de una redirección, mientras que `Content-Location` indica la URL directa a ser utilizada para acceder al recurso, sin necesidad de realizar [negociación de contenido](/es/docs/Web/HTTP/Content_negotiation) en el futuro. Mientras que `Location` es una cabecera asociada con la respuesta, `Content-Location` está asociada con los datos devueltos. Esta distinción puede parecer abstracta sin ver algunos [ejemplos](#examples).
 
-| Header type                                      | {{Glossary("Entity header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Entity header")}} |
+| ------------------------------------- | ----------------------------- |
+| {{Glossary("Forbidden header name")}} | no                            |
 
 ## Sintaxis
 
@@ -22,7 +22,7 @@ Content-Location: <url>
 ## Directivas
 
 - \<url>
-  - : Una URL [relativa](/es/docs/Learn/Common_questions/What_is_a_URL#Examples_of_relative_URLs) o [absoluta](/es/docs/Learn/Common_questions/What_is_a_URL#Examples_of_absolute_URLs) (a la URL de la petición).
+  - : Una URL [relativa](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#examples_of_relative_urls) o [absoluta](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#examples_of_absolute_urls) (a la URL de la petición).
 
 ## Ejemplos
 
@@ -36,7 +36,7 @@ Suponga que la API de un sitio web puede devolver datos en los formatos {{glossa
 | `Accept: application/xml, text/xml`   | `Content-Location: /documents/foo.xml`  |
 | `Accept: text/plain, text/*`          | `Content-Location: /documents/foo.txt`  |
 
-Estas URLs son ejemplos — el sitio web podría servir los distintos tipos de ficheros con cualquier patrón de URL que desee, por ejemplo, por medio de un [parámetro en la query](/es/docs/Web/API/HTMLHyperlinkElementUtils/search): `/documents/foo?format=json`, `/documents/foo?format=xml`, y así sucesivamente.
+Estas URLs son ejemplos — el sitio web podría servir los distintos tipos de ficheros con cualquier patrón de URL que desee, por ejemplo, por medio de un [parámetro en la query](/es/docs/Web/API/HTMLAnchorElement/search): `/documents/foo?format=json`, `/documents/foo?format=xml`, y así sucesivamente.
 
 De esa forma el cliente podrÍa recordar que la versión en formato JSON está disponible en esa URL particular, saltándose el paso de la negociación de contenido la próxima vez que solicite ese documento.
 
@@ -73,14 +73,16 @@ Digamos que tiene un formulario [`<form>`](/es/docs/Web/HTML/Element/form) para 
 ```html
 <form action="/enviar-pago" method="post">
   <p>
-    <label>A quien desea enviar dinero?
-      <input type="text" name="destinatario">
+    <label
+      >A quien desea enviar dinero?
+      <input type="text" name="destinatario" />
     </label>
   </p>
 
   <p>
-    <label>Cuanto dinero?
-      <input type="number" name="cantidad">
+    <label
+      >Cuanto dinero?
+      <input type="number" name="cantidad" />
     </label>
   </p>
 
@@ -105,13 +107,11 @@ Content-Location: /mis-recibos/38
 
 ## Especificaciones
 
-| Especificación                                               | Título                                                        |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "Content-Location", "3.1.4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Content-Location")}}
+{{Compat}}
 
 ## Ver también
 

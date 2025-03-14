@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing variable name'
+title: "SyntaxError: missing variable name"
 slug: Web/JavaScript/Reference/Errors/No_variable_name
 ---
 
@@ -36,7 +36,7 @@ var ohGodWhy = "foo";
 
 ### 保留字不能作为变量名
 
-有一些名称是作为[保留字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords)而存在的。不好意思，你不能使用！:(
+有一些名称是作为[保留字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#keywords)而存在的。不好意思，你不能使用！:(
 
 ```js example-bad
 var debugger = "whoop";
@@ -60,11 +60,12 @@ var second = document.getElementById('two'),
 修复后的代码：
 
 ```js example-good
-var x, y = "foo";
+var x,
+  y = "foo";
 var x = "foo";
 
-var first = document.getElementById('one');
-var second = document.getElementById('two');
+var first = document.getElementById("one");
+var second = document.getElementById("two");
 ```
 
 ### 数组
@@ -79,11 +80,11 @@ var arr = 1,2,3,4,5;
 这样写才是正确的：
 
 ```js example-good
-var arr = [1,2,3,4,5];
+var arr = [1, 2, 3, 4, 5];
 ```
 
 ## 相关内容
 
-- [Good variable names](http://wiki.c2.com/?GoodVariableNames)
+- [Good variable names](https://wiki.c2.com/?GoodVariableNames)
 - [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var)
-- [Variable declarations in the JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations)
+- [Variable declarations in the JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)

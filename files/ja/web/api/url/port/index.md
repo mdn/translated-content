@@ -1,42 +1,50 @@
 ---
-title: URL.port
+title: "URL: port プロパティ"
+short-title: port
 slug: Web/API/URL/port
+l10n:
+  sourceCommit: 216794e76611c18e53222bb8efa570e898e990de
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-{{domxref("URL")}} インターフェイスの **`port`** プロパティは、URL のポート番号を含む {{domxref("USVString")}} です。 URL に明示的なポート番号が含まれていない場合は、`''` に設定されます。
+**`port`** は {{domxref("URL")}} インターフェイスのプロパティで、この URL のポート番号の入った文字列です。
 
-{{AvailableInWorkers}}
+> **メモ:** [`URL()`](/ja/docs/Web/API/URL/URL) コンストラクターに渡された入力文字列が明示的なポート番号を含んでいないか（例えば `https://localhost`）、入力文字列のプロトコル部分に対応する既定のポート番号を含んでいる場合（例えば `https://localhost:443`）、コンストラクターが返す [`URL`](/ja/docs/Web/API/URL) オブジェクトの port プロパティの値は空文字列 (`''`) になります。
 
-## 構文
+## 値
 
-```
-string = object.port;
-object.port = string;
-```
-
-### 値
-
-{{domxref("USVString")}}。
+文字列です。
 
 ## 例
 
 ```js
-var url = new URL('https://mydomain.com:80/svn/Repos/');
-var result = url.port; // 戻り値: '80'
+// https プロトコルで既定ではないポート番号
+new URL("https://example.com:5443/svn/Repos/").port; // '5443'
+// http プロトコルで既定ではないポート番号
+new URL("http://example.com:8080/svn/Repos/").port; // '8080'
+// https プロトコルで既定のポート番号
+new URL("https://example.com:443/svn/Repos/").port; // ''（空文字列）
+// http プロトコルで既定のポート番号
+new URL("http://example.com:80/svn/Repos/").port; // ''（空文字列）
+// https プロトコルで明示的なポート番号なし
+new URL("https://example.com/svn/Repos/").port; // ''（空文字列）
+// http プロトコルで明示的なポート番号なし
+new URL("https://example.com/svn/Repos/").port; // ''（空文字列）
+// ftp プロトコルで既定ではないポート番号
+new URL("ftp://example.com:221/svn/Repos/").port; // '221'
+// ftp プロトコルで既定のポート番号
+new URL("ftp://example.com:21/svn/Repos/").port; // ''（空文字列）
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                             | 状態                 | コメント |
-| ---------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#dom-url-port', 'URL.port')}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.URL.port")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{domxref("URL")}} インターフェイスに属します。
+- 所属先の {{domxref("URL")}} インターフェイス

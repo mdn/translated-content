@@ -3,7 +3,7 @@ title: SVG Attribute reference
 slug: Web/SVG/Attribute
 ---
 
-« [SVG](/pt-BR/SVG) / [SVG Element reference](/pt-BR/SVG/Element) »
+« [SVG](/pt-BR/docs/Web/SVG) / [SVG Element reference](/pt-BR/docs/Web/SVG/Element) »
 
 ## SVG Attributes
 
@@ -392,7 +392,8 @@ slug: Web/SVG/Attribute
 
 ### Presentation attributes
 
-> **Nota:** Note that all SVG presentation attributes can be used as CSS properties.
+> [!NOTE]
+> Note that all SVG presentation attributes can be used as CSS properties.
 
 {{ SVGAttr("alignment-baseline") }}, {{ SVGAttr("baseline-shift") }}, {{ SVGAttr("clip") }}, {{ SVGAttr("clip-path") }}, {{ SVGAttr("clip-rule") }}, {{ SVGAttr("color") }}, {{ SVGAttr("color-interpolation") }}, {{ SVGAttr("color-interpolation-filters") }}, {{ SVGAttr("color-profile") }}, {{ SVGAttr("color-rendering") }}, {{ SVGAttr("cursor") }}, {{ SVGAttr("direction") }}, {{ SVGAttr("display") }}, {{ SVGAttr("dominant-baseline") }}, {{ SVGAttr("enable-background") }}, {{ SVGAttr("fill") }}, {{ SVGAttr("fill-opacity") }}, {{ SVGAttr("fill-rule") }}, {{ SVGAttr("filter") }}, {{ SVGAttr("flood-color") }}, {{ SVGAttr("flood-opacity") }}, {{ SVGAttr("font-family") }}, {{ SVGAttr("font-size") }}, {{ SVGAttr("font-size-adjust") }}, {{ SVGAttr("font-stretch") }}, {{ SVGAttr("font-style") }}, {{ SVGAttr("font-variant") }}, {{ SVGAttr("font-weight") }}, {{ SVGAttr("glyph-orientation-horizontal") }}, {{ SVGAttr("glyph-orientation-vertical") }}, {{ SVGAttr("image-rendering") }}, {{ SVGAttr("kerning") }}, {{ SVGAttr("letter-spacing") }}, {{ SVGAttr("lighting-color") }}, {{ SVGAttr("marker-end") }}, {{ SVGAttr("marker-mid") }}, {{ SVGAttr("marker-start") }}, {{ SVGAttr("mask") }}, {{ SVGAttr("opacity") }}, {{ SVGAttr("overflow") }}, {{ SVGAttr("pointer-events") }}, {{ SVGAttr("shape-rendering") }}, {{ SVGAttr("stop-color") }}, {{ SVGAttr("stop-opacity") }}, {{ SVGAttr("stroke") }}, {{ SVGAttr("stroke-dasharray") }}, {{ SVGAttr("stroke-dashoffset") }}, {{ SVGAttr("stroke-linecap") }}, {{ SVGAttr("stroke-linejoin") }}, {{ SVGAttr("stroke-miterlimit") }}, {{ SVGAttr("stroke-opacity") }}, {{ SVGAttr("stroke-width") }}, {{ SVGAttr("text-anchor") }}, {{ SVGAttr("text-decoration") }}, {{ SVGAttr("text-rendering") }}, {{ SVGAttr("unicode-bidi") }}, {{ SVGAttr("visibility") }}, {{ SVGAttr("word-spacing") }}, {{ SVGAttr("writing-mode") }}
 

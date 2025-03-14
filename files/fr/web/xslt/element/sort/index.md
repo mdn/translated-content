@@ -1,13 +1,9 @@
 ---
 title: sort
 slug: Web/XSLT/Element/sort
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/sort
-original_slug: Web/XSLT/sort
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:sort>` définit les paramètres de tri pour des nœuds sélectionnés par `<xsl:apply-templates>` ou par `<xsl:for-each>`.
 
@@ -57,7 +53,7 @@ Sous-instruction, apparaît toujours comme un enfant de \<xsl:for-each>, où il 
 
 ### Définition
 
-- [XSLT 1.0, section 10 (en)](http://www.w3.org/TR/xslt#sorting).
+- [XSLT 1.0, section 10 (en)](https://www.w3.org/TR/xslt#sorting).
 - [XSLT 1.0, tri (fr)](http://xmlfr.org/w3c/TR/xslt/#sorting).
 
 ### Support Gecko

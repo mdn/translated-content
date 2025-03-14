@@ -1,21 +1,15 @@
 ---
 title: JavaScript
 slug: Web/JavaScript
-tags:
-  - JavaScript
-  - Landing
-  - Landing page
-  - Learn
-translation_of: Web/JavaScript
 ---
 
 {{JsSidebar}}
 
-**JavaScript** (souvent abrégé en « JS ») est un langage de script léger, orienté objet, principalement connu comme le langage de script des pages web. Mais il est aussi [utilisé dans de nombreux environnements extérieurs aux navigateurs web](https://fr.wikipedia.org/wiki/JavaScript#Autres_utilisations) tels que [Node.js](https://nodejs.org/), [Apache CouchDB](https://couchdb.apache.org/) voire [Adobe Acrobat](https://www.adobe.com/devnet/acrobat/javascript.html). Le code JavaScript est interprété ou compilé à la volée ([JIT](https://fr.wikipedia.org/wiki/Compilation_%C3%A0_la_vol%C3%A9e)). C'est un langage à objets utilisant le concept de [prototype](https://fr.wikipedia.org/wiki/Programmation_orient%C3%A9e_prototype), disposant d'un typage faible et dynamique qui permet de programmer suivant plusieurs paradigmes de programmation : fonctionnelle, impérative et orientée objet. [Apprenez-en plus sur JavaScript](/fr/docs/Web/JavaScript/About_JavaScript).
+**JavaScript** (souvent abrégé en « JS ») est un langage de script léger, orienté objet, principalement connu comme le langage de script des pages web. Mais il est aussi [utilisé dans de nombreux environnements extérieurs aux navigateurs web](https://fr.wikipedia.org/wiki/JavaScript#Autres_utilisations) tels que [Node.js](https://nodejs.org/), [Apache CouchDB](https://couchdb.apache.org/) voire [Adobe Acrobat](https://www.adobe.com/devnet/acrobat/javascript.html). Le code JavaScript est interprété ou compilé à la volée ([JIT](https://fr.wikipedia.org/wiki/Compilation_à_la_volée)). C'est un langage à objets utilisant le concept de [prototype](https://fr.wikipedia.org/wiki/Programmation_orientée_prototype), disposant d'un typage faible et dynamique qui permet de programmer suivant plusieurs paradigmes de programmation : fonctionnelle, impérative et orientée objet. [Apprenez-en plus sur JavaScript](/fr/docs/Web/JavaScript).
 
 Cette section de MDN est dédiée au langage JavaScript. Pour des informations sur l'utilisation de JavaScript avec les [API](/fr/docs/Glossary/API) spécifiques des navigateurs web pour les pages web, veuillez consulter les sections sur les [API Web](/fr/docs/Web/API) (_Web API_ en anglais) et le [DOM](/fr/docs/Web/API/Document_Object_Model).
 
-Le standard qui spécifie JavaScript est [ECMAScript](/fr/docs/Web/JavaScript/Language_Resources). En 2012, tous les navigateurs modernes supportent complètement ECMAScript 5.1. Les anciens navigateurs supportent au minimum ECMAScript 3. Une sixième version majeure du standard a été finalisée et publiée le 17 juin 2015. Cette version s'intitule officiellement ECMAScript 2015 mais est encore fréquemment appelée ECMAScript 6 ou ES6. Étant donné que les standards ECMAScript sont désormais édités sur un rythme annuel, cette documentation fait référence à la dernière version en cours de rédaction, actuellement c'est [ECMAScript 2020](https://tc39.github.io/ecma262/).
+Le standard qui spécifie JavaScript est [ECMAScript](/fr/docs/Web/JavaScript/JavaScript_technologies_overview). En 2012, tous les navigateurs modernes supportent complètement ECMAScript 5.1. Les anciens navigateurs supportent au minimum ECMAScript 3. Une sixième version majeure du standard a été finalisée et publiée le 17 juin 2015. Cette version s'intitule officiellement ECMAScript 2015 mais est encore fréquemment appelée ECMAScript 6 ou ES6. Étant donné que les standards ECMAScript sont désormais édités sur un rythme annuel, cette documentation fait référence à la dernière version en cours de rédaction, actuellement c'est [ECMAScript 2020](https://tc39.github.io/ecma262/).
 
 JavaScript ne doit pas être confondu avec le [langage de programmation Java](https://fr.wikipedia.org/wiki/Java_%28langage%29). Java et JavaScript sont deux marques déposées par Oracle dans de nombreux pays mais ces deux langages de programmation ont chacun une syntaxe, une sémantique et des usages différents.
 
@@ -23,7 +17,7 @@ JavaScript ne doit pas être confondu avec le [langage de programmation Java](ht
 >
 > Nous avons élaboré un cours qui comprend toutes les informations essentielles dont vous avez besoin pour atteindre votre objectif.
 >
-> [Commencer](/fr/docs/Learn/Front-end_web_developer)
+> [Commencer](/fr/curriculum/)
 
 ## Tutoriels
 
@@ -53,7 +47,7 @@ Si vous souhaitez apprendre JavaScript et que vous débutez en programmation ou 
 
 - [Comprendre les _frameworks_ JavaScript côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
   - : Les _frameworks_ JavaScript font partie de l'écosystème du développement web côté client. Les outils qu'ils fournissent permettent de construire des applications dynamiques sur des bases robustes. Dans ce module, on présente les notions principales de leur fonctionnement et comment ces outils peuvent rejoindre votre panoplie. Des tutoriels sur les frameworks les plus répandus suivront cet article.
-- [Une réintroduction à JavaScript](/fr/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+- [Une réintroduction à JavaScript](/fr/docs/Web/JavaScript/Language_overview)
   - : Un aperçu pour ceux qui _pensent_ s'y connaître en JavaScript.
 - [Structures de données JavaScript](/fr/docs/Web/JavaScript/Data_structures)
   - : Aperçu des structures de données disponibles en JavaScript.
@@ -68,11 +62,11 @@ Si vous souhaitez apprendre JavaScript et que vous débutez en programmation ou 
   - : Cette page explique l'héritage à base de prototype, un concept souvent incompris et sous-estimé.
 - [Le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode)
   - : Une variante plus restreinte de JavaScript (par exemple, on ne peut pas utiliser de variable avant de l'avoir définie). Elle permet d'obtenir de meilleures performances et de faciliter le débogage.
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Typed_arrays)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
   - : Les tableaux typés permettent d'accéder à des données binaires brutes, de façon organisée.
-- [La gestion de la mémoire en JavaScript](/fr/docs/Web/JavaScript/Memory_Management)
+- [La gestion de la mémoire en JavaScript](/fr/docs/Web/JavaScript/Memory_management)
   - : Cet article décrit le cycle de vie des objets et de la mémoire en JavaScript, ainsi que le mécanisme du ramasse-miettes.
-- [Gestion de la concurrence et boucle des événements](/fr/docs/Web/JavaScript/EventLoop)
+- [Gestion de la concurrence et boucle des événements](/fr/docs/Web/JavaScript/Event_loop)
   - : Le modèle de concurrence utilisé par JavaScript est basé sur une « boucle d'événements »
 
 ## Référence
@@ -82,7 +76,7 @@ Parcourez la documentation complète de la [référence JavaScript](/fr/docs/Web
 - [Les objets standard](/fr/docs/Web/JavaScript/Reference/Global_Objects)
   - : Apprenez à connaître les objets natifs standard tels que [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array), [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean), [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error), [`Function`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function), [`JSON`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON), [`Math`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math), [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number), [`Object`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object), [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp), [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String), [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map), [`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set), [`WeakMap`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap), [`WeakSet`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet), et d'autres.
 - [Les expressions et les opérateurs](/fr/docs/Web/JavaScript/Reference/Operators)
-  - : Apprenez à connaître comment fonctionnent les opérateurs JavaScript comme [`instanceof`](/fr/docs/Web/JavaScript/Reference/Operators/instanceof), [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof), [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new), [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) et bien d'autres notions comme [la précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
+  - : Apprenez à connaître comment fonctionnent les opérateurs JavaScript comme [`instanceof`](/fr/docs/Web/JavaScript/Reference/Operators/instanceof), [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof), [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new), [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) et bien d'autres notions comme [la précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence).
 - [Les instructions et les déclarations](/fr/docs/Web/JavaScript/Reference/Statements)
   - : Apprenez à connaître comment utiliser [`do...while`](/fr/docs/Web/JavaScript/Reference/Statements/do...while), [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in), [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of), [`try...catch`](/fr/docs/Web/JavaScript/Reference/Statements/try...catch), [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let), [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var), [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const), [`if...else`](/fr/docs/Web/JavaScript/Reference/Statements/if...else), [`switch`](/fr/docs/Web/JavaScript/Reference/Statements/switch) et les autres mots-clés et instructions JavaScript.
 - [Les fonctions](/fr/docs/Web/JavaScript/Reference/Functions)
@@ -92,9 +86,9 @@ Parcourez la documentation complète de la [référence JavaScript](/fr/docs/Web
 
 Voici une liste d'outils utiles pour écrire et déboguer du code **JavaScript**.
 
-- [Outils de développement de Firefox](/fr/docs/Tools)
-  - : [Console web](/fr/docs/Tools/Web_Console), [profileur JavaScript](/fr/docs/Tools/Performance), [débogueur](/fr/docs/Tools/Debugger), et plus.
-- [Invites de commande JavaScript](/fr/docs/Web/JavaScript/Shells)
+- [Outils de développement de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+  - : [Console web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html), [profileur JavaScript](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html), [débogueur](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html), et plus.
+- [Invites de commande JavaScript](/fr/docs/Web/JavaScript/JavaScript_technologies_overview)
   - : Un interpréteur de commandes JavaScript vous permet de tester rapidement des extraits de code JavaScript.
 - [Apprendre le JavaScript (en anglais)](https://learnjavascript.online/)
   - : Une excellente ressource pour les développeurs web en herbe - Apprenez JavaScript dans un environnement interactif, avec des leçons courtes et des tests interactifs, guidés par une évaluation automatique. Les 40 premières leçons sont gratuites, et le cours complet est disponible moyennant un petit paiement unique.

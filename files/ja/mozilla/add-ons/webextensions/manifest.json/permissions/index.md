@@ -119,10 +119,10 @@ API 権限には、拡張機能から使用したい [WebExtension API](/ja/docs
 
 ほとんどの場合、権限はその API へのアクセス権を付与するだけですが、以下のような例外があります。
 
-- `tabs` 権限は、 {{webextAPIref("tabs", "<code>tabs</code> API のうち特権が必要なもの")}}に対して、 [host 権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)なしにアクセスできます。対象は `Tab.url`, `Tab.title`, `Tab.faviconUrl` です。
+- `tabs` 権限は、 {{webextAPIref("tabs", "<code>tabs</code> API のうち特権が必要なもの")}}に対して、 [host 権限](#host_permissions)なしにアクセスできます。対象は `Tab.url`, `Tab.title`, `Tab.faviconUrl` です。
 
   - Firefox 85 以前では、 `tabs` は `url` を `queryInfo` 引数に含めて {{webextAPIref("tabs/query", "tabs.query()")}} を呼び出す際にも必要です。 `tabs` API の他の部分は、権限を要求することなく使用できます。
-  - Firefox 86 および Chrome 50 では、 "tabs" 権限の代わりに matching [host 権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)を使用することもできます。
+  - Firefox 86 および Chrome 50 では、 "tabs" 権限の代わりに matching [host 権限](#host_permissions)を使用することもできます。
 
 - `webRequestBlocking` 権限を指定した場合、"blocking" 引数の使用が許可されます。これによって{{webextAPIref("WebRequest", "リクエストの変更やキャンセル")}}が可能となります。
 - `downloads.open` 権限を指定した場合、{{WebExtAPIRef("downloads.open()")}} API の利用が許可されます。
@@ -147,11 +147,12 @@ API 権限には、拡張機能から使用したい [WebExtension API](/ja/docs
 
 例えば、ユーザーがブラウザーアクションをクリックした時に現在のページでスクリプトを実行する拡張機能を考えます。`activeTab` 権限がない場合、拡張機能は `<all_urls>` の host 権限を要求する必要があります。しかし、これは拡張機能に必要以上の力を与えています。アクティブなタブで単にユーザーアクションに応答する代わりに、*任意のタブ*で、*任意の時*に、スクリプトを実行できます。
 
-> **メモ:** ユーザー操作 (例：クリック) が発生したときに存在していたタブ／データにのみアクセスできます。アクティブなタブが移動すると (例：読み込みの終了やその他のイベントにより)、権限はそのタブへのアクセスを許可しなくなります。
+> [!NOTE]
+> ユーザー操作 (例：クリック) が発生したときに存在していたタブ／データにのみアクセスできます。アクティブなタブが移動すると (例：読み込みの終了やその他のイベントにより)、権限はそのタブへのアクセスを許可しなくなります。
 
 通常、 `activeTab` が付与されるタブは、 1 つのケースを除いて、単に現在アクティブなタブです。 {{webextAPIref("menus")}} API では、ユーザーがタブをコンテキストクリックしたときに表示されるメニュー項目を作成することができます (つまり、ユーザーがあるタブから別のタブに切り替えることができるタブトリップの要素)。
 
-ユーザーがこのような項目をクリックした場合、ユーザーがクリックしたタブが現在のアクティブなタブでなくても、activeTab 権限が付与されます (Firefox 63 以降、{{bug(1446956)}})。
+ユーザーがこのような項目をクリックした場合、ユーザーがクリックしたタブが現在のアクティブなタブでなくても、activeTab 権限が付与されます (Firefox 63 以降、[Firefox バグ 1446956](https://bugzil.la/1446956))。
 
 ## クリップボードのアクセス
 
@@ -169,7 +170,7 @@ API 権限には、拡張機能から使用したい [WebExtension API](/ja/docs
 `unlimitedStorage` 権限は以下の通りです。
 
 - 拡張機能に {{WebExtAPIRef("storage.local")}} API で制限する容量を超えられるようにする
-- Firefox では[「永続的な」IndexedDB データベース](/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#firefox_specifics)の作成を、データベース作成時にブラウザーからユーザーに許可を確認することなく、可能にする
+- Firefox では[「永続的な」IndexedDB データベース](/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#firefox_specifics)の作成を、データベース作成時にブラウザーからユーザーに許可を確認することなく、可能にする
 
 ## 例
 
@@ -193,4 +194,4 @@ API 権限には、拡張機能から使用したい [WebExtension API](/ja/docs
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.permissions")}}
+{{Compat}}

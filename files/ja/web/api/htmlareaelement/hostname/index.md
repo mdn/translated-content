@@ -1,7 +1,8 @@
 ---
-title: HTMLAreaElement.hostname
+title: "HTMLAreaElement: hostname プロパティ"
 slug: Web/API/HTMLAreaElement/hostname
-original_slug: Web/API/HTMLHyperlinkElementUtils/hostname
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -18,12 +19,20 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/hostname
 ```html
 <textarea id="log" rows="4" cols="100"></textarea>
 <map name="infographic">
-    <area id="area1" shape="rect" coords="184,6,253,27"
-          href="/en-US/docs/HTMLAreaElement"
-          target="_blank" alt="Mozilla" />
-    <area id="area2" shape="circle" coords="130,136,60"
-          href="https://coolexample.com/"
-          target="_blank" alt="MDN" />
+  <area
+    id="area1"
+    shape="rect"
+    coords="184,6,253,27"
+    href="/ja/docs/HTMLAreaElement"
+    target="_blank"
+    alt="Mozilla" />
+  <area
+    id="area2"
+    shape="circle"
+    coords="130,136,60"
+    href="https://coolexample.com/"
+    target="_blank"
+    alt="MDN" />
 </map>
 ```
 
@@ -33,8 +42,8 @@ const area1 = document.getElementById("area1");
 const area2 = document.getElementById("area2");
 
 const log = document.getElementById("log");
-log.textContent = `area1 hostname: ${ area1.hostname } \n`; // 'developer.mozilla.org'
-log.textContent += `area2 hostname: ${ area2.hostname }`;  // 'coolexample.com'
+log.textContent = `area1 hostname: ${area1.hostname} \n`; // 'developer.mozilla.org'
+log.textContent += `area2 hostname: ${area2.hostname}`; // 'coolexample.com'
 ```
 
 {{EmbedLiveSample("Examples")}}

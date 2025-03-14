@@ -1,16 +1,15 @@
 ---
 title: テーブルのレイアウトが崩れている
 slug: orphaned/Web/Compatibility_FAQ/Broken_Table_Layout.html
-original_slug: Web/Compatibility_FAQ/Broken_Table_Layout.html
 ---
 
 ## 概要
 
 テーブルのセル幅に統一性がなく、テーブル全体のレイアウトが崩れます。
 
-![](https://mdn.mozillademos.org/files/9963/0107_1.jpg) ![](https://mdn.mozillademos.org/files/9965/0107_2.jpg)
+![](0107_1.jpg) ![](0107_2.jpg)
 
-左：Firefox 右：他ブラウザ
+左：Firefox 右：他ブラウザー
 
 ## 要因
 
@@ -50,9 +49,9 @@ original_slug: Web/Compatibility_FAQ/Broken_Table_Layout.html
 
 ## メリット
 
-- 他のブラウザでも互換性を維持することができます。
+- 他のブラウザーでも互換性を維持することができます。
   - 細かい px の指定をせずにテーブルの見た目を整えることができます。
   - また、後続するセルのコンテンツが用意された列幅をオーバーフロー(はみ出し)した場合にも、
     発生したセルに対して[overflow](/ja/docs/Web/CSS/overflow)プロパティを用いればはみ出したセルの内容を表示できるようになるなど、セルの内容変更にも柔軟に対応できます。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

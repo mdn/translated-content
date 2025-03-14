@@ -3,16 +3,16 @@ title: kernelMatrix
 slug: Web/SVG/Attribute/kernelMatrix
 ---
 
-« [SVG Attribute reference home](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-用于 order 属性定义一列[\<number>](/zh-CN/SVG/Content_type#Number)为{{SVGElement("feConvolveMatrix")}} 元素构成核矩阵。值之间用空格或逗号分开。[\<number>](/zh-CN/SVG/Content_type#Number)的数量必须等于在{{SVGAttr("order")}}属性中定义的\<orderX>和\<orderY>的乘积。
+用于 order 属性定义一列 [\<number>](/zh-CN/docs/SVG/Content_type#number) 为 {{SVGElement("feConvolveMatrix")}} 元素构成核矩阵。值之间用空格或逗号分开。[\<number>](/zh-CN/docs/SVG/Content_type#number) 的数量必须等于在 {{SVGAttr("order")}} 属性中定义的 \<orderX> 和 \<orderY> 的乘积。
 
 ## Usage context
 
-| Categories | None                                                                         |
-| ---------- | ---------------------------------------------------------------------------- |
-| Value      | [T<.2Fvar>s">\<list of number>](/zh-CN/SVG/Content_type#List-of-<var>T<.2Fvar>s) |
-| Animatable | Yes                                                                          |
+| Categories | None                                                                                  |
+| ---------- | ------------------------------------------------------------------------------------- |
+| Value      | [T<.2Fvar>s">\<list of number>](/zh-CN/docs/SVG/Content_type#list-of-<var>t<.2fvar>s) |
+| Animatable | Yes                                                                                   |
 
 ## Example
 

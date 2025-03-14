@@ -1,19 +1,63 @@
 ---
 title: transition
 slug: Web/CSS/transition
-tags:
-  - CSS
-  - CSS переход
-  - Reference
-  - transition
-  - Свойство CSS
-translation_of: Web/CSS/transition
 ---
+
 {{CSSRef}}
 
 Свойство [CSS](/ru/docs/Web/CSS) **`transition`** - это {{ cssxref("Shorthand_properties", "сокращённое свойство") }} для {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, и {{ cssxref("transition-delay") }}.
 
-{{EmbedInteractiveExample("pages/css/transition.html")}}
+{{InteractiveExample("CSS Demo: transition")}}
+
+```css interactive-example-choice
+transition: margin-right 2s;
+```
+
+```css interactive-example-choice
+transition: margin-right 2s 0.5s;
+```
+
+```css interactive-example-choice
+transition: margin-right 2s ease-in-out;
+```
+
+```css interactive-example-choice
+transition: margin-right 2s ease-in-out 0.5s;
+```
+
+```css interactive-example-choice
+transition:
+  margin-right 2s,
+  color 1s;
+```
+
+```css interactive-example-choice
+transition: all 1s ease-out;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">Hover to see<br />the transition.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #e4f0f5;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: 1em monospace;
+  width: 100%;
+  transition: margin-right 2s;
+}
+
+#default-example:hover > #example-element {
+  background-color: #909;
+  color: #fff;
+  margin-right: 40%;
+}
+```
 
 Transition позволяет определять переходное состояние между двумя состояниями элемента. Различные состояния могут быть определены с помощью {{ cssxref("Псевдо-классы", "псевдоклассов") }}, таких как {{cssxref(":hover")}} или {{cssxref(":active")}} или установлены динамически с помощью JavaScript.
 
@@ -33,7 +77,9 @@ transition: margin-left 4s 1s;
 transition: margin-left 4s ease-in-out 1s;
 
 /* Применить к 2 свойствам */
-transition: margin-left 4s, color 1s;
+transition:
+  margin-left 4s,
+  color 1s;
 
 /* Применить ко всем изменённым свойствам */
 transition: all 0.5s ease-out;
@@ -57,7 +103,7 @@ transition: unset;
 - ноль или одно {{cssxref("&lt;single-transition-timing-function&gt;")}} значение, представляющее временну́ю функцию
 - ноль, одно или два {{cssxref("&lt;time&gt;")}} значения. Первое значение, которое может быть интерпретировано как время, присваивается {{cssxref("transition-duration")}}, а второе значение, которое может быть интерпретировано как время, присваивается {{cssxref("transition-delay")}}.
 
-Посмотрите, [что предпринимается](/ru/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#Когда_у_списков_значений_свойств_разные_длины) когда у списков значений свойств разные длины. Вкратце, избыточные свойства, не подлежащие анимации, игнорируются.
+Посмотрите, [что предпринимается](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#%d0%9a%d0%be%d0%b3%d0%b4%d0%b0_%d1%83_%d1%81%d0%bf%d0%b8%d1%81%d0%ba%d0%be%d0%b2_%d0%b7%d0%bd%d0%b0%d1%87%d0%b5%d0%bd%d0%b8%d0%b9_%d1%81%d0%b2%d0%be%d0%b9%d1%81%d1%82%d0%b2_%d1%80%d0%b0%d0%b7%d0%bd%d1%8b%d0%b5_%d0%b4%d0%bb%d0%b8%d0%bd%d1%8b) когда у списков значений свойств разные длины. Вкратце, избыточные свойства, не подлежащие анимации, игнорируются.
 
 ### Формальное описание синтаксиса
 
@@ -65,19 +111,19 @@ transition: unset;
 
 ## Примеры
 
-Примеры CSS переходов включены в главную статью о [CSS переходах](/ru/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
+Примеры CSS переходов включены в главную статью о [CSS переходах](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
 
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
-\[2] [PPK test](http://www.quirksmode.org/css/transitions/properties.html#t031)
+\[2] [PPK test](https://www.quirksmode.org/css/transitions/properties.html#t031)
 
 ## Смотрите также
 
-- [Использование CSS переходов](/ru/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Использование CSS переходов](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{ domxref("TransitionEvent") }}

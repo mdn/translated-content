@@ -16,7 +16,10 @@ slug: Web/CSS/@media/device-width
 この HTML は、800 ピクセルより狭い機器に特別のスタイルシートを適用します。
 
 ```html
-<link rel="stylesheet" media="screen and (max-device-width: 799px)" href="http://foo.bar.com/narrow-styles.css" />
+<link
+  rel="stylesheet"
+  media="screen and (max-device-width: 799px)"
+  href="http://foo.bar.com/narrow-styles.css" />
 ```
 
 ## 仕様書
@@ -29,5 +32,5 @@ slug: Web/CSS/@media/device-width
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/ja/docs/Web/CSS/@media)

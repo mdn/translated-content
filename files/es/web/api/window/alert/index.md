@@ -1,8 +1,6 @@
 ---
 title: Window.alert()
 slug: Web/API/Window/alert
-translation_of: Web/API/Window/alert
-browser-compat: api.Window.alert
 ---
 
 {{ APIRef }}
@@ -17,8 +15,8 @@ a que el usuario cierre el cuadro de diálogo.
 ## Sintaxis
 
 ```js
-alert()
-alert(message)
+alert();
+alert(message);
 ```
 
 ### Parámetros

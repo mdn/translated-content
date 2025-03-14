@@ -3,11 +3,9 @@ title: FormData.values()
 slug: Web/API/FormData/values
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
-**`FormData.values()`** 方法返回一个允许遍历该对象中所有值的 {{jsxref("Iteration_protocols",'迭代器')}} 。这些值是 {{domxref("USVString")}} 或是{{domxref("Blob")}} 对象。
-
-> **备注：** 此方法在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 中可用
+**`FormData.values()`** 方法返回一个允许遍历 {{domxref("FormData")}} 中所有值的[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。这些值是字符串或是 {{domxref("Blob")}} 对象。
 
 ## 语法
 
@@ -24,18 +22,18 @@ formData.values();
 ```js
 //创建一个 FormData 测试对象
 var formData = new FormData();
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 //显示值
 for (var value of formData.values()) {
-   console.log(value);
+  console.log(value);
 }
 ```
 
 结果为：
 
-```
+```plain
 value1
 value2
 ```
@@ -48,9 +46,7 @@ value2
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

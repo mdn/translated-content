@@ -1,15 +1,6 @@
 ---
 title: PerformanceResourceTiming.toJSON()
 slug: Web/API/PerformanceResourceTiming/toJSON
-tags:
-  - API
-  - Method
-  - Méthode
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - toJSON()
-translation_of: Web/API/PerformanceResourceTiming/toJSON
 ---
 
 {{APIRef("Resource Timing API")}}

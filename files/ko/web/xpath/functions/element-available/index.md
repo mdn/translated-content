@@ -1,12 +1,9 @@
 ---
 title: element-available
 slug: Web/XPath/Functions/element-available
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/element-available
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `element-available` 함수는 요소가 이용 가능한 지를 결정하고 true나 false를 반환합니다.
 
@@ -27,7 +24,7 @@ element-available(QName )
 
 ### 정의
 
-[XSLT 1.0 15](http://www.w3.org/TR/xslt#function-element-available)
+[XSLT 1.0 15](https://www.w3.org/TR/xslt#function-element-available)
 
 ### Gecko 지원
 

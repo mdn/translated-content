@@ -1,8 +1,6 @@
 ---
 title: math-style
 slug: Web/CSS/math-style
-translation_of: Web/CSS/math-style
-browser-compat: css.properties.math-style
 ---
 
 {{MDNSidebar}}

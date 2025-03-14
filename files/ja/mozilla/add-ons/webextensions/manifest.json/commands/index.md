@@ -117,7 +117,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 次に、これらのコマンドの最初を下記のようにリッスンできます:
 
 ```js
-browser.commands.onCommand.addListener(function(command) {
+browser.commands.onCommand.addListener(function (command) {
   if (command == "toggle-feature") {
     console.log("toggling the feature!");
   }
@@ -128,9 +128,9 @@ browser.commands.onCommand.addListener(function(command) {
 
 特殊なショートカットが 3 つあります:
 
-- \_execute_browser_action: 拡張機能の[ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_action)のクリックのように動作します。
-- \_execute_page_action: 拡張機能の[ページアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/Page_actions)のクリックのように動作します。
-- \_execute_sidebar_action: 拡張機能の[サイドバー](/ja/docs/Mozilla/Add-ons/WebExtensions/Sidebars)を開きます。Firefox のバージョン 54 以降のみでサポートされます。
+- \_execute_browser_action: 拡張機能の[ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)のクリックのように動作します。
+- \_execute_page_action: 拡張機能の[ページアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)のクリックのように動作します。
+- \_execute_sidebar_action: 拡張機能の[サイドバー](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)を開きます。Firefox のバージョン 54 以降のみでサポートされます。
 
 例えば、これはブラウザーアクションをクリックするキーの組み合わせを定義します:
 
@@ -209,4 +209,4 @@ Mac では、"Ctrl" は"Command" と翻訳され、実際の "Ctrl"が必要な�
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.commands")}}
+{{Compat}}

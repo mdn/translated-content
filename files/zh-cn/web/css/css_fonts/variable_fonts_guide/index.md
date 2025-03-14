@@ -1,11 +1,14 @@
 ---
 title: Variable fonts guide
-slug: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
+slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 ---
+
+{{CSSRef}}
 
 **可变字体（Variable fonts）**是 OpenType 字体规范上的演进，它允许将同一字体的多个变体统合进单独的字体文件中。从而无需再将不同字宽、字重或不同样式的字体分割成不同的字体文件。你只需通过 CSS 与一行{{cssxref("@font-face")}}引用，即可获取包含在这个单一文件中的各种字体变体。本文将介绍如何在 Web 中使用可变字体。
 
-> **警告：** 为了能够在您的操作系统上正确地使用可变字体，请确定您的操作系统已经升级到最新版本。例如各 Linux 发行版，应将 Freetype 升级到最新版本。10.13 版本之前的 macOS 不支持可变字体。如果您的操作系统没有升级到最新版，您将无法在网页和 Firefox Developer Tools 中使用可变字体。
+> [!WARNING]
+> 为了能够在你的操作系统上正确地使用可变字体，请确定你的操作系统已经升级到最新版本。例如各 Linux 发行版，应将 Freetype 升级到最新版本。10.13 版本之前的 macOS 不支持可变字体。如果你的操作系统没有升级到最新版，你将无法在网页和 Firefox Developer Tools 中使用可变字体。
 
 ## 可变字体：何谓与何异
 
@@ -25,9 +28,9 @@ slug: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
 
 #### 关于字体系列，字重和变体的说明
 
-您可能注意到，我们一直在讨论为每种权重和样式 (即粗体，斜体以及斜体加粗) 创建特定的字体文件，而不是依赖于浏览器来合成它们。这样做的原因，是大多数字体对于粗体和斜体都有非常特殊的设计，它们通常包含完全不同的字符 (例如，小写字母的“a”和“g”在斜体中常常是完全不同的)。在使用非可变字体时，为了最准确地反映字体设计，避免浏览器之间的差异以及它们如何合成或不合成不同的样式，在需要的地方加载特定的字体文件会更为准确。
+你可能注意到，我们一直在讨论为每种权重和样式 (即粗体，斜体以及斜体加粗) 创建特定的字体文件，而不是依赖于浏览器来合成它们。这样做的原因，是大多数字体对于粗体和斜体都有非常特殊的设计，它们通常包含完全不同的字符 (例如，小写字母的“a”和“g”在斜体中常常是完全不同的)。在使用非可变字体时，为了最准确地反映字体设计，避免浏览器之间的差异以及它们如何合成或不合成不同的样式，在需要的地方加载特定的字体文件会更为准确。
 
-您可能还会发现一些可变字体分为两个文件：一个用于正体及其所有变体，另一个包含斜体变体。有时这样做是为了在不需要或不使用斜体的情况下减小整体文件大小。在所有情况下，仍然可以通过通用的 {{cssxref("font-family")}} 名称链接它们，以便您可以使用相同的 font-family 和相应的 {{cssxref("font-style")}} 来调用它们。
+你可能还会发现一些可变字体分为两个文件：一个用于正体及其所有变体，另一个包含斜体变体。有时这样做是为了在不需要或不使用斜体的情况下减小整体文件大小。在所有情况下，仍然可以通过通用的 {{cssxref("font-family")}} 名称链接它们，以便你可以使用相同的 font-family 和相应的 {{cssxref("font-style")}} 来调用它们。
 
 ## 介绍“可变轴” (variation axis)
 
@@ -35,8 +38,8 @@ slug: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
 
 如规范中所定义，存在两种变形轴，**注册轴**和**自定义轴**：
 
-- 注册轴最为常见，常见到制定规范的作者认为有必要进行标准化。目前注册的五个轴是字重，宽度，倾斜度，斜体和光学尺寸。W3C 已经将它们映射到现有的 CSS 属性，并在一个案例中引入了一个新的属性，您将在下面看到。
-- 自定义轴实际上是无限的：字体设计师可以定义和界定他们喜欢的任何轴，并且只需要给它一个四个字母的标签以在字体文件格式本身中识别它。您可以在 CSS 中使用这些四个字母的标签来指定沿该变化轴的点，您也将在下面的代码示例中看到。
+- 注册轴最为常见，常见到制定规范的作者认为有必要进行标准化。目前注册的五个轴是字重，宽度，倾斜度，斜体和光学尺寸。W3C 已经将它们映射到现有的 CSS 属性，并在一个案例中引入了一个新的属性，你将在下面看到。
+- 自定义轴实际上是无限的：字体设计师可以定义和界定他们喜欢的任何轴，并且只需要给它一个四个字母的标签以在字体文件格式本身中识别它。你可以在 CSS 中使用这些四个字母的标签来指定沿该变化轴的点，你也将在下面的代码示例中看到。
 
 ### 注册轴和现有的 CSS 属性
 
@@ -46,13 +49,15 @@ slug: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
 
 1. 当使用 `font-variation-settings` 时，请务必注意轴名称区分大小写。注册轴名称必须为小写，自定义轴必须为大写。例如：
 
-    ```css
-    font-variation-settings: 'wght' 375, 'GRAD' 88;
-    ```
+   ```css
+   font-variation-settings:
+     "wght" 375,
+     "GRAD" 88;
+   ```
 
-    `wght` (weight) 是一个注册轴， `GRAD` (grade) 是一个自定义轴。
+   `wght`（weight）是一个注册轴，`GRAD`（grade）是一个自定义轴。
 
-2. 如果您使用 `font-variation-settings` 设置了值并想要更改其中一个值，则必须重新声明所有值。您可以通过对各个值使用[CSS 自定义属性](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)（CSS 变量）来解决此限制，并只需修改单个自定义属性的值。该指南末尾有示例代码。
+2. 如果你使用 `font-variation-settings` 设置了值并想要更改其中一个值，则必须重新声明所有值。你可以通过对各个值使用[CSS 自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)（CSS 变量）来解决此限制，并只需修改单个自定义属性的值。该指南末尾有示例代码。
 
 ### 字重
 
@@ -63,7 +68,7 @@ slug: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
 ```css
 font-weight: 375;
 
-font-variation-settings: 'wght' 375;
+font-variation-settings: "wght" 375;
 ```
 
 可以通过编辑下面实例的 CSS 来使用字重值。
@@ -74,12 +79,13 @@ font-variation-settings: 'wght' 375;
 
 字宽（由 `wdth` 标签表示）定义字形可以是多窄或多宽（印刷术语中称为压缩或扩展）的设计轴。这通常在 CSS 中通过使用 {{cssxref("font-stretch")}} 属性设置，该属性值表示为高于或低于“正常”的百分比（100％），任何大于 0 的数字在技术上都是有效的 - 尽管它的范围更有可能是接近 100％的，例如 75％-125％。如果提供的数字值超出了字体编码的范围，浏览器应该以允许的最接近值渲染字体。
 
-> **备注：** 在使用 `font-variation-settings` 时不需要使用%。
+> [!NOTE]
+> 在使用 `font-variation-settings` 时不需要使用%。
 
 ```css
 font-stretch: 115%;
 
-font-variation-settings: 'wdth' 115;
+font-variation-settings: "wdth" 115;
 ```
 
 可以通过编辑下面实例的 CSS 来使用字宽值。
@@ -95,7 +101,7 @@ Italic（`ital`）轴的工作方式不同，因为它仅可以打开或关闭; 
 ```css
 font-style: italic;
 
-font-variation-settings: 'ital' 1;
+font-variation-settings: "ital" 1;
 ```
 
 可以通过编辑下面实例的 CSS 来使用斜体值。
@@ -106,12 +112,13 @@ font-variation-settings: 'ital' 1;
 
 Slant（由 `slnt` 标签表示），或者它经常被称为“oblique” - 与真正的斜体不同之处在于它改变了字体的角度但不执行任何类型的字符替换。它也是可变的，因为它表示为数值范围。这允许字体沿该轴的任何位置变化。允许的范围通常为 0（直立）到 20 度 — 可以使用该范围内的任何数值，因此字体可以倾斜一点点。但是，-90-90 度的任何值都是有效的。
 
-> **备注：** 在使用 `font-variation-settings` 时不需要使用 `deg` 这个关键字。
+> [!NOTE]
+> 在使用 `font-variation-settings` 时不需要使用 `deg` 这个关键字。
 
 ```css
 font-style: oblique 14deg;
 
-font-variation-settings: 'slnt' 14;
+font-variation-settings: "slnt" 14;
 ```
 
 可以通过编辑下面实例的 CSS 来使用 slant/oblique 值。
@@ -126,12 +133,12 @@ font-variation-settings: 'slnt' 14;
 
 光学尺寸值通常旨在根据 `font-size`自动应用，但也可以使用较低级别的 `font-variation-settings` 语法进行操作。
 
-创建了一个在 CSS 中中支持可变字体的新属性 {{cssxref("font-optical-sizing")}} 。使用 `font-optical-sizing` 时，唯一允许的值是 `auto` 或 `none` - 因此该属性仅允许打开或关闭光学尺寸。但是，当使用 `font-variation-settings: 'opsz' <num>`时，您可以使用数值。在大多数情况下，您可能希望将 `font-size`（正在渲染的类型的物理大小）与 `opsz` 值（使用 `auto`时应用光学尺寸的方式）进行匹配。提供了特定值，以便在必要时（为了易认性，美观或其他原因）可以应用特定值来覆盖默认值。
+创建了一个在 CSS 中中支持可变字体的新属性 {{cssxref("font-optical-sizing")}} 。使用 `font-optical-sizing` 时，唯一允许的值是 `auto` 或 `none` - 因此该属性仅允许打开或关闭光学尺寸。但是，当使用 `font-variation-settings: 'opsz' <num>`时，你可以使用数值。在大多数情况下，你可能希望将 `font-size`（正在渲染的类型的物理大小）与 `opsz` 值（使用 `auto`时应用光学尺寸的方式）进行匹配。提供了特定值，以便在必要时（为了易认性，美观或其他原因）可以应用特定值来覆盖默认值。
 
 ```css
 font-optical-sizing: auto;
 
-font-variation-settings: 'opsz' 36;
+font-variation-settings: "opsz" 36;
 ```
 
 可以通过编辑下面实例的 CSS 来使用视觉尺寸值。
@@ -147,7 +154,7 @@ font-variation-settings: 'opsz' 36;
 由于在字体设计方面有着众所周知的历史，等级可能会成为更常见的自定义轴之一。设计不同等级的字体通常是根据预期的用途和印刷技术来进行的。 “等级”一词指的是字体设计的相对重量或密度，但与传统的“重量”不同之处在于文本占据的物理空间不会改变，因此改变文本等级并不会改变文本或其周围元素的整体布局。这使得等级成为有用的变化轴，因为它可以变化或动画而不会引起文本本身的回流。
 
 ```css
-font-variation-settings: 'GRAD' 88;
+font-variation-settings: "GRAD" 88;
 ```
 
 可以通过编辑下面实例的 CSS 来使用字体等级值。
@@ -162,16 +169,18 @@ font-variation-settings: 'GRAD' 88;
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
+  font-family: "MyVariableFontName";
+  src: "path/to/font/file/myvariablefont.woff2" format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
 }
 ```
 
-> **备注：** 并非所有浏览器都实现了字体格式的完整语法，因此请仔细测试。如果您将字体格式设置为仅文件格式，而不是格式变体（即 `woff2` 而不是 `woff2-variations`），那么支持可变字体的所有浏览器仍将渲染它们，但如果可能，最好使用正确的语法。
+> [!NOTE]
+> 并非所有浏览器都实现了字体格式的完整语法，因此请仔细测试。如果你将字体格式设置为仅文件格式，而不是格式变体（即 `woff2` 而不是 `woff2-variations`），那么支持可变字体的所有浏览器仍将渲染它们，但如果可能，最好使用正确的语法。
 
-> **备注：** 如果使用适当的属性（即 `font-weight`或 `font-stretch`），提供 `font-weight`， `font-stretch`和 `font-style`的值范围将使浏览器不会尝试渲染超出该范围的轴，但不会阻止您通过 `font-variation-settings` 使用无效值，因此请小心使用。
+> [!NOTE]
+> 如果使用适当的属性（即 `font-weight`或 `font-stretch`），提供 `font-weight`， `font-stretch`和 `font-style`的值范围将使浏览器不会尝试渲染超出该范围的轴，但不会阻止你通过 `font-variation-settings` 使用无效值，因此请小心使用。
 
 ## 使用旧版本浏览器
 
@@ -179,13 +188,13 @@ font-variation-settings: 'GRAD' 88;
 
 ```css
 h1 {
- font-family: some-non-variable-font-family;
+  font-family: some-non-variable-font-family;
 }
 
-@supports (font-variation-settings: 'wdth' 115) {
- h1 {
+@supports (font-variation-settings: "wdth" 115) {
+  h1 {
     font-family: some-variable-font-family;
- }
+  }
 }
 ```
 
@@ -201,7 +210,7 @@ h1 {
 - [W3C Github issue queue](https://github.com/w3c/csswg-drafts/issues)
 - [Microsoft Open Type Variations introduction](https://docs.microsoft.com/en-us/typography/opentype/spec/otvaroverview)
 - [Microsoft OpenType Design-Variation Axis Tag Registry](https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg)
-- [Wakamai Fondue](https://wakamaifondue.com) （通过简单的拖拽告诉您字体可以做什么的网站）
+- [Wakamai Fondue](https://wakamaifondue.com) （通过简单的拖拽告诉你字体可以做什么的网站）
 - [Axis Praxis](https://www.axis-praxis.org) （独创的可变字体排版试验网站）
 - [V-Fonts.com](https://v-fonts.com) （可变字体目录网站）
 - [Font Playground](https://play.typedetail.com) （另一个拥有独特用户界面的可变字体排版试验网站）

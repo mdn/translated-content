@@ -1,34 +1,30 @@
 ---
 title: <optgroup>
 slug: Web/HTML/Element/optgroup
-tags:
-  - HTML
-  - HTML forms
-  - Описание
-  - Формы
-  - Элемент
-translation_of: Web/HTML/Element/optgroup
 ---
 
-**HTML-элемент `<optgroup>` **позволяет группировать опции, находящиеся внутри элемента {{HTMLElement("select")}}.
+{{HTMLSidebar}}
 
-| [Категории контента](/ru/docs/HTML/Content_categories) | Нет                                                                                                                                                                                |
-| ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимый контент                                     | Ноль или более {{HTMLElement("option")}} элементов.                                                                                                                         |
-| Пропуск тегов                                          | Открывающий тег обязателен. Закрывающий тег может быть опущен, если сразу после элемента находится следующий элемент `<optgroup>`, или если это последний элемент внутри родителя. |
-| Допустимые родители                                    | Элемент {{HTMLElement("select")}}                                                                                                                                           |
-| Допустимые ARIA-роли                                   | Нет                                                                                                                                                                                |
-| DOM-интерфейс                                          | {{domxref("HTMLOptGroupElement")}}                                                                                                                                       |
+HTML-элемент **`<optgroup>`** позволяет группировать опции, находящиеся внутри элемента {{HTMLElement("select")}}.
 
-{{Note("Элементы optgroup не могут быть вложенными друг в друга.")}}
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | Нет                                                                                                                                                                                |
+| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимый контент                                         | Ноль или более {{HTMLElement("option")}} элементов.                                                                                                                                |
+| Пропуск тегов                                              | Открывающий тег обязателен. Закрывающий тег может быть опущен, если сразу после элемента находится следующий элемент `<optgroup>`, или если это последний элемент внутри родителя. |
+| Допустимые родители                                        | Элемент {{HTMLElement("select")}}                                                                                                                                                  |
+| Допустимые ARIA-роли                                       | Нет                                                                                                                                                                                |
+| DOM-интерфейс                                              | {{domxref("HTMLOptGroupElement")}}                                                                                                                                                 |
+
+> [!NOTE]
+> Элементы optgroup не могут быть вложенными друг в друга.
 
 ## Атрибуты
 
 Элемент `<optgroup>` допускает использование [глобальных атрибутов](/ru/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : Если установить этот атрибут, опции, находящиеся внутри элемента станут недоступными для выбора. Часто браузеры отображают эти опции серым цветом и игнорируют срабатывающие на них события, такие как события мыши или события получения фокуса.
-- {{htmlattrdef("label")}}
+- `label`
   - : Имя группы, которое будет отображено браузером в выпадающем списке. Этот атрибут обязателен.
 
 ## Пример
@@ -64,6 +60,4 @@ translation_of: Web/HTML/Element/optgroup
 
 ## Смотрите также
 
-- Элементы, имеющие отношение к формам: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} и {{HTMLElement("meter")}}.
-
-{{HTMLSidebar}}
+- Элементы, имеющие отношение к формам: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} и {{HTMLElement("meter")}}.

@@ -1,17 +1,9 @@
 ---
 title: cookies.Cookie
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
-tags:
-  - API
-  - Cookies
-  - cookie
-  - Дополнения
-  - Расширения
-  - Справка
-  - данные
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Тип `Cookie` из {{WebExtAPIRef("cookies")}} API представляет собой информацию о HTTP cookie.
 
@@ -66,9 +58,8 @@ gettingAll.then(logCookies);
 
 {{WebExtExamples}}
 
-> **Примечание:** Это API основано на API Chromium [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#type-Cookie). Эта документация основана на [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) из кода Chromium.
->
-> Информация о совместимости Microsoft Edge предоставлена корпорацией Microsoft и включена здесь под лицензией Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> Этот API основан на Chromium API [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies#type-Cookie). Эта документация основана на [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) из кода Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

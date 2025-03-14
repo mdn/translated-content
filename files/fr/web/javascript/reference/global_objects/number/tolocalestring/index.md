@@ -1,23 +1,35 @@
 ---
 title: Number.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/toLocaleString
-browser-compat: javascript.builtins.Number.toLocaleString
 ---
 
 {{JSRef}}
 
 La méthode **`toLocaleString()`** permet de renvoyer une chaîne de caractères représentant un nombre en tenant compte de la locale.
 
-{{EmbedInteractiveExample("pages/js/number-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toLocaleString()")}}
+
+```js interactive-example
+function eArabic(x) {
+  return x.toLocaleString("ar-EG");
+}
+
+console.log(eArabic(123456.789));
+// Expected output: "١٢٣٬٤٥٦٫٧٨٩"
+
+console.log(eArabic("123456.789"));
+// Expected output: "123456.789"
+
+console.log(eArabic(NaN));
+// Expected output: "ليس رقم"
+```
 
 ## Syntaxe
 
 ```js
-toLocaleString()
-toLocaleString(locales)
-toLocaleString(locales, options)
+toLocaleString();
+toLocaleString(locales);
+toLocaleString(locales, options);
 ```
 
 ### Paramètres
@@ -68,7 +80,11 @@ Afin de vérifier la prise en charge pour tous les environnements, y compris ceu
 
 ```js
 function toLocaleStringSupportsOptions() {
-  return !!(typeof Intl == 'object' && Intl && typeof Intl.NumberFormat == 'function');
+  return !!(
+    typeof Intl == "object" &&
+    Intl &&
+    typeof Intl.NumberFormat == "function"
+  );
 }
 ```
 
@@ -113,21 +129,30 @@ Les résultats fournis par `toLocaleString` peuvent être adaptés en utilisant 
 const nombre = 123456.789;
 
 // on formate selon une devise
-console.log(nombre.toLocaleString("de-DE", {style: "currency", currency: "EUR"}));
+console.log(
+  nombre.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+);
 // → 123.456,79 €
 
 // le yen japonais ne possède pas de centimes
-console.log(nombre.toLocaleString("ja-JP", {style: "currency", currency: "JPY"}))
+console.log(
+  nombre.toLocaleString("ja-JP", { style: "currency", currency: "JPY" }),
+);
 // → ￥123,457
 
 // on se limite à trois chiffres significatifs
-console.log(nombre.toLocaleString("en-IN", {maximumSignificantDigits: 3}));
+console.log(nombre.toLocaleString("en-IN", { maximumSignificantDigits: 3 }));
 // → 1,23,000
 
 // on utilise la langue du système pour la mise en
 // forme des nombres
 const num = 30000.65;
-console.log(num.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+console.log(
+  num.toLocaleString(undefined, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }),
+);
 // → "30,000.65" quand l'anglais est la langue par défaut
 // → "30.000,65" quand l'allemand est la langue par défaut
 // → "30 000,65" quand le français est la langue par défaut

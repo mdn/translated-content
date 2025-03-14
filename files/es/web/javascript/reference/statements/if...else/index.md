@@ -1,37 +1,58 @@
 ---
 title: if...else
 slug: Web/JavaScript/Reference/Statements/if...else
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/if...else
-original_slug: Web/JavaScript/Referencia/Sentencias/if...else
+l10n:
+  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
 {{jsSidebar("Statements")}}
 
-## Resumen
+La sentencia **`if...else`** ejecuta una sentencia, si una condición específicada es evaluada como {{Glossary("truthy", "verdadera")}}. Si la condición es evaluada como {{Glossary("falsy", "falsa")}}, otra sentencia en la clausula opcional `else` será ejecutada.
 
-Ejecuta una sentencia si una condición específicada es evaluada como verdadera. Si la condición es evaluada como falsa, otra sentencia puede ser ejecutada.
+{{InteractiveExample("JavaScript Demo: Statement - If...Else")}}
+
+```js interactive-example
+function testNum(a) {
+  let result;
+  if (a > 0) {
+    result = "positive";
+  } else {
+    result = "NOT positive";
+  }
+  return result;
+}
+
+console.log(testNum(-5));
+// Expected output: "NOT positive"
+```
 
 ## Sintaxis
 
-```
-if (condición) sentencia1 [else sentencia2]
+```js-nolint
+if (condición)
+  sentencia1
+
+// Con una clausula else
+if (condición)
+  sentencia1
+else
+  sentencia2
 ```
 
 - `condición`
-  - : Una expresión que puede ser evaluada como verdadera o falsa.
+
+  - : Una expresión que puede ser evaluada como {{Glossary("truthy", "verdadera")}} o {{Glossary("falsy", "falsa")}}.
 
 - `sentencia1`
-  - : Sentencia que se ejecutará si `condición` es evaluada como verdadera. Puede ser cualquier sentencia, incluyendo otras sentenccias `if` anidadas. Para ejecutar múltiples sentencias, use una sentencia {{jsxref("Sentencias/block", "block")}} ({ ... }) para agruparlas.
+
+  - : Sentencia que se ejecutará si `condición` es evaluada como {{Glossary("truthy", "verdadera")}}. Puede ser cualquier sentencia, incluyendo otras sentenccias `if` anidadas. Para ejecutar múltiples sentencias, use una sentencia [_block_](/es/docs/Web/JavaScript/Reference/Statements/block) ({ ... }) para agruparlas. Para no ejecutar ninguna sentencia, usa una sentencia [vacía](/es/docs/Web/JavaScript/Reference/Statements/Empty).
 
 - `sentencia2`
-  - : Sentencia que se ejecutará si `condición` se evalúa como falsa, y exista una cláusula `else`. Puede ser cualquier sentencia, incluyendo sentencias block y otras sentencias `if` anidadas.
+  - : Sentencia que se ejecutará si `condición` se evalúa como {{Glossary("falsy", "falsa")}}, y existe una cláusula `else`. Puede ser cualquier sentencia, incluyendo sentencias _block_ y otras sentencias `if` anidadas.
 
 ## Descripción
 
-Multiples sentencias `if...else` pueden ser anidadas para crear una cláusula `else if`:
+Multiples sentencias `if...else` pueden ser anidadas para crear una cláusula `else if`. Note que no hay una palabra clave `elseif` (en una sola palabra) en JavaScript.
 
 ```
 if (condición1)
@@ -40,7 +61,7 @@ else if (condición2)
    sentencia2
 else if (condición3)
    sentencia3
-...
+//...
 else
    sentenciaN
 ```
@@ -58,54 +79,123 @@ else
       ...
 ```
 
-Para ejecutar varias sentencias en una cláusula, use una sentencia block (`{ ... }`) para agruparlas. Generalmente, es una buena práctica usar siempre sentencias block, especialmente en código que incluya sentencias if anidadas:
+Para ejecutar varias sentencias en una cláusula, use una sentencia _block_ (`{/* ... */ }`) para agruparlas.
 
 ```js
 if (condición) {
-   sentencia1
+  sentencia1;
 } else {
-   sentencia2
+  sentencia2;
 }
 ```
 
-No confundir los valores primitivos `true` y `false` con los valores true y false del objeto {{jsxref("Boolean")}}. Cualquier valor diferente de `undefined`, `null`, `0`, `-0`, `NaN`, o la cadena vacía (`""`), y cualquier objecto, incluso un objeto Boolean cuyo valor es false, se evalúa como verdadero en una sentencia condicional. Por ejemplo:
+No usar _blocks_ puede ocacionar un comportamiento inesperado, especialmente si el código es estructurado manualmente. Por ejemplo:
+
+```js-nolint example-bad
+function checkValue(a, b) {
+  if (a === 1)
+    if (b === 2)
+      console.log("a is 1 and b is 2");
+  else
+    console.log("a is not 1");
+}
+```
+
+Este código puede parece inocente — sin embargo, si ejecutamos `checkValue(1, 3)` registrara el mensaje "a is not 1". Esto debido a que en el caso de [dangling else](https://en.wikipedia.org/wiki/Dangling_else), la clausula `else` se conectará a la clausula `if` más cercana. Por lo tanto, el código anterior, indentado apropiadamente, se vería así:
+
+```js-nolint
+function checkValue(a, b) {
+  if (a === 1)
+    if (b === 2)
+      console.log("a is 1 and b is 2");
+    else
+      console.log("a is not 1");
+}
+```
+
+Generalmente, es una buena práctica usar siempre sentencias block, especialmente en código que incluya sentencias if anidadas.
+
+```js example-good
+function checkValue(a, b) {
+  if (a === 1) {
+    if (b === 2) {
+      console.log("a is 1 and b is 2");
+    }
+  } else {
+    console.log("a is not 1");
+  }
+}
+```
+
+No confundir los valores booleanos primitivos `true` y `false` con los valores verdadero y falso del objeto {{jsxref("Boolean")}}. Cualquier valor diferente de `undefined`, `null`, `0`, `-0`, `NaN`, o la cadena vacía (`""`), y cualquier objecto, incluso un objeto Boolean cuyo valor es false, se evalúa como {{Glossary("truthy", "verdadero")}} en una sentencia condicional. Por ejemplo:
 
 ```js
-var b = new Boolean(false);
-if (b) // Esta condición se evalúa como verdadera
+const b = new Boolean(false);
+// Esta condición se evalúa como verdadera
+if (b) {
+  console.log("b is truthy"); // "b is truthy"
+}
 ```
 
 ## Ejemplos
 
-### Ejemplo: Uso de `if...else`
+### Uso de `if...else`
+
+Note que no hay sintaxis `elseif` en JavaScript. Sin embargo, puede escribirse con un espacio entre `else` y `if`:
 
 ```js
-if (cipher_char == from_char) {
-   result = result + to_char;
-   x++;
-} else
-   result = result + clear_char;
-```
-
-### Ejemplo: Asignación en una expresión condicional
-
-Es aconsejable no usar asignaciones simples en una expresión condicional, porque la asignación puede ser confundida con igualdad (operador relacional) cuando se lee el código. Por ejemplo, no use el siguiente código:
-
-```js
-if (x = y) {
-   /* sentencia */
+if (cipherChar === fromChar) {
+  result += toChar;
+  x++;
+} else {
+  result += clearChar;
 }
 ```
 
-Si realmente necesita una asignación dentro de una exprsión condicional, una práctica común es poner paréntesis adicionales alrededor del la asignación, por ejemplo:
+### Using else if
+
+Note que no hay sintaxis `elseif` en JavaScript. Sin embargo, puede escribirse con un espacio entre `else` y `if`:
 
 ```js
+if (x > 50) {
+  /* hace algo */
+} else if (x > 5) {
+  /* hace algo */
+} else {
+  /* hace algo */
+}
+```
+
+### Asignación en una expresión condicional
+
+Casi nunca deberías tener un `if...else` con una asignacion `x = y` como condición:
+
+```js example-bad
 if ((x = y)) {
-   /* sentencia */
+  // …
 }
 ```
 
-## Vea También
+Porque a diferencia de los bucles {{jsxref("Statements/while", "while")}}, la condición es evaluada sólo una vez, así que la asignación es ejecutada una vez. El código anterior es equivalente a:
+
+```js example-good
+x = y;
+if (x) {
+  // …
+}
+```
+
+El cual es mucho más claro. Sin embargo, en el raro caso que te encuentres en la situación de hacer algo como eso, la documentación del bucle [`while`](/es/docs/Web/JavaScript/Reference/Statements/while) tiene una sección llamada [Usando una asignación como una condición](/es/docs/Web/JavaScript/Reference/Statements/while#usando_una_asignacion_como_condicion) con nuestras recomendaciones.
+
+## Especificaciones
+
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
+
+## Véase También
 
 - {{jsxref("Sentencias/block", "block")}}
 - {{jsxref("Sentencias/switch", "switch")}}

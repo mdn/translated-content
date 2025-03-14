@@ -1,26 +1,25 @@
 ---
 title: Date.prototype.toUTCString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toUTCString
 ---
 
 {{JSRef}}
 
 La méthode **`toUTCString()`** convertit une date en une chaîne de caractères, selon le fuseau horaire UTC.
 
-{{EmbedInteractiveExample("pages/js/date-toutcstring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toUTCString()")}}
+
+```js interactive-example
+const event = new Date("14 Jun 2017 00:00:00 PDT");
+
+console.log(event.toUTCString());
+// Expected output: "Wed, 14 Jun 2017 07:00:00 GMT"
+```
 
 ## Syntaxe
 
 ```js
-dateObj.toUTCString()
+dateObj.toUTCString();
 ```
 
 ### Valeur de retour

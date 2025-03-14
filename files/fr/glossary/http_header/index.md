@@ -1,13 +1,9 @@
 ---
 title: En-tête
 slug: Glossary/HTTP_header
-tags:
-  - En-têtes
-  - Glossaire
-  - Mécanismes web
-translation_of: Glossary/HTTP_header
-original_slug: Glossaire/Header
 ---
+
+{{GlossarySidebar}}
 
 Un **en-tête HTTP** est un champ de requête ou de réponse HTTP permettant de transmettre des informations supplémentaires modifiant ou précisant la sémantique du message ou de son contenu. Les en-têtes ne sont pas sensibles à la casse, commencent au début d'une ligne et sont immédiatemment suivis d'un '`:`' et d'une valeur dépendant de l'en-tête en question. La valeur se termine au retour chariot suivant ou à la fin du message.
 
@@ -58,4 +54,4 @@ X-Cache-Info: cached
 
 ### Informations techniques
 
-- [Liste de tous les en-têtes HTTP](/fr/docs/HTTP/Headers)
+- [Liste de tous les en-têtes HTTP](/fr/docs/Web/HTTP/Headers)

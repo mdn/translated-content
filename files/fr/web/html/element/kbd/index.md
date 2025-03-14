@@ -1,12 +1,6 @@
 ---
-title: '<kbd> : l''élément de saisie clavier'
+title: "<kbd> : l'élément de saisie clavier"
 slug: Web/HTML/Element/kbd
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/kbd
 ---
 
 {{HTMLSidebar}}
@@ -15,11 +9,36 @@ L'élément HTML **`<kbd>`** représente une plage de texte en ligne indiquant l
 
 `<kbd>` peut être imbriqué dans diverses combinaisons avec {{HTMLElement("samp")}} (Sample Output) pour représenter diverses formes d'entrée ou d'entrée basées sur des repères visuels.
 
-{{EmbedInteractiveExample("pages/tabbed/kbd.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;kbd&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an
+  MDN page.
+</p>
+```
+
+```css interactive-example
+kbd {
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.2),
+    0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  color: #333;
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+```
 
 ## Attributs
 
-Cet élément ne contient que [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément ne contient que [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes d'utilisation
 
@@ -29,15 +48,18 @@ D'autres éléments peuvent être utilisés en association avec `<kbd>` afin de 
 - Imbriquer un élément `<kbd>` dans un élément {{HTMLElement("samp")}} permet d'indiquer que la saisie a été restituée (_echo_) à l'utilisateur. Cf. [Saisie restituée](#saisie_restituée), ci-après.
 - Imbriquer un élément `<samp>` dans un élément `<kbd>` permet de représenter des saisies basées sur le texte présenté par le système (cela peut être le nom de menus, d'éléments de menu ou le nom de bouttons affichés à l'écran). Cf. [Représenter les options de saisies à l'écran](#représenter_les_options_de_saisies_à_l'écran) ci-après.
 
-> **Note :** Il est possible de définir un style pour surcharger la mise en forme par défaut du navigateur pour l'élément `<kbd>`. À ce titre, on gardera à l'esprit que les préférences et feuilles de style de l'utilisateur peuvent surcharger la mise en forme du site.
+> [!NOTE]
+> Il est possible de définir un style pour surcharger la mise en forme par défaut du navigateur pour l'élément `<kbd>`. À ce titre, on gardera à l'esprit que les préférences et feuilles de style de l'utilisateur peuvent surcharger la mise en forme du site.
 
 ## Exemples
 
 ### Exemple simple
 
 ```html
-<p>Utilisez la commande <kbd>help macommande</kbd> afin de consulter
- la documentation pour la commande "macommande".</p>
+<p>
+  Utilisez la commande <kbd>help macommande</kbd> afin de consulter la
+  documentation pour la commande "macommande".
+</p>
 ```
 
 #### Résultat
@@ -56,9 +78,10 @@ Commençons par analyser le code HTML.
 
 ```html
 <p>
-  Vous pouvez également créer un nouveau document
-  en utilisant le raccourci clavier
-  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd>.
+  Vous pouvez également créer un nouveau document en utilisant le raccourci
+  clavier
+  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd
+  >.
 </p>
 ```
 
@@ -92,9 +115,10 @@ On met à jour le code HTML afin d'utiliser cette classe :
 
 ```html
 <p>
-  Vous pouvez également créer un nouveau document
-  en utilisant le raccourci clavier
-  <kbd><kbd class="key">Ctrl</kbd>+<kbd class="key">N</kbd></kbd>.
+  Vous pouvez également créer un nouveau document en utilisant le raccourci
+  clavier
+  <kbd><kbd class="key">Ctrl</kbd>+<kbd class="key">N</kbd></kbd
+  >.
 </p>
 ```
 
@@ -110,8 +134,8 @@ En imbriquant un élément `<kbd>` dans un élément {{HTMLElement("samp")}}, on
 
 ```html
 <p>
-  S'il se produit une erreur de syntaxe, cet outil affichera
-  la commande initialement saisie pour que vous la revoyez :
+  S'il se produit une erreur de syntaxe, cet outil affichera la commande
+  initialement saisie pour que vous la revoyez :
 </p>
 <blockquote>
   <samp><kbd>custom-git ad mon-nouveau-fichier.cpp</kbd></samp>
@@ -124,7 +148,7 @@ En imbriquant un élément `<kbd>` dans un élément {{HTMLElement("samp")}}, on
 
 ### Représenter les options de saisies à l'écran
 
-Imbriquer un élément `<samp>` dans un élément `<kbd>`  représente une saisie basée sur du texte affiché par le système (par exemple des noms de menu, d'éléments de menu, des noms de boutons affichés à l'écran, etc.).
+Imbriquer un élément `<samp>` dans un élément `<kbd>` représente une saisie basée sur du texte affiché par le système (par exemple des noms de menu, d'éléments de menu, des noms de boutons affichés à l'écran, etc.).
 
 #### HTML
 
@@ -133,14 +157,17 @@ Ainsi, si on souhaite expliquer comment choisir l'option "Nouveau document" dans
 ```html
 <p>
   Pour créer un nouveau fichier, sélectionner l'option
-  <kbd><kbd><samp>Fichier</samp></kbd>⇒<kbd><samp>Nouveau
-  document</samp></kbd></kbd> dans le menu.
+  <kbd
+    ><kbd><samp>Fichier</samp></kbd
+    >⇒<kbd><samp>Nouveau document</samp></kbd></kbd
+  >
+  dans le menu.
 </p>
 
 <p>
   N'oubliez pas de cliquer sur le bouton
-  <kbd><samp>OK</samp></kbd> afin de confirmer
-  que vous avez saisi le nom du nouveau fichier.
+  <kbd><samp>OK</samp></kbd> afin de confirmer que vous avez saisi le nom du
+  nouveau fichier.
 </p>
 ```
 
@@ -161,11 +188,11 @@ On voit ici différentes imbrications. La description de l'option du menu est in
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
         >,
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
@@ -177,21 +204,21 @@ On voit ici différentes imbrications. La description de l'option du menu est in
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >Contenu phrasé</a
         >.
       </td>
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>
       <td>
         Tout élément qui accepte du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>

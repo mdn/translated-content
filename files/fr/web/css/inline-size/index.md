@@ -1,13 +1,6 @@
 ---
 title: inline-size
 slug: Web/CSS/inline-size
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/inline-size
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

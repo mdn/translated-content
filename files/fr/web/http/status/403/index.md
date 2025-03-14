@@ -1,8 +1,6 @@
 ---
 title: 403 Forbidden
 slug: Web/HTTP/Status/403
-translation_of: Web/HTTP/Status/403
-browser-compat: http.status.403
 ---
 
 {{HTTPSidebar}}

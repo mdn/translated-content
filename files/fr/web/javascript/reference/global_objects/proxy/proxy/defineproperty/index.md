@@ -1,28 +1,40 @@
 ---
 title: handler.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Proxy
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/defineProperty
 ---
 
 {{JSRef}}
 
 La méthode **`handler.defineProperty()`** est une trappe pour {{jsxref("Object.defineProperty()")}}.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-defineproperty.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.defineProperty()", "taller")}}
+
+```js interactive-example
+const handler1 = {
+  defineProperty(target, key, descriptor) {
+    invariant(key, "define");
+    return true;
+  },
+};
+
+function invariant(key, action) {
+  if (key[0] === "_") {
+    throw new Error(`Invalid attempt to ${action} private "${key}" property`);
+  }
+}
+
+const monster1 = {};
+const proxy1 = new Proxy(monster1, handler1);
+
+console.log((proxy1._secret = "easily scared"));
+// Expected output: Error: Invalid attempt to define private "_secret" property
+```
 
 ## Syntaxe
 
 ```js
 var p = new Proxy(cible, {
-  defineProperty: function(cible, propriété, descripteur) {
-  }
+  defineProperty: function (cible, propriété, descripteur) {},
 });
 ```
 
@@ -67,11 +79,14 @@ Si les contraintes d'invariances suivantes ne sont pas respectées, le proxy ren
 Dans le code suivant, on piège l'appel à {{jsxref("Object.defineProperty()")}}.
 
 ```js
-var p = new Proxy({}, {
-  defineProperty: function(target, prop, descriptor) {
-    console.log("appelé avec : " + prop);
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    defineProperty: function (target, prop, descriptor) {
+      console.log("appelé avec : " + prop);
+    },
+  },
+);
 
 var desc = { configurable: true, enumerable: true, value: 10 };
 Object.defineProperty(p, "a", desc); // "appelé avec : a"

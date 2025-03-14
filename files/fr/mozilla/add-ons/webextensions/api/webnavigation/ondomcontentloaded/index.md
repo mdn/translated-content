@@ -1,32 +1,21 @@
 ---
 title: webNavigation.onDOMContentLoaded
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onDOMContentLoaded
-  - webNavigation
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-Lancé lorsque l'événement [DOMContentLoaded](/fr/docs/Web/Events/DOMContentLoaded) est déclenché dans la page. À ce stade, le document est chargé et analysé, et le DOM est entièrement construit, mais les ressources liées telles que les images, les feuilles de style et les sous-trames peuvent ne pas encore être chargées.
+Lancé lorsque l'événement [DOMContentLoaded](/fr/docs/Web/API/Document/DOMContentLoaded_event) est déclenché dans la page. À ce stade, le document est chargé et analysé, et le DOM est entièrement construit, mais les ressources liées telles que les images, les feuilles de style et les sous-trames peuvent ne pas encore être chargées.
 
 ## Syntaxe
 
 ```js
 browser.webNavigation.onDOMContentLoaded.addListener(
-  listener,                   // function
-  filter                      // optional object
-)
-browser.webNavigation.onDOMContentLoaded.removeListener(listener)
-browser.webNavigation.onDOMContentLoaded.hasListener(listener)
+  listener, // function
+  filter, // optional object
+);
+browser.webNavigation.onDOMContentLoaded.removeListener(listener);
+browser.webNavigation.onDOMContentLoaded.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -67,9 +56,9 @@ Les événements ont trois fonctions :
 - `timeStamp`
   - : `number`. L'heure à laquelle `DOMContentLoaded` a été déclenchée, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.onDOMContentLoaded")}}
+{{Compat}}
 
 ## Exemples
 
@@ -77,25 +66,24 @@ Logs les URL cibles pour `onDOMContentLoaded`,si le nom d'hôte de l'URL cible c
 
 ```js
 var filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnDOMContentLoaded(details) {
   console.log("onDOMContentLoaded: " + details.url);
 }
 
-browser.webNavigation.onDOMContentLoaded.addListener(logOnDOMContentLoaded, filter);
+browser.webNavigation.onDOMContentLoaded.addListener(
+  logOnDOMContentLoaded,
+  filter,
+);
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

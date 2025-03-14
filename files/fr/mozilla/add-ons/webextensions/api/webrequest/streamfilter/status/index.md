@@ -1,18 +1,9 @@
 ---
 title: webRequest.StreamFilter.status
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/status
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StreamFilter.status
-  - WebExtensions
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/status
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Une chaîne de caractères qui décrit l'état actuel de la demande. Ce sera l'une des valeurs suivantes :
 
@@ -31,38 +22,38 @@ Une chaîne de caractères qui décrit l'état actuel de la demande. Ce sera l'u
 - `"failed"`
   - : Une erreur s'est produite et le filtre a été déconnecté de la requête. L'extension peut trouver un message d'erreur dans {{WebExtAPIRef("webRequest.StreamFilter.error", "error")}}, et ne peut appeler aucune fonction de filtrage.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.StreamFilter.status", 10)}}
+{{Compat}}
 
 ## Exemples
 
 ```js
 function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
-  console.log(filter.status);          // uninitialized
+  console.log(filter.status); // uninitialized
 
-  filter.onstart = event => {
-    console.log(filter.status);        // transferringdata
-  }
+  filter.onstart = (event) => {
+    console.log(filter.status); // transferringdata
+  };
 
-  filter.ondata = event => {
-    console.log(filter.status);        // transferringdata
+  filter.ondata = (event) => {
+    console.log(filter.status); // transferringdata
     // pass through the response data
     filter.write(event.data);
-  }
+  };
 
-  filter.onstop = event => {
-    console.log(filter.status);        // finishedtransferringdata
+  filter.onstop = (event) => {
+    console.log(filter.status); // finishedtransferringdata
     filter.disconnect();
-    console.log(filter.status);        // disconnected
-  }
+    console.log(filter.status); // disconnected
+  };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.com/*"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.com/*"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 

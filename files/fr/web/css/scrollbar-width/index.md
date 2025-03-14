@@ -1,11 +1,6 @@
 ---
 title: scrollbar-width
 slug: Web/CSS/scrollbar-width
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/scrollbar-width
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -62,9 +57,11 @@ scrollbar-width: unset;
       </tbody>
     </table>
 
-    > **Note :** Toute valeur de `scrollbar-width` doit être appliquée sur l'élément racine de la zone d'affichage (_viewport_) par les agents utilisateur.
+    > [!NOTE]
+    > Toute valeur de `scrollbar-width` doit être appliquée sur l'élément racine de la zone d'affichage (_viewport_) par les agents utilisateur.
 
-    > **Note :** L'utilisation des longueurs pour `scrollbar-width` est une fonctionnalité qui sera potentiellement abandonnée de la spécification (voir [l'_issue_ 1958](https://github.com/w3c/csswg-drafts/issues/1958)).
+    > [!NOTE]
+    > L'utilisation des longueurs pour `scrollbar-width` est une fonctionnalité qui sera potentiellement abandonnée de la spécification (voir [l'_issue_ 1958](https://github.com/w3c/csswg-drafts/issues/1958)).
 
 ## Définition formelle
 
@@ -90,7 +87,13 @@ scrollbar-width: unset;
 ### HTML
 
 ```html
-<div class="scroller">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</div>
+<div class="scroller">
+  Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+  daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
+  corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts
+  fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
+  earthnut pea peanut soko zucchini.
+</div>
 ```
 
 ### Résultat

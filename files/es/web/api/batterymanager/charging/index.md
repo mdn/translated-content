@@ -10,7 +10,7 @@ Un valor boleano indicando si está cargando o no la batería del dispositivo (e
 ## Sintaxis
 
 ```js
-var cargando = battery.charging
+var cargando = battery.charging;
 ```
 
 El valor de retorno, `cargando` indica si la `battery` se está cargando o no, el cual es un objeto {{domxref("BatteryManager")}}, está actualmente cargandose, si la batería se está cargando, este valor es `true`. De lo contrario el valor es `false`.
@@ -26,11 +26,10 @@ El valor de retorno, `cargando` indica si la `battery` se está cargando o no, e
 ### Contenido JavaScript
 
 ```js
-navigator.getBattery().then(function(battery) {
+navigator.getBattery().then(function (battery) {
+  var cargando = battery.charging;
 
-    var cargando = battery.charging;
-
-    document.querySelector('#cargando').textContent = cargando;
+  document.querySelector("#cargando").textContent = cargando;
 });
 ```
 

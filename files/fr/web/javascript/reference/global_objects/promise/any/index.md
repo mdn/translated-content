@@ -1,21 +1,25 @@
 ---
 title: Promise.any()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/any
-tags:
-  - JavaScript
-  - Method
-  - Méthode
-  - Promise
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
-original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/any
 ---
 
 {{JSRef}}
 
 La méthode **`Promise.any()`** prend comme argument un itérable contenant des objets {{JSxRef("Promise")}} et, dès qu'une des promesses de cet itérable est tenue, renvoie une unique promesse résolue avec la valeur de la promesse résolue. Si aucune promesse de l'itérable n'est tenue (c'est-à-dire si toutes les promesses sont rejetées), la promesse renvoyée est rompue avec un objet {{JSxRef("Objets_globaux/AggregateError", "AggregateError")}} (une nouvelle sous-classe de {{JSxRef("Error")}} qui regroupe un ensemble d'erreurs). Cette méthode fait essentiellement le _contraire_ de {{JSxRef("Promise.all()")}} (qui renvoie une promesse tenue uniquement si toutes les promesses de l'itérable passé en argument ont été tenues).
 
-{{EmbedInteractiveExample("pages/js/promise-any.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.any()")}}
+
+```js interactive-example
+const promise1 = Promise.reject(0);
+const promise2 = new Promise((resolve) => setTimeout(resolve, 100, "quick"));
+const promise3 = new Promise((resolve) => setTimeout(resolve, 500, "slow"));
+
+const promises = [promise1, promise2, promise3];
+
+Promise.any(promises).then((value) => console.log(value));
+
+// Expected output: "quick"
+```
 
 ## Syntaxe
 
@@ -26,7 +30,7 @@ Promise.any(iterable);
 ### Paramètres
 
 - `iterable`
-  - : Un objet [itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration) tel qu'un tableau ({{JSxRef("Array")}}) contenant des promesses ({{jsxref("Promise")}}).
+  - : Un objet [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) tel qu'un tableau ({{JSxRef("Array")}}) contenant des promesses ({{jsxref("Promise")}}).
 
 ### Valeur de retour
 
@@ -89,7 +93,7 @@ const pErr = new Promise((resolve, reject) => {
 
 Promise.any([pErr]).catch((err) => {
   console.log(err);
-})
+});
 // résultat attendu : "AggregateError: No Promise in Promise.any was resolved"
 ```
 
@@ -99,26 +103,25 @@ Dans cet exemple, nous avons une fonction qui requête une image et retourne un 
 
 ```js
 function fetchAndDecode(url) {
-  return fetch(url).then(réponse => {
-    if (!réponse.ok)
-      throw new Error(`Erreur HTTP ! état : ${response.status}`);
-    else
-      return réponse.blob();
-  })
+  return fetch(url).then((réponse) => {
+    if (!réponse.ok) throw new Error(`Erreur HTTP ! état : ${response.status}`);
+    else return réponse.blob();
+  });
 }
 
-let café = fetchAndDecode('coffee.jpg');
-let thé = fetchAndDecode('tea.jpg');
+let café = fetchAndDecode("coffee.jpg");
+let thé = fetchAndDecode("tea.jpg");
 
-Promise.any([café, thé]).then(valeur => {
-  let URLobjet = URL.createObjectURL(valeur);
-  let image = document.createElement('img');
-  image.src = URLobjet;
-  document.body.appendChild(image);
-})
-.catch(e => {
-  console.log(e.message);
-});
+Promise.any([café, thé])
+  .then((valeur) => {
+    let URLobjet = URL.createObjectURL(valeur);
+    let image = document.createElement("img");
+    image.src = URLobjet;
+    document.body.appendChild(image);
+  })
+  .catch((e) => {
+    console.log(e.message);
+  });
 ```
 
 ## Spécifications

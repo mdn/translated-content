@@ -7,7 +7,8 @@ slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 
 游戏中一个典型的 3D 场景 (最简单的那种) 包含标准的物品比如在坐标轴中的形状，一个实际可看到他们的摄像机，灯光和材质让其看起来不错，动画使其生动等等。 **Three.js**, 和其他 3D 库一样，提供内置的 helper 函数来帮助你尽可能快地实现通用的 3D 功能 . 在这篇文章我们会带你了解使用 Three 的基本知识，包含设置开发者环境，必要的 HTML 结构，Three.js 对象基础，以及如何创建一个基本的 demo.
 
-> **备注：** 我们选择 Three.js 因为它是最流行的[WebGL](/zh-CN/docs/Web/API/WebGL_API) 库之一，并且很容易上手。我们不会介绍任何其他更好的 WebGL 库，你可以自由选择其他库做尝试，比如 [CopperLicht](http://www.ambiera.com/copperlicht/index.html), [GLGE](http://www.glge.org/), [OSG.js](http://osgjs.org/), [O3D](https://code.google.com/p/o3d/), 或者其他你喜欢的库。
+> [!NOTE]
+> 我们选择 Three.js 因为它是最流行的[WebGL](/zh-CN/docs/Web/API/WebGL_API) 库之一，并且很容易上手。我们不会介绍任何其他更好的 WebGL 库，你可以自由选择其他库做尝试，比如 [CopperLicht](http://www.ambiera.com/copperlicht/index.html), [GLGE](http://www.glge.org/), [OSG.js](http://osgjs.org/), [O3D](https://code.google.com/p/o3d/), 或者其他你喜欢的库。
 
 ## 环境设置
 
@@ -15,32 +16,38 @@ slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 
 - 确保使用的支持 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 的现代浏览器，例如最新版的 Firefox 或 Chrome.
 - 创建一个目录保存例子。
-- 复制最新的压缩版 [Three.js](http://threejs.org/build/three.min.js) 到你的目录。
-- 用单独的浏览器 tab 打开 [Three.js](http://threejs.org/docs/) 文档 — 对应参考很有用。
+- 复制最新的压缩版 [Three.js](https://threejs.org/build/three.min.js) 到你的目录。
+- 用单独的浏览器 tab 打开 [Three.js](https://threejs.org/docs/) 文档 — 对应参考很有用。
 
 ## HTML 结构
 
 这是将用到的 HTML 结构。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  meta charset="utf-8">
-  <title>MDN Games: Three.js demo</title>
-  <style>
-    body { margin: 0; padding: 0; }
-    canvas { width: 100%; height: 100%; }
-  </style>
-</head>
-<body>
-<script src="three.min.js"></script>
-<script>
-  var WIDTH = window.innerWidth;
-  var HEIGHT = window.innerHeight;
-  /* all our JavaScript code goes here */
-</script>
-</body>
+  <head>
+    meta charset="utf-8">
+    <title>MDN Games: Three.js demo</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="three.min.js"></script>
+    <script>
+      var WIDTH = window.innerWidth;
+      var HEIGHT = window.innerHeight;
+      /* all our JavaScript code goes here */
+    </script>
+  </body>
 </html>
 ```
 
@@ -53,9 +60,9 @@ Before reading on, copy this code to a new text file, and save it in your workin
 A renderer is a tool that displays scenes right in your browser. There are a few different renderers: WebGL is the default one, and the others you can use are Canvas, SVG, CSS and DOM. They differ in a way everything is rendered, so the WebGL implementation will work differently than the CSS one, but the idea is to have it look exactly the same for the end user. Thanks to this approach, a fallback can be used if the primary technology is not supported by the browser.
 
 ```js
-var renderer = new THREE.WebGLRenderer({antialias:true});
+var renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(WIDTH, HEIGHT);
-renderer.setClearColor(0xDDDDDD, 1);
+renderer.setClearColor(0xdddddd, 1);
 document.body.appendChild(renderer.domElement);
 ```
 
@@ -78,7 +85,7 @@ Later on we will be using the `.add()` method to add objects to the scene.
 我们有渲染场景，但是我们仍然需要一个摄像机来观察场景 - 想象没有摄像机的电影场景。下面的代码将摄像机放在三维坐标系中，并将其指向我们的场景，这样人们就能看到一些东西：
 
 ```js
-var camera = new THREE.PerspectiveCamera(70, WIDTH/HEIGHT);
+var camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT);
 camera.position.z = 50;
 scene.add(camera);
 ```
@@ -93,11 +100,12 @@ There are other types of camera available (Cube, Orthographic), but the simplest
 
 You should experiment with these values and see how they change what you see in the scene.
 
-> **备注：** The distance values (e.g. for the camera z position) are unitless, and can basically be anything you deem suitable for your scene — milimeters, meters, feet, or miles — it's up to you.
+> [!NOTE]
+> The distance values (e.g. for the camera z position) are unitless, and can basically be anything you deem suitable for your scene — milimeters, meters, feet, or miles — it's up to you.
 
 ## Rendering the scene
 
-Everything is ready, but we still can't see anything. Although we set the renderer up, we still have to actually render everything. Our `render()` function will do this job, with a little help from [`requestAnimationFrame()`](/zh-CN/docs/Web/API/window/requestAnimationFrame), which causes the scene to be re-rendered constantly on every frame:
+Everything is ready, but we still can't see anything. Although we set the renderer up, we still have to actually render everything. Our `render()` function will do this job, with a little help from [`requestAnimationFrame()`](/zh-CN/docs/Web/API/Window/requestAnimationFrame), which causes the scene to be re-rendered constantly on every frame:
 
 ```js
 function render() {
@@ -126,7 +134,7 @@ In this case we define a simple cube that is 10 x 10 x 10 units. The geometry it
 Material is that thing covering the object — the colors or texture on its surface. In our case we will use a simple blue color to paint our box. There are predefined materials that can be used: Basic, Phong, Lambert. We will play with the last two later on, but for now the Basic one should be enough:
 
 ```js
-var basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
+var basicMaterial = new THREE.MeshBasicMaterial({ color: 0x0095dd });
 ```
 
 Add this line below the previous one.
@@ -179,7 +187,7 @@ Now onto the shapes and materials: what would you say for a torus using the Phon
 
 ```js
 var torusGeometry = new THREE.TorusGeometry(7, 1, 6, 12);
-var phongMaterial = new THREE.MeshPhongMaterial({color: 0xFF9500});
+var phongMaterial = new THREE.MeshPhongMaterial({ color: 0xff9500 });
 var torus = new THREE.Mesh(torusGeometry, phongMaterial);
 scene.add(torus);
 ```
@@ -190,7 +198,7 @@ We can have even crazier predefined shapes; let's play some more — add the fol
 
 ```js
 var dodecahedronGeometry = new THREE.DodecahedronGeometry(7);
-var lambertMaterial = new THREE.MeshLambertMaterial({color: 0xEAEFF2});
+var lambertMaterial = new THREE.MeshLambertMaterial({ color: 0xeaeff2 });
 var dodecahedron = new THREE.Mesh(dodecahedronGeometry, lambertMaterial);
 dodecahedron.position.x = 25;
 scene.add(dodecahedron);
@@ -205,7 +213,7 @@ As mentioned above, the new objects currently just look black. To have both the 
 There are various types of light sources available in Three.js; the most basic one is the `PointLight`, which works like a flashlight — shinig a spotlight in a given direction. Add the following below your shapre definitions:
 
 ```js
-var light = new THREE.PointLight(0xFFFFFF);
+var light = new THREE.PointLight(0xffffff);
 light.position.set(-10, 15, 50);
 scene.add(light);
 ```
@@ -254,7 +262,7 @@ Now onto the movement part.
 Beside rotation and scaling we can also move objects around the scene. Add the following, again just below the `requestAnimationFrame()` invocation:
 
 ```js
-dodecahedron.position.y = -7*Math.sin(t*2);
+dodecahedron.position.y = -7 * Math.sin(t * 2);
 ```
 
 This will move the dodecahedron up and down by applying the `sin()` value to the y axis on each frame, with a little bit of adjustment to make it look cooler. Try changing the values to see how it affects the animations.

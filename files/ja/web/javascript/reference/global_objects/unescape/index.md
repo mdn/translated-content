@@ -14,12 +14,13 @@ l10n:
 
 **`unescape()`** 関数は 16 進数エスケープシーケンスを、それが表す文字列に置換します。エスケープシーケンスは {{jsxref("escape")}} などの関数によって生成されます。通常は {{jsxref("decodeURI")}} または {{jsxref("decodeURIComponent")}} が `unescape` よりも推奨されます。
 
-> **メモ:** URI のデコードに `unescape` を使用しないでください。代わりに `decodeURI` を使用してください。
+> [!NOTE]
+> URI のデコードに `unescape` を使用しないでください。代わりに `decodeURI` を使用してください。
 
 ## 構文
 
 ```js
-unescape(str)
+unescape(str);
 ```
 
 ### 引数
@@ -40,9 +41,9 @@ unescape(str)
 ### unescape の使用
 
 ```js
-unescape('abc123');     // "abc123"
-unescape('%E4%F6%FC');  // "äöü"
-unescape('%u0107');     // "ć"
+unescape("abc123"); // "abc123"
+unescape("%E4%F6%FC"); // "äöü"
+unescape("%u0107"); // "ć"
 ```
 
 ## 仕様書

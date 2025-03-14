@@ -5,9 +5,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/add
 
 {{JSRef}}
 
-如果 `Set` 对象中没有具有相同值的元素，则 **`add()`** 方法将插入一个具有指定值的新元素到 `Set` 对象中。
+{{jsxref("Set")}} 实例的 **`add()`** 方法会在该集合中插入一个具有指定值的新元素，如果该 `Set` 对象中没有具有相同值的元素。
 
-{{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.add()")}}
+
+```js interactive-example
+const set1 = new Set();
+
+set1.add(42);
+set1.add(42);
+set1.add(13);
+
+for (const item of set1) {
+  console.log(item);
+  // Expected output: 42
+  // Expected output: 13
+}
+```
 
 ## 语法
 
@@ -22,7 +36,7 @@ add(value)
 
 ### 返回值
 
-`Set` 对象本身。
+添加了值的 `Set` 对象。
 
 ## 示例
 
@@ -32,7 +46,7 @@ add(value)
 const mySet = new Set();
 
 mySet.add(1);
-mySet.add(5).add('some text'); // 可以链式调用
+mySet.add(5).add("some text"); // 可以链式调用
 
 console.log(mySet);
 // Set [1, 5, "some text"]

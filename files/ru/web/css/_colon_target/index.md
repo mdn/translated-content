@@ -1,15 +1,11 @@
 ---
-title: ':target'
+title: :target
 slug: Web/CSS/:target
-tags:
-  - Вёрстка
-  - Псевдоклассы
-translation_of: Web/CSS/:target
 ---
 
 {{CSSRef}}
 
-[Псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) [CSS](/ru/docs/Web/CSS) **`:target`** представляет уникальный элемент (целевой элемент) с подходящим {{htmlattrxref("id")}} URL-фрагментом.
+[Псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) [CSS](/ru/docs/Web/CSS) **`:target`** представляет уникальный элемент (целевой элемент) с подходящим [`id`](/ru/docs/Web/HTML/Global_attributes#id) URL-фрагментом.
 
 ```css
 /* Выбирает элемент с подходящим ID текущего URL-фрагмента */
@@ -45,17 +41,24 @@ http://www.example.com/index.html#section2
 ```html
 <h3>Table of Contents</h3>
 <ol>
- <li><a href="#p1">Jump to the first paragraph!</a></li>
- <li><a href="#p2">Jump to the second paragraph!</a></li>
- <li><a href="#nowhere">This link goes nowhere,
-   because the target doesn't exist.</a></li>
+  <li><a href="#p1">Jump to the first paragraph!</a></li>
+  <li><a href="#p2">Jump to the second paragraph!</a></li>
+  <li>
+    <a href="#nowhere"
+      >This link goes nowhere, because the target doesn't exist.</a
+    >
+  </li>
 </ol>
 
 <h3>My Fun Article</h3>
-<p id="p1">You can target <i>this paragraph</i> using a
-  URL fragment. Click on the link above to try out!</p>
-<p id="p2">This is <i>another paragraph</i>, also accessible
-  from the links above. Isn't that delightful?</p>
+<p id="p1">
+  You can target <i>this paragraph</i> using a URL fragment. Click on the link
+  above to try out!
+</p>
+<p id="p2">
+  This is <i>another paragraph</i>, also accessible from the links above. Isn't
+  that delightful?
+</p>
 ```
 
 #### CSS
@@ -70,7 +73,7 @@ p:target::before {
   font: 70% sans-serif;
   content: "►";
   color: limegreen;
-  margin-right: .25em;
+  margin-right: 0.25em;
 }
 
 /* Стиль italic-элементов без target-элемента */
@@ -87,7 +90,8 @@ p:target i {
 
 Вы можете использовать псевдокласс `:target` для создания lightbox без использования JavaScript. Этот метод основан на способности якорных ссылок указывать на элементы, которые изначально скрыты на странице. После этого, CSS изменяет их `display` на видимый.
 
-> **Примечание:** Более полный pure-CSS lightbox , основанный на псевдоклассе`:target` - [available on GitHub](https://github.com/madmurphy/takefive.css/) ([demo](https://madmurphy.github.io/takefive.css/)).
+> [!NOTE]
+> Более полный pure-CSS lightbox , основанный на псевдоклассе`:target` - [available on GitHub](https://github.com/madmurphy/takefive.css/) ([demo](https://madmurphy.github.io/takefive.css/)).
 
 #### HTML
 
@@ -100,17 +104,20 @@ p:target i {
 <div class="lightbox" id="example1">
   <figure>
     <a href="#" class="close"></a>
-    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec felis enim, placerat id eleifend eu, semper vel sem.</figcaption>
+    <figcaption>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis enim,
+      placerat id eleifend eu, semper vel sem.
+    </figcaption>
   </figure>
 </div>
 
 <div class="lightbox" id="example2">
   <figure>
     <a href="#" class="close"></a>
-    <figcaption>Cras risus odio, pharetra nec ultricies et,
-      mollis ac augue. Nunc et diam quis sapien dignissim auctor.
-      Quisque quis neque arcu, nec gravida magna.</figcaption>
+    <figcaption>
+      Cras risus odio, pharetra nec ultricies et, mollis ac augue. Nunc et diam
+      quis sapien dignissim auctor. Quisque quis neque arcu, nec gravida magna.
+    </figcaption>
   </figure>
 </div>
 ```
@@ -173,7 +180,7 @@ p:target i {
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0, 0, 0, 0.7);
   content: "";
   cursor: default;
 }
@@ -187,7 +194,7 @@ p:target i {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

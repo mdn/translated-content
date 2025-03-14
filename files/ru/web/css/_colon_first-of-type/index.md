@@ -1,21 +1,20 @@
 ---
-title: ':first-of-type'
+title: :first-of-type
 slug: Web/CSS/:first-of-type
-tags:
-  - Псевдоклассы
-translation_of: Web/CSS/:first-of-type
 ---
 
 {{CSSRef}}
 
 ## Описание
 
-[CSS](/ru/docs/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:first-of-type` находит первого потомка своего типа среди детей родителя.
+[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:first-of-type` находит первого потомка своего типа среди детей родителя.
 
 ## Синтаксис
 
 ```css
-element:first-of-type { /* стили */ }
+element:first-of-type {
+  /* стили */
+}
 ```
 
 ## Пример
@@ -46,7 +45,7 @@ div :first-of-type {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

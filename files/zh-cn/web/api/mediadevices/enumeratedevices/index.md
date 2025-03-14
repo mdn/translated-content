@@ -15,7 +15,7 @@ var enumeratorPromise = navigator.mediaDevices.enumerateDevices();
 
 ### 返回值
 
-返回一个 {{ domxref("Promise") }} 。当完成时，它接收一个 {{domxref("MediaDeviceInfo")}} 对象的数组。每个对象描述一个可用的媒体输入输出设备。.
+返回一个 {{ domxref("Promise") }}。当完成时，它接收一个 {{domxref("MediaDeviceInfo")}} 对象的数组。每个对象描述一个可用的媒体输入输出设备。
 
 如果枚举失败，promise 也会被拒绝（rejected）。
 
@@ -31,16 +31,18 @@ if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
 
 // 列出相机和麦克风。
 
-navigator.mediaDevices.enumerateDevices()
-.then(function(devices) {
-  devices.forEach(function(device) {
-    console.log(device.kind + ": " + device.label +
-                " id = " + device.deviceId);
+navigator.mediaDevices
+  .enumerateDevices()
+  .then(function (devices) {
+    devices.forEach(function (device) {
+      console.log(
+        device.kind + ": " + device.label + " id = " + device.deviceId,
+      );
+    });
+  })
+  .catch(function (err) {
+    console.log(err.name + ": " + err.message);
   });
-})
-.catch(function(err) {
-  console.log(err.name + ": " + err.message);
-});
 ```
 
 这将会输出类似以下的内容：
@@ -70,6 +72,6 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 ## See also
 
 - {{domxref("navigator.mediaDevices.getUserMedia()")}}
-- [WebRTC](/zh-CN/docs/WebRTC) - the introductory page to the API
-- [MediaStream API](/zh-CN/docs/WebRTC/MediaStream_API) - the API for the media stream objects
-- [Taking webcam photos](/zh-CN/docs/WebRTC/taking_webcam_photos) - a tutorial on using `getUserMedia()` for taking photos rather than video.
+- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) - the introductory page to the API
+- [MediaStream API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API) - the API for the media stream objects
+- [Taking webcam photos](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - a tutorial on using `getUserMedia()` for taking photos rather than video.

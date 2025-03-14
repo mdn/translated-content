@@ -1,10 +1,9 @@
 ---
 title: Agregando Contenido 2D en el Contexto WebGL
 slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
-translation_of: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
 
 Una vez que has logrado [crear el contexto WebGL](/es/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL), estás listo para crear objetos dentro del mismo. Algo sencillo que podemos hacer es pintar un simple cuadrado plano sin texturas, así que vamos a empezar desde ahí, creando el código para dibujar el cuadrado plano.
 
@@ -20,19 +19,19 @@ Los shaders usan especificamente [OpenGL ES Shading Language](https://www.khrono
 
 La responsabilidad de los Shaders de Vértices es asignar un valor a una variable especial `gl_Position` para crear los valores del espacio de trabajo (valores entre -1 y +1) en toda la zona del canvas. En nuestro Shader de Vértices de abajo estamos recibiendo valores de un atributo que definiremos como `aVertexPosition`. Estamos entonces multiplicando esa posición por dos matrices 4x4 que definimos como `uProjectionMatrix` y `uModelMatrix` e igualando `gl_Position` al resultado. Para más información sobre proyección y otras matrices [puedes encontrar útil este artículo](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html).
 
-```html
-  // Vertex shader program
+```js
+// Vertex shader program
 
-  const vsSource = `
-    attribute vec4 aVertexPosition;
+const vsSource = `
+  attribute vec4 aVertexPosition;
 
-    uniform mat4 uModelViewMatrix;
-    uniform mat4 uProjectionMatrix;
+  uniform mat4 uModelViewMatrix;
+  uniform mat4 uProjectionMatrix;
 
-    void main() {
-      gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition;
-    }
-  `;
+  void main() {
+    gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition;
+  }
+`;
 ```
 
 #### Shaders de Fragmentos
@@ -41,12 +40,12 @@ Cada vez que el Shader de Vértices escribe de 1 a 3 valores al `gl_Position` es
 
 `gl_FragColor` es una variable built-in de GL que es usada para el color del fragmento. Al definir su valor se establece el color del pixel, como se ve a continuación:
 
-```html
-  const fsSource = `
-    void main() {
-      gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
-    }
-  `;
+```js
+const fsSource = `
+  void main() {
+    gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+  }
+`;
 ```
 
 ### Inicializando los shaders
@@ -71,7 +70,10 @@ function initShaderProgram(gl, vsSource, fsSource) {
   // If creating the shader program failed, alert
 
   if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
-    alert('Unable to initialize the shader program: ' + gl.getProgramInfoLog(shaderProgram));
+    alert(
+      "Unable to initialize the shader program: " +
+        gl.getProgramInfoLog(shaderProgram),
+    );
     return null;
   }
 
@@ -96,7 +98,9 @@ function loadShader(gl, type, source) {
   // See if it compiled successfully
 
   if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-    alert('An error occurred compiling the shaders: ' + gl.getShaderInfoLog(shader));
+    alert(
+      "An error occurred compiling the shaders: " + gl.getShaderInfoLog(shader),
+    );
     gl.deleteShader(shader);
     return null;
   }
@@ -108,22 +112,22 @@ function loadShader(gl, type, source) {
 Para usar este código lo llamamos así:
 
 ```js
-  const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
+const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
 ```
 
 Después de haber creado el programa de sombreado necesitaremos buscar las ubicaciones que WebGL asignó a nuestras entradas (inputs). En este caso tenemos un attribute y 2 uniforms. Los attribute reciben valores de los buffers. Cada iteración del Shader de Vértices recibe el siguiente valor desde el buffer asignado al attribute. Los uniforms son similares a variables globales en Javascript, estos mantienen el mismo valor para todas las iteraciones de un shader. Como las ubicaciones attribute y uniform son específicas de un solo programa de sombreado, los almacenamos juntos para que sean fáciles de pasar.
 
 ```js
-  const programInfo = {
-    program: shaderProgram,
-    attribLocations: {
-      vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
-    },
-    uniformLocations: {
-      projectionMatrix: gl.getUniformLocation(shaderProgram, 'uProjectionMatrix'),
-      modelViewMatrix: gl.getUniformLocation(shaderProgram, 'uModelViewMatrix'),
-    },
-  };
+const programInfo = {
+  program: shaderProgram,
+  attribLocations: {
+    vertexPosition: gl.getAttribLocation(shaderProgram, "aVertexPosition"),
+  },
+  uniformLocations: {
+    projectionMatrix: gl.getUniformLocation(shaderProgram, "uProjectionMatrix"),
+    modelViewMatrix: gl.getUniformLocation(shaderProgram, "uModelViewMatrix"),
+  },
+};
 ```
 
 ## Creando el cuadrado plano
@@ -132,7 +136,6 @@ Antes de que podamos renderizar nuestro cuadrado plano, necesitamos crear el buf
 
 ```js
 function initBuffers(gl) {
-
   // Create a buffer for the square's positions.
 
   const positionBuffer = gl.createBuffer();
@@ -144,20 +147,13 @@ function initBuffers(gl) {
 
   // Now create an array of positions for the square.
 
-  const positions = [
-     1.0,  1.0,
-    -1.0,  1.0,
-     1.0, -1.0,
-    -1.0, -1.0,
-  ];
+  const positions = [1.0, 1.0, -1.0, 1.0, 1.0, -1.0, -1.0, -1.0];
 
   // Now pass the list of positions into WebGL to build the
   // shape. We do this by creating a Float32Array from the
   // JavaScript array, then use it to fill the current buffer.
 
-  gl.bufferData(gl.ARRAY_BUFFER,
-                new Float32Array(positions),
-                gl.STATIC_DRAW);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
 
   return {
     position: positionBuffer,
@@ -175,10 +171,10 @@ Una vez que los shaders estan establecidos, se buscan las ubicaciones, y las pos
 
 ```js
 function drawScene(gl, programInfo, buffers) {
-  gl.clearColor(0.0, 0.0, 0.0, 1.0);  // Clear to black, fully opaque
-  gl.clearDepth(1.0);                 // Clear everything
-  gl.enable(gl.DEPTH_TEST);           // Enable depth testing
-  gl.depthFunc(gl.LEQUAL);            // Near things obscure far things
+  gl.clearColor(0.0, 0.0, 0.0, 1.0); // Clear to black, fully opaque
+  gl.clearDepth(1.0); // Clear everything
+  gl.enable(gl.DEPTH_TEST); // Enable depth testing
+  gl.depthFunc(gl.LEQUAL); // Near things obscure far things
 
   // Clear the canvas before we start drawing on it.
 
@@ -191,7 +187,7 @@ function drawScene(gl, programInfo, buffers) {
   // and we only want to see objects between 0.1 units
   // and 100 units away from the camera.
 
-  const fieldOfView = 45 * Math.PI / 180;   // in radians
+  const fieldOfView = (45 * Math.PI) / 180; // in radians
   const aspect = gl.canvas.clientWidth / gl.canvas.clientHeight;
   const zNear = 0.1;
   const zFar = 100.0;
@@ -199,11 +195,7 @@ function drawScene(gl, programInfo, buffers) {
 
   // note: glmatrix.js always has the first argument
   // as the destination to receive the result.
-  mat4.perspective(projectionMatrix,
-                   fieldOfView,
-                   aspect,
-                   zNear,
-                   zFar);
+  mat4.perspective(projectionMatrix, fieldOfView, aspect, zNear, zFar);
 
   // Set the drawing position to the "identity" point, which is
   // the center of the scene.
@@ -212,29 +204,31 @@ function drawScene(gl, programInfo, buffers) {
   // Now move the drawing position a bit to where we want to
   // start drawing the square.
 
-  mat4.translate(modelViewMatrix,     // destination matrix
-                 modelViewMatrix,     // matrix to translate
-                 [-0.0, 0.0, -6.0]);  // amount to translate
+  mat4.translate(
+    modelViewMatrix, // destination matrix
+    modelViewMatrix, // matrix to translate
+    [-0.0, 0.0, -6.0],
+  ); // amount to translate
 
   // Tell WebGL how to pull out the positions from the position
   // buffer into the vertexPosition attribute.
   {
-    const numComponents = 2;  // pull out 2 values per iteration
-    const type = gl.FLOAT;    // the data in the buffer is 32bit floats
-    const normalize = false;  // don't normalize
-    const stride = 0;         // how many bytes to get from one set of values to the next
-                              // 0 = use type and numComponents above
-    const offset = 0;         // how many bytes inside the buffer to start from
+    const numComponents = 2; // pull out 2 values per iteration
+    const type = gl.FLOAT; // the data in the buffer is 32bit floats
+    const normalize = false; // don't normalize
+    const stride = 0; // how many bytes to get from one set of values to the next
+    // 0 = use type and numComponents above
+    const offset = 0; // how many bytes inside the buffer to start from
     gl.bindBuffer(gl.ARRAY_BUFFER, buffers.position);
     gl.vertexAttribPointer(
-        programInfo.attribLocations.vertexPosition,
-        numComponents,
-        type,
-        normalize,
-        stride,
-        offset);
-    gl.enableVertexAttribArray(
-        programInfo.attribLocations.vertexPosition);
+      programInfo.attribLocations.vertexPosition,
+      numComponents,
+      type,
+      normalize,
+      stride,
+      offset,
+    );
+    gl.enableVertexAttribArray(programInfo.attribLocations.vertexPosition);
   }
 
   // Tell WebGL to use our program when drawing
@@ -244,13 +238,15 @@ function drawScene(gl, programInfo, buffers) {
   // Set the shader uniforms
 
   gl.uniformMatrix4fv(
-      programInfo.uniformLocations.projectionMatrix,
-      false,
-      projectionMatrix);
+    programInfo.uniformLocations.projectionMatrix,
+    false,
+    projectionMatrix,
+  );
   gl.uniformMatrix4fv(
-      programInfo.uniformLocations.modelViewMatrix,
-      false,
-      modelViewMatrix);
+    programInfo.uniformLocations.modelViewMatrix,
+    false,
+    modelViewMatrix,
+  );
 
   {
     const offset = 0;
@@ -264,18 +260,18 @@ El primer paso es limpiar el canvas de nuestro color de fondo; establecemos la p
 
 Entonces establecemos la posición del cuadrado plano al cargar la posición de identidad y alejando la cámara en 6 unidades. Déspues de eso, enlazamos el buffer del vértice del cuadrado al atributo que el shader estaba usando para `aVertexPosition` y le decimos a WebGL como jalar los datos fuera de este. Finalmente dibujamos el objeto al llamar el método {{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}}.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
-[Ver código completo](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2) | [Abrir esta demostración en una nueva página](http://mdn.github.io/webgl-examples/tutorial/sample2/)
+[Ver código completo](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2) | [Abrir esta demostración en una nueva página](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)
 
 ## Utilidades para operaciones de Matrices
 
-Las operaciones de matrices pueden parecer complicadas pero [en realidad son muy fáciles si las tomas un paso a la vez](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html). Generalmente la gente usa una librería de matrices antes que escribir la suya. En nuestro caso estamos usando la popular [librería glMatrix](http://glmatrix.net/).
+Las operaciones de matrices pueden parecer complicadas pero [en realidad son muy fáciles si las tomas un paso a la vez](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html). Generalmente la gente usa una librería de matrices antes que escribir la suya. En nuestro caso estamos usando la popular [librería glMatrix](https://glmatrix.net/).
 
 Ver también
 
 - [Matrices](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html) en WebGLFundamentals
-- [Matrices](http://mathworld.wolfram.com/Matrix.html) en Wolfram MathWorld
+- [Matrices](https://mathworld.wolfram.com/Matrix.html) en Wolfram MathWorld
 - [Matriz](<http://en.wikipedia.org/wiki/Matrix_(mathematics)>) en Wikipedia
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

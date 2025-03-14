@@ -63,9 +63,11 @@ outline-style: unset;
 
 {{csssyntax}}
 
-## 示例 1 `dotted` 和 `dashed`
+## 示例
 
-### HTML
+### `dotted` 和 `dashed`
+
+#### HTML
 
 ```html
 <div>
@@ -75,7 +77,7 @@ outline-style: unset;
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 .dotted {
@@ -86,14 +88,17 @@ outline-style: unset;
 }
 
 /* 让效果更清楚 */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
-{{ EmbedLiveSample('Example_1_-_dotted_and_dashed') }}
+{{ EmbedLiveSample('dotted 和 dashed') }}
 
-## 示例 2 - `solid` 和 `double`
+### `solid` 和 `double`
 
-### HTML
+#### HTML
 
 ```html
 <div>
@@ -103,7 +108,7 @@ outline-style: unset;
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 .solid {
@@ -114,14 +119,17 @@ outline-style: unset;
 }
 
 /* 让效果更清楚 */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
-{{ EmbedLiveSample('Example_2_-_solid_and_double') }}
+{{ EmbedLiveSample('solid 和 double') }}
 
-## 示例 3 - `groove` 和 `ridge`
+### `groove` 和 `ridge`
 
-### HTML
+#### HTML
 
 ```html
 <div>
@@ -131,7 +139,7 @@ outline-style: unset;
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 .groove {
@@ -142,14 +150,17 @@ outline-style: unset;
 }
 
 /* 让效果更清楚 */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
-{{ EmbedLiveSample('Example_3_-_groove_and_ridge') }}
+{{ EmbedLiveSample('groove 和 ridge') }}
 
-## 示例 4 - `inset` 和 `outset`
+### `inset` 和 `outset`
 
-### HTML
+#### HTML
 
 ```html
 <div>
@@ -159,7 +170,7 @@ outline-style: unset;
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 .inset {
@@ -170,10 +181,13 @@ outline-style: unset;
 }
 
 /* 让效果更清楚 */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
-{{ EmbedLiveSample('Example_4_-_inset_and_outset') }}
+{{ EmbedLiveSample('inset 和 outset') }}
 
 ## 规范
 

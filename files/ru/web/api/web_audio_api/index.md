@@ -1,16 +1,10 @@
 ---
 title: Web Audio API
 slug: Web/API/Web_Audio_API
-tags:
-  - API
-  - Guide
-  - NeedsTranslation
-  - Reference
-  - Référence(2)
-  - TopicStub
-  - Web Audio API
-translation_of: Web/API/Web_Audio_API
 ---
+
+{{DefaultAPISidebar("Web Audio API")}}
+
 Web audio API - мощный и многогранный инструмент для манипуляции звуковой составляющей на веб-странице, что даёт возможность разработчикам выбрать источники, добавить к ним специальные звуковые эффекты (такие как panning), визуализировать их и многое другое.
 
 ## Общие концепции и использование Web Audio
@@ -27,14 +21,15 @@ Web audio API позволяет обрабатывать операции на�
 4. Выберем конечную точку аудио сигнала, например ваши системные звуковые устройства
 5. Привяжем наши источники к эффектам, и эффекты к конечному сигналу.
 
-![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](https://mdn.mozillademos.org/files/7893/web-audio-api-flowchart.png)
+![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](web-audio-api-flowchart.png)
 
 Распределение времени контролируется с высокой точностью и низкими задержками, позволяя разработчикам писать код, что точно реагирует на события и в состоянии обработать образец даже на высокой оценке образцов (sample rate). Так что такие приложения как ритм-компьютер и программный автомат всегда под рукой.
 
 Web audio API также даёт нам возможность контролировать то, каким аудио является в пространстве. Используя особую систему, что базируется
 на модели source-listener, он позволяет контролировать модель панорамирования и обходиться без дистанционно-вызванного ослабления (distance-induced attenuation) или duppler shift, вызванного сдвигом источника (или сдвигом слушателя).
 
-> **Примечание:** Помните: вы можете прочитать более детальный теоретический материал о Web audio API в нашей статье [Basic concepts behind Web Audio API](/ru/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API).
+> [!NOTE]
+> Вы можете прочитать более детальный теоретический материал о Web audio API в нашей статье [Basic concepts behind Web Audio API](/ru/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API).
 
 ## Web Audio API интерфейсы
 
@@ -50,7 +45,7 @@ Web audio API также даёт нам возможность контроли
   - : Интерфейс AudioNode представляет собой некий обрабатывающий модуль такой как источник аудио (то есть HTML \<audio> или \<video> элемент), конечный аудио объект, модуль непосредственной обработки (например фильтр BiquadFilterNode или звуковой контроллер такой как GainNode).
 - {{domxref("AudioParam")}}
   - : Интерфейс **`AudioParam`** представляет аудио-параметры связанные с {{domxref("AudioNode")}}. Он может содержать как точное значение параметра, так и параметры изменяющиеся во времени.
-- {{event("ended_(Web_Audio)", "ended")}} (event)
+- [`ended`](</ru/docs/Web/Events/ended_(Web_Audio)>) (event)
   - : Событие **ended** генерируется тогда, когда воспроизведение остановлено по причине окончания носителя.
 
 ### Источники звука
@@ -66,7 +61,7 @@ Web audio API также даёт нам возможность контроли
 - {{domxref("MediaElementAudioSourceNode")}}
   - : Интерфейс **`MediaElementAudioSourceNode`** представляет источник звука, содержащегося в элементе HTML5 {{ htmlelement("audio") }} или {{ htmlelement("video") }} . Это {{domxref("AudioNode")}}, который действует в качестве источника звука.
 - {{domxref("MediaStreamAudioSourceNode")}}
-  - : Интерфейс **`MediaStreamAudioSourceNode`** представляет источник звука, содержащегося в потоке [WebRTC](/ru/docs/WebRTC) {{domxref("MediaStream")}} (например веб-камеры или микрофона). Это {{domxref("AudioNode")}}, который действует в качестве источника звука.
+  - : Интерфейс **`MediaStreamAudioSourceNode`** представляет источник звука, содержащегося в потоке [WebRTC](/ru/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} (например веб-камеры или микрофона). Это {{domxref("AudioNode")}}, который действует в качестве источника звука.
 
 ### Аудио фильтры
 
@@ -96,7 +91,7 @@ Once you are done processing your audio, these interfaces define where to output
 - {{domxref("AudioDestinationNode")}}
   - : The **`AudioDestinationNode`** interface represents the end destination of an audio source in a given context — usually the speakers of your device.
 - {{domxref("MediaStreamAudioDestinationNode")}}
-  - : The **`MediaStreamAudioDestinationNode`** interface represents an audio destination consisting of a [WebRTC](/ru/docs/WebRTC) {{domxref("MediaStream")}} with a single `AudioMediaStreamTrack`, which can be used in a similar way to a MediaStream obtained from {{ domxref("Navigator.getUserMedia") }}. It is an {{domxref("AudioNode")}} that acts as an audio destination.
+  - : The **`MediaStreamAudioDestinationNode`** interface represents an audio destination consisting of a [WebRTC](/ru/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} with a single `AudioMediaStreamTrack`, which can be used in a similar way to a MediaStream obtained from {{ domxref("Navigator.getUserMedia") }}. It is an {{domxref("AudioNode")}} that acts as an audio destination.
 
 ### Анализ и визуализация данных
 
@@ -127,14 +122,15 @@ These interfaces allow you to add audio spatialization panning effects to your a
 
 If you want to use an external script to process your audio source, the below Node and events make it possible.
 
-> **Примечание:** As of the August 29 2014 Web Audio API spec publication, these features have been marked as deprecated, and are soon to be replaced by [Audio_Workers](#audio_workers).
+> [!NOTE]
+> As of the August 29 2014 Web Audio API spec publication, these features have been marked as deprecated, and are soon to be replaced by [Audio_Workers](#audio_workers).
 
 - {{domxref("ScriptProcessorNode")}}
   - : The **`ScriptProcessorNode`** interface allows the generation, processing, or analyzing of audio using JavaScript. It is an {{domxref("AudioNode")}} audio-processing module that is linked to two buffers, one containing the current input, one containing the output. An event, implementing the {{domxref("AudioProcessingEvent")}} interface, is sent to the object each time the input buffer contains new data, and the event handler terminates when it has filled the output buffer with data.
-- {{event("audioprocess")}} (event)
+- [`audioprocess`](/ru/docs/Web/API/ScriptProcessorNode/audioprocess_event) (event)
   - : The `audioprocess` event is fired when an input buffer of a Web Audio API {{domxref("ScriptProcessorNode")}} is ready to be processed.
 - {{domxref("AudioProcessingEvent")}}
-  - : The [Web Audio API](/ru/docs/Web_Audio_API) `AudioProcessingEvent` represents events that occur when a {{domxref("ScriptProcessorNode")}} input buffer is ready to be processed.
+  - : The [Web Audio API](/ru/docs/Web/API/Web_Audio_API) `AudioProcessingEvent` represents events that occur when a {{domxref("ScriptProcessorNode")}} input buffer is ready to be processed.
 
 ### Offline/background audio processing
 
@@ -142,14 +138,14 @@ It is possible to process/render an audio graph very quickly in the background �
 
 - {{domxref("OfflineAudioContext")}}
   - : The **`OfflineAudioContext`** interface is an {{domxref("AudioContext")}} interface representing an audio-processing graph built from linked together {{domxref("AudioNode")}}s. In contrast with a standard `AudioContext`, an `OfflineAudioContext` doesn't really render the audio but rather generates it, _as fast as it can_, in a buffer.
-- {{event("complete")}} (event)
+- [`complete`](/ru/docs/Web/API/OfflineAudioContext/complete_event) (event)
   - : The `complete` event is fired when the rendering of an {{domxref("OfflineAudioContext")}} is terminated.
 - {{domxref("OfflineAudioCompletionEvent")}}
-  - : The `OfflineAudioCompletionEvent` represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The {{event("complete")}} event implements this interface.
+  - : The `OfflineAudioCompletionEvent` represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The [`complete`](/ru/docs/Web/API/OfflineAudioContext/complete_event) event implements this interface.
 
 ### Audio Workers
 
-Audio workers provide the ability for direct scripted audio processing to be done inside a [web worker](/ru/docs/Web/Guide/Performance/Using_web_workers) context, and are defined by a couple of interfaces (new as of 29th August 2014.) These are not implemented in any browsers yet. When implemented, they will replace {{domxref("ScriptProcessorNode")}}, and the other features discussed in the [Audio processing via JavaScript](#Audio_processing_via_JavaScript) section above.
+Audio workers provide the ability for direct scripted audio processing to be done inside a [web worker](/ru/docs/Web/API/Web_Workers_API/Using_web_workers) context, and are defined by a couple of interfaces (new as of 29th August 2014.) These are not implemented in any browsers yet. When implemented, they will replace {{domxref("ScriptProcessorNode")}}, and the other features discussed in the [Audio processing via JavaScript](#audio_processing_via_javascript) section above.
 
 - {{domxref("AudioWorkerNode")}}
   - : The AudioWorkerNode interface represents an {{domxref("AudioNode")}} that interacts with a worker thread to generate, process, or analyse audio directly.
@@ -169,7 +165,7 @@ The following interfaces were defined in old versions of the Web Audio API spec,
 
 ## Пример
 
-This example shows a wide variety of Web Audio API functions being used. You can see this code in action on the [Voice-change-o-matic](http://mdn.github.io/voice-change-o-matic/) demo (also check out the [full source code at Github](https://github.com/mdn/voice-change-o-matic)) — this is an experimental voice changer toy demo; keep your speakers turned down low when you use it, at least to start!
+This example shows a wide variety of Web Audio API functions being used. You can see this code in action on the [Voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) demo (also check out the [full source code at Github](https://github.com/mdn/voice-change-o-matic)) — this is an experimental voice changer toy demo; keep your speakers turned down low when you use it, at least to start!
 
 The Web Audio API lines are highlighted; if you want to find more out about what the different methods, etc. do, have a search around the reference pages.
 
@@ -179,7 +175,7 @@ var audioCtx = new (window.AudioContext || window.webkitAudioContext)(); // defi
 
 var voiceSelect = document.getElementById("voice"); // select box for selecting voice effect options
 var visualSelect = document.getElementById("visual"); // select box for selecting audio visualization options
-var mute = document.querySelector('.mute'); // mute button
+var mute = document.querySelector(".mute"); // mute button
 var drawVisual; // requestAnimationFrame
 
 var analyser = audioCtx.createAnalyser();
@@ -187,28 +183,29 @@ var distortion = audioCtx.createWaveShaper();
 var gainNode = audioCtx.createGain();
 var biquadFilter = audioCtx.createBiquadFilter();
 
-function makeDistortionCurve(amount) { // function to make curve shape for distortion/wave shaper node to use
-  var k = typeof amount === 'number' ? amount : 50,
+function makeDistortionCurve(amount) {
+  // function to make curve shape for distortion/wave shaper node to use
+  var k = typeof amount === "number" ? amount : 50,
     n_samples = 44100,
     curve = new Float32Array(n_samples),
     deg = Math.PI / 180,
     i = 0,
     x;
-  for ( ; i < n_samples; ++i ) {
-    x = i * 2 / n_samples - 1;
-    curve[i] = ( 3 + k ) * x * 20 * deg / ( Math.PI + k * Math.abs(x) );
+  for (; i < n_samples; ++i) {
+    x = (i * 2) / n_samples - 1;
+    curve[i] = ((3 + k) * x * 20 * deg) / (Math.PI + k * Math.abs(x));
   }
   return curve;
-};
+}
 
-navigator.getUserMedia (
+navigator.getUserMedia(
   // constraints - only audio needed for this app
   {
-    audio: true
+    audio: true,
   },
 
   // Success callback
-  function(stream) {
+  function (stream) {
     source = audioCtx.createMediaStreamSource(stream);
     source.connect(analyser);
     analyser.connect(distortion);
@@ -218,13 +215,12 @@ navigator.getUserMedia (
 
     visualize(stream);
     voiceChange();
-
   },
 
   // Error callback
-  function(err) {
-    console.log('The following gUM error occured: ' + err);
-  }
+  function (err) {
+    console.log("The following gUM error occured: " + err);
+  },
 );
 
 function visualize(stream) {
@@ -234,7 +230,7 @@ function visualize(stream) {
   var visualSetting = visualSelect.value;
   console.log(visualSetting);
 
-  if(visualSetting == "sinewave") {
+  if (visualSetting == "sinewave") {
     analyser.fftSize = 2048;
     var bufferLength = analyser.frequencyBinCount; // half the FFT value
     var dataArray = new Uint8Array(bufferLength); // create an array to store the data
@@ -242,28 +238,26 @@ function visualize(stream) {
     canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
 
     function draw() {
-
       drawVisual = requestAnimationFrame(draw);
 
       analyser.getByteTimeDomainData(dataArray); // get waveform data and put it into the array created above
 
-      canvasCtx.fillStyle = 'rgb(200, 200, 200)'; // draw wave with canvas
+      canvasCtx.fillStyle = "rgb(200, 200, 200)"; // draw wave with canvas
       canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
       canvasCtx.lineWidth = 2;
-      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+      canvasCtx.strokeStyle = "rgb(0, 0, 0)";
 
       canvasCtx.beginPath();
 
-      var sliceWidth = WIDTH * 1.0 / bufferLength;
+      var sliceWidth = (WIDTH * 1.0) / bufferLength;
       var x = 0;
 
-      for(var i = 0; i < bufferLength; i++) {
-
+      for (var i = 0; i < bufferLength; i++) {
         var v = dataArray[i] / 128.0;
-        var y = v * HEIGHT/2;
+        var y = (v * HEIGHT) / 2;
 
-        if(i === 0) {
+        if (i === 0) {
           canvasCtx.moveTo(x, y);
         } else {
           canvasCtx.lineTo(x, y);
@@ -272,54 +266,52 @@ function visualize(stream) {
         x += sliceWidth;
       }
 
-      canvasCtx.lineTo(canvas.width, canvas.height/2);
+      canvasCtx.lineTo(canvas.width, canvas.height / 2);
       canvasCtx.stroke();
-    };
+    }
 
     draw();
-
-  } else if(visualSetting == "off") {
+  } else if (visualSetting == "off") {
     canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
     canvasCtx.fillStyle = "red";
     canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
   }
-
 }
 
 function voiceChange() {
-  distortion.curve = new Float32Array;
+  distortion.curve = new Float32Array();
   biquadFilter.gain.value = 0; // reset the effects each time the voiceChange function is run
 
   var voiceSetting = voiceSelect.value;
   console.log(voiceSetting);
 
-  if(voiceSetting == "distortion") {
+  if (voiceSetting == "distortion") {
     distortion.curve = makeDistortionCurve(400); // apply distortion to sound using waveshaper node
-  } else if(voiceSetting == "biquad") {
+  } else if (voiceSetting == "biquad") {
     biquadFilter.type = "lowshelf";
     biquadFilter.frequency.value = 1000;
     biquadFilter.gain.value = 25; // apply lowshelf filter to sounds using biquad
-  } else if(voiceSetting == "off") {
+  } else if (voiceSetting == "off") {
     console.log("Voice settings turned off"); // do nothing, as off option was chosen
   }
-
 }
 
 // event listeners to change visualize and voice settings
 
-visualSelect.onchange = function() {
+visualSelect.onchange = function () {
   window.cancelAnimationFrame(drawVisual);
   visualize(stream);
-}
+};
 
-voiceSelect.onchange = function() {
+voiceSelect.onchange = function () {
   voiceChange();
-}
+};
 
 mute.onclick = voiceMute;
 
-function voiceMute() { // toggle to mute and unmute sound
-  if(mute.id == "") {
+function voiceMute() {
+  // toggle to mute and unmute sound
+  if (mute.id == "") {
     gainNode.gain.value = 0; // gain set to 0 to mute sound
     mute.id = "activated";
     mute.innerHTML = "Unmute";
@@ -331,73 +323,71 @@ function voiceMute() { // toggle to mute and unmute sound
 }
 ```
 
-## Определения
+## Спецификации
 
-| Specification                            | Status                               | Comment |
-| ---------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
-{{Compat("api.AudioContext", 0)}}
+{{Compat}}
 
 ## Смотрите также
 
 - [Using the Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Visualizations with Web Audio API](/ru/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-- [Voice-change-O-matic example](http://mdn.github.io/voice-change-o-matic/)
-- [Violent Theremin example](http://mdn.github.io/violent-theremin/)
-- [Web audio spatialisation basics](/ru/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)
-- [Mixing Positional Audio and WebGL](http://www.html5rocks.com/tutorials/webaudio/positional_audio/)
-- [Developing Game Audio with the Web Audio API](http://www.html5rocks.com/tutorials/webaudio/games/)
-- [Porting webkitAudioContext code to standards based AudioContext](/ru/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext)
+- [Voice-change-O-matic example](https://mdn.github.io/voice-change-o-matic/)
+- [Violent Theremin example](https://mdn.github.io/violent-theremin/)
+- [Web audio spatialisation basics](/ru/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Mixing Positional Audio and WebGL](https://www.html5rocks.com/tutorials/webaudio/positional_audio/)
+- [Developing Game Audio with the Web Audio API](https://www.html5rocks.com/tutorials/webaudio/games/)
+- [Porting webkitAudioContext code to standards based AudioContext](/ru/docs/Web/API/Web_Audio_API)
 - [Tones](https://github.com/bit101/tones): a simple library for playing specific tones/notes using the Web Audio API.
-- [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html) and falls back to [HTML5 Audio](http://www.whatwg.org/specs/web-apps/current-work/#the-audio-element), as well as providing other useful features.
+- [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html) and falls back to [HTML5 Audio](https://www.whatwg.org/specs/web-apps/current-work/#the-audio-element), as well as providing other useful features.
 - [Mooog](https://github.com/mattlima/mooog): jQuery-style chaining of AudioNodes, mixer-style sends/returns, and more.
 
 ### Quicklinks
 
 1. **Guides**
 
-    1. [Basic concepts behind Web Audio API](/ru/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
-    2. [Using the Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-    3. [Visualizations with Web Audio API](/ru/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-    4. [Web audio spatialisation basics](/ru/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)
-    5. [Porting webkitAudioContext code to standards based AudioContext](/ru/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext)
+   1. [Basic concepts behind Web Audio API](/ru/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
+   2. [Using the Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+   3. [Visualizations with Web Audio API](/ru/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
+   4. [Web audio spatialisation basics](/ru/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+   5. [Porting webkitAudioContext code to standards based AudioContext](/ru/docs/Web/API/Web_Audio_API)
 
 2. **Examples**
 
-    1. [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)
-    2. [Violent Theremin](http://mdn.github.io/violent-theremin/)
+   1. [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/)
+   2. [Violent Theremin](https://mdn.github.io/violent-theremin/)
 
 3. **Interfaces**
 
-    1. {{domxref("AnalyserNode")}}
-    2. {{domxref("AudioBuffer")}}
-    3. {{domxref("AudioBufferSourceNode")}}
-    4. {{domxref("AudioContext")}}
-    5. {{domxref("AudioDestinationNode")}}
-    6. {{domxref("AudioListener")}}
-    7. {{domxref("AudioNode")}}
-    8. {{domxref("AudioParam")}}
-    9. {{event("audioprocess")}} (event)
-    10. {{domxref("AudioProcessingEvent")}}
-    11. {{domxref("BiquadFilterNode")}}
-    12. {{domxref("ChannelMergerNode")}}
-    13. {{domxref("ChannelSplitterNode")}}
-    14. {{event("complete")}} (event)
-    15. {{domxref("ConvolverNode")}}
-    16. {{domxref("DelayNode")}}
-    17. {{domxref("DynamicsCompressorNode")}}
-    18. {{event("ended_(Web_Audio)", "ended")}} (event)
-    19. {{domxref("GainNode")}}
-    20. {{domxref("MediaElementAudioSourceNode")}}
-    21. {{domxref("MediaStreamAudioDestinationNode")}}
-    22. {{domxref("MediaStreamAudioSourceNode")}}
-    23. {{domxref("OfflineAudioCompletionEvent")}}
-    24. {{domxref("OfflineAudioContext")}}
-    25. {{domxref("OscillatorNode")}}
-    26. {{domxref("PannerNode")}}
-    27. {{domxref("PeriodicWaveNode")}}
-    28. {{domxref("ScriptProcessorNode")}}
-    29. {{domxref("WaveShaperNode")}}
+   1. {{domxref("AnalyserNode")}}
+   2. {{domxref("AudioBuffer")}}
+   3. {{domxref("AudioBufferSourceNode")}}
+   4. {{domxref("AudioContext")}}
+   5. {{domxref("AudioDestinationNode")}}
+   6. {{domxref("AudioListener")}}
+   7. {{domxref("AudioNode")}}
+   8. {{domxref("AudioParam")}}
+   9. [`audioprocess`](/ru/docs/Web/API/ScriptProcessorNode/audioprocess_event) (event)
+   10. {{domxref("AudioProcessingEvent")}}
+   11. {{domxref("BiquadFilterNode")}}
+   12. {{domxref("ChannelMergerNode")}}
+   13. {{domxref("ChannelSplitterNode")}}
+   14. [`complete`](/ru/docs/Web/API/OfflineAudioContext/complete_event) (event)
+   15. {{domxref("ConvolverNode")}}
+   16. {{domxref("DelayNode")}}
+   17. {{domxref("DynamicsCompressorNode")}}
+   18. [`ended`](</ru/docs/Web/Events/ended_(Web_Audio)>) (event)
+   19. {{domxref("GainNode")}}
+   20. {{domxref("MediaElementAudioSourceNode")}}
+   21. {{domxref("MediaStreamAudioDestinationNode")}}
+   22. {{domxref("MediaStreamAudioSourceNode")}}
+   23. {{domxref("OfflineAudioCompletionEvent")}}
+   24. {{domxref("OfflineAudioContext")}}
+   25. {{domxref("OscillatorNode")}}
+   26. {{domxref("PannerNode")}}
+   27. {{domxref("PeriodicWaveNode")}}
+   28. {{domxref("ScriptProcessorNode")}}
+   29. {{domxref("WaveShaperNode")}}

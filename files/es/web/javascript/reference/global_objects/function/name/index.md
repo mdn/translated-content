@@ -1,17 +1,17 @@
 ---
 title: Function.name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/name
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/name
 ---
 
 {{JSRef}}
 
 La propiedad **`function.name`** retorna el nombre de la función o retorna `"anonymous"` por funciones creadas anónimamente.
 
-{{js_property_attributes(0,0,1)}}Nótese que en implementaciones no estándar previas a ES2015 el atributo `configurable` también era `false`.
+{{js_property_attributes(0,0,1)}}
 
-## Ejemplos
+Nótese que en implementaciones no estándar previas a ES2015 el atributo `configurable` también era `false`.
+
+## Descripción
 
 ### Nombre de una declaración de función
 
@@ -28,13 +28,13 @@ console.log(doSomething.name); // imprime en pantalla "doSomething"
 Las funciones creadas con la sintaxis `new Function(...)` o simplemente `Function(...)` tienen como propiedad `name` una cadena vacía. En los ejemplos a continuación se crean funciones anónimas, tales que su `name` retorna una cadena vacía:
 
 ```js
-var f = function() {};
+var f = function () {};
 var object = {
-  someMethod: function() {}
+  someMethod: function () {},
 };
 
-console.log(f.name == ''); // true
-console.log(object.someMethod.name == ''); // también true
+console.log(f.name == ""); // true
+console.log(object.someMethod.name == ""); // también true
 ```
 
 ### Nombres de función inferidos
@@ -42,7 +42,7 @@ console.log(object.someMethod.name == ''); // también true
 Los navegadores que implementan funciones ES2015 pueden inferir el nombre de una función anónima de su posición sintáctica. Por ejemplo:
 
 ```js
-var f = function() {};
+var f = function () {};
 console.log(f.name); // "f"
 ```
 
@@ -50,11 +50,15 @@ Se puede definir una función con un nombre en un {{jsxref("Operators/Function",
 
 ```js
 var object = {
-  someMethod: function object_someMethod() {}
+  someMethod: function object_someMethod() {},
 };
 console.log(object.someMethod.name); // imprime "object_someMethod"
 
-try { object_someMethod } catch(e) { console.log(e); }
+try {
+  object_someMethod;
+} catch (e) {
+  console.log(e);
+}
 // ReferenceError: object_someMethod is not defined
 ```
 
@@ -63,10 +67,10 @@ No se puede cambiar el nombre de una función, esta propiedad es de solo lectura
 ```js
 var object = {
   // anonymous
-  someMethod: function() {}
+  someMethod: function () {},
 };
 
-object.someMethod.name = 'someMethod';
+object.someMethod.name = "someMethod";
 console.log(object.someMethod.name); // cadena vacía, someMethod es anónimo
 ```
 
@@ -76,7 +80,7 @@ Sin embargo, se puede usar {{jsxref("Object.defineProperty()")}} para cambiarlo.
 
 ```js
 var o = {
-  foo(){}
+  foo() {},
 };
 o.foo.name; // "foo";
 ```
@@ -86,7 +90,7 @@ o.foo.name; // "foo";
 {{jsxref("Function.bind()")}} produce una función cuyo nombre es igual a "bound " seguido del nombre de la función original.
 
 ```js
-function foo() {};
+function foo() {}
 foo.bind({}).name; // "bound foo"
 ```
 
@@ -96,8 +100,8 @@ Cuando se usan [`get`](/es/docs/Web/JavaScript/Reference/Functions/get) y `set,`
 
 ```js
 var o = {
-  get foo(){},
-  set foo(x){}
+  get foo() {},
+  set foo(x) {},
 };
 
 var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
@@ -117,14 +121,10 @@ var b = new a();
 console.log(b.constructor.name); // imprime "a"
 ```
 
-## Polyfill
-
-Para versiones de IE < 9, se puede usar `fn._name()` en su lugar. Para IE9 o posteriores se puede usar el siguiente [polyfill](https://github.com/JamesMGreene/Function.name).
-
 ## Especificaciones
 
 {{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function.name")}}
+{{Compat}}

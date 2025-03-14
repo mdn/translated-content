@@ -1,5 +1,5 @@
 ---
-title: '@namespace'
+title: "@namespace"
 slug: Web/CSS/@namespace
 ---
 
@@ -12,13 +12,16 @@ slug: Web/CSS/@namespace
 @namespace svg url(http://www.w3.org/2000/svg);
 
 /* Esto coincide con todos los elementos XHTML <a>, ya que el XHTML es el namespace por defecto sin prefijo */
-a {}
+a {
+}
 
 /* Esto coincide con todos los elementos SVG <a> */
-svg|a {}
+svg|a {
+}
 
 /* Esto concuerda con todos los elementos XHTML y SVG <a> elements */
-*|a {}
+*|a {
+}
 ```
 
 Cualquier `@namespace` debe seguir todas las reglas de [@charset](/es/docs/Web/CSS/%40charset) y [@import](/es/docs/Web/CSS/%40import), y preceder a todas las demás reglas y [declaraciones de estilo](/es/docs/Web/API/CSSStyleDeclaration) de una hoja de estilos.
@@ -29,7 +32,8 @@ La regla `@namespace` también puede usarse para definir un **prefijo de namespa
 
 En [HTML5](/es/docs/Glossary/HTML5), conocidos como[elementos externos](https://html.spec.whatwg.org/#foreign-elements) automaticamente se les asignarán un namespace. Esto significa que los elementos HTML actuarán como si estuvieran en un namespace XHTML (`http://www.w3.org/1999/xhtml`), incluso si no hay ningún atributo xmlns en ninguna parte del document, y los elementos [\<svg>](/es/docs/Web/SVG/Element/svg) y [\<math>](/es/docs/Web/MathML/Element/math) se les asignará un namespace propio (`http://www.w3.org/2000/svg` and `http://www.w3.org/1998/Math/MathML`).
 
-> **Nota:** En XML, a menos que se defina un prefijo directamente sobre un atributo (_ejemplo._, `xlink:href`), ese atributo no tiene namespace. En otras palabras, los atributos no heredan el namespace del elemento en el que están. Para que coincida con este comportamiento, el namespace por defecto en CSS no se aplica a los selectores de atributos.
+> [!NOTE]
+> En XML, a menos que se defina un prefijo directamente sobre un atributo (_ejemplo._, `xlink:href`), ese atributo no tiene namespace. En otras palabras, los atributos no heredan el namespace del elemento en el que están. Para que coincida con este comportamiento, el namespace por defecto en CSS no se aplica a los selectores de atributos.
 
 ## Sintaxis
 
@@ -51,6 +55,6 @@ En [HTML5](/es/docs/Glossary/HTML5), conocidos como[elementos externos](https://
 
 {{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.namespace")}}
+{{Compat}}

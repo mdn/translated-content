@@ -1,15 +1,16 @@
 ---
 title: complete
 slug: Web/API/IDBTransaction/complete_event
-translation_of: Web/API/IDBTransaction/complete_event
 ---
+
+{{APIRef("IndexedDB")}}
 
 Le gestionnaire **complete** est exécuté lorsqu'une transaction est complétée avec succès.
 
 ## Informations générales
 
 - Spécification
-  - : [IndexedDB](http://www.w3.org/TR/IndexedDB/#request-api)
+  - : [IndexedDB](https://www.w3.org/TR/IndexedDB/#request-api)
 - Interface
   - : Event
 - Propagation
@@ -23,12 +24,12 @@ Le gestionnaire **complete** est exécuté lorsqu'une transaction est complété
 
 ## Propriétés
 
-| Property                              | Type                                 | Description                                            |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| Property                        | Type                       | Description                                            |
+| ------------------------------- | -------------------------- | ------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
 
 ## Exemple
 
@@ -47,4 +48,4 @@ transaction.addEventListener("complete", function( event ) {
 
 ## Voir aussi
 
-- [Utilisation d'indexedDB](/fr/docs/IndexedDB/Using_IndexedDB)
+- [Utilisation d'indexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)

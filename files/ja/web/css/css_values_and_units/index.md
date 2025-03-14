@@ -1,259 +1,255 @@
 ---
 title: CSS 値と単位
 slug: Web/CSS/CSS_Values_and_Units
+l10n:
+  sourceCommit: 891bc513a3349040a16c4896197d6a3a910ca42b
 ---
 
 {{CSSRef}}
 
-CSS 宣言はすべて、プロパティと値の組を含みます。プロパティによって、値は単純な整数やキーワードから、一連のキーワードや単位つき・単位なしの値などを含みます。CSS プロパティには受け付けるデータ型の組み合わせ -- 値と単位 -- があります。以下ではデータ型の大部分を概観します。より詳しい情報は、それぞれのデータ型のページを参照してください。
-
-## テキストのデータ型
-
-- {{cssxref("&lt;custom-ident&gt;")}}
-- `<ident>` として定義済みのキーワード
-- {{cssxref("&lt;string&gt;")}}
-- {{cssxref("url()","url()")}}
-
-テキストデータ型は、引用符で囲まれた文字の並びである `<string>` と、引用符で囲まれていない文字列、すなわち「CSS 識別子」である `<ident>` のどちらかです。 `<string>` は単一引用符か二重引用符のどちらかで囲まれます。仕様書で `<ident>` または `<custom-ident>` として挙げられている CSS 識別子は、引用符で囲んではいけません。
-
-CSS の仕様では、ウェブ開発者が定義できる値には、アニメーションのキーフレームやフォントファミリーの名前、グリッドエリアなどがあり、これらは {{cssxref("&lt;custom-ident&gt;")}} または {{cssxref("&lt;string&gt;")}} またはその両方の形式で記述します。
-
-ユーザーが定義するテキスト値のうち、引用符があってもなくてもよい箇所では、仕様書には `<custom-ident> | <string>`のように記してあります。これは、例えばアニメーション名のように、引用符が任意だということです。
-
-```css
-@keyframe validIdent {
-  /* ここにキーフレーム */
-}
-@keyframe 'validString' {
-  /* ここにキーフレーム */
-}
-```
-
-引用符で囲んではいけないテキスト値もあります。たとえば {{cssxref("grid-area")}} の値は `<custom-ident>` なので、もし `content` という名前のグリッドエリアがあれば、それは引用符なしで書きます。
-
-```css
-.item {
-  grid-area: content;
-}
-```
-
-いっぽう、 {{cssxref("&lt;string&gt;")}} のデータ型、たとえば {{cssxref("content")}} プロパティの文字列値には引用符が必要です。
-
-```css
-.item::after {
-    content: "This is my content.";
-}
-```
-
-どんな名前でも (絵文字を含んでいるものでも) 一般的には作れますが、識別子については `none`、`unset`、 `initial`、`inherit` にはできず、先頭を数字や二重ダッシュにすることもできません。また、一般的に CSS のそのほかの定義済みキーワードを使用することは避けるのが好ましいです。詳しくは {{cssxref("&lt;custom-ident&gt;")}} と {{cssxref("&lt;string&gt;")}} のリファレンスページを参照してください。
-
-### 定義済みキーワード値
-
-定義済みキーワードは、特定のプロパティ用に仕様で定義されているテキスト値です。これらのキーワードは CSS 識別子でもあるので、引用符なしで使用します。
-
-CSS の仕様書や MDN のプロパティページで、CSS プロパティの値の構文を見ると、そこに書けるキーワードは次のような形式で列挙されているでしょう。以下の値は、{{cssxref("float")}} で使用できる定義済みキーワードです。
-
-```css
-left | right | none | inline-start | inline-end
-```
-
-こうした値は引用符なしで使用します。
-
-```css
-.box {
-    float: left;
-}
-```
-
-### CSS 全般の値
-
-プロパティ用に仕様で定められている定義済みキーワードのほかに、すべての CSS プロパティで使える CSS 全般のプロパティ値として、{{cssxref("initial")}}、{{cssxref("inherit")}}、{{cssxref("unset")}} があります。これらは既定値への戻し方を明示するために使用します。
-
-`initial` キーワードは、そのプロパティの初期値として指定された値を表します。`inherit` キーワードは、その要素の親要素のプロパティで計算された値を表し、親の値を継承します。
-
-`unset` キーワードは、そのプロパティが継承されているか否かによって、`inherit` または `initial` のいずれかと同じ動きになります。
-
-{{cssxref("revert")}} という 4 つめの値が Cascade Level 4 の仕様で追加されましたが、いまのところブラウザーの対応状況は好ましくありません。
-
-### URL
-
-{{cssxref("url()","url()")}} 型は関数記法を使用し、 URL である `<string>` を受け取ります。これは絶対 URL または相対 URL です。例えば、背景画像を読み込みたいときには以下のどちらの使い方でもできます。
-
-```css
-.box {
-  background-image: url("images/my-background.png");
-}
-
-.box {
-  background-image: url("https://www.exammple.com/images/my-background.png");
-}
-```
-
-`url()` の引数は引用符があってもなくてもかまいません。引用符をつけない場合には、`<url-token>` と同様に解釈され、特定の文字のエスケープを行う必要があるなど、独自の要件があります。詳しくは {{cssxref("url()","url()")}} を参照してください。
-
-## 数値データ型
-
-- {{cssxref("&lt;integer&gt;")}}
-- {{cssxref("&lt;number&gt;")}}
-- {{cssxref("&lt;dimension&gt;")}}
-- {{cssxref("&lt;percentage&gt;")}}
-
-### 整数
-
-整数は 1 桁以上の `0` から `9` の十進数で、`1024`、`-55` など該当します。整数は `+` や `-` を先頭に付けることができますが、記号と整数の間に空白を開けないでください。
-
-### 数値
-
-{{cssxref("&lt;number&gt;")}} は実数を表します。小数点以下の小数部はあってもなくても構いません。例えば `0.255`、`128`、`-1.2` が該当します。数値にも `+` や `-` の記号を先頭に付けることができます。
-
-### 大きさ
-
-{{cssxref("&lt;dimension&gt;")}} は、`<number>` に単位が付いたものです。例えば `45deg`、`100ms`、`10px` が該当します。付けた単位の識別子は大文字小文字が区別されません。数値と単位の間には、空白やその他の文字を入れないでください。例えば、`1 cm` は無効です。
-
-CSS では、以下のものを表すために寸法を使います。
-
-- {{cssxref("&lt;length&gt;")}} (距離の単位)
-- {{cssxref("&lt;angle&gt;")}}
-- {{cssxref("&lt;time&gt;")}}
-- {{cssxref("&lt;frequency&gt;")}}
-- {{cssxref("&lt;resolution&gt;")}}
-
-以下の節で、これらについて説明します。
-
-#### 長さの単位
-
-長さ (距離) の単位がプロパティの値として使用できるとき、これを {{cssxref("&lt;length&gt;")}} 型と呼びます。CSS の長さには、相対的な長さと絶対的な長さの 2 種類があります。
-
-相対的な長さの単位は、他のものを基準に長さを表します。例えば、`em` はその要素のフォントの大きさを基準とする値で、`vh` はビューポートの高さを基準とする値です。
-
-| 単位   | 基準                                                                                                                            |
-| ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `em`   | その要素のフォントの大きさ                                                                                                              |
-| `ex`   | その要素のフォントの x-height                                                                                                        |
-| `cap`  | その要素のフォントの Cap height (大文字の名目上の高さ)                                                              |
-| `ch`   | その要素のフォントにおける narrow グリフの平均文字送り幅で、“0” (ZERO, U+0030) のグリフを表す                     |
-| `ic`   | その要素のフォントにおける full width グリフの平均文字送り幅で、“水” (CJK water ideograph, U+6C34) のグリフを表す |
-| `rem`  | ルート要素のフォントの大きさ                                                                                                         |
-| `lh`   | その要素の行の高さ                                                                                                            |
-| `rlh`  | ルート要素の行の高さ                                                                                                       |
-| `vw`   | ビューポートの幅の 1%                                                                                                                |
-| `vh`   | ビューポートの高さの 1%                                                                                                               |
-| `vi`   | ルート要素のインライン軸におけるビューポートの大きさの 1%。                                                                               |
-| `vb`   | ルート要素のブロック軸におけるビューポートの大きさの 1%。                                                                                |
-| `vmin` | ビューポートの小さい側の 1%。                                                                                                    |
-| `vmax` | ビューポートの大きい側の 1%。                                                                                                     |
-
-絶対的な長さの単位は物理的な長さであり、インチやセンチメートルなどと決まっています。そのため、これらの単位の多くは、印刷などの固定サイズの媒体への出力に向いています。たとえば、 `mm` は物理的なミリメートルで、センチメートルの 1/10 です。
-
-| 単位 | 名称             | 換算                |
-| ---- | ---------------- | ------------------- |
-| `cm` | センチメートル   | 1cm = 96px/2.54     |
-| `mm` | ミリメートル     | 1mm = 1/10th of 1cm |
-| `Q`  | 1/4 ミリメートル | 1Q = 1/40th of 1cm  |
-| `in` | インチ           | 1in = 2.54cm = 96px |
-| `pc` | パイカ           | 1pc = 1/6th of 1in  |
-| `pt` | ポイント         | 1pt = 1/72th of 1in |
-| `px` | ピクセル         | 1px = 1/96th of 1in |
-
-長さの値を使用する場合、その長さが `0` なら単位をつける必要はありません。そうでないときには、単位は必須で、大文字小文字は区別せず、値の数値部分の直後に空白をはさむことなく付けなければなりません。
-
-#### 角度の単位
-
-角度の値は {{cssxref("&lt;angle&gt;")}} 型で表され、以下の値を受け付けます。
-
-| 単位   | 名称         | 説明                              |
-| ------ | ------------ | --------------------------------- |
-| `deg`  | 度           | 完全な円は 360 度です。           |
-| `grad` | グラディアン | 完全な円は 400 グラディアンです。 |
-| `rad`  | ラジアン     | 完全な円は 2π ラジアンです。     |
-| `turn` | 周           | 完全な円は 1 周です。             |
-
-#### 時間の単位
-
-時間の値は {{cssxref("&lt;time&gt;")}} 型で表されます。時間の値を含めるときは、単位 -- the `s` か `ms` -- の指定が必要です。以下の値を受け付けます。
-
-| 単位 | 名称   | 説明                     |
-| ---- | ------ | ------------------------ |
-| `s`  | 秒     |                          |
-| `ms` | ミリ秒 | 1000 ミリ秒で 1 秒です。 |
-
-#### 周期の単位
-
-周期の値は {{cssxref("&lt;frequency&gt;")}} 型で表されます。以下の値を受け付けます。
-
-| 単位  | 名称       | 説明                             |
-| ----- | ---------- | -------------------------------- |
-| `Hz`  | ヘルツ     | 1 秒間に発生する回数を表します。 |
-| `kHz` | キロヘルツ | 1 キロヘルツは 1000 ヘルツです。 |
-
-`1Hz` は `1hz` や `1HZ` とも表記でき、一秒あたり一周となります。
-
-#### 解像度の単位
-
-解像度の単位は {{cssxref("&lt;resolution&gt;")}} 型で表されます。これらは、CSS のインチ、センチメートル、ピクセルに収まるドット数を示すことで、画面などの視覚表現におけるドット 1 つの大きさを表します。以下の値を受け付けます。
-
-| 単位        | 説明                             |
-| ----------- | -------------------------------- |
-| `dpi`       | インチ当たりのドット数。         |
-| `dpcm`      | センチメートル当たりのドット数。 |
-| `dppx`, `x` | ピクセル単位のドット数。         |
-
-### パーセント
-
-{{cssxref("&lt;percentage&gt;")}} は他の値の割合を表す型です。
-
-パーセント値は、常に長さなどの他の量に対する相対的な値です。パーセントにできるプロパティごとに、パーセントが参照する量も定義されています。この量は、同じ要素の別のプロパティの値であったり、祖先要素のプロパティの値であったり、包含ブロックの測定値であったり、何か他のものであったりします。
-
-例えば、ボックスの {{cssxref("width")}} をパーセントで指定した場合、ボックスの親要素で計算された幅を参照するパーセントになります。
-
-```css
-.box {
-  width: 50%;
-}
-```
-
-### パーセントと寸法の混合
-
-一部のプロパティでは、2 つの型のいずれかの寸法を受け入れることがあります。`<length>` **または** `<percentage>` といった具合です。この場合の許容値は、{{cssxref("&lt;length-percentage&gt;")}} のように組合わせ単位として仕様書で詳解しています。他に取りうる組み合わせは以下の通りです。
-
-- {{cssxref("&lt;frequency-percentage&gt;")}}
-- {{cssxref("&lt;angle-percentage&gt;")}}
-- {{cssxref("&lt;time-percentage&gt;")}}
-
-### 特殊データ型 (他の仕様書で定義)
-
-- {{cssxref("&lt;color&gt;")}}
-- {{cssxref("&lt;image&gt;")}}
-- {{cssxref("&lt;position&gt;")}}
-
-#### 色
-
-{{cssxref("&lt;color&gt;")}} の値は要素機能 (背景色など) の色を指定します。これは [CSS 色モジュール](https://drafts.csswg.org/css-color-3/)で定義されています。
-
-#### 画像
-
-{{cssxref("&lt;image&gt;")}} の値は、CSS で使用できる各種すべての画像を指定します。これは [CSS 画像の値と置換要素モジュール](https://www.w3.org/TR/css-images-4/)で定義されています。
-
-#### 位置
-
-{{cssxref("&lt;position&gt;")}} 型は位置取りできる領域内におけるオブジェクトの 2D 位置を定義します。例えば、コンテナ要素内の背景画像がこれにあたります。この型は {{cssxref("background-position")}} として解釈されるために、[CSS の背景と境界の仕様書](https://www.w3.org/TR/css-backgrounds-3/) で定義されています。
-
-### 関数記法
-
-- {{cssxref("calc()", "calc()")}}
-- {{cssxref("min()", "min()")}}
-- {{cssxref("max()", "max()")}}
-- {{cssxref("clamp()", "clamp()")}}
-- {{cssxref("toggle", "toggle()")}}
-- {{cssxref("attr()", "attr()")}}
-
-[関数記法](/ja/docs/Web/CSS/CSS_Functions)は、 CSS でより複雑な型を表現したり、特殊な処理を呼び出すことができる値の型です。この構文は、関数名の直後に左括弧 `(` 、関数記法の引数、右括弧 `)` と続きます。関数は複数の引数を取ることができ、CSS のプロパティ値と同様の書式になります。
-
-括弧内のホワイトスペースは許容されますが、任意です。(ただし、`min()`、`max()`、`clamp()` 関数については、各ページ内の空白に関する注意事項を参照してください。)
-
-`rgba()` のように、古い関数記法の中にはカンマを使用するものもあります。しかし、カンマは一般的にリスト内の項目を区切るためにのみ使用されます。引数の区切りにカンマを使用するとき、カンマの前後に空白を入れるかどうかは任意です。
+CSS 宣言はすべて、プロパティと値のペアから成っています。値には、単一のキーワード、整数、関数、異なる型の組み合わせなど、プロパティに応じてさまざまなデータ型を含めることがあります。また、値には単位を持つものもあれば、持たないものもあります。すべてのプロパティは、CSS 全体で有効な値も受け入れます。CSS 値と単位モジュールでは、CSS プロパティが受け入れる値と単位というデータの型を定義しています。このモジュールでは、CSS プロパティと関数に対して有効な値の設定するには、CSS 値定義構文、つまり形式文法を定義します。
+
+## リファレンス
+
+### プロパティ
+
+- {{cssxref("interpolate-size")}}
+
+### 関数
+
+- {{cssxref("abs()")}}
+- {{cssxref("acos()")}}
+- {{cssxref("asin()")}}
+- {{cssxref("atan()")}}
+- {{cssxref("atan2()")}}
+- {{cssxref("attr()")}}
+- {{cssxref("calc()")}}
+- {{cssxref("calc-size()")}}
+- {{cssxref("clamp()")}}
+- {{cssxref("cos()")}}
+- {{cssxref("exp()")}}
+- {{cssxref("hypot()")}}
+- {{cssxref("ident()")}}
+- {{cssxref("inherit()")}}
+- {{cssxref("log()")}}
+- {{cssxref("max()")}}
+- {{cssxref("min()")}}
+- {{cssxref("mod()")}}
+- {{cssxref("pow()")}}
+- {{cssxref("rem()")}}
+- {{cssxref("round()")}}
+- {{cssxref("sign()")}}
+- {{cssxref("sin()")}}
+- {{cssxref("sqrt()")}}
+- {{cssxref("tan()")}}
+- {{cssxref("url_value")}}
+
+それ以外にも、 `calc-mix()`, `crossorigin()`, `first-valid()`, `if()`, `integrity()`, `progress()`, `random()`, `random-item()`, `referrerpolicy()`, `sibling-count()`, `sibling-index()`, `src()`, `type()`, `toggle()` などの巻子が仕様書では定義されていますが、まだブラウザーでは実装されていません。
+
+### データ型
+
+- [`<angle-percentage>`](/ja/docs/Web/CSS/angle-percentage)
+- [`<angle>`](/ja/docs/Web/CSS/angle)
+- [`<animation-timeline>`](/ja/docs/Web/CSS/animation-timeline)
+- [`<attr-name>`](/ja/docs/Web/CSS/attr#attr-name)
+- [`<attr-type>`](/ja/docs/Web/CSS/attr#attr-type)
+- [`<attr-unit>`](/ja/docs/Web/CSS/attr#attr-unit)
+- {{CSSxRef("&lt;calc-keyword&gt;")}} (`e`, `pi`, `infinity`, {{glossary("NaN")}})
+- [`<calc-size-basis>`](/ja/docs/Web/CSS/calc-size#calc-size-basis)
+- [`<calc-sum>`](/ja/docs/Web/CSS/calc-sum)
+- [`<custom-ident>`](/ja/docs/Web/CSS/custom-ident)
+- [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident)
+- [`<dimension>`](/ja/docs/Web/CSS/dimension)
+- [`<easing-function>`](/ja/docs/Web/CSS/easing-function)
+- [`<first-valid()>`](/ja/docs/Web/CSS)
+- [`<frequency>`](/ja/docs/Web/CSS/frequency)
+- [`<frequency-percentage>`](/ja/docs/Web/CSS/frequency-percentage)
+- [`<ident>`](/ja/docs/Web/CSS/ident)
+- [`<integer>`](/ja/docs/Web/CSS/integer)
+- [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage)
+- [`<length>`](/ja/docs/Web/CSS/length)
+- [`<number>`](/ja/docs/Web/CSS/number)
+- [`<percentage>`](/ja/docs/Web/CSS/percentage)
+- [`<position>`](/ja/docs/Web/CSS/position)
+- [`<ratio>`](/ja/docs/Web/CSS/ratio)
+- [`<resolution>`](/ja/docs/Web/CSS/resolution)
+- [`<rounding-strategy>`](/ja/docs/Web/CSS/round#rounding-strategy) (`down`, `up`, `to-zero`)
+- [`<string>`](/ja/docs/Web/CSS/string)
+- [`<syntax>`](/ja/docs/Web/CSS/CSS_syntax/Syntax)
+- [`<time-percentage>`](/ja/docs/Web/CSS/time-percentage)
+- [`<time>`](/ja/docs/Web/CSS/time)
+- [`<url>`](/ja/docs/Web/CSS/url_value)
+- [`<url-modifier>`](/ja/docs/Web/CSS/url_function#url-modifier)
+- [`<view-timeline-name>`](/ja/docs/Web/CSS/view-timeline-name)
+
+#### 単位
+
+- [`%` （パーセント値）](/ja/docs/Web/CSS/length#cap)
+- [`cap`](/ja/docs/Web/CSS/length#cap)
+- [`ch`](/ja/docs/Web/CSS/length#ch)
+- [`cm`](/ja/docs/Web/CSS/length#cm)
+- [`deg`](/ja/docs/Web/CSS/length#deg)
+- [`dpcm`](/ja/docs/Web/CSS/length#dpcm)
+- [`dpi`](/ja/docs/Web/CSS/length#dpi)
+- [`dppx`](/ja/docs/Web/CSS/length#dppx)
+- [`dvb`](/ja/docs/Web/CSS/length#dvb)
+- [`dvh`](/ja/docs/Web/CSS/length#dvh)
+- [`dvi`](/ja/docs/Web/CSS/length#dvi)
+- [`dvmax`](/ja/docs/Web/CSS/length#dvmax)
+- [`dvmin`](/ja/docs/Web/CSS/length#dvmin)
+- [`dvw`](/ja/docs/Web/CSS/length#dvw)
+- [`em`](/ja/docs/Web/CSS/length#em)
+- [`ex`](/ja/docs/Web/CSS/length#ex)
+- [`grad`](/ja/docs/Web/CSS/length#grad)
+- [`Hz`](/ja/docs/Web/CSS/length#hz)
+- [`ic`](/ja/docs/Web/CSS/length#ic)
+- [`in`](/ja/docs/Web/CSS/length#in)
+- [`kHz`](/ja/docs/Web/CSS/length#khz)
+- [`left`](/ja/docs/Web/CSS/length#left)
+- [`lh`](/ja/docs/Web/CSS/length#lh)
+- [`lvb`](/ja/docs/Web/CSS/length#lvb)
+- [`lvh`](/ja/docs/Web/CSS/length#lvh)
+- [`lvi`](/ja/docs/Web/CSS/length#lvi)
+- [`lvmax`](/ja/docs/Web/CSS/length#lvmax)
+- [`lvmin`](/ja/docs/Web/CSS/length#lvmin)
+- [`lvw`](/ja/docs/Web/CSS/length#lvw)
+- [`mm`](/ja/docs/Web/CSS/length#mm)
+- [`ms`](/ja/docs/Web/CSS/length#ms)
+- [`pc`](/ja/docs/Web/CSS/length#pc)
+- [`pi`](/ja/docs/Web/CSS/length#pi)
+- [`pt`](/ja/docs/Web/CSS/length#pt)
+- [`px`](/ja/docs/Web/CSS/length#px)
+- [`Q`](/ja/docs/Web/CSS/length#q)
+- [`rad`](/ja/docs/Web/CSS/length#rad)
+- [`rcap`](/ja/docs/Web/CSS/length#rcap)
+- [`rch`](/ja/docs/Web/CSS/length#rch)
+- [`rem`](/ja/docs/Web/CSS/length#rem)
+- [`rex`](/ja/docs/Web/CSS/length#rex)
+- [`ric`](/ja/docs/Web/CSS/length#ric)
+- [`rlh`](/ja/docs/Web/CSS/length#rlh)
+- [`s`](/ja/docs/Web/CSS/length#s)
+- [`size`](/ja/docs/Web/CSS/length#size)
+- [`svb`](/ja/docs/Web/CSS/length#svb)
+- [`svh`](/ja/docs/Web/CSS/length#svh)
+- [`svi`](/ja/docs/Web/CSS/length#svi)
+- [`svmax`](/ja/docs/Web/CSS/length#svmax)
+- [`svmin`](/ja/docs/Web/CSS/length#svmin)
+- [`svw`](/ja/docs/Web/CSS/length#svw)
+- [`turn`](/ja/docs/Web/CSS/length#turn)
+- [`up`](/ja/docs/Web/CSS/length#up)
+- [`vb`](/ja/docs/Web/CSS/length#vb)
+- [`vh`](/ja/docs/Web/CSS/length#vh)
+- [`vi`](/ja/docs/Web/CSS/length#vi)
+- [`vmax`](/ja/docs/Web/CSS/length#vmax)
+- [`vmin`](/ja/docs/Web/CSS/length#vmin)
+- [`vw`](/ja/docs/Web/CSS/length#vw)
+- [`x`](/ja/docs/Web/CSS/length#x)
+
+[フレックス単位](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#フレックス単位) (`fr`) および[コンテナー単位](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#コンテナー単位) (`cqb`,`cqh`,`cqi`,`cqmax`,`cqmin`,`cqw`)が、それぞれ [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)および [CSS 条件付きルール](/ja/docs/Web/CSS/CSS_conditional_rules)モジュールで定義されています。
+
+#### 単位の分類
+
+- [絶対的な長さの単位](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#絶対的な長さの単位) (`cm`, `in`, `mm`, `pc`, `pt`, `px`, `Q`)
+- [角度の単位](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#角度の単位) (`deg`, `grad`, `rad`, `turn`)
+- [既定ビューポート単位](/ja/docs/Web/CSS/length#既定ビューポートサイズ) (`vb` , `vh`, `vi` , `vmax`, `vmin`, `vw`)
+- [動的ビューポート単位](/ja/docs/Web/CSS/length#動的ビューポートサイズ) (`dvb`, `dvh`, `dvi`, `dvmax`, `dvmin`, `dvw`)
+- [周期の単位](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#周期の単位) (`Hz`, `kHz`)
+- [大ビューポート単位](/ja/docs/Web/CSS/length#大ビューポートサイズ) (`lvb`, `lvh`, `lvi`, `lvmax`, `lvmin`, `lvw`)
+- [ローカルフォント相対長](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#ローカルフォント相対長) (`cap`, `ch` ,`em`, `ex`, `ic`, `lh`)
+- [物理的な単位](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#絶対的な長さの単位) (`cm`, `in`, `mm`, `pc`, `pt`, `Q`)
+- [相対的な長さの単位](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) (`cap`, `ch`, `em`, `ex`, `ic`, `lh`, `rem`, `rlh`, `vb`, `vh`, `vi`, `vmax`, `vmin`, `vw`)
+- [解像度の単位](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#解像度の単位) (`dpcm`, `dpi` , `dppx`, `x`)
+- [ルートフォント相対長](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#ルートフォント相対長) (`rcap` ,`rch`, `rem`, `rex`, `ric`, `rlh`)
+- [小ビューポート単位](/ja/docs/Web/CSS/length#小ビューポートサイズ) (`svb`, `svh`, `svi`, `svmax`, `svmin`, `svw`)
+- [時間の単位](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#時間の単位) (`ms`, `s`)
+- [ビューポート単位](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#ビューポート単位) (`dvh`, `dvw`, `lvh`, `lvw`, `svh`, `svw`, `vb` , `vh`, `vi` , `vmax`, `vmin`, `vw`)
+- [視覚角度単位](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#絶対的な長さの単位) (`px`)
+
+### 主要概念
+
+- {{glossary("Advance measure", "送り幅")}}
+- [範囲の角括弧記法](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#範囲の角括弧記法_minmax)
+- [成分値の組み合わせ](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#成分値の組み合わせ)
+- [CSS 全体のキーワード](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css_全体のキーワード)
+- {{glossary("Device pixel", "デバイスピクセル")}}
+- [関数記法](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- {{glossary("Identifier", "識別子")}}
+- {{glossary("Interpolation", "補間")}}
+- {{glossary("Keyword", "キーワード")}}
+- [数学関数](/ja/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)
+- [数値データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
+- {{glossary("Origin", "オリジン")}}
+- {{glossary("Pixel", "ピクセル")}}
+- [テキストデータ型](/ja/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
+- {{glossary("URL")}}
+- [値定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+
+## ガイド
+
+- [CSS データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
+
+  - : CSS プロパティおよび関数によって受け入れられる典型的な値を定義する CSS データ型についての紹介です。
+
+- [数値データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
+
+  - : 数値データ型の概要で、整数、数値、パーセント値、寸法、相対寸法および絶対寸法、角度、時刻などの単位など。
+
+- [テキストデータ型](/ja/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
+
+  - : テキストデータ型（定義済みのキーワード値、グローバル CSS キーワード値、 URL など）の概要。
+
+- [CSS 値関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+
+  - : CSS プロパティの CSS 値を返すために、特別なデータ処理や計算を呼び出す CSS 文の概要。
+
+- [CSS 数学関数の使用](/ja/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)
+
+  - : プロパティ値を数式で書くことができる CSS の数学関数。
+
+- [値定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+
+  - : CSS プロパティおよび関数の有効な値の設定するには、使用されている形式文法。
+
+- [学習: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+
+  - : 最も頻繁に使用される値の型を見ていき、それらが何なのか、また、これがどのように動作するのかを見ていきます。
+
+## 関連事項
+
+- [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)モジュール
+
+  - {{cssxref("initial")}}
+  - {{cssxref("inherit")}}
+  - {{cssxref("revert")}}
+  - {{cssxref("revert-layer")}}
+  - {{cssxref("unset")}}
+  - {{cssxref("all")}}
+
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)モジュール
+
+  - {{cssxref("&lt;flex&gt;")}}
+  - [フレックス単位](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#フレックス単位) (`fr`)
+
+- [CSS 条件付きルール](/ja/docs/Web/CSS/CSS_conditional_rules)モジュール
+
+  - [コンテナー単位](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#コンテナー単位) (`cqb`,`cqh`,`cqi`,`cqmax`,`cqmin`,`cqw`)
+
+- [CSS 色](/ja/docs/Web/CSS/CSS_colors)モジュール
+
+  - {{cssxref("&lt;color&gt;")}}
+  - {{cssxref("system-color")}}
+  - [`color-mix()`](/ja/docs/Web/CSS/color_value/color-mix)
+
+- [CSS 画像](/ja/docs/Web/CSS/CSS_images)モジュール
+
+  - {{cssxref("&lt;image&gt;")}}
+  - {{cssxref("&lt;gradient&gt;")}}
 
 ## 仕様書
 
 {{Specifications}}
 
+## 関連情報
+
+- [CSS 構文](/ja/docs/Web/CSS/CSS_syntax)モジュール
+- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール

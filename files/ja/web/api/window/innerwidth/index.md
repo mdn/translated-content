@@ -1,6 +1,9 @@
 ---
-title: Window.innerWidth
+title: "Window: innerWidth プロパティ"
+short-title: innerWidth
 slug: Web/API/Window/innerWidth
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}}
@@ -9,13 +12,7 @@ slug: Web/API/Window/innerWidth
 
 もっと詳細に言えば、`innerWidth` の値はウィンドウの{{Glossary("layout viewport", "レイアウトビューポート")}}の幅から取られます。ウィンドウの内部の高さは {{domxref("Window.innerHeight", "innerHeight")}} プロパティを使用して取ることができます。
 
-## 構文
-
-```
-let intViewportWidth = window.innerWidth;
-```
-
-### 値
+## 値
 
 整数値で、ウィンドウのレイアウトビューポートの幅をピクセル単位で示します。このプロパティは読み取り専用で、既定値はありません。
 
@@ -31,27 +28,59 @@ let intViewportWidth = window.innerWidth;
 
 ```js
 // これはビューポートの幅を返す
-var intFrameWidth = window.innerWidth;
+console.log(window.innerWidth);
 
 // これはフレームセット内のフレームビューポートの幅を返す
-var intFrameWidth = self.innerWidth;
+console.log(self.innerWidth);
 
 // これは直近のフレームセットのビューポートの幅を返す
-var intFramesetWidth = parent.innerWidth;
+console.log(parent.innerWidth);
 
 // これはもっとも外側のフレームセットのビューポートの幅を返す
-var intOuterFramesetWidth = top.innerWidth;
+console.log(top.innerWidth);
 ```
+
+## デモ
+
+### HTML
+
+```html
+<p>
+  <code>resize</code>
+  イベントを発行させるためにブラウザーのウィンドウの大きさを変えてください。
+</p>
+<p>ウィンドウの幅: <span id="width"></span></p>
+<p>ウィンドウの高さ: <span id="height"></span></p>
+```
+
+### JavaScript
+
+```js
+const heightOutput = document.querySelector("#height");
+const widthOutput = document.querySelector("#width");
+
+function updateSize() {
+  heightOutput.textContent = window.innerHeight;
+  widthOutput.textContent = window.innerWidth;
+}
+
+updateSize();
+window.addEventListener("resize", updateSize);
+```
+
+### 結果
+
+{{EmbedLiveSample('Demo')}}
+
+{{LiveSampleLink('Demo', '別なページでこのデモコードの結果を見る')}}ことができます。
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('CSSOM View', '#dom-window-innerwidth', 'window.innerWidth')}} | {{Spec2('CSSOM View')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.innerWidth")}}
+{{Compat}}
 
 ## 関連情報
 

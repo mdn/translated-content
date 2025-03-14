@@ -9,7 +9,7 @@ slug: Web/API/Document_Object_Model
 
 雖然常常使用 JavaScript 來存取 DOM，但它本身並不是 JavaScript 語言的一部分，而且它也可以被其他語言存取（雖然不太常見就是了）。
 
-這裡有一篇 DOM 的[介紹](/zh-TW/docs/DOM/DOM_Reference/Introduction)可供查閱。
+這裡有一篇 DOM 的[介紹](/zh-TW/docs/Web/API/Document_Object_Model/Introduction)可供查閱。
 
 ## DOM 介面
 
@@ -108,7 +108,6 @@ slug: Web/API/Document_Object_Model
 - {{domxref("HTMLIFrameElement")}}
 - {{domxref("HTMLImageElement")}}
 - {{domxref("HTMLInputElement")}}
-- {{domxref("HTMLKeygenElement")}}
 - {{domxref("HTMLLabelElement")}}
 - {{domxref("HTMLLegendElement")}}
 - {{domxref("HTMLLIElement")}}
@@ -169,7 +168,6 @@ slug: Web/API/Document_Object_Model
 
 ### 棄用的 HTML 介面
 
-- {{domxref("HTMLBaseFontElement")}}
 - {{domxref("HTMLIsIndexElement")}}
 
 ## SVG 介面
@@ -266,7 +264,8 @@ slug: Web/API/Document_Object_Model
 
 這裡是資料型態的 DOM API，在 SVG 特性和性質的定義中被使用。
 
-> **備註：** 從 {{Gecko("5.0")}} 開始，下列 SVG 相關的 DOM 介面物件的表示清單，現在可以被索引且可以像陣列般被取用；此外，他們也有 length 屬性來標示其清單中的項目個數：{{domxref("SVGLengthList")}}、{{domxref("SVGNumberList")}}、{{domxref("SVGPathSegList")}}，和 {{domxref("SVGPointList")}}。
+> [!NOTE]
+> 從 Gecko 5.0 開始，下列 SVG 相關的 DOM 介面物件的表示清單，現在可以被索引且可以像陣列般被取用；此外，他們也有 length 屬性來標示其清單中的項目個數：{{domxref("SVGLengthList")}}、{{domxref("SVGNumberList")}}、{{domxref("SVGPathSegList")}}，和 {{domxref("SVGPointList")}}。
 
 #### 靜態類型
 
@@ -332,4 +331,4 @@ slug: Web/API/Document_Object_Model
 
 ## 相關連結
 
-- [DOM 範例](/zh-TW/docs/DOM/DOM_Reference/Examples)
+- [DOM 範例](/zh-TW/docs/Web/API/Document_Object_Model/Examples)

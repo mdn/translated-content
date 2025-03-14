@@ -1,22 +1,27 @@
 ---
 title: Math.expm1()
 slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
-tags:
-  - JavaScript
-  - Matemáticas
-  - Math
-  - Method
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/expm1
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/expm1
 ---
 
 {{JSRef}}
 
 La función **`Math.expm1()`** regresa `e^x - 1`, donde `x` es el argumento, y {{jsxref("Math.E", "e", "", 1)}} la base del logaritmo natural.
 
-{{EmbedInteractiveExample("pages/js/math-expm1.html")}}El código para este ejemplo interactivo está almacenado en un repositorio de GitHub. Sí te gustaría contribuir al proyecto de ejemplos interactivos If you'd like to contribute, por favor clona <https://github.com/mdn/interactive-examples> y envíanos un pull request.
+{{InteractiveExample("JavaScript Demo: Math.expm1()")}}
+
+```js interactive-example
+console.log(Math.expm1(0));
+// Expected output: 0
+
+console.log(Math.expm1(1));
+// Expected output: 1.718281828459045
+
+console.log(Math.expm1(-1));
+// Expected output: -0.6321205588285577
+
+console.log(Math.expm1(2));
+// Expected output: 6.38905609893065
+```
 
 ## Sintaxis
 
@@ -43,8 +48,8 @@ Debido a que `expm1()` es un método estático de `Math`, uselo siempre como `Ma
 
 ```js
 Math.expm1(-1); // -0.6321205588285577
-Math.expm1(0);  // 0
-Math.expm1(1);  // 1.718281828459045
+Math.expm1(0); // 0
+Math.expm1(1); // 1.718281828459045
 ```
 
 ## Polyfill
@@ -52,20 +57,20 @@ Math.expm1(1);  // 1.718281828459045
 Esto puede ser emulado con la ayuda de la función {{jsxref("Math.exp()")}}:
 
 ```js
-Math.expm1 = Math.expm1 || function(x) {
-  return Math.exp(x) - 1;
-};
+Math.expm1 =
+  Math.expm1 ||
+  function (x) {
+    return Math.exp(x) - 1;
+  };
 ```
 
 ## Especificaciones
 
-| Especificación                                                               |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.expm1', 'Math.expm1')}} |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.expm1")}}
+{{Compat}}
 
 ## Vea también
 

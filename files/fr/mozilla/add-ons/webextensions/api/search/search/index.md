@@ -1,25 +1,15 @@
 ---
 title: search.search()
 slug: Mozilla/Add-ons/WebExtensions/API/search/search
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Recherche
-  - Reference
-  - Search
-  - SearchEngines
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/search/search
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Effectuer une recherche en utilisant le moteur de recherche spécifié, ou le moteur de recherche par défaut si aucun moteur de recherche n'est spécifié.
 
 Les résultats seront affichés dans un nouvel onglet, ou si l'argument tabId est donné, dans l'onglet identifié par ceci.
 
-Pour utiliser cette fonction dans votre extension, vous devez demander la [permission manifest](/fr/Add-ons/WebExtensions/manifest.json/permissions) "search".
+Pour utiliser cette fonction dans votre extension, vous devez demander la [permission manifest](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "search".
 
 Pour obtenir les moteurs de recherche installés, utilisez {{WebExtAPIRef("search.get()")}}.
 
@@ -27,8 +17,8 @@ Pour obtenir les moteurs de recherche installés, utilisez {{WebExtAPIRef("searc
 
 ```js
 browser.search.search(
-  searchProperties       // object
-)
+  searchProperties, // object
+);
 ```
 
 ### Paramètres
@@ -48,9 +38,9 @@ browser.search.search(
 
 Aucune
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.search.search", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -59,7 +49,7 @@ Recherche à l'aide du moteur de recherche par défaut. Les résultats seront af
 ```js
 function search() {
   browser.search.search({
-    query: "styracosaurus"
+    query: "styracosaurus",
   });
 }
 
@@ -72,7 +62,7 @@ Recherche à l'aide de Wikipédia. Les résultats seront affichés dans un nouve
 function search() {
   browser.search.search({
     query: "styracosaurus",
-    engine: "Wikipedia (en)"
+    engine: "Wikipedia (en)",
   });
 }
 
@@ -86,7 +76,7 @@ function search(tab) {
   browser.search.search({
     query: "styracosaurus",
     engine: "Wikipedia (en)",
-    tabId: tab.id
+    tabId: tab.id,
   });
 }
 

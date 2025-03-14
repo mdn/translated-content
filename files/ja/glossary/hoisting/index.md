@@ -1,85 +1,56 @@
 ---
 title: Hoisting (巻き上げ、ホイスティング)
 slug: Glossary/Hoisting
+l10n:
+  sourceCommit: 8fb5853ceee5db8ac6e1c564c6dda4b3f5ec86c5
 ---
 
-巻き上げ (Hoisting) は、[ECMAScript® 2015 言語仕様](http://www.ecma-international.org/ecma-262/6.0/index.html)より前には、どんな規範的な仕様書にもなかったものです。巻き上げは JavaScript の実行コンテキスト (特に作成と実行のフェーズで) では一般的な方法と考えられていました。しかし、巻き上げの概念は誤解に繋がる可能性があります。
+{{GlossarySidebar}}
 
-概念的には、例えば、厳密な定義では、変数や関数の宣言が物理的にコードの先頭に移動されることを示唆していますが、実際にはそうではありません。変数や関数の宣言は*コンパイル*時にメモリに格納されますが、コード内で入力された場所は変わりません。
+JavaScript の**巻き上げ** (Hoisting) は、インタープリターがコードの実行前に、関数、変数、クラス、インポートの宣言をそのスコープの先頭に移動するように見えるプロセスを指します。
 
-## 詳細情報
+「巻き上げ」は ECMAScript 仕様書で規範的に定義されている用語ではありません。仕様書では宣言のグループを [_HoistableDeclaration_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-HoistableDeclaration) として定義していますが、これは [`function`](/ja/docs/Web/JavaScript/Reference/Statements/function)、[`function*`](/ja/docs/Web/JavaScript/Reference/Statements/function*)、[`async function`](/ja/docs/Web/JavaScript/Reference/Statements/async_function)、[`async function*`](/ja/docs/Web/JavaScript/Reference/Statements/async_function*) 宣言しか含んでいません。巻き上げは、異なる形でではありますが、 [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) 宣言の機能としても多く考えられています。俗な言い方をすれば、以下のような動作はすべて巻き上げと見なされます。
 
-### 技術的な例
+1. スコープ内の宣言行よりも前で変数の値を使用すること。（「値の巻き上げ」）
+2. 変数がスコープ内の宣言行よりも前で参照しても {{jsxref("ReferenceError")}} が発生せず、値が常に [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) であること。（「宣言の巻き上げ」）
+3. 変数の宣言により、スコープ内のそれが宣言された行よりも前の動作が変化すること。
+4. 宣言の副作用として、宣言を含む残りのコードの評価が行われる前に、宣言の副作用が発生すること。
 
-JavaScript で関数宣言がコード領域を実行する前にメモリーに配置される利点は、コードで関数を定義する前に使うことができることです。例えば:
+上記の 4 つの関数宣言はタイプ 1 の動作で巻き上げが行われます。 `var` 宣言はタイプ 2 の動作で巻き上げが行われます。 [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let), [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const), [`class`](/ja/docs/Web/JavaScript/Reference/Statements/class) 宣言（まとめて字句宣言とも呼ばれる）はタイプ 3 の動作で巻き上げが行われます。 [`import`](/ja/docs/Web/JavaScript/Reference/Statements/import) 宣言はタイプ 1 とタイプ 4 の動作で巻き上げが行われます。
+
+人によっては `let`, `const`, `class` を巻き上げが行われないと見なしますが、それは[一時的デッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)で宣言前に変数を使用することを厳しく禁止しているからです。巻き上げは普遍的に同意された用語ではないので、この反論は問題ありません。しかし、一時的デッドゾーンはそのスコープで他にも観測可能な変化を発生させることがあり、これは何らかの形で巻き上げがあるといえます。
 
 ```js
-function catName(name) {
-  console.log("My cat's name is " + name);
+const x = 1;
+{
+  console.log(x); // ReferenceError
+  const x = 2;
 }
-
-catName("Tiger");
-
-/*
-上記のコードの結果: "My cat's name is Tiger"
-*/
 ```
 
-上記のコード断片はコードが動作するように書いたよう期待する方法です。今度は、関数を書く前に関数を呼び出したらどうでしょう。
+もし `const x = 2` 宣言がすべて巻き上げられなければ（実行されたときだけ有効になるように）、`console.log(x)` 文は上のスコープから `x` 値を読み取ることができるはずです。しかし、 `const` 宣言が定義されているスコープ全体をまだ「汚染」しているため、 `console.log(x)` 文はまだ初期化されていない `const x = 2` 宣言から `x` を読み込み、 {{jsxref("ReferenceError")}} を発生します。それでも、字句の宣言をnon-hoistingとして特徴付ける方が有益かもしれません。なぜなら、実用的な視点から見ると、これらの宣言の巻き上げは何の意味ももたらさないからです。
+
+なお、以下は巻き上げの形式ではありません。
 
 ```js
-catName("Chloe");
-
-function catName(name) {
-  console.log("My cat's name is " + name);
+{
+  var x = 1;
 }
-/*
-上記のコードの結果は: "My cat's name is Chloe"
-*/
+console.log(x); // 1
 ```
 
-コード内で関数を書く前に、関数呼び出しを最初に書いても、コードは動作します。これは JavaScript でコンテキスト実行が動作するためです。
+これは「宣言する前にアクセスする」のではなく、単に `var` 宣言がブロックにスコープされていないからです。
 
-巻き上げはその他のデータ型や変数でも同様に動作します。変数は定義の前に初期化して使うことができます。しかし初期化しないと使うことができません。
+巻き上げについての詳細は、次の記事を参照してください。
 
-### 定義のみが巻き上げられる
+- `var`/`let`/`const` の巻き上げ — [文法とデータ型ガイド](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#変数の巻き上げ)
+- `function` の巻き上げ — [関数ガイド](/ja/docs/Web/JavaScript/Guide/Functions#function_hoisting)
+- `class` の巻き上げ — [クラスガイド](/ja/docs/Web/JavaScript/Guide/Using_classes#クラス宣言の巻き上げ)
+- `import` の巻き上げ — [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules#import_declarations_are_hoisted)
 
-JavaScript では定義のみが巻き上げられ、初期化はそうでありません。変数が使用された後に定義や初期化された場合、値は undefined になります。例えば次のようになります。
+## 関連情報
 
-```js
-console.log(num); // undefined を返す。宣言のみが巻き上げられ、この段階では初期化が行われないため
-var num; // 宣言
-num = 6; // 初期化
-```
-
-以下の例では初期化のみが行われています。巻き上げが行われませんので、変数を読み取ろうとすると ReferenceError 例外が発生します。
-
-```js
-console.log(num); // ReferenceError 例外が発生
-num = 6; // 初期化
-```
-
-巻き上げの例をもっと示します。
-
-```js
-// 例 1
-// y のみが巻き上げられる
-
-x = 1; // x を初期化し、まだ定義されていない場合は、定義する - ただし、文中に var がないので巻き上げは行われない。
-console.log(x + " " + y); // '1 undefined'
-// JavaScript は宣言のみを巻き上げるので、 y の値の表示はこうなる。
-var y = 2; // y の宣言と初期化
-
-
-// 例 2
-// 巻き上げは行われないが、初期化は (まだ宣言されていない場合は) 宣言も行うので、変数は利用できる。
-
-a = 'Cran'; // Initialize a
-b = 'berry'; // Initialize b
-console.log(a + "" + b); // 'Cranberry'
-```
-
-### 技術リファレンス
-
-- [var 宣言](/ja/docs/Web/JavaScript/Reference/Statements/var) — MDN
-- [関数 宣言](/ja/docs/Web/JavaScript/Reference/Statements/function) — MDN
+- [`var` 文](/ja/docs/Web/JavaScript/Reference/Statements/var) — MDN
+- [`let` 文](/ja/docs/Web/JavaScript/Reference/Statements/let) — MDN
+- [`const` 文](/ja/docs/Web/JavaScript/Reference/Statements/const) — MDN
+- [`function` 文](/ja/docs/Web/JavaScript/Reference/Statements/function) — MDN

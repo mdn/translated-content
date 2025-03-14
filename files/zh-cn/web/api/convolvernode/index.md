@@ -7,7 +7,8 @@ slug: Web/API/ConvolverNode
 
 `ConvolverNode` 接口是一个对给定 {{domxref("AudioBuffer")}} 上执行线性卷积的 {{domxref("AudioNode")}}，一般用来做音频混响效果。每一个 `ConvolverNode` 都会有一个输入值和输出值。
 
-> **备注：** 更多线性卷积理论的相关信息，请参阅[Convolution article on Wikipedia](https://en.wikipedia.org/wiki/Convolution).
+> [!NOTE]
+> 更多线性卷积理论的相关信息，请参阅[Convolution article on Wikipedia](https://en.wikipedia.org/wiki/Convolution).
 
 <table class="properties">
   <tbody>
@@ -56,7 +57,8 @@ slug: Web/API/ConvolverNode
 
 下面的示例展示了 AudioContext 创建卷积节点的基础用法。
 
-> **备注：** 你需要找到一个脉冲反应来完成下面的示例。可查看[此处](https://codepen.io/DonKarlssonSan/pen/doVKRE) 的实例。
+> [!NOTE]
+> 你需要找到一个脉冲反应来完成下面的示例。可查看[此处](https://codepen.io/DonKarlssonSan/pen/doVKRE) 的实例。
 
 ```js
 let audioCtx = new window.AudioContext();
@@ -89,6 +91,6 @@ reverb.connect(audioCtx.destination);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

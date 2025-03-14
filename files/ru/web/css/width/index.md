@@ -1,27 +1,55 @@
 ---
 title: width
 slug: Web/CSS/width
-translation_of: Web/CSS/width
 ---
+
 {{CSSRef}}
 
-Свойство CSS **`width`** устанавливает ширину элемента. По умолчанию она равняется ширине [внутренней области](/ru/docs/Web/CSS/box_model#content), но если {{cssxref("box-sizing")}} имеет значение `border-box`, то она будет равняться ширине [области рамки](/ru/docs/Web/CSS/box_model#border).
+Свойство CSS **`width`** устанавливает ширину элемента. По умолчанию она равняется ширине [внутренней области](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content), но если {{cssxref("box-sizing")}} имеет значение `border-box`, то она будет равняться ширине [области рамки](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border).
 
-{{EmbedInteractiveExample("pages/css/width.html")}}
+{{InteractiveExample("CSS Demo: width")}}
+
+```css interactive-example-choice
+width: 150px;
+```
+
+```css interactive-example-choice
+width: 20em;
+```
+
+```css interactive-example-choice
+width: 75%;
+```
+
+```css interactive-example-choice
+width: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the width.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 Свойства {{cssxref("min-width")}} и {{cssxref("max-width")}} перекрывают {{cssxref("width")}}.
 
 ## Синтаксис
 
 ```css
-/* <length> значения */
-width: 300px;
-width: 25em;
-
-/* <percentage> значения */
-width: 75%;
-
-/* Значения-ключевые слова */
+/* Ключевые слова */
 width: 25em border-box;
 width: 75% content-box;
 width: max-content;
@@ -29,6 +57,13 @@ width: min-content;
 width: available;
 width: fit-content;
 width: auto;
+
+/* <length> значения */
+width: 300px;
+width: 25em;
+
+/* <percentage> значения */
+width: 75%;
 
 /* Глобальные значения */
 width: inherit;
@@ -132,8 +167,8 @@ p.goldie {
 ```css
 p.maxgreen {
   background: lightgreen;
-  width: intrinsic;           /* Safari/WebKit используют нестандартное имя */
-  width: -moz-max-content;    /* Firefox/Gecko */
+  width: intrinsic; /* Safari/WebKit используют нестандартное имя */
+  width: -moz-max-content; /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
 }
 ```
@@ -149,7 +184,7 @@ p.maxgreen {
 ```css
 p.minblue {
   background: lightblue;
-  width: -moz-min-content;    /* Firefox */
+  width: -moz-min-content; /* Firefox */
   width: -webkit-min-content; /* Chrome */
 }
 ```
@@ -160,7 +195,7 @@ p.minblue {
 
 {{EmbedLiveSample('min-content_2', '500px', '155px')}}
 
-## Проблемы доступности
+## Доступность
 
 Убедитесь, что элементы с `width` не обрезаются и / или не затеняют другое содержимое, когда страница масштабируется для увеличения размера текста.
 
@@ -171,10 +206,10 @@ p.minblue {
 
 {{Specifications}}{{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Блочная модель](/ru/docs/Web/CSS/box_model), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}
+- [Блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}

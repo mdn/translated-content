@@ -5,7 +5,7 @@ slug: Web/API/PerformancePaintTiming
 
 {{SeeCompatTable}}{{APIRef("Performance Timeline API")}}
 
-[Paint Timing API](/zh-CN/docs/Web/API/Paint_Timing_API) 提供的 **`PerformancePaintTiming`** 是一个提供页面在构建过程中的“绘制”（也称“渲染”）时间点信息的接口。“绘制”是指将渲染树转换为页面上像素的过程。
+[Paint Timing API](/zh-CN/docs/Web/API/PerformancePaintTiming) 提供的 **`PerformancePaintTiming`** 是一个提供页面在构建过程中的“绘制”（也称“渲染”）时间点信息的接口。“绘制”是指将渲染树转换为页面上像素的过程。
 
 应用可以为名为“`paint`”的{{domxref("PerformanceEntry","performance entry 类型")}} 注册一个{{domxref("PerformanceObserver")}}，然后观察者可以获取绘制相关的事件发生的时间。以此来帮你找出那些花费太多时间去绘制的区域，而后提升用户体验。
 
@@ -34,12 +34,18 @@ slug: Web/API/PerformancePaintTiming
 function showPaintTimings() {
   if (window.performance) {
     let performance = window.performance;
-    let performanceEntries = performance.getEntriesByType('paint');
-    performanceEntries.forEach( (performanceEntry, i, entries) => {
-      console.log("The time to " + performanceEntry.name + " was " + performanceEntry.startTime + " milliseconds.");
+    let performanceEntries = performance.getEntriesByType("paint");
+    performanceEntries.forEach((performanceEntry, i, entries) => {
+      console.log(
+        "The time to " +
+          performanceEntry.name +
+          " was " +
+          performanceEntry.startTime +
+          " milliseconds.",
+      );
     });
   } else {
-    console.log('Performance timing isn\'t supported.');
+    console.log("Performance timing isn't supported.");
   }
 }
 ```

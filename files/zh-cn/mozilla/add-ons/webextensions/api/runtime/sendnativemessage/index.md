@@ -3,7 +3,7 @@ title: runtime.sendNativeMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 从 WebExtension 发送单条消息到 native application。
 
@@ -19,15 +19,15 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
 
 ```js
 var sending = browser.runtime.sendNativeMessage(
-  application,             // string
-  message                  // object
-)
+  application, // string
+  message, // object
+);
 ```
 
 ### 参数
 
 - `application`
-  - : `字符串类型。`native application 的名字。它必须和 [native application's manifest file](/zh-CN/Add-ons/WebExtensions/Native_messaging#App_manifest)中的‘name’字段一致。
+  - : `字符串类型。`native application 的名字。它必须和 [native application's manifest file](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#app_manifest)中的‘name’字段一致。
 - `message`
   - : `对象类型。一个将要发送给` native application 的 JSON 对象。
 
@@ -64,9 +64,8 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **备注：** 这个 API 基于 Chromium 的 [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-sendNativeMessage) API。本文来自 Chromium 代码中的 [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) 。
->
-> 微软 Edge 的兼容性数据由 Microsoft Corporation 提供，并且包含在这里基于 Creative Commons Attribution 3.0 United States License。
+> [!NOTE]
+> 这个 API 基于 Chromium 的 [`chrome.runtime`](https://developer.chrome.google.cn/docs/extensions/reference/api/runtime#method-sendNativeMessage) API。本文来自 Chromium 代码中的 [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) 。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -7,9 +7,50 @@ slug: Web/CSS/overflow-y
 
 La propiedad [CSS](/es/docs/Web/CSS) **`overflow-y`** define qué se debe mostrar cuando el contenido se desborda de los extremos superior e inferior de un elemento en bloque.
 
-> **Nota:** Si {{cssxref("overflow-x")}} es `hidden`, `scroll` o `auto` y esta propiedad es `visible` (por defecto) se calculará implícitamente como `auto`.
+> [!NOTE]
+> Si {{cssxref("overflow-x")}} es `hidden`, `scroll` o `auto` y esta propiedad es `visible` (por defecto) se calculará implícitamente como `auto`.
 
-{{EmbedInteractiveExample("pages/css/overflow-y.html")}}
+{{InteractiveExample("CSS Demo: overflow-y")}}
+
+```css interactive-example-choice
+overflow-y: visible;
+```
+
+```css interactive-example-choice
+overflow-y: hidden;
+```
+
+```css interactive-example-choice
+overflow-y: clip;
+```
+
+```css interactive-example-choice
+overflow-y: scroll;
+```
+
+```css interactive-example-choice
+overflow-y: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p id="example-element">
+    Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln's
+    Inn Hall. Implacable November weather. As much mud in the streets as if the
+    waters had but newly retired from the face of the earth.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 15em;
+  height: 9em;
+  border: medium dotted;
+  padding: 0.75em;
+  text-align: left;
+}
+```
 
 El código para este ejemplo interactivo está almacenado en un repositorio de GitHub. Si quieres contribuir con el proyecto de ejemplos interactivos, por favor clone <https://github.com/mdn/interactive-examples> y envíanos un pull request.
 
@@ -51,27 +92,49 @@ La propiedad `overflow-y` es especificada con una sola palabra clave escogida de
 
 ```html
 <ul>
-  <li><code>overflow-y:hidden</code> — Esconde el texto fuera de la caja
-  <div id="div1">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <li>
+    <code>overflow-y:hidden</code> — Esconde el texto fuera de la caja
+    <div id="div1">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </li>
 
-  <li><code>overflow-y:scroll</code> — Agrega una barra scroll si se necesita
-  <div id="div2">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <li>
+    <code>overflow-y:scroll</code> — Agrega una barra scroll si se necesita
+    <div id="div2">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </li>
 
-  <li><code>overflow-y:visible</code> — Muestra el texto fuera de la caja si se necesita
-  <div id="div3">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <li>
+    <code>overflow-y:visible</code> — Muestra el texto fuera de la caja si se
+    necesita
+    <div id="div3">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </li>
 
-  <li><code>overflow-y:auto</code> — En la mayoría de los navegadores, equivalente a <code>scroll</code>
-  <div id="div4">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <li>
+    <code>overflow-y:auto</code> — En la mayoría de los navegadores, equivalente
+    a <code>scroll</code>
+    <div id="div4">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </li>
 </ul>
@@ -85,14 +148,26 @@ La propiedad `overflow-y` es especificada con una sola palabra clave escogida de
 #div3,
 #div4 {
   border: 1px solid black;
-  width:  250px;
+  width: 250px;
   height: 100px;
 }
 
-#div1 { overflow-y: hidden; margin-bottom: 12px;}
-#div2 { overflow-y: scroll; margin-bottom: 12px;}
-#div3 { overflow-y: visible; margin-bottom: 120px;}
-#div4 { overflow-y: auto; margin-bottom: 120px;}
+#div1 {
+  overflow-y: hidden;
+  margin-bottom: 12px;
+}
+#div2 {
+  overflow-y: scroll;
+  margin-bottom: 12px;
+}
+#div3 {
+  overflow-y: visible;
+  margin-bottom: 120px;
+}
+#div4 {
+  overflow-y: auto;
+  margin-bottom: 120px;
+}
 ```
 
 ### Resultado
@@ -105,7 +180,7 @@ La propiedad `overflow-y` es especificada con una sola palabra clave escogida de
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.overflow-y")}}
+{{Compat}}
 
 ## Ver también
 

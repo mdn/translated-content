@@ -1,20 +1,11 @@
 ---
 title: expresión class
 slug: Web/JavaScript/Reference/Operators/class
-tags:
-  - Classes
-  - ECMAScript6
-  - Expression
-  - JavaScript
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/class
-original_slug: Web/JavaScript/Referencia/Operadores/class
 ---
 
 {{jsSidebar("Operators")}}
 
-La **expresión class** es una forma de definir una clase en ECMAScript 2015 (ES6). Similar a las [funciones](/es/docs/Web/JavaScript/Referencia/Operadores/function), las expresiones de clase pueden ser nombradas o no. Si se nombran, el nombre de la clase es local sólo en el cuerpo de la clase. Las clases en JavaScript utilizan herencia basada en prototipos.
+La **expresión class** es una forma de definir una clase en ECMAScript 2015 (ES6). Similar a las [funciones](/es/docs/Web/JavaScript/Reference/Operators/function), las expresiones de clase pueden ser nombradas o no. Si se nombran, el nombre de la clase es local sólo en el cuerpo de la clase. Las clases en JavaScript utilizan herencia basada en prototipos.
 
 ## Sintaxis
 
@@ -26,12 +17,12 @@ var MyClass = class [className] [extends] {
 
 ## Descripción
 
-Una expresión de clase tiene una sintaxis similar a la [declaración de una clase](/es/docs/Web/JavaScript/Referencia/Sentencias/class). Sin embargo, con las expresiones de clases, está permitido omitir el nombre de la clase ("identificador de enlace"), cosa que no se puede hacer con las declaraciones de clases. Además, las expresiones de clases permiten redefinir/redeclarar clases y **no lanzar** ningún tipo de error como las [declaraciones de clases](/es/docs/Web/JavaScript/Referencia/Sentencias/class). La propiedad `constructor` es opcional. Y el _typeof_ de las clases generadas con esta palabra clave siempre será "function".
+Una expresión de clase tiene una sintaxis similar a la [declaración de una clase](/es/docs/Web/JavaScript/Reference/Statements/class). Sin embargo, con las expresiones de clases, está permitido omitir el nombre de la clase ("identificador de enlace"), cosa que no se puede hacer con las declaraciones de clases. Además, las expresiones de clases permiten redefinir/redeclarar clases y **no lanzar** ningún tipo de error como las [declaraciones de clases](/es/docs/Web/JavaScript/Reference/Statements/class). La propiedad `constructor` es opcional. Y el _typeof_ de las clases generadas con esta palabra clave siempre será "function".
 
-Tal y como en la declaración de clases, el cuerpo de la expresión de clase se ejecuta en [modo estricto](/es/docs/Web/JavaScript/Referencia/Modo_estricto).
+Tal y como en la declaración de clases, el cuerpo de la expresión de clase se ejecuta en [modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode).
 
 ```js
-'use strict';
+"use strict";
 var Foo = class {}; // la propiedad constructor es opcional
 var Foo = class {}; // Se permite repetir declaraciones
 
@@ -40,7 +31,7 @@ typeof class {}; // devuelve "function"
 
 Foo instanceof Object; // true
 Foo instanceof Function; // true
-class Foo {}; // Lanza TypeError, no permite volver a declararla
+class Foo {} // Lanza TypeError, no permite volver a declararla
 ```
 
 ## Ejemplo
@@ -72,7 +63,7 @@ var Foo = class NamedFoo {
   whoIsThere() {
     return NamedFoo.name;
   }
-}
+};
 var bar = new Foo();
 bar.whoIsThere(); // "NamedFoo"
 NamedFoo.name; // ReferenceError: NamedFoo no está definido
@@ -83,12 +74,12 @@ Foo.name; // "NamedFoo"
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.class")}}
+{{Compat}}
 
 ## Ver también
 
-- [expresión `function`](/es/docs/Web/JavaScript/Referencia/Operadores/function)
-- [`declaración class`](/es/docs/Web/JavaScript/Referencia/Sentencias/class)
-- [Clases](/es/docs/Web/JavaScript/Referencia/Classes)
+- [expresión `function`](/es/docs/Web/JavaScript/Reference/Operators/function)
+- [`declaración class`](/es/docs/Web/JavaScript/Reference/Statements/class)
+- [Clases](/es/docs/Web/JavaScript/Reference/Classes)

@@ -1,6 +1,6 @@
 ---
 title: Aplicando cores a elementos HTML usando CSS
-slug: Web/CSS/CSS_Colors/Applying_color
+slug: Web/CSS/CSS_colors/Applying_color
 ---
 
 {{HTMLSidebar}}
@@ -11,7 +11,7 @@ Este artigo é uma cartilha que apresenta cada uma das maneiras pelas quais as c
 
 O uso da cor é uma forma fundamental de expressão humana. As crianças experimentam a cor antes mesmo de terem a destreza manual para desenhar. Talvez seja por isso que a cor é uma das primeiras coisas que as pessoas muitas vezes querem experimentar quando aprendem a desenvolver sites. Com [CSS](/pt-BR/docs/Web/CSS), há várias maneiras de adicionar cor aos seus [elementos](/pt-BR/docs/Web/HTML/Element) [HTML](/pt-BR/docs/Web/HTML) para criar exatamente a aparência desejada.
 
-Vamos abordar a maior parte do que você precisa saber ao usar cores, incluindo uma [lista do que você pode colorir e quais propriedades CSS estão envolvidas](#things_that_can_have_color), [como você descreve as cores](#how_to_describe_a_color ), e como realmente [usar cores em folhas de estilo e em scripts](#using_color). Também veremos como [deixar o usuário escolher uma cor](#letting_the_user_pick_a_color).
+Vamos abordar a maior parte do que você precisa saber ao usar cores, incluindo uma [lista do que você pode colorir e quais propriedades CSS estão envolvidas](#things_that_can_have_color), [como você descreve as cores](#how_to_describe_a_color), e como realmente [usar cores em folhas de estilo e em scripts](#using_color). Também veremos como [deixar o usuário escolher uma cor](#letting_the_user_pick_a_color).
 
 Em seguida, encerraremos as coisas com uma breve discussão sobre como [usar cores com sabedoria](#using_color_wisely): como selecionar cores apropriadas, tendo em mente as necessidades de pessoas com diferentes capacidades visuais.
 
@@ -30,13 +30,13 @@ Sempre que um elemento é renderizado, essas propriedades são usadas para deter
 - {{cssxref("background-color")}}
   - : A cor de fundo do texto.
 - {{cssxref("text-shadow")}}
-  - : Configura um efeito de sombra aplicado ao texto. Entre as opções para os aspectos da sombra, está a cor base da sombra (que será então desfocada e mesclada com o plano de fundo, com base nos outros parâmetros). Veja {{SectionOnPage("/pt-BR/docs/Learn/CSS/Styling_text/Fundamentals", "Sombras projetadas em texto")}} para descobrir mais.
+  - : Configura um efeito de sombra aplicado ao texto. Entre as opções para os aspectos da sombra, está a cor base da sombra (que será então desfocada e mesclada com o plano de fundo, com base nos outros parâmetros). Veja [Sombras projetadas em texto](/pt-BR/docs/Learn/CSS/Styling_text/Fundamentals#sombras_projetadas_em_texto) para descobrir mais.
 - {{cssxref("text-decoration-color")}}
   - : Por padrão, as decorações de texto (como sublinhados, tachados, etc.) usam a propriedade `color` como suas cores. No entanto, você pode substituir esse comportamento e usar uma cor diferente para eles com a propriedade `text-decoration-color`.
 - {{cssxref("text-emphasis-color")}}
   - : A cor a ser usada ao desenhar símbolos de ênfase adjacentes a cada caractere no texto. Isso é usado principalmente ao desenhar texto para idiomas do Leste Asiático.
 - {{cssxref("caret-color")}}
-  - : A cor a ser usada ao desenhar o {{Glossary("caret")}} (às vezes chamado de cursor de entrada de texto) dentro do elemento. Isso só é útil em elementos que são editáveis, como {{HTMLElement("input")}} e {{HTMLElement("textarea")}} ou elementos cujo atributo HTML {{htmlattrxref("contenteditable")}} está definido.
+  - : A cor a ser usada ao desenhar o {{Glossary("caret")}} (às vezes chamado de cursor de entrada de texto) dentro do elemento. Isso só é útil em elementos que são editáveis, como {{HTMLElement("input")}} e {{HTMLElement("textarea")}} ou elementos cujo atributo HTML [`contenteditable`](/pt-BR/docs/Web/HTML/Global_attributes#contenteditable) está definido.
 
 ### Caixas
 
@@ -53,7 +53,7 @@ Cada elemento é uma caixa com algum tipo de conteúdo e tem um fundo e uma bord
 
 ### Bordas
 
-Qualquer elemento pode ter uma [borda](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) desenhada em torno dele. Uma borda de elemento básico é uma linha desenhada ao redor das bordas do conteúdo do elemento. Consulte {{SectionOnPage("/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Box_model", "Box properties")}} para saber mais sobre a relação entre elementos e suas bordas, e o artigo [Estilizando bordas usando CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) para saber mais sobre como aplicar estilos a bordas.
+Qualquer elemento pode ter uma [borda](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) desenhada em torno dele. Uma borda de elemento básico é uma linha desenhada ao redor das bordas do conteúdo do elemento. Consulte [Propriedades do Box](/pt-BR/docs/Learn/CSS/Building_blocks/The_box_model#box_properties) para saber mais sobre a relação entre elementos e suas bordas, e o artigo [Estilizando bordas usando CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) para saber mais sobre como aplicar estilos a bordas.
 
 Você pode usar a propriedade abreviada {{cssxref("border")}}, que permite configurar tudo sobre o borda de uma só vez (incluindo recursos não coloridos de bordas, como sua [largura](/pt-BR/docs/Web/CSS/border-width), [estilo](/pt-BR/docs/Web/CSS/border-style) (sólido, tracejado, etc.), e assim por diante.
 
@@ -87,7 +87,7 @@ Para uma discussão mais detalhada de cada um dos tipos de valor de cor, veja a 
 
 Um conjunto de nomes de cores padrão foi definido, permitindo que você use essas palavras-chave em vez de representações numéricas de cores se você optar por fazer isso e houver uma palavra-chave representando a cor exata que você deseja usar. As palavras-chave de cores incluem as cores primárias e secundárias padrão (como `red`, `blue` ou `orange`), tons de cinza (de `black` a `white`, incluindo cores como `darkgray` e `lightgrey`), e uma variedade de outras cores misturadas, incluindo `lightseagreen`, `cornflowerblue` e `rebeccapurple`.
 
-Veja {{SectionOnPage("/pt-BR/docs/Web/CSS/color_value", "Palavras-chave de cor", "code")}} para uma lista de todas as palavras-chave de cores disponíveis.
+Veja [Palavras-chave de cores](/pt-BR/docs/Web/CSS/color_value#palavras-chave_de-cores) para uma lista de todas as palavras-chave de cores disponíveis.
 
 ### valores RGB
 
@@ -148,7 +148,11 @@ Aqui estão algumas cores de amostra em notação HSL:
 ```css hidden
 table {
   border: 1px solid black;
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border-spacing: 0;
   border-collapse: collapse;
 }
@@ -204,7 +208,8 @@ th {
 
 {{EmbedLiveSample("HSL_functional_notation", 300, 260)}}
 
-> **Nota:** Quando você omite a unidade do matiz, assume-se que está em graus (`deg`).
+> [!NOTE]
+> Quando você omite a unidade do matiz, assume-se que está em graus (`deg`).
 
 ### Notação funcional HWB
 
@@ -283,14 +288,17 @@ Nossas duas caixas coloridas compartilham várias propriedades em comum, então,
   height: 100px;
   margin: 0;
   padding: 4px 6px;
-  font: 28px "Marker Felt", "Zapfino", cursive;
+  font:
+    28px "Marker Felt",
+    "Zapfino",
+    cursive;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 ```
 
-Resumidamente, `.box` estabelece o tamanho de cada caixa, bem como a configuração da fonte utilizada dentro dela. Também aproveitamos o [CSS Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout) para centralizar facilmente o conteúdo de cada caixa. Ativamos o modo `flex` usando {{cssxref("display", "display: flex")}} e definimos {{cssxref("justify-content")}} e {{cssxref("align-items")}} para `center`. Então podemos criar uma classe para cada umas duas caixas que definem as propriedades que diferem entre as duas.
+Resumidamente, `.box` estabelece o tamanho de cada caixa, bem como a configuração da fonte utilizada dentro dela. Também aproveitamos o [CSS Flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout) para centralizar facilmente o conteúdo de cada caixa. Ativamos o modo `flex` usando {{cssxref("display", "display: flex")}} e definimos {{cssxref("justify-content")}} e {{cssxref("align-items")}} para `center`. Então podemos criar uma classe para cada umas duas caixas que definem as propriedades que diferem entre as duas.
 
 ```css
 .boxLeft {
@@ -317,7 +325,8 @@ A classe `.boxLeft` — que, inteligentemente, é usada para estilizar a caixa �
 }
 ```
 
-> **Nota:** ao tentar mostrá-lo no Safari, ele não será exibido corretamente. Porque o Safari não suporta `text-decoration: underline wavy #88ff88`.
+> [!NOTE]
+> ao tentar mostrá-lo no Safari, ele não será exibido corretamente. Porque o Safari não suporta `text-decoration: underline wavy #88ff88`.
 
 Finalmente, a classe `.boxRight` descreve as propriedades únicas da caixa que é desenhada à direita. Ele está configurado para flutuar a caixa para a direita para que ela apareça ao lado da caixa anterior. Em seguida, as seguintes cores são estabelecidas:
 
@@ -329,7 +338,7 @@ Finalmente, a classe `.boxRight` descreve as propriedades únicas da caixa que �
 
 ## Deixando o usuário escolher uma cor
 
-Há muitas situações em que seu site pode precisar permitir que o usuário selecione uma cor. Talvez você tenha uma interface de usuário personalizável ou esteja implementando um aplicativo de desenho. Talvez você tenha texto editável e precise deixar o usuário escolher a cor do texto. Ou talvez seu aplicativo permita que o usuário atribua cores a pastas ou itens. Embora historicamente tenha sido necessário implementar seu próprio [seletor de cores](https://en.wikipedia.org/wiki/Color_picker), o HTML agora oferece suporte para navegadores fornecerem um para seu uso por meio do {{HTMLElement("input" )}}, usando `"color"` como o valor de seu atributo {{htmlattrxref("type", "input")}}.
+Há muitas situações em que seu site pode precisar permitir que o usuário selecione uma cor. Talvez você tenha uma interface de usuário personalizável ou esteja implementando um aplicativo de desenho. Talvez você tenha texto editável e precise deixar o usuário escolher a cor do texto. Ou talvez seu aplicativo permita que o usuário atribua cores a pastas ou itens. Embora historicamente tenha sido necessário implementar seu próprio [seletor de cores](https://en.wikipedia.org/wiki/Color_picker), o HTML agora oferece suporte para navegadores fornecerem um para seu uso por meio do {{HTMLElement("input" )}}, usando `"color"` como o valor de seu atributo [`type`](/pt-BR/docs/Web/HTML/Element/input#type).
 
 O elemento `<input>` representa uma cor apenas na [notação de string hexadecimal](#hexadecimal_string_notation) abordada acima.
 
@@ -339,7 +348,8 @@ Vejamos um exemplo simples, no qual o usuário pode escolher uma cor. Conforme o
 
 {{EmbedLiveSample("Example_Picking_a_color", 525, 275)}}
 
-> **Nota:** no macOS, você indica que finalizou a seleção da cor fechando a janela do seletor de cores.
+> [!NOTE]
+> no macOS, você indica que finalizou a seleção da cor fechando a janela do seletor de cores.
 
 #### HTML
 
@@ -363,7 +373,11 @@ O CSS estabelece um tamanho para a caixa e alguns estilos básicos para as apar�
   height: 200px;
   border: 2px solid rgb(245, 220, 225);
   padding: 4px 6px;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", "sans-serif";
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    "sans-serif";
 }
 ```
 
@@ -378,13 +392,21 @@ const output = document.getElementById("output");
 
 box.style.borderColor = colorPicker.value;
 
-colorPicker.addEventListener("input", (event) => {
-  box.style.borderColor = event.target.value;
-}, false);
+colorPicker.addEventListener(
+  "input",
+  (event) => {
+    box.style.borderColor = event.target.value;
+  },
+  false,
+);
 
-colorPicker.addEventListener("change", (event) => {
-  output.innerText = `Cor definida como ${colorPicker.value}.`;
-}, false);
+colorPicker.addEventListener(
+  "change",
+  (event) => {
+    output.innerText = `Cor definida como ${colorPicker.value}.`;
+  },
+  false,
+);
 ```
 
 O evento {{domxref("HTMLElement/input_event", "input")}} é enviado toda vez que o valor do elemento muda; ou seja, toda vez que o usuário ajusta a cor no seletor de cores. Cada vez que esse evento chega, definimos a cor da borda da caixa para corresponder ao valor atual do seletor de cores.
@@ -409,7 +431,8 @@ O primeiro passo é escolher sua **cor base**. Esta é a cor que de alguma forma
 
 Ao tentar decidir sobre uma cor base, você pode descobrir que as extensões do navegador que permitem selecionar cores do conteúdo da Web podem ser particularmente úteis. Alguns deles são projetados especificamente para ajudar nesse tipo de trabalho. Por exemplo, o site [ColorZilla](https://www.colorzilla.com/) oferece uma extensão ([Chrome](https://www.colorzilla.com/chrome/) / [Firefox](https:// www.colorzilla.com/firefox/)) que oferece uma ferramenta conta-gotas para escolher cores da web. Também pode obter médias das cores dos pixels em áreas de vários tamanhos ou até mesmo em uma área selecionada da página.
 
-> **Nota:** A vantagem da média de cores pode ser que, muitas vezes, o que parece uma cor sólida é, na verdade, um número surpreendentemente variado de cores relacionadas, todas usadas em conjunto, misturando-se para criar o efeito desejado. Escolher apenas um desses pixels pode resultar na obtenção de uma cor que, por si só, parece muito fora do lugar.
+> [!NOTE]
+> A vantagem da média de cores pode ser que, muitas vezes, o que parece uma cor sólida é, na verdade, um número surpreendentemente variado de cores relacionadas, todas usadas em conjunto, misturando-se para criar o efeito desejado. Escolher apenas um desses pixels pode resultar na obtenção de uma cor que, por si só, parece muito fora do lugar.
 
 #### Confeccionando a paleta
 
@@ -417,13 +440,14 @@ Depois de decidir a cor base, existem muitas ferramentas on-line que podem ajud�
 
 Alguns exemplos (todos gratuitos para uso a partir do momento em que esta lista foi revisada pela última vez):
 
-- [Ferramenta seletora de cores do MDN](/pt-BR/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [Ferramenta seletora de cores do MDN](/pt-BR/docs/Web/CSS/CSS_colors/Color_picker_tool)
 - [Paletton](https://paletton.com/)
 - [Roda de cores on-line do Adobe Color CC](https://color.adobe.com/create/color-wheel)
 
 Ao projetar sua paleta, lembre-se de que, além das cores que essas ferramentas normalmente geram, você provavelmente também precisará adicionar algumas cores neutras centrais, como branco (ou quase branco), preto (ou quase preto), e algum número de tons de cinza.
 
-> **Nota:** Normalmente, é muito melhor usar o menor número de cores possível. Ao usar cores para acentuar em vez de adicionar cores a tudo na página, você mantém seu conteúdo fácil de ler e as cores que você usa têm muito mais impacto.
+> [!NOTE]
+> Normalmente, é muito melhor usar o menor número de cores possível. Ao usar cores para acentuar em vez de adicionar cores a tudo na página, você mantém seu conteúdo fácil de ler e as cores que você usa têm muito mais impacto.
 
 ### Recursos da teoria das cores
 
@@ -440,7 +464,8 @@ Existem várias maneiras pelas quais a cor pode ser um problema {{Glossary("acce
 
 Você deve fazer pelo menos uma pesquisa básica sobre [daltonismo](https://en.wikipedia.org/wiki/Color_blindness). Existem vários tipos; o mais comum é o daltonismo vermelho-verde, que faz com que as pessoas não consigam diferenciar entre as cores vermelho e verde. Existem outras, também, que vão desde a incapacidade de distinguir certas cores até a total incapacidade de ver as cores.
 
-> **Nota:** A regra mais importante: nunca use a cor como a única maneira de saber algo. Se, por exemplo, você indicar sucesso ou falha de uma operação alterando a cor de uma forma de branco para verde para sucesso e vermelho para falha, os usuários com daltonismo vermelho-verde não poderão usar seu site corretamente. Em vez disso, talvez use texto e cor juntos, para que todos possam entender o que está acontecendo.
+> [!NOTE]
+> A regra mais importante: nunca use a cor como a única maneira de saber algo. Se, por exemplo, você indicar sucesso ou falha de uma operação alterando a cor de uma forma de branco para verde para sucesso e vermelho para falha, os usuários com daltonismo vermelho-verde não poderão usar seu site corretamente. Em vez disso, talvez use texto e cor juntos, para que todos possam entender o que está acontecendo.
 
 Para obter mais informações sobre daltonismo, consulte os seguintes artigos:
 
@@ -491,11 +516,12 @@ O valor padrão de `print-color-adjust`, `economy`, indica que o navegador tem p
 Você pode definir `print-color-adjust` como `exact` para informar ao navegador que o elemento ou elementos nos quais você o usa foram projetados especificamente para funcionar melhor com as cores e imagens deixadas como estão.
 Com este conjunto, o navegador não alterará a aparência do elemento e o desenhará conforme indicado pelo seu CSS.
 
-> **Nota:** Não há garantia, porém, de que `print-color-adjust: exact` resultará em seu CSS sendo usado exatamente como fornecido.
+> [!NOTE]
+> Não há garantia, porém, de que `print-color-adjust: exact` resultará em seu CSS sendo usado exatamente como fornecido.
 > Se o navegador fornecer as preferências do usuário para alterar a saída (como uma caixa de seleção "não imprimir fundos" em uma caixa de diálogo de impressão), isso substituirá o valor de `print-color-adjust`.
 
 ## Veja também
 
 - [Desenhando gráficos](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Gráficos na web](/pt-BR/docs/Web/Guide/Graphics)
-- [ferramenta seletora de cores do MDN](/pt-BR/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [Gráficos na web](/pt-BR/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [ferramenta seletora de cores do MDN](/pt-BR/docs/Web/CSS/CSS_colors/Color_picker_tool)

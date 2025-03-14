@@ -1,24 +1,32 @@
 ---
 title: Soustraction (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.subtraction
 ---
 
 {{jsSidebar("Operators")}}
 
 L'opérateur de soustraction (`-`) effectue la soustraction entre les deux opérandes et fournit la différence obtenue.
 
-{{EmbedInteractiveExample("pages/js/expressions-subtraction.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Subtraction operator")}}
+
+```js interactive-example
+console.log(5 - 3);
+// Expected output: 2
+
+console.log(3.5 - 5);
+// Expected output: -1.5
+
+console.log(5 - "hello");
+// Expected output: NaN
+
+console.log(5 - true);
+// Expected output: 4
+```
 
 ## Syntaxe
 
 ```js
-Opérateur : x - y
+Opérateur: x - y;
 ```
 
 ## Exemples
@@ -26,14 +34,14 @@ Opérateur : x - y
 ### Avec des valeurs numériques
 
 ```js
-5 - 3     // 2
-3 - 5     // -2
+5 - 3; // 2
+3 - 5; // -2
 ```
 
 ### Avec des valeurs non-numériques
 
 ```js
-'toto' - 3 // NaN
+"toto" - 3; // NaN
 ```
 
 ## Spécifications

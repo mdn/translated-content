@@ -1,7 +1,6 @@
 ---
 title: Range.detach()
 slug: Web/API/Range/detach
-translation_of: Web/API/Range/detach
 ---
 
 {{ApiRef("DOM")}}

@@ -1,11 +1,6 @@
 ---
 title: <display-legacy>
 slug: Web/CSS/display-legacy
-tags:
-  - CSS
-  - Reference
-  - Type de donnée
-translation_of: Web/CSS/display-legacy
 ---
 
 {{CSSRef}}
@@ -79,21 +74,7 @@ Avec la nouvelle syntaxe, on peut décrire le conteneur avec deux valeurs : la p
 
 ## Compatibilité des navigateurs
 
-### Prise en charge de `inline-block`
-
-{{Compat("css.properties.display.inline-block", 10)}}
-
-### Prise en charge de `inline-table`
-
-{{Compat("css.properties.display.inline-table", 10)}}
-
-### Prise en charge de `inline-flex`
-
-{{Compat("css.properties.display.inline-flex", 10)}}
-
-### Prise en charge de `inline-grid`
-
-{{Compat("css.properties.display.inline-grid", 10)}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,44 +1,45 @@
 ---
-title: HTMLSelectElement.form
+title: "HTMLSelectElement: form プロパティ"
+short-title: form
 slug: Web/API/HTMLSelectElement/form
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{ APIRef("HTML DOM") }}
 
 **`HTMLSelectElement.form`** は読み取り専用のプロパティで、この要素が関連付けられているフォームを表す {{domxref("HTMLFormElement")}} を返します。この要素が {{HTMLElement("form")}} 要素に関連付けられていなかった場合は、`null` を返します。
 
-## 構文
+## 値
 
-```js
-aForm = aSelectElement.form.selectname;
-```
+{{domxref("HTMLFormElement")}} です。
 
 ## 例
 
-### HTML
-
 ```html
-<form action="http://www.google.com/search" method="get">
- <label>Google: <input type="search" name="q"></label> <input type="submit" value="Search...">
+<form id="pet-form">
+  <label for="pet-select">ペットを選択してください</label>
+  <select name="pets" id="pet-select">
+    <option value="dog">犬</option>
+    <option value="cat">猫</option>
+    <option value="parrot">オウム</option>
+  </select>
+
+  <button type="submit">送信</button>
 </form>
-```
 
-### Javascript
+<label for="lunch-select">ランチを選んでください</label>
+<select name="lunch" id="lunch-select">
+  <option value="salad">サラダ</option>
+  <option value="sandwich">サンドウィッチ</option>
+</select>
 
-すべてのフォーム要素で使用できるプロパティである "type" は、呼び出し元のフォーム要素の型を返します。SELECT の場合、選択リストの種類に応じて "`select-one`" または "`select-multiple`" の値を取ります。以下のコードは特定のフォーム内のすべての SELECT 要素に CSS の "`selectclass`" クラスを設定します。
+<script>
+  const petSelect = document.getElementById("pet-select");
+  const petForm = petSelect.form; // <form id="pet-form">
 
-```html
-<script type="text/javascript">
-var form_element = document.getElementById('subscribe_form');
-var vist = form_element.style;
-if (vist.display=='' || vist.display=='none')
-{
-  vist.display = 'block';
-}
-else
-{
-  vist.display = 'none';
-}
+  const lunchSelect = document.getElementById("lunch-select");
+  const lunchForm = lunchSelect.form; // null
 </script>
 ```
 

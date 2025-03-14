@@ -21,17 +21,17 @@ slug: Web/API/TouchList
 
 ## 示例
 
-参考这个[主要 Touch 事件的示例](/zh-CN/DOM/Touch_events#Example).
+参考这个[主要 Touch 事件的示例](/zh-CN/docs/Web/API/Touch_events#example).
 
 ## 规范
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 
 ## 相关链接
 
-- [Touch 事件](/zh-CN/DOM/Touch_events)
+- [Touch 事件](/zh-CN/docs/Web/API/Touch_events)
 - {{domxref("Document.createTouchList()")}}

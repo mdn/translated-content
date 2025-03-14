@@ -1,124 +1,175 @@
 ---
-title: <menu>
+title: "<menu>: 메뉴 요소"
 slug: Web/HTML/Element/menu
-translation_of: Web/HTML/Element/menu
+l10n:
+  sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
-{{HTMLSidebar}}{{SeeCompatTable}}
+{{HTMLSidebar}}
 
-**HTML `<menu>` 요소**는 사용자가 수행하거나 하는 명령 묶음을 말합니다. 이것은 스크린 위에 나오는 목록 메뉴와 눌려진 버튼 아래에 나오는 것과 같은 맥락 메뉴를 포함합니다.
+[HTML](/ko/docs/Web/HTML) **`<menu>`** 요소는 {{HTMLElement("ul")}}의 의미론적 대안으로 설명되지만, 브라우저에 의해서는 {{HTMLElement("ul")}}과 다르지 않게 다루어집니다. {{HTMLElement("li")}} 요소들로 표현되는 항목들의 비정렬 목록을 나타냅니다.
+
+{{InteractiveExample("HTML Demo: &lt;menu&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<div class="news">
+  <a href="#">NASA’s Webb Delivers Deepest Infrared Image of Universe Yet</a>
+  <menu>
+    <li><button id="save">Save for later</button></li>
+    <li><button id="share">Share this news</button></li>
+  </menu>
+</div>
+```
+
+```css interactive-example
+.news {
+  background-color: bisque;
+  padding: 1em;
+  border: solid thin black;
+}
+
+menu {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin-bottom: 0;
+  gap: 1em;
+}
+```
+
+## 특성
+
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+
+## 사용 일람
+
+`<menu>`와 {{HTMLElement("ul")}} 요소 모두 비정렬 목록을 표현합니다. 주요 차이점은 {{HTMLElement("ul")}}이 주로 표시를 위한 항목들을 포함하는 반면, `<menu>`는 상호작용을 위한 항목들을 포함하도록 의도되어 있습니다. 관련된 {{HTMLElement("menuitem")}} 요소는 사용이 중단되었습니다.
+
+> [!NOTE]
+> HTML 사양의 초기 버전에서는 `<menu>` 요소가 [컨텍스트 메뉴](/ko/docs/conflicting/Web/HTML/Element/menu)로서 사용되는 사례가 있었습니다. 이 기능은 오래되었으며 사양에는 포함되어 있지 않습니다.
+
+## 예시
+
+### 툴바
+
+이 예시에서는, 편집 앱을 위한 툴바를 생성하는 데에 `<menu>`가 사용됩니다.
+
+#### HTML
+
+```html
+<menu>
+  <li><button onclick="copy()">Copy</button></li>
+  <li><button onclick="cut()">Cut</button></li>
+  <li><button onclick="paste()">Paste</button></li>
+</menu>
+```
+
+이는 기능적으로 다음과 다르지 않습니다.
+
+```html
+<ul>
+  <li><button onclick="copy()">Copy</button></li>
+  <li><button onclick="cut()">Cut</button></li>
+  <li><button onclick="paste()">Paste</button></li>
+</ul>
+```
+
+#### CSS
+
+```css
+menu,
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  width: 400px;
+}
+
+li {
+  flex-grow: 1;
+}
+
+button {
+  width: 100%;
+}
+```
+
+#### 결과
+
+{{EmbedLiveSample("Toolbar", "100%", 100)}}
+
+## 기술 요약
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/ko/docs/Web/HTML/Content_categories"
+          >콘텐츠 카테고리</a
+        >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
-          >Flow content</a
-        >. Additionally, if in the <em>list menu</em> state, palpable content.
-        (<em>list menu</em> is the default state, unless the parent element is a
-        {{HTMLElement("menu")}} in the <em>context menu</em> state.)
+        <p>
+          <a href="/ko/docs/Web/HTML/Content_categories#flow_content"
+            >플로우 콘텐츠</a
+          >. 요소의 자식으로 적어도 한 개 이상의 {{HTMLElement("li")}} 요소를 포함한다면:
+          <a
+            href="/ko/docs/Web/HTML/Content_categories#palpable_content"
+            >뚜렷한 콘텐츠</a
+          >.
+        </p>
       </td>
     </tr>
     <tr>
-      <th scope="row">Permitted content</th>
+      <th scope="row">가능한 콘텐츠</th>
       <td>
-        If the element is in the <em>list menu</em> state:
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
-          >flow content</a
-        >, or alternatively, zero or more occurrences of
-        {{HTMLElement("li")}}, {{HTMLElement("script")}}, and
-        {{HTMLElement("template")}}.<br />If the element is in the
-        <em>context menu</em> state: zero or more occurrences, in any order, of
-        {{HTMLElement("menu")}} (<em>context menu</em> state only),
-        {{HTMLElement("menuitem")}}, {{HTMLElement("hr")}},
-        {{HTMLElement("script")}}, and
-        {{HTMLElement("template")}}.
+        <p>
+          {{HTMLElement("li")}}와 {{HTMLElement("script")}}, {{HTMLElement("template")}}가 0번 이상 존재할 수 있음.
+        </p>
       </td>
     </tr>
     <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <th scope="row">태그 생략</th>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
-      <th scope="row">Permitted parent elements</th>
+      <th scope="row">가능한 부모 요소</th>
       <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
-          >flow content</a
-        >.
+        <a href="/ko/docs/Web/HTML/Content_categories#flow_content"
+          >플로우 콘텐츠</a
+        >를 허용하는 모든 요소.
       </td>
     </tr>
     <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLMenuElement")}}</td>
+      <th scope="row">암시적 ARIA 역할</th>
+      <td>
+        <code
+          ><a href="/ko/docs/Web/Accessibility/ARIA/Roles/List_role"
+            >list</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">가능한 ARIA 역할</th>
+      <td>
+        <a href="/ko/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>, <a href="/ko/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>,
+        <code
+          ><a href="/ko/docs/Web/Accessibility/ARIA/Roles/listbox_role"
+            >listbox</a
+          ></code
+        >, <a href="/ko/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a>, <a href="/ko/docs/Web/Accessibility/ARIA/Roles/menubar_role"><code>menubar</code></a>,
+        <a href="/ko/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>,
+        <a href="/ko/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>, <a href="/ko/docs/Web/Accessibility/ARIA/Roles/tablist_role"><code>tablist</code></a>,
+        <a href="/ko/docs/Web/Accessibility/ARIA/Roles/toolbar_role"><code>toolbar</code></a> or <a href="/ko/docs/Web/Accessibility/ARIA/Roles/tree_role"><code>tree</code></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 인터페이스</th>
+      <td>{{DOMxRef("HTMLMenuElement")}}</td>
     </tr>
   </tbody>
 </table>
-
-## 속성
-
-이 요소는 [전역 속성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
-
-- {{htmlattrdef("label")}}
-  - : 사용자에게 보여지는 메뉴의 이름입니다. Used within nested menus, to provide a label through which the submenu can be accessed. Must only be specified when the parent element is a {{HTMLElement("menu")}} in the _context menu_ state.
-- {{htmlattrdef("type")}}
-
-  - : This attribute indicates the kind of menu being declared, and can be one of two values.
-
-    - `context`: The _context menu_ state, which represents a group of commands activated through another element. This might be through the {{htmlattrxref("menu", "button")}} attribute of a {{HTMLElement("button")}}, or an element with a [`contextmenu`](/ko/docs/HTML/Global_attributes#attr-contextmenu) attribute. When nesting {{HTMLElement("menu")}} elements directly within one another, this is the missing value default if the parent is already in this state.
-    - `list`: The _list menu_ state, which represents a series of commands for user interaction. This is the missing value default, except where the parent element is a {{HTMLElement("menu")}} in the _context menu_ state.
-
-## Examples
-
-### Example 1
-
-```html
-<!-- A button, which displays a menu when clicked. -->
-<button type="menu" menu="dropdown-menu">
-  Dropdown
-</button>
-
-<menu type="context" id="dropdown-menu">
-  <menuitem label="Action">
-  <menuitem label="Another action">
-  <hr>
-  <menuitem label="Separated action">
-</menu>
-```
-
-### Result
-
-{{EmbedLiveSample('Example_1')}}
-
-### Example 2
-
-```html
-<!-- A context menu for a simple editor, containing two menu buttons. -->
-<menu>
-  <li>
-    <button type="menu" value="File" menu="file-menu">
-    <menu type="context" id="file-menu">
-      <menuitem label="New..." onclick="newFile()">
-      <menuitem label="Save..." onclick="saveFile()">
-    </menu>
-  </li>
-  <li>
-    <button type="menu" value="Edit" menu="edit-menu">
-    <menu type="context" id="edit-menu">
-      <menuitem label="Cut..." onclick="cutEdit()">
-      <menuitem label="Copy..." onclick="copyEdit()">
-      <menuitem label="Paste..." onclick="pasteEdit()">
-    </menu>
-  </li>
-</menu>
-```
-
-### Result
-
-{{EmbedLiveSample('Example_2')}}
 
 ## 명세
 
@@ -126,9 +177,8 @@ translation_of: Web/HTML/Element/menu
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.menu")}}
+{{Compat}}
 
 ## 같이 보기
 
-- Other list-related HTML Elements: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, {{HTMLElement("li")}} and the obsolete {{HTMLElement("dir")}}.
-- The [`contextmenu`](/ko/docs/HTML/Global_attributes#attr-contextmenu) [global attribute](/ko/docs/HTML/Global_attributes) can be used on an element to refer to the `id` of a `menu` with the `context` {{htmlattrxref("type","menu")}}.
+- 목록과 관련된 다른 HTML 요소들: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, and {{HTMLElement("li")}}.

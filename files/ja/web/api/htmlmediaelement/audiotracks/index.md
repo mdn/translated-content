@@ -1,6 +1,9 @@
 ---
-title: HTMLMediaElement.audioTracks
+title: "HTMLMediaElement: audioTracks プロパティ"
+short-title: audioTracks
 slug: Web/API/HTMLMediaElement/audioTracks
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,7 +12,7 @@ slug: Web/API/HTMLMediaElement/audioTracks
 
 このメディア要素は、{{HTMLElement("audio")}} 要素または {{HTMLElement("video")}} 要素のどちらでもかまいません。
 
-返されたリストは*生きて*います。つまり、トラックがメディア要素に追加、削除されると、リストの内容が動的に変更されます。一度リストへの参照を得れば、新しい音声トラックが追加されたり、既存のものが削除されたりしたときに、その変更を監視することができます。メディア要素のトラックリストの変更を監視する方法については、 {{domxref("AudioTrackList")}} の[イベントハンドラー](/ja/docs/Web/API/AudioTrackList#event_handlers)を参照してください。
+返されたリストは*生きて*います。つまり、トラックがメディア要素に追加、削除されると、リストの内容が動的に変更されます。一度リストへの参照を得れば、新しい音声トラックが追加されたり、既存のものが削除されたりしたときに、その変更を監視することができます。メディア要素のトラックリストの変更を監視する方法については、 [AudioTrackList のイベント](/ja/docs/Web/API/AudioTrackList#イベント)を参照してください。
 
 ## 値
 
@@ -34,9 +37,9 @@ HTML で、要素自体を確立します。
 JavaScript コードで、動画要素の音声トラックのミュートを処理します。
 
 ```js
-var video = document.getElementById("video");
+const video = document.getElementById("video");
 
-for (var i = 0; i < video.audioTracks.length; i += 1) {
+for (let i = 0; i < video.audioTracks.length; i += 1) {
   video.audioTracks[i].enabled = false;
 }
 ```
@@ -51,6 +54,6 @@ for (var i = 0; i < video.audioTracks.length; i += 1) {
 
 ## 関連情報
 
-- これを定義しているインターフェイスである {{domxref("HTMLMediaElement")}}
-- {{HTMLElement("audio")}} および {{HTMLElement("video")}}
-- {{domxref("AudioTrack")}} および {{domxref("AudioTrackList")}}
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.audioTracks` プロパティを定義しているインターフェイス
+- {{HTMLElement("audio")}}, {{HTMLElement("video")}}
+- {{domxref("AudioTrack")}}, {{domxref("AudioTrackList")}}

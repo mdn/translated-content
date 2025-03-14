@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
 
 **`WeakMap()` コンストラクター**は、キーが弱く参照されている、キーと値の組のコレクションである `WeakMap` オブジェクトを生成します。キーはオブジェクトでなければならず、値は任意の値を指定することができます。
 
-`WeakMap` については、[キー付きコレクション](/ja/docs/Web/JavaScript/Guide/Keyed_collections)の [WeakMap オブジェクト](/ja/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object)の節を参照してください。
+`WeakMap` については、[キー付きコレクション](/ja/docs/Web/JavaScript/Guide/Keyed_collections)の [WeakMap オブジェクト](/ja/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)の節を参照してください。
 
 ## 構文
 
@@ -26,14 +26,14 @@ new WeakMap([iterable])
 
 ```js
 const wm1 = new WeakMap(),
-      wm2 = new WeakMap(),
-      wm3 = new WeakMap();
+  wm2 = new WeakMap(),
+  wm3 = new WeakMap();
 const o1 = {},
-      o2 = function() {},
-      o3 = window;
+  o2 = function () {},
+  o3 = window;
 
 wm1.set(o1, 37);
-wm1.set(o2, 'azerty');
+wm1.set(o2, "azerty");
 wm2.set(o1, o2); // 値は何でもよく、オブジェクトでも関数でもよい
 wm2.set(o3, undefined);
 wm2.set(wm1, wm2); // キーと値はあらゆるオブジェクトになれる。 WeakMap も同様。
@@ -60,12 +60,12 @@ wm1.has(o1); // false
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakMap.WeakMap")}}
+{{Compat}}
 
 ## 関連情報
 
-- [`WeakMap` (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object)
-- [Hiding Implementation Details with ECMAScript 6 WeakMaps](http://fitzgeraldnick.com/weblog/53/)
+- [`WeakMap` (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)
+- [Hiding Implementation Details with ECMAScript 6 WeakMaps](https://fitzgeraldnick.com/weblog/53/)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}

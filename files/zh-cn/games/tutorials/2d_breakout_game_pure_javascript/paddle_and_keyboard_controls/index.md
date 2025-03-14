@@ -7,29 +7,29 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_contr
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}
 
-这是[Gamedev Canvas tutorial](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch)中的第四章。完成本课程后，你可以在[Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html)找到源码。
+这是[Gamedev Canvas tutorial](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)中的第四章。完成本课程后，你可以在[Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html)找到源码。
 
 你可以看到球自由的、无限次的在墙壁上反弹，但是没有和我们发生任何交互。如果我们没有对它的控制操作，这仍然不是一个游戏。下面，我们新增一些用户操作：一个可以控制球的球板。
 
 ## 定义一个球板去接球
 
-我们需要添加一个球板去接球：为此需要先定义一些变量。在你的代码的顶部的其它变量下方添加下列代码：
+我们需要添加一个球板去接球：为此需要先定义一些变量。在你的代码的顶部的其他变量下方添加下列代码：
 
 ```js
 var paddleHeight = 10;
 var paddleWidth = 75;
-var paddleX = (canvas.width-paddleWidth)/2;
+var paddleX = (canvas.width - paddleWidth) / 2;
 ```
 
 然后定义球拍的长和宽，以及为了之后的处理同时定义 x 轴上的初始位置。新建一个方法来在页面上描绘球板。把下列代码添加到你的 `drawBall()` 方法里去：
 
 ```js
 function drawPaddle() {
-    ctx.beginPath();
-    ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+  ctx.beginPath();
+  ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
 }
 ```
 
@@ -42,7 +42,7 @@ function drawPaddle() {
 - 两个用于处理按键被按下或松开后的事件处理方法
 - 实现左右移动球拍
 
-按键可以使用 boolean 变量来初始定义。在你的其它变量附近添加下列代码：
+按键可以使用 boolean 变量来初始定义。在你的其他变量附近添加下列代码：
 
 ```js
 var rightPressed = false;
@@ -60,21 +60,19 @@ document.addEventListener("keyup", keyUpHandler, false);
 
 ```js
 function keyDownHandler(e) {
-    if(e.keyCode == 39) {
-        rightPressed = true;
-    }
-    else if(e.keyCode == 37) {
-        leftPressed = true;
-    }
+  if (e.keyCode == 39) {
+    rightPressed = true;
+  } else if (e.keyCode == 37) {
+    leftPressed = true;
+  }
 }
 
 function keyUpHandler(e) {
-    if(e.keyCode == 39) {
-        rightPressed = false;
-    }
-    else if(e.keyCode == 37) {
-        leftPressed = false;
-    }
+  if (e.keyCode == 39) {
+    rightPressed = false;
+  } else if (e.keyCode == 37) {
+    leftPressed = false;
+  }
 }
 ```
 
@@ -87,22 +85,20 @@ function keyUpHandler(e) {
 我们现在有用于存储按键，事件监听器和相关功能的信息的变量。现在我们将看到实际的代码来使用这些变量，并在屏幕上移动球拍。在 draw（）函数内部，我们将检查每一帧被渲染的同时是否按下左或右键。我们的代码如下：
 
 ```js
-if(rightPressed) {
-    paddleX += 7;
-}
-else if(leftPressed) {
-    paddleX -= 7;
+if (rightPressed) {
+  paddleX += 7;
+} else if (leftPressed) {
+  paddleX -= 7;
 }
 ```
 
 如果按一下左键，球拍将向左移动 7 个像素，如果按一下右键，球拍将向右移动 7 个像素。目前这个功能可以正常工作，但是如果我们按任意一个键的时间太长，球拍就会从画布的边缘消失。我们可以通过改变代码来改善这种情况，并且只能在画布的边界内移动球拍，如下所示：
 
 ```js
-if(rightPressed && paddleX < canvas.width-paddleWidth) {
-    paddleX += 7;
-}
-else if(leftPressed && paddleX > 0) {
-    paddleX -= 7;
+if (rightPressed && paddleX < canvas.width - paddleWidth) {
+  paddleX += 7;
+} else if (leftPressed && paddleX > 0) {
+  paddleX -= 7;
 }
 ```
 
@@ -118,14 +114,15 @@ drawPaddle();
 
 ## 比较你的代码
 
-以下是我们的示例代码，以便与您进行比较：
+以下是我们的示例代码，以便与你进行比较：
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/tgn3zscj/","","320")}}
 
-> **备注：** 让球拍变快变慢，或者改变它的大小。
+> [!NOTE]
+> 让球拍变快变慢，或者改变它的大小。
 
 ## 下一步
 
-现在我们有一些类似于游戏的东西。唯一的麻烦就是无论如何你都可以继续用球拍击球。这一切都将在第五章中改变，[游戏结束](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch/Game_over)时，我们会为游戏添加一个最后的状态。
+现在我们有一些类似于游戏的东西。唯一的麻烦就是无论如何你都可以继续用球拍击球。这一切都将在第五章中改变，[游戏结束](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over)时，我们会为游戏添加一个最后的状态。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}

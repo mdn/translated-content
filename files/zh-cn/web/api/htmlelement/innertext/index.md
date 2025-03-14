@@ -1,54 +1,64 @@
 ---
-title: HTMLElement.innerText
+title: HTMLElement：innerText 属性
 slug: Web/API/HTMLElement/innerText
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
-**`innerText`** 属性表示一个节点及其后代的“渲染”文本内容。As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.
+{{domxref("HTMLElement")}} 接口的 **`innerText`** 属性表示一个节点及其后代所渲染文本的内容。
 
-> **备注：** `innerText` 很容易与{{domxref("Node.textContent")}}混淆，但这两个属性间实际上有很重要的区别。大体来说，`innerText` 可操作已被渲染的内容，而 `textContent` 则不会。
+作为一个 getter，它近似于用户用光标突出该元素的内容，然后将其复制到剪贴板上所得到的文本。作为一个 setter，这将用给定的值替换该元素的子元素，并将任何换行符转换为 {{HTMLElement("br")}} 元素。
 
-## 语法
+> **备注：** `innerText` 很容易与 {{domxref("Node.textContent")}} 混淆，但这两个属性间实际上有很重要的区别。大体来说，`innerText` 知道文本的渲染外观，而 `textContent` 不知道。
 
-```plain
-var renderedText = HTMLElement.innerText;
-HTMLElement.innerText = string;
-```
+### 输出
 
-### 输出值
+一个字符串，代表元素的渲染文本内容。
 
-一段 {{domxref("DOMString")}} 表示一个元素中已被渲染的内容。如果元素自身没有 [被渲染](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered) (e.g 被从文档中删除或没有在视图中显示), 这时返回值与 {{domxref("Node.textContent")}} 属性相同。
+如果元素本身没有[被渲染](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered)（例如，从文档中分离出来或从视图中隐藏起来），返回值与 {{domxref("Node.textContent")}} 属性相同。
+
+> [!WARNING]
+> 在一个节点上设置 `innerText` 会移除该节点的*所有*子节点，并用给定的字符串值的单一文本节点代替它们。
 
 ## 示例
 
-这个示例对比了 `innerText` 和 {{domxref("Node.textContent")}}. 这时 `innerText` 代表的含义就像 {{htmlElement("br")}} 标签，并且忽略了隐藏的元素。
+这个示例对比了 `innerText` 和 {{domxref("Node.textContent")}}。请注意 `innerText` 是如何意识到像 {{htmlElement("br")}} 这样的元素，并忽略了隐藏的元素的。
 
 ### HTML
 
 ```html
-<h3>Source element:</h3>
+<h3>源元素：</h3>
 <p id="source">
-  <style>#source { color: red; }</style>
-Take a look at<br>how this text<br>is interpreted
-       below.
-  <span style="display:none">HIDDEN TEXT</span>
+  <style>
+    #source {
+      color: red;
+    }
+    #text {
+      text-transform: uppercase;
+    }
+  </style>
+  <span id="text">
+    来看看<br />
+    这段文字<br />
+    在下方怎么表示。
+  </span>
+  <span style="display:none">隐藏文字</span>
 </p>
-<h3>Result of textContent:</h3>
-<textarea id="textContentOutput" rows="6" cols="30" readonly>...</textarea>
-<h3>Result of innerText:</h3>
-<textarea id="innerTextOutput" rows="6" cols="30" readonly>...</textarea>
+<h3>textContent 结果：</h3>
+<textarea id="textContentOutput" rows="6" cols="30" readonly>…</textarea>
+<h3>innerText 结果：</h3>
+<textarea id="innerTextOutput" rows="6" cols="30" readonly>…</textarea>
 ```
 
 ### JavaScript
 
 ```js
-const source = document.getElementById('source');
-const textContentOutput = document.getElementById('textContentOutput');
-const innerTextOutput = document.getElementById('innerTextOutput');
+const source = document.getElementById("source");
+const textContentOutput = document.getElementById("textContentOutput");
+const innerTextOutput = document.getElementById("innerTextOutput");
 
-textContentOutput.innerHTML = source.textContent;
-innerTextOutput.innerHTML = source.innerText;
+textContentOutput.value = source.textContent;
+innerTextOutput.value = source.innerText;
 ```
 
 ### 结果
@@ -59,11 +69,9 @@ innerTextOutput.innerHTML = source.innerText;
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
-
-此特性最初由 Internet Explorer 引入。被所有主要的浏览器供应商（vendor）采用后，它于 2016 年正式进入 HTML 标准。
 
 ## 参见
 

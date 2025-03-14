@@ -1,12 +1,6 @@
 ---
 title: HTMLBRElement
 slug: Web/API/HTMLBRElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLBRElement
 ---
 
 {{APIRef("HTML DOM")}}

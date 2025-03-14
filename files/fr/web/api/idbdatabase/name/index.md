@@ -1,12 +1,6 @@
 ---
 title: IDBDatabase.name
 slug: Web/API/IDBDatabase/name
-tags:
-  - API
-  - IndexedDB
-  - Propriété
-  - Reference
-translation_of: Web/API/IDBDatabase/name
 ---
 
 {{APIRef("IndexedDB")}}
@@ -18,7 +12,7 @@ La propriété **`name`** de l'interface `IDBDatabase` est une chaîne de caract
 ## Syntaxe
 
 ```js
-db.name
+db.name;
 ```
 
 ### Valeur
@@ -37,12 +31,12 @@ var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 // détecter si l'ouverture de la base se déroule
 // correctement ou non.
 
-DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '<li>Erreur au chargement de la base de données.</li>';
+DBOpenRequest.onerror = function (event) {
+  note.innerHTML += "<li>Erreur au chargement de la base de données.</li>";
 };
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Base de données initialisée.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Base de données initialisée.</li>";
 
   // Affecte la connexion à la variable db.
   db = DBOpenRequest.result;
@@ -53,7 +47,8 @@ DBOpenRequest.onsuccess = function(event) {
 };
 ```
 
-> **Note :** Pour un exemple fonctionnel complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([voir l'exemple _live_](https://mdn.github.io/to-do-notifications/)).
+> [!NOTE]
+> Pour un exemple fonctionnel complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 
@@ -65,10 +60,10 @@ DBOpenRequest.onsuccess = function(event) {
 
 ## Voir aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Démarrer des transactions : {{domxref("IDBDatabase")}}
 - Manipuler des transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
 - Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)

@@ -3,7 +3,7 @@ title: WebRTC プロトコル入門
 slug: Web/API/WebRTC_API/Protocols
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 この記事では、 WebRTC API の基礎となっているプロトコルについて説明します。
 
@@ -35,7 +35,7 @@ NAT を使用するルーターによっては、 'Symmetric NAT' と呼ばれ�
 
 ## SDP
 
-[Session Description Protocol (SDP)](https://ja.wikipedia.org/wiki/Session_Description_Protocol) とは、解像度、フォーマット、コーデック、暗号化などのマルチメディアコンテンツを指定するための標準です。これにより、データが転送された際に双方が理解できるようになります。本来、これらはメディアコンテンツそのものではなくそのコンテンツを指定するメタデータです。
+[Session Description Protocol (SDP)](https://ja.wikipedia.org/wiki/Session_Description_Protocol) とは、解像度、フォーマット、コーデック、暗号化などのマルチメディアコンテンツを指定するための標準です。これにより、データが転送された際に双方が理解できるようになります。本来、これらはメディアコンテンツそのものではなくそのコンテンツを指定するメタデータです。
 
 技術的には、 SDP は真のプロトコルではなく、端末間でメディアを共有する接続を記述するために使用されるデータ形式です。
 

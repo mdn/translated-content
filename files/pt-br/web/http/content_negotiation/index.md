@@ -9,7 +9,7 @@ slug: Web/HTTP/Content_negotiation
 
 Um documento específico é denominado _recurso_. Quando um cliente quer obtê-lo, ele o requisita usando sua URL. O servidor usa esta URL para escolherum das variantes que ele provê - cada variante sendo chamada de _representação_ - e retorna essa representação específica para o cliente. O recurso de forma geral, bem como suas representações, têm uma URL específica. Como uma representação específica é escolhida quando um recurso é chamado é determinado pela _negociação de conteúdo_ e existem algumas maneiras de negociar entre entre o cliente e o servidor.
 
-![](https://mdn.mozillademos.org/files/13789/HTTPNego.png)
+![](httpnego.png)
 
 A determinação da representação mais adequada é feita através de um dos dois mecanismos:
 
@@ -20,9 +20,9 @@ Ao longo dos anos, outras propostas de negociação de conteúdo, como _negocia�
 
 ## Negociação baseada no servidor
 
-Na _negociação baseada no servidor_, ou negociação proativa, o navegador (ou outro tipo de agente do usuário) envia diversos cabeçalhos HTTP junto com a URL. Estes cabeçalhos descrevem a escolha preferida do usuário. O servidor usa-os como sugestões e um algoritmo intero escolhe o melhor conteúdo para ser servido ao usuário. O algoritmo é específico para cada servidor e não é definido no padrão. Veja, por-exemplo, o [algoritmo de negociação do Apache 2.2](http://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm).
+Na _negociação baseada no servidor_, ou negociação proativa, o navegador (ou outro tipo de agente do usuário) envia diversos cabeçalhos HTTP junto com a URL. Estes cabeçalhos descrevem a escolha preferida do usuário. O servidor usa-os como sugestões e um algoritmo intero escolhe o melhor conteúdo para ser servido ao usuário. O algoritmo é específico para cada servidor e não é definido no padrão. Veja, por-exemplo, o [algoritmo de negociação do Apache 2.2](https://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm).
 
-![](https://mdn.mozillademos.org/files/13791/HTTPNegoServer.png)
+![](httpnegoserver.png)
 
 O padrão HTTP/1.1 define uma lista de cabeçalhos-padrão que iniciam a negociação baseada no servidor ({{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}). Apesar do {{HTTPHeader("User-Agent")}} não estar formalmente na lista, ele é, às vezes, também usado para enviar uma representação específica do recurso requisitado, apesar disso não ser considerado uma boa prática. O servidor usa o cabeçalho {{HTTPHeader("Vary")}} para indicar quais cebeçalhos de fato foram usados na negociação do conteúdo (ou, mais precisamente, nos cabeçahos de resposta associados), de forma que [caches](/pt-BR/docs/Web/HTTP/Caching) possam funcionar de forma otimizada.
 
@@ -42,7 +42,8 @@ The {{HTTPHeader("Accept")}} header is defined by the browser, or any other user
 
 ### The `Accept-CH` header {{experimental_inline}}
 
-> **Nota:** This is part of an **experimental** technology called _Client Hints_. Initial support is in Chrome 46 or later. The Device-Memory value is in Chrome 61 or later.
+> [!NOTE]
+> This is part of an **experimental** technology called _Client Hints_. Initial support is in Chrome 46 or later. The Device-Memory value is in Chrome 61 or later.
 
 The experimental {{HTTPHeader("Accept-CH")}} lists configuration data that can be used by the server to select an appropriate response. Valid values are:
 
@@ -61,7 +62,8 @@ With UTF-8 now being well-supported, being the preferred way of encoding charact
 
 ### The `Accept-CH-Lifetime` header
 
-> **Nota:** This is part of an **experimental** technology called _Client Hints_ and is only available in Chrome 61 or later.
+> [!NOTE]
+> This is part of an **experimental** technology called _Client Hints_ and is only available in Chrome 61 or later.
 
 The {{HTTPHeader("Accept-CH-Lifetime")}} header is used with the `Device-Memory` value of the `Accept-CH` header and indicates the amount of time the device should opt-in to sharing the amount of device memory with the server. The value is given in miliseconds and it's use is optional.
 
@@ -82,7 +84,8 @@ Due to the [configuration-based entropy](https://www.eff.org/deeplinks/2010/01/p
 
 ### The `User-Agent` header
 
-> **Nota:** Though there are legitimate uses of this header for selecting content, [it is considered bad practice](/pt-BR/docs/Web/HTTP/Browser_detection_using_the_user_agent) to rely on it to define what features are supported by the user agent.
+> [!NOTE]
+> Though there are legitimate uses of this header for selecting content, [it is considered bad practice](/pt-BR/docs/Web/HTTP/Browser_detection_using_the_user_agent) to rely on it to define what features are supported by the user agent.
 
 The {{HTTPHeader("User-Agent")}} header identifies the browser sending the request. This string may contain a space-separated list of _product tokens_ and _comments_.
 
@@ -102,6 +105,6 @@ Server-driven negotiation suffers from a few downsides: it doesn't scale well. T
 
 From the beginnings of HTTP, the protocol allowed another negotiation type: _agent-driven negotiation_ or _reactive negotiation_. In this negotiation, when facing an ambiguous request, the server sends back a page containing links to the available alternative resources. The user is presented the resources and choose the one to use.
 
-![](https://mdn.mozillademos.org/files/13795/HTTPNego3.png)
+![](httpnego3.png)
 
 Unfortunately, the HTTP standard does not specify the format of the page allowing to choose between the available resource, which prevents to easily automatize the process. Besides falling back to the _server-driven negotiation_, this method is almost always used in conjunction with scripting, especially with JavaScript redirection: after having checked for the negotiation criteria, the script performs the redirection. A second problem is that one more request is needed in order to fetch the real resource, slowing the availability of the resource to the user.

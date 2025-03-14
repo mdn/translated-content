@@ -1,19 +1,22 @@
 ---
 title: function
 slug: Web/JavaScript/Reference/Statements/function
-tags:
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/function
-original_slug: Web/JavaScript/Reference/Instructions/function
 ---
 
 {{jsSidebar("Statements")}}
 
 La déclaration **`function`** (ou l'instruction `function`) permet de définir une fonction et les paramètres que celle-ci utilise.
 
-{{EmbedInteractiveExample("pages/js/statement-function.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Function")}}
+
+```js interactive-example
+function calcRectArea(width, height) {
+  return width * height;
+}
+
+console.log(calcRectArea(5, 6));
+// Expected output: 30
+```
 
 Il est également possible de définir des fonctions en utilisant le constructeur {{jsxref("Function")}} et une {{jsxref("Opérateurs/L_opérateur_function", "expression de fonction","",1)}}.
 
@@ -46,9 +49,15 @@ Il est possible de déclarer des fonctions de façon conditionnelle (c'est-à-di
 
 ```js
 var remontee = "toto" in this;
-console.log(`'toto' ${remontee ? "est" : "n'est pas"} remontée. typeof toto vaut ${typeof toto}`);
+console.log(
+  `'toto' ${
+    remontee ? "est" : "n'est pas"
+  } remontée. typeof toto vaut ${typeof toto}`,
+);
 if (false) {
-  function toto(){ return 1; }
+  function toto() {
+    return 1;
+  }
 }
 
 // Pour Chrome:
@@ -68,9 +77,15 @@ On obtient exactement les mêmes résultats si la condition est vérifiée (ici 
 
 ```js
 var remontee = "toto" in this;
-console.log(`'toto' ${remontee ? "est" : "n'est pas"} remontée. typeof toto vaut ${typeof toto}`);
+console.log(
+  `'toto' ${
+    remontee ? "est" : "n'est pas"
+  } remontée. typeof toto vaut ${typeof toto}`,
+);
 if (true) {
-  function toto(){ return 1; }
+  function toto() {
+    return 1;
+  }
 }
 
 // Pour Chrome:
@@ -103,8 +118,8 @@ On notera que les {{jsxref("Opérateurs/L_opérateur_function", "expressions de 
 ```js
 nonRemontée(); // TypeError: nonRemontée is not a function
 
-var nonRemontée = function() {
-   console.log("truc");
+var nonRemontée = function () {
+  console.log("truc");
 };
 ```
 
@@ -116,7 +131,7 @@ Dans l'exemple qui suit, on déclare une fonction qui renvoie le total des vente
 
 ```js
 function calc_ventes(nb_produits_a, nb_produits_b, nb_produits_c) {
-   return nb_produits_a*79 + nb_produits_b * 129 + nb_produits_c * 699;
+  return nb_produits_a * 79 + nb_produits_b * 129 + nb_produits_c * 699;
 }
 ```
 
@@ -137,5 +152,5 @@ function calc_ventes(nb_produits_a, nb_produits_b, nb_produits_c) {
 - L'expression {{jsxref("Opérateurs/function*", "function*")}}
 - {{jsxref("Fonctions/Fonctions_fléchées", "Les fonctions fléchées","",1)}}
 - {{jsxref("GeneratorFunction")}}
-- [L'instruction `async function` (les déclarations des fonctions asynchrones)](/fr/docs/Web/JavaScript/Reference/Instructions/async_function)
-- [L'opérateur `async function` (les expressions de fonctions asynchrones)](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/async_function)
+- [L'instruction `async function` (les déclarations des fonctions asynchrones)](/fr/docs/Web/JavaScript/Reference/Statements/async_function)
+- [L'opérateur `async function` (les expressions de fonctions asynchrones)](/fr/docs/Web/JavaScript/Reference/Operators/async_function)

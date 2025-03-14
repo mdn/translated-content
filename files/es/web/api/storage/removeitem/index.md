@@ -1,20 +1,11 @@
 ---
 title: Storage.removeItem()
 slug: Web/API/Storage/removeItem
-tags:
-  - API
-  - Almacenamiento
-  - Almacenamiento web
-  - Referencia
-  - Storage
-  - Web Storage
-  - metodo
-translation_of: Web/API/Storage/removeItem
 ---
 
 {{APIRef("Web Storage API")}}
 
-El método `removeItem()` de la interfaz {{domxref("Storage")}} elimina la clave cuyo nombre recibe por parámetro del almacenamiento. La interfaz `Storage` de la [API de almacenamiento web](/es/docs/Web/API/API_de_almacenamiento_web) provee acceso al almacenamiento de la sesión (`sessionStorage`) o al almacenamiento local (`localStorage`).
+El método `removeItem()` de la interfaz {{domxref("Storage")}} elimina la clave cuyo nombre recibe por parámetro del almacenamiento. La interfaz `Storage` de la [API de almacenamiento web](/es/docs/Web/API/Web_Storage_API) provee acceso al almacenamiento de la sesión (`sessionStorage`) o al almacenamiento local (`localStorage`).
 
 ## Sintaxis
 
@@ -37,11 +28,11 @@ La siguiente función crea 3 elementos dentro del almacenamiento local y despué
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'red');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'myCat.png');
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "myCat.png");
 
-  localStorage.removeItem('image');
+  localStorage.removeItem("image");
 }
 ```
 
@@ -49,15 +40,16 @@ De la misma manera se podría manipular el almacenamiento de sesión:
 
 ```js
 function populateSessionStorage() {
-  sessionStorage.setItem('bgcolor', 'red');
-  sessionStorage.setItem('font', 'Helvetica');
-  sessionStorage.setItem('image', 'myCat.png');
+  sessionStorage.setItem("bgcolor", "red");
+  sessionStorage.setItem("font", "Helvetica");
+  sessionStorage.setItem("image", "myCat.png");
 
-  sessionStorage.removeItem('image');
+  sessionStorage.removeItem("image");
 }
 ```
 
-> **Nota:** Para ver esto en un ejemplo real, vea nuestra [Demo de Web Storage](https://github.com/mdn/web-storage-demo).
+> [!NOTE]
+> Para ver esto en un ejemplo real, vea nuestra [Demo de Web Storage](https://github.com/mdn/web-storage-demo).
 
 ## Especificaciones
 
@@ -65,7 +57,7 @@ function populateSessionStorage() {
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Storage.removeItem")}}
+{{Compat}}
 
 ## Vea también
 

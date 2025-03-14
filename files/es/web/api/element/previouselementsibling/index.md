@@ -1,7 +1,6 @@
 ---
 title: NonDocumentTypeChildNode.previousElementSibling
 slug: Web/API/Element/previousElementSibling
-original_slug: Web/API/NonDocumentTypeChildNode/previousElementSibling
 ---
 
 {{APIRef}}
@@ -24,13 +23,13 @@ prevNode = elementNodeReference.previousElementSibling;
 <div id="div-03">Aquí esta div-03</div>
 
 <script>
-  var el = document.getElementById('div-03').previousElementSibling;
-  document.write('<p>Hermanos de div-03</p><ol>');
+  var el = document.getElementById("div-03").previousElementSibling;
+  document.write("<p>Hermanos de div-03</p><ol>");
   while (el) {
-    document.write('<li>' + el.nodeName + '</li>');
+    document.write("<li>" + el.nodeName + "</li>");
     el = el.previousElementSibling;
   }
-  document.write('</ol>');
+  document.write("</ol>");
 </script>
 ```
 
@@ -51,15 +50,14 @@ Esta propiedad no está soportada con anterioridad a IE9, así que puede utiliza
 
 ```js
 // Source: https://github.com/Alhadis/Snippets/blob/master/js/polyfills/IE8-child-elements.js
-if(!("previousElementSibling" in document.documentElement)){
-    Object.defineProperty(Element.prototype, "previousElementSibling", {
-        get: function(){
-            var e = this.previousSibling;
-            while(e && 1 !== e.nodeType)
-                e = e.previousSibling;
-            return e;
-        }
-    });
+if (!("previousElementSibling" in document.documentElement)) {
+  Object.defineProperty(Element.prototype, "previousElementSibling", {
+    get: function () {
+      var e = this.previousSibling;
+      while (e && 1 !== e.nodeType) e = e.previousSibling;
+      return e;
+    },
+  });
 }
 ```
 

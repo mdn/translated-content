@@ -1,16 +1,19 @@
 ---
-title: HTMLElement.attachInternals()
+title: "HTMLElement: attachInternals() メソッド"
+short-title: attachInternals()
 slug: Web/API/HTMLElement/attachInternals
+l10n:
+  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
-{{APIRef('DOM')}}
+{{APIRef("Web Components")}}
 
-**`HTMLElement.attachInternals()`** メソッドは、 {{domxref("ElementInternals")}} オブジェクトを返します。このメソッドにより、[カスタム要素](/ja/docs/Web/Web_Components/Using_custom_elements)が HTML フォームに参加することができるようになります。 `ElementInternals` インターフェイスは、標準的な HTML フォーム要素と同じようにこれらの要素を扱うためのユーティリティを提供し、また、要素に対して[アクセシビリティオブジェクトモデル](https://wicg.github.io/aom/explainer.html)を公開します。
+**`HTMLElement.attachInternals()`** メソッドは、 {{domxref("ElementInternals")}} オブジェクトを返します。このメソッドにより、[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)が HTML フォームに参加することができるようになります。 `ElementInternals` インターフェイスは、標準的な HTML フォーム要素と同じようにこれらの要素を扱うためのユーティリティを提供し、また、要素に対して[アクセシビリティオブジェクトモデル](https://wicg.github.io/aom/explainer.html)を公開します。
 
 ## 構文
 
-```js
-var internals = element.attachInternals();
+```js-nolint
+attachInternals()
 ```
 
 ### 引数
@@ -32,7 +35,7 @@ var internals = element.attachInternals();
 
 ## 例
 
-次の例では、カスタムフォームに関連する要素を {{domxref("HTMLElement.attachInternals")}} で作成する方法を示しています。そして、 {{domxref("ElementInternals.form")}} プロパティがコンソールに出力され、 {{domxref("ElementInternals")}} オブジェクトがあることを実証しています。
+次の例では、カスタムフォームに関連する要素を `HTMLElement.attachInternals` で作成する方法を示しています。そして、 {{domxref("ElementInternals.form")}} プロパティがコンソールに出力され、 {{domxref("ElementInternals")}} オブジェクトがあることを実証しています。
 
 ```js
 class CustomCheckbox extends HTMLElement {
@@ -42,11 +45,10 @@ class CustomCheckbox extends HTMLElement {
     super();
     this.internals_ = this.attachInternals();
   }
+  // …
+}
 
-  /* ... */
-
-  window.customElements.define("custom-checkbox", CustomCheckbox);
-})();
+window.customElements.define("custom-checkbox", CustomCheckbox);
 
 let element = document.getElementById("custom-checkbox");
 console.log(element.internals_.form);
@@ -62,5 +64,5 @@ console.log(element.internals_.form);
 
 ## 関連情報
 
-- [More capable form controls](https://web.dev/more-capable-form-controls/)
+- [More capable form controls](https://web.dev/articles/more-capable-form-controls)
 - [Creating custom form controls with ElementInternals](https://css-tricks.com/creating-custom-form-controls-with-elementinternals/)

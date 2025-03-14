@@ -1,11 +1,11 @@
 ---
 title: BroadcastChannel
 slug: Web/API/BroadcastChannel
-translation_of: Web/API/BroadcastChannel
 ---
+
 {{APIRef("Broadcast Channel API")}}
 
-Интерфейс **`BroadcastChannel`** представляет собой именованный канал, на который можно подписаться из любого {{glossary("browsing context","контекста просмотра")}} данного {{glossary("origin","источника")}}. Это позволяет настроить коммуникацию между разными документами (в разных окнах, вкладках, фреймах и т.д.) одного источника. Сообщения распространяются с помощью события {{event("message")}}, выстреливающего для всех объектов `BroadcastChannel`, слушающих этот канал.
+Интерфейс **`BroadcastChannel`** представляет собой именованный канал, на который можно подписаться из любого {{glossary("browsing context","контекста просмотра")}} данного {{glossary("origin","источника")}}. Это позволяет настроить коммуникацию между разными документами (в разных окнах, вкладках, фреймах и т.д.) одного источника. Сообщения распространяются с помощью события [`message`](/ru/docs/Web/API/BroadcastChannel/message_event), возникающего для всех объектов `BroadcastChannel`, слушающих этот канал.
 
 {{AvailableInWorkers}}
 
@@ -25,10 +25,10 @@ _Этот интерфейс также наследует свойства от
 
 - {{domxref("BroadcastChannel.onmessage")}}
 
-  - : {{event("Event_handlers", "event handler")}} свойство, определяющее функцию, которая будет запущена, когда произойдёт вызов события {{event("message")}} на этом объекте.
+  - : свойство [`event handler`](/ru/docs/Web/Events/Event_handlers), определяющее функцию, которая будет запущена, когда произойдёт вызов события [`message`](/ru/docs/Web/API/BroadcastChannel/message_event) на этом объекте.
 
 - {{domxref("BroadcastChannel.onmessageerror")}}
-  - : {{event("Event_handlers", "event handler")}}, который вызывается, когда приходит {{domxref("MessageEvent")}} типа {{domxref("MessageError")}} — когда приходит сообщение, которое не может быть десереализовано.
+  - : [`event handler`](/ru/docs/Web/Events/Event_handlers), который вызывается, когда приходит {{domxref("MessageEvent")}} типа {{domxref("MessageError")}} — когда приходит сообщение, которое не может быть десереализовано.
 
 ## Методы
 
@@ -43,7 +43,7 @@ _Этот интерфейс также наследует свойства от
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -1,9 +1,6 @@
 ---
 title: GlobalEventHandlers.onfocus
 slug: Web/API/Window/focus_event
-translation_of: Web/API/GlobalEventHandlers/onfocus
-original_slug: Web/API/GlobalEventHandlers/onfocus
-browser-compat: api.GlobalEventHandlers.onfocus
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -14,7 +11,8 @@ L'évènement `focus` est déclenché lorsque la personne active le focus sur un
 
 Afin que `onfocus` soit déclenché sur les éléments qui ne sont pas des éléments `<input>`, il faut que ces derniers aient un attribut [`tabindex`](/fr/docs/Web/HTML/Global_attributes#attr-tabindex). Voir la section [Remettre l'accessibilité au clavier](/fr/docs/Learn/Accessibility/HTML#remettre_laccessibilité_au_clavier) pour plus de détails.
 
-> **Note :** Le gestionnaire d'évènement opposé à `onfocus` est [`onblur`](/fr/docs/Web/API/GlobalEventHandlers/onblur).
+> [!NOTE]
+> Le gestionnaire d'évènement opposé à `onfocus` est [`onblur`](/fr/docs/Web/API/Window/blur_event).
 
 ## Syntaxe
 
@@ -28,28 +26,28 @@ cible.onfocus = refFonction;
 
 ## Exemple
 
-Cet exemple utilise [`onblur`](/fr/docs/Web/API/GlobalEventHandlers/onblur) et `onfocus` pour changer le texte au sein d'un élément [`<input>`](/fr/docs/Web/HTML/Element/Input).
+Cet exemple utilise [`onblur`](/fr/docs/Web/API/Window/blur_event) et `onfocus` pour changer le texte au sein d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input).
 
 ### HTML
 
 ```html
-<input type="text" value="Cliquez ici">
+<input type="text" value="Cliquez ici" />
 ```
 
 ### JavaScript
 
 ```js
-let input = document.querySelector('input');
+let input = document.querySelector("input");
 
 input.onblur = inputBlur;
 input.onfocus = inputFocus;
 
 function inputBlur() {
-  input.value = 'Le focus a été perdu';
+  input.value = "Le focus a été perdu";
 }
 
 function inputFocus() {
-  input.value = 'Le focus est là';
+  input.value = "Le focus est là";
 }
 ```
 
@@ -70,4 +68,4 @@ Essayez de cliquer à l'intérieur et en dehors du champ pour voir son contenu �
 ## Voir aussi
 
 - L'évènement [`focus`](/fr/docs/Web/API/Element/focus_event)
-- Le gestionnaire d'évènement dual&nbsp;: [`GlobalEventHandlers.onblur`](/fr/docs/Web/API/GlobalEventHandlers/onblur)
+- Le gestionnaire d'évènement dual&nbsp;: [`GlobalEventHandlers.onblur`](/fr/docs/Web/API/Window/blur_event)

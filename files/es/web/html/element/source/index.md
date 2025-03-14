@@ -1,19 +1,23 @@
 ---
 title: <source>
 slug: Web/HTML/Element/source
-tags:
-  - Elemento
-  - HTML
-  - Media
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/source
-original_slug: Web/HTML/Elemento/source
 ---
 
-El **elemento HTML `<source>`** especifica recursos de medios múltiples para los elementos {{HTMLElement("picture")}}, {{HTMLElement("audio")}}, o {{HTMLElement("video")}}. Es un elemento vacío. Normalmente se utiliza para servir el mismo contenido multimedia en [varios formatos soportados por diferentes navegadores](/es/docs/Media_formats_supported_by_the_audio_and_video_elements).
+El **elemento HTML `<source>`** especifica recursos de medios múltiples para los elementos {{HTMLElement("picture")}}, {{HTMLElement("audio")}}, o {{HTMLElement("video")}}. Es un elemento vacío. Normalmente se utiliza para servir el mismo contenido multimedia en [varios formatos soportados por diferentes navegadores](/es/docs/Web/Media/Formats).
 
-{{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;source&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video controls width="250" height="200" muted>
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+```
 
 La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, por favor clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples)y envíenos una solicitud de pull.
 
@@ -21,7 +25,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/es/docs/Web/HTML/Content_categories"
           >Categorías de contenido</a
         >
       </th>
@@ -43,7 +47,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
         <div>
           Un elemento multimedia—{{HTMLElement("audio")}} o
           {{HTMLelement("video")}}—y se debe colocar antes que cualquier
-          <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+          <a href="/es/docs/HTML/Content_categories#Flow_content"
             >contenido de flujo</a
           >
           o elemento {{HTMLElement("track")}}.
@@ -68,14 +72,14 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("sizes")}} {{experimental_inline}}
-  - : Es una lista de tamaños del origen que describe el ancho renderizado final de la imagen representada por el origen. Cada tamaño de origen consiste de una lista separada por comas de pares de longitud de condición de medios. Esta información es utilizada por el navegador para determinar, antes de distribuir la página, qué imagen definida en {{htmlattrxref("srcset", "source")}} se utilizará.
+- `sizes` {{experimental_inline}}
+  - : Es una lista de tamaños del origen que describe el ancho renderizado final de la imagen representada por el origen. Cada tamaño de origen consiste de una lista separada por comas de pares de longitud de condición de medios. Esta información es utilizada por el navegador para determinar, antes de distribuir la página, qué imagen definida en [`srcset`](#srcset) se utilizará.
     El atributo `sizes` tiene un efecto solo cuando el elemento {{HTMLElement("source")}} es hijo directo de un elemento {{HTMLElement("picture")}}.
-- {{htmlattrdef("src")}}
+- `src`
   - : Es la ubicación del recurso multimedia, requerido por los elementos {{HTMLElement("audio")}} y {{HTMLElement("video")}}. El valor de este atributo es ignorado cuando el elemento `<source>` se coloca dentro de un elemento {{HTMLElement("picture")}}.
-- {{htmlattrdef("srcset")}} {{experimental_inline}}
+- `srcset` {{experimental_inline}}
 
   - : Una lista de una o más cadenas separadas por comas que indican un conjunto de posibles imágenes representadas por la fuente para que las utilice el navegador. Cada cadena se compone de:
 
@@ -87,35 +91,35 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
     El navegador elige la imagen más adecuada para mostrar en un momento determinado.
     El atributo `srcset` solo tiene efecto cuando el elemento {{HTMLElement("source")}} es hijo directo de un elemento {{HTMLElement("picture")}}.
 
-- {{htmlattrdef("type")}}
+- `type`
   - : El tipo MIME del recurso, opcionalmente con un parámetro `codecs`. Consultar [RFC 4281](https://tools.ietf.org/html/rfc4281)para obtener información sobre cómo especificar los códecs.
-- {{htmlattrdef("media")}} {{experimental_inline}}
-  - : [Consulta multimedia](/es/docs/CSS/Media_queries) de los medios destinados al recurso; esto solo debe usarse en un elemento {{HTMLElement("picture")}}.
+- `media` {{experimental_inline}}
+  - : [Consulta multimedia](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries) de los medios destinados al recurso; esto solo debe usarse en un elemento {{HTMLElement("picture")}}.
 
 Si el atributo `type` no se especifica, el tipo de medio se recupera del servidor y se verifica para ver si el agente de usuario puede manejarlo; si no se puede procesar, se comprueba el siguiente `<source>`. Si se especifica el atributo `type`, se compara con los tipos que puede presentar el agente de usuario y, si no se reconoce, el servidor ni siquiera recibe consultas; en su lugar, el siguiente elemento `<source>` se comprueba a la vez.
 
 ## Ejemplos
 
-Este ejemplo muestra cómo ofrecer un video en formato Ogg para usuarios cuyos navegadores admiten el formato Ogg, y un video en formato QuickTime para usuarios cuyos navegadores lo admiten. Si el navegador no admite los elementos `audio` o `video`, se muestra un aviso. Si el navegador admite los elementos pero no admite ninguno de los formatos especificados, se genera un evento `error` y los controles de medios predeterminados (si están habilitados) indicarán un error. Consulte también la lista de [formatos de medios compatibles con los elementos de audio y video](/es/docs/Media_formats_supported_by_the_audio_and_video_elements) en varios navegadores.
+Este ejemplo muestra cómo ofrecer un video en formato Ogg para usuarios cuyos navegadores admiten el formato Ogg, y un video en formato QuickTime para usuarios cuyos navegadores lo admiten. Si el navegador no admite los elementos `audio` o `video`, se muestra un aviso. Si el navegador admite los elementos pero no admite ninguno de los formatos especificados, se genera un evento `error` y los controles de medios predeterminados (si están habilitados) indicarán un error. Consulte también la lista de [formatos de medios compatibles con los elementos de audio y video](/es/docs/Web/Media/Formats) en varios navegadores.
 
 ```html
 <video controls>
-  <source src="foo.webm" type="video/webm">
-  <source src="foo.ogg" type="video/ogg">
-  <source src="foo.mov" type="video/quicktime">
+  <source src="foo.webm" type="video/webm" />
+  <source src="foo.ogg" type="video/ogg" />
+  <source src="foo.mov" type="video/quicktime" />
   Lo lamento; su navegador no soporta video HTML5.
 </video>
 ```
 
-Para obtener más ejemplos, consulte [Uso de audio y video en Firefox](/es/docs/Using_HTML5_audio_and_video).
+Para obtener más ejemplos, consulte [Uso de audio y video en Firefox](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content).
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compaibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.source")}}
+{{Compat}}
 
 ## Ver también
 

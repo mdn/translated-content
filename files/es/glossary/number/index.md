@@ -1,12 +1,9 @@
 ---
 title: Number
 slug: Glossary/Number
-tags:
-  - Glosario
-  - JavaScript
-translation_of: Glossary/Number
-original_slug: Glossary/Numero
 ---
+
+{{GlossarySidebar}}
 
 En {{Glossary("JavaScript")}}, **Number** es un tipo de datos numérico ([double-precision 64-bit floating point format (IEEE 754)](https://es.wikipedia.org/wiki/Formato_en_coma_flotante_de_doble_precisi%C3%B3n)). En otros lenguajes de programación puede existir diferentes tipos numéricos, por ejemplo: Integers, Floats, Doubles, or Bignums.
 
@@ -18,5 +15,5 @@ En {{Glossary("JavaScript")}}, **Number** es un tipo de datos numérico ([double
 
 ### Referencia Técnica
 
-- La estructura de datos de JavaScript: [Number](/es/docs/Web/JavaScript/Data_structures#Number_type)
+- La estructura de datos de JavaScript: [Number](/es/docs/Web/JavaScript/Data_structures#number_type)
 - El objeto global de JavaScript: {{jsxref("Number")}}

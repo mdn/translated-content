@@ -1,22 +1,35 @@
 ---
-title: '<small>: 덧붙임 글 요소'
+title: "<small>: 덧붙임 글 요소"
 slug: Web/HTML/Element/small
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/small
 ---
 
 {{HTMLSidebar}}
 
 **HTML `<small>`** **요소**는 덧붙이는 글이나, 저작권과 법률 표기 등의 작은 텍스트를 나타냅니다. 기본 상태에서 `<small>`은 자신의 콘텐츠를 한 사이즈 작은 글꼴(`small`에서 `x-small` 등)로 표시하지만, 스타일을 적용한 후에도 글씨 크기가 작을 필요는 없습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/small.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;small&gt;", "tabbed-shorter")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
+```html interactive-example
+<p>
+  MDN Web Docs is a learning platform for Web technologies and the software that
+  powers the Web.
+</p>
+
+<hr />
+
+<p>
+  <small
+    >The content is licensed under a Creative Commons Attribution-ShareAlike 2.5
+    Generic License.</small
+  >
+</p>
+```
+
+```css interactive-example
+small {
+  font-size: 0.7em;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -43,7 +56,7 @@ translation_of: Web/HTML/Element/small
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -76,8 +89,9 @@ translation_of: Web/HTML/Element/small
 ### 기본 사용법
 
 ```html
-<p>This is the first sentence.
- <small>This whole sentence is in small letters.</small>
+<p>
+  This is the first sentence.
+  <small>This whole sentence is in small letters.</small>
 </p>
 ```
 
@@ -86,9 +100,9 @@ translation_of: Web/HTML/Element/small
 ### CSS 예제
 
 ```html
-<p>This is the first sentence.
-  <span style="font-size:0.8em">This whole sentence is in small
-  letters.</span>
+<p>
+  This is the first sentence.
+  <span style="font-size:0.8em">This whole sentence is in small letters.</span>
 </p>
 ```
 
@@ -104,7 +118,7 @@ translation_of: Web/HTML/Element/small
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.small")}}
+{{Compat}}
 
 ## 같이 보기
 

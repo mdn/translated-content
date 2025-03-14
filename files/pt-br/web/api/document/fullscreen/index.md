@@ -9,7 +9,8 @@ A propriedade de somente leitura da interface **`fullscreen`** retorna se o docu
 
 Apesar dessa propriedade ser de somente leitura, ela não será executa se for modificada (mesmo em modo estrito); o setter não é um operador e não será modificado.
 
-> **Nota:** Desde que esta propriedade foi descontinuada, você pode determinar se o modo full-screen está ativo no documento checando se {{DOMxRef("Document.fullscreenElement")}} não é `null`.
+> [!NOTE]
+> Desde que esta propriedade foi descontinuada, você pode determinar se o modo full-screen está ativo no documento checando se {{DOMxRef("Document.fullscreenElement")}} não é `null`.
 
 ## Síntaxe
 
@@ -41,15 +42,13 @@ function isDocumentInFullScreenMode() {
 
 Se `fullscreenElement` não é `null`, retorna `true`, indicando se modo full-screen está sendo usado.
 
-## Específicações
+## Especificações
 
-| Specification                                                                                            | Status                           | Comment                                          |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------ |
-| {{SpecName("Fullscreen", "#dom-document-fullscreen", "Document.fullscreen")}} | {{Spec2("Fullscreen")}} | Definição inicial (como uma proprieda obsoleta). |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.fullscreen")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,7 +1,6 @@
 ---
 title: Document.referrer
 slug: Web/API/Document/referrer
-translation_of: Web/API/Document/referrer
 ---
 
 {{APIRef("DOM")}}링크를 통해 현재 페이지로 이동 시킨, 전 페이지의 URI 정보를 반환.
@@ -18,4 +17,4 @@ string = document.referrer;
 
 ## Specification
 
-- [DOM Level 2: referrer](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95229140)
+- [DOM Level 2: referrer](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95229140)

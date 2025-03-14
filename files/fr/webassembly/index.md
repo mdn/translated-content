@@ -1,14 +1,9 @@
 ---
 title: WebAssembly
 slug: WebAssembly
-tags:
-  - Landing
-  - WebAssembly
-  - wasm
-translation_of: WebAssembly
 ---
 
-{{WebAssemblySidebar}}{{SeeCompatTable}}
+{{WebAssemblySidebar}}
 
 WebAssembly est un nouveau type de code qui peut être exécuté dans un navigateur web moderne. C'est un langage bas niveau, semblable à l'assembleur permettant d'atteindre des performances proches des applications natives (par exemple écrites en C/C++) tout en fonctionnant sur le Web. WebAssembly est conçu pour fonctionner en lien avec JavaScript.
 
@@ -24,10 +19,10 @@ WebAssembly est conçu comme un standard web par le [groupe communautaire du W3C
 
 - [Les concepts de WebAssembly](/fr/docs/WebAssembly/Concepts)
   - : Découvrez les concepts clés de WebAssembly : ce que c'est, son utilité, l'intégration dans le Web et comment l'utiliser.
-- [Compiler du code C/C++ en WebAssembly](/fr/docs/WebAssembly/C_to_wasm)
+- [Compiler du code C/C++ en WebAssembly](/fr/docs/WebAssembly/C_to_Wasm)
   - : Du code écrit en C/C++ peut être compilé en WebAssembly grâce à des outils tels que [Emscripten](/fr/docs/Mozilla/Projects/Emscripten). Nous voyons ici comment cela fonctionne.
 - [Charger et exécuter du code WebAssembly](/fr/docs/WebAssembly/Loading_and_running)
-  - : Dans cet article, on aborde comment récupérer, compiler et instancier en associant l'API [WebAssembly JavaScript](/fr/docs/Web/JavaScript/Reference/Objets_globaux/WebAssembly) avec les API [Fetch](/fr/docs/Web/API/Fetch_API) ou [XHR](/fr/docs/Web/API/XMLHttpRequest).
+  - : Dans cet article, on aborde comment récupérer, compiler et instancier en associant l'API [WebAssembly JavaScript](/fr/docs/WebAssembly/JavaScript_interface) avec les API [Fetch](/fr/docs/Web/API/Fetch_API) ou [XHR](/fr/docs/Web/API/XMLHttpRequest).
 - [Mettre en cache des modules WebAssembly compilés](/fr/docs/WebAssembly/Caching_modules)
   - : La mise en cache de grands modules WebAssembly côté client permet d'améliorer les performances au démarrage. Dans cet article, on voit comment utiliser [IndexedDB](/fr/docs/Web/API/IndexedDB_API) pour cela.
 - [Utiliser l'API JavaScript de WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
@@ -68,10 +63,6 @@ WebAssembly est conçu comme un standard web par le [groupe communautaire du W3C
 ## Spécifications
 
 {{Specifications}}
-
-## Compatibilité des navigateurs
-
-{{Compat}}
 
 ## Voir aussi
 

@@ -5,7 +5,7 @@ slug: Web/API/Page_Visibility_API
 
 {{DefaultAPISidebar("Page Visibility API")}}
 
-A **API de visibilidade de página** deixa você saber quando uma página da web está visível ou em foco. Com a navegação em abas, existem razões para que quaisquer páginas da web que estejam sendo executadas em segundo plano e não visíveis para o usuário. Quando o usuário minimiza a página ou muda para outra aba, a API envia um evento {{event("visibilitychange")}} informando o estado de visibilidade da página. Você pode detectar o evento e realizar algumas ações ou modificar o seu comportamento. Por exemplo, se a sua aplicação web estiver reproduzindo um video, ela pode pausar durante o momento que o usuário estiver olhando para outra aba, e reproduz novamente quando o usuário retorna para a aba. O usuário não perde nenhuma parte do video e pode continuar assistindo.
+A **API de visibilidade de página** deixa você saber quando uma página da web está visível ou em foco. Com a navegação em abas, existem razões para que quaisquer páginas da web que estejam sendo executadas em segundo plano e não visíveis para o usuário. Quando o usuário minimiza a página ou muda para outra aba, a API envia um evento [`visibilitychange`](/pt-BR/docs/Web/API/Document/visibilitychange_event) informando o estado de visibilidade da página. Você pode detectar o evento e realizar algumas ações ou modificar o seu comportamento. Por exemplo, se a sua aplicação web estiver reproduzindo um video, ela pode pausar durante o momento que o usuário estiver olhando para outra aba, e reproduz novamente quando o usuário retorna para a aba. O usuário não perde nenhuma parte do video e pode continuar assistindo.
 
 ### Benefícios
 
@@ -30,7 +30,8 @@ O exemplo, que pausa o video quando você troca para outra aba e volta a reprodu
 ```js
 // Configura o nome da propriedade hidden e o evento de mudança para visibilidade
 var hidden, visibilityChange;
-if (typeof document.hidden !== "undefined") { // Suporte para Opera 12.10 e Firefox 18 em diante
+if (typeof document.hidden !== "undefined") {
+  // Suporte para Opera 12.10 e Firefox 18 em diante
   hidden = "hidden";
   visibilityChange = "visibilitychange";
 } else if (typeof document.mozHidden !== "undefined") {
@@ -57,34 +58,54 @@ function handleVisibilityChange() {
 }
 
 // Alerta se o navegador não suporta addEventListener ou a API de visibilidade da página
-if (typeof document.addEventListener === "undefined" ||
-  typeof document[hidden] === "undefined") {
-  alert("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
+if (
+  typeof document.addEventListener === "undefined" ||
+  typeof document[hidden] === "undefined"
+) {
+  alert(
+    "This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.",
+  );
 } else {
   // Manipula o evento de mudança da visibilidade da página
   document.addEventListener(visibilityChange, handleVisibilityChange, false);
 
   // Reverte para o favicon existente para o site quando a página é fechada;
   // caso contrário, o favicon continua como paused.png
-  window.addEventListener("unload", function(){
-    favicon.change("/favicon.ico");
-  }, false);
+  window.addEventListener(
+    "unload",
+    function () {
+      favicon.change("/favicon.ico");
+    },
+    false,
+  );
 
   // Quando o video é pausado, configura o favicon.
   // Isso mostra a imagem paused.png
-  videoElement.addEventListener("pause", function(){
-    favicon.change("images/paused.png");
-  }, false);
+  videoElement.addEventListener(
+    "pause",
+    function () {
+      favicon.change("images/paused.png");
+    },
+    false,
+  );
 
   // Quando o video é reproduzido, configura o favicon.
-  videoElement.addEventListener("play", function(){
-    favicon.change("images/playing.png");
-  }, false);
+  videoElement.addEventListener(
+    "play",
+    function () {
+      favicon.change("images/playing.png");
+    },
+    false,
+  );
 
   // Configura o título da aba com o tempo atual do video
-  videoElement.addEventListener("timeupdate", function(){
-    document.title = Math.floor(videoElement.currentTime) + " segundo(s)";
-  }, false);
+  videoElement.addEventListener(
+    "timeupdate",
+    function () {
+      document.title = Math.floor(videoElement.currentTime) + " segundo(s)";
+    },
+    false,
+  );
 }
 ```
 
@@ -108,7 +129,7 @@ Retorna `true` se a página está escondida para o usuário, caso contrário, re
 function handleVisibilityChange() {
   if (document.hidden) {
     pauseSimulation();
-  } else  {
+  } else {
     startSimulation();
   }
 }
@@ -122,15 +143,13 @@ Os estados de visibilidade de {{HTMLElement("iframe")}} são os mesmos do docume
 
 ## Especificações
 
-| Especificação                                    | Estado                                       | Comentário |
-| ------------------------------------------------ | -------------------------------------------- | ---------- |
-| {{SpecName('Page Visibility API')}} | {{Spec2('Page Visibility API')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.visibilityState")}}
+{{Compat}}
 
 ## Veja também
 
-- Descrição da [API de Visibilidade de Página](http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx) do IEBlog.
-- Descrição da [API de visibilidade de Página](http://code.google.com/chrome/whitepapers/pagevisibility.html) do Google
+- Descrição da [API de Visibilidade de Página](https://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx) do IEBlog.
+- Descrição da [API de visibilidade de Página](https://code.google.com/chrome/whitepapers/pagevisibility.html) do Google

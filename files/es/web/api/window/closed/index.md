@@ -1,13 +1,6 @@
 ---
 title: Window.closed
 slug: Web/API/Window/closed
-tags:
-  - API
-  - HTML DOM
-  - Propiedad
-  - Referencia
-  - Ventana
-translation_of: Web/API/Window/closed
 ---
 
 {{APIRef}}
@@ -33,12 +26,12 @@ isClosed = windowRef.closed;
 
 ### Cambiar la URL de una ventana desde una ventana emergente
 
-El siguiente ejemplo demuestra cómo una ventana emergente puede cambiar la URL de la ventana que la abrió. Antes de intentar cambiar la URL, verifica que la ventana actual tiene referencia a la ventana que la abrió usando la propiedad [window.opener](/es/docs/DOM/window.opener) y que esa ventana no está cerrada:
+El siguiente ejemplo demuestra cómo una ventana emergente puede cambiar la URL de la ventana que la abrió. Antes de intentar cambiar la URL, verifica que la ventana actual tiene referencia a la ventana que la abrió usando la propiedad [window.opener](/es/docs/Web/API/Window/opener) y que esa ventana no está cerrada:
 
 ```js
 // Verifica que opener existe y no esté cerrado
 if (window.opener && !window.opener.closed) {
-  window.opener.location.href = "http://www.mozilla.org";
+  window.opener.location.href = "https://www.mozilla.org";
 }
 ```
 
@@ -57,7 +50,7 @@ function refreshPopupWindow() {
     popupWindow.location.reload(true);
   } else {
     // Abre una nueva ventana emergente
-    popupWindow = window.open("popup.html","dataWindow");
+    popupWindow = window.open("popup.html", "dataWindow");
   }
 }
 ```

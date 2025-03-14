@@ -1,11 +1,6 @@
 ---
 title: text-transform
 slug: Web/CSS/text-transform
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-transform
 ---
 
 {{CSSRef}}
@@ -49,7 +44,8 @@ text-transform: unset;
 
   - : En utilisant ce mot-clé, la première lettre de chaque mot sera affichée en capitale. Les autres caractères ne seront pas modifiés et conserveront ainsi la forme originale, contenue dans le texte de l'élément. Ici, une lettre peut être n'importe quel caractère Unicode qui fait partie des catégories génériques Lettre. Cela exclue donc les symboles de ponctuations qui peuvent être utilisés en début de mot.
 
-    > **Note :** Le mot-clé capitalize n'était pas complètement spécifié avec CSS 1 et CSS 2.1. Il y avait certaines différences entre les navigateurs : Firefox considèrait que - et \_ étaient des lettres ; Webkit et Gecko considéraient que les symboles lettrés comme ⓐ étaient de vraies lettres ; Internet Explorer 9 était le plus proche de la définition donnée par CSS2 mais il y avait certains cas étranges. Grâce à CSS Text Level 3, ces ambiguités sont levées. Dans le tableau, la ligne capitalize traduit le support de cette spécification.
+    > [!NOTE]
+    > Le mot-clé capitalize n'était pas complètement spécifié avec CSS 1 et CSS 2.1. Il y avait certaines différences entre les navigateurs : Firefox considèrait que - et \_ étaient des lettres ; Webkit et Gecko considéraient que les symboles lettrés comme ⓐ étaient de vraies lettres ; Internet Explorer 9 était le plus proche de la définition donnée par CSS2 mais il y avait certains cas étranges. Grâce à CSS Text Level 3, ces ambiguités sont levées. Dans le tableau, la ligne capitalize traduit le support de cette spécification.
 
 - `uppercase`
   - : En utilisant ce mot-clé, tous les caractères seront écrits en capitales.

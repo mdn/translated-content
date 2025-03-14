@@ -5,11 +5,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/random
 
 {{JSRef}}
 
-函數 **`Math.random()`** 會回傳一個偽隨機小數 (pseudo-random) 介於 0 到 1 之間(包含 0，不包含 1) ，大致符合數學與統計上的均勻分佈 (uniform distribution) ，您可以選定想要的數字區間，它會透過演算法被產生並且不允許使用者自行跳選或重設成特定數字。{{EmbedInteractiveExample("pages/js/math-random.html")}}
+函數 **`Math.random()`** 會回傳一個偽隨機小數 (pseudo-random) 介於 0 到 1 之間(包含 0，不包含 1) ，大致符合數學與統計上的均勻分佈 (uniform distribution) ，你可以選定想要的數字區間，它會透過演算法被產生並且不允許使用者自行跳選或重設成特定數字。{{EmbedInteractiveExample("pages/js/math-random.html")}}
 
 > **備註：** `Math.random()` 所產生的偽隨機小數不符合加密學安全性要求。_請勿使用於任何加密、資安相關領域。_
 >
-> _如有加密需求建議參考 Web Crypto API_[`window.crypto.getRandomValues()`](/zh-TW/docs/Web/API/RandomSource/getRandomValues)
+> _如有加密需求建議參考 Web Crypto API_[`window.crypto.getRandomValues()`](/zh-TW/docs/Web/API/Crypto/getRandomValues)
 
 ## 語法
 
@@ -55,7 +55,8 @@ function getRandomInt(min, max) {
 }
 ```
 
-> **備註：** might be tempting to use `Math.round()` to accomplish that, but doing so would cause your random numbers to follow a non-uniform distribution, which may not be acceptable for your needs.
+> [!NOTE]
+> might be tempting to use `Math.round()` to accomplish that, but doing so would cause your random numbers to follow a non-uniform distribution, which may not be acceptable for your needs.
 
 ### Getting a random integer between two values, inclusive
 
@@ -79,4 +80,4 @@ function getRandomIntInclusive(min, max) {
 
 ## 其他參考資料
 
-- [`window.crypto.getRandomValues()`](/zh-TW/docs/Web/API/RandomSource/getRandomValues)
+- [`window.crypto.getRandomValues()`](/zh-TW/docs/Web/API/Crypto/getRandomValues)

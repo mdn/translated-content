@@ -1,6 +1,9 @@
 ---
-title: 'HTMLInputElement: selectionchange イベント'
+title: "HTMLInputElement: selectionchange イベント"
+short-title: selectionchange
 slug: Web/API/HTMLInputElement/selectionchange_event
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef}}{{SeeCompatTable}}
@@ -8,32 +11,25 @@ slug: Web/API/HTMLInputElement/selectionchange_event
 **`selectionchange`** は[選択 API](/ja/docs/Web/API/Selection) のイベントで、 {{HTMLElement("input")}} 要素の中でテキストの選択状態が変化したときに発行されます。
 これは、文字単位の選択範囲位が変化した場合も、キャレットが移動したときも含みます。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>バブリング</th>
-      <td>はい</td>
-    </tr>
-    <tr>
-      <th>キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th>インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th>イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onselectionchange", "onselectionchange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可です。
 
-このイベントは通常 {{HTMLElement("input")}} 上にイベントリスナーを追加し、ハンドラー関数内で {{domxref("HTMLInputElement")}} の `selectionStart`, `selectionEnd`, `selectionDirection` の各プロパティを読み取ることで処理します。
+このイベントは通常 {{HTMLElement("input")}} 上にイベントリスナーを追加し、ハンドラー関数内で {{domxref("HTMLInputElement")}} の `selectionStart`、`selectionEnd`、`selectionDirection` の各プロパティを読み取ることで処理します。
 
-また、グローバルな {{domxref("GlobalEventHandlers.onselectionchange", "onselectionchange")}} イベントハンドラーにリスナーを追加し、ハンドラー関数内で {{domxref("Document.getSelection()")}} を使って{{domxref("Selection", "選択状態", "", 1)}}を得ることもできます。しかし、これはテキストの選択範囲の変更を取得するのにはあまり便利ではありません。
+また、`onselectionchange` イベントハンドラーにリスナーを追加し、ハンドラー関数内で {{domxref("Document.getSelection()")}} を使って{{domxref("Selection", "選択状態", "", 1)}}を得ることもできます。しかし、これはテキストの選択範囲の変更を取得するのにはあまり便利ではありません。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("selectionchange", (event) => {});
+
+onselectionchange = (event) => {};
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
@@ -42,7 +38,12 @@ slug: Web/API/HTMLInputElement/selectionchange_event
 ### HTML
 
 ```html
-<div>Enter and select text here:<br><input id="mytext" rows="2" cols="20"></div>
+<div>
+  こちらにテキストを入力して選択してください:<br /><input
+    id="mytext"
+    rows="2"
+    cols="20" />
+</div>
 <div>selectionStart: <span id="start"></span></div>
 <div>selectionEnd: <span id="end"></span></div>
 <div>selectionDirection: <span id="direction"></span></div>
@@ -71,7 +72,3 @@ myinput.addEventListener("selectionchange", () => {
 ## ブラウザーの互換性
 
 {{Compat}}
-
-## 関連情報
-
-- {{domxref("GlobalEventHandlers.onselectionchange")}}

@@ -1,5 +1,5 @@
 ---
-title: ':last-child'
+title: :last-child
 slug: Web/CSS/:last-child
 ---
 
@@ -15,7 +15,8 @@ p:last-child {
 }
 ```
 
-> **Nota:** Como se definió originalmente, el elemento seleccionado tenía que tener un padre. Comenzando con el Nivel 4 de Selectores, esto ya no es necesario.
+> [!NOTE]
+> Como se definió originalmente, el elemento seleccionado tenía que tener un padre. Comenzando con el Nivel 4 de Selectores, esto ya no es necesario.
 
 ## Sintaxis
 
@@ -61,7 +62,8 @@ p:last-child {
 <ul>
   <li>Artículo 1</li>
   <li>Artículo 2</li>
-  <li>Artículo 3
+  <li>
+    Artículo 3
     <ul>
       <li>Artículo 3.1</li>
       <li>Artículo 3.2</li>
@@ -94,7 +96,7 @@ ul li:last-child {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.last-child")}}
+{{Compat}}
 
 ## Ver también
 

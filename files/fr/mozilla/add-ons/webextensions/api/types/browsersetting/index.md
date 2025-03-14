@@ -1,25 +1,15 @@
 ---
 title: BrowserSetting
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting
-tags:
-  - API
-  - Add-ons
-  - BrowserSetting
-  - Extensions
-  - Reference
-  - Type
-  - Types
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un `BrowserSetting` est un objet représentant un paramètre de navigateur.
 
 Il fournit des méthodes pour définir et obtenir la valeur sous-jacente du paramètre, pour effacer tout changement que vous avez apporté et pour écouter les modifications apportées à sa valeur.
 
-Notez que si cet objet est basé sur le type [ChromeSetting](https://developer.chrome.com/extensions/types#type-ChromeSetting), cet objet ne fait pas de distinction entre le réglage de la valeur dans les fenêtres de navigation privées. Cela signifie que toutes les parties de l'API relatives à la navigation privée (telles que l'option `scope` de `ChromeSetting.set()`) ne sont pas implémentées.
+Notez que si cet objet est basé sur le type [ChromeSetting](https://developer.chrome.com/docs/extensions/reference/api/types#type-ChromeSetting), cet objet ne fait pas de distinction entre le réglage de la valeur dans les fenêtres de navigation privées. Cela signifie que toutes les parties de l'API relatives à la navigation privée (telles que l'option `scope` de `ChromeSetting.set()`) ne sont pas implémentées.
 
 ## Méthodes
 
@@ -35,17 +25,15 @@ Notez que si cet objet est basé sur le type [ChromeSetting](https://developer.c
 - {{WebExtAPIRef("types.BrowserSetting.onChange")}}
   - : Définit lorsque la valeur du paramètre change.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-## Browser compatibility
-
-{{Compat("webextensions.api.types.BrowserSetting")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/extensions/types).
+> Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types).
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

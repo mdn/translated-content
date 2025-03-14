@@ -1,15 +1,6 @@
 ---
 title: Мета-программирование
 slug: Web/JavaScript/Guide/Meta_programming
-tags:
-  - Guide
-  - JavaScript
-  - Meta
-  - Meta programming
-  - Proxy
-  - Reflect
-  - Метапрограммирование
-translation_of: Web/JavaScript/Guide/Meta_programming
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}
@@ -22,9 +13,10 @@ translation_of: Web/JavaScript/Guide/Meta_programming
 
 ```js
 var handler = {
-  get: function(target, name) {
+  get: function (target, name) {
     return name in target ? target[name] : 42;
-}};
+  },
+};
 var p = new Proxy({}, handler);
 p.a = 1;
 console.log(p.a, p.b); // 1, 42
@@ -38,7 +30,7 @@ console.log(p.a, p.b); // 1, 42
 
 В разговоре о функциях объекта `Proxy` применимы следующие термины:
 
-- {{jsxref("Global_Objects/Proxy/handler","handler","","true")}} (обработчик)
+- {{jsxref("Global_Objects/Proxy/handler","handler","",1)}} (обработчик)
   - : Объект - обёртка, содержащий в себе функции-ловушки.
 - ловушки (traps)
   - : Методы, реализующие доступ к свойствам. В своей концепции они аналогичны методам перехвата(hooking) в операционных системах.
@@ -49,7 +41,7 @@ console.log(p.a, p.b); // 1, 42
 
 ## Обработчики и ловушки
 
-В следующей таблице перечислены ловушки, доступные для использования в объекте `Proxy`. Смотрите подробные объяснения и примеры в [документации](/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler).
+В следующей таблице перечислены ловушки, доступные для использования в объекте `Proxy`. Смотрите подробные объяснения и примеры в [документации](/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy).
 
 <table class="standard-table">
   <thead>
@@ -363,37 +355,40 @@ console.log(p.a, p.b); // 1, 42
 Метод {{jsxref("Proxy.revocable()")}} создаёт отзываемый объект `Proxy`. Такой прокси объект может быть отозван функцией `revoke`, которая отключает все ловушки-обработчики. После этого любые операции над прокси объектом вызовут ошибку {{jsxref("TypeError")}}.
 
 ```js
-var revocable = Proxy.revocable({}, {
-  get: function(target, name) {
-    return '[[' + name + ']]';
-  }
-});
+var revocable = Proxy.revocable(
+  {},
+  {
+    get: function (target, name) {
+      return "[[" + name + "]]";
+    },
+  },
+);
 var proxy = revocable.proxy;
 console.log(proxy.foo); // "[[foo]]"
 
 revocable.revoke();
 
-console.log(proxy.foo);  // ошибка TypeError
-proxy.foo = 1;           // снова ошибка TypeError
-delete proxy.foo;        // опять TypeError
-typeof proxy;            // "object", для метода typeof нет ловушек
+console.log(proxy.foo); // ошибка TypeError
+proxy.foo = 1; // снова ошибка TypeError
+delete proxy.foo; // опять TypeError
+typeof proxy; // "object", для метода typeof нет ловушек
 ```
 
 ## Рефлексия
 
-{{jsxref("Reflect")}} это встроенный объект, предоставляющий методы для перехватываемых операций JavaScript. Это те же самые методы, что имеются в {{jsxref("Global_Objects/Proxy/handler","обработчиках Proxy","","true")}}. Объект `Reflect` не является функцией.
+{{jsxref("Reflect")}} это встроенный объект, предоставляющий методы для перехватываемых операций JavaScript. Это те же самые методы, что имеются в {{jsxref("Global_Objects/Proxy/handler","обработчиках Proxy","",1)}}. Объект `Reflect` не является функцией.
 
 `Reflect` помогает при пересылке стандартных операций из обработчика к целевому объекту.
 
 Например, метод {{jsxref("Reflect.has()")}} это тот же [`оператор in`](/ru/docs/Web/JavaScript/Reference/Operators/in) но в виде функции:
 
 ```js
-Reflect.has(Object, 'assign'); // true
+Reflect.has(Object, "assign"); // true
 ```
 
 ### Улучшенная функция `apply`
 
-В ES5 обычно используется метод {{jsxref("Function.prototype.apply()")}} для вызова функции в определённом контексте (с определённым `this)` и с параметрами, заданными в виде массива (или [массива-подобного объекта](/ru/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)).
+В ES5 обычно используется метод {{jsxref("Function.prototype.apply()")}} для вызова функции в определённом контексте (с определённым `this)` и с параметрами, заданными в виде массива (или [массива-подобного объекта](/ru/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
 
 ```js
 Function.prototype.apply.call(Math.floor, undefined, [1.75]);
@@ -408,10 +403,10 @@ Reflect.apply(Math.floor, undefined, [1.75]);
 Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
 // "hello"
 
-Reflect.apply(RegExp.prototype.exec, /ab/, ['confabulation']).index;
+Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index;
 // 4
 
-Reflect.apply(''.charAt, 'ponies', [3]);
+Reflect.apply("".charAt, "ponies", [3]);
 // "i"
 ```
 

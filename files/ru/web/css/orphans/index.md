@@ -1,17 +1,11 @@
 ---
 title: orphans
 slug: Web/CSS/orphans
-tags:
-  - Вёрстка
-  - печать
-  - разрыв страницы
-  - фрагментация
-translation_of: Web/CSS/orphans
 ---
 
 {{CSSRef}}
 
-Свойство [CSS](/ru/docs/CSS) `orphans` устанавливает _минимальное_ число строк в блочном контейнере, которое должно быть показано _внизу_ [страницы](/ru/docs/Web/CSS/Paged_Media), региона или [столбца](/ru/docs/Web/CSS/CSS_Columns).
+Свойство [CSS](/ru/docs/Web/CSS) `orphans` устанавливает _минимальное_ число строк в блочном контейнере, которое должно быть показано _внизу_ [страницы](/ru/docs/Web/CSS/CSS_paged_media), региона или [столбца](/ru/docs/Web/CSS/CSS_multicol_layout).
 
 ```css
 /* <integer> значения */
@@ -24,7 +18,8 @@ orphans: initial;
 orphans: unset;
 ```
 
-> **Примечание:** В типографии, _orphan_ это первая линия абзаца, которая отображается внизу страницы. (Абзац продолжается на следующей странице.)
+> [!NOTE]
+> В типографии, _orphan_ это первая линия абзаца, которая отображается внизу страницы. (Абзац продолжается на следующей странице.)
 
 {{cssinfo}}
 
@@ -46,8 +41,14 @@ orphans: unset;
 ```html
 <div>
   <p>This is the first paragraph containing some text.</p>
-  <p>This is the second paragraph containing some more text than the first one. It is used to demonstrate how widows work.</p>
-  <p>This is the third paragraph. It has a little bit more text than the first one.</p>
+  <p>
+    This is the second paragraph containing some more text than the first one.
+    It is used to demonstrate how widows work.
+  </p>
+  <p>
+    This is the third paragraph. It has a little bit more text than the first
+    one.
+  </p>
 </div>
 ```
 
@@ -82,11 +83,11 @@ p:first-child {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - {{cssxref("widows")}}
-- [Paged media](/ru/docs/Web/CSS/Paged_Media)
+- [Paged media](/ru/docs/Web/CSS/CSS_paged_media)

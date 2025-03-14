@@ -1,25 +1,51 @@
 ---
 title: background-color
 slug: Web/CSS/background-color
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Graphics
-  - HTML Colors
-  - HTML Styles
-  - Layout
-  - Reference
-  - Styles
-  - Styling HTML
-translation_of: Web/CSS/background-color
 ---
 
 {{CSSRef}}
 
-[CSS](/en/CSS) **`background-color`** 속성은 요소의 배경 색을 지정합니다.
+[CSS](/en-US/CSS) **`background-color`** 속성은 요소의 배경 색을 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/background-color.html")}}
+{{InteractiveExample("CSS Demo: background-color")}}
+
+```css interactive-example-choice
+background-color: brown;
+```
+
+```css interactive-example-choice
+background-color: #74992e;
+```
+
+```css interactive-example-choice
+background-color: rgb(255, 255, 128);
+```
+
+```css interactive-example-choice
+background-color: rgba(255, 255, 128, 0.5);
+```
+
+```css interactive-example-choice
+background-color: hsl(50, 33%, 25%);
+```
+
+```css interactive-example-choice
+background-color: hsla(50, 33%, 25%, 0.75);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 ## 구문
 
@@ -29,20 +55,20 @@ background-color: red;
 background-color: indigo;
 
 /* 16진수 값 */
-background-color: #bbff00;    /* 완전 불투명 */
-background-color: #bf0;       /* 완전 불투명 단축 */
-background-color: #11ffee00;  /* 완전 투명 */
-background-color: #1fe0;      /* 완전 투명 단축 */
-background-color: #11ffeeff;  /* 완전 불투명 */
-background-color: #1fef;      /* 완전 불투명 단축 */
+background-color: #bbff00; /* 완전 불투명 */
+background-color: #bf0; /* 완전 불투명 단축 */
+background-color: #11ffee00; /* 완전 투명 */
+background-color: #1fe0; /* 완전 투명 단축 */
+background-color: #11ffeeff; /* 완전 불투명 */
+background-color: #1fef; /* 완전 불투명 단축 */
 
 /* RGB 값 */
-background-color: rgb(255, 255, 128);        /* 완전 불투명 */
-background-color: rgba(117, 190, 218, 0.5);  /* 50% 불투명도 */
+background-color: rgb(255, 255, 128); /* 완전 불투명 */
+background-color: rgba(117, 190, 218, 0.5); /* 50% 불투명도 */
 
 /* HSL 값 */
-background-color: hsl(50, 33%, 25%);         /* 완전 불투명 */
-background-color: hsla(50, 33%, 25%, 0.75);  /* 75% 불투명도 */
+background-color: hsl(50, 33%, 25%); /* 완전 불투명 */
+background-color: hsla(50, 33%, 25%, 0.75); /* 75% 불투명도 */
 
 /* 특별 키워드 값 */
 background-color: currentcolor;
@@ -84,17 +110,11 @@ background-color: unset;
 ### HTML
 
 ```html
-<div class="exampleone">
- Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exampleone">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="exampletwo">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exampletwo">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="examplethree">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="examplethree">Lorem ipsum dolor sit amet, consectetuer</div>
 ```
 
 ### CSS
@@ -106,13 +126,13 @@ background-color: unset;
 }
 
 .exampletwo {
-  background-color: rgb(153,102,153);
-  color: rgb(255,255,204);
+  background-color: rgb(153, 102, 153);
+  color: rgb(255, 255, 204);
 }
 
 .examplethree {
   background-color: #777799;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 ```
 
@@ -120,13 +140,9 @@ background-color: unset;
 
 {{EmbedLiveSample("예제","200","150")}}
 
-## 명세
+## 명세서
 
-| 명세                                                                                                             | 주석                                                                                                                                                           | 피드백                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| {{ SpecName('CSS3 Backgrounds', '#background-color', 'background-color') }}             | Though technically removing the `transparent` keyword, this doesn't change anything as it has been incorporated as a true {{cssxref("&lt;color&gt;")}} | [Backgrounds Level 3 GitHub issues](https://github.com/w3c/csswg-drafts/labels/css-backgrounds-3) |
-| {{ SpecName('CSS2.1', 'colors.html#propdef-background-color', 'background-color') }} | No change.                                                                                                                                                     |                                                                                                   |
-| {{ SpecName('CSS1', '#background-color', 'background-color') }}                             |                                                                                                                                                                |                                                                                                   |
+{{Specifications}}
 
 ## 브라우저 호환성
 
@@ -134,7 +150,7 @@ background-color: unset;
 
 ## 더 보기
 
-- [한 번에 여러 배경 사용하기](/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [한 번에 여러 배경 사용하기](/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
 - {{cssxref("&lt;color&gt;")}} 자료형
 - 색상 관련 다른 속성: {{cssxref("color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- [CSS로 HTML 요소에 색입히기](/ko/docs/Web/HTML/Applying_color)
+- [CSS로 HTML 요소에 색입히기](/ko/docs/Web/CSS/CSS_colors/Applying_color)

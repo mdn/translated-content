@@ -1,11 +1,71 @@
 ---
 title: inset-inline-start
 slug: Web/CSS/inset-inline-start
+l10n:
+  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
 {{CSSRef}}
 
 **`inset-inline-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素における行頭からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的なオフセットに対応付けられます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+
+{{InteractiveExample("CSS Demo: inset-inline-start")}}
+
+```css interactive-example-choice
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container" id="example-element">
+    <div id="abspos">
+      I am absolutely positioned with inset-inline-start: 50px
+    </div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 0.75em solid;
+  padding: 0.75em;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  unicode-bidi: bidi-override;
+}
+
+#abspos {
+  background-color: yellow;
+  color: black;
+  border: 3px solid red;
+  position: absolute;
+  inset-inline-start: 50px;
+  inline-size: 140px;
+  min-block-size: 80px;
+}
+```
+
+## 構文
 
 ```css
 /* <length> 値 */
@@ -22,12 +82,11 @@ inset-inline-start: auto;
 inset-inline-start: inherit;
 inset-inline-start: initial;
 inset-inline-start: revert;
+inset-inline-start: revert-layer;
 inset-inline-start: unset;
 ```
 
 `inset-inline-start` と {{cssxref("inset-inline-end")}} の一括指定は {{cssxref("inset-inline")}} です。
-
-## 構文
 
 ### 値
 
@@ -43,7 +102,7 @@ inset-inline-start: unset;
 
 ## 例
 
-<h3 id="Setting_inline_start_offset">インライン方向の先頭のオフセットの設定</h3>
+### インライン方向の先頭のオフセットの設定
 
 #### HTML
 
@@ -72,7 +131,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_inline_start_offset", 140, 140)}}
+{{EmbedLiveSample("インライン方向の先頭のオフセットの設定", 140, 140)}}
 
 ## 仕様書
 

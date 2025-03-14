@@ -1,27 +1,75 @@
 ---
-title: row-gap (grid-row-gap)
+title: row-gap
 slug: Web/CSS/row-gap
+l10n:
+  sourceCommit: 353711e2f11b92232b532c82b10de2afca75f648
 ---
 
 {{CSSRef}}
 
 **`row-gap`** 该 [CSS](/zh-CN/docs/Web/CSS) 属性用来设置行元素之间的间隙（{{glossary("gutters","gutter")}}）大小。
 
-{{EmbedInteractiveExample("pages/css/row-gap.html")}}
+规范的早期版本将此属性命名为 `grid-row-gap`，为了保持与旧网站的兼容性，浏览器仍然会将 `grid-row-gap` 视为 `row-gap` 的别名。
+
+{{InteractiveExample("CSS Demo: row-gap")}}
+
+```css interactive-example-choice
+row-gap: 0;
+```
+
+```css interactive-example-choice
+row-gap: 1ch;
+```
+
+```css interactive-example-choice
+row-gap: 1em;
+```
+
+```css interactive-example-choice
+row-gap: 20px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 200px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## 语法
 
 ```css
-/* <length> values */
+/* <length> 值 */
 row-gap: 20px;
 row-gap: 1em;
 row-gap: 3vmin;
 row-gap: 0.5cm;
 
-/* <percentage> value */
+/* <percentage> 值 */
 row-gap: 10%;
 
-/* Global values */
+/* 全局值 */
 row-gap: inherit;
 row-gap: initial;
 row-gap: revert;
@@ -44,7 +92,7 @@ row-gap: unset;
 
 ## 示例
 
-### Flex 布局
+### 弹性布局
 
 #### HTML
 
@@ -80,14 +128,17 @@ row-gap: unset;
 
 #### 结果
 
-{{EmbedLiveSample('Flex 布局', "auto", "120px")}}
+{{EmbedLiveSample('弹性布局', "auto", "120px")}}
 
-### Grid 布局
+### 网格布局
 
 #### HTML
 
 ```html
 <div id="grid">
+  <div></div>
+  <div></div>
+  <div></div>
   <div></div>
   <div></div>
   <div></div>
@@ -100,7 +151,7 @@ row-gap: unset;
 #grid {
   display: grid;
   height: 200px;
-  grid-template-columns: 200px;
+  grid-template-columns: 150px 1fr;
   grid-template-rows: repeat(3, 1fr);
   row-gap: 20px;
 }
@@ -113,11 +164,11 @@ row-gap: unset;
 
 #### 结果
 
-{{EmbedLiveSample('Grid 布局', 'auto', 120)}}
+{{EmbedLiveSample('网格布局', 'auto', 120)}}
 
 ## 规范
 
-{{Specifications("css.properties.row-gap.grid_context")}}
+{{Specifications}}
 
 ## 浏览器兼容性
 
@@ -126,4 +177,4 @@ row-gap: unset;
 ## 参见
 
 - 相关 CSS 属性：{{cssxref("column-gap")}}、{{cssxref("gap")}}
-- 网格布局指南：_[网格布局基本概念 - 网格间距](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#网格间距)_
+- 网格布局指南：_[网格布局基本概念——网格间距](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#网格间距)_

@@ -1,12 +1,14 @@
 ---
-title: Encapsulation
+title: 封装
 slug: Glossary/Encapsulation
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-Encapsulation（封装）是指将数据与函数打包到一个组件（例如，类）中，使得外部对于该组件对象的访问如同一个“黑盒子”一样。如此一来，类的使用者只需知道它的接口（即类对外暴露的数据与方法），而无需关心其内部是如何实现的。
+{{GlossarySidebar}}
 
-## 了解更多
+**封装**是将数据和{{glossary("function", "函数")}}打包到一个组件中（例如，{{glossary("class", "类")}}），然后控制对该组件的访问，使{{glossary("object", "对象")}}成为一个“黑箱”。因此，该类的用户只需要了解其接口（即类外部暴露的数据和功能），而不需要了解隐藏的实现。
 
-### 基础知识
+## 参见
 
-- 维基百科上的 [封装](<https://zh.m.wikipedia.org/zh-hans/封裝_(物件導向程式設計)>)
+- 维基百科上的[封装](<https://zh.wikipedia.org/wiki/封裝_(物件導向程式設計)>)

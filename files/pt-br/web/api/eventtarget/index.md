@@ -3,7 +3,7 @@ title: EventTarget
 slug: Web/API/EventTarget
 ---
 
-{{ ApiRef("DOM Events") }}
+{{APIRef("DOM")}}
 
 ## Resumo
 
@@ -11,7 +11,7 @@ slug: Web/API/EventTarget
 
 {{domxref("Element")}}, {{domxref("document")}}, e {{domxref("window")}} são os mais comuns disparadores de eventos, mas outros objetos podem disparar eventos também, por exemplo {{domxref("XMLHttpRequest")}}, {{domxref("AudioNode")}}, {{domxref("AudioContext")}} e outros.
 
-Muitos disparadores de eventos (incluindo elements, documents, e windows) também suportam definir [event handlers](/pt-BR/docs/Web/Guide/DOM/Events/Event_handlers) através `on...` propriedades e atributos.
+Muitos disparadores de eventos (incluindo elements, documents, e windows) também suportam definir [event handlers](/pt-BR/docs/Web/Events/Event_handlers) através `on...` propriedades e atributos.
 
 ## Métodos
 
@@ -24,18 +24,14 @@ Muitos disparadores de eventos (incluindo elements, documents, e windows) també
 
 ## Especificações
 
-| Especificação                                                                                                    | Status                           | Comentário                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#interface-eventtarget', 'EventTarget')}}                         | {{Spec2('DOM WHATWG')}} | Sem mundanças.                                                                                |
-| {{SpecName('DOM3 Events', 'DOM3-Events.html#interface-EventTarget', 'EventTarget')}} | {{Spec2('DOM3 Events')}} | Alguns parâmetros agora são opcionais (`listener`), ou aceitam o valor `null` (`useCapture`). |
-| {{SpecName('DOM2 Events', 'events.html#Events-EventTarget', 'EventTarget')}}             | {{Spec2('DOM2 Events')}} | Definição inicial.                                                                            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.EventTarget")}}
+{{Compat}}
 
 ## Veja também
 
-- [Referência de eventos](/pt-BR/docs/Web/Reference/Events) - os eventos disponíveis na plataforma.
+- [Referência de eventos](/pt-BR/docs/Web/Events) - os eventos disponíveis na plataforma.
 - [Guia do desenvolvedor sobre Eventos](/pt-BR/docs/Web/Guide/DOM/Events)
 - Interface {{domxref("Event")}}

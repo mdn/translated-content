@@ -1,15 +1,34 @@
 ---
-title: 'Null'
+title: "Null"
 slug: Glossary/Null
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
-컴퓨터 과학에서 `null` 값은 일반적으로 존재하지 않거나 유효하지 않은 {{glossary ("object")}} 또는 주소를 의도적으로 가리키는 참조를 나타냅니다. null 참조의 의미는 언어의 구현에 따라 다양하다.
 
-`null`은 동작이 원시적으로 보이기 때문에 {{Glossary ( "Primitive", "primitive values")}} 중 하나로 표시됩니다.
+{{GlossarySidebar}}
 
-그러나 특정 경우에, `null` 은 처음 봤던것 만큼 "원시적"이지 않다. 모든 객체는 `null` 값으로 부터 파생되며 따라서 `typeof` 연산자는 아래의 코드에서 `object`를 반환한다.
+컴퓨터 과학에서, `null` 값은 일반적으로 존재하지 않거나 유효하지 않은 {{glossary ("object")}} 또는 주소를 의도적으로 가리키는 참조를 나타냅니다. null 참조의 의미는 언어의 구현에 따라 다양합니다.
+
+{{Glossary("JavaScript")}}에서 `null`은 동작이 원시적으로 보이기 때문에 {{Glossary ( "Primitive", "원시 값")}} 중 하나로 표시됩니다. 하지만 [`typeof`](/ko/docs/Web/JavaScript/Reference/Operators/typeof) 연산자를 사용할 때는 `"object"`를 반환합니다.
 
 ```js
-typeof null === 'object' // true
+console.log(typeof null); // "object"
 ```
 
-<section id="Quick_links"><ul><li><strong><a href="/en-US/docs/Glossary">Glossary</a></strong><ul><li>{{Glossary("JavaScript")}}</li><li>{{Glossary("string")}}</li><li>{{Glossary("number")}}</li><li>{{Glossary("bigint")}}</li><li>{{Glossary("boolean")}}</li><li>{{Glossary("null")}}</li><li>{{Glossary("undefined")}}</li><li>{{Glossary("symbol")}}</li></ul></li><li><a href="/en-US/docs/Web/JavaScript/Data_structures">JavaScript data types</a></li><li>The JavaScript global object: {{jsxref("null")}}</li><li><a href="https://ko.wikipedia.org/wiki/%EB%84%90_%ED%8F%AC%EC%9D%B8%ED%84%B0">Null pointer</a> on Wikipedia</li></ul></section>
+이는 [버그](/ko/docs/Web/JavaScript/Reference/Operators/typeof#null)로 여겨지지만 수정하면 많은 스크립트에 문제가 발생할 수 있어서 고칠 수 없습니다.
+
+## 같이 보기
+
+- [JavaScript의 타입](/ko/docs/Web/JavaScript/Data_structures)
+- JavaScript 전역 객체: [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null)
+- 위키백과의 [널 포인터](https://ko.wikipedia.org/wiki/널_포인터)
+- **[용어 사전](/ko/docs/Glossary)**
+
+  - {{Glossary("JavaScript")}}
+  - {{Glossary("string")}}
+  - {{Glossary("number")}}
+  - {{Glossary("bigint")}}
+  - {{Glossary("boolean")}}
+  - {{Glossary("null")}}
+  - {{Glossary("undefined")}}
+  - {{jsxref("Symbol")}}

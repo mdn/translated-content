@@ -1,12 +1,9 @@
 ---
 title: sort
 slug: Web/XSLT/Element/sort
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/sort
-original_slug: Web/XSLT/sort
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:sort>` 요소는 `<xsl:apply-templates>`나 `<xsl:for-each>`가 선택한 노드에 정렬키를 정의하고 노드를 처리할 순서를 결정합니다.
 
@@ -44,7 +41,7 @@ original_slug: Web/XSLT/sort
 
 ### 정의
 
-[XSLT section 10, Sorting](http://www.w3.org/TR/xslt#sorting)
+[XSLT section 10, Sorting](https://www.w3.org/TR/xslt#sorting)
 
 ### Gecko 지원
 

@@ -11,7 +11,7 @@ Resize Observer API 提供了一种高性能的机制，通过该机制，代码
 
 存在大量的响应式设计（以及其他相关）技术，它们可以响应元素大小的变化，但是以前，它们的实现常常很笨拙或者说生硬。
 
-举个例子，当视口更改大小时，[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries) / {{domxref("window.matchMedia")}} 非常适合在特定点更新布局，但是如果要响应于特定元素的大小更改而更改布局，该元素又不是外部容器时，该怎么办？
+举个例子，当视口更改大小时，[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries) / {{domxref("window.matchMedia")}} 非常适合在特定点更新布局，但是如果要响应于特定元素的大小更改而更改布局，该元素又不是外部容器时，该怎么办？
 
 为此，一种有限的解决方案是监听对适当事件的更改，该事件会提示你对更改大小感兴趣的元素（例如 window [resize 事件](/zh-CN/docs/Web/API/Window/resize_event)），然后找出该元素之后新的尺寸或其他功能，例如，使用{{domxref("Element.getBoundingClientRect")}} 或者{{domxref("Window.getComputedStyle")}}，来调整大小。
 
@@ -46,12 +46,12 @@ const resizeObserver = new ResizeObserver((entries) => {
     if (entry.borderBoxSize) {
       entry.target.style.borderRadius = calcBorderRadius(
         entry.borderBoxSize[0].inlineSize,
-        entry.borderBoxSize[0].blockSize
+        entry.borderBoxSize[0].blockSize,
       );
     } else {
       entry.target.style.borderRadius = calcBorderRadius(
         entry.contentRect.width,
-        entry.contentRect.height
+        entry.contentRect.height,
       );
     }
   }
@@ -70,4 +70,4 @@ resizeObserver.observe(document.querySelector("div"));
 
 ## 参见
 
-- [ResizeObserver: It’s Like document.onresize for Elements](https://developers.google.com/web/updates/2016/10/resizeobserver)
+- [ResizeObserver：类似于元素的 document.onresize](https://web.developers.google.cn/articles/resize-observer)

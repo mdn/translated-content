@@ -3,7 +3,7 @@ title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 ## Resumo
 
@@ -18,7 +18,7 @@ obj.hasOwnProperty(prop)
 ### Parâmetros
 
 - `prop`
-  - : Uma {{jsxref("String")}} ou [symbol](/pt-BR/docs/Glossary/Symbol) indicando o nome da propriedade a ser verificada.
+  - : Uma {{jsxref("String")}} ou [symbol](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol) indicando o nome da propriedade a ser verificada.
 
 ### Valor de Retorno
 
@@ -61,10 +61,10 @@ O seguinte exemplo diferencia entre propriedade diretas e propriedade herdadas d
 
 ```js
 o = new Object();
-o.prop = 'existe';
-o.hasOwnProperty('prop');             // Retorna true
-o.hasOwnProperty('toString');         // Retorna false
-o.hasOwnProperty('hasOwnProperty');   // Retorna false
+o.prop = "existe";
+o.hasOwnProperty("prop"); // Retorna true
+o.hasOwnProperty("toString"); // Retorna false
+o.hasOwnProperty("hasOwnProperty"); // Retorna false
 ```
 
 ### Percorrer através das propriedades de um objeto
@@ -75,16 +75,15 @@ Vale observar que o loop {{jsxref("Statements/for...in", "for...in")}} percorre 
 
 ```js
 var buz = {
-    fog: 'stack'
+  fog: "stack",
 };
 
 for (var nome in buz) {
-    if (buz.hasOwnProperty(nome)) {
-        alert("this is fog (" + nome + ") for sure. Value: " + buz[nome]);
-    }
-    else {
-        alert(nome); // toString ou qualquer outra coisa
-    }
+  if (buz.hasOwnProperty(nome)) {
+    alert("this is fog (" + nome + ") for sure. Value: " + buz[nome]);
+  } else {
+    alert(nome); // toString ou qualquer outra coisa
+  }
 }
 ```
 
@@ -94,39 +93,35 @@ JavaScript não protege o nome `hasOwnProperty`, assim, se existir a possibilida
 
 ```js
 var foo = {
-    hasOwnProperty: function() {
-        return false;
-    },
-    bar: 'Here be dragons'
+  hasOwnProperty: function () {
+    return false;
+  },
+  bar: "Here be dragons",
 };
 
-foo.hasOwnProperty('bar'); // Sempre retorna false
+foo.hasOwnProperty("bar"); // Sempre retorna false
 
 // Usando a propriedade hasOwnProperty de outro objeto e definindo 'this' como foo
-({}).hasOwnProperty.call(foo, 'bar'); // true
+({}).hasOwnProperty.call(foo, "bar"); // true
 
 // Também é possível usar hasOwnProperty do objeto
-Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
+Object.prototype.hasOwnProperty.call(foo, "bar"); // true
 ```
 
 Observe que neste ultimo caso nenhum novo objeto é criado.
 
 ## Especificações
 
-| Especificação                                                                                                                | Status                   | Comentário         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| ECMAScript 3rd Edition. Implemented in JavaScript 1.5                                                                        | Standard                 | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}                             | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}} | {{Spec2('ES6')}}     |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.hasOwnProperty")}}
+{{Compat}}
 
 ## Veja Também
 
-- [Enumerability and ownership of properties](/pt-BR/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - [for...in](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in)
 - {{jsxref("Operators/in", "in")}}
-- [JavaScript Guide: Inheritance revisted](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_Revisited)
+- [JavaScript Guide: Inheritance revisted](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

@@ -1,15 +1,16 @@
 ---
-title: 'HTMLMediaElement: emptied'
+title: "HTMLMediaElement: emptied"
 slug: Web/API/HTMLMediaElement/emptied_event
-translation_of: Web/API/HTMLMediaElement/emptied_event
 ---
+
+{{APIRef("HTMLMediaElement")}}
 
 L'événement **`emptied`** est déclenché lorsqu'un média est devenu vide. Par exemple, cet événement est envoyé si le média a déjà été chargé (complètement ou partiellement), et que la méthode _load()_ est appelé pour le recharger.
 
 ## Informations générales
 
 - Spécification
-  - : [HTML5 media](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-emptied)
+  - : [HTML5 media](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-emptied)
 - Interface
   - : {{domxref("Event")}}
 - propagation
@@ -23,12 +24,12 @@ L'événement **`emptied`** est déclenché lorsqu'un média est devenu vide. Pa
 
 ## Propriétés
 
-| Property                              | Type                                 | Description                                            |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| Property                        | Type                       | Description                                            |
+| ------------------------------- | -------------------------- | ------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
 
 ## Evénements liés
 

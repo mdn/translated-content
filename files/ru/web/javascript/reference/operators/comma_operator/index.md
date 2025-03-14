@@ -1,17 +1,27 @@
 ---
 title: Оператор Запятая
-slug: Web/JavaScript/Reference/Operators/Comma_Operator
-tags:
-  - Оператор запятая
-translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
-original_slug: Web/JavaScript/Reference/Operators/Оператор_Запятая
+slug: Web/JavaScript/Reference/Operators/Comma_operator
 ---
 
 {{jsSidebar("Operators")}}
 
 **Оператор запятая** выполняет каждый из его операндов (слева направо) и возвращает значение последнего операнда.
 
-{{EmbedInteractiveExample("pages/js/expressions-commaoperators.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Comma operator")}}
+
+```js interactive-example
+let x = 1;
+
+x = (x++, x);
+
+console.log(x);
+// Expected output: 2
+
+x = (2, 3);
+
+console.log(x);
+// Expected output: 3
+```
 
 ## Синтаксис
 
@@ -42,11 +52,11 @@ for (let i = 0, j = 9; i <= 9; i++, j--)
 Заметьте, что запятая при объявлении переменной `var`, `let` или `const` **не** является оператором запятая, так как в данном случае она находится не в выражении. Скорее, это спец символ в объявлении переменных, комбинирующий их множество в одно выражение. Практически, эта запятая ведёт себя почти так же, как и запятая.
 
 ```js
-  // подобное объявление запрещено в строгом режиме(strict mode)
+// подобное объявление запрещено в строгом режиме(strict mode)
 
-a = b = 3, c = 4; // возвращает 4 в консоль
+(a = b = 3), (c = 4); // возвращает 4 в консоль
 console.log(a); // 3
-x = (y = 5, z = 6); // возвращает 6 в консоль
+x = ((y = 5), (z = 6)); // возвращает 6 в консоль
 console.log(x); // 6
 ```
 
@@ -57,10 +67,10 @@ console.log(x); // 6
 Другой пример использования оператора запятой – вычисления перед возвратом значения. Как было указано ранее, будет возвращён только последний элемент, но все предыдущие также будут вычислены. Таким образом можно сделать:
 
 ```js
-function myFunc () {
+function myFunc() {
   let x = 0;
 
-  return (x += 1, x); // то же самое, что return ++x;
+  return (x += 1), x; // то же самое, что return ++x;
 }
 ```
 
@@ -68,7 +78,7 @@ function myFunc () {
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

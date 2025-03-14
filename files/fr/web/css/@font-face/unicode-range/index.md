@@ -1,8 +1,6 @@
 ---
 title: unicode-range
 slug: Web/CSS/@font-face/unicode-range
-translation_of: Web/CSS/@font-face/unicode-range
-browser-compat: css.at-rules.font-face.unicode-range
 ---
 
 {{cssref}}
@@ -13,11 +11,11 @@ Le descripteur **`unicode-range`**, associé à la règle @ [`@font-face`](/fr/d
 
 ```css
 /* Valeurs <unicode-range> */
-unicode-range: U+26;                 /* un seul point de code         */
+unicode-range: U+26; /* un seul point de code         */
 unicode-range: U+0-7F;
-unicode-range: U+0025-00FF;          /* un intervalle spécifique      */
-unicode-range: U+4??;                /* un intervalle de substitution */
-unicode-range: U+0025-00FF, U+4??;   /* plusieurs valeurs             */
+unicode-range: U+0025-00FF; /* un intervalle spécifique      */
+unicode-range: U+4??; /* un intervalle de substitution */
+unicode-range: U+0025-00FF, U+4??; /* plusieurs valeurs             */
 ```
 
 ### Valeurs
@@ -64,8 +62,8 @@ Dans la feuille de style CSS, on définit une règle [`@font-face`](/fr/docs/Web
 
 ```css
 @font-face {
-  font-family: 'Ampersand';
-  src: local('Times New Roman');
+  font-family: "Ampersand";
+  src: local("Times New Roman");
   unicode-range: U+26;
 }
 
@@ -94,7 +92,7 @@ div {
 - [`font-stretch`](/fr/docs/Web/CSS/@font-face/font-stretch)
 - [`font-style`](/fr/docs/Web/CSS/@font-face/font-style)
 - [`font-weight`](/fr/docs/Web/CSS/@font-face/font-weight)
-- [`font-variant`](/fr/docs/Web/CSS/@font-face/font-variant)
+- [`font-variant`](/fr/docs/Web/CSS/@font-face)
 - [`font-feature-settings`](/fr/docs/Web/CSS/font-feature-settings)
 - [`font-variation-settings`](/fr/docs/Web/CSS/@font-face/font-variation-settings)
 - [`src`](/fr/docs/Web/CSS/@font-face/src)

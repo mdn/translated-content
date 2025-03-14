@@ -1,21 +1,20 @@
 ---
 title: matrix()
 slug: Web/CSS/transform-function/matrix
-translation_of: Web/CSS/transform-function/matrix()
-original_slug: Web/CSS/transform-function/matrix()
 ---
 
 {{CSSRef}}
 
 **`matrix()`** [CSS](/ko/docs/Web/CSS) 함수는 2D 변형 동차 행렬을 선언합니다. 결과는 {{cssxref("&lt;transform-function&gt;")}} 데이터 타입입니다.
 
-> **참고:** **주의:** `matrix(a, b, c, d, tx, ty)` 는 `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)` 를 짧게 쓴 것입니다.
+> **경고:** `matrix(a, b, c, d, tx, ty)` 는 `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)` 를 짧게 쓴 것입니다.
 
 ## Syntax
 
 `matrix()` 함수는 6개의 값을 지정합니다. 상수 값은 묵시적이며, 매개변수(parameter)로 전달하지 않습니다. 다른 매개 변수는 column-major 순서로 설명됩니다.
 
-> **참고:** **주의:** 파이어폭스 16까지, Gecko(엔진) `tx`, `ty` 에{{cssxref("&lt;length&gt;")}} 값을 허용했습니다.
+> [!NOTE]
+> Firefox 16까지, Gecko(엔진) `tx`, `ty` 에{{cssxref("&lt;length&gt;")}} 값을 허용했습니다.
 
 ```
 matrix(a, b, c, d, tx, ty)
@@ -122,11 +121,11 @@ div {
 
 ## Browser compatibility
 
-호환성 정보는 [`<transform-function>`](/ko/docs/Web/CSS/transform-function#Browser_compatibility) 데이터 타입을 확인하세요.
+호환성 정보는 [`<transform-function>`](/ko/docs/Web/CSS/transform-function#browser_compatibility) 데이터 타입을 확인하세요.
 
 ## See also
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`matrix3d()`](/en-US/docs/Web/CSS/transform-function/matrix3d)
+- [`matrix3d()`](/ko/docs/Web/CSS/transform-function/matrix3d)
 - [Understanding the CSS Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

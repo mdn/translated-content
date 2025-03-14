@@ -7,7 +7,7 @@ slug: Web/CSS/transition
 
 ## Summary
 
-A propriedade de [CSS](/pt-BR/CSS)**transition** é uma [propriedade abreviada](/pt-BR/docs/Web/CSS/Shorthand_properties) para {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }} e {{ cssxref("transition-delay") }}. Ela permite definir a transição entre dois estados de um elemento. Estados diferentes podem ser definidos usando [pseudo-classes](/pt-BR/docs/Web/CSS/Pseudo-classes) tais como {{cssxref(":hover")}} ou {{cssxref(":active")}}; ou dinamicamente, usando javascript.
+A propriedade de [CSS](/pt-BR/docs/Web/CSS)**transition** é uma [propriedade abreviada](/pt-BR/docs/Web/CSS/Shorthand_properties) para {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }} e {{ cssxref("transition-delay") }}. Ela permite definir a transição entre dois estados de um elemento. Estados diferentes podem ser definidos usando [pseudo-classes](/pt-BR/docs/Web/CSS/Pseudo-classes) tais como {{cssxref(":hover")}} ou {{cssxref(":active")}}; ou dinamicamente, usando javascript.
 
 {{cssinfo}}
 
@@ -25,7 +25,9 @@ transition: margin-left 4s 1s;
 transition: margin-left 4s ease-in-out 1s;
 
 /* Apply to 2 properties */
-transition: margin-left 4s, color 1s;
+transition:
+  margin-left 4s,
+  color 1s;
 
 /* Apply to all changed properties */
 transition: all 0.5s ease-out;
@@ -46,19 +48,17 @@ Veja [como as coisas são manipuladas](/pt-BR/docs/Web/CSS/CSS_Transitions/Using
 
 ## Examples
 
-Existem vários outros exemplos de transições CSS incluídas no artigo principal sobre [CSS transitions](/pt-BR/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
+Existem vários outros exemplos de transições CSS incluídas no artigo principal sobre [CSS transitions](/pt-BR/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
 
 ## Specifications
 
-| Specification                                                                                                | Status                                   | Comment            |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{ SpecName('CSS3 Transitions', '#transition-shorthand-property', 'transition') }} | {{ Spec2('CSS3 Transitions') }} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.transition")}}
+{{Compat}}
 
 ## See also
 
-- [Using CSS transitions](/pt-BR/docs/CSS/Using_CSS_transitions)
+- [Using CSS transitions](/pt-BR/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{ domxref("TransitionEvent") }}

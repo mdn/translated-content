@@ -1,20 +1,28 @@
 ---
 title: Number.isSafeInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Number
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 ---
 
 {{JSRef}}
 
 **`Number.isSafeInteger()`** 메서드는 전달된 값이 안전한 정숫값인지 확인합니다.
 
-{{EmbedInteractiveExample("pages/js/number-issafeinteger.html")}}
+{{InteractiveExample("JavaScript Demo: Number.isSafeInteger()")}}
+
+```js interactive-example
+function warn(x) {
+  if (Number.isSafeInteger(x)) {
+    return "Precision safe.";
+  }
+  return "Precision may be lost!";
+}
+
+console.log(warn(Math.pow(2, 53)));
+// Expected output: "Precision may be lost!"
+
+console.log(warn(Math.pow(2, 53) - 1));
+// Expected output: "Precision safe."
+```
 
 안전한 정숫값이란 다음과 같습니다.
 
@@ -28,7 +36,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 ## 구문
 
 ```js
-    Number.isSafeInteger(testValue)
+Number.isSafeInteger(testValue);
 ```
 
 ### 매개변수
@@ -43,22 +51,26 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 ## 예시
 
 ```js
-Number.isSafeInteger(3);                    // true
-Number.isSafeInteger(Math.pow(2, 53));      // false
-Number.isSafeInteger(Math.pow(2, 53) - 1);  // true
-Number.isSafeInteger(NaN);                  // false
-Number.isSafeInteger(Infinity);             // false
-Number.isSafeInteger('3');                  // false
-Number.isSafeInteger(3.1);                  // false
-Number.isSafeInteger(3.0);                  // true
+Number.isSafeInteger(3); // true
+Number.isSafeInteger(Math.pow(2, 53)); // false
+Number.isSafeInteger(Math.pow(2, 53) - 1); // true
+Number.isSafeInteger(NaN); // false
+Number.isSafeInteger(Infinity); // false
+Number.isSafeInteger("3"); // false
+Number.isSafeInteger(3.1); // false
+Number.isSafeInteger(3.0); // true
 ```
 
 ## 폴리필
 
 ```js
-Number.isSafeInteger = Number.isSafeInteger || function (value) {
-   return Number.isInteger(value) && Math.abs(value) <= Number.MAX_SAFE_INTEGER;
-};
+Number.isSafeInteger =
+  Number.isSafeInteger ||
+  function (value) {
+    return (
+      Number.isInteger(value) && Math.abs(value) <= Number.MAX_SAFE_INTEGER
+    );
+  };
 ```
 
 ## 명세

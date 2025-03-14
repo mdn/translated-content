@@ -7,12 +7,13 @@ slug: Web/API/Animation/cancel
 
 {{domxref("Animation")}} 接口的 Web 动画 API 的 **`cancel()`** 方法将清除此动画造成的所有 {{domxref("KeyframeEffect")}}，并中止其播放。
 
-> **备注：** 当一个动画被取消时，其 {{domxref("Animation.startTime", "startTime")}} 和 {{domxref("Animation.currentTime", "currentTime")}} 被设置为 null。
+> [!NOTE]
+> 当一个动画被取消时，其 {{domxref("Animation.startTime", "startTime")}} 和 {{domxref("Animation.currentTime", "currentTime")}} 被设置为 null。
 
 ## 语法
 
-```
-Animation.cancel();
+```js-nolint
+cancel()
 ```
 
 ### 参数
@@ -31,7 +32,7 @@ Animation.cancel();
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

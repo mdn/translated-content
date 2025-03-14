@@ -1,22 +1,56 @@
 ---
 title: border-color
 slug: Web/CSS/border-color
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/border-color
 ---
+
 {{CSSRef}}
 
 **`border-color`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 모든 면의 테두리 색상을 설정합니다.
 
-{{EmbedInteractiveExample("pages/css/border-color.html")}}
+{{InteractiveExample("CSS Demo: border-color")}}
+
+```css interactive-example-choice
+border-color: red;
+```
+
+```css interactive-example-choice
+border-color: red #32a1ce;
+```
+
+```css interactive-example-choice
+border-color: red rgba(170, 50, 220, 0.6) green;
+```
+
+```css interactive-example-choice
+border-color: red yellow green hsla(60, 90%, 50%, 0.8);
+```
+
+```css interactive-example-choice
+border-color: red yellow green transparent;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 각 면 테두리의 색상은 {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}}를 사용해 정할 수 있습니다. 아니면 쓰기 방향에 따라 달라지는 속성인 {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end-color")}}, {{cssxref("border-inline-start-color")}}, {{cssxref("border-inline-end-color")}}을 사용할 수도 있습니다.
 
-테두리 색상에 대해 더 알아보려면 [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/HTML/Applying_color#테두리) 문서를 참고하세요.
+테두리 색상에 대해 더 알아보려면 [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/CSS/CSS_colors/Applying_color#%ed%85%8c%eb%91%90%eb%a6%ac) 문서를 참고하세요.
 
 ## 구문
 
@@ -28,7 +62,7 @@ border-color: red;
 border-color: red #f015ca;
 
 /* 위 | 가로방향 | 아래 */
-border-color: red rgb(240,30,50,.7) green;
+border-color: red rgb(240, 30, 50, 0.7) green;
 
 /* 위 | 오른쪽 | 아래 | 왼쪽 */
 border-color: red yellow green blue;
@@ -64,7 +98,8 @@ border-color: unset;
 ```html
 <div id="justone">
   <p><code>border-color: red;</code>는 아래와 같습니다.</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: red;</code></li>
     <li><code>border-left-color: red;</code></li>
@@ -72,7 +107,8 @@ border-color: unset;
 </div>
 <div id="horzvert">
   <p><code>border-color: gold red;</code>는 아래와 같습니다.</p>
-  <ul><li><code>border-top-color: gold;</code></li>
+  <ul>
+    <li><code>border-top-color: gold;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: red;</code></li>
@@ -80,7 +116,8 @@ border-color: unset;
 </div>
 <div id="topvertbott">
   <p><code>border-color: red cyan gold;</code>는 아래와 같습니다.</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: cyan;</code></li>
@@ -88,7 +125,8 @@ border-color: unset;
 </div>
 <div id="trbl">
   <p><code>border-color: red cyan black gold;</code>는 아래와 같습니다.</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: black;</code></li>
     <li><code>border-left-color: gold;</code></li>
@@ -149,4 +187,4 @@ ul {
 - 다른 테두리 관련 CSS 속성: {{Cssxref("border-width")}}, {{Cssxref("border-style")}}
 - {{cssxref("&lt;color&gt;")}} 자료형
 - 다른 색상 관련 속성: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}
-- [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/HTML/Applying_color#테두리)
+- [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/CSS/CSS_colors/Applying_color#%ed%85%8c%eb%91%90%eb%a6%ac)

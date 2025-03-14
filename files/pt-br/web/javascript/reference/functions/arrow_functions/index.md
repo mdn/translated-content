@@ -5,9 +5,16 @@ slug: Web/JavaScript/Reference/Functions/Arrow_functions
 
 {{jsSidebar("Functions")}}
 
-Uma **expressão _arrow function_** possui uma sintaxe mais curta quando comparada a uma expressão de função (_[function expression](/pt-BR/docs/Web/JavaScript/Reference/Operators/function)_) e não tem seu próprio _[this](/pt-BR/docs/Web/JavaScript/Reference/Operators/this)_, _[arguments](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments)_, _[super](/pt-BR/docs/Web/JavaScript/Reference/Operators/super)_ ou _[new.target](/pt-BR/docs/Web/JavaScript/Reference/Operators/new.target)_. Estas expressões de funções são melhor aplicadas para funções que não sejam métodos, e elas não podem ser usadas como construtoras (_constructors_).
+Uma **expressão _arrow function_** possui uma sintaxe mais curta quando comparada a uma expressão de função (_[function expression](/pt-BR/docs/Web/JavaScript/Reference/Operators/function)_) e não tem seu próprio _[this](/pt-BR/docs/Web/JavaScript/Reference/Operators/this)_, _[arguments](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments)_, _[super](/pt-BR/docs/Web/JavaScript/Reference/Operators/super)_ ou _[new.target](/pt-BR/docs/Web/JavaScript/Reference/Operators/new.target)_. Estas expressões de funções são melhor aplicadas para funções que não sejam métodos, e elas não podem ser usadas como construtores (_constructors_).
 
-{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
+{{InteractiveExample("JavaScript Demo: Functions =>")}}
+
+```js interactive-example
+const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+
+console.log(materials.map((material) => material.length));
+// Expected output: Array [8, 6, 7, 9]
+```
 
 ## Sintaxe
 
@@ -128,7 +135,7 @@ Alternativamente, uma função de ligação ([bound function](/pt-BR/docs/Web/Ja
 Uma _arrow function_ não tem seu próprio `this;` o valor `this` do contexto léxico encapsulado é usado. Ex: _Arrow functions_ seguem as regras normais de pesquisa de variáveis. Então, ao procurar por `this`, que não está no escopo atual elas acabam encontrando `this` no escopo encapsulado. Assim, no código a seguir, o `this` dentro da função que é passado para `setInterval` tem o mesmo valor do `this` na função lexicamente encapsulada:
 
 ```js
-function Person(){
+function Person() {
   this.age = 0;
 
   setInterval(() => {
@@ -144,7 +151,10 @@ var p = new Person();
 Considerando que `this` vem do contexto léxico envolvente, as regras do modo estrito (_[strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)_) em relação ao `this` são ignoradas.
 
 ```js
-var f = () => { 'use strict'; return this };
+var f = () => {
+  "use strict";
+  return this;
+};
 f() === window; // ou o objeto global
 ```
 
@@ -306,19 +316,13 @@ var func = (a, b, c)
 Entretanto, isto pode ser corrigido ao usar parênteses ou colocar a quebra de linha dentro dos argumentos como visto abaixo para garantir que o código permaneça bonito e leve.
 
 ```js
-var func = (
-  a,
-  b,
-  c
-) => (
-  1
-);
+var func = (a, b, c) => 1;
 // SyntaxError (erro de sintaxe) não é lançado
 ```
 
 ## Ordem de análise
 
-Apesar de a flecha numa _arrow function_ não ser um operador, _arrow functions_ possuem regras especiais de análise que interagem diferentemente com precedência de operador ([operator precedence](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)) comparadas à funções comuns.
+Apesar de a flecha numa _arrow function_ não ser um operador, _arrow functions_ possuem regras especiais de análise que interagem diferentemente com precedência de operador ([operator precedence](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_precedence)) comparadas à funções comuns.
 
 ```
 let callback;
@@ -380,11 +384,8 @@ setTimeout( () => {
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                       | Comentário         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}} | {{Spec2('ES2015')}}     | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.functions.arrow_functions")}}
+{{Compat}}

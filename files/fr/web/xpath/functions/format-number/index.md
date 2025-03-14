@@ -1,13 +1,9 @@
 ---
 title: format-number
 slug: Web/XPath/Functions/format-number
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/format-number
-original_slug: Web/XPath/Fonctions/format-number
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `format-number` évalue un nombre et retourne une chaîne représentant le nombre dans un format donné.
 
@@ -25,7 +21,7 @@ format-number( nombre , motif [, format-décimal] )
 <!---->
 
 - `motif`
-  - : Une chaîne au format de la classe [Decimal Format (en)](http://java.sun.com/products/jdk/1.1/docs/api/java.text.DecimalFormat.html) du JDK 1.1. La notice du JDK 1.1 n'est plus disponible. Vous trouverez ici la notice pour le JSE 6: [Decimal Format (en)](http://java.sun.com/javase/6/docs/api/java/text/DecimalFormat.html)
+  - : Une chaîne au format de la classe [Decimal Format (en)](https://java.sun.com/products/jdk/1.1/docs/api/java.text.DecimalFormat.html) du JDK 1.1. La notice du JDK 1.1 n'est plus disponible. Vous trouverez ici la notice pour le JSE 6: [Decimal Format (en)](https://java.sun.com/javase/6/docs/api/java/text/DecimalFormat.html)
 
 <!---->
 
@@ -42,7 +38,7 @@ Cette fonction est un ajout à XPath spécifique à XSLT. Elle ne fait pas parti
 
 ### Définition
 
-[XSLT 1.0, section 12.3](http://www.w3.org/TR/xslt#function-format-number).
+[XSLT 1.0, section 12.3](https://www.w3.org/TR/xslt#function-format-number).
 
 ### Support Gecko
 

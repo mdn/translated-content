@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 
 O método **`getUTCFullYear()`** retorna o ano na data indicada de acordo com o horário universal.
 
-{{EmbedInteractiveExample("pages/js/date-getutcfullyear.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getUTCFullYear()")}}
+
+```js interactive-example
+const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+const date2 = new Date("December 31, 1975, 23:15:30 GMT-11:00");
+
+console.log(date1.getUTCFullYear());
+// Expected output: 1975
+
+console.log(date2.getUTCFullYear());
+// Expected output: 1976
+```
 
 ## Sintaxe
 
@@ -36,16 +47,11 @@ var year = today.getUTCFullYear();
 
 ## Especificações
 
-| Especificação                                                                                                                | Status                       | Comentário                                         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.11', 'Date.prototype.getUTCFullYear')}}                             | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-date.prototype.getutcfullyear', 'Date.prototype.getUTCFullYear')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-date.prototype.getutcfullyear', 'Date.prototype.getUTCFullYear')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getUTCFullYear")}}
+{{Compat}}
 
 ## Veja também
 

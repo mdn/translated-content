@@ -1,10 +1,9 @@
 ---
 title: WheelEvent.deltaY
 slug: Web/API/WheelEvent/deltaY
-translation_of: Web/API/WheelEvent/deltaY
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 La propiedad de solo lectura **`WheelEvent.deltaY`** es un `double` que representa la cantidad de deslizamiento vertical en la unidad {{domxref("WheelEvent.deltaMode")}} .
 
@@ -17,7 +16,10 @@ var dY = event.deltaY;
 ## Ejemplo
 
 ```js
-var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaY": 4, "deltaMode": 0});
+var syntheticEvent = new WheelEvent("syntheticWheel", {
+  deltaY: 4,
+  deltaMode: 0,
+});
 
 console.log(syntheticEvent.deltaY);
 ```
@@ -26,11 +28,11 @@ console.log(syntheticEvent.deltaY);
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.WheelEvent.deltaY")}}
+{{Compat}}
 
 ## Ver más
 
-- [`wheel`](/es/docs/Web/Reference/Events/wheel)
+- [`wheel`](/es/docs/Web/API/Element/wheel_event)
 - {{domxref("WheelEvent")}}

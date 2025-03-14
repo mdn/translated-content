@@ -14,7 +14,8 @@ slug: Web/HTML/Microdata
 
 Google をはじめとする主要な検索エンジンは、構造化されたデータ [Schema.org](https://schema.org) に対応しています。この語彙は、タイプ名やプロパティ名の標準セットを定義しています。たとえば、 [Schema.org Music Event](https://schema.org/MusicEvent) はコンサートを表し、 [startDate](https://schema.org/startDate) と [location](https://schema.org/location) プロパティをコンサートの主要な詳細を指定するために併用します。この場合、 [Schema.org Music Event](https://schema.org/MusicEvent) は itemtype によって使用される URL となり、 startDate と location は [Schema.org Music Event](https://schema.org/MusicEvent) が定義する itemprop になります。
 
-> **メモ:** itemtype 属性の詳細は <https://schema.org/Thing> にあります。
+> [!NOTE]
+> itemtype 属性の詳細は <https://schema.org/Thing> にあります。
 
 マイクロデータの語彙は、アイテムのセマンティックスや意味を提供します。ウェブ開発者は専用の語彙を設計したり、 [schema.org](https://schema.org) のような広く使用されている語彙を利用したりすることができます。よく使用されるマークアップ語彙のコレクションは、 Schema.org によって提供されます。
 
@@ -57,12 +58,16 @@ Google、Microsoft、Yahoo! のような主要な検索エンジンの管理者�
 
 ```html
 <div itemscope itemtype="https://schema.org/SoftwareApplication">
-  <span itemprop="name">Angry Birds</span> -
+  <span itemprop="name">Angry Birds</span> - REQUIRES
+  <span itemprop="operatingSystem">ANDROID</span><br />
+  <link
+    itemprop="applicationCategory"
+    href="https://schema.org/GameApplication" />
 
-  REQUIRES <span itemprop="operatingSystem">ANDROID</span><br>
-  <link itemprop="applicationCategory" href="https://schema.org/GameApplication"/>
-
-  <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+  <div
+    itemprop="aggregateRating"
+    itemscope
+    itemtype="https://schema.org/AggregateRating">
     RATING:
     <span itemprop="ratingValue">4.6</span> (
     <span itemprop="ratingCount">8864</span> ratings )
@@ -138,7 +143,8 @@ Google、Microsoft、Yahoo! のような主要な検索エンジンの管理者�
 
 {{ EmbedLiveSample('HTML', '', '100') }}
 
-> **メモ:** HTML からマイクロデータを抽出するための手軽なツールとして、 Google の[構造化データテストツール](https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data)があります。上に示した HTML 上で試してみてください。
+> [!NOTE]
+> HTML からマイクロデータを抽出するための手軽なツールとして、 Google の[構造化データテストツール](https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data)があります。上に示した HTML 上で試してみてください。
 
 ## ブラウザーの互換性
 

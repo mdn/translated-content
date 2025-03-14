@@ -1,7 +1,11 @@
 ---
 title: min-content
 slug: Web/CSS/min-content
+l10n:
+  sourceCommit: 3d8560ff659dea02550ce8b7e4633cf76a389131
 ---
+
+{{CSSRef}}
 
 `min-content` は大きさのキーワードで、コンテンツの内在的な最小幅を表しています。テキストコンテンツの場合は、コンテンツがすべてのソフトラッピングの機会を使用した場合に、最も長い単語と同じくらい小さくなることを意味します。
 
@@ -16,17 +20,11 @@ block-size: min-content;
 
 /* グリッドトラックで使用 */
 grid-template-columns: 200px 1fr min-content;
-
-/* グローバル値 */
-min-content: inherit;
-min-content: initial;
-min-content: revert;
-min-content: unset;
 ```
 
 ## 例
 
-<h3 id="Using_min-content_for_box_sizing">min-content をボックスの大きさに使用</h3>
+### min-content をボックスの大きさに使用
 
 #### HTML
 
@@ -50,17 +48,15 @@ min-content: unset;
 
 {{EmbedLiveSample("Using_min-content_for_box_sizing", "100%", 200)}}
 
-<h3 id="Sizing_grid_columns_with_min-content">min-content をグリッド列の大きさに使用</h3>
+### min-content をグリッド列の大きさに使用
 
 #### HTML
 
 ```html
 <div id="container">
-  Item
-  <div>
-    Item with more text in it.
-  </div>
-  Flexible item
+  <div>Item</div>
+  <div>Item with more text in it.</div>
+  <div>Flexible item</div>
 </div>
 ```
 
@@ -94,6 +90,8 @@ min-content: unset;
 
 ## ブラウザーの互換性
 
-### width (および他の大きさのプロパティ) での対応
-
 {{Compat}}
+
+## 関連情報
+
+- 関連する大きさのキーワード: {{cssxref("max-content")}}, {{cssxref("fit-content")}}

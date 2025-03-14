@@ -1,14 +1,9 @@
 ---
 title: Agent utilisateur
 slug: Glossary/User_agent
-tags:
-  - Glossaire
-  - Mécanismes web
-  - Web
-  - agent utilisateur
-translation_of: Glossary/User_agent
-original_slug: Glossaire/User_agent
 ---
+
+{{GlossarySidebar}}
 
 Un agent utilisateur est un programme informatique qui représente une personne, par exemple, un {{Glossary("Navigateur","navigateur")}} dans le cadre d'une utilisation sur le {{Glossary("World Wide Web", "Web")}}.
 
@@ -28,4 +23,4 @@ Une chaîne classique d'agent utilisateur ressemble à ceci : `"Mozilla/5.0 (X11
 
 ### Référence technique
 
-- En-tête [User agent](http://tools.ietf.org/html/rfc2616#section-14.43) dans la RFC 2616
+- En-tête [User agent](https://tools.ietf.org/html/rfc2616#section-14.43) dans la RFC 2616

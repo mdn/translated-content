@@ -1,16 +1,6 @@
 ---
 title: userScripts
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts
-tags:
-  - Add-ons
-  - Customisation
-  - Extensions
-  - Firefox
-  - Mozilla
-  - Reference
-  - WebExtensions
-  - userScripts
-translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts
 ---
 
 {{AddonSidebar}}
@@ -23,11 +13,13 @@ Cette API offre des capacités similaires à {{WebExtAPIRef("contentScripts")}} 
 - l'accès à la `fenêtre` et aux valeurs globales du `document` liées à la page web à laquelle le script utilisateur est attaché.
 - aucun accès aux API de WebExtension ou aux autorisations associées accordées à l'extension : le script API, qui hérite des autorisations de l'extension, peut fournir des API de WebExtension packagées aux scripts utilisateur enregistrés. Un script API est déclaré dans le fichier manifeste de l'extension en utilisant la clé du manifeste "user_scripts".
 
-> **Attention :** Cette API requiert la présence de la clé [`user_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) dans le manifest.json, même si aucun script API n'est spécifié. Par exemple, `user_scripts: {}`.
+> [!WARNING]
+> Cette API requiert la présence de la clé [`user_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) dans le manifest.json, même si aucun script API n'est spécifié. Par exemple, `user_scripts: {}`.
 
 Pour utiliser l'API, appelez `{{WebExtAPIRef("userScripts.register","register()")}}` en passant un objet définissant les scripts à enregistrer. La méthode renvoie une promesse qui est résolue par un objet `{{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}`.
 
-> **Note :** Les scripts utilisateur sont désenregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts utilisateur ont été enregistrés) est déchargée, vous devez donc enregistrer un script utilisateur depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts utilisateur restent enregistrés
+> [!NOTE]
+> Les scripts utilisateur sont désenregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts utilisateur ont été enregistrés) est déchargée, vous devez donc enregistrer un script utilisateur depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts utilisateur restent enregistrés
 
 ## Types
 
@@ -44,9 +36,9 @@ Pour utiliser l'API, appelez `{{WebExtAPIRef("userScripts.register","register()"
 - {{WebExtAPIRef("userScripts.onBeforeScript")}}
   - : Un événement disponible pour le script API, enregistré dans [`"user_scripts"`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts), qui s'exécute avant qu'un script utilisateur ne s'exécute. Utilisez-le pour déclencher l'exportation des API supplémentaires fournies par le script API, afin qu'elles soient disponibles pour le script utilisateur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.userScripts", 10, 1)}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -9,7 +9,7 @@ slug: Web/SVG/Element/switch
 
 注意：属性`display`和属性`visibility`的值对`switch 元素处理是不起作用的。`特别是，在`switch 元素的子元素上`设置`display`为 none，对`switch` 元素的 true/false 测试处理不起作用。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
@@ -19,10 +19,10 @@ slug: Web/SVG/Element/switch
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/zh-CN/docs/SVG/Attribute#Core) »
-- [图形事件属性](/zh-CN/docs/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/zh-CN/docs/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/Web/SVG/Attribute#graphicalevent) »
+- [外观属性](/zh-CN/docs/Web/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -34,8 +34,8 @@ slug: Web/SVG/Element/switch
 
 ## DOM 接口
 
-该元素实现了[`SVGSwitchElement`](/zh-CN/docs/DOM/SVGSwitchElement) 接口。
+该元素实现了 [`SVGSwitchElement`](/zh-CN/docs/Web/API/SVGSwitchElement) 接口。
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}

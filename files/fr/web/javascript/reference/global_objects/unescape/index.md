@@ -1,16 +1,12 @@
 ---
 title: unescape()
 slug: Web/JavaScript/Reference/Global_Objects/unescape
-tags:
-  - Déprécié
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/unescape
-original_slug: Web/JavaScript/Reference/Objets_globaux/unescape
 ---
 
 {{jsSidebar("Objects")}}
 
-> **Attention :** Bien que `unescape(…)` ne soit pas strictement obsolète (au sens où elle n'a pas été retirée des standards), elle est définie au sein de [l'Annexe B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) du standard ECMA-262 qui commence par :
+> [!WARNING]
+> Bien que `unescape(…)` ne soit pas strictement obsolète (au sens où elle n'a pas été retirée des standards), elle est définie au sein de [l'Annexe B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) du standard ECMA-262 qui commence par :
 >
 > > … L'ensemble des fonctionnalités et comportements définis dans cette annexe possède une ou plusieurs caractéristiques indésirables. En l'absence d'une utilisation historique, ces fonctionnalités seraient retirés de la spécification. …
 > > … Les développeurs ne devraient pas utiliser ces fonctionnalités et comportements ou présupposer qu'elles existent lors de l'écriture de nouveau code ECMAScript. …
@@ -22,7 +18,7 @@ La fonction dépréciée **`unescape()`** calcule une nouvelle chaîne de caract
 ## Syntaxe
 
 ```js
-unescape(str)
+unescape(str);
 ```
 
 ### Paramètres
@@ -41,9 +37,9 @@ La fonction `unescape` est une propriété de l'_objet global_.
 ## Exemples
 
 ```js
-unescape("abc123");     // "abc123"
-unescape("%E4%F6%FC");  // "äöü"
-unescape("%u0107");     // "ć"
+unescape("abc123"); // "abc123"
+unescape("%E4%F6%FC"); // "äöü"
+unescape("%u0107"); // "ć"
 ```
 
 ## Spécifications

@@ -1,14 +1,6 @@
 ---
 title: Float32Array
 slug: Web/JavaScript/Reference/Global_Objects/Float32Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/Float32Array
-original_slug: Web/JavaScript/Reference/Objets_globaux/Float32Array
 ---
 
 {{JSRef}}
@@ -92,7 +84,7 @@ Chacun des objets `Float32Array` hérite de {{jsxref("TypedArray.prototype", "%T
   - : Renvoie le dernier indice (le plus élevé) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Float32Array.prototype.map()")}}
   - : Crée un nouveau tableau dont les éléments sont les images des éléments du tableau courant par une fonction donnée. Voir également {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Float32Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
+- {{jsxref("TypedArray.move", "Float32Array.prototype.move()")}} {{non-standard_inline}}
   - : Ancienne version, non-standard, de {{jsxref("TypedArray.copyWithin", "Float32Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.reduce", "Float32Array.prototype.reduce()")}}
   - : Applique une fonction sur un accumulateur et chaque élément du tableau (de gauche à droite) afin de réduire le tableau en une seule valeur. Voir également {{jsxref("Array.prototype.reduce()")}}.
@@ -132,7 +124,7 @@ console.log(float32.length); // 2
 console.log(float32.BYTES_PER_ELEMENT); // 4
 
 // Construction à partir d'un tableau
-var arr = new Float32Array([21,31]);
+var arr = new Float32Array([21, 31]);
 console.log(arr[1]); // 31
 
 // Construction à partir d'un tableau typé
@@ -145,7 +137,9 @@ var buffer = new ArrayBuffer(16);
 var z = new Float32Array(buffer, 0, 4);
 
 // Construction à partir d'un itérable
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var float32 = new Float32Array(iterable);
 // Float32Array[1, 2, 3]
 ```
@@ -174,6 +168,6 @@ var dv = new Float32Array([1, 2, 3]);
 
 ## Voir aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

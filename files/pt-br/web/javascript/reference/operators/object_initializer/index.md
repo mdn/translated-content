@@ -1,7 +1,6 @@
 ---
 title: Inicializador de Objeto
 slug: Web/JavaScript/Reference/Operators/Object_initializer
-original_slug: Web/JavaScript/Reference/Operators/Inicializador_Objeto
 ---
 
 {{JsSidebar("Operadores")}}
@@ -14,7 +13,9 @@ Objetos podem ser inicializados utilizando [`new Object()`](/pt-BR/docs/Web/Java
 var o = {};
 var o = { a: "foo", b: 42, c: {} };
 
-var a = "foo", b = 42, c = {};
+var a = "foo",
+  b = 42,
+  c = {};
 var o = { a: a, b: b, c: c };
 
 var o = {
@@ -30,7 +31,9 @@ Por favor, verifique o suporte das anotações na tabela de compatibilidade. Em 
 
 ```js
 // // Abreviação em nomes de propriedades (ES2015)
-var a = "foo", b = 42, c = {};
+var a = "foo",
+  b = 42,
+  c = {};
 var o = { a, b, c };
 
 // // Abreviação em nomes de métodos (ES2015)
@@ -67,12 +70,12 @@ var object = {
   foo: "bar",
   age: 42,
   baz: { myProp: 12 },
-}
+};
 ```
 
 ### Acessando propriedades
 
-Uma vez que você criou um objeto, é interessante que possa ler ou alterá-lo. As propriedades de um objeto podem ser acessadas utilizando a notação de ponto ou colchetes. Veja [assessores de propriedade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors) para mais informações.
+Uma vez que você criou um objeto, é interessante que possa ler ou alterá-lo. As propriedades de um objeto podem ser acessadas utilizando a notação de ponto ou colchetes. Veja [assessores de propriedade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_accessors) para mais informações.
 
 ```js
 object.foo; // "bar"
@@ -87,13 +90,13 @@ Nós temos aprendido como descrever propriedades utilizando a sintaxe _inicializ
 
 ```js
 var a = "foo",
-    b = 42,
-    c = {};
+  b = 42,
+  c = {};
 
 var o = {
   a: a,
   b: b,
-  c: c
+  c: c,
 };
 ```
 
@@ -101,14 +104,14 @@ Com ECMAScript 2015, há uma notação mais curta que possibilita atingir o mesm
 
 ```js
 var a = "foo",
-    b = 42,
-    c = {};
+  b = 42,
+  c = {};
 
 // Abreviação em nomes de propriedades (ES2015)
 var o = { a, b, c };
 
 // Em outras palavras,
-console.log((o.a === { a }.a)); // true
+console.log(o.a === { a }.a); // true
 ```
 
 #### Duplicação em nomes de propriedades
@@ -116,14 +119,14 @@ console.log((o.a === { a }.a)); // true
 Quando se está utilizando o mesmo nome para suas propriedades, a última sobrescreverá as anteriores.
 
 ```js
-var a = {x: 1, x: 2};
+var a = { x: 1, x: 2 };
 console.log(a); // { x: 2}
 ```
 
 Em códigos ECMAScript 5 no modo estrito, duplicação em nomes de propriedades serão consideradas {{jsxref("SyntaxError")}}. Porém, com a introdução de "nomes de propriedades computadas", tornou-se possível a duplicação das propriedades em tempo de execução. Assim, ECMAScript 2015 removeu a restrição.
 
 ```js
-function haveES2015DuplicatePropertySemantics(){
+function haveES2015DuplicatePropertySemantics() {
   "use strict";
   try {
     ({ prop: 1, prop: 2 });
@@ -157,7 +160,7 @@ var o = {
   propriedade([parâmetros]) {},
   get propriedade() {},
   set propriedade(valor) {},
-  * gerador() {}
+  *gerador() {},
 };
 ```
 
@@ -181,11 +184,11 @@ var o = {
 };
 ```
 
-Para mais informações e exemplos, veja [definições de método](/pt-BR/docs/Web/JavaScript/Reference/Functions/Definicoes_metodos).
+Para mais informações e exemplos, veja [definições de método](/pt-BR/docs/Web/JavaScript/Reference/Functions/Method_definitions).
 
 ### Nomes de propriedades computados
 
-Começando com ECMAScript 2015, a sintaxe _inicializador_ de objeto também suporta "nomes de propriedades computados". Isso permite que você possa inserir uma expressão dentro de colchetes `[]`, que será computada como o nome de uma propriedade. Isto é semelhante à notação de chaves utilizado em [acessor de propriedade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors), utilizado para ler a alterar as propriedades existentes em um objeto. Segue um exemplo utilizando a mesma sintaxe em objetos literais:
+Começando com ECMAScript 2015, a sintaxe _inicializador_ de objeto também suporta "nomes de propriedades computados". Isso permite que você possa inserir uma expressão dentro de colchetes `[]`, que será computada como o nome de uma propriedade. Isto é semelhante à notação de chaves utilizado em [acessor de propriedade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_accessors), utilizado para ler a alterar as propriedades existentes em um objeto. Segue um exemplo utilizando a mesma sintaxe em objetos literais:
 
 ```js
 // Nomes de propriedades computados (ES2015)
@@ -193,17 +196,17 @@ var i = 0;
 var a = {
   ["foo" + ++i]: i,
   ["foo" + ++i]: i,
-  ["foo" + ++i]: i
+  ["foo" + ++i]: i,
 };
 
 console.log(a.foo1); // 1
 console.log(a.foo2); // 2
 console.log(a.foo3); // 3
 
-var param = 'size';
+var param = "size";
 var config = {
   [param]: 12,
-  ["mobile" + param.charAt(0).toUpperCase() + param.slice(1)]: 4
+  ["mobile" + param.charAt(0).toUpperCase() + param.slice(1)]: 4,
 };
 
 console.log(config); // { size: 12, mobileSize: 4 }
@@ -211,7 +214,7 @@ console.log(config); // { size: 12, mobileSize: 4 }
 
 ### Mutação Prototype
 
-Uma definição de propriedade na forma de `__proto__: valor` or `"__proto__": valor` não cria uma propriedade com o nome `__proto__`. Inclusive, se o valor fornecido for um objeto ou [`null`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/null), muda o `[[Prototype]]` do objeto criado para o valor informado. (Se o valor fornecido não é um objeto ou null, o valor não será alterado.)
+Uma definição de propriedade na forma de `__proto__: valor` or `"__proto__": valor` não cria uma propriedade com o nome `__proto__`. Inclusive, se o valor fornecido for um objeto ou [`null`](/pt-BR/docs/Web/JavaScript/Reference/Operators/null), muda o `[[Prototype]]` do objeto criado para o valor informado. (Se o valor fornecido não é um objeto ou null, o valor não será alterado.)
 
 ```js
 var obj1 = {};
@@ -221,7 +224,7 @@ var obj2 = { __proto__: null };
 assert(Object.getPrototypeOf(obj2) === null);
 
 var protoObj = {};
-var obj3 = { "__proto__": protoObj };
+var obj3 = { __proto__: protoObj };
 assert(Object.getPrototypeOf(obj3) === protoObj);
 
 var obj4 = { __proto__: "not an object or null" };
@@ -241,7 +244,11 @@ assert(Object.getPrototypeOf(obj1) === Object.prototype);
 assert(obj1.hasOwnProperty("__proto__"));
 assert(obj1.__proto__ === "variable");
 
-var obj2 = { __proto__() { return "hello"; } };
+var obj2 = {
+  __proto__() {
+    return "hello";
+  },
+};
 assert(obj2.__proto__() === "hello");
 
 var obj3 = { ["__prot" + "o__"]: 17 };
@@ -250,7 +257,7 @@ assert(obj3.__proto__ === 17);
 
 ## Notação de objeto literal vs JSON
 
-A notação de objeto literal não é a mesma de **J**ava**S**cript **O**bject **N**otation ([JSON](/pt-BR/docs/JSON)). Mesmo que possuam semelhanças, há as seguintes diferenças:
+A notação de objeto literal não é a mesma de **J**ava**S**cript **O**bject **N**otation ([JSON](/pt-BR/docs/Glossary/JSON)). Mesmo que possuam semelhanças, há as seguintes diferenças:
 
 - JSON permite definições de propriedades utilizando apenas aspas duplas, como `"propriedade": valor`. E a definição não pode ser abreviada.
 - Os valores JSON podem ser apenas strings, numbers, arrays, `true`, `false`, `null`, ou outro objeto JSON.
@@ -260,20 +267,15 @@ A notação de objeto literal não é a mesma de **J**ava**S**cript **O**bject *
 
 ## Especificações
 
-| Specification                                                                                    | Status                       | Comment                                                                                                                                  |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                         | {{Spec2('ES1')}}         | Definição inicial.                                                                                                                       |
-| {{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}                     | {{Spec2('ES5.1')}}     | [getter](/pt-BR/docs/Web/JavaScript/Reference/Functions/get) e [setter](/pt-BR/docs/Web/JavaScript/Reference/Functions/set) adicionados. |
-| {{SpecName('ES6', '#sec-object-initializer', 'Object Initializer')}}     | {{Spec2('ES6')}}         | Abreviações de nomes em propriedades/métodos e nomes de propriedados computados foram adicionados.                                       |
-| {{SpecName('ESDraft', '#sec-object-initializer', 'Object Initializer')}} | {{Spec2('ESDraft')}} |                                                                                                                                          |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.object_initializer")}}
+{{Compat}}
 
 ## Veja também
 
-- [Assesores de propriedade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Assesores de propriedade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_accessors)
 - [`get`](/pt-BR/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/pt-BR/docs/Web/JavaScript/Reference/Functions/set)
-- [Definições de métodos](/pt-BR/docs/Web/JavaScript/Reference/Functions/Definicoes_metodos)
+- [Definições de métodos](/pt-BR/docs/Web/JavaScript/Reference/Functions/Method_definitions)
 - [Lexical grammar](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar)

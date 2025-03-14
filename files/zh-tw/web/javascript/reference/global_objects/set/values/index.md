@@ -7,13 +7,27 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/values
 
 **`values()`** 方法回傳一個 `Iterator` 物件，包含著 `Set` 物件中所有元素，由插入順序排序。
 
-**`keys()`** 是這個方法的替身 (為了與 {{jsxref("Map")}} 物件保持相似性)；他運行的完全一模一樣，回傳 `Set` 中元素的 **values** 。
+**`keys()`** 是這個方法的替身（為了與 {{jsxref("Map")}} 物件保持相似性）；他運行的完全一模一樣，回傳 `Set` 中元素的 **values**。
 
-{{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.values")}}
+
+```js interactive-example
+const set1 = new Set();
+set1.add(42);
+set1.add("forty two");
+
+const iterator1 = set1.values();
+
+console.log(iterator1.next().value);
+// Expected output: 42
+
+console.log(iterator1.next().value);
+// Expected output: "forty two"
+```
 
 ## 語法
 
-```plain
+```js
 mySet.values();
 ```
 
@@ -27,9 +41,9 @@ mySet.values();
 
 ```js
 var mySet = new Set();
-mySet.add('foo');
-mySet.add('bar');
-mySet.add('baz');
+mySet.add("foo");
+mySet.add("bar");
+mySet.add("baz");
 
 var setIter = mySet.values();
 
@@ -46,6 +60,6 @@ console.log(setIter.next().value); // "baz"
 
 {{Compat}}
 
-## 另見
+## 參見
 
 - {{jsxref("Set.prototype.entries()")}}

@@ -1,19 +1,22 @@
 ---
 title: Blink
 slug: Glossary/Blink
-tags:
-  - Agencement
-  - Glossaire
-  - Infrastructure
-translation_of: Glossary/Blink
-original_slug: Glossaire/Blink
+l10n:
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-**Blink** est un moteur de rendu HTML libre basé sur {{Glossary("WebKit")}} et développé principalement par Google dans le cadre du projet Chromium (et par conséquent présent dans Chrome aussi). Plus particulièrement, Blink est une branche de la bibliothèque WebCore de WebKit qui gère l'agencement, le rendu et le {{Glossary("DOM")}}.
+{{GlossarySidebar}}
+
+**Blink** est un moteur de rendu de navigateur en sources ouvertes, développé par Google dans le cadre de Chromium (et par conséquent également présent dans [Google Chrome](/fr/docs/Glossary/Google_Chrome)). Plus précisément, Blink a débuté comme un <i lang="en">fork</i> de la bibliothèque WebCore de [WebKit](/fr/docs/Glossary/WebKit), qui gère la mise en page, le rendu et le [DOM](/fr/docs/Glossary/DOM). Blink est désormais un [moteur de rendu](/fr/docs/Glossary/Engine/Rendering) distinct à part entière.
 
 ## Voir aussi
 
-### Culture générale
-
-- [Page d'accueil](http://www.chromium.org/blink) du projet Blink
-- [Blink](http://fr.wikipedia.org/wiki/Blink_%28moteur_de_rendu%29) sur Wikipédia.
+- [Page d'accueil](https://www.chromium.org/blink) du projet Blink
+- [Blink](<https://fr.wikipedia.org/wiki/Blink_(moteur_de_rendu)>) sur Wikipédia.
+- [FAQ](https://www.chromium.org/blink/developer-faq/) sur Blink
+- [Glossaire](/fr/docs/Glossary)
+  - [Google Chrome](/fr/docs/Glossary/Google_Chrome)
+  - [Gecko](/fr/docs/Glossary/Gecko)
+  - [Trident](/fr/docs/Glossary/Trident)
+  - [WebKit](/fr/docs/Glossary/WebKit)
+  - [Moteur de rendu](/fr/docs/Glossary/Engine/Rendering)

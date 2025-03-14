@@ -1,19 +1,6 @@
 ---
 title: Référence des attributs HTML
 slug: Web/HTML/Attributes
-tags:
-  - Attribute
-  - Attributes
-  - Beginner
-  - Configuring
-  - Element Attributes
-  - Elements
-  - HTML
-  - Reference
-  - Settings
-  - Web
-translation_of: Web/HTML/Attributes
-original_slug: Web/HTML/Attributs
 ---
 
 {{HTMLSidebar}}
@@ -211,8 +198,6 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         >,
         <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Keygen"><code>&#x3C;keygen></code></a
-        >,
         <a href="/fr/docs/Web/HTML/Element/select"><code>&#x3C;select></code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/Textarea"
@@ -344,19 +329,6 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
       <td>
         À partir de la spécification <i lang="en">HTML Media Capture</i>, spécifie qu'un nouveau fichier peut être capturé.
       </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Keygen#attr-challenge"
-          ><code>challenge</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Keygen"
-          ><code>&#x3C;keygen></code></a
-        >
-      </td>
-      <td>Une chaîne de challenge qui est envoyée avec la clef publique.</td>
     </tr>
     <tr>
       <td>
@@ -728,8 +700,6 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         >,
         <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Keygen"><code>&#x3C;keygen></code></a
-        >,
         <a href="/fr/docs/Web/HTML/Element/Optgroup"
           ><code>&#x3C;optgroup></code></a
         >,
@@ -834,8 +804,6 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
           ><code>&#x3C;fieldset></code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Keygen"><code>&#x3C;keygen></code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/Label"><code>&#x3C;label></code></a
         >,
@@ -1204,19 +1172,6 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Keygen#attr-keytype"
-          ><code>keytype</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Keygen"
-          ><code>&#x3C;keygen></code></a
-        >
-      </td>
-      <td>Cet attribut définit le type de clé qui est généré.</td>
-    </tr>
-    <tr>
-      <td>
         <a href="/fr/docs/Web/HTML/Element/track#attr-kind"
           ><code>kind</code></a
         >
@@ -1484,8 +1439,6 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Element/iframe"><code>&#x3C;iframe></code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Keygen"><code>&#x3C;keygen></code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/object"><code>&#x3C;object></code></a
         >,
@@ -2153,11 +2106,11 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
 
 En HTML, la plupart des attributs ont deux aspects : l'**attribut de contenu** et l'**attribut IDL** (pour _Interface Definition Language_ ou langage de définition des interfaces).
 
-L'attribut de contenu est l'attribut qu'on définit via le contenu (le code HTML) et qu'on obtient et/ou définit via les méthodes [`element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute) et [`element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute). L'attribut de contenu sera toujours une chaîne de caractères, y compris lorsque la valeur attendue est un entier. Ainsi, pour indiquer une `maxlength` d'un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) à 42, on utilisera `setAttribute("maxlength", "42")` sur cet élément.
+L'attribut de contenu est l'attribut qu'on définit via le contenu (le code HTML) et qu'on obtient et/ou définit via les méthodes [`element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute) et [`element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute). L'attribut de contenu sera toujours une chaîne de caractères, y compris lorsque la valeur attendue est un entier. Ainsi, pour indiquer une `maxlength` d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input) à 42, on utilisera `setAttribute("maxlength", "42")` sur cet élément.
 
 L'attribut IDL est également connu sous la forme d'une propriété JavaScript. Ce sont les attributs qu'on peut obtenir ou modifier via JavaScript sous la forme `élément.toto`. L'attribut IDL utilisera toujours la valeur de l'attribut de contenu sous-jacent, éventuellement en la modifiant pour renvoyer une valeur ou pour la modifier. Autrement dit, les attributs IDL, reflètent les attributs de contenu.
 
-La plupart du temps, les attributs IDL renverront leurs valeurs, telles qu'elles sont utilisées. Par exemple, le type (l'attribut `type`) par défaut des éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) vaut `"text"`, et si on définit `input.type="tototruc"`, l'élément `<input>` se comportera comme un élément de type `text` (en termes d'apparence et de comportement) mais le contenu de l'attribut `type` sera "tototruc". Cependant, l'attribut de type IDL renverra la chaîne `"text"`.
+La plupart du temps, les attributs IDL renverront leurs valeurs, telles qu'elles sont utilisées. Par exemple, le type (l'attribut `type`) par défaut des éléments [`<input>`](/fr/docs/Web/HTML/Element/input) vaut `"text"`, et si on définit `input.type="tototruc"`, l'élément `<input>` se comportera comme un élément de type `text` (en termes d'apparence et de comportement) mais le contenu de l'attribut `type` sera "tototruc". Cependant, l'attribut de type IDL renverra la chaîne `"text"`.
 
 Les attributs IDL ne sont pas toujours des chaînes de caractères. `input.maxlength` est un nombre par exemple (un entier long signé pour être précis). Lorsqu'on manipule des attributs IDL on utilisera toujours le type défini pour l'interface. Ainsi, `input.maxlength` renverra toujours un nombre et si on souhaite le définir, il faudra le faire avec un nombre, si on passe une valeur d'un autre type, cette valeur sera convertie grâce aux mécanismes de conversion habituels de JavaScript.
 
@@ -2171,9 +2124,13 @@ HTML5 définit des restrictions sur les valeurs autorisées des attributs boolé
 
 ```html
 <div itemscope>Ce fragment est du HTML valide mais du XML invalide.</div>
-<div itemscope=itemscope>Ce fragment est du HTML valide mais du XML invalide.</div>
+<div itemscope="itemscope">
+  Ce fragment est du HTML valide mais du XML invalide.
+</div>
 <div itemscope="">Ce fragment est du HTML valide et du XML valide.</div>
-<div itemscope="itemscope">Ce fragment est du HTML et du XML valide mais est plus verbeux.</div>
+<div itemscope="itemscope">
+  Ce fragment est du HTML et du XML valide mais est plus verbeux.
+</div>
 ```
 
 Pour être tout à fait explicite, les valeurs `"true"` et `"false"` ne sont pas autorisées pour les attributs booléens. Pour représenter une valeur fausse, il faudra ne pas écrire l'attribut du tout. Cette règle peut entraîner quelques incompréhensions : si on écrit `checked="false"` l'attribut `checked` sera présent et donc considéré comme _vrai_ (_true_).

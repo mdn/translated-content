@@ -17,7 +17,7 @@ var lastChance = SyncEvent.lastChance
 
 {{jsxref("Boolean")}} は、現在の試行の後にユーザーエージェントがこれ以上同期を試行しないかどうかを示します。
 
-## 仕様
+## 仕様書
 
 | 仕様                                                                                      |
 | ----------------------------------------------------------------------------------------- |
@@ -25,4 +25,4 @@ var lastChance = SyncEvent.lastChance
 
 ## ブラウザー実装状況
 
-{{Compat("api.SyncEvent.lastChance")}}
+{{Compat}}

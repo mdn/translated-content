@@ -29,12 +29,12 @@ escape(str)
 ## 示例
 
 ```js
-escape("abc123");     // "abc123"
-escape("äöü");        // "%E4%F6%FC"
-escape("ć");          // "%u0107"
+escape("abc123"); // "abc123"
+escape("äöü"); // "%E4%F6%FC"
+escape("ć"); // "%u0107"
 
 // special characters
-escape("@*_+-./");    // "@*_+-./"
+escape("@*_+-./"); // "@*_+-./"
 ```
 
 ## 规范

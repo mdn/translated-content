@@ -1,9 +1,6 @@
 ---
 title: Symbol.toPrimitive
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
-browser-compat: javascript.builtins.Symbol.toPrimitive
 l10n:
   sourceCommit: 02024642bdb12940509cb4c7e2e60cbc3d62bf21
 ---
@@ -12,7 +9,21 @@ l10n:
 
 El **`Symbol.toPrimitive`** es un símbolo que especifica una propiedad con valor de función que se llama para convertir un objeto en un valor primitivo correspondiente.
 
-{{EmbedInteractiveExample("pages/js/symbol-toprimitive.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.toPrimitive")}}
+
+```js interactive-example
+const object1 = {
+  [Symbol.toPrimitive](hint) {
+    if (hint === "number") {
+      return 42;
+    }
+    return null;
+  },
+};
+
+console.log(+object1);
+// Expected output: 42
+```
 
 ## Descripción
 
@@ -29,25 +40,25 @@ El siguiente ejemplo describe cómo la propiedad `Symbol.toPrimitive` puede modi
 ```js
 // Un objeto sin la propiedad Symbol.toPrimitive.
 const obj1 = {};
-console.log(+obj1);     // NaN
+console.log(+obj1); // NaN
 console.log(`${obj1}`); // "[object Object]"
-console.log(obj1 + ''); // "[object Object]"
+console.log(obj1 + ""); // "[object Object]"
 
 // Un objeto con la propiedad Symbol.toPrimitive.
 const obj2 = {
   [Symbol.toPrimitive](hint) {
-    if (hint === 'number') {
+    if (hint === "number") {
       return 10;
     }
-    if (hint === 'string') {
-      return 'hello';
+    if (hint === "string") {
+      return "hello";
     }
     return true;
-  }
+  },
 };
-console.log(+obj2);     // 10        — hint es "number"
+console.log(+obj2); // 10        — hint es "number"
 console.log(`${obj2}`); // "hello"   — hint es "string"
-console.log(obj2 + ''); // "true"    — hint es "default"
+console.log(obj2 + ""); // "true"    — hint es "default"
 ```
 
 ## Especificaciones

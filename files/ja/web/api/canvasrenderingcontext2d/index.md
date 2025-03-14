@@ -20,8 +20,8 @@ slug: Web/API/CanvasRenderingContext2D
 このキャンバスの二次元描画コンテキストを取得するには、引数に `'2d'` を指定して {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} を `<canvas>` に対して呼び出します。
 
 ```js
-const canvas = document.getElementById('my-house');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("my-house");
+const ctx = canvas.getContext("2d");
 ```
 
 二次元描画コンテキストを取得した後は、好きなように描画できます。以下のコードは家を描画します。
@@ -214,11 +214,11 @@ ctx.stroke();
 {{domxref("ImageData")}} オブジェクトも参照してください。
 
 - {{domxref("CanvasRenderingContext2D.createImageData()")}}
-  - : 引数で指定した領域から空の {{domxref("ImageData")}} オブジェクトを作成します。そのオブジェクトはすべてのピクセルが透明な黒で構成されています。
+  - : 引数で指定したサイズの空の {{domxref("ImageData")}} オブジェクトを作成します。そのオブジェクトはすべてのピクセルが透明な黒で構成されています。
 - {{domxref("CanvasRenderingContext2D.getImageData()")}}
-  - : キャンバス内の座標 _(sx, sy)_ から 幅 _sw_ と 高さ _sh_ のサイズで示される基本のピクセルデータの {{domxref("ImageData")}} オブジェクトを取得します。
+  - : キャンバス内の座標 _(sx, sy)_ から 幅 _sw_ と 高さ _sh_ のサイズで示される部分に対応するピクセルデータの {{domxref("ImageData")}} オブジェクトを取得します。
 - {{domxref("CanvasRenderingContext2D.putImageData()")}}
-  - : 引数で指定した {{domxref("ImageData")}} オブジェクトのデータをビットマップ上に描画します。不適切な四角形が指定された場合は、その四角形のピクセルだけが描画されます。
+  - : 引数で指定した {{domxref("ImageData")}} オブジェクトのデータをビットマップ上に描画します。再描画対象の四角形が指定された場合は、その四角形のピクセルだけが描画されます。
 
 ### 画像の平滑化
 
@@ -236,7 +236,7 @@ ctx.stroke();
 - {{domxref("CanvasRenderingContext2D.restore()")}}
   - : 描画スタイルの状態を `save()` によって保存された '状態スタック' の最後の要素に復元します。
 - {{domxref("CanvasRenderingContext2D.canvas")}}
-  - : {{domxref("HTMLCanvasElement")}} への読み取り専用の後方参照。 {{HTMLElement("canvas")}} 要素と関連付けられていない場合、 {{jsxref("null")}} になる可能性があります。
+  - : {{domxref("HTMLCanvasElement")}} への読み取り専用の後方参照。 {{HTMLElement("canvas")}} 要素と関連付けられていない場合、 [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) になる可能性があります。
 - {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}
   - : 実際のコンテキスト属性を含むオブジェクトを返します。コンテキスト属性は {{domxref("HTMLCanvasElement.getContext()")}} で要求することができます。
 

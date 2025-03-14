@@ -1,27 +1,31 @@
 ---
 title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
-tags:
-  - Expressions rationnelles
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/search
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/search
 ---
 
 {{JSRef}}
 
 La méthode **`search()`** éxecute une recherche dans une chaine de caractères grâce à une expression rationnelle appliquée sur la chaîne courante.
 
-{{EmbedInteractiveExample("pages/js/string-search.html")}}
+{{InteractiveExample("JavaScript Demo: String.search()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+// Anything not a word character, whitespace or apostrophe
+const regex = /[^\w\s']/g;
+
+console.log(paragraph.search(regex));
+// Expected output: 41
+
+console.log(paragraph[paragraph.search(regex)]);
+// Expected output: "!"
+```
 
 ## Syntaxe
 
 ```js
-str.search(regexp)
+str.search(regexp);
 ```
 
 ### Paramètres

@@ -1,11 +1,6 @@
 ---
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
-tags:
-  - Error
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/Error
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Error
 ---
 
 {{JSRef}}
@@ -77,9 +72,9 @@ Normalmente, creas un objeto `Error` con la intención de generarlo utilizando l
 
 ```js
 try {
-  throw new Error('¡Ups!')
+  throw new Error("¡Ups!");
 } catch (e) {
-  console.error(e.name + ': ' + e.message)
+  console.error(e.name + ": " + e.message);
 }
 ```
 
@@ -89,12 +84,12 @@ Puede elegir manejar solo tipos de error específicos probando el tipo de error 
 
 ```js
 try {
-  foo.bar()
+  foo.bar();
 } catch (e) {
   if (e instanceof EvalError) {
-    console.error(e.name + ': ' + e.message)
+    console.error(e.name + ": " + e.message);
   } else if (e instanceof RangeError) {
-    console.error(e.name + ': ' + e.message)
+    console.error(e.name + ": " + e.message);
   }
   // ... etc
 }
@@ -104,39 +99,41 @@ try {
 
 Posiblemente desees definir tus propios tipos de error derivados de `Error` para poder lanzarlo con `throw new MyError()` y usar `instanceof MyError` para verificar el tipo de error en el controlador de excepciones. Esto da como resultado un código de manejo de errores más limpio y consistente.
 
-Consulta ["¿Cuál es una buena manera de extender `Error` en JavaScript?"](http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) en StackOverflow para una discusión en profundidad.
+Consulta ["¿Cuál es una buena manera de extender `Error` en JavaScript?"](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) en StackOverflow para una discusión en profundidad.
 
 #### Clase `Error` personalizado en ES6
 
-> **Advertencia:** Las versiones de Babel anteriores a la 7 pueden manejar métodos de clase `CustomError`, pero solo cuando se declaran con {{JSxRef("Objetos_globales/Object/defineProperty", "Object.defineProperty()")}}. De lo contrario, las versiones antiguas de Babel y otros transpiladores no manejarán correctamente el siguiente código sin [configuración adicional](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
+> [!WARNING]
+> Las versiones de Babel anteriores a la 7 pueden manejar métodos de clase `CustomError`, pero solo cuando se declaran con {{JSxRef("Objetos_globales/Object/defineProperty", "Object.defineProperty()")}}. De lo contrario, las versiones antiguas de Babel y otros transpiladores no manejarán correctamente el siguiente código sin [configuración adicional](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
 
-> **Nota:** Algunos navegadores incluyen el constructor `CustomError` en el seguimiento de la pila cuando se utilizan clases de ES2015.
+> [!NOTE]
+> Algunos navegadores incluyen el constructor `CustomError` en el seguimiento de la pila cuando se utilizan clases de ES2015.
 
 ```js
 class CustomError extends Error {
-  constructor(foo = 'bar', ...params) {
+  constructor(foo = "bar", ...params) {
     // Pasa los argumentos restantes (incluidos los específicos del proveedor) al constructor padre
-    super(...params)
+    super(...params);
 
     // Mantiene un seguimiento adecuado de la pila para el lugar donde se lanzó nuestro error (solo disponible en V8)
     if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, CustomError)
+      Error.captureStackTrace(this, CustomError);
     }
 
-    this.name = 'CustomError'
+    this.name = "CustomError";
     // Información de depuración personalizada
-    this.foo = foo
-    this.date = new Date()
+    this.foo = foo;
+    this.date = new Date();
   }
 }
 
 try {
-  throw new CustomError('baz', 'bazMessage')
-} catch(e) {
-  console.error(e.name)    // CustomError
-  console.error(e.foo)     // baz
-  console.error(e.message) // bazMessage
-  console.error(e.stack)   // stacktrace
+  throw new CustomError("baz", "bazMessage");
+} catch (e) {
+  console.error(e.name); // CustomError
+  console.error(e.foo); // baz
+  console.error(e.message); // bazMessage
+  console.error(e.stack); // stacktrace
 }
 ```
 
@@ -147,7 +144,7 @@ try {
 ```js
 function CustomError(foo, message, fileName, lineNumber) {
   var instance = new Error(message, fileName, lineNumber);
-  instance.name = 'CustomError';
+  instance.name = "CustomError";
   instance.foo = foo;
   Object.setPrototypeOf(instance, Object.getPrototypeOf(this));
   if (Error.captureStackTrace) {
@@ -161,19 +158,19 @@ CustomError.prototype = Object.create(Error.prototype, {
     value: Error,
     enumerable: false,
     writable: true,
-    configurable: true
-  }
+    configurable: true,
+  },
 });
 
-if (Object.setPrototypeOf){
+if (Object.setPrototypeOf) {
   Object.setPrototypeOf(CustomError, Error);
 } else {
   CustomError.__proto__ = Error;
 }
 
 try {
-  throw new CustomError('baz', 'bazMessage');
-} catch(e){
+  throw new CustomError("baz", "bazMessage");
+} catch (e) {
   console.error(e.name); // CustomError
   console.error(e.foo); // baz
   console.error(e.message); // bazMessage
@@ -182,13 +179,11 @@ try {
 
 ## Especificaciones
 
-| Especificación                                                           |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-error-objects', 'Error')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Error")}}
+{{Compat}}
 
 ## Ve también
 

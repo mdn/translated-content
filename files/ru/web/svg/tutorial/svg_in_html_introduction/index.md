@@ -1,8 +1,9 @@
 ---
 title: SVG в HTML. Введение
 slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
-translation_of: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 ---
+
+{{SVGRef}}
 
 ## Описание
 
@@ -10,48 +11,66 @@ translation_of: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 
 ## Код
 
-Демонстрация примера [здесь](/presentations/xtech2005/svg-canvas/SVGDemo.xml):
+Демонстрация примера [здесь](https://mdn.dev/archives/media/presentations/xtech2005/svg-canvas/SVGDemo.xml):
 
 ```html
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>XTech SVG Demo</title>
-<style>
-  stop.begin { stop-color:yellow; }
-  stop.end { stop-color:green; }
-  body.invalid stop.end { stop-color:red; }
-  #err { display:none; }
-  body.invalid #err { display:inline; }
-</style>
-<script>
-  function signalError() {
-    document.getElementById('body').setAttribute("class", "invalid");
-  }
-</script>
-</head>
-<body id="body"
-  style="position:absolute; z-index:0; border:1px solid black; left:5%; top:5%; width:90%; height:90%;">
-<form>
-  <fieldset>
-    <legend>HTML Form</legend>
-    <p><label>Введите что-нибудь:</label>
-    <input type="text"/>
-    <span id="err">Incorrect value!</span></p>
-    <p><input type="button" value="Activate!" onclick="signalError();" /></p>
-  </fieldset>
-</form>
+  <head>
+    <title>XTech SVG Demo</title>
+    <style>
+      stop.begin {
+        stop-color: yellow;
+      }
+      stop.end {
+        stop-color: green;
+      }
+      body.invalid stop.end {
+        stop-color: red;
+      }
+      #err {
+        display: none;
+      }
+      body.invalid #err {
+        display: inline;
+      }
+    </style>
+    <script>
+      function signalError() {
+        document.getElementById("body").setAttribute("class", "invalid");
+      }
+    </script>
+  </head>
+  <body
+    id="body"
+    style="position:absolute; z-index:0; border:1px solid black; left:5%; top:5%; width:90%; height:90%;">
+    <form>
+      <fieldset>
+        <legend>HTML Form</legend>
+        <p>
+          <label>Введите что-нибудь:</label>
+          <input type="text" />
+          <span id="err">Incorrect value!</span>
+        </p>
+        <p>
+          <input type="button" value="Activate!" onclick="signalError();" />
+        </p>
+      </fieldset>
+    </form>
 
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-  viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice"
-  style="width:100%; height:100%; position:absolute; top:0; left:0; z-index:-1;">
-  <linearGradient id="gradient">
-    <stop class="begin" offset="0%"/>
-    <stop class="end" offset="100%"/>
-  </linearGradient>
-  <rect x="0" y="0" width="100" height="100" style="fill:url(#gradient)" />
-  <circle cx="50" cy="50" r="30" style="fill:url(#gradient)" />
-</svg>
-</body>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      viewBox="0 0 100 100"
+      preserveAspectRatio="xMidYMid slice"
+      style="width:100%; height:100%; position:absolute; top:0; left:0; z-index:-1;">
+      <linearGradient id="gradient">
+        <stop class="begin" offset="0%" />
+        <stop class="end" offset="100%" />
+      </linearGradient>
+      <rect x="0" y="0" width="100" height="100" style="fill:url(#gradient)" />
+      <circle cx="50" cy="50" r="30" style="fill:url(#gradient)" />
+    </svg>
+  </body>
 </html>
 ```
 
@@ -69,10 +88,11 @@ translation_of: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 - С помощью JavaScript можно управлять как HTML так и SVG
 - Это полностью валидный документ, основанный на стандартах.
 
-> **Примечание:** Чтобы к изображению с DOM добавить связь встроенного SVG, необходимо использовать setAttributeNS, установив href как показано в следующем примере:
+> [!NOTE]
+> Чтобы к изображению с DOM добавить связь встроенного SVG, необходимо использовать setAttributeNS, установив href как показано в следующем примере:
 >
 > ```js
->  var img = document.createElementNS("http://www.w3.org/2000/svg", "image");
+> var img = document.createElementNS("http://www.w3.org/2000/svg", "image");
 >
 > img.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "move.png");
 > ```
@@ -90,7 +110,7 @@ viewBox="0 0 100 100"
 Размер изображения svg (заданный атрибутами width и height), может отличаться от области просмотра. Для регулирования отрисовки такого изображения используется атрибут `preserveAspectRatio`. С его помощью могут быть заданы правила выравнивания и поведения при переполнении (overflow) области просмотра, края svg могут быть обрезаны или вписаны.
 
 ```html
- preserveAspectRatio="alignment [meet | slice]"
+preserveAspectRatio="alignment [meet | slice]"
 ```
 
 `alignment` - одно из значений `xMinYMin, xMinYMid, xMinYMax, xMidYMin, xMidYMid, xMidYMax, xMaxYMin, xMaxYMid` или `xMaxYMax`.
@@ -102,7 +122,7 @@ viewBox="0 0 100 100"
 Также есть спецификатор `none который означает, что изображение заполнит область путём масштабирования сторон, не сохраняя пропорции (растянет).`
 
 ```html
- preserveAspectRatio="none"
+preserveAspectRatio="none"
 ```
 
 Атрибут `style` применяется для определения стиля элемента.
@@ -111,4 +131,4 @@ viewBox="0 0 100 100"
 
 - Сохранение пропорций [ссылка](http://xiper.net/learn/svg/svg-essentials/preserving-aspect-ratio)
 - Масштабирование и сдвиг [msdn.microsoft](<https://msdn.microsoft.com/ru-ru/library/gg589508(v=vs.85).aspx>)
-- Ещё SVG в XHTML: [пример](/ru/docs/SVG/Namespaces_Crash_Course/Example)
+- Ещё SVG в XHTML: [пример](/ru/docs/Web/SVG/Namespaces_Crash_Course/Example)

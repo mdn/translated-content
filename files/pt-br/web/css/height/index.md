@@ -3,11 +3,11 @@ title: height
 slug: Web/CSS/height
 ---
 
-{{CSSRef()}}
+{{CSSRef}}
 
 ## Sumário
 
-A propriedade `height` do CSS determina a altura da área do conteúdo de um elemento. A [área de conteúdo](/pt-BR/docs/CSS/box_model#content) consiste no `padding`, `margin` e `border` do elemento.
+A propriedade `height` do CSS determina a altura da área do conteúdo de um elemento. A [área de conteúdo](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content) consiste no `padding`, `margin` e `border` do elemento.
 
 As propriedades {{Cssxref("min-height")}} e {{Cssxref("max-height")}} sobrepõem a {{Cssxref("height")}}.
 
@@ -15,7 +15,7 @@ As propriedades {{Cssxref("min-height")}} e {{Cssxref("max-height")}} sobrepõem
 
 ## Sintaxe
 
-```html
+```plain
 Sintaxe formal: [<length> | <percentage>] && [border-box | content-box]? | available | min-content | max-content | fit-content | complex | auto
 ```
 
@@ -104,17 +104,12 @@ div {
 
 ## Especificações
 
-| Specification                                                                                | Status                                   | Comment                                                                                                           |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Box', '#the-width-and-height-properties', 'height')}} | {{Spec2('CSS3 Box')}}             | Added the `max-content`, `min-content`, `available`, `fit-content`, `border-box`, `content-box` keywords.         |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'height')}}             | {{Spec2('CSS3 Transitions')}} | Lists `height` as animatable.                                                                                     |
-| {{SpecName('CSS2.1', 'visudet.html#the-height-property', 'height')}} | {{Spec2('CSS2.1')}}                 | Adds support for the {{cssxref("&lt;length&gt;")}} values and precises on which element it applies to. |
-| {{SpecName('CSS1', '#height', 'height')}}                                     | {{Spec2('CSS1')}}                 | Initial specification.                                                                                            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.height")}}
+{{Compat}}
 
 ## Veja também
 
-- [box model](/pt-BR/docs/CSS/box_model), {{Cssxref("width")}}, {{Cssxref("box-sizing")}}, {{Cssxref("min-height")}}, {{Cssxref("max-height")}}
+- [box model](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{Cssxref("width")}}, {{Cssxref("box-sizing")}}, {{Cssxref("min-height")}}, {{Cssxref("max-height")}}

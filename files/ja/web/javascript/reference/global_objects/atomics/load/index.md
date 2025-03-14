@@ -7,12 +7,26 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/load
 
 静的な **`Atomics.load()`** メソッドは、配列内の指定された位置の値を返します。
 
-{{EmbedInteractiveExample("pages/js/atomics-load.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.load()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+// 5 + 2 = 7
+console.log(Atomics.add(uint8, 0, 2));
+// Expected output: 5
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 7
+```
 
 ## 構文
 
 ```js
-Atomics.load(typedArray, index)
+Atomics.load(typedArray, index);
 ```
 
 ### 引数

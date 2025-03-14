@@ -5,9 +5,9 @@ slug: Web/SVG/Attribute/marker-start
 
 {{SVGRef}}
 
-**`marker-start`** 属性将在给定[形状](/zh-CN/docs/Web/SVG/Element#Shape_elements)的起始顶点绘制的箭头或者多边形标记
+**`marker-start`** 属性将在给定[形状](/zh-CN/docs/Web/SVG/Element#shape_elements)的起始顶点绘制的箭头或者多边形标记
 
-对于除 SVG 的 polyline 和 path 元素之外的所有形状元素，最后的一个顶点与第一个顶点相同。在这种情况下，如果 SVG 的`marker-start`属性和 {{SVGAttr("marker-end")}} 的值都不是 `none` ，然后再最后一个顶点渲染两个图标。对于一个 `<path>` 元素，对于每个封闭的子路径，他的最后一个顶点都与第一个顶点相同。 `marker-end` 仅在[路径数据](/zh-CN/docs/Web/SVG/Attribute/d#Path_commands)的起始顶点上呈现。
+对于除 SVG 的 polyline 和 path 元素之外的所有形状元素，最后的一个顶点与第一个顶点相同。在这种情况下，如果 SVG 的`marker-start`属性和 {{SVGAttr("marker-end")}} 的值都不是 `none` ，然后再最后一个顶点渲染两个图标。对于一个 `<path>` 元素，对于每个封闭的子路径，他的最后一个顶点都与第一个顶点相同。 `marker-end` 仅在[路径数据](/zh-CN/docs/Web/SVG/Attribute/d#path_commands)的起始顶点上呈现。
 
 **Note:**作为一个图像属性， `marker-start` 可以用作 CSS 属性。
 
@@ -16,7 +16,9 @@ slug: Web/SVG/Attribute/marker-start
 ## 示例
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -24,16 +26,23 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <marker id="triangle" viewBox="0 0 10 10"
-          refX="1" refY="5"
-          markerUnits="strokeWidth"
-          markerWidth="10" markerHeight="10"
-          orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f00"/>
+    <marker
+      id="triangle"
+      viewBox="0 0 10 10"
+      refX="1"
+      refY="5"
+      markerUnits="strokeWidth"
+      markerWidth="10"
+      markerHeight="10"
+      orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f00" />
     </marker>
   </defs>
-  <polyline fill="none" stroke="black"
-      points="20,100 40,60 70,80 100,20" marker-start="url(#triangle)"/>
+  <polyline
+    fill="none"
+    stroke="black"
+    points="20,100 40,60 70,80 100,20"
+    marker-start="url(#triangle)" />
 </svg>
 ```
 
@@ -59,7 +68,7 @@ html, body, svg {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{SVGElement("marker")}}
 - {{SVGAttr("marker-end")}}

@@ -1,12 +1,12 @@
 ---
 title: Object.prototype.__defineGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 ---
 
 {{JSRef}}
 
-> **경고:** 이 기능은 object initializer 문법 혹은 {{jsxref("Object.defineProperty()")}} API를 사용한 getter 정의가 표준화됨으로써 비표준화되었습니다.
+> [!WARNING]
+> 이 기능은 object initializer 문법 혹은 {{jsxref("Object.defineProperty()")}} API를 사용한 getter 정의가 표준화됨으로써 비표준화되었습니다.
 > 이 기능은 이제까지의 ECMAScript 사양에서만 사용되고 있습니다.
 > 보다 좋은 방법이 있으므로, 이 메소드는 사용하지 말아야합니다.
 
@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 ## 문법
 
 ```js
-    obj.__defineGetter__(prop, func)
+obj.__defineGetter__(prop, func);
 ```
 
 ### 인자
@@ -40,41 +40,46 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 // Non-standard and deprecated way
 
 var o = {};
-o.__defineGetter__('gimmeFive', function() { return 5; });
+o.__defineGetter__("gimmeFive", function () {
+  return 5;
+});
 console.log(o.gimmeFive); // 5
-
 
 // Standard-compliant ways
 
 // Using the get operator
-var o = { get gimmeFive() { return 5; } };
+var o = {
+  get gimmeFive() {
+    return 5;
+  },
+};
 console.log(o.gimmeFive); // 5
 
 // Using Object.defineProperty
 var o = {};
-Object.defineProperty(o, 'gimmeFive', {
-  get: function() {
+Object.defineProperty(o, "gimmeFive", {
+  get: function () {
     return 5;
-  }
+  },
 });
 console.log(o.gimmeFive); // 5
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
 ## See also
 
-- {{jsxref("Object.prototype.__defineSetter__()")}}
+- [`Object.prototype.__defineSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - {{jsxref("Operators/get", "get")}} operator
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.prototype.__lookupGetter__()")}}
-- {{jsxref("Object.prototype.__lookupSetter__()")}}
-- [JS Guide: Defining Getters and Setters](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
+- [`Object.prototype.__lookupGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
+- [`Object.prototype.__lookupSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
+- [JS Guide: Defining Getters and Setters](/ko/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)
 - [\[Blog Post\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
-- {{bug(647423)}}
+- [Firefox bug 647423](https://bugzil.la/647423)

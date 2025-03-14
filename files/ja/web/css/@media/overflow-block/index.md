@@ -25,7 +25,16 @@ slug: Web/CSS/@media/overflow-block
 ### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac turpis eleifend, fringilla velit ac, aliquam tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc velit erat, tempus id rutrum sed, dapibus ut urna. Integer vehicula nibh a justo imperdiet rutrum. Nam faucibus pretium orci imperdiet sollicitudin. Nunc id facilisis dui. Proin elementum et massa et feugiat. Integer rutrum ullamcorper eleifend. Proin sit amet tincidunt risus. Sed nec augue congue eros accumsan tincidunt sed eget ex.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac turpis
+  eleifend, fringilla velit ac, aliquam tellus. Vestibulum ante ipsum primis in
+  faucibus orci luctus et ultrices posuere cubilia Curae; Nunc velit erat,
+  tempus id rutrum sed, dapibus ut urna. Integer vehicula nibh a justo imperdiet
+  rutrum. Nam faucibus pretium orci imperdiet sollicitudin. Nunc id facilisis
+  dui. Proin elementum et massa et feugiat. Integer rutrum ullamcorper eleifend.
+  Proin sit amet tincidunt risus. Sed nec augue congue eros accumsan tincidunt
+  sed eget ex.
+</p>
 ```
 
 ### CSS
@@ -52,5 +61,5 @@ slug: Web/CSS/@media/overflow-block
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/ja/docs/Web/CSS/@media)

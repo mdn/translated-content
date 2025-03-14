@@ -1,35 +1,40 @@
 ---
 title: Date.parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/parse
 ---
 
 {{JSRef}}
 
 La méthode **`Date.parse()`** analyse la représentation textuelle d'une date, et renvoie le nombre de millisecondes depuis le 1er janvier 1970, 00:00:00 UTC jusqu'à cette date ou `NaN` si la chaîne n'est pas reconnue ou décrit une date invalide (par exemple 2015-02-31).
 
-> **Note :** Pour les anciennes implémentations (avant ES5), le résultat de `Date.parse` variait d'une implémentation à l'autre. Attention donc à la compatibilité avec ces anciennes versions.
+> [!NOTE]
+> Pour les anciennes implémentations (avant ES5), le résultat de `Date.parse` variait d'une implémentation à l'autre. Attention donc à la compatibilité avec ces anciennes versions.
 
-{{EmbedInteractiveExample("pages/js/date-parse.html")}}
+{{InteractiveExample("JavaScript Demo: Date.parse()")}}
+
+```js interactive-example
+const unixTimeZero = Date.parse("01 Jan 1970 00:00:00 GMT");
+const javaScriptRelease = Date.parse("04 Dec 1995 00:12:00 GMT");
+
+console.log(unixTimeZero);
+// Expected output: 0
+
+console.log(javaScriptRelease);
+// Expected output: 818035920000
+```
 
 ## Syntaxe
 
 Appel direct :
 
 ```js
-Date.parse(dateString)
+Date.parse(dateString);
 ```
 
 Appel implicite :
 
 ```js
-new Date(dateString)
+new Date(dateString);
 ```
 
 ### Paramètres
@@ -59,40 +64,6 @@ Lorsque des indicateurs de fuseau horaire sont utilisés, la valeur renvoyée co
 
 Avec une chaîne comme `"March 7, 2014"`, `parse()` supposera un fuseau horaire local, avec une chaîne au format ISO comme `"2014-03-07"`, la méthode supposera un fuseau horaire UTC en ES5 et un fuseau horaire local pour ECMAScript 2015. Ainsi les objets {{jsxref("Date")}} construits avec ces chaînes représenteront des instants différents, sauf si le fuseau horaire local du système utilisé correspond à UTC. Cela signifie que deux dates représentées de façon textuelles semblables peuvent donner des dates différentes (ce comportement doit être corrigé avec ECMAScript 6 afin que les deux dates soient traitées de façon locale).
 
-### Traitement laissé libre à l'implémentation
-
-Le standard ECMAScript dicte que si la chaîne utilisée n'est pas conforme au format standard, alors la fonction peut utiliser une heuristique et/ou un algorithme d'analyse de texte propre à l'implémentation. Les chaînes impossibles à décoder et/ou qui contiennent des éléments non-conformes aux formats ISO doivent renvoyer {{jsxref("NaN")}} lors de l'appel à `Date.parse()`.
-
-Cependant, les valeurs invalides qui ne sont pas reconnues dans un format ISO pris en charge par ECMA-262 peuvent ou non engendrer la valeur {{jsxref("NaN")}} selon le navigateur et les valeurs utilisées. Par exemple :
-
-```js
-// Chaîne non ISO avec des valeurs invalides
-new Date('23/25/2014');
-```
-
-sera traitée comme la date locale du 25 novembre 2015 avec Firefox 30 et comme invalide avec Safari 7. Cependant, si la chaîne est reconnue dans un format ISO mais contient des valeurs invalides, la méthode renverra {{jsxref("NaN")}} pour tous les navigateurs conformes à ES5 (ou aux versions ultérieures) :
-
-```js
-// Chaîne ISO avec des valeurs invalides new
-Date('2014-25-23').toISOString();
-// renvoie "RangeError: invalid date" pour les navigateurs ES5
-```
-
-L'implémentation spécifique de SpiderMonkey peut être trouvée dans le fichier [`jsdate.cpp`](https://dxr.mozilla.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889). La chaîne `"10 06 2014"` est un exemple de chaîne non ISO, utiliser parse() sur cette chaîne entraînera le moteur JavaScript à utiliser son implémentation de recours. Voir ce [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1023155#c6) pour une explication rapide de la façon dont est faite l'analyse de la chaîne.
-
-```js
-new Date('10 06 2014');
-```
-
-sera traitée comme la date locale du 6 octobre 2014 et non comme le 10 juin 2014. D'autres exemples :
-
-```js
-new Date('toto-truc 2014').toString();
-// renvoie : "Invalid Date"
-Date.parse('toto-truc 2014');
-// renvoie : NaN
-```
-
 ## Exemples
 
 ### Utiliser `Date.parse()`
@@ -100,61 +71,62 @@ Date.parse('toto-truc 2014');
 Les appels suivants renvoient tous `1546300800000`. Dans le premier appel, on indique uniquement la date (et donc le fuseau UTC implicite). Les chaînes qui suivent utilisent une indication de fuseau horaire selon la norme ISO (`Z` et `+00:00`)
 
 ```js
-Date.parse("2019-01-01")
-Date.parse("2019-01-01T00:00:00.000Z")
-Date.parse("2019-01-01T00:00:00.000+00:00")
+Date.parse("2019-01-01");
+Date.parse("2019-01-01T00:00:00.000Z");
+Date.parse("2019-01-01T00:00:00.000+00:00");
 ```
 
 L'appel suivant, qui ne précise pas le fuseau horaire, fournira le nombre de millisecondes écoulées entre le premier janvier 1970 minuit UTC et le premier janvier 2019 à minuit selon l'heure locale du système utilisé.
 
 ```js
-Date.parse("2019-01-01T00:00:00")
+Date.parse("2019-01-01T00:00:00");
 ```
 
 ### Chaînes de caractères non-standard
 
-> **Note :** Cette section contient des exemples qui reposent sur des comportements spécifiques aux implémentations et on peut donc avoir des incohérences entre les moteurs utilisés.
+> [!NOTE]
+> Cette section contient des exemples qui reposent sur des comportements spécifiques aux implémentations et on peut donc avoir des incohérences entre les moteurs utilisés.
 
 Si `IPOdate` est un objet {{jsxref("Date")}}, on peut définir sa valeur au 9 août 1995 (heure locale), de la façon suivante :
 
 ```js
-IPOdate.setTime(Date.parse('Aug 9, 1995'));
+IPOdate.setTime(Date.parse("Aug 9, 1995"));
 ```
 
 Voici un autre exemple avec une chaîne qui ne suit pas le format standard.
 
 ```js
-Date.parse('Aug 9, 1995');
+Date.parse("Aug 9, 1995");
 ```
 
 Cette méthode renverra `807937200000` pour le fuseau horaire GMT-0300 et d'autres valeurs pour d'autres fuseaux car la chaîne n'indique pas le fuseau horaire et ne respecte pas le format ISO (le fuseau considéré par défaut est donc le fuseau local).
 
 ```js
-Date.parse('Wed, 09 Aug 1995 00:00:00 GMT');
+Date.parse("Wed, 09 Aug 1995 00:00:00 GMT");
 ```
 
 Renvoie `807926400000` quel que soit le fuseau local car on indique GMT.
 
 ```js
-Date.parse('Wed, 09 Aug 1995 00:00:00');
+Date.parse("Wed, 09 Aug 1995 00:00:00");
 ```
 
 Renvoie `807937200000` dans le fuseau GMT-0300 et d'autres valeurs pour d'autres fuseaux car aucune indication de fuseau n'est fournie et que la chaîne n'est pas au format ISO, elle est donc traitée comme un temps local.
 
 ```js
-Date.parse('Thu, 01 Jan 1970 00:00:00 GMT');
+Date.parse("Thu, 01 Jan 1970 00:00:00 GMT");
 ```
 
 Renvoie `0` quel que soit le fuseau local car l'indicateur GMT est fourni.
 
 ```js
-Date.parse('Thu, 01 Jan 1970 00:00:00');
+Date.parse("Thu, 01 Jan 1970 00:00:00");
 ```
 
 Renvoie `14400000` pour le fuseau GMT-0400 et d'autres valeurs dans d'autres fuseaux car aucune indication de fuseau n'est fournie et la chaîne n'est pas au format ISO, elle est donc traitée comme un temps local.
 
 ```js
-Date.parse('Thu, 01 Jan 1970 00:00:00 GMT-0400');
+Date.parse("Thu, 01 Jan 1970 00:00:00 GMT-0400");
 ```
 
 Renvoie `14400000` quel que soit le fuseau car l'indicateur GMT est fourni.

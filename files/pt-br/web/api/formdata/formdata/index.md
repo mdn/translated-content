@@ -3,16 +3,19 @@ title: FormData()
 slug: Web/API/FormData/FormData
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 O **`FormData()`** construtor cria um novo objeto {{domxref("FormData")}}.
 
-> **Nota:** Este recurso está disponível em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Este recurso está disponível em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
 ## Sintaxe
 
 ```js
-var formData = new FormData(form)
+var formData = new FormData(form);
 ```
 
 ### Parâmetros
@@ -31,7 +34,7 @@ var formData = new FormData(); // Currently empty
 Você poderia adicionar uma chave/valor usando {{domxref("FormData.append")}}:
 
 ```js
-formData.append('username', 'Chris');
+formData.append("username", "Chris");
 ```
 
 Ou você pode especificicar o opcional `form` argument ao criar o objeto `FormData`, para o popular com valores de forma especifica:
@@ -40,40 +43,39 @@ Ou você pode especificicar o opcional `form` argument ao criar o objeto `FormDa
 <form id="myForm" name="myForm">
   <div>
     <label for="username">Enter name:</label>
-    <input type="text" id="username" name="username">
+    <input type="text" id="username" name="username" />
   </div>
   <div>
     <label for="useracc">Enter account number:</label>
-    <input type="text" id="useracc" name="useracc">
+    <input type="text" id="useracc" name="useracc" />
   </div>
   <div>
     <label for="userfile">Upload file:</label>
-    <input type="file" id="userfile" name="userfile">
+    <input type="file" id="userfile" name="userfile" />
   </div>
-<input type="submit" value="Submit!">
+  <input type="submit" value="Submit!" />
 </form>
 ```
 
-> **Nota:** Todos os elementos de entrada têm um atributo 'name'. Para que possa acessar seus valores mais tarde.
+> [!NOTE]
+> Todos os elementos de entrada têm um atributo 'name'. Para que possa acessar seus valores mais tarde.
 
 ```js
-var myForm = document.getElementById('myForm');
+var myForm = document.getElementById("myForm");
 formData = new FormData(myForm);
 ```
 
 ## Especificações
 
-| Especificação                                                                    | Status                               | Comentário        |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ----------------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata','FormData()')}} | {{Spec2('XMLHttpRequest')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.FormData.FormData")}}
+{{Compat}}
 
 ## Veja também
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Using XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Using FormData objects](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

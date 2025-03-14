@@ -1,11 +1,9 @@
 ---
 title: Заголовок сущности
 slug: Glossary/Entity_header
-tags:
-  - Глоссарий
-translation_of: Glossary/Entity_header
-original_slug: Глоссарий/Entity_header
 ---
+
+{{GlossarySidebar}}
 
 Заголовок сущности - это {{Glossary("header", "HTTP header")}}, описывающий содержимое тела сообщения. Заголовки сущности используются в HTTP-запросах и ответах. Заголовки, такие как {{HTTPHeader("Content-Length")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Encoding")}} являются заголовками сущности.
 
@@ -24,4 +22,4 @@ Content-Length: 128
 
 ### Технические знания
 
-- [Список всех HTTP заголовков](/ru/docs/Web/HTTP/Заголовки)
+- [Список всех HTTP заголовков](/ru/docs/Web/HTTP/Headers)

@@ -15,7 +15,7 @@ slug: Mozilla/Firefox/Releases/100
 
 ### CSS
 
-- [`dynamic-range`](/ja/docs/Web/CSS/@media/dynamic-range) および [`video-dynamic-range`](/ja/docs/Web/CSS/@media/video-dynamic-range) 向けの CSS メディア特性をサポートしました。`dynamic-range` を使用して、ユーザーエージェントや出力デバイスが輝度、コントラスト比、色深度の組み合わせをサポートしているかを確認できます。また `video-dynamic-range` は、ビデオプレーンで確認できます ({{bug(1751217)}})。
+- [`dynamic-range`](/ja/docs/Web/CSS/@media/dynamic-range) および [`video-dynamic-range`](/ja/docs/Web/CSS/@media/video-dynamic-range) 向けの CSS メディア特性をサポートしました。`dynamic-range` を使用して、ユーザーエージェントや出力デバイスが輝度、コントラスト比、色深度の組み合わせをサポートしているかを確認できます。また `video-dynamic-range` は、ビデオプレーンで確認できます ([Firefox バグ 1751217](https://bugzil.la/1751217))。
 
 ### JavaScript
 
@@ -25,25 +25,25 @@ slug: Mozilla/Firefox/Releases/100
 
 #### 廃止
 
-- 非標準の {{httpheader("Large-Allocation")}} HTTP ヘッダーを削除しました ({{bug(1598759)}})。
+- 非標準の {{httpheader("Large-Allocation")}} HTTP ヘッダーを削除しました ([Firefox バグ 1598759](https://bugzil.la/1598759))。
 
 ### API
 
-- [`WritableStream`](/ja/docs/Web/API/WritableStream)、[`WritableStreamDefaultWriter`](/ja/docs/Web/API/WritableStreamDefaultWriter)、[`WritableStreamDefaultController`](/ja/docs/Web/API/WritableStreamDefaultController)、[`ReadableStream.pipeTo()`](/ja/docs/Web/API/ReadableStream/pipeTo) をサポートしました ({{bug(1759597)}})。
+- [`WritableStream`](/ja/docs/Web/API/WritableStream)、[`WritableStreamDefaultWriter`](/ja/docs/Web/API/WritableStreamDefaultWriter)、[`WritableStreamDefaultController`](/ja/docs/Web/API/WritableStreamDefaultController)、[`ReadableStream.pipeTo()`](/ja/docs/Web/API/ReadableStream/pipeTo) をサポートしました ([Firefox バグ 1759597](https://bugzil.la/1759597))。
 
 #### DOM
 
-- コードで [`AbortSignal.timeout()`](/ja/docs/Web/API/AbortSignal/timeout) 静的メソッドが使用可能になりました。
-  これは、指定した時間の後に `TimeoutError` で操作を自動的に中止するために使用できる {{domxref("AbortSignal")}} を返します ({{bug(1753309)}})。
+- コードで [`AbortSignal.timeout()`](/ja/docs/Web/API/AbortSignal/timeout_static) 静的メソッドが使用可能になりました。
+  これは、指定した時間の後に `TimeoutError` で操作を自動的に中止するために使用できる {{domxref("AbortSignal")}} を返します ([Firefox バグ 1753309](https://bugzil.la/1753309))。
 
 ### WebAssembly
 
 - WebAssembly で、WebAssembly または Javascript (あるいは他のランタイム) のどちらかでスローおよびキャッチでき、処理されない場合は環境の境界を越える例外をサポートしました。
-  WebAssembly の例外を JavaScript で表したものが、[WebAssembly.Exception](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception) および [WebAssembly.Tag](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag) です ({{bug(1759217)}})。
+  WebAssembly の例外を JavaScript で表したものが、[WebAssembly.Exception](/ja/docs/WebAssembly/JavaScript_interface/Exception) および [WebAssembly.Tag](/ja/docs/WebAssembly/JavaScript_interface/Tag) です ([Firefox バグ 1759217](https://bugzil.la/1759217))。
 
 ### WebDriver conformance (Marionette)
 
-- Android でユーザープロンプト (たとえば `alert`) をサポートしました ({{bug(1708105)}})。
+- Android でユーザープロンプト (たとえば `alert`) をサポートしました ([Firefox バグ 1708105](https://bugzil.la/1708105))。
 
 ## 過去のバージョン
 

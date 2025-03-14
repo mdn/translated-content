@@ -1,21 +1,30 @@
 ---
 title: RegExp.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/toString
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/toString
 ---
 
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaîne de caractères représentant l'expression rationnelle.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-tostring.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.toString()", "taller")}}
+
+```js interactive-example
+console.log(new RegExp("a+b+c"));
+// Expected output: /a+b+c/
+
+console.log(new RegExp("a+b+c").toString());
+// Expected output: "/a+b+c/"
+
+console.log(new RegExp("bar", "g").toString());
+// Expected output: "/bar/g"
+
+console.log(new RegExp("\n", "g").toString());
+// Expected output (if your browser supports escaping): "/\n/g"
+
+console.log(new RegExp("\\n", "g").toString());
+// Expected output: "/\n/g"
+```
 
 ## Syntaxe
 
@@ -39,10 +48,10 @@ L'exemple qui suit affiche la chaîne correspondant à la valeur de l'objet {{js
 
 ```js
 var maRegExp = new RegExp("a+b+c");
-console.log(maRegExp.toString());  // affiche "/a+b+c/"
+console.log(maRegExp.toString()); // affiche "/a+b+c/"
 
 var toto = new RegExp("truc", "g");
-console.log(toto.toString());      // affiche "/truc/g"
+console.log(toto.toString()); // affiche "/truc/g"
 ```
 
 ### Les expressions ratonnelles vides et l'échappement
@@ -52,8 +61,8 @@ console.log(toto.toString());      // affiche "/truc/g"
 ```js
 new RegExp().toString(); // "(?:)"
 
-new RegExp('\n').toString() === "/\n/";  // true avant ES5
-new RegExp('\n').toString() === "/\\n/"; // true à partir d'ES5
+new RegExp("\n").toString() === "/\n/"; // true avant ES5
+new RegExp("\n").toString() === "/\\n/"; // true à partir d'ES5
 ```
 
 ## Spécifications

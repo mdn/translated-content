@@ -1,14 +1,6 @@
 ---
 title: Классы
 slug: Web/JavaScript/Reference/Classes
-tags:
-  - ECMAScript 2015
-  - ECMAScript6
-  - JavaScript
-  - Reference
-  - Классы
-  - Наследование
-translation_of: Web/JavaScript/Reference/Classes
 ---
 
 {{JsSidebar("Классы")}}
@@ -21,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Classes
 
 ### Объявление класса
 
-Первый способ определения класса — **class declaration (**_объявление класса_**)**. Для этого необходимо воспользоваться ключевым словом `class` и указать имя класса (в примере — «Rectangle»).
+Первый способ определения класса — **class declaration (_объявление класса_)**. Для этого необходимо воспользоваться ключевым словом `class` и указать имя класса (в примере — «Rectangle»).
 
 ```js
 class Rectangle {
@@ -44,7 +36,7 @@ class Rectangle {}
 
 ### Выражение класса
 
-Второй способ определения класса — **class expression (**_выражение класса_**)**. Можно создавать именованные и безымянные выражения. В первом случае имя выражения класса находится в локальной области видимости класса и может быть получено через свойства самого класса, а не его экземпляра.
+Второй способ определения класса — **class expression (_выражение класса_)**. Можно создавать именованные и безымянные выражения. В первом случае имя выражения класса находится в локальной области видимости класса и может быть получено через свойства самого класса, а не его экземпляра.
 
 ```js
 // безымянный
@@ -68,7 +60,8 @@ console.log(Rectangle.name);
 // отобразится: "Rectangle2"
 ```
 
-> **Примечание:** **Обратите внимание: выражения** класса подвержены тем же проблемам с подъёмом (hoisting), что и **объявления** класса.
+> [!NOTE]
+> Выражения класса подвержены тем же проблемам с подъёмом (hoisting), что и **объявления** класса.
 
 ## Тело класса и задание методов
 
@@ -111,7 +104,7 @@ console.log(square.area); // 100
 
 ### Статические методы и свойства
 
-Ключевое слово [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static), определяет статический метод или свойства для класса. Статические методы и свойства вызываются без [инстанцирования](/ru/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_Object_.28Class_Instance.29) их класса, и **не могут** быть вызваны у экземпляров (_instance_) класса. Статические методы, часто используются для создания служебных функций для приложения, в то время как статические свойства полезны для кеширования в рамках класса, фиксированной конфигурации или любых других целей, не связанных с реплецированием данных между экземплярами.
+Ключевое слово [`static`](/ru/docs/Web/JavaScript/Reference/Classes/static), определяет статический метод или свойства для класса. Статические методы и свойства вызываются без [инстанцирования](/ru/docs/Learn/JavaScript/Objects#the_object_.28class_instance.29) их класса, и **не могут** быть вызваны у экземпляров (_instance_) класса. Статические методы, часто используются для создания служебных функций для приложения, в то время как статические свойства полезны для кеширования в рамках класса, фиксированной конфигурации или любых других целей, не связанных с реплецированием данных между экземплярами.
 
 ```js
 class Point {
@@ -132,11 +125,11 @@ class Point {
 const p1 = new Point(5, 5);
 const p2 = new Point(10, 10);
 p1.displayName; //undefined
-p1.distance;    //undefined
+p1.distance; //undefined
 p2.displayName; //undefined
-p2.distance;    //undefined
+p2.distance; //undefined
 
-console.log(Point.displayName);      // "Точка"
+console.log(Point.displayName); // "Точка"
 console.log(Point.distance(p1, p2)); // 7.0710678118654755
 ```
 
@@ -159,7 +152,7 @@ obj.speak(); // объект Animal
 let speak = obj.speak;
 speak(); // undefined
 
-Animal.eat() // класс Animal
+Animal.eat(); // класс Animal
 let eat = Animal.eat;
 eat(); // undefined
 ```
@@ -167,13 +160,13 @@ eat(); // undefined
 Если мы напишем этот же код используя классы основанные на функциях, тогда произойдёт автоупаковка основанная на значении this, в течение которого функция была вызвана. В строгом режиме автоупаковка не произойдёт - значение this останется прежним.
 
 ```js
-function Animal() { }
+function Animal() {}
 
-Animal.prototype.speak = function(){
+Animal.prototype.speak = function () {
   return this;
 };
 
-Animal.eat = function() {
+Animal.eat = function () {
   return this;
 };
 
@@ -207,7 +200,8 @@ Rectangle.prototype.prototypeWidth = 25;
 
 ### Определение полей
 
-> **Предупреждение:** Публичные и приватные поля - это [экспериментальная особенность (stage 3)](https://github.com/tc39/proposal-class-fields), предложенная комитетом [TC39](https://tc39.es/) по стандартам языка Javascript. Поддержка браузерами ограничена, но это нововведение может быть использовано на моменте сборки, используя к примеру [Babel](https://babeljs.io/).
+> [!WARNING]
+> Публичные и приватные поля - это [экспериментальная особенность (stage 3)](https://github.com/tc39/proposal-class-fields), предложенная комитетом [TC39](https://tc39.es/) по стандартам языка Javascript. Поддержка браузерами ограничена, но это нововведение может быть использовано на моменте сборки, используя к примеру [Babel](https://babeljs.io/).
 
 #### Публичные поля
 
@@ -226,7 +220,7 @@ class Rectangle {
 
 Как видно из примера, поля могут быть объявлены как со начальным значением, так и без него.
 
-Более подробно об этом написано в [публичные поля класса](/ru/docs/Web/JavaScript/Reference/Classes/Class_fields).
+Более подробно об этом написано в [публичные поля класса](/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields).
 
 #### Приватные поля
 
@@ -245,7 +239,8 @@ class Rectangle {
 
 Приватные поля могут быть изменены или прочитаны только в рамках класса и не могут быть вызваны извне. Определяя вещи, которые не видны за пределами класса, вы гарантируете, что пользователи ваших классов не могут зависеть от внутренних компонентов, которые могут изменить версию на версию.
 
-> **Примечание:** Приватные поля могут быть объявлены только заранее в объявлении поля.
+> [!NOTE]
+> Приватные поля могут быть объявлены только заранее в объявлении поля.
 
 Приватные поля не могут быть созданы позже путём присваивания им значения, в отличии от обычных свойств.
 
@@ -253,7 +248,7 @@ class Rectangle {
 
 ## Наследование классов с помощью `extends`
 
-Ключевое слово [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) используется в _объявлениях классов_ и _выражениях классов_ для создания класса, дочернего относительно другого класса.
+Ключевое слово [`extends`](/ru/docs/Web/JavaScript/Reference/Classes/extends) используется в _объявлениях классов_ и _выражениях классов_ для создания класса, дочернего относительно другого класса.
 
 ```js
 class Animal {
@@ -276,7 +271,7 @@ class Dog extends Animal {
   }
 }
 
-let d = new Dog('Митци');
+let d = new Dog("Митци");
 d.speak(); // Митци лает
 ```
 
@@ -285,12 +280,12 @@ d.speak(); // Митци лает
 Аналогичным образом можно расширять традиционные, основанные на функциях "классы":
 
 ```js
-function Animal (name) {
+function Animal(name) {
   this.name = name;
 }
 Animal.prototype.speak = function () {
   console.log(`${this.name} издаёт звук.`);
-}
+};
 
 class Dog extends Animal {
   speak() {
@@ -298,7 +293,7 @@ class Dog extends Animal {
   }
 }
 
-let d = new Dog('Митци');
+let d = new Dog("Митци");
 d.speak(); // Митци лает
 
 // Для аналогичных методов дочерний метод имеет приоритет над родительским.
@@ -310,7 +305,7 @@ d.speak(); // Митци лает
 var Animal = {
   speak() {
     console.log(`${this.name} издаёт звук.`);
-  }
+  },
 };
 
 class Dog {
@@ -322,7 +317,7 @@ class Dog {
 // Если вы этого не сделаете, вы получите ошибку TypeError при вызове speak.
 Object.setPrototypeOf(Dog.prototype, Animal);
 
-let d = new Dog('Митци');
+let d = new Dog("Митци");
 d.speak(); // Митци издаёт звук.
 ```
 
@@ -335,13 +330,15 @@ d.speak(); // Митци издаёт звук.
 ```js
 class MyArray extends Array {
   // Изменить species на родительский конструктор Array
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
-var a = new MyArray(1,2,3);
-var mapped = a.map(x => x * x);
+var a = new MyArray(1, 2, 3);
+var mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true
+console.log(mapped instanceof Array); // true
 ```
 
 ## Обращение к родительскому классу с помощью `super`
@@ -366,7 +363,7 @@ class Lion extends Cat {
   }
 }
 
-let l = new Lion('Фаззи');
+let l = new Lion("Фаззи");
 l.speak();
 // Фаззи издаёт звук.
 // Фаззи рычит.
@@ -379,20 +376,22 @@ l.speak();
 Для реализации mix-ins в ECMAScript можно использовать функцию, которая в качестве аргумента принимает родительский класс, а возвращает подкласс, его расширяющий:
 
 ```js
-var calculatorMixin = Base => class extends Base {
-  calc() { }
-};
+var calculatorMixin = (Base) =>
+  class extends Base {
+    calc() {}
+  };
 
-var randomizerMixin = Base => class extends Base {
-  randomize() { }
-};
+var randomizerMixin = (Base) =>
+  class extends Base {
+    randomize() {}
+  };
 ```
 
 Класс, использующий такие mix-ins, можно описать следующим образом:
 
 ```js
-class Foo { }
-class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
+class Foo {}
+class Bar extends calculatorMixin(randomizerMixin(Foo)) {}
 ```
 
 ## Спецификации
@@ -407,14 +406,14 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
 
 Класс не может быть переопределён. Попытка этого приведёт к `SyntaxError` .
 
-Если мы запускаете код в веб браузере, к примеру в Firefox Web Console (**Tools** > **Web Developer** > **Web Console**) и вы используете ('Run') определение класса с одним и тем же именем дважды, вы получите `SyntaxError: redeclaration of let ClassName;`. (Обсуждение по ошибке можно посмотреть в {{Bug(1428672)}}.) Chrome Developer Tools возвращает сообщение типа `Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1`.
+Если мы запускаете код в веб браузере, к примеру в Firefox Web Console (**Tools** > **Web Developer** > **Web Console**) и вы используете ('Run') определение класса с одним и тем же именем дважды, вы получите `SyntaxError: redeclaration of let ClassName;`. (Обсуждение по ошибке можно посмотреть в [Firefox bug 1428672](https://bugzil.la/1428672).) Chrome Developer Tools возвращает сообщение типа `Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1`.
 
 ## Смотрите также
 
 - [Функции](/ru/docs/Web/JavaScript/Reference/Functions)
 - [Определение классов](/ru/docs/Web/JavaScript/Reference/Statements/class)
 - [Выражение классов](/ru/docs/Web/JavaScript/Reference/Operators/class)
-- [Публичные поля класса](/ru/docs/Web/JavaScript/Reference/Classes/Class_fields)
+- [Публичные поля класса](/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
 - [Приватные поля класса](/ru/docs/Web/JavaScript/Reference/Classes/%D0%9F%D1%80%D0%B8%D0%B2%D0%B0%D1%82%D0%BD%D1%8B%D0%B5_%D0%BF%D0%BE%D0%BB%D1%8F_%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0)
 - [super](/ru/docs/Web/JavaScript/Reference/Operators/super)
 - [Статья в блоге: "ES6 In Depth: Classes"](https://hacks.mozilla.org/2015/07/es6-in-depth-classes/)

@@ -1,7 +1,6 @@
 ---
 title: Window.outerWidth
 slug: Web/API/Window/outerWidth
-translation_of: Web/API/Window/outerWidth
 ---
 
 {{APIRef}}
@@ -26,13 +25,13 @@ Para cambiar el tamaño de la ventana, ver {{domxref("window.resizeBy()")}} y {{
 
 Para obtener el ancho exterior de la ventana, i.e. el ancho de la pagina desplegada, ver {{domxref("window.innerWidth")}}.
 
-## Compatibilidad del navegador
-
-{{Compat("api.Window.outerWidth")}}
-
 ## Especificaciones
 
 {{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

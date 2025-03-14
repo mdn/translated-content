@@ -1,21 +1,78 @@
 ---
-title: '<thead>: 표 머릿글 요소'
+title: "<thead>: 표 머릿글 요소"
 slug: Web/HTML/Element/thead
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Tables
-  - Web
-browser-compat: html.elements.thead
 ---
 
 {{HTMLSidebar}}
 
 **`<thead>`** [HTML](/ko/docs/Web/HTML) 요소는 테이블의 열의 머리글인 행들의 집합입니다.
 
-{{EmbedInteractiveExample("pages/tabbed/thead.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;thead&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Council budget (in £) 2018
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Items</th>
+      <th scope="col">Expenditure</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Donuts</th>
+      <td>3,000</td>
+    </tr>
+    <tr>
+      <th scope="row">Stationery</th>
+      <td>18,000</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row">Totals</th>
+      <td>21,000</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+```css interactive-example
+thead,
+tfoot {
+  background-color: #2c5e77;
+  color: #fff;
+}
+
+tbody {
+  background-color: #e4f0f5;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td {
+  text-align: center;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -71,7 +128,7 @@ browser-compat: html.elements.thead
 
 ### 더 이상 사용하지 않는 특성
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : 아래에 나열된 속성들은 각 셀 컨텐츠의 수평 정렬 방법을 지정합니다. 가능한 값:
 
@@ -79,16 +136,16 @@ browser-compat: html.elements.thead
     - `center`, 컨텐츠를 셀의 가운데로 정렬합니다.
     - `right`, 컨텐츠를 셀의 오른쪽으로 정렬합니다.
     - `justify`, 컨텐츠가 셀의 양쪽으로 정렬되도록 텍스트 컨텐츠에 공백을 삽입합니다.
-    - `char`, {{htmlattrxref("char", "thead")}} 와 {{htmlattrxref("charoff", "thead")}} 특성에 의해 정해지는 최소 오프셋을 가진 특수 문자에 대해 텍스트 컨텐츠를 정렬합니다.
+    - `char`, [`char`](#char) 와 [`charoff`](#charoff) 특성에 의해 정해지는 최소 오프셋을 가진 특수 문자에 대해 텍스트 컨텐츠를 정렬합니다.
 
     만약 값이 따로 할당되어 있지 않다면 `left` 가 기본값으로 지정됩니다.
 
     > **주의:** 이 속성은 최신 표준에서는 사용되지 않으며 지원되지 않으므로 사용하지 마십시오.
     >
     > - `left`, `center`, `right` 또는 `justify` 값과 같은 효과를 내고 싶다면, CSS {{cssxref("text-align")}} 속성을 적용하세요.
-    > - `char` 값과 같은 효과를 내고 싶다면, CSS3에서 {{cssxref("text-align")}} 속성의 값으로 {{htmlattrxref("char", "thead")}}의 값을 사용할 수 있습니다.
+    > - `char` 값과 같은 효과를 내고 싶다면, CSS3에서 {{cssxref("text-align")}} 속성의 값으로 [`char`](#char)의 값을 사용할 수 있습니다.
 
-- {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
+- `bgcolor` {{Non-standard_inline}}
 
   - : 이 특성은 열의 각 셀의 배경색을 정의합니다. 앞에 '#'을 붙인 [sRGB](https://www.w3.org/Graphics/Color/sRGB) 6자리 16진수 코드입니다. 미리 정의된 16개의 색상 문자열을 사용할 수도 있습니다.
 
@@ -109,21 +166,23 @@ browser-compat: html.elements.thead
     - `fuchsia` = "#FF00FF"
     - `aqua` = "#00FFFF"
 
-    > **Note:** 이 특성은 표준이 아니며, Microsoft Internet Explorer의 몇몇 버전에서만 구현되므로 사용하지 마십시오. {{HTMLElement("thead")}} 요소에 스타일을 적용하려면 [CSS](/ko/docs/Web/CSS)를 사용해야 합니다. **bgcolor** 특성과 비슷한 효과를 내고 싶다면, 관련된 {{HTMLElement("td")}} 또는 {{HTMLElement("th")}} 요소에 [CSS](/ko/docs/Web/CSS) {{cssxref("background-color")}} 속성을 사용하세요.
+    > [!NOTE]
+    > 이 특성은 표준이 아니며, Microsoft Internet Explorer의 몇몇 버전에서만 구현되므로 사용하지 마십시오. {{HTMLElement("thead")}} 요소에 스타일을 적용하려면 [CSS](/ko/docs/Web/CSS)를 사용해야 합니다. **bgcolor** 특성과 비슷한 효과를 내고 싶다면, 관련된 {{HTMLElement("td")}} 또는 {{HTMLElement("th")}} 요소에 [CSS](/ko/docs/Web/CSS) {{cssxref("background-color")}} 속성을 사용하세요.
 
-- {{htmlattrdef("char")}} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
 
-  - : 이 특성은 열의 셀을 정렬할 문자를 설정하는 데 사용됩니다. 숫자 또는 통화 값을 정렬할 때에는 일반적으로 마침표(.)가 포함됩니다. 만약 {{htmlattrxref("align", "thead")}}이 `char`로 설정되어 있지 않으면, 이 특성은 무시됩니다.
+  - : 이 특성은 열의 셀을 정렬할 문자를 설정하는 데 사용됩니다. 숫자 또는 통화 값을 정렬할 때에는 일반적으로 마침표(.)가 포함됩니다. 만약 [`align`](#align)이 `char`로 설정되어 있지 않으면, 이 특성은 무시됩니다.
 
-    > **Note:** 이 특성은 최신 표준에서는 사용되지 않으며 지원되지 않으므로 사용하지 마십시오. {{htmlattrxref("char", "thead")}}와 같은 효과를 내고 싶다면, CSS3에서 {{htmlattrxref("char", "thead")}} 특성을 {{cssxref("text-align")}} 속성의 값으로 하여 문자 집합을 사용할 수 있습니다.
+    > [!NOTE]
+    > 이 특성은 최신 표준에서는 사용되지 않으며 지원되지 않으므로 사용하지 마십시오. [`char`](#char)와 같은 효과를 내고 싶다면, CSS3에서 [`char`](#char) 특성을 {{cssxref("text-align")}} 속성의 값으로 하여 문자 집합을 사용할 수 있습니다.
 
-- {{htmlattrdef("charoff")}} {{deprecated_inline}}
+- `charoff` {{deprecated_inline}}
 
   - : 이 특성은 **char** 특성으로 지정된 정렬 문자에서 열 데이터를 오프셋할 문자의 수를 나타내는 데 사용됩니다.
 
     > **주의:** 이 특성은 최신 표준에서는 사용되지 않으며 지원되지 않으므로 사용하지 마십시오.
 
-- {{htmlattrdef("valign")}} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
 
   - : 이 특성은 표 머리글의 각 행 내에 있는 텍스트의 수직 정렬 방식을 지정합니다. 이 특성에 사용 가능한 값:
 
@@ -132,7 +191,8 @@ browser-compat: html.elements.thead
     - `middle`, 텍스트를 셀의 가운데에 배치합니다.
     - `top`, 텍스트를 가능한 한 셀의 상단에 가깝게 배치합니다.
 
-    > **Note:** 이 특성은 최신 표준에서는 사용되지 않으며 지원되지 않으므로 사용하지 마십시오. 대신 CSS의 {{cssxref("vertical-align")}} 속성을 적용하세요.
+    > [!NOTE]
+    > 이 특성은 최신 표준에서는 사용되지 않으며 지원되지 않으므로 사용하지 마십시오. 대신 CSS의 {{cssxref("vertical-align")}} 속성을 적용하세요.
 
 ## 예제
 

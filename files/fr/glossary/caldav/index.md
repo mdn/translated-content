@@ -1,23 +1,14 @@
 ---
 title: CalDAV
 slug: Glossary/CalDAV
-tags:
-  - CalDAV
-  - Glossaire
-  - Infrastructure
-translation_of: Glossary/CalDAV
-original_slug: Glossaire/CalDAV
 ---
 
-CalDAV (extensions de gestion de calendrier pour {{Glossary("WebDAV")}}) est un {{glossary("protocol","protocole")}} normalisé par l'IETF utilisé pour accéder à distance à des données d'agendas stockées sur un {{glossary("server","serveur")}}.
+{{GlossarySidebar}}
 
-## Pour en savoir plus
+**CalDAV** (extensions de gestion de calendrier pour [WebDAV](/fr/docs/Glossary/WebDAV) est [un protocole](/fr/docs/Glossary/Protocol) normalisé par [l'IETF](/fr/docs/Glossary/IETF) et utilisé pour accéder à distance à des données d'agendas stockées sur [un serveur](/fr/docs/Glossary/Server).
 
-### Culture générale
+## Voir aussi
 
 - [CalDAV](https://fr.wikipedia.org/wiki/CalDAV) sur Wikipédia
-
-### Référence technique
-
-- [RFC 4791: Calendaring extensions to WebDAV (CalDAV)](http://tools.ietf.org/html/rfc4791)
-- [RFC 6638: Scheduling Extensions to CalDAV](http://tools.ietf.org/html/rfc6638)
+- [La RFC 4791 qui spécifie ce protocole (en anglais)](https://datatracker.ietf.org/doc/html/rfc4791)
+- [La RFC 6638 qui spécifie les extensions au protocole CalDAV (en anglais)](https://datatracker.ietf.org/doc/html/rfc6638)

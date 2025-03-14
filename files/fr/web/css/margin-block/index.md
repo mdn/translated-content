@@ -1,13 +1,6 @@
 ---
 title: margin-block
 slug: Web/CSS/margin-block
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/margin-block
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -17,10 +10,10 @@ La propriété **`margin-block`** définit la marge sur les côtés de l'éléme
 ```css
 /* Valeurs de longueur */
 /* Type <length> */
-margin-block: 10px 20px;  /* Une longueur absolue */
-margin-block: 1em 2em;    /* Une longueur relative à la taille du texte */
-margin-block: 5% 2%;      /* Une longueur relative à la largeur ou hauteur du bloc englobant */
-margin-block: 10px;       /* Une valeur utilisée pour les deux côtés */
+margin-block: 10px 20px; /* Une longueur absolue */
+margin-block: 1em 2em; /* Une longueur relative à la taille du texte */
+margin-block: 5% 2%; /* Une longueur relative à la largeur ou hauteur du bloc englobant */
+margin-block: 10px; /* Une valeur utilisée pour les deux côtés */
 
 /* Valeurs avec un mot-clé */
 margin-block: auto;

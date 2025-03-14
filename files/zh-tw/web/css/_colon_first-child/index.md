@@ -1,5 +1,5 @@
 ---
-title: ':first-child'
+title: :first-child
 slug: Web/CSS/:first-child
 ---
 
@@ -28,7 +28,7 @@ slug: Web/CSS/:first-child
 
 ```css
 span:first-child {
-    background-color: lime;
+  background-color: lime;
 }
 ```
 
@@ -51,11 +51,11 @@ span:first-child {
 #### CSS 內文
 
 ```css
-li{
-  color:red;
+li {
+  color: red;
 }
-li:first-child{
-  color:green;
+li:first-child {
+  color: green;
 }
 ```
 

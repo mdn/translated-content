@@ -7,7 +7,7 @@ slug: Web/API/DOMParser
 
 `DOMParser` puede analizar gramaticalmente (parsear, en adelante) código XML o HTML almacenado en una cadena de texto y convertirlo en un [Documento](/es/docs/Web/API/Document) DOM. `DOMParser` está especificado en [DOM Parsing and Serialization](https://w3c.github.io/DOM-Parsing/).
 
-Tener en cuenta que [XMLHttpRequest](/es/docs/DOM/XMLHttpRequest) soporta parsear XML y HTML desde recursos direccionables por URL.
+Tener en cuenta que [XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest) soporta parsear XML y HTML desde recursos direccionables por URL.
 
 ## Creando un DOMParser
 
@@ -26,7 +26,7 @@ var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 
 ### Manejo de errores
 
-Es importante tener en cuenta que si el proceso de parseado falla, actualmente `DOMParser` no arroja una excepción, pero devuelve en cambio un documento de error (see {{Bug(45566)}}):
+Es importante tener en cuenta que si el proceso de parseado falla, actualmente `DOMParser` no arroja una excepción, pero devuelve en cambio un documento de error (see [Error 45566 en Firefox](https://bugzil.la/45566)):
 
 ```xml
 <parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml">
@@ -70,40 +70,34 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 /*! @source https://gist.github.com/1129031 */
 /*global document, DOMParser*/
 
-(function(DOMParser) {
- "use strict";
+(function (DOMParser) {
+  "use strict";
 
- var
-   proto = DOMParser.prototype
- , nativeParse = proto.parseFromString
- ;
+  var proto = DOMParser.prototype,
+    nativeParse = proto.parseFromString;
+  // Firefox/Opera/IE throw errors on unsupported types
+  try {
+    // WebKit returns null on unsupported types
+    if (new DOMParser().parseFromString("", "text/html")) {
+      // text/html parsing is natively supported
+      return;
+    }
+  } catch (ex) {}
 
- // Firefox/Opera/IE throw errors on unsupported types
- try {
-  // WebKit returns null on unsupported types
-  if ((new DOMParser()).parseFromString("", "text/html")) {
-   // text/html parsing is natively supported
-   return;
-  }
- } catch (ex) {}
-
- proto.parseFromString = function(markup, type) {
-  if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
-   var
-     doc = document.implementation.createHTMLDocument("")
-   ;
-         if (markup.toLowerCase().indexOf('<!doctype') > -1) {
-           doc.documentElement.innerHTML = markup;
-         }
-         else {
-           doc.body.innerHTML = markup;
-         }
-   return doc;
-  } else {
-   return nativeParse.apply(this, arguments);
-  }
- };
-}(DOMParser));
+  proto.parseFromString = function (markup, type) {
+    if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
+      var doc = document.implementation.createHTMLDocument("");
+      if (markup.toLowerCase().indexOf("<!doctype") > -1) {
+        doc.documentElement.innerHTML = markup;
+      } else {
+        doc.body.innerHTML = markup;
+      }
+      return doc;
+    } else {
+      return nativeParse.apply(this, arguments);
+    }
+  };
+})(DOMParser);
 ```
 
 ### DOMParser de Chrome/JSM/XPCOM/Privileged Scope
@@ -114,13 +108,13 @@ Ver artículo aquí: [nsIDOMParser](/es/docs/nsIDOMParser)
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.DOMParser")}}
+{{Compat}}
 
 ## Ver también
 
-- [Parsing and serializing XML](/es/docs/Parsing_and_serializing_XML)
-- [XMLHttpRequest](/es/docs/XMLHttpRequest)
-- [XMLSerializer](/es/docs/XMLSerializer)
-- [Parsing HTML to DOM](/es/Add-ons/Code_snippets/HTML_to_DOM)
+- [Parsing and serializing XML](/es/docs/Web/XML/Parsing_and_serializing_XML)
+- [XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest)
+- [XMLSerializer](/es/docs/Web/API/XMLSerializer)
+- [Parsing HTML to DOM](/es/docs/Mozilla/Add-ons/Code_snippets/HTML_to_DOM)

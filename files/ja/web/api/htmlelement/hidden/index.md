@@ -1,74 +1,46 @@
 ---
-title: HTMLElement.hidden
+title: "HTMLElement: hidden プロパティ"
+short-title: hidden
 slug: Web/API/HTMLElement/hidden
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{ APIRef("HTML DOM") }}
 
-{{domxref("HTMLElement")}} の **`hidden`** プロパティは論理値で、この要素が非表示の場合は `true` で、それ以外の場合は `false` です。 これは、CSS プロパティの {{cssxref("display")}} を使用して要素の可視性を制御することとはまったく異なります。
-
-`hidden` プロパティはすべてのプレゼンテーションモードに適用され、ユーザーが直接アクセスできるように意図されたコンテンツを非表示にために使用するべきではありません。
-
-`hidden` の適切な使用例は次のとおりです。
-
-- まだ関連性はないが、後で必要になる可能性のあるコンテンツ
-- 以前は必要であったが、もう存在しないコンテンツ
-- テンプレートのようにページの他の部分で再利用されるコンテンツ
-- 描画バッファーとしてオフスクリーンのキャンバスを作成する
-
-不適切な使用例には次のものがあります。
-
-- タブ付きダイアログボックスでのパネルの非表示
-- あるプレゼンテーションでコンテンツを非表示にし、他のプレゼンテーションでは表示されるようにする
-
-> **メモ:** `hidden` でない要素は、`hidden` 要素にリンクしてはいけません。
+{{domxref("HTMLElement")}} の **`hidden`** プロパティは、この要素の [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性の値を反映します。
 
 ## 値
 
-論理値で、この要素がビューから非表示になっている場合は `true`、そうでなければ `false` の値です。
+この属性には 3 つの値のうち 1 つを取ります。
+
+- `true`
+  - : この要素は非表示です。
+- `false`
+  - : この要素は非表示ではありません。これはこの属性の既定値です。
+- `"until-found"`
+  - : この要素は _hidden until found_ で、隠されているが、ページ内検索で見つかったり、フラグメントナビゲーションで到達したりすると表示されることを意味します。
+
+この属性の使い方の詳細は、このプロパティが反映する HTML の [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性のページを参照してください。
 
 ## 例
 
-次に、非表示のブロックを使用して、ユーザーが珍しい要求に同意した後に表示されるお礼のメッセージを含める例を示します。
-
-### JavaScript
-
-```js
-document.getElementById("okButton")
-        .addEventListener("click", function() {
-  document.getElementById("welcome").hidden = true;
-  document.getElementById("awesome").hidden = false;
-}, false);
-```
-
-このコードは、ウェルカムパネルを非表示にして、その場所に "awesome" という名前のフォローアップパネルを表示する、ウェルカムパネルの [OK] ボタンのハンドラーを設定します。
+ここでは、非表示のブロックを使用して、ユーザーが珍しい要求に同意した後に表示されるお礼のメッセージを含める例を示します。
 
 ### HTML
 
-2 つのボックスの HTML は次のとおりです。
-
-#### ウェルカムパネル
+この HTML には 2 つのパネルがあります。1 つはようこそパネルで、ユーザーに素晴らしいことを尋ね、もう一方はフォローアップパネルで、初期状態では非表示です。
 
 ```html
 <div id="welcome" class="panel">
   <h1>Foobar.com へようこそ！</h1>
-  <p>[OK] をクリックすると、あなたは毎日が素晴らしいことに同意します。</p>
+  <p>[OK] をクリックすると、今日は素晴らしいと同意したことになります。</p>
   <button class="button" id="okButton">OK</button>
 </div>
-```
 
-この HTML は、ユーザーをサイトに歓迎し、[OK] ボタンをクリックして同意していることを伝えるパネルを（{{HTMLElement("div")}} ブロック内に）作成します。
-
-#### フォローアップパネル
-
-ユーザーがウェルカムパネルの [OK] ボタンをクリックすると、 JavaScript コードは 2 つのパネルのそれぞれの `hidden` の値を変更して 2 つのパネルを入れ替えます。 フォローアップパネルは、HTML では次のようになります。
-
-```html
 <div id="awesome" class="panel" hidden>
   <h1>ありがとう！</h1>
-  <p>今日は素晴らしいことに同意してくれて<strong>とても</strong>ありがとう！
-  さあ、世界をもっと素晴らしいものにするために、
-  そこから出て、素晴らしいことをしてください！</p>
+  <p>今日は素晴らしいと同意してくれてありがとう！</p>
 </div>
 ```
 
@@ -78,7 +50,11 @@ document.getElementById("okButton")
 
 ```css
 .panel {
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border: 1px solid #22d;
   padding: 12px;
   width: 500px;
@@ -86,7 +62,11 @@ document.getElementById("okButton")
 }
 
 .button {
-  font: 22px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    22px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   padding: 5px 36px;
 }
 
@@ -96,9 +76,24 @@ h1 {
 }
 ```
 
+### JavaScript
+
+この JavaScript はイベントリスナーを [OK] ボタンに追加し、これが "welcome" パネルを非表示にして "awesome" パネルを表示します。
+
+```js
+document.getElementById("okButton").addEventListener(
+  "click",
+  () => {
+    document.getElementById("welcome").hidden = true;
+    document.getElementById("awesome").hidden = false;
+  },
+  false,
+);
+```
+
 ### 結果
 
-{{ EmbedLiveSample('Example', 560, 200) }}
+{{ EmbedLiveSample('Examples', 560, 200) }}
 
 ## 仕様書
 
@@ -110,5 +105,5 @@ h1 {
 
 ## 関連情報
 
-- {{htmlattrxref("hidden")}} 属性
+- [hidden](/ja/docs/Web/HTML/Global_attributes#hidden) 属性
 - {{cssxref("display")}}

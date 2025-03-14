@@ -1,42 +1,59 @@
 ---
 title: Atomics.and()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/and
+l10n:
+  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
-**`Atomics.and()`** 静态方法会将给定的值与数组上的值进行按位与操作，并将结果赋值给数组，然后返回数组该位置上的旧值。此原子操作保证在写上修改的值之前不会发生其他写操作。
+**`Atomics.and()`** 静态方法会将给定的值与数组指定位置上的值进行按位与运算，并返回该位置的旧值。此原子操作保证在修改后的值写回之前不会发生其他写操作。
 
-{{EmbedInteractiveExample("pages/js/atomics-and.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.and()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 7;
+
+// 7 (0111) AND 2 (0010) = 2 (0010)
+console.log(Atomics.and(uint8, 0, 2));
+// Expected output: 7
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 2
+```
 
 ## 语法
 
-```plain
+```js-nolint
 Atomics.and(typedArray, index, value)
 ```
 
 ### 参数
 
 - `typedArray`
-  - : 一个共享的整型 typed array。例如 {{jsxref("Int8Array")}}，{{jsxref("Uint8Array")}}，{{jsxref("Int16Array")}}，{{jsxref("Uint16Array")}}，{{jsxref("Int32Array")}}，或 {{jsxref("Uint32Array")}}。
+  - : 一个整数类型数组。{{jsxref("Int8Array")}}、{{jsxref("Uint8Array")}}、{{jsxref("Int16Array")}}、{{jsxref("Uint16Array")}}、{{jsxref("Int32Array")}}、{{jsxref("Uint32Array")}}、{{jsxref("BigInt64Array")}} 或 {{jsxref("BigUint64Array")}} 之一。
 - `index`
-  - : `按位与操作的 typedArray 的值在数组`上的索引。
+  - : `typedArray` 中要进行按位与运算的位置。
 - `value`
-  - : 给定的按位与操作的值。
+  - : 要进行按位与运算的值。
 
 ### 返回值
 
 给定位置的旧值（`typedArray[index]`）。
 
-### 错误
+### 异常
 
-- 假如 `typedArray` 不是允许的整型之一，则抛出 {{jsxref("TypeError")}}。
-- `假如 typedArray` 不是一个贡献的 typed array，则抛出 {{jsxref("TypeError")}}。
-- 如果 `index` 超出了 `typedArray 的边界，则抛出` {{jsxref("RangeError")}}。
+- {{jsxref("TypeError")}}
+  - : 如果 `typedArray` 不是允许的整数类型数组之一，则抛出该异常。
+- {{jsxref("RangeError")}}
+  - : 如果 `index` 超出 `typedArray` 的范围，则抛出该异常。
 
 ## 描述
 
-假如 a 和 b 都是 1，那么按位与运算（a & b）仅产生 1。与操作的真值表为：
+当且仅当 `a` 和 `b` 都为 1 时，按位与运算结果为 1。与运算的真值表如下：
 
 | `a` | `b` | `a & b` |
 | --- | --- | ------- |
@@ -45,7 +62,7 @@ Atomics.and(typedArray, index, value)
 | 1   | 0   | 0       |
 | 1   | 1   | 1       |
 
-比如，一个按位与如 `5 & 1` 的结果是 `0001`，其十进制就是 `1`。
+例如，`5 & 1` 按位与运算的结果是 `0001`，也就是十进制的 1。
 
 ```plain
 5  0101
@@ -57,13 +74,15 @@ Atomics.and(typedArray, index, value)
 
 ## 示例
 
+### 使用 and()
+
 ```js
-var sab = new SharedArrayBuffer(1024);
-var ta = new Uint8Array(sab);
+const sab = new SharedArrayBuffer(1024);
+const ta = new Uint8Array(sab);
 ta[0] = 5;
 
-Atomics.and(ta, 0, 1); // returns 0, the old value
-Atomics.load(ta, 0);  // 1
+Atomics.and(ta, 0, 1); // 返回 5，即旧的值
+Atomics.load(ta, 0); // 1
 ```
 
 ## 规范
@@ -74,7 +93,7 @@ Atomics.load(ta, 0);  // 1
 
 {{Compat}}
 
-## 相关
+## 参见
 
 - {{jsxref("Atomics")}}
 - {{jsxref("Atomics.or()")}}

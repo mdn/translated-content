@@ -1,22 +1,18 @@
 ---
-title: CSSKeyframesRule.name
+title: "CSSKeyframesRule: name プロパティ"
+short-title: name
 slug: Web/API/CSSKeyframesRule/name
+l10n:
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
 {{APIRef("CSSOM") }}
 
 **`name`** は {{domxref("CSSKeyframeRule")}} インターフェイスのプロパティで、 {{cssxref("animation-name")}} プロパティで使用されるアニメーションの名前を取得したり設定したりします。
 
-## 構文
-
-```js
-var name = CSSKeyframesRule.name;
-CSSKeyframesRule.name = name;
-```
-
 ### 値
 
-{{domxref('CSSOMString')}} です。
+文字列です。
 
 ## 例
 

@@ -15,23 +15,23 @@ slug: Web/API/Sensor_APIs
 
 ### 功能检测
 
-传感器接口仅仅是底层器件传感器的代理。因此，相比其它 API，传感器功能检测更为复杂。传感器 API 的存在并不能告诉你 API 是否与一个真实的硬件传感器相连，即使相连它是否在工作，甚至用户是否已经授权访问它。要一致地提供所有这些信息是要消耗性能和电池电量的。
+传感器接口仅仅是底层器件传感器的代理。因此，相比其他 API，传感器功能检测更为复杂。传感器 API 的存在并不能告诉你 API 是否与一个真实的硬件传感器相连，即使相连它是否在工作，甚至用户是否已经授权访问它。要一致地提供所有这些信息是要消耗性能和电池电量的。
 
-因此，传感器 API 的功能检测必须包含 API 本身的检测以及[防御性编程策略（见下）](#Defensive_Programming)（defensive programming strategies）。
+因此，传感器 API 的功能检测必须包含 API 本身的检测以及[防御性编程策略（见下）](#defensive_programming)（defensive programming strategies）。
 
 下面的例子展示了检测传感器 API 的三种方法。此外你还可以把对象实例化部分放在一个{{jsxref('statements/try...catch', 'try...catch')}} 块中。注意通过你并不能通过{{domxref('Navigator')}} 接口来实现传感器检测。
 
 ```js
 if (typeof Gyroscope === "function") {
-    // run in circles...
+  // run in circles...
 }
 
 if ("ProximitySensor" in window) {
-    // watch out!
+  // watch out!
 }
 
 if (window.AmbientLightSensor) {
-    // go dark...
+  // go dark...
 }
 ```
 
@@ -55,13 +55,13 @@ navigator.permissions.query({ name: 'accelerometer' })
 ```js
 const sensor = new AbsoluteOrientationSensor();
 sensor.start();
-sensor.onerror = event => {
-  if (event.error.name === 'SecurityError')
+sensor.onerror = (event) => {
+  if (event.error.name === "SecurityError")
     console.log("No permissions to use AbsoluteOrientationSensor.");
 };
 ```
 
-下表描述了每种传感器类型，使用它们在 Permissions API、{{HTMLElement('iframe')}} 元素中`allow` 属性，以及{{httpheader('Feature-Policy')}}语句中被引用时使用的名字。
+下表描述了每种传感器类型，使用它们在 Permissions API、{{HTMLElement('iframe')}} 元素中`allow` 属性，以及{{httpheader('Permissions-Policy')}}语句中被引用时使用的名字。
 
 | Sensor                      | Permission/Feature Policy Name                         |
 | --------------------------- | ------------------------------------------------------ |
@@ -80,16 +80,16 @@ sensor.onerror = event => {
 下面以{{domxref('Magnetometer')}}为例展示使用方法。
 
 ```js
-let magSensor = new Magnetometer({frequency: 60});
+let magSensor = new Magnetometer({ frequency: 60 });
 
-magSensor.addEventListener('reading', e => {
+magSensor.addEventListener("reading", (e) => {
   console.log("Magnetic field along the X-axis " + magSensor.x);
   console.log("Magnetic field along the Y-axis " + magSensor.y);
   console.log("Magnetic field along the Z-axis " + magSensor.z);
-})
-magSensor.addEventListener('error', event => {
+});
+magSensor.addEventListener("error", (event) => {
   console.log(event.error.name, event.error.message);
-})
+});
 magSensor.start();
 ```
 
@@ -103,32 +103,33 @@ magSensor.start();
 
 下面的示例代码说明以上原则。{{jsxref('statements/try...catch', 'try...catch')}}代码块捕捉在实例化传感器时抛出的错误。它实现了一个{{domxref('Sensor.onerror')}}处理函数以捕捉使用中抛出的错误。它只在以下情况下提示用户：需要请求[权限](/zh-CN/docs/Web/API/Permissions_API)时，以及所请求的传感器类型在设备上不支持时。
 
-> **备注：** 如果一个功能策略（feature policy）阻止了对某功能的使用，这是因为你的代码与你的服务器上设置的策略不一致。这种情况是不应该显示给用户看的。具体实现请参见{{httpheader('Feature-Policy')}}。
+> [!NOTE]
+> 如果一个权限策略（permission policy）阻止了对某功能的使用，这是因为你的代码与你的服务器上设置的策略不一致。这种情况是不应该显示给用户看的。具体实现请参见 {{httpheader('Permissions-Policy')}}。
 
 ```js
 let accelerometer = null;
 try {
-    accelerometer = new Accelerometer({ referenceFrame: 'device' });
-    accelerometer.addEventListener('error', event => {
-        // Handle runtime errors.
-        if (event.error.name === 'NotAllowedError') {
-            // Branch to code for requesting permission.
-        } else if (event.error.name === 'NotReadableError' ) {
-            console.log('Cannot connect to the sensor.');
-        }
-    });
-    accelerometer.addEventListener('reading', () => reloadOnShake(accelerometer));
-    accelerometer.start();
-} catch (error) {
-    // Handle construction errors.
-    if (error.name === 'SecurityError') {
-        // See the note above about feature policy.
-        console.log('Sensor construction was blocked by a feature policy.');
-    } else if (error.name === 'ReferenceError') {
-        console.log('Sensor is not supported by the User Agent.');
-    } else {
-        throw error;
+  accelerometer = new Accelerometer({ referenceFrame: "device" });
+  accelerometer.addEventListener("error", (event) => {
+    // Handle runtime errors.
+    if (event.error.name === "NotAllowedError") {
+      // Branch to code for requesting permission.
+    } else if (event.error.name === "NotReadableError") {
+      console.log("Cannot connect to the sensor.");
     }
+  });
+  accelerometer.addEventListener("reading", () => reloadOnShake(accelerometer));
+  accelerometer.start();
+} catch (error) {
+  // Handle construction errors.
+  if (error.name === "SecurityError") {
+    // See the note above about feature policy.
+    console.log("Sensor construction was blocked by a feature policy.");
+  } else if (error.name === "ReferenceError") {
+    console.log("Sensor is not supported by the User Agent.");
+  } else {
+    throw error;
+  }
 }
 ```
 
@@ -151,7 +152,7 @@ try {
 - {{domxref('RelativeOrientationSensor')}}
   - : 描述设备与地球参考坐标系无关的物理方向。
 - {{domxref('Sensor')}}
-  - : 所有其它传感器接口的基类。本接口不能直接使用。它提供其继承类可访问的属性、事件处理函数及方法。
+  - : 所有其他传感器接口的基类。本接口不能直接使用。它提供其继承类可访问的属性、事件处理函数及方法。
 - {{domxref('SensorErrorEvent')}}
   - : 提供由{{domxref('Sensor')}}或其相关的接口抛出的错误的信息。
 

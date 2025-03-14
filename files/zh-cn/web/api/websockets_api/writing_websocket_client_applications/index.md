@@ -3,11 +3,14 @@ title: 编写 WebSocket 客户端应用
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 ---
 
+{{DefaultAPISidebar("WebSockets API")}}
+
 WebSocket 客户端应用程序使用 WebSocket API 通过 WebSocket 协议与 WebSocket 服务器通信。
 
 {{AvailableInWorkers}}
 
-> **警告：** 本文中的示例代码片段来自我们的 WebSocket 聊天应用示例，[源代码在此处](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)。
+> [!WARNING]
+> 本文中的示例代码片段来自我们的 WebSocket 聊天应用示例，[源代码在此处](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)。
 
 ## 创建 WebSocket 对象
 
@@ -15,11 +18,8 @@ WebSocket 客户端应用程序使用 WebSocket API 通过 WebSocket 协议与 W
 
 WebSocket 构造函数接受一个必要参数和一个可选参数：
 
-```
-WebSocket WebSocket(
-  in DOMString url,
-  in optional DOMString protocols
-);
+```js
+webSocket = new WebSocket(url, protocols);
 ```
 
 - `url`
@@ -36,14 +36,17 @@ WebSocket WebSocket(
 
 如果尝试连接过程中发生错误，那么首先一个名为 "error" 的事件会被发送给 [`WebSocket`](/zh-CN/WebSockets/WebSockets_reference/WebSocket) 对象（然后调用其`onerror` handler），然后 [`CloseEvent`](/zh-CN/WebSockets/WebSockets_reference/CloseEvent) 被发送给[`WebSocket`](/zh-CN/WebSockets/WebSockets_reference/WebSocket) （然后调用其 `onclose` handler）以说明连接关闭的原因。
 
-在 Firefox 11 中，通常会从 Mozilla 平台的控制台中收到一个描述性的错误信息，以及一个通过 [`CloseEvent`](/zh-CN/WebSockets/WebSockets_reference/CloseEvent) 在 [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4) 中定义的错误代码。
+在 Firefox 11 中，通常会从 Mozilla 平台的控制台中收到一个描述性的错误信息，以及一个通过 [`CloseEvent`](/zh-CN/WebSockets/WebSockets_reference/CloseEvent) 在 [RFC 6455, Section 7.4](https://tools.ietf.org/html/rfc6455#section-7.4) 中定义的错误代码。
 
 ### 示例
 
 本例创建了一个新的 WebSocket，连接到地址为 `ws://www.example.com/socketserver` 的服务器。请求中命名了一个自定义的协议 "protocolOne"，这一部分可以省略。
 
 ```js
-var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
+var exampleSocket = new WebSocket(
+  "ws://www.example.com/socketserver",
+  "protocolOne",
+);
 ```
 
 返回后，`exampleSocket.readyState` 参数为 `CONNECTING`。一旦连接可以传送数据，`readyState` 就会变成 `OPEN` 。
@@ -51,12 +54,15 @@ var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocol
 如果你想建立一个支持协议可选的连接，你可以指定协议的列表：
 
 ```js
-var exampleSocket = new WebSocket("ws://www.example.com/socketserver", ["protocolOne", "protocolTwo"]);
+var exampleSocket = new WebSocket("ws://www.example.com/socketserver", [
+  "protocolOne",
+  "protocolTwo",
+]);
 ```
 
 一旦连接建立了（也就是说 `readyState` 是 `OPEN`） `exampleSocket.protocol` 就会告诉你服务器选择了哪个协议。
 
-上面的例子中 `ws` 替代了 `http`，同样地 `wss 也会替代 https`. 建立 WebSocket 链接有赖于 [HTTP Upgrade mechanism](/zh-CN/docs/Web/HTTP/Protocol_upgrade_mechanism), 所以当我们使用 `ws://www.example.com`或者 `wss://www.example.com`来访问 HTTP 服务器的时候协议会隐式地升级。
+上面的例子中 `ws` 替代了 `http`，同样地 `wss 也会替代 https`. 建立 WebSocket 链接有赖于 [HTTP Upgrade mechanism](/zh-CN/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism), 所以当我们使用 `ws://www.example.com`或者 `wss://www.example.com`来访问 HTTP 服务器的时候协议会隐式地升级。
 
 ## 向服务器发送数据
 
@@ -66,9 +72,7 @@ var exampleSocket = new WebSocket("ws://www.example.com/socketserver", ["protoco
 exampleSocket.send("Here's some text that the server is urgently awaiting!");
 ```
 
-你可以把数据作为字符串，{{ domxref("Blob") }}，或者[`ArrayBuffer`](/zh-CN/JavaScript_typed_arrays/ArrayBuffer)来发送。
-
-> **备注：** 在版本 11 之前，Firefox 只支持以字符串的形式发送数据。
+你可以把数据作为字符串，{{ domxref("Blob") }}，或者[`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)来发送。
 
 因为连接的建立是异步的，而且容易失败，所以不能保证刚创建 WebSocket 对象时使用 `send()` 方法会成功。我们至少可以确定企图在链接建立起来之后立马发送数据，可以通过注册 `onopen` 事件处理器解决：
 
@@ -89,8 +93,8 @@ function sendText() {
   var msg = {
     type: "message",
     text: document.getElementById("text").value,
-    id:   clientID,
-    date: Date.now()
+    id: clientID,
+    date: Date.now(),
   };
 
   // 把 msg 对象作为 JSON 格式字符串发送
@@ -108,7 +112,7 @@ WebSockets 是一个基于事件的 API；收到消息的时候，一个 "messag
 ```js
 exampleSocket.onmessage = function (event) {
   console.log(event.data);
-}
+};
 ```
 
 ### 接受与解析 JSON 对象
@@ -121,31 +125,39 @@ exampleSocket.onmessage = function (event) {
 
 解析这些收到的消息的代码可能是这样的：
 
-```
-exampleSocket.onmessage = function(event) {
+```js
+exampleSocket.onmessage = function (event) {
   var f = document.getElementById("chatbox").contentDocument;
   var text = "";
   var msg = JSON.parse(event.data);
   var time = new Date(msg.date);
   var timeStr = time.toLocaleTimeString();
 
-  switch(msg.type) {
+  switch (msg.type) {
     case "id":
       clientID = msg.id;
       setUsername();
       break;
     case "username":
-      text = "<b>User <em>" + msg.name + "</em> signed in at " + timeStr + "</b><br>";
+      text =
+        "<b>User <em>" +
+        msg.name +
+        "</em> signed in at " +
+        timeStr +
+        "</b><br>";
       break;
     case "message":
       text = "(" + timeStr + ") <b>" + msg.name + "</b>: " + msg.text + "<br>";
       break;
     case "rejectusername":
-      text = "<b>Your username has been set to <em>" + msg.name + "</em> because the name you chose is in use.</b><br>"
+      text =
+        "<b>Your username has been set to <em>" +
+        msg.name +
+        "</em> because the name you chose is in use.</b><br>";
       break;
     case "userlist":
       var ul = "";
-      for (i=0; i < msg.users.length; i++) {
+      for (i = 0; i < msg.users.length; i++) {
         ul += msg.users[i] + "<br>";
       }
       document.getElementById("userlistbox").innerHTML = ul;
@@ -159,7 +171,7 @@ exampleSocket.onmessage = function(event) {
 };
 ```
 
-这里我们使用 [`JSON.parse()`](/zh-CN/JavaScript/Reference/Global_Objects/JSON/parse) 来将 JSON 转换回原始对象，然后检查并根据其内容做下一步动作。
+这里我们使用 [`JSON.parse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) 来将 JSON 转换回原始对象，然后检查并根据其内容做下一步动作。
 
 ### 文本数据的格式
 

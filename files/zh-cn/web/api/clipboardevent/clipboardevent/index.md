@@ -9,8 +9,9 @@ slug: Web/API/ClipboardEvent/ClipboardEvent
 
 ## 语法
 
-```
-var clipboardEvent = new ClipboardEvent(type[, options]);
+```js-nolint
+new ClipboardEvent(type)
+new ClipboardEvent(type, options)
 ```
 
 ### 参数
@@ -35,7 +36,7 @@ _`ClipboardEvent()` 构造函数也从_ _{{domxref("Event.Event", "Event()")}}_ 
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - 与复制相关的事件：[`copy`](/zh-CN/docs/Web/API/Element/copy_event), [`cut`](/zh-CN/docs/Web/API/Element/cut_event), [`paste`](/zh-CN/docs/Web/API/Element/paste_event)
 - 所属的 {{domxref("ClipboardEvent")}} 接口。

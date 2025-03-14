@@ -1,8 +1,8 @@
 ---
 title: Cache.matchAll()
 slug: Web/API/Cache/matchAll
-translation_of: Web/API/Cache/matchAll
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 Метод **`matchAll()`** интерфейса {{domxref("Cache")}} возвращает {{jsxref("Promise")}}, который разрешается в массив всех совпадающих запросов в объекте {{domxref("Cache")}}.
@@ -10,7 +10,7 @@ translation_of: Web/API/Cache/matchAll
 ## Синтаксис
 
 ```js
-cache.matchAll(request,{options}).then(function(response) {
+cache.matchAll(request, { options }).then(function (response) {
   // сделать что-нибудь с массивом ответов
 });
 ```
@@ -19,7 +19,7 @@ cache.matchAll(request,{options}).then(function(response) {
 
 {{jsxref("Promise")}}, который разрешается в массив всех совпадающих запросов в объекте {{domxref("Cache")}}.
 
-> **Примечание:** **Замечание**: {{domxref("Cache.match()")}} в основном идентичен `Cache.matchAll()`, за исключением того, что последний разрешается с `response[0]` (т.е., первым совпадающим ответом) вместо `response` (всех совпадающих ответов в массиве).
+> **Примечание:** {{domxref("Cache.match()")}} в основном идентичен `Cache.matchAll()`, за исключением того, что последний разрешается с `response[0]` (т.е., первым совпадающим ответом) вместо `response` (всех совпадающих ответов в массиве).
 
 ### Параметры
 
@@ -37,13 +37,13 @@ cache.matchAll(request,{options}).then(function(response) {
 ## Примеры
 
 ```js
-caches.open('v1').then(function(cache) {
-  cache.matchAll('/images/').then(function(response) {
-    response.forEach(function(element, index, array) {
+caches.open("v1").then(function (cache) {
+  cache.matchAll("/images/").then(function (response) {
+    response.forEach(function (element, index, array) {
       cache.delete(element);
     });
   });
-})
+});
 ```
 
 ## Спецификации
@@ -56,6 +56,6 @@ caches.open('v1').then(function(cache) {
 
 ## Смотрите также
 
-- [Использование сервис воркеров](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Использование сервис воркеров](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("WorkerGlobalScope.caches")}}

@@ -13,7 +13,7 @@ slug: Web/JavaScript/Guide/Loops_and_iteration
 var step;
 for (step = 0; step < 5; step++) {
   // 執行五次：從step為0到4
-  console.log('Walking east one step');
+  console.log("Walking east one step");
 }
 ```
 
@@ -46,14 +46,16 @@ for ([初始表達式]; [條件式]; [遞增表達式])
 3. 執行敘事式。要執行多個敘事式時，使用區塊敘事式(`{ ... }`) 來把那些敘事式歸為一組。
 4. 如果有更新表達式的遞增表達式便執行。然後 return 到第二步。
 
-### **範例**
+### 範例
 
 以下的函式包含一個用來數在一個滾動列表中被選過的選項(a {{HTMLElement("select")}} 允許複數選項的元素)的 for 陳述式 。這個 for 敘事式宣告了變數 i 並將其初始化為 0。 他檢查 i ，如果 i 少於在\<select>元素中的選項數量，進行接著的 if 陳述式，並將 i 在每次通過迴圈後遞增。
 
 ```html
 <form name="selectForm">
   <p>
-    <label for="musicTypes">Choose some music types, then click the button below:</label>
+    <label for="musicTypes"
+      >Choose some music types, then click the button below:</label
+    >
     <select id="musicTypes" name="musicTypes" multiple="multiple">
       <option selected="selected">R&B</option>
       <option>Jazz</option>
@@ -67,26 +69,28 @@ for ([初始表達式]; [條件式]; [遞增表達式])
 </form>
 
 <script>
-function howMany(selectObject) {
-  var numberSelected = 0;
-  for (var i = 0; i < selectObject.options.length; i++) {
-    if (selectObject.options[i].selected) {
-      numberSelected++;
+  function howMany(selectObject) {
+    var numberSelected = 0;
+    for (var i = 0; i < selectObject.options.length; i++) {
+      if (selectObject.options[i].selected) {
+        numberSelected++;
+      }
     }
+    return numberSelected;
   }
-  return numberSelected;
-}
 
-var btn = document.getElementById("btn");
-btn.addEventListener("click", function(){
-  alert('Number of options selected: ' + howMany(document.selectForm.musicTypes))
-});
+  var btn = document.getElementById("btn");
+  btn.addEventListener("click", function () {
+    alert(
+      "Number of options selected: " + howMany(document.selectForm.musicTypes),
+    );
+  });
 </script>
 ```
 
 ## `do...while` 陳述式
 
-`do...while` 陳述式會不斷重複直到一個特定的條件判斷為false。一個do...while 陳述式看起來像以下：
+`do...while` 陳述式會不斷重複直到一個特定的條件判斷為 false。一個 do...while 陳述式看起來像以下：
 
 ```plain
 do
@@ -96,7 +100,7 @@ while (條件式);
 
 `陳述式會在檢查條件式以前先執行一次。要執行多個陳述式的話，使用區塊陳述式來將那些陳述式歸為一組。如果條件式為true，那陳述式便再次執行。在每次執行的最後，條件會被檢查。當條件式為false時，` 停止執行並把控制傳給 `do...while接著的陳述式。`
 
-### **範例**
+### 範例
 
 在下列範例中，do 迴圈重複了至少一次並不斷重複直到 i 不再比 5 少。
 
@@ -123,7 +127,7 @@ while (condition)
 
 `要執行多個陳述式的話，使用區塊陳述式來將那些陳述式歸為一組。`
 
-### **範例 1**
+### 範例 1
 
 以下的 while 迴圈在只要 n 比 3 少的情況下便會不斷重複：
 
@@ -144,7 +148,7 @@ while (n < 3) {
 
 在完成第三次迴圈後，判斷是 n<3 不再是 true ，所以迴圈終止。
 
-### **範例 2**
+### 範例 2
 
 避免無限迴圈。確定在迴圈內的判斷式終究會變成 false； 不然迴圈會永遠不終止。在迴圈內的陳述式會永遠的執行因為判斷式永遠不會變成 false：
 
@@ -167,14 +171,13 @@ label :
 
 Label 的值可以是任何不是保留字的 JavaScript 識別字。你用 label 所識別的陳述式可以是任何陳述式。
 
-### **範例**
+### 範例
 
 在這個範例，`markLoop這個label 識別一個while 迴圈。`
 
 ```js
-markLoop:
-while (theMark == true) {
-   doSomething();
+markLoop: while (theMark == true) {
+  doSomething();
 }
 ```
 
@@ -192,7 +195,7 @@ break 陳述式的語法看起來如下：
 
 第一種語法會終止最內部的迴圈或 switch 區間；第二種語法會終止那個特定的 label 陳述式。
 
-### **範例** **1**
+### 範例 1
 
 以下的範例會不斷重複跑迴圈直到有在陣列裡的元素符合 theValue 的值：
 
@@ -204,7 +207,7 @@ for (var i = 0; i < a.length; i++) {
 }
 ```
 
-### **範例 2:** Break 至一個 label 陳述式
+### 範例 2：Break 至一個 label 陳述式
 
 ```js
 var x = 0;
@@ -237,7 +240,7 @@ continue 陳述式的語法看起來如下：
 1. `continue;`
 2. `continue`_`label;`_
 
-### **範例 1**
+### 範例 1
 
 以下的範例有 while 迴圈以及一個在 i 的值為 3 的時候執行的 continue 陳述式。因此，n 的值會連著是 1, 3, 7, 12。
 
@@ -253,29 +256,27 @@ while (i < 5) {
 }
 ```
 
-### **範例 2**
+### 範例 2
 
 一個被 label 成 checkiandj 的陳述式包還著一個被 label 成 checkj 的陳述式。如果遇到了 continue，程式會終止現在的這輪迴圈並開始下一輪。每次遇到 continue，checkj 就會一直重複直到它的條件式返回 false。當 false 被傳回時，checkiandj 陳述式剩下的陳述式已被完成，而 checkiandj 也會繼續重複直到它的條件式傳回 false。當 false 被傳回，程式會繼續進行接著 checkiandj 後面的陳述式。
 
 如果 continue 有了 checkiandj 的 label 程式會從 checkiandj 陳述式的頭開始繼續。
 
 ```js
-checkiandj:
-  while (i < 4) {
-    console.log(i);
-    i += 1;
-    checkj:
-      while (j > 4) {
-        console.log(j);
-        j -= 1;
-        if ((j % 2) == 0) {
-          continue checkj;
-        }
-        console.log(j + " is odd.");
-      }
-      console.log("i = " + i);
-      console.log("j = " + j);
+checkiandj: while (i < 4) {
+  console.log(i);
+  i += 1;
+  checkj: while (j > 4) {
+    console.log(j);
+    j -= 1;
+    if (j % 2 == 0) {
+      continue checkj;
+    }
+    console.log(j + " is odd.");
   }
+  console.log("i = " + i);
+  console.log("j = " + j);
+}
 ```
 
 ## `for...in` 陳述式
@@ -288,7 +289,7 @@ for (variable in object) {
 }
 ```
 
-### **範例**
+### 範例
 
 以下的函式透過它的參數得到一個物件和物件的名字。接著它循環這個物件的所有屬性並傳回一個列出屬性名和值的字串。
 
@@ -306,17 +307,17 @@ function dump_props(obj, obj_name) {
 對於一個擁有 make 跟 model 屬性的物件 car 來說，執行結果是：
 
 ```js
-car.make = Ford
-car.model = Mustang
+car.make = Ford;
+car.model = Mustang;
 ```
 
-### **陣列**
+### 陣列
 
 雖然用 for...in 來迭代 {{jsxref("Array")}} 元素很吸引人，但是它傳回的除了數字的索引之外還有可能是你自己定的屬性名。因此還是用帶有數字索引的傳統`for迴圈來迭帶一個陣列會比較好。因為如果你想改變陣列物件，比如增加屬性或是方法，`**for...in** 陳述式迭代的是自定的屬性而不是陣列的元素。
 
 ## `for...of` 陳述式
 
-[`for...of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) 陳述式在[iterable objects](/zh-TW/docs/Web/JavaScript/Guide/iterable)(可迭代的物件)上建立了一個循環 (包含 {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, [arguments](/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments)(參數) 物件 等等), 對每個獨特屬性的值使用一個準備被執行的有陳述式的自訂迭代掛勾。
+[`for...of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) 陳述式在[iterable objects](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols)(可迭代的物件)上建立了一個循環 (包含 {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, [arguments](/zh-TW/docs/Web/JavaScript/Reference/Functions/arguments)(參數) 物件 等等), 對每個獨特屬性的值使用一個準備被執行的有陳述式的自訂迭代掛勾。
 
 ```plain
 for (variable of object) {
@@ -331,11 +332,11 @@ let arr = [3, 5, 7];
 arr.foo = "hello";
 
 for (let i in arr) {
-   console.log(i); // logs "0", "1", "2", "foo"
+  console.log(i); // logs "0", "1", "2", "foo"
 }
 
 for (let i of arr) {
-   console.log(i); // logs 3, 5, 7
+  console.log(i); // logs 3, 5, 7
 }
 ```
 

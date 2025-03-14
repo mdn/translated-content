@@ -1,38 +1,79 @@
 ---
 title: clear
 slug: Web/CSS/clear
-tags:
-  - CSS
-  - Справка
-translation_of: Web/CSS/clear
 ---
+
 {{CSSRef}}
 
-Свойство **`clear`** CSS указывает, может ли элемент быть рядом с плавающими [floating](/ru/docs/CSS/float) элементами, которые предшествуют ему или должны быть перемещены вниз (очищены) под ними. Свойство `clear` применяется как к плавающим, так и к неплавающим элементам.
+Свойство **`clear`** CSS указывает, может ли элемент быть рядом с плавающими [floating](/ru/docs/Web/CSS/float) элементами, которые предшествуют ему или должны быть перемещены вниз (очищены) под ними. Свойство `clear` применяется как к плавающим, так и к неплавающим элементам.
 
-{{EmbedInteractiveExample("pages/css/clear.html")}}
+{{InteractiveExample("CSS Demo: clear")}}
 
-При применении к неплавающим блокам он перемещает границу края [border edge](/ru/docs/CSS/box_model) элемента до тех пор, пока не окажется ниже края [margin edge](/ru/docs/CSS/box_model) поля всех соответствующих поплавков. Вертикальный край неплавающего блока сжимается.
+```css interactive-example-choice
+clear: none;
+```
 
-Вертикальные поля между двумя плавающими элементами, с другой стороны, не будут разрушаться. При применении к плавающим элементам - [margin edge](/ru/docs/CSS/box_model) нижнего элемента перемещается ниже [margin edge](/ru/docs/CSS/box_model) всех соответствующих поплавков. Это влияет на положение более поздних поплавков, поскольку более поздние поплавки не могут быть расположены выше предыдущих.
+```css interactive-example-choice
+clear: left;
+```
 
-Поплавки, которые имеют отношение к очистке, - это более ранние поплавки в одном и том же [контексте форматирования блоков](/ru/docs/CSS/block_formatting_context).
+```css interactive-example-choice
+clear: right;
+```
 
-> **Примечание:** **Примечание:** Если элемент содержит только плавающие элементы, его высота сворачивается в ничто. Если вы хотите, чтобы он всегда мог изменять размер, чтобы он содержал в себе плавающие элементы, вам нужно самоочистить своих детей. Это называется **clearfix,** и один из способов сделать это - это заменит `clear` заменённый {{cssxref("::after")}} [псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) на нем.```css
-> #container::after {
-> content: "";
-> display: block;
-> clear: both;
-> }
->
-> ```
->
-> ```
+```css interactive-example-choice
+clear: both;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="floated-left">Left</div>
+    <div class="floated-right">Right</div>
+    <div class="transition-all" id="example-element">
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  padding: 0.75em;
+  text-align: left;
+  line-height: normal;
+}
+
+.floated-left {
+  border: solid 10px #ffc129;
+  background-color: rgba(81, 81, 81, 0.6);
+  padding: 1em;
+  float: left;
+}
+
+.floated-right {
+  border: solid 10px #ffc129;
+  background-color: rgba(81, 81, 81, 0.6);
+  padding: 1em;
+  float: right;
+  height: 150px;
+}
+```
+
+При применении к неплавающим блокам он перемещает границу края [border edge](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) элемента до тех пор, пока не окажется ниже края [margin edge](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) поля всех соответствующих поплавков. Вертикальный край неплавающего блока сжимается.
+
+Вертикальные поля между двумя плавающими элементами, с другой стороны, не будут разрушаться. При применении к плавающим элементам - [margin edge](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) нижнего элемента перемещается ниже [margin edge](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) всех соответствующих поплавков. Это влияет на положение более поздних поплавков, поскольку более поздние поплавки не могут быть расположены выше предыдущих.
+
+Поплавки, которые имеют отношение к очистке, - это более ранние поплавки в одном и том же [контексте форматирования блоков](/ru/docs/Web/CSS/CSS_display/Block_formatting_context).
 
 ## Синтаксис
 
 ```css
-/* Значения ключевых слов */
+/* Ключевые слова */
 clear: none;
 clear: left;
 clear: right;
@@ -73,8 +114,15 @@ clear: unset;
 
 ```html
 <div class="wrapper">
-  <p class="black">Давай лучше "бёзди хэппи" затянем, нежели Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
-  <p class="red">Пусть бегут неуклюже пешеходы по лужам, Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  <p class="black">
+    Давай лучше "бёзди хэппи" затянем, нежели Lorem ipsum dolor sit amet,
+    consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius
+    dui. Suspendisse eget dolor.
+  </p>
+  <p class="red">
+    Пусть бегут неуклюже пешеходы по лужам, Lorem ipsum dolor sit amet,
+    consectetuer adipiscing elit.
+  </p>
   <p class="left">Этот абзац очищается слева.</p>
 </div>
 ```
@@ -82,9 +130,9 @@ clear: unset;
 #### CSS
 
 ```css
-.wrapper{
-  border:1px solid black;
-  padding:10px;
+.wrapper {
+  border: 1px solid black;
+  padding: 10px;
 }
 .left {
   border: 1px solid black;
@@ -101,7 +149,7 @@ clear: unset;
   float: left;
   margin: 0;
   background-color: pink;
-  width:20%;
+  width: 20%;
 }
 p {
   width: 50%;
@@ -116,8 +164,14 @@ p {
 
 ```html
 <div class="wrapper">
-  <p class="black">Лучше нести бред и околесицу, но более осмысленную, чем Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  <p class="red">- Так я ж намедни намекал, что Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  <p class="black">
+    Лучше нести бред и околесицу, но более осмысленную, чем Lorem ipsum dolor
+    sit amet, consectetuer adipiscing elit.
+  </p>
+  <p class="red">
+    - Так я ж намедни намекал, что Lorem ipsum dolor sit amet, consectetuer
+    adipiscing elit.
+  </p>
   <p class="right">Этот абзац очищается справа.</p>
 </div>
 ```
@@ -125,9 +179,9 @@ p {
 #### CSS
 
 ```css
-.wrapper{
-  border:1px solid black;
-  padding:10px;
+.wrapper {
+  border: 1px solid black;
+  padding: 10px;
 }
 .right {
   border: 1px solid black;
@@ -138,13 +192,13 @@ p {
   margin: 0;
   background-color: black;
   color: #fff;
-  width:20%;
+  width: 20%;
 }
 .red {
   float: right;
   margin: 0;
   background-color: pink;
-  width:20%;
+  width: 20%;
 }
 p {
   width: 50%;
@@ -159,8 +213,16 @@ p {
 
 ```html
 <div class="wrapper">
-  <p class="black">Лучше нести осмысленную белиберду, чем "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
-  <p class="red">Вот я и говорю, что "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor".</p>
+  <p class="black">
+    Лучше нести осмысленную белиберду, чем "Lorem ipsum dolor sit amet,
+    consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius
+    dui. Suspendisse eget dolor.
+  </p>
+  <p class="red">
+    Вот я и говорю, что "Lorem ipsum dolor sit amet, consectetuer adipiscing
+    elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget
+    dolor".
+  </p>
   <p class="both">Этот абзац очищает оба.</p>
 </div>
 ```
@@ -168,9 +230,9 @@ p {
 #### CSS
 
 ```css
-.wrapper{
-  border:1px solid black;
-  padding:10px;
+.wrapper {
+  border: 1px solid black;
+  padding: 10px;
 }
 .both {
   border: 1px solid black;
@@ -181,13 +243,13 @@ p {
   margin: 0;
   background-color: black;
   color: #fff;
-  width:20%;
+  width: 20%;
 }
 .red {
   float: right;
   margin: 0;
   background-color: pink;
-  width:20%;
+  width: 20%;
 }
 p {
   width: 45%;
@@ -198,18 +260,12 @@ p {
 
 ## Характеристики
 
-| Спецификация                                                                                     | Статус                                           | Коммент                                                 |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------------- |
-| {{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}} | {{Spec2('CSS Logical Properties')}} | Добавляет значения `inline-start` и `inline-end`.       |
-| {{SpecName('CSS2.1', 'visuren.html#flow-control', 'clear')}}                 | {{Spec2('CSS2.1')}}                         | Никаких существенных изменений, хотя детали уточняются. |
-| {{SpecName('CSS1', '#clear', 'clear')}}                                             | {{Spec2('CSS1')}}                         | Начальное определение                                   |
+{{Specifications}}
 
-{{cssinfo}}
-
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Box model](/ru/docs/CSS/box_model)
+- [Box model](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

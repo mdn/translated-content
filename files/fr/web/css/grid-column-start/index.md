@@ -1,16 +1,13 @@
 ---
 title: grid-column-start
 slug: Web/CSS/grid-column-start
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/grid-column-start
+l10n:
+  sourceCommit: 84b1729de4f527c8d81e44a38fca70ea4db97922
 ---
 
 {{CSSRef}}
 
-La propriété **`grid-column-start`** définit la position du début d'un élément (au sens des propriétés logiques `*-block-start`) en définissant la ligne ou la taille de fragment occupé sur la grille.
+La propriété **`grid-column-start`** définit la position du début d'un élément au sein de la grille de façon automatique, absolue ou relative par rapport à la fin de l'élément. La position de début définit le bord de la [zone de grille](/fr/docs/Glossary/Grid_Areas) selon l'axe logique de bloc (celui orthogonal au sens de lecteur).
 
 {{EmbedInteractiveExample("pages/css/grid-column-start.html")}}
 
@@ -35,44 +32,49 @@ grid-column-start: span unezonedegrille 5;
 /* Valeurs globales */
 grid-column-start: inherit;
 grid-column-start: initial;
+grid-column-start: revert;
+grid-column-start: revert-layer;
 grid-column-start: unset;
 ```
 
-La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. Une telle valeur peut être définie avec :
+La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. Une telle valeur peut être définie avec&nbsp;:
 
 - le mot-clé `auto`
-- ou une valeur `<custom-ident>`
-- ou une valeur `<integer>`
-- ou une valeur `<custom-ident>` et un `<integer>` séparés par un espace
-- ou le mot-clé `span` avec une valeur `<custom-ident>` ou un `<integer>` ou les deux.
+- un identifiant ([`<custom-ident>`](/fr/docs/Web/CSS/custom-ident))
+- ou une valeur entière ([`<integer>`](/fr/docs/Web/CSS/integer))
+- ou un identifiant et un entier séparés par un espace
+- ou le mot-clé `span` avec un identifiant ou un entier ou les deux.
 
 ### Valeurs
 
 - `auto`
-  - : Un mot-clé qui indique que la propriété ne contribue pas au placement de l'élément sur la grille. Cela indique un placement automatique, une taille de fragment (_span_) automatique ou une taille par défaut de `1`.
-- `<custom-ident>`
 
-  - : S'il existe une ligne nommée avec '\<custom-ident>-start', la première ligne correspondante contribue au placement de l'élément sur la grille.
+  - : Un mot-clé qui indique que la propriété ne contribue pas au placement de l'élément sur la grille. Cela indique un placement automatique, une taille de fragment (<i lang="en">span</i>) automatique ou une taille par défaut de `1`.
 
-    > **Note :** Les noms des zones de grille sont générés implicitement. Ainsi, en utilisant `grid-column-start: foo;` cela sélectionnera le début de la grille nommée correspondante (sauf si une autre ligne `foo-start` a été explicitement déclarée).
+- [`<custom-ident>`](/fr/docs/Web/CSS/custom-ident)
+
+  - : S'il existe une ligne nommée avec '\<custom-ident>-start', le début de l'élément coincide avec la première ligne correspondante.
+
+    > [!NOTE]
+    > Les noms des zones de grille sont générés implicitement. Ainsi, en utilisant `grid-column-start: toto;` cela sélectionnera le bord de la zone de grille nommée correspondante (sauf si une autre ligne `toto-start` a explicitement été déclarée).
 
     Sinon, la valeur est traitée comme si on avait utilisé `<custom-ident>` et la valeur `1`.
 
 - `<integer> && <custom-ident>?`
 
-  - : La n-ième ligne de la grille contribue au placement de l'élément sur la grille. Si un entier négatif est utilisé, le comptage sera fait depuis la fin de la grille explicite.
+  - : Le début de l'élément est placé sur la n-ième ligne de la grille. Si un entier négatif est utilisé, le comptage sera fait depuis la fin de la grille explicite.
 
-    Si un nom est fourni pour \<custom-ident>, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existant avec ce nom, toutes les lignes implicites seront comptées afin de trouver la position.
+    Si un nom est fourni pour `<custom-ident>`, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existant avec ce nom, toutes les lignes implicites seront considérées afin de trouver la position.
 
-    Si la valeur entière utilisée est `0`, la règle est invalide.
+    Une valeur entière de `0` sera considérée comme invalide.
 
 - `span && [ <integer> || <custom-ident> ]`
 
-  - : Un fragment de grille est utilisé pour le placement de l'élément sur la grille afin que le début de la ligne pour l'élément de la grille soit placé à n lignes du bord de fin.
+  - : Le début de l'élément est placé relativement au bord de fin pour occuper n colonnes.
 
-    Si un nom fourni pour \<custom-ident>, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existantes avec ce nom, tout les lignes implicites du côté de la grille explicite et qui correspondent à la direction de la recherche seront comptées afin de placer ce fragment.
+    Si un nom fourni pour `<custom-ident>`, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existantes avec ce nom, toutes les lignes implicites du côté de la grille explicite et qui correspondent à la direction de la recherche seront comptées pour l'étendue de l'élément.
 
-    Si l'entier n'est pas défini, la valeur par défaut qui sera utilisée sera `1`. Les entiers négatifs ou nuls sont invalides.
+    Si l'entier n'est pas défini, la valeur par défaut sera `1`. Les entiers négatifs ou nuls sont invalides.
 
     `<custom-ident>` ne peut pas prendre la valeur `span`.
 
@@ -86,15 +88,21 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
 
 ## Exemples
 
+### Définir la colonne de début pour un élément de grille
+
+#### HTML
+
 ```html
 <div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
-  <div class="box4">Four</div>
-  <div class="box5">Five</div>
+  <div class="box1">Un</div>
+  <div class="box2">Deux</div>
+  <div class="box3">Trois</div>
+  <div class="box4">Quatre</div>
+  <div class="box5">Cinq</div>
 </div>
 ```
+
+#### CSS
 
 ```css
 .wrapper {
@@ -104,7 +112,7 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
 }
 
 .box1 {
-  grid-column-start: 1;
+  grid-column-start: span 2;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 3;
@@ -118,7 +126,9 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -142,7 +152,78 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
 }
 ```
 
-{{EmbedLiveSample('Exemples', '230', '420')}}
+#### Résultat
+
+{{EmbedLiveSample('définir_la_colonne_de_début_pour_un_élément_de_grille', '230', '420')}}
+
+### Placement relatif aux lignes
+
+#### HTML
+
+```html
+<div class="wrapper">
+  <div class="box1">Un</div>
+  <div class="box2">Deux</div>
+  <div class="box3">Trois</div>
+  <div class="box4">Quatre</div>
+  <div class="box5">Cinq</div>
+</div>
+```
+
+#### CSS
+
+```css
+.wrapper {
+  display: grid;
+  grid-template-columns: [main-start] 2fr [main] 1fr [main] 1fr [inter] 1fr [main];
+}
+
+.box1 {
+  grid-column-start: span 2 main;
+  grid-column-end: 5;
+}
+
+.box2 {
+  grid-column-start: span 2 main;
+  grid-column-end: inter;
+}
+
+.box3 {
+  grid-column-start: span 2 main;
+  grid-column-end: main;
+}
+```
+
+```css hidden
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.wrapper > div {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
+}
+
+.nested {
+  border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample('placement_relatif_aux_lignes', '230', '220')}}
 
 ## Spécifications
 
@@ -154,10 +235,10 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
 
 ## Voir aussi
 
-- {{cssxref("grid-column-end")}}
-- {{cssxref("grid-column")}}
-- {{cssxref("grid-row-start")}}
-- {{cssxref("grid-row-end")}}
-- {{cssxref("grid-row")}}
-- [Guide : le placement sur les lignes d'une grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-- Tutoriel vidéo : [le placement sur les lignes (en anglais)](https://gridbyexample.com/video/series-line-based-placement/)
+- [`grid-column-end`](/fr/docs/Web/CSS/grid-column-end)
+- [`grid-column`](/fr/docs/Web/CSS/grid-column)
+- [`grid-row-start`](/fr/docs/Web/CSS/grid-row-start)
+- [`grid-row-end`](/fr/docs/Web/CSS/grid-row-end)
+- [`grid-row`](/fr/docs/Web/CSS/grid-row)
+- [Guide&nbsp;: le placement sur les lignes d'une grille](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [Tutoriel vidéo en anglais sur le placement sur les lignes](https://gridbyexample.com/video/series-line-based-placement/)

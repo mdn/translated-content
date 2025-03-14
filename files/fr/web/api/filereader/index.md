@@ -1,12 +1,6 @@
 ---
 title: FileReader
 slug: Web/API/FileReader
-tags:
-  - API
-  - File
-  - Interface
-  - Référence(2)
-translation_of: Web/API/FileReader
 ---
 
 {{APIRef("File API")}}
@@ -22,7 +16,7 @@ Les objets qui sont des fichiers peuvent être obtenus à partir d'un objet {{do
 - {{domxref("FileReader.FileReader", "FileReader()")}}
   - : Ce constructeur renvoie un nouvel objet `FileReader`.
 
-Pour plus d'informations et d'exemples, consulter [utiliser des fichiers depuis des applications web](/fr/docs/Using_files_from_web_applications).
+Pour plus d'informations et d'exemples, consulter [utiliser des fichiers depuis des applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications).
 
 ## Propriétés
 
@@ -95,6 +89,6 @@ Pour plus d'informations et d'exemples, consulter [utiliser des fichiers depuis 
 
 ## Voir aussi
 
-- [Manipuler des fichiers depuis des applications web](/fr/docs/Using_files_from_web_applications)
+- [Manipuler des fichiers depuis des applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications)
 - {{domxref("File")}}
 - {{domxref("Blob")}}

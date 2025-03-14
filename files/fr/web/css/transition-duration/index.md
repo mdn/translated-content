@@ -1,7 +1,6 @@
 ---
 title: transition-duration
 slug: Web/CSS/transition-duration
-translation_of: Web/CSS/transition-duration
 ---
 
 {{CSSRef}}
@@ -48,13 +47,13 @@ transition-duration: unset;
 #### HTML
 
 ```html
-  <div class="box duration-1">0,5 secondes</div>
+<div class="box duration-1">0,5 secondes</div>
 
-  <div class="box duration-2">2 secondes</div>
+<div class="box duration-2">2 secondes</div>
 
-  <div class="box duration-3">4 secondes</div>
+<div class="box duration-3">4 secondes</div>
 
-  <button id="change">Changer</button>
+<button id="change">Changer</button>
 ```
 
 #### CSS
@@ -122,5 +121,5 @@ changeButton.addEventListener("click", change);
 
 ## Voir aussi
 
-- [Utiliser les transitions CSS](/fr/docs/CSS/Using_CSS_transitions)
+- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{domxref("TransitionEvent")}}

@@ -7,7 +7,8 @@ slug: Web/CSS/mask
 
 **`mask`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、指定された位置での画像のマスクまたは切り取りによって要素を (部分的または全体的に) 隠します。
 
-> **メモ:** 以下のプロパティに加えて、`mask` 一括指定は {{cssxref("mask-border")}} を初期値にリセットします。そのため、カスケード内の初期のマスク設定を上書きするには、他の一括指定や個々のプロパティではなく、`mask` 一括指定を使用することをお勧めします。これにより、`mask-border` もリセットされ、新しいスタイルが適用されるようになります。
+> [!NOTE]
+> 以下のプロパティに加えて、`mask` 一括指定は {{cssxref("mask-border")}} を初期値にリセットします。そのため、カスケード内の初期のマスク設定を上書きするには、他の一括指定や個々のプロパティではなく、`mask` 一括指定を使用することをお勧めします。これにより、`mask-border` もリセットされ、新しいスタイルが適用されるようになります。
 
 ## 構成要素のプロパティ
 
@@ -29,16 +30,16 @@ slug: Web/CSS/mask
 mask: none;
 
 /* 画像値 */
-mask: url(mask.png);                       /* マスクとして使用されるピクセル画像 */
-mask: url(masks.svg#star);                 /* マスクとして使用されるSVGグラフィック内の要素 */
+mask: url(mask.png); /* マスクとして使用されるピクセル画像 */
+mask: url(masks.svg#star); /* マスクとして使用されるSVGグラフィック内の要素 */
 
 /* 組み合わせ値 */
-mask: url(masks.svg#star) luminance;       /* 輝度マスクとして使用される SVG グラフィック内の要素 */
-mask: url(masks.svg#star) 40px 20px;       /* マスクとして使用される SVG グラフィック内の要素が、上から 40px、左から 20px の位置に配置されている */
-mask: url(masks.svg#star) 0 0/50px 50px;   /* 幅と高さが 50px のマスクとして使用される SVG グラフィック内の要素 */
-mask: url(masks.svg#star) repeat-x;        /* 水平方向に繰り返されるマスクとして使用される SVG グラフィック内の要素 */
-mask: url(masks.svg#star) stroke-box;      /* ストロークで囲まれたボックスに拡張するマスクとして使用される SVG グラフィック内の要素 */
-mask: url(masks.svg#star) exclude;         /* SVGグラフィック内の要素をマスクとして使用し、非重複部分を使用して背景と組み合わせる */
+mask: url(masks.svg#star) luminance; /* 輝度マスクとして使用される SVG グラフィック内の要素 */
+mask: url(masks.svg#star) 40px 20px; /* マスクとして使用される SVG グラフィック内の要素が、上から 40px、左から 20px の位置に配置されている */
+mask: url(masks.svg#star) 0 0/50px 50px; /* 幅と高さが 50px のマスクとして使用される SVG グラフィック内の要素 */
+mask: url(masks.svg#star) repeat-x; /* 水平方向に繰り返されるマスクとして使用される SVG グラフィック内の要素 */
+mask: url(masks.svg#star) stroke-box; /* ストロークで囲まれたボックスに拡張するマスクとして使用される SVG グラフィック内の要素 */
+mask: url(masks.svg#star) exclude; /* SVGグラフィック内の要素をマスクとして使用し、非重複部分を使用して背景と組み合わせる */
 
 /* グローバル値 */
 mask: inherit;
@@ -47,8 +48,10 @@ mask: revert;
 mask: unset;
 
 /* 複数のマスク */
-mask: url(masks.svg#star) left / 16px repeat-y,    /* SVG グラフィック内の要素が、幅 16px の左端のマスクとして使用されている */
-      url(masks.svg#circle) right / 16px repeat-y; /* SVG グラフィック内の要素が、幅 16px の右端のマスクとして使用されている */
+mask:
+  url(masks.svg#star) left / 16px repeat-y,
+  /* SVG グラフィック内の要素が、幅 16px の左端のマスクとして使用されている */
+    url(masks.svg#circle) right / 16px repeat-y; /* SVG グラフィック内の要素が、幅 16px の右端のマスクとして使用されている */
 ```
 
 ### 値

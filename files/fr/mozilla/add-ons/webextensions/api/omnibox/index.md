@@ -1,14 +1,6 @@
 ---
 title: omnibox
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - omnibox
-translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox
 ---
 
 {{AddonSidebar}}
@@ -49,14 +41,14 @@ L'API omnibox fournit à l'extension un moyen de personnaliser les suggestions a
 - {{WebExtAPIRef("omnibox.onInputCancelled")}}
   - : Lancé lorsque l'utilisateur supprime la liste déroulante de la barre d'adresse, après avoir défini la barre d'adresse et tapé le mot clé omnibox de votre extension.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.omnibox")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/extensions/omnibox).
+> Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

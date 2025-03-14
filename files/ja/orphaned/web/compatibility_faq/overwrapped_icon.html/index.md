@@ -1,7 +1,6 @@
 ---
 title: アイコンが隣接する他のアイコンと重なってしまう
 slug: orphaned/Web/Compatibility_FAQ/Overwrapped_Icon.html
-original_slug: Web/Compatibility_FAQ/Overwrapped_Icon.html
 ---
 
 ## 概要
@@ -9,7 +8,7 @@ original_slug: Web/Compatibility_FAQ/Overwrapped_Icon.html
 アイコンが隣接する他のアイコンと重なってしまい、正しく表示できません。
 隣のアイコンと重なっている部分が、欠けてしまったり、隣のアイコンの上に表示されてしまう場合があります。
 
-表示画面![](https://mdn.mozillademos.org/files/9993/0106.jpg)
+表示画面![](0106.jpg)
 
 ## 要因
 
@@ -47,4 +46,4 @@ original_slug: Web/Compatibility_FAQ/Overwrapped_Icon.html
 ・px 指定した場合は、少ない修正で横幅の変動するアイコンに対応できます。
 ・「auto」で指定した場合は、他のアイコンの表示位置指定を全体的に見直す必要がありますが、桁数の少ない場合と多い場合で、それぞれ合った表示を行うことが可能となります。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

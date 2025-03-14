@@ -1,7 +1,6 @@
 ---
 title: Débuter sur MDN
 slug: MDN/Community/Contributing/Getting_started
-original_slug: MDN/Contribute/Getting_started
 l10n:
   sourceCommit: 2d6d6a1d9f8ba2073c9f8e1bbc6b4e20204fb53c
 ---
@@ -28,7 +27,8 @@ En ce qui concerne les contributions en français, vous pouvez consulter [les de
 
 Pour contribuer, vous aurez besoin d'un compte GitHub. Si vous n'en avez pas déjà un, [inscrivez-vous](https://github.com/signup) pour créer un compte avant de continuer. Si vous débutez avec Git et GitHub, nous vous conseillons de lire les articles suivants pour apprendre leur fonctionnement. Avec ces connaissances en main, vous pourrez vous concentrer sur vos contributions sans avoir à apprendre de nouveaux outils en même temps.
 
-> **Note :** Ne vous sentez pas obligé⋅e de lire toutes ces pages pour commencer à contribuer. Avec les deux premiers articles, vous serez déjà bien équipé⋅e.
+> [!NOTE]
+> Ne vous sentez pas obligé⋅e de lire toutes ces pages pour commencer à contribuer. Avec les deux premiers articles, vous serez déjà bien équipé⋅e.
 
 - [MDN sur GitHub, comment contribuer&nbsp;?](https://tech.mozfr.org/post/2021/03/16/MDN-sur-GitHub-comment-contribuer)
 - [Introduction à GitHub (en anglais)](https://github.com/skills/introduction-to-github)
@@ -36,7 +36,8 @@ Pour contribuer, vous aurez besoin d'un compte GitHub. Si vous n'en avez pas dé
 - [Processus de contribution sur GitHub (en anglais)](https://docs.github.com/en/get-started/quickstart/github-flow)
 - [Utiliser le format Markdown (en anglais)](https://github.com/skills/communicate-using-markdown)
 
-> **Note :** Si vous avez besoin d'aide ou de conseils en français, n'hésitez pas à [nous demander sur Matrix sur le canal l10n-fr](https://matrix.to/#/#l10n-fr:mozilla.org).
+> [!NOTE]
+> Si vous avez besoin d'aide ou de conseils en français, n'hésitez pas à [nous demander sur Matrix sur le canal l10n-fr](https://matrix.to/#/#l10n-fr:mozilla.org).
 
 ### Lectures complémentaires et ressources d'apprentissage
 

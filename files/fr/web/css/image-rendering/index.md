@@ -1,8 +1,6 @@
 ---
 title: image-rendering
-slug: Web/CSS/Image-rendering
-translation_of: Web/CSS/image-rendering
-browser-compat: css.properties.image-rendering
+slug: Web/CSS/image-rendering
 ---
 
 {{CSSRef}}
@@ -41,7 +39,8 @@ image-rendering: unset;
 - `smooth` {{Experimental_inline}}
   - : L'algorithme utilisé pour le redimensionnement doit maximiser l'apparence de l'image. Les algorithmes qui adoucissent les couleurs (l'interpolation bilinéaire par exemple) sont acceptables. Cette valeur est destinée aux images telles que les photos.
 
-> **Note :** Les valeurs `optimizeQuality` et `optimizeSpeed` qui étaient présentes dans un brouillon de la spécification (et qui provenaient de la spécification équivalente pour SVG) sont synonymes respectifs de `smooth` et `pixelated`.
+> [!NOTE]
+> Les valeurs `optimizeQuality` et `optimizeSpeed` qui étaient présentes dans un brouillon de la spécification (et qui provenaient de la spécification équivalente pour SVG) sont synonymes respectifs de `smooth` et `pixelated`.
 
 ## Définition formelle
 

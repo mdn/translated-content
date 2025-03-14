@@ -10,7 +10,7 @@ slug: Web/API/CustomElementRegistry
 ## メソッド
 
 - {{domxref("CustomElementRegistry.define()")}}
-  - : 新しい[カスタム要素](/ja/docs/Web/Web_Components/Using_custom_elements)を定義します。
+  - : 新しい[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)を定義します。
 - {{domxref("CustomElementRegistry.get()")}}
   - : 名前付きカスタム要素のコンストラクターを返します。カスタム要素が定義されていない場合は {{jsxref("undefined")}} を返します。
 - {{domxref("CustomElementRegistry.upgrade()")}}
@@ -32,37 +32,37 @@ class WordCount extends HTMLParagraphElement {
     // 要素の親要素の語数を数える
     var wcParent = this.parentNode;
 
-    function countWords(node){
-      var text = node.innerText || node.textContent
+    function countWords(node) {
+      var text = node.innerText || node.textContent;
       return text.split(/\s+/g).length;
     }
 
-    var count = 'Words: ' + countWords(wcParent);
+    var count = "Words: " + countWords(wcParent);
 
     // シャドウルートを生成
-    var shadow = this.attachShadow({mode: 'open'});
+    var shadow = this.attachShadow({ mode: "open" });
 
     // テキストノードを生成し、語数を追加
-    var text = document.createElement('span');
+    var text = document.createElement("span");
     text.textContent = count;
 
     // シャドウルートに追加
     shadow.appendChild(text);
 
     // 要素の内容が変化したとき、語数を更新
-    setInterval(function() {
-      var count = 'Words: ' + countWords(wcParent);
+    setInterval(function () {
+      var count = "Words: " + countWords(wcParent);
       text.textContent = count;
-    }, 200)
-
+    }, 200);
   }
 }
 
 // 新しい要素を定義
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
-> **メモ:** CustomElementsRegistry は {{domxref("Window.customElements")}} プロパティを通して利用可能です。
+> [!NOTE]
+> CustomElementsRegistry は {{domxref("Window.customElements")}} プロパティを通して利用可能です。
 
 ## 仕様書
 

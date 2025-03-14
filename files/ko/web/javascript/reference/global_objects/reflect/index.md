@@ -1,24 +1,19 @@
 ---
 title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 ---
+
 {{JSRef}}
 
-**`Reflect`**는 중간에서 가로챌 수 있는 JavaScript 작업에 대한 메서드를 제공하는 내장 객체입니다. 메서드의 종류는 [프록시 처리기](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)와 동일합니다. `Reflect`는 함수 객체가 아니므로 생성자로 사용할 수 없습니다.
+**`Reflect`** 는 중간에서 가로챌 수 있는 JavaScript 작업에 대한 메서드를 제공하는 내장 객체입니다. 메서드의 종류는 [프록시 처리기](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)와 동일합니다. `Reflect`는 함수 객체가 아니므로 생성자로 사용할 수 없습니다.
 
 ## 설명
 
 다른 대부분의 전역 객체와 다르게, `Reflect`는 생성자가 아닙니다. 따라서 함수처럼 호출하거나 [`new` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/new)로 인스턴스를 만들 수 없습니다. {{jsxref("Math")}} 객체처럼, `Reflect`의 모든 속성과 메서드는 정적입니다.
 
-`Reflect` 객체의 정적 메서드 이름은 [프록시 처리기 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)의 이름과 같습니다.
+`Reflect` 객체의 정적 메서드 이름은 [프록시 처리기 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)의 이름과 같습니다.
 
-일부 메서드는 {{jsxref("Object")}}에도 존재하는 메서드이지만 [약간의 차이](/ko/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods)가 있습니다.
+일부 메서드는 {{jsxref("Object")}}에도 존재하는 메서드이지만 [약간의 차이](/ko/docs/Web/JavaScript/Reference/Global_Objects/Reflect)가 있습니다.
 
 ## 정적 메서드
 
@@ -59,16 +54,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 
 ```js
 const duck = {
-  name: 'Maurice',
-  color: 'white',
-  greeting: function() {
+  name: "Maurice",
+  color: "white",
+  greeting: function () {
     console.log(`Quaaaack! My name is ${this.name}`);
-  }
-}
+  },
+};
 
-Reflect.has(duck, 'color');
+Reflect.has(duck, "color");
 // true
-Reflect.has(duck, 'haircut');
+Reflect.has(duck, "haircut");
 // false
 ```
 
@@ -82,7 +77,7 @@ Reflect.ownKeys(duck);
 ### 객체에 새로운 속성 추가하기
 
 ```js
-Reflect.set(duck, 'eyes', 'black');
+Reflect.set(duck, "eyes", "black");
 // returns "true" if successful
 // "duck" now contains the property "eyes: 'black'"
 ```

@@ -1,13 +1,11 @@
 ---
 title: GlobalEventHandlers.onanimationcancel
 slug: Web/API/Element/animationcancel_event
-translation_of: Web/API/GlobalEventHandlers/onanimationcancel
-original_slug: Web/API/GlobalEventHandlers/onanimationcancel
 ---
 
 {{APIRef("CSS3 Animations")}}
 
-Обработчик события {{event("animationcancel")}} . Это событие вызывается когда CSS Анимация ([CSS Animation](/ru/docs/Web/CSS/CSS_Animations)) неожиданно прерывается (иными словами, в любой момент, когда анимация прекращает воспроизведение, не отправляя событие завершения {{event("animationend")}} ), например, когда изменяется {{cssxref("animation-name")}}, анимация удаляется или когда элемент с анимацией оказывается скрыт (непосредственно сам элемент, или другой элемент, содержащий его) средствами CSS.
+Обработчик события [`animationcancel`](/ru/docs/Web/API/Element/animationcancel_event) . Это событие вызывается когда анимация ([CSS Animation](/ru/docs/Web/CSS/CSS_animations)) неожиданно прерывается (иными словами, в любой момент, когда анимация прекращает воспроизведение, не отправляя событие завершения [`animationend`](/ru/docs/Web/API/Element/animationend_event)), например, когда изменяется {{cssxref("animation-name")}}, анимация удаляется или когда элемент с анимацией оказывается скрыт (непосредственно сам элемент, или другой элемент, содержащий его) средствами CSS.
 
 ## Синтаксис
 
@@ -19,7 +17,7 @@ target.onanimationcancel = {{jsxref("Function")}}
 
 ### Значения
 
-Функция {{jsxref("Function")}} вызывается когда {{event("animationcancel")}} происходит событие, указывающее, что CSS-анимация запустилась на объекте _target_, где объект _target_ object это HTML-элемент ({{domxref("HTMLElement")}}), документ ({{domxref("Document")}}), или окно ({{domxref("Window")}}). Эта функция принимает один параметр {{domxref("AnimationEvent")}} - объект, описывающий событие, которое произошло.
+Функция {{jsxref("Function")}} вызывается когда происходит событие [`animationcancel`](/ru/docs/Web/API/Element/animationcancel_event), указывающее, что CSS-анимация запустилась на объекте _target_, который представляет HTML-элемент ({{domxref("HTMLElement")}}), документ ({{domxref("Document")}}) или окно ({{domxref("Window")}}). Эта функция принимает один параметр {{domxref("AnimationEvent")}} — объект, описывающий событие, которое произошло.
 
 ## Пример
 
@@ -32,9 +30,7 @@ target.onanimationcancel = {{jsxref("Function")}}
   </div>
 </div>
 
-<div class="button" id="toggleBox">
-  Hide the Box
-</div>
+<div class="button" id="toggleBox">Hide the Box</div>
 
 <pre id="log"></pre>
 ```
@@ -43,12 +39,12 @@ target.onanimationcancel = {{jsxref("Function")}}
 
 ```css hidden
 :root {
-  --boxwidth:50px;
+  --boxwidth: 50px;
 }
 
 .main {
   width: 300px;
-  height:300px;
+  height: 300px;
   border: 1px solid black;
 }
 
@@ -63,7 +59,10 @@ target.onanimationcancel = {{jsxref("Function")}}
   padding-bottom: 4px;
   color: white;
   background-color: darkgreen;
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 
 #text {
@@ -73,10 +72,11 @@ target.onanimationcancel = {{jsxref("Function")}}
   text-align: center;
   align-self: center;
   color: white;
-  font: bold 1.4em "Lucida Grande", "Open Sans", sans-serif;
+  font:
+    bold 1.4em "Lucida Grande",
+    "Open Sans",
+    sans-serif;
 }
-
-
 ```
 
 Опустим некоторые фрагменты CSS, не имеющие значение для нас, и рассмотрим стили для элемента, который мы анимируем. Это блок box со всеми своими свойствами, включая определённую анимацию {{cssxref("animation")}}. Мы продолжим и опишем анимацию прямо здесь, поскольку обычно она должна запускаться непосредственно при загрузке страницы, не зависимо от какого-либо другого события.
@@ -87,10 +87,10 @@ target.onanimationcancel = {{jsxref("Function")}}
   height: var(--boxwidth);
   left: 0;
   top: 0;
-  border: 1px solid #7788FF;
+  border: 1px solid #7788ff;
   margin: 0;
   position: relative;
-  background-color: #2233FF;
+  background-color: #2233ff;
   display: flex;
   justify-content: center;
   animation: 5s ease-in-out 0s infinite alternate both slideBox;
@@ -102,12 +102,12 @@ target.onanimationcancel = {{jsxref("Function")}}
 ```css
 @keyframes slideBox {
   from {
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
   }
   to {
-    left:calc(100% - var(--boxwidth));
-    top:calc(100% - var(--boxwidth))
+    left: calc(100% - var(--boxwidth));
+    top: calc(100% - var(--boxwidth));
   }
 }
 ```
@@ -125,27 +125,30 @@ function log(msg, event) {
   logBox.innerHTML += msg;
 
   if (event) {
-    logBox.innerHTML += " <code>"+ event.animationName +
-        "</code> at time " + event.elapsedTime.toFixed(2) +
-        " seconds.";
+    logBox.innerHTML +=
+      " <code>" +
+      event.animationName +
+      "</code> at time " +
+      event.elapsedTime.toFixed(2) +
+      " seconds.";
   }
 
   logBox.innerHTML += "\n";
-};
+}
 ```
 
-Затем мы устанавливаем обработчик событий `handleCancelEvent() - функцию`, которая вызывается в ответ на событие {{event("animationcancel")}}. Все, что мы делаем здесь - это выводим информацию в консоль, но вы можете использовать это для запуска новой анимацию или других эффектов, связанных с окончанием некоторой операции.
+Затем мы устанавливаем обработчик событий `handleCancelEvent()`, который вызывается в ответ на событие [`animationcancel`](/ru/docs/Web/API/Element/animationcancel_event). Все, что мы делаем здесь — это выводим информацию в консоль, но вы можете использовать это для запуска новой анимацию или других эффектов, связанных с окончанием некоторой операции.
 
 ```js
 function handleCancelEvent(event) {
   log("Animation canceled", event);
-};
+}
 ```
 
-Теперь добавим переключение {{cssxref("display")}} между `"flex"` и `"none"` и установим обработчик события щелчка {{event("click")}} на кнопке "Hide/Show":
+Теперь добавим переключение {{cssxref("display")}} между `"flex"` и `"none"` и установим обработчик события [`click`](/ru/docs/Web/API/Element/click_event) на кнопке "Hide/Show":
 
 ```js
-document.getElementById('toggleBox').addEventListener('click', function() {
+document.getElementById("toggleBox").addEventListener("click", function () {
   if (box.style.display == "none") {
     box.style.display = "flex";
     document.getElementById("toggleBox").innerHTML = "Hide the box";
@@ -156,9 +159,10 @@ document.getElementById('toggleBox').addEventListener('click', function() {
 });
 ```
 
-Таким образом переключение стилей элемента `display: none` приводит к прерыванию анимации. In browsers that support {{event("animationcancel")}}, the event is fired and this handler is called.
+Таким образом переключение стилей элемента `display: none` приводит к прерыванию анимации. In browsers that support [`animationcancel`](/ru/docs/Web/API/Element/animationcancel_event), the event is fired and this handler is called.
 
-> **Примечание:** At this time, no major browser supports `animationcancel`.
+> [!NOTE]
+> At this time, no major browser supports `animationcancel`.
 
 ### Result
 
@@ -170,15 +174,13 @@ If your browser supports `animationcancel`, hiding the box using the button will
 
 ## Specification
 
-| Specification                                                                                                                | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('CSS3 Animations','#eventdef-animationevent-animationcancel','onanimationcancel')}} | {{Spec2('CSS3 Animations')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- The {{event("animationcancel")}} event this event handler is triggered by.
+- The [`animationcancel`](/ru/docs/Web/API/Element/animationcancel_event) event this event handler is triggered by.
 - {{domxref("AnimationEvent")}}

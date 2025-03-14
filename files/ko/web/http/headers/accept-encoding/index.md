@@ -1,7 +1,6 @@
 ---
 title: Accept-Encoding
 slug: Web/HTTP/Headers/Accept-Encoding
-translation_of: Web/HTTP/Headers/Accept-Encoding
 ---
 
 {{HTTPSidebar}}
@@ -15,7 +14,7 @@ translation_of: Web/HTTP/Headers/Accept-Encoding
 
 부호화(encoding)되지 않았음을 의미하는, `identity` 값이 식별에 대한 다른 명시적인 설정 값 없이 `identity;q=0` or a `*;q=0`에 의해 명시적으로 숨겨지지 않는 한, 서버는 {{HTTPStatus("406")}} `Acceptable` 오류를 회신해서는 결코 안됩니다.
 
-> **참고:** **Notes:**- IANA 레지스트리는 [공식적인 컨텐츠 인코딩의 전체 목록](http://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)을 운영 중입니다.
+> **참고:** **Notes:**- IANA 레지스트리는 [공식적인 컨텐츠 인코딩의 전체 목록](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)을 운영 중입니다.
 >
 > - 두 개의 다른 컨텐츠 인코딩, `bzip`과 `bzip2`이 표준은 아니지만 때때로 사용되기도 합니다. 그들은 두 개의 UNIX 프로그램에 의해 사용되는 알고리즘을 구현합니다. 첫번째 알고리즘은 특허 라이선스 문제 때문에 더 이상 유지되지 않는다는 것을 알아두시기 바랍니다.
 

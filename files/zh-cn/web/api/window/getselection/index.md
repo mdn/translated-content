@@ -9,8 +9,8 @@ slug: Web/API/Window/getSelection
 
 ## 语法
 
-```
-const selection = window.getSelection() ;
+```js-nolint
+getSelection()
 ```
 
 - `selection` 是一个 {{domxref("Selection")}} 对象。如果想要将 `selection` 转换为字符串，可通过连接一个空字符串（""）或使用 {{jsxref("String.toString()")}} 方法。
@@ -19,10 +19,10 @@ const selection = window.getSelection() ;
 
 ```js
 function foo() {
-    let selObj = window.getSelection();
-    console.log(selObj);
-    let selRange = selObj.getRangeAt(0);
-    // 其他代码
+  let selObj = window.getSelection();
+  console.log(selObj);
+  let selRange = selObj.getRangeAt(0);
+  // 其他代码
 }
 ```
 

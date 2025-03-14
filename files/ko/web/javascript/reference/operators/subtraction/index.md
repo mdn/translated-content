@@ -1,25 +1,32 @@
 ---
 title: 빼기 (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Subtraction
-browser-compat: javascript.operators.subtraction
 ---
 
 {{jsSidebar("Operators")}}
 
 빼기 연산자(`-`)는 두 연산자의 차이를 구합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-subtraction.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Subtraction operator")}}
+
+```js interactive-example
+console.log(5 - 3);
+// Expected output: 2
+
+console.log(3.5 - 5);
+// Expected output: -1.5
+
+console.log(5 - "hello");
+// Expected output: NaN
+
+console.log(5 - true);
+// Expected output: 4
+```
 
 ## 구문
 
 ```js
-x - y
+x - y;
 ```
 
 ## 예제
@@ -27,14 +34,14 @@ x - y
 ### 뺄셈
 
 ```js
-5 - 3  // 2
-3 - 5  // -2
+5 - 3; // 2
+3 - 5; // -2
 ```
 
 ### 숫자가 아닌 경우
 
 ```js
-'foo' - 3 // NaN
+"foo" - 3; // NaN
 ```
 
 ## 명세

@@ -32,7 +32,8 @@ A função Math.hypot() torna esta tarefa mais rápida e mais fácil, basta exec
 
 Dessa maneira também se evita problemas se a magnitude dos seus número for muito grande. O maio número que se pode representar em um _double float_ em JavasScript é `Number.MAX_VALUE` = 1.797...e+308. Se os seu números são maior que 1e154, calcular o quadrado deles resultará em `Infinity`, estragando os seus resultados. Por exemplo, `Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinity`. Se você usar a função `Math.hypot()`, você receberá uma resposta aceitável: `Math.hypot(1e200, 1e200) = 1.4142...e+200`. Isto também é verdade para número muito pequenos. `Math.sqrt(1e-200*1e-200 + 1e-200*1e-200) = 0`, mas `Math.hypot(1e-200, 1e-200) = 1.4142...e-200` é uma boa resposta.
 
-> **Nota:** Por `hypot()` ser um método estático de `Math`, deve-se sempre usá-lo como `Math.hypot()`, e não como um método de um objeto `Math` que você criou.
+> [!NOTE]
+> Por `hypot()` ser um método estático de `Math`, deve-se sempre usá-lo como `Math.hypot()`, e não como um método de um objeto `Math` que você criou.
 
 Se nenhum parâmetro for passado, o resultado é +0.
 
@@ -45,13 +46,13 @@ Com apenas um parâmetro, `Math.hypot()` se comporta como `Math.abs()`.
 ### Usando `Math.hypot()`
 
 ```js
-Math.hypot(3, 4);        // 5
-Math.hypot(3, 4, 5);     // 7.0710678118654755
-Math.hypot();            // 0
-Math.hypot(NaN);         // NaN
-Math.hypot(3, 4, 'foo'); // NaN, +'foo' => NaN
-Math.hypot(3, 4, '5');   // 7.0710678118654755, +'5' => 5
-Math.hypot(-3);          // 3, the same as Math.abs(-3)
+Math.hypot(3, 4); // 5
+Math.hypot(3, 4, 5); // 7.0710678118654755
+Math.hypot(); // 0
+Math.hypot(NaN); // NaN
+Math.hypot(3, 4, "foo"); // NaN, +'foo' => NaN
+Math.hypot(3, 4, "5"); // 7.0710678118654755, +'5' => 5
+Math.hypot(-3); // 3, the same as Math.abs(-3)
 ```
 
 ## Polyfill
@@ -59,30 +60,29 @@ Math.hypot(-3);          // 3, the same as Math.abs(-3)
 O comportamento de `Math.hypot()` pode ser emulado com a seguinte função:
 
 ```js
-Math.hypot = Math.hypot || function() {
-  var y = 0;
-  var length = arguments.length;
+Math.hypot =
+  Math.hypot ||
+  function () {
+    var y = 0;
+    var length = arguments.length;
 
-  for (var i = 0; i < length; i++) {
-    if (arguments[i] === Infinity || arguments[i] === -Infinity) {
-      return Infinity;
+    for (var i = 0; i < length; i++) {
+      if (arguments[i] === Infinity || arguments[i] === -Infinity) {
+        return Infinity;
+      }
+      y += arguments[i] * arguments[i];
     }
-    y += arguments[i] * arguments[i];
-  }
-  return Math.sqrt(y);
-};
+    return Math.sqrt(y);
+  };
 ```
 
 ## Especificações
 
-| Specification                                                                | Status                       | Comment            |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-math.hypot', 'Math.hypot')}}     | {{Spec2('ES2015')}}     | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-math.hypot', 'Math.hypot')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.hypot")}}
+{{Compat}}
 
 ## Ver também
 

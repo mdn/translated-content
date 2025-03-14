@@ -1,14 +1,6 @@
 ---
 title: Response
 slug: Web/API/Response
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Interface
-  - Referencia
-  - Respuesta
-translation_of: Web/API/Response
 ---
 
 {{APIRef("Fetch API")}}
@@ -73,18 +65,20 @@ Tú puedes crear un nuevo objeto `Response` usando el constructor{{domxref("Resp
 
 ## Examples
 
-En nuestro [ejemplo básico de ferch](https://github.com/mdn/fetch-examples/tree/gh-pages/basic-fetch) ([ejecutar el ejemplo](http://mdn.github.io/fetch-examples/basic-fetch/)) usamos una llamada `fetch()` para descargar una imagen y mostrarla en una etiqueta {{htmlelement("img")}} . La llamda a `fetch()` call devuelve una promesa, la cual resuelve a un objeto `Response` asociado a la operación fetch.
+En nuestro [ejemplo básico de ferch](https://github.com/mdn/fetch-examples/tree/gh-pages/basic-fetch) ([ejecutar el ejemplo](https://mdn.github.io/fetch-examples/basic-fetch/)) usamos una llamada `fetch()` para descargar una imagen y mostrarla en una etiqueta {{htmlelement("img")}} . La llamda a `fetch()` call devuelve una promesa, la cual resuelve a un objeto `Response` asociado a la operación fetch.
 
 Observa como ya que lo que estamos solicitando es una imagen, necesitamos ejecutar {{domxref("Body.blob")}} ({{domxref("Response")}} implements body) para darle a la respuesta su tipo MIME correcto.
 
 ```js
-var myImage = document.querySelector('.my-image');
-fetch('flowers.jpg').then(function(response) {
-  return response.blob();
-}).then(function(blob) {
-  var objectURL = URL.createObjectURL(blob);
-  myImage.src = objectURL;
-});
+var myImage = document.querySelector(".my-image");
+fetch("flowers.jpg")
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (blob) {
+    var objectURL = URL.createObjectURL(blob);
+    myImage.src = objectURL;
+  });
 ```
 
 También puedes usar el constructor {{domxref("Response.Response()")}} para crear tus objetos `Response` personalizados:
@@ -97,12 +91,12 @@ var myResponse = new Response();
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Response")}}
+{{Compat}}
 
 ## Ver también
 
-- [ServiceWorker API](/es/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/es/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/es/docs/Web/HTTP/CORS)
 - [HTTP](/es/docs/Web/HTTP)

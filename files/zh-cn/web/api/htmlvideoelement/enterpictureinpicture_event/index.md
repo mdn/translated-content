@@ -1,27 +1,29 @@
 ---
-title: 'HTMLVideoElement: enterpictureinpicture event'
+title: HTMLVideoElement：enterpictureinpicture 事件
 slug: Web/API/HTMLVideoElement/enterpictureinpicture_event
+l10n:
+  sourceCommit: 73b2b6ee411ac094b9fc57dafac6f9c232fc20d9
 ---
 
-{{APIRef("HTMLVideoElement")}}
+{{APIRef("Picture-in-Picture API")}}
 
 **`enterpictureinpicture`** 事件会在 {{DOMxRef("HTMLVideoElement")}} 成功进入画中画模式时触发。
 
-此事件不可取消，也不会冒泡
+此事件不可取消，也不会冒泡。
 
 ## 语法
 
 在 {{domxref("EventTarget.addEventListener", "addEventListener()")}}使用事件的名称，或者设置事件处理器属性。
 
 ```js
-addEventListener('enterpictureinpicture', event => { });
+addEventListener("enterpictureinpicture", (event) => {});
 
-onenterpictureinpicture = event => { };
+onenterpictureinpicture = (event) => {};
 ```
 
 ## 事件类型
 
-{{domxref("PictureInPictureEvent")}} 继承自 {{domxref("Event")}} 。
+{{domxref("PictureInPictureEvent")}}。继承自 {{domxref("Event")}}。
 
 {{InheritanceDiagram("PictureInPictureEvent")}}
 
@@ -36,35 +38,35 @@ onenterpictureinpicture = event => { };
 使用 `addEventListener()`:
 
 ```js
-const video = document.querySelector('#video');
-const button = document.querySelector('#button');
+const video = document.querySelector("#video");
+const button = document.querySelector("#button");
 
 function onEnterPip() {
-  console.log("Picture-in-Picture mode activated!");
+  console.log("画中画模式已激活！");
 }
 
-video.addEventListener('enterpictureinpicture', onEnterPip, false);
+video.addEventListener("enterpictureinpicture", onEnterPip, false);
 
-button.onclick = function() => {
+button.onclick = () => {
   video.requestPictureInPicture();
-}
+};
 ```
 
-使用事件处理程序 `onenterpictureinpicture` :
+使用事件处理器属性 `onenterpictureinpicture`：
 
 ```js
-const video = document.querySelector('#video');
-const button = document.querySelector('#button');
+const video = document.querySelector("#video");
+const button = document.querySelector("#button");
 
 function onEnterPip() {
-  console.log("Picture-in-Picture mode activated!");
+  console.log("画中画模式已激活！");
 }
 
 video.onenterpictureinpicture = onEnterPip;
 
-button.onclick = function() => {
+button.onclick = () => {
   video.requestPictureInPicture();
-}
+};
 ```
 
 ## 规范
@@ -78,4 +80,4 @@ button.onclick = function() => {
 ## 参见
 
 - {{domxref("HTMLVideoElement")}}
-- {{domxref("Picture-in-Picture_API")}}
+- {{domxref("Picture-in-Picture_API", "画中画 API", "", 1)}}

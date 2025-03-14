@@ -1,16 +1,15 @@
 ---
 title: Usando IndexedDB
 slug: Web/API/IndexedDB_API/Using_IndexedDB
-original_slug: Web/API/IndexedDB_API/Usando_IndexedDB
 ---
 
 IndexedDB é uma forma de armazenar dados no navegador do usuário. Com ele você pode criar aplicações web com possibilidade de fazer query sem necessidade de conexão, suas aplicações podem funcionar tanto online quanto offline.
 
 ## Sobre esse documento
 
-Esse tutorial utiliza a API assíncrona do IndexedDB. Se você não está familiarizado com IndexedDB, você pode ler [Conceitos básicos sobre IndexedDB](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB).
+Esse tutorial utiliza a API assíncrona do IndexedDB. Se você não está familiarizado com IndexedDB, você pode ler [Conceitos básicos sobre IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API/Basic_Terminology).
 
-Para a documentação de referência, veja o artigo sobre [API IndexedDB](/pt-BR/docs/IndexedDB), pois nele contém os tipos de objetos utilizados no IndexedDB, como também métodos da API, tanto síncrona como assíncrona.
+Para a documentação de referência, veja o artigo sobre [API IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API), pois nele contém os tipos de objetos utilizados no IndexedDB, como também métodos da API, tanto síncrona como assíncrona.
 
 ## Padrão básico
 
@@ -34,11 +33,19 @@ Se você quiser testar seu código em navegadores que usam prefixo, você pode u
 
 ```js
 // Na linha abaixo, você deve incluir os prefixos do navegador que você vai testar.
-window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+window.indexedDB =
+  window.indexedDB ||
+  window.mozIndexedDB ||
+  window.webkitIndexedDB ||
+  window.msIndexedDB;
 // Não use "var indexedDB = ..." se você não está numa function.
 // Posteriormente, você pode precisar de referências de algum objeto window.IDB*:
-window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
-window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
+window.IDBTransaction =
+  window.IDBTransaction ||
+  window.webkitIDBTransaction ||
+  window.msIDBTransaction;
+window.IDBKeyRange =
+  window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
 // (Mozilla nunca usou prefixo nesses objetos, então não precisamos window.mozIDB*)
 ```
 
@@ -46,7 +53,9 @@ Tome cuidado, implementações prefixadas podem estar com bugs ou implementando 
 
 ```js
 if (!window.indexedDB) {
-    window.alert("Seu navegador não suporta uma versão estável do IndexedDB. Alguns recursos não estarão disponíveis.");
+  window.alert(
+    "Seu navegador não suporta uma versão estável do IndexedDB. Alguns recursos não estarão disponíveis.",
+  );
 }
 ```
 
@@ -61,11 +70,12 @@ var request = window.indexedDB.open("DBteste", 3);
 
 Abrir um banco é como qualquer outra operação — Você tem que "requerer (request)".
 
-A requisição de abertura não abre o banco ou inicia a transação. A chamada da função `open()` retorna um objeto [`IDBOpenDBRequest`](/pt-BR/docs/IndexedDB/IDBOpenDBRequest) com o resultado (success) ou um erro que você terá que tratar. Muitas outras funções assíncronas no IndexedDB fazem a mesma coisa - retornam um objeto [`IDBRequest`](/pt-BR/docs/IndexedDB/IDBRequest) com o resultado ou erro. O resultado para a função open é uma instância de `IDBDatabase.`
+A requisição de abertura não abre o banco ou inicia a transação. A chamada da função `open()` retorna um objeto [`IDBOpenDBRequest`](/pt-BR/docs/Web/API/IDBOpenDBRequest) com o resultado (success) ou um erro que você terá que tratar. Muitas outras funções assíncronas no IndexedDB fazem a mesma coisa - retornam um objeto [`IDBRequest`](/pt-BR/docs/Web/API/IDBRequest) com o resultado ou erro. O resultado para a função open é uma instância de `IDBDatabase.`
 
-O segundo parâmetro para o método open é a versão do banco. A versão do banco determina seu schema — os registros no banco e sua estrutura. Se o banco não existe ainda, ele é criado pela operação `open`, então o evento `onupgradeneeded` é chamado e você cria o schema do banco nesse evento. Se o banco existe mas você está fornecendo um novo número de versão, o evento `onupgradeneeded` é chamado imediatamente, permitindo você tratar a atualização do schema. Para mais informações sobre isso veja [Updating the version of the database](#Updating_the_version_of_the_database).
+O segundo parâmetro para o método open é a versão do banco. A versão do banco determina seu schema — os registros no banco e sua estrutura. Se o banco não existe ainda, ele é criado pela operação `open`, então o evento `onupgradeneeded` é chamado e você cria o schema do banco nesse evento. Se o banco existe mas você está fornecendo um novo número de versão, o evento `onupgradeneeded` é chamado imediatamente, permitindo você tratar a atualização do schema. Para mais informações sobre isso veja [Updating the version of the database](#updating_the_version_of_the_database).
 
-> **Aviso:** O número de versão é um `unsigned long long`, o que significa que ele pode ver um inteiro muito grande. Isso também significa que você não pode usar float, pois ele será convertido em um inteiro pequeno e a transação pode não acontecer, ou o evento `upgradeneeded` pode não ser chamado. Então se você usar 2.4 como versão:
+> [!WARNING]
+> O número de versão é um `unsigned long long`, o que significa que ele pode ver um inteiro muito grande. Isso também significa que você não pode usar float, pois ele será convertido em um inteiro pequeno e a transação pode não acontecer, ou o evento `upgradeneeded` pode não ser chamado. Então se você usar 2.4 como versão:
 >
 > ```js
 > var request = indexedDB.open("DBteste", 2.4); // não faça isso, pois a versão será convertida para 2.
@@ -76,10 +86,10 @@ O segundo parâmetro para o método open é a versão do banco. A versão do ban
 A primeira coisa que você vai querer fazer em quase todos os requests é tratar os casos de success e error:
 
 ```js
-request.onerror = function(event) {
+request.onerror = function (event) {
   // Fazer algo com request.errorCode!
 };
-request.onsuccess = function(event) {
+request.onsuccess = function (event) {
   // Fazer algo com request.result!
 };
 ```
@@ -95,10 +105,10 @@ Agora, assumindo que o usuário aprovou seu request para criar o banco, e você 
 ```js
 var db;
 var request = indexedDB.open("DBteste");
-request.onerror = function(event) {
+request.onerror = function (event) {
   alert("Você não habilitou minha web app para usar IndexedDB?!");
 };
-request.onsuccess = function(event) {
+request.onsuccess = function (event) {
   db = request.result;
 };
 ```
@@ -108,7 +118,7 @@ request.onsuccess = function(event) {
 Como mencionado acima, o evento de erro é chamado quando o request dá erro. Se você quer evitar manipuladores de erro a cada request, você pode adicionar um único manipulador de erro no objeto db, como abaixo:
 
 ```js
-db.onerror = function(event) {
+db.onerror = function (event) {
   // Função genérica para tratar os erros de todos os requests desse banco!
   alert("Database error: " + event.target.errorCode);
 };
@@ -122,7 +132,7 @@ Quando você cria um novo banco ou aumenta sua versão, o evento `onupgradeneede
 
 ```js
 // Este evento é implementado somente em navegadores mais recentes
-request.onupgradeneeded = function(event) {
+request.onupgradeneeded = function (event) {
   var db = event.target.result;
 
   // cria um objectStore para esse banco
@@ -157,7 +167,7 @@ Isso soa meio confuso, mas este exemplo pode iluminar o conceito. Primeiro, vamo
 // Isso é o que os dados de nossos clientes será.
 const DadosClientes = [
   { ssn: "444-44-4444", nome: "Bill", idade: 35, email: "bill@company.com" },
-  { ssn: "555-55-5555", nome: "Donna", idade: 32, email: "donna@home.org" }
+  { ssn: "555-55-5555", nome: "Donna", idade: 32, email: "donna@home.org" },
 ];
 ```
 
@@ -168,10 +178,10 @@ const dbName = "clientes";
 
 var request = indexedDB.open(dbName, 2);
 
-request.onerror = function(event) {
+request.onerror = function (event) {
   // Tratar erros.
 };
-request.onupgradeneeded = function(event) {
+request.onupgradeneeded = function (event) {
   var db = event.target.result;
 
   // Cria um objectStore para conter a informação sobre nossos clientes. Nós vamos
@@ -188,13 +198,15 @@ request.onupgradeneeded = function(event) {
 
   // Usando transação oncomplete para afirmar que a criação do objectStore
   // é terminada antes de adicionar algum dado nele.
-  objectStore.transaction.oncomplete = function(event) {
+  objectStore.transaction.oncomplete = function (event) {
     // Armazenando valores no novo objectStore.
-    var clientesObjectStore = db.transaction("clientes", "readwrite").objectStore("clientes");
+    var clientesObjectStore = db
+      .transaction("clientes", "readwrite")
+      .objectStore("clientes");
     for (var i in DadosClientes) {
       clientesObjectStore.add(DadosClientes[i]);
     }
-  }
+  };
 };
 ```
 
@@ -204,7 +216,7 @@ Armazens de objetos são criados com uma única chamada de `createObjectStore()`
 
 Nós também criamos um índice chamado "nome" ligado à propriedade `nome`. Assim como o `createObjectStore()`, o `createIndex()` tem um parâmetro opcional `options` que cuida do tipo de índice que você quer criar. Adicionando objetos que não tem a propriedade `nome` terá sucesso, porém esses objetos não aparecerão no índice "nome".
 
-Nós podemos obter os objetos de clientes armazenados usando os `ssn` da objectStore diretamente, ou usando os nomes usados no índice. Para aprender como isso é feito, veja a seção [usando um índice](#Using_an_index).
+Nós podemos obter os objetos de clientes armazenados usando os `ssn` da objectStore diretamente, ou usando os nomes usados no índice. Para aprender como isso é feito, veja a seção [usando um índice](#using_an_index).
 
 ### Usando um key generator
 
@@ -219,20 +231,19 @@ Nós podemos criar outro objectStore com o key generator como abaixo:
 var request = indexedDB.open(dbName, 3);
 
 request.onupgradeneeded = function (event) {
+  var db = event.target.result;
 
-    var db = event.target.result;
+  // Criando outro objeto chamado "names" com o autoIncrement setado.
+  var objStore = db.createObjectStore("names", { autoIncrement: true });
 
-    // Criando outro objeto chamado "names" com o autoIncrement setado.
-    var objStore = db.createObjectStore("names", { autoIncrement : true });
-
-    // Porque "names" tem o the key generator, a chave para o nome é gerada automaticamente.
-    // Os registros adicionados serão assim:
-    // key : 1 => value : "Bill"
-    // key : 2 => value : "Donna"
-    for (var i in DadosClientes) {
-        objStore.add(DadosClientes[i].nome);
-    }
-}
+  // Porque "names" tem o the key generator, a chave para o nome é gerada automaticamente.
+  // Os registros adicionados serão assim:
+  // key : 1 => value : "Bill"
+  // key : 2 => value : "Donna"
+  for (var i in DadosClientes) {
+    objStore.add(DadosClientes[i].nome);
+  }
+};
 ```
 
 Para mais detalhes veja ["W3C Key Generators"](https://www.w3.org/TR/IndexedDB/#key-generator-concept).
@@ -248,7 +259,7 @@ Para ler os registros de um objectStore existente, a transação pode ser tanto 
 Você pode deixar o acesso aos dados mais rápido usando o escopo correto e o modo correto de transação. Aqui vai algumas dicas:
 
 - Quando definir o escopo, especifique apenas os objectStores que você precisa. Desse jeito você pode rodar multiplas transações sem que uma sobreponha a outra.
-- Somente especifique uma transação `readwrite` quando necessário. Você pode rodar várias transações `readonly` com escopos sobreposts, mas você pode ter somente uma transação `readwrite` por objectStore. Para aprender mais sobre _[transactions](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#Database)_ veja [Basic Concepts](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB).
+- Somente especifique uma transação `readwrite` quando necessário. Você pode rodar várias transações `readonly` com escopos sobreposts, mas você pode ter somente uma transação `readwrite` por objectStore. Para aprender mais sobre _[transactions](/pt-BR/docs/Web/API/IndexedDB_API/Basic_Terminology#database)_ veja [Basic Concepts](/pt-BR/docs/Web/API/IndexedDB_API/Basic_Terminology).
 
 ### Adicionando dados no banco
 
@@ -271,18 +282,18 @@ Agora que você tem uma transação, você precisará obter um objectStore dela.
 
 ```js
 // Faz algo após a inserção dos dados.
-transaction.oncomplete = function(event) {
+transaction.oncomplete = function (event) {
   alert("Pronto!");
 };
 
-transaction.onerror = function(event) {
+transaction.onerror = function (event) {
   // Não esquecer de tratar os erros!
 };
 
 var objectStore = transaction.objectStore("clientes");
 for (var i in DadosClientes) {
   var request = objectStore.add(DadosClientes[i]);
-  request.onsuccess = function(event) {
+  request.onsuccess = function (event) {
     // event.target.result == DadosClientes[i].ssn;
   };
 }
@@ -295,10 +306,11 @@ O `result` de um request gerado de uma chamada de `add()` é a chave do valor qu
 Para remoção o código é parecido:
 
 ```js
-var request = db.transaction(["clientes"], "readwrite")
-                .objectStore("clientes")
-                .delete("444-44-4444");
-request.onsuccess = function(event) {
+var request = db
+  .transaction(["clientes"], "readwrite")
+  .objectStore("clientes")
+  .delete("444-44-4444");
+request.onsuccess = function (event) {
   // Pronto!
 };
 ```
@@ -311,10 +323,10 @@ Agora que o banco tem algumas informações nele, você pode obtê-las de difere
 var transaction = db.transaction(["clientes"]);
 var objectStore = transaction.objectStore("clientes");
 var request = objectStore.get("444-44-4444");
-request.onerror = function(event) {
+request.onerror = function (event) {
   // Tratar erro!
 };
-request.onsuccess = function(event) {
+request.onsuccess = function (event) {
   // Fazer algo com request.result!
   alert("O nome do SSN 444-44-4444 é " + request.result.name);
 };
@@ -323,29 +335,35 @@ request.onsuccess = function(event) {
 Veja agora de maneira resumida:
 
 ```js
-db.transaction("clientes").objectStore("clientes").get("444-44-4444").onsuccess = function(event) {
+db
+  .transaction("clientes")
+  .objectStore("clientes")
+  .get("444-44-4444").onsuccess = function (event) {
   alert("O nome do SSN 444-44-4444 é " + request.result.name);
 };
 ```
 
 Viu como funciona? Desde que exista um objectStore, você pode evitar passar uma lista de objectStores que precisa na transação e passar apenas o nome como string. Você também pode ler do banco, apenas, então não precisará de uma transação `"readwrite"`. Chamando `transaction()` com nenhum modo especificado, você terá uma transação `"readonly"`. Outra consideração é que você não necessita salvar o request em uma variável. Desde que o evento DOM tenha o target que você precisará para obter a propriedade `result`.
 
-> **Nota:** Você pode deixar o acesso aos dados mais rápido limitando o escopo e o modo de transação. Veja algumas dicas:
+> [!NOTE]
+> Você pode deixar o acesso aos dados mais rápido limitando o escopo e o modo de transação. Veja algumas dicas:
 >
 > - Quando definir o [escopo](#scope), especifique somente os objectStores que vai precisar. Assim você pode rodar multiplas transações sem sopreposições.
-> - Utilize uma transação `readwrite` somente quando necessário. Você pode rodar várias transações `readonly` simultâneas, mas apenas uma transação `readwrite` por objectStore. Para aprender mais sobre isso veja o artigo [_transactions_ in the Basic Concepts](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction).
+> - Utilize uma transação `readwrite` somente quando necessário. Você pode rodar várias transações `readonly` simultâneas, mas apenas uma transação `readwrite` por objectStore. Para aprender mais sobre isso veja o artigo [_transactions_ in the Basic Concepts](/pt-BR/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_transaction).
 
 ### Atualizando um registro no banco
 
 Agora que obtemos algum dado, atualizá-ls é inserí-los novamente no IndexedDB é bem simples. Vamos atualizar o exemplo anterior:
 
 ```js
-var objectStore = db.transaction(["clientes"], "readwrite").objectStore("clientes");
+var objectStore = db
+  .transaction(["clientes"], "readwrite")
+  .objectStore("clientes");
 var request = objectStore.get("444-44-4444");
-request.onerror = function(event) {
+request.onerror = function (event) {
   // Tratar erro
 };
-request.onsuccess = function(event) {
+request.onsuccess = function (event) {
   // Obter os valores antigos
   var data = request.result;
 
@@ -354,18 +372,19 @@ request.onsuccess = function(event) {
 
   // Atulizar esse dado no banco
   var requestUpdate = objectStore.put(data);
-   requestUpdate.onerror = function(event) {
-     // Tratar erro
-   };
-   requestUpdate.onsuccess = function(event) {
-     // Sucesso na atualização \o/
-   };
+  requestUpdate.onerror = function (event) {
+    // Tratar erro
+  };
+  requestUpdate.onsuccess = function (event) {
+    // Sucesso na atualização \o/
+  };
 };
 ```
 
 Criamos uma `objectStore` e obtemos um cliente dele, identificado pelo ssn (`444-44-4444`). Nós atualizamos o objeto, passando-o como parâmetro de um método put de outro request (`requestUpdate`) sobrescrevendo o valor antigo.
 
-> **Nota:** que neste caso nós temos que especificar a transação `readwrite` porque nós queremos escrever no banco, não somente ler os dados dele.
+> [!NOTE]
+> que neste caso nós temos que especificar a transação `readwrite` porque nós queremos escrever no banco, não somente ler os dados dele.
 
 ### Usando um cursor
 
@@ -374,13 +393,12 @@ Ao usar o método `get()` você precisa saber a chave do objeto que deseja obter
 ```js
 var objectStore = db.transaction("cliente").objectStore("cliente");
 
-objectStore.openCursor().onsuccess = function(event) {
+objectStore.openCursor().onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     alert("O nome do SSN " + cursor.key + " é " + cursor.value.name);
     cursor.continue();
-  }
-  else {
+  } else {
     alert("Não existe mais registros!");
   }
 };
@@ -393,22 +411,22 @@ Um padrão comum para cursores é obter todos os objetos em um objectStore e adi
 ```js
 var clientes = [];
 
-objectStore.openCursor().onsuccess = function(event) {
+objectStore.openCursor().onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     clientes.push(cursor.value);
     cursor.continue();
-  }
-  else {
+  } else {
     alert("Todos os clientes: " + clientes);
   }
 };
 ```
 
-> **Nota:** Note: Mozilla também implementou o método `getAll()` para ser usado nesse caso (e `getAllKeys()`, que está atualmente dentro da preferência do `dom.indexedDB.experimental` em about:config). Estes métodos não são parte do padrão IndexedDB, então eles podem desaparecer no futuro. Nós adicionamos porque achamos útil. O código abaixo faz o mesmo que o código acima:
+> [!NOTE]
+> Note: Mozilla também implementou o método `getAll()` para ser usado nesse caso (e `getAllKeys()`, que está atualmente dentro da preferência do `dom.indexedDB.experimental` em about:config). Estes métodos não são parte do padrão IndexedDB, então eles podem desaparecer no futuro. Nós adicionamos porque achamos útil. O código abaixo faz o mesmo que o código acima:
 >
 > ```js
-> objectStore.getAll().onsuccess = function(event) {
+> objectStore.getAll().onsuccess = function (event) {
 >   alert("Todos os clientes: " + event.target.result);
 > };
 > ```
@@ -421,7 +439,7 @@ Armazenar dados de um cliente usando o SSN como chave é lógico pois o SSN iden
 
 ```js
 var index = objectStore.index("nome");
-index.get("John").onsuccess = function(event) {
+index.get("John").onsuccess = function (event) {
   alert("O SSN de John é " + event.target.result.ssn);
 };
 ```
@@ -432,17 +450,24 @@ Se você precisa acessar todos os registros retornados, você pode usar um curso
 
 ```js
 // Usando um cursor normal para obter todos os objetos
-index.openCursor().onsuccess = function(event) {
+index.openCursor().onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     // cursor.key é um nome, como "Bill", e cursor.value é o objeto inteiro.
-    alert("Nome: " + cursor.key + ", SSN: " + cursor.value.ssn + ", email: " + cursor.value.email);
+    alert(
+      "Nome: " +
+        cursor.key +
+        ", SSN: " +
+        cursor.value.ssn +
+        ", email: " +
+        cursor.value.email,
+    );
     cursor.continue();
   }
 };
 
 // Usando um cursor-chave para obter todos os objetos
-index.openKeyCursor().onsuccess = function(event) {
+index.openKeyCursor().onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     // cursor.key é o nome, como "Bill", e cursor.value é o SSN (chave).
@@ -474,7 +499,7 @@ var upperBoundOpenKeyRange = IDBKeyRange.upperBound("Donna", true);
 var boundKeyRange = IDBKeyRange.bound("Bill", "Donna", false, true);
 
 // Para usar qualquer um desses key ranges, basta passar como primeiro parâmetro de openCursor()/openKeyCursor()
-index.openCursor(boundKeyRange).onsuccess = function(event) {
+index.openCursor(boundKeyRange).onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     // Faz algo com o que encontrar
@@ -486,7 +511,7 @@ index.openCursor(boundKeyRange).onsuccess = function(event) {
 As vezes você pode querer iterar em ordem decrescente, em vez de crescente, alterando o segundo parâmetro de `openCursor()`:
 
 ```js
-objectStore.openCursor(boundKeyRange, "prev").onsuccess = function(event) {
+objectStore.openCursor(boundKeyRange, "prev").onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     // Prev indica ordem decrescente
@@ -498,7 +523,7 @@ objectStore.openCursor(boundKeyRange, "prev").onsuccess = function(event) {
 Se você apenas quer especificar a ordem sem key range, é só passar null no primeiro parâmetro:
 
 ```js
-objectStore.openCursor(null, "prev").onsuccess = function(event) {
+objectStore.openCursor(null, "prev").onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     // Faça algo com os resultados.
@@ -510,7 +535,7 @@ objectStore.openCursor(null, "prev").onsuccess = function(event) {
 Uma vez que o índice "nome" não é único, pode existir várias entradas onde o `nome` é o mesmo. Isso não acontece com objectStores porque a chave deve ser sempre única. Se você deseja filtrar valores duplicados numa iteração do cursor, você pode passar `nextunique` (ou `prevunique` se quiser decrescer) como parâmetro de direção. Quando `nextunique` ou `prevunique` é usado, o registro com menor chave é retornado.
 
 ```js
-index.openKeyCursor(null, "nextunique").onsuccess = function(event) {
+index.openKeyCursor(null, "nextunique").onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     // Faça algo com os registros.
@@ -521,35 +546,37 @@ index.openKeyCursor(null, "nextunique").onsuccess = function(event) {
 
 Veja "[IDBCursor Constants](/pt-BR/docs/Web/API/IDBCursor?redirectlocale=en-US&redirectslug=IndexedDB%2FIDBCursor#Constants)" para parâmetros válidos.
 
-## Mudança de versão quando a web app está aberta em outra aba.
+## Mudança de versão quando a web app está aberta em outra aba
 
 Quando sua web app muda a versão você precisa considerar o que vai acontecer se o usuário está na versão antiga em uma aba, e carrega a versão nova na outra. Quando você chamar o `open()` com a versão mais nova, um evento `onblocked` é chamado até que a aba da versão antiga seja fechada ou recarregada. Veja abaixo:
 
 ```js
 var openReq = mozIndexedDB.open("DBteste", 2);
 
-openReq.onblocked = function(event) {
+openReq.onblocked = function (event) {
   // Se existe outra aba com a versão antiga
-  alert("Existe uma versão antiga da web app aberta em outra aba, feche-a por favor!");
+  alert(
+    "Existe uma versão antiga da web app aberta em outra aba, feche-a por favor!",
+  );
 };
 
-openReq.onupgradeneeded = function(event) {
+openReq.onupgradeneeded = function (event) {
   // Se estiver tudo fechado, então faça as devidas alterações
   db.createObjectStore(/* ... */);
   useDatabase(db);
-}
+};
 
-openReq.onsuccess = function(event) {
+openReq.onsuccess = function (event) {
   var db = event.target.result;
   useDatabase(db);
   return;
-}
+};
 
 function useDatabase(db) {
   // Esteja certo de que adicionou um evento para notificar se a página muda a versão
   // Nós devemos fechar o banco. Isso permite à outra página ser atualizada
   // Se você não fizer isso a atualização não acontecerá até fechar as abas.
-  db.onversionchange = function(event) {
+  db.onversionchange = function (event) {
     db.close();
     alert("Uma nova versão desta web app está pronta. Atualiza, por favor!");
   };
@@ -562,7 +589,7 @@ function useDatabase(db) {
 
 IndexedDB usa o princípio de mesma origem, o que significa que o banco só será acessado pelo site que o criou.
 
-É importante notar que o IndexedDB não funciona para conteúdo carregado em um frame de outro site (seja {{ HTMLElement("frame") }} ou {{ HTMLElement("iframe") }}. Esta é uma política de segurança e privacidade análoga ao bloqueio de cookies de terceiros. Para mais detalhes, veja {{ bug(595307) }}.
+É importante notar que o IndexedDB não funciona para conteúdo carregado em um frame de outro site (seja {{ HTMLElement("frame") }} ou {{ HTMLElement("iframe") }}. Esta é uma política de segurança e privacidade análoga ao bloqueio de cookies de terceiros. Para mais detalhes, veja [Firefox bug 595307](https://bugzil.la/595307).
 
 ## Alerta sobre fechar o navegador
 
@@ -572,144 +599,139 @@ Primeiro, você deve ter o cuidado de sempre deixar seu banco de dados em um est
 
 Em segundo lugar, você nunca deve amarrar as operações de banco de dados ao evento unload. Se o evento unload é acionado pelo fechamento do navegador, todas as transações criadas no unload nunca serão concluídas. Uma abordagem intuitiva para manter algumas informações em sessões do navegador é lê-la a partir do banco de dados quando o navegador (ou uma determinada página) é aberta, atualizá-la assim que o usuário interagir com o navegador, e depois salvá-lo para o banco de dados quando o navegador (ou página) será fechada. No entanto, isso não vai funcionar. As transações de banco de dados será criado no unload, mas como elas são assíncronas, serão abortadas antes que eles possam executar.
 
-De fato, não existe uma maneira de garantir que as transações no IndexedDBserão completadas, mesmo com o fechamento padrão do navegador. Ver {{ bug(870645) }}.
+De fato, não existe uma maneira de garantir que as transações no IndexedDBserão completadas, mesmo com o fechamento padrão do navegador. Ver [Firefox bug 870645](https://bugzil.la/870645).
 
 ## Exemplo de IndexedDB
 
 ### HTML
 
 ```html
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script
+  type="text/javascript"
+  src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
-    <h1>IndexedDB Demo: storing blobs, e-publication example</h1>
-    <div class="note">
-      <p>
-        Works and tested with:
-      </p>
-      <div id="compat">
-      </div>
-    </div>
+<h1>IndexedDB Demo: storing blobs, e-publication example</h1>
+<div class="note">
+  <p>Works and tested with:</p>
+  <div id="compat"></div>
+</div>
 
-    <div id="msg">
-    </div>
+<div id="msg"></div>
 
-    <form id="register-form">
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <label for="pub-title" class="required">
-                Title:
-              </label>
-            </td>
-            <td>
-              <input type="text" id="pub-title" name="pub-title" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="pub-biblioid" class="required">
-                Bibliographic ID:<br/>
-                <span class="note">(ISBN, ISSN, etc.)</span>
-              </label>
-            </td>
-            <td>
-              <input type="text" id="pub-biblioid" name="pub-biblioid"/>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="pub-year">
-                Year:
-              </label>
-            </td>
-            <td>
-              <input type="number" id="pub-year" name="pub-year" />
-            </td>
-          </tr>
-        </tbody>
-        <tbody>
-          <tr>
-            <td>
-              <label for="pub-file">
-                File image:
-              </label>
-            </td>
-            <td>
-              <input type="file" id="pub-file"/>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="pub-file-url">
-                Online-file image URL:<br/>
-                <span class="note">(same origin URL)</span>
-              </label>
-            </td>
-            <td>
-              <input type="text" id="pub-file-url" name="pub-file-url"/>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+<form id="register-form">
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <label for="pub-title" class="required"> Title: </label>
+        </td>
+        <td>
+          <input type="text" id="pub-title" name="pub-title" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="pub-biblioid" class="required">
+            Bibliographic ID:<br />
+            <span class="note">(ISBN, ISSN, etc.)</span>
+          </label>
+        </td>
+        <td>
+          <input type="text" id="pub-biblioid" name="pub-biblioid" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="pub-year"> Year: </label>
+        </td>
+        <td>
+          <input type="number" id="pub-year" name="pub-year" />
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>
+          <label for="pub-file"> File image: </label>
+        </td>
+        <td>
+          <input type="file" id="pub-file" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="pub-file-url">
+            Online-file image URL:<br />
+            <span class="note">(same origin URL)</span>
+          </label>
+        </td>
+        <td>
+          <input type="text" id="pub-file-url" name="pub-file-url" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-      <div class="button-pane">
-        <input type="button" id="add-button" value="Add Publication" />
-        <input type="reset" id="register-form-reset"/>
-      </div>
-    </form>
+  <div class="button-pane">
+    <input type="button" id="add-button" value="Add Publication" />
+    <input type="reset" id="register-form-reset" />
+  </div>
+</form>
 
-    <form id="delete-form">
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <label for="pub-biblioid-to-delete">
-                Bibliographic ID:<br/>
-                <span class="note">(ISBN, ISSN, etc.)</span>
-              </label>
-            </td>
-            <td>
-              <input type="text" id="pub-biblioid-to-delete"
-                     name="pub-biblioid-to-delete" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="key-to-delete">
-                Key:<br/>
-                <span class="note">(for example 1, 2, 3, etc.)</span>
-              </label>
-            </td>
-            <td>
-              <input type="text" id="key-to-delete"
-                     name="key-to-delete" />
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="button-pane">
-        <input type="button" id="delete-button" value="Delete Publication" />
-        <input type="button" id="clear-store-button"
-               value="Clear the whole store" class="destructive" />
-      </div>
-    </form>
+<form id="delete-form">
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <label for="pub-biblioid-to-delete">
+            Bibliographic ID:<br />
+            <span class="note">(ISBN, ISSN, etc.)</span>
+          </label>
+        </td>
+        <td>
+          <input
+            type="text"
+            id="pub-biblioid-to-delete"
+            name="pub-biblioid-to-delete" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="key-to-delete">
+            Key:<br />
+            <span class="note">(for example 1, 2, 3, etc.)</span>
+          </label>
+        </td>
+        <td>
+          <input type="text" id="key-to-delete" name="key-to-delete" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="button-pane">
+    <input type="button" id="delete-button" value="Delete Publication" />
+    <input
+      type="button"
+      id="clear-store-button"
+      value="Clear the whole store"
+      class="destructive" />
+  </div>
+</form>
 
-    <form id="search-form">
-      <div class="button-pane">
-        <input type="button" id="search-list-button"
-               value="List database content" />
-      </div>
-    </form>
+<form id="search-form">
+  <div class="button-pane">
+    <input
+      type="button"
+      id="search-list-button"
+      value="List database content" />
+  </div>
+</form>
 
-    <div>
-      <div id="pub-msg">
-      </div>
-      <div id="pub-viewer">
-      </div>
-      <ul id="pub-list">
-      </ul>
-    </div>
+<div>
+  <div id="pub-msg"></div>
+  <div id="pub-viewer"></div>
+  <ul id="pub-list"></ul>
+</div>
 ```
 
 ### CSS Content
@@ -807,20 +829,22 @@ input {
 ```js
 (function () {
   var COMPAT_ENVS = [
-    ['Firefox', ">= 16.0"],
-    ['Google Chrome',
-     ">= 24.0 (you may need to get Google Chrome Canary), NO Blob storage support"]
+    ["Firefox", ">= 16.0"],
+    [
+      "Google Chrome",
+      ">= 24.0 (you may need to get Google Chrome Canary), NO Blob storage support",
+    ],
   ];
-  var compat = $('#compat');
+  var compat = $("#compat");
   compat.empty();
   compat.append('<ul id="compat-list"></ul>');
-  COMPAT_ENVS.forEach(function(val, idx, array) {
-    $('#compat-list').append('<li>' + val[0] + ': ' + val[1] + '</li>');
+  COMPAT_ENVS.forEach(function (val, idx, array) {
+    $("#compat-list").append("<li>" + val[0] + ": " + val[1] + "</li>");
   });
 
-  const DB_NAME = 'mdn-demo-indexeddb-epublications';
+  const DB_NAME = "mdn-demo-indexeddb-epublications";
   const DB_VERSION = 1; // Use a long long for this value (don't use a float)
-  const DB_STORE_NAME = 'publications';
+  const DB_STORE_NAME = "publications";
 
   var db;
 
@@ -843,12 +867,14 @@ input {
 
     req.onupgradeneeded = function (evt) {
       console.log("openDb.onupgradeneeded");
-      var store = evt.currentTarget.result.createObjectStore(
-        DB_STORE_NAME, { keyPath: 'id', autoIncrement: true });
+      var store = evt.currentTarget.result.createObjectStore(DB_STORE_NAME, {
+        keyPath: "id",
+        autoIncrement: true,
+      });
 
-      store.createIndex('biblioid', 'biblioid', { unique: true });
-      store.createIndex('title', 'title', { unique: false });
-      store.createIndex('year', 'year', { unique: false });
+      store.createIndex("biblioid", "biblioid", { unique: true });
+      store.createIndex("title", "title", { unique: false });
+      store.createIndex("year", "year", { unique: false });
     };
   }
 
@@ -862,9 +888,9 @@ input {
   }
 
   function clearObjectStore(store_name) {
-    var store = getObjectStore(DB_STORE_NAME, 'readwrite');
+    var store = getObjectStore(DB_STORE_NAME, "readwrite");
     var req = store.clear();
-    req.onsuccess = function(evt) {
+    req.onsuccess = function (evt) {
       displayActionSuccess("Store cleared");
       displayPubList(store);
     };
@@ -876,10 +902,9 @@ input {
 
   function getBlob(key, store, success_callback) {
     var req = store.get(key);
-    req.onsuccess = function(evt) {
+    req.onsuccess = function (evt) {
       var value = evt.target.result;
-      if (value)
-        success_callback(value.blob);
+      if (value) success_callback(value.blob);
     };
   }
 
@@ -889,12 +914,12 @@ input {
   function displayPubList(store) {
     console.log("displayPubList");
 
-    if (typeof store == 'undefined')
-      store = getObjectStore(DB_STORE_NAME, 'readonly');
+    if (typeof store == "undefined")
+      store = getObjectStore(DB_STORE_NAME, "readonly");
 
-    var pub_msg = $('#pub-msg');
+    var pub_msg = $("#pub-msg");
     pub_msg.empty();
-    var pub_list = $('#pub-list');
+    var pub_list = $("#pub-list");
     pub_list.empty();
     // Resetting the iframe so that it doesn't display previous content
     newViewerFrame();
@@ -905,18 +930,21 @@ input {
     // transaction, and their results are returned in the same order.
     // Thus the count text below will be displayed before the actual pub list
     // (not that it is algorithmically important in this case).
-    req.onsuccess = function(evt) {
-      pub_msg.append('<p>There are <strong>' + evt.target.result +
-                     '</strong> record(s) in the object store.</p>');
+    req.onsuccess = function (evt) {
+      pub_msg.append(
+        "<p>There are <strong>" +
+          evt.target.result +
+          "</strong> record(s) in the object store.</p>",
+      );
     };
-    req.onerror = function(evt) {
+    req.onerror = function (evt) {
       console.error("add error", this.error);
       displayActionFailure(this.error);
     };
 
     var i = 0;
     req = store.openCursor();
-    req.onsuccess = function(evt) {
+    req.onsuccess = function (evt) {
       var cursor = evt.target.result;
 
       // If the cursor is pointing at something, ask for the data
@@ -925,21 +953,31 @@ input {
         req = store.get(cursor.key);
         req.onsuccess = function (evt) {
           var value = evt.target.result;
-          var list_item = $('<li>' +
-                            '[' + cursor.key + '] ' +
-                            '(biblioid: ' + value.biblioid + ') ' +
-                            value.title +
-                            '</li>');
-          if (value.year != null)
-            list_item.append(' - ' + value.year);
+          var list_item = $(
+            "<li>" +
+              "[" +
+              cursor.key +
+              "] " +
+              "(biblioid: " +
+              value.biblioid +
+              ") " +
+              value.title +
+              "</li>",
+          );
+          if (value.year != null) list_item.append(" - " + value.year);
 
-          if (value.hasOwnProperty('blob') &&
-              typeof value.blob != 'undefined') {
+          if (
+            value.hasOwnProperty("blob") &&
+            typeof value.blob != "undefined"
+          ) {
             var link = $('<a href="' + cursor.key + '">File</a>');
-            link.on('click', function() { return false; });
-            link.on('mouseenter', function(evt) {
-                      setInViewer(evt.target.getAttribute('href')); });
-            list_item.append(' / ');
+            link.on("click", function () {
+              return false;
+            });
+            link.on("mouseenter", function (evt) {
+              setInViewer(evt.target.getAttribute("href"));
+            });
+            list_item.append(" / ");
             list_item.append(link);
           } else {
             list_item.append(" / No attached file");
@@ -959,9 +997,9 @@ input {
   }
 
   function newViewerFrame() {
-    var viewer = $('#pub-viewer');
+    var viewer = $("#pub-viewer");
     viewer.empty();
-    var iframe = $('<iframe />');
+    var iframe = $("<iframe />");
     viewer.append(iframe);
     return iframe;
   }
@@ -969,50 +1007,51 @@ input {
   function setInViewer(key) {
     console.log("setInViewer:", arguments);
     key = Number(key);
-    if (key == current_view_pub_key)
-      return;
+    if (key == current_view_pub_key) return;
 
     current_view_pub_key = key;
 
-    var store = getObjectStore(DB_STORE_NAME, 'readonly');
-    getBlob(key, store, function(blob) {
+    var store = getObjectStore(DB_STORE_NAME, "readonly");
+    getBlob(key, store, function (blob) {
       console.log("setInViewer blob:", blob);
       var iframe = newViewerFrame();
 
       // It is not possible to set a direct link to the
       // blob to provide a mean to directly download it.
-      if (blob.type == 'text/html') {
+      if (blob.type == "text/html") {
         var reader = new FileReader();
-        reader.onload = (function(evt) {
+        reader.onload = function (evt) {
           var html = evt.target.result;
-          iframe.load(function() {
-            $(this).contents().find('html').html(html);
+          iframe.load(function () {
+            $(this).contents().find("html").html(html);
           });
-        });
+        };
         reader.readAsText(blob);
-      } else if (blob.type.indexOf('image/') == 0) {
-        iframe.load(function() {
-          var img_id = 'image-' + key;
+      } else if (blob.type.indexOf("image/") == 0) {
+        iframe.load(function () {
+          var img_id = "image-" + key;
           var img = $('<img id="' + img_id + '"/>');
-          $(this).contents().find('body').html(img);
+          $(this).contents().find("body").html(img);
           var obj_url = window.URL.createObjectURL(blob);
-          $(this).contents().find('#' + img_id).attr('src', obj_url);
+          $(this)
+            .contents()
+            .find("#" + img_id)
+            .attr("src", obj_url);
           window.URL.revokeObjectURL(obj_url);
         });
-      } else if (blob.type == 'application/pdf') {
-        $('*').css('cursor', 'wait');
+      } else if (blob.type == "application/pdf") {
+        $("*").css("cursor", "wait");
         var obj_url = window.URL.createObjectURL(blob);
-        iframe.load(function() {
-          $('*').css('cursor', 'auto');
+        iframe.load(function () {
+          $("*").css("cursor", "auto");
         });
-        iframe.attr('src', obj_url);
+        iframe.attr("src", obj_url);
         window.URL.revokeObjectURL(obj_url);
       } else {
-        iframe.load(function() {
-          $(this).contents().find('body').html("No view available");
+        iframe.load(function () {
+          $(this).contents().find("body").html("No view available");
         });
       }
-
     });
   }
 
@@ -1029,21 +1068,24 @@ input {
     console.log("addPublicationFromUrl:", arguments);
 
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
+    xhr.open("GET", url, true);
     // Setting the wanted responseType to "blob"
     // https://www.w3.org/TR/XMLHttpRequest2/#the-response-attribute
-    xhr.responseType = 'blob';
+    xhr.responseType = "blob";
     xhr.onload = function (evt) {
-                           if (xhr.status == 200) {
-                             console.log("Blob retrieved");
-                             var blob = xhr.response;
-                             console.log("Blob:", blob);
-                             addPublication(biblioid, title, year, blob);
-                           } else {
-                             console.error("addPublicationFromUrl error:",
-                                           xhr.responseText, xhr.status);
-                           }
-                         };
+      if (xhr.status == 200) {
+        console.log("Blob retrieved");
+        var blob = xhr.response;
+        console.log("Blob:", blob);
+        addPublication(biblioid, title, year, blob);
+      } else {
+        console.error(
+          "addPublicationFromUrl error:",
+          xhr.responseText,
+          xhr.status,
+        );
+      }
+    };
     xhr.send();
 
     // We can't use jQuery here because as of jQuery 1.8.3 the new "blob"
@@ -1075,17 +1117,17 @@ input {
   function addPublication(biblioid, title, year, blob) {
     console.log("addPublication arguments:", arguments);
     var obj = { biblioid: biblioid, title: title, year: year };
-    if (typeof blob != 'undefined')
-      obj.blob = blob;
+    if (typeof blob != "undefined") obj.blob = blob;
 
-    var store = getObjectStore(DB_STORE_NAME, 'readwrite');
+    var store = getObjectStore(DB_STORE_NAME, "readwrite");
     var req;
     try {
       req = store.add(obj);
     } catch (e) {
-      if (e.name == 'DataCloneError')
-        displayActionFailure("This engine doesn't know how to clone a Blob, " +
-                             "use Firefox");
+      if (e.name == "DataCloneError")
+        displayActionFailure(
+          "This engine doesn't know how to clone a Blob, " + "use Firefox",
+        );
       throw e;
     }
     req.onsuccess = function (evt) {
@@ -1093,7 +1135,7 @@ input {
       displayActionSuccess();
       displayPubList(store);
     };
-    req.onerror = function() {
+    req.onerror = function () {
       console.error("addPublication error", this.error);
       displayActionFailure(this.error);
     };
@@ -1104,10 +1146,10 @@ input {
    */
   function deletePublicationFromBib(biblioid) {
     console.log("deletePublication:", arguments);
-    var store = getObjectStore(DB_STORE_NAME, 'readwrite');
-    var req = store.index('biblioid');
-    req.get(biblioid).onsuccess = function(evt) {
-      if (typeof evt.target.result == 'undefined') {
+    var store = getObjectStore(DB_STORE_NAME, "readwrite");
+    var req = store.index("biblioid");
+    req.get(biblioid).onsuccess = function (evt) {
+      if (typeof evt.target.result == "undefined") {
         displayActionFailure("No matching record found");
         return;
       }
@@ -1125,18 +1167,18 @@ input {
   function deletePublication(key, store) {
     console.log("deletePublication:", arguments);
 
-    if (typeof store == 'undefined')
-      store = getObjectStore(DB_STORE_NAME, 'readwrite');
+    if (typeof store == "undefined")
+      store = getObjectStore(DB_STORE_NAME, "readwrite");
 
     // As per spec https://www.w3.org/TR/IndexedDB/#object-store-deletion-operation
     // the result of the Object Store Deletion Operation algorithm is
     // undefined, so it's not possible to know if some records were actually
     // deleted by looking at the request result.
     var req = store.get(key);
-    req.onsuccess = function(evt) {
+    req.onsuccess = function (evt) {
       var record = evt.target.result;
       console.log("record:", record);
-      if (typeof record == 'undefined') {
+      if (typeof record == "undefined") {
         displayActionFailure("No matching record found");
         return;
       }
@@ -1144,7 +1186,7 @@ input {
       // the deletion. If the key was a Number for creation, then it needs to
       // be a Number for deletion.
       req = store.delete(key);
-      req.onsuccess = function(evt) {
+      req.onsuccess = function (evt) {
         console.log("evt:", evt);
         console.log("evt.target:", evt.target);
         console.log("evt.target.result:", evt.target.result);
@@ -1158,42 +1200,42 @@ input {
     };
     req.onerror = function (evt) {
       console.error("deletePublication:", evt.target.errorCode);
-      };
+    };
   }
 
   function displayActionSuccess(msg) {
-    msg = typeof msg != 'undefined' ? "Success: " + msg : "Success";
-    $('#msg').html('<span class="action-success">' + msg + '</span>');
+    msg = typeof msg != "undefined" ? "Success: " + msg : "Success";
+    $("#msg").html('<span class="action-success">' + msg + "</span>");
   }
   function displayActionFailure(msg) {
-    msg = typeof msg != 'undefined' ? "Failure: " + msg : "Failure";
-    $('#msg').html('<span class="action-failure">' + msg + '</span>');
+    msg = typeof msg != "undefined" ? "Failure: " + msg : "Failure";
+    $("#msg").html('<span class="action-failure">' + msg + "</span>");
   }
   function resetActionStatus() {
     console.log("resetActionStatus ...");
-    $('#msg').empty();
+    $("#msg").empty();
     console.log("resetActionStatus DONE");
   }
 
   function addEventListeners() {
     console.log("addEventListeners");
 
-    $('#register-form-reset').click(function(evt) {
+    $("#register-form-reset").click(function (evt) {
       resetActionStatus();
     });
 
-    $('#add-button').click(function(evt) {
+    $("#add-button").click(function (evt) {
       console.log("add ...");
-      var title = $('#pub-title').val();
-      var biblioid = $('#pub-biblioid').val();
+      var title = $("#pub-title").val();
+      var biblioid = $("#pub-biblioid").val();
       if (!title || !biblioid) {
         displayActionFailure("Required field(s) missing");
         return;
       }
-      var year = $('#pub-year').val();
-      if (year != '') {
+      var year = $("#pub-year").val();
+      if (year != "") {
         // Better use Number.isInteger if the engine has EcmaScript 6
-        if (isNaN(year))  {
+        if (isNaN(year)) {
           displayActionFailure("Invalid year");
           return;
         }
@@ -1202,14 +1244,14 @@ input {
         year = null;
       }
 
-      var file_input = $('#pub-file');
+      var file_input = $("#pub-file");
       var selected_file = file_input.get(0).files[0];
       console.log("selected_file:", selected_file);
       // Keeping a reference on how to reset the file input in the UI once we
       // have its value, but instead of doing that we rather use a "reset" type
       // input in the HTML form.
       //file_input.val(null);
-      var file_url = $('#pub-file-url').val();
+      var file_url = $("#pub-file-url").val();
       if (selected_file) {
         addPublication(biblioid, title, year, selected_file);
       } else if (file_url) {
@@ -1217,19 +1259,18 @@ input {
       } else {
         addPublication(biblioid, title, year);
       }
-
     });
 
-    $('#delete-button').click(function(evt) {
+    $("#delete-button").click(function (evt) {
       console.log("delete ...");
-      var biblioid = $('#pub-biblioid-to-delete').val();
-      var key = $('#key-to-delete').val();
+      var biblioid = $("#pub-biblioid-to-delete").val();
+      var key = $("#key-to-delete").val();
 
-      if (biblioid != '') {
+      if (biblioid != "") {
         deletePublicationFromBib(biblioid);
-      } else if (key != '') {
+      } else if (key != "") {
         // Better use Number.isInteger if the engine has EcmaScript 6
-        if (key == '' || isNaN(key))  {
+        if (key == "" || isNaN(key)) {
           displayActionFailure("Invalid key");
           return;
         }
@@ -1238,20 +1279,18 @@ input {
       }
     });
 
-    $('#clear-store-button').click(function(evt) {
+    $("#clear-store-button").click(function (evt) {
       clearObjectStore();
     });
 
-    var search_button = $('#search-list-button');
-    search_button.click(function(evt) {
+    var search_button = $("#search-list-button");
+    search_button.click(function (evt) {
       displayPubList();
     });
-
   }
 
   openDb();
   addEventListeners();
-
 })(); // Immediately-Invoked Function Expression (IIFE)
 ```
 
@@ -1271,5 +1310,5 @@ Uma leitura adicional para você encontrar mais informações.
 
 ### Guias e tutoriais
 
-- [Databinding UI Elements with IndexedDB](http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
+- [Databinding UI Elements with IndexedDB](https://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
 - [IndexedDB — The Store in Your Browser](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)

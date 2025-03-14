@@ -1,11 +1,6 @@
 ---
 title: Compression dans HTTP
 slug: Web/HTTP/Compression
-tags:
-  - Guide
-  - HTTP
-  - compression
-translation_of: Web/HTTP/Compression
 ---
 
 {{HTTPSidebar}}
@@ -31,33 +26,34 @@ Certains formats peuvent être utilisés à la fois pour une compression sans pe
 
 Les algorithmes de compression avec pertes sont généralement plus performants que les algorithmes de compression sans perte.
 
-> **Note :** Puisque certains types de fichiers gèrent nativement la compression, il est souvent inutile de les compresser une seconde fois. En réalité, cela s'avère souvent contre-productif de par la taille induite par les données additionnelles nécessaires (lors de la compression, un dictionnaire de données est généré) le fichier en sortie est alors plus gros que celui avant compression. Veillez à ne pas utiliser les techniques suivantes pour les fichiers au format compressé.
+> [!NOTE]
+> Puisque certains types de fichiers gèrent nativement la compression, il est souvent inutile de les compresser une seconde fois. En réalité, cela s'avère souvent contre-productif de par la taille induite par les données additionnelles nécessaires (lors de la compression, un dictionnaire de données est généré) le fichier en sortie est alors plus gros que celui avant compression. Veillez à ne pas utiliser les techniques suivantes pour les fichiers au format compressé.
 
 ## Compression de bout en bout
 
 La compression de bout en bout constitue la compression permettant le plus de gain de performances pour le Web. La compression de bout en bout est définie par la compression du corps du message qui est effectuée par le serveur et ne sera modifié qu'une fois arrivé à destination par le client. Les étapes lors du transport laissent la charge utile inchangée.
 
-![Séquence du serveur au client mettant en œuvre la compression de bout en bout](httpenco1.png)
+![Séquence du serveur au client mettant en œuvre la compression de bout en bout](httpenco1.svg)
 
 L'ensemble des navigateurs récents supportent la compression de bout en bout et le seul élément à échanger entre le serveur et le client est l'algorithme de compression à utiliser. Ces algorithmes sont optimisés pour le transport du texte. Dans les années 90, les technologies de compression ont évoluées rapidement, il existe donc de nombreuses possibilités en termes d'algorithmes. Les algorithmes qu'il convient de considérer à l'heure actuelle sont : `gzip`, le plus utilisé et `br` le nouveau venu.
 
-Pour sélectionner l'algorithme à utiliser, le navigateur et le serveur s'appuient sur [la négociation du contenu](/fr/docs/Web/HTTP/Content_negotiation). Le navigateur envoie un en-tête {{HTTPHeader("Accept-Encoding")}} contenant les algorithmes qu'il prend en charge par ordre de préférence, le serveur en sélectionne un pour compresser le corps de la réponse et inclut l'algorithme utilisé dans l'en-tête {{HTTPHeader("Content-Encoding")}} pour informer le navigateur de l’algorithme sélectionné. La négociation de contenu s'appuyant sur l'encodage des données le serveur doit envoyer un en-tête {{HTTPHeader("Vary")}} contenant au moins {{HTTPHeader("Accept-Encoding")}} en plus de l'en-tête de la réponse. Les caches seront ainsi en mesure de gérer les différentes représentations de la ressource.
+Pour sélectionner l'algorithme à utiliser, le navigateur et le serveur s'appuient sur [la négociation du contenu](/fr/docs/Web/HTTP/Content_negotiation). Le navigateur envoie un en-tête {{HTTPHeader("Accept-Encoding")}} contenant les algorithmes qu'il prend en charge par ordre de préférence, le serveur en sélectionne un pour compresser le corps de la réponse et inclut l'algorithme utilisé dans l'en-tête {{HTTPHeader("Content-Encoding")}} pour informer le navigateur de l'algorithme sélectionné. La négociation de contenu s'appuyant sur l'encodage des données le serveur doit envoyer un en-tête {{HTTPHeader("Vary")}} contenant au moins {{HTTPHeader("Accept-Encoding")}} en plus de l'en-tête de la réponse. Les caches seront ainsi en mesure de gérer les différentes représentations de la ressource.
 
-![Séquence de négociation de contenu échangeant les algorithmes de compression et les en-têtes associés](httpcompression1.png)
+![Séquence de négociation de contenu échangeant les algorithmes de compression et les en-têtes associés](httpcompression1.svg)
 
 La compression permettant un gain de performance significatif, il est conseillé de l'activer pour l'ensemble des fichiers à l'exception des fichiers audios et vidéos au format compressé.
 
-Apache prend en charge la compression et utilise [mod_deflate](http://httpd.apache.org/docs/current/mod/mod_deflate.html); nginx dispose de [ngx_http_gzip_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html); pour IIS, il existe l'élément [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression).
+Apache prend en charge la compression et utilise [mod_deflate](https://httpd.apache.org/docs/current/mod/mod_deflate.html); nginx dispose de [ngx_http_gzip_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html); pour IIS, il existe l'élément [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression).
 
 ## Compression saut par saut
 
 La compression saut par saut, bien que similaire à la compression de bout en bout se distingue fondamentalement par son fonctionnement : la compression n'a pas lieu au niveau du serveur mais entre des éléments du réseau situés entre le serveur et le navigateur, chaque bond pouvant utiliser un mécanisme de compression _différent_.
 
-![Compression saut par saut entre le serveur et le client](httpte1.png)
+![Compression saut par saut entre le serveur et le client](httpte1.svg)
 
 HTTP permet de mettre en œuvre cette technique à l'aide d'un élément de négociation de contenu. Le nœud transmettant la donnée diffuse son utilisation de l'en-tête {{HTTPHeader("TE")}}, le noeud suivant choisit la méthode de compression appropriée et transmet son choix via {{HTTPHeader("Transfer-Encoding")}}.
 
-![Diagramme de séquence détaillant les échanges d'en-têtes en compression saut par saut](httpcomp2.png)
+![Diagramme de séquence détaillant les échanges d'en-têtes en compression saut par saut](httpcomp2.svg)
 
 En pratique la compression saut par saut est transparente pour le serveur et le client et elle demeure rarement utilisée. Les en-têtes {HTTPHeader("TE")}} and {{HTTPHeader("Transfer-Encoding")}} sont le plus souvent utilisé pour transmettre des réponses par morceaux ce qui permet la transmission de ressource avant d'en avoir déterminé la taille.
 

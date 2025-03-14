@@ -1,23 +1,23 @@
 ---
 title: String.prototype.startsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/startsWith
 ---
 
 {{JSRef}}
 
 La méthode **`startsWith()`** renvoie un booléen indiquant si la chaine de caractères commence par la deuxième chaine de caractères fournie en argument.
 
-{{EmbedInteractiveExample("pages/js/string-startswith.html")}}
+{{InteractiveExample("JavaScript Demo: String.startsWith()")}}
+
+```js interactive-example
+const str1 = "Saturday night plans";
+
+console.log(str1.startsWith("Sat"));
+// Expected output: true
+
+console.log(str1.startsWith("Sat", 3));
+// Expected output: false
+```
 
 ## Syntaxe
 
@@ -45,8 +45,8 @@ Cette méthode permet de savoir si une chaine de caractères commence avec une a
 ```js
 var str = "Être, ou ne pas être : telle est la question.";
 
-console.log(str.startsWith("Être"));         // true
-console.log(str.startsWith("pas être"));     // false
+console.log(str.startsWith("Être")); // true
+console.log(str.startsWith("pas être")); // false
 console.log(str.startsWith("pas être", 12)); // true
 ```
 

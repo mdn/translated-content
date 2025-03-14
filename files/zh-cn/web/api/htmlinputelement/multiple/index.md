@@ -11,15 +11,14 @@ slug: Web/API/HTMLInputElement/multiple
 
 ```js
 // fileInput is a <input type=file multiple>
-let fileInput = document.getElementById('myfileinput');
+let fileInput = document.getElementById("myfileinput");
 
 if (fileInput.multiple == true) {
-
   for (let i = 0; i < fileInput.files.length; i++) {
     // Loop fileInput.files
   }
 
-// Only one file available
+  // Only one file available
 } else {
   let file = fileInput.files.item(0);
 }
@@ -27,12 +26,12 @@ if (fileInput.multiple == true) {
 
 ## See also
 
-- [FileList](/zh-CN/DOM/FileList)
+- [FileList](/zh-CN/docs/Web/API/FileList)
 - [Bug 523771](https://bugzilla.mozilla.org/show_bug.cgi?id=523771) - Support \<input type=file multiple>
 
 ## Specification
 
-- [The multiple attribute](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#attr-input-multiple) (HTML 5 working draft)
+- [The multiple attribute](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#attr-input-multiple) (HTML 5 working draft)
 
 ## Browser compatibility
 

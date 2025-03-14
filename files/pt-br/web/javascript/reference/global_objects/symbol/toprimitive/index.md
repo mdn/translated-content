@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 
 O **`Symbol.toPrimitive`** é um símbolo que específica uma propriedade com valor função que é chamada para converter um ojbeto para um valor primitivo correspondente.
 
-{{EmbedInteractiveExample("pages/js/symbol-toprimitive.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.toPrimitive")}}
+
+```js interactive-example
+const object1 = {
+  [Symbol.toPrimitive](hint) {
+    if (hint === "number") {
+      return 42;
+    }
+    return null;
+  },
+};
+
+console.log(+object1);
+// Expected output: 42
+```
 
 ## Descrição
 
@@ -24,36 +38,34 @@ O exemplo a seguir descreve que a propriedade **`Symbol.toPrimitive`** pode ser 
 ```js
 // Um objeto sem propriedade Symbol.toPrimitive.
 var obj1 = {};
-console.log(+obj1);     // NaN
+console.log(+obj1); // NaN
 console.log(`${obj1}`); // "[object Object]"
-console.log(obj1 + ''); // "[object Object]"
+console.log(obj1 + ""); // "[object Object]"
 
 // Um objeto com propriedade Symbol.toPrimitive
 var obj2 = {
   [Symbol.toPrimitive](hint) {
-    if (hint == 'number') {
+    if (hint == "number") {
       return 10;
     }
-    if (hint == 'string') {
-      return 'hello';
+    if (hint == "string") {
+      return "hello";
     }
     return true;
-  }
+  },
 };
-console.log(+obj2);     // 10        -- dica é "number"
+console.log(+obj2); // 10        -- dica é "number"
 console.log(`${obj2}`); // "hello"   -- dica é "string"
-console.log(obj2 + ''); // "true"    -- dica é "default"
+console.log(obj2 + ""); // "true"    -- dica é "default"
 ```
 
 ## Especificações
 
-| Especificação                                                                                    |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.toprimitive', 'Symbol.toPrimitive')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.toPrimitive")}}
+{{Compat}}
 
 ## Veja também
 

@@ -27,112 +27,51 @@ A {{domxref("DelayNode")}}. The default {{domxref("DelayNode.delayTime")}} if no
 
 ## 示例
 
-首先是中文版的简洁的示例，这个例子中话筒里接收到的声音会延迟 3 秒从音响中播放。
-
-```
-window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;
-
-try {//音频相关api
-    var audioContext = new window.AudioContext();
-    var synthDelay = audioContext.createDelay(5.0);
-} catch (e) {
-    alert("你浏览器不支持");
-}
-
-
-var error = function (error) {alert("有错误"); };
-
-//以下是获取麦克风
-if (navigator.getUserMedia) { //标准api
- navigator.getUserMedia({ "audio": true },
- function (stream) {
- micto(stream);    //具体工作
-                   }, error);
-}else if(navigator.webkitGetUserMedia) {   //webkit api
- navigator.webkitGetUserMedia({audio:true, video:  false },
- function (stream) {
-  micto(stream); //具体工作
-                   }, error);
- }else if (navigator.mozGetUserMedia) {  //火狐 api
- navigator.mozGetUserMedia({ "audio": true },
- function (stream) {
-  micto(stream);//具体工作
-                   }, error);
- }else if (navigator.msGetUserMedia) { //ie api
- navigator.msGetUserMedia({ "audio": true },
- function (stream) {
-  micto(stream);//具体工作
-                   }, error);
- } else {
-   alert("您的浏览器版不支持这个api");
-}
-
-
-
-
-
- var micto = function(stream) {
-
-  synthDelay.delayTime.value = 3.0;   //延迟3秒
-
-  var source = audioContext.createMediaStreamSource(stream);
-
-  source.connect(synthDelay);
-
-  synthDelay.connect(audioContext.destination);
-
-      }
-
-```
-
-以下是英文版示例
-
-We have created a simple example that allows you to play three different samples on a constant loop — see [create-delay](http://chrisdavidmills.github.io/create-delay/) (you can also [view the source code](https://github.com/chrisdavidmills/create-delay)). If you just press the play buttons, the loops will start immediately; if you slide the sliders up to the right, then press the play buttons, a delay will be introduced, so the looping sounds don't start playing for a short amount of time.
+我们创建了一个允许你循环播放三个不同样例的简单示例——参阅 [create-delay](https://chrisdavidmills.github.io/create-delay/)（你也可以[查看源代码](https://github.com/chrisdavidmills/create-delay)）。如果你只按下播放按钮，循环将立刻开始；如果你将滑块向右滑动，然后按下播放按钮，则会引入延迟，因此循环的声音不会立刻开始播放。
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+const audioCtx = new AudioContext();
 
-var synthDelay = audioCtx.createDelay(5.0);
+const synthDelay = audioCtx.createDelay(5.0);
 
-  ...
+// …
 
-var synthSource;
+let synthSource;
 
-playSynth.onclick = function() {
+playSynth.onclick = () => {
   synthSource = audioCtx.createBufferSource();
   synthSource.buffer = buffers[2];
   synthSource.loop = true;
   synthSource.start();
   synthSource.connect(synthDelay);
   synthDelay.connect(destination);
-  this.setAttribute('disabled', 'disabled');
-}
+  this.setAttribute("disabled", "disabled");
+};
 
-stopSynth.onclick = function() {
+stopSynth.onclick = () => {
   synthSource.disconnect(synthDelay);
   synthDelay.disconnect(destination);
   synthSource.stop();
-  playSynth.removeAttribute('disabled');
-}
+  playSynth.removeAttribute("disabled");
+};
 
-...
+// …
 
-var delay1;
-rangeSynth.oninput = function() {
-delay1 = rangeSynth.value;
-synthDelay.delayTime.value = delay1;
-}
+let delay1;
+rangeSynth.oninput = () => {
+  delay1 = rangeSynth.value;
+  synthDelay.delayTime.setValueAtTime(delay1, audioCtx.currentTime);
+};
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

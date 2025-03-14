@@ -1,21 +1,27 @@
 ---
 title: Function.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Function/toString
-tags:
-  - Function
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/toString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Function/toString
 ---
 
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaîne de caractères représentant le code source de la fonction.
 
-{{EmbedInteractiveExample("pages/js/function-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Function.toString()")}}
+
+```js interactive-example
+function sum(a, b) {
+  return a + b;
+}
+
+console.log(sum.toString());
+// Expected output: "function sum(a, b) {
+//                     return a + b;
+//                   }"
+
+console.log(Math.abs.toString());
+// Expected output: "function abs() { [native code] }"
+```
 
 ## Syntaxe
 

@@ -1,14 +1,8 @@
 ---
 title: AudioNode
 slug: Web/API/AudioNode
-tags:
-  - API
-  - AudioNode
-  - Interface
-  - Reference
-  - Web Audio API
-browser-compat: api.AudioNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`AudioNode`** 인터페이스는 오디오 프로세싱 모듈을 나타내기 위한 포괄적인 인터페이스입니다.
@@ -22,7 +16,9 @@ browser-compat: api.AudioNode
 
 {{InheritanceDiagram}}
 
-> **참고**: `AudioNode` 는 이벤트의 대상이 될 수 있으므로, `AudioNode` 는 {{domxref("EventTarget")}} 인터페이스를 구현합니다.
+> [!NOTE]
+>
+> `AudioNode` 는 이벤트의 대상이 될 수 있으므로, `AudioNode`는 {{domxref("EventTarget")}} 인터페이스를 구현합니다.
 
 ## 설명
 

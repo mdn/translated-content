@@ -3,7 +3,7 @@ title: browserAction.ColorArray
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/ColorArray
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 ## 型
 
@@ -18,13 +18,15 @@ RGBA 色を定義する、4 つの 0 から 255 の整数の`配列`です。4 �
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.browserAction.ColorArray")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の[`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#type-ColorArray) API に基づいています。このドキュメントは Chromium コードの [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)から派生したものです。Microsoft Edge の互換性データは Microsoft Corporation から提供されており、Creative Commons Attribution 3.0 United States License のもとにここに含まれています。
+> [!NOTE]
+> この API は Chromium の[`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#type-ColorArray) API に基づいています。このドキュメントは Chromium コードの [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)から派生したものです。Microsoft Edge の互換性データは Microsoft Corporation から提供されており、Creative Commons Attribution 3.0 United States License のもとにここに含まれています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -51,4 +53,4 @@ RGBA 色を定義する、4 つの 0 から 255 の整数の`配列`です。4 �
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

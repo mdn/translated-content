@@ -1,9 +1,8 @@
 ---
 title: Date.prototype.setFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
-browser-compat: javascript.builtins.Date.setFullYear
 ---
+
 {{JSRef}}
 
 **setFullYear()** 메서드는 현지 시간에 따라 지정된 날짜의 전체 연도를 설정합니다. 새로운 타임 스탬프를 반환합니다.

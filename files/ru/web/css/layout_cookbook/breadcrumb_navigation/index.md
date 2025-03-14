@@ -1,13 +1,13 @@
 ---
 title: Breadcrumb Navigation
 slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
-translation_of: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 ---
+
 {{CSSRef}}
 
 Навигация по хлебным крошкам помогает пользователю понять своё местоположение на веб-сайте, обеспечивая обратный путь к начальной странице.
 
-![Links displayed inline with separators](https://mdn.mozillademos.org/files/16228/breadcrumb-navigation.png)
+![Links displayed inline with separators](breadcrumb-navigation.png)
 
 ## Требование
 
@@ -17,31 +17,40 @@ translation_of: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}
 
-> **Примечание:** [Загрузить этот пример](https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html)
+> [!CALLOUT]
+>
+> [Загрузить этот пример](https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html)
 
-> **Примечание:** **Примечание**: В приведённом выше примере используются два селектора для вставки содержимого перед каждым li, кроме первого. Этого также можно добиться, используя только один селектор: .breadcrumb li:not(:first-child)::before {
-> content: "→";
-> }Это решение использует более сложный селектор, но требует меньше правил. Смело выбирайте то решение, которое вам больше по душе.
+> [!NOTE]
+> В приведённом выше примере используются два селектора для вставки содержимого перед каждым li, кроме первого. Этого также можно добиться, используя только один селектор:
+>
+> ```css
+> .breadcrumb li:not(:first-child)::before {
+>   content: "→";
+> }
+> ```
+>
+> Это решение использует более сложный селектор, но требует меньше правил. Смело выбирайте то решение, которое вам больше по душе.
 
 ## Сделанный выбор
 
 Этот шаблон построен с использованием простого гибкого макета, демонстрирующего, как строка CSS может дать нам нашу навигацию. Разделители добавляются с использованием содержимого, созданного CSS. Вы можете изменить их на любой разделитель, который вам нравится.
 
-## Проблемы доступности
+## Доступность
 
 Я использовал атрибуты `aria-label` и `aria-current`, чтобы помочь пользователям понять, что это за навигация и где в структуре находится текущая страница.
 Смотреть связанные ссылки для получения дополнительной информации.
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 Различные методы компоновки имеют разную поддержку браузером. Смотреть диаграммы ниже для получения подробной информации о базовой поддержке используемых свойств.
 
 #### Flexbox
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
-## Смотреть также
+## Смотрите также
 
-- [CSS Flexible Box Layout](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [CSS Flexible Box Layout](/ru/docs/Web/CSS/CSS_flexible_box_layout)
 - [Создание следа из хлебных крошек](https://www.w3.org/TR/WCAG20-TECHS/G65.html)
 - [Использование атрибута aria-current](https://tink.uk/using-the-aria-current-attribute/)

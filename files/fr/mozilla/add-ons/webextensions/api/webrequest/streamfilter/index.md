@@ -1,21 +1,9 @@
 ---
 title: webRequest.StreamFilter
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - NeedsTranslation
-  - Reference
-  - StreamFilter
-  - TopicStub
-  - Type
-  - WebExtensions
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un `StreamFilter` est un objet que vous pouvez utiliser pour surveiller et modifier les réponses HTTP.
 
@@ -33,9 +21,9 @@ Le filtre génère quatre événements différents :
 Vous pouvez écouter chaque événement en assignant une fonction d'écoute à son attribut :
 
 ```js
-filter.onstart = event => {
+filter.onstart = (event) => {
   console.log("started");
-}
+};
 ```
 
 Notez que la demande est bloquée pendant l'exécution de n'importe quel auditeur d'événement.
@@ -82,9 +70,9 @@ Le filtre fournit également des fonctions à {{WebEXTAPIRef("webRequest.StreamF
 - {{WebExtAPIRef("webRequest.StreamFilter.status")}}
   - : Décrit l'état actuel du flux.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.StreamFilter", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -94,27 +82,27 @@ Ce code écoute pour `onstart`, `ondata` et `onstop`. Il enregistre simplement c
 function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
-  filter.onstart = event => {
+  filter.onstart = (event) => {
     console.log("started");
-  }
+  };
 
-  filter.ondata = event => {
+  filter.ondata = (event) => {
     console.log(event.data);
     filter.write(event.data);
-  }
+  };
 
-  filter.onstop = event => {
+  filter.onstop = (event) => {
     console.log("finished");
     filter.disconnect();
-  }
+  };
 
   //return {}; // not needed
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.org/"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.org/"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 

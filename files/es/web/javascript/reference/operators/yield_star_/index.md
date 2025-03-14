@@ -1,11 +1,6 @@
 ---
 title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
-tags:
-  - ECMAScript6
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Operators/yield*
-original_slug: Web/JavaScript/Referencia/Operadores/yield*
 ---
 
 {{jsSidebar("Operators")}}
@@ -100,9 +95,9 @@ console.log(iterator.next()); // { value: 1, done: false }
 console.log(iterator.next()); // { value: 2, done: false }
 console.log(iterator.next()); // { value: 3, done: false }
 console.log(iterator.next()); // { value: undefined, done: true },
-                              // g4() returned { value: "foo", done: true } at this point
+// g4() returned { value: "foo", done: true } at this point
 
-console.log(result);          // "foo"
+console.log(result); // "foo"
 ```
 
 ## Especificaciones
@@ -111,24 +106,11 @@ console.log(result);          // "foo"
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.yield_star")}}
-
-## Notas específicas de Firefox
-
-- Iniciando con Gecko 33 (Firefox 33 / Thunderbird 33 / SeaMonkey 2.30), el análisis del yield expression ha sido actualizado para cumplir con la última especificación ES6 ({{bug(981599)}}):
-
-  - Ahora está implementada la restricción de salto de línea. No está permitido el salto de línea entre "yield" y "\*". Código como el siguiente lanzará una {{jsxref("SyntaxError")}}:
-
-    ```js
-    function* foo() {
-      yield
-      *[];
-    }
-    ```
+{{Compat}}
 
 ## Ver también
 
-- [Protocolos de iteración](/es/docs/Web/JavaScript/Referencia/Iteration_protocols)
+- [Protocolos de iteración](/es/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield", "yield")}}

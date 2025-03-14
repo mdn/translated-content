@@ -1,8 +1,9 @@
 ---
-title: HTMLSlotElement.assignedNodes()
+title: "HTMLSlotElement: assignedNodes() メソッド"
+short-title: assignedNodes()
 slug: Web/API/HTMLSlotElement/assignedNodes
 l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Shadow DOM API")}}
@@ -37,10 +38,12 @@ assignedNodes(options)
 の例](https://github.com/mdn/web-components-examples/tree/main/slotchange) ([ライブでも確認](https://mdn.github.io/web-components-examples/slotchange/)) からとりました。
 
 ```js
-let slots = this.shadowRoot.querySelectorAll('slot');
-slots[1].addEventListener('slotchange', (e) => {
+let slots = this.shadowRoot.querySelectorAll("slot");
+slots[1].addEventListener("slotchange", (e) => {
   let nodes = slots[1].assignedNodes();
-  console.log(`Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`);
+  console.log(
+    `Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`,
+  );
 });
 ```
 

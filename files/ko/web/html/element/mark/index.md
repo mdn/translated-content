@@ -1,20 +1,35 @@
 ---
 title: <mark>
 slug: Web/HTML/Element/mark
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/mark
 ---
 
 {{HTMLSidebar}}
 
 **HTML `<mark>` 요소**는 현재 맥락에 관련이 깊거나 중요해 표시 또는 하이라이트한 부분을 나타냅니다.
 
-{{EmbedInteractiveExample("pages/tabbed/mark.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;mark&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>Search results for "salamander":</p>
+
+<hr />
+
+<p>
+  Several species of <mark>salamander</mark> inhabit the temperate rainforest of
+  the Pacific Northwest.
+</p>
+
+<p>
+  Most <mark>salamander</mark>s are nocturnal, and hunt for insects, worms, and
+  other small creatures.
+</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+mark {
+}
+```
 
 <table class="properties">
   <tbody>
@@ -41,7 +56,7 @@ translation_of: Web/HTML/Element/mark
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -84,11 +99,10 @@ translation_of: Web/HTML/Element/mark
 
 ```html
 <blockquote>
-  It is a period of civil war. Rebel spaceships, striking from a
-  hidden base, have won their first victory against the evil
-  Galactic Empire. During the battle, <mark>Rebel spies managed
-  to steal secret plans</mark> to the Empire’s ultimate weapon,
-  the DEATH STAR, an armored space station with enough power to
+  It is a period of civil war. Rebel spaceships, striking from a hidden base,
+  have won their first victory against the evil Galactic Empire. During the
+  battle, <mark>Rebel spies managed to steal secret plans</mark> to the Empire’s
+  ultimate weapon, the DEATH STAR, an armored space station with enough power to
   destroy an entire planet.
 </blockquote>
 ```
@@ -100,15 +114,17 @@ translation_of: Web/HTML/Element/mark
 다음 예제는 글의 검색 결과를 강조할 용도로 `<mark>`를 사용합니다.
 
 ```html
-<p>It is a dark time for the Rebellion. Although the Death
-Star has been destroyed, <mark class="match">Imperial</mark>
-troops have driven the Rebel forces from their hidden base and
-pursued them across the galaxy.</p>
+<p>
+  It is a dark time for the Rebellion. Although the Death Star has been
+  destroyed, <mark class="match">Imperial</mark> troops have driven the Rebel
+  forces from their hidden base and pursued them across the galaxy.
+</p>
 
-<p>Evading the dreaded <mark class="match">Imperial</mark>
-Starfleet, a group of freedom fighters led by Luke Skywalker
-has established a new secret base on the remote ice world of
-Hoth.</p>
+<p>
+  Evading the dreaded <mark class="match">Imperial</mark> Starfleet, a group of
+  freedom fighters led by Luke Skywalker has established a new secret base on
+  the remote ice world of Hoth.
+</p>
 ```
 
 다른 `<mark>`와 검색 결과 표시를 구별하기 위해 사용자 지정 클래스 `"match"`를 추가로 적용했습니다.
@@ -143,7 +159,7 @@ mark::after {
 스크린 리더 사용자 일부는 지나치게 자세한 안내를 유발할 수 있는 콘텐츠의 표현을 의도적으로 꺼놓습니다. 그러므로 이 방식을 남용해선 안되며, 콘텐츠의 이해에 강조표시의 유무가 꼭 필요할 때만 사용해야 합니다.
 
 - [Short note on making your mark (more accessible) | The Paciello Group](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
-- [Tweaking Text Level Styles | Adrian Roselli](http://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## 명세
 
@@ -151,4 +167,4 @@ mark::after {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.mark")}}
+{{Compat}}

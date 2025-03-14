@@ -1,13 +1,6 @@
 ---
 title: element.nodeType
 slug: Web/API/Node/nodeType
-tags:
-  - API
-  - DOM
-  - Noeuds
-  - Propriétés
-  - Types
-translation_of: Web/API/Node/nodeType
 ---
 
 {{APIRef("DOM")}}La propriété en lecture seule **`Node.nodeType`** représente le type du noeud.
@@ -19,7 +12,7 @@ La propriété **`nodeType`** peut être utilisée pour distinguer les uns des a
 ## Syntaxe
 
 ```js
-Type = node .nodeType
+Type = node.nodeType;
 ```
 
 Renvoie un entier (_integer_) qui spécifie le type du noeud ; les valeurs possibles sont listées dans [Constantes](#constantes).
@@ -28,15 +21,15 @@ Renvoie un entier (_integer_) qui spécifie le type du noeud ; les valeurs possi
 
 ### Constantes de type nœud
 
-| Constante                          | Valeur | Description                                                                                                              |
-| ---------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `Node.ELEMENT_NODE`                | `1`    | Un noeud {{domxref("Element")}} tel que {{HTMLElement("p")}} ou {{HTMLElement("div")}}`.`           |
-| `Node.TEXT_NODE`                   | `3`    | Le {{domxref("Text")}} actuel de l'{{domxref("Element")}} ou {{domxref("Attr")}}.                        |
+| Constante                          | Valeur | Description                                                                                                  |
+| ---------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------ |
+| `Node.ELEMENT_NODE`                | `1`    | Un noeud {{domxref("Element")}} tel que {{HTMLElement("p")}} ou {{HTMLElement("div")}}`.`                    |
+| `Node.TEXT_NODE`                   | `3`    | Le {{domxref("Text")}} actuel de l'{{domxref("Element")}} ou {{domxref("Attr")}}.                            |
 | `Node.PROCESSING_INSTRUCTION_NODE` | `7`    | Une {{domxref("ProcessingInstruction")}} d'un document XML tel que la déclaration `<?xml-stylesheet ... ?>`. |
-| `Node.COMMENT_NODE`                | `8`    | Un noeud {{domxref("Comment")}}.                                                                                   |
-| `Node.DOCUMENT_NODE`               | `9`    | Un noeud {{domxref("Document")}}.                                                                               |
-| `Node.DOCUMENT_TYPE_NODE`          | `10`   | Un noeud {{domxref("DocumentType")}} c'est-à-dire `<!DOCTYPE html>` pour des documents HTML5.                   |
-| `Node.DOCUMENT_FRAGMENT_NODE`      | `11`   | Un noeud {{domxref("DocumentFragment")}}.                                                                       |
+| `Node.COMMENT_NODE`                | `8`    | Un noeud {{domxref("Comment")}}.                                                                             |
+| `Node.DOCUMENT_NODE`               | `9`    | Un noeud {{domxref("Document")}}.                                                                            |
+| `Node.DOCUMENT_TYPE_NODE`          | `10`   | Un noeud {{domxref("DocumentType")}} c'est-à-dire `<!DOCTYPE html>` pour des documents HTML5.                |
+| `Node.DOCUMENT_FRAGMENT_NODE`      | `11`   | Un noeud {{domxref("DocumentFragment")}}.                                                                    |
 
 ### Constantes de type noeud dépréciées {{deprecated_inline()}}
 

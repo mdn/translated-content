@@ -1,28 +1,54 @@
 ---
-title: ':focus-within'
+title: :focus-within
 slug: Web/CSS/:focus-within
+l10n:
+  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
 ---
 
 {{CSSRef}}
 
-**`:focus-within`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、その要素または子孫要素にフォーカスがある場合に一致します。言い換えれば、それ自身が {{CSSxRef(":focus")}} 擬似クラスに該当するか、子孫に `:focus` に該当する要素がある要素を表します。 (これは[シャドウツリー](/ja/docs/Web/Web_Components/Using_shadow_DOM)における子孫も含みます。)
+**`:focus-within`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、その要素または子孫要素にフォーカスがある場合に一致します。言い換えれば、それ自身が {{CSSxRef(":focus")}} 擬似クラスに該当するか、子孫に `:focus` に該当する要素がある要素を表します。（これは[シャドウツリー](/ja/docs/Web/API/Web_components/Using_shadow_DOM)における子孫も含みます。）
 
-```css
-/* 子孫要素の一つにフォーカスがある <div> を選択 */
-div:focus-within {
-  background: cyan;
+{{InteractiveExample("CSS Demo: :focus-within", "tabbed-shorter")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
 }
+
+label:focus-within {
+  font-weight: bold;
+}
+```
+
+```html interactive-example
+<form>
+  <p>Which flavor would you like to order?</p>
+  <label>Full Name: <input name="firstName" type="text" /></label>
+  <label
+    >Flavor:
+    <select name="flavor">
+      <option>Cherry</option>
+      <option>Green Tea</option>
+      <option>Moose Tracks</option>
+      <option>Mint Chip</option>
+    </select>
+  </label>
+</form>
 ```
 
 このセレクターは、よくある例のように、 {{HTMLElement("input")}} 欄の一つにユーザーがフォーカスを置いたときに、それを含む {{HTMLElement("form")}} 全体を強調する場合に便利です。
 
 ## 構文
 
-```
-:focus-within
+```css
+:focus-within {
+  /* ... */
+}
 ```
 
-<h2 id="Examples">例</h2>
+## 例
 
 この例では、何れかの入力欄にフォーカスが当たった時、特殊な色のスタイルにします。
 
@@ -33,10 +59,10 @@ div:focus-within {
 
 <form>
   <label for="given_name">名前:</label>
-  <input id="given_name" type="text">
-  <br>
+  <input id="given_name" type="text" />
+  <br />
   <label for="family_name">苗字:</label>
-  <input id="family_name" type="text">
+  <input id="family_name" type="text" />
 </form>
 ```
 
@@ -74,5 +100,5 @@ input {
 ## 関連情報
 
 - {{CSSxRef(":focus")}}
-- {{CSSxRef(":focus-visible")}} {{Experimental_Inline}}
+- {{CSSxRef(":focus-visible")}}
 - [Grab your user's attention with the focus-within selector](https://dev.to/vtrpldn/grab-your-user-s-attention-with-the-focus-within-css-selector-4d4)

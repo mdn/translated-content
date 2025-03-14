@@ -12,7 +12,7 @@ slug: Web/API/Window/screenY
 ## 構文
 
 ```js
-topWindowPos = window.screenY
+topWindowPos = window.screenY;
 ```
 
 ### 返値
@@ -34,14 +34,25 @@ function positionElem() {
   let leftUpdate = initialLeft - newLeft;
   let topUpdate = initialTop - newTop;
 
-  ctx.fillStyle = 'rgb(0, 0, 0)';
+  ctx.fillStyle = "rgb(0, 0, 0)";
   ctx.fillRect(0, 0, width, height);
-  ctx.fillStyle = 'rgb(0, 0, 255)';
+  ctx.fillStyle = "rgb(0, 0, 255)";
   ctx.beginPath();
-  ctx.arc(leftUpdate + (width/2), topUpdate + (height/2) + 35, 50, degToRad(0), degToRad(360), false);
+  ctx.arc(
+    leftUpdate + width / 2,
+    topUpdate + height / 2 + 35,
+    50,
+    degToRad(0),
+    degToRad(360),
+    false,
+  );
   ctx.fill();
 
-  pElem.textContent = 'Window.screenLeft: ' + window.screenLeft + ', Window.screenTop: ' + window.screenTop;
+  pElem.textContent =
+    "Window.screenLeft: " +
+    window.screenLeft +
+    ", Window.screenTop: " +
+    window.screenTop;
 
   window.requestAnimationFrame(positionElem);
 }
@@ -55,7 +66,7 @@ window.requestAnimationFrame(positionElem);
 `screenX`/`screenY` で代替するようになっています。
 
 ```js
-if(!window.screenLeft) {
+if (!window.screenLeft) {
   window.screenLeft = window.screenX;
   window.screenTop = window.screenY;
 }
@@ -63,13 +74,11 @@ if(!window.screenLeft) {
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{ SpecName('CSSOM View', '#dom-window-screeny', 'Window.screenY') }} | {{ Spec2('CSSOM View') }} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.screenY")}}
+{{Compat}}
 
 ## 関連情報
 

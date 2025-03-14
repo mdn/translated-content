@@ -1,6 +1,8 @@
 ---
-title: CSSKeyframesRule.deleteRule()
+title: "CSSKeyframesRule: deleteRule() メソッド"
 slug: Web/API/CSSKeyframesRule/deleteRule
+l10n:
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
 {{APIRef("CSSOM") }}
@@ -9,15 +11,15 @@ slug: Web/API/CSSKeyframesRule/deleteRule
 
 ## 構文
 
-```js
-CSSKeyframesRule.deleteRule(select);
+```js-nolint
+deleteRule(select)
 ```
 
 ### 引数
 
 - `select`
 
-  - : {{domxref("CSSOMString")}} で、削除するルールのキーフレームセレクターを指定します。次のうちのいずれかを指令します。
+  - : 削除するルールのキーフレームセレクターの入った文字列です。次のうちのいずれかを指定します。
 
     - 0% から 100% までのパーセント値をカンマで区切ったリスト
     - または `from` か `to` のキーワード
@@ -26,13 +28,13 @@ CSSKeyframesRule.deleteRule(select);
 
 ### 返値
 
-None.
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
 この CSS には keyframes アットルールがあります。これは `document.styleSheets[0].cssRules` で返される最初の {{domxref("CSSRule")}} になります。
 `myRules[0]` は {{domxref("CSSKeyframesRule")}} オブジェクトを返します。 `cssRules` プロパティは
- 2 つのルールを持った {{domxref("CSSRuleList")}} を返します。
+2 つのルールを持った {{domxref("CSSRuleList")}} を返します。
 
 `deleteRule()` でルールを 1 つ削除した後は、 `cssRules` プロパティはルールを 1 つ持った {{domxref("CSSRuleList")}} を返します。
 
@@ -51,7 +53,7 @@ None.
 ```js
 let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // CSSKeyframesRule
-keyframes.deleteRule('to');
+keyframes.deleteRule("to");
 console.log(keyframes.cssRules); // 1 つのルールを持った CSSRuleList を返す
 ```
 

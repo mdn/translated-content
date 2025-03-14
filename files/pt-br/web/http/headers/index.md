@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers
 
 {{HTTPSidebar}}Os cabeçalhos HTTP permitem que o cliente e o servidor passem informações adicionais com a solicitação ou a resposta HTTP. Um cabeçalho de solicitação é composto por seu nome _case-insensitive_ (não diferencia letras maiúsculas e minúsculas), seguido por dois pontos ':' e pelo seu valor (sem quebras de linha). Espaços em branco antes do valor serão ignorados.
 
-Cabeçalhos proprietários personalizados podem ser adicionados usando o prefixo 'X-', mas essa convenção foi descontinuada em Junho de 2012, devido aos inconvenientes que causou quando os campos não-padronizados tornaram-se padronizados na [RFC 6648](https://tools.ietf.org/html/rfc6648); outros estão listados em um [registro IANA](http://www.iana.org/assignments/message-headers/perm-headers.html), cujo o conteúdo original foi definido na [RFC 4229](http://tools.ietf.org/html/rfc4229). O IANA também mantém o [registro das propostas de novas mensagens de cabeçalhos HTTP](http://www.iana.org/assignments/message-headers/prov-headers.html).
+Cabeçalhos proprietários personalizados podem ser adicionados usando o prefixo 'X-', mas essa convenção foi descontinuada em Junho de 2012, devido aos inconvenientes que causou quando os campos não-padronizados tornaram-se padronizados na [RFC 6648](https://tools.ietf.org/html/rfc6648); outros estão listados em um [registro IANA](https://www.iana.org/assignments/message-headers/perm-headers.html), cujo o conteúdo original foi definido na [RFC 4229](https://tools.ietf.org/html/rfc4229). O IANA também mantém o [registro das propostas de novas mensagens de cabeçalhos HTTP](https://www.iana.org/assignments/message-headers/prov-headers.html).
 
 Cabeçalhos podem ser classificados de acordo com os seus contextos:
 
@@ -49,12 +49,12 @@ A lista a seguir resume os cabeçalhos HTTP pela categoria de uso. Para uma list
 
 ## Client hints
 
-O recurso HTTP [Client hints](/pt-BR/docs/Glossary/Client_hints) ainda está em desenvolvimento. A documentação está disponível no site do [HTTP working group.](https://httpwg.org/http-extensions/client-hints.html)
+O recurso HTTP [Client hints](/pt-BR/docs/Web/HTTP/Client_hints) ainda está em desenvolvimento. A documentação está disponível no site do [HTTP working group.](https://httpwg.org/http-extensions/client-hints.html)
 
 - {{HTTPHeader("Accept-CH")}} {{experimental_inline}}
-  - : Os servidores podem dar suporte para o [Client hints](/pt-BR/docs/Glossary/Client_hints) usando o campo de cabeçalho Accept-CH ou um elemento HTML \<meta> equivalente com atributo http-equiv (\[HTML5]).
+  - : Os servidores podem dar suporte para o [Client hints](/pt-BR/docs/Web/HTTP/Client_hints) usando o campo de cabeçalho Accept-CH ou um elemento HTML \<meta> equivalente com atributo http-equiv (\[HTML5]).
 - {{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}}
-  - : Os servidores podem solicitar ao cliente que lembre-se do conjunto de [Client hints](/pt-BR/docs/Glossary/Client_hints) que o servidor dá suporte por um período de tempo especificado, para permitir a entrega de [Client hints](/pt-BR/docs/Glossary/Client_hints) em solicitações seguidas ao servidor de origem(\[RFC6454]).
+  - : Os servidores podem solicitar ao cliente que lembre-se do conjunto de [Client hints](/pt-BR/docs/Web/HTTP/Client_hints) que o servidor dá suporte por um período de tempo especificado, para permitir a entrega de [Client hints](/pt-BR/docs/Web/HTTP/Client_hints) em solicitações seguidas ao servidor de origem(\[RFC6454]).
 - {{HTTPHeader("Content-DPR")}} {{experimental_inline}}
   - : Um número que indica a proporção entre pixels físicos sobre pixels CSS da resposta de imagem selecionada.
 - {{HTTPHeader("DPR")}} {{experimental_inline}}
@@ -121,9 +121,9 @@ O recurso HTTP [Client hints](/pt-BR/docs/Glossary/Client_hints) ainda está em 
   - : Contém [cookies](/pt-BR/docs/Web/HTTP/Cookies) HTTP armazenados previamente enviados pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie")}}.
 - {{HTTPHeader("Set-Cookie")}}
   - : Envia cookies do servidor para o agente de usuário.
-- {{HTTPHeader("Cookie2")}} {{obsolete_inline}}
+- {{HTTPHeader("Cookie2")}}
   - : Contém um cookie HTTP enviado anteriormente pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie2")}}, mas se tornou obsoleto pela especificação. Use {{HTTPHeader("Cookie")}} em vez disso.
-- {{HTTPHeader("Set-Cookie2")}} {{obsolete_inline}}
+- {{HTTPHeader("Set-Cookie2")}}
   - : Envia cookies do servidor para o agente-usuário, mas se tornou obsoleto pela especificação. Use {{HTTPHeader("Set-Cookie")}} em vez disso.
 
 ## CORS
@@ -236,7 +236,7 @@ O recurso HTTP [Client hints](/pt-BR/docs/Glossary/Client_hints) ainda está em 
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
   - : Force communication using HTTPS instead of HTTP.
 - {{HTTPHeader("Upgrade-Insecure-Requests")}}
-  - : Sends a signal to the server expressing the client’s preference for an encrypted and authenticated response, and that it can successfully handle the {{CSP("upgrade-insecure-requests")}} directive.
+  - : Sends a signal to the server expressing the client's preference for an encrypted and authenticated response, and that it can successfully handle the {{CSP("upgrade-insecure-requests")}} directive.
 - {{HTTPHeader("X-Content-Type-Options")}}
   - : Disables MIME sniffing and forces browser to use the type given in {{HTTPHeader("Content-Type")}}.
 - {{HTTPHeader("X-Frame-Options")}} (XFO)

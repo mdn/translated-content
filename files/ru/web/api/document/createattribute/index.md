@@ -1,38 +1,42 @@
 ---
-title: Document.createAttribute()
+title: "Document: метод createAttribute()"
 slug: Web/API/Document/createAttribute
-translation_of: Web/API/Document/createAttribute
+l10n:
+  sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
 ---
 
 {{ ApiRef("DOM") }}
 
-Метод **`Document.createAttribute()`** создаёт новый атрибут узла и возвращает его. Созданный объект узла реализует {{domxref("Attr")}} интерфейс . DOM не указывает, какие атрибуты могут быть добавлены к определённому элементу таким способом.
+Метод **`Document.createAttribute()`** создаёт новый атрибут и возвращает его. Созданный объект является узлом и реализует интерфейс {{domxref("Attr")}}. DOM не накладывает ограничений на тип атрибутов, которые могут быть добавлены к определённому элементу таким способом.
 
-> **Примечание:** Строка, заданная в параметре, преобразуется в нижний регистр.
+> [!NOTE]
+> Строка, заданная в параметре, преобразуется в нижний регистр.
 
-## Syntax
+## Синтаксис
 
+```js-nolint
+createAttribute(name)
 ```
-attribute = document.createAttribute(name)
-```
 
-### Parameters
+### Параметры
 
-- `name` строка, содержащая имя атрибута.
+- `name`
+  - : строка, содержащая имя атрибута.
 
-### Return value
+### Возвращаемое значение
 
-A {{domxref("Attr")}} node.
+Узел {{domxref("Attr")}}.
 
-### Exceptions
+### Исключения
 
-- `INVALID_CHARACTER_ERR` если параметр содержит недопустимые символы для атрибута XML.
+- `InvalidCharacterError` {{domxref("DOMException")}}
+  - : Вызывается если значение [`name`](#name) не является корректным [именем XML](https://www.w3.org/TR/REC-xml/#dt-name) (например, начинается с цифры, дефиса или точки, или содержит символы, отличные от букв и цифр, подчёркиваний, дефисов и точек).
 
-## Example
+## Примеры
 
 ```js
-var node = document.getElementById("div1");
-var a = document.createAttribute("my_attrib");
+const node = document.getElementById("div1");
+const a = document.createAttribute("my_attrib");
 a.value = "newVal";
 node.setAttributeNode(a);
 console.log(node.getAttribute("my_attrib")); // "newVal"
@@ -40,17 +44,15 @@ console.log(node.getAttribute("my_attrib")); // "newVal"
 
 ## Спецификации
 
-| Specification                                                                                                        | Status                           | Comment                                 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------- |
-| {{SpecName('DOM WHATWG','#dom-document-createattribute','Document.createAttribute()')}} | {{Spec2("DOM WHATWG")}} | Точное поведение с прописными символами |
-| {{SpecName('DOM3 Core','core.html#ID-1084891198','Document.createAttribute()')}}         | {{Spec2('DOM3 Core')}}     | No change.                              |
-| {{SpecName('DOM2 Core','core.html#ID-1084891198','Document.createAttribute()')}}         | {{Spec2('DOM2 Core')}}     | No change.                              |
-| {{SpecName('DOM1','level-one-core.html#ID-1084891198','Document.createAttribute()')}}     | {{Spec2('DOM1')}}         | Первоначальное определение.             |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
+- {{domxref("Document.createAttributeNS()")}}
 - {{domxref("Document.createElement()")}}
+- {{domxref("Element.setAttribute()")}}
+- {{domxref("Element.setAttributeNode()")}}

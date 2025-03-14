@@ -1,13 +1,54 @@
 ---
 title: word-spacing
 slug: Web/CSS/word-spacing
+l10n:
+  sourceCommit: 3928d2b1004e2435e063ef4b037e06e1906d62f3
 ---
 
 {{CSSRef}}
 
 **`word-spacing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、タグや単語の間隔に関する挙動を指定します。
 
-{{EmbedInteractiveExample("pages/css/word-spacing.html")}}
+{{InteractiveExample("CSS Demo: word-spacing")}}
+
+```css interactive-example-choice
+word-spacing: normal;
+```
+
+```css interactive-example-choice
+word-spacing: 1rem;
+```
+
+```css interactive-example-choice
+word-spacing: 4px;
+```
+
+```css interactive-example-choice
+word-spacing: -0.4ch;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    As much mud in the streets as if the waters had but newly retired from the
+    face of the earth, and it would not be wonderful to meet a Megalosaurus,
+    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  font-family: Amstelvar;
+  font-style: normal;
+}
+
+section {
+  font-size: 1.2em;
+  font-family: Amstelvar;
+}
+```
 
 ## 構文
 
@@ -19,33 +60,37 @@ word-spacing: normal;
 word-spacing: 3px;
 word-spacing: 0.3em;
 
-/* <percentage> 値 */
-word-spacing: 50%;
-word-spacing: 200%;
-
 /* グローバル値 */
 word-spacing: inherit;
 word-spacing: initial;
 word-spacing: revert;
+word-spacing: revert-layer;
 word-spacing: unset;
 ```
 
 ### 値
 
 - `normal`
-  - : 現在のフォントやブラウザ―で定義された普通の単語の間隔です。
+  - : 現在のフォントやブラウザー―で定義された普通の単語の間隔です。
 - {{cssxref("length")}}
   - : フォントによって定義された単語の間隔に追加する間隔を定義します。
-- {{cssxref("percentage")}}
-  - : 文字の advance width を基準とした追加する間隔の量をパーセント値で指定します。
 
-<h2 id="Examples">例</h2>
+## アクセシビリティ
+
+`word-spacing` 値を大きな生または負の値にすると、スタイル設定が適用された文が読みにくくなります。とても大きな正の値でスタイル設定されたテキストでは、単語が離れすぎてしまい、文として現れなくなります。大きな負の値でスタイル設定されたテキストでは、単語が互いに重なり合い、各単語の始めと終わりが認識できなくなります。
+
+読みやすい `word-spacing` は、フォントファミリーごとに文字幅が異なるため、案件ごとに決定する必要があります。 すべてのフォントファミリーで読みやすさを自動的に保証する値は存在しません。
+
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+
+## 例
 
 ### HTML
 
 ```html
-<div id="mozdiv1">Here are many words...</div>
-<div id="mozdiv2">...and many more!</div>
+<div id="mozdiv1">Lorem ipsum dolor sit amet.</div>
+<div id="mozdiv2">Lorem ipsum dolor sit amet.</div>
 ```
 
 ### CSS
@@ -61,15 +106,6 @@ word-spacing: unset;
 ```
 
 {{ EmbedLiveSample('Examples') }}
-
-## アクセシビリティの考慮
-
-`word-spacing` で大きな正の値や負の値を設定すると、スタイルが適用される文が読めなくなります。テキストをとても大きな正の値でスタイル付けすると、単語間が離れすぎて文として表示されなくなります。大きな負の数でスタイル付けすると、それぞれの単語の先頭と末尾が互いに重複して、理解できなくなります。
-
-フォントファミリーによって文字の幅が異なるため、読みやすい `word-spacing` は場面によって検討する必要があります。すべてのフォントファミリーで自動的に読みやすさを調整する単一の値はありません。
-
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## 公式定義
 

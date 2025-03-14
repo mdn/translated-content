@@ -41,7 +41,7 @@ console.log(uint8.length); // 2
 console.log(uint8.BYTES_PER_ELEMENT); // 1
 
 // 配列から
-var arr = new Uint8Array([21,31]);
+var arr = new Uint8Array([21, 31]);
 console.log(arr[1]); // 31
 
 // 他の型付き配列から
@@ -54,7 +54,9 @@ var buffer = new ArrayBuffer(8);
 var z = new Uint8Array(buffer, 1, 4);
 
 // 反復可能オブジェクトから
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var uint8 = new Uint8Array(iterable);
 // Uint8Array[1, 2, 3]
 ```
@@ -65,7 +67,7 @@ var uint8 = new Uint8Array(iterable);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Uint8Array.Uint8Array")}}
+{{Compat}}
 
 ### 互換性メモ
 
@@ -83,6 +85,6 @@ var dv = new Uint8Array([1, 2, 3]);
 
 ## 関連情報
 
-- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

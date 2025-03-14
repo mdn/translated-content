@@ -1,13 +1,9 @@
 ---
 title: output
 slug: Web/XSLT/Element/output
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/output
-original_slug: Web/XSLT/output
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:output>` 요소는 출력 문서의 특성을 조절합니다. method 속성이 있는 이 요소가 Netscape에서 정확하게 기능하도록 쓸 수 있어야 합니다. 7.0 현재, `method="text"`는 기대한 대로 동작합니다.
 
@@ -60,7 +56,7 @@ original_slug: Web/XSLT/output
 
 ### 정의
 
-[XSLT section 16, Output](http://www.w3.org/TR/xslt#output)
+[XSLT section 16, Output](https://www.w3.org/TR/xslt#output)
 
 ### Gecko 지원
 

@@ -1,7 +1,6 @@
 ---
 title: font-display
 slug: Web/CSS/@font-face/font-display
-translation_of: Web/CSS/@font-face/font-display
 ---
 
 {{CSSRef}}
@@ -54,19 +53,20 @@ font-display: optional;
 ```css
 @font-face {
   font-family: ExampleFont;
-  src: url(/path/to/fonts/examplefont.woff) format('woff'),
-       url(/path/to/fonts/examplefont.eot) format('eot');
+  src:
+    url(/path/to/fonts/examplefont.woff) format("woff"),
+    url(/path/to/fonts/examplefont.eot) format("eot");
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

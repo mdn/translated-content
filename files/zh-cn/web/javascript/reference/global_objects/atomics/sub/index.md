@@ -1,22 +1,42 @@
 ---
 title: Atomics.sub()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/sub
+l10n:
+  sourceCommit: a92a2bb31cf5d79808878701f0344a4eabf12963
 ---
 
-{{JSRef}}**`Atomics.sub()`** 静态方法在数组中的给定位置减去给定值，并返回该位置的旧值。这个原子操作保证在修改后的值被写回之前不会发生其他写操作。{{EmbedInteractiveExample("pages/js/atomics-sub.html")}}
+{{JSRef}}
+
+**`Atomics.sub()`** 静态方法对数组中的指定位置减去给定的值，并返回该位置的旧值。此原子操作保证在修改后的值写回之前不会发生其他写操作。
+
+{{InteractiveExample("JavaScript Demo: Atomics.sub()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 7;
+
+// 7 - 2 = 5
+console.log(Atomics.sub(uint8, 0, 2));
+// Expected output: 7
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 5
+```
 
 ## 语法
 
-```plain
+```js-nolint
 Atomics.sub(typedArray, index, value)
 ```
 
 ### 参数
 
 - `typedArray`
-  - : 一个共享的整型 typed array。例如 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, 或者 {{jsxref("Uint32Array")}}.
+  - : 一个整数类型数组。{{jsxref("Int8Array")}}、{{jsxref("Uint8Array")}}、{{jsxref("Int16Array")}}、{{jsxref("Uint16Array")}}、{{jsxref("Int32Array")}}、{{jsxref("Uint32Array")}}、{{jsxref("BigInt64Array")}} 或 {{jsxref("BigUint64Array")}} 之一。
 - `index`
-  - : 要被 `value` 值减去的 `typedArray` 索引位置。
+  - : `typedArray` 中的要减去 `value` 的位置。
 - `value`
   - : 要减去的数字。
 
@@ -26,18 +46,21 @@ Atomics.sub(typedArray, index, value)
 
 ### 异常
 
-- 假如 `typedArray` 不是允许的整型之一，则抛出 {{jsxref("TypeError")}}。
-- 假如 `typedArray` 不是一个共享的整型 typed array，则抛出 {{jsxref("TypeError")}}。
-- 如果 `index` 超出了 `typedArray` 的边界，则抛出 {{jsxref("RangeError")}}。
+- {{jsxref("TypeError")}}
+  - : 如果 `typedArray` 不是允许的整数类型数组之一，则抛出该异常。
+- {{jsxref("RangeError")}}
+  - : 如果 `index` 超出 `typedArray` 的范围，则抛出该异常。
 
-## 例子
+## 示例
+
+### 使用 sub()
 
 ```js
 const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 ta[0] = 48;
 
-Atomics.sub(ta, 0, 12); // returns 48, the old value
+Atomics.sub(ta, 0, 12); // 返回 48，即旧的值
 Atomics.load(ta, 0); // 36
 ```
 
@@ -49,7 +72,7 @@ Atomics.load(ta, 0); // 36
 
 {{Compat}}
 
-## 相关
+## 参见
 
 - {{jsxref("Atomics")}}
 - {{jsxref("Atomics.add()")}}

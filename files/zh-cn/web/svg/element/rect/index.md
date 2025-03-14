@@ -7,14 +7,18 @@ slug: Web/SVG/Element/rect
 
 `rect`元素是 SVG 的一个基本形状，用来创建矩形，基于一个角位置以及它的宽和高。它还可以用来创建圆角矩形。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
 ## 示例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -33,10 +37,10 @@ html,body,svg { height:100% }
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [图形事件属性](/zh-CN/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/docs/SVG/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/SVG/Attribute#graphicalevent) »
+- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -53,9 +57,9 @@ html,body,svg { height:100% }
 
 ## DOM 接口
 
-这个元素实现了 [`SVGRectElement`](/zh-CN/DOM/SVGRectElement) 接口。
+这个元素实现了 [`SVGRectElement`](/zh-CN/docs/DOM/SVGRectElement) 接口。
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 

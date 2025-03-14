@@ -1,7 +1,6 @@
 ---
 title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
-browser-compat: javascript.builtins.EvalError
 ---
 
 {{JSRef}}
@@ -36,15 +35,15 @@ El objeto `EvalError` no se utiliza en la especificación actual de ECMAScript y
 
 ```js
 try {
-  throw new EvalError('Hello', 'someFile.js', 10);
+  throw new EvalError("Hello", "someFile.js", 10);
 } catch (e) {
   console.log(e instanceof EvalError); // true
-  console.log(e.message);              // "Hello"
-  console.log(e.name);                 // "EvalError"
-  console.log(e.fileName);             // "someFile.js"
-  console.log(e.lineNumber);           // 10
-  console.log(e.columnNumber);         // 0
-  console.log(e.stack);                // "@Scratchpad/2:2:9\n"
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "EvalError"
+  console.log(e.fileName); // "someFile.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 

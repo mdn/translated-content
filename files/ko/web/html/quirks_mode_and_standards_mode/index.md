@@ -1,48 +1,49 @@
 ---
-title: 호환 모드와 표준 모드
+title: Quirks 모드
 slug: Web/HTML/Quirks_Mode_and_Standards_Mode
-translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
-과거 웹 페이지는 넷스케이프 내비게이터(Netscape Navigator)용과 마이크로소프트 인터넷 익스플로러(Microsoft Internet Explorer)용의 두 가지 버전으로 만들어졌다. W3C에서 웹 표준을 제정할 당시, 기존 브라우저들은 새롭게 만들어진 표준을 기반으로 대부분의 웹 사이트들을 제대로 표현할 수 없었다. 따라서, 브라우저들은 새로운 표준으로 제작된 사이트와 예전 방식으로 제작된 사이트를 렌더링하기 위한 두 가지 모드를 제공했다.
 
-웹 브라우저의 레이아웃 엔진으로 호환 모드(quirks mode), 거의 표준 모드(almost standards mode), 표준 모드(standards mode)의 세 가지 방식이 존재한다. **호환 모드**(quirks mode)에서는 기존 방식으로 제작된 웹사이트들을 표현하기 위해 내비게이터 4(Navigator 4)와 인터넷 익스플로러 5의 비표준 동작들을 에뮬레이션한다. **완전 표준 모드**(full standards mode; 이하 표준 모드)에서는 (아마도) HTML과 CSS에 의해 웹 페이지가 표시된다. **거의 표준 모드**(almost standards mode)는 소수의 호환 모드 요소만 지원한다.
+{{HTMLSidebar}}
 
-## 브라우저는 무엇을 보고 모드를 결정할까?
+웹의 과거 시절에는 일반적으로 두가지 버전으로 페이지가 작성됐습니다. 하나는 Netscape Navigator를 위한것이고 다른 하나는 Microsoft Internet Explorer를 위한 것이었습니다. 웹 표준이 W3C에서 만들어질때 브라우저들은 이를 그대로 사용할 수 없었습니다. 그렇게 되면 웹의 대부분의 기존 사이트가 동작하지 않기 때문이었습니다. 따라서 브라우저들은 새로운 표준을 준수하는 사이트와 이전 레거시 사이트를 다르게 처리하기 위해 두 가지 모드를 도입했습니다.
 
-웹 브라우저는 [HTML](/ko/docs/HTML) 페이지를 호환 모드나 표준 모드 중 무엇으로 렌더링할지 결정할 때 문서의 첫 부분에 기술된 DOCTYPE을 참조한다. 웹 페이지를 표준 모드로 렌더링하려고 한다면 다음과 같이 페이지 첫 부분에 DOCTYPE을 기술해야 한다.
+현재 웹 브라우저의 레이아웃 엔진에서 사용하는 모드는 세 가지입니다. quirks모드, limited-quirks모드 그리고 no-quirks모드 입니다. **quirks 모드**에서 레이아웃은 Navigator 4와 Internet Explorer5의 동작을 모방합니다. 이것은 웹 표준이 널리 채택되기 전에 구축된 웹 사이트를 지원하기 위해 필수적입니다. **no-quirks모드** 에서는(바라건대) 현대 HTML 및 CSS명세에서 설명한대로 동작합니다. **limited-quirks 모드**에서는 일부 quirks만 구현됩니다.
+
+limited-quirks 및 no-quirks 모드는 이전에 각각 "almost-standards" 모드와 "full standards" 모드로 불렸습니다. 이러한 이름은 이제 동작이 표준화되었기 때문에 변경되었습니다.
+
+## 브라우저는 어떤 모드를 사용할지 어떻게 결정할까?
+
+[HTML](/ko/docs/Web/HTML)문서의 경우 브라우저는 문서 시작 부분에 DOCTYPE을 사용하여 문서를 quirks 모드에서 처리할지 표준 모드에서 처리할지 결정합니다. 페이지가 전체 표준 모드를 사용하도록 하려면 페이지에 아래 예시와 같은 DOCTYPE이 있는지 확인하세요.
 
 ```html
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset=UTF-8>
+    <meta charset="UTF-8" />
     <title>Hello World!</title>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
-예제에서 사용한 `<!DOCTYPE html>`은 HTML5에서 권장하는, 가장 간단한 방식이다. 이전 버전의 HTML 표준들은 다른 방식들을 권장하지만, 오늘날 현존하는 모든 브라우저들은(심지어 옛날 인터넷 익스플로러 6조차도) 이 DOCTYPE은 완전 표준 모드로 렌더링할 것이다. 더 복잡한 DOCTYPE을 굳이 사용할 이유는 없다. 만약 다른 DOCTYPE을 사용하게 된다면, 해당 페이지가 거의 표준 모드나 호환 모드로 렌더링될 수 있는 위험이 있다.
+예제에 표시된 `<!DOCTYPE html>`이 가장 단순하며 현재 HTML 표준에서 권장하는 DOCTYPE입니다. 이전 버전의 HTML 표준에서는 다른 변형을 권장했지만 현재 모든 기존 브라우저는 이 DOCTYPE에 대한 전체 표준모드를 사용하며 심지어 오래된 Internet Explorer 6도 마찬가지 입니다. 더 복잡한 DOCTYPE을 사용해야 할 타당한 이유는 없습니다. 다른 DOCTYPE을 사용하는 경우 limited-quirks모드 또는 quirks 모드를 트리거 하는것을 선택할 위험이 있습니다.
 
-DOCTYPE은 반드시 HTML 문서 첫 부분에 기술하자. 인터넷 익스플로러 9 또는 그 이전 버전에서는 DOCTYPE 이전에 주석이나 XML 선언부 등 무엇이든 작성된 상태라면 해당 문서를 호환 모드로 렌더링하게 된다.
+HTML문서의 시작 부분에 DOCTYPE을 넣어야 합니다. 주석이나 XML 선언과 같이 DOCTYPE 앞에 무엇이든 있으면 Internet Expolorer 9 이상에서는 quirks모드가 트리거 됩니다.
 
-HTML5에서 DOCTYPE의 유일한 목적은 완전 표준 모드를 활성화하기 위함이다. 이전 버전의 HTML 표준에서는 DOCTYPE이 추가적인 의미를 갖지만, 실제로 이를 호환 모드와 표준 모드의 판단 이외의 목적으로 사용한 브라우저는 없다.
+<!DOCTYPE html>의 유일한 목적은 no-quirks 모드를 활성화하는 것입니다. 이전 버전의 HTML 표준 DOCTYPE은 추가적인 의미를 제공했지만, 어떤 브라우저도 렌더링 모드 전환 이외의 다른 용도로 DOCTYPE을 사용한 적이 없습니다.
 
-좀 더 자세한 내용은 "브라우저가 다양한 모드를 판단할 때"([when different browsers choose various modes](http://hsivonen.iki.fi/doctype/))를 참고하자.
+[브라우저가 다양한 모드를 선택하는 시기](https://hsivonen.iki.fi/doctype/)에 대한 자세한 설명도 참조하세요.
 
 ### XHTML
 
-여러분의 페이지가 `Content-Type` HTTP 헤더를 `application/xhtml+xml` MIME 타입으로 설정함으로써 [XHTML](/ko/docs/XHTML)로 제공된다면, 이런 페이지들은 항상 표준 모드로 렌더링되기 때문에 DOCTYPE을 기술할 필요가 없다. 다만 인터넷 익스플로러는 9부터 XHTML을 지원하기 때문에 인터넷 익스플로러 8의 경우 `application/xhtml+xml`로 기술된 페이지를 표시하지 않고 알 수 없는 형식으로 판단해 [다운로드 창을 표시한다](/ko/docs/XHTML#Support).
+`Content-Type` HTTP 헤더에 `application/xhtml+xml` MIME 타입으로 설정함으로써 [XHTML](/ko/docs/Glossary/XHTML)로 제공 하는 경우 해당 문서는 항상 no-quirks 모드로 렌더링되기 때문에 DOCTYPE이 필요하지 않습니다. 단 인터넷 익스플로러는 9부터 XHTML을 지원하기 때문에 인터넷 익스플로러 8의 경우 `application/xhtml+xml`로 기술된 페이지를 표시하지 않고 알 수 없는 형식으로 판단해 다운로드 대화상자가 표시될 수 있다는 점에 유의하세요.
 
 XHTML 같은(XHTML-like) 콘텐트를 `text/html` MIME 타입으로 제공한다면 웹 브라우저는 이를 HTML로 인식하므로, 표준 모드로 렌더링하려면 DOCTYPE을 기술해야 한다.
 
-## 페이지에 사용된 모드 확인하기
+## 어떤 모드가 사용되었는지 확인하려면 어떻게 해야 하나요?
 
-파이어폭스(Firefox)에서는 우클릭을 하고 '페이지 등록 정보'에서 '렌더링 방식'을 확인한다.
+페이지가 quirks 또는 limited-quirks 모드에서 랜더링 되는 경우 Firefox는 개발자 도구의 콘솔탭에 경고를 기록합니다. 이 경고가 표시되지 않으면 Firefox가 no-quirk 모드를 사용하고 있는것입니다.
 
-인터넷 익스플로러에서는 F12 키를 누르고 문서 모드를 확인한다.
-
-## 모드 간의 차이점
-
-여러 렌더링 모드의 차이점을 비교하려면 [Mozilla Quirks Mode Behavior](/ko/docs/Mozilla_Quirks_Mode_Behavior)와 [Gecko's "Almost Standards" Mode](/ko/docs/Mozilla/Gecko_Almost_Standards_Mode)(영문) 문서를 참고하자.
+자바스크립트에서 `document.compatMode`의 값은 문서가 quirks 모드에 있는지 여부를 표시합니다. 값이 `"BackCompat"`이면 문서가 quirks 모드라는 것이고 그렇지 않으면 `"CSS1Compat"` 값을 가집니다.

@@ -1,7 +1,6 @@
 ---
 title: Window.scrollMaxX
 slug: Web/API/Window/scrollMaxX
-translation_of: Web/API/Window/scrollMaxX
 ---
 
 {{APIRef}} {{Non-standard_header}}
@@ -27,7 +26,7 @@ window.scrollTo(maxX, 0);
 
 ## Примечания
 
-Не используйте это свойство для получения ширины документа с помощью [window.innerWidth](/ru/docs/DOM/window.innerWidth) + window\.scrollMaxX. Это не равнозначно всей ширине документа, потому что {{domxref("window.innerWidth")}} включает в себя ширину полосы прокрутки, таким образом результат будет включать себя ширину документа с шириной полосы прокрутки. Вместо этого используйте {{domxref("element.scrollWidth","document.body.scrollWidth")}}. Смотрите также {{domxref("window.scrollMaxY")}}.
+Не используйте это свойство для получения ширины документа с помощью [window.innerWidth](/ru/docs/Web/API/Window/innerWidth) + window\.scrollMaxX. Это не равнозначно всей ширине документа, потому что {{domxref("window.innerWidth")}} включает в себя ширину полосы прокрутки, таким образом результат будет включать себя ширину документа с шириной полосы прокрутки. Вместо этого используйте {{domxref("element.scrollWidth","document.body.scrollWidth")}}. Смотрите также {{domxref("window.scrollMaxY")}}.
 
 ## Спецификации
 

@@ -1,20 +1,19 @@
 ---
 title: Adobe Flash
 slug: Glossary/Adobe_Flash
-tags:
-  - Flash
-  - Glossaire
-  - Infrastructure
-translation_of: Glossary/Adobe_Flash
-original_slug: Glossaire/Adobe_Flash
+l10n:
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-_Adobe Flash_ est une technologie obsolescente, développée par Adobe Systems, qui permet de créer des applications internet riches, des graphiques vectoriels et des applications multimédias. Pour utiliser Flash au sein d'un {{Glossary("Browser","navigateur web")}}, vous devez installer le plugin adéquat.
+{{GlossarySidebar}}
+
+[**Flash**](https://fr.wikipedia.org/wiki/Adobe_Flash) est une technologie obsolète, développée par Adobe, qui permet de créer des applications web riches, du contenu multimédia et de diffuser des médias.
+
+Depuis 2021, Flash n'est plus pris en charge par Adobe ni par aucun des principaux navigateurs web.
 
 ## Voir aussi
 
-### Culture générale
-
-- [Site officiel d'Adobe](http://www.adobe.com/fr)
-- [Shumway](https://mozilla.github.io/shumway/), une implémentation libre par Mozilla
-- [Présentation du projet Gnash](http://gnashdev.org/) sur Sourceforge, une implémentation libre par GNU.
+- [Annonce de la fin de vie d'Adobe Flash](https://blog.adobe.com/en/publish/2017/07/25/adobe-flash-update#gs.g8mmgf) (en anglais)
+- [Annonce de la fin d'utilisation d'Adobe Flash sur Chrome](https://www.blog.google/products/chrome/saying-goodbye-flash-chrome/) (en anglais)
+- [Feuille de route de fin de vie d'Adobe Flash pour Firefox](https://blog.mozilla.org/futurereleases/2017/07/25/firefox-roadmap-flash-end-life/) (en anglais)
+- [Annonce de fin de support d'Adobe Flash pour Microsoft Windows](https://blogs.windows.com/msedgedev/2020/09/04/update-adobe-flash-end-support/) (en anglais)

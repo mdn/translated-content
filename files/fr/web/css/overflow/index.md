@@ -1,22 +1,23 @@
 ---
 title: overflow
 slug: Web/CSS/overflow
-translation_of: Web/CSS/overflow
 ---
 
 {{CSSRef}}
 
-La propriété CSS **`overflow`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui définit comment gérer le dépassement du contenu d'un élément dans son bloc. Elle définit les valeurs des propriétés {{cssxref("overflow-x")}} et {{cssxref("overflow-y")}}.
+La propriété CSS **`overflow`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui définit comment gérer le dépassement du contenu d'un élément dans son bloc. Elle définit les valeurs des propriétés {{cssxref("overflow-x")}} et {{cssxref("overflow-y")}}.
 
 {{EmbedInteractiveExample("pages/css/overflow.html")}}
 
-Lorsqu'on utilise la propriété `overflow` avec une autre valeur que `visible` (la valeur par défaut), cela entraîne la création [d'un nouveau contexte de formatage de bloc](/fr/docs/Web/Guide/CSS/Block_formatting_context). Cette création est nécessaire d'un point de vue technique. Ceci est nécessaire techniquement puisque si un élément flottant traverse l'élément avec barres de défilement, cela forcera l'encapsulation du contenu de ce dernier autour de l'élément flottant. L'encapsulation devrait alors se produire après chaque défilement de la barre et mènerait à une expérience utilisateur dégradée
+Lorsqu'on utilise la propriété `overflow` avec une autre valeur que `visible` (la valeur par défaut), cela entraîne la création [d'un nouveau contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context). Cette création est nécessaire d'un point de vue technique. Ceci est nécessaire techniquement puisque si un élément flottant traverse l'élément avec barres de défilement, cela forcera l'encapsulation du contenu de ce dernier autour de l'élément flottant. L'encapsulation devrait alors se produire après chaque défilement de la barre et mènerait à une expérience utilisateur dégradée
 
 Afin que la propriété `overflow` puisse avoir un effet, le conteneur de niveau de bloc doit avoir une hauteur limite (définie grâce à {{cssxref("height")}} ou {{cssxref("max-height")}}) ou avoir `white-space` avec la valeur `nowrap.`
 
-> **Note :** Si on définit un axe avec `visible` (la valeur par défaut) et qu'on définit l'autre axe avec une valeur différente, alors la valeur du premier axe (`visible`) sera considérée comme `auto`.
+> [!NOTE]
+> Si on définit un axe avec `visible` (la valeur par défaut) et qu'on définit l'autre axe avec une valeur différente, alors la valeur du premier axe (`visible`) sera considérée comme `auto`.
 
-> **Note :** Lorsqu'on définit, via un script, la propriété `scrollTop` sur les éléments HTML pertinents, même lorsque `overflow` vaut `hidden`, il faut parfois faire défiler l'élément.
+> [!NOTE]
+> Lorsqu'on définit, via un script, la propriété `scrollTop` sur les éléments HTML pertinents, même lorsque `overflow` vaut `hidden`, il faut parfois faire défiler l'élément.
 
 ## Syntaxe
 
@@ -79,33 +80,37 @@ La propriété `overflow` peut être définie grâce à un ou deux des mots-clé
 #### HTML
 
 ```html
-  <div>
-    <code>visible</code>
-    <p class="visible">
-     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-    </p>
-  </div>
+<div>
+  <code>visible</code>
+  <p class="visible">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+    doloremque laudantium.
+  </p>
+</div>
 
-  <div>
-    <code>hidden</code>
-    <p class="hidden">
-     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-    </p>
-  </div>
+<div>
+  <code>hidden</code>
+  <p class="hidden">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+    doloremque laudantium.
+  </p>
+</div>
 
-  <div>
-    <code>scroll</code>
-    <p class="scroll">
-     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-    </p>
-  </div>
+<div>
+  <code>scroll</code>
+  <p class="scroll">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+    doloremque laudantium.
+  </p>
+</div>
 
-  <div>
-    <code>auto</code>
-    <p class="auto">
-     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-    </p>
-  </div>
+<div>
+  <code>auto</code>
+  <p class="auto">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+    doloremque laudantium.
+  </p>
+</div>
 ```
 
 #### CSS

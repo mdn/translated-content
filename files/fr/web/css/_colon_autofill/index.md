@@ -1,20 +1,14 @@
 ---
-title: ':-webkit-autofill'
+title: :-webkit-autofill
 slug: Web/CSS/:autofill
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:-webkit-autofill
-original_slug: Web/CSS/:-webkit-autofill
 ---
 
 {{CSSRef}}{{Non-standard_header}}
 
 La pseudo-classe **`:-webkit-autofill`** correspond à un élément {{HTMLElement("input")}} lorsque sa valeur est remplie automatiquement par le navigateur.
 
-> **Note :** Pour plusieurs navigateurs, les feuilles de style de l'agent utilisateur utilisent `!important` pour les déclarations avec `:-webkit-autofill` ce qui les rend difficilement modifiables sans utiliser JavaScript.
+> [!NOTE]
+> Pour plusieurs navigateurs, les feuilles de style de l'agent utilisateur utilisent `!important` pour les déclarations avec `:-webkit-autofill` ce qui les rend difficilement modifiables sans utiliser JavaScript.
 
 ## Spécifications
 

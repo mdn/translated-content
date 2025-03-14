@@ -20,8 +20,9 @@ slug: Web/API/Performance/mark
 
 ## 语法
 
-```
-performance.mark(name);
+```js-nolint
+mark(name)
+mark(name, markOptions)
 ```
 
 ### 参数
@@ -64,6 +65,6 @@ performance.clearMarks();
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}

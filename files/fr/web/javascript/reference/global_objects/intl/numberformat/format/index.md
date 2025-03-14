@@ -1,29 +1,34 @@
 ---
 title: Intl.NumberFormat.prototype.format
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - NumberFormat
-  - Propriété
-  - Prototype
-  - Reference
-  - i18n
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/NumberFormat/format
 ---
 
 {{JSRef}}
 
 La méthode **`Intl.NumberFormat.prototype.format()`** formate un nombre en fonction des options de locales et de formats définis dans l'objet {{jsxref("NumberFormat", "Intl.NumberFormat")}} correspondant.
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-format.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.format")}}
+
+```js interactive-example
+const amount = 654321.987;
+
+const options1 = { style: "currency", currency: "RUB" };
+const numberFormat1 = new Intl.NumberFormat("ru-RU", options1);
+
+console.log(numberFormat1.format(amount));
+// Expected output: "654 321,99 ₽"
+
+const options2 = { style: "currency", currency: "USD" };
+const numberFormat2 = new Intl.NumberFormat("en-US", options2);
+
+console.log(numberFormat2.format(amount));
+// Expected output: "$654,321.99"
+```
 
 ## Syntaxe
 
 ```js
-numberFormat.format(nombre)
+numberFormat.format(nombre);
 ```
 
 ### Paramètres
@@ -42,7 +47,7 @@ La fonction d'accesseur `format` permet de formater un nombre donné en une cha�
 On peut utiliser la fonction renvoyée par `format` pour formater une valeur monétaire selon la locale russe :
 
 ```js
-var options = {style: "currency", currency: "RUB"};
+var options = { style: "currency", currency: "RUB" };
 var numberFormat = new Intl.NumberFormat("ru-RU", options);
 console.log(numberFormat.format(654321.987));
 // → "654 321,99 руб."

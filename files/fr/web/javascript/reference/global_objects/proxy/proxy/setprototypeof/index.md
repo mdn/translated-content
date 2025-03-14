@@ -1,28 +1,42 @@
 ---
 title: handler.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Proxy
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/setPrototypeOf
 ---
 
 {{JSRef}}
 
 La méthode **`handler.setPrototypeOf()`** est une trappe pour intercepter {{jsxref("Object.setPrototypeOf()")}}.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-setprototypeof.html", "taller", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.setPrototypeOf()", "taller", "taller")}}
+
+```js interactive-example
+const handler1 = {
+  setPrototypeOf(monster1, monsterProto) {
+    monster1.geneticallyModified = true;
+    return false;
+  },
+};
+
+const monsterProto = {};
+const monster1 = {
+  geneticallyModified: false,
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+// Object.setPrototypeOf(proxy1, monsterProto); // Throws a TypeError
+
+console.log(Reflect.setPrototypeOf(proxy1, monsterProto));
+// Expected output: false
+
+console.log(monster1.geneticallyModified);
+// Expected output: true
+```
 
 ## Syntaxe
 
 ```js
 var p = new Proxy(cible, {
-  setPrototypeOf: function(cible, prototype) {
-  }
+  setPrototypeOf: function (cible, prototype) {},
 });
 ```
 
@@ -64,12 +78,13 @@ Avec cette première approche, toute opération qui voudra modifier le prototype
 
 ```js
 var handlerReturnsFalse = {
-    setPrototypeOf(target, newProto) {
-        return false;
-    }
+  setPrototypeOf(target, newProto) {
+    return false;
+  },
 };
 
-var newProto = {}, target = {};
+var newProto = {},
+  target = {};
 
 var p1 = new Proxy(target, handlerReturnsFalse);
 Object.setPrototypeOf(p1, newProto);
@@ -82,12 +97,13 @@ Avec cette seconde approche, toute tentative de modification génèrera une exce
 
 ```js
 var handlerThrows = {
-    setPrototypeOf(target, newProto) {
-        throw new Error("erreur custom");
-    }
+  setPrototypeOf(target, newProto) {
+    throw new Error("erreur custom");
+  },
 };
 
-var newProto = {}, target = {};
+var newProto = {},
+  target = {};
 
 var p2 = new Proxy(target, handlerThrows);
 Object.setPrototypeOf(p2, newProto);

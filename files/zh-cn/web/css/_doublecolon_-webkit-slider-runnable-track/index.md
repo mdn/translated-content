@@ -1,25 +1,36 @@
 ---
-title: '::-webkit-slider-runnable-track'
+title: ::-webkit-slider-runnable-track
 slug: Web/CSS/::-webkit-slider-runnable-track
+l10n:
+  sourceCommit: f2175c4c2cf9de232ec9b2e1c395903d53ea24a0
 ---
 
-**`::-webkit-slider-runnable-track`**表示其在 type 为 range 的 input 标签内中的滑块凹槽，也就是滑块可滑动的区域
+{{CSSRef}}{{SeeCompatTable}}
 
-### 使用方法
+**`::-webkit-slider-runnable-track`** CSS [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)表示 {{HTMLElement("input/range", '&lt;input type="range"&gt;')}} 中的“轨道”（即，滑块可在其中滑动的凹槽）。
 
-input\[type=range]**`::-webkit-slider-runnable-track`**`{`border-radius: 10px; //为凹槽添加圆角边 background:#eee;//修改背景色`}`
+## 语法
 
-### 规范
+```css
+::-webkit-slider-runnable-track {
+  /* ... */
+}
+```
 
-**`::-webkit-slider-runnable-track`** 不是任何规范的一部分。这是 WebKit/Blink 特有的伪元素 (也就是 chrome/safari 浏览器内核特有的)
+## 规范
 
-### 另请参阅
+不属于任何规范。
 
-- ::-webkit-slider-thumb
-- 与其他浏览器内核功能类似的伪类
+## 浏览器兼容性
 
-  - ::-ms-track
-  - ::-moz-range-track
+{{Compat}}
 
-- [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode: Styling and scripting sliders](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+## 参见
+
+- {{CSSxRef("::-webkit-slider-thumb")}}
+- 其他浏览器使用的与之类似的伪元素：
+
+  - {{CSSxRef("::-moz-range-track")}}
+
+- [CSS-Tricks：使用 CSS 设置跨浏览器兼容的 range 输入的样式](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+- [QuirksMode：为滑块添加样式并设置脚本](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

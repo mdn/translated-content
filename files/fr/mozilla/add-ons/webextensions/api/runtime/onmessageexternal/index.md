@@ -1,20 +1,9 @@
 ---
 title: runtime.onMessageExternal
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onMessageExternal
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal
 ---
 
-{{AddonSidebar()}}Utilisez cet événement pour écouter les messages d'une autre extension.
+{{AddonSidebar}}Utilisez cet événement pour écouter les messages d'une autre extension.
 
 Pour envoyer un message qui sera reçu par le module d'écoute `onMessageExternal`, utilisez {{WebExtAPIRef("runtime.sendMessage()")}}, en transmettant l'ID du destinataire dans le paramètre `extensionId`.
 
@@ -28,9 +17,9 @@ Cette API ne peut pas être utilisée dans un script de contenu.
 ## Syntaxe
 
 ```js
-browser.runtime.onMessageExternal.addListener()
-browser.runtime.onMessageExternal.removeListener(listener)
-browser.runtime.onMessageExternal.hasListener(listener)
+browser.runtime.onMessageExternal.addListener();
+browser.runtime.onMessageExternal.removeListener(listener);
+browser.runtime.onMessageExternal.hasListener(listener);
 ```
 
 Les événements ont trois fonctions:
@@ -69,11 +58,11 @@ Les événements ont trois fonctions:
         To send a response synchronously, call `sendResponse` before the listener function returns. To send a response asynchronously:
 
         - Soit garder une référence à l'argumen `sendResponse` et retourne `true` à partir de la fonction d'écouteur. Vous pourrez ensuite appeler `sendResponse` après le retour de la fonction d'écouteur..
-        - ou retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) de la fonction d'écouteur et résoudre la promesse lorsque la réponse est prête.
+        - ou retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) de la fonction d'écouteur et résoudre la promesse lorsque la réponse est prête.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.onMessageExternal")}}
+{{Compat}}
 
 ## Exemples
 
@@ -83,10 +72,7 @@ Dans cet exemple, l'extension "blue\@mozilla.org" envoie un message à l'extensi
 // sender: browser.runtime.id == "blue@mozilla.org"
 
 // Send a message to the extension whose ID is "red@mozilla.org"
-browser.runtime.sendMessage(
-    "red@mozilla.org",
-    "my message"
-  );
+browser.runtime.sendMessage("red@mozilla.org", "my message");
 ```
 
 ```js
@@ -104,9 +90,9 @@ browser.runtime.onMessageExternal.addListener(handleMessage);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

@@ -1,8 +1,6 @@
 ---
 title: Date.prototype.getUTCSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
-browser-compat: javascript.builtins.Date.getUTCSeconds
 ---
 
 {{JSRef}}
@@ -12,7 +10,7 @@ browser-compat: javascript.builtins.Date.getUTCSeconds
 ## Syntax
 
 ```js
-    dateObj.getUTCSeconds()
+dateObj.getUTCSeconds();
 ```
 
 ### Return value

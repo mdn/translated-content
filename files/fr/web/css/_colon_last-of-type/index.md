@@ -1,11 +1,6 @@
 ---
-title: ':last-of-type'
+title: :last-of-type
 slug: Web/CSS/:last-of-type
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:last-of-type
 ---
 
 {{CSSRef}}
@@ -20,7 +15,8 @@ p:last-of-type {
 }
 ```
 
-> **Note :** Dans la version initiale de la spécification (CSS3), l'élément ciblé devait avoir un parent, ce n'est plus nécessaire depuis (spécification pour les sélecteurs de CSS4).
+> [!NOTE]
+> Dans la version initiale de la spécification (CSS3), l'élément ciblé devait avoir un parent, ce n'est plus nécessaire depuis (spécification pour les sélecteurs de CSS4).
 
 ## Syntaxe
 

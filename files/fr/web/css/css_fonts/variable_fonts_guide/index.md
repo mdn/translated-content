@@ -1,20 +1,14 @@
 ---
 title: Guide des polices variables
-slug: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
-tags:
-  - CSS
-  - Fonts
-  - Guide
-  - Polices
-translation_of: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
-original_slug: Web/CSS/CSS_Fonts/Guide_polices_variables
+slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 ---
 
 {{CSSRef}}
 
 **Les polices variables** sont une évolution de la spécification OpenType et qui permet d'activer différentes variations d'une police dans un seul fichier plutôt que d'avoir différents fichiers pour chaque taille, graisse ou style. En CSS, on peut accéder à l'ensemble des variations en utilisant une seule référence {{cssxref("@font-face")}}. Dans cet article, nous verrons tout ce qu'il faut savoir pour commencer à utiliser les polices variables.
 
-> **Attention :** Afin d'utiliser les polices variables, il faut s'assurer que son système d'exploitation est à jour. Pour les systèmes basés sur GNU/Linux, il faut la version la plus récente de Linux Freetype. Pour macOS, les versions antérieures à 10.13 ne prennent pas en charge les polices variables. Si votre système d'exploitation n'est pas à jour ou ne prend pas en charge les polices variables, vous ne pourrez pas en bénéficier sur le Web ou dans les outils de développement Firefox par exemple.
+> [!WARNING]
+> Afin d'utiliser les polices variables, il faut s'assurer que son système d'exploitation est à jour. Pour les systèmes basés sur GNU/Linux, il faut la version la plus récente de Linux Freetype. Pour macOS, les versions antérieures à 10.13 ne prennent pas en charge les polices variables. Si votre système d'exploitation n'est pas à jour ou ne prend pas en charge les polices variables, vous ne pourrez pas en bénéficier sur le Web ou dans les outils de développement Firefox par exemple.
 
 ## Qu'est-ce qu'une police variable ?
 
@@ -57,11 +51,13 @@ Cette propriété fut le premier mécanisme implémenté pour tester les premiè
 
 1. Les noms d'axes utilisés avec `font-variation-settings` sont sensibles à la casse. Les noms des axes enregistrés doivent être écrits en minuscules et les noms des axes spécifiques doivent être écrits en majuscules. Ainsi, dans ce cas :
 
-    ```css
-    font-variation-settings: 'wght' 375, 'GRAD' 88;
-    ```
+   ```css
+   font-variation-settings:
+     "wght" 375,
+     "GRAD" 88;
+   ```
 
-    `wght` correspondra à l'axe enregistré du même nom et `GRAD` à un axe spécifique.
+   `wght` correspondra à l'axe enregistré du même nom et `GRAD` à un axe spécifique.
 
 2. Si on a défini des valeurs avec `font-variation-settings` et qu'on souhaite changer une de ces valeurs, il sera nécessaire de redéclarer l'ensemble des valeurs (de la même façon qu'on doit redéclarer l'ensemble des caractéristiques OpenType avec {{cssxref("font-feature-settings")}}). Il est possible de contourner cet écueil en utilisant [des propriétés CSS personnalisées](/fr/docs/Web/CSS/Using_CSS_custom_properties) pour les valeurs individuelles et en modifiant uniquement la valeur d'une des propriétés personnalisée (cf. l'exemple en fin d'article).
 
@@ -74,7 +70,7 @@ On notera qu'il n'est pas possible d'utiliser la déclaration `@font-face` afin 
 ```css
 font-weight: 375;
 
-font-variation-settings: 'wght' 375;
+font-variation-settings: "wght" 375;
 ```
 
 Vous pouvez éditer l'exemple CSS suivant pour voir l'effet sur la graisse de la police.
@@ -85,12 +81,13 @@ Vous pouvez éditer l'exemple CSS suivant pour voir l'effet sur la graisse de la
 
 La largeur (indiquée par l'étiquette `wdth`) correspond à l'axe selon lequel les caractères sont plus ou moins étroits ou larges. En CSS, c'est le descripteur {{cssxref("font-stretch")}} qui peut être utilisé avec un pourcentage inférieur ou supérieur à 100% (la largeur « normale ») ou avec n'importe quel nombre positif. Si une valeur numérique est fournie et se situe en dehors de l'intervalle couvert par la police variable, le navigateur devra choisir la valeur la plus proche possible.
 
-> **Note :** Lorsqu'on utilise la notation « bas niveau » avec `font-variation-settings`, on n'écrit pas le caractère %.
+> [!NOTE]
+> Lorsqu'on utilise la notation « bas niveau » avec `font-variation-settings`, on n'écrit pas le caractère %.
 
 ```css
 font-stretch: 115%;
 
-font-variation-settings: 'wdth' 115;
+font-variation-settings: "wdth" 115;
 ```
 
 L'exemple suivant peut être édité pour observer les modifications des valeurs sur cet axe.
@@ -106,7 +103,7 @@ En CSS, l'italique est appliqué grâce à la propriété {{cssxref("font-style"
 ```css
 font-style: italic;
 
-font-variation-settings: 'ital' 1;
+font-variation-settings: "ital" 1;
 
 font-synthesis: none;
 ```
@@ -119,12 +116,13 @@ L'exemple suivant peut être édité pour observer les modifications des valeurs
 
 La pente (indiquée par l'étiquette `slnt`), également appelée « oblique », diffère de l'italique car elle applique une pente sur les caractères mais ne change aucun des glyphes. Cet axe est un intervalle numérique allant généralement de 0 (droit) à 20 degrés. Toutefois, les valeurs allant de -90 et à 90 (degrés) sont autorisées. C'est également le descripteur `font-style` qui peut être utilisé pour cet axe.
 
-> **Note :** Le mot-clé `deg` ne doit pas être utilisé comme unité pour la notation avec `font-variation-settings`.
+> [!NOTE]
+> Le mot-clé `deg` ne doit pas être utilisé comme unité pour la notation avec `font-variation-settings`.
 
 ```css
 font-style: oblique 14deg;
 
-font-variation-settings: 'slnt' 14;
+font-variation-settings: "slnt" 14;
 ```
 
 L'exemple suivant peut être édité pour observer les modifications des valeurs sur cet axe.
@@ -144,7 +142,7 @@ Une nouvelle propriété CSS a été créée afin de prendre en charge cet axe a
 ```css
 font-optical-sizing: auto;
 
-font-variation-settings: 'opsz' 36;
+font-variation-settings: "opsz" 36;
 ```
 
 L'exemple suivant peut être édité pour observer les modifications des valeurs sur cet axe.
@@ -160,7 +158,7 @@ Les axes spécifiques sont introduits spécifiquement par les concepteurs de pol
 Le grade est une variation qui consiste à épaissir certains des traits des glyphes sans agrandir la largeur totale du glyphe. En augmentant le grade, on a ainsi un caractère plus « dense ». Il ne faut pas confondre le corps et le grade : le premier augmente la taille générale, largeur incluse, des glyphes tandis que le second ne modifie pas l'espace physique occupé par le caractère. Le grade est un axe spécifique plutôt populaire car il permet de faire varier la densité apparente du texte sans modifier sa largeur et ainsi il évite de générer un décalage du texte.
 
 ```css
-font-variation-settings: 'GRAD' 88;
+font-variation-settings: "GRAD" 88;
 ```
 
 L'exemple suivant peut être édité pour observer les modifications des valeurs sur cet axe.
@@ -173,59 +171,62 @@ Pour charger une police variable, la syntaxe est proche de celle utilisée pour 
 
 La syntaxe de base est la même mais on peut indiquer la technologie utilisée pour la police ainsi que les intervalles autorisés pour les descripteurs `font-weight` et `font-stretch`.
 
-#### Exemple d'une police standard réale droite :
+#### Exemple d'une police standard réale droite
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
- font-style: normal;
+  font-family: "MyVariableFontName";
+  src: "path/to/font/file/myvariablefont.woff2" format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: normal;
 }
 ```
 
-#### Exemple d'une police avec une forme droite et une forme italique :
+#### Exemple d'une police avec une forme droite et une forme italique
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
- font-style: oblique 0deg 20deg;
+  font-family: "MyVariableFontName";
+  src: "path/to/font/file/myvariablefont.woff2" format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: oblique 0deg 20deg;
 }
 ```
 
-> **Note :** Il n'existe pas de valeur spécifique pour la mesure du degré supérieur. Les valeurs fournies à `font-style` indiquent simplement qu'un axe est présent afin que le navigateur puisse afficher correctement les caractères droits ou en italique.
+> [!NOTE]
+> Il n'existe pas de valeur spécifique pour la mesure du degré supérieur. Les valeurs fournies à `font-style` indiquent simplement qu'un axe est présent afin que le navigateur puisse afficher correctement les caractères droits ou en italique.
 
-#### Exemple d'une police qui ne contient que des italiques et aucun caractère droit :
+#### Exemple d'une police qui ne contient que des italiques et aucun caractère droit
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
- font-style: italic;
+  font-family: "MyVariableFontName";
+  src: "path/to/font/file/myvariablefont.woff2" format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: italic;
 }
 ```
 
-#### Exemple d'une police avec un axe de pente :
+#### Exemple d'une police avec un axe de pente
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
- font-style: oblique 0deg 12deg;
+  font-family: "MyVariableFontName";
+  src: "path/to/font/file/myvariablefont.woff2" format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: oblique 0deg 12deg;
 }
 ```
 
-> **Note :** La syntaxe complète n'est pas implémentée par l'ensemble des navigateurs et il faudra donc tester avec précaution. Tous les navigateurs qui prennent en charge les polices variables sauront les afficher même si seul le format de fichier est indiqué (plutôt que le format complet : par exemple `woff2` à la place de `woff2-variations`), mais mieux vaut utiliser la syntaxe la plus précise si possible.
+> [!NOTE]
+> La syntaxe complète n'est pas implémentée par l'ensemble des navigateurs et il faudra donc tester avec précaution. Tous les navigateurs qui prennent en charge les polices variables sauront les afficher même si seul le format de fichier est indiqué (plutôt que le format complet : par exemple `woff2` à la place de `woff2-variations`), mais mieux vaut utiliser la syntaxe la plus précise si possible.
 
-> **Note :** Fournir des valeurs d'intervalle pour `font-weight`, `font-stretch` et `font-style` empêchera le navigateur d'afficher des polices en dehors de ces intervalles en utilisant les attributs `font-weight` ou `font-stretch`. En revanche, cela ne bloquera pas la syntaxe de plus bas niveau avec `font-variation-settings` !
+> [!NOTE]
+> Fournir des valeurs d'intervalle pour `font-weight`, `font-stretch` et `font-style` empêchera le navigateur d'afficher des polices en dehors de ces intervalles en utilisant les attributs `font-weight` ou `font-stretch`. En revanche, cela ne bloquera pas la syntaxe de plus bas niveau avec `font-variation-settings` !
 
 ## Amélioration progressive et anciens navigateurs
 
@@ -233,13 +234,13 @@ La prise en charge des polices variables peut être vérifié grâce à {{cssxre
 
 ```css
 h1 {
- font-family: some-non-variable-font-family;
+  font-family: some-non-variable-font-family;
 }
 
-@supports (font-variation-settings: 'wdth' 115) {
- h1 {
+@supports (font-variation-settings: "wdth" 115) {
+  h1 {
     font-family: some-variable-font-family;
- }
+  }
 }
 ```
 

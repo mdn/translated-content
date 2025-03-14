@@ -5,17 +5,11 @@ slug: Web/API/Storage/length
 
 {{APIRef("Web Storage API")}}
 
-`length` 是 {{domxref("Storage")}} 接口的只读属性，返回一个整数，表示存储在 `Storage` 对象里的数据项（data items）数量。
+{{domxref("Storage")}} 接口的只读属性 **`length`** 返回存储在一个给定的 `Storage` 对象中的数据项的数量。
 
-## 语法
+## 值
 
-```plain
-var aLength = storage.length;
-```
-
-### 返回值
-
-一个整数。
+`Storage` 对象中存储的数据项数量。
 
 ## 示例
 
@@ -23,15 +17,16 @@ var aLength = storage.length;
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'yellow');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'cats.png');
+  localStorage.setItem("bgcolor", "yellow");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "cats.png");
 
-  localStorage.length; // 返回 3
+  return localStorage.length; // 应该返回 3
 }
 ```
 
-> **备注：** 关于实际的例子，可以查看 [Web Storage Demo](https://github.com/mdn/web-storage-demo).
+> [!NOTE]
+> 有关实际运行的例子，详见 [Web Storage 演示](https://mdn.github.io/dom-examples/web-storage/)。
 
 ## 规范
 

@@ -1,27 +1,27 @@
 ---
 title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
-tags:
-  - Expressions rationnelles
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/match
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/match
 ---
 
 {{JSRef}}
 
 La méthode **`match()`** permet d'obtenir le tableau des correspondances entre la chaîne courante et une expression rationnelle.
 
-{{EmbedInteractiveExample("pages/js/string-match.html")}}
+{{InteractiveExample("JavaScript Demo: String.match()")}}
+
+```js interactive-example
+const paragraph = "The quick brown fox jumps over the lazy dog. It barked.";
+const regex = /[A-Z]/g;
+const found = paragraph.match(regex);
+
+console.log(found);
+// Expected output: Array ["T", "I"]
+```
 
 ## Syntaxe
 
 ```js
-str.match(regexp)
+str.match(regexp);
 ```
 
 ### Paramètres
@@ -40,7 +40,7 @@ Un tableau ({{jsxref("Array")}}) contenant les correspondances et les groupes ca
 
 Comme indiqué ci-avant, les résultats peuvent contenir certaines propriétés supplémentaires :
 
-- `groups` : un tableau de groupes capturants nommés ou {{jsxref("undefined")}} si aucun groupe capturant n'a été défini. Voir [la page sur les groupes et les intervalles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) pour plus d'informations.
+- `groups` : un tableau de groupes capturants nommés ou {{jsxref("undefined")}} si aucun groupe capturant n'a été défini. Voir [la page sur les groupes et les intervalles](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) pour plus d'informations.
 - `index` : l'indice de la chaîne de caractères où a été trouvée la correspondance.
 - `input` : une copie de la chaîne sur laquelle a été effectuée la recherche.
 
@@ -61,7 +61,7 @@ Si l'expression n'utilise pas le drapeau (_flag_) `g`, le résultat obtenu sera 
 Dans l'exemple suivant, on utilise `match()` afin de trouver la chaîne `'Chapitre'` suivie par un ou plusieurs chiffres séparés par des points. L'expression utilisée active le drapeau `i` afin que la casse ne soit pas prise en compte.
 
 ```js
-var str = 'Pour plus d\'informations, voir le chapitre 3.4.5.1';
+var str = "Pour plus d'informations, voir le chapitre 3.4.5.1";
 var re = /(chapitre \d+(\.\d)*)/i;
 var trouvé = str.match(re);
 
@@ -80,7 +80,7 @@ console.log(trouvé);
 Dans cet exemple, on illustre comment utiliser des drapeaux avec l'expression rationnelle qui est un argument de `match()`. Chaque lettre de A à E et de a à e est renvoyée, chacune dans un élément du tableau de résultat.
 
 ```js
-var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 var regexp = /[A-E]/gi;
 var tableau_correspondances = str.match(regexp);
 
@@ -94,11 +94,11 @@ Lorsque le paramètre passé à la fonction est une chaîne de caractères ou un
 
 ```js
 var str1 = "NaN signifie : qui n'est pas un nombre.";
-var str2 = "Mon père a 65 ans."
-str1.match("nombre");   // "nombre" est une chaîne, renvoie ["nombre"]
-str1.match(NaN);        // NaN est de type number, renvoie ["NaN"]
-str2.match(65);         // Renvoie ["65"]
-str2.match(+65);        // Renvoie également ["65"]
+var str2 = "Mon père a 65 ans.";
+str1.match("nombre"); // "nombre" est une chaîne, renvoie ["nombre"]
+str1.match(NaN); // NaN est de type number, renvoie ["NaN"]
+str2.match(65); // Renvoie ["65"]
+str2.match(+65); // Renvoie également ["65"]
 ```
 
 ## Spécifications

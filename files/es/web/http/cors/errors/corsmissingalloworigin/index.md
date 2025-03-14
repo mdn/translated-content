@@ -1,5 +1,5 @@
 ---
-title: 'Reason: CORS header ''Access-Control-Allow-Origin'' missing'
+title: "Reason: CORS header 'Access-Control-Allow-Origin' missing"
 slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 ---
 
@@ -17,19 +17,20 @@ A la respuesta de la solicitud {{Glossary("CORS")}} le falta la requerida cabece
 
 Si el servidor está bajo su control, agregue el origen del sitio solicitado al conjunto de dominios con acceso permitido agregándolo al valor de la cabecera `Access-Control-Allow-Origin`.
 
-Por ejemplo, para permitir a un sitio como `https://amazing.site` acceder al recurso usando CORS, la cabecera deberia ser:
+Por ejemplo, para permitir a un sitio como `https://example.com` acceder al recurso usando CORS, la cabecera deberia ser:
 
-```
-Access-Control-Allow-Origin: https://amazing.site
+```http
+Access-Control-Allow-Origin: https://example.com
 ```
 
-También puede configurar un sitio para permitirle el acceso desde cualquier otro sitio usando el comodín `"*"`. Solamente debería usar esto para APIs públicas. Las APIs privadas nunca deberían usar este comodín, en lugar de eso, se debería especificar un dominio o conjunto de dominios. Adicionalmente, el comodín solamente funciona para consultas con el atributo {{htmlattrxref("crossorigin")}} establecido en `"anonymous"`.
+También puede configurar un sitio para permitirle el acceso desde cualquier otro sitio usando el comodín `"*"`. Solamente debería usar esto para APIs públicas. Las APIs privadas nunca deberían usar este comodín, en lugar de eso, se debería especificar un dominio o conjunto de dominios. Adicionalmente, el comodín solamente funciona para consultas con el atributo [`crossorigin`](/es/docs/Web/HTML/Global_attributes#crossorigin) establecido en `"anonymous"`.
 
-```
+```http
 Access-Control-Allow-Origin: *
 ```
 
-> **Advertencia:** Utilizar el comodín para permitir que todos los sitios accedan a una API privada es una mala idea.
+> [!WARNING]
+> Utilizar el comodín para permitir que todos los sitios accedan a una API privada es una mala idea.
 
 Para permitir que cualquier sitio realice peticiones CORS _sin_ usar el comodín `*` (por ejemplo, para activar credenciales), su servidor deberá leer el valor la cabecera `Origin` de la petición y usar dicho valor para `Access-Control-Allow-Origin` y además declarar una cabecera `Vary: Origin` para indicar que algunas cabeceras están siendo dinámicamente declaradas dependiendo del origen.
 

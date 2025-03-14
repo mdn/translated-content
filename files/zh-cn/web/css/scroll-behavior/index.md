@@ -3,13 +3,66 @@ title: scroll-behavior
 slug: Web/CSS/scroll-behavior
 ---
 
-{{ CSSRef }}
+{{CSSRef}}
 
 当用户手动导航或者 CSSOM scrolling API 触发滚动操作时，[CSS](/zh-CN/docs/Web/CSS) 属性 **`scroll-behavior`** 为一个滚动框指定滚动行为，其他任何的滚动，例如那些由于用户行为而产生的滚动，不受这个属性的影响。在根元素中指定这个属性时，它反而适用于视窗。
 
 {{cssinfo}}
 
-{{EmbedInteractiveExample("pages/css/scroll-behavior.html")}}
+{{InteractiveExample("CSS Demo: scroll-behavior")}}
+
+```css interactive-example-choice
+scroll-behavior: auto;
+```
+
+```css interactive-example-choice
+scroll-behavior: smooth;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="container">
+    <p class="nav">
+      Scroll to:
+      <a href="#pageA">A</a>
+      <a href="#pageB">B</a>
+      <a href="#pageC">C</a>
+    </p>
+    <scroll-container id="example-element">
+      <scroll-page id="pageA">A</scroll-page>
+      <scroll-page id="pageB">B</scroll-page>
+      <scroll-page id="pageC">C</scroll-page>
+    </scroll-container>
+  </div>
+</section>
+```
+
+```css interactive-example
+/* stylelint-disable selector-type-no-unknown */
+.container {
+  flex-direction: column;
+}
+
+.nav a {
+  color: #009e5f;
+}
+
+scroll-container {
+  border: 1px solid black;
+  display: block;
+  height: 200px;
+  overflow-y: scroll;
+  width: 200px;
+}
+
+scroll-page {
+  align-items: center;
+  display: flex;
+  font-size: 5em;
+  height: 100%;
+  justify-content: center;
+}
+```
 
 用户代理可以忽略此属性。
 
@@ -33,11 +86,11 @@ scroll-behavior: unset;
 - `smooth`
   - : 滚动框通过一个用户代理预定义的时长、使用预定义的时间函数，来实现平稳的滚动，用户代理应遵循其平台的约定，如果有的话。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -62,7 +115,8 @@ a {
   width: 50px;
   text-decoration: none;
 }
-nav, scroll-container {
+nav,
+scroll-container {
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -88,9 +142,9 @@ scroll-page {
 }
 ```
 
-### 输出
+### 结果
 
-{{ EmbedLiveSample('Example', "100%", 250) }}
+{{ EmbedLiveSample('示例', "100%", 250) }}
 
 ## 规范
 

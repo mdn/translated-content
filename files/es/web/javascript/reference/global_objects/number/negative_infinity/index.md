@@ -1,15 +1,9 @@
 ---
 title: Number.NEGATIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
-tags:
-  - JavaScript
-  - Number
-  - Property
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/NEGATIVE_INFINITY
 ---
 
-{{JSRef("Objetos_globales", "Number")}}
+{{JSRef}}
 
 ## Resumen
 
@@ -36,17 +30,17 @@ Este valor tiene un comportamiento ligeramente diferente que el del infinito mat
 
 Muchos métodos JavaScript (tales como el constructor del objeto `Number`, `parseFloat`, y `parseInt`) retornan `NaN` si el valor especifico en el párametro es significativamente menor a `Number.MIN_VALUE`.
 
-Podrías utilizar la propiedad `Number.NEGATIVE_INFINITY` para indicar una condición de error que retorne un numero finito en caso de que esto suceda. Note, sin embargo, que [`isFinite`](/es/docs/Referencia_de_JavaScript_1.5/Funciones_globales/isFinite) seria mas apropiado en estos casos.
+Podrías utilizar la propiedad `Number.NEGATIVE_INFINITY` para indicar una condición de error que retorne un numero finito en caso de que esto suceda. Note, sin embargo, que [`isFinite`](/es/docs/Web/JavaScript/Reference/Global_Objects/isFinite) seria mas apropiado en estos casos.
 
 ## Example
 
 En el siguiente ejemplo, a la variable `smallNumber` se le asigna un valor mucho mas pequeño al valor minimo. Cuando la sentencia `if` es ejecutada, `smallNumber` tiene el valor "`-Infinity`", por lo cual a `smallNumber` le es asignado un valor finito mas manejable antes de continuar.
 
 ```js
-var smallNumber = (-Number.MAX_VALUE) * 2
+var smallNumber = -Number.MAX_VALUE * 2;
 
 if (smallNumber === Number.NEGATIVE_INFINITY) {
- smallNumber = returnFinite();
+  smallNumber = returnFinite();
 }
 ```
 
@@ -56,7 +50,7 @@ if (smallNumber === Number.NEGATIVE_INFINITY) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.NEGATIVE_INFINITY")}}
+{{Compat}}
 
 ## Ver también
 

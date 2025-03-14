@@ -1,18 +1,11 @@
 ---
-title: '::after (:after)'
+title: ::after (:after)
 slug: Web/CSS/::after
-tags:
-  - CSS
-  - Layout
-  - Pseudo-element
-  - Reference
-  - Web
-translation_of: Web/CSS/::after
 ---
 
 {{CSSRef}}
 
-CSS에서, **`::after`**는 선택한 요소의 맨 마지막 자식으로 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 하나 생성합니다. 보통 {{cssxref("content")}} 속성과 함께 짝지어, 요소에 장식용 콘텐츠를 추가할 때 사용합니다. 기본값은 인라인입니다.
+CSS에서, **`::after`** 는 선택한 요소의 맨 마지막 자식으로 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 하나 생성합니다. 보통 {{cssxref("content")}} 속성과 함께 짝지어, 요소에 장식용 콘텐츠를 추가할 때 사용합니다. 기본값은 인라인입니다.
 
 ```css
 /* 링크 뒤에 화살표 추가 */
@@ -75,14 +68,14 @@ a::after {
 
 ```css
 .ribbon {
- background-color: #5BC8F7;
+  background-color: #5bc8f7;
 }
 
 .ribbon::after {
- content: "멋진 주황색 상자입니다.";
- background-color: #FFBA10;
- border-color: black;
- border-style: dotted;
+  content: "멋진 주황색 상자입니다.";
+  background-color: #ffba10;
+  border-color: black;
+  border-style: dotted;
 }
 ```
 
@@ -99,9 +92,12 @@ a::after {
 #### HTML
 
 ```html
-<p>이 예제는
-  <span tabindex="0" data-descr="단어와 문장 부호의 집합">텍스트</span>와 함께 약간의
-  <span tabindex="0" data-descr="호버 시 보여지는 작은 팝업">툴팁</span>을 포함합니다.
+<p>
+  이 예제는
+  <span tabindex="0" data-descr="단어와 문장 부호의 집합">텍스트</span>와 함께
+  약간의
+  <span tabindex="0" data-descr="호버 시 보여지는 작은 팝업">툴팁</span>을
+  포함합니다.
 </p>
 ```
 
@@ -111,7 +107,7 @@ a::after {
 span[data-descr] {
   position: relative;
   text-decoration: underline;
-  color: #00F;
+  color: #00f;
   cursor: help;
 }
 

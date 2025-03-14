@@ -1,26 +1,26 @@
 ---
-title: CanvasRenderingContext2D.shadowOffsetX
+title: CanvasRenderingContext2D：shadowOffsetX 属性
 slug: Web/API/CanvasRenderingContext2D/shadowOffsetX
+l10n:
+  sourceCommit: c7edf2734fccb185c5e93ee114ea3d5edc0177b5
 ---
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.shadowOffsetX`** 是 Canvas 2D API 描述阴影水平偏移距离的属性。
+Canvas 2D API 的 **`CanvasRenderingContext2D.shadowOffsetX`** 属性用于描述阴影水平偏移距离。
 
-## Syntax
+> [!NOTE]
+> 只有当 `shadowColor` 属性设置为非透明值时，阴影才会被绘制。其中的 {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}、`shadowOffsetX` 或 {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} 属性中至少有一个必须是非零的。
 
-```
-ctx.shadowOffsetX = offset;
-```
+## 值
 
-- `offset`
-  - : 阴影水平偏移距离的 float 类型的值。默认值是 0。 {{jsxref("Infinity")}} 或者{{jsxref("NaN")}}都会被忽略。
+一个浮点数，指定阴影在水平方向上的偏移距离。正值向右偏移，负值向左偏移。默认值为 `0`（无水平偏移）。{{jsxref("Infinity")}} 和 {{jsxref("NaN")}} 值将被忽略。
 
 ## 示例
 
-### 使用 `shadowOffsetX` 属性
+### 水平移动阴影
 
-这是一段简单的代码片段，使用 `shadowOffsetX` 属性设置阴影的水平偏移量。注意：将 shadowColor 属性设置成不透明，阴影才会被绘制。
+这个例子向一个矩形添加了模糊的阴影。{{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} 属性设置阴影的颜色，`shadowOffsetX` 设置阴影向右偏移 25 个单位，而 {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} 设置阴影的模糊等级为 10。
 
 #### HTML
 
@@ -31,62 +31,24 @@ ctx.shadowOffsetX = offset;
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.shadowColor = "black";
-ctx.shadowOffsetX = 10;
+// 阴影
+ctx.shadowColor = "red";
+ctx.shadowOffsetX = 25;
 ctx.shadowBlur = 10;
 
-ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);
+// 矩形
+ctx.fillStyle = "blue";
+ctx.fillRect(20, 20, 150, 100);
 ```
 
-修改下面的代码并在线查看 canvas 的变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.shadowColor = "black";
-ctx.shadowOffsetX = 10;
-ctx.shadowBlur = 10;
-ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);</textarea>
-```
+{{ EmbedLiveSample('水平移动阴影', 700, 180) }}
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 
@@ -96,7 +58,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 参见
 
-- 接口定义，{{domxref("CanvasRenderingContext2D")}}.
+- 定义该属性的接口：{{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.shadowOffsetY")}}
 - {{domxref("CanvasRenderingContext2D.shadowColor")}}
 - {{domxref("CanvasRenderingContext2D.shadowBlur")}}

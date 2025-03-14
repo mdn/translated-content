@@ -1,12 +1,12 @@
 ---
 title: devtools.network
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.network
 ---
 
 {{AddonSidebar}}
 
-> **メモ:** このページは Firefox 54 に存在する WebExtensions devtools APIs を記述しています。この API は [Chrome devtools APIs](https://developer.chrome.com/extensions/devtools) に基づいていますが、Firefox では実装されていない多くの機能があり、よってここに文書化されていません。現在欠けている機能を見るには、 [Limitations of the devtools APIs](/ja/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs) を見てください。
+> [!NOTE]
+> このページは Firefox 54 に存在する WebExtensions devtools APIs を記述しています。この API は [Chrome devtools APIs](https://developer.chrome.com/extensions/devtools) に基づいていますが、Firefox では実装されていない多くの機能があり、よってここに文書化されていません。現在欠けている機能を見るには、 [Limitations of the devtools APIs](/ja/docs/Mozilla/Add-ons/WebExtensions/Using_the_devtools_APIs#limitations_of_the_devtools_apis) を見てください。
 
 `devtools.network` API によって開発ツール拡張機能では開発ツールが付属しているウィンドウ(インスペクト対象ウィンドウ)に関連するネットワークリクエストの情報を取得できます。
 
@@ -14,18 +14,20 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.network
 
 ## Events
 
-- [`devtools.network.onNavigated`](/ja/Add-ons/WebExtensions/API/devtools.network/onNavigated)
+- [`devtools.network.onNavigated`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network/onNavigated)
   - : ユーザーが新規ページのインスペクト対象ウィンドウに移動した時に発火します
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.devtools.network")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **メモ:** この API は Chromium の [`chrome.devtools.network`](https://developer.chrome.com/extensions/devtools_network) API に基づいています。また、このドキュメントは bookmarks.json における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!NOTE]
+> この API は Chromium の [`chrome.devtools.network`](https://developer.chrome.com/extensions/devtools_network) API に基づいています。また、このドキュメントは bookmarks.json における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -52,4 +54,4 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.network
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

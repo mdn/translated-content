@@ -5,29 +5,27 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/find
 
 {{JSRef}}
 
-如果某个元素满足所提供的测试函数，**`find()`**方法返回类型化数组中的 **值**。否则返回{{jsxref("undefined")}} 。_TypedArray_ 是这里的 [类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
+如果某个元素满足所提供的测试函数，**`find()`** 方法返回类型化数组中的**值**，否则返回 {{jsxref("undefined")}}。_TypedArray_ 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)之一。
 
-同时请参见{{jsxref("TypedArray.findIndex", "findIndex()")}}方法，它返回了类型化数组中所发现元素的 **下标** ，而不是它的值。
+同时请参见 {{jsxref("TypedArray.findIndex", "findIndex()")}} 方法，它返回了类型化数组中所发现元素的**下标**，而不是它的值。
 
 ## 语法
 
-```plain
-typedarray.find(callback[, thisArg])
+```js-nolint
+find(callbackFn)
+find(callbackFn, thisArg)
 ```
 
 ### 参数
 
 - `callback`
-
   - : 用于在类型化数组中的每个元素上执行的函数，接受三个参数：
-
     - `element`
       - : 要处理的类型化数组的当前元素。
     - `index`
       - : 要处理的当前元素在类型化数组中的下标
     - `array`
       - : `find` 在其上调用的类型化数组
-
 - `thisArg`
   - : 可选，执行`callback`时的`this`值。
 
@@ -76,7 +74,7 @@ console.log(uint8.find(isPrime)); // 5
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("TypedArray.prototype.findIndex()")}}
 - {{jsxref("TypedArray.prototype.every()")}}

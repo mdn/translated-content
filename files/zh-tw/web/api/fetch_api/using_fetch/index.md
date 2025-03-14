@@ -13,18 +13,18 @@ slug: Web/API/Fetch_API/Using_Fetch
 
 - `fetch()` 回傳的 promise **不會 reject HTTP 的 error status**，就算是 HTTP 404 或 500 也一樣。相反地，它會正常地 resolve，並把 `ok` status 設為 false。會讓它發生 reject 的只有網路錯誤或其他會中斷 request 的情況。
 - `fetch` **可以接收跨站的 cookies**，你可以用 Fetch 來建立跨站的 session。
-- `fetch` **不會傳送 cookies**，除非你有設定 credentials 的 [init option](/zh-TW/docs/Web/API/fetch#Parameters)。 (Since [Aug 25, 2017](https://github.com/whatwg/fetch/pull/585). The spec changed the default credentials policy to `same-origin`. Firefox changed since 61.0b13.)
+- `fetch` **不會傳送 cookies**，除非你有設定 credentials 的 [init option](/zh-TW/docs/Web/API/Window/fetch#parameters)。 (Since [Aug 25, 2017](https://github.com/whatwg/fetch/pull/585). The spec changed the default credentials policy to `same-origin`. Firefox changed since 61.0b13.)
 
 ## 使用 Fetch 發送請求 ( request )
 
 用法簡單，如下:
 
 ```js
-fetch('http://example.com/movies.json')
-  .then(function(response) {
+fetch("http://example.com/movies.json")
+  .then(function (response) {
     return response.json();
   })
-  .then(function(myJson) {
+  .then(function (myJson) {
     console.log(myJson);
   });
 ```
@@ -35,9 +35,10 @@ fetch('http://example.com/movies.json')
 
 回傳的 response 需要透過 {{domxref("Body.json","json()")}} (在 {{domxref("Body")}} 可以找到定義, Body 是用 {{domxref("Request")}} 和 {{domxref("Response")}} 實作出來的物件.)
 
-> **備註：** 其實 Body 還提供了其他類似的功能可以將內容輸成其他類型格式，詳見[Body](#body)
+> [!NOTE]
+> 其實 Body 還提供了其他類似的功能可以將內容輸成其他類型格式，詳見[Body](#body)
 
-Fetch 請求的安全性 [Content Security Policy](/zh-TW/docs/Security/CSP/CSP_policy_directives)(內容安全策略) 是由 header 中的 `connect-src` directive 所設定 ，並非其他 directive ( 比如：img-src、default-src 等)。
+Fetch 請求的安全性 [Content Security Policy](/zh-TW/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)(內容安全策略) 是由 header 中的 `connect-src` directive 所設定 ，並非其他 directive ( 比如：img-src、default-src 等)。
 
 ### Request 可用的設定值
 
@@ -48,26 +49,25 @@ Fetch 請求的安全性 [Content Security Policy](/zh-TW/docs/Security/CSP/CSP_
 ```js
 // 來發個 POST Request:
 
-postData('http://example.com/answer', {answer: 42})
-  .then(data => console.log(data)) // JSON from `response.json()` call
-  .catch(error => console.error(error))
+postData("http://example.com/answer", { answer: 42 })
+  .then((data) => console.log(data)) // JSON from `response.json()` call
+  .catch((error) => console.error(error));
 
 function postData(url, data) {
   // Default options are marked with *
   return fetch(url, {
     body: JSON.stringify(data), // must match 'Content-Type' header
-    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'same-origin', // include, same-origin, *omit
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "same-origin", // include, same-origin, *omit
     headers: {
-      'user-agent': 'Mozilla/4.0 MDN Example',
-      'content-type': 'application/json'
+      "user-agent": "Mozilla/4.0 MDN Example",
+      "content-type": "application/json",
     },
-    method: 'POST', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, cors, *same-origin
-    redirect: 'follow', // manual, *follow, error
-    referrer: 'no-referrer', // *client, no-referrer
-  })
-  .then(response => response.json()) // 輸出成 json
+    method: "POST", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors", // no-cors, cors, *same-origin
+    redirect: "follow", // manual, *follow, error
+    referrer: "no-referrer", // *client, no-referrer
+  }).then((response) => response.json()); // 輸出成 json
 }
 ```
 
@@ -76,9 +76,9 @@ function postData(url, data) {
 要讓瀏覽器將 credentials 跟著 request 一起送出, 方式就是在 `init` object 加上 `credentials: 'include'`
 
 ```js
-fetch('https://example.com', {
-  credentials: 'include'
-})
+fetch("https://example.com", {
+  credentials: "include",
+});
 ```
 
 如果只想要把 credentials 發送給同源的 URL ，加上`credentials: 'same-origin'`。
@@ -86,17 +86,17 @@ fetch('https://example.com', {
 ```js
 // The calling script is on the origin 'https://example.com'
 
-fetch('https://example.com', {
-  credentials: 'same-origin'
-})
+fetch("https://example.com", {
+  credentials: "same-origin",
+});
 ```
 
 或要確保瀏覽器不會帶著 credentials 請求，可以用 `credentials: 'omit'` 。
 
 ```js
-fetch('https://example.com', {
-  credentials: 'omit'
-})
+fetch("https://example.com", {
+  credentials: "omit",
+});
 ```
 
 ### 上傳 JSON 資料
@@ -104,18 +104,19 @@ fetch('https://example.com', {
 使用 {{domxref("GlobalFetch.fetch","fetch()")}} 來 POST JSON 格式的資料。
 
 ```js
-var url = 'https://example.com/profile';
-var data = {username: 'example'};
+var url = "https://example.com/profile";
+var data = { username: "example" };
 
 fetch(url, {
-  method: 'POST', // or 'PUT'
+  method: "POST", // or 'PUT'
   body: JSON.stringify(data), // data can be `string` or {object}!
   headers: new Headers({
-    'Content-Type': 'application/json'
-  })
-}).then(res => res.json())
-.catch(error => console.error('Error:', error))
-.then(response => console.log('Success:', response));
+    "Content-Type": "application/json",
+  }),
+})
+  .then((res) => res.json())
+  .catch((error) => console.error("Error:", error))
+  .then((response) => console.log("Success:", response));
 ```
 
 ### 上傳檔案
@@ -126,16 +127,16 @@ fetch(url, {
 var formData = new FormData();
 var fileField = document.querySelector("input[type='file']");
 
-formData.append('username', 'abc123');
-formData.append('avatar', fileField.files[0]);
+formData.append("username", "abc123");
+formData.append("avatar", fileField.files[0]);
 
-fetch('https://example.com/profile/avatar', {
-  method: 'PUT',
-  body: formData
+fetch("https://example.com/profile/avatar", {
+  method: "PUT",
+  body: formData,
 })
-.then(response => response.json())
-.catch(error => console.error('Error:', error))
-.then(response => console.log('Success:', response));
+  .then((response) => response.json())
+  .catch((error) => console.error("Error:", error))
+  .then((response) => console.log("Success:", response));
 ```
 
 ### 如何確認 fetch 是否成功
@@ -145,17 +146,23 @@ fetch('https://example.com/profile/avatar', {
 因此, 確認`fetch()`是否成功的正確方式, 應包含檢查 promise resolved, 以及檢查{{domxref("Response.ok")}}的屬性是否為 true. 代碼如下例：
 
 ```js
-fetch('flowers.jpg').then(function(response) {
-  if(response.ok) {
-    return response.blob();
-  }
-  throw new Error('Network response was not ok.');
-}).then(function(myBlob) {
-  var objectURL = URL.createObjectURL(myBlob);
-  myImage.src = objectURL;
-}).catch(function(error) {
-  console.log('There has been a problem with your fetch operation: ', error.message);
-});
+fetch("flowers.jpg")
+  .then(function (response) {
+    if (response.ok) {
+      return response.blob();
+    }
+    throw new Error("Network response was not ok.");
+  })
+  .then(function (myBlob) {
+    var objectURL = URL.createObjectURL(myBlob);
+    myImage.src = objectURL;
+  })
+  .catch(function (error) {
+    console.log(
+      "There has been a problem with your fetch operation: ",
+      error.message,
+    );
+  });
 ```
 
 ### Supplying your own request object
@@ -165,19 +172,23 @@ Instead of passing a path to the resource you want to request into the `fetch()`
 ```js
 var myHeaders = new Headers();
 
-var myInit = { method: 'GET',
-               headers: myHeaders,
-               mode: 'cors',
-               cache: 'default' };
+var myInit = {
+  method: "GET",
+  headers: myHeaders,
+  mode: "cors",
+  cache: "default",
+};
 
-var myRequest = new Request('flowers.jpg', myInit);
+var myRequest = new Request("flowers.jpg", myInit);
 
-fetch(myRequest).then(function(response) {
-  return response.blob();
-}).then(function(myBlob) {
-  var objectURL = URL.createObjectURL(myBlob);
-  myImage.src = objectURL;
-});
+fetch(myRequest)
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (myBlob) {
+    var objectURL = URL.createObjectURL(myBlob);
+    myImage.src = objectURL;
+  });
 ```
 
 `Request()` accepts exactly the same parameters as the `fetch()` method. You can even pass in an existing request object to create a copy of it:
@@ -188,7 +199,8 @@ var anotherRequest = new Request(myRequest, myInit);
 
 This is pretty useful, as request and response bodies are one use only. Making a copy like this allows you to make use of the request/response again, while varying the `init` options if desired. The copy must be made before the body is read, and reading the body in the copy will also mark it as read in the original request.
 
-> **備註：** There is also a {{domxref("Request.clone","clone()")}} method that creates a copy. Both methods of creating a copy will fail if the body of the original request or response has already been read, but reading the body of a cloned response or request will not cause it to be marked as read in the original.
+> [!NOTE]
+> There is also a {{domxref("Request.clone","clone()")}} method that creates a copy. Both methods of creating a copy will fail if the body of the original request or response has already been read, but reading the body of a cloned response or request will not cause it to be marked as read in the original.
 
 ## Headers
 
@@ -235,7 +247,7 @@ All of the Headers methods throw a `TypeError` if a header name is used that is 
 var myResponse = Response.error();
 try {
   myResponse.headers.set("Origin", "http://mybank.com");
-} catch(e) {
+} catch (e) {
   console.log("Cannot pretend to be a bank!");
 }
 ```
@@ -243,15 +255,20 @@ try {
 A good use case for headers is checking whether the content type is correct before you process it further. For example:
 
 ```js
-fetch(myRequest).then(function(response) {
+fetch(myRequest)
+  .then(function (response) {
     var contentType = response.headers.get("content-type");
-    if(contentType && contentType.includes("application/json")) {
+    if (contentType && contentType.includes("application/json")) {
       return response.json();
     }
     throw new TypeError("Oops, we haven't got JSON!");
   })
-  .then(function(json) { /* process your JSON further */ })
-  .catch(function(error) { console.log(error); });
+  .then(function (json) {
+    /* process your JSON further */
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
 ```
 
 ### Guard
@@ -266,7 +283,8 @@ Possible guard values are:
 - `response`: guard for a Headers obtained from a response ({{domxref("Response.headers")}}).
 - `immutable`: Mostly used for ServiceWorkers; renders a headers object read-only.
 
-> **備註：** You may not append or set a `request` guarded Headers’ `Content-Length` header. Similarly, inserting `Set-Cookie` into a response header is not allowed: ServiceWorkers are not allowed to set cookies via synthesized responses.
+> [!NOTE]
+> You may not append or set a `request` guarded Headers' `Content-Length` header. Similarly, inserting `Set-Cookie` into a response header is not allowed: ServiceWorkers are not allowed to set cookies via synthesized responses.
 
 ## Response objects
 
@@ -283,18 +301,20 @@ They can also be created programmatically via JavaScript, but this is only reall
 ```js
 var myBody = new Blob();
 
-addEventListener('fetch', function(event) { // ServiceWorker intercepting a fetch
+addEventListener("fetch", function (event) {
+  // ServiceWorker intercepting a fetch
   event.respondWith(
     new Response(myBody, {
-      headers: { "Content-Type" : "text/plain" }
-    })
+      headers: { "Content-Type": "text/plain" },
+    }),
   );
 });
 ```
 
 The {{domxref("Response.Response","Response()")}} constructor takes two optional arguments — a body for the response, and an init object (similar to the one that {{domxref("Request.Request","Request()")}} accepts.)
 
-> **備註：** The static method {{domxref("Response.error","error()")}} simply returns an error response. Similarly, {{domxref("Response.redirect","redirect()")}} returns a response resulting in a redirect to a specified URL. These are also only relevant to Service Workers.
+> [!NOTE]
+> The static method {{domxref("Response.error","error()")}} simply returns an error response. Similarly, {{domxref("Response.redirect","redirect()")}} returns a response resulting in a redirect to a specified URL. These are also only relevant to Service Workers.
 
 ## Body
 
@@ -320,10 +340,10 @@ This makes usage of non-textual data much easier than it was with XHR.
 Request bodies can be set by passing body parameters:
 
 ```js
-var form = new FormData(document.getElementById('login-form'));
+var form = new FormData(document.getElementById("login-form"));
 fetch("/login", {
   method: "POST",
-  body: form
+  body: form,
 });
 ```
 
@@ -335,28 +355,16 @@ Both request and response (and by extension the `fetch()` function), will try to
 
 ```js
 if (self.fetch) {
-    // run my fetch request here
+  // run my fetch request here
 } else {
-    // do something with XMLHttpRequest?
+  // do something with XMLHttpRequest?
 }
 ```
 
-## Polyfill
-
-在不支援 Fetch 的瀏覽器, 可改用 [Fetch Polyfill](https://github.com/github/fetch) 來重新支持缺少的 fetch 功能。
-
-## 技術指標
-
-{{Specifications}}
-
-## 瀏覽器相容性
-
-{{Compat}}
-
 ## 參見
 
-- [ServiceWorker API](/zh-TW/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-TW/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-TW/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/zh-TW/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-TW/docs/Web/HTTP)
-- [Fetch polyfill](https://github.com/github/fetch)
+- [Fetch polyfill](https://github.com/JakeChampion/fetch)
 - [Fetch examples on Github](https://github.com/mdn/fetch-examples/)

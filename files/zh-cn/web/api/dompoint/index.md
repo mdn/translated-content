@@ -43,9 +43,13 @@ function setView() {
   var posState = gPositionSensor.getState();
 
   if (posState.hasPosition) {
-    posPara.textContent = 'Position: x' + roundToTwo(posState.position.x) + " y"
-                                        + roundToTwo(posState.position.y) + " z"
-                                        + roundToTwo(posState.position.z);
+    posPara.textContent =
+      "Position: x" +
+      roundToTwo(posState.position.x) +
+      " y" +
+      roundToTwo(posState.position.y) +
+      " z" +
+      roundToTwo(posState.position.z);
     xPos = -posState.position.x * WIDTH * 2;
     yPos = posState.position.y * HEIGHT * 2;
 
@@ -57,11 +61,11 @@ function setView() {
   }
 
   /* ... */
-
 }
 ```
 
-> **备注：** See our [positionsensorvrdevice demo](https://github.com/mdn/webvr-tests/blob/gh-pages/positionsensorvrdevice/index.html) for the full code.
+> [!NOTE]
+> See our [positionsensorvrdevice demo](https://github.com/mdn/webvr-tests/blob/gh-pages/positionsensorvrdevice/index.html) for the full code.
 
 ## Specifications
 

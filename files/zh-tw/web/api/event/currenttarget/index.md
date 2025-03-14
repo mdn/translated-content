@@ -12,15 +12,15 @@ slug: Web/API/Event/currentTarget
 `event.currentTarget` 在把相同的事件監聽器，附加到多個元素時，會出現很有趣的事情：
 
 ```js
-function hide(e){
+function hide(e) {
   e.currentTarget.style.visibility = "hidden";
   // 在這個函式用於事件監聽器時： this === e.currentTarget
 }
 
-var ps = document.getElementsByTagName('p');
+var ps = document.getElementsByTagName("p");
 
-for(var i = 0; i < ps.length; i++){
-  ps[i].addEventListener('click', hide, false);
+for (var i = 0; i < ps.length; i++) {
+  ps[i].addEventListener("click", hide, false);
 }
 
 // 單擊四周的話 p 元素就會消失
@@ -36,4 +36,4 @@ for(var i = 0; i < ps.length; i++){
 
 ## 參見
 
-- [事件指向的比較](/zh-TW/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [事件指向的比較](/zh-TW/docs/Learn_web_development/Core/Scripting/Event_bubbling)

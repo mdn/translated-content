@@ -1,8 +1,8 @@
 ---
 title: Node.cloneNode()
 slug: Web/API/Node/cloneNode
-translation_of: Web/API/Node/cloneNode
 ---
+
 {{APIRef("DOM")}}
 
 Метод **`Node.cloneNode()`** возвращает дубликат узла, из которого этот метод был вызван.
@@ -20,20 +20,16 @@ var dupNode = node.cloneNode(deep);
 - _deep {{optional_inline}}_
   - : `true,` если дети узла должны быть клонированы или `false` для того, чтобы был клонирован только указанный узел.
 
-> **Примечание:** в спецификации DOM4 (как реализовано в Gecko 13.0 {{geckoRelease(13)}}), `deep` необязательный аргумент. Если он опущен, метод действует как если бы значение `deep` было **`true`**, по умолчанию используется глубокое клонирование. Для создания поверхностного клонирования, `deep` должен быть установлен как `false`.
->
-> Это поведение было изменено в последней спецификации, и если опущено значение, метод будет действовать как если бы `deep` было **`false`**. Хотя, это все ещё не обязательно, вы всегда должны обеспечить аргументом `deep`, для прямой и обратной совместимости. С Gecko 28.0 {{geckoRelease(28)}}), консоль предупреждает разработчиков не опускать аргумент. Начиная с Gecko 29.0 {{geckoRelease(29)}}), поверхностный клон, по умолчанию, вместо глубокого клона.
-
 ## Пример
 
 ```js
-    var p = document.getElementById("para1");
-    var p_prime = p.cloneNode(true);
+var p = document.getElementById("para1");
+var p_prime = p.cloneNode(true);
 ```
 
 ## Примечание
 
-Клонирование узлов копирует все атрибуты и их значения, в том числе собственных (в линию) перехватчиков. Это не копирует перехватчики событий, добавленных используя [`addEventListener()`](/ru/docs/DOM/element.addEventListener) или тех что назначены через свойства элемента (т.е `node.onclick = fn`).
+Клонирование узлов копирует все атрибуты и их значения, в том числе собственных (в линию) перехватчиков. Это не копирует перехватчики событий, добавленных используя [`addEventListener()`](/ru/docs/Web/API/EventTarget/addEventListener) или тех что назначены через свойства элемента (т.е `node.onclick = fn`).
 
 Дубликат узла, возвращённого `cloneNode()` не является частью документа, пока не будет добавлен в другой узел, который является частью документа, используя {{domxref("Node.appendChild()")}} или другой метод. Кроме того, не имеет родителя, пока не будет добавлен к другому узлу.
 
@@ -47,12 +43,10 @@ var dupNode = node.cloneNode(deep);
 
 Чтобы клонировать узел для добавления к другому документу используйте {{domxref("Document.importNode()")}} вместо этого.
 
+## Спецификации
+
+{{Specifications}}
+
 ## Совместимость с браузерами
 
 {{Compat}}
-
-## Спецификации
-
-- {{Spec("http://w3.org/TR/DOM-Level-2-Core/core.html#ID-3A0ED0A4","DOM Level 2 Core: cloneNode","REC")}}
-- {{Spec("http://w3.org/TR/DOM-Level-3-Core/core.html#ID-3A0ED0A4","DOM Level 3 Core: cloneNode","REC")}}
-- [DOM4: cloneNode](http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-node-clonenode) (черновик)

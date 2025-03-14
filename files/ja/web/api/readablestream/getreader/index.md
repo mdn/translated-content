@@ -1,8 +1,9 @@
 ---
-title: ReadableStream.getReader()
+title: "ReadableStream: getReader() メソッド"
+short-title: getReader()
 slug: Web/API/ReadableStream/getReader
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: d41c5446d4ef257280fae9b78e2298ced8954a95
 ---
 
 {{APIRef("Streams")}}
@@ -28,7 +29,7 @@ getReader(options)
       - : 作成するリーダーの種類を指定するプロパティです。
         値は以下の通り。
 
-        - `"byob"`: 読み取り可能なバイトストリーム（内部ストリームバッファが空のときに、基礎となるバイトソースからリーダーへのゼロコピー転送に対応しているストリーム）を読み取ることができる {{domxref("ReadableStreamBYOBReader")}} を作成します。
+        - `"byob"`: 読み取り可能なバイトストリーム（内部ストリームバッファーが空のときに、基礎となるバイトソースからリーダーへのゼロコピー転送に対応しているストリーム）を読み取ることができる {{domxref("ReadableStreamBYOBReader")}} を作成します。
         - `undefined` （または指定しない場合、既定値）。 これにより、ストリームから個々のチャンクを読み取ることができる {{domxref("ReadableStreamDefaultReader")}} が作成されます。
 
 ### 返値
@@ -55,7 +56,7 @@ function fetchStream() {
   // read() は、値を受け取ったときに解決する promise を返します
   reader.read().then(function processText({ done, value }) {
     // 結果オブジェクトには2つのプロパティが含まれます。
-    // done  - ストリームがすべてのデータを既に提供している場合は true。
+    // done - ストリームがすべてのデータを既に提供している場合は true。
     // value - 一部のデータ。 done が true の場合、常に undefined。
     if (done) {
       console.log("Stream complete");
@@ -66,7 +67,7 @@ function fetchStream() {
     // フェッチしたストリームの値は Uint8Array です
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
+    let listItem = document.createElement("li");
     listItem.textContent = `Received ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list2.appendChild(listItem);
 
@@ -85,3 +86,11 @@ function fetchStream() {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} コンストラクター
+- {{domxref("ReadableStreamDefaultReader")}}
+- {{domxref("ReadableStreamBYOBReader")}}
+- [読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)
+- [読み取り可能なバイトストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams)

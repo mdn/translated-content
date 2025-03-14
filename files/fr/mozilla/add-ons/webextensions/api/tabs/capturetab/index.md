@@ -1,31 +1,21 @@
 ---
 title: tabs.captureTab()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/captureTab
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - captureTab
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/captureTab
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-Crée un URI de données codant une image de la zone visible de l'onglet donné. Vous devez avoir la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `<all_urls>` pour utiliser cette méthode.
+Crée un URI de données codant une image de la zone visible de l'onglet donné. Vous devez avoir la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `<all_urls>` pour utiliser cette méthode.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var capturing = browser.tabs.captureTab(
-  tabId,               // optional integer
-  options              // optional extensionTypes.ImageDetails
-)
+  tabId, // optional integer
+  options, // optional extensionTypes.ImageDetails
+);
 ```
 
 ### Paramètres
@@ -37,7 +27,7 @@ var capturing = browser.tabs.captureTab(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une URL de données qui code une image de la zone visible de l'onglet capturé. Peut être affecté à la propriété 'src' d'un élément HTML Image pour l'affichage. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec une URL de données qui code une image de la zone visible de l'onglet capturé. Peut être affecté à la propriété 'src' d'un élément HTML Image pour l'affichage. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
 ## Exemples
 
@@ -52,7 +42,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(function () {
   var capturing = browser.tabs.captureTab();
   capturing.then(onCaptured, onError);
 });
@@ -60,13 +50,13 @@ browser.browserAction.onClicked.addListener(function() {
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.captureTab")}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

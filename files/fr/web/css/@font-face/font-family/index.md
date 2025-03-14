@@ -1,11 +1,6 @@
 ---
 title: font-family
 slug: Web/CSS/@font-face/font-family
-tags:
-  - CSS
-  - Descripteur
-  - Reference
-translation_of: Web/CSS/@font-face/font-family
 ---
 
 {{CSSRef}}
@@ -18,7 +13,7 @@ Le descripteur **`font-family`** permet aux auteurs d'un document de définir la
 /* Valeurs de chaînes de caractères */
 /* Type <string>                    */
 font-family: "police de caractères a";
-font-family: 'une autre police';
+font-family: "une autre police";
 
 /* Valeur de type <custom-ident> */
 font-family: exemplepolice;
@@ -42,7 +37,7 @@ font-family: exemplepolice;
 ```css
 @font-face {
   font-family: exemplepolice;
-  src: url('exemplepolice.ttf');
+  src: url("exemplepolice.ttf");
 }
 ```
 

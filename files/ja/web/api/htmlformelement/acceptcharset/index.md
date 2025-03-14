@@ -1,13 +1,14 @@
 ---
-title: HTMLFormElement.acceptCharset
+title: "HTMLFormElement: acceptCharset プロパティ"
+short-title: acceptCharset
 slug: Web/API/HTMLFormElement/acceptCharset
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLFormElement.acceptCharset`** プロパティは、指定された {{htmlelement("form")}} 要素で対応している[文字エンコーディング](/ja/docs/Glossary/character_encoding) の一覧を表します。このリストは、カンマ区切りまたはスペース区切りで記述することができます。
+**`HTMLFormElement.acceptCharset`** プロパティは、指定された {{htmlelement("form")}} 要素で対応している[文字エンコーディング](/ja/docs/Glossary/Character_encoding) の一覧を表します。このリストは、カンマ区切りまたはスペース区切りで記述することができます。
 
 ## 値
 
@@ -16,7 +17,7 @@ l10n:
 ## 例
 
 ```js
-let inputs = document.forms['myform'].acceptCharset;
+let inputs = document.forms["myform"].acceptCharset;
 ```
 
 ## 仕様書

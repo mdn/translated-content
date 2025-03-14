@@ -11,7 +11,8 @@ l10n:
 
 このプロパティは {{domxref("PublicKeyCredential.rawId")}} の [base64url エンコード](/ja/docs/Glossary/Base64)版です。
 
-> **メモ:** このプロパティは最上位のコンテキストでのみ使用することができ、例えば {{HTMLElement("iframe")}} では使用することができません。
+> [!NOTE]
+> このプロパティは最上位のコンテキストでのみ使用することができ、例えば {{HTMLElement("iframe")}} では使用することができません。
 
 ## 値
 
@@ -24,22 +25,23 @@ const publicKey = {
   challenge: new Uint8Array(26) /* this actually is given from the server */,
   rp: {
     name: "Example CORP",
-    id  : "login.example.com"
+    id: "login.example.com",
   },
   user: {
-    id: new Uint8Array(26), /* To be changed for each user */
+    id: new Uint8Array(26) /* To be changed for each user */,
     name: "canand@example.com",
     displayName: "Carina Anand",
   },
   pubKeyCredParams: [
     {
       type: "public-key",
-      alg: -7
-    }
-  ]
+      alg: -7,
+    },
+  ],
 };
 
-navigator.credentials.create({ publicKey })
+navigator.credentials
+  .create({ publicKey })
   .then((newCredentialInfo) => {
     const id = newCredentialInfo.id;
     // Do something with the id
@@ -47,8 +49,9 @@ navigator.credentials.create({ publicKey })
     // send attestation response and client extensions
     // to the server to proceed with the registration
     // of the credential
-  }).catch((err) => {
-     console.error(err);
+  })
+  .catch((err) => {
+    console.error(err);
   });
 ```
 

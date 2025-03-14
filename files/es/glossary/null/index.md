@@ -1,10 +1,9 @@
 ---
-title: 'Null'
+title: "Null"
 slug: Glossary/Null
-tags:
-  - Glosario
-translation_of: Glossary/Null
 ---
+
+{{GlossarySidebar}}
 
 En ciencias informáticas, un valor **null** representa una referencia que apunta, generalmente intencionadamente, a una inexistente o inválido {{glossary("objecto","objeto")}} o dirección. El significado de una referencia null varía entre las implementaciones de lenguajes.
 

@@ -1,7 +1,6 @@
 ---
 title: range
 slug: Web/API/Range
-translation_of: Web/API/Range
 ---
 
 {{ ApiRef() }}
@@ -10,7 +9,7 @@ translation_of: Web/API/Range
 
 L'objet `Range` (littéralement : "étendue" ou "portée", ici : "segment") représente un fragment de document qui peut contenir des nœuds et des parties de nœuds texte dans un document donné.
 
-Un segment peut être crée en utilisant la méthode [createRange](/fr/docs/Web/API/document/createRange) de l'objet [document](/fr/docs/Web/API/document). Les objets range peuvent également être récupérés en utilisant la méthode [getRangeAt](/fr/docs/Web/API/Selection/getRangeAt) de l'objet [selection](/fr/docs/Web/API/Selection).
+Un segment peut être crée en utilisant la méthode [createRange](/fr/docs/Web/API/Document/createRange) de l'objet [document](/fr/docs/Web/API/Document). Les objets range peuvent également être récupérés en utilisant la méthode [getRangeAt](/fr/docs/Web/API/Selection/getRangeAt) de l'objet [selection](/fr/docs/Web/API/Selection).
 
 ### Propriétés
 
@@ -33,7 +32,7 @@ Un segment peut être crée en utilisant la méthode [createRange](/fr/docs/Web/
 
 Ces méthodes permettent de définir le début et la fin d'un segment.
 
-- [setStart](/fr/docs/Web/API/range/setStart)
+- [setStart](/fr/docs/Web/API/Range/setStart)
   - : Définit le point de départ d'un segment.
 - [setEnd](/fr/docs/Web/API/range/setEnd)
   - : Définit le point final d'un segment.
@@ -45,7 +44,7 @@ Ces méthodes permettent de définir le début et la fin d'un segment.
   - : Définit le point final d'un segment relativement à un autre nœud.
 - [setEndAfter](/fr/docs/Web/API/range/setEndAfter)
   - : Définit le point final d'un segment relativement à un autre nœud.
-- [selectNode](/fr/docs/Web/API/range/selectNode)
+- [selectNode](/fr/docs/Web/API/Range/selectNode)
   - : Le contenu du segment devient le nœud et son contenu.
 - [selectNodeContents](/fr/docs/Web/API/range/selectNodeContents)
   - : le contenu du segment devient le contenu du nœud.
@@ -60,11 +59,11 @@ Ces méthodes recupèrent les nœuds d'un segment et modifient le contenu d'un s
   - : Renvoie un fragment de document où sont copiés les nœuds d'un segment.
 - [deleteContents](/fr/docs/Web/API/range/deleteContents)
   - : Supprime du document le contenu d'un segment.
-- [extractContents](/fr/docs/Web/API/range/extractContents)
+- [extractContents](/fr/docs/Web/API/Range/extractContents)
   - : Déplace le contenu d'un segment, de l'arbre du document vers un fragment de document.
-- [insertNode](/fr/docs/Web/API/range/insertNode)
+- [insertNode](/fr/docs/Web/API/Range/insertNode)
   - : Insère un nœud au début d'un segment.
-- [surroundContents](/fr/docs/Web/API/range/surroundContents)
+- [surroundContents](/fr/docs/Web/API/Range/surroundContents)
   - : Déplace le contenu d'un segment dans un nouveau nœud.
 
 #### Autres méthodes
@@ -73,7 +72,7 @@ Ces méthodes recupèrent les nœuds d'un segment et modifient le contenu d'un s
   - : Compare les points frontières de deux segments.
 - [cloneRange](/fr/docs/Web/API/range/cloneRange)
   - : Renvoie un objet `Range` avec des points frontières identiques à ceux du segment cloné.
-- [detach](/fr/docs/Web/API/range/detach)
+- [detach](/fr/docs/Web/API/Range/detach)
   - : Supprime le segment afin d'améliorer la performance.
 - [toString](/fr/docs/Web/API/range/toString)
   - : Renvoie le texte du segment.
@@ -86,7 +85,7 @@ Cette section décrit les méthodes de range qui sont particulières à Mozilla 
   - : Renvoie une constante qui indique si le nœud est avant, après, dans ou englobe le segment.
 - [comparePoint](/fr/docs/Web/API/range/comparePoint)
   - : Renvoie -1, 0, ou 1, indiquant si le point se trouve avant, après, ou dans le segment.
-- [createContextualFragment](/fr/docs/Web/API/range/createContextualFragment)
+- [createContextualFragment](/fr/docs/Web/API/Range/createContextualFragment)
   - : Renvoie un fragment de document créé à partir d'un morceau de code donné.
 - [intersectsNode](/fr/docs/Web/API/range/intersectsNode) {{deprecated_inline}}
   - : Renvoie un booléen indiquant si un nœud donné a une intersection avec le segment.

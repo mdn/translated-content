@@ -1,12 +1,11 @@
 ---
-title: ':defined'
+title: :defined
 slug: Web/CSS/:defined
-translation_of: Web/CSS/:defined
 ---
 
 {{ CSSRef }}
 
-[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:defined`** находит любой элемент, который был определён, включая любой стандартный элемент, встроенный в браузер, и [пользовательские элементы](/ru/docs/Web/Web_Components/Использование_пользовательских_элементов) (то есть определённые с помощью метода {{domxref("CustomElementRegistry.define()")}}).
+[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:defined`** находит любой элемент, который был определён, включая любой стандартный элемент, встроенный в браузер, и [пользовательские элементы](/ru/docs/Web/API/Web_components/Using_custom_elements) (то есть определённые с помощью метода {{domxref("CustomElementRegistry.define()")}}).
 
 ```css
 /* Находит любой элемент, который был определён */
@@ -26,21 +25,22 @@ simple-custom:defined {
 
 ## Примеры
 
-Этот пример включает скрипт, определяющий [пользовательский элемент](/ru/docs/Web/Web_Components/Использование_пользовательских_элементов) `<simple-custom>`:
+Этот пример включает скрипт, определяющий [пользовательский элемент](/ru/docs/Web/API/Web_components/Using_custom_elements) `<simple-custom>`:
 
 ```js
-customElements.define('simple-custom',
+customElements.define(
+  "simple-custom",
   class extends HTMLElement {
     constructor() {
       super();
 
-      let divElem = document.createElement('div');
-      divElem.textContent = this.getAttribute('text');
+      let divElem = document.createElement("div");
+      divElem.textContent = this.getAttribute("text");
 
-      let shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(divElem);
-  }
-})
+      let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
+    }
+  },
+);
 ```
 
 Затем мы используем короткий HTML код с элементом `<simple-custom>` и стандартным элементом {{htmlelement("p")}}:
@@ -95,13 +95,13 @@ simple-custom:defined {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Веб-компоненты](ru/docs/Web/Web_Components)
+- [Веб-компоненты](/ru/docs/Web/API/Web_components)
 - {{cssxref(":host")}}
 - {{cssxref(":host()")}}
 - {{cssxref(":host-context()")}}

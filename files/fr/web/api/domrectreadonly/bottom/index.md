@@ -1,14 +1,6 @@
 ---
 title: DOMRectReadOnly.bottom
 slug: Web/API/DOMRectReadOnly/bottom
-tags:
-  - API
-  - Bas
-  - DOM
-  - Géométrie
-  - Propriétés
-  - Rectangle
-translation_of: Web/API/DOMRectReadOnly/bottom
 ---
 
 {{APIRef("DOM")}}{{ SeeCompatTable() }}

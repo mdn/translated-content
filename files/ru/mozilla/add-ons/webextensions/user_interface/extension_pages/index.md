@@ -1,19 +1,13 @@
 ---
 title: Страницы расширения
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
-tags:
-  - UI
-  - WebExtensions
-  - Веб-расширения
-  - Для начинающих
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 В расширение можно добавить HTML-страницы, чтобы предоставить пользователю формы, помощь или другое необходимое содержимое.
 
-![Example of a simple bundled page displayed as a detached panel.](https://mdn.mozillademos.org/files/15752/bundled_page_as_panel_small.png)
+![Example of a simple bundled page displayed as a detached panel.](bundled_page_as_panel_small.png)
 
 Эти страницы получат доступ к привилегированным средствам JavaScript API — таким же как те, что доступны фоновым скриптам расширения. Но каждая из них будет открыта в своей отдельной вкладке — со своей очередью задач JavaScript, своими глобальными переменными и т. д.
 
@@ -41,7 +35,7 @@ let createData = {
   type: "detached_panel",
   url: "panel.html",
   width: 250,
-  height: 100
+  height: 100,
 };
 let creating = browser.windows.create(createData);
 ```
@@ -51,7 +45,7 @@ let creating = browser.windows.create(createData);
 Например, когда пользователь нажмёт на кнопку, можно вызвать функцию {{WebExtAPIRef("windows.remove()")}} и передать ей идентификатор текущего окна:
 
 ```js
-document.getElementById("closeme").addEventListener("click", function(){
+document.getElementById("closeme").addEventListener("click", function () {
   let winId = browser.windows.WINDOW_ID_CURRENT;
   let removing = browser.windows.remove(winId);
 });
@@ -64,7 +58,7 @@ document.getElementById("closeme").addEventListener("click", function(){
 ```js
 function onVisited(historyItem) {
   if (historyItem.url == browser.extension.getURL(myPage)) {
-    browser.history.deleteUrl({url: historyItem.url});
+    browser.history.deleteUrl({ url: historyItem.url });
   }
 }
 

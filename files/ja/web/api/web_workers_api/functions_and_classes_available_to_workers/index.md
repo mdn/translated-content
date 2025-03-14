@@ -26,7 +26,8 @@ l10n:
 
 ## ワーカーで使用できる API
 
-> **メモ:** 掲載されている API に特定のバージョンのプラットフォームが対応している場合、一般にウェブワーカーで動作するとみなすことができます。
+> [!NOTE]
+> 掲載されている API に特定のバージョンのプラットフォームが対応している場合、一般にウェブワーカーで動作するとみなすことができます。
 
 以下の Web API はワーカーで利用することができます。 {{domxref("Broadcast_Channel_API","Broadcast Channel API")}}, {{domxref("Cache", "Cache API")}}, {{domxref("Channel_Messaging_API", "Channel Messaging API")}}, {{domxref("Console API", "Console API")}}, {{domxref("Crypto")}}, {{domxref("CustomEvent")}}, `DOMRequest` と `DOMCursor`, {{domxref("Fetch_API", "Fetch")}}, {{domxref("FileReader")}}, {{domxref("FileReaderSync")}} (only works in workers!), {{domxref("FormData")}}, {{domxref("ImageData")}}, {{domxref("IndexedDB_API", "IndexedDB")}}, [ネットワーク情報 API](/ja/docs/Web/API/Network_Information_API), {{domxref("Notifications_API", "通知", "", 1)}}, {{domxref("Performance")}}, {{domxref("PerformanceEntry")}}, {{domxref("PerformanceMeasure")}}, {{domxref("PerformanceMark")}}, {{domxref("PerformanceObserver")}}, {{domxref("PerformanceResourceTiming")}}, {{jsxref("Promise")}}, [サーバー送信イベント](/ja/docs/Web/API/Server-sent_events), {{domxref("ServiceWorkerRegistration")}}, {{domxref("TextEncoder")}} と {{domxref("TextDecoder")}}, {{ domxref("URL") }}, [WebGL](/ja/docs/Web/API/WebGL_API) と {{domxref("OffscreenCanvas")}}, {{domxref("WebSocket")}}, {{domxref("XMLHttpRequest")}} （ただし `responseXML` および `channel` 属性は常に null）。
 

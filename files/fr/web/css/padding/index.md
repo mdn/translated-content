@@ -1,23 +1,18 @@
 ---
 title: padding
 slug: Web/CSS/padding
-tags:
-  - CSS
-  - Propriété
-  - Propriété raccourcie
-  - Reference
-translation_of: Web/CSS/padding
 ---
 
 {{CSSRef}}
 
-La propriété **`padding`** est [une propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui permet de définir les différents écarts de remplissage sur les quatre côtés d'un élément (cf. [les boîtes CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model#les_propri%c3%a9t%c3%a9s_des_bo%c3%aetes)). Elle synthétise {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}.
+La propriété **`padding`** est [une propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir les différents écarts de remplissage sur les quatre côtés d'un élément (cf. [les boîtes CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model#les_propriétés_des_boîtes)). Elle synthétise {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}.
 
 {{EmbedInteractiveExample("pages/css/padding.html")}}
 
 La [zone de remplissage](/fr/docs/Learn/CSS/Building_blocks/The_box_model) correspond à l'espace entre le contenu de l'élément et sa bordure. Les valeurs négatives ne sont pas autorisées.
 
-> **Note :** Le _padding_ permet de créer un espace supplémentaire à l'intérieur d'un élément. La marge ({{cssxref("margin")}}) permet quant à elle de créer un espace supplémentaire à l'extérieur de l'élément.
+> [!NOTE]
+> Le _padding_ permet de créer un espace supplémentaire à l'intérieur d'un élément. La marge ({{cssxref("margin")}}) permet quant à elle de créer un espace supplémentaire à l'extérieur de l'élément.
 
 ## Syntaxe
 

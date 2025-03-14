@@ -1,8 +1,6 @@
 ---
 title: Héritage
-slug: Web/CSS/inheritance
-l10n:
-  sourceCommit: e7a4b5d88a8cd280bb56132aa386990154aa1beb
+slug: Web/CSS/Inheritance
 ---
 
 {{CSSRef}}
@@ -54,7 +52,7 @@ p {
 
 {{EmbedLiveSample("")}}
 
-Les mots «&nbsp;du texte en emphase&nbsp;» n'ont pas de bordure *en plus* (car la valeur initiale de [`border-style`](/fr/docs/Web/CSS/border-style) est `none`).
+Les mots «&nbsp;du texte en emphase&nbsp;» n'ont pas de bordure _en plus_ (car la valeur initiale de [`border-style`](/fr/docs/Web/CSS/border-style) est `none`).
 
 ## Notes
 
@@ -112,7 +110,7 @@ On voit ici la bordure supplémentaire autour du texte en emphase.
   - [Modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
   - [Modes d'affichage](/fr/docs/Web/CSS/Layout_mode)
   - [Modèles de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
-  - [Fusion des marges](/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Valeurs
     - [Initiales](/fr/docs/Web/CSS/initial_value)
     - [Calculées](/fr/docs/Web/CSS/computed_value)

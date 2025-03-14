@@ -1,8 +1,9 @@
 ---
 title: IIFE
 slug: Glossary/IIFE
-original_slug: Glossario/IIFE
 ---
+
+{{GlossarySidebar}}
 
 **IIFE** (Immediately Invoked Function Expression) é uma função em {{glossary("JavaScript")}} que é executada assim que definida.
 
@@ -16,18 +17,18 @@ A função se torna uma expressão que é imediatamente executada. A variável d
 
 ```js
 (function () {
-    var nome = "Felipe";
+  var nome = "Felipe";
 })();
 // A variável nome não é acessível fora do escopo da expressão
-nome // gerará o erro "Uncaught ReferenceError: nome is not defined"
+nome; // gerará o erro "Uncaught ReferenceError: nome is not defined"
 ```
 
 Atribuir uma IIFE a uma variável não armazenará a função em si, mas o **resultado da função.**
 
 ```js
 var result = (function () {
-    var nome = "Felipe";
-    return nome;
+  var nome = "Felipe";
+  return nome;
 })();
 // Imediatamente gera a saída:
 result; // "Felipe"
@@ -38,8 +39,8 @@ result; // "Felipe"
 ### Aprenda mais sobre IFFE
 
 - [Ben Alman's blog post defining IIFEs](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)
-- [Quick example](/pt-BR/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions) (at the end of the "Functions" section, right before "Custom objects")
+- [Quick example](/pt-BR/docs/Web/JavaScript/Language_overview#functions) (at the end of the "Functions" section, right before "Custom objects")
 
 ### Conhecimentos Gerais
 
-- {{interwiki("wikipedia", "Immediately-invoked function expression", "IIFE")}} on Wikipedia
+- [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) on Wikipedia

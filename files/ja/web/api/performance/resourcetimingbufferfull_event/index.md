@@ -1,55 +1,47 @@
 ---
-title: 'Performance: resourcetimingbufferfull イベント'
+title: "Performance: resourcetimingbufferfull イベント"
+short-title: resourcetimingbufferfull
 slug: Web/API/Performance/resourcetimingbufferfull_event
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef}}
+{{APIRef("Performance API")}}
 
-`resourcetimingbufferfull` イベントは、ブラウザーのリソースタイミングバッファーがいっぱいになると発生します。
+`resourcetimingbufferfull` イベントは、ブラウザーの[リソースタイミングバッファー](/ja/docs/Web/API/Performance/setResourceTimingBufferSize)がいっぱいになると発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>はい</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("Performance.onresourcetimingbufferfull", "onresourcetimingbufferfull")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("resourcetimingbufferfull", (event) => {});
+
+onresourcetimingbufferfull = (event) => {};
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
-次の例では、`onresourcetimingbufferfull` プロパティにコールバック関数を設定します。
+### バッファーが満杯になったときにサイズを拡大
+
+次の例は、 `resourcetimingbufferfull` イベントを待ち受け、 {{domxref("Performance.setResourceTimingBufferSize", "setResourceTimingBufferSize()")}} メソッドを使用してバッファーサイズを増やします。
 
 ```js
-function buffer_full(event) {
-  console.log("WARNING: Resource Timing Buffer is FULL!");
-  performance.setResourceTimingBufferSize(200);
+function increaseFilledBufferSize(event) {
+  console.log(
+    "警告: リソースタイミングバッファーが満杯です。バッファーサイズを 500 に増やします。",
+  );
+  performance.setResourceTimingBufferSize(500);
 }
-function init() {
-  // リソースバッファーが一杯になったときのコールバックを設定
-  performance.onresourcetimingbufferfull = buffer_full;
-}
-<body onload="init()">
-```
 
-addEventListener() 関数を使用してハンドラーを設定することもできます。
-
-```js
-performance.addEventListener('resourcetimingbufferfull', buffer_full);
+performance.addEventListener(
+  "resourcetimingbufferfull",
+  increaseFilledBufferSize,
+);
 ```
 
 ## 仕様書
@@ -62,5 +54,5 @@ performance.addEventListener('resourcetimingbufferfull', buffer_full);
 
 ## 関連情報
 
-- {{domxref("Performance.clearResourceTimings","Performance.clearResourceTimings()")}}
-- {{domxref("Performance.setResourceTimingBufferSize","Performance.setResourceTimingBufferSize()")}}
+- {{domxref("Performance.clearResourceTimings()")}}
+- {{domxref("Performance.setResourceTimingBufferSize()")}}

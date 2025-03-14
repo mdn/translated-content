@@ -1,79 +1,96 @@
 ---
 title: tabs.create()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
+l10n:
+  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-新建一个 tab.
+创建一个新标签页。
 
-这是一个异步函数，返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## 语法
 
-```js
-var creating = browser.tabs.create(
-  createProperties   // object
+```js-nolint
+let creating = browser.tabs.create(
+  createProperties   // 对象
 )
 ```
 
 ### 参数
 
 - `createProperties`
-  - : `object`. Properties to give the new tab. To learn more about these properties, see the {{WebExtAPIRef("tabs.Tab")}} documentation.
-  
-    - `active` {{optional_inline}}
-      - : `boolean`. Whether the tab should become the active tab in the window. Does not affect whether the window is focused (see {{WebExtAPIRef('windows.update')}}). Defaults to `true`.
-    - `cookieStoreId` {{optional_inline}}
-      - : `string`. Use this to create a tab whose cookie store ID is `cookieStoreId`. This option is only available if the extension has the `"cookies"` [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
-    - `index`{{optional_inline}}
-      - : `integer`. The position the tab should take in the window. The provided value will be clamped to between zero and the number of tabs in the window.
-    - `openerTabId`{{optional_inline}}
-      - : `integer`. The ID of the tab that opened this tab. If specified, the opener tab must be in the same window as the newly created tab.
-    - `openInReaderMode`{{optional_inline}}
-      - : `boolean`. If `true`, open this tab in [Reader Mode](/zh-CN/Add-ons/WebExtensions/API/tabs/toggleReaderMode). Defaults to `false`.
-    - `pinned`{{optional_inline}}
-      - : `boolean`. Whether the tab should be pinned. Defaults to `false`.
-    - `selected`{{optional_inline}}
-      - : `boolean`. Whether the tab should become the selected tab in the window. Defaults to `true`.
-        > **警告：** This property is deprecated, and is not supported in Firefox. Use `active` instead.
-    - `url`{{optional_inline}}
-      - : `string`. The URL to navigate the tab to initially. Defaults to the New Tab Page. Fully-qualified URLs must include a scheme (i.e. 'http://www.google.com', not 'www.google.com'). For security reasons, in Firefox, this may not be a privileged URL. So passing any of the following URLs will fail:
-        - chrome: URLs
-        - javascript: URLs
-        - data: URLs
-        - file: URLs (i.e., files on the filesystem. However, to use a file packaged inside the extension, see below)
-        - privileged about: URLs (for example, `about:config`, `about:addons`, `about:debugging`) . Non-privileged URLs (e.g., `about:blank`) are allowed.
-        - The New Tab page (`about:newtab`) can be opened if no value for URL is provided.
 
-        To load a page that's packaged with your extension, specify an absolute URL starting at the extension's manifest.json file. For example: '/path/to/my-page.html'. If you omit the leading '/', the URL is treated as a relative URL, and different browsers may construct different absolute URLs.
-    - `windowId`{{optional_inline}}
-      - : `integer`. The window to create the new tab in. Defaults to the current window.
+  - : `object`。用于设置新标签页的属性。要了解更多这些属性的信息，请参阅 {{WebExtAPIRef("tabs.Tab")}} 文档。
+
+    - `active` {{optional_inline}}
+      - : `boolean`。标签页是否应该成为窗口中的活动标签页。如果为 `false`，则不会产生任何效果。这不影响窗口是否获得焦点（参见 {{WebExtAPIRef('windows.update')}}）。默认为 `true`。
+    - `cookieStoreId` {{optional_inline}}
+      - : `string`。使用此选项创建具有特定 cookie 存储 ID（`cookieStoreId`）的标签页。此选项仅在扩展具有 `"cookies"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)时可用。有关详细信息，请参阅[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
+    - `discarded` {{optional_inline}}
+      - : `boolean`。是否创建并在标签栏中可见的状态下不加载任何内容到内存，即处于弃用状态。当激活标签页时，将加载标签页的内容。
+    - `index` {{optional_inline}}
+      - : `integer`。标签页在窗口中的位置。提供的值将被钳制在零和窗口中的标签数之间。
+    - `muted` {{optional_inline}}
+      - : `boolean`。标签页是否应静音。默认为 `false`。
+    - `openerTabId` {{optional_inline}}
+      - : `integer`。打开此标签页的标签页的 ID。如果指定，打开者标签页必须与新创建的标签页在同一个窗口中。
+    - `openInReaderMode` {{optional_inline}}
+      - : `boolean`。如果为 `true`，在[阅读模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode)中打开此标签页。默认为 `false`。
+    - `pinned` {{optional_inline}}
+      - : `boolean`。标签页是否应固定。默认为 `false`。
+    - `selected` {{optional_inline}}
+
+      - : `boolean`。标签页是否应成为窗口中选择的标签页。默认为 `true`。
+
+        > [!WARNING]
+        > 此属性已弃用，在 Firefox 中不受支持。请改用 `active`。
+
+    - `title` {{optional_inline}}
+      - : `string`。标签页的标题。仅当将标签页创建为 `discarded` 设置为 `true` 时才允许使用。
+    - `url` {{optional_inline}}
+
+      - : `string`。要导航到的标签页的 URL。默认为新标签页。
+
+        完整的 URL 必须包含方案（scheme）（例如，`http://www.google.com` 而不是 `www.google.com`）。
+
+        出于安全原因，在 Firefox 中，可能不允许使用特权 URL。因此，传递以下任何 URL 将失败：
+
+        - chrome：URL
+        - javascript：URL
+        - data：URL
+        - file：URL（即文件系统上的文件。但是，要使用打包在扩展内部的文件，请参见下文）
+        - 特权 about：URL（例如，`about:config`、`about:addons`、`about:debugging`）。非特权 URL（例如 `about:blank`）是允许的。
+
+        要加载扩展打包的页面，请指定从扩展的 manifest.json 文件开始的绝对 URL。例如：`/path/to/my-page.html`。如果省略了前导 `/`，则 URL 将被视为相对 URL，不同的浏览器可能构造不同的绝对 URL。
+
+    - `windowId` {{optional_inline}}
+      - : `integer`。要创建新标签页的窗口。默认为当前窗口。
 
 ### 返回值
 
-A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the created tab. If the tab could not be created (for example, because `url` used a privileged scheme) the promise will be rejected with an error message.
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含有关已创建标签页详细信息的 {{WebExtAPIRef('tabs.Tab')}} 对象。如果无法创建标签页（例如因为 `url` 使用了特权方案），则该 promise 将以错误消息拒绝。
 
-## 浏览器兼容性
+`browser.tabs.create()` 返回的 promise 在标签页创建后立即兑现。标签页可能仍在加载中。要检测标签页何时加载完成，可以监听 {{WebExtAPIRef('tabs.onUpdated')}} 或 {{WebExtAPIRef('webNavigation.onCompleted')}} 事件，然后调用 `tabs.create`。
 
-{{Compat}}
+## 示例
 
-## 实例
-
-在新标签页打开 "https\://example.org" :
+在新标签页中打开 `https://example.org`：
 
 ```js
 function onCreated(tab) {
-  console.log(`Created new tab: ${tab.id}`)
+  console.log(`创建了新标签页：${tab.id}`);
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.log(`发生错误：${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
-  var creating = browser.tabs.create({
-    url:"https://example.org"
+browser.browserAction.onClicked.addListener(() => {
+  let creating = browser.tabs.create({
+    url: "https://example.org",
   });
   creating.then(onCreated, onError);
 });
@@ -81,9 +98,12 @@ browser.browserAction.onClicked.addListener(function() {
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-create) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+## 浏览器兼容性
+
+{{Compat}}
+
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-create) API。本文档内容源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

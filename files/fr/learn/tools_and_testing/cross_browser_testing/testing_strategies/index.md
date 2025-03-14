@@ -1,7 +1,6 @@
 ---
 title: Stratégies pour mener à bien vos tests
 slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -52,7 +51,8 @@ L'objectif est de mettre en place une liste des navigateurs/appareils sur laquel
 
 Tout au long des sections à venir, nous allons mettre en place une liste de support dans ce format.
 
-> **Note :** Yahoo est le premier à avoir rendu cette approche répandue, avec leur approche de [Support de navigateur classé](https://github.com/yui/yui3/wiki/Graded-Browser-Support).
+> [!NOTE]
+> Yahoo est le premier à avoir rendu cette approche répandue, avec leur approche de [Support de navigateur classé](https://github.com/yui/yui3/wiki/Graded-Browser-Support).
 
 ### Déductions logiques
 
@@ -60,7 +60,8 @@ Vous pouvez les appeler "hypothèses" ou "intuitions". Ce n'est pas une approche
 
 Par exemple, si vous habitez en Europe de l'Ouest ou en Amérique du Nord, vous devez savoir que la plupart des gens utilisent des ordinateurs de bureau/portable Windows et Mac, et que les navigateurs principaux sont Chrome, Firefox, Safari, IE, et Edge. Vous n'aurez sûrement besoin que de tester uniquement les dernières versions des trois premiers, étant donné que ces navigateurs reçoivent des mises à jour régulières. Pour Edge et IE vous n'aurez que besoin de tester les deux dernières versions ; ils doivent tous aller dans le niveau de grade A.
 
-> **Note :** Vous ne pouvez avoir qu'une seule version d'IE ou d'Edge installée sur une machine à la fois, vous aurez donc probablement besoin d'utiliser une machine virtuelle, ou une autre stratégie pour faire les tests nécessaires. Voir [Les machines virtuelles](#les_machines_virtuelles) plus tard.
+> [!NOTE]
+> Vous ne pouvez avoir qu'une seule version d'IE ou d'Edge installée sur une machine à la fois, vous aurez donc probablement besoin d'utiliser une machine virtuelle, ou une autre stratégie pour faire les tests nécessaires. Voir [Les machines virtuelles](#les_machines_virtuelles) plus tard.
 
 Beaucoup de personnes utilisent iOS et Android, vous aurez donc aussi besoin de tester les dernières versions d'iOS Safari, les deux dernières versions de l'ancien Android stock browser, et Chrome et Firefox pour iOS et Android. Idéalement, vous devriez tester sur un téléphone et une tablette de chaque système d'exploitation, afin de vous assurer que les designs responsives fonctionnent bien.
 
@@ -74,7 +75,8 @@ Ce qui nous donne pour l'instant la liste de support suivante :
 
 Si vous vivez autre part, ou travaillez sur un site qui va être livré autre part (par ex. dans un pays ou un endroit en particulier), alors vous aurez sûrement des navigateurs communs différents à tester.
 
-> **Note :** "Le PDG de mon entreprise utilise un Blackberry, nous devons donc nous assurer que cela apparaîtra parfaitement sur ce support" peut aussi être un argument persuasif.
+> [!NOTE]
+> "Le PDG de mon entreprise utilise un Blackberry, nous devons donc nous assurer que cela apparaîtra parfaitement sur ce support" peut aussi être un argument persuasif.
 
 ### Les statistiques de support navigateur
 
@@ -118,7 +120,8 @@ Il y a une énorme quantité de donnée que vous pouvez regarder en utilisant Go
 
 Vous devriez aussi vous intéresser aux différentes options du menu gauche, et voir quels types de données vous pouvez trouver. Par exemple, vous pouvez trouver quels navigateurs et quels systèmes d'exploitation vos utilisateurs utilisent en sélectionnant _Audience_ > _Technologie_ > _Navigateur & OS_ du menu gauche.
 
-> **Note :** Lorsque vous utilisez Google Analytics, vous devez pour prévenir des biais trompeurs, par ex. "Nous n'avons aucun utilisateur de Firefox Mobile" peut vous amener à ne pas vous soucier de supporter Firefox Mobile. Mais vous n'allez pas avoir un seul utilisateur de Firefox Mobile si le site ne fonctionnait pas dessus dès le départ.
+> [!NOTE]
+> Lorsque vous utilisez Google Analytics, vous devez pour prévenir des biais trompeurs, par ex. "Nous n'avons aucun utilisateur de Firefox Mobile" peut vous amener à ne pas vous soucier de supporter Firefox Mobile. Mais vous n'allez pas avoir un seul utilisateur de Firefox Mobile si le site ne fonctionnait pas dessus dès le départ.
 
 ### Autres cas
 
@@ -138,7 +141,7 @@ Donc, notre liste de support finale devrait finir par ressemble à ça :
 
 Lorsque vous ajouter une nouveauté à votre code de base qui nécessite d'être testée, avant de commencer vos tests, vous devez rédiger une liste des conditions des tests qui ont besoin de passer pour être admises. Ces conditions peuvent être visuelles ou fonctionnelles — combiner les deux afin de mettre en place une fonctionnalité web utilisable.
 
-Considérez l'exemple suivant (voir le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html), et aussi l'[exemple exécuté en direct](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html)) :
+Considérez l'exemple suivant (voir le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html), et aussi l'[exemple exécuté en direct](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html)) :
 
 ![](sliding-box-demo.png)
 
@@ -190,15 +193,17 @@ Certaines grandes entreprises ont des labos d'appareils qui stockent une sélect
 
 Nous couvrirons chacune des autres options plus bas.
 
-> **Note :** Certains efforts ont été effectué afin de créer des labos d'appareils accessibles au public — voir [Open Device Labs](https://opendevicelab.com/).
+> [!NOTE]
+> Certains efforts ont été effectué afin de créer des labos d'appareils accessibles au public — voir [Open Device Labs](https://opendevicelab.com/).
 
-> **Note :** Nous devons aussi prendre en considération l'accessibilité — il y a plusieurs outils utiles que vous pouvez installer sur votre machine afin de faciliter les tests d'accessibilité, mais nous les couvrirons dans l'article Gestion des problèmes communs d'accessibilité, plus tard dans le cours.
+> [!NOTE]
+> Nous devons aussi prendre en considération l'accessibilité — il y a plusieurs outils utiles que vous pouvez installer sur votre machine afin de faciliter les tests d'accessibilité, mais nous les couvrirons dans l'article Gestion des problèmes communs d'accessibilité, plus tard dans le cours.
 
 ### Les émulateurs
 
 Les émulateurs sont essentiellement des programmes qui s'exécutent à l'intérieur de votre ordinateur et simulent des appareils ou des conditions particulières d'appareil d'un certain type, ils vous permettent de faire certains tests plus aisément qu'en ayant à trouver une combinaison de matériels/logiciels à tester.
 
-Un émulateur peut être aussi simple à tester qu'une condition d'appareil. Par exemple, si vous voulez faire quelques tests rapides et sales de la largeur/hauteur de vos media queries pour le responsive design, vous pouvez utiliser le [Mode Design Responsive](/fr/docs/Tools/Responsive_Design_Mode) de Firefox. Safari possède également un mode similaire, qui peut être activé en allant dans _Safari_ > _Préférences_, et en cochant _Show Develop menu_, puis en choisissant _Develop > Enter Responsive Design Mode_. Chrome propose également quelque chose de similaire : Device mode (voir [Simuler un Appareil Mobile avec le Device Mode](https://developers.google.com/web/tools/chrome-devtools/device-mode/)).
+Un émulateur peut être aussi simple à tester qu'une condition d'appareil. Par exemple, si vous voulez faire quelques tests rapides et sales de la largeur/hauteur de vos media queries pour le responsive design, vous pouvez utiliser le [Mode Design Responsive](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) de Firefox. Safari possède également un mode similaire, qui peut être activé en allant dans _Safari_ > _Préférences_, et en cochant _Show Develop menu_, puis en choisissant _Develop > Enter Responsive Design Mode_. Chrome propose également quelque chose de similaire : Device mode (voir [Simuler un Appareil Mobile avec le Device Mode](https://developers.google.com/web/tools/chrome-devtools/device-mode/)).
 
 Le plus souvent, vous allez devoir installer un émulateur. Les appareils/navigateurs les plus courants que vous allez devoir tester sont les suivants :
 
@@ -211,13 +216,15 @@ Vous pouvez facilement trouver des simulateurs pour les autres environnements d'
 - Vous pouvez simuler [Opera Mini](https://dev.opera.com/articles/installing-opera-mini-on-your-computer/) tel quel si vous voulez le tester.
 - Il y a des émulateurs disponibles pour les OSs Windows Mobile : voir [Les émulateurs pour les Windows Phone 8](<https://msdn.microsoft.com/en-us/library/windows/apps/ff402563(v=vs.105).aspx>) et [Test avec l'Emulateur Microsoft pour Windows 10 Mobile](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/test-with-the-emulator) (il ne fonctionnent que sur Windows).
 
-> **Note :** Beaucoup d'émulateurs requièrent actuellement l'utilisation d'une machine virtuelle (voir en-dessous) ; quand c'est le cas, les instructions sont souvent fournies, et/ou l'utilisation de la machine virtuelle est inclue dans l'installeur de l'émulateur.
+> [!NOTE]
+> Beaucoup d'émulateurs requièrent actuellement l'utilisation d'une machine virtuelle (voir en-dessous) ; quand c'est le cas, les instructions sont souvent fournies, et/ou l'utilisation de la machine virtuelle est inclue dans l'installeur de l'émulateur.
 
 ### Les machines virtuelles
 
 Les machines virtuelles sont des applications qui s'exécutent sur le bureau de votre ordinateur et vous permettent d'exécuter les simulations de tous les systèmes d'exploitation, chacun compartimenté sur son propre disque dur virtuel (souvent représenté par un seul large fichier existant sur le disque dur de la machine hôte). Il y a plusieurs applis de machine virtuelle populaire, comme [Parallels](www.parallels.com/), [VMWare](http://www.vmware.com/), et [Virtual Box](https://www.virtualbox.org/wiki/Downloads); personnellement, nous préférons la dernière, parce qu'elle est gratuite.
 
-> **Note :** Nous avons besoin de beaucoup d'espace disponible sur le disque dur pour exécuter les émulations de machine virtuelle ; chaque système d'exploitation que vous émulez peut prendre beaucoup de mémoire. Vous aurez tendance à choisir l'espace de disque dur que vous voulez pour chaque installation ; vous pouvez vous en sortir avec environ 10Go, mais certaines sources recommandent d'augmenter à 50Go ou plus, alors le système d'exploitation s'éxécutera de façon fiable. Une bonne option fournit par la plupart des applis de machine virtuelle est de créer des disques durs à allocations dynamiques qui grossissent et rétrécissent en fonction que les besoins surviennent.
+> [!NOTE]
+> Nous avons besoin de beaucoup d'espace disponible sur le disque dur pour exécuter les émulations de machine virtuelle ; chaque système d'exploitation que vous émulez peut prendre beaucoup de mémoire. Vous aurez tendance à choisir l'espace de disque dur que vous voulez pour chaque installation ; vous pouvez vous en sortir avec environ 10Go, mais certaines sources recommandent d'augmenter à 50Go ou plus, alors le système d'exploitation s'éxécutera de façon fiable. Une bonne option fournit par la plupart des applis de machine virtuelle est de créer des disques durs à allocations dynamiques qui grossissent et rétrécissent en fonction que les besoins surviennent.
 
 Pour utiliser Virtual Box, vous avez besoin de :
 
@@ -227,17 +234,18 @@ Pour utiliser Virtual Box, vous avez besoin de :
 4. Pour créer une nouvelle machine virtuelle, appuyer sur le bouton _Nouveau_ dans le coin en haut à gauche.
 5. Suivez les instructions et remplissez les boîtes de dialogues suivantes comme il se doit. Vous allez :
 
-    1. Donner un nom à votre machine virtuelle
-    2. Choisir un système d'exploitation et une version que vous allez installer dessus
-    3. Préciser combien de RAM doit être allouée (nous vous recommandons quelque chose comme 2048Mo, ou 2Go)
-    4. Créer un disque dur virtuel (choisissez les options pas défaut à travers les trois boîtes de dialogues contenant _Créer un disque dur virtuel maintenant_, _IDV (image disque virtuelle)_, _Allocation dynamique_)
-    5. Choisissez l'emplacement du fichier et la taille du disque dur virtuel (choisir un nom sensé et un emplacement facile à garder, et pour la dimension préciser quelque chose autour de 50Go, ou autant que vous pensez que c'est nécessaire)
+   1. Donner un nom à votre machine virtuelle
+   2. Choisir un système d'exploitation et une version que vous allez installer dessus
+   3. Préciser combien de RAM doit être allouée (nous vous recommandons quelque chose comme 2048Mo, ou 2Go)
+   4. Créer un disque dur virtuel (choisissez les options pas défaut à travers les trois boîtes de dialogues contenant _Créer un disque dur virtuel maintenant_, _IDV (image disque virtuelle)_, _Allocation dynamique_)
+   5. Choisissez l'emplacement du fichier et la taille du disque dur virtuel (choisir un nom sensé et un emplacement facile à garder, et pour la dimension préciser quelque chose autour de 50Go, ou autant que vous pensez que c'est nécessaire)
 
 Maintenant la nouvelle virtual box devrait apparaître dans le menu gauche de la fenêtre de l'interface principale de Virtual Box. A ce stade, vous pouvez double-cliquer dessus pour ouvrir la virtual box — cela commencera à démarrer la machine virtuelle, mais il n'y aura pas encore le système d'exploitation d'installé. A cet instant vous devez préciser à la boîte de dialogue l'image de votre programme d'installation, et les étapes s'exécuteront une par une dans la machine virtuelle, exactement comme si c'était un vrai ordinateur.
 
 ![](virtualbox-installer.png)
 
-> **Attention :** Vous devez vous assurez que vous avez l'image du système d'exploitation que vous voulez installer sur la machine virtuelle existante à ce stade, et l'installer complètement. Si vous annulé le processus à ce stade, cela peut rendre la machine virtuelle inutilisable, et vous amener à la supprimer et en créer une nouvelle. Ce n'est pas fatal, mais c'est ennuyant.
+> [!WARNING]
+> Vous devez vous assurez que vous avez l'image du système d'exploitation que vous voulez installer sur la machine virtuelle existante à ce stade, et l'installer complètement. Si vous annulé le processus à ce stade, cela peut rendre la machine virtuelle inutilisable, et vous amener à la supprimer et en créer une nouvelle. Ce n'est pas fatal, mais c'est ennuyant.
 
 Une fois que le processus est complété, vous devriez avoir une machine virtuelle exécutant un système d'exploitation à l'intérieur d'une fenêtre sur votre ordinateur hôte.
 
@@ -256,7 +264,8 @@ Avoir plusieurs machines virtuelles est très utile, particulièrement pour les 
 - Windows XP avec IE7
 - Windows XP avec IE6
 
-> **Note :** Une autre bonne chose à propos des machines virtuelles, c'est que les images de disque virtuel sont clairement autonomes. Si vous travaillez en équipe, vous pouvez créer une image disque, puis la copier et vous la passer. Assurez-vous juste d'avoir les licences requises pour exécuter toutes les copies de Windows ou qu'importe ce que vous exécutez, si c'est un produit licencié.
+> [!NOTE]
+> Une autre bonne chose à propos des machines virtuelles, c'est que les images de disque virtuel sont clairement autonomes. Si vous travaillez en équipe, vous pouvez créer une image disque, puis la copier et vous la passer. Assurez-vous juste d'avoir les licences requises pour exécuter toutes les copies de Windows ou qu'importe ce que vous exécutez, si c'est un produit licencié.
 
 ### Automatisation et applis commerciales
 
@@ -286,9 +295,11 @@ Lorsque vous exécutez les tests, cela peut aussi être une bonne idée de :
 
 Ces étapes sont conçues pour s'assurer que le navigateur que vous êtes en train de tester est aussi "pure" que possible. C-à-d qu'il n'y a rien d'installé qui pourrait affecter les résultats des tests.
 
-> **Note :** Une autre option faiblement utile, si vous avez le matériel disponible est de tester vos sites sur des téléphones bas de gammes/d'autres appareils — plus vos sites vont s'agrandir et les fonctionnalités avoir plus d'effets, plus vous avez des chances que votre site subisse des ralentissements, il vous faut donc prendre la performance comme une nouvelle considération importante. Essayer de faire marcher vos fonctionnalités sur des appareils bas de gamme, cela rendra l'expérience bien meilleure sur des appareils haut de gamme.
+> [!NOTE]
+> Une autre option faiblement utile, si vous avez le matériel disponible est de tester vos sites sur des téléphones bas de gammes/d'autres appareils — plus vos sites vont s'agrandir et les fonctionnalités avoir plus d'effets, plus vous avez des chances que votre site subisse des ralentissements, il vous faut donc prendre la performance comme une nouvelle considération importante. Essayer de faire marcher vos fonctionnalités sur des appareils bas de gamme, cela rendra l'expérience bien meilleure sur des appareils haut de gamme.
 
-> **Note :** Certains environnement de développement côté serveur fournissent des mécanismes très utiles pour sortir les modifications sur le site pour seulement un sous-ensemble d'utilisateurs, très utile pour sortir des fonctionnalités testées par un sous-ensemble d'utilisateurs sans avoir besoin de mettre en place un serveur de développement séparé. Un bon exemple est [Django Waffle Flags](https://github.com/jsocol/django-waffle).
+> [!NOTE]
+> Certains environnement de développement côté serveur fournissent des mécanismes très utiles pour sortir les modifications sur le site pour seulement un sous-ensemble d'utilisateurs, très utile pour sortir des fonctionnalités testées par un sous-ensemble d'utilisateurs sans avoir besoin de mettre en place un serveur de développement séparé. Un bon exemple est [Django Waffle Flags](https://github.com/jsocol/django-waffle).
 
 ## Résumé
 
@@ -297,14 +308,3 @@ Après avoir lu cet article vous devriez maintenant avoir une bonne idée de ce 
 La prochaine fois nous tournerons notre attention sur les problèmes concrets de votre code que vos tests peuvent révéler, en commençant avec le HTML et le CSS.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## Dans ce module
-
-- [Introduction to cross browser testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

@@ -1,15 +1,6 @@
 ---
 title: Window.stop()
 slug: Web/API/Window/stop
-tags:
-  - API
-  - DOM
-  - HTML DOM
-  - Méthode
-  - Reference
-  - Window
-  - stop
-translation_of: Web/API/Window/stop
 ---
 
 {{APIRef}}
@@ -21,7 +12,7 @@ En raison de la manière dont les scripts sont exécutés, cette méthode ne peu
 ## Syntaxe
 
 ```js
-window.stop()
+window.stop();
 ```
 
 ## Exemple

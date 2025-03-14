@@ -1,14 +1,10 @@
 ---
 title: Функция
 slug: Glossary/Function
-tags:
-  - JavaScript
-  - Глоссарий
-  - КодингСкриптинг
-  - Функция
-translation_of: Glossary/Function
-original_slug: Глоссарий/Функция
 ---
+
+{{GlossarySidebar}}
+
 **Функция** это отрывок кода который может быть вызван из другого кода или вызван собой, или это {{glossary("variable","переменная")}} которая ссылается на функцию. Когда функция вызвана, {{glossary("argument","аргументы")}} переданы в функцию как вход, и функция может необязательно вернуть вывод. Функция в {{glossary("JavaScript")}} это {{glossary("object","объект")}}.
 
 Имя функции это {{Glossary("identifier","идентификатор")}}, объявленный как часть объявления функции или выражения функции. Имя функции {{Glossary("scope")}} зависит от того является ли имя функции объявлением или выражением.
@@ -30,11 +26,11 @@ function foo() {}
 **Внутренняя функция** это функция внутри другой функции (`square` в данном случае). **Внешняя функция** это функция содержащая функцию (`addSquares` в данном случае):
 
 ```js
-function addSquares(a,b) {
-   function square(x) {
-      return x * x;
-   }
-   return square(a) + square(b);
+function addSquares(a, b) {
+  function square(x) {
+    return x * x;
+  }
+  return square(a) + square(b);
 }
 ```
 
@@ -42,9 +38,8 @@ function addSquares(a,b) {
 
 ```js
 function loop(x) {
-   if (x >= 10)
-      return;
-   loop(x + 1);
+  if (x >= 10) return;
+  loop(x + 1);
 }
 ```
 
@@ -55,13 +50,13 @@ function loop(x) {
 ```js
 // Примеры:
 
-​function foo(){
+function foo(){
  console.log('Здравствуй Foo');
 }();
 
 
 (function foo() {
-​ console.log('Здравствуй Foo');
+ console.log('Здравствуй Foo');
 }());
 
 

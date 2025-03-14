@@ -1,12 +1,11 @@
 ---
 title: CORS_habilitar_imagens
 slug: Web/HTML/CORS_enabled_image
-original_slug: Web/HTML/CORS_imagens_habilitadas
 ---
 
-The HTML specification introduces a {{ htmlattrxref("crossorigin", "img") }} attribute for images that, in combination with an appropriate {{Glossary("CORS")}} header, allows images defined by the {{ HTMLElement("img") }} element that are loaded from foreign origins to be used in canvas as if they were being loaded from the current origin.
+The HTML specification introduces a [`crossorigin`](/pt-BR/docs/Web/HTML/Element/img#crossorigin) attribute for images that, in combination with an appropriate {{Glossary("CORS")}} header, allows images defined by the {{ HTMLElement("img") }} element that are loaded from foreign origins to be used in canvas as if they were being loaded from the current origin.
 
-See [CORS settings attributes](/pt-BR/HTML/CORS_settings_attributes) for details on how the `crossorigin` attribute is used.
+See [CORS settings attributes](/pt-BR/docs/HTML/CORS_settings_attributes) for details on how the `crossorigin` attribute is used.
 
 ## O que é um "contaminado" canvas?
 
@@ -29,31 +28,32 @@ Você precisa ter um servidor hospedando as imagenscom o apropriado Access-Contr
 </IfModule>
 ```
 
-Dado que está tudo classificado, você permiti salvar àquelas imagens no [Armazenamento DOM](/pt-BR/docs/Web/Guide/API/DOM/Storage)
+Dado que está tudo classificado, você permiti salvar àquelas imagens no [Armazenamento DOM](/pt-BR/docs/Web/API/Web_Storage_API)
 
 ```js
-var img = new Image,
-    canvas = document.createElement("canvas"),
-    ctx = canvas.getContext("2d"),
-    src = "http://example.com/image"; // insert image url here
+var img = new Image(),
+  canvas = document.createElement("canvas"),
+  ctx = canvas.getContext("2d"),
+  src = "http://example.com/image"; // insert image url here
 
 img.crossOrigin = "Anonymous";
 
-img.onload = function() {
-    canvas.width = img.width;
-    canvas.height = img.height;
-    ctx.drawImage( img, 0, 0 );
-    localStorage.setItem( "savedImageData", canvas.toDataURL("image/png") );
-}
+img.onload = function () {
+  canvas.width = img.width;
+  canvas.height = img.height;
+  ctx.drawImage(img, 0, 0);
+  localStorage.setItem("savedImageData", canvas.toDataURL("image/png"));
+};
 img.src = src;
 // make sure the load event fires for cached images too
-if ( img.complete || img.complete === undefined ) {
-    img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
-    img.src = src;
+if (img.complete || img.complete === undefined) {
+  img.src =
+    "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+  img.src = src;
 }
 ```
 
 ## Veja também
 
-- [Usando imagens de Cross-domínio em WebGL e Chrome 13](http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
+- [Usando imagens de Cross-domínio em WebGL e Chrome 13](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
 - [Especificações HTML - o atributo crossorigin](http://whatwg.org/html#attr-img-crossorigin)

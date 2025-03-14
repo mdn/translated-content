@@ -1,26 +1,28 @@
 ---
 title: String.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/String/toString
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toString
-browser-compat: javascript.builtins.String.toString
 ---
 
 {{JSRef}}
 
 **`toString()`** 메서드는 객체의 문자열 표현을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/string-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: String.toString()")}}
+
+```js interactive-example
+const stringObj = new String("foo");
+
+console.log(stringObj);
+// Expected output: String { "foo" }
+
+console.log(stringObj.toString());
+// Expected output: "foo"
+```
 
 ## 구문
 
 ```js
-toString()
+toString();
 ```
 
 ### 반환 값
@@ -38,9 +40,9 @@ toString()
 {{jsxref("String")}} 객체의 문자열 값을 표시하는 예제입니다.
 
 ```js
-var x = new String('Hello world')
+var x = new String("Hello world");
 
-console.log(x.toString()) // logs 'Hello world'
+console.log(x.toString()); // logs 'Hello world'
 ```
 
 ## 명세

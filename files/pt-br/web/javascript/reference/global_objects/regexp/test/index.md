@@ -14,7 +14,7 @@ regexObj.test(str)
 ### Parâmetros
 
 - `str`
-  - : A string que confrontará a expressão regular.
+  - : A string que confrontará a expressão regular. Todos os valores são convertidos em strings, portanto, omiti-lo ou passar undefined faz com que test() procure a string "undefined".
 
 ### Retorno
 
@@ -44,34 +44,30 @@ console.log(result); // true
 O exemplo a seguir mostra uma mensagem dependendo do sucesso do teste.
 
 ```js
-function testinput(re, str){
+function testinput(re, str) {
   var midstring;
   if (re.test(str)) {
-    midstring = ' Contém ';
+    midstring = " Contém ";
   } else {
-    midstring = ' não contém ';
+    midstring = " não contém ";
   }
   console.log(str + midstring + re.source);
 }
 ```
 
-## Specificações
+## Especificações
 
-| Specificações                                                                        | Status                   | Comentário                                         |
-| ------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                             | {{Spec2('ES3')}}     | Definição inicial. Implementado no JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.10.6.3', 'RegExp.test')}}             | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-regexp.prototype.test', 'RegExp.test')}} | {{Spec2('ES6')}}     |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.RegExp.test")}}
+{{Compat}}
 
 ## Gecko-specific notes
 
-A priori no Grecko 8.0 {{geckoRelease("8.0")}}, `test()` foi implementado incorretamente; quando chamado sem parâmetros, ele encontrária uma correspondência com o valor de entrada anterior (`RegExp.input` property) no lugar de uma correspondência com `"undefined"`. Isso está conrrigido; agora `/undefined/.test()` resultará em `true`, no lugar de um erro.
+A priori no Grecko 8.0, `test()` foi implementado incorretamente; quando chamado sem parâmetros, ele encontrária uma correspondência com o valor de entrada anterior (`RegExp.input` property) no lugar de uma correspondência com `"undefined"`. Isso está conrrigido; agora `/undefined/.test()` resultará em `true`, no lugar de um erro.
 
 ## See also
 
-- [Regular Expressions](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the [JavaScript Guide](/pt-BR/docs/Web/JavaScript/Guide)
+- [Regular Expressions](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions) chapter in the [JavaScript Guide](/pt-BR/docs/Web/JavaScript/Guide)
 - {{jsxref("RegExp")}}

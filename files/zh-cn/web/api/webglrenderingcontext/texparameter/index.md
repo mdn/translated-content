@@ -9,9 +9,9 @@ slug: Web/API/WebGLRenderingContext/texParameter
 
 ## 语法
 
-```
-void gl.texParameterf(GLenum target, GLenum pname, GLfloat param);
-void gl.texParameteri(GLenum target, GLenum pname, GLint param);
+```js-nolint
+texParameterf(target, pname, param)
+texParameteri(target, pname, param)
 ```
 
 ### 参数
@@ -144,7 +144,11 @@ void gl.texParameteri(GLenum target, GLenum pname, GLint param);
 
 ```js
 gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST);
+gl.texParameteri(
+  gl.TEXTURE_2D,
+  gl.TEXTURE_MIN_FILTER,
+  gl.LINEAR_MIPMAP_NEAREST,
+);
 ```
 
 ## 规范
@@ -155,7 +159,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST)
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.getTexParameter()")}}
 - {{domxref("EXT_texture_filter_anisotropic")}}

@@ -1,12 +1,12 @@
 ---
 title: devtools.panels
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels
 ---
 
 {{AddonSidebar}}
 
-> **メモ:** この API は [Chrome devtools APIs](https://developer.chrome.com/extensions/devtools) に基づいていますが、Firefox では実装されていない多くの機能があり、よってここに文書化されていません。現在欠けている機能を見るには、 [Limitations of the devtools APIs](/ja/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs) を見てください。
+> [!NOTE]
+> この API は [Chrome devtools APIs](https://developer.chrome.com/extensions/devtools) に基づいていますが、Firefox では実装されていない多くの機能があり、よってここに文書化されていません。現在欠けている機能を見るには、 [Limitations of the devtools APIs](/ja/docs/Mozilla/Add-ons/WebExtensions/Using_the_devtools_APIs#limitations_of_the_devtools_apis) を見てください。
 
 `devtools.panels` API によって開発ツール拡張機能では開発ツールウィンドウ内のユーザーインターフェイスの定義ができます。
 
@@ -18,39 +18,41 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels
 
 ## 型
 
-- [`devtools.panels.ElementsPanel`](/ja/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel)
+- [`devtools.panels.ElementsPanel`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel)
   - : ブラウザーの開発ツールの HTML/CSS インスペクターを表す
-- [`devtools.panels.ExtensionPanel`](/ja/Add-ons/WebExtensions/API/devtools.panels/ExtensionPanel)
+- [`devtools.panels.ExtensionPanel`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionPanel)
   - : 拡張機能によって作られた開発ツールパネルを表す
-- [`devtools.panels.ExtensionSidebarPane`](/ja/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane)
+- [`devtools.panels.ExtensionSidebarPane`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane)
   - : ブラウザーの開発ツールの HTML/CSS インスペクターに、拡張機能が追加したペインを表す
 
 ## プロパティ
 
-- [`devtools.panels.elements`](/ja/Add-ons/WebExtensions/API/devtools.panels/elements)
-  - : [`ElementsPanel`](/ja/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel) オブジェクトの参照
-- [`devtools.panels.themeName`](/ja/Add-ons/WebExtensions/API/devtools.panels/themeName)
+- [`devtools.panels.elements`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/elements)
+  - : [`ElementsPanel`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel) オブジェクトの参照
+- [`devtools.panels.themeName`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/themeName)
   - : 現在の開発ツールテーマの名前
 
 ## 関数
 
-- [`devtools.panels.create()`](/ja/Add-ons/WebExtensions/API/devtools.panels/create)
+- [`devtools.panels.create()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/create)
   - : 開発ツールを作成する
 
 ## イベント
 
-- [`devtools.panels.onThemeChanged`](/ja/Add-ons/WebExtensions/API/devtools.panels/onThemeChanged)
+- [`devtools.panels.onThemeChanged`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/onThemeChanged)
   - : 開発ツールテーマが変更された時に発火する
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.devtools.panels", 2)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **メモ:** この API は Chromium の [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!NOTE]
+> この API は Chromium の [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -77,4 +79,4 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

@@ -10,7 +10,7 @@ slug: Web/API/CSSNumericValue/mul
 ## 構文
 
 ```js
-mul(number)
+mul(number);
 ```
 
 ### 引数
@@ -30,7 +30,10 @@ mul(number)
 ## 例
 
 ```js
-let mathSum = CSS.px("23").mul(CSS.percent("4")).mul(CSS.cm("3")).mul(CSS.in("9"));
+let mathSum = CSS.px("23")
+  .mul(CSS.percent("4"))
+  .mul(CSS.cm("3"))
+  .mul(CSS.in("9"));
 // Prints "calc(23px * 4% * 3cm * 9in)"
 console.log(mathSum.toString());
 ```

@@ -7,7 +7,8 @@ slug: Web/API/Event/composed
 
 {{domxref("Event")}} 接口的只读属性 **`composed`** 返回一个 {{jsxref("Boolean")}} 值，用来指示该事件是否可以从 Shadow DOM 传递到一般的 DOM。
 
-> **备注：** 此属性以前命名为`scoped`。
+> [!NOTE]
+> 此属性以前命名为`scoped`。
 
 ## 语法
 
@@ -28,19 +29,19 @@ var composed = Event.composed;
 第一个定义如下所示：
 
 ```js
-customElements.define('open-shadow',
+customElements.define(
+  "open-shadow",
   class extends HTMLElement {
     constructor() {
       super();
 
-      let pElem = document.createElement('p');
-      pElem.textContent = this.getAttribute('text');
+      let pElem = document.createElement("p");
+      pElem.textContent = this.getAttribute("text");
 
-      let shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(pElem);
-
-  }
-});
+      let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(pElem);
+    }
+  },
+);
 ```
 
 我们将他们插入我们的页面当中：
@@ -53,7 +54,7 @@ customElements.define('open-shadow',
 然后在 `html` 标签上监听 click 事件：
 
 ```js
-document.querySelector('html').addEventListener('click',function(e) {
+document.querySelector("html").addEventListener("click", function (e) {
   console.log(e.composed);
   console.log(e.composedPath());
 });
@@ -66,13 +67,13 @@ document.querySelector('html').addEventListener('click',function(e) {
 
 `<open-shadow>` 元素的组合路径是：
 
-```
+```plain
 Array [ p, ShadowRoot, open-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
 ```
 
 而 `<closed-shadow>` 元素的组合路径是：
 
-```
+```plain
 Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
 ```
 

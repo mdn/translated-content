@@ -1,17 +1,16 @@
 ---
 title: box-align
 slug: Web/CSS/box-align
-translation_of: Web/CSS/box-align
-browser-compat: css.properties.box-align
 ---
 
 {{CSSRef}}{{Non-standard_header}}
 
->**Attention :** Cette propriété s'inscrivait dans une ancienne version du standard pour le module CSS sur les boîtes flexibles et a été remplacée dans une nouvelle version du standard.
+> [!WARNING]
+> Cette propriété s'inscrivait dans une ancienne version du standard pour le module CSS sur les boîtes flexibles et a été remplacée dans une nouvelle version du standard.
 
 La propriété [CSS](/fr/docs/Web/CSS) **`box-align`** définit comment un élément aligne son contenu par rapport à l'axe orthogonal à la disposition. L'effet obtenu ne sera visible que s'il y a de l'espace supplémentaire dans la boîte flexible.
 
-Voir la page [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) pour plus d'informations.
+Voir la page [Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) pour plus d'informations.
 
 ```css
 /* Valeurs avec un mot-clé */

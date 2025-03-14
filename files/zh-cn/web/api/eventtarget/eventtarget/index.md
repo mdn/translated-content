@@ -7,7 +7,8 @@ slug: Web/API/EventTarget/EventTarget
 
 **`EventTarget()`** 构造方法将会创建一个新的 {{domxref("EventTarget")}} 对象实例。
 
-> **备注：** 需要显式调用这一构造函数的情况极为少见。在大多数情况下，这一函数是在继承了 {{domxref("EventTarget")}} 类的构造函数中被 [`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 所调用的。
+> [!NOTE]
+> 需要显式调用这一构造函数的情况极为少见。在大多数情况下，这一函数是在继承了 {{domxref("EventTarget")}} 类的构造函数中被 [`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 所调用的。
 
 ## 语法
 
@@ -32,11 +33,13 @@ class MyEventTarget extends EventTarget {
     this._secret = mySecret;
   }
 
-  get secret() { return this._secret; }
-};
+  get secret() {
+    return this._secret;
+  }
+}
 
 let myEventTarget = new MyEventTarget(5);
-let value = myEventTarget.secret;  // === 5
+let value = myEventTarget.secret; // === 5
 myEventTarget.addEventListener("foo", (e) => {
   myEventTarget._secret = e.detail;
 });

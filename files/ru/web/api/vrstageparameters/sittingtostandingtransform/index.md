@@ -1,40 +1,37 @@
 ---
-title: VRStageParameters.sittingToStandingTransform
+title: "VRStageParameters: свойство sittingToStandingTransform"
 slug: Web/API/VRStageParameters/sittingToStandingTransform
-tags:
-  - Виртуальная реальность
-translation_of: Web/API/VRStageParameters/sittingToStandingTransform
+l10n:
+  sourceCommit: ccbc5d4100e0a5de844e060b025883ef1611d7b8
 ---
 
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-Постоянное свойство **`sittingToStandingTransform`** (read-only, только для чтения ) интерфейса {{domxref("VRStageParameters")}} содержит матрицу, которая преобразует матрицы горизонтального вида {{domxref("VRFrameData")}} в вертикальный.
+Доступное только для чтения свойство **`sittingToStandingTransform`** интерфейса {{domxref("VRStageParameters")}} содержит матрицу преобразования {{domxref("VRFrameData")}} из горизонтального вида в вертикальный.
 
-В основном, это может быть передано в ваш кроссплатформенный WebGL-код для преобразования визуализированного вида из горизонтального в вертикальный.
+> [!NOTE]
+> Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Синтаксис
+Обычно это используется для передачи в WebGL-код для преобразования отображения из горизонтального вида в вертикальный.
 
-```js
-var myTransform = vrStageParametersInstance.sittingToStandingTransform;
-```
+### Значение
 
-### Value
+Массив {{domxref ("Float32Array")}}, содержащий компоненты матрицы преобразования 4×4.
 
-16-значный элемент {{domxref ("Float32Array")}}, содержащий компоненты матрицы преобразования вида 4 × 4.
+## Примеры
 
-## Пример
-
-{{page("/Web/API/VRStageParameters", "Examples")}}
+Смотрите примеры использования в [`VRStageParameters`](/ru/docs/Web/API/VRStageParameters#examples).
 
 ## Спецификации
 
-{{Specifications}}
+Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/). Больше не планируется сделать его стандартом.
 
-## Режим совместимости браузера
+Пока все браузеры не реализуют новые [WebXR API](/ru/docs/Web/API/WebXR_Device_API/Fundamentals), рекомендуется использовать такие фреймворки как [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), [Three.js](https://threejs.org/) или [полифил](https://github.com/immersive-web/webxr-polyfill) для разработки приложений WebXR, которые будут работать [во всех браузерах](https://developer.oculus.com/documentation/web/port-vr-xr/).
+
+## Совместимость с браузерами
 
 {{Compat}}
 
-## Дополнительно
+## Смотрите также
 
-- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — демонстрационные, доступные для загрузки и другие материалы команды Mozilla VR team.
+- [WebVR API](/ru/docs/Web/API/WebVR_API)

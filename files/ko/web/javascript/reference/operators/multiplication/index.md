@@ -1,25 +1,32 @@
 ---
 title: 곱하기 (*)
 slug: Web/JavaScript/Reference/Operators/Multiplication
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Multiplication
-browser-compat: javascript.operators.multiplication
 ---
 
 {{jsSidebar("Operators")}}
 
 곱하기 연산자(`*`)는 두 연산자의 곱을 구합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-multiplication.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Multiplication operator")}}
+
+```js interactive-example
+console.log(3 * 4);
+// Expected output: 12
+
+console.log(-3 * 4);
+// Expected output: -12
+
+console.log("3" * 2);
+// Expected output: 6
+
+console.log("foo" * 2);
+// Expected output: NaN
+```
 
 ## 구문
 
 ```js
-x * y
+x * y;
 ```
 
 ## 예제
@@ -27,21 +34,21 @@ x * y
 ### 곱셈
 
 ```js
- 2 * 2     // 4
--2 * 2     // -4
+2 * 2; // 4
+-2 * 2; // -4
 ```
 
 ### Infinity 곱하기
 
 ```js
-Infinity * 0         // NaN
-Infinity * Infinity  // Infinity
+Infinity * 0; // NaN
+Infinity * Infinity; // Infinity
 ```
 
 ### 숫자가 아닌 경우
 
 ```js
-'foo' * 2 // NaN
+"foo" * 2; // NaN
 ```
 
 ## 명세

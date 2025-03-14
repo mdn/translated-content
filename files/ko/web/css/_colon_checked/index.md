@@ -1,13 +1,6 @@
 ---
-title: ':checked'
+title: :checked
 slug: Web/CSS/:checked
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Web
-translation_of: Web/CSS/:checked
 ---
 
 {{CSSRef}}
@@ -24,7 +17,8 @@ translation_of: Web/CSS/:checked
 
 사용자가 요소를 체크했거나 선택한 경우 활성화되고, 체크나 선택을 해제하는 경우 비활성화됩니다.
 
-> **참고:** 많은 경우 브라우저는 `<option>` 요소를 [대체 요소](/ko/docs/Web/CSS/Replaced_element)로 취급하므로, `:checked` 의사 클래스를 사용한 스타일을 적용할 수 있는 범위도 브라우저마다 다릅니다.
+> [!NOTE]
+> 많은 경우 브라우저는 `<option>` 요소를 [대체 요소](/ko/docs/Web/CSS/Replaced_element)로 취급하므로, `:checked` 의사 클래스를 사용한 스타일을 적용할 수 있는 범위도 브라우저마다 다릅니다.
 
 ## 구문
 
@@ -38,15 +32,15 @@ translation_of: Web/CSS/:checked
 
 ```html
 <div>
-  <input type="radio" name="my-input" id="yes">
+  <input type="radio" name="my-input" id="yes" />
   <label for="yes">Yes</label>
 
-  <input type="radio" name="my-input" id="no">
+  <input type="radio" name="my-input" id="no" />
   <label for="no">No</label>
 </div>
 
 <div>
-  <input type="checkbox" name="my-checkbox" id="opt-in">
+  <input type="checkbox" name="my-checkbox" id="opt-in" />
   <label for="opt-in">Check me!</label>
 </div>
 
@@ -102,14 +96,38 @@ option:checked {
 
 <table>
   <thead>
-    <tr><th>Column #1</th><th>Column #2</th><th>Column #3</th></tr>
+    <tr>
+      <th>Column #1</th>
+      <th>Column #2</th>
+      <th>Column #3</th>
+    </tr>
   </thead>
   <tbody>
-    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
-    <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
-    <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
-    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
-    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
+    <tr class="expandable">
+      <td>[more text]</td>
+      <td>[more text]</td>
+      <td>[more text]</td>
+    </tr>
+    <tr>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+    </tr>
+    <tr>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+    </tr>
+    <tr class="expandable">
+      <td>[more text]</td>
+      <td>[more text]</td>
+      <td>[more text]</td>
+    </tr>
+    <tr class="expandable">
+      <td>[more text]</td>
+      <td>[more text]</td>
+      <td>[more text]</td>
+    </tr>
   </tbody>
 </table>
 

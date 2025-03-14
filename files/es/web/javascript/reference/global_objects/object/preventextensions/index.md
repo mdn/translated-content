@@ -1,8 +1,6 @@
 ---
 title: Object.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/preventExtensions
 ---
 
 {{JSRef}}
@@ -48,13 +46,13 @@ Object.isExtensible(empty); // === false
 // una propiedad nueva a un objeto no-extendible.
 var nonExtensible = { removable: true };
 Object.preventExtensions(nonExtensible);
-Object.defineProperty(nonExtensible, 'new', { value: 8675309 }); // arroja TypeError
+Object.defineProperty(nonExtensible, "new", { value: 8675309 }); // arroja TypeError
 
 // En modo estricto, tratar de agregar propiedades nuevas
 // a un objeto no-extensible arroja una excepción TypeError.
 function fail() {
-  'use strict';
-  nonExtensible.newProperty = 'FAIL'; // arroja TypeError
+  "use strict";
+  nonExtensible.newProperty = "FAIL"; // arroja TypeError
 }
 fail();
 
@@ -62,7 +60,7 @@ fail();
 // (el cual esta obsoleto. Usar Object.getPrototypeOf en su lugar)):
 // La propiedad prototype de un objeto no-extendible es inmutable.
 var fixed = Object.preventExtensions({});
-fixed.__proto__ = { oh: 'hai' }; // arroja TypeError
+fixed.__proto__ = { oh: "hai" }; // arroja TypeError
 ```
 
 ## Notas
@@ -81,9 +79,9 @@ Object.preventExtensions(1);
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.preventExtensions")}}
+{{Compat}}
 
 ## Mira también
 

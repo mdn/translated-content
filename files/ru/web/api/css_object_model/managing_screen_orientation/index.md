@@ -1,22 +1,16 @@
 ---
 title: Разбираемся с ориентацией экрана
 slug: Web/API/CSS_Object_Model/Managing_screen_orientation
-tags:
-  - Ориентация экрана
-  - Положение экрана
-  - Руководство
-translation_of: Web/API/CSS_Object_Model/Managing_screen_orientation
-original_slug: Web/API/CSS_Object_Model/ориентация_экрана
 ---
 
 {{DefaultAPISidebar("Screen Orientation API")}}{{SeeCompatTable}}
 
-Ориентация экрана не идентична [ориентации устройства](/ru/docs/WebAPI/Detecting_device_orientation).
+Ориентация экрана не идентична [ориентации устройства](/ru/docs/Web/API/Device_orientation_events/Detecting_device_orientation).
 Даже если устройство не способно определить своё положение в пространстве — экран может всегда. А когда устройство знает свою ориентацию, хорошо бы иметь возможность управлять ориентацией экрана для
 сохранения или адаптации интерфейса веб-приложения.
 
 Управление ориентацией экрана доступно в CSS и JavaScript.
-Например, [использование медиавыражений](/ru/docs/Web/CSS/Media_Queries/Using_media_queries) позволяет контенту адаптироваться с помощью CSS в зависимости от того, в каком режиме просмотра находится браузер: альбомный (горизонтальный, когда ширина экрана больше высоты) или портретный (вертикальный, высота экрана больше ширины).
+Например, [использование медиавыражений](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries) позволяет контенту адаптироваться с помощью CSS в зависимости от того, в каком режиме просмотра находится браузер: альбомный (горизонтальный, когда ширина экрана больше высоты) или портретный (вертикальный, высота экрана больше ширины).
 
 Для определения положения экрана и его блокировки можно воспользоваться _JavaScript Screen orientation API_.
 
@@ -33,7 +27,12 @@ original_slug: Web/API/CSS_Object_Model/ориентация_экрана
   <li>C</li>
 </ul>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut interdum tristique dapibus. Nullam quis malesuada est.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec
+  sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt
+  leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut
+  interdum tristique dapibus. Nullam quis malesuada est.
+</p>
 ```
 
 Соответствующий CSS:
@@ -41,8 +40,9 @@ original_slug: Web/API/CSS_Object_Model/ориентация_экрана
 ```css
 /* Сначала зададим простые стили */
 
-html, body {
-  width : 100%;
+html,
+body {
+  width: 100%;
   height: 100%;
 }
 
@@ -54,17 +54,17 @@ body {
 }
 
 p {
-  font   : 1em sans-serif;
-  margin : 0;
-  padding: .5em;
+  font: 1em sans-serif;
+  margin: 0;
+  padding: 0.5em;
 }
 
 ul {
   list-style: none;
 
-  font   : 1em monospace;
-  margin : 0;
-  padding: .5em;
+  font: 1em monospace;
+  margin: 0;
+  padding: 0.5em;
 
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -74,7 +74,7 @@ ul {
 
 li {
   display: inline-block;
-  margin : 0;
+  margin: 0;
   padding: 0.5em;
   background: white;
 }
@@ -105,22 +105,24 @@ li {
   }
 
   li + li {
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 }
 ```
 
 Результат:
 
-| Портретный режим просмотра                                                                                                                                                           | Альбомный режим просмотра                                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Портретный режим просмотра                                                              | Альбомный режим просмотра                                                               |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | {{ EmbedLiveSample('Настройка_раскладки_содержимого_по_ориентации_экрана', 180, 350) }} | {{ EmbedLiveSample('Настройка_раскладки_содержимого_по_ориентации_экрана', 350, 180) }} |
 
-> **Примечание:** Медиавыражение по ориентации ссылается на окно браузера (соотношение его размеров), а не на ориентацию устройства.
+> [!NOTE]
+> Медиавыражение по ориентации ссылается на окно браузера (соотношение его размеров), а не на ориентацию устройства.
 
 ## Блокировка ориентации экрана
 
-> **Предупреждение:** Этот API вводится в экспериментальном режиме и доступен в [Firefox OS](/ru/docs/Archive/B2G_OS) и [Firefox для Android](/ru/docs/Mozilla/Firefox_для_Android) с приставкой `moz`, а также для Internet Explorer на Windows 8.1 и выше с приставкой `ms`.
+> [!WARNING]
+> Этот API вводится в экспериментальном режиме и доступен в [Firefox OS](/ru/docs/Archive/B2G_OS) и [Firefox для Android](/ru/docs/Mozilla/Firefox_для_Android) с приставкой `moz`, а также для Internet Explorer на Windows 8.1 и выше с приставкой `ms`.
 
 Некоторые устройства (в основном мобильные) могут изменять ориентацию экрана в соответствии с ориентацией самого устройства для удобства восприятия информации пользователем.
 Это хорошо подходит для текста, но на некоторое содержимое такое поведение может оказать негативное воздействие. Например, это трагичная ситуация для игры, разработанной под определённую ориентацию.
@@ -129,7 +131,7 @@ li {
 
 ### Отслеживание изменения ориентации
 
-Событие {{event("orientationchange")}} возникает каждый раз, когда устройство изменяет ориентацию экрана и самого себя, и может быть отслежено свойством {{domxref("Screen.orientation")}}.
+Событие [`orientationchange`](/ru/docs/Web/API/Window/orientationchange_event) возникает каждый раз, когда устройство изменяет ориентацию экрана и самого себя, и может быть отслежено свойством {{domxref("Screen.orientation")}}.
 
 ```js
 screen.addEventListener("orientationchange", function () {
@@ -144,17 +146,18 @@ screen.addEventListener("orientationchange", function () {
 Метод {{domxref("Screen.lockOrientation()")}} принимает одну или несколько строк для определения типа блокировки: `portrait-primary`, `portrait-secondary`, `landscape-primary`, `landscape-secondary`, `portrait`, `landscape`. Подробнее: {{domxref("Screen.lockOrientation")}}.
 
 ```js
-screen.lockOrientation('landscape');
+screen.lockOrientation("landscape");
 ```
 
-> **Примечание:** Положение экрана зависит от конкретной настройки приложения. Если в приложении A экран блокируется на альбомную ориентацию (`landscape`), а приложение B блокирует экран на портретный режим (`portrait`),
-> то переход из приложения A в приложение B (или наоборот) не вызовет событие изменения ориентации экрана {{event("orientationchange")}}, т. к. оба приложения сохраняют заданную ориентацию.
+> [!NOTE]
+> Положение экрана зависит от конкретной настройки приложения. Если в приложении A экран блокируется на альбомную ориентацию (`landscape`), а приложение B блокирует экран на портретный режим (`portrait`),
+> то переход из приложения A в приложение B (или наоборот) не вызовет событие изменения ориентации экрана [`orientationchange`](/ru/docs/Web/API/Window/orientationchange_event), т. к. оба приложения сохраняют заданную ориентацию.
 >
-> В то же время, событие {{event("orientationchange")}} может возникнуть в момент блокировки ориентации, если для удовлетворения заданному параметру блокировки изменяется положение экрана.
+> В то же время, событие [`orientationchange`](/ru/docs/Web/API/Window/orientationchange_event) может возникнуть в момент блокировки ориентации, если для удовлетворения заданному параметру блокировки изменяется положение экрана.
 
 ## Firefox OS и Android: блокирование ориентации через манифест
 
-Для Firefox OS и Firefox Android (скоро заработает и в десктопном Firefox) существует более специфичный способ: в файле манифеста вашего приложения можно указать [ориентацию](/en-US/Apps/Build/Manifest#orientation):
+Для Firefox OS и Firefox Android (скоро заработает и в десктопном Firefox) существует более специфичный способ: в файле манифеста вашего приложения можно указать [ориентацию](/ru/docs/Web/Apps/Build/Manifest#orientation):
 
 ```json
 "orientation": "portrait"
@@ -166,5 +169,5 @@ screen.lockOrientation('landscape');
 - {{domxref("Screen.lockOrientation()")}}
 - {{domxref("Screen.unlockOrientation()")}}
 - {{domxref("Screen.onorientationchange")}}
-- [The orientation media query](/ru/docs/CSS/Media_queries#orientation)
-- [A short introduction to media queries in Firefox 3.5](http://hacks.mozilla.org/2009/06/media-queries/)
+- [The orientation media query](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation)
+- [A short introduction to media queries in Firefox 3.5](https://hacks.mozilla.org/2009/06/media-queries/)

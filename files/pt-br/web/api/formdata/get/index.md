@@ -3,11 +3,14 @@ title: FormData.get()
 slug: Web/API/FormData/get
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 O método get() da interface {{domxref("FormData")}} retorna o primeiro valor associado com a chave fornecida de um objeto do tipo FormData.
 
-> **Nota:** Este método está disponível em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Este método está disponível em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
 ## Sintaxe
 
@@ -35,29 +38,27 @@ var formData = new FormData();
 Se adicionarmos dois valores usuario_nome usando {{domxref("FormData.append")}}:
 
 ```js
-formData.append('usuario_nome', 'Sabrina');
-formData.append('usuario_nome', 'Antônio');
+formData.append("usuario_nome", "Sabrina");
+formData.append("usuario_nome", "Antônio");
 ```
 
 A função get() abaixo apenas irá retornar o primeiro valor usuario_nome incluido:
 
 ```js
-formData.get('usuario_nome'); // Retorna "Sabrina"
+formData.get("usuario_nome"); // Retorna "Sabrina"
 ```
 
 ## Especificações
 
-| Especificação                                                                | Status                               | Comentário |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata-get','get()')}} | {{Spec2('XMLHttpRequest')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.FormData.get")}}
+{{Compat}}
 
 ## Veja também
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Using XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Using FormData objects](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

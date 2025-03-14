@@ -14,8 +14,8 @@ l10n:
 ## 構文
 
 ```js
-getComputedStyle(element)
-getComputedStyle(element, pseudoElt)
+getComputedStyle(element);
+getComputedStyle(element, pseudoElt);
 ```
 
 ### 引数
@@ -35,7 +35,8 @@ _生きた_ {{DOMxRef("CSSStyleDeclaration")}} オブジェクトで、要素の
 
   - : 渡されたオブジェクトが {{DOMxRef("Element")}} ではないか、 `pseudoElt` が有効な擬似要素セレクターではないか、 {{CSSxRef("::part", "::part()")}} または {{CSSxRef("::slotted", "::slotted()")}} である場合。
 
-    > **メモ:** 有効な擬似要素とは構文的に適切であることを指します。例えば `::unsupported` は擬似要素として対応されていませんが、有効と判断されます。さらに、最新の W3 標準では `::before` と `::after` のみを[明示的に対応しています](https://www.w3.org/TR/cssom-1/#dom-window-getcomputedstyle)が、CSS の WG 草案は[この値を制限していません](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle)。 ブラウザーの互換性は様々かもしれません。
+    > [!NOTE]
+    > 有効な擬似要素とは構文的に適切であることを指します。例えば `::unsupported` は擬似要素として対応されていませんが、有効と判断されます。さらに、最新の W3 標準では `::before` と `::after` のみを[明示的に対応しています](https://www.w3.org/TR/cssom-1/#dom-window-getcomputedstyle)が、CSS の WG 草案は[この値を制限していません](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle)。 ブラウザーの互換性は様々かもしれません。
 
 ## 例
 
@@ -64,10 +65,13 @@ p {
 ### JavaScript
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 const compStyles = window.getComputedStyle(para);
-para.textContent = `My computed font-size is ${compStyles.getPropertyValue('font-size')},\n` +
-  `and my computed line-height is ${compStyles.getPropertyValue('line-height')}.`;
+para.textContent =
+  `My computed font-size is ${compStyles.getPropertyValue("font-size")},\n` +
+  `and my computed line-height is ${compStyles.getPropertyValue(
+    "line-height",
+  )}.`;
 ```
 
 ### 結果
@@ -94,17 +98,17 @@ para.textContent = `My computed font-size is ${compStyles.getPropertyValue('font
 ```html
 <style>
   h3::after {
-    content: ' rocks!';
+    content: " rocks!";
   }
 </style>
 
 <h3>Generated content</h3>
 
 <script>
-  const h3 = document.querySelector('h3');
-  const result = getComputedStyle(h3, ':after').content;
+  const h3 = document.querySelector("h3");
+  const result = getComputedStyle(h3, ":after").content;
 
-  console.log('the generated content is: ', result); // returns ' rocks!'
+  console.log("the generated content is: ", result); // returns ' rocks!'
 </script>
 ```
 
@@ -114,7 +118,7 @@ para.textContent = `My computed font-size is ${compStyles.getPropertyValue('font
 - CSS のプロパティ値は、 `getPropertyValue(propName)` API を使用してアクセスすることも、 `obj['z-index']` や `obj.zIndex`のようにオブジェクトに直接添字を指定してアクセスすることもできます。
 - `getComputedStyle` によって返される値は、{{CSSxRef("resolved_value", "解決値", "", 1)}}です。これらの値は通常、CSS 2.1 の{{CSSxRef("computed_value","計算値", "", 1)}}と同じですが、 `width`, `height`, `padding` のような古いプロパティの場合は、{{CSSxRef("used_value","使用値", "", 1)}}と同じになります。もともと CSS 2.0 では、*計算値*はカスケードと継承後のプロパティの「使用可能な」最終値として定義されていましたが、 CSS 2.1 ではレイアウトする前の値として再定義され、*使用値*はレイアウト後の値として再定義されています。 CSS 2.0 のプロパティでは、 `getComputedStyle` は計算値の古い意味を返しますが、現在は**使用値**と呼ばれています。レイアウト前の値とレイアウト後の値の違いの例として、 `width` や `height` のパーセント値の解像度があり、これらは*使用値*のみ同等のピクセル数に置き換えられます。
 - 返される値が意図的に不正確になる場合があります。 "CSS History Leak" のセキュリティ問題を回避するために、ブラウザーは訪問したリンクの計算されたスタイルについて嘘をつき、ユーザーがリンク先の URL を訪問していないかのような値を返すことがあります。これがどのように実装されているかについては、 [Plugging the CSS History Leak](https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/) と [Privacy-related changes coming to CSS :visited](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) を参照してください。
-- [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions)が動作している間、 `getComputedStyle` は、 Firefox では元のプロパティ値を返しますが、 WebKit では最終的なプロパティ値を返します。
+- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)が動作している間、 `getComputedStyle` は、 Firefox では元のプロパティ値を返しますが、 WebKit では最終的なプロパティ値を返します。
 - Firefox では、 `auto` の値を持つプロパティは `auto` の値ではなく、使用値を返します。そのため、 `top:auto` と `bottom:0` を `height:30px` の要素に適用し、包含ブロックを `height:100px` を適用すると、 Firefox の `top` のスタイルの計算値は、 100 − 30 = 70 なので `70px` となります。
 
 ## 仕様書

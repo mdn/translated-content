@@ -1,15 +1,17 @@
 ---
 title: shape
 slug: Web/CSS/@media/shape
+l10n:
+  sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 `shape` は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、端末の形状が矩形であるか丸いディスプレイであるかを区別するために使用することができます。
 
 ## 構文
 
-`shape` は識別機能であり、四角い画面を表す `rect` または丸や楕円の画面を表す `round` の二つの文字列のうちの一つで指定します。
+`shape` は識別機能であり、受付可能な 2 つの文字列のうちのどちらか指定します。`rect` は四角い画面を表し、`round` は円形、楕円形の画面を表します。
 
 - `rect`
   - : 形状は長方形か正方形、または角丸矩形などの軸であり、伝統的なデザインが適しています。
@@ -19,8 +21,6 @@ slug: Web/CSS/@media/shape
 ## 例
 
 ### 基本的な例
-
-<h4 id="HTML" name="HTML">HTML</h4>
 
 #### HTML
 
@@ -54,9 +54,12 @@ h1 {
 
 ```html
 <head>
-    <link rel="stylesheet" href="default.css" />
-    <link media="screen and (shape: rect)" rel="stylesheet" href="rectangle.css" />
-    <link media="screen and (shape: round)" rel="stylesheet" href="round.css" />
+  <link rel="stylesheet" href="default.css" />
+  <link
+    media="screen and (shape: rect)"
+    rel="stylesheet"
+    href="rectangle.css" />
+  <link media="screen and (shape: round)" rel="stylesheet" href="round.css" />
 </head>
 ```
 
@@ -66,9 +69,9 @@ h1 {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+この機能を実装しているブラウザーはありません。
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/ja/docs/Web/CSS/@media)

@@ -1,7 +1,6 @@
 ---
 title: Stylesheet.title
 slug: Web/API/StyleSheet/title
-translation_of: Web/API/StyleSheet/title
 ---
 
 {{ ApiRef() }}
@@ -12,8 +11,8 @@ translation_of: Web/API/StyleSheet/title
 
 ### Notas
 
-El título es a menudo especificado en el [ownerNode](/es/DOM/stylesheet.ownerNode).
+El título es a menudo especificado en el [ownerNode](/es/docs/Web/API/StyleSheet/ownerNode).
 
 ### Especificación
 
-[title](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-title)
+[title](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-title)

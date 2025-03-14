@@ -1,22 +1,25 @@
 ---
-title: Element.closest()
+title: "Element: closest() メソッド"
+short-title: closest()
 slug: Web/API/Element/closest
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{APIRef('DOM')}}
 
-**`closest()`** は {{domxref("Element")}} インターフェイスのメソッドで、この要素とその親に（文書ルートに向かって）、指定された [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)に一致するノードが見つかるまで探索します。
+**`closest()`** は {{domxref("Element")}} インターフェイスのメソッドで、この要素とその親に（文書ルートに向かって）、指定された [CSS セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)に一致するノードが見つかるまで探索します。
 
 ## 構文
 
-```js
+```js-nolint
 closest(selectors)
 ```
 
 ### 引数
 
 - `selectors`
-  - : 有効な [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)を表す文字列です。これをこの要素 ({{domxref("Element")}}) およびその祖先に向けて照合します。
+  - : 有効な [CSS セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)を表す文字列です。これをこの要素 ({{domxref("Element")}}) およびその祖先に向けて照合します。
 
 ### 返値
 
@@ -33,8 +36,10 @@ closest(selectors)
 
 ```html
 <article>
-  <div id="div-01">Here is div-01
-    <div id="div-02">Here is div-02
+  <div id="div-01">
+    Here is div-01
+    <div id="div-02">
+      Here is div-02
       <div id="div-03">Here is div-03</div>
     </div>
   </div>
@@ -44,60 +49,19 @@ closest(selectors)
 ### JavaScript
 
 ```js
-const el = document.getElementById('div-03');
+const el = document.getElementById("div-03");
 
 // "div-02" の id を持つ直近の祖先
-console.log(el.closest('#div-02')); // <div id="div-02">
+console.log(el.closest("#div-02")); // <div id="div-02">
 
 // div の中にある div である直近の祖先
-console.log(el.closest('div div')); // <div id="div-03">
+console.log(el.closest("div div")); // <div id="div-03">
 
 // div であって親に article がある直近の祖先
 console.log(el.closest("article > div")); // <div id="div-01">
 
 // div ではない直近の祖先
 console.log(el.closest(":not(div)")); // <article>
-```
-
-## ポリフィル
-
-`Element.closest()` に対応していないブラウザーで、 `element.matches()` (または接頭辞付きの同等のもの、すなわち IE9+) に対応しているものには、ポリフィルがあります。
-
-```js
-if (!Element.prototype.matches) {
-  Element.prototype.matches =
-    Element.prototype.msMatchesSelector ||
-    Element.prototype.webkitMatchesSelector;
-}
-
-if (!Element.prototype.closest) {
-  Element.prototype.closest = function(s) {
-    var el = this;
-
-    do {
-      if (Element.prototype.matches.call(el, s)) return el;
-      el = el.parentElement || el.parentNode;
-    } while (el !== null && el.nodeType === 1);
-    return null;
-  };
-}
-```
-
-しかし、本当に IE 8 の対応が必要な場合は、以下のポリフィルがとても遅い処理ながら、結果を出すことができます。但し、 IE 8 は CSS 2.1 のセレクターにしか対応しておらず、本番のウェブサイトが極端に遅くなる原因となることがあります。
-
-```js
-if (window.Element && !Element.prototype.closest) {
-  Element.prototype.closest = function(s) {
-    var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-        i,
-        el = this;
-    do {
-      i = matches.length;
-      while (--i >= 0 && matches.item(i) !== el) {};
-    } while ((i < 0) && (el = el.parentElement));
-    return el;
-  };
-}
 ```
 
 ## 仕様書
@@ -114,5 +78,5 @@ if (window.Element && !Element.prototype.closest) {
 
 ## 関連情報
 
-- [CSS セレクターリファレンス](/ja/docs/Web/CSS/CSS_Selectors)
+- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
 - セレクターを取る他の {{domxref("Element")}} のメソッド: {{domxref("Element.querySelector()")}}, {{domxref("Element.querySelectorAll()")}}, {{domxref("Element.matches()")}}

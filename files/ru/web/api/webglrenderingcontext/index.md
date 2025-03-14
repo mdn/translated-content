@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext
 slug: Web/API/WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext
 ---
 
 {{APIRef("WebGL")}}
@@ -11,8 +10,8 @@ translation_of: Web/API/WebGLRenderingContext
 Чтобы получить объект с помощью этого интерфейса вызовите метод {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} элемента \<canvas> , используя "webgl" в качестве аргумента.
 
 ```js
-var canvas = document.getElementById('myCanvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("myCanvas");
+var gl = canvas.getContext("webgl");
 ```
 
 После того, как вы получили WebGL контекст, вы можете его использовать для рендеринга.
@@ -55,11 +54,8 @@ var gl = canvas.getContext('webgl');
   - : Устанавливает параметры смешивания источника и назначения
 - {{domxref("WebGLRenderingContext.blendEquation()")}}
   - : Уравнение смешивания RGB и уравнение альфа-смешивания сводит к одному уравнению.
-
-**{{domxref("WebGLRenderingContext.blendEquationSeparate()")}}**
-
-Устанавливает уравнение смешивания RGB и уравнение alpha смешивания отдельно.
-
+- {{domxref("WebGLRenderingContext.blendEquationSeparate()")}}
+  - : Устанавливает уравнение смешивания RGB и уравнение альфа-смешивания отдельно.
 - {{domxref("WebGLRenderingContext.blendFunc()")}}
   - : Определяет, какая арифметическая функция используется для смешивания пикселей.
 - {{domxref("WebGLRenderingContext.blendFuncSeparate()")}}
@@ -295,16 +291,14 @@ These methods manage WebGL extensions:
 - {{domxref("WebGLRenderingContext.getExtension()")}}
   - : Returns an extension object.
 
-## Specifications
+## Спецификации
 
-| Specification                                                            | Status                   | Comment            |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('WebGL', "#5.14", "WebGLRenderingContext")}} | {{Spec2('WebGL')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("HTMLCanvasElement")}}

@@ -1,20 +1,9 @@
 ---
 title: pageAction.ImageDataType
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/ImageDataType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - ImageDataType
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - pageAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/ImageDataType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Données en pixel pour une image.
 
@@ -22,13 +11,13 @@ Données en pixel pour une image.
 
 Un objet [`ImageData`](/fr/docs/Web/API/ImageData) , par exemple à partir d'un élément {{htmlelement("canvas")}}.
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pageAction.ImageDataType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
 >

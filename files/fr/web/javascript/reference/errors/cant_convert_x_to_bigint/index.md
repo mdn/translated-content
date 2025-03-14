@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: can''t convert x to BigInt'
+title: "TypeError: can't convert x to BigInt"
 slug: Web/JavaScript/Reference/Errors/Cant_convert_x_to_BigInt
 l10n:
   sourceCommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4
@@ -47,7 +47,8 @@ const c = BigInt("1");
 const d = BigInt(Symbol("1").description);
 ```
 
-> **Note :** Le simple fait de convertir la valeur en un nombre ou en une chaîne de caractères à l'aide de [`String()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/String) ou [`Number()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) avant de la passer à `BigInt()` ne sera généralement pas suffisant pour éviter toutes les erreurs. En effet, si la chaîne n'est pas une chaîne de caractères valide pour décrire un nombre entier, c'est une exception [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Errors/Invalid_BigInt_syntax) qui sera levée&nbsp;; si le nombre n'est pas un entier (c'est notamment le cas de [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN)), c'est une exception [`RangeError`](/fr/docs/Web/JavaScript/Reference/Errors/Cant_be_converted_to_BigInt_because_it_isnt_an_integer) qui sera levée. Si le domaine de la valeur d'entrée est inconnu, on veillera à la valider correctement avant d'utiliser `BigInt()`.
+> [!NOTE]
+> Le simple fait de convertir la valeur en un nombre ou en une chaîne de caractères à l'aide de [`String()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/String) ou [`Number()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) avant de la passer à `BigInt()` ne sera généralement pas suffisant pour éviter toutes les erreurs. En effet, si la chaîne n'est pas une chaîne de caractères valide pour décrire un nombre entier, c'est une exception [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Errors/Invalid_BigInt_syntax) qui sera levée&nbsp;; si le nombre n'est pas un entier (c'est notamment le cas de [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN)), c'est une exception [`RangeError`](/fr/docs/Web/JavaScript/Reference/Errors/Cant_be_converted_to_BigInt_because_it_isnt_an_integer) qui sera levée. Si le domaine de la valeur d'entrée est inconnu, on veillera à la valider correctement avant d'utiliser `BigInt()`.
 
 ### Passer un nombre à une opération qui utilise un grand entier
 

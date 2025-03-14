@@ -25,7 +25,8 @@ Les cookies ont été un outil général de stockage côté client. Bien que cel
 - [L'API Web Storage](/fr/docs/Web/API/Web_Storage_API) (`localStorage` et `sessionStorage`)
 - [IndexedDB](/fr/docs/Web/API/IndexedDB_API).
 
-> **Note :** Pour observer les cookies enregistrés (et les autres types de stockage utilisés par une page web), vous pouvez activer [l'inspecteur de stockage](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html) dans les outils de développement de Firefox et ouvrir le niveau Cookies dans la hiérarchie de l'onglet Stockage.
+> [!NOTE]
+> Pour observer les cookies enregistrés (et les autres types de stockage utilisés par une page web), vous pouvez activer [l'inspecteur de stockage](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html) dans les outils de développement de Firefox et ouvrir le niveau Cookies dans la hiérarchie de l'onglet Stockage.
 
 ## Créer un cookie
 
@@ -58,7 +59,8 @@ Host: www.example.org
 Cookie: delicieux_cookie=choco; savoureux_cookie=menthe
 ```
 
-> **Note :** Voici différents guides pour utiliser l'en-tête `Set-Cookie` avec différentes technologies côté serveur&nbsp;:
+> [!NOTE]
+> Voici différents guides pour utiliser l'en-tête `Set-Cookie` avec différentes technologies côté serveur&nbsp;:
 >
 > - [PHP](https://www.php.net/manual/en/function.setcookie.php)
 > - [Node.JS](https://nodejs.org/dist/latest/docs/api/http.html#http_response_setheader_name_value)
@@ -78,7 +80,8 @@ Par exemple&nbsp;:
 Set-Cookie: id=a3fWa; Expires=Thu, 31 Oct 2021 07:28:00 GMT;
 ```
 
-> **Note :** Lorsqu'une date et une heure sont indiquées dans l'attribut `Expires`, elles sont relatives au client qui enregistre le cookie et pas au serveur.
+> [!NOTE]
+> Lorsqu'une date et une heure sont indiquées dans l'attribut `Expires`, elles sont relatives au client qui enregistre le cookie et pas au serveur.
 
 Si votre site permet d'authentifier des utilisatrices ou utilisateurs, il devrait régénérer et renvoyer les cookies de session à chaque fois que la personne s'authentifie, y compris pour ceux qui existent déjà. Cette approche permet d'éviter [les attaques par fixation de session](/fr/docs/Web/Security/Types_of_attacks#fixation_de_session), où une tierce partie peut réutiliser des cookies de session.
 
@@ -91,7 +94,7 @@ Il est possible de s'assurer que les cookies sont envoyés de façon sécurisée
 
 Un cookie avec l'attribut `Secure` sera uniquement envoyé au serveur si la requête est chiffrée (avec le protocole HTTPS). Il ne sera jamais envoyé sur une adresse HTTP non sécurisée (exception faite de `localhost`). Cela signifie qu'une [attaque d'interception](/fr/docs/Glossary/MitM) ne permettra pas de lire l'information. Les sites qui utilisent un protocole non sécurisé, comme ceux avec `http:` dans l'URL, ne peuvent pas définir de cookies avec l'attribut `Secure`. Toutefois, l'attribut `Secure` ne garantit pas une protection absolue des données sensibles des cookies. Ainsi, quelqu'un qui a accès au disque dur du client (ou au code JavaScript du site si l'attribut `HttpOnly` n'est pas ajouté) pourra toujours lire et modifier l'information.
 
-Lorsque l'attribut `HttpOnly` est indiqué, le cookie est inaccessible en JavaScript et ne peut pas être manipulé avec l'API [`Document.cookie`](/fr/docs/Web/API/Document/cookie), il est uniquement envoyé au serveur. Ainsi, les cookies qui persistent côté serveur pour les sessions n'ont pas besoin d'être disponibles en JavaScript et devraient être paramétrés avec l'attribut `HttpOnly`. Cette précaution permet de réduire les risque d'attaque [XSS](/fr/docs/Web/Security/Types_of_attacks#cross-site_scripting_(xss)).
+Lorsque l'attribut `HttpOnly` est indiqué, le cookie est inaccessible en JavaScript et ne peut pas être manipulé avec l'API [`Document.cookie`](/fr/docs/Web/API/Document/cookie), il est uniquement envoyé au serveur. Ainsi, les cookies qui persistent côté serveur pour les sessions n'ont pas besoin d'être disponibles en JavaScript et devraient être paramétrés avec l'attribut `HttpOnly`. Cette précaution permet de réduire les risque d'attaque [XSS](</fr/docs/Web/Security/Types_of_attacks#cross-site_scripting_(xss)>).
 
 Voici un exemple&nbsp;:
 
@@ -129,7 +132,7 @@ En revanche, pour ces chemins, les cookies ne seront pas ajoutés&nbsp;:
 
 #### Attribut `SameSite`
 
-L'attribut [`SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite) permet aux serveurs d'indiquer quand les cookies doivent être envoyés lors de requêtes vers d'autres [origines/sites](/fr/docs/Glossary/Site). Cela fournit une certaine protection contre les attaques [<i lang="en">cross-site request forgery</i>](/fr/docs/Glossary/CSRF).
+L'attribut [`SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) permet aux serveurs d'indiquer quand les cookies doivent être envoyés lors de requêtes vers d'autres [origines/sites](/fr/docs/Glossary/Site). Cela fournit une certaine protection contre les attaques [<i lang="en">cross-site request forgery</i>](/fr/docs/Glossary/CSRF).
 
 Cet attribut peut prendre trois valeurs différentes&nbsp;:
 
@@ -139,7 +142,7 @@ Cet attribut peut prendre trois valeurs différentes&nbsp;:
   - : Similaire à `Strict`, mais le navigateur envoie également le cookie lorsque la personne _navigue_ vers le site d'origine du cookie (même si elle vient d'un site différent), par exemple lorsqu'elle suit un lien depuis un site externe.
 - `None`.
   - : Les cookies sont envoyés pour les requêtes du même site et pour les autres sites, mais _uniquement dans des contextes sécurisés_ (autrement dit, si on a `SameSite=None`, l'attribut `Secure` doit également être présent).
-  
+
 Si aucun attribut `SameSite` n'est indiqué, la valeur par défaut est `Lax`.
 
 Voici un exemple&nbsp;:
@@ -148,7 +151,8 @@ Voici un exemple&nbsp;:
 Set-Cookie: macle=mavaleur; SameSite=Strict
 ```
 
-> **Note :** La spécification concernant `SameSite` a changé (MDN documente le comportement actuel). Voir [le tableau de compatibilité pour `SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite#compatibilité_des_navigateurs) pour plus d'informations dont l'attribut est géré selon les versions des navigateurs&nbsp;:
+> [!NOTE]
+> La spécification concernant `SameSite` a changé (MDN documente le comportement actuel). Voir [le tableau de compatibilité pour `SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value#compatibilité_des_navigateurs) pour plus d'informations dont l'attribut est géré selon les versions des navigateurs&nbsp;:
 >
 > - `SameSite=Lax` est désormais la valeur par défaut si `SameSite` n'est pas indiqué. Auparavant, les cookies étaient par défaut envoyés pour toutes les requêtes.
 > - Les cookies avec `SameSite=None` doivent désormais utiliser l'attribut `Secure` (autrement dit, le contexte doit être sécurisé).
@@ -160,7 +164,7 @@ Set-Cookie: macle=mavaleur; SameSite=Strict
 
 Une application vulnérable sur un sous-domaine pourrait donc définir un cookie avec l'attribut `Domain`, ce qui donnerait accès à ce cookie sur l'ensemble des sous-domaines. Ce mécanisme pourrait être abusé lors d'une _attaque par fixation de session_. Voir [la description de ce type d'attaque](/fr/docs/Web/Security/Types_of_attacks#fixation_de_session) pour plus d'informations sur les méthodes de prévention.
 
-Comme [mesure de défense en profondeur](https://fr.wikipedia.org/wiki/D%C3%A9fense_en_profondeur), on peut utiliser des _préfixes de cookie_ pour confirmer différents aspects du cookie. Deux préfixes sont disponibles&nbsp;:
+Comme [mesure de défense en profondeur](https://fr.wikipedia.org/wiki/Défense_en_profondeur), on peut utiliser des _préfixes de cookie_ pour confirmer différents aspects du cookie. Deux préfixes sont disponibles&nbsp;:
 
 - `__Host-`
   - : Si un nom de cookie utilise ce préfixe, il sera uniquement accepté dans un en-tête [`Set-Cookie`](/fr/docs/Web/HTTP/Headers/Set-Cookie) si&nbsp;:
@@ -168,13 +172,14 @@ Comme [mesure de défense en profondeur](https://fr.wikipedia.org/wiki/D%C3%A9fe
     - Il a été envoyé depuis une origine sécurisée
     - Il n'inclut pas d'attribut `Domain`
     - L'attribut `Path` vaut `/`.
-    Ainsi, de tels cookies peuvent être vus comme verrouillés au domaine.
+      Ainsi, de tels cookies peuvent être vus comme verrouillés au domaine.
 - `__Secure-`
   - : Si un nom de cookie utilise ce préfixe, il sera uniquement accepté dans un en-tête [`Set-Cookie`](/fr/docs/Web/HTTP/Headers/Set-Cookie) s'il est marqué avec l'attribut `Secure` et qu'il a été envoyé depuis une origine sécurisée. Il s'agit d'une forme plus faible que celle fournie par le préfixe `__Host-`.
 
 Le navigateur rejettera les cookies avec ces préfixes et qui ne respectent pas ces contraintes. On notera qu'ainsi, les cookies créés par les sous-domaines et avec ces préfixes sont confinés au sous-domaine en question ou ignorés complètement. Comme le serveur d'application vérifie uniquement le nom d'un cookie donné pour l'authentification ou la validité d'un jeton CSRF, cela sert de mesure contre les fixations de session.
 
-> **Attention :** Sur le serveur d'application, l'application web _doit_ vérifier le nom complet du cookie, incluant le préfixe. Les agents utilisateurs ne suppriment pas le préfixe avant de l'envoyer dans l'en-tête [`Cookie`](/fr/docs/Web/HTTP/Headers/Cookie) de la réponse.
+> [!WARNING]
+> Sur le serveur d'application, l'application web _doit_ vérifier le nom complet du cookie, incluant le préfixe. Les agents utilisateurs ne suppriment pas le préfixe avant de l'envoyer dans l'en-tête [`Cookie`](/fr/docs/Web/HTTP/Headers/Cookie) de la réponse.
 
 Pour plus d'informations sur les préfixes et la compatibilité des navigateurs associée, voir [la section sur les préfixes de la page sur l'article de référence `Set-Cookie`](/fr/docs/Web/HTTP/Headers/Set-Cookie#préfixes_de_cookie).
 
@@ -195,7 +200,8 @@ Voir la section qui suit sur [la sécurité](#sécurité)&nbsp;: les cookies dis
 
 ## Sécurité
 
-> **Note :** Quand des informations sont enregistrées dans des cookies, elles sont visibles et éditables par l'utilisatrice ou l'utilisateur final·e. Selon le cas d'usage de l'application, vous pouvez utiliser un identifiant opaque qui sera utilisé par le serveur ou utiliser d'autres mécanismes d'authentification ou de confidentialité comme [les JSON Web Tokens](https://jwt.io/introduction).
+> [!NOTE]
+> Quand des informations sont enregistrées dans des cookies, elles sont visibles et éditables par l'utilisatrice ou l'utilisateur final·e. Selon le cas d'usage de l'application, vous pouvez utiliser un identifiant opaque qui sera utilisé par le serveur ou utiliser d'autres mécanismes d'authentification ou de confidentialité comme [les JSON Web Tokens](https://jwt.io/introduction).
 
 Plusieurs mécanismes existent pour prévenir les attaques utilisant les cookies&nbsp;:
 
@@ -214,7 +220,8 @@ Si le domaine et schéma sont différents, le cookie n'est pas considéré comme
 
 Un serveur tiers peut créer un profil d'une personne à partir des habitudes et parcours de navigation grâce aux cookies qui lui sont envoyés par le navigateur lors de l'accès à différents sites. Par défaut, Firefox et Safari bloquent les cookies tiers connus pour le pistage. Ces cookies peuvent aussi être bloqués en utilisant les paramètres des autres navigateurs ou des extensions. Le blocage des cookies peut parfois empêcher le bon fonctionnement de composants tiers (comme les intégrations de réseaux sociaux).
 
-> **Note :** Les serveurs peuvent (et devraient) définir [l'attribut `SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite) pour indiquer si un cookie peut être envoyé ou non à un site tierce.
+> [!NOTE]
+> Les serveurs peuvent (et devraient) définir [l'attribut `SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) pour indiquer si un cookie peut être envoyé ou non à un site tierce.
 
 ### Régulations relatives aux cookies
 
@@ -244,8 +251,8 @@ Certaines techniques peuvent être utilisées pour recréer des cookies après l
 - [`Cookie`](/fr/docs/Web/HTTP/Headers/Cookie)
 - [`Document.cookie`](/fr/docs/Web/API/Document/cookie)
 - [`Navigator.cookieEnabled`](/fr/docs/Web/API/Navigator/cookieEnabled)
-- [L'attribut `SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite)
+- [L'attribut `SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value)
 - [La RFC 6265 qui spécifie les cookies](https://datatracker.ietf.org/doc/html/rfc6265)
-- [La page Wikipédia sur les cookies](https://fr.wikipedia.org/wiki/Cookie_(informatique))
+- [La page Wikipédia sur les cookies](<https://fr.wikipedia.org/wiki/Cookie_(informatique)>)
 - [Les cookies, le RGPD, et la directive ePrivacy (pas un site officiel de l'UE)](https://gdpr.eu/cookies/)
 - [Firefox&nbsp;: inspecter les cookies en utilisant l'inspecteur de stockage (en anglais)](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)

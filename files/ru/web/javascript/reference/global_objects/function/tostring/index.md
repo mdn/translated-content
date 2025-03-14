@@ -1,14 +1,9 @@
 ---
 title: Function.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Function/toString
-tags:
-  - Function
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/toString
 ---
-{{JSRef("Global_Objects", "Function")}}
+
+{{JSRef}}
 
 ## Сводка
 
@@ -22,7 +17,7 @@ function.toString(indentation)
 
 ### Параметры
 
-- `indentation` {{non-standard_inline}} {{obsolete_inline(17)}}
+- `indentation` {{non-standard_inline}}
   - : Количество пробелов для отступов в строковом представлении исходного кода. Если параметр меньше или равен `-1`, большинство ненужных пробелов будет удалено.
 
 ## Описание
@@ -33,11 +28,7 @@ JavaScript вызывает метод `toString` автоматически в 
 
 ## Спецификации
 
-| Спецификация                                                                                                         | Статус                   | Комментарии                                            |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.3.4.2', 'Function.prototype.toString')}}                         | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-function.prototype.tostring', 'Function.prototype.toString')}} | {{Spec2('ES6')}}     |                                                        |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

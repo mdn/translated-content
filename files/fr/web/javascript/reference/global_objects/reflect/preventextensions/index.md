@@ -1,26 +1,30 @@
 ---
 title: Reflect.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
-original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/preventExtensions
 ---
 
 {{JSRef}}
 
 La méthode statique **`Reflect.preventExtensions()`** permet d'empêcher d'ajouter de nouvelles propriétés à un objet. Cette méthode est semblable à la méthode {{jsxref("Object.preventExtensions()")}} (modulo [quelques différences](#diffs)).
 
-{{EmbedInteractiveExample("pages/js/reflect-preventextensions.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.preventExtensions()")}}
+
+```js interactive-example
+const object1 = {};
+
+console.log(Reflect.isExtensible(object1));
+// Expected output: true
+
+Reflect.preventExtensions(object1);
+
+console.log(Reflect.isExtensible(object1));
+// Expected output: false
+```
 
 ## Syntaxe
 
 ```js
-Reflect.preventExtensions(cible)
+Reflect.preventExtensions(cible);
 ```
 
 ### Paramètres

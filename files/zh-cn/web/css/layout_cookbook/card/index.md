@@ -1,32 +1,33 @@
 ---
 title: 卡片
 slug: Web/CSS/Layout_cookbook/Card
-original_slug: Web/CSS/Layout_cookbook/卡片
 ---
 
 {{CSSRef}}
 
-这个模式是带有页脚选项的卡片组件列表。
+这个模式是带有可选页脚的“卡片”组件列表。
 
 ![Three card components in a row](cards.png)
 
-## 要求
+## 需求
 
-卡片组件可以包含各种内容，包括一个头部 (heading)，图片，内容和一个页脚 (footer)
+卡片组件可以包含各种内容，如头部、图片、内容和页脚。
 
-每个卡片组件应有相同的高度，并且页脚应该在卡片组件的底部
+每个卡片组件应有相同的高度，并且页脚应该在卡片组件的底部。
 
-当添加到卡片组中时，卡片上下应对齐。
+当添加到卡片组中时，卡片应在两个维度上对齐。
 
 ## 使用指南
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/card.html", '100%', 1720)}}
 
-> **备注：** [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/card--download.html)
+> [!CALLOUT]
+>
+> [下载这个示例](https://github.com/mdn/css-examples/blob/main/css-cookbook/card--download.html)
 
 ## 所选方案
 
-卡片布局使用 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)([CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)) despite being a single dimensional layout, as it enables the use of content sizing for the grid tracks. When setting up the single column grid I use the following:
+尽管是单维布局，该卡片还是使用 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)技术进行布局，因为它可以为网格轨道使用内容大小。在设置单列网格时，我使用了以下方法：
 
 ```css
 .card {
@@ -35,29 +36,26 @@ original_slug: Web/CSS/Layout_cookbook/卡片
 }
 ```
 
-The heading track is set to {{cssxref("max-content")}}, which prevents it from stretching. I have decided that I want my image to live within a track that is 200 pixels tall. I then set the next track — which is where the content lives — to `1fr`. This means it will take up any additional space.
+标题轨道被设置为 {{cssxref("max-content")}}，这使得它不能被拉伸。我决定让我的图片放置在 200 像素高的轨道里。然后我把下一个轨道（也就是内容所在的地方）的高度设置为 `1fr`。这意味着它将占用任何额外的空间。
 
-If the track does have a footer it will be auto-sized, as rows created in the implicit grid are auto-sized by default. Therefore this will fit the content added to it.
+如果该轨道确实有页脚，它将自动调整大小，因为在隐式网格中创建的行是默认自动调整大小的，这样可以让添加到其中的内容适合网格大小。
 
-> **备注：** The various elements in separate cards do not align with each other, as each card is an independent grid. The proposed subgrid feature of Grid Level 2 would give a solution to this issue.
+> [!NOTE]
+> 由于每张卡片都是独立的网格，所以独立卡片中的各种元素并不互相对齐。所提出的 Grid Level 2 的子网格功能将给这个问题一个解决方案。
 
-## Useful fallbacks or alternative methods
+## 有用的后备措施或替代方法
 
-[Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout) could be used to lay out the card, in which case you should make the content area grow, and other items not grow. This would be a reasonable way to lay out the card, although I have a slight preference for being able to control the tracks from the container rather than needing to add rules to the items.
+[弹性盒](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)可以用来布置卡片，在这种情况下，应该让内容区增长，而其他项目不增长。我略微倾向于能够从容器中控制轨道，而不需要为项目添加规则，这种布局卡片的方式更加合理。
 
-For the overall layout you could use flexbox, however this will result in cards stretching over the final flex row where there are fewer than can fit in the rows above. Alternatively you could use [CSS multi-col](/zh-CN/docs/Web/CSS/CSS_Columns) — this would cause the cards to lay out down the columns, which may or may not be a problem.
+对于整体布局，你可以使用 flexbox，然而这将导致卡片在最后的 flex 行上伸展，因为那里的卡片数量少于上面的行。另外，你可以使用 [CSS 多列布局](/zh-CN/docs/Web/CSS/CSS_multicol_layout)——这将导致卡片顺着列铺开，可能会导致问题。
 
-See the [columns recipe](/zh-CN/docs/Web/CSS/Layout_cookbook/Column_layouts) for demonstrations of each of these layout methods.
+请参阅[多列布局方案](/zh-CN/docs/Web/CSS/Layout_cookbook/Column_layouts)以了解这些布局方法的演示。
 
-## Accessibility concerns
+## 无障碍考虑
 
-Depending on the content of your card there may be things you could, or should do to enhance accessibility. See [Inclusive Components: Card](https://inclusive-components.design/cards/) by Heydon Pickering, for a very detailed explanation of these issues.
+根据卡片的内容，你可以或应该做一些事情来加强无障碍性。请参阅 Heydon Pickering 撰写的 [Inclusive Components: Card](https://inclusive-components.design/cards/)，那篇文章对这些问题进行了非常详细的解释。
 
-## Browser compatibility
+## 参见
 
-{{Compat}}
-
-## See also
-
-- {{Cssxref("grid-template-columns")}}, {{Cssxref("grid-template-rows")}}, {{Cssxref("grid-gap")}}
+- {{Cssxref("grid-template-columns")}}、{{Cssxref("grid-template-rows")}}、{{Cssxref("grid-gap")}}
 - [Inclusive Components: Card](https://inclusive-components.design/cards/)

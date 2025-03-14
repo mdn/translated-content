@@ -3,9 +3,9 @@ title: Selectores de clase
 slug: Web/CSS/Class_selectors
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
-En un documento HTML, los selectores de clase buscan un elemento basado en el contenido de su atributo `class`. El atributo {{htmlattrxref("class")}} está definido como una lista de elementos separados por espacio, y uno de esos elementos debe coincidir exactamente con el nombre de clase dado en el selector.
+En un documento HTML, los selectores de clase buscan un elemento basado en el contenido de su atributo `class`. El atributo [`class`](/es/docs/Web/HTML/Global_attributes#class) está definido como una lista de elementos separados por espacio, y uno de esos elementos debe coincidir exactamente con el nombre de clase dado en el selector.
 
 ## Sintaxis
 
@@ -42,6 +42,6 @@ span.classy {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.class")}}
+{{Compat}}

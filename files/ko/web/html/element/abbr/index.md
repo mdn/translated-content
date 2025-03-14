@@ -1,20 +1,29 @@
 ---
 title: <abbr>
 slug: Web/HTML/Element/abbr
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/abbr
 ---
 
 {{HTMLSidebar}}
 
-**HTML `<abbr>` 요소**는 준말 또는 머리글자를 나타냅니다. 선택 속성인 {{htmlattrxref("title")}}을 사용하면 준말의 전체 뜻이나 설명을 제공할 수 있습니다. `title` 속성은 전체 설명만을 가져야 하며 다른건 포함할 수 없습니다.
+**HTML `<abbr>` 요소**는 준말 또는 머리글자를 나타냅니다. 선택 속성인 [`title`](/ko/docs/Web/HTML/Global_attributes#title)을 사용하면 준말의 전체 뜻이나 설명을 제공할 수 있습니다. `title` 속성은 전체 설명만을 가져야 하며 다른건 포함할 수 없습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;abbr&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  You can use <abbr>CSS</abbr> (Cascading Style Sheets) to style your
+  <abbr>HTML</abbr> (HyperText Markup Language). Using style sheets, you can
+  keep your <abbr>CSS</abbr> presentation layer and <abbr>HTML</abbr> content
+  layer separate. This is called "separation of concerns."
+</p>
+```
+
+```css interactive-example
+abbr {
+  font-style: italic;
+  color: chocolate;
+}
+```
 
 <table class="htmlelt">
   <tbody>
@@ -47,7 +56,7 @@ translation_of: Web/HTML/Element/abbr
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -80,7 +89,7 @@ translation_of: Web/HTML/Element/abbr
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다. 단, 다른 요소와 달리 `<abbr>` 요소에서의 {{htmlattrxref("title")}} 특성은 특정한 의미를 가지며, `title`은 준말에 대한 설명 혹은 확장 형태를 사람이 읽을 수 있는 형태를 값으로 가져야 합니다. 브라우저는 `title`의 값을 보통 마우스 커서를 올렸을 때 나타나는 툴팁으로 보여줍니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다. 단, 다른 요소와 달리 `<abbr>` 요소에서의 [`title`](/ko/docs/Web/HTML/Global_attributes#title) 특성은 특정한 의미를 가지며, `title`은 준말에 대한 설명 혹은 확장 형태를 사람이 읽을 수 있는 형태를 값으로 가져야 합니다. 브라우저는 `title`의 값을 보통 마우스 커서를 올렸을 때 나타나는 툴팁으로 보여줍니다.
 
 각각의 `<abbr>` 요소는 서로 독립적입니다. 하나의 요소에 `title`을 제공한다고 나머지에 지정하지 않아도 되는 것은 아닙니다.
 
@@ -90,7 +99,7 @@ translation_of: Web/HTML/Element/abbr
 
 당연히 모든 준말을 `<abbr>`로 표시해야 하는 것은 아닙니다. 그러나 표시할 경우 도움이 될, 다음과 같은 경우가 있습니다.
 
-- 사용한 준말과 머리글자를 문서 콘텐츠 플로우 밖에서 풀어서 설명하고 싶으면 적절한 {{htmlattrxref("title")}} 특성을 지정한 `<abbr>` 요소를 사용하세요.
+- 사용한 준말과 머리글자를 문서 콘텐츠 플로우 밖에서 풀어서 설명하고 싶으면 적절한 [`title`](/ko/docs/Web/HTML/Global_attributes#title) 특성을 지정한 `<abbr>` 요소를 사용하세요.
 - 독자에게 익숙하지 않을 수 있는 준말을 사용할 경우 `<abbr>`과 함께 `title` 특성이나 인라인 텍스트로 단어에 대한 정의를 제공하세요.
 - 준말임을 명시적으로 나타내야 할 경우 `<abbr>` 요소가 유용합니다. 이를 응용하면 스타일링이나 스크립트 적용에도 사용할 수 있습니다.
 - `<abbr>`을 {{HTMLElement("dfn")}}과 같이 사용하면 준말이나 머리글자를 그 정의와 연결할 수 있습니다. 아래의 [준말 정의하기](#준말_정의하기)을 참고하세요.
@@ -147,13 +156,12 @@ abbr {
 
 ### 펼친 형태 보여주기
 
-{{htmlattrxref("title")}} 특성을 사용하면 준말과 머리글자를 펼친 원래 형태를 보여줄 수 있습니다.
+[`title`](/ko/docs/Web/HTML/Global_attributes#title) 특성을 사용하면 준말과 머리글자를 펼친 원래 형태를 보여줄 수 있습니다.
 
 #### HTML
 
 ```html
-<p>Ashok's joke made me <abbr title="Laugh Out Loud">LOL</abbr> big
-time.</p>
+<p>Ashok's joke made me <abbr title="Laugh Out Loud">LOL</abbr> big time.</p>
 ```
 
 #### 결과
@@ -167,14 +175,16 @@ time.</p>
 #### HTML
 
 ```html
-<p><dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr>
-</dfn> is a markup language used to create the semantics and structure
-of a web page.</p>
+<p>
+  <dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr> </dfn> is a
+  markup language used to create the semantics and structure of a web page.
+</p>
 
-<p>A <dfn id="spec">Specification</dfn>
-(<abbr title="Specification">spec</abbr>) is a document that outlines
-in detail how a technology or API is intended to function and how it is
-accessed.</p>
+<p>
+  A <dfn id="spec">Specification</dfn> (<abbr title="Specification">spec</abbr>)
+  is a document that outlines in detail how a technology or API is intended to
+  function and how it is accessed.
+</p>
 ```
 
 #### 결과
@@ -188,7 +198,9 @@ accessed.</p>
 #### 예제
 
 ```html
-<p>JavaScript Object Notation(<abbr>JSON</abbr>)은 경량의 데이터 교환 형식입니다.</p>
+<p>
+  JavaScript Object Notation(<abbr>JSON</abbr>)은 경량의 데이터 교환 형식입니다.
+</p>
 ```
 
 무엇보다 용어나 개념에 익숙하지 않은 사람, 언어를 새로 접한 사람, 그리고 인지력 문제를 겪고 있는 사용자에게 큰 도움이 됩니다.
@@ -199,4 +211,4 @@ accessed.</p>
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.abbr")}}
+{{Compat}}

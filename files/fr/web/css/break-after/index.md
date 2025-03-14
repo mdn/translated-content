@@ -1,11 +1,6 @@
 ---
 title: break-after
 slug: Web/CSS/break-after
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/break-after
 ---
 
 {{CSSRef}}
@@ -104,7 +99,8 @@ Pour des raisons de compatibilité, la propriété historique {{cssxref("page-br
 | `avoid`            | `avoid`       |
 | `always`           | `page`        |
 
-> **Note :** La valeur `always` de `page-break-*` a été implémenté par les navigateurs comme une rupture de page et pas comme une rupture de colonne. C'est pourquoi l'alias correspondant à cette valeur est `page` et pas `always`.
+> [!NOTE]
+> La valeur `always` de `page-break-*` a été implémenté par les navigateurs comme une rupture de page et pas comme une rupture de colonne. C'est pourquoi l'alias correspondant à cette valeur est `page` et pas `always`.
 
 ## Exemples
 
@@ -130,16 +126,17 @@ p {
 
 ```html
 <div class="exemple">
-  <p>« Mais alors, » pensa Alice, « ne serai-je donc
-  jamais plus vieille que je ne le suis maintenant ?
-  D’un côté cela aura ses avantages, ne jamais être
-  une vieille femme. Mais alors avoir toujours des
-  leçons à apprendre ! Oh, je n’aimerais pas cela du
-  tout. »</p>
-  <p>« Oh ! Alice, petite folle, » se répondit-elle.
-  « Comment pourriez-vous apprendre des leçons ici ?
-  Il y a à peine de la place pour vous, et il n’y en
-  a pas du tout pour vos livres de leçons. »</p>
+  <p>
+    « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je
+    ne le suis maintenant ? D’un côté cela aura ses avantages, ne jamais être
+    une vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
+    n’aimerais pas cela du tout. »
+  </p>
+  <p>
+    « Oh ! Alice, petite folle, » se répondit-elle. « Comment pourriez-vous
+    apprendre des leçons ici ? Il y a à peine de la place pour vous, et il n’y
+    en a pas du tout pour vos livres de leçons. »
+  </p>
 </div>
 ```
 

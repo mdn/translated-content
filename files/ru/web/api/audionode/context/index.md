@@ -1,8 +1,8 @@
 ---
 title: AudioNode.context
 slug: Web/API/AudioNode/context
-translation_of: Web/API/AudioNode/context
 ---
+
 {{ APIRef("Web Audio API") }}
 
 Свойство интерфейса {{ domxref("AudioNode") }} возвращающее связанный {{domxref("AudioContext")}}, это объект, представляющий граф, в котором находится данный узел.**_(только для чтения)_**

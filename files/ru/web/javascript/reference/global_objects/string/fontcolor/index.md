@@ -1,23 +1,16 @@
 ---
 title: String.prototype.fontcolor()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Методы оборачивания в HTML
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 ---
-{{JSRef("Global_Objects", "String")}} {{deprecated_header}}
+
+{{JSRef}} {{deprecated_header}}
 
 ## Сводка
 
 Метод **`fontcolor()`** создаёт HTML-элемент {{HTMLElement("font")}}, заставляющий строку отображаться шрифтом указанного цвета.
 
-> **Примечание:** **Примечание по использованию:** элемент \<font> был удалён из [HTML5](/ru/docs/Web/Guide/HTML/HTML5) и больше не должен использоваться. Вместо него веб-разработчикам следует использовать свойства [CSS](/ru/docs/Web/CSS).
+> [!NOTE]
+> Элемент \<font> был удалён из [HTML5](/ru/docs/Glossary/HTML5) и больше не должен использоваться. Вместо него веб-разработчикам следует использовать свойства [CSS](/ru/docs/Web/CSS).
 
 ## Синтаксис
 
@@ -41,26 +34,27 @@ str.fontcolor(color)
 В следующем примере метод `fontcolor()` используется для изменения цвета строки путём генерирования строки с HTML-тегом `<font>`.
 
 ```js
-var worldString = 'Привет, мир';
+var worldString = "Привет, мир";
 
-console.log(worldString.fontcolor('red') +  ' на этой строке красный');
+console.log(worldString.fontcolor("red") + " на этой строке красный");
 // '<font color="red">Привет, мир</font> на этой строке красный'
 
-console.log(worldString.fontcolor('FF00') + ' на этой строке красный в шестнадцатеричной форме');
+console.log(
+  worldString.fontcolor("FF00") +
+    " на этой строке красный в шестнадцатеричной форме",
+);
 // '<font color="FF00">Привет, мир</font> на этой строке красный в шестнадцатеричной форме'
 ```
 
 При помощи объекта {{domxref("HTMLElement.style", "element.style")}} вы можете получить значение атрибута `style` элемента и управлять им более обобщённым способом, например:
 
 ```js
-document.getElementById('yourElemId').style.color = 'red';
+document.getElementById("yourElemId").style.color = "red";
 ```
 
 ## Спецификации
 
-| Спецификация                                                                                                     | Статус               | Комментарии                                                                                                                                                 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-string.prototype.fontcolor', 'String.prototype.fontcolor')}} | {{Spec2('ES6')}} | Изначальное определение. Реализована в JavaScript 1.0. Определена в (нормативном) Приложении B по Дополнительным возможностям ECMAScript для веб-браузеров. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

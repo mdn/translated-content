@@ -1,15 +1,6 @@
 ---
 title: CSS Color
-slug: Web/CSS/CSS_Colors
-tags:
-  - Aperçu
-  - CSS
-  - CSS Colors
-  - Couleurs
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Color
-original_slug: Web/CSS/CSS_Color
+slug: Web/CSS/CSS_colors
 ---
 
 {{CSSRef}}
@@ -30,7 +21,7 @@ original_slug: Web/CSS/CSS_Color
 
 ## Guides
 
-- [Appliquer des couleurs à des éléments HTML grâce à CSS](/fr/docs/Web/HTML/Appliquer_des_couleurs)
+- [Appliquer des couleurs à des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
   - : Un guide décrivant comment utiliser CSS pour colorer différents types de contenu. Cet article couvre l'ensemble des propriétés CSS ayant trait aux couleurs.
 
 ## Outils
@@ -59,4 +50,4 @@ original_slug: Web/CSS/CSS_Color
   - {{cssxref("caret-color")}},
   - {{cssxref("column-rule-color")}}
 
-- En CSS, les dégradés ne sont pas des couleurs mais des [images](/fr/docs/Web/CSS/CSS_Images).
+- En CSS, les dégradés ne sont pas des couleurs mais des [images](/fr/docs/Web/CSS/CSS_images).

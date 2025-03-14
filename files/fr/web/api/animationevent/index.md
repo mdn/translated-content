@@ -1,16 +1,13 @@
 ---
 title: AnimationEvent
 slug: Web/API/AnimationEvent
-page-type: web-api-interface
-translation_of: Web/API/AnimationEvent
-browser-compat: api.AnimationEvent
 l10n:
   sourceCommit: c000698d544f932314050edec3f47b8b8dc906bf
 ---
 
 {{APIRef("Web Animations API")}}
 
-L'interface **`AnimationEvent`** représente les évènements apportant des informations sur les [animations CSS](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations).
+L'interface **`AnimationEvent`** représente les évènements apportant des informations sur les [animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations).
 
 {{InheritanceDiagram}}
 
@@ -44,7 +41,7 @@ _Hérite des méthodes de son parent, [`Event`](/fr/docs/Web/API/Event)._
 
 ## Voir aussi
 
-- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - Les propriétés CSS et règles @ relatives aux animations&nbsp;:
   - [`animation`](/fr/docs/Web/CSS/animation)
   - [`animation-delay`](/fr/docs/Web/CSS/animation-delay)

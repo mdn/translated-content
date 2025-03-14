@@ -18,7 +18,7 @@ while (condição) {
 - `condição`
   - : Uma expressão avaliada antes de cada passagem através do laço. Se essa condição for avaliada como verdadeira, a rotina é executada. Quando a condição for avaliada como falsa, a execução continua na declaração depois do laço `while`.
 - rotina
-  - : Uma declaração que é executada enquanto a condição é avaliada como verdadeira. Para executar multiplas declarações dentro de um laço, use uma declaração em [bloco](/pt-BR/docs/JavaScript/Reference/Statements/block) (`{ ... }`) para agrupar essas declarações.
+  - : Uma declaração que é executada enquanto a condição é avaliada como verdadeira. Para executar multiplas declarações dentro de um laço, use uma declaração em [bloco](/pt-BR/docs/Web/JavaScript/Reference/Statements/block) (`{ ... }`) para agrupar essas declarações.
 
 ## Exemplos
 
@@ -44,17 +44,11 @@ Depois de completar a terceira passagem, a condição n < 3 não é mais verdade
 
 ## Especificações
 
-| Specification                                                                            | Status                       | Comment           |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ----------------- |
-| {{SpecName('ESDraft', '#sec-while-statement', 'while statement')}} | {{Spec2('ESDraft')}} |                   |
-| {{SpecName('ES6', '#sec-while-statement', 'while statement')}}     | {{Spec2('ES6')}}         |                   |
-| {{SpecName('ES5.1', '#sec-12.6.2', 'while statement')}}                 | {{Spec2('ES5.1')}}     |                   |
-| {{SpecName('ES3', '#sec-12.6.2', 'while statement')}}                 | {{Spec2('ES3')}}         |                   |
-| {{SpecName('ES1', '#sec-12.6.1', 'while statement')}}                 | {{Spec2('ES1')}}         | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.while")}}
+{{Compat}}
 
 ## Veja Também
 

@@ -11,7 +11,7 @@ O cabeçalho de resposta HTTP **`Accept-Patch`** indica qual tipo de mídia o se
 
 O servidor recebendo uma requisição PATCH com um tipo de mídia não suportado pode responder com {{HTTPStatus("415")}} `Unsupported Media Type` e um cabeçalho Accept-Patch referenciando um ou mais tipos de mídia suportados.
 
-> **Nota:** **Notas:**- Um registro da IANA mantém [uma lista oficial completa das codificações de conteúdo](http://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1).
+> **Nota:** **Notas:**- Um registro da IANA mantém [uma lista oficial completa das codificações de conteúdo](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1).
 >
 > - Duas outras codificações de conteúdo, `bzip` e `bzip2`, são algumas vezes utilizadas, entretanto não são o padrão. Elas implementam o algoritmo usado por estes dois programas UNIX. Note que o primeiro foi descontinuado por problemas de patente.
 
@@ -52,13 +52,13 @@ Accept-Patch: application/merge-patch+json
 
 ## Especificações
 
-| Specification                                        | Título     |
-| ---------------------------------------------------- | ---------- |
+| Specification                          | Título     |
+| -------------------------------------- | ---------- |
 | {{RFC("5789", "Accept-Patch", "3.1")}} | HTTP PATCH |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Accept-Patch")}}
+{{Compat}}
 
 ## Veja também
 

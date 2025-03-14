@@ -1,16 +1,6 @@
 ---
 title: ServiceWorkerContainer.register()
 slug: Web/API/ServiceWorkerContainer/register
-tags:
-  - API
-  - Méthode
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - ServicerWorkerContainer
-  - register
-translation_of: Web/API/ServiceWorkerContainer/register
 ---
 
 {{APIRef("Service Workers API")}}
@@ -31,12 +21,12 @@ serviceWorkerContainer.register(scriptURL, options)
 ### Paramètres
 
 - `scriptURL`
-  - : L' URL du script contenant le `ServiceWorker`. Le fichier qui a enregistré le `ServiceWorker` doit avoir un [JavaScript MIME type](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types) valide.
+  - : L' URL du script contenant le `ServiceWorker`. Le fichier qui a enregistré le `ServiceWorker` doit avoir un [JavaScript MIME type](/fr/docs/Web/HTTP/MIME_types#javascript_types) valide.
 - `options` {{optional_inline}}
 
   - : Un objet contenant les options d'enregistrement. Les options sont:
 
-    - `scope`: Un {{domxref("USVString")}} représentant une URL qui définit la portée d'enregistrement d'un `ServiceWorker`; c'est-à-dire quelle plage d'URL un `ServiceWorker` peut contrôler. Il s'agit généralement d'une URL relative. Elle est relative à l'URL de base de l'application. Par défaut, la valeur de la portée de l'enregistrement d'un `ServiceWorker` est limité au répertoire qui contient le script du `ServiceWorker`. Consultez la section [Exemples](#Exemples) pour plus d'informations sur son fonctionnement.
+    - `scope`: Un {{domxref("USVString")}} représentant une URL qui définit la portée d'enregistrement d'un `ServiceWorker`; c'est-à-dire quelle plage d'URL un `ServiceWorker` peut contrôler. Il s'agit généralement d'une URL relative. Elle est relative à l'URL de base de l'application. Par défaut, la valeur de la portée de l'enregistrement d'un `ServiceWorker` est limité au répertoire qui contient le script du `ServiceWorker`. Consultez la section [Exemples](#exemples) pour plus d'informations sur son fonctionnement.
     - {{non-standard_inline}} `type`: Un {{domxref("WorkerType")}}, il prend les valeurs "classic" ou "module". Par défaut, la valeur est fixé à "classic".
     - {{non-standard_inline}} `updateViaCache`: Un {{domxref("ServiceWorkerUpdateViaCache")}}, il prend les valeurs "imports" ou "all" ou "none". Par défaut, la valeur est fixé à "imports".
 
@@ -51,19 +41,19 @@ Les exemples décrits ici doivent être pris ensemble pour obtenir une meilleure
 L'exemple suivant utilise la valeur par défaut de la portée (en l'omettant). Le code du `ServiceWorker` dans ce cas, s'il est inclus dans `example.com/index.html`, contrôlera `example.com/index.html`, ainsi que les pages en dessous, comme `example.com/product/description.html`.
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // Register a service worker hosted at the root of the
   // site using the default scope.
-  navigator.serviceWorker.register('/sw.js').then(
+  navigator.serviceWorker.register("/sw.js").then(
     (registration) => {
-      console.log('Service worker registration succeeded:', registration)
+      console.log("Service worker registration succeeded:", registration);
     },
-      /*catch*/ (error) => {
-         console.log('Service worker registration failed:', error)
-    }
-  )
+    /*catch*/ (error) => {
+      console.log("Service worker registration failed:", error);
+    },
+  );
 } else {
-  console.log('Service workers are not supported.')
+  console.log("Service workers are not supported.");
 }
 ```
 
@@ -72,18 +62,18 @@ Le code suivant, s'il est inclus dans `example.com/index.html`, à la racine d'u
 Sinon, si ce code était inclus dans une page à `example.com/product/description.html`, avec le fichier Javascript résidant à `example.com/product/sw.js`, alors le service worker ne s'appliquerait qu'aux ressources sous `example.com /product`.
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // declaring scope manually
-  navigator.serviceWorker.register('/sw.js', { scope: './' }).then(
+  navigator.serviceWorker.register("/sw.js", { scope: "./" }).then(
     (registration) => {
-      console.log('Service worker registration succeeded:', registration)
+      console.log("Service worker registration succeeded:", registration);
     },
     /*catch*/ (error) => {
-      console.log('Service worker registration failed:', error)
-    }
-  )
+      console.log("Service worker registration failed:", error);
+    },
+  );
 } else {
-  console.log('Service workers are not supported.')
+  console.log("Service workers are not supported.");
 }
 ```
 
@@ -92,18 +82,18 @@ Il y a une confusion fréquente autour de la signification et de l'utilisation d
 Le code suivant, s'il est inclus dans `example.com/index.html`, à la racine d'un site, ne s'appliquerait qu'aux ressources sous `example.com/product`.
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // declaring scope manually
-  navigator.serviceWorker.register('/sw.js', { scope: '/product/' }).then(
+  navigator.serviceWorker.register("/sw.js", { scope: "/product/" }).then(
     (registration) => {
-      console.log('Service worker registration succeeded:', registration)
+      console.log("Service worker registration succeeded:", registration);
     },
     /*catch*/ (error) => {
-      console.log('Service worker registration failed:', error)
-    }
-  )
+      console.log("Service worker registration failed:", error);
+    },
+  );
 } else {
-  console.log('Service workers are not supported.')
+  console.log("Service workers are not supported.");
 }
 ```
 

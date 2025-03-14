@@ -1,5 +1,5 @@
 ---
-title: ':right'
+title: :right
 slug: Web/CSS/:right
 ---
 
@@ -16,7 +16,8 @@ La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) **`:r
 
 Que una página dada sea "izquierda" o "derecha" está determinada por la dirección principal de escritura del documento. Por ejemplo, si la primera página tiene una dirección de escritura principal de izquierda a derecha, entonces será una página `:right`; si tiene una dirección de escritura principal de derecha a izquierda, entonces será una página {{Cssxref(":left")}}.
 
-> **Nota:** No puede cambiar todas las propiedades de CSS con esta pseudo-clase. Solo puede cambiar las propiedades {{ Cssxref("margin") }}, {{ Cssxref("padding") }}, {{ Cssxref("border") }}, y {{ Cssxref("background") }} de la caja de página. Se ignorarán todas las demás propiedades y solo se verá afectada la caja de página, no el contenido del documento en la página.
+> [!NOTE]
+> No puede cambiar todas las propiedades de CSS con esta pseudo-clase. Solo puede cambiar las propiedades {{ Cssxref("margin") }}, {{ Cssxref("padding") }}, {{ Cssxref("border") }}, y {{ Cssxref("background") }} de la caja de página. Se ignorarán todas las demás propiedades y solo se verá afectada la caja de página, no el contenido del documento en la página.
 
 ## Sintaxis
 
@@ -36,7 +37,7 @@ Que una página dada sea "izquierda" o "derecha" está determinada por la direcc
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.right")}}
+{{Compat}}
 
 ## Ver también
 

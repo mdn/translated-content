@@ -1,15 +1,13 @@
 ---
-title: ':invalid'
+title: :invalid
 slug: Web/CSS/:invalid
-tags:
-  - Псевдо-классы
-translation_of: Web/CSS/:invalid
 ---
+
 {{ CSSRef() }}
 
 ## Описание
 
-CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:invalid` находит любые {{ HTMLElement("input") }} или {{ HTMLElement("form") }} элементы, контент которых не проходит [валидацию](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation), в соответствии с типом поля. Он позволяет вам легко менять внешний вид полей, что позволяет пользователю видеть и исправлять ошибки.
+CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:invalid` находит любые {{ HTMLElement("input") }} или {{ HTMLElement("form") }} элементы, контент которых не проходит [валидацию](/ru/docs/Web/HTML/Constraint_validation), в соответствии с типом поля. Он позволяет вам легко менять внешний вид полей, что позволяет пользователю видеть и исправлять ошибки.
 
 По умолчанию, Gecko не применяет стили к псевдоклассу `:invalid`. Однако, применяет стили (красное "свечение", используя свойство {{ Cssxref("box-shadow") }}) к псевдоклассу {{ Cssxref(":-moz-ui-invalid") }}, который применяется в подгруппе случаев для `:invalid`.
 
@@ -25,7 +23,7 @@ CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:inval
 }
 
 :-moz-ui-invalid {
-  box-shadow:none;
+  box-shadow: none;
 }
 ```
 
@@ -48,7 +46,7 @@ CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:inval
   <br />
   <br />
   <label>Введите эл. почту:</label>
-  <input type="email" required/>
+  <input type="email" required />
 </form>
 ```
 
@@ -83,7 +81,7 @@ input:required {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -91,5 +89,5 @@ input:required {
 
 - Прочие псевдоклассы для валидации: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":valid") }}
 - Псевдоклассы Mozilla: {{cssxref(":user-invalid")}}, {{cssxref(":-moz-submit-invalid")}}
-- [Валидация форм](/en-US/docs/Learn/Forms/Form_validation)
-- Получение [состояния валидации](/en-US/docs/Web/API/ValidityState) средствами JavaScript
+- [Валидация форм](/ru/docs/Learn/Forms/Form_validation)
+- Получение [состояния валидации](/ru/docs/Web/API/ValidityState) средствами JavaScript

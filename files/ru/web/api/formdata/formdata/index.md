@@ -1,17 +1,18 @@
 ---
 title: FormData()
 slug: Web/API/FormData/FormData
-translation_of: Web/API/FormData/FormData
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 Конструктор **`FormData()`** создаёт новые объект {{domxref("FormData")}}, если проще - HTML-форму**.**
 
 ## Синтаксис
 
 ```js
-var formData = new FormData(form)
+var formData = new FormData(form);
 ```
 
 ### Параметры
@@ -23,26 +24,21 @@ var formData = new FormData(form)
 
 ```html
 <form name="test">
-  <input type="text" name="code" value="12345">
-  <input type="submit" value="Отправить">
+  <input type="text" name="code" value="12345" />
+  <input type="submit" value="Отправить" />
 </form>
 ```
 
 ```js
-var
-    oldForm = document.forms.test,
-    formData = new FormData(oldForm)
-;
-
-console.log(
-    formData.get("code"),
-    formData === oldForm
-);
+var oldForm = document.forms.test,
+  formData = new FormData(oldForm);
+console.log(formData.get("code"), formData === oldForm);
 ```
 
 ### Методы
 
-> **Примечание:** Подробнее о каждом методе можно прочитать, выбрав его в колонке слева.
+> [!NOTE]
+> Подробнее о каждом методе можно прочитать, выбрав его в колонке слева.
 
 Добавление нового текстового поля в форму:
 
@@ -74,10 +70,10 @@ formData.has(name);
 formData.set(name, value, filename);
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

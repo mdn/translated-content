@@ -1,11 +1,6 @@
 ---
 title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
-tags:
-  - HTTP
-  - Reference
-  - en-tête
-translation_of: Web/HTTP/Headers/Content-Type
 ---
 
 {{HTTPSidebar}}
@@ -43,7 +38,7 @@ Content-Type: multipart/form-data; boundary=something
 ## Directives
 
 - `media-type`
-  - : Le [type MIME](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types) de la ressource ou des données.
+  - : Le [type MIME](/fr/docs/Web/HTTP/MIME_types) de la ressource ou des données.
 - `charset`
   - : L'encodage utilisé pour les caractères des données.
 - `boundary`
@@ -57,8 +52,8 @@ Dans une requête {{HTTPMethod("POST")}}, qui vient d'une soumission d'un formul
 
 ```html
 <form action="/" method="post" enctype="multipart/form-data">
-  <input type="text" name="description" value="du texte">
-  <input type="file" name="monFichier">
+  <input type="text" name="description" value="du texte" />
+  <input type="file" name="monFichier" />
   <button type="submit">Envoyer</button>
 </form>
 ```
@@ -86,12 +81,9 @@ Content-Type: text/plain
 
 ## Spécifications
 
-| Spécification                                                        | Titre                                                         |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7233", "Content-Type in multipart", "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests        |
-| {{RFC("7231", "Content-Type", "3.1.1.5")}}             | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## Compatibilité selon les navigateurs
+## Compatibilité des navigateurs
 
 {{Compat}}
 

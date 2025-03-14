@@ -1,34 +1,29 @@
 ---
-title: Document.all
+title: "Document: all 속성"
+short-title: all
 slug: Web/API/Document/all
-tags:
-  - API
-  - DOM
-  - Document
-  - HTMLAllCollection
-  - Property
-  - Reference
-  - all
-translation_of: Web/API/Document/all
+l10n:
+  sourceCommit: e8e22a6e6d6455222c8c1a1e1346a149d300ab35
 ---
-{{APIRef("DOM")}}{{SeeCompatTable}}
 
-{{DOMxRef("Document")}} 인터페이스의 read-only **`all`** 요소는 document node에 위치한{{DOMxRef("HTMLAllCollection")}} 반환한다. 간단하게 말하면 read-only **`all`** 요소는 페이지의 모든 contents를 반환 해준다.
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
-## Syntax
+{{DOMxRef("Document")}} 읽기전용 인터페이스인 **`all`** 속성은 문서 노드에 위치한{{DOMxRef("HTMLAllCollection")}} 반환합니다.
+
+문서순서상의 문서의 모든 요소 {{DOMxRef("HTMLAllCollection")}}를 리턴하는 `document.all` 대신, 문서순서상의 문서의 모든 요소 {{DOMxRef("NodeList")}}를 리턴하는 {{DOMxRef("Document.querySelectorAll")}}를 사용 할 수 있습니다:
 
 ```js
-var htmlAllCollection = document.all;
+const allElements = document.querySelectorAll("*");
 ```
 
-### Value
+## 값
 
-{{DOMxRef("HTMLAllCollection")}}는 문서 내에서 모든 node를 담고 있다.
+{{DOMxRef("HTMLAllCollection")}}는 문서 내에서 모든 요소를 담고 있다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

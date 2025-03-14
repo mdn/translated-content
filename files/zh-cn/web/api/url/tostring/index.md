@@ -1,18 +1,18 @@
 ---
-title: URL.toString()
+title: URL：toString() 方法
 slug: Web/API/URL/toString
+l10n:
+  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-**`URL.toString()`** 字符串化方法返回一个包含完整 URL 的 {{domxref("USVString")}}。它的作用等同于只读的 {{domxref("URL.href")}}。
-
-{{AvailableInWorkers}}
+{{domxref("URL")}} 接口的 **`toString()`** 方法返回一个包含整个 URL 的字符串。它实际上是 {{domxref("URL.href")}} 的只读版本。
 
 ## 语法
 
-```plain
-string = url.toString();
+```js-nolint
+toString()
 ```
 
 ### 参数
@@ -21,13 +21,15 @@ string = url.toString();
 
 ### 返回值
 
-一个{{domxref("USVString")}}。
+字符串。
 
-## 参考
+## 示例
 
 ```js
-const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
-url.toString() // 应当返回字符串形式的 URL
+const url = new URL(
+  "https://developer.mozilla.org/zh-CN/docs/Web/API/URL/toString",
+);
+url.toString(); // 应以字符串形式返回 URL
 ```
 
 ## 规范
@@ -40,4 +42,4 @@ url.toString() // 应当返回字符串形式的 URL
 
 ## 参见
 
-- 父级接口 {{domxref("URL")}}。
+- 所属的 {{domxref("URL")}} 接口。

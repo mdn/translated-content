@@ -1,14 +1,13 @@
 ---
 title: Canvas
 slug: Web/API/Canvas_API
-original_slug: Web/HTML/Canvas
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 A **Canvas API** provê maneiras de desenhar gráficos via [JavaScript](/pt-BR/docs/Web/JavaScript) e via elemento [HTML](/pt-BR/docs/Web/HTML) {{HtmlElement("canvas")}}. Entre outras coisas, ele pode ser utilizado para animação, gráficos de jogos, visualização de dados, manipulação de fotos e processamento de vídeo em tempo real.
 
-A Canvas API foca amplamente em gráficos 2D. A [WebGL API](/pt-BR/docs/Web/WebGL), que também usa o elemento `<canvas>`, desenha gráficos 2D e 3D acelerados por hardware.
+A Canvas API foca amplamente em gráficos 2D. A [WebGL API](/pt-BR/docs/Web/API/WebGL_API), que também usa o elemento `<canvas>`, desenha gráficos 2D e 3D acelerados por hardware.
 
 ## Exemplo básico
 
@@ -27,10 +26,10 @@ O método {{domxref("Document.getElementById()")}} pega uma referência para o e
 O desenho atual é feito usando a interface {{domxref("CanvasRenderingContext2D")}}. A propriedade {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} faz o retângulo verde. O método {{domxref("CanvasRenderingContext2D.fillRect()", "fillRect()")}} coloca seu canto superior direito em (10, 10) e dá a ele o tamanho de 150 unidades de largura e 100 de altura.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 150, 100);
 ```
 
@@ -53,7 +52,8 @@ ctx.fillRect(10, 10, 150, 100);
 - {{domxref("Path2D")}} {{experimental_inline}}
 - {{domxref("ImageBitmapRenderingContext")}} {{experimental_inline}}
 
-> **Nota:** As interfaces relacionadas ao `WebGLRenderingContext` são referenciadas sob [WebGL](/pt-BR/docs/Web/WebGL).
+> [!NOTE]
+> As interfaces relacionadas ao `WebGLRenderingContext` são referenciadas sob [WebGL](/pt-BR/docs/Web/API/WebGL_API).
 
 {{domxref("CanvasCaptureMediaStream")}} é uma interface relacionada.
 
@@ -63,9 +63,9 @@ ctx.fillRect(10, 10, 150, 100);
 
   - : Um tutorial compreensivo abordando o uso básico da API de Canvas e suas funcionalidades avançadas.
 
-- [Mergulhando no Canvas HTML5](http://joshondesign.com/p/books/canvasdeepdive/title.html)
+- [Mergulhando no Canvas HTML5](https://joshondesign.com/p/books/canvasdeepdive/title.html)
   - : Uma introdução prática e extensa à API Canvas e WebGL.
-- [Guia Canvas](http://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html)
+- [Guia Canvas](https://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html)
   - : Uma referência acessível para a API Canvas.
 - [Demonstração: Um _ray-caster_ básico](/pt-BR/docs/Web/API/Canvas_API/A_basic_ray-caster)
   - : Uma demonstração de animação _ray-tracing_ usando canvas.
@@ -76,32 +76,31 @@ ctx.fillRect(10, 10, 150, 100);
 
 A API Canvas é extremamente poderosa, mas nem sempre é simples de usar. As bibliotecas listadas abaixo podem fazer a criação de projetos baseados em canvas mais rápida e fácil.
 
-- [EaselJS](http://www.createjs.com/easeljs) é uma biblioteca de código aberto que facilita criações de jogos, arte generativa e outras experiências altamente gráficas.
+- [EaselJS](https://www.createjs.com/easeljs) é uma biblioteca de código aberto que facilita criações de jogos, arte generativa e outras experiências altamente gráficas.
 - [Fabric.js](http://fabricjs.com/) é uma biblioteca código aberto em canvas com suporte à SVG.
 - [heatmap.js](https://www.patrick-wied.at/static/heatmapjs/) é uma biblioteca de código aberto para criar mapas de calor (heatmaps) baseados em canvas.
-- [JavaScript InfoVis Toolkit](http://thejit.org/) cria visualizações de dados interativas.
+- [JavaScript InfoVis Toolkit](https://thejit.org/) cria visualizações de dados interativas.
 - [Konva.js](https://konvajs.github.io/) é uma biblioteca de canvas 2D para aplicações _desktop_ e móveis.
 - [p5.js](https://p5js.org/) tem um conjunto completo de funcionalidades de desenho canvas para artistas, _designers_, educadores e iniciantes.
 - [Paper.js](http://paperjs.org/) é um framework de código-aberto para scripting de vetores gŕaficos que funciona sobre o Canvas HTML5.
 - [Phaser](https://phaser.io/) é um framework de código-aberto rápido, grátis e divertido para jogos de navegador desenvolvidos com Canvas e WebGL.
-- [Processing.js](http://processingjs.org/) é um conversor da linguagem de visualização Processing.
+- [Processing.js](https://processingjs.org/) é um conversor da linguagem de visualização Processing.
 - [Pts.js](https://ptsjs.org/) é uma biblioteca para codificação criativa e visualização em canvas e SVG.
 - [Rekapi](https://github.com/jeremyckahn/rekapi) é uma API de animação _key-framing_ para Canvas.
-- [Scrawl-canvas](http://scrawl.rikweb.org.uk/) é uma biblioteca JavaScript de código aberto para criação e manipulação de elementos canvas 2D.
-- O framework [ZIM](http://zimjs.com/) provê conveniências, componentes e controles para programar criatividade no canvas - inclui acessibilidade e centenas de tutoriais cheios de cores.
+- [Scrawl-canvas](https://scrawl.rikweb.org.uk/) é uma biblioteca JavaScript de código aberto para criação e manipulação de elementos canvas 2D.
+- O framework [ZIM](https://zimjs.com/) provê conveniências, componentes e controles para programar criatividade no canvas - inclui acessibilidade e centenas de tutoriais cheios de cores.
 
-> **Nota:** Veja a [WebGL API](/pt-BR/docs/Web/WebGL) para bibliotecas 2D e 3D que usam WebGL.
+> [!NOTE]
+> Veja a [WebGL API](/pt-BR/docs/Web/API/WebGL_API) para bibliotecas 2D e 3D que usam WebGL.
 
 ## Especificações
 
-| Especificações                                                                               | Estado                           | Comentário |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', '#2dcontext', 'the 2D rendering context')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-Aplicações Mozilla ganharam suporte para `<canvas>` a partir do Gecko 1.8 ([Firefox 1.5](/pt-BR/docs/Mozilla/Firefox/Releases/1.5)). O elemento foi originalmente introduzido pela Apple para o Dashboard OS X e Safari. O Internet Explorer suporta `<canvas>` quando inclui-se um script do projeto Explorer Canvas, da google. Google Chrome e Opera 9 também suportam `<canvas>`.
+{{Compat}}
 
 ## Ver também
 
-- [WebGL](/pt-BR/docs/Web/WebGL)
+- [WebGL](/pt-BR/docs/Web/API/WebGL_API)

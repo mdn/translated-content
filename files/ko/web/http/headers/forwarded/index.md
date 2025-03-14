@@ -1,13 +1,6 @@
 ---
 title: Forwarded
 slug: Web/HTTP/Headers/Forwarded
-tags:
-  - HTTP
-  - HTTP 헤더
-  - 요청 헤더
-  - 참고자료
-  - 헤더
-translation_of: Web/HTTP/Headers/Forwarded
 ---
 
 {{HTTPSidebar}}
@@ -87,8 +80,8 @@ Forwarded: for=192.0.2.43, for="[2001:db8:cafe::17]"
 
 ## 기술 사양
 
-| 기술 사양                                    | 제목                     |
-| -------------------------------------------- | ------------------------ |
+| 기술 사양                         | 제목                     |
+| --------------------------------- | ------------------------ |
 | {{RFC("7239", "Forwarded", "4")}} | Forwarded HTTP Extension |
 
 ## 함께 참고할 내용

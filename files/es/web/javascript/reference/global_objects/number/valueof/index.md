@@ -1,13 +1,6 @@
 ---
 title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
-tags:
-  - JavaScript
-  - Métodos
-  - Number
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/valueOf
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/valueOf
 ---
 
 {{JSRef}}
@@ -37,17 +30,17 @@ var numObj = new Number(10);
 console.log(typeof numObj); // objeto
 
 var num = numObj.valueOf();
-console.log(num);           // 10
-console.log(typeof num);    // número
+console.log(num); // 10
+console.log(typeof num); // número
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad con navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.valueOf")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,14 +1,6 @@
 ---
 title: object-position
 slug: Web/CSS/object-position
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Reference
-  - Replaced Elements
-  - 대체 요소
-translation_of: Web/CSS/object-position
 ---
 
 {{CSSRef}}
@@ -17,7 +9,41 @@ translation_of: Web/CSS/object-position
 
 대체 요소 객체의 고유 크기(수정을 가하지 않은 원래 크기)를 조정해 요소 박스에 맞추는 방법은 {{cssxref("object-fit")}} 속성으로 지정할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/css/object-position.html")}}
+{{InteractiveExample("CSS Demo: object-position")}}
+
+```css interactive-example-choice
+object-position: 50% 50%;
+```
+
+```css interactive-example-choice
+object-position: right top;
+```
+
+```css interactive-example-choice
+object-position: left bottom;
+```
+
+```css interactive-example-choice
+object-position: 250px 125px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/moon.jpg" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 250px;
+  width: 250px;
+  object-fit: none;
+  border: 1px solid red;
+}
+```
 
 ## 구문
 
@@ -37,7 +63,8 @@ object-position: unset;
 - {{cssxref("&lt;position&gt;")}}
   - : 객체의 2D 위치를 지정하는 한 개에서 네 개의 값. 상대와 절대 오프셋을 사용할 수 있습니다.
 
-> **참고:** 콘텐츠가 대체 요소의 박스 바깥으로 나가도록 지정할 수도 있습니다.
+> [!NOTE]
+> 콘텐츠가 대체 요소의 박스 바깥으로 나가도록 지정할 수도 있습니다.
 
 ## 형식 정의
 
@@ -56,8 +83,8 @@ object-position: unset;
 두 개의 {{htmlelement("img")}} 요소가 MDN 로고를 가리키는 코드입니다.
 
 ```html
-<img id="object-position-1" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/>
-<img id="object-position-2" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/>
+<img id="object-position-1" src="mdn.svg" alt="MDN Logo" />
+<img id="object-position-2" src="mdn.svg" alt="MDN Logo" />
 ```
 
 #### CSS

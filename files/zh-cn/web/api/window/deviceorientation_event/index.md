@@ -1,5 +1,5 @@
 ---
-title: 'Window：deviceorientation 事件'
+title: Window：deviceorientation 事件
 slug: Web/API/Window/deviceorientation_event
 ---
 
@@ -7,7 +7,7 @@ slug: Web/API/Window/deviceorientation_event
 
 **`deviceorientation`** 事件在方向传感器输出新数据的时候触发。其数据系传感器与地球坐标系相比较所得，也就是说在设备上可能会采用设备地磁计的数据。
 
-参见[有关方向与运动信息的说明](/zh-CN/docs/Web/Events/Orientation_and_motion_data_explained)。
+参见[有关方向与运动信息的说明](/zh-CN/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)。
 
 该事件不可取消也不会冒泡。
 
@@ -16,9 +16,9 @@ slug: Web/API/Window/deviceorientation_event
 在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 方法中使用事件名称，或使用事件处理器属性。
 
 ```js
-addEventListener('deviceorientation', event => { });
+addEventListener("deviceorientation", (event) => {});
 
-ondeviceorientation = event => { };
+ondeviceorientation = (event) => {};
 ```
 
 ## 事件类型
@@ -46,20 +46,28 @@ ondeviceorientation = event => { };
 
 ```js
 if (window.DeviceOrientationEvent) {
-    window.addEventListener("deviceorientation", function(event) {
-        // alpha: rotation around z-axis
-        var rotateDegrees = event.alpha;
-        // gamma: left to right
-        var leftToRight = event.gamma;
-        // beta: front back motion
-        var frontToBack = event.beta;
+  window.addEventListener(
+    "deviceorientation",
+    function (event) {
+      // alpha: rotation around z-axis
+      var rotateDegrees = event.alpha;
+      // gamma: left to right
+      var leftToRight = event.gamma;
+      // beta: front back motion
+      var frontToBack = event.beta;
 
-        handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
-    }, true);
+      handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
+    },
+    true,
+  );
 }
 
-var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
-    // do something amazing
+var handleOrientationEvent = function (
+  frontToBack,
+  leftToRight,
+  rotateDegrees,
+) {
+  // do something amazing
 };
 ```
 
@@ -74,5 +82,5 @@ var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
 ## 参见
 
 - [`devicemotion`](/zh-CN/docs/Web/API/Window/devicemotion_event)
-- [检测设备朝向](/zh-CN/docs/Web/Events/Detecting_device_orientation)
-- [有关方向与运动信息的说明](/zh-CN/docs/Web/Events/Orientation_and_motion_data_explained)
+- [检测设备朝向](/zh-CN/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- [有关方向与运动信息的说明](/zh-CN/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)

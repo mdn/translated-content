@@ -9,18 +9,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/of
 
 **`Array.of()`** 與 **`Array`** 建構式之間的不同在於如何處理整數引數：**`Array.of(7)`** 會建立一個擁有單個元素—`7`—的陣列，而 **`Array(7)`** 會建立一個 `length` 屬性值為 7 的空陣列（**註：**這意味著這個陣列有 7 個空缺欄位（empty slots），而非 7 個值為 `undefined` 的欄位）。
 
-```js
-Array.of(7);       // [7]
-Array.of(1, 2, 3); // [1, 2, 3]
+{{InteractiveExample("JavaScript Demo: Array.of()", "shorter")}}
 
-Array(7);          // [ , , , , , , ]
-Array(1, 2, 3);    // [1, 2, 3]
+```js interactive-example
+console.log(Array.of("foo", 2, "bar", true));
+// Expected output: Array ["foo", 2, "bar", true]
+
+console.log(Array.of());
+// Expected output: Array []
 ```
 
 ## 語法
 
-```plain
-Array.of(element0[, element1[, ...[, elementN]]])
+```js-nolint
+Array.of(element0)
+Array.of(element0, element1)
+Array.of(element0, element1, /* … ,*/ elementN)
 ```
 
 ### 參數
@@ -38,10 +42,34 @@ Array.of(element0[, element1[, ...[, elementN]]])
 
 ## 範例
 
+### 使用 Array.of()
+
 ```js
-Array.of(1);         // [1]
-Array.of(1, 2, 3);   // [1, 2, 3]
+Array.of(1); // [1]
+Array.of(1, 2, 3); // [1, 2, 3]
 Array.of(undefined); // [undefined]
+```
+
+### 在非陣列建構中使用 of()
+
+可以在接受表示新陣列長度的單個參數的任何建構式上調用 `of()` 方法。
+
+```js
+function NotArray(len) {
+  console.log("NotArray called with length", len);
+}
+
+console.log(Array.of.call(NotArray, 1, 2, 3));
+// NotArray called with length 3
+// NotArray { '0': 1, '1': 2, '2': 3, length: 3 }
+
+console.log(Array.of.call(Object)); // [Number: 0] { length: 0 }
+```
+
+When the `this` value is not a constructor, a plain `Array` object is returned.
+
+```js
+console.log(Array.of.call({}, 1)); // [ 1 ]
 ```
 
 ## Polyfill
@@ -50,7 +78,7 @@ Array.of(undefined); // [undefined]
 
 ```js
 if (!Array.of) {
-  Array.of = function() {
+  Array.of = function () {
     return Array.prototype.slice.call(arguments);
   };
 }
@@ -66,6 +94,7 @@ if (!Array.of) {
 
 ## 參見
 
-- {{jsxref("Array")}}
+- [Polyfill of `Array.of` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
 - {{jsxref("Array.from()")}}
 - {{jsxref("TypedArray.of()")}}

@@ -1,12 +1,6 @@
 ---
 title: font-variant-caps
 slug: Web/CSS/font-variant-caps
-tags:
-  - CSS
-  - CSS Fonts
-  - Propriété
-  - Reference
-translation_of: Web/CSS/font-variant-caps
 ---
 
 {{CSSRef}}
@@ -86,11 +80,9 @@ La valeur de cette propriété peut être l'un des mots-clés définis ci-après
 
 ```html
 <p>
-  La Reine devint pourpre de colère et
-  après l’avoir considérée un moment avec
-  des yeux flamboyants comme ceux d’une
-  bête fauve, elle se mit à crier :
-  « <span class="exemple">Qu’on lui coupe la tête !</span> »
+  La Reine devint pourpre de colère et après l’avoir considérée un moment avec
+  des yeux flamboyants comme ceux d’une bête fauve, elle se mit à crier : «
+  <span class="exemple">Qu’on lui coupe la tête !</span> »
 </p>
 ```
 
@@ -102,7 +94,7 @@ La valeur de cette propriété peut être l'un des mots-clés définis ci-après
 
 L'utilisation de grandes portions de textes avec `font-style: all-small-caps` ou `font-style: all-petite-caps` peut rendre la lecture difficile pour les personnes dyslexiques ou ayant des troubles cognitifs.
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [_W3C Understanding WCAG 2.1_ (en anglais)](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## Spécifications

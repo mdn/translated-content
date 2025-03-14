@@ -1,20 +1,9 @@
 ---
 title: browserAction.ImageDataType
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/ImageDataType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - ImageDataType
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - browserAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/ImageDataType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Données en pixels pour une image. Doit être un objet [`ImageData`](/fr/docs/Web/API/ImageData) (par exemple, un élément {{htmlelement("canvas")}}).
 
@@ -22,13 +11,13 @@ Données en pixels pour une image. Doit être un objet [`ImageData`](/fr/docs/We
 
 Un objet [`ImageData`](/fr/docs/Web/API/ImageData).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserAction.ImageDataType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
 >

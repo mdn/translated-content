@@ -1,8 +1,9 @@
 ---
 title: Argumento
 slug: Glossary/Argument
-original_slug: Glossario/Argument
 ---
+
+{{GlossarySidebar}}
 
 Um **argumento** é um {{glossary("valor")}} ({{Glossary("primitivo")}} ou um {{Glossary("objeto")}}) passado como um input (entrada) para uma {{Glossary("função")}}.
 
@@ -10,7 +11,7 @@ Um **argumento** é um {{glossary("valor")}} ({{Glossary("primitivo")}} ou um {{
 
 ### Conhecimento Geral
 
-- {{Interwiki("wikipedia", "Parâmetro_(ciência_da_computação)", "Diferenças de Parâmetro e Argumento")}} no Wikipédia
+- [Diferenças de Parâmetro e Argumento](<https://pt.wikipedia.org/wiki/Parâmetro_(ciência_da_computação)>) no Wikipédia
 
 ### Referencia Técnica
 

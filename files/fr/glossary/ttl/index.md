@@ -1,12 +1,9 @@
 ---
 title: TTL
 slug: Glossary/TTL
-tags:
-  - Glossaire
-  - Infrastructure
-translation_of: Glossary/TTL
-original_slug: Glossaire/TTL
 ---
+
+{{GlossarySidebar}}
 
 TTL peut se référer soit à :
 

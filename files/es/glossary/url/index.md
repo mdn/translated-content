@@ -1,12 +1,9 @@
 ---
 title: URL
 slug: Glossary/URL
-tags:
-  - Glosario
-  - Infraestructura
-  - l10n:priority
-translation_of: Glossary/URL
 ---
+
+{{GlossarySidebar}}
 
 La «**_Uniform Resource Locator_**» (**URL** o _Localizadora Uniforme de Recursos_ en Español) es una cadena de texto que especifica dónde se puede encontrar un recurso (como una página web, una imagen o un video) en Internet.
 
@@ -22,7 +19,7 @@ Las URLs también se pueden utilizar para la transferencia de archivos ({{Glossa
 
 ### Aprende sobre esto
 
-- [Comprender las URLs y su estructura](/es/Learn/Understanding_URLs)
+- [Comprender las URLs y su estructura](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 
 ### Especificación
 

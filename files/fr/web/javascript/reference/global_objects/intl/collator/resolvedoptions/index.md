@@ -1,29 +1,29 @@
 ---
 title: Intl.Collator.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
-tags:
-  - Collator
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - i18n
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Collator/resolvedOptions
 ---
 
 {{JSRef}}
 
 La méthode **`Intl.Collator.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de locale et de collation calculées à l'initialisation de l'objet {{jsxref("Collator")}}.
 
-{{EmbedInteractiveExample("pages/js/intl-collator-prototype-resolvedoptions.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Collator.prototype.resolvedOptions")}}
+
+```js interactive-example
+const numberDe = new Intl.NumberFormat("de-DE");
+const numberAr = new Intl.NumberFormat("ar");
+
+console.log(numberDe.resolvedOptions().numberingSystem);
+// Expected output: "latn"
+
+console.log(numberAr.resolvedOptions().numberingSystem);
+// Expected output: "arab"
+```
 
 ## Syntaxe
 
 ```js
-collator.resolvedOptions()
+collator.resolvedOptions();
 ```
 
 ### Valeur de retour
@@ -46,15 +46,15 @@ L'objet renvoyé par cette méthode contient les propriétés suivantes :
 ## Exemples
 
 ```js
-var de = new Intl.Collator('de', { sensitivity: 'base' })
+var de = new Intl.Collator("de", { sensitivity: "base" });
 var usedOptions = de.resolvedOptions();
 
-usedOptions.locale;            // "de"
-usedOptions.usage;             // "sort"
-usedOptions.sensitivity;        // "base"
+usedOptions.locale; // "de"
+usedOptions.usage; // "sort"
+usedOptions.sensitivity; // "base"
 usedOptions.ignorePunctuation; // false
-usedOptions.collation;         // "default"
-usedOptions.numeric;           // false
+usedOptions.collation; // "default"
+usedOptions.numeric; // false
 ```
 
 ## Spécifications

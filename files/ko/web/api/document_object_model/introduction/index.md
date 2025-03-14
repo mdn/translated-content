@@ -1,22 +1,17 @@
 ---
 title: DOM 소개
 slug: Web/API/Document_Object_Model/Introduction
-tags:
-  - DOM
-  - 가이드
-  - 문서
-translation_of: Web/API/Document_Object_Model/Introduction
-original_slug: Web/API/Document_Object_Model/소개
 ---
+
 이 문서는 {{glossary("DOM")}}에 대한 개념을 간략하게 소개하는 문서이다: DOM 이 무엇이며, 그것이 어떻게 {{glossary("HTML")}}, {{glossary("XML")}} 문서들을 위한 구조를 제공하는지, 어떻게 DOM 에 접근하는지, API 가 어떻게 사용되는지에 대한 참조 정보와 예제들을 제공한다.
 
 ## DOM 이란?
 
 문서 객체 모델(The Document Object Model, 이하 DOM) 은 HTML, XML 문서의 프로그래밍 interface 이다. DOM은 문서의 구조화된 표현(structured representation)을 제공하며 프로그래밍 언어가 DOM 구조에 접근할 수 있는 방법을 제공하여 그들이 문서 구조, 스타일, 내용 등을 변경할 수 있게 돕는다. DOM 은 nodes와 objects로 문서를 표현한다. 이들은 웹 페이지를 스크립트 또는 프로그래밍 언어들에서 사용될 수 있게 연결시켜주는 역할을 담당한다.
 
-웹 페이지는 일종의 문서(document)다. 이 문서는 웹 브라우저를 통해 그 내용이 해석되어 웹 브라우저 화면에 나타나거나 HTML 소스 자체로 나타나기도 한다. 동일한 문서를 사용하여 이처럼 다른 형태로 나타날 수 있다는 점에 주목할 필요가 있다. DOM 은 동일한 문서를 표현하고, 저장하고, 조작하는 방법을 제공한다. DOM 은 웹 페이지의 객체 지향 표현이며, 자바스크립트와 같은 스크립팅 언어를 이용해 DOM 을 수정할 수 있다.
+웹 페이지는 일종의 문서(document)다. 이 문서는 웹 브라우저를 통해 그 내용이 해석되어 웹 브라우저 화면에 나타나거나 HTML 소스 자체로 나타나기도 한다. 동일한 문서를 사용하여 이처럼 다른 형태로 나타날 수 있다는 점에 주목할 필요가 있다. DOM 은 동일한 문서를 표현하고, 저장하고, 조작하는 방법을 제공한다. DOM 은 웹 페이지의 객체 지향 표현이며, JavaScript와 같은 스크립팅 언어를 이용해 DOM 을 수정할 수 있다.
 
-[W3C DOM](http://www.w3.org/DOM/), [WHATWG DOM](https://dom.spec.whatwg.org) 표준은 대부분의 브라우저에서 DOM 을 구현하는 기준이다. 많은 브라우저들이 표준 규약에서 제공하는 기능 외에도 추가적인 기능들을 제공하기 때문에 사용자가 작성한 문서들이 각기 다른 DOM 이 적용된 다양한 브라우저 환경에서 동작할 수 있다는 사실을 항상 인지하고 있어야 한다.
+[W3C DOM](https://www.w3.org/DOM/), [WHATWG DOM](https://dom.spec.whatwg.org) 표준은 대부분의 브라우저에서 DOM 을 구현하는 기준이다. 많은 브라우저들이 표준 규약에서 제공하는 기능 외에도 추가적인 기능들을 제공하기 때문에 사용자가 작성한 문서들이 각기 다른 DOM 이 적용된 다양한 브라우저 환경에서 동작할 수 있다는 사실을 항상 인지하고 있어야 한다.
 
 예를 들어, 표준 DOM 에서는 문서 안에서 모든 `<P>` elements 에 대한 list 를 리턴하는 `getElementsByTagName` method 를 정의하고 있다:
 
@@ -29,15 +24,15 @@ alert(paragraphs[0].nodeName);
 
 웹 페이지를 수정하거나 생성하는데 사용되는 모든 property, method, event 들은 objects 로 구성된다. 예를 들어 document object 는 document 자체를 의미하며, table object 는 HTML table 에 접근하기 위한 `HTMLTableElement` DOM 인터페이스를 구현한 것이다. 이 문서는 Gecko 기반의 브라우저에서 구현된 DOM 에 대한 object-by-object reference 를 제공한다.
 
-## DOM 과 자바스크립트
+## DOM 과 JavaScript
 
-이 문서의 대부분의 예제와 같이, 위에서 사용된 예제는 {{glossary("JavaScript")}}이다. 위의 예제는 자바스크립트로 작성되었지만 문서(document) 와 문서의 요소(element) 에 접근하기 위해 DOM 이 사용되었다. DOM 은 프로그래밍 언어는 아니지만 DOM 이 없다면 자바스크립트 언어는 웹 페이지 또는 XML 페이지 및 요소들과 관련된 모델이나 개념들에 대한 정보를 갖지 못하게 된다. 문서의 모든 element - 전체 문서, 헤드, 문서 안의 table, table header, table cell 안의 text - 는 문서를 위한 document object model 의 한 부분이다. 때문에, 이러한 요소들을 DOM 과 자바스크립트와 같은 스크립팅 언어를 통해 접근하고 조작할 수 있는 것이다.
+이 문서의 대부분의 예제와 같이, 위에서 사용된 예제는 {{glossary("JavaScript")}}이다. 위의 예제는 JavaScript로 작성되었지만 문서(document) 와 문서의 요소(element) 에 접근하기 위해 DOM 이 사용되었다. DOM 은 프로그래밍 언어는 아니지만 DOM 이 없다면 JavaScript 언어는 웹 페이지 또는 XML 페이지 및 요소들과 관련된 모델이나 개념들에 대한 정보를 갖지 못하게 된다. 문서의 모든 element - 전체 문서, 헤드, 문서 안의 table, table header, table cell 안의 text - 는 문서를 위한 document object model 의 한 부분이다. 때문에, 이러한 요소들을 DOM 과 JavaScript와 같은 스크립팅 언어를 통해 접근하고 조작할 수 있는 것이다.
 
-초창기에는 자바스크립트와 DOM 가 밀접하게 연결되어 있었지만, 나중에는 각각 분리되어 발전해왔다. 페이지 콘텐츠(the page content)는 DOM 에 저장되고 자바스크립트를 통해 접근하거나 조작할 수 있다. 이것을 방정식으로 표현하면 아래와 같다:
+초창기에는 JavaScript와 DOM 가 밀접하게 연결되어 있었지만, 나중에는 각각 분리되어 발전해왔다. 페이지 콘텐츠(the page content)는 DOM 에 저장되고 JavaScript를 통해 접근하거나 조작할 수 있다. 이것을 방정식으로 표현하면 아래와 같다:
 
 API (web or XML page) = DOM + JS (scripting language)
 
-DOM 은 프로그래밍 언어와 독립적으로 디자인되었다. 때문에 문서의 구조적인 표현은 단일 API 를 통해 이용가능하다. 이 문서에서는 자바스크립트를 주로 사용하였지만, DOM 의 구현은 어떠한 언어에서도 가능하다. 아래는 파이썬을 사용한 예제이다:
+DOM 은 프로그래밍 언어와 독립적으로 디자인되었다. 때문에 문서의 구조적인 표현은 단일 API 를 통해 이용가능하다. 이 문서에서는 JavaScript를 주로 사용하였지만, DOM 의 구현은 어떠한 언어에서도 가능하다. 아래는 파이썬을 사용한 예제이다:
 
 ```python
 # Python DOM example
@@ -47,37 +42,35 @@ doc.nodeName # DOM property of document object;
 p_list = doc.getElementsByTagName("para");
 ```
 
-웹에서 자바스크립트 사용하기와 관련된 기술에 대한 추가정보는 [자바스크립트 기술 개요](/ko/docs/Web/JavaScript/JavaScript_technologies_overview) 문서를 참조하라.
+웹에서 JavaScript 사용하기와 관련된 기술에 대한 추가정보는 [JavaScript 기술 개요](/ko/docs/Web/JavaScript/JavaScript_technologies_overview) 문서를 참조하라.
 
 ## DOM 에 어떻게 접근할 수 있는가?
 
 DOM 을 사용하기 위해 특별히 해야할 일은 없다. 각각의 브라우저는 자신만의 방법으로 DOM 구현하였으며, 이로 인해 실제 DOM 기준을 따르는지 확인해야 하는 번거로움이 발생하였다. (이 문제는 이 문서에서 피하고 싶어하는 주제이기도 하다.) 모든 웹 브라우저는 스크립트가 접근할 수 있는 웹 페이지를 만들기 위해 어느 정도의 DOM 을 항상 사용한다.
 
-스크립트를 작성할 때(인라인 `<script>` 요소를 사용하거나 웹 페이지 안에 있는 스크립트 로딩 명령을 사용하여), 문서 자체를 조작하거나 문서의 children 을 얻기 위해 {{domxref("document")}} 또는 [`window`](/ko/docs/DOM/window) elements 를 위한 API 를 즉시 사용할 수 있다. DOM 프로그래밍은 아래처럼 [`window`](/ko/docs/DOM/window) object 로 부터 [`alert()`](/ko/docs/DOM/window.alert) 함수를 사용하여 alert message 를 표시하는 매우 간단한 것일 수도 있고 다음번 예제처럼 새로운 content 를 작성하는 복잡한 DOM 이 될 수도 있다.
+스크립트를 작성할 때(인라인 `<script>` 요소를 사용하거나 웹 페이지 안에 있는 스크립트 로딩 명령을 사용하여), 문서 자체를 조작하거나 문서의 children 을 얻기 위해 {{domxref("document")}} 또는 [`window`](/ko/docs/Web/API/Window) elements 를 위한 API 를 즉시 사용할 수 있다. DOM 프로그래밍은 아래처럼 [`window`](/ko/docs/Web/API/Window) object 로 부터 [`alert()`](/ko/docs/Web/API/Window/alert) 함수를 사용하여 alert message 를 표시하는 매우 간단한 것일 수도 있고 다음번 예제처럼 새로운 content 를 작성하는 복잡한 DOM 이 될 수도 있다.
 
 ```html
-<body onload="window.alert('welcome to my home page!');">
+<body onload="window.alert('welcome to my home page!');"></body>
 ```
 
-아래의 자바스크립트는 문서가 로드될 때(모든 DOM을 사용할 수 있게 되는 때임) 실행되는 함수를 정의하였다. 이 함수는 새로운 H1 element 를 생성하고, element 에 text 를 추가하며, H1 을 이 문서의 트리에 추가한다.
+아래의 JavaScript는 문서가 로드될 때(모든 DOM을 사용할 수 있게 되는 때임) 실행되는 함수를 정의하였다. 이 함수는 새로운 H1 element 를 생성하고, element 에 text 를 추가하며, H1 을 이 문서의 트리에 추가한다.
 
 ```html
 <html>
   <head>
     <script>
-       // run this function when the document is loaded
-       window.onload = function() {
-
-         // create a couple of elements in an otherwise empty HTML page
-         var heading = document.createElement("h1");
-         var heading_text = document.createTextNode("Big Head!");
-         heading.appendChild(heading_text);
-         document.body.appendChild(heading);
-      }
+      // run this function when the document is loaded
+      window.onload = function () {
+        // create a couple of elements in an otherwise empty HTML page
+        var heading = document.createElement("h1");
+        var heading_text = document.createTextNode("Big Head!");
+        heading.appendChild(heading_text);
+        document.body.appendChild(heading);
+      };
     </script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -186,8 +179,7 @@ var table = document.getElementById("table");
 var tableAttrs = table.attributes; // Node/Element interface
 for (var i = 0; i < tableAttrs.length; i++) {
   // HTMLTableElement interface: border attribute
-  if(tableAttrs[i].nodeName.toLowerCase() == "border")
-    table.border = "1";
+  if (tableAttrs[i].nodeName.toLowerCase() == "border") table.border = "1";
 }
 // HTMLTableElement interface: summary attribute
 table.summary = "note: increased border";
@@ -210,10 +202,10 @@ table.summary = "note: increased border";
 - `element.setAttribute`
 - `element.getAttribute`
 - `element.addEventListener`
-- [`window.content`](/ko/docs/DOM/window.content)
-- [`window.onload`](/ko/docs/DOM/window.onload)
-- [`window.dump`](/ko/docs/DOM/window.dump)
-- [`window.scrollTo`](/ko/docs/DOM/window.scrollTo)
+- [`window.content`](/ko/docs/Web/API/Window)
+- [`window.onload`](/ko/docs/Web/API/Window/load_event)
+- [`window.dump`](/ko/docs/Web/API/Window/dump)
+- [`window.scrollTo`](/ko/docs/Web/API/Window/scrollTo)
 
 ## DOM API 테스팅
 
@@ -228,35 +220,47 @@ table.summary = "note: increased border";
   <head>
     <title>DOM Tests</title>
     <script type="application/javascript">
-    function setBodyAttr(attr,value){
-      if (document.body) eval('document.body.'+attr+'="'+value+'"');
-      else notSupported();
-    }
+      function setBodyAttr(attr, value) {
+        if (document.body) eval("document.body." + attr + '="' + value + '"');
+        else notSupported();
+      }
     </script>
   </head>
   <body>
     <div style="margin: .5in; height: 400;">
-      <p><b><tt>text</tt>color</b></p>
+      <p>
+        <b><tt>text</tt>color</b>
+      </p>
       <form>
-        <select onChange="setBodyAttr('text',
+        <select
+          onChange="setBodyAttr('text',
         this.options[this.selectedIndex].value);">
-          <option value="black">black
-          <option value="darkblue">darkblue
+          <option value="black">black</option>
+          <option value="darkblue">darkblue</option>
         </select>
-        <p><b><tt>bgColor</tt></b></p>
-        <select onChange="setBodyAttr('bgColor',
+        <p>
+          <b><tt>bgColor</tt></b>
+        </p>
+        <select
+          onChange="setBodyAttr('bgColor',
         this.options[this.selectedIndex].value);">
-          <option value="white">white
-          <option value="lightgrey">gray
+          <option value="white">white</option>
+          <option value="lightgrey">gray</option>
         </select>
-        <p><b><tt>link</tt></b></p>
-        <select onChange="setBodyAttr('link',
+        <p>
+          <b><tt>link</tt></b>
+        </p>
+        <select
+          onChange="setBodyAttr('link',
         this.options[this.selectedIndex].value);">
-          <option value="blue">blue
-          <option value="green">green
-        </select>  <small>
-        <a href="http://www.brownhen.com/dom_api_top.html" id="sample">
-        (sample link)</a></small><br>
+          <option value="blue">blue</option>
+          <option value="green">green</option>
+        </select>
+        <small>
+          <a href="http://www.brownhen.com/dom_api_top.html" id="sample">
+            (sample link)</a
+          ></small
+        ><br />
       </form>
       <form>
         <input type="button" value="version" onclick="ver()" />
@@ -274,7 +278,7 @@ table.summary = "note: increased border";
 
 - [DOM Reference](/ko/docs/Web/API/Document_Object_Model)
 - [Introduction to the DOM](/ko/docs/Web/API/Document_Object_Model/Introduction)
-- [Events and the DOM](/ko/docs/Web/API/Document_Object_Model/Events)
+- [Events and the DOM](/ko/docs/Learn/JavaScript/Building_blocks/Events)
 - [Examples](/ko/docs/Web/API/Document_Object_Model/Examples)
 
 {{DefaultAPISidebar("DOM")}}

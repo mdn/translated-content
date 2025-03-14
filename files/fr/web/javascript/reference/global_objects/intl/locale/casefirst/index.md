@@ -1,16 +1,6 @@
 ---
 title: Intl.Locale.prototype.caseFirst
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Locale
-  - Propriété
-  - Reference
-  - Unicode
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/caseFirst
 ---
 
 {{JSRef}}
@@ -33,7 +23,7 @@ Cette propriété peut avoir une des 3 valeurs suivantes :
 
 ### Définir `caseFirst` grâce à la chaîne de description de la locale
 
-Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale) prend comme premier argument une chaîne de caractères qui décrit la locale. On peut allonger cette chaîne avec certaines valeurs afin de l'affiner.
+Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) prend comme premier argument une chaîne de caractères qui décrit la locale. On peut allonger cette chaîne avec certaines valeurs afin de l'affiner.
 
 Dans la [spécification Unicode sur les clés des extensions](https://www.unicode.org/reports/tr35/), `caseFirst` correspond à la clé `kf`. `kf`. Il est possible d'ajouter des extensions à la chaîne identifiant la locale en la concaténant à `-u` puis en concaténant la clé de l'extension qu'on souhaite préciser (ici `-kf`) puis en ajoutant enfin la valeur pour cette extension (ici `upper`) :
 
@@ -44,22 +34,20 @@ console.log(caseFirstStr.caseFirst); // Prints "upper"
 
 ### Définir `caseFirst` via l'objet de configuration
 
-Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale) permet d'utiliser un objet de configuration comme deuxième argument. Les propriétés de cet objet seront autant d'extensions Unicode à utiliser pour la locale. Ici, on peut utiliser un objet avec la propriété `caseFirst` pour indiquer l'impact de la casse sur la collation de cette locale :
+Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) permet d'utiliser un objet de configuration comme deuxième argument. Les propriétés de cet objet seront autant d'extensions Unicode à utiliser pour la locale. Ici, on peut utiliser un objet avec la propriété `caseFirst` pour indiquer l'impact de la casse sur la collation de cette locale :
 
 ```js
-let caseFirstObj= new Intl.Locale("en-Latn-US", {caseFirst: "lower"});
+let caseFirstObj = new Intl.Locale("en-Latn-US", { caseFirst: "lower" });
 console.log(us12hour.caseFirst); // affichera "lower" dans la console.
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                      | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------ | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.caseFirst) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.caseFirst")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,70 +1,89 @@
 ---
 title: TypedArray.of()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/of
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/of
+l10n:
+  sourceCommit: fb442649a7e91a177a582a3e9c6e1a95a9e8dda5
 ---
 
 {{JSRef}}
 
-<code><strong><em>TypedArray</em>.of()</strong></code>
+정적 메서드 **`TypedArray.of()`**는 다양한 수의 인자로부터 새로운
+[형식화 배열](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects)를 생성합니다.
+이 메서드는 {{jsxref("Array.of()")}}와 거의 동일합니다.
 
-는 가변적으로 인수를 전달 할수 있는 새로운 형식화 배열([typed array](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects))를 만들어내는 메소드입니다.
+{{InteractiveExample("JavaScript Demo: TypedArray.of()", "shorter")}}
 
-이 메소드는 {{jsxref("Array.of()")}}와 거의 같습니다.
+```js interactive-example
+const int16array = Int16Array.of("10", "20", "30", "40", "50");
 
-## 문법
-
+console.log(int16array);
+// Expected output: Int16Array [10, 20, 30, 40, 50]
 ```
-TypedArray.of(element0[, element1[, ...[, elementN]]])
+
+## 구문
+
+```js-nolint
+TypedArray.of()
+TypedArray.of(element1)
+TypedArray.of(element1, element2)
+TypedArray.of(element1, element2, /* …, */ elementN)
 ```
 
-where TypedArray is one of:
+`TypedArray`는 아래 중 하나입니다.
 
-- Int8Array
-- Uint8Array
-- Uint8ClampedArray
-- Int16Array
-- Uint16Array
-- Int32Array
-- Uint32Array
-- Float32Array
-- Float64Array
+- {{jsxref("Int8Array")}}
+- {{jsxref("Uint8Array")}}
+- {{jsxref("Uint8ClampedArray")}}
+- {{jsxref("Int16Array")}}
+- {{jsxref("Uint16Array")}}
+- {{jsxref("Int32Array")}}
+- {{jsxref("Uint32Array")}}
+- {{jsxref("Float16Array")}}
+- {{jsxref("Float32Array")}}
+- {{jsxref("Float64Array")}}
+- {{jsxref("BigInt64Array")}}
+- {{jsxref("BigUint64Array")}}
 
 ### 매개변수
 
-- `elementN`
-  - : 형식화 된 배열을 만들 요소입니다.
+- `element1`, …, `elementN`
+  - : 형식화 배열을 생성할 때 사용할 요소
 
 ### 반환 값
 
-생성된 {{jsxref("TypedArray")}} 인스턴스
+새로운 {{jsxref("TypedArray")}} 인스턴스.
 
 ## 설명
 
-{{jsxref("Array.of()")}}와 `TypedArray.of()` 사이의 약간의 차이점은 다음과 같습니다.
+보다 자세한 설명은 {{jsxref("Array.of()")}}을 참고하시기 바랍니다.
+{{jsxref("Array.of()")}}와 `TypedArray.of()`는 약간의 미묘한 차이가 있습니다.
 
-- `TypedArray.of`에 전달된 값이 생성자가 아닌 경우 `TypedArray.of`는 {{jsxref ( "TypeError")}}를 발생시킵니다. `Array.of`는 기본적으로 새로운 {{jsxref ( "Array")}}를 생성합니다.
-- `TypedArray.of` uses `[[Put]]` where `Array.of` uses `[[DefineProperty]]`. Hence, when working with {{jsxref("Proxy")}} objects, it calls {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} to create new elements rather than {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty")}}.
-- `TypedArray.of`는 `Array.of`가 `[[DefineProperty]]`를 사용하는 것처럼 `[[Put]]`을 사용합니다. 따라서 {{jsxref("Proxy")}} 객체로 작업 할 때 새로운 요소를 생성하기 위해 {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}}대신 {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty")}}를 호출합니다.
+- `TypedArray.of()`에 전달된 `this` 값이 생성자가 아닌 경우 `TypedArray.from()`은 {{jsxref("TypeError")}}를 발생시키고, `Array.of()`는 기본적으로 새 {{jsxref("Array")}}를 생성합니다.
+- `TypedArray.of()`는 `[[Set]]`를 사용하는 반면 `Array.of()`는 `[[DefineOwnProperty]]`를 사용합니다. 따라서 {{jsxref("Proxy")}} 객체로 작업할 때 [`handler.set()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set)을 호출하여 [`handler.defineProperty()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty)가 아닌 새 요소를 생성합니다.
 
 ## 예제
 
+### of() 사용하기
+
 ```js
-Uint8Array.of(1);            // Uint8Array [ 1 ]
-Int8Array.of('1', '2', '3'); // Int8Array [ 1, 2, 3 ]
-Float32Array.of(1, 2, 3);    // Float32Array [ 1, 2, 3 ]
-Int16Array.of(undefined);    // IntArray [ 0 ]
+Uint8Array.of(1); // Uint8Array [ 1 ]
+Int8Array.of("1", "2", "3"); // Int8Array [ 1, 2, 3 ]
+Float32Array.of(1, 2, 3); // Float32Array [ 1, 2, 3 ]
+Int16Array.of(undefined); // Int16Array [ 0 ]
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
+- [`core-js`에서의 `TypedArray.of` 폴리필](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 안내서
+- {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.from()")}}
 - {{jsxref("Array.of()")}}

@@ -7,7 +7,73 @@ slug: Web/CSS/shape-image-threshold
 
 **`shape-image-threshold`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("shape-outside")}} の値に指定された画像によってシェイプを抽出するために使用するアルファチャネルのしきい値を設定します。
 
-{{EmbedInteractiveExample("pages/css/shape-image-threshold.html")}}
+{{InteractiveExample("CSS Demo: shape-image-threshold")}}
+
+```css interactive-example-choice
+shape-outside: linear-gradient(
+  50deg,
+  rgb(77, 26, 103),
+  transparent 80%,
+  transparent
+);
+shape-image-threshold: 0.2;
+```
+
+```css interactive-example-choice
+shape-outside: linear-gradient(
+  50deg,
+  rgb(77, 26, 103),
+  transparent 80%,
+  transparent
+);
+shape-image-threshold: 0.4;
+```
+
+```css interactive-example-choice
+shape-outside: linear-gradient(
+  50deg,
+  rgb(77, 26, 103),
+  transparent 80%,
+  transparent
+);
+shape-image-threshold: 0.6;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element"></div>
+    We had agreed, my companion and I, that I should call for him at his house,
+    after dinner, not later than eleven o’clock. This athletic young Frenchman
+    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
+    as a pastime. After having exhausted all the sensations that are to be found
+    in ordinary sports, even those of “automobiling” at a breakneck speed, the
+    members of the “Aéro Club” now seek in the air, where they indulge in all
+    kinds of daring feats, the nerve-racking excitement that they have ceased to
+    find on earth.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  text-align: left;
+  padding: 20px;
+}
+
+#example-element {
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  background-image: linear-gradient(
+    50deg,
+    rgb(77, 26, 103),
+    transparent 80%,
+    transparent
+  );
+}
+```
 
 アルファコンポーネントの値がしきい値よりも大きいピクセルはすべて、境界を特定するためのシェイプの一部とみなされます。例えば、 `0.5` の値は不透過度が 50% よりも大きいピクセルをすべて含めた図形になるという意味です。
 
@@ -51,14 +117,14 @@ shape-image-threshold: unset;
 <p>
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel at commodi
   voluptates enim, distinctio officia. Saepe optio accusamus doloribus sint
-  facilis itaque ab nulla, dolor molestiae assumenda cum sit placeat
-  adipisci, libero quae nihil porro debitis laboriosam inventore animi
-  impedit nostrum nesciunt quisquam expedita! Dolores consectetur iure atque
-  a mollitia dicta repudiandae illum exercitationem aliquam repellendus
-  ipsum porro modi, id nemo eligendi, architecto ratione quibusdam iusto
-  nisi soluta? Totam inventore ea eum sed velit et eligendi suscipit
-  accusamus iusto dolore, at provident eius alias maxime pariatur non
-  deleniti ipsum sequi rem eveniet laboriosam magni expedita?
+  facilis itaque ab nulla, dolor molestiae assumenda cum sit placeat adipisci,
+  libero quae nihil porro debitis laboriosam inventore animi impedit nostrum
+  nesciunt quisquam expedita! Dolores consectetur iure atque a mollitia dicta
+  repudiandae illum exercitationem aliquam repellendus ipsum porro modi, id nemo
+  eligendi, architecto ratione quibusdam iusto nisi soluta? Totam inventore ea
+  eum sed velit et eligendi suscipit accusamus iusto dolore, at provident eius
+  alias maxime pariatur non deleniti ipsum sequi rem eveniet laboriosam magni
+  expedita?
 </p>
 ```
 
@@ -69,10 +135,8 @@ shape-image-threshold: unset;
   width: 150px;
   height: 150px;
   float: left;
-  background-image: linear-gradient(30deg, black, transparent 80%,
-      transparent);
-  shape-outside: linear-gradient(30deg, black, transparent 80%,
-      transparent);
+  background-image: linear-gradient(30deg, black, transparent 80%, transparent);
+  shape-outside: linear-gradient(30deg, black, transparent 80%, transparent);
   shape-image-threshold: 0.2;
 }
 ```
@@ -95,8 +159,8 @@ shape-image-threshold: unset;
 
 ## 関連情報
 
-- [CSS シェイプ](/ja/docs/Web/CSS/CSS_Shapes)
-- [CSS シェイプの概要](/ja/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
+- [CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes)
+- [CSS シェイプの概要](/ja/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
 - {{cssxref("&lt;basic-shape&gt;")}}
 - {{cssxref("shape-outside")}}
 - {{cssxref("shape-margin")}}

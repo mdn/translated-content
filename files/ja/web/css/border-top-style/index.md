@@ -1,15 +1,65 @@
 ---
 title: border-top-style
 slug: Web/CSS/border-top-style
+l10n:
+  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
 {{CSSRef}}
 
-**`border-top-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界 ({{CSSxRef("border")}}) における線の形状を設定します。
+**`border-top-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界 ({{CSSxRef("border")}}) における線のスタイルを設定します。
 
-{{EmbedInteractiveExample("pages/css/border-top-style.html")}}
+{{InteractiveExample("CSS Demo: border-top-style")}}
 
-> **メモ:** 仕様書では、異なる形状の境界線を角でどのように接続するかを定義していません。
+```css interactive-example-choice
+border-top-style: none;
+```
+
+```css interactive-example-choice
+border-top-style: dotted;
+```
+
+```css interactive-example-choice
+border-top-style: dashed;
+```
+
+```css interactive-example-choice
+border-top-style: solid;
+```
+
+```css interactive-example-choice
+border-top-style: groove;
+```
+
+```css interactive-example-choice
+border-top-style: inset;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+
+body {
+  background-color: #fff;
+}
+```
+
+> [!NOTE]
+> 仕様書では、異なるスタイルの境界線を角でどのように接続するかを定義していません。
 
 ## 構文
 
@@ -30,10 +80,11 @@ border-top-style: outset;
 border-top-style: inherit;
 border-top-style: initial;
 border-top-style: revert;
+border-top-style: revert-layer;
 border-top-style: unset;
 ```
 
-`border-top-style` プロパティは、 {{CSSxRef("border-style")}} プロパティで利用できるキーワードのうちの一つで指定します。
+`border-top-style` プロパティは、単一の {{cssxref("line-style")}} キーワード値で指定します。
 
 ## 公式定義
 
@@ -43,13 +94,13 @@ border-top-style: unset;
 
 {{CSSSyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### border-top-style の設定
 
 #### HTML
 
-```html
+```html live-sample___examples
 <table>
   <tr>
     <td class="b1">none</td>
@@ -72,27 +123,48 @@ border-top-style: unset;
 
 #### CSS
 
-```css
+```css live-sample___examples
 /* 表の外見を定義 */
 table {
   border-width: 2px;
-  background-color: #52E385;
+  background-color: #52e385;
 }
-tr, td {
+tr,
+td {
   padding: 3px;
 }
 
 /* border-top-style の例のクラス */
-.b1 {border-top-style: none;}
-.b2 {border-top-style: hidden;}
-.b3 {border-top-style: dotted;}
-.b4 {border-top-style: dashed;}
-.b5 {border-top-style: solid;}
-.b6 {border-top-style: double;}
-.b7 {border-top-style: groove;}
-.b8 {border-top-style: ridge;}
-.b9 {border-top-style: inset;}
-.b10 {border-top-style: outset;}
+.b1 {
+  border-top-style: none;
+}
+.b2 {
+  border-top-style: hidden;
+}
+.b3 {
+  border-top-style: dotted;
+}
+.b4 {
+  border-top-style: dashed;
+}
+.b5 {
+  border-top-style: solid;
+}
+.b6 {
+  border-top-style: double;
+}
+.b7 {
+  border-top-style: groove;
+}
+.b8 {
+  border-top-style: ridge;
+}
+.b9 {
+  border-top-style: inset;
+}
+.b10 {
+  border-top-style: outset;
+}
 ```
 
 #### 結果
@@ -109,5 +181,5 @@ tr, td {
 
 ## 関連情報
 
-- その他の形状に関する境界のプロパティ: {{CSSxRef("border-left-style")}}, {{CSSxRef("border-right-style")}}, {{CSSxRef("border-bottom-style")}}, {{CSSxRef("border-style")}}
+- その他のスタイルに関する境界のプロパティ: {{CSSxRef("border-left-style")}}, {{CSSxRef("border-right-style")}}, {{CSSxRef("border-bottom-style")}}, {{CSSxRef("border-style")}}
 - その他の左側の境界に関するプロパティ: {{CSSxRef("border-top")}}, {{CSSxRef("border-top-color")}}, {{CSSxRef("border-top-width")}}

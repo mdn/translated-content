@@ -1,25 +1,25 @@
 ---
 title: 编译
 slug: Glossary/Compile
-original_slug: Glossary/编译
+l10n:
+  sourceCommit: 06fb3fd5a4967ea68a766f318d08fd9d1bd46e9d
 ---
 
-编译是将相同的程序从一种计算机程序语言转换到另一种语言计算机语言的过程。编译器是运行上述任务的软件。有时候，任务也被称为“汇编”或“构建”，这通常表示不仅仅编译完成，例如，用二进制格式进行打包。
+{{GlossarySidebar}}
 
-通常，编译器转换一个人类理解的高级语言例如 c 或者 java 到机器语言，例如 cpu 理解的汇编语言。一些编译器转化同级别语言的被称为转换器或者交叉编译器，例如从 TypeScript 到 JavaScript 的编译。这些通常被理解为效率工具。
+**编译**是将使用特定{{Glossary("computer programming", "编程语言")}}编写的计算机程序转换为一组其他格式的指令或其他语言的过程。**编译器**是执行该任务的计算机程序。
 
-绝大多数编译器以预先编译（AOT）或实时编译（JIT）形式工作。作为一个开发者，你通常使用命令行或者集成开发环境（IDE）调用预先编译（AOT）的编译器。最出名的就是 gcc 编译器了。
+通常，编译器会将使用高级语言（如 [C++](https://zh.wikipedia.org/wiki/C++)、[Rust](https://zh.wikipedia.org/wiki/Rust) 或 [Java](https://zh.wikipedia.org/wiki/Java)）编写的代码转换为可执行的（可运行的）代码——即所谓的**二进制码**或**机器码**。[WebAssembly](/zh-CN/docs/WebAssembly) 就是一种可执行的二进制代码形式，[可以从使用 C++、Rust、C#、Go、Swift 等多种语言编写的代码进行编译](https://webassembly.org/getting-started/developers-guide/)，可以在现代浏览器中的任何网页上运行，并且大部分的功能都得到支持（详见[浏览器兼容性表](/zh-CN/docs/WebAssembly#浏览器兼容性)）。
 
-实时编译器通常是用来提高性能的，令你没有感知的。例如在浏览器中，Firefox 的 SpiderMonkey 的 JavaScript 引擎又一个内置的实时编译器会在你浏览时将网页中的 JavaScript 代码编译为机器码，从而提供运行效率。类似 WebAssembly 的项目正在使这些工作做的更好。
+大多数编译器执行的是预先编译（AOT）或即时编译（JIT）之一。
 
-## 了解更多
+GNU `gcc` 编译器是 AOT 编译器的一个最常见的案例。AOT 编译器通常在命令行中通过 shell 环境（从终端或控制台内部）或在 {{Glossary("IDE")}} 中调用。
 
-### 基础知识
+JIT 编译器通常不会直接调用，而是内部构建到软件运行时中，以提高性能。例如，所有主要浏览器现在都使用具有内置 JIT 编译器的 JavaScript 引擎。
 
-- [Compiler](https://zh.wikipedia.org/wiki/Compiler) on Wikipedia
-- The [GNU Compiler Collection (GCC)](https://gcc.gnu.org)
+编译器还可以在高级语言之间进行转换——例如，从 TypeScript 到 {{Glossary("JavaScript")}}——在这种情况下，它们通常被称为**转换器**。
 
-### 学习资料
+## 参见
 
-- [Base CS Introduction on Compilers](https://medium.com/basecs/a-deeper-inspection-into-compilation-and-interpretation-d98952ebc842)
-- [A big list of learning material on StackOverflow](https://stackoverflow.com/a/1672/133203)
+- 维基百科上的[编译器](https://zh.wikipedia.org/wiki/編譯器)
+- [WebAssembly](/zh-CN/docs/WebAssembly)

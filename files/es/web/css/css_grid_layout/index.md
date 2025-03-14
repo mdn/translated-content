@@ -1,6 +1,6 @@
 ---
 title: CSS Grid Layout
-slug: Web/CSS/CSS_Grid_Layout
+slug: Web/CSS/CSS_grid_layout
 ---
 
 **CSS Grid layout** contiene funciones de diseño dirigidas a los desarrolladores de aplicaciones web. El CSS grid se puede utilizar para lograr muchos diseños diferentes. También se destaca por permitir dividir una página en áreas o regiones principales, por definir la relación en términos de tamaño, posición y capas entre partes de un control construido a partir de primitivas HTML.
@@ -12,16 +12,18 @@ Al igual que las tablas, el grid layout permite a un autor alinear elementos en 
 El siguiente ejemplo muestra un grid de tres columnas con filas nuevas creadas con un mínimo de 100 píxeles y un máximo automático. Los elementos se han colocado en el grid utilizando posicionamiento en línea.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
   max-width: 940px;
   margin: 0 auto;
 }
 
 .wrapper > div {
-  border: 2px solid rgb(233,171,88);
+  border: 2px solid rgb(233, 171, 88);
   border-radius: 5px;
-  background-color: rgba(233,171,88,.5);
+  background-color: rgba(233, 171, 88, 0.5);
   padding: 1em;
   color: #d9480f;
 }
@@ -119,31 +121,31 @@ CSS
 - [Grid Area](/es/docs/Glossary/Grid_Areas)
 - [Gutters](/es/docs/Glossary/Gutters)
 - [Grid Axis](/es/docs/Glossary/Grid_Axis)
-- [Grid row](/es/docs/Glossary/Grid_Rows)
+- [Grid row](/es/docs/Glossary/Grid_Row)
 - [Grid column](/es/docs/Glossary/Grid_Column)
 
 ## Guías
 
-- [Basic concepts of Grid Layout](/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-- [Relationship of Grid Layout to other layout methods](/es/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-- [Layout using line-based placement](/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+- [Basic concepts of Grid Layout](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [Relationship of Grid Layout to other layout methods](/es/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+- [Layout using line-based placement](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
 - [Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-- [Layout using named grid lines](/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-- [Auto-placement in CSS Grid Layout](/es/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-- [Box alignment in CSS Grid Layout](/es/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-- [CSS Grid, Logical Values and Writing Modes](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-- [CSS Grid Layout and accessibility](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-- [CSS Grid and progressive enhancement](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-- [Realising common layouts using CSS Grid](/es/docs/Web/CSS/CSS_Grid_Layout/Realising_common_layouts_using_CSS_Grid_)
+- [Layout using named grid lines](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+- [Auto-placement in CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+- [Box alignment in CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [CSS Grid, Logical Values and Writing Modes](/es/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+- [CSS Grid Layout and accessibility](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+- [CSS Grid and progressive enhancement](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [Realising common layouts using CSS Grid](/es/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 ## Recursos externos
 
-- [Examples from Jen Simmons](http://labs.jensimmons.com/)
-- [Grid by Example - a collection of usage examples and video tutorials](http://gridbyexample.com/)
+- [Examples from Jen Simmons](https://labs.jensimmons.com/)
+- [Grid by Example - a collection of usage examples and video tutorials](https://gridbyexample.com/)
 - [Codrops Grid Reference](https://tympanus.net/codrops/css_reference/grid/)
-- [Firefox DevTools CSS Grid Inspector](/es/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
+- [Firefox DevTools CSS Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 - [CSS Grid Playground](https://mozilladevelopers.github.io/playground/)
-- [Grid Garden](http://cssgridgarden.com) - Un juego para aprender el grid
+- [Grid Garden](https://cssgridgarden.com) - Un juego para aprender el grid
 
 ## Especificaciones
 

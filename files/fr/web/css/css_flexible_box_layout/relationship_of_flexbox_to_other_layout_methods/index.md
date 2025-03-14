@@ -1,23 +1,14 @@
 ---
 title: Les liens entre flexbox et les autres méthodes de disposition
-slug: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
-tags:
-  - CSS
-  - Guide
-  - display
-  - flexbox
-  - grid
-translation_of: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
-original_slug: Web/CSS/CSS_Flexible_Box_Layout/Liens_entre_flexbox_et_les_autres_dispositions
+slug: Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
 ---
 
 {{CSSRef}}
 
 Dans cet article, nous verrons comment les boîtes flexibles interagissent avec les autres modules CSS. Nous verrons quelles sont les spécifications qui décrivent les boîtes flexibles et pourquoi les boîtes flexibles sont différentes des autres modules.
 
-> **Note :** Dans les versions 1 et 2 de CSS, la spécification était « monolithique » et décrite dans un seul document. Évoluant vers un langage riche possédant de nombreuses fonctionnalité, la maintenance de cette spécification unique est devenue problématiques, certaines parties évoluant à différentes vitesses. La spécification CSS a donc été modularisée et ce sont ces différents modules qui constituent CSS aujourd'hui. Ces modules sont liés les uns aux autres et sont chacun à différents stades de développement.
+> [!NOTE]
+> Dans les versions 1 et 2 de CSS, la spécification était « monolithique » et décrite dans un seul document. Évoluant vers un langage riche possédant de nombreuses fonctionnalité, la maintenance de cette spécification unique est devenue problématiques, certaines parties évoluant à différentes vitesses. La spécification CSS a donc été modularisée et ce sont ces différents modules qui constituent CSS aujourd'hui. Ces modules sont liés les uns aux autres et sont chacun à différents stades de développement.
 
 ## Le module d'alignement des boîtes (_Box Alignment_)
 
@@ -29,7 +20,7 @@ Ces propriétés d'alignement sont actuellement détaillées dans les spécifica
 
 > « Note : Bien que les propriétés d'alignement soient définies dans le module CSS _Box Alignment_ [CSS-ALIGN-3](https://www.w3.org/TR/css-align-3/), le module _Flexible Box Layout_ reproduit les définitions des propriétés qui sont ici pertinentes afin de ne pas créer de dépendance normative qui ralentirait l'avancement de la spécification. Ces propriétés s'appliquent uniquement à la disposition flexible jusqu'à ce que _CSS Box Alignment Level 3_ soit terminé et définisse leurs effets pour les autres modes de disposition. De plus, toute nouvelle valeur qui apparaîtra dans le module _Box Alignment_ s'appliquera également à la disposition en boîtes flexibles. Autrement dit, le module _Box Alignment_, lorsqu'il sera complet, remplacera les définitions énoncées ici. »
 
-Dans un prochain article de ce guide ([Aligner les éléments d'un conteneur flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_%C3%A9l%C3%A9ments_dans_un_conteneur_flexible)), nous verrons dans le détail comment les propriétés du module d'alignement des boîtes s'appliquent aux éléments flexibles.
+Dans un prochain article de ce guide ([Aligner les éléments d'un conteneur flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)), nous verrons dans le détail comment les propriétés du module d'alignement des boîtes s'appliquent aux éléments flexibles.
 
 ### Les propriétés d'espacement (_gap_)
 
@@ -37,7 +28,7 @@ Récemment, les propriétés {{cssxref("row-gap")}} et {{cssxref("column-gap")}}
 
 ## Les modes d'écritures (_Writing Modes_)
 
-Dans l'article sur [les concepts de bases relatifs aux _flexbox_](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox), nous avons vu que les boîtes flexibles prenaient en compte le mode d'écriture (la direction du texte). Les différents modes d'écritures sont décrits dans la spécification CSS [Writing Modes](https://www.w3.org/TR/css-writing-modes-3/) qui détaille comment CSS prend en charge les différents modes d'écritures qui existent dans le monde. Cette spécification permet notamment de comprendre les directions **de bloc** et **en ligne** qui sont fondamentales pour les axes principal et secondaires des boîtes flexibles.
+Dans l'article sur [les concepts de bases relatifs aux _flexbox_](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox), nous avons vu que les boîtes flexibles prenaient en compte le mode d'écriture (la direction du texte). Les différents modes d'écritures sont décrits dans la spécification CSS [Writing Modes](https://www.w3.org/TR/css-writing-modes-3/) qui détaille comment CSS prend en charge les différents modes d'écritures qui existent dans le monde. Cette spécification permet notamment de comprendre les directions **de bloc** et **en ligne** qui sont fondamentales pour les axes principal et secondaires des boîtes flexibles.
 
 On notera qu'il est possible de modifier le mode d'écriture d'un document pour d'autres raisons que des raisons linguistiques. Vous pouvez [consulter cet article](https://24ways.org/2016/css-writing-modes/) pour en savoir plus sur les différentes façons d'utiliser les modes d'écriture, que ce soit en fonction de la langue du contenu ou pour des raisons créatives.
 
@@ -61,7 +52,7 @@ On notera que la propriété `writing-mode` CSS ne doit pas être utilisée pour
 
 La spécification sur les boîtes flexibles contient [une définition](https://www.w3.org/TR/css-flexbox-1/#flex-containers) de ce qui se produit lorsqu'un élément utilisant une autre méthode de disposition devient un élément flexible (par exemple : un élément est positionné de façon flottante et son élément parent devient un conteneur flexible). Elle décrit également comment un conteneur flexible s'inscrit dans une disposition.
 
-Un élément avec `display: flex` se comportera majoritairement comme un conteneur de bloc qui établit un bloc englobant. Les éléments flottants ne rentreront pas dans ce conteneur et [les marges des conteneurs ne fusionneront pas](/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing).
+Un élément avec `display: flex` se comportera majoritairement comme un conteneur de bloc qui établit un bloc englobant. Les éléments flottants ne rentreront pas dans ce conteneur et [les marges des conteneurs ne fusionneront pas](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
 
 Pour un élément flexible, si celui-ci était avant un élément flottant ou dégagé (_cleared_) et qu'il devient flexible car son élément parent reçoit `display: flex`, le flottement et le dégagement ne s'appliquent plus. L'élément ne sera pas retiré du flux normal (ce qui aurait lieu avec un flottement). Si on a utilisé la propriété {{cssxref("vertical-align")}} avec `inline-block` ou si on a utilisé une disposition tabulaire, cela n'aura plus d'effet et on pourra utiliser les propriétés d'alignement des boîtes flexibles à la place.
 
@@ -71,7 +62,7 @@ Dans le prochain exemple, on applique un flottement sur les éléments fils puis
 
 ## Les boîtes flexibles et la disposition en grille
 
-[La disposition en grille (_CSS Grid_)](/fr/docs/Web/CSS/CSS_Grid_Layout) et les boîtes flexibles agissent de la même façon lorsqu'elles surchargent les autres méthodes de disposition. Les boîtes flexibles pourront être utilisées comme solution de repli si les grilles CSS ne sont pas prises en charge. En effet, les boîtes flexibles bénéficient d'une meilleure prise en charge pour les navigateurs moins récents. Cette approche fonctionne sans problème car, si un élément flexible devient un élément d'une grille, les propriétés `flex` qui auraient pu être affectées aux éléments enfants seront ignorées.
+[La disposition en grille (_CSS Grid_)](/fr/docs/Web/CSS/CSS_grid_layout) et les boîtes flexibles agissent de la même façon lorsqu'elles surchargent les autres méthodes de disposition. Les boîtes flexibles pourront être utilisées comme solution de repli si les grilles CSS ne sont pas prises en charge. En effet, les boîtes flexibles bénéficient d'une meilleure prise en charge pour les navigateurs moins récents. Cette approche fonctionne sans problème car, si un élément flexible devient un élément d'une grille, les propriétés `flex` qui auraient pu être affectées aux éléments enfants seront ignorées.
 
 Les propriétés du module d'alignement des boîtes peuvent être utilisées pour ces deux modes de dispositions.
 
@@ -93,7 +84,7 @@ Dans certains cas, les deux méthodes peuvent fonctionner sans problème. En les
 
 De façon générale, si vous ajoutez des marges autour d'éléments flexibles afin que ceux-ci soient alignés, vous devriez utiliser une méthode de disposition bidimensionnelle comme la grille CSS qui vous permettra de mieux organiser votre contenu. La taille du composant à mettre en forme n'a pas d'importance, on n'utilisera pas plus les boîtes flexibles pour un « petit » composant et la grille pour un « grand ». Essayez les différentes méthodes, profitez de la liberté de choix qui existe désormais avec ces outils.
 
-Pour approfondir cette comparaison entre la grille et les boîtes flexibles, vous pouvez consulter [cet article à propos des relations entre la grille CSS et les autres méthodes de disposition](/fr/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout). Cet article détaille les nombreuses différences entre la grille CSS et les boîtes flexibles ; il illustre aussi les fonctionnalités supplémentaires provenant de la grille. Cet article pourra vous aider à choisir la méthode de disposition à privilégier.
+Pour approfondir cette comparaison entre la grille et les boîtes flexibles, vous pouvez consulter [cet article à propos des relations entre la grille CSS et les autres méthodes de disposition](/fr/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods). Cet article détaille les nombreuses différences entre la grille CSS et les boîtes flexibles ; il illustre aussi les fonctionnalités supplémentaires provenant de la grille. Cet article pourra vous aider à choisir la méthode de disposition à privilégier.
 
 ## Les boîtes flexibles et `display: contents`
 
@@ -109,7 +100,8 @@ En ajoutant `display: contents` à l'élément flexible qui contient deux élém
 
 On notera que cela ne retire que la boîte de la disposition. Les éléments fils au deuxième niveau ne deviennent pas des éléments fils directs pour d'autres notions. On peut voir dans l'exemple qu'on utilise un sélecteur sur les éléments fils directs pour gérer l'arrière-plan et les bordures : ces styles n'ont pas été appliqués aux éléments fils de deuxième rang. Ces éléments ont été disposés comme des éléments flexibles, mais ils ne récupèrent pas la mise en forme des éléments fils directs.
 
-> **Attention :** Utiliser `display: contents` entraînera la suppression de l'élément dans l'arbre d'accessibilité et les lecteurs d'écran ne pourront pas en voir le contenu (comme si on avait utilisé `display: none`). La valeur `contents` doit uniquement être utilisée pour les éléments de présentation (et pas de contenu).
+> [!WARNING]
+> Utiliser `display: contents` entraînera la suppression de l'élément dans l'arbre d'accessibilité et les lecteurs d'écran ne pourront pas en voir le contenu (comme si on avait utilisé `display: none`). La valeur `contents` doit uniquement être utilisée pour les éléments de présentation (et pas de contenu).
 
 En retirant la boîte de l'élément parent, on ne peut pas utiliser cette boîte pour, par exemple, ajouter une couleur d'arrière-plan commune aux éléments fils imbriqués. Si on retire `display: contents` dans l'exemple, on peut voir que l'arrière-plan orange rattaché à l'élément disparaît avec la boîte.
 

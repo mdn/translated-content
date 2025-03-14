@@ -1,14 +1,6 @@
 ---
 title: Comprendre les frameworks JavaScript côté client
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - TopicStub
-  - client-side
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 ---
 
 {{LearnSidebar}}
@@ -38,7 +30,7 @@ Votre code n'en sera que plus qualitatif et plus professionnel, et vous serez en
 
 Nous avons créé un cours qui inclut toutes les informations essentielles dont vous avez besoin pour atteindre votre objectif.
 
-[Commencer](/fr/docs/Learn/Front-end_web_developer)
+[Commencer](/fr/curriculum/)
 
 ## Guides d'introduction
 
@@ -49,7 +41,8 @@ Nous avons créé un cours qui inclut toutes les informations essentielles dont 
 
 ## Tutoriels sur React
 
-> **Note :** Les tutoriels sur React ont été essayés pour la dernière fois en mai 2020, avec React/ReactDOM 16.13.1 et create-react-app 3.4.1.
+> [!NOTE]
+> Les tutoriels sur React ont été essayés pour la dernière fois en mai 2020, avec React/ReactDOM 16.13.1 et create-react-app 3.4.1.
 >
 > Si vous avez besoin de vérifier votre code par rapport à notre version, vous pouvez trouver une version finale de l'exemple de code d'application React dans notre [todo-react repository](https://github.com/mdn/todo-react). Pour une version exécutable en direct, voir <https://mdn.github.io/todo-react-build/>.
 
@@ -70,7 +63,8 @@ Nous avons créé un cours qui inclut toutes les informations essentielles dont 
 
 ## Tutoriels sur Ember
 
-> **Note :** Les tutoriels Ember ont été essayés pour la dernière fois en Mai 2020, avec Ember/Ember CLI version 3.18.0.
+> [!NOTE]
+> Les tutoriels Ember ont été essayés pour la dernière fois en Mai 2020, avec Ember/Ember CLI version 3.18.0.
 >
 > Si vous avez besoin de vérifier votre code par rapport à notre version, vous pouvez trouver une version finale de l'exemple de code d'application Ember dans le Ember app code in the [ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc). Pour une version exécutable en direct, voir <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> (cela inclut également quelques fonctionnalités supplémentaires non couvertes dans le tutoriel).
 
@@ -89,7 +83,8 @@ Nous avons créé un cours qui inclut toutes les informations essentielles dont 
 
 ## Tutoriels sur Vue
 
-> **Note :** Les tutoriels sur Vue ont été essayés pour la dernière fois en mai 2020, avec Vue 2.6.11.
+> [!NOTE]
+> Les tutoriels sur Vue ont été essayés pour la dernière fois en mai 2020, avec Vue 2.6.11.
 >
 > Si vous avez besoin de vérifier votre code par rapport à notre version, vous pouvez trouver une version terminée de l'exemple de code d'application Vue dans notre [todo-vue repository](https://github.com/mdn/todo-vue). Pour une version exécutable en direct, voir <https://mdn.github.io/todo-vue/dist/>.
 
@@ -114,7 +109,8 @@ Nous avons créé un cours qui inclut toutes les informations essentielles dont 
 
 ## Tutoriels sur Svelte
 
-> **Note :** Les tutoriels sur Svelte ont été essayés pour la dernière fois en aout 2020, avec Svelte 3.24.1.
+> [!NOTE]
+> Les tutoriels sur Svelte ont été essayés pour la dernière fois en aout 2020, avec Svelte 3.24.1.
 >
 > Si vous avez besoin de vérifier votre code par rapport à notre version, vous pouvez trouver une version terminée de l'exemple eu code de l'application Svelte (tel qu'il est après chaque chapitre) dans le dépôt [mdn-svelte-tutorial](https://github.com/opensas/mdn-svelte-tutorial). Pour une version exécutable en direct, voir <https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2>.
 

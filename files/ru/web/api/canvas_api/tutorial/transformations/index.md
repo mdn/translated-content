@@ -1,11 +1,11 @@
 ---
 title: Transformations
 slug: Web/API/Canvas_API/Tutorial/Transformations
-translation_of: Web/API/Canvas_API/Tutorial/Transformations
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
 
-Ранее в этом уроке мы узнали о [сетке холста](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) и **координатном пространстве**. До сих пор мы использовали только сетку по умолчанию и изменили размер всего холста для наших нужд. При преобразованиях существуют более мощные способы изменения исходных координат в различные положение, поворот сетки и даже масштабирование.
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
+
+Ранее в этом уроке мы узнали о [сетке холста](/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) и **координатном пространстве**. До сих пор мы использовали только сетку по умолчанию и изменили размер всего холста для наших нужд. При преобразованиях существуют более мощные способы изменения исходных координат в различные положение, поворот сетки и даже масштабирование.
 
 ## Сохранение и восстановление состояния
 
@@ -20,7 +20,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 - Трансформации, которые были применены (например, `translate`, `rotate` and `scale` – см. ниже).
 - Текущее значение следующих атрибутов: {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}, {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}, {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}, {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}, {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}, {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}, {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}, {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}, {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}, {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}, {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}}, {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}}, {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.
-- Текущее значение границ вырезанного холста ([clipping path](/ru/docs/Web/API/Canvas_API/Tutorial/Compositing#Clipping_paths)), которые будут рассматриваться в следующем разделе.
+- Текущее значение границ вырезанного холста ([clipping path](/ru/docs/Web/API/Canvas_API/Tutorial/Compositing#clipping_paths)), которые будут рассматриваться в следующем разделе.
 
 Вы можете вызывать метод `save()` столько раз, сколько захотите. В то же время, при вызове метода `restore()` последнее сохранённое состояние будет считано из стека, и все сохранённые настройки будут восстановлены.
 
@@ -30,24 +30,24 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
-  ctx.fillRect(0, 0, 150, 150);   // рисуем прямоугольник с настройками по умолчанию
-  ctx.save();                     // сохраняем состояние
+  ctx.fillRect(0, 0, 150, 150); // рисуем прямоугольник с настройками по умолчанию
+  ctx.save(); // сохраняем состояние
 
-  ctx.fillStyle = '#09F';         // вносим изменения в настройки
+  ctx.fillStyle = "#09F"; // вносим изменения в настройки
   ctx.fillRect(15, 15, 120, 120); // рисуем прямоугольник с новыми настройками
-  ctx.save();                     // сохраняем состояние
+  ctx.save(); // сохраняем состояние
 
-  ctx.fillStyle = '#FFF';         // вносим изменения в настройки
+  ctx.fillStyle = "#FFF"; // вносим изменения в настройки
   ctx.globalAlpha = 0.5;
-  ctx.fillRect(30, 30, 90, 90);   // рисуем прямоугольник с новыми настройками
+  ctx.fillRect(30, 30, 90, 90); // рисуем прямоугольник с новыми настройками
 
-  ctx.restore();                  // возвращаемся к предыдущим настройкам
-  ctx.fillRect(45, 45, 60, 60);   // рисуем прямоугольник с восстановленными настройками
+  ctx.restore(); // возвращаемся к предыдущим настройкам
+  ctx.fillRect(45, 45, 60, 60); // рисуем прямоугольник с восстановленными настройками
 
-  ctx.restore();                  // возвращаемся к начальным настройкам
-  ctx.fillRect(60, 60, 30, 30);   // рисуем прямоугольник с изначальными настройками
+  ctx.restore(); // возвращаемся к начальным настройкам
+  ctx.fillRect(60, 60, 30, 30); // рисуем прямоугольник с изначальными настройками
 }
 ```
 
@@ -65,11 +65,11 @@ draw();
 
 Когда второй вызов `restore()` сделан, изначальное состояние (то самое, которое было сделано перед первым вызовом `save`) восстанавливается и последний нарисованный прямоугольник вновь становится чёрным.
 
-{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "https://mdn.mozillademos.org/files/249/Canvas_savestate.png")}}
+{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "canvas_savestate.png")}}
 
 ## Трансляция (смещение)
 
-![](https://mdn.mozillademos.org/files/234/Canvas_grid_translate.png)Первый метод для трансформирования холста `translate()`. Он используется для перемещения холста в любую точку нашей сетки.
+![](canvas_grid_translate.png)Первый метод для трансформирования холста `translate()`. Он используется для перемещения холста в любую точку нашей сетки.
 
 - {{domxref("CanvasRenderingContext2D.translate", "translate(x, y)")}}
   - : Перемещение холста на сетке. `x` и `y` - смещение по горизонтали и вертикали соответственно.
@@ -84,11 +84,11 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   for (var i = 0; i < 3; i++) {
     for (var j = 0; j < 3; j++) {
       ctx.save();
-      ctx.fillStyle = 'rgb(' + (51 * i) + ', ' + (255 - 51 * i) + ', 255)';
+      ctx.fillStyle = "rgb(" + 51 * i + ", " + (255 - 51 * i) + ", 255)";
       ctx.translate(10 + j * 50, 10 + i * 50);
       ctx.fillRect(0, 0, 25, 25);
       ctx.restore();
@@ -105,11 +105,11 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_translate_example", "160", "160", "https://mdn.mozillademos.org/files/9857/translate.png")}}
+{{EmbedLiveSample("A_translate_example", "160", "160", "translate.png")}}
 
 ## Поворот
 
-![](https://mdn.mozillademos.org/files/233/Canvas_grid_rotate.png)Второй метод трансформации `rotate()`. Он используется для поворота нашего холста.
+![](canvas_grid_rotate.png)Второй метод трансформации `rotate()`. Он используется для поворота нашего холста.
 
 - {{domxref("CanvasRenderingContext2D.rotate", "rotate(angle)")}}
   - : Поворачивает наш холст по часовой стрелке вокруг начальной точки на угол `anglе` в радианах.
@@ -120,36 +120,37 @@ draw();
 
 В этом примере мы сначала используем `rotate()` для поворота прямоугольника относительно начала координат, а затем, используя `translate()` совместно с `rotate()` поворачиваем прямоугольник относительно его центра.
 
-> **Примечание:** **Памятка**: Углы измеряются в радианах, а не в градусах. Для преобразования единиц используйте следующую формулу: `radians = (Math.PI/180)*degrees`.
+> [!NOTE]
+> Углы измеряются в радианах, а не в градусах. Для преобразования единиц используйте следующую формулу: `radians = (Math.PI/180)*degrees`.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // left rectangles, rotate from canvas origin
   ctx.save();
   // blue rect
-  ctx.fillStyle = '#0095DD';
+  ctx.fillStyle = "#0095DD";
   ctx.fillRect(30, 30, 100, 100);
   ctx.rotate((Math.PI / 180) * 25);
   // grey rect
-  ctx.fillStyle = '#4D4E53';
+  ctx.fillStyle = "#4D4E53";
   ctx.fillRect(30, 30, 100, 100);
   ctx.restore();
 
   // right rectangles, rotate from rectangle center
   // draw blue rect
-  ctx.fillStyle = '#0095DD';
+  ctx.fillStyle = "#0095DD";
   ctx.fillRect(150, 30, 100, 100);
 
   ctx.translate(200, 80); // translate to rectangle center
-                          // x = x + 0.5 * width
-                          // y = y + 0.5 * height
+  // x = x + 0.5 * width
+  // y = y + 0.5 * height
   ctx.rotate((Math.PI / 180) * 25); // rotate
   ctx.translate(-200, -80); // translate back
 
   // draw grey rect
-  ctx.fillStyle = '#4D4E53';
+  ctx.fillStyle = "#4D4E53";
   ctx.fillRect(150, 30, 100, 100);
 }
 ```
@@ -164,7 +165,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_rotate_example", "310", "210", "https://mdn.mozillademos.org/files/9859/rotate.png")}}
+{{EmbedLiveSample("A_rotate_example", "310", "210", "rotate.png")}}
 
 ## Масштабирование
 
@@ -183,7 +184,7 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // рисуем масштабированный прямоугольник.
   ctx.save();
@@ -193,8 +194,8 @@ function draw() {
 
   // размещаем текст, отражённый по горизонтали
   ctx.scale(-1, 1);
-  ctx.font = '48px serif';
-  ctx.fillText('MDN', -135, 120);
+  ctx.font = "48px serif";
+  ctx.fillText("MDN", -135, 120);
 }
 ```
 
@@ -206,7 +207,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_scale_example", "160", "160", "https://mdn.mozillademos.org/files/9861/scale.png")}}
+{{EmbedLiveSample("A_scale_example", "160", "160", "scale.png")}}
 
 ## Матричное преобразование
 
@@ -216,7 +217,7 @@ draw();
 
   - : Накладывает матрицу преобразования, заданную параметрами, на текущую матрицу. Матрица преобразования задаётся следующим образом: <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
 
-    If any of the arguments are [`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity) the transformation matrix must be marked as infinite instead of the method throwing an exception.
+    If any of the arguments are [`Infinity`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Infinity) the transformation matrix must be marked as infinite instead of the method throwing an exception.
 
 Параметры функции:
 
@@ -241,21 +242,21 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   var sin = Math.sin(Math.PI / 6);
   var cos = Math.cos(Math.PI / 6);
   ctx.translate(100, 100);
   var c = 0;
   for (var i = 0; i <= 12; i++) {
-    c = Math.floor(255 / 12 * i);
-    ctx.fillStyle = 'rgb(' + c + ', ' + c + ', ' + c + ')';
+    c = Math.floor((255 / 12) * i);
+    ctx.fillStyle = "rgb(" + c + ", " + c + ", " + c + ")";
     ctx.fillRect(0, 0, 100, 10);
     ctx.transform(cos, sin, -sin, cos, 0, 0);
   }
 
   ctx.setTransform(-1, 0, 0, 1, 100, 100);
-  ctx.fillStyle = 'rgba(255, 128, 255, 0.5)';
+  ctx.fillStyle = "rgba(255, 128, 255, 0.5)";
   ctx.fillRect(0, 50, 100, 100);
 }
 ```
@@ -268,6 +269,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Пример_использования_transform_и_setTransform", "230", "280", "https://mdn.mozillademos.org/files/255/Canvas_transform.png")}}
+{{EmbedLiveSample("Пример_использования_transform_и_setTransform", "230", "280", "canvas_transform.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

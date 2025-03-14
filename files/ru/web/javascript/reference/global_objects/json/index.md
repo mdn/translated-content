@@ -1,15 +1,9 @@
 ---
 title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
-tags:
-  - JSON
-  - JavaScript
-  - Object
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON
 ---
-{{JSRef("Global_Objects", "JSON")}}
+
+{{JSRef}}
 
 ## Сводка
 
@@ -52,10 +46,10 @@ JSON является синтаксисом для сериализации о�
         <p>
           Только ограниченный набор символов может быть заэкранирован; некоторые
           управляющие символы запрещены; разрешены юникодные символы
-          разделительной линии (<a href="http://unicode-table.com/ru/2028/"
+          разделительной линии (<a href="https://symbl.cc/ru/2028/"
             >U+2028</a
           >) и разделительного параграфа (<a
-            href="http://unicode-table.com/ru/2029/"
+            href="https://symbl.cc/ru/2029/"
             >U+2029</a
           >); строки должны быть заключены в двойные кавычки. Смотрите следующий
           пример, в котором метод {{jsxref("JSON.parse()")}}
@@ -125,7 +119,7 @@ ArrayElements = JSON
              or ArrayElements , JSON
 ```
 
-Во всех продукциях могут присутствовать незначащие пробельные символы, за исключением продукций `ЧислоJSON` (числа не должны содержать пробелов) и `СтрокаJSON` (где они интерпретируются как часть строки или возбуждают ошибку). Пробельными символами считаются символы табуляции ([U+0009](http://unicode-table.com/ru/0009/)), возврата каретки ([U+000D](http://unicode-table.com/ru/000D/)), перевода строки ([U+000A](http://unicode-table.com/ru/000A/)) и, собственно, пробела ([U+0020](http://unicode-table.com/ru/0020/)).
+Во всех продукциях могут присутствовать незначащие пробельные символы, за исключением продукций `ЧислоJSON` (числа не должны содержать пробелов) и `СтрокаJSON` (где они интерпретируются как часть строки или возбуждают ошибку). Пробельными символами считаются символы табуляции ([U+0009](https://symbl.cc/ru/0009/)), возврата каретки ([U+000D](https://symbl.cc/ru/000D/)), перевода строки ([U+000A](https://symbl.cc/ru/000A/)) и, собственно, пробела ([U+0020](https://symbl.cc/ru/0020/)).
 
 ## Методы
 
@@ -143,24 +137,37 @@ ArrayElements = JSON
 ```js
 if (!window.JSON) {
   window.JSON = {
-    parse: function(sJSON) { return eval('(' + sJSON + ')'); },
-    stringify: function(vContent) {
+    parse: function (sJSON) {
+      return eval("(" + sJSON + ")");
+    },
+    stringify: function (vContent) {
       if (vContent instanceof Object) {
-        var sOutput = '';
+        var sOutput = "";
         if (vContent.constructor === Array) {
-          for (var nId = 0; nId < vContent.length; sOutput += this.stringify(vContent[nId]) + ',', nId++);
-          return '[' + sOutput.substr(0, sOutput.length - 1) + ']';
+          for (
+            var nId = 0;
+            nId < vContent.length;
+            sOutput += this.stringify(vContent[nId]) + ",", nId++
+          );
+          return "[" + sOutput.substr(0, sOutput.length - 1) + "]";
         }
         if (vContent.toString !== Object.prototype.toString) {
-          return '"' + vContent.toString().replace(/"/g, '\\$&') + '"';
+          return '"' + vContent.toString().replace(/"/g, "\\$&") + '"';
         }
         for (var sProp in vContent) {
-          sOutput += '"' + sProp.replace(/"/g, '\\$&') + '":' + this.stringify(vContent[sProp]) + ',';
+          sOutput +=
+            '"' +
+            sProp.replace(/"/g, "\\$&") +
+            '":' +
+            this.stringify(vContent[sProp]) +
+            ",";
         }
-        return '{' + sOutput.substr(0, sOutput.length - 1) + '}';
-     }
-     return typeof vContent === 'string' ? '"' + vContent.replace(/"/g, '\\$&') + '"' : String(vContent);
-    }
+        return "{" + sOutput.substr(0, sOutput.length - 1) + "}";
+      }
+      return typeof vContent === "string"
+        ? '"' + vContent.replace(/"/g, "\\$&") + '"'
+        : String(vContent);
+    },
   };
 }
 ```
@@ -177,5 +184,5 @@ if (!window.JSON) {
 
 ## Смотрите также
 
-- [Использование родного объекта `JSON`](/ru/docs/Web/JavaScript/Guide/Using_native_JSON)
+- [Использование родного объекта `JSON`](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - {{jsxref("Date.prototype.toJSON()")}}

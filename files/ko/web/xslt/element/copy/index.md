@@ -1,12 +1,9 @@
 ---
 title: copy
 slug: Web/XSLT/Element/copy
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/copy
-original_slug: Web/XSLT/copy
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:copy>` 요소는 출력 문서에 현재 노드의 노드와 어떤 관련 이름공간 노드만을 얕게 복사(shallow copy) 전달합니다. 속성이나 자식은 복사하지 않습니다.
 
@@ -33,7 +30,7 @@ original_slug: Web/XSLT/copy
 
 ### 정의
 
-[XSLT section 7.5, Copying](http://www.w3.org/TR/xslt#copying)
+[XSLT section 7.5, Copying](https://www.w3.org/TR/xslt#copying)
 
 ### Gecko 지원
 

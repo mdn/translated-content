@@ -39,14 +39,11 @@ gl.getParameter(gl.STENCIL_CLEAR_VALUE);
 
 ## 仕様策定状況
 
-| 仕様策定状況                                                                                 | 策定状況                             | コメント                        |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------- |
-| {{SpecName('WebGL', "#5.14.3", "clearStencil")}}                             | {{Spec2('WebGL')}}             | 初回定義。                      |
-| {{SpecName('OpenGL ES 2.0', "glClearStencil.xml", "glClearStencil")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API のマニュアルページ。 |
+{{Specifications}}
 
 ## ブラウザーの対応
 
-{{Compat("api.WebGLRenderingContext.clearStencil")}}
+{{Compat}}
 
 ## 関連項目
 

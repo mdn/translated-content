@@ -1,21 +1,27 @@
 ---
 title: Division (/)
 slug: Web/JavaScript/Reference/Operators/Division
-tags:
-  - JS
-  - JavaScript
-  - Operador de Division
-  - Operadores
-  - Referências
-translation_of: Web/JavaScript/Reference/Operators/Division
-original_slug: Web/JavaScript/Referencia/Operadores/Division
 ---
 
 {{jsSidebar("Operators")}}
 
 El operador de división (`/`) produce el cociente de sus operandos donde el operando izquierdo es el dividendo y el operando derecho es el divisor.
 
-{{EmbedInteractiveExample("pages/js/expressions-division.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Division operator")}}
+
+```js interactive-example
+console.log(12 / 2);
+// Expected output: 6
+
+console.log(3 / 2);
+// Expected output: 1.5
+
+console.log(6 / "3");
+// Expected output: 2
+
+console.log(2 / 0);
+// Expected output: Infinity
+```
 
 ## Sintaxis
 
@@ -28,32 +34,30 @@ Operador: x / y
 ### Division basica
 
 ```js
-1 / 2              // 0.5
+1 / 2; // 0.5
 
-Math.floor(3 / 2) // 1
+Math.floor(3 / 2); // 1
 
-1.0 / 2.0         // 0.5
+1.0 / 2.0; // 0.5
 ```
 
 ### Division por cero
 
 ```js
-2.0 / 0     // Retorna Infinity
+2.0 / 0; // Retorna Infinity
 
-2.0 / 0.0   // Retorna Infinity, Dado que 0.0 === 0
+2.0 / 0.0; // Retorna Infinity, Dado que 0.0 === 0
 
-2.0 / -0.0  // Retorna -Infinity
+2.0 / -0.0; // Retorna -Infinity
 ```
 
 ## Especificaciones
 
-| Specification                                                                                            |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-multiplicative-operators', 'Division operator')}} |
+{{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.division")}}
+{{Compat}}
 
 ## Ver también
 

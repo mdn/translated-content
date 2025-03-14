@@ -1,7 +1,6 @@
 ---
 title: EventSource.onopen
 slug: Web/API/EventSource/open_event
-original_slug: Web/API/EventSource/onopen
 ---
 
 {{APIRef('WebSockets API')}}
@@ -17,12 +16,13 @@ eventSource.onopen = function
 ## Ejemplos
 
 ```js
-evtSource.onopen = function() {
+evtSource.onopen = function () {
   console.log("Connection to server opened.");
 };
 ```
 
-> **Nota:** Tu puedes encontrar un ejemplo completo en GitHub — ve [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!NOTE]
+> Tu puedes encontrar un ejemplo completo en GitHub — ve [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
 ## Especificaciones
 

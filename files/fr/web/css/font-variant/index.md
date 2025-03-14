@@ -1,8 +1,6 @@
 ---
 title: font-variant
 slug: Web/CSS/font-variant
-translation_of: Web/CSS/font-variant
-browser-compat: css.properties.font-variant
 ---
 
 {{CSSRef}}

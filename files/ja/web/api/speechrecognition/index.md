@@ -9,7 +9,8 @@ l10n:
 
 **`SpeechRecognition`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) のインターフェイスで、 認識サービスの制御インターフェイスです。これは、認識サービスから送信された {{domxref("SpeechRecognitionEvent")}} も処理します。
 
-> **メモ:** Chrome など一部のブラウザーでは、ウェブページ上で音声認識を使用するとサーバーベースの認識エンジンが使用されます。音声を認識処理するためにウェブサービスへ送信するため、オフラインでは動作しません。
+> [!NOTE]
+> Chrome など一部のブラウザーでは、ウェブページ上で音声認識を使用するとサーバーベースの認識エンジンが使用されます。音声を認識処理するためにウェブサービスへ送信するため、オフラインでは動作しません。
 
 {{InheritanceDiagram}}
 
@@ -25,7 +26,7 @@ _`SpeechRecognition` は、親インターフェイスである {{domxref("Event
 - {{domxref("SpeechRecognition.grammars")}}
   - : {{domxref("SpeechGrammar")}} オブジェクトのコレクションを返却および設定します。これは、現在の `SpeechRecognition` により理解される文法を表します。
 - {{domxref("SpeechRecognition.lang")}}
-  - : 現在の `SpeechRecognition` の言語を返して設定します。指定されない場合、これは既定でで HTML の {{htmlattrxref("lang","html")}} 属性の値になります。どちらも設定されていない場合、ユーザーエージェントの言語設定が使用されます。
+  - : 現在の `SpeechRecognition` の言語を返して設定します。指定されない場合、これは既定でで HTML の [`lang`](/ja/docs/Web/HTML/Element/html#lang) 属性の値になります。どちらも設定されていない場合、ユーザーエージェントの言語設定が使用されます。
 - {{domxref("SpeechRecognition.continuous")}}
   - : 各認識の継続的な結果を返すか、単一の認識結果だけを返すかを制御します。既定値は単一 (`false`) です。
 - {{domxref("SpeechRecognition.interimResults")}}
@@ -77,7 +78,7 @@ _`SpeechRecognition` は、その親インターフェイスである {{domxref(
     `onpeechstart` プロパティからも利用できます。
 - [`speechend`](/ja/docs/Web/API/SpeechRecognition/speechend_event)
   - : 音声認識サービスによって認識された音声が検出されなくなったときに発行されます。
-また、 `onspeechend` プロパティからも利用できます。
+    また、 `onspeechend` プロパティからも利用できます。
 - [`start`](/ja/docs/Web/API/SpeechRecognition/start_event)
   - : 音声認識サービスが、現在の `SpeechRecognition` に関連付けられた文法を認識するために、入力された音声を聞き始めたときに発行されます。
     `onstart` プロパティからも利用できます。
@@ -89,29 +90,30 @@ _`SpeechRecognition` は、その親インターフェイスである {{domxref(
 他の値を定義した後、それを設定して、クリックイベントの発生時 ({{domxref("SpeechRecognition.start()")}} 参照) に認識サービスを開始します。音声の認識に成功すると、{{domxref("SpeechRecognition.result_event")}} イベントが発生し、イベントオブジェクトから発話された色を展開、そしてそれを {{htmlelement("html")}} 要素の背景色に設定します。
 
 ```js
-const grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
+const grammar =
+  "#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;";
 const recognition = new SpeechRecognition();
 const speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 recognition.continuous = false;
-recognition.lang = 'en-US';
+recognition.lang = "en-US";
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 
-const diagnostic = document.querySelector('.output');
-const bg = document.querySelector('html');
+const diagnostic = document.querySelector(".output");
+const bg = document.querySelector("html");
 
 document.body.onclick = () => {
   recognition.start();
-  console.log('Ready to receive a color command.');
-}
+  console.log("Ready to receive a color command.");
+};
 
 recognition.onresult = (event) => {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}`;
   bg.style.backgroundColor = color;
-}
+};
 ```
 
 ## 仕様書
@@ -120,7 +122,7 @@ recognition.onresult = (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.SpeechRecognition")}}
+{{Compat}}
 
 ## 関連情報
 

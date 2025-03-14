@@ -1,23 +1,58 @@
 ---
-title: ':only-of-type'
+title: :only-of-type
 slug: Web/CSS/:only-of-type
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
-## 概述
+**`:only-of-type`** CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)代表了任意一个元素，这个元素没有其他相同类型的兄弟元素。
 
-CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) `:only-of-type` 代表了任意一个元素，这个元素没有其他相同类型的兄弟元素。
+{{InteractiveExample("CSS Demo: :only-of-type", "tabbed-shorter")}}
 
-> **备注：** 根据原来的定义，被选择的元素必须具有父元素。直到 Selectors Level 4 开始，这个要求就不是必须的了。
+```css interactive-example
+a:only-of-type {
+  color: fuchsia;
+}
+
+dd:only-of-type {
+  background-color: bisque;
+}
+```
+
+```html interactive-example
+<p>
+  To find out more about <b>QUIC</b>, check <a href="#">RFC 9000</a> and
+  <a href="#">RFC 9114</a>.
+</p>
+
+<dl>
+  <dt>Published</dt>
+  <dd>2021</dd>
+  <dd>2022</dd>
+</dl>
+
+<p>Details about <b>QPACK</b> can be found in <a href="#">RFC 9204</a>.</p>
+
+<dl>
+  <dt>Published</dt>
+  <dd>2022</dd>
+</dl>
+```
+
+> [!NOTE]
+> 根据原来的定义，被选择的元素必须具有父元素。直到 Selectors Level 4 开始，这个要求就不是必须的了。
 
 ## 语法
 
-```
-element:only-of-type { style properties }
+```css
+:only-of-type {
+  /* ... */
+}
 ```
 
-## Example
+## 示例
+
+### 为没有同类型兄弟元素的元素设置样式
 
 #### HTML
 
@@ -26,7 +61,8 @@ element:only-of-type { style properties }
   <div>I am `div` #1.</div>
   <p>I am the only `p` among my siblings.</p>
   <div>I am `div` #2.</div>
-  <div>I am `div` #3.
+  <div>
+    I am `div` #3.
     <i>I am the only `i` child.</i>
     <em>I am `em` #1.</em>
     <em>I am `em` #2.</em>
@@ -44,7 +80,7 @@ main :only-of-type {
 
 #### 结果
 
-{{EmbedLiveSample('Example','100%',180)}}
+{{EmbedLiveSample('为没有同类型兄弟元素的元素设置样式','100%',180)}}
 
 ## 规范
 

@@ -16,13 +16,13 @@ Webextension を用いた拡張機能は Chrome や Opera の拡張機能と互�
 Chrome では、拡張機能は `chrome` ネームスペースを使って特権 JavaScript API にアクセスします:
 
 ```js
-chrome.browserAction.setIcon({path: "path/to/icon.png"});
+chrome.browserAction.setIcon({ path: "path/to/icon.png" });
 ```
 
 WebExtensions は同等の API に `browser` ネームスペースを使ってアクセスします:
 
 ```js
-browser.browserAction.setIcon({path: "path/to/icon.png"});
+browser.browserAction.setIcon({ path: "path/to/icon.png" });
 ```
 
 多くの API は非同期です。 Chrome では、非同期 API はコールバックを使用して値を返し、{{WebExtAPIRef("runtime.lastError")}}がエラーを通知します:
@@ -36,10 +36,7 @@ function logCookie(c) {
   }
 }
 
-chrome.cookies.set(
-  {url: "https://developer.mozilla.org/"},
-  logCookie
-);
+chrome.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
 ```
 
 同様の WebExtensions API では [promises](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を利用します:
@@ -53,9 +50,7 @@ function logError(e) {
   console.error(e);
 }
 
-var setCookie = browser.cookies.set(
-  {url: "https://developer.mozilla.org/"}
-);
+var setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
 setCookie.then(logCookie, logError);
 ```
 
@@ -75,13 +70,13 @@ setCookie.then(logCookie, logError);
 
 #### [notifications](/ja/docs/Mozilla/Add-ons/WebExtensions/API/notifications)
 
-- `notifications.create()`の `"basic"` [`type`](/ja/Add-ons/WebExtensions/API/notifications/TemplateType)を指定した場合の、 `iconUrl` は Firefox では任意です。Chrome では必須です。
+- `notifications.create()`の `"basic"` [`type`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType)を指定した場合の、 `iconUrl` は Firefox では任意です。Chrome では必須です。
 - 通知はユーザーがクリックするとすぐに消去されます。 これは Chrome では当てはまりません。
 - `notifications.create()` を複数回連続して呼び出すと、Firefox が通知を一切表示しなくなることがあります。 `chrome.notifications.create()` のコールバック 関数内に入るまでの時間は、後続のスクリプトが実行されるまで待つほど十分な時間ではありません。
 
 #### [proxy](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
 
-- この API は Chrome API の設計とはまったく異なります。 Chrome の API を使用すると、拡張機能で PAC ファイルを登録できますが、明示的なプロキシルールを定義することもできます。これは拡張 PAC ファイルを使用しても可能であるため、この API は PAC ファイルのアプローチのみをサポートしています。 この API は Chrome の `proxy` API と互換性がないため、この API は `browser` の名前空間でのみ使用できます。
+- この API は Chrome API の設計とはまったく異なります。 Chrome の API を使用すると、拡張機能で PAC ファイルを登録できますが、明示的なプロキシールールを定義することもできます。これは拡張 PAC ファイルを使用しても可能であるため、この API は PAC ファイルのアプローチのみをサポートしています。 この API は Chrome の `proxy` API と互換性がないため、この API は `browser` の名前空間でのみ使用できます。
 
 #### [tabs](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
 
@@ -93,13 +88,13 @@ setCookie.then(logCookie, logError);
 
 <!---->
 
-- Firefox では、`tabs.query()` を使用して URL でタブにクエリを行うには、`"tabs"`権限が必要です。 Chrome では、`"tabs"`権限がなくても可能ですが、URL がホスト権限と一致するタブに制限されます。
+- Firefox では、`tabs.query()` を使用して URL でタブにクエリーを行うには、`"tabs"`権限が必要です。 Chrome では、`"tabs"`権限がなくても可能ですが、URL がホスト権限と一致するタブに制限されます。
 - Firefox では、`beforeunload` イベントの後に `tabs.remove()` の promise が実行されますが、Chrome では コールバック が `beforeunload` を待ちません。
 
-#### [webRequest](/ja/Add-ons/WebExtensions/API/webRequest)
+#### [webRequest](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)
 
 - Firefox では、元の URL が`http:`または`https:`を使用する場合にのみ、リクエストをリダイレクトできます。
-- Firefox では、システム要求（拡張機能のアップグレードや検索バーの提案など）でイベントが発生しません。 Firefox 57 以降では、Firefox はプロキシ認証のために{{WebExtAPIRef("webRequest.onAuthRequired")}}を遮断する必要がある拡張機能の例外を生成します。{{WebExtAPIRef("webRequest.onAuthRequired")}}のドキュメントをご覧ください。
+- Firefox では、システム要求（拡張機能のアップグレードや検索バーの提案など）でイベントが発生しません。 Firefox 57 以降では、Firefox はプロキシー認証のために{{WebExtAPIRef("webRequest.onAuthRequired")}}を遮断する必要がある拡張機能の例外を生成します。{{WebExtAPIRef("webRequest.onAuthRequired")}}のドキュメントをご覧ください。
 - Firefox では、拡張機能が外部 URL (例 HTTPS) から[拡張機能ページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)にリダイレクトする場合、拡張機能の manifest.json ファイルは、その拡張機能ページの URL を一覧にした [web_accessible_resources](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) キーを含むことが必須です。 その URL にあらゆるウェブサイトからリンクやリダイレクトされる可能性があり、拡張機能は、入力データ(例えば POST データ) を、ただ通常のウェブページがそうするように、アントラステッドなソースからとして取り扱うべきであるのに注意します。
 
 #### [windows](/ja/docs/Mozilla/Add-ons/WebExtensions/API/windows)
@@ -150,4 +145,4 @@ Chrome では、アプリマニフェストの `allowed_extensions` キーは、
 
 ### アプリマニフェストの位置
 
-Chrome は、別の場所でアプリのマニフェストを見つけることを期待しています。 Chrome ドキュメントの[「ネイティブメッセージングホストの場所」](https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location)をご覧ください。
+Chrome は、別の場所でアプリのマニフェストを見つけることを期待しています。 Chrome ドキュメントの[「ネイティブメッセージングホストの場所」](https://developer.chrome.com/docs/extensions/develop/concepts/native-messaging#native-messaging-host-location)をご覧ください。

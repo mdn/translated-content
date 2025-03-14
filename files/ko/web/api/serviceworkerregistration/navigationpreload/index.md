@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerRegistration.navigationPreload
 slug: Web/API/ServiceWorkerRegistration/navigationPreload
-translation_of: Web/API/ServiceWorkerRegistration/navigationPreload
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
@@ -11,17 +10,17 @@ translation_of: Web/API/ServiceWorkerRegistration/navigationPreload
 ## Syntax
 
 ```js
-var navigationPreloadManager = serviceWorkerRegistration.navigationPreload
+var navigationPreloadManager = serviceWorkerRegistration.navigationPreload;
 ```
 
 ### Value
 
 {{domxref("NavigationPreloadManager")}} 의 객체.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser Compatibility
+## 브라우저 호환성
 
 {{Compat}}

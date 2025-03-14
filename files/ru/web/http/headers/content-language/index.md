@@ -1,8 +1,6 @@
 ---
 title: Content-Language
 slug: Web/HTTP/Headers/Content-Language
-translation_of: Web/HTTP/Headers/Content-Language
-original_slug: Web/HTTP/Заголовки/Content-Language
 ---
 
 {{HTTPSidebar}}
@@ -54,23 +52,24 @@ Content-Language: de-DE, en-CA
 
     В большинстве случаев языковой тег состоит из подтега основного языка, который идентифицирует широкое семейство родственных языков (например, "`en`" = English), за которым дополнительно следует ряд подтегов, уточняющих или сужающих диапазон этого языка (например, "`en-CA`" = вариант диалекта английского языка, использующегося в Канаде).
 
-> **Примечание:** Языковые теги формально описаны в [RFC 5646](https://tools.ietf.org/html/rfc5646), который в свою очередь опирается на стандарт [ISO 639](https://en.wikipedia.org/wiki/ISO_639) (точнее на [ISO 639-1 code list](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) в части перечня используемых [language codes](https://en.wikipedia.org/wiki/Language_code).
+> [!NOTE]
+> Языковые теги формально описаны в [RFC 5646](https://tools.ietf.org/html/rfc5646), который в свою очередь опирается на стандарт [ISO 639](https://en.wikipedia.org/wiki/ISO_639) (точнее на [ISO 639-1 code list](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) в части перечня используемых [language codes](https://en.wikipedia.org/wiki/Language_code).
 
 ## Примеры
 
 ### Указание использованного языка документа
 
-Глобальный атрибут [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) используется на HTML-элементах для указания языка всего HTML документа или его частей.
+Глобальный атрибут [`lang`](/ru/docs/Web/HTML/Global_attributes/lang) используется на HTML-элементах для указания языка всего HTML документа или его частей.
 
 ```html
-<html lang="de">
+<html lang="de"></html>
 ```
 
 **Не** используйте этот мета элемент как здесь для констатирования языка документа:
 
 ```html example-bad
 <!-- /!\ Это плохая практика -->
-<meta http-equiv="content-language" content="de">
+<meta http-equiv="content-language" content="de" />
 ```
 
 ### Указание целевой аудитории для ресурса
@@ -83,8 +82,8 @@ Content-Language: de, en
 
 ## Спецификации
 
-| Спецификация                                                 | Заголовок                                                     |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
+| Спецификация                                   | Заголовок                                                     |
+| ---------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Content-Language", "3.1.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Совместимость с браузерами

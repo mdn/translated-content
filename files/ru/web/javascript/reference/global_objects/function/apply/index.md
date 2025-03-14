@@ -1,21 +1,16 @@
 ---
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
-tags:
-  - Function
-  - JavaScript
-  - Method
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 ---
-{{JSRef("Global_Objects", "Function")}}
+
+{{JSRef}}
 
 ## Общие сведения
 
-Метод **`apply()`** вызывает функцию с указанным значением `this` и аргументами, предоставленными в виде массива (либо [массивоподобного объекта](/ru/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Working_with_Array-like_objects)).
+Метод **`apply()`** вызывает функцию с указанным значением `this` и аргументами, предоставленными в виде массива (либо [массивоподобного объекта](/ru/docs/Web/JavaScript/Guide#working_with_array-like_objects)).
 
-> **Примечание:** хотя синтаксис этой функции практически полностью идентичен функции {{jsxref("Function.prototype.call()", "call()")}}, фундаментальное различие между ними заключается в том, что функция `call()` принимает список аргументов, в то время как функция `apply()` принимает единичный массив аргументов.
+> [!NOTE]
+> Хотя синтаксис этой функции практически полностью идентичен функции {{jsxref("Function.prototype.call()", "call()")}}, фундаментальное различие между ними заключается в том, что функция `call()` принимает список аргументов, в то время как функция `apply()` принимает единичный массив аргументов.
 
 ## Синтаксис
 
@@ -26,9 +21,9 @@ fun.apply(thisArg, [argsArray])
 ### Параметры
 
 - `thisArg`
-  - : Опциональный параметр. Значение `this`, предоставляемое для вызова функции _`fun`_. Обратите внимание, что `this` может не быть реальным значением, видимым этим методом: если метод является функцией в {{jsxref("Functions_and_function_scope/Strict_mode", "нестрогом режиме", "", 1)}}, значения {{jsxref("Global_Objects/null", "null")}} и {{jsxref("Global_Objects/undefined", "undefined")}} будут заменены глобальным объектом, а примитивные значения будут упакованы в объекты.
-- `argsArray`
-  - : Опциональный параметр. Массивоподобный объект, определяющий аргументы, с которыми функция _`fun`_ должна быть вызвана, либо {{jsxref("Global_Objects/null", "null")}} или {{jsxref("Global_Objects/undefined", "undefined")}}, если в функцию не надо передавать аргументы. Начиная с ECMAScript 5 эти аргументы могут быть обобщёнными массивоподобными объектами, а не только массивом. Смотрите ниже информацию по [совместимости с браузерами](#browser_compatibility).
+  - : Значение `this`, предоставляемое для вызова функции _`fun`_. Обратите внимание, что `this` может не быть реальным значением, видимым этим методом: если метод является функцией в {{jsxref("Functions_and_function_scope/Strict_mode", "нестрогом режиме", "", 1)}}, значения {{jsxref("Global_Objects/null", "null")}} и {{jsxref("Global_Objects/undefined", "undefined")}} будут заменены глобальным объектом, а примитивные значения будут упакованы в объекты.
+- `argsArray` {{optional_inline}}
+  - : Массивоподобный объект, определяющий аргументы, с которыми функция _`fun`_ должна быть вызвана, либо {{jsxref("Global_Objects/null", "null")}} или {{jsxref("Global_Objects/undefined", "undefined")}}, если в функцию не надо передавать аргументы. Начиная с ECMAScript 5 эти аргументы могут быть обобщёнными массивоподобными объектами, а не только массивом. Смотрите ниже информацию по [совместимости с браузерами](#browser_compatibility).
 
 ## Описание
 
@@ -40,7 +35,8 @@ fun.apply(thisArg, [argsArray])
 
 Начиная с 5-го издания ECMAScript, вы также можете использовать любой вид массивоподобного объекта, что на практике означает, что он должен иметь свойство `length` и целочисленные свойства в диапазоне `(0...length)`. В качестве примера, теперь вы можете использовать {{domxref("NodeList")}} или свой собственный объект вида `{ 'length': 2, '0': 'есть', '1': 'бананы' }`.
 
-{{note("Большинство браузеров, включая Chrome 14 и Internet Explorer 9, всё ещё не принимают массивоподобные объекты и будут выбрасывать исключение.")}}
+> [!NOTE]
+> Большинство браузеров, включая Chrome 14 и Internet Explorer 9, всё ещё не принимают массивоподобные объекты и будут выбрасывать исключение.
 
 ## Примеры
 
@@ -56,11 +52,15 @@ Function.prototype.construct = function (aArgs) {
 };
 ```
 
-> **Примечание:** метод {{jsxref("Object.create()")}}, использованный в этом примере, относительно новый. В качестве альтернативного способа можно рассмотреть возможность использования замыкания:
+> [!NOTE]
+> Метод {{jsxref("Object.create()")}}, использованный в этом примере, относительно новый. В качестве альтернативного способа можно рассмотреть возможность использования замыкания:
 >
 > ```js
-> Function.prototype.construct = function(aArgs) {
->   var fConstructor = this, fNewConstr = function() { fConstructor.apply(this, aArgs); };
+> Function.prototype.construct = function (aArgs) {
+>   var fConstructor = this,
+>     fNewConstr = function () {
+>       fConstructor.apply(this, aArgs);
+>     };
 >   fNewConstr.prototype = fConstructor.prototype;
 >   return new fNewConstr();
 > };
@@ -71,19 +71,20 @@ Function.prototype.construct = function (aArgs) {
 ```js
 function MyConstructor() {
   for (var nProp = 0; nProp < arguments.length; nProp++) {
-    this['property' + nProp] = arguments[nProp];
+    this["property" + nProp] = arguments[nProp];
   }
 }
 
-var myArray = [4, 'Привет, мир!', false];
+var myArray = [4, "Привет, мир!", false];
 var myInstance = MyConstructor.construct(myArray);
 
-alert(myInstance.property1);                // выведет 'Привет, мир!'
+alert(myInstance.property1); // выведет 'Привет, мир!'
 alert(myInstance instanceof MyConstructor); // выведет 'true'
-alert(myInstance.constructor);              // выведет 'MyConstructor'
+alert(myInstance.constructor); // выведет 'MyConstructor'
 ```
 
-> **Примечание:** этот неродной метод `Function.construct()` не будет работать с некоторыми родными конструкторами (вроде конструктора {{jsxref("Global_Objects/Date", "Date")}}, к примеру). В этих случаях вы можете использовать метод {{jsxref("Function.prototype.bind()")}} (например, представьте, что вы имеете следующий массив, который можно использовать с конструктором {{jsxref("Global_Objects/Date", "Date")}}: `[2012, 11, 4]`; в этом случае вы напишите что-то вроде: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` — так или иначе, это не самый изящный способ и, вероятно, его не стоит использовать в рабочем окружении).
+> [!NOTE]
+> Этот неродной метод `Function.construct()` не будет работать с некоторыми родными конструкторами (вроде конструктора {{jsxref("Global_Objects/Date", "Date")}}, к примеру). В этих случаях вы можете использовать метод {{jsxref("Function.prototype.bind()")}} (например, представьте, что вы имеете следующий массив, который можно использовать с конструктором {{jsxref("Global_Objects/Date", "Date")}}: `[2012, 11, 4]`; в этом случае вы напишите что-то вроде: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` — так или иначе, это не самый изящный способ и, вероятно, его не стоит использовать в рабочем окружении).
 
 ### Пример: использование `apply()` и встроенных функций
 
@@ -94,12 +95,15 @@ alert(myInstance.constructor);              // выведет 'MyConstructor'
 var numbers = [5, 6, 2, 3, 7];
 
 /* используем apply к Math.min/Math.max */
-var max = Math.max.apply(null, numbers); /* Это эквивалентно Math.max(numbers[0], ...)
+var max = Math.max.apply(
+  null,
+  numbers,
+); /* Это эквивалентно Math.max(numbers[0], ...)
                                             или Math.max(5, 6, ...) */
 var min = Math.min.apply(null, numbers);
 
 /* сравним с простым алгоритмом с циклом */
-max = -Infinity, min = +Infinity;
+(max = -Infinity), (min = +Infinity);
 
 for (var i = 0; i < numbers.length; i++) {
   if (numbers[i] > max) {
@@ -135,16 +139,16 @@ var min = minOfArray([5, 6, 2, 3, 7]);
 
 ```js
 var originalfoo = someobject.foo;
-someobject.foo = function() {
+someobject.foo = function () {
   // Делаем что-то до вызова функции
   console.log(arguments);
   // Вызываем функцию так, как будто бы она была вызвана обычным образом:
   originalfoo.apply(this, arguments);
   // Делаем что-то после вызова функции.
-}
+};
 ```
 
-Этот метод особенно удобен, когда вам нужно отладить события, либо интерфейс с чем-то, что не имеет API, вроде различных событий `.on([event]...`, например, тех что используются в [Инспекторе инструментов разработчика](/ru/docs/Tools/Page_Inspector#Developer_API)).
+Этот метод особенно удобен, когда вам нужно отладить события, либо интерфейс с чем-то, что не имеет API, вроде различных событий `.on([event]...`, например, тех что используются в [Инспекторе инструментов разработчика](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#developer_api)).
 
 ## Спецификации
 

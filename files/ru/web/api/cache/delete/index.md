@@ -1,8 +1,8 @@
 ---
 title: Cache.delete()
 slug: Web/API/Cache/delete
-translation_of: Web/API/Cache/delete
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 Метод **`delete()`** интерфейса {{domxref("Cache")}} ищет запись {{domxref("Cache")}}, чей ключ совпадает с запросом, и, в случае находки, удаляет запись {{domxref("Cache")}} и возвращает {{jsxref("Promise")}}, который разрешается со значением `true`. Если запись не была найдена {{domxref("Cache")}}, метод возвращает `false`.
@@ -35,11 +35,11 @@ cache.delete(request,{options}).then(function(true) {
 ## Примеры
 
 ```js
-caches.open('v1').then(function(cache) {
-  cache.delete('/images/image.png').then(function(response) {
+caches.open("v1").then(function (cache) {
+  cache.delete("/images/image.png").then(function (response) {
     someUIUpdateFunction();
   });
-})
+});
 ```
 
 ## Спецификации
@@ -52,6 +52,6 @@ caches.open('v1').then(function(cache) {
 
 ## Смотрите также
 
-- [Использование сервис воркеров](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Использование сервис воркеров](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("WorkerGlobalScope.caches")}}

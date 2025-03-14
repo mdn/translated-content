@@ -1,122 +1,125 @@
 ---
-title: CanvasRenderingContext2D.createPattern()
+title: CanvasRenderingContext2D：createPattern() 方法
 slug: Web/API/CanvasRenderingContext2D/createPattern
+l10n:
+  sourceCommit: 4656260748aea78929639c4bf776d643d9911a82
 ---
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.createPattern()`** 是 Canvas 2D API 使用指定的图像 ({{domxref("CanvasImageSource")}}) 创建模式的方法。它通过 repetition 参数在指定的方向上重复元图像。此方法返回一个{{domxref("CanvasPattern")}}对象。
+Canvas 2D API 的 **`CanvasRenderingContext2D.createPattern()`** 方法用于使用指定的图像或重复创建图案。此方法返回一个 {{domxref("CanvasPattern")}} 对象。
+
+这个方法并不直接在画布上绘制任何内容。它所创建的图案必须赋值给 {{domxref("CanvasRenderingContext2D.fillStyle")}} 或 {{domxref("CanvasRenderingContext2D.strokeStyle")}}，之后才会应用于接下来的绘制操作。
 
 ## 语法
 
-```
-CanvasPattern ctx.createPattern(image, repetition);
+```js-nolint
+createPattern(image, repetition)
 ```
 
 ### 参数
 
 - `image`
 
-  - : 作为重复图像源的 {{domxref("CanvasImageSource")}} 对象。可以是下列之一：
+  - : 用作图案图像的图像。可以是下列之一：
 
-    - {{domxref("HTMLImageElement")}} ({{HTMLElement("img")}}),
-    - {{domxref("HTMLVideoElement")}} ({{HTMLElement("video")}}),
-    - {{domxref("HTMLCanvasElement")}} ({{HTMLElement("canvas")}}),
-    - {{domxref("CanvasRenderingContext2D")}},
-    - {{domxref("ImageBitmap")}},
-    - {{domxref("ImageData")}},
-    - {{domxref("Blob")}}.
+    - {{domxref("HTMLImageElement")}}（{{HTMLElement("img")}}）
+    - {{domxref("SVGImageElement")}}（{{SVGElement("image")}}）
+    - {{domxref("HTMLVideoElement")}}（{{HTMLElement("video")}}，通过使用视频捕获）
+    - {{domxref("HTMLCanvasElement")}}（{{HTMLElement("canvas")}}）
+    - {{domxref("ImageBitmap")}}
+    - {{domxref("OffscreenCanvas")}}
+    - {{domxref("VideoFrame")}}
 
 - `repetition`
 
-  - : {{domxref("DOMString")}}，指定如何重复图像。允许的值有：
+  - : 一个指示如何重复图案图像的字符串。可能的值包括：
 
-    - `"repeat"` (both directions),
-    - `"repeat-x"` (horizontal only),
-    - `"repeat-y"` (vertical only),
-    - `"no-repeat"` (neither).
+    - `"repeat"`（两个方向都重复）
+    - `"repeat-x"`（仅水平方向重复）
+    - `"repeat-y"`（仅垂直方向重复）
+    - `"no-repeat"`（两个方向都不重复）
 
-    如果为空字符串 (`''`) 或 {{jsxref("null")}} (但不是 {{jsxref("undefined")}})，repetition 将被当作"repeat"。
+    [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 值与空字符串（`""`）的处理方式相同：两者都是 `"repeat"` 的同义词。
 
 ### 返回值
 
 - {{domxref("CanvasPattern")}}
-  - : 描述模式的不透明对象
+  - : 描述图案的不透明对象
+
+如果 `image` 没有完全加载（即 {{domxref("HTMLImageElement.complete")}} 是 `false`），则返回 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
 
 ## 示例
 
-### 使用`createPattern`方法
+### 从图像创建图案
 
-这是一段简单的代码片段，使用 createPattern 方法创建一个指定图像和重复的{{domxref("CanvasPattern")}} 对象。创建完成后，可以使用{{domxref("CanvasPattern.setTransform()")}}方法对图案进行变形。如示例所示，你可以把此模式赋值给当前的{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}，当你使用{{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 方法时，会在 canvas 上绘制出效果。
+这个例子使用 `createPattern()` 方法来创建一个带有重复源图像的 {{domxref("CanvasPattern")}}。创建完成后，将这个图案赋值给画布上下文的填充样式，并应用于一个矩形。
+
+原始图像如下所示：
+
+![一个花纹图案](canvas_createpattern.png)
 
 #### HTML
 
 ```html
-<canvas id="canvas"></canvas>
+<canvas id="canvas" width="300" height="300"></canvas>
 ```
 
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
-img.onload = function() {
-  var pattern = ctx.createPattern(img, 'repeat');
+const img = new Image();
+img.src = "canvas_createpattern.png";
+// 请确保在图像加载完成后再使用
+img.onload = () => {
+  const pattern = ctx.createPattern(img, "repeat");
   ctx.fillStyle = pattern;
-  ctx.fillRect(0,0,400,400);
+  ctx.fillRect(0, 0, 300, 300);
 };
 ```
 
-编辑以下代码并在线查看 canvas 变化：
+{{ EmbedLiveSample('从图像创建图案', 700, 310) }}
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code" style="height:120px">
-var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
-img.onload = function() {
-  var pattern = ctx.createPattern(img, 'repeat');
-  ctx.fillStyle = pattern;
-  ctx.fillRect(0,0,400,400);
-};</textarea>
+### 从画布创建图案
+
+在这个例子中，我们从一个离屏画布的内容创建了一个图案。然后将这个图案应用到主画布的填充样式上，并用该图案填充主画布。
+
+#### JavaScript
+
+```js
+// 创建一个离屏画布作为图案的源
+const patternCanvas = document.createElement("canvas");
+const patternContext = patternCanvas.getContext("2d");
+
+// 设置图案的宽度和高度为 50
+patternCanvas.width = 50;
+patternCanvas.height = 50;
+
+// 设置图案的背景颜色并绘制一个圆弧
+patternContext.fillStyle = "#fec";
+patternContext.fillRect(0, 0, patternCanvas.width, patternCanvas.height);
+patternContext.arc(0, 0, 50, 0, 0.5 * Math.PI);
+patternContext.stroke();
+
+// 创建我们的主画布并用图案填充
+const canvas = document.createElement("canvas");
+const ctx = canvas.getContext("2d");
+const pattern = ctx.createPattern(patternCanvas, "repeat");
+ctx.fillStyle = pattern;
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+// 将主画布添加到网页中
+document.body.appendChild(canvas);
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+#### 结果
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
+{{ EmbedLiveSample('从画布创建图案', 700, 160) }}
 
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 380) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 
@@ -126,5 +129,5 @@ window.addEventListener("load", drawCanvas);
 
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}
+- 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasPattern")}}

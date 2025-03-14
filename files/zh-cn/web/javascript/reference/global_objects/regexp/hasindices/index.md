@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
 
 **`hasIndices`** 访问器属性指示 `d` 标志是否与正则表达式一起使用。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-hasindices.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.hasIndices")}}
+
+```js interactive-example
+const regex1 = new RegExp("foo", "d");
+
+console.log(regex1.hasIndices);
+// Expected output: true
+
+const regex2 = new RegExp("bar");
+
+console.log(regex2.hasIndices);
+// Expected output: false
+```
 
 ## 描述
 
@@ -20,16 +32,16 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
 ### 使用 hasIndices
 
 ```js
-const str1 = 'foo bar foo';
+const str1 = "foo bar foo";
 
-const regex1 = /foo/gd;
+const regex1 = /foo/dg;
 
 console.log(regex1.hasIndices); // Output: true
 
 console.log(regex1.exec(str1).indices[0]); // Output: Array [0, 3]
 console.log(regex1.exec(str1).indices[0]); // Output: Array [8, 11]
 
-const str2 = 'foo bar foo';
+const str2 = "foo bar foo";
 
 const regex2 = /foo/;
 

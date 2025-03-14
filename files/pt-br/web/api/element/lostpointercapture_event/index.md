@@ -1,12 +1,11 @@
 ---
 title: GlobalEventHandlers.onlostpointercapture
 slug: Web/API/Element/lostpointercapture_event
-original_slug: Web/API/GlobalEventHandlers/onlostpointercapture
 ---
 
 {{ApiRef("HTML DOM")}}
 
-A propriedade **`onlostpointercapture`** do mixin {{domxref("GlobalEventHandlers")}} é uma {{event("Event_handlers", "event handler")}} que processa eventos {{event("lostpointercapture")}}.
+A propriedade **`onlostpointercapture`** do mixin {{domxref("GlobalEventHandlers")}} é uma [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) que processa eventos [`lostpointercapture`](/pt-BR/docs/Web/API/Element/lostpointercapture_event).
 
 ## Sintaxe
 
@@ -27,16 +26,14 @@ function overHandler(event) {
 }
 
 function init() {
-  let el = document.getElementById('target');
+  let el = document.getElementById("target");
   el.onlostpointercapture = overHandler;
 }
 ```
 
 ## Especificações
 
-| Specification                                                                                                            | Status                                   | Comment |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------- |
-| {{SpecName('Pointer Events 2', '#the-lostpointercapture-event', 'onlostpointercapture')}} | {{Spec2('Pointer Events 2')}} |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
@@ -44,6 +41,6 @@ function init() {
 
 ## See also
 
-- Evento [`Document: lostpointercapture`](/pt-BR/docs/Web/API/Document/lostpointercapture_event)
-- Evento [`HTMLElement: lostpointercapture`](/pt-BR/docs/Web/API/HTMLElement/lostpointercapture_event)
+- Evento [`Document: lostpointercapture`](/pt-BR/docs/Web/API/Element/lostpointercapture_event)
+- Evento [`HTMLElement: lostpointercapture`](/pt-BR/docs/Web/API/Element/lostpointercapture_event)
 - {{domxref("Element.releasePointerCapture()")}}

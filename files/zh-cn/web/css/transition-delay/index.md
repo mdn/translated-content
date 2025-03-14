@@ -3,11 +3,9 @@ title: transition-delay
 slug: Web/CSS/transition-delay
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-## 概要
-
-CSS 的**transition-delay**属性规定了在[过渡效果](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)开始作用之前需要等待的时间。
+CSS 的**transition-delay**属性规定了在[过渡效果](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)开始作用之前需要等待的时间。
 
 值以秒（s）或毫秒（ms）为单位，表明动画过渡效果将在何时开始。取值为正时会延迟一段时间来响应过渡效果；取值为负时会导致过渡立即开始。
 
@@ -33,279 +31,82 @@ transition-delay: unset;
 - `<time>`
   - : 表明动画效果属性生效之前需要等待的时间。
 
-### 语法形式
+### 形式语法
 
 {{csssyntax}}
 
-## 举例
+## 示例
 
-`transition-delay: 0.5s`
+### 展示不同的延迟
 
-```html hidden
- <div class="parent">
-  <div class="box">Lorem</div>
-</div>
+#### HTML
 
+```html
+<div class="box delay-1">0.5 秒</div>
+
+<div class="box delay-2">2 秒</div>
+
+<div class="box delay-3">4 秒</div>
+
+<button id="change">变换</button>
 ```
 
-```css hidden
-.parent { width: 250px; height:125px;}
+#### CSS
+
+```css
 .box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:0.5s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:0.5s;
-    transition-timing-function: linear;
+  margin: 20px;
+  padding: 10px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 18px;
+  transition-property: background-color, font-size, transform, color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 3s;
 }
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-     -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:0.5s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:0.5s;
-    transition-timing-function: linear;
+
+.transformed-state {
+  transform: rotate(270deg);
+  background-color: blue;
+  color: yellow;
+  font-size: 12px;
+  transition-property: background-color, font-size, transform, color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 3s;
+}
+
+.delay-1 {
+  transition-delay: 0.5s;
+}
+
+.delay-2 {
+  transition-delay: 2s;
+}
+
+.delay-3 {
+  transition-delay: 4s;
 }
 ```
 
-```js hidden
-function updateTransition() {
-  var el = document.querySelector("div.box");
+#### JavaScript
 
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
+```js
+function change() {
+  const elements = document.querySelectorAll("div.box");
+  for (const element of elements) {
+    element.classList.toggle("transformed-state");
   }
-
-  return el;
 }
 
-var intervalID = window.setInterval(updateTransition, 7000);
+const changeButton = document.querySelector("#change");
+changeButton.addEventListener("click", change);
 ```
 
-{{EmbedLiveSample("delay_0_5s",275,150)}}
+#### 结果
 
-`transition-delay: 1s`
-
-```html hidden
- <div class="parent">
-  <div class="box">Lorem</div>
-</div>
-
-```
-
-```css hidden
-.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-     -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:1s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:1s;
-    transition-timing-function: linear;
-}
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:1s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:1s;
-    transition-timing-function: linear;
-}
-```
-
-```js hidden
-function updateTransition() {
-  var el = document.querySelector("div.box");
-
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-```
-
-{{EmbedLiveSample("delay_1s",275,150)}}
-
-`transition-delay: 2s`
-
-```html hidden
- <div class="parent">
-  <div class="box">Lorem</div>
-</div>
-
-```
-
-```css hidden
-.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:2s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:2s;
-    transition-timing-function: linear;
-}
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:2s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:2s;
-    transition-timing-function: linear;
-}
-```
-
-```js hidden
-function updateTransition() {
-  var el = document.querySelector("div.box");
-
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-```
-
-{{EmbedLiveSample("delay_2s",275,150)}}
-
-`transition-delay: 4s`
-
-```html hidden
- <div class="parent">
-  <div class="box">Lorem</div>
-</div>
-
-```
-
-```css hidden
-.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:4s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:4s;
-    transition-timing-function: ease-in-out;
-}
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:4s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:4s;
-    transition-timing-function: ease-in-out;
-}
-```
-
-```js hidden
-function updateTransition() {
-  var el = document.querySelector("div.box");
-
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-```
-
-{{EmbedLiveSample("delay_4s",275,150)}}
+{{EmbedLiveSample("展示不同的延迟",275,200)}}
 
 ## 规范
 
@@ -315,7 +116,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 {{Compat}}
 
-## 扩展阅读
+## 参见
 
-- [Using CSS transitions](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS transitions](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{domxref("TransitionEvent")}}

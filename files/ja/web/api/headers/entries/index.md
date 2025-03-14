@@ -1,15 +1,14 @@
 ---
-title: Headers.entries()
+title: "Headers: entries() メソッド"
+short-title: entries()
 slug: Web/API/Headers/entries
 l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{APIRef}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
-**`Headers.entries()`** メソッドは、このオブジェクトに含まれるすべてのキーと値のペアを走査する{{jsxref("Iteration_protocols", '反復子', '', 1)}}を返します。それぞれのペアのキーと値は両方とも {{jsxref("String")}} オブジェクトです。
-
-> **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
+**`Headers.entries()`** メソッドは、このオブジェクトに含まれるすべてのキーと値のペアを走査する{{jsxref("Iteration_protocols", 'イテレーター', '', 1)}}を返します。それぞれのペアのキーと値は両方とも {{jsxref("String")}} オブジェクトです。
 
 ## 構文
 
@@ -23,25 +22,25 @@ entries()
 
 ### 返値
 
-{{jsxref("Iteration_protocols", '反復子', '', 1)}}を返します。
+{{jsxref("Iteration_protocols", 'イテレーター', '', 1)}}を返します。
 
 ## 例
 
 ```js
 // Headers テストオブジェクトを作成
 const myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.append('Vary', 'Accept-Language');
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.append("Vary", "Accept-Language");
 
 // キーと値のペアを表示
 for (const pair of myHeaders.entries()) {
-   console.log(`${pair[0]}: ${pair[1]}`);
+  console.log(`${pair[0]}: ${pair[1]}`);
 }
 ```
 
 結果は次の通りです。
 
-```
+```plain
 content-type: text/xml
 vary: Accept-Language
 ```

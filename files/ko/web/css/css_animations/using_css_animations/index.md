@@ -1,14 +1,6 @@
 ---
 title: CSS 애니메이션 사용하기
-slug: Web/CSS/CSS_Animations/Using_CSS_animations
-tags:
-  - Advanced
-  - CSS
-  - CSS Animations
-  - Example
-  - Experimental
-  - Guide
-translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
+slug: Web/CSS/CSS_animations/Using_CSS_animations
 ---
 
 {{SeeCompatTable}}{{CSSRef}}
@@ -17,8 +9,8 @@ translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
 
 CSS 애니메이션은 기존에 사용되던 스크립트를 이용한 애니메이션 보다 다음 세 가지 이유에서 이점을 가집니다.
 
-1. 자바스크립트를 모르더라도 간단하게 애니메이션을 만들 수 있습니다.
-2. 자바스크립트를 이용한 애니메이션은 잘 만들어졌더라도 성능이 좋지 못할때가 있습니다. CSS 애니메이션은 frame-skipping 같은 여러 기술을 이용하여 최대한 부드럽게 렌더링됩니다.
+1. JavaScript를 모르더라도 간단하게 애니메이션을 만들 수 있습니다.
+2. JavaScript를 이용한 애니메이션은 잘 만들어졌더라도 성능이 좋지 못할때가 있습니다. CSS 애니메이션은 frame-skipping 같은 여러 기술을 이용하여 최대한 부드럽게 렌더링됩니다.
 3. 브라우저는 애니메이션의 성능을 효율적으로 최적화할 수 있습니다. 예를 들어 현재 안보이는 엘리먼트에 대한 애니메이션은 업데이트 주기를 줄여 부하를 최소화할 수 있습니다.
 
 ## 애니메이션 적용하기
@@ -69,7 +61,7 @@ p {
 @keyframes slidein {
   from {
     margin-left: 100%;
-    width: 300%
+    width: 300%;
   }
 
   to {
@@ -88,9 +80,11 @@ CSS 애니메이션을 지원하지 않는 브라우저를 위하여 {{ HTMLElem
 두번째 중간 상태는 애니메이션이 시작되고나서 100% (to키워드를 사용해도 됩니다)시점에 왼쪽 마진을 0%으로 지정하는 것입니다. 따라서 애니메이션 마지막에는 엘리먼트가 브라우저 윈도우의 왼쪽 모서리에 그려집니다.
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("텍스트가_브라우저를_가로질러_움직이게_하기","100%","250")}}
@@ -127,9 +121,11 @@ p {
 ```
 
 ```html hidden
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 애니메이션의 75% 시점에서 엘리먼트의 왼쪽 마진을 25%, 너비를 150%, 글자 크기를 300%로 지정하라는 의미입니다.
@@ -163,9 +159,11 @@ p {
 ```
 
 ```html hidden
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("애니메이션_반복하기","100%","250")}}
@@ -198,9 +196,11 @@ p {
 ```
 
 ```html hidden
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("앞뒤로_움직이기","100%","250")}}
@@ -229,44 +229,44 @@ her in a languid, sleepy voice.</p>
 
 @-moz-keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-    margin-left:0%;
-    width:100%;
+    margin-left: 0%;
+    width: 100%;
   }
 }
 
 @-webkit-keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-   margin-left:0%;
-   width:100%;
- }
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 @keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-   margin-left:0%;
-   width:100%;
- }
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 ```
 
 #### 애니메이션 이벤트 리스너 추가하기
 
-자바스크립트 코드를 사용하여 위에서 언급한 세개의 이벤트를 감지해 봅시다. `setup()` 함수는 애니메이션 이벤트 리스너를 추가하는 함수입니다. 문서가 로드되었을 때 이 함수를 실행할 것입니다.
+JavaScript 코드를 사용하여 위에서 언급한 세개의 이벤트를 감지해 봅시다. `setup()` 함수는 애니메이션 이벤트 리스너를 추가하는 함수입니다. 문서가 로드되었을 때 이 함수를 실행할 것입니다.
 
 ```js
 function setup() {
@@ -291,7 +291,7 @@ function setup() {
 ```js
 function listener(e) {
   var l = document.createElement("li");
-  switch(e.type) {
+  switch (e.type) {
     case "animationstart":
       l.innerHTML = "Started: elapsed time is " + e.elapsedTime;
       break;
@@ -324,11 +324,15 @@ function listener(e) {
 ```html
 <body onload="setup()">
   <h1 id="watchme">Watch me move</h1>
-  <p>This example shows how to use CSS animations to make <code>h1</code> elements
-  move across the page.</p>
-  <p>In addition, we output some text each time an animation event fires, so you can see them in action.</p>
-  <ul id="output">
-  </ul>
+  <p>
+    This example shows how to use CSS animations to make
+    <code>h1</code> elements move across the page.
+  </p>
+  <p>
+    In addition, we output some text each time an animation event fires, so you
+    can see them in action.
+  </p>
+  <ul id="output"></ul>
 </body>
 ```
 

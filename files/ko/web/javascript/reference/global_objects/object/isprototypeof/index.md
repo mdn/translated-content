@@ -1,14 +1,8 @@
 ---
 title: Object.prototype.isPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 ---
+
 {{JSRef}}
 
 **`isPrototypeOf()`** 메소드는 해당 객체가 다른 객체의 프로토타입 체인에 속한 객체인지 확인하기 위해 사용됩니다.
@@ -18,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 ## 구문
 
 ```js
-prototypeObj.isPrototypeOf(obj)
+prototypeObj.isPrototypeOf(obj);
 ```
 
 ### 매개변수
@@ -79,4 +73,4 @@ if (Fi.prototype.isPrototypeOf(fum)) {
 - {{jsxref("Operators/instanceof", "instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

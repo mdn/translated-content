@@ -1,21 +1,32 @@
 ---
-title: Element.getAttributeNames()
+title: "Element: getAttributeNames() メソッド"
+short-title: getAttributeNames()
 slug: Web/API/Element/getAttributeNames
+l10n:
+  sourceCommit: d93e5a0bca36d745734e46c0cd55f40cda28e221
 ---
 
 {{APIRef("DOM")}}
 
-**`getAttributeNames()`** は {{domxref("Element")}} インターフェースのメソッドで、この要素の属性名を文字列の {{jsxref("Array")}} で返します。要素に属性がない場合は、空の配列を返します。
+**`getAttributeNames()`** は {{domxref("Element")}} インターフェイスのメソッドで、この要素の属性名を文字列の {{jsxref("Array")}} で返します。要素に属性がない場合は、空の配列を返します。
 
-`getAttributeNames()` を {{domxref("Element.getAttribute","getAttribute()")}} と共に使用すると、 {{domxref("Element.attributes")}} にアクセスするよりメモリ効率やパフォーマンスが良くなります。
+`getAttributeNames()` を {{domxref("Element.getAttribute","getAttribute()")}} と共に使用すると、 {{domxref("Element.attributes")}} にアクセスするよりメモリー効率やパフォーマンスが良くなります。
 
 **`getAttributeNames()`** から返される名前は*修飾*属性名です。すなわち、名前空間接頭辞がついた属性であり、名前空間接頭辞（実際の名前空間では*ない*）にコロンが続き、属性名が続きます（例えば **`xlink:href`**）。名前空間接頭辞のない属性は、そのままの名前になります（例えば **`href`**）。
 
 ## 構文
 
-```js
-let attributeNames = element.getAttributeNames();
+```js-nolint
+getAttributeNames()
 ```
+
+### 引数
+
+なし。
+
+### 返値
+
+文字列の配列 ({{jsxref("Array")}}) です。
 
 ## 例
 
@@ -32,18 +43,22 @@ let attributeNames = element.getAttributeNames();
 以下の例では、このような「名前空間に所属しているが、名前空間接頭辞がない」場合を示しています。
 
 ```js
-const element = document.createElement('a')
+const element = document.createElement("a");
 
 // "href" 属性を名前空間なし、名前空間接頭辞なしで設定
-element.setAttribute('href', 'https://example.com')
+element.setAttribute("href", "https://example.com");
 // "href" 属性を名前空間あり、 "xlink" 名前空間接頭辞で設定
-element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'https://example.com')
+element.setAttributeNS(
+  "http://www.w3.org/1999/xlink",
+  "xlink:href",
+  "https://example.com",
+);
 // "show" 属性を名前空間あり、名前空間接頭辞なしで設定
-element.setAttributeNS('http://www.w3.org/1999/xlink', 'show', 'new')
+element.setAttributeNS("http://www.w3.org/1999/xlink", "show", "new");
 
 // 要素の属性を反復処理する
-for (let name of element.getAttributeNames()) {
-  let value = element.getAttribute(name);
+for (const name of element.getAttributeNames()) {
+  const value = element.getAttribute(name);
   console.log(name, value);
 }
 
@@ -51,22 +66,6 @@ for (let name of element.getAttributeNames()) {
 // href https://example.com
 // xlink:href https://example.com
 // show new
-```
-
-## ポリフィル
-
-```js
-if (Element.prototype.getAttributeNames == undefined) {
-  Element.prototype.getAttributeNames = function () {
-    var attributes = this.attributes;
-    var length = attributes.length;
-    var result = new Array(length);
-    for (var i = 0; i < length; i++) {
-      result[i] = attributes[i].name;
-    }
-    return result;
-  };
-}
 ```
 
 ## 仕様書

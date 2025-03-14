@@ -1,46 +1,42 @@
 ---
-title: 'HTMLMediaElement: error イベント'
+title: "HTMLMediaElement: error イベント"
+short-title: error
 slug: Web/API/HTMLMediaElement/error_event
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef}}
 
 **`error`** イベントは、リソースがエラーのために読み込めなかったときに発生します（例えば、ネットワーク接続の問題など）。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onerror", "onerror")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("error", (event) => {});
+
+onerror = (event) => {};
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
 ```js
-const video = document.querySelector('video');
-const videoSrc = 'https://path/to/video.webm';
+const video = document.querySelector("video");
+const videoSrc = "https://path/to/video.webm";
 
-video.addEventListener('error', () => {
+video.addEventListener("error", () => {
   console.error(`Error loading: ${videoSrc}`);
 });
 
-video.setAttribute('src', videoSrc);
+video.setAttribute("src", videoSrc);
 ```
 
 ## 仕様書

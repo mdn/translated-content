@@ -9,12 +9,13 @@ slug: Web/API/Clipboard/read
 
 クリップボードから読み込みを行うためには、まず `"clipboard-read"` 権限を取得する必要があります。
 
-> **メモ:** 非同期のクリップボード API と[権限 API](/ja/docs/Web/API/Permissions_API) は、ほとんどのブラウザーでは組み込み途中の状態です。そのため、権限などが公式仕様とは異なっていることがよくあります。これらのメソッドを使う前に[互換性一覧表](#ブラウザーの互換性)を確認してください。
+> [!NOTE]
+> 非同期のクリップボード API と[権限 API](/ja/docs/Web/API/Permissions_API) は、ほとんどのブラウザーでは組み込み途中の状態です。そのため、権限などが公式仕様とは異なっていることがよくあります。これらのメソッドを使う前に[互換性一覧表](#ブラウザーの互換性)を確認してください。
 
 ## 構文
 
 ```js
-read()
+read();
 ```
 
 ### 引数
@@ -35,13 +36,14 @@ read()
 
 この例では、クリップボードの読み取りを確認または許可して、画像データを取得し、空のフレームに画像データを表示します。
 
-> **メモ:** 現時点では、Firefoxは `read()` を実装していますが、 `"clipboard-read"` 権限を認識しないため、[権限 API](/ja/docs/Web/API/Permissions_API) を使ってアクセス管理をしようとしてもうまくいきません。
+> [!NOTE]
+> 現時点では、Firefoxは `read()` を実装していますが、 `"clipboard-read"` 権限を認識しないため、[権限 API](/ja/docs/Web/API/Permissions_API) を使ってアクセス管理をしようとしてもうまくいきません。
 
 #### HTML
 
 ```html
-<img id="source" src="butterfly.jpg" alt="A butterfly">
-<img id="destination">
+<img id="source" src="butterfly.jpg" alt="A butterfly" />
+<img id="destination" />
 ```
 
 #### CSS
@@ -58,25 +60,26 @@ img {
 #### JavaScript
 
 ```js
-const destinationImage = document.querySelector('#destination')
-destinationImage.addEventListener('click', pasteImage);
+const destinationImage = document.querySelector("#destination");
+destinationImage.addEventListener("click", pasteImage);
 
 async function pasteImage() {
   try {
-    const permission = await navigator.permissions.query({ name: 'clipboard-read' });
-    if (permission.state === 'denied') {
-      throw new Error('Not allowed to read clipboard.');
+    const permission = await navigator.permissions.query({
+      name: "clipboard-read",
+    });
+    if (permission.state === "denied") {
+      throw new Error("Not allowed to read clipboard.");
     }
     const clipboardContents = await navigator.clipboard.read();
     for (const item of clipboardContents) {
-      if (!item.types.includes('image/png')) {
-        throw new Error('Clipboard contains non-image data.');
+      if (!item.types.includes("image/png")) {
+        throw new Error("Clipboard contains non-image data.");
       }
-      const blob = await item.getType('image/png');
+      const blob = await item.getType("image/png");
       destinationImage.src = URL.createObjectURL(blob);
     }
-  }
-  catch (error) {
+  } catch (error) {
     console.error(error.message);
   }
 }

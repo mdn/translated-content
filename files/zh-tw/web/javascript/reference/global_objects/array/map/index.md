@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/map
 
 **`map()`** 方法會建立一個新的陣列，其內容為原陣列的每一個元素經由回呼函式運算後所回傳的結果之集合。
 
-{{EmbedInteractiveExample("pages/js/array-map.html")}}
+{{InteractiveExample("JavaScript Demo: Array.map()")}}
+
+```js interactive-example
+const array1 = [1, 4, 9, 16];
+
+// Pass a function to map
+const map1 = array1.map((x) => x * 2);
+
+console.log(map1);
+// Expected output: Array [2, 8, 18, 32]
+```
 
 ## 語法
 
@@ -90,14 +100,16 @@ var roots = numbers.map(Math.sqrt); //map會return一個新的array
 以下程式碼取出一陣列，將其中物件變更格式後建立為一個新的陣列並傳回。
 
 ```js
-var kvArray = [{key: 1, value: 10},
-               {key: 2, value: 20},
-               {key: 3, value: 30}];
+var kvArray = [
+  { key: 1, value: 10 },
+  { key: 2, value: 20 },
+  { key: 3, value: 30 },
+];
 
-var reformattedArray = kvArray.map(function(obj) {
-   var rObj = {};
-   rObj[obj.key] = obj.value;
-   return rObj;
+var reformattedArray = kvArray.map(function (obj) {
+  var rObj = {};
+  rObj[obj.key] = obj.value;
+  return rObj;
 });
 
 // reformattedArray 現在是 [{1: 10}, {2: 20}, {3: 30}],
@@ -114,7 +126,7 @@ var reformattedArray = kvArray.map(function(obj) {
 
 ```js
 var numbers = [1, 4, 9];
-var doubles = numbers.map(function(num) {
+var doubles = numbers.map(function (num) {
   return num * 2;
 });
 
@@ -128,7 +140,7 @@ var doubles = numbers.map(function(num) {
 
 ```js
 var map = Array.prototype.map;
-var a = map.call('Hello World', function(x) {
+var a = map.call("Hello World", function (x) {
   return x.charCodeAt(0);
 });
 // a 現在等於 [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
@@ -139,8 +151,8 @@ var a = map.call('Hello World', function(x) {
 本範例將展示如何遍歷由 `querySelectorAll` 所產生的物件。我們將得到所有的選項、並印在主控台上：
 
 ```js
-var elems = document.querySelectorAll('select option:checked');
-var values = Array.prototype.map.call(elems, function(obj) {
+var elems = document.querySelectorAll("select option:checked");
+var values = Array.prototype.map.call(elems, function (obj) {
   return obj.value;
 });
 ```
@@ -149,13 +161,13 @@ var values = Array.prototype.map.call(elems, function(obj) {
 
 ### 棘手的範例
 
-[（透過連結的部落格啟發）](http://www.wirfs-brock.com/allen/posts/166)
+[（透過連結的部落格啟發）](https://wirfs-brock.com/allen/posts/166)
 
 透過一個（被遍歷元素的）參數叫出回調是個常見的用法。有些函式也常常在含有其他可選參數的情況下，使用上一個參數。這種行為常常會給人帶來困惑。
 
 ```js
 // Consider:
-['1', '2', '3'].map(parseInt);
+["1", "2", "3"].map(parseInt);
 // 以為會是 [1, 2, 3] 嗎
 // 其實是 [1, NaN, NaN]
 
@@ -170,33 +182,31 @@ function returnInt(element) {
   return parseInt(element, 10);
 }
 
-['1', '2', '3'].map(returnInt); // [1, 2, 3]
+["1", "2", "3"].map(returnInt); // [1, 2, 3]
 // Actual result is an array of numbers (as expected)
 
 // Same as above, but using the concise arrow function syntax
-['1', '2', '3'].map( str => parseInt(str) );
+["1", "2", "3"].map((str) => parseInt(str));
 
 // A simpler way to achieve the above, while avoiding the "gotcha":
-['1', '2', '3'].map(Number); // [1, 2, 3]
+["1", "2", "3"].map(Number); // [1, 2, 3]
 // but unlike `parseInt` will also return a float or (resolved) exponential notation:
-['1.1', '2.2e2', '3e300'].map(Number); // [1.1, 220, 3e+300]
+["1.1", "2.2e2", "3e300"].map(Number); // [1.1, 220, 3e+300]
 ```
 
 ## Polyfill
 
-`map` was added to the ECMA-262 standard in the 5th edition; as such it may not be present in all implementations of the standard. You can work around this by inserting the following code at the beginning of your scripts, allowing use of `map` in implementations which do not natively support it. This algorithm is exactly the one specified in ECMA-262, 5th edition, assuming {{jsxref("Object")}}, {{jsxref("TypeError")}}, and {{jsxref("Array")}} have their original values and that `callback.call` evaluates to the original value of `{{jsxref("Function.prototype.call")}}`.
+`map` was added to the ECMA-262 standard in the 5th edition; as such it may not be present in all implementations of the standard. You can work around this by inserting the following code at the beginning of your scripts, allowing use of `map` in implementations which do not natively support it. This algorithm is exactly the one specified in ECMA-262, 5th edition, assuming {{jsxref("Object")}}, {{jsxref("TypeError")}}, and {{jsxref("Array")}} have their original values and that `callback.call` evaluates to the original value of {{jsxref("Function.prototype.call")}}.
 
 ```js
 // Production steps of ECMA-262, Edition 5, 15.4.4.19
 // Reference: http://es5.github.io/#x15.4.4.19
 if (!Array.prototype.map) {
-
-  Array.prototype.map = function(callback/*, thisArg*/) {
-
+  Array.prototype.map = function (callback /*, thisArg*/) {
     var T, A, k;
 
     if (this == null) {
-      throw new TypeError('this is null or not defined');
+      throw new TypeError("this is null or not defined");
     }
 
     // 1. Let O be the result of calling ToObject passing the |this|
@@ -210,8 +220,8 @@ if (!Array.prototype.map) {
 
     // 4. If IsCallable(callback) is false, throw a TypeError exception.
     // See: http://es5.github.com/#x9.11
-    if (typeof callback !== 'function') {
-      throw new TypeError(callback + ' is not a function');
+    if (typeof callback !== "function") {
+      throw new TypeError(callback + " is not a function");
     }
 
     // 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
@@ -229,7 +239,6 @@ if (!Array.prototype.map) {
 
     // 8. Repeat, while k < len
     while (k < len) {
-
       var kValue, mappedValue;
 
       // a. Let Pk be ToString(k).
@@ -239,7 +248,6 @@ if (!Array.prototype.map) {
       //   This step can be combined with c
       // c. If kPresent is true, then
       if (k in O) {
-
         // i. Let kValue be the result of calling the Get internal
         //    method of O with argument Pk.
         kValue = O[k];

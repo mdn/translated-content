@@ -1,12 +1,8 @@
 ---
 title: Document.head
 slug: Web/API/Document/head
-tags:
-  - API
-  - Document
-  - Property
-translation_of: Web/API/Document/head
 ---
+
 {{APIRef("DOM")}}
 
 Возвращает элемент {{HTMLElement("head")}} текущего документа. Если имеется более одного элемента `<head>`, будет возвращён первый из них.
@@ -46,7 +42,7 @@ var objRef = document.head;
 
 {{Specifications}}
 
-## Браузерная поддержка
+## Совместимость с браузерами
 
 {{Compat}}
 

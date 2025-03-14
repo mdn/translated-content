@@ -1,16 +1,14 @@
 ---
 title: <position>
 slug: Web/CSS/position_value
-translation_of: Web/CSS/position_value
-original_slug: Web/CSS/Type_position
-browser-compat: css.types.position
 ---
 
 {{CSSRef}}
 
 Le type de donnée [CSS](/fr/docs/Web/CSS) **`<position>`** (ou **`<bg-position>`**) définit une paire de coordonnées dans l'espace (bidimensionnel) afin de définir la position relative d'une boîte. Ce type de donnée est notamment utilisé avec les propriétés [`background-position`](/fr/docs/Web/CSS/background-position) et [`offset-anchor`](/fr/docs/Web/CSS/offset-anchor).
 
-> **Note :** La position finale obtenue, décrite par la valeur `<position>`, n'est pas nécessairement située à l'intérieur de la boîte de l'élément.
+> [!NOTE]
+> La position finale obtenue, décrite par la valeur `<position>`, n'est pas nécessairement située à l'intérieur de la boîte de l'élément.
 
 ## Syntaxe
 
@@ -55,7 +53,8 @@ mot-clé valeur mot-clé valeur /* Chaque valeur indique le décalage par rappor
 ]
 ```
 
-> **Note :** La propriété [`background-position`](/fr/docs/Web/CSS/background-position) accepte également une syntaxe avec trois valeurs. Celle-ci n'est pas autorisée pour les autres propriétés qui utilisent une valeur `<position>`.
+> [!NOTE]
+> La propriété [`background-position`](/fr/docs/Web/CSS/background-position) accepte également une syntaxe avec trois valeurs. Celle-ci n'est pas autorisée pour les autres propriétés qui utilisent une valeur `<position>`.
 
 ## Interpolation
 
@@ -98,5 +97,5 @@ bottom top
 - [Valeurs et unités en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
 - [Tutoriel — Introduction aux valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
 - [`background-position`](/fr/docs/Web/CSS/background-position)
-- [`radial-gradient()`](/fr/docs/Web/CSS/gradient/radial-gradient())
-- [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient())
+- [`radial-gradient()`](</fr/docs/Web/CSS/gradient/radial-gradient()>)
+- [`conic-gradient()`](</fr/docs/Web/CSS/gradient/conic-gradient()>)

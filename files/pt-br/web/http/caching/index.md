@@ -256,7 +256,8 @@ O servidor retornará `304 Not Modified` se o valor do cabeçalho `ETag` que ele
 
 Mas se o servidor determinar que o recurso solicitado deve ter agora um valor 'ETag' diferente, o servidor responderá com um '200 OK' e a versão mais recente do recurso.
 
-> **Nota:** ao avaliar como usar `ETag` e `Last-Modified`, considere o seguinte:
+> [!NOTE]
+> Ao avaliar como usar `ETag` e `Last-Modified`, considere o seguinte:
 > Durante a revalidação de cache, se ambos `ETag` e `Last-Modified` estiverem presentes, `ETag` terá precedência.
 > Portanto, se você está considerando apenas o armazenamento em cache, você pode pensar que 'Last-Modified' é desnecessário.
 > No entanto, `Last-Modified` não é apenas útil para cache; em vez disso, é um cabeçalho HTTP padrão que também é usado por sistemas de gerenciamento de conteúdo (CMS) para exibir a hora da última modificação, por rastreadores para ajustar a frequência de rastreamento e para outras finalidades.
@@ -566,12 +567,13 @@ Observe que o número `41` tem a `max-age` mais longa (1 ano), mas com `public`.
 
 O valor `public` tem o efeito de tornar a resposta armazenável mesmo se o cabeçalho `Authorization` estiver presente.
 
-> **Nota:** A diretiva `public` só deve ser usada se houver necessidade de armazenar a resposta quando o cabeçalho `Authorization` for definido.
+> [!NOTE]
+> A diretiva `public` só deve ser usada se houver necessidade de armazenar a resposta quando o cabeçalho `Authorization` for definido.
 > Não é necessário de outra forma, porque uma resposta será armazenada no cache compartilhado enquanto `max-age` for fornecido.
 
 Portanto, se a resposta for personalizada com autenticação básica, a presença de `público` pode causar problemas. Se estiver preocupado com isso, você pode escolher o segundo valor mais longo, `38` (1 mês).
 
-``` http
+```http
 # resposta para bundle.v123.js
 
 # Se você nunca personalizar as respostas por meio de autorização
@@ -609,7 +611,8 @@ ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 O **bloqueio de cache** é uma técnica para tornar uma resposta armazenável em cache por um longo período, alterando o URL quando o conteúdo é alterado. A técnica pode ser aplicada a todos os sub-recursos, como imagens.
 
-> **Nota:** Ao avaliar o uso de `immutable` e QPACK:
+> [!NOTE]
+> Ao avaliar o uso de `immutable` e QPACK:
 > Se você está preocupado que `imutable` altera o valor predefinido fornecido pelo QPACK, considere que
 > neste caso, a parte `imutable` pode ser codificada separadamente dividindo o valor `Cache-Control` em duas linhas — embora isso dependa do algoritmo de codificação que uma implementação QPACK específica usa.
 

@@ -1,15 +1,9 @@
 ---
 title: Object.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
-tags:
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 ---
-{{JSRef("Global_Objects", "Object")}}
+
+{{JSRef}}
 
 ## Сводка
 
@@ -28,7 +22,7 @@ Object.isExtensible(obj)
 
 ## Описание
 
-Объекты являются расширяемыми по умолчанию: к ним можно добавлять новые свойства и (в движках, поддерживающих свойство {{jsxref("Object.proto", "__proto__")}}) их можно изменять. Объект может быть помечен, как не изменяемый с помощью методов {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}} или {{jsxref("Object.freeze()")}}.
+Объекты являются расширяемыми по умолчанию: к ним можно добавлять новые свойства и (в движках, поддерживающих свойство [`Object.prototype.__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)) их можно изменять. Объект может быть помечен, как не изменяемый с помощью методов {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}} или {{jsxref("Object.freeze()")}}.
 
 ## Примеры
 
@@ -64,10 +58,7 @@ false                         // код ES6
 
 ## Спецификации
 
-| Спецификация                                                                                 | Статус                   | Комментарии                                              |
-| -------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.13', 'Object.isExtensible')}}         | {{Spec2('ES5.1')}} | Изначальное определение. Реализована в JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.isextensible', 'Object.isExtensible')}} | {{Spec2('ES6')}}     |                                                          |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

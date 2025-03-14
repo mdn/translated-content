@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Functions/Method_definitions
 
 ECMAScript 2015 より、オブジェクトイニシャライザーのメソッド定義のための短い構文が導入されました。これは、メソッドの名前に割り当てられた関数の簡略構文です。
 
-{{EmbedInteractiveExample("pages/js/functions-definitions.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Definitions")}}
+
+```js interactive-example
+const obj = {
+  foo() {
+    return "bar";
+  },
+};
+
+console.log(obj.foo());
+// Expected output: "bar"
+```
 
 ## 構文
 
@@ -38,13 +49,13 @@ const obj = {
 
 ```js
 const obj = {
-  foo: function() {
+  foo: function () {
     // ...
   },
-  bar: function() {
+  bar: function () {
     // ...
-  }
-}
+  },
+};
 ```
 
 これを以下のように短縮することができます。
@@ -56,8 +67,8 @@ const obj = {
   },
   bar() {
     // ...
-  }
-}
+  },
+};
 ```
 
 ### ジェネレーターメソッド
@@ -67,32 +78,32 @@ const obj = {
 次のように行います。
 
 - ジェネレータープロパティ名の前にアスタリスク (`*`) が必要です。すなわち、 `* g(){}` は動作しますが、 `g *(){}` は動作しません。
-- 非ジェネレーターメソッド定義では `yield` キーワードを入れることはできません。つまり [旧式のジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)は動作せず、 {{jsxref("SyntaxError")}} が発生します。 `yield` は常にアスタリスク (`*`) と一緒に使ってください。
+- 非ジェネレーターメソッド定義では `yield` キーワードを入れることはできません。つまり [旧式のジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)は動作せず、 {{jsxref("SyntaxError")}} が発生します。 `yield` は常にアスタリスク (`*`) と一緒に使ってください。
 
 ```js
 // 名前付きプロパティを使用
 const obj2 = {
   g: function* () {
-    let index = 0
+    let index = 0;
     while (true) {
-      yield index++
+      yield index++;
     }
-  }
+  },
 };
 
 // 簡略構文を使用して同じオブジェクトを生成
 const obj2 = {
-  * g() {
-    let index = 0
+  *g() {
+    let index = 0;
     while (true) {
-      yield index++
+      yield index++;
     }
-  }
+  },
 };
 
-const it = obj2.g()
-console.log(it.next().value)  // 0
-console.log(it.next().value)  // 1
+const it = obj2.g();
+console.log(it.next().value); // 0
+console.log(it.next().value); // 1
 ```
 
 ### 非同期メソッド
@@ -103,16 +114,16 @@ console.log(it.next().value)  // 1
 // 名前付きプロパティ
 const obj3 = {
   f: async function () {
-    await some_promise
-  }
-}
+    await some_promise;
+  },
+};
 
 // 簡略構文を使用して同じオブジェクトを生成
 const obj3 = {
   async f() {
-    await some_promise
-  }
-}
+    await some_promise;
+  },
+};
 ```
 
 ### 非同期ジェネレーターメソッド
@@ -122,20 +133,20 @@ const obj3 = {
 ```js
 const obj4 = {
   f: async function* () {
-    yield 1
-    yield 2
-    yield 3
-  }
+    yield 1;
+    yield 2;
+    yield 3;
+  },
 };
 
 // 簡略構文を使用して同じオブジェクトを生成
 const obj4 = {
-  async* f() {
-   yield 1
-   yield 2
-   yield 3
-  }
-}
+  async *f() {
+    yield 1;
+    yield 2;
+    yield 3;
+  },
+};
 ```
 
 ### メソッド定義はコンストラクターではない
@@ -144,14 +155,14 @@ const obj4 = {
 
 ```js example-bad
 const objA = {
-  method() {}
-}
-new objA.method  // TypeError: obj.method is not a constructor
+  method() {},
+};
+new objA.method(); // TypeError: obj.method is not a constructor
 
 const objB = {
-  * g() {}
-}
-new objB.g       // TypeError: obj.g is not a constructor (ES2016 で変更)
+  *g() {},
+};
+new objB.g(); // TypeError: obj.g is not a constructor (ES2016 で変更)
 ```
 
 ## 例
@@ -160,10 +171,12 @@ new objB.g       // TypeError: obj.g is not a constructor (ES2016 で変更)
 
 ```js
 const obj = {
-  a: 'foo',
-  b() { return this.a }
+  a: "foo",
+  b() {
+    return this.a;
+  },
 };
-console.log(obj.b())  // "foo"
+console.log(obj.b()); // "foo"
 ```
 
 ### 計算されたプロパティ名
@@ -172,22 +185,28 @@ console.log(obj.b())  // "foo"
 
 ```js
 const bar = {
-  foo0: function() { return 0 },
-  foo1() { return 1 },
-  ['foo' + 2]() { return 2 }
-}
+  foo0: function () {
+    return 0;
+  },
+  foo1() {
+    return 1;
+  },
+  ["foo" + 2]() {
+    return 2;
+  },
+};
 
-console.log(bar.foo0())  // 0
-console.log(bar.foo1())  // 1
-console.log(bar.foo2())  // 2
+console.log(bar.foo0()); // 0
+console.log(bar.foo1()); // 1
+console.log(bar.foo2()); // 2
 
 // A global function
 function foo() {
-  return 1
+  return 1;
 }
 
-let name = 'foo'
-console.log(window[name]())  // 1
+let name = "foo";
+console.log(window[name]()); // 1
 ```
 
 ## 仕様書

@@ -1,6 +1,8 @@
 ---
 title: DOM の紹介
 slug: Web/API/Document_Object_Model/Introduction
+l10n:
+  sourceCommit: c367939020b2cbd60da7bd56a14670659d5e9491
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -27,7 +29,7 @@ alert(paragraphs[0].nodeName);
 現在の DOM は協調して動作する複数 API によって構築されています。
 コア [DOM](/ja/docs/Web/API/Document_Object_Model) は、文書やその中のオブジェクトを基礎的に記述するオブジェクトを定義しています。
 これは必要に応じて DOM に新しい機能や能力を追加する他の API によって拡張されます。
-例えば、 [HTML DOM API](/ja/docs/Web/API/HTML_DOM) はコア DOM に HTML 文書の表現の対応を、 SVG API は SVG 文書の表現の対応を追加しています。
+例えば、 [HTML DOM API](/ja/docs/Web/API/HTML_DOM_API) はコア DOM に HTML 文書の表現の対応を、 SVG API は SVG 文書の表現の対応を追加しています。
 
 ## DOM と JavaScript
 
@@ -35,7 +37,7 @@ alert(paragraphs[0].nodeName);
 
 DOM は JavaScript 言語の一部ではなく、ウェブサイトを構築するために使用される Web API の 1 つです。
 JavaScript は他のコンテキストで使われることもあります。
-例えば、 Node.js はコンピュータ上で JavaScript プログラムを実行しますが、異なる API のセットを提供しており、 DOM API は Node.js ランタイムのコア部分にはなりません。
+例えば、 Node.js はコンピューター上で JavaScript プログラムを実行しますが、異なる API のセットを提供しており、 DOM API は Node.js ランタイムのコア部分にはなりません。
 
 DOM は、特定のプログラミング言語から独立し、文書の構造表現を単一の一貫した API から利用できるように設計されています。
 ほとんどのウェブ開発者が JavaScript でしか DOM を使用しないとしても、この Python の例が示すように、 DOM の実装はどの言語でも構築することができます。
@@ -55,33 +57,33 @@ p_list = doc.getElementsByTagName("para")
 DOM を使い始めるのに、特別なものは必要ありません。
 ブラウザーで実行されるプログラムである*スクリプト*と呼ばれるものの中から、 JavaScript で直接 API を使用するのです。
 
-スクリプトを作成すると、インラインの `<script>` 要素であろうと、ウェブページに含まれていようと、すぐに {{domxref("document")}} や {{domxref("Window", "window")}} オブジェクトの API を使って、文書自体やウェブページ内の様々な要素（文書の子孫要素）を操作し始めることができるようになるのです。 DOM プログラミングは、次の例のように、 {{domxref("console.log()")}} 関数を使ってコンソールにメッセージを表示させるような簡単なものであってもかまいません。
+スクリプトを作成すると、インラインの `<script>` 要素であろうと、ウェブページに含まれていようと、すぐに {{domxref("document")}} や {{domxref("Window", "window")}} オブジェクトの API を使って、文書自体やウェブページ内の様々な要素（文書の子孫要素）を操作し始めることができるようになるのです。 DOM プログラミングは、次の例のように、 {{domxref("console.log_static")}} 関数を使ってコンソールにメッセージを表示させるような簡単なものであってもかまいません。
 
 ```html
 <body onload="console.log('ホームページへようこそ!');">
+  …
+</body>
 ```
 
 一般に、ページの構造（HTML で記述）と DOM の操作（JavaScript で記述）を混在させることは推奨されないため、ここでは JavaScript 部分をまとめ、 HTML とは切り離して記述することにします。
 
-例えば、次の関数は、新しい {{HTMLElement("h1")}} 要素を生成し、その要素にテキストを追加し、文書ツリーに追加します。
+例えば、次の関数は、新しい {{HTMLElement("Heading_Elements", "h1")}} 要素を生成し、その要素にテキストを追加し、文書ツリーに追加します。
 
 ```html
-<html>
+<html lang="en">
   <head>
     <script>
-       // この関数は文書が読み込まれた時に実行される
-       window.onload = function() {
-
-         // create a couple of elements in an otherwise empty HTML page
-         const heading = document.createElement("h1");
-         const heading_text = document.createTextNode("Big Head!");
-         heading.appendChild(heading_text);
-         document.body.appendChild(heading);
-      }
+      // この関数は文書が読み込まれた時に実行される
+      window.onload = () => {
+        // create a couple of elements in an otherwise empty HTML page
+        const heading = document.createElement("h1");
+        const headingText = document.createTextNode("Big Head!");
+        heading.appendChild(headingText);
+        document.body.appendChild(heading);
+      };
     </script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -89,7 +91,8 @@ DOM を使い始めるのに、特別なものは必要ありません。
 
 このページでは、様々なオブジェクトと型をなるべく簡単な方法で説明します。しかし、API に渡される、注意しなければならないデータ型はたくさんあります。
 
-> **メモ:** DOM を使用するコードの大部分は HTML 文書の操作を中心としているため、DOM 内のノードを**要素**と呼ぶのが一般的ですが、厳密にはすべてのノードが要素というわけではありません。
+> [!NOTE]
+> DOM を使用するコードの大部分は HTML 文書の操作を中心としているため、DOM 内のノードを**要素**と呼ぶのが一般的ですが、厳密にはすべてのノードが要素というわけではありません。
 
 以下の表はこれらのデータの種類を簡単に説明しています。
 
@@ -146,7 +149,7 @@ DOM を使い始めるのに、特別なものは必要ありません。
 
 注意すべき用語の使い方がいくつかあります。例えば、ある {{domxref("Attr")}} ノードを参照するのに単に `attribute` と呼んだり、 DOM ノードの配列を参照するのに `nodeList` と呼んだりします。このような用語は文書を通して紹介され使用されているのが分かるでしょう。
 
-## DOM インタフェース
+## DOM インターフェイス
 
 このガイドは、 DOM 階層構造を操作するために利用できるオブジェクトと、実際の*もの*について触れます。どのように動作するかを理解する上で、混乱を催すかもしれない点がたくさんあります。例えば、 HTML の `form` 要素を表すオブジェクトには、 `name` プロパティが `HTMLFormElement` インターフェイスにある一方、 `className` プロパティが `HTMLElement` インターフェイスにあります。どちらにしても、求めるプロパティはその form オブジェクトの中にあります。
 
@@ -154,7 +157,7 @@ DOM を使い始めるのに、特別なものは必要ありません。
 
 ### インターフェイスとオブジェクト
 
-多くのオブジェクトは複数のインターフェイスを受けついでいます。例えば、 table オブジェクトでは、特別な {{domxref("HTMLTableElement")}} インターフェイスを実装しており、そのインターフェイスは `createCaption` や `insertRow` などのメソッドを含んでいます。しかし、 `table` は HTML の要素でもあるので、 DOM の {{domxref("Element")}} リファレンスの章で説明している `Element` インターフェイスも実装しています。さらには、 HTML の要素は、 DOM を考慮する限り、ウェブページや XML ページのオブジェクトモデルを作りあげるノードのツリー内にあるノードもであるので、 table オブジェクトはより基本的な `Node` インターフェイスを、 `Element` から継承して実装しています。
+多くのオブジェクトは複数のインターフェイスを継承しています。例えば、 table オブジェクトでは、特別な {{domxref("HTMLTableElement")}} インターフェイスを実装しており、そのインターフェイスは `createCaption` や `insertRow` などのメソッドを含んでいます。しかし、 `table` は HTML の要素でもあるので、 DOM の {{domxref("Element")}} リファレンスの章で説明している `Element` インターフェイスも実装しています。さらには、 HTML の要素は、 DOM を考慮する限り、ウェブページや XML ページのオブジェクトモデルを作りあげるノードのツリー内にあるノードもであるので、 table オブジェクトはより基本的な `Node` インターフェイスを、 `Element` から継承して実装しています。
 
 次の例のように、 `table` オブジェクトの参照を入手したときは、おそらく無意識に、このオブジェクトの三つのインターフェイスをごく普通に交互に使います。
 
@@ -163,8 +166,9 @@ const table = document.getElementById("table");
 const tableAttrs = table.attributes; // Node/Element インターフェイス
 for (let i = 0; i < tableAttrs.length; i++) {
   // HTMLTableElement インターフェイス: border 属性
-  if(tableAttrs[i].nodeName.toLowerCase() == "border")
+  if (tableAttrs[i].nodeName.toLowerCase() === "border") {
     table.border = "1";
+  }
 }
 // HTMLTableElement インターフェイス: summary 属性
 table.summary = "note: increased border";
@@ -178,76 +182,151 @@ table.summary = "note: increased border";
 
 以下は、 DOM を使うウェブや XML ページのスクリプトでよく使われる API の簡単な一覧です。
 
-- `{{domxref("document.querySelector", "", "", "1")}}(selector)`
-- `{{domxref("document.querySelectorAll", "", "", "1")}}(name)`
-- `{{domxref("document.createElement", "", "", "1")}}(name)`
-- `parentNode.{{domxref("Node.appendChild", "appendChild", "", "1")}}(node)`
-- `element.{{domxref("element.innerHTML", "innerHTML", "", "1")}}`
-- `element.{{domxref("HTMLElement/style", "style", "", "1")}}.left`
-- `element.{{domxref("element.setAttribute", "setAttribute", "", "1")}}()`
-- `element.{{domxref("element.getAttribute", "getAttribute", "", "1")}}()`
-- `element.{{domxref("EventTarget.addEventListener", "addEventListener", "", "1")}}()`
-- `{{domxref("window.content", "", "", "1")}}`
-- `{{domxref("GlobalEventHandlers/onload", "", "", "1")}}`
-- `{{domxref("window.scrollTo", "", "", "1")}}()`
+- {{domxref("document.querySelector()")}}
+- {{domxref("document.querySelectorAll()")}}
+- {{domxref("document.createElement()")}}
+- {{domxref("Element.innerHTML")}}
+- {{domxref("Element.setAttribute()")}}
+- {{domxref("Element.getAttribute()")}}
+- {{domxref("EventTarget.addEventListener()")}}
+- {{domxref("HTMLElement.style")}}
+- {{domxref("Node.appendChild()")}}
+- {{domxref("Window.load_event", "window.onload")}}
+- {{domxref("window.scrollTo()")}}
 
 ## 例
 
-次の簡単な例では、 DOM の {{domxref("Document")}} API の使用方法を説明します。具体的には、{{domxref("Document")}} API の {{domxref("Document.body", "body")}} プロパティを使用して以下のものを変更する例を示しています。
+### テキストコンテンツの設定
 
-- 文書のテキスト色
-- 文書の背景色
-- 文書のリンク色 (すなわち、文書内のあらゆる場所のハイパーテキストリンクの色）
+この例では、 {{HTMLElement("div")}} 要素に {{HTMLElement("textarea")}} と 2 つの {{HTMLElement("button")}} 要素が入っています。ユーザーが最初のボタンをクリックすると、 `<textarea>` にテキストを設定します。ユーザーが 2 つ目のボタンをクリックすると、そのテキストを消去します。使用しているものは次の通りです。
+
+- {{domxref("Document.querySelector()")}} で `<textarea>` とボタンにアクセスする
+- {{domxref("EventTarget.addEventListener()")}} でボタンのクリックを待ち受けする
+- {{domxref("Node.textContent")}} でテキストを設定したり消去したりする
+
+#### HTML
 
 ```html
-<html>
-<head>
-  <title>Simple Document API example</title>
-  <script>
-    function setBodyAttr(attr, value) {
-      if (document.body) document.body[attr] = value;
-      else throw new Error("no support");
-    }
-  </script>
-</head>
-<body>
-  <div>
-    <form>
-      <p><b><code>text</code></b></p>
-      <select onChange="setBodyAttr('text',
-        this.options[this.selectedIndex].value);">
-        <option value="black">black</option>
-        <option value="red">red</option>
-      </select>
-      <p><b><code>bgColor</code></b></p>
-      <select onChange="setBodyAttr('bgColor',
-        this.options[this.selectedIndex].value);">
-        <option value="white">white</option>
-        <option value="lightgrey">gray</option>
-      </select>
-      <p><b><code>link</code></b></p>
-      <select onChange="setBodyAttr('link',
-        this.options[this.selectedIndex].value);">
-        <option value="blue">blue</option>
-        <option value="green">green</option>
-      </select>
-      <small>
-        <a href="http://some.website.tld/page.html" id="sample">
-          (sample link)
-        </a>
-      </small>
-    </form>
-  </div>
-</body>
-</html>
+<div class="container">
+  <textarea class="story"></textarea>
+  <button id="set-text" type="button">テキストコンテンツを設定</button>
+  <button id="clear-text" type="button">テキストコンテンツを消去</button>
+</div>
 ```
 
-### 結果
+#### CSS
 
-{{EmbedLiveSample("Example", "85ch", "263px")}}
+```css
+.container {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+button {
+  width: 200px;
+}
+```
+
+#### JavaScript
+
+```js
+const story = document.body.querySelector(".story");
+
+const setText = document.body.querySelector("#set-text");
+setText.addEventListener("click", () => {
+  story.textContent = "暗くて嵐のような夜でした...";
+});
+
+const clearText = document.body.querySelector("#clear-text");
+clearText.addEventListener("click", () => {
+  story.textContent = "";
+});
+```
+
+#### 結果
+
+{{EmbedLiveSample("Setting text content", "", "150px")}}
+
+### 子要素の追加
+
+この例では、 {{HTMLElement("div")}} 要素に {{HTMLElement("div")}} と 2 つの {{HTMLElement("button")}} 要素が入っています。ユーザーが最初のボタンをクリックすると、新しい要素を作成し、 `<div>` の子要素として追加します。ユーザーが 2 つ目のボタンをクリックしたら、子要素を除去します。使用しているものは次の通りです。
+
+- {{domxref("Document.querySelector()")}} で `<div>` とボタンにアクセスする
+- {{domxref("EventTarget.addEventListener()")}} でボタンのクリックを待ち受けする
+- {{domxref("Document.createElement")}} で要素を作成する
+- {{domxref("Node.appendChild()")}} で子要素を追加する
+- {{domxref("Node.removeChild()")}} で子要素を除去する
+
+#### HTML
+
+```html
+<div class="container">
+  <div class="parent">親</div>
+  <button id="add-child" type="button">子を追加</button>
+  <button id="remove-child" type="button">子を除去</button>
+</div>
+```
+
+#### CSS
+
+```css
+.container {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+button {
+  width: 100px;
+}
+
+div.parent {
+  border: 1px solid black;
+  padding: 5px;
+  width: 100px;
+  height: 100px;
+}
+
+div.child {
+  border: 1px solid red;
+  margin: 10px;
+  padding: 5px;
+  width: 80px;
+  height: 60px;
+  box-sizing: border-box;
+}
+```
+
+#### JavaScript
+
+```js
+const parent = document.body.querySelector(".parent");
+
+const addChild = document.body.querySelector("#add-child");
+addChild.addEventListener("click", () => {
+  // テキストノード「親」の他に、まだ子ノードがない場合のみ、
+  // 子ノードを追加します。
+  if (parent.childNodes.length > 1) {
+    return;
+  }
+  const child = document.createElement("div");
+  child.classList.add("child");
+  child.textContent = "子";
+  parent.appendChild(child);
+});
+
+const removeChild = document.body.querySelector("#remove-child");
+removeChild.addEventListener("click", () => {
+  const child = document.body.querySelector(".child");
+  parent.removeChild(child);
+});
+```
+
+#### 結果
+
+{{EmbedLiveSample("Adding a child element", "", "180px")}}
 
 ## 仕様書
 
-| 仕様書                                       |
-| --------------------------------------------------- |
-| [DOM Living Standard](https://dom.spec.whatwg.org/) |
+{{Specifications}}

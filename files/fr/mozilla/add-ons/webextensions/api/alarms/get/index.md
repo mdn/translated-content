@@ -1,17 +1,6 @@
 ---
 title: alarms.get()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/get
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
-  - get
-translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/get
 ---
 
 {{AddonSidebar}}
@@ -22,8 +11,8 @@ Cette méthode permet d'obtenir une alarme en fonction de son nom. Cette fonctio
 
 ```js
 var getAlarm = browser.alarms.get(
-  name  // optional string
-)
+  name, // optional string
+);
 ```
 
 ### Paramètres
@@ -50,12 +39,12 @@ getAlarm.then(gotAlarm);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.alarms.get")}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/extensions/alarms).
+> Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

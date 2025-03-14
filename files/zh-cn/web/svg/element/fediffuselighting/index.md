@@ -9,7 +9,7 @@ slug: Web/SVG/Element/feDiffuseLighting
 
 滤镜制造的光映射可以与一个纹理图像组合，使用{{SVGElement("feComposite")}}滤镜的多重 `arithmetic` 操作。在应用纹理图案之前合加多个光映射可以模拟多重光源。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
@@ -19,7 +19,6 @@ slug: Web/SVG/Element/feDiffuseLighting
 
 ```html
 <svg width="440" height="140" xmlns="http://www.w3.org/2000/svg">
-
   <!-- No light is applied -->
   <text text-anchor="middle" x="60" y="22">No Light</text>
   <circle cx="60" cy="80" r="50" fill="green" />
@@ -31,8 +30,14 @@ slug: Web/SVG/Element/feDiffuseLighting
       <fePointLight x="150" y="60" z="20" />
     </feDiffuseLighting>
 
-    <feComposite in="SourceGraphic" in2="light"
-                 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/>
+    <feComposite
+      in="SourceGraphic"
+      in2="light"
+      operator="arithmetic"
+      k1="1"
+      k2="0"
+      k3="0"
+      k4="0" />
   </filter>
 
   <circle cx="170" cy="80" r="50" fill="green" filter="url(#lightMe1)" />
@@ -41,11 +46,17 @@ slug: Web/SVG/Element/feDiffuseLighting
   <text text-anchor="middle" x="280" y="22">feDistantLight</text>
   <filter id="lightMe2">
     <feDiffuseLighting in="SourceGraphic" result="light" lighting-color="white">
-      <feDistantLight azimuth="240" elevation="20"/>
+      <feDistantLight azimuth="240" elevation="20" />
     </feDiffuseLighting>
 
-    <feComposite in="SourceGraphic" in2="light"
-                 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/>
+    <feComposite
+      in="SourceGraphic"
+      in2="light"
+      operator="arithmetic"
+      k1="1"
+      k2="0"
+      k3="0"
+      k4="0" />
   </filter>
 
   <circle cx="280" cy="80" r="50" fill="green" filter="url(#lightMe2)" />
@@ -54,33 +65,41 @@ slug: Web/SVG/Element/feDiffuseLighting
   <text text-anchor="middle" x="390" y="22">feSpotLight</text>
   <filter id="lightMe3">
     <feDiffuseLighting in="SourceGraphic" result="light" lighting-color="white">
-      <feSpotLight x="360" y="5" z="30" limitingConeAngle="20"
-                   pointsAtX="390" pointsAtY="80" pointsAtZ="0"/>
+      <feSpotLight
+        x="360"
+        y="5"
+        z="30"
+        limitingConeAngle="20"
+        pointsAtX="390"
+        pointsAtY="80"
+        pointsAtZ="0" />
     </feDiffuseLighting>
 
-    <feComposite in="SourceGraphic" in2="light"
-                 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/>
+    <feComposite
+      in="SourceGraphic"
+      in2="light"
+      operator="arithmetic"
+      k1="1"
+      k2="0"
+      k3="0"
+      k4="0" />
   </filter>
 
   <circle cx="390" cy="80" r="50" fill="green" filter="url(#lightMe3)" />
 </svg>
 ```
 
-预计的呈现：
-
-![Expected rendering for the example](/files/4447/feDiffuseLighting.png)
-
 实时呈现：
 
-{{EmbedLiveSample("Example",470,170)}}
+{{EmbedLiveSample("示例",470,170)}}
 
 ## 属性
 
 ### 全局属性
 
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
-- [滤镜属性](/zh-CN/SVG/Attribute#Filter) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
+- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
+- [滤镜属性](/zh-CN/docs/SVG/Attribute#filter) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -93,7 +112,7 @@ slug: Web/SVG/Element/feDiffuseLighting
 
 ## DOM 接口
 
-该元素实现了[`SVGFEDiffuseLightingElement`](/zh-CN/DOM/SVGFEDiffuseLightingElement)接口。
+该元素实现了 [`SVGFEDiffuseLightingElement`](/zh-CN/docs/DOM/SVGFEDiffuseLightingElement) 接口。
 
 ## 参见
 
@@ -116,4 +135,4 @@ slug: Web/SVG/Element/feDiffuseLighting
 - {{ SVGElement("feSpotLight") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/zh-CN/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/SVG/Tutorial/Filter_effects)

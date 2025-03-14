@@ -1,7 +1,6 @@
 ---
 title: Findbar API
 slug: orphaned/Findbar_API
-original_slug: Findbar_API
 ---
 
 Mozilla 1.9 から検索バー機能が拡張や XULRunner アプリケーション向けに toolkit xul ウィジットとして利用可能になります。

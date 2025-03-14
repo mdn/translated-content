@@ -1,7 +1,6 @@
 ---
 title: 物理演算
 slug: Games/Tutorials/2D_breakout_game_Phaser/Physics
-original_slug: Games/Workflows/2D_breakout_game_Phaser/Physics
 ---
 
 {{GamesSidebar}}
@@ -14,7 +13,7 @@ original_slug: Games/Workflows/2D_breakout_game_Phaser/Physics
 
 ## 物理演算の追加
 
-Phaser は Arcade Physics、P2、そして Ninja Physics  と、3 つの異なる物理演算エンジンを備えています。また商用プラグインとして Box2D も物理演算エンジンとして利用できます。チュートリアルで作成しているような単純なゲームでは、複雑な幾何計算を必要としません。そのような場合には Arcade Physics を利用すると良いでしょう。
+Phaser は Arcade Physics、P2、そして Ninja Physics と、3 つの異なる物理演算エンジンを備えています。また商用プラグインとして Box2D も物理演算エンジンとして利用できます。チュートリアルで作成しているような単純なゲームでは、複雑な幾何計算を必要としません。そのような場合には Arcade Physics を利用すると良いでしょう。
 
 まず最初に、ゲーム内の Arcade Physics エンジンを初期化しましょう。以下のように、`create` 関数の最初に `physics.startSystem()` メソッドを追加します（関数内の最初の行にします）。
 
@@ -22,7 +21,7 @@ Phaser は Arcade Physics、P2、そして Ninja Physics  と、3 つの異な�
 game.physics.startSystem(Phaser.Physics.ARCADE);
 ```
 
-標準では Phaser オブジェクトは物理演算エンジンを利用しません。そのため、`create()`  の末尾に次の行を追加して、ボールから物理演算エンジンを利用できるようにします：
+標準では Phaser オブジェクトは物理演算エンジンを利用しません。そのため、`create()` の末尾に次の行を追加して、ボールから物理演算エンジンを利用できるようにします：
 
 ```js
 game.physics.enable(ball, Phaser.Physics.ARCADE);
@@ -58,19 +57,18 @@ function preload() {
   game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
   game.scale.pageAlignHorizontally = true;
   game.scale.pageAlignVertically = true;
-  game.stage.backgroundColor = '#eee';
-  game.load.image('ball', 'img/ball.png');
+  game.stage.backgroundColor = "#eee";
+  game.load.image("ball", "img/ball.png");
 }
 
 function create() {
   game.physics.startSystem(Phaser.Physics.ARCADE);
-  ball = game.add.sprite(50, 50, 'ball');
+  ball = game.add.sprite(50, 50, "ball");
   game.physics.enable(ball, Phaser.Physics.ARCADE);
   ball.body.velocity.set(150, 150);
 }
 
-function update() {
-}
+function update() {}
 ```
 
 `index.html` を再読み込みすると、ボールは 1 方向に進み続けます。現在、物理エンジンには重力加速度も摩擦係数も設定されていません。重力加速度を設定すれば、ボールは落下するようになります。また、摩擦係数を設定すれば、ボールが摩擦で停止するようになります。
@@ -79,7 +77,7 @@ function update() {
 
 今回扱った内容以外にもできることはたくさんあります。例えば、 `ball.body.gravity.y = 100;` と追加することで、ボールに影響する重力を設定できます。その結果として、ボールが重力に引かれて、落下するようになります。
 
-このような機能はほんの一部分です。公式の [physics documentation](https://phaser.io/docs#physics)  には、物理演算に関する数多くの関数と変数が、 [Arcade](https://phaser.io/examples/v2/category/arcade-physics) と [P2](https://phaser.io/examples/v2/category/p2-physics) 物理演算エンジンの使用例とともに解説されています。
+このような機能はほんの一部分です。公式の [physics documentation](https://phaser.io/docs#physics) には、物理演算に関する数多くの関数と変数が、 [Arcade](https://phaser.io/examples/v2/category/arcade-physics) と [P2](https://phaser.io/examples/v2/category/p2-physics) 物理演算エンジンの使用例とともに解説されています。
 
 ## 自分のコードと比較しよう
 

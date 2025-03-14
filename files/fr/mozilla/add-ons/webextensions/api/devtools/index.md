@@ -1,8 +1,6 @@
 ---
 title: devtools
 slug: Mozilla/Add-ons/WebExtensions/API/devtools
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools
-browser-compat: webextensions.api.devtools
 ---
 
 {{AddonSidebar}}
@@ -24,7 +22,8 @@ Pour utiliser cette API, [la permission](/fr/docs/Mozilla/Add-ons/WebExtensions/
 
 {{Compat}}
 
-> **Note :** Cette API est basée sur l'API Chromium [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv2/devtools/).
+> [!NOTE]
+> Cette API est basée sur l'API Chromium [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv2/devtools/).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

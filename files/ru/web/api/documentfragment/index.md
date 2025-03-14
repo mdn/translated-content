@@ -1,7 +1,6 @@
 ---
 title: DocumentFragment
 slug: Web/API/DocumentFragment
-translation_of: Web/API/DocumentFragment
 ---
 
 {{ APIRef("DOM") }}
@@ -54,10 +53,10 @@ _Этот интерфейс наследует методы его родите
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Интерфейсы DOM.](/ru/docs/DOM/DOM_Reference)
+- [Интерфейсы DOM.](/ru/docs/Web/API/Document_Object_Model)

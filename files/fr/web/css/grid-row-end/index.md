@@ -1,11 +1,6 @@
 ---
 title: grid-row-end
 slug: Web/CSS/grid-row-end
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/grid-row-end
 ---
 
 {{CSSRef}}
@@ -46,7 +41,8 @@ grid-row-end: unset;
 
   - : S'il existe une ligne nommée '\<custom-ident>-end', cela placera l'élément sur la première ligne correspondante..
 
-    > **Note :** Les noms de zones génèrent automatiquement les noms de lignes sous cette forme. Ainsi, `grid-row-end: foo;` permettra de désigner l'extrêmité (à la fin) de la zone nommée (sauf si une autre ligne a explicitement été nommée avec `foo-end`).
+    > [!NOTE]
+    > Les noms de zones génèrent automatiquement les noms de lignes sous cette forme. Ainsi, `grid-row-end: foo;` permettra de désigner l'extrêmité (à la fin) de la zone nommée (sauf si une autre ligne a explicitement été nommée avec `foo-end`).
 
     Si aucune zone ne correspond, la valeur est traitée comme la combinaison de l'entier 1 et de `<custom-ident>` (cf. définition suivante).
 
@@ -108,7 +104,9 @@ grid-row-end: unset;
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -149,5 +147,5 @@ grid-row-end: unset;
 - {{cssxref("grid-column-start")}}
 - {{cssxref("grid-column-end")}}
 - {{cssxref("grid-column")}}
-- [Guide : Placer les éléments d'une grille sur les lignes](/fr/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+- [Guide : Placer les éléments d'une grille sur les lignes](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
 - Tutoriel vidéo : [le placement des éléments d'une grille sur les lignes (en anglais)](https://gridbyexample.com/video/series-line-based-placement/)

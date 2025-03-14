@@ -1,40 +1,29 @@
 ---
 title: devtools.panels.ElementsPanel
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel
-tags:
-  - API
-  - Add-ons
-  - DevTools
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.panels
-  - devtools.panelsElementsPanel
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un `ElementsPanel` représente l'inspecteur HTML/CSS dans la devtools du navigateur. C'est ce qu'on appelle l'inspecteur de page dans Firefox et le panneau Éléments de Chrome.
 
 ## Fonctions
 
-- [`devtools.panels.ElementsPanel.createSidebarPane()`](/fr/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/createSidebarPane)
+- [`devtools.panels.ElementsPanel.createSidebarPane()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane)
   - : Crée un volet dans la barre latérale de l'inspecteur.
 
 ## Evénements
 
-- [`devtools.panels.ElementsPanel.onSelectionChanged`](/fr/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/onSelectionChanged)
+- [`devtools.panels.ElementsPanel.onSelectionChanged`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged)
   - : Appèle lorsque l'utilisateur sélectionne un élément différent dans la page, par exemple en utilisant l'élément de menu contextuel "inspect élément".
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.ElementsPanel", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
 

@@ -1,33 +1,22 @@
 ---
 title: devtools.network.onRequestFinished
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.network
-  - onRequestFinished
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.network/onRequestFinished
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.network/onRequestFinished
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsqu'une requête réseau est terminée et que ses détails sont disponibles pour l'extension.
 
 La requête est donnée en tant qu'[objet d'entrée HAR](http://www.softwareishard.com/blog/har-12-spec/#entries), qui est également doté d'une méthode `getContent()` asynchrone qui récupère le contenu du corps de la réponse.
 
-Notez que bien que votre extension puisse ajouter un écouteur à tout moment,elle commencera seulement à se déclencher après que l'utilisateur a activé le [moniteur réseau](/fr/docs/Outils/Moniteur_réseau) du navigateur au moins une fois.
+Notez que bien que votre extension puisse ajouter un écouteur à tout moment,elle commencera seulement à se déclencher après que l'utilisateur a activé le [moniteur réseau](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) du navigateur au moins une fois.
 
 ## Syntaxe
 
 ```js
-browser.devtools.network.onRequestFinished.addListener(listener)
-browser.devtools.network.onRequestFinished.removeListener(listener)
-browser.devtools.network.onRequestFinished.hasListener(listener)
+browser.devtools.network.onRequestFinished.addListener(listener);
+browser.devtools.network.onRequestFinished.removeListener(listener);
+browser.devtools.network.onRequestFinished.hasListener(listener);
 ```
 
 Les événements ont trois fonctions
@@ -35,7 +24,7 @@ Les événements ont trois fonctions
 - `addListener(listener)`
   - : Ajoute un écouteur à cet événement.
 - `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument de `listener`  est l'écouteur à supprimer.
+  - : Arrêtez d'écouter cet événement. L'argument de `listener` est l'écouteur à supprimer.
 - `hasListener(listener)`
   - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true`s'il écoute, sinon `false`.
 
@@ -48,11 +37,11 @@ Les événements ont trois fonctions
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
 
     - `request`
-      - : `object`. Un objet représentant la requête. Cet objet est un seul objet d'[entrée HAR](http://www.softwareishard.com/blog/har-12-spec/#entries). Il définit également une méthode `getContent()` asynchrone, qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se résout avec le corps de la réponse.
+      - : `object`. Un objet représentant la requête. Cet objet est un seul objet d'[entrée HAR](http://www.softwareishard.com/blog/har-12-spec/#entries). Il définit également une méthode `getContent()` asynchrone, qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout avec le corps de la réponse.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.network.onRequestFinished")}}
+{{Compat}}
 
 ## Examples
 
@@ -61,7 +50,7 @@ Ajoutez un écouteur qui consigne l'adresse IP du serveur et le corps de la rép
 ```js
 function handleRequestFinished(request) {
   console.log("Server IP: ", request.serverIPAddress);
-  request.getContent().then(content => {
+  request.getContent().then((content) => {
     console.log("Content: ", content);
   });
 }
@@ -71,7 +60,7 @@ browser.devtools.network.onRequestFinished.addListener(handleRequestFinished);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) de Chromium.
 

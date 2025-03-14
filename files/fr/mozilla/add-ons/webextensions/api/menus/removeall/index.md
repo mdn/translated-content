@@ -1,32 +1,20 @@
 ---
 title: menus.removeAll()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/removeAll
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - contextMenus
-  - menus
-  - removeAll
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/removeAll
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Supprime tous les éléments de menu ajoutés par l'extension.
 
 Pour la compatibilité avec d'autres navigateurs, Firefox rend cette méthode disponible via l'espace de noms `contextMenus` ainsi que l'espace de noms des `menus`.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
-var removing = browser.menus.removeAll()
+var removing = browser.menus.removeAll();
 ```
 
 ### Paramètres
@@ -35,11 +23,11 @@ None.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque tous les éléments ont été supprimés.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans argument lorsque tous les éléments ont été supprimés.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.removeAll", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -53,16 +41,16 @@ function onRemoved() {
 browser.menus.create({
   id: "click-me",
   title: "Click me!",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.create({
   id: "remove-all",
   title: "Remove all!",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
-browser.menus.onClicked.addListener(function(info, tab) {
+browser.menus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "remove-all") {
     var removing = browser.menus.removeAll();
     removing.then(onRemoved);
@@ -72,9 +60,9 @@ browser.menus.onClicked.addListener(function(info, tab) {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
+> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

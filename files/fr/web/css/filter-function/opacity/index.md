@@ -1,9 +1,6 @@
 ---
 title: opacity()
 slug: Web/CSS/filter-function/opacity
-translation_of: Web/CSS/filter-function/opacity()
-original_slug: Web/CSS/filter-function/opacity()
-browser-compat: css.types.filter-function.opacity
 ---
 
 {{CSSRef}}
@@ -12,7 +9,8 @@ La fonction CSS **`opacity()`** permet de modifier la transparence de l'image. L
 
 {{EmbedInteractiveExample("pages/css/function-opacity.html")}}
 
-> **Note :** Cette fonction est proche de la propriété [`opacity`](/fr/docs/Web/CSS/opacity) mais, selon le navigateur, les filtres CSS peuvent bénéficier de l'accélération matérielle pour de meilleures performances.
+> [!NOTE]
+> Cette fonction est proche de la propriété [`opacity`](/fr/docs/Web/CSS/opacity) mais, selon le navigateur, les filtres CSS peuvent bénéficier de l'accélération matérielle pour de meilleures performances.
 
 ## Syntaxe
 
@@ -47,12 +45,12 @@ opacity(1);    /* Aucun effet */
 
 - La propriété CSS [`opacity`](/fr/docs/Web/CSS/opacity)
 - [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
-  - [`blur()`](/fr/docs/Web/CSS/filter-function/blur())
-  - [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness())
-  - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast())
-  - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow())
-  - [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale())
-  - [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate())
-  - [`invert()`](/fr/docs/Web/CSS/filter-function/invert())
-  - [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate())
-  - [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia())
+  - [`blur()`](</fr/docs/Web/CSS/filter-function/blur()>)
+  - [`brightness()`](</fr/docs/Web/CSS/filter-function/brightness()>)
+  - [`contrast()`](</fr/docs/Web/CSS/filter-function/contrast()>)
+  - [`drop-shadow()`](</fr/docs/Web/CSS/filter-function/drop-shadow()>)
+  - [`grayscale()`](</fr/docs/Web/CSS/filter-function/grayscale()>)
+  - [`hue-rotate()`](</fr/docs/Web/CSS/filter-function/hue-rotate()>)
+  - [`invert()`](</fr/docs/Web/CSS/filter-function/invert()>)
+  - [`saturate()`](</fr/docs/Web/CSS/filter-function/saturate()>)
+  - [`sepia()`](</fr/docs/Web/CSS/filter-function/sepia()>)

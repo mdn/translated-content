@@ -1,27 +1,24 @@
 ---
 title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
-translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
-original_slug: Web/JavaScript/Reference/Objets_globaux/AsyncFunction
-browser-compat: javascript.builtins.AsyncFunction
 ---
 
 {{JSRef}}
 
 Le constructeur **`AsyncFunction`** crée un nouvel objet pour [une fonction asynchrone](/fr/docs/Web/JavaScript/Reference/Statements/async_function). En JavaScript, chaque fonction asynchrone est en fait un objet `AsyncFunction`.
 
-On notera que `AsyncFunction` *n'est pas* un objet global. On peut l'obtenir grâce au code suivant&nbsp;:
+On notera que `AsyncFunction` _n'est pas_ un objet global. On peut l'obtenir grâce au code suivant&nbsp;:
 
 ```js
-Object.getPrototypeOf(async function(){}).constructor
+Object.getPrototypeOf(async function () {}).constructor;
 ```
 
 ## Syntaxe
 
 ```js
-new AsyncFunction(arg0, corpsFonction)
-new AsyncFunction(arg0, arg1, corpsFonction)
-new AsyncFunction(arg0, arg1, ...argN, corpsFonction)
+new AsyncFunction(arg0, corpsFonction);
+new AsyncFunction(arg0, arg1, corpsFonction);
+new AsyncFunction(arg0, arg1, ...argN, corpsFonction);
 ```
 
 ### Paramètres
@@ -41,7 +38,8 @@ Les objets de [fonction asynchrone](/fr/docs/Web/JavaScript/Reference/Statements
 
 Tous les arguments passés à la fonction sont traités comme les noms des identifiants des paramètres de la fonction qui sera créée, dans l'ordre dans lequel ils sont passés.
 
-> **Note :** Les [fonctions asynchrones](/fr/docs/Web/JavaScript/Reference/Statements/async_function) créées avec le constructeur `AsyncFunction` ne créent pas de fermetures avec leurs contextes de création. Elles sont toujours créées dans la portée globale.
+> [!NOTE]
+> Les [fonctions asynchrones](/fr/docs/Web/JavaScript/Reference/Statements/async_function) créées avec le constructeur `AsyncFunction` ne créent pas de fermetures avec leurs contextes de création. Elles sont toujours créées dans la portée globale.
 >
 > Lorsqu'on les exécute, elles ne pourront accéder qu'à leurs variables locales et aux variables globales, pas à celles qui appartiennent à la portée dans laquelle `AsyncFunction` a été appelé.
 >
@@ -55,20 +53,22 @@ Si on appelle `AsyncFunction` comme une fonction (c'est-à-dire sans `new`), cel
 
 ```js
 function resoudreApres2Secondes(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
   });
 }
 
-let AsyncFunction = Object.getPrototypeOf(async function(){}).constructor;
+let AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
 
-let a = new AsyncFunction('a',
-                          'b',
-                          'return await resoudreApres2Secondes(a) + await resoudreApres2Secondes(b);');
+let a = new AsyncFunction(
+  "a",
+  "b",
+  "return await resoudreApres2Secondes(a) + await resoudreApres2Secondes(b);",
+);
 
-a(10, 20).then(v => {
+a(10, 20).then((v) => {
   console.log(v); // affiche 30 dans la console après 4 secondes
 });
 ```

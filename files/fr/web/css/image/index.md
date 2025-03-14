@@ -13,7 +13,7 @@ Le [type de données](/fr/docs/Web/CSS/CSS_Types) [CSS](/fr/docs/Web/CSS) **`<im
 
 Le type de données `<image>` peut être représenté avec l'une des valeurs suivantes&nbsp;:
 
-- Une image portée par une valeur de type [`url()`](/fr/docs/Web/CSS/url)
+- Une image portée par une valeur de type [`url()`](/fr/docs/Web/CSS/url_value)
 - Une valeur de type [`<gradient>`](/fr/docs/Web/CSS/gradient) qui représente un dégradé
 - Une partie d'une page web définie par la fonction [`element()`](/fr/docs/Web/CSS/element)
 - Une image, un fragment d'image ou une zone de couleur définie par la fonction [`image()`](/fr/docs/Web/CSS/image/image)
@@ -35,17 +35,17 @@ Le moteur CSS détermine la _taille effective_ d'un objet en utilisant&nbsp;:
 2. Sa taille indiquée, définie par les propriétés CSS telles que [`width`](/fr/docs/Web/CSS/width), [`height`](/fr/docs/Web/CSS/height), ou [`background-size`](/fr/docs/Web/CSS/background-size)
 3. Sa taille par défaut, déterminée en fonction de la propriété avec laquelle l'image est utilisée (voir le tableau qui suit)
 
-| Type d'objet (propriété CSS)                                                                                                                 | Taille par défaut de l'objet                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| [`background-image`](/fr/docs/Web/CSS/background-image)                                                                                      | La taille de la zone de positionnement de l'arrière-plan de l'élément                                         |
-| [`list-style-image`](/fr/docs/Web/CSS/list-style-image)                                                                                      | La taille d'un caractère en `1em`                                                                             |
-| [`border-image-source`](/fr/docs/Web/CSS/border-image-source)                                                                                | La taille de la zone de bordure de l'élément                                                                  |
-| [`cursor`](/fr/docs/Web/CSS/cursor)                                                                                                          | La taille définie par le navigateur qui correspond à la taille du curseur du système client                   |
-| [`mask-image`](/fr/docs/Web/CSS/mask-image)                                                                                                  | ?                                                                                                             |
-| [`shape-outside`](/fr/docs/Web/CSS/shape-outside)                                                                                            | ?                                                                                                             |
-| [`mask-border-source`](/fr/docs/Web/CSS/mask-border-source)                                                                                  | ?                                                                                                             |
-| [`symbols()`](/fr/docs/Web/CSS/symbols) pour [`@counter-style`](/fr/docs/Web/CSS/@counter-style)                                             | Fonctionnalité à risque. Si prise en charge, la taille est celle du curseur du système client                 |
-| [`content`](/fr/docs/Web/CSS/content) pour un pseudo-élément ([`::after`](/fr/docs/Web/CSS/::after)/[`::before`](/fr/docs/Web/CSS/::before)) | Un rectangle de 300px par 150px                                                                               |
+| Type d'objet (propriété CSS)                                                                                                                 | Taille par défaut de l'objet                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| [`background-image`](/fr/docs/Web/CSS/background-image)                                                                                      | La taille de la zone de positionnement de l'arrière-plan de l'élément                         |
+| [`list-style-image`](/fr/docs/Web/CSS/list-style-image)                                                                                      | La taille d'un caractère en `1em`                                                             |
+| [`border-image-source`](/fr/docs/Web/CSS/border-image-source)                                                                                | La taille de la zone de bordure de l'élément                                                  |
+| [`cursor`](/fr/docs/Web/CSS/cursor)                                                                                                          | La taille définie par le navigateur qui correspond à la taille du curseur du système client   |
+| [`mask-image`](/fr/docs/Web/CSS/mask-image)                                                                                                  | ?                                                                                             |
+| [`shape-outside`](/fr/docs/Web/CSS/shape-outside)                                                                                            | ?                                                                                             |
+| [`mask-border-source`](/fr/docs/Web/CSS/mask-border-source)                                                                                  | ?                                                                                             |
+| [`symbols()`](/fr/docs/Web/CSS/symbols) pour [`@counter-style`](/fr/docs/Web/CSS/@counter-style)                                             | Fonctionnalité à risque. Si prise en charge, la taille est celle du curseur du système client |
+| [`content`](/fr/docs/Web/CSS/content) pour un pseudo-élément ([`::after`](/fr/docs/Web/CSS/::after)/[`::before`](/fr/docs/Web/CSS/::before)) | Un rectangle de 300px par 150px                                                               |
 
 La taille effective d'un objet est calculée avec l'algorithme suivant&nbsp;:
 
@@ -53,7 +53,8 @@ La taille effective d'un objet est calculée avec l'algorithme suivant&nbsp;:
 2. Si la taille indiquée définit _uniquement la largeur ou la hauteur_, la valeur manquante est déterminée à l'aide des proportions intrinsèques si elles existent, de la dimension intrinsèque correspondante si la valeur correspond ou de la taille par défaut de l'objet pour la valeur manquante.
 3. Si la taille indiquée ne définit _ni la largeur, ni la hauteur_, la taille effective de l'objet est calculée afin de respecter les proportions intrinsèques de l'image sans dépasser la taille par défaut de l'objet sur aucun des deux axes. Si l'image n'a pas de proportions intrinsèques, ce sont celles de l'objet auquel elle s'applique qui sont utilisées et si l'objet n'en a pas non plus, la largeur ou la hauteur manquante est déterminée à partir de la taille par défaut de l'objet.
 
-> **Note :** Tous les navigateurs ne prennent pas en charge tous les types d'image pour chaque propriété. Voir [le tableau de compatibilité](#compatibilité_des_navigateurs) pour plus de détails.
+> [!NOTE]
+> Tous les navigateurs ne prennent pas en charge tous les types d'image pour chaque propriété. Voir [le tableau de compatibilité](#compatibilité_des_navigateurs) pour plus de détails.
 
 ## Accessibilité
 

@@ -1,11 +1,16 @@
 ---
 title: SVG 属性リファレンス
+short-title: 属性
 slug: Web/SVG/Attribute
+l10n:
+  sourceCommit: a7615ee2f9e22946edff7633962bc1d9eee9e0ad
 ---
 
 {{SVGRef}}
 
-SVG 要素は、要素の扱いや描画の詳細を指定する属性を使って変更できます。以下は、すべての SVG 属性のリストです。各属性のリンク先のドキュメンテーションでは、どの要素が属性をサポートしているか、どのように動作するかを学ぶことができます。
+SVG 要素は、その要素がどのように処理され描画されるべきかの詳細を指定する属性を使用して変更することができます。
+
+以下は、すべての SVG 属性のリストです。各属性のリンク先のドキュメントでは、どの要素が属性に対応しているか、どのように動作するかを学ぶことができます。
 
 ## SVG 属性 A to Z
 
@@ -15,14 +20,12 @@ SVG 要素は、要素の扱いや描画の詳細を指定する属性を使っ�
 - {{SVGAttr("accumulate")}}
 - {{SVGAttr("additive")}}
 - {{SVGAttr("alignment-baseline")}}
-- {{SVGAttr("allowReorder")}}
 - {{SVGAttr("alphabetic")}}
 - {{SVGAttr("amplitude")}}
 - {{SVGAttr("arabic-form")}}
 - {{SVGAttr("ascent")}}
 - {{SVGAttr("attributeName")}}
 - {{SVGAttr("attributeType")}}
-- {{SVGAttr("autoReverse")}}
 - {{SVGAttr("azimuth")}}
 
 ### B
@@ -47,10 +50,8 @@ SVG 要素は、要素の扱いや描画の詳細を指定する属性を使っ�
 - {{SVGAttr("color")}}
 - {{SVGAttr("color-interpolation")}}
 - {{SVGAttr("color-interpolation-filters")}}
-- {{SVGAttr("color-profile")}}
 - {{SVGAttr("color-rendering")}}
-- {{SVGAttr("contentScriptType")}}
-- {{SVGAttr("contentStyleType")}}
+- {{SVGAttr("crossorigin")}}
 - {{SVGAttr("cursor")}}
 - {{SVGAttr("cx")}}
 - {{SVGAttr("cy")}}
@@ -73,10 +74,8 @@ SVG 要素は、要素の扱いや描画の詳細を指定する属性を使っ�
 
 - {{SVGAttr("edgeMode")}}
 - {{SVGAttr("elevation")}}
-- {{SVGAttr("enable-background")}}
 - {{SVGAttr("end")}}
 - {{SVGAttr("exponent")}}
-- {{SVGAttr("externalResourcesRequired")}}
 
 ### F
 
@@ -84,7 +83,6 @@ SVG 要素は、要素の扱いや描画の詳細を指定する属性を使っ�
 - {{SVGAttr("fill-opacity")}}
 - {{SVGAttr("fill-rule")}}
 - {{SVGAttr("filter")}}
-- {{SVGAttr("filterRes")}}
 - {{SVGAttr("filterUnits")}}
 - {{SVGAttr("flood-color")}}
 - {{SVGAttr("flood-opacity")}}
@@ -139,7 +137,6 @@ SVG 要素は、要素の扱いや描画の詳細を指定する属性を使っ�
 - {{SVGAttr("k4")}}
 - {{SVGAttr("kernelMatrix")}}
 - {{SVGAttr("kernelUnitLength")}}
-- {{SVGAttr("kerning")}}
 - {{SVGAttr("keyPoints")}}
 - {{SVGAttr("keySplines")}}
 - {{SVGAttr("keyTimes")}}
@@ -300,7 +297,6 @@ SVG 要素は、要素の扱いや描画の詳細を指定する属性を使っ�
 - {{SVGAttr("vert-origin-x")}}
 - {{SVGAttr("vert-origin-y")}}
 - {{SVGAttr("viewBox")}}
-- {{SVGAttr("viewTarget")}}
 - {{SVGAttr("visibility")}}
 
 ### W
@@ -319,12 +315,11 @@ SVG 要素は、要素の扱いや描画の詳細を指定する属性を使っ�
 - {{SVGAttr("xChannelSelector")}}
 - {{SVGAttr("xlink:actuate")}}
 - {{SVGAttr("xlink:arcrole")}}
-- {{SVGAttr("xlink:href")}}
+- {{SVGAttr("xlink:href")}}{{deprecated_inline}}
 - {{SVGAttr("xlink:role")}}
 - {{SVGAttr("xlink:show")}}
 - {{SVGAttr("xlink:title")}}
 - {{SVGAttr("xlink:type")}}
-- {{SVGAttr("xml:base")}}
 - {{SVGAttr("xml:lang")}}
 - {{SVGAttr("xml:space")}}
 
@@ -340,84 +335,193 @@ SVG 要素は、要素の扱いや描画の詳細を指定する属性を使っ�
 - {{SVGAttr("z")}}
 - {{SVGAttr("zoomAndPan")}}
 
-## カテゴリ別の SVG 属性
+## カテゴリー別の SVG 属性
 
-### ジェネリック属性
+### 一般属性
 
-#### [コア属性](/ja/docs/Web/SVG/Attribute/Core)
+- コア属性
 
-{{SVGAttr("id")}}, {{SVGAttr("lang")}}, {{SVGAttr("tabindex")}}, {{SVGAttr("xml:base")}}, {{SVGAttr("xml:lang")}}, {{SVGAttr("xml:space")}}
+  - {{SVGAttr("id")}}
+  - {{SVGAttr("class")}}
+  - {{SVGAttr("style")}}
+  - {{SVGAttr("lang")}}
+  - {{SVGAttr("tabindex")}}
+  - {{SVGAttr("xml:lang")}}
+  - {{SVGAttr("xml:space")}}
 
-#### [スタイル属性](/ja/docs/Web/SVG/Attribute/Styling)
-
-{{SVGAttr("class")}}, {{SVGAttr("style")}}
-
-#### 条件処理属性
-
-{{SVGAttr("externalResourcesRequired")}}, {{SVGAttr("requiredExtensions")}}, {{SVGAttr("requiredFeatures")}}, {{SVGAttr("systemLanguage")}}.
+- 条件処理属性
+  - {{SVGAttr("requiredExtensions")}}
+  - {{SVGAttr("requiredFeatures")}}
+  - {{SVGAttr("systemLanguage")}}
 
 ### XLink 属性
 
-{{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:type")}}, {{SVGAttr("xlink:role")}}, {{SVGAttr("xlink:arcrole")}}, {{SVGAttr("xlink:title")}}, {{SVGAttr("xlink:show")}}, {{SVGAttr("xlink:actuate")}}
+- {{SVGAttr("xlink:href")}}{{deprecated_inline}}
+- {{SVGAttr("xlink:type")}}
+- {{SVGAttr("xlink:role")}}
+- {{SVGAttr("xlink:arcrole")}}
+- {{SVGAttr("xlink:title")}}
+- {{SVGAttr("xlink:show")}}
+- {{SVGAttr("xlink:actuate")}}
 
-### [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute/Presentation)
+### プレゼンテーション属性
 
-> **メモ:** すべての SVG プレゼンテーション属性が CSS プロパティとして使用できます。
+> [!NOTE]
+> すべての SVG プレゼンテーション属性が CSS プロパティとして使用できます。
 
-{{SVGAttr("alignment-baseline")}}, {{SVGAttr("baseline-shift")}}, {{SVGAttr("clip")}}, {{SVGAttr("clip-path")}}, {{SVGAttr("clip-rule")}}, {{SVGAttr("color")}}, {{SVGAttr("color-interpolation")}}, {{SVGAttr("color-interpolation-filters")}}, {{SVGAttr("color-profile")}}, {{SVGAttr("color-rendering")}}, {{SVGAttr("cursor")}}, {{SVGAttr("direction")}}, {{SVGAttr("display")}}, {{SVGAttr("dominant-baseline")}}, {{SVGAttr("enable-background")}}, {{SVGAttr("fill")}}, {{SVGAttr("fill-opacity")}}, {{SVGAttr("fill-rule")}}, {{SVGAttr("filter")}}, {{SVGAttr("flood-color")}}, {{SVGAttr("flood-opacity")}}, {{SVGAttr("font-family")}}, {{SVGAttr("font-size")}}, {{SVGAttr("font-size-adjust")}}, {{SVGAttr("font-stretch")}}, {{SVGAttr("font-style")}}, {{SVGAttr("font-variant")}}, {{SVGAttr("font-weight")}}, {{SVGAttr("glyph-orientation-horizontal")}}, {{SVGAttr("glyph-orientation-vertical")}}, {{SVGAttr("image-rendering")}}, {{SVGAttr("kerning")}}, {{SVGAttr("letter-spacing")}}, {{SVGAttr("lighting-color")}}, {{SVGAttr("marker-end")}}, {{SVGAttr("marker-mid")}}, {{SVGAttr("marker-start")}}, {{SVGAttr("mask")}}, {{SVGAttr("opacity")}}, {{SVGAttr("overflow")}}, {{SVGAttr("pointer-events")}}, {{SVGAttr("shape-rendering")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("stop-opacity")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stroke-dasharray")}}, {{SVGAttr("stroke-dashoffset")}}, {{SVGAttr("stroke-linecap")}}, {{SVGAttr("stroke-linejoin")}}, {{SVGAttr("stroke-miterlimit")}}, {{SVGAttr("stroke-opacity")}}, {{SVGAttr("stroke-width")}}, {{SVGAttr("text-anchor")}}, {{SVGAttr("text-decoration")}}, {{SVGAttr("text-rendering")}}, {{SVGAttr("transform")}}, {{SVGAttr("transform-origin")}}, {{SVGAttr("unicode-bidi")}}, {{SVGAttr("vector-effect")}}, {{SVGAttr("visibility")}}, {{SVGAttr("word-spacing")}}, {{SVGAttr("writing-mode")}}
+- {{SVGAttr("alignment-baseline")}}
+- {{SVGAttr("baseline-shift")}}
+- {{SVGAttr("clip")}}
+- {{SVGAttr("clip-path")}}
+- {{SVGAttr("clip-rule")}}
+- {{SVGAttr("color")}}
+- {{SVGAttr("color-interpolation")}}
+- {{SVGAttr("color-interpolation-filters")}}
+- {{SVGAttr("color-rendering")}}
+- {{SVGAttr("cursor")}}
+- {{SVGAttr("d")}}
+- {{SVGAttr("direction")}}
+- {{SVGAttr("display")}}
+- {{SVGAttr("dominant-baseline")}}
+- {{SVGAttr("fill")}}
+- {{SVGAttr("fill-opacity")}}
+- {{SVGAttr("fill-rule")}}
+- {{SVGAttr("filter")}}
+- {{SVGAttr("flood-color")}}
+- {{SVGAttr("flood-opacity")}}
+- {{SVGAttr("font-family")}}
+- {{SVGAttr("font-size")}}
+- {{SVGAttr("font-size-adjust")}}
+- {{SVGAttr("font-stretch")}}
+- {{SVGAttr("font-style")}}
+- {{SVGAttr("font-variant")}}
+- {{SVGAttr("font-weight")}}
+- {{SVGAttr("glyph-orientation-horizontal")}}
+- {{SVGAttr("glyph-orientation-vertical")}}
+- {{SVGAttr("image-rendering")}}
+- {{SVGAttr("letter-spacing")}}
+- {{SVGAttr("lighting-color")}}
+- {{SVGAttr("marker-end")}}
+- {{SVGAttr("marker-mid")}}
+- {{SVGAttr("marker-start")}}
+- {{SVGAttr("mask")}}
+- {{SVGAttr("opacity")}}
+- {{SVGAttr("overflow")}}
+- {{SVGAttr("pointer-events")}}
+- {{SVGAttr("shape-rendering")}}
+- {{SVGAttr("stop-color")}}
+- {{SVGAttr("stop-opacity")}}
+- {{SVGAttr("stroke")}}
+- {{SVGAttr("stroke-dasharray")}}
+- {{SVGAttr("stroke-dashoffset")}}
+- {{SVGAttr("stroke-linecap")}}
+- {{SVGAttr("stroke-linejoin")}}
+- {{SVGAttr("stroke-miterlimit")}}
+- {{SVGAttr("stroke-opacity")}}
+- {{SVGAttr("stroke-width")}}
+- {{SVGAttr("text-anchor")}}
+- {{SVGAttr("text-decoration")}}
+- {{SVGAttr("text-rendering")}}
+- {{SVGAttr("transform")}}
+- {{SVGAttr("transform-origin")}}
+- {{SVGAttr("unicode-bidi")}}
+- {{SVGAttr("vector-effect")}}
+- {{SVGAttr("visibility")}}
+- {{SVGAttr("word-spacing")}}
+- {{SVGAttr("writing-mode")}}
 
 ### フィルター属性
 
-#### フィルタープリミティブ属性
-
-{{SVGAttr("height")}}, {{SVGAttr("result")}}, {{SVGAttr("width")}}, {{SVGAttr("x")}}, {{SVGAttr("y")}}
-
-#### 変換関数属性
-
-{{SVGAttr("type")}}, {{SVGAttr("tableValues")}}, {{SVGAttr("slope")}}, {{SVGAttr("intercept")}}, {{SVGAttr("amplitude")}}, {{SVGAttr("exponent")}}, {{SVGAttr("offset")}}
+- フィルタープリミティブ属性
+  - : {{SVGAttr("height")}}, {{SVGAttr("result")}}, {{SVGAttr("width")}}, {{SVGAttr("x")}}, {{SVGAttr("y")}}
+- 座標変換関数属性
+  - : {{SVGAttr("type")}}, {{SVGAttr("tableValues")}}, {{SVGAttr("slope")}}, {{SVGAttr("intercept")}}, {{SVGAttr("amplitude")}}, {{SVGAttr("exponent")}}, {{SVGAttr("offset")}}
 
 ### アニメーション属性
 
-#### アニメーション対象要素属性
-
-{{SVGAttr("href")}}
-
-#### アニメーション属性に対する属性
-
-{{SVGAttr("attributeType")}}, {{SVGAttr("attributeName")}}
-
-#### アニメーションタイミング属性
-
-{{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
-
-#### アニメーション値属性
-
-{{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}, {{SVGAttr("autoReverse")}}, {{SVGAttr("accelerate")}}, {{SVGAttr("decelerate")}}
-
-#### アニメーション付加属性
-
-{{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
+- アニメーション対象要素属性
+  - : {{SVGAttr("href")}}
+- アニメーション属性に対する属性
+  - : {{SVGAttr("attributeType")}}, {{SVGAttr("attributeName")}}
+- アニメーションタイミング属性
+  - : {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
+- アニメーション値属性
+  - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}, {{SVGAttr("autoReverse")}}, {{SVGAttr("accelerate")}}, {{SVGAttr("decelerate")}}
+- アニメーション付加属性
+  - : {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
 
 ### イベント属性
 
-#### [アニメーションイベント属性](/ja/docs/Web/SVG/Attribute/Events#Animation_event_attributes)
-
-**`onbegin`**, **`onend`**, **`onrepeat`**
-
-#### [文書イベント属性](/ja/docs/Web/SVG/Attribute/Events#Document_event_attributes)
-
-**`onabort`**, **`onerror`**, **`onresize`**, **`onscroll`**, **`onunload`**
-
-#### [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#Global_event_attributes)
-
-**`oncancel`**, **`oncanplay`**, **`oncanplaythrough`**, **`onchange`**, **`onclick`**, **`onclose`**, **`oncuechange`**, **`ondblclick`**, **`ondrag`**, **`ondragend`**, **`ondragenter`**, **`ondragexit`**, **`ondragleave`**, **`ondragover`**, **`ondragstart`**, **`ondrop`**, **`ondurationchange`**, **`onemptied`**, **`onended`**, **`onerror`**, **`onfocus`**, **`oninput`**, **`oninvalid`**, **`onkeydown`**, **`onkeypress`**, **`onkeyup`**, **`onload`**, **`onloadeddata`**, **`onloadedmetadata`**, **`onloadstart`**, **`onmousedown`**, **`onmouseenter`**, **`onmouseleave`**, **`onmousemove`**, **`onmouseout`**, **`onmouseover`**, **`onmouseup`**, **`onmousewheel`**, **`onpause`**, **`onplay`**, **`onplaying`**, **`onprogress`**, **`onratechange`**, **`onreset`**, **`onresize`**, **`onscroll`**, **`onseeked`**, **`onseeking`**, **`onselect`**, **`onshow`**, **`onstalled`**, **`onsubmit`**, **`onsuspend`**, **`ontimeupdate`**, **`ontoggle`**, **`onvolumechange`**, **`onwaiting`**
-
-#### [グラフィカルイベント属性](/ja/docs/Web/SVG/Attribute/Events#Graphical_event_attributes)
-
-**`onactivate`**, **`onfocusin`**, **`onfocusout`**
+- **`onabort`**
+- **`onactivate`**
+- **`onbegin`**
+- **`oncancel`**
+- **`oncanplay`**
+- **`oncanplaythrough`**
+- **`onchange`**
+- **`onclick`**
+- **`onclose`**
+- **`oncuechange`**
+- **`ondblclick`**
+- **`ondrag`**
+- **`ondragend`**
+- **`ondragenter`**
+- **`ondragleave`**
+- **`ondragover`**
+- **`ondragstart`**
+- **`ondrop`**
+- **`ondurationchange`**
+- **`onemptied`**
+- **`onend`**
+- **`onended`**
+- **`onerror`**
+- **`onerror`**
+- **`onfocus`**
+- **`onfocusin`**
+- **`onfocusout`**
+- **`oninput`**
+- **`oninvalid`**
+- **`onkeydown`**
+- **`onkeypress`**
+- **`onkeyup`**
+- **`onload`**
+- **`onloadeddata`**
+- **`onloadedmetadata`**
+- **`onloadstart`**
+- **`onmousedown`**
+- **`onmouseenter`**
+- **`onmouseleave`**
+- **`onmousemove`**
+- **`onmouseout`**
+- **`onmouseover`**
+- **`onmouseup`**
+- **`onmousewheel`**
+- **`onpause`**
+- **`onplay`**
+- **`onplaying`**
+- **`onprogress`**
+- **`onratechange`**
+- **`onrepeat`**
+- **`onreset`**
+- **`onresize`**
+- **`onresize`**
+- **`onscroll`**
+- **`onscroll`**
+- **`onseeked`**
+- **`onseeking`**
+- **`onselect`**
+- **`onshow`**
+- **`onstalled`**
+- **`onsubmit`**
+- **`onsuspend`**
+- **`ontimeupdate`**
+- **`ontoggle`**
+- **`onunload`**
+- **`onvolumechange`**
+- **`onwaiting`**
 
 ## 関連情報
 
 - [SVG 要素リファレンス](/ja/docs/Web/SVG/Element)
 - [SVG チュートリアル](/ja/docs/Web/SVG/Tutorial)
-- [SVG インターフェイスリファレンス](/ja/docs/Web/API/Document_Object_Model#SVG_interfaces)
+- [SVG インターフェイスリファレンス](/ja/docs/Web/API/SVG_API#インターフェイス)

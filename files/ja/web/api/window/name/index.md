@@ -34,7 +34,7 @@ window.name = "lab_view";
 
 > **メモ:** `window.name` は保存される全ての値を `toString` メソッドにより文字列表現に変換します。
 
-## 例
+### 例
 
 ```html
 <script>
@@ -47,11 +47,4 @@ window.name = "lab_view";
 
 ## 仕様書
 
-| 仕様                                                                                         | 状態                             | コメント |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-name', 'Window.name')}} | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-name', 'Window.name')}}     | {{Spec2('HTML5 W3C')}}     |          |
-
-## ブラウザーの互換性
-
-{{Compat}}
+{{Specifications}}

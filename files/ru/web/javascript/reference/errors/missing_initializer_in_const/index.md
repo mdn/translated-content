@@ -1,7 +1,6 @@
 ---
-title: 'SyntaxError: missing = in const declaration'
+title: "SyntaxError: missing = in const declaration"
 slug: Web/JavaScript/Reference/Errors/Missing_initializer_in_const
-translation_of: Web/JavaScript/Reference/Errors/Missing_initializer_in_const
 ---
 
 {{jsSidebar("Errors")}}
@@ -54,6 +53,6 @@ let columns;
 
 ## Смотрите также
 
-- [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
-- [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)
-- [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)
+- [`const`](/ru/docs/Web/JavaScript/Reference/Statements/const)
+- [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let)
+- [`var`](/ru/docs/Web/JavaScript/Reference/Statements/var)

@@ -1,11 +1,6 @@
 ---
 title: <feDropShadow>
 slug: Web/SVG/Element/feDropShadow
-tags:
-  - Element
-  - SVG
-  - SVG Filter
-translation_of: Web/SVG/Element/feDropShadow
 ---
 
 {{SVGRef}}
@@ -34,9 +29,9 @@ La primitive de filtre **`<feDropShadow>`** crée une ombre portée pour l'image
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation)
-- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Attribute#Attributs_de_primitives_de_filtre)
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
+- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
 
 ### Attributs spécifiques
 
@@ -59,12 +54,11 @@ Cet élément implémente l'interface {{domxref("SVGFEDropShadowElement")}}.
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <filter id="shadow">
-      <feDropShadow dx="4" dy="8" stdDeviation="4"/>
+      <feDropShadow dx="4" dy="8" stdDeviation="4" />
     </filter>
   </defs>
 
-  <circle cx="50%" cy="50%" r="80"
-      style="fill:blue; filter:url(#shadow);"/>
+  <circle cx="50%" cy="50%" r="80" style="fill:blue; filter:url(#shadow);" />
 </svg>
 ```
 
@@ -88,4 +82,4 @@ Cet élément implémente l'interface {{domxref("SVGFEDropShadowElement")}}.
 - {{SVGElement("feFlood")}}
 - {{SVGElement("feComposite")}}
 - {{SVGElement("feMerge")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres)
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)

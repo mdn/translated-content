@@ -1,16 +1,18 @@
 ---
-title: Animation.play()
+title: Animation：play() 方法
 slug: Web/API/Animation/play
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ APIRef("Web Animations") }}{{SeeCompatTable}}
+{{ APIRef("Web Animations") }}
 
-[Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)的{{ domxref("Animation") }}接口中的**`play()`** 方法 可开始或恢复动画的播放。如果动画结束，则调用`play()`重新启动动画，从头开始播放。
+[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API) 的 {{domxref("Animation")}} 接口的 **`play()`** 方法可开始或恢复动画的播放。如果动画结束，调用 `play()` 则会重新开始动画，从头开始播放。
 
 ## 语法
 
-```plain
-animation.play();
+```js-nolint
+play()
 ```
 
 ### 参数
@@ -19,44 +21,43 @@ animation.play();
 
 ### 返回值
 
-{{jsxref("undefined")}}
+无（{{jsxref("undefined")}}）。
 
-## 例子
+## 示例
 
-在 [Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) 示例中，单击或点击蛋糕会导致 Alice 的增长动画 (`aliceChange`) 播放，导致她体型变大并触发蛋糕的动画。在以下示例中，使用了一个事件监听器来触发两者的动画：
+在 [Alice 的成长游戏](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)示例中，单击或轻触蛋糕会导致 Alice 长大的动画（`aliceChange`）向前播放，从而使她的体型变大并触发蛋糕的动画。包含两个 `Animation.play()` 和一个 `EventListener`：
 
 ```js
-// 蛋糕拥有其自己的动画：
-var nommingCake = document.getElementById('eat-me_sprite').animate(
-[
-  { transform: 'translateY(0)' },
-  { transform: 'translateY(-80%)' }
-], {
-  fill: 'forwards',
-  easing: 'steps(4, end)',
-  duration: aliceChange.effect.timing.duration / 2
-});
+// 蛋糕有它自己的动画：
+const nommingCake = document
+  .getElementById("eat-me_sprite")
+  .animate(
+    [{ transform: "translateY(0)" }, { transform: "translateY(-80%)" }],
+    {
+      fill: "forwards",
+      easing: "steps(4, end)",
+      duration: aliceChange.effect.timing.duration / 2,
+    },
+  );
 
 // 暂停蛋糕的动画，以避免动画立即播放。
 nommingCake.pause();
 
-// 该函数会在用户点击时触发
-var growAlice = function() {
-
-  // Play Alice's animation.
+// 该函数会在用户点击或轻触时触发
+const growAlice = () => {
+  // 播放 Alice 的动画。
   aliceChange.play();
 
-  // Play the cake's animation.
+  // 播放蛋糕的动画。
   nommingCake.play();
+};
 
-}
-
-// 当用户持续按下或点击时，调用 growAlice 函数使得所有的动画播放。
+// 当用户保持鼠标按下或轻触的状态时，调用 growAlice 来播放所有动画。
 cake.addEventListener("mousedown", growAlice, false);
 cake.addEventListener("touchstart", growAlice, false);
 ```
 
-## 标准
+## 规范
 
 {{Specifications}}
 
@@ -64,11 +65,11 @@ cake.addEventListener("touchstart", growAlice, false);
 
 {{Compat}}
 
-## 了解更多
+## 参见
 
-- [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}} for other methods and properties you can use to control web page animation.
-- {{domxref("Animation.pause()")}} to pause an animation.
-- {{domxref("Animation.reverse()")}} to play an animation backwards.
-- {{domxref("Animation.finish()")}} to finish an animation.
-- {{domxref("Animation.cancel()")}} to cancel an animation.
+- [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}} 包含你可用于控制网页动画的其他方法和属性。
+- {{domxref("Animation.pause()")}} 用于暂停动画。
+- {{domxref("Animation.reverse()")}} 用于反向播放动画。
+- {{domxref("Animation.finish()")}} 用于立即结束动画。
+- {{domxref("Animation.cancel()")}} 用于取消动画。

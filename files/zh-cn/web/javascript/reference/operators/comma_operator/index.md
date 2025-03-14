@@ -1,13 +1,27 @@
 ---
 title: 逗号运算符（,）
-slug: Web/JavaScript/Reference/Operators/Comma_Operator
+slug: Web/JavaScript/Reference/Operators/Comma_operator
 ---
 
 {{jsSidebar("Operators")}}
 
 **逗号**（**`,`**）运算符对它的每个操作数从左到右求值，并返回最后一个操作数的值。这让你可以创建一个复合表达式，其中多个表达式被评估，复合表达式的最终值是其成员表达式中最右边的值。这通常用于为 [`for`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for) 循环提供多个参数。
 
-{{EmbedInteractiveExample("pages/js/expressions-commaoperators.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Comma operator")}}
+
+```js interactive-example
+let x = 1;
+
+x = (x++, x);
+
+console.log(x);
+// Expected output: 2
+
+x = (2, 3);
+
+console.log(x);
+// Expected output: 3
+```
 
 ## 语法
 
@@ -38,7 +52,7 @@ for (let i = 0, j = 9; i <= 9; i++, j--) {
 }
 ```
 
-请注意，赋值中的逗号运算符可能看起来没有逗号运算符的正常效果，因为它们并不存在于表达式中。在以下示例中，`a` 被设置为 `b=3` 的值（它是 3），但是表达式 `c=4` 仍然会经过评估，且它的值（也就是 4）会返回至控制台。这是由于[运算符的优先级和结合性](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)。
+请注意，赋值中的逗号运算符可能看起来没有逗号运算符的正常效果，因为它们并不存在于表达式中。在以下示例中，`a` 被设置为 `b=3` 的值（它是 3），但是表达式 `c=4` 仍然会经过评估，且它的值（也就是 4）会返回至控制台。这是由于[运算符的优先级和结合性](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)。
 
 ```js-nolint
 let a, b, c;

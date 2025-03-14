@@ -13,17 +13,18 @@ Mas isto nunca esteve disponível para JavaScript antes. Anteriormente, se quis�
 
 Com o Streams disponível para JavaScript, tudo isso muda - agora você pode começar a processar dados brutos com JavaScript bit a bit assim que estiverem disponíveis no lado do cliente, sem a necessidade de gerar um buffer, string ou blob.
 
-![](https://mdn.mozillademos.org/files/15817/Concept.png)
+![](concept.png)
 
 Também há mais vantagens - você pode detectar quando os fluxos começam ou terminam, encadeia os fluxos juntos, trata os erros e cancela os fluxos quando necessário e reage à velocidade em que o fluxo está sendo lido.
 
-O uso básico de Streams gira em torno de tornar as respostas disponíveis como streams. Por exemplo, a resposta {{domxref("Body")}} retornada com sucesso de uma [fetch request](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch) pode ser exposta como um {{domxref("ReadableStream")}}, e você pode lê-lo usando um leitor criado com {{domxref("ReadableStream.getReader()")}}, cancela-lo com {{domxref("ReadableStream.cancel()")}}, etc.
+O uso básico de Streams gira em torno de tornar as respostas disponíveis como streams. Por exemplo, a resposta {{domxref("Body")}} retornada com sucesso de uma [fetch request](/pt-BR/docs/Web/API/Window/fetch) pode ser exposta como um {{domxref("ReadableStream")}}, e você pode lê-lo usando um leitor criado com {{domxref("ReadableStream.getReader()")}}, cancela-lo com {{domxref("ReadableStream.cancel()")}}, etc.
 
 Usos mais complicados envolvem a criação de seu próprio fluxo usando o contrutor {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}, por exemplo para processar dados dentro de um [service worker](/pt-BR/docs/Web/API/Service_Worker_API).
 
 Você também pode gravar dados em streams usando {{domxref("WritableStream")}}.
 
-> **Nota:** Você pode encontrar muito mais detalhes sobre a teoria e prática de streams em nossos artigos — [Streams API concepts](/pt-BR/docs/Web/API/Streams_API/Concepts), [Using readable streams](/pt-BR/docs/Web/API/Streams_API/Using_readable_streams), e [Using writable streams](/pt-BR/docs/Web/API/Streams_API/Using_writable_streams).
+> [!NOTE]
+> Você pode encontrar muito mais detalhes sobre a teoria e prática de streams em nossos artigos — [Streams API concepts](/pt-BR/docs/Web/API/Streams_API/Concepts), [Using readable streams](/pt-BR/docs/Web/API/Streams_API/Using_readable_streams), e [Using writable streams](/pt-BR/docs/Web/API/Streams_API/Using_writable_streams).
 
 ## Stream interfaces
 
@@ -57,7 +58,7 @@ Você também pode gravar dados em streams usando {{domxref("WritableStream")}}.
 - {{domxref("Request")}}
   - : When a new `Request` object is constructed, you can pass it a {{domxref("ReadableStream")}} in the `body` property of its `RequestInit` dictionary. This `Request` could then be passed to a {{domxref("WindowOrWorkerGlobalScope.fetch()")}} to commence fetching the stream.
 - {{domxref("Body")}}
-  - : The response {{domxref("Body")}} returned by a successful [fetch request](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch) is exposed by default as a {{domxref("ReadableStream")}}, and can have a reader attached to it, etc.
+  - : The response {{domxref("Body")}} returned by a successful [fetch request](/pt-BR/docs/Web/API/Window/fetch) is exposed by default as a {{domxref("ReadableStream")}}, and can have a reader attached to it, etc.
 
 ### ByteStream-related interfaces
 
@@ -74,26 +75,22 @@ Você também pode gravar dados em streams usando {{domxref("WritableStream")}}.
 
 We have created a directory of examples to go along with the Streams API documentation — see [mdn/dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams). The examples are as follows:
 
-- [Simple stream pump](http://mdn.github.io/dom-examples/streams/simple-pump/): This example shows how to consume a ReadableStream and pass its data to another.
-- [Grayscale a PNG](http://mdn.github.io/dom-examples/streams/grayscale-png/): This example shows how a ReadableStream of a PNG can be turned into grayscale.
-- [Simple random stream](http://mdn.github.io/dom-examples/streams/simple-random-stream/): This example shows how to use a custom stream to generate random strings, enqueue them as chunks, and then read them back out again.
-- [Simple tee example](http://mdn.github.io/dom-examples/streams/simple-tee-example/): This example extends the Simple random stream example, showing how a stream can be teed and both resulting streams can be read independently.
-- [Simple writer](http://mdn.github.io/dom-examples/streams/simple-writer/): This example shows how to to write to a writable stream, then decode the stream and write the contents to the UI.
-- [Unpack chunks of a PNG](http://mdn.github.io/dom-examples/streams/png-transform-stream/): This example shows how [`pipeThrough()`](/pt-BR/docs/Web/API/ReadableStream/pipeThrough) can be used to transform a ReadableStream into a stream of other data types by transforming a data of a PNG file into a stream of PNG chunks.
+- [Simple stream pump](https://mdn.github.io/dom-examples/streams/simple-pump/): This example shows how to consume a ReadableStream and pass its data to another.
+- [Grayscale a PNG](https://mdn.github.io/dom-examples/streams/grayscale-png/): This example shows how a ReadableStream of a PNG can be turned into grayscale.
+- [Simple random stream](https://mdn.github.io/dom-examples/streams/simple-random-stream/): This example shows how to use a custom stream to generate random strings, enqueue them as chunks, and then read them back out again.
+- [Simple tee example](https://mdn.github.io/dom-examples/streams/simple-tee-example/): This example extends the Simple random stream example, showing how a stream can be teed and both resulting streams can be read independently.
+- [Simple writer](https://mdn.github.io/dom-examples/streams/simple-writer/): This example shows how to to write to a writable stream, then decode the stream and write the contents to the UI.
+- [Unpack chunks of a PNG](https://mdn.github.io/dom-examples/streams/png-transform-stream/): This example shows how [`pipeThrough()`](/pt-BR/docs/Web/API/ReadableStream/pipeThrough) can be used to transform a ReadableStream into a stream of other data types by transforming a data of a PNG file into a stream of PNG chunks.
 
 Examples from other developers:
 
 - [Progress Indicators with Streams, Service Workers, & Fetch](https://fetch-progress.anthum.com/).
 
-## Specifications
+## Especificações
 
-| Specification                    | Status                       | Comment             |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Streams')}} | {{Spec2('Streams')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
-
-### WritableStream
 
 {{Compat}}
 

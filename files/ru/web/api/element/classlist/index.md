@@ -1,146 +1,74 @@
 ---
-title: Element.classList
+title: "Element: свойство classList"
 slug: Web/API/Element/classList
-translation_of: Web/API/Element/classList
+l10n:
+  sourceCommit: 1b22d649b27f7b9359388cb57fc0075559e32584
 ---
 
 {{APIRef("DOM")}}
 
 ## Описание
 
-Свойство** `classList`** возвращает псевдомассив {{domxref("DOMTokenList")}}, содержащий все классы элемента.
+**`Element.classList`** — это доступное только для чтения свойство, которое содержит текущую коллекцию {{domxref("DOMTokenList")}} всех атрибутов `class` элемента.
 
-> **Примечание:** У **classList** есть примитивная альтернатива - свойство **className,** которое содержит значение атрибута **class** элемента.
+Использование `classList` представляет более удобный способ, чем доступ к списку классов элемента в виде строки, разделенной пробелами, через {{domxref("element.className")}}.
 
-## Синтаксис
+## Значение
 
-```
-var elementClasses = elem.classList;
-```
+{{domxref("DOMTokenList")}} представляет содержимое атрибута `class` элемента. Если атрибут `class` не установлен или пуст, то будет возвращён пустой `DOMTokenList`, то есть `DOMTokenList` со свойством `length` равным `0`.
 
-- Результат - псевдомассив {{domxref("DOMTokenList")}}, содержащий все классы узла **elem**
+Хотя само свойство `classList` доступно только для чтения, можно изменять связанный с ним `DOMTokenList` с помощью методов {{domxref("DOMTokenList/add", "add()")}}, {{domxref("DOMTokenList/remove", "remove()")}}, {{domxref("DOMTokenList/replace", "replace()")}} и {{domxref("DOMTokenList/toggle", "toggle()")}}.
 
-## Методы
-
-**ClassList** является геттером. Возвращаемый им объект имеет несколько методов:
-
-- add( String \[,String] )
-  - : Добавляет элементу указанные классы
-- remove( String \[,String] )
-  - : **Удаляет у элемента указанные классы **item** ( Number )
-    Результат аналогичен вызову **`сlassList[Number]`**
-    **toggle** ( String \[, Boolean])
-    Если класс у элемента отсутствует - добавляет, иначе - убирает. Когда вторым параметром передано false - удаляет указанный класс, а если true - добавляет.
-    Если вторым параметром передан undefined или переменная с typeof == 'undefined', поведение будет аналогичным передаче только первого параметра при вызове toggle.
-    **contains** ( String )
-    Проверяет, есть ли данный класс у элемента (вернёт true или false)
-
-> **Примечание:** И, конечно же, у **ClassList** есть заветное свойство **length**, которое возвращает количество классов у элемента.
+Для проверки, содержит ли элемент какой-либо класс можно использовать метод {{domxref("DOMTokenList/contains", "classList.contains()")}}.
 
 ## Примеры
 
 ```js
-<div id="clock" class="example for you"> </div>
+const div = document.createElement("div");
+div.className = "foo";
+
+// Начальное состояние: <div class="foo"></div>
+console.log(div.outerHTML);
+
+// Используем classList API для удаления и добавления классов
+div.classList.remove("foo");
+div.classList.add("anotherclass");
+
+// <div class="anotherclass"></div>
+console.log(div.outerHTML);
+
+// Если класс "visible" присутствует в списке классов, то он будет удалён, а иначе наоборот добавлен
+div.classList.toggle("visible");
+
+// Добавление/удаление класса "visible" в зависимости от условия, передаваемого вторым аргументом
+div.classList.toggle("visible", i < 10);
+
+// false
+console.log(div.classList.contains("foo"));
+
+// Добавление или удаление нескольких классов сразу
+div.classList.add("foo", "bar", "baz");
+div.classList.remove("foo", "bar", "baz");
+
+// Добавление или удаление нескольких классов с использованием spread-синтаксиса
+const cls = ["foo", "bar"];
+div.classList.add(...cls);
+div.classList.remove(...cls);
+
+// Замена класса "foo" классом "bar"
+div.classList.replace("foo", "bar");
 ```
 
-```js
-var elem = document.querySelector("#clock")
+## Спецификации
 
-//Выведем классы
-console.log(elem.classList); //DOMTokenList ["example", "for", "you"]
+{{Specifications}}
 
-//Добавим классы
-elem.classList.add("ok", "understand");
-console.log(elem.classList); //DOMTokenList ["example", "for", "you", "ok", "understand"]
-
-//Переключим классы
-elem.classList.toggle("you");
-elem.classList.toggle("he");
-console.log(elem.classList); //DOMTokenList ["example", "for", "ok", "understand", "he"]
-
-//Проверим класс
-console.log(elem.classList.contains("example")); //true
-console.log(elem.classList.contains("lol")); //false
-
-//И удалим классы
-elem.classList.remove("example", "for", "understand", "he");
-console.log(elem.classList); //DOMTokenList ["ok"]
-```
-
-> **Предупреждение:** В Firefox 25- в методах add, remove и toggle возможно указать только один аргумент. Смотрите: <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
-
-## Полифил
-
-```js
-// Источник: https://gist.github.com/k-gun/c2ea7c49edf7b757fe9561ba37cb19ca
-;(function() {
-    // helpers
-    var regExp = function(name) {
-        return new RegExp('(^| )'+ name +'( |$)');
-    };
-    var forEach = function(list, fn, scope) {
-        for (var i = 0; i < list.length; i++) {
-            fn.call(scope, list[i]);
-        }
-    };
-
-    // class list object with basic methods
-    function ClassList(element) {
-        this.element = element;
-    }
-
-    ClassList.prototype = {
-        add: function() {
-            forEach(arguments, function(name) {
-                if (!this.contains(name)) {
-                    this.element.className += ' '+ name;
-                }
-            }, this);
-        },
-        remove: function() {
-            forEach(arguments, function(name) {
-                this.element.className =
-                    this.element.className.replace(regExp(name), '');
-            }, this);
-        },
-        toggle: function(name) {
-            return this.contains(name)
-                ? (this.remove(name), false) : (this.add(name), true);
-        },
-        contains: function(name) {
-            return regExp(name).test(this.element.className);
-        },
-        // bonus..
-        replace: function(oldName, newName) {
-            this.remove(oldName), this.add(newName);
-        }
-    };
-
-    // IE8/9, Safari
-    if (!('classList' in Element.prototype)) {
-        Object.defineProperty(Element.prototype, 'classList', {
-            get: function() {
-                return new ClassList(this);
-            }
-        });
-    }
-
-    // replace() support for others
-    if (window.DOMTokenList && DOMTokenList.prototype.replace == null) {
-        DOMTokenList.prototype.replace = ClassList.prototype.replace;
-    }
-})();
-```
-
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
-## Спецификация
-
-- <http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#dom-classlist>
-- <https://dom.spec.whatwg.org/#interface-domtokenlist>
-
 ## Смотрите также
 
-- [element.className](/ru/docs/DOM/element.className)
+- {{domxref("element.className")}}
+- {{domxref("DOMTokenList")}}
+- [`classList.js`](https://github.com/eligrey/classList.js) (кросс-браузерный полифил, реализующий функциональность `element.classList`)

@@ -1,11 +1,73 @@
 ---
 title: inset-inline
 slug: Web/CSS/inset-inline
+l10n:
+  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
 {{CSSRef}}
 
 **`inset-inline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素におけるインライン方向の先頭および末尾からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxref("top")}} と {{cssxref("bottom")}}、または {{cssxref("right")}} と {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+
+{{InteractiveExample("CSS Demo: inset-inline")}}
+
+```css interactive-example-choice
+inset-inline: 5% 10%;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+inset-inline: 10px 40px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+inset-inline: 5% 10%;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <div id="example-element">I am absolutely positioned.</div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 0.75em solid #ad1457;
+  padding: 0.75em;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+#example-element {
+  background-color: #07136c;
+  border: 6px solid #ffa000;
+  color: white;
+  position: absolute;
+  inset: 0;
+}
+```
+
+## 構成要素のプロパティ
+
+このプロパティは、以下の CSS プロパティの一括指定です。
+
+- {{cssxref("inset-inline-end")}}
+- {{cssxref("inset-inline-start")}}
+
+## 構文
 
 ```css
 /* <length> 値 */
@@ -23,17 +85,9 @@ inset-inline: auto;
 inset-inline: inherit;
 inset-inline: initial;
 inset-inline: revert;
+inset-inline: revert-layer;
 inset-inline: unset;
 ```
-
-## 構成要素のプロパティ
-
-このプロパティは以下の CSS プロパティの一括指定です。
-
-- {{cssxref("inset-inline-end")}}
-- {{cssxref("inset-inline-start")}}
-
-## 構文
 
 ### 値
 
@@ -49,9 +103,7 @@ inset-inline: unset;
 
 ## 例
 
-<h3 id="Setting_inline_start_and_end_offsets">インライン方向の先頭と末尾のオフセットの設定</h3>
-
-<h4 id="HTML">HTML</h4>
+### インライン方向の先頭と末尾のオフセットの設定
 
 #### HTML
 
@@ -80,7 +132,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_inline_start_and_end_offsets", 140, 140)}}
+{{EmbedLiveSample("インライン方向の先頭と末尾のオフセットの設定", 140, 140)}}
 
 ## 仕様書
 

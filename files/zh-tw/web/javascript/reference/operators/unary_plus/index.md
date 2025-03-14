@@ -1,29 +1,52 @@
 ---
-title: 一元正號運算子 (+)
+title: 一元正號運算子（+）
 slug: Web/JavaScript/Reference/Operators/Unary_plus
 ---
 
 {{jsSidebar("Operators")}}
 
-一元正號運算子 (`+`) 置於運算元之前並取其數值。如果可以，亦會將之轉為數字。
+一元正號運算子（`+`）置於運算元之前並取其數值。如果可以，亦會將之轉為數字。
 
-{{EmbedInteractiveExample("pages/js/expressions-unary-plus.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Unary plus operator", "taller")}}
+
+```js interactive-example
+const x = 1;
+const y = -1;
+
+console.log(+x);
+// Expected output: 1
+
+console.log(+y);
+// Expected output: -1
+
+console.log(+"");
+// Expected output: 0
+
+console.log(+true);
+// Expected output: 1
+
+console.log(+false);
+// Expected output: 0
+
+console.log(+"hello");
+// Expected output: NaN
+```
 
 ## 語法
 
-```js
+```js-nolint
 +x
 ```
 
 ## 詳細說明
 
-一元負號運算子 (`-`) 也可以轉換非數字，但正號運算子卻是將運算元轉換為數字的最快和首選方法。
+一元負號運算子（`-`）也可以轉換非數字，但正號運算子卻是將運算元轉換為數字的最快和首選方法。
 
 它不會對該運算元進行任何其他操作。
 
 它可以將字串轉為整數和浮點數（如果字串值符合）；亦可使用在非字串的運算元，例如 `true`、`false`、`null`。
 
-正號運算子支持十進制和十六進制整數（`0x`前綴）、負數（雖然不適用於十六進制）格式。
+正號運算子支持十進制和十六進制整數（`0x` 前綴）、負數（雖然不適用於十六進制）格式。
 
 若用於 BigInt 類型的值，會觸發 TypeError。
 
@@ -45,11 +68,12 @@ console.log(+y);
 
 ### 使用於非數字上
 
-```js
+```js-nolint
 +true  // 1
 +false // 0
 +null  // 0
-+function(val){ return val } // NaN
++[]    // 0
++function (val) { return val; } // NaN
 +1n    // throws TypeError: Cannot convert BigInt value to number
 ```
 

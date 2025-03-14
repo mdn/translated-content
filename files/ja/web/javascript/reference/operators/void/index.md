@@ -7,12 +7,36 @@ slug: Web/JavaScript/Reference/Operators/void
 
 **`void` 演算子**は与えられた式 (`expression`) を評価し、{{jsxref("undefined")}} を返します。
 
-{{EmbedInteractiveExample("pages/js/expressions-voidoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - void operator")}}
+
+```js interactive-example
+const output = void 1;
+console.log(output);
+// Expected output: undefined
+
+void console.log("expression evaluated");
+// Expected output: "expression evaluated"
+
+void (function iife() {
+  console.log("iife is executed");
+})();
+// Expected output: "iife is executed"
+
+void function test() {
+  console.log("test function executed");
+};
+try {
+  test();
+} catch (e) {
+  console.log("test function is not defined");
+  // Expected output: "test function is not defined"
+}
+```
 
 ## 構文
 
 ```js
-void expression
+void expression;
 ```
 
 ## 解説
@@ -21,11 +45,11 @@ void expression
 
 `void` 演算子は、よく単にプリミティブ値 `undefined` を得る目的で使われ、一般的に "`void(0)`" と書かれます（これは "`void 0`" と等価です）。この目的であれば、グローバル変数 {{jsxref("undefined")}} を使用することができます。
 
-なお、`void` 演算子の [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) を考慮するべきであり、括弧は `void` 演算子に続く式の解決を明確にするのに役立つとされています。
+なお、`void` 演算子の [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence) を考慮するべきであり、括弧は `void` 演算子に続く式の解決を明確にするのに役立つとされています。
 
 ```js
-void 2 == '2';   // (void 2) == '2', false を返す
-void (2 == '2'); // void (2 == '2'), undefined を返す
+void 2 == "2"; // (void 2) == '2', false を返す
+void (2 == "2"); // void (2 == '2'), undefined を返す
 ```
 
 ## 例
@@ -35,11 +59,9 @@ void (2 == '2'); // void (2 == '2'), undefined を返す
 [即時実行関数式](/ja/docs/Glossary/IIFE) を使用する場合、 `void` により `function` キーワードが宣言ではなく式として扱うよう強制することができます。
 
 ```js
-void function iife() {
-
+void (function iife() {
   console.log("Executed!");
-
-}();
+})();
 
 // Output: "Executed!"
 ```
@@ -48,12 +70,10 @@ void function iife() {
 
 ### JavaScript URI
 
-`javascript:` の URI に対応しているブラウザーでは、 URI の中のコードを評価し、返値が  {{jsxref("undefined")}} でない限り、返された値でページの内容を置き換えます。 `void` 演算子は、`undefined` を返すために使用できます。
+`javascript:` の URI に対応しているブラウザーでは、 URI の中のコードを評価し、返値が {{jsxref("undefined")}} でない限り、返された値でページの内容を置き換えます。 `void` 演算子は、`undefined` を返すために使用できます。
 
 ```html
-<a href="javascript:void(0);">
-  Click here to do nothing
-</a>
+<a href="javascript:void(0);"> Click here to do nothing </a>
 
 <a href="javascript:void(document.body.style.backgroundColor='green');">
   Click here for green background

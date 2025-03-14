@@ -19,8 +19,12 @@ cursor: pointer;
 cursor: auto;
 
 /* Usando URL e cordenadas */
-cursor:  url(cursor1.png) 4 12, auto;
-cursor:  url(cursor2.png) 2 2, pointer;
+cursor:
+  url(cursor1.png) 4 12,
+  auto;
+cursor:
+  url(cursor2.png) 2 2,
+  pointer;
 
 /* Valores globais */
 cursor: inherit;
@@ -71,7 +75,7 @@ cursor: unset;
           <td>
             Um menu de contexto está disponível sob o cursor.<br />Somente IE 10 e
             superior implementou esta propriedade no Windows:
-            {{Bug("258960")}}.
+            [Erro do Firefox 258960](https://bugzil.la/258960).
           </td>
         </tr>
         <tr style="cursor: help">
@@ -149,7 +153,7 @@ cursor: unset;
           <td><img alt="no-drop.gif" class="lwrap" src="no-drop.gif" /></td>
           <td>
             Cursor mostrando que não é permitido largar um elemento no local
-            atual.<br />{{bug("275173")}}no Windows e no Mac OS X, "sem
+            atual.<br />[Erro do Firefox 275173](https://bugzil.la/275173)no Windows e no Mac OS X, "sem
             soltar é o mesmo que não permitido".
           </td>
         </tr>
@@ -164,7 +168,7 @@ cursor: unset;
           <td><img alt="all-scroll.gif" src="all-scroll.gif" /></td>
           <td>
             Cursor showing that something can be scrolled in any direction
-            (panned).<br />{{bug("275174")}} on Windows, "<em>all-scroll</em>
+            (panned).<br />[Erro do Firefox 275174](https://bugzil.la/275174) on Windows, "<em>all-scroll</em>
             is the same as <em>move</em>".
           </td>
         </tr>

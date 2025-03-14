@@ -15,9 +15,7 @@ alt = coordinates.altitude
 
 ## Especificações
 
-| Specification                                                                        | Status                           | Comment            |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('Geolocation', '#altitude', 'Coordinates.altitude')}} | {{Spec2('Geolocation')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
@@ -25,5 +23,5 @@ alt = coordinates.altitude
 
 ## Veja também
 
-- [Using geolocation](/pt-BR/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/pt-BR/docs/Web/API/Geolocation_API)
 - The {{domxref("Coordinates")}} interface it belongs to.

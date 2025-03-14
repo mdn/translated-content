@@ -1,10 +1,11 @@
 ---
 title: テキストの描画
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
-original_slug: Drawing_text_using_a_canvas
+l10n:
+  sourceCommit: f9f48866f02963e752717310b76a70d5bdaf554c
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
 前の章で[スタイルや色を適用する](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)方法を見た後は、キャンバスにテキストを描画する方法を見ていきます。
 
@@ -23,9 +24,9 @@ original_slug: Drawing_text_using_a_canvas
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.font = '48px serif';
-  ctx.fillText('Hello world', 10, 50);
+  const ctx = document.getElementById("canvas").getContext("2d");
+  ctx.font = "48px serif";
+  ctx.fillText("Hello world", 10, 50);
 }
 ```
 
@@ -45,9 +46,9 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.font = '48px serif';
-  ctx.strokeText('Hello world', 10, 50);
+  const ctx = document.getElementById("canvas").getContext("2d");
+  ctx.font = "48px serif";
+  ctx.strokeText("Hello world", 10, 50);
 }
 ```
 
@@ -91,33 +92,34 @@ draw();
 <textarea id="code" class="playable-code">
 ctx.font = "48px serif";
 ctx.textBaseline = "hanging";
-ctx.strokeText("Hello world", 0, 100);</textarea>
+ctx.strokeText("Hello world", 0, 100);
+</textarea>
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
-var code = textarea.value;
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const edit = document.getElementById("edit");
+const code = textarea.value;
 
 function drawCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", () => {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener("click", () => {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', drawCanvas);
-window.addEventListener('load', drawCanvas);
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);
 ```
 
 {{ EmbedLiveSample('A_textBaseline_example', 700, 400) }}
@@ -133,14 +135,16 @@ window.addEventListener('load', drawCanvas);
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var text = ctx.measureText('foo'); // TextMetrics object
+  const ctx = document.getElementById("canvas").getContext("2d");
+  const text = ctx.measureText("foo"); // TextMetrics object
   text.width; // 16;
 }
 ```
 
-## Gecko 固有の注意事項
+## アクセシビリティの考慮
 
-Gecko (Firefox、Firefox OS および他の Mozilla ベースアプリケーション) では一部の[接頭辞付き API](/ja/docs/Web/API/CanvasRenderingContext2D#prefixed_apis) で、早期バージョンのテキスト描画法を実装しています。これらは非推奨になり削除されており、動作が保証されていません。
+`<canvas>` 要素は単なるビットマップであり、描画するオブジェクトの情報は提供しません。キャンバス上に書かれたテキストは、画面の拡大を頼りにしているユーザーにとって、読みやすさの問題を発生させる可能性があります。キャンバス要素内のピクセルは変倍しないので、拡大するとぼやけてしまいます。これは、ピクセルがベクターではなく、文字の形をしたピクセルの集合であるためです。拡大するとピクセルが大きくなります。
+
+キャンバスのコンテンツは、意味づけされた HTML のようにアクセシビリティツールに公開されることはありません。一般的に、アクセシビリティのあるウェブサイトやアプリでキャンバスを使用することは避けましょう。キャンバスの代わりに HTML 要素や SVG を使用することもできます。
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}

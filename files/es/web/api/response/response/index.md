@@ -1,7 +1,6 @@
 ---
 title: Response()
 slug: Web/API/Response/Response
-translation_of: Web/API/Response/Response
 ---
 
 {{APIRef("Fetch")}}
@@ -37,24 +36,24 @@ var miRespuesta = new Response(cuerpo,opciones);
 
 ## Ejemplos
 
-En nuestro [ejemplo Fetch Response](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (ver [Fetch Response live](http://mdn.github.io/fetch-examples/fetch-response/)) creamos un nuevo objeto `Response` usando el constructor, pasándole un nuevo objeto {{domxref("Blob")}} como cuerpo, y un objeto con `status` y`statusText` como opciones:
+En nuestro [ejemplo Fetch Response](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (ver [Fetch Response live](https://mdn.github.io/fetch-examples/fetch-response/)) creamos un nuevo objeto `Response` usando el constructor, pasándole un nuevo objeto {{domxref("Blob")}} como cuerpo, y un objeto con `status` y`statusText` como opciones:
 
 ```js
 var miBlob = new Blob();
-var opciones = { "status" : 200 , "statusText" : "Flipante!" };
-var miRespuesta = new Response(miBlob,opciones);
+var opciones = { status: 200, statusText: "Flipante!" };
+var miRespuesta = new Response(miBlob, opciones);
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Response.Response")}}
+{{Compat}}
 
 ## Relacionado
 
-- [ServiceWorker API](/es/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/es/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/es/docs/Web/HTTP/CORS)
 - [HTTP](/es/docs/Web/HTTP)

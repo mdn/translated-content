@@ -1,23 +1,22 @@
 ---
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/filter
 ---
 
 {{JSRef}}
 
 La méthode **`filter()`** crée et retourne un nouveau tableau contenant tous les éléments du tableau d'origine qui remplissent une condition déterminée par la fonction `callback`.
 
-{{EmbedInteractiveExample("pages/js/array-filter.html")}}
+{{InteractiveExample("JavaScript Demo: Array.filter()")}}
+
+```js interactive-example
+const words = ["spray", "elite", "exuberant", "destruction", "present"];
+
+const result = words.filter((word) => word.length > 6);
+
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+```
 
 ## Syntaxe
 
@@ -58,7 +57,7 @@ La fonction `callback` est appelée avec trois arguments :
 2. l'index de l'élément courant,
 3. l'objet `Array` parcouru.
 
-Si le paramètre `thisArg` est fourni, il sera utilisé comme valeur `this` lors de l'appel de la fonction `callback`. S'il n'est pas fourni, la valeur `undefined` sera utilisée à la place. La valeur de `this` qui est finalement utilisée par la fonction `callback` est déterminée selon [les règles usuelles pour déterminer la valeur `this` au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
+Si le paramètre `thisArg` est fourni, il sera utilisé comme valeur `this` lors de l'appel de la fonction `callback`. S'il n'est pas fourni, la valeur `undefined` sera utilisée à la place. La valeur de `this` qui est finalement utilisée par la fonction `callback` est déterminée selon [les règles usuelles pour déterminer la valeur `this` au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Operators/this).
 
 Noter que `filter()` ne modifie pas le tableau d'origine.
 
@@ -89,17 +88,17 @@ var arr = [
   { id: 0 },
   { id: 3 },
   { id: 12.2 },
-  { },
+  {},
   { id: null },
   { id: NaN },
-  { id: 'undefined' }
+  { id: "undefined" },
 ];
 
 var elementsInvalides = 0;
 
 function filtrerParID(obj) {
   // Si c'est un nombre
-  if (obj.id !== undefined && typeof(obj.id) === 'number' && !isNaN(obj.id)) {
+  if (obj.id !== undefined && typeof obj.id === "number" && !isNaN(obj.id)) {
     return true;
   } else {
     elementsInvalides++;
@@ -109,11 +108,11 @@ function filtrerParID(obj) {
 
 var arrByID = arr.filter(filtrerParID);
 
-console.log('Tableau filtré\n', arrByID);
+console.log("Tableau filtré\n", arrByID);
 // Le tableau filtré est :
 // [{ id: 15 }, { id: -1 }, { id: 0 }, { id: 3 }, { id: 12.2 }]
 
-console.log('Nombre d\'éléments invalides = ', elementsInvalides);
+console.log("Nombre d'éléments invalides = ", elementsInvalides);
 // Nombre d'éléments invalides 4
 ```
 
@@ -122,31 +121,33 @@ console.log('Nombre d\'éléments invalides = ', elementsInvalides);
 Dans l'exemple qui suit, on utilise `filter()` pour filtrer le contenu d'un tableau selon un critère donné.
 
 ```js
-var fruits = ['pomme', 'banane', 'raisin', 'mangue'];
+var fruits = ["pomme", "banane", "raisin", "mangue"];
 
 function filtreTexte(arr, requete) {
   return arr.filter(function (el) {
     return el.toLowerCase().indexOf(requete.toLowerCase()) !== -1;
-  })
+  });
 }
 
-console.log(filtreTexte(fruits, 'an')); // ['banane', 'mangue'];
-console.log(filtreTexte(fruits, 'm')); // ['pomme', 'mangue'];
+console.log(filtreTexte(fruits, "an")); // ['banane', 'mangue'];
+console.log(filtreTexte(fruits, "m")); // ['pomme', 'mangue'];
 ```
 
 ### Implémentation avec la syntaxe ECMAScript 2015 (ES6)
 
-L'exemple suivant utilise [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées), et le mot clé [`const`](/fr/docs/Web/JavaScript/Reference/Instructions/const) disponible en ES6.
+L'exemple suivant utilise [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions), et le mot clé [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const) disponible en ES6.
 
 ```js
-const fruits = ['pomme', 'banane', 'raisin', 'mangue'];
+const fruits = ["pomme", "banane", "raisin", "mangue"];
 
 const filtreTexte = (arr, requete) => {
-  return arr.filter(el =>  el.toLowerCase().indexOf(requete.toLowerCase()) !== -1);
-}
+  return arr.filter(
+    (el) => el.toLowerCase().indexOf(requete.toLowerCase()) !== -1,
+  );
+};
 
-console.log(filtreTexte(fruits, 'an')); // ['banane', 'mangue'];
-console.log(filtreTexte(fruits, 'm')); // ['pomme', 'mangue'];
+console.log(filtreTexte(fruits, "an")); // ['banane', 'mangue'];
+console.log(filtreTexte(fruits, "m")); // ['pomme', 'mangue'];
 ```
 
 ## Prothèse d'émulation (_polyfill_)
@@ -154,30 +155,31 @@ console.log(filtreTexte(fruits, 'm')); // ['pomme', 'mangue'];
 `Array.prototype.filter()` a été ajoutée avec la cinquième édition du standard ECMA-262 — ainsi elle pourrait ne pas être présente dans toutes les implémentations du standard. Ce problème peut être contourné en ajoutant le code suivant au début des scripts et permettra d'utiliser `filter` au sein d'implémentations qui n'en bénéficient pas nativement. Cet algorithme est strictement celui spécifié par la cinquième édition d'ECMA-262, en considérant que `callbackfn.call` est évaluée avec la valeur d'origine de {{jsxref("Function.prototype.call")}} et que {{jsxref("Array.prototype.push")}} a sa valeur d'origine.
 
 ```js
-if (!Array.prototype.filter){
-  Array.prototype.filter = function(func, thisArg) {
-    'use strict';
-    if ( ! ((typeof func === 'Function' || typeof func === 'function') && this) )
-        throw new TypeError();
+if (!Array.prototype.filter) {
+  Array.prototype.filter = function (func, thisArg) {
+    "use strict";
+    if (!((typeof func === "Function" || typeof func === "function") && this))
+      throw new TypeError();
 
     var len = this.length >>> 0,
-        res = new Array(len), // preallocate array
-        t = this, c = 0, i = -1;
-    if (thisArg === undefined){
-      while (++i !== len){
+      res = new Array(len), // preallocate array
+      t = this,
+      c = 0,
+      i = -1;
+    if (thisArg === undefined) {
+      while (++i !== len) {
         // checks to see if the key was set
-        if (i in this){
-          if (func(t[i], i, t)){
+        if (i in this) {
+          if (func(t[i], i, t)) {
             res[c++] = t[i];
           }
         }
       }
-    }
-    else{
-      while (++i !== len){
+    } else {
+      while (++i !== len) {
         // checks to see if the key was set
-        if (i in this){
-          if (func.call(thisArg, t[i], i, t)){
+        if (i in this) {
+          if (func.call(thisArg, t[i], i, t)) {
             res[c++] = t[i];
           }
         }

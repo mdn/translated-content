@@ -1,47 +1,71 @@
 ---
 title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
-tags:
-  - JavaScript
-  - Prototype
-  - Reference
-  - polyfill
-  - Массив
-  - inArray
-  - Метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
+l10n:
+  sourceCommit: 85d7482697cc2bf407c58e809a2a754180d6714c
 ---
+
 {{JSRef}}
 
-Метод **`includes()`** определяет, содержит ли массив определённый элемент, возвращая в зависимости от этого `true` или `false`.
+Метод **`includes()`** экземпляров {{jsxref("Array")}} определяет, содержит ли массив определенное значение, возвращая `true` или `false`.
 
-{{EmbedInteractiveExample("pages/js/array-includes.html")}}
+{{InteractiveExample("JavaScript Demo: Array.includes()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// Expected output: true
+
+const pets = ["cat", "dog", "bat"];
+
+console.log(pets.includes("cat"));
+// Expected output: true
+
+console.log(pets.includes("at"));
+// Expected output: false
+```
 
 ## Синтаксис
 
-```
-arr.includes(searchElement[fromIndex = 0])
+```js-nolint
+includes(searchElement)
+includes(searchElement, fromIndex)
 ```
 
 ### Параметры
 
 - `searchElement`
-  - : Искомый элемент.
+  - : Проверяемое значение.
 - `fromIndex` {{optional_inline}}
-  - : Позиция в массиве, с которой начинать поиск элемента `searchElement`. При отрицательных значениях поиск производится начиная с индекса `array.length + fromIndex` по возрастанию. Значение по умолчанию равно 0.
+  - : Индекс, с которого начинать поиск. Начинается с нуля и [преобразуется в целое число](/ru/docs/Web/JavaScript/Reference/Global_Objects/Number#преобразование_строк_и_null_в_числа).
+    - При отрицательных значениях поиск производится с конца массива. Если `-array.length <= fromIndex < 0`, то будет применено значение `fromIndex + array.length`. Однако в этом случае поиск будет производится с начала массива.
+    - Если `fromIndex < -array.length` или `fromIndex` не указан, то используется значение `0`, то есть производится поиск по всему массиву.
+    - Если `fromIndex >= array.length`, то поиск не производится и возвращается `false`.
 
 ### Возвращаемое значение
 
-{{jsxref("Boolean")}}.
+Логическое значение, `true` если значение `searchElement` найдено в массиве (или части массива, если указан параметр `fromIndex`).
+
+## Описание
+
+Метод `includes()` сравнивает `searchElement` с элементами массива используя [алгоритм сравнения SameValueZero](/ru/docs/Web/JavaScript/Equality_comparisons_and_sameness#равенство_одинаковых_величин_и_нулей). Все нулевые значения считаются равными, независимо от знака (то есть `-0` и `0` равны), но `false` _не_ равно `0`. Значение [`NaN`](/ru/docs/Web/JavaScript/Reference/Global_Objects/NaN) доступно для поиска.
+
+При использовании в разреженных массивах, метод `includes()` метод считает, что пустые позиции имеют значение `undefined`.
+
+Метод `includes()` является универсальным, то есть может быть вызван не только у массивов, но и у массивоподобных объектов (у которых значение `this` имеет свойство `length` и свойства с целочисленными ключами).
 
 ## Примеры
 
+### Использование `includes()`
+
 ```js
-[1, 2, 3].includes(2);     // true
-[1, 2, 3].includes(4);     // false
-[1, 2, 3].includes(3, 3);  // false
+[1, 2, 3].includes(2); // true
+[1, 2, 3].includes(4); // false
+[1, 2, 3].includes(3, 3); // false
 [1, 2, 3].includes(3, -1); // true
 [1, 2, NaN].includes(NaN); // true
+["1", "2", "3"].includes(3); // false
 ```
 
 ### `fromIndex` больше или равен длине массива
@@ -49,10 +73,10 @@ arr.includes(searchElement[fromIndex = 0])
 Если `fromIndex` больше или равен длине массива, то возвращается `false`. При этом поиск не производится.
 
 ```js
-var arr = ['a', 'b', 'c'];
+const arr = ["a", "b", "c"];
 
-arr.includes('c', 3);   // false
-arr.includes('c', 100); // false
+arr.includes("c", 3); // false
+arr.includes("c", 100); // false
 ```
 
 ### Вычисленный индекс меньше нуля 0
@@ -64,94 +88,55 @@ arr.includes('c', 100); // false
 // fromIndex равен -100
 // вычисленный индекс равен 3 + (-100) = -97
 
-var arr = ['a', 'b', 'c'];
+const arr = ["a", "b", "c"];
 
-arr.includes('a', -100); // true
-arr.includes('b', -100); // true
-arr.includes('c', -100); // true
+arr.includes("a", -100); // true
+arr.includes("b", -100); // true
+arr.includes("c", -100); // true
+arr.includes("a", -2); // false
 ```
 
-### Использование `includes()` в качестве общих метода
+### Использование `includes()` в разреженных массивах
 
-`includes()` специально сделан общим. Он не требует, чтобы `this` являлся массивом, так что он может быть применён к другим типам объектов (например, к массивоподобным объектам). Пример ниже показывает использование метода `includes()` на объекте [arguments](/ru/docs/Web/JavaScript/Reference/Functions/arguments).
+Можно производить поиск `undefined` в разреженном массиве и получать `true`.
 
 ```js
-(function() {
-  console.log([].includes.call(arguments, 'a')); // true
-  console.log([].includes.call(arguments, 'd')); // false
-})('a','b','c');
+console.log([1, , 3].includes(undefined)); // true
 ```
 
-## Полифил
+### Вызов `includes()` у объектов, не являющихся массивами
+
+Метод `include()` считывает свойство `length` у `this`, а затем обращается к каждому свойству, ключ которого представляет собой неотрицательное целое число, меньшее `length`.
 
 ```js
-// https://tc39.github.io/ecma262/#sec-array.prototype.includes
-if (!Array.prototype.includes) {
-  Object.defineProperty(Array.prototype, 'includes', {
-    value: function(searchElement, fromIndex) {
-
-      if (this == null) {
-        throw new TypeError('"this" is null or not defined');
-      }
-
-      // 1. Let O be ? ToObject(this value).
-      var o = Object(this);
-
-      // 2. Let len be ? ToLength(? Get(O, "length")).
-      var len = o.length >>> 0;
-
-      // 3. If len is 0, return false.
-      if (len === 0) {
-        return false;
-      }
-
-      // 4. Let n be ? ToInteger(fromIndex).
-      //    (If fromIndex is undefined, this step produces the value 0.)
-      var n = fromIndex | 0;
-
-      // 5. If n ≥ 0, then
-      //  a. Let k be n.
-      // 6. Else n < 0,
-      //  a. Let k be len + n.
-      //  b. If k < 0, let k be 0.
-      var k = Math.max(n >= 0 ? n : len - Math.abs(n), 0);
-
-      function sameValueZero(x, y) {
-        return x === y || (typeof x === 'number' && typeof y === 'number' && isNaN(x) && isNaN(y));
-      }
-
-      // 7. Repeat, while k < len
-      while (k < len) {
-        // a. Let elementK be the result of ? Get(O, ! ToString(k)).
-        // b. If SameValueZero(searchElement, elementK) is true, return true.
-        if (sameValueZero(o[k], searchElement)) {
-          return true;
-        }
-        // c. Increase k by 1.
-        k++;
-      }
-
-      // 8. Return false
-      return false;
-    }
-  });
-}
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+  3: 1, // includes() не будет обращаться к этому элементу, потому что свойство length равно 3
+};
+console.log(Array.prototype.includes.call(arrayLike, 2));
+// true
+console.log(Array.prototype.includes.call(arrayLike, 1));
+// false
 ```
-
-Если требуется поддержка устаревших движков JavaScript, которые не поддерживают [`Object.defineProperty`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), то наилучшим решением будет вообще не делать полифил для методов `Array.prototype`, так как не получится сделать их неперечисляемыми.
 
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- {{jsxref("TypedArray.prototype.includes()")}}
-- {{jsxref("String.prototype.includes()")}}
+- [Полифил `Array.prototype.includes` в `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- Руководство по [индексируемым коллекциям](/ru/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.indexOf()")}}
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("TypedArray.prototype.includes()")}}
+- {{jsxref("String.prototype.includes()")}}

@@ -1,11 +1,6 @@
 ---
-title: ':default'
+title: :default
 slug: Web/CSS/:default
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:default
 ---
 
 {{CSSRef}}
@@ -27,7 +22,8 @@ Ce sélecteur peut être utilisé sur des éléments {{htmlelement("button")}}, 
 - Les éléments `<input type="checkbox">` et `<input type="radio">` seront ciblés s'ils possèdent l'attribut `checked`.
 - L'élément `<button>` est ciblé si c'est le bouton d'envoi par défaut d'un formulaire, c'est-à-dire le premier bouton (selon l'ordre du DOM) appartenant au formulaire (cela vaut également pour les éléments {{htmlelement("input")}} dont le type permet d'envoyer des formulaires tels que `image` ou `submit`).
 
-> **Note :** La spécification WHATWG HTML définit cela dans [le paragraphe 4.16.3](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-default).
+> [!NOTE]
+> La spécification WHATWG HTML définit cela dans [le paragraphe 4.16.3](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-default).
 
 Les éléments de l'interface utilisateur qui permette une sélection multiple peuvent avoir plusieurs éléments par défaut. Dans ce cas, tous les éléments par défaut sont ciblés via la pseudo-classe `:default`.
 
@@ -55,16 +51,16 @@ input:default + label {
 <fieldset>
   <legend>Saison préférée</legend>
 
-  <input type="radio" name="season" id="spring">
+  <input type="radio" name="season" id="spring" />
   <label for="spring">Printemps</label>
 
-  <input type="radio" name="season" id="summer" checked>
+  <input type="radio" name="season" id="summer" checked />
   <label for="summer">Eté</label>
 
-  <input type="radio" name="season" id="fall">
+  <input type="radio" name="season" id="fall" />
   <label for="fall">Automne</label>
 
-  <input type="radio" name="season" id="winter">
+  <input type="radio" name="season" id="winter" />
   <label for="winter">Hiver</label>
 </fieldset>
 ```

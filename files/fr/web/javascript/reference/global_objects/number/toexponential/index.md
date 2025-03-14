@@ -1,26 +1,33 @@
 ---
 title: Number.prototype.toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
-tags:
-  - JavaScript
-  - Méthode
-  - Number
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toExponential
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/toExponential
 ---
 
 {{JSRef}}
 
 La méthode **`toExponential()`** renvoie une chaîne de caractères, représentant l'objet Number en notation exponentielle.
 
-{{EmbedInteractiveExample("pages/js/number-toexponential.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toExponential()")}}
+
+```js interactive-example
+function expo(x, f) {
+  return Number.parseFloat(x).toExponential(f);
+}
+
+console.log(expo(123456, 2));
+// Expected output: "1.23e+5"
+
+console.log(expo("123456"));
+// Expected output: "1.23456e+5"
+
+console.log(expo("oink"));
+// Expected output: "NaN"
+```
 
 ## Syntaxe
 
 ```js
-numObj.toExponential([nbChiffresDécimaux])
+numObj.toExponential([nbChiffresDécimaux]);
 ```
 
 ### Paramètre
@@ -54,11 +61,11 @@ Si un nombre possède plus de chiffres décimaux que `nbChiffresDécimaux`, le n
 ```js
 var numObj = 77.1234;
 
-console.log(numObj.toExponential());  // affiche 7.71234e+1
+console.log(numObj.toExponential()); // affiche 7.71234e+1
 console.log(numObj.toExponential(4)); // affiche 7.7123e+1
 console.log(numObj.toExponential(2)); // affiche 7.71e+1
-console.log(77.1234.toExponential()); // affiche 7.71234e+1
-console.log(77 .toExponential());     // affiche 7.7e+1
+console.log((77.1234).toExponential()); // affiche 7.71234e+1
+console.log((77).toExponential()); // affiche 7.7e+1
 ```
 
 ## Spécifications

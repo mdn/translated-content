@@ -1,20 +1,28 @@
 ---
 title: L'opérateur set
 slug: Web/JavaScript/Reference/Functions/set
-tags:
-  - ECMAScript 5
-  - Functions
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Functions/set
-original_slug: Web/JavaScript/Reference/Fonctions/set
 ---
 
 {{jsSidebar("Functions")}}
 
 La syntaxe **`set`** permet de lier une propriété d'un objet à une fonction qui sera appelée à chaque tentative de modification de cette propriété.
 
-{{EmbedInteractiveExample("pages/js/functions-setter.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Setter")}}
+
+```js interactive-example
+const language = {
+  set current(name) {
+    this.log.push(name);
+  },
+  log: [],
+};
+
+language.current = "EN";
+language.current = "FA";
+
+console.log(language.log);
+// Expected output: Array ["EN", "FA"]
+```
 
 ## Syntaxe
 
@@ -53,11 +61,11 @@ Dans l'exemple qui suit, on définit une pseudo-propriété `courant` pour un ob
 
 ```js
 var o = {
-  set courant (str) {
+  set courant(str) {
     this.log[this.log.length] = str;
   },
-  log: []
-}
+  log: [],
+};
 ```
 
 On notera que `courant` n'est pas défini. Toute tentative pour y accéder renverra `undefined`.
@@ -75,12 +83,16 @@ delete o.courant;
 On peut également ajouter un mutateur sur un objet d'ores et déjà créé. Pour cela, on utilisera la méthode {{jsxref("Object.defineProperty()")}}.
 
 ```js
-var o = { a:0 };
+var o = { a: 0 };
 
-Object.defineProperty(o, "b", { set: function (x) { this.a = x / 2; } });
+Object.defineProperty(o, "b", {
+  set: function (x) {
+    this.a = x / 2;
+  },
+});
 
 o.b = 10; // On utilise le setter, qui affecte 10 / 2 (5) à 'a'
-console.log(o.a) // 5
+console.log(o.a); // 5
 ```
 
 ### Utiliser un nom de propriété calculé
@@ -90,11 +102,13 @@ var expr = "toto";
 
 var obj = {
   bidule: "truc",
-  set [expr](v) { this.bidule = v; }
+  set [expr](v) {
+    this.bidule = v;
+  },
 };
 
 console.log(obj.bidule); // "truc"
-obj.toto = "bidule";      // le mutateur est utilisé
+obj.toto = "bidule"; // le mutateur est utilisé
 console.log(obj.bidule); // "bidule"
 ```
 
@@ -113,4 +127,4 @@ console.log(obj.bidule); // "bidule"
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Définir des accesseurs et des mutateurs](/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#D.C3.A9finir_des_getters_et_setters), dans le Guide JavaScript
+- [Définir des accesseurs et des mutateurs](/fr/docs/Web/JavaScript/Guide/Working_with_objects#d.c3.a9finir_des_getters_et_setters), dans le Guide JavaScript

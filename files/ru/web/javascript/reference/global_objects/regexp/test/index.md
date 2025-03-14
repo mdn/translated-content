@@ -1,17 +1,9 @@
 ---
 title: RegExp.prototype.test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - регулярные выражения
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 ---
 
-{{JSRef("Global_Objects", "RegExp")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -43,12 +35,12 @@ regexObj.test(str)
 Следующий пример печатает сообщение, в зависимости от того, была ли проверка успешной:
 
 ```js
-function testinput(re, str){
+function testinput(re, str) {
   var midstring;
   if (re.test(str)) {
-    midstring = ' содержит ';
+    midstring = " содержит ";
   } else {
-    midstring = ' не содержит ';
+    midstring = " не содержит ";
   }
   console.log(str + midstring + re.source);
 }
@@ -64,5 +56,5 @@ function testinput(re, str){
 
 ## Смотрите также
 
-- Глава про [регулярные выражения](/ru/docs/Web/JavaScript/Guide/Regular_Expressions) в [руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide)
+- Глава про [регулярные выражения](/ru/docs/Web/JavaScript/Guide/Regular_expressions) в [руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide)
 - {{jsxref("Global_Objects/RegExp", "RegExp")}}

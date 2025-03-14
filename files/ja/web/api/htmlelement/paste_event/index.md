@@ -1,7 +1,9 @@
 ---
-title: 'HTMLElement: paste イベント'
+title: "HTMLElement: paste イベント"
+short-title: paste
 slug: Web/API/HTMLElement/paste_event
-original_slug: Web/API/HTMLElement/onpaste
+l10n:
+  sourceCommit: 73b2b6ee411ac094b9fc57dafac6f9c232fc20d9
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -13,9 +15,9 @@ original_slug: Web/API/HTMLElement/onpaste
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('paste', event => { });
+addEventListener("paste", (event) => {});
 
-onpaste = event => { };
+onpaste = (event) => {};
 ```
 
 ## イベント型
@@ -28,8 +30,8 @@ onpaste = event => { };
 
 _親である {{domxref("Event")}} から継承したプロパティもあります。_
 
-- {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
-  - : {{domxref("DataTransfer")}} オブジェクトで、ユーザーが行った {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, {{domxref("HTMLElement/paste_event", "paste")}} 操作によって影響されたデータと MIME タイプが入ります。
+- {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
+  - : {{domxref("DataTransfer")}} オブジェクトで、ユーザーが行った {{domxref("HTMLElement/cut_event", "cut")}}、{{domxref("HTMLElement/copy_event", "copy")}}、`paste` のいずれかの操作によって影響されたデータと MIME タイプが入ります。
 
 ## 例
 
@@ -39,7 +41,9 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 
 ```html
 <h3>このテキストエリアで実行してみる</h3>
-<textarea id="editor" rows="3">このフィールドにテキストをコピー＆ペーストしてみてください。</textarea>
+<textarea id="editor" rows="3">
+このフィールドにテキストをコピー＆ペーストしてみてください。
+</textarea>
 
 <h3>ログ:</h3>
 <p id="log"></p>
@@ -49,15 +53,15 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 
 ```js
 function logCopy(event) {
-  log.innerText = 'コピーされました。\n' + log.innerText;
+  log.innerText = `コピーされました。\n${log.innerText}`;
 }
 
 function logPaste(event) {
-  log.innerText = '貼り付けされました。\n' + log.innerText;
+  log.innerText = `貼り付けされました。\n${log.innerText}`;
 }
 
-const editor = document.getElementById('editor');
-const log = document.getElementById('log');
+const editor = document.getElementById("editor");
+const log = document.getElementById("log");
 
 editor.oncopy = logCopy;
 editor.onpaste = logPaste;
@@ -77,6 +81,6 @@ editor.onpaste = logPaste;
 
 ## 関連情報
 
-- 関連イベント
-  - {{domxref("HTMLElement.copy_event")}}
-  - {{domxref("HTMLElement.cut_event")}}
+- 関連イベント:
+  - {{domxref("HTMLElement.copy_event", "copy")}} イベント
+  - {{domxref("HTMLElement.cut_event", "cut")}} イベント

@@ -22,7 +22,7 @@ tokenList.item(index)
 
 {{domxref("DOMString")}}类型，一个表示要返回的项。如果数字大于或等于列表的`length`，则返回`null`。
 
-## 例子
+## 示例
 
 在下面的列子中，我们通过{{domxref("Element.classList")}}方法从{{htmlelement("span")}}元素中获取`DOMTokenList`对象。然后使用`item(tokenList.length - 1)`检索列表中的最后的一个项，并将其写入\<span>元素的 {{domxref("Node.textContent")}}。
 
@@ -37,13 +37,13 @@ tokenList.item(index)
 ```js
 let span = document.querySelector("span");
 let classes = span.classList;
-let item = classes.item(classes.length-1);
+let item = classes.item(classes.length - 1);
 span.textContent = item;
 ```
 
 输出结果如下：
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ EmbedLiveSample('示例', '100%', 60) }}
 
 ## 规范
 

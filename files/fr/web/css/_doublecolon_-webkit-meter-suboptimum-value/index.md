@@ -1,7 +1,6 @@
 ---
-title: '::-webkit-meter-suboptimum-value'
+title: ::-webkit-meter-suboptimum-value
 slug: Web/CSS/::-webkit-meter-suboptimum-value
-translation_of: Web/CSS/::-webkit-meter-suboptimum-value
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -14,7 +13,10 @@ Le pseudo-élément **`::-webkit-meter-suboptimum-value`** donne une couleur jau
 
 ```css
 meter::-webkit-meter-suboptimum-value {
-  background: -webkit-gradient linear, left top, left bottom;
+  background:
+    -webkit-gradient linear,
+    left top,
+    left bottom;
   height: 100%;
   box-sizing: border-box;
 }
@@ -30,7 +32,8 @@ meter::-webkit-meter-suboptimum-value {
 
 {{EmbedLiveSample('Exemples', '100%', 50)}}
 
-> **Note :** Cette fonctionnalité ne sera visible que depuis un navigateur WebKit/Blink.
+> [!NOTE]
+> Cette fonctionnalité ne sera visible que depuis un navigateur WebKit/Blink.
 
 ## Spécifications
 
@@ -38,7 +41,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-webkit-meter-suboptimum-value")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -10,7 +10,7 @@ O **construtor `AsyncFunction`** cria um novo objeto {{jsxref("Statements/async_
 Note que`AsyncFunction` não é um objeto global. Ele poderia ser obtido analisando o seguinte código:
 
 ```js
-Object.getPrototypeOf(async function(){}).constructor
+Object.getPrototypeOf(async function () {}).constructor;
 ```
 
 ## Sintaxe
@@ -36,7 +36,7 @@ Todos os argumentos passado para a função são tratados como nomes dos identif
 
 Invocar o construtor `AsyncFunction` como uma função (sem usar o operador `new`) tem o mesmo efeito de invocá-lo como um construtor.
 
-## Propriedas
+## Propriedades
 
 - **`AsyncFunction.length`**
   - : A propriedade tamanho do construtor da `AsyncFunction` cujo valor é 1.
@@ -47,7 +47,7 @@ Invocar o construtor `AsyncFunction` como uma função (sem usar o operador `new
 
 ### Propriedades
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype', 'Propriedades')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype', 'Propriedades') -->
 
 ## `AsyncFunction` instances
 
@@ -59,33 +59,33 @@ Instância `AsyncFunction` herdam métodos e propriedades do {{jsxref("AsyncFunc
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
   });
 }
 
-var AsyncFunction = Object.getPrototypeOf(async function(){}).constructor
+var AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
 
-var a = new AsyncFunction('a',
-                          'b',
-                          'return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);');
+var a = new AsyncFunction(
+  "a",
+  "b",
+  "return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);",
+);
 
-a(10, 20).then(v => {
+a(10, 20).then((v) => {
   console.log(v); // imprime 30 após 4 seconds
 });
 ```
 
 ## Especificações
 
-| Especificação                                                                                            | Situação                     | Comentário                   |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-objects', 'AsyncFunction object')}} | {{Spec2('ESDraft')}} | Definição inicial no ES2017. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.AsyncFunction")}}
+{{Compat}}
 
 ## Veja também
 

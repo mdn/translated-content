@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing name after . operator'
+title: "SyntaxError: missing name after . operator"
 slug: Web/JavaScript/Reference/Errors/Missing_name_after_dot_operator
 ---
 
@@ -17,13 +17,13 @@ SyntaxError: missing name after . operator
 
 ## 哪里出错了？
 
-点操作符 (`.`) 用于[属性访问](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)。你需要指定要访问的属性名称。对于属性名称是运算表达式的属性访问，需要将属性访问的方式从点操作符转换为方括号操作符。这样你就可以在其中进行表达式运算了。或许你想要进行字符串拼接操作？那么请使用加号操作符（+）。请参考下面的示例。
+点操作符 (`.`) 用于[属性访问](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)。你需要指定要访问的属性名称。对于属性名称是运算表达式的属性访问，需要将属性访问的方式从点操作符转换为方括号操作符。这样你就可以在其中进行表达式运算了。或许你想要进行字符串拼接操作？那么请使用加号操作符（+）。请参考下面的示例。
 
 ## 示例
 
 ### 属性访问
 
-在 JavaScript 中，[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)或者使用点操作符 (.)，或者使用方括号操作符 (\[])，但是二者不能同时使用。方括号操作符允许属性名称为运算表达式的属性访问。
+在 JavaScript 中，[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)或者使用点操作符 (.)，或者使用方括号操作符 (\[])，但是二者不能同时使用。方括号操作符允许属性名称为运算表达式的属性访问。
 
 ```js example-bad
 var obj = { foo: { bar: "baz", bar2: "baz2" } };
@@ -65,4 +65,4 @@ console.log("Hello" + "World");
 
 ## 相关页面
 
-- [属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)

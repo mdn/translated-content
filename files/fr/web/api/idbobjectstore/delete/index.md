@@ -1,12 +1,6 @@
 ---
 title: IDBObjectStore.delete()
 slug: Web/API/IDBObjectStore/delete
-tags:
-  - API
-  - IndexedDB
-  - Méthode
-  - Reference
-translation_of: Web/API/IDBObjectStore/delete
 ---
 
 {{APIRef("IndexedDB")}}
@@ -36,23 +30,23 @@ Un objet {{domxref("IDBRequest")}} qui recevra les évènements relatifs à cett
 
 Cette méthode peut lever une des exceptions suivantes :
 
-| Exception                  | Description                                                                                                                         |
-| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `TransactionInactiveError` | La transaction associée au curseur `IDBCursor` est inactive.                                                                        |
-| `ReadOnlyError`            | La transaction est uniquement en lecture seule.                                                                                     |
+| Exception                  | Description                                                                                                              |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `TransactionInactiveError` | La transaction associée au curseur `IDBCursor` est inactive.                                                             |
+| `ReadOnlyError`            | La transaction est uniquement en lecture seule.                                                                          |
 | `InvalidStateError`        | Le curseur créé avec {{domxref("IDBindex.openKeyCursor")}}, est en train d'être parcouru ou a été parcouru après sa fin. |
-| `DataError`                | La clé ou l'intervalle de clés n'est pas valide.                                                                                    |
+| `DataError`                | La clé ou l'intervalle de clés n'est pas valide.                                                                         |
 
 ## Exemples
 
-Dans l'exemple qui suit, on ouvre une transaction en lecture/écriture et on supprime un enregistrement donné grâce à `delete()`. Pour un exemple complet, voir l'application [Notifications To-do](https://github.com/mdn/to-do-notifications/) ([démonstration](https://mdn.github.io/to-do-notifications/)).
+Dans l'exemple qui suit, on ouvre une transaction en lecture/écriture et on supprime un enregistrement donné grâce à `delete()`. Pour un exemple complet, voir l'application [Notifications To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([démonstration](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // On ouvre l'accès à la base de données
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Initialisation de la base</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Initialisation de la base</li>";
 
   // On enregistre le résultat de l'ouverture
   // dans la variable db.
@@ -69,13 +63,16 @@ function deleteData() {
   var transaction = db.transaction(["toDoList"], "readwrite");
 
   // On indique le succès de la transaction
-  transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction terminée : modification de la base terminée.</li>';
+  transaction.oncomplete = function (event) {
+    note.innerHTML +=
+      "<li>Transaction terminée : modification de la base terminée.</li>";
   };
 
-
-  transaction.onerror = function(event) {
-    note.innerHTML += '<li>Transaction interrompue suite à l\'erreur : ' + transaction.error + '</li>';
+  transaction.onerror = function (event) {
+    note.innerHTML +=
+      "<li>Transaction interrompue suite à l'erreur : " +
+      transaction.error +
+      "</li>";
   };
 
   // On crée un magasin d'objets pour la transaction
@@ -84,11 +81,11 @@ function deleteData() {
   // On supprime l'enregistrement du magasin
   var objectStoreRequest = objectStore.delete("Walk dog");
 
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = function (event) {
     // On indique le succès de l'opération
-    note.innerHTML += '<li>Enregistremnt supprimé.</li>';
+    note.innerHTML += "<li>Enregistremnt supprimé.</li>";
   };
-};
+}
 ```
 
 ## Spécifications
@@ -101,10 +98,10 @@ function deleteData() {
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Initier une connexion : {{domxref("IDBDatabase")}}
 - Utiliser les transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- L'exemple de référence : [notifications de trucs à faire](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([voir la démonstration](https://mdn.github.io/to-do-notifications/))
+- L'exemple de référence : [notifications de trucs à faire](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir la démonstration](https://mdn.github.io/dom-examples/to-do-notifications/))

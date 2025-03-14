@@ -1,7 +1,6 @@
 ---
 title: TouchEvent
 slug: Web/API/TouchEvent
-translation_of: Web/API/TouchEvent
 ---
 
 {{ APIRef("Touch Events") }}
@@ -38,13 +37,14 @@ _Esta interfaz hereda propiedades de sus padres {{domxref("UIEvent")}} y {{domxr
 
 Hay varios tipos de eventos que pueden ser disparados (activados) para indicar que han ocurrido cambios relacionados con el contacto. Puede determinar cuál de estos ha ocurrido mirando la propiedad {{domxref ("event.type", "TouchEvent.type")}} del evento.
 
-> **Nota:** Es importante observar que en muchos casos, Los eventos táctiles y de mouse se envían (para permitir que el código no táctil específico aún interactúe con el usuario). Si usa eventos táctiles, debe llamar a {{domxref ("event.preventDefault ()")}} para evitar que también se envíe el evento del mouse.
+> [!NOTE]
+> Es importante observar que en muchos casos, Los eventos táctiles y de mouse se envían (para permitir que el código no táctil específico aún interactúe con el usuario). Si usa eventos táctiles, debe llamar a {{domxref ("event.preventDefault ()")}} para evitar que también se envíe el evento del mouse.
 
-### [`touchstart`](/es/docs/Web/Reference/Events/touchstart)
+### [`touchstart`](/es/docs/Web/API/Element/touchstart_event)
 
 Sent when the user places a touch point on the touch surface. The event's target will be the {{ domxref("element") }} in which the touch occurred.
 
-### [`touchend`](/es/docs/Web/Reference/Events/touchend)
+### [`touchend`](/es/docs/Web/API/Element/touchend_event)
 
 Sent when the user removes a touch point from the surface (that is, when they lift a finger or stylus from the surface). This is also sent if the touch point moves off the edge of the surface; for example, if the user's finger slides off the edge of the screen.
 
@@ -52,15 +52,16 @@ The event's target is the same {{ domxref("element") }} that received the `touch
 
 The touch point (or points) that were removed from the surface can be found in the {{ domxref("TouchList") }} specified by the `changedTouches` attribute.
 
-### [`touchmove`](/es/docs/Web/Reference/Events/touchmove)
+### [`touchmove`](/es/docs/Web/API/Element/touchmove_event)
 
 Sent when the user moves a touch point along the surface. The event's target is the same {{ domxref("element") }} that received the `touchstart` event corresponding to the touch point, even if the touch point has moved outside that element.
 
 This event is also sent if the values of the radius, rotation angle, or force attributes of a touch point change.
 
-> **Nota:** The rate at which `touchmove` events is sent is browser-specific, and may also vary depending on the capability of the user's hardware. You must not rely on a specific granularity of these events.
+> [!NOTE]
+> The rate at which `touchmove` events is sent is browser-specific, and may also vary depending on the capability of the user's hardware. You must not rely on a specific granularity of these events.
 
-### [`touchcancel`](/es/docs/Web/Reference/Events/touchcancel)
+### [`touchcancel`](/es/docs/Web/API/Element/touchcancel_event)
 
 Sent when a touch point has been disrupted in some way. There are several possible reasons why this might happen (and the exact reasons will vary from device to device, as well as browser to browser):
 
@@ -73,25 +74,25 @@ Sent when a touch point has been disrupted in some way. There are several possib
 {{SeeCompatTable}}
 
 - {{ domxref("GlobalEventHandlers.ontouchstart") }} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the [`touchstart`](/es/docs/Web/Reference/Events/touchstart) event.
+  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the [`touchstart`](/es/docs/Web/API/Element/touchstart_event) event.
 - {{ domxref("GlobalEventHandlers.ontouchend") }} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the [`touchend`](/es/docs/Web/Reference/Events/touchend) event.
+  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the [`touchend`](/es/docs/Web/API/Element/touchend_event) event.
 - {{ domxref("GlobalEventHandlers.ontouchmove") }} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the [`touchmove`](/es/docs/Web/Reference/Events/touchmove) event.
+  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the [`touchmove`](/es/docs/Web/API/Element/touchmove_event) event.
 - {{ domxref("GlobalEventHandlers.ontouchcancel") }} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the [`touchcancel`](/es/docs/Web/Reference/Events/touchcancel) event.
+  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the [`touchcancel`](/es/docs/Web/API/Element/touchcancel_event) event.
 
 ## Ejemplo
 
-See the [example on the main Touch events article](/en/DOM/Touch_events#Example).
+See the [example on the main Touch events article](/es/docs/Web/API/Touch_events#example).
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.TouchEvent")}}
+{{Compat}}
 
 ## See also
 

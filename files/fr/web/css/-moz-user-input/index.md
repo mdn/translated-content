@@ -1,12 +1,6 @@
 ---
-title: '-moz-user-input'
+title: -moz-user-input
 slug: Web/CSS/-moz-user-input
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/-moz-user-input
 ---
 
 {{Non-standard_header}}{{CSSRef}}{{Deprecated_Header(60)}}
@@ -34,9 +28,9 @@ Pour les éléments qui acceptent la saisie par défaut (ex. les élémetns {{HT
 - `none`
   - : L'élément ne réagit pas aux saisies de l'utilisateur et il ne prend jamais l'état {{cssxref(":active")}}.
 - `enabled`
-  - : L'utilisateur peut effectuer une saisie sur cet élément. Pour les boîtes de texte, c'est le comportement par défaut. **Cette valeur n'est plus prise en charge à partir de Firefox 60 (cf. {{bug(1405087)}}).**
+  - : L'utilisateur peut effectuer une saisie sur cet élément. Pour les boîtes de texte, c'est le comportement par défaut. **Cette valeur n'est plus prise en charge à partir de Firefox 60 (cf. [bug Firefox 1405087](https://bugzil.la/1405087)).**
 - `disabled`
-  - : L'utilisateur ne peut pas effectuer de saisie sur cet élément (cela n'est pas équivalent à utiliser l'attribut `disabled` avec la valeur `true` car l'élément est dessiné normalement). **Cette valeur n'est plus prise en charge à partir de Firefox 60 (cf. {{bug(1405087)}}).**
+  - : L'utilisateur ne peut pas effectuer de saisie sur cet élément (cela n'est pas équivalent à utiliser l'attribut `disabled` avec la valeur `true` car l'élément est dessiné normalement). **Cette valeur n'est plus prise en charge à partir de Firefox 60 (cf. [bug Firefox 1405087](https://bugzil.la/1405087)).**
 
 ### Syntaxe formelle
 
@@ -60,7 +54,7 @@ Cette propriété est une propriété propriétaire liée à Gecko/Mozilla et ne
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-moz-user-input")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -9,7 +9,7 @@ JavaScript 异常“_x_ is (not) _y_”在出现与期望不符的类型（通�
 
 ## 消息
 
-```
+```plain
 TypeError: Cannot read properties of undefined (reading 'x') (V8-based)
 TypeError: "x" is undefined (Firefox)
 TypeError: "undefined" is not an object (Firefox)
@@ -42,10 +42,10 @@ const foo = null;
 foo.substring(1); // TypeError: foo is null
 
 // Certain methods might require a specific type
-const foo = {}
+const foo = {};
 Symbol.keyFor(foo); // TypeError: foo is not a symbol
 
-const foo = 'bar'
+const foo = "bar";
 Object.create(foo); // TypeError: "foo" is not an object or null
 ```
 
@@ -59,7 +59,7 @@ if (foo !== undefined && foo !== null) {
 }
 ```
 
-或者，你如果能确定 `foo` 的值不会是其它的[假值](/zh-CN/docs/Glossary/Falsy)（如：`""` 或 `0`），或者排除这些情况不是问题，那你可以简单地测试其是否为真。
+或者，你如果能确定 `foo` 的值不会是其他的[假值](/zh-CN/docs/Glossary/Falsy)（如：`""` 或 `0`），或者排除这些情况不是问题，那你可以简单地测试其是否为真。
 
 ```js example-good
 if (foo) {

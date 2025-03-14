@@ -1,26 +1,19 @@
 ---
 title: Atomics.notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/notify
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/notify
 ---
 
 {{JSRef}}
 
 La méthode statique **`Atomics.notify()`** permet de réveiller des agents dormants qui sont dans la file d'attente.
 
-> **Note :** Cette opération ne fonctionne que sur un tableau typé partagé de type {{jsxref("Int32Array")}}.
+> [!NOTE]
+> Cette opération ne fonctionne que sur un tableau typé partagé de type {{jsxref("Int32Array")}}.
 
 ## Syntaxe
 
 ```js
-Atomics.notify(typedArray, index, count)
+Atomics.notify(typedArray, index, count);
 ```
 
 ### Paramètres

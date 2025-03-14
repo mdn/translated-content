@@ -1,15 +1,49 @@
 ---
 title: object-position
 slug: Web/CSS/object-position
-translation_of: Web/CSS/object-position
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS)-свойство **`object-position`** определяет выравнивание контента выбранного [замещаемого элемента](/ru/docs/Web/CSS/%D0%97%D0%B0%D0%BC%D0%B5%D1%89%D0%B0%D0%B5%D0%BC%D1%8B%D0%B9_%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82) внутри блока элемента. На областях блока, не покрытых объектом замещаемого элемента, будет отображаться фон элемента.
 
 Вы можете задавать способ подстройки собственного размера объекта замещаемого элемента (т. е., его естественного размера) под размер блока элемента, используя свойство {{cssxref("object-fit")}}.
 
-{{EmbedInteractiveExample("pages/css/object-position.html")}}
+{{InteractiveExample("CSS Demo: object-position")}}
+
+```css interactive-example-choice
+object-position: 50% 50%;
+```
+
+```css interactive-example-choice
+object-position: right top;
+```
+
+```css interactive-example-choice
+object-position: left bottom;
+```
+
+```css interactive-example-choice
+object-position: 250px 125px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/moon.jpg" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 250px;
+  width: 250px;
+  object-fit: none;
+  border: 1px solid red;
+}
+```
 
 ## Синтаксис
 
@@ -29,7 +63,8 @@ object-position: unset;
 - {{cssxref("&lt;position&gt;")}}
   - : От одного до четырёх значений, которые определяют 2D-позицию элемента. Могут использоваться как абсолютные, так и относительные значения сдвигов.
 
-> **Примечание:** Позиция может быть даже такой, что замещаемый элемент будет отрисовываться за пределами своего блока.
+> [!NOTE]
+> Позиция может быть даже такой, что замещаемый элемент будет отрисовываться за пределами своего блока.
 
 ## Формальное определение
 
@@ -45,11 +80,11 @@ object-position: unset;
 
 #### HTML
 
-Здесь мы видим HTML, содержаний два {{HTMLElement("img")}}-элемента, отображающие логотипы MDN.
+Здесь мы видим HTML, содержащий два {{HTMLElement("img")}}-элемента, отображающие логотипы MDN.
 
 ```html
-<img id="object-position-1" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/>
-<img id="object-position-2" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/>
+<img id="object-position-1" src="mdn.svg" alt="MDN Logo" />
+<img id="object-position-2" src="mdn.svg" alt="MDN Logo" />
 ```
 
 #### CSS

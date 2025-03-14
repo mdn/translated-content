@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/Function
 
 **`Function` コンストラクター**は、新しい `Function` **オブジェクト**を生成します。コンストラクターを直接呼び出すと動的に関数を生成することができますが、セキュリティや、 {{jsxref("eval")}} と似た性能の (ただし、はるかに重要性の低い) 問題を抱えます。ただし eval とは異なり、 `Function` コンストラクターはグローバルスコープで実行される関数のみを生成します。
 
-{{EmbedInteractiveExample("pages/js/function-constructor.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Function()", "shorter")}}
+
+```js interactive-example
+const sum = new Function("a", "b", "return a + b");
+
+console.log(sum(2, 6));
+// Expected output: 8
+```
 
 ## 構文
 
@@ -40,7 +47,7 @@ new Function([arg1 [, arg2 [, ...argN]] ,] functionBody)
 // この例は JavaScript コンソールで直接実行することができます
 
 // 二つの引数を取り、その合計を返す関数を生成します
-const adder = new Function('a', 'b', 'return a + b');
+const adder = new Function("a", "b", "return a + b");
 
 // 関数を呼び出します
 adder(2, 6);

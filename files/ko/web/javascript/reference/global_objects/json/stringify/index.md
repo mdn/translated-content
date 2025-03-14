@@ -1,19 +1,29 @@
 ---
 title: JSON.stringify()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
-tags:
-  - JSON
-  - JavaScript
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 ---
 
 {{JSRef}}
 
 **`JSON.stringify()`** 메서드는 JavaScript 값이나 객체를 JSON 문자열로 변환합니다. 선택적으로, `replacer`를 함수로 전달할 경우 변환 전 값을 변형할 수 있고, 배열로 전달할 경우 지정한 속성만 결과에 포함합니다.
 
-{{EmbedInteractiveExample("pages/js/json-stringify.html")}}
+{{InteractiveExample("JavaScript Demo: JSON.stringify()")}}
+
+```js interactive-example
+console.log(JSON.stringify({ x: 5, y: 6 }));
+// Expected output: '{"x":5,"y":6}'
+
+console.log(
+  JSON.stringify([new Number(3), new String("false"), new Boolean(false)]),
+);
+// Expected output: '[3,"false",false]'
+
+console.log(JSON.stringify({ x: [10, undefined, function () {}, Symbol("")] }));
+// Expected output: '{"x":[10,null,null,null]}'
+
+console.log(JSON.stringify(new Date(2006, 0, 2, 15, 4, 5)));
+// Expected output: '"2006-01-02T15:04:05.000Z"'
+```
 
 ## 구문
 
@@ -49,36 +59,41 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 - 열거 불가능한 속성들은 무시된다.
 
 ```js
-JSON.stringify({});                  // '{}'
-JSON.stringify(true);                // 'true'
-JSON.stringify('foo');               // '"foo"'
-JSON.stringify([1, 'false', false]); // '[1,"false",false]'
-JSON.stringify({ x: 5 });            // '{"x":5}'
+JSON.stringify({}); // '{}'
+JSON.stringify(true); // 'true'
+JSON.stringify("foo"); // '"foo"'
+JSON.stringify([1, "false", false]); // '[1,"false",false]'
+JSON.stringify({ x: 5 }); // '{"x":5}'
 
-JSON.stringify(new Date(2006, 0, 2, 15, 4, 5))
+JSON.stringify(new Date(2006, 0, 2, 15, 4, 5));
 // '"2006-01-02T15:04:05.000Z"'
 
 JSON.stringify({ x: 5, y: 6 });
 // '{"x":5,"y":6}' or '{"y":6,"x":5}'
-JSON.stringify([new Number(1), new String('false'), new Boolean(false)]);
+JSON.stringify([new Number(1), new String("false"), new Boolean(false)]);
 // '[1,"false",false]'
 
 // Symbols:
-JSON.stringify({ x: undefined, y: Object, z: Symbol('') });
+JSON.stringify({ x: undefined, y: Object, z: Symbol("") });
 // '{}'
-JSON.stringify({ [Symbol('foo')]: 'foo' });
+JSON.stringify({ [Symbol("foo")]: "foo" });
 // '{}'
-JSON.stringify({ [Symbol.for('foo')]: 'foo' }, [Symbol.for('foo')]);
+JSON.stringify({ [Symbol.for("foo")]: "foo" }, [Symbol.for("foo")]);
 // '{}'
-JSON.stringify({ [Symbol.for('foo')]: 'foo' }, function(k, v) {
-  if (typeof k === 'symbol') {
-    return 'a symbol';
+JSON.stringify({ [Symbol.for("foo")]: "foo" }, function (k, v) {
+  if (typeof k === "symbol") {
+    return "a symbol";
   }
 });
 // '{}'
 
 // Non-enumerable properties:
-JSON.stringify( Object.create(null, { x: { value: 'x', enumerable: false }, y: { value: 'y', enumerable: true } }) );
+JSON.stringify(
+  Object.create(null, {
+    x: { value: "x", enumerable: false },
+    y: { value: "y", enumerable: true },
+  }),
+);
 // '{"y":"y"}'
 ```
 
@@ -104,7 +119,13 @@ function replacer(key, value) {
   return value;
 }
 
-var foo = {foundation: "Mozilla", model: "box", week: 45, transport: "car", month: 7};
+var foo = {
+  foundation: "Mozilla",
+  model: "box",
+  week: 45,
+  transport: "car",
+  month: 7,
+};
 var jsonString = JSON.stringify(foo, replacer);
 ```
 
@@ -115,7 +136,7 @@ JSON 문자열 결과는 `{"week":45,"month":7}` 이다.
 `replacer` 가 배열인 경우, 그 배열의 값은 JSON 문자열의 결과에 포함되는 속성의 이름을 나타낸다.
 
 ```js
-JSON.stringify(foo, ['week', 'month']);
+JSON.stringify(foo, ["week", "month"]);
 // '{"week":45,"month":7}', 단지 "week" 와 "month" 속성을 포함한다
 ```
 
@@ -124,7 +145,7 @@ JSON.stringify(foo, ['week', 'month']);
 `space` 매개변수는 최종 문자열의 간격을 제어한다. 숫자일 경우 최대 10자 만큼의 공백 문자 크기로 들여쓰기되며, 문자열인 경우 해당 문자열 또는 처음 10자 만큼 들여쓰기 된다.
 
 ```js
-JSON.stringify({ a: 2 }, null, ' ');
+JSON.stringify({ a: 2 }, null, " ");
 // '{
 //  "a": 2
 // }'
@@ -133,7 +154,7 @@ JSON.stringify({ a: 2 }, null, ' ');
 '\t'를 사용하면 일반적으로 들여쓰기 된 코드스타일과 유사함.
 
 ```js
-JSON.stringify({ uno: 1, dos: 2 }, null, '\t');
+JSON.stringify({ uno: 1, dos: 2 }, null, "\t");
 // returns the string:
 // '{
 //     "uno": 1,
@@ -147,12 +168,12 @@ If an object being stringified has a property named `toJSON` whose value is a fu
 
 ```js
 var obj = {
-  foo: 'foo',
-  toJSON: function() {
-    return 'bar';
-  }
+  foo: "foo",
+  toJSON: function () {
+    return "bar";
+  },
 };
-JSON.stringify(obj);        // '"bar"'
+JSON.stringify(obj); // '"bar"'
 JSON.stringify({ x: obj }); // '{"x":"bar"}'
 ```
 
@@ -160,35 +181,36 @@ JSON.stringify({ x: obj }); // '{"x":"bar"}'
 
 In a case where you want to store an object created by your user and allowing it to be restored even after the browser has been closed, the following example is a model for the applicability of `JSON.stringify()`:
 
-> **경고:** Functions are not a valid JSON data type so they will not work. However, they can be displayed if first converted to a string (e.g. in the replacer), via the function's toString method. Also, some objects like {{jsxref("Date")}} will be a string after {{jsxref("JSON.parse()")}}.
+> [!WARNING]
+> Functions are not a valid JSON data type so they will not work. However, they can be displayed if first converted to a string (e.g. in the replacer), via the function's toString method. Also, some objects like {{jsxref("Date")}} will be a string after {{jsxref("JSON.parse()")}}.
 
 ```js
 // Creating an example of JSON
 var session = {
-  'screens': [],
-  'state': true
+  screens: [],
+  state: true,
 };
-session.screens.push({ 'name': 'screenA', 'width': 450, 'height': 250 });
-session.screens.push({ 'name': 'screenB', 'width': 650, 'height': 350 });
-session.screens.push({ 'name': 'screenC', 'width': 750, 'height': 120 });
-session.screens.push({ 'name': 'screenD', 'width': 250, 'height': 60 });
-session.screens.push({ 'name': 'screenE', 'width': 390, 'height': 120 });
-session.screens.push({ 'name': 'screenF', 'width': 1240, 'height': 650 });
+session.screens.push({ name: "screenA", width: 450, height: 250 });
+session.screens.push({ name: "screenB", width: 650, height: 350 });
+session.screens.push({ name: "screenC", width: 750, height: 120 });
+session.screens.push({ name: "screenD", width: 250, height: 60 });
+session.screens.push({ name: "screenE", width: 390, height: 120 });
+session.screens.push({ name: "screenF", width: 1240, height: 650 });
 
 // Converting the JSON string with JSON.stringify()
 // then saving with localStorage in the name of session
-localStorage.setItem('session', JSON.stringify(session));
+localStorage.setItem("session", JSON.stringify(session));
 
 // Example of how to transform the String generated through
 // JSON.stringify() and saved in localStorage in JSON object again
-var restoredSession = JSON.parse(localStorage.getItem('session'));
+var restoredSession = JSON.parse(localStorage.getItem("session"));
 
 // Now restoredSession variable contains the object that was saved
 // in localStorage
 console.log(restoredSession);
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

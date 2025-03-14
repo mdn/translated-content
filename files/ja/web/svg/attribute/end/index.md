@@ -31,7 +31,7 @@ slug: Web/SVG/Attribute/end
 `<end-value-list>` は値のセミコロン区切りのリストです。それぞれの値は以下のうちの 1 つです。
 
 - `<offset-value>`
-  - : この値は時点を表す [clock-value](/ja/docs/Web/SVG/Content_type#Clock-value) を、 SVG 文書の始まり (通常は {{domxref("SVGElement/load_event", "load")}} または {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} イベント) からの相対で定義します。負の数も有効です。
+  - : この値は時点を表す [clock-value](/ja/docs/Web/SVG/Content_type#clock-value) を、 SVG 文書の始まり (通常は {{domxref("SVGElement/load_event", "load")}} または {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} イベント) からの相対で定義します。負の数も有効です。
 - `<syncbase-value>`
   - : この値は _syncbase_ と、任意でその _syncbase_ からのオフセットを定義します。要素のアニメーションの終了時刻は、他のアニメーションの開始またはアクティブ状態の終了からの相対で定義します。
     有効な syncbase-value は、他のアニメーション要素への ID による参照にドット、そして `begin` または `end` が続き、参照先のアニメーション要素の開始とアクティブ状態の終了のどちらと同期するかを識別します。 `<offset-value>` で定義される任意のオフセット値を追加することができます。
@@ -55,42 +55,57 @@ slug: Web/SVG/Attribute/end
 ### オフセットの例
 
 ```html
-<svg width="120" height="120"  viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1">
+  <!-- animated rectangles -->
+  <rect x="10" y="35" height="15" width="0">
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      to="100"
+      begin="0s"
+      end="8s"
+      fill="freeze" />
+  </rect>
 
-    <!-- animated rectangles -->
-    <rect x="10" y="35" height="15" width="0">
-        <animate attributeType="XML" attributeName="width" to="100"
-                 begin="0s" end="8s"
-                 fill="freeze" />
-    </rect>
+  <rect x="10" y="60" height="15" width="0">
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      to="75"
+      begin="0s"
+      end="6s"
+      fill="freeze" />
+  </rect>
 
-    <rect x="10" y="60" height="15" width="0">
-        <animate attributeType="XML" attributeName="width" to="75"
-                 begin="0s" end="6s"
-                 fill="freeze" />
-    </rect>
+  <rect x="10" y="85" height="15" width="0">
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      to="50"
+      begin="0s"
+      end="4s"
+      fill="freeze" />
+  </rect>
 
-    <rect x="10" y="85" height="15" width="0">
-        <animate attributeType="XML" attributeName="width" to="50"
-                 begin="0s" end="4s"
-                 fill="freeze" />
-    </rect>
+  <!-- grid -->
+  <text x="10" y="20" text-anchor="middle">0s</text>
+  <line x1="10" y1="25" x2="10" y2="105" stroke="grey" stroke-width=".5" />
+  <text x="35" y="20" text-anchor="middle">2s</text>
+  <line x1="35" y1="25" x2="35" y2="105" stroke="grey" stroke-width=".5" />
+  <text x="60" y="20" text-anchor="middle">4s</text>
+  <line x1="60" y1="25" x2="60" y2="105" stroke="grey" stroke-width=".5" />
+  <text x="85" y="20" text-anchor="middle">6s</text>
+  <line x1="85" y1="25" x2="85" y2="105" stroke="grey" stroke-width=".5" />
+  <text x="110" y="20" text-anchor="middle">8s</text>
+  <line x1="110" y1="25" x2="110" y2="105" stroke="grey" stroke-width=".5" />
 
-    <!-- grid -->
-    <text x="10" y="20" text-anchor="middle">0s</text>
-    <line x1="10" y1="25" x2="10" y2="105" stroke="grey" stroke-width=".5" />
-    <text x="35" y="20" text-anchor="middle">2s</text>
-    <line x1="35" y1="25" x2="35" y2="105" stroke="grey" stroke-width=".5" />
-    <text x="60" y="20" text-anchor="middle">4s</text>
-    <line x1="60" y1="25" x2="60" y2="105" stroke="grey" stroke-width=".5" />
-    <text x="85" y="20" text-anchor="middle">6s</text>
-    <line x1="85" y1="25" x2="85" y2="105" stroke="grey" stroke-width=".5" />
-    <text x="110" y="20" text-anchor="middle">8s</text>
-    <line x1="110" y1="25" x2="110" y2="105" stroke="grey" stroke-width=".5" />
-
-    <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
-    <line x1="10" y1="105" x2="110" y2="105" stroke="grey" stroke-width=".5" />
+  <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
+  <line x1="10" y1="105" x2="110" y2="105" stroke="grey" stroke-width=".5" />
 </svg>
 ```
 
@@ -99,39 +114,58 @@ slug: Web/SVG/Attribute/end
 ### イベントの例
 
 ```html
-<svg width="120" height="120"  viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg" version="1.1"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- animated rectangle -->
+  <rect x="10" y="35" height="15" width="0">
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      from="0"
+      to="100"
+      begin="0s"
+      end="endButton.click"
+      dur="8s"
+      repeatCount="indefinite"
+      fill="freeze" />
+  </rect>
 
-    <!-- animated rectangle -->
-    <rect x="10" y="35" height="15" width="0">
-        <animate attributeType="XML" attributeName="width" from="0" to="100"
-                 begin="0s" end="endButton.click" dur="8s"
-                 repeatCount="indefinite" fill="freeze" />
-    </rect>
+  <!-- trigger -->
+  <rect
+    id="endButton"
+    style="cursor:pointer;"
+    x="19.5"
+    y="62.5"
+    rx="5"
+    height="25"
+    width="80"
+    fill="#EFEFEF"
+    stroke="black"
+    stroke-width="1" />
 
-    <!-- trigger -->
-    <rect id="endButton" style="cursor:pointer;"
-          x="19.5" y="62.5" rx="5" height="25" width="80"
-          fill="#EFEFEF" stroke="black" stroke-width="1" />
+  <text x="60" y="80" text-anchor="middle" style="pointer-events:none;">
+    Click me.
+  </text>
 
-    <text x="60" y="80" text-anchor="middle"
-          style="pointer-events:none;">Click me.</text>
+  <!-- grid -->
+  <text x="10" y="20" text-anchor="middle">0s</text>
+  <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="35" y="20" text-anchor="middle">2s</text>
+  <line x1="35" y1="25" x2="35" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="60" y="20" text-anchor="middle">4s</text>
+  <line x1="60" y1="25" x2="60" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="85" y="20" text-anchor="middle">6s</text>
+  <line x1="85" y1="25" x2="85" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="110" y="20" text-anchor="middle">8s</text>
+  <line x1="110" y1="25" x2="110" y2="55" stroke="grey" stroke-width=".5" />
 
-    <!-- grid -->
-    <text x="10" y="20" text-anchor="middle">0s</text>
-    <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
-    <text x="35" y="20" text-anchor="middle">2s</text>
-    <line x1="35" y1="25" x2="35" y2="55" stroke="grey" stroke-width=".5" />
-    <text x="60" y="20" text-anchor="middle">4s</text>
-    <line x1="60" y1="25" x2="60" y2="55" stroke="grey" stroke-width=".5" />
-    <text x="85" y="20" text-anchor="middle">6s</text>
-    <line x1="85" y1="25" x2="85" y2="55" stroke="grey" stroke-width=".5" />
-    <text x="110" y="20" text-anchor="middle">8s</text>
-    <line x1="110" y1="25" x2="110" y2="55" stroke="grey" stroke-width=".5" />
-
-    <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
-    <line x1="10" y1="55" x2="110" y2="55" stroke="grey" stroke-width=".5" />
+  <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
+  <line x1="10" y1="55" x2="110" y2="55" stroke="grey" stroke-width=".5" />
 </svg>
 ```
 
@@ -140,35 +174,46 @@ slug: Web/SVG/Attribute/end
 ### アクセスキーの例
 
 ```html
-<svg width="120" height="120"  viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg" version="1.1"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- animated rectangles -->
+  <rect x="10" y="35" height="15" width="0">
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      from="0"
+      to="100"
+      begin="0s"
+      end="accessKey(e)"
+      dur="8s"
+      repeatCount="indefinite"
+      fill="freeze" />
+  </rect>
 
-    <!-- animated rectangles -->
-    <rect x="10" y="35" height="15" width="0">
-        <animate attributeType="XML" attributeName="width" from="0" to="100"
-                 begin="0s" end="accessKey(e)" dur="8s"
-                 repeatCount="indefinite" fill="freeze" />
-    </rect>
+  <!-- trigger -->
+  <text x="60" y="80" text-anchor="middle" style="pointer-events:none;">
+    Hit the "s" key
+  </text>
 
-    <!-- trigger -->
-    <text x="60" y="80" text-anchor="middle"
-          style="pointer-events:none;">Hit the "s" key</text>
+  <!-- grid -->
+  <text x="10" y="20" text-anchor="middle">0s</text>
+  <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="35" y="20" text-anchor="middle">2s</text>
+  <line x1="35" y1="25" x2="35" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="60" y="20" text-anchor="middle">4s</text>
+  <line x1="60" y1="25" x2="60" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="85" y="20" text-anchor="middle">6s</text>
+  <line x1="85" y1="25" x2="85" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="110" y="20" text-anchor="middle">8s</text>
+  <line x1="110" y1="25" x2="110" y2="55" stroke="grey" stroke-width=".5" />
 
-    <!-- grid -->
-    <text x="10" y="20" text-anchor="middle">0s</text>
-    <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
-    <text x="35" y="20" text-anchor="middle">2s</text>
-    <line x1="35" y1="25" x2="35" y2="55" stroke="grey" stroke-width=".5" />
-    <text x="60" y="20" text-anchor="middle">4s</text>
-    <line x1="60" y1="25" x2="60" y2="55" stroke="grey" stroke-width=".5" />
-    <text x="85" y="20" text-anchor="middle">6s</text>
-    <line x1="85" y1="25" x2="85" y2="55" stroke="grey" stroke-width=".5" />
-    <text x="110" y="20" text-anchor="middle">8s</text>
-    <line x1="110" y1="25" x2="110" y2="55" stroke="grey" stroke-width=".5" />
-
-    <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
-    <line x1="10" y1="55" x2="110" y2="55" stroke="grey" stroke-width=".5" />
+  <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
+  <line x1="10" y1="55" x2="110" y2="55" stroke="grey" stroke-width=".5" />
 </svg>
 ```
 
@@ -179,4 +224,3 @@ _この例は iFrame に埋め込まれています。キーイベントを有�
 ## 仕様書
 
 {{Specifications}}
-

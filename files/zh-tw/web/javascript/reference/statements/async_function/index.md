@@ -44,13 +44,12 @@ async 函式內部可以使用 {{jsxref("Operators/await", "await")}} 表達式�
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
   });
 }
-
 
 async function add1(x) {
   const a = await resolveAfter2Seconds(20);
@@ -58,23 +57,23 @@ async function add1(x) {
   return x + a + b;
 }
 
-add1(10).then(v => {
-  console.log(v);  // prints 60 after 4 seconds.
+add1(10).then((v) => {
+  console.log(v); // prints 60 after 4 seconds.
 });
-
 
 async function add2(x) {
   const p_a = resolveAfter2Seconds(20);
   const p_b = resolveAfter2Seconds(30);
-  return x + await p_a + await p_b;
+  return x + (await p_a) + (await p_b);
 }
 
-add2(10).then(v => {
-  console.log(v);  // prints 60 after 2 seconds.
+add2(10).then((v) => {
+  console.log(v); // prints 60 after 2 seconds.
 });
 ```
 
-> **警告：** 不要誤解 `Promise.all` 的 `await`
+> [!WARNING]
+> 不要誤解 `Promise.all` 的 `await`
 >
 > 在 `add1` 裡，該執行為了第一個 `await` 而暫停了兩秒，接著為了第二個 `await` 又暫停了兩秒。在第一個計時器（timer）被觸發前，第二個計時器並不會被建立。而在 `add2` 裡，兩個計時器都被建立起來、也都執行 `await` 過了。這把它帶往了 resolve 所的 2 秒暫停、而不是 4 秒暫停。然而這兩個 `await` 呼叫都在連續運行，而非平行運行。`await` **並不是** `Promise.all` 的自動程式。如果你想讓兩個、甚至兩個以上的 `await` promises 同時執行（in parallel），你必須使用 `Promise.all`.
 
@@ -85,10 +84,10 @@ add2(10).then(v => {
 ```js
 function getProcessedData(url) {
   return downloadData(url) // returns a promise
-    .catch(e => {
+    .catch((e) => {
       return downloadFallbackData(url); // returns a promise
     })
-    .then(v => {
+    .then((v) => {
       return processDataInWorker(v); // returns a promise
     });
 }
@@ -101,7 +100,7 @@ async function getProcessedData(url) {
   let v;
   try {
     v = await downloadData(url);
-  } catch(e) {
+  } catch (e) {
     v = await downloadFallbackData(url);
   }
   return processDataInWorker(v);
@@ -123,4 +122,4 @@ async function getProcessedData(url) {
 - {{jsxref("Operators/async_function", "async function expression")}}
 - {{jsxref("AsyncFunction")}} 物件
 - {{jsxref("Operators/await", "await")}}
-- ["Decorating Async Javascript Functions" on "innolitics.com"](http://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/)
+- ["Decorating Async Javascript Functions" on "innolitics.com"](https://innolitics.com/articles/javascript-decorators-for-promise-returning-functions/)

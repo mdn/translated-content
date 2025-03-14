@@ -9,7 +9,7 @@ O **método HTTP `POST`** envia dados ao servidor. O tipo do corpo da solicitaç
 
 A diferença entre `PUT` e {{HTTPMethod("POST")}} é que `PUT` é idempotente: chamá-lo uma vez ou várias vezes sucessivamente tem o mesmo efeito (ou seja, nenhum efeito colateral), onde sucessivos POST idênticos podem ter efeitos adicionais, assim como passando uma ordem várias vezes.
 
-Uma solicitação `POST` geralmente é enviada por meio de um [formulário HTML](/pt-BR/docs/Web/Guide/HTML/Forms) e resulta em uma alteração no servidor. Nesse caso, o tipo de conteúdo é selecionado colocando a string adequada no atributo {{htmlattrxref("enctype", "form")}} do elemento {{HTMLElement("form")}} ou o atributo {{htmlattrxref("formenctype", "input")}} dos elementos {{HTMLElement("input")}} ou {{HTMLElement("button")}}:
+Uma solicitação `POST` geralmente é enviada por meio de um [formulário HTML](/pt-BR/docs/Learn/Forms) e resulta em uma alteração no servidor. Nesse caso, o tipo de conteúdo é selecionado colocando a string adequada no atributo [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) do elemento {{HTMLElement("form")}} ou o atributo [`formenctype`](/pt-BR/docs/Web/HTML/Element/input#formenctype) dos elementos {{HTMLElement("input")}} ou {{HTMLElement("button")}}:
 
 - `application/x-www-form-urlencoded`: as chaves e valores são codificados em tuplas de valor-chave separadas por `'&'`, com um `'='` entre a chave e o valor. Caracteres não alfanuméricos em chaves e valores são {{glossary ("percent-encoding", "percent encoded")}}: este é o motivo pelo qual esse tipo não é adequado para uso com dados binários (ao invés disso, use `multipart/form-data`)
 - `multipart/form-data`
@@ -77,7 +77,7 @@ POST /index.html
 
 Um simples formulário utilizando o padrão _content type_ `application/x-www-form-urlencoded`:
 
-```html
+```http
 POST / HTTP/1.1
 Host: foo.com
 Content-Type: application/x-www-form-urlencoded
@@ -88,7 +88,7 @@ say=Hi&to=Mom
 
 Um formulário utilizando o _content type_ `multipart/form-data`:
 
-```
+```http
 POST /test.html HTTP/1.1
 Host: example.org
 Content-Type: multipart/form-data;boundary="boundary"
@@ -105,13 +105,13 @@ value2
 
 ## Especificações
 
-| Especificação                                | Título                                                        |
-| -------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                    | Título                                                        |
+| -------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "POST", "4.3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.methods.POST")}}
+{{Compat}}
 
 ## Veja também
 

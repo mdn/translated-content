@@ -1,33 +1,26 @@
 ---
-title: HTMLHyperlinkElementUtils.protocol
+title: "HTMLAnchorElement: свойство protocol"
 slug: Web/API/HTMLAnchorElement/protocol
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/protocol
-original_slug: Web/API/HTMLHyperlinkElementUtils/protocol
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ApiRef("URL API")}}
+{{APIRef("HTML DOM")}}
 
-Свойство **`HTMLHyperlinkElementUtils.protocol`** – это {{domxref("USVString")}}, содержащий протокол URL включая `':'` в конце.
+Свойство **`HTMLAnchorElement.protocol`** — это строка, представляющая схему протокола URL, включая завершающий символ `':'`.
 
-## Синтаксис
+## Значение
 
-```
-string = object.protocol;
-object.protocol = string;
-```
+Строка.
 
 ## Примеры
 
+### Получение протокола из ссылки
+
 ```js
-// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils.protocol">
-var anchor = document.getElementByID("myAnchor");
-var result = anchor.protocol; // Вернёт: 'https:'
+// Документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLAnchorElement">
+const anchor = document.getElementByID("myAnchor");
+anchor.protocol; // 'https:'
 ```
 
 ## Спецификации
@@ -40,4 +33,4 @@ var result = anchor.protocol; // Вернёт: 'https:'
 
 ## Смотрите также
 
-- Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.
+- Интерфейс {{domxref("HTMLAnchorElement")}}.

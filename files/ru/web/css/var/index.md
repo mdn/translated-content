@@ -1,26 +1,47 @@
 ---
 title: var()
 slug: Web/CSS/var
-tags:
-  - CSS
-  - CSS Custom Properties
-  - CSS Function
-  - CSS Variables
-  - Experimental
-  - Function
-  - Reference
-  - Variables
-  - var
-  - var()
-original_slug: Web/CSS/var()
-browser-compat: css.properties.custom-property.var
 ---
 
 {{CSSRef}}
 
 [Функция](/ru/docs/Web/CSS/CSS_Functions) [CSS](/ru/docs/Web/CSS) **`var()`** используется для вставки значения [кастомного свойства](/ru/docs/Web/CSS/--*) (также известного как "CSS-переменная") в другое свойство.
 
-{{EmbedInteractiveExample("pages/css/var.html")}}
+{{InteractiveExample("CSS Demo: var()")}}
+
+```css interactive-example-choice
+border-color: var(--color-a);
+```
+
+```css interactive-example-choice
+border-color: var(--color-b);
+```
+
+```css interactive-example-choice
+border-color: var(--color-c);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element">
+    Three color options have been set on the :root use these to change the
+    border color.
+  </div>
+</section>
+```
+
+```css interactive-example
+:root {
+  --color-a: pink;
+  --color-b: green;
+  --color-c: rebeccapurple;
+}
+
+#example-element {
+  border: 10px solid #000;
+  padding: 10px;
+}
+```
 
 Функцию `var()` нельзя использовать в именах свойств, селекторах или где-либо ещё, кроме как в качестве значений для свойств.
 
@@ -30,7 +51,8 @@ browser-compat: css.properties.custom-property.var
 
 {{csssyntax}}
 
-> **Примечание:** синтаксис резервного значения, как и синтаксис кастомного свойств, допускает использование запятых. Например, `var(--foo, red, blue)` задаёт резервное значение `red, blue`; таким образом всё, что находится между первой запятой и закрывающей скобкой, считается резервным значением.
+> [!NOTE]
+> Синтаксис резервного значения, как и синтаксис кастомного свойств, допускает использование запятых. Например, `var(--foo, red, blue)` задаёт резервное значение `red, blue`; таким образом всё, что находится между первой запятой и закрывающей скобкой, считается резервным значением.
 
 ### Значения
 
@@ -59,7 +81,10 @@ body {
 /* Резервное значение */
 /* Стили для элементов компонента: */
 .component .header {
-  color: var(--header-color, blue); /* header-color не существует, поэтому используется blue */
+  color: var(
+    --header-color,
+    blue
+  ); /* header-color не существует, поэтому используется blue */
 }
 
 .component .text {
@@ -76,7 +101,7 @@ body {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

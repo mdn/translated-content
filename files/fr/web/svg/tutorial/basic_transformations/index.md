@@ -1,13 +1,9 @@
 ---
 title: Transformations de base
 slug: Web/SVG/Tutorial/Basic_Transformations
-tags:
-  - Intermediate
-  - SVG
-  - SVG:Tutoriel
-translation_of: Web/SVG/Tutorial/Basic_Transformations
-original_slug: Web/SVG/Tutoriel/Transformations_de_base
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutoriel/Texts", "Web/SVG/Tutoriel/Découpages_et_masquages") }}
 
@@ -17,10 +13,10 @@ Maintenant, nous sommes prêts à tordre nos images dans tous les sens. Mais ava
 
 ```html
 <svg width="30" height="10">
-    <g fill="red">
-        <rect x="0" y="0" width="10" height="10" />
-        <rect x="20" y="0" width="10" height="10" />
-    </g>
+  <g fill="red">
+    <rect x="0" y="0" width="10" height="10" />
+    <rect x="20" y="0" width="10" height="10" />
+  </g>
 </svg>
 ```
 
@@ -34,7 +30,7 @@ Il peut être nécessaire de décaler un élément, même s'il est possible de d
 
 ```html
 <svg width="40" height="50" style="background-color:#bff;">
-    <rect x="0" y="0" width="10" height="10" transform="translate(30,40)" />
+  <rect x="0" y="0" width="10" height="10" transform="translate(30,40)" />
 </svg>
 ```
 
@@ -50,7 +46,7 @@ Appliquer une rotation à un élément est assez simple : il suffit d'utiliser l
 
 ```html
 <svg width="31" height="31">
-    <rect x="12" y="-10" width="20" height="20" transform="rotate(45)" />
+  <rect x="12" y="-10" width="20" height="20" transform="rotate(45)" />
 </svg>
 ```
 
@@ -64,7 +60,12 @@ Les transformations peuvent être concaténées, séparées par des espaces. Par
 
 ```html
 <svg width="40" height="50" style="background-color:#bff;">
-    <rect x="0" y="0" width="10" height="10" transform="translate(30,40) rotate(45)" />
+  <rect
+    x="0"
+    y="0"
+    width="10"
+    height="10"
+    transform="translate(30,40) rotate(45)" />
 </svg>
 ```
 
@@ -86,7 +87,7 @@ Toutes les transformations détaillées ci-dessous peuvent être décrites dans 
 
 <math display="block"><semantics><mrow><mo>{</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>new</mi><mi></mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>=</mo><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prev</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prev</mi><mi></mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>e</mi></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>new</mi><mi></mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>=</mo><mi>b</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prev</mi><mi></mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prev</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>f</mi></mtd></mtr></mtable></mrow><annotation encoding="TeX">\left\{ \begin{matrix} x*{\mathrm{prevCoordSys}} = a x*{\mathrm{newCoordSys}} + c y*{\mathrm{newCoordSys}} + e \\ y*{\mathrm{prevCoordSys}} = b x*{\mathrm{newCoordSys}} + d y*{\mathrm{newCoordSys}} + f \end{matrix} \right.</annotation></semantics></math>
 
-Voici un [exemple concret sur la documentation de transformation SVG](/fr/docs/Web/SVG/Attribute/transform#General_Transformation). Pour plus de renseignements, veuillez vous référer à [la page de recommandation SVG](http://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined).
+Voici un [exemple concret sur la documentation de transformation SVG](/fr/docs/Web/SVG/Attribute/transform#general_transformation). Pour plus de renseignements, veuillez vous référer à [la page de recommandation SVG](https://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined).
 
 ## Effets sur les systèmes de coordonnées
 

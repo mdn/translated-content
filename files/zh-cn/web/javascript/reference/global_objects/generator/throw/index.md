@@ -1,54 +1,67 @@
 ---
 title: Generator.prototype.throw()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
+l10n:
+  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
 {{JSRef}}
 
-**`throw()`** 方法用来向生成器抛出异常，并恢复生成器的执行，返回带有 `done` 及 `value` 两个属性的对象。
+{{jsxref("Generator")}} 实例的 **`throw()`** 方法的作用就好像一个 `throw` 语句被插入到生成器主体的当前暂停位置，这会通知生成器错误的情况并允许其处理错误，或者执行清理和自行关闭。
 
 ## 语法
 
-```plain
-gen.throw(exception)
+```js-nolint
+generatorInstance.throw(exception)
 ```
 
 ### 参数
 
 - `exception`
-  - : 用于抛出的异常。使用 {{jsxref("Error")}} 的实例对调试非常有帮助。
+  - : 要抛出的异常。使用 {{jsxref("Error")}} 实例对调试非常有帮助。
 
 ### 返回值
 
-带有两个属性的{{jsxref("Object", "对象")}}：
+如果抛出的异常被 [`try...catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 捕获并且生成器恢复生成更多的值，它将返回一个 {{jsxref("Object")}}，带有两个属性：
 
-- `done` (boolean)
+- `done`
+  - : 一个布尔值：
+    - 如果该生成器函数的控制流程已经结束，则为 `true`。
+    - 如果该生成器函数还能产生更多的值，则为 `false`。
+- `value`
+  - : 下一个 `yeild` 表达式生成的值。
 
-  - 如果迭代器已经返回了迭代序列的末尾，则值为 `true`。在这种情况下，可以指定迭代器 `value` 的返回值。
-  - 如果迭代能够继续生产在序列中的下一个值，则值为 `false`。这相当与不指定 done 属性的值。
+### 异常
 
-- `value` - 迭代器返回的任何 JavaScript 值。当 done 是 true 的时候可以省略。
+如果抛出的错误没有被 `try...catch` 捕获，则传给 `throw()` 的 `exception` 将从生成器函数中抛出。
+
+## 描述
+
+`throw()` 方法在被调用时，可以看作是在生成器主体当前暂停的位置插入了一个 `throw exception;` 语句，其中 `exception` 是传入给 `throw()` 方法的异常。因此，在典型的流程中，调用 `throw(exception)` 将会导致生成器抛出异常。然而，如果 `yield` 表达式被包含在 `try...finally` 块中，错误可能会被捕获，并且控制流可以在错误处理后恢复，或者正常退出。
 
 ## 示例
 
-### 使用 `throw()`
+### 使用 throw()
 
-下面的例子展示了一个简单的生成器并使用 throw 方法向该生成器抛出一个异常，该异常通常可以通过 [`try...catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 块进行捕获。
+以下示例展示了一个简单生成器和使用 `throw` 方法抛出的错误。像往常一样，错误可以通过 {{jsxref("Statements/try...catch", "try...catch")}} 块捕获。
 
 ```js
 function* gen() {
-  while(true) {
+  while (true) {
     try {
-       yield 42;
-    } catch(e) {
-      console.log("Error caught!");
+      yield 42;
+    } catch (e) {
+      console.log("捕获到错误！");
     }
   }
 }
 
-var g = gen();
-g.next(); // { value: 42, done: false }
-g.throw(new Error("Something went wrong")); // "Error caught!"
+const g = gen();
+g.next();
+// { value: 42, done: false }
+g.throw(new Error("出现了些问题"));
+// "捕获到错误！"
+// { value: 42, done: false }
 ```
 
 ## 规范
@@ -59,6 +72,6 @@ g.throw(new Error("Something went wrong")); // "Error caught!"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)
+- {{jsxref("Statements/function*", "function*")}}

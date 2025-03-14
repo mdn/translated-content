@@ -1,7 +1,6 @@
 ---
 title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
-translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 ---
 
 {{JSRef}}
@@ -11,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 ## 문법
 
 ```js
-str.match(regexp)
+str.match(regexp);
 ```
 
 ### 매개변수
@@ -42,7 +41,7 @@ str.match(regexp)
 다음 예제에서는, `match()`를 사용하여 `'Chapter'` 라는 단어와 그에 이어지는 1 이상의 숫자, 그리고 그에 이어서 소숫점, 숫자 형태가 반복되는 문자열을 찾는다. 이 정규표현식은 i 플래그를 사용함으로써, 대소문자 구분 없이 찾고자 하는 문자열을 찾는다.
 
 ```js
-var str = 'For more information, see Chapter 3.4.5.1';
+var str = "For more information, see Chapter 3.4.5.1";
 var re = /see (chapter \d+(\.\d)*)/i;
 var found = str.match(re);
 
@@ -66,7 +65,7 @@ console.log(found);
 다음 예제는 글로벌(g) 및 대/소문자 무시(i) 플래그를 사용하여 `match()`를 사용하는 방법을 보여준다. A부터 E 까지의 모든 문자와 a부터 e 까지의 모든 문자가 배열의 각 원소를 구성하는 형태로 반환된다.
 
 ```js
-var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 var regexp = /[A-E]/gi;
 var matches_array = str.match(regexp);
 
@@ -79,7 +78,7 @@ console.log(matches_array);
 ```js
 var str = "Nothing will come of nothing.";
 
-str.match();   // returns [""]
+str.match(); // returns [""]
 ```
 
 ### 정규표현식이 아닌 객체를 매개변수로 사용하기
@@ -87,17 +86,18 @@ str.match();   // returns [""]
 매개변수가 문자열이나 숫자(Number)이면, 해당 매개변수는 내부적으로 new RegExp(obj)를 사용하여 {{jsxref("RegExp")}}로 변환된다. 만약 매개변수가 플러스 기호와 이어지는 숫자형이라면, RegExp() 매서드는 플러스 기호를 무시한다.
 
 ```js
-var str1 = "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.",
-    str2 = "My grandfather is 65 years old and My grandmother is 63 years old.",
-    str3 = "The contract was declared null and void.";
-str1.match("number");   // "number"는 문자열임. ["number"]를 반환함.
-str1.match(NaN);        // NaN 타입은 숫자형임. ["NaN"]을 반환함.
-str1.match(Infinity);   // Infinity 타입은 숫자형임. ["Infinity"]를 반환함.
-str1.match(+Infinity);  // ["Infinity"]를 반환함.
-str1.match(-Infinity);  // ["-Infinity"]를 반환함.
-str2.match(65);         // ["65"]를 반환함
-str2.match(+65);        // 플러스 기호가 붙은 숫자형. ["65"]를 반환함.
-str3.match(null);       // ["null"]을 반환함.
+var str1 =
+    "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.",
+  str2 = "My grandfather is 65 years old and My grandmother is 63 years old.",
+  str3 = "The contract was declared null and void.";
+str1.match("number"); // "number"는 문자열임. ["number"]를 반환함.
+str1.match(NaN); // NaN 타입은 숫자형임. ["NaN"]을 반환함.
+str1.match(Infinity); // Infinity 타입은 숫자형임. ["Infinity"]를 반환함.
+str1.match(+Infinity); // ["Infinity"]를 반환함.
+str1.match(-Infinity); // ["-Infinity"]를 반환함.
+str2.match(65); // ["65"]를 반환함
+str2.match(+65); // 플러스 기호가 붙은 숫자형. ["65"]를 반환함.
+str3.match(null); // ["null"]을 반환함.
 ```
 
 ## 명세
@@ -107,14 +107,6 @@ str3.match(null);       // ["null"]을 반환함.
 ## 브라우저 호환성
 
 {{Compat}}
-
-## Firefox-specific notes
-
-- `flags` was a non standard second argument only available in Gecko : _str_.match(_regexp, flags_)
-- Starting with Gecko 27 {{geckoRelease(27)}}, this method has been adjusted to conform with the ECMAScript specification. When `match()` is called with a global regular expression, the {{jsxref("RegExp.lastIndex")}} property (if specified) will be reset to `0` ({{bug(501739)}}).
-- Starting with Gecko 39 {{geckoRelease(39)}}, the non-standard `flags` argument is deprecated and throws a console warning ({{bug(1142351)}}).
-- Starting with Gecko 47 {{geckoRelease(47)}}, the non-standard `flags` argument is no longer supported in non-release builds and will soon be removed entirely ({{bug(1245801)}}).
-- Starting with Gecko 49 {{geckoRelease(49)}}, the non-standard `flags` argument is no longer supported ({{bug(1108382)}}).
 
 ## 같이 보기
 

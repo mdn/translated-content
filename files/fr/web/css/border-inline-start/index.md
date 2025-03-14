@@ -1,8 +1,6 @@
 ---
 title: border-inline-start
 slug: Web/CSS/border-inline-start
-translation_of: Web/CSS/border-inline-start
-browser-compat: css.properties.border-inline-start
 ---
 
 {{CSSRef}}

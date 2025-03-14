@@ -1,18 +1,18 @@
 ---
 title: VRDisplay.stageParameters
 slug: Web/API/VRDisplay/stageParameters
-original_slug: Web/API/VRDevice/stageParameters
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`stageParameters`** は {{domxref("VRDisplay")}} インターフェイスの読み取り専用プロパティで、 `VRDisplay` がルームスケール体験をサポートしている場合に、ルームスケールパラメーターを持つ {{domxref("VRStageParameters")}} オブジェクトを返します．
 
-> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!NOTE]
+> このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ### 値
 
-`VRDisplay` のルームスケールパラメーターを持つ {{domxref("VRStageParameters")}} オブジェクトです。 `VRDisplay` がルームスケール体験をサポートしていない場合は  `null` です。
+`VRDisplay` のルームスケールパラメーターを持つ {{domxref("VRStageParameters")}} オブジェクトです。 `VRDisplay` がルームスケール体験をサポートしていない場合は `null` です。
 
 ## 例
 
@@ -30,5 +30,4 @@ original_slug: Web/API/VRDevice/stageParameters
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

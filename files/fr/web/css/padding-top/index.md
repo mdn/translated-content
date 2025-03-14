@@ -1,18 +1,13 @@
 ---
 title: padding-top
 slug: Web/CSS/padding-top
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/padding-top
 ---
 
 {{CSSRef}}
 
 La propriété **`padding-top`** d'un élément ajuste la hauteur de la boîte de remplissage (_padding_) en haut de l'élément.
 
-La [zone de remplissage](/fr/Apprendre/CSS/Les_bases/Le_mod%C3%A8le_de_bo%C3%AEte) correspond à l'espace entre le contenu et la bordure. Contrairement à {{cssxref("margin-top")}}, `padding-top` ne peut pas recevoir de valeurs négatives.
+La [zone de remplissage](/fr/docs/Learn/CSS/Building_blocks/The_box_model) correspond à l'espace entre le contenu et la bordure. Contrairement à {{cssxref("margin-top")}}, `padding-top` ne peut pas recevoir de valeurs négatives.
 
 {{EmbedInteractiveExample("pages/css/padding-top.html")}}
 
@@ -58,10 +53,8 @@ padding-top: unset;
 
 ```html
 <p class="padd">
-  Elle n’avait pas bu la moitié de la bouteille,
-  que sa tête touchait au plafond et qu’elle fut
-  forcée de se baisser pour ne pas se casser le
-  cou.
+  Elle n’avait pas bu la moitié de la bouteille, que sa tête touchait au plafond
+  et qu’elle fut forcée de se baisser pour ne pas se casser le cou.
 </p>
 ```
 
@@ -88,5 +81,5 @@ padding-top: unset;
 
 ## Voir aussi
 
-- [Le modèle de boîtes CSS](/fr/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte)
+- [Le modèle de boîtes CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
 - La propriété raccourcie {{cssxref("padding")}} qui permet de paramétrer `padding-top`, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} et {{cssxref("padding-left")}}.

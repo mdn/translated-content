@@ -1,5 +1,5 @@
 ---
-title: '<figure>: O elemento Figure com Caption opcional'
+title: "<figure>: O elemento Figure com Caption opcional"
 slug: Web/HTML/Element/figure
 ---
 
@@ -7,7 +7,40 @@ slug: Web/HTML/Element/figure
 
 O elemento **`<figure>`** [HTML](/pt-BR/docs/Web/HTML) representa conteúdo autocontido, potencialmente com uma legenda opcional, que é especificada usando o {{HTMLElement("figcaption" )}} elemento. A figura, sua legenda e seu conteúdo são referenciados como uma única unidade.
 
-{{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;figure&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<figure>
+  <img
+    src="/shared-assets/images/examples/elephant.jpg"
+    alt="Elephant at sunset" />
+  <figcaption>An elephant at sunset</figcaption>
+</figure>
+```
+
+```css interactive-example
+figure {
+  border: thin #c0c0c0 solid;
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  max-width: 220px;
+  margin: auto;
+}
+
+img {
+  max-width: 220px;
+  max-height: 150px;
+}
+
+figcaption {
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -38,7 +71,7 @@ O elemento **`<figure>`** [HTML](/pt-BR/docs/Web/HTML) representa conteúdo auto
     </tr>
     <tr>
       <th scope="row">Omissão de tag</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Pais permitidos</th>
@@ -106,7 +139,9 @@ Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_a
 
 ```html
 <figure>
-  <figcaption>Obtenha detalhes do navegador usando o <code>navigator</code>.</figcaption>
+  <figcaption>
+    Obtenha detalhes do navegador usando o <code>navigator</code>.
+  </figcaption>
   <pre>
 function NavigatorExample() {
   var txt;
@@ -130,8 +165,8 @@ function NavigatorExample() {
 <figure>
   <figcaption><b>Edsger Dijkstra:</b></figcaption>
   <blockquote>
-    Se a depuração é o processo de remoção de bugs de software, então a programação deve
-    ser o processo de colocá-los.
+    Se a depuração é o processo de remoção de bugs de software, então a
+    programação deve ser o processo de colocá-los.
   </blockquote>
 </figure>
 ```
@@ -143,10 +178,10 @@ function NavigatorExample() {
 ```html
 <figure>
   <p style="white-space:pre">
-    Ofereça-me um discurso, encantarei seu ouvido, Ou como uma viagem de fadas sobre o
-    verde, Ou, como uma ninfa, com longos cabelos desgrenhados, Dança na areia, e
-    mas nenhum fundamento visto: O amor é um espírito todo compacto de fogo, Não grosseiro para
-    afundar, mas leve, e vai aspirar.
+    Ofereça-me um discurso, encantarei seu ouvido, Ou como uma viagem de fadas
+    sobre o verde, Ou, como uma ninfa, com longos cabelos desgrenhados, Dança na
+    areia, e mas nenhum fundamento visto: O amor é um espírito todo compacto de
+    fogo, Não grosseiro para afundar, mas leve, e vai aspirar.
   </p>
   <figcaption><cite>Vênus e Adônis</cite>, de William Shakespeare</figcaption>
 </figure>

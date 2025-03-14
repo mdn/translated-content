@@ -1,70 +1,89 @@
 ---
-title: 'Element: scroll イベント'
+title: "Element: scroll イベント"
+short-title: scroll
 slug: Web/API/Element/scroll_event
+l10n:
+  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
 {{APIRef}}
 
 **`scroll`** イベントは、要素がスクロールしたときに発行されます。
+スクロールの終了を検出するには、 `Element` の {{domxref("Element/scrollend_event", "scrollend")}} イベントを参照してください。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## 構文
 
-> **メモ:** iOS の UIWebViews では、 `scroll` イベントはスクロールしている最中には発行されません。スクロールが完了した後に発行されます。 [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202) を参照してください。 Safari と WKWebViews はこのバグの影響を受けません。
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("scroll", (event) => {});
+
+onscroll = (event) => {};
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
-### スクロールイベントの間引き
+以下の例では、 `scroll` イベントをイベントリスナーと `onscroll` イベントハンドラープロパティによって使用する方法を示しています。
+`scroll` イベントは高頻度で発行されるため、 {{DOMxRef("Window.setTimeout", "setTimeout()")}} メソッドを使用してイベントハンドラーを{{glossary("throttle","スロットル")}}で制御しています。
+その他の {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame")}} を使用した例については、 `Document` の {{domxref("Document/scroll_event", "scroll")}} イベントページを参照してください。
 
-`scroll` イベントは高い頻度で発行されるため、イベントハンドラーで DOM の変更のような計算が重い操作を実行するべきではありません。代わりに、次のように {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{DOMxRef("WindowOrWorkerGlobalScope.setTimeout()", "setTimeout()")}}, {{DOMxRef("CustomEvent")}} などを使用してイベントを間引くことをお勧めします。
+### `scroll` をイベントリスナーで使用
 
-なお、ただし、 input イベントやアニメーションフレームがおよそ同じ頻度で発行されるため、以下の最適化は必要ないことがあります。この例は `requestAnimationFrame` の `scroll` イベントを最適化します。
+次の例では、`scroll` イベントを使用して、ユーザーが要素の内部をスクロールしていることを検出する方法を示します。
+
+```html
+<div
+  id="scroll-box"
+  style="overflow: scroll; height: 100px; width: 100px; float: left;">
+  <p style="height: 200px; width: 200px;">スクロールしてね</p>
+</div>
+<p style="text-align: center;" id="output">scroll イベントを待っています...</p>
+```
 
 ```js
-// 参照: http://www.html5rocks.com/en/tutorials/speed/animations/
+const element = document.querySelector("div#scroll-box");
+const output = document.querySelector("p#output");
 
-let last_known_scroll_position = 0;
-let ticking = false;
-
-function doSomething(scroll_pos) {
-  // スクロール位置で何かをする
-}
-
-window.addEventListener('scroll', function(e) {
-  last_known_scroll_position = window.scrollY;
-
-  if (!ticking) {
-    window.requestAnimationFrame(function() {
-      doSomething(last_known_scroll_position);
-      ticking = false;
-    });
-
-    ticking = true;
-  }
+element.addEventListener("scroll", (event) => {
+  output.textContent = "scroll イベントが発生しました！";
+  setTimeout(() => {
+    output.textContent = "scroll イベントを待っています...";
+  }, 1000);
 });
 ```
 
-> **メモ:** それ以外例が {{domxref("Document/resize_event", "resize")}} イベントページにあります。
+{{EmbedLiveSample("Using_scroll_with_an_event_listener", "100%", 120)}}
+
+### `onscroll` イベントハンドラープロパティの使用
+
+次の例では、`onscroll` イベントハンドラープロパティを使用して、ユーザーがスクロールしていることを検出する方法を示しています。
+
+```html
+<div
+  id="scroll-box"
+  style="overflow: scroll; height: 100px; width: 100px; float: left;">
+  <p style="height: 200px; width: 200px;">スクロールしてね</p>
+</div>
+<p id="output" style="text-align: center;">scroll イベントを待っています...</p>
+```
+
+```js
+const element = document.querySelector("div#scroll-box");
+const output = document.querySelector("p#output");
+
+element.onscroll = (event) => {
+  output.textContent = "scroll イベントが発生しました！";
+  setTimeout(() => {
+    output.textContent = "scroll イベントを待っています...";
+  }, 1000);
+};
+```
+
+{{EmbedLiveSample("Using_onscroll_event_handler_property", "100%", 120)}}
 
 ## 仕様書
 
@@ -76,4 +95,6 @@ window.addEventListener('scroll', function(e) {
 
 ## 関連情報
 
-- Document: {{domxref("Document/scroll_event", "scroll")}} イベント
+- [Element の `scrollend` イベント](/ja/docs/Web/API/Element/scrollend_event)
+- [Document の `scroll` イベント](/ja/docs/Web/API/Document/scroll_event)
+- [Document の `scrollend` イベント](/ja/docs/Web/API/Document/scrollend_event)

@@ -1,15 +1,6 @@
 ---
 title: PerformanceEntry.startTime
 slug: Web/API/PerformanceEntry/startTime
-tags:
-  - API
-  - Performance Timeline API
-  - PerformanceEntry
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-translation_of: Web/API/PerformanceEntry/startTime
 ---
 
 {{APIRef("Performance Timeline API")}}
@@ -39,7 +30,8 @@ entry.startTime;
 
 Un objet [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant le premier horodatage lorsque l'[entrée de performance](/fr/docs/Web/API/PerformanceEntry) a été créée.
 
-> **Note :** Si l'entrée de performance a un [`entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) "`resource`" (c'est-à-dire que l'entrée est un objet [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming)), cette propriété renvoie la valeur de l'horodatage fournie par [`PerformanceResourceTiming.fetchStart`](/fr/docs/Web/API/PerformanceResourceTiming/fetchStart).
+> [!NOTE]
+> Si l'entrée de performance a un [`entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) "`resource`" (c'est-à-dire que l'entrée est un objet [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming)), cette propriété renvoie la valeur de l'horodatage fournie par [`PerformanceResourceTiming.fetchStart`](/fr/docs/Web/API/PerformanceResourceTiming/fetchStart).
 
 ## Exemple
 
@@ -73,10 +65,8 @@ function check_PerformanceEntry(obj) {
   for (let i = 0; i < properties.length; i++) {
     // On vérifie chaque propriété
     let supported = properties[i] in obj;
-    if (supported)
-      log("..." + properties[i] + " = " + obj[properties[i]]);
-    else
-      log("..." + properties[i] + " = N'est pas pris en charge");
+    if (supported) log("..." + properties[i] + " = " + obj[properties[i]]);
+    else log("..." + properties[i] + " = N'est pas pris en charge");
   }
   for (let i = 0; i < methods.length; i++) {
     // On vérifie chaque méthode

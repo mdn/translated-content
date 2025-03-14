@@ -35,7 +35,7 @@ new DecompressionStream(format)
 この例では、blob を gzip 圧縮を用いて展開します。
 
 ```js
-const ds = new DecompressionStream('gzip');
+const ds = new DecompressionStream("gzip");
 const decompressedStream = blob.stream().pipeThrough(ds);
 ```
 

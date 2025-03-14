@@ -1,7 +1,6 @@
 ---
 title: WebXR Device API
 slug: Web/API/WebXR_Device_API
-translation_of: Web/API/WebXR_Device_API
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}
@@ -23,7 +22,7 @@ At the most basic level, a scene is presented in 3D by computing the perspective
 
 Example WebXR hardware setup
 
-![Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labeled "Position sensor"](https://mdn.mozillademos.org/files/11035/hw-setup.png)
+![Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labeled "Position sensor"](hw-setup.png)
 
 While the older [WebVR API](/ru/docs/Web/API/WebVR_API) was designed solely to support Virtual Reality (VR), WebXR provides support for both VR and Augmented Reality (AR) on the web. Support for AR functionality is added by the WebXR Augmented Reality Module.
 
@@ -125,7 +124,7 @@ WebGL API расширяется спецификацией WebXR для тог�
   - : In this example and tutorial, we use information learned throughout the WebXR documentation to create a scene containing a rotating cube which the user can move around using both VR headset and keyboard and mouse.
 - [Inputs and input sources](/ru/docs/Web/API/WebXR_Device_API/Inputs)
   - : A guide to input sources and how to efficiently manage the input devices being used to control the WebXR session, and how to receive and process user inputs from those devices.
-- [Targeting and hit detection](/ru/docs/Web/API/Web_Audio_API/Targeting)
+- [Targeting and hit detection](/ru/docs/Web/API/WebXR_Device_API/Targeting)
   - : How to use an input source's targeting ray mode and targeting ray space to display a targeting ray, identify targeted surfaces or objects, and perform related tasks.
 - [Using WebXR input profiles](/ru/docs/Web/API/WebXR_Device_API/Input_profiles)
   - : A guide to interpreting the {{Glossary("JSON")}} data provided by the [WebXR Input Profiles Registry](https://github.com/immersive-web/webxr-input-profiles/tree/master/packages/registry), which can be used to determine what options and controls are available on the user's available input devices.
@@ -161,13 +160,13 @@ WebGL API расширяется спецификацией WebXR для тог�
 | [**WebXR Layers API**](https://immersive-web.github.io/layers/) ([Source](https://github.com/immersive-web/layers), [Issues](https://github.com/immersive-web/layers/issues), [Explainer](https://github.com/immersive-web/layers/blob/master/explainer.md))                                                                                      |
 | [**WebXR Lighting Estimation API**](https://immersive-web.github.io/lighting-estimation/) ([Source](https://github.com/immersive-web/lighting-estimation), [Issues](https://github.com/immersive-web/lighting-estimation/issues), [Explainer](https://github.com/immersive-web/lighting-estimation/blob/master/lighting-estimation-explainer.md)) |
 
-## Совместимость
+## Совместимость с браузерами
 
-{{Compat("api.Navigator.xr")}}
+{{Compat}}
 
-## See also
+## Смотрите также
 
-- [Graphics on the web](/ru/docs/Web/Guide/Graphics)
+- [Graphics on the web](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 - [Drawing graphics](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [WebGL API](/ru/docs/Web/API/WebGL_API): Accelerated 2D and 3D graphics on the web
 - [Canvas API](/ru/docs/Web/API/Canvas_API): 2D drawing for the web

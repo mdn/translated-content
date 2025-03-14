@@ -1,30 +1,20 @@
 ---
 title: pkcs11.isModuleInstalled()
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/isModuleInstalled
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - isModuleInstalled
-  - pkcs11
-translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11/isModuleInstalled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Vérifie si le module PKCS #11 nommé est actuellement installé dans Firefox.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var checking = browser.pkcs11.isModuleInstalled(
-  name              // string
-)
+  name, // string
+);
 ```
 
 ### Paramètres
@@ -34,13 +24,13 @@ var checking = browser.pkcs11.isModuleInstalled(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec `true` si le module est installé, `false` sinon.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec `true` si le module est installé, `false` sinon.
 
 Si une erreur se produit dans le module, la promise sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pkcs11.isModuleInstalled", 10)}}
+{{Compat}}
 
 ## Exemples
 

@@ -1,14 +1,6 @@
 ---
 title: Les protocoles d'itération
 slug: Web/JavaScript/Reference/Iteration_protocols
-tags:
-  - ECMAScript 2015
-  - Intermédiaire
-  - Iterator
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Iteration_protocols
-original_slug: Web/JavaScript/Reference/Les_protocoles_iteration
 ---
 
 {{jsSidebar("More")}}
@@ -21,7 +13,7 @@ Il existe deux protocoles concernant l'itération : [le protocole « itérable �
 
 Le protocole « **itérable** » permet aux objets JavaScript de définir ou de personnaliser leur comportement lors d'une itération, par exemple la façon dont les valeurs seront parcourues avec une boucle {{jsxref("Instructions/for...of", "for..of")}}. Certains types natifs tels que {{jsxref("Array")}} ou {{jsxref("Map")}} possèdent un comportement itératif par défaut, d'autres types, comme {{jsxref("Object")}} n'ont pas ce type de comportement.
 
-Afin d'être **itérable**, un objet doit implémenter la méthode **`@@iterator`**, cela signifie que l'objet (ou un des objets de [sa chaîne de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)) doit avoir une propriété avec une clé **`@@iterator`** qui est accessible via {{jsxref("Symbol.iterator")}} :
+Afin d'être **itérable**, un objet doit implémenter la méthode **`@@iterator`**, cela signifie que l'objet (ou un des objets de [sa chaîne de prototypes](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)) doit avoir une propriété avec une clé **`@@iterator`** qui est accessible via {{jsxref("Symbol.iterator")}} :
 
 | Propriété           | Valeur                                                                                         |
 | ------------------- | ---------------------------------------------------------------------------------------------- |
@@ -94,8 +86,8 @@ Certains itérateurs sont des itérables :
 var unTableau = [1, 5, 7];
 var élémentsDuTableau = unTableau.entries();
 
-élémentsDuTableau.toString();    // "[object Array Iterator]"
-élémentsDuTableau === élémentsDuTableau[Symbol.iterator]();    // true
+élémentsDuTableau.toString(); // "[object Array Iterator]"
+élémentsDuTableau === élémentsDuTableau[Symbol.iterator](); // true
 ```
 
 ## Exemples d'utilisation des protocoles d'itération
@@ -104,38 +96,39 @@ Une {{jsxref("String")}} est un exemple d'objet natif itérable :
 
 ```js
 var uneChaîne = "coucou";
-typeof uneChaîne[Symbol.iterator];           // "function"
+typeof uneChaîne[Symbol.iterator]; // "function"
 ```
 
-[L'itérateur par défaut d'un objet `String`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/@@iterator) renverra les caractères de la chaîne les uns à la suite des autres :
+[L'itérateur par défaut d'un objet `String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator) renverra les caractères de la chaîne les uns à la suite des autres :
 
 ```js
 var itérateur = uneChaîne[Symbol.iterator]();
-itérateur + "";     // "[object String Iterator]"
+itérateur + ""; // "[object String Iterator]"
 
-itérateur.next();  // { value: "c", done: false }
-itérateur.next();  // { value: "o", done: false }
-itérateur.next();  // { value: "u", done: false }
-itérateur.next();  // { value: "c", done: false }
-itérateur.next();  // { value: "o", done: false }
-itérateur.next();  // { value: "u", done: false }
-itérateur.next();  // { value: undefined, done: true }
+itérateur.next(); // { value: "c", done: false }
+itérateur.next(); // { value: "o", done: false }
+itérateur.next(); // { value: "u", done: false }
+itérateur.next(); // { value: "c", done: false }
+itérateur.next(); // { value: "o", done: false }
+itérateur.next(); // { value: "u", done: false }
+itérateur.next(); // { value: undefined, done: true }
 ```
 
 Certains éléments natifs du langage, tels que [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateur_de_décomposition), utilisent ce même protocole :
 
 ```js
-[...uneChaîne];   // ["c", "o", "u", "c", "o", "u"]
+[...uneChaîne]; // ["c", "o", "u", "c", "o", "u"]
 ```
 
 Il est possible de redéfinir le comportement par défaut en définissant soi-même le symbole `@@iterator` :
 
 ```js
-var uneChaîne = new String("yo");          // on construit un objet String explicitement afin d'éviter la conversion automatique
+var uneChaîne = new String("yo"); // on construit un objet String explicitement afin d'éviter la conversion automatique
 
-uneChaîne[Symbol.iterator] = function() {
-  return { // l'objet itérateur qui renvoie un seul élément, la chaîne "bop"
-    next: function() {
+uneChaîne[Symbol.iterator] = function () {
+  return {
+    // l'objet itérateur qui renvoie un seul élément, la chaîne "bop"
+    next: function () {
       if (this._first) {
         this._first = false;
         return { value: "bop", done: false };
@@ -143,7 +136,7 @@ uneChaîne[Symbol.iterator] = function() {
         return { done: true };
       }
     },
-    _first: true
+    _first: true,
   };
 };
 ```
@@ -151,8 +144,8 @@ uneChaîne[Symbol.iterator] = function() {
 On notera que redéfinir le symbole `@@iterator` affecte également le comportement des éléments du langage qui utilisent le protocole :
 
 ```js
-[...uneChaîne];  // ["bop"]
-uneChaîne + "";  // "yo"
+[...uneChaîne]; // ["bop"]
+uneChaîne + ""; // "yo"
 ```
 
 ## Exemples d'itérables
@@ -168,9 +161,9 @@ Il est possible de construire un itérable dans un script de la façon suivante 
 ```js
 var monItérable = {};
 monItérable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 };
 [...monItérable]; // [1, 2, 3]
 ```
@@ -181,26 +174,36 @@ Plusieurs API utilisent les itérables, par exemple : {{jsxref("Map", "Map([ité
 
 ```js
 var monObjet = {};
-new Map([[1,"a"],[2,"b"],[3,"c"]]).get(2);  // "b"
-new WeakMap([[{},"a"],[monObjet,"b"],[{},"c"]]).get(monObjet); // "b"
-new Set([1, 2, 3]).has(3);    // true
-new Set("123").has("2");      // true
-new WeakSet(function*() {
+new Map([
+  [1, "a"],
+  [2, "b"],
+  [3, "c"],
+]).get(2); // "b"
+new WeakMap([
+  [{}, "a"],
+  [monObjet, "b"],
+  [{}, "c"],
+]).get(monObjet); // "b"
+new Set([1, 2, 3]).has(3); // true
+new Set("123").has("2"); // true
+new WeakSet(
+  (function* () {
     yield {};
     yield monObjet;
     yield {};
-}()).has(monObjet);           // true
+  })(),
+).has(monObjet); // true
 ```
 
 ainsi que {{jsxref("Promise.all", "Promise.all(itérable)")}}, {{jsxref("Promise.race", "Promise.race(itérable)")}}, {{jsxref("Array.from", "Array.from()")}}
 
 ### Les éléments de syntaxe utilisant des itérables
 
-Certains éléments du langage utilisent des itérables, par exemple : [`for..of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of), [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateur_de_d%C3%A9composition), [yield\*](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/yield*), [l'affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Affecter_par_d%C3%A9composition) :
+Certains éléments du langage utilisent des itérables, par exemple : [`for..of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of), [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateur_de_décomposition), [yield\*](/fr/docs/Web/JavaScript/Reference/Operators/yield*), [l'affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) :
 
 ```js
-for(let value of ["a", "b", "c"]){
-    console.log(value);
+for (let value of ["a", "b", "c"]) {
+  console.log(value);
 }
 // "a"
 // "b"
@@ -208,7 +211,7 @@ for(let value of ["a", "b", "c"]){
 
 [..."abc"]; // ["a", "b", "c"]
 
-function* gen(){
+function* gen() {
   yield* ["a", "b", "c"];
 }
 
@@ -233,36 +236,36 @@ itérableMalFormé[Symbol.iterator] = () => 1
 ### Un itérateur simple
 
 ```js
-function créerItérateur(tableau){
-    var nextIndex = 0;
+function créerItérateur(tableau) {
+  var nextIndex = 0;
 
-    return {
-       next: function(){
-           return nextIndex < tableau.length ?
-               {value: tableau[nextIndex++], done: false} :
-               {done: true};
-       }
-    }
+  return {
+    next: function () {
+      return nextIndex < tableau.length
+        ? { value: tableau[nextIndex++], done: false }
+        : { done: true };
+    },
+  };
 }
 
-var it = créerItérateur(['yo', 'ya']);
+var it = créerItérateur(["yo", "ya"]);
 
 console.log(it.next().value); // 'yo'
 console.log(it.next().value); // 'ya'
-console.log(it.next().done);  // true
+console.log(it.next().done); // true
 ```
 
 ### Un itérateur infini
 
 ```js
-function créateurID(){
-    var index = 0;
+function créateurID() {
+  var index = 0;
 
-    return {
-       next: function(){
-           return {value: index++, done: false};
-       }
-    };
+  return {
+    next: function () {
+      return { value: index++, done: false };
+    },
+  };
 }
 
 var it = créateurID();
@@ -276,24 +279,23 @@ console.log(it.next().value); // '2'
 ### Avec un générateur
 
 ```js
-function* créerUnGénérateurSimple(tableau){
-    var nextIndex = 0;
+function* créerUnGénérateurSimple(tableau) {
+  var nextIndex = 0;
 
-    while(nextIndex < tableau.length){
-        yield tableau[nextIndex++];
-    }
+  while (nextIndex < tableau.length) {
+    yield tableau[nextIndex++];
+  }
 }
 
-var gen = créerUnGénérateurSimple(['yo', 'ya']);
+var gen = créerUnGénérateurSimple(["yo", "ya"]);
 
 console.log(gen.next().value); // 'yo'
 console.log(gen.next().value); // 'ya'
-console.log(gen.next().done);  // true
+console.log(gen.next().done); // true
 
-function* créateurID(){
-    var index = 0;
-    while(true)
-        yield index++;
+function* créateurID() {
+  var index = 0;
+  while (true) yield index++;
 }
 
 var gen = créateurID();
@@ -316,23 +318,23 @@ class ClasseSimple {
     return {
       next: () => {
         if (this.index < this.data.length) {
-          return {value: this.data[this.index++], done: false};
+          return { value: this.data[this.index++], done: false };
         } else {
           this.index = 0;
           // En réinitialisant l'index, on peut
           // "reprendre" l'itérateure sans avoir
           // à gérer de mise à jour manuelle
-          return {done: true};
+          return { done: true };
         }
-      }
+      },
     };
   }
 }
 
-const simple = new ClasseSimple([1,2,3,4,5]);
+const simple = new ClasseSimple([1, 2, 3, 4, 5]);
 
 for (const val of simple) {
-  console.log(val);  // '1' '2' '3' '4' '5'
+  console.log(val); // '1' '2' '3' '4' '5'
 }
 ```
 
@@ -358,4 +360,4 @@ unObjetGénérateur[Symbol.iterator]() === unObjetGénérateur
 
 ## Voir aussi
 
-- Pour plus d'informations sur les générateurs définis par ES2015, voir [la page dédiée](/fr/docs/Web/JavaScript/Reference/Instructions/function*).
+- Pour plus d'informations sur les générateurs définis par ES2015, voir [la page dédiée](/fr/docs/Web/JavaScript/Reference/Statements/function*).

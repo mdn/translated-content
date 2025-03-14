@@ -1,7 +1,6 @@
 ---
 title: RTCSessionDescription.sdp
 slug: Web/API/RTCSessionDescription/sdp
-translation_of: Web/API/RTCSessionDescription/sdp
 ---
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
@@ -51,5 +50,5 @@ alert(pc.remoteDescription.sdp);
 
 ## 참조
 
-- [WebRTC](/ko/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/ko/docs/Web/API/WebRTC_API)
 - The standard for using SDP in an offer/answer protocol {{rfc("3264")}}.

@@ -1,16 +1,11 @@
 ---
-title: ':in-range'
+title: :in-range
 slug: Web/CSS/:in-range
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:in-range
 ---
 
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:in-range`** cible un élément {{htmlelement("input")}} lorsque sa valeur courante est comprise dans l'intervalle défini par les attributs {{htmlattrxref("min", "input")}} et {{htmlattrxref("max","input")}}.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:in-range`** cible un élément {{htmlelement("input")}} lorsque sa valeur courante est comprise dans l'intervalle défini par les attributs [`min`](/fr/docs/Web/HTML/Element/input#min) et [max](/fr/docs/Web/HTML/Element/input#max).
 
 ```css
 /* Cible n'importe quel élément <input>   */
@@ -23,7 +18,8 @@ input:in-range {
 
 Cette pseudo-classe s'avère utile lorsqu'on souhaite fournir une indication visuelle quand la valeur est en dehors de la fourchette autorisée.
 
-> **Note :** Cette pseudo-classe ne s'applique qu'aux éléments qui ont des limites de valeurs (autrement dit la valeur doit être comprise dans un intervalle donné). Sans ces limitations, l'élément ne pourra pas être vu comme _dans l'intervalle_ ou _en dehors de l'intervalle_.
+> [!NOTE]
+> Cette pseudo-classe ne s'applique qu'aux éléments qui ont des limites de valeurs (autrement dit la valeur doit être comprise dans un intervalle donné). Sans ces limitations, l'élément ne pourra pas être vu comme _dans l'intervalle_ ou _en dehors de l'intervalle_.
 
 ## Syntaxe
 
@@ -49,10 +45,10 @@ input:out-of-range {
   border: 2px solid red;
 }
 input:in-range + label::after {
-  content:' OK';
+  content: " OK";
 }
 input:out-of-range + label::after {
-  content:' non autorisée !';
+  content: " non autorisée !";
 }
 ```
 
@@ -60,9 +56,17 @@ input:out-of-range + label::after {
 
 ```html
 <form action="" id="form1">
-  <ul>Les valeurs entre 1 et 10 sont valides.
+  <ul>
+    Les valeurs entre 1 et 10 sont valides.
     <li>
-      <input id="valeur1" name="valeur1" type="number" placeholder="de 1 à 10" min="1" max="10" value="12">
+      <input
+        id="valeur1"
+        name="valeur1"
+        type="number"
+        placeholder="de 1 à 10"
+        min="1"
+        max="10"
+        value="12" />
       <label for="valeur1">Votre valeur est </label>
     </li>
   </ul>

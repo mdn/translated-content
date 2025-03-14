@@ -1,16 +1,6 @@
 ---
 title: history
 slug: Mozilla/Add-ons/WebExtensions/API/history
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/history
 ---
 
 {{AddonSidebar}}
@@ -19,21 +9,22 @@ Utilisez l'API `historique` pour interargir avec l'historique du navigateur.
 
 Si vous recherchez des informations sur l'historique de session du navigateur, consultez l'[interface historique](/fr/docs/Web/API/History).
 
-> **Note :** Les téléchargements sont traités comme des objets [`HistoryItem`](/fr/Add-ons/WebExtensions/API/history/HistoryItem). Par conséquent, des événements tels que [`history.onVisited`](/fr/Add-ons/WebExtensions/API/history/onVisited) seront également déclenchés pour les téléchargements.
+> [!NOTE]
+> Les téléchargements sont traités comme des objets [`HistoryItem`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem). Par conséquent, des événements tels que [`history.onVisited`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited) seront également déclenchés pour les téléchargements.
 
 L'historique du navigateur est un enregistrement chronologique des pages que l'utilisateur a visitées. l'API d'historique vous permet de :
 
-- [Recherchez dans des pagesqui apparaissent dans l'historique du navigateur](/fr/Add-ons/WebExtensions/API/history/search)
-- [Supprimer des pages individuelles de l'historique du navigateur](/fr/Add-ons/WebExtensions/API/history/deleteUrl)
-- [Ajouter des pages à l'historique du navigateur](/fr/Add-ons/WebExtensions/API/history/addUrl)
-- [Supprimer toutes les pages de l'historique du navigateur](/fr/Add-ons/WebExtensions/API/history/deleteAll).
+- [Recherchez dans des pagesqui apparaissent dans l'historique du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/API/history/search)
+- [Supprimer des pages individuelles de l'historique du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteUrl)
+- [Ajouter des pages à l'historique du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/API/history/addUrl)
+- [Supprimer toutes les pages de l'historique du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteAll).
 
 Cependant, l'utilisateur peut avoir visité une seule page, plusieurs fois, de sorte que l'API a également le concept de"visites". Vous pouvez également utiliser cette API pour :
 
-- [Récupérer l'ensemble des visites effectuées par l'utilisateur sur une page particulière](/fr/Add-ons/WebExtensions/API/history/getVisits)
-- [Supprimer les visites à toutes les pages faites pendant une période de temps](/fr/Add-ons/WebExtensions/API/history/deleteRange).
+- [Récupérer l'ensemble des visites effectuées par l'utilisateur sur une page particulière](/fr/docs/Mozilla/Add-ons/WebExtensions/API/history/getVisits)
+- [Supprimer les visites à toutes les pages faites pendant une période de temps](/fr/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteRange).
 
-Pour utiliser cette API, une extension doit demander la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "history" dans le fichier [`manifest.json`](/fr/Add-ons/WebExtensions/manifest.json).
+Pour utiliser cette API, une extension doit demander la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "history" dans le fichier [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
 ## Types
 
@@ -47,7 +38,7 @@ Pour utiliser cette API, une extension doit demander la [permission](/fr/Add-ons
 ## Fonctions
 
 - {{WebExtAPIRef("history.search()")}}
-  - : Recherche dans l'historique du navigateur les objets [`history.HistoryItem`](/fr/Add-ons/WebExtensions/API/History/HistoryItem) correspondant aux critères donnés.
+  - : Recherche dans l'historique du navigateur les objets [`history.HistoryItem`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/History/HistoryItem) correspondant aux critères donnés.
 - {{WebExtAPIRef("history.getVisits()")}}
   - : Récupère des informations sur les visites sur une page donnée.
 - {{WebExtAPIRef("history.addUrl()")}}
@@ -68,15 +59,15 @@ Pour utiliser cette API, une extension doit demander la [permission](/fr/Add-ons
 - {{WebExtAPIRef("history.onVisitRemoved")}}
   - : Lancé lorsqu'une URL est complètement supprimée de l'historique du navigateur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/extensions/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

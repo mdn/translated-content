@@ -1,21 +1,27 @@
 ---
 title: RegExp.prototype.global
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
-tags:
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/global
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/global
 ---
 
 {{JSRef}}
 
 La propriété **`global`** indique si le marqueur (_flag_) "`g`" est utilisé pour l'expression rationnelle. `global` est une propriété accessible en lecture seule pour une expression rationnelle donnée.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-global.html")}}{{js_property_attributes(0,0,1)}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.global")}}
+
+```js interactive-example
+const regex1 = new RegExp("foo", "g");
+
+console.log(regex1.global);
+// Expected output: true
+
+const regex2 = new RegExp("bar", "i");
+
+console.log(regex2.global);
+// Expected output: false
+```
+
+{{js_property_attributes(0,0,1)}}
 
 ## Description
 
@@ -30,15 +36,15 @@ var regex = new RegExp("toto", "g");
 
 console.log(regex.global); // true
 
-var str = 'totoexempletoto';
-var str1 = str.replace(regex, '');
+var str = "totoexempletoto";
+var str1 = str.replace(regex, "");
 
-console.log(str1);  // affichera "exemple" dans la console
+console.log(str1); // affichera "exemple" dans la console
 
-var regex1 = new RegExp('toto');
-var str2 = str.replace(regex1, '');
+var regex1 = new RegExp("toto");
+var str2 = str.replace(regex1, "");
 
-console.log(str2);  // affichera "exempletoto" dans la console
+console.log(str2); // affichera "exempletoto" dans la console
 ```
 
 ## Spécifications

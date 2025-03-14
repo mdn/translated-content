@@ -1,25 +1,25 @@
 ---
 title: AJAX
 slug: Glossary/AJAX
+l10n:
+  sourceCommit: 998a4e6fc713678381e6bc31130e3a0a53158d69
 ---
 
-**AJAX**（Asynchronous {{glossary("JavaScript")}} And {{glossary("XML")}} ）是一种使用 {{glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}} 技术构建更复杂，动态的网页的编程实践。
+{{GlossarySidebar}}
 
-AJAX 允许只更新一个 {{glossary("HTML")}} 页面的部分 {{glossary("DOM")}}，而无须重新加载整个页面。AJAX 还允许异步工作，这意味着当网页的一部分正试图重新加载时，您的代码可以继续运行（相比之下，同步会阻止代码继续运行，直到这部分的网页完成重新加载）。
+**AJAX**（Asynchronous {{glossary("JavaScript")}} And {{glossary("XML")}}）是一种在 Web 应用中通过异步发送 HTTP 请求向服务器获取内容，并使用这些新内容更新页面中相关的部分，而无需重新加载整个页面的 Web 开发技术。这可以让网页更具有响应性，因为只请求了需要更新的部分。
 
-通过交互式网站和现代 Web 标准，AJAX 正在逐渐被 JavaScript 框架中的函数和官方的 {{domxref("Fetch API")}} 标准取代。
+AJAX 可以用于创建{{Glossary("SPA", "单页应用")}}——那些使用 AJAX 来更新需要的内容的、由单一文档构成的一整个 Web 应用。
 
-## 深入了解
+一开始的时候 AJAX 通过使用 {{domxref("XMLHttpRequest")}} 接口实现，但是 {{domxref("Window/fetch", "fetch()")}} API 更适合用于开发现代 Web 应用：更出色、更灵活、更好地与一些 Web 应用的基础技术相结合（如 [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API)）。现代 Web 框架也为 AJAX 提供了抽象。
 
-### 基础知识
+这项技术在现代 Web 开发中太过常见了，以至于 AJAX 这个术语很少被使用到。
 
-- 维基百科上的 [AJAX](https://zh.wikipedia.org/wiki/AJAX)
-- [MDN 上的 AJAX - Getting started](/zh-CN/docs/Web/Guide/AJAX/Getting_Started)
-- [Synchronous vs. Asynchronous Communications](http://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)
+## 参见
 
-### 技术资讯
-
-- {{DOMxRef("XMLHttpRequest")}} 对象
-- {{DOMxRef("Fetch API")}}
-- [MDN 上的 AJAX 文档](/zh-CN/docs/Web/Guide/AJAX)
+- [从服务器获取数据](/zh-CN/docs/Learn_web_development/Core/Scripting/Network_requests)
+- [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
+- 相关术语：
+  - {{Glossary("SPA", "单页应用")}}
 - [使用 Fetch API](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
+- 维基百科上的 [AJAX](https://zh.wikipedia.org/wiki/AJAX)

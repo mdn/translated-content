@@ -1,21 +1,20 @@
 ---
 title: Array.prototype.length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
-tags:
-  - Array
-  - JavaScript
-  - Propiedad
-  - Referencia
-  - Vector
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/length
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/length
 ---
 
 {{JSRef}}
 
 La propiedad **`length`** de un objeto que es una instancia de tipo Array establece o devuelve la cantidad de elementos en esa matriz. El valor es un entero sin signo de 32 bits que siempre es numéricamente mayor que el índice más alto en la matriz.
 
-{{EmbedInteractiveExample("pages/js/array-length.html")}}
+{{InteractiveExample("JavaScript Demo: Array.length")}}
+
+```js interactive-example
+const clothing = ["shoes", "shirts", "socks", "sweaters"];
+
+console.log(clothing.length);
+// Expected output: 4
+```
 
 ## Descripción
 
@@ -23,15 +22,13 @@ El valor de la propiedad `length` es un número entero con un signo positivo y u
 
 ```js
 var namelistA = new Array(4294967296); //2 a la 32a potencia = 4294967296
-var namelistC = new Array(-100) //signo negativo
+var namelistC = new Array(-100); //signo negativo
 
 console.log(namelistA.length); //RangeError: longitud de la matriz inválida
 console.log(namelistC.length); //RangeError: longitud de la matriz inválida
 
-
-
 var namelistB = [];
-namelistB.length = Math.pow(2,32)-1; //establecer una longitud de la matriz menor que 2 a la 32ª potencia
+namelistB.length = Math.pow(2, 32) - 1; //establecer una longitud de la matriz menor que 2 a la 32ª potencia
 console.log(namelistB.length);
 
 //4294967295
@@ -51,7 +48,7 @@ function printEntries(arr) {
   for (var i = 0; i < length; i++) {
     console.log(arr[i]);
   }
-  console.log('=== printed ===');
+  console.log("=== printed ===");
 }
 
 // 1
@@ -66,7 +63,7 @@ function printEntries(arr) {
 // === impreso ===
 ```
 
-Pero, la propiedad `length` no necesariamente indica el número de valores definidos en la matriz. Ver también [Relación entre `length` y las propiedades numéricas](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#Relationship_between_length_and_numerical_properties).
+Pero, la propiedad `length` no necesariamente indica el número de valores definidos en la matriz. Ver también [Relación entre `length` y las propiedades numéricas](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#relationship_between_length_and_numerical_properties).
 
 {{js_property_attributes(1, 0, 0)}}
 
@@ -110,7 +107,7 @@ console.log(numbers.length); // 3
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.length")}}
+{{Compat}}
 
 ## Ver también
 

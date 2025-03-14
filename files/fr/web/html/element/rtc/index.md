@@ -1,35 +1,46 @@
 ---
-title: '<rtc> : l''élément de conteneur de texte Ruby'
+title: "<rtc> : l'élément de conteneur de texte Ruby"
 slug: Web/HTML/Element/rtc
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Ruby
-  - Web
-translation_of: Web/HTML/Element/rtc
 ---
 
 {{HTMLSidebar}}
 
 L'élément **`<rtc>`** permet d'ajouter des notations Ruby sémantiques. Il est donc « proche » des éléments liées à la représentation Ruby comme {{HTMLElement("rb")}}, {{HTMLElement("ruby")}}. Les éléments {{HTMLElement("rb")}} peuvent être annotés pour la prononciation ({{HTMLElement("rt")}}) ou pour la sémantique ({{HTMLElement("rtc")}}).
 
-{{EmbedInteractiveExample("pages/tabbed/rtc.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;rtc&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<ruby xml:lang="zh-Hant" style="ruby-position: under;">
+    <rbc>
+        <rb>馬</rb><rp>(</rp><rt>mǎ</rt><rp>)</rp>
+        <rb>來</rb><rp>(</rp><rt>lái</rt><rp>)</rp>
+        <rb>西</rb><rp>(</rp><rt>xī</rt><rp>)</rp>
+        <rb>亞</rb><rp>(</rp><rt>yà</rt><rp>)</rp>
+    </rbc>
+    <rtc xml:lang="en" style="ruby-position: over;">
+        <rp>(</rp><rt>Malaysia</rt><rp>)</rp>
+    </rtc>
+</ruby>
+```
+
+```css interactive-example
+ruby {
+  font-size: 2em;
+}
+```
 
 ## Attributs
 
-Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
-## Exemple
+## Exemples
 
 ### HTML
 
 ```html
 <ruby>
-   <rb>旧</rb> <rt>jiù</rt>
-   <rb>金</rb> <rt>jīn</rt>
-   <rb>山</rb> <rt>shān</rt>
-   <rtc>San Francisco</rtc>
+  <rb>旧</rb> <rt>jiù</rt> <rb>金</rb> <rt>jīn</rt> <rb>山</rb> <rt>shān</rt>
+  <rtc>San Francisco</rtc>
 </ruby>
 ```
 
@@ -42,7 +53,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
 
 ### Résultat
 
-{{EmbedLiveSample("Exemple",600,120)}}
+{{EmbedLiveSample("",600,120)}}
 
 ## Résumé technique
 
@@ -63,7 +74,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
       <td>
         Du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >
         ou des éléments {{HTMLElement("rt")}}.

@@ -3,7 +3,7 @@ title: viewBox
 slug: Web/SVG/Attribute/viewBox
 ---
 
-« [SVG 属性参考](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
 viewBox 属性允许指定一个给定的一组图形伸展以适应特定的容器元素。
 
@@ -11,35 +11,49 @@ viewBox 属性的值是一个包含 4 个参数的列表 `min-x`, `min-y`, `widt
 
 不允许宽度和高度为负值，0 则禁用元素的呈现。
 
+## 示例
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+  vertical-align: top;
+}
+svg:not(:root) {
+  display: inline-block;
+}
+```
+
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <!--
   with relative unit such as percentage, the visual size
   of the square looks unchanged regardless of the viewBox
   -->
-  <rect x="0" y="0" width="100%" height="100%"/>
+  <rect x="0" y="0" width="100%" height="100%" />
 
   <!--
   with a large viewBox the circle looks small
   as it is using user units for the r attribute:
   4 resolved against 100 as set in the viewBox
   -->
-  <circle cx="50%" cy="50%" r="4" fill="white"/>
+  <circle cx="50%" cy="50%" r="4" fill="white" />
 </svg>
 
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
   <!--
   with relative unit such as percentage, the visual size
-  of the square looks unchanged regardless of the viewBox`
+  of the square looks unchanged regardless of the viewBox
   -->
-  <rect x="0" y="0" width="100%" height="100%"/>
+  <rect x="0" y="0" width="100%" height="100%" />
 
   <!--
   with a small viewBox the circle looks large
   as it is using user units for the r attribute:
   4 resolved against 10 as set in the viewBox
   -->
-  <circle cx="50%" cy="50%" r="4" fill="white"/>
+  <circle cx="50%" cy="50%" r="4" fill="white" />
 </svg>
 
 <svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg">
@@ -48,18 +62,18 @@ viewBox 属性的值是一个包含 4 个参数的列表 `min-x`, `min-y`, `widt
   and 100% is still resolve to a width or height of 10 user units so
   the rectangle looks shifted to the bottom/right corner of the viewport
   -->
-  <rect x="0" y="0" width="100%" height="100%"/>
+  <rect x="0" y="0" width="100%" height="100%" />
 
   <!--
   With the point of coordinate 0,0 in the center of the viewport the
   value 50% is resolve to 5 which means the center of the circle is
   in the bottom/right corner of the viewport.
   -->
-  <circle cx="50%" cy="50%" r="4" fill="white"/>
+  <circle cx="50%" cy="50%" r="4" fill="white" />
 </svg>
 ```
 
-{{EmbedLiveSample('topExample', '100%', 200)}}
+{{EmbedLiveSample("示例", '100%', 200)}}
 
 这个属性会受到 {{ SVGAttr("preserveAspectRatio") }} 的影响。
 
@@ -89,6 +103,6 @@ viewBox 属性的值是一个包含 4 个参数的列表 `min-x`, `min-y`, `widt
 
 {{Specifications}}
 
-## See also
+## 参见
 
-- [SVG Getting Started: Positions](/zh-CN/SVG/Tutorial/Positions)
+- [SVG Getting Started: Positions](/zh-CN/docs/SVG/Tutorial/Positions)

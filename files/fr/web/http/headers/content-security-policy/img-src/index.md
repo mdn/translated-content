@@ -1,8 +1,6 @@
 ---
-title: 'CSP : img-src'
+title: "CSP : img-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/img-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/img-src
-browser-compat: http.headers.csp.Content-Security-Policy.img-src
 ---
 
 {{HTTPSidebar}}
@@ -39,9 +37,9 @@ Content-Security-Policy: img-src <source> <source>;
 
 ### Sources
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#directives_associées)).
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
 
 ## Exemples
 
@@ -53,10 +51,10 @@ Soit cet en-tête CSP&nbsp;:
 Content-Security-Policy: img-src https://example.com/
 ```
 
-Cet élément [`<img>`](/fr/docs/Web/HTML/Element/Img) sera bloqué et ne se chargera pas&nbsp;:
+Cet élément [`<img>`](/fr/docs/Web/HTML/Element/img) sera bloqué et ne se chargera pas&nbsp;:
 
 ```html
-<img src="https://not-example.com/toto.jpg" alt="image d'exemple">
+<img src="https://not-example.com/toto.jpg" alt="image d'exemple" />
 ```
 
 ## Spécifications
@@ -70,4 +68,4 @@ Cet élément [`<img>`](/fr/docs/Web/HTML/Element/Img) sera bloqué et ne se cha
 ## Voir aussi
 
 - [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`<img>`](/fr/docs/Web/HTML/Element/Img)
+- [`<img>`](/fr/docs/Web/HTML/Element/img)

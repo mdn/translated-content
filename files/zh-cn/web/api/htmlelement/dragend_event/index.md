@@ -1,7 +1,6 @@
 ---
 title: Document：dragend 事件
 slug: Web/API/HTMLElement/dragend_event
-original_slug: Web/API/Document/dragend_event
 ---
 
 {{APIRef}}
@@ -15,9 +14,9 @@ original_slug: Web/API/Document/dragend_event
 在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener('dragend', (event) => {});
+addEventListener("dragend", (event) => {});
 
-ondragend = (event) => { };
+ondragend = (event) => {};
 ```
 
 ## 事件类型
@@ -41,15 +40,13 @@ ondragend = (event) => { };
 
 我们在拖动元素时，使元素变得半透明，并监听 `dragend` 事件以在释放元素时重置其不透明度。
 
-参见 [`drag`](/zh-CN/docs/Web/API/Document/drag_event) 事件，以获取完整的拖放示例。
+参见 [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event) 事件，以获取完整的拖放示例。
 
 #### HTML
 
 ```html
 <div id="container">
-  <div id="draggable" draggable="true">
-    这个 div 是可拖动的
-  </div>
+  <div id="draggable" draggable="true">这个 div 是可拖动的</div>
 </div>
 <div class="dropzone"></div>
 ```
@@ -75,7 +72,7 @@ body {
 }
 
 .dragging {
-  opacity: .5;
+  opacity: 0.5;
 }
 ```
 
@@ -107,7 +104,7 @@ document.addEventListener("dragend", (event) => {
 
 ## 参见
 
-- 其它拖放事件：
+- 其他拖放事件：
 
   - {{domxref("Document/drag_event", "drag")}}
   - {{domxref("Document/dragstart_event", "dragstart")}}
@@ -116,7 +113,7 @@ document.addEventListener("dragend", (event) => {
   - {{domxref("Document/dragleave_event", "dragleave")}}
   - {{domxref("Document/drop_event", "drop")}}
 
-- 其它目标上的 `dragend` 事件：
+- 其他目标上的 `dragend` 事件：
 
   - {{domxref("Window")}}：{{domxref("Window/dragend_event", "dragend")}} 事件
   - {{domxref("HTMLElement")}}：{{domxref("HTMLElement/dragend_event", "dragend")}} 事件

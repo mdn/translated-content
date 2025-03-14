@@ -1,19 +1,51 @@
 ---
 title: flex-basis
 slug: Web/CSS/flex-basis
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/flex-basis
 ---
 
 {{CSSRef}}
 
 **`flex-basis`** [CSS](/ko/docs/Web/CSS) 속성은 플렉스 아이템의 초기 크기를 지정합니다. {{cssxref("box-sizing")}}을 따로 지정하지 않는다면 콘텐츠 박스의 크기를 변경합니다.
 
-{{EmbedInteractiveExample("pages/css/flex-basis.html")}}
+{{InteractiveExample("CSS Demo: flex-basis")}}
+
+```css interactive-example-choice
+flex-basis: auto;
+```
+
+```css interactive-example-choice
+flex-basis: 0;
+```
+
+```css interactive-example-choice
+flex-basis: 200px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Item One</div>
+  <div>Item Two</div>
+  <div>Item Three</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  border: 1px solid #c5c5c5;
+  width: auto;
+  max-height: 300px;
+  display: flex;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+```
 
 > **참고:** `auto` 값을 가지지 않은 `flex-basis`와 {{cssxref("width")}}({{cssxref("flex-direction")}}`: column`인 경우 {{cssxref("height")}}) 값을 동시에 적용한 경우 `flex-basis`가 우선합니다.
 
@@ -47,12 +79,14 @@ flex-basis: unset;
 - `<'width'>`
   - : {{cssxref("&lt;length&gt;")}}, 플렉스 컨테이너의 크기에 상대적인 {{cssxref("&lt;percentage&gt;")}}, `auto` 키워드 중 하나. 음수 값은 유효하지 않습니다.
 - `content`
+
   - : 플렉스 아이템의 콘텐츠 크기에 따라 자동으로 크기가 변합니다.
+
     > **참고:** `content` 키워드는 Flexible Box Layout의 첫 배포에 포함되지 않아, 일부 오래 된 구현체에서는 지원하지 않을 수 있습니다. `flex-basis`와 주 크기({{cssxref("width")}}, {{cssxref("height")}}) 속성을 동시에 `auto`로 설정하면 동일한 효과를 볼 수 있습니다.
 
     > **역사:** 원래 `flex-basis: auto`의 뜻은 자신의 `width` 또는 `height` 속성의 값을 사용하라는 것이었습니다.
 
-    - 그 후 `flex-basis: auto`는 자동 크기조절로 바뀌고, 기존의 `auto`는 `main-size`로 바뀌었습니다. [bug 1032922](https://bugzilla.mozilla.org/show_bug.cgi?id=1032922)에서 구현 기록을 볼 수 있습니다.[bug 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316)에서 되돌려져 `auto` 가 다시 `width` / `height` 속성을 가리키게 됐고, 대신 새로운 `content` 키워드가 자동 크기조절을 맡게 됐습니다. ({{bug("1105111")}}에서 볼 수 있습니다)
+    - 그 후 `flex-basis: auto`는 자동 크기조절로 바뀌고, 기존의 `auto`는 `main-size`로 바뀌었습니다. [bug 1032922](https://bugzilla.mozilla.org/show_bug.cgi?id=1032922)에서 구현 기록을 볼 수 있습니다.[bug 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316)에서 되돌려져 `auto` 가 다시 `width` / `height` 속성을 가리키게 됐고, 대신 새로운 `content` 키워드가 자동 크기조절을 맡게 됐습니다. ([Firefox bug 1105111](https://bugzil.la/1105111)에서 볼 수 있습니다)
 
 ### 형식 구문
 
@@ -89,10 +123,10 @@ flex-basis: unset;
 }
 
 .flex {
-  background: #6AB6D8;
+  background: #6ab6d8;
   padding: 10px;
   margin-bottom: 50px;
-  border: 3px solid #2E86BB;
+  border: 3px solid #2e86bb;
   color: white;
   font-size: 20px;
   text-align: center;
@@ -115,7 +149,7 @@ flex-basis: unset;
 }
 
 .flex1:after {
-  content: 'auto';
+  content: "auto";
 }
 
 .flex2 {
@@ -123,7 +157,7 @@ flex-basis: unset;
 }
 
 .flex2:after {
-  content: 'max-content';
+  content: "max-content";
 }
 
 .flex3 {
@@ -131,7 +165,7 @@ flex-basis: unset;
 }
 
 .flex3:after {
-  content: 'min-content';
+  content: "min-content";
 }
 
 .flex4 {
@@ -139,15 +173,15 @@ flex-basis: unset;
 }
 
 .flex4:after {
-  content: 'fit-content';
+  content: "fit-content";
 }
 
 .flex5 {
-   flex-basis: content;
+  flex-basis: content;
 }
 
 .flex5:after {
-  content: 'content';
+  content: "content";
 }
 
 .flex6 {
@@ -155,7 +189,7 @@ flex-basis: unset;
 }
 
 .flex6:after {
-  content: 'fill';
+  content: "fill";
 }
 ```
 
@@ -175,6 +209,6 @@ flex-basis: unset;
 
 ## 같이 보기
 
-- CSS 플렉스박스 안내서: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS 플렉스박스 안내서: _[Controlling Ratios of flex items along the main axis](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS 플렉스박스 안내서: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS 플렉스박스 안내서: _[Controlling Ratios of flex items along the main axis](/ko/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
 - {{cssxref("width")}}

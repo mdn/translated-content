@@ -1,12 +1,6 @@
 ---
-title: '::-webkit-slider-thumb'
+title: ::-webkit-slider-thumb
 slug: Web/CSS/::-webkit-slider-thumb
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::-webkit-slider-thumb
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -19,7 +13,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-webkit-slider-thumb")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -7,11 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/toString
 
 **`toString()`** 方法將回傳一個可以表達該陣列及其元素的字串。
 
-{{EmbedInteractiveExample("pages/js/array-tostring.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.toString()", "shorter")}}
+
+```js interactive-example
+const array1 = [1, 2, "a", "1a"];
+
+console.log(array1.toString());
+// Expected output: "1,2,a,1a"
+```
 
 ## 語法
 
-```js
+```js-nolint
 toString()
 ```
 
@@ -36,13 +43,13 @@ toString()
 ### 如何使用 toString
 
 ```js
-const array1 = [1, 2, 'a', '1a'];
+const array1 = [1, 2, "a", "1a"];
 
 console.log(array1.toString());
 // expected output: "1,2,a,1a"
 ```
 
-## 規格
+## 規範
 
 {{Specifications}}
 

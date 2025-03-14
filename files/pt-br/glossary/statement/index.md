@@ -1,8 +1,9 @@
 ---
 title: Declaração
 slug: Glossary/Statement
-original_slug: Glossario/Declaração
 ---
+
+{{GlossarySidebar}}
 
 Em uma linguagem de programação, uma **declaração** é uma linha de código que dá comando para execução de uma tarefa. Cada programa é composto por uma sequência de declarações.
 

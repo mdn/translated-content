@@ -1,13 +1,62 @@
 ---
 title: border-style
 slug: Web/CSS/border-style
+l10n:
+  sourceCommit: 59593341146f085e57cec84f0928c7b7e18f3e97
 ---
 
 {{CSSRef}}
 
- **`border-style`** は [一括指定](/ja/docs/Web/CSS/Shorthand_properties) の [CSS](/ja/docs/Web/CSS) プロパティで、要素の境界線の 4 辺すべての線のスタイルを設定します。
+**`border-style`** は[一括指定](/ja/docs/Web/CSS/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) プロパティで、要素の境界線の 4 辺すべての線のスタイルを設定します。
 
-{{EmbedInteractiveExample("pages/css/border-style.html")}}
+{{InteractiveExample("CSS Demo: border-style")}}
+
+```css interactive-example-choice
+border-style: none;
+```
+
+```css interactive-example-choice
+border-style: dotted;
+```
+
+```css interactive-example-choice
+border-style: inset;
+```
+
+```css interactive-example-choice
+border-style: dashed solid;
+```
+
+```css interactive-example-choice
+border-style: dashed double none;
+```
+
+```css interactive-example-choice
+border-style: dashed groove none dotted;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+
+body {
+  background-color: #fff;
+}
+```
 
 ## 構成要素のプロパティ
 
@@ -46,6 +95,7 @@ border-style: none solid dotted dashed;
 border-style: inherit;
 border-style: initial;
 border-style: revert;
+border-style: revert-layer;
 border-style: unset;
 ```
 
@@ -77,13 +127,13 @@ border-style: unset;
     - `double`
       - : 2 本の直線を表示し、幅の合計は {{cssxref("border-width")}} で定義したピクセル数になります。
     - `groove`
-      - :  凹んだように見える境界線を表示します。 `ridge` の逆です。
+      - : 凹んだように見える境界線を表示します。 `ridge` の逆です。
     - `ridge`
       - : 出っ張ったように見える境界線を表示します。 `groove` の逆です。
     - `inset`
-      - : 要素が埋め込まれて見える境界線を表示します。 `outset` の逆です。 {{cssxref("border-collapse")}} が `collapsed` に設定されたテーブルのセルに適用すると、この値は `groove` のようにふるまいます。
+      - : 要素が埋め込まれて見える境界線を表示します。 `outset` の逆です。 {{cssxref("border-collapse")}} が `collapsed` に設定されたテーブルのセルに適用すると、この値は `ridge` のようにふるまいます。
     - `outset`
-      - : 要素が出っ張って見える境界線を表示します。 `inset` の逆です。 {{cssxref("border-collapse")}} を `collapsed` に設定したテーブルセルに適用すると、この値は `ridge` のようにふるまいます。
+      - : 要素が出っ張って見える境界線を表示します。 `inset` の逆です。 {{cssxref("border-collapse")}} を `collapsed` に設定したテーブルセルに適用すると、この値は `groove` のようにふるまいます。
 
 ## 公式定義
 
@@ -95,7 +145,7 @@ border-style: unset;
 
 ## 例
 
-<h3 id="All_property_values">プロパティのすべての値</h3>
+### プロパティのすべての値
 
 プロパティのすべての値のサンプルです。
 
@@ -170,7 +220,7 @@ pre {
 }
 ```
 
-### 結果
+#### 結果
 
 {{EmbedLiveSample('All_property_values', "1200", 450)}}
 

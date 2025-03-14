@@ -1,8 +1,6 @@
 ---
-title: ':user-valid (:-moz-ui-valid)'
+title: :user-valid (:-moz-ui-valid)
 slug: Web/CSS/:user-valid
-translation_of: Web/CSS/:user-valid
-browser-compat: css.selectors.user-valid
 l10n:
   sourceCommit: 257486f64b2472dda4996a4ea7b6b5305e46f863
 ---
@@ -11,7 +9,8 @@ l10n:
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) CSS **`:user-valid`** représente tout élément de formulaire validé donc la valeur respecte [la validation des contraintes](/fr/docs/Learn/Forms#constraint_validation). Toutefois, à la différence de [`:valid`](/fr/docs/Web/CSS/:valid), cette pseudo-classe ne cible l'élément qu'après que la personne a interagi avec.
 
-> **Note :** Cette pseudo-classe se comporte de la même façon que la pseudo-classe non-standard `:-moz-ui-valid`.
+> [!NOTE]
+> Cette pseudo-classe se comporte de la même façon que la pseudo-classe non-standard `:-moz-ui-valid`.
 
 Cette pseudo-classe s'applique selon les règles suivantes&nbsp;:
 
@@ -42,7 +41,7 @@ input:user-valid {
 }
 
 input:user-valid + span::before {
-  content: '✓';
+  content: "✓";
   color: green;
 }
 ```
@@ -52,7 +51,12 @@ input:user-valid + span::before {
 ```html
 <form>
   <label for="email">Email *: </label>
-  <input id="email" name="email" type="email" value="test@example.com" required>
+  <input
+    id="email"
+    name="email"
+    type="email"
+    value="test@example.com"
+    required />
   <span></span>
 </form>
 ```

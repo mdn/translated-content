@@ -1,12 +1,6 @@
 ---
 title: Grilles CSS (CSS Grid)
-slug: Web/CSS/CSS_Grid_Layout
-tags:
-  - CSS
-  - CSS Grids
-  - Grilles CSS
-  - Reference
-translation_of: Web/CSS/CSS_Grid_Layout
+slug: Web/CSS/CSS_grid_layout
 ---
 
 {{CSSRef}}
@@ -20,16 +14,18 @@ Comme les tableaux, la grille permet d'aligner des éléments sous forme de colo
 Dans l'exemple qui suit, on montre comment utiliser une grille avec trois pistes en colonnes pour laquelle les nouvelles lignes créées mesureront au moins 100 pixels et auront au plus la taille automatique (définie par leur contenu). Les éléments sont placés sur la grille grâce aux numéros des lignes horizontales et verticales.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
   max-width: 940px;
   margin: 0 auto;
 }
 
 .wrapper > div {
-  border: 2px solid rgb(233,171,88);
+  border: 2px solid rgb(233, 171, 88);
   border-radius: 5px;
-  background-color: rgba(233,171,88,.5);
+  background-color: rgba(233, 171, 88, 0.5);
   padding: 1em;
   color: #d9480f;
 }
@@ -120,39 +116,39 @@ Dans l'exemple qui suit, on montre comment utiliser une grille avec trois pistes
 
 ### Termes définis dans le glossaire
 
-- [Grille](/fr/docs/Glossaire/Grid)
+- [Grille](/fr/docs/Glossary/Grid)
 - [Lignes](/fr/docs/Glossaire/Grid_Lines)
 - [Pistes](/fr/docs/Glossaire/Grid_Tracks)
 - [Cellules](/fr/docs/Glossaire/Grid_Cell)
 - [Zones](/fr/docs/Glossaire/Grid_Areas)
-- [Gouttières](/fr/docs/Glossaire/Gutters)
+- [Gouttières](/fr/docs/Glossary/Gutters)
 - [Axe](/fr/docs/Glossaire/Grid_Axis)
 - [Ligne horizontale](/fr/docs/Glossaire/Grid_Rows)
 - [Colonnes](/fr/docs/Glossaire/Grid_Column)
 
 ## Guides
 
-- [Les concepts de base](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)
-- [Placer les éléments sur les lignes d'une grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_une_grille_CSS)
-- [Le modèle de grille et les autres modèles de disposition](/fr/docs/Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_disposition)
-- [Utiliser des lignes nommées sur une grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_grille)
-- [Définir des zones sur une grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille)
-- [Le placement automatique sur une grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS)
-- [L'alignement des boîtes avec les grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_CSS)
-- [Les grilles CSS, les valeurs logiques et les modes d'écriture](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_écriture)
-- [Les grilles CSS et l'accessibilité](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_accessibilité)
-- [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_amélioration_progressive)
-- [Construire des dispositions courantes avec des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Construire_des_dispositions_courantes_avec_des_grilles_CSS)
-- [Les sous-grilles (_subgrid_)](/fr/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- [Les concepts de base](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [Placer les éléments sur les lignes d'une grille CSS](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [Le modèle de grille et les autres modèles de disposition](/fr/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+- [Utiliser des lignes nommées sur une grille](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+- [Définir des zones sur une grille](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+- [Le placement automatique sur une grille](/fr/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+- [L'alignement des boîtes avec les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [Les grilles CSS, les valeurs logiques et les modes d'écriture](/fr/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+- [Les grilles CSS et l'accessibilité](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+- [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [Construire des dispositions courantes avec des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+- [Les sous-grilles (_subgrid_)](/fr/docs/Web/CSS/CSS_grid_layout/Subgrid)
 
 ## Ressources externes
 
-- [Des exemples créés par Jen Simmons (en anglais)](http://labs.jensimmons.com/)
-- [Les grilles CSS par l'exemple - un ensemble d'exemples et de tutoriels (en anglais)](http://gridbyexample.com/)
+- [Des exemples créés par Jen Simmons (en anglais)](https://labs.jensimmons.com/)
+- [Les grilles CSS par l'exemple - un ensemble d'exemples et de tutoriels (en anglais)](https://gridbyexample.com/)
 - [La référence Codrops sur les grilles CSS (en anglais)](https://tympanus.net/codrops/css_reference/grid/)
-- [L'inspecteur de grille dans les outils de développement Firefox](/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
+- [L'inspecteur de grille dans les outils de développement Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 - [Le bac à sable CSS Grid (en anglais)](https://mozilladevelopers.github.io/playground/)
-- [Les grilles CSS et Internet Explorer 11](http://tomrothe.de/posts/css_grid_and_ie11.html) ([prothèse - _polyfill_](https://github.com/motine/css_grid_annotator))
+- [Les grilles CSS et Internet Explorer 11](https://tomrothe.de/posts/css_grid_and_ie11.html) ([prothèse - _polyfill_](https://github.com/motine/css_grid_annotator))
 
 ## Spécifications
 

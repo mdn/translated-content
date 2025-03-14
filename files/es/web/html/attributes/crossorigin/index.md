@@ -1,11 +1,11 @@
 ---
 title: Atributos de configuración CORS
 slug: Web/HTML/Attributes/crossorigin
-translation_of: Web/HTML/Attributes/crossorigin
-original_slug: Web/HTML/Atributos_de_configuracion_CORS
 ---
 
-En HTML5, algunos elementos HTML que dan soporte para [CORS](/es/docs/HTTP/Access_control_CORS), tales como {{ HTMLElement("img") }} o {{ HTMLElement("video") }}, tienen un atributo `crossorigin` (propiedad `crossOrigin`), que les permite configurar las peticiones CORS de los datos que se cargan. Estos atributos están enumerados, y tienen los siguientes valores posibles:
+{{HTMLSidebar}}
+
+En HTML5, algunos elementos HTML que dan soporte para [CORS](/es/docs/Web/HTTP/CORS), tales como {{ HTMLElement("img") }} o {{ HTMLElement("video") }}, tienen un atributo `crossorigin` (propiedad `crossOrigin`), que les permite configurar las peticiones CORS de los datos que se cargan. Estos atributos están enumerados, y tienen los siguientes valores posibles:
 
 | Palabra clave     | Descripción                                                                                                                                      |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -24,6 +24,7 @@ Una clave inválida y un string vacío serán gestionados como una clave anónim
 
 {{Compat}}
 
-## Ver también
+## Véase también
 
-- [HTTP access control](/En/HTTP_access_control)
+- [Control de acceso HTTP (CORS)](/es/docs/Web/HTTP/CORS)
+- [Atributo HTML: `rel`](/es/docs/Web/HTML/Attributes/rel)

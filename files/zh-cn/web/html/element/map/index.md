@@ -1,66 +1,128 @@
 ---
-title: <map>
+title: <map>：图像映射元素
 slug: Web/HTML/Element/map
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-> **备注：** 这篇文章翻译不完整
+{{HTMLSidebar}}
 
-**HTML `<map>` 属性** 与 {{HTMLElement("area")}} 属性一起使用来定义一个图像映射 (一个可点击的链接区域).
+[HTML](/zh-CN/docs/Web/HTML) **`<map>`** 元素与 {{HTMLElement("area")}} 元素一起使用来定义一个图像映射（一个可点击的链接区域）。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容类别</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">流式内容</a>，<a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语内容</a>，palpable 内容。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的内容</th>
-   <td>任何<a href="/zh-CN/docs/HTML/Content_categories#Transparent_content_model">透明</a>元素。</td>
-  </tr>
-  <tr>
-   <th scope="row">标签省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的父元素</th>
-   <td>任何接受<a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语内容</a>的元素。</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLMapElement")}}</td>
-  </tr>
- </tbody>
-</table>
+{{InteractiveExample("HTML Demo: &lt;map&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<map name="infographic">
+  <area
+    shape="poly"
+    coords="130,147,200,107,254,219,130,228"
+    href="https://developer.mozilla.org/docs/Web/HTML"
+    alt="HTML" />
+  <area
+    shape="poly"
+    coords="130,147,130,228,6,219,59,107"
+    href="https://developer.mozilla.org/docs/Web/CSS"
+    alt="CSS" />
+  <area
+    shape="poly"
+    coords="130,147,200,107,130,4,59,107"
+    href="https://developer.mozilla.org/docs/Web/JavaScript"
+    alt="JavaScript" />
+</map>
+<img
+  usemap="#infographic"
+  src="/shared-assets/images/examples/mdn-info2.png"
+  alt="MDN infographic" />
+```
+
+```css interactive-example
+img {
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 232px;
+}
+```
 
 ## 属性
 
-这个元素拥有[全局属性](/zh-CN/docs/HTML/Global_attributes)。
+这个元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{htmlattrdef("name")}}
-  - : name 属性 给 map 一个名字用来查询，这个属性是必须的，值必须不能为空并且不能带空格。name 属性不准与同文档中其他 map 元素的值相同，如果 id 属性也被添加，name 属性和 id 属性的值必须相同。
+- `name`
+  - : `name` 属性给予该映射引用的名称，这个属性必须存在，值不得为空并且不能带空格。`name` 属性的值不得与同文档中其他 `<map>` 元素的该属性值相同，如果还指定了 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 属性，则两个属性的值必须相同。
 
 ## 示例
 
+### 含有两个区域的图像映射
+
+单击左侧的鹦鹉访问 JavaScript 页面，单击右侧的鹦鹉访问 CSS 页面。
+
+#### HTML
+
 ```html
-<map name="example-map-1">
-  <area shape="circle" coords="200,250,25" href="another.htm" />
-  <area shape="default" />
+<!-- 图片由 Unsplash 上的 Juliana e Mariana Amorim 创作  -->
+<map name="primary">
+  <area
+    shape="circle"
+    coords="75,75,75"
+    href="https://developer.mozilla.org/docs/Web/JavaScript"
+    target="_blank"
+    alt="JavaScript" />
+  <area
+    shape="circle"
+    coords="275,75,75"
+    href="https://developer.mozilla.org/docs/Web/CSS"
+    target="_blank"
+    alt="CSS" />
 </map>
+<img
+  usemap="#primary"
+  src="parrots.jpg"
+  alt="两只鹦鹉的照片，大小为 350 x 150" />
 ```
 
-### 结果
+#### 结果
 
-{{ EmbedLiveSample('示例', '350', '166') }}
+{{ EmbedLiveSample('含有两个区域的图像映射', '', '250') }}
 
-### Expected live example output
+## 技术概要
 
-The live example above should appear similar to the following images (when using your keyboard tab key):
-
-_For the `left.html` link:_
-![](https://mdn.mozillademos.org/files/14595/Screen%20Shot%202017-02-02%20at%2010.48.40%20PM.png)
-
-_For the `right.html` link_
-![](https://mdn.mozillademos.org/files/14597/Screen%20Shot%202017-02-02%20at%2010.49.04%20PM.png)
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容类别</a></th>
+      <td><a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容">流式内容</a>、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>、可感知内容。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>任何<a href="/zh-CN/docs/Web/HTML/Content_categories#透明内容模型">透明</a>元素。</td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>的元素。</td>
+    </tr>
+    <tr>
+       <th scope="row">隐式 ARIA 角色</th>
+       <td>
+         <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >没有相应的角色</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>没有允许的 <code>role</code></td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLMapElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 规范
 
@@ -70,9 +132,7 @@ _For the `right.html` link_
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{HTMLElement("a")}}
 - {{HTMLElement("area")}}
-
-{{HTMLSidebar}}

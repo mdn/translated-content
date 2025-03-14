@@ -1,6 +1,8 @@
 ---
 title: 位置情報 API の使用
 slug: Web/API/Geolocation_API/Using_the_Geolocation_API
+l10n:
+  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
@@ -14,7 +16,7 @@ slug: Web/API/Geolocation_API/Using_the_Geolocation_API
 このオブジェクトが存在していれば、位置情報サービスを利用することができます。次のようなコードでの存在を確認することができます。
 
 ```js
-if('geolocation' in navigator) {
+if ("geolocation" in navigator) {
   /* geolocation が使用可能 */
 } else {
   /* geolocation が使用不可 */
@@ -25,7 +27,8 @@ if('geolocation' in navigator) {
 
 ユーザーの現在位置を取得するには、 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} メソッドを呼び出します。このメソッドはユーザーの現在位置を特定するための非同期通信を開始するとともに、位置取得デバイスから最新の情報を取得します。現在位置が特定されるとコールバック関数が実行されます。また、オプションとして第二引数にコールバック関数を指定することで、エラー発生時に実行される関数を指定することができます。省略可能な第三引数は、最大試行回数、要求待ち時間、高精度の位置情報を求めるかを指定するオブジェクトです。
 
-> **メモ:** 既定では、 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} は低精度の結果を使い、なるべく高速に応答しようとします。これは、正確さに関わらず速い応答を必要とする場合に役立ちます。例えば GPS を備えている端末でも GPS が確定するまでには数分以上かかる可能性がありますので、 `getCurrentPosition()` からは (IP ロケーションや Wi-Fi による) 低精度のデータを返すことがあります。
+> [!NOTE]
+> 既定では、 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} は低精度の結果を使い、なるべく高速に応答しようとします。これは、正確さに関わらず速い応答を必要とする場合に役立ちます。例えば GPS を備えている端末でも GPS が確定するまでには数分以上かかる可能性がありますので、 `getCurrentPosition()` からは (IP ロケーションや Wi-Fi による) 低精度のデータを返すことがあります。
 
 ```js
 navigator.geolocation.getCurrentPosition((position) => {
@@ -67,13 +70,13 @@ function success(position) {
 }
 
 function error() {
-  alert('位置情報が利用できません。');
+  alert("位置情報が利用できません。");
 }
 
 const options = {
   enableHighAccuracy: true,
   maximumAge: 30000,
-  timeout: 27000
+  timeout: 27000,
 };
 
 const watchID = navigator.geolocation.watchPosition(success, error, options);
@@ -83,13 +86,13 @@ const watchID = navigator.geolocation.watchPosition(success, error, options);
 
 ユーザーの位置は {{domxref("GeolocationPosition")}} オブジェクトインスタンスを使用して記述され、それ自体が {{domxref("GeolocationCoordinates")}} オブジェクトインスタンスを含んでいます。
 
-`GeolocationPosition` インスタンスが持つ情報は 2 つだけで、 `coords` プロパティは `GeolocationCoordinates` インスタンスを持っており、 `timestamp` プロパティは位置データが取得された時刻を表す {{domxref("DOMTimeStamp")}} インスタンスを持ちます。
+`GeolocationPosition` インスタンスが持つ情報は 2 つだけで、 `coords` プロパティは `GeolocationCoordinates` インスタンスを持っており、 `timestamp` プロパティは位置データが取得された時刻を表す、ミリ秒単位の [Unix 時刻](/ja/docs/Glossary/Unix_time)を持っています。
 
 `GeolocationCoordinates` インスタンスにはいくつかのプロパティがありますが、最も一般的に使用されるのは `latitude` と `longitude` の 2 つで、これは地図上に位置を描画するために必要なものです。そのため、多くの Geolocation 成功コールバックはとてもシンプルに見えます。
 
 ```js
 function success(position) {
-  const latitude  = position.coords.latitude;
+  const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
 
   // 緯度と経度で何かを行う
@@ -107,7 +110,7 @@ function success(position) {
 ```js
 function errorCallback(error) {
   alert(`ERROR(${error.code}): ${error.message}`);
-};
+}
 ```
 
 ## 例
@@ -117,56 +120,54 @@ function errorCallback(error) {
 ```css hidden
 body {
   padding: 20px;
-  background-color:#ffffc9
+  background-color: #ffffc9;
 }
 
 button {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 ```
 
 ### HTML
 
 ```html
-<button id = "find-me">Show my location</button><br/>
-<p id = "status"></p>
-<a id = "map-link" target="_blank"></a>
+<button id="find-me">現在の位置を表示</button><br />
+<p id="status"></p>
+<a id="map-link" target="_blank"></a>
 ```
 
 ### JavaScript
 
 ```js
 function geoFindMe() {
+  const status = document.querySelector("#status");
+  const mapLink = document.querySelector("#map-link");
 
-  const status = document.querySelector('#status');
-  const mapLink = document.querySelector('#map-link');
-
-  mapLink.href = '';
-  mapLink.textContent = '';
+  mapLink.href = "";
+  mapLink.textContent = "";
 
   function success(position) {
-    const latitude  = position.coords.latitude;
+    const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
 
-    status.textContent = '';
+    status.textContent = "";
     mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
-    mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
+    mapLink.textContent = `緯度: ${latitude}°、経度: ${longitude}°`;
   }
 
   function error() {
-    status.textContent = 'Unable to retrieve your location';
+    status.textContent = "Unable to retrieve your location";
   }
 
-  if(!navigator.geolocation) {
-    status.textContent = 'Geolocation is not supported by your browser';
+  if (!navigator.geolocation) {
+    status.textContent = "このブラウザーは位置情報に対応していません";
   } else {
-    status.textContent = 'Locating…';
+    status.textContent = "位置情報を取得中…";
     navigator.geolocation.getCurrentPosition(success, error);
   }
-
 }
 
-document.querySelector('#find-me').addEventListener('click', geoFindMe);
+document.querySelector("#find-me").addEventListener("click", geoFindMe);
 ```
 
 ### 結果

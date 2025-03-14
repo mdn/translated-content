@@ -1,21 +1,14 @@
 ---
 title: theme.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/theme/onUpdated
-tags:
-  - Add-ons
-  - Event
-  - Extensions
-  - Theme
-  - WebExtensions;
-translation_of: Mozilla/Add-ons/WebExtensions/API/theme/onUpdated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 L'événement se déclenche lorsqu'un thème fourni en tant qu'extension de navigateur est appliqué ou supprimé, plus précisément :
 
-- Quand un [thème statique](/fr/Add-ons/Themes/Theme_concepts#Static_themes) est installé
-- Quand un [thème dynamique](/fr/Add-ons/WebExtensions/API/theme) appelle [`theme.update()`](/fr/Add-ons/WebExtensions/API/theme/update) ou [`theme.reset()`](/fr/Add-ons/WebExtensions/API/theme/update)
+- Quand un [thème statique](/fr/docs/Mozilla/Add-ons/Themes/Theme_concepts#static_themes) est installé
+- Quand un [thème dynamique](/fr/docs/Mozilla/Add-ons/WebExtensions/API/theme) appelle [`theme.update()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/theme/update) ou [`theme.reset()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/theme/update)
 - Quand un thème est désinstallé
 
 Notez que cet événement n'est pas déclenché pour les thèmes intégrés.
@@ -23,9 +16,9 @@ Notez que cet événement n'est pas déclenché pour les thèmes intégrés.
 ## Syntaxe
 
 ```js
-browser.theme.onUpdated.addListener(listener)
-browser.theme.onUpdated.removeListener(listener)
-browser.theme.onUpdated.hasListener(listener)
+browser.theme.onUpdated.addListener(listener);
+browser.theme.onUpdated.removeListener(listener);
+browser.theme.onUpdated.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -54,9 +47,9 @@ Les événements ont trois fonctions :
         - `windowId`{{optional_inline}}
           - : `integer`. L'ID de la fenêtre pour laquelle le thème a été mis à jour. Si cette propriété n'est pas présente, cela signifie que le thème a été mise à jour globalement.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.theme.onUpdated", 10)}}
+{{Compat}}
 
 ## Exemples
 

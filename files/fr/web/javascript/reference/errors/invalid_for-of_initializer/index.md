@@ -1,14 +1,6 @@
 ---
-title: >-
-  SyntaxError: a declaration in the head of a for-of loop can't have an
-  initializer
+title: "SyntaxError: a declaration in the head of a for-of loop can't have an initializer"
 slug: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
-original_slug: Web/JavaScript/Reference/Erreurs/Invalid_for-of_initializer
 ---
 
 {{jsSidebar("Errors")}}
@@ -27,7 +19,7 @@ SyntaxError: for-of loop variable declaration may not have an initializer. (Chro
 
 ## Quel est le problème ?
 
-L'en-tête d'une boucle [`for...of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of) contient une expression d'initialisation, c'est-à-dire qu'une variable est déclarée et qu'on lui affecte une valeur. Ceci n'est pas autorisé pour les boucles `for-of`. En revanche, les boucles [`for`](/fr/docs/Web/JavaScript/Reference/Instructions/for) permettent d'avoir un initialisateur.
+L'en-tête d'une boucle [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) contient une expression d'initialisation, c'est-à-dire qu'une variable est déclarée et qu'on lui affecte une valeur. Ceci n'est pas autorisé pour les boucles `for-of`. En revanche, les boucles [`for`](/fr/docs/Web/JavaScript/Reference/Statements/for) permettent d'avoir un initialisateur.
 
 ## Exemples
 
@@ -62,6 +54,6 @@ for (let value of iterable) {
 
 ## Voir aussi
 
-- [`for...of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of)
-- [`for...in`](/fr/docs/Web/JavaScript/Reference/Instructions/for...in) interdit également d'utiliser un initialisateur en mode strict ([SyntaxError: for-in loop head declarations may not have initializers](/fr/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer))
-- [`for`](/fr/docs/Web/JavaScript/Reference/Instructions/for) permet de définir un initialisateur lors de l'itération
+- [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of)
+- [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) interdit également d'utiliser un initialisateur en mode strict ([SyntaxError: for-in loop head declarations may not have initializers](/fr/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer))
+- [`for`](/fr/docs/Web/JavaScript/Reference/Statements/for) permet de définir un initialisateur lors de l'itération

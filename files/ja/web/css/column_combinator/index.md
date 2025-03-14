@@ -3,13 +3,13 @@ title: 列結合子
 slug: Web/CSS/Column_combinator
 ---
 
-{{CSSRef("Selectors")}}{{SeeCompatTable}}
+{{CSSRef}} {{SeeCompatTable}}
 
 **列結合子** (column combinator, `||`) は、2 つの CSS セレクターの間に配置されます。前者のセレクターに一致する列要素に所属する、後者のセレクターに一致する要素に一致します。
 
 ```css
 /* 表の "selected" クラスの列に所属するセル */
-col.selected || td {
+col.selected||td {
   background: gray;
 }
 ```
@@ -17,7 +17,7 @@ col.selected || td {
 ## 構文
 
 ```css
-column-selector || cell-selector {
+column-selector||cell-selector {
   /* スタイルプロパティ */
 }
 ```
@@ -29,14 +29,14 @@ column-selector || cell-selector {
 ```html
 <table border="1">
   <colgroup>
-    <col span="2"/>
-    <col class="selected"/>
+    <col span="2" />
+    <col class="selected" />
   </colgroup>
   <tbody>
     <tr>
-      <td>A
-      <td>B
-      <td>C
+      <td>A</td>
+      <td>B</td>
+      <td>C</td>
     </tr>
     <tr>
       <td colspan="2">D</td>
@@ -53,7 +53,7 @@ column-selector || cell-selector {
 ### CSS
 
 ```css
-col.selected || td {
+col.selected||td {
   background: gray;
   color: white;
   font-weight: bold;

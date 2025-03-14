@@ -13,7 +13,7 @@ async function [nome]([parametro1[, parametro2[, ..., parametroN]]]) {
 }
 ```
 
-Como no [ES2015](/pt-BR/docs/), você tambem pode usar [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+Como no [ES2015](/pt-BR/docs/Web), você tambem pode usar [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Parâmetros
 
@@ -34,41 +34,41 @@ Uma expressão `async function` é muito similar, e tem quase a mesma sintaxe de
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
   });
-};
+}
 
-(async function(x) { // async function expression usada como uma IIFE
+(async function (x) {
+  // async function expression usada como uma IIFE
   var a = resolveAfter2Seconds(20);
   var b = resolveAfter2Seconds(30);
-  return x + await a + await b;
-})(10).then(v => {
-  console.log(v);  // imprime 60 após 2 segundo.
+  return x + (await a) + (await b);
+})(10).then((v) => {
+  console.log(v); // imprime 60 após 2 segundo.
 });
 
-var add = async function(x) { // async function expression atribuída a uma variável
+var add = async function (x) {
+  // async function expression atribuída a uma variável
   var a = await resolveAfter2Seconds(20);
   var b = await resolveAfter2Seconds(30);
   return x + a + b;
 };
 
-add(10).then(v => {
-  console.log(v);  // imprime 60 após 4 segundos.
+add(10).then((v) => {
+  console.log(v); // imprime 60 após 4 segundos.
 });
 ```
 
 ## Especificações
 
-| Especificação                                                                                        | Status                       | Comentário                   |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ESDraft')}} | Definição inicial no ES2017. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.async_function")}}
+{{Compat}}
 
 ## Veja também
 

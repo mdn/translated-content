@@ -1,14 +1,6 @@
 ---
 title: PerformanceElementTiming.intersectionRect
 slug: Web/API/PerformanceElementTiming/intersectionRect
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - intersectionRect
-  - PerformanceElementTiming
-translation_of: Web/API/PerformanceElementTiming/intersectionRect
 ---
 
 {{APIRef("Element Timing API")}}
@@ -32,7 +24,11 @@ Pour les images, il s'agit du rectangle d'affichage de l'image dans la zone d'af
 Dans cet exemple, l'appel à `entry.intersectionRect` renvoie un objet [`DOMRectReadOnly`](/fr/docs/Web/API/DOMRectReadOnly) avec le rectangle d'affichage de l'image.
 
 ```html
-<img src="image.jpg" alt="une belle image" elementtiming="big-image" id="myImage">
+<img
+  src="image.jpg"
+  alt="une belle image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js
@@ -46,7 +42,8 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ entryTypes: ["element"] });
 ```
 
-> **Note :** Cet exemple utilise l'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) afin d'utiliser l'interface `PerformanceElementTiming`.
+> [!NOTE]
+> Cet exemple utilise l'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) afin d'utiliser l'interface `PerformanceElementTiming`.
 
 ## Spécifications
 

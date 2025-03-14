@@ -1,13 +1,6 @@
 ---
 title: <position>
 slug: Web/CSS/position_value
-tags:
-  - CSS
-  - CSS Data Type
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/position_value
 ---
 
 {{CSSRef}}
@@ -18,7 +11,7 @@ translation_of: Web/CSS/position_value
 
 ## 구문
 
-![](https://mdn.mozillademos.org/files/12215/position_type.png)`<position>` 자료형은 하나 혹은 두 개의 키워드와 함께 선택적인 오프셋을 사용해 지정합니다.
+![](position_type.png)`<position>` 자료형은 하나 혹은 두 개의 키워드와 함께 선택적인 오프셋을 사용해 지정합니다.
 
 키워드에는 `center`, `top`, `right`, `bottom`, `left`가 있으며, 각각 요소 박스의 해당하는 방향 모서리 또는 마주보는 두 모서리의 가운데 지점을 의미합니다. 맥락에 따라, `center`는 좌우 모서리의 중간점일 수도 있고, 상하 모서리의 중간점일 수도 있습니다.
 
@@ -59,7 +52,7 @@ keyword value keyword value /* Each value is an offset from the keyword that pre
 
 ## 보간
 
-애니메이션에서 점의 가로 값과 세로 값은 각각 따로 보간됩니다. 그러나 두 좌표 모두에 대한 보간 속도는 하나의 [타이밍 함수](/ko/docs/Web/CSS/single-transition-timing-function)가 결정하므로, 점은 직선을 따라 이동하게 됩니다.
+애니메이션에서 점의 가로 값과 세로 값은 각각 따로 보간됩니다. 그러나 두 좌표 모두에 대한 보간 속도는 하나의 [타이밍 함수](/ko/docs/Web/CSS/easing-function)가 결정하므로, 점은 직선을 따라 이동하게 됩니다.
 
 ## 예제
 
@@ -96,7 +89,7 @@ bottom top
 ## 같이 보기
 
 - [CSS 값과 단위](/ko/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS 값과 단위 소개](/ko/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [CSS 값과 단위 소개](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
 - {{cssxref("background-position")}}
 - {{cssxref("radial-gradient()")}}
 - {{cssxref("conic-gradient()")}}

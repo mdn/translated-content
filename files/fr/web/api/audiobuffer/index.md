@@ -1,12 +1,6 @@
 ---
 title: AudioBuffer
 slug: Web/API/AudioBuffer
-tags:
-  - API
-  - Experimental
-  - Reference
-  - Web Audio API
-translation_of: Web/API/AudioBuffer
 ---
 
 {{APIRef("Web Audio API")}}
@@ -42,7 +36,7 @@ Ce type d'objet est conçu pour contenir de petit extraits audio, durant génér
 
 ## Exemple
 
-L'exemple suivant montre comment créer un `AudioBuffer` et le remplir avec du bruit blanc. Le code source est disponible sur notre repo [audio-buffer demo](https://github.com/mdn/audio-buffer); une [version live](http://mdn.github.io/audio-buffer/) est également consultable.
+L'exemple suivant montre comment créer un `AudioBuffer` et le remplir avec du bruit blanc. Le code source est disponible sur notre repo [audio-buffer demo](https://github.com/mdn/audio-buffer); une [version live](https://mdn.github.io/audio-buffer/) est également consultable.
 
 ```js
 // Stéréo
@@ -51,9 +45,13 @@ var nombreCanaux = 2;
 // Crée une mémoire tampon vide de 2 secondes
 // à la fréquence d'échantillonage du contexte AudioContext
 var nombreFrames = contexteAudio.sampleRate * 2.0;
-var tableauDonnees = audioCtx.createBuffer(nombreCanaux, nombreFrames, contexteAudio.sampleRate);
+var tableauDonnees = audioCtx.createBuffer(
+  nombreCanaux,
+  nombreFrames,
+  contexteAudio.sampleRate,
+);
 
-bouton.onclick = function() {
+bouton.onclick = function () {
   // remplit la mémoire tampon avec du bruit blanc
   // valeurs aléatoires entre -1.0 et 1.0
   for (var canal = 0; canal < nombreCanaux; canal++) {
@@ -79,8 +77,7 @@ bouton.onclick = function() {
 
   // lance la lecture du so
   source.start();
-
-}
+};
 ```
 
 ## Spécifications

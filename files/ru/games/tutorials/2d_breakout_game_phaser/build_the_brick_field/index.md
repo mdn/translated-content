@@ -1,13 +1,9 @@
 ---
 title: Создание кирпичей
 slug: Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field
-original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Создание_кирпичей
 ---
 
-{{GamesSidebar}}{{IncludeSubnav("/ru/docs/Games")}}
-
-{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Game_over", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Обработка_коллизий")}}
+{{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Game_over", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Обработка_коллизий")}}
 
 Это **9** из 16 уроков [руководства разработки игры с помощью Phaser](/ru/docs/Games/Tutorials/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_2D_Breakout_%D0%B8%D0%B3%D1%80%D1%8B_%D0%BD%D0%B0_Phaser). Исходный код этого урока вы можете найти здесь: [Gamedev-Phaser-Content-Kit/demos/lesson09.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson09.html).
 
@@ -31,8 +27,8 @@ var brickInfo;
 
 ```js
 function preload() {
-    // ...
-    game.load.image('brick', 'img/brick.png');
+  // ...
+  game.load.image("brick", "img/brick.png");
 }
 ```
 
@@ -43,9 +39,9 @@ function preload() {
 Для удобства, давайте вынесем код отрисовки кирпичей в отдельную функцию `initBricks` и вызовем её в конце функции `create()`:
 
 ```js
-function create(){
-    // ...
-    initBricks();
+function create() {
+  // ...
+  initBricks();
 }
 ```
 
@@ -53,19 +49,19 @@ function create(){
 
 ```js
 function initBricks() {
-    brickInfo = {
-        width: 50,
-        height: 20,
-        count: {
-            row: 3,
-            col: 7
-        },
-        offset: {
-            top: 50,
-            left: 60
-        },
-        padding: 10
-    };
+  brickInfo = {
+    width: 50,
+    height: 20,
+    count: {
+      row: 3,
+      col: 7,
+    },
+    offset: {
+      top: 50,
+      left: 60,
+    },
+    padding: 10,
+  };
 }
 ```
 
@@ -80,26 +76,26 @@ bricks = game.add.group();
 Далее переберём в цикле ряды и столбцы — добавьте следующий код со вложенным циклом после предыдущей строки:
 
 ```js
-for(c=0; c<brickInfo.count.col; c++) {
-    for(r=0; r<brickInfo.count.row; r++) {
-        // create new brick and add it to the group
-    }
+for (c = 0; c < brickInfo.count.col; c++) {
+  for (r = 0; r < brickInfo.count.row; r++) {
+    // create new brick and add it to the group
+  }
 }
 ```
 
 Теперь необходимо в каждой итерации создавать кирпич, чтобы получить необходимое число кирпичей, нарисовать их всех на экране и добавить в наш набор `bricks`. Для этого добавим во вложенный цикл немного кода, как показано ниже:
 
 ```js
-for(c=0; c<brickInfo.count.col; c++) {
-    for(r=0; r<brickInfo.count.row; r++) {
-        var brickX = 0;
-        var brickY = 0;
-        newBrick = game.add.sprite(brickX, brickY, 'brick');
-        game.physics.enable(newBrick, Phaser.Physics.ARCADE);
-        newBrick.body.immovable = true;
-        newBrick.anchor.set(0.5);
-        bricks.add(newBrick);
-    }
+for (c = 0; c < brickInfo.count.col; c++) {
+  for (r = 0; r < brickInfo.count.row; r++) {
+    var brickX = 0;
+    var brickY = 0;
+    newBrick = game.add.sprite(brickX, brickY, "brick");
+    game.physics.enable(newBrick, Phaser.Physics.ARCADE);
+    newBrick.body.immovable = true;
+    newBrick.anchor.set(0.5);
+    bricks.add(newBrick);
+  }
 }
 ```
 
@@ -108,8 +104,8 @@ for(c=0; c<brickInfo.count.col; c++) {
 Но у нас осталась проблема — все кирпичи мы рисуем в одном и том же месте, в координатах (0,0). Чтобы это исправить, давайте добавим вычисление координат `brickX` и `brickY` в каждой итерации. Обновите строки инициализации этих переменных, как показано ниже:
 
 ```js
-var brickX = (c*(brickInfo.width+brickInfo.padding))+brickInfo.offset.left;
-var brickY = (r*(brickInfo.height+brickInfo.padding))+brickInfo.offset.top;
+var brickX = c * (brickInfo.width + brickInfo.padding) + brickInfo.offset.left;
+var brickY = r * (brickInfo.height + brickInfo.padding) + brickInfo.offset.top;
 ```
 
 Координата `x` каждого кирпича рассчитывается на основе суммы ширины кирпича `brickInfo.width` и зазора `brickInfo.padding`, умноженной на номер столбца `с`, после этого добавляем отступ от левого края `brickInfo.offset.left`; Расчёт `y` аналогичен, только используются номер ряда r, высота кирпича `brickInfo.height` и отступ от верхнего края `brickInfo.offset.top`. Вот теперь каждый кирпич на своём месте, с учётом всех отступов и зазоров.
@@ -120,31 +116,33 @@ var brickY = (r*(brickInfo.height+brickInfo.padding))+brickInfo.offset.top;
 
 ```js
 function initBricks() {
-    brickInfo = {
-        width: 50,
-        height: 20,
-        count: {
-            row: 3,
-            col: 7
-        },
-        offset: {
-            top: 50,
-            left: 60
-        },
-        padding: 10
+  brickInfo = {
+    width: 50,
+    height: 20,
+    count: {
+      row: 3,
+      col: 7,
+    },
+    offset: {
+      top: 50,
+      left: 60,
+    },
+    padding: 10,
+  };
+  bricks = game.add.group();
+  for (c = 0; c < brickInfo.count.col; c++) {
+    for (r = 0; r < brickInfo.count.row; r++) {
+      var brickX =
+        c * (brickInfo.width + brickInfo.padding) + brickInfo.offset.left;
+      var brickY =
+        r * (brickInfo.height + brickInfo.padding) + brickInfo.offset.top;
+      newBrick = game.add.sprite(brickX, brickY, "brick");
+      game.physics.enable(newBrick, Phaser.Physics.ARCADE);
+      newBrick.body.immovable = true;
+      newBrick.anchor.set(0.5);
+      bricks.add(newBrick);
     }
-    bricks = game.add.group();
-    for(c=0; c<brickInfo.count.col; c++) {
-        for(r=0; r<brickInfo.count.row; r++) {
-            var brickX = (c*(brickInfo.width+brickInfo.padding))+brickInfo.offset.left;
-            var brickY = (r*(brickInfo.height+brickInfo.padding))+brickInfo.offset.top;
-            newBrick = game.add.sprite(brickX, brickY, 'brick');
-            game.physics.enable(newBrick, Phaser.Physics.ARCADE);
-            newBrick.body.immovable = true;
-            newBrick.anchor.set(0.5);
-            bricks.add(newBrick);
-        }
-    }
+  }
 }
 ```
 

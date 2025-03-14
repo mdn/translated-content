@@ -1,32 +1,47 @@
 ---
-title: Document.exitFullscreen()
+title: Document：exitFullscreen() 方法
 slug: Web/API/Document/exitFullscreen
+l10n:
+  sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
 ---
 
 {{ApiRef("Fullscreen API")}}
 
-**`Document.exitFullscreen()`** 方法用于让当前文档退出全屏模式（原文表述不准确，详见备注）。调用这个方法会让文档回退到上一个调用{{domxref("Element.requestFullscreen()")}}方法进入全屏模式之前的状态。
-
-> **备注：** 如果一个元素 A 在请求进去全屏模式之前，已经存在其他元素处于全屏状态，当这个元素 A 退出全屏模式之后，之前的元素仍然处于全屏状态。浏览器内部维护了一个全屏元素栈用于实现这个目的。
+{{domxref("Document")}} 的 **`exitFullscreen()`** 方法请求将当前在全屏模式下呈现的文档元素退出全屏模式，恢复屏幕的先前状态。这通常会逆转先前调用 {{domxref("Element.requestFullscreen()")}} 的效果。
 
 ## 语法
 
+```js-nolint
+exitFullscreen()
 ```
-document.exitFullscreen();
-```
+
+### 参数
+
+无。
+
+### 返回值
+
+一个 {{jsxref("Promise")}}，在{{Glossary("user agent", "用户代理")}}完成退出全屏模式后被兑现。如果在尝试退出全屏模式时发生错误，promise 的 `catch()` 处理器将被调用。
 
 ## 示例
 
+此示例使当前文档在鼠标按钮点击其内部时切换进出全屏显示模式。
+
 ```js
-// 点击切换全屏模式
-document.onclick = function (event) {
+document.onclick = (event) => {
   if (document.fullscreenElement) {
-    document.exitFullscreen()
+    document
+      .exitFullscreen()
+      .then(() => console.log("文档已退出全屏模式"))
+      .catch((err) => console.error(err));
   } else {
-    document.documentElement.requestFullscreen()
+    document.documentElement.requestFullscreen();
   }
 };
 ```
+
+> [!NOTE]
+> 有关更完整的示例，请参阅 [`Element.requestFullscreen()` 示例](/zh-CN/docs/Web/API/Element/requestFullscreen#示例)。
 
 ## 规范
 
@@ -36,12 +51,11 @@ document.onclick = function (event) {
 
 {{Compat}}
 
-## 参阅
+## 参见
 
-- [Using full-screen mode](/zh-CN/DOM/Using_full-screen_mode)
+- [全屏 API](/zh-CN/docs/Web/API/Fullscreen_API)
+- [全屏 API 指南](/zh-CN/docs/Web/API/Fullscreen_API/Guide)
 - {{ domxref("Element.requestFullscreen()") }}
-- {{ domxref("Document.exitFullscreen()") }}
-- {{ domxref("Document.fullscreen") }}
 - {{ domxref("Document.fullscreenElement") }}
-- {{ cssxref(":fullscreen") }}
-- {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
+- {{ cssxref(":fullscreen") }} 和 {{cssxref("::backdrop")}}
+- {{HTMLElement("iframe")}} [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen) 属性

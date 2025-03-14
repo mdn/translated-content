@@ -1,37 +1,36 @@
 ---
-title: HTMLHyperlinkElementUtils.password
+title: HTMLAnchorElement：password 属性
 slug: Web/API/HTMLAnchorElement/password
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("HTML DOM")}}
 
-HTMLHyperlinkElementUtils**`.password`** property 属性是一个{{domxref("USVString")}} ，包含域名前面指定的密码。
+**`HTMLAnchorElement.password`** 属性是一个字符串，包含域名之前指定的密码。
 
-如果在没有首先设置[`用户名`](/zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/username)属性的情况下设置，则会静默失败。
+如果未先设置 [`username`](/zh-CN/docs/Web/API/HTMLAnchorElement/username) 属性就尝试设置此属性，则会静默失败。
 
-## Syntax
+## 值
 
-```plain
-string = object.password;
-object.password = string;
-```
+一个字符串。
 
-## Examples
+## 示例
 
 ```js
-// Let's <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.username"> be in the document
-var anchor = document.getElementByID("myAnchor");
-var result = anchor.password; // Returns:'flabada'
+// 文档中有一个 <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/zh-CN/docs/HTMLAnchorElement"> 元素
+const anchor = document.getElementByID("myAnchor");
+anchor.password; // 返回“flabada”
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- The {{domxref("HTMLHyperlinkElementUtils")}} mixin it belongs to.
+- 所属接口 {{domxref("HTMLAnchorElement")}}。

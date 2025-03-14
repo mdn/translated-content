@@ -1,10 +1,15 @@
 ---
-title: 用語集の項目を書いたり参照したりするには
+title: 用語集の項目を執筆する方法
 slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
-original_slug: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
+l10n:
+  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
 
 {{MDNSidebar}}
+
+> [!CALLOUT]
+> 訳注:
+> MDN Web Docs では、日本語版の記事を最初から作成するのではなく、まず英語版の記事を作成してから日本語訳するようにしてください。
 
 この記事では、 [MDN Web Docs の用語集](/ja/docs/Glossary)に項目を追加したりリンクしたりする方法について説明します。
 また、用語集の項目のレイアウトと内容に関するガイドラインも提供します。
@@ -19,9 +24,10 @@ original_slug: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 
 ## 項目を執筆する方法
 
-用語集に項目が必要なトピックを探している場合は、[文書化されていない用語のリスト](/ja/docs/Glossary#contribute_to_the_glossary)が[用語集のランディングページ](/ja/docs/Glossary)の最後にあるので確認してください。これらのリンクをクリックすると、クリックした項目の新しい用語ページが開きます。それから、次の手順に従ってください。
+最初に、どのようなトピックの用語集項目を書くかを選びましょう。
+用語集に項目が必要なトピックを探している場合は、[用語集のランディングページ](/ja/docs/Glossary)の最後にあるので確認してください。
 
-新たなトピックについての考えがあるならば、 [glossary ランディングページ](https://github.com/mdn/content/tree/main/files/en-us/glossary) 付近に[新しいページを作成](https://github.com/mdn/content#adding-a-new-document)してください。
+新たなトピックについての考えがあるならば、[新しいページ](/ja/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#creating_pages) を [glossary ランディングページ](https://github.com/mdn/content/tree/main/files/en-us/glossary) の直下に作成してください。
 
 ### 要約を書く
 
@@ -29,14 +35,15 @@ original_slug: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 できれば、 2 文以内にしてください。
 説明を読めばどんな人であってもただちに理解できるような説明であるようにしてください。
 
-> **メモ:** インターネット上にある他の定義やコンテンツをコピー＆ペーストしないでください。
+> [!NOTE]
+> インターネット上にある他の定義やコンテンツをコピー＆ペーストしないでください。
 > （特にウィキペディアは、ライセンスの版の幅が小さいため、 MDN とは互換性がありません。）用語集の項目は独自の内容にしてください。
 
 #### 良い用語集の項目を書く
 
 必要であれば、いくつかの段落を追加してください。しかし、気がつくと、全体の記事を書いていることがあります。
 記事を書くのは構いませんが、用語集には行わないでください。
-記事をどこに置けばよいかわからない場合は、お気軽に[相談してください](/ja/docs/MDN/Contribute/Getting_started#step_4_ask_for_help)。
+記事をどこに置けばよいかわからない場合は、お気軽に[相談してください](/ja/docs/MDN/Community/Discussions)。
 
 より良い用語集の項目を書くために考慮すべき簡単なガイドラインがいくつかあります。
 
@@ -49,16 +56,16 @@ original_slug: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 
 ### リンクで拡張する
 
-用語集の項目は常に*詳細情報*の節で終わらせてください。この節では、読者が先へ進むための手助けとなるリンクを含むようにしてください。例えば、さらなる詳細がわかるようになるもの、関連した技術を学ぶことができるものなどです。
+用語集の項目は常に「関連情報」の節で終わらせてください。この節では、読者が先へ進むための手助けとなるリンクを含むようにしてください。例えば、さらなる詳細がわかるようになるもの、関連した技術を学ぶことができるものなどです。
 
 リンクは少なくとも以下の 3 つのグループに分けることをおすすめします。
 
 - 一般知識
-  - : その用語や主題についてのより高水準な情報を提供するリンク群です。例えば、関連する [Wikipedia](https://www.wikipedia.org/) ページへのリンクです。
+  - : その用語や主題についてのより高水準な情報を提供するリンク群です。例えば、関連する [Wikipedia](https://en.wikipedia.org/) ページへのリンクです。
 - 技術情報
   - : MDN Web Docs もしくは外部サイトにある、より詳細な技術情報へのリンク群です。
 - 学習素材
-  - : 読者がその用語の背景にある技術の利用方法を学ぶことを支援する、チュートリアルや演習問題、その他の素材へのリンク群です。
+  - : チュートリアル、練習問題、例、その他の読者の学習に役立つコンテンツへのリンクです。
 
 ## 曖昧な言葉の扱い
 

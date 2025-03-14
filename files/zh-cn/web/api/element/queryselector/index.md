@@ -12,12 +12,12 @@ element = baseElement.querySelector(selectors);
 ```
 
 - `element` 和 `baseElement` 是 {{domxref("element")}} 对象。
-- `selectors` 是一个 CSS 选择器字符串 ( [selectors](/zh-CN/docs/Web/Guide/CSS/Getting_Started/Selectors) )
+- `selectors` 是一个 CSS [选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)字符串。
 
 ### 参数
 
 - `selectors`
-  - : 一组用来匹配{{domxref("Element")}} `baseElement`后代元素的选择器[selectors](/zh-CN/docs/Web/Guide/CSS/Getting_Started/Selectors)；必须是合法的 css 选择器，否则会引起语法错误。返回匹配指定选择器的第一个元素。
+  - : 一组用来匹配 {{domxref("Element")}} `baseElement` 后代元素的[选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)；必须是合法的 css 选择器，否则会引起语法错误。返回匹配指定选择器的第一个元素。
 
 ### 返回值
 
@@ -39,7 +39,9 @@ element = baseElement.querySelector(selectors);
 在第一个例子中，会返回 HTML 文档里第一个没有 type 属性或者有值为“text/css”的 type 属性的{{HTMLElement("style")}}元素：
 
 ```js
-let el = document.body.querySelector("style[type='text/css'], style:not([type])");
+let el = document.body.querySelector(
+  "style[type='text/css'], style:not([type])",
+);
 ```
 
 ### 整个层次结构有效
@@ -68,7 +70,7 @@ let el = document.body.querySelector("style[type='text/css'], style:not([type])"
 ```js
 var baseElement = document.querySelector("p");
 document.getElementById("output").innerHTML =
-         (baseElement.querySelector("div span").innerHTML);
+  baseElement.querySelector("div span").innerHTML;
 ```
 
 #### 结果
@@ -91,9 +93,9 @@ document.getElementById("output").innerHTML =
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [`element.querySelectorAll`](/zh-CN/docs/DOM/Element.querySelectorAll)
-- [`document.querySelector`](/zh-CN/docs/DOM/Document.querySelector)
-- [`document.querySelectorAll`](/zh-CN/docs/DOM/Document.querySelectorAll)
+- [`element.querySelectorAll`](/zh-CN/docs/Web/API/Element/querySelectorAll)
+- [`document.querySelector`](/zh-CN/docs/Web/API/Document/querySelector)
+- [`document.querySelectorAll`](/zh-CN/docs/Web/API/Document/querySelectorAll)
 - [Code snippets for querySelector](/zh-CN/docs/Code_snippets/QuerySelector)

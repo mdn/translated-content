@@ -1,14 +1,9 @@
 ---
 title: Domain
 slug: Glossary/Domain
-tags:
-  - Браузер
-  - домен
-  - инфраструктура
-  - сеть
-translation_of: Glossary/Domain
-original_slug: Глоссарий/Домен
 ---
+
+{{GlossarySidebar}}
 
 **Домен** - это часть компьютерной сети, в которой один объект контролирует ресурсы обработки данных, например веб-сайт.
 

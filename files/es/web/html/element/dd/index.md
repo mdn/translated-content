@@ -1,26 +1,44 @@
 ---
 title: dd
 slug: Web/HTML/Element/dd
-tags:
-  - Contenido agrupado HTML
-  - Definición
-  - Detalles
-  - Detalles de descripción
-  - Elemento
-  - HTML
-  - Lista de descripciones
-  - Referencia
-  - Web
-  - dd
-translation_of: Web/HTML/Element/dd
-original_slug: Web/HTML/Elemento/dd
 ---
 
 {{HTMLSidebar}}
 
 El **elemento HTML `<dd>`** provee detalles acerca de o la definición de un término precedente ({{HTMLElement("dt")}}) en una lista de descripciones ({{HTMLElement("dl")}}).
 
-{{EmbedInteractiveExample("pages/tabbed/dd.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;dd&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Cryptids of Cornwall:</p>
+
+<dl>
+  <dt>Beast of Bodmin</dt>
+  <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+  <dt>Morgawr</dt>
+  <dd>A sea serpent.</dd>
+
+  <dt>Owlman</dt>
+  <dd>A giant owl-like creature.</dd>
+</dl>
+```
+
+```css interactive-example
+p,
+dt {
+  font-weight: bold;
+}
+
+dl,
+dd {
+  font-size: 0.9rem;
+}
+
+dd {
+  margin-bottom: 1em;
+}
+```
 
 La fuente para este ejemplo interactivo esta almacenado en un repositorio GitHub. Si desea contribuir al poryecto de ejemplos interactivos, por favor clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples)y envíe una petición de extracción (pull request).
 
@@ -81,22 +99,22 @@ La fuente para este ejemplo interactivo esta almacenado en un repositorio GitHub
 
 ## Atributos
 
-Los atributos de este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
+Los atributos de este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("nowrap")}} {{Non-standard_inline}}
+- `nowrap` {{Non-standard_inline}}
   - : Si el valor de este atributo es definido como `yes`, el texto de la definición no se encapsulará. El valor por defecto es `no`.
 
 ## Ejemplo
 
-Para un ejemplo, ver [ejemplos \<dl>](/es/docs/Web/HTML/Elemento/dl#Examples).
+Para un ejemplo, ver [ejemplos \<dl>](/es/docs/Web/HTML/Element/dl#examples).
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.dd")}}
+{{Compat}}
 
 ## Ver también
 

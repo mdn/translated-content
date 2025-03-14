@@ -1,38 +1,65 @@
 ---
 title: transform
 slug: Web/CSS/transform
-tags:
-  - CSS
-  - transform
-  - Вёрстка
-  - Свойство CSS
-  - наклон
-  - поворот
-  - трансформация
-translation_of: Web/CSS/transform
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS)-свойство **`transform`** позволяет вам поворачивать, масштабировать, наклонять или сдвигать элемент. Оно модифицирует координатное пространство для CSS [визуальной форматируемой модели](/ru/docs/Web/CSS/Visual_formatting_model).
 
-{{EmbedInteractiveExample("pages/css/transform.html")}}
+{{InteractiveExample("CSS Demo: transform")}}
 
-Если свойство имеет значение, отличное от `none`, будет создан [контекст наложения](/ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context). В этом случае, элемент будет действовать как [содержащий блок](/ru/docs/Web/CSS/Containing_block) для любых элементов `position: fixed;` или `position: absolute;` которые он содержит.
+```css interactive-example-choice
+transform: matrix(1, 2, 3, 4, 5, 6);
+```
 
-> **Предупреждение:** Только трансформируемый элемент может быть `transform`. Т.е. все элементы, шаблоны которых регулируются блочной моделью CSS, кроме : [неизменяемые инлайновые блоки](/ru/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes), [блоки таблица-колонка](/ru/docs/Web/HTML/Element/col), и [блоки таблица-колонка-группа](/ru/docs/Web/HTML/Element/colgroup).
+```css interactive-example-choice
+transform: translate(120px, 50%);
+```
+
+```css interactive-example-choice
+transform: scale(2, 0.5);
+```
+
+```css interactive-example-choice
+transform: rotate(0.5turn);
+```
+
+```css interactive-example-choice
+transform: skew(30deg, 20deg);
+```
+
+```css interactive-example-choice
+transform: scale(0.5) translate(-100%, -100%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
+
+Если свойство имеет значение, отличное от `none`, будет создан [контекст наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context). В этом случае, элемент будет действовать как [содержащий блок](/ru/docs/Web/CSS/Containing_block) для любых элементов `position: fixed;` или `position: absolute;` которые он содержит.
+
+> [!WARNING]
+> Только трансформируемый элемент может быть `transform`. Т.е. все элементы, шаблоны которых регулируются блочной моделью CSS, кроме : [неизменяемые инлайновые блоки](/ru/docs/Web/CSS/Visual_formatting_model#inline-level_elements_and_inline_boxes), [блоки таблица-колонка](/ru/docs/Web/HTML/Element/col), и [блоки таблица-колонка-группа](/ru/docs/Web/HTML/Element/colgroup).
 
 ## Синтаксис
 
 ```css
-/* Значения ключевым словом*/
+/* Ключевые слова */
 transform: none;
 
 /* Значения функций */
-transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
+transform: matrix(1, 2, 3, 4, 5, 6);
 transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 transform: perspective(17px);
 transform: rotate(0.5turn);
-transform: rotate3d(1, 2.0, 3.0, 10deg);
+transform: rotate3d(1, 2, 3, 10deg);
 transform: rotateX(10deg);
 transform: rotateY(10deg);
 transform: rotateZ(10deg);
@@ -98,7 +125,7 @@ div {
 
 {{EmbedLiveSample("Примеры", "400", "160")}}
 
-Для того, чтобы посмотреть другие примеры, обратитесь к [Использование CSS-трансформации](/ru/docs/Web/Guide/CSS/Using_CSS_transforms) и {{cssxref("&lt;transform-function&gt;")}}.
+Для того, чтобы посмотреть другие примеры, обратитесь к [Использование CSS-трансформации](/ru/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) и {{cssxref("&lt;transform-function&gt;")}}.
 
 ## Accessibility concerns
 
@@ -117,12 +144,12 @@ Scaling/zooming анимации являются проблемой для acce
 
 {{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Использование CSS-трансформации](/ru/docs/CSS/Using_CSS_transforms)
+- [Использование CSS-трансформации](/ru/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - {{cssxref("&lt;transform-function&gt;")}} типы данных
 - [Плагин jQuery для кросс-браузерной 2D-трансформации](https://louisremi.github.io/jquery.transform.js/)

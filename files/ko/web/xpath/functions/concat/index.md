@@ -1,12 +1,9 @@
 ---
 title: concat
 slug: Web/XPath/Functions/concat
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/concat
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `concat` 함수는 둘 또는 둘 이상의 문자열을 연결하고 연결한 문자열을 반환합니다.
 
@@ -27,7 +24,7 @@ concat(string1 ,string2 [,stringn]* )
 
 ### 정의
 
-[XPath 1.0 4.2](http://www.w3.org/TR/xpath#function-concat)
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-concat)
 
 ### Gecko 지원
 

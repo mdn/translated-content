@@ -1,20 +1,9 @@
 ---
 title: webRequest.handlerBehaviorChanged()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/handlerBehaviorChanged
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - handlerBehaviorChanged
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/handlerBehaviorChanged
 ---
 
-{{AddonSidebar()}}Cette fonction peut être utilisée pour s'assurer que les auditeurs d'événements sont appliqués correctement lorsque les pages se trouvent dans le cache en mémoire du navigateur.Si le navigateur a chargé une page et que la page est rechargée, le navigateur peut recharger la page à partir de son cache en mémoire, et dans ce cas, les événements ne seront pas déclenchés pour la demande.
+{{AddonSidebar}}Cette fonction peut être utilisée pour s'assurer que les auditeurs d'événements sont appliqués correctement lorsque les pages se trouvent dans le cache en mémoire du navigateur.Si le navigateur a chargé une page et que la page est rechargée, le navigateur peut recharger la page à partir de son cache en mémoire, et dans ce cas, les événements ne seront pas déclenchés pour la demande.
 
 Supposons que le travail d'une extension consiste à bloquer les requêtes Web par rapport à un modèle, et le scénario suivant se produit :
 
@@ -31,12 +20,12 @@ Parce que `handlerBehaviorChanged()` nettoie le cache, cela peut être coûteux 
 
 L'implémentation de la mise en cache, d'où la nécessité de cette fonction, varie d'un navigateur à l'autre, de sorte que dans certains navigateurs, cette fonction ne fait rien.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
-var flushingCache = browser.webRequest.handlerBehaviorChanged()
+var flushingCache = browser.webRequest.handlerBehaviorChanged();
 ```
 
 ### Paramètres
@@ -45,11 +34,11 @@ None.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments, lorsque l'opération sera terminée.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments, lorsque l'opération sera terminée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.handlerBehaviorChanged")}}
+{{Compat}}
 
 ## Exemples
 
@@ -70,9 +59,9 @@ flushingCache.then(onFlushed, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

@@ -1,16 +1,11 @@
 ---
 title: Recursos de linguagem JavaScript
 slug: conflicting/Web/JavaScript/JavaScript_technologies_overview
-tags:
-  - Avançado
-  - Recursos
-translation_of: Web/JavaScript/Language_Resources
-original_slug: Web/JavaScript/Language_Resources
 ---
 
 {{JsSidebar}}
 
-**ECMAScript** é a linguagem de script que forma a base do [JavaScript](/pt-BR/docs/JavaScript). ECMAScript é padronizada pela [Ecma International](http://www.ecma-international.org/) organização de padrões nas especificações **ECMA-262 e ECMA-402** . As seguintes normas ECMAScript foram aprovadas ou estão sendo trabalhadas:
+**ECMAScript** é a linguagem de script que forma a base do [JavaScript](/pt-BR/docs/Web/JavaScript). ECMAScript é padronizada pela [Ecma International](https://www.ecma-international.org/) organização de padrões nas especificações **ECMA-262 e ECMA-402** . As seguintes normas ECMAScript foram aprovadas ou estão sendo trabalhadas:
 
 <table class="standard-table">
   <tbody>
@@ -110,7 +105,7 @@ original_slug: Web/JavaScript/Language_Resources
       </td>
       <td>Junho 2004</td>
       <td>
-        <a href="/en-US/docs/E4X" title="E4X">ECMAScript for XML (E4X)</a
+        <a href="/pt-BR/docs/E4X" title="E4X">ECMAScript for XML (E4X)</a
         >.<br />Veja também a
         <a
           class="link-https"
@@ -129,7 +124,7 @@ original_slug: Web/JavaScript/Language_Resources
       </td>
       <td>Dezembro de 2005</td>
       <td>
-        <a href="/en-US/docs/E4X" title="E4X">ECMAScript para XML (E4X)</a>.
+        <a href="/pt-BR/docs/E4X" title="E4X">ECMAScript para XML (E4X)</a>.
       </td>
     </tr>
     <tr>

@@ -1,13 +1,11 @@
 ---
 title: Ajout de styles et de couleurs
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
-translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
-original_slug: Web/API/Canvas_API/Tutoriel_canvas/Ajout_de_styles_et_de_couleurs
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Tutoriel_canvas/Formes_géométriques", "Dessin_de_texte_avec_canvas")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Formes_géométriques", "Dessin_de_texte_avec_canvas")}}
 
-Dans le chapitre sur [les formes géométriques](/fr/docs/Tutoriel_canvas/Formes_g%C3%A9om%C3%A9triques), nous avons utilisé les styles de lignes et de remplissage par défaut. Ici, nous allons explorer les options de canvas à notre disposition pour rendre nos dessins un peu plus attrayants. Vous apprendrez comment ajouter des couleurs différentes, des styles de ligne, des dégradés, des motifs et des ombres à vos dessins.
+Dans le chapitre sur [les formes géométriques](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes), nous avons utilisé les styles de lignes et de remplissage par défaut. Ici, nous allons explorer les options de canvas à notre disposition pour rendre nos dessins un peu plus attrayants. Vous apprendrez comment ajouter des couleurs différentes, des styles de ligne, des dégradés, des motifs et des ombres à vos dessins.
 
 ## Les couleurs
 
@@ -20,17 +18,18 @@ Jusqu'à présent, nous avons seulement vu des méthodes sur le contexte de dess
 
 `color` est une chaîne représentant un CSS {{cssxref("&lt;color&gt;")}}, d'un objet gradient ou d'un objet motif. Nous allons examiner le gradient et la structure des objets plus tard. Par défaut, l'encadrement et la couleur de remplissage sont fixés sur noir (valeur `#000000` de CSS `color`).
 
-> **Note :** Lorsque vous définissez `strokeStyle` et `fillStyle`, la nouvelle valeur devient la valeur par défaut pour toutes les formes en cours d'élaboration à partir de là. Pour chaque forme que vous voulez dans une couleur différente, vous aurez besoin de réaffecter `fillStyle` ou `strokeStyle`.
+> [!NOTE]
+> Lorsque vous définissez `strokeStyle` et `fillStyle`, la nouvelle valeur devient la valeur par défaut pour toutes les formes en cours d'élaboration à partir de là. Pour chaque forme que vous voulez dans une couleur différente, vous aurez besoin de réaffecter `fillStyle` ou `strokeStyle`.
 
 Les chaînes pour être valides, doivent être conforme à la spécification CSS {{cssxref("&lt;color&gt;")}}. Chacun des exemples suivants décrit la même couleur.
 
 ```js
 // Les valeurs possibles de fillStyle pour "orange"
 
-ctx.fillStyle = 'orange';
-ctx.fillStyle = '#FFA500';
-ctx.fillStyle = 'rgb(255, 165, 0)';
-ctx.fillStyle = 'rgba(255, 165, 0, 1)';
+ctx.fillStyle = "orange";
+ctx.fillStyle = "#FFA500";
+ctx.fillStyle = "rgb(255, 165, 0)";
+ctx.fillStyle = "rgba(255, 165, 0, 1)";
 ```
 
 ### Un exemple `fillStyle`
@@ -39,11 +38,15 @@ Dans cet exemple, nous utilisons une nouvelle fois deux boucles `for` pour dessi
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   for (var i = 0; i < 6; i++) {
     for (var j = 0; j < 6; j++) {
-      ctx.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ',' +
-                       Math.floor(255 - 42.5 * j) + ',0)';
+      ctx.fillStyle =
+        "rgb(" +
+        Math.floor(255 - 42.5 * i) +
+        "," +
+        Math.floor(255 - 42.5 * j) +
+        ",0)";
       ctx.fillRect(j * 25, i * 25, 25, 25);
     }
   }
@@ -68,17 +71,21 @@ Cet exemple est similaire à celui ci-dessus, mais utilise `strokeStyle` pour ch
 
 ```js
 function draw() {
-    var ctx = document.getElementById('canvas').getContext('2d');
-    for (var i = 0; i < 6; i++) {
-      for (var j = 0; j < 6; j++) {
-        ctx.strokeStyle = 'rgb(0, ' + Math.floor(255 - 42.5 * i) + ', ' +
-                         Math.floor(255 - 42.5 * j) + ')';
-        ctx.beginPath();
-        ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
-        ctx.stroke();
-      }
+  var ctx = document.getElementById("canvas").getContext("2d");
+  for (var i = 0; i < 6; i++) {
+    for (var j = 0; j < 6; j++) {
+      ctx.strokeStyle =
+        "rgb(0, " +
+        Math.floor(255 - 42.5 * i) +
+        ", " +
+        Math.floor(255 - 42.5 * j) +
+        ")";
+      ctx.beginPath();
+      ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
+      ctx.stroke();
     }
   }
+}
 ```
 
 ```html hidden
@@ -119,17 +126,17 @@ Dans cet exemple, nous allons dessiner un fond de quatre carrés de couleurs dif
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   // draw background
-  ctx.fillStyle = '#FD0';
+  ctx.fillStyle = "#FD0";
   ctx.fillRect(0, 0, 75, 75);
-  ctx.fillStyle = '#6C0';
+  ctx.fillStyle = "#6C0";
   ctx.fillRect(75, 0, 75, 75);
-  ctx.fillStyle = '#09F';
+  ctx.fillStyle = "#09F";
   ctx.fillRect(0, 75, 75, 75);
-  ctx.fillStyle = '#F30';
+  ctx.fillStyle = "#F30";
   ctx.fillRect(75, 75, 75, 75);
-  ctx.fillStyle = '#FFF';
+  ctx.fillStyle = "#FFF";
 
   // règle la valeur de transparence
   ctx.globalAlpha = 0.2;
@@ -159,21 +166,21 @@ Dans ce deuxième exemple, nous faisons quelque chose de similaire, mais au lieu
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // Dessine le fond
-  ctx.fillStyle = 'rgb(255, 221, 0)';
+  ctx.fillStyle = "rgb(255, 221, 0)";
   ctx.fillRect(0, 0, 150, 37.5);
-  ctx.fillStyle = 'rgb(102, 204, 0)';
+  ctx.fillStyle = "rgb(102, 204, 0)";
   ctx.fillRect(0, 37.5, 150, 37.5);
-  ctx.fillStyle = 'rgb(0, 153, 255)';
+  ctx.fillStyle = "rgb(0, 153, 255)";
   ctx.fillRect(0, 75, 150, 37.5);
-  ctx.fillStyle = 'rgb(255, 51, 0)';
+  ctx.fillStyle = "rgb(255, 51, 0)";
   ctx.fillRect(0, 112.5, 150, 37.5);
 
   // Dessine des rectangles semi-transparents
   for (var i = 0; i < 10; i++) {
-    ctx.fillStyle = 'rgba(255, 255, 255, ' + (i + 1) / 10 + ')';
+    ctx.fillStyle = "rgba(255, 255, 255, " + (i + 1) / 10 + ")";
     for (var j = 0; j < 4; j++) {
       ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
     }
@@ -222,7 +229,7 @@ Dans l'exemple ci-dessous, 10 lignes droites sont dessinées avec des largeurs c
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   for (var i = 0; i < 10; i++) {
     ctx.lineWidth = 1 + i;
     ctx.beginPath();
@@ -251,7 +258,8 @@ Si vous considérez un tracé de (3,1) à (3,5) avec une épaisseur de ligne de 
 
 Pour résoudre ce problème, vous devez être très précis dans la création de votre tracé. Sachant qu'une largeur de `1.0` s'étendra d'une demi-unité de chaque côté du tracé, créer le tracé de (3.5,1) à (3.5,5) aboutit à l'exemple trois pour une largeur de `1.0` et au remplissage d'un seul pixel de ligne verticale.
 
-> **Note :** Sachez que dans notre exemple de ligne verticale, la position Y fait toujours référence à une position de grille entière — sinon, vous verrez des pixels à moitié colorés à gauche et à droite (mais notez aussi que ce comportement dépend de l'actuel style `lineCap`, dont la valeur par défaut est `butt`. Vous pouvez essayer de tracer des traits consistants avec des coordonnées non-entières pour les lignes et avec une largeur particulière, en définissant le style `lineCap` à `square`, pour que le bord extérieur du trait autour du point final soit automatiquement étendu pour couvrir le pixel entier).
+> [!NOTE]
+> Sachez que dans notre exemple de ligne verticale, la position Y fait toujours référence à une position de grille entière — sinon, vous verrez des pixels à moitié colorés à gauche et à droite (mais notez aussi que ce comportement dépend de l'actuel style `lineCap`, dont la valeur par défaut est `butt`. Vous pouvez essayer de tracer des traits consistants avec des coordonnées non-entières pour les lignes et avec une largeur particulière, en définissant le style `lineCap` à `square`, pour que le bord extérieur du trait autour du point final soit automatiquement étendu pour couvrir le pixel entier).
 >
 > Notez également que seuls les points de début et de fin d'un chemin sont affectés : si un chemin est fermé avec `closePath ()`, il n'y a pas de point de départ ni de point final ; à la place, tous les points d'extrémité du chemin sont connectés à leurs segments joints précédent et suivant, en utilisant le paramètre courant du style `lineJoin`, dont la valeur par défaut est `miter`, avec pour effet d'étendre automatiquement les bordures extérieures des segments connectés à leur point d'intersection. Ainsi, le trait de rendu couvrira exactement les pixels pleins centrés à chaque extrémité si ces segments connectés sont horizontaux et / ou verticaux. Voir les deux sections suivantes pour les démonstrations de ces styles de lignes supplémentaires.
 
@@ -276,11 +284,11 @@ La ligne de gauche utilise l'option par défaut `butt`. Vous pourrez noter qu'el
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var lineCap = ['butt', 'round', 'square'];
+  var ctx = document.getElementById("canvas").getContext("2d");
+  var lineCap = ["butt", "round", "square"];
 
   // Dessiner des guides
-  ctx.strokeStyle = '#09f';
+  ctx.strokeStyle = "#09f";
   ctx.beginPath();
   ctx.moveTo(10, 10);
   ctx.lineTo(140, 10);
@@ -289,7 +297,7 @@ function draw() {
   ctx.stroke();
 
   // Dessiner des lignes
-  ctx.strokeStyle = 'black';
+  ctx.strokeStyle = "black";
   for (var i = 0; i < lineCap.length; i++) {
     ctx.lineWidth = 15;
     ctx.lineCap = lineCap[i];
@@ -328,8 +336,8 @@ L'exemple ci-dessous dessine trois chemins différents, démontrant chacun de ce
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var lineJoin = ['round', 'bevel', 'miter'];
+  var ctx = document.getElementById("canvas").getContext("2d");
+  var lineJoin = ["round", "bevel", "miter"];
   ctx.lineWidth = 10;
   for (var i = 0; i < lineJoin.length; i++) {
     ctx.lineJoin = lineJoin[i];
@@ -374,31 +382,31 @@ Si vous spécifiez une valeur `miterLimit` inférieure à 4.2 dans cette démo, 
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // Éffacer canvas
   ctx.clearRect(0, 0, 150, 150);
 
   // Dessiner des guides
-  ctx.strokeStyle = '#09f';
-  ctx.lineWidth   = 2;
+  ctx.strokeStyle = "#09f";
+  ctx.lineWidth = 2;
   ctx.strokeRect(-5, 50, 160, 50);
 
   // Définir les styles de lignes
-  ctx.strokeStyle = '#000';
+  ctx.strokeStyle = "#000";
   ctx.lineWidth = 10;
 
   // Vérifier l'entrée (input)
-  if (document.getElementById('miterLimit').value.match(/\d+(\.\d+)?/)) {
-    ctx.miterLimit = parseFloat(document.getElementById('miterLimit').value);
+  if (document.getElementById("miterLimit").value.match(/\d+(\.\d+)?/)) {
+    ctx.miterLimit = parseFloat(document.getElementById("miterLimit").value);
   } else {
-    alert('Value must be a positive number');
+    alert("Value must be a positive number");
   }
 
   // Dessiner des lignes
   ctx.beginPath();
   ctx.moveTo(0, 100);
-  for (i = 0; i < 24 ; i++) {
+  for (i = 0; i < 24; i++) {
     var dy = i % 2 == 0 ? 25 : -25;
     ctx.lineTo(Math.pow(i, 1.5) * 2, 75 + dy);
   }
@@ -411,11 +419,13 @@ function draw() {
 <table>
   <tr>
     <td><canvas id="canvas" width="150" height="150"></canvas></td>
-    <td>Change the <code>miterLimit</code> by entering a new value below and clicking the redraw button.<br><br>
+    <td>
+      Change the <code>miterLimit</code> by entering a new value below and
+      clicking the redraw button.<br /><br />
       <form onsubmit="return draw();">
         <label>Miter limit</label>
-        <input type="text" size="3" id="miterLimit"/>
-        <input type="submit" value="Redraw"/>
+        <input type="text" size="3" id="miterLimit" />
+        <input type="submit" value="Redraw" />
       </form>
     </td>
   </tr>
@@ -423,7 +433,9 @@ function draw() {
 ```
 
 ```js hidden
-document.getElementById('miterLimit').value = document.getElementById('canvas').getContext('2d').miterLimit;
+document.getElementById("miterLimit").value = document
+  .getElementById("canvas")
+  .getContext("2d").miterLimit;
 draw();
 ```
 
@@ -433,14 +445,14 @@ draw();
 
 `setLineDash` et `lineDashOffset` précisent le modèle de lignes. `setLineDash` accepte une liste de nombres qui spécifie les distances pour dessiner alternativement une ligne et un espace et `lineDashOffset` définit un décalage pour commencer le motif.
 
-Dans cet exemple, nous créons un effet de fourmis en marche. C'est une technique d'animation souvent employée dans les sélections d'outils des programmes graphiques. Cet effet permet à l'utilisateur de distinguer la frontière de l'image de fond de la sélection en animant la frontière. Dans une partie de ce tutoriel, vous pouvez apprendre comment faire cela et d'autres animations de base [animation basiques.](/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations)[.](/fr/docs/Tutoriel_canvas/Animations_basiques)
+Dans cet exemple, nous créons un effet de fourmis en marche. C'est une technique d'animation souvent employée dans les sélections d'outils des programmes graphiques. Cet effet permet à l'utilisateur de distinguer la frontière de l'image de fond de la sélection en animant la frontière. Dans une partie de ce tutoriel, vous pouvez apprendre comment faire cela et d'autres animations de base [animation basiques.](/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations)[.](/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations)
 
 ```html hidden
 <canvas id="canvas" width="110" height="110"></canvas>
 ```
 
 ```js
-var ctx = document.getElementById('canvas').getContext('2d');
+var ctx = document.getElementById("canvas").getContext("2d");
 var offset = 0;
 
 function draw() {
@@ -489,8 +501,8 @@ Vous pouvez ajouter autant d'arrêts de couleur à un dégradé que vous le souh
 
 ```js
 var lineargradient = ctx.createLinearGradient(0, 0, 150, 150);
-lineargradient.addColorStop(0, 'white');
-lineargradient.addColorStop(1, 'black');
+lineargradient.addColorStop(0, "white");
+lineargradient.addColorStop(1, "black");
 ```
 
 ### Un exemple de `createLinearGradient`
@@ -499,18 +511,18 @@ Dans cet exemple, nous allons créer deux dégradés différents. Comme vous pou
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // Créer un dégradé
   var lingrad = ctx.createLinearGradient(0, 0, 0, 150);
-  lingrad.addColorStop(0, '#00ABEB');
-  lingrad.addColorStop(0.5, '#fff');
-  lingrad.addColorStop(0.5, '#26C000');
-  lingrad.addColorStop(1, '#fff');
+  lingrad.addColorStop(0, "#00ABEB");
+  lingrad.addColorStop(0.5, "#fff");
+  lingrad.addColorStop(0.5, "#26C000");
+  lingrad.addColorStop(1, "#fff");
 
   var lingrad2 = ctx.createLinearGradient(0, 50, 0, 95);
-  lingrad2.addColorStop(0.5, '#000');
-  lingrad2.addColorStop(1, 'rgba(0, 0, 0, 0)');
+  lingrad2.addColorStop(0.5, "#000");
+  lingrad2.addColorStop(1, "rgba(0, 0, 0, 0)");
 
   // assigner des dégradés aux styles "fill" et "stroke"
   ctx.fillStyle = lingrad;
@@ -519,7 +531,6 @@ function draw() {
   // Dessiner des formes
   ctx.fillRect(10, 10, 130, 130);
   ctx.strokeRect(50, 50, 50, 50);
-
 }
 ```
 
@@ -543,28 +554,28 @@ Dans cet exemple, nous définirons quatre dégradés radiaux différents. Parce 
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // Créer un dégradé
   var radgrad = ctx.createRadialGradient(45, 45, 10, 52, 50, 30);
-  radgrad.addColorStop(0, '#A7D30C');
-  radgrad.addColorStop(0.9, '#019F62');
-  radgrad.addColorStop(1, 'rgba(1, 159, 98, 0)');
+  radgrad.addColorStop(0, "#A7D30C");
+  radgrad.addColorStop(0.9, "#019F62");
+  radgrad.addColorStop(1, "rgba(1, 159, 98, 0)");
 
   var radgrad2 = ctx.createRadialGradient(105, 105, 20, 112, 120, 50);
-  radgrad2.addColorStop(0, '#FF5F98');
-  radgrad2.addColorStop(0.75, '#FF0188');
-  radgrad2.addColorStop(1, 'rgba(255, 1, 136, 0)');
+  radgrad2.addColorStop(0, "#FF5F98");
+  radgrad2.addColorStop(0.75, "#FF0188");
+  radgrad2.addColorStop(1, "rgba(255, 1, 136, 0)");
 
   var radgrad3 = ctx.createRadialGradient(95, 15, 15, 102, 20, 40);
-  radgrad3.addColorStop(0, '#00C9FF');
-  radgrad3.addColorStop(0.8, '#00B5E2');
-  radgrad3.addColorStop(1, 'rgba(0, 201, 255, 0)');
+  radgrad3.addColorStop(0, "#00C9FF");
+  radgrad3.addColorStop(0.8, "#00B5E2");
+  radgrad3.addColorStop(1, "rgba(0, 201, 255, 0)");
 
   var radgrad4 = ctx.createRadialGradient(0, 150, 50, 0, 140, 90);
-  radgrad4.addColorStop(0, '#F4F201');
-  radgrad4.addColorStop(0.8, '#E4C700');
-  radgrad4.addColorStop(1, 'rgba(228, 199, 0, 0)');
+  radgrad4.addColorStop(0, "#F4F201");
+  radgrad4.addColorStop(0.8, "#E4C700");
+  radgrad4.addColorStop(1, "rgba(228, 199, 0, 0)");
 
   // dessiner des formes
   ctx.fillStyle = radgrad4;
@@ -614,11 +625,12 @@ Nous utilisons cette méthode pour créer un objet {{domxref ("CanvasPattern")}}
 
 ```js
 var img = new Image();
-img.src = 'someimage.png';
-var ptrn = ctx.createPattern(img, 'repeat');
+img.src = "someimage.png";
+var ptrn = ctx.createPattern(img, "repeat");
 ```
 
-> **Note :** Comme avec la méthode `drawImage ()`, vous devez vous assurer que l'image que vous utilisez est chargée avant d'appeler cette méthode, ou le motif pourrait être mal dessiné.
+> [!NOTE]
+> Comme avec la méthode `drawImage ()`, vous devez vous assurer que l'image que vous utilisez est chargée avant d'appeler cette méthode, ou le motif pourrait être mal dessiné.
 
 ### Un exemple de `createPattern`
 
@@ -626,19 +638,17 @@ Dans ce dernier exemple, nous allons créer un modèle à affecter à la propri�
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // créer un nouvel objet image à utiliser comme modèle
   var img = new Image();
-  img.src = 'canvas_createpattern.png';
-  img.onload = function() {
-
+  img.src = "canvas_createpattern.png";
+  img.onload = function () {
     // créer le modèle
-    var ptrn = ctx.createPattern(img, 'repeat');
+    var ptrn = ctx.createPattern(img, "repeat");
     ctx.fillStyle = ptrn;
     ctx.fillRect(0, 0, 150, 150);
-
-  }
+  };
 }
 ```
 
@@ -673,7 +683,8 @@ La propriété `shadowBlur` indique la taille de l'effet de flou ; cette valeur 
 
 La propriété `shadowColor` est une valeur de couleur CSS standard indiquant la couleur de l'effet d'ombre ; par défaut, il est entièrement en noir transparent.
 
-> **Note :** Les ombres ne sont dessinées que pour les [opérations de composition](/fr/docs/Web/API/Canvas_API/Tutorial/Compositing) `source-over`.
+> [!NOTE]
+> Les ombres ne sont dessinées que pour les [opérations de composition](/fr/docs/Web/API/Canvas_API/Tutorial/Compositing) `source-over`.
 
 ### Un exemple de texte ombré
 
@@ -681,16 +692,16 @@ Cet exemple dessine une chaîne de texte avec un effet d'ombrage.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   ctx.shadowOffsetX = 2;
   ctx.shadowOffsetY = 2;
   ctx.shadowBlur = 2;
-  ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+  ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
 
-  ctx.font = '20px Times New Roman';
-  ctx.fillStyle = 'Black';
-  ctx.fillText('Sample String', 5, 30);
+  ctx.font = "20px Times New Roman";
+  ctx.fillStyle = "Black";
+  ctx.fillText("Sample String", 5, 30);
 }
 ```
 
@@ -704,7 +715,7 @@ draw();
 
 {{EmbedLiveSample("Un_exemple_de_texte_ombré", "180", "100", "shadowed-string.png")}}
 
-Nous allons regarder la propriété de la `font` _(police de caratères)_ et la méthode `fillText` dans le chapitre suivant sur le [dessin de texte](/fr/docs/Dessin_de_texte_avec_canvas).
+Nous allons regarder la propriété de la `font` _(police de caratères)_ et la méthode `fillText` dans le chapitre suivant sur le [dessin de texte](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 ## Règles de remplissage Canvas
 
@@ -721,11 +732,11 @@ Dans cet exemple, nous utilisons la règle `evenodd` .
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.beginPath();
   ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
   ctx.arc(50, 50, 15, 0, Math.PI * 2, true);
-  ctx.fill('evenodd');
+  ctx.fill("evenodd");
 }
 ```
 

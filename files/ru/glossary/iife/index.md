@@ -1,56 +1,47 @@
 ---
 title: IIFE
 slug: Glossary/IIFE
-tags:
-  - IIFE
-  - JavaScript
-  - Глоссарий
-  - КодингСкриптинг
-translation_of: Glossary/IIFE
-original_slug: Глоссарий/IIFE
 ---
-**IIFE** (Immediately Invoked Function Expression) это {{glossary("JavaScript")}} {{glossary("функция")}}, которая выполняется сразу же после того, как она была определена.
 
-```
+{{GlossarySidebar}}
+
+**IIFE** (от англ. _Immediately Invoked Function Expression_ «немедленно вызываемое функциональное выражение») — это идиома {{Glossary("JavaScript")}}, в которой {{Glossary("function", "функция")}} выполняется сразу после её определения. Такие функции также известны как _самовыполняющиеся анонимные функции_. Название IIFE было предложено Беном Альманом в [его блоге](https://web.archive.org/web/20171201033208/http://benalman.com/news/2010/11/immediately-invoked-function-expression/#iife).
+
+```js
+// Обычное IIFE
 (function () {
-    statements
+  // инструкции…
+})();
+
+// Вариант с использованием стрелочной функции
+(() => {
+  // инструкции…
+})();
+
+// Асинхронное IIFE
+(async () => {
+  // инструкции…
 })();
 ```
 
-Это тип выражений, также известный как {{glossary("Self-Executing Anonymous Function")}}, который состоит из двух основных частей. Первая - это сама анонимная функция с лексической областью видимости, заключённым внутри {{jsxref("Operators/Grouping", "Оператора группировки")}} `()`. Благодаря этому переменные IIFE замыкаются в его пределах, и глобальная область видимости ими не засоряется.
+Они состоят из двух основных частей:
 
-Вторая часть создаёт мгновенно выполняющееся функциональное выражение `()` , благодаря которому JavaScript-движок выполняет функцию напрямую.
+1. [Функциональное выражение](/ru/docs/Web/JavaScript/Reference/Operators/function). Для корректного разбора его обычно нужно [заключить в круглые скобки](/ru/docs/Web/JavaScript/Reference/Operators/Grouping).
+2. Немедленный _вызов_ функционального выражения. Возможна передача аргументов, хотя более распространены IIFE без них.
 
-## Примеры
+IIFE — это распространенный шаблон, используемый для выполнения произвольного количества инструкций в своей области видимости (и, возможно, возврата значения) в месте, требующем одного выражения. Они похожи на [оператор запятой](/ru/docs/Web/JavaScript/Reference/Operators/Comma_operator), но гораздо мощнее, так как он может выполнять только несколько выражений и, следовательно, не предоставляет возможности использовать локальные переменные или операторы управления потоком.
 
-Функция становится мгновенно выполняющимся функциональным выражением. Переменные внутри функции не могут быть использованы за пределами её области видимости.
+Варианты использования IIFE:
 
-```
-(function () {
-    var aName = "Barry";
-})();
-// Variable name is not accessible from the outside scope
-aName // throws "Uncaught ReferenceError: aName is not defined"
-```
+- Избежание загрязнения глобального пространства имён путём создания новой {{Glossary("scope", "области видимости")}}.
+- Создание нового асинхронного контекста для использования оператора {{jsxref("Operators/await", "await")}} в неасинхронном контексте.
+- Вычисление значений со сложной логикой, например, использование нескольких операторов в качестве одного выражения.
 
-Переменная, которой присвоено IIFE, хранит в себе результат выполнения функции, но не саму функцию.
+Смотрите примеры в описании [функциональных выражений](/ru/docs/Web/JavaScript/Reference/Operators/function) и [ключевого слова `async function`](/ru/docs/Web/JavaScript/Reference/Operators/async_function).
 
-```
-var result = (function () {
-    var name = "Barry";
-    return name;
-})();
-// Immediately creates the output:
-result; // "Barry"
-```
+## Смотрите также
 
-## Узнать больше
-
-### Материалы
-
-- [Ben Alman's blog post defining IIFEs](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)
-- [Quick example](/ru/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions) (в конце абзаца "Functions", сразу после "Custom objects")
-
-### Основные понятия
-
-- {{interwiki("wikipedia", "Immediately-invoked function expression", "IIFE")}} на Wikipedia
+- [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) в Википедии (англ.)
+- [Оператор запятая](/ru/docs/Web/JavaScript/Reference/Operators/Comma_operator)
+- Связанные термины глоссария:
+  - {{Glossary("Function", "Функция")}}

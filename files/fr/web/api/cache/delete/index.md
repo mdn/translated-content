@@ -1,16 +1,6 @@
 ---
 title: Cache.delete()
 slug: Web/API/Cache/delete
-tags:
-  - API
-  - Cache
-  - Experimental
-  - Méthode
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - delete
-translation_of: Web/API/Cache/delete
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
@@ -45,11 +35,11 @@ Une {{jsxref("Promise", "Promesse")}} qui est résolue à `true` si l'entrée de
 ## Exemples
 
 ```js
-caches.open('v1').then(function(cache) {
-  cache.delete('/images/image.png').then(function(response) {
+caches.open("v1").then(function (cache) {
+  cache.delete("/images/image.png").then(function (response) {
     someUIUpdateFunction();
   });
-})
+});
 ```
 
 ## Spécifications

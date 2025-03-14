@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: as declarações da cabeça do laço for-in podem não ter inicializadores'
+title: "SyntaxError: as declarações da cabeça do laço for-in podem não ter inicializadores"
 slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 ---
 
@@ -35,7 +35,7 @@ No [modo estrito](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode), contudo, é
 
 Esse exemplo lança um `SyntaxError`:
 
-```js example-bad
+```js-nolint example-bad
 const obj = { a: 1, b: 2, c: 3 };
 
 for (const i = 0 in obj) {

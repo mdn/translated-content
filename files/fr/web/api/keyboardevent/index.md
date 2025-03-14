@@ -1,17 +1,9 @@
 ---
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
-tags:
-  - API
-  - DOM
-  - Evènements IU
-  - Interface
-  - Reference
-  - évènements
-translation_of: Web/API/KeyboardEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 Les objets **`KeyboardEvent`** décrivent l'interaction d'un utilisateur avec le clavier. Chaque événement décrit une touche&nbsp;; le type d'événement (`keydown`, `keypress`, ou `keyup`) identifie quel type d'activité a été effectué.
 
@@ -75,15 +67,18 @@ _Cette interface hérite également des propriétés de ses parents, {{domxref("
 
   - : Renvoie une {{domxref("DOMString")}} représentant la valeur de caractère de la touche. Si la touche correspond à un caractère imprimable, cette valeur est une chaîne Unicode non vide contenant ce caractère. Si la touche n'a pas de représentation imprimable, il s'agit d'une chaîne vide.
 
-    > **Note :** si la touche est utilisée comme une macro insérant plusieurs caractères, la valeur de cet attribut est la chaîne entière, pas seulement le premier caractère.
+    > [!NOTE]
+    > Si la touche est utilisée comme une macro insérant plusieurs caractères, la valeur de cet attribut est la chaîne entière, pas seulement le premier caractère.
 
-    > **Attention :** cela a été supprimé des DOM Level 3 Events. C'est pris en charge uniquement sur IE9 + et Microsoft Edge.
+    > [!WARNING]
+    > Cela a été supprimé des DOM Level 3 Events. C'est pris en charge uniquement sur IE9 + et Microsoft Edge.
 
 - {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}}{{Readonlyinline}}
 
   - : Retourne un {{jsxref ("Number")}} représentant le numéro de référence Unicode de la touche ; cet attribut est utilisé uniquement par l'événement `keypress`. Pour les touches dont l'attribut `char` contient plusieurs caractères, il s'agit de la valeur Unicode du premier caractère de cet attribut. Dans Firefox 26, cela retourne des codes pour les caractères imprimables.
 
-    > **Attention :** cet attribut est obsolète : vous devriez utiliser {{domxref("KeyboardEvent.key")}} à la place, si disponible.
+    > [!WARNING]
+    > Cet attribut est obsolète : vous devriez utiliser {{domxref("KeyboardEvent.key")}} à la place, si disponible.
 
 - {{domxref("KeyboardEvent.code")}} {{Readonlyinline}}
   - : Retourne une {{domxref ("DOMString")}} avec la valeur du code de la touche représentée par l'événement.
@@ -103,7 +98,8 @@ _Cette interface hérite également des propriétés de ses parents, {{domxref("
 
   - : Retourne un {{jsxref("Number")}} représentant un code numérique dépendant du système et de l'implémentation, identifiant la valeur non modifiée de la touche pressée.
 
-    > **Attention :** cet attribut est obsolète. vous devriez utiliser {{domxref("KeyboardEvent.key")}} à la place, si disponible.
+    > [!WARNING]
+    > Cet attribut est obsolète. vous devriez utiliser {{domxref("KeyboardEvent.key")}} à la place, si disponible.
 
 - {{domxref("KeyboardEvent.keyIdentifier")}} {{Non-standard_inline}}{{deprecated_inline}}{{Readonlyinline}}
   - : Cette propriété n'est pas standard et a été abandonnée en faveur de {{domxref("KeyboardEvent.key")}}. Elle faisait partie d'une ancienne version de DOM Level 3 Events.
@@ -113,7 +109,8 @@ _Cette interface hérite également des propriétés de ses parents, {{domxref("
 
   - : Retourne une {{domxref("DOMString")}} représentant une chaîne de paramètres régionaux indiquant les paramètres régionaux pour lesquels le clavier est configuré. Cela peut être une chaîne vide si le navigateur ou l'appareil ne connaît pas les paramètres régionaux du clavier.
 
-    > **Note :** cela ne décrit pas les paramètres régionaux des données entrées. Un utilisateur peut utiliser une disposition du clavier donnée, tout en saisissant du texte dans une autre langue.
+    > [!NOTE]
+    > Cela ne décrit pas les paramètres régionaux des données entrées. Un utilisateur peut utiliser une disposition du clavier donnée, tout en saisissant du texte dans une autre langue.
 
 - {{domxref("KeyboardEvent.location")}}{{Readonlyinline}}
   - : Retourne un {{jsxref ("Number")}} représentant l'emplacement de la touche du clavier ou tout autre dispositif d'entrée.
@@ -147,7 +144,8 @@ _Cette interface hérite également des propriétés de ses parents, {{domxref("
 
   - : Retourne un {{jsxref("Number")}} représentant un code numérique dépendant du système et de l'implémentation, identifiant la valeur non modifiée de la touche pressée ; c'est généralement le même que `keyCode`.
 
-    > **Attention :** cet attribut est obsolète ; vous devriez utiliser {{domxref("KeyboardEvent.key")}} à la place, si disponible.
+    > [!WARNING]
+    > Cet attribut est obsolète ; vous devriez utiliser {{domxref("KeyboardEvent.key")}} à la place, si disponible.
 
 ## Notes
 
@@ -161,9 +159,10 @@ Les événements existants sont `keydown`, `keypress` et `keyup`. Pour la plupar
 
 Certaines touches inversent l'état d'un voyant lumineux ; celles-ci comprennent des touches telles que Caps Lock, Num Lock et Scroll Lock. Sous Windows et Linux, ces touches génèrent uniquement les événements `keydown` et `keyup`.
 
-> **Note :** Sous Linux, Firefox 12 et les versions antérieures ont également envoyé l'événement `keypress` pour ces touches.
+> [!NOTE]
+> Sous Linux, Firefox 12 et les versions antérieures ont également envoyé l'événement `keypress` pour ces touches.
 
-Cependant, une limitation du modèle d'événement Mac OS X fait que Caps Lock ne génère que l'événement `keydown`. Num Lock était supporté sur certains modèles d'ordinateurs portables plus anciens (modèles 2007 et plus anciens), mais depuis lors, Mac OS X n'a pas supporté Num Lock même sur les claviers externes. Sur les MacBooks plus anciens avec une touche Num Lock, cette touche ne génère aucun événement touche. Gecko supporte la touche Scroll Lock si un clavier externe ayant une touche F14 est connecté. Dans certaines anciennes versions de Firefox, cette touche générait un événement `keypress` ; ce comportement incohérent était le {{bug(602812)}}.
+Cependant, une limitation du modèle d'événement Mac OS X fait que Caps Lock ne génère que l'événement `keydown`. Num Lock était supporté sur certains modèles d'ordinateurs portables plus anciens (modèles 2007 et plus anciens), mais depuis lors, Mac OS X n'a pas supporté Num Lock même sur les claviers externes. Sur les MacBooks plus anciens avec une touche Num Lock, cette touche ne génère aucun événement touche. Gecko supporte la touche Scroll Lock si un clavier externe ayant une touche F14 est connecté. Dans certaines anciennes versions de Firefox, cette touche générait un événement `keypress` ; ce comportement incohérent était le [bug Firefox 602812](https://bugzil.la/602812).
 
 ### Gestion de l'auto-répétition
 
@@ -204,49 +203,56 @@ Avant Gecko 5.0, la gestion du clavier était moins cohérente entre les plates-
 - Linux
   - : Le comportement de l'événement dépend de la plate-forme particulière. Il se comportera comme Windows ou Mac suivant ce que fait le modèle d'événement natif.
 
-> **Note :** le déclenchement manuel d'un événement ne génère _pas_ l'action par défaut associée à cet événement. Par exemple, le déclenchement manuel d'un événement touche n'entraîne pas l'apparition de cette lettre dans une zone de saisie de texte ayant la focalisation. Dans le cas des événements de l'interface utilisateur, cela est important pour des raisons de sécurité, car cela empêche les scripts de simuler les actions de l'utilisateur interagissant avec le navigateur lui-même.
+> [!NOTE]
+> Le déclenchement manuel d'un événement ne génère _pas_ l'action par défaut associée à cet événement. Par exemple, le déclenchement manuel d'un événement touche n'entraîne pas l'apparition de cette lettre dans une zone de saisie de texte ayant la focalisation. Dans le cas des événements de l'interface utilisateur, cela est important pour des raisons de sécurité, car cela empêche les scripts de simuler les actions de l'utilisateur interagissant avec le navigateur lui-même.
 
 ## Exemple
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<script>
-'use strict';
+  <head>
+    <script>
+      "use strict";
 
-document.addEventListener('keydown', (event) => {
-  const nomTouche = event.key;
+      document.addEventListener(
+        "keydown",
+        (event) => {
+          const nomTouche = event.key;
 
-  if (nomTouche === 'Control') {
-    // Pas d'alerte si seule la touche Control est pressée.
-    return;
-  }
+          if (nomTouche === "Control") {
+            // Pas d'alerte si seule la touche Control est pressée.
+            return;
+          }
 
-  if (event.ctrlKey) {
-    // Même si event.key n'est pas 'Control' (par ex., 'a' is pressed),
-    // event.ctrlKey peut être true si la touche Ctrl est pressée dans le même temps.
-    alert(`Combinaison de ctrlKey + ${nomTouche}`);
-     } else {
-    alert(`Touche pressée ${nomTouche}`);
-  }
-}, false);
+          if (event.ctrlKey) {
+            // Même si event.key n'est pas 'Control' (par ex., 'a' is pressed),
+            // event.ctrlKey peut être true si la touche Ctrl est pressée dans le même temps.
+            alert(`Combinaison de ctrlKey + ${nomTouche}`);
+          } else {
+            alert(`Touche pressée ${nomTouche}`);
+          }
+        },
+        false,
+      );
 
-document.addEventListener('keyup', (event) => {
-  const nomTouche = event.key;
+      document.addEventListener(
+        "keyup",
+        (event) => {
+          const nomTouche = event.key;
 
-  // Dès que l'utilisateur relâche la touche Ctrl, la touche n'est plus active.
-  // Aussi event.ctrlKey est false.
-  if (nomTouche === 'Control') {
-    alert('La touche Control a été relâchée');
-  }
-}, false);
+          // Dès que l'utilisateur relâche la touche Ctrl, la touche n'est plus active.
+          // Aussi event.ctrlKey est false.
+          if (nomTouche === "Control") {
+            alert("La touche Control a été relâchée");
+          }
+        },
+        false,
+      );
+    </script>
+  </head>
 
-</script>
-</head>
-
-<body>
-</body>
+  <body></body>
 </html>
 ```
 

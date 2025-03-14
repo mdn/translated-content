@@ -1,11 +1,6 @@
 ---
 title: border-collapse
 slug: Web/CSS/border-collapse
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-collapse
 ---
 
 {{CSSRef}}
@@ -65,54 +60,101 @@ table {
   border: dashed 6px;
   border-width: 6px;
 }
-table th, table td {
+table th,
+table td {
   border: solid 3px;
 }
-.fx { border-color: orange blue; }
-.gk { border-color: black red; }
-.ie { border-color: blue gold; }
-.tr { border-color: aqua; }
-.sa { border-color: silver blue; }
-.wk { border-color: gold blue; }
-.ch { border-color: red yellow green blue; }
-.bk { border-color: navy blue teal aqua; }
-.op { border-color: red; }
+.fx {
+  border-color: orange blue;
+}
+.gk {
+  border-color: black red;
+}
+.ie {
+  border-color: blue gold;
+}
+.tr {
+  border-color: aqua;
+}
+.sa {
+  border-color: silver blue;
+}
+.wk {
+  border-color: gold blue;
+}
+.ch {
+  border-color: red yellow green blue;
+}
+.bk {
+  border-color: navy blue teal aqua;
+}
+.op {
+  border-color: red;
+}
 ```
 
 ### HTML
 
 ```html
 <table class="separate">
-  <caption><code>border-collapse: separate</code></caption>
+  <caption>
+    <code>border-collapse: separate</code>
+  </caption>
   <tbody>
-    <tr><th>Navigateur</th> <th>Moteur de rendu</th>
+    <tr>
+      <th>Navigateur</th>
+      <th>Moteur de rendu</th>
     </tr>
-    <tr><td class="fx">Firefox</td> <td class="gk">Gecko</td>
+    <tr>
+      <td class="fx">Firefox</td>
+      <td class="gk">Gecko</td>
     </tr>
-    <tr><td class="ie">Internet Explorer</td> <td class="tr">Trident</td>
+    <tr>
+      <td class="ie">Internet Explorer</td>
+      <td class="tr">Trident</td>
     </tr>
-    <tr><td class="sa">Safari</td> <td class="wk">Webkit</td>
+    <tr>
+      <td class="sa">Safari</td>
+      <td class="wk">Webkit</td>
     </tr>
-    <tr><td class="ch">Chrome</td> <td class="bk">Blink</td>
+    <tr>
+      <td class="ch">Chrome</td>
+      <td class="bk">Blink</td>
     </tr>
-    <tr><td class="op">Opera</td> <td class="bk">Blink</td>
+    <tr>
+      <td class="op">Opera</td>
+      <td class="bk">Blink</td>
     </tr>
   </tbody>
 </table>
 <table class="collapse">
-  <caption><code>border-collapse: collapse</code></caption>
+  <caption>
+    <code>border-collapse: collapse</code>
+  </caption>
   <tbody>
-    <tr><th>Navigateur</th> <th>Moteur de rendu</th>
+    <tr>
+      <th>Navigateur</th>
+      <th>Moteur de rendu</th>
     </tr>
-    <tr><td class="fx">Firefox</td> <td class="gk">Gecko</td>
+    <tr>
+      <td class="fx">Firefox</td>
+      <td class="gk">Gecko</td>
     </tr>
-    <tr><td class="ie">Internet Explorer</td> <td class="tr">Trident</td>
+    <tr>
+      <td class="ie">Internet Explorer</td>
+      <td class="tr">Trident</td>
     </tr>
-    <tr><td class="sa">Safari</td> <td class="wk">Webkit</td>
+    <tr>
+      <td class="sa">Safari</td>
+      <td class="wk">Webkit</td>
     </tr>
-    <tr><td class="ch">Chrome</td> <td class="bk">Blink</td>
+    <tr>
+      <td class="ch">Chrome</td>
+      <td class="bk">Blink</td>
     </tr>
-    <tr><td class="op">Opera</td> <td class="bk">Blink</td>
+    <tr>
+      <td class="op">Opera</td>
+      <td class="bk">Blink</td>
     </tr>
   </tbody>
 </table>

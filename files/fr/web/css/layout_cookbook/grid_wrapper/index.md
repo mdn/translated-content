@@ -1,11 +1,6 @@
 ---
 title: Envelopper une grille
 slug: Web/CSS/Layout_cookbook/Grid_wrapper
-tags:
-  - CSS
-  - Guide
-  - Recette
-translation_of: Web/CSS/Layout_cookbook/Grid_wrapper
 ---
 
 {{CSSRef}}
@@ -64,17 +59,15 @@ On a ainsi une méthode plus compatible mais qui ne permet pas d'aligner les él
 
 ## Accessibilité
 
-Bien que les grilles CSS nous permettent potentiellement de positionner n'importe où on le souhaite, il est important que l'ordre des éléments dans le document soit le même que l'ordre visuel, utilisé pour la navigation (voir [les grilles CSS et l'accessibilité](/fr/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility) pour plus de détails).
+Bien que les grilles CSS nous permettent potentiellement de positionner n'importe où on le souhaite, il est important que l'ordre des éléments dans le document soit le même que l'ordre visuel, utilisé pour la navigation (voir [les grilles CSS et l'accessibilité](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility) pour plus de détails).
 
 ## Compatibilité des navigateurs
 
-### `grid-template-columns`
-
-{{Compat("css.properties.grid-template-columns")}}
+{{Compat}}
 
 ## Voir aussi
 
 - {{Cssxref("grid-template-columns")}}
-- [Les grilles CSS sur MDN](/fr/docs/Web/CSS/CSS_Grid_Layout)
+- [Les grilles CSS sur MDN](/fr/docs/Web/CSS/CSS_grid_layout)
 - Article : [Les grilles CSS, plus de flexibilité avec `minmax()` (en anglais)](https://css-irl.info/more-flexibility-with-minmax/)
 - Article : [Isoler des éléments sur une grille CSS (en anglais)](https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/)

@@ -1,9 +1,6 @@
 ---
 title: cross-fade()
 slug: Web/CSS/cross-fade
-translation_of: Web/CSS/cross-fade()
-original_slug: Web/CSS/cross-fade()
-browser-compat: css.types.image.cross-fade
 ---
 
 {{CSSRef}}
@@ -13,7 +10,8 @@ On peut l'utiliser pour de nombreuses manipulations d'image&nbsp;: teinter une i
 
 ## Syntaxe
 
-> **Attention :** À l'heure actuelle (janvier 2019), la syntaxe décrite par la spécification et les syntaxes implémentées sont différentes. Nous commencerons ici par définir la syntaxe telle que définie par la spécification puis celle utilisée au sein des implémentations actuelles.
+> [!WARNING]
+> À l'heure actuelle (janvier 2019), la syntaxe décrite par la spécification et les syntaxes implémentées sont différentes. Nous commencerons ici par définir la syntaxe telle que définie par la spécification puis celle utilisée au sein des implémentations actuelles.
 
 ### Syntaxe de la spécification
 
@@ -80,7 +78,7 @@ Dans les exemples associés à la syntaxe de la spécification, on avait un cas 
 
 Les outils d'assistance ne peuvent pas analyser les images d'arrière-plan. Si l'image contient des informations essentielles à la compréhension du document, mieux vaudra la décrire de façon sémantique dans le document afin que ce dernier soit correctement accessible. Lorsqu'on utilisera des images d'arrière-plan, on s'assurera que le contraste est suffisamment élevé par rapport au texte qui serait affiché par-dessus.
 
-- [Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content)
+- [Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Comprendre les critères de succès 1.1.1 | Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Syntaxe formelle
@@ -103,14 +101,8 @@ Les outils d'assistance ne peuvent pas analyser les images d'arrière-plan. Si l
 .crossfade {
   width: 300px;
   height: 300px;
-  background-image: -webkit-cross-fade(
-    url('br.png'),
-    url('tr.png'),
-    75%);
-  background-image: cross-fade(
-    url('br.png'),
-    url('tr.png'),
-    75%);
+  background-image: -webkit-cross-fade(url("br.png"), url("tr.png"), 75%);
+  background-image: cross-fade(url("br.png"), url("tr.png"), 75%);
 }
 ```
 
@@ -129,11 +121,11 @@ Les outils d'assistance ne peuvent pas analyser les images d'arrière-plan. Si l
 ## Voir aussi
 
 - [`<image>`](/fr/docs/Web/CSS/image)
-- [`url()`](/fr/docs/Web/CSS/url())
-- [`image()`](/fr/docs/Web/CSS/image/image())
-- [`image-set()`](/fr/docs/Web/CSS/image/image-set())
-- [`element()`](/fr/docs/Web/CSS/element())
-- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [`url()`](</fr/docs/Web/CSS/url()>)
+- [`image()`](</fr/docs/Web/CSS/image/image()>)
+- [`image-set()`](</fr/docs/Web/CSS/image/image-set()>)
+- [`element()`](</fr/docs/Web/CSS/element()>)
+- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Fonctions de création de dégradés&nbsp;:
   - [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient)
   - [`radial-gradient()`](/fr/docs/Web/CSS/gradient/radial-gradient)

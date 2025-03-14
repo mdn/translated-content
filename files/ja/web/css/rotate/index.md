@@ -1,11 +1,107 @@
 ---
 title: rotate
 slug: Web/CSS/rotate
+l10n:
+  sourceCommit: 9428e6f9ac2fd4166b5cf245fb674123209787ff
 ---
 
 {{CSSRef}}
 
-**`rotate`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{CSSxRef("transform")}} とは個別に独立して回転変換を指定することができます。これは一般のユーザーインターフェイスの利用においてはより適しており、 `transform` の値で変形関数を指定する実際の順序を覚えておく手間を軽減します。
+**`rotate`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{CSSxRef("transform")}} とは個別に独立して回転変換を指定することができます。これは一般のユーザーインターフェイスの利用においてはより適しており、 `transform` の値で座標変換関数を指定する実際の順序を覚えておく手間を軽減します。
+
+{{InteractiveExample("CSS Demo: rotate")}}
+
+```css interactive-example-choice
+rotate: none;
+```
+
+```css interactive-example-choice
+rotate: -45deg;
+```
+
+```css interactive-example-choice
+rotate: z 45deg;
+```
+
+```css interactive-example-choice
+rotate: x 45deg;
+```
+
+```css interactive-example-choice
+rotate: y 45deg;
+```
+
+```css interactive-example-choice
+rotate: 3 0.5 2 45deg;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+  perspective: 550px;
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgba(210, 0, 0, 0.7);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+  background: rgba(0, 0, 210, 0.7);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+  background: rgba(210, 210, 0, 0.7);
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgba(210, 0, 210, 0.7);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+```
 
 ## 構文
 
@@ -30,7 +126,102 @@ rotate: 1 1 1 90deg;
 rotate: inherit;
 rotate: initial;
 rotate: revert;
+rotate: revert-layer;
 rotate: unset;
+```
+
+{{InteractiveExample("CSS Demo: rotate")}}
+
+```css interactive-example-choice
+rotate: none;
+```
+
+```css interactive-example-choice
+rotate: -45deg;
+```
+
+```css interactive-example-choice
+rotate: z 45deg;
+```
+
+```css interactive-example-choice
+rotate: x 45deg;
+```
+
+```css interactive-example-choice
+rotate: y 45deg;
+```
+
+```css interactive-example-choice
+rotate: 3 0.5 2 45deg;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+  perspective: 550px;
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgba(210, 0, 0, 0.7);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+  background: rgba(0, 0, 210, 0.7);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+  background: rgba(210, 210, 0, 0.7);
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgba(210, 0, 210, 0.7);
+  transform: rotateX(-90deg) translateZ(50px);
+}
 ```
 
 ### 値
@@ -54,55 +245,48 @@ rotate: unset;
 
 ## 例
 
-<h3 id="Rotate_an_element_on_hover">ホバー時に要素を回転</h3>
+### ホバー時に要素を回転
+
+次の例は、 `rotate` プロパティを使用して、ホバー時に要素を様々な軸にで回転させる方法を示しています。
+1 つ目のボックスはホバー時に Z 軸で 90 度回転し、 2 つ目はホバー時に Y 軸で 180 度回転し、 3 つ目はホバー時に座標を定義したベクトルを中心に 360 度回転します。
 
 #### HTML
 
 ```html
-<div>
-  <p class="rotate">Rotation</p>
-</div>
+<div class="box" id="box1">rotate Z</div>
+<div class="box" id="box2">rotate Y</div>
+<div class="box" id="box3">vector & angle</div>
 ```
 
 #### CSS
 
-```css hidden
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: sans-serif;
-}
-
-div {
-  width: 150px;
-  margin: 0 auto;
-}
-
-p {
-  padding: 10px 5px;
-  border: 3px solid black;
-  border-radius: 20px;
-  width: 150px;
-  font-size: 1.2rem;
-  text-align: center;
-}
-```
-
 ```css
-.rotate {
-  transition: rotate 1s;
+.box {
+  display: inline-block;
+  margin: 1em;
+  min-width: 6.5em;
+  line-height: 6.5em;
+  text-align: center;
+  transition: 1s ease-in-out;
+  border: 0.25em dotted;
 }
 
-div:hover .rotate {
-  rotate: 1 -0.5 1 180deg;
+#box1:hover {
+  rotate: 90deg;
+}
+
+#box2:hover {
+  rotate: y 180deg;
+}
+
+#box3:hover {
+  rotate: 1 2 1 360deg;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Rotate_an_element_on_hover")}}
+{{EmbedLiveSample("Rotating_an_element_on_hover", "100%", 150)}}
 
 ## 仕様書
 

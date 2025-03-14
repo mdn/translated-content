@@ -1,30 +1,25 @@
 ---
-title: URL.href
+title: URL：href 属性
 slug: Web/API/URL/href
+l10n:
+  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-{{domxref("URL")}} 接口的 **`href`** 属性是一个包含完整 URL 的 {{domxref("USVString")}} 值。
+{{domxref("URL")}} 接口的 **`href`** 属性是包含整个 URL 的字符串。
 
-{{AvailableInWorkers}}
+## 值
 
-## 语法
-
-```plain
-string = object.href;
-object.href = string;
-```
-
-### 返回值
-
-{{domxref("USVString")}}.
+字符串。
 
 ## 示例
 
 ```js
-var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/href');
-var result = url.href; // Returns: 'https://developer.mozilla.org/en-US/docs/Web/API/URL/href'
+const url = new URL(
+  "https://developer.mozilla.org/zh-CN/docs/Web/API/URL/href",
+);
+console.log(url.href); // 输出：'https://developer.mozilla.org/zh-CN/docs/Web/API/URL/href'
 ```
 
 ## 规范
@@ -35,6 +30,6 @@ var result = url.href; // Returns: 'https://developer.mozilla.org/en-US/docs/Web
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - 所属的 {{domxref("URL")}} 接口。

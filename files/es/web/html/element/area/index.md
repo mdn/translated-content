@@ -1,401 +1,203 @@
 ---
-title: area
+title: "<area>: El elemento área de un mapa de imagen"
 slug: Web/HTML/Element/area
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/area
-original_slug: Web/HTML/Elemento/area
+l10n:
+  sourceCommit: 1d62348c03b9a3afa762124de570ae11411562cc
 ---
-### Definición
 
-**area** de area=área
+{{HTMLSidebar}}
 
-- Sirve para crear las distintas secciones en las que se puede dividir un [mapas de imágenes](http://html.conclase.net/w3c/html401-es/struct/objects.html#include-maps) en el cliente.
-  - : **Sus etiquetas son**: \<area> (solo tiene una).
-  
-    **Crea una caja**: No.
+El elemento **`<area>`** [HTML](/es/docs/Web/HTML) define un área dentro de un mapa de imagen que tiene áreas cliqueables predefinidas. Un mapa de imágen permite que áreas geométricas en una imagen sean asociadas con un {{Glossary("Hyperlink", "hipervínculo")}}.
 
-    **Es un**: Elemento para mapas de imágenes.
+Este elemento solo es usado dentro de un elemento {{HTMLElement("map")}}.
 
-    **Puede contener**: Nada.
+{{InteractiveExample("HTML Demo: &lt;area&gt;", "tabbed-taller")}}
 
-    **Solo puede ser hijo de**: Elementos [map](/es/HTML/Elemento/map).
+```html interactive-example
+<map name="infographic">
+  <area
+    shape="poly"
+    coords="129,0,260,95,129,138"
+    href="https://developer.mozilla.org/docs/Web/HTTP"
+    alt="HTTP" />
+  <area
+    shape="poly"
+    coords="260,96,209,249,130,138"
+    href="https://developer.mozilla.org/docs/Web/HTML"
+    alt="HTML" />
+  <area
+    shape="poly"
+    coords="209,249,49,249,130,139"
+    href="https://developer.mozilla.org/docs/Web/JavaScript"
+    alt="JavaScript" />
+  <area
+    shape="poly"
+    coords="48,249,0,96,129,138"
+    href="https://developer.mozilla.org/docs/Web/API"
+    alt="Web APIs" />
+  <area
+    shape="poly"
+    coords="0,95,128,0,128,137"
+    href="https://developer.mozilla.org/docs/Web/CSS"
+    alt="CSS" />
+</map>
+<img
+  usemap="#infographic"
+  src="/shared-assets/images/examples/mdn-info.png"
+  alt="MDN infographic" />
+```
 
-#### Atributos
+```css interactive-example
+img {
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 260px;
+}
+```
 
-<table class="fullwidth-table standard-table">
+## Atributos
+
+Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+
+- `alt`
+  - : Una línea de texto alternativo que se muestra en los navegadores o en lectores de pantalla, si no se muestra la imagen.
+    El texto debe ser redactado de modo que el usuario tenga el mismo tipo de elección a si la imagen fuese mostrada sin el texto alternativo.
+    Este atributo solo es requerido si se usa el atributo [`href`](#href).
+- `coords`
+
+  - : El atributo `coords` detalla las coordenadas del atributo [`shape`](#shape) en tamaño, forma, y posicionamiento del `<area>`.
+    Este atributo debe ser usado si el atributo `shape` está establecido en `default`.
+
+    - `rect`: el valor es `x1,y1,x2,y2`.
+      El valor especifica las coordenadas de la esquina superior izquierda y de la esquina inferior derecha del rectangulo.
+      Por ejemplo, en `<area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla">` las coordinadas son `0,0` y `253,27`, indicando las esquinas superior izquierda e inferior derecha del rectángulo, respectivamente.
+    - `circle`: el valor es `x,y,radius`. Este valor especifica las coordenadas del centro del círculo y el radio del mismo.
+      Por ejemplo: `<area shape="circle" coords="130,136,60" href="#" target="_blank" alt="MDN">`
+    - `poly`: el valor es `x1,y1,x2,y2,..,xn,yn`. Este valor especifica las coordenadas de los bordes de el polígono.
+      Si los primeros y últimos pares de coordenadas no son los mismos, el navegador añadirá el último par de coordenadas para cerrar el polígono.
+      Los valores son numeros de píxeles de CSS.
+
+- `download`
+  - : Este atributo indica que el autor pretende que el hipervínculo sea usado para descargar un recurso.
+    Véase {{HTMLElement("a")}} para una descripción completa del atributo [`download`](/es/docs/Web/HTML/Element/a#download).
+- `href`
+  - : Se utiliza para incluir un hipervínculo para el área.
+    Su valor debe ser un URL valido.
+    Este atributo puede ser omitido, si es así, el elemento `<area>` no representará un hipervínculo.
+- `ping`
+  - : Contiene una lista de URLs separada por espacios a las que, cuando se sigue el hipervínculo, el navegador enviará solicitudes {{HTTPMethod("POST")}} con el cuerpo `PING` (en segundo plano).
+    Típicamente utlizado para el rastreo.
+- `referrerpolicy`
+
+  - : Indica que referente será utilizado cuando se recoja el recurso:
+
+    - `no-referrer`: La cabecera {{HTTPHeader("Referer")}} no sera enviada.
+    - `no-referrer-when-downgrade`: La cabecera {{HTTPHeader("Referer")}} no sera enviada a {{Glossary("origin")}} sin {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
+    - `origin`: El referente enviado será limitado al origen de la página de referencia: su [esquema](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, y {{Glossary("port", "puerto")}}.
+    - `origin-when-cross-origin`: El referente enviado será limitado al esquema, _host_ y el puerto. Las navegaciones del mismo origen seran aun incluidas en la ruta.
+    - `same-origin`: Un referente será enviado para el {{Glossary("Same-origin policy", "mismo origen")}}, Sin embargo, las solicitudes de origen cruzado no contendrán información de referencia.
+    - `strict-origin`: Solo envía el origen del documento como referente cuando el nivel del protocolo de seguridad se mantiene igual (HTTPS→HTTPS), pero no lo envía si el destino es menos seguro, como un HTTP.
+    - `strict-origin-when-cross-origin` (predeterminado): Envia un URL completo cuando se realiza una solicitud del mismo origen, Solo envía el origen cuando el protocolo de seguridad es el mismo (HTTPS→HTTP) y no envía ninguna cabecera a un destino menos seguro (HTTPS → HTTP).
+    - `unsafe-url`: El referente incluira el origen y ruta (pero no [fragment](/es/docs/Web/API/HTMLAnchorElement/hash), [password](/es/docs/Web/API/HTMLAnchorElement/password), o [username](/es/docs/Web/API/HTMLAnchorElement/username)). **Este valor es inseguro**, ya que filtra los origenes y las rutas de acceso a los recursos protegidos TLS.
+
+- `rel`
+  - : Para anclas que contengan el atributo [`href`](#href), este atributo especifica la relación entre el destino del enlace con el del objeto del enlace.
+    El valor es una lista de tipos de enlaces separados por espacios.
+    Los valores y su semántica serán registrados por alguna autoridad que pueda tener significado para el autor del documento.
+    La relación predeterminada, si no se ha dado ningun otra es nula. Usa solamente el atributo si se está usando un atributo [`href`](#href).
+- `shape`
+  - : Es la forma asociada al area del mapa. Las especificaciones para HTML definen los valores `rect`, define una región en forma rectangular; `circle`, define la región como una forma circular; `poly`, la define como un polígono; y `default`, la cual indica toda la región sin ninguna forma específica.
+- `target`
+
+  - : Palabra clave o nombre definido por el autor del {{Glossary("browsing context","contexto de exploración")}} para mostrar el recurso vinculado. Las siguientes palabras clave tienen significados especiales:
+
+    - `_self` (predeterminado): Muestra el recurso en el contexto de navegación actual.
+    - `_blank`: Muestra el recurso en un contexto de navegación nuevo y sin nombrar.
+    - `_parent`: Muestra el recurso en el contexto de navegación padre del actual.
+      Si no hay un elemento padre, se comporta de igual manera que `_self`.
+    - `_top`: Mestra los recursos en el contexto de navegación mas alto (el contexto de navegacion que es un ancestro del actual y no tiene padre).
+      Si no hay elemento padre, se comporta igual que `_self`.
+
+    Usa este atributo solo si esta presente el atributo [`href`](#href).
+
+    > [!NOTE]
+    > Si se ajusta `target="_blank"` en el elemento `<area>` implicitamente provoca el mismo comportamiento `rel` que si se ocupara [`rel="noopener"`](/es/docs/Web/HTML/Attributes/rel/noopener) que no establece `window.opener`. Véase también [Compatibilidad con navegadores](#browser_compatibility).
+
+## Ejemplos
+
+```html
+<map name="primary">
+  <area
+    shape="circle"
+    coords="75,75,75"
+    href="left.html"
+    alt="Clic para ir a la izquierda" />
+  <area
+    shape="circle"
+    coords="275,75,75"
+    href="right.html"
+    alt="Clic para ir a la derecha" />
+</map>
+<img
+  usemap="#primary"
+  src="https://via.placeholder.com/350x150"
+  alt="350 x 150 pic" />
+```
+
+### Resultado
+
+{{ EmbedLiveSample('Ejemplos', 360, 160) }}
+
+## Resumen Técnico
+
+<table class="properties">
   <tbody>
     <tr>
-      <th>atributo</th>
-      <th>descripción</th>
-      <th>valor</th>
-      <th>por omisión</th>
-    </tr>
-    <tr>
-      <th colspan="4">Genéricos</th>
-    </tr>
-    <tr>
+      <th scope="row">
+        <a href="/es/docs/Web/HTML/Content_categories">Categorias de Contenido</a>
+      </th>
       <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-title"
-          >title</a
-        >
-      </td>
-      <td>
-        Texto informativo o título del elemento. Suele mostrarse a modo de "tool
-        tip".
-      </td>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#h-6.3"
-          >Texto legible</a
-        >. Sensible a
-        <abbr title="diferencia entre Mayúsculas y minúsculas">M/m.</abbr>.
-      </td>
-      <td>Lo fija el navegador.</td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-id"
-          >id</a
-        >
-      </td>
-      <td>
-        Le da un nombre al elemento que lo diferencia de todos los demás del
-        documento.
-      </td>
-      <td>
-        Un
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#type-id"
-          >nombre único</a
-        >. Sensible a
-        <abbr title="diferencia entre Máyusculas y minúsculas">M/m.</abbr>
-      </td>
-      <td>Lo fija el navegador.</td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-class"
-          >class</a
-        >
-      </td>
-      <td>Asigna nombres de clases al elemento. Por defecto, clases CSS.</td>
-      <td>
-        Lista de clases separadas por espacio en blanco. Sensible a
-        <abbr title="diferencia entre Máyusculas y minúsculas">M/m.</abbr>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#type-cdata"
-          >cdata</a
-        >
-      </td>
-      <td>Lo fija el navegador.</td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/styles.html#adef-style"
-          >style</a
-        >
-      </td>
-      <td>
-        Permite especificar
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/styles.html"
-          >información de estilo</a
-        >. Por defecto, estilos CSS.
-      </td>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#type-style"
-          >Declaraciones de estilo</a
-        >.
-      </td>
-      <td>Lo fija el navegador.</td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-lang"
-          >lang</a
-        >
-      </td>
-      <td>
-        Información sobre el
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html"
-          >idioma del contenido</a
-        >
-        del elemento y del valor de sus atributos.
-      </td>
-      <td>
-        Un
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#type-langcode"
-          >código de idioma</a
-        >.
-      </td>
-      <td>
-        Lo fija el navegador. <abbr title="Por defecto">PD.</abbr>:
-        "desconocido".
+        <a href="/es/docs/Web/HTML/Content_categories#flow_content">Contenido de flujo</a>,
+        <a href="/es/docs/Web/HTML/Content_categories#phrasing_content">contenido de redacción</a>.
       </td>
     </tr>
     <tr>
+      <th scope="row">Contenido Permitido</th>
+      <td>Ninguno, este es un {{Glossary("void element","elemento vacío")}}.</td>
+    </tr>
+    <tr>
+      <th scope="row">Omisión de Etiqueta</th>
+      <td>Debe tener una etiqueta de inicio y no una de final.</td>
+    </tr>
+    <tr>
+      <th scope="row">Elementos padre permitidos</th>
       <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-dir"
-          >dir</a
-        >
-      </td>
-      <td>
-        Indica la
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html"
-          >dirección de texto</a
-        >
-        y tablas.
-      </td>
-      <td>
-        Uno de los siguientes: <abbr title="Left-to-right">'ltr' </abbr>o
-        <abbr title="Right-to-left">'rtl'.</abbr>
-      </td>
-      <td>
-        Lo fija el navegador. <abbr title="Por defecto">PD.</abbr>: En
-        castellano 'ltr'.
+        Cualquier elemento que acepte <a href="/es/docs/Web/HTML/Content_categories#phrasing_content">contenido redactable</a>. El elemento <code>&#x3C;area></code> debe tener como ancestro un elemento {{HTMLElement("map")}}, pero no es necesario que este sea el padre directo.
       </td>
     </tr>
     <tr>
-      <td colspan="4">
-        <strong>Eventos</strong>:
-        <code style="color: green"
-          >onclick, ondblclick, onmousedown, onmouseup, onmouseover,
-          onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.</code
-        >
+      <th scope="row">Rol ARIA implícito</th>
+      <td>
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> cuando el atributo <a href="/es/docs/Web/HTML/Element/area#href"><code>href</code></a> esta presente, si no lo esta es
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/generic_role"><code>generic</code></a>
       </td>
     </tr>
     <tr>
-      <th colspan="4">Específicos</th>
+      <th scope="row">Roles de ARIA permitidos</th>
+      <td>No hay <code>role</code> permitidos</td>
     </tr>
     <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/objects.html#adef-shape"
-          >shape</a
-        >
-      </td>
-      <td>Indica la forma del área del mapa.</td>
-      <td>
-        Uno de los siguientes: <code>'rect'</code>, <code>'circle'</code>,
-        <code>'poly'</code>, o <code>'default'</code>.
-      </td>
-      <td><abbr title="Por defecto">PD.</abbr>: <code>'rect'</code></td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/objects.html#adef-coords"
-          >coords</a
-        >
-      </td>
-      <td>Indica las coordenadas (x,y) del área del mapa.</td>
-      <td>
-        Lista de: cantidades de píxeles, o porcentajes de espacio disponible.
-        Separadas por comas.
-      </td>
-      <td>Lo fija el navegador.</td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/links.html#adef-href"
-          >href</a
-        >
-      </td>
-      <td>La dirección del recurso vínculado.</td>
-      <td>
-        Una dirección
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#h-6.4"
-          >URI</a
-        >. Sensible a
-        <abbr title="diferencia entre Máyusculas y minúsculas">M/m.</abbr> (o
-        no).
-      </td>
-      <td>Lo fija el navegador.</td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/objects.html#adef-nohref"
-          >nohref</a
-        >
-      </td>
-      <td>Indica que el área no es activa, no tiene enlace.</td>
-      <td>Uno: 'nohref'</td>
-      <td>Lo fija el navegador.</td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/objects.html#adef-alt"
-          >alt</a
-        >
-      </td>
-      <td>
-        Describe el área o su vínculo, es necesario por que
-        <strong>area</strong> no tiene contenido.
-      </td>
-      <td>
-        Texto legible. Sensible a
-        <abbr title="diferencia entre Máyusculas y minúsculas">M/m.</abbr>
-      </td>
-      <td><abbr title="El autor debe indicarlo">Requerido</abbr></td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/interact/forms.html#adef-accesskey"
-          >accesskey</a
-        >
-      </td>
-      <td>
-        Define una tecla de acceso rápido. Importante para la
-        <a href="es/Accesibilidad">Accesibilidad</a>.
-      </td>
-      <td>
-        Un
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#type-character"
-          >carácter</a
-        >
-        o letra.
-      </td>
-      <td>Lo fija el navegador.</td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/interact/forms.html#adef-tabindex"
-          >tabindex</a
-        >
-      </td>
-      <td>Asigna un número de posición en el orden de tabulación.</td>
-      <td>Un número entre 0 y 32767.</td>
-      <td>Lo fija el navegador.</td>
-    </tr>
-    <tr>
-      <td colspan="4">
-        <strong>Eventos</strong>:
-        <code style="color: green">onfocus, onblur.</code>
-      </td>
-    </tr>
-    <tr>
-      <th colspan="4">De transición</th>
-    </tr>
-    <tr>
-      <td><code style="color: green">target</code></td>
-      <td>
-        Indica el
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/frames.html#h-16.1"
-          >marco</a
-        >
-        en el que se cargará el recurso.
-      </td>
-      <td>
-        Puede ser el nombre de un marco existente, o un
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#type-frame-target"
-          >nombre reservado</a
-        >
-      </td>
-      <td>Lo fija el navegador.</td>
-    </tr>
-    <tr>
-      <th>atributo</th>
-      <th>descripción</th>
-      <th>valor</th>
-      <th>por omisión</th>
+      <th scope="row">Interfaz DOM</th>
+      <td>{{domxref("HTMLAreaElement")}}</td>
     </tr>
   </tbody>
 </table>
 
-### Ejemplos de uso
+## Especificaciones
 
-#### Un mapa de imágenes dividido en dos
+{{Specifications}}
 
-```
+## Compatibilidad con navegadores
 
- <object data="http://developer.mozilla.org/wiki-images/es/3/39/Firefoxlogo.png"
-         usemap="#map1" type="image/png"
-         width="135" height="155">
-
-   <map name="map1">
-     <area href="http://www.mozilla.com/firefox/"
-       alt="El navegador"
-       shape="rect"
-       coords="0,0,60,155">
-
-     <area href="http://www.mozilla.com/thunderbird/"
-       alt="El gestor de correo"
-       shape="rect"
-       coords="75,0,135,155">
-   </map>
- </object>
-
-```
-
-### Soporte
-
-Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html.php#support-html401-area): IE6 vs IE7 vs FF1.5 vs OP9.
-
-### Estilo predeterminado
-
-### Notas
-
-- **area** es un elemento antiguo con el que pueden hacerse mapas simples y poco accesibles. No se recomienda su uso, es preferible diseñar los mapas con elementos en bloque y [anclas](/es/HTML/Elemento/a).
-
-### Referencia
-
-- Los mapas de imágenes y el elemento [**area** en la especificación](http://html.conclase.net/w3c/html401-es/struct/objects.html#h-13.6) de html 4.01
-
----
-
-> **Nota:** Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras! Disculpen las molestias.
->
-> ¿Quieres participar en su ampliación? Para saber como hacerlo consulta MDC:Como ayudar.
-
-Categoría
-
-interwiki links
-
-automatismos
+{{Compat}}

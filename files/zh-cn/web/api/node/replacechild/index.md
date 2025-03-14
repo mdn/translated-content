@@ -9,8 +9,8 @@ slug: Web/API/Node/replaceChild
 
 ## 语法
 
-```plain
-parentNode.replaceChild(newChild, oldChild);
+```js-nolint
+replaceChild(newChild, oldChild)
 ```
 
 ### 参数
@@ -22,38 +22,38 @@ parentNode.replaceChild(newChild, oldChild);
 
 ### 返回值
 
-The returned value is the replaced node. This is the same node as `oldChild`.
+返回值为被替换的{{domxref("Node", "节点", "", 1)}}，与 `oldChild` 为同一个节点。
 
-## 例子
+## 示例
 
 ```js
 // <div>
-//  <span id="childSpan">foo bar</span>
+//   <span id="childSpan">foo bar</span>
 // </div>
 
 // 创建一个空的 span 元素节点
 // 没有 id，没有任何属性和内容
-var sp1 = document.createElement("span");
+const sp1 = document.createElement("span");
 
-// 添加一个 id 属性，值为'newSpan'
+// 添加一个 id 属性，值为 'newSpan'
 sp1.setAttribute("id", "newSpan");
 
 // 创建一个文本节点
-var sp1_content = document.createTextNode("新的 span 元素的内容。");
+const sp1_content = document.createTextNode("新的 span 元素的内容。");
 
 // 将文本节点插入到 span 元素中
 sp1.appendChild(sp1_content);
 
 // 获得被替换节点和其父节点的引用。
-var sp2 = document.getElementById("childSpan");
-var parentDiv = sp2.parentNode;
+const sp2 = document.getElementById("childSpan");
+const parentDiv = sp2.parentNode;
 
 // 用新的 span 元素 sp1 来替换掉 sp2
 parentDiv.replaceChild(sp1, sp2);
 
 // 结果：
 // <div>
-//   <span id="newSpan">新的 span 元素的内容.</span>
+//   <span id="newSpan">新的 span 元素的内容。</span>
 // </div>
 ```
 
@@ -68,4 +68,4 @@ parentDiv.replaceChild(sp1, sp2);
 ## 参见
 
 - {{domxref("Node.removeChild")}}
-- {{domxref("ChildNode.replaceWith")}}
+- {{domxref("Element.replaceWith")}}

@@ -1,26 +1,72 @@
 ---
 title: padding
 slug: Web/CSS/padding
+l10n:
+  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
 {{CSSRef}}
 
-**`padding`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素の全四辺の[パディング領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#パディング領域)を一度に設定します。
+**`padding`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素の全四辺の[パディング領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#パディング領域)を一度に設定します。
 
-{{EmbedInteractiveExample("pages/css/padding.html")}}
+{{InteractiveExample("CSS Demo: padding")}}
+
+```css interactive-example-choice
+padding: 1em;
+```
+
+```css interactive-example-choice
+padding: 10% 0;
+```
+
+```css interactive-example-choice
+padding: 10px 50px 20px;
+```
+
+```css interactive-example-choice
+padding: 10px 50px 30px 0;
+```
+
+```css interactive-example-choice
+padding: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+}
+```
 
 要素のパディング領域とは、コンテンツと境界との間の領域のことです。
 
-> **メモ:** パディングは要素の内部に追加の領域を作成します。それに対して、 {{cssxref("margin")}} は要素の*周り*に追加の領域を作成します。
+> [!NOTE]
+> パディングは要素の内部に追加の領域を作成します。それに対して、 {{cssxref("margin")}} は要素の*周り*に追加の領域を作成します。
 
 ## 構成要素のプロパティ
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
+- {{cssxref("padding-top")}}
+- {{cssxref("padding-right")}}
 - {{cssxref("padding-bottom")}}
 - {{cssxref("padding-left")}}
-- {{cssxref("padding-right")}}
-- {{cssxref("padding-top")}}
 
 ## 構文
 
@@ -41,6 +87,7 @@ padding: 5px 1em 0 1em;
 padding: inherit;
 padding: initial;
 padding: revert;
+padding: revert-layer;
 padding: unset;
 ```
 
@@ -56,7 +103,7 @@ padding: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : パディングの寸法を固定値で表したものです。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : パディングの寸法を包含ブロックの*幅*に対するパーセント値で表したものです。
+  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
 
 ## 公式定義
 
@@ -68,18 +115,18 @@ padding: unset;
 
 ## 例
 
-<h3 id="Setting_padding_with_pixels">パディングをピクセル数で設定</h3>
+### パディングをピクセル数で設定
 
 #### HTML
 
-```html
-<h4>This element has moderate padding.</h4>
-<h3>The padding is huge in this element!</h3>
+```html-nolint live-sample___setting_padding_with_pixels
+<h4>この要素には適度なパディングがあります。</h4>
+<h3>この要素のパディングが巨大です。</h3>
 ```
 
 #### CSS
 
-```css
+```css live-sample___setting_padding_with_pixels
 h4 {
   background-color: lime;
   padding: 20px 50px;
@@ -98,21 +145,21 @@ h3 {
 ### パディングをピクセル数とパーセント値で設定
 
 ```css
-padding: 5%;                /* 全辺: 5% のパディング */
+padding: 5%; /* 全辺: 5% のパディング */
 
-padding: 10px;              /* 全辺: 10px のパディング */
+padding: 10px; /* 全辺: 10px のパディング */
 
-padding: 10px 20px;         /* 上と下: 10px のパディング */
-                            /* 左と右: 20px のパディング */
+padding: 10px 20px; /* 上と下: 10px のパディング */
+/* 左と右: 20px のパディング */
 
-padding: 10px 3% 20px;      /* 上:     10px のパディング */
-                            /* 左と右: 3% のパディング   */
-                            /* 下:     20px のパディング */
+padding: 10px 3% 20px; /* 上:     10px のパディング */
+/* 左と右: 3% のパディング   */
+/* 下:     20px のパディング */
 
-padding: 1em 3px 30px 5px;  /* 上:     1em のパディング  */
-                            /* 右:     3px のパディング  */
-                            /* 下:     30px のパディング */
-                            /* 右:     5px のパディング  */
+padding: 1em 3px 30px 5px; /* 上:     1em のパディング */
+/* 右:     3px のパディング */
+/* 下:     30px のパディング */
+/* 左:     5px のパディング */
 ```
 
 ## 仕様書
@@ -125,6 +172,6 @@ padding: 1em 3px 30px 5px;  /* 上:     1em のパディング  */
 
 ## 関連情報
 
-- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}
 - 対応付けられる論理的プロパティ: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}} および一括指定の {{cssxref("padding-block")}} と {{cssxref("padding-inline")}}

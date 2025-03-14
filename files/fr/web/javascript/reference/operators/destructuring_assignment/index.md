@@ -1,25 +1,29 @@
 ---
 title: Affecter par décomposition
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
-tags:
-  - Destructuration
-  - Affectation de déstructuration
-  - ECMAScript 2015
-  - ES6
-  - JavaScript
-  - Caractéristiques de la langue
-  - Déstructuration des objets imbriqués et des tableaux
-  - Opérateur
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
-original_slug: Web/JavaScript/Reference/Opérateurs/Affecter_par_décomposition
 ---
 
 {{jsSidebar("Operators")}}
 
 L'**affectation par décomposition** (_destructuring_ en anglais) est une expression JavaScript qui permet d'extraire (_unpack_ en anglais) des données d'un tableau ou d'un objet grâce à une syntaxe dont la forme ressemble à la structure du tableau ou de l'objet.
 
-{{EmbedInteractiveExample("pages/js/expressions-destructuringassignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Destructuring assignment")}}
+
+```js interactive-example
+let a, b, rest;
+[a, b] = [10, 20];
+
+console.log(a);
+// Expected output: 10
+
+console.log(b);
+// Expected output: 20
+
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+
+console.log(rest);
+// Expected output: Array [30, 40, 50]
+```
 
 ## Syntaxe
 
@@ -34,12 +38,12 @@ console.log(a); // 10
 console.log(b); // 20
 console.log(rest); // [30, 40, 50]
 
-({a, b} = {a: 10, b: 20});
+({ a, b } = { a: 10, b: 20 });
 console.log(a); // 10
 console.log(b); // 20
 
 // Proposition de syntaxe (niveau 4)
-({a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40});
+({ a, b, ...rest } = { a: 10, b: 20, c: 30, d: 40 });
 console.log(a); // 10
 console.log(b); // 20
 console.log(rest); // {c: 30, d: 40}
@@ -51,7 +55,7 @@ console.log(rest); // {c: 30, d: 40}
 
 ## Description
 
-Ces expressions utilisant des littéraux pour les [objets](/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_littéraux#Litt.C3.A9raux_objets) ou les [tableaux](/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_littéraux#Litt.C3.A9raux_de_tableaux) permettent de créer simplement des données regroupées. Une fois créées, on peut les utiliser de n'importe quelle façon, y compris comme valeur renvoyée par une fonction.
+Ces expressions utilisant des littéraux pour les [objets](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#litt.c3.a9raux_objets) ou les [tableaux](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#litt.c3.a9raux_de_tableaux) permettent de créer simplement des données regroupées. Une fois créées, on peut les utiliser de n'importe quelle façon, y compris comme valeur renvoyée par une fonction.
 
 ```js
 const x = [1, 2, 3, 4, 5]; // On crée un "paquet" de données
@@ -72,8 +76,8 @@ Cette syntaxe est semblable aux fonctionnalités offertes par des langages tels 
 const toto = ["un", "deux", "trois"];
 
 // sans utiliser la décomposition
-const un    = toto[0];
-const deux  = toto[1];
+const un = toto[0];
+const deux = toto[1];
 const trois = toto[2];
 
 // en utilisant la décomposition
@@ -87,8 +91,8 @@ L'affectation par décomposition peut être effectuée sans qu'il y ait de décl
 ```js
 let a, b;
 [a, b] = [1, 2];
-console.log(a);  // 1
-console.log(b);  // 2
+console.log(a); // 1
+console.log(b); // 2
 ```
 
 ### Valeurs par défaut
@@ -161,12 +165,12 @@ console.log("A vaut " + a + " B vaut " + b);
 Après avoir exécuté ce code, on aura a égal à 1 et b égal à 3. La valeur 2 est ignorée. On peut ignorer n'importe laquelle des valeurs (voire toutes). Par exemple :
 
 ```js
-[,,] = f();
+[, ,] = f();
 ```
 
 ### Exploiter les résultats d'une expression rationnelle
 
-Lorsque la méthode [`exec()`](/fr/docs/JavaScript/Reference/Objets_globaux/Object/RegExp/Exec), liées aux expressions rationnelles, trouve une correspondance, elle renvoie un tableau qui contient d'abord la partie complète de la chaîne qui correspond puis ensuite les différentes portions correspondant aux différents groupes. L'affectation par décomposition permet de filtrer simplement les valeurs qu'on souhaite exploiter. Ici, on ignore le premier élément qui est la correspondance complète :
+Lorsque la méthode [`exec()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), liées aux expressions rationnelles, trouve une correspondance, elle renvoie un tableau qui contient d'abord la partie complète de la chaîne qui correspond puis ensuite les différentes portions correspondant aux différents groupes. L'affectation par décomposition permet de filtrer simplement les valeurs qu'on souhaite exploiter. Ici, on ignore le premier élément qui est la correspondance complète :
 
 ```js
 function parseProtocol(url) {
@@ -180,7 +184,9 @@ function parseProtocol(url) {
   return protocol;
 }
 
-console.log(parseProtocol('https://developer.mozilla.org/en-US/Web/JavaScript')); // "https"
+console.log(
+  parseProtocol("https://developer.mozilla.org/en-US/Web/JavaScript"),
+); // "https"
 ```
 
 ### Affecter le reste d'un tableau à une variable
@@ -195,8 +201,8 @@ console.log(b); // [2, 3]
 
 Un exception {{jsxref("SyntaxError")}} sera levée si une virgule est laissée à la fin de l'élément du reste du tableau de gauche :
 
-```js example-bad
-const [a, ...b,] = [1, 2, 3]
+```js-nolint example-bad
+const [a, ...b,] = [1, 2, 3];
 // SyntaxError : un élément du reste ne peut pas avoir
 //               de virgule à la fin
 ```
@@ -206,14 +212,14 @@ const [a, ...b,] = [1, 2, 3]
 ### Exemple simple
 
 ```js
-const o = {p: 42, q: true};
-const {p, q} = o;
+const o = { p: 42, q: true };
+const { p, q } = o;
 
 console.log(p); // 42
 console.log(q); // true
 
 // Assign new variable names
-const {p: toto, q: truc} = o;
+const { p: toto, q: truc } = o;
 
 console.log(toto); // 42
 console.log(truc); // true
@@ -225,18 +231,19 @@ Il est possible d'effectuer une affectation par décomposition même si aucune d
 
 ```js
 let a, b;
-({a, b} = {a:1, b:2});
+({ a, b } = { a: 1, b: 2 });
 ```
 
-> **Note :** Les parenthèses `( ... )` utilisées autour de l'instruction sont nécessaires pour que la partie gauche soit bien interprétée comme un objet littéral et non comme un bloc. Il est également nécessaire d'avoir un point-virgule avant les parenthèses de l'instruction car sinon, ces parenthèses peuvent être interprétées comme un appel de fonction.
+> [!NOTE]
+> Les parenthèses `( ... )` utilisées autour de l'instruction sont nécessaires pour que la partie gauche soit bien interprétée comme un objet littéral et non comme un bloc. Il est également nécessaire d'avoir un point-virgule avant les parenthèses de l'instruction car sinon, ces parenthèses peuvent être interprétées comme un appel de fonction.
 
 ### Affecter avec un nom différent
 
 Lorsqu'on décompose un objet, on peut affecter la variable obtenue sur une variable qui possède un autre nom (que celui de la propriété) :
 
 ```js
-const o = {p: 42, q: true};
-const {p: toto, q: truc} = o;
+const o = { p: 42, q: true };
+const { p: toto, q: truc } = o;
 
 console.log(toto); // 42
 console.log(truc); // true
@@ -249,7 +256,7 @@ Ici, par exemple, `const {p: toto} = o` prend la propriété `p` de l'objet `o` 
 Une variable peut recevoir une valeur par défaut lors de la décomposition si la propriété correspondante de l'objet vaut `undefined`.
 
 ```js
-const {a = 10, b = 5} = {a: 3};
+const { a = 10, b = 5 } = { a: 3 };
 
 console.log(a); // 3
 console.log(b); // 5
@@ -260,7 +267,7 @@ console.log(b); // 5
 Il est possible d'extraitre une valeur d'un objet pour lui affecter un nouveau nom et lui affecter une valeur par défaut au cas où la valeur extraite vaut `undefined`.
 
 ```js
-const {a: aa = 10, b: bb = 5} = {a: 3};
+const { a: aa = 10, b: bb = 5 } = { a: 3 };
 
 console.log(aa); // 3
 console.log(bb); // 5
@@ -273,7 +280,7 @@ console.log(bb); // 5
 ```js
 function dessinGrapheES5(options) {
   options = options === undefined ? {} : options;
-  var size = options.size === undefined ? 'big' : options.size;
+  var size = options.size === undefined ? "big" : options.size;
   var coords = options.coords === undefined ? { x: 0, y: 0 } : options.coords;
   var radius = options.radius === undefined ? 25 : options.radius;
   console.log(size, coords, radius);
@@ -282,51 +289,58 @@ function dessinGrapheES5(options) {
 
 dessinGrapheES5({
   coords: { x: 18, y: 30 },
-  radius: 30
+  radius: 30,
 });
 ```
 
 #### Version ES2015
 
 ```js
-function dessinGrapheES2015({size = 'big', coords = { x: 0, y: 0 }, radius = 25} = {})
-{
+function dessinGrapheES2015({
+  size = "big",
+  coords = { x: 0, y: 0 },
+  radius = 25,
+} = {}) {
   console.log(size, coords, radius);
   // on dessine le graphe
 }
 
 dessinGrapheES2015({
   coords: { x: 18, y: 30 },
-  radius: 30
+  radius: 30,
 });
 ```
 
-> **Note :** Dans la signature de la fonction `dessinGrapheES2015` ci avant, la valeur décomposée à gauche utilise un objet vide comme opérande droit (`{size = 'big', coords = { x: 0, y: 0 }, radius = 25} = {}`). On aurait également pu écrire la fonction sans cet objet vide mais, dans ce cas, il aurait fallu au moins un argument pour utiliser la fonction. Avec cette « forme », `dessinGrapheES2015()` pourra être appelée sans paramètre.
+> [!NOTE]
+> Dans la signature de la fonction `dessinGrapheES2015` ci avant, la valeur décomposée à gauche utilise un objet vide comme opérande droit (`{size = 'big', coords = { x: 0, y: 0 }, radius = 25} = {}`). On aurait également pu écrire la fonction sans cet objet vide mais, dans ce cas, il aurait fallu au moins un argument pour utiliser la fonction. Avec cette « forme », `dessinGrapheES2015()` pourra être appelée sans paramètre.
 
 ### Décomposition imbriquée avec objets et tableaux
 
 ```js
 const metadata = {
-    title: "Scratchpad",
-    translations: [
-       {
-        locale: "de",
-        localization_tags: [ ],
-        last_edit: "2014-04-14T08:43:37",
-        url: "/de/docs/Tools/Scratchpad",
-        title: "JavaScript-Umgebung"
-       }
-    ],
-    url: "/en-US/docs/Tools/Scratchpad"
+  title: "Scratchpad",
+  translations: [
+    {
+      locale: "de",
+      localization_tags: [],
+      last_edit: "2014-04-14T08:43:37",
+      url: "/de/docs/Tools/Scratchpad",
+      title: "JavaScript-Umgebung",
+    },
+  ],
+  url: "/fr/docs/Tools/Scratchpad",
 };
 
-let { title: englishTitle, translations: [{ title: localeTitle }] } = metadata;
+let {
+  title: englishTitle,
+  translations: [{ title: localeTitle }],
+} = metadata;
 
 console.log(englishTitle); // "Scratchpad"
-console.log(localeTitle);  // "JavaScript-Umgebung"
+console.log(localeTitle); // "JavaScript-Umgebung"
 ```
 
-### Décomposition et utilisation de [for of](/fr/docs/JavaScript/Référence_JavaScript/Instructions/for...of)
+### Décomposition et utilisation de [for of](/fr/docs/Web/JavaScript/Reference/Statements/for...of)
 
 ```js
 const personnes = [
@@ -335,22 +349,25 @@ const personnes = [
     famille: {
       mere: "Isabelle Dupont",
       pere: "Jean Dupont",
-      soeur: "Laure Dupont"
+      soeur: "Laure Dupont",
     },
-    age: 35
+    age: 35,
   },
   {
     nom: "Luc Marchetoile",
     famille: {
       mere: "Patricia Marchetoile",
       pere: "Antonin Marchetoile",
-      frere: "Yann Marchetoile"
+      frere: "Yann Marchetoile",
     },
-    age: 25
-  }
+    age: 25,
+  },
 ];
 
-for (const {nom: n, famille: { pere: f } } of personnes) {
+for (const {
+  nom: n,
+  famille: { pere: f },
+} of personnes) {
   console.log("Nom : " + n + ", Père : " + f);
 }
 
@@ -366,19 +383,20 @@ const user = {
   displayName: "jbiche",
   fullName: {
     firstName: "Jean",
-    lastName: "Biche"
-  }
+    lastName: "Biche",
+  },
 };
 
-function userId({id}) {
+function userId({ id }) {
   return id;
 }
 
-function whois({displayName: displayName, fullName: {firstName: name}}){
+function whois({ displayName: displayName, fullName: { firstName: name } }) {
   console.log(displayName + " est " + name);
 }
 
-console.log("userId: " + userId(user)); w// "userId: 42"
+console.log("userId: " + userId(user));
+w; // "userId: 42"
 whois(user); // "jbiche est Jean"
 ```
 
@@ -386,7 +404,7 @@ Cela permet d'accéder directement à `id`, `displayName` et `firstName` depuis 
 
 ### Les noms de propriétés calculés et la décomposition
 
-Il est possible d'utiliser des noms de propriétés calculés, comme avec les [littéraux objets](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Initialisateur_objet#Noms_de_propri.C3.A9t.C3.A9s_calcul.C3.A9s), avec la décomposition.
+Il est possible d'utiliser des noms de propriétés calculés, comme avec les [littéraux objets](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer#noms_de_propri.c3.a9t.c3.a9s_calcul.c3.a9s), avec la décomposition.
 
 ```js
 let clef = "z";
@@ -397,10 +415,10 @@ console.log(toto); // "truc"
 
 ### Syntaxe du « reste » et décomposition d'un objet
 
-[La proposition de décomposition des propriétés et de la syntaxe du reste dans ECMAScript](https://github.com/tc39/proposal-object-rest-spread) ajoute [la syntaxe du reste](/fr/docs/Web/JavaScript/Reference/Fonctions/paramètres_du_reste) pour la décomposition. La propriété du reste permet de collecter les propriétés énumérables restantes qui n'auraient pas été extraites par la décomposition :
+[La proposition de décomposition des propriétés et de la syntaxe du reste dans ECMAScript](https://github.com/tc39/proposal-object-rest-spread) ajoute [la syntaxe du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters) pour la décomposition. La propriété du reste permet de collecter les propriétés énumérables restantes qui n'auraient pas été extraites par la décomposition :
 
 ```js
-let {a, b, ...reste } = {a: 10, b: 20, c: 30, d: 40};
+let { a, b, ...reste } = { a: 10, b: 20, c: 30, d: 40 };
 a; // 10
 b; // 20
 reste; // { c: 30, d: 40 }
@@ -411,10 +429,10 @@ reste; // { c: 30, d: 40 }
 Si besoin, on peut également utiliser la décomposition pour fournir un alias à des noms de propriétés qui ne seraient pas des identifiants valides. Par exemple :
 
 ```js
-const toto = {'truc-bidule': true}
-const {'truc-bidule': trucBidule } = toto;
+const toto = { "truc-bidule": true };
+const { "truc-bidule": trucBidule } = toto;
 
-console.log(trucBidule);  // "true"
+console.log(trucBidule); // "true"
 ```
 
 ### Combiner la décomposition de tableaux et d'objets
@@ -423,12 +441,12 @@ Il est possible de décomposer un tableau et un objet simultanément. Dans l'exe
 
 ```js
 const props = [
-  { id: 1, nom: "Toto"},
-  { id: 2, nom: "Truc"},
-  { id: 3, nom: "Bidule"}
+  { id: 1, nom: "Toto" },
+  { id: 2, nom: "Truc" },
+  { id: 3, nom: "Bidule" },
 ];
 
-const [,, {nom}] = props;
+const [, , { nom }] = props;
 console.log(nom); // Bidule
 ```
 
@@ -442,5 +460,5 @@ console.log(nom); // Bidule
 
 ## Voir aussi
 
-- [Opérateurs d'affectation](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_d_affectation)
+- [Opérateurs d'affectation](/fr/docs/Web/JavaScript/Reference/Operators)
 - [ES6 en détails : La décomposition sur tech.mozfr.org](https://tech.mozfr.org/post/2015/06/05/ES6-en-details-%3A-la-decomposition)

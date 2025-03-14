@@ -1,8 +1,6 @@
 ---
 title: JavaScript orientado a objetos para iniciantes
 slug: conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
-translation_of: Learn/JavaScript/Objects/Object-oriented_JS
-original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
@@ -16,12 +14,12 @@ Com o básico fora do caminho, agora vamos nos concentrar no JavaScript orientad
       <td>
         Alfabetização básica em informática, um entendimento básico de HTML e
         CSS, familiaridade com o básico do JavaScript (consulte
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">Primeiros passos</a>
+        <a href="/pt-BR/docs/Learn/JavaScript/First_steps">Primeiros passos</a>
         e
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks"
           >Blocos de construção</a
         >) e noções básicas do OOJS (consulte
-        <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction"
+        <a href="/pt-BR/docs/Learn/JavaScript/Object-oriented/Introduction"
           >Introdução aos objetos</a
         >).
       </td>
@@ -49,13 +47,13 @@ Vamos considerar um programa simples que exibe informações sobre os alunos e p
 
 Para começar, poderíamos retornar ao nosso tipo de objeto Person do nosso [primeiro artigo de objetos](/pt-BR/docs/Learn/JavaScript/Objects/Basics), que define os dados genéricos e a funcionalidade de uma pessoa. Há muitas coisas que você poderia saber sobre uma pessoa (endereço, altura, tamanho do sapato, perfil de DNA, número de passaporte, traços de personalidade significativos ...), mas neste caso estamos interessados apenas em mostrar seu nome, idade, sexo e interesses, e também queremos ser capazes de escrever uma breve introdução sobre eles com base nesses dados e fazê-los dizer oi. Isso é conhecido como **abstração** — criando um modelo simples de uma coisa mais complexa, que representa seus aspectos mais importantes de uma forma que é fácil trabalhar com os objetivos do nosso programa.
 
-![](https://mdn.mozillademos.org/files/13889/person-diagram.png)
+![](person-diagram.png)
 
 ### Criando objetos reais
 
 De nossa classe, podemos criar **instâncias de objeto** — objetos que contêm os dados e a funcionalidade definidos na classe. Da nossa classe Person, podemos criar algumas pessoas reais:
 
-![](https://mdn.mozillademos.org/files/15163/MDN-Graphics-instantiation-2-fixed.png)
+![](mdn-graphics-instantiation-2-fixed.png)
 
 Quando uma instância de objeto é criada a partir de uma classe, a **função construtora** da classe é executada para criá-la. Esse processo de criação de uma instância de objeto de uma classe é chamado de **instanciação** — a instância do objeto é **instanciada** a partir da classe.
 
@@ -63,15 +61,16 @@ Quando uma instância de objeto é criada a partir de uma classe, a **função c
 
 Neste caso, não queremos pessoas genéricas — queremos professores e alunos, que são tipos mais específicos de pessoas. Em OOP, podemos criar novas classes com base em outras classes — essas novas **classes filhas** podem **herdar** os recursos de dados e código de sua **classe pai**, para que você possa reutilizar a funcionalidade comum a todos os tipos de objetos em vez de duplicá-los. Onde a funcionalidade difere entre as classes, você pode definir recursos especializados diretamente sobre eles, conforme necessário.
 
-![](https://mdn.mozillademos.org/files/13881/MDN-Graphics-inherited-3.png)
+![](mdn-graphics-inherited-3.png)
 
 Isso é realmente útil — professores e alunos compartilham muitos recursos comuns, como nome, sexo e idade, por isso é conveniente definir apenas esses recursos uma vez. Você também pode definir o mesmo recurso separadamente em classes diferentes, já que cada definição desse recurso estará em um namespace diferente. Por exemplo, a saudação de um aluno pode estar no formato "Yo, I'm \[firstName]" (por exemplo, _Yo, I'm Sam_), enquanto um professor pode usar algo mais formal, como "Olá, meu nome é \[Prefixo \[lastName], e eu ensino \[Subject]. " (por exemplo _Olá, Meu nome é Mr Griffiths, e eu ensino Química_).
 
-> **Nota:** A palavra chique para a capacidade de múltiplos tipos de objeto de implementar a mesma funcionalidade é o **polimorfismo**. Apenas no caso de você estar se perguntando.
+> [!NOTE]
+> A palavra chique para a capacidade de múltiplos tipos de objeto de implementar a mesma funcionalidade é o **polimorfismo**. Apenas no caso de você estar se perguntando.
 
 Agora você pode criar instâncias de objetos de suas classes filhas. Por exemplo:
 
-![](https://mdn.mozillademos.org/files/13885/MDN-Graphics-instantiation-teacher-3.png)
+![](mdn-graphics-instantiation-teacher-3.png)
 
 No restante do artigo, começaremos a analisar como a teoria da POO pode ser colocada em prática no JavaScript.
 
@@ -119,7 +118,8 @@ Vamos explorar a criação de classes por meio de construtores e criar instânci
 
 A função de construtor é a versão do JavaScript de uma classe. Você notará que ela tem todos os recursos que você espera em uma função, embora ela não retorne nada ou crie explicitamente um objeto — ela basicamente define propriedades e métodos. Você verá a palavra-chave `this` sendo usada aqui também — é basicamente dizer que sempre que uma dessas instâncias de objeto é criada, a propriedade `name` do objeto será igual ao valor do nome passado à chamada do construtor, e o método `greeting()` usará o valor do nome passado para a chamada do construtor também.
 
-> **Nota:** Um nome de função de construtor geralmente começa com uma letra maiúscula — essa convenção é usada para tornar as funções do construtor mais fáceis de reconhecer no código.
+> [!NOTE]
+> Um nome de função de construtor geralmente começa com uma letra maiúscula — essa convenção é usada para tornar as funções do construtor mais fáceis de reconhecer no código.
 
 Então, como podemos chamar um construtor para criar alguns objetos?
 
@@ -218,7 +218,8 @@ person1.bio()
 // etc.
 ```
 
-> **Nota:** Se você está tendo problemas para fazer isso funcionar, tente comparar seu código com a nossa versão — veja o código em [oojs-class-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html) (também [você pode ve-lo sendo executado aqui](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html)).
+> [!NOTE]
+> Se você está tendo problemas para fazer isso funcionar, tente comparar seu código com a nossa versão — veja o código em [oojs-class-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html) (também [você pode ve-lo sendo executado aqui](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html)).
 
 ### Exercícios adicionais
 
@@ -226,17 +227,18 @@ Para começar, tente adicionar mais algumas linhas de criação de objetos e ten
 
 Além disso, há alguns problemas com nosso método `bio()` — a saída sempre inclui o pronome "Ele", mesmo que sua pessoa seja do sexo feminino ou alguma outra classificação de gênero preferida. E a biografia incluirá apenas dois interesses, mesmo que mais sejam listados na matriz `interests`. Você pode descobrir como corrigir isso na definição de classe (construtor)? Você pode colocar qualquer código que você gosta dentro de um construtor (você provavelmente precisará de alguns condicionais e um loop). Pense em como as sentenças devem ser estruturadas de maneira diferente dependendo do gênero e dependendo se o número de interesses listados é 1, 2 ou mais de 2.
 
-> **Nota:** If you get stuck, we have provided an [answer inside our GitHub repo](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html) ([see it live](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)) — try writing it yourself first though!
+> [!NOTE]
+> If you get stuck, we have provided an [answer inside our GitHub repo](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html) ([see it live](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)) — try writing it yourself first though!
 
 ## Outras maneiras de criar instâncias de objeto
 
-Até agora, vimos duas maneiras diferentes de criar uma instância de objeto — [declarar um literal de objeto](/pt-BR/docs/Learn/JavaScript/Objects/Basics#Object_basics), e usar uma função de construtor (veja acima).
+Até agora, vimos duas maneiras diferentes de criar uma instância de objeto — [declarar um literal de objeto](/pt-BR/docs/Learn/JavaScript/Objects/Basics#object_basics), e usar uma função de construtor (veja acima).
 
 Isso faz sentido, mas existem outras maneiras — queremos familiarizá-lo com essas informações caso você as encontre em suas viagens pela Web.
 
 ### O construtor Object()
 
-Primeiro de tudo, você pode usar o construtor [`Object()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) para criar um novo objeto. Sim, até objetos genéricos possuem um construtor, o que gera um objeto vazio.
+Primeiro de tudo, você pode usar o construtor [`Object()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object) para criar um novo objeto. Sim, até objetos genéricos possuem um construtor, o que gera um objeto vazio.
 
 1. Tente inserir isso no console JavaScript do seu navegador:
 
@@ -270,7 +272,7 @@ Primeiro de tudo, você pode usar o construtor [`Object()`](/en-US/docs/Web/Java
 
 Os construtores podem ajudá-lo a fornecer seu pedido de código — você pode criar construtores em um único local e, em seguida, criar instâncias conforme necessário, e fica claro de onde eles vieram.
 
-No entanto, algumas pessoas preferem criar instâncias de objeto sem primeiro criar construtores, especialmente se estiverem criando apenas algumas instâncias de um objeto. JavaScript tem um método embutido chamado [`create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) que permite que você faça isso. Com ele, você pode criar um novo objeto com base em qualquer objeto existente.
+No entanto, algumas pessoas preferem criar instâncias de objeto sem primeiro criar construtores, especialmente se estiverem criando apenas algumas instâncias de um objeto. JavaScript tem um método embutido chamado [`create()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/create) que permite que você faça isso. Com ele, você pode criar um novo objeto com base em qualquer objeto existente.
 
 1. Com o exercício concluído das seções anteriores carregadas no navegador, tente isso no seu console JavaScript:
 
@@ -302,9 +304,9 @@ No próximo artigo, vamos explorar os protótipos de objetos JavaScript.
 ## Neste módulo
 
 - [O básico de objetos](/pt-BR/docs/Learn/JavaScript/Objects/Basics)
-- [Orientação a objetos em JavaScript para iniciantes](/pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_JS)
+- [Orientação a objetos em JavaScript para iniciantes](/pt-BR/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript)
 - [Protótipos de objetos](/pt-BR/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Herença em JavaScript](/pt-BR/docs/Learn/JavaScript/Objects/Inheritance)
+- [Herença em JavaScript](/pt-BR/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
 - [Trabalhando com dados em JSON](/pt-BR/docs/Learn/JavaScript/Objects/JSON)
 - [Prática de construção de objetos](/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice)
 - [Adicionando melhorias no nossa demo bolas saltitantes](/pt-BR/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

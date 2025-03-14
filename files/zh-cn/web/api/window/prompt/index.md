@@ -1,45 +1,68 @@
 ---
-title: window.prompt
+title: Window：prompt() 方法
 slug: Web/API/Window/prompt
 ---
 
-{{ ApiRef() }}
+{{ApiRef("Window")}}
 
-### 概述
+`window.prompt()` 指示浏览器显示一个对话框，其中有一个可选的信息，提示用户输入一些文本，并等待用户提交文本或取消对话框。
 
-显示一个对话框，对话框中包含一条文字信息，用来提示用户输入文字。
+在某些情况下（例如，当用户切换标签时）浏览器可能不会实际显示一个对话框，或者不等待用户提交文本或取消对话框。
 
-### 语法
+## 语法
 
-```js
-result = window.prompt(text, value);
+```js-nolint
+prompt()
+prompt(message)
+prompt(message, defaultValue)
 ```
 
-- `result` 用来存储用户输入文字的字符串，或者是 null。
-- `text` 用来提示用户输入文字的字符串，如果没有任何提示内容，该参数可以省略不写。
-- `value` 文本输入框中的默认值，该参数也可以省略不写。不过在 Internet Explorer 7 和 8 中，省略该参数会导致输入框中显示默认值"undefined"。
+### 参数
 
-### 例子
+- `message` {{optional_inline}}
+  - : 向用户显示的一串文本。如果在提示窗口中没有什么可显示的，可以省略。
+- `defaultValue` {{optional_inline}}
+  - : 一个字符串，包含文本输入字段中显示的默认值。
+
+### 返回值
+
+一个包含用户输入文本的字符串，或 `null`。
+
+## 示例
 
 ```js
-var sign = prompt("你是什么星座的？");
-if (sign == "天蝎座"){
-   alert("哇！我也是天蝎座的耶！");
+let sign = prompt("你是什么星座的？");
+
+if (sign == "天蝎座") {
+  alert("哇！我也是天蝎座的耶！");
 }
+
 // 有多种使用 prompt 方法的方式
-var sign = window.prompt(); // 打开空的提示窗口
-var sign = prompt();       // 打开空的提示窗口
-var sign = window.prompt('你觉得很幸运吗？'); // 打开显示提示文本为"你觉得很幸运吗？"的提示窗口
-var sign = window.prompt('你觉得很幸运吗？','是的'); // 打开显示提示文本为"你觉得很幸运吗？"并且输入框默认值为"是的"的提示窗口
+sign = window.prompt(); // 打开空的提示窗口
+sign = prompt(); // 打开空的提示窗口
+sign = window.prompt("你觉得很幸运吗？"); // 打开显示提示文本为"你觉得很幸运吗？"的提示窗口
+sign = window.prompt("你觉得很幸运吗？", "是的"); // 打开显示提示文本为"你觉得很幸运吗？"并且输入框默认值为"是的"的提示窗口
 ```
 
-当用户点击"确定"按钮后，文本输入框中的文字被返回。如果文本输入框中为空，则返回一个空字符串。如果用户点击"取消"按钮，则返回 null。
+当用户点击“确定”按钮时，在输入框中输入的文本被返回。如果用户在没有输入任何文本的情况下点击确定，则返回一个空字符串。如果用户点击“取消”按钮，该函数返回 `null`。
 
-### 注意
+以上提示框显示如下（在 macOS 的 Chrome 浏览器上）：
 
-一个 prompt 对话框，包含一个单行文本框，一个“取消”按钮，一个“确定”按钮，在对话框关闭时，返回用户输入到文本框内的值 (可能为空)。
+![macOS 上 Chrome 中的 prompt() 对话框](prompt.png)
 
-prompt 和 alert 以及类似的对话框都是模态窗口，它们会阻止用户激活程序其他部分的界面，直到该对话框关闭。因此，你不应该过度使用该方法。(译注：在 content 上下文，Firefox 4 以上版本使用非模态的对话框)。Chrome 上下文执行的脚本 (例如扩展开发) 应该使用 XPCOM [nsIPromptService](/zh-CN/XPCOM_Interface_Reference/nsIPromptService) 来替代 window\.prompt。
+## 注意事项
+
+一个提示对话框包含一个单行文本框、一个取消按钮和一个确定按钮，并返回用户在该文本框中输入的（可能是空的）文本。
+
+请注意，结果是一个字符串。这意味着你有时应该对用户给出的值进行转换。例如，如果他们的答案应该是一个数字，你应该把这个值转换为数字。
+
+```js
+const aNumber = Number(window.prompt("输入一个数字", ""));
+```
+
+对话框是模态窗口——它们阻止用户访问程序界面的其他部分，直到对话框被关闭。出于这个原因，你不应该过度使用任何创建对话框（或模态窗口）的函数。
+
+另外，{{HTMLElement("dialog")}} 元素也可用于获取用户输入。
 
 ## 规范
 
@@ -49,6 +72,8 @@ prompt 和 alert 以及类似的对话框都是模态窗口，它们会阻止用
 
 {{Compat}}
 
-### 参见
+## 参见
 
-[alert](/zh-CN/DOM/window.alert), [confirm](/zh-CN/DOM/window.confirm)
+- {{HTMLElement("dialog")}} 元素
+- {{domxref("window.alert", "alert")}}
+- {{domxref("window.confirm", "confirm")}}

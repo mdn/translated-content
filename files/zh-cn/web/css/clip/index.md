@@ -9,19 +9,24 @@ slug: Web/CSS/clip
 
 `clip` 属性定义了元素的哪一部分是可见的。`clip` 属性只适用于 {{ cssxref("position","position:absolute") }} 的元素。
 
-> **警告：** 这个属性已被废弃。建议使用 {{cssxref("clip-path")}} 。
-
-{{cssinfo}}
+> [!WARNING]
+> 这个属性已被废弃。建议使用 {{cssxref("clip-path")}} 。
 
 ## 语法
 
-[形式语法](/zh-CN/docs/CSS/Value_definition_syntax): {{csssyntax("clip")}}
+```css
+/* 关键字值 */
+clip: auto;
 
-```
-clip: rect(1px, 10em, 3rem, 2ch)
-clip: auto
+/* <shape> 值 */
+clip: rect(1px, 10em, 3rem, 2ch);
 
-clip: inherit
+/* 全局值 */
+clip: inherit;
+clip: initial;
+clip: revert;
+clip: revert-layer;
+clip: unset;
 ```
 
 ### 值
@@ -46,27 +51,68 @@ clip: inherit
 - `auto`
   - : 元素不裁剪 (默认值)
 
+## 形式定义
+
+{{cssinfo}}
+
+## 形式语法
+
+{{csssyntax}}
+
 ## 示例
 
+### 裁剪图像
+
+#### HTML
+
+```html
+<p class="dotted-border">
+  <img src="macarons.png" title="Original graphic" />
+  <img id="top-left" src="macarons.png" title="Graphic clipped to upper left" />
+  <img id="middle" src="macarons.png" title="Graphic clipped towards middle" />
+  <img
+    id="bottom-right"
+    src="macarons.png"
+    title="Graphic clipped to bottom right" />
+</p>
+```
+
+#### CSS
+
 ```css
-p { border:dotted;  position:relative; }
-
-#img2 {
-  position:absolute;  left:263px;
-
-  clip: rect(40px, 200px, 150px, 30px);
-  /* 标准语法，Internet Explorer 4-7 不支持 */
+.dotted-border {
+  border: dotted;
+  position: relative;
+  width: 390px;
+  height: 400px;
 }
 
-#img3 {
-  position: absolute; left:526px;
+#top-left,
+#middle,
+#bottom-right {
+  position: absolute;
+  top: 0;
+}
 
-  clip: rect(40px  200px  150px  30px);
-  /* 非标准语法，但是包括火狐与 IE 在内的主要浏览器均支持 */
+#top-left {
+  left: 400px;
+  clip: rect(0, 130px, 90px, 0);
+}
+
+#middle {
+  left: 270px;
+  clip: rect(100px, 260px, 190px, 130px);
+}
+
+#bottom-right {
+  left: 140px;
+  clip: rect(200px, 390px, 290px, 260px);
 }
 ```
 
-![hut.jpg](/@api/deki/files/3613/=hut.jpg) ![hut.jpg](/@api/deki/files/3613/=hut.jpg) ![hut.jpg](/@api/deki/files/3613/=hut.jpg)
+#### 结果
+
+{{EmbedLiveSample('裁剪图像', '', '450px')}}
 
 ## 规范
 
@@ -76,6 +122,6 @@ p { border:dotted;  position:relative; }
 
 {{Compat}}
 
-## See also
+## 参见
 
 - Related CSS properties: {{ cssxref("text-overflow") }}, {{ cssxref("white-space") }}, {{ Cssxref("overflow-x") }}, {{ Cssxref("overflow-y") }}, {{ Cssxref("overflow") }}, {{ Cssxref("display") }}, {{ Cssxref("position") }}

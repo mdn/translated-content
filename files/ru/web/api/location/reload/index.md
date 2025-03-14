@@ -1,14 +1,8 @@
 ---
 title: Location.reload()
 slug: Web/API/Location/reload
-tags:
-  - API
-  - HTML-DOM
-  - Location
-  - Method
-  - Reference
-translation_of: Web/API/Location/reload
 ---
+
 {{ APIRef("HTML DOM") }}
 
 Метод **`Location.reload()`** перезагружает ресурс из текущего URL подобно кнопке обновления браузера.

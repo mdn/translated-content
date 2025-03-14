@@ -1,8 +1,6 @@
 ---
-title: 'Location : reload()'
+title: "Location : reload()"
 slug: Web/API/Location/reload
-translation_of: Web/API/Location/reload
-browser-compat: api.Location.reload
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -25,7 +23,7 @@ Il est toutefois possible que vous rencontriez des occurrences de `location.relo
 
 Historiquement, une version de Netscape Navigator a introduit la prise en charge de cet argument et cela s'est retrouvé dans Firefox. À un moment, le groupe de travail du W3C sur les API Web [a ouvert le sujet](https://www.w3.org/2005/06/tracker/webapi/issues/69) pour étudier son ajout à la spécification pour `location.reload()`. Toutefois, il n'a jamais été ajouté formellement.
 
-En résumé, ce paramètre booléen ne fait pas partie de la spécification actuelle `location.reload()` et n'en a en fait jamais fait partie.
+En résumé, ce paramètre booléen ne fait pas partie de la spécification actuelle de `location.reload()` et n'en a d'ailleurs jamais fait partie.
 
 ## Spécifications
 

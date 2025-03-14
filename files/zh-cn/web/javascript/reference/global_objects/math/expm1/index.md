@@ -3,9 +3,7 @@ title: Math.expm1()
 slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
 ---
 
-{{JSRef("Global_Objects", "Math")}}
-
-## 概述
+{{JSRef}}
 
 **`Math.expm1()`** 函数返回 `E^x - 1`, 其中 `x` 是该函数的参数，`E` 是自然对数的底数 `2.718281828459045`。
 
@@ -29,20 +27,12 @@ Math.expm1(x)
 ## 示例
 
 ```js
-Math.expm1(1)     // 1.7182818284590453
-Math.expm1(-38)   // -1
-Math.expm1("-38") // -1
-Math.expm1("foo") // NaN
-```
-
-## Polyfill
-
-因为我们已经有了 `Math.exp` 函数，所以很容易 polyfill。
-
-```js
-Math.expm1 = Math.expm1 || function (x) {
-    return Math.exp(x) - 1
-}
+Math.expm1(-Infinity); // -1
+Math.expm1(-1); // -0.6321205588285577
+Math.expm1(-0); // -0
+Math.expm1(0); // 0
+Math.expm1(1); // 1.718281828459045
+Math.expm1(Infinity); // Infinity
 ```
 
 ## 规范
@@ -53,6 +43,6 @@ Math.expm1 = Math.expm1 || function (x) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Global_Objects/Math", "Math")}} 对象。

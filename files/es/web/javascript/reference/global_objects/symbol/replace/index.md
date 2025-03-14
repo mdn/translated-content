@@ -1,9 +1,6 @@
 ---
 title: Symbol.replace
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/replace
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
-browser-compat: javascript.builtins.Symbol.replace
 l10n:
   sourceCommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
 ---
@@ -14,7 +11,23 @@ El símbolo conocido como **`Symbol.replace`** especifica el método que reempla
 
 Para más información, consulte {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}} y {{jsxref("String.prototype.replace()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-replace.html")}}{{js_property_attributes(0,0,0)}}
+{{InteractiveExample("JavaScript Demo: Symbol.replace")}}
+
+```js interactive-example
+class Replace1 {
+  constructor(value) {
+    this.value = value;
+  }
+  [Symbol.replace](string) {
+    return `s/${string}/${this.value}/g`;
+  }
+}
+
+console.log("foo".replace(new Replace1("bar")));
+// Expected output: "s/foo/bar/g"
+```
+
+{{js_property_attributes(0,0,0)}}
 
 ## Ejemplos
 
@@ -26,11 +39,11 @@ class CustomReplacer {
     this.value = value;
   }
   [Symbol.replace](string) {
-    return string.replace(this.value, '#!@?');
+    return string.replace(this.value, "#!@?");
   }
 }
 
-console.log('football'.replace(new CustomReplacer('foo')));
+console.log("football".replace(new CustomReplacer("foo")));
 // salida esperada: "#!@?tball"
 ```
 

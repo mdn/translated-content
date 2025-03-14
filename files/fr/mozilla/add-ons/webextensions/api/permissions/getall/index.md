@@ -1,27 +1,18 @@
 ---
 title: permissions.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/getAll
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Permissions
-  - Reference
-  - WebExtensions
-  - getAll
-translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/getAll
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Récupère un objet {{WebExtAPIRef("permissions.Permissions")}} contenant toutes les permissions actuellement acccordées à l'extension.
 
-Il s'agit d'une fonction asynchrone qui retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
-var gettingAll = browser.permissions.getAll()
+var gettingAll = browser.permissions.getAll();
 ```
 
 ### Paramètres
@@ -30,11 +21,11 @@ None.
 
 ### Valeur renvoyée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef("permissions.Permissions")}} contenant toutes les permissions actuellement accordées à l'extensions. Cela inclut toutes les permissions que l'extension à répertoriées dans la clé de [`permissions`](/fr/Add-ons/WebExtensions/manifest.json/permissions) , et toutes les permissions répertoriées dans [`optional_permissions`](/fr/Add-ons/WebExtensions/manifest.json/optional_permissions) que l'extension a été accordée en appelant {{WebExtAPIRef("permissions.request()")}}.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet {{WebExtAPIRef("permissions.Permissions")}} contenant toutes les permissions actuellement accordées à l'extensions. Cela inclut toutes les permissions que l'extension à répertoriées dans la clé de [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) , et toutes les permissions répertoriées dans [`optional_permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) que l'extension a été accordée en appelant {{WebExtAPIRef("permissions.request()")}}.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.permissions.getAll")}}
+{{Compat}}
 
 ## Exemples
 
@@ -44,14 +35,14 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 browser.permissions.getAll().then((result) => {
   console.log(result.permissions); // [ "webRequest", "tabs" ]
-  console.log(result.origins)      // [ "*://*.mozilla.org/*" ]
+  console.log(result.origins); // [ "*://*.mozilla.org/*" ]
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/extensions/permissions).
+> Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

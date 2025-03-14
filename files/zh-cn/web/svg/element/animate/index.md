@@ -10,13 +10,23 @@ slug: Web/SVG/Element/animate
 ## 示例
 
 ```css hidden
-html,body,svg { height:100%; margin:0; padding:0; }
+html,
+body,
+svg {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 ```
 
 ```html
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
   <rect width="10" height="10">
-    <animate attributeName="rx" values="0;5;0" dur="10s" repeatCount="indefinite" />
+    <animate
+      attributeName="rx"
+      values="0;5;0"
+      dur="10s"
+      repeatCount="indefinite" />
   </rect>
 </svg>
 ```
@@ -31,21 +41,12 @@ html,body,svg { height:100%; margin:0; padding:0; }
   - : {{SVGAttr("begin")}}、{{SVGAttr("dur")}}、{{SVGAttr("end")}}、{{SVGAttr("min")}}、{{SVGAttr("max")}}、{{SVGAttr("restart")}}、{{SVGAttr("repeatCount")}}、{{SVGAttr("repeatDur")}}、{{SVGAttr("fill")}}
 - [动画取值属性](/zh-CN/docs/Web/SVG/Attribute#动画取值属性)
   - : {{SVGAttr("calcMode")}}、{{SVGAttr("values")}}、{{SVGAttr("keyTimes")}}、{{SVGAttr("keySplines")}}、{{SVGAttr("from")}}、{{SVGAttr("to")}}、{{SVGAttr("by")}}
-- [其它动画属性](/zh-CN/docs/Web/SVG/Attribute#动画额外属性)
+- [其他动画属性](/zh-CN/docs/Web/SVG/Attribute#动画额外属性)
   - : 最主要的有：{{SVGAttr("attributeName")}}、{{SVGAttr("additive")}}、{{SVGAttr("accumulate")}}
 - [动画事件属性](/zh-CN/docs/Web/SVG/Attribute#动画事件属性)
   - : 最主要的有：{{SVGAttr("onbegin")}}、{{SVGAttr("onend")}}、{{SVGAttr("onrepeat")}}
 
-### 全局属性
-
-- [核心属性](/zh-CN/docs/Web/SVG/Attribute/Core)
-  - : 最主要的有：{{SVGAttr('id')}}
-- [样式属性](/zh-CN/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}、{{SVGAttr('style')}}
-- 事件属性
-  - : [全局事件属性](/zh-CN/docs/Web/SVG/Attribute/Events#global_event_attributes)、[文档元素事件属性](/zh-CN/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
-
-## 用法
+## 使用说明
 
 该元素实现了 {{domxref("SVGAnimateElement")}} 接口。
 
@@ -58,7 +59,7 @@ html,body,svg { height:100%; margin:0; padding:0; }
 - [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
 - [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
 - [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN Understanding WCAG, Guideline 2.2 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_—_enough_time_provide_users_enough_time_to_read_and_use_content)
+- [MDN Understanding WCAG, Guideline 2.2 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.2_—_enough_time_provide_users_enough_time_to_read_and_use_content)
 - [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
 ## 规范

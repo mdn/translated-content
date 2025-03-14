@@ -1,58 +1,66 @@
 ---
-title: API de Notifications
+title: API Notifications
 slug: Web/API/Notifications_API
-tags:
-  - API Notifications
-  - Notifications
-  - permission
-  - système
-translation_of: Web/API/Notifications_API
+l10n:
+  sourceCommit: 1a26583f60bdceece64347bf967d0653fe8df288
 ---
 
-{{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
-L'API Notifications permet aux pages Web de contrôler l'affichage des notifications système de l'utilisateur final. Ceux-ci sont en dehors de la fenêtre du contexte de navigation de niveau supérieur, ils peuvent donc être affichés même lorsque l'utilisateur a changé d'onglet ou déplacé vers une autre application. L'API est conçue pour être compatible avec les systèmes de notification existants, sur différentes plates-formes.
+L'API Notifications permet aux pages web de contrôler l'affichage des notifications système. Celles-ci sont affichées en dehors de la fenêtre du contexte de navigation de plus haut niveau et peuvent donc être affichées, même lorsque la personne a changé d'onglet voire d'application. L'API est conçue pour être compatible avec les systèmes de notification existants sur les différentes plateformes.
 
 ## Concepts et utilisation
 
-Sur les plates-formes prises en charge, l'affichage d'une notification système implique généralement deux choses. Tout d'abord, l'utilisateur doit accorder l'autorisation à l' {{glossary("Origin","origine")}} actuelle pour afficher les notifications système, ce qui est généralement effectué lorsque l'application ou le site s'initialise, à l'aide de la méthode {{domxref ("Notification.requestPermission()")}}. Cela doit être fait en réponse à un geste de l'utilisateur, tel que cliquer sur un bouton, par exemple:
+Sur les plateformes prises en charge, l'affichage d'une notification système implique généralement deux choses.
+
+### Autoriser les notifications
+
+Tout d'abord, il faut que [l'origine](/fr/docs/Glossary/Origin) actuelle soit autorisée à afficher des notifications système. Cela se fait généralement à l'initialisation du site ou de l'application à l'aide de la méthode [`Notification.requestPermission()`](/fr/docs/Web/API/Notification/requestPermission_static). Cette demande d'autorisation doit faire suite à une action explicite de la personne, par exemple le clic sur un bouton&nbsp;:
 
 ```js
-btn.addEventListener('click', () => {
-  let promise = Notification.requestPermission()
-  // wait for permission
-})
+btn.addEventListener("click", () => {
+  let promise = Notification.requestPermission();
+  // attendre l'autorisation
+});
 ```
 
-> **Note :** Il ne s'agit pas seulement d'une bonne pratique - vous ne devriez pas envoyer de spam aux utilisateurs avec des notifications qu'ils n'acceptent pas - mais les navigateurs suivants interdiront explicitement les notifications non déclenchées en réponse à un geste de l'utilisateur. Firefox le fait déjà depuis la version 72, par exemple.
+Il ne s'agit pas seulement d'une bonne pratique&nbsp;: il est nécessaire de respecter le consentement des personnes avant de leur envoyer des notifications. Les navigateurs interdiront explicitement les notifications qui ne sont pas déclenchées suite à une action explicite (c'est le cas de Firefox depuis la version 72 par exemple).
 
-Cela créera une boîte de dialogue, proche de cette apparence:
+Lors de la demande d'autorisation, une boîte de dialogue apparaît dans le navigateur
 
-![](screen_shot_2019-12-11_at_9.59.14_am.png)
+![Une boîte de dialogue demandant la permission d'envoyer des notifications depuis cette origine. Deux options sont présentes : toujours bloquer d'une part et autoriser d'autre part.](notifications_permission.png)
 
-De là, l'utilisateur peut choisir d'autoriser les notifications de cette origine ou de les bloquer. Une fois le choix effectué, le paramètre persistera généralement pour la session en cours.
+Ainsi, on peut choisir d'autoriser les notifications d'une origine donnée ou les bloquer. Une fois le choix effectué, le paramètre persistera généralement pour la session en cours.
 
-> **Note :** Depuis Firefox 44, les autorisations pour les notifications et le push ont été fusionnées. Si l'autorisation est accordée pour les notifications, le push sera également activé.
+> [!NOTE]
+> Pour Firefox, à partir de Firefox 44, les permissions pour les notifications et [l'API Push](/fr/docs/Web/API/Push_API) ont été fusionnées. Ainsi, si on autorise les notifications, les messages et notifications <i lang="en">push</i> seront également autorisées.
 
-Ensuite, une nouvelle notification est créée à l'aide du constructeur {{domxref ("Notification.Notification", "Notification ()")}}. Auquel on doit passé un titre en argument et il peut éventuellement recevoir un objet d'options pour personnalisés la notification, telles que la direction du texte, le corps du texte, l'icône à afficher, le son de notification à lire, etc.
+### Création de la notification
 
-En outre, la spécification de l'API Notifications spécifie un certain nombre d'ajouts à l'[API ServiceWorker](/fr/docs/Web/API/ServiceWorker_API), pour permettre aux service worker de déclencher des notifications.
+Ensuite, on peut créer une nouvelle notification à l'aide du constructeur [`Notification()`](/fr/docs/Web/API/Notification/Notification) auquel on passera un titre en argument et éventuellement un objet d'options afin de personnaliser la notification (la direction du texte, le corps du texte, l'icône à afficher, le son de notification à lire, etc).
 
-> **Note :** Pour en savoir plus sur l'utilisation des notifications dans votre propre application, lisez [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API).
+En outre, la spécification de l'API Notifications spécifie un certain nombre d'ajouts à l'[API ServiceWorker](/fr/docs/Web/API/Service_Worker_API), qui permettent aux <i lang="en">service worker</i> de déclencher des notifications.
 
-## Les interfaces de Notifications
+> [!NOTE]
+> Pour mieux savoir comment utiliser les notifications au sein de votre propre application, lisez [Utiliser l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API).
 
-- {{domxref("Notification")}}
-  - : Définit un objet `Notification`.
+## Interfaces
 
-### Ajout de service worker
+- [`Notification`](/fr/docs/Web/API/Notification)
+  - : Définit un objet représentant une notification.
+- [`NotificationEvent`](/fr/docs/Web/API/NotificationEvent)
+  - : Représente un évènement de notification diffusé sur la portée [`ServiceWorkerGlobalScope`](/fr/docs/Web/API/ServiceWorkerGlobalScope) d'un [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker).
 
-- {{domxref("ServiceWorkerRegistration")}}
-  - : Inclut les méthodes {{domxref ("ServiceWorkerRegistration.showNotification()")}} et {{domxref ("ServiceWorkerRegistration.getNotifications()")}}, pour contrôler l'affichage des notifications.
-- {{domxref("ServiceWorkerGlobalScope")}}
-  - : Inclut le gestionnaire {{domxref ("ServiceWorkerGlobalScope.onnotificationclick")}}, pour déclencher des fonctions personnalisées lorsqu'un utilisateur clique sur une notification.
-- {{domxref("NotificationEvent")}}
-  - : Un type spécifique d'objet événement, basé sur {{domxref ("ExtendableEvent")}}, qui représente une notification qui s'est déclenchée.
+### Ajouts aux autres interfaces
+
+- Évènement [`notificationclick`](/fr/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event)
+  - : Se produit lors d'un clic sur une notification affichée.
+- Évènement [`notificationclose`](/fr/docs/Web/API/ServiceWorkerGlobalScope/notificationclose_event)
+  - : Se produit lorsqu'une personne ferme une notification affichée.
+- [`ServiceWorkerRegistration.getNotifications()`](/fr/docs/Web/API/ServiceWorkerRegistration/getNotifications)
+  - : Renvoie une liste de notifications dans l'ordre selon lequel elles ont été créées pour l'origine courante et pour la portée courante du <i lang="en">service worker</i>.
+- [`ServiceWorkerRegistration.showNotification()`](/fr/docs/Web/API/ServiceWorkerRegistration/showNotification)
+  - : Affiche la notification avec le titre indiqué.
 
 ## Spécifications
 
@@ -64,4 +72,4 @@ En outre, la spécification de l'API Notifications spécifie un certain nombre d
 
 ## Voir aussi
 
-- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Utiliser l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

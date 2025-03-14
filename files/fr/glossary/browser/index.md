@@ -1,12 +1,9 @@
 ---
 title: Navigateur
 slug: Glossary/Browser
-tags:
-  - Glossaire
-  - Navigation
-translation_of: Glossary/Browser
-original_slug: Glossaire/Navigateur
 ---
+
+{{GlossarySidebar}}
 
 Un _navigateur internet_ est un programme informatique qui reçoit et affiche les pages du {{Glossary("World Wide Web","Web")}}, et permet aux utilisateurs d'accéder à d'autres pages au travers d'{{Glossary("hyperlink","hyperliens")}}.
 
@@ -21,5 +18,5 @@ Un _navigateur internet_ est un programme informatique qui reçoit et affiche le
 
 - [Mozilla Firefox](https://www.mozilla.org/fr/firefox/desktop/)
 - [Google Chrome](https://www.google.fr/intl/fr/chrome/browser/desktop/index.html)
-- [Microsoft Internet Explorer](http://windows.microsoft.com/fr-fr/internet-explorer/download-ie)
-- [Navigateur Opera](http://www.opera.com/fr)
+- [Microsoft Internet Explorer](https://windows.microsoft.com/fr-fr/internet-explorer/download-ie)
+- [Navigateur Opera](https://www.opera.com/fr)

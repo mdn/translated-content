@@ -1,13 +1,6 @@
 ---
-title: '-webkit-line-clamp'
+title: -webkit-line-clamp
 slug: Web/CSS/-webkit-line-clamp
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/-webkit-line-clamp
 ---
 
 {{CSSRef}}
@@ -20,7 +13,7 @@ translation_of: Web/CSS/-webkit-line-clamp
 
 앵커 요소에 적용한 경우 텍스트의 끝이 아니라 중앙에서 잘리는 경우도 있습니다.
 
-> **참고:** :`-webkit-line-clamp`는 원래 WebKit이 구현했었으며 몇몇 문제점을 가지고 있으나 레거시 지원을 위해 표준화를 거쳤습니다. [CSS Overflow Module Level 3](https://www.w3.org/TR/css-overflow-3/#propdef--webkit-line-clamp) 명세의 {{cssxref("line-clamp")}}가 `-webkit-line-clamp`를 대체하기 위해 정의된 속성입니다.
+> **참고:** `-webkit-line-clamp`는 원래 WebKit이 구현했었으며 몇몇 문제점을 가지고 있으나 레거시 지원을 위해 표준화를 거쳤습니다. [CSS Overflow Module Level 3](https://www.w3.org/TR/css-overflow-3/#propdef--webkit-line-clamp) 명세의 {{cssxref("line-clamp")}}가 `-webkit-line-clamp`를 대체하기 위해 정의된 속성입니다.
 
 ## 구문
 
@@ -59,8 +52,9 @@ translation_of: Web/CSS/-webkit-line-clamp
 
 ```html
 <p>
-  In this example the <code>-webkit-line-clamp</code> property is set to <code>3</code>, which means the text is clamped after three lines.
-  An ellipsis will be shown at the point where the text is clamped.
+  In this example the <code>-webkit-line-clamp</code> property is set to
+  <code>3</code>, which means the text is clamped after three lines. An ellipsis
+  will be shown at the point where the text is clamped.
 </p>
 ```
 
@@ -90,5 +84,5 @@ p {
 
 ## 같이 보기
 
-- [Line Clampin’ (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/)
+- [Line Clampin' (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/)
 - {{cssxref("line-clamp")}}

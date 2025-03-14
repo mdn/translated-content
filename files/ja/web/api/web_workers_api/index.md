@@ -27,7 +27,7 @@ l10n:
 - {{DOMxRef("SharedWorker","共有ワーカー", "", 1)}} (shared worker) は、ワーカーと同じドメイン内にある限り、異なるウィンドウや iframe などで動作する複数のスクリプトで利用できるワーカーです。専用ワーカーよりも少し複雑で、スクリプトはアクティブなポートを介して通信する必要があります。
 - [サービスワーカー](/ja/docs/Web/API/Service_Worker_API)は、基本的に複数のウェブアプリケーション間やブラウザー、（利用可能なら）ネットワークの間でプロキシーサーバーとして動くものです。他にも、効果的なオフライン操作を実現したり、ネットワークリクエストを遮断してネットワークが利用できるかどうかで適切なアクションを取ったり、サーバーにある資産を更新したりすることなどを目的としています。また、プッシュ通知やバックグラウンド同期APIへのアクセスも可能になる予定です。
 
-> **メモ:** [Web workers 仕様書](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2)によれば、ワーカーのエラーイベントはバブリングすべきではありません（{{bug(1188141)}} を参照。これは Firefox 42 で実装されました）。
+> **メモ:** [Web workers 仕様書](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2)によれば、ワーカーのエラーイベントはバブリングすべきではありません（[Firefox バグ 1188141](https://bugzil.la/1188141) を参照。これは Firefox 42 で実装されました）。
 
 ### ワーカーグローバルコンテキストと関数
 
@@ -46,7 +46,8 @@ l10n:
 
 ### 利用可能な Web API
 
-> **メモ:** 掲載されている API が特定のバージョンのプラットフォームで対応している場合、一般的にウェブワーカーでも利用可能とみなされます。また、 <https://worker-playground.glitch.me/> を使用して特定のオブジェクト/関数の 対応をテストすることもできます。
+> [!NOTE]
+> 掲載されている API が特定のバージョンのプラットフォームで対応している場合、一般的にウェブワーカーでも利用可能とみなされます。また、 <https://worker-playground.glitch.me/> を使用して特定のオブジェクト/関数の 対応をテストすることもできます。
 
 ワーカーで利用可能な Web APIは、{{domxref("Barcode_Detection_API","バーコード検出 API", "", 1)}}、{{domxref("Broadcast_Channel_API","放送チャンネル API", "", 1)}}、{{domxref("Cache", "キャッシュ API", "", 1)}}、{{domxref("Channel_Messaging_API", "チャンネルメッセージ API", "", 1)}}、{{domxref("Console API", "コンソール API", "", 1)}}, [ウェブ暗号化 API](/ja/docs/Web/API/Web_Crypto_API) ({{domxref("Crypto")}})、{{domxref("CustomEvent")}}、{{domxref("Encoding_API", "エンコーディング API", "", 1)}} ({{domxref("TextEncoder")}}、{{domxref("TextDecoder")}}、など）、{{domxref("Fetch_API", "フェッチ API", "", 1)}}、{{domxref("FileReader")}}、{{domxref("FileReaderSync")}} （ワーカーでのみ動作）、{{domxref("FormData")}}、{{domxref("ImageData")}}、{{domxref("IndexedDB_API", "IndexedDB")}}, [ネットワーク情報 API](/ja/docs/Web/API/Network_Information_API), {{domxref("Notifications_API", "通知 API", "", 1)}}、{{domxref("Performance_API","パフォーマンス API", "", 1)}} （{{domxref("Performance")}}、{{domxref("PerformanceEntry")}}、{{domxref("PerformanceMeasure")}}、{{domxref("PerformanceMark")}}、{{domxref("PerformanceObserver")}}、{{domxref("PerformanceResourceTiming")}}、など)、{{jsxref("Promise")}}、[サーバー送信イベント](/ja/docs/Web/API/Server-sent_events)、{{domxref("ServiceWorkerRegistration")}}、{{ domxref("URL_API","URL API", "", 1) }} （{{ domxref("URL")}} など)、[WebGL](/ja/docs/Web/API/WebGL_API) （{{domxref("OffscreenCanvas")}} による）、{{domxref("WebSocket")}}、{{domxref("XMLHttpRequest")}} です。
 

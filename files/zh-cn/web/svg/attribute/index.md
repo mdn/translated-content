@@ -1,11 +1,15 @@
 ---
 title: SVG 属性参考
 slug: Web/SVG/Attribute
+l10n:
+  sourceCommit: 7f67f81c799f3afcff118661faec6cd391308a17
 ---
 
 {{SVGRef}}
 
-SVG 元素可以通过属性来修改，这些属性指定有关如何处理或呈现元素的详细信息。下面列出了 SVG 中所有的可用属性以及参考文档的链接，以帮助您了解哪些元素支持它们，以及它们如何工作。
+SVG 元素可以通过属性来修改，这些属性指定有关如何处理或渲染元素的详细信息。
+
+下面列出了 SVG 中所有的可用属性以及参考文档的链接，以帮助你了解哪些元素支持它们，以及它们如何工作。
 
 ## SVG 属性（从 A-Z 排序）
 
@@ -15,14 +19,12 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 - {{SVGAttr("accumulate")}}
 - {{SVGAttr("additive")}}
 - {{SVGAttr("alignment-baseline")}}
-- {{SVGAttr("allowReorder")}}
 - {{SVGAttr("alphabetic")}}
 - {{SVGAttr("amplitude")}}
 - {{SVGAttr("arabic-form")}}
 - {{SVGAttr("ascent")}}
 - {{SVGAttr("attributeName")}}
 - {{SVGAttr("attributeType")}}
-- {{SVGAttr("autoReverse")}}
 - {{SVGAttr("azimuth")}}
 
 ### B
@@ -49,8 +51,7 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 - {{SVGAttr("color-interpolation-filters")}}
 - {{SVGAttr("color-profile")}}
 - {{SVGAttr("color-rendering")}}
-- {{SVGAttr("contentScriptType")}}
-- {{SVGAttr("contentStyleType")}}
+- {{SVGAttr("crossorigin")}}
 - {{SVGAttr("cursor")}}
 - {{SVGAttr("cx")}}
 - {{SVGAttr("cy")}}
@@ -73,10 +74,8 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 
 - {{SVGAttr("edgeMode")}}
 - {{SVGAttr("elevation")}}
-- {{SVGAttr("enable-background")}}
 - {{SVGAttr("end")}}
 - {{SVGAttr("exponent")}}
-- {{SVGAttr("externalResourcesRequired")}}
 
 ### F
 
@@ -84,7 +83,6 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 - {{SVGAttr("fill-opacity")}}
 - {{SVGAttr("fill-rule")}}
 - {{SVGAttr("filter")}}
-- {{SVGAttr("filterRes")}}
 - {{SVGAttr("filterUnits")}}
 - {{SVGAttr("flood-color")}}
 - {{SVGAttr("flood-opacity")}}
@@ -273,6 +271,7 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 - {{SVGAttr("textLength")}}
 - {{SVGAttr("to")}}
 - {{SVGAttr("transform")}}
+- {{SVGAttr("transform-origin")}}
 - {{SVGAttr("type")}}
 
 ### U
@@ -299,7 +298,6 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 - {{SVGAttr("vert-origin-x")}}
 - {{SVGAttr("vert-origin-y")}}
 - {{SVGAttr("viewBox")}}
-- {{SVGAttr("viewTarget")}}
 - {{SVGAttr("visibility")}}
 
 ### W
@@ -318,7 +316,7 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 - {{SVGAttr("xChannelSelector")}}
 - {{SVGAttr("xlink:actuate")}}
 - {{SVGAttr("xlink:arcrole")}}
-- {{SVGAttr("xlink:href")}}
+- {{SVGAttr("xlink:href")}}{{deprecated_inline}}
 - {{SVGAttr("xlink:role")}}
 - {{SVGAttr("xlink:show")}}
 - {{SVGAttr("xlink:title")}}
@@ -341,78 +339,195 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 
 ## SVG 属性（按类别分类）
 
-### Generic Attributes
+### 通用属性
 
-#### [核心属性](/zh-CN/docs/Web/SVG/Attribute/Core)
+- 核心属性
 
-{{SVGAttr("id")}}, {{SVGAttr("lang")}}, {{SVGAttr("tabindex")}}, {{SVGAttr("xml:base")}}, {{SVGAttr("xml:lang")}}, {{SVGAttr("xml:space")}}
+  - {{SVGAttr("id")}}
+  - {{SVGAttr("class")}}
+  - {{SVGAttr("style")}}
+  - {{SVGAttr("lang")}}
+  - {{SVGAttr("tabindex")}}
+  - {{SVGAttr("xml:base")}}
+  - {{SVGAttr("xml:lang")}}
+  - {{SVGAttr("xml:space")}}
 
-#### [样式属性](/zh-CN/docs/Web/SVG/Attribute/Styling)
+- 条件处理属性
 
-{{SVGAttr("class")}}, {{SVGAttr("style")}}
-
-#### 条件处理属性
-
-{{SVGAttr("externalResourcesRequired")}}, {{SVGAttr("requiredExtensions")}}, {{SVGAttr("requiredFeatures")}}, {{SVGAttr("systemLanguage")}}.
+  - {{SVGAttr("requiredExtensions")}}
+  - {{SVGAttr("requiredFeatures")}}
+  - {{SVGAttr("systemLanguage")}}
 
 ### XLink 属性
 
-{{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:type")}}, {{SVGAttr("xlink:role")}}, {{SVGAttr("xlink:arcrole")}}, {{SVGAttr("xlink:title")}}, {{SVGAttr("xlink:show")}}, {{SVGAttr("xlink:actuate")}}
+- {{SVGAttr("xlink:href")}}{{deprecated_inline}}
+- {{SVGAttr("xlink:type")}}
+- {{SVGAttr("xlink:role")}}
+- {{SVGAttr("xlink:arcrole")}}
+- {{SVGAttr("xlink:title")}}
+- {{SVGAttr("xlink:show")}}
+- {{SVGAttr("xlink:actuate")}}
 
-### [显示属性](/zh-CN/docs/Web/SVG/Attribute/Presentation)
+### 表现属性
 
-> **备注：** 所有 SVG 显示属性都可以作为 CSS 属性来使用。
+> [!NOTE]
+> 所有 SVG 表现属性都可以作为 CSS 属性来使用。
 
-{{SVGAttr("alignment-baseline")}}, {{SVGAttr("baseline-shift")}}, {{SVGAttr("clip")}}, {{SVGAttr("clip-path")}}, {{SVGAttr("clip-rule")}}, {{SVGAttr("color")}}, {{SVGAttr("color-interpolation")}}, {{SVGAttr("color-interpolation-filters")}}, {{SVGAttr("color-profile")}}, {{SVGAttr("color-rendering")}}, {{SVGAttr("cursor")}}, {{SVGAttr("direction")}}, {{SVGAttr("display")}}, {{SVGAttr("dominant-baseline")}}, {{SVGAttr("enable-background")}}, {{SVGAttr("fill")}}, {{SVGAttr("fill-opacity")}}, {{SVGAttr("fill-rule")}}, {{SVGAttr("filter")}}, {{SVGAttr("flood-color")}}, {{SVGAttr("flood-opacity")}}, {{SVGAttr("font-family")}}, {{SVGAttr("font-size")}}, {{SVGAttr("font-size-adjust")}}, {{SVGAttr("font-stretch")}}, {{SVGAttr("font-style")}}, {{SVGAttr("font-variant")}}, {{SVGAttr("font-weight")}}, {{SVGAttr("glyph-orientation-horizontal")}}, {{SVGAttr("glyph-orientation-vertical")}}, {{SVGAttr("image-rendering")}}, {{SVGAttr("kerning")}}, {{SVGAttr("letter-spacing")}}, {{SVGAttr("lighting-color")}}, {{SVGAttr("marker-end")}}, {{SVGAttr("marker-mid")}}, {{SVGAttr("marker-start")}}, {{SVGAttr("mask")}}, {{SVGAttr("opacity")}}, {{SVGAttr("overflow")}}, {{SVGAttr("pointer-events")}}, {{SVGAttr("shape-rendering")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("stop-opacity")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stroke-dasharray")}}, {{SVGAttr("stroke-dashoffset")}}, {{SVGAttr("stroke-linecap")}}, {{SVGAttr("stroke-linejoin")}}, {{SVGAttr("stroke-miterlimit")}}, {{SVGAttr("stroke-opacity")}}, {{SVGAttr("stroke-width")}}, {{SVGAttr("text-anchor")}}, {{SVGAttr("transform")}}, {{SVGAttr("text-decoration")}}, {{SVGAttr("text-rendering")}}, {{SVGAttr("unicode-bidi")}}, {{SVGAttr("vector-effect")}}, {{SVGAttr("visibility")}}, {{SVGAttr("word-spacing")}}, {{SVGAttr("writing-mode")}}
+- {{SVGAttr("alignment-baseline")}}
+- {{SVGAttr("baseline-shift")}}
+- {{SVGAttr("clip")}}
+- {{SVGAttr("clip-path")}}
+- {{SVGAttr("clip-rule")}}
+- {{SVGAttr("color")}}
+- {{SVGAttr("color-interpolation")}}
+- {{SVGAttr("color-interpolation-filters")}}
+- {{SVGAttr("color-profile")}}
+- {{SVGAttr("color-rendering")}}
+- {{SVGAttr("cursor")}}
+- {{SVGAttr("d")}}
+- {{SVGAttr("direction")}}
+- {{SVGAttr("display")}}
+- {{SVGAttr("dominant-baseline")}}
+- {{SVGAttr("fill")}}
+- {{SVGAttr("fill-opacity")}}
+- {{SVGAttr("fill-rule")}}
+- {{SVGAttr("filter")}}
+- {{SVGAttr("flood-color")}}
+- {{SVGAttr("flood-opacity")}}
+- {{SVGAttr("font-family")}}
+- {{SVGAttr("font-size")}}
+- {{SVGAttr("font-size-adjust")}}
+- {{SVGAttr("font-stretch")}}
+- {{SVGAttr("font-style")}}
+- {{SVGAttr("font-variant")}}
+- {{SVGAttr("font-weight")}}
+- {{SVGAttr("glyph-orientation-horizontal")}}
+- {{SVGAttr("glyph-orientation-vertical")}}
+- {{SVGAttr("image-rendering")}}
+- {{SVGAttr("kerning")}}
+- {{SVGAttr("letter-spacing")}}
+- {{SVGAttr("lighting-color")}}
+- {{SVGAttr("marker-end")}}
+- {{SVGAttr("marker-mid")}}
+- {{SVGAttr("marker-start")}}
+- {{SVGAttr("mask")}}
+- {{SVGAttr("opacity")}}
+- {{SVGAttr("overflow")}}
+- {{SVGAttr("pointer-events")}}
+- {{SVGAttr("shape-rendering")}}
+- {{SVGAttr("stop-color")}}
+- {{SVGAttr("stop-opacity")}}
+- {{SVGAttr("stroke")}}
+- {{SVGAttr("stroke-dasharray")}}
+- {{SVGAttr("stroke-dashoffset")}}
+- {{SVGAttr("stroke-linecap")}}
+- {{SVGAttr("stroke-linejoin")}}
+- {{SVGAttr("stroke-miterlimit")}}
+- {{SVGAttr("stroke-opacity")}}
+- {{SVGAttr("stroke-width")}}
+- {{SVGAttr("text-anchor")}}
+- {{SVGAttr("text-decoration")}}
+- {{SVGAttr("text-rendering")}}
+- {{SVGAttr("transform")}}
+- {{SVGAttr("transform-origin")}}
+- {{SVGAttr("unicode-bidi")}}
+- {{SVGAttr("vector-effect")}}
+- {{SVGAttr("visibility")}}
+- {{SVGAttr("word-spacing")}}
+- {{SVGAttr("writing-mode")}}
 
 ### 滤镜属性
 
-#### 滤镜原始属性
-
-{{SVGAttr("height")}}, {{SVGAttr("result")}}, {{SVGAttr("width")}}, {{SVGAttr("x")}}, {{SVGAttr("y")}}
-
-#### 传递函数属性
-
-{{SVGAttr("type")}}, {{SVGAttr("tableValues")}}, {{SVGAttr("slope")}}, {{SVGAttr("intercept")}}, {{SVGAttr("amplitude")}}, {{SVGAttr("exponent")}}, {{SVGAttr("offset")}}
+- 滤镜原语属性
+  - : {{SVGAttr("height")}}、{{SVGAttr("result")}}、{{SVGAttr("width")}}、{{SVGAttr("x")}}、{{SVGAttr("y")}}
+- 传递函数属性
+  - : {{SVGAttr("type")}}、{{SVGAttr("tableValues")}}、{{SVGAttr("slope")}}、{{SVGAttr("intercept")}}、{{SVGAttr("amplitude")}}、{{SVGAttr("exponent")}}、{{SVGAttr("offset")}}
 
 ### 动画属性
 
-#### 动画属性目标属性
-
-{{SVGAttr("attributeType")}}, {{SVGAttr("attributeName")}}
-
-#### 动画时间属性
-
-{{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
-
-#### 动画取值属性
-
-{{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}, {{SVGAttr("autoReverse")}}, {{SVGAttr("accelerate")}}, {{SVGAttr("decelerate")}}
-
-#### 动画累加属性
-
-{{SVGAttr("additive")}}、{{SVGAttr("accumulate")}}
+- 动画目标元素属性
+  - : {{SVGAttr("href")}}
+- 动画属性目标属性
+  - : {{SVGAttr("attributeType")}}、{{SVGAttr("attributeName")}}
+- 动画时间属性
+  - : {{SVGAttr("begin")}}、{{SVGAttr("dur")}}、{{SVGAttr("end")}}、{{SVGAttr("min")}}、{{SVGAttr("max")}}、{{SVGAttr("restart")}}、{{SVGAttr("repeatCount")}}、{{SVGAttr("repeatDur")}}、{{SVGAttr("fill")}}
+- 动画取值属性
+  - : {{SVGAttr("calcMode")}}、{{SVGAttr("values")}}、{{SVGAttr("keyTimes")}}、{{SVGAttr("keySplines")}}、{{SVGAttr("from")}}、{{SVGAttr("to")}}、{{SVGAttr("by")}}、{{SVGAttr("autoReverse")}}、{{SVGAttr("accelerate")}}、{{SVGAttr("decelerate")}}
+- 动画累加属性
+  - : {{SVGAttr("additive")}}、{{SVGAttr("accumulate")}}
 
 ### 事件属性
 
-#### [动画事件属性](/zh-CN/docs/Web/SVG/Attribute/Events#Animation_Event_Attributes)
-
-**`onbegin`**, **`onend`**, **`onrepeat`**
-
-#### [文档事件属性](/zh-CN/docs/Web/SVG/Attribute/Events#Document_Event_Attributes)
-
-**`onabort`**, **`onerror`**, **`onresize`**, **`onscroll`**, **`onunload`**
-
-#### [全局事件属性](/zh-CN/docs/Web/SVG/Attribute/Events#Global_Event_Attributes)
-
-**`oncancel`**, **`oncanplay`**, **`oncanplaythrough`**, **`onchange`**, **`onclick`**, **`onclose`**, **`oncuechange`**, **`ondblclick`**, **`ondrag`**, **`ondragend`**, **`ondragenter`**, **`ondragexit`**, **`ondragleave`**, **`ondragover`**, **`ondragstart`**, **`ondrop`**, **`ondurationchange`**, **`onemptied`**, **`onended`**, **`onerror`**, **`onfocus`**, **`oninput`**, **`oninvalid`**, **`onkeydown`**, **`onkeypress`**, **`onkeyup`**, **`onload`**, **`onloadeddata`**, **`onloadedmetadata`**, **`onloadstart`**, **`onmousedown`**, **`onmouseenter`**, **`onmouseleave`**, **`onmousemove`**, **`onmouseout`**, **`onmouseover`**, **`onmouseup`**, **`onmousewheel`**, **`onpause`**, **`onplay`**, **`onplaying`**, **`onprogress`**, **`onratechange`**, **`onreset`**, **`onresize`**, **`onscroll`**, **`onseeked`**, **`onseeking`**, **`onselect`**, **`onshow`**, **`onstalled`**, **`onsubmit`**, **`onsuspend`**, **`ontimeupdate`**, **`ontoggle`**, **`onvolumechange`**, **`onwaiting`**
-
-#### [图像事件属性](/zh-CN/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
-
-**`onactivate`**, **`onfocusin`**, **`onfocusout`**
+- **`onabort`**
+- **`onactivate`**
+- **`onbegin`**
+- **`oncancel`**
+- **`oncanplay`**
+- **`oncanplaythrough`**
+- **`onchange`**
+- **`onclick`**
+- **`onclose`**
+- **`oncuechange`**
+- **`ondblclick`**
+- **`ondrag`**
+- **`ondragend`**
+- **`ondragenter`**
+- **`ondragleave`**
+- **`ondragover`**
+- **`ondragstart`**
+- **`ondrop`**
+- **`ondurationchange`**
+- **`onemptied`**
+- **`onend`**
+- **`onended`**
+- **`onerror`**
+- **`onerror`**
+- **`onfocus`**
+- **`onfocusin`**
+- **`onfocusout`**
+- **`oninput`**
+- **`oninvalid`**
+- **`onkeydown`**
+- **`onkeypress`**
+- **`onkeyup`**
+- **`onload`**
+- **`onloadeddata`**
+- **`onloadedmetadata`**
+- **`onloadstart`**
+- **`onmousedown`**
+- **`onmouseenter`**
+- **`onmouseleave`**
+- **`onmousemove`**
+- **`onmouseout`**
+- **`onmouseover`**
+- **`onmouseup`**
+- **`onmousewheel`**
+- **`onpause`**
+- **`onplay`**
+- **`onplaying`**
+- **`onprogress`**
+- **`onratechange`**
+- **`onrepeat`**
+- **`onreset`**
+- **`onresize`**
+- **`onresize`**
+- **`onscroll`**
+- **`onscroll`**
+- **`onseeked`**
+- **`onseeking`**
+- **`onselect`**
+- **`onshow`**
+- **`onstalled`**
+- **`onsubmit`**
+- **`onsuspend`**
+- **`ontimeupdate`**
+- **`ontoggle`**
+- **`onunload`**
+- **`onvolumechange`**
+- **`onwaiting`**
 
 ## 参见
 
 - [SVG 元素参考](/zh-CN/docs/Web/SVG/Element)
 - [SVG 教程](/zh-CN/docs/Web/SVG/Tutorial)
-- [SVG 接口参考](/zh-CN/docs/Web/API/Document_Object_Model#SVG_interfaces)
+- [SVG 接口参考](/zh-CN/docs/Web/API/SVG_API#接口)

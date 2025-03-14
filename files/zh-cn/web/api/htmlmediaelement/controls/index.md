@@ -1,27 +1,22 @@
 ---
-title: HTMLMediaElement.controls
+title: HTMLMediaElement：controls 属性
 slug: Web/API/HTMLMediaElement/controls
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.controls`** 这个负责控制 html 中的[`controls`](/zh-CN/docs/Web/HTML/Element/video#attr-controls)HTML 属性，它负责控制播放的媒体 (视频或音频) 的控制条是否显示。.
+**`HTMLMediaElement.controls`** 属性反映了 [`controls`](/zh-CN/docs/Web/HTML/Element/video#controls) HTML 属性，该属性控制是否显示用于播放媒体项的用户界面控件。
 
-## 语法
+## 值
 
-```plain
-var ctrls = video.controls;
-audio.controls = true;
-```
+一个布尔值。`true` 值表示将显示控件。
 
-### 返回值
-
-类型 {{domxref("Boolean")}}. 是否成功
-
-## 例子
+## 示例
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement("video");
 obj.controls = true;
 ```
 
@@ -29,10 +24,10 @@ obj.controls = true;
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 
-## 产考文档
+## 参见
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}：用于定义 `HTMLMediaElement.controls` 属性的接口

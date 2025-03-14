@@ -1,20 +1,9 @@
 ---
 title: extensionTypes.RunAt
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/RunAt
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - RunAt
-  - Type
-  - WebExtensions
-  - extensionTypes
-translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes/RunAt
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le plus tot que le Javascript ou CSS sera injecté dans l'onglet.
 
@@ -28,15 +17,15 @@ Les valeurs de ce type sont des chaines. Les valeurs possibles sont : `"document
 
 La valeur par défaut est `"document_idle"`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extensionTypes.RunAt")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basé sur l'API Chromium [`chrome.extensionTypes`](https://developer.chrome.com/extensions/extensionTypes) . Cette documentation provient de [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) dans le code de Chromium.
+> Cette API est basé sur l'API Chromium [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/api/extensionTypes) . Cette documentation provient de [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) dans le code de Chromium.
 >
 > Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 

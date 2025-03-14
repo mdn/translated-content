@@ -1,15 +1,78 @@
 ---
-title: '<tfoot> : l''élément de pied de tableau'
+title: "<tfoot> : l'élément de pied de tableau"
 slug: Web/HTML/Element/tfoot
-translation_of: Web/HTML/Element/tfoot
-browser-compat: html.elements.tfoot
 ---
 
 {{HTMLSidebar}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<tfoot>`** permet de définir un ensemble de lignes qui résument les colonnes d'un tableau.
 
-{{EmbedInteractiveExample("pages/tabbed/tfoot.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;tfoot&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Council budget (in £) 2018
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Items</th>
+      <th scope="col">Expenditure</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Donuts</th>
+      <td>3,000</td>
+    </tr>
+    <tr>
+      <th scope="row">Stationery</th>
+      <td>18,000</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row">Totals</th>
+      <td>21,000</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+```css interactive-example
+thead,
+tfoot {
+  background-color: #2c5e77;
+  color: #fff;
+}
+
+tbody {
+  background-color: #e4f0f5;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td {
+  text-align: center;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -61,6 +124,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 Les attributs qui suivent sont dépréciés et ne devraient pas être utilisés. Ils sont uniquement documentés à des fins historiques et pour la mise à jour du code existant qui les utiliserait.
 
 - `align` {{Deprecated_inline}}
+
   - : Cet attribut à valeurs définit l'alignement horizontal pour le contenu de chaque cellule de la colonne. Les valeurs possibles sont&nbsp;:
 
     - `left`
@@ -76,7 +140,8 @@ Les attributs qui suivent sont dépréciés et ne devraient pas être utilisés.
 
     Si cet attribut n'est pas renseigné, la valeur `left` est prise par défaut.
 
-    > **Note :** Pour réaliser le même effet qu'avec les valeurs `left`, `center`, `right` ou `justify`, utilisez la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align) sur cet élément.
+    > [!NOTE]
+    > Pour réaliser le même effet qu'avec les valeurs `left`, `center`, `right` ou `justify`, utilisez la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align) sur cet élément.
     >
     > - Pour réaliser le même effet qu'avec `char`, vous pouvez, en CSS3, utiliser la valeur de `char` comme valeur pour la propriété [`text-align`](/fr/docs/Web/CSS/text-align) (non implémenté à date).
 
@@ -87,9 +152,11 @@ Les attributs qui suivent sont dépréciés et ne devraient pas être utilisés.
     Pour réaliser un effet équivalent, on utilisera plutôt la propriété CSS [`background-color`](/fr/docs/Web/CSS/background-color).
 
 - `char` {{Deprecated_inline}}
+
   - : Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (.) pour aligner des nombres ou des valeurs monétaires. Si l'attribut `align` ne vaut pas `char`, l'attribut est ignoré.
 
 - `charoff` {{Deprecated_inline}}
+
   - : Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère définit par l'attribut `char` à appliquer au contenu des cellules.
 
 - `valign` {{Deprecated_inline}}
@@ -105,7 +172,8 @@ Les attributs qui suivent sont dépréciés et ne devraient pas être utilisés.
     - `top`
       - : Place le texte au plus haut de la cellule.
 
-    > **Note :** Cet attribut étant maintenant obsolète (et n'étant plus pris en charge), il est fortement déconseillé de l'utiliser. La propriété CSS [`vertical-align`](/fr/docs/Web/CSS/vertical-align) doit être utilisée à la place.
+    > [!NOTE]
+    > Cet attribut étant maintenant obsolète (et n'étant plus pris en charge), il est fortement déconseillé de l'utiliser. La propriété CSS [`vertical-align`](/fr/docs/Web/CSS/vertical-align) doit être utilisée à la place.
 
 ## Exemples
 

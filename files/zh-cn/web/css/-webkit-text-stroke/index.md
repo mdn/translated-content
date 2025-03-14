@@ -1,50 +1,60 @@
 ---
-title: '-webkit-text-stroke'
+title: -webkit-text-stroke
 slug: Web/CSS/-webkit-text-stroke
 ---
 
-## 摘要
+{{CSSRef}}
 
-**`-webkit-text-stroke`** [CSS](/zh-CN/docs/Web/CSS)属性为文本字符指定了[宽](/zh-CN/docs/Web/CSS/length) 和 [颜色](/zh-CN/docs/Web/CSS/color_value) . 它是{{cssxref("-webkit-text-stroke-width")}} 和{{cssxref("-webkit-text-stroke-color")}}属性的缩写。
-
-## 语法
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`-webkit-text-stroke`** 指定了文本字符的笔触[宽度](/zh-CN/docs/Web/CSS/length)和笔触[颜色](/zh-CN/docs/Web/CSS/color_value)。此属性为全称属性 {{CSSXref("-webkit-text-stroke-width")}} 和 {{CSSXref("-webkit-text-stroke-color")}} 的简写属性。
 
 ```css
-/* 宽度和颜色属性 */
+/* 宽度和颜色值 */
 -webkit-text-stroke: 4px navy;
+text-stroke: 4px navy;
 
-/* 全局属性 */
+/* 全局值 */
 -webkit-text-stroke: inherit;
 -webkit-text-stroke: initial;
+-webkit-text-stroke: revert;
+-webkit-text-stroke: revert-layer;
 -webkit-text-stroke: unset;
 ```
 
-### 值
+## 属性构成
 
-- `<length>`
-  - : 文本宽。
-- `<color>`
-  - : 文本颜色。
+此属性为下列 CSS 属性的简写属性：
 
-### 常规用法
+- {{cssxref("-webkit-text-stroke-color")}}
+- {{cssxref("-webkit-text-stroke-width")}}
 
-```plain
-/* 设置宽度和颜色 */
--webkit-text-stroke: <length> <color>;
+## 语法
 
-/* 默认设置 */
--webkit-text-stroke: inherit/initial/unset;
-```
+### 取值
 
-## 用例
+- {{cssxref("&lt;length&gt;")}}
+  - : 笔触宽度。
+- {{cssxref("&lt;color&gt;")}}
+  - : 笔触颜色。
 
-### HTML
+## 形式定义
+
+{{CSSInfo}}
+
+## 形式语法
+
+{{csssyntax}}
+
+## 示例
+
+### 添加红色文本笔触
+
+#### HTML
 
 ```html
-<p id="example">The stroke of this text is red.</p>
+<p id="example">此文本的笔触为红色的。</p>
 ```
 
-### CSS
+#### CSS
 
 ```css
 #example {
@@ -54,7 +64,11 @@ slug: Web/CSS/-webkit-text-stroke
 }
 ```
 
-## 规格
+#### 结果
+
+{{EmbedLiveSample("添加红色文本笔触", 600, 60)}}
+
+## 规范
 
 {{Specifications}}
 
@@ -62,10 +76,10 @@ slug: Web/CSS/-webkit-text-stroke
 
 {{Compat}}
 
-## 参考文档
+## 参见
 
-- [Surfin' Safari blog post announcing this feature](https://www.webkit.org/blog/85/introducing-text-stroke/)
-- [CSS-Tricks article explaining this feature](https://css-tricks.com/adding-stroke-to-web-text/)
+- [Surfin 的 Safari 博客文章宣布了此特性](https://www.webkit.org/blog/85/introducing-text-stroke/)
+- [解释该特性的 CSS-Tricks 文章](https://css-tricks.com/adding-stroke-to-web-text/)
 - {{cssxref("-webkit-text-stroke-width")}}
 - {{cssxref("-webkit-text-stroke-color")}}
 - {{cssxref("-webkit-text-fill-color")}}

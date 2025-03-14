@@ -1,6 +1,8 @@
 ---
-title: CharacterData.replaceWith()
+title: "CharacterData: replaceWith() メソッド"
 slug: Web/API/CharacterData/replaceWith
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef("DOM")}}
@@ -11,8 +13,8 @@ slug: Web/API/CharacterData/replaceWith
 
 ## 構文
 
-```js
-replaceWith(nodes);
+```js-nolint
+replaceWith(nodes)
 ```
 
 ### 引数
@@ -20,7 +22,12 @@ replaceWith(nodes);
 - `nodes` {{optional_inline}}
   - : カンマ区切りの {{domxref("Node")}} オブジェクトまたは文字列のリストで、現在のノードを置き換えるものです。
 
-> **メモ:** 引数が渡されなかった場合、このメソッドはこのノードを DOM ツリーから取り除くだけの動作をします。
+> [!NOTE]
+> 引数が渡されなかった場合、このメソッドはこのノードを DOM ツリーから取り除くだけの動作をします。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
@@ -34,14 +41,14 @@ replaceWith(nodes);
 ```
 
 ```js
-let text = document.getElementById('myText').firstChild;
+let text = document.getElementById("myText").firstChild;
 let em = document.createElement("em");
 em.textContent = "Italic text";
 
 text.replaceWith(em); // `Some text` を `Italic text` で置き換える
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+{{EmbedLiveSample("Examples", "100%", 30)}}
 
 ## 仕様書
 

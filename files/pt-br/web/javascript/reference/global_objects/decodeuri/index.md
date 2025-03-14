@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/decodeURI
 
 A função **`decodeURI()`** decodifica um Uniform Resource Identifier (URI) criado anteriormente por {{jsxref("encodeURI", "encodeURI()")}} ou por uma rotina semelhante.
 
-{{EmbedInteractiveExample("pages/js/globalprops-decodeuri.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - decodeURI()")}}
+
+```js interactive-example
+const uri = "https://mozilla.org/?x=шеллы";
+const encoded = encodeURI(uri);
+console.log(encoded);
+// Expected output: "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+
+try {
+  console.log(decodeURI(encoded));
+  // Expected output: "https://mozilla.org/?x=шеллы"
+} catch (e) {
+  // Catches a malformed URI
+  console.error(e);
+}
+```
 
 ## Sintaxe
 
@@ -22,7 +37,7 @@ decodeURI(encodedURI)
 
 ### Valor retornado
 
-Uma nova string representando a versão não codificada do URI (Uniform Resource Identifier) ​​codificado fornecido.
+Uma nova string representando a versão não codificada do URI (Uniform Resource Identifier) codificado fornecido.
 
 ### Exceções
 
@@ -30,14 +45,16 @@ Lança uma exceção {{jsxref("URIError")}} ("sequência de URI malformada") qua
 
 ## Descrição
 
-Substitui cada sequência de escape no URI codificado pelo caractere que ele representa, mas não decodifica sequências de escape que não poderiam ter sido introduzidas por {{jsxref("encodeURI")}}. O caractere “`#`” não é decodificado a partir de sequência de escape.
+Substitui cada sequência de escape no URI codificado pelo caractere que ele representa, mas não decodifica sequências de escape que não poderiam ter sido introduzidas por {{jsxref("encodeURI")}}. O caractere "`#`" não é decodificado a partir de sequência de escape.
 
 ## Exemplos
 
 ### Decodificando uma URL Cyrillic
 
 ```js
-decodeURI('https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
+decodeURI(
+  "https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B",
+);
 // "https://developer.mozilla.org/ru/docs/JavaScript_шеллы"
 ```
 
@@ -55,16 +72,11 @@ try {
 
 ## Especificações
 
-| Specification                                                                            | Status                       | Comment            |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES3')}}                                                                 | {{Spec2('ES3')}}         | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-15.1.3.1', 'decodeURI')}}                     | {{Spec2('ES5.1')}}     |                    |
-| {{SpecName('ES6', '#sec-decodeuri-encodeduri', 'decodeURI')}}         | {{Spec2('ES6')}}         |                    |
-| {{SpecName('ESDraft', '#sec-decodeuri-encodeduri', 'decodeURI')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.decodeURI")}}
+{{Compat}}
 
 ## Ver também
 

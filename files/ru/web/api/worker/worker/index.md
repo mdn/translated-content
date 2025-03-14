@@ -1,23 +1,16 @@
 ---
 title: Worker()
 slug: Web/API/Worker/Worker
-tags:
-  - API
-  - Constructor
-  - Reference
-  - Web Workers
-  - Worker
-  - Конструктор
-  - Ссылка
-translation_of: Web/API/Worker/Worker
 ---
+
 {{APIRef("Web Workers API")}}
 
-Конструктор **`Worker()`** создаёт объект {{domxref ("Worker")}}, который выполняет скрипт по указанному URL-адресу. Этот скрипт должен подчиняться политике одного источника ([same-origin policy](/en/Same_origin_policy_for_JavaScript)).
+Конструктор **`Worker()`** создаёт объект {{domxref ("Worker")}}, который выполняет скрипт по указанному URL-адресу. Этот скрипт должен подчиняться политике одного источника ([same-origin policy](/en-US/Same_origin_policy_for_JavaScript)).
 
 Если URL имеет недопустимый синтаксис или нарушена политика одного источника, то будет вызвано {{domxref("DOMException")}} типа `SECURITY_ERR`.
 
-> **Примечание:** **Замечание**: that there is a disagreement among browser manufacturers about whether a data URI is of the same origin or not. Though Gecko 10.0 {{ geckoRelease("10.0") }} and later accept data URIs, that's not the case in all other browsers.
+> [!NOTE]
+> There is a disagreement among browser manufacturers about whether a data URI is of the same origin or not. Though Gecko 10.0 and later accept data URIs, that's not the case in all other browsers.
 
 ## Синтаксис
 
@@ -48,15 +41,15 @@ var myWorker = new Worker(aURL, options);
 Следующий фрагмент кода показывает создание объекта {{domxref ("Worker")}} с помощью конструктора `Worker()` и его последующее использование:
 
 ```js
-var myWorker = new Worker('worker.js');
+var myWorker = new Worker("worker.js");
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+first.onchange = function () {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 ```
 
-Больше примеров можно найти здесь: [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
+Больше примеров можно найти здесь: [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
 
 ## Спецификации
 

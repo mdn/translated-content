@@ -3,11 +3,18 @@ title: Date.prototype.getUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`getUTCMilliseconds()`** 方法以世界时为标准，返回一个指定的日期对象的毫秒数。
 
-{{EmbedInteractiveExample("pages/js/date-getutcmilliseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getUTCMilliseconds()")}}
+
+```js interactive-example
+const exampleDate = new Date("2018-01-02T03:04:05.678Z"); // 2 January 2018, 03:04:05.678 (UTC)
+
+console.log(exampleDate.getUTCMilliseconds());
+// Expected output: 678
+```
 
 ## 语法
 
@@ -23,9 +30,9 @@ dateObj.getUTCMilliseconds()
 
 `getUTCMilliseconds()` 返回一个 0 到 999 的整数。
 
-## 例子
+## 示例
 
-### 例子：使用 `getUTCMilliseconds()` 方法
+### 示例：使用 `getUTCMilliseconds()` 方法
 
 下例将当前时间的毫秒部分赋值给变量 `milliseconds`。
 
@@ -42,7 +49,7 @@ var milliseconds = today.getUTCMilliseconds();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getMilliseconds()")}}
 - {{jsxref("Date.prototype.setUTCMilliseconds()")}}

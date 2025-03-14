@@ -20,8 +20,8 @@ slug: Web/HTML/Element/template
    <td>No restrictions</td>
   </tr>
   <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
+   <th scope="row">标签省略</th>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
@@ -76,11 +76,10 @@ slug: Web/HTML/Element/template
 ```js
 // 通过检查来测试浏览器是否支持 HTML 模板元素
 // 用于保存模板元素的内容属性。
-if ('content' in document.createElement('template')) {
-
+if ("content" in document.createElement("template")) {
   // 使用现有的 HTML tbody 实例化表和该行与模板
-  let t = document.querySelector('#productrow'),
-  td = t.content.querySelectorAll("td");
+  let t = document.querySelector("#productrow"),
+    td = t.content.querySelectorAll("td");
   td[0].textContent = "1235646565";
   td[1].textContent = "Stuff";
 
@@ -96,7 +95,6 @@ if ('content' in document.createElement('template')) {
   // 克隆新行并将其插入表中
   let clone2 = document.importNode(t.content, true);
   tb[0].appendChild(clone2);
-
 } else {
   // 找到另一种方法来添加行到表，因为不支持 HTML 模板元素。
 }
@@ -126,4 +124,4 @@ table td {
 ## 参见
 
 - Web components: {{HTMLElement("slot")}} (and historical: {{HTMLElement("shadow")}})
-- [Using templates and slots](/zh-CN/docs/Web/Web_Components/Using_templates_and_slots)
+- [Using templates and slots](/zh-CN/docs/Web/API/Web_components/Using_templates_and_slots)

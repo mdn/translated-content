@@ -5,9 +5,59 @@ slug: Web/CSS/transition
 
 {{CSSRef}}
 
-**`transition`** [CSS](/zh-CN/docs/Web/CSS) 属性是 {{ cssxref("transition-property") }}、{{ cssxref("transition-duration") }}、{{ cssxref("transition-timing-function") }} 和 {{ cssxref("transition-delay") }} 的一个[简写属性](/zh-CN/docs/CSS/Shorthand_properties)。
+**`transition`** [CSS](/zh-CN/docs/Web/CSS) 属性是 {{ cssxref("transition-property") }}、{{ cssxref("transition-duration") }}、{{ cssxref("transition-timing-function") }} 和 {{ cssxref("transition-delay") }} 的一个[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)。
 
-{{EmbedInteractiveExample("pages/css/transition.html")}}
+{{InteractiveExample("CSS Demo: transition")}}
+
+```css interactive-example-choice
+transition: margin-right 2s;
+```
+
+```css interactive-example-choice
+transition: margin-right 2s 0.5s;
+```
+
+```css interactive-example-choice
+transition: margin-right 2s ease-in-out;
+```
+
+```css interactive-example-choice
+transition: margin-right 2s ease-in-out 0.5s;
+```
+
+```css interactive-example-choice
+transition:
+  margin-right 2s,
+  color 1s;
+```
+
+```css interactive-example-choice
+transition: all 1s ease-out;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">Hover to see<br />the transition.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #e4f0f5;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: 1em monospace;
+  width: 100%;
+  transition: margin-right 2s;
+}
+
+#default-example:hover > #example-element {
+  background-color: #909;
+  color: #fff;
+  margin-right: 40%;
+}
+```
 
 过渡可以为一个元素在不同状态之间切换的时候定义不同的过渡效果。比如在不同的伪元素之间切换，像是 {{cssxref(":hover")}}，{{cssxref(":active")}} 或者通过 JavaScript 实现的状态变化。
 
@@ -28,7 +78,9 @@ transition: margin-right 4s ease-in-out;
 transition: margin-right 4s ease-in-out 1s;
 
 /* Apply to 2 properties */
-transition: margin-right 4s, color 1s;
+transition:
+  margin-right 4s,
+  color 1s;
 
 /* Apply to all changed properties */
 transition: all 0.5s ease-out;
@@ -52,7 +104,7 @@ transition: unset;
 - 零或一个 {{cssxref("&lt;single-transition-timing-function&gt;")}} 值表示要使用的过渡函数
 - 零，一或两个 {{cssxref("&lt;time&gt;")}} 值。可以解析为时间的第一个值被分配给 {{cssxref("transition-duration")}}，并且可以解析为时间的第二个值被分配给{{cssxref("transition-delay")}}。
 
-请查看“[如何处理](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#When_property_value_lists_are_of_different_lengths)”以了解当`transition`属性的值个数超过可以接收的值的个数时该如何处理。简而言之，当`transition`属性的值个数超过可以接收的值的个数时，多余的值都会被忽略掉，不再进行解析。
+请查看“[如何处理](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#when_property_value_lists_are_of_different_lengths)”以了解当`transition`属性的值个数超过可以接收的值的个数时该如何处理。简而言之，当`transition`属性的值个数超过可以接收的值的个数时，多余的值都会被忽略掉，不再进行解析。
 
 ### 标准语法
 
@@ -60,7 +112,7 @@ transition: unset;
 
 ## 示例
 
-“[使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)”一文中还包含了几个 CSS 过渡示例。
+“[使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)”一文中还包含了几个 CSS 过渡示例。
 
 ## 规范
 
@@ -74,5 +126,5 @@ transition: unset;
 
 ## 参见
 
-- [Using CSS transitions](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS transitions](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{ domxref("TransitionEvent") }}

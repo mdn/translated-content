@@ -1,18 +1,14 @@
 ---
 title: CanvasRenderingContext2D.fillStyle
 slug: Web/API/CanvasRenderingContext2D/fillStyle
-tags:
-  - API
-  - Canvas
-  - Property
-translation_of: Web/API/CanvasRenderingContext2D/fillStyle
 ---
 
 {{APIRef}}
 
 Свойство **`CanvasRenderingContext2D.fillStyle`**, предоставляемое [Canvas 2D API](/ru/docs/Web/API/Canvas_API), задаёт цвет или стиль, используемый при заливке фигур. По умолчанию установлено значение `#000` (чёрный цвет).
 
-> **Примечание:** Смотрите также главу [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) в [Canvas Tutorial](/ru/docs/Web/API/Canvas_API/Tutorial).
+> [!NOTE]
+> Смотрите также главу [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) в [Canvas Tutorial](/ru/docs/Web/API/Canvas_API/Tutorial).
 
 ## Синтаксис
 
@@ -46,10 +42,10 @@ ctx.fillStyle = pattern;
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(10, 10, 100, 100);
 ```
 
@@ -66,8 +62,8 @@ ctx.fillRect(10, 10, 100, 100);
 ```
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 for (let i = 0; i < 6; i++) {
   for (let j = 0; j < 6; j++) {
@@ -80,30 +76,17 @@ for (let i = 0; i < 6; i++) {
 }
 ```
 
-#### Результат:
+#### Результат
 
-{{EmbedLiveSample("Использование_fillStyle_в_циклах_for", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}
+{{EmbedLiveSample("Использование_fillStyle_в_циклах_for", 160, 160, "canvas_fillstyle.png")}}
 
 ## Спецификации
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
-
-В браузерах на основе WebKit и Blink реализован устаревший и нестандартный метод `ctx.setFillColor()` в дополнение к этому.
-
-### Особенности WebKit/Blink
-
-В браузерах на базе Webkit и Blink помимо этого свойства, также поддерживается нестандартный метод `ctx.setFillColor()`.
-
-```js
-setFillColor(color, optional alpha);
-setFillColor(grayLevel, optional alpha);
-setFillColor(r, g, b, a);
-setFillColor(c, m, y, k, a);
-```
 
 ## Смотрите также
 

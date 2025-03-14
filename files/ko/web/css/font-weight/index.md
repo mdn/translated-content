@@ -1,15 +1,13 @@
 ---
 title: font-weight
 slug: Web/CSS/font-weight
-translation_of: Web/CSS/font-weight
-browser-compat: css.properties.font-weight
 ---
 
 {{CSSRef}}
 
 ## 요약
 
-**`font-weight`** [CSS](/ko/docs/CSS) 속성은 폰트(font)의 가중치(weight)나 굵기(boldness)를 명시한다. 몇몇 폰트들은 `normal` 나 `bold` 일 때만 가능하다.
+**`font-weight`** [CSS](/ko/docs/Web/CSS) 속성은 폰트(font)의 가중치(weight)나 굵기(boldness)를 명시한다. 몇몇 폰트들은 `normal` 나 `bold` 일 때만 가능하다.
 
 {{cssinfo}}
 
@@ -116,14 +114,14 @@ font-weight: unset;
 
 ```html
 <p>
-  Alice was beginning to get very tired of sitting by her sister on the
-  bank, and of having nothing to do: once or twice she had peeped into the
-  book her sister was reading, but it had no pictures or conversations in
-  it, 'and what is the use of a book,' thought Alice 'without pictures or
-  conversations?'
+  Alice was beginning to get very tired of sitting by her sister on the bank,
+  and of having nothing to do: once or twice she had peeped into the book her
+  sister was reading, but it had no pictures or conversations in it, 'and what
+  is the use of a book,' thought Alice 'without pictures or conversations?'
 </p>
 
-<div>I'm heavy<br/>
+<div>
+  I'm heavy<br />
   <span>I'm lighter</span>
 </div>
 ```
@@ -139,7 +137,7 @@ p {
 /* Set div text to two steps darker than
    normal but less than a standard bold. */
 div {
- font-weight: 600;
+  font-weight: 600;
 }
 
 /* Sets text enclosed within span tag

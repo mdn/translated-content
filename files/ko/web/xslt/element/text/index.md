@@ -1,12 +1,9 @@
 ---
 title: text
 slug: Web/XSLT/Element/text
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/text
-original_slug: Web/XSLT/text
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:text>` 요소는 출력 트리에 리터럴(literal) 텍스트를 씁니다. `#PCDATA`, 리터럴 텍스트, 엔티티 참조를 포함할 지도 모릅니다.
 
@@ -33,7 +30,7 @@ original_slug: Web/XSLT/text
 
 ### 정의
 
-[XSLT section 7.2, Creating Text](http://www.w3.org/TR/xslt#section-Creating-Text)
+[XSLT section 7.2, Creating Text](https://www.w3.org/TR/xslt#section-Creating-Text)
 
 ### Gecko 지원
 

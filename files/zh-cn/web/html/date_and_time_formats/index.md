@@ -7,15 +7,15 @@ slug: Web/HTML/Date_and_time_formats
 
 特定的 HTML 元素会使用日期和（或）时间值，指定这些值的字符串格式将在本篇文章中描述。
 
-使用这些格式的元素包含一些令用户选择或指定日期、时间或日期和时间的 {{HTMLElement("input")}} 和 {{HTMLElement("ins")}}、{{HTMLElement("del")}} 元素，它们的 {{htmlattrxref("datetime", "ins")}} 属性指定了插入或删除内容的日期或日期和时间。
+使用这些格式的元素包含一些令用户选择或指定日期、时间或日期和时间的 {{HTMLElement("input")}} 和 {{HTMLElement("ins")}}、{{HTMLElement("del")}} 元素，它们的 [`datetime`](/zh-CN/docs/Web/HTML/Element/ins#datetime) 属性指定了插入或删除内容的日期或日期和时间。
 
-对于 `<input>` 元素来说，能够返回包含代表日期或日期和时间的字符串 {{htmlattrxref("value")}} 的 {{htmlattrxref("type", "input")}} 的值为：
+对于 `<input>` 元素来说，能够返回包含代表日期或日期和时间的字符串 [`value`](/zh-CN/docs/Web/HTML/Global_attributes#value) 的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 的值为：
 
-- [`date`](/zh-CN/docs/Web/HTML/Element/Input/date)
-- [`datetime-local`](/zh-CN/docs/Web/HTML/Element/Input/datetime-local)
-- [`month`](/zh-CN/docs/Web/HTML/Element/Input/month)
-- [`time`](/zh-CN/docs/Web/HTML/Element/Input/time)
-- [`week`](/zh-CN/docs/Web/HTML/Element/Input/week)
+- [`date`](/zh-CN/docs/Web/HTML/Element/input/date)
+- [`datetime-local`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)
+- [`month`](/zh-CN/docs/Web/HTML/Element/input/month)
+- [`time`](/zh-CN/docs/Web/HTML/Element/input/time)
+- [`week`](/zh-CN/docs/Web/HTML/Element/input/week)
 
 ## 示例
 
@@ -226,14 +226,14 @@ HTML 中的日期和时间总会使用 [ASCII](https://zh.wikipedia.org/zh-cn/IS
 
 所有其他年份含有 52 周。
 
-| 星期字符串  | 年份和星期数（日期区间）                                   |
-| ---------- | ------------------------------------------------------ |
-| `2001-W37` | 2001 年的第 37 周（2001 年 9 月 10-16 日）                |
+| 星期字符串 | 年份和星期数（日期区间）                                     |
+| ---------- | ------------------------------------------------------------ |
+| `2001-W37` | 2001 年的第 37 周（2001 年 9 月 10-16 日）                   |
 | `1953-W01` | 1953 年的第 1 周（1952 年 12 月 29 日 - 1953 年 1 月 4 日）  |
 | `1948-W53` | 1948 年的第 53 周（1948 年 12 月 27 日 - 1949 年 1 月 2 日） |
-| `1949-W01` | 1949 年的第 1 周（1949 年 1 月 3 - 9 日）                   |
-| `0531-W16` | 531 年的第 16 周（531 年 4 月 13 - 19 日）                  |
-| `0042-W04` | 42 年的第 4 周（42 年 1 月 21 - 27 日）                     |
+| `1949-W01` | 1949 年的第 1 周（1949 年 1 月 3 - 9 日）                    |
+| `0531-W16` | 531 年的第 16 周（531 年 4 月 13 - 19 日）                   |
+| `0042-W04` | 42 年的第 4 周（42 年 1 月 21 - 27 日）                      |
 
 注意，年份和星期数都由前导零补齐长度，年份补齐至四位数，而星期数补齐至两位数。
 
@@ -243,8 +243,8 @@ HTML 中的日期和时间总会使用 [ASCII](https://zh.wikipedia.org/zh-cn/IS
 
 一个 **有效的月份字符串** 由一个有效的[年份数字](#年份数字)（至少四位数的字符串）组成，后面是一个连字符（“`-`”，或 U+002D），再后面是一个两位数的[月份数字](#一年中的第几月)，其中 `01` 代表一月，`12` 代表十二月。
 
-| 月份字符串  | 年份和月       |
-| ---------- | ------------ |
+| 月份字符串 | 年份和月      |
+| ---------- | ------------- |
 | `17310-09` | 17310 年 9 月 |
 | `2019-01`  | 2019 年 1 月  |
 | `1993-11`  | 1993 年 11 月 |
@@ -257,8 +257,8 @@ HTML 中的日期和时间总会使用 [ASCII](https://zh.wikipedia.org/zh-cn/IS
 
 一个有效的日期字符串包含[月份字符串](#月份字符串)，后面是一个连字符（“`-`”，或 U+002D），再后面是一个两位数的[天数数字](#一月中的第几天)。
 
-| 日期字符串     | 日期表示            |
-| ------------ | ------------------ |
+| 日期字符串   | 日期表示            |
+| ------------ | ------------------- |
 | `1993-11-01` | 1993 年 11 月 1 日  |
 | `1066-10-14` | 1066 年 10 月 14 日 |
 | `0571-04-22` | 571 年 4 月 22 日   |
@@ -277,17 +277,17 @@ HTML 中的日期和时间总会使用 [ASCII](https://zh.wikipedia.org/zh-cn/IS
 - 如果指定的秒数为整数，则不可在其后方跟随小数点。
 - 如果秒数包含了小数，它可以是代表毫秒数的 1 至 3 位数，且跟随在时间字符串的秒成分之后的小数点后面。
 
-| 时间字符串     | 时间                              |
-| ------------- | -------------------------------- |
+| 时间字符串    | 时间                                |
+| ------------- | ----------------------------------- |
 | `00:00:30.75` | 上午 12:00:30.75（午夜后 30.75 秒） |
-| `12:15`       | 下午 12:15                        |
+| `12:15`       | 下午 12:15                          |
 | `13:44:25`    | 下午 1:44:25（下午 1:44 后 25 秒）  |
 
 ## 本地日期时间字符串
 
-一个有效的 [`datetime-local`](/zh-CN/docs/Web/HTML/Element/Input/datetime-local) 字符串由一个 `date` 字符串和一个 `time` 字符串连接起来，中间用字母“`T`”或空格分开。字符串中不包含时区的信息；日期和时间被认为是用户的本地时区。
+一个有效的 [`datetime-local`](/zh-CN/docs/Web/HTML/Element/input/datetime-local) 字符串由一个 `date` 字符串和一个 `time` 字符串连接起来，中间用字母“`T`”或空格分开。字符串中不包含时区的信息；日期和时间被认为是用户的本地时区。
 
-当你设置 `datetime-local` 输入的 {{htmlattrxref("value", "input")}} 时，该字符串被**规范化**为标准形式。标准化的 `datetime` 字符串总是使用字母“`T`”来分隔日期和时间，并且字符串的时间部分尽可能地短。如果秒的值是 `:00`，则不使用秒的成分。
+当你设置 `datetime-local` 输入的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 时，该字符串被**规范化**为标准形式。标准化的 `datetime` 字符串总是使用字母“`T`”来分隔日期和时间，并且字符串的时间部分尽可能地短。如果秒的值是 `:00`，则不使用秒的成分。
 
 <table class="standard-table">
   <caption>
@@ -390,6 +390,6 @@ HTML 中的日期和时间总会使用 [ASCII](https://zh.wikipedia.org/zh-cn/IS
 - {{HTMLElement("input")}}
 - {{HTMLElement("ins")}} 和 {{HTMLElement("del")}}：请查阅 `datetime` 属性，它指定了插入或删除内容的日期或本地日期和时间
 - [ISO 8601 定义](https://www.iso.org/iso-8601-date-and-time-format.html)
-- [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[数字和日期](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates)
+- [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[数字和字符串](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_strings)
 - JavaScript {{jsxref("Date")}} 对象
 - 以给定区域选项格式化日期和时间的 [`Intl.DateTimeFormat`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) 对象

@@ -1,21 +1,57 @@
 ---
-title: '<article> : l''élément de contenu d''un article'
+title: "<article> : l'élément de contenu d'un article"
 slug: Web/HTML/Element/article
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/article
-browser-compat: html.elements.article
 ---
 
 {{HTMLSidebar}}
 
 L'élément **`<article>`** représente une composition autonome dans un document, une page, une application ou un site, destinée à être distribuée ou réutilisée de manière indépendante (par exemple, dans le cadre d'une syndication). Exemples : un message de forum, un article de magazine ou de journal, ou un article de blog, une fiche produit, un commentaire soumis par un utilisateur, un widget ou gadget interactif, ou tout autre élément de contenu indépendant.
 
-{{EmbedInteractiveExample("pages/tabbed/article.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;article&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<article class="forecast">
+  <h1>Weather forecast for Seattle</h1>
+  <article class="day-forecast">
+    <h2>03 March 2018</h2>
+    <p>Rain.</p>
+  </article>
+  <article class="day-forecast">
+    <h2>04 March 2018</h2>
+    <p>Periods of rain.</p>
+  </article>
+  <article class="day-forecast">
+    <h2>05 March 2018</h2>
+    <p>Heavy rain.</p>
+  </article>
+</article>
+```
+
+```css interactive-example
+.forecast {
+  margin: 0;
+  padding: 0.3rem;
+  background-color: #eee;
+}
+
+.forecast > h1,
+.day-forecast {
+  margin: 0.5rem;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.day-forecast {
+  background: right/contain content-box border-box no-repeat
+    url("/shared-assets/images/examples/rain.svg") white;
+}
+
+.day-forecast > h2,
+.day-forecast > p {
+  margin: 0.2rem;
+  font-size: 1rem;
+}
+```
 
 Un document donné peut contenir plusieurs articles ; par exemple, sur un blog qui affiche le texte de chaque article l'un après l'autre au fur et à mesure que le lecteur fait défiler, chaque message sera contenu dans un élément `<article>`, avec éventuellement une ou plusieurs `<section>` à l'intérieur.
 
@@ -110,7 +146,7 @@ Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs
 - Des informations à propos de l'auteur d'un élément `<article>` peuvent être fournies au travers de l'élément [`<address>`](/fr/docs/Web/HTML/Element/address), mais cela ne s'applique pas aux éléments `<article>` imbriqués.
 - La date et l'heure de publication d'un élément `<article>` peuvent être donnés en utilisant l'attribut [`datetime`](/fr/docs/Web/HTML/Element/time#attr-datetime) d'un élément [`<time>`](/fr/docs/Web/HTML/Element/time). _Notez que l'attribut [`pubdate`](/fr/docs/Web/HTML/Element/time#attr-pubdate) de [`<time>`](/fr/docs/Web/HTML/Element/time) ne fait plus partie de la norme W3C HTML 5._
 
-## Exemple
+## Exemples
 
 ```html
 <article class="film_review">
@@ -152,6 +188,10 @@ Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs
 </article>
 ```
 
+### Résultat
+
+{{EmbedLiveSample('','','380')}}
+
 ## Spécifications
 
 {{Specifications}}
@@ -163,4 +203,4 @@ Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs
 ## Voir aussi
 
 - Les autres éléments liés aux sections d'un document : [`<body>`](/fr/docs/Web/HTML/Element/body), [`<nav>`](/fr/docs/Web/HTML/Element/nav), [`<section>`](/fr/docs/Web/HTML/Element/section), [`<aside>`](/fr/docs/Web/HTML/Element/aside), [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<hgroup>`](/fr/docs/Web/HTML/Element/hgroup), [`<header>`](/fr/docs/Web/HTML/Element/header), [`<footer>`](/fr/docs/Web/HTML/Element/footer), [`<address>`](/fr/docs/Web/HTML/Element/address)
-- [Sections et structure d'un document HTML5](/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)
+- [Sections et structure d'un document HTML5](/fr/docs/Web/HTML/Element/Heading_Elements)

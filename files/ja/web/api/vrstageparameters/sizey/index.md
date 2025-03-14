@@ -1,41 +1,37 @@
 ---
 title: VRStageParameters.sizeY
 slug: Web/API/VRStageParameters/sizeY
+l10n:
+  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-{{domxref("VRStageParameters")}} インターフェイスの **`sizeY`** 読取専用プロパティはプレイエリア境界の奥行きをメートル単位で返します．
+**`sizeY`** は {{domxref("VRStageParameters")}} インターフェイスの読み取り専用プロパティで、プレイエリア境界の奥行きをメートル単位で返します。
 
-境界は，安全性を目的として，床の平面上に軸に沿った矩形として定義されています．コンテンツは，この境界を超えてユーザが動いてしまうような動作をすべてきではありません; しかし，ユーザは境界を無視して動くこと自体は可能で，ユーザ位置がこの矩形境界の外側になることもあります．矩形の中心は，立位空間座標における (0,0,0) です．
+> [!NOTE]
+> このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
-## シンタックス
+境界は、安全性を目的として、床の平面上に軸に沿った矩形として定義されています。コンテンツは、この境界を超えてユーザが動いてしまうような動作をすべてきではありません; しかし、ユーザは境界を無視して動くこと自体は可能で、ユーザ位置がこの矩形境界の外側になることもあります。矩形の中心は、立位空間座標における (0,0,0) です。
 
-```js
-var mySizeY = vrStageParametersInstance.sizeY;
-```
+## 値
 
-### 値
-
-float で表現された奥行き（メートル単位）．
+float で表現された奥行き（メートル単位）。
 
 ## 例
 
-```
-TBD.
-```
+コード例については [`VRStageParameters`](/ja/docs/Web/API/VRStageParameters#例) を参照してください。
 
-## 仕様
+## 仕様書
 
-| Specification                                                                        | Status                   | Comment            |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('WebVR', '#dom-vrstageparameters-sizey', 'sizeY')}} | {{Spec2('WebVR')}} | Initial definition |
+このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部であり、これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) で置き枯れられました。標準規格になる見込みはありません。
 
-## ブラウザの互換性
+すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、 [A-Frame](https://aframe.io/)、[Babylon.js](https://www.babylonjs.com/)、[Three.js](https://threejs.org/) などのフレームワークを使用するか、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を使用することが、すべてのブラウザーで動作する WebXR アプリを開発する上で推奨されます。[\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)
 
-{{Compat("api.VRStageParameters.sizeY")}}
+## ブラウザーの互換性
 
-## 参照
+{{Compat}}
 
-- [WebVR API homepage](/ja/docs/Web/API/WebVR_API).
-- [MozVr.com](http://mozvr.com/) — Mozilla VR チームのデモ，ダウンロード，その他のリソース．
+## 関連情報
+
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

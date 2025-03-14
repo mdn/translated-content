@@ -1,8 +1,6 @@
 ---
 title: gap (grid-gap)
 slug: Web/CSS/gap
-translation_of: Web/CSS/gap
-browser-compat: css.properties.gap
 ---
 
 {{CSSRef}}
@@ -100,13 +98,12 @@ Cette propriété est définie avec une valeur `<'row-gap'>`, éventuellement su
   flex: 1 1 auto;
   width: 100px;
   height: 50px;
-
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("", "auto", "230px")}}
+{{EmbedLiveSample("Disposition flexible", "auto", "230px")}}
 
 ### Disposition en grille
 
@@ -150,7 +147,7 @@ Cette propriété est définie avec une valeur `<'row-gap'>`, éventuellement su
 
 #### Résultat
 
-{{EmbedLiveSample("", "auto", "230px")}}
+{{EmbedLiveSample("Disposition en grille", "auto", "230px")}}
 
 ### Disposition multi-colonnes
 
@@ -158,9 +155,9 @@ Cette propriété est définie avec une valeur `<'row-gap'>`, éventuellement su
 
 ```html
 <p class="content-box">
-  Voici un texte en multi-colonne sur des colonnes avec
-  une gouttière de 40px créée grâce à la propriété
-  CSS <code>gap</code>. Est-ce que c'est pas trop génial ?
+  Voici un texte en multi-colonne sur des colonnes avec une gouttière de 40px
+  créée grâce à la propriété CSS <code>gap</code>. Est-ce que c'est pas trop
+  génial ?
 </p>
 ```
 
@@ -175,7 +172,7 @@ Cette propriété est définie avec une valeur `<'row-gap'>`, éventuellement su
 
 #### Résultat
 
-{{EmbedLiveSample("", "auto", "120px")}}
+{{EmbedLiveSample("Disposition multi-colonnes", "auto", "120px")}}
 
 ## Spécifications
 
@@ -188,4 +185,4 @@ Cette propriété est définie avec une valeur `<'row-gap'>`, éventuellement su
 ## Voir aussi
 
 - Les autres propriétés relatives aux gouttières&nbsp;: [`row-gap`](/fr/docs/Web/CSS/row-gap), [`column-gap`](/fr/docs/Web/CSS/column-gap)
-- Guide sur les grilles&nbsp;: _[Les concepts de base des grilles CSS&nbsp;: les gouttières](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#les_gouttières)_
+- Guide sur les grilles&nbsp;: _[Les concepts de base des grilles CSS&nbsp;: les gouttières](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#les_goutti%c3%a8res)_

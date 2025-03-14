@@ -1,14 +1,15 @@
 ---
-title: HTMLAreaElement.hash
+title: "HTMLAreaElement: hash プロパティ"
 slug: Web/API/HTMLAreaElement/hash
-original_slug: Web/API/HTMLHyperlinkElementUtils/hash
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{ APIRef("HTML DOM") }}
 
 **`HTMLAreaElement.hash`** プロパティは、`'#'` の後に URL のフラグメント識別子が続く文字列を返します。
 
-フラグメントは[パーセントデコード](/ja/docs/Glossary/percent-encoding)されません。 URL にフラグメント識別子がない場合、このプロパティには空の文字列 `""` が含まれます。
+フラグメントは [URL デコード](https://ja.wikipedia.org/wiki/パーセントエンコーディング)されません。 URL にフラグメント識別子がない場合、このプロパティには空の文字列 `""` が含まれます。
 
 ## 値
 
@@ -22,11 +23,18 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/hash
 
 ```html
 <map name="infographic">
-  <area id="mdn-circle" shape="circle" coords="130,136,60"
-  href="https://developer.mozilla.org/#ExampleSection" alt="MDN" />
+  <area
+    id="mdn-circle"
+    shape="circle"
+    coords="130,136,60"
+    href="https://developer.mozilla.org/#ExampleSection"
+    alt="MDN" />
 </map>
 
-<img usemap="#infographic" src="/media/examples/mdn-info.png" alt="MDN infographic" />
+<img
+  usemap="#infographic"
+  src="/media/examples/mdn-info.png"
+  alt="MDN infographic" />
 ```
 
 このようにすると、アンカーのハッシュを取得することができます。

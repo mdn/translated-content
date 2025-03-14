@@ -1,14 +1,52 @@
 ---
 title: inline-size
 slug: Web/CSS/inline-size
-translation_of: Web/CSS/inline-size
 ---
 
 {{CSSRef}}
 
 Свойство [CSS](/ru/docs/Web/CSS) **`inline-size`** определяет горизонтальные или вертикальные размеры блока в зависимости от режима написания (writing mode). Оно соответствует свойствам {{cssxref("width")}} и {{cssxref("height")}} и зависит от свойства {{cssxref("writing-mode")}}.
 
-{{EmbedInteractiveExample("pages/css/inline-size.html")}}
+{{InteractiveExample("CSS Demo: inline-size")}}
+
+```css interactive-example-choice
+inline-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+inline-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+inline-size: auto;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+inline-size: auto;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the inline-size.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## Syntax
 
@@ -70,17 +108,15 @@ inline-size: unset;
 
 {{EmbedLiveSample("Setting_inline_size_in_pixels")}}
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                            | Status                                           | Comment            |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------ |
-| {{SpecName("CSS Logical Properties", "#propdef-inline-size", "inline-size")}} | {{Spec2("CSS Logical Properties")}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - The mapped physical properties: {{cssxref("width")}} and {{cssxref("height")}}
 - {{cssxref("writing-mode")}}

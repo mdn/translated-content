@@ -28,7 +28,7 @@ A {{jsxref("Promise")}} for `void`.
 The following example uses `claim()` inside service worker's "`activate`" event listener so that clients loaded in the same scope do not need to be reloaded before their fetches will go through this service worker.
 
 ```js
-self.addEventListener('activate', event => {
+self.addEventListener("activate", (event) => {
   event.waitUntil(clients.claim());
 });
 ```
@@ -41,10 +41,8 @@ self.addEventListener('activate', event => {
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
-- [The service worker lifecycle](https://developers.google.com/web/fundamentals/instant-and-offline/service-worker/lifecycle)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise", "Promises")}}
-- {{domxref("ServiceWorkerGlobalScope.skipWaiting()", "self.skipWaiting()")}} - skip the service worker's waiting phase
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [service worker 的生命周期](https://web.developers.google.cn/articles/service-worker-lifecycle)
+- {{domxref("ServiceWorkerGlobalScope.skipWaiting()", "self.skipWaiting()")}}——跳过 service worker 的等待阶段

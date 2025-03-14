@@ -1,67 +1,75 @@
 ---
-title: Node.insertBefore()
+title: Node：insertBefore() 方法
 slug: Web/API/Node/insertBefore
+l10n:
+  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
 {{APIRef("DOM")}}
 
-**`Node.insertBefore()`** 方法在参考节点之前插入一个拥有指定父节点的子节点。如果给定的子节点是对文档中现有节点的引用，`insertBefore()` 会将其从当前位置移动到新位置（在将节点附加到其他节点之前，不需要从其父节点删除该节点）。
+{{domxref("Node")}} 接口的 **`insertBefore()`** 方法是将一个节点插入到指定*父节点*的子节点中，并位于*参考节点*之前。
 
-这意味着一个节点不能同时位于文档的两个点中。因此，如果被插入节点已经有父节点，则首先删除该节点，然后将其插入到新位置。若要保留已在文档中的被插入节点，在将该节点追加到新父节点之前，可以使用 {{domxref("Node.cloneNode()")}} 复制节点。注意，使用 `cloneNode()` 创建的节点副本不会自动与原始节点保持同步。
+如果给定的节点已经存在于文档中，`insertBefore()` 会将其从当前位置移动到新位置。（也就是说，它会在附加到指定的新父节点之前自动从现有的父节点中移除。）
 
-如果引用节点为 `null`，则将指定的节点添加到指定父节点的子节点列表的末尾。
+这意味着一个节点不能同时存在于文档的两个位置。
 
-如果给定的子节点是 {{domxref("DocumentFragment")}}，那么 `DocumentFragment` 的全部内容将被移动到指定父节点的子节点列表中。
+> [!NOTE]
+> 可以使用 {{domxref("Node.cloneNode()")}} 在将节点追加到新的父节点之前先对其进行复制。请注意，使用 `cloneNode()` 进行复制的节点不会自动保持同步。
+
+如果给定的子节点是 {{domxref("DocumentFragment")}}，则该 `DocumentFragment` 的全部内容将被移动到指定父节点的子节点列表中。
 
 ## 语法
 
-```js
-var insertedNode = parentNode.insertBefore(newNode, referenceNode);
+```js-nolint
+insertBefore(newNode, referenceNode)
 ```
 
-- `insertedNode` 被插入节点 (newNode)
-- `parentNode` 新插入节点的父节点
-- `newNode` 用于插入的节点
-- `referenceNode` `newNode` 将要插在这个节点之前
+### 参数
 
-如果 `referenceNode` 为 `null` 则 `newNode` 将被插入到子节点的末尾*。*
+- `newNode`
+  - : 要插入的节点。
+- `referenceNode`
+  - : 在其之前插入 `newNode` 的节点。如果为 `null`，`newNode` 将被插入到节点的子节点列表末尾。
+    > **备注：** `referenceNode` **不是**可选参数。你必须显式传递 {{domxref("Node")}} 或 `null`。未能提供它或传递无效值，可能会在不同的浏览器版本中具有[不同](https://bugzil.la/119489)的[表现](https://crbug.com/419780)。
 
-> **备注：** `referenceNode` 引用节点**不是**可选参数——你必须显式传入一个 `Node` 或者 `null`。如果不提供节点或者传入无效值，在不同的浏览器中会有[不同](https://bugzilla.mozilla.org/show_bug.cgi?id=119489)的[表现](https://code.google.com/p/chromium/issues/detail?id=419780)。
+### 返回值
 
-## 返回值
+返回添加的子节点（除非 `newNode` 是 {{domxref("DocumentFragment")}}——将返回空的 {{domxref("DocumentFragment")}}）。
 
-函数返回被插入过的子节点；当 `newNode` 是 {{domxref("DocumentFragment")}} 时，返回空 {{domxref("DocumentFragment")}}。
+### 异常
 
-## 例子
+预插入有效性
+
+## 示例
 
 ### 示例 1
 
-```js
+```html
 <div id="parentElement">
-   <span id="childElement">foo bar</span>
+  <span id="childElement">foo bar</span>
 </div>
 
 <script>
-// 创建要插入的节点
-var newNode = document.createElement("span");
+  // 创建要插入的新节点
+  const newNode = document.createElement("span");
 
-// 获得父节点的引用
-var parentDiv = document.getElementById("childElement").parentNode;
+  // 获取父节点的引用
+  const parentDiv = document.getElementById("childElement").parentNode;
 
-//实验一：referenceNode 存在 --> 正确返回
-var sp2 = document.getElementById("childElement");
-parentDiv.insertBefore(newNode, sp2);
-//实验一结束
+  // 开始测试用例 [ 1 ]：存在 childElement（全部正常运行）
+  let sp2 = document.getElementById("childElement");
+  parentDiv.insertBefore(newNode, sp2);
+  // 结束测试用例 [ 1 ]
 
-//实验二：referenceNode 为 undefined
-var sp2 = undefined; // Not exist a node of id "childElement"
-parentDiv.insertBefore(newNode, sp2); //隐式转换到节点类型
-//实验二结束
+  // 开始测试案例 [ 2 ]：childElement 类型未定义
+  sp2 = undefined; // id 为“childElement”的节点不存在
+  parentDiv.insertBefore(newNode, sp2); // 隐式动态转换为节点类型
+  // 结束测试用例 [ 2 ]
 
-//实验三：referenceNode 为字符类型的 "undefined"
-var sp2 = "undefined"; //不存在 id 为"childElement"的 referenceNode
-parentDiv.insertBefore(newNode, sp2); // Generate "Type Error: Invalid Argument"
-//实验三结束
+  // 开始测试案例 [ 3 ]：childElement 的类型为“undefined”（字符串）
+  sp2 = "undefined"; // id 为“childElement”的节点不存在
+  parentDiv.insertBefore(newNode, sp2); // 生成“Type Error: Invalid Argument”
+  // 结束测试用例 [ 3 ]
 </script>
 ```
 
@@ -73,47 +81,48 @@ parentDiv.insertBefore(newNode, sp2); // Generate "Type Error: Invalid Argument"
 </div>
 
 <script>
-//创建一个新的、普通的<span>元素
-var sp1 = document.createElement("span");
+  // 创建新的普通 <span> 元素
+  let sp1 = document.createElement("span");
 
-//插入节点之前，要获得节点的引用
-var sp2 = document.getElementById("childElement");
-//获得父节点的引用
-var parentDiv = sp2.parentNode;
+  // 获取引用元素
+  let sp2 = document.getElementById("childElement");
+  // 获取父元素
+  let parentDiv = sp2.parentNode;
 
-//在 DOM 中在 sp2 之前插入一个新元素
-parentDiv.insertBefore(sp1, sp2);
+  // 在 sp2 之前插入新元素
+  parentDiv.insertBefore(sp1, sp2);
 </script>
 ```
 
-没有 `insertAfter()`。不过，可以使用 `insertBefore` 和 {{domxref("Node.nextSibling")}} 来模拟它。
-
-在前一个例子中，可使用下面代码将 `sp1` 插入到 `sp2` 之后：
-
-```js
-parentDiv.insertBefore(sp1, sp2.nextSibling);
-```
-
-如果 `sp2` 没有下一个节点，则它肯定是最后一个节点，则 `sp2.nextSibling` 返回 `null`，且 `sp1` 被插入到子节点列表的最后面（即 `sp2` 后面）。
+> [!NOTE]
+> 没有 `insertAfter()` 方法。可以通过将 `insertBefore` 方法与 {{domxref("Node.nextSibling")}} 结合使用来模拟实现。在前面的例子中，可以使用以下方法在 `sp2` 后面插入 `sp1`：
+>
+> ```js
+> parentDiv.insertBefore(sp1, sp2.nextSibling);
+> ```
+>
+> 如果 `sp2` 没有下一个兄弟节点，那么它必须是最后一个子节点——`sp2.nextSibling` 返回 `null`，此时 `sp1` 将被插入到子节点列表的末尾（紧接在 `sp2` 之后）。
 
 ### 示例 3
 
-在第一个子元素的前面插入一个元素，可使用 [firstChild](/zh-CN/docs/DOM/Node.firstChild) 属性。
+使用 {{domxref("Node/firstChild", "firstChild")}} 属性，在第一个子元素之前插入一个元素。
 
 ```js
-//插入节点之前，要获得节点的引用
-var parentElement = document.getElementById('parentElement');
-//获得第一个子节点的引用
-var theFirstChild = parentElement.firstChild;
+// 获取父元素
+let parentElement = document.getElementById("parentElement");
+// 获取父元素的第一个子元素
+let theFirstChild = parentElement.firstChild;
 
-//创建新元素
-var newElement = document.createElement("div");
+// 创建新元素
+let newElement = document.createElement("div");
 
-//在第一个子节点之前插入新元素
+// 在第一个子元素之前插入新元素
 parentElement.insertBefore(newElement, theFirstChild);
 ```
 
-当元素没有首节点时，`firstChild` 返回 `null`。该元素仍然会被插入到父元素中，位于最后一个节点后面。又由于父元素没有第一个子节点，也没有最后一个子节点。最终，新元素成为唯一的子元素。
+如果元素没有第一个子元素，则 `firstChild` 为 `null`。该元素仍然会被追加到父元素的最后一个子元素之后。
+
+由于父元素没有第一个子元素，所以也没有最后一个子元素。因此，新插入的元素是*唯一*的元素。
 
 ## 规范
 
@@ -130,4 +139,6 @@ parentElement.insertBefore(newElement, theFirstChild);
 - {{domxref("Node.appendChild()")}}
 - {{domxref("Node.hasChildNodes()")}}
 - {{domxref("Element.insertAdjacentElement()")}}
-- {{domxref("ParentNode.prepend()")}}
+- {{domxref("Element.prepend()")}}
+- {{domxref("Element.before()")}}
+- {{domxref("Element.after()")}}

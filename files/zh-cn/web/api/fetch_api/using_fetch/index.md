@@ -7,19 +7,19 @@ slug: Web/API/Fetch_API/Using_Fetch
 
 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 提供了一个 JavaScript 接口，用于访问和操纵 HTTP 管道的一些具体部分，例如请求和响应。它还提供了一个全局 {{domxref("fetch()")}} 方法，该方法提供了一种简单，合理的方式来跨网络异步获取资源。
 
-这种功能以前是使用 {{domxref("XMLHttpRequest")}} 实现的。Fetch 提供了一个更理想的替代方案，可以很容易地被其他技术使用，例如 {{domxref("Service_Worker_API", "Service Workers")}}。Fetch 还提供了专门的逻辑空间来定义其他与 HTTP 相关的概念，例如 [CORS](/zh-CN/docs/Web/HTTP/CORS) 和 HTTP 的扩展。
+这种功能以前是使用 {{domxref("XMLHttpRequest")}} 实现的。Fetch 提供了一个更理想的替代方案，可以很容易地被其他技术使用，例如 {{domxref("Service_Worker_API", "Service Workers")}}。Fetch 还提供了专门的逻辑空间来定义其他与 HTTP 相关的概念，例如 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) 和 HTTP 的扩展。
 
 请注意，`fetch` 规范与 `jQuery.ajax()` 主要有以下的不同：
 
 - 当接收到一个代表错误的 HTTP 状态码时，从 `fetch()` 返回的 Promise **不会被标记为 reject**，即使响应的 HTTP 状态码是 404 或 500。相反，它会将 Promise 状态标记为 resolve（如果响应的 HTTP 状态码不在 200 - 299 的范围内，则设置 resolve 返回值的 {{domxref("Response/ok", "ok")}} 属性为 false），仅当网络故障时或请求被阻止时，才会标记为 reject。
-- `fetch` **不会发送跨域 cookie**，除非你使用了 _credentials_ 的[初始化选项](/zh-CN/docs/Web/API/fetch#参数)。（自 [2018 年 8 月](https://github.com/whatwg/fetch/pull/585)以后，默认的 credentials 政策变更为 `same-origin`。Firefox 也在 61.0b13 版本中进行了修改）
+- `fetch` **不会发送跨域 cookie**，除非你使用了 _credentials_ 的[初始化选项](/zh-CN/docs/Web/API/Window/fetch#参数)。（自 [2018 年 8 月](https://github.com/whatwg/fetch/pull/585)以后，默认的 credentials 政策变更为 `same-origin`。Firefox 也在 61.0b13 版本中进行了修改）
 
 一个基本的 fetch 请求设置起来很简单。看看下面的代码：
 
 ```js
-fetch('http://example.com/movies.json')
-  .then(response => response.json())
-  .then(data => console.log(data));
+fetch("http://example.com/movies.json")
+  .then((response) => response.json())
+  .then((data) => console.log(data));
 ```
 
 这里我们通过网络获取一个 JSON 文件并将其打印到控制台。最简单的用法是只提供一个参数用来指明想 `fetch()` 到的资源路径，然后返回一个包含响应结果的 promise（一个 {{domxref("Response")}} 对象）。
@@ -28,38 +28,37 @@ fetch('http://example.com/movies.json')
 
 > **备注：** [Body](#body) 还有其他相似的方法，用于获取其他类型的内容。
 
-最好使用符合[内容安全策略 (CSP)](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy)的链接而不是使用直接指向资源地址的方式来进行 fetch 的请求。
+最好使用符合[内容安全策略 (CSP)](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)的链接而不是使用直接指向资源地址的方式来进行 fetch 的请求。
 
 ### 支持的请求参数
 
- `fetch()` 接受第二个可选参数，一个可以控制不同配置的 `init` 对象：
+`fetch()` 接受第二个可选参数，一个可以控制不同配置的 `init` 对象：
 
 参考 {{domxref("fetch()")}}，查看所有可选的配置和更多描述。
 
 ```js
 // Example POST method implementation:
-async function postData(url = '', data = {}) {
+async function postData(url = "", data = {}) {
   // Default options are marked with *
   const response = await fetch(url, {
-    method: 'POST', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'same-origin', // include, *same-origin, omit
+    method: "POST", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors", // no-cors, *cors, same-origin
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "same-origin", // include, *same-origin, omit
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
       // 'Content-Type': 'application/x-www-form-urlencoded',
     },
-    redirect: 'follow', // manual, *follow, error
-    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-    body: JSON.stringify(data) // body data type must match "Content-Type" header
+    redirect: "follow", // manual, *follow, error
+    referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: JSON.stringify(data), // body data type must match "Content-Type" header
   });
   return response.json(); // parses JSON response into native JavaScript objects
 }
 
-postData('https://example.com/answer', { answer: 42 })
-  .then(data => {
-    console.log(data); // JSON data parsed by `data.json()` call
-  });
+postData("https://example.com/answer", { answer: 42 }).then((data) => {
+  console.log(data); // JSON data parsed by `data.json()` call
+});
 ```
 
 注意：`mode: "no-cors"` 仅允许使用一组有限的 HTTP 请求头：
@@ -74,31 +73,33 @@ postData('https://example.com/answer', { answer: 42 })
 为了让浏览器发送包含凭据的请求（即使是跨域源），要将 `credentials: 'include'` 添加到传递给 `fetch()` 方法的 `init` 对象。
 
 ```js
-fetch('https://example.com', {
-  credentials: 'include'
+fetch("https://example.com", {
+  credentials: "include",
 });
 ```
 
-> **备注：** 当请求使用 `credentials: 'include'` 时，响应的 `Access-Control-Allow-Origin` 不能使用通配符 "`*`"。在这种情况下，`Access-Control-Allow-Origin` 必须是当前请求的源，在使用 CORS Unblock 插件的情况下请求仍会失败。
+> [!NOTE]
+> 当请求使用 `credentials: 'include'` 时，响应的 `Access-Control-Allow-Origin` 不能使用通配符 "`*`"。在这种情况下，`Access-Control-Allow-Origin` 必须是当前请求的源，在使用 CORS Unblock 插件的情况下请求仍会失败。
 
-> **备注：** 无论怎么设置，浏览器都不应在 _预检请求_ 中发送凭据。了解更多：[跨域资源共享 > 附带身份凭证的请求](/zh-CN/docs/Web/HTTP/CORS#附带身份凭证的请求)
+> [!NOTE]
+> 无论怎么设置，浏览器都不应在 _预检请求_ 中发送凭据。了解更多：[跨域资源共享 > 附带身份凭证的请求](/zh-CN/docs/Web/HTTP/Guides/CORS#附带身份凭证的请求)
 
 如果你只想在请求 URL 与调用脚本位于同一起源处时发送凭据，请添加 `credentials: 'same-origin'`。
 
 ```js
 // The calling script is on the origin 'https://example.com'
 
-fetch('https://example.com', {
-  credentials: 'same-origin'
+fetch("https://example.com", {
+  credentials: "same-origin",
 });
 ```
 
 要改为确保浏览器不在请求中包含凭据，请使用 `credentials: 'omit'`。
 
 ```js
-fetch('https://example.com', {
-  credentials: 'omit'
-})
+fetch("https://example.com", {
+  credentials: "omit",
+});
 ```
 
 ### 上传 JSON 数据
@@ -106,22 +107,22 @@ fetch('https://example.com', {
 使用 {{domxref("fetch()")}} POST JSON 数据
 
 ```js
-const data = { username: 'example' };
+const data = { username: "example" };
 
-fetch('https://example.com/profile', {
-  method: 'POST', // or 'PUT'
+fetch("https://example.com/profile", {
+  method: "POST", // or 'PUT'
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
   body: JSON.stringify(data),
 })
-.then(response => response.json())
-.then(data => {
-  console.log('Success:', data);
-})
-.catch((error) => {
-  console.error('Error:', error);
-});
+  .then((response) => response.json())
+  .then((data) => {
+    console.log("Success:", data);
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
 ```
 
 ### 上传文件
@@ -132,20 +133,20 @@ fetch('https://example.com/profile', {
 const formData = new FormData();
 const fileField = document.querySelector('input[type="file"]');
 
-formData.append('username', 'abc123');
-formData.append('avatar', fileField.files[0]);
+formData.append("username", "abc123");
+formData.append("avatar", fileField.files[0]);
 
-fetch('https://example.com/profile/avatar', {
-  method: 'PUT',
-  body: formData
+fetch("https://example.com/profile/avatar", {
+  method: "PUT",
+  body: formData,
 })
-.then(response => response.json())
-.then(result => {
-  console.log('Success:', result);
-})
-.catch(error => {
-  console.error('Error:', error);
-});
+  .then((response) => response.json())
+  .then((result) => {
+    console.log("Success:", result);
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
 ```
 
 ### 上传多个文件
@@ -156,22 +157,22 @@ fetch('https://example.com/profile/avatar', {
 const formData = new FormData();
 const photos = document.querySelector('input[type="file"][multiple]');
 
-formData.append('title', 'My Vegas Vacation');
+formData.append("title", "My Vegas Vacation");
 for (let i = 0; i < photos.files.length; i++) {
   formData.append(`photos_${i}`, photos.files[i]);
 }
 
-fetch('https://example.com/posts', {
-  method: 'POST',
+fetch("https://example.com/posts", {
+  method: "POST",
   body: formData,
 })
-.then(response => response.json())
-.then(result => {
-  console.log('Success:', result);
-})
-.catch(error => {
-  console.error('Error:', error);
-});
+  .then((response) => response.json())
+  .then((result) => {
+    console.log("Success:", result);
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
 ```
 
 ### 逐行处理文本文件
@@ -180,11 +181,11 @@ fetch('https://example.com/posts', {
 
 ```js
 async function* makeTextFileLineIterator(fileURL) {
-  const utf8Decoder = new TextDecoder('utf-8');
+  const utf8Decoder = new TextDecoder("utf-8");
   const response = await fetch(fileURL);
   const reader = response.body.getReader();
   let { value: chunk, done: readerDone } = await reader.read();
-  chunk = chunk ? utf8Decoder.decode(chunk) : '';
+  chunk = chunk ? utf8Decoder.decode(chunk) : "";
 
   const re = /\n|\r|\r\n/gm;
   let startIndex = 0;
@@ -198,7 +199,7 @@ async function* makeTextFileLineIterator(fileURL) {
       }
       let remainder = chunk.substr(startIndex);
       ({ value: chunk, done: readerDone } = await reader.read());
-      chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : '');
+      chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : "");
       startIndex = re.lastIndex = 0;
       continue;
     }
@@ -225,18 +226,18 @@ run();
 如果遇到网络故障或服务端的 CORS 配置错误时，{{domxref("fetch()")}} promise 将会 reject，带上一个 {{jsxref("TypeError")}} 对象。虽然这个情况经常是遇到了权限问题或类似问题——比如 404 不是一个网络故障。想要精确的判断 `fetch()` 是否成功，需要包含 promise resolved 的情况，此时再判断 {{domxref("Response.ok")}} 是否为 true。类似以下代码：
 
 ```js
-fetch('flowers.jpg')
-  .then(response => {
+fetch("flowers.jpg")
+  .then((response) => {
     if (!response.ok) {
-      throw new Error('Network response was not OK');
+      throw new Error("Network response was not OK");
     }
     return response.blob();
   })
-  .then(myBlob => {
+  .then((myBlob) => {
     myImage.src = URL.createObjectURL(myBlob);
   })
-  .catch(error => {
-    console.error('There has been a problem with your fetch operation:', error);
+  .catch((error) => {
+    console.error("There has been a problem with your fetch operation:", error);
   });
 ```
 
@@ -247,16 +248,16 @@ fetch('flowers.jpg')
 ```js
 const myHeaders = new Headers();
 
-const myRequest = new Request('flowers.jpg', {
-  method: 'GET',
+const myRequest = new Request("flowers.jpg", {
+  method: "GET",
   headers: myHeaders,
-  mode: 'cors',
-  cache: 'default',
+  mode: "cors",
+  cache: "default",
 });
 
 fetch(myRequest)
-  .then(response => response.blob())
-  .then(myBlob => {
+  .then((response) => response.blob())
+  .then((myBlob) => {
     myImage.src = URL.createObjectURL(myBlob);
   });
 ```
@@ -276,48 +277,48 @@ const anotherRequest = new Request(myRequest, myInit);
 使用 {{domxref("Headers")}} 的接口，你可以通过 {{domxref("Headers.Headers","Headers()")}} 构造函数来创建一个你自己的 headers 对象。一个 headers 对象是一个简单的多键值对：
 
 ```js
-const content = 'Hello World';
+const content = "Hello World";
 const myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/plain');
-myHeaders.append('Content-Length', content.length.toString());
-myHeaders.append('X-Custom-Header', 'ProcessThisImmediately');
+myHeaders.append("Content-Type", "text/plain");
+myHeaders.append("Content-Length", content.length.toString());
+myHeaders.append("X-Custom-Header", "ProcessThisImmediately");
 ```
 
 也可以传入一个多维数组或者对象字面量：
 
 ```js
 const myHeaders = new Headers({
-  'Content-Type': 'text/plain',
-  'Content-Length': content.length.toString(),
-  'X-Custom-Header': 'ProcessThisImmediately'
+  "Content-Type": "text/plain",
+  "Content-Length": content.length.toString(),
+  "X-Custom-Header": "ProcessThisImmediately",
 });
 ```
 
 它的内容可以被获取：
 
 ```js
-console.log(myHeaders.has('Content-Type')); // true
-console.log(myHeaders.has('Set-Cookie')); // false
-myHeaders.set('Content-Type', 'text/html');
-myHeaders.append('X-Custom-Header', 'AnotherValue');
+console.log(myHeaders.has("Content-Type")); // true
+console.log(myHeaders.has("Set-Cookie")); // false
+myHeaders.set("Content-Type", "text/html");
+myHeaders.append("X-Custom-Header", "AnotherValue");
 
-console.log(myHeaders.get('Content-Length')); // 11
-console.log(myHeaders.get('X-Custom-Header')); // ['ProcessThisImmediately', 'AnotherValue']
+console.log(myHeaders.get("Content-Length")); // 11
+console.log(myHeaders.get("X-Custom-Header")); // ['ProcessThisImmediately', 'AnotherValue']
 
-myHeaders.delete('X-Custom-Header');
-console.log(myHeaders.get('X-Custom-Header')); // null
+myHeaders.delete("X-Custom-Header");
+console.log(myHeaders.get("X-Custom-Header")); // null
 ```
 
 虽然一些操作只能在 {{domxref("Service_Worker_API","ServiceWorkers")}} 中使用，但是它提供了更方便的操作 Headers 的 API。
 
-如果使用了一个不合法的 HTTP Header 属性名，那么 Headers 的方法通常都抛出 TypeError 异常。如果不小心写入了一个不可写的属性（[见下方](#Guard)），也会抛出一个 TypeError 异常。除此以外的情况，失败了并不抛出异常。例如：
+如果使用了一个不合法的 HTTP Header 属性名，那么 Headers 的方法通常都抛出 TypeError 异常。如果不小心写入了一个不可写的属性（[见下方](#guard)），也会抛出一个 TypeError 异常。除此以外的情况，失败了并不抛出异常。例如：
 
 ```js
 const myResponse = Response.error();
 try {
-  myResponse.headers.set('Origin', 'http://mybank.com');
+  myResponse.headers.set("Origin", "http://mybank.com");
 } catch (e) {
-  console.log('Cannot pretend to be a bank!');
+  console.log("Cannot pretend to be a bank!");
 }
 ```
 
@@ -325,17 +326,17 @@ try {
 
 ```js
 fetch(myRequest)
-  .then(response => {
-     const contentType = response.headers.get('content-type');
-     if (!contentType || !contentType.includes('application/json')) {
-       throw new TypeError("Oops, we haven't got JSON!");
-     }
-     return response.json();
+  .then((response) => {
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      throw new TypeError("Oops, we haven't got JSON!");
+    }
+    return response.json();
   })
-  .then(data => {
-      /* process your data further */
+  .then((data) => {
+    /* process your data further */
   })
-  .catch(error => console.error(error));
+  .catch((error) => console.error(error));
 ```
 
 ### Guard
@@ -350,7 +351,8 @@ fetch(myRequest)
 - `response`：从 response 中获得的 headers（{{domxref("Response.headers")}}）只读。
 - `immutable`：在 ServiceWorkers 中最常用的，所有的 headers 都只读。
 
-> **备注：** 你不可以添加或者修改一个 guard 属性是 `request` 的 Request Header 的 `Content-Length` 属性。同样地，插入 `Set-Cookie` 属性到一个 response header 是不允许的，因此，Service Worker 中，不能给合成的 Response 设置 cookie。
+> [!NOTE]
+> 你不可以添加或者修改一个 guard 属性是 `request` 的 Request Header 的 `Content-Length` 属性。同样地，插入 `Set-Cookie` 属性到一个 response header 是不允许的，因此，Service Worker 中，不能给合成的 Response 设置 cookie。
 
 ## Response 对象
 
@@ -367,19 +369,20 @@ fetch(myRequest)
 ```js
 const myBody = new Blob();
 
-addEventListener('fetch', event => {
+addEventListener("fetch", (event) => {
   // ServiceWorker intercepting a fetch
   event.respondWith(
     new Response(myBody, {
-      headers: { 'Content-Type': 'text/plain' }
-    })
+      headers: { "Content-Type": "text/plain" },
+    }),
   );
 });
 ```
 
-{{domxref("Response.Response","Response()")}} 构造方法接受两个可选参数—— response 的 body 和一个初始化对象（与{{domxref("Request.Request","Request()")}} 所接受的 init 参数类似）。
+{{domxref("Response.Response","Response()")}} 构造方法接受两个可选参数——response 的 body 和一个初始化对象（与{{domxref("Request.Request","Request()")}} 所接受的 init 参数类似）。
 
-> **备注：** 静态方法 {{domxref("Response.error","error()")}} 只是返回了错误的 response。与此类似地，{{domxref("Response.redirect","redirect()")}} 只是返回了一个可以重定向至某 URL 的 response。这些也只与 Service Worker 有关。
+> [!NOTE]
+> 静态方法 {{domxref("Response.error","error()")}} 只是返回了错误的 response。与此类似地，{{domxref("Response.redirect","redirect()")}} 只是返回了一个可以重定向至某 URL 的 response。这些也只与 Service Worker 有关。
 
 ## Body
 
@@ -405,10 +408,10 @@ Body 类定义了以下方法（这些方法都被 {{domxref("Request")}} 和 {{
 请求体可以由传入 body 参数来进行设置：
 
 ```js
-const form = new FormData(document.getElementById('login-form'));
-fetch('/login', {
-  method: 'POST',
-  body: form
+const form = new FormData(document.getElementById("login-form"));
+fetch("/login", {
+  method: "POST",
+  body: form,
 });
 ```
 
@@ -426,22 +429,10 @@ if (window.fetch) {
 }
 ```
 
-## Polyfill
-
-如果要在不支持的浏览器中使用 Fetch，可以使用 [Fetch Polyfill](https://github.com/github/fetch)。
-
-## 规范
-
-{{Specifications}}
-
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - {{domxref("Service_Worker_API", "ServiceWorker API")}}
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
-- [Fetch examples on Github](https://github.com/mdn/fetch-examples/)
+- [Fetch examples on GitHub](https://github.com/mdn/fetch-examples/)

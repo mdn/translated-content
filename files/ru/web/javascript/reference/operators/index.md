@@ -1,10 +1,6 @@
 ---
 title: Выражения и операторы
 slug: Web/JavaScript/Reference/Operators
-tags:
-  - JavaScript
-  - Operators
-translation_of: Web/JavaScript/Reference/Operators
 ---
 
 {{jsSidebar("Operators")}}
@@ -126,7 +122,8 @@ translation_of: Web/JavaScript/Reference/Operators
 - {{jsxref("Operators/Comparison_Operators", "&gt;=", "#Greater_than_or_equal_operator")}}
   - : Оператор больше или равно.
 
-> **Примечание:** **Заметьте: =>** это не оператор. Это нотация для [Стрелочных функций](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+> [!NOTE]
+> Это не оператор. Это нотация для [Стрелочных функций](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Операторы равенства
 
@@ -229,12 +226,7 @@ translation_of: Web/JavaScript/Reference/Operators
 
 ## Спецификации
 
-| Спецификация                                                                                                                         | Статус                       | Комментарии                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------------------------------------- |
-| {{SpecName('ES1', '#sec-11', 'Expressions')}}                                                                         | {{Spec2('ES1')}}         | Изначальное определение.                                                                 |
-| {{SpecName('ES5.1', '#sec-11', 'Expressions')}}                                                                     | {{Spec2('ES5.1')}}     |                                                                                          |
-| {{SpecName('ES6', '#sec-ecmascript-language-expressions', 'ECMAScript Language: Expressions')}}     | {{Spec2('ES6')}}         | Новое: Оператор распространения, деструктурирующее присваивание, ключевое слово `super`. |
-| {{SpecName('ESDraft', '#sec-ecmascript-language-expressions', 'ECMAScript Language: Expressions')}} | {{Spec2('ESDraft')}} |                                                                                          |
+{{Specifications}}
 
 ## Смотрите также
 

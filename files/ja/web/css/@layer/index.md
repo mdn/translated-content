@@ -1,47 +1,84 @@
 ---
-title: '@layer'
+title: "@layer"
 slug: Web/CSS/@layer
+l10n:
+  sourceCommit: 3c33463072905e81ac620dd9780313369029b498
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-**`@layer`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、*カスケードレイヤー*を宣言します。カスケードレイヤー内のルールは一緒にカスケードされるため、ウェブ開発者はカスケードをより自由に制御することができます。
+**`@layer`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、カスケードレイヤーを宣言するために使用し、また複数のカスケードレイヤーがある場合に、優先順位を定義するためにも使用することができます。
 
-```css
-@layer utilities {
-  /* utilities という名前のレイヤーを作成します。 */
+{{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
+
+```css interactive-example
+@layer module, state;
+
+@layer state {
+  .alert {
+    background-color: brown;
+  }
+  p {
+    border: medium solid limegreen;
+  }
 }
+
+@layer module {
+  .alert {
+    border: medium solid violet;
+    background-color: yellow;
+    color: white;
+  }
+}
+```
+
+```html interactive-example
+<p class="alert">Beware of the zombies</p>
 ```
 
 ## 構文
 
-`@layer` アットルールは、 3 つの方法のうちの 1 つでカスケードレイヤーを作成するために使用されます。 1 つ目は、上記の例のように、そのレイヤーの CSS ルールを内部に持つブロックのアットルールを作成する方法です。
+```css
+@layer layer-name {rules}
+@layer layer-name;
+@layer layer-name, layer-name, layer-name;
+@layer {rules}
+```
+
+ここで次のようになります。
+
+- _layer-name_
+  - : カスケードレイヤーの名前です。
+- _rules_
+  - : そのカスケードレイヤーに含まれる一連の CSS ルールです。
+
+## 解説
+
+カスケードレイヤー内のルールは、一緒にカスケードされ、ウェブ開発者がカスケードをより制御できるようにします。レイヤーの中にないスタイルは一斉に集められ、宣言されたレイヤー、名前付きまたは無名のレイヤーのすべて後に来る単一の無名のレイヤーに配置されます。この意味は、レイヤーの外で宣言されたスタイルは、レイヤーの中で宣言されたスタイルよりも優先されるということです。
+
+`@layer` アットルールは 3 つの方法のいずれかでカスケードレイヤーを作成するために使用します。
+
+最初の方法は、次のようにして名前付きカスケードレイヤーを作成し、 CSS ルールをその中に入れることです。
 
 ```css
 @layer utilities {
   .padding-sm {
-    padding: .5rem;
+    padding: 0.5rem;
   }
 
   .padding-lg {
-    padding: .8rem;
+    padding: 0.8rem;
   }
 }
 ```
 
-カスケードレイヤーは {{cssxref("@import")}} で作ることができ、この場合のルールはインポートされたスタイルシートにあることになります。
-
-```css
-@import(utilities.css) layer(utilities);
-```
-
-また、スタイルを割り当てずに、名前付きのカスケードレイヤーを作成することもできます。これは単一の名前にすることができます。
+2 つ目は、スタイルを割り当てずに名前付きのカスケードレイヤーを作成する方法です。これは下記のように単一のレイヤーとすることができます。
 
 ```css
 @layer utilities;
 ```
 
-また、次のようにして複数のレイヤーを一度に定義することもできます。
+次のようにして複数のレイヤーを一度に定義することもできます。
 
 ```css
 @layer theme, layout, utilities;
@@ -51,9 +88,26 @@ slug: Web/CSS/@layer
 
 `utilities` のルールの方が `theme` ルールよりも詳細度が低くても適用されます。これは、レイヤーの順序が決まれば、詳細度や見た目の順序は無視されるからです。これは、セレクターが競合するルールを上書きするのに十分な高い詳細度を持つことを保証する必要がなく、後のレイヤーに表示されることだけを保証すればよいため、よりシンプルな CSS セレクターを作成することが可能になるのです。
 
-> **メモ:** レイヤー名を宣言して順番を決めたら、名前を宣言し直してレイヤーに CSS ルールを追加してください。すると、スタイルがレイヤーに追加され、レイヤーの順序は変更されません。
+> [!NOTE]
+> レイヤー名を宣言して順番を決めたら、名前を宣言し直してレイヤーに CSS ルールを追加してください。すると、スタイルがレイヤーに追加され、レイヤーの順序は変更されません。
 
-レイヤーにないスタイルはまとめて、宣言されたすべてのレイヤーの後にある無名レイヤーに配置されます。これは、レイヤーの外で宣言されたスタイルは、レイヤーで宣言されたスタイルを上書きすることを意味します。
+3 つ目は、次のように名前のないカスケードレイヤーを作成する方法です。
+
+```css
+@layer {
+  p {
+    margin-block: 1rem;
+  }
+}
+```
+
+これは無名カスケードレイヤーを作成します。このレイヤーは名前付きレイヤーと同じように機能しますが、後でルールを割り当てることはできません。無名レイヤーの優先順位は、名前付きまたは無名のレイヤーが宣言された順番であり、レイヤーの外側で宣言されたスタイル設定よりも下になります。
+
+カスケードレイヤーを作成するもう一つの方法は、 {{cssxref("@import")}} を使用することです。この場合、ルールはインポートされたスタイルシートの中にあることになります。 `@import` アットルールは、 `@charset` ルールと `@layer` ルールを除く、他のすべての種類のルールに先立って入力しなければならないことを覚えておいてください。
+
+```css
+@import "theme.css" layer(utilities);
+```
 
 ### レイヤーの入れ子
 
@@ -62,7 +116,6 @@ slug: Web/CSS/@layer
 ```css
 @layer framework {
   @layer layout {
-
   }
 }
 ```
@@ -77,23 +130,9 @@ slug: Web/CSS/@layer
 }
 ```
 
-### 無名レイヤー
-
-次のように名前のないレイヤーを作成すると、
-
-```css
-@layer {
-  p {
-    margin-block: 1rem;
-  }
-}
-```
-
-そして、無名の、名前のないレイヤーが作成されます。これは名前付きレイヤーと同じように機能しますが、後からルールを割り当てることはできません。
-
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
@@ -140,9 +179,11 @@ p {
 #### HTML
 
 ```html
-<div class="item">I am displayed in <code>color: rebeccapurple</code>
-because the <code>special</code> layer comes after the <code>base</code> layer.
-My green border, font-size, and padding come from the <code>base</code> layer.</div>
+<div class="item">
+  I am displayed in <code>color: rebeccapurple</code> because the
+  <code>special</code> layer comes after the <code>base</code> layer. My green
+  border, font-size, and padding come from the <code>base</code> layer.
+</div>
 ```
 
 #### CSS
@@ -161,7 +202,7 @@ My green border, font-size, and padding come from the <code>base</code> layer.</
     color: green;
     border: 5px solid green;
     font-size: 1.3em;
-    padding: .5em;
+    padding: 0.5em;
   }
 }
 ```
@@ -180,4 +221,12 @@ My green border, font-size, and padding come from the <code>base</code> layer.</
 
 ## 関連情報
 
-- [The Future of CSS: Cascade Layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/)
+- [`@import`](/ja/docs/Web/CSS/@import)
+- {{domxref("CSSLayerBlockRule")}}
+- {{domxref("CSSLayerStatementRule")}}
+- [`!important`](/ja/docs/Web/CSS/important)
+- [`revert-layer`](/ja/docs/Web/CSS/revert-layer)
+- [CSS カスケード入門](/ja/docs/Web/CSS/Cascade)
+- [カスケード、詳細度、継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [カスケードレイヤー](/ja/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) (bram.us (2021))

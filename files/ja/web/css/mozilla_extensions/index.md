@@ -9,7 +9,8 @@ Firefox などの Mozilla アプリケーションは、いくつもの特別な
 
 ## Mozilla 独自のプロパティと擬似クラス (ウェブサイトで使用しないでください)
 
-> **メモ:** これらのプロパティと擬似クラスは、Firefox などの Mozilla アプリケーション内でのみ動作するものであり、標準化されていません。これら標準外のプロパティの一部は、[XUL](/ja/docs/Mozilla/Tech/XUL) 要素にのみ適用されます。
+> [!NOTE]
+> これらのプロパティと擬似クラスは、Firefox などの Mozilla アプリケーション内でのみ動作するものであり、標準化されていません。これら標準外のプロパティの一部は、[XUL](/ja/docs/Mozilla/Tech/XUL) 要素にのみ適用されます。
 
 ### B
 
@@ -65,7 +66,8 @@ Firefox などの Mozilla アプリケーションは、いくつもの特別な
 
 ## 以前は独自だったが標準化されたもの
 
-> **メモ:** CSS の互換性を最大化するため、以下の接頭辞付きのものではなく、接頭辞なしの標準プロパティを使用してください。これらは、標準化されて接頭辞なしの形式が対応され次第、接頭辞付きのバージョンは順次破棄されます。
+> [!NOTE]
+> CSS の互換性を最大化するため、以下の接頭辞付きのものではなく、接頭辞なしの標準プロパティを使用してください。これらは、標準化されて接頭辞なしの形式が対応され次第、接頭辞付きのバージョンは順次破棄されます。
 
 ### A
 
@@ -266,7 +268,7 @@ Firefox などの Mozilla アプリケーションは、いくつもの特別な
 
 ### {{CSSxRef("border-color")}}
 
-- `-moz-use-text-color` {{deprecated_inline}} ({{bug(1306214)}} で削除)、代わりに {{CSSxRef("color_value#currentColor_keyword","currentcolor")}} を使用してください。
+- `-moz-use-text-color` {{deprecated_inline}} ([Firefox バグ 1306214](https://bugzil.la/1306214) で削除)、代わりに {{CSSxRef("color_value#currentColor_keyword","currentcolor")}} を使用してください。
 
 ### {{CSSxRef("border-style")}} と {{CSSxRef("outline-style")}}
 
@@ -532,7 +534,7 @@ Firefox などの Mozilla アプリケーションは、いくつもの特別な
 
 ## その他
 
-- {{CSSxRef("-moz-alt-content")}} (see {{Bug(11011)}})
+- {{CSSxRef("-moz-alt-content")}} (see [Firefox バグ 11011](https://bugzil.la/11011))
 
 ## 関連情報
 

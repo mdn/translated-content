@@ -1,8 +1,8 @@
 ---
 title: Element.querySelector()
 slug: Web/API/Element/querySelector
-translation_of: Web/API/Element/querySelector
 ---
+
 {{APIRef("DOM")}}
 
 Возвращает первый элемент, являющийся потомком элемента, на который применено правило указанной группы селекторов.
@@ -14,14 +14,16 @@ element = baseElement.querySelector(selectors);
 ```
 
 - `element` и `baseElement` это {{domxref("element")}} объекты.
-- `selectors` - это группа [селекторов](/ru/docs/Web/Guide/CSS/Getting_Started/Selectors) для поиска совпадения.
+- `selectors` - это группа [селекторов](/ru/docs/Learn/CSS/Building_blocks/Selectors) для поиска совпадения.
 
 ## Пример
 
 Данный пример получает первый элемент style, который не имеет атрибута type или этот атрибут равен text/css, в теле (body) HTML документа:
 
 ```js
-var el = document.body.querySelector("style[type='text/css'], style:not([type])");
+var el = document.body.querySelector(
+  "style[type='text/css'], style:not([type])",
+);
 ```
 
 ## Примечания
@@ -34,7 +36,7 @@ var el = document.body.querySelector("style[type='text/css'], style:not([type])"
 
 Строка аргументов передаваемая `querySelector()` должна удовлетворять синтаксису CSS. Более подробные примеры смотрите в {{domxref("document.querySelector")}}.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

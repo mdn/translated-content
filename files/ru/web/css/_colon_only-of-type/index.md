@@ -1,43 +1,72 @@
 ---
-title: ':only-of-type'
+title: :only-of-type
 slug: Web/CSS/:only-of-type
-tags:
-  - CSS
-  - Псевдоклассы
-translation_of: Web/CSS/:only-of-type
+l10n:
+  sourceCommit: 71d9840f3da24005b015d3d103b358d4f9f46819
 ---
 
 {{CSSRef}}
 
-## Описание
+CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:only-of-type`** выбирает элемент, который является единственным потомком своего типа.
 
-[CSS](/ru/docs/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:only-of-type` выбирает такой элемент, который является единственным потомком такого типа.
+{{InteractiveExample("CSS Demo: :only-of-type", "tabbed-shorter")}}
 
-```css
-/* Выбирает все <p>, которые являются */
-/* единственным потомками типа <p> */
-p:only-of-type {
-  background-color: lime;
+```css interactive-example
+a:only-of-type {
+  color: fuchsia;
 }
+
+dd:only-of-type {
+  background-color: bisque;
+}
+```
+
+```html interactive-example
+<p>
+  Чтобы узнать больше о <b>QUIC</b>, ознакомьтесь с <a href="#">RFC 9000</a> и
+  <a href="#">RFC 9114</a>.
+</p>
+
+<dl>
+  <dt>Опубликовано</dt>
+  <dd>2021</dd>
+  <dd>2022</dd>
+</dl>
+
+<p>
+  Подробную информацию о <b>QPACK</b> можно найти в <a href="#">RFC 9204</a>.
+</p>
+
+<dl>
+  <dt>Опубликовано</dt>
+  <dd>2022</dd>
+</dl>
 ```
 
 ## Синтаксис
 
-{{csssyntax}}
+```css
+:only-of-type {
+  /* ... */
+}
+```
 
-## Пример
+## Примеры
+
+### Применение стилей к элементам, которые являются единственными потомками своего типа
 
 #### HTML
 
 ```html
 <main>
-  <div>Я `div` №1.</div>
-  <p>Я тут единственный `p` элемент.</p>
-  <div>Я `div` №2.</div>
-  <div>Я `div` №3.
-    <i>Я единственный потомок типа `i`.</i>
-    <em>Я `em` №1.</em>
-    <em>Я `em` №2.</em>
+  <div>Я элемент `div` #1.</div>
+  <p>Я единственный элемент `p` у своего родителя.</p>
+  <div>Я элемент `div` #2.</div>
+  <div>
+    Я элемент `div` #3.
+    <i>Я единственный элемент `i` у своего родителя.</i>
+    <em>Я элемент `em` #1.</em>
+    <em>Я элемент `em` #2.</em>
   </div>
 </main>
 ```
@@ -52,16 +81,19 @@ main :only-of-type {
 
 #### Результат
 
-{{EmbedLiveSample('Пример', '', '', '', 'Web/CSS/:only-of-type')}}
+{{EmbedLiveSample('Применение стилей к элементам, которые являются единственными потомками своего типа', '100%', 180)}}
 
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- {{Cssxref(":nth-of-type")}}, {{Cssxref(":first-of-type")}}, {{Cssxref(":last-of-type")}}
+- {{Cssxref(":only-child")}}
+- {{Cssxref(":first-of-type")}}
+- {{Cssxref(":last-of-type")}}
+- {{Cssxref(":nth-of-type")}}

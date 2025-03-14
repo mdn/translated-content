@@ -1,17 +1,15 @@
 ---
 title: SVN
 slug: Glossary/SVN
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-Apache Subversion (**SVN**) 是一个开源免费的源代码控制管理（{{Glossary("SCM")}}）系统。它允许开发者们保留文本和代码修改历史。虽然 SVN 可以操作二进制文件，但是我们不推荐这些文件使用 SVN。
+{{GlossarySidebar}}
 
-## 了解更多
+Apache Subversion（**SVN**）是一个开源免费的源代码控制管理（{{Glossary("SCM")}}）系统。它允许开发者保留文本和代码修改历史。虽然 SVN 可以处理二进制文件，但是我们不推荐将 SVN 用于这些文件。
 
-### 基础知识
+## 参见
 
-- 在维基百科上的 [SVN](https://zh.wikipedia.org/wiki/SVN)
+- 维基百科上的 [Apache Subversion](https://zh.wikipedia.org/wiki/Subversion)
 - [官方网站](https://subversion.apache.org/)
-
-### 学习
-
-- [在 MDN 上的 SVN 使用教程](/zh-CN/docs/Mozilla/Localization/SVN_guide_for_localizers)

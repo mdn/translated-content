@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing variable name'
+title: "SyntaxError: missing variable name"
 slug: Web/JavaScript/Reference/Errors/No_variable_name
 ---
 
@@ -36,7 +36,7 @@ var ohGodWhy = "foo";
 
 ### Palavras-chave reservadas não podem ser nomes de variáveis
 
-Existem alguns nomes de variáveis ​​que são palavras-chave resevadas. Você não pode usar isso. Desculpa :(
+Existem alguns nomes de variáveis que são palavras-chave resevadas. Você não pode usar isso. Desculpa :(
 
 ```js example-bad
 var debugger = "whoop";
@@ -60,11 +60,12 @@ var second = document.getElementById('two'),
 A versão corrigida:
 
 ```js example-good
-var x, y = "foo";
+var x,
+  y = "foo";
 var x = "foo";
 
-var first = document.getElementById('one');
-var second = document.getElementById('two');
+var first = document.getElementById("one");
+var second = document.getElementById("two");
 ```
 
 ### Arrays
@@ -79,11 +80,11 @@ var arr = 1,2,3,4,5;
 Isso seria correto:
 
 ```js example-good
-var arr = [1,2,3,4,5];
+var arr = [1, 2, 3, 4, 5];
 ```
 
 ## Veja também
 
 - Bons nomes de variáveis
 - [`var`](/pt-BR/docs/Web/JavaScript/Reference/Statements/var)
-- Declarações de variáveis ​​no Guia JavaScript
+- Declarações de variáveis no Guia JavaScript

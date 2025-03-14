@@ -25,17 +25,17 @@ Void.
 ## Examples
 
 ```js
-var mql = window.matchMedia('(max-width: 600px)');
+var mql = window.matchMedia("(max-width: 600px)");
 
 function screenTest(e) {
   if (e.matches) {
     /* the viewport is 600 pixels wide or less */
-    para.textContent = 'This is a narrow screen — less than 600px wide.';
-    document.body.style.backgroundColor = 'red';
+    para.textContent = "This is a narrow screen — less than 600px wide.";
+    document.body.style.backgroundColor = "red";
   } else {
     /* the viewport is more than than 600 pixels wide */
-    para.textContent = 'This is a wide screen — more than 600px wide.';
-    document.body.style.backgroundColor = 'blue';
+    para.textContent = "This is a wide screen — more than 600px wide.";
+    document.body.style.backgroundColor = "blue";
   }
 }
 
@@ -46,14 +46,14 @@ mql.addListener(screenTest);
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.MediaQueryList.addListener")}}
+{{Compat}}
 
 ## See also
 
-- [Media queries](/es/docs/CSS/Media_queries)
-- [Using media queries from code](/es/docs/CSS/Using_media_queries_from_code)
+- [Media queries](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using media queries from code](/es/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{domxref("window.matchMedia()")}}
 - {{domxref("MediaQueryList")}}
 - {{domxref("MediaQueryListEvent")}}

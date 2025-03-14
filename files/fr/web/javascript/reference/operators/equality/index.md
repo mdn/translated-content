@@ -1,24 +1,32 @@
 ---
 title: Égalité (==)
 slug: Web/JavaScript/Reference/Operators/Equality
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.equality
 ---
 
 {{jsSidebar("Operators")}}
 
 L'opérateur d'égalité (`==`) vérifie si ses deux opérandes sont égaux et renvoie un booléen indiquant le résultat de la comparaison. À la différence de l'opérateur [d'égalité stricte](/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality), l'opérateur d'égalité tente de convertir ses opérandes avant la comparaison si ceux-ci sont de types différents.
 
-{{EmbedInteractiveExample("pages/js/expressions-equality.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Equality operator")}}
+
+```js interactive-example
+console.log(1 == 1);
+// Expected output: true
+
+console.log("hello" == "hello");
+// Expected output: true
+
+console.log("1" == 1);
+// Expected output: true
+
+console.log(0 == false);
+// Expected output: true
+```
 
 ## Syntaxe
 
 ```js
-x == y
+x == y;
 ```
 
 ## Description
@@ -46,36 +54,36 @@ La différence fondamentale entre cet opérateur et [l'opérateur d'égalité st
 ### Comparaison sans conversion de types
 
 ```js
-1 == 1;              // true
-"coucou" == "coucou";  // true
+1 == 1; // true
+"coucou" == "coucou"; // true
 ```
 
 ### Comparaison avec conversion de types
 
 ```js
-"1" ==  1;            // true
-1 == "1";             // true
-0 == false;           // true
-0 == null;            // false
-0 == undefined;       // false
-0 == !!null;          // true, voir la documentation pour !!
-0 == !!undefined;     // true, voir la documentation pour !!
-null == undefined;    // true
+"1" == 1; // true
+1 == "1"; // true
+0 == false; // true
+0 == null; // false
+0 == undefined; // false
+0 == !!null; // true, voir la documentation pour !!
+0 == !!undefined; // true, voir la documentation pour !!
+null == undefined; // true
 
 const nombre1 = new Number(3);
 const nombre2 = new Number(3);
-nombre1 == 3;         // true
-nombre1 == nombre2;   // false
+nombre1 == 3; // true
+nombre1 == nombre2; // false
 ```
 
 ### Comparaison d'objets
 
 ```js
-const objet1 = {"clé": "valeur"}
-const objet2 = {"clé": "valeur"};
+const objet1 = { clé: "valeur" };
+const objet2 = { clé: "valeur" };
 
-objet1 == objet2 // false
-objet2 == objet2 // true
+objet1 == objet2; // false
+objet2 == objet2; // true
 ```
 
 ### Comparaison entre des chaînes de caractères et des objets String
@@ -98,9 +106,9 @@ console.log(string4 == string4); // true
 ### Comparaison entre les dates et les chaînes de caractères
 
 ```js
-const d = new Date('December 17, 1995 03:24:00');
+const d = new Date("December 17, 1995 03:24:00");
 const s = d.toString(); // par exemple : "Sun Dec 17 1995 03:24:00 GMT-0800 (Pacific Standard Time)"
-console.log(d == s);    //true
+console.log(d == s); //true
 ```
 
 ## Spécifications

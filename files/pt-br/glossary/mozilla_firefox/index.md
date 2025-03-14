@@ -1,8 +1,9 @@
 ---
 title: Mozilla Firefox
 slug: Glossary/Mozilla_Firefox
-original_slug: Glossario/Mozilla_Firefox
 ---
+
+{{GlossarySidebar}}
 
 Mozilla Firefox é um {{Glossary("browser")}} open-source cujo desenvolvimento é supervisionado pela Mozilla Corporation. Firefox roda em Windows, OS X, Linux, e Android.
 
@@ -16,4 +17,4 @@ O primeiro lançamento foi em Novembro de 2004, Firefox é completamente customi
 
 ### Referência técnica
 
-- [Informações de documentação/desenvolvimento na MDN](/en-US/Firefox)
+- [Informações de documentação/desenvolvimento na MDN](/pt-BR/docs/Mozilla/Firefox)

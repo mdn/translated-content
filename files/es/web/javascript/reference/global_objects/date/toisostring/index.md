@@ -1,13 +1,6 @@
 ---
 title: Date.prototype.toISOString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
-tags:
-  - Date
-  - JavaScript
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toISOString
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toISOString
 ---
 
 {{JSRef}}
@@ -29,7 +22,7 @@ Una cadena que representa la fecha dada en el formato [ISO 8601](http://en.wikip
 ### Usando `toISOString()`
 
 ```js
-var today = new Date('05 October 2011 14:48 UTC');
+var today = new Date("05 October 2011 14:48 UTC");
 
 console.log(today.toISOString()); // Devuelve 2011-10-05T14:48:00.000Z
 ```
@@ -42,27 +35,33 @@ Este método fue estandarizado en ECMA-262 5° edición. Los motores javascript 
 
 ```js
 if (!Date.prototype.toISOString) {
-  (function() {
-
+  (function () {
     function pad(number) {
       if (number < 10) {
-        return '0' + number;
+        return "0" + number;
       }
       return number;
     }
 
-    Date.prototype.toISOString = function() {
-      return this.getUTCFullYear() +
-        '-' + pad(this.getUTCMonth() + 1) +
-        '-' + pad(this.getUTCDate()) +
-        'T' + pad(this.getUTCHours()) +
-        ':' + pad(this.getUTCMinutes()) +
-        ':' + pad(this.getUTCSeconds()) +
-        '.' + (this.getUTCMilliseconds() / 1000).toFixed(3).slice(2, 5) +
-        'Z';
+    Date.prototype.toISOString = function () {
+      return (
+        this.getUTCFullYear() +
+        "-" +
+        pad(this.getUTCMonth() + 1) +
+        "-" +
+        pad(this.getUTCDate()) +
+        "T" +
+        pad(this.getUTCHours()) +
+        ":" +
+        pad(this.getUTCMinutes()) +
+        ":" +
+        pad(this.getUTCSeconds()) +
+        "." +
+        (this.getUTCMilliseconds() / 1000).toFixed(3).slice(2, 5) +
+        "Z"
+      );
     };
-
-  }());
+  })();
 }
 ```
 
@@ -72,7 +71,7 @@ if (!Date.prototype.toISOString) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.toISOString")}}
+{{Compat}}
 
 ## Ver también
 

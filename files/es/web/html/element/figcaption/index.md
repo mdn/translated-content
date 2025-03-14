@@ -1,27 +1,53 @@
 ---
 title: <figcaption>
 slug: Web/HTML/Element/figcaption
-tags:
-  - Elemento
-  - Elementos de agrupación de contenido en HTML
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Element/figcaption
-original_slug: Web/HTML/Elemento/figcaption
 ---
 
 {{HTMLSidebar}}
 
 El elemento **HTML `<figcaption>`** representa un subtítulo o leyenda asociado al contenido del elemento padre {{HTMLElement("figure")}}, pudiendo ser colocado como primer o último hijo. Es importante destacar que el elemento **`<figcaption>`** es opcional.
 
-{{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;figcaption&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<figure>
+  <img
+    src="/shared-assets/images/examples/elephant.jpg"
+    alt="Elephant at sunset" />
+  <figcaption>An elephant at sunset</figcaption>
+</figure>
+```
+
+```css interactive-example
+figure {
+  border: thin #c0c0c0 solid;
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  max-width: 220px;
+  margin: auto;
+}
+
+img {
+  max-width: 220px;
+  max-height: 150px;
+}
+
+figcaption {
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
+}
+```
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/HTML/Content_categories"
+          href="/es/docs/HTML/Content_categories"
           title="HTML/Content_categories"
           >Content categories</a
         >
@@ -32,7 +58,7 @@ El elemento **HTML `<figcaption>`** representa un subtítulo o leyenda asociado 
       <th scope="row">Contenido Permitido</th>
       <td>
         <a
-          href="/en-US/docs/HTML/Content_categories#Flow_content"
+          href="/es/docs/HTML/Content_categories#Flow_content"
           title="HTML/Content categories#Flow content"
           >Flow content</a
         >.
@@ -40,7 +66,7 @@ El elemento **HTML `<figcaption>`** representa un subtítulo o leyenda asociado 
     </tr>
     <tr>
       <th scope="row">Omisión de etiqueta</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th scope="row">Elementos padre permitidos</th>
@@ -64,7 +90,7 @@ El elemento **HTML `<figcaption>`** representa un subtítulo o leyenda asociado 
 
 ## Atributos
 
-Este elemento sólo incluye los [global attributes](/es/docs/HTML/Global_attributes).
+Este elemento sólo incluye los [global attributes](/es/docs/Web/HTML/Global_attributes).
 
 ## Ejemplos
 
@@ -74,11 +100,9 @@ Para ejemplos con `<figcaption>`, por favor ver la página {{HTMLElement("figure
 
 {{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data> and send us a pull request.
-
-{{Compat("html.elements.figcaption")}}
+{{Compat}}
 
 ## Ver además
 

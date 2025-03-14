@@ -1,6 +1,8 @@
 ---
 title: イベントの扱い (概要)
 slug: Web/Events/Event_handlers
+l10n:
+  sourceCommit: 857c6f9e7f1a847e7d3466b0d047159f7b345991
 ---
 
 イベントとは、ブラウザーや OS の環境の変化を知らせる信号で、ブラウザーのウィンドウ内で発行されます。プログラマーは、イベントが発行されたときに実行される*イベントハンドラー*のコードを作成することで、ウェブページが変化に適切に対応できるようになります。
@@ -17,46 +19,46 @@ slug: Web/Events/Event_handlers
 
 ハンドラーの登録には、推奨される方法が 2 つあります。イベントハンドラーのコードは、ターゲットとなる要素の対応する _onevent_ プロパティに割り当てて、イベントが起動されたときに実行されるようにするか、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} メソッドを使用して、ハンドラーを要素のリスナーとして登録するかすることができます。いずれの場合も、ハンドラーは [`Event` インターフェイス](/ja/docs/Web/API/Event) (または[派生インターフェイス](/ja/docs/Web/API/Event#introduction)) に準拠したオブジェクトを受け取ります。主な違いは、イベントリスナーのメソッドを使うと、複数のイベントハンドラーを追加 (または削除) できることです。
 
-> **警告:** 第 3 の方法として、 HTML の onevent 属性を使ってイベントハンドラーを設定する方法がありますが、お勧めしません。これはマークアップを膨張させ、可読性を低下させ、デバッグを困難にします。詳しくは、[インラインイベントハンドラー](/ja/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_—_dont_use_these)を参照してください。
+> [!WARNING]
+> 第 3 の方法として、 HTML の onevent 属性を使ってイベントハンドラーを設定する方法がありますが、お勧めしません。これはマークアップを膨張させ、可読性を低下させ、デバッグを困難にします。詳しくは、[インラインイベントハンドラー](/ja/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_—_dont_use_these)を参照してください。
 
 ### onevent プロパティの使用
 
-慣習上、イベントを発行する Javascript オブジェクトには、それに対応する "onevent" プロパティ (イベント名の前に "on" を付けて命名) があります。これらのプロパティは、イベントが発行されたときに、関連するハンドラーコードを実行するために呼び出されます。
+慣習上、イベントを発行する JavaScript オブジェクトには、それに対応する "onevent" プロパティ (イベント名の前に "on" を付けて命名) があります。これらのプロパティは、イベントが発行されたときに、関連するハンドラーコードを実行するために呼び出されます。
 
 イベントハンドラーのコードを設定するには、適切な onevent プロパティに代入してください。 1 つの要素のそれぞれのイベントに対して、割り当てることができるイベントハンドラーは 1 つだけです。必要に応じて、同じプロパティに別の関数を代入することで、ハンドラーを置き換えることができます。
 
 以下の例では、 `greet()` 関数を `click` イベントに割り当てるために `onclick` プロパティを使用しています。
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
-function greet(event){
-  // print the event object to console
-  console.log('greet:', arguments)
+function greet(event) {
+  console.log("greet:", event);
 }
 
 btn.onclick = greet;
 ```
 
-なお、イベントハンドラーの第一引数には、イベントを表すオブジェクトが渡されます。このイベントオブジェクトは、 {{domxref("Event")}} インターフェースを実装しているか、またはそれを継承しています。
+なお、イベントハンドラーの第一引数には、イベントを表すオブジェクトが渡されます。このイベントオブジェクトは、 {{domxref("Event")}} インターフェイスを実装しているか、またはそれを継承しています。
 
 ### EventTarget.addEventListener
 
 要素にイベントハンドラーを設定する最も柔軟な方法は、 {{domxref("EventTarget.addEventListener")}} メソッドを使用することです。この方法では、複数のリスナーを 1 つの要素に割り当てることができ、必要に応じて ({{domxref("EventTarget.removeEventListener")}} を使用して) リスナーを削除することができます。
 
-> **メモ:** イベントハンドラーの追加と削除ができることで、例えば、同じボタンで状況によって異なるアクションを実行することができます。また、より複雑なプログラムでは、古い、使われていないイベントハンドラーを整理することで、効率を上げることができます。
+> [!NOTE]
+> イベントハンドラーの追加と削除ができることで、例えば、同じボタンで状況によって異なるアクションを実行することができます。また、より複雑なプログラムでは、古い、使われていないイベントハンドラーを整理することで、効率を上げることができます。
 
 以下では、単純な `greet()` 関数をクリックイベントのリスナーまたはイベントハンドラーとして設定する方法を示します (必要に応じて、名前付き関数の代わりにラムダ関数を使用することもできます)。繰り返しますが、イベントは、イベントハンドラーの第一引数として渡されます。
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
-function greet(event){
-  // print the event object to console
-  console.log('greet:', arguments)
+function greet(event) {
+  console.log("greet:", event);
 }
 
-btn.addEventListener('click', greet);
+btn.addEventListener("click", greet);
 ```
 
 このメソッドは、イベントのキャプチャおよび削除の制御をするために、追加の引数/オプションを取ることもできます。詳細については、 {{domxref("EventTarget.addEventListener")}} のリファレンスページを参照してください。
@@ -70,10 +72,13 @@ btn.addEventListener('click', greet);
 ```js
 const controller = new AbortController();
 
-btn.addEventListener('click', function(event) {
-  // イベントオブジェクトをコンソールに表示
-  console.log('greet:', arguments)
-  }, { signal: controller.signal }); // このハンドラーに AbortSignal を渡す
+btn.addEventListener(
+  "click",
+  (event) => {
+    console.log("greet:", event);
+  },
+  { signal: controller.signal },
+); // このハンドラーに AbortSignal を渡す
 ```
 
 上記のコードで生成したイベントハンドラーは、次のようにして削除することができます。
@@ -82,4 +87,8 @@ btn.addEventListener('click', function(event) {
 controller.abort(); // このコントローラーに関連付けられたすべてのイベントハンドラーを削除
 ```
 
-<section id="Quick_links"><ul><li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベント入門</a></li><li><a href="/ja/docs/Web/Events">イベントリファレンス</a></li></ul></section>
+<section id="Quick_links">
+  <ol>
+    <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベント入門</a></li><li><a href="/ja/docs/Web/Events">イベントリファレンス</a></li>
+  </ol>
+</section>

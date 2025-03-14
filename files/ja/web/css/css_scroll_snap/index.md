@@ -1,6 +1,6 @@
 ---
 title: CSS スクロールスナップ
-slug: Web/CSS/CSS_Scroll_Snap
+slug: Web/CSS/CSS_scroll_snap
 ---
 
 {{CSSRef}}
@@ -42,8 +42,8 @@ slug: Web/CSS/CSS_Scroll_Snap
 
 ## ガイド
 
-- [CSS スクロールスナップの基本概念](/ja/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts)
-- [ブラウザーの互換性とスクロールスナップ](/ja/docs/Web/CSS/CSS_Scroll_Snap/Browser_compat)
+- [CSS スクロールスナップの基本概念](/ja/docs/Web/CSS/CSS_scroll_snap/Basic_concepts)
+- [ブラウザーの互換性とスクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
 
 ## 仕様書
 
@@ -53,4 +53,5 @@ slug: Web/CSS/CSS_Scroll_Snap
 
 個々のプロパティページにて、それぞれのプロパティのブラウザー互換性情報を詳しく説明しています。
 
-> **メモ:** このモジュールの以前のバージョンはスクロールスナップ点と呼ばれており、非推奨になりました。CSS スクロールスナップが現在の実装です。新旧の仕様の対応方法の概要については、[ブラウザーの互換性のガイド](/ja/docs/Web/CSS/CSS_Scroll_Snap/Browser_compat)を参照してください。
+> [!NOTE]
+> このモジュールの以前のバージョンはスクロールスナップ点と呼ばれており、非推奨になりました。CSS スクロールスナップが現在の実装です。新旧の仕様の対応方法の概要については、[ブラウザーの互換性のガイド](/ja/docs/Web/CSS/CSS_scroll_snap)を参照してください。

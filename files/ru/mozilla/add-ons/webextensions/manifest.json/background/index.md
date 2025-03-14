@@ -1,14 +1,8 @@
 ---
 title: ключ background
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
-tags:
-  - WebExtensions
-  - Веб-расширения
-  - Дополнения
-  - Манифест
-  - Расширения
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -40,7 +34,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
 
 Фоновые сценарии загружаются сразу при загрузке расширения и остаются загруженными до тех пор, пока расширение не будет отключено или удалено. Вы можете использовать любой API-интерфейс WebExtension в сценарии, если вы запросили необходимые [права (permissions)](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-Дополнительную информацию см. В разделе «Справочные страницы» в статье [Анатомия расширения](/ru/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_pages).
+Дополнительную информацию можно найти в статье [Внутреннее устройство расширения](/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_pages).
 
 Ключ `background` это объект, у которого есть два следующих необязательных свойства:
 
@@ -144,7 +138,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
             когда фоновая страница выгружена из памяти, но остальные значения
             сбрасываются. Если нужно хранить постоянные данные при использовании
             страницы событий, используйте
-            <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage"
+            <a href="/ru/docs/Mozilla/Add-ons/WebExtensions/API/storage"
               >storage API</a
             >.
           </li>

@@ -5,11 +5,12 @@ slug: Web/CSS/image-rendering
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/CSS) 属性 **`image-rendering`** 用于设置图像缩放算法。它适用于元素本身，适用于元素其他属性中的图像，也应用于子元素。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`image-rendering`** 用于设置图像缩放算法。它适用于元素本身，适用于元素其他属性中的图像，也应用于子元素。
 
 当页面作者指定的尺寸不是图像的原始尺寸时，{{Glossary("user agent", "用户代理")}}将缩放图像。缩放也可能由于用户互动（双指缩放）而发生。举个例子，如果有一张尺寸为 `100×100px` 的图片，但作者有意将尺寸设置为 `200×200px`（或`50×50px`），然后，图片便会根据 `image-rendering` 指定的算法，缩小或放大到新尺寸。此属性对于未缩放的图像没有影响。
 
-> **备注：** The [Canvas API](/zh-CN/docs/Web/API/Canvas_API) can provide a [fallback solution for `crisp-edges`](http://phrogz.net/tmp/canvas_image_zoom.html) through manual image data manipulation.
+> [!NOTE]
+> The [Canvas API](/zh-CN/docs/Web/API/Canvas_API) can provide a [fallback solution for `crisp-edges`](http://phrogz.net/tmp/canvas_image_zoom.html) through manual image data manipulation.
 
 ## 语法
 
@@ -38,19 +39,20 @@ image-rendering: unset;
 - `pixelated`
   - : 放大图像时，使用最近邻居算法，因此，图像看着像是由大块像素组成的。缩小图像时，算法与 `auto` 相同。
 
-> **备注：** 早期草案中出现的 `optimizationQuality` 和 `optimizationSpeed` （来自 SVG 的对应值）分别被定义为 `smooth` 和 `pixelated`。
+> [!NOTE]
+> 早期草案中出现的 `optimizationQuality` 和 `optimizationSpeed` （来自 SVG 的对应值）分别被定义为 `smooth` 和 `pixelated`。
 
-### 形式化语法
+### 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ```html hidden
 <div>
-  <img class="auto" alt="auto" src="https://mdn.mozillademos.org/files/2765/blumen.jpg" />
-  <img class="pixelated" alt="pixelated" src="https://mdn.mozillademos.org/files/2765/blumen.jpg" />
-  <img class="crisp-edges" alt="crisp-edges" src="https://mdn.mozillademos.org/files/2765/blumen.jpg" />
+  <img class="auto" alt="auto" src="blumen.jpg" />
+  <img class="pixelated" alt="pixelated" src="blumen.jpg" />
+  <img class="crisp-edges" alt="crisp-edges" src="blumen.jpg" />
 </div>
 ```
 
@@ -76,7 +78,7 @@ img {
 }
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 
@@ -84,7 +86,8 @@ img {
 
 {{cssinfo}}
 
-> **备注：** 虽然在最初此属性与 SVG 的 `image-rendering` 属性定义相近，但到现在，它们之间已有相当的差别。
+> [!NOTE]
+> 虽然在最初此属性与 SVG 的 `image-rendering` 属性定义相近，但到现在，它们之间已有相当的差别。
 
 ## 浏览器兼容性
 
@@ -92,7 +95,8 @@ img {
 
 ### 备注
 
-> **备注：** 这是来自旧版浏览器兼容性表格的备注，保留以便查阅。可另行参阅 [Can I use](https://caniuse.com/#search=image-rendering)。
+> [!NOTE]
+> 这是来自旧版浏览器兼容性表格的备注，保留以便查阅。可另行参阅 [Can I use](https://caniuse.com/#search=image-rendering)。
 
 Internet Explorer 7 和 8 支持非标准的 [`-ms-interpolation-mode` 属性](<http://msdn.microsoft.com/en-us/library/ie/ms530822(v=vs.85).aspx>)，有两个属性值：`bicubic` 和 `nearest-neighbor`，和大量差距：
 

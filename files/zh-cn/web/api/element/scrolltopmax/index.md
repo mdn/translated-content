@@ -17,7 +17,7 @@ var pxl = elt.scrollTopMax;
 
 此属性不在当前规范中
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

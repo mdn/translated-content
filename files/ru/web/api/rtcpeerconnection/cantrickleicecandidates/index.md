@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.canTrickleIceCandidates
 slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
-translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 ---
 
 {{APIRef("WebRTC")}}Свойство только для чтения **`canTrickleIceCandidates`** , объекта **{{domxref("RTCPeerConnection")}}**, возвращает значение типа {{jsxref("Boolean")}} , которое указывает на то, может ли удалённый пир принимать кандидаты, согласно спецификации [trickled ICE candidates](https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice).
@@ -22,7 +21,8 @@ translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 
 Тип {{jsxref("Boolean")}} содержит `true` , если удалённый пир может принимать просвечивающие ICE кандидаты, и `false` , если не может. Если удалённый пир ещё не инициализирован, свойство возвращает `null`.
 
-> **Примечание:** **Примечание :** Значение свойства инициализируется после того, как локальный пир вызовет метод {{domxref("RTCPeerConnection.setRemoteDescription()")}}; Возвращаемый объект описания используется агентом ICE для определения возможности удалённого пира поддерживать просачивающихся ICE кандидатов.
+> [!NOTE]
+> Значение свойства инициализируется после того, как локальный пир вызовет метод {{domxref("RTCPeerConnection.setRemoteDescription()")}}; Возвращаемый объект описания используется агентом ICE для определения возможности удалённого пира поддерживать просачивающихся ICE кандидатов.
 
 ## Пример
 
@@ -65,6 +65,6 @@ pc.addEventListener('icecandidate', e => {
 
 ## Смотрите также
 
-- [WebRTC](/ru/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/ru/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection.addIceCandidate()")}}
 - [Жизненный цикл сессии WebRTC](/ru/docs/Web/API/WebRTC_API/Session_lifetime)

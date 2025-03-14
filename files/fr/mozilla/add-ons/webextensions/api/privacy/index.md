@@ -1,21 +1,13 @@
 ---
 title: privacy
 slug: Mozilla/Add-ons/WebExtensions/API/privacy
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Privacy
-  - Reference
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/privacy
 ---
 
 {{AddonSidebar}}
 
 Accédez et modifiez les différents paramètres du navigateur liés à la vie privée.
 
-Pour utiliser l'API de confidentialité, vous devez avoir [l'autorisation de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "privacy".
+Pour utiliser l'API de confidentialité, vous devez avoir [l'autorisation de l'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "privacy".
 
 ## Propriétés
 
@@ -26,15 +18,15 @@ Pour utiliser l'API de confidentialité, vous devez avoir [l'autorisation de l'A
 - {{WebExtAPIRef("privacy.websites")}}
   - : Accès et modification des paramètres de confidentialité relatifs aux comportements des sites Web.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.privacy", 10, 1)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.privacy`](https://developer.chrome.com/extensions/privacy).
+> Cette API est basée sur l'API Chromium [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/api/privacy).
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -1,14 +1,6 @@
 ---
 title: AnalyserNode.minDecibels
 slug: Web/API/AnalyserNode/minDecibels
-tags:
-  - API
-  - AnalyserNode
-  - Property
-  - Reference
-  - Web Audio API
-  - minDecibels
-browser-compat: api.AnalyserNode.minDecibels
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -28,7 +20,8 @@ FFT 분석 데이터를 스케일링하는 것에 대한 최소 [데시벨](http
 
 `getByteFrequencyData()`로부터 데이터를 얻을 때, `minDecibels` 또는 더 낮은 진폭을 가진 모든 주파수는 `0`으로 반환됩니다.
 
-> **참고:** 만약 `AnalyserNode.maxDecibels`보다 더 큰 값이 설정된다면, `INDEX_SIZE_ERR` 예외가 발생합니다.
+> [!NOTE]
+> 만약 `AnalyserNode.maxDecibels`보다 더 큰 값이 설정된다면, `INDEX_SIZE_ERR` 예외가 발생합니다.
 
 ## 예제
 

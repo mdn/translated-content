@@ -9,7 +9,15 @@ l10n:
 
 **`getDate()`** メソッドは、地方時に基づき、指定された日付の「日」を返します。
 
-{{EmbedInteractiveExample("pages/js/date-getdate.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.getDate()", "shorter")}}
+
+```js interactive-example
+const birthday = new Date("August 19, 1975 23:15:30");
+const date1 = birthday.getDate();
+
+console.log(date1);
+// Expected output: 19
+```
 
 ## 構文
 
@@ -28,7 +36,7 @@ getDate()
 以下の 2 行目の文は、{{jsxref("Date")}} オブジェクトである `xmas95` の値に基づき、変数 `day` に 25 という値を代入します。
 
 ```js
-const xmas95 = new Date('December 25, 1995 23:15:30');
+const xmas95 = new Date("December 25, 1995 23:15:30");
 const day = xmas95.getDate();
 
 console.log(day); // 25

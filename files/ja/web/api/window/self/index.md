@@ -33,17 +33,13 @@ var w4 = window.self;
 // w1, w2, w3, w4 は厳密に等価、しかし w2 だけは worker で動作します。
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                     | 状態                             | コメント                                                               |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-self', 'Window.self')}}                 | {{Spec2('HTML WHATWG')}} | 最新のスナップショット {{SpecName("HTML5.1")}} からの変更なし |
-| {{SpecName('HTML5.1', 'browsers.html#dom-self', 'Window.self')}}     | {{Spec2('HTML5.1')}}     | {{SpecName("HTML5 W3C")}} からの変更なし                        |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-self', 'Window.self')}} | {{Spec2('HTML5 W3C')}}     | `Window.self` の定義を含む最初のスナップショット                       |
+{{Specifications}}
 
 ## ブラウザー互換性
 
-{{Compat("api.Window.self")}}
+{{Compat}}
 
 ## 関連
 

@@ -1,21 +1,9 @@
 ---
 title: downloads.showDefaultFolder()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/showDefaultFolder
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Refernce
-  - ShwoDefaultFolder
-  - Téléchargement
-  - WebExtensions
-  - downloads
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/showDefaultFolder
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`showDefaultFolder()`** de l'API {{WebExtAPIRef("downloads")}} ouvre le dossier de téléchargement par défaut dans le gestionnaire de fichiers de la plateforme.
 
@@ -29,27 +17,27 @@ browser.downloads.showDefaultFolder();
 
 Aucun
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.showDefaultFolder")}}
+{{Compat}}
 
 ## Exemples
 
 L'extrait suivant contient un bouton d'affichage qui, lorsqu'il est cliqué, appelle `showDefaultFolder()` pour ouvrir le dossier de téléchargement par défaut dans le gestionnaire de fichiers de la plateforme :
 
 ```js
-var showBtn = document.querySelector('.show');
+var showBtn = document.querySelector(".show");
 
-showBtn.onclick = function() {
+showBtn.onclick = function () {
   browser.downloads.showDefaultFolder();
-}
+};
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

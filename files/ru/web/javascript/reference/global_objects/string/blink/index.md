@@ -1,23 +1,16 @@
 ---
 title: String.prototype.blink()
 slug: Web/JavaScript/Reference/Global_Objects/String/blink
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Методы оборачивания в HTML
-translation_of: Web/JavaScript/Reference/Global_Objects/String/blink
 ---
-{{JSRef("Global_Objects", "String")}} {{deprecated_header}}
+
+{{JSRef}} {{deprecated_header}}
 
 ## Сводка
 
-Метод **`blink()`** создаёт HTML-элемент {{HTMLElement("blink")}}, заставляющий строку мерцать.
+Метод **`blink()`** создаёт HTML-элемент `<blink>`, заставляющий строку мерцать.
 
-> **Предупреждение:** мерцающий текст осуждается некоторыми стандартами доступности. Сам элемент `<blink>` является нестандартным и устаревшим!
+> [!WARNING]
+> Мерцающий текст осуждается некоторыми стандартами доступности. Сам элемент `<blink>` является нестандартным и устаревшим!
 
 ## Синтаксис
 
@@ -36,7 +29,7 @@ str.blink()
 В следующем примере демонстрируется использование нескольких строковых методов для изменения форматирования строки:
 
 ```js
-var worldString = 'Привет, мир';
+var worldString = "Привет, мир";
 
 document.write(worldString.blink());
 document.write(worldString.bold());
@@ -55,9 +48,7 @@ document.write(worldString.strike());
 
 ## Спецификации
 
-| Спецификация                                                                                         | Статус               | Комментарии                                                                                                                                                 |
-| ---------------------------------------------------------------------------------------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-string.prototype.blink', 'String.prototype.blink')}} | {{Spec2('ES6')}} | Изначальное определение. Реализована в JavaScript 1.0. Определена в (нормативном) Приложении B по Дополнительным возможностям ECMAScript для веб-браузеров. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

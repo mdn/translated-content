@@ -1,20 +1,11 @@
 ---
-title: 'CSP: sandbox'
+title: "CSP: sandbox"
 slug: Web/HTTP/Headers/Content-Security-Policy/sandbox
-tags:
-  - CSP
-  - Content-Securityè-Policy
-  - Directive
-  - HTTP
-  - Sandbox
-  - Security
-  - Sécurité
-translation_of: Web/HTTP/Headers/Content-Security-Policy/sandbox
 ---
 
 {{HTTPSidebar}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`sandbox`** active un bac à sable (_sandbox_) pour les ressources demandées similaire à l'attribut {{htmlattrxref("sandbox", "iframe")}} des éléments {{HTMLElement("iframe")}}. Elle applique des restrictions aux actions d'une page, dont le fait d'empêcher les fenêtres intruses (_popups_) et l'exécution de greffons et de scripts et de créer une contrainte de même origine.
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`sandbox`** active un bac à sable (_sandbox_) pour les ressources demandées similaire à l'attribut [`sandbox`](/fr/docs/Web/HTML/Element/iframe#sandbox) des éléments {{HTMLElement("iframe")}}. Elle applique des restrictions aux actions d'une page, dont le fait d'empêcher les fenêtres intruses (_popups_) et l'exécution de greffons et de scripts et de créer une contrainte de même origine.
 
 <table class="properties">
   <tbody>
@@ -57,7 +48,7 @@ Où `<valeur>` peut optionnellement être une valeur parmi :
 - `allow-orientation-lock`
   - : Autorise la page à désactiver la possibilité de verrouiller l'orientation de l'écran.
 - `allow-pointer-lock`
-  - : Autorise la page à utiliser l'[API Pointer Lock](/fr/docs/WebAPI/Pointer_Lock).
+  - : Autorise la page à utiliser l'[API Pointer Lock](/fr/docs/Web/API/Pointer_Lock_API).
 - `allow-popups`
   - : Autorise les fenêtres intruses (comme avec `window.open`, `target="_blank"`, `showModalDialog`). Si ce mot-clé n'est pas utilisée, cette fonctionnalité échouera en silence.
 - `allow-popups-to-escape-sandbox`
@@ -92,4 +83,4 @@ Content-Security-Policy: sandbox allow-scripts;
 ## Voir aussi
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- {{htmlattrxref("sandbox", "iframe")}} attribute on {{HTMLElement("iframe")}} elements
+- [`sandbox`](/fr/docs/Web/HTML/Element/iframe#sandbox) attribute on {{HTMLElement("iframe")}} elements

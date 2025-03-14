@@ -1,13 +1,6 @@
 ---
 title: shape
 slug: Web/CSS/@media/shape
-tags:
-  - '@media'
-  - CSS
-  - Caractéristique média
-  - Reference
-  - Règle @
-translation_of: Web/CSS/@media/shape
 ---
 
 {{CSSRef}} {{Non-standard_header}}
@@ -25,7 +18,8 @@ La caractéristique `shape` peut prendre une valeur parmi deux valeurs définies
 
 ## Exemples
 
-> **Note :** Aucun navigateur n'implémente actuellement cette fonctionnalité.
+> [!NOTE]
+> Aucun navigateur n'implémente actuellement cette fonctionnalité.
 
 ### Exemple simple
 
@@ -65,18 +59,19 @@ Ce fragment de code HTML permettra d'appliquer une feuille de style particulièr
 
 ```html
 <head>
-    <link rel="stylesheet" href="default.css" />
-    <link media="screen and (shape: rect)" rel="stylesheet" href="rectangle.css" />
-    <link media="screen and (shape: round)" rel="stylesheet" href="round.css" />
+  <link rel="stylesheet" href="default.css" />
+  <link
+    media="screen and (shape: rect)"
+    rel="stylesheet"
+    href="rectangle.css" />
+  <link media="screen and (shape: round)" rel="stylesheet" href="round.css" />
 </head>
 ```
 
 ## Spécifications
 
-| Spécification                                                              | État      | Commentaires         |
-| -------------------------------------------------------------------------- | --------- | -------------------- |
-| _[CSS Round Display Level 1](https://drafts.csswg.org/css-round-display/)_ | Brouillon | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.shape")}}
+{{Compat}}

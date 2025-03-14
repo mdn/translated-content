@@ -1,13 +1,11 @@
 ---
 title: Functions
 slug: Web/XPath/Functions
-tags:
-  - XPath
-  - XPath_Reference
-  - XSLT_Reference
-translation_of: Web/XPath/Functions
 ---
-{{ XsltRef() }} 다음은 설명, 문법, 인수 목록, 결과형, 해당 W3C 권고안 소스, 현 [Gecko](ko/Gecko) 지원 정도를 포함하는 기본 [XPath](ko/XPath) 함수와 XPath에 더해진 [XSLT](ko/XSLT) 고유의 추가분에 주석을 단 목록입니다. XPath/XSLT 함수 사용에 관한 추가 정보는, [For Further Reading](ko/Transforming_XML_with_XSLT/For_Further_Reading) 페이지를 봐 주세요.
+
+{{XsltSidebar}}
+
+{{ XsltRef() }} 다음은 설명, 문법, 인수 목록, 결과형, 해당 W3C 권고안 소스, 현 [Gecko](/ko/Gecko) 지원 정도를 포함하는 기본 [XPath](/ko/XPath) 함수와 XPath에 더해진 [XSLT](/ko/XSLT) 고유의 추가분에 주석을 단 목록입니다. XPath/XSLT 함수 사용에 관한 추가 정보는, [For Further Reading](/ko/Transforming_XML_with_XSLT/For_Further_Reading) 페이지를 봐 주세요.
 
 - [boolean()](Functions/boolean)
 - [ceiling()](Functions/ceiling)
@@ -16,7 +14,7 @@ translation_of: Web/XPath/Functions
 - [count()](Functions/count)
 - [current()](Functions/current)
   _XSLT 고유_
-- [document()](ko/Functions/document)
+- [document()](/ko/Functions/document)
   _XSLT 고유_
 - [element-available()](Functions/element-available)
 - [false()](Functions/false)

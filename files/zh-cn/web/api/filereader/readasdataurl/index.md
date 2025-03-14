@@ -1,43 +1,59 @@
 ---
-title: FileReader.readAsDataURL()
+title: FileReader：readAsDataURL() 方法
 slug: Web/API/FileReader/readAsDataURL
+l10n:
+  sourceCommit: 6b730e3cfdf0f51940b44efa71bd59c84ce76e71
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-`readAsDataURL` 方法会读取指定的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象。读取操作完成的时候，{{domxref("FileReader.readyState","readyState")}} 会变成已完成`DONE`，并触发 [`loadend`](/zh-CN/docs/Web/API/XMLHttpRequest/loadend_event) 事件，同时 {{domxref("FileReader.result","result")}} 属性将包含一个`data:`URL 格式的字符串（base64 编码）以表示所读取文件的内容。
+{{domxref("FileReader")}} 接口的 **`readAsDataURL()`** 方法用于读取指定的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象的内容。当读操作完成时，{{domxref("FileReader.readyState","readyState")}} 属性变为 `DONE`，并触发 {{domxref("FileReader/loadend_event", "loadend")}} 事件。此时，{{domxref("FileReader.result","result")}} 属性包含作为 [data: URL](/zh-CN/docs/Web/URI/Reference/Schemes/data) 的数据，将文件的数据表示为 base64 编码字符串。
+
+> [!NOTE]
+> 如果不先删除 Base64 编码数据前面的 Data-URL 声明，则 blob 的 {{domxref("FileReader.result","result")}} 无法直接解码为 Base64。要仅检索 Base64 编码的字符串，请首先从结果中删除 `data:*/*;base64,`。
 
 ## 语法
 
-```
-instanceOfFileReader.readAsDataURL(blob);
+```js-nolint
+readAsDataURL(blob)
 ```
 
 ### 参数
 
 - `blob`
-  - : 即将被读取的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象。
+  - : 从中读取的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
-### HTML
+### 读取单个文件
+
+#### HTML
 
 ```html
-<input type="file" onchange="previewFile()"><br>
-<img src="" height="200" alt="Image preview...">
+<input type="file" onchange="previewFile()" /><br />
+<img src="" height="200" alt="图片预览" />
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 function previewFile() {
-  var preview = document.querySelector('img');
-  var file    = document.querySelector('input[type=file]').files[0];
-  var reader  = new FileReader();
+  const preview = document.querySelector("img");
+  const file = document.querySelector("input[type=file]").files[0];
+  const reader = new FileReader();
 
-  reader.addEventListener("load", function () {
-    preview.src = reader.result;
-  }, false);
+  reader.addEventListener(
+    "load",
+    () => {
+      // 将图像文件转换为 Base64 字符串
+      preview.src = reader.result;
+    },
+    false,
+  );
 
   if (file) {
     reader.readAsDataURL(file);
@@ -45,54 +61,59 @@ function previewFile() {
 }
 ```
 
-### 演示
+#### 结果
 
-{{EmbedLiveSample("示例", "100%", 240)}}
+{{EmbedLiveSample("读取单个文件", "100%", 240)}}
 
-## 读取多个文件的例子
+### 读取多个文件
 
-### HTML
+#### HTML
 
 ```html
-<input id="browse" type="file" onchange="previewFiles()" multiple>
+<input id="browse" type="file" multiple />
 <div id="preview"></div>
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 function previewFiles() {
-
-  var preview = document.querySelector('#preview');
-  var files   = document.querySelector('input[type=file]').files;
+  const preview = document.querySelector("#preview");
+  const files = document.querySelector("input[type=file]").files;
 
   function readAndPreview(file) {
+    // 确保 `file.name` 符合我们的文件扩展名标准
+    if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
+      const reader = new FileReader();
 
-    // 确保 `file.name` 符合我们要求的扩展名
-    if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
-      var reader = new FileReader();
-
-      reader.addEventListener("load", function () {
-        var image = new Image();
-        image.height = 100;
-        image.title = file.name;
-        image.src = this.result;
-        preview.appendChild( image );
-      }, false);
+      reader.addEventListener(
+        "load",
+        () => {
+          const image = new Image();
+          image.height = 100;
+          image.title = file.name;
+          image.src = reader.result;
+          preview.appendChild(image);
+        },
+        false,
+      );
 
       reader.readAsDataURL(file);
     }
-
   }
 
   if (files) {
-    [].forEach.call(files, readAndPreview);
+    Array.prototype.forEach.call(files, readAndPreview);
   }
-
 }
+
+const picker = document.querySelector("#browse");
+picker.addEventListener("change", previewFiles);
 ```
 
-> **备注：** Internet Explorer 10 之前的版本并不支持 [`FileReader()`](/zh-CN/docs/Web/API/FileReader) 。关于图片文件预览的兼容性解决方案，可以查看 [crossbrowser possible solution for image preview](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html) 或者 [this more powerful example](https://mdn.mozillademos.org/files/3698/image_upload_preview.html) 。
+#### 结果
+
+{{EmbedLiveSample("读取多个文件", "100%", 240)}}
 
 ## 规范
 
@@ -105,6 +126,4 @@ function previewFiles() {
 ## 参见
 
 - {{domxref("FileReader")}}
-- {{domxref("URL.createObjectURL()")}}
-
-{{APIRef("File API")}}
+- {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}

@@ -1,13 +1,6 @@
 ---
 title: ExtendableMessageEvent.ExtendableMessageEvent()
 slug: Web/API/ExtendableMessageEvent/ExtendableMessageEvent
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Reference
-  - Service Workers
-translation_of: Web/API/ExtendableMessageEvent/ExtendableMessageEvent
 ---
 
 {{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
@@ -38,12 +31,12 @@ var myEME = new ExtendableMessageEvent(type, init);
 
 ```js
 var init = {
-             data : 'Message de bienvenue',
-             source : MessagePortReference,
-             ports : MessagePortListReference
-           }
+  data: "Message de bienvenue",
+  source: MessagePortReference,
+  ports: MessagePortListReference,
+};
 
-var myEME = new ExtendableMessageEvent('message', init);
+var myEME = new ExtendableMessageEvent("message", init);
 ```
 
 ## Spécifications
@@ -56,7 +49,7 @@ var myEME = new ExtendableMessageEvent('message', init);
 
 ## Voir aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Exemple simple de service workers](https://github.com/mdn/sw-test)
 - [Les Services Workers sont-ils prêts ?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Canal de messages](/fr/docs/Web/API/Channel_Messaging_API)

@@ -1,26 +1,24 @@
 ---
 title: MitM
 slug: Glossary/MitM
-tags:
-  - Attaque
-  - Glossaire
-  - Sécurité
-translation_of: Glossary/MitM
-original_slug: Glossaire/MitM
+l10n:
+  sourceCommit: 37bd8d794902f05bbb638eb3505cb87ccf38a992
 ---
 
-Une **attaque de l'homme du milieu** (Man-in-the-middle attack ou MitM) intercepte une communication entre deux systèmes. Par exemple, un routeur Wi-Fi peut être compromis.
+{{GlossarySidebar}}
 
-En comparant cela au courrier physique : si vous échangez des lettres, le facteur peut intercepter chaque lettre que vous postez. Il l'ouvre, la lit, la modifie finalement, puis la reconditionne et seulement ensuite l'envoie à son destinataire initial. Celui-ci vous répond par lettre postée, et à nouveau, le facteur l'ouvre, la lit, la modifie éventuellement, la reconditionne et vous la remet. Vous ne savez pas qu'il y a un homme au milieu de votre canal de communication - le facteur est invisible pour vous et votre destinataire.
+Une **attaque du monstre du milieu** (en anglais <i lang="en">manipulator-in-the-middle attack</i>, abrégé en MitM) ou aussi attaque de l'homme du milieu consiste à intercepter une communication entre deux systèmes. Cela peut par exemple se produit lorsqu'un routeur Wi-Fi a été compromis.
 
-Dans le courrier physique et la communication en ligne, il est difficile de se défendre contre les attaques MitM. Quelques conseils :
+Prenons une analogie avec le courrier postal&nbsp;: si vous échangez des lettres, la factrice ou le facteur peut intercepter chaque lettre que vous postez&nbsp;: l'ouvrir, la lire, la modifier, puis la reconditionner et ensuite l'envoyer au destinataire initial. Lorsque ce dernier vous répond par courrier, à nouveau, la factrice ou le facteur peut l'ouvrir, la lire, la modifier éventuellement, la renvelopper et vous la remettre. Vous ne savez pas que votre courrier a été intercepté, le circuit de distribution du courrier est invisible pour vous et votre destinataire.
 
-- Ne pas ignorer les avertissements de certificat. Vous pourriez être connecté à un serveur d'hameçonnage ou à un serveur imposteur.
-- Les sites sensibles sans cryptage HTTPS sur les réseaux Wi-Fi publics ne sont pas fiables.
-- Vérifiez "HTTPS" dans votre barre d'adresse et assurez-vous que le chiffrement est en place avant de vous connecter.
+Qu'il s'agisse du courrier postal ou des communications électroniques, il est difficile de se défendre contre les attaques MitM. Voici quelques conseils&nbsp;:
+
+- N'ignorez pas les avertissements liés aux certificats. Vous pourriez être connecté à un serveur d'hameçonnage ou à un serveur imposteur.
+- Les sites sensibles qui ne sont pas chiffrés à l'aide de HTTPS ne sont pas fiables sur les réseaux Wi-Fi publics.
+- Avant de vous authentifier sur un site, vérifiez dans la barre d'URL que son adresse commence bien par `https://`, ce qui indique que le chiffrement est en place.
 
 ## Voir aussi
 
-- Article OWASP : [Man-in-the-middle attack](https://www.owasp.org/index.php/Man-in-the-middle_attack) (en)
-- Wikipédia : [Attaque de l'homme du milieu](https://fr.wikipedia.org/wiki/Attaque_de_l%27homme_du_milieu)
-- L'en-tête {{HTTPHeader("Public-Key-Pins")}} ({{Glossary("HPKP")}}) peut significativement réduire le risque d'attaque MitM en demandant aux navigateurs d'exiger des certificats valides (liste blanche) pour toute connexion ultérieure à ce site.
+- [La page OWASP sur les attaques du monstre du milieu (en anglais)](https://owasp.org/www-community/attacks/Manipulator-in-the-middle_attack)
+- Le site PortSwigger&nbsp;: [les dernières actualités concernant les attaques du monstre du milieu (en anglais)](https://portswigger.net/daily-swig/mitm)
+- [La page Wikipédia correspondante](https://fr.wikipedia.org/wiki/Attaque_de_l%27homme_du_milieu)

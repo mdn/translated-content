@@ -11,15 +11,15 @@ O elemento HTML **`<aside>`** representa uma seção de uma página que consiste
 >
 > - **Não use** o elemento `<aside>` para texto entre parenteses, pois este tipo de texto é considerado parte do fluxo principal.
 
-- _[Categoria de conteudo](/pt-BR/docs/HTML/Content_categories)_ [Conteudo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content), conteudo de secionamento, conteudo palpavel.
-- _Conteudo permitido_ [Conteudo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content).
+- _[Categoria de conteudo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteudo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), conteudo de secionamento, conteudo palpavel.
+- _Conteudo permitido_ [Conteudo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content).
 - _Omissao de tag_ Nenhuma, ambas as tags de início e fim são obrigatórias.
-- _Elementos pai permitidos_ Qualquer elemento que aceita [conteudo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content). Note que um elemento `<aside>` nao deve ser descendente de um elemento {{HTMLElement("address")}}.
+- _Elementos pai permitidos_ Qualquer elemento que aceita [conteudo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content). Note que um elemento `<aside>` nao deve ser descendente de um elemento {{HTMLElement("address")}}.
 - _Interface DOM_ {{domxref("HTMLElement")}}
 
 ## Atributos
 
-Este elemento inclui apenas os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 ## Exemplos
 
@@ -31,14 +31,11 @@ Este elemento inclui apenas os [atributos globais](/pt-BR/docs/HTML/Global_attri
 
 ## Especificações
 
-| Especificaçao                                                                                                                                     | Status                           | Comentario |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'sections.html#the-aside-element', '&lt;aside&gt;')}}                                          | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'the-aside-element.html#the-aside-element', '&lt;aside&gt;')}} {{todo("brokenLink")}} | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.aside")}}
+{{Compat}}
 
 ## Veja também
 

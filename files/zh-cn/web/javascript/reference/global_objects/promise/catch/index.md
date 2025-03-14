@@ -1,123 +1,181 @@
 ---
 title: Promise.prototype.catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
+l10n:
+  sourceCommit: c08b415e28c07247ab8ef41c504f29d94f5bee6f
 ---
 
 {{JSRef}}
 
-**catch()** 方法返回一个[Promise](/zh-CN/docs/Web/API/Promise)，并且处理拒绝的情况。它的行为与调用{{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} 相同。(事实上，calling `obj.catch(onRejected)` 内部 calls `obj.then(undefined, onRejected)`).
+{{jsxref("Promise")}} 实例的 **`catch()`** 方法用于注册一个在 promise 被拒绝时调用的函数。它会立即返回一个等效的 {{jsxref("Promise")}} 对象，这可以允许你[链式](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#链式调用)调用其他 promise 的方法。此方法是 {{jsxref("Promise/then", "Promise.prototype.then(undefined, onRejected)")}} 的一种简写形式。
+
+{{InteractiveExample("JavaScript Demo: Promise.catch()")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  throw new Error("Uh-oh!");
+});
+
+promise1.catch((error) => {
+  console.error(error);
+});
+// Expected output: Error: Uh-oh!
+```
 
 ## 语法
 
-```plain
-p.catch(onRejected);
-
-p.catch(function(reason) {
-   // 拒绝
-});
+```js-nolint
+catch(onRejected)
 ```
 
 ### 参数
 
-- **onRejected**
-  - : 当 Promise 被 rejected 时，被调用的一个{{jsxref("Function")}}。该函数拥有一个参数：`reason` rejection 的原因。如果 `onRejected` 抛出一个错误或返回一个本身失败的 Promise，通过 `catch()` 返回的 Promise 被 rejected；否则，它将显示为成功（resolved）。
+- `onRejected`
+  - : 一个在此 Promise 对象被拒绝时异步执行的函数。它的返回值将成为 `catch()` 返回的 Promise 对象的兑现值。此函数被调用时将传入以下参数：
+    - `reason`
+      - : Promise 对象的拒绝值。
 
 ### 返回值
 
-一个{{jsxref("Promise")}}.
+返回一个新的 {{jsxref("Promise")}}，无论当前的 promise 状态如何，这个新的 promise 在返回时总是处于待定（pending）状态。如果调用了 `onRejected`，则返回的 promise 将根据此调用的返回值进行兑现，或者使用此调用引发的错误进行拒绝。如果当前的 promise 已兑现，则 `onRejected` 不会被调用，并且返回的 promise 具有相同的兑现值。
 
 ## 描述
 
-`catch` 方法可以用于您的 promise 组合中的错误处理。
+`catch` 方法用于在 Promise 链进行错误处理，因为它总是会返回一个 {{jsxref("Promise")}}，所以它可以和 {{jsxref("Promise/then", "then()")}} 方法一样被[链式调用](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#catch_的后续链式操作)。
 
-Internally calls `Promise.prototype.then` on the object upon which is called, passing the parameters `undefined` and the `onRejected` handler received; then returns the value of that call (which is a {{jsxref("Promise")}}).
+如果一个 promise 被拒绝并且没有可调用的拒绝处理器（处理器可以是 {{jsxref("Promise.prototype.then()")}}、{{jsxref("Promise.prototype.catch()")}} 或 {{jsxref("Promise.prototype.finally()")}}），则拒绝事件由宿主环境来提供。在浏览器中，这将触发 [`unhandledrejection`](/zh-CN/docs/Web/API/Window/unhandledrejection_event) 事件。如果将一个处理器附加到一个已被拒绝，且已导致未处理的拒绝事件的 promise，将会触发 [`rejectionhandled`](/zh-CN/docs/Web/API/Window/rejectionhandled_event) 事件。
+
+`catch()` 方法内部会调用当前 promise 对象的 `then()` 方法，并将 `undefined` 和 `onRejected` 作为参数传递给 `then()`。该调用的返回值直接被返回。如果你对这些方法进行封装，这一点是可以观察到的。
+
+```js
+// 重写原本的 Promise.prototype.then/catch 方法，只是为了添加一些日志
+((Promise) => {
+  const originalThen = Promise.prototype.then;
+  const originalCatch = Promise.prototype.catch;
+
+  Promise.prototype.then = function (...args) {
+    console.log("在 %o 上调用 .then 方法，参数为：%o", this, args);
+    return originalThen.apply(this, args);
+  };
+  Promise.prototype.catch = function (...args) {
+    console.error("在 %o 上调用 .catch 方法，参数为：%o", this, args);
+    return originalCatch.apply(this, args);
+  };
+})(Promise);
+
+// 对已经解决的 Promise 调用 catch
+Promise.resolve().catch(function XXX() {});
+
+// 输出：
+// 在 Promise{} 上调用 .catch，参数为：Arguments{1} [0: function XXX()]
+// 在 Promise{} 上调用 .then，参数为：Arguments{2} [0: undefined, 1: function XXX()]
+```
+
+这意味着传入 `undefined` 仍然会导致返回的 promise 被拒绝，你必须传入一个函数来防止最终的 promise 被拒绝。
+
+因为 `catch()` 只是单纯的调用了 `then()`，它支持子类化。
+
+> [!NOTE]
+> 下面的示例抛出了 [`Error`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error) 的实例。与同步的 [`throw`](/zh-CN/docs/Web/JavaScript/Reference/Statements/throw) 语句一样，这被认为是一种良好的实践；否则，执行捕获的部分将不得不对参数进行检查，以查看它是字符串还是错误，并且你可能会丢失有用的信息，例如堆栈跟踪。
 
 ## 示例
 
-### 使用链式语句的 `catch` 方法
+### 在链式调用中使用 catch() 方法
 
 ```js
-var p1 = new Promise(function(resolve, reject) {
-  resolve('Success');
+const p1 = new Promise((resolve, reject) => {
+  resolve("成功！");
 });
 
-p1.then(function(value) {
-  console.log(value); // "Success!"
-  throw 'oh, no!';
-}).catch(function(e) {
-  console.log(e); // "oh, no!"
-}).then(function(){
-  console.log('after a catch the chain is restored');
-}, function () {
-  console.log('Not fired due to the catch');
+p1.then((value) => {
+  console.log(value); // "成功！"
+  throw new Error("噢，不！");
+})
+  .catch((e) => {
+    console.error(e.message); // "噢，不！"
+  })
+  .then(
+    () => console.log("在 catch 后，调用链恢复了"),
+    () => console.log("因为有了 catch 而不会被触发"),
+  );
+
+// 下面的行为与上面相同
+p1.then((value) => {
+  console.log(value); // "成功！"
+  return Promise.reject("噢，不！");
+})
+  .catch((e) => {
+    console.error(e); // "噢，不！"
+  })
+  .then(
+    () => console.log("在 catch 后，调用链恢复了"),
+    () => console.log("因为有了 catch 而不会被触发"),
+  );
+```
+
+### 抛出错误时的陷阱
+
+大多数情况下，抛出错误会调用 `catch()` 方法：
+
+```js
+const p1 = new Promise((resolve, reject) => {
+  throw new Error("哦吼！");
 });
 
-// 以下行为与上述相同
-p1.then(function(value) {
-  console.log(value); // "Success!"
-  return Promise.reject('oh, no!');
-}).catch(function(e) {
-  console.log(e); // "oh, no!"
-}).then(function(){
-  console.log('after a catch the chain is restored');
-}, function () {
-  console.log('Not fired due to the catch');
+p1.catch((e) => {
+  console.error(e); // "哦吼！"
 });
 ```
 
-### 捕获抛出的错误
+在异步函数内部抛出的错误会像未捕获的错误一样：
 
 ```js
-// 抛出一个错误，大多数时候将调用 catch 方法
-var p1 = new Promise(function(resolve, reject) {
-  throw 'Uh-oh!';
-});
-
-p1.catch(function(e) {
-  console.log(e); // "Uh-oh!"
-});
-
-// 在异步函数中抛出的错误不会被 catch 捕获到
-var p2 = new Promise(function(resolve, reject) {
-  setTimeout(function() {
-    throw 'Uncaught Exception!';
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    throw new Error("未捕获的异常！");
   }, 1000);
 });
 
-p2.catch(function(e) {
-  console.log(e); // 不会执行
-});
-
-// 在 resolve() 后面抛出的错误会被忽略
-var p3 = new Promise(function(resolve, reject) {
-  resolve();
-  throw 'Silenced Exception!';
-});
-
-p3.catch(function(e) {
-   console.log(e); // 不会执行
+p2.catch((e) => {
+  console.error(e); // 永远不会被调用
 });
 ```
 
-### 如果已决议
+在调用 `resolve` 之后抛出的错误会被忽略：
 
 ```js
-//创建一个新的 Promise，且已决议
-var p1 = Promise.resolve("calling next");
-
-var p2 = p1.catch(function (reason) {
-    //这个方法永远不会调用
-    console.log("catch p1!");
-    console.log(reason);
+const p3 = new Promise((resolve, reject) => {
+  resolve();
+  throw new Error("Silenced Exception!");
 });
 
-p2.then(function (value) {
-    console.log("next promise's onFulfilled"); /* next promise's onFulfilled */
-    console.log(value); /* calling next */
-}, function (reason) {
-    console.log("next promise's onRejected");
-    console.log(reason);
+p3.catch((e) => {
+  console.error(e); // 这里永远不会执行
 });
+```
+
+### 如果 Promise 已兑现，catch() 不会被调用
+
+```js
+// 创建一个不会调用 onReject 的 Promise
+const p1 = Promise.resolve("调用下一个");
+
+const p2 = p1.catch((reason) => {
+  // 这里永远不会执行
+  console.error("p1 的 catch 函数被调用了！");
+  console.error(reason);
+});
+
+p2.then(
+  (value) => {
+    console.log("下一个 Promise 的 onFulfilled 函数被调用了");
+    console.log(value); // 调用下一个
+  },
+  (reason) => {
+    console.log("下一个 Promise 的 onRejected 函数被调用了");
+    console.log(reason);
+  },
+);
 ```
 
 ## 规范
@@ -128,7 +186,8 @@ p2.then(function (value) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.prototype.then()")}}
+- {{jsxref("Promise.prototype.finally()")}}

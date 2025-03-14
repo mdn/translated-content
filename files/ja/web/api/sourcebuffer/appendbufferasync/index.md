@@ -1,58 +1,56 @@
 ---
 title: SourceBuffer.appendBufferAsync()
 slug: Web/API/SourceBuffer/appendBufferAsync
+l10n:
+  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
-{{APIRef("Media Source Extensions")}}{{non-standard_header}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}{{Non-standard_Header}}{{SeeCompatTable}}
 
-{{domxref("SourceBuffer")}} インターフェイスの **`appendBufferAsync()`** メソッドは、{{jsxref("ArrayBuffer")}} または {{domxref("ArrayBufferView")}} オブジェクトから `SourceBuffer` にメディアセグメントデータを非同期的に追加するプロセスを開始します。 バッファが追加されると満たされる {{jsxref("Promise")}} を返します。
+**`appendBufferAsync()`** は {{domxref("SourceBuffer")}} インターフェイスのメソッドで、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} のいずれかのオブジェクトから `SourceBuffer` にメディアセグメントデータを非同期的に追加するプロセスを開始します。 バッファーが追加されると履行される {{jsxref("Promise")}} を返します。
 
 ## 構文
 
-```
-appendPromise = sourceBuffer.appendBufferAsync(source);
+```js-nolint
+appendBufferAsync(source)
 ```
 
-### パラメーター
+### 引数
 
 - `source`
-  - : `SourceBuffer` に追加するメディアセグメントデータを含む {{domxref("BufferSource")}}（つまり、{{domxref("ArrayBufferView")}} または {{jsxref("ArrayBuffer")}}）。
+  - : {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} のいずれかのオブジェクトで、 `SourceBuffer` に追加するメディアセグメントデータが入ったもの。
 
-### 戻り値
+### 返値
 
-バッファが `SourceBuffer` に正常に追加されたときに満たされる {{jsxref("Promise")}}、または要求を開始できなかった場合は `null`。
+バッファーが `SourceBuffer` に正常に追加されたときに履行される {{jsxref("Promise")}}、または要求を開始できなかった場合は `null`。
 
 ## 例
 
-この単純化された非同期関数の例 `fillSourceBuffer()` は、入力パラメーターとして {{domxref("BufferSource")}} の `buffer`、およびバッファからソースメディアを追加する `SourceBuffer` を受け取ります。
+この単純化された非同期関数の例 `fillSourceBuffer()` は、入力引数 `buffer` として{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} のいずれかのオブジェクトと、そのバッファーからソースメディアを追加する `SourceBuffer` を受け取ります。
 
 ```js
 async function fillSourceBuffer(buffer, msBuffer) {
   try {
-    while(true) {
+    while (true) {
       await msBuffer.appendBufferAsync(buffer);
     }
-  } catch(e) {
+  } catch (e) {
     handleException(e);
   }
 }
 ```
 
-## 仕様
+## 仕様書
 
-現在、仕様の一部ではありません。 これは、**Web Platform Incubator Community Group**（WICG）の後援の下で実験されています。
-
-| 仕様                                                 | 状態                                             | コメント                               |
-| ---------------------------------------------------- | ------------------------------------------------ | -------------------------------------- |
-| {{SpecName('Media Source Extensions')}} | {{Spec2('Media Source Extensions')}} | 初期定義、このメソッドは含まれません。 |
+この機能は、どの仕様にも属しません。標準化の予定もありません。
 
 ## ブラウザーの互換性
 
-{{Compat("api.SourceBuffer.appendBufferAsync")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Media Source Extensions API](/ja/docs/Web/API/Media_Source_Extensions_API)
+- [メディアソース拡張 API](/ja/docs/Web/API/Media_Source_Extensions_API)
 - {{domxref("SourceBuffer.appendBuffer()")}}
 - {{domxref("MediaSource")}}
 - {{domxref("SourceBufferList")}}

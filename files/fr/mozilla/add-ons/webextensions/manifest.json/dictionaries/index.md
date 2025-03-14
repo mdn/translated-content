@@ -1,12 +1,6 @@
 ---
 title: dictionaries
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/dictionaries
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-  - manifest.json
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/dictionaries
 ---
 
 {{AddonSidebar}}
@@ -46,4 +40,4 @@ Les clés des `dictionaries` specifie le `locale_code` pour lequel votre extensi
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.dictionaries")}}
+{{Compat}}

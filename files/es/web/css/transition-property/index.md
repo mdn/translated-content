@@ -1,15 +1,9 @@
 ---
 title: transition-property
 slug: Web/CSS/transition-property
-tags:
-  - CSS
-  - Propiedad CSS
-  - Referencia
-  - Transiciones CSS
-translation_of: Web/CSS/transition-property
 ---
 
-{{CSSRef("CSS Transitions")}}
+{{CSSRef}}
 
 La propiedad CSS **`transition-property`** se usa para definir los nombres de las propiedades CSS en las que el efecto de la transición debe aplicarse.
 
@@ -24,7 +18,10 @@ transition-property: sliding-vertically;
 transition-property: test1;
 transition-property: test1, animation4;
 transition-property: all, height, all;
-transition-property: all, -moz-specific, sliding;
+transition-property:
+  all,
+  -moz-specific,
+  sliding;
 
 /* Global values */
 transition-property: inherit;
@@ -32,7 +29,8 @@ transition-property: initial;
 transition-property: unset;
 ```
 
-> **Nota:** El [conjunto de propiedades que puede ser animado](/es/docs/Web/CSS/CSS_animated_properties) está sujeto a cambios. Por lo tanto deberías evitar incluir en la lista cualquiera de las propiedades que actualmente no puede animarse, aunque algún día pudieran, ya que podría causar resultados inesperados.
+> [!NOTE]
+> El [conjunto de propiedades que puede ser animado](/es/docs/Web/CSS/CSS_animated_properties) está sujeto a cambios. Por lo tanto deberías evitar incluir en la lista cualquiera de las propiedades que actualmente no puede animarse, aunque algún día pudieran, ya que podría causar resultados inesperados.
 
 Si se especifica una propiedad abreviada (por ejemplo , {{cssxref("background")}}) todas sus subpropiedades que soporten animación serán animadas.
 
@@ -55,7 +53,7 @@ Si se especifica una propiedad abreviada (por ejemplo , {{cssxref("background")}
 
 ## Ejemplos
 
-Hay varios ejemplos de transiciones CSS incluídos en el artículo principal [Transiciones CSS.](/es/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+Hay varios ejemplos de transiciones CSS incluídos en el artículo principal [Transiciones CSS.](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 
 ## Especificaciones
 
@@ -63,9 +61,9 @@ Hay varios ejemplos de transiciones CSS incluídos en el artículo principal [Tr
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.transition-property")}}
+{{Compat}}
 
 ## Véase también
 
-- [Usando transiciones CSS](/es/docs/Web/Guide/CSS/Using_CSS_transitions)
+- [Usando transiciones CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{domxref("TransitionEvent")}}

@@ -25,7 +25,7 @@ l10n:
 {{domxref("HID.requestDevice","requestDevice()")}} メソッドを用いてデバイスに接続できます。この場合、利用可能な全てのデバイスの中から選択することになります。
 
 ```js
-const device = await navigator.hid.requestDevice({filters: []})
+const device = await navigator.hid.requestDevice({ filters: [] });
 // デバイスを選択するためのリストと「接続」「キャンセル」のボタンがある「... が HID デバイスへの接続を要求しています」というタイトルのポップアップが現れます。
 // 1個選択し、「接続」ボタンをクリックしてください。すると、選択されたデバイスが入った配列が device に格納されます。
 ```
@@ -35,16 +35,16 @@ const device = await navigator.hid.requestDevice({filters: []})
 ```js
 let devices = await navigator.hid.getDevices();
 devices.forEach((device) => {
-    console.log(`HID: ${device.productName}`);
+  console.log(`HID: ${device.productName}`);
 });
 ```
 
 任意の HID デバイスの切断に反応するイベントリスナーを登録できます。
 
 ```js
-navigator.hid.addEventListener('disconnect', (event) => {
-    console.log(`HID disconnected: ${event.device.productName}`);
-    console.dir(event)
+navigator.hid.addEventListener("disconnect", (event) => {
+  console.log(`HID disconnected: ${event.device.productName}`);
+  console.dir(event);
 });
 // 例えば、キーボードが切断される時、コンソールに以下のログが記録されるでしょう。
 // HID disconnected: USB Keyboard

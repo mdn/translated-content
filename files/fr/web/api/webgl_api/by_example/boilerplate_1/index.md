@@ -1,14 +1,6 @@
 ---
 title: Modèle 1
 slug: Web/API/WebGL_API/By_example/Boilerplate_1
-tags:
-  - Apprendre
-  - Débutant
-  - Exemple
-  - Tutoriel
-  - WebGL
-translation_of: Web/API/WebGL_API/By_example/Boilerplate_1
-original_slug: Web/API/WebGL_API/By_example/Modèle_1
 ---
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL","Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique")}}
@@ -43,28 +35,29 @@ Enfin, tout le code JavaScript est exécuté par une fonction immédiatement app
 ```html
 <p>[ Un texte qui décrit l'exemple. ]</p>
 <button>[ Un bouton optionnel pour les interactions. ]</button>
-<canvas>Il semblerait que votre navigateur ne supporte
-    pas le canevas HTML5.</canvas>
+<canvas
+  >Il semblerait que votre navigateur ne supporte pas le canevas HTML5.</canvas
+>
 ```
 
 ```css
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  display : block;
-  width : 280px;
-  height : 210px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  display: block;
+  width: 280px;
+  height: 210px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 button {
-  display : block;
-  font-size : inherit;
-  margin : auto;
-  padding : 0.6em;
+  display: block;
+  font-size: inherit;
+  margin: auto;
+  padding: 0.6em;
 }
 ```
 
@@ -73,18 +66,18 @@ function getRenderingContext() {
   var canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
-  var gl = canvas.getContext("webgl")
-    || canvas.getContext("experimental-webgl");
+  var gl =
+    canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
   if (!gl) {
     var paragraph = document.querySelector("p");
-    paragraph.innerHTML = "Échec de l'obtention du "
-      + "contexte WebGL."
-      + "Votre navigateur ou appareil ne supporte "
-      + "peut-être pas WebGL.";
+    paragraph.innerHTML =
+      "Échec de l'obtention du " +
+      "contexte WebGL." +
+      "Votre navigateur ou appareil ne supporte " +
+      "peut-être pas WebGL.";
     return null;
   }
-  gl.viewport(0, 0,
-    gl.drawingBufferWidth, gl.drawingBufferHeight);
+  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
   gl.clearColor(0.0, 0.0, 0.0, 1.0);
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;

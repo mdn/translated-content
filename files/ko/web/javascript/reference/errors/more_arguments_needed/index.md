@@ -1,7 +1,6 @@
 ---
-title: 'TypeError: More arguments needed'
+title: "TypeError: More arguments needed"
 slug: Web/JavaScript/Reference/Errors/More_arguments_needed
-translation_of: Web/JavaScript/Reference/Errors/More_arguments_needed
 ---
 
 {{jsSidebar("Errors")}}
@@ -45,4 +44,4 @@ var obj = Object.setPrototypeOf({}, null);
 
 ## 참조
 
-- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/ko/docs/Web/JavaScript/Guide/Functions)

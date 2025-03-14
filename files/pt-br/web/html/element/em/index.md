@@ -1,5 +1,5 @@
 ---
-title: '<em>: O elemento de ênfase'
+title: "<em>: O elemento de ênfase"
 slug: Web/HTML/Element/em
 ---
 
@@ -34,7 +34,7 @@ O **elemento** **HTML** **`<em>`** marca o texto que tem ênfase. O elemento \<e
     </tr>
     <tr>
       <th scope="row">Omissão de tag</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Pais permitidos</th>
@@ -76,8 +76,7 @@ O elemento `<em>` é frequentemente usado para indicar um contraste implícito o
 ```html
 <p>
   Em HTML 5, o que anteriormente era chamado de conteúdo
-  <em>block-level</em> agora é chamado de conteúdo
-  <em>flow</em> .
+  <em>block-level</em> agora é chamado de conteúdo <em>flow</em> .
 </p>
 ```
 
@@ -97,15 +96,11 @@ Um exemplo para `<i>` poderia ser: "A _Rainha Mary_ velejou na noite passada". A
 
 ## Especificações
 
-| Especificação                                                                                                    | Status                           | Comentário |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-em-element', '&lt;em&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-em-element', '&lt;em&gt;')}}     | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;em&gt;')}}                         | {{Spec2('HTML4.01')}}     |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.em")}}
+{{Compat}}
 
 ## Veja também
 

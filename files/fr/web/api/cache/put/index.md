@@ -1,44 +1,35 @@
 ---
 title: Cache.put()
 slug: Web/API/Cache/put
-tags:
-  - API
-  - Cache
-  - Experimental
-  - Méthode
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - put
-translation_of: Web/API/Cache/put
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 La méthode **`put()`** de l'interface {{domxref("Cache")}} permet d'ajouter des paires clé/valeur à l'objet {{domxref("Cache")}} en cours.
 
-Souvent, le comportement voulu est juste de [`fetch()`](/fr/docs/Web/API/fetch) une ou plusieurs requête, et d'ajouter les résultats directement dans le cache. Dans ce type de cas, il est plus judicieux d'utiliser {{domxref("Cache.add","Cache.add()")}}/{{domxref("Cache.addAll","Cache.addAll()")}} , étant donné que ces méthodes sont des raccourcis pour une ou plusieurs de ces opérations&nbsp;:
+Souvent, le comportement voulu est juste de [`fetch()`](/fr/docs/Web/API/Window/fetch) une ou plusieurs requête, et d'ajouter les résultats directement dans le cache. Dans ce type de cas, il est plus judicieux d'utiliser {{domxref("Cache.add","Cache.add()")}}/{{domxref("Cache.addAll","Cache.addAll()")}} , étant donné que ces méthodes sont des raccourcis pour une ou plusieurs de ces opérations&nbsp;:
 
 ```js
-fetch(url).then(function(response) {
+fetch(url).then(function (response) {
   if (!response.ok) {
-    throw new TypeError('Bad response status');
+    throw new TypeError("Bad response status");
   }
   return cache.put(url, response);
-})
+});
 ```
 
 > **Note :** `put()` écrasera toute paire clé/valeur précedemment stockée en cache et qui correspond à la requête.
 
-> **Note :** Les implémentations initiales de Cache (à la fois dans Blink et Gecko) résolvent les promesses   {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, et {{domxref("Cache.put")}} quand le corps de la réponse est entièrement écrit en stockage. Les versions plus récentes des spécifications sont plus précises en déclarant que le navigateur peut résoudre ces promesses dès que l'entrée est enregistrée en base de donnée, même si le reste de la requête est encore en train d'arriver.
+> [!NOTE]
+> Les implémentations initiales de Cache (à la fois dans Blink et Gecko) résolvent les promesses {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, et {{domxref("Cache.put")}} quand le corps de la réponse est entièrement écrit en stockage. Les versions plus récentes des spécifications sont plus précises en déclarant que le navigateur peut résoudre ces promesses dès que l'entrée est enregistrée en base de donnée, même si le reste de la requête est encore en train d'arriver.
 
-> **Note :** Depuis Chrome 46, l'API Cache ne stocke que les requêtes depuis des origines sécurisées, à savoir celles servies en HTTPS.
+> [!NOTE]
+> Depuis Chrome 46, l'API Cache ne stocke que les requêtes depuis des origines sécurisées, à savoir celles servies en HTTPS.
 
 ## Syntaxe
 
 ```js
-cache.put(request, response).then(function() {
+cache.put(request, response).then(function () {
   // la paire requête/réponse a été ajoutée au cache
 });
 ```
@@ -54,7 +45,8 @@ cache.put(request, response).then(function() {
 
 Une {{jsxref("Promise", "Promesse")}} est retournée avec void.
 
-> **Note :** La promesse sera rompue avec un `TypeError` si le schéma d'URL n'est pas `http` ou `https`.
+> [!NOTE]
+> La promesse sera rompue avec un `TypeError` si le schéma d'URL n'est pas `http` ou `https`.
 
 ## Exemples
 
@@ -66,17 +58,21 @@ Cet extrait de code est tiré du MDN [sw-test example](https://github.com/mdn/sw
 
 ```js
 var response;
-var cachedResponse = caches.match(event.request).catch(function() {
-  return fetch(event.request);
-}).then(function(r) {
-  response = r;
-  caches.open('v1').then(function(cache) {
-    cache.put(event.request, response);
+var cachedResponse = caches
+  .match(event.request)
+  .catch(function () {
+    return fetch(event.request);
+  })
+  .then(function (r) {
+    response = r;
+    caches.open("v1").then(function (cache) {
+      cache.put(event.request, response);
+    });
+    return response.clone();
+  })
+  .catch(function () {
+    return caches.match("/sw-test/gallery/myLittleVader.jpg");
   });
-  return response.clone();
-}).catch(function() {
-  return caches.match('/sw-test/gallery/myLittleVader.jpg');
-});
 ```
 
 ## Spécifications
@@ -91,4 +87,4 @@ var cachedResponse = caches.match(event.request).catch(function() {
 
 - [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- [`caches`](/fr/docs/Web/API/caches)
+- [`caches`](/fr/docs/Web/API/Window/caches)

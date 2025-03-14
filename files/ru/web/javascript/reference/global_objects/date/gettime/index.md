@@ -1,22 +1,23 @@
 ---
 title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTime
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 Метод **`getTime()`** возвращает числовое значение, соответствующее указанной дате по всемирному координированному времени.
 
 Вы можете использовать этот метод для того, чтобы присвоить дату и время другому объекту {{jsxref("Global_Objects/Date", "Date")}}. Этот метод функционально эквивалентен методу {{jsxref("Date.prototype.valueof", "valueOf()")}}.
 
-{{EmbedInteractiveExample("pages/js/date-gettime.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getTime()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 20:17:40 GMT+00:00");
+
+// Milliseconds since Jan 1, 1970, 00:00:00.000 GMT
+console.log(moonLanding.getTime());
+// Expected output: -14182940000
+```
 
 ## Синтаксис
 
@@ -59,7 +60,7 @@ for (let i = 0; i < 1000; i++) {
 }
 end = new Date();
 
-console.log('Операция заняла ' + (end.getTime() - start.getTime()) + ' мсек');
+console.log("Операция заняла " + (end.getTime() - start.getTime()) + " мсек");
 ```
 
 ## Спецификации

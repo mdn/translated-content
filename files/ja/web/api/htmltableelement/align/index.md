@@ -1,41 +1,34 @@
 ---
-title: HTMLTableElement.align
+title: "HTMLTableElement: align プロパティ"
+short-title: align
 slug: Web/API/HTMLTableElement/align
+l10n:
+  sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
 **`HTMLTableElement.align`** プロパティは、表の配置を表します。
 
-## 構文
+## 値
 
-```js
-HTMLTableElement.align = alignment;
-var alignment = HTMLTableElement.align;
-```
+以下の文字列値のいずれかです。
 
-### 引数
-
-- `alignment`
-
-  - : {{DOMxRef("DOMString")}} で、以下の値の何れかです。
-
-    - left
-    - center
-    - right
+- `left`
+- `center`
+- `right`
 
 ## 例
 
 ```js
 // 表の位置を設定
-var t = document.getElementById('TableA');
-t.align = 'center';
+const t = document.getElementById("TableA");
+t.align = "center";
 ```
 
 ## 仕様書
 
-- W3C DOM 2 HTML 仕様書: [_HTMLTableElement_
-  .align](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-23180977)
+{{Specifications}}
 
 ## ブラウザーの互換性
 

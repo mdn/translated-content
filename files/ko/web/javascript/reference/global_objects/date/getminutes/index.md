@@ -1,25 +1,25 @@
 ---
 title: Date.prototype.getMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 ---
 
 {{JSRef}}
 
 **`getMinutes()`** 메서드는 `Date` 인스턴스의 분을 현지 시간 기준으로 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/date-getminutes.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getMinutes()")}}
+
+```js interactive-example
+const birthday = new Date("March 13, 08 04:20");
+
+console.log(birthday.getMinutes());
+// Expected output: 20
+```
 
 ## 구문
 
 ```js
-    dateObj.getMinutes()
+dateObj.getMinutes();
 ```
 
 ### 반환 값
@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 다음 예제는 {{jsxref("Date")}} 객체 `Xmas95`의 분을 사용해 변수 `minutes`에 15를 할당합니다.
 
 ```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
+var Xmas95 = new Date("December 25, 1995 23:15:30");
 var minutes = Xmas95.getMinutes();
 
 console.log(minutes); // 15

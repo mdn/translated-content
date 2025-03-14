@@ -148,7 +148,7 @@ const greeting = "Sou um bom exemplo";
 ```
 
 ```js example-bad
-const greeting ="Eu sou um mau exemplo";
+const greeting = "Eu sou um mau exemplo";
 ```
 
 ### Referência de discussão
@@ -181,7 +181,8 @@ Como o texto "Nota:" ou "Aviso:" também aparece na saída renderizada, ele deve
 #### Observação
 
 ```plain
-> **Nota:** é assim que você escreve uma nota.
+> [!NOTE]
+> é assim que você escreve uma nota.
 >
 > Pode ter várias linhas.
 ```
@@ -197,14 +198,16 @@ Isso produzirá o seguinte HTML:
 
 Este HTML será renderizado como uma caixa destacada:
 
-> **Nota:** é assim que você escreve uma nota.
+> [!NOTE]
+> é assim que você escreve uma nota.
 >
 > Pode ter várias linhas.
 
 #### Avisos
 
 ```plain
-> **Aviso:** é assim que você escreve um aviso.
+> [!WARNING]
+> é assim que você escreve um aviso.
 >
 > Pode ter vários parágrafos.
 ```
@@ -220,7 +223,8 @@ Isso produzirá o seguinte HTML:
 
 Este HTML será renderizado como uma caixa destacada:
 
-> **Aviso:** é assim que você escreve um aviso.
+> [!WARNING]
+> é assim que você escreve um aviso.
 >
 > Pode ter vários parágrafos.
 
@@ -243,7 +247,7 @@ Isso produzirá o seguinte HTML:
 
 Este HTML será renderizado como uma caixa destacada:
 
-> **Observação:**
+> [!CALLOUT]
 >
 > **É assim que você escreve uma frase de destaque.**
 >
@@ -254,7 +258,8 @@ Este HTML será renderizado como uma caixa destacada:
 Por exemplo, se quisermos usar "Warnung" para "Warning" em alemão, nas páginas em alemão, escreveríamos:
 
 ```plain
-> **Warnung:** So schreibt man eine Warnung.
+> [!WARNING]
+> So schreibt man eine Warnung.
 ```
 
 E isso produzirá:
@@ -270,7 +275,8 @@ E isso produzirá:
 Este exemplo contém um bloco de código.
 
 ````plain
-> **Nota:** é assim que você escreve uma nota.
+> [!NOTE]
+> é assim que você escreve uma nota.
 >
 > Pode conter blocos de código.
 >
@@ -293,7 +299,8 @@ Isso produzirá o seguinte HTML:
 
 Este HTML será renderizado como um bloco de código:
 
-> **Nota:** é assim que você escreve uma nota.
+> [!NOTE]
+> é assim que você escreve uma nota.
 >
 > Pode conter blocos de código.
 >

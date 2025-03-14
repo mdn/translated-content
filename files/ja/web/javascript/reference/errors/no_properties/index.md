@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Errors/No_properties
 
 {{jsSidebar("Errors")}}
 
-JavaScript の例外 "null (or undefined) has no properties" は、 {{jsxref("null")}} および {{jsxref("undefined")}} のプロパティにアクセスしようとしたときに発生します。これらには何もありません。They
+JavaScript の例外 "null (or undefined) has no properties" は、 [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) および {{jsxref("undefined")}} のプロパティにアクセスしようとしたときに発生します。これらはプロパティを何も持ちません。
 
 ## エラーメッセージ
 
@@ -21,7 +21,7 @@ TypeError: undefined has no properties (Firefox)
 
 ## 何がうまくいかなかったのか？
 
-{{jsxref("null")}} と {{jsxref("undefined")}} に、アクセス可能なプロパティはありません。
+[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) と {{jsxref("undefined")}} に、アクセス可能なプロパティはありません。
 
 ## 例
 
@@ -37,5 +37,5 @@ undefined.bar;
 
 ## 関連項目
 
-- {{jsxref("null")}}
+- [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null)
 - {{jsxref("undefined")}}

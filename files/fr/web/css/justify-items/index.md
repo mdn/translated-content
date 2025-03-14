@@ -1,11 +1,6 @@
 ---
 title: justify-items
 slug: Web/CSS/justify-items
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/justify-items
 ---
 
 {{CSSRef}}
@@ -18,9 +13,9 @@ L'effet de cette propriété sera différent selon le type de disposition utilis
 
 - Pour les dispositions de bloc : cette propriété aligne l'élément selon l'axe en ligne au sein du bloc englobant.
 - Pour les éléments positionnés de façon absolue : cette propriété aligne l'élément selon l'axe en ligne au sein du bloc englobant en prenant en compte les valeurs de décalage par rapport au haut, à la gauche, au bas et à la droite.
-- Pour les cellules de tableau, cette propriété est ignorée ([en savoir plus](/fr/docs/Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_bloc_absolue_tableau)).
-- Pour les dispositions flexibles (_flexbox_), cette propriété est ignorée ([en savoir plus](/fr/docs/Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_Flexbox)).
-- Pour les grilles, cette propriété aligne l'élément sur la zone de la grille à laquelle il appartient selon l'axe en ligne ([en savoir plus](/fr/docs/Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_grille)).
+- Pour les cellules de tableau, cette propriété est ignorée ([en savoir plus](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)).
+- Pour les dispositions flexibles (_flexbox_), cette propriété est ignorée ([en savoir plus](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)).
+- Pour les grilles, cette propriété aligne l'élément sur la zone de la grille à laquelle il appartient selon l'axe en ligne ([en savoir plus](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)).
 
 ## Syntaxe
 
@@ -31,15 +26,15 @@ justify-items: normal;
 justify-items: stretch;
 
 /* Alignement par rapport à l'axe */
-justify-items: center;     /* Les éléments sont regroupés au centre */
-justify-items: start;      /* Les éléments sont regroupés au début  */
-justify-items: end;        /* Les éléments sont regroupés à la fin  */
+justify-items: center; /* Les éléments sont regroupés au centre */
+justify-items: start; /* Les éléments sont regroupés au début  */
+justify-items: end; /* Les éléments sont regroupés à la fin  */
 justify-items: flex-start; /* Les éléments sont regroupés au début de l'axe */
-justify-items: flex-end;   /* Les éléments sont regroupés à la fin de l'axe */
+justify-items: flex-end; /* Les éléments sont regroupés à la fin de l'axe */
 justify-items: self-start;
 justify-items: self-end;
-justify-items: left;       /* Les éléments sont regroupés à gauche */
-justify-items: right;      /* Les éléments sont regroupés à droite */
+justify-items: left; /* Les éléments sont regroupés à gauche */
+justify-items: right; /* Les éléments sont regroupés à droite */
 
 /* Alignement par rapport à la ligne de base */
 justify-items: baseline;
@@ -128,7 +123,9 @@ Cette propriété peut être définie selon trois formes différentes :
 ### CSS
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -149,7 +146,7 @@ Cette propriété peut être définie selon trois formes différentes :
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3,100px);
+  grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
   grid-gap: 10px;
@@ -199,8 +196,8 @@ Cette propriété peut être définie selon trois formes différentes :
 
 ## Voir aussi
 
-- [L'alignement des boîtes avec les grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_CSS)
+- [L'alignement des boîtes avec les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - La propriété {{cssxref("justify-self")}}
-- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)
+- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/CSS_box_alignment)
 - La propriété raccourcie {{CSSxRef("place-items")}}
 - La propriété {{CSSxRef("align-items")}}

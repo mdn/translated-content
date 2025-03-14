@@ -1,12 +1,6 @@
 ---
-title: '-webkit-box-reflect'
+title: -webkit-box-reflect
 slug: Web/CSS/-webkit-box-reflect
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/-webkit-box-reflect
 ---
 
 {{Non-standard_header}}{{CSSRef}}
@@ -32,7 +26,8 @@ La propriété **`-webkit-box-reflect`** peut être utilisée afin de créer un 
 -webkit-box-reflect: unset;
 ```
 
-> **Attention :** Cette fonctionnalité ne doit pas être utilisée sur le Web. Pour créer des effets de reflet sur le Web, on pourra utiliser la fonction CSS standard {{cssxref("element()", "element()")}}.
+> [!WARNING]
+> Cette fonctionnalité ne doit pas être utilisée sur le Web. Pour créer des effets de reflet sur le Web, on pourra utiliser la fonction CSS standard {{cssxref("element()", "element()")}}.
 
 ## Syntaxe
 
@@ -57,7 +52,7 @@ Cette propriété n'est pas en voie de standardisation et ne fera pas partie de 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-box-reflect")}}
+{{Compat}}
 
 ## Voir aussi
 

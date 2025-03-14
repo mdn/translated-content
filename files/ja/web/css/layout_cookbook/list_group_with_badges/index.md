@@ -17,7 +17,7 @@ slug: Web/CSS/Layout_cookbook/List_group_with_badges
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/list-group-badges.html", '100%', 720)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/list-group-badges--download.html)
 
@@ -35,13 +35,13 @@ slug: Web/CSS/Layout_cookbook/List_group_with_badges
 
 #### justify-content
 
-{{Compat("css.properties.justify-content")}}
+{{Compat}}
 
 #### align-items
 
-{{Compat("css.properties.align-items")}}
+{{Compat}}
 
 ## 関連情報
 
-- [フレックスボックスでのボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
-- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
+- [フレックスボックスでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)

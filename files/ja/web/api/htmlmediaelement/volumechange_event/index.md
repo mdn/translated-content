@@ -1,40 +1,30 @@
 ---
-title: 'HTMLMediaElement: volumechange イベント'
+title: "HTMLMediaElement: volumechange イベント"
+short-title: volumechange
 slug: Web/API/HTMLMediaElement/volumechange_event
+l10n:
+  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
 {{APIRef("HTMLMediaElement")}}
 
-`volumechange` イベントは、ボリュームが変更されたときに発生します。
+`volumechange`イベントは、{{domxref("HTMLMediaElement.volume", "volume")}} 属性か {{domxref("HTMLMediaElement.muted", "muted")}} 属性のいずれかが変更されたときに発行されます。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル可能</th>
-      <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">対象</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">既定のアクション</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>{{domxref("GlobalEventHandlers.onvolumechange")}}</td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("volumechange", (event) => {});
+
+onvolumechange = (event) => {};
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
@@ -43,20 +33,20 @@ slug: Web/API/HTMLMediaElement/volumechange_event
 `addEventListener()` を使用した例:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('volumechange', (event) => {
-  console.log('The volume changed.');
+video.addEventListener("volumechange", (event) => {
+  console.log("The volume changed.");
 });
 ```
 
 `onvolumechange` イベントハンドラープロパティを使用した例:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onvolumechange = (event) => {
-  console.log('The volume changed.');
+  console.log("The volume changed.");
 };
 ```
 
@@ -84,7 +74,6 @@ video.onvolumechange = (event) => {
 - HTMLMediaElement {{domxref("HTMLMediaElement.play_event", 'play')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.pause_event", 'pause')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.suspend_event", 'suspend')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.emptied_event", 'emptied')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.stalled_event", 'stalled')}} イベント

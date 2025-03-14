@@ -1,13 +1,9 @@
 ---
 title: processing-instruction
 slug: Web/XSLT/Element/processing-instruction
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/processing-instruction
-original_slug: Web/XSLT/processing-instruction
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:processing-instruction>` 요소는 출력 문서에 처리 명령을 씁니다.
 
@@ -30,7 +26,7 @@ original_slug: Web/XSLT/processing-instruction
 
 ### 정의
 
-[XSLT section 7.3, Creating Processing Instructions](http://www.w3.org/TR/xslt#section-Creating-Processing-Instructions)
+[XSLT section 7.3, Creating Processing Instructions](https://www.w3.org/TR/xslt#section-Creating-Processing-Instructions)
 
 ### Gecko 지원
 

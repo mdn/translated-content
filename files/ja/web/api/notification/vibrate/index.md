@@ -1,9 +1,11 @@
 ---
 title: Notification.vibrate
 slug: Web/API/Notification/vibrate
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 `vibrate` は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、通知が発行されたときに端末のバイブレーションハードウェアが出力する[バイブレーションパターン](/ja/docs/Web/API/Vibration_API#vibration_patterns)を指定します。これは {{domxref("Notification.Notification","Notification()")}} コンストラクターの `vibrate` オプションで指定されます。
 
@@ -17,13 +19,13 @@ slug: Web/API/Notification/vibrate
 
 ```js
 const options = {
-  body: 'Do you like my body?',
-  vibrate: [200, 100, 200]
-}
+  body: "Do you like my body?",
+  vibrate: [200, 100, 200],
+};
 
-const n = new Notification('Test notification',options);
+const n = new Notification("Test notification", options);
 
-console.log(n.vibrate) // should log [200,100,200]
+console.log(n.vibrate); // should log [200,100,200]
 ```
 
 ## 仕様書

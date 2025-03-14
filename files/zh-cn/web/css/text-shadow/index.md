@@ -7,7 +7,51 @@ slug: Web/CSS/text-shadow
 
 **`text-shadow`** 为文字添加阴影。可以为文字与 [`decoration`](/zh-CN/docs/Web/CSS/text-decoration) 添加多个阴影，阴影值之间用逗号隔开。每个阴影值由元素在 X 和 Y 方向的偏移量、模糊半径和颜色值组成。
 
-{{EmbedInteractiveExample("pages/css/text-shadow.html")}}
+{{InteractiveExample("CSS Demo: text-shadow")}}
+
+```css interactive-example-choice
+text-shadow: 1px 1px 2px pink;
+```
+
+```css interactive-example-choice
+text-shadow: #fc0 1px 0 10px;
+```
+
+```css interactive-example-choice
+text-shadow: 5px 5px #558abb;
+```
+
+```css interactive-example-choice
+text-shadow: red 2px 5px;
+```
+
+```css interactive-example-choice
+text-shadow: 5px 10px;
+```
+
+```css interactive-example-choice
+text-shadow:
+  1px 1px 2px red,
+  0 0 1em blue,
+  0 0 0.2em blue;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    Far out in the uncharted backwaters of the unfashionable end of the western
+    spiral arm of the Galaxy...
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font:
+    1.5em Georgia,
+    serif;
+}
+```
 
 ## 语法
 
@@ -65,14 +109,15 @@ text-shadow: unset;
 
 ```css
 .red-text-shadow {
-   text-shadow: red 0 -2px;
+  text-shadow: red 0 -2px;
 }
 ```
 
 ```html
 <p class="red-text-shadow">
-   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-   inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 </p>
 ```
 
@@ -82,16 +127,25 @@ text-shadow: unset;
 
 ```css
 .white-with-blue-shadow {
-   text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
-   color: white;
-   font: 1.5em Georgia, "Bitstream Charter", "URW Bookman L", "Century Schoolbook L", serif;
+  text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
+  color: white;
+  font:
+    1.5em Georgia,
+    "Bitstream Charter",
+    "URW Bookman L",
+    "Century Schoolbook L",
+    serif;
 }
 ```
 
 ```html
 <p class="white-with-blue-shadow">
-   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-   veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 </p>
 ```
 
@@ -109,4 +163,4 @@ text-shadow: unset;
 
 - {{cssxref("box-shadow")}}
 - The {{cssxref("&lt;color&gt;")}} data type (for specifying the shadow color)
-- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_Colors/Applying_color)
+- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)

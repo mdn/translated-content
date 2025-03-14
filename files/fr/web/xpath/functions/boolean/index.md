@@ -1,13 +1,9 @@
 ---
 title: boolean
 slug: Web/XPath/Functions/boolean
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/boolean
-original_slug: Web/XPath/Fonctions/boolean
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 la fonction `boolean` évalue une expression et retourne `true` ou `false`.
 
@@ -35,7 +31,7 @@ La valeur booléenne `true` ou `false` en fonction de l'évaluation de `expressi
 
 ### Définition
 
-[XPath 1.0, section 4.3](http://www.w3.org/TR/xpath#function-boolean).
+[XPath 1.0, section 4.3](https://www.w3.org/TR/xpath#function-boolean).
 
 ### Support Gecko
 

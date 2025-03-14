@@ -1,19 +1,53 @@
 ---
 title: border-collapse
 slug: Web/CSS/border-collapse
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - CSS Tables
-  - Reference
-translation_of: Web/CSS/border-collapse
 ---
+
 {{CSSRef}}
 
 **`border-collapse`** CSS 속성은 표 테두리(border)가 분리(separated) 또는 상쇄(collapsed)될 지를 결정합니다. 분리 모델에서는, 인접한 셀은 각각 자신의 고유(distinct) 테두리가 있습니다. 상쇄 모델에서는, 인접한 표 셀은 테두리를 공유합니다.
 
-{{EmbedInteractiveExample("pages/css/border-collapse.html")}}
+{{InteractiveExample("CSS Demo: border-collapse")}}
+
+```css interactive-example-choice
+border-collapse: collapse;
+```
+
+```css interactive-example-choice
+border-collapse: separate;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <table class="transition-all" id="example-element">
+    <tr>
+      <td>Cell 1.1</td>
+      <td>Cell 1.2</td>
+    </tr>
+    <tr>
+      <td>Cell 2.1</td>
+      <td>Cell 2.2</td>
+    </tr>
+    <tr>
+      <td>Cell 3.1</td>
+      <td>Cell 3.2</td>
+    </tr>
+  </table>
+</section>
+```
+
+```css interactive-example
+table {
+  width: 15rem;
+  table-layout: fixed;
+}
+
+td {
+  border: 5px solid;
+  border-color: crimson dodgerblue orange limegreen;
+  padding: 0.75rem;
+}
+```
 
 분리(_separated_) 모델은 HTML 표 테두리 전통 모델입니다. 인접 셀은 각각 자신의 고유 테두리가 있습니다. 그 사이의 간격은 {{ Cssxref("border-spacing") }} 속성에 의해 주어집니다.
 
@@ -51,38 +85,66 @@ border-collapse: unset;
 
 ```html
 <table class="separate">
-    <caption><code>border-collapse: separate</code></caption>
-    <tbody>
-        <tr><th>Browser</th> <th>Layout Engine</th>
-        </tr>
-        <tr><td class="fx">Firefox</td> <td class="gk">Gecko</td>
-        </tr>
-        <tr><td class="ie">Internet Explorer</td> <td class="tr">Trident</td>
-        </tr>
-        <tr><td class="sa">Safari</td> <td class="wk">Webkit</td>
-        </tr>
-        <tr><td class="ch">Chrome</td> <td class="bk">Blink</td>
-        </tr>
-        <tr><td class="op">Opera</td> <td class="bk">Blink</td>
-        </tr>
-    </tbody>
+  <caption>
+    <code>border-collapse: separate</code>
+  </caption>
+  <tbody>
+    <tr>
+      <th>Browser</th>
+      <th>Layout Engine</th>
+    </tr>
+    <tr>
+      <td class="fx">Firefox</td>
+      <td class="gk">Gecko</td>
+    </tr>
+    <tr>
+      <td class="ie">Internet Explorer</td>
+      <td class="tr">Trident</td>
+    </tr>
+    <tr>
+      <td class="sa">Safari</td>
+      <td class="wk">Webkit</td>
+    </tr>
+    <tr>
+      <td class="ch">Chrome</td>
+      <td class="bk">Blink</td>
+    </tr>
+    <tr>
+      <td class="op">Opera</td>
+      <td class="bk">Blink</td>
+    </tr>
+  </tbody>
 </table>
 <table class="collapse">
-    <caption><code>border-collapse: collapse</code></caption>
-    <tbody>
-        <tr><th>Browser</th> <th>Layout Engine</th>
-        </tr>
-        <tr><td class="fx">Firefox</td> <td class="gk">Gecko</td>
-        </tr>
-        <tr><td class="ie">Internet Explorer</td> <td class="tr">Trident</td>
-        </tr>
-        <tr><td class="sa">Safari</td> <td class="wk">Webkit</td>
-        </tr>
-        <tr><td class="ch">Chrome</td> <td class="bk">Blink</td>
-        </tr>
-        <tr><td class="op">Opera</td> <td class="bk">Blink</td>
-        </tr>
-    </tbody>
+  <caption>
+    <code>border-collapse: collapse</code>
+  </caption>
+  <tbody>
+    <tr>
+      <th>Browser</th>
+      <th>Layout Engine</th>
+    </tr>
+    <tr>
+      <td class="fx">Firefox</td>
+      <td class="gk">Gecko</td>
+    </tr>
+    <tr>
+      <td class="ie">Internet Explorer</td>
+      <td class="tr">Trident</td>
+    </tr>
+    <tr>
+      <td class="sa">Safari</td>
+      <td class="wk">Webkit</td>
+    </tr>
+    <tr>
+      <td class="ch">Chrome</td>
+      <td class="bk">Blink</td>
+    </tr>
+    <tr>
+      <td class="op">Opera</td>
+      <td class="bk">Blink</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -90,29 +152,48 @@ border-collapse: unset;
 
 ```css
 .collapse {
-    border-collapse: collapse;
+  border-collapse: collapse;
 }
 .separate {
-    border-collapse: separate;
+  border-collapse: separate;
 }
 table {
-    display: inline-table;
-    margin: 1em;
-    border: dashed 6px;
-    border-width: 6px;
+  display: inline-table;
+  margin: 1em;
+  border: dashed 6px;
+  border-width: 6px;
 }
-table th, table td {
-    border: solid 3px;
+table th,
+table td {
+  border: solid 3px;
 }
-.fx { border-color: orange blue; }
-.gk { border-color: black red; }
-.ie { border-color: blue gold; }
-.tr { border-color: aqua; }
-.sa { border-color: silver blue; }
-.wk { border-color: gold blue; }
-.ch { border-color: red yellow green blue; }
-.bk { border-color: navy blue teal aqua; }
-.op { border-color: red; }
+.fx {
+  border-color: orange blue;
+}
+.gk {
+  border-color: black red;
+}
+.ie {
+  border-color: blue gold;
+}
+.tr {
+  border-color: aqua;
+}
+.sa {
+  border-color: silver blue;
+}
+.wk {
+  border-color: gold blue;
+}
+.ch {
+  border-color: red yellow green blue;
+}
+.bk {
+  border-color: navy blue teal aqua;
+}
+.op {
+  border-color: red;
+}
 ```
 
 #### 결과

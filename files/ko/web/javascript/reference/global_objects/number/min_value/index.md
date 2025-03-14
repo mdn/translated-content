@@ -1,18 +1,30 @@
 ---
 title: Number.MIN_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
-tags:
-  - JavaScript
-  - Number
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
 ---
+
 {{JSRef}}
 
 **`Number.MIN_VALUE`** 속성은 JavaScript가 표현할 수 있는 제일 작은 양의 숫자 값을 나타냅니다.
 
-{{EmbedInteractiveExample("pages/js/number-min-value.html")}}{{js_property_attributes(0, 0, 0)}}
+{{InteractiveExample("JavaScript Demo: Number.MIN_VALUE")}}
+
+```js interactive-example
+function divide(x, y) {
+  if (x / y < Number.MIN_VALUE) {
+    return "Process as 0";
+  }
+  return x / y;
+}
+
+console.log(divide(5e-324, 1));
+// Expected output: 5e-324
+
+console.log(divide(5e-324, 2));
+// Expected output: "Process as 0"
+```
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## 설명
 

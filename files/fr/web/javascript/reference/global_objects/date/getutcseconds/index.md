@@ -1,26 +1,25 @@
 ---
 title: Date.prototype.getUTCSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getUTCSeconds
 ---
 
 {{JSRef}}
 
 La méthode **`getUTCSeconds()`** renvoie les secondes de la date renseignée, d'après UTC.
 
-{{EmbedInteractiveExample("pages/js/date-getutcseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getUTCSeconds()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 1969, 20:18:04 UTC");
+
+console.log(moonLanding.getUTCSeconds());
+// Expected output: 4
+```
 
 ## Syntaxe
 
 ```js
-dateObj.getUTCSeconds()
+dateObj.getUTCSeconds();
 ```
 
 ### Valeur de retour

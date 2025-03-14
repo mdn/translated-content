@@ -1,12 +1,6 @@
 ---
 title: CONNECT
 slug: Web/HTTP/Methods/CONNECT
-tags:
-  - HTTP
-  - Reference
-  - Request method
-translation_of: Web/HTTP/Methods/CONNECT
-original_slug: Web/HTTP/Méthode/CONNECT
 ---
 
 {{HTTPSidebar}}
@@ -70,13 +64,11 @@ Proxy-Authorization: basic aGVsbG86d29ybGQ=
 
 ## Spécifications
 
-| Spécification                                    | Titre                                                         |
-| ------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "CONNECT", "4.3.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http/methods", "CONNECT")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,7 +1,6 @@
 ---
 title: Document.applets
 slug: Web/API/Document/applets
-translation_of: Web/API/Document/applets
 ---
 
 {{ ApiRef() }}
@@ -11,7 +10,7 @@ translation_of: Web/API/Document/applets
 ### Syntaxe
 
 ```js
-nodeList = document.applets
+nodeList = document.applets;
 ```
 
 ### Exemple
@@ -23,4 +22,4 @@ my_java_app = document.applets[1];
 
 ### Spécification
 
-[DOM Level 2 HTML: applets](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-85113862)
+[DOM Level 2 HTML: applets](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-85113862)

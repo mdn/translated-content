@@ -1,14 +1,6 @@
 ---
 title: <display-listitem>
 slug: Web/CSS/display-listitem
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Display
-  - Reference
-  - list-item
-  - Справка
-translation_of: Web/CSS/display-listitem
 ---
 
 {{CSSRef}}
@@ -19,21 +11,20 @@ translation_of: Web/CSS/display-listitem
 
 Единственное значение `list-item приведёт к тому, что элемент будет вести себя как элемент списка. Это можно использовать вместе с {{CSSxRef("list-style-type")}} и {{CSSxRef("list-style-position")}}.`
 
-> **Примечание:** В браузерах, поддерживающих двухзначный синтаксис, если внутреннее значение не указано, по умолчанию оно будет `flow`. Если внешнее значение не указано, основной блок будет иметь внешний вид отображения (`outer display type`) block.`
+> [!NOTE]
+> В браузерах, поддерживающих двухзначный синтаксис, если внутреннее значение не указано, по умолчанию оно будет `flow`. Если внешнее значение не указано, основной блок будет иметь внешний вид отображения (`outer display type`) block.`
 
 ## `Пример`
 
 ### `HTML`
 
 ```html
-
 <div class="fake-list">I will display as a list item</div>
 ```
 
 ### `CSS`
 
 ```css
-
 .fake-list {
   display: list-item;
   list-style-position: inside;
@@ -48,4 +39,4 @@ translation_of: Web/CSS/display-listitem
 
 ### `Поддержка list-item`
 
-{{Compat("css.properties.display.list-item", 10)}}
+{{Compat}}

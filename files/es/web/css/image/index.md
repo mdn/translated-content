@@ -18,12 +18,12 @@ CSS puede manejar diferentes tipos de imágenes:
 
 CSS determina el _tamaño concreto del objeto_ usando estas _dimensiones intrínsecas_, el _tamaño específico_ en propiedades CSS como {{cssxref("width")}}, {{cssxref("height")}} o {{cssxref("background-size")}}, y el _tamaño predeterminado del objeto_ definido por el tipo de propiedad con el que se usa la imagen:
 
-| Tipo de objeto                                                                                                                                                                          | Tamaño de objeto predeterminado                                                                        |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| {{cssxref("background-image")}}                                                                                                                                                | El tamaño del área de posicionamiento de fondo de la imagen                                            |
-| {{cssxref("list-style-image")}}                                                                                                                                                | El tamaño de un caracter de `1em`                                                                      |
-| {{cssxref("border-image")}}                                                                                                                                                    | El tamaño del área de imagen de borde de un elemento                                                   |
-| {{cssxref("cursor")}}                                                                                                                                                            | Un tamaño definido por el navegador que coincida con el tamaño común de un cursor en el sistema en uso |
+| Tipo de objeto                                                                                                                                                     | Tamaño de objeto predeterminado                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| {{cssxref("background-image")}}                                                                                                                                    | El tamaño del área de posicionamiento de fondo de la imagen                                            |
+| {{cssxref("list-style-image")}}                                                                                                                                    | El tamaño de un caracter de `1em`                                                                      |
+| {{cssxref("border-image")}}                                                                                                                                        | El tamaño del área de imagen de borde de un elemento                                                   |
+| {{cssxref("cursor")}}                                                                                                                                              | Un tamaño definido por el navegador que coincida con el tamaño común de un cursor en el sistema en uso |
 | Contenido reemplazado como cuando se combina la propiedad CSS {{cssxref("content")}} con los pseudo-elementos CSS {{cssxref("::after")}} y {{cssxref("::before")}} | Un rectángulo de `300px × 150px`                                                                       |
 
 El tamaño concreto del objeto es calculado usando los siguientes algoritmos:
@@ -34,7 +34,8 @@ El tamaño concreto del objeto es calculado usando los siguientes algoritmos:
 
 Las imágenes pueden ser usadas en numerosas propiedades CSS, como {{cssxref("background-image")}}, {{cssxref("border-image")}}, {{cssxref("content")}}, {{cssxref("list-style-image")}} o {{cssxref("cursor")}}.
 
-> **Nota:** No todos los navegadores soportan algun tipo de imagen o alguna propiedad. Vea la sección de [compatibilidad de navegadores](#Compatibilidad_de_navegadores) para una lista detallada.
+> [!NOTE]
+> No todos los navegadores soportan algun tipo de imagen o alguna propiedad. Vea la sección de [compatibilidad de navegadores](#compatibilidad_de_navegadores) para una lista detallada.
 
 ## Sintáxis
 
@@ -67,11 +68,11 @@ element(#fakeid)                       /* Si 'fakeid' no es un identificador CSS
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.image")}}
+{{Compat}}
 
 ## Véase también
 
-- [Degradados CSS](/es/docs/CSS/Using_CSS_gradients), {{cssxref("&lt;gradient&gt;")}}, {{cssxref("linear-gradient","linear-gradient()")}}, {{cssxref("radial-gradient","radial-gradient()")}}, {{cssxref("repeating-linear-gradient","repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient","repeating-radial-gradient()")}}
+- [Degradados CSS](/es/docs/Web/CSS/CSS_images/Using_CSS_gradients), {{cssxref("&lt;gradient&gt;")}}, {{cssxref("linear-gradient","linear-gradient()")}}, {{cssxref("radial-gradient","radial-gradient()")}}, {{cssxref("repeating-linear-gradient","repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient","repeating-radial-gradient()")}}
 - {{cssxref("element", "element()")}}

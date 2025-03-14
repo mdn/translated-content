@@ -1,23 +1,33 @@
 ---
 title: parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/parseFloat
-tags:
-  - JavaScript
-  - Method
-  - Reference
-browser-compat: javascript.builtins.parseFloat
 ---
 
 {{jsSidebar("Objects")}}
 
 **`parseFloat()`** 함수는 주어진 값을 필요한 경우 문자열로 변환한 후 부동소수점 실수로 파싱해 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/globalprops-parsefloat.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseFloat()")}}
+
+```js interactive-example
+function circumference(r) {
+  return parseFloat(r) * 2.0 * Math.PI;
+}
+
+console.log(circumference(4.567));
+// Expected output: 28.695307297889173
+
+console.log(circumference("4.567abcdefgh"));
+// Expected output: 28.695307297889173
+
+console.log(circumference("abcdefgh"));
+// Expected output: NaN
+```
 
 ## 구문
 
 ```js
-parseFloat(string)
+parseFloat(string);
 ```
 
 ### 매개변수
@@ -54,12 +64,16 @@ parseFloat(string)
 
 ```js
 parseFloat(3.14);
-parseFloat('3.14');
-parseFloat('  3.14  ');
-parseFloat('314e-2');
-parseFloat('0.0314E+2');
-parseFloat('3.14와 숫자가 아닌 문자들');
-parseFloat({ toString: function() { return "3.14" } });
+parseFloat("3.14");
+parseFloat("  3.14  ");
+parseFloat("314e-2");
+parseFloat("0.0314E+2");
+parseFloat("3.14와 숫자가 아닌 문자들");
+parseFloat({
+  toString: function () {
+    return "3.14";
+  },
+});
 ```
 
 ### `NaN`을 반환하는 경우
@@ -67,7 +81,7 @@ parseFloat({ toString: function() { return "3.14" } });
 다음 예제는 {{jsxref("NaN")}}을 반환합니다.
 
 ```js
-parseFloat('FF2');
+parseFloat("FF2");
 ```
 
 ### `parseFloat`과 `BigInt`
@@ -76,7 +90,7 @@ parseFloat('FF2');
 
 ```js
 parseFloat(900719925474099267n);
-parseFloat('900719925474099267n');
+parseFloat("900719925474099267n");
 ```
 
 ## 명세

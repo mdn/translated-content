@@ -1,12 +1,6 @@
 ---
 title: Range.setStart()
 slug: Web/API/Range/setStart
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
-translation_of: Web/API/Range/setStart
 ---
 
 {{ApiRef("DOM")}}
@@ -36,7 +30,7 @@ range.setStart(startNode, startOffset);
 var range = document.createRange();
 var startNode = document.getElementsByTagName("p").item(2);
 var startOffset = 0;
-range.setStart(startNode,startOffset);
+range.setStart(startNode, startOffset);
 ```
 
 ## Spécifications
@@ -49,4 +43,4 @@ range.setStart(startNode,startOffset);
 
 ## Voir aussi
 
-- [L'index des interfaces DOM](/fr/docs/DOM/DOM_Reference)
+- [L'index des interfaces DOM](/fr/docs/Web/API/Document_Object_Model)

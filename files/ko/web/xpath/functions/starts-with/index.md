@@ -1,11 +1,9 @@
 ---
 title: starts-with
 slug: Web/XPath/Functions/starts-with
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/starts-with
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 `starts-with` 함수는 첫 번째 문자열이 두 번째 문자열로 시작하는 지를 확인한 뒤 true나 false를 반환합니다.
 
@@ -32,7 +30,7 @@ starts-with(haystack ,needle)
 
 ### 정의
 
-[XPath 1.0 4.2](http://www.w3.org/TR/xpath#function-starts-with)
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-starts-with)
 
 ### Gecko 지원
 

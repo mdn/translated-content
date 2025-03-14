@@ -1,16 +1,40 @@
 ---
 title: Intl.NumberFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/NumberFormat
-browser-compat: javascript.builtins.Intl.NumberFormat
 ---
 
 {{JSRef}}
 
 L'objet **`Intl.NumberFormat`** permet de formater des nombres en fonction de la locale.
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat")}}
+
+```js interactive-example
+const number = 123456.789;
+
+console.log(
+  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
+    number,
+  ),
+);
+// Expected output: "123.456,79 €"
+
+// The Japanese yen doesn't use a minor unit
+console.log(
+  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
+    number,
+  ),
+);
+// Expected output: "￥123,457"
+
+// Limit to three significant digits
+console.log(
+  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
+    number,
+  ),
+);
+// Expected output: "1,23,000"
+```
 
 ## Constructeur
 
@@ -89,32 +113,48 @@ Les résultats fournis peuvent être paramétrés grâce à l'argument `options`
 var nombre = 123456.789;
 
 // on affiche une devise avec le style "currency"
-console.log(new Intl.NumberFormat("de-DE", {style: "currency", currency: "EUR"}).format(nombre));
+console.log(
+  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
+    nombre,
+  ),
+);
 // → 123.456,79 €
 
 // Le yen japonais n'a pas de centimes
-console.log(new Intl.NumberFormat("ja-JP", {style: "currency", currency: "JPY"}).format(nombre))
+console.log(
+  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
+    nombre,
+  ),
+);
 // → ￥123,457
 
 // On se limite ici à trois chiffres significatifs
-console.log(new Intl.NumberFormat("en-IN", {maximumSignificantDigits: 3}).format(nombre));
+console.log(
+  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
+    nombre,
+  ),
+);
 // → 1,23,000
 ```
 
 ### Utiliser les options `style` et `unit`
 
 ```js
-console.log(new Intl.NumberFormat('pt-PT',  {
-    style: 'unit',
-    unit: 'kilometer-per-hour'
-}).format(50));
+console.log(
+  new Intl.NumberFormat("pt-PT", {
+    style: "unit",
+    unit: "kilometer-per-hour",
+  }).format(50),
+);
 // → 50 km/h
 
-console.log((16).toLocaleString('en-GB', {
-    style: 'unit',
-    unit: 'liter',
-    unitDisplay: 'long'
-}));
+console.log(
+  (16).toLocaleString("en-GB", {
+    style: "unit",
+    unit: "liter",
+    unitDisplay: "long",
+  }),
+);
 // → 16 litres
 ```
 

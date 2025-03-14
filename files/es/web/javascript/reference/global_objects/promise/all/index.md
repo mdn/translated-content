@@ -1,14 +1,6 @@
 ---
 title: Promise.all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Método(2)
-  - Promesa
-  - Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/all
 ---
 
 {{JSRef}}
@@ -22,7 +14,7 @@ Promise.all(iterable);
 ```
 
 - iterable
-  - : Un objeto iterable, por ejemplo un {{jsxref("Array")}}. Vea [iterable](/es/docs/Web/JavaScript/Guide/iterable).
+  - : Un objeto iterable, por ejemplo un {{jsxref("Array")}}. Vea [iterable](/es/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 ### Valor devuelto
 
@@ -47,7 +39,7 @@ var p3 = new Promise((resolve, reject) => {
   setTimeout(resolve, 100, "foo");
 });
 
-Promise.all([p1, p2, p3]).then(values => {
+Promise.all([p1, p2, p3]).then((values) => {
   console.log(values); // [3, 1337, "foo"]
 });
 ```
@@ -73,21 +65,26 @@ var p5 = new Promise((resolve, reject) => {
   reject("reject");
 });
 
-Promise.all([p1, p2, p3, p4, p5]).then(values => {
-  console.log(values);
-}, reason => {
-  console.log(reason)
-});
+Promise.all([p1, p2, p3, p4, p5]).then(
+  (values) => {
+    console.log(values);
+  },
+  (reason) => {
+    console.log(reason);
+  },
+);
 
 //From console:
 //"reject"
 
 // Evenly, it's possible to use .catch
-Promise.all([p1, p2, p3, p4, p5]).then(values => {
-  console.log(values);
-}).catch(reason => {
-  console.log(reason)
-});
+Promise.all([p1, p2, p3, p4, p5])
+  .then((values) => {
+    console.log(values);
+  })
+  .catch((reason) => {
+    console.log(reason);
+  });
 
 //From console:
 //"reject"
@@ -97,9 +94,9 @@ Promise.all([p1, p2, p3, p4, p5]).then(values => {
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript/promise","Promise.all")}}
+{{Compat}}
 
 ## Vea también
 

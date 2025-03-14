@@ -7,12 +7,34 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
 
 The **`Intl.DateTimeFormat.prototype.format()`** メソッドは、この {{jsxref("Intl.DateTimeFormat")}} オブジェクトのロケールと整形オプションに従って日付や時刻を整形します。
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-format.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.format", "taller")}}
+
+```js interactive-example
+const options1 = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+const date1 = new Date(2012, 5);
+
+const dateTimeFormat1 = new Intl.DateTimeFormat("sr-RS", options1);
+console.log(dateTimeFormat1.format(date1));
+// Expected output: "петак, 1. јун 2012."
+
+const dateTimeFormat2 = new Intl.DateTimeFormat("en-GB", options1);
+console.log(dateTimeFormat2.format(date1));
+// Expected output: "Friday, 1 June 2012"
+
+const dateTimeFormat3 = new Intl.DateTimeFormat("en-US", options1);
+console.log(dateTimeFormat3.format(date1));
+// Expected output: "Friday, June 1, 2012"
+```
 
 ## 構文
 
 ```js
-format(date)
+format(date);
 ```
 
 ### 引数
@@ -31,8 +53,13 @@ format(date)
 `format` ゲッター関数を使用して単一の日付値を整形します。こちらはセルビアの例です。
 
 ```js
-var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-var dateTimeFormat = new Intl.DateTimeFormat('sr-RS', options);
+var options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+var dateTimeFormat = new Intl.DateTimeFormat("sr-RS", options);
 console.log(dateTimeFormat.format(new Date()));
 // → "недеља, 7. април 2013."
 ```
@@ -43,10 +70,10 @@ console.log(dateTimeFormat.format(new Date()));
 
 ```js
 var a = [new Date(2012, 08), new Date(2012, 11), new Date(2012, 03)];
-var options = { year: 'numeric', month: 'long' };
-var dateTimeFormat = new Intl.DateTimeFormat('pt-BR', options);
+var options = { year: "numeric", month: "long" };
+var dateTimeFormat = new Intl.DateTimeFormat("pt-BR", options);
 var formatted = a.map(dateTimeFormat.format);
-console.log(formatted.join('; '));
+console.log(formatted.join("; "));
 // → "setembro de 2012; dezembro de 2012; abril de 2012"
 ```
 
@@ -59,12 +86,12 @@ console.log(formatted.join('; '));
 ```js example-bad
 let d = new Date("2019-01-01T00:00:00.000000Z");
 let formattedDate = Intl.DateTimeFormat(undefined, {
-  year: 'numeric',
-  month: 'numeric',
-  day: 'numeric',
-  hour: 'numeric',
-  minute: 'numeric',
-  second: 'numeric'
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
 }).format(d);
 
 "1.1.2019, 01:00:00" === formattedDate;
@@ -72,7 +99,8 @@ let formattedDate = Intl.DateTimeFormat(undefined, {
 // false in IE and Edge
 ```
 
-> **メモ:** この [StackOverflow のスレッド](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)に詳細や例があります。
+> [!NOTE]
+> この [StackOverflow のスレッド](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)に詳細や例があります。
 
 ## 仕様書
 

@@ -1,58 +1,61 @@
 ---
-title: Document.createTextNode()
+title: Document：createTextNode() 方法
 slug: Web/API/Document/createTextNode
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("DOM")}}
 
-创建一个新的{{domxref("Text", "文本")}}节点。这个方法可以用来转义 HTML 字符。
+创建新的{{domxref("Text", "文本", "", 1)}}节点。该方法可用于转义 HTML 字符。
 
 ## 语法
 
-```plain
-var text = document.createTextNode(data);
+```js-nolint
+createTextNode(data)
 ```
 
-- _`text`_ 是一个文本节点。
-- _`data`_ 是一个字符串，包含了要放入文本节点的内容。
+### 参数
+
+- `data`
+  - : 包含要放入文本节点的数据的字符串。
+
+### 返回值
+
+{{domxref("Text", "文本", "", 1)}}节点。
 
 ## 示例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-<title>createTextNode 示例</title>
-</head>
+  <head>
+    <title>createTextNode 示例</title>
+    <script>
+      function addTextNode(text) {
+        const newtext = document.createTextNode(text);
+        const p1 = document.getElementById("p1");
 
-<body>
-  <button value="YES! ">YES! </button>
-  <button value="NO! ">NO! </button>
-  <button value="WE CAN! ">WE CAN! </button>
+        p1.appendChild(newtext);
+      }
+    </script>
+  </head>
 
-  <hr />
+  <body>
+    <button onclick="addTextNode('是！');">是！</button>
+    <button onclick="addTextNode('否！');">否！</button>
+    <button onclick="addTextNode('我们可以！');">我们可以！</button>
 
-  <p id="p1">段落的第一行。</p>
+    <hr />
 
-  <script>
-  const p1 = document.getElementById("p1"),
-  buttons = document.body.querySelectorAll(":scope > button");
-  function addTextNode(text) {
-    p1.appendChild( document.createTextNode(text) );
-  }
-  buttons.forEach(button =>
-    button.addEventListener("click", () =>
-      addTextNode(button.value)
-    )
-  );
-  </script>
-</body>
+    <p id="p1">段落第一行。</p>
+  </body>
 </html>
 ```
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('示例')}}
 
-### 规范
+## 规范
 
 {{Specifications}}
 

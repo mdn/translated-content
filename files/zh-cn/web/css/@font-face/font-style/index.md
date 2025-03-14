@@ -1,74 +1,93 @@
 ---
 title: font-style
 slug: Web/CSS/@font-face/font-style
+l10n:
+  sourceCommit: 418b3ebf6464716649125199385c39d86c944973
 ---
 
 {{CSSRef}}
 
-## 概述
+**`font-style`** CSS 描述符允许作者为 {{cssxref("@font-face")}} @ 规则中指定的字体指定字体样式。
 
-**font-style** 描述符允许开发者在 @font-rule 规则中为指定字体样式 (该条目区别于 font-style，意指用在 @font-rule 中的 font-style 属性)
+对于特定字体家族，作者可以下载与同一字体家族的不同风格相对应的各种字体，然后使用 `font-style` 描述符明确指定字体的风格。该 CSS 描述符的值与相应的 {{cssxref("font-style")}} 属性的值相同。
 
-For a particular font family, authors can download various font faces which correspond to the different styles of the same font family, and then use the `font-style` descriptor to explicitly specify the font face's style. The values for the CSS descriptor is same as that of its corresponding font property.
-
-{{cssinfo}}
-
-## Syntax
+## 语法
 
 ```css
 font-style: normal;
 font-style: italic;
 font-style: oblique;
+font-style: oblique 30deg;
+font-style: oblique 30deg 50deg;
 ```
 
-### Values
+### 值
 
-**`normal`**
-Selects the normal version of the font-family.
+- `normal`
+  - : 选择 font-family 的常规版本。
+- `italic`
+  - : 指定 font-face 为普通字体的斜体版本。
+- `oblique`
+  - : 指定 font-face 是普通字体的人工倾斜版本。
+- 带有角度值 `oblique`
+  - : 选择被归类为 `oblique` 的字体，并指定文字倾斜的角度。
+- 带有角度范围的 `oblique`
+  - : 选择被归类为 `oblique` 的字体，并指定文字倾斜角度的允许范围。请注意，只有当 `font-style` 为 `oblique` 时，才支持范围；对于 `font-style: normal` 或 `italic`，不允许使用第二个值。
 
-**`italic`**
-Specifies that font-face is an italicized version of the normal font .
+## 形式定义
 
-**`oblique`**
-Specifies that the font-face is an artificially sloped version of the normal font.
+{{cssinfo}}
 
-### Formal syntax
+## 形式语法
 
 {{csssyntax}}
 
-## Examples
+## 示例
 
-As an example, consider the garamond font family, in its normal form, we get the following result:
+### 指定斜体字体样式
+
+以 garamond 字体家族为例，在其正常形式下，我们可以得到以下结果：
 
 ```css
 @font-face {
   font-family: garamond;
-  src: url('garamond.ttf');
+  src: url("garamond.ttf");
 }
 ```
 
-![unstyled Garamond](garamondunstyled.jpg)
+![未加额外样式的 Garamond](garamondunstyled.jpg)
 
-The italicized version of this text uses the same glyphs present in the unstyled version, but they are artificially sloped by a few degrees.
+该文本的斜体版本使用与无样式版本相同的字形，但它们被人为地倾斜了几度。
 
-![artificially sloped garamond](garamondartificialstyle.jpg)
+![人工倾斜的 Garamond](garamondartificialstyle.jpg)
 
-On the other hand, if a true italicized version of the font family exists, we can include it in the `src` descriptor and specify the font style as italic, so that it is clear that the font is italicized. True italics use different glyphs and are a bit different from their upright counterparts, having some unique features and generally have a rounded and calligraphic quality. These fonts are specially created by font designers and are **not** artificially sloped.
+另一方面，如果存在字体家族的真正斜体版本，我们可以将其包含在 `src` 描述符中，并将字体样式指定为斜体，这样就可以清楚地看到字体是斜体了。真正的斜体使用不同的字形，与正体有些不同，具有一些独特的特征，通常具有圆润的书法气质。这些字体是由字体设计师专门设计的，并**不是**人为倾斜的。
 
 ```css
 @font-face {
   font-family: garamond;
-  src: url('garamond-italic.ttf');
+  src: url("garamond-italic.ttf");
   font-style: italic;
 }
 ```
 
-![italic garamond](garamonditalic.jpg)
+![斜体 Garamond](garamonditalic.jpg)
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{cssxref("@font-face/font-display", "font-display")}}
+- {{cssxref("@font-face/font-family", "font-family")}}
+- {{cssxref("@font-face/font-stretch", "font-stretch")}}
+- {{cssxref("@font-face/font-weight", "font-weight")}}
+- {{cssxref("font-feature-settings", "font-feature-settings")}}
+- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
+- {{cssxref("@font-face/src", "src")}}
+- {{cssxref("@font-face/unicode-range", "unicode-range")}}

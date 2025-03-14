@@ -1,31 +1,13 @@
 ---
 title: Firefox 1.5 para Desarrolladores
 slug: Mozilla/Firefox/Releases/1.5
-tags:
-  - CSS
-  - Complementos
-  - DOM
-  - Desarrollo_Web
-  - Estándares_Web
-  - HTML
-  - JavaScript
-  - RDF
-  - SVG
-  - Servicios_Web_XML
-  - Todas_las_Categorías
-  - XML
-  - XSLT
-  - XUL
-  - extensiones
-translation_of: Mozilla/Firefox/Releases/1.5
-original_slug: Firefox_1.5_para_Desarrolladores
 ---
 
 {{FirefoxSidebar}}
 
 ### Firefox 1.5
 
-Se ha lanzado Firefox 1.5 y ya se puede descargar **[descarga](https://www.mozilla.com/firefox/)**. Este programa esta basado en el motor de [Gecko](/es/Gecko) 1.8, esta nueva versión del navegador mejora su ya magnífico soporte a los estándares web y proporciona nuevas capacidades que hacen posible una nueva generación de aplicaciones web. Algunas de las nuevas características de Firefox 1.5 son: soporte de CSS2 y CSS3 mejorado, APIs para programar gráficos en 2D por medio de `<canvas>`, o gráficos vectoriales con [SVG](/es/SVG) 1.1, [XForms](/es/XForms) y eventos XML, así como muchas mejoras en DHTML, JavaScript y DOM.
+Se ha lanzado Firefox 1.5 y ya se puede descargar **[descarga](https://www.mozilla.com/firefox/)**. Este programa esta basado en el motor de [Gecko](/es/Gecko) 1.8, esta nueva versión del navegador mejora su ya magnífico soporte a los estándares web y proporciona nuevas capacidades que hacen posible una nueva generación de aplicaciones web. Algunas de las nuevas características de Firefox 1.5 son: soporte de CSS2 y CSS3 mejorado, APIs para programar gráficos en 2D por medio de `<canvas>`, o gráficos vectoriales con [SVG](/es/docs/Web/SVG) 1.1, [XForms](/es/XForms) y eventos XML, así como muchas mejoras en DHTML, JavaScript y DOM.
 
 **Firefox 1.5** ya puede descargarse en el siguiente link: - <https://www.mozilla.com/firefox/>
 
@@ -122,16 +104,16 @@ Algunas de las nuevas características en Firefox 1.5:
 
 Firefox es lider de la industria en el soporte a los estandares Web con constantes implementaciones multiplataforma para:
 
-- Lenguaje para el Formato de HiperTextos ([HTML](/es/HTML)) y lenguaje extensible de marcado de hipertexto ([XHTML](/es/XHTML)): [HTML 4.01](https://www.w3.org/TR/html401/) y [XHTML 1.0/1.1](https://www.w3.org/TR/xhtml1/)
-- Hojas de Estilo en Cascada ([CSS](/es/CSS)): [CSS Level 1](https://www.w3.org/TR/REC-CSS1), [CSS Level 2](https://www.w3.org/TR/REC-CSS2) y partes de [CSS Level 3](https://www.w3.org/Style/CSS/current-work.html)
-- Modelo de Objetos de Documento ([DOM](/es/DOM)): [DOM Level 1](https://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/), [DOM Level 2](https://www.w3.org/DOM/DOMTR#dom2) and parts of [DOM Level 3](https://www.w3.org/DOM/DOMTR#dom3)
+- Lenguaje para el Formato de HiperTextos ([HTML](/es/docs/Web/HTML)) y lenguaje extensible de marcado de hipertexto ([XHTML](/es/XHTML)): [HTML 4.01](https://www.w3.org/TR/html401/) y [XHTML 1.0/1.1](https://www.w3.org/TR/xhtml1/)
+- Hojas de Estilo en Cascada ([CSS](/es/docs/Web/CSS)): [CSS Level 1](https://www.w3.org/TR/REC-CSS1), [CSS Level 2](https://www.w3.org/TR/REC-CSS2) y partes de [CSS Level 3](https://www.w3.org/Style/CSS/current-work.html)
+- Modelo de Objetos de Documento ([DOM](/es/docs/Web/API/Document_Object_Model)): [DOM Level 1](https://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/), [DOM Level 2](https://www.w3.org/DOM/DOMTR#dom2) and parts of [DOM Level 3](https://www.w3.org/DOM/DOMTR#dom3)
 - Mathematical Markup Language: [MathML Version 2.0](https://www.w3.org/Math/)
 - Lenguaje Extensible de Marcas ([XML](/es/XML)): [XML 1.0](https://www.w3.org/TR/REC-xml), [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/), [Associating Style Sheets with XML Documents 1.0](https://www.w3.org/TR/xml-stylesheet/), [Fragment Identifier for XML](https://lists.w3.org/Archives/Public/www-xml-linking-comments/2001AprJun/att-0074/01-NOTE-FIXptr-20010425.htm)
 - XSL Transformations ([XSLT](/es/XSLT)): [XSLT 1.0](https://www.w3.org/TR/xslt)
 - XML Path Language ([XPath](/es/XPath)): [XPath 1.0](https://www.w3.org/TR/xpath)
 - Resource Description Framework ([RDF](/es/RDF)): [RDF](https://www.w3.org/RDF/)
 - Simple Object Access Protocol (SOAP): [SOAP 1.1](https://www.w3.org/TR/SOAP/)
-- [JavaScript](/es/JavaScript) 1.6, based on [ECMA-262](/es/ECMA-262), revision 3: [ECMA-262](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
+- [JavaScript](/es/docs/Web/JavaScript) 1.6, based on [ECMA-262](/es/ECMA-262), revision 3: [ECMA-262](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
 
 Firefox 1.5 soporta: los siguientes protocolos para transporte de datos (HTTP, FTP, SSL, TLS, y otros), caracteres multilingües (Unicode), múltiples formatos gráficos (GIF, JPEG, PNG, SVG, y otros) y la última versión del lenguaje para scripts más popular del mundo, [JavaScript 1.6](/es/Novedades_en_JavaScript_1.6).
 

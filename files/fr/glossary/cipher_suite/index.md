@@ -1,13 +1,9 @@
 ---
 title: Suite de chiffrement
 slug: Glossary/Cipher_suite
-tags:
-  - Cryptographie
-  - Glossaire
-  - Sécurité
-translation_of: Glossary/Cipher_suite
-original_slug: Glossaire/suite_de_chiffrement
 ---
+
+{{GlossarySidebar}}
 
 Une **suite de chiffrement** est un ensemble comprenant un algorithme d'échange de clefs, une méthode d'authentification, un {{glossary("Cipher","chiffre")}} et un code d'authentification des messages.
 

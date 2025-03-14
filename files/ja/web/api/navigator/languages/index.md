@@ -1,30 +1,30 @@
 ---
-title: Navigator.languages
+title: "Navigator: languages プロパティ"
+short-title: languages
 slug: Web/API/Navigator/languages
-original_slug: Web/API/NavigatorLanguage/languages
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
-**`navigator.languages`** は読み取り専用プロパティで、ユーザーの推奨される言語を表す {{domxref("DOMString")}} の配列を返します。この言語は [BCP 47](http://tools.ietf.org/html/bcp47) 言語タグを使用して記述されています。返された配列の中では、設定で最も推奨される言語が最初に来るように並べられています。
+**`Navigator.languages`** は読み取り専用プロパティで、ユーザーの推奨される言語を表す文字列の配列を返します。この言語は {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} による言語タグを使用して記述されています。返された配列の中では、設定で最も推奨される言語が最初に来るように並べられています。
 
 {{domxref("Navigator.language","navigator.language")}} の値は返される配列の最初の要素です。
 
-この値を変更すると、ユーザーの推奨言語が変更され、 {{event("languagechange")}} イベントが {{domxref("Window")}} オブジェクトに発行されます。
+この値を変更すると、ユーザーの推奨言語が変更され、 {{domxref("Window.languagechange_event", "languagechange")}} イベントが {{domxref("Window")}} オブジェクトに発行されます。
 
 ユーザーのブラウザーからのすべての HTTP リクエストにある `Accept-Language` ヘッダーは、 `navigator.languages` プロパティと同じ値ですが、拡張された `qvalues` (quality values) フィールドのみが異なります (例えば `en-US;q=0.8`)。
 
-## 構文
+## 値
 
-```js
-preferredLanguages = globalObj.navigator.languages
-```
+文字列です。
 
 ## 例
 
 ```js
-navigator.language   //"en-US"
-navigator.languages  //["en-US", "zh-CN", "ja-JP"]
+navigator.language; //"en-US"
+navigator.languages; //["en-US", "zh-CN", "ja-JP"]
 ```
 
 ## 仕様書
@@ -39,4 +39,4 @@ navigator.languages  //["en-US", "zh-CN", "ja-JP"]
 
 - {{domxref("navigator.language")}}
 - {{domxref("navigator")}}
-- {{domxref("Window.onlanguagechange")}}
+- {{domxref("Window.languagechange_event", "languagechange")}} イベント

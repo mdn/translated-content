@@ -1,13 +1,75 @@
 ---
 title: grid-template
 slug: Web/CSS/grid-template
+l10n:
+  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
 {{CSSRef}}
 
-**`grid-template`** は CSS のプロパティで、[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティとして {{glossary("grid column", "grid columns")}}、{{glossary("grid rows", "rows")}}、{{glossary("grid areas", "areas")}} を定義します。
+**`grid-template`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティとして {{glossary("grid column", "グリッド列")}}、{{glossary("grid_row", "グリッド行")}}、{{glossary("grid areas", "グリッド領域")}} を定義します。
 
-{{EmbedInteractiveExample("pages/css/grid-template.html")}}
+{{InteractiveExample("CSS Demo: grid-template")}}
+
+```css interactive-example-choice
+grid-template:
+  "a a a" 40px
+  "b c c" 40px
+  "b c c" 40px / 1fr 1fr 1fr;
+```
+
+```css interactive-example-choice
+grid-template:
+  "b b a" auto
+  "b b c" 2ch
+  "b b c" 1em / 20% 20px 1fr;
+```
+
+```css interactive-example-choice
+grid-template:
+  "a a ." minmax(50px, auto)
+  "a a ." 80px
+  "b b c" auto / 2em 3em auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-gap: 10px;
+  width: 200px;
+}
+
+#example-element :nth-child(1) {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  grid-area: a;
+}
+
+#example-element :nth-child(2) {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+  grid-area: b;
+}
+
+#example-element :nth-child(3) {
+  background-color: rgba(94, 255, 0, 0.2);
+  border: 3px solid green;
+  grid-area: c;
+}
+```
 
 ## 構成要素のプロパティ
 
@@ -26,22 +88,26 @@ grid-template: none;
 /* grid-template-rows / grid-template-columns の値 */
 grid-template: 100px 1fr / 50px 1fr;
 grid-template: auto 1fr / auto 1fr auto;
-grid-template: [linename] 100px / [columnname1] 30% [columnname2] 70%;
+grid-template: [line-name] 100px / [column-name1] 30% [column-name2] 70%;
 grid-template: fit-content(100px) / fit-content(40%);
 
 /* grid-template-areas grid-template-rows / grid-template-column の値 */
-grid-template: "a a a"
-               "b b b";
-grid-template: "a a a" 20%
-               "b b b" auto;
-grid-template: [header-top] "a a a"     [header-bottom]
-                 [main-top] "b b b" 1fr [main-bottom]
-                            / auto 1fr auto;
+grid-template:
+  "a a a"
+  "b b b";
+grid-template:
+  "a a a" 20%
+  "b b b" auto;
+grid-template:
+  [header-top] "a a a" [header-bottom]
+  [main-top] "b b b" 1fr [main-bottom]
+  / auto 1fr auto;
 
 /* グローバル値 */
 grid-template: inherit;
 grid-template: initial;
 grid-template: revert;
+grid-template: revert-layer;
 grid-template: unset;
 ```
 
@@ -55,9 +121,10 @@ grid-template: unset;
 
   - : {{cssxref("grid-template-areas")}} にリストの文字列を設定し、{{cssxref("grid-template-rows")}} にリストの各文字列に従ったトラックサイズを設定します (サイズ指定の足りない部分には `auto` が設定されます)。さらに、各サイズの前後で定義された名前付き線をつなぎ、{{cssxref("grid-template-columns")}} にトラックリストのスラッシュ記号の後で指定されたサイズを設定します (指定されていない場合は `none` が設定されます)。
 
-    > **メモ:** これらのトラックリストに {{cssxref("repeat()")}} 関数を使うことはできません。トラックは “ASCII アート” 内の行列と一対一の関係で視覚的に並んでいるためです。
+    > [!NOTE]
+    > これらのトラックリストに {{cssxref("repeat", "repeat()")}} 関数を使うことはできません。トラックは「ASCII アート」内の行列と一対一の関係で視覚的に並んでいるためです。
 
-> **メモ:** {{cssxref("grid")}} 一括指定プロパティは同じ構文を受け入れますが、暗黙的なグリッドプロパティをその初期値にリセットしてしまいます。これらの値が別々にカスケードされないようにするには、(`grid-template` ではなく) `grid` を使用してください。
+> **メモ:** {{cssxref("grid")}} 一括指定プロパティは同じ構文を受け入れますが、暗黙的なグリッドプロパティをその初期値にリセットしてしまいます。これらの値が別々にカスケードされないようにするには、（`grid-template` ではなく） `grid` を使用してください。
 
 ## 公式定義
 
@@ -73,15 +140,16 @@ grid-template: unset;
 
 #### CSS
 
-```css
+```css live-sample___defining_a_grid_template
 #page {
   display: grid;
   width: 100%;
   height: 200px;
-  grid-template: [header-left] "head head" 30px [header-right]
-                 [main-left]   "nav  main" 1fr  [main-right]
-                 [footer-left] "nav  foot" 30px [footer-right]
-                 / 120px 1fr;
+  grid-template:
+    [header-left] "head head" 30px [header-right]
+    [main-left] "nav  main" 1fr [main-right]
+    [footer-left] "nav  foot" 30px [footer-right]
+    / 120px 1fr;
 }
 
 header {
@@ -107,13 +175,13 @@ footer {
 
 #### HTML
 
-```html
-<section id="page">
+```html live-sample___defining_a_grid_template
+<div id="page">
   <header>ヘッダー</header>
   <nav>ナビゲーション</nav>
   <main>メイン領域</main>
   <footer>フッター</footer>
-</section>
+</div>
 ```
 
 #### 結果
@@ -130,7 +198,9 @@ footer {
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}
-- グリッドレイアウトガイド: [CSS グリッドにおける線に基づく配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-- グリッドレイアウトガイド: [グリッドテンプレート領域 - グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#グリッド定義の一括指定)
-- 動画チュートリアル: _[Grid Template shorthand](https://gridbyexample.com/video/grid-template-shorthand/)_
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-areas")}}
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [グリッドテンプレート領域: グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#グリッド定義の一括指定)
+- 動画: [Grid template shorthand](https://gridbyexample.com/video/grid-template-shorthand/)

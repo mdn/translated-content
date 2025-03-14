@@ -1,14 +1,6 @@
 ---
 title: PerformanceNavigationTiming.domInteractive
 slug: Web/API/PerformanceNavigationTiming/domInteractive
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - PerformanceNavigationTiming
-  - Performance Web
-translation_of: Web/API/PerformanceNavigationTiming/domInteractive
 ---
 
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
@@ -34,17 +26,22 @@ function print_nav_timing_data() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements de type "navigation".
   let perfEntries = performance.getEntriesByType("navigation");
 
-  for (let i =0; i < perfEntries.length; i++) {
+  for (let i = 0; i < perfEntries.length; i++) {
     console.log("= Entrée de navigation : entry[" + i + "]");
     let p = perfEntries[i];
     // propriétés du DOM
-    console.log("Contenu du DOM chargé = " + (p.domContentLoadedEventEnd - p.domContentLoadedEventStart));
+    console.log(
+      "Contenu du DOM chargé = " +
+        (p.domContentLoadedEventEnd - p.domContentLoadedEventStart),
+    );
     console.log("Contenu du DOM complet = " + p.domComplete);
     console.log("Contenu du DOM interactif = " + p.interactive);
 
     // temps de chargement et de déchargement des documents
     console.log("Document chargé = " + (p.loadEventEnd - p.loadEventStart));
-    console.log("Document déchargé = " + (p.unloadEventEnd - p.unloadEventStart));
+    console.log(
+      "Document déchargé = " + (p.unloadEventEnd - p.unloadEventStart),
+    );
 
     // autres propriétés
     console.log("type = " + p.type);

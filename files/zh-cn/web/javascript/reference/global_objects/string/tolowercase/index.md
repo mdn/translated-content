@@ -5,12 +5,21 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 
 {{JSRef}}
 
-**`toLowerCase()`** 会将调用该方法的字符串值转为小写形式，并返回。
+{{jsxref("String")}} 的 **`toLowerCase()`** 方法将该字符串转换为小写形式。
+
+{{InteractiveExample("JavaScript Demo: String.toLowerCase()", "shorter")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+console.log(sentence.toLowerCase());
+// Expected output: "the quick brown fox jumps over the lazy dog."
+```
 
 ## 语法
 
-```js
-str.toLowerCase()
+```js-nolint
+toLowerCase()
 ```
 
 ### 返回值
@@ -19,18 +28,14 @@ str.toLowerCase()
 
 ## 描述
 
-`toLowerCase` 会将调用该方法的字符串值转为小写形式，并返回。`toLowerCase` 不会影响字符串本身的值。
+`toLowerCase()` 方法返回将字符串转换为小写形式后的值。`toLowerCase()` 不会影响字符串 `str` 本身的值。
 
 ## 示例
 
-### 例子：使用 `toLowerCase()`
+### 使用 `toLowerCase()`
 
 ```js
-console.log('中文简体 zh-CN || zh-Hans'.toLowerCase());
-// 中文简体 zh-cn || zh-hans
-
-​console.log( "ALPHABET".toLowerCase() );
-// "alphabet"
+console.log("ALPHABET".toLowerCase()); // 'alphabet'
 ```
 
 ## 规范
@@ -41,7 +46,7 @@ console.log('中文简体 zh-CN || zh-Hans'.toLowerCase());
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("String.prototype.toLocaleLowerCase()")}}
 - {{jsxref("String.prototype.toLocaleUpperCase()")}}

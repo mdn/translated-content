@@ -1,15 +1,8 @@
 ---
 title: File
 slug: Web/API/File
-tags:
-  - API
-  - File API
-  - Interface
-  - Reference
-  - Web
-browser-compat: api.File
-translation_of: Web/API/File
 ---
+
 {{APIRef}}
 
 **`File`** 인터페이스는 파일에 대한 정보를 제공하고, 웹 페이지가 JavaScript로 파일의 내용에 접근할 수 있는 방법을 제공합니다.
@@ -18,7 +11,7 @@ translation_of: Web/API/File
 
 `File` 객체는 {{domxref("Blob")}}의 한 종류로, `Blob`을 사용할 수 있는 모든 맥락에서 사용할 수 있습니다. 특히 {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("createImageBitmap()")}}, {{domxref("XMLHttpRequest", "", "send()")}}는 `Blob`과 `File`을 모두 허용합니다.
 
-자세한 정보 및 예제는 [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File/Using_files_from_web_applications)를 참고하세요.
+자세한 정보 및 예제는 [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File_API/Using_files_from_web_applications)를 참고하세요.
 
 {{InheritanceDiagram}}
 
@@ -43,7 +36,7 @@ translation_of: Web/API/File
 - {{domxref("File.prototype.size")}} {{readonlyinline}}
   - : `File`의 크기를 바이트 단위로 반환합니다.
 - {{domxref("File.prototype.type")}} {{readonlyinline}}
-  - : `File`의 [MIME 유형](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types)을 반환합니다.
+  - : `File`의 [MIME 유형](/ko/docs/Web/HTTP/MIME_types)을 반환합니다.
 
 ## 메서드
 
@@ -68,5 +61,5 @@ translation_of: Web/API/File
 
 ## 같이 보기
 
-- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File/Using_files_from_web_applications)
+- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File_API/Using_files_from_web_applications)
 - {{domxref("FileReader")}}

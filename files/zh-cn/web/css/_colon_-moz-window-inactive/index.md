@@ -1,15 +1,24 @@
 ---
-title: ':-moz-window-inactive'
+title: :-moz-window-inactive
 slug: Web/CSS/:-moz-window-inactive
 ---
 
 {{CSSRef}}{{Non-standard_header}}
 
-在[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)是[Mozilla 的扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)匹配任何元素，而它在非活动窗口。**`:-moz-window-inactive`**
+**`:-moz-window-inactive`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)是一个 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)匹配处于非活动窗口中的任何元素。
 
-`:-moz-window-inactive` 也在内容 HTML 文档中工作。
+`:-moz-window-inactive` 也适用于 HTML 文档中的内容。
 
-> **备注：** 在添加此伪类之前，通过`active="true"`在顶级 XUL chrome 窗口上设置 attribute（）来实现为背景窗口提供不同样式。该属性不再使用。
+> [!NOTE]
+> 在引入这个伪类之前，为背景窗口提供不同的样式是通过在顶层 XUL chrome 窗口上设置属性（`active="true"`）来实现的。这个属性现在已不再使用。
+
+## 语法
+
+```css
+:-moz-window-inactive {
+  /* ... */
+}
+```
 
 ## 示例
 
@@ -18,14 +27,14 @@ slug: Web/CSS/:-moz-window-inactive
 ### HTML
 
 ```html
-<div id=“mybox”>
+<div id="mybox">
   <p>这是一个盒子！</p>
 </div>
 ```
 
 ### CSS
 
-```
+```css
 #mybox {
   background: linear-gradient(to bottom, yellow, cyan);
   width: 200px;
@@ -39,14 +48,23 @@ slug: Web/CSS/:-moz-window-inactive
 
 ### 结果
 
-{{EmbedLiveSample('Example', 220, 220)}}
+此代码的结果如下所示。你也可以打开一个{{LiveSampleLink('示例', '单独的页面')}}查看。
 
-您可以将其视为{{LiveSampleLink('Example', 'live sample here')}}。
+{{EmbedLiveSample('示例', 220, 220)}}
 
-## 产品规格
+## 规范
 
-不属于任何规范。这是专门针对 Gecko 的专有伪类。
+不属于任何标准。
 
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)
+- 相关的 CSS 选择器：
+
+  - [`:active`](/zh-CN/docs/Web/CSS/:active)
+
+- 常规 DOM 的 {{domxref("Document.activeElement")}} 属性和[影子 DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 根的 {{domxref("ShadowRoot.activeElement")}} 属性。

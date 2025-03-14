@@ -3,9 +3,9 @@ title: EventTarget.dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("DOM")}}
 
-Dispara um {{domxref("Event")}} para o {{domxref("EventTarget")}} especificado, invocando os {{domxref("EventListener")}}s especificados, em uma ordem apropriada. O processamento normal das regras (including the capturing and optional bubbling phase) aplica-se a eventos disparados manualmente com `dispatchEvent()`.
+Dispara um {{domxref("Event")}} para o {{domxref("EventTarget")}} especificado, invocando os {{domxref("EventListener")}}s especificados, em uma ordem apropriada. O processamento normal das regras (incluindo a captura e a fase opcional de [bubbling](https://javascript.info/bubbling-and-capturing)) aplica-se a eventos disparados manualmente com `dispatchEvent()`.
 
 ## Sintaxe
 
@@ -21,13 +21,13 @@ O método `dispatchEvent joga` `UNSPECIFIED_EVENT_TYPE_ERR` se o tipo do evento 
 
 ## Notas
 
-`dispatchEvent` é a última fase do processo create-init-dispatch, a qual é usada para disparar eventos na implementação do event model. O evento pode ser criado utilizando o método [document.createEvent](/pt-BR/docs/DOM/document.createEvent) e pode ser inicializado com [initEvent](/pt-BR/docs/DOM/event.initEvent) ou outro método de inicialização mais específico, como [initMouseEvent](/pt-BR/docs/DOM/event.initMouseEvent) ou [initUIEvent](/pt-BR/docs/DOM/event.initUIEvent).
+`dispatchEvent` é a última fase do processo create-init-dispatch, a qual é usada para disparar eventos na implementação do event model. O evento pode ser criado utilizando o método [document.createEvent](/pt-BR/docs/Web/API/Document/createEvent) e pode ser inicializado com [initEvent](/pt-BR/docs/Web/API/Event/initEvent) ou outro método de inicialização mais específico, como [initMouseEvent](/pt-BR/docs/Web/API/MouseEvent/initMouseEvent) ou [initUIEvent](/pt-BR/docs/Web/API/UIEvent/initUIEvent).
 
-Veja também a [referência Event object](/pt-BR/docs/DOM/event).
+Veja também a [referência Event object](/pt-BR/docs/Web/API/Event).
 
 ## Exemplo
 
-Veja [Creating and triggering events](/pt-BR/docs/Web/Guide/DOM/Events/Creating_and_triggering_events).
+Veja [Creating and triggering events](/pt-BR/docs/Web/Events/Creating_and_triggering_events).
 
 ## Especificações
 

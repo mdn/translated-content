@@ -1,18 +1,13 @@
 ---
-title: '@counter-style'
+title: "@counter-style"
 slug: Web/CSS/@counter-style
-tags:
-  - CSS CSS At-rule CSS Counter Styles Reference
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/CSS/@counter-style
 ---
 
 {{CSSRef}}
 
 ## Описание
 
-The** `@counter-style`** [CSS](/en/CSS) [at-rule](/en/CSS/At-rule) lets authors define specific counter styles that are not part of the predefined set of styles. A `@counter-style` rule defines how to convert a counter value into a string representation.
+The **`@counter-style`** [CSS](/en-US/CSS) [at-rule](/en-US/CSS/At-rule) lets authors define specific counter styles that are not part of the predefined set of styles. A `@counter-style` rule defines how to convert a counter value into a string representation.
 
 Initial version of CSS defined a set of useful counter styles. Although more styles where added to this set of predefined styles over the years, this restrictive way proved unable to fulfill the needs of worldwide typography. The `@counter-style` at-rule addresses this shortcoming in an open-ended manner, by allowing authors to define their own counter styles when the pre-defined styles aren't fitting their needs.
 
@@ -99,7 +94,7 @@ The above counter style rule can be applied to lists like this:
 
 ```css
 .items {
-   list-style: circled-alpha;
+  list-style: circled-alpha;
 }
 ```
 
@@ -124,9 +119,7 @@ Checkout more examples on the [demo page](https://mdn.github.io/css-counter-styl
 
 ## Спецификации
 
-| Спецификация                                                                                             | Статус                                       | Комментарий                |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------- |
-| {{SpecName('CSS3 Counter Styles', '#the-counter-style-rule', 'counter-style')}} | {{Spec2('CSS3 Counter Styles')}} | Первоначальное определение |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

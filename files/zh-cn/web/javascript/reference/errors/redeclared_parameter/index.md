@@ -47,11 +47,11 @@ function f(arg) {
 
 ## 兼容性提醒
 
-- 在 Firefox 49 之前，会抛出的是 {{jsxref("TypeError")}} ({{bug(1275240)}})。
+- 在 Firefox 49 之前，会抛出的是 {{jsxref("TypeError")}}（[Firefox bug 1275240](https://bugzil.la/1275240)）。
 
 ## 相关
 
 - [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)
 - [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)
 - [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var)
-- [Declaring variables](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_Types#Declarations) in the [JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide)
+- [Declaring variables](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#declarations) in the [JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide)

@@ -11,10 +11,10 @@ slug: Web/HTTP/Headers/Content-Type
 
 En solicitudes (tales como {{HTTPMethod("POST")}} o {{HTTPMethod("PUT")}}), el cliente indica al servidor que tipo de dato es enviado actualmente.
 
-| Header type                                                                                      | {{Glossary("Entity header")}} |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}}                                                 | no                                       |
-| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | si                                       |
+| Header type                                                               | {{Glossary("Entity header")}} |
+| ------------------------------------------------------------------------- | ----------------------------- |
+| {{Glossary("Forbidden header name")}}                                     | no                            |
+| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | si                            |
 
 ## Sintaxis
 
@@ -26,7 +26,7 @@ Content-Type: multipart/form-data; boundary=something
 ## Directivas
 
 - `media-type`
-  - : El [MIME type](/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types) de el recurso o el dato.
+  - : El [MIME type](/es/docs/Web/HTTP/MIME_types) de el recurso o el dato.
 - charset
   - : La codificación de caracteres.
 - boundary
@@ -40,8 +40,8 @@ En una solicitud {{HTTPMethod("POST")}} , que resulta del envio de un formulario
 
 ```html
 <form action="/" method="post" enctype="multipart/form-data">
-  <input type="text" name="description" value="some text">
-  <input type="file" name="myFile">
+  <input type="text" name="description" value="some text" />
+  <input type="file" name="myFile" />
   <button type="submit">Submit</button>
 </form>
 ```
@@ -67,14 +67,11 @@ Content-Type: text/plain
 
 ## Especificaciones
 
-| Specification                                                        | Title                                                         |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7233", "Content-Type in multipart", "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests        |
-| {{RFC("7231", "Content-Type", "3.1.1.5")}}             | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Content-Type")}}
+{{Compat}}
 
 ## Más sobre
 

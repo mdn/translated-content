@@ -45,7 +45,7 @@ _从{{domxref("AudioNode")}}继承的属性_.
 
 ## 方法
 
-*继承 {{domxref("AudioNode")}} 的方法。*
+_继承 {{domxref("AudioNode")}} 的方法。_
 
 ## 例子
 
@@ -58,16 +58,16 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 ```
 
-更多的例子，请查看 MDN Web Audio 示例，例如[Voice-change-o-matic](http://mdn.github.io/voice-change-o-matic/) 或者 [Violent Theremin](http://mdn.github.io/violent-theremin/).
+更多的例子，请查看 MDN Web Audio 示例，例如[Voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) 或者 [Violent Theremin](https://mdn.github.io/violent-theremin/).
 
 ## 标准
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 其他
+## 参见
 
 - [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

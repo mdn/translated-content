@@ -73,7 +73,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 browser.pageAction.onClicked.addListener(handleClick);
 ```
 
-如果你指定了一个 popup，则点击事件不被派送，在用户点击按钮时显示 popup。用户可以与 popup 进行交互，并且当用户点击 popup 以外区域时，popup 自动关闭。参见[Popup](/zh-CN/Add-ons/WebExtensions/Popups)可获得创建和管理 popups 更详细内容。
+如果你指定了一个 popup，则点击事件不被派送，在用户点击按钮时显示 popup。用户可以与 popup 进行交互，并且当用户点击 popup 以外区域时，popup 自动关闭。参见[Popup](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Popups)可获得创建和管理 popups 更详细内容。
 
 注意你的扩展只能有一个地址栏按钮。
 
@@ -85,4 +85,4 @@ browser.pageAction.onClicked.addListener(handleClick);
 
 ## 示例
 
-GitHub 上的 [webextensions-examples](https://github.com/mdn/webextensions-examples) 库中包括了实现无 popup 地址栏按钮的例子 [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out) 。
+GitHub 上的 [webextensions-examples](https://github.com/mdn/webextensions-examples) 库中包括了实现无 popup 地址栏按钮的例子 [chill-out](https://github.com/mdn/webextensions-examples/tree/main/chill-out) 。

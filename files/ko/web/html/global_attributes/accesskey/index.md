@@ -1,22 +1,27 @@
 ---
 title: accesskey
 slug: Web/HTML/Global_attributes/accesskey
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - 단축키
-translation_of: Web/HTML/Global_attributes/accesskey
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`accesskey`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 현재 요소에 대한 키보드 단축키를 생성할 때 사용할 힌트를 제공합니다. `accesskey` 속성의 값은 반드시 출력 가능한 단일 문자(키보드로 입력할 수 있는 글자)여야 합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-accesskey.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: accesskey", "tabbed-shorter")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+```html interactive-example
+<p>If you need to relax, press the <b>S</b>tress reliever!</p>
+<button accesskey="s">Stress reliever</button>
+```
 
-> **참고:** WHATWG 명세는 `accesskey`의 값에 공백으로 구분한 여러 개의 문자를 사용할 수 있고, 브라우저는 그 중 지원하는 첫 번째 문자를 사용한다고 되어 있습니다. 하지만 대부분의 브라우저는 이렇게 동작하지 않습니다. 단, 다른 명령과 충돌하지 않는 경우, IE/Edge에서는 지원되는 첫 번째 문자를 문제 없이 사용합니다.
+```css interactive-example
+b {
+  text-decoration: underline;
+}
+```
+
+> [!NOTE]
+> WHATWG 명세는 `accesskey`의 값에 공백으로 구분한 여러 개의 문자를 사용할 수 있고, 브라우저는 그 중 지원하는 첫 번째 문자를 사용한다고 되어 있습니다. 하지만 대부분의 브라우저는 이렇게 동작하지 않습니다. 단, 다른 명령과 충돌하지 않는 경우, IE/Edge에서는 지원되는 첫 번째 문자를 문제 없이 사용합니다.
 
 단축키를 활성화하는 방법은 브라우저와 플랫폼에 따라 다를 수 있습니다.
 
@@ -108,7 +113,7 @@ translation_of: Web/HTML/Global_attributes/accesskey
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.accesskey")}}
+{{compat}}
 
 ## 함께 보기
 

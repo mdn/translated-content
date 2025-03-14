@@ -1,5 +1,5 @@
 ---
-title: ':nth-of-type()'
+title: :nth-of-type()
 slug: Web/CSS/:nth-of-type
 ---
 
@@ -13,6 +13,36 @@ slug: Web/CSS/:nth-of-type
 p:nth-of-type(4n) {
   color: lime;
 }
+```
+
+{{InteractiveExample("CSS Demo: :nth-of-type", "tabbed-shorter")}}
+
+```css interactive-example
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 3px;
+}
+
+dd:nth-of-type(even) {
+  border: 2px solid orange;
+}
+```
+
+```html interactive-example
+<dl>
+  <dt>Vegetables:</dt>
+  <dd>1. Tomatoes</dd>
+  <dd>2. Cucumbers</dd>
+  <dd>3. Mushrooms</dd>
+  <dt>Fruits:</dt>
+  <dd>4. Apples</dd>
+  <dd>5. Mangos</dd>
+  <dd>6. Pears</dd>
+  <dd>7. Oranges</dd>
+</dl>
 ```
 
 ## 構文
@@ -46,7 +76,7 @@ p:nth-of-type(4n) {
 
 ```css
 /* 奇数の段落 */
-p:nth-of-type(2n+1) {
+p:nth-of-type(2n + 1) {
   color: red;
 }
 
@@ -62,7 +92,7 @@ p:nth-of-type(1) {
 
 /* これは 2n+1 であり、かつ fancy のクラスを持つ要素に一致するので、第 3 段落に一致します。
 2 番目の段落は fancy というクラスを持っていますが、 :nth-of-type(2n+1) ではないので一致しません。 */
-p.fancy:nth-of-type(2n+1) {
+p.fancy:nth-of-type(2n + 1) {
   text-decoration: underline;
 }
 ```
@@ -71,7 +101,8 @@ p.fancy:nth-of-type(2n+1) {
 
 {{EmbedLiveSample('Basic_example', 250, 250)}}
 
-> **メモ:** このセレクターを使用して n 番目のクラスを選択する方法はありません。このセレクターは、一致するリストを作成する際に型だけを見ます。しかし、上の例のように `:nth-of-type` の位置**と**クラスに基づいて要素に CSS を適用することができます。
+> [!NOTE]
+> このセレクターを使用して n 番目のクラスを選択する方法はありません。このセレクターは、一致するリストを作成する際に型だけを見ます。しかし、上の例のように `:nth-of-type` の位置**と**クラスに基づいて要素に CSS を適用することができます。
 
 ## 仕様書
 

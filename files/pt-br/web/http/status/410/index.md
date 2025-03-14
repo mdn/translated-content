@@ -19,15 +19,15 @@ Se você não sabe se a ausência do recurso é temporária ou permanente, o có
 
 ## Especificações
 
-| Especificação                                    | Título                                                        |
-| ------------------------------------------------ | ------------------------------------------------------------- |
+| Especificação                         | Título                                                        |
+| ------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "410 Gone" , "6.5.9")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
 A informação mostrada abaixo está sendo servida do MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.410")}}
+{{Compat}}
 
 ## Veja também
 

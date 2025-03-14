@@ -1,17 +1,50 @@
 ---
 title: object-fit
 slug: Web/CSS/object-fit
-tags:
-  - CSS
-  - CSS Property
-  - object-fit
-translation_of: Web/CSS/object-fit
 ---
+
 {{CSSRef}}
 
-Свойство** `object-fit`** определяет, как содержимое заменяемого элемента, такого как [`<img>`](/ru/docs/Web/HTML/Element/img) или [`<video>`](/ru/docs/Web/HTML/Element/video), должно заполнять контейнер относительно его высоты и ширины.
+Свойство **`object-fit`** определяет, как содержимое заменяемого элемента, такого как [`<img>`](/ru/docs/Web/HTML/Element/img) или [`<video>`](/ru/docs/Web/HTML/Element/video), должно заполнять контейнер относительно его высоты и ширины.
 
-{{EmbedInteractiveExample("pages/css/object-fit.html")}}
+{{InteractiveExample("CSS Demo: object-fit")}}
+
+```css interactive-example-choice
+object-fit: fill;
+```
+
+```css interactive-example-choice
+object-fit: contain;
+```
+
+```css interactive-example-choice
+object-fit: cover;
+```
+
+```css interactive-example-choice
+object-fit: none;
+```
+
+```css interactive-example-choice
+object-fit: scale-down;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/plumeria-146x200.jpg" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 100%;
+  width: 100%;
+  border: 2px dotted #888;
+}
+```
 
 ## Синтаксис
 
@@ -41,30 +74,29 @@ translation_of: Web/CSS/object-fit
 ```html
 <div>
   <h2>object-fit: fill</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="fill" />
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow" />
 
   <h2>object-fit: contain</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="contain" />
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow" />
 
   <h2>object-fit: cover</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="cover" />
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow" />
 
   <h2>object-fit: none</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="none" />
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none narrow"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="none narrow" />
 
   <h2>object-fit: scale-down</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="scale-down" />
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow"/>
-
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow" />
 </div>
 ```
 
@@ -72,7 +104,9 @@ translation_of: Web/CSS/object-fit
 
 ```css
 h2 {
-  font-family: Courier New, monospace;
+  font-family:
+    Courier New,
+    monospace;
   font-size: 1em;
   margin: 1em 0 0.3em;
 }
@@ -124,14 +158,11 @@ img {
 
 ## Технические параметры
 
-| Specification                                                                    | Status                           | Comment                                        |
-| -------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------- |
-| {{SpecName('CSS4 Images', '#the-object-fit', 'object-fit')}} | {{Spec2('CSS4 Images')}} | `Добавлены ключевые слова from-image` `и flip` |
-| {{SpecName('CSS3 Images', '#the-object-fit', 'object-fit')}} | {{Spec2('CSS3 Images')}} | Первоначальное определение                     |
+{{Specifications}}
 
 {{cssinfo}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

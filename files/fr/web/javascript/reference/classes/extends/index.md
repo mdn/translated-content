@@ -1,18 +1,38 @@
 ---
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Classes/extends
 ---
 
 {{jsSidebar("Classes")}}
 
-Le mot-clé **`extends`** est utilisé dans les [déclarations](/fr/docs/Web/JavaScript/Reference/Instructions/class) et [expressions de classes](/fr/docs/Web/JavaScript/Reference/Opérateurs/class) afin de signifier qu'un type représenté par une classe hérite d'un autre type.
+Le mot-clé **`extends`** est utilisé dans les [déclarations](/fr/docs/Web/JavaScript/Reference/Statements/class) et [expressions de classes](/fr/docs/Web/JavaScript/Reference/Operators/class) afin de signifier qu'un type représenté par une classe hérite d'un autre type.
 
-{{EmbedInteractiveExample("pages/js/classes-extends.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Classes Extends", "taller")}}
+
+```js interactive-example
+class DateFormatter extends Date {
+  getFormattedDate() {
+    const months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    return `${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
+  }
+}
+
+console.log(new DateFormatter("August 19, 1975 23:15:30").getFormattedDate());
+// Expected output: "19-Aug-1975"
+```
 
 ## Syntaxe
 
@@ -41,13 +61,12 @@ class Carré extends Polygone {
     // Pour les classes dérivées, super() doit être appelé avant de
     // pouvoir utiliser 'this' sinon cela provoque une exception
     // ReferenceError
-    this.nom = 'Carré';
+    this.nom = "Carré";
   }
 
   get aire() {
     return this.hauteur * this.largeur;
   }
-
 }
 ```
 
@@ -62,8 +81,23 @@ class maDate extends Date {
   }
 
   getFormattedDate() {
-    var mois = ['Jan','Fév','Mar','Avr','Mai','Juin','Juil','Août','Sep','Oct','Nov','Déc'];
-    return this.getDate() + "-" + mois[this.getMonth()] + "-" + this.getFullYear();
+    var mois = [
+      "Jan",
+      "Fév",
+      "Mar",
+      "Avr",
+      "Mai",
+      "Juin",
+      "Juil",
+      "Août",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Déc",
+    ];
+    return (
+      this.getDate() + "-" + mois[this.getMonth()] + "-" + this.getFullYear()
+    );
   }
 }
 ```
@@ -96,4 +130,4 @@ new extensionNull(); // ReferenceError
 ## Voir aussi
 
 - [Les classes](/fr/docs/Web/JavaScript/Reference/Classes)
-- [`super`](/fr/docs/Web/JavaScript/Reference/Opérateurs/super)
+- [`super`](/fr/docs/Web/JavaScript/Reference/Operators/super)

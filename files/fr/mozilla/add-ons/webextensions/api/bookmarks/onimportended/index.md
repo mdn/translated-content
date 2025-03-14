@@ -1,20 +1,9 @@
 ---
 title: bookmarks.onImportEnded
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportEnded
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onImportEnded
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportEnded
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsque le navigateur a fini d'importer un ensemble de signets.
 
@@ -23,9 +12,9 @@ Voir {{WebExtAPIRef("bookmarks.onImportBegan")}}.
 ## Syntaxe
 
 ```js
-browser.bookmarks.onImportEnded.addListener(listener)
-browser.bookmarks.onImportEnded.removeListener(listener)
-browser.bookmarks.onImportEnded.hasListener(listener)
+browser.bookmarks.onImportEnded.addListener(listener);
+browser.bookmarks.onImportEnded.removeListener(listener);
+browser.bookmarks.onImportEnded.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -44,9 +33,9 @@ Les événements ont trois fonctions :
 - `callback`
   - : Fonction qui sera appelée lorsque cet événement se produit. Il n'a pas passé de paramètres.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.onImportEnded")}}
+{{Compat}}
 
 ## Exemples
 
@@ -69,9 +58,9 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

@@ -1,30 +1,28 @@
 ---
-title: Navigator.connection
+title: Navigator：connection 属性
 slug: Web/API/Navigator/connection
+l10n:
+  sourceCommit: 8bb6752a4d3ed3d54ab681636d16602e6bf1d74d
 ---
 
-{{APIRef("Network Information API")}}{{SeeCompatTable}}
+{{APIRef("Network Information API")}}
 
-**`Navigator.connection`** 是只读的，提供一个 {{domxref("NetworkInformation")}} 对象来获取设备的网络连接信息。例如用户设备的当前带宽或连接是否被计量，这可以用于基于用户的连接来选择高清晰度内容或低清晰度内容。
+{{domxref("Navigator")}} 接口的 **`connection`** 只读属性返回一个包含有关系统网络连接信息的 {{domxref("NetworkInformation")}} 对象，例如用户设备的当前带宽或连接是否按流量计费。
 
-## 语法
+这可以用于根据用户的连接状态来选择高清晰度内容或低清晰度内容。
 
-```plain
-connectionInfo = navigator.connection
-```
+## 值
 
-### 值
-
-返回网络连接状态 NetworkInformation 对象，包括 downlink（网络下行速度）effectiveType（网络类型）onchange（有值代表网络状态变更）rtt（估算的往返时间）saveData（打开/请求数据保护模式）
+一个 {{domxref("NetworkInformation")}} 对象。
 
 ## 规范
 
 {{Specifications}}
 
-## 浏览器兼容情况
+## 浏览器兼容性
 
 {{Compat}}
 
-## 参考资料
+## 参见
 
-- [Online and offline events](/zh-CN/docs/Online_and_offline_events)
+- [在线事件和离线事件](/zh-CN/docs/Web/API/Navigator/onLine)

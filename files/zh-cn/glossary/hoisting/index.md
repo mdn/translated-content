@@ -1,97 +1,58 @@
 ---
-title: Hoisting（变量提升）
+title: 提升
 slug: Glossary/Hoisting
+l10n:
+  sourceCommit: 9fd171abed5944476123db22360b1e086f0900d5
 ---
 
-变量提升（Hoisting）被认为是，Javascript 中执行上下文（特别是创建和执行阶段）工作方式的一种认识。在 [ECMAScript® 2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/index.html) 之前的 JavaScript 文档中找不到变量提升（Hoisting）这个词。不过，需要注意的是，开始时，这个概念可能比较难理解，甚至恼人。
+{{GlossarySidebar}}
 
-例如，从概念的字面意义上说，“变量提升”意味着变量和函数的声明会在物理层面移动到代码的最前面，但这么说并不准确。实际上变量和函数声明在代码里的位置是不会动的，而是在编译阶段被放入内存中。
+JavaScript **提升**是指解释器在执行代码之前，似乎将函数、变量、类或导入的*声明*移动到其{{glossary("scope", "作用域")}}的顶部的过程。
 
-## 了解更多
+*提升*不是 ECMAScript 规范中规范定义的术语。规范确实将一组声明定义为[_可提升的声明_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-HoistableDeclaration)，但这只包括 [`function`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)、[`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)、[`async function`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function) 以及 [`async function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*) 声明。提升通常也被认为是 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 声明的一个特性，尽管方式不同。用通俗的话来说，以下任何行为都可以被视为提升：
 
-### 技术范例
+1. 能够在声明变量之前在其作用域中使用该变量的值。（“值提升”）
+2. 能够在声明变量之前在其作用域中引用该变量而不抛出 {{jsxref("ReferenceError")}}，但值始终是 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)。（“声明提升”）
+3. 变量的声明导致在声明行之前的作用域中行为发生变化。
+4. 声明的副作用在评估包含该声明的其余代码之前产生。
 
-JavaScript 在执行任何代码段之前，将函数声明放入内存中的优点之一是，你可以在声明一个函数之前使用该函数。例如：
+前面说到的四种函数声明的提升表现为第 1 种行为；`var` 声明的提升表现为第 2 种行为；[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)、[`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 和 [`class`](/zh-CN/docs/Web/JavaScript/Reference/Statements/class) 声明（也称为*词法声明*）的提升表现为第 3 种行为；[`import`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 声明的提升表现为第 1 和第 4 种行为。
+
+有些人更倾向于将 `let`、`const` 和 `class` 视为不提升的，因为[暂时性死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#暂时性死区)严格禁止在声明之前使用变量。这种看法是可以接受的，因为提升并不是一个普遍认同的术语。然而，暂时性死区可以导致其作用域内的其他可观察变化，这表明存在某种形式的提升：
 
 ```js
-/**
-* 正确的方式：先声明函数，再调用函数 (最佳实践)
-*/
-function catName(name) {
-    console.log("我的猫名叫 " + name);
+const x = 1;
+{
+  console.log(x); // ReferenceError
+  const x = 2;
 }
-
-catName("Tigger");
-
-/*
-以上代码的执行结果是："我的猫名叫 Tigger"
-*/
 ```
 
-上面的代码片按照是你的正常思维（先声明，后调用）去书写的。现在，我们来看看当我们在写这个函数之前调用这个函数会发生什么：
+如果 `const x = 2` 声明完全没有提升（即仅在执行时生效），那么 `console.log(x)` 语句应该能够读取上层作用域的 `x` 值。然而，由于 `const` 声明仍然“污染”了其定义的整个作用域，`console.log(x)` 语句读取的是 `const x = 2` 声明的 `x`，但它尚未初始化，因此抛出 {{jsxref("ReferenceError")}}。不过，从实用角度看，将词法声明视为不提升可能更有用，因为这些声明的提升并没有带来任何有意义的特性。
+
+注意以下情况不属于提升：
 
 ```js
-/**
-* 不推荐的方式：先调用函数，再声明函数
-*/
-
-catName("Chloe");
-
-function catName(name) {
-    console.log("我的猫名叫 " + name);
+{
+  var x = 1;
 }
-
-/*
-代码执行的结果是："我的猫名叫 Chloe"
-*/
+console.log(x); // 1
 ```
 
-即使我们在定义这个函数之前调用它，函数仍然可以工作。这是因为在 JavaScript 中**执行上下文**的工作方式造成的。
+这里没有“在声明前访问”；只是因为 `var` 声明不是块级作用域的。
 
-变量提升也适用于其他数据类型和变量。变量可以在声明之前进行初始化和使用。但是如果没有初始化，就不能使用它们。
+有关提升的更多信息，请参见：
 
-译者注：函数和变量相比，会被优先提升。这意味着函数会被提升到更靠前的位置。
+- `var`、`let`、`const` 提升——[语法类型教程](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#变量提升)
+- `function` 提升——[函数教程](/zh-CN/docs/Web/JavaScript/Guide/Functions#函数提升)
+- `class` 提升——[类教程](/zh-CN/docs/Web/JavaScript/Guide/Using_classes#类声明提升)
+- `import` 提升——[JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#导入声明提升)
 
-### 只有声明被提升
+## 参见
 
-JavaScript 只会提升声明，不会提升其初始化。如果一个变量先被使用再被声明和赋值的话，使用时的值是 undefined。参见例子：
-
-```js
-console.log(num); // Returns undefined
-var num;
-num = 6;
-```
-
-如果你先赋值、再使用、最后声明该变量，使用时能获取到所赋的值
-
-```js
-num = 6;
-console.log(num); // returns 6
-var num;
-```
-
-再来看几个类似的例子：
-
-```js
-// Example 1 - only y is hoisted
-var x = 1;                 // 声明 + 初始化 x
-console.log(x + " " + y);  // '1 undefined'
-var y = 2;                 // 声明 + 初始化 y
-
-// Example 2 - Hoists
-var num1 = 3;                   // Declare and initialize num1
-num2 = 4;                       // Initialize num2
-console.log(num1 + " " + num2); //'3 4'
-var num2;                       // Declare num2 for hoisting
-
-// Example 3 - Hoists
-a = 'Cran';              // Initialize a
-b = 'berry';             // Initialize b
-console.log(a + "" + b); // 'Cranberry'
-var a, b;                // Declare both a & b for hoisting
-```
-
-### 技术参考
-
-- [var statement](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) - MDN
-- [function statement](/zh-CN/docs/Web/JavaScript/Reference/Statements/function) - MDN
+- [`var` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/var)
+- [`let` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)
+- [`const` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)
+- [`function` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)
+- [`class` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)
+- [`import` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)

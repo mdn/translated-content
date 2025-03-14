@@ -1,13 +1,6 @@
 ---
 title: Utiliser DASH avec les vidéos en HTML
 slug: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
-tags:
-  - Avancé
-  - DASH
-  - Guide
-  - HTML
-translation_of: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
-original_slug: Web/HTML/Utiliser_DASH_avec_les_vidéos_en_HTML
 ---
 
 {{HTMLSidebar}}
@@ -18,13 +11,13 @@ original_slug: Web/HTML/Utiliser_DASH_avec_les_vidéos_en_HTML
 
 Firefox 21 inclut une implémentation de DASH pour le format vidéo WebM mais celle-ci est désactivée par défaut et peut être activée via la préférence `media.dash.enabled` sous `about:config`.
 
-Firefox 23 a retiré la prise en charge de DASH pour le format WebM. Cette fonctionnalité sera remplacée par l'implémentation de l'[API Media Source Extensions](http://www.w3.org/TR/media-source/) qui permettra la prise en charge de DASH via des bibliothèques JavaScript tierces (telles que dash.js). Pour plus de détails, voir le bug [778617](https://bugzilla.mozilla.org/show_bug.cgi?id=778617).
+Firefox 23 a retiré la prise en charge de DASH pour le format WebM. Cette fonctionnalité sera remplacée par l'implémentation de l'[API Media Source Extensions](https://www.w3.org/TR/media-source/) qui permettra la prise en charge de DASH via des bibliothèques JavaScript tierces (telles que dash.js). Pour plus de détails, voir le bug [778617](https://bugzilla.mozilla.org/show_bug.cgi?id=778617).
 
 ## Utiliser DASH, côté serveur
 
 Pour commencer, il faut convertir la vidéo WebM en manifeste DASH avec les vidéos associées aux différents débits. Pour cela, on aura besoin de :
 
-- ffpmeg - avec la prise en charge de l'audio et vidéo WebM fourni via libvpx and libvoribis en version 2.5 minimum ([ffmpeg.org](http://www.ffmpeg.org/)).
+- ffpmeg - avec la prise en charge de l'audio et vidéo WebM fourni via libvpx and libvoribis en version 2.5 minimum ([ffmpeg.org](https://www.ffmpeg.org/)).
 
 ### 1. Utiliser un fichier WebM afin de créer une piste audio et plusieurs fichiers vidéo
 
@@ -101,8 +94,8 @@ Il faut modifier la page web pour que celle-ci pointe d'abord vers le manifeste,
 
 ```html
 <video>
-  <source src="movie.mpd">
-  <source src="movie.webm">
+  <source src="movie.mpd" />
+  <source src="movie.webm" />
   Votre navigateur ne prend pas en charge les vidéos HTML.
 </video>
 ```
@@ -113,5 +106,5 @@ Si le navigateur utilisé prend en charge DASH/MSE, la diffusion de la vidéo se
 ## Voir aussi
 
 - [La spécification WebM DASH du projet WebM](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification)
-- [Le forum DASH Industry](http://dashif.org/)
+- [Le forum DASH Industry](https://dashif.org/)
 - [Descriptions du projet WebM pour la création de fichiers DASH avec FFMPEG](http://wiki.webmproject.org/adaptive-streaming/instructions-to-playback-adaptive-webm-using-dash)

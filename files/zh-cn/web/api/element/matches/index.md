@@ -7,18 +7,19 @@ slug: Web/API/Element/matches
 
 如果元素被指定的选择器字符串选择，**`Element.matches()`** 方法返回 true; 否则返回 false。
 
-> **警告：** 有一些浏览器使用前缀，在非标准名称 matchesSelector () 下实现了这个方法！
+> [!WARNING]
+> 有一些浏览器使用前缀，在非标准名称 matchesSelector () 下实现了这个方法！
 
 ## 语法
 
-```
-let result = element.matches(selectorString);
+```js-nolint
+matches(selectors)
 ```
 
 - `result` 的值为 `true` 或 `false`.
 - `selectorString` 是个 css 选择器字符串。
 
-## 例子
+## 示例
 
 ```html
 <ul id="birds">
@@ -28,11 +29,11 @@ let result = element.matches(selectorString);
 </ul>
 
 <script type="text/javascript">
-  var birds = document.getElementsByTagName('li');
+  var birds = document.getElementsByTagName("li");
 
   for (var i = 0; i < birds.length; i++) {
-    if (birds[i].matches('.endangered')) {
-      console.log('The ' + birds[i].textContent + ' is endangered!');
+    if (birds[i].matches(".endangered")) {
+      console.log("The " + birds[i].textContent + " is endangered!");
     }
   }
 </script>
@@ -61,18 +62,18 @@ let result = element.matches(selectorString);
 
 ```js
 if (!Element.prototype.matches) {
-    Element.prototype.matches =
-        Element.prototype.matchesSelector ||
-        Element.prototype.mozMatchesSelector ||
-        Element.prototype.msMatchesSelector ||
-        Element.prototype.oMatchesSelector ||
-        Element.prototype.webkitMatchesSelector ||
-        function(s) {
-            var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-                i = matches.length;
-            while (--i >= 0 && matches.item(i) !== this) {}
-            return i > -1;
-        };
+  Element.prototype.matches =
+    Element.prototype.matchesSelector ||
+    Element.prototype.mozMatchesSelector ||
+    Element.prototype.msMatchesSelector ||
+    Element.prototype.oMatchesSelector ||
+    Element.prototype.webkitMatchesSelector ||
+    function (s) {
+      var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+        i = matches.length;
+      while (--i >= 0 && matches.item(i) !== this) {}
+      return i > -1;
+    };
 }
 ```
 

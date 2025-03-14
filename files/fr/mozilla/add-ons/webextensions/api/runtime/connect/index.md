@@ -1,20 +1,9 @@
 ---
 title: runtime.connect()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/connect
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - connect
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/connect
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Créer une connexion pour plusieurs cas d'utilisation pout votre extension.
 
@@ -30,14 +19,14 @@ Attention, vous ne pouvez pas utiliser cette fonctionnalité pour connecter une 
 ```js
 var port = browser.runtime.connect(
   extensionId, // optional string
-  connectInfo  // optional object
-)
+  connectInfo, // optional object
+);
 ```
 
 ### Paramètres
 
 - `extensionId`{{optional_inline}}
-  - : `string`. L'ID de l'extension à laquelle se connecter. Si la cible à défini un ID dans la clé [applications](/fr/Add-ons/WebExtensions/manifest.json/applications) du fichier manifest.json, alors `extensionId` doit avoir cette valeur. Autrement, il doit avoir l'ID qui a été généré pour la cible.
+  - : `string`. L'ID de l'extension à laquelle se connecter. Si la cible à défini un ID dans la clé [applications](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) du fichier manifest.json, alors `extensionId` doit avoir cette valeur. Autrement, il doit avoir l'ID qui a été généré pour la cible.
 - `connectInfo`{{optional_inline}}
 
   - : `object`. Détails de la connexion:
@@ -51,9 +40,9 @@ var port = browser.runtime.connect(
 
 {{WebExtAPIRef('runtime.Port')}}. Port à travers lequel les messages peuvent être envoyés et reçus. L'événement `onDisconnect` du port est déclenché si l'extension n'existe pas.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.connect")}}
+{{Compat}}
 
 ## Exemples
 
@@ -66,16 +55,16 @@ Le script de contenu :
 ```js
 // content-script.js
 
-var myPort = browser.runtime.connect({name:"port-from-cs"});
-myPort.postMessage({greeting: "hello from content script"});
+var myPort = browser.runtime.connect({ name: "port-from-cs" });
+myPort.postMessage({ greeting: "hello from content script" });
 
-myPort.onMessage.addListener(function(m) {
+myPort.onMessage.addListener(function (m) {
   console.log("In content script, received message from background script: ");
   console.log(m.greeting);
 });
 
-document.body.addEventListener("click", function() {
-  myPort.postMessage({greeting: "they clicked the page!"});
+document.body.addEventListener("click", function () {
+  myPort.postMessage({ greeting: "they clicked the page!" });
 });
 ```
 
@@ -97,25 +86,25 @@ var portFromCS;
 
 function connected(p) {
   portFromCS = p;
-  portFromCS.postMessage({greeting: "hi there content script!"});
-  portFromCS.onMessage.addListener(function(m) {
-    console.log("In background script, received message from content script")
+  portFromCS.postMessage({ greeting: "hi there content script!" });
+  portFromCS.onMessage.addListener(function (m) {
+    console.log("In background script, received message from content script");
     console.log(m.greeting);
   });
 }
 
 browser.runtime.onConnect.addListener(connected);
 
-browser.browserAction.onClicked.addListener(function() {
-  portFromCS.postMessage({greeting: "they clicked the button!"});
+browser.browserAction.onClicked.addListener(function () {
+  portFromCS.postMessage({ greeting: "they clicked the button!" });
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

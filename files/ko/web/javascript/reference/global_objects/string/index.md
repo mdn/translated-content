@@ -1,13 +1,8 @@
 ---
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String
 ---
+
 {{JSRef}}
 
 **`String`** 전역 객체는 문자열(문자의 나열)의 생성자입니다.
@@ -25,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
 문자열은 `String` 전역 객체를 직접 사용하여 생성할 수 있습니다.
 
 ```js
-String(thing)
+String(thing);
 ```
 
 ### 매개변수
@@ -40,23 +35,24 @@ ECMAScript 2015 이후, 문자열 리터럴은 소위 [템플릿 리터럴](/ko/
 
 일반적인 출력 문자 외의 특수 문자는 이스케이프 표현을 사용해 적을 수 있습니다.
 
-| 코드                     | 출력                                                 |
-| ------------------------ | ---------------------------------------------------- |
-| `\XXX`                   | 8진수 Latin-1 문자                                   |
-| `\'`                     | 작은따옴표                                           |
-| `\"`                     | 큰따옴표                                             |
-| `\\`                     | 역슬래시                                             |
-| `\n`                     | 개행                                                 |
-| `\r`                     | 캐리지 리턴                                          |
-| `\v`                     | 세로 탭                                              |
-| `\t`                     | 탭                                                   |
-| `\b`                     | 백 스페이스                                          |
-| `\f`                     | 폼 피드                                              |
-| `\uXXXX`                 | 유니코드 코드포인트                                  |
+| 코드                     | 출력                                        |
+| ------------------------ | ------------------------------------------- |
+| `\XXX`                   | 8진수 Latin-1 문자                          |
+| `\'`                     | 작은따옴표                                  |
+| `\"`                     | 큰따옴표                                    |
+| `\\`                     | 역슬래시                                    |
+| `\n`                     | 개행                                        |
+| `\r`                     | 캐리지 리턴                                 |
+| `\v`                     | 세로 탭                                     |
+| `\t`                     | 탭                                          |
+| `\b`                     | 백 스페이스                                 |
+| `\f`                     | 폼 피드                                     |
+| `\uXXXX`                 | 유니코드 코드포인트                         |
 | `\u{X}` ... `\u{XXXXXX}` | 유니코드 코드포인트 {{experimental_inline}} |
-| `\xXX`                   | Latin-1 문자                                         |
+| `\xXX`                   | Latin-1 문자                                |
 
-> **참고:** 일부 다른 프로그래밍 언어와 달리, JavaScript는 작은따옴표와 큰따옴표 문자열을 구분하지 않습니다. 따라서 위의 이스케이프 문자는 작은따옴표나 큰따옴표에서 상관 없이 작동합니다.
+> [!NOTE]
+> 일부 다른 프로그래밍 언어와 달리, JavaScript는 작은따옴표와 큰따옴표 문자열을 구분하지 않습니다. 따라서 위의 이스케이프 문자는 작은따옴표나 큰따옴표에서 상관 없이 작동합니다.
 
 ### 긴 문자열 리터럴
 
@@ -65,15 +61,17 @@ ECMAScript 2015 이후, 문자열 리터럴은 소위 [템플릿 리터럴](/ko/
 우선 다음과 같이 [+](</ko/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#%EB%8D%94%ED%95%98%EA%B8%B0_()>) 연산자를 사용할 수 있습니다.
 
 ```js
-let longString = "여러 줄에 걸쳐 작성해야 할 정도로 " +
-                 "긴 문자열인데 왜 한 줄에 다 적으면 안되냐면 " +
-                 "코드를 읽기 힘들어지니까요.";
+let longString =
+  "여러 줄에 걸쳐 작성해야 할 정도로 " +
+  "긴 문자열인데 왜 한 줄에 다 적으면 안되냐면 " +
+  "코드를 읽기 힘들어지니까요.";
 ```
 
 아니면 역슬래시 문자("\\")를 각 줄의 맨 끝에 붙여 문자열이 이어진다는걸 표시할 수도 있습니다. 역슬래시 다음에 공백을 포함한 어떤 문자라도 붙으면 제대로 작동하지 않으므로 주의해야 합니다.
 
 ```js
-let longString = "여러 줄에 걸쳐 작성해야 할 정도로 \
+let longString =
+  "여러 줄에 걸쳐 작성해야 할 정도로 \
 긴 문자열인데 왜 한 줄에 다 적으면 안되냐면 \
 코드를 읽기 힘들어지니까요.";
 ```
@@ -89,25 +87,26 @@ let longString = "여러 줄에 걸쳐 작성해야 할 정도로 \
 문자열에서 개개의 문자에 접근할 수 있는 방법은 두가지가 있습니다. 첫번째는 {{jsxref("String.prototype.charAt()", "charAt()")}} 메서드를 이용하는 것입니다:
 
 ```js
-return 'cat'.charAt(1); // returns "a"
+return "cat".charAt(1); // returns "a"
 ```
 
 다른 방법(ECMAScript 5에서 소개하고 있는)은 문자열을 배열과 같은 오브젝트로 취급하여, 문자에 해당하는 숫자 인덱스를 사용하는 방법입니다 :
 
 ```js
-return 'cat'[1]; // returns "a"
+return "cat"[1]; // returns "a"
 ```
 
 브라켓(\[ ]) 표기법을 사용하여 문자에 접근하는 경우 , 이러한 프로퍼티들에 새로운 값을 할당하거나 삭제할 수는 없습니다. 포함되어 있는 프로퍼티들은 작성할 수도, 수정할 수도 없습니다. (더 자세한 정보는 {{jsxref("Object.defineProperty()")}}를 참고 바랍니다 .)
 
 ### 문자열 비교
 
-C 개발자는 문자열 비교를 위하여 `strcmp()` 함수를 사용합니다. JavaScript에서는 단지 [less-than와 greater-than 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)만을 사용하여 문자열을 비교할 수 있습니다:
+C 개발자는 문자열 비교를 위하여 `strcmp()` 함수를 사용합니다. JavaScript에서는 단지 [less-than와 greater-than 연산자](/ko/docs/Web/JavaScript/Reference/Operators)만을 사용하여 문자열을 비교할 수 있습니다:
 
 ```js
 var a = "a";
 var b = "b";
-if (a < b) { // true
+if (a < b) {
+  // true
   console.log(a + " is less than " + b);
 } else if (a > b) {
   console.log(a + " is greater than " + b);
@@ -129,16 +128,16 @@ var s_prim = "foo";
 var s_obj = new String(s_prim);
 
 console.log(typeof s_prim); // Logs "string"
-console.log(typeof s_obj);  // Logs "object"
+console.log(typeof s_obj); // Logs "object"
 ```
 
 문자열 원형과 `String` 오브젝트는 {{jsxref("Global_Objects/eval", "eval()")}}을 사용할 때 다른 결과를 제공합니다. `eval`에 전달되는 문자열 원형들은 소스 코드 취급을 받습니다; `String` 오브젝트들은 다른 모든 오브젝트들과 마찬가지로 취급하며, 오브젝트를 반환합니다. 예를 들면:
 
 ```js
-var s1 = '2 + 2';               // creates a string primitive
-var s2 = new String('2 + 2');   // creates a String object
-console.log(eval(s1));          // returns the number 4
-console.log(eval(s2));          // returns the string "2 + 2"
+var s1 = "2 + 2"; // creates a string primitive
+var s2 = new String("2 + 2"); // creates a String object
+console.log(eval(s1)); // returns the number 4
+console.log(eval(s2)); // returns the string "2 + 2"
 ```
 
 이러한 이유로, 비록 코드 상에서 원형 문자열을 사용하는 대신에 `String` 오브젝트를 사용하게 되면 코드가 손상될 수 있지만, 일반적인 개발자는 차이를 걱정할 필요는 없습니다.
@@ -157,11 +156,9 @@ console.log(eval(s2.valueOf())); // returns the number 4
 
 ## 정적 메서드
 
-- {{jsxref("String.fromCharCode()", "String.fromCharCode(<var>num1</var> [, ...[,
-    <var>numN</var>]])")}}
+- {{jsxref("String.fromCharCode()", "String.fromCharCode(<var>num1</var> [, ...[, <var>numN</var>]])")}}
   - : 지정된 유니코드 값의 순서를 이용하여 만든 문자열을 반환합니다.
-- {{jsxref("String.fromCodePoint()", "String.fromCodePoint(<var>num1</var> [, ...[,
-    <var>numN</var>)")}}
+- {{jsxref("String.fromCodePoint()", "String.fromCodePoint(<var>num1</var> [, ...[, <var>numN</var>)")}}
   - : 지정된 코드 포인트 순서를 이용하여 만든 문자열을 반환합니다.
 - {{jsxref("String.raw()")}}
   - : 원형 템플릿 문자열(raw template string)에서 생성된 문자열을 반환합니다.
@@ -178,95 +175,73 @@ console.log(eval(s2.valueOf())); // returns the number 4
 - {{jsxref("String.prototype.charAt()", "String.prototype.charAt(<var>index</var>)")}}
   - : Returns the character (exactly one UTF-16 code unit) at the specified
     `index`.
-- {{jsxref("String.prototype.charCodeAt()",
-    "String.prototype.charCodeAt(<var>index</var>)")}}
+- {{jsxref("String.prototype.charCodeAt()", "String.prototype.charCodeAt(<var>index</var>)")}}
   - : Returns a number that is the UTF-16 code unit value at the given
     `index`.
-- {{jsxref("String.prototype.codePointAt()",
-    "String.prototype.codePointAt(<var>pos</var>)")}}
+- {{jsxref("String.prototype.codePointAt()", "String.prototype.codePointAt(<var>pos</var>)")}}
   - : Returns a nonnegative integer Number that is the code point value of the UTF-16
     encoded code point starting at the specified `pos`.
-- {{jsxref("String.prototype.concat()", "String.prototype.concat(<var>str </var>[,
-    ...<var>strN </var>])")}}
+- {{jsxref("String.prototype.concat()", "String.prototype.concat(<var>str </var>[, ...<var>strN </var>])")}}
   - : Combines the text of two (or more) strings and returns a new string.
-- {{jsxref("String.prototype.includes()",
-    "String.prototype.includes(<var>searchString</var> [, <var>position</var>])")}}
+- {{jsxref("String.prototype.includes()", "String.prototype.includes(<var>searchString</var> [, <var>position</var>])")}}
   - : Determines whether the calling string contains `searchString`.
-- {{jsxref("String.prototype.endsWith()",
-    "String.prototype.endsWith(<var>searchString</var> [, <var>length</var>])")}}
+- {{jsxref("String.prototype.endsWith()", "String.prototype.endsWith(<var>searchString</var> [, <var>length</var>])")}}
   - : Determines whether a string ends with the characters of the string
     `searchString`.
-- {{jsxref("String.prototype.indexOf()",
-    "String.prototype.indexOf(<var>searchValue</var> [, <var>fromIndex</var>])")}}
+- {{jsxref("String.prototype.indexOf()", "String.prototype.indexOf(<var>searchValue</var> [, <var>fromIndex</var>])")}}
   - : Returns the index within the calling {{jsxref("String")}} object of the first
     occurrence of `searchValue`, or `-1` if not found.
-- {{jsxref("String.prototype.lastIndexOf()",
-    "String.prototype.lastIndexOf(<var>searchValue</var> [, <var>fromIndex</var>])")}}
+- {{jsxref("String.prototype.lastIndexOf()", "String.prototype.lastIndexOf(<var>searchValue</var> [, <var>fromIndex</var>])")}}
   - : Returns the index within the calling {{jsxref("String")}} object of the last
     occurrence of `searchValue`, or `-1` if not found.
-- {{jsxref("String.prototype.localeCompare()",
-    "String.prototype.localeCompare(<var>compareString</var> [, <var>locales</var> [,
-    <var>options</var>]])")}}
+- {{jsxref("String.prototype.localeCompare()", "String.prototype.localeCompare(<var>compareString</var> [, <var>locales</var> [, <var>options</var>]])")}}
   - : Returns a number indicating whether the reference string
     `compareString` comes before, after, or is equivalent to the
     given string in sort order.
 - {{jsxref("String.prototype.match()", "String.prototype.match(<var>regexp</var>)")}}
   - : Used to match regular expression `regexp` against a string.
-- {{jsxref("String.prototype.matchAll()",
-    "String.prototype.matchAll(<var>regexp</var>)")}}
+- {{jsxref("String.prototype.matchAll()", "String.prototype.matchAll(<var>regexp</var>)")}}
   - : Returns an iterator of all `regexp`'s matches.
-- {{jsxref("String.prototype.normalize()",
-    "String.prototype.normalize([<var>form</var>])")}}
+- {{jsxref("String.prototype.normalize()", "String.prototype.normalize([<var>form</var>])")}}
   - : Returns the Unicode Normalization Form of the calling string value.
-- {{jsxref("String.prototype.padEnd()",
-    "String.prototype.padEnd(<var>targetLength</var> [, <var>padString</var>])")}}
+- {{jsxref("String.prototype.padEnd()", "String.prototype.padEnd(<var>targetLength</var> [, <var>padString</var>])")}}
   - : Pads the current string from the end with a given string and returns a new string of
     the length `targetLength`.
-- {{jsxref("String.prototype.padStart()",
-    "String.prototype.padStart(<var>targetLength</var> [, <var>padString</var>])")}}
+- {{jsxref("String.prototype.padStart()", "String.prototype.padStart(<var>targetLength</var> [, <var>padString</var>])")}}
   - : Pads the current string from the start with a given string and returns a new string
     of the length `targetLength`.
 - {{jsxref("String.prototype.repeat()", "String.prototype.repeat(<var>count</var>)")}}
   - : Returns a string consisting of the elements of the object repeated
     `count` times.
-- {{jsxref("String.prototype.replace()" ,
-    "String.prototype.replace(<var>searchFor</var>, <var>replaceWith</var>)")}}
+- {{jsxref("String.prototype.replace()" , "String.prototype.replace(<var>searchFor</var>, <var>replaceWith</var>)")}}
   - : Used to replace occurrences of `searchFor` using
     `replaceWith`. `searchFor` may be a string
     or Regular Expression, and `replaceWith` may be a string or
     function.
-- {{jsxref("String.prototype.replaceAll()" ,
-    "String.prototype.replaceAll(<var>searchFor</var>, <var>replaceWith</var>)")}}
+- {{jsxref("String.prototype.replaceAll()" , "String.prototype.replaceAll(<var>searchFor</var>, <var>replaceWith</var>)")}}
   - : Used to replace all occurrences of `searchFor` using
     `replaceWith`. `searchFor` may be a string
     or Regular Expression, and `replaceWith` may be a string or
     function.
-- {{jsxref("String.prototype.search()",
-    "String.prototype.search(<var>regexp</var>)")}}
+- {{jsxref("String.prototype.search()", "String.prototype.search(<var>regexp</var>)")}}
   - : Search for a match between a regular expression `regexp` and
     the calling string.
-- {{jsxref("String.prototype.slice()", "String.prototype.slice(<var>beginIndex</var>[,
-    <var>endIndex</var>])")}}
+- {{jsxref("String.prototype.slice()", "String.prototype.slice(<var>beginIndex</var>[, <var>endIndex</var>])")}}
   - : Extracts a section of a string and returns a new string.
-- {{jsxref("String.prototype.split()", "String.prototype.split([<var>sep</var> [,
-    <var>limit</var>] ])")}}
+- {{jsxref("String.prototype.split()", "String.prototype.split([<var>sep</var> [, <var>limit</var>] ])")}}
   - : Returns an array of strings populated by splitting the calling string at occurrences
     of the substring `sep`.
-- {{jsxref("String.prototype.startsWith()",
-    "String.prototype.startsWith(<var>searchString</var> [, <var>length</var>])")}}
+- {{jsxref("String.prototype.startsWith()", "String.prototype.startsWith(<var>searchString</var> [, <var>length</var>])")}}
   - : Determines whether the calling string begins with the characters of string
     `searchString`.
-- {{jsxref("String.prototype.substring()",
-    "String.prototype.substring(<var>indexStart</var> [, <var>indexEnd</var>])")}}
+- {{jsxref("String.prototype.substring()", "String.prototype.substring(<var>indexStart</var> [, <var>indexEnd</var>])")}}
   - : Returns a new string containing characters of the calling string from (or between)
     the specified index (or indices).
-- {{jsxref("String.prototype.toLocaleLowerCase()",
-    "String.prototype.toLocaleLowerCase( [<var>locale</var>, ...<var>locales</var>])")}}
+- {{jsxref("String.prototype.toLocaleLowerCase()", "String.prototype.toLocaleLowerCase( [<var>locale</var>, ...<var>locales</var>])")}}
   - : The characters within a string are converted to lowercase while respecting the
     current locale.For most languages, this will return the same as
     {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}.
-- {{jsxref("String.prototype.toLocaleUpperCase()",
-    "String.prototype.toLocaleUpperCase( [<var>locale</var>, ...<var>locales</var>])")}}
+- {{jsxref("String.prototype.toLocaleUpperCase()", "String.prototype.toLocaleUpperCase( [<var>locale</var>, ...<var>locales</var>])")}}
   - : The characters within a string are converted to uppercase while respecting the
     current locale.For most languages, this will return the same as
     {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}}.
@@ -304,14 +279,9 @@ for (var i = 0, n = inputValues.length; i < n; ++i) {
 }
 ```
 
-## 명세
+## 명세서
 
-| Specification                                                                | Status                       | Comment             |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Initial definition. |
-| {{SpecName('ES5.1', '#sec-15.5', 'String')}}                 | {{Spec2('ES5.1')}}     |                     |
-| {{SpecName('ES6', '#sec-string-objects', 'String')}}         | {{Spec2('ES6')}}         |                     |
-| {{SpecName('ESDraft', '#sec-string-objects', 'String')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## 브라우저 호환성
 

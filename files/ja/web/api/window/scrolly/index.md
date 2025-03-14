@@ -17,7 +17,8 @@ var y = window.scrollY
 
 実際に返される値は、文書が原点から垂直方向にスクロールした量をピクセル数で表す倍精度浮動小数点値であり、正の値は、内容物が上にスクロールしていることを表します。文書がサブピクセル精度の端末に表示されている場合は、返値も小数部を含むサブピクセル精度の値になります。文書が上にも下にもスクロールしていない場合、 `scrollY` は 0 になります。
 
-> **メモ:** 整数値が必要である場合は、 {{jsxref("Math.round()")}} を使用して四捨五入してください。
+> [!NOTE]
+> 整数値が必要である場合は、 {{jsxref("Math.round()")}} を使用して四捨五入してください。
 
 専門用語で説明すると `scrollY` は、現在の {{Glossary("viewport", "ビューポート")}} の上端の Y 座標を返します。ビューポートがない場合の戻り値は 0 です。
 
@@ -46,21 +47,27 @@ window.pageYOffset === window.scrollY; // 常に true
 
 ```js
 var supportPageOffset = window.pageXOffset !== undefined;
-var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+var isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
 
-var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
-var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+var x = supportPageOffset
+  ? window.pageXOffset
+  : isCSS1Compat
+    ? document.documentElement.scrollLeft
+    : document.body.scrollLeft;
+var y = supportPageOffset
+  ? window.pageYOffset
+  : isCSS1Compat
+    ? document.documentElement.scrollTop
+    : document.body.scrollTop;
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{ SpecName('CSSOM View', '#dom-window-scrolly', 'window.scrollY') }} | {{ Spec2('CSSOM View') }} |      |
+{{Specifications}}
 
 ## ブラウザーの対応
 
-{{Compat("api.Window.scrollY")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -1,25 +1,33 @@
 ---
 title: Number.parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Number
-  - Polyfill
-browser-compat: javascript.builtins.Number.parseFloat
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 ---
+
 {{JSRef}}
 
 **`Number.parseFloat()`** 메서드는 주어진 값을 필요한 경우 문자열로 변환한 후 부동소수점 실수로 파싱해 반환합니다. 숫자를 파싱할 수 없는 경우 {{jsxref("NaN")}}을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/number-parsefloat.html")}}
+{{InteractiveExample("JavaScript Demo: Number.parseFloat()")}}
+
+```js interactive-example
+function circumference(r) {
+  if (Number.isNaN(Number.parseFloat(r))) {
+    return 0;
+  }
+  return parseFloat(r) * 2.0 * Math.PI;
+}
+
+console.log(circumference("4.567abcdefgh"));
+// Expected output: 28.695307297889173
+
+console.log(circumference("abcdefgh"));
+// Expected output: 0
+```
 
 ## 구문
 
 ```js
-Number.parseFloat(string)
+Number.parseFloat(string);
 ```
 
 ### 매개변수

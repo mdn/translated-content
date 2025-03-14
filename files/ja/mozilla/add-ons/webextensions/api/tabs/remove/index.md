@@ -3,7 +3,7 @@ title: tabs.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 １つ以上のタブを閉じます。
 
@@ -13,11 +13,11 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/remove
 
 ```js
 var removing = browser.tabs.remove(
-  tabIds          // integer or integer array
-)
+  tabIds, // integer or integer array
+);
 ```
 
-### パラメータ
+### パラメーター
 
 - `tabIds`
   - : `integer` または `array of integer`. 閉じるタブの ID を指定します。
@@ -28,7 +28,7 @@ A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.tabs.remove")}}
+{{Compat}}
 
 ## 例
 
@@ -64,9 +64,11 @@ removing.then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-remove) API に基づいています。 This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!NOTE]
+> この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-remove) API に基づいています。 This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -93,4 +95,4 @@ removing.then(onRemoved, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

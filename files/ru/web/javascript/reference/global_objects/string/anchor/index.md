@@ -1,17 +1,9 @@
 ---
 title: String.prototype.anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-  - String
-  - Методы оборачивания в HTML
-translation_of: Web/JavaScript/Reference/Global_Objects/String/anchor
 ---
-{{JSRef("Global_Objects", "String")}} {{deprecated_header}}
+
+{{JSRef}} {{deprecated_header}}
 
 ## Сводка
 
@@ -32,7 +24,7 @@ str.anchor(name)
 
 Метод `anchor()` используется для программного создания и отображения якоря в документе.
 
-Текстовая строка представляет из себя буквальный текст, который ва хотите показать пользователю. Строковый параметр `name` представляет атрибут `name` элемента {{HTMLElement("a")}}.
+Текстовая строка представляет из себя буквальный текст, который вы хотите показать пользователю. Строковый параметр `name` представляет атрибут `name` элемента {{HTMLElement("a")}}.
 
 Якоря, созданные методом `anchor()`, становятся элементами в массиве {{domxref("document.anchors")}}.
 
@@ -41,9 +33,9 @@ str.anchor(name)
 ### Пример: использование метода `anchor()`
 
 ```js
-var myString = 'Оглавление';
+var myString = "Оглавление";
 
-document.body.innerHTML = myString.anchor('contents_anchor');
+document.body.innerHTML = myString.anchor("contents_anchor");
 ```
 
 приведёт к выводу следующего HTML:

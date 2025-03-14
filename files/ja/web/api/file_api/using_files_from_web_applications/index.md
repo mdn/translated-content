@@ -1,31 +1,30 @@
 ---
 title: ウェブアプリケーションからのファイルの使用
 slug: Web/API/File_API/Using_files_from_web_applications
-original_slug: Web/API/File/Using_files_from_web_applications
+l10n:
+  sourceCommit: b079d9c8113879d70c668fc94347d50c35fc2fac
 ---
 
 {{APIRef("File API")}}
 
-File API は DOM に HTML5 で追加されたもので、ウェブコンテンツがユーザーにローカルファイルを選択するように指示し、それらのファイルを読み取ることができるようになりました。この選択は HTML の `{{HTMLElement("input/file", '&lt;input type="file"&gt;')}}` 要素を使用したり、ドラッグ＆ドロップを行ったりすることで行うことができます。
-
-File API を拡張機能や他のクロームコードから利用することもできます。この場合、もういくつか知っておきたい機能があります。詳細は [DOM File API をクロームコードで使う](/ja/docs/Extensions/Using_the_DOM_File_API_in_chrome_code)をご覧下さい。
+ファイル API を使用すると、ウェブコンテンツがユーザーにローカルファイルを選択するように指示し、それらのファイルを読み取ることができるようになりました。この選択は HTML の `{{HTMLElement("input/file", '&lt;input type="file"&gt;')}}` 要素を使用したり、ドラッグ & ドロップを行ったりすることで行うことができます。
 
 ## 選択されたファイルへのアクセス
 
 この HTML を考えてください。
 
 ```html
-<input type="file" id="input" multiple>
+<input type="file" id="input" multiple />
 ```
 
-File API により、ユーザーが選択したファイルを表す {{DOMxRef("File")}} オブジェクトを含む {{DOMxRef("FileList")}} にアクセスすることができます。
+ファイル API により、ユーザーが選択したファイルを表す {{DOMxRef("File")}} オブジェクトを含む {{DOMxRef("FileList")}} にアクセスすることができます。
 
 `multiple` 属性を `input` 要素に付けることで、ユーザーが複数のファイルを選択することができるようになります。
 
 旧来の DOM セレクターを使って、最初に選択されたファイルにアクセスします。
 
 ```js
-const selectedFile = document.getElementById('input').files[0];
+const selectedFile = document.getElementById("input").files[0];
 ```
 
 ### change イベントでの選択されたファイルへのアクセス
@@ -53,7 +52,7 @@ const numFiles = fileList.length;
 ```js
 for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
   const file = fileList[i];
-  // ...
+  // …
 }
 ```
 
@@ -73,73 +72,107 @@ for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
 次のコードは `size` プロパティを利用する例です。
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>ファイルのサイズ</title>
-</head>
+<!doctype html>
+<html lang="ja-JP">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ファイルのサイズ</title>
+  </head>
 
-<body>
-  <form name="uploadForm">
-    <div>
-      <input id="uploadInput" type="file" name="myFiles" multiple>
-      選択されたファイル: <span id="fileNum">0</span>;
-      合計サイズ: <span id="fileSize">0</span>
-    </div>
-    <div><input type="submit" value="Send file"></div>
-  </form>
+  <body>
+    <form name="uploadForm">
+      <div>
+        <input id="uploadInput" type="file" multiple />
+        <label for="fileNum">選択されたファイル:</label>
+        <output id="fileNum">0</output>;
+        <label for="fileSize">合計サイズ:</label>
+        <output id="fileSize">0</output>
+      </div>
+      <div><input type="submit" value="Send file" /></div>
+    </form>
 
-  <script>
-  function updateSize() {
-    let nBytes = 0,
-        oFiles = this.files,
-        nFiles = oFiles.length;
-    for (let nFileId = 0; nFileId < nFiles; nFileId++) {
-      nBytes += oFiles[nFileId].size;
-    }
-    let sOutput = nBytes + " bytes";
-    // 倍数近似のための任意のコード
-    const aMultiples = ["KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"];
-    for (nMultiple = 0, nApprox = nBytes / 1024; nApprox > 1; nApprox /= 1024, nMultiple++) {
-      sOutput = nApprox.toFixed(3) + " " + aMultiples[nMultiple] + " (" + nBytes + " bytes)";
-    }
-    // 任意コードの末尾
-    document.getElementById("fileNum").innerHTML = nFiles;
-    document.getElementById("fileSize").innerHTML = sOutput;
-  }
+    <script>
+      const uploadInput = document.getElementById("uploadInput");
+      uploadInput.addEventListener(
+        "change",
+        () => {
+          // 合計サイズを計算
+          let numberOfBytes = 0;
+          for (const file of uploadInput.files) {
+            numberOfBytes += file.size;
+          }
 
-  document.getElementById("uploadInput").addEventListener("change", updateSize, false);
-  </script>
-</body>
+          // 最も近い接頭辞単位に近似
+          const units = [
+            "B",
+            "KiB",
+            "MiB",
+            "GiB",
+            "TiB",
+            "PiB",
+            "EiB",
+            "ZiB",
+            "YiB",
+          ];
+          const exponent = Math.min(
+            Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
+            units.length - 1,
+          );
+          const approx = numberOfBytes / 1024 ** exponent;
+          const output =
+            exponent === 0
+              ? `${numberOfBytes} bytes`
+              : `${approx.toFixed(3)} ${
+                  units[exponent]
+                } (${numberOfBytes} bytes)`;
+
+          document.getElementById("fileNum").textContent =
+            uploadInput.files.length;
+          document.getElementById("fileSize").textContent = output;
+        },
+        false,
+      );
+    </script>
+  </body>
 </html>
 ```
 
 ## click() メソッドを使用して非表示の input 要素を使用する
 
-見た目の悪い {{HTMLElement("input")}} 要素を非表示にし、独自のインターフェイスでファイル選択を開き、ユーザーが選択したファイルを表示することができます。 input 要素のスタイルを `display: none` とし、その上で {{DOMxRef("HTMLElement.click","click()")}} メソッドを {{HTMLElement("input")}} に対して呼び出すことで実現できます。
+見た目の悪い {{HTMLElement("input")}} 要素を非表示にし、独自のインターフェイスでファイル選択を開き、ユーザーが選択したファイルを表示することができます。 input 要素のスタイルを `display:none` とし、その上で {{DOMxRef("HTMLElement.click","click()")}} メソッドを {{HTMLElement("input")}} に対して呼び出すことで実現できます。
 
 次のような HTML を考えてみましょう。
 
 ```html
-<input type="file" id="fileElem" multiple accept="image/*" style="display:none">
-<button id="fileSelect">いくつかのファイルを選択してください。</button>
+<input
+  type="file"
+  id="fileElem"
+  multiple
+  accept="image/*"
+  style="display:none" />
+<button id="fileSelect" type="button">
+  いくつかのファイルを選択してください。
+</button>
 ```
 
 `click` イベントを扱うコードは次のようなものです。
 
 ```js
-const fileSelect = document.getElementById("fileSelect"),
-  fileElem = document.getElementById("fileElem");
+const fileSelect = document.getElementById("fileSelect");
+const fileElem = document.getElementById("fileElem");
 
-fileSelect.addEventListener("click", function (e) {
-  if (fileElem) {
-    fileElem.click();
-  }
-}, false);
+fileSelect.addEventListener(
+  "click",
+  (e) => {
+    if (fileElem) {
+      fileElem.click();
+    }
+  },
+  false,
+);
 ```
 
-ファイル選択を開くための新しいボタンは、好きなようにスタイル付けできます。
+{{HTMLElement("button")}} は、好きなようにスタイル付けできます。
 
 ## label 要素を使用して非表示の file input 要素を起動
 
@@ -148,7 +181,12 @@ JavaScript (click() メソッド) を使用せずにファイル選択を開け�
 次の HTML を見てください。
 
 ```html
-<input type="file" id="fileElem" multiple accept="image/*" class="visually-hidden">
+<input
+  type="file"
+  id="fileElem"
+  multiple
+  accept="image/*"
+  class="visually-hidden" />
 <label for="fileElem">いくつかのファイルを選択してください。</label>
 ```
 
@@ -163,20 +201,16 @@ JavaScript (click() メソッド) を使用せずにファイル選択を開け�
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-/* 互換性のための別ルールとして、最近の Firefox と Chrome では :focus-within が必要です。 */
-input.visually-hidden:focus + label {
-  outline: thin dotted;
-}
-input.visually-hidden:focus-within + label {
+input.visually-hidden:is(:focus, :focus-within) + label {
   outline: thin dotted;
 }
 ```
 
-JavaScript コードを追加して `fileElem.click()` を呼び出す必要はありません。またこの場合は、ラベル要素のスタイルを希望どおりに設定することもできます。前例のようにアウトラインに設定したり、background-color や box-shadow を設定したりして、ラベルの非表示入力フィールドのフォーカスステータスを視覚的に示す必要があります。(この記事を書いている時点では、Firefox は `<input type="file">` 要素に対してこの視覚的な手がかりを表示していません。)
+JavaScript コードを追加して `fileElem.click()` を呼び出す必要はありません。またこの場合は、ラベル要素のスタイルを希望どおりに設定することもできます。前例のようにアウトラインに設定したり、background-color や box-shadow を設定したりして、ラベルの非表示入力フィールドのフォーカスステータスを視覚的に示す必要があります。(この記事を書いている時点では、 Firefox は `<input type="file">` 要素に対してこの視覚的な手がかりを表示していません。)
 
-## ドラッグ＆ドロップを使用したファイルの選択
+## ドラッグ & ドロップを使用したファイルの選択
 
-ユーザーがファイルをウェブアプリケーションにドラッグ＆ドロップすることもできます。
+ユーザーがファイルをウェブアプリケーションにドラッグ & ドロップすることもできます。
 
 最初のステップは、ドロップゾーンを確立することです。コンテンツのどの部分がドロップを受け入れるかは、アプリケーションの設計によって異なりますが、要素がドロップイベントを受け取れるようにするのは簡単です。
 
@@ -189,7 +223,7 @@ dropbox.addEventListener("dragover", dragover, false);
 dropbox.addEventListener("drop", drop, false);
 ```
 
-この例では、ID `dropbox` を持つ要素をドロップゾーンに指定しています。これは、{{domxref('Document/dragenter_event', 'dragenter')}}、{{domxref('Document/dragover_event', 'dragover')}}、{{domxref('Document/drop_event', 'drop')}} の各イベントのリスナーを追加することで行われます。
+この例では、ID `dropbox` を持つ要素をドロップゾーンに指定しています。これは、{{domxref("HTMLElement/dragenter_event", "dragenter")}}、{{domxref("HTMLElement/dragover_event", "dragover")}}、{{domxref("HTMLElement/drop_event", "drop")}} の各イベントのリスナーを追加することで行われます。
 
 実際には、この場合、 `dragenter` と `dragover` のイベントでは何もする必要はありませんので、これらの関数はどちらも簡単です。これらの関数はイベントの伝播を停止し、既定のアクションが発生しないようにするだけです。
 
@@ -219,7 +253,7 @@ function drop(e) {
 }
 ```
 
-ここでは、イベントから `dataTransfer` フィールドを取得し、そこからファイルリストを取得し、それを `handleFiles()` に渡します。これより先は、ユーザーが入力要素を使用したかドラッグ＆ドロップを使用するかどうかにかかわらず、ファイルの処理方法は全く同じです。
+ここでは、イベントから `dataTransfer` フィールドを取得し、そこからファイルリストを取得し、それを `handleFiles()` に渡します。これより先は、ユーザーが入力要素を使用したかドラッグ & ドロップを使用するかどうかにかかわらず、ファイルの処理方法は全く同じです。
 
 ## 例: ユーザーが選択した画像のサムネイルを表示
 
@@ -230,7 +264,9 @@ function handleFiles(files) {
   for (let i = 0; i < files.length; i++) {
     const file = files[i];
 
-    if (!file.type.startsWith('image/')){ continue }
+    if (!file.type.startsWith("image/")) {
+      continue;
+    }
 
     const img = document.createElement("img");
     img.classList.add("obj");
@@ -238,7 +274,9 @@ function handleFiles(files) {
     preview.appendChild(img); // 「プレビュー」とは、コンテンツが表示される div 出力のことを想定しています。
 
     const reader = new FileReader();
-    reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
+    reader.onload = (e) => {
+      img.src = e.target.result;
+    };
     reader.readAsDataURL(file);
   }
 }
@@ -248,7 +286,7 @@ function handleFiles(files) {
 
 各画像には CSS クラス `obj` が追加されており、DOM ツリーで簡単に見つけることができます。また、各画像に `file` 属性を追加し、画像の {{DOMxRef("File")}} を指定しています。これにより、後で実際にアップロードする画像を取得することができます。{{DOMxRef("Node.appendChild()")}} を使用して、文書のプレビュー領域に新しいサムネイルを追加します。
 
-次に、画像の読み込みと `img` 要素へのアタッチを非同期で処理するための {{DOMxRef("FileReader")}} を確立します。新しい `FileReader` オブジェクトを作成した後、その `onload` 関数を設定し、`readAsDataURL()` を呼び出してバックグラウンドで読み込み処理を開始します。画像ファイルのコンテンツ全体が読み込まれると、それらは `data:` URL に変換され、`onload` コールバックに渡されます。このルーチンの実装では、`img` 要素の `src` 属性が読み込まれた画像に設定され、その結果、画像がユーザの画面のサムネイルに表示されます。
+次に、画像の読み込みと `img` 要素へのアタッチを非同期で処理するための {{DOMxRef("FileReader")}} を確立します。新しい `FileReader` オブジェクトを作成した後、その `onload` 関数を設定し、`readAsDataURL()` を呼び出してバックグラウンドで読み込み処理を開始します。画像ファイルのコンテンツ全体が読み込まれると、それらは `data:` URL に変換され、`onload` コールバックに渡されます。このルーチンの実装では、`img` 要素の `src` 属性が読み込まれた画像に設定され、その結果、画像がユーザーの画面のサムネイルに表示されます。
 
 ## オブジェクト URL を利用する
 
@@ -270,31 +308,40 @@ URL.revokeObjectURL(objectURL);
 
 この例では、オブジェクト URL を使用して画像のサムネイルを表示しています。さらに、ファイル名やサイズなどの他のファイル情報も表示します。
 
-インターフェースとなる HTML は次のようになります。
+インターフェイスとなる HTML は次のようになります。
 
 ```html
-<input type="file" id="fileElem" multiple accept="image/*" style="display:none">
+<input
+  type="file"
+  id="fileElem"
+  multiple
+  accept="image/*"
+  style="display:none" />
 <a href="#" id="fileSelect">いくつかのファイルを選択してください。</a>
 <div id="fileList">
   <p>ファイルが選択されていません。</p>
 </div>
 ```
 
-これにより、ファイル {{HTMLElement("input")}} 要素と、ファイル選択を呼び出すリンクが確立されます (あまり美しくないファイル入力を非表示にするため)。これは、ファイル選択を呼び出すメソッドと同様に、セクション [click() メソッドを使用して非表示の input 要素を使用する](#click_%e3%83%a1%e3%82%bd%e3%83%83%e3%83%89%e3%82%92%e4%bd%bf%e7%94%a8%e3%81%97%e3%81%a6%e9%9d%9e%e8%a1%a8%e7%a4%ba%e3%81%ae_input_%e8%a6%81%e7%b4%a0%e3%82%92%e4%bd%bf%e7%94%a8%e3%81%99%e3%82%8b) で説明されています。
+これにより、ファイル {{HTMLElement("input")}} 要素と、ファイル選択を呼び出すリンクが確立されます (あまり美しくないファイル入力を非表示にするため)。これは、ファイル選択を呼び出すメソッドと同様に、[click() メソッドを使用して非表示の input 要素を使用する](#click_メソッドを使用して非表示の_input_要素を使用する)の節で説明されています。
 
 `handleFiles()` メソッドは次のようになります。
 
 ```js
 const fileSelect = document.getElementById("fileSelect"),
-    fileElem = document.getElementById("fileElem"),
-    fileList = document.getElementById("fileList");
+  fileElem = document.getElementById("fileElem"),
+  fileList = document.getElementById("fileList");
 
-fileSelect.addEventListener("click", function (e) {
-  if (fileElem) {
-    fileElem.click();
-  }
-  e.preventDefault(); // "#" への移動を防ぐ
-}, false);
+fileSelect.addEventListener(
+  "click",
+  (e) => {
+    if (fileElem) {
+      fileElem.click();
+    }
+    e.preventDefault(); // "#" への移動を防ぐ
+  },
+  false,
+);
 
 fileElem.addEventListener("change", handleFiles, false);
 
@@ -312,19 +359,19 @@ function handleFiles() {
       const img = document.createElement("img");
       img.src = URL.createObjectURL(this.files[i]);
       img.height = 60;
-      img.onload = function() {
-        URL.revokeObjectURL(this.src);
-      }
+      img.onload = () => {
+        URL.revokeObjectURL(img.src);
+      };
       li.appendChild(img);
       const info = document.createElement("span");
-      info.innerHTML = this.files[i].name + ": " + this.files[i].size + " バイト";
+      info.innerHTML = `${this.files[i].name}: ${this.files[i].size} バイト`;
       li.appendChild(info);
     }
   }
 }
 ```
 
-これは、{{HTMLElement("div")}} の URL を `fileList` という ID で取得することから始まります。これは、サムネイルを含むファイルリストを挿入するブロックです。
+これは、 {{HTMLElement("div")}} の URL を `fileList` という ID で取得することから始まります。これは、サムネイルを含むファイルリストを挿入するブロックです。
 
 `handleFiles()` に渡された {{DOMxRef("FileList")}} オブジェクトが `null` の場合、ブロックの内部 HTML に「ファイルが選択されていません」と表示するように設定します。そうでない場合は、次のようにファイルリストの構築を開始します。
 
@@ -332,24 +379,24 @@ function handleFiles() {
 2. 新しいリスト要素は、{{HTMLElement("div")}} ブロックの中に {{DOMxRef("Node.appendChild()")}} メソッドを呼び出すことで挿入されます。
 3. `files` で表される {{DOMxRef("FileList")}} 内のそれぞれの {{DOMxRef("File")}} に対して次の処理を実行します。
 
-    1. 新しくリスト項目 ({{HTMLElement("li")}}) 要素を作成し、リストに挿入します。
-    2. 新しく画像 ({{HTMLElement("img")}}) 要素を作成します。
-    3. {{DOMxRef("URL.createObjectURL()")}} を用いて、Blob の URL を作成して、画像のソースをファイルを表す新しいオブジェクト URL に設定します。
-    4. 画像の高さを 60 ピクセルに設定します。
-    5. 画像が読み込まれると不要になるため、画像の読み込みイベントハンドラーを設定してオブジェクトの URL を解放します。これは {{DOMxRef("URL.revokeObjectURL()")}} メソッドを呼び出し、`img.src` で指定したオブジェクト URL 文字列を渡すことで行います。
-    6. 新しいリスト項目をリストに追加する。
+   1. 新しくリスト項目 ({{HTMLElement("li")}}) 要素を作成し、リストに挿入します。
+   2. 新しく画像 ({{HTMLElement("img")}}) 要素を作成します。
+   3. {{DOMxRef("URL.createObjectURL()")}} を用いて、Blob の URL を作成して、画像のソースをファイルを表す新しいオブジェクト URL に設定します。
+   4. 画像の高さを 60 ピクセルに設定します。
+   5. 画像が読み込まれると不要になるため、画像の読み込みイベントハンドラーを設定してオブジェクトの URL を解放します。これは {{DOMxRef("URL.revokeObjectURL()")}} メソッドを呼び出し、`img.src` で指定したオブジェクト URL 文字列を渡すことで行います。
+   6. 新しいリスト項目をリストに追加する。
 
 上のコードのライブデモはこちらです。
 
 {{EmbedLiveSample('Example_Using_object_URLs_to_display_images', '100%', '300px')}}
 
-## 例: ユーザが選択したファイルを送信
+## 例: ユーザーが選択したファイルを送信
 
 もう１つは、ユーザーが選択したファイルやファイル (先ほどの例で選択した画像など) をサーバーにアップロードできるようにすることです。これは非常に簡単に非同期で行うことができます。
 
 ### アップロードタスクの生成
 
-前の例でサムネイルを作成したコードの続きで、すべてのサムネイル画像が CSS クラス `obj` にあり、対応する {{DOMxRef("File")}}} が `file` 属性に添付されていることを思い出してください。これにより、このように{{DOMxRef("Document.querySelectorAll()")}}を使用して、ユーザーがアップロードするために選択した画像をすべて選択することができます。
+前の例でサムネイルを作成したコードの続きで、すべてのサムネイル画像が CSS クラス `obj` にあり、対応する {{DOMxRef("File")}} が `file` 属性に添付されていることを思い出してください。これにより、このように{{DOMxRef("Document.querySelectorAll()")}}を使用して、ユーザーがアップロードするために選択した画像をすべて選択することができます。
 
 ```js
 function sendFiles() {
@@ -361,7 +408,7 @@ function sendFiles() {
 }
 ```
 
-2 行目は、CSS クラス `obj` を持つドキュメント内のすべての要素の {{DOMxRef("NodeList")}}} を取得し `imgs` と呼ばれる変数に格納します。この例では、これらの要素はすべての画像サムネイルになります。このリストを取得したら、それを参照して、それぞれの新しい `FileUpload` インスタンスを作成するのは簡単です。それぞれが対応するファイルのアップロードを処理します。
+2 行目は、CSS クラス `obj` を持つドキュメント内のすべての要素の {{DOMxRef("NodeList")}} を取得し `imgs` と呼ばれる変数に格納します。この例では、これらの要素はすべての画像サムネイルになります。このリストを取得したら、それを参照して、それぞれの新しい `FileUpload` インスタンスを作成するのは簡単です。それぞれが対応するファイルのアップロードを処理します。
 
 ### ファイルのアップロード処理を行う
 
@@ -375,24 +422,60 @@ function FileUpload(img, file) {
   this.xhr = xhr;
 
   const self = this;
-  this.xhr.upload.addEventListener("progress", function(e) {
-        if (e.lengthComputable) {
-          const percentage = Math.round((e.loaded * 100) / e.total);
-          self.ctrl.update(percentage);
-        }
-      }, false);
+  this.xhr.upload.addEventListener(
+    "progress",
+    (e) => {
+      if (e.lengthComputable) {
+        const percentage = Math.round((e.loaded * 100) / e.total);
+        self.ctrl.update(percentage);
+      }
+    },
+    false,
+  );
 
-  xhr.upload.addEventListener("load", function(e){
-          self.ctrl.update(100);
-          const canvas = self.ctrl.ctx.canvas;
-          canvas.parentNode.removeChild(canvas);
-      }, false);
-  xhr.open("POST", "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php");
-  xhr.overrideMimeType('text/plain; charset=x-user-defined-binary');
-  reader.onload = function(evt) {
+  xhr.upload.addEventListener(
+    "load",
+    (e) => {
+      self.ctrl.update(100);
+      const canvas = self.ctrl.ctx.canvas;
+      canvas.parentNode.removeChild(canvas);
+    },
+    false,
+  );
+  xhr.open(
+    "POST",
+    "https://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
+  );
+  xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
+  reader.onload = (evt) => {
     xhr.send(evt.target.result);
   };
   reader.readAsBinaryString(file);
+}
+
+function createThrobber(img) {
+  const throbberWidth = 64;
+  const throbberHeight = 6;
+  const throbber = document.createElement("canvas");
+  throbber.classList.add("upload-progress");
+  throbber.setAttribute("width", throbberWidth);
+  throbber.setAttribute("height", throbberHeight);
+  img.parentNode.appendChild(throbber);
+  throbber.ctx = throbber.getContext("2d");
+  throbber.ctx.fillStyle = "orange";
+  throbber.update = (percent) => {
+    throbber.ctx.fillRect(
+      0,
+      0,
+      (throbberWidth * percent) / 100,
+      throbberHeight,
+    );
+    if (percent === 100) {
+      throbber.ctx.fillStyle = "green";
+    }
+  };
+  throbber.update(0);
+  return throbber;
 }
 ```
 
@@ -402,7 +485,7 @@ function FileUpload(img, file) {
 
 1. `XMLHttpRequest` のアップロード `progress` リスナーは、アップロードの進捗に応じて最新の情報に基づいて throbber が更新されるように、新しいパーセント値の情報で throbber を更新するように設定されています。
 2. `XMLHttpRequest` のアップロード `load` イベントハンドラーは、進捗インジケーターが実際に 100 % に達することを確認するために、throbber の進捗情報を 100% に更新するように設定されています (プロセス中に粒度のクセがある場合)。そして、必要がなくなれば throbber を削除します。これにより、アップロードが完了すると throbber が消えます。
-3. 画像ファイルをアップロードするリクエストは、`XMLHttpRequest` の `open()` メソッドを呼び出して POST リクエストを生成することで開始されます。
+3. 画像ファイルをアップロードするリクエストは、 `XMLHttpRequest` の `open()` メソッドを呼び出して POST リクエストを生成することで開始されます。
 4. アップロードの MIME タイプは `XMLHttpRequest` 関数の `overrideMimeType()` を呼び出して設定します。この場合、一般的な MIME タイプを使用しています。用途によっては MIME タイプを設定する必要がない場合もあります。
 5. `FileReader` オブジェクトを使用して、ファイルをバイナリー文字列に変換します
 6. 最後に、コンテンツがロードされると、 `XMLHttpRequest` 関数の `send()` が呼び出され、ファイルのコンテンツがアップロードされます。
@@ -411,7 +494,7 @@ function FileUpload(img, file) {
 
 この例では、サーバー側で PHP を使用し、クライアント側で JavaScript を使用して、ファイルの非同期アップロードを実演しています。
 
-```js
+```php
 <?php
 if (isset($_FILES['myFile'])) {
     // 例:
@@ -419,10 +502,10 @@ if (isset($_FILES['myFile'])) {
     exit;
 }
 ?><!DOCTYPE html>
-<html>
+<html lang="ja-JP">
 <head>
-    <title>dnd binary upload</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>dnd binary upload</title>
     <script type="application/javascript">
         function sendFile(file) {
             const uri = "/index.php";
@@ -430,8 +513,8 @@ if (isset($_FILES['myFile'])) {
             const fd = new FormData();
 
             xhr.open("POST", uri, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 && xhr.status == 200) {
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4 && xhr.status === 200) {
                     alert(xhr.responseText); // handle response.
                 }
             };
@@ -440,14 +523,14 @@ if (isset($_FILES['myFile'])) {
             xhr.send(fd);
         }
 
-        window.onload = function() {
+        window.onload = () => {
             const dropzone = document.getElementById("dropzone");
-            dropzone.ondragover = dropzone.ondragenter = function(event) {
+            dropzone.ondragover = dropzone.ondragenter = (event) => {
                 event.stopPropagation();
                 event.preventDefault();
             }
 
-            dropzone.ondrop = function(event) {
+            dropzone.ondrop = (event) => {
                 event.stopPropagation();
                 event.preventDefault();
 
@@ -461,7 +544,7 @@ if (isset($_FILES['myFile'])) {
 </head>
 <body>
     <div>
-        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">Drag & drop your file here...</div>
+        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">ここにファイルをドラッグ & ドロップしてください</div>
     </div>
 </body>
 </html>
@@ -474,15 +557,15 @@ if (isset($_FILES['myFile'])) {
 Firefox では、 PDF が iframe 内に埋め込まれて表示されるようにするには (ダウンロードファイルとして提案されるのではなく)、`pdfjs.disabled` の設定を `false` {{non-standard_inline()}} に設定する必要があります。
 
 ```html
-<iframe id="viewer">
+<iframe id="viewer"></iframe>
 ```
 
 そして、`src` 属性の変更点はこちらです。
 
 ```js
 const obj_url = URL.createObjectURL(blob);
-const iframe = document.getElementById('viewer');
-iframe.setAttribute('src', obj_url);
+const iframe = document.getElementById("viewer");
+iframe.setAttribute("src", obj_url);
 URL.revokeObjectURL(obj_url);
 ```
 
@@ -491,38 +574,12 @@ URL.revokeObjectURL(obj_url);
 他の形式のファイルも同じように操作できます。ここでは、アップロードされた動画をプレビューする方法を紹介します。
 
 ```js
-const video = document.getElementById('video');
+const video = document.getElementById("video");
 const obj_url = URL.createObjectURL(blob);
 video.src = obj_url;
 video.play();
 URL.revokeObjectURL(obj_url);
 ```
-
-## 仕様書
-
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">仕様書</th>
-      <th scope="col">状態</th>
-      <th scope="col">備考</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'number-state.html#concept-input-type-file-selected', 'File upload state')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('File API')}}</td>
-      <td>{{Spec2('File API')}}</td>
-      <td>初回定義</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 関連情報
 
@@ -531,4 +588,4 @@ URL.revokeObjectURL(obj_url);
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("URL")}}
 - {{DOMxRef("XMLHttpRequest")}}
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

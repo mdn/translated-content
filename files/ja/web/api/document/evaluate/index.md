@@ -1,95 +1,146 @@
 ---
-title: Document.evaluate()
+title: "Document: evaluate() メソッド"
+short-title: evaluate()
 slug: Web/API/Document/evaluate
+l10n:
+  sourceCommit: 8d89e9669f59f208a80c0bdbee48ba75d37a726e
 ---
 
 {{ ApiRef("DOM") }}
 
-[XPath](/ja/docs/XPath) 式やその他与えられたパラメータに基づいて [`XPathResult`](/ja/docs/XPathResult) を返します。
+**`evaluate()`** は {{domxref("Document")}} インターフェイスのメソッドで、引数で与えられた [XPath](/ja/docs/Web/XPath) 式に基づいて要素を選択します。
+
+XPath 式は HTML および XML 文書の両方を評価することができます。
 
 ## 構文
 
-```
-var xpathResult = document.evaluate(
- xpathExpression,
- contextNode,
- namespaceResolver,
- resultType,
- result
-);
+```js-nolint
+evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
 ```
 
-- `xpathExpression` は評価される Xpath を示す文字列です。
-- `contextNode` はクエリの*コンテキストノード*を指定します([XPath の仕様](http://www.w3.org/TR/xpath)を参照してください)　コンテキストノードとして `document` を渡すのが一般的です。
-- `namespaceResolver` は、任意の名前空間接頭辞を受け取り、その接頭辞に関連付けられた名前空間 URI を文字列として返す関数です。接頭辞が文書の中でマッチされるように、XPath 自身の中で接頭辞を解決するために使われます。HTML 文書向け、または名前空間接頭辞を使わないときは `null` を指定するのが一般的です。
-- `resultType` は返り値である `XPathResult` のタイプに対応する整数です。XPathResult コンストラクタの[名前付き定数プロパティ](#Result_types) (例えば `XPathResult.ANY_TYPE`) を使用してください。これらは 0 から 9 までの整数に対応しています。
-- `result` は結果として使われる既存の `XPathResult` です。`null` を指定するのが最も一般的です。`null` は新しい `XPathResult を生成します。`
+### 引数
+
+- `xpathExpression`
+  - : 文字列で、評価される xpath を表します。
+- `contextNode`
+  - : このクエリーのコンテキストノードです（[XPath 仕様書](https://www.w3.org/TR/1999/REC-xpath-19991116/)を参照してください）。
+    コンテキストノードとして `document` を渡すのが一般的です。
+- `namespaceResolver`
+  - : 名前空間接頭辞を渡すと、その接頭辞に関連付けられた名前空間 URI を表す文字列を返す関数です。
+    これは、_xpath_ 自身の中で接頭辞を解決し、文書と照合できるようにするために使用することができます。
+    値が `null` の場合は、HTML 文書や 名前空間接頭辞を使用していない場合によく用いられます。
+- `resultType`
+
+  - : 整数で、返す結果の `XPathResult` の型に対応する整数。
+    取りうる値は以下の通りです。
+    - `ANY_TYPE` (`0`)
+      - : 指定された式から自然に得られるあらゆる型。
+    - `NUMBER_TYPE` (`1`)
+      - : 単一の数値を含む結果セット。例えば `count()` 関数を使用する _xpath_ 式で有益なものです。
+    - `STRING_TYPE` (`2`)
+      - : 単一の文字列を含む結果セット。
+    - `BOOLEAN_TYPE` (`3`)
+      - : 単一の論理値を含む結果セット。例えば、 `not()` 関数を使用した _xpath_ 式に有用です。
+    - `UNORDERED_NODE_ITERATOR_TYPE` (`4`)
+      - : 式に一致するすべてのノードを含む結果セット。結果セット内のノードは、必ずしも文書内に現れる順番とは限りません。
+        > [!NOTE]
+        > この型の結果は、文書内のノードへの参照を格納します。
+        > ノードを変更すると、イテレーターは無効になります。
+        > ノードを変更した後、結果を反復処理しようとするとエラーになります。
+    - `ORDERED_NODE_ITERATOR_TYPE` (`5`)
+      - : 式に一致するすべてのノードを含む結果セット。結果セット内のノードは、文書内に現れる順序と同じです。
+        > [!NOTE]
+        > この型の結果は、文書内のノードへの参照を格納します。
+        > ノードを変更すると、イテレーターは無効になります。
+        > ノードを変更した後、結果を反復処理しようとするとエラーになります。
+    - `UNORDERED_NODE_SNAPSHOT_TYPE` (`6`)
+      - : 式に一致するすべてのノードのスナップショットを格納した結果セット。結果セット内のノードは、必ずしも文書内のノードと同じ順序ではありません。
+        > [!NOTE]
+        > この型の結果はスナップショットで、基本的に一致するノードのリストです。
+        > スナップショットノードを変更することで、文書に変更を加えることができます。
+        > 文書を変更してもスナップショットは無効にはなりません。
+        > しかし、文書が変更された場合、スナップショットは文書の現在の状態と一致しないことがあります。
+        > ノードが移動されたり、変更されたり、追加されたり、除去されたりすることがあるからです。
+    - `ORDERED_NODE_SNAPSHOT_TYPE` (`7`)
+      - : 式に一致するすべてのノードのスナップショットを含む結果セット。結果セット内のノードは、文書内に現れる順序と同じです。
+        > [!NOTE]
+        > この型の結果はスナップショットで、基本的に一致するノードのリストです。
+        > スナップショットノードを変更することで、文書に変更を加えることができます。
+        > 文書を変更してもスナップショットは無効にはなりません。
+        > しかし、文書が変更された場合、スナップショットは文書の現在の状態と一致しないことがあります。
+        > ノードが移動されたり、変更されたり、追加されたり、除去されたりすることがあるからです。
+    - `ANY_UNORDERED_NODE_TYPE` (`8`)
+      - : 式に一致する単一のノードを含む結果セット。このノードは、必ずしも文書内の式に一致する最初のノードであるとは限りません。
+    - `FIRST_ORDERED_NODE_TYPE` (`9`)
+      - : 式に一致する文書内の最初のノードを含む結果設定します。
+
+- `result`
+  - : 結果に使用する既存の `XPathResult`。`null` を設定すると、メソッドは新しい `XPathResult` を作成して返します。
+
+### 返値
+
+選択されたノードにリンクする {{domxref("XPathResult")}} です。もし `result` が `null` であった場合は新しいオブジェクトとなり、そうでなかった場合は `result` 引数に渡したオブジェクトと同じオブジェクトとなります。
 
 ## 例
 
+### XPath によりすべての H2 見出しを検索
+
 ```js
-var headings = document.evaluate("/html/body//h2", document, null, XPathResult.ANY_TYPE, null);
-/* Search the document for all h2 elements.
- * The result will likely be an unordered node iterator. */
-var thisHeading = headings.iterateNext();
-var alertText = "Level 2 headings in this document are:\n";
+const headings = document.evaluate(
+  "/html/body//h2",
+  document,
+  null,
+  XPathResult.ANY_TYPE,
+  null,
+);
+/* この文書ですべての h2 要素を検索する。
+ * 結果は、おそらく順序なしのノードイテレーターになる。 */
+let thisHeading = headings.iterateNext();
+let alertText = "この文書のレベル 2 見出し:\n";
 while (thisHeading) {
-  alertText += thisHeading.textContent + "\n";
+  alertText += `${thisHeading.textContent}\n`;
   thisHeading = headings.iterateNext();
 }
-alert(alertText); // Alerts the text of all h2 elements
+alert(alertText); // すべての h2 要素のテキストをアラート表示
 ```
 
-Note, in the above example, a more verbose XPath is preferred over common shortcuts such as `//h2`. Generally, more specific XPath selectors as in the above example usually gives a significant performance improvement, especially on very large documents. This is because the evaluation of the query spends does not waste time visiting unnecessary nodes. Using // is generally slow as it visits _every_ node from the root and all subnodes looking for possible matches.
+上の例では、`//h2` のような一般的なショートカットよりも、より冗長な _xpath_ が推奨されていることに注意してください。一般的に、上記の例のように、より詳細な _xpath_ セレクターを使用すると、特に非常に大きな文書において、パフォーマンスが大幅に向上します。これは、クエリーの評価で不必要なノードを訪問して時間を浪費しないためです。 // を使用すると、ルートとすべてのサブノードからすべてのノードを訪問して一致する可能性があるものを探すため、一般的に遅くなります。
 
-Further optimization can be achieved by careful use of the context parameter. For example, if you know the content you are looking for is somewhere inside the body tag, you can use this:
+コンテキスト引数を注意深く使用することで、さらなる最適化を図ることができます。例えば、探しているコンテンツが body タグの内側のどこかにあることがわかっている場合は、このように使用することができます。
 
 ```js
 document.evaluate(".//h2", document.body, null, XPathResult.ANY_TYPE, null);
 ```
 
-Notice in the above `document.body` has been used as the context instead of `document` so the XPath starts from the body element. (In this example, the `"."` is important to indicate that the querying should start from the context node, document.body. If the "." was left out (leaving `//h2`) the query would start from the root node (`html`) which would be more wasteful.)
+上記の例では、コンテキストとして `document` の代わりに `document.body` が使用されているので、_xpath_ は body 要素から始まることに注意してください。（この例内の `"."` は、コンテキストノードである document.body からクエリーを始めることを示すために重要です。"." が省略された場合（`//h2`のまま）、クエリーはルートノード (`html`) から開始することになり、より無駄が多くなります）。
+詳しくは[JavaScript での XPath の利用の手引き](/ja/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)を参照してください。
 
-See [Introduction to using XPath in JavaScript](/ja/docs/Introduction_to_using_XPath_in_JavaScript) for more information.
+### xml:id で要素を取得
 
-## 注釈
+この関数は {{domxref("Document.getElementById()")}} の置き換えで、`xml:id` で検索したい場合に使います。
 
-- XPath expressions can be evaluated on HTML and XML documents.
-- While using document.evaluate() works in FF2, in FF3 one must use someXMLDoc.evaluate() if evaluating against something other than the current document.
+```js
+function getElementByIdWrapper(xmldoc, id) {
+  return xmldoc.evaluate(
+    `//*[@xml:id="${id}"]`,
+    xmldoc,
+    () => "http://www.w3.org/XML/1998/namespace",
+    XPathResult.FIRST_ORDERED_NODE_TYPE,
+    null,
+  ).singleNodeValue;
+}
+```
 
-## 戻り値の分類
-
-(Merge with [Template:XPathResultConstants](/Template:XPathResultConstants)?
-
-These are supported values for the `resultType` parameter of the `evaluate` method:
-
-| Result Type                    | Value | Description                                                                                                                                                                |
-| ------------------------------ | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ANY_TYPE`                     | 0     | Whatever type naturally results from the given expression.                                                                                                                 |
-| `NUMBER_TYPE`                  | 1     | A result set containing a single number. Useful, for example, in an XPath expression using the `count()` function.                                                         |
-| `STRING_TYPE`                  | 2     | A result set containing a single string.                                                                                                                                   |
-| `BOOLEAN_TYPE`                 | 3     | A result set containing a single boolean value. Useful, for example, an an XPath expression using the `not()` function.                                                    |
-| `UNORDERED_NODE_ITERATOR_TYPE` | 4     | A result set containing all the nodes matching the expression. The nodes in the result set are not necessarily in the same order they appear in the document.              |
-| `ORDERED_NODE_ITERATOR_TYPE`   | 5     | A result set containing all the nodes matching the expression. The nodes in the result set are in the same order they appear in the document.                              |
-| `UNORDERED_NODE_SNAPSHOT_TYPE` | 6     | A result set containing snapshots of all the nodes matching the expression. The nodes in the result set are not necessarily in the same order they appear in the document. |
-| `ORDERED_NODE_SNAPSHOT_TYPE`   | 7     | A result set containing snapshots of all the nodes matching the expression. The nodes in the result set are in the same order they appear in the document.                 |
-| `ANY_UNORDERED_NODE_TYPE`      | 8     | A result set containing any single node that matches the expression. The node is not necessarily the first node in the document that matches the expression.               |
-| `FIRST_ORDERED_NODE_TYPE`      | 9     | A result set containing the first node in the document that matches the expression.                                                                                        |
-
-Results of `NODE_ITERATOR` types contain references to nodes in the document. Modifying a node will invalidate the iterator. After modifying a node, attempting to iterate through the results will result in an error.
-
-Results of `NODE_SNAPSHOT` types are snapshots, which are essentially lists of matched nodes. You can make changes to the document by altering snapshot nodes. Modifying the document doesn't invalidate the snapshot; however, if the document is changed, the snapshot may not correspond to the current state of the document, since nodes may have moved, been changed, added, or removed.
-
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
-- [DOM:document.createExpression](/ja/docs/DOM/document.createExpression)
-- [XPath Code Snippets](/ja/docs/Code_snippets/XPath)
-- [Check for browser support](http://codepen.io/johan/full/ckFgn)
+- {{domxref("Document.createExpression()")}}
+- {{domxref("XPathResult")}}
+- [ブラウザーの対応のチェック](https://codepen.io/johan/full/DJoqaX)（英語）

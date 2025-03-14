@@ -3,17 +3,20 @@ title: 用 C＃来编写 WebSocket 服务器
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
 ---
 
+{{DefaultAPISidebar("WebSockets API")}}
+
 ## 介绍
 
 如果你想学习如何使用 WebSocket API，那么有一台服务器将会是非常有用的。在本文中，我将向你展示如何使用 C#来写后端。你可以使用任何可用于后端开发的语言来做这个事，但是，要为了使例子简明易懂，我选择微软的 C#。
 
-此服务器符合 [RFC 6455](http://tools.ietf.org/html/rfc6455) 因此，因此它只处理来自 Chrome16，Firefox 11，IE 10 及更高版本的连接。
+此服务器符合 [RFC 6455](https://tools.ietf.org/html/rfc6455) 因此，因此它只处理来自 Chrome16，Firefox 11，IE 10 及更高版本的连接。
 
 ## 第一步
 
 WebSockets 通过 [TCP (传输控制协议)](http://en.wikipedia.org/wiki/Transmission_Control_Protocol) 连接进行通信.。幸运的是，C# 中有一个 [TcpListener](http://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx) 类。它位于 _System.Net.Sockets_ 的命名空间。
 
-> **备注：** 最好使用 `using` 关键字来包含命名空间，这样在你写代码的时候就不需要指定详细的命名空间。
+> [!NOTE]
+> 最好使用 `using` 关键字来包含命名空间，这样在你写代码的时候就不需要指定详细的命名空间。
 
 ### TcpListener
 
@@ -25,7 +28,8 @@ TcpListener(System.Net.IPAddress localaddr, int port)
 
 `localaddr` 是监听地址， `port` 是监听端口。
 
-> **备注：** 如果字符串创建 `IPAddress` 对象，请使用 Parse 静态方法。
+> [!NOTE]
+> 如果字符串创建 `IPAddress` 对象，请使用 Parse 静态方法。
 
 方法：
 
@@ -35,8 +39,8 @@ TcpListener(System.Net.IPAddress localaddr, int port)
 
 下面是基于服务端的实现：
 
-```cpp
-​using System.Net.Sockets;
+```cs
+using System.Net.Sockets;
 using System.Net;
 using System;
 
@@ -173,7 +177,7 @@ if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
 
 - FIN 位：这个位表明是否整个消息都已经从客户端被发送出去。消息可能以多个帧的形式发送，但现在我们将情景考虑得简单一些。
 - RSV1, RSV2, RSV3：除非规定的扩展协议支持将它们赋为非 0 值，否则这些位必须为 0。
-- Opcode：这些位描述了接收的消息的类型。Opcode 0x1 意味着这是一条文本消息。[Opcodes 值的完整罗列](http://tools.ietf.org/html/rfc6455#section-5.2)
+- Opcode：这些位描述了接收的消息的类型。Opcode 0x1 意味着这是一条文本消息。[Opcodes 值的完整罗列](https://tools.ietf.org/html/rfc6455#section-5.2)
 
 第二个字节，当前值是 131，是另一个按位组成的部分，分解如下：
 
@@ -184,7 +188,8 @@ if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
 - MASK 位：定义了是否"Payload data"进行了掩码计算。如果值设置为 1，那么在 Masking-Key 字段中会有一个掩码密钥，并且它可以用来进行"Payload data"的去掩码计算。所有从客户端发到服务器的消息中此位都会被置 1。
 - Payload Length：如果这个值在 0 与 125 之间，那么这个值就是消息的长度。如果这个值是 126，那么接下来的 2 个字节（16 位无符号整数）是消息长度。如果这个值是 127，那么接下来的 8 个字节（64 位无符号整数）是消息长度。
 
-> **备注：** 因为在客户端到服务器的消息中第一位总是 1，所以你可以将这个字节减去 128 去除 MASK 位。
+> [!NOTE]
+> 因为在客户端到服务器的消息中第一位总是 1，所以你可以将这个字节减去 128 去除 MASK 位。
 
 需要注意的是 MASK 位在我们的消息中被置为 1。这意味着接下来的 4 个字节 (61, 84, 35, 6) 是用于解码消息的掩码字节。这些字节在每个消息中都不是固定不变的。
 
@@ -210,4 +215,4 @@ for (int i = 0; i < encoded.Length; i++) {
 
 ## 有关文档
 
-- [编写 WebSocket 服务器](/zh-CN/docs/WebSockets/Writing_WebSocket_servers)
+- [编写 WebSocket 服务器](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)

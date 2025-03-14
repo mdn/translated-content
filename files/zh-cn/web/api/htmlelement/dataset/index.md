@@ -16,7 +16,7 @@ slug: Web/API/HTMLElement/dataset
 - 在 JavaScript
   - : 自定义 data 属性的属性名与没有 `data-` 前缀的 HTML 属性相同，并且在移除单个破折号（`-`）后，大写之后的字母以获得属性的“驼峰”命名。
 
-除了以下属性，你还可以在我们的文章[_使用 data 属性_](/zh/docs/Learn/HTML/Howto/Use_data_attributes)中找到使用 HTML 数据属性的操作指南。
+除了以下属性，你还可以在我们的文章[_使用 data 属性_](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)中找到使用 HTML 数据属性的操作指南。
 
 ### 名称转换
 
@@ -36,7 +36,7 @@ slug: Web/API/HTMLElement/dataset
     1. **限制**：在转换之前，破折号*不得*立即后跟 ASCII 小写字母 `a` 到 `z`；
     2. 增加 `data-` 前缀；
     3. 在任何 ASCII 大写字母 `A` 到 `Z` 之前增加一个破折号，然后小写该字母。
-    4. 其它字母不做改变。
+    4. 其他字母不做改变。
 
 例如，一个 `data-abc-def` 属性对应于 `dataset.abcDef`。
 
@@ -64,7 +64,7 @@ slug: Web/API/HTMLElement/dataset
 ```
 
 ```js
-const el = document.querySelector('#user');
+const el = document.querySelector("#user");
 
 // el.id === 'user'
 // el.dataset.id === '1234567890'
@@ -72,7 +72,7 @@ const el = document.querySelector('#user');
 // el.dataset.dateOfBirth === ''
 
 // set a data attribute
-el.dataset.dateOfBirth = '1960-10-03';
+el.dataset.dateOfBirth = "1960-10-03";
 // Result on JS: el.dataset.dateOfBirth === '1960-10-03'
 // Result on HTML: <div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth="1960-10-03">John Doe</div>
 
@@ -80,8 +80,8 @@ delete el.dataset.dateOfBirth;
 // Result on JS: el.dataset.dateOfBirth === undefined
 // Result on HTML: <div id="user" data-id="1234567890" data-user="johndoe">John Doe</div>
 
-if (!('someDataAttr' in el.dataset)) {
-  el.dataset.someDataAttr = 'mydata';
+if (!("someDataAttr" in el.dataset)) {
+  el.dataset.someDataAttr = "mydata";
   // Result on JS: 'someDataAttr' in el.dataset === true
   // Result on HTML: <div id="user" data-id="1234567890" data-user="johndoe" data-some-data-attr="mydata">John Doe</div>
 }
@@ -98,5 +98,5 @@ if (!('someDataAttr' in el.dataset)) {
 ## 参见
 
 - 全局属性的 HTML [`data-*`](/zh-CN/docs/Web/HTML/Global_attributes/data-*) 类。
-- [使用 data 属性](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes)
+- [使用 data 属性](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
 - {{DOMxRef("Element.getAttribute()")}} 和 {{DOMxRef("Element.setAttribute()")}}

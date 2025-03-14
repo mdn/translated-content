@@ -1,17 +1,17 @@
 ---
-title: 'WebGL: ウェブの 2D および 3D グラフィック'
+title: "WebGL: ウェブの 2D および 3D グラフィック"
 slug: Web/API/WebGL_API
 l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+  sourceCommit: abf155210d826c2584d23433eb2eac45a6669d23
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
-WebGL (Web Graphics Library) は、互換性があるウェブブラウザーでプラグインを使用せずにインタラクティブな 3D グラフィックや 2D グラフィックをレンダリングするための JavaScript API です。HTML の {{HTMLElement("canvas")}} 要素へ OpenGL ES 2.0 に密接に従った API を導入することにより、WebGL を実現します。これにより、ユーザーの端末が提供するハードウェアのグラフィックアクセラレーションを API で利用することが可能になります。
+**WebGL** (Web Graphics Library) は、互換性があるウェブブラウザーにおいて、プラグインを使用せずにインタラクティブな 3D や 2D のグラフィックをレンダリングするための JavaScript API です。HTML の {{HTMLElement("canvas")}} 要素へ OpenGL ES 2.0 に密接に従った API を導入することにより、WebGL を実現します。これにより、ユーザーの端末が提供するハードウェアのグラフィックアクセラレーションを API で利用することが可能になります。
 
-WebGL は [Firefox](/ja/docs/Mozilla/Firefox) 4 以降、[Google Chrome](https://www.google.com/chrome/) 9 以降、[Opera](https://www.opera.com/) 12 以降、[Safari](https://www.apple.com/safari/) 5.1 以降、[Internet Explorer](https://support.microsoft.com/en-us/windows/internet-explorer-help-23360e49-9cd3-4dda-ba52-705336cc0de2) 11 以降、[Microsoft Edge](https://www.microsoft.com/ja-jp/edge) build 10240 以降でサポートしていますが、ユーザーの端末がこの機能をサポートするハードウェアであることも必要です。
+WebGL への対応は、現代のすべてのブラウザーにあります（後述の[互換性一覧表](#ブラウザーの互換性)を参照してください）。ただし、ユーザーの端末にこれらの機能に対応したハードウェアが搭載されている必要があります。
 
-WebGL 2](#webgl_2) API は OpenGL ES 3.0 の機能セットの大部分に対応しています。このインターフェイスは {{domxref("WebGL2RenderingContext")}} インターフェイスを通して提供されています。
+[WebGL 2](#webgl_2) API は OpenGL ES 3.0 の機能セットの大部分に対応しています。このインターフェイスは {{domxref("WebGL2RenderingContext")}} インターフェイスを通して提供されています。
 
 ウェブページ上の 2D グラフィックを実現するには、 {{HTMLElement("canvas")}} 要素で [Canvas API](/ja/docs/Web/API/Canvas_API) を使用する方法もあります。
 
@@ -53,6 +53,7 @@ WebGL 2](#webgl_2) API は OpenGL ES 3.0 の機能セットの大部分に対応
 - {{domxref("EXT_texture_filter_anisotropic")}}
 - {{domxref("EXT_texture_norm16")}}
 - {{domxref("KHR_parallel_shader_compile")}}
+- {{domxref("OES_draw_buffers_indexed")}}
 - {{domxref("OES_element_index_uint")}}
 - {{domxref("OES_fbo_render_mipmap")}}
 - {{domxref("OES_standard_derivatives")}}
@@ -89,7 +90,7 @@ WebGL 2](#webgl_2) API は OpenGL ES 3.0 の機能セットの大部分に対応
 
 ### WebGL 2
 
-WebGL 2 は {{domxref("WebGL2RenderingContext")}} インターフェイスによって提供される、WebGL の大規模なアップデートです。これは OpenGL ES 3.0 に基づいており、以下の新機能を含みます:
+WebGL 2 は {{domxref("WebGL2RenderingContext")}} インターフェイスによって提供される、WebGL の大規模なアップデートです。これは OpenGL ES 3.0 に基づいており、以下の新機能を含みます。
 
 - [3D テクスチャ](/ja/docs/Web/API/WebGL2RenderingContext/texImage3D)、
 - [Sampler オブジェクト](/ja/docs/Web/API/WebGLSampler)、
@@ -97,7 +98,7 @@ WebGL 2 は {{domxref("WebGL2RenderingContext")}} インターフェイスによ
 - [Sync オブジェクト](/ja/docs/Web/API/WebGLSync)、
 - [Query オブジェクト](/ja/docs/Web/API/WebGLQuery)、
 - [Transform Feedback オブジェクト](/ja/docs/Web/API/WebGLTransformFeedback)、
-- WebGL 2 のコア機能に昇格した拡張: [Vertex Array オブジェクト](/ja/docs/Web/API/WebGLVertexArrayObject)、[instancing](/ja/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced)、[Multiple Render Targets](/ja/docs/Web/API/WebGL2RenderingContext/drawBuffers)、[fragment depth](/ja/docs/Web/API/EXT_frag_depth)。
+- WebGL 2 のコア機能に昇格した拡張: [Vertex Array オブジェクト](/ja/docs/Web/API/WebGLVertexArrayObject)、[インスタンス化](/ja/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced)、[複数のレンダリングターゲット](/ja/docs/Web/API/WebGL2RenderingContext/drawBuffers)、[fragment depth](/ja/docs/Web/API/EXT_frag_depth)。
 
 ["WebGL 2 lands in Firefox"](https://hacks.mozilla.org/2017/01/webgl-2-lands-in-firefox/) のブログ記事や、[webglsamples.org/WebGL2Samples](https://webglsamples.org/WebGL2Samples/) のデモもご覧ください。
 
@@ -128,7 +129,7 @@ WebGL 2 は {{domxref("WebGL2RenderingContext")}} インターフェイスによ
 
 ### 高度なチュートリアル
 
-- [WebGL model view projection](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)
+- [WebGL のモデル、ビュー、投影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)
   - : 3D オブジェクトビューを表現するためによく使用する 3 つの主要な行列 (モデル行列、ビュー行列、プロジェクション行列) について、詳しく説明します
 - [Matrix math for the web](/ja/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
   - : 3D 変換行列がどのように働くか、およびウェブ (WebGL の演算や、CSS 座標変換) でどのように使用できるかのガイドです
@@ -140,7 +141,7 @@ WebGL 2 は {{domxref("WebGL2RenderingContext")}} インターフェイスによ
 - [Raw WebGL: An introduction to WebGL](https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage) Nick Desaulniers による、 WebGL の基本的な部分を紹介する講演です。
 - [WebGL playground](http://webglplayground.net): WebGL プロジェクトの作成と共有ができるオンラインツール。迅速なプロトタイピングや実験に最適です。
 - [WebGL Academy](http://www.webglacademy.com): WebGL プログラミングの基礎を学ぶチュートリアルがある、 HTML/JavaScript エディターです。
-- [WebGL Stats](http://webglstats.com/): さまざまなプラットフォームのブラウザーについて、WebGL の機能性の状況を示すサイトです。
+- [WebGL Stats](https://webglreport.com/): さまざまなプラットフォームのブラウザーについて、WebGL の機能性の状況を示すサイトです。
 
 ### ライブラリー
 
@@ -180,5 +181,5 @@ Firefox では、テストなどの目的で WebGL の機能を制限する 2 �
 
 ## 関連情報
 
-- [Canvas](/ja/docs/Web/API/Canvas_API)
+- [キャンバス](/ja/docs/Web/API/Canvas_API)
 - [WebGL 拡張の互換性情報](/ja/docs/Web/API/WebGLRenderingContext/getSupportedExtensions#Browser_compatibility)

@@ -9,12 +9,13 @@ slug: Web/API/Cache/keys
 
 请求将以它们被插入的顺序返回。
 
-> **备注：** 具有相同 URL 但不同请求头的请求，如果它们的响应头中有 VARY 头部，则他们可以被返回。
+> [!NOTE]
+> 具有相同 URL 但不同请求头的请求，如果它们的响应头中有 VARY 头部，则他们可以被返回。
 
 ## 语法
 
 ```js
-cache.keys(request,{options}).then(function(keys) {
+cache.keys(request, { options }).then(function (keys) {
   //do something with your array of requests
 });
 ```
@@ -39,13 +40,13 @@ cache.keys(request,{options}).then(function(keys) {
 ## 示例
 
 ```js
-caches.open('v1').then(function(cache) {
-  cache.keys().then(function(keys) {
-    keys.forEach(function(request, index, array) {
+caches.open("v1").then(function (cache) {
+  cache.keys().then(function (keys) {
+    keys.forEach(function (request, index, array) {
       cache.delete(request);
     });
   });
-})
+});
 ```
 
 ## 规范
@@ -58,6 +59,6 @@ caches.open('v1').then(function(cache) {
 
 ## 参见
 
-- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("WorkerGlobalScope.caches")}}
+- {{domxref("Window.caches")}} 和 {{domxref("WorkerGlobalScope.caches")}}

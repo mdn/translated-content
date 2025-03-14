@@ -19,23 +19,23 @@ The `event.target` property can be used in order to implement **event delegation
 
 ```js
 // Make a list
-var ul = document.createElement('ul');
+var ul = document.createElement("ul");
 document.body.appendChild(ul);
 
-var li1 = document.createElement('li');
-var li2 = document.createElement('li');
+var li1 = document.createElement("li");
+var li2 = document.createElement("li");
 ul.appendChild(li1);
 ul.appendChild(li2);
 
-function hide(e){
+function hide(e) {
   // e.target refers to the clicked <li> element
   // This is different than e.currentTarget which would refer to the parent <ul> in this context
-  e.target.style.visibility = 'hidden';
+  e.target.style.visibility = "hidden";
 }
 
 // Attach the listener to the list
 // It will fire when each <li> is clicked
-ul.addEventListener('click', hide, false);
+ul.addEventListener("click", hide, false);
 ```
 
 ## 規範
@@ -54,10 +54,10 @@ On IE 6-8 the event model is different. Event listeners are attached with the no
 function hide(e) {
   // Support IE6-8
   var target = e.target || e.srcElement;
-  target.style.visibility = 'hidden';
+  target.style.visibility = "hidden";
 }
 ```
 
 ## 參見
 
-- [Comparison of Event Targets](/zh-TW/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [Comparison of Event Targets](/zh-TW/docs/Learn_web_development/Core/Scripting/Event_bubbling)

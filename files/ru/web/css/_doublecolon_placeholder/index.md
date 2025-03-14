@@ -1,15 +1,11 @@
 ---
-title: '::placeholder'
+title: ::placeholder
 slug: Web/CSS/::placeholder
-tags:
-  - '::placeholder'
-  - CSS
-  - Псевдоэлемент
-translation_of: Web/CSS/::placeholder
 ---
+
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) **`::placeholder`** представляет собой [текст placeholder](/ru/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute) в {{HTMLElement("input")}} или {{HTMLElement("textarea")}} элементах.
+[CSS](/ru/docs/Web/CSS) [псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) **`::placeholder`** представляет собой [текст placeholder](/ru/docs/Learn/Forms#the_placeholder_attribute) в {{HTMLElement("input")}} или {{HTMLElement("textarea")}} элементах.
 
 ```css
 ::placeholder {
@@ -20,7 +16,8 @@ translation_of: Web/CSS/::placeholder
 
 В `::placeholder` можно использовать только те CSS-свойства, которые разрешены в псевдоэлементе {{cssxref("::first-line")}}.
 
-> **Примечание:** В большинстве браузеров по умолчанию placeholder выглядит как полупрозрачный или светло-серый текст.
+> [!NOTE]
+> В большинстве браузеров по умолчанию placeholder выглядит как полупрозрачный или светло-серый текст.
 
 ## Синтаксис
 
@@ -33,7 +30,7 @@ translation_of: Web/CSS/::placeholder
 #### HTML
 
 ```html
-<input placeholder="Введите что-нибудь!">
+<input placeholder="Введите что-нибудь!" />
 ```
 
 #### CSS
@@ -55,7 +52,7 @@ input::placeholder {
 #### HTML
 
 ```html
-<input placeholder="Введите что-нибудь...">
+<input placeholder="Введите что-нибудь..." />
 ```
 
 #### CSS
@@ -70,7 +67,7 @@ input::placeholder {
 
 {{EmbedLiveSample("Зелёный_текст", 200, 60)}}
 
-## Проблемы доступности
+## Доступность
 
 ### Цветовой контраст
 
@@ -90,14 +87,18 @@ input::placeholder {
 
 Текст placeholder с высоким цветовым контрастом может быть воспринят как введённые данные. Текст placeholder исчезает, когда пользователь вводит что-либо в {{htmlelement("input")}} элемент. Эти обстоятельства могут помешать заполнить правильно форму, особенно людям с когнитивными проблемами.
 
-Другой подход к представлению информации placeholder заключается в том, чтобы расположить её вне формы ввода в непосредственной близости от неё, а затем использовать [`aria-describedby`](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) для программного связывания {{HTMLElement("input")}} элемента с подсказкой.
+Другой подход к представлению информации placeholder заключается в том, чтобы расположить её вне формы ввода в непосредственной близости от неё, а затем использовать [`aria-describedby`](/ru/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) для программного связывания {{HTMLElement("input")}} элемента с подсказкой.
 
 В таком случае содержимое подсказки будет доступно даже в том случае, если что-то введено в форму. Большинство скринридеров используют `aria-describedby` для чтения подсказок после того, как будет прочитан текст метки формы. Пользователь может отключить эту функцию, если дополнительная информация окажется ему ненужной.
 
 ```html
 <label for="user-email">Ваш email адрес</label>
 <span id="user-email-hint" class="input-hint">Пример: jane@sample.com</span>
-<input id="user-email" aria-describedby="user-email-hint" name="email" type="email">
+<input
+  id="user-email"
+  aria-describedby="user-email-hint"
+  name="email"
+  type="email" />
 ```
 
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
@@ -106,13 +107,13 @@ input::placeholder {
 
 Текст placeholder будет отображаться с теми же стилями, что и введённый пользователем текст при работе в [режиме высокой контрастности Windows](/ru/docs/Web/CSS/-ms-high-contrast). Это вызовет затруднения с определением того какой текст был введён, а какой является placeholder.
 
-- [Greg Whitworth — How to use -ms-high-contrast](http://www.gwhitworth.com/blog/2017/04/how-to-use-ms-high-contrast)
+- [Greg Whitworth — How to use -ms-high-contrast](https://www.gwhitworth.com/blog/2017/04/how-to-use-ms-high-contrast)
 
 ### Метки
 
-Placeholder не является заменой элемента {{htmlelement("label")}}. Без метки, которая программно связывается с формой с помощью {{htmlattrxref("for", "label")}} и {{htmlattrxref("id")}} атрибутов, такие программы, как скринридеры не смогут анализировать элементы {{htmlelement("input")}}.
+Placeholder не является заменой элемента {{htmlelement("label")}}. Без метки, которая программно связывается с формой с помощью [`for`](/ru/docs/Web/HTML/Element/label#for) и [`id`](/ru/docs/Web/HTML/Global_attributes#id) атрибутов, такие программы, как скринридеры не смогут анализировать элементы {{htmlelement("input")}}.
 
-- [MDN Basic form hints](/ru/docs/Web/Accessibility/ARIA/forms/Basic_form_hints)
+- [MDN Basic form hints](/ru/docs/Web/Accessibility/ARIA)
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
 
 ## Спецификации
@@ -127,4 +128,4 @@ Placeholder не является заменой элемента {{htmlelement(
 
 - Псевдокласс {{cssxref(":placeholder-shown")}}, который позволяет применять стили к элементу с **активным** placeholder.
 - Связанные HTML-элементы: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
-- [HTML-формы](/ru/docs/Learn/HTML/Forms)
+- [HTML-формы](/ru/docs/Learn/Forms)

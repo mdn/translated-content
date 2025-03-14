@@ -1,12 +1,6 @@
 ---
 title: Django Web Framework (Python)
 slug: Learn/Server-side/Django
-tags:
-  - Apprendre
-  - Débutant
-  - Python
-  - django
-translation_of: Learn/Server-side/Django
 ---
 
 {{LearnSidebar}}
@@ -17,9 +11,10 @@ Django est une infrastructure d'application (aussi appelé framework) côté ser
 
 Aucune connaissance sur ce framework n'est requise. Il vous faudra seulement comprendre ce qu'est la programmation web côté serveur ainsi que les frameworks web, notamment en lisant les sujets sur notre [module d'initiation à la programmation web coté serveur](/fr/docs/Learn/Server-side/First_steps).
 
-Une connaissance générale en programmation et plus précisement en [Python](/fr/docs/Glossaire/Python) est recommandée, mais pas nécessaire pour comprendre la majeure partie de ce module.
+Une connaissance générale en programmation et plus précisement en [Python](/fr/docs/Glossary/Python) est recommandée, mais pas nécessaire pour comprendre la majeure partie de ce module.
 
-> **Note :** Python est un des languages les plus faciles à apprendre, lire et comprendre pour les novices. Ceci dit, si vous voulez mieux comprendre ce module, il existe beaucoup de livres gratuits et de tutoriaux sur internet (les nouveaux programmeurs pourraient être intéressés par la page du [Python pour les non-programmeurs](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) dans la documentation sur le site officiel de Python: python.org).
+> [!NOTE]
+> Python est un des languages les plus faciles à apprendre, lire et comprendre pour les novices. Ceci dit, si vous voulez mieux comprendre ce module, il existe beaucoup de livres gratuits et de tutoriaux sur internet (les nouveaux programmeurs pourraient être intéressés par la page du [Python pour les non-programmeurs](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) dans la documentation sur le site officiel de Python: python.org).
 
 ## Guides
 
@@ -44,7 +39,7 @@ Une connaissance générale en programmation et plus précisement en [Python](/f
 - [Tutoriel Django Partie 8: L'authentification de l'utilisateur ainsi que les permissions](/fr/docs/Learn/Server-side/Django/Authentication)
   - : Dans ce tutoriel, nous allons vous montrer comment autoriser les utilisateurs à se connecter à votre site avec leurs propres comptes, et comment contrôler ce qu'ils peuvent faire et voir en fonction des _permissions_ accordées et de s'ils sont connectés ou non. Comme partie de cette démonstration, nous allons étendre le site _LocalLibrary_ en ajoutant une page de connexion, de déconnexion et d'utilisateur - ainsi que des pages dédiées aux membres de la librairie afin de voir quel livre a été emprunté.
 - [Tutoriel Django Partie 9: Travailler avec les formulaires](/fr/docs/Learn/Server-side/Django/Forms)
-  - : Dans ce tutoriel, nous allons vous montrer comment travailler avec [les formulaires en HTML](/fr/docs/Web/Guide/HTML/Forms) avec Django, et plus particulièrement la façon la plus facile d'écrire, créer, mettre à jour et supprimer les formulaires. Pour cela, nous allons devoir étendre le site _LocalLibrary_ afin que les libraires puissent changer les livres, et créer, mettre à jour, et supprimer les auteurs en utilisant nos propres formulaires (au lieu de passer par Django Admin).
+  - : Dans ce tutoriel, nous allons vous montrer comment travailler avec [les formulaires en HTML](/fr/docs/Learn/Forms) avec Django, et plus particulièrement la façon la plus facile d'écrire, créer, mettre à jour et supprimer les formulaires. Pour cela, nous allons devoir étendre le site _LocalLibrary_ afin que les libraires puissent changer les livres, et créer, mettre à jour, et supprimer les auteurs en utilisant nos propres formulaires (au lieu de passer par Django Admin).
 - [Tutoriel Django Partie 10: Tester une application Django](/fr/docs/Learn/Server-side/Django/Testing)
   - : Plus les sites s'agrandissent, plus il devient dur de les tester manuellement — pas seulement parce que il y a plus de contenu à tester mais aussi parce que les intéractions entre les éléments deviennent plus complexes, un petit changement dans une partie du site peut nécessiter de nombreux tests afin de vérifier que ce changement n'a pas impacté les autres parties du site. La solution à ce problème est de programmer des tests automatiques, qui peuvent facilement et fiablement être executés à chaque changements. Ce tutoriel montre comment automatiser vos tests sur votre site web en utilisant le module de test du framework Django.
 - [Tutoriel Django Partie 11: Déployer son site fait avec Django](/fr/docs/Learn/Server-side/Django/Deployment)

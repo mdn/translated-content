@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.requestAnimationFrame()
 slug: Web/API/VRDisplay/requestAnimationFrame
-translation_of: Web/API/VRDisplay/requestAnimationFrame
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
@@ -89,19 +88,17 @@ function drawVRScene() {
 }
 ```
 
-> **Примечание:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
+> [!NOTE]
+> You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                                | Status                       | Comment            |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('WebVR 1.1', '#dom-vrdisplay-requestanimationframe', 'requestAnimationFrame()')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/ru/docs/Web/API/WebVR_API)

@@ -7,20 +7,21 @@ slug: Web/API/FileList
 
 この型のオブジェクトは、 HTML の {{HTMLElement("input")}} 要素の `files` プロパティで返されます。これにより、 `<input type="file">` 要素で選択されているファイルのリストにアクセスすることができます。また、ドラッグ＆ドロップ API を使用している場合は、ウェブコンテンツにドロップされたファイルのリストにも使用されます。使用方法の詳細は [`DataTransfer`](/ja/docs/Web/API/DataTransfer) オブジェクトを見てください。
 
-> **メモ:** {{Gecko("1.9.2")}} より前は、input 要素は一度に 1 つのファイルだけ選択することができます。すなわち、 FileList に入るファイルは 1 つだけです。 {{Gecko("1.9.2")}} から、 input 要素の multiple 属性が true の場合、 FileList に複数のファイルが入ります。
+> [!NOTE]
+> Gecko 1.9.2 より前は、input 要素は一度に 1 つのファイルだけ選択することができます。すなわち、 FileList に入るファイルは 1 つだけです。 Gecko 1.9.2 から、 input 要素の multiple 属性が true の場合、 FileList に複数のファイルが入ります。
 
 ## ファイルリストの使用
 
 すべての `<input>` 要素のノードには `files` 属性があり、これが `FileList` 型なので、リスト中の項目にアクセスすることができます。例えば、HTML に以下のファイル入力があるとします。
 
 ```html
-<input id="fileItem" type="file">
+<input id="fileItem" type="file" />
 ```
 
 次のコードの行は、ノードのファイルリスト内の最初のファイルを [`File`](/ja/docs/Web/API/File) オブジェクトとして取得します。
 
 ```js
-var file = document.getElementById('fileItem').files[0];
+var file = document.getElementById("fileItem").files[0];
 ```
 
 ## メソッドの概要
@@ -87,54 +88,49 @@ var file;
 
 // files を反復処理
 for (var i = 0; i < files.length; i++) {
+  // get item
+  file = files.item(i);
+  //or
+  file = files[i];
 
-    // get item
-    file = files.item(i);
-    //or
-    file = files[i];
-
-    alert(file.name);
+  alert(file.name);
 }
 ```
 
 こちらが完全な例です。
 
 ```html
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
-<head>
-</head>
-<body>
-<!-- multiple を設定して、複数のファイルが選択できるようにしています -->
+  <head> </head>
+  <body>
+    <!-- multiple を設定して、複数のファイルが選択できるようにしています -->
 
-<input id="myfiles" multiple type="file">
+    <input id="myfiles" multiple type="file" />
+  </body>
 
-</body>
+  <script>
+    var pullfiles = function () {
+      // querySelector が好き
+      var fileInput = document.querySelector("#myfiles");
+      var files = fileInput.files;
+      // files.length をキャッシュ
+      var fl = files.length;
+      var i = 0;
 
-<script>
-
-var pullfiles=function(){
-    // querySelector が好き
-    var fileInput = document.querySelector("#myfiles");
-    var files = fileInput.files;
-    // files.length をキャッシュ
-    var fl = files.length;
-    var i = 0;
-
-    while ( i < fl) {
+      while (i < fl) {
         // ループ内のファイル var をローカライズ
         var file = files[i];
         alert(file.name);
         i++;
-    }
-}
+      }
+    };
 
-// input 要素の onchange を設定し pullfiles を呼び出すようにします。
-document.querySelector("#myfiles").onchange=pullfiles;
+    // input 要素の onchange を設定し pullfiles を呼び出すようにします。
+    document.querySelector("#myfiles").onchange = pullfiles;
 
-//a.t
-</script>
-
+    //a.t
+  </script>
 </html>
 ```
 

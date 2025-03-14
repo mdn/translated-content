@@ -1,13 +1,6 @@
 ---
 title: event.which
 slug: Web/API/UIEvent/which
-tags:
-  - DOM
-  - events
-  - metodo
-  - which
-translation_of: Web/API/KeyboardEvent/which
-original_slug: Web/API/KeyboardEvent/which
 ---
 
 {{ ApiRef() }}
@@ -22,7 +15,7 @@ Devuelve el `keyCode` de la tecla presionada, o el codigo del caracter (`charCod
 var keyResult = event.which;
 ```
 
-`keyResult` contiene el codigo numerico para una tecla en particular, dependiendo si la tecla presionada es alfanumerica o no-alfanumerica. Por favor mire [`charCode`](/en/DOM/event.charCode) y [`keyCode`](/en/DOM/event.keyCode) para mas informacion.
+`keyResult` contiene el codigo numerico para una tecla en particular, dependiendo si la tecla presionada es alfanumerica o no-alfanumerica. Por favor mire [`charCode`](/es/docs/Web/API/KeyboardEvent/charCode) y [`keyCode`](/es/docs/Web/API/KeyboardEvent/keyCode) para mas informacion.
 
 ### Ejemplo
 
@@ -68,7 +61,8 @@ alert("onkeydown handler: \n"
 </html>
 ```
 
-> **Nota:** El codigo de arriba falla en Firefox 9 debido al [bug 696020](https://bugzilla.mozilla.org/show_bug.cgi?id=696020).
+> [!NOTE]
+> El codigo de arriba falla en Firefox 9 debido al [bug 696020](https://bugzilla.mozilla.org/show_bug.cgi?id=696020).
 
 ### Especificacion
 

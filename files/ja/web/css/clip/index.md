@@ -23,7 +23,8 @@ clip: unset;
 
 ## 構文
 
-> **メモ:** 可能であれば、より新しい {{cssxref("clip-path")}} を使うことをお勧めします。
+> [!NOTE]
+> 可能であれば、より新しい {{cssxref("clip-path")}} を使うことをお勧めします。
 
 ### 値
 
@@ -85,10 +86,13 @@ clip: unset;
 
 ```html
 <p class="dotted-border">
-  <img src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Original graphic">
-  <img id="top-left" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to upper left">
-  <img id="middle" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped towards middle">
-  <img id="bottom-right" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to bottom right">
+  <img src="hut.jpg" title="Original graphic" />
+  <img id="top-left" src="hut.jpg" title="Graphic clipped to upper left" />
+  <img id="middle" src="hut.jpg" title="Graphic clipped towards middle" />
+  <img
+    id="bottom-right"
+    src="hut.jpg"
+    title="Graphic clipped to bottom right" />
 </p>
 ```
 

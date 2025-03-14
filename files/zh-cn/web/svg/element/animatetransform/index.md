@@ -7,7 +7,7 @@ slug: Web/SVG/Element/animateTransform
 
 `animateTransform`元素变动了目标元素上的一个变形属性，从而允许动画控制转换、缩放、旋转或斜切。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
@@ -15,23 +15,25 @@ slug: Web/SVG/Element/animateTransform
 
 ```html
 <?xml version="1.0"?>
-<svg width="120" height="120"  viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg" version="1.1"
-     xmlns:xlink="http://www.w3.org/1999/xlink" >
-
-    <polygon points="60,30 90,90 30,90">
-        <animateTransform attributeName="transform"
-                          attributeType="XML"
-                          type="rotate"
-                          from="0 60 70"
-                          to="360 60 70"
-                          dur="10s"
-                          repeatCount="indefinite"/>
-    </polygon>
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <polygon points="60,30 90,90 30,90">
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="0 60 70"
+      to="360 60 70"
+      dur="10s"
+      repeatCount="indefinite" />
+  </polygon>
 </svg>
 ```
-
-**示例输出**
 
 {{ EmbedLiveSample('示例','120','120') }}
 
@@ -56,6 +58,6 @@ slug: Web/SVG/Element/animateTransform
 - {{ SVGAttr("to") }}
 - {{ SVGAttr("type") }}
 
-## DOM Interface
+## DOM 接口
 
-该元素实现了[`SVGAnimateTransformElement`](/zh-CN/docs/DOM/SVGAnimateTransformElement)接口。
+该元素实现了 [`SVGAnimateTransformElement`](/zh-CN/docs/Web/API/SVGAnimateTransformElement) 接口。

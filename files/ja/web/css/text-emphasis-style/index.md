@@ -1,22 +1,60 @@
 ---
 title: text-emphasis-style
 slug: Web/CSS/text-emphasis-style
+l10n:
+  sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
 {{CSSRef}}
 
 **`text-emphasis-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点の表示を設定します。設定やリセットに一括指定の {{cssxref("text-emphasis")}} を使用することもできます。
 
+{{InteractiveExample("CSS Demo: text-emphasis-style")}}
+
+```css interactive-example-choice
+text-emphasis-style: none;
+```
+
+```css interactive-example-choice
+text-emphasis-style: triangle;
+```
+
+```css interactive-example-choice
+text-emphasis-style: "x";
+```
+
+```css interactive-example-choice
+text-emphasis-style: filled double-circle;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+```
+
+## 構文
+
 ```css
 /* 初期値 */
 text-emphasis-style: none; /* 圏点なし */
 
 /* <string> 値 */
-text-emphasis-style: 'x';
-text-emphasis-style: '点';
-text-emphasis-style: '\25B2';
-text-emphasis-style: '*';
-text-emphasis-style: 'foo'; /* 使用するべきではない。計算されるか 'f' のみが表示される */
+text-emphasis-style: "x";
+text-emphasis-style: "点";
+text-emphasis-style: "\25B2";
+text-emphasis-style: "*";
+text-emphasis-style: "foo"; /* 使用するべきではない。計算されるか 'f' のみが表示される */
 
 /* キーワード値 */
 text-emphasis-style: filled;
@@ -32,10 +70,9 @@ text-emphasis-style: open sesame;
 text-emphasis-style: inherit;
 text-emphasis-style: initial;
 text-emphasis-style: revert;
+text-emphasis-style: revert-layer;
 text-emphasis-style: unset;
 ```
-
-## 構文
 
 ### 値
 
@@ -66,7 +103,7 @@ text-emphasis-style: unset;
 
 {{csssyntax}}
 
-## Examples
+## 例
 
 ### 基本的な例
 

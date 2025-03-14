@@ -7,7 +7,30 @@ slug: Web/HTML/Element/optgroup
 
 **HTML 元素 `<optgroup>` **为{{HTMLElement("select")}} 元素中的选项创建分组。
 
-{{EmbedInteractiveExample("pages/tabbed/optgroup.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;optgroup&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="dino-select">Choose a dinosaur:</label>
+<select id="dino-select">
+  <optgroup label="Theropods">
+    <option>Tyrannosaurus</option>
+    <option>Velociraptor</option>
+    <option>Deinonychus</option>
+  </optgroup>
+  <optgroup label="Sauropods">
+    <option>Diplodocus</option>
+    <option>Saltasaurus</option>
+    <option>Apatosaurus</option>
+  </optgroup>
+</select>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+```
 
 <table class="properties">
  <tbody>
@@ -29,7 +52,7 @@ slug: Web/HTML/Element/optgroup
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
-   <td>{{ARIARole("group")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a></td>
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
@@ -42,15 +65,16 @@ slug: Web/HTML/Element/optgroup
  </tbody>
 </table>
 
-> **备注：** Optgroup elements may not be nested.
+> [!NOTE]
+> Optgroup elements may not be nested.
 
 ## 属性
 
-这个元素包含 [global attributes](/zh-CN/docs/HTML/Global_attributes)。
+这个元素包含 [global attributes](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : 如果设置了这个布尔值，则不能选择这个选项组中的任何选项。通常浏览器会置灰这样的控件，它不接受任何浏览器事件，如鼠标点击或者焦点相关的事件。
-- {{htmlattrdef("label")}}
+- `label`
   - : 选项组的名字，浏览器用以在用户界面中标记选项。使用这个元素时必须加上这个属性。
 
 ## 示例
@@ -74,7 +98,7 @@ slug: Web/HTML/Element/optgroup
 
 ### 结果
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 
@@ -84,6 +108,6 @@ slug: Web/HTML/Element/optgroup
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
-- 其他表单相关的元素：{{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}。
+- 其他表单相关的元素：{{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}。

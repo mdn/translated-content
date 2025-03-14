@@ -1,38 +1,25 @@
 ---
 title: devtools.panels.ElementsPanel.setExpression()
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setExpression
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.panels
-  - setExpression
-translation_of: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setExpression
-original_slug: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setExpression
+slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setExpression
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Evalue une expression dans le contexte de la page inspectée et affiche le résultat dans le volet de la barre latérale d'extension.
 
-Le contexte d'exécution de l'expression est le même que celui de [`inspectedWindow.eval()`](/fr/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval).
+Le contexte d'exécution de l'expression est le même que celui de [`inspectedWindow.eval()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval).
 
-Les objets JSON et les noeuds DOM sont affichés en tant qu'arborescence extensible, comme dans la [visionneuse jSON](/fr/docs/Outils/JSON_viewer) dans Firefox. Vous pouvez éventuellement spécifier une chaîne `rootTitle` : elle sera affichée comme le titre de la racine de l'arbre.
+Les objets JSON et les noeuds DOM sont affichés en tant qu'arborescence extensible, comme dans la [visionneuse jSON](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) dans Firefox. Vous pouvez éventuellement spécifier une chaîne `rootTitle` : elle sera affichée comme le titre de la racine de l'arbre.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var evaluating = browser.devtools.panels.setExpression(
-  expression,       // string
-  rootTitle         // string
-)
+  expression, // string
+  rootTitle, // string
+);
 ```
 
 ### Paramètres
@@ -44,11 +31,11 @@ var evaluating = browser.devtools.panels.setExpression(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie sans arguments, une fois l'expression évaluée.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera remplie sans arguments, une fois l'expression évaluée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.ExtensionSidebarPane.setExpression", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -56,13 +43,11 @@ Ce code crée un volet de barre latérale qui affiche le [`tagName`](/fr/docs/We
 
 ```js
 function onCreated(sidebarPane) {
-
   browser.devtools.panels.elements.onSelectionChanged.addListener(() => {
     const exp = "$0 && $0.tagName";
     const title = "Selected Element tagName";
     sidebarPane.setExpression(exp, title);
   });
-
 }
 
 browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
@@ -70,7 +55,7 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
 

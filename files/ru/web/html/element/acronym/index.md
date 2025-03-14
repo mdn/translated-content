@@ -1,12 +1,9 @@
 ---
 title: <acronym>
 slug: Web/HTML/Element/acronym
-tags:
-  - Obsolete
-translation_of: Web/HTML/Element/acronym
 ---
 
-{{obsolete_header}}
+{{HTMLSidebar}}
 
 ## Аннотация
 
@@ -16,7 +13,7 @@ translation_of: Web/HTML/Element/acronym
 
 ## Атрибуты
 
-Этот элемент поддерживает _только_ [глобальные атрибуты](/ru/docs/HTML/global_attributes).
+Этот элемент поддерживает _только_ [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 ## Интерфейс DOM
 
@@ -27,7 +24,10 @@ translation_of: Web/HTML/Element/acronym
 ## Пример
 
 ```html
-<p>The <acronym title="World Wide Web">WWW</acronym> is only one component of the Internet.</p>
+<p>
+  The <acronym title="World Wide Web">WWW</acronym> is only one component of the
+  Internet.
+</p>
 ```
 
 ## Стилизация по умолчанию
@@ -42,16 +42,12 @@ translation_of: Web/HTML/Element/acronym
 
 ## Спецификации
 
-| Спецификация                                                                                         | Статус                       | Комментарий |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('HTML4.01', 'struct/text.html#edef-ACRONYM', '&lt;acronym&gt;')}} | {{Spec2('HTML4.01')}} |             |
+{{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
-## Смотрите также:
+## Смотрите также
 
 - {{HTMLElement("abbr")}}
-
-{{HTMLSidebar}}

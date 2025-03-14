@@ -1,11 +1,11 @@
 ---
 title: Console
-slug: Web/API/Console
+slug: Web/API/console
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
 
-O objeto `console` fornece acesso ao console de debug do navegador (por exemplo, o [Web Console](/pt-BR/docs/Tools/Web_Console) do Firefox). O seu funcionamento específico varia de navegador para navegador, mas existe um conjunto de ferramentas que na prática são fornecidas normalmente.
+O objeto `console` fornece acesso ao console de debug do navegador (por exemplo, o [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) do Firefox). O seu funcionamento específico varia de navegador para navegador, mas existe um conjunto de ferramentas que na prática são fornecidas normalmente.
 
 Esta página documenta os [Métodos](#métodos) disponíveis no objeto `console` e fornece alguns exemplos de [Uso](#uso).
 
@@ -15,7 +15,7 @@ Esta página documenta os [Métodos](#métodos) disponíveis no objeto `console`
   - : Emite uma mensagem e traça a sequência de operações até o primeiro argumento for falso.
 - {{domxref("console.count()", "console.count([label])")}}
   - : Mostra o número de vezes que esta linha foi chamada com a label fornecida.
-- {{domxref("console.log()", "console.debug(object[, object...])")}} {{deprecated_inline("5.0")}}
+- {{domxref("console.log()", "console.debug(object[, object...])")}} {{deprecated_inline}}
   - : Um atalho para `log()`; que foi adicionado para melhorar a compatibilidade de páginas já existentes que utilizavam `debug()`. Porém, ao invés destes comandos você deve utilizar {{domxref("console.log()")}}.
 - {{domxref("console.dir()", "console.dir(object)")}}
   - : Exibe uma listagem interativa das propriedades de um objeto JavaScript especificado. Esta listagem permite a você expandir o objeto para visualizar o conteúdo de objetos filhos.
@@ -34,10 +34,10 @@ Esta página documenta os [Métodos](#métodos) disponíveis no objeto `console`
 - {{domxref("console.log()", "console.log(object[, object...])")}}
   - : Utilizado para a emissão de informações de registro em geral. Você pode utilizar substituição de string e outros argumentos com este método. Consulte [Uso de substituição de string](#uso_de_substituição_de_string).
 - {{domxref("console.profile()", "console.profile( [profileLabel] )")}}
-  - : Inicia o [JavaScript profiler](/pt-BR/docs/Tools/Profiler). Você pode especificar qualquer label opcional para o perfil.
+  - : Inicia o [JavaScript profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html). Você pode especificar qualquer label opcional para o perfil.
 - {{domxref("console.profileEnd()")}}
 
-  - : Interrompe o profiler. Você pode ver o profile resultante no [JavaScript profiler](/pt-BR/docs/Tools/Profiler).
+  - : Interrompe o profiler. Você pode ver o profile resultante no [JavaScript profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html).
 
 - {{domxref("Console.table()")}}
 
@@ -81,8 +81,13 @@ Você também pode realizar o output de múltiplos objetos ao simplesmente list�
 
 ```js
 var carro = "Fusca";
-var algumObjeto = {str:"Algum texto", id:5};
-console.info("Meu primeiro carro era um ", carro, ". O objeto é: ", algumObjeto);
+var algumObjeto = { str: "Algum texto", id: 5 };
+console.info(
+  "Meu primeiro carro era um ",
+  carro,
+  ". O objeto é: ",
+  algumObjeto,
+);
 ```
 
 O output será algo assim:
@@ -93,7 +98,7 @@ O output será algo assim:
 
 #### Uso de substituição de string
 
-O Gecko 9.0 {{geckoRelease("9.0")}} introduziu o suporte à substituição de strings. Ao fornecer uma string para um dos métodos do console que aceitam uma string, você pode utilizar estas strings de substituição:
+O Gecko 9.0 introduziu o suporte à substituição de strings. Ao fornecer uma string para um dos métodos do console que aceitam uma string, você pode utilizar estas strings de substituição:
 
 | String de substituição | Descrição                                                                  |
 | ---------------------- | -------------------------------------------------------------------------- |
@@ -128,17 +133,20 @@ You can use the `"%c"` directive to apply a CSS style to console output:
 console.log("%cMy stylish message", "color: red; font-style: italic");
 ```
 
-![](https://mdn.mozillademos.org/files/7739/console-style.png)
+![](console-style.png)
 
 ### Usando grupos no console
 
 You can use nested groups to help organize your output by visually combining related material. To create a new nested block, call `console.group()`. The `console.groupCollapsed()` method is similar, but creates the new block collapsed, requiring the use of a disclosure button to open it for reading.
 
-> **Nota:** Collapsed groups are not supported yet in Gecko; the `groupCollapsed()` method is the same as `group()` at this time.
+> [!NOTE]
+> Collapsed groups are not supported yet in Gecko; the `groupCollapsed()` method is the same as `group()` at this time.
 
-> **Nota:** To exit the current group, simply call `console.groupEnd()`.
+> [!NOTE]
+> To exit the current group, simply call `console.groupEnd()`.
 
-> **Nota:** For example, given this code:
+> [!NOTE]
+> For example, given this code:
 
 ```js
 console.log("This is the outer level");
@@ -155,7 +163,7 @@ console.debug("Back to the outer level");
 
 The output looks like this:
 
-![nesting.png](/@api/deki/files/6082/=nesting.png)
+![nesting.png](nesting.png)
 
 ### Temporizadores
 
@@ -171,11 +179,12 @@ console.timeEnd("answer time");
 
 will log the time needed by the user to discard the alert box:
 
-![timerresult.png](/@api/deki/files/6084/=timerresult.png)
+![timerresult.png](timerresult.png)
 
 Notice that the timer's name is displayed both when the timer is started and when it's stopped.
 
-> **Nota:** It's important to note that if you're using this to log the timing for network traffic, the timer will report the total time for the transaction, while the time listed in the network panel is just the amount of time required for the header. If you have response body logging enabled, the time listed for the response header and body combined should match what you see in the console output.
+> [!NOTE]
+> It's important to note that if you're using this to log the timing for network traffic, the timer will report the total time for the transaction, while the time listed in the network panel is just the amount of time required for the header. If you have response body logging enabled, the time listed for the response header and body combined should match what you see in the console output.
 
 ### Stack traces
 
@@ -194,25 +203,25 @@ function foo() {
 
 The output in the console looks something like this:
 
-![](https://mdn.mozillademos.org/files/7167/api-trace2.png)
+![](api-trace2.png)
 
 ## Notes
 
 - At least in Firefox, if a page defines a console object, that object overrides the one built into Firefox.
-- Prior to {{Gecko("12.0")}}, the console object's methods only work when the Web Console is open. Starting with {{Gecko("12.0")}}, output is cached until the Web Console is opened, then displayed at that time.
-- It's worth noting that the Firefox's built-in `console` object is compatible with the one provided by [Firebug](http://getfirebug.com/).
+- Prior to Gecko 12.0, the console object's methods only work when the Web Console is open. Starting with Gecko 12.0, output is cached until the Web Console is opened, then displayed at that time.
+- It's worth noting that the Firefox's built-in `console` object is compatible with the one provided by [Firebug](https://getfirebug.com/).
 
 ## See also
 
-- [Tools](/pt-BR/docs/Tools)
-- [Web Console](/pt-BR/docs/Tools/Web_Console) - how the Web Console in Firefox handles console API calls
-- [Remote debugging](/pt-BR/docs/Tools/Remote_Debugging) - how to see console output when the debugging target is a mobile device
+- [Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+- [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) - how the Web Console in Firefox handles console API calls
+- [Remote debugging](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html) - how to see console output when the debugging target is a mobile device
 - [Debugging apps on Firefox OS](/pt-BR/Firefox_OS/Using_the_App_Manager) - using the App Manager to debug apps running on Firefox OS
 - [On-device console logging](/pt-BR/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging) - how to do logging on Firefox OS devices
 
 ### Other implementations
 
 - [Google Chrome DevTools](https://developers.google.com/chrome-developer-tools/docs/console-api);
-- [Firebug](http://getfirebug.com/wiki/index.php/Console_API);
+- [Firebug](https://getfirebug.com/wiki/index.php/Console_API);
 - [Internet Explorer](<http://msdn.microsoft.com/en-us/library/hh772173(v=vs.85).aspx>);
 - [Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html).

@@ -1,13 +1,8 @@
 ---
 title: 식 및 연산자
 slug: Web/JavaScript/Reference/Operators
-tags:
-  - JavaScript
-  - Operators
-  - Overview
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators
 ---
+
 {{jsSidebar("Operators")}}
 
 이 장은 JavaScript의 모든 연산자, 식 및 키워드를 나열합니다.
@@ -35,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Operators
 - {{JSxRef("Operators/async_function", "async function")}}
   - : `async function`은 비동기 함수 표현식을 정의합니다.
 - {{JSxRef("Operators/await", "await")}}
-  - : 비동기 함수를 일시 중지했다가 다시 시작하고 promise의 resolution/rejection을 ​​기다립니다.
+  - : 비동기 함수를 일시 중지했다가 다시 시작하고 promise의 resolution/rejection을 기다립니다.
 - {{JSxRef("Global_Objects/Array", "[]")}}
   - : 배열 초기자 및 리터럴 구문.
 - {{JSxRef("Operators/Object_initializer", "{}")}}
@@ -187,7 +182,7 @@ translation_of: Web/JavaScript/Reference/Operators
 ### 선택적 연결 연산자
 
 - {{JSxRef("Operators/Optional_chaining", "?.")}}
-  - : 선택적 연결 연산자는 참조가 [nullish](/en-US/docs/Glossary/nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) 또는 [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)) 인 경우 오류를 발생시키는 대신 `undefined`를 반환합니다.
+  - : 선택적 연결 연산자는 참조가 [nullish](/ko/docs/Glossary/Nullish) ([`null`](/ko/docs/Web/JavaScript/Reference/Operators/null) 또는 [`undefined`](/ko/docs/Web/JavaScript/Reference/Global_Objects/undefined)) 인 경우 오류를 발생시키는 대신 `undefined`를 반환합니다.
 
 ### 할당 연산자
 
@@ -240,8 +235,8 @@ translation_of: Web/JavaScript/Reference/Operators
 
 ## 브라우저 호환성
 
-{{Compat("javascript.operators")}}
+{{Compat}}
 
 ## 같이 보기
 
-- [연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/연산자_우선순위)
+- [연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence)

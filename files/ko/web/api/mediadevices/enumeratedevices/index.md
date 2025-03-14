@@ -1,8 +1,8 @@
 ---
 title: MediaDevices.enumerateDevices()
 slug: Web/API/MediaDevices/enumerateDevices
-translation_of: Web/API/MediaDevices/enumerateDevices
 ---
+
 {{APIRef("WebRTC")}}
 
 {{domxref("MediaDevices")}}의 **`enumerateDevices()`** 메서드는 사용(또는 접근)이 가능한 미디어 입력장치나 출력장치들의 리스트를 가져옵니다. 예를 들면 마이크, 카메라, 헤드셋 등의 미디어 입/출력 장치 리스트를 불러오는 것 이죠. 이 메서드는 {{domxref("Promise")}}를 반환하는데, 이 Promise가 resolve되면 장치(device)정보가 들어있는 {{domxref("MediaDeviceInfo")}} 배열(array)을 확인할 수 있습니다.
@@ -31,16 +31,18 @@ if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
 
 // 카메라와 마이크 리스트
 
-navigator.mediaDevices.enumerateDevices()
-.then(function(devices) {
-  devices.forEach(function(device) {
-    console.log(device.kind + ": " + device.label +
-                " id = " + device.deviceId);
+navigator.mediaDevices
+  .enumerateDevices()
+  .then(function (devices) {
+    devices.forEach(function (device) {
+      console.log(
+        device.kind + ": " + device.label + " id = " + device.deviceId,
+      );
+    });
+  })
+  .catch(function (err) {
+    console.log(err.name + ": " + err.message);
   });
-})
-.catch(function(err) {
-  console.log(err.name + ": " + err.message);
-});
 ```
 
 위 코드를 실행하면 아래와 같은 결과를 볼 수 있을 것입니다.:
@@ -59,7 +61,7 @@ audioinput: default (Built-in Microphone) id=RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCI
 audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
@@ -70,6 +72,6 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 ## See also
 
 - {{domxref("navigator.mediaDevices.getUserMedia()")}}
-- [WebRTC](/ko/docs/WebRTC) - the introductory page to the API
-- [MediaStream API](/ko/docs/WebRTC/MediaStream_API) - the API for the media stream objects
-- [Taking webcam photos](/ko/docs/WebRTC/taking_webcam_photos) - a tutorial on using `getUserMedia()` for taking photos rather than video.
+- [WebRTC](/ko/docs/Web/API/WebRTC_API) - the introductory page to the API
+- [MediaStream API](/ko/docs/Web/API/Media_Capture_and_Streams_API) - the API for the media stream objects
+- [Taking webcam photos](/ko/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - a tutorial on using `getUserMedia()` for taking photos rather than video.

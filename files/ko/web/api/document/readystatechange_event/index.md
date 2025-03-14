@@ -1,17 +1,17 @@
 ---
-title: 'Document: readystatechange event'
+title: "Document: readystatechange event"
 slug: Web/API/Document/readystatechange_event
-translation_of: Web/API/Document/readystatechange_event
 ---
+
 {{APIRef}}
 
 **`readystatechange`** 이벤트는 현재 페이지의 {{domxref("Document.readyState", "readyState")}} 속성값이 변할 때 발생한다.
 
-| Bubbles                | No                           |
-| ---------------------- | ---------------------------- |
-| Cancelable             | No                           |
+| Bubbles                | No                   |
+| ---------------------- | -------------------- |
+| Cancelable             | No                   |
 | Interface              | {{domxref("Event")}} |
-| Event handler property | `onreadystatechange`         |
+| Event handler property | `onreadystatechange` |
 
 ## Examples
 
@@ -51,7 +51,8 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
@@ -63,26 +64,26 @@ label, button {
 #### JS
 
 ```js
-const log = document.querySelector('.event-log-contents');
-const reload = document.querySelector('#reload');
+const log = document.querySelector(".event-log-contents");
+const reload = document.querySelector("#reload");
 
-reload.addEventListener('click', () => {
-  log.textContent ='';
+reload.addEventListener("click", () => {
+  log.textContent = "";
   window.setTimeout(() => {
-      window.location.reload(true);
+    window.location.reload(true);
   }, 200);
 });
 
-window.addEventListener('load', (event) => {
-    log.textContent = log.textContent + 'load\n';
+window.addEventListener("load", (event) => {
+  log.textContent = log.textContent + "load\n";
 });
 
-document.addEventListener('readystatechange', (event) => {
-    log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
+document.addEventListener("readystatechange", (event) => {
+  log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    log.textContent = log.textContent + `DOMContentLoaded\n`;
+document.addEventListener("DOMContentLoaded", (event) => {
+  log.textContent = log.textContent + `DOMContentLoaded\n`;
 });
 ```
 
@@ -90,14 +91,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 {{ EmbedLiveSample('Live_example', '100%', '160px') }}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
 ## See also
 
-- Related events: [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event), [`load`](/en-US/docs/Web/API/Window/load_event), [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event), [`unload`](/en-US/docs/Web/API/Window/unload_event)
+- Related events: [`DOMContentLoaded`](/ko/docs/Web/API/Document/DOMContentLoaded_event), [`load`](/ko/docs/Web/API/Window/load_event), [`beforeunload`](/ko/docs/Web/API/Window/beforeunload_event), [`unload`](/ko/docs/Web/API/Window/unload_event)

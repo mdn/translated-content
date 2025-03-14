@@ -15,11 +15,12 @@ var offsetWidth =element.offsetWidth;
 
 `intElemOffsetWidth` is a variable storing an integer corresponding to the `offsetWidth` pixel value of the element. `offsetWidth` 是一个只读属性。
 
-> **备注：** 这个属性将会 round(四舍五入) 为一个整数。如果你想要一个 fractional(小数) 值，请使用{{ domxref("element.getBoundingClientRect()") }}.
+> [!NOTE]
+> 这个属性将会 round(四舍五入) 为一个整数。如果你想要一个 fractional(小数) 值，请使用{{ domxref("element.getBoundingClientRect()") }}.
 
 ## 示例
 
-![Image:Dimensions-offset.png](/@api/deki/files/186/=Dimensions-offset.png)
+![Image:Dimensions-offset.png](dimensions-offset.png)
 
 ## 规范
 
@@ -33,4 +34,4 @@ var offsetWidth =element.offsetWidth;
 
 - {{domxref("Element.clientWidth")}}
 - {{domxref("Element.scrollWidth")}}
-- [Determining the dimensions of elements](/zh-CN/docs/Determining_the_dimensions_of_elements)
+- [Determining the dimensions of elements](/zh-CN/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

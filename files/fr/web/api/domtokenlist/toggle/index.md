@@ -1,8 +1,6 @@
 ---
 title: DOMTokenList.toggle()
 slug: Web/API/DOMTokenList/toggle
-translation_of: Web/API/DOMTokenList/toggle
-browser-compat: api.DOMTokenList.toggle
 ---
 
 {{APIRef("DOM")}}
@@ -18,7 +16,7 @@ tokenList.toggle(token [, force]);
 ### Paramètres
 
 - token
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) représentant le jeton que l'on veut activer ou désactiver.
+  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le jeton que l'on veut activer ou désactiver.
 - force {{optional_inline}}
   - : Un _booléen_ qui, s'il est inclus, transforme la bascule en opération à un seul sens. Si ce paramètre vaut `false`, le jeton sera seulement supprimé et aucun ajout ne suivra. S'il vaut `true`, le jeton sera seulement ajouté et pas supprimé.
 
@@ -42,7 +40,7 @@ Dans l'exemple suivant, nous récupérons la liste des classes définies dans un
 let span = document.querySelector("span");
 let classes = span.classList;
 
-span.addEventListener('click', function() {
+span.addEventListener("click", function () {
   let result = classes.toggle("c");
 
   if (result) {
@@ -50,7 +48,7 @@ span.addEventListener('click', function() {
   } else {
     span.textContent = `'c' retiré ; classList vaut désormais "${classes}".`;
   }
-})
+});
 ```
 
 ### Résultat

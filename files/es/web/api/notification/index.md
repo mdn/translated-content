@@ -1,6 +1,6 @@
 ---
 title: Notification
-slug: Web/API/notification
+slug: Web/API/Notification
 ---
 
 {{APIRef("Web Notifications")}}
@@ -85,9 +85,9 @@ Las siguientes propiedades están listadas en las especificaciones más actualiz
 #### Manejador de Eventos(Event Handler)
 
 - {{domxref("Notification.onclick")}}
-  - : Un manejador para el [`click`](/es/docs/Web/Reference/Events/click) event. Sera inicializado cada vez que el usuario de click en la notificacion.
+  - : Un manejador para el [`click`](/es/docs/Web/API/Element/click_event) event. Sera inicializado cada vez que el usuario de click en la notificacion.
 - {{domxref("Notification.onerror")}}
-  - : A handler for the [`error`](/es/docs/Web/Reference/Events/error) event. It is triggered each time the notification encounters an error.
+  - : A handler for the [`error`](/es/docs/Web/API/HTMLElement/error_event) event. It is triggered each time the notification encounters an error.
 
 #### Obsolete handlers
 
@@ -109,7 +109,7 @@ Estos métodos están disponibles solo en el objeto de `Notificación` en sí.
 
 ### Instance methods
 
-These properties are available only on an instance of the `Notification` object or through its [`prototype`](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain). The `Notification` object also inherits from the {{domxref("EventTarget")}} interface.
+These properties are available only on an instance of the `Notification` object or through its [`prototype`](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain). The `Notification` object also inherits from the {{domxref("EventTarget")}} interface.
 
 - {{domxref("Notification.close()")}}
   - : Programmatically closes a notification.
@@ -138,7 +138,7 @@ function notifyMe() {
   }
 
   // Otherwise, we need to ask the user for permission
-  else if (Notification.permission !== 'denied') {
+  else if (Notification.permission !== "denied") {
     Notification.requestPermission(function (permission) {
       // If the user accepts, let's create a notification
       if (permission === "granted") {
@@ -154,10 +154,10 @@ function notifyMe() {
 
 {{EmbedLiveSample('Example', '100%', 30)}}
 
-In many cases, you don't need to be this verbose. For example, in our [Emogotchi demo](http://mdn.github.io/emogotchi/) ([see source code](https://github.com/mdn/emogotchi)), we simply run {{domxref("Notification.requestPermission")}} regardless to make sure we can get permission to send notifications (this uses the newer promise-based method syntax):
+In many cases, you don't need to be this verbose. For example, in our [Emogotchi demo](https://mdn.github.io/emogotchi/) ([see source code](https://github.com/mdn/emogotchi)), we simply run {{domxref("Notification.requestPermission")}} regardless to make sure we can get permission to send notifications (this uses the newer promise-based method syntax):
 
 ```js
-Notification.requestPermission().then(function(result) {
+Notification.requestPermission().then(function (result) {
   console.log(result);
 });
 ```
@@ -165,12 +165,12 @@ Notification.requestPermission().then(function(result) {
 Then we run a simple `spawnNotification()` function when we want to fire a notification — this is passed arguments to specify the body, icon and title we want, then it creates the necessary `options` object and fires the notification using the {{domxref("Notification.Notification","Notification()")}} constructor.
 
 ```js
-function spawnNotification(theBody,theIcon,theTitle) {
+function spawnNotification(theBody, theIcon, theTitle) {
   var options = {
-      body: theBody,
-      icon: theIcon
-  }
-  var n = new Notification(theTitle,options);
+    body: theBody,
+    icon: theIcon,
+  };
+  var n = new Notification(theTitle, options);
 }
 ```
 
@@ -178,9 +178,9 @@ function spawnNotification(theBody,theIcon,theTitle) {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## See also
 

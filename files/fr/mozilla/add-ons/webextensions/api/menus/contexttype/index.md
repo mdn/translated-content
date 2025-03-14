@@ -1,21 +1,9 @@
 ---
 title: menus.ContextType
 slug: Mozilla/Add-ons/WebExtensions/API/menus/ContextType
-tags:
-  - API
-  - Add-ons
-  - ContextType
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - contextMenus
-  - menus
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/ContextType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Les différents contextes dans lesquels un élément de menu peut apparaître.
 
@@ -28,7 +16,7 @@ Les valeurs de ce type sont des chaînes. L'élément est affiché lorsque le co
 - audio
   - : S'applique lorsque l'utilisateur clique sur le contexte d'un élément [audio](/fr/docs/Web/HTML/Element/audio).
 - bookmark
-  - : S'applique lorsque l'utilisateur clique en contexte sur un élément de signet dans la barre d'outils des signets, le menu des signets, la barre latérale des signets (\<kbd>Ctrl\</kbd> + \<kbd>B\</kbd>) et la fenêtre Bibliothèque (\<kbd>Ctrl\</kbd> + \<kbd>Shift\</kbd> + \<kbd>B\</kbd>). Ces deux derniers sont supportés à partir de Firefox 66. Nécessite la [permission d'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) dans le manifest.
+  - : S'applique lorsque l'utilisateur clique en contexte sur un élément de signet dans la barre d'outils des signets, le menu des signets, la barre latérale des signets (\<kbd>Ctrl\</kbd> + \<kbd>B\</kbd>) et la fenêtre Bibliothèque (\<kbd>Ctrl\</kbd> + \<kbd>Shift\</kbd> + \<kbd>B\</kbd>). Ces deux derniers sont supportés à partir de Firefox 66. Nécessite la [permission d'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) dans le manifest.
 - browser_action
   - : S'applique lorsque l'utilisateur clique en contexte sur l'action de votre navigateur. Le nombre maximal d'éléments pouvant être ajoutés au menu contextuel de l'action du navigateur de niveau supérieur est {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}, mais vous pouvez ajouter n'importe quel nombre d'éléments aux sous-menus.
 - editable
@@ -48,7 +36,7 @@ Les valeurs de ce type sont des chaînes. L'élément est affiché lorsque le co
 - selection
   - : S'applique lorsqu'une partie de la page est sélectionnée.
 - tab
-  - : S'applique lorsque l'utilisateur clique en contexte sur un onglet (en particulier, il s'agit de l'onglet ou d'un autre élément de l'interface utilisateur permettant à l'utilisateur de passer d'un onglet de navigateur à un autre, et non à la page elle-même). Depuis Firefox 63, cliquer sur l'élément du menu d'un onglet accorde la permission [activeTab](/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) pour l'onglet cliqué, même si ce n'est pas l'onglet actuellement actif.
+  - : S'applique lorsque l'utilisateur clique en contexte sur un onglet (en particulier, il s'agit de l'onglet ou d'un autre élément de l'interface utilisateur permettant à l'utilisateur de passer d'un onglet de navigateur à un autre, et non à la page elle-même). Depuis Firefox 63, cliquer sur l'élément du menu d'un onglet accorde la permission [activeTab](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) pour l'onglet cliqué, même si ce n'est pas l'onglet actuellement actif.
 - tools_menu
   - : L'élément sera ajouté au menu des outils du navigateur. Notez que ceci n'est disponible que si vous accédez à `ContextType` via l'espace de nom des `menus`. Il n'est pas disponible si vous y accédez via l'espace de noms `contextMenus`.
 - video
@@ -56,15 +44,15 @@ Les valeurs de ce type sont des chaînes. L'élément est affiché lorsque le co
 
 Notez que "launcher" n'est pas supporté.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.ContextType", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
+> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

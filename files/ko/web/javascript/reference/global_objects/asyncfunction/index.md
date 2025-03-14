@@ -1,86 +1,45 @@
 ---
 title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
+l10n:
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
 
-**`AsyncFunction`** 생성자는 새로운 {{jsxref("Statements/async_function", "async function")}} 객체를 만든다. 자바스크립트에서 모든 비동기 함수는 사실상 AsyncFunction 객체이다.
+**`AsyncFunction`** 객체는 [비동기 함수](/ko/docs/Web/JavaScript/Reference/Statements/async_function)에 대한 메서드를 제공합니다. JavaScript에서 모든 비동기 함수는 실제로는 `AsyncFunction` 객체입니다.
 
-`AsyncFunction`이 전역변수가 아님에 주의한다. 다음코드를 보면 알 수 있다.
-
-```js
-Object.getPrototypeOf(async function(){}).constructor
-```
-
-## 문법
+`AsyncFunction`은 전역 객체가 아니라는 점에 유의하세요. 다음 코드를 통해 얻을 수 있습니다.
 
 ```js
-    new AsyncFunction([arg1[, arg2[, ...argN]],] functionBody)
+const AsyncFunction = async function () {}.constructor;
 ```
 
-### 파라미터
+`AsyncFunction`은 {{jsxref("Function")}}의 하위 클래스입니다.
 
-- `arg1, arg2, ... argN`
-  - : 인수의 이름들은 함수내에서 사용되는 이름이다. 이름은 자바스크립트 식별자 로 유용한 문자열이거나 컴마로 구분된 문자열 목록이어야 한다. 예를들면 "x","theValue",or"a,b"와 같다.
-- `functionBody`
-  - : 함수 정의를 구성하는 자바스크립트 명령문들로 구성된 문자열.
+## 생성자
 
-## 상세설명
+- {{jsxref("AsyncFunction/AsyncFunction", "AsyncFunction()")}}
+  - : 새로운 `AsyncFunction` 객체를 생성합니다.
 
-AsyncFunction 생성자를 통해 만들어진 {{jsxref("Statements/async_function", "async function")}} 객체는 함수가 만들어질때 분석된다. 이방법에서는 코드가 실행되지 않을 때도 작동하기 때문에 {{jsxref("Statements/async_function", "async function expression")}} 으로 비동기함수를 정의하고 해당 코드에서 호출할 때보다 비효율적이다.
+## 인스턴스 속성
 
-함수에 전달된 모든 인수들은 전달된 순서대로 함수내에서 인수이름으로 식별자가 생성된 것처럼 다루어진다.
+부모 {{jsxref("Function")}}에서 인스턴스 속성을 상속합니다.
 
-> **참고:** **주의:** `AsyncFunction` 생성자로 만들어진 {{jsxref("Statements/async_function", "async functions")}} 객체는 클로저를 생성 컨텍스트에 만들지 않는다; 이 객체들은 항상 전역 범위에서 생성됩니다.이 객체들을 실행할 때, `AsyncFunction`생성자가 호출된 범위의 변수가 아니라 자신의 지역 변수와 전역 변수에만 액세스 할 수 있습니다.이것은 비동기 함수 표현식을위한 코드와 함께 {{jsxref ( "Global_Objects/eval", "eval")}}을 사용하는 것과 다릅니다.
+`AsyncFunction.prototype`에 정의되어 있는 이 속성은 모든 `AsyncFunction` 인스턴스에 공유됩니다.
 
-`AsyncFunction` 생성자를 (`new` 연산자를 사용하지 않고) 함수로 호출하는 것과 생성자로 동작시키는 것은 동일하다.
+- {{jsxref("Object/constructor", "AsyncFunction.prototype.constructor")}}
+  - : 인스턴스 객체를 만드는 생성자 함수입니다. `AsyncFunction` 인스턴스의 경우 초기 값은 {{jsxref("AsyncFunction/AsyncFunction", "AsyncFunction")}} 생성자입니다.
+- `AsyncFunction.prototype[@@toStringTag]`
+  - : [`@@toStringTag`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 속성의 초기 값은 문자열 `"AsyncFunction"` 입니다. 이 속성은 {{jsxref("Object.prototype.toString()")}}에서 사용합니다.
 
-## 속성
+> **참고:** `AsyncFunction` 인스턴스는 [`prototype`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function) 속성을 가지지 않습ㄴ디ㅏ.
 
-- **`AsyncFunction.length`**
-  - : `AsyncFunction` 생성자의 `length` 속성(이 값은 1임).
-- **`AsyncFunction.prototype`**
-  - : 모든 비동기 함수 객체에 속성을 추가할 수 있도록 함.
-- **`AsyncFunction.constructor`**
-  - : 초기값은 {{jsxref("AsyncFunction")}}임.
-- **`AsyncFunction.prototype[@@toStringTag]`**
-  - : "AsyncFunction"을 반환.
+## 인스턴스 메서드
 
-## `AsyncFunction 인스턴스`
+부모 {{jsxref("Function")}}에서 인스턴스 메서드를 상속합니다.
 
-`AsyncFunction` 인스턴스는 `AsyncFunction.prototype` 에서 메소드와 속성을 상속받는다.
-
-여느 생성자에서와 같이 모든 `AsyncFunction` 인스턴스들을 수정할 수 있도록 생성자의 `prototype` 객체를 수정할 수 있다.
-
-## 예제
-
-### `AsyncFunction` 생성자를 통한 비동기 함수 만들기
-
-```js
-    function resolveAfter2Seconds(x) {
-      return new Promise(resolve => {
-        setTimeout(() => {
-          resolve(x);
-        }, 2000);
-      });
-    }
-
-    let AsyncFunction = Object.getPrototypeOf(async function(){}).constructor
-
-    let a = new AsyncFunction('a',
-                              'b',
-                              'return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);');
-
-    a(10, 20).then(v => {
-      console.log(v); // 4초 후에 30을 출력
-    });
-```
-
-## Specifications
+## 명세서
 
 {{Specifications}}
 
@@ -88,11 +47,11 @@ AsyncFunction 생성자를 통해 만들어진 {{jsxref("Statements/async_functi
 
 {{Compat}}
 
-## 참고 문서
+## 같이 보기
 
-- {{jsxref("Statements/async_function", "async function function")}}
-- {{jsxref("Operators/async_function", "async function expression")}}
-- {{jsxref("Global_Objects/Function", "Function")}}
-- {{jsxref("Statements/function", "function statement")}}
-- {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}
+- [`async function`](/ko/docs/Web/JavaScript/Reference/Statements/async_function)
+- [`async function` 표현식](/ko/docs/Web/JavaScript/Reference/Operators/async_function)
+- {{jsxref("Function")}}
+- {{jsxref("AsyncGeneratorFunction")}}
+- {{jsxref("GeneratorFunction")}}
+- {{jsxref("Functions", "Functions", "", 1)}}

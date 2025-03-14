@@ -89,7 +89,7 @@ _Esta interface não herda nenhuma propriedade._
 - {{domxref("Event.type")}} {{readonlyinline}}
   - : O nome do evento (case-insensitive).
 - {{domxref("Event.isTrusted")}} {{readonlyinline}}
-  - : Indica se ou não o evento foi iniciado pelo navegador (depois de um clique do usuário, por exemplo) ou por um script (usando um método de criação de evento, como [event.initEvent](/pt-BR/docs/DOM/event.initEvent))
+  - : Indica se ou não o evento foi iniciado pelo navegador (depois de um clique do usuário, por exemplo) ou por um script (usando um método de criação de evento, como [event.initEvent](/pt-BR/docs/Web/API/Event/initEvent))
 
 ## Metodos
 
@@ -97,15 +97,15 @@ _Esta interface não herda nenhum método._
 
 - {{domxref("Event.initEvent()")}} {{deprecated_inline}}
   - : Inicializa o valor de um evento criado. Se o evento já está sendo despachado, este método não faz nada.
-- {{domxref("Event.preventBubble()")}} {{non-standard_inline}} {{Obsolete_inline(24)}}
+- {{domxref("Event.preventBubble()")}} {{non-standard_inline}}
   - : Impede o evento de borbulhar. Obsoleto, use {{domxref ("event.stopPropagation")}} em vez disso.
-- {{domxref("Event.preventCapture()")}} {{non-standard_inline}} {{Obsolete_inline(24)}}
+- {{domxref("Event.preventCapture()")}} {{non-standard_inline}}
   - : Obsoleto, use {{domxref("event.stopPropagation")}} ao invés.
 - {{domxref("Event.preventDefault()")}}
   - : Cancela o evento (caso seja cancelável).
 - {{domxref("Event.stopImmediatePropagation()")}}
   - : Para este evento em particular, nenhum outro ouvinte será chamado. Ou aqueles ligados no mesmo elemento, nem aqueles associados em elementos que serão percorridos mais tarde
-    (em fase de captura, por exemplo)​.
+    (em fase de captura, por exemplo).
 - {{domxref("Event.stopPropagation()")}}
   - : Para a propagação de eventos mais adiante no DOM.
 - {{domxref("Event.getPreventDefault()")}} {{non-standard_inline}}
@@ -113,9 +113,9 @@ _Esta interface não herda nenhum método._
 
 ## Veja também
 
-- Tipos de eventos disponíveis: [Referência de eventos](/pt-BR/docs/Web/Reference/Events)
-- [Comparitivo dos Alvos de Eventos](/pt-BR/docs/Web/API/Event/Comparison_of_Event_Targets) (target vs currentTarget vs relatedTarget vs originalTarget)
-- [Criação e gatilho de eventos customizados](/pt-BR/docs/Web/Guide/DOM/Events/Creating_and_triggering_events)
+- Tipos de eventos disponíveis: [Referência de eventos](/pt-BR/docs/Web/Events)
+- [Comparitivo dos Alvos de Eventos](/pt-BR/docs/Learn/JavaScript/Building_blocks/Event_bubbling) (target vs currentTarget vs relatedTarget vs originalTarget)
+- [Criação e gatilho de eventos customizados](/pt-BR/docs/Web/Events/Creating_and_triggering_events)
 - Para desenvolvedores de extensões para o Firefox:
 
   - [Escutando eventos em extensões do Firefox](/pt-BR/docs/Listening_to_events_in_Firefox_extensions)

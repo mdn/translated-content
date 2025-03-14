@@ -1,60 +1,50 @@
 ---
-title: 'Document: scroll event'
+title: Document：scroll 事件
 slug: Web/API/Document/scroll_event
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-文档视图或者一个元素在滚动时，会触发元素的 **`scroll`** 事件。
+{{APIRef}}
 
-<table class="properties">
-  <thead></thead>
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>
-        {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+当文档视图滚动后，**`scroll`** 事件就会触发。要检测滚动何时结束，请参阅 {{domxref("Document/scrollend_event", "Document：scrollend 事件", "", "1")}}。关于元素滚动，请参见 {{domxref("Element/scroll_event", "Element：scroll 事件", "", "1")}}。
 
-> **备注：** 在 iOS UIWebViews 中，滚动进行时不会触发 `scroll` 事件；只有当滚动结束后事件才会被触发。参见 [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202)。Safari 和 WKWebViews 则没有这个问题。
+## 语法
+
+在类似于 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+
+```js
+addEventListener("scroll", (event) => {});
+
+onscroll = (event) => {};
+```
+
+## 事件类型
+
+通用的 {{domxref("Event")}}。
 
 ## 示例
 
-### Scroll 事件节流
+### Scroll 事件限流
 
-由于 `scroll` 事件可被高频触发，事件处理程序不应该执行高性能消耗的操作，如 DOM 操作。而更推荐的做法是使用 {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}、{{DOMxRef("setTimeout()")}} 或 {{DOMxRef("CustomEvent")}} 给事件节流，如下所述。
+由于 `scroll` 事件可被高频触发，事件处理器不应该执行高性能消耗的操作，如 DOM 操作。而更推荐的做法是使用 {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}、{{DOMxRef("Window.setTimeout", "setTimeout()")}} 或 {{DOMxRef("CustomEvent")}} 给事件限流，如下所述。
 
-然而需要注意的是，输入事件和动画帧常常以差不多的频率被触发，因此以下优化常常不必要。这个例子使用 `requestAnimationFrame` 优化 `scroll` 事件。
+然而需要注意的是，输入事件和动画帧的触发速度大致相同，因此通常不需要下述优化。此示例使用 `requestAnimationFrame` 优化 `scroll` 事件。
 
 ```js
-// 参见：http://www.html5rocks.com/en/tutorials/speed/animations/
-
-let last_known_scroll_position = 0;
+let lastKnownScrollPosition = 0;
 let ticking = false;
 
-function doSomething(scroll_pos) {
-  // 根据滚动位置做的事
+function doSomething(scrollPos) {
+  // 利用滚动位置完成一些事情
 }
 
-window.addEventListener('scroll', function(e) {
-  last_known_scroll_position = window.scrollY;
+document.addEventListener("scroll", (event) => {
+  lastKnownScrollPosition = window.scrollY;
 
   if (!ticking) {
-    window.requestAnimationFrame(function() {
-      doSomething(last_known_scroll_position);
+    window.requestAnimationFrame(() => {
+      doSomething(lastKnownScrollPosition);
       ticking = false;
     });
 
@@ -62,8 +52,6 @@ window.addEventListener('scroll', function(e) {
   }
 });
 ```
-
-在 [`resize`](/zh-CN/docs/Web/API/Document/defaultView/resize_event) 事件页面中查看更多类似的例子。
 
 ## 规范
 
@@ -75,4 +63,6 @@ window.addEventListener('scroll', function(e) {
 
 ## 参见
 
-- [Element: `scroll` event](/zh-CN/docs/Web/API/Element/scroll_event)
+- [Document：`scrollend` 事件](/zh-CN/docs/Web/API/Document/scrollend_event)
+- [Element：`scroll` 事件](/zh-CN/docs/Web/API/Element/scroll_event)
+- [Element：`scrollend` 事件](/zh-CN/docs/Web/API/Element/scrollend_event)

@@ -1,5 +1,5 @@
 ---
-title: 'レシピ: メディアオブジェクト'
+title: "レシピ: メディアオブジェクト"
 slug: Web/CSS/Layout_cookbook/Media_objects
 ---
 
@@ -23,13 +23,13 @@ slug: Web/CSS/Layout_cookbook/Media_objects
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/media-objects.html", '100%', 2700)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロードする](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html)
 
 ## 行った選択
 
-必要に応じて 2 次元でレイアウトを制御できるようにするため、メディアオブジェクトに[グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)を使用することを選択しました。 つまり、フッターがあり、その上に短いコンテンツがある場合、そのフッターはそのメディアオブジェクトの下部にまで押し下げられます。
+必要に応じて 2 次元でレイアウトを制御できるようにするため、メディアオブジェクトに[グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)を使用することを選択しました。 つまり、フッターがあり、その上に短いコンテンツがある場合、そのフッターはそのメディアオブジェクトの下部にまで押し下げられます。
 
 グリッドレイアウトを使用するもう 1 つの理由は、画像のトラックのサイズ変更に {{cssxref("fit-content")}} を使用できるようにするためです。 最大サイズが 200 ピクセルの `fit-content` を使用すると、アイコンのような小さい画像がある場合、トラックはその画像のサイズ、つまり `max-content` のサイズと同じサイズになります。 画像が大きい場合、トラックは 200 ピクセルで拡大しなくなり、画像には 100% の {{cssxref("max-width")}} が適用されるため、列の内側に収まるように縮小されます。
 
@@ -45,7 +45,7 @@ slug: Web/CSS/Layout_cookbook/Media_objects
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/media-objects-fallback.html", '100%', 3000)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html)
 
@@ -55,11 +55,11 @@ slug: Web/CSS/Layout_cookbook/Media_objects
 
 ## MDN の関連資料
 
-- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)
-- [プログレッシブエンハンスメントとグリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-- [グリッドテンプレート領域の使用](/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)
+- [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
 - [fit-content](/ja/docs/Web/CSS/fit-content)
-- [grid-template-areas](/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+- [grid-template-areas](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
 
 ## ブラウザーの互換性
 
@@ -67,8 +67,8 @@ slug: Web/CSS/Layout_cookbook/Media_objects
 
 #### grid-template-areas
 
-{{Compat("css.properties.grid-template-areas")}}
+{{Compat}}
 
 #### float
 
-{{Compat("css.properties.float")}}
+{{Compat}}

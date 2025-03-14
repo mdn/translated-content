@@ -1,15 +1,6 @@
 ---
-title: 'Document: paste 이벤트'
+title: "Document: paste 이벤트"
 slug: Web/API/Document/paste_event
-tags:
-  - API
-  - Document
-  - Event
-  - Reference
-  - Web
-  - paste
-browser-compat: api.Document.paste_event
-translation_of: Web/API/Document/paste_event
 ---
 
 {{APIRef}}
@@ -42,8 +33,8 @@ translation_of: Web/API/Document/paste_event
 ## 예제
 
 ```js
-document.addEventListener('paste', (event) => {
-    console.log('붙여넣기 동작 실행')
+document.addEventListener("paste", (event) => {
+  console.log("붙여넣기 동작 실행");
 });
 ```
 

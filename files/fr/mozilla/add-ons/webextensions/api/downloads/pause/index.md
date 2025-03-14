@@ -1,31 +1,20 @@
 ---
 title: downloads.pause()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/pause
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - pause
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/pause
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`pause()`** de l'API {{WebExtAPIRef("downloads")}} interrompt un téléchargement.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var pausing = browser.downloads.pause(
-  downloadId      // integer
-)
+  downloadId, // integer
+);
 ```
 
 ### Paramètres
@@ -35,11 +24,11 @@ var pausing = browser.downloads.pause(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si l'appel a réussi, le téléchargement sera mis en pause et la promesse sera satisfaite sans aucun argument. Si l'appel échoue, la promesse sera rejetée avec un message d'erreur. L'appel échouera si le téléchargement n'est pas actif: par exemple, parce qu'il a fini le téléchargement.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si l'appel a réussi, le téléchargement sera mis en pause et la promesse sera satisfaite sans aucun argument. Si l'appel échoue, la promesse sera rejetée avec un message d'erreur. L'appel échouera si le téléchargement n'est pas actif: par exemple, parce qu'il a fini le téléchargement.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.pause")}}
+{{Compat}}
 
 ## Exemples
 
@@ -58,9 +47,9 @@ pausing.then(onPaused, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

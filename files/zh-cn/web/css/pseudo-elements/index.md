@@ -3,7 +3,7 @@ title: 伪元素
 slug: Web/CSS/Pseudo-elements
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 伪元素是一个附加至选择器末的关键词，允许你对被选择元素的特定部分修改样式。下例中的 {{CSSxRef("::first-line")}} 伪元素可改变段落首行文字的样式。
 
@@ -15,19 +15,21 @@ p::first-line {
 }
 ```
 
-> **备注：** 与伪元素比较，{{cssxref("pseudo-classes")}} 能够根据状态改变元素样式。
+> [!NOTE]
+> 与伪元素比较，{{cssxref("pseudo-classes")}} 能够根据*状态*改变元素样式。
 
 ## 语法
 
-```
+```css
 selector::pseudo-element {
   property: value;
 }
 ```
 
-> **备注：** 一个选择器中只能使用一个伪元素。伪元素必须紧跟在语句中的简单选择器/基础选择器之后。
->
-> **注意：**按照规范，应该使用双冒号（`::`）而不是单个冒号（`:`），以便区分伪类和伪元素。但是，由于旧版本的 W3C 规范并未对此进行特别区分，因此目前绝大多数的浏览器都同时支持使用这两种方式来表示伪元素。
+一个选择器中只能使用一个伪元素。伪元素必须紧跟在语句中的简单选择器/基础选择器之后。
+
+> [!NOTE]
+> 按照规范，应该使用双冒号（`::`）而不是单个冒号（`:`），以便区分伪类和伪元素。但是，由于旧版本的 W3C 规范并未对此进行特别区分，因此目前绝大多数的浏览器都同时支持使用这两种方式来表示伪元素。
 
 ## 字母索引
 
@@ -35,12 +37,12 @@ selector::pseudo-element {
 
 A
 
-- {{CSSxRef("::after", "::after (:after)")}}
+- {{CSSxRef("::after")}}
 
 B
 
 - {{CSSxRef("::backdrop")}}
-- {{CSSxRef("::before", "::before (:before)")}}
+- {{CSSxRef("::before")}}
 
 C
 
@@ -49,8 +51,8 @@ C
 
 F
 
-- {{CSSxRef("::first-letter", "::first-letter (:first-letter)")}}
-- {{CSSxRef("::first-line", "::first-line (:first-line)")}}
+- {{CSSxRef("::first-letter")}}
+- {{CSSxRef("::first-line")}}
 - {{CSSxRef("::file-selector-button")}}
 
 G
@@ -85,9 +87,9 @@ T
 <table class="standard-table">
   <tbody>
     <tr>
-      <th>Browser</th>
-      <th>Lowest Version</th>
-      <th>Support of</th>
+      <th>浏览器</th>
+      <th>最低版本</th>
+      <th>支持的伪元素</th>
     </tr>
     <tr>
       <td rowspan="2">Internet Explorer</td>

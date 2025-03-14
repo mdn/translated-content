@@ -1,15 +1,53 @@
 ---
-title: 'HTML 属性: disabled'
+title: "HTML 属性: disabled"
 slug: Web/HTML/Attributes/disabled
+l10n:
+  sourceCommit: db32c2f103885a65715e2cce48bda44be03f44f7
 ---
 
 {{HTMLSidebar}}
 
 **`disabled`** は論理属性で、存在する場合、その要素は変更不可、フォーカス不可、フォームへの送信不可となります。ユーザーはそのコントロールやフォームコントロールの子孫を編集したり、フォーカスしたりすることができません。
 
+{{InteractiveExample("HTML Demo: disabled", "tabbed-standard")}}
+
+```html interactive-example
+<form>
+  <label for="name">Name:</label>
+  <input id="name" name="name" type="text" />
+
+  <label for="emp">Employed:</label>
+  <select id="emp" name="emp" disabled>
+    <option>No</option>
+    <option>Yes</option>
+  </select>
+
+  <label for="empDate">Employment Date:</label>
+  <input id="empDate" name="empDate" type="date" disabled />
+
+  <label for="resume">Resume:</label>
+  <input id="resume" name="resume" type="file" />
+</form>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+*:disabled {
+  background-color: dimgrey;
+  color: linen;
+  opacity: 1;
+}
+```
+
+## 概要
+
 フォームコントロールに `disabled` 属性が指定された場合、その要素とフォームコントロールの子孫は制約検証が行われません。多くの場合、ブラウザーはそのようなコントロールをグレーアウトし、マウスクリックやフォーカス関連のイベントなどの閲覧イベントを受け取りません。
 
-`disabled` 属性は、 {{ HTMLElement("button") }}, {{ HTMLElement("command") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("keygen") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }}, {{ HTMLElement("input")}} が対応しています。
+`disabled` 属性は、 {{ HTMLElement("button") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }}, {{ HTMLElement("input")}} が対応しています。
 
 論理属性の disabled は、ユーザーがコントロールやその子孫のコントロールと対話できないことを示します。この属性が指定されていない場合、コントロールは、例えば `fieldset` のような包含要素からその設定を継承します。 `disabled` 属性が設定されている包含要素がなく、コントロール自体がこの属性を持っていない場合、コントロールは有効になります。 {{ HTMLElement("optgroup") }}上で宣言された場合、 select は（特に無効化されていない限り）操作可能になりますが、オプショングループの項目はどれも選択不可能になります。
 
@@ -41,61 +79,70 @@ Firefox は他のブラウザーとは異なり、ページを再読み込みし
 
 ## 例
 
-フォームコントロールが無効になったとき、多くのブラウザーは既定で、より薄いグレーアウトした色で表示します。ここでは、無効になったチェックボックス、ラジオボタン、 {{ HTMLElement("option") }} と {{ HTMLElement("optgroup") }} の例と、祖先の {{HTMLElement("fieldset")}} 要素に設定された disabled 属性によって無効にされているいくつかのフォーム制御の例を示します。 {{ HTMLElement("option") }} は無効になっていますが、 {{ HTMLElement("select") }} 自体は無効になっていません。 {{ HTMLElement("select") }} 是t内を無効にするには、子孫ではなく、その要素にこの属性を追加します。
+フォームコントロールが無効になったとき、多くのブラウザーは既定で、より薄いグレーアウトした色で表示します。ここでは、無効になったチェックボックス、ラジオボタン、 {{ HTMLElement("option") }} と {{ HTMLElement("optgroup") }} の例と、祖先の {{HTMLElement("fieldset")}} 要素に設定された disabled 属性によって無効にされているいくつかのフォーム制御の例を示します。 {{ HTMLElement("option") }} は無効になっていますが、 {{ HTMLElement("select") }} 自体は無効になっていません。 {{ HTMLElement("select") }} 自体を無効にするには、子孫ではなく、その要素にこの属性を追加します。
 
-```html
+```html-nolint
 <fieldset>
   <legend>チェックボックス</legend>
-  <p><label>
-    <input type="checkbox" name="chbox" value="regular"> 通常
-  </label></p>
-  <p><label>
-    <input type="checkbox" name="chbox" value="disabled" disabled> disabled
-  </label></p>
+  <p>
+    <label>
+      <input type="checkbox" name="chbox" value="regular" /> 通常
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" name="chbox" value="disabled" disabled /> disabled
+    </label>
+  </p>
 </fieldset>
 
 <fieldset>
   <legend>ラジオボタン</legend>
-  <p><label>
-    <input type="radio" name="radio" value="regular"> 通常
-  </label></p>
-  <p><label>
-    <input type="radio" name="radio" value="disabled" disabled> disabled
-  </label></p>
+  <p>
+    <label> <input type="radio" name="radio" value="regular" /> 通常 </label>
+  </p>
+  <p>
+    <label>
+      <input type="radio" name="radio" value="disabled" disabled /> disabled
+    </label>
+  </p>
 </fieldset>
 
 <p>
- <label>選択してください
-  <select>
-    <optgroup label="Group 1">
-      <option>Option 1.1</option>
-    </optgroup>
-    <optgroup label="Group 2">
-      <option>Option 2.1</option>
-      <option disabled>Option 2.2</option>
-      <option>Option 2.3</option>
-    </optgroup>
-    <optgroup label="Group 3" disabled>
-      <option>Disabled 3.1</option>
-      <option>Disabled 3.2</option>
-      <option>Disabled 3.3</option>
-    </optgroup>
-  </select>
- </label>
+  <label
+    >選択してください:
+    <select>
+      <optgroup label="Group 1">
+        <option>Option 1.1</option>
+      </optgroup>
+      <optgroup label="Group 2">
+        <option>Option 2.1</option>
+        <option disabled>Option 2.2</option>
+        <option>Option 2.3</option>
+      </optgroup>
+      <optgroup label="Group 3" disabled>
+        <option>Disabled 3.1</option>
+        <option>Disabled 3.2</option>
+        <option>Disabled 3.3</option>
+      </optgroup>
+    </select>
+  </label>
 </p>
 
 <fieldset disabled>
   <legend>無効なフィールドセット</legend>
   <p>
-   <label>名前: <input type="name" name="radio" value="通常"> 通常 </label>
+    <label>
+      名前: <input type="radio" name="radio" value="通常" /> 通常
+    </label>
   </p>
   <p>
-   <label>数値: <input type="number"></label>
+    <label>数値: <input type="number" /></label>
   </p>
 </fieldset>
 ```
 
-{{EmbedLiveSample('Examples', 500, 300)}}
+{{EmbedLiveSample('Examples', 500, 450)}}
 
 ## 仕様書
 

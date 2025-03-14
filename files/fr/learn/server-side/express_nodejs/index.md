@@ -1,18 +1,6 @@
 ---
 title: Express Web Framework (Node.js/JavaScript)
 slug: Learn/Server-side/Express_Nodejs
-tags:
-  - Beginner
-  - CodingScripting
-  - Express
-  - Express.js
-  - Intro
-  - JavaScript
-  - Learn
-  - Node
-  - Server-side programming
-  - node.js
-translation_of: Learn/Server-side/Express_Nodejs
 ---
 
 {{LearnSidebar}}
@@ -23,7 +11,8 @@ Express est une infrastructure d'application (framework), écrit en JavaScript e
 
 Avant d'aller plus loin, vous devrez avoir compris ce qu'est la programmation côté serveur et le concept de "framework", idéalement en ayant lu notre article [Premiers pas en programmation côté-serveur](/fr/docs/Learn/Server-side/First_steps). Une connaissance générale des concepts de programmation et du [JavaScript](/fr/docs/Web/JavaScript) est vivement recommandée, sans pour autant être essentielle à la compréhension des concepts fondamentaux.
 
-> **Note :** Le site MDN possède de nombreuses ressources utiles pour apprendre JavaScript dans le contexte du _développement côté client_ : [Référence JavaScript](/fr/docs/Web/JavaScript), [Guide JavaScript](/fr/docs/Web/JavaScript/Guide), [Les bases de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics), [Apprendre JavaScript](/fr/docs/Learn/JavaScript). Le noyau du langage et les principaux concepts de JavaScript sont les mêmes que pour le développement côté serveur sur Node.js, il est donc important d'avoir déjà une bonne compréhension de JavaScript avant de continuer. Node.js offre des [API supplémentaires](https://nodejs.org/dist/latest/docs/api/) pour supporter des fonctionnalités utiles dans des environnements sans navigateur, par ex. pour créer des serveurs HTTP et accéder au système de fichiers, mais ne prend pas en charge les API JavaScript pour travailler avec le navigateur et le DOM.
+> [!NOTE]
+> Le site MDN possède de nombreuses ressources utiles pour apprendre JavaScript dans le contexte du _développement côté client_ : [Référence JavaScript](/fr/docs/Web/JavaScript), [Guide JavaScript](/fr/docs/Web/JavaScript/Guide), [Les bases de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics), [Apprendre JavaScript](/fr/docs/Learn/JavaScript). Le noyau du langage et les principaux concepts de JavaScript sont les mêmes que pour le développement côté serveur sur Node.js, il est donc important d'avoir déjà une bonne compréhension de JavaScript avant de continuer. Node.js offre des [API supplémentaires](https://nodejs.org/dist/latest/docs/api/) pour supporter des fonctionnalités utiles dans des environnements sans navigateur, par ex. pour créer des serveurs HTTP et accéder au système de fichiers, mais ne prend pas en charge les API JavaScript pour travailler avec le navigateur et le DOM.
 >
 > Ce guide vous fournira des informations sur l'utilisation de Node.js et Express, et contient de nombreuses références à d'autres excellentes ressources sur Internet et dans des livres — dont des liens depuis [How do I get started with Node.js](https://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js/5511507#5511507) (StackOverflow) et [What are the best resources for learning Node.js?](https://www.quora.com/What-are-the-best-resources-for-learning-Node-js?) (Quora).
 

@@ -5,7 +5,8 @@ slug: Web/HTTP/Headers/Warning
 
 {{HTTPSidebar}}
 
-> **Nota:** O cabeçalho `Warning` será depreciado em breve; veja [Warning (https://github.com/httpwg/http-core/issues/139)](https://github.com/httpwg/http-core/issues/139) e [Warning: header & stale-while-revalidate (https://github.com/whatwg/fetch/issues/913)](https://github.com/whatwg/fetch/issues/913) para mais detalhes.
+> [!NOTE]
+> O cabeçalho `Warning` será depreciado em breve; veja [Warning (https://github.com/httpwg/http-core/issues/139)](https://github.com/httpwg/http-core/issues/139) e [Warning: header & stale-while-revalidate (https://github.com/whatwg/fetch/issues/913)](https://github.com/whatwg/fetch/issues/913) para mais detalhes.
 
 O cabeçalho geral HTTP **`Warning`** contém informação sobre possíveis problemas com o status da mensagem. Mais de um cabeçalho `Warning` pode aparecer na resposta.
 
@@ -48,7 +49,7 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 
 ## Códigos de aviso (Warning)
 
-O [registro de Códigos de Aviso HTTP em iana.org](http://www.iana.org/assignments/http-warn-codes/http-warn-codes.xhtml) define o espaço de nomes para códigos de aviso.
+O [registro de Códigos de Aviso HTTP em iana.org](https://www.iana.org/assignments/http-warn-codes/http-warn-codes.xhtml) define o espaço de nomes para códigos de aviso.
 
 | Código | Texto                     | Descrição                                                                                                                                         |
 | ------ | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -71,13 +72,13 @@ Warning: 112 - "cache down" "Wed, 21 Oct 2015 07:28:00 GMT"
 
 ## Especificações
 
-| Especificação                                | Título                                          |
-| -------------------------------------------- | ----------------------------------------------- |
+| Especificação                     | Título                                          |
+| --------------------------------- | ----------------------------------------------- |
 | {{RFC("7234", "Warning", "5.5")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Warning")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,9 +1,9 @@
 ---
 title: <main>
 slug: Web/HTML/Element/main
-translation_of: Web/HTML/Element/main
-original_slug: Web/HTML/Elemento/main
 ---
+
+{{HTMLSidebar}}
 
 ## Resumen
 
@@ -11,10 +11,10 @@ El **elemento HTML `<main>`** representa el contenido principal del {{HTMLElemen
 
 > **Nota:** **no debe haber** más de un elemento `<main>` en un documento, y este **no debe ser** descendiente de un elemento {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, o {{HTMLElement("nav")}}.
 
-- _[Content categories](/es/docs/Web/HTML/Content_categories)_[Flow content](/es/docs/Web/HTML/Content_categories#Flow_content), palpable content.
-- _Contenido permitido_ [Flow content](/es/docs/Web/HTML/Content_categories#Flow_content).
+- _[Content categories](/es/docs/Web/HTML/Content_categories)_[Flow content](/es/docs/Web/HTML/Content_categories#flow_content), palpable content.
+- _Contenido permitido_ [Flow content](/es/docs/Web/HTML/Content_categories#flow_content).
 - _Omisión de etiquetas_ Ninguna; ambas etiqueta inical y de fin son obligatorias.
-- _Elementos padres permitidos_ Cualquier elemento que acepte [flow content](/es/docs/Web/HTML/Content_categories#Flow_content), pero no debe ser un descendiente de un elemento {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, o {{HTMLElement("nav")}}.
+- _Elementos padres permitidos_ Cualquier elemento que acepte [flow content](/es/docs/Web/HTML/Content_categories#flow_content), pero no debe ser un descendiente de un elemento {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, o {{HTMLElement("nav")}}.
 - _Interfaz DOM_ {{domxref("HTMLElement")}}
 
 ## Atributos
@@ -32,20 +32,19 @@ Este elemento solo incluye [atributos globales.](/es/docs/Web/HTML/Global_attrib
 
   <article>
     <h2>Red Delicious</h2>
-    <p>These bright red apples are the most common found in many
-    supermarkets.</p>
-    <p>... </p>
-    <p>... </p>
+    <p>
+      These bright red apples are the most common found in many supermarkets.
+    </p>
+    <p>...</p>
+    <p>...</p>
   </article>
 
   <article>
     <h2>Granny Smith</h2>
-    <p>These juicy, green apples make a great filling for
-    apple pies.</p>
-    <p>... </p>
-    <p>... </p>
+    <p>These juicy, green apples make a great filling for apple pies.</p>
+    <p>...</p>
+    <p>...</p>
   </article>
-
 </main>
 
 <!-- other content -->
@@ -59,17 +58,9 @@ Algunos lectores de pantalla reconocen la etiqueta `main` y proveen un atajo par
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-Como una caracterisca nueva propuesta para HTML, el elemento `<main>` no está todavía ampliamente soportado. Es sumamente recomendable añadir el rol ARIA `"main"` a cualquier elemento `<main>`:
-
-```html
-<main role="main">
-  ...
-</main>
-```
-
-{{Compat("html.elements.main")}}
+{{Compat}}
 
 ## Ver también
 

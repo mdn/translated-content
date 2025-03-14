@@ -1,11 +1,6 @@
 ---
 title: CSS Text Decoration
-slug: Web/CSS/CSS_Text_Decoration
-tags:
-  - Aperçu
-  - CSS
-  - Reference
-translation_of: Web/CSS/CSS_Text_Decoration
+slug: Web/CSS/CSS_text_decoration
 ---
 
 {{CSSRef}}

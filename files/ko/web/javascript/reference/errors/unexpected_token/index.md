@@ -1,10 +1,6 @@
 ---
-title: 'SyntaxError: Unexpected token'
+title: "SyntaxError: Unexpected token"
 slug: Web/JavaScript/Reference/Errors/Unexpected_token
-tags:
-  - 에러
-  - 자바스크립트
-translation_of: Web/JavaScript/Reference/Errors/Unexpected_token
 ---
 
 {{jsSidebar("Errors")}}
@@ -32,9 +28,9 @@ translation_of: Web/JavaScript/Reference/Errors/Unexpected_token
 
 ### 예상하지 못한 표현식
 
-예를 들어, 함수를 호출할 때, 인수에서 마지막 부분에 콤마는 허용되지 않습니다. 자바스크립트는 계속해서 다른 인자가 있을 것이라고 기대하기 때문입니다.
+예를 들어, 함수를 호출할 때, 인수에서 마지막 부분에 콤마는 허용되지 않습니다. JavaScript는 계속해서 다른 인자가 있을 것이라고 기대하기 때문입니다.
 
-```js example-bad
+```js-nolint example-bad
 Math.max(2, 42,);
 // SyntaxError: expected expression, got ')'
 ```
@@ -43,7 +39,7 @@ Math.max(2, 42,);
 
 ```js example-good
 Math.max(2, 42);
-Math.max(2, 42, 13+37);
+Math.max(2, 42, 13 + 37);
 ```
 
 ## 참조

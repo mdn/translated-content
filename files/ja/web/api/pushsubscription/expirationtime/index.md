@@ -1,13 +1,14 @@
 ---
-title: PushSubscription.expirationTime
+title: "PushSubscription: expirationTime プロパティ"
+short-title: expirationTime
 slug: Web/API/PushSubscription/expirationTime
 l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
 {{APIRef("Push API")}}
 
-{{domxref("PushSubscription")}} インターフェイスの **`expirationTime`** 読み取り専用プロパティは、プッシュサブスクリプションに関連付いたサブスクリプション期限切れ時間を表す {{domxref("DOMHighResTimeStamp")}} を返します。存在しなければ `null` を返します。
+**`expirationTime`** は {{domxref("PushSubscription")}} インターフェイスの読み取り専用プロパティで、プッシュサブスクリプションに関連付けられたサブスクリプションの有効期限を {{domxref("DOMHighResTimeStamp")}} で返します。存在しなければ `null` を返します。
 
 ## 値
 

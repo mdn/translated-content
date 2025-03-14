@@ -1,18 +1,35 @@
 ---
 title: handler.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
-tags:
-  - Прокси
-  - вызов функции
-  - ловушка
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 ---
 
 {{JSRef}}
 
 Метод **`handler.apply()`** является ловушкой для вызова функции.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-apply.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.apply()", "taller")}}
+
+```js interactive-example
+function sum(a, b) {
+  return a + b;
+}
+
+const handler = {
+  apply: function (target, thisArg, argumentsList) {
+    console.log(`Calculate sum: ${argumentsList}`);
+    // Expected output: "Calculate sum: 1,2"
+
+    return target(argumentsList[0], argumentsList[1]) * 10;
+  },
+};
+
+const proxy1 = new Proxy(sum, handler);
+
+console.log(sum(1, 2));
+// Expected output: 3
+console.log(proxy1(1, 2));
+// Expected output: 30
+```
 
 ## Синтаксис
 
@@ -63,15 +80,15 @@ const p = new Proxy(target, {
 Следующий код ловит вызов функции.
 
 ```js
-const p = new Proxy(function() {}, {
-  apply: function(target, thisArg, argumentsList) {
-    console.log('called: ' + argumentsList.join(', '));
+const p = new Proxy(function () {}, {
+  apply: function (target, thisArg, argumentsList) {
+    console.log("called: " + argumentsList.join(", "));
     return argumentsList[0] + argumentsList[1] + argumentsList[2];
-  }
+  },
 });
 
 console.log(p(1, 2, 3)); // "called: 1, 2, 3"
-                         // 6
+// 6
 ```
 
 ## Спецификации
@@ -80,7 +97,7 @@ console.log(p(1, 2, 3)); // "called: 1, 2, 3"
 
 ## Совместимость с браузерами
 
-{{Compat("javascript.builtins.Proxy.handler.apply")}}
+{{Compat}}
 
 ## Смотрите также
 

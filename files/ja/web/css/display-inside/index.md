@@ -1,6 +1,8 @@
 ---
 title: <display-inside>
 slug: Web/CSS/display-inside
+l10n:
+  sourceCommit: 8d4fb1e2934111a13989d2796152dc601468e7b5
 ---
 
 {{CSSRef}}
@@ -11,28 +13,33 @@ slug: Web/CSS/display-inside
 
 有効な `<display-inside>` の値は以下の通りです。
 
-- `flow` {{Experimental_Inline}}
+- `flow`
 
   - : 要素は、フローレイアウト (ブロックおよびインラインのレイアウト) を使用して、内容物をレイアウトします。
 
     外部表示種別が `inline` または `run-in` であり、またブロックまたはインラインの整形コンテキストに関係する場合は、インラインボックスを生成します。そうでない場合は、ブロックコンテナーボックスを生成します。
 
-    ほかのプロパティ ({{cssxref("position")}}, {{cssxref("float")}}, {{cssxref("overflow")}} など) の値や、要素自体がブロックまたはインラインの整形コンテキストに関係するかによって、新たな[ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context) (BFC) を生成する、または内容物が親の整形コンテキストに吸収されます。
+    ほかのプロパティ ({{CSSxRef("position")}}, {{CSSxRef("float")}}, {{CSSxRef("overflow")}} など) の値や、要素自体がブロックまたはインラインの整形コンテキストに関係するかによって、新たな[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) を生成する、または内容物が親の整形コンテキストに吸収されます。
 
 - `flow-root`
-  - : 要素は、新たな[ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)を確立するブロック要素ボックスを生成し、整形ルートがある場所を定義します。
+  - : 要素は、新たな[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)を確立するブロック要素ボックスを生成し、整形ルートがある場所を定義します。
 - `table`
   - : HTML の {{HTMLElement("table")}} 要素と同じように動作します。これは、ブロックレベルボックスを定義します。
 - `flex`
-  - : 要素は、ブロック要素のように動作しつつ、そのコンテンツを[フレックスボックスモデル](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)に従ってレイアウトします。
+  - : 要素は、ブロック要素のように動作しつつ、そのコンテンツを[フレックスボックスモデル](/ja/docs/Web/CSS/CSS_flexible_box_layout)に従ってレイアウトします。
 - `grid`
-  - : 要素は、ブロック要素のように動作しつつ、そのコンテンツを[グリッドモデル](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)に従ってレイアウトします。
-- `ruby` {{Experimental_Inline}}
+  - : 要素は、ブロック要素のように動作しつつ、そのコンテンツを[グリッドモデル](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)に従ってレイアウトします。
+- `ruby`
   - : 要素は、インライン要素のように動作しつつ、そのコンテンツをルビ (ruby) モデルに従ってレイアウトします。HTML の {{HTMLElement("ruby")}} 要素のように動作します。
 
-> **メモ:** 二つの値の構文に対応しているブラウザーは、 `display: flex` や `display: grid` などの内部表示種別のみが指定されていると、外部表示種別を `block` に設定します。これで期待通りに動作します。例えば、ある要素を `display: grid` に指定した場合、そのボックスはブロックレベルボックスのグリッドコンテナーとして生成されることが期待されるでしょう。
+> [!NOTE]
+> 2 つの値の構文に対応しているブラウザーは、 `display: flex` や `display: grid` などの内部表示種別のみが指定されていると、外部表示種別を `block` に設定します。これで期待通りに動作します。例えば、ある要素を `display: grid` に指定した場合、そのボックスはブロックレベルボックスのグリッドコンテナーとして生成されることが期待されるでしょう。
 
-<h2 id="Examples">例</h2>
+## 形式文法
+
+{{csssyntax}}
+
+## 例
 
 この例では、親ボックスは `display: flow-root` となり、新しいブロック整形コンテキストを確立して浮動アイテムを含みます。
 
@@ -49,18 +56,18 @@ slug: Web/CSS/display-inside
 
 ```css
 .box {
-    background-color: rgb(224, 206, 247);
-    border: 5px solid rebeccapurple;
-    display: flow-root;
+  background-color: rgb(224, 206, 247);
+  border: 5px solid rebeccapurple;
+  display: flow-root;
 }
 
 .float {
-    float: left;
-    width: 200px;
-    height: 150px;
-    background-color: white;
-    border:1px solid black;
-    padding: 10px;
+  float: left;
+  width: 200px;
+  height: 150px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
 }
 ```
 
@@ -74,31 +81,7 @@ slug: Web/CSS/display-inside
 
 ## ブラウザーの互換性
 
-### 複数のキーワードの対応
-
-{{Compat("css.properties.display.multi-keyword_values", 10)}}
-
-- Chromium のバグ: <https://bugs.chromium.org/p/chromium/issues/detail?id=804600>
-
-### flow-root の対応
-
-{{Compat("css.properties.display.flow-root", 10)}}
-
-### table の対応
-
-{{Compat("css.properties.display.table_values", 10)}}
-
-### grid の対応
-
-{{Compat("css.properties.display.grid", 10)}}
-
-### flex の対応
-
-{{Compat("css.properties.display.flex", 10)}}
-
-### ruby の対応
-
-{{Compat("css.properties.display.ruby_values", 10)}}
+{{Compat}}
 
 ## 関連情報
 
@@ -110,5 +93,5 @@ slug: Web/CSS/display-inside
   - {{CSSxRef("&lt;display-box&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
-- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)

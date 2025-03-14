@@ -9,7 +9,8 @@ slug: Web/API/SharedWorker/SharedWorker
 
 如果 URL 的语法无效或者违反了同源策略会抛出 `SECURITY_ERR` 类型的 {{domxref("DOMException")}} 异常。
 
-> **备注：** 浏览器开发者对于 data URI 是否同源产生分歧。尽管 Gecko 10.0 及之后版本支持 data URIs，其他浏览器并不能支持。
+> [!NOTE]
+> 浏览器开发者对于 data URI 是否同源产生分歧。尽管 Gecko 10.0 及之后版本支持 data URIs，其他浏览器并不能支持。
 
 ## 语法
 
@@ -47,27 +48,27 @@ var myWorker = new SharedWorker(aURL, options);
 以下代码段显示了使用 `SharedWorker()` 构造函数创建 {{domxref("SharedWorker")}} 对象以及对象的后续用法：
 
 ```js
-var myWorker = new SharedWorker('worker.js');
+var myWorker = new SharedWorker("worker.js");
 
 myWorker.port.start();
 
-first.onchange = function() {
-  myWorker.port.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+first.onchange = function () {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 
-second.onchange = function() {
-  myWorker.port.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+second.onchange = function () {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 
-myWorker.port.onmessage = function(e) {
+myWorker.port.onmessage = function (e) {
   result1.textContent = e.data;
-  console.log('Message received from worker');
-}
+  console.log("Message received from worker");
+};
 ```
 
-看完整示例，请见 [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](http://mdn.github.io/simple-shared-worker/).)
+有关更完整的示例，详见[基本的共享型 worker 示例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker)（[运行基本的共享型 worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)）。
 
 ## 规范
 

@@ -1,9 +1,6 @@
 ---
 title: matrix()
 slug: Web/CSS/transform-function/matrix
-translation_of: Web/CSS/transform-function/matrix()
-original_slug: Web/CSS/transform-function/matrix()
-browser-compat: css.types.transform-function.matrix
 ---
 
 {{CSSRef}}
@@ -27,7 +24,8 @@ matrix(a, b, c, d, tx, ty)
 - `tx` `ty`
   - : Les coefficients de la matrice, de type [`<number>`](/fr/docs/Web/CSS/number), qui définissent la translation à appliquer.
 
-> **Note :** Jusqu'à Firefox 16, Gecko permettait d'utiliser des valeurs [`<length>`](/fr/docs/Web/CSS/length) pour les coefficients `tx` et `ty`.
+> [!NOTE]
+> Jusqu'à Firefox 16, Gecko permettait d'utiliser des valeurs [`<length>`](/fr/docs/Web/CSS/length) pour les coefficients `tx` et `ty`.
 
 <table class="standard-table">
   <thead>
@@ -111,8 +109,8 @@ p {
   background-color: teal;
 }
 
-.transformation{
-  transform: matrix(0.87,-0.5,0,0.87,0,1);
+.transformation {
+  transform: matrix(0.87, -0.5, 0, 0.87, 0, 1);
   background-color: blue;
 }
 ```

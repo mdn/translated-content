@@ -1,13 +1,11 @@
 ---
 title: Grid template areas
-slug: Web/CSS/CSS_Grid_Layout/Grid_template_areas
-tags:
-  - CSS
-  - CSS Grids
-  - Guide
-translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
+slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 ---
-[이전 가이드](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_그리드의_라인을_기준으로_한_아이템_배치)에서 우리는 그리드 라인에 대해서 살펴보았으며, 이 라인을 기준으로 어떻게 아이템들을 배치하는지 알아보았습니다. CSS 그리드 레이아웃으로 작업할 땐 거기엔 항상 라인이 있을 것이고, 이것은 아이템들을 그리드에 배치할 때 사용할 수 있는 아주 직관적인 방법이 될 수 있습니다. 그렇지만, 아이템을 그리드에 배치할 때 사용할 수 있는 또 다른 방법이 있는데, 이것은 독자적으로 혹은 라인 기준 배치 방법과 함께 혼용해서 사용할 수 있습니다. 이 방법은 이름이 지명된 템플릿 영역을 사용하여 아이템을 배치하는 작업과 연관돼 있으며, 이 방법이 정확히 어떻게 작동하는지 알아보겠습니다. 이것이 때때로 왜 그리드 레이아웃의 ascii-art 방식이라고 일컬어지는지 쉽게 눈치채실 수 있을 겁니다!
+
+{{CSSRef}}
+
+[이전 가이드](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)에서 우리는 그리드 라인에 대해서 살펴보았으며, 이 라인을 기준으로 어떻게 아이템들을 배치하는지 알아보았습니다. CSS 그리드 레이아웃으로 작업할 땐 거기엔 항상 라인이 있을 것이고, 이것은 아이템들을 그리드에 배치할 때 사용할 수 있는 아주 직관적인 방법이 될 수 있습니다. 그렇지만, 아이템을 그리드에 배치할 때 사용할 수 있는 또 다른 방법이 있는데, 이것은 독자적으로 혹은 라인 기준 배치 방법과 함께 혼용해서 사용할 수 있습니다. 이 방법은 이름이 지명된 템플릿 영역을 사용하여 아이템을 배치하는 작업과 연관돼 있으며, 이 방법이 정확히 어떻게 작동하는지 알아보겠습니다. 이것이 때때로 왜 그리드 레이아웃의 ascii-art 방식이라고 일컬어지는지 쉽게 눈치채실 수 있을 겁니다!
 
 ## 그리드 영역의 이름 짓기
 
@@ -15,13 +13,13 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 ```css
 .box1 {
-   grid-area: 1 / 1 / 4 / 2;
+  grid-area: 1 / 1 / 4 / 2;
 }
 ```
 
 이렇게 모두 네 개의 라인을 정의하는 작업은, 영역을 둘러싸는 라인을 지정해서 해당 영역이 차지하게 될 자리를 정의해 주는 것이라 할 수 있습니다.
 
-![라인으로 정의된 그리드 영역](https://mdn.mozillademos.org/files/14667/4_Area.png)
+![라인으로 정의된 그리드 영역](4_area.png)
 
 이와 더불어서, 각 영역에 이름을 붙여서 정의할 수도 있으며, 각 영역의 위치는 {{cssxref("grid-template-areas")}} 프로퍼티의 값을 지정해서 정의할 수 있습니다. 영역의 이름은 원하시는 것 아무거나 선택해서 사용하실 수 있습니다. 예를 들어, 아래에 보이는 레이아웃을 만들고자 할 때, 다음과 같이 네 개의 주요 영역으로 구분할 수 있습니다.
 
@@ -30,22 +28,22 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 - a sidebar
 - the main content
 
-![단순하게 헤더와 푸터가 있는 두 개의 열로 구성된 레이아웃을 보여주는 그림](https://mdn.mozillademos.org/files/14669/4_Layout.png)
+![단순하게 헤더와 푸터가 있는 두 개의 열로 구성된 레이아웃을 보여주는 그림](4_layout.png)
 
 여기서 각 영역의 이름은 {{cssxref("grid-area")}} 프로퍼티로 지정할 수 있습니다. 이것은 아직 아무런 레이아웃도 생성하지 않지만, 이렇게 해서 레이아웃에 사용될 영역의 이름을 갖게 됩니다.
 
 ```css
 .header {
-    grid-area: hd;
+  grid-area: hd;
 }
 .footer {
-    grid-area: ft;
+  grid-area: ft;
 }
 .content {
-    grid-area: main;
+  grid-area: main;
 }
 .sidebar {
-    grid-area: sd;
+  grid-area: sd;
 }
 ```
 
@@ -53,42 +51,44 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    grid-template-areas:
-      "hd hd hd hd   hd   hd   hd   hd   hd"
-      "sd sd sd main main main main main main"
-      "ft ft ft ft   ft   ft   ft   ft   ft";
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    "hd hd hd hd   hd   hd   hd   hd   hd"
+    "sd sd sd main main main main main main"
+    "ft ft ft ft   ft   ft   ft   ft   ft";
 }
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 940px;
-    margin: 0 auto;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 940px;
+  margin: 0 auto;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-    <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Content</div>
+  <div class="footer">Footer</div>
 </div>
 ```
 
@@ -102,57 +102,59 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 ```css
 .header {
-    grid-area: hd;
+  grid-area: hd;
 }
 .footer {
-    grid-area: ft;
+  grid-area: ft;
 }
 .content {
-    grid-area: main;
+  grid-area: main;
 }
 .sidebar {
-    grid-area: sd;
+  grid-area: sd;
 }
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 940px;
-    margin: 0 auto;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 940px;
+  margin: 0 auto;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    grid-template-areas:
-      "hd hd hd hd   hd   hd   hd   hd   hd"
-      "sd sd sd main main main main main main"
-      ".  .  .  ft   ft   ft   ft   ft   ft";
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    "hd hd hd hd   hd   hd   hd   hd   hd"
+    "sd sd sd main main main main main main"
+    ".  .  .  ft   ft   ft   ft   ft   ft";
 }
 ```
 
 ```html
 <div class="wrapper">
-    <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Content</div>
+  <div class="footer">Footer</div>
 </div>
 ```
 
@@ -168,57 +170,59 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 ```css
 .header {
-    grid-area: hd;
+  grid-area: hd;
 }
 .footer {
-    grid-area: ft;
+  grid-area: ft;
 }
 .content {
-    grid-area: main;
+  grid-area: main;
 }
 .sidebar {
-    grid-area: sd;
+  grid-area: sd;
 }
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 940px;
-    margin: 0 auto;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 940px;
+  margin: 0 auto;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    grid-template-areas:
-      "hd hd hd hd   hd   hd   hd   hd   hd"
-      "sd sd sd main main main main main main"
-      "sd sd sd  ft  ft   ft   ft   ft   ft";
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    "hd hd hd hd   hd   hd   hd   hd   hd"
+    "sd sd sd main main main main main main"
+    "sd sd sd  ft  ft   ft   ft   ft   ft";
 }
 ```
 
 ```html hidden
 <div class="wrapper">
-    <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Content</div>
+  <div class="footer">Footer</div>
 </div>
 ```
 
@@ -235,48 +239,50 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 위 예제에 있는 레이아웃을 가지고, 만약 너비가 좁을 때는 아주 단순한 레이아웃을 형성하도록 단일 열 형태의 그리드를 정의해서 아이템들이 서로 중첩되도록 하였습니다.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 940px;
-    margin: 0 auto;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 940px;
+  margin: 0 auto;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .header {
-    grid-area: hd;
+  grid-area: hd;
 }
 .footer {
-    grid-area: ft;
+  grid-area: ft;
 }
 .content {
-    grid-area: main;
+  grid-area: main;
 }
 .sidebar {
-    grid-area: sd;
+  grid-area: sd;
 }
 
 .wrapper {
-    display: grid;
-    grid-auto-rows: minmax(100px, auto);
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "hd"
-      "main"
-      "sd"
-      "ft";
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "hd"
+    "main"
+    "sd"
+    "ft";
 }
 ```
 
@@ -284,29 +290,29 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 ```css
 @media (min-width: 500px) {
-    .wrapper {
-        grid-template-columns: repeat(9, 1fr);
-        grid-template-areas:
-          "hd hd hd hd   hd   hd   hd   hd   hd"
-          "sd sd sd main main main main main main"
-          "sd sd sd  ft  ft   ft   ft   ft   ft";
-    }
+  .wrapper {
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas:
+      "hd hd hd hd   hd   hd   hd   hd   hd"
+      "sd sd sd main main main main main main"
+      "sd sd sd  ft  ft   ft   ft   ft   ft";
+  }
 }
 @media (min-width: 700px) {
-    .wrapper {
-        grid-template-areas:
-          "hd hd hd   hd   hd   hd   hd   hd hd"
-          "sd sd main main main main main ft ft";
-    }
+  .wrapper {
+    grid-template-areas:
+      "hd hd hd   hd   hd   hd   hd   hd hd"
+      "sd sd main main main main main ft ft";
+  }
 }
 ```
 
 ```html hidden
 <div class="wrapper">
-    <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Content</div>
+  <div class="footer">Footer</div>
 </div>
 ```
 
@@ -316,48 +322,50 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 온라인에서 찾을 수 있는 많은 그리드 예제들을 보면 주로 주요 페이지 레이아웃에만 그리드를 사용한다고 느끼실 수 있습니다만, 그리드는 큰 요소만큼이나 작은 요소에서도 유용하게 사용될 수 있습니다. 특히나 {{cssxref("grid-template-areas")}}를 쓰면 요소가 어떻게 보일지 코드를 보면 쉽게 이해할 수 있어서 아주 유용합니다.
 
-아주 간단한 예로 “미디어 오브젝트”를 만들어 보겠습니다. 이 컴포넌트의 한쪽은 그림이나 다른 미디어를 위한 공간이 차지하고 다른 쪽은 주 내용이 위치하게 됩니다. 그림은 박스의 오른쪽 혹은 왼쪽에 표시될 수 있습니다.
+아주 간단한 예로 "미디어 오브젝트"를 만들어 보겠습니다. 이 컴포넌트의 한쪽은 그림이나 다른 미디어를 위한 공간이 차지하고 다른 쪽은 주 내용이 위치하게 됩니다. 그림은 박스의 오른쪽 혹은 왼쪽에 표시될 수 있습니다.
 
-![미디어 오브젝트 디자인의 한 예를 보여주는 그림](https://mdn.mozillademos.org/files/14671/4_Media_objects.png)
+![미디어 오브젝트 디자인의 한 예를 보여주는 그림](4_media_objects.png)
 
 여기서 그리드는 두 개의 열 트랙으로 구성되어 있으며, 그림이 들어가는 공간의 열 트랙의 크기는 `1fr`이며 글자 내용이 들어가는 공간의 크기는 `3fr`입니다. 만약에 고정된 너비의 그림 영역을 원하시면, 그림이 들어가는 열의 너비는 픽셀값으로 설정하고, 글자 영역에는 `1fr`을 지정하실 수 있습니다. 그러면 `1fr` 크기의 단일 열 트랙이 남은 공간을 모두 차지하게 됩니다.
 
 그림이 위치하는 영역의 그리드 이름으로 `img`를 지정하고 글자 영역은 `content`라 부르기로 하고, `grid-template-areas` 프로퍼티를 써서 다음과 같이 배치하게 됩니다.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .media {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 400px;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 400px;
 }
 .media {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-areas: "img content";
-    margin-bottom: 1em;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "img content";
+  margin-bottom: 1em;
 }
 
 .media .image {
-    grid-area: img;
-    background-color: #ffd8a8;
+  grid-area: img;
+  background-color: #ffd8a8;
 }
 
 .media .text {
-    grid-area: content;
-    padding: 10px;
-
+  grid-area: content;
+  padding: 10px;
 }
 ```
 
 ```html
 <div class="media">
-    <div class="image"></div>
-    <div class="text">This is a media object example.
-      We can use grid-template-areas to switch around the image and text part of the media object.
-    </div>
+  <div class="image"></div>
+  <div class="text">
+    This is a media object example. We can use grid-template-areas to switch
+    around the image and text part of the media object.
+  </div>
 </div>
 ```
 
@@ -368,44 +376,46 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 반대로 그림이 박스의 맞은편에 표시되기를 원하실 때도 있을 겁니다. 이렇게 하려면, `1fr` 크기의 트랙을 마지막에 위치하도록 하고, 단순하게 {{cssxref("grid-template-areas")}}의 값을 뒤집어서 그리드를 다시 정의해주면 됩니다.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .media {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 400px;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 400px;
 }
 .media {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-areas: "img content";
-    margin-bottom: 1em;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "img content";
+  margin-bottom: 1em;
 }
 
 .media.flipped {
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas: "content img";
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "content img";
 }
 
 .media .image {
-    grid-area: img;
-    background-color: #ffd8a8;
+  grid-area: img;
+  background-color: #ffd8a8;
 }
 
 .media .text {
-    grid-area: content;
-    padding: 10px;
-
+  grid-area: content;
+  padding: 10px;
 }
 ```
 
 ```html
 <div class="media flipped">
-    <div class="image"></div>
-    <div class="text">This is a media object example.
-      We can use grid-template-areas to switch around the image and text part of the media object.
-    </div>
+  <div class="image"></div>
+  <div class="text">
+    This is a media object example. We can use grid-template-areas to switch
+    around the image and text part of the media object.
+  </div>
 </div>
 ```
 
@@ -435,12 +445,12 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template:
-      "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
-      "sd sd sd main main main main main main" minmax(100px, auto)
-      "ft ft ft ft   ft   ft   ft   ft   ft" minmax(100px, auto)
-             / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+  display: grid;
+  grid-template:
+    "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
+    "sd sd sd main main main main main main" minmax(100px, auto)
+    "ft ft ft ft   ft   ft   ft   ft   ft" minmax(100px, auto)
+    / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 ```
 
@@ -465,11 +475,12 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 ```css
 .wrapper {
-    display: grid;
-    grid: "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
+  display: grid;
+  grid:
+    "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
     "sd sd sd main main main main main main" minmax(100px, auto)
     "ft ft ft ft   ft   ft   ft   ft   ft" minmax(100px, auto)
-    / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 ```
 
@@ -479,50 +490,50 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 1. [**CSS**](/ko/docs/Web/CSS)
 2. [**CSS Reference**](/ko/docs/Web/CSS/Reference)
-3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout)
+3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout)
 4. **가이드**
 
-    1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃의_기본_개념)
-    2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃과_다른_레이아웃_방법과의_관계)
-    3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_그리드의_라인을_기준으로_한_아이템_배치)
-    4. [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_템플릿_영역)
-    5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout/이름이_주어진_그리드_라인을_이용한_레이아웃)
-    6. [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7. [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8. [Grids, logical values and writing modes](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9. [CSS Grid Layout and Accessibility](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-    10. [CSS Grid Layout and Progressive Enhancement](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-    11. [Realizing common layouts using grids](/ko/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+   1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+   2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+   3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+   4. [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+   5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+   6. [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+   7. [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+   8. [Grids, logical values and writing modes](/ko/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+   9. [CSS Grid Layout and Accessibility](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+   10. [CSS Grid Layout and Progressive Enhancement](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+   11. [Realizing common layouts using grids](/ko/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 5. **프로퍼티**
 
-    1. [grid](/ko/docs/Web/CSS/grid)
-    2. [grid-area](/ko/docs/Web/CSS/grid-area)
-    3. [grid-auto-columns](/ko/docs/Web/CSS/grid-auto-columns)
-    4. [grid-auto-flow](/ko/docs/Web/CSS/grid-auto-flow)
-    5. [grid-auto-rows](/ko/docs/Web/CSS/grid-auto-rows)
-    6. [grid-column](/ko/docs/Web/CSS/grid-column)
-    7. [grid-column-end](/ko/docs/Web/CSS/grid-column-end)
-    8. [grid-column-gap](/ko/docs/Web/CSS/grid-column-gap)
-    9. [grid-column-start](/ko/docs/Web/CSS/grid-column-start)
-    10. [grid-gap](/ko/docs/Web/CSS/grid-gap)
-    11. [grid-row](/ko/docs/Web/CSS/grid-row)
-    12. [grid-row-end](/ko/docs/Web/CSS/grid-row-end)
-    13. [grid-row-gap](/ko/docs/Web/CSS/grid-row-gap)
-    14. [grid-row-start](/ko/docs/Web/CSS/grid-row-start)
-    15. [grid-template](/ko/docs/Web/CSS/grid-template)
-    16. [grid-template-areas](/ko/docs/Web/CSS/grid-template-areas)
-    17. [grid-template-columns](/ko/docs/Web/CSS/grid-template-columns)
-    18. [grid-template-rows](/ko/docs/Web/CSS/grid-template-rows)
+   1. [grid](/ko/docs/Web/CSS/grid)
+   2. [grid-area](/ko/docs/Web/CSS/grid-area)
+   3. [grid-auto-columns](/ko/docs/Web/CSS/grid-auto-columns)
+   4. [grid-auto-flow](/ko/docs/Web/CSS/grid-auto-flow)
+   5. [grid-auto-rows](/ko/docs/Web/CSS/grid-auto-rows)
+   6. [grid-column](/ko/docs/Web/CSS/grid-column)
+   7. [grid-column-end](/ko/docs/Web/CSS/grid-column-end)
+   8. [grid-column-gap](/ko/docs/Web/CSS/column-gap)
+   9. [grid-column-start](/ko/docs/Web/CSS/grid-column-start)
+   10. [grid-gap](/ko/docs/Web/CSS/gap)
+   11. [grid-row](/ko/docs/Web/CSS/grid-row)
+   12. [grid-row-end](/ko/docs/Web/CSS/grid-row-end)
+   13. [grid-row-gap](/ko/docs/Web/CSS/row-gap)
+   14. [grid-row-start](/ko/docs/Web/CSS/grid-row-start)
+   15. [grid-template](/ko/docs/Web/CSS/grid-template)
+   16. [grid-template-areas](/ko/docs/Web/CSS/grid-template-areas)
+   17. [grid-template-columns](/ko/docs/Web/CSS/grid-template-columns)
+   18. [grid-template-rows](/ko/docs/Web/CSS/grid-template-rows)
 
 6. **용어집**
 
-    1. [Grid](/ko/docs/Glossary/Grid)
-    2. [Grid lines](/ko/docs/Glossary/Grid_lines)
-    3. [Grid tracks](/ko/docs/Glossary/Grid_tracks)
-    4. [Grid cell](/ko/docs/Glossary/Grid_cell)
-    5. [Grid areas](/ko/docs/Glossary/Grid_areas)
-    6. [Gutters](/ko/docs/Glossary/Gutters)
-    7. [Grid Axis](/ko/docs/Glossary/Grid_Axis)
-    8. [Grid row](/ko/docs/Glossary/Grid_rows)
-    9. [Grid column](/ko/docs/Glossary/Grid_column)
+   1. [Grid](/ko/docs/Glossary/Grid)
+   2. [Grid lines](/ko/docs/Glossary/Grid_Lines)
+   3. [Grid tracks](/ko/docs/Glossary/Grid_Tracks)
+   4. [Grid cell](/ko/docs/Glossary/Grid_Cell)
+   5. [Grid areas](/ko/docs/Glossary/Grid_Areas)
+   6. [Gutters](/ko/docs/Glossary/Gutters)
+   7. [Grid Axis](/ko/docs/Glossary/Grid_Axis)
+   8. [Grid row](/ko/docs/Glossary/Grid_Row)
+   9. [Grid column](/ko/docs/Glossary/Grid_Column)

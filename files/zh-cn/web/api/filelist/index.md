@@ -1,124 +1,79 @@
 ---
 title: FileList
 slug: Web/API/FileList
+l10n:
+  sourceCommit: cfa628aedb53a83b315943ef19fa6c73298fb7d5
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-一个 FileList 对象通常来自于一个 HTML {{HTMLElement("input")}} 元素的 `files` 属性，你可以通过这个对象访问到用户所选择的文件。该类型的对象还有可能来自用户的拖放操作，查看 [`DataTransfer`](/zh-CN/docs/DragDrop/DataTransfer) 对象了解详情。
+**`FileList`** 接口表示由 HTML {{HTMLElement("input")}} 元素的 `files` 属性返回的该类型的对象；这使你可以访问使用 `<input type="file">` 元素选择的文件列表。它还用于使用拖放 API 中放入 Web 内容中的文件列表；有关此用法的详细信息，请参阅 {{domxref("DataTransfer")}} 对象。
 
-> **备注：** 在 Gecko 1.9.2 之前，通过 `input` 元素，每次只能选择一个文件，这意味着该 `input` 元素的 `files` 属性上的 FileList 对象无论如何都只能包含一个文件。从 Gecko 1.9.2 开始，如果一个 `input` 元素拥有 `multiple` 属性，则可以用它来选择多个文件。
+所有 `<input>` 元素节点都有一个 `FileList` 类型的 `files` 属性，其允许访问此列表中的项目。例如，如果 HTML 包含以下文件输入框：
 
-## 使用 FileList
-
-所有 type 属性 (attribute) 为 file 的 `<input>` 元素都有一个 files 属性 (property),用来存储用户所选择的文件。例如：
-
-```
-<input id="fileItem" type="file">
+```html
+<input id="fileItem" type="file" />
 ```
 
-下面的一行代码演示如何获取到一个 FileList 对象中的第一个文件 ([`File`](/zh-CN/docs/Web/API/File) 对象):
+以下代码行将节点文件列表中的第一个文件作为 {{domxref("File")}} 对象获取：
 
 ```js
-var file = document.getElementById('fileItem').files[0];
+const file = document.getElementById("fileItem").files[0];
 ```
 
-## 方法概述
+此接口[试图创建不可修改的列表](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156)，为了不破坏已经使用该接口的代码，才继续支持该接口。现代 API 使用基于 JavaScript [数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)的类型来表示列表结构，从而提供许多数组方法，同时对其使用施加额外的语义（例如使其项目为只读）。
 
-```
-File item(index);
-```
+这些历史原因并不意味着你作为开发人员应该避免使用 `FileList`。你不会自己创建 `FileList` 对象，而是从诸如 {{domxref("HTMLInputElement.files")}} 之类的 API 获取它们，并且这些 API 并未弃用。但是，请注意与真实数组的语义差异。
 
-## 属性
+## 实例属性
 
-| 属性名   | 类型      | 描述                                         |
-| -------- | --------- | -------------------------------------------- |
-| `length` | `integer` | 一个只读的整数值，用来返回列表中的文件数量。 |
+- {{DOMxRef("FileList.length", "length")}} {{ReadOnlyInline}}
+  - : 指示列表中文件数量的只读值。
 
-## 方法
+## 实例方法
 
-### `item()`
-
-根据给定的索引值，返回 FileList 对象中对应的 [`File`](/zh-CN/docs/Web/API/File) 对象。
-
-```
- File item(
-   index
- );
-```
-
-###### 参数
-
-- `index`
-  - : File 对象在 FileList 对象中的索引值，从 0 开始。
-
-###### 返回值
-
-所请求的[`File`](/zh-CN/docs/Web/API/File)对象。
+- {{DOMxRef("FileList.item()", "item()")}}
+  - : 返回一个 {{domxref("File")}} 对象，表示文件列表中指定索引处的文件。
 
 ## 示例
 
-这个例子迭代了用户通过一个 `input` 元素选择的多个文件：
+### 记录文件名
 
-```js
-// fileInput 是一个 HTML input 元素：<input type="file" id="myfileinput" multiple>
-var fileInput = document.getElementById("myfileinput");
+在此示例中，我们记录用户选择的所有文件的名称。
 
-// files 是一个 FileList 对象 (类似于 NodeList 对象)
-var files = fileInput.files;
-var file;
-
-// 遍历所有文件
-for (var i = 0; i < files.length; i++) {
-
-    // 取得一个文件
-    file = files.item(i);
-    // 这样也行
-    file = files[i];
-    // 取得文件名
-    alert(file.name);
-}
-```
-
-下面是一个更完整的例子。
+#### HTML
 
 ```html
-<!DOCTYPE HTML>
-<html>
-<head>
-</head>
-<body>
-<!-- multiple 属性允许用户选择多个文件 -->
-
-<input id="myfiles" multiple type="file">
-
-</body>
-
-<script>
-
-var pullfiles=function(){
-    // love the query selector
-    var fileInput = document.querySelector("#myfiles");
-    var files = fileInput.files;
-    // 获取所选文件数量
-    var fl = files.length;
-    var i = 0;
-
-    while ( i < fl) {
-        // localize file var in the loop
-        var file = files[i];
-        alert(file.name);
-        i++;
-    }
-}
-
-// 设置 change 事件处理函数
-document.querySelector("#myfiles").onchange=pullfiles;
-
-</script>
-
-</html>
+<input id="myfiles" multiple type="file" />
+<pre class="output">选定的文件：</pre>
 ```
+
+#### CSS
+
+```css
+.output {
+  overflow: scroll;
+  margin: 1rem 0;
+  height: 200px;
+}
+```
+
+#### JavaScript
+
+```js
+const output = document.querySelector(".output");
+const fileInput = document.querySelector("#myfiles");
+
+fileInput.addEventListener("change", () => {
+  for (const file of fileInput.files) {
+    output.innerText += `\n${file.name}`;
+  }
+});
+```
+
+#### 结果
+
+{{EmbedLiveSample("记录文件名")}}
 
 ## 规范
 
@@ -130,6 +85,6 @@ document.querySelector("#myfiles").onchange=pullfiles;
 
 ## 参见
 
-- [如何在 Web 应用程序中使用文件](/zh-CN/docs/Using_files_from_web_applications)
-- [`File`](/zh-CN/docs/DOM/File)
-- [`FileReader`](/zh-CN/docs/DOM/FileReader)
+- [在 Web 应用程序中使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)
+- {{domxref("File")}}
+- {{domxref("FileReader")}}

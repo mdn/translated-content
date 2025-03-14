@@ -3,7 +3,9 @@ title: state
 slug: Web/API/History/state
 ---
 
-返回在 history 栈顶的 `任意` 值的拷贝。通过这种方式可以查看 state 值，不必等待 [`popstate`](/zh-CN/docs/Web/Events/popstate)事件发生后再查看。
+{{APIRef("History API")}}
+
+返回在 history 栈顶的 `任意` 值的拷贝。通过这种方式可以查看 state 值，不必等待 [`popstate`](/zh-CN/docs/Web/API/Window/popstate_event)事件发生后再查看。
 
 ## 语法
 
@@ -24,7 +26,7 @@ let currentState = history.state;
 console.log(`History.state before pushState: ${history.state}`);
 
 // 现在 push 一些数据到栈里
-history.replaceState({name: 'Example'}, "pushState example", 'page3.html');
+history.replaceState({ name: "Example" }, "pushState example", "page3.html");
 
 // 现在 state 已经有值了
 console.log(`History.state after pushState: ${history.state}`);

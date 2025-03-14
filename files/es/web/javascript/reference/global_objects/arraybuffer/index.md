@@ -1,9 +1,6 @@
 ---
 title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-original_slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-browser-compat: javascript.builtins.ArrayBuffer
 ---
 
 {{JSRef}}
@@ -61,6 +58,6 @@ const view = new Int32Array(buffer);
 ## Véase también
 
 - Un polyfill de `ArrayBuffer` está disponible en [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [Arraglos tipados en JavaScript](/es/docs/Web/JavaScript/Typed_arrays)
+- [Arraglos tipados en JavaScript](/es/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("SharedArrayBuffer")}}
 - [RangeError: longitud de array invalida](/es/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

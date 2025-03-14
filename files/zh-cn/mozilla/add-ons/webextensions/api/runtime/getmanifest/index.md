@@ -3,12 +3,14 @@ title: 读取主文件信息方法 - runtime.getManifest()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
 ---
 
-{{AddonSidebar()}}该方法会获取一个完整的主文件 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json), 并返回一个序列化后的 JSON 对象。
+{{AddonSidebar}}
+
+该方法会获取一个完整的主文件 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)，并返回一个序列化后的 JSON 对象。
 
 ## 语法
 
 ```js
-browser.runtime.getManifest()
+browser.runtime.getManifest();
 ```
 
 ### 参数
@@ -34,9 +36,8 @@ console.log(manifest.name);
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-getManifest) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.google.cn/docs/extensions/reference/api/runtime#method-getManifest) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

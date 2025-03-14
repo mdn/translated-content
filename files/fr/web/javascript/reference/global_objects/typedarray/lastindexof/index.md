@@ -1,23 +1,23 @@
 ---
 title: TypedArray.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/lastIndexOf
 ---
 
 {{JSRef}}
 
-La méthode **`lastIndexOf()`** renvoie le dernier indice (le plus grand) pour lequel un élément donné est trouvé. Si l'élément cherché n'est pas trouvé, la valeur de retour sera -1. Le tableau typé est parcouru dans l'ordre des indices décroissants (de la fin vers le début) à partir de `indexDépart`. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.lastIndexOf()")}}. Dans le reste de l'article, *TypedArray* correspond à l'un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
+La méthode **`lastIndexOf()`** renvoie le dernier indice (le plus grand) pour lequel un élément donné est trouvé. Si l'élément cherché n'est pas trouvé, la valeur de retour sera -1. Le tableau typé est parcouru dans l'ordre des indices décroissants (de la fin vers le début) à partir de `indexDépart`. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.lastIndexOf()")}}. Dans le reste de l'article, _TypedArray_ correspond à l'un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
 
-{{EmbedInteractiveExample("pages/js/typedarray-lastindexof.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.lastIndexOf()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 50, 50, 50, 60]);
+
+console.log(uint8.lastIndexOf(50, 5));
+// Expected output: 4
+
+console.log(uint8.lastIndexOf(50, 3));
+// Expected output: 3
+```
 
 ## Syntaxe
 
@@ -38,16 +38,16 @@ Le dernier indice du tableau typé pour lequel l'élément a été trouvé ou `-
 
 ## Description
 
-`lastIndexOf` compare `élémentRecherché` avec les éléments du tableau typé en utilisant l'[égalité stricte](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison#Using_the_Equality_Operators) (celle utilisée par l'opérateur ===).
+`lastIndexOf` compare `élémentRecherché` avec les éléments du tableau typé en utilisant l'[égalité stricte](/fr/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators) (celle utilisée par l'opérateur ===).
 
 ## Exemples
 
 ```js
 var uint8 = new Uint8Array([2, 5, 9, 2]);
-uint8.lastIndexOf(2);     // 3
-uint8.lastIndexOf(7);     // -1
-uint8.lastIndexOf(2, 3);  // 3
-uint8.lastIndexOf(2, 2);  // 0
+uint8.lastIndexOf(2); // 3
+uint8.lastIndexOf(7); // -1
+uint8.lastIndexOf(2, 3); // 3
+uint8.lastIndexOf(2, 2); // 0
 uint8.lastIndexOf(2, -2); // 0
 uint8.lastIndexOf(2, -1); // 3
 ```

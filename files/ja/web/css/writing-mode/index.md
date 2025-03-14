@@ -7,7 +7,55 @@ slug: Web/CSS/writing-mode
 
 **`writing-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの行のレイアウトを横書きにするか縦書きにするか、ブロックのフロー方向を左向きにするか右向きにするかを設定します。文書全体に設定する場合は、ルート要素 (HTML 文書の場合は `html` 要素) に設定してください。
 
-{{EmbedInteractiveExample("pages/css/writing-mode.html")}}
+{{InteractiveExample("CSS Demo: writing-mode")}}
+
+```css interactive-example-choice
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-lr;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+writing-mode: sideways-rl;
+```
+
+```css interactive-example-choice
+writing-mode: sideways-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  padding: 0.75em;
+  width: 80%;
+  max-height: 300px;
+  display: flex;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex: 1;
+}
+```
 
 このプロパティは、*ブロックのフロー方向*を指定します。これは、ブロックレベルコンテナーが積まれる方向と、インラインレベルの内容物がブロックコンテナー内でフローする方向です。このように、 `writing-mode` プロパティはブロックレベルの内容物の順序も決定します。
 
@@ -122,48 +170,55 @@ HTML は単純な {{HTMLElement("table")}} であり、行方向に書字方向�
 
 ```css hidden
 table {
-  border-collapse:collapse;
+  border-collapse: collapse;
 }
-td, th {
-  border: 1px black solid; padding: 3px;
+td,
+th {
+  border: 1px black solid;
+  padding: 3px;
 }
 th {
   background-color: lightgray;
 }
 .example {
-  height:75px;
-  width:75px;
+  height: 75px;
+  width: 75px;
 }
 ```
 
 内容物の方向を調整する CSS は次のようになります。
 
 ```css
-.example.Text1 span, .example.Text1 {
+.example.Text1 span,
+.example.Text1 {
   writing-mode: horizontal-tb;
   -webkit-writing-mode: horizontal-tb;
   -ms-writing-mode: horizontal-tb;
 }
 
-.example.Text2 span, .example.Text2 {
+.example.Text2 span,
+.example.Text2 {
   writing-mode: vertical-lr;
   -webkit-writing-mode: vertical-lr;
   -ms-writing-mode: vertical-lr;
 }
 
-.example.Text3 span, .example.Text3 {
+.example.Text3 span,
+.example.Text3 {
   writing-mode: vertical-rl;
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: vertical-rl;
 }
 
-.example.Text4 span, .example.Text4 {
+.example.Text4 span,
+.example.Text4 {
   writing-mode: sideways-lr;
   -webkit-writing-mode: sideways-lr;
   -ms-writing-mode: sideways-lr;
 }
 
-.example.Text5 span, .example.Text5 {
+.example.Text5 span,
+.example.Text5 {
   writing-mode: sideways-rl;
   -webkit-writing-mode: sideways-rl;
   -ms-writing-mode: sideways-rl;
@@ -193,6 +248,6 @@ th {
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("text-orientation")}}
 - {{Cssxref("text-combine-upright")}}
-- [CSS 論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties)
-- [Styling vertical text (Chinse, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/)
+- [CSS 論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
+- [Styling vertical text (Chinese, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/)
 - 広範なブラウザーの対応試験結果: [https://w3c.github.io/i18n-tests/results/writing-mode-vertical](https://w3c.github.io/i18n-tests/results/writing-mode-vertical)

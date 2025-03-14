@@ -10,13 +10,13 @@ MathML の `<msqrt>` 要素は平方根（根指数のついていない累乗�
 ## 属性
 
 - class, id, style
-  - : [CSS](/ja/docs/CSS)を用いて修飾を行なう際に使われます。
+  - : [CSS](/ja/docs/Web/CSS)を用いて修飾を行なう際に使われます。
 - href
   - : ハイパーリンクを設定する際に用いられます。
 - mathbackground
-  - : 数式の背景色を指定するために使われます。`#rgb`、`#rrggbb`のような 16 進表現のほか、HTML で定められた[色キーワード](/ja/docs/Web/CSS/color_value#Color_keywords)を用いることができます。
+  - : 数式の背景色を指定するために使われます。`#rgb`、`#rrggbb`のような 16 進表現のほか、HTML で定められた[色キーワード](/ja/docs/Web/CSS/named-color)を用いることができます。
 - mathcolor
-  - : 根号を含んだ数式の文字の色を指定するために使われます。`#rgb`、`#rrggbb`のような 16 進表現のほか、HTML で定められた[色キーワード](/ja/docs/Web/CSS/color_value#Color_keywords)を用いることができます。
+  - : 根号を含んだ数式の文字の色を指定するために使われます。`#rgb`、`#rrggbb`のような 16 進表現のほか、HTML で定められた[色キーワード](/ja/docs/Web/CSS/named-color)を用いることができます。
 
 ## 例
 
@@ -26,22 +26,20 @@ MathML の `<msqrt>` 要素は平方根（根指数のついていない累乗�
 
 ```html
 <math>
-
- <msqrt>
+  <msqrt>
     <mi>x</mi>
   </msqrt>
-
 </math>
 ```
 
 ## ブラウザーの互換性
 
-{{Compat("mathml.elements.msqrt")}}
+{{Compat}}
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## See also
+## 関連情報
 
 - {{ MathMLElement("mroot") }} (Radical with an index)

@@ -1,14 +1,64 @@
 ---
 title: repeat()
 slug: Web/CSS/repeat
-original_slug: Web/CSS/repeat()
+l10n:
+  sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
 ---
 
 {{CSSRef}}
 
-**`repeat()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、トラックリスト内での部分的な繰り返しを表し、列や行の繰り返しをよりコンパクトに書くことができます。
+**`repeat()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、[トラックリスト](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)内での部分的な繰り返しを表し、繰り返しパターンを示す多数の列や行を、よりコンパクトな形式で記述することができます。
+
+{{InteractiveExample("CSS Demo: repeat()")}}
+
+```css interactive-example-choice
+grid-template-columns: repeat(2, 60px);
+```
+
+```css interactive-example-choice
+grid-template-columns: 1fr repeat(2, 60px);
+```
+
+```css interactive-example-choice
+grid-template-columns: repeat(2, 20px 1fr);
+```
+
+```css interactive-example-choice
+grid-template-columns: repeat(auto-fill, 40px);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 この関数は CSS グリッドのプロパティである {{cssxref("grid-template-columns")}} と {{cssxref("grid-template-rows")}} の中で使うことができます。
+
+## 構文
 
 ```css
 /* <track-repeat> 値 */
@@ -41,31 +91,77 @@ repeat(4, [col-start] fit-content(200px) [col-end])
 repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 ```
 
-## 構文
+`repeat()` 関数は 2 つの引数を取ります。
+
+- **反復回数**: 最初の引数は、トラックリストが繰り返される回数を指定します。これは 1 以上の整数値で指定するか、キーワード値 [`auto-fill`](#auto-fill) または [`auto-fit`](#auto-fit) で指定します。これらのキーワード値は、グリッドコンテナーを埋めるのに必要な回数だけトラックの組み合わせを繰り返します。
+- **トラック**: 2 番目の引数は、繰り返されるトラックの組み合わせを指定します。基本的にこれは 1 つ以上の値で構成され、それぞれの値はそのトラックのサイズを表します。それぞれのサイズは [`<track-size>`](#track-size) または [`<fixed-size>`](#fixed-size) で指定します。また、トラックサイズの前後に [`<line-names>`](#line-names) 値を提供することで、各トラックの前後に 1 つ以上の[行名](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)を指定することもできます。
+
+[`auto-fill`](#auto-fill) や [`auto-fit`](#auto-fit) を使用して反復回数を設定する場合、[`<fixed-size>`](#fixed-size) 型を使用してのみトラックサイズを指定することができ、 [`<track-size>`](#track-size) 型を使用することはできません。これで `repeat()` の構文が 3 種類になりました。
+
+- `<track-repeat>` は次のいずれかです。
+  - 反復回数を設定する整数
+  - トラックのサイズを設定する [`<track-size>`](#track-size) 値
+- `<auto-repeat>` は次のいずれかです。
+  - 反復回数を設定する [`auto-fill`](#auto-fill) または [`auto-fit`](#auto-fit)
+  - トラックのサイズを設定する [`<fixed-size>`](#fixed-size) 値
+- `<fixed-repeat>` は次のいずれかです。
+  - 反復回数を設定する整数
+  - トラックのサイズを設定する [`<fixed-size>`](#fixed-size) 値
+
+プロパティ宣言で `<auto-repeat>` を用いた場合、`<fixed-repeat>` を使用するのは `repeat()` を呼び出すときだけです。例えば、この例は `<auto-repeat>` 形式と `<track-repeat>` 形式を結合しているので不正です。
+
+```css example-bad
+.wrapper {
+  grid-template-columns:
+    repeat(auto-fill, 10px)
+    repeat(2, minmax(min-content, max-content));
+}
+```
+
+サブグリッドに行名を追加するために使用する `<name-repeat>` という第 4 の形式があります。これは [`subgrid`](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid) キーワードでのみ使用し、行名のみを指定し、トラックサイズは指定しません。
 
 ### 値
 
-- {{cssxref("&lt;length&gt;")}}
-  - : 正の整数で表される長さです。
-- {{cssxref("&lt;percentage&gt;")}}
-  - : 負の数ではないパーセント値で、列グリッドトラック内のグリッドコンテナーのインライン寸法と、行グリッドトラック内のグリッドコンテナーのブロック寸法との相対的値を表します。グリッドコンテナーの寸法がトラックの寸法に依存する場合、 `<percentage>` は `auto` として扱う必要があります。ユーザーエージェントは、トラックの本質的な寸法の寄与をグリッドコンテナーの寸法に調整し、トラックの最終的な寸法を、パーセント値を尊重する結果となる最小の量だけ増加させることができます。
+- `<fixed-size>`
+  - : 以下の形式のいずれかです。
+    - {{cssxref("&lt;length-percentage&gt;")}} 値
+    - {{cssxref("minmax", "minmax()")}} 関数
+      - `min` は {{cssxref("&lt;length-percentage&gt;")}} 値で指定
+      - `max` は {{cssxref("&lt;length-percentage&gt;")}} 値、 {{cssxref("&lt;flex&gt;")}} 値、または [`min-content`](#min-content), [`max-content`](#max-content), [`auto`](#auto) のキーワード値のいずれかで指定
+    - {{cssxref("minmax", "minmax()")}} 関数
+      - `min` は {{cssxref("&lt;length-percentage&gt;")}} 値または [`min-content`](#min-content), [`max-content`](#max-content), [`auto`](#auto) のキーワード値のいずれかで指定
+      - `max` は {{cssxref("&lt;length-percentage&gt;")}} 値で指定
 - {{cssxref("&lt;flex&gt;")}}
-  - : トラックのフレックス要素を明示している `fr` 単位の負ではない寸法。それぞれのフレックスサイズのトラックは、それらのフレックス要素に比例して残りの空間を配分します。
-- `max-content`
-  - : グリッドトラックにあるグリッドアイテムの最も大きい max-content を表します。
-- `min-content`
-  - : グリッドトラックにあるグリッドアイテムの最も大きい min-content を表します。
+  - : 単位 `fr` でトラックのフレックス係数を指定します。それぞれの `<flex>` サイズのトラックは、そのフレックス係数に比例して残りの空間を占めます。
+- {{cssxref("&lt;length&gt;")}}
+  - : 正の整数の長さです。
+- `<line-names>`
+  - : 0 個以上の空白区切りの {{cssxref("&lt;custom-ident&gt;")}} 値を角括弧で囲んだもの。例えば `[first header-start]`。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : 列グリッドトラックではグリッドコンテナーのインラインサイズ、行グリッドトラックではグリッドコンテナーのブロックサイズに対する、非負のパーセントを指定します。グリッドコンテナーのサイズがトラックのサイズに依存する場合、 `<percentage>` は `auto` として扱われなければなりません。ユーザーエージェントは、トラックの内在サイズの寄与をグリッドコンテナーのサイズに調整し、パーセント値を尊重する結果となる最小量だけトラックの最終サイズを大きくすることができます。
+- `<track-size>`
+  - : 以下の形式のいずれかです。
+    - {{cssxref("&lt;length-percentage&gt;")}} 値、 {{cssxref("&lt;flex&gt;")}} 値、または [`min-content`](#min-content), [`max-content`](#max-content), [`auto`](#auto) のキーワード値のいずれかで指定
+    - {{cssxref("minmax", "minmax()")}} 関数
+      - `min` は {{cssxref("&lt;length-percentage&gt;")}} 値、または [`min-content`](#min-content), [`max-content`](#max-content), [`auto`](#auto) のキーワード値のいずれかで指定
+      - `max` は {{cssxref("&lt;length-percentage&gt;")}} 値、 {{cssxref("&lt;flex&gt;")}} 値、または [`min-content`](#min-content), [`max-content`](#max-content), [`auto`](#auto) のキーワード値のいずれかで指定
+    - {{cssxref("fit-content_function", "fit-content()")}} 関数に {{cssxref("&lt;length-percentage&gt;")}} 値を渡したもの
 - `auto`
-  - : 最大値としては、 `max-content` と同じです。最小値としては、グリッドトラックを占めるグリッドアイテムの最大最小サイズ ({{cssxref("min-width")}}/{{cssxref("min-height")}} で指定されたもの) を表します。
+  - : 最大値としては、 `max-content` と同じです。最小値としては、グリッドトラックを占めるグリッドアイテムの最大最小サイズ（{{cssxref("min-width")}}/{{cssxref("min-height")}} で指定されたもの）を表します。
 - `auto-fill`
-  - : グリッドコンテナーが関連する軸に、定義されたまたは最大の幅を持っている場合、繰り返しの数は、グリッドコンテナーをオーバーフローさせない最大の正の数になります。各トラックは定義されているならば、最大トラック幅を調整する関数 (`grid-template-rows` または `grid-template-columns` を定義するために使用されるそれぞれ独立した値) として扱われます。それ以外の場合は、最小トラック幅を調整する関数として扱い、グリッドギャップを考慮に入れます。何回繰り返してもオーバーフローしてしまう場合は、繰り返しを 1 とする。そうでなければ、グリッドコンテナーが関連する軸に、定義された最小の寸法をもっている場合、繰り返しの数は最小の要件を満たす可能性がある最小の正の整数になります。その他の場合は、指定されたトラックリストは `1` 回のみ繰り返します。
+  - : グリッドコンテナーが関連する軸に、定義されたまたは最大の幅を持っている場合、繰り返しの数は、グリッドコンテナーをオーバーフローさせない最大の正の数になります。各トラックは定義されているならば、最大トラック幅を調整する関数（`grid-template-rows` または `grid-template-columns` を定義するために使用されるそれぞれ独立した値）として扱われます。それ以外の場合は、最小トラック幅を調整する関数として扱い、グリッドギャップを考慮に入れます。何回繰り返してもオーバーフローしてしまう場合は、繰り返しを 1 とする。そうでなければ、グリッドコンテナーが関連する軸に、定義された最小の寸法をもっている場合、繰り返しの数は最小の要件を満たす可能性がある最小の正の整数になります。その他の場合は、指定されたトラックリストは `1` 回のみ繰り返します。
 - `auto-fit`
 
-  - : `auto-fill` と同様に動作しますが、グリッドアイテムを配置した後、空の繰り返しトラックが折りたたまれる点が異なります。空のトラックとは、フロー内のグリッドアイテムが配置されていない、またはそれをまたいで配置されているものがないトラックのことです。 (これは、すべてのトラックが空の場合、すべてのトラックが折りたたまれる結果になる可能性があります。)
+  - : `auto-fill` と同様に動作しますが、グリッドアイテムを配置した後、空の繰り返しトラックが折りたたまれる点が異なります。空のトラックとは、フロー内のグリッドアイテムが配置されていない、またはそれをまたいで配置されているものがないトラックのことです。（これは、すべてのトラックが空の場合、すべてのトラックが折りたたまれる結果になる可能性があります。）
 
- 折り畳まれたトラックは、 `0px`　の固定トラックサイジング機能を1つ持っているものとして扱われ、その左右の溝も折り畳まれます。
+    折りたたまれたトラックは、`0px`の単一の固定されたトラックサイジング関数を持つものとして扱われ、その両側の溝は折りたたまれます。
 
- 自動反復トラックの数を見つけるために、ユーザーエージェントは、ゼロによる除算を避けるために、トラックの寸法をユーザーエージェントが指定した値 (例えば `1px`) に切り下げます。
+    自動反復トラックの数を探すため、ユーザーエージェントはトラックサイズをユーザーエージェントが指定する値（例えば、`1px`）で割り、ゼロによる除算を避けます。
+
+- `max-content`
+  - : グリッドトラックを占めるグリッドアイテムの最も大きな最大コンテンツ寄与を表します。
+- `min-content`
+  - : グリッドトラックを占めるグリッドアイテムの最も大きな最小コンテンツ寄与を表します。
 
 ## 例
 
@@ -73,29 +169,19 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 #### HTML
 
-```html
+```html live-sample___specifying_grid_columns_using_repeat
 <div id="container">
-  <div>
-    This item is 50 pixels wide.
-  </div>
-  <div>
-    Item with flexible width.
-  </div>
-  <div>
-    This item is 50 pixels wide.
-  </div>
-  <div>
-    Item with flexible width.
-  </div>
-  <div>
-    Inflexible item of 100 pixels width.
-  </div>
+  <div>このアイテムの幅は 50 ピクセルです。</div>
+  <div>幅が自由なアイテムです。</div>
+  <div>このアイテムの幅は 50 ピクセルです。</div>
+  <div>幅が自由なアイテムです。</div>
+  <div>幅 100 ピクセルの柔軟性のないアイテムです。</div>
 </div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___specifying_grid_columns_using_repeat
 #container {
   display: grid;
   grid-template-columns: repeat(2, 50px 1fr) 100px;
@@ -127,6 +213,12 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}
-- グリッドレイアウトガイド: [CSS グリッドでの線ベースの配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-- グリッドレイアウトガイド: [グリッドテンプレート領域 - グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#グリッド定義の一括指定)
+- {{cssxref("grid-template")}}
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-areas")}}
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid-auto-flow")}}
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [グリッドテンプレート領域 - グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#グリッド定義の一括指定)

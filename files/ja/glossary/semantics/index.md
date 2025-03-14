@@ -3,6 +3,8 @@ title: Semantics (セマンティクス)
 slug: Glossary/Semantics
 ---
 
+{{GlossarySidebar}}
+
 プログラミングでは、**セマンティクス**とは、コードの断片の*意味*を指します。たとえば、「JavaScript でその行を実行すると、どのような効果があるのか？」、「その HTML 要素には、どのような目的や役割があるのか？」 (「どのように見えるのか？」ではなく)。
 
 ## JavaScript でのセマンティクス
@@ -26,7 +28,9 @@ CSS において、さまざまな種類の果物を表すために `li` 要素�
 一方、どの要素も最上位の見出しのように見せることができます。次ののことを想像してみてください。
 
 ```html
-<span style="font-size: 32px; margin: 21px 0;">これは最上位の見出しですか？</span>
+<span style="font-size: 32px; margin: 21px 0;"
+  >これは最上位の見出しですか？</span
+>
 ```
 
 これは最上位の見出しのように表示されますが、セマンティックな意義はありませんので、上記のように特別なメリットはありません。したがって、 HTML 要素を適材適所に使用することをお勧めします。
@@ -63,13 +67,13 @@ HTML は既定の表示スタイルに基づくのではなく、入力される
 
 ## より詳しく知る
 
-- MDN の [HTML 要素リファレンス](/ja/docs/Web/HTML/Element#Inline_text_semantics)
-- MDN の [HTML のセクションとアウトラインの使用](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Problems_solved_by_HTML5)
+- MDN の [HTML 要素リファレンス](/ja/docs/Web/HTML/Element#inline_text_semantics)
+- MDN の [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Element/Heading_Elements#problems_solved_by_html5)
 - Wikipedia 上の [コンピュータ科学におけるセマンティクスの意味](https://ja.wikipedia.org/wiki/意味論#コンピュータ科学)
 
 <!---->
 
-- [MDN 用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("SEO")}}
 

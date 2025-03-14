@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocales
 
 **`Intl.ListFormat.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールで代替する必要なく数値の書式で対応されているものを含む配列を返します。
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-supportedlocalesof.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.supportedLocalesOf", "shorter")}}
+
+```js interactive-example
+const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
+const options1 = { localeMatcher: "lookup" };
+
+console.log(Intl.NumberFormat.supportedLocalesOf(locales1, options1));
+// Expected output: Array ["id-u-co-pinyin", "de-ID"]
+// (Note: the exact output may be browser-dependent)
+```
 
 ## 構文
 
@@ -41,9 +50,9 @@ Intl.NumberFormat.supportedLocalesOf(locales[, options])
 数値の書式でインドネシア語とドイツ語に対応しており、バリ語に対応していないランタイムを想定すると、 `supportedLocalesOf` はインドネシア語とドイツ語の言語タグを変更せずに返しますが、 `pinyin` の照合は数値の書式には関係なく、インドネシア語でも使用されません。ここでの `lookup` アルゴリズムの仕様に注意してください — バリ語話者のほとんどはインドネシア語も理解しているので、 `best fit` のマッチャーはインドネシア語がバリ語に適切に一致すると判断し、バリ語の言語タグも返すかもしれません。
 
 ```js
-var locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-var options = { localeMatcher: 'lookup' };
-console.log(Intl.NumberFormat.supportedLocalesOf(locales, options).join(', '));
+var locales = ["ban", "id-u-co-pinyin", "de-ID"];
+var options = { localeMatcher: "lookup" };
+console.log(Intl.NumberFormat.supportedLocalesOf(locales, options).join(", "));
 // → "id-u-co-pinyin, de-ID"
 ```
 
@@ -53,7 +62,7 @@ console.log(Intl.NumberFormat.supportedLocalesOf(locales, options).join(', '));
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Intl.NumberFormat.supportedLocalesOf")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -1,39 +1,47 @@
 ---
 title: TypedArray.prototype.length
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/length
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/length
+l10n:
+  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
+
 {{JSRef}}
 
-**`length`** 접근자(accessor) 속성(property)은 형식화 배열의 (요소) 길이를 나타냅니다.
+{{jsxref("TypedArray")}} 인스턴스의 **`length`** 접근자 속성은 이 형식화 배열의 요소의 수를 반환합니다.
+
+{{InteractiveExample("JavaScript Demo: TypedArray.length", "shorter")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+const uint8 = new Uint8Array(buffer, 2);
+
+console.log(uint8.length);
+// Expected output: 6
+```
 
 ## 설명
 
-`length` 속성은 set 접근자 함수가 `undefined`인 접근자 속성입니다, 이 속성을 읽을 수만 있음을 뜻하는. 값은 *TypedArray*가 만들어질 때 수립되어 변경될 수 없습니다. *TypedArray*가 `byteOffset` 또는 `length`를 지정하지 않은 경우, 참조되는 {{jsxref("ArrayBuffer")}}의 길이가 반환됩니다. *TypedArray*는 [TypedArray 객체 유형](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_객체) 중 하나입니다.
+`length` 속성은 설정된 접근자 함수가 `undefined`인 접근자 속성으로, 이 속성을 읽을 수만 있습니다. 이 값은 TypedArray를 구성할 때 설정되며 변경할 수 없습니다. TypeArray에서 `byteOffset` 또는 `length`를 지정하지 않으면 참조된 {{jsxref("ArrayBuffer")}}의 길이가 반환됩니다. TypeArray는 [TypeArray 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypeArray#typedarray_객체) 중 하나입니다.
 
 ## 예제
 
-### `length` 속성 사용
+### `length` 속성 사용하기
 
 ```js
-var buffer = new ArrayBuffer(8);
+const buffer = new ArrayBuffer(8);
 
-var uint8 = new Uint8Array(buffer);
+let uint8 = new Uint8Array(buffer);
 uint8.length; // 8 (버퍼의 길이와 일치)
 
-var uint8 = new Uint8Array(buffer, 1, 5);
+uint8 = new Uint8Array(buffer, 1, 5);
 uint8.length; // 5 (Uint8Array를 만들 때 지정된 대로)
 
-var uint8 = new Uint8Array(buffer, 2);
+uint8 = new Uint8Array(buffer, 2);
 uint8.length; // 6 (만든 Uint8Array의 오프셋으로 인해)
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
@@ -43,5 +51,5 @@ uint8.length; // 6 (만든 Uint8Array의 오프셋으로 인해)
 
 ## 같이 보기
 
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 안내서
 - {{jsxref("TypedArray")}}

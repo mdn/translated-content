@@ -1,16 +1,13 @@
 ---
 title: FileReader()
 slug: Web/API/FileReader/FileReader
-tags:
-  - API
-  - FileReader
-  - Конструктор
-  - Ссылка
-translation_of: Web/API/FileReader/FileReader
 ---
+
+{{APIRef("File API")}}
+
 Конструктор **`FileReader()`** создаёт новый FileReader.
 
-Дополнительные сведения об использовании `FileReader`, смотрите в разделе [Использование файлов из веб-приложений](/ru/docs/Web/API/File/Using_files_from_web_applications).
+Дополнительные сведения об использовании `FileReader`, смотрите в разделе [Использование файлов из веб-приложений](/ru/docs/Web/API/File_API/Using_files_from_web_applications).
 
 ## Синтаксис
 
@@ -29,7 +26,7 @@ var reader = new FileReader();
 ```js
 function printFile(file) {
   var reader = new FileReader();
-  reader.onload = function(evt) {
+  reader.onload = function (evt) {
     console.log(evt.target.result);
   };
   reader.readAsText(file);
@@ -40,6 +37,6 @@ function printFile(file) {
 
 {{Specifications}}
 
-## Смотреть также
+## Смотрите также
 
-- [Использование файлов из веб-приложений](/ru/docs/Web/API/File/Using_files_from_web_applications)
+- [Использование файлов из веб-приложений](/ru/docs/Web/API/File_API/Using_files_from_web_applications)

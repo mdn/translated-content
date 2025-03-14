@@ -1,19 +1,9 @@
 ---
 title: update
 slug: Mozilla/Add-ons/WebExtensions/API/theme/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Refernce
-  - Theme
-  - Update
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/theme/update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Met à jour le thème du navigateur en fonction du contenu de l'objet {{WebExtAPIRef("theme.Theme", "Theme")}} donné.
 
@@ -21,9 +11,9 @@ Met à jour le thème du navigateur en fonction du contenu de l'objet {{WebExtAP
 
 ```js
 browser.theme.update(
-  windowId,    // integer
-  theme        // object
-)
+  windowId, // integer
+  theme, // object
+);
 ```
 
 ### Paramètres
@@ -36,9 +26,9 @@ browser.theme.update(
 - `theme`
   - : `object`. Un objet {{WebExtAPIRef("theme.Theme", "Theme")}} spécifiant des valeurs pour les éléments de l'interface utilisateur que vous voulez modifier
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.theme.update", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -46,13 +36,13 @@ Définit le thème du navigateur pour utiliser un graphique solaire avec une cou
 
 ```js
 const suntheme = {
- images: {
-   headerURL: 'sun.jpg',
- },
- colors: {
-   accentcolor: '#CF723F',
-   textcolor: '#111',
- }
+  images: {
+    headerURL: "sun.jpg",
+  },
+  colors: {
+    accentcolor: "#CF723F",
+    textcolor: "#111",
+  },
 };
 
 browser.theme.update(suntheme);
@@ -62,19 +52,19 @@ Définissez le thème uniquement pour la fenêtre actuellement ciblée:
 
 ```js
 const day = {
-    images: {
-      headerURL: 'sun.jpg',
-    },
-    colors: {
-      accentcolor: '#CF723F',
-      textcolor: '#111',
-    }
+  images: {
+    headerURL: "sun.jpg",
+  },
+  colors: {
+    accentcolor: "#CF723F",
+    textcolor: "#111",
+  },
 };
 
 browser.menus.create({
   id: "set-theme",
   title: "set theme",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 async function updateThemeForCurrentWindow() {

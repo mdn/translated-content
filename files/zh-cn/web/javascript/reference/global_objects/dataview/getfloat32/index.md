@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat32
 
 **`getFloat32()`**方法从相对于{{jsxref("DataView")}} 的起始位置偏移 n 个字节处获取一个 32-bit 浮点数 (单精度浮点数，4 个字节).
 
-{{EmbedInteractiveExample("pages/js/dataview-getfloat32.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.getFloat32()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setFloat32(1, Math.PI);
+
+console.log(view.getFloat32(1));
+// Expected output: 3.1415927410125732
+```
 
 ## 语法
 
@@ -35,7 +46,7 @@ dataview.getFloat32(byteOffset [, littleEndian])
 
 没有对齐约束; 多字节值可以从任何偏移处获取。
 
-## 例子
+## 示例
 
 ```js
 var buffer = new ArrayBuffer(8);
@@ -51,7 +62,7 @@ dataview.getFloat32(1); // 0
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}

@@ -1,31 +1,23 @@
 ---
 title: Courbe de Bézier
 slug: Glossary/Bezier_curve
-tags:
-  - Courbe de Bézier
-  - Glossaire
-  - Reference
-  - graphique
-translation_of: Glossary/Bézier_curve
-original_slug: Glossary/Bézier_curve
+l10n:
+  sourceCommit: edd12a268c7b2cbd1a5be394d9e89e9d8f285ad5
 ---
 
-Une **courbe de Bézier** est une courbe décrite mathématiquement utilisée en infographie et en animation. Dans {{Glossary("vector image", "vector images")}}, elles sont utilisées pour modéliser des courbes lisses qui peuvent être redimensionnées indéfiniment.
+{{GlossarySidebar}}
 
-La courbe est définie par un ensemble de points de contrôle avec un minimum de deux. Les graphiques et animations Web utilisent Cubic Béziers, qui sont des courbes avec quatre points de contrôle P<sub>0</sub>, P<sub>1</sub>, P<sub>2</sub>, et P<sub>3</sub>.
+Une **courbe de Bézier** est une courbe décrite mathématiquement utilisée en infographie et en animation. Pour les images vectorielles, elles sont utilisées afin de modéliser des courbes lisses qui peuvent être redimensionnées indéfiniment.
 
-Pour tracer la courbe, deux lignes imaginaires sont tracées l'une de P<sub>0</sub> à P<sub>1</sub> et l'autre de P<sub>1</sub> à P<sub>2</sub>. Les extrémités des lignes sont ensuite régulièrement déplacées vers le point suivant. Une troisième ligne imaginaire est dessinée avec son point de départ se déplaçant régulièrement sur la première ligne d'assistance et le point final sur la deuxième ligne d'assistance. Sur cette ligne imaginaire, un point est dessiné à partir de son point de départ en se déplaçant régulièrement vers son point final. La courbe décrite par ce point est la courbe de Bézier. Voici une illustration animée démontrant la création de la courbe :
+La courbe est définie par un ensemble de points de contrôle avec un minimum de deux. Les graphiques et animations web utilisent généralement des courbes de Bézier cubiques, qui possèdent quatre points de contrôle P<sub>0</sub>, P<sub>1</sub>, P<sub>2</sub>, et P<sub>3</sub>.
 
-![Drawing a Bézier curve](bézier_3_big.gif)
+Pour tracer une courbe de Bézier quadratique, deux lignes imaginaires sont tracées l'une de P<sub>0</sub> à P<sub>1</sub> et l'autre de P<sub>1</sub> à P<sub>2</sub>. Une troisième ligne imaginaire est dessinée avec son point de départ se déplaçant régulièrement sur la première ligne et le point final sur la deuxième ligne. En suivant la courbe formée par le déplacement d'un point, du début à la fin, sur cette troisième ligne imaginaire, on obtient la courbe de Bézier. Voici une illustration animée démontrant la création d'une courbe de Bézier quadratique&nbsp;:
 
-## Apprendre plus
+![Tracé d'une courbe de Bézier quadratique](bézier_2_big.gif)
 
-### Culture générale
+## Voir aussi
 
-- [courbe de Bézier sur Wikipédia](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier)
-
-### Voir aussi
-
-- [Fonctions de synchronisation Cubic Bézier en CSS](</fr/docs/Web/CSS/timing-function#The_cubic-bezier()_class_of_timing_functions>)
-- {{SVGAttr("keySplines")}} Attribut SVG
-- [Générateur Cubic Bézier](/fr/docs/Web/CSS/Tools/Cubic_Bezier_Generator)
+- [Courbe de Bézier sur Wikipédia](https://fr.wikipedia.org/wiki/Courbe_de_Bézier)
+- [La fonction d'évolution `cubic-bezier()` en CSS](/fr/docs/Web/CSS/easing-function#exemples_avec_cubic-bezier)
+- [L'attribut SVG `keySplines`](/fr/docs/Web/SVG/Attribute/keySplines)
+- [Un site de visualisation et de génération de courbe cubique de Bézier (en anglais)](https://cubic-bezier.com/)

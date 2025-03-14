@@ -1,28 +1,26 @@
 ---
 title: DataTransfer
 slug: Web/API/DataTransfer
-tags:
-  - API
-translation_of: Web/API/DataTransfer
 ---
+
 {{APIRef("HTML DOM")}}
 
-{{ gecko_minversion_header("1.9") }} Объект **DataTransfer** используется для хранения данных, перетаскиваемых мышью во время операции **drag and drop**. Он может хранить от одного до нескольких элементов данных, вне зависимости от их типа. Для получения доп. информации об операции drag and drop, см. [Drag and Drop](/En/DragDrop/Drag_and_Drop)
+Объект **DataTransfer** используется для хранения данных, перетаскиваемых мышью во время операции **drag and drop**. Он может хранить от одного до нескольких элементов данных, вне зависимости от их типа. Для получения доп. информации об операции drag and drop, см. [Drag and Drop](/ru/docs/Web/API/HTML_Drag_and_Drop_API)
 
 Объект может быть получен из свойства **dataTransfer** всех событий перетаскивания. Он не может быть отдельно создан.
 
 ## Список свойств
 
-| Свойство                                                                                         | Тип                                                                |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
-| [`dropEffect`](#dropEffect.28.29)                                                                | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String) |
-| [`effectAllowed`](#effectAllowed.28.29)                                                          | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String) |
-| [`files`](#files.28.29) {{ gecko_minversion_inline("1.9.2") }}                                   | {{ domxref("FileList") }}                                          |
-| [`mozCursor`](#mozCursor) {{ non-standard_inline() }} {{ gecko_minversion_inline("1.9.1") }}     | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String) |
-| [`mozItemCount`](#mozItemCount.28.29) {{ non-standard_inline() }}                                | `unsigned long`                                                    |
-| [`mozSourceNode`](#mozSourceNode) {{ non-standard_inline() }} {{ gecko_minversion_inline("2") }} | {{ domxref("Node") }}                                              |
-| [`mozUserCancelled`](#mozUserCancelled)                                                          | [`Boolean`](/en/JavaScript/Reference/Global_Objects/Boolean)       |
-| [`types`](#types.28.29)                                                                          | [`DOMStringList`](/en-US/docs/Web/API/DOMStringList)               |
+| Свойство                                                          | Тип                                                                   |
+| ----------------------------------------------------------------- | --------------------------------------------------------------------- |
+| [`dropEffect`](#dropeffect.28.29)                                 | [`String`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String)   |
+| [`effectAllowed`](#effectallowed.28.29)                           | [`String`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String)   |
+| [`files`](#files.28.29)                                           | {{ domxref("FileList") }}                                             |
+| [`mozCursor`](#mozcursor) {{ non-standard_inline() }}             | [`String`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String)   |
+| [`mozItemCount`](#mozitemcount.28.29) {{ non-standard_inline() }} | `unsigned long`                                                       |
+| [`mozSourceNode`](#mozsourcenode) {{ non-standard_inline() }}     | {{ domxref("Node") }}                                                 |
+| [`mozUserCancelled`](#mozusercancelled)                           | [`Boolean`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean) |
+| [`types`](#types.28.29)                                           | [`DOMStringList`](/ru/docs/Web/API/DOMStringList)                     |
 
 ## Список методов
 
@@ -78,15 +76,13 @@ Assigning any other value has no effect and retains the old value.
 
 ### files
 
-{{ gecko_minversion_header("1.9.2") }}
-
 Содержит список локальных файлов доступных на dataTransfer. Если операция перемещения не включала в себя перемещение файлов, то данное свойство будет пустым списком. Неверное обращение по индексу к объекту {{ domxref("FileList") }} определённым данным свойством вернёт null.
 
 #### Пример
 
 Данный пример демонстрирует перетаскивание файлов в окно браузера:
 
-<http://jsfiddle.net/9C2EF/>
+<https://jsfiddle.net/9C2EF/>
 
 ### types
 
@@ -96,7 +92,8 @@ Assigning any other value has no effect and retains the old value.
 
 The drag cursor's state. This is primarily used to control the cursor during tab drags.
 
-> **Примечание:** This method is currently only implemented on Windows.
+> [!NOTE]
+> This method is currently only implemented on Windows.
 
 #### Possible values
 
@@ -105,27 +102,29 @@ The drag cursor's state. This is primarily used to control the cursor during tab
 - `default`
   - : Uses the default Gecko behavior, which is to set the cursor to an arrow during the drag operation.
 
-> **Примечание:** If you specify any value other than "default", "auto" is assumed.
+> [!NOTE]
+> If you specify any value other than "default", "auto" is assumed.
 
 ### mozItemCount
 
 The number of items being dragged.
 
-> **Примечание:** This property is Gecko-specific.
+> [!NOTE]
+> This property is Gecko-specific.
 
 ### mozSourceNode
 
-{{ gecko_minversion_header("2") }}
-
 The {{ domxref("Node") }} over which the mouse cursor was located when the button was pressed to initiate the drag operation. This value is `null` for external drags or if the caller can't access the node.
 
-> **Примечание:** This property is Gecko-specific.
+> [!NOTE]
+> This property is Gecko-specific.
 
 ### mozUserCancelled
 
 This property applies only to the `dragend` event, and is `true` if the user canceled the drag operation by pressing escape. It will be `false` in all other cases, including if the drag failed for any other reason, for instance due to a drop over an invalid location. This property is not currently implemented on Linux.
 
-> **Примечание:** This property is Gecko-specific.
+> [!NOTE]
+> This property is Gecko-specific.
 
 ## Методы
 
@@ -228,7 +227,8 @@ If the last format for the item is removed, the entire item is removed, reducing
 
 If the `format` list is empty, then the data associated with all formats is removed. If the format is not found, then this method has no effect.
 
-> **Примечание:** This method is Gecko-specific.
+> [!NOTE]
+> This method is Gecko-specific.
 
 ```
  void mozClearDataAt(
@@ -248,7 +248,8 @@ If the `format` list is empty, then the data associated with all formats is remo
 
 Retrieves the data associated with the given format for an item at the specified index, or null if it does not exist. The index should be in the range from zero to the number of items minus one.
 
-> **Примечание:** This method is Gecko-specific.
+> [!NOTE]
+> This method is Gecko-specific.
 
 ```
  nsIVariant mozGetDataAt(
@@ -272,7 +273,8 @@ Data should be added in order of preference, with the most specific format added
 
 The data should be either a string, a primitive boolean or number type (which will be converted into a string) or an `nsISupports`.
 
-> **Примечание:** This method is Gecko-specific.
+> [!NOTE]
+> This method is Gecko-specific.
 
 ```
  void mozSetDataAt(
@@ -295,7 +297,8 @@ The data should be either a string, a primitive boolean or number type (which wi
 
 Holds a list of the format types of the data that is stored for an item at the specified index. If the index is not in the range from 0 to the number of items minus one, an empty string list is returned.
 
-> **Примечание:** This method is Gecko-specific.
+> [!NOTE]
+> This method is Gecko-specific.
 
 ```
  nsIVariant mozTypesAt(
@@ -308,6 +311,6 @@ Holds a list of the format types of the data that is stored for an item at the s
 - `index`
   - : The index of the data for which to retrieve the types.
 
-## See also
+## Смотрите также
 
-[Drag and Drop](/En/DragDrop/Drag_and_Drop)
+[Drag and Drop](/ru/docs/Web/API/HTML_Drag_and_Drop_API)

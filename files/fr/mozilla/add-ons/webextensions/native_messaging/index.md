@@ -1,9 +1,6 @@
 ---
 title: Native messaging
 slug: Mozilla/Add-ons/WebExtensions/Native_messaging
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Native_messaging
 ---
 
 {{AddonSidebar}}
@@ -21,7 +18,7 @@ Par la suite, l'extension pourra échanger des messages en JSON avec l'applicati
 Le support de native messaging dans les extensions est généralement compatible avec Chrome, avec deux grandes différences :
 
 - La liste `allowed_extensions` du manifest de l'application est un tableau d'ID d'applications, tandis que Chrome liste `allowed_origins`, sous la forme d'un tableau d'URL "chrome-extension".
-- Le manifeste de l'application est stocké dans un emplacement différent [comparé à Chrome](https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location).
+- Le manifeste de l'application est stocké dans un emplacement différent [comparé à Chrome](https://developer.chrome.com/docs/extensions/develop/concepts/native-messaging#native-messaging-host-location).
 
 Il y a un exemple complet (en anglais) dans le répertoire « [native‐messaging](https://github.com/mdn/webextensions-examples/tree/master/native-messaging) » du dépôt «&nbsp;webextensions‐examples&nbsp;» sur GitHub. La plus grande partie du code de cet article est repris de cet exemple.
 
@@ -38,7 +35,6 @@ Voici un exemple de fichier «&nbsp;manifest.json&nbsp;» :
 
 ```json
 {
-
   "description": "Native messaging example extension",
   "manifest_version": 2,
   "name": "Native messaging example",
@@ -63,7 +59,6 @@ Voici un exemple de fichier «&nbsp;manifest.json&nbsp;» :
   },
 
   "permissions": ["nativeMessaging"]
-
 }
 ```
 
@@ -83,13 +78,14 @@ Par exemple, voici un manifeste pour l'application native "ping_pong" :
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
   "type": "stdio",
-  "allowed_extensions": [ "ping_pong@example.org" ]
+  "allowed_extensions": ["ping_pong@example.org"]
 }
 ```
 
 Ceci autorise l'application dont l'ID est « ping_pong\@example.org » à se connecter, en passant le nom « ping_pong » comme paramètre à la fonction de l'API {{WebExtAPIRef("runtime")}} concernée. L'application, elle‐même se trouve dans le fichier « /path/to/native‐messaging/app/ping_pong.py ».
 
-> **Note :** Pour Windows dans l'exemple ci‐dessus, l'application native est un script Python. Il peut être compliqué d'amener Windows à faire fonctionner correctement des scripts Python, une méthode alternative est de fournir un fichier .bat, et de l'indiquer dans le manifest :
+> [!NOTE]
+> Pour Windows dans l'exemple ci‐dessus, l'application native est un script Python. Il peut être compliqué d'amener Windows à faire fonctionner correctement des scripts Python, une méthode alternative est de fournir un fichier .bat, et de l'indiquer dans le manifest :
 >
 > ```json
 > {
@@ -97,7 +93,7 @@ Ceci autorise l'application dont l'ID est « ping_pong\@example.org » à se con
 >   "description": "Example host for native messaging",
 >   "path": "c:\\path\\to\\native-messaging\\app\\ping_pong_win.bat",
 >   "type": "stdio",
->   "allowed_extensions": [ "ping_pong@example.org" ]
+>   "allowed_extensions": ["ping_pong@example.org"]
 > }
 > ```
 >
@@ -128,7 +124,8 @@ L'application native passe deux arguments lorsqu'elle démarre :
 - le chemin complet du manifest de l'application
 - (nouveau dans Firefox 55) l'ID (tel qu'indiqué dans la clé du manifest.json de [browser_specific_settings](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)) of the add-on that started it.
 
-> **Note :** Chrome gère différemment les arguments passés :
+> [!NOTE]
+> Chrome gère différemment les arguments passés :
 >
 > - Sous Linux et Mac, Chrome passe un argument, l'origine de l'extension qui l'a lancé sous la forme : `chrome-extension://[extensionID]`. Ceci permet à l'application d'identifier l'extension.
 > - Sous Windows, Chrome passe deux arguments : le premier est l'origine de l'extension, et le second est une poignée à la fenêtre native Chrome qui a lancé l'application.
@@ -137,7 +134,7 @@ L'aplication continue de fonctionner jusqu'à ce que l'extension invoque `Port.d
 
 Pour envoyer des messages en utilisant `Port`, utilisez sa fonction `postMessage()`, en passant le message JSON à envoyer. Pour écouter les messages en utilisant `Port`, ajouter un écouteur (_listener_) en utilisant sa fonction `onMessage.addListener()`.
 
-Voici un exemple de script « _background_ » qui établit une connection avec l'application «&nbsp;ping_pong », qui écoute à l'attente de messages de celle‐ci et qui lui envoie un message « ping&nbsp;» à chaque fois que l'utilisateur clique sur l'action du navigateur (_browser action_) :
+Voici un exemple de script « _background_ » qui établit une connection avec l'application « `ping_pong` », qui écoute à l'attente de messages de celle‐ci et qui lui envoie un message « ping » à chaque fois que l'utilisateur clique sur l'action du navigateur _(browser action)_ :
 
 ```js
 /*
@@ -192,9 +189,7 @@ On a click on the browser action, send the app a message.
 */
 browser.browserAction.onClicked.addListener(() => {
   console.log("Sending:  ping");
-  var sending = browser.runtime.sendNativeMessage(
-    "ping_pong",
-    "ping");
+  var sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
   sending.then(onResponse, onError);
 });
 ```

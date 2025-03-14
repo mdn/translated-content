@@ -24,7 +24,9 @@ slug: Web/CSS/@media/scripting
 
 ```html
 <p class="script-none">スクリプトは利用できません。 :-(</p>
-<p class="script-initial-only">スクリプトはページを読み込んでいる間だけ有効です。残念。</p>
+<p class="script-initial-only">
+  スクリプトはページを読み込んでいる間だけ有効です。残念。
+</p>
 <p class="script-enabled">スクリプトは有効です。 :-)</p>
 ```
 
@@ -37,7 +39,7 @@ p {
 
 @media (scripting: none) {
   .script-none {
-     color: red;
+    color: red;
   }
 }
 
@@ -68,5 +70,5 @@ p {
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/ja/docs/Web/CSS/@media)

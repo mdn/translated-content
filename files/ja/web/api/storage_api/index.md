@@ -47,7 +47,8 @@ slug: Web/API/Storage_API
 
 サイトやアプリに **`"persistent-storage"`** 機能のパーミッションがある場合は、{{domxref("StorageManager.persist()")}} メソッドを使用して、そのボックスを永続的にすることを要求できます。また利用特性や他の測定基準により、ユーザーエージェントがサイトのストレージユニットを永続的にすることを決定することも可能です。`"persistent-storage"` 機能のパーミッション関連のフラグ、アルゴリズム、およびタイプはすべてパーミッションの標準デフォルトに設定されています。ただし、**パーミッションの状態**（permission state）はオリジン全体で同じでなければならず、パーミッションの状態が `"granted"` （付与）されていない場合（何らかの理由で永続的ストレージ機能へのアクセスが拒否された場合）、そのオリジンのサイトストレージユニットのボックスモードは常に `"best-effort"` になります。
 
-> **メモ:** パーミッションの取得と管理の詳細については、[Permissions API の使用](/ja/docs/Web/API/Permissions_API/Using_the_Permissions_API)を参照してください。
+> [!NOTE]
+> パーミッションの取得と管理の詳細については、[Permissions API の使用](/ja/docs/Web/API/Permissions_API/Using_the_Permissions_API)を参照してください。
 
 サイトストレージユニットを消去するとき、オリジンのボックスは単一の実体として扱われます。ユーザーエージェントがそれを消去する必要があり、ユーザーが承認した場合、個々の API からデータのみを消去する手段を提供するのではなく、データストア全体を消去します。
 
@@ -66,13 +67,13 @@ slug: Web/API/Storage_API
 特定のオリジンのクォータと使用量の推定値を決定するには、{{domxref("StorageManager.estimate", "navigator.storage.estimate()")}} メソッドを使用します。このメソッドは、解決すると、これらの数値を含む {{domxref("StorageEstimate")}} を受け取るという Promise を返します。例えば次のようにです。
 
 ```js
-navigator.storage.estimate().then(estimate => {
+navigator.storage.estimate().then((estimate) => {
   // estimate.quota は見積もりクォータです
   // estimate.usage は見積もり使用バイト数です
 });
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
@@ -80,7 +81,7 @@ navigator.storage.estimate().then(estimate => {
 
 ### `StorageManager`
 
-{{Compat("api.StorageManager")}}
+{{Compat}}
 
 ## 関連情報
 

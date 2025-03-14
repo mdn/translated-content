@@ -1,25 +1,31 @@
 ---
 title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
-tags:
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/do...while
-original_slug: Web/JavaScript/Reference/Instructions/do...while
 ---
 
 {{jsSidebar("Statements")}}
 
 L'instruction **`do...while`** crée une boucle qui exécute une instruction jusqu'à ce qu'une condition de test ne soit plus vérifiée. La condition est testée après que l'instruction soit exécutée, le bloc d'instructions défini dans la boucle est donc exécuté au moins une fois.
 
-{{EmbedInteractiveExample("pages/js/statement-dowhile.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Do...While")}}
+
+```js interactive-example
+let result = "";
+let i = 0;
+
+do {
+  i = i + 1;
+  result = result + i;
+} while (i < 5);
+
+console.log(result);
+// Expected output: "12345"
+```
 
 ## Syntaxe
 
 ```js
-do
-  instruction
+do instruction;
 while (condition);
 ```
 
@@ -37,8 +43,8 @@ Dans l'exemple suivant, la boucle `do...while` est parcourue au moins une fois e
 ```js
 var i = 0;
 do {
-   i += 1;
-   console.log(i);
+  i += 1;
+  console.log(i);
 } while (i < 5);
 ```
 

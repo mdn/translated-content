@@ -20,7 +20,7 @@ var element = document.createElement(tagName[, options]);
 - `tagName`
   - : 一個指定類型給所創建的元素的字串。{{domxref("Node.nodeName", "nodeName")}} 創建的元素由 `tagName` 的值初始，不要使用吻合名稱（例如 "html:a"）。當該方法在 HTML 文件中被調用時，`createElement()` 會先將 `tagName` 轉化為小寫後再創建元素。在 Firefox、Opera 和 Chrome，`createElement(null)` 與 `createElement("null")` 作用相同。
 - `options`{{optional_inline}}
-  - : 選擇性 `ElementCreationOptions` 物件包含一個屬性 `is`，它的值是先前使用`customElements.define()` 所定義的自定義元素的標籤名稱。為了與以前的 [自定義元素規範](https://www.w3.org/TR/custom-elements/) 相容，一些瀏覽器將允許你在此傳遞一個字串而非物件，其字串的值就是自定義元件的標籤名稱。了解更多訊息以及如何使用此參數，可以參閱 [擴展原生 HTML 元素](https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml)。新元素將被賦予一個 `is` 屬性，其值就是自定義元素的標籤名稱。自定義元素算是實驗中的功能，因此目前只作用於部分瀏覽器中。
+  - : 選擇性 `ElementCreationOptions` 物件包含一個屬性 `is`，它的值是先前使用`customElements.define()` 所定義的自定義元素的標籤名稱。為了與以前的 [自定義元素規範](https://www.w3.org/TR/custom-elements/) 相容，一些瀏覽器將允許你在此傳遞一個字串而非物件，其字串的值就是自定義元件的標籤名稱。了解更多訊息以及如何使用此參數，可以參閱[擴展原生 HTML 元素](/zh-TW/docs/Web/API/Web_components#extendhtml)。新元素將被賦予一個 `is` 屬性，其值就是自定義元素的標籤名稱。自定義元素算是實驗中的功能，因此目前只作用於部分瀏覽器中。
 
 ### 回傳值
 
@@ -33,14 +33,14 @@ var element = document.createElement(tagName[, options]);
 ### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>||Working with elements||</title>
-</head>
-<body>
-  <div id="div1">The text above has been created dynamically.</div>
-</body>
+  <head>
+    <title>||Working with elements||</title>
+  </head>
+  <body>
+    <div id="div1">The text above has been created dynamically.</div>
+  </body>
 </html>
 ```
 
@@ -49,7 +49,7 @@ var element = document.createElement(tagName[, options]);
 ```js
 document.body.onload = addElement;
 
-function addElement () {
+function addElement() {
   // create a new div element
   // and give it some content
   var newDiv = document.createElement("div");

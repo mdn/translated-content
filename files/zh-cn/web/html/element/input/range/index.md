@@ -9,7 +9,41 @@ slug: Web/HTML/Element/input/range
 
 由于这种小部件不精确，因此除非控件的确切值不重要，否则通常不应使用它。
 
-{{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;range&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Audio settings:</p>
+
+<div>
+  <input type="range" id="volume" name="volume" min="0" max="11" />
+  <label for="volume">Volume</label>
+</div>
+
+<div>
+  <input
+    type="range"
+    id="cowbell"
+    name="cowbell"
+    min="0"
+    max="100"
+    value="90"
+    step="10" />
+  <label for="cowbell">Cowbell</label>
+</div>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 如果用户的浏览器不支持 `range` 类型，它将回退并将其视为 `{{HTMLElement('input/text', 'text')}}` 输入。
 
@@ -21,11 +55,11 @@ slug: Web/HTML/Element/input/range
   </tr>
   <tr>
    <td><strong>事件</strong></td>
-   <td>{{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("HTMLElement/input_event", "input")}}</td>
+   <td>{{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("Element/input_event", "input")}}</td>
   </tr>
   <tr>
    <td><strong>支持的常用属性</strong></td>
-   <td>{{htmlattrxref("autocomplete", "input")}}、{{htmlattrxref("list", "input")}}、{{htmlattrxref("max", "input")}}、{{htmlattrxref("min", "input")}} 和 {{htmlattrxref("step", "input")}}</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#max"><code>max</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#min"><code>min</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/input#step"><code>step</code></a></td>
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>
@@ -46,14 +80,14 @@ slug: Web/HTML/Element/input/range
 
 没有可用的模式验证。但是，执行以下形式的自动验证：
 
-- 如果将 {{htmlattrxref("value", "input")}} 设置为无法转换为有效浮点数的值，则验证将失败，因为输入框的值是错误的。
-- 该值不得小于 {{htmlattrxref("min", "input")}}，默认值为 0。
-- 该值将不大于 {{htmlattrxref("max", "input")}}，默认值为 100。
-- 该值将是 {{htmlattrxref("step", "input")}} 的整倍数，默认值为 1。
+- 如果将 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 设置为无法转换为有效浮点数的值，则验证将失败，因为输入框的值是错误的。
+- 该值不得小于 [`min`](/zh-CN/docs/Web/HTML/Element/input#min)，默认值为 0。
+- 该值将不大于 [`max`](/zh-CN/docs/Web/HTML/Element/input#max)，默认值为 100。
+- 该值将是 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) 的整倍数，默认值为 1。
 
 ### 值
 
-{{htmlattrxref("value", "input")}} 属性包含所选数字的字符串表示形式。该值绝不能为空字符串（`""`）。默认值介于指定的最小值和最大值之间，除非最大值实际上小于最小值，在这种情况下，默认值将设置 `min` 属性的值。确定默认值的算法是：
+[`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性包含所选数字的字符串表示形式。该值绝不能为空字符串（`""`）。默认值介于指定的最小值和最大值之间，除非最大值实际上小于最小值，在这种情况下，默认值将设置 `min` 属性的值。确定默认值的算法是：
 
 ```js
 defaultValue =
@@ -72,27 +106,28 @@ defaultValue =
 
 list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Element.id", "id")}}，用来提供输入建议。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 type 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
 
-有关在支持的浏览器中如何表示范围中的选项的示例，请参见下面的[使用井号标识范围控制](#使用井号标识范围控制)。
+有关在支持的浏览器中如何表示范围中的选项的示例，请参见下面的[添加井号标记](#添加井号标记)。
 
 ### max
 
-允许值范围内的最大值。如果输入到元素中的 {{htmlattrxref("value", "input")}} 超过此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 [`max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性的值不是数字，则元素没有最大值。
+允许值范围内的最大值。如果输入到元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 超过此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 [`max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性的值不是数字，则元素没有最大值。
 
 此值必须大于或等于 `min` 属性的值。请参见 HTML [`max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性。
 
 ### min
 
-允许值范围内的最小值。如果元素的{{htmlattrxref("value", "input")}} 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `min` 指定的值不是有效数字，则输入没有最小值。
+允许值范围内的最小值。如果元素的[`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `min` 指定的值不是有效数字，则输入没有最小值。
 
 该值必须小于或等于 [`max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性的值。请参见 HTML [`min`](/zh-CN/docs/Web/HTML/Attributes/min) 属性。
 
 ### step
 
-`step` 属性指定了值必须满足的粒度，或者是下文描述的特殊值 `any`。值必须满足基础的步进值，才有效。如果指定了 [`min`](#min) 属性，则由 min 属性决定，否则，使用 {{htmlattrxref("value", "input")}} 属性的值，如果上述两个值都不存在，则提供适当的默认值。
+`step` 属性指定了值必须满足的粒度，或者是下文描述的特殊值 `any`。值必须满足基础的步进值，才有效。如果指定了 [`min`](#min) 属性，则由 min 属性决定，否则，使用 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性的值，如果上述两个值都不存在，则提供适当的默认值。
 
 字符串值 `any` 意味着不使用步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#min) 之外）。
 
-> **备注：** 当用户输入的数据不符合步进配置时，{{Glossary("user agent","用户代理")}}可能会四舍五入到最近的有效值，当有两个同样接近的选项时，更倾向于正方向的数字。
+> [!NOTE]
+> 当用户输入的数据不符合步进配置时，{{Glossary("user agent","用户代理")}}可能会四舍五入到最近的有效值，当有两个同样接近的选项时，更倾向于正方向的数字。
 
 `range` 输入的默认步进值为 1，*除非*步进基数不是整数，否则仅允许输入整数；否则，默认值为 1。例如，如果将 `min` 设置为 -10 并将 `value` 设置为 1.5，则 1 的 `step` 将只允许正方向上的值为 1.5、2.5、3.5 等，以及负方向上的值为 -0.5，-1.5，-2.5 等。请参阅 [HTML `step` 属性](/zh-CN/docs/Web/HTML/Attributes/step)。
 
@@ -102,7 +137,8 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 类似于影响 {{htmlelement('progress')}} 和 {{htmlelement('meter')}} 元素的非标准 CSS 属性 -moz-orient，`orient` 属性定义范围滑块的方向。值包括 `horizontal` 和 `vertical`，分别代表范围的水平呈现和垂直呈现。
 
-> **备注：** 以下输入属性不适用于 range 输入：`accept`、`alt`、`checked`、`dirname`、`formaction`、`formenctype`、`formmethod`、`formnovalidate`、`formtarget`、`height`、`maxlength`、`minlength`、`multiple`、`pattern`、`placeholder`、`readonly`、`required`、`size`、`src` 和 `width`。如果包含了这些属性中的任何一个，都将被忽略。
+> [!NOTE]
+> 以下输入属性不适用于 range 输入：`accept`、`alt`、`checked`、`dirname`、`formaction`、`formenctype`、`formmethod`、`formnovalidate`、`formtarget`、`height`、`maxlength`、`minlength`、`multiple`、`pattern`、`placeholder`、`readonly`、`required`、`size`、`src` 和 `width`。如果包含了这些属性中的任何一个，都将被忽略。
 
 ## 示例
 
@@ -119,7 +155,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ### 指定最小值和最大值
 
-默认情况下，最小值为 0，最大值为 100。如果这不是想要的值，则可以通过更改 {{htmlattrxref("min", "input")}} 和/或 {{htmlattrxref("max", "input")}} 属性。这些可以是任何浮点值。
+默认情况下，最小值为 0，最大值为 100。如果这不是想要的值，则可以通过更改 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和/或 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性。这些可以是任何浮点值。
 
 例如，要要求用户输入介于 -10 和 10 之间的值，可以使用：
 
@@ -131,7 +167,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ### 设置值的粒度
 
-默认情况下，粒度为 1，表示该值始终是整数。可以通过更改 {{htmlattrxref("step")}} 属性控制粒度。例如，如果需要一个介于 5 到 10 之间的值（精确到两位小数），则应将 `step` 的值设置为 0.01：
+默认情况下，粒度为 1，表示该值始终是整数。可以通过更改 [`step`](/zh-CN/docs/Web/HTML/Global_attributes#step) 属性控制粒度。例如，如果需要一个介于 5 到 10 之间的值（精确到两位小数），则应将 `step` 的值设置为 0.01：
 
 #### 设置 step 属性
 
@@ -143,7 +179,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 #### 设置 step 为“any”
 
-如果要接受任何值而不论扩展到小数点后多少位，可以为 {{htmlattrxref("step", "input")}} 属性指定值 `any`。
+如果要接受任何值而不论扩展到小数点后多少位，可以为 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) 属性指定值 `any`。
 
 ```html
 <input type="range" min="0" max="3.14" step="any" />
@@ -155,7 +191,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ### 添加井号标记
 
-为了在 range 控制器中添加井号标记，要包含 `list` 属性，赋予它某个定义了一系列控件上的井号标记 {{HTMLElement("datalist")}} 元素的 `id`。每个点使用带有 {{htmlattrxref("value", "option")}} 属性的 {{HTMLElement("option")}} 元素设置需要添加标记的点。
+为了在 range 控制器中添加井号标记，要包含 `list` 属性，赋予它某个定义了一系列控件上的井号标记 {{HTMLElement("datalist")}} 元素的 `id`。每个点使用带有 [`value`](/zh-CN/docs/Web/HTML/Element/option#value) 属性的 {{HTMLElement("option")}} 元素设置需要添加标记的点。
 
 #### HTML
 
@@ -321,10 +357,10 @@ input[type="range"] {
 
 ## 另请参考
 
-- [HTML 表单](/zh-CN/docs/Learn/Forms)
+- [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} 元素和其基于的 {{domxref("HTMLInputElement")}} 接口
 - [`<input type="number">`](/zh-CN/docs/Web/HTML/Element/input/number)
 - {{domxref('validityState.rangeOverflow')}} 和 {{domxref('validityState.rangeUnderflow')}}
 - [使用 ConstantSourceNode 控制多个参数](/zh-CN/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [设置范围元素的样式](https://css-tricks.com/sliding-nightmare-understanding-range-input)
-- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

@@ -1,11 +1,10 @@
 ---
 title: EventListener
 slug: conflicting/Web/API/EventTarget/addEventListener
-translation_of: Web/API/EventListener
 original_slug: Web/API/EventListener
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("DOM")}}
 
 ## Información General del Método
 
@@ -31,7 +30,7 @@ void handleEvent(
 
 ### Observaciones
 
-Como la interfaz es marcada con la bandera [function], todas los objetos [Function](/en/JavaScript/Reference/Global_Objects/Function) de javascript automaticamente implementan esta interfaz. Llamando el método [handleEvent](#handleevent) en tales implementaciones automaticamente invocan la funcion.
+Como la interfaz es marcada con la bandera [function], todas los objetos [Function](/es/docs/Web/JavaScript/Reference/Global_Objects/Function) de javascript automaticamente implementan esta interfaz. Llamando el método [handleEvent](#handleevent) en tales implementaciones automaticamente invocan la funcion.
 
 ## Mira también
 

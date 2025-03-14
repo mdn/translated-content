@@ -1,318 +1,488 @@
 ---
-title: WebVR APIの使い方
+title: WebVR API の使用
 slug: Web/API/WebVR_API/Using_the_WebVR_API
+l10n:
+  sourceCommit: 081123785142051fba3e353ff2d8c743af69b862
 ---
 
-[WebVR API](/ja/docs/Web/API/WebVR_API) はウェブ開発者のツールキットへのすばらしい追加機能で、[Oculus Rift](https://developer.oculus.com/) のようなバーチャルリアリティハードウェアへのアクセスが可能となります。そして出力された動きや向きはウェブアプリの描画更新に変換されます。しかし VR アプリを開発はどのようにやればいいのでしょうか？ この記事では、それに関する基礎的な解説を行います。
+{{APIRef("WebVR API")}}{{deprecated_header}}
 
-> **メモ:** WebVR は現在実験的な段階にあります（[最新の仕様はこちら](http://mozvr.github.io/webvr-spec/webvr.html)にあります); 今の段階でもっとも正常に動作するのは Firefox Nightly/Developer Edition で、一部の機能は Google Chrome でも動作します。詳細は Brandon Jones の [Bringing VR to Chrome](http://blog.tojicode.com/2014/07/bringing-vr-to-chrome.html) を参照してください。
+> [!NOTE]
+> WebVR API は [WebXR API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として批准されることはなく、ごく少数のブラウザーでしか既定で実装・有効化されず、少数の端末しか対応していませんでした。
 
-## 始めるには
+WebVR API はウェブ開発者のツールキットへのすばらしい追加機能で、 Oculus Rift のようなバーチャルリアリティハードウェアへのアクセスが可能となります。そして出力された動きや向きはウェブアプリの描画更新に変換されます。しかし VR アプリを開発はどのようにやればいいのでしょうか？ この記事では、それに関する基礎的な解説を行います。
 
-WebVR を始めるには，VR ハードウェアのマニュアルに従ったセットアップと、[WebVR environment setup](/ja/docs/Web/API/WebVR_API/WebVR_environment_setup) に示されているコンピュータへの設定が必要になります、スムースな動作には専用 GPU が推奨されます。
+## 始めましょう
 
-[Firefox Nightly](https://nightly.mozilla.org/) (または [Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)) のインストールと合わせて [WebVR Enabler Add-on](http://www.mozvr.com/downloads/webvr-addon-0.1.0.xpi) も必要となります。
+始めるには、次のものが必要です。
 
-いちど環境が設定できたら、テストのために私たちの [MozVR projects](http://mozvr.com/projects/) を開いて、\[Enter VR**]** ボタンをクリックすることを試してください。
+- 対応している VR ハードウェア
 
-> **メモ:** より深い情報のために，[WebVR environment setup](/ja/docs/Web/API/WebVR_API/WebVR_environment_setup) をチェックしてください。
+  - 最も安価なオプションは、モバイル端末、対応しているブラウザー、および機器マウント（例えば Google Cardboard）を使用することです。これは、専用のハードウェアほど良い使い勝手ではありませんが、強力なコンピューターや専用の VR ディスプレイを購入する必要はありません。
+  - 専用のハードウェアはコストがかかりますが、より良い使い勝手を提供することができます。現時点で最も WebVR と互換性のあるハードウェアは、 HTC VIVE と Oculus Rift です。 [webvr.info](https://webvr.info/) のトップページには、利用できるハードウェアや対応しているブラウザーについて、さらに有益な情報が掲載されています。
 
-> **メモ:** モバイルデバイスを HMD として用いるような安価な選択肢もあります。この場合，位置センサは利用できませんので、代わりに [deviceorientation API](/ja/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) を用いて擬似的な向きデータを使う必要があるかもしれません。
+- 使用した場合、 VR 専用ハードウェアを使用して VR シーンのレンダリング/表示を処理するのに十分な性能のコンピューター。購入する VR の関連ガイド（例： [VIVE READY コンピューター](https://www.vive.com/us/ready/)）を見ていただくと、必要なものがわかると思います。
+- 対応しているブラウザーがインストールされていること - 最新の[Firefox Nightly](https://www.mozilla.org/ja/firefox/channel/desktop/) または [Chrome](https://www.google.com/chrome/index.html) が、デスクトップでもモバイルでも、正しい選択となります。
+
+すべての組み立てが完了したら、 [simple A-Frame demo](https://mdn.github.io/webvr-tests/webvr/aframe-demo/) にアクセスすると、シーンがレンダリングされるか、右下のボタンを押して VR 表示モードに入ることができるかどうかで、セットアップによって WebVR が正しく動作するかどうかをテストすることができます。
+
+新しい JavaScript コードの束を理解する必要なく、WebVR 互換の 3D シーンをすばやく作成したい場合は、[A-Frame](https://aframe.io/) が断然最適なオプションと言えます。しかし、これは生の WebVR API がどのように動作するのかを教えてはくれませんので、次に取りかかるのはこの点です。
 
 ## 簡単なデモ
 
-WebVR のデモは [MozVR team repo](https://github.com/MozVR/) や [MDN webvr-tests repo](https://github.com/mdn/webvr-tests) にたくさんありますが、この記事では、主に[positionsensorvrdevice](https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice) について ([動作しているデモ](http://mdn.github.io/webvr-tests/positionsensorvrdevice/)) を例に解説します。
+WebVR API がどのように動作するのかを説明するために、次のような raw-webgl-example を勉強してみましょう。
 
-![](https://mdn.mozillademos.org/files/10797/vrpositionsensor-demo.png)
+![灰色の回転する 3D 立方体](capture1.png)
 
-これは簡単な 2.5D のデモで，[HTML5 Canvas](/ja/docs/Web/HTML/Element/canvas) にレンダリングされた Firefox ロゴが右目と左目のビューに表示されるものです．VR HMD でデモを見ているときにキャンバスをクリックすると、デモはフルスクリーンになり、Firefox ロゴに近づけるようになります。あなたが動くと頭の動きに合わせて上下左右や回転してリアルに動きます。
+> **メモ:** [このデモのソースコード](https://github.com/mdn/webvr-tests/tree/main/webvr/raw-webgl-example) は GitHub で、[ライブで見ることができます](https://mdn.github.io/webvr-tests/webvr/raw-webgl-example/) also.
 
-あなたが WebVR のコードがどう動いているかを簡単に確認できるように、デモは意図的にシンプルになるよう保持されています。API は十分シンプルであるため，単純な DOM ベースインターフェイスでも複雑な WebGL シーンでも、好きなアプリに WebVR 制御の移動を簡単に適用できます。
+> [!NOTE]
+> ブラウザーで WebVR が動作しない場合、グラフィックカードを通して実行しているかどうかを確認する必要がある場合があります。例えば NVIDIA のカードの場合、 NVIDIA コントロールパネルが正常に設定されていれば、利用できるコンテキストメニューオプションがあります - Firefox を右クリックし、 _Run with graphics processor > High-performance NVIDIA processor_ を選んでください。
 
-## アプリはどう動く?
+このデモでは、WebGL のデモの聖杯である、回転する 3D 立方体を扱っています。私たちはこれを生の [WebGL API](/ja/docs/Web/API/WebGL_API) コードを使用して実装しています。基本的な JavaScript や WebGL は一切教えず、WebVR の部分のみを教える予定です。
 
-このセクションでは、アプリを動作させるために必要なコードの変更箇所を通じて、基礎的なレベルで何が必要かを知ることができます。
+このデモでは、次のような機能も備えています。
 
-### VR デバイスへのアクセス
+- VR ディスプレイに存在するシーンを開始（および停止）するためのボタン。
+- VR の正の値、すなわちヘッドセットの位置と方向をリアルタイムで更新して表示（および非表示）するボタン。
 
-最初にコンピュータに接続中の VR ハードウェアへのプログラム的な参照を取得します。それには接続中の全 VR デバイスの配列へと解決できるプロミスを返す {{domxref("Navigator.getVRDevices")}} を使います。
+このデモのメインの [JavaScript ファイル](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js)のソースコードを見ていくと、先行するコメントで "WebVR" という文字列を探せば、簡単に WebVR に特化した部分を見つけることができます。
 
-返される可能性のあるオブジェクトが 2 種類あります:
+> [!NOTE]
+> 基本的な JavaScript と WebGL については、 [JavaScript 学習素材](/ja/docs/Learn/JavaScript)、[WebGL チュートリアル](/ja/docs/Web/API/WebGL_API/Tutorial)を参照してください。
 
-- {{domxref("PositionSensorVRDevice")}}: 位置センサカメラ。
-- {{domxref("HMDVRDevice")}}: VR ヘッドマウントディスプレイ。
+## アプリはどう動くか
 
-[vrdevice demo](https://github.com/mdn/webvr-tests/tree/gh-pages/vrdevice) で基本的なデバイス情報を表示するための非常に簡単なコードを見ることができます。
+この点で、コードの WebVR 部分がどのように動作するのかを見ていきましょう。
 
-本当に欲しいものはデバイスのペアを取得するものです (将来のマルチプレイヤ VR ゲームでは複数のペアになるかもですが)。WebVR 仕様からもってきた（そして [positionsensorvrdevice](https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice) デモでも使っている）次のコードはかなりよく使うトリックです:
+典型的な（単純な） WebVR アプリはこのように作業します。
+
+1. {{domxref("Navigator.getVRDisplays()")}} を使用して、 VRディスプレイへの参照を取得します。
+2. {{domxref("VRDisplay.requestPresent()")}} を使用して VR ディスプレイへの表示を開始します。
+3. WebVR 専用の {{domxref("VRDisplay.requestAnimationFrame()")}} メソッドを使用して、ディスプレイの正しいリフレッシュレートでアプリのレンダリングループが実行されます。
+4. レンダリングループ内では、現在のフレームを表示するために必要なデータを取得し（{{domxref("VRDisplay.getFrameData()")}}）、表示シーンを両眼で 2 回描画し、レンダリングしたビューをディスプレイに送信してユーザに表示します ({{domxref("VRDisplay.submitFrame()")}})。
+
+下記の節では、この raw-webgl-demo を詳しく見ていき、上記の機能が具体的にどこで使用されるかを見ていきます。
+
+### いくつかの変数で始める
+
+最初に出会う WebVR 関連のコードは、以下のブロックです。
 
 ```js
-var gHMD, gPositionSensor;
+// WebVR 変数
 
-navigator.getVRDevices().then(function(devices) {
-  for (var i = 0; i < devices.length; ++i) {
-    if (devices[i] instanceof HMDVRDevice) {
-      gHMD = devices[i];
-      break;
-    }
-  }
+const frameData = new VRFrameData();
+let vrDisplay;
+const btn = document.querySelector(".stop-start");
+let normalSceneFrame;
+let vrSceneFrame;
 
-  if (gHMD) {
-    for (var i = 0; i < devices.length; ++i) {
-      if (devices[i] instanceof PositionSensorVRDevice && devices[i].hardwareUnitId === gHMD.hardwareUnitId) {
-        gPositionSensor = devices[i];
-        break;
+const poseStatsBtn = document.querySelector(".pose-stats");
+const poseStatsSection = document.querySelector("section");
+poseStatsSection.style.visibility = "hidden"; // hide it initially
+
+const posStats = document.querySelector(".pos");
+const orientStats = document.querySelector(".orient");
+const linVelStats = document.querySelector(".lin-vel");
+const linAccStats = document.querySelector(".lin-acc");
+const angVelStats = document.querySelector(".ang-vel");
+const angAccStats = document.querySelector(".ang-acc");
+let poseStatsDisplayed = false;
+```
+
+これらについて簡単に説明します。
+
+- `frameData` には {{domxref("VRFrameData")}} オブジェクトを入れ、これは {{domxref("VRFrameData.VRFrameData", "VRFrameData()")}} コンストラクターで作成します。これは初期状態では空ですが、後に VR ディスプレイに表示する各フレームのレンダリングに必要なデータを格納し、レンダリングループの実行に合わせて常に更新されます。
+- `vrDisplay` は初期化されていませんが、後に VR ヘッドセット（{{domxref("VRDisplay")}} — API の中心的な制御オブジェクト）への参照を保持するようになります。
+- `btn` と `poseStatsBtn` には、アプリを制御するために使用する 2 つのボタンへの参照が格納されています。
+- `normalSceneFrame` と `vrSceneFrame` は初期化されずに始まりますが、後で {{domxref("Window.requestAnimationFrame()")}} と {{domxref("VRDisplay.requestAnimationFrame()")}} の呼び出しへの参照を格納します。これらは通常のレンダリングループと特別な WebVR レンダリングループを実行するようになりますが、後でこの 2 つの違いを説明することになります。
+- 他にも、UI の右下に表示される VR ポーズデータの表示ボックスの異なる形への参照を格納する変数があります。
+
+### VR ディスプレイへの参照の取得
+
+コード内の主要な関数の一つは `start()` で、本体の読み込みが完了したときにこの関数を実行しています。
+
+```js
+// start
+//
+// 本体が読み込まれたときに呼び出され、ボールを取得するために作成されます。
+
+document.body.onload = start;
+```
+
+まず始めに、`start()` は WebGL コンテキストを取得して、3D グラフィックを [HTML](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/index.html) の {{htmlelement("canvas")}} 要素にレンダリングするために使用します。次に、`gl` コンテキストが利用できるかどうかを調べます。利用できる場合は、表示するシーンを設定するためにいくつかの関数を実行します。
+
+```js
+function start() {
+  canvas = document.getElementById("glcanvas");
+
+  initWebGL(canvas);      // Initialize the GL context
+
+  // WebGL setup code here
+```
+
+次に、キャンバスをブラウザーのビューポートいっぱいに設定し、レンダリングループ (`drawScene()`) を最初に実行して、シーンをキャンバスに実際にレンダリングする処理を始めます。これは WebVR ではない、通常のレンダリングループです。
+
+```js
+// draw the scene normally, without WebVR - for those who don't have it and want to see the scene in their browser
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+drawScene();
+```
+
+これで最初の WebVR 固有のコードに入ります。まず最初に、 {{domxref("Navigator.getVRDisplays")}} が存在するかどうかを調べます - これは API へのエントリーポイントであり、したがって WebVR の基本的な機能を適切に検出することができます。ブロックの最後（`else` 句の中）に、これが存在しない場合、 WebVR 1.1 がブラウザーで対応していないことを示すメッセージをログ出力していることがわかります。
+
+```js
+  // WebVR: Check to see if WebVR is supported
+  if (navigator.getVRDisplays) {
+    console.log('WebVR 1.1 supported');
+```
+
+`if () { }` ブロックの中で、 {{domxref("Navigator.getVRDisplays()")}} という関数を実行しています。この関数は、コンピューターに接続されているすべての VR ディスプレイ機器を格納した配列で履行されるプロミスを返します。 1 台も接続されていない場合は、配列は空になります。
+
+```js
+    // Then get the displays attached to the computer
+    navigator.getVRDisplays().then((displays) => {
+```
+
+プロミスの `then()` ブロックの中で、配列の長さが 0 以上かどうかを調べます。0 以上であれば、変数 `vrDisplay` の値を配列の 0 番目のインデックスに集合させます。これで `vrDisplay` には、接続されたディスプレイを表す {{domxref("VRDisplay")}} オブジェクトが格納されました。
+
+```js
+      // If a display is available, use it to present the scene
+      if (displays.length > 0) {
+        vrDisplay = displays[0];
+        console.log('Display found');
+```
+
+> [!NOTE]
+> コンピューターに複数の VR ディスプレイを保有することはまずないでしょうし、このデモでは単純なものなので、とりあえずはこれで大丈夫でしょう。
+
+### VR 表示の開始と停止
+
+これで {{domxref("VRDisplay")}} オブジェクトを取得し、このオブジェクトを使用してさまざまなことを行うことができます。次に行うことは、ディスプレイへの WebGL コンテンツの表示を始めたり、止めたりするための機能を設定することです。
+
+前のコードブロックに引き続き、今度は開始/停止ボタン (`btn`) にイベントリスナーを追加します。このボタンがクリックされたときに、ディスプレイにすでに表示されているかどうかを確認します（これはかなり間抜けな方法で、ボタン [`textContent`](/ja/docs/Web/API/Node/textContent) が何を格納しているかを調べることによって行われます）。
+
+ディスプレイがまだ表示されていない場合、 {{domxref("VRDisplay.requestPresent()")}} メソッドを使用して、ブラウザーがディスプレイへのコンテンツの表示を始めるようにリクエストします。これは、引数として、ディスプレイに表示したいレイヤーを表す {{domxref("VRLayerInit")}} オブジェクトの配列を取ります。
+
+現在、表示できるレイヤーの最大数は 1 で、必要なオブジェクトのメンバーは {{domxref("VRLayerInit.source")}} プロパティ(これは、そのレイヤーで表示したい {{htmlelement("canvas")}} への参照です。他の引数は、感覚的な既定値として与えられています - {{domxref("VRLayerInit.leftBounds", "leftBounds")}} および {{domxref("VRLayerInit.rightBounds", "rightBounds")}})) で、引数は \[{ source: canvas }] になっています。］
+
+`requestPresent()` は表示が正常に始まったときに履行されるプロミスを返します。
+
+```js
+        // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
+        btn.addEventListener('click', () => {
+          if (btn.textContent === 'Start VR display') {
+            vrDisplay.requestPresent([{ source: canvas }]).then(() => {
+              console.log('Presenting to WebVR display');
+```
+
+表示リクエストが成功したので、今度は VRDisplay に表示しているコンテンツをレンダリングするための設定を始めたいと思います。最初の設定として、キャンバスで VR ディスプレイと同じ大きさに設定します。これは、{{domxref("VRDisplay.getEyeParameters()")}} を使用して両目の {{domxref("VREyeParameters")}} を取得することによって行われます。
+
+次に、単純な計算を行って、目の {{domxref("VREyeParameters.renderWidth")}} と {{domxref("VREyeParameters.renderHeight")}} に基づいて VRDisplay 描画領域の合計幅を計算します。
+
+```js
+// Set the canvas size to the size of the vrDisplay viewport
+
+const leftEye = vrDisplay.getEyeParameters("left");
+const rightEye = vrDisplay.getEyeParameters("right");
+
+canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
+canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);
+```
+
+次に、前回 `drawScene()` 関数内の {{domxref("Window.requestAnimationFrame()")}} 呼び出しによって設定されたアニメーションのループをキャンセルし、代わりに `drawVRScene()` を呼び出すことにします。この関数は前と同じシーンをレンダリングしますが、WebVR の特別なマジックが行われます。ここでのループは WebVR の特別な {{domxref("VRDisplay.requestAnimationFrame")}} メソッドによって維持されています。
+
+```js
+// stop the normal presentation, and start the vr presentation
+window.cancelAnimationFrame(normalSceneFrame);
+drawVRScene();
+```
+
+最後に、ボタンテキストを更新し、次にボタンが押された時刻に VR ディスプレイへの表示を停止するようにします。
+
+```js
+              btn.textContent = 'Exit VR display';
+            });
+```
+
+続いてボタンが押されたときに VR 表示を停止するために、 {{domxref("VRDisplay.exitPresent()")}} を呼び出しています。また、ボタンのテキストコンテンツを反転させ、 `requestAnimationFrame` の呼び出しを入れ替えました。ここで、 {{domxref("VRDisplay.cancelAnimationFrame")}} を使用して VR レンダリングのループを停止し、 `drawScene()` を使用して通常のレンダリングループを再び開始していることが分かります。
+
+```js
+          } else {
+            vrDisplay.exitPresent();
+            console.log('Stopped presenting to WebVR display');
+
+            btn.textContent = 'Start VR display';
+
+            // Stop the VR presentation, and start the normal presentation
+            vrDisplay.cancelAnimationFrame(vrSceneFrame);
+            drawScene();
+          }
+        });
       }
-    }
+    });
+  } else {
+    console.log('WebVR API not supported by this browser.');
   }
+}
+```
+
+プレゼンテーションを始めるには、ブラウザーに表示される立体視を確認します。
+
+![3D 立方体の立体視画像](capture2.png)
+
+実際にどのように立体視が行われるかは下記をご覧ください。
+
+### なぜ WebVR は独自の requestAnimationFrame() を持つのか
+
+これは良い質問です。なぜなら、 VR ディスプレイ内でスムーズなレンダリングを行うには、コンピューターのリフレッシュレートではなく、ディスプレイのネイティブリフレッシュレートでコンテンツをレンダリングする必要があるからです。 VR ディスプレイのリフレッシュレートは PC のリフレッシュレートよりも大きく、通常は最大で 90fps です。このレートは、コンピューターのコアリフレッシュレートとは異なる形になります。
+
+VR ディスプレイが表示されていないときは、{{domxref("VRDisplay.requestAnimationFrame")}} は {{domxref("Window.requestAnimationFrame")}} と同じように動作するので、必要に応じて、このアプリで使用している 2 つのレンダリング ループではなく、1 つのレンダリング ループだけを使用できることに留意してください。2 つ使用したのは、VR ディスプレイが存在するかどうかに応じて異なることを行い、理解しやすいように物事を別個のものにしたかったからです。
+
+### レンダリングと表示
+
+この点で、 VR ハードウェアにアクセスし、ハードウェアにシーンを表示するようリクエストし、レンダリング ループを実行し始めるために必要なすべてのコードを見てきました。これで、レンダリング ループのコードを見て、 WebVR 固有の部分がどのように動作するのかを説明します。
+
+まずすべて、レンダリングループ関数である `drawVRScene()` の定義から始めます。この内部で最初に行うことは {{domxref("VRDisplay.requestAnimationFrame()")}} を呼び出して、ループが一度呼ばれた後（これはコードの前半で VR ディスプレイに表示を開始したときに発生します）、ループを実行し続けるようにすることです。この呼び出しをグローバル変数 `vrSceneFrame` の値として設定し、VR プレゼンテーションを終了したら {{domxref("VRDisplay.cancelAnimationFrame()")}} の呼び出しでループをキャンセルできるようにしています。
+
+```js
+function drawVRScene() {
+  // WebVR: Request the next frame of the animation
+  vrSceneFrame = vrDisplay.requestAnimationFrame(drawVRScene);
+```
+
+次に {{domxref("VRDisplay.getFrameData()")}} を呼び出して、フレームデータを格納するために使用したい変数名を渡します。先ほど、`frameData`という変数で初期化しました。呼び出された後、この変数には次のフレームを VR 機器にレンダリングするために必要なデータが {{domxref("VRFrameData")}} オブジェクトとしてパッケージングされて格納されます。これには、左目用と右目用のシーンを正しくレンダリングするための投影およびビューマトリックス、そして方向や位置などVRディスプレイのデータを格納する現在の {{domxref("VRPose")}} オブジェクトといったものが含まれています。
+
+これは、レンダリングされたビューが常に最新の状態になるように、フレームごとに呼び出される必要があります。
+
+```js
+// Populate frameData with the data of the next frame to display
+vrDisplay.getFrameData(frameData);
+```
+
+これで、{{domxref("VRPose")}} プロパティから現在の {{domxref("VRFrameData.pose")}} を取得し、後で使用するために位置と方向を格納し、変数 `poseStatsDisplayed` が true の場合は現在の pose を pose stats ボックスに送って表示することができました。
+
+```js
+// You can get the position, orientation, etc. of the display from the current frame's pose
+
+const curFramePose = frameData.pose;
+const curPos = curFramePose.position;
+const curOrient = curFramePose.orientation;
+if (poseStatsDisplayed) {
+  displayPoseStats(curFramePose);
+}
+```
+
+これで、キャンバスには描画を始める前にクリアされ、次のフレームがはっきりと見えるようになり、前回のレンダリングフレームも見えなくなりました。
+
+```js
+// Clear the canvas before we start drawing on it.
+
+gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+```
+
+これで、左目と右目の両方のビューをレンダリングすることができます。最初に、レンダリングに使用する投影位置と表示位置を作成する必要があります。これらは {{domxref("WebGLUniformLocation")}} オブジェクトで、 {{domxref("WebGLRenderingContext.getUniformLocation()")}} メソッドを使用して作成し、引数としてシェーダープログラムの識別子と識別名 を渡します。
+
+```js
+// WebVR: Create the required projection and view matrix locations needed
+// for passing into the uniformMatrix4fv methods below
+
+const projectionMatrixLocation = gl.getUniformLocation(
+  shaderProgram,
+  "projMatrix",
+);
+const viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
+```
+
+次のレンダリング手順では、次のことを行います。
+
+- 左目のビューポートサイズを {{domxref("WebGLRenderingContext.viewport")}} で指定します - これは論理的にはキャンバス幅の最初の半分と、キャンバス高さいっぱいになります。
+- 左目のレンダリングに使用するビューおよび投影行列の値を指定します - これは {{domxref("WebGLRenderingContext.uniformMatrix", "WebGLRenderingContext.uniformMatrix4fv")}} メソッドで行います。このメソッドには、上で取得した位置情報と {{domxref("VRFrameData")}} オブジェクトで得た左行列の値が渡され、使用します。
+- 実際のシーンをレンダリングする `drawGeometry()` 関数を実行します。前回の2つの手順で指定した内容から、左目用にのみレンダリングすることになります。
+
+```js
+// WebVR: Render the left eye's view to the left half of the canvas
+gl.viewport(0, 0, canvas.width * 0.5, canvas.height);
+gl.uniformMatrix4fv(
+  projectionMatrixLocation,
+  false,
+  frameData.leftProjectionMatrix,
+);
+gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.leftViewMatrix);
+drawGeometry();
+```
+
+これで、まったく同じことを右目で行います。
+
+```js
+// WebVR: Render the right eye's view to the right half of the canvas
+gl.viewport(canvas.width * 0.5, 0, canvas.width * 0.5, canvas.height);
+gl.uniformMatrix4fv(
+  projectionMatrixLocation,
+  false,
+  frameData.rightProjectionMatrix,
+);
+gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.rightViewMatrix);
+drawGeometry();
+```
+
+次に、 `drawGeometry()` 関数を定義します。この関数のほとんどは、 3D 立方体を描画するために必要な一般的な WebGL コードです。 `mvTranslate()` と `mvRotate()` 関数呼び出しに WebVR 固有の部分があります。これらは、現在のフレームにおける立方体の移動と回転を定義する行列を WebGL プログラムに渡すものです。
+
+これらの値を {{domxref("VRPose")}} オブジェクトから取得した VR ディスプレイの位置 (`curPos`) と方向 (`curOrient`) によって変更していることがわかると思います。その結果、例えば頭を左に動かしたり回転させたりすると、x 位置値 (`curPos[0]`) と y 回転値 (`[curOrient[1]`) が x 移動値に追加されます。つまり、何かを見ているときに頭を左に移動/回転させると、キューブは右に移動することを意味します。
+
+これは、VR ポーズデータを使用するためのすばやく汚い方法ですが、基本的な原理を説明しています。
+
+```js
+function drawGeometry() {
+  // Establish the perspective with which we want to view the
+  // scene. Our field of view is 45 degrees, with a width/height
+  // ratio of 640:480, and we only want to see objects between 0.1 units
+  // and 100 units away from the camera.
+  perspectiveMatrix = makePerspective(45, 640.0 / 480.0, 0.1, 100.0);
+
+  // Set the drawing position to the "identity" point, which is
+  // the center of the scene.
+  loadIdentity();
+
+  // Now move the drawing position a bit to where we want to start
+  // drawing the cube.
+  mvTranslate([
+    0.0 - curPos[0] * 25 + curOrient[1] * 25,
+    5.0 - curPos[1] * 25 - curOrient[0] * 25,
+    -15.0 - curPos[2] * 25,
+  ]);
+
+  // Save the current matrix, then rotate before we draw.
+  mvPushMatrix();
+  mvRotate(cubeRotation, [0.25, 0, 0.25 - curOrient[2] * 0.5]);
+
+  // Draw the cube by binding the array buffer to the cube's vertices
+  // array, setting attributes, and pushing it to GL.
+  gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesBuffer);
+  gl.vertexAttribPointer(vertexPositionAttribute, 3, gl.FLOAT, false, 0, 0);
+
+  // Set the texture coordinates attribute for the vertices.
+  gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesTextureCoordBuffer);
+  gl.vertexAttribPointer(textureCoordAttribute, 2, gl.FLOAT, false, 0, 0);
+
+  // Specify the texture to map onto the faces.
+  gl.activeTexture(gl.TEXTURE0);
+  gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
+  gl.uniform1i(gl.getUniformLocation(shaderProgram, "uSampler"), 0);
+
+  // Draw the cube.
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cubeVerticesIndexBuffer);
+  setMatrixUniforms();
+  gl.drawElements(gl.TRIANGLES, 36, gl.UNSIGNED_SHORT, 0);
+
+  // Restore the original matrix
+  mvPopMatrix();
+}
+```
+
+次のコードは WebVR とは何の関係もなく、各フレームで立方体の回転を更新するだけです。
+
+```js
+// Update the rotation for the next draw, if it's time to do so.
+let currentTime = new Date().getTime();
+if (lastCubeUpdateTime) {
+  const delta = currentTime - lastCubeUpdateTime;
+
+  cubeRotation += (30 * delta) / 1000.0;
+}
+lastCubeUpdateTime = currentTime;
+```
+
+レンダリングループの最後の部分で {{domxref("VRDisplay.submitFrame()")}} を呼び出します。このメソッドでは、すべての作業が完了し、 {{htmlelement("canvas")}} に表示がレンダリングされると、フレームを VR ディスプレイに送信して、そこに表示することができます。
+
+```js
+  // WebVR: Indicate that we are ready to present the rendered frame to the VR display
+  vrDisplay.submitFrame();
+}
+```
+
+### ポーズ（位置、向きなど）データの表示
+
+この節では、各フレームで更新されたポーズデータを表示する `displayPoseStats()` 関数について説明します。この関数はかなり単純です。
+
+すべて {{domxref("VRPose")}} オブジェクトから得られる 6 つの異なる形のプロパティ値を自分自身で変数に格納します。それぞれ {{jsxref("Float32Array")}} とします。
+
+```js
+function displayPoseStats(pose) {
+  const pos = pose.position;
+  const orient = pose.orientation;
+  const linVel = pose.linearVelocity;
+  const linAcc = pose.linearAcceleration;
+  const angVel = pose.angularVelocity;
+  const angAcc = pose.angularAcceleration;
+```
+
+そして、そのデータを情報ボックスに書き出し、フレームごとに更新しています。そうしないと値が読みにくいので、 [`toFixed()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) で各値を小数点以下 3 桁に固定しています。
+
+データを表示する前に、線形加速度と角加速度の配列が正常に返されたかどうかを検出するために、条件式を使用していることにメモしておいてください。これらの値はまだほとんどの VR ハードウェアで報告されないので、これを行わないとコードがエラーを発生します（配列は正常に報告されないと `null` を返します）。
+
+```js
+  posStats.textContent = `Position: ` +
+    `x ${pos[0].toFixed(3)}, ` +
+    `y ${pos[1].toFixed(3)}, ` +
+    `z ${pos[2].toFixed(3)}`;
+  orientStats.textContent = `Orientation: ` +
+    `x ${orient[0].toFixed(3)}, ` +
+    `y ${orient[1].toFixed(3)}, ` +
+    `z ${orient[2].toFixed(3)}`;
+  linVelStats.textContent = `Linear velocity: ` +
+    `x ${linVel[0].toFixed(3)}, ` +
+    `y ${linVel[1].toFixed(3)}, ` +
+    `z ${linVel[2].toFixed(3)}`;
+  angVelStats.textContent = `Angular velocity: ` +
+    `x ${angVel[0].toFixed(3)}, ` +
+    `y ${angVel[1].toFixed(3)}, ` +
+    `z ${angVel[2].toFixed(3)}`;
+
+  if (linAcc) {
+    linAccStats.textContent = `Linear acceleration: ` +
+      `x ${linAcc[0].toFixed(3)}, ` +
+      `y ${linAcc[1].toFixed(3)}, ` +
+      `z ${linAcc[2].toFixed(3)}`;
+  } else {
+    linAccStats.textContent = 'Linear acceleration not reported';
+  }
+
+  if (angAcc) {
+    angAccStats.textContent = `Angular acceleration: ` +
+    `x ${angAcc[0].toFixed(3)}, ` +
+    `y ${angAcc[1].toFixed(3)}, ` +
+    `z ${angAcc[2].toFixed(3)}`;
+  } else {
+    angAccStats.textContent = 'Angular acceleration not reported';
+  }
+}
+```
+
+## WebVR イベント
+
+WebVR の仕様では、 VR ディスプレイの状態の変化にアプリのコードが反応できるように、いくつかのイベントが発行される機能があります ([Window イベント](/ja/docs/Web/API/WebVR_API#window_events) を参照してください)。例として、
+
+- {{domxref("Window/vrdisplaypresentchange_event", "vrdisplaypresentchange")}} - VR ディスプレイの表示状態が変化したとき、つまり表示から非表示、または非表示から表示へと変化したときに発行されま す。
+- {{domxref("Window.vrdisplayconnect_event", "vrdisplayconnect")}} - 対応する VR ディスプレイがコンピューターに接続されたときに発行されます。
+- {{domxref("Window.vrdisplaydisconnect_event", "vrdisplaydisconnect")}} - 対応する VR ディスプレイがコンピュータから切断されたときに発行されます。
+
+これらがどのように動作するのかを示すために、この単純なデモでは以下のような例を記載しています。
+
+```js
+window.addEventListener("vrdisplaypresentchange", (e) => {
+  console.log(
+    `Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`,
+  );
 });
 ```
 
-最初に見つかった {{domxref("HMDVRDevice")}} のインスタンスを取得し、それを `gHMD` 変数へ保存します．次に見つかった {{domxref("PositionSensorVRDevice")}} のインスタンスを取得して `gPositionSensor` 変数に代入していますが，それは先ほど取得した `gHMD` オブジェクトの {{domxref("VRDevice.hardWareUnitId")}} プロパティが一致するものだけを対象にしています。同一のハードウェアは複数のデバイスとして取得されますが、それらはハードウェアユニット ID を共有しています — これは取得した 2 つのデバイスの参照がマッチングしているかをチェックする方法です。
+このプロパティには、イベントが発行された {{domxref("VRDisplay")}} への参照が格納され、イベントが発生した理由を人間が読み取り可能な値で示します。
 
-### アプリの初期化
+これはとても有益なイベントです。ディスプレイが予期せず切断された場合を処理するために使用することができ、エラーが発生するのを阻止し、ユーザーに状況を認識させることができます。 Google の Webvr.info プレゼンテーションのデモでは、このイベントを使用して [`onVRPresentChange()` function](https://github.com/toji/webvr.info/blob/master/samples/03-vr-presentation.html#L174) が実行され、UI コントロールが適宜更新されてキャンバスのサイズが変更されます。
 
-シーンを描画する {{htmlelement("canvas")}} 要素を次のように作成し、配置します:
+## まとめ
 
-```js
-var myCanvas = document.createElement('canvas');
-var ctx = myCanvas.getContext('2d');
-var body = document.querySelector('body');
-body.appendChild(myCanvas);
-```
-
-次に、新しい [image](/ja/docs/Web/API/HTMLImageElement) を作成し、アプリの [main loop](/ja/docs/Games/Anatomy#Building_a_main_loop_in_JavaScript) である`draw()` を実行する前に `image` が ロードされているかをチェックするために` {{event("load")}} イベントを使います:
-
-```js
-var image = new Image();
-image.src = 'firefox.png';
-image.onload = draw;
-```
-
-### メインループ
-
-`draw()` は次のように実装します:
-
-```js
-function draw() {
-  WIDTH = window.innerWidth;
-  HEIGHT = window.innerHeight;
-  lCtrOffset = WIDTH*0.25;
-  rCtrOffset = WIDTH*0.25;
-
-  myCanvas.width = WIDTH;
-  myCanvas.height = HEIGHT;
-
-  setView();
-  drawImages();
-  drawCrosshairs();
-
-  requestAnimationFrame(draw);
-}
-```
-
-[window](/ja/docs/Web/API/Window) の `WIDTH` と `HEIGHT` は各フレームでリサンプリングされ，次の設定に使われます:
-
-- 左右の目のビュー中心からの相対的に描画される画像を維持するのに使われる左右のオフセット値です。半分の幅のシーンのコピーを描画するので、各コピーの中心はそれぞれ、エッジの端から端までのキャンバス全体幅のちょうど 1/4 の幅になります。
-- キャンバスの [width](/ja/docs/Web/API/HTMLCanvasElement/width) と [height](/ja/docs/Web/API/HTMLCanvasElement/height)。
-
-これによってブラウザウィンドウがリサイズされたとしても、シーンが正しくリサイズされます。
-
-次にメインループの中で 3 つの関数を実行しています:
-
-- `setView()` は，VR ハードウェアから位置と向きの情報を受け取り，シーン内の更新された画像位置の描画に使用する準備をします。
-- `drawImages()` はシーンを更新された位置で実際に描画します。
-- `drawCrosshairs()` は常にシーンの中央にある十字線を描画します。
-
-これらの詳細は、後ほど解説します。
-
-ループの最後に [requestAnimationFrame(draw)](/ja/docs/Web/API/window/requestAnimationFrame) を実行し`、draw()` ループが連続して呼び出されるようにします。
-
-### 位置と向き情報の受取り
-
-では `setView()` 関数の詳細を見ていきましょう。コードの各部分を順に追って、そこで何をしているかを説明します:
-
-```js
-function setView() {
-  var posState = gPositionSensor.getState();
-```
-
-位置センサへの参照を使って {{domxref("PositionSensorVRDevice.getState")}} を呼び出します。このメソッドは、あなたが知りたい現在の HMD の状態のすべてを返します — {{domxref("VRPositionState")}} オブジェクトへのアクセスを通じて — 位置、向き、そして速度/ 加速度や角速度 / 角加速度のようなより高度な情報を含んでいます。
-
-```js
-  if(posState.hasPosition) {
-    posPara.textContent = 'Position: x' + roundToTwo(posState.position.x) + " y"
-                                + roundToTwo(posState.position.y) + " z"
-                                + roundToTwo(posState.position.z);
-    xPos = -posState.position.x * WIDTH * 2;
-    yPos = posState.position.y * HEIGHT * 2;
-    if(-posState.position.z > 0.01) {
-      zPos = -posState.position.z;
-    } else {
-      zPos = 0.01;
-    }
-  }
-```
-
-HMD のスイッチが OFF にされたり位置センサを向いていなかったりした場合など、アプリがエラーになったり停止したりしないように、 {{domxref("VRPositionState.hasPosition")}} を使って HMD の正常な位置情報が利用可能かを確認する方法をチェックします。
-
-そして通知を目的として、アプリの UI 内のパラグラフへ現在の位置情報を出力します。読みやすくするために、カスタム関数を使って小数点以下 2 桁に丸めています。
-
-最後に {{domxref("VRPositionState.position")}} に格納されている位置情報に関して、`xPos`、 `yPos`、`zPos` 変数に代入します。`zPos` の値を 0.01 以上にするのに `if ... else` ブロックが利用されていることに気付くでしょう — このアプリは 0 以下になると例外を投げていました。
-
-```js
-  if(posState.hasOrientation) {
-    orientPara.textContent = 'Orientation: x' + roundToTwo(posState.orientation.x) + " y"
-                                + roundToTwo(posState.orientation.y) + " z"
-                                + roundToTwo(posState.orientation.z);
-    xOrient = posState.orientation.x * WIDTH;
-    yOrient = -posState.orientation.y * HEIGHT * 2;
-    zOrient = posState.orientation.z * 180;
-
-  }
-```
-
-次に同じような処理をして、HMD の向きに応じてシーンの更新処理をします — {{domxref("VRPositionState.hasOrientation")}} を使って有効な向きデータかをチェックして，向きのデータを通知用の UI に表示し、`xOrient`、`yOrient`、`zOrient` の値を {{domxref("VRPositionState.orientation")}} に格納されている値から設定します．
-
-```
-  timePara.textContent = 'Timestamp: ' + Math.floor(posState.timeStamp);
-}
-```
-
-最後に {{domxref("VRPositionState.timeStamp")}} に格納されている現在のタイムスタンプを通知 UI に出力します。この値は位置データが更新済みか、どんな順序で更新が発生したかを判断するのに役立ちます。
-
-### シーンの更新
-
-`setView()` で取得された `xPos`、`yPos`、`zPos`、`xOrient`、`yOrient`、`zOrient` の値は、`drawImages()` で行われるシーン病がの更新のための変更値として使用されます。どうやっているかを見ていきますが、左目のビューの描画コードだけをウォークスルーしていきます。右目については、右にオーバーシフトしている以外はほぼ同じです:
-
-```js
-function drawImages() {
-  ctx.fillStyle = 'white';
-  ctx.fillRect(0,0,WIDTH,HEIGHT);
-```
-
-最初に次のフレームが描画される前にシーンをクリアするため、白い {{domxref("CanvasRenderingContext2D.fillRect","fillRect()")}} を描画します。
-
-```js
-  ctx.save();
-  ctx.beginPath();
-  ctx.translate(WIDTH/4,HEIGHT/2);
-  ctx.rect(-(WIDTH/4),-(HEIGHT/2),WIDTH/2,HEIGHT);
-```
-
-次に左目のビューを別の画像として扱って右目のビューに影響を与えないコードにするので、 {{domxref("CanvasRenderingContext2D.save","save()")}} でコンテキスト状態を保存します。
-
-そして {{domxref("CanvasRenderingContext2D.beginPath","pathを開始し")}}, {{domxref("CanvasRenderingContext2D.translate","canvasを変換します")}}、これによって原点を左目の中心（全体の 1/4 幅で半分の高さ）に移動させます。回転を正しく動かすためにもこれは必要です。回転は canvas の原点が中心となります。そして左目のビュー全体を覆うように {{domxref("CanvasRenderingContext2D.rect","rect()")}} を描画します。
-
-`rect()` はマイナスの 1/4 幅，マイナスの 1/2 高さから描画し始めていることに注意してください。これは原点が既に移動しているためです。
-
-```
-  ctx.clip();
-```
-
-canvas を {{domxref("CanvasRenderingContext2D.clip","clip()")}} します。`rect()` が描画された直後にこれを呼ぶので、キャンバス上に対して行うことは `rect() の内側に制限され`、`restore()` が呼び出されるまですべてのオーバーフローは隠蔽されます（後述）。これは左ビュー全体が右ビューから独立したままであることを保証します。
-
-```js
-  ctx.rotate(zOrient * Math.PI / 180);
-```
-
-頭の回転と同じようにシーンを回転させるために、zOrient の値に従った回転が画像に適用します。
-
-```js
-  ctx.drawImage(image,-(WIDTH/4)+lCtrOffset-((image.width)/(2*(1/zPos)))+xPos-yOrient,-((image.height)/(2*(1/zPos)))+yPos+xOrient,image.width*zPos,image.height*zPos);
-```
-
-実際に画像を描画しましょう! この少し厄介なコードを、ここでは引数ごとに分解してみましょう:
-
-- `image`: 描画する画像
-- `-(WIDTH/4)+lCtrOffset-((image.width)/(2*(1/zPos)))+xPos-yOrient`: 画像原点の水平座標。前に行った平行移動を打ち消すために `WIDTH/4` を引きます．そして中心に戻すために左中心オフセットを加えて，画像幅を `zPos` の逆数の 2 倍で割ったものを引きます— 描画する画像が小さい（大きい）ほど減算値が小さい（大きい）くなり，画像中心が保持されます．最後に，HMD の水平方向の動きや回転にあわせて画像位置を更新するために `xPos` を加えて，`yOrient` を引きます（y 軸周りの回転が画像を水平方向に移動します)。
-- `-((image.height)/(2*(1/zPos)))+yPos+xOrient`: 画像原点の垂直方向の座標です。これは In this case the "HEIGHT/2 の減算"と"右中心オフセットの追加"は、ちょうどお互いにキャンセルされるので、計算式から取り除きます。計算式の残りは上と同じように、zPos の逆数の 2 倍で画像幅を割ったものを減算することによる画像中心を保持と、`yPos` と `xOrient` による描画位置の修正です。
-- `image.width*zPos`: 画像を描画する幅; 近いものほど大きく描画されるように `zPos` で修正します。
-- `image.height*zPos`: 画像を描画する高さ; 近いものほど大きく描画されるように `zPos` で修正します。
-
-```js
-  ctx.strokeStyle = "black";
-  ctx.stroke();
-```
-
-左目ビューの周囲に黒い {{domxref("CanvasRenderingContext2D.stroke","stroke()")}} を描画します。これはビューの分離をちょっとだけわかりやすくする手助けとなります。
-
-```js
-  ctx.restore();
-```
-
-右目ビューの描画の実施に移行するため、キャンバスの復元を {{domxref("CanvasRenderingContext2D.restore","restore()")}} で行います。
-
-```js
-  ...
-}
-```
-
-> **メモ:** ここである種のチートをしていて，2D キャンバスを使って 3D シーンを擬似的に表現しています。学習目的の場合、物事を簡単にすることができます。WEB テクノロジで作成された任意のアプリで、ビューレンダリングを修正するために上述した位置と向きのデータを使うことができます。例えば [3Dpositionorientation](https://github.com/mdn/webvr-tests/tree/gh-pages/3Dpositionorientation) デモでは、[Three.js](http://threejs.org/) を使って作成された WebGL シーンのビューを制御するために上述の方法と非常によく似たコードを使っています。
-
-> **メモ:** [`drawCrosshairs() のコード`](https://github.com/mdn/webvr-tests/blob/gh-pages/positionsensorvrdevice/index.html#L106-L119) は `drawImages()と比較して`非常にシンプルですので、もし興味があるなら自分自身で勉強することをおすすめします!
-
-### フルスクリーン表示
-
-VR エフェクトはアプリを [フルスクリーンモード](/ja/docs/Web/Guide/API/DOM/Using_full_screen_mode) で実行すると非常に効果的です。ディスプレイのダブルクリックやボタンの押下のような、特定のイベントが発生した時に {{htmlelement("canvas")}} 要素をフルスクリーンにするための一般的な設定を説明します。
-
-シンプルさを保つために、ここではキャンバスのクリック時に `fullScreen()` 関数を実行します:
-
-```js
-myCanvas.addEventListener('click',fullScreen,false);
-```
-
-`fullScreen()` 関数は、できるだけ互換性を保つために、ブラウザによって異なるキャンバスに実装されている `requestFullscreen()` メソッドのバージョンをチェックして、見つかった適切な関数を呼び出します:
-
-```js
-function fullScreen() {
-  if (myCanvas.requestFullscreen) {
-    myCanvas.requestFullscreen();
-  } else if (myCanvas.msRequestFullscreen) {
-    myCanvas.msRequestFullscreen();
-  } else if (myCanvas.mozRequestFullScreen) {
-    myCanvas.mozRequestFullScreen();
-  } else if (myCanvas.webkitRequestFullscreen) {
-    myCanvas.webkitRequestFullscreen();
-  }
-}
-```
-
-## FOV とデバイスのキャリブレーション
-
-現在のデモではあまり考えませんでしたが，商用アプリでは，ユーザが持っている VR ハードウェアを正しく動作させるためにユーザキャリブレーションをする必要があるでしょう．WebVR API はそれを手助けする多くの機能があります。
-
-HMD の位置と姿勢をリセットするために {{domxref("PositionSensorVRDevice.resetSensor")}} メソッドを利用できます。実行すると、現在のヘッドセットの位置/向きが 0 にセットされます。実行前に，ヘッドセットが検知可能な位置にあることを保証する必要があります。positionsensorvrdevice demo では、\[Reset Sensor] ボタンでそれを実行することができます:
-
-```html
-<button>Reset Sensor</button>
-```
-
-```js
-document.querySelector('button').onclick = function() {
-  gPositionSensor.resetSensor();
-}
-```
-
-他にもヘッドセットの視野角 (FOV) を、シーン内で上，右，下，左方向に見える範囲がどの程度かキャリブレーションします。それぞれの目のパラメータを別々に返す {{domxref("HMDVRDevice.getEyeParameters")}} メソッドを呼ぶと、両目それぞれの情報を個別に受け取ることができます。なお左目用パラメータで 1 回、右目用で 1 回の計 2 回の呼出しが必要です。それぞれの目用に {{domxref("VREyeParameters")}} オブジェクトを返します。
-
-一例として、 {{domxref("VREyeParameters.currentFieldOfView")}} を用いて片目分の現在の FOV を受け取れます。これは次の 4 つのプロパティを持つ {{domxref("VRFieldOfView")}} オブジェクトを返します:
-
-- {{domxref("VRFieldOfViewReadOnly.upDegrees","upDegrees")}}: FOV の上方向へ広がる角度の値．
-- {{domxref("VRFieldOfViewReadOnly.rightDegrees","rightDegrees")}}: FOV の右方向へ広がる角度の値．
-- {{domxref("VRFieldOfViewReadOnly.downDegrees","downDegrees")}}: FOV の下方向へ広がる角度の値．
-- {{domxref("VRFieldOfViewReadOnly.leftDegrees","leftDegrees")}}: FOV の左方向へ広がる角度の値．
-
-FOV は眼を頂点としたピラミッド形になっています．
-
-あなたのアプリに適切な FOV をユーザが持っているかをチェックし，もしそうでないなら {{domxref("HMDVRDevice.setFieldOfView")}} メソッドを使って新しい FOV を設定します．これを扱う簡単な関数は次のような感じです:
-
-```js
-function setCustomFOV(up,right,down,left) {
-  var testFOV = new VRFieldOfView(up,right,down,left);
-
-  gHMD.setFieldOfView(testFOV,testFOV,0.01,10000.0);
-}
-```
-
-この関数は引数として 4 つの角度を受け取り、VRFieldOfView() コンストラクタを用いて新しい {{domxref("VRFieldOfView")}} オブジェクトを作成します。これを `setFieldOfView()` の最初の 2 つの引数（左目と右目の FOV）として渡します。第 3、4 引数は，FOV のオブジェクト可視領域を定義する眼からの最短、最大距離を示す `zNear` と `zFar` です．
+この記事では、単純な WebVR 1.1 アプリを作成する方法について、取得するのに役立つ、ごく基本的なことを説明しました。

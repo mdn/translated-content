@@ -1,10 +1,9 @@
 ---
 title: 检测设备方向
 slug: Web/API/Device_orientation_events/Detecting_device_orientation
-original_slug: Web/Events/Detecting_device_orientation
 ---
 
-{{SeeCompatTable}}
+{{DefaultAPISidebar("Device Orientation Events")}}{{SeeCompatTable}}
 
 有越来越多的基于 web 的设备能够确定它们的方向; 也就是说，它们可以报告数据以指示基于重力方向的方向改变。特别地，手持设备如手机可以利用这些信息以自动旋转屏幕，保持内容直立，当设备旋转至横屏时（宽度大于高度），提供网页内容的横屏视图。
 
@@ -49,13 +48,13 @@ function handleOrientation(orientData) {
 
 ### 相关值解释
 
-关于每一个轴的记录值表示的是相对于标准的坐标系，设备在某一个给定轴上的旋转量。[Orientation and motion data explained](/zh-CN/DOM/Orientation_and_motion_data_explained) 这篇文章有更详细的描述，下面是对这篇文章的总结。
+关于每一个轴的记录值表示的是相对于标准的坐标系，设备在某一个给定轴上的旋转量。[Orientation and motion data explained](/zh-CN/docs/DOM/Orientation_and_motion_data_explained) 这篇文章有更详细的描述，下面是对这篇文章的总结。
 
 - {{ domxref("DeviceOrientationEvent.alpha") }} 表示设备沿 z 轴上的旋转角度，范围为 0\~360。
 - {{ domxref("DeviceOrientationEvent.beta") }} 表示设备在 x 轴上的旋转角度，范围为 -180\~180。它描述的是设备由前向后旋转的情况。
 - {{ domxref("DeviceOrientationEvent.gamma") }} 表示设备在 y 轴上的旋转角度，范围为 -90\~90。它描述的是设备由左向右旋转的情况。
 
-### 例子
+### 示例
 
 这个例子会成功运行在支持检测自己方向的设备中的支持[`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event) 事件的浏览器中。
 
@@ -74,17 +73,17 @@ function handleOrientation(orientData) {
 ```css
 .garden {
   position: relative;
-  width : 200px;
+  width: 200px;
   height: 200px;
-  border: 5px solid #CCC;
+  border: 5px solid #ccc;
   border-radius: 10px;
 }
 
 .ball {
   position: absolute;
-  top   : 90px;
-  left  : 90px;
-  width : 20px;
+  top: 90px;
+  left: 90px;
+  width: 20px;
   height: 20px;
   background: green;
   border-radius: 100%;
@@ -94,24 +93,28 @@ function handleOrientation(orientData) {
 现在，如果我们移动设备，球将随之移动：
 
 ```js
-var ball   = document.querySelector('.ball');
-var garden = document.querySelector('.garden');
-var output = document.querySelector('.output');
+var ball = document.querySelector(".ball");
+var garden = document.querySelector(".garden");
+var output = document.querySelector(".output");
 
-var maxX = garden.clientWidth  - ball.clientWidth;
+var maxX = garden.clientWidth - ball.clientWidth;
 var maxY = garden.clientHeight - ball.clientHeight;
 
 function handleOrientation(event) {
-  var x = event.beta;  // In degree in the range [-180,180]
+  var x = event.beta; // In degree in the range [-180,180]
   var y = event.gamma; // In degree in the range [-90,90]
 
-  output.innerHTML  = "beta : " + x + "\n";
+  output.innerHTML = "beta : " + x + "\n";
   output.innerHTML += "gamma: " + y + "\n";
 
   // Because we don't want to have the device upside down
   // We constrain the x value to the range [-90,90]
-  if (x >  90) { x =  90};
-  if (x < -90) { x = -90};
+  if (x > 90) {
+    x = 90;
+  }
+  if (x < -90) {
+    x = -90;
+  }
 
   // To make computation easier we shift the range of
   // x and y to [0,180]
@@ -120,20 +123,21 @@ function handleOrientation(event) {
 
   // 10 is half the size of the ball
   // It center the positioning point to the center of the ball
-  ball.style.top  = (maxX*x/180 - 10) + "px";
-  ball.style.left = (maxY*y/180 - 10) + "px";
+  ball.style.top = (maxX * x) / 180 - 10 + "px";
+  ball.style.left = (maxY * y) / 180 - 10 + "px";
 }
 
-window.addEventListener('deviceorientation', handleOrientation);
+window.addEventListener("deviceorientation", handleOrientation);
 ```
 
 输出结果：
 
-在{{LiveSampleLink("Orientation_example", "这里")}}以新窗口打开此示例；因为有些浏览器中的 [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event) 事件不支持跨域。
+在{{LiveSampleLink("示例", "这里")}}以新窗口打开此示例；因为有些浏览器中的 [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event) 事件不支持跨域。
 
-{{EmbedLiveSample('Orientation_example', '230', '260')}}
+{{EmbedLiveSample('示例', '230', '260')}}
 
-> **警告：** Chrome 和 Firefox 处理角度的机制不同，所以某些轴上的方向是相反的。
+> [!WARNING]
+> Chrome 和 Firefox 处理角度的机制不同，所以某些轴上的方向是相反的。
 
 ## 处理移动（motion）事件
 
@@ -154,21 +158,21 @@ window.addEventListener("devicemotion", handleMotion, true);
 
 ### 相关值解释
 
-{{ domxref("DeviceMotionEvent") }}对象提供给 web 开发者设备在位置和方向上的改变速度的相关信息。这些变化信息是通过三个轴来体现的。（[Orientation and motion data explained](/zh-CN/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained)有更详细的说明。）
+{{ domxref("DeviceMotionEvent") }}对象提供给 web 开发者设备在位置和方向上的改变速度的相关信息。这些变化信息是通过三个轴来体现的。（[Orientation and motion data explained](/zh-CN/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)有更详细的说明。）
 
-[`acceleration`](/zh-CN/docs/Web/API/DeviceMotionEvent.acceleration) 和 [`accelerationIncludingGravity`](/zh-CN/docs/Web/API/DeviceMotionEvent.accelerationIncludingGravity)，都包含下面三个轴：
+[`acceleration`](/zh-CN/docs/Web/API/DeviceMotionEvent/acceleration) 和 [`accelerationIncludingGravity`](/zh-CN/docs/Web/API/DeviceMotionEvent/accelerationIncludingGravity)，都包含下面三个轴：
 
 - `x`: 西向东
 - `y`: 南向北
 - `z`: 垂直地面
 
-对于 [`rotationRate`](/zh-CN/docs/Web/API/DeviceMotionEvent.rotationRate) ，情况有点不同；三个轴的信息对应着以下三种情况：
+对于 [`rotationRate`](/zh-CN/docs/Web/API/DeviceMotionEvent/rotationRate) ，情况有点不同；三个轴的信息对应着以下三种情况：
 
 - `alpha`: 设备沿着垂直于屏幕（对于桌面设备则是垂直于键盘）的轴的旋转速率
 - `beta`: 设备沿着屏幕（对于桌面设备则是键盘）左至右方向的轴的旋转速率 (桌面设备相对于键盘)
 - `gamma`: 设备沿着屏幕（对于桌面设备则是键盘）下至上方向的轴的旋转速率
 
-最后，[`interval`](/zh-CN/docs/Web/API/DeviceMotionEvent.interval) 表示的是从设备获取数据的间隔时间，单位是毫秒。
+最后，[`interval`](/zh-CN/docs/Web/API/DeviceMotionEvent/interval) 表示的是从设备获取数据的间隔时间，单位是毫秒。
 
 ## 规范
 
@@ -182,6 +186,6 @@ window.addEventListener("devicemotion", handleMotion, true);
 
 - {{domxref("DeviceOrientationEvent")}}
 - {{domxref("DeviceMotionEvent")}}
-- The legacy [`MozOrientation`](/zh-CN/DOM/MozOrientation) event.
-- [Orientation and motion data explained](/zh-CN/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained)
-- [Using deviceorientation in 3D Transforms](/zh-CN/docs/Web/Guide/DOM/Events/Using_device_orientation_with_3D_transforms)
+- The legacy [`MozOrientation`](/zh-CN/docs/DOM/MozOrientation) event.
+- [Orientation and motion data explained](/zh-CN/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- [Using deviceorientation in 3D Transforms](/zh-CN/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms)

@@ -1,13 +1,6 @@
 ---
 title: 'TypeError: property "x" is non-configurable and can''t be deleted'
 slug: Web/JavaScript/Reference/Errors/Cant_delete
-tags:
-  - Erreurs
-  - JavaScript
-  - Mode strict
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Cant_delete
-original_slug: Web/JavaScript/Reference/Erreurs/Cant_delete
 ---
 
 {{jsSidebar("Errors")}}
@@ -26,7 +19,7 @@ TypeError: Cannot delete property 'x' of #<Object> (Chrome)
 
 ## Quel est le problème ?
 
-Une instruction demande la suppression d'une propriété [non-configurable](/fr/docs/Web/JavaScript/Structures_de_données#Propriétés). L'attribut `configurable` permet de contrôler si la propriété peut être supprimée de l'objet auquel elle est rattachée et si ces attributs (en dehors de `writable`) peuvent être modifiés.
+Une instruction demande la suppression d'une propriété [non-configurable](/fr/docs/Web/JavaScript/Data_structures#propriétés). L'attribut `configurable` permet de contrôler si la propriété peut être supprimée de l'objet auquel elle est rattachée et si ces attributs (en dehors de `writable`) peuvent être modifiés.
 
 Cette erreur ne se produit qu'en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode). En mode non-strict, l'opération de suppression renverra `false`.
 
@@ -36,28 +29,28 @@ Les propriétés non-configurables ne sont pas très fréquentes mais il est pos
 
 ```js example-bad
 "use strict";
-var obj = Object.freeze({name: "Elsa", score: 157});
-delete obj.score;  // TypeError
+var obj = Object.freeze({ name: "Elsa", score: 157 });
+delete obj.score; // TypeError
 
-"use strict";
+("use strict");
 var obj = {};
-Object.defineProperty(obj, "toto", {value: 2, configurable: false});
-delete obj.toto;  // TypeError
+Object.defineProperty(obj, "toto", { value: 2, configurable: false });
+delete obj.toto; // TypeError
 
-"use strict";
+("use strict");
 var frozenArray = Object.freeze([0, 1, 2]);
-frozenArray.pop();  // TypeError
+frozenArray.pop(); // TypeError
 ```
 
 Certaines propriétés natives de JavaScript sont non-configurables. Peut-être que le code tente de supprimer une constante mathématique :
 
 ```js example-bad
 "use strict";
-delete Math.PI;  // TypeError
+delete Math.PI; // TypeError
 ```
 
 ## Voir aussi
 
-- [L'opérateur `delete`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_delete)
+- [L'opérateur `delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.freeze()")}}

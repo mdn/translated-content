@@ -1,26 +1,30 @@
 ---
 title: Boolean.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
-tags:
-  - Boolean
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/toString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Boolean/toString
 ---
 
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaine de caractères correspondant à l'objet `Boolean` courant.
 
-{{EmbedInteractiveExample("pages/js/boolean-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Boolean.toString()")}}
+
+```js interactive-example
+const flag1 = new Boolean(true);
+
+console.log(flag1.toString());
+// Expected output: "true"
+
+const flag2 = new Boolean(1);
+
+console.log(flag2.toString());
+// Expected output: "true"
+```
 
 ## Syntaxe
 
 ```js
-bool.toString()
+bool.toString();
 ```
 
 ### Valeur de retour

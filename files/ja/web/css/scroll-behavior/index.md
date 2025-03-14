@@ -1,13 +1,68 @@
 ---
 title: scroll-behavior
 slug: Web/CSS/scroll-behavior
+l10n:
+  sourceCommit: a1596fe065b9c726f9412999d2218b7b6e256e30
 ---
 
 {{CSSRef}}
 
 **`scroll-behavior`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ナビゲーションや CSSOM のスクローリング API によってスクロールするボックスにスクロールが発生した際の、そのスクロールの振る舞いを設定します。
 
-{{EmbedInteractiveExample("pages/css/scroll-behavior.html")}}
+{{InteractiveExample("CSS Demo: scroll-behavior")}}
+
+```css interactive-example-choice
+scroll-behavior: auto;
+```
+
+```css interactive-example-choice
+scroll-behavior: smooth;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="container">
+    <p class="nav">
+      Scroll to:
+      <a href="#pageA">A</a>
+      <a href="#pageB">B</a>
+      <a href="#pageC">C</a>
+    </p>
+    <scroll-container id="example-element">
+      <scroll-page id="pageA">A</scroll-page>
+      <scroll-page id="pageB">B</scroll-page>
+      <scroll-page id="pageC">C</scroll-page>
+    </scroll-container>
+  </div>
+</section>
+```
+
+```css interactive-example
+/* stylelint-disable selector-type-no-unknown */
+.container {
+  flex-direction: column;
+}
+
+.nav a {
+  color: #009e5f;
+}
+
+scroll-container {
+  border: 1px solid black;
+  display: block;
+  height: 200px;
+  overflow-y: scroll;
+  width: 200px;
+}
+
+scroll-page {
+  align-items: center;
+  display: flex;
+  font-size: 5em;
+  height: 100%;
+  justify-content: center;
+}
+```
 
 なお、ユーザーが実行したスクロールなど、その他のスクロールはこのプロパティの影響を受けません。このプロパティがルート要素に指定された場合は、代わりにビューポートに適用されます。このプロパティが `body` 要素に指定された場合は、ビューポートには適用され*ません*。
 
@@ -24,6 +79,7 @@ scroll-behavior: smooth;
 scroll-behavior: inherit;
 scroll-behavior: initial;
 scroll-behavior: revert;
+scroll-behavior: revert-layer;
 scroll-behavior: unset;
 ```
 
@@ -34,7 +90,7 @@ scroll-behavior: unset;
 - `auto`
   - : スクロールするボックスは瞬時にスクロールします。
 - `smooth`
-  - : スクロールするボックスは、ユーザーエージェント定義のタイミング関数を使い、ユーザーエージェント定義の時間をかけて、円滑ににスクロールします。もし存在するなら、ユーザーエージェントはプラットフォームの慣例に従うべきです。
+  - : スクロールするボックスは、ユーザーエージェント定義のイージング関数を使い、ユーザーエージェント定義の時間をかけて、円滑にスクロールします。もし存在するなら、ユーザーエージェントはプラットフォームの慣例に従うべきです。
 
 ## 公式定義
 
@@ -71,7 +127,8 @@ a {
   width: 50px;
   text-decoration: none;
 }
-nav, .scroll-container {
+nav,
+.scroll-container {
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -98,7 +155,7 @@ nav {
 
 #### 結果
 
-{{ EmbedLiveSample("Setting_smooth_scroll_behavior", "100%", 250) }}
+{{ EmbedLiveSample("スクロールの動きをスムーズに設定", "100%", 250) }}
 
 ## 仕様書
 

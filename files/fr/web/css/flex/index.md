@@ -1,7 +1,6 @@
 ---
 title: flex
 slug: Web/CSS/flex
-translation_of: Web/CSS/flex
 ---
 
 {{CSSRef}}
@@ -20,43 +19,33 @@ Pour la plupart des cas, on utilisera une des valeurs suivantes : `auto`, `initi
 
 ```html hidden
 <div class="flex-container">
-
-   <div class="item auto">auto</div>
-   <div class="item auto">auto</div>
-   <div class="item auto">auto</div>
-
+  <div class="item auto">auto</div>
+  <div class="item auto">auto</div>
+  <div class="item auto">auto</div>
 </div>
 
 <div class="flex-container">
-
-   <div class="item auto">auto</div>
-   <div class="item initial">initial</div>
-   <div class="item initial">initial</div>
-
+  <div class="item auto">auto</div>
+  <div class="item initial">initial</div>
+  <div class="item initial">initial</div>
 </div>
 
 <div class="flex-container">
-
-   <div class="item auto">auto</div>
-   <div class="item auto">auto</div>
-   <div class="item none">none</div>
-
+  <div class="item auto">auto</div>
+  <div class="item auto">auto</div>
+  <div class="item none">none</div>
 </div>
 
 <div class="flex-container">
-
-   <div class="item initial">initial</div>
-   <div class="item none">none</div>
-   <div class="item none">none</div>
-
+  <div class="item initial">initial</div>
+  <div class="item none">none</div>
+  <div class="item none">none</div>
 </div>
 
 <div class="flex-container">
-
-   <div class="item four">4</div>
-   <div class="item two">2</div>
-   <div class="item one">1</div>
-
+  <div class="item four">4</div>
+  <div class="item two">2</div>
+  <div class="item one">1</div>
 </div>
 ```
 
@@ -66,11 +55,11 @@ Pour la plupart des cas, on utilisera une des valeurs suivantes : `auto`, `initi
 }
 
 .flex-container {
-   background-color: #F4F7F8;
-   resize: horizontal;
-   overflow: hidden;
-   display: flex;
-   margin: 1em;
+  background-color: #f4f7f8;
+  resize: horizontal;
+  overflow: hidden;
+  display: flex;
+  margin: 1em;
 }
 
 .item {
@@ -78,7 +67,7 @@ Pour la plupart des cas, on utilisera une des valeurs suivantes : `auto`, `initi
   padding: 0.5em;
   width: 110px;
   min-width: 0;
-  background-color: #1B5385;
+  background-color: #1b5385;
   color: white;
   font-family: monospace;
 }
@@ -112,7 +101,7 @@ Pour la plupart des cas, on utilisera une des valeurs suivantes : `auto`, `initi
 
 Par défaut, les éléments flexibles ne se rétrécissent pas en dessous de la taille minimale du contenu. Pour modifier ce comportement, il faudra paramétrer {{cssxref("min-width")}} ou {{cssxref("min-height")}}.
 
-Voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) pour plus d'informations.
+Voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) pour plus d'informations.
 
 ## Syntaxe
 
@@ -184,7 +173,8 @@ La propriété `flex` peut être définie avec une, deux ou trois valeurs.
 - `<'flex-basis'>`
   - : Voir {{cssxref("flex-basis")}}. Une valeur valide pour {{cssxref("width")}} et {{cssxref("height")}}. La valeur par défaut est `0`.
 
-> **Note :** Lorsqu'on utilise une ou deux valeurs sans unité dans la règle, `flex-basis` vaudra 0. Pour plus d'informations, voir [le brouillon de spécification du module des boîtes flexibles](https://drafts.csswg.org/css-flexbox/#flex-common).
+> [!NOTE]
+> Lorsqu'on utilise une ou deux valeurs sans unité dans la règle, `flex-basis` vaudra 0. Pour plus d'informations, voir [le brouillon de spécification du module des boîtes flexibles](https://drafts.csswg.org/css-flexbox/#flex-common).
 
 ## Définition formelle
 
@@ -217,8 +207,10 @@ La propriété `flex` peut être définie avec une, deux ou trois valeurs.
 
 ```html
 <div id="flex-container">
-    <div class="flex-item" id="flex">Boîte flexible (cliquez pour basculer l’affichage de la boîte « normale »)</div>
-    <div class="raw-item" id="raw">Boîte « normale » </div>
+  <div class="flex-item" id="flex">
+    Boîte flexible (cliquez pour basculer l’affichage de la boîte « normale »)
+  </div>
+  <div class="raw-item" id="raw">Boîte « normale »</div>
 </div>
 ```
 
@@ -227,7 +219,7 @@ La propriété `flex` peut être définie avec une, deux ou trois valeurs.
 ```js
 var flex = document.getElementById("flex");
 var raw = document.getElementById("raw");
-flex.addEventListener("click", function() {
+flex.addEventListener("click", function () {
   raw.style.display = raw.style.display == "none" ? "block" : "none";
 });
 ```
@@ -262,5 +254,5 @@ flex.addEventListener("click", function() {
 
 ## Voir aussi
 
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- Guide sur les boîtes flexibles : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- Guide sur les boîtes flexibles : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_

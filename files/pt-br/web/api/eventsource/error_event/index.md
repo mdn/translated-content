@@ -1,12 +1,11 @@
 ---
 title: EventSource.onerror
 slug: Web/API/EventSource/error_event
-original_slug: Web/API/EventSource/onerror
 ---
 
 {{APIRef('WebSockets API')}}
 
-A propriedade **`onerror`** da interface {{domxref("EventSource")}} é um {{event("Event_handlers", "event handler")}} chamado quando um erro ocorre e um evento {{event("error")}} é despachado para o objeto `EventSource`.
+A propriedade **`onerror`** da interface {{domxref("EventSource")}} é um [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) chamado quando um erro ocorre e um evento [`error`](/pt-BR/docs/Web/API/HTMLElement/error_event) é despachado para o objeto `EventSource`.
 
 ## Sintaxe
 
@@ -17,22 +16,21 @@ eventSource.onerror = function
 ## Exemplos
 
 ```js
-evtSource.onerror = function() {
+evtSource.onerror = function () {
   console.log("EventSource failed.");
 };
 ```
 
-> **Nota:** Você pode encontrar um exemplo completo no GitHub — veja [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!NOTE]
+> Você pode encontrar um exemplo completo no GitHub — veja [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
 ## Especificações
 
-| Especificação                                                                                                | Status                           | Comentário        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------- |
-| {{SpecName('HTML WHATWG', "comms.html#handler-eventsource-onerror", "onerror")}} | {{Spec2('HTML WHATWG')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.EventSource.error_event")}}
+{{Compat}}
 
 ## Veja também
 

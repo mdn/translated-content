@@ -1,32 +1,38 @@
 ---
-title: CanvasRenderingContext2D.scale()
+title: CanvasRenderingContext2D：scale() 方法
 slug: Web/API/CanvasRenderingContext2D/scale
+l10n:
+  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.scale()`** 是 Canvas 2D API 根据 x 水平方向和 y 垂直方向，为 canvas 单位添加缩放变换的方法。
+Canvas 2D API 的 **`CanvasRenderingContext2D.scale()`** 方法用于根据水平和垂直方向，为 canvas 单位添加缩放变换。
 
-默认的，在 canvas 中一个单位实际上就是一个像素。例如，如果我们将 0.5 作为缩放因子，最终的单位会变成 0.5 像素，并且形状的尺寸会变成原来的一半。相似的方式，我们将 2.0 作为缩放因子，将会增大单位尺寸变成两个像素。形状的尺寸将会变成原来的两倍。
+默认情况下，在 canvas 中一个单位实际上就是一个像素。例如，如果我们将 0.5 作为缩放因子，最终的单位会变成 0.5 像素，并且形状的尺寸会变成原来的一半。相似的方式，我们将 2.0 作为缩放因子，将会增大单位尺寸变成两个像素。形状的尺寸将会变成原来的两倍。
 
 ## 语法
 
-```
-void ctx.scale(x, y);
+```js-nolint
+scale(x, y)
 ```
 
 ### 参数
 
 - `x`
-  - : 水平方向的缩放因子。A negative value flips pixels across the vertical axis. A value of `1` results in no horizontal scaling.
-- y
-  - : 垂直方向的缩放因子。A negative value flips pixels across the horizontal axis. A value of `1` results in no vertical scaling.
+  - : 水平方向的缩放因子。负值会将像素沿垂直轴翻转。值为 `1` 表示没有水平缩放。
+- `y`
+  - : 垂直方向的缩放因子。负值会将像素沿水平轴翻转。值为 `1` 表示没有垂直缩放。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
-### 使用 `scale` 方法
+### 缩放形状
 
-这是一段使用 `scale` 方法的简单的代码片段。
+这个示例绘制了一个缩放后的矩形。然后绘制一个未缩放的矩形进行对比。
 
 #### HTML
 
@@ -36,38 +42,38 @@ void ctx.scale(x, y);
 
 #### JavaScript
 
-The rectangle has a specified width of 8 and a height of 20. The transformation matrix scales it by 9x horizontally and by 3x vertically. Thus, its final size is a width of 72 and a height of 60.
+该矩形的指定宽度为 8，高度为 20。变换矩阵将其水平缩放为 9 倍，垂直缩放为 3 倍。因此，它的最终尺寸为宽度 72 和高度 60。
 
-Notice that its position on the canvas also changes. Since its specified corner is (10, 10), its rendered corner becomes (90, 30).
+注意，它在画布上的位置也发生了变化。由于其指定的角落是 (10, 10)，其渲染角落变为 (90, 30)。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-// Scaled rectangle
+// 缩放后的矩形
 ctx.scale(9, 3);
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 ctx.fillRect(10, 10, 8, 20);
 
-// Reset current transformation matrix to the identity matrix
+// 将当前变换矩阵重置为单位矩阵
 ctx.setTransform(1, 0, 0, 1, 0, 0);
 
-// Non-scaled rectangle
-ctx.fillStyle = 'gray';
+// 未缩放的矩形
+ctx.fillStyle = "gray";
 ctx.fillRect(10, 10, 8, 20);
 ```
 
 #### 结果
 
-The scaled rectangle is red, and the non-scaled rectangle is gray.
+缩放后的矩形是红色的，未缩放的矩形是灰色的。
 
-{{ EmbedLiveSample('Scaling_a_shape', 700, 180) }}
+{{ EmbedLiveSample('缩放形状', 700, 180) }}
 
-### 使用 scale 水平或竖直翻转
+### 水平或垂直翻转
 
-你可以使用 `ctx.scale(-1, 1)` 水平翻转上下文，使用 `ctx.scale(1, -1)` 垂直翻转上下文。在这个例子中，"Hello world!" 被水平翻转。
+你可以使用 `scale(-1, 1)` 来将上下文水平翻转，使用 `scale(1, -1)` 来将其垂直翻转。在这个示例中，单词“Hello world!”被水平翻转。
 
-Note that the call to {{domxref("CanvasRenderingContext2D.fillText()", "fillText()")}} specifies a negative x coordinate. This is to adjust for the negative scaling factor: `-280 * -1` becomes `280`, and text is drawn leftwards from that point.
+请注意，调用 {{domxref("CanvasRenderingContext2D.fillText()", "fillText()")}} 方法时指定了一个负的 x 坐标。这是为了调整负的缩放因子：`-280 * -1` 变成了 `280`，并且文本从该点向左绘制。
 
 #### HTML
 
@@ -78,20 +84,20 @@ Note that the call to {{domxref("CanvasRenderingContext2D.fillText()", "fillText
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.scale(-1, 1);
-ctx.font = '48px serif';
-ctx.fillText('Hello world!', -280, 90);
+ctx.font = "48px serif";
+ctx.fillText("Hello world!", -280, 90);
 ctx.setTransform(1, 0, 0, 1, 0, 0);
 ```
 
-#### Result
+#### 结果
 
-{{ EmbedLiveSample('Flipping_things_horizontally_or_vertically', 700, 180) }}
+{{ EmbedLiveSample('水平或垂直翻转', 700, 180) }}
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 
@@ -101,4 +107,4 @@ ctx.setTransform(1, 0, 0, 1, 0, 0);
 
 ## 参见
 
-- 接口定义，{{domxref("CanvasRenderingContext2D")}}
+- 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}

@@ -1,13 +1,9 @@
 ---
 title: Grille
 slug: Glossary/Grid
-tags:
-  - CSS
-  - Glossaire
-  - Grilles
-translation_of: Glossary/Grid
-original_slug: Glossaire/Grid
 ---
+
+{{GlossarySidebar}}
 
 Une grille _CSS_ est définie en utilisant la valeur `grid` de la propriété `display` ; vous pouvez définir les colonnes et les lignes de votre grille en utilisant les propriétés {{cssxref("grid-template-rows")}} et {{cssxref("grid-template-columns")}}.
 
@@ -20,20 +16,22 @@ Dans l'exemple ci-dessous, nous avons créé une grille explicite de 3 colonnes 
 ## Exemple
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -47,14 +45,14 @@ Dans l'exemple ci-dessous, nous avons créé une grille explicite de 3 colonnes 
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
 </div>
 ```
 
@@ -71,4 +69,4 @@ Dans l'exemple ci-dessous, nous avons créé une grille explicite de 3 colonnes 
 
 ### En lire plus
 
-- Guide des grilles CSS : _[Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)_
+- Guide des grilles CSS : _[Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_

@@ -1,10 +1,9 @@
 ---
 title: Conclusão
 slug: Web/API/Canvas_API/Tutorial/Finale
-original_slug: Web/Guide/HTML/Canvas_tutorial/Conclusão
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
 
 Parabéns! Você terminou o [Canvas tutorial](/pt-BR/docs/Web/API/Canvas_API/Tutorial)! Este conhecimento ajudará você a fazer ótimos gráficos 2D na web.
 
@@ -12,9 +11,9 @@ Parabéns! Você terminou o [Canvas tutorial](/pt-BR/docs/Web/API/Canvas_API/Tut
 
 Há uma variedade de demonstrações e mais explicações sobre canvas nesses sites:
 
-- [Codepen.io](http://codepen.io/search?q=canvas)
+- [Codepen.io](https://codepen.io/search?q=canvas)
   - : Front End Developer Playground & Code Editor no navegador.
-- [HTML5CanvasTutorials](http://www.html5canvastutorials.com/)
+- [HTML5CanvasTutorials](https://www.html5canvastutorials.com/)
   - : Exemplos para a maioria das APIs canvas.
 - [31 days of Canvas tutorials](http://creativejs.com/2011/08/31-days-of-canvas-tutorials/)
   - : Uma ótima fundação para codificação visual em JavaScript .
@@ -25,7 +24,7 @@ Há uma variedade de demonstrações e mais explicações sobre canvas nesses si
 
 Essas APIs podem ser úteis, quando trabalhando mais com canvas e gráficos:
 
-- [WebGL](/pt-BR/docs/Web/WebGL)
+- [WebGL](/pt-BR/docs/Web/API/WebGL_API)
   - : API para renderização interativa de gráficos 3D.
 - [SVG](/pt-BR/docs/Web/SVG)
   - : Scalable Vector Graphics permitem que você descreva imagens como conjuntos de vetores (linhas) e formas, a fim de permitir que eles sejam redimensionados sem problemas, independentemente do tamanho em que são desenhados.
@@ -34,7 +33,7 @@ Essas APIs podem ser úteis, quando trabalhando mais com canvas e gráficos:
 
 ## Questions
 
-- [Stackoverflow](http://stackoverflow.com/questions/tagged/canvas)
+- [Stackoverflow](https://stackoverflow.com/questions/tagged/canvas)
   - : Perguntas marcadas como "canvas".
 - [Comentários sobre esse tutorial – A comunidade MDN de documentação](/pt-BR/docs/MDN)
   - : Se você tiver algum comentário sobre este tutorial ou quiser nos agradecer, fique à vontade para entrar em contato conosco!

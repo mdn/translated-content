@@ -1,10 +1,6 @@
 ---
 title: Audio()
 slug: Web/API/HTMLAudioElement/Audio
-tags:
-  - аудио
-translation_of: Web/API/HTMLAudioElement/Audio
-original_slug: Web/API/HTMLAudioElement/Audio()
 ---
 
 {{APIRef("HTML DOM")}}
@@ -41,7 +37,7 @@ audioObj = new Audio(url);
 Лучший подход, основанный на событии:
 
 ```js
-myAudioElement.addEventListener("canplaythrough", event => {
+myAudioElement.addEventListener("canplaythrough", (event) => {
   /* аудио может быть воспроизведено; проиграть, если позволяют разрешения */
   myAudioElement.play();
 });
@@ -55,7 +51,7 @@ myAudioElement.addEventListener("canplaythrough", event => {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

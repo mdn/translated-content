@@ -3,7 +3,7 @@ title: 函数
 slug: Web/JavaScript/Reference/Functions
 ---
 
-{{jsSidebar("Functions")}}一般来说，一个函数是可以通过外部代码调用的一个“子程序”（或在递归的情况下由内部函数调用）。像程序本身一样，一个函数由称为函数体的一系列语句组成。值可以传递给一个函数，函数将返回一个值。在 JavaScript 中，函数是**头等 (**first-class**)**对象，因为它们可以像任何其他**对象**一样具有属性和方法。它们与其他对象的区别在于函数可以被调用。简而言之，它们是[`Function`](/zh-CN/JavaScript/Reference/Global_Objects/Function)对象。
+{{jsSidebar("Functions")}}一般来说，一个函数是可以通过外部代码调用的一个“子程序”（或在递归的情况下由内部函数调用）。像程序本身一样，一个函数由称为函数体的一系列语句组成。值可以传递给一个函数，函数将返回一个值。在 JavaScript 中，函数是**头等 (**first-class**)**对象，因为它们可以像任何其他**对象**一样具有属性和方法。它们与其他对象的区别在于函数可以被调用。简而言之，它们是[`Function`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)对象。
 
 有关更多示例和说明，请参阅[有关函数的 JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide/Functions)。
 
@@ -11,42 +11,41 @@ slug: Web/JavaScript/Reference/Functions
 
 在 JavaScript 中，每个函数其实都是一个`Function`对象。查看{{jsxref("Function")}}页面`了解其`属性和方法。
 
-如果一个函数中没有使用 return 语句，则它默认返回`undefined`。要想返回一个特定的值，则函数必须使用 [`return`](/zh-CN/JavaScript/Reference/Statements/return) 语句来指定一个要返回的值。(使用[new](/zh-CN/JavaScript/Reference/Operators/new)关键字调用一个[构造函数](/zh-CN/JavaScript/Reference/Global_Objects/Object/constructor)除外)。
+如果一个函数中没有使用 return 语句，则它默认返回`undefined`。要想返回一个特定的值，则函数必须使用 [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 语句来指定一个要返回的值。(使用[new](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)关键字调用一个[构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)除外)。
 
 调用函数时，传递给函数的值被称为函数的实参（值传递），对应位置的函数参数名叫作形参。如果实参是一个包含原始值 (数字，字符串，布尔值) 的变量，则就算函数在内部改变了对应形参的值，返回后，该实参变量的值也不会改变。如果实参是一个对象引用，则对应形参会和该实参指向同一个对象。假如函数在内部改变了对应形参的值，返回后，实参指向的对象的值也会改变：
 
 ```js
- /* 定义函数 myFunc */
- function myFunc(theObject)
- {
-   //实参 mycar 和形参 theObject 指向同一个对象。
-   theObject.brand = "Toyota";
- }
+/* 定义函数 myFunc */
+function myFunc(theObject) {
+  //实参 mycar 和形参 theObject 指向同一个对象。
+  theObject.brand = "Toyota";
+}
 
- /*
-  * 定义变量 mycar;
-  * 创建并初始化一个对象;
-  * 将对象的引用赋值给变量 mycar
-  */
- var mycar = {
-   brand: "Honda",
-   model: "Accord",
-   year: 1998
- };
+/*
+ * 定义变量 mycar;
+ * 创建并初始化一个对象;
+ * 将对象的引用赋值给变量 mycar
+ */
+var mycar = {
+  brand: "Honda",
+  model: "Accord",
+  year: 1998,
+};
 
- /* 弹出 'Honda' */
- window.alert(mycar.brand);
+/* 弹出 'Honda' */
+window.alert(mycar.brand);
 
- /* 将对象引用传给函数 */
- myFunc(mycar);
+/* 将对象引用传给函数 */
+myFunc(mycar);
 
- /*
-  * 弹出 'Toyota',对象的属性已被修改。
-  */
- console.log(mycar.brand);
+/*
+ * 弹出 'Toyota',对象的属性已被修改。
+ */
+console.log(mycar.brand);
 ```
 
-在函数执行时，[`this` 关键字](/zh-CN/JavaScript/Reference/Operators/this)并不会指向正在运行的函数本身，而是指向调用该函数的对象。所以，如果你想在函数内部获取函数自身的引用，只能使用函数名或者使用[arguments.callee](/zh-CN/JavaScript/Reference/Functions_and_function_scope/arguments/callee)属性 (**[严格模式](/zh-CN/JavaScript/Strict_mode)**下不可用)，如果该函数是一个匿名函数，则你只能使用后者。
+在函数执行时，[`this` 关键字](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)并不会指向正在运行的函数本身，而是指向调用该函数的对象。所以，如果你想在函数内部获取函数自身的引用，只能使用函数名或者使用[arguments.callee](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee)属性 (**[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)**下不可用)，如果该函数是一个匿名函数，则你只能使用后者。
 
 ## 函数定义
 
@@ -54,7 +53,7 @@ slug: Web/JavaScript/Reference/Functions
 
 ### 函数声明 (函数语句)
 
-有一个特殊的语法来声明函数 (查看[函数语句](/zh-CN/JavaScript/Reference/Statements/function)了解详情)：
+有一个特殊的语法来声明函数 (查看[函数语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)了解详情)：
 
 ```plain
 function name([param[, param[, ... param]]]) { statements }
@@ -85,28 +84,28 @@ var myFunction = function name([param[, param[, ... param]]]) { statements }
 下面是**匿名**函数的一个例子（函数没有名字）：
 
 ```js
-var myFunction = function() {
-    // statements
-}
+var myFunction = function () {
+  // statements
+};
 ```
 
 也可以在定义时为函数**命名**：
 
 ```js
-var myFunction = function namedFunction(){
-    // statements
-}
+var myFunction = function namedFunction() {
+  // statements
+};
 ```
 
-命名函数表达式的好处是当我们遇到错误时，堆栈跟踪会显示函数名，容易寻找错误。
+具名函数表达式的好处是当我们遇到错误时，堆栈跟踪会显示函数名，容易寻找错误。
 
 可以看到，上面的两个例子都不以 function 开头。不以 function 开头的函数语句就是函数表达式定义。
 
 当函数只使用一次时，通常使用**IIFE (_Immediately Invokable Function Expressions_)。**
 
 ```js
-(function() {
-    statements
+(function () {
+  statements;
 })();
 ```
 
@@ -157,7 +156,8 @@ function* [name]([param] [, param] [..., param]) { statements }
 
 ### `Function`构造函数
 
-> **备注：** 不推荐使用 `Function` 构造函数创建函数，因为它需要的函数体作为字符串可能会阻止一些 JS 引擎优化，也会引起其他问题。
+> [!NOTE]
+> 不推荐使用 `Function` 构造函数创建函数，因为它需要的函数体作为字符串可能会阻止一些 JS 引擎优化，也会引起其他问题。
 
 所有其他对象，{{jsxref("Function")}} 对象可以用 new 操作符创建：
 
@@ -174,9 +174,10 @@ new Function (arg1, arg2, ... argN, functionBody)
 
 ### 生成器函数的构造函数
 
-> **备注：** `GeneratorFunction` 不是一个全局对象，但可以从构造函数实例取得。(详情请查阅[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/生成器函数)).
+> **备注：** `GeneratorFunction` 不是一个全局对象，但可以从构造函数实例取得。(详情请查阅[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)).
 
-> **备注：** 不推荐使用构造器函数的构造函数 (`GeneratorFunction` constructor) 创建函数，因为它需要的函数体作为字符串可能会阻止一些 JS 引擎优化，也会引起其他问题。
+> [!NOTE]
+> 不推荐使用构造器函数的构造函数 (`GeneratorFunction` constructor) 创建函数，因为它需要的函数体作为字符串可能会阻止一些 JS 引擎优化，也会引起其他问题。
 
 所有其他对象，{{jsxref("GeneratorFunction")}} 对象可以用 new 操作符创建：
 
@@ -199,16 +200,16 @@ new GeneratorFunction (arg1, arg2, ... argN, functionBody)
 
 ### 剩余参数
 
-剩余参数语法允许将数量不限的参数描述成一个数组。参见：[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)。
+剩余参数语法允许将数量不限的参数描述成一个数组。参见：[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)。
 
 ## `arguments`对象
 
 你可以参阅在函数里使用`arguments`对象的函数参数。参见：[arguments](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)。
 
-- [`arguments`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments): 一个包含了传递给当前执行函数参数的类似于数组的对象。
-- [`arguments.callee`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee) {{Deprecated_Inline}}: 当前正在执行的函数。
+- [`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments): 一个包含了传递给当前执行函数参数的类似于数组的对象。
+- [`arguments.callee`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee) {{Deprecated_Inline}}: 当前正在执行的函数。
 - [`arguments.caller`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller){{Deprecated_Inline}} : 调用当前执行函数的函数。
-- [`arguments.length`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length): 传给函数的参数的数目。
+- [`arguments.length`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/length): 传给函数的参数的数目。
 
 ## 方法函数定义
 
@@ -226,10 +227,10 @@ new GeneratorFunction (arg1, arg2, ... argN, functionBody)
 从 ECMAScript 6 开始，你可以用更短的语法定义自己的方法，类似于 getters 和 setters。详情请查阅 [method definitions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions) .
 
 ```js
- var obj = {
-   foo() {},
-   bar() {}
- };
+var obj = {
+  foo() {},
+  bar() {},
+};
 ```
 
 ## 构造函数 vs 函数声明 vs 函数表达式
@@ -239,30 +240,30 @@ new GeneratorFunction (arg1, arg2, ... argN, functionBody)
 一个用`Function`构造函数定义的函数，被赋值给变量 multiply：
 
 ```js
-var multiply = new Function('x', 'y', 'return x * y');
+var multiply = new Function("x", "y", "return x * y");
 ```
 
 一个名为`multiply`的函数声明：
 
 ```js
 function multiply(x, y) {
-   return x * y;
+  return x * y;
 } // 没有分号
 ```
 
 一个匿名函数的函数表达式，被赋值给变量`multiply`：
 
 ```js
- var multiply = function(x, y) {
-   return x * y;
- };
+var multiply = function (x, y) {
+  return x * y;
+};
 ```
 
 一个命名为`func_named`的函数的函数表达式，被赋值给变量`multiply`：
 
 ```js
 var multiply = function func_name(x, y) {
-   return x * y;
+  return x * y;
 };
 ```
 
@@ -286,8 +287,7 @@ alert(x); // throws an error
 使用用 '`new Function'定义的函数没有函数名。` 然而，在 [SpiderMonkey](/zh-CN/docs/Mozilla/Projects/SpiderMonkey) JavaScript 引擎中，其函数的序列化形式表现的好像它拥有一个名叫"anonymous"的名称一样。比如，使用 `alert(new Function())` 输出：
 
 ```js
-function anonymous() {
-}
+function anonymous() {}
 ```
 
 而实际上其函数并没有名称，`anonymous` 不是一个可以在函数内被访问到的变量。例如，下面的例子将会导致错误：
@@ -302,7 +302,7 @@ foo();
 ```js
 foo(); // alerts FOO!
 function foo() {
-   alert('FOO!');
+  alert("FOO!");
 }
 ```
 
@@ -313,7 +313,9 @@ function foo() {
 有一点应该要注意的，在通过解析 Function 构造函数字符串产生的函数里，内嵌的函数表达式和函数声明不会被重复解析。例如：
 
 ```js
-var foo = (new Function("var bar = \'FOO!\';\nreturn(function() {\n\talert(bar);\n});"))();
+var foo = new Function(
+  "var bar = 'FOO!';\nreturn(function() {\n\talert(bar);\n});",
+)();
 foo(); // 函数体字符串"function() {\n\talert(bar);\n}"的这一部分不会被重复解析。
 ```
 
@@ -323,46 +325,49 @@ foo(); // 函数体字符串"function() {\n\talert(bar);\n}"的这一部分不�
 - 不再是函数或者脚本自身的“源元素”（source element）。“源元素”是脚本或函数体中的非嵌套语句。
 
 ```js
-var x = 0;               // source element
-if (x === 0) {           // source element
-   x = 10;               // 非 source element
-   function boo() {}     // 非 source element
+var x = 0; // source element
+if (x === 0) {
+  // source element
+  x = 10; // 非 source element
+  function boo() {} // 非 source element
 }
-function foo() {         // source element
-   var y = 20;           // source element
-   function bar() {}     // source element
-   while (y === 10) {    // source element
-      function blah() {} // 非 source element
-      y++;               //非 source element
-   }
+function foo() {
+  // source element
+  var y = 20; // source element
+  function bar() {} // source element
+  while (y === 10) {
+    // source element
+    function blah() {} // 非 source element
+    y++; //非 source element
+  }
 }
 ```
 
-### 例子
+### 示例
 
 ```js
 // 函数声明
 function foo() {}
 
 // 函数表达式
-(function bar() {})
+(function bar() {});
 
 // 函数表达式
-x = function hello() {}
+x = function hello() {};
 
 if (x) {
-   // 函数表达式
-   function world() {}
+  // 函数表达式
+  function world() {}
 }
 
 // 函数声明
 function a() {
-   // 函数声明
-   function b() {}
-   if (0) {
-      //函数表达式
-      function c() {}
-   }
+  // 函数声明
+  function b() {}
+  if (0) {
+    //函数表达式
+    function c() {}
+  }
 }
 ```
 
@@ -371,7 +376,7 @@ function a() {
 从 ECMAScript 6 开始，在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下，块里的函数作用域为这个块。ECMAScript 6 之前不建议块级函数在严格模式下使用。
 
 ```js
-'use strict';
+"use strict";
 
 function f() {
   return 1;
@@ -396,9 +401,10 @@ f() === 1; // true
 
 ```js
 if (shouldDefineZero) {
-   function zero() {     // DANGER: 兼容性风险
-      console.log("This is zero.");
-   }
+  function zero() {
+    // DANGER: 兼容性风险
+    console.log("This is zero.");
+  }
 }
 ```
 
@@ -411,9 +417,9 @@ ECMAScript 6 中，如果`shouldDefineZero`是 false，则永远不会定义 zer
 ```js
 var zero;
 if (0) {
-   zero = function() {
-      console.log("This is zero.");
-   };
+  zero = function () {
+    console.log("This is zero.");
+  };
 }
 ```
 
@@ -426,12 +432,12 @@ if (0) {
 ```js
 // 这个函数返回一个由 0 开头并填充的字符串
 function padZeros(num, totalLen) {
-   var numStr = num.toString();             // 用字符串返回值进行初始化
-   var numZeros = totalLen - numStr.length; // 计算 zeros 顺序
-   for (var i = 1; i <= numZeros; i++) {
-      numStr = "0" + numStr;
-   }
-   return numStr;
+  var numStr = num.toString(); // 用字符串返回值进行初始化
+  var numZeros = totalLen - numStr.length; // 计算 zeros 顺序
+  for (var i = 1; i <= numZeros; i++) {
+    numStr = "0" + numStr;
+  }
+  return numStr;
 }
 ```
 
@@ -439,24 +445,24 @@ function padZeros(num, totalLen) {
 
 ```js
 var result;
-result = padZeros(42,4); // returns "0042"
-result = padZeros(42,2); // returns "42"
-result = padZeros(5,4);  // returns "0005"
+result = padZeros(42, 4); // returns "0042"
+result = padZeros(42, 2); // returns "42"
+result = padZeros(5, 4); // returns "0005"
 ```
 
 ### 检测函数是否存在
 
-你可以通过 **typeof** 操作符检测一个函数是否存在。在下面的例子中，用一个测试来演示检测 window 对象是否拥有一个 noFunc 函数的属性。如果存在，那就使用它；否则就采取其它的一些操作。
+你可以通过 **typeof** 操作符检测一个函数是否存在。在下面的例子中，用一个测试来演示检测 window 对象是否拥有一个 noFunc 函数的属性。如果存在，那就使用它；否则就采取其他的一些操作。
 
 ```js
-if ('function' === typeof window.noFunc) {
-   // use noFunc()
- } else {
-   // do something else
- }
+if ("function" === typeof window.noFunc) {
+  // use noFunc()
+} else {
+  // do something else
+}
 ```
 
-注意在 if 语句中，使用了 noFunc 的引用 -- 在函数名的后面没有括号“（）”，所以实际函数并没有被调用。
+注意在 if 语句中，使用了 noFunc 的引用——在函数名的后面没有括号“（）”，所以实际函数并没有被调用。
 
 ## 规范
 
@@ -481,4 +487,4 @@ if ('function' === typeof window.noFunc) {
 - {{jsxref("Functions/get", "getter")}}
 - {{jsxref("Functions/set", "setter")}}
 - {{jsxref("Functions/Method_definitions", "Method definitions")}}
-- [Functions and function scope](/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope)
+- [Functions and function scope](/zh-CN/docs/Web/JavaScript/Reference/Functions)

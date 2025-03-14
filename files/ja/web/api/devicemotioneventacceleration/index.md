@@ -1,23 +1,27 @@
 ---
-title: DeviceAcceleration
+title: DeviceMotionEventAcceleration
 slug: Web/API/DeviceMotionEventAcceleration
-original_slug: Web/API/DeviceAcceleration
+l10n:
+  sourceCommit: f45409ba2169ff05e433d21aa4ee0424079916b8
 ---
 
-{{ ApiRef("Device Orientation Events") }}{{SeeCompatTable}}
+{{securecontext_header}}{{ ApiRef("Device Orientation Events") }}
 
-`DeviceAcceleration`オブジェクトは、3 つの軸に沿って発生しているデバイスの加速度についての情報を提供します。
+**`DeviceMotionEventAcceleration`** オブジェクトは、端末が 3 軸すべてで経験している加速度の量に関する情報を提供します。
 
-## プロパティ
+## インスタンスプロパティ
 
-- {{domxref("DeviceAcceleration.x")}} {{readonlyInline}}
-  - : X 軸に沿った加速度の大きさ。**読み取り専用。**
-- {{domxref("DeviceAcceleration.y")}} {{readonlyInline}}
-  - : Y 軸に沿った加速度の大きさ。**読み取り専用。**
-- {{domxref("DeviceAcceleration.z")}} {{readonlyInline}}
-  - : Z 軸に沿った加速度の大きさ。**読み取り専用。**
+- {{domxref("DeviceMotionEventAcceleration.x")}} {{ReadOnlyInline}}
+  - : X 軸に沿った加速度の大きさです。
+- {{domxref("DeviceMotionEventAcceleration.y")}} {{ReadOnlyInline}}
+  - : Y 軸に沿った加速度の大きさです。
+- {{domxref("DeviceMotionEventAcceleration.z")}} {{ReadOnlyInline}}
+  - : Z 軸に沿った加速度の大きさです。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
+## ブラウザーの互換性
+
+{{Compat}}

@@ -7,7 +7,7 @@ slug: Web/SVG/Element/filter
 
 `filter`元素作用是作为原子滤镜操作的容器。它不能直接呈现。可以利用目标 SVG 元素上的{{ SVGAttr("filter") }}属性引用一个滤镜。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
@@ -15,9 +15,9 @@ slug: Web/SVG/Element/filter
 
 ### 全局属性
 
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
-- [XLink 属性](/zh-CN/SVG/Attribute#XLink) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
+- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
+- [XLink 属性](/zh-CN/docs/SVG/Attribute#xlink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -37,26 +37,25 @@ slug: Web/SVG/Element/filter
 
 该元素实现了 `SVGFilterElement` 接口。
 
-## 示例：
+## 示例
 
 #### SVG
 
-```plain
+```html
 <svg width="230" height="120" xmlns="http://www.w3.org/2000/svg">
- <filter id="blurMe">
-   <feGaussianBlur stdDeviation="5"/>
- </filter>
+  <filter id="blurMe">
+    <feGaussianBlur stdDeviation="5" />
+  </filter>
 
- <circle cx="60" cy="60" r="50" fill="green" />
+  <circle cx="60" cy="60" r="50" fill="green" />
 
- <circle cx="170" cy="60" r="50" fill="green"
-          filter="url(#blurMe)" />
+  <circle cx="170" cy="60" r="50" fill="green" filter="url(#blurMe)" />
 </svg>
 ```
 
 #### 结果
 
-{{EmbedLiveSample("Example",232,124,"/files/4227/feGaussianBlur.png")}}
+{{EmbedLiveSample("示例",232,124)}}
 
 ## 规范
 
@@ -84,4 +83,4 @@ slug: Web/SVG/Element/filter
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/zh-CN/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/SVG/Tutorial/Filter_effects)

@@ -1,51 +1,38 @@
 ---
-title: window.scrollbars
+title: "Window: scrollbars プロパティ"
+short-title: scrollbars
 slug: Web/API/Window/scrollbars
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{ApiRef}}
+{{APIRef()}}
 
-## 概要
+`scrollbars` オブジェクトを返します。
 
-scrollbars オブジェクトを返します。このバーの表示は、ウィンドウ内でトグル（表示/非表示の状態を切り替える）ことができます。
+これは `Window` プロパティのうちの論理値を持つ `visible` プロパティの 1 つであり、ウェブブラウザーのユーザーインターフェイスの特定の部分が可視であるかどうかを表すものでした。
+
+プライバシーと相互運用性の理由から、これで `visible` プロパティの値は、この `Window` がポップアップの場合は `false` となり、そうでない場合は `true` となるようになりました。
 
 ## 構文
 
-```
-objRef = window.scrollbars
-```
+単一のプロパティを持つオブジェクトです。
 
-## 例
+- `visible` {{ReadOnlyInline}}
+  - : 論理値のプロパティで、 `false` は `Window` がポップアップの場合、 `true` はそれ以外を表します。
 
-以下の完全な HTML の例は、様々な "bar" オブジェクトの visible プロパティで利用可能な方法を示しています。
+## 仕様書
 
-```html
-<DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8" />
-<title>様々な DOM テスト</title>
+{{Specifications}}
 
-<script>
-// 存在するウィンドウのバーの状態を変更します
-netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserWrite");
-window.scrollbars.visible = !window.scrollbars.visible;
-</script>
+## ブラウザーの互換性
 
-</head>
-<body>
-  <p>様々な DOM テスト</p>
-</body>
-</html>
-```
-
-## 仕様
-
-| 仕様                                                                                                                 | 状態                             | コメント |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-scrollbars', 'Window.scrollbars')}} | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-window-scrollbars', 'Window.scrollbars')}}     | {{Spec2('HTML5 W3C')}}     |          |
+{{Compat}}
 
 ## 関連情報
 
-- [window.locationbar](/ja/docs/DOM/window.locationbar) 、 [window.menubar](/ja/docs/DOM/window.menubar) 、 [window.personalbar](/ja/docs/DOM/window.personalbar) 、 [window.statusbar](/ja/docs/DOM/window.statusbar) 、 [window.toolbar](/ja/docs/DOM/window.toolbar)
+- {{domxref("window.locationbar")}}
+- {{domxref("window.menubar")}}
+- {{domxref("window.personalbar")}}
+- {{domxref("window.statusbar")}}
+- {{domxref("window.toolbar")}}

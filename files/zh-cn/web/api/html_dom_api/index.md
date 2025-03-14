@@ -1,303 +1,312 @@
 ---
-title: The HTML DOM API
+title: HTML DOM API
 slug: Web/API/HTML_DOM_API
 ---
 
 {{DefaultAPISidebar("HTML DOM")}}
 
-The **HTML DOM API** is made up of the interfaces that define the functionality of each of the {{Glossary("element", "elements")}} in {{Glossary("HTML")}}, as well as any supporting types and interfaces they rely upon.
+**HTML DOM API** 由一系列接口组成，它们定义了 {{Glossary("HTML")}} 中每个{{Glossary("element", "元素")}}的功能，以及它们所依赖的任何支持类型和接口。
 
-The functional areas included in the HTML DOM API include:
+HTML DOM API 的功能包括：
 
-- Access to and control of HTML elements via the {{Glossary("DOM")}}.
-- Access to and manipulation of form data.
-- Interacting with the contents of 2D images and the context of an HTML {{HTMLElement("canvas")}}, for example to draw on top of them.
-- Management of media connected to the HTML media elements ({{HTMLElement("audio")}} and {{HTMLElement("video")}}).
-- Dragging and dropping of content on webpages.
-- Access to the browser navigation history
-- Supporting and connective interfaces for other APIs such as [Web Components](/zh-CN/docs/Web/Web_Components), [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API), [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API), [WebSocket](/zh-CN/docs/Web/API/WebSockets_API), and [Server-sent events](/zh-CN/docs/Web/API/Server-sent_events).
+- 通过 {{Glossary("DOM")}} 访问和控制 HTML 元素。
+- 访问和操作表单数据。
+- 与 2D 图像的内容，以及 HTML {{HTMLElement("canvas")}} 元素的上下文进行交互，例如在其上绘制。
+- 管理连接到 HTML 媒体元素的媒体（{{HTMLElement("audio")}} 和 {{HTMLElement("video")}}）。
+- 在网页上拖放内容。
+- 访问浏览器导航历史记录。
+- 支持和关联其他 API 的接口，例如 [Web 组件](/zh-CN/docs/Web/API/Web_components)、{{DOMxRef("Web_Storage_API", "Web Storage", "", "1")}}、{{DOMxRef("Web_Workers_API", "Web Worker", "", "1")}}、{{DOMxRef("WebSockets_API", "WebSocket", "", "1")}} 和 {{DOMxRef("Server-sent_events", "Server-sent 事件", "", "1")}}。
 
-## HTML DOM concepts and usage
+## HTML DOM 概念和用法
 
-In this article, we'll focus on the parts of the HTML DOM that involve engaging with HTML elements. Discussion of other areas, such as [Drag and Drop](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API), [WebSockets](/zh-CN/docs/Web/API/WebSockets_API), [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API), etc. can be found in the documentation for those APIs.
+在本文中，我们将重点关注与 HTML 元素交互的 HTML DOM 部分。其他领域的讨论，例如[拖放](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)、[WebSocket](/zh-CN/docs/Web/API/WebSockets_API)、[Web Storage](/zh-CN/docs/Web/API/Web_Storage_API) 等，可以在这些 API 的文档中找到。
 
-### Structure of an HTML document
+### HTML 文档的结构
 
-The Document Object Model ({{Glossary("DOM")}}) is an architecture that describes the structure of a {{domxref("document")}}; each document is represented by an instance of the interface {{domxref("Document")}}. A document, in turn, consists of a hierarchical tree of **nodes**, in which a node is a fundamental record representing a single object within the document (such as an element or text node).
+文档对象模型（{{Glossary("DOM")}}）是一种描述{{domxref("document", "文档", "", 1)}}结构的架构；每个文档都由 {{domxref("Document")}} 接口的实例表示。而一个文档则由**节点**层次树组成，其中每个节点，都代表文档中单个对象（如元素或文本节点）的基本记录。
 
-Nodes may be strictly organizational, providing a means for grouping other nodes together or for providing a point at which a hierarchy can be constructed; other nodes may represent visible components of a document. Each node is based on the {{domxref("Node")}} interface, which provides properties for getting information about the node as well as methods for creating, deleting, and organizing nodes within the DOM.
+节点可以组织文档结构，提供将其他节点分组，以及构建层级结构的点的方法。其他节点可能代表文档的可见组件。每个节点都基于 {{domxref("Node")}} 接口，该接口提供了获取有关节点信息，以及创建、删除和组织 DOM 中节点的方法。
 
-Nodes don't have any concept of including the content that is actually displayed in the document. They're empty vessels. The fundamental notion of a node that can represent visual content is introduced by the {{domxref("Element")}} interface. An `Element` object instance represents a single element in a document created using either HTML or an {{glossary("XML")}} vocabulary such as {{glossary("SVG")}}.
+节点本身不包含实际显示在文档中的内容，它们是空容器。节点呈现视觉内容的能力，是由 {{domxref("Element")}} 接口引入的。一个 `Element` 对象实例，代表着使用 HTML 或 {{glossary("SVG")}} 等 {{glossary("XML")}} 词汇创建的文档中的单个元素。
 
-For example, consider a document with two elements, one of which has two more elements nested inside it:
-
-![Structure of a document with elements inside a document in a window](dom-structure.svg)
-
-While the {{domxref("Document")}} interface is defined as part of the [DOM](/zh-CN/docs/Web/API/Document_Object_Model) specification, the HTML specification significantly enhances it to add information specific to using the DOM in the context of a web browser, as well as to using it to represent HTML documents specifically.
-
-Among the things added to `Document` by the HTML standard are:
-
-- Support for accessing various information provided by the {{Glossary("HTTP")}} headers when loading the page, such as the [location](/zh-CN/docs/Web/API/Document/location) from which the document was loaded, [cookies](/zh-CN/docs/Web/API/Document/cookie), [modification date](/zh-CN/docs/Web/API/Document/lastModified), [referring site](/zh-CN/docs/Web/API/Document/referrer), and so forth.
-- Access to lists of elements in the document's {{HTMLElement("head")}} block and [body](/zh-CN/docs/Web/API/Document/body), as well as lists of the [images](/zh-CN/docs/Web/API/Document/images), [links](/zh-CN/docs/Web/API/Document/links), [scripts](/zh-CN/docs/Web/API/Document/scripts), etc. contained in the document.
-- Support for interacting with the user by examining [focus](/zh-CN/docs/Web/API/Document/hasFocus) and by executing commands on [editable content](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable).
-- Event handlers for document [events defined by the HTML standard](/zh-CN/docs/Web/API/GlobalEventHandlers) to allow access to [mouse](/zh-CN/docs/Web/API/MouseEvent) and [keyboard](/zh-CN/docs/Web/API/KeyboardEvent) events, [drag and drop](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API), [media control](/zh-CN/docs/Web/API/HTMLMediaElement), and more.
-- Event handlers for events that can be delivered to both elements and documents; these presently include only [copy](/zh-CN/docs/Web/API/HTMLElement/oncopy), [cut](/zh-CN/docs/Web/API/HTMLElement/oncut), and [paste](/zh-CN/docs/Web/API/HTMLElement/onpaste) actions.
-
-### HTML element interfaces
-
-The `Element` interface has been further adapted to represent HTML elements specifically by introducing the {{domxref("HTMLElement")}} interface, which all more specific HTML element classes inherit from. This expands the `Element` class to add HTML-specific general features to the element nodes. Properties added by `HTMLElement` include for example {{domxref("HTMLElement.hidden", "hidden")}} and {{domxref("HTMLElement.innerText", "innerText")}}. `HTMLElement` also adds all the [global event handlers](/zh-CN/docs/Web/API/GlobalEventHandlers).
-
-An {{Glossary("HTML")}} document is a DOM tree in which each of the nodes is an HTML element, represented by the {{domxref("HTMLElement")}} interface. The `HTMLElement` class, in turn, implements `Node`, so every element is also a node (but not the other way around). This way, the structural features implemented by the {{domxref("Node")}} interface are also available to HTML elements, allowing them to be nested within each other, created and deleted, moved around, and so forth.
-
-The `HTMLElement` interface is generic, however, providing only the functionality common to all HTML elements such as the element's ID, its coordinates, the HTML making up the element, information about scroll position, and so forth.
-
-In order to expand upon the functionality of the core `HTMLElement` interface to provide the features needed by a specific element, the `HTMLElement` class is subclassed to add the needed properties and methods. For example, the {{HTMLElement("canvas")}} element is represented by an object of type {{domxref("HTMLCanvasElement")}}. `HTMLCanvasElement` augments the `HTMLElement` type by adding properties such as {{domxref("HTMLCanvasElement.height", "height")}} and methods like {{domxref("HTMLCanvasElement.getContext", "getContext()")}} to provide canvas-specific features.
-
-The overall inheritance for HTML element classes looks like this:
-
-![Hierarchy of interfaces for HTML elements](html-dom-hierarchy.svg)
-
-As such, an element inherits the properties and methods of all of its ancestors. For example, consider a {{HTMLElement("a")}} element, which is represented in the DOM by an object of type {{domxref("HTMLAnchorElement")}}. The element, then, includes the anchor-specific properties and methods described in that class's documentation, but also those defined by {{domxref("HTMLElement")}} and {{domxref("Element")}}, as well as from {{domxref("Node")}} and, finally, {{domxref("EventTarget")}}.
-
-Each level defines a key aspect of the utility of the element. From `Node`, the element inherits concepts surrounding the ability for the element to be contained by another element, and to contain other elements itself. Of special importance is what is gained by inheriting from `EventTarget`: the ability to receive and handle events such as mouse clicks, play and pause events, and so forth.
-
-There are elements that share commonalities and thus have an additional intermediary type. For example, the {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements both present audiovisual media. The corresponding types, {{domxref("HTMLAudioElement")}} and {{domxref("HTMLVideoElement")}}, are both based upon the common type {{domxref("HTMLMediaElement")}}, which in turn is based upon {{domxref("HTMLElement")}} and so forth. `HTMLMediaElement` defines the methods and properties held in common between audio and video elements.
-
-These element-specific interfaces make up the majority of the HTML DOM API, and are the focus of this article. To learn more about the actual structure of the [DOM](/zh-CN/docs/Web/API/Document_Object_Model), see [Introduction to the DOM](/zh-CN/docs/Web/API/Document_Object_Model/Introduction).
-
-## HTML DOM target audience
-
-The features exposed by the HTML DOM are among the most commonly-used APIs in the web developer's arsenal. All but the most simple web applications will use some features of the HTML DOM.
-
-## HTML DOM API interfaces
-
-The majority of the interfaces that comprise the HTML DOM API map almost one-to-one to individual HTML elements, or to a small group of elements with similar functionality. In addition, the HTML DOM API includes a few interfaces and types to support the HTML element interfaces.
-
-### HTML element interfaces
-
-These interfaces represent specific HTML elements (or sets of related elements which have the same properties and methods associated with them).
-
-- [`HTMLAnchorElement`](/zh-CN/docs/Web/API/HTMLAnchorElement)
-- [`HTMLAreaElement`](/zh-CN/docs/Web/API/HTMLAreaElement)
-- [`HTMLAudioElement`](/zh-CN/docs/Web/API/HTMLAudioElement)
-- [`HTMLBRElement`](/zh-CN/docs/Web/API/HTMLBRElement)
-- [`HTMLBaseElement`](/zh-CN/docs/Web/API/HTMLBaseElement)
-- [`HTMLBaseFontElement`](/zh-CN/docs/Web/API/HTMLBaseFontElement) {{Deprecated_Inline}}
-- [`HTMLBodyElement`](/zh-CN/docs/Web/API/HTMLBodyElement)
-- [`HTMLButtonElement`](/zh-CN/docs/Web/API/HTMLButtonElement)
-- [`HTMLCanvasElement`](/zh-CN/docs/Web/API/HTMLCanvasElement)
-- [`HTMLDListElement`](/zh-CN/docs/Web/API/HTMLDListElement)
-- [`HTMLDataElement`](/zh-CN/docs/Web/API/HTMLDataElement)
-- [`HTMLDataListElement`](/zh-CN/docs/Web/API/HTMLDataListElement)
-- [`HTMLDetailsElement`](/zh-CN/docs/Web/API/HTMLDetailsElement)
-- [`HTMLDialogElement`](/zh-CN/docs/Web/API/HTMLDialogElement)
-- [`HTMLDirectoryElement`](/zh-CN/docs/Web/API/HTMLDirectoryElement)
-- [`HTMLDivElement`](/zh-CN/docs/Web/API/HTMLDivElement)
-- [`HTMLElement`](/zh-CN/docs/Web/API/HTMLElement)
-- [`HTMLEmbedElement`](/zh-CN/docs/Web/API/HTMLEmbedElement)
-- [`HTMLFieldSetElement`](/zh-CN/docs/Web/API/HTMLFieldSetElement)
-- [`HTMLFontElement`](/zh-CN/docs/Web/API/HTMLFontElement) {{Deprecated_Inline}}
-- [`HTMLFormElement`](/zh-CN/docs/Web/API/HTMLFormElement)
-- [`HTMLFrameElement`](/zh-CN/docs/Web/API/HTMLFrameElement) {{Deprecated_Inline}}
-- [`HTMLFrameSetElement`](/zh-CN/docs/Web/API/HTMLFrameSetElement) {{Deprecated_Inline}}
-- [`HTMLHRElement`](/zh-CN/docs/Web/API/HTMLHRElement)
-- [`HTMLHeadElement`](/zh-CN/docs/Web/API/HTMLHeadElement)
-- [`HTMLHeadingElement`](/zh-CN/docs/Web/API/HTMLHeadingElement)
-- [`HTMLHtmlElement`](/zh-CN/docs/Web/API/HTMLHtmlElement)
-- [`HTMLIFrameElement`](/zh-CN/docs/Web/API/HTMLIFrameElement)
-- [`HTMLImageElement`](/zh-CN/docs/Web/API/HTMLImageElement)
-- [`HTMLInputElement`](/zh-CN/docs/Web/API/HTMLInputElement)
-- [`HTMLIsIndexElement`](/zh-CN/docs/Web/API/HTMLIsIndexElement) {{Deprecated_Inline}}
-- [`HTMLLIElement`](/zh-CN/docs/Web/API/HTMLLIElement)
-- [`HTMLLabelElement`](/zh-CN/docs/Web/API/HTMLLabelElement)
-- [`HTMLLegendElement`](/zh-CN/docs/Web/API/HTMLLegendElement)
-- [`HTMLLinkElement`](/zh-CN/docs/Web/API/HTMLLinkElement)
-- [`HTMLMapElement`](/zh-CN/docs/Web/API/HTMLMapElement)
-- [`HTMLMarqueeElement`](/zh-CN/docs/Web/API/HTMLMarqueeElement) {{deprecated_inline}}
-- [`HTMLMediaElement`](/zh-CN/docs/Web/API/HTMLMediaElement)
-- [`HTMLMenuElement`](/zh-CN/docs/Web/API/HTMLMenuElement)
-- [`HTMLMenuItemElement`](/zh-CN/docs/Web/API/HTMLMenuItemElement) {{Deprecated_Inline}}
-- [`HTMLMetaElement`](/zh-CN/docs/Web/API/HTMLMetaElement)
-- [`HTMLMeterElement`](/zh-CN/docs/Web/API/HTMLMeterElement)
-- [`HTMLModElement`](/zh-CN/docs/Web/API/HTMLModElement)
-- [`HTMLOListElement`](/zh-CN/docs/Web/API/HTMLOListElement)
-- [`HTMLObjectElement`](/zh-CN/docs/Web/API/HTMLObjectElement)
-- [`HTMLOptGroupElement`](/zh-CN/docs/Web/API/HTMLOptGroupElement)
-- [`HTMLOptionElement`](/zh-CN/docs/Web/API/HTMLOptionElement)
-- [`HTMLOutputElement`](/zh-CN/docs/Web/API/HTMLOutputElement)
-- [`HTMLParagraphElement`](/zh-CN/docs/Web/API/HTMLParagraphElement)
-- [`HTMLParamElement`](/zh-CN/docs/Web/API/HTMLParamElement)
-- [`HTMLPictureElement`](/zh-CN/docs/Web/API/HTMLPictureElement)
-- [`HTMLPreElement`](/zh-CN/docs/Web/API/HTMLPreElement)
-- [`HTMLProgressElement`](/zh-CN/docs/Web/API/HTMLProgressElement)
-- [`HTMLQuoteElement`](/zh-CN/docs/Web/API/HTMLQuoteElement)
-- [`HTMLScriptElement`](/zh-CN/docs/Web/API/HTMLScriptElement)
-- [`HTMLSelectElement`](/zh-CN/docs/Web/API/HTMLSelectElement)
-- [`HTMLSlotElement`](/zh-CN/docs/Web/API/HTMLSlotElement)
-- [`HTMLSourceElement`](/zh-CN/docs/Web/API/HTMLSourceElement)
-- [`HTMLSpanElement`](/zh-CN/docs/Web/API/HTMLSpanElement)
-- [`HTMLStyleElement`](/zh-CN/docs/Web/API/HTMLStyleElement)
-- [`HTMLTableCaptionElement`](/zh-CN/docs/Web/API/HTMLTableCaptionElement)
-- [`HTMLTableCellElement`](/zh-CN/docs/Web/API/HTMLTableCellElement)
-- [`HTMLTableColElement`](/zh-CN/docs/Web/API/HTMLTableColElement)
-- [`HTMLTableElement`](/zh-CN/docs/Web/API/HTMLTableElement)
-- [`HTMLTableRowElement`](/zh-CN/docs/Web/API/HTMLTableRowElement)
-- [`HTMLTableSectionElement`](/zh-CN/docs/Web/API/HTMLTableSectionElement)
-- [`HTMLTemplateElement`](/zh-CN/docs/Web/API/HTMLTemplateElement)
-- [`HTMLTextAreaElement`](/zh-CN/docs/Web/API/HTMLTextAreaElement)
-- [`HTMLTimeElement`](/zh-CN/docs/Web/API/HTMLTimeElement)
-- [`HTMLTitleElement`](/zh-CN/docs/Web/API/HTMLTitleElement)
-- [`HTMLTrackElement`](/zh-CN/docs/Web/API/HTMLTrackElement)
-- [`HTMLUListElement`](/zh-CN/docs/Web/API/HTMLUListElement)
-- [`HTMLUnknownElement`](/zh-CN/docs/Web/API/HTMLUnknownElement)
-- [`HTMLVideoElement`](/zh-CN/docs/Web/API/HTMLVideoElement)
-
-### Web app and browser integration interfaces
-
-These interfaces offer access to the browser window and document that contain the HTML, as well as to the browser's state, available plugins (if any), and various configuration options.
-
-- [`ApplicationCache`](/zh-CN/docs/Web/API/ApplicationCache) {{Deprecated_Inline}}
-- [`BarProp`](/zh-CN/docs/Web/API/BarProp)
-- [`External`](/zh-CN/docs/Web/API/External) {{deprecated_inline}}
-- [`Navigator`](/zh-CN/docs/Web/API/Navigator)
-- [`Plugin`](/zh-CN/docs/Web/API/Plugin) {{Deprecated_Inline}}
-- [`PluginArray`](/zh-CN/docs/Web/API/PluginArray) {{Deprecated_Inline}}
-- [`Window`](/zh-CN/docs/Web/API/Window)
-
-### Form support interfaces
-
-These interfaces provide structure and functionality required by the elements used to create and manage forms, including the {{HTMLElement("form")}} and {{HTMLElement("input")}} elements.
-
-- [`FormDataEvent`](/zh-CN/docs/Web/API/FormDataEvent)
-- [`HTMLFormControlsCollection`](/zh-CN/docs/Web/API/HTMLFormControlsCollection)
-- [`HTMLOptionsCollection`](/zh-CN/docs/Web/API/HTMLOptionsCollection)
-- [`RadioNodeList`](/zh-CN/docs/Web/API/RadioNodeList)
-- [`ValidityState`](/zh-CN/docs/Web/API/ValidityState)
-
-### Canvas and image interfaces
-
-These interfaces represent objects used by the Canvas API as well as the {{HTMLElement("img")}} element and {{HTMLElement("picture")}} elements.
-
-- [`CanvasGradient`](/zh-CN/docs/Web/API/CanvasGradient)
-- [`CanvasPattern`](/zh-CN/docs/Web/API/CanvasPattern)
-- [`CanvasRenderingContext2D`](/zh-CN/docs/Web/API/CanvasRenderingContext2D)
-- [`ImageBitmap`](/zh-CN/docs/Web/API/ImageBitmap)
-- [`ImageBitmapRenderingContext`](/zh-CN/docs/Web/API/ImageBitmapRenderingContext)
-- [`ImageData`](/zh-CN/docs/Web/API/ImageData)
-- [`OffscreenCanvas`](/zh-CN/docs/Web/API/OffscreenCanvas)
-- [`OffscreenCanvasRenderingContext2D`](/zh-CN/docs/Web/API/OffscreenCanvasRenderingContext2D)
-- [`Path2D`](/zh-CN/docs/Web/API/Path2D)
-- [`TextMetrics`](/zh-CN/docs/Web/API/TextMetrics)
-
-### Media interfaces
-
-The media interfaces provide HTML access to the contents of the media elements: {{HTMLElement("audio")}} and {{HTMLElement("video")}}.
-
-- [`AudioTrack`](/zh-CN/docs/Web/API/AudioTrack)
-- [`AudioTrackList`](/zh-CN/docs/Web/API/AudioTrackList)
-- [`MediaError`](/zh-CN/docs/Web/API/MediaError)
-- [`TextTrack`](/zh-CN/docs/Web/API/TextTrack)
-- [`TextTrackCue`](/zh-CN/docs/Web/API/TextTrackCue)
-- [`TextTrackCueList`](/zh-CN/docs/Web/API/TextTrackCueList)
-- [`TextTrackList`](/zh-CN/docs/Web/API/TextTrackList)
-- [`TimeRanges`](/zh-CN/docs/Web/API/TimeRanges)
-- [`TrackEvent`](/zh-CN/docs/Web/API/TrackEvent)
-- [`VideoTrack`](/zh-CN/docs/Web/API/VideoTrack)
-- [`VideoTrackList`](/zh-CN/docs/Web/API/VideoTrackList)
-
-### Drag and drop interfaces
-
-These interfaces are used by the [HTML Drag and Drop API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API) to represent individual draggable (or dragged) items, groups of dragged or draggable items, and to handle the drag and drop process.
-
-- [`DataTransfer`](/zh-CN/docs/Web/API/DataTransfer)
-- [`DataTransferItem`](/zh-CN/docs/Web/API/DataTransferItem)
-- [`DataTransferItemList`](/zh-CN/docs/Web/API/DataTransferItemList)
-- [`DragEvent`](/zh-CN/docs/Web/API/DragEvent)
-
-### Page history interfaces
-
-The History API interfaces let you access information about the browser's history, as well as to shift the browser's current tab forward and backward through that history.
-
-- [`BeforeUnloadEvent`](/zh-CN/docs/Web/API/BeforeUnloadEvent)
-- [`HashChangeEvent`](/zh-CN/docs/Web/API/HashChangeEvent)
-- [`History`](/zh-CN/docs/Web/API/History)
-- [`Location`](/zh-CN/docs/Web/API/Location)
-- [`PageTransitionEvent`](/zh-CN/docs/Web/API/PageTransitionEvent)
-- [`PopStateEvent`](/zh-CN/docs/Web/API/PopStateEvent)
-
-### Web Components interfaces
-
-These interfaces are used by the [Web Components API](/zh-CN/docs/Web/Web_Components) to create and manage the available [custom elements](/zh-CN/docs/Web/Web_Components/Using_custom_elements).
-
-- [`CustomElementRegistry`](/zh-CN/docs/Web/API/CustomElementRegistry)
-
-### Miscellaneous and supporting interfaces
-
-These supporting object types are used in a variety of ways in the HTML DOM API; in addition, {{domxref("PromiseRejectionEvent")}} represents the event delivered when a {{Glossary("JavaScript")}} {{jsxref("Promise")}} is rejected.
-
-- [`DOMStringList`](/zh-CN/docs/Web/API/DOMStringList)
-- [`DOMStringMap`](/zh-CN/docs/Web/API/DOMStringMap)
-- [`ErrorEvent`](/zh-CN/docs/Web/API/ErrorEvent)
-- [`HTMLAllCollection`](/zh-CN/docs/Web/API/HTMLAllCollection)
-- [`MimeType`](/zh-CN/docs/Web/API/MimeType)
-- [`MimeTypeArray`](/zh-CN/docs/Web/API/MimeTypeArray)
-- [`PromiseRejectionEvent`](/zh-CN/docs/Web/API/PromiseRejectionEvent)
-
-### Interfaces belonging to other APIs
-
-There are several interfaces which are technically defined in the HTML specification while actually being part of other APIs.
-
-#### Web storage interfaces
-
-The [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API) provides the ability for web sites to store data either temporarily or permanently on the user's device for later re-use.
-
-- [`Storage`](/zh-CN/docs/Web/API/Storage)
-- [`StorageEvent`](/zh-CN/docs/Web/API/StorageEvent)
-
-#### Web Workers interfaces
-
-These interfaces are used by the [Web Workers API](/zh-CN/docs/Web/API/Web_Workers_API) both to establish the ability for workers to interact with an app and its content, but also to support messaging between windows or apps.
-
-- [`BroadcastChannel`](/zh-CN/docs/Web/API/BroadcastChannel)
-- [`DedicatedWorkerGlobalScope`](/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope)
-- [`MessageChannel`](/zh-CN/docs/Web/API/MessageChannel)
-- [`MessageEvent`](/zh-CN/docs/Web/API/MessageEvent)
-- [`MessagePort`](/zh-CN/docs/Web/API/MessagePort)
-- [`SharedWorker`](/zh-CN/docs/Web/API/SharedWorker)
-- [`SharedWorkerGlobalScope`](/zh-CN/docs/Web/API/SharedWorkerGlobalScope)
-- [`Worker`](/zh-CN/docs/Web/API/Worker)
-- [`WorkerGlobalScope`](/zh-CN/docs/Web/API/WorkerGlobalScope)
-- [`WorkerLocation`](/zh-CN/docs/Web/API/WorkerLocation)
-- [`WorkerNavigator`](</zh-CN/docs/Web/API/WorkerNavigator >)
-
-#### WebSocket interfaces
-
-These interfaces, defined by the HTML specification, are used by the [WebSocket API](/zh-CN/docs/Web/API/WebSockets_API).
-
-- [`CloseEvent`](/zh-CN/docs/Web/API/CloseEvent)
-- [`WebSocket`](/zh-CN/docs/Web/API/WebSocket)
-
-#### Server-sent events interfaces
-
-The {{domxref("EventSource")}} interface represents the source which sent or is sending [server-sent events](/zh-CN/docs/Web/API/Server-sent_events).
-
-- [`EventSource`](/zh-CN/docs/Web/API/EventSource)
-
-## Examples
-
-In this example, an {{HTMLElement("input")}} element's {{domxref("HTMLInputElement.input_event", "input")}} event is monitored in order to update the state of a form's "submit" button based on whether or not a given field currently has a value.
-
-#### JavaScript
+例如，考虑一个包含两个元素的文档，其中一个元素内嵌了另外两个元素：
+
+![窗口中，内部包含元素的文档结构](dom-structure.svg)
+
+虽然 {{domxref("Document")}} 接口是作为 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 规范的一部分定义的，但 HTML 规范显著增强了它，添加了特定于 Web 浏览器上下文中，使用 DOM 以及表示 HTML 文档的信息。
+
+HTML 标准添加到 `Document` 中的内容包括：
+
+- 在加载页面时，支持访问 {{Glossary("HTTP")}} 标头提供的各种信息，例如文档加载的{{DOMxRef("Document/location", "位置", "", "1")}}、{{DOMxRef("Document/cookie", "cookie", "", "1")}}、{{DOMxRef("Document/lastModified", "修改日期", "", "1")}}、{{DOMxRef("Document/referrer", "引用站点", "", "1")}}等。
+- 可以访问文档 {{HTMLElement("head")}} 块和 {{DOMxRef("Document/body", "body", "", "1")}} 中元素的列表，以及包含在文档中的{{DOMxRef("Document/images", "图像", "", "1")}}、{{DOMxRef("Document/links", "链接", "", "1")}}、{{DOMxRef("Document/scripts", "脚本", "", "1")}}等列表。
+- 支持通过检查{{DOMxRef("Document/hasFocus", "焦点", "", "1")}}和对[可编辑内容](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable)执行命令来与用户交互。
+- HTML 标准定义的文档事件处理器，允许访问{{DOMxRef("MouseEvent", "鼠标", "", "1")}}和{{DOMxRef("KeyboardEvent", "键盘", "", "1")}}事件、{{DOMxRef("HTML_Drag_and_Drop_API", "拖放", "", "1")}}、{{DOMxRef("HTMLMediaElement", "媒体控制", "", "1")}}等。
+- 可以传递到元素和文档的事件处理器；目前仅包括{{DOMxRef("HTMLElement/copy_event", "复制", "", "1")}}、{{DOMxRef("HTMLElement/cut_event", "剪切", "", "1")}}和{{DOMxRef("HTMLElement/paste_event", "粘贴", "", "1")}}操作。
+
+### HTML 元素接口
+
+通过引入 {{domxref("HTMLElement")}} 接口，`Element` 接口被进一步调整为专门表示 HTML 元素，所有更具体的 HTML 元素类都继承自它。这扩展了 `Element` 类，以向元素节点添加了特定于 HTML 的通用特性。`HTMLElement` 添加的属性包括 {{domxref("HTMLElement.hidden", "hidden")}} 和 {{domxref("HTMLElement.innerText", "innerText")}} 等。
+
+{{Glossary("HTML")}} 文档是 DOM 树，其中每个节点都是一个由 {{domxref("HTMLElement")}} 接口表示的 HTML 元素。`HTMLElement` 类实现了 `Node`，因此每个元素也是一个节点（但反过来不成立）。这样，由 {{domxref("Node")}} 接口实现的结构特性也可用于 HTML 元素中，允许它们相互嵌套、创建和删除、移动等。
+
+`HTMLElement` 接口是通用的，但是它仅提供所有 HTML 元素共有的功能，例如元素的 ID、坐标、构成元素的 HTML 代码、滚动位置等信息。
+
+为了扩展核心 `HTMLElement` 接口的功能，以提供特定元素所需的特性，`HTMLElement` 类被子类化以添加所需的属性和方法。例如，{{HTMLElement("canvas")}} 元素由类型为 {{domxref("HTMLCanvasElement")}} 的对象表示。`HTMLElement` 通过添加诸如 {{domxref("HTMLCanvasElement.height", "height")}} 等属性和 {{domxref("HTMLCanvasElement.getContext", "getContext()")}} 等方法来增强 `HTMLElement` 类型，从而提供特定于 canvas 的特性。
+
+HTML 元素类的总体继承关系如下：
+
+![HTML 元素的接口层次结构](html-dom-hierarchy.svg)
+
+因此，元素继承其所有祖先的属性和方法。例如，考虑 {{HTMLElement("a")}} 元素，在 DOM 中由类型为 {{domxref("HTMLAnchorElement")}} 的对象表示。元素包括了该类文档中，`Anchor` 特定的属性和方法。但也包括 {{domxref("HTMLElement")}}、{{domxref("Element")}} 以及 {{domxref("Node")}} 定义的内容，最后是 {{domxref("EventTarget")}} 定义的内容。
+
+每一层级都定义了元素实用性的一个关键方面。从 `Node` 开始，该元素继承了有关该元素能否被另一个元素包含，以及自身包含其他元素的概念。特别重要的是从 `EventTarget` 继承的：接收和处理事件（如鼠标点击、播放和暂停事件等）的能力。
+
+有一些元素具有共性，因此还有一个额外的中介类型。例如，{{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 元素都呈现音视频媒体。相应的 {{domxref("HTMLAudioElement")}} 和 {{domxref("HTMLVideoElement")}} 类型都基于通用类型 {{domxref("HTMLMediaElement")}}，后者又基于 {{domxref("HTMLElement")}} 等等。`HTMLMediaElement` 定义了音频和视频元素之间共同拥有的方法和属性。
+
+这些特定于元素的接口构成了大部分 HTML DOM API，并且是本文的重点。要了解 {{DOMxRef("Document_Object_Model", "DOM", "", "1")}} 的实际结构，请参阅 {{DOMxRef("Document_Object_Model/Introduction", "DOM 概述", "", "1")}}。
+
+## HTML DOM 的目标受众
+
+HTML DOM 所暴露的特性是 web 开发人员工具箱中最常用的 API 之一。除了最简单的 web 应用程序外，几乎所有 web 应用程序都会使用 HTML DOM 的某些特性。
+
+## HTML DOM API 接口
+
+HTML DOM API 中的大多数接口，几乎一对一地映射到单个 HTML 元素，或是类似功能的少量元素组。此外，HTML DOM API 还包括一些接口和类型，以支持 HTML 元素接口。
+
+### HTML 元素接口
+
+这些接口代表特定的 HTML 元素（或者属性、方法与它们相关、相同的元素）。
+
+- {{DOMxRef("HTMLAnchorElement")}}
+- {{DOMxRef("HTMLAreaElement")}}
+- {{DOMxRef("HTMLAudioElement")}}
+- {{DOMxRef("HTMLBaseElement")}}
+- {{DOMxRef("HTMLBodyElement")}}
+- {{DOMxRef("HTMLBRElement")}}
+- {{DOMxRef("HTMLButtonElement")}}
+- {{DOMxRef("HTMLCanvasElement")}}
+- {{DOMxRef("HTMLDataElement")}}
+- {{DOMxRef("HTMLDataListElement")}}
+- {{DOMxRef("HTMLDetailsElement")}}
+- {{DOMxRef("HTMLDialogElement")}}
+- {{DOMxRef("HTMLDirectoryElement")}}
+- {{DOMxRef("HTMLDivElement")}}
+- {{DOMxRef("HTMLDListElement")}}
+- {{DOMxRef("HTMLElement")}}
+- {{DOMxRef("HTMLEmbedElement")}}
+- {{DOMxRef("HTMLFieldSetElement")}}
+- {{DOMxRef("HTMLFormElement")}}
+- {{DOMxRef("HTMLHRElement")}}
+- {{DOMxRef("HTMLHeadElement")}}
+- {{DOMxRef("HTMLHeadingElement")}}
+- {{DOMxRef("HTMLHtmlElement")}}
+- {{DOMxRef("HTMLIFrameElement")}}
+- {{DOMxRef("HTMLImageElement")}}
+- {{DOMxRef("HTMLInputElement")}}
+- {{DOMxRef("HTMLLabelElement")}}
+- {{DOMxRef("HTMLLegendElement")}}
+- {{DOMxRef("HTMLLIElement")}}
+- {{DOMxRef("HTMLLinkElement")}}
+- {{DOMxRef("HTMLMapElement")}}
+- {{DOMxRef("HTMLMediaElement")}}
+- {{DOMxRef("HTMLMenuElement")}}
+- {{DOMxRef("HTMLMetaElement")}}
+- {{DOMxRef("HTMLMeterElement")}}
+- {{DOMxRef("HTMLModElement")}}
+- {{DOMxRef("HTMLObjectElement")}}
+- {{DOMxRef("HTMLOListElement")}}
+- {{DOMxRef("HTMLOptGroupElement")}}
+- {{DOMxRef("HTMLOptionElement")}}
+- {{DOMxRef("HTMLOutputElement")}}
+- {{DOMxRef("HTMLParagraphElement")}}
+- {{DOMxRef("HTMLPictureElement")}}
+- {{DOMxRef("HTMLPreElement")}}
+- {{DOMxRef("HTMLProgressElement")}}
+- {{DOMxRef("HTMLQuoteElement")}}
+- {{DOMxRef("HTMLScriptElement")}}
+- {{DOMxRef("HTMLSelectElement")}}
+- {{DOMxRef("HTMLSlotElement")}}
+- {{DOMxRef("HTMLSourceElement")}}
+- {{DOMxRef("HTMLSpanElement")}}
+- {{DOMxRef("HTMLStyleElement")}}
+- {{DOMxRef("HTMLTableCaptionElement")}}
+- {{DOMxRef("HTMLTableCellElement")}}
+- {{DOMxRef("HTMLTableColElement")}}
+- {{DOMxRef("HTMLTableElement")}}
+- {{DOMxRef("HTMLTableRowElement")}}
+- {{DOMxRef("HTMLTableSectionElement")}}
+- {{DOMxRef("HTMLTemplateElement")}}
+- {{DOMxRef("HTMLTextAreaElement")}}
+- {{DOMxRef("HTMLTimeElement")}}
+- {{DOMxRef("HTMLTitleElement")}}
+- {{DOMxRef("HTMLTrackElement")}}
+- {{DOMxRef("HTMLUListElement")}}
+- {{DOMxRef("HTMLUnknownElement")}}
+- {{DOMxRef("HTMLVideoElement")}}
+
+#### 废弃的 HTML 元素接口
+
+- {{DOMxRef("HTMLMarqueeElement")}} {{deprecated_inline}}
+
+#### 过时的 HTML 元素接口
+
+- {{DOMxRef("HTMLFontElement")}} {{deprecated_inline}}
+- {{DOMxRef("HTMLFrameElement")}} {{deprecated_inline}}
+- {{DOMxRef("HTMLFrameSetElement")}} {{deprecated_inline}}
+- {{DOMxRef("HTMLIsIndexElement")}} {{deprecated_inline}}
+
+### Web 应用程序和浏览器集成接口
+
+这些接口提供了访问包含 HTML 的浏览器窗口和文档的方式，以及访问浏览器状态、可用插件（如果有）和各种配置选项的方式。
+
+- {{DOMxRef("BarProp")}}
+- {{DOMxRef("Navigator")}}
+- {{DOMxRef("Window")}}
+
+#### 废弃的 Web 应用程序和浏览器集成接口
+
+- {{DOMxRef("External")}} {{deprecated_inline}}
+
+#### 过时的 Web 应用程序和浏览器集成接口
+
+- {{DOMxRef("ApplicationCache")}} {{deprecated_inline}}
+- {{DOMxRef("Plugin")}} {{deprecated_inline}}
+- {{DOMxRef("PluginArray")}} {{deprecated_inline}}
+
+### 表单支持接口
+
+这些接口提供了创建和管理表单所需的结构和功能，包括 {{HTMLElement("form")}} 和 {{HTMLElement("input")}} 元素。
+
+- {{DOMxRef("FormDataEvent")}}
+- {{DOMxRef("HTMLFormControlsCollection")}}
+- {{DOMxRef("HTMLOptionsCollection")}}
+- {{DOMxRef("RadioNodeList")}}
+- {{DOMxRef("ValidityState")}}
+
+### Canvas 和图像接口
+
+这些接口代表了 Canvas API 以及 {{HTMLElement("img")}} 元素和 {{HTMLElement("picture")}} 元素使用的对象。
+
+- {{DOMxRef("CanvasGradient")}}
+- {{DOMxRef("CanvasPattern")}}
+- {{DOMxRef("CanvasRenderingContext2D")}}
+- {{DOMxRef("ImageBitmap")}}
+- {{DOMxRef("ImageBitmapRenderingContext")}}
+- {{DOMxRef("ImageData")}}
+- {{DOMxRef("OffscreenCanvas")}}
+- {{DOMxRef("OffscreenCanvasRenderingContext2D")}}
+- {{DOMxRef("Path2D")}}
+- {{DOMxRef("TextMetrics")}}
+
+### 媒体接口
+
+媒体接口提供对媒体元素（{{HTMLElement("audio")}} 和 {{HTMLElement("video")}}）内容的 HTML 访问。
+
+- {{DOMxRef("AudioTrack")}}
+- {{DOMxRef("AudioTrackList")}}
+- {{DOMxRef("MediaError")}}
+- {{DOMxRef("TextTrack")}}
+- {{DOMxRef("TextTrackCue")}}
+- {{DOMxRef("TextTrackCueList")}}
+- {{DOMxRef("TextTrackList")}}
+- {{DOMxRef("TimeRanges")}}
+- {{DOMxRef("TrackEvent")}}
+- {{DOMxRef("VideoTrack")}}
+- {{DOMxRef("VideoTrackList")}}
+
+### 拖放接口
+
+这些接口被 [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API) 用于表示单个或一组可拖动（或已拖动）元素，并处理拖放过程。
+
+- {{DOMxRef("DataTransfer")}}
+- {{DOMxRef("DataTransferItem")}}
+- {{DOMxRef("DataTransferItemList")}}
+- {{DOMxRef("DragEvent")}}
+
+### 页面历史接口
+
+History API 接口允许你访问有关浏览器历史记录的信息，并通过历史记录将浏览器的当前标签页向前或向后跳转。
+
+- {{DOMxRef("BeforeUnloadEvent")}}
+- {{DOMxRef("HashChangeEvent")}}
+- {{DOMxRef("History")}}
+- {{DOMxRef("Location")}}
+- {{DOMxRef("PageTransitionEvent")}}
+- {{DOMxRef("PopStateEvent")}}
+
+### Web 组件接口
+
+这些接口被 [Web 组件 API](/zh-CN/docs/Web/API/Web_components) 用于创建和管理可用的[自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)。
+
+- {{DOMxRef("CustomElementRegistry")}}
+
+### 杂项和支持接口
+
+这些支持对象类型在 HTML DOM API 中以各种方式被使用。此外，{{domxref("PromiseRejectionEvent")}} 表示当 {{Glossary("JavaScript")}} {{jsxref("Promise")}} 被拒绝时传递的事件。
+
+- {{DOMxRef("DOMStringList")}}
+- {{DOMxRef("DOMStringMap")}}
+- {{DOMxRef("ErrorEvent")}}
+- {{DOMxRef("HTMLAllCollection")}}
+- {{DOMxRef("MimeType")}}
+- {{DOMxRef("MimeTypeArray")}}
+- {{DOMxRef("PromiseRejectionEvent")}}
+
+### 属于其他 API 的接口
+
+有几个接口在 HTML 规范中在技术上被定义，但实际上是其他 API 的一部分。
+
+#### Web Storage 接口
+
+{{DOMxRef("Web_Storage_API", "Web Storage API", "", "1")}} 提供了网站在用户设备上临时或永久存储数据以便后续复用的能力。
+
+- {{DOMxRef("Storage")}}
+- {{DOMxRef("StorageEvent")}}
+
+#### Web Worker 接口
+
+这些接口被 {{DOMxRef("Web_Workers_API", "Web Worker API", "", "1")}} 用于建立 Worker 与应用及其内容交互的能力，同时也支持窗口或应用之间的消息传递。
+
+- {{DOMxRef("BroadcastChannel")}}
+- {{DOMxRef("DedicatedWorkerGlobalScope")}}
+- {{DOMxRef("MessageChannel")}}
+- {{DOMxRef("MessageEvent")}}
+- {{DOMxRef("MessagePort")}}
+- {{DOMxRef("SharedWorker")}}
+- {{DOMxRef("SharedWorkerGlobalScope")}}
+- {{DOMxRef("Worker")}}
+- {{DOMxRef("WorkerGlobalScope")}}
+- {{DOMxRef("WorkerLocation")}}
+- {{DOMxRef("WorkerNavigator")}}
+
+#### WebSocket 接口
+
+这些接口由 HTML 规范定义，被 {{DOMxRef("WebSockets_API", "WebSocket API", "", "1")}} 使用。
+
+- {{DOMxRef("CloseEvent")}}
+- {{DOMxRef("WebSocket")}}
+
+#### Server-sent 事件接口
+
+{{domxref("EventSource")}} 接口表示发送或正在发送 {{DOMxRef("Server-sent_events", "server-sent 事件", "", "1")}}的源。
+
+- {{DOMxRef("EventSource")}}
+
+## 示例
+
+在这个示例中，{{HTMLElement("input")}} 元素的 {{domxref("Element/input_event", "input")}} 事件被监听，以便根据给定字段当前是否有值，来更新表单“提交”按钮的状态。
+
+### JavaScript
 
 ```js
 const nameField = document.getElementById("userName");
-const sendButton = document.getElementById("sendButton")
+const sendButton = document.getElementById("sendButton");
 
 sendButton.disabled = true;
-// [note: this is disabled since it causes this article to always load with this example focused and scrolled into view]
+// [提示：这是被禁用的，因为它会导致文章始终加载此示例，并将其聚焦和滚动到视图中]
 //nameField.focus();
 
-nameField.addEventListener("input", event => {
+nameField.addEventListener("input", (event) => {
   const elem = event.target;
   const valid = elem.value.length != 0;
 
@@ -309,48 +318,53 @@ nameField.addEventListener("input", event => {
 });
 ```
 
-This code uses the {{domxref("Document")}} interface's {{domxref("Document.getElementById", "getElementById()")}} method to get the DOM object representing the {{HTMLElement("input")}} elements whose IDs are `userName` and `sendButton`. With these, we can access the properties and methods that provide information about and grant control over these elements.
+这段代码使用 {{domxref("Document")}} 接口的 {{domxref("Document.getElementById", "getElementById()")}} 方法，获取 ID 为 `userName` 和 `sendButton` 的 {{HTMLElement("input")}} 元素的 DOM 对象。通过这些对象，我们可以访问提供信息的属性和方法，并获得对这些元素的控制权。
 
-The {{domxref("HTMLInputElement")}} object for the "Send" button's {{domxref("HTMLInputElement.disabled", "disabled")}} property is set to `true`, which disables the "Send" button so it can't be clicked. In addition, the user name input field is made the active focus by calling the {{domxref("HTMLElement.focus", "focus()")}} method it inherits from {{domxref("HTMLElement")}}.
+“发送”按钮的 {{domxref("HTMLInputElement")}} 对象的 {{domxref("HTMLInputElement.disabled", "disabled")}} 属性被设置为 `true`，这将禁用“发送”按钮，使其无法点击。此外，通过调用继承自 {{domxref("HTMLElement")}} 的 {{domxref("HTMLElement/focus", "focus()")}} 方法，用户名输入字段成为活动焦点。
 
-Then {{domxref("EventTarget.addEventListener", "addEventListener()")}} is called to add a handler for the `input` event to the user name input. This code looks at the length of the current value of the input; if it's zero, then the "Send" button is disabled if it's not already disabled. Otherwise, the code ensures that the button is enabled.
+然后调用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 来为用户名输入添加一个 `input` 事件的处理器。这段代码检测当前输入值的长度；如果它是零，则禁用“发送”按钮（如果尚未禁用）。否则，该代码确保按钮已启用。
 
-With this in place, the "Send" button is always enabled whenever the user name input field has a value, and disabled when it's empty.
+有了这个设置，只要用户名输入框中有值，“发送”按钮就会一直处于启用状态，当为空时则禁用。
 
-#### HTML
+### HTML
 
-The HTML for the form looks like this:
+表单的 HTML 如下：
 
 ```html
-<p>Please provide the information below. Items marked with "*" are required.</p>
+<p>请提供以下信息。标有“*”的项目为必填项。</p>
 <form action="" method="get">
   <p>
-    <label for="userName" required>Your name:</label>
-    <input type="text" id="userName"> (*)
+    <label for="userName" required>用户名：</label>
+    <input type="text" id="userName" /> (*)
   </p>
   <p>
-    <label for="email">Email:</label>
-    <input type="email" id="userEmail">
+    <label for="email">邮箱：</label>
+    <input type="email" id="userEmail" />
   </p>
-  <input type="submit" value="Send" id="sendButton">
+  <input type="submit" value="发送" id="sendButton" />
 </form>
 ```
 
-#### Result
+### 结果
 
-{{EmbedLiveSample("Examples", 640, 300)}}
+{{EmbedLiveSample("示例", 640, 300)}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [HTML elements reference](/zh-CN/docs/Web/HTML/Element)
-- [HTML attribute reference](/zh-CN/docs/Web/HTML/Attributes)
-- [Document Object Model (DOM)](/zh-CN/docs/Web/API/Document_Object_Model) reference
-- [Manipulating documents](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents): A beginner's guide to manipulating the DOM.
+### 参考
+
+- [HTML 元素参考](/zh-CN/docs/Web/HTML/Element)
+- [HTML 属性参考](/zh-CN/docs/Web/HTML/Attributes)
+- {{DOMxRef("Document_Object_Model", "文档对象模型（DOM）", "", "1")}}参考
+
+### 指南
+
+- [操作文档](/zh-CN/docs/Learn_web_development/Core/Scripting/DOM_scripting)：操作 DOM 的入门指南。

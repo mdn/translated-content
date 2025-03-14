@@ -1,7 +1,6 @@
 ---
 title: NonDocumentTypeChildNode.nextElementSibling
 slug: Web/API/Element/nextElementSibling
-original_slug: Web/API/NonDocumentTypeChildNode/nextElementSibling
 ---
 
 {{APIRef}}
@@ -21,8 +20,8 @@ var nextNode = elementNodeReference.nextElementSibling;
 <div id="div-02">Here is div-02</div>
 
 <script type="text/javascript">
-  var el = document.getElementById('div-01').nextElementSibling;
-  console.log('Siblings of div-01:');
+  var el = document.getElementById("div-01").nextElementSibling;
+  console.log("Siblings of div-01:");
   while (el) {
     console.log(el.nodeName);
     el = el.nextElementSibling;
@@ -44,15 +43,14 @@ Esta propiedad no está soportada con anterioridad a IE9, así que el siguiente 
 
 ```js
 // Source: https://github.com/Alhadis/Snippets/blob/master/js/polyfills/IE8-child-elements.js
-if(!("nextElementSibling" in document.documentElement)){
-    Object.defineProperty(Element.prototype, "nextElementSibling", {
-        get: function(){
-            var e = this.nextSibling;
-            while(e && 1 !== e.nodeType)
-                e = e.nextSibling;
-            return e;
-        }
-    });
+if (!("nextElementSibling" in document.documentElement)) {
+  Object.defineProperty(Element.prototype, "nextElementSibling", {
+    get: function () {
+      var e = this.nextSibling;
+      while (e && 1 !== e.nodeType) e = e.nextSibling;
+      return e;
+    },
+  });
 }
 ```
 
@@ -62,22 +60,22 @@ if(!("nextElementSibling" in document.documentElement)){
 // Source: https://github.com/jserz/js_piece/blob/master/DOM/NonDocumentTypeChildNode/nextElementSibling/nextElementSibling.md
 (function (arr) {
   arr.forEach(function (item) {
-    if (item.hasOwnProperty('nextElementSibling')) {
+    if (item.hasOwnProperty("nextElementSibling")) {
       return;
     }
-    Object.defineProperty(item, 'nextElementSibling', {
+    Object.defineProperty(item, "nextElementSibling", {
       configurable: true,
       enumerable: true,
       get: function () {
         var el = this;
-        while (el = el.nextSibling) {
+        while ((el = el.nextSibling)) {
           if (el.nodeType === 1) {
-              return el;
+            return el;
           }
         }
         return null;
       },
-      set: undefined
+      set: undefined,
     });
   });
 })([Element.prototype, CharacterData.prototype]);

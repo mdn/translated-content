@@ -1,29 +1,18 @@
 ---
 title: runtime.onRestartRequired
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onRestartRequired
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onRestartRequired
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onRestartRequired
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-Lancé lorsqu'une application ou le périphérique sur lequel elle s'exécute doit être redémarré. L'application devrait fermer toutes ses fenêtres dans les meilleurs délais pour permettre le redémarrage. Si l'application ne fait rien, un redémarrage sera appliqué après une période de grâce de 24 heures. Actuellement, cet événement est uniquement déclenché pour les applications de kiosque Chrome OS.
+Lancé lorsqu'une application ou le périphérique sur lequel elle s'exécute doit être redémarré. L'application devrait fermer toutes ses fenêtres dans les meilleurs délais pour permettre le redémarrage. Si l'application ne fait rien, un redémarrage sera appliqué après une période de grâce de 24 heures. Actuellement, cet événement est uniquement déclenché pour les applications de kiosque ChromeOS.
 
 ## Syntaxe
 
 ```js
-browser.runtime.onRestartRequired.addListener(listener)
-browser.runtime.onRestartRequired.removeListener(listener)
-browser.runtime.onRestartRequired.hasListener(listener)
+browser.runtime.onRestartRequired.addListener(listener);
+browser.runtime.onRestartRequired.removeListener(listener);
+browser.runtime.onRestartRequired.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -46,17 +35,17 @@ Les événements ont trois fonctions :
     - `raison`
       - : Une valeur {{WebExtAPIRef('runtime.OnRestartRequiredReason')}} — La raison pour laquelle l'événemtn est envoyé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.onRestartRequired")}}
+{{Compat}}
 
 ## Exemples
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

@@ -1,13 +1,54 @@
 ---
 title: border-width
 slug: Web/CSS/border-width
+l10n:
+  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
 {{CSSRef}}
 
 **`border-width`** は[一括指定](/ja/docs/Web/CSS/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の幅を設定します。
 
-{{EmbedInteractiveExample("pages/css/border-width.html")}}
+{{InteractiveExample("CSS Demo: border-width")}}
+
+```css interactive-example-choice
+border-width: thick;
+```
+
+```css interactive-example-choice
+border-width: 1em;
+```
+
+```css interactive-example-choice
+border-width: 4px 1.25em;
+```
+
+```css interactive-example-choice
+border-width: 2ex 1.25ex 0.5ex;
+```
+
+```css interactive-example-choice
+border-width: 0 4px 8px 12px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 構成要素のプロパティ
 
@@ -43,6 +84,7 @@ border-width: 1px 2em 0 4rem;
 border-width: inherit;
 border-width: initial;
 border-width: revert;
+border-width: revert-layer;
 border-width: unset;
 ```
 
@@ -63,7 +105,8 @@ border-width: unset;
     - `medium`
     - `thick`
 
- > **メモ:** 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、何れか 1つを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
+> [!NOTE]
+> 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、いずれかを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
 
 ## 公式定義
 
@@ -75,37 +118,39 @@ border-width: unset;
 
 ## 例
 
-<h3 id="A_mix_of_values_and_lengths">値と長さの組み合わせ</h3>
+### 値と長さの組み合わせ
 
 #### HTML
 
-```html
-<p id="sval">
-    one value: 6px wide border on all 4 sides</p>
-<p id="bival">
-    two different values: 2px wide top and bottom border, 10px wide right and left border</p>
-<p id="treval">
-    three different values: 0.3em top, 9px bottom, and zero width right and left</p>
-<p id="fourval">
-    four different values: "thin" top, "medium" right, "thick" bottom, and 1em left</p>
+```html-nolint live-sample___a_mix_of_values_and_lengths
+<p id="one-value">1 つの値: 6px 幅が全 4 辺の境界に適用</p>
+<p id="two-values">
+  異なる値 2 つの値: 2px 幅が上下の境界に、 10px 幅が左右の境界に適用
+</p>
+<p id="three-values">
+  異なる 3 つの値: 0.3em 幅が上に、 9px 幅が下に、ゼロ幅が左右に適用
+</p>
+<p id="four-values">
+  異なる 4 つの値: "thin" が上に、 "medium" が右に、 "thick" が下に、 1em が左に
+</p>
 ```
 
 #### CSS
 
-```css
-#sval {
+```css live-sample___a_mix_of_values_and_lengths
+#one-value {
   border: ridge #ccc;
   border-width: 6px;
 }
-#bival {
+#two-values {
   border: solid red;
   border-width: 2px 10px;
 }
-#treval {
+#three-values {
   border: dotted orange;
   border-width: 0.3em 0 9px;
 }
-#fourval {
+#four-values {
   border: solid lightgreen;
   border-width: thin medium thick 1em;
 }
@@ -116,7 +161,7 @@ p {
 }
 ```
 
-#### Result
+#### 結果
 
 {{ EmbedLiveSample('A_mix_of_values_and_lengths', 320, 320) }}
 

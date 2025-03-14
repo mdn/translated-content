@@ -31,9 +31,9 @@ class Square extends Polygon {
     // Here, it calls the parent class' constructor with lengths
     // provided for the Polygon's width and height
     super(length, length);
-    // Note: In derived classes, super() must be called before you
+    // Nota: In derived classes, super() must be called before you
     // can use 'this'. Leaving this out will cause a reference error.
-    this.name = 'Square';
+    this.name = "Square";
   }
 
   get area() {
@@ -57,8 +57,23 @@ class myDate extends Date {
   }
 
   getFormattedDate() {
-    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    return this.getDate() + "-" + months[this.getMonth()] + "-" + this.getFullYear();
+    var months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    return (
+      this.getDate() + "-" + months[this.getMonth()] + "-" + this.getFullYear()
+    );
   }
 }
 ```
@@ -73,18 +88,16 @@ class nullExtends extends null {
 }
 
 Object.getPrototypeOf(nullExtends); // Function.prototype
-Object.getPrototypeOf(nullExtends.prototype) // null
+Object.getPrototypeOf(nullExtends.prototype); // null
 ```
 
 ## Especificações
 
-| Especificação                                                                | Status               | Comentário         |
-| ---------------------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-class-definitions', 'extends')}} | {{Spec2('ES6')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.classes.extends")}}
+{{Compat}}
 
 ## Ver também
 

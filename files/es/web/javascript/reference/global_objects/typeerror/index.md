@@ -1,7 +1,6 @@
 ---
 title: TypeError
 slug: Web/JavaScript/Reference/Global_Objects/TypeError
-browser-compat: javascript.builtins.TypeError
 ---
 
 {{JSRef}}
@@ -42,15 +41,15 @@ Un `TypeError` puede ser lanzado cuando:
 
 ```js
 try {
-  null.f()
+  null.f();
 } catch (e) {
-  console.log(e instanceof TypeError)  // Respuesta: true
-  console.log(e.message)               // Respuesta: "null has no properties"
-  console.log(e.name)                  // Respuesta: "TypeError"
-  console.log(e.fileName)              // Respuesta: "Scratchpad/1"
-  console.log(e.lineNumber)            // Respuesta: 2
-  console.log(e.columnNumber)          // Respuesta: 2
-  console.log(e.stack)                 // Respuesta: "@Scratchpad/2:2:3\n"
+  console.log(e instanceof TypeError); // Respuesta: true
+  console.log(e.message); // Respuesta: "null has no properties"
+  console.log(e.name); // Respuesta: "TypeError"
+  console.log(e.fileName); // Respuesta: "Scratchpad/1"
+  console.log(e.lineNumber); // Respuesta: 2
+  console.log(e.columnNumber); // Respuesta: 2
+  console.log(e.stack); // Respuesta: "@Scratchpad/2:2:3\n"
 }
 ```
 
@@ -58,15 +57,15 @@ try {
 
 ```js
 try {
-  throw new TypeError('Hello', "someFile.js", 10)
+  throw new TypeError("Hello", "someFile.js", 10);
 } catch (e) {
-  console.log(e instanceof TypeError)  // Respuesta: true
-  console.log(e.message)               // Respuesta: "Hello"
-  console.log(e.name)                  // Respuesta: "TypeError"
-  console.log(e.fileName)              // Respuesta: "someFile.js"
-  console.log(e.lineNumber)            // Respuesta: 10
-  console.log(e.columnNumber)          // Respuesta: 0
-  console.log(e.stack)                 // Respuesta: "@Scratchpad/2:2:9\n"
+  console.log(e instanceof TypeError); // Respuesta: true
+  console.log(e.message); // Respuesta: "Hello"
+  console.log(e.name); // Respuesta: "TypeError"
+  console.log(e.fileName); // Respuesta: "someFile.js"
+  console.log(e.lineNumber); // Respuesta: 10
+  console.log(e.columnNumber); // Respuesta: 0
+  console.log(e.stack); // Respuesta: "@Scratchpad/2:2:9\n"
 }
 ```
 

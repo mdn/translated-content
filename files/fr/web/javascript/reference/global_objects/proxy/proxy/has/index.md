@@ -1,28 +1,45 @@
 ---
 title: handler.has()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Proxy
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/has
 ---
 
 {{JSRef}}
 
 La méthode **`handler.has()`** est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}}.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-has.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.has()", "taller")}}
+
+```js interactive-example
+const handler1 = {
+  has(target, key) {
+    if (key[0] === "_") {
+      return false;
+    }
+    return key in target;
+  },
+};
+
+const monster1 = {
+  _secret: "easily scared",
+  eyeCount: 4,
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+console.log("eyeCount" in proxy1);
+// Expected output: true
+
+console.log("_secret" in proxy1);
+// Expected output: false
+
+console.log("_secret" in monster1);
+// Expected output: true
+```
 
 ## Syntaxe
 
 ```js
 var p = new Proxy(cible, {
-  has: function(cible, prop) {
-  }
+  has: function (cible, prop) {},
 });
 ```
 
@@ -49,7 +66,7 @@ Cette trappe permet d'intercepter les opérations suivantes :
 
 - L'accès à une propriété : `toto in proxy`
 - L'accès à une propriété héritée : `toto in Object.create(proxy)`
-- Accès via l'instruction [`with`](/fr/docs/Web/JavaScript/Reference/Instructions/with) : `with(proxy) { (foo); }`
+- Accès via l'instruction [`with`](/fr/docs/Web/JavaScript/Reference/Statements/with) : `with(proxy) { (foo); }`
 - {{jsxref("Reflect.has()")}}
 
 ### Invariants
@@ -64,15 +81,18 @@ Si les invariants suivants ne sont pas respectés, le proxy lèvera une exceptio
 Dans l'exemple qui suit, on intercepte l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}} :
 
 ```js
-var p = new Proxy({}, {
-  has: function(cible, prop) {
-    console.log("appelée : " + prop);
-    return true;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    has: function (cible, prop) {
+      console.log("appelée : " + prop);
+      return true;
+    },
+  },
+);
 
 console.log("a" in p); // "appelée : a"
-                       // true
+// true
 ```
 
 L'exemple suivant ne respecte pas un invariant :
@@ -81,9 +101,9 @@ L'exemple suivant ne respecte pas un invariant :
 var obj = { a: 10 };
 Object.preventExtensions(obj);
 var p = new Proxy(obj, {
-  has: function(cible, prop) {
+  has: function (cible, prop) {
     return false;
-  }
+  },
 });
 
 "a" in p; // TypeError levée

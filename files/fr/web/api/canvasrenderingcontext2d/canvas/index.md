@@ -1,13 +1,6 @@
 ---
 title: CanvasRenderingContext2D.canvas
 slug: Web/API/CanvasRenderingContext2D/canvas
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Propriété
-  - Reference
-translation_of: Web/API/CanvasRenderingContext2D/canvas
 ---
 
 {{APIRef}}
@@ -33,7 +26,7 @@ Vous pouvez obtenir la référence à l'élément `canvas` grâce à `CanvasRend
 ```js
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-ctx.canvas // HTMLCanvasElement
+ctx.canvas; // HTMLCanvasElement
 ```
 
 ## Spécifications

@@ -1,21 +1,13 @@
 ---
 title: FormData.entries()
 slug: Web/API/FormData/entries
-tags:
-  - API
-  - FormData
-  - Iterator
-  - Method
-  - Reference
-  - XMLHttpRequest API
-translation_of: Web/API/FormData/entries
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 Метод **`FormData.entries()`** возвращает {{jsxref("Iteration_protocols",'iterator')}}, позволяя пройтись по всем ключам/значениям в этом объекте. Ключ каждой пары - это объект {{domxref("USVString")}}, значение - это {{domxref("USVString")}} или {{domxref("Blob")}}.
-
-> **Примечание:** Метод доступен в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
 
 ## Синтаксис
 
@@ -32,12 +24,12 @@ formData.entries();
 ```js
 // Create a test FormData object
 var formData = new FormData();
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 // Display the key/value pairs
-for(var pair of formData.entries()) {
-   console.log(pair[0]+ ', '+ pair[1]);
+for (var pair of formData.entries()) {
+  console.log(pair[0] + ", " + pair[1]);
 }
 ```
 
@@ -48,17 +40,17 @@ key1, value1
 key2, value2
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Using FormData objects](/ru/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

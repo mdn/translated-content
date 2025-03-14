@@ -1,14 +1,9 @@
 ---
 title: Текст
 slug: Web/API/Text
-tags:
-  - Node
-  - Text
-  - Текст
-translation_of: Web/API/Text
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
 Интерфейс **`Text`** представляет собой текстовое содержание (элемента) {{domxref("Element")}} или {{domxref("Attr")}}. Если элемент не имеет разметки внутри собственного содержимого, то он интерпретируется как a single child (implementing) `Text` ,который содержит текст элемента. Однако, если элемент содержит разметку, он разбивается на information items и `Text` nodes ,которые образуют его дочерние элементы.
 
@@ -25,7 +20,7 @@ translation_of: Web/API/Text
 
 _Inherits properties from its parent, {{domxref("CharacterData")}}._
 
-- {{domxref("Text.isElementContentWhitespace")}} {{readonlyInline}}{{ obsolete_inline() }}
+- {{domxref("Text.isElementContentWhitespace")}} {{readonlyInline}}
   - : Возвращает флаг {{domxref("Boolean")}}, сигнализирующий, содержит ли (или нет) text node только пробел(ы).
 - {{domxref("Text.wholeText")}} {{readonlyInline}}
   - : Возвращает {{domxref("DOMString")}}, который содержит все `Text` nodes логически примыкающие к этому {{domxref("Node")}}, соединённые как в документе.
@@ -45,7 +40,7 @@ _Наследует родительские методы, {{domxref("CharacterD
 
 <!---->
 
-- {{domxref("Text.replaceWholeText")}} {{ obsolete_inline() }}
+- {{domxref("Text.replaceWholeText")}}
   - : Заменяет текст текущего узла и всех логически прилегающих узлов указанным текстом(with the specified text).
 
 <!---->
@@ -63,4 +58,4 @@ _Наследует родительские методы, {{domxref("CharacterD
 
 ## Смотри(те) также
 
-- [The DOM interfaces index](/ru/docs/DOM/DOM_Reference).
+- [The DOM interfaces index](/ru/docs/Web/API/Document_Object_Model).

@@ -1,12 +1,6 @@
 ---
 title: place-items
 slug: Web/CSS/place-items
-tags:
-  - CSS
-  - Propriété
-  - Propriété raccourcie
-  - Reference
-translation_of: Web/CSS/place-items
 ---
 
 {{CSSRef}}
@@ -96,7 +90,7 @@ place-items: unset;
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   place-items: center; /* Cette valeur peut être modifiée dans l'exemple */
   background-color: #8c8c8c;
@@ -209,15 +203,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.placeItems = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```
@@ -236,10 +230,10 @@ display.addEventListener('change', function (evt) {
 
 ## Voir aussi
 
-- Guide sur les grilles : _[Aligner des objets dans une grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_CSS)_
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox)_
-- Guide sur les boîtes flexibles : _[Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_éléments_dans_un_conteneur_flexible)_
-- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)
+- Guide sur les grilles : _[Aligner des objets dans une grille](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- Guide sur les boîtes flexibles : _[Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/CSS_box_alignment)
 - Les propriétés détaillées correspondantes :
 
   - {{cssxref("align-items")}}

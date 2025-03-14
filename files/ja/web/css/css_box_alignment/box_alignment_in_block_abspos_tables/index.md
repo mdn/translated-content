@@ -1,11 +1,11 @@
 ---
 title: ブロック、絶対配置、表レイアウトのブロック配置
-slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables
+slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
+l10n:
+  sourceCommit: ca6d4f6114d278926e183225a90fd2209802cfe9
 ---
 
-[ボックス配置仕様書](/ja/docs/Web/CSS/CSS_Box_Alignment)は、様々なレイアウト方式でどのように配置が動作するかを詳説しています。このページでは、ボックス配置は浮動、位置指定、表要素を含むボックスレイアウトのレイアウトでどのように動作するかを明らかにします。このページはブロックレイアウトとボックス配置に固有のことを詳説するため、様々なレイアウト方式に共通のボックス配置の共通機能について説明している、中心となる[ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)ページを併せて読んでください。
-
-> **メモ:** 執筆時点 (2018 年 5 月) では、ブロックレイアウトのボックス配置プロパティへの対応は実際にはありません。この文書では完全性を保つために、仕様がこれらのプロパティをどのように実装することを期待しているかを詳細に説明していますが、仕様やブラウザーの実装が発展するにつれて変更される可能性があります。
+[ボックス配置仕様書](/ja/docs/Web/CSS/CSS_box_alignment)は、様々なレイアウト方式でどのように配置が動作するかを詳説しています。このページでは、ボックス配置は浮動、位置指定、表要素を含むボックスレイアウトのレイアウトでどのように動作するかを明らかにします。このページはブロックレイアウトとボックス配置に固有のことを詳説するため、様々なレイアウト方式に共通のボックス配置の共通機能について説明している、中心となる[ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)ページを併せて読んでください。
 
 ## align-content と justify-content
 
@@ -45,7 +45,36 @@ slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables
 
 多くの利用場面では、ブロックコンテナーをフレックスアイテムに変えることで、求めていた配置機能が得られます。以下の例では、アイテムが 1 つだけ入っているコンテナーを、配置プロパティを使用できるようにするためにフレックスコンテナーに変えています。
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/intro.html", '100%', 700)}}
+```html live-sample___intro
+<div class="box">
+  <div></div>
+</div>
+```
+
+```css live-sample___intro
+.box {
+  height: 300px;
+  border: 2px dotted rgb(96 139 168);
+}
+
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box div {
+  width: 100px;
+  height: 100px;
+}
+```
+
+{{EmbedLiveSample("intro", "", "320px")}}
 
 ## リファレンス
 

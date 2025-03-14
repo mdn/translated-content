@@ -47,27 +47,25 @@ Os métodos `wait()` e `wake()` são modelados no Linux futexes ("fast user-spac
 
 ## Especificações
 
-| Especificações                                                               | Status                               | Comentário         |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Shared Memory', '#AtomicsObject', 'Atomics')}} | {{Spec2('Shared Memory')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Atomics")}}
+{{Compat}}
 
 ## Observações de compatibilidade
 
-\[3] A especificação de compartilhamento de memória está sendo estabilizada. Anterior ao SpiderMonkey 48 {{geckoRelease(48)}}, a última API e semântica não foram implementadas ainda. As alterações entre as versões 46 e 48 do Firefox são:
+\[3] A especificação de compartilhamento de memória está sendo estabilizada. Anterior ao SpiderMonkey 48, a última API e semântica não foram implementadas ainda. As alterações entre as versões 46 e 48 do Firefox são:
 
-- Os métodos `Atomics.futexWakeOrRequeue()` e `Atomics.fence()` foram totalmente removidos ({{bug(1259544)}} e {{bug(1225028)}}).
-- O método {{jsxref("Atomics.wait()")}} e {{jsxref("Atomics.wake()")}} foram nomeados como `Atomics.futexWait()` e `Atomics.futexWake()` ({{bug(1260910)}}). Os nomes antigos foram mantidos como alias, e serão removidos na versão 49 ({{bug(1262062)}}).
-- As propriedades `Atomics.OK`, `Atomics.TIMEDOUT`, `Atomics.NOTEQUAL` foram removidas. O método {{jsxref("Atomics.wait()")}} agora retorna "ok", "timed-out" e "not-equal" ({{bug(1260835)}}).
-- O parâmetro `count` do método {{jsxref("Atomics.wake()")}} foi alterado: este agora possui o valor padrão `+Infinity`, e não `0` ({{bug(1253350)}}).
+- Os métodos `Atomics.futexWakeOrRequeue()` e `Atomics.fence()` foram totalmente removidos ([Erro do Firefox 1259544](https://bugzil.la/1259544) e [Erro do Firefox 1225028](https://bugzil.la/1225028)).
+- O método {{jsxref("Atomics.wait()")}} e {{jsxref("Atomics.wake()")}} foram nomeados como `Atomics.futexWait()` e `Atomics.futexWake()` ([Erro do Firefox 1260910](https://bugzil.la/1260910)). Os nomes antigos foram mantidos como alias, e serão removidos na versão 49 ([Erro do Firefox 1262062](https://bugzil.la/1262062)).
+- As propriedades `Atomics.OK`, `Atomics.TIMEDOUT`, `Atomics.NOTEQUAL` foram removidas. O método {{jsxref("Atomics.wait()")}} agora retorna "ok", "timed-out" e "not-equal" ([Erro do Firefox 1260835](https://bugzil.la/1260835)).
+- O parâmetro `count` do método {{jsxref("Atomics.wake()")}} foi alterado: este agora possui o valor padrão `+Infinity`, e não `0` ([Erro do Firefox 1253350](https://bugzil.la/1253350)).
 
 ## Veja Também
 
 - {{jsxref("ArrayBuffer")}}
-- [JavaScript typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays)
 - [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API)
 - [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – a simple library providing synchronization and work distribution abstractions.
 - [Shared Memory – a brief tutorial](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)

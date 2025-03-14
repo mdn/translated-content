@@ -1,7 +1,6 @@
 ---
 title: 304 Not Modified
 slug: Web/HTTP/Status/304
-translation_of: Web/HTTP/Status/304
 ---
 
 {{HTTPSidebar}}
@@ -10,7 +9,8 @@ translation_of: Web/HTTP/Status/304
 
 Если эквивалентный ответ {{HTTPStatus("200")}} `OK` включал {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}}, {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}} и {{HTTPHeader("Vary")}}.
 
-> **Примечание:** Многие [developer tools' network panels](/ru/docs/Tools/Network_Monitor) браузеров создают посторонние запросы, приводящие к 304 ответам, так что доступ к локальному кешу виден разработчикам.
+> [!NOTE]
+> Многие [developer tools' network panels](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) браузеров создают посторонние запросы, приводящие к 304 ответам, так что доступ к локальному кешу виден разработчикам.
 
 ## Статус
 
@@ -20,11 +20,11 @@ translation_of: Web/HTTP/Status/304
 
 ## Характеристики
 
-| Спецификации                                             | Название                                                     |
-| -------------------------------------------------------- | ------------------------------------------------------------ |
+| Спецификации                                | Название                                                     |
+| ------------------------------------------- | ------------------------------------------------------------ |
 | {{RFC("7232", "304 Not Modified" , "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

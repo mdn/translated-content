@@ -3,7 +3,7 @@ title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 指定されたプロパティを持つ全てのタブを取得します。何も指定しない場合、全てのタブを取得します。
 
@@ -13,11 +13,11 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
 
 ```js
 var querying = browser.tabs.query(
-  queryInfo             // object
-)
+  queryInfo, // object
+);
 ```
 
-### パラメータ
+### パラメーター
 
 - `queryInfo`
 
@@ -34,7 +34,7 @@ var querying = browser.tabs.query(
     - `currentWindow`{{optional_inline}}
       - : `boolean`. カレントウインドウの中のタブか。
     - `discarded`{{optional_inline}}
-      - : `boolean`. タブが discard されているか。 discard されたタブはコンテンツがメモリからアンロードされているが、タブの一覧には表示されたままになります。コンテンツはタブが次にアクティブになったときにリロードされます。
+      - : `boolean`. タブが discard されているか。 discard されたタブはコンテンツがメモリーからアンロードされているが、タブの一覧には表示されたままになります。コンテンツはタブが次にアクティブになったときにリロードされます。
     - `highlighted`{{optional_inline}}
       - : `boolean`. ハイライトされているか。
     - `index`{{optional_inline}}
@@ -66,7 +66,7 @@ var querying = browser.tabs.query(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.tabs.query", 10)}}
+{{Compat}}
 
 ## 例
 
@@ -102,7 +102,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({currentWindow: true});
+var querying = browser.tabs.query({ currentWindow: true });
 querying.then(logTabs, onError);
 ```
 
@@ -120,7 +120,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({currentWindow: true, active: true});
+var querying = browser.tabs.query({ currentWindow: true, active: true });
 querying.then(logTabs, onError);
 ```
 
@@ -138,7 +138,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({url: "*://*.mozilla.org/*"});
+var querying = browser.tabs.query({ url: "*://*.mozilla.org/*" });
 querying.then(logTabs, onError);
 ```
 
@@ -157,7 +157,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({url: "moz-extension://*/*"});
+var querying = browser.tabs.query({ url: "moz-extension://*/*" });
 querying.then(logTabs, onError);
 ```
 
@@ -176,15 +176,17 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({url: browser.extension.getURL("*")});
+var querying = browser.tabs.query({ url: browser.extension.getURL("*") });
 querying.then(logTabs, onError);
 ```
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-duplicate) API に基づいています。 This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!NOTE]
+> この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-duplicate) API に基づいています。 This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -211,4 +213,4 @@ querying.then(logTabs, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

@@ -1,36 +1,23 @@
 ---
 title: devtools.panels.ExtensionSidebarPane.setObject()
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setObject
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.panels
-  - setObject
-translation_of: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setObject
-original_slug: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setObject
+slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setObject
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Affiche un objet JSON dans le volet de la barre latérale de l'extension.
 
-L'objet est affiché en tant qu'arborescence extensible, comme dans le [JSON viewer](/fr/docs/Outils/JSON_viewer) dans Firefox. Vous pouvez éventuellement spécifier une chaîne `rootTitle` : elle sera affichée comme le titre de la racine de l'arbre.
+L'objet est affiché en tant qu'arborescence extensible, comme dans le [JSON viewer](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) dans Firefox. Vous pouvez éventuellement spécifier une chaîne `rootTitle` : elle sera affichée comme le titre de la racine de l'arbre.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var setting = browser.devtools.panels.setObject(
-  jsonObject,       // string, array, or JSON object
-  rootTitle         // string
-)
+  jsonObject, // string, array, or JSON object
+  rootTitle, // string
+);
 ```
 
 ### Paramètres
@@ -42,15 +29,15 @@ var setting = browser.devtools.panels.setObject(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera accomplie sans arguments, une fois l'objet défini.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera accomplie sans arguments, une fois l'objet défini.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.ExtensionSidebarPane.setObject", 10)}}
+{{Compat}}
 
 ## Exemples
 
-Créez un nouveau volet et remplissez-le avec un objet JSON. Vous pouvez exécuter ce code dans un script chargé par la [page devtools](/fr/Add-ons/WebExtensions/manifest.json/devtools_page). de votre extension
+Créez un nouveau volet et remplissez-le avec un objet JSON. Vous pouvez exécuter ce code dans un script chargé par la [page devtools](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page). de votre extension
 
 ```js
 function onCreated(sidebarPane) {
@@ -59,8 +46,8 @@ function onCreated(sidebarPane) {
     someString: "hello there",
     someObject: {
       someNumber: 42,
-      someOtherString: "this is my pane's content"
-    }
+      someOtherString: "this is my pane's content",
+    },
   });
 }
 
@@ -69,7 +56,7 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
 

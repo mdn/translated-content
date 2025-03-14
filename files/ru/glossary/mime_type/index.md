@@ -1,13 +1,10 @@
 ---
 title: MIME-тип
 slug: Glossary/MIME_type
-tags:
-  - MIME-тип
-  - Media-тип
-  - Медиа тип
-translation_of: Glossary/MIME_type
-original_slug: Глоссарий/MIME_type
 ---
+
+{{GlossarySidebar}}
+
 **MIME-тип** (называемый "media type", а иногда "content type") - это строка, отправляемая вместе с файлом, которая указывает тип файла. (например, передаваемый аудиофайл может быть помечен как `audio/ogg` тип, а изображение - `image/png`). MIME-тип играет точно такую же роль, как и расширение файла в системе Windows. Когда HTTP-сообщение содержит `Content-type` заголовок, тело запроса будет парситься в соответствии с MIME-типом, указанным в заголовке.
 
 ## Узнать больше
@@ -18,6 +15,6 @@ original_slug: Глоссарий/MIME_type
 
 ### Технические справки
 
-- [List of MIME types](http://www.iana.org/assignments/media-types/media-types.xhtml)
-- [Properly Configuring Server MIME Types](/ru/docs/Properly_Configuring_Server_MIME_Types)
-- Детальная информация об использовании [MIME Types](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types) в контексте Веб.
+- [List of MIME types](https://www.iana.org/assignments/media-types/media-types.xhtml)
+- [Properly Configuring Server MIME Types](/ru/docs/Learn/Server-side/Configuring_server_MIME_types)
+- Детальная информация об использовании [MIME Types](/ru/docs/Web/HTTP/MIME_types) в контексте Веб.

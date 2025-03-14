@@ -1,15 +1,29 @@
 ---
 title: accesskey
 slug: Web/HTML/Global_attributes/accesskey
+l10n:
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`accesskey`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、現在の要素のショートカットキーを生成するためのヒントを与えます。この属性は空白で区切った表示可能な文字 (キーボードから生成できるアクセント付き文字やその他の文字を含む) から成ります。
+**`accesskey`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、現在の要素のショートカットキーを生成するためのヒントを与えます。この属性は空白で区切った表示可能な文字（キーボードから生成できるアクセント付き文字やその他の文字を含む）から成ります。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-accesskey.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: accesskey", "tabbed-shorter")}}
 
-> **メモ:** WHATWG の仕様書では、空白区切りの複数の文字を指定することができ、ブラウザーは対応する最初の一つを使用するとしています。しかし、これは多くのブラウザーでは動作しません。 IE や Edge は、他のコマンドと競合がない問題なく使用することができる最初の 1 つを使用します。
+```html interactive-example
+<p>If you need to relax, press the <b>S</b>tress reliever!</p>
+<button accesskey="s">Stress reliever</button>
+```
+
+```css interactive-example
+b {
+  text-decoration: underline;
+}
+```
+
+> [!NOTE]
+> WHATWG の仕様書では、空白区切りの複数の文字を指定することができ、ブラウザーは対応する最初の一つを使用するとしています。しかし、これは多くのブラウザーでは動作しません。 IE や Edge は、他のコマンドと競合がない問題なく使用することができる最初の 1 つを使用します。
 
 アクセスキーを有効にする方法は、ブラウザーやプラットフォームによって異なります。
 
@@ -23,7 +37,7 @@ slug: Web/HTML/Global_attributes/accesskey
     </tr>
     <tr>
       <th>Firefox</th>
-      <td colspan="2" rowspan="1" style="text-align: center">
+      <td colspan="2">
         <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd><em>key</em></kbd>
       </td>
       <td>
@@ -36,17 +50,9 @@ slug: Web/HTML/Global_attributes/accesskey
       </td>
     </tr>
     <tr>
-      <th>Internet Explorer</th>
-      <td rowspan="3" style="text-align: center">
-        <kbd>Alt</kbd> + <kbd><em>key</em></kbd
-        ><br /><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd><em>key</em></kbd>
-      </td>
-      <td colspan="2" rowspan="1" style="text-align: center">N/A</td>
-    </tr>
-    <tr>
       <th>Edge</th>
-      <td style="text-align: center">N/A</td>
-      <td rowspan="3" style="text-align: center">
+      <td>N/A</td>
+      <td rowspan="3">
         <kbd>Control</kbd> + <kbd>Option</kbd> + <kbd><em>key</em></kbd
         ><br /><kbd>Control</kbd> + <kbd>Option</kbd> + <kbd>Shift</kbd> +
         <kbd><em>key</em></kbd>
@@ -54,26 +60,26 @@ slug: Web/HTML/Global_attributes/accesskey
     </tr>
     <tr>
       <th>Google Chrome</th>
-      <td style="text-align: center">
-        <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd><em>key</em></kbd>
+      <td>
+        <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
       </td>
     </tr>
     <tr>
       <th>Safari</th>
-      <td colspan="2" style="text-align: center">N/A</td>
+      <td colspan="2">N/A</td>
     </tr>
     <tr>
       <th>Opera 15+</th>
-      <td colspan="2" rowspan="1" style="text-align: center">
+      <td colspan="2">
         <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
       </td>
-      <td style="text-align: center">
+      <td>
         <kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
       </td>
     </tr>
     <tr>
       <th>Opera 12</th>
-      <td colspan="3" rowspan="1">
+      <td colspan="3">
         <kbd>Shift</kbd> + <kbd>Esc</kbd> で、accesskey
         でアクセスできるコンテンツの一覧を開きます。そして
         <kbd><em>key</em></kbd> を押すと、該当項目を選択できます。
@@ -101,11 +107,11 @@ slug: Web/HTML/Global_attributes/accesskey
 
 ## ブラウザーの互換性
 
-{{Compat("html.global_attributes.accesskey")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{domxref("Element.accessKey")}}
+- {{domxref("HTMLElement.accessKey")}}
 - {{domxref("HTMLElement.accessKeyLabel")}}
-- すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)。
+- すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)
 - [`aria-keyshortcuts`](https://www.w3.org/TR/wai-aria-1.1/#aria-keyshortcuts)

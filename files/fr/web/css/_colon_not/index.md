@@ -1,11 +1,6 @@
 ---
-title: ':not'
+title: :not
 slug: Web/CSS/:not
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:not
 ---
 
 {{CSSRef}}
@@ -22,7 +17,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) de négation, **`:not()`**, 
 
 La [spécificité](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) de la pseudo-classe `:not` est la spécificité de son argument. La pseudo-classe de négation n'ajoute pas de spécificité, contrairement aux autres pseudo-classes.
 
-> **Note :**
+> [!NOTE]
 >
 > - Attention à ne pas écrire de sélecteurs inutiles à l'aide de cette pseudo-classe. Ainsi, `:not(*)` va exclure tous les éléments et ne sera jamais appliqué.
 > - À l'inverse, il est possible d'augmenter la [spécificitié](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) d'un sélecteur. Ainsi. `toto:not(truc)` ciblera les mêmes éléments que `toto`, mais avec une spécificité plus forte.
@@ -33,7 +28,8 @@ La [spécificité](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) d
 
 La pseudo-classe `:not()` prend en argument une liste d'un ou plusieurs sélecteurs séparés par des virgules. Cette liste ne doit pas contenir d'autre sélecteur de négation ou [de pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements).
 
-> **Attention :** la possibilité d'avoir plusieurs sélecteurs est expérimentale et n'est pas encore largement prise en charge.
+> [!WARNING]
+> La possibilité d'avoir plusieurs sélecteurs est expérimentale et n'est pas encore largement prise en charge.
 
 {{csssyntax}}
 
@@ -66,15 +62,9 @@ body :not(.classy, p) {
 ### HTML
 
 ```html
-<p>
-  Un peu de texte.
-</p>
-<p class="classy">
-  Encore du texte.
-</p>
-<span>
-  Et toujours du texte.
-<span>
+<p>Un peu de texte.</p>
+<p class="classy">Encore du texte.</p>
+<span> Et toujours du texte. </span>
 ```
 
 ### Résultat

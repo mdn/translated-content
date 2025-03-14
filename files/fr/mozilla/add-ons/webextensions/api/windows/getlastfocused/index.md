@@ -1,31 +1,20 @@
 ---
 title: windows.getLastFocused()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/getLastFocused
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Referece
-  - WebExtensions
-  - Windows
-  - getLastFocused
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/getLastFocused
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient la fenêtre qui a été recentrée récemment — généralement la fenêtre 'en haut'.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var gettingWindow = browser.windows.getLastFocused(
-  getInfo               // optional object
-)
+  getInfo, // optional object
+);
 ```
 
 ### Paramètres
@@ -39,7 +28,7 @@ var gettingWindow = browser.windows.getLastFocused(
     - `windowTypes`{{optional_inline}}
       - : Un ensemble d'objets {{WebExtAPIRef('windows.WindowType')}}. Si défini, le {{WebExtAPIRef('windows.Window')}} retourné sera filtré en fonction de son type. Si désactivé, le filtre par défaut est réglé sur `['normal', 'panel', 'popup']`, avec le type de fenêtre `'panel'` qui sont limités aux propres fenêtres de l'extension.
 
-> **Note :**
+> [!NOTE]
 >
 > Si fourni, le composant `windowTypes` de `getInfo` est ignoré. L'utilisation de `windowTypes` a été dépréciée à partir de Firefox 62.
 
@@ -47,9 +36,9 @@ var gettingWindow = browser.windows.getLastFocused(
 
 `Une Promise` qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la dernière fenêtre ciblée. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.getLastFocused",2)}}
+{{Compat}}
 
 ## Exemples
 
@@ -67,16 +56,16 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  var getting = browser.windows.getLastFocused({populate: true});
+  var getting = browser.windows.getLastFocused({ populate: true });
   getting.then(logTabs, onError);
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/extensions/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
 >
 > Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 

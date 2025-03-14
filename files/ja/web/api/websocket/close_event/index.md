@@ -1,9 +1,12 @@
 ---
-title: 'WebSocket: close イベント'
+title: "WebSocket: close イベント"
+short-title: close
 slug: Web/API/WebSocket/close_event
+l10n:
+  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
-{{APIRef}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
 `close` イベントは、 `WebSocket` の接続が閉じられたときに発生します。
 
@@ -12,9 +15,9 @@ slug: Web/API/WebSocket/close_event
 イベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('close', event => { })
+addEventListener("close", (event) => {});
 
-onclose = event => { }
+onclose = (event) => {};
 ```
 
 ## イベント型
@@ -27,11 +30,11 @@ onclose = event => { }
 
 _下記に示したプロパティに加えて、親インターフェイスである {{domxref("Event")}} からのプロパティが利用できます。_
 
-- {{domxref("CloseEvent.code", "code")}}{{readOnlyInline}}
+- {{domxref("CloseEvent.code", "code")}} {{ReadOnlyInline}}
   - : サーバーが送信したクローズコードを `unsigned short` で返します。
-- {{domxref("CloseEvent.reason", "reason")}}{{readOnlyInline}}
-  - : サーバーが接続を閉じた理由を示す {{domxref("DOMString")}} を返します。これは、特定のサーバーとサブプロトコルに固有のものです。
-- {{domxref("CloseEvent.wasClean", "wasClean")}}{{readOnlyInline}}
+- {{domxref("CloseEvent.reason", "reason")}} {{ReadOnlyInline}}
+  - : サーバーが接続を閉じた理由を示す文字列を返します。これは、特定のサーバーとサブプロトコルに固有のものです。
+- {{domxref("CloseEvent.wasClean", "wasClean")}} {{ReadOnlyInline}}
   - : 接続がきれいに閉じられたか否かを示す論理値を返します。
 
 ## 例
@@ -39,16 +42,16 @@ _下記に示したプロパティに加えて、親インターフェイスで�
 接続が閉じられる時が分かれば、 UI を更新させたり、閉じた接続についてのデータを保存したりすることができます。以下の例では `exampleSocket` と呼ばれる変数が開かれた `WebSocket` を参照しており、このハンドラーが、ソケットが閉じられた場面を扱います。
 
 ```js
-exampleSocket.addEventListener('close', (event) => {
-  console.log('The connection has been closed successfully.');
+exampleSocket.addEventListener("close", (event) => {
+  console.log("この接続を閉じることに成功しました。");
 });
 ```
 
 同じことを、イベントハンドラープロパティを用いて行うこともできます。
 
 ```js
-exampleSocket.onclose = function (event) {
-  console.log('The connection has been closed successfully.');
+exampleSocket.onclose = (event) => {
+  console.log("この接続を閉じることに成功しました。");
 };
 ```
 

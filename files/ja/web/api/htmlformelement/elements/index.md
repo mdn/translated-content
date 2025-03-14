@@ -1,8 +1,9 @@
 ---
-title: HTMLFormElement.elements
+title: "HTMLFormElement: elements プロパティ"
+short-title: elements
 slug: Web/API/HTMLFormElement/elements
 l10n:
-  sourceCommit: 03f91ed2e2c6123fbf711f1759c7e99a2dc63de6
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
@@ -15,7 +16,8 @@ l10n:
 
 HTML 5 より前のバージョンでは、返されるオブジェクトは {{domxref("HTMLCollection")}} でした。 `HTMLFormControlsCollection` これに基づいています。
 
-> **メモ:** 同様に、指定された文書内のすべてのフォームの一覧を取得するには、その文書の {{domxref("Document.forms", "forms")}} プロパティを使用してください。
+> [!NOTE]
+> 同様に、指定された文書内のすべてのフォームの一覧を取得するには、その文書の {{domxref("Document.forms", "forms")}} プロパティを使用してください。
 
 ## 値
 
@@ -29,7 +31,7 @@ HTML 5 より前のバージョンでは、返されるオブジェクトは {{d
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
-- {{HTMLElement("input")}} （ただし、 {{htmlattrxref("type", "input")}} が `"image"` であるものは、過去の経緯から除外されています）。
+- {{HTMLElement("input")}} （ただし、 [`type`](/ja/docs/Web/HTML/Element/input#type) が `"image"` であるものは、過去の経緯から除外されています）。
 - {{HTMLElement("object")}}
 - {{HTMLElement("output")}}
 - {{HTMLElement("select")}}
@@ -43,9 +45,18 @@ HTML 5 より前のバージョンでは、返されるオブジェクトは {{d
 
 ```html
 <form id="my-form">
-  <input type="text" name="username" />
-  <input type="text" name="full-name" />
-  <input type="password" name="password" />
+  <label>
+    ユーザー名:
+    <input type="text" name="username" />
+  </label>
+  <label>
+    フルネーム:
+    <input type="text" name="full-name" />
+  </label>
+  <label>
+    パスワード:
+    <input type="password" name="password" />
+  </label>
 </form>
 ```
 

@@ -1,13 +1,51 @@
 ---
 title: line-height
 slug: Web/CSS/line-height
+l10n:
+  sourceCommit: 3928d2b1004e2435e063ef4b037e06e1906d62f3
 ---
 
 {{CSSRef}}
 
-**`line-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、行ボックスの高さを設定します。これは主にテキストの行間を設定するために使用します。ブロックレベル要素では、要素に含まれる行ボックスの最小の高さを指定します。非[置換](/ja/docs/Web/CSS/Replaced_element)インライン要素では、行ボックスの高さの計算に使われる高さを指定します。
+**`line-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[書字方向](/ja/docs/Web/CSS/writing-mode#vertical-rl)が水平の場合は、行ボックスの高さを設定します。書字方向が垂直の場合は、行ボックスの幅を設定します。これは主にテキストの行間を設定するために使用します。書字方向が水平のブロックレベル要素では、要素に含まれる行ボックスの推奨される高さを指定し、非[置換](/ja/docs/Web/CSS/Replaced_element)インライン要素では、行ボックスの高さの計算に使われる高さを指定します。
 
-{{EmbedInteractiveExample("pages/css/line-height.html")}}
+{{InteractiveExample("CSS Demo: line-height")}}
+
+```css interactive-example-choice
+line-height: normal;
+```
+
+```css interactive-example-choice
+line-height: 2.5;
+```
+
+```css interactive-example-choice
+line-height: 3em;
+```
+
+```css interactive-example-choice
+line-height: 150%;
+```
+
+```css interactive-example-choice
+line-height: 32px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    Far out in the uncharted backwaters of the unfashionable end of the western
+    spiral arm of the Galaxy lies a small unregarded yellow sun.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-family: Georgia, sans-serif;
+  max-width: 200px;
+}
+```
 
 ## 構文
 
@@ -15,8 +53,8 @@ slug: Web/CSS/line-height
 /* キーワード値 */
 line-height: normal;
 
-/* 単位のない値: この値を要素のフォントサイズに
-掛けたものを使用する */
+/* 単位のない値:
+この値を要素のフォントサイズに掛けたものを使用する */
 line-height: 3.5;
 
 /* <length> 値 */
@@ -29,14 +67,15 @@ line-height: 34%;
 line-height: inherit;
 line-height: initial;
 line-height: revert;
+line-height: revert-layer;
 line-height: unset;
 ```
 
-`line-height` プロパティは以下のうちの一つで指定します。
+`line-height` プロパティは以下のうちの 1 つで指定します。
 
-- 一つの `<number>`
-- 一つの `<length>`
-- 一つの `<percentage>`
+- 1 つの `<number>`
+- 1 つの `<length>`
+- 1 つの `<percentage>`
 - キーワード `normal`
 
 ### 値
@@ -49,10 +88,8 @@ line-height: unset;
   - : 行ボックスの高さの計算に、指定した {{cssxref("&lt;length&gt;")}} が使われます。**em** の単位で値が与えられると予期しない結果をになることがあります (下記の例を参照してください)。
 - `<percentage>`
   - : 要素自身のフォントサイズに対する相対値です。計算値はこの {{cssxref("&lt;percentage&gt;")}} に要素のフォントサイズの計算値を掛けたものです。**パーセント値**は予期しない結果を生む可能性があります (下記の第 2 の例を参照してください)。
-- `-moz-block-height` {{non-standard_inline}}
-  - : 行の高さを現在のブロックのコンテンツの高さにします。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
 主要な段落コンテンツでは、 `line-height` の値が `1.5` 以上になるようにしてください。これは弱視の人や、認知障碍を負った人に有用です。ページがテキストの寸法が大きくなるように拡大した場合、単位なしの値を使用すれば行の高さも同じ割合で拡大します。
 
@@ -73,33 +110,54 @@ line-height: unset;
 ```css
 /* 以下のルールの結果はすべて、同じ line height です */
 
-div { line-height: 1.2;   font-size: 10pt; }   /* 数値/単位なし */
-div { line-height: 1.2em; font-size: 10pt; }   /* 長さ */
-div { line-height: 120%;  font-size: 10pt; }   /* パーセント値 */
-div { font: 10pt/1.2  Georgia,"Bitstream Charter",serif; } /* 一括指定 */
+/* 数値/単位なし */
+div {
+  line-height: 1.2;
+  font-size: 10pt;
+}
+
+/* 長さ */
+div {
+  line-height: 1.2em;
+  font-size: 10pt;
+}
+
+/* パーセント値 */
+div {
+  line-height: 120%;
+  font-size: 10pt;
+}
+
+/* font 一括指定 */
+div {
+  font:
+    10pt/1.2 Georgia,
+    "Bitstream Charter",
+    serif;
+}
 ```
 
 `line-height` を設定するには、上記の {{cssxref("font")}} 一括指定プロパティがより便利なことが多いのですが、この場合は同時に `font-family` プロパティも指定しなければなりません。
 
-<h3 id="Prefer_unitless_numbers_for_line-height_values">line-height の値は単位なしの数値が好ましい</h3>
+### line-height の値は単位なしの数値が好ましい
 
-以下の例は、{{cssxref("&lt;number&gt;")}} を使用したほうが {{cssxref("&lt;length&gt;")}} よりも好ましい理由を示しています。 2 つの {{HTMLElement("div")}} 要素を使用しています。最初のものには緑色の境界があり、単位なしの `line-height` の値を使用しています。2 番目には赤色の境界があり、 `line-height` の値を `em` で定義して使用しています。
+以下の例は、{{cssxref("&lt;number&gt;")}} を使用したほうが {{cssxref("&lt;length&gt;")}} よりも好ましい理由を示しています。 2 つの {{HTMLElement("div")}} 要素を使用しています。最初の div には緑色の境界があり、単位なしの `line-height` の値を使用しています。2 番目の div には赤色の境界があり、 `line-height` の値を `em` で定義して使用しています。
 
 #### HTML
 
-```html
+```html-nolint
 <div class="box green">
- <h1>予期しない結果を避けるために、単位なしの line-height を使いましょう。</h1>
-  length と percentage で line-height を指定すると、継承動作がうまくいきません。 ...
+  <h1>予期しない結果を避けるために、単位なしの line-height を使いましょう。</h1>
+  length と percentage で line-height を指定すると、継承動作がうまくいきません。
 </div>
 
 <div class="box red">
- <h1>予期しない結果を避けるために、単位なしの line-height を使いましょう。</h1>
-  length と percentage で line-height を指定すると、継承動作がうまくいきません。 ...
+  <h1>予期しない結果を避けるために、 line-height は単位なしで使いましょう。</h1>
+  length と percentage で line-height を指定すると、継承動作がうまくいきません。
 </div>
 
 <!-- 1 つ目の <h1> の line-height はそれ自身のフォントサイズから計算されます   (30px × 1.1) = 33px  -->
-<!-- 2 つ目の <h1> の line-height は red div のフォントサイズから計算されます  (15px × 1.1) = 16.5px  おそらく、望む結果ではないでしょう -->
+<!-- 2 つ目の <h1> の line-height は red の div のフォントサイズから計算されます  (15px × 1.1) = 16.5px  おそらく、望む結果ではないでしょう -->
 ```
 
 #### CSS
@@ -130,6 +188,45 @@ h1 {
 #### 結果
 
 {{EmbedLiveSample('Prefer_unitless_numbers_for_line-height_values', 600, 200)}}
+
+### 縦書きモードでの行間の空間
+
+`line-height` プロパティは、縦書きの書字方向における縦の行間の空間を調整するために使用することができます。
+
+```html hidden
+<div class="haiku">
+  古池や蛙飛び込む水の音<br />
+  ふるいけやかわずとびこむみずのおと<br />
+  富士の風や扇にのせて江戸土産<br />
+  ふじのかぜやおうぎにのせてえどみやげ<br />
+</div>
+
+<div class="haiku wide">
+  古池や蛙飛び込む水の音<br />
+  ふるいけやかわずとびこむみずのおと<br />
+  富士の風や扇にのせて江戸土産<br />
+  ふじのかぜやおうぎにのせてえどみやげ<br />
+</div>
+```
+
+```css
+.haiku {
+  border: 1px solid;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: wheat;
+
+  writing-mode: vertical-rl;
+}
+
+.wide {
+  line-height: 2;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('Space between lines in vertical writing modes', '100%', 650)}}
 
 ## 仕様書
 

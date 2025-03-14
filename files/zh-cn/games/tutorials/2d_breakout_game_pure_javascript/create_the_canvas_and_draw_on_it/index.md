@@ -1,14 +1,13 @@
 ---
 title: 创建、绘制画布
-slug: >-
-  Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
+slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 ---
 
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
 
-本篇是 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch) 10 节教程中的第一节。如果你完成了本篇教程之后，你可以从 [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html) 看到源码。
+本篇是 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) 10 节教程中的第一节。如果你完成了本篇教程之后，你可以从 [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html) 看到源码。
 
 在我们开始编写游戏功能之前，我们可以通过 HTML 的 canvas 标签创建支撑游戏的基本结构。
 
@@ -17,25 +16,30 @@ slug: >-
 HTML 文档的结构是非常简单的，我们的游戏将完全呈现在这个 HTML 的 canvas 标签中。你可以选择一款你最喜欢的文本编辑器，创建一个 HTML 文件，保存到你理想的位置，名称为 index.html。并添加以下代码：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-     * { padding: 0; margin: 0; }
-     canvas { background: #eee; display: block; margin: 0 auto; }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      canvas {
+        background: #eee;
+        display: block;
+        margin: 0 auto;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="480" height="320"></canvas>
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
-
-<script>
- // JavaScript code goes here
-</script>
-
-</body>
+    <script>
+      // JavaScript code goes here
+    </script>
+  </body>
 </html>
 ```
 
@@ -68,7 +72,7 @@ ctx.closePath();
 
 ```js
 ctx.beginPath();
-ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
 ctx.fillStyle = "green";
 ctx.fill();
 ctx.closePath();
@@ -83,7 +87,7 @@ ctx.closePath();
 
 ctx.fillStyle 属性的值看起来和之前不大一样。这是因为它与 CSS 一样，颜色可以指定为十六进制值也可以指定为 rgba() 函数，或者任何其他可用的颜色值函数。
 
-当然我们也可以不使用 ctx.fill() 函数来填充图形和颜色，用 ctx.stroke() 函数来绘制定义图形的路径。试着将这段代码添加到您的 JavaScript:
+当然我们也可以不使用 ctx.fill() 函数来填充图形和颜色，用 ctx.stroke() 函数来绘制定义图形的路径。试着将这段代码添加到你的 JavaScript:
 
 ```js
 ctx.beginPath();
@@ -101,10 +105,11 @@ ctx.closePath();
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","370")}}
 
-> **备注：** 练习：尝试改变给定几何图形的大小和颜色。
+> [!NOTE]
+> 练习：尝试改变给定几何图形的大小和颜色。
 
 ## 下一节
 
-现在我们已经创建了基本的 HTML 和关于画布的基本知识。我们继续第二节，如何让球在游戏中动起来 — [让球动起来](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch/Move_the_ball)。
+现在我们已经创建了基本的 HTML 和关于画布的基本知识。我们继续第二节，如何让球在游戏中动起来 — [让球动起来](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball)。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}

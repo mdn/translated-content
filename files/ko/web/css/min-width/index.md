@@ -1,20 +1,50 @@
 ---
 title: min-width
 slug: Web/CSS/min-width
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/min-width
 ---
 
 {{CSSRef}}
 
-**`min-width`** [CSS](/ko/docs/CSS) 속성은 요소의 최소 너비를 설정합니다. `min-width`는 {{cssxref("width")}} 속성의 [사용값](/ko/docs/Web/CSS/used_value)이 자신의 값보다 작아지는걸 방지합니다.
+**`min-width`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 최소 너비를 설정합니다. `min-width`는 {{cssxref("width")}} 속성의 [사용값](/ko/docs/Web/CSS/used_value)이 자신의 값보다 작아지는걸 방지합니다.
 
-{{EmbedInteractiveExample("pages/css/min-width.html")}}
+{{InteractiveExample("CSS Demo: min-width")}}
 
-`min-width`가 {{cssxref("max-width")}} 또는 {{cssxref("width")}}보다 커지면 요소의 높이는 `min-width`의 값을 사용합니다.
+```css interactive-example-choice
+min-width: 150px;
+```
+
+```css interactive-example-choice
+min-width: 20em;
+```
+
+```css interactive-example-choice
+min-width: 75%;
+```
+
+```css interactive-example-choice
+min-width: 40ch;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Change the minimum width.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
+
+`min-width`가 {{cssxref("max-width")}} 또는 {{cssxref("width")}}보다 커지면 요소의 너비는 `min-width`의 값을 사용합니다.
 
 ## 구문
 
@@ -42,7 +72,7 @@ min-width: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 고정 길이로 나타낸 최대 너비. 음수 값은 유효하지 않습니다.
 - {{cssxref("&lt;percentage&gt;")}}
-  - [: 컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 너비에 대한 백분율로 나타낸 최대 너비. 음수 값은 유효하지 않습니다.
+  - [: 컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 너비에 대한 백분율로 나타낸 최대 너비. 음수 값은 유효하지 않습니다.
 
 #### 키워드 값
 
@@ -64,9 +94,13 @@ min-width: unset;
 ## 예제
 
 ```css
-table { min-width: 75%; }
+table {
+  min-width: 75%;
+}
 
-form { min-width: 0; }
+form {
+  min-width: 0;
+}
 ```
 
 ## 명세
@@ -81,5 +115,5 @@ form { min-width: 0; }
 
 ## 같이 보기
 
-- [박스 모델 입문](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
+- [박스 모델 입문](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
 - {{ Cssxref("width") }}, {{ Cssxref("max-width") }}

@@ -1,36 +1,32 @@
 ---
-title: CanvasRenderingContext2D.direction
+title: CanvasRenderingContext2D：direction 属性
 slug: Web/API/CanvasRenderingContext2D/direction
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef}} {{SeeCompatTable}}
+{{APIRef}}
 
-**`CanvasRenderingContext2D.direction`** 是 Canvas 2D API 用来在绘制文本时，描述当前文本方向的属性。
+Canvas 2D API 的 **`CanvasRenderingContext2D.direction`** 属性用来在绘制文本时，描述当前文本方向。
 
-## 语法
+## 值
 
-```
-ctx.direction = "ltr" || "rtl" || "inherit";
-```
+可能的取值：
 
-### 选项
+- `"ltr"`
+  - : 文字方向为从左到右。
+- `"rtl"`
+  - : 文字方向为从右到左。
+- `"inherit"`
+  - : 文字方向从相应的 {{HTMLElement("canvas")}} 元素或 {{domxref("Document")}} 继承。
 
-有效值：
-
-- ltr
-  - : 文本方向从左向右。
-- rtl
-  - : 文本方向从右向左。
-- inherit
-  - : 根据情况继承 {{HTMLElement("canvas")}} 元素或者 {{domxref("Document")}} 。
-
-默认值是 `inherit`。
+默认值为 `"inherit"`。
 
 ## 示例
 
-### 使用`direction` 属性
+### 改变文字方向
 
-这是一段简单的代码片段，对文本设置不同的 direction 数值。
+这个示例绘制了两段文字。第一段是从左到右的，第二段是从右到左的。注意在 `ltr` 中的“Hi!”变成了在 `rtl` 中的“!Hi”。
 
 #### HTML
 
@@ -41,34 +37,20 @@ ctx.direction = "ltr" || "rtl" || "inherit";
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.font = '48px serif';
-ctx.fillText('Hi!', 150, 50);
-ctx.direction = 'rtl';
-ctx.fillText('Hi!', 150, 130);
-```
-
-```html hidden
-<canvas id="canvas" width="550" height="500"></canvas>
-```
-
-```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-
-ctx.font = '48px serif';
-ctx.fillText('Hi!', 150, 50);
-ctx.direction = 'rtl';
-ctx.fillText('Hi!', 150, 130);
+ctx.font = "48px serif";
+ctx.fillText("Hi!", 150, 50);
+ctx.direction = "rtl";
+ctx.fillText("Hi!", 150, 130);
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('Playable_code', 700, 180) }}
+{{ EmbedLiveSample('改变文字方向', 700, 180) }}
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 
@@ -78,4 +60,4 @@ ctx.fillText('Hi!', 150, 130);
 
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}.
+- 定义此属性的接口：{{domxref("CanvasRenderingContext2D")}}

@@ -1,18 +1,20 @@
 ---
-title: BaseAudioContext.createBiquadFilter()
+title: "BaseAudioContext: createBiquadFilter() メソッド"
+short-title: createBiquadFilter()
 slug: Web/API/BaseAudioContext/createBiquadFilter
-original_slug: Web/API/AudioContext/createBiquadFilter
+l10n:
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
 {{ APIRef("Web Audio API") }}
 
 `createBiquadFilter()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、 {{ domxref("BiquadFilterNode") }} を生成し、いくつかの異なる共通フィルター型として設定可能な 2 次フィルターを表現します。
 
-> **メモ:** {{domxref("BiquadFilterNode.BiquadFilterNode", "BiquadFilterNode()")}} コンストラクターが {{domxref("BiquadFilterNode")}} を作成するのに推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
+> **メモ:** {{domxref("BiquadFilterNode.BiquadFilterNode", "BiquadFilterNode()")}} コンストラクターが {{domxref("BiquadFilterNode")}} を作成するのに推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
 
 ## 構文
 
-```js
+```js-nolint
 createBiquadFilter()
 ```
 
@@ -26,17 +28,18 @@ createBiquadFilter()
 
 ## 例
 
-次の例は AudioContext で Biquad フィルターノードを作成する基本的な使い方を示しています。完全に動作する例は、 [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) を参照してください（[ソースコード](https://github.com/mdn/voice-change-o-matic)も参照してください）。
+次の例は、AudioContext で Biquad フィルターノードを作成するための基本的な使用方法を示しています。
+より完全な応用例/情報については、[Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) デモを調べてください（関連コードについては、[app.js 行 108-193](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193) を参照してください）。
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 
 // このアプリで使う2つのノードを設定する
-var analyser = audioCtx.createAnalyser();
-var distortion = audioCtx.createWaveShaper();
-var gainNode = audioCtx.createGain();
-var biquadFilter = audioCtx.createBiquadFilter();
-var convolver = audioCtx.createConvolver();
+const analyser = audioCtx.createAnalyser();
+const distortion = audioCtx.createWaveShaper();
+const gainNode = audioCtx.createGain();
+const biquadFilter = audioCtx.createBiquadFilter();
+const convolver = audioCtx.createConvolver();
 
 // ノードを接続する
 

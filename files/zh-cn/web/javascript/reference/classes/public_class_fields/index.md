@@ -1,186 +1,114 @@
 ---
 title: 公有类字段
 slug: Web/JavaScript/Reference/Classes/Public_class_fields
+l10n:
+  sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
 ---
 
 {{JsSidebar("Classes")}}
 
-公有静态字段和公有实例字段都是可编辑、可枚举和可配置的属性。因此，不同于私有对应值（private counterpart）的是，它们参与原型的继承。
+**公有字段**是可编辑、可枚举和可配置的属性。因此，不同于私有对应值（private counterpart）的是，它们参与原型的继承。
 
 ## 语法
 
-```js
-class ClassWithInstanceField {
-  instanceField = 'instance field'
-}
-
-class ClassWithStaticField {
-  static staticField = 'static field'
-}
-
-class ClassWithPublicInstanceMethod {
-  publicMethod() {
-    return 'hello world'
-  }
+```js-nolint
+class ClassWithField {
+  instanceField;
+  instanceFieldWithInitializer = "实例字段";
+  static staticField;
+  static staticFieldWithInitializer = "静态字段";
 }
 ```
 
-## 示例
+还有一些额外的语法限制：
 
-### 公有静态字段
+- 静态属性（字段或方法）的名称不能是 `prototype`。
+- 类字段（静态或实例）的名称不能是 `constructor`。
 
-公有静态字段在你想要创建一个只在每个类里面只存在一份，而不会存在于你创建的每个类的实例中的属性时可以用到。你可以用它存放缓存数据、固定结构数据或者其它你不想在所有实例都复制一份的数据。
+## 描述
 
-公有静态字段是使用关键字 `static` 声明的。我们在声明一个类的时候，使用 {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} 方法将公有静态字段添加到类的构造函数中。在类被声明之后，可以从类的构造函数访问公有静态字段。
+本页面将详细介绍公共实例字段。
+
+- 有关公共静态字段，请参阅 [`static`](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)。
+- 关于私有字段，请参阅[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)。
+- 公共方法请参见[方法的定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)。
+- 有关公共访问器，请参阅 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 和 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。
+
+公有实例字段存在于类的每个已创建实例中。通过声明公共字段，可以确保该字段始终存在，而且类的定义也更加自文档化（self-documenting）。
+
+公共实例字段会在基类的构造时（构造函数主体运行之前）或子类的 `super()` 返回后添加到实例中。没有初始化器的字段会被初始化为 `undefined`。与属性一样，字段名称也可以计算。
 
 ```js
-class ClassWithStaticField {
-  static staticField = 'static field'
+const PREFIX = "prefix";
+
+class ClassWithField {
+  field;
+  fieldWithInitializer = "实例字段";
+  [`${PREFIX}Field`] = "带前缀字段";
 }
 
-console.log(ClassWithStaticField.staticField)
-// 预期输出值："static field"​ 
+const instance = new ClassWithField();
+console.log(Object.hasOwn(instance, "field")); // true
+console.log(instance.field); // undefined
+console.log(instance.fieldWithInitializer); // "实例字段"
+console.log(instance.prefixField); // "带前缀字段"
 ```
 
-没有设定初始化的字段将默认被初始化为 `undefined`。
+只在[类定义时](/zh-CN/docs/Web/JavaScript/Reference/Classes#求值顺序)对计算字段名进行一次求值。这意味着每个类总是有一组固定的字段名，两个实例不能通过计算的名称拥有不同的字段名。计算表达式中的 `this` 指向类声明所处上下文的 `this`，而引用类名会导致 {{jsxref("ReferenceError")}}，因为类尚未初始化。在此表达式中，{{jsxref("Operators/await", "await")}} 和 {{jsxref("Operators/yield", "yield")}} 按预期工作。
 
 ```js
-class ClassWithStaticField {
-  static staticField
+class C {
+  [Math.random()] = 1;
 }
 
-console.assert(Object.hasOwn(ClassWithStaticField, 'staticField'))
-console.log(ClassWithStaticField.staticField)
-// 预期输出值："undefined"
+console.log(new C());
+console.log(new C());
+// 两个实例拥有相同的字段名称
 ```
 
-公有静态字段不会在子类中重复初始化，但我们可以通过原型链访问它们。
+在字段初始化器中，[`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 指向正在构建的类实例，而 [`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 指向基类的 `prototype` 属性，它包含基类的实例方法，但不包含其实例字段。
 
 ```js
-class ClassWithStaticField {
-  static baseStaticField = 'base field'
-}
-
-class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = 'sub class field'
-}
-
-console.log(SubClassWithStaticField.subStaticField)
-// 预期输出值："sub class field"
-
-console.log(SubClassWithStaticField.baseStaticField)
-// 预期输出值："base field"
-```
-
-在初始化字段时，`this` 指向的是类的构造函数。你也可以通过名字引用构造函数，并使用 `super` 获取到存在的父类的构造函数。
-
-```js
-class ClassWithStaticField {
-  static baseStaticField = 'base static field'
-  static anotherBaseStaticField = this.baseStaticField
-
-  static baseStaticMethod() { return 'base static method output' }
-}
-
-class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = super.baseStaticMethod()
-}
-
-console.log(ClassWithStaticField.anotherBaseStaticField)
-// 预期输出值："base static field"
-
-console.log(SubClassWithStaticField.subStaticField)
-// 预期输出值："base static method output"
-```
-
-### 公有实例字段
-
-公有实例字段存在于类的每一个实例中。通过声明一个公有字段，我们可以确保该字段一直存在，而类的定义则会更加像是自我描述。
-
-公有实例字段可以在基类的构造过程中（构造函数主体运行前）使用 {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} 添加，也可以在子类构造函数中的 `super()` 函数结束后添加。
-
-```js
-class ClassWithInstanceField {
-  instanceField = 'instance field'
-}
-
-const instance = new ClassWithInstanceField()
-console.log(instance.instanceField)
-// 预期输出值："instance field"
-```
-
-没有设定初始化的字段将默认被初始化为 `undefined`。
-
-```js
-class ClassWithInstanceField {
-  instanceField
-}
-
-const instance = new ClassWithInstanceField()
-console.assert(Object.hasOwn(instance, 'instanceField'))
-console.log(instance.instanceField)
-// 预期输出值："undefined"
-```
-
-和属性（properties）一样，字段名可以由计算得出。
-
-```js
-const PREFIX = 'prefix';
-
-class ClassWithComputedFieldName {
-    [`${PREFIX}Field`] = 'prefixed field';
-}
-
-const instance = new ClassWithComputedFieldName();
-console.log(instance.prefixField);
-// 预期输出值："prefixed field"
-```
-
-在初始化字段时，`this` 指向的是类正在构造中的实例。和公有实例方法相同的是：你可以在子类中使用 `super` 来访问父类的原型。
-
-```js
-class ClassWithInstanceField {
-  baseInstanceField = 'base field'
-  anotherBaseInstanceField = this.baseInstanceField
-  baseInstanceMethod() { return 'base method output' }
-}
-
-class SubClassWithInstanceField extends ClassWithInstanceField {
-  subInstanceField = super.baseInstanceMethod()
-}
-
-const base = new ClassWithInstanceField()
-const sub = new SubClassWithInstanceField()
-
-console.log(base.anotherBaseInstanceField)
-// 预期输出值："base field"
-
-console.log(sub.subInstanceField)
-// 预期输出值："base method output"
-```
-
-因为类的实例字段是在对应的构造函数运行之前添加的，所以你可以在构造函数中访问字段的值。
-
-```js
-class ClassWithInstanceField {
-  instanceField = 'instance field';
-
-  constructor() {
-    console.log(this.instanceField);
-    this.instanceField = 'new value';
+class Base {
+  baseField = "基类字段";
+  anotherBaseField = this.baseField;
+  baseMethod() {
+    return "基类方法输出";
   }
 }
 
-const instance = new ClassWithInstanceField(); // 输出 "instance field"
-console.log(instance.instanceField); // "new value"
+class Derived extends Base {
+  subField = super.baseMethod();
+}
+
+const base = new Base();
+const sub = new Derived();
+
+console.log(base.anotherBaseField); // "基类字段"
+
+console.log(sub.subField); // "基类方法输出"
 ```
 
-但是，因为派生类的实例字段是在 `super()` 返回之后定义的，所以基类的构造函数无法访问派生类的字段。
+每次创建新实例时，都会对字段初始化表达式进行求值。（因为每个实例的 `this` 值都不同，所以初始化表达式可以访问特定于实例的属性）。
+
+```js
+class C {
+  obj = {};
+}
+
+const instance1 = new C();
+const instance2 = new C();
+console.log(instance1.obj === instance2.obj); // false
+```
+
+表达式是同步求值的。不能在初始化表达式中使用 {{jsxref("Operators/await", "await")}} 或 {{jsxref("Operators/yield", "yield")}}。（将初始化表达式视为被隐式封装在函数中。）
+
+由于类的实例字段是在各自的构造函数运行之前添加的，因此可以在构造函数中访问字段的值。然而，由于派生类的实例字段是在 `super()` 返回后定义的，因此基类的构造函数无法访问派生类的字段。
 
 ```js
 class Base {
   constructor() {
-    console.log('Base constructor:', this.field);
+    console.log("基类的构造函数：", this.field);
   }
 }
 
@@ -188,16 +116,36 @@ class Derived extends Base {
   field = 1;
   constructor() {
     super();
-    console.log('Derived constructor:', this.field);
+    console.log("派生类的控制函数：", this.field);
+    this.field = 2;
   }
 }
 
 const instance = new Derived();
-// Base constructor: undefined
-// Derived constructor: 1
+// 基类的构造函数：undefined
+// 派生类的控制函数：1
+console.log(instance.field); // 2
 ```
 
-因为类字段是通过 `[[Define]]` 语义（本质上是 {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}）添加的，所以派生类中的字段声明并不会调用基类中的 setter。此行为不同于在构造函数中使用 `this.field = …`。
+字段是逐个添加的。字段初始化器可以引用它上面的字段值，但不能引用它下面的字段值。所有实例方法和静态方法都会事先添加并可以访问，但如果这些方法引用的字段低于正在初始化的字段，那么调用这些方法时可能会出现与预期不符的情况。
+
+```js
+class C {
+  a = 1;
+  b = this.c;
+  c = this.a + 1;
+  d = this.c + 1;
+}
+
+const instance = new C();
+console.log(instance.d); // 3
+console.log(instance.b); // undefined
+```
+
+> [!NOTE]
+> 这对[私有字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)更为重要，因为访问未初始化的私有字段会抛出 {{jsxref("TypeError")}}，即使该私有字段已在下面声明。（如果未声明私有字段，则会提前抛出 {{jsxref("SyntaxError")}}。）
+
+由于类字段是使用 [`[[DefineOwnProperty]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) 语义（本质上是 {{jsxref("Object.defineProperty()")}}）添加的，因此派生类中的字段声明不会调用基类中的 setter。这种行为不同于在构造函数中使用 `this.field = …`。
 
 ```js
 class Base {
@@ -219,99 +167,74 @@ class DerivedWithConstructor extends Base {
   }
 }
 
-const instance2 = new DerivedWithConstructor(); // Logs 1
+const instance2 = new DerivedWithConstructor(); // 打印 1
 ```
 
-> **备注：** 在类字段规范最终确定使用 `[[Define]]` 语义前，包括 [Babel](https://babeljs.io/) 和 [tsc](https://www.typescriptlang.org/) 在内的大多数转译器都将类字段转换为 `DerivedWithConstructor` 的形式，这在类字段标准化后产生了一些错误。
+> [!NOTE]
+> 在类字段规范最终确定为`[[DefineOwnProperty]]`语义之前，包括 [Babel](https://babeljs.io/) 和 [tsc](https://www.typescriptlang.org/)在内的大多数转译器都将类字段转换为 `DerivedWithConstructor` 形式，这在类字段规范化之后造成了一些微妙的错误。
 
-## 公有方法
+## 示例
 
-### 公有静态方法
+### 使用类字段
 
-关键字 **`static`** 将为一个类定义一个静态方法。静态方法不是在一个实例之上被调用，而是在类自身之上被调用。它们通常是工具函数，比如用来创建或者复制对象。
+类字段不能依赖于构造函数的参数，因此字段初始化器通常会在每个实例中都求出相同的值（除非同一表达式每次求出的值都不同，例如 {{jsxref("Date.now()")}} 或对象初始化器）。
 
-```js
-class ClassWithStaticMethod {
-  static staticMethod() {
-    return 'static method has been called.';
-  }
-}
-
-console.log(ClassWithStaticMethod.staticMethod());
-// 预期输出值："static method has been called."
-```
-
-静态方法是在类的声明阶段用 {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} 方法添加到类的构造函数中的。静态方法是可编辑、不可枚举和可配置的。
-
-### 公有实例方法
-
-正如其名，公有实例方法是可以在类的实例中使用的。
-
-```js
-class ClassWithPublicInstanceMethod {
-  publicMethod() {
-    return 'hello world'
-  }
-}
-
-const instance = new ClassWithPublicInstanceMethod()
-console.log(instance.publicMethod())
-// 预期输出值："hello world"
-```
-
-公有实例方法是在类的声明阶段用 {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} 方法添加到类中的。静态方法是可编辑、不可枚举和可配置的。
-
-你可以使用生成器（generator）、异步和异步生成器方法。
-
-```js
-class ClassWithFancyMethods {
-  *generatorMethod() { }
-  async asyncMethod() { }
-  async *asyncGeneratorMethod() { }
+```js example-bad
+class Person {
+  name = nameArg; // nameArg 在构造函数的作用域外
+  constructor(nameArg) {}
 }
 ```
 
-在实例的方法中，`this` 指向的是实例本身，你可以使用 `super` 访问到父类的原型，由此你可以调用父类的方法。
-
-```js
-class BaseClass {
-  msg = 'hello world'
-  basePublicMethod() {
-    return this.msg
-  }
+```js example-good
+class Person {
+  // Person 的所有实例会有相同的 name
+  name = "Dragomir";
 }
-
-class SubClass extends BaseClass {
-  subPublicMethod() {
-    return super.basePublicMethod()
-  }
-}
-
-const instance = new SubClass()
-console.log(instance.subPublicMethod())
-// 预期输出值："hello world"
 ```
 
-`getter` 和 `setter` 是和类的属性绑定的特殊方法，分别会在其绑定的属性被取值、赋值时调用。使用 [get](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 和 [set](/zh-CN/docs/Web/JavaScript/Reference/Functions/set) 语法定义实例的公有 `getter` 和 `setter`。
+不过，即使声明一个空的类字段也是有好处的，因为这表明了字段的存在，从而允许类型检查程序和人类读者静态分析类的结构。
 
 ```js
-class ClassWithGetSet {
-  #msg = 'hello world'
-  get msg() {
-    return this.#msg
+class Person {
+  name;
+  age;
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
   }
-  set msg(x) {
-    this.#msg = `hello ${x}`
- }
+}
+```
+
+上面的代码看似重复，但考虑一下 `this` 被动态更改的情况：明确的字段声明清楚地表明了哪些字段一定会出现在实例中。
+
+```js
+class Person {
+  name;
+  age;
+  constructor(properties) {
+    Object.assign(this, properties);
+  }
+}
+```
+
+由于初始化器是在基类执行完成后求值的，因此你可以访问由基类构造函数创建的属性。
+
+```js
+class Person {
+  name;
+  age;
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
 }
 
-const instance = new ClassWithGetSet()
-console.log(instance.msg)
-// 预期输出值："hello world"
+class Professor extends Person {
+  name = `${this.name} 教授`;
+}
 
-instance.msg = 'cake'
-console.log(instance.msg)
-// 预期输出值："hello cake"
+console.log(new Professor("Radev", 54).name); // "Radev 教授"
 ```
 
 ## 规范
@@ -324,5 +247,9 @@ console.log(instance.msg)
 
 ## 参见
 
+- [使用类](/zh-CN/docs/Web/JavaScript/Guide/Using_classes)指南
+- [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)
+- [私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)
+- {{jsxref("Statements/class", "class")}}
 - [所有 JS 类元素的语义](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
 - v8.dev 站点中关于[公有和私有类字段](https://v8.dev/features/class-fields)的文章

@@ -1,135 +1,110 @@
 ---
-title: CanvasRenderingContext2D.arc()
+title: CanvasRenderingContext2D：arc() 方法
 slug: Web/API/CanvasRenderingContext2D/arc
+l10n:
+  sourceCommit: c8b447485fd893d5511d88f592f5f3aec29a725b
 ---
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.arc()`** 是 Canvas 2D API 绘制圆弧路径的方法。圆弧路径的圆心在 _(x, y)_ 位置，半径为 _r_，根据*anticlockwise* （默认为顺时针）指定的方向从 _startAngle_ 开始绘制，到 _endAngle_ 结束。
+[Canvas 2D API](/zh-CN/docs/Web/API/CanvasRenderingContext2D) 的 **`CanvasRenderingContext2D.arc()`** 方法用于将一个圆弧添加到当前子路径中。
 
 ## 语法
 
-```
-void ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
+```js-nolint
+arc(x, y, radius, startAngle, endAngle)
+arc(x, y, radius, startAngle, endAngle, counterclockwise)
 ```
 
-### Parameters
+`arc()` 方法创建一个以坐标 `(x, y)` 为中心，以 `radius` 为半径的圆弧。路径从 `startAngle` 开始，到 `endAngle` 结束，路径方向由 `counterclockwise` 参数决定（默认为顺时针方向）。
+
+### 参数
 
 - `x`
   - : 圆弧中心（圆心）的 x 轴坐标。
 - `y`
   - : 圆弧中心（圆心）的 y 轴坐标。
 - `radius`
-  - : 圆弧的半径。
+  - : 圆弧的半径。必须为正值。
 - `startAngle`
-  - : 圆弧的起始点，x 轴方向开始计算，单位以弧度表示。
+  - : 圆弧的起始点，从 x 轴方向开始计算，以弧度为单位。
 - `endAngle`
-  - : 圆弧的终点，单位以弧度表示。
-- `anticlockwise` {{optional_inline}}
-  - : 可选的{{jsxref("Boolean")}}值，如果为 `true`，逆时针绘制圆弧，反之，顺时针绘制。
+  - : 圆弧的终点，从 x 轴方向开始计算，以弧度为单位。
+- `counterclockwise` {{optional_inline}}
+  - : 可选的布尔值，如果为 `true`，逆时针绘制圆弧，反之，顺时针绘制。默认为 `false`（顺时针）。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
-### 使用 `arc` 方法
+### 绘制一个完整的圆
 
-这是一段绘制圆的简单的代码片段。
+此示例使用 `arc()` 方法在画布上绘制了一个完整的圆。
 
 #### HTML
 
 ```html
-<canvas id="canvas"></canvas>
+<canvas></canvas>
 ```
 
 #### JavaScript
 
+圆弧的 x 坐标为 100，y 坐标为 75，半径为 50。为了绘制完整的圆，圆弧从 0 弧度角（0°）开始，到 2π 弧度角（360°）结束。
+
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
-ctx.arc(75, 75, 50, 0, 2 * Math.PI);
+ctx.arc(100, 75, 50, 0, 2 * Math.PI);
 ctx.stroke();
 ```
 
-修改下面的代码并在线查看 canvas 的变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.beginPath();
-ctx.arc(50, 50, 50, 0, 2 * Math.PI, false);
-ctx.stroke();</textarea>
-```
-
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ EmbedLiveSample('绘制一个完整的圆', 700, 180) }}
 
 ### 不同的形状演示
 
-在此例中，使用 arc() 尽可能地绘制不同的形状。
+此示例使用 `arc()` 方法绘制了多种形状，展示了它的各种可能性。
 
 ```html hidden
 <canvas id="canvas" width="150" height="200"></canvas>
 ```
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 
-// Draw shapes
-for (i=0;i<4;i++){
-  for(j=0;j<3;j++){
+// 绘制形状
+for (let i = 0; i <= 3; i++) {
+  for (let j = 0; j <= 2; j++) {
     ctx.beginPath();
-    var x          = 25+j*50;               // x coordinate
-    var y          = 25+i*50;               // y coordinate
-    var radius     = 20;                    // Arc radius
-    var startAngle = 0;                     // Starting point on circle
-    var endAngle   = Math.PI+(Math.PI*j)/2; // End point on circle
-    var clockwise  = i%2==0 ? false : true; // clockwise or anticlockwise
+    let x = 25 + j * 50; // x 坐标
+    let y = 25 + i * 50; // y 坐标
+    let radius = 20; // 圆弧半径
+    let startAngle = 0; // 圆弧起始角度
+    let endAngle = Math.PI + (Math.PI * j) / 2; // 圆弧结束角度
+    let counterclockwise = i % 2 === 1; // 是否逆时针绘制
 
-    ctx.arc(x,y,radius,startAngle,endAngle, clockwise);
+    ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
 
-    if (i>1){
-      ctx.fill();
+    if (i > 1) {
+      ctx.fill(); // 填充形状
     } else {
-      ctx.stroke();
+      ctx.stroke(); // 绘制形状轮廓
     }
   }
 }
 ```
 
-{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png") }}
+#### 结果
 
-## 规范描述
+{{EmbedLiveSample('不同的形状演示', "", "210")}}
+
+## 规范
 
 {{Specifications}}
 
@@ -139,4 +114,5 @@ for (i=0;i<4;i++){
 
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}
+- 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}
+- 使用 {{domxref("CanvasRenderingContext2D.ellipse()")}} 来绘制椭圆弧。

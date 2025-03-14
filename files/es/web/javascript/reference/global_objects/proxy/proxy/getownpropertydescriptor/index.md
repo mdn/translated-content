@@ -1,13 +1,6 @@
 ---
 title: handler.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Proxy
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor
 ---
 
 {{JSRef}}El método **`handler.getOwnPropertyDescriptor()`** captura {{jsxref("Object.getOwnPropertyDescriptor()")}}.
@@ -16,8 +9,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPrope
 
 ```js
 var p = new Proxy(target, {
-  getOwnPropertyDescriptor: function(target, prop) {
-  }
+  getOwnPropertyDescriptor: function (target, prop) {},
 });
 ```
 
@@ -61,15 +53,18 @@ Si los siguientes invariantes son violados, el proxy lanzará {{jsxref("TypeErro
 El siguiente código captura {{jsxref("Object.getOwnPropertyDescriptor()")}}.
 
 ```js
-var p = new Proxy({ a: 20}, {
-  getOwnPropertyDescriptor: function(target, prop) {
-    console.log('called: ' + prop);
-    return { configurable: true, enumerable: true, value: 10 };
-  }
-});
+var p = new Proxy(
+  { a: 20 },
+  {
+    getOwnPropertyDescriptor: function (target, prop) {
+      console.log("called: " + prop);
+      return { configurable: true, enumerable: true, value: 10 };
+    },
+  },
+);
 
-console.log(Object.getOwnPropertyDescriptor(p, 'a').value); // "called: a"
-                                                            // 10
+console.log(Object.getOwnPropertyDescriptor(p, "a").value); // "called: a"
+// 10
 ```
 
 El siguiente código viola uno de los invariantes definidos previamente.
@@ -78,21 +73,21 @@ El siguiente código viola uno de los invariantes definidos previamente.
 var obj = { a: 10 };
 Object.preventExtensions(obj);
 var p = new Proxy(obj, {
-  getOwnPropertyDescriptor: function(target, prop) {
+  getOwnPropertyDescriptor: function (target, prop) {
     return undefined;
-  }
+  },
 });
 
-Object.getOwnPropertyDescriptor(p, 'a'); // TypeError is thrown
+Object.getOwnPropertyDescriptor(p, "a"); // TypeError is thrown
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad con buscadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Proxy.handler.getOwnPropertyDescriptor")}}
+{{Compat}}
 
 ## Ver también
 

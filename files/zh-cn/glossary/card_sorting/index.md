@@ -1,13 +1,14 @@
 ---
 title: 卡片分类法
 slug: Glossary/Card_sorting
-original_slug: Glossary/卡片分类法
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-卡片分类法是一种简单的技巧，{{glossary("Information architecture")}} 通常是邀请参与网站开发的设计师（或是开发其他类型产品的人），让他们写下他们认为这个产品应当包含的内容、服务和功能，然后将这些功能分组。一个很好的例子是考虑网站上每个页面应当显示什么样的内容。这个名字源于这个分类是通过把要分类的项目写在卡片上，再通过排列卡片完成的。
+{{GlossarySidebar}}
 
-## 了解更多
+**卡片分类法**是一种简单的用于{{glossary("Information architecture", "信息架构")}}的技术。在这种技术中，参与网站（或其他类型产品）设计的人被邀请写下他们认为产品应该包含的内容/服务/特性，然后将这些特性组织成类别或分组。例如，这可以用来确定网站的每个页面应该放置什么内容。该名称来源于通常通过将要排序的项目字面上写在卡片上，然后将卡片排成一堆的行为。
 
-### **常识**
+## 参见
 
-- [Card sorting](https://zh.wikipedia.org/wiki/Card_sorting) on Wikipedia
+- 维基百科上的[卡片分类法](https://zh.wikipedia.org/wiki/卡片分類法)

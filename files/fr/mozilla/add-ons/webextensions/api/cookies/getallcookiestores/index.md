@@ -1,29 +1,18 @@
 ---
 title: cookies.getAllCookieStores()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/getAllCookieStores
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getAllCookieStores
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/getAllCookieStores
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La méthode **`getAllCookieStores()`** de l'API {{WebExtAPIRef("cookies")}} retourne une liste de tous les cookies stores.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
-var gettingStores = browser.cookies.getAllCookieStores()
+var gettingStores = browser.cookies.getAllCookieStores();
 ```
 
 ### Paramètres
@@ -32,11 +21,11 @@ Aucun.
 
 ### Valeur renvoyée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un `tableau` d'objets {{WebExtAPIRef('cookies.CookieStore')}} représentant tous les cookies stores existants.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un `tableau` d'objets {{WebExtAPIRef('cookies.CookieStore')}} représentant tous les cookies stores existants.
 
 ## Compatibibilité du navigateur
 
-{{Compat("webextensions.api.cookies.getAllCookieStores")}}
+{{Compat}}
 
 ## Exemples
 
@@ -57,9 +46,9 @@ Chaque membre du tableau `cookieStores` est un objet {{WebExtAPIRef("cookies.Coo
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/extensions/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

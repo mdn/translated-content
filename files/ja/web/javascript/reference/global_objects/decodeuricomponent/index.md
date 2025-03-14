@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 
 **`decodeURIComponent()`** 関数は、{{jsxref("encodeURIComponent", "encodeURIComponent()")}} 関数あるいは同様のルーチンによって事前に作成された URI (Uniform Resource Identifier; 統一資源識別子) の構成要素をデコードします。
 
-{{EmbedInteractiveExample("pages/js/globalprops-decodeuricomponent.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - decodeURIComponent()")}}
+
+```js interactive-example
+function containsEncodedComponents(x) {
+  // ie ?,=,&,/ etc
+  return decodeURI(x) !== decodeURIComponent(x);
+}
+
+console.log(containsEncodedComponents("%3Fx%3Dtest")); // ?x=test
+// Expected output: true
+
+console.log(containsEncodedComponents("%D1%88%D0%B5%D0%BB%D0%BB%D1%8B")); // шеллы
+// Expected output: false
+```
 
 ## 構文
 
@@ -37,7 +50,7 @@ decodeURIComponent(encodedURI)
 ### キリル文字の URL の構成要素をデコード
 
 ```js
-decodeURIComponent('JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
+decodeURIComponent("JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
 // "JavaScript_шеллы"
 ```
 
@@ -45,8 +58,8 @@ decodeURIComponent('JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
 
 ```js
 try {
-  var a = decodeURIComponent('%E0%A4%A');
-} catch(e) {
+  var a = decodeURIComponent("%E0%A4%A");
+} catch (e) {
   console.error(e);
 }
 
@@ -59,20 +72,20 @@ decodeURIComponent は、URL からのクエリパラメータを解析するた
 
 ```js
 function decodeQueryParam(p) {
-  return decodeURIComponent(p.replace(/\+/g, ' '));
+  return decodeURIComponent(p.replace(/\+/g, " "));
 }
 
-decodeQueryParam('search+query%20%28correct%29');
+decodeQueryParam("search+query%20%28correct%29");
 // 'search query (correct)'
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.decodeURIComponent")}}
+{{Compat}}
 
 ## 関連情報
 

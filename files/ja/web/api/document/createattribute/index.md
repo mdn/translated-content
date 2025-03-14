@@ -1,17 +1,21 @@
 ---
-title: Document.createAttribute()
+title: "Document: createAttribute() メソッド"
+short-title: createAttribute()
 slug: Web/API/Document/createAttribute
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{ ApiRef("DOM") }}
 
 **`Document.createAttribute()`** は、新しい属性ノードを生成して返します。生成されたオブジェクトは {{domxref("Attr")}} を実装したノードです。この方法では DOM は、特定の要素にどんな種類の属性を追加できるかを強制しません。
 
-> **メモ:** 引数に渡される文字列は小文字に変換されます。
+> [!NOTE]
+> 引数に渡される文字列は小文字に変換されます。
 
 ## 構文
 
-```js
+```js-nolint
 createAttribute(name)
 ```
 
@@ -26,7 +30,7 @@ createAttribute(name)
 ### 例外
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : [`name`](#name) が無効な [XML name](https://www.w3.org/TR/REC-xml/#dt-name) である場合（例えば、数字・ハイフン・ピリオドで始まっている場合や、英数字・アンダースコア・ハイフン・ピリオド以外の文字を含む場合）に発生します。
+  - : [`name`](#name) が無効な [XML name](https://www.w3.org/TR/REC-xml/#dt-name) である場合、例えば、数字・ハイフン・ピリオドで始まっている場合や、英数字・アンダースコア・ハイフン・ピリオド以外の文字を含む場合）に発生します。
 
 ## 例
 

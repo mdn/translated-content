@@ -1,8 +1,6 @@
 ---
 title: Types et structures de données JavaScript
 slug: Web/JavaScript/Data_structures
-translation_of: Web/JavaScript/Data_structures
-original_slug: Web/JavaScript/Structures_de_données
 ---
 
 {{jsSidebar("More")}}
@@ -14,9 +12,9 @@ Les langages de programmation disposent de structures de données natives. Selon
 JavaScript est un langage dont le typage est _faible_ et _dynamique_. Cela signifie qu'il n'est pas nécessaire de déclarer le type d'une variable avant de l'utiliser. Le type de la variable sera automatiquement déterminé lorsque le programme sera exécuté. Cela signifie également que la même variable pourra avoir différents types au cours de son existence&nbsp;:
 
 ```js
-let toto = 42;     // toto est un nombre
-    toto = 'truc'; // toto est désormais une chaîne de caractères
-    toto = true;   // toto est désormais un booléen
+let toto = 42; // toto est un nombre
+toto = "truc"; // toto est désormais une chaîne de caractères
+toto = true; // toto est désormais un booléen
 ```
 
 ## Les types de données JavaScript
@@ -24,6 +22,7 @@ let toto = 42;     // toto est un nombre
 L'ensemble des types disponible en JavaScript se compose [_des valeurs primitives_](#les_valeurs_primitives) et [_des objets_](#les_objects).
 
 - [Les valeurs primitives](#les_valeurs_primitives) (des données immuables, représentées au niveau le plus bas du langage)
+
   - [Le type booléen](#le_type_booléen)
   - [Le type nul](#le_type_nul)
   - [Le type indéfini](#le_type_indéfini)
@@ -44,11 +43,11 @@ Un booléen représente le résultat d'une assertion logique et peut avoir deux 
 
 ### Le type nul
 
-Le type nul ne possède qu'une valeur&nbsp;: `null`. Voir [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null) et [la page du glossaire](/fr/docs/Glossary/Null) pour plus d'informations.
+Le type nul ne possède qu'une valeur&nbsp;: `null`. Voir [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) et [la page du glossaire](/fr/docs/Glossary/Null) pour plus d'informations.
 
 ### Le type indéfini
 
-Une variable à laquelle on n'a pas affecté de valeur vaudra `undefined`. Voir [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) et [la page du glossaire](/fr/docs/Glossary/undefined) pour plus d'informations.
+Une variable à laquelle on n'a pas affecté de valeur vaudra `undefined`. Voir [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) et [la page du glossaire](/fr/docs/Glossary/Undefined) pour plus d'informations.
 
 ### Les types numériques
 
@@ -58,7 +57,8 @@ ECMAScript possède deux types numériques natifs&nbsp;: [`Number`](#le_type_nom
 
 Le type `Number` est géré pour représenter les nombres&nbsp;: [les nombres flottants à précision double, représentés sur 64 bits, selon le format IEEE 754](https://fr.wikipedia.org/wiki/IEEE_754). Cette représentation permet de stocker des nombres décimaux entre `2^-1074` et `2^1024`, mais ne permet de représenter des entiers de façon sûre qu'au sein de l'intervalle allant de `-(2^53 − 1)` à `2^53 − 1`. Les valeurs en dehors de l'intervalle compris entre [`Number.MIN_VALUE`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE) et [`Number.MAX_VALUE`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE) sont automatiquement converties en `+Infinity` ou `-Infinity`, qui se comporteront de façon analogue à l'infini mathématique (voir la page sur [`Number.POSITIVE_INFINITY`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY) pour les détails et les quelques différences).
 
-> **Note :** Vous pouvez vérifier si un nombre est un nombre entier représentable de façon exacte avec une représentation en nombre flottant à double précision avec la méthode [`Number.isSafeInteger()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger). En dehors de l'intervalle entre [`Number.MIN_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER) et [`Number.MAX_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER), JavaScript ne peut plus représenter un entier de façon exacte et ce sera une approximation avec un nombre flottant à double précision.
+> [!NOTE]
+> Vous pouvez vérifier si un nombre est un nombre entier représentable de façon exacte avec une représentation en nombre flottant à double précision avec la méthode [`Number.isSafeInteger()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger). En dehors de l'intervalle entre [`Number.MIN_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER) et [`Number.MAX_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER), JavaScript ne peut plus représenter un entier de façon exacte et ce sera une approximation avec un nombre flottant à double précision.
 
 Pour le type `Number`, il n'y a qu'un seul nombre qui possède plusieurs représentations&nbsp;: `0` qui est représenté comme `-0` et `+0` (avec `0` étant un synonyme pour `+0`). En pratique, il n'y a presque pas de différences entre ces représentations et `+0 === -0` vaut `true`. Toutefois, on pourra remarquer la nuance lors de la division par zéro&nbsp;:
 
@@ -71,7 +71,8 @@ Infinity
 
 Dans la plupart des cas, un nombre représente sa propre valeur et JavaScript fournit des [opérateurs binaires](/fr/docs/Web/JavaScript/Reference/Operators).
 
-> **Note :** Bien que les opérateurs binaires _puissent_ être utilisés afin de représenter plusieurs valeurs booléennes avec un seul nombre en utilisant [un masque de bits](https://fr.wikipedia.org/wiki/Masquage), c'est généralement une mauvaise pratique. En effet, JavaScript fournit d'autres moyens pour représenter un ensemble de valeurs booléennes comme les tableaux ou l'utilisation de propriétés nommées pour stocker ces valeurs. L'utilisation d'un masque de bit dégrade également la lisibilité, la clarté et la maintenabilité du code.
+> [!NOTE]
+> Bien que les opérateurs binaires _puissent_ être utilisés afin de représenter plusieurs valeurs booléennes avec un seul nombre en utilisant [un masque de bits](https://fr.wikipedia.org/wiki/Masquage), c'est généralement une mauvaise pratique. En effet, JavaScript fournit d'autres moyens pour représenter un ensemble de valeurs booléennes comme les tableaux ou l'utilisation de propriétés nommées pour stocker ces valeurs. L'utilisation d'un masque de bit dégrade également la lisibilité, la clarté et la maintenabilité du code.
 
 Il peut être nécessaire d'utiliser de telles techniques dans des environnements extrêmement contraints, pour gérer des limites de stockage local ou lorsque chaque bit transmis sur le réseau compte. Cette technique devrait uniquement être considérée comme dernière mesure pour réduire la taille.
 
@@ -134,7 +135,7 @@ En résumé, les chaînes doivent être utilisées pour les données de texte. P
 
 Un symbole est une valeur primitive **unique** et **immuable** pouvant être utilisée comme clé pour propriété d'un objet (voir ci-après). Dans d'autres langages de programmation, les symboles sont appelés atomes.
 
-Pour plus de détails, voir les pages [du glossaire](/fr/docs/Glossary/Symbol) et de [`Symbol`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) JavaScript.
+Pour plus de détails, voir les pages [du glossaire](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) et de [`Symbol`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) JavaScript.
 
 ## Les objets
 
@@ -146,7 +147,8 @@ En JavaScript, les objets peuvent être considérés comme des collections de pr
 
 Il existe deux types de propriétés qui ont certains attributs&nbsp;: des [propriétés de _données_](#propriétés_de_données) (<i lang="en">data property</i>) et des [propriétés d'_accesseur_](#propriétés_daccesseur).
 
-> **Note :** Chaque propriété est décrite par des *attributs* correspondants. Ceux-ci sont utilisés par le moteur JavaScript et ne peuvent pas être manipulés depuis le code. Pour les identifier, les attributs sont indiqués entre double crochets.
+> [!NOTE]
+> Chaque propriété est décrite par des _attributs_ correspondants. Ceux-ci sont utilisés par le moteur JavaScript et ne peuvent pas être manipulés depuis le code. Pour les identifier, les attributs sont indiqués entre double crochets.
 >
 > Voir la page [`Object.defineProperty()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) pour en savoir plus.
 
@@ -212,7 +214,8 @@ Elles associent une clé avec une valeur et possèdent les attributs suivants&nb
 
 Ces propriétés associent une clé avec une ou deux fonctions accesseur et mutateur (respectivement `get` et `set`) qui permettent de récupérer ou d'enregistrer une valeur.
 
-> **Note :** Il est important de noter qu'on parle de _propriété_ d'accesseur et pas de _méthode_. On peut donner des accesseurs semblables à ceux d'une classe à un objet en utilisant une fonction comme valeur d'une propriété mais ça ne fait pas de l'objet une classe.
+> [!NOTE]
+> Il est important de noter qu'on parle de _propriété_ d'accesseur et pas de _méthode_. On peut donner des accesseurs semblables à ceux d'une classe à un objet en utilisant une fonction comme valeur d'une propriété mais ça ne fait pas de l'objet une classe.
 
 Elles possèdent les attributs suivants&nbsp;:
 
@@ -220,7 +223,7 @@ Elles possèdent les attributs suivants&nbsp;:
 | ------------------ | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
 | `[[Get]]`          | Un objet `Function` ou `undefined` | La fonction qui est appelée sans argument afin de récupérer la valeur de la propriété quand on souhaite y accéder. Voir aussi la page sur [`get`](/fr/docs/Web/JavaScript/Reference/Functions/get).                                                    | `undefined`       |
 | `[[Set]]`          | Un objet `Function` ou `undefined` | La fonction, appelée avec un argument qui contient la valeur qu'on souhaite affecter à la valeur et qui est exécutée à chaque fois qu'on souhaite modifier la valeur. Voir aussi la page sur [`set`](/fr/docs/Web/JavaScript/Reference/Functions/set). | `undefined`       |
-| `[[Enumerable]]`   | Booléen                            | S'il vaut `true`, la propriété sera listée dans les boucles [`for…in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in).                                                                                                                     | `false`           |
+| `[[Enumerable]]`   | Booléen                            | S'il vaut `true`, la propriété sera listée dans les boucles [`for…in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in).                                                                                                                         | `false`           |
 | `[[Configurable]]` | Booléen                            | S'il vaut `false`, la propriété ne pourra pas être supprimée et ne pourra pas être transformée en une propriété de données.                                                                                                                            | `false`           |
 
 ### Les objets «&nbsp;normaux&nbsp;» et les fonctions
@@ -239,7 +242,7 @@ Lorsqu'on souhaite représenter des dates, il est tout indiqué d'utiliser le ty
 
 De plus, les tableaux héritent de `Array.prototype` qui permet de bénéficier de plusieurs méthodes pour manipuler les tableaux. Par exemple, [`indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) qui permet de rechercher une valeur dans le tableau ou [`push()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/push) qui permet d'ajouter un élément au tableau. Les tableaux sont donc indiqués quand on souhaite représenter des listes de valeurs ou d'objets.
 
-[Les tableaux typés](/fr/docs/Web/JavaScript/Typed_arrays) (<i lang="en">Typed Arrays</i> en anglais) ont été ajoutés avec ECMAScript 2015 et offrent une vue sous forme d'un tableau pour manipuler des tampons de données binaires. Le tableau qui suit illustre les types de données équivalents en C&nbsp;:
+[Les tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays) (<i lang="en">Typed Arrays</i> en anglais) ont été ajoutés avec ECMAScript 2015 et offrent une vue sous forme d'un tableau pour manipuler des tampons de données binaires. Le tableau qui suit illustre les types de données équivalents en C&nbsp;:
 
 <table class="standard-table">
   <tbody>

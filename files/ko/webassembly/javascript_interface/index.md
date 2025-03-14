@@ -1,12 +1,11 @@
 ---
 title: WebAssembly
 slug: WebAssembly/JavaScript_interface
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
-{{JSRef}}
 
-**`WebAssembly`** 자바스크립트 객체는 모든 [WebAssembly](/ko/docs/WebAssembly)에 관계된 기능의 네임스페이스로서 역할합니다.
+{{WebAssemblySidebar}}
+
+**`WebAssembly`** JavaScript 객체는 모든 [WebAssembly](/ko/docs/WebAssembly)에 관계된 기능의 네임스페이스로서 역할합니다.
 
 대부분의 전역객체와 다르게, `WebAssembly`는 생성자가 아닙니다 (함수 객체가 아닙니다). 비슷한 예로 수학적인 상수나 함수들을 담고있는 {{jsxref("Math")}} 객체나, 국제화 관련 생성자나 언어에 민감한 다른 함수들을 담고있는 {{jsxref("Intl")}} 등이 있습니다.
 
@@ -52,13 +51,14 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 
 ## 예제
 
-다음 예제 (GitHub의 [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) 데모보기 및 [라이브보기](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html))에서는 기본 소스에서 .wasm 모듈을 직접 스트리밍 한 다음 컴파일하고 인스턴스화합니다. 프로미스는 `ResultObject`로 충족됩니다. `instantiateStreaming()` 함수는 {{domxref ( "Response")}} 객체에 대한 promise를 받아들이므로 직접 {{domxref ( "WindowOrWorkerGlobalScope.fetch()")}} 호출에 전달할 수 있습니다.
+다음 예제 (GitHub의 [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) 데모보기 및 [라이브보기](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html))에서는 기본 소스에서 .wasm 모듈을 직접 스트리밍 한 다음 컴파일하고 인스턴스화합니다. 프로미스는 `ResultObject`로 충족됩니다. `instantiateStreaming()` 함수는 {{domxref ( "Response")}} 객체에 대한 promise를 받아들이므로 직접 {{domxref("fetch()")}} 호출에 전달할 수 있습니다.
 
 ```js
-var importObject = { imports: { imported_func: arg => console.log(arg) } };
+var importObject = { imports: { imported_func: (arg) => console.log(arg) } };
 
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj => obj.instance.exports.exported_func());
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (obj) => obj.instance.exports.exported_func(),
+);
 ```
 
 그런 다음 ResultObject의 인스턴스 구성에 액세스하고 그 안에 있는 `exported_func`을 호출합니다.

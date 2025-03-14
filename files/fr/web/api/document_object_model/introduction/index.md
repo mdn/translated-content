@@ -1,15 +1,6 @@
 ---
 title: Introduction
 slug: Web/API/Document_Object_Model/Introduction
-tags:
-  - Beginner
-  - DOM
-  - Document
-  - Guide
-  - HTML DOM
-  - Introduction
-  - Tutorial
-translation_of: Web/API/Document_Object_Model/Introduction
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -64,7 +55,7 @@ Lorsque vous créez un script, qu'il figure au sein de la page dans un élément
 Le code JavaScript suivant affichera une alerte quand le document est chargé (et quand le DOM entier est disponible à l'utilisation).
 
 ```html
-<body onload="window.alert('Bienvenue sur ma page Web !');">
+<body onload="window.alert('Bienvenue sur ma page Web !');"></body>
 ```
 
 Un autre exemple. Cette fonction crée un nouvel élément H1, y ajoute du texte, et ajoute ensuite cet élément à l'arbre du document :
@@ -73,19 +64,17 @@ Un autre exemple. Cette fonction crée un nouvel élément H1, y ajoute du texte
 <html>
   <head>
     <script>
-       // run this function when the document is loaded
-       window.onload = function() {
-
-         // create a couple of elements in an otherwise empty HTML page
-         const heading = document.createElement("h1");
-         const heading_text = document.createTextNode("Gros titre !");
-         heading.appendChild(heading_text);
-         document.body.appendChild(heading);
-      }
+      // run this function when the document is loaded
+      window.onload = function () {
+        // create a couple of elements in an otherwise empty HTML page
+        const heading = document.createElement("h1");
+        const heading_text = document.createTextNode("Gros titre !");
+        heading.appendChild(heading_text);
+        document.body.appendChild(heading);
+      };
     </script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -93,7 +82,8 @@ Un autre exemple. Cette fonction crée un nouvel élément H1, y ajoute du texte
 
 Cette référence tente de décrire les différents objets et types de la manière la plus simple possible. Mais il y a un certain nombre de types de données utilisées par l'API que vous devez connaître.
 
-> **Note :** Parce que la vaste majorité de codes qui utilisent le DOM gravitent autour de la manipulation de documents HTML, il est courant de toujours se référer aux nœuds du DOM comme éléments, étant donné que dans le document HTML, chaque nœud est un élément. Bien que n'étant pas strictement exact, la documentation que vous trouverez dans MDN fera souvent la même chose, à cause de la fréquence de cette hypothèse.
+> [!NOTE]
+> Parce que la vaste majorité de codes qui utilisent le DOM gravitent autour de la manipulation de documents HTML, il est courant de toujours se référer aux nœuds du DOM comme éléments, étant donné que dans le document HTML, chaque nœud est un élément. Bien que n'étant pas strictement exact, la documentation que vous trouverez dans MDN fera souvent la même chose, à cause de la fréquence de cette hypothèse.
 
 **NDTR:** (Pour simplifier, les exemples de syntaxe présentés dans cette référence se réfèreront aux nœuds en les appelant `elements`, aux tableaux de nœuds en tant que `nodeLists` (ou même simplement éléments), et aux nœuds d'attributs en tant qu'`attributes)`.
 
@@ -209,10 +199,9 @@ Lorsque vous obtiendrez une référence à un objet `table`, comme dans l'exempl
 ```js
 var table = document.getElementById("table");
 var tableAttrs = table.attributes; // Interface Node/Element
-for(var i = 0; i < tableAttrs.length; i++){
+for (var i = 0; i < tableAttrs.length; i++) {
   // Interface HTMLTableElement : attribut border
-  if(tableAttrs[i].nodeName.toLowerCase() == "border")
-    table.border = "1";
+  if (tableAttrs[i].nodeName.toLowerCase() == "border") table.border = "1";
 }
 // Interface HTMLTableElement : attribut summary
 table.summary = "note : bordure plus large";

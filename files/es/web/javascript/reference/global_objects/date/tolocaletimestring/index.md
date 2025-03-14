@@ -1,23 +1,27 @@
 ---
 title: Date.prototype.toLocaleTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
-tags:
-  - Date
-  - Fecha
-  - Internacionalizacion
-  - JavaScript
-  - Method
-  - Prototype
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toLocaleTimeString
 ---
 
 {{JSRef}}
 
 El método **`toLocaleTimeString()`** devuelve una cadena con una representación de la parte del tiempo de esta fecha sensible al idioma. Los nuevos argumentos `locales` y `options` le permiten a la aplicación especificar el idioma cuyas convenciones de formato deben usarse y personalizan el comportamiento de esta función. En implementaciones antiguas que ignoran los argumentos `locales` y `options` la localidad usada y la forma de la cadena devuelta son completamente dependientes de la implementación.
 
-{{EmbedInteractiveExample("pages/js/date-tolocaletimestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toLocaleTimeString()")}}
+
+```js interactive-example
+// Depending on timezone, your results will vary
+const event = new Date("August 19, 1975 23:15:30 GMT+00:00");
+
+console.log(event.toLocaleTimeString("en-US"));
+// Expected output: "1:15:30 AM"
+
+console.log(event.toLocaleTimeString("it-IT"));
+// Expected output: "01:15:30"
+
+console.log(event.toLocaleTimeString("ar-EG"));
+// Expected output: "١٢:١٥:٣٠ ص"
+```
 
 ## Sintaxis
 
@@ -29,7 +33,7 @@ dateObj.toLocaleTimeString([locales[, options]])
 
 Los argumentos `locales` y `options` personalizan el comportamiento de la función y le permiten a la aplicación especificar el idioma cuyas convenciones de formato deben usarse. En las implementaciones que ignoran los argumentos `locales` y `options`, la localidad y la forma de la cadena devuelta son dependientes por completo de la implementación.
 
-Vea el [constructor `Intl.DateTimeFormat()`](/es/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/DateTimeFormat) para los detalles de estos parámetros y sobre cómo usarlos.
+Vea el [constructor `Intl.DateTimeFormat()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) para los detalles de estos parámetros y sobre cómo usarlos.
 
 El valor predeterminado de cada componente de fecha-hora es {{jsxref("undefined")}}, pero si las propiedades `weekday`, `year`, `month` y `day` son todas {{jsxref("undefined")}}, entonces `year`, `month` y `day` se asumen como `"numeric"`.
 
@@ -59,9 +63,9 @@ Los argumentos `locales` y `options` aún no están soportados en todos los nave
 ```js
 function toLocaleTimeStringSoportaLocales() {
   try {
-    new Date().toLocaleTimeString('i');
+    new Date().toLocaleTimeString("i");
   } catch (e) {
-    return e​.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
@@ -78,24 +82,24 @@ var fecha = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // America/Los_Angeles para los EEUU
 
 // El inglés americano usa formato de 12 horas con AM/PM
-console.log(fecha.toLocaleTimeString('en-US'));
+console.log(fecha.toLocaleTimeString("en-US"));
 // → "7:00:00 PM"
 
 // El inglés británico usa formato de 24 horas sin AM/PM
-console.log(date.toLocaleTimeString('en-GB'));
+console.log(date.toLocaleTimeString("en-GB"));
 // → "03:00:00"
 
 // El koreano usa formato de 12 horas con AM/PM
-console.log(date.toLocaleTimeString('ko-KR'));
+console.log(date.toLocaleTimeString("ko-KR"));
 // → "오후 12:00:00"
 
 // En muchos países donde hablan árabe se usan dígitos árabes
-console.log(date.toLocaleTimeString('ar-EG'));
+console.log(date.toLocaleTimeString("ar-EG"));
 // → "٧:٠٠:٠٠ م"
 
 // cuando se pide un idioma que puede no estar disponible, como
 // balinés, incluya un idioma de respaldo, como en este caso, indonesio
-console.log(date.toLocaleTimeString(['ban', 'id']));
+console.log(date.toLocaleTimeString(["ban", "id"]));
 // → "11.00.00"
 ```
 
@@ -107,16 +111,18 @@ Los resultados provistos por `toLocaleTimeString()` pueden ser personalizados us
 var fecha = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // una aplicación puede querer usar UTC y visibilizarlo:
-var options = { timeZone: 'UTC', timeZoneName: 'short' };
-console.log(date.toLocaleTimeString('en-US', options));
+var options = { timeZone: "UTC", timeZoneName: "short" };
+console.log(date.toLocaleTimeString("en-US", options));
 // → "3:00:00 AM GMT"
 
 // algunas veces incluso en EEUU necesitan el tiempo en 24 horas
-console.log(date.toLocaleTimeString('en-US', { hour12: false }));
+console.log(date.toLocaleTimeString("en-US", { hour12: false }));
 // → "19:00:00"
 
 // mostrar únicamente horas y minutos, use options con la localidad predeterminada - usar un arreglo vacío
-console.log(date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+console.log(
+  date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+);
 // → "20:01"
 ```
 
@@ -126,14 +132,11 @@ Cuando se da formato a un gran número de fechas, es mejor crear un objeto {{jsx
 
 ## Especificaciones
 
-| Specification                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.tolocaletimestring', 'Date.prototype.toLocaleTimeString')}}         |
-| {{SpecName('ES Int Draft', '#sup-date.prototype.tolocaletimestring', 'Date.prototype.toLocaleTimeString')}} |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.toLocaleTimeString")}}
+{{Compat}}
 
 ## Ver también
 

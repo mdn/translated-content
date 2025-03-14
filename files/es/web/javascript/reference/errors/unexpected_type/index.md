@@ -1,7 +1,6 @@
 ---
 title: 'TypeError: "x" is (not) "y"'
 slug: Web/JavaScript/Reference/Errors/Unexpected_type
-translation_of: Web/JavaScript/Reference/Errors/Unexpected_type
 ---
 
 {{jsSidebar("Errors")}}
@@ -39,12 +38,11 @@ foo.substring(1); // TypeError: foo is undefined
 var foo = null;
 foo.substring(1); // TypeError: foo is null
 
-
 // Certain methods might require a specific type
-var foo = {}
+var foo = {};
 Symbol.keyFor(foo); // TypeError: foo is not a symbol
 
-var foo = 'bar'
+var foo = "bar";
 Object.create(foo); // TypeError: "foo" is not an object or null
 ```
 
@@ -53,7 +51,7 @@ Object.create(foo); // TypeError: "foo" is not an object or null
 Para fijar un puntero nulo a indefinidos o valores nulos, puede utilizar el operador typeof, por ejemplo
 
 ```js
-if (typeof foo !== 'undefined') {
+if (typeof foo !== "undefined") {
   // Ahora sabemos que foo está definido, ahora podemos continuar.
 }
 ```

@@ -12,16 +12,16 @@ slug: Web/CSS/mask
 mask: none;
 
 /* Image values */
-mask: url(mask.png);                       /* 使用位图来做遮罩 */
-mask: url(masks.svg#star);                 /* 使用 SVG 图形中的形状来做遮罩 */
+mask: url(mask.png); /* 使用位图来做遮罩 */
+mask: url(masks.svg#star); /* 使用 SVG 图形中的形状来做遮罩 */
 
 /* Combined values */
-mask: url(masks.svg#star) luminance;       /* Element within SVG graphic used as luminance mask */
-mask: url(masks.svg#star) 40px 20px;       /* 使用 SVG 图形中的形状来做遮罩并设定它的位置：离上边缘 40px，离左边缘 20px */
-mask: url(masks.svg#star) 0 0/50px 50px;   /* 使用 SVG 图形中的形状来做遮罩并设定它的位置和大小：长宽都是 50px */
-mask: url(masks.svg#star) repeat-x;        /* Element within SVG graphic used as horizontally repeated mask */
-mask: url(masks.svg#star) stroke-box;      /* Element within SVG graphic used as mask extending to the box enclosed by the stroke */
-mask: url(masks.svg#star) exclude;         /* Element within SVG graphic used as mask and combined with background using non-overlapping parts */
+mask: url(masks.svg#star) luminance; /* Element within SVG graphic used as luminance mask */
+mask: url(masks.svg#star) 40px 20px; /* 使用 SVG 图形中的形状来做遮罩并设定它的位置：离上边缘 40px，离左边缘 20px */
+mask: url(masks.svg#star) 0 0/50px 50px; /* 使用 SVG 图形中的形状来做遮罩并设定它的位置和大小：长宽都是 50px */
+mask: url(masks.svg#star) repeat-x; /* Element within SVG graphic used as horizontally repeated mask */
+mask: url(masks.svg#star) stroke-box; /* Element within SVG graphic used as mask extending to the box enclosed by the stroke */
+mask: url(masks.svg#star) exclude; /* Element within SVG graphic used as mask and combined with background using non-overlapping parts */
 
 /* Global values */
 mask: inherit;
@@ -29,7 +29,8 @@ mask: initial;
 mask: unset;
 ```
 
-> **备注：** mask 的简写会将 {{cssxref("mask-border")}} 设为初始值。使用 `mask` 的简写优于使用其他简写或者各自属性的设置来覆盖。这能保证 `mask-border` 也会重新设置为新的效果样式。
+> [!NOTE]
+> mask 的简写会将 {{cssxref("mask-border")}} 设为初始值。使用 `mask` 的简写优于使用其他简写或者各自属性的设置来覆盖。这能保证 `mask-border` 也会重新设置为新的效果样式。
 
 {{cssinfo}}
 
@@ -82,5 +83,5 @@ mask: unset;
 
 - {{Cssxref("clip-path")}}, {{Cssxref("filter")}}
 - [CSS Shapes, clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
-- [Applying SVG effects to HTML content](/zh-CN/docs/Applying_SVG_effects_to_HTML_content)
-- [SVG](/zh-CN/docs/SVG)
+- [Applying SVG effects to HTML content](/zh-CN/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [SVG](/zh-CN/docs/Web/SVG)

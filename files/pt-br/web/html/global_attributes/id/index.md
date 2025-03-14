@@ -9,20 +9,16 @@ O valor deste atributo é uma string opaca: isso significa que os desenvolvedore
 
 O valor deste atributo não deve conter lacunas (espaços, tabulações etc.). Navegadores tratam IDs inadequadas que contenham lacunas como se as lacunas fossem parte do ID. Em contraste com o atributo **class**, que permite múltiplos valores separados por espaço, os elementos podem ter somente um único ID.
 
-> **Note:** **Nota:** Utilizar caracteres exceto letras e dígitos ASCII, `'_'`, `'-'` e `'.'` pode causar problemas de compatibilidade, já que eles não eram permitidos no HTML 4. Embora esta restrição fora suspensa no HTML 5, um ID deve iniciar com uma letra para fins de compatibilidade.
+> [!NOTE]
+> Utilizar caracteres exceto letras e dígitos ASCII, `'_'`, `'-'` e `'.'` pode causar problemas de compatibilidade, já que eles não eram permitidos no HTML 4. Embora esta restrição fora suspensa no HTML 5, um ID deve iniciar com uma letra para fins de compatibilidade.
 
 ## Especificações
 
-| Especificação                                                                        | Status                           | Comentário                                                                                                                                                                                                                                                                               |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "dom.html#the-id-attribute", "id")}} | {{Spec2('HTML WHATWG')}} | Nenhuma mudança desde o mais recente snapshot, {{SpecName('HTML5.1')}}                                                                                                                                                                                                          |
-| {{SpecName('HTML5.1', "dom.html#the-id-attribute", "id")}}         | {{Spec2('HTML5.1')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, nenhuma mudança desde {{SpecName('HTML5 W3C')}}                                                                                                                                                                                 |
-| {{SpecName('HTML5 W3C', "dom.html#the-id-attribute", "id")}}     | {{Spec2('HTML5 W3C')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, passa a aceitar `'_'`, `'-'` and `'.'` se não estiverem no começo do ID. Se torna um atributo global verdadeiro.                                                                                                                       |
-| {{SpecName('HTML4.01', 'struct/global.html#adef-id', 'id')}}     | {{Spec2('HTML4.01')}}     | Suportado por todos os elementos menos {{HTMLElement("base")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, and {{HTMLElement("title")}}. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.global_attributes.id")}}
+{{Compat}}
 
 ## Veja também
 

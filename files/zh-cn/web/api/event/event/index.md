@@ -9,15 +9,16 @@ slug: Web/API/Event/Event
 
 ## 语法
 
-```
- event = new Event(typeArg, eventInit);
+```js-nolint
+new Event(type)
+new Event(type, options)
 ```
 
 ### 参数
 
-- _typeArg_
+- `type`
   - : 是{{domxref("DOMString")}} 类型，表示所创建事件的名称。
-- _eventInit_{{optional_inline}}
+- `options` {{optional_inline}}
 
   - : 是 `EventInit` 类型的字典，接受以下字段：
 
@@ -30,7 +31,7 @@ slug: Web/API/Event/Event
 ```js
 // 创建一个支持冒泡且不能被取消的 look 事件
 
-var ev = new Event("look", {"bubbles":true, "cancelable":false});
+var ev = new Event("look", { bubbles: true, cancelable: false });
 document.dispatchEvent(ev);
 
 // 事件可以在任何元素触发，不仅仅是 document

@@ -1,10 +1,6 @@
 ---
 title: Firefox 3 para desarrolladores
 slug: Mozilla/Firefox/Releases/3
-tags:
-  - Firefox 3
-translation_of: Mozilla/Firefox/Releases/3
-original_slug: Firefox_3_para_desarrolladores
 ---
 
 {{FirefoxSidebar}}
@@ -19,13 +15,14 @@ Si eres un desarrollador que intenta ponerse al día con todas las nuevas caract
   - : Información sobre los cambios que se podrían necesitar para realizar un sitio o aplicación web y sacarle mayor ventaja a las nuevas características de Firefox 3.
 - [Eventos online y offline](/es/Eventos_online_y_offline)
   - : Firefox 3 implementa los eventos conectado y desconectado definidos por WHATWG, que permiten a aplicaciones y extensiones descubrir si una conexión activa de internet es disponible, además de detectar cuando hay conexión o desconexión.
-- [Manipuladores de protocolo web](/es/DOM/window.navigator.registerProtocolHandler)
+- [Manipuladores de protocolo web](/es/docs/Web/API/Navigator/registerProtocolHandler)
   - : Ahora se puede registrar una aplicación web como manipulador de protocolo con el método `navigator.registerProtocolHandler()`.
 - [Dibujar texto usando canvas](/es/Dibujar_texto_usando_canvas)
   - : Ahora se puede dibujar texto en canvas con una API no estándar implementada por Firefox 3.
 - [Gestión de transformaciones en canvas](/es/Tutorial_de_Canvas/Transformaciones#Transformaciones)
   - : Firefox 3 administra los métodos `transform()` y `setTransform()` en canvases (lienzos).
 - [El uso de microformatos](/es/El_uso_de_microformatos)
+
   - : Firefox 3 tiene APIs que permiten trabajar con microformatos.
 
 - [Hojas de estilo alternativas](/es/Hojas_de_estilo_alternativas)

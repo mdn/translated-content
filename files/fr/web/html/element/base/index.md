@@ -1,14 +1,6 @@
 ---
-title: '<base> : l''élément pour l''URL de base du document'
+title: "<base> : l'élément pour l'URL de base du document"
 slug: Web/HTML/Element/base
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - HTML:Metadata content
-  - Reference
-translation_of: Web/HTML/Element/base
-browser-compat: html.elements.base
 ---
 
 {{HTMLSidebar}}
@@ -75,14 +67,15 @@ Il est possible d'accéder à l'URL de base d'un document via un script en utili
 
 Les [attributs universels](/fr/docs/Web/HTML/Global_attributes) peuvent être utilisés sur cet élément.
 
-> **Attention :** Si l'un des attributs suivants est spécifié, cet élément **doit** venir avant d'autres éléments dont les valeurs d'attribut sont des URL, comme l'attribut `href` de [`<link>`](/fr/docs/Web/HTML/Element/link).
+> [!WARNING]
+> Si l'un des attributs suivants est spécifié, cet élément **doit** venir avant d'autres éléments dont les valeurs d'attribut sont des URL, comme l'attribut `href` de [`<link>`](/fr/docs/Web/HTML/Element/link).
 
 - **`href`**
   - : L'URL de base à utiliser afin de recomposer les URL relatives contenues dans le document. Si cet attribut est défini, cet élément doit être présent avant les éléments dont les attributs sont des URL.
     Les URI absolues et relatives sont autorisées (voir la note ci-après).
 - **`target`**
 
-  - : Un **mot-clé** ou un **nom défini par l'auteur** du [contexte de navigation](/fr/docs/Glossary/Browsing_context) par défaut pour afficher les résultats de la navigation à partir des éléments [`<a>`](/fr/docs/Web/HTML/Element/a), [`<area>`](/fr/docs/Web/HTML/Element/area) ou [`<form>`](/fr/docs/Web/HTML/Element/Form) sans attributs `target` explicites.
+  - : Un **mot-clé** ou un **nom défini par l'auteur** du [contexte de navigation](/fr/docs/Glossary/Browsing_context) par défaut pour afficher les résultats de la navigation à partir des éléments [`<a>`](/fr/docs/Web/HTML/Element/a), [`<area>`](/fr/docs/Web/HTML/Element/area) ou [`<form>`](/fr/docs/Web/HTML/Element/form) sans attributs `target` explicites.
 
     Les mots-clés suivants ont des significations particulières :
 
@@ -110,15 +103,15 @@ Les ancres d'une page ([`<a>`](/fr/docs/Web/HTML/Element/a)), par exemple `<a hr
 Les balises [Open Graph](https://ogp.me/) ne tiennent pas de compte de l'élément `<base>`, et doivent toujours avoir des URL absolues complètes. Par exemple :
 
 ```html
-<meta property="og:image" content="https://example.com/thumbnail.jpg">
+<meta property="og:image" content="https://example.com/thumbnail.jpg" />
 ```
 
 ## Exemples
 
 ```html
-<base href="https://www.example.com/">
-<base target="_blank">
-<base target="_top" href="https://example.com/">
+<base href="https://www.example.com/" />
+<base target="_blank" />
+<base target="_top" href="https://example.com/" />
 ```
 
 ## Spécifications

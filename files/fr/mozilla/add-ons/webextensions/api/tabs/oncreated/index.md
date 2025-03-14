@@ -1,20 +1,9 @@
 ---
 title: tabs.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onCreated
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsqu'un onglet est créé.
 
@@ -23,9 +12,9 @@ Notez que l'URL de l'onglet peut ne pas avoir sa valeur finale au moment où cet
 ## Syntaxe
 
 ```js
-browser.tabs.onCreated.addListener(callback)
-browser.tabs.onCreated.removeListener(listener)
-browser.tabs.onCreated.hasListener(listener)
+browser.tabs.onCreated.addListener(callback);
+browser.tabs.onCreated.removeListener(listener);
+browser.tabs.onCreated.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -62,13 +51,13 @@ browser.tabs.onCreated.addListener(handleCreated);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onCreated")}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

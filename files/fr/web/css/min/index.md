@@ -1,8 +1,6 @@
 ---
 title: min()
 slug: Web/CSS/min
-translation_of: Web/CSS/min()
-original_slug: Web/CSS/min()
 ---
 
 {{CSSRef}}
@@ -42,7 +40,8 @@ La fonction `min()` peut également être utilisée pour définir la taille maxi
 #### CSS
 
 ```css
-input, label {
+input,
+label {
   padding: 2px;
   box-sizing: border-box;
   display: inline-block;
@@ -64,7 +63,7 @@ On a ici la règle qui s'applique au formulaire et qui occupe 100% de la largeur
 ```html
 <form>
   <label>Saisir quelque chose :</label>
-  <input type="text">
+  <input type="text" />
 </form>
 ```
 
@@ -72,7 +71,7 @@ On a ici la règle qui s'applique au formulaire et qui occupe 100% de la largeur
 
 ## Accessibilité
 
-Lorsqu'on utilise `min()` afin de contrôler la taille du texte, il faut s'assurer que le texte puisse toujours être suffisamment grand pour être lisible. Pour cela, on peut imbriquer l'appel à `min()` dans [`max()`](/fr/docs/Web/CSS/max) utilisant [une unité de longueur relative](/fr/docs/Web/CSS/length#Unités_de_longueur_relatives) en deuxième argument afin de garantir une lisibilité minimale :
+Lorsqu'on utilise `min()` afin de contrôler la taille du texte, il faut s'assurer que le texte puisse toujours être suffisamment grand pour être lisible. Pour cela, on peut imbriquer l'appel à `min()` dans [`max()`](/fr/docs/Web/CSS/max) utilisant [une unité de longueur relative](/fr/docs/Web/CSS/length#unités_de_longueur_relatives) en deuxième argument afin de garantir une lisibilité minimale :
 
 ```css
 small {
@@ -82,7 +81,7 @@ small {
 
 On aura ainsi une taille minimale de `1rem` et la taille du texte qui se met à l'échelle si on zoome sur la page.
 
-- [Comprendre les règles 1.4 du WCAG](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) (MDN)
+- [Comprendre les règles 1.4 du WCAG](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) (MDN)
 - [Comprendre le critère de réussite 1.4.4 du WCAG 2.0 (W3C)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## Spécifications
@@ -98,4 +97,4 @@ On aura ainsi une taille minimale de `1rem` et la taille du texte qui se met à 
 - {{CSSxRef("calc", "calc()")}}
 - {{CSSxRef("clamp", "clamp()")}}
 - {{CSSxRef("max", "max()")}}
-- [Valeurs et unités en CSS](/fr/docs/Apprendre/CSS/Introduction_à_CSS/Values_and_units)
+- [Valeurs et unités en CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)

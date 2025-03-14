@@ -1,7 +1,6 @@
 ---
 title: Operador Exponencial
 slug: Web/JavaScript/Reference/Operators/Exponentiation
-original_slug: Web/JavaScript/Reference/Operators/Operador_Exponencial
 ---
 
 {{jsSidebar("Operators")}}
@@ -12,12 +11,26 @@ O **operador de exponenciação (`**`)** retorna o resultado de elevar o primeir
 segundo operando. É equivalente ao método `Math.pow`, exceto que também aceita números do tipo BigInt
 como operandos.
 
-{{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation operator")}}
+
+```js interactive-example
+console.log(3 ** 4);
+// Expected output: 81
+
+console.log(10 ** -2);
+// Expected output: 0.01
+
+console.log(2 ** (3 ** 2));
+// Expected output: 512
+
+console.log((2 ** 3) ** 2);
+// Expected output: 64
+```
 
 ## Sintaxe
 
 ```js
-    x ** y;
+x ** y;
 ```
 
 ## Descrição
@@ -50,19 +63,19 @@ mas o JavaScript usa esse símbolo para o operador `XOR lógico bit a bit`.
 ### Exponenciação básica
 
 ```js
-    2 ** 3   // 8
-    3 ** 2   // 9
-    3 ** 2.5 // 15.588457268119896
-    10 ** -1 // 0.1
-    NaN ** 2 // NaN
+2 ** 3; // 8
+3 ** 2; // 9
+3 ** 2.5; // 15.588457268119896
+10 ** -1; // 0.1
+NaN ** 2; // NaN
 ```
 
 ### Associatividade
 
-```js
-    2 ** 3 ** 2   // 512
-    2 ** (3 ** 2) // 512
-    (2 ** 3) ** 2 // 64
+```js-nolint
+2 ** 3 ** 2; // 512
+2 ** (3 ** 2); // 512
+(2 ** 3) ** 2; // 64
 ```
 
 ### Uso com operadores unários
@@ -70,13 +83,13 @@ mas o JavaScript usa esse símbolo para o operador `XOR lógico bit a bit`.
 Para inverter o sinal do resultado de uma expressão de exponenciação:
 
 ```js
-    -(2 ** 2) // -4
+-(2 ** 2); // -4
 ```
 
 Para forçar a base de uma expressão de exponenciação a ser um número negativo:
 
 ```js
-    (-2) ** 2 // 4
+(-2) ** 2; // 4
 ```
 
 ## Compatibilidade com navegadores

@@ -1,11 +1,9 @@
 ---
 title: Заголовок запроса
 slug: Glossary/Request_header
-tags:
-  - Глоссарий
-translation_of: Glossary/Request_header
-original_slug: Глоссарий/Request_header
 ---
+
+{{GlossarySidebar}}
 
 **Заголовок запроса** - {{Glossary("header", "HTTP header")}} который используется в HTTP-запросе и который не относится к содержимому сообщения. Заголовки запроса, такие как {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language", "Accept-*")}} или {{HTTPHeader("If-Modified-Since", "If-*")}} позволяют выполнять условные запросы; другие, такие как {{HTTPHeader("Cookie")}}, {{HTTPHeader("User-Agent")}} или {{HTTPHeader("Referer")}} уточняют контекст, чтобы сервер мог адаптировать ответ.
 
@@ -43,4 +41,4 @@ Content-Length: 128
 
 ### Технические знания
 
-- [Список всех HTTP заголовков](/ru/docs/Web/HTTP/Заголовки)
+- [Список всех HTTP заголовков](/ru/docs/Web/HTTP/Headers)

@@ -1,46 +1,44 @@
 ---
 title: <marquee>
 slug: Web/HTML/Element/marquee
-translation_of: Web/HTML/Element/marquee
 ---
-{{HTMLSidebar}}{{obsolete_header}}
 
-## Определение
+{{HTMLSidebar}}
 
-HTML-элемент `<marquee>` используется для создания на странице прокручивающегося текста (бегущей строки).
+HTML-элемент **`<marquee>`** используется для создания на странице прокручивающегося текста (бегущей строки).
 
-## Атрибут
+## Атрибуты
 
-- {{htmlattrdef("behavior")}}
+- `behavior`
   - : Описывает поведение прокрутки. Допустимые значения: `scroll`, `slide` `и alternate`. Если значение не указано, то используется `scroll`.
-- {{htmlattrdef("bgcolor")}}
+- `bgcolor`
   - : Задаёт цвет фона (можно использовать имя цвета или шестнадцатеричное значение).
-- {{htmlattrdef("direction")}}
+- `direction`
   - : Задаёт направление прокрутки. `Допустимые значения: left`, `right`, `up` и `down`. Если значение не указано, то используется `left`.
-- {{htmlattrdef("height")}}
+- `height`
   - : Задаёт высоту в пикселях или процентах.
-- {{htmlattrdef("hspace")}}
+- `hspace`
   - : Задаёт поле (margin) слева.
-- {{htmlattrdef("loop")}}
+- `loop`
   - : Задаёт количество прокруток. Если значение не указано, то используется -1, что означает бесконечную прокрутку
-- {{htmlattrdef("scrollamount")}}
+- `scrollamount`
   - : Задаёт сдвиг на каждом шаге в пикселях. По умолчанию 6.
-- {{htmlattrdef("scrolldelay")}}
+- `scrolldelay`
   - : Задаёт интервал между каждым шагом в миллисекундах. По умолчанию 85. Обратите внимание, что значения меньше 60 будут проигнорированы и будет использовано 60, если не присутствует атрибут `truespeed`.
-- {{htmlattrdef("truespeed")}}
+- `truespeed`
   - : По умолчанию значения меньше 60 в `scrolldelay` игнорируются. Однако, если присутствует `truespeed`, то они не игнорируются
-- {{htmlattrdef("vspace")}}
+- `vspace`
   - : Задаёт вертикальный отступ (margin) в пикселях или процентах.
-- {{htmlattrdef("width")}}
+- `width`
   - : Задаёт ширину в пикселях или процентах.
 
 ## Обработчики событий
 
-- {{htmlattrdef("onbounce")}}
+- `onbounce`
   - : Срабатывает, когда marquee достиг конечного состояния. Срабатывает только в случаях, когда `behavior` имеет значение `alternate`.
-- {{htmlattrdef("onfinish")}}
+- `onfinish`
   - : Срабатывает, когда marquee прокрутился столько раз, сколько было задано в атрибуте `loop`. Срабатывает только тогда, когда атрибут `loop` имеет положительное значение.
-- {{htmlattrdef("onstart")}}
+- `onstart`
   - : Срабатывает в начале прокрутки.
 
 ## Методы
@@ -57,10 +55,13 @@ HTML-элемент `<marquee>` используется для создания
 
 <marquee direction="up">This text will scroll from bottom to top</marquee>
 
-<marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
-  <marquee behavior="alternate">
-    This text will bounce
-  </marquee>
+<marquee
+  direction="down"
+  width="250"
+  height="200"
+  behavior="alternate"
+  style="border:solid">
+  <marquee behavior="alternate">This text will bounce</marquee>
 </marquee>
 ```
 

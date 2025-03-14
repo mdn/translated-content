@@ -1,13 +1,6 @@
 ---
 title: BiquadFilterNode
 slug: Web/API/BiquadFilterNode
-tags:
-  - API
-  - BiquadFilterNode
-  - Interface
-  - Reference
-  - Web Audio API
-translation_of: Web/API/BiquadFilterNode
 ---
 
 {{APIRef("Web Audio API")}}
@@ -150,7 +143,7 @@ _Inherits properties from its parent,_ _{{domxref("AudioNode")}}_.
           <td>
             밴드 스톱, 혹은 밴드 리젝션으로 불리는 표준 <a
               href="http://en.wikipedia.org/wiki/Band-stop_filter"
-              title="/en-US/docs/"
+              title="/ko/docs/"
               >notch</a
             > 필터입니다. 이는 밴드패스 필터와 반대입니다. 주어진 대역폭 바깥의
             주파수는 통과하며, 안쪽의 주파수는 감쇠합니다.
@@ -166,7 +159,7 @@ _Inherits properties from its parent,_ _{{domxref("AudioNode")}}_.
           <td>
             표준 2차 <a
               href="http://en.wikipedia.org/wiki/All-pass_filter#Digital_Implementation"
-              title="/en-US/docs/"
+              title="/ko/docs/"
               >allpass</a
             > 필터입니다. 이는 모든 주파수를 통과시키지만, 가변 주파수 사이의 위상
             관계를 변화시킵니다.
@@ -174,7 +167,7 @@ _Inherits properties from its parent,_ _{{domxref("AudioNode")}}_.
           <td>
             최대 <a
               href="http://en.wikipedia.org/wiki/Group_delay_and_phase_delay"
-              title="/en-US/docs/"
+              title="/ko/docs/"
               >group delay</a
             >를 갖는 주파수, 즉 위상 전이 발생의 중심에 있는 주파수입니다.
           </td>
@@ -198,14 +191,14 @@ _{{domxref("AudioNode")}} 로부터 메서드를 상속받습니다_.
 
 See [`AudioContext.createBiquadFilter`](/ko/docs/Web/API/BaseAudioContext/createBiquadFilter#example) for example code that shows how to use an `AudioContext` to create a Biquad filter node.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
 ## See also
 
-- [Using the Web Audio API](/ko/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

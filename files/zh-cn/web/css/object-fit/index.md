@@ -7,9 +7,46 @@ slug: Web/CSS/object-fit
 
 **`object-fit`** [CSS](/zh-CN/docs/Web/CSS) 属性指定[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)（例如：{{HTMLElement("img")}} 或 {{HTMLElement("video")}}）的内容应该如何适应到其使用高度和宽度确定的框。
 
-您可以通过使用 {{cssxref("object-position")}} 属性来切换被替换元素的内容对象在元素框内的对齐方式。
+你可以通过使用 {{cssxref("object-position")}} 属性来切换被替换元素的内容对象在元素框内的对齐方式。
 
-{{EmbedInteractiveExample("pages/css/object-fit.html")}}
+{{InteractiveExample("CSS Demo: object-fit")}}
+
+```css interactive-example-choice
+object-fit: fill;
+```
+
+```css interactive-example-choice
+object-fit: contain;
+```
+
+```css interactive-example-choice
+object-fit: cover;
+```
+
+```css interactive-example-choice
+object-fit: none;
+```
+
+```css interactive-example-choice
+object-fit: scale-down;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/plumeria-146x200.jpg" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 100%;
+  width: 100%;
+  border: 2px dotted #888;
+}
+```
 
 ## 语法
 
@@ -52,36 +89,36 @@ object-fit 属性由下列的值中的单独一个关键字来指定。
 
 ## 示例
 
-### 为图像设置 object-fill
+### 为图像设置 object-fit
 
 #### HTML
 
 ```html
 <section>
   <h2>object-fit: fill</h2>
-  <img class="fill" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="fill" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
-  <img class="fill narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="fill narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
   <h2>object-fit: contain</h2>
-  <img class="contain" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="contain" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
-  <img class="contain narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="contain narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
   <h2>object-fit: cover</h2>
-  <img class="cover" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="cover" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
-  <img class="cover narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="cover narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
   <h2>object-fit: none</h2>
-  <img class="none" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="none" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
-  <img class="none narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="none narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
   <h2>object-fit: scale-down</h2>
-  <img class="scale-down" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="scale-down" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
-  <img class="scale-down narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="scale-down narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
 </section>
 ```
 
@@ -89,7 +126,9 @@ object-fit 属性由下列的值中的单独一个关键字来指定。
 
 ```css
 h2 {
-  font-family: Courier New, monospace;
+  font-family:
+    Courier New,
+    monospace;
   font-size: 1em;
   margin: 1em 0 0.3em;
 }
@@ -141,5 +180,5 @@ img {
 
 ## 参见
 
-- 其它与图像相关的 CSS 属性：{{cssxref("object-position")}}、{{cssxref("image-orientation")}}、{{cssxref("image-rendering")}}、{{cssxref("image-resolution")}}。
+- 其他与图像相关的 CSS 属性：{{cssxref("object-position")}}、{{cssxref("image-orientation")}}、{{cssxref("image-rendering")}}、{{cssxref("image-resolution")}}。
 - {{cssxref("background-size")}}

@@ -1,6 +1,6 @@
 ---
 title: CSS 表
-slug: Web/CSS/CSS_Table
+slug: Web/CSS/CSS_table
 ---
 
 {{CSSRef}}
@@ -21,4 +21,3 @@ slug: Web/CSS/CSS_Table
 ## 仕様書
 
 {{Specifications}}
-

@@ -5,9 +5,75 @@ slug: Web/HTML/Element/th
 
 {{HTMLSidebar}}
 
-O **elemento** **HTML `<th>` **define uma célula cabeçalho do grupo de células de sua tabela. A exatidão natural deste grupo é definida pelos atributos {{htmlattrxref("scope", "th")}} e {{htmlattrxref("headers", "th")}}.
+O **elemento HTML `<th>`** define uma célula cabeçalho do grupo de células de sua tabela. A exatidão natural deste grupo é definida pelos atributos [`scope`](#scope) e [`headers`](#headers).
 
-{{EmbedInteractiveExample("pages/tabbed/th.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;th&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Alien football stars
+  </caption>
+  <tr>
+    <th scope="col">Player</th>
+    <th scope="col">Gloobles</th>
+    <th scope="col">Za'taak</th>
+  </tr>
+  <tr>
+    <th scope="row">TR-7</th>
+    <td>7</td>
+    <td>4,569</td>
+  </tr>
+  <tr>
+    <th scope="row">Khiresh Odo</th>
+    <td>7</td>
+    <td>7,223</td>
+  </tr>
+  <tr>
+    <th scope="row">Mia Oolong</th>
+    <td>9</td>
+    <td>6,219</td>
+  </tr>
+</table>
+```
+
+```css interactive-example
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+th[scope="col"] {
+  background-color: #505050;
+  color: #fff;
+}
+
+th[scope="row"] {
+  background-color: #d6ecd4;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-of-type(even) {
+  background-color: #eee;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -56,15 +122,15 @@ O **elemento** **HTML `<th>` **define uma célula cabeçalho do grupo de célula
 
 Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("abbr")}}
+- `abbr`
   - : Este atributo contém uma breve descrição do conteúdo da célula. Alguns usuários-agentes, como leitores, pode apresentar essa descrição antes do próprio conteúdo.
-- {{htmlattrdef("colspan")}}
+- `colspan`
   - : Este atributo contém um valor inteiro não negativo que indica quantas colunas a célula ocupará. Valor padrão `1`. Valores acima de 1000 são considerados incorretos e serão modificados para o valor padrão `1`.
-- {{htmlattrdef("headers")}}
+- `headers`
   - : Este atributo contém uma lista de palavras separadas por espaço, cada uma correspondendo ao atributo **id** dos elementos {{HTMLElement("th")}} que se aplicam a este elemento.
-- {{htmlattrdef("rowspan")}}
+- `rowspan`
   - : Este atributo contém um valor inteiro não negativo que indica quantas linhas a célula estende. Valor padrão `1`. Se seu valor é definido como `0`, ele se estende até o final da tabela ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, mesmo que implicitamente definido), que a célula pertence. Não é possível colocar valores superiores a 65534.
-- {{htmlattrdef("scope")}}
+- `scope`
 
   - : Este atributo define as células a que o cabeçalho (definido no elemento {{HTMLElement("th")}}) se relaciona.
     Possíveis valores:
@@ -79,7 +145,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
 ### Atributos depreciados
 
-- {{htmlattrdef("align")}} {{obsolete_inline("html5")}}
+- `align`
 
   - : Este atributo especifica como o alinhamento horizontal do conteúdo da célula será tratado.
 
@@ -89,21 +155,22 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     - `center`: O conteúdo é centralizado da célula.
     - `right`: O conteúdo é alinhado a direita da célula.
     - `justify` (somente com texto): O conteúdo é estendido dentro da célula para cobrir toda a sua largura.
-    - `char` (somente com texto): O conteúdo está alinhado a um caractere dentro do elemento `<th>` com deslocamento mínimo. Esse caractere é definido pelos atributos {{htmlattrxref("char", "th")}} e {{htmlattrxref("charoff", "th")}}.
+    - `char` (somente com texto): O conteúdo está alinhado a um caractere dentro do elemento `<th>` com deslocamento mínimo. Esse caractere é definido pelos atributos [`char`](#char) e [`charoff`](#charoff).
 
     O valor padrão quando não especificado é `left`.
 
     > **Note:**Não use esse atributo, pois ele está obsoleto no padrão mais recente.- Para alcançar o mesmo efeito que os valores `left`, `center`, `right` ou `justify`, aplique a propriedade CSS {{cssxref("text-align")}} no elemento.
     >
-    > - Para alcançar o mesmo efeito que os valor `char`, atribue a {{cssxref("text-align")}} o mesmo valor que você usaria para {{htmlattrxref("char", "th")}}. {{unimplemented_inline}} no CSS3.
+    > - Para alcançar o mesmo efeito que os valor `char`, atribue a {{cssxref("text-align")}} o mesmo valor que você usaria para [`char`](#char).
 
-- {{htmlattrdef("axis")}} {{obsolete_inline("html5")}}
+- `axis`
 
   - : Este atributo contém uma lista de palavras separadas por espaço. Cada palavra é o `id` de um grupo de células às quais este cabeçalho se aplica.
 
-    > **Note:** Não use esse atributo, pois ele está obsoleto no padrão mais recente: use o atributo {{htmlattrxref("scope", "th")}}.
+    > [!NOTE]
+    > Não use esse atributo, pois ele está obsoleto no padrão mais recente: use o atributo [`scope`](#scope).
 
-- {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
+- `bgcolor` {{Non-standard_inline}}
 
   - : Esse atributo define a cor de fundo de cada célula na coluna. Ele consiste de 6 digitos hexadecimais definidos pelo [sRGB](https://www.w3.org/Graphics/Color/sRGB) com o prefixo '#. Nesse atributo pode ser usado dezesseis cores predefinidas:
 
@@ -117,27 +184,29 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     |     | `purple` = "#800080"  |     | `teal` = "#008080"   |
     |     | `fuchsia` = "#FF00FF" |     | `aqua` = "#00FFFF"   |
 
-    > **Note:** Não use esse atributo como padrão pois não é implementado em algumas versões do Microsoft Internet Explorer: O elemento {{HTMLElement("th")}} deve ser estilizado usando [CSS](/pt-BR/docs/Web/CSS). Para criar um efeito semelhante, use a propriedade {{cssxref("background-color")}} do [CSS](/pt-BR/docs/Web/CSS).
+    > [!NOTE]
+    > Não use esse atributo como padrão pois não é implementado em algumas versões do Microsoft Internet Explorer: O elemento {{HTMLElement("th")}} deve ser estilizado usando [CSS](/pt-BR/docs/Web/CSS). Para criar um efeito semelhante, use a propriedade {{cssxref("background-color")}} do [CSS](/pt-BR/docs/Web/CSS).
 
-- {{htmlattrdef("char")}} {{obsolete_inline("html5")}}
+- `char`
 
-  - : O conteúdo da célula está alinhado a um caractere. Os valores típicos incluem um ponto (.) para alinhar números ou valores monetários. Se {{htmlattrxref("align", "th")}} não está definido no `char`, o atributo é ignorado.
+  - : O conteúdo da célula está alinhado a um caractere. Os valores típicos incluem um ponto (.) para alinhar números ou valores monetários. Se [`align`](#align) não está definido no `char`, o atributo é ignorado.
 
-    > **Note:** Não use esse atributo, pois ele está obsoleto no padrão mais recente. Para obter o mesmo efeito, você pode especificar o caractere como o primeiro valor da propriedade {{cssxref("text-align")}}, {{unimplemented_inline}} no CSS3.
+    > [!NOTE]
+    > Não use esse atributo, pois ele está obsoleto no padrão mais recente. Para obter o mesmo efeito, você pode especificar o caractere como o primeiro valor da propriedade {{cssxref("text-align")}}.
 
-- {{htmlattrdef("charoff")}} {{obsolete_inline("html5")}}
+- `charoff`
 
   - : Este atributo é usado para mudar os dados da coluna para a direita do caractere especificado pelo atributo **char**. Seu valor especifica o comprimento desse deslocamento.
 
     > **Note:**Não use esse atributo, pois ele está obsoleto no padrão mais recente.
 
-- {{htmlattrdef("height")}} {{Deprecated_inline("html 4")}}, {{obsolete_inline("html5")}}
+- `height` {{Deprecated_inline}}
 
   - : Esse atributo é usado para definir uma altura recomendada da célula.
 
     > **Note:**Não use esse atributo, pois ele está obsoleto no padrão mais recente: use a propriedade CSS {{cssxref("height")}}.
 
-- {{htmlattrdef("valign")}} {{obsolete_inline("html5")}}
+- `valign`
 
   - : Esse atributo especifica como o texto é alinhado verticalmente na célula.
 
@@ -148,13 +217,15 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     - `middle`: Centraliza o texto na célula.
     - `top`: Posiciona o texto próximo à parte superior da célula.
 
-    > **Note:** Não use esse atributo, pois ele está obsoleto no padrão mais recente: use a propriedade CSS {{cssxref("vertical-align")}}.
+    > [!NOTE]
+    > Não use esse atributo, pois ele está obsoleto no padrão mais recente: use a propriedade CSS {{cssxref("vertical-align")}}.
 
-- {{htmlattrdef("width")}} {{Deprecated_inline("html 4")}}, {{obsolete_inline("html5")}}
+- `width` {{Deprecated_inline}}
 
   - : Este atributo é usado para definir uma largura de célula recomendada. Espaço adicional pode ser adicionado com as propriedades {{domxref("HTMLTableElement.cellSpacing", "cellspacing")}} e {{domxref("HTMLTableElement.cellPadding", "cellpadding")}}, e a largura do elemento {{HTMLElement("col")}} pode criar largura extra. Mas, se a largura de uma coluna for muito estreita para mostrar uma célula específica corretamente, ela será ampliada quando exibida.
 
-    > **Note:** Não use esse atributo, pois ele está obsoleto no padrão mais recente: use a propriedade CSS {{cssxref("width")}}.
+    > [!NOTE]
+    > Não use esse atributo, pois ele está obsoleto no padrão mais recente: use a propriedade CSS {{cssxref("width")}}.
 
 ## Exemplos
 
@@ -162,14 +233,11 @@ Veja {{HTMLElement("table")}} para mais elementos `<th>`.
 
 ## Especificações
 
-| Especificações                                                                                   | Estados                          | Comentário |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG','tables.html#the-th-element','th element')}}     | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C','tabular-data.html#the-th-element','th element')}} | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.th")}}
+{{Compat}}
 
 ## Veja mais
 

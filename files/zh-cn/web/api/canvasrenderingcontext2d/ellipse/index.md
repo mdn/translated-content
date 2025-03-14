@@ -1,42 +1,82 @@
 ---
-title: CanvasRenderingContext2D.ellipse()
+title: CanvasRenderingContext2D：ellipse() 方法
 slug: Web/API/CanvasRenderingContext2D/ellipse
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef}} {{SeeCompatTable}}
+{{APIRef}}
 
-**`CanvasRenderingContext2D.ellipse()`** 是 Canvas 2D API 添加椭圆路径的方法。椭圆的圆心在（x,y）位置，半径分别是*radiusX* 和 _radiusY_，按照*anticlockwise*（默认顺时针）指定的方向，从 _startAngle_ 开始绘制，到 _endAngle_ 结束。
+Canvas 2D API 的 **`CanvasRenderingContext2D.ellipse()`** 方法用于向当前子路径添加椭圆弧。
 
 ## 语法
 
-```
-void ctx.ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, anticlockwise);
+```js-nolint
+ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle)
+ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, counterclockwise)
 ```
 
 ### 参数
 
 - `x`
-  - : 椭圆圆心的 x 轴坐标。
+  - : 椭圆圆心的 x 轴（水平）坐标。
 - `y`
-  - : 椭圆圆心的 y 轴坐标。
-- `radius`X
-  - : 椭圆长轴的半径。
-- `radius`Y
-  - : 椭圆短轴的半径。
+  - : 椭圆圆心的 y 轴（垂直）坐标。
+- `radiusX`
+  - : 椭圆长轴的半径。必须为非负数。
+- `radiusY`
+  - : 椭圆短轴的半径。必须为非负数。
 - `rotation`
-  - : 椭圆的旋转角度，以弧度表示 (**非角度度数**)。
+  - : 椭圆的旋转角度，以弧度表示。
 - `startAngle`
-  - : 将要绘制的起始点角度，从 x 轴测量，以弧度表示 (**非角度度数**)。
+  - : 椭圆弧的起始[偏心角](https://www.simply.science/index.php/math/geometry/conic-sections/ellipse/10022-eccentric-angle-and-parametric-equations-of-an-ellipse)，从正 x 轴沿顺时针测量，用弧度表示。
 - `endAngle`
-  - : 椭圆将要绘制的结束点角度，以弧度表示 (**非角度度数**)。
-- `anticlockwise` {{optional_inline}}
-  - : {{jsxref("Boolean")}} 选项，如果为 `true`，逆时针方向绘制椭圆（逆时针），反之顺时针方向绘制。
+  - : 椭圆弧的结束[偏心角](https://www.simply.science/index.php/math/geometry/conic-sections/ellipse/10022-eccentric-angle-and-parametric-equations-of-an-ellipse)，从正 x 轴沿顺时针测量，用弧度表示。
+- `counterclockwise` {{optional_inline}}
+  - : 一个可选的布尔值，如果为 `true`，则逆时针绘制椭圆弧。默认值为 `false`（顺时针）。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
-### 使用 `ellipse` 方法
+### 画完整的椭圆
 
-这是一段绘制椭圆的简单的代码片段。
+此示例以 π/4 弧度（45**°**）的角度绘制一个椭圆。为了绘制完整的椭圆，弧的起始角度为 0 弧度（0**°**），结束角度为 2π 弧度（360**°**）。
+
+#### HTML
+
+```html
+<canvas id="canvas" width="200" height="200"></canvas>
+```
+
+#### JavaScript
+
+```js
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+// 绘制椭圆
+ctx.beginPath();
+ctx.ellipse(100, 100, 50, 75, Math.PI / 4, 0, 2 * Math.PI);
+ctx.stroke();
+
+// 绘制椭圆的对称轴
+ctx.beginPath();
+ctx.setLineDash([5, 5]);
+ctx.moveTo(0, 200);
+ctx.lineTo(200, 0);
+ctx.stroke();
+```
+
+#### 结果
+
+{{ EmbedLiveSample('画完整的椭圆', 700, 250) }}
+
+### 不同的椭圆弧
+
+此示例创建了三条具有不同属性的椭圆路径。
 
 #### HTML
 
@@ -46,67 +86,31 @@ void ctx.ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, anticlo
 
 #### JavaScript
 
-```
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-ctx.setLineDash([]);
+```js
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+ctx.fillStyle = "red";
 ctx.beginPath();
-ctx.ellipse(100, 100, 50, 75, 45 * Math.PI/180, 0, 2 * Math.PI); //倾斜 45°角
-ctx.stroke();
-ctx.setLineDash([5]);
-ctx.moveTo(0,200);
-ctx.lineTo(200,0);
-ctx.stroke();
-```
+ctx.ellipse(60, 75, 50, 30, Math.PI * 0.25, 0, Math.PI * 1.5);
+ctx.fill();
 
-修改下面的代码并在线查看 canvas 的变化（如果椭圆没有绘制，请在兼容性列表中检查你的浏览器是否支持）：
-
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.setLineDash([]);
+ctx.fillStyle = "blue";
 ctx.beginPath();
-ctx.ellipse(100, 100, 50, 75, 45 * Math.PI/180, 0, 2 * Math.PI); //倾斜 45°角
-ctx.stroke();
-ctx.setLineDash([5]);
-ctx.moveTo(0,200);
-ctx.lineTo(200,0);
-ctx.stroke();</textarea>
+ctx.ellipse(150, 75, 50, 30, Math.PI * 0.25, 0, Math.PI);
+ctx.fill();
+
+ctx.fillStyle = "green";
+ctx.beginPath();
+ctx.ellipse(240, 75, 50, 30, Math.PI * 0.25, 0, Math.PI, true);
+ctx.fill();
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+#### 结果
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
+{{ EmbedLiveSample('不同的椭圆弧', 700, 180) }}
 
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 
@@ -116,4 +120,5 @@ window.addEventListener("load", drawCanvas);
 
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}
+- 定义该方法的接口：{{domxref("CanvasRenderingContext2D")}}
+- 使用 {{domxref("CanvasRenderingContext2D.arc()")}} 方法来绘制圆弧

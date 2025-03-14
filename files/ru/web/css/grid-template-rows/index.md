@@ -1,24 +1,63 @@
 ---
 title: grid-template-rows
 slug: Web/CSS/grid-template-rows
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.grid-template-rows
 ---
+
 {{CSSRef}}
 
 CSS-свойство **`grid-template-rows`** определяет имена линий и размеры полос {{glossary("grid rows", "грид-рядов")}}.
 
-{{EmbedInteractiveExample("pages/css/grid-template-rows.html")}}
+{{InteractiveExample("CSS Demo: grid-template-rows")}}
+
+```css interactive-example-choice
+grid-template-rows: auto;
+```
+
+```css interactive-example-choice
+grid-template-rows: 40px 4em 40px;
+```
+
+```css interactive-example-choice
+grid-template-rows: 1fr 2fr 1fr;
+```
+
+```css interactive-example-choice
+grid-template-rows: 3ch auto minmax(10px, 60px);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  width: 200px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## Синтаксис
 
 ```css
-/* Ключевое слово в качестве значения */
+/* Ключевые слова */
 grid-template-rows: none;
 
 /* Значения <track-list> */
@@ -33,13 +72,16 @@ grid-template-rows: masonry;
 
 /* Значения <auto-track-list> */
 grid-template-rows: 200px repeat(auto-fill, 100px) 300px;
-grid-template-rows: minmax(100px, max-content)
-                       repeat(auto-fill, 200px) 20%;
-grid-template-rows: [linename1] 100px [linename2]
-                       repeat(auto-fit, [linename3 linename4] 300px)
-                       100px;
-grid-template-rows: [linename1 linename2] 100px
-                       repeat(auto-fit, [linename1] 300px) [linename3];
+grid-template-rows:
+  minmax(100px, max-content)
+  repeat(auto-fill, 200px) 20%;
+grid-template-rows:
+  [linename1] 100px [linename2]
+  repeat(auto-fit, [linename3 linename4] 300px)
+  100px;
+grid-template-rows:
+  [linename1 linename2] 100px
+  repeat(auto-fit, [linename1] 300px) [linename3];
 
 /* Глобальные значения */
 grid-template-rows: inherit;
@@ -57,9 +99,9 @@ grid-template-rows: unset;
 ### Значения
 
 - `none`
-  - :  Ключевое слово, означающее отсутствие явного грида. Это значит, что все ряды будут генерироваться автоматически (неявно), а их размер определяться свойством {{cssxref("grid-auto-rows")}}.
+  - : Ключевое слово, означающее отсутствие явного грида. Это значит, что все ряды будут генерироваться автоматически (неявно), а их размер определяться свойством {{cssxref("grid-auto-rows")}}.
 - `[linename]`
-  - : [Идентификатор (`<custom-ident>`)](/en-US/docs/Web/CSS/custom-ident) задаёт имя линии. Идентификатор может быть любой допустимой строкой, кроме зарезервированных слов `span` и `auto`. У линий может быть несколько имён, указанных через пробел внутри квадратных скобок, например `[line-name-a line-name-b]`.
+  - : [Идентификатор (`<custom-ident>`)](/ru/docs/Web/CSS/custom-ident) задаёт имя линии. Идентификатор может быть любой допустимой строкой, кроме зарезервированных слов `span` и `auto`. У линий может быть несколько имён, указанных через пробел внутри квадратных скобок, например `[line-name-a line-name-b]`.
 - {{cssxref("&lt;length&gt;")}}
   - : Положительное значение типа length.
 - {{cssxref("&lt;percentage&gt;")}}
@@ -81,18 +123,20 @@ grid-template-rows: unset;
 
     При использовании `auto` в {{cssxref("minmax()", "minmax()")}}, диапазон минимальных и максимальных значений вычисляется по описанному выше принципу. В большинстве случаев это то же самое, что написать `minmax(min-content,max-content)`.
 
-    > **Примечание:** размеры полос, заданных `auto` (и только `auto`) могут быть увеличены свойствами {{cssxref("align-content")}} и {{cssxref("justify-content")}}. Поэтому по умолчанию полоса с размером `auto` будет занимать всё оставшееся пространство в грид-контейнере.
+    > [!NOTE]
+    > Размеры полос, заданных `auto` (и только `auto`) могут быть увеличены свойствами {{cssxref("align-content")}} и {{cssxref("justify-content")}}. Поэтому по умолчанию полоса с размером `auto` будет занимать всё оставшееся пространство в грид-контейнере.
 
 - {{cssxref("fit-content()", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}
   - : Представляет формулу `min(max-content, max(auto, argument))`, которая рассчитывается так же, как и `auto` (т.е. `minmax(auto, max-content)`), за исключением того, что размер полосы ограничивается _argument_, если он больше минимального значения, вычисленного `auto`.
 - {{cssxref("repeat()", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
   - : Позволяет в краткой форме создать список рядов с определённым количеством и размером.
-- [`masonry`](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout){{Experimental_Inline}}
+- [`masonry`](/ru/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout){{Experimental_Inline}}
   - : Значение masonry указывает на то, что эта ось должна быть проложена в соответствии с алгоритмом masonry.
-- [`subgrid`](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- [`subgrid`](/ru/docs/Web/CSS/CSS_grid_layout/Subgrid)
   - : Значение `subgrid` указывает на то, что грид примет составную часть родительского грида по данной оси. Поскольку размеры рядов/колонок не указываются явно, они берутся из определения родительского грида.
 
-> **Предупреждение:** Значение `masonry` появилось в спецификации Grid третьего уровня и на данный момент реализовано в качестве эксперимента и доступно по флагу в Firefox.
+> [!WARNING]
+> Значение `masonry` появилось в спецификации Grid третьего уровня и на данный момент реализовано в качестве эксперимента и доступно по флагу в Firefox.
 >
 > Значение `subgrid` определено в спецификации Grid второго уровня и на данный момент реализовано только в Firefox с версии 71.
 
@@ -143,13 +187,13 @@ grid-template-rows: unset;
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - Связанные CSS-свойства: {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
-- Руководство по грид-раскладке: _[Основы грид-раскладки - грид-полосы](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#grid_tracks)_
-- Обучающее видео: _[Defining a Grid](http://gridbyexample.com/video/series-define-a-grid/)_
-- [Сабгрид](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- Руководство по грид-раскладке: _[Основы грид-раскладки - грид-полосы](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#grid_tracks)_
+- Обучающее видео: _[Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)_
+- [Сабгрид](/ru/docs/Web/CSS/CSS_grid_layout/Subgrid)

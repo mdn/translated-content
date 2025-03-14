@@ -1,12 +1,6 @@
 ---
 title: text-decoration-skip
 slug: Web/CSS/text-decoration-skip
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-decoration-skip
 ---
 
 {{CSSRef}}
@@ -32,7 +26,8 @@ text-decoration-skip: initial;
 text-decoration-skip: unset;
 ```
 
-> **Note :** La valeur `ink` initialement définie pour cette propriété a été déplacée vers la propriété {{cssxref("text-decoration-skip-ink")}}.
+> [!NOTE]
+> La valeur `ink` initialement définie pour cette propriété a été déplacée vers la propriété {{cssxref("text-decoration-skip-ink")}}.
 
 ## Syntaxe
 

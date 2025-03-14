@@ -1,14 +1,101 @@
 ---
 title: scaleZ()
 slug: Web/CSS/transform-function/scaleZ
-original_slug: Web/CSS/transform-function/scaleZ()
+l10n:
+  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
 {{CSSRef}}
 
-**`scaleZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を Z 軸に沿って変倍する変形を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+**`scaleZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を Z 軸に沿って変倍する座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-{{EmbedInteractiveExample("pages/css/function-scaleZ.html")}}
+{{InteractiveExample("CSS Demo: scaleZ()")}}
+
+```css interactive-example-choice
+transform: scaleZ(1);
+```
+
+```css interactive-example-choice
+transform: scaleZ(1.4);
+```
+
+```css interactive-example-choice
+transform: scaleZ(0.5);
+```
+
+```css interactive-example-choice
+transform: scaleZ(-1.4);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+  perspective: 800px;
+  perspective-origin: 150% 150%;
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  perspective: 550px;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgba(210, 0, 0, 0.7);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+  background: rgba(0, 0, 210, 0.7);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+  background: rgba(210, 210, 0, 0.7);
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgba(210, 0, 210, 0.7);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+```
 
 これは要素のそれぞれの点の Z 座標を一定の係数で修正しますが、係数が 1 である場合はこの関数が恒等変換になるので例外です。変倍は等方性ではなく、要素の角度は保存されません。 `scaleZ(-1)` は[軸の線対称](https://en.wikipedia.org/wiki/Axial_symmetry)を定義し、Z 軸は ({{cssxref("transform-origin")}} プロパティの指定通りに) 原点を通過します。
 
@@ -30,20 +117,20 @@ scaleZ(s)
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">ℝ^2 上のデカルト座標</th>
-      <th scope="col">ℝℙ^2 上の同次座標</th>
-      <th scope="col">ℝ^3 上のデカルト座標</th>
-      <th scope="col">ℝℙ^3 上の同次座標</th>
+      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
+      <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
+      <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td colspan="2">
-        この変形は三次元空間に適用され、平面で表すことはできません。
+        この座標変換は 3D 空間に適用され、平面で表すことはできません。
       </td>
       <td>
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
@@ -55,13 +142,13 @@ scaleZ(s)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mi>s</mi></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td>
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
@@ -76,7 +163,7 @@ scaleZ(s)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
@@ -84,7 +171,7 @@ scaleZ(s)
   </tbody>
 </table>
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 
@@ -104,13 +191,13 @@ div {
 }
 
 .perspective {
-  /* 三次元空間を生成するために視点を含める */
+  /* 3D 空間を生成するために視点を含める */
   transform: perspective(400px) translateZ(-100px);
   background-color: limegreen;
 }
 
 .scaled-translated {
-  /* 三次元空間を生成するために視点を含める */
+  /* 3D 空間を生成するために視点を含める */
   transform: perspective(400px) scaleZ(2) translateZ(-100px);
   background-color: pink;
 }
@@ -130,8 +217,13 @@ div {
 
 ## 関連情報
 
-- [`scaleX()`](/ja/docs/Web/CSS/transform-function/scaleX())
-- [`scaleY()`](/ja/docs/Web/CSS/transform-function/scaleY())
+- [`scaleX()`](/ja/docs/Web/CSS/transform-function/scaleX)
+- [`scaleY()`](/ja/docs/Web/CSS/transform-function/scaleY)
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("transform-origin")}}
+- 独立した座標変換プロパティ:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}
+  - 注: `skew` プロパティはありません

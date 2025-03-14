@@ -6,7 +6,8 @@ original_slug: Web/API/Document/height
 
 {{APIRef("DOM")}} {{deprecated_header}}
 
-> **メモ:** {{Gecko("6.0")}} より `document.height` には対応しなくなりました。代わりに `document.body.clientHeight` を使用してください。 {{domxref("element.clientHeight")}} を参照してください。
+> [!NOTE]
+> Gecko 6.0 より `document.height` には対応しなくなりました。代わりに `document.body.clientHeight` を使用してください。 {{domxref("element.clientHeight")}} を参照してください。
 
 現在の {{domxref("document")}} オブジェクトの高さを返します。多くの場合、これは現在の文書の {{HTMLElement("body")}} 要素の高さと同じ値です。
 

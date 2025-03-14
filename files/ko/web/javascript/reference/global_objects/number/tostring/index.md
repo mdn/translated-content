@@ -1,24 +1,33 @@
 ---
 title: Number.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toString
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toString
 ---
 
 {{JSRef}}
 
-**`toString()` **메서드는 특정한 {{jsxref("Number")}} 객체를 나타내는 문자열을 반환합니다.
+**`toString()`** 메서드는 특정한 {{jsxref("Number")}} 객체를 나타내는 문자열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/number-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toString()")}}
+
+```js interactive-example
+function hexColour(c) {
+  if (c < 256) {
+    return Math.abs(c).toString(16);
+  }
+  return 0;
+}
+
+console.log(hexColour(233));
+// Expected output: "e9"
+
+console.log(hexColour("11"));
+// Expected output: "b"
+```
 
 ## 구문
 
 ```js
-    numObj.toString([radix])
+numObj.toString([radix]);
 ```
 
 ### 매개변수
@@ -54,16 +63,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toString
 ```js
 var count = 10;
 
-console.log(count.toString());    // displays '10'
-console.log((17).toString());     // displays '17'
-console.log((17.2).toString());   // displays '17.2'
+console.log(count.toString()); // displays '10'
+console.log((17).toString()); // displays '17'
+console.log((17.2).toString()); // displays '17.2'
 
 var x = 6;
 
-console.log(x.toString(2));       // displays '110'
-console.log((254).toString(16));  // displays 'fe'
+console.log(x.toString(2)); // displays '110'
+console.log((254).toString(16)); // displays 'fe'
 
-console.log((-10).toString(2));   // displays '-1010'
+console.log((-10).toString(2)); // displays '-1010'
 console.log((-0xff).toString(2)); // displays '-11111111'
 ```
 

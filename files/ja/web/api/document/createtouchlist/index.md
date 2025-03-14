@@ -1,24 +1,27 @@
 ---
-title: Document.createTouchList()
+title: "Document: createTouchList() メソッド"
+short-title: createTouchList()
 slug: Web/API/Document/createTouchList
+l10n:
+  sourceCommit: 542ef6cfd82288925e0a9238b47933f03e2dddca
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
-
-> **メモ:** {{Gecko("25.0")}} 以前では、このメソッドは {{DOMxRef("DocumentTouch")}} ミックスインで定義されていました。
+{{APIRef("DOM")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 **`Document.createTouchList()`** メソッドは、新しい {{DOMxRef("TouchList")}} オブジェクトを生成して返します。
 
 ## 構文
 
-```
-var list = DocumentTouch.createTouchList([touch1 [, touch2 [, ...]]]);
+```js-nolint
+createTouchList(touch1)
+createTouchList(touch1, touch2)
+createTouchList(touch1, touch2, /* …, */ touchN)
 ```
 
 ### 引数
 
-- `touches`
-  - : 0 個以上の {{DOMxRef("Touch")}} オブジェクトです。 **注:** Firefox は {{DOMxRef("Touch")}} オブジェクトの[配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)も受け付けます。
+- `touch1`, …, `touchN`
+  - : 0 個以上の {{DOMxRef("Touch")}} オブジェクトです。 **メモ:** Firefox は {{DOMxRef("Touch")}} オブジェクトの[配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)も受け付けます。
 
 ### 返値
 
@@ -32,27 +35,25 @@ var list = DocumentTouch.createTouchList([touch1 [, touch2 [, ...]]]);
 以下のコードスニペットでは、いくつかの {{DOMxRef("Touch")}} オブジェクトがタッチ点と共に `target` 要素に生成され、 {{DOMxRef("TouchList")}} オブジェクトを作成するために使用されます。
 
 ```js
-var target = document.getElementById("target");
+const target = document.getElementById("target");
 
 // Create some touch points
-var touch1 = document.createTouch(window, target, 1, 15, 20, 35, 40);
-var touch2 = document.createTouch(window, target, 2, 25, 30, 45, 50);
+const touch1 = document.createTouch(window, target, 1, 15, 20, 35, 40);
+const touch2 = document.createTouch(window, target, 2, 25, 30, 45, 50);
 
 // Create an empty TouchList objects
-var list0 = document.createTouchList();
+const list0 = document.createTouchList();
 
 // Create a TouchList with only one Touch object
-var list1 = document.createTouchList(touch1);
+const list1 = document.createTouchList(touch1);
 
 // Create a list with two Touch objects
-var list2 = document.createTouchList(touch1, touch2);
+const list2 = document.createTouchList(touch1, touch2);
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                       | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName("Touch Events", "#widl-Document-createTouchList-TouchList-Touch-touches", "Document.createTouchList()")}} | {{Spec2("Touch Events")}} | 初回定義 |
+この機能は、現在のどの仕様にも属しません。標準化の予定はなくなりました。
 
 ## ブラウザーの互換性
 

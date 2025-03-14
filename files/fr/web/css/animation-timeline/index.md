@@ -1,15 +1,13 @@
 ---
 title: animation-timeline
 slug: Web/CSS/animation-timeline
-translation_of: Web/CSS/animation-timeline
-browser-compat: css.properties.animation-timeline
 l10n:
   sourceCommit: 9f958fd33582b47bd3e365c64eb2cdd9cee8f527
 ---
 
 {{CSSRef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`animation-timeline`** indique le nom d'une ou plusieurs règles @ [`@scroll-timeline`](/fr/docs/Web/CSS/@scroll-timeline) décrivant les animations de défilement à appliquer à l'élément.
+La propriété [CSS](/fr/docs/Web/CSS) **`animation-timeline`** indique le nom d'une ou plusieurs règles @ [`@scroll-timeline`](/fr/docs/Web/CSS/scroll-timeline) décrivant les animations de défilement à appliquer à l'élément.
 
 Il est généralement plus pratique d'utiliser la propriété raccourcie [`animation`](/fr/docs/Web/CSS/animation) afin de définir l'ensemble des propriétés relatives à une animation en une fois.
 
@@ -24,7 +22,10 @@ animation-timeline: sliding-vertically;
 
 /* Plusieurs animations */
 animation-timeline: test1, animation4;
-animation-timeline: none, -moz-specific, sliding;
+animation-timeline:
+  none,
+  -moz-specific,
+  sliding;
 
 /* Valeurs globales */
 animation-timeline: inherit;
@@ -41,7 +42,7 @@ animation-timeline: unset;
 - `none`
   - : L'animation n'est associée à aucune chronologie.
 - `<timeline-name>`
-  - : Un [identifiant (`custom-ident`)](/fr/docs/Web/CSS/custom-ident) ou une chaîne de caractères identifiant la chronologie de défilement, déclarée via une règle [`@scroll-timeline`](/fr/docs/Web/CSS/@scroll-timeline). Si deux chronologies de défilement (ou plus) partagent le même nom, c'est la dernière déclarée au sein de la cascade qui sera utilisée. Si aucune chronologie de défilement correspondante n'est trouvée, l'animation ne sera pas associée à une chronologie.
+  - : Un [identifiant (`custom-ident`)](/fr/docs/Web/CSS/custom-ident) ou une chaîne de caractères identifiant la chronologie de défilement, déclarée via une règle [`@scroll-timeline`](/fr/docs/Web/CSS/scroll-timeline). Si deux chronologies de défilement (ou plus) partagent le même nom, c'est la dernière déclarée au sein de la cascade qui sera utilisée. Si aucune chronologie de défilement correspondante n'est trouvée, l'animation ne sera pas associée à une chronologie.
 
 ## Définition formelle
 
@@ -74,7 +75,8 @@ Dans cet exemple, on déclare une chronologie de défilement intitulée `squareT
 
 #square {
   background-color: deeppink;
-  width: 100px; height: 100px;
+  width: 100px;
+  height: 100px;
   margin-top: 100px;
   animation-name: rotateAnimation;
   animation-duration: 3s;
@@ -83,9 +85,9 @@ Dans cet exemple, on déclare une chronologie de défilement intitulée `squareT
 }
 
 @scroll-timeline squareTimeline {
-  source: selector('#container');
+  source: selector("#container");
   orientation: "vertical";
-  scroll-offsets:  0px, 300px;
+  scroll-offsets: 0px, 300px;
 }
 
 @keyframes rotateAnimation {
@@ -114,5 +116,5 @@ Faites défiler le cadre pour observer l'animation.
 
 ## Voir aussi
 
-- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
-- [La règle @ `@scroll-timeline`](/fr/docs/Web/CSS/@scroll-timeline)
+- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [La règle @ `@scroll-timeline`](/fr/docs/Web/CSS/scroll-timeline)

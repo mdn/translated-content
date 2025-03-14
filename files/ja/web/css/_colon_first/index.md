@@ -1,5 +1,5 @@
 ---
-title: ':first'
+title: :first
 slug: Web/CSS/:first
 ---
 
@@ -15,7 +15,8 @@ slug: Web/CSS/:first
 }
 ```
 
-> **メモ:** この擬似クラスを使用してすべての CSS プロパティを変更できるわけではありません。変更できるのは文書のマージン、 {{cssxref("orphans")}}、{{cssxref("widows")}}、ページ区切りのみです。さらに、マージンを定義するときには[絶対的な長さ](/ja/docs/Web/CSS/length#absolute_length_units)の単位のみしか使用できません。他のすべてのプロパティは無視されます。
+> [!NOTE]
+> この擬似クラスを使用してすべての CSS プロパティを変更できるわけではありません。変更できるのは文書のマージン、 {{cssxref("orphans")}}、{{cssxref("widows")}}、ページ区切りのみです。さらに、マージンを定義するときには[絶対的な長さ](/ja/docs/Web/CSS/length#absolute_length_units)の単位のみしか使用できません。他のすべてのプロパティは無視されます。
 
 ## 構文
 
@@ -49,7 +50,7 @@ p {
 ### JavaScript
 
 ```js
-document.querySelector("button").addEventListener('click', () => {
+document.querySelector("button").addEventListener("click", () => {
   window.print();
 });
 ```

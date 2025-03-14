@@ -9,7 +9,8 @@ slug: Web/API/AuthenticatorAssertionResponse
 
 このインターフェイスは {{domxref("AuthenticatorResponse")}} を継承しています。
 
-> **メモ:** このインターフェイスは最上位のコンテキストに限定されています。 {{HTMLElement("iframe")}} 要素の中で使用しても、何も効果がありません。
+> [!NOTE]
+> このインターフェイスは最上位のコンテキストに限定されています。 {{HTMLElement("iframe")}} 要素の中で使用しても、何も効果がありません。
 
 ## プロパティ
 
@@ -30,19 +31,23 @@ slug: Web/API/AuthenticatorAssertionResponse
 
 ```js
 var options = {
-  challenge: new Uint8Array([/* bytes sent from the server */])
+  challenge: new Uint8Array([
+    /* bytes sent from the server */
+  ]),
 };
 
-navigator.credentials.get({ "publicKey": options })
-    .then(function (credentialInfoAssertion) {
+navigator.credentials
+  .get({ publicKey: options })
+  .then(function (credentialInfoAssertion) {
     var assertionResponse = credentialInfoAssertion.response;
     // Do something specific with the response
 
     // send assertion response back to the server
     // to proceed with the control of the credential
-}).catch(function (err) {
-     console.error(err);
-});
+  })
+  .catch(function (err) {
+    console.error(err);
+  });
 ```
 
 ## 仕様書
@@ -51,7 +56,7 @@ navigator.credentials.get({ "publicKey": options })
 
 ## ブラウザーの互換性
 
-{{Compat("api.AuthenticatorAssertionResponse")}}
+{{Compat}}
 
 ## 関連情報
 

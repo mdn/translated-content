@@ -1,26 +1,23 @@
 ---
 title: meta
 slug: Web/HTML/Element/meta
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/meta
-original_slug: Web/HTML/Elemento/meta
 ---
+
+{{HTMLSidebar}}
 
 ### Definición
 
 - **meta** de "metainformation" - metainformación. Sirve para aportar información sobre el documento..
+
   - : **Sus etiquetas son**: `<meta>` (solo tiene una).
-  
-    **Está definido como**: Elemento [de cabecera](/es/HTML/Elemento/Tipos_de_elementos#de_cabecera).
+
+    **Está definido como**: Elemento [de cabecera](/es/docs/HTML/Elemento/Tipos_de_elementos#de_cabecera).
 
     **Crea una caja**: No.
 
     **Puede contener**: Nada.
 
-    **Puede ser contenido por**: Elementos [head](/es/HTML/Elemento/head)
+    **Puede ser contenido por**: Elementos [head](/es/docs/Web/HTML/Element/head)
 
 #### Atributos
 
@@ -193,7 +190,8 @@ Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html
 
 ---
 
-> **Nota:** Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!NOTE]
+> Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
 >
 > ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.
 

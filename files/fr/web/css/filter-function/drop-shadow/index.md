@@ -1,9 +1,6 @@
 ---
 title: drop-shadow()
 slug: Web/CSS/filter-function/drop-shadow
-translation_of: Web/CSS/filter-function/drop-shadow()
-original_slug: Web/CSS/filter-function/drop-shadow()
-browser-compat: css.types.filter-function.drop-shadow
 ---
 
 {{CSSRef}}
@@ -14,7 +11,8 @@ La fonction CSS **`drop-shadow()`** permet d'appliquer une ombre portée sur une
 
 En pratique, une ombre portée correspond à une version floutée et décalée du masque alpha de l'image, dessiné avec une couleur donnée et fusionné sous l'image.
 
-> **Note :** Cette fonction s'apparente à la propriété [`box-shadow`](/fr/docs/Web/CSS/box-shadow). La propriété `box-shadow` permet de créer une ombre rectangulaire sous **la boîte entière** d'un élément. En revanche, la fonction `drop-shadow()` permet de créer un ombre qui épouse la forme (le canal alpha) de **l'image même**.
+> [!NOTE]
+> Cette fonction s'apparente à la propriété [`box-shadow`](/fr/docs/Web/CSS/box-shadow). La propriété `box-shadow` permet de créer une ombre rectangulaire sous **la boîte entière** d'un élément. En revanche, la fonction `drop-shadow()` permet de créer un ombre qui épouse la forme (le canal alpha) de **l'image même**.
 
 ## Syntaxe
 
@@ -60,13 +58,13 @@ drop-shadow(.5rem .5rem 1rem #e23)
 ## Voir aussi
 
 - [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
-  - [`blur()`](/fr/docs/Web/CSS/filter-function/blur())
-  - [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness())
-  - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast())
-  - [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale())
-  - [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate())
-  - [`invert()`](/fr/docs/Web/CSS/filter-function/invert())
-  - [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity())
-  - [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate())
-  - [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia())
+  - [`blur()`](</fr/docs/Web/CSS/filter-function/blur()>)
+  - [`brightness()`](</fr/docs/Web/CSS/filter-function/brightness()>)
+  - [`contrast()`](</fr/docs/Web/CSS/filter-function/contrast()>)
+  - [`grayscale()`](</fr/docs/Web/CSS/filter-function/grayscale()>)
+  - [`hue-rotate()`](</fr/docs/Web/CSS/filter-function/hue-rotate()>)
+  - [`invert()`](</fr/docs/Web/CSS/filter-function/invert()>)
+  - [`opacity()`](</fr/docs/Web/CSS/filter-function/opacity()>)
+  - [`saturate()`](</fr/docs/Web/CSS/filter-function/saturate()>)
+  - [`sepia()`](</fr/docs/Web/CSS/filter-function/sepia()>)
 - La propriété CSS [`box-shadow`](/fr/docs/Web/CSS/box-shadow)

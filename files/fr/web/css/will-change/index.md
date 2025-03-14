@@ -1,11 +1,6 @@
 ---
 title: will-change
 slug: Web/CSS/will-change
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/will-change
 ---
 
 {{CSSRef}}
@@ -19,9 +14,9 @@ La propriété **`will-change`** fournit une indication au navigateur sur la pro
 will-change: auto;
 will-change: scroll-position;
 will-change: contents;
-will-change: transform;        /* Exemple de <custom-ident> */
-will-change: opacity;          /* Exemple de <custom-ident> */
-will-change: left, top;        /* Exemple de deux <animateable-feature> */
+will-change: transform; /* Exemple de <custom-ident> */
+will-change: opacity; /* Exemple de <custom-ident> */
+will-change: left, top; /* Exemple de deux <animateable-feature> */
 
 /* Valeurs globales */
 will-change: inherit;
@@ -35,7 +30,7 @@ Il est parfois difficile de bien utiliser cette propriété :
 - _À utiliser avec parcimonie._ Normalement, le navigateur essaie d'appliquer les optimisations dès que possible afin de revenir au plus vite dans un état normal. En revanche, en utilisant `will-change` dans la feuille de style, on indique que les éléments ciblés vont bientôt changer et le navigateur conservera les optimisations en cours beaucoup plus longtemps si la propriété est maintenue. Il est donc conseillé d'activer et de désactiver `will-change` de façon pertinente grâce à du script avant et après le changement concerné.
 - _Ne pas « sur-optimiser » avec `will-change`_. Si votre page fonctionne correctement, n'ajoutez pas la propriété `will-change` sur certains éléments uniquement pour gagner un peu de vitesse. `will-change` est conçu pour être utilisé en dernier ressort afin de régler les problèmes de performances existants. En utilisant `will-change` trop souvent, cela consommera plus de mémoire, complexifiera le rendu de la page pour le navigateur (qui se préparera au changement). En bref, cela réduira les performances de la page.
 - _Laisser le temps à `will-change` pour qu'il fonctionne._ Cette propriété est conçue pour permettre aux auteurs d'indiquer à l'agent-utilisateur les propriétés qui vont probablement changer afin que le navigateur puisse optimiser en avance de phase. Il est donc important de laisser le temps au navigateur d'appliquer ces opérations pour que l'effet obtenu soit bénéfique. Pour cela, mieux vaut donc prévoir légèrement avant le changement que celui-ci aura lieu et alors modifier `will-change` en prévision.
-- _Sachez que `will-change`_ _peut modifier l'apparence des éléments_ lorsqu'il est utilisé avec des propriétés qui créent [des contextes d'empilement](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) (par exemple `will-change: opacity`) car le contexte d'empilement est créé au préalable.
+- _Sachez que `will-change`_ _peut modifier l'apparence des éléments_ lorsqu'il est utilisé avec des propriétés qui créent [des contextes d'empilement](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) (par exemple `will-change: opacity`) car le contexte d'empilement est créé au préalable.
 
 ## Syntaxe
 
@@ -72,21 +67,21 @@ Un valeur de type `<animateable-feature>` peut être :
 Dans l'exemple précédent, on applique la propriété `will-change` à même la feuille de style. Dans ce cas, le navigateur conservera l'optimisation en mémoire beaucoup plus longtemps que nécessaire. Nous avons vu précédemment que cela devait être évité et voici donc un deuxième exemple qui illustre comment appliquer la propriété `will-change` grâce à JavaScript (et qui correspond donc à la méthode qui devrait être utilisée la plupart du temps) :
 
 ```js
-var el = document.getElementById('element');
+var el = document.getElementById("element");
 
 // On applique will-change quand la souris/curseur
 // pointeur/stylet passe au-dessus de l'élément
-el.addEventListener('mouseenter', hintBrowser);
-el.addEventListener('animationEnd', removeHint);
+el.addEventListener("mouseenter", hintBrowser);
+el.addEventListener("animationEnd", removeHint);
 
 function hintBrowser() {
   // On liste les propriétés sujettes au changement
   // lors de l'animation
-  this.style.willChange = 'transform, opacity';
+  this.style.willChange = "transform, opacity";
 }
 
 function removeHint() {
-  this.style.willChange = 'auto';
+  this.style.willChange = "auto";
 }
 ```
 

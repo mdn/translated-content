@@ -1,6 +1,6 @@
 ---
 title: 画像からのシェイプの作成
-slug: Web/CSS/CSS_Shapes/Shapes_From_Images
+slug: Web/CSS/CSS_shapes/Shapes_from_images
 ---
 
 {{CSSRef}}
@@ -45,7 +45,7 @@ slug: Web/CSS/CSS_Shapes/Shapes_From_Images
 
 ## グラデーションを用いたシェイプの作成
 
-[CSS グラデーション](/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients)は画像として扱われるので、透過や半透過の領域をグラデーションの一部として持つことで、グラデーションを使ってシェイプを作ることができます。
+[CSS グラデーション](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)は画像として扱われるので、透過や半透過の領域をグラデーションの一部として持つことで、グラデーションを使ってシェイプを作ることができます。
 
 次の例では、直線グラデーションの背景画像によって与えられた生成された浮動状態のコンテンツを使用しています。 {{cssxref("shape-outside")}} の値と同じ値を使用しています。直線グラデーションは紫色から透明に変化しますので、 {{cssxref("shape-image-threshold")}} の値を変更すると、どれくらいのピクセルがシェイプを作成するのに必要かを決めることができます。以下の例で値を操作することで、その値に応じてシェイプを横切る対角線がどれだけ移動するかを確認することができます。
 

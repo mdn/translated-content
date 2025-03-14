@@ -1,22 +1,24 @@
 ---
 title: CSSStyleDeclaration
 slug: Web/API/CSSStyleDeclaration
+l10n:
+  sourceCommit: 3aeb6559c17355efa107bcf2d9d2bdb8193a9300
 ---
 
 {{APIRef("CSSOM")}}
 
-**`CSSStyleDeclaration`** インターフェースは CSS 宣言ブロックのオブジェクトを表し、スタイル情報や様々なスタイルに関するメソッドやプロパティを提供します。
+**`CSSStyleDeclaration`** インターフェイスは CSS 宣言ブロックのオブジェクトを表し、スタイル情報や様々なスタイルに関するメソッドやプロパティを提供します。
 
 `CSSStyleDeclaration` オブジェクトは、下記の 3 つの API によって使用されます。
 
-- 単一の要素のインラインスタイルを扱う {{DOMxRef("HTMLElement.style")}} から (例: `<div style="...">`)。
-- {{DOMxRef("CSSStyleSheet")}} API から。例えば `document.styleSheets[0].cssRules[0].style` は、その文書の最初のスタイルシートの最初の CSS 規則を `CSSStyleDeclaration` を返します。
+- 単一の要素のインラインスタイルを扱う {{DOMxRef("HTMLElement.style")}} から（例: `<div style="…">`）。
+- {{DOMxRef("CSSStyleSheet")}} API から。例えば `document.styleSheets[0].cssRules[0].style` は、その文書の最初のスタイルシートの最初の CSS ルールを `CSSStyleDeclaration` を返します。
 - {{DOMxRef("Window.getComputedStyle()")}} で、 `CSSStyleDeclaration` オブジェクトを**読み取り専用**インターフェイスとして返します。
 
 ## 属性
 
 - {{DOMxRef("CSSStyleDeclaration.cssText")}}
-  - : 宣言ブロックのテキスト表現です。この属性を設定すると、スタイルが変化します。
+  - : 宣言ブロックのテキスト表現です。{{DOMxRef("HTMLElement.style")}} で公開されている場合のみ。この属性を設定すると、インラインスタイルが変更されます。計算された宣言ブロックのテキスト表現が必要な場合は、`JSON.stringify()` で取得することができます。
 - {{DOMxRef("CSSStyleDeclaration.length")}}{{ReadOnlyInline}}
   - : プロパティの数を表します。後述の {{DOMxRef("CSSStyleDeclaration.item()", 'item()')}} メソッドを参照のこと。
 - {{DOMxRef("CSSStyleDeclaration.parentRule")}}{{ReadOnlyInline}}
@@ -25,7 +27,7 @@ slug: Web/API/CSSStyleDeclaration
 ### CSS プロパティ
 
 - {{DOMxRef("CSSStyleDeclaration.cssFloat", "CSSStyleDeclaration.cssFloat")}}
-  - : CSS の {{CSSxRef("float")}} プロパティのエイリアスです。
+  - : CSS の {{CSSxRef("float")}} プロパティの特殊な別名です。
 - {{DOMxRef("CSSStyleDeclaration.named_properties", '<code>CSSStyleDeclaration</code> の名前付きプロパティ', "", 1)}}
   - : 対応するすべての CSS プロパティを、ダッシュおよびキャメルケースにした属性です。
 
@@ -48,11 +50,11 @@ slug: Web/API/CSSStyleDeclaration
 ## 例
 
 ```js
-var styleObj = document.styleSheets[0].cssRules[0].style;
+const styleObj = document.styleSheets[0].cssRules[0].style;
 console.log(styleObj.cssText);
 
-for (var i = styleObj.length; i--;) {
-  var nameString = styleObj[i];
+for (let i = styleObj.length; i--; ) {
+  const nameString = styleObj[i];
   styleObj.removeProperty(nameString);
 }
 
@@ -66,7 +68,3 @@ console.log(styleObj.cssText);
 ## ブラウザーの互換性
 
 {{Compat}}
-
-## 関連情報
-
-- [CSS Properties Reference](/ja/docs/Web/CSS/CSS_Properties_Reference)

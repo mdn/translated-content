@@ -1,32 +1,52 @@
 ---
 title: <option>
-slug: Web/HTML/Element/Option
-tags:
-  - Element
-  - Formulaires
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/option
+slug: Web/HTML/Element/option
 ---
 
 {{HTMLSidebar}}
 
 L'élément HTML **`<option>`**, utilisé dans un formulaire, permet de représenter un contrôle au sein d'un élément {{HTMLElement("select")}}, {{HTMLElement("optgroup")}} ou {{HTMLElement("datalist")}}. Cet élément peut donc représenter des éléments d'un menu dans un document HTML.
 
-{{EmbedInteractiveExample("pages/tabbed/option.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;option&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="pet-select">Choose a pet:</label>
+
+<select id="pet-select">
+  <option value="">--Please choose an option--</option>
+  <option value="dog">Dog</option>
+  <option value="cat">Cat</option>
+  <option value="hamster">Hamster</option>
+  <option value="parrot">Parrot</option>
+  <option value="spider">Spider</option>
+  <option value="goldfish">Goldfish</option>
+</select>
+```
+
+```css interactive-example
+label {
+  font-family: sans-serif;
+  font-size: 1rem;
+  padding-right: 10px;
+}
+
+select {
+  font-size: 0.9rem;
+  padding: 2px 5px;
+}
+```
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : Si cet attribut booléen est défini, l'option ne peut pas être sélectionnée. Généralement, les navigateurs affichent l'option grisée et celle-ci ne reçoit pas les évènements de navigation (liés aux clics ou au focus par exemple). Si cet attribut n'est pas défini, l'élément peut tout de même être désactivé si un de ses ancêtres est un élément {{HTMLElement("optgroup")}} désactivé.
-- {{htmlattrdef("label")}}
+- `label`
   - : La valeur de cet attribut correspond au texte affiché pour expliquer l'option. Si cet attribut n'est pas défini, sa valeur correspondra à celle du texte contenu dans l'élément.
-- {{htmlattrdef("selected")}}
-  - : S'il est présent, cet attribut booléen indique que l'option est sélectionnée à l'état initial. Si l'élément `<option>` est un élément descendant d'un élément {{HTMLElement("select")}} dont l'attribut {{htmlattrxref("multiple", "select")}} n'est pas activé, seul une `<option>` de cet élément {{HTMLElement("select")}} peut être sélectionnée de cette façon.
-- {{htmlattrdef("value")}}
+- `selected`
+  - : S'il est présent, cet attribut booléen indique que l'option est sélectionnée à l'état initial. Si l'élément `<option>` est un élément descendant d'un élément {{HTMLElement("select")}} dont l'attribut [`multiple`](/fr/docs/Web/HTML/Element/select#multiple) n'est pas activé, seul une `<option>` de cet élément {{HTMLElement("select")}} peut être sélectionnée de cette façon.
+- `value`
   - : Le contenu de cet attribut représente la valeur qu'on souhaite envoyer au formulaire lorsque l'option est sélectionnée. Si cet attribut n'est pas défini, la valeur sera le contenu texuel de l'élément `<option>`.
 
 ## Exemples
@@ -103,4 +123,4 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ## Voir aussi
 
-- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.
+- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.

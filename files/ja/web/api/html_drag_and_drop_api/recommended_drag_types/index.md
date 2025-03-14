@@ -1,7 +1,6 @@
 ---
 title: 推奨されるドラッグのデータ型
 slug: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
-original_slug: DragDrop/Recommended_Drag_Types
 l10n:
   sourceCommit: a122e87245c624ba56197641b4d7b21b643a6021
 ---
@@ -10,7 +9,8 @@ l10n:
 
 HTML ドラッグ & ドロップ API は、プレーンテキスト、URL、HTML コード、ファイルなど、さまざまな形式のデータのドラッグをサポートしています。この記事では、一般的なドラッグ可能なデータ形式のベストプラクティスについて説明しています。
 
-> **メモ:** この記事の中で、 `mozSetDataAt()` のような `moz` の接頭辞を持つすべてのメソッドとプロパティは、Gecko ベースのブラウザーでのみ動作します。
+> [!NOTE]
+> この記事の中で、 `mozSetDataAt()` のような `moz` の接頭辞を持つすべてのメソッドとプロパティは、Gecko ベースのブラウザーでのみ動作します。
 
 ## テキストのドラッグ
 
@@ -42,12 +42,13 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 複数のリンクをドラッグするには、それぞれのリンクを `text/uri-list` データ内で CRLF 改行で区切ってください。ナンバー記号 (`#`) で始まる行はコメントで、有効な URL として扱われません。コメントは、リンクの目的を示したり、リンクに関連づけられたタイトルを保持したりする目的で利用できます
 
-> **警告:** 複数のリンクのための `text/plain` 型のフォールバックは、すべての URL を含むべきですが、コメントを含めるべきではありません。
+> [!WARNING]
+> 複数のリンクのための `text/plain` 型のフォールバックは、すべての URL を含むべきですが、コメントを含めるべきではありません。
 
 例えば、以下のサンプル `text/uri-list` データには、2 つのリンクと 1 つのコメントが含まれています。
 
 ```
-http://www.mozilla.org
+https://www.mozilla.org
 # 2 つ目のリンク
 http://www.example.com
 ```
@@ -63,7 +64,7 @@ const url = event.dataTransfer.getData("URL");
 Mozilla 特有の型として、`text/x-moz-url` 型のデータを見かけることがあるかもしれません。この型が表示される場合は、`text/uri-list` 型の前に表示されるはずです。この型のデータは、リンクの URL に続いてリンクのタイトルが保持されており。例えば、以下のようになります。
 
 ```
-http://www.mozilla.org
+https://www.mozilla.org
 Mozilla
 http://www.example.com
 Example
@@ -95,7 +96,7 @@ event.dataTransfer.mozSetDataAt("application/x-moz-file", file, 0);
 
 可能であれば、`text/uri-list` 型と `text/plain` 型の両方を使ってファイルの URL を含めてください。これらの型は最後に登録されるべきで、それによって、 `application/x-moz-file` 型は優先度の高い、より適切な型となります。
 
-複数のファイルは、データ転送中に複数のアイテムとしてドロップ中に受信されます。これについての詳細は、[複数の項目のドラッグ & ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)を参照してください。
+複数のファイルは、データ転送中に複数のアイテムとしてドロップ中に受信されます。これについての詳細は、[複数の項目のドラッグ & ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)を参照してください。
 
 以下の例は、ドロップしたファイルを受信するための領域を作成する方法を示しています。
 
@@ -128,7 +129,7 @@ event.dataTransfer.mozSetDataAt("application/x-moz-file", file, 0);
 その結果、[contains](/ja/docs/Web/API/Node/contains) メソッドはもう機能しません。代わりに [includes](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) メソッドを使用し、以下のようなコードで特定の形式のデータが提供されているかどうかを確認する必要があります。
 
 ```js
-if ([...event.dataTransfer.types].includes('text/html')) {
+if ([...event.dataTransfer.types].includes("text/html")) {
   // 実行するコード
 }
 ```
@@ -137,9 +138,9 @@ if ([...event.dataTransfer.types].includes('text/html')) {
 
 ## 画像のドラッグ
 
-画像の直接のドラッグは一般的ではありません。そのため、Mozilla は Mac と Linux での画像の直接のドラッグをサポートしていません。その代わり、画像は通常その URL としてドラッグされます。そのためには、他の URL と同様に `text/uri-list` 型を使用します。データは、画像の URL、または画像が Web 上やディスク上に無い場合は [データ URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) である必要があります。
+画像の直接のドラッグは一般的ではありません。そのため、Mozilla は Mac と Linux での画像の直接のドラッグをサポートしていません。その代わり、画像は通常その URL としてドラッグされます。そのためには、他の URL と同様に `text/uri-list` 型を使用します。データは、画像の URL、または画像が Web 上やディスク上に無い場合は [データ URL](/ja/docs/Web/URI/Schemes/data) である必要があります。
 
-リンクと同様に、`text/plain` 型のデータには URL も含まれている必要があります。しかし、[データ URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) は通常のテキストの内容には有用ではないので、このような状況では `text/plain` 型のデータを除外した方がよいでしょう。
+リンクと同様に、`text/plain` 型のデータには URL も含まれている必要があります。しかし、[データ URL](/ja/docs/Web/URI/Schemes/data) は通常のテキストの内容には有用ではないので、このような状況では `text/plain` 型のデータを除外した方がよいでしょう。
 
 Chrome などの特権的なコードでは、画像の種類に応じて、`image/jpeg`、`image/png`、`image/gif` のいずれかの形式を使用することもできます。データは `nsIInputStream` インターフェイスを実装したオブジェクトでなければなりません。このストリームが読み込まれる時には、そのファイル形式での画像のデータビットを提供しなければなりません。
 
@@ -176,57 +177,84 @@ dt.setData("text/plain", imageurl);
 
 currentEvent.dataTransfer.setData("text/x-moz-url", URL);
 currentEvent.dataTransfer.setData("application/x-moz-file-promise-url", URL);
-currentEvent.dataTransfer.setData("application/x-moz-file-promise-dest-filename", leafName);
-currentEvent.dataTransfer.mozSetDataAt('application/x-moz-file-promise',
-                  new dataProvider(success,error),
-                  0, Components.interfaces.nsISupports);
+currentEvent.dataTransfer.setData(
+  "application/x-moz-file-promise-dest-filename",
+  leafName,
+);
+currentEvent.dataTransfer.mozSetDataAt(
+  "application/x-moz-file-promise",
+  new dataProvider(success, error),
+  0,
+  Components.interfaces.nsISupports,
+);
 
-function dataProvider(){}
+function dataProvider() {}
 
 dataProvider.prototype = {
   QueryInterface(iid) {
-    if (iid.equals(Components.interfaces.nsIFlavorDataProvider)
-                  || iid.equals(Components.interfaces.nsISupports))
+    if (
+      iid.equals(Components.interfaces.nsIFlavorDataProvider) ||
+      iid.equals(Components.interfaces.nsISupports)
+    )
       return this;
     throw Components.results.NS_NOINTERFACE;
   },
   getFlavorData(aTransferable, aFlavor, aData, aDataLen) {
-    if (aFlavor === 'application/x-moz-file-promise') {
+    if (aFlavor === "application/x-moz-file-promise") {
+      const urlPrimitive = {};
+      const dataSize = {};
 
-       const urlPrimitive = {};
-       const dataSize = {};
+      aTransferable.getTransferData(
+        "application/x-moz-file-promise-url",
+        urlPrimitive,
+        dataSize,
+      );
+      const url = urlPrimitive.value.QueryInterface(
+        Components.interfaces.nsISupportsString,
+      ).data;
+      console.log(`URL file original is = ${url}`);
 
-       aTransferable.getTransferData('application/x-moz-file-promise-url', urlPrimitive, dataSize);
-       const url = urlPrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
-       console.log(`URL file original is = ${url}`);
+      const namePrimitive = {};
+      aTransferable.getTransferData(
+        "application/x-moz-file-promise-dest-filename",
+        namePrimitive,
+        dataSize,
+      );
+      const name = namePrimitive.value.QueryInterface(
+        Components.interfaces.nsISupportsString,
+      ).data;
 
-       const namePrimitive = {};
-       aTransferable.getTransferData('application/x-moz-file-promise-dest-filename', namePrimitive, dataSize);
-       const name = namePrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
+      console.log(`target filename is = ${name}`);
 
-       console.log(`target filename is = ${name}`);
+      const dirPrimitive = {};
+      aTransferable.getTransferData(
+        "application/x-moz-file-promise-dir",
+        dirPrimitive,
+        dataSize,
+      );
+      const dir = dirPrimitive.value.QueryInterface(
+        Components.interfaces.nsILocalFile,
+      );
 
-       const dirPrimitive = {};
-       aTransferable.getTransferData('application/x-moz-file-promise-dir', dirPrimitive, dataSize);
-       const dir = dirPrimitive.value.QueryInterface(Components.interfaces.nsILocalFile);
+      console.log(`target folder is = ${dir.path}`);
 
-       console.log(`target folder is = ${dir.path}`);
+      const file = Cc["@mozilla.org/file/local;1"].createInstance(
+        Components.interfaces.nsILocalFile,
+      );
+      file.initWithPath(dir.path);
+      file.appendRelativePath(name);
 
-       const file = Cc['@mozilla.org/file/local;1'].createInstance(Components.interfaces.nsILocalFile);
-       file.initWithPath(dir.path);
-       file.appendRelativePath(name);
+      console.log(`output final path is = ${file.path}`);
 
-       console.log(`output final path is = ${file.path}`);
-
-       // now you can write or copy the file yourself…
+      // now you can write or copy the file yourself…
     }
-  }
-}
+  },
+};
 ```
 
 ## 関連情報
 
 - [HTML ドラッグ & ドロップ API (概要)](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [複数のアイテムのドラッグ & ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [複数のアイテムのドラッグ & ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

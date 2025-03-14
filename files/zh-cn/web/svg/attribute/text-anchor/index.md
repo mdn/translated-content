@@ -1,14 +1,13 @@
 ---
 title: text-anchor
 slug: Web/SVG/Attribute/text-anchor
-original_slug: Web/SVG/Attribute/文本锚点
 ---
 
-« [SVG Attribute reference home](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-文本锚点属性被用来描述该文本与所给点的对齐方式 (开头、中间、末尾对齐) 。
+文本锚点属性被用来描述该文本与所给点的对齐方式（开头、中间、末尾对齐）。
 
-文本锚点属性被运用到每个 {{ SVGElement("text") }} 元素的独立文本块上。每个文本块有一个初始的当前文本位置，一个来源于 {{ SVGElement("text") }} 元素的{{ SVGAttr("x") }}和{{ SVGAttr("y") }}属性在当前上下文的用户坐标系中所对应的点，任何 一个{{ SVGElement("tspan") }}、{{SVGElement("tref") }}、{{ SVGElement("altGlyph") }} 元素的 {{ SVGAttr("x") }} 或者 {{ SVGAttr("y") }} 属性值都明确指向了文本块里第一个被呈现的字符，或者是决定了{{ SVGElement("textPath") }}元素的当前文本位置的初始值。
+文本锚点属性被运用到每个 {{ SVGElement("text") }} 元素的独立文本块上。每个文本块有一个初始的当前文本位置，一个来源于 {{ SVGElement("text") }} 元素的 {{ SVGAttr("x") }} 和 {{ SVGAttr("y") }} 属性在当前上下文的用户坐标系中所对应的点，任何一个 {{ SVGElement("tspan") }}、{{SVGElement("tref") }} 元素的 {{ SVGAttr("x") }} 或者 {{ SVGAttr("y") }} 属性值都明确指向了文本块里第一个被呈现的字符，或者是决定了 {{ SVGElement("textPath") }} 元素的当前文本位置的初始值。
 
 作为一个描述性的属性，它也可以直接用作 CSS 样式的性质（style 属性的值）。
 
@@ -30,37 +29,38 @@ original_slug: Web/SVG/Attribute/文本锚点
 
 ```html
 <?xml version="1.0"?>
-<svg width="120" height="120" viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1">
+  <!-- Materialisation of anchors -->
+  <path
+    d="M60,15 L60,110 M30,40 L90,40 M30,75 L90,75 M30,110 L90,110"
+    stroke="grey" />
 
-    <!-- Materialisation of anchors -->
-    <path d="M60,15 L60,110 M30,40 L90,40 M30,75 L90,75 M30,110 L90,110" stroke="grey" />
+  <!-- Anchors in action -->
+  <text text-anchor="start" x="60" y="40">A</text>
 
+  <text text-anchor="middle" x="60" y="75">A</text>
 
-    <!-- Anchors in action -->
-    <text text-anchor="start"
-          x="60" y="40">A</text>
+  <text text-anchor="end" x="60" y="110">A</text>
 
-    <text text-anchor="middle"
-          x="60" y="75">A</text>
+  <!-- Materialisation of anchors -->
+  <circle cx="60" cy="40" r="3" fill="red" />
+  <circle cx="60" cy="75" r="3" fill="red" />
+  <circle cx="60" cy="110" r="3" fill="red" />
 
-    <text text-anchor="end"
-          x="60" y="110">A</text>
-
-    <!-- Materialisation of anchors -->
-    <circle cx="60" cy="40" r="3" fill="red" />
-    <circle cx="60" cy="75" r="3" fill="red" />
-    <circle cx="60" cy="110" r="3" fill="red" />
-
-<style><![CDATA[
-text{
-    font: bold 36px Verdana, Helvetica, Arial, sans-serif;
-}
-]]></style>
+  <style>
+    <![CDATA[
+    text{
+        font: bold 36px Verdana, Helvetica, Arial, sans-serif;
+    }
+    ]]>
+  </style>
 </svg>
 ```
-
-**Live sample**
 
 {{ EmbedLiveSample('示例','120','120') }}
 
@@ -68,7 +68,7 @@ text{
 
 以下元素可以运用文本锚点属性：
 
-- [Text content elements](/zh-CN/SVG/Element#Text_content_elements) »
+- [Text content elements](/zh-CN/docs/Web/SVG/Element#text_content_elements) »
 
 ## 规范
 

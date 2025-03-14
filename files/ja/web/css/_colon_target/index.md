@@ -1,11 +1,13 @@
 ---
-title: ':target'
+title: :target
 slug: Web/CSS/:target
+l10n:
+  sourceCommit: 259a7061abfce122ff8bb3a6687b02509263ef38
 ---
 
 {{CSSRef}}
 
-**`:target`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 URL のフラグメントに一致する {{htmlattrxref("id")}} を持つ固有の要素 (*対象要素*) を表します。
+**`:target`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 URL のフラグメントに一致する [`id`](/ja/docs/Web/HTML/Global_attributes#id) を持つ固有の要素（_ターゲット要素_）を表します。
 
 ```css
 /* 現在の URL のフラグメントに一致する ID を持つ要素を選択 */
@@ -14,7 +16,7 @@ slug: Web/CSS/:target
 }
 ```
 
-例えば、以下の URL には `section2` と呼ばれる要素を指すフラグメント (_#_ 記号で記述) があります。
+例えば、以下の URL には `section2` と呼ばれる要素を指すフラグメント（_#_ 記号で記述）があります。
 
 ```
 http://www.example.com/index.html#section2
@@ -28,9 +30,13 @@ http://www.example.com/index.html#section2
 
 ## 構文
 
+```css
+:target {
+  /* ... */
+}
 ```
-:target
-```
+
+> **メモ:** [CSS 仕様書のバグの可能性](https://discourse.wicg.io/t/target-css-does-not-work-because-shadowroot-does-not-set-a-target-element/2070)がありますが、`:target` は[ウェブコンポーネント](/ja/docs/Web/API/Web_components)内では動作しません。[シャドウルート](/ja/docs/Web/API/ShadowRoot)がターゲット要素をシャドウツリーに渡さないためです。
 
 ## 例
 
@@ -40,20 +46,23 @@ http://www.example.com/index.html#section2
 
 #### HTML
 
-```html
+```html-nolint
 <h3>目次</h3>
 <ol>
- <li><a href="#p1">第1段落にジャンプ！</a></li>
- <li><a href="#p2">第2段落にジャンプ！</a></li>
- <li><a href="#nowhere">このリンクは対象がないので、
-   どこにも行きません。</a></li>
+  <li><a href="#p1">第 1 段落にジャンプ！</a></li>
+  <li><a href="#p2">第 2 段落にジャンプ！</a></li>
+  <li>
+    <a href="#nowhere">このリンクは対象がないので、どこにも行きません。</a>
+  </li>
 </ol>
 
-<h3>My Fun Article</h3>
-<p id="p1">You can target <i>this paragraph</i> using a
-  URL fragment. Click on the link above to try out!</p>
-<p id="p2">This is <i>another paragraph</i>, also accessible
-  from the links above. Isn't that delightful?</p>
+<h3>面白い記事</h3>
+<p id="p1">
+  URL フラグメントを使うと<i>この段落</i>をターゲットにすることができます。上記のリンクをクリックして試してみてください。
+</p>
+<p id="p2">
+  これは<i>別な段落</i>であり、やはり上記のリンクからアクセスできます。喜ばしいことだと思いませんか。
+</p>
 ```
 
 #### CSS
@@ -68,7 +77,7 @@ p:target::before {
   font: 70% sans-serif;
   content: "►";
   color: limegreen;
-  margin-right: .25em;
+  margin-right: 0.25em;
 }
 
 /* 対象要素の中の i 要素にスタイルを適用 */
@@ -98,17 +107,20 @@ p:target i {
 <div class="lightbox" id="example1">
   <figure>
     <a href="#" class="close"></a>
-    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec felis enim, placerat id eleifend eu, semper vel sem.</figcaption>
+    <figcaption>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis enim,
+      placerat id eleifend eu, semper vel sem.
+    </figcaption>
   </figure>
 </div>
 
 <div class="lightbox" id="example2">
   <figure>
     <a href="#" class="close"></a>
-    <figcaption>Cras risus odio, pharetra nec ultricies et,
-      mollis ac augue. Nunc et diam quis sapien dignissim auctor.
-      Quisque quis neque arcu, nec gravida magna.</figcaption>
+    <figcaption>
+      Cras risus odio, pharetra nec ultricies et, mollis ac augue. Nunc et diam
+      quis sapien dignissim auctor. Quisque quis neque arcu, nec gravida magna.
+    </figcaption>
   </figure>
 </div>
 ```
@@ -171,7 +183,7 @@ p:target i {
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0, 0, 0, 0.7);
   content: "";
   cursor: default;
 }
@@ -191,4 +203,4 @@ p:target i {
 
 ## 関連情報
 
-- [セレクターでの :target 擬似クラスの利用](/ja/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors)
+- [セレクターでの :target 擬似クラスの利用](/ja/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)

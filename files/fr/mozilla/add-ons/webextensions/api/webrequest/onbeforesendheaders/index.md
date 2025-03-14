@@ -1,20 +1,9 @@
 ---
 title: webRequest.onBeforeSendHeaders
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standardn
-  - Reference
-  - WebExtensions
-  - onBeforeSendHeaders
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Cet événement est déclenché avant l'envoi de données HTTP, mais après que tous les en-têtes HTTP soient disponibles. C'est un bon endroit pour écouter si vous voulez modifier les en-têtes de requête HTTP.
 
@@ -22,9 +11,9 @@ Pour que les en-têtes de requête soient passés dans l'écouteur avec le reste
 
 Pour modifier les en-têtes de façon synchrone : passez `"blocking"` dans `extraInfoSpec`, puis dans votre événement écouté, retournez un [`BlockingResponse`](/fr/Add-ons/WebExtensions/API/webRequest/BlockingResponse 'An object of this type is returned by event listeners that have set "blocking" in their extraInfoSpec argument.') avec une propriété nommée `requestHeaders`, dont la valeur est l'ensemble des en-têtes de requête à envoyer.
 
-Pour modifier les en-têtes de façon asynchrone : passez `"blocking"` dans `extraInfoSpec`, puis dans votre event listener, retournez une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue avec une `BlockingResponse`.
+Pour modifier les en-têtes de façon asynchrone : passez `"blocking"` dans `extraInfoSpec`, puis dans votre event listener, retournez une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue avec une `BlockingResponse`.
 
-Si vous utilisez le `"blocking"`, vous devez avoir la ["permission de l'API "webRequestBlocking"](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) dans votre manifest.json.
+Si vous utilisez le `"blocking"`, vous devez avoir la ["permission de l'API "webRequestBlocking"](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) dans votre manifest.json.
 
 Il est possible d'étendre le conflit ici. Si deux extensions écoutent `onBeforeSendHeaders` pour la même requête, le deuxième auditeur verra les modifications apportées par le premier auditeur et pourra annuler les modifications apportées par le premier auditeur. Par exemple, si le premier auditeur ajoute un en-tête `Cookie`, et que le deuxième auditeur supprime tous les en-têtes `Cookie`, les modifications apportées par le premier auditeur seront perdues. Si vous voulez voir les en-têtes qui sont effectivement envoyés, sans risque qu'une autre extension les modifie par la suite, utilisez {{WebExtAPIRef("webRequest.onSendHeaders", "onSendHeaders")}}, bien que vous ne puissiez pas modifier les en-têtes sur cet événement.
 
@@ -46,12 +35,12 @@ Le navigateur conserve la casse originale du nom de l'en-tête tel qu'il a été
 
 ```js
 browser.webRequest.onBeforeSendHeaders.addListener(
-  listener,             //  function
-  filter,               //  object
-  extraInfoSpec         //  optional array of strings
-)
-browser.webRequest.onBeforeSendHeaders.removeListener(listener)
-browser.webRequest.onBeforeSendHeaders.hasListener(listener)
+  listener, //  function
+  filter, //  object
+  extraInfoSpec, //  optional array of strings
+);
+browser.webRequest.onBeforeSendHeaders.removeListener(listener);
+browser.webRequest.onBeforeSendHeaders.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -83,7 +72,7 @@ Les événements ont trois fonctions :
   - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :
 
     - `"blocking"`: rendre la requête synchrone, ce qui vous permet de modifier les en-têtes de requête
-    - `"requestHeaders"`: inclure les en-têtes de requête dans l'objet `details`  transmis à l'auditeur
+    - `"requestHeaders"`: inclure les en-têtes de requête dans l'objet `details` transmis à l'auditeur
 
 ## Objets supplémentaires
 
@@ -142,9 +131,9 @@ Les événements ont trois fonctions :
 - `url`
   - : `string`. Cible de la demande.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.onBeforeSendHeaders", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -161,7 +150,8 @@ var targetPage = "https://httpbin.org/*";
 /*
 Set UA string to Opera 12
 */
-var ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+var ua =
+  "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 /*
 Rewrite the User-Agent header to "ua".
@@ -172,7 +162,7 @@ function rewriteUserAgentHeader(e) {
       header.value = ua;
     }
   }
-  return {requestHeaders: e.requestHeaders};
+  return { requestHeaders: e.requestHeaders };
 }
 
 /*
@@ -183,12 +173,12 @@ Make it "blocking" so we can modify the headers.
 */
 browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentHeader,
-  {urls: [targetPage]},
-  ["blocking", "requestHeaders"]
+  { urls: [targetPage] },
+  ["blocking", "requestHeaders"],
 );
 ```
 
-Ce code est exactement comme l'exemple précédent, sauf que l'auditeur est asynchrone, retournant une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue avec les nouveaux en-têtes :
+Ce code est exactement comme l'exemple précédent, sauf que l'auditeur est asynchrone, retournant une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue avec les nouveaux en-têtes :
 
 ```js
 "use strict";
@@ -201,7 +191,8 @@ var targetPage = "https://httpbin.org/*";
 /*
 Set UA string to Opera 12
 */
-var ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+var ua =
+  "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 /*
 Rewrite the User-Agent header to "ua".
@@ -214,7 +205,7 @@ function rewriteUserAgentHeaderAsync(e) {
           header.value = ua;
         }
       }
-      resolve({requestHeaders: e.requestHeaders});
+      resolve({ requestHeaders: e.requestHeaders });
     }, 2000);
   });
 
@@ -229,16 +220,16 @@ Make it "blocking" so we can modify the headers.
 */
 browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentHeaderAsync,
-  {urls: [targetPage]},
-  ["blocking", "requestHeaders"]
+  { urls: [targetPage] },
+  ["blocking", "requestHeaders"],
 );
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

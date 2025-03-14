@@ -1,18 +1,6 @@
 ---
 title: ExtendableEvent
 slug: Web/API/ExtendableEvent
-tags:
-  - API
-  - Experimental
-  - ExtendableEvent
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - Workers
-translation_of: Web/API/ExtendableEvent
-browser-compat: api.ExtendableEvent
 ---
 
 {{APIRef("Service Workers API")}}
@@ -21,13 +9,15 @@ L'interface **`ExtendableEvent`** étend la durée de vie des événements [`ins
 
 Si [`waitUntil()`](/fr/docs/Web/API/ExtendableEvent/waitUntil) est appelé en dehors du gestionnaire `ExtendableEvent`, le navigateur doit lever une exception `InvalidStateError` ; notez que plusieurs appels vont s'empiler, et que les promesses de résultat seront ajoutées à la liste des [promesses à vie étendue](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises).
 
-> **Note :** Le comportement décrit dans le paragraphe précédent a été corrigé dans Firefox 43 (voir [le bug 1180274](https://bugzilla.mozilla.org/show_bug.cgi?id=1180274)).
+> [!NOTE]
+> Le comportement décrit dans le paragraphe précédent a été corrigé dans Firefox 43 (voir [le bug 1180274](https://bugzilla.mozilla.org/show_bug.cgi?id=1180274)).
 
 Cette interface hérite de l'interface [`Event`](/fr/docs/Web/API/Event).
 
 {{InheritanceDiagram(700, 60, 20)}}
 
-> **Note :** Cette interface est disponible seulement quand la portée globale est [`ServiceWorkerGlobalScope`](/fr/docs/Web/API/ServiceWorkerGlobalScope). Elle n'est pas disponible quand c'est un objet [`Window`](/fr/docs/Web/API/Window) ou un autre type de worker.
+> [!NOTE]
+> Cette interface est disponible seulement quand la portée globale est [`ServiceWorkerGlobalScope`](/fr/docs/Web/API/ServiceWorkerGlobalScope). Elle n'est pas disponible quand c'est un objet [`Window`](/fr/docs/Web/API/Window) ou un autre type de worker.
 
 ## Constructeur
 
@@ -54,33 +44,46 @@ Ce fragment de code montre aussi une bonne pratique pour construire des versions
 ```js
 var CACHE_VERSION = 1;
 var CURRENT_CACHES = {
-  prefetch: 'prefetch-cache-v' + CACHE_VERSION
+  prefetch: "prefetch-cache-v" + CACHE_VERSION,
 };
 
-self.addEventListener('install', function(event) {
+self.addEventListener("install", function (event) {
   var urlsToPrefetch = [
-    './static/pre_fetched.txt',
-    './static/pre_fetched.html',
-    'https://www.chromium.org/_/rsrc/1302286216006/config/customLogo.gif'
+    "./static/pre_fetched.txt",
+    "./static/pre_fetched.html",
+    "https://www.chromium.org/_/rsrc/1302286216006/config/customLogo.gif",
   ];
 
-  console.log('Installation en cours. Ressources à pré-charger :', urlsToPrefetch);
+  console.log(
+    "Installation en cours. Ressources à pré-charger :",
+    urlsToPrefetch,
+  );
 
   event.waitUntil(
-    caches.open(CURRENT_CACHES['prefetch']).then(function(cache) {
-      cache.addAll(urlsToPrefetch.map(function(urlToPrefetch) {
-        return new Request(urlToPrefetch, {mode: 'no-cors'});
-      })).then(function() {
-        console.log('Toutes les ressources ont été chargées et mises en cache.');
-      });
-    }).catch(function(error) {
-      console.error('Erreur de pré-chargement :', error);
-    })
+    caches
+      .open(CURRENT_CACHES["prefetch"])
+      .then(function (cache) {
+        cache
+          .addAll(
+            urlsToPrefetch.map(function (urlToPrefetch) {
+              return new Request(urlToPrefetch, { mode: "no-cors" });
+            }),
+          )
+          .then(function () {
+            console.log(
+              "Toutes les ressources ont été chargées et mises en cache.",
+            );
+          });
+      })
+      .catch(function (error) {
+        console.error("Erreur de pré-chargement :", error);
+      }),
   );
 });
 ```
 
-> **Attention :** Au moment du chargement des ressources, il est très important d'utiliser `{mode: 'no-cors'}` s'il y a une chance que la ressource soit servie depuis un serveur qui ne supporte pas le [CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing). Dans cet exemple, [www.chromium.org](https://www.chromium.org) ne prend pas en charge le CORS.
+> [!WARNING]
+> Au moment du chargement des ressources, il est très important d'utiliser `{mode: 'no-cors'}` s'il y a une chance que la ressource soit servie depuis un serveur qui ne supporte pas le [CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing). Dans cet exemple, [www.chromium.org](https://www.chromium.org) ne prend pas en charge le CORS.
 
 ## Spécifications
 
@@ -92,8 +95,8 @@ self.addEventListener('install', function(event) {
 
 ## Voir aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Un exemple de base pour un service worker](https://github.com/mdn/sw-test)
 - [Peut-on utiliser les service workers ?](https://jakearchibald.github.io/isserviceworkerready/)
 - [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Utiliser les web workers](/fr/docs/Web/Guide/Performance/Using_web_workers)
+- [Utiliser les web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)

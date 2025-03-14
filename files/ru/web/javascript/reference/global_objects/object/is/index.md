@@ -1,21 +1,13 @@
 ---
 title: Object.is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
-tags:
-  - ECMAScript6
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/is
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 ## Сводка
 
-Метод **`Object.is()`** определяет, являются ли два значения [одинаковыми значениями](/ru/docs/Web/JavaScript/Guide/Sameness).
+Метод **`Object.is()`** определяет, являются ли два значения [одинаковыми значениями](/ru/docs/Web/JavaScript/Equality_comparisons_and_sameness).
 
 ## Синтаксис
 
@@ -32,7 +24,7 @@ var isSame = Object.is(value1, value2);
 
 ## Описание
 
-Метод `Object.is()` определяет, являются ли два значения [одинаковыми значениями](/ru/docs/Web/JavaScript/Guide/Sameness). Два значения являются одинаковыми в следующих случаях:
+Метод `Object.is()` определяет, являются ли два значения [одинаковыми значениями](/ru/docs/Web/JavaScript/Equality_comparisons_and_sameness). Два значения являются одинаковыми в следующих случаях:
 
 - оба равны {{jsxref("undefined")}}
 - оба равны {{jsxref("null")}}
@@ -53,21 +45,21 @@ var isSame = Object.is(value1, value2);
 ## Примеры
 
 ```js
-Object.is('foo', 'foo');     // true
-Object.is(window, window);   // true
+Object.is("foo", "foo"); // true
+Object.is(window, window); // true
 
-Object.is('foo', 'bar');     // false
-Object.is([], []);           // false
+Object.is("foo", "bar"); // false
+Object.is([], []); // false
 
 var test = { a: 1 };
-Object.is(test, test);       // true
+Object.is(test, test); // true
 
-Object.is(null, null);       // true
+Object.is(null, null); // true
 
 // Специальные случаи
-Object.is(0, -0);            // false
-Object.is(-0, -0);           // true
-Object.is(NaN, 0/0);         // true
+Object.is(0, -0); // false
+Object.is(-0, -0); // true
+Object.is(NaN, 0 / 0); // true
 ```
 
 ## Полифил
@@ -99,4 +91,4 @@ if (!Object.is) {
 
 ## Смотрите также
 
-- [Руководство по JavaScript: одинаковость](/ru/docs/Web/JavaScript/Guide/Sameness) — сравнение всех трёх встроенных способов проверки на одинаковость
+- [Руководство по JavaScript: одинаковость](/ru/docs/Web/JavaScript/Equality_comparisons_and_sameness) — сравнение всех трёх встроенных способов проверки на одинаковость

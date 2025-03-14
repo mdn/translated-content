@@ -1,14 +1,6 @@
 ---
 title: Math.acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/acosh
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/acosh
 ---
 
 {{JSRef}}
@@ -17,12 +9,26 @@ La fonction **`Math.acosh()`** renvoie l'arc cosinus hyperbolique d'un nombre.El
 
 <math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>1</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.acosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> l'unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace width="thickmathspace"></mspace><mtext>tel que</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">cosh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \geq 1, \mathtt{\operatorname{Math.acosh}(x)} = \operatorname{arcosh}(x) = \text{ the unique } \; y \geq 0 \; \text{such that} \; \cosh(y) = x</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-acosh.html")}}
+{{InteractiveExample("JavaScript Demo: Math.acosh()")}}
+
+```js interactive-example
+console.log(Math.acosh(0.999999999999));
+// Expected output: NaN
+
+console.log(Math.acosh(1));
+// Expected output: 0
+
+console.log(Math.acosh(2));
+// Expected output: 1.3169578969248166
+
+console.log(Math.acosh(2.5));
+// Expected output: 1.566799236972411
+```
 
 ## Syntaxe
 
 ```js
-Math.acosh(x)
+Math.acosh(x);
 ```
 
 ### Paramètres
@@ -43,11 +49,11 @@ L'arc cosinus hyperbolique du nombre en argument. Si le nombre est inférieur à
 ### Utiliser `Math.acosh()`
 
 ```js
-Math.acosh(-1);  // NaN
-Math.acosh(0);   // NaN
+Math.acosh(-1); // NaN
+Math.acosh(0); // NaN
 Math.acosh(0.5); // NaN
-Math.acosh(1);   // 0
-Math.acosh(2);   // 1.3169578969248166
+Math.acosh(1); // 0
+Math.acosh(2); // 1.3169578969248166
 ```
 
 Pour les valeurs strictement inférieures à 1 `Math.acosh` renvoie {{jsxref("NaN")}}.

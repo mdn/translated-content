@@ -1,45 +1,46 @@
 ---
 title: this
 slug: Web/JavaScript/Reference/Operators/this
+l10n:
+  sourceCommit: 8cb0caef8175e1772f13ef7bc761f9616e2c5a4b
 ---
 
 {{jsSidebar("Operators")}}
 
-**関数の `this` キーワード** は、JavaScript ではほかの言語と少々異なる動作をします。また、[strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)であるかどうかでも違いがあります。
+**`this`** キーワードは、関数本体などのコードを実行するコンテキストを指します。最も一般的な用途はオブジェクトメソッドで、この場合、`this` はメソッドが関連付けられているオブジェクトを指し、これにより、同じメソッドをさまざまなオブジェクトで再利用することができます。
 
-ほとんどの場合、`this` の値はどのように関数が呼ばれたかによって決定されます (実行時結合)。これは実行時に代入によって設定することはできず、関数が呼び出されるたびに異なる可能性があります。ES5 では {{jsxref("Function.prototype.bind()", "bind()")}} メソッドが導入され、関数が{{jsxref('Operators/this', "どのように呼ばれたかに関係なく `this` の値を設定する", 'The_bind_method', 1)}}することができるようになり、ES2015 では、自身では `this` の結び付けを行わない[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)が導入されました (これは包含する構文上のコンテキストの `this` の値を保持します)。
+JavaScript で `this` の値は、関数がどのように定義されているかではなく、どのように呼び出されるか(実行時の{{glossary("binding", "バインド方法")}})によって決まります。通常の関数がオブジェクトのメソッドとして呼び出された場合 (`obj.method()`)、`this` はそのオブジェクトを指します。単独の関数として呼び出された場合（オブジェクトに関連付けられていない func()）、this は通常、[グローバルオブジェクト](/ja/docs/Glossary/Global_object)（厳格モードでない場合）、グローバルオブジェクトまたは `undefined` （[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)の場合）を指します。
+{{jsxref("Function.prototype.bind()")}} メソッドは、`this` のバインドが変更されない関数を作成できます。また、{{jsxref("Function.prototype.apply()")}} および {{jsxref("Function.prototype.call()")}} メソッドは、特定の呼び出しに対して `this` の値を設定することもできます。
 
-{{EmbedInteractiveExample("pages/js/expressions-this.html")}}
+[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)では、`this` の扱いが異なります。定義された時点で親スコープから継承します。この動作により、アロー関数はコールバックやコンテキストの保持を行う上で特に便利です。ただし、アロー関数には独自の `this` バインディングがありません。そのため、`bind()`、`apply()`、`call()` メソッドで `this` の値を設定することはできません。また、オブジェクトメソッドで現在のオブジェクトを指すこともできません。
+
+{{InteractiveExample("JavaScript Demo: Expressions - this")}}
+
+```js interactive-example
+const test = {
+  prop: 42,
+  func: function () {
+    return this.prop;
+  },
+};
+
+console.log(test.func());
+// Expected output: 42
+```
 
 ## 構文
 
-```
+```js-nolint
 this
 ```
 
 ### 値
 
-strict モードでない場合は、実行コンテキスト (グローバル、関数、eval) のプロパティで、常にオブジェクトへの参照です。 strict モードではどのような値でも取り得ます。
+厳格モードでない場合は、`this` は常にオブジェクトを参照します。厳格モードでは、どのような値もどのような値でも取り得ます。値の決定方法に関する詳細情報は、下記を参照してください。
 
 ## 解説
 
-### グローバルコンテキスト
-
-グローバル実行コンテキスト (すべての関数の外側) では、strict モードであるかどうかにかかわらず、`this` はグローバルオブジェクトを参照します。
-
-``` js
-// ウェブブラウザーでは window オブジェクトもグローバルオブジェクトです。
-console.log(this === window); // true
-
-a = 37;
-console.log(window.a); // 37
-
-this.b = "MDN";
-console.log(window.b)  // "MDN"
-console.log(b)         // "MDN"
-```
-
-> **メモ:** コードが実行されている現在のコンテキストに関係なく、グローバルの {{jsxref("globalThis")}} プロパティを使用していつでも簡単にグローバルオブジェクトを取得できます。
+この値は、それが現れるコンテキスト（関数、クラス、グローバル）によって異なります。
 
 ### 関数コンテキスト
 
@@ -48,72 +49,201 @@ console.log(b)         // "MDN"
 下記のコードは [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)ではないため、また呼び出し時に `this` の値が設定されないため、`this` は既定でグローバルオブジェクトとなり、これはブラウザーでは {{domxref("Window", "window")}} です。
 
 ```js
-function f1() {
+function getThis() {
   return this;
 }
 
-// ブラウザー上で
-f1() === window; // true
+const obj1 = { name: "obj1" };
+const obj2 = { name: "obj2" };
 
-// Node 上で
-f1() === global; // true
+obj1.getThis = getThis;
+obj2.getThis = getThis;
+
+console.log(obj1.getThis()); // { name: 'obj1', getThis: [Function: getThis] }
+console.log(obj2.getThis()); // { name: 'obj2', getThis: [Function: getThis] }
 ```
 
-ただし strict モードでは、実行コンテキストに入るときに `this` 値が設定されていないと、以下の例のように `undefined` のままになります。
+関数は同じですが、呼び出し方法によって `this` の値が異なることに注目してください。これは、関数への引数がどのように動作するのかと似ています。
+
+`this` の値は、自分自身のプロパティとして機能を持つオブジェクトではなく、その機能を呼び出すために使用されるオブジェクトです。これを証明するために、[プロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)の上位にあるオブジェクトのメソッドを呼び出してみましょう。
 
 ```js
-function f2() {
-  'use strict'; // strict モードにする
+const obj3 = {
+  __proto__: obj1,
+  name: "obj3",
+};
+
+console.log(obj3.getThis()); // { name: 'obj3' }
+```
+
+`this` の値は、関数がオブジェクトに作成時に定義された場合でも、常にその関数がどのように呼び出されたかによって変化します。
+
+```js
+const obj4 = {
+  name: "obj4",
+  getThis() {
+    return this;
+  },
+};
+
+const obj5 = { name: "obj5" };
+
+obj5.getThis = obj4.getThis;
+console.log(obj5.getThis()); // { name: 'obj5', getThis: [Function: getThis] }
+```
+
+メソッドにアクセスする値がプリミティブの場合、`this` はプリミティブ値となります。ただし、関数が厳格モードの場合のみです。
+
+```js
+function getThisStrict() {
+  "use strict"; // 厳格モードに入る
   return this;
 }
 
-f2() === undefined; // true
+// デモ専用のものです。組み込みのプロトタイプを変更しないでください。
+Number.prototype.getThisStrict = getThisStrict;
+console.log(typeof (1).getThisStrict()); // "number"
 ```
 
-> **メモ:** 二番目の例において、`this` が {{jsxref("undefined")}} となるのは `f2` が直接呼び出されており、オブジェクトのメソッドやプロパティ (例えば `window.f2()`) ではないためです。この機能は初めて [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)への対応が始まったとき、一部のブラウザーが実装していませんでした。結果的に、これらのブラウザーは不正確に `window` オブジェクトを返していました。
+何らかの形でアクセスされることなく関数が呼び出された場合、`this` は `undefined` となります。ただし、関数が厳格モードの場合のみです。
 
-関数の呼び出し時に `this` の値を特定の値に設定するには、以下の例のように {{jsxref("Function.prototype.call()", "call()")}} または {{jsxref("Function.prototype.apply()", "apply()")}} を使用します。
+```js
+console.log(typeof getThisStrict()); // "undefined"
+```
+
+厳格モードではない場合、[`this` 置換](/ja/docs/Web/JavaScript/Reference/Strict_mode#no_this_substitution)と呼ばれる特別な処理により、この値が常にオブジェクトであることが確実に保持されます。これはつまり、
+
+- 関数が `this` を `undefined` または `null` に設定されて呼び出された場合、`this` は {{jsxref("globalThis")}} に置き換えられます。
+- 関数が `this` をプリミティブ値に設定されて呼び出された場合、`this` はそのプリミティブ地のラッパーオブジェクトに置き換えられます。
+
+```js
+function getThis() {
+  return this;
+}
+
+// デモ専用のものです。組み込みのプロトタイプを変更しないでください。
+Number.prototype.getThis = getThis;
+console.log(typeof (1).getThis()); // "object"
+console.log(getThis() === globalThis); // true
+```
+
+一般的な関数呼び出しでは、この値は関数の接頭辞（ドットの前の部分）を通して暗黙的に引数として渡されます。また、`this` の値は {{jsxref("Function.prototype.call()")}}、{{jsxref("Function.prototype.apply()")}}、{{jsxref("Reflect.apply()")}} のメソッドを使用して、明示的に設定することもできます。{{jsxref("Function.prototype.bind()")}} を使用すると、関数の呼び出し方法に関わらず変更されない特定の `this` 値を持つ新しい関数を作成することができます。これらのメソッドを使用する場合、関数が厳格モードでない場合でも、上記の `this` の置換ルールが適用されます。
+
+#### コールバック
+
+関数がコールバックとして渡される場合、`this` の値はコールバックがどのように呼び出されるかによって決まり、これはAPIの実装者によって決定されます。コールバックは通常、`this` の値が `undefined` で（オブジェクトに関連付けずに直接）呼び出されます。これは、関数が厳格モードでない場合、`this` の値はグローバルオブジェクト ({{jsxref("globalThis")}}) であることを意味します。これは、[反復処理可能な配列メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)、[`Promise()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) コンストラクターなどにも当てはまります。
+
+```js
+function logThis() {
+  "use strict";
+  console.log(this);
+}
+
+[1, 2, 3].forEach(logThis); // undefined, undefined, undefined
+```
+
+API によっては、コールバックの呼び出し時に `this` の値を設定することができます。例えば、すべての反復処理配列メソッドと、{{jsxref("Set.prototype.forEach()")}} のような関連メソッドでは、オプションの `thisArg` 引数を受け入れます。/\
+
+```js
+[1, 2, 3].forEach(logThis, { name: "obj" });
+// { name: 'obj' }, { name: 'obj' }, { name: 'obj' }
+```
+
+時には、`this` 値が `undefined` 以外でコールバックが呼び出されることもあります。例えば、{{jsxref("JSON.parse()")}} の `reviver` 引数と {{jsxref("JSON.stringify()")}} の `replacer` 引数はどちらも、この値が解釈/シリアライズできるプロパティが属するオブジェクトに設定されて呼び出されます。
+
+#### アロー関数
+
+[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)では、`this` 値は周囲の字句コンテキストの `this` の値を保持します。言い換えれば、アロー関数の本体を評価する際、言語は新しい `this` のバインドを作成しません。
+
+例えば、グローバルコードでは、`this` は厳格モードであるかどうかにかかわらず、常に `globalThis` となります。これは、[グローバルコンテキスト](#グローバルコンテキスト)のバインドによるものです。
+
+```js
+const globalObject = this;
+const foo = () => this;
+console.log(foo() === globalObject); // true
+```
+
+アロー関数は、その関数が存在するスコープの `this` 値を囲む[クロージャ](/ja/docs/Web/JavaScript/Closures)を作成します。つまり、アロー関数は「自動バインド」されているかのように動作します。つまり、どのように呼び出されたとしても、`this` は関数が作成された時点での値（例えば、グローバルオブジェクト）にバインドされます。他の関数内で作成されたアロー関数にも同じことが言えます。そのthisは、それを囲む字句コンテキストのままです。[下記の例を参照してください](#アロー関数内の_this)。
+
+さらに、`call()`、`bind()`、`apply()` を使用してアロー関数を呼び出す場合、`thisArg` 引数は無視されます。ただし、これらのメソッドを使用しても、他にも引数を渡すことができます。
+
+```js
+const obj = { name: "obj" };
+
+// call を使用して this を設定しようとする
+console.log(foo.call(obj) === globalObject); // true
+
+// bind を使用して this を設定しようとする
+const boundFoo = foo.bind(obj);
+console.log(boundFoo() === globalObject); // true
+```
+
+#### コンストラクター
+
+関数がコンストラクター（{{jsxref("Operators/new", "new")}} キーワード付き）として使用される場合、コンストラクター関数がどのオブジェクトにアクセスしているかに関わらず、その `this` は、構築中の新しいオブジェクトにバインドされます。コンストラクターが別のプリミティブ値以外の値を返さない限り、`this` の値は `new` 式の値となります。
+
+```js
+function C() {
+  this.a = 37;
+}
+
+let o = new C();
+console.log(o.a); // 37
+
+function C2() {
+  this.a = 37;
+  return { a: 38 };
+}
+
+o = new C2();
+console.log(o.a); // 38
+```
+
+2 つ目の例 (`C2`) では、構築中にオブジェクトが返されるため、`this` にバインドされていた新しいオブジェクトは破棄されます。（これは本質的に、`this.a = 37;` の文をデッドコードにします。このコードは実行されるため、厳密にはデッドコードではありませんが、外部に影響を与えることなく削除することができます。）
+
+#### super
+
+`super.method()` 形式で関数が最初に呼び出された場合、`method` 関数内の `this` は `super.method()` 呼び出しの周辺の `this` 値と同じ値であり、通常 `super` が参照するオブジェクトとは異なります。これは、`super.method` が上記のオブジェクトメンバーにアクセスするようなものではないためです。これは、異なるバインドルールを持つ特別な構文です。例えば、[`super` のリファレンス](/ja/docs/Web/JavaScript/Reference/Operators/super#calling_methods_from_super)を参照してください。
 
 ### クラスコンテキスト
 
-[クラス](/ja/docs/Web/JavaScript/Reference/Classes)は関数の機能であるため、クラスと関数の `this` の動作は似ています。ただし、いくつかの違いと注意点があります。
+[クラス](/ja/docs/Web/JavaScript/Reference/Classes)は、静的コンテキストとインスタンスコンテキストの 2 つに分けることができます。[コンストラクター](/ja/docs/Web/JavaScript/Reference/Classes/constructor)、メソッド、インスタンスフィールド初期化子（[パブリック](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)または[プライベート](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)）はインスタンスコンテキストに属します。[静的](/ja/docs/Web/JavaScript/Reference/Classes/static)メソッド、静的フィールド初期化子、静的初期化ブロックは静的コンテキストに属します。それぞれのコンテキストで、`this` の値が異なります。
 
-クラスのコンストラクター内では、`this` は通常のオブジェクトです。クラス内のすべて静的でないメソッドは `this` のプロトタイプに追加されます。
+クラスのコンストラクターは常に `new` で呼び出されるため、その動作は[関数コンストラクター](#コンストラクター)と同じです。`this` 値は、作成される新しいインスタンスです。 クラスメソッドは、オブジェクトリテラル内のメソッドと同じように動作します。`this` 値は、メソッドがアクセスされたオブジェクトです。 メソッドが他のオブジェクトに転送されない場合、`this` は通常、クラスのインスタンスです。
+
+静的メソッドは `this` のプロパティではありません。クラス自体のプロパティです。つまり、それらは一般的にクラスにアクセスされるため、`this` はクラス（またはサブクラス）の値です。静的初期化ブロックも、`this` を現在のクラスに設定して評価します。
+
+フィールド初期化子もクラスのコンテキストで評価されます。インスタンスフィールドは、`this` を構築中のインスタンスに設定して評価されます。静的フィールドは、`this` を現在のクラスに設定して評価されます。これが、フィールド初期化子でアロー関数が[インスタンスフィールドの場合はインスタンスに、静的フィールドの場合はクラスにバインドされる](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions#メソッドとしては使用不可)理由です。
 
 ```js
-class Example {
-  constructor() {
-    const proto = Object.getPrototypeOf(this);
-    console.log(Object.getOwnPropertyNames(proto));
-  }
-  first(){}
-  second(){}
-  static third(){}
+class C {
+  instanceField = this;
+  static staticField = this;
 }
 
-new Example(); // ['constructor', 'first', 'second']
+const c = new C();
+console.log(c.instanceField === c); // true
+console.log(C.staticField === C); // true
 ```
 
-> **メモ:** 静的メソッドは `this` のプロパティではありません。クラス自身のプロパティです。
+#### 派生クラスのコンストラクター
 
-### 派生クラス
+基本クラスのコンストラクターとは異なり、派生コンストラクターには初期の `this` の結び付けがありません。{{jsxref("Operators/super", "super()")}} を呼び出すとコンストラクター内に `this` のバインドが作成され、基本的に以下のコードを評価する効果があります。ここで、`Base` は継承されたクラスです。
 
-基本クラスのコンストラクターとは異なり、派生コンストラクターには初期の `this` の結び付けがありません。{{jsxref("Operators/super", "super()")}} を呼び出すとコンストラクター内に `this` の結び付けが作成され、基本的に以下のコードを評価する効果があります。ここで、Base は継承されたクラスです。
-
-```js
+```js-nolint
 this = new Base();
 ```
 
 > **警告:** `this` を `super()` の呼び出しの前に参照すると、エラーが発生します。
 
-派生クラスはでは `super()` を呼び出す前に return をしてはいけません。ただし、 `Object` を返す場合やコンストラクターがない場合を除きます。
+派生クラスはでは `super()` を呼び出す前に return をしてはいけません。ただし、オブジェクトを返す場合やコンストラクターがない場合を除きます。
 
 ```js
 class Base {}
 class Good extends Base {}
 class AlsoGood extends Base {
   constructor() {
-    return {a: 5};
+    return { a: 5 };
   }
 }
 class Bad extends Base {
@@ -122,263 +252,187 @@ class Bad extends Base {
 
 new Good();
 new AlsoGood();
-new Bad(); // 参照エラー
+new Bad(); // ReferenceError: Must call super constructor in derived class before accessing 'this' or returning from derived constructor
+```
+
+### グローバルコンテキスト
+
+グローバル実行コンテキスト（関数やクラスの外部、グローバルスコープで定義された[ブロック](/ja/docs/Web/JavaScript/Reference/Statements/block)または[アロー関数](#アロー関数)の内部の場合もあり）では、スクリプトが動作する実行コンテキストによって `this` の値が決まります。 [コールバック](#コールバック)と同様に、`this` の値は実行環境（呼び出し側）によって決定されます。
+
+スクリプトの最上位レベルでは、`this` 値は厳格モードであるかどうかに関わらず、`globalThis` を参照します。これは一般的にグローバルオブジェクトと同じです。例えば、ソースが HTML の [`<script>`](/ja/docs/Web/HTML/Element/script) 要素内に置かれ、スクリプトとして実行された場合、`this === window` となります。
+
+> **メモ:** `globalThis` は一般的にグローバルオブジェクトと同じ概念です(つまり、`globalThis` にプロパティを追加するとグローバル変数になります)。これはブラウザーとノードの場合です。しかし、ホストはグローバルオブジェクトとは関係のない値を `globalThis` に指定することができます。
+
+```js
+// ウェブブラウザーでは window オブジェクトもグローバルオブジェクトです。
+console.log(this === window); // true
+
+this.b = "MDN";
+console.log(window.b); // "MDN"
+console.log(b); // "MDN"
+```
+
+ソースが[モジュール](/ja/docs/Web/JavaScript/Guide/Modules)として読み込まれた場合（HTML では、`type="module"` を `<script>` タグに追加するということ）、この場合は常に最上位で `undefined` となります。
+
+ソースが [`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) で実行される場合、`this` は[直接的な eval](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval#直接的または間接的な_eval) の場合は囲んだ中のコンテキスト、間接的な eval の場合は `globalThis` と同じです（別個のグローバルスクリプトで実行されているかのように）。
+
+```js
+function test() {
+  // 直接的な eval
+  console.log(eval("this") === this);
+  // 間接的な eval （厳格モード以外）
+  console.log(eval?.("this") === globalThis);
+  // 間接的な eval （厳格モード）
+  console.log(eval?.("'use strict'; this") === globalThis);
+}
+
+test.call({ name: "obj" }); // Logs 3 "true"
+```
+
+なお、グローバルスコープのように見えても、実行時には実際には関数にラップされているソースコードもあります。例えば、Node.js の CommonJS モジュールは関数にラップされており、`this` 値が `module.exports` に設定されて実行されます。[イベントハンドラー属性](#インラインイベントハンドラー内の_this)は、この値が関連付けられている要素に設定されて実行されます。
+
+オブジェクトリテラルでは `this` スコープを作成しません。オブジェクト内で定義された関数（メソッド）のみが作成されます。オブジェクトリテラルで `this` を使用すると、その値は周囲のスコープから継承されます。
+
+```js
+const obj = {
+  a: this,
+};
+
+console.log(obj.a === window); // true
 ```
 
 ## 例
 
 ### 関数コンテキスト内の this
 
-```js
-// オブジェクトを call や apply の最初の引数として渡すと、this がそれに結び付けられます。
-var obj = {a: 'Custom'};
+`this` 引数の値は、関数がどのように呼ばれるかによって決まり、定義のされ方によって決まるものではありません。
 
-// 変数を定義すると、その変数がグローバルの window のプロパティとして割り当てられます。
-var a = 'Global';
+```js
+// オブジェクトを 'call' や 'apply' の最初の引数として渡すと、'this' がそれに結び付けられます。
+const obj = { a: "Custom" };
+
+// var で宣言された変数は、'globalThis' のプロパティになります。
+var a = "Global";
 
 function whatsThis() {
-  return this.a;  // this の値は関数の呼び出し方によって変わります
+  return this.a; // 'this' の値は関数の呼び出し方によって変わります
 }
 
-whatsThis();          // 'Global' はこの関数では this として設定されていないので、既定でグローバルの window オブジェクトになります
-whatsThis.call(obj);  // 'Custom' が関数内の this として obj に設定されています
-whatsThis.apply(obj); // 'Custom' が関数内の this として obj に設定されています
+whatsThis(); // 'Global' です。厳格モードでなければ 'this' 引数の既定値は、'globalThis'
+obj.whatsThis = whatsThis;
+obj.whatsThis(); // 'Custom' です。'this' 引数は obj に結び付けられています
 ```
 
-### this とオブジェクト変換
+`call()` と `apply()` を使用すると、`this` の値を明示的な引数であるかのように渡すことができます。
 
 ```js
 function add(c, d) {
   return this.a + this.b + c + d;
 }
 
-var o = {a: 1, b: 3};
+const o = { a: 1, b: 3 };
 
-// 最初の引数は 'this' として使用する
-// オブジェクトで、続く引数は関数呼び出しの
-// 引数として使用されます。
+// 最初の引数は暗黙的な 'this' 引数にバインドされます。
+// 残りの引数は名前付き引数にバインドされます。
 add.call(o, 5, 7); // 16
 
-// 最初の引数は 'this' として使用する
-// オブジェクトで、二番目の引数は関数呼び出しの
-// 引数として使用される配列です。
+// 最初の引数は暗黙的な 'this' 引数にバインドされます。
+// 第 2 引数は配列であり、そのメンバーが名前付き引数にバインドされます。
 add.apply(o, [10, 20]); // 34
 ```
 
-なお、 strict モードでない場合、`call` と `apply` は、`this` として渡された値がオブジェクトではないと、内部の `ToObject` 操作を利用してオブジェクトに変換しようします。`7` や `'foo'` のようなプリミティブが渡された場合、関連するコンストラクターを使用してオブジェクトに変換されます。たとえば、プリミティブの数値である `7` は `new Number(7)` であるかのようにオブジェクトに変換され、文字列の `'foo'` は `new String('foo')` であるかのようにオブジェクトに変換されます。
+### this とオブジェクト変換
+
+厳格モードでない場合、オブジェクトではない `this` 値で関数が呼び出されると、`this` 値はオブジェクトに置き換えられます。`null` と `undefined` は `globalThis` になります。`7` や 'foo' などのプリミティブは、関連するコンストラクターを使用してオブジェクトに変換されます。そのため、プリミティブの数値 `7` は {{jsxref("Number")}} ラッパークラスに変換され、文字列 'foo' は {{jsxref("String")}} ラッパークラスに変換されます。
 
 ```js
 function bar() {
   console.log(Object.prototype.toString.call(this));
 }
 
-bar.call(7);     // [object Number]
-bar.call('foo'); // [object String]
-bar.call(undefined); // [object global]
+bar.call(7); // [object Number]
+bar.call("foo"); // [object String]
+bar.call(undefined); // [object Window]
 ```
 
-### `bind` メソッド
+### bind() メソッド
 
-ECMAScript 5 で {{jsxref("Function.prototype.bind()")}} が導入されました。`f.bind(someObject)` の呼び出しは、`f` と同じ内部とスコープを持つ新しい関数を生成し、ここが `this` が発生するオリジナルの関数ですが、関数がどのように使われるかにかかわらず、新しい関数では `bind` の最初の引数に永続的にバインドされます。
+[`f.bind(someObject)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) を呼び出すと、`f` と同じ本体とスコープを持つ新しい関数を生成しますが、関数がどのように呼び出されていても、`this` の値は `bind` の最初の引数に恒久的にバインドされます。
 
 ```js
 function f() {
   return this.a;
 }
 
-var g = f.bind({a: 'azerty'});
+const g = f.bind({ a: "azerty" });
 console.log(g()); // azerty
 
-var h = g.bind({a: 'yoo'}); // bind は一度しか機能しない
+const h = g.bind({ a: "yoo" }); // bind は一度しか機能しない
 console.log(h()); // azerty
 
-var o = {a: 37, f: f, g: g, h: h};
-console.log(o.a, o.f(), o.g(), o.h()); // 37,37, azerty, azerty
+const o = { a: 37, f, g, h };
+console.log(o.a, o.f(), o.g(), o.h()); // 37 37 azerty azerty
 ```
 
-### アロー関数
+### アロー関数内の this
 
-[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)では、`this` はそれを囲む構文上のコンテキストの `this` の値が設定されます。グローバルコードでは、グローバルオブジェクトが設定されます。
-
-```js
-var globalObject = this;
-var foo = (() => this);
-console.log(foo() === globalObject); // true
-```
-
-> **メモ:** アロー関数の呼び出し時に `this` 引数が `call`, `bind`, `apply` に渡されても無視されます。呼び出しに引数を加えることはできますが、最初の引数 (`thisArg`) は `null` を設定してください。
+アロー関数は、それを包含する実行コンテキストの `this` 値をクロージャとして作成します。次の例では、`this` の値を返す関数を返すメソッド `getThisGetter` を持つ `obj` を作成します。返される関数はアロー関数として作成されるため、その `this` は常に包含する関数の `this` にバインドされます。`getThisGetter` 内の `this` の値は、呼び出す際に設定することができ、その結果、返される関数の返値が設定されます。`getThisGetter` は厳格モードではない関数であると仮定します。つまり、厳格モードでないスクリプトに含まれ、クラスや厳格モードの関数にさらに入れ子にされていないということです。
 
 ```js
-// オブジェクトのメソッドとして呼び出す。
-var obj = {func: foo};
-console.log(obj.func() === globalObject); // true
-
-// call を使用して this の設定を試みる
-console.log(foo.call(obj) === globalObject); // true
-
-// bind を使用して this の設定を試みる
-foo = foo.bind(obj);
-console.log(foo() === globalObject); // true
-```
-
-何があっても、`foo` の `this` は生成されたときの値が設定されています (上記の例ではグローバルオブジェクトです)。同様のことが、ほかの関数内で生成したアロー関数にも適用されます。それらの `this` には、それを包含する構文上のコンテキストのものになります。
-
-```js
-// this を返す関数を返す bar メソッドを持つ
-// obj を生成します。返された関数はアロー関数
-// として生成されているため、その this は
-// それを包含する関数の this に永続的に拘束
-// されます。bar の値は呼び出し時に設定でき、
-// 返値の関数の値に順に設定します。
-var obj = {
-  bar: function() {
-    var x = (() => this);
-    return x;
-  }
+const obj = {
+  getThisGetter() {
+    const getter = () => this;
+    return getter;
+  },
 };
+```
 
-// bar を obj のメソッドとして呼び出す際、その this を obj に設定します
-// 返値の関数への参照を fn に割り当てます。
-var fn = obj.bar();
+`getThisGetter` を `obj` のメソッドとして呼び出すことができます。これにより、本体内部で `this` が `obj` にバインドされます。返された関数は変数 `fn` に割り当てられます。これで、`fn` を呼ぶと、返される `this` の値は依然として `getThisGetter` を呼び出して設定した値、つまり `obj` となります。返された関数がアロー関数でなかった場合、このような呼び出しでは `this` の値が `globalThis` となります。これは、`getThisGetter` が厳格モードではないためです。
 
-// strict モードでは、this を設定せずに fn を呼び出すと
-// 通常はグローバルオブジェクトか undefined が既定値となります。
+```js
+const fn = obj.getThisGetter();
 console.log(fn() === obj); // true
-
-// しかし obj のメソッドを call することなく参照するのは要注意です。
-var fn2 = obj.bar;
-// するとアロー関数の呼び出しで this は bar の
-// this に従うため window と同じになります。
-console.log(fn2()() == window); // true
 ```
 
-上記では、関数 (この無名関数を A と呼びます) に `obj.bar` が返すアロー関数として生成されたほかの関数 (この無名関数を B と呼びます) を割り当てています。結果として、呼び出されたときに関数 B の `this` は、永続的に `obj.bar` (関数 A) の `this` が設定されます。返された関数 (関数 B) が呼びされるとき、その `this` は常に最初に設定されたものになります。上記のコード例では、関数 B の `this` は `obj` である関数 A の `this` が設定されているため、通常はその `this` に `undefined` かグローバルオブジェクト (または、以前の例のグローバルコンテキストのように、いずれかのメソッド) が設定されますが、`obj` の設定が残ります。
-
-### オブジェクトのメソッドとして
-
-関数がオブジェクトのメソッドとして呼び出されるとき、その `this` にはメソッドが呼び出されたオブジェクトが設定されます。
-
-次の例では、`o.f()` が起動したとき、関数内の `this` には、`o` オブジェクトが関連付けられます。
+しかし、`obj` のメソッドを呼び出さずにバインド解除すると、`getThisGetter` は依然として `this` の値が変化するメソッドであるため、注意が必要です。次の例で `fn2()()` を呼び出すと、`globalThis` が返されます。これは、`fn2()` の `this` に従うことで、`fn2()` はオブジェクトに関連付けられることなく呼び出されるため、`globalThis` となるためです。
 
 ```js
-var o = {
-  prop: 37,
-  f: function() {
-    return this.prop;
-  }
-};
-
-console.log(o.f()); // 37
+const fn2 = obj.getThisGetter;
+console.log(fn2()() === globalThis); // true in non-strict mode
 ```
 
-この動作は、関数定義の方法や場所に全く影響を受けないことに注意してください。前述の例では、`o` の定義中に `f` メンバーとして関数をインラインに定義しています。しかし、関数を最初に定義して、後から `o.f` に付け足すことができます。その結果は同じ動作になります。
-
-```js
-var o = {prop: 37};
-
-function independent() {
-  return this.prop;
-}
-
-o.f = independent;
-
-console.log(o.f()); // 37
-```
-
-これは、関数が `o` の `f` のメンバーとして呼び出されることだけが重要なことを示しています。
-
-同様に、`this` の関連付けは、最も直近のメンバー参照にのみ影響を受けます。次の例では、関数が呼び出すとき、オブジェクト `o.b` の `g` メソッドとして呼び出しています。実行時に、関数内の `this` は `o.b` を参照します。オブジェクト自体が `o` のメンバーであるという事実は何の意味もありません。最も直近の参照のみが重要なのです。
-
-```js
-o.b = {g: independent, prop: 42};
-console.log(o.b.g()); // 42
-```
-
-#### オブジェクトのプロトタイプチェーン上の `this`
-
-同じ概念が、オブジェクトのプロトタイプチェーンのどこかに定義されたメソッドにも当てはまります。メソッドがオブジェクトのプロトタイプチェーン上にあった場合、メソッドがオブジェクト上にあるかのように、`this` はメソッドを呼び出したオブジェクトを参照します。
-
-```js
-var o = {f: function() { return this.a + this.b; }};
-var p = Object.create(o);
-p.a = 1;
-p.b = 4;
-
-console.log(p.f()); // 5
-```
-
-この例では、変数 `p` に割り当てられたオブジェクト自身は `f` プロパティを持たず、プロトタイプから継承しています。しかし、`f` に対する検索が、最終的に `o` でその名前を持つメンバーを見つけることは重要ではありません。検索は `p.f` への参照から開始されるため、関数内の `this` は `p` として参照されるオブジェクトの値を取ります。`f` は `p` のメソッドとして呼ばれたため、その `this` は `p` を参照します。これは、JavaScript のプロトタイプ継承の興味深い機能です。
+この動作は、コールバックを定義する際にとても便利です。通常、各関数式は自分自身で `this` のバインドを作成し、上位スコープの `this` 値を隠してしまいます。つまり、`this` 値を気にしないのであれば関数をアロー関数として定義することができ、また、必要に応じて（例えばクラスメソッド内）で `this` のバインドを作成することができます。[`setTimeout()` を使用した例](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions#call、apply、bind_の使用)を参照してください。
 
 #### ゲッター/セッターと `this`
 
-再度、同じ概念が、ゲッターやセッターから呼ばれる関数にも当てはまります。ゲッターやセッターとして使用される関数は、このプロパティを設定するか、または得られている元のオブジェクトに関連付けられている `this` を持ちます。
+ゲッターおよびセッターにおける `this` は、プロパティが定義されているオブジェクトではなく、プロパティにアクセスするオブジェクトに基づきます。ゲッターまたはセッターとして使用される関数は、プロパティが設定または取得されるオブジェクトに `this` がバインドされています。
 
 ```js
 function sum() {
   return this.a + this.b + this.c;
 }
 
-var o = {
+const o = {
   a: 1,
   b: 2,
   c: 3,
   get average() {
     return (this.a + this.b + this.c) / 3;
-  }
+  },
 };
 
-Object.defineProperty(o, 'sum', {
-    get: sum, enumerable: true, configurable: true});
+Object.defineProperty(o, "sum", {
+  get: sum,
+  enumerable: true,
+  configurable: true,
+});
 
-console.log(o.average, o.sum); // 2, 6
+console.log(o.average, o.sum); // 2 6
 ```
 
-### コンストラクターとして
+### DOM イベントハンドラー内の this
 
-関数がコンストラクターとして ({{jsxref("Operators/new", "new")}} キーワードとともに) 使用されたとき、その `this` は生成された新しいオブジェクトに関連付けられます。
-
-> **メモ:** コンストラクターの既定では、`this` で参照されるオブジェクトを返しますが、代わりにほかのオブジェクトを返すことができます (返値がオブジェクトではない場合、`this` オブジェクトが返されます)。
-
-```js
-/*
- * コンストラクターは下記のように動作します。
- *
- * function MyConstructor(){
- *   // 実際の関数本体のコードはこちらになります。
- *   // プロパティに代入することで、 |this| に必要な
- *   // プロパティを作成します。例えば、
- *   this.fum = "nom";
- *   // など...
- *
- *   // 関数にオブジェクトを返す return 文があれば、
- *   // そのオブジェクトが |new| 式の結果になります。
- *   // そうでなければ、式の結果は現在 |this| に
- *   // バインドされているオブジェクトになります
- *   // (つまり、最もよく見られる一般的なケースです)。
- * }
- */
-
-function C() {
-  this.a = 37;
-}
-
-var o = new C();
-console.log(o.a); // 37
-
-function C2() {
-  this.a = 37;
-  return {a: 38};
-}
-
-o = new C2();
-console.log(o.a); // 38
-```
-
-最後の例 (`C2`) では、構築中にオブジェクトを返しているので、`this` が結び付けられている新しいオブジェクトは単に破棄されています。(これは根本的に "`this.a = 37;`" 文を死んだコードにしてしまっています。これは実行されるので、正確には死んだコードではありませんが、外部への影響がありません。)
-
-### DOM イベントハンドラーとして
-
-関数がイベントハンドラとして使用された場合、その `this` はリスナーが配置されている要素に設定されます ({{domxref("EventTarget/addEventListener", "addEventListener()")}} 以外のメソッドで動的に追加されたリスナーについては、この規約に従わないブラウザーもあります)。
+関数がイベントハンドラーとして使用された場合、その `this` はリスナーが配置されている要素に設定されます ({{domxref("EventTarget/addEventListener", "addEventListener()")}} 以外のメソッドで動的に追加されたリスナーについては、この規約に従わないブラウザーもあります)。
 
 ```js
 // リスナーとして呼び出された場合は、関連づけられた要素を青にする
@@ -387,40 +441,38 @@ function bluify(e) {
   console.log(this === e.currentTarget);
   // currentTarget と target が同じオブジェクトであれば true
   console.log(this === e.target);
-  this.style.backgroundColor = '#A5D9F3';
+  this.style.backgroundColor = "#A5D9F3";
 }
 
 // 文書内の各要素の一覧を取得
-var elements = document.getElementsByTagName('*');
+const elements = document.getElementsByTagName("*");
 
 // クリックリスナーとして bluify を追加することで、
 // 要素をクリックすると青くなるようになる
-for (var i = 0; i < elements.length; i++) {
-  elements[i].addEventListener('click', bluify, false);
+for (const element of elements) {
+  element.addEventListener("click", bluify, false);
 }
 ```
 
-### インラインイベントハンドラー内
+### インラインイベントハンドラー内の this
 
-コードがインラインの [on-イベントハンドラー](/ja/docs/Web/Events/Event_handlers)から呼び出されたとき、その `this` にはリスナーが配置されている DOM 要素が設定されます。
+コードがインラインの[イベントハンドラー属性](/ja/docs/Web/HTML/Attributes#イベントハンドラー属性)から呼び出されたとき、その `this` にはリスナーが配置されている DOM 要素が設定されます。
 
 ```html
-<button onclick="alert(this.tagName.toLowerCase());">
-  Show this
-</button>
+<button onclick="alert(this.tagName.toLowerCase());">Show this</button>
 ```
 
 上記のアラートは `button` と表示します。ただし、外側のコードがこのように設定された `this` を持っているだけだということに注意してください。
 
 ```html
-<button onclick="alert((function() { return this; })());">
+<button onclick="alert((function () { return this; })());">
   Show inner this
 </button>
 ```
 
-この場合、内側の関数の `this` は設定されていないので、グローバルの window オブジェクトを返します (つまり、`this` が呼び出しによって設定されていないので、非 strict モードの既定オブジェクトです)。
+この場合、内部関数の `this` 引数は `globalThis` にバインドされます（すなわち、厳格モードではない場合に `this` が呼び出される際に渡されない既定オブジェクト）。
 
-### クラス内の this
+### クラス内のメソッドのバインド
 
 通常の関数と同様に、メソッド内の `this` の値は、どのように呼び出されるかによって異なります。クラス内の `this` が常にクラスのインスタンスを参照するように、この動作をオーバーライドしておくと便利な場合もあります。これを実現するには、コンストラクターでクラスのメソッドをバインドします。
 
@@ -430,20 +482,23 @@ class Car {
     // 違いを示すために sayHi ではなく sayBye をバインドする
     this.sayBye = this.sayBye.bind(this);
   }
+
   sayHi() {
     console.log(`Hello from ${this.name}`);
   }
+
   sayBye() {
     console.log(`Bye from ${this.name}`);
   }
+
   get name() {
-    return 'Ferrari';
+    return "Ferrari";
   }
 }
 
 class Bird {
   get name() {
-    return 'Tweety';
+    return "Tweety";
   }
 }
 
@@ -457,10 +512,34 @@ bird.sayHi(); // Hello from Tweety
 
 // バインドされたメソッドの場合、'this' は呼び出し元に依存しません
 bird.sayBye = car.sayBye;
-bird.sayBye();  // Bye from Ferrari
+bird.sayBye(); // Bye from Ferrari
 ```
 
-> **メモ:** クラスは常に strict モードのコードです。これを定義せずに `this` でメソッドを呼び出すとエラーが発生します。
+> [!NOTE]
+> クラスは常に厳格モードのコードです。これを定義せずに `this` でメソッドを呼び出すとエラーが発生します。
+>
+> ```js example-bad
+> const carSayHi = car.sayHi;
+> carSayHi(); // TypeError because the 'sayHi' method tries to access 'this.name', but 'this' is undefined in strict mode.
+> ```
+
+ただし、自動バインドされたメソッドは、[クラスプロパティにアロー関数を使用すること](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions#メソッドとしては使用不可)と同じ問題を抱えていることに注意してください。つまり、クラスの各インスタンスには、そのメソッドのコピーがそれぞれ保有されるため、メモリー使用量が増加します。 絶対に必要な場合のみ、これを使用してください。 [`Intl.NumberFormat.prototype.format()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format#format_と_map_の使用) の実装を模倣することもできます。プロパティをゲッターとして定義し、アクセスされた際にバインド済み関数を返し、それを保存します。これにより、関数は一度だけ作成され、必要な場合にのみ作成されます。
+
+### with 文内の this
+
+[`with`](/ja/docs/Web/JavaScript/Reference/Statements/with) 文は非推奨であり、厳格モードでは利用できませんが、通常の `this` バインドルールに対する例外として機能します。`with` 文内で関数が呼ばれ、その関数がスコープオブジェクトのプロパティである場合、`this` 値は `obj1.` 接頭辞が存在するかのように、スコープオブジェクトにバインドされます。
+
+```js
+const obj1 = {
+  foo() {
+    return this;
+  },
+};
+
+with (obj1) {
+  console.log(foo() === obj1); // true
+}
+```
 
 ## 仕様書
 
@@ -472,7 +551,5 @@ bird.sayBye();  // Bye from Ferrari
 
 ## 関連情報
 
-- [Strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)
-- [Gentle
-  explanation of 'this' keyword in JavaScript](https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/)
-- グローバルコンテキストの取得: {{jsxref("globalThis")}}
+- [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)
+- {{jsxref("globalThis")}}

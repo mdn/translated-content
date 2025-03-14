@@ -1,19 +1,21 @@
 ---
 title: shape-rendering
 slug: Web/SVG/Attribute/shape-rendering
-translation_of: Web/SVG/Attribute/shape-rendering
 ---
+
+{{SVGRef}}
+
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 При создании SVG есть возможность указать браузеру, как рекомендуется рендерить (отрисовывать) элементы {{ SVGElement("path") }} или базовые фигуры. `shape-rendering` предоставляет возможность указывать данные рекомендации.
 
 ## Контекст использования
 
-| Категория            | Атрибут представления                                                                    |
-| -------------------- | ---------------------------------------------------------------------------------------- |
-| Значения             | **auto** \| optimizeSpeed \| crispEdges \| geometricPrecision \| inherit                 |
-| Анимация             | Да                                                                                       |
-| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/painting.html#ShapeRenderingProperty) |
+| Категория            | Атрибут представления                                                                     |
+| -------------------- | ----------------------------------------------------------------------------------------- |
+| Значения             | **auto** \| optimizeSpeed \| crispEdges \| geometricPrecision \| inherit                  |
+| Анимация             | Да                                                                                        |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/painting.html#ShapeRenderingProperty) |
 
 - auto
   - : Указывает на то, что браузер должен внести соответствующие компромиссы, чтобы сбалансировать скорость рендеринга, чёткие края и геометрическую точность, но геометрической точности уделять более пристальное внимание, чем скорости и чётким краями.
@@ -47,4 +49,4 @@ translation_of: Web/SVG/Attribute/shape-rendering
 
 Следующие элементы могут использовать атрибут `shape-rendering`
 
-- [Shape elements](/en/SVG/Element#Shape)
+- [Shape elements](/en-US/SVG/Element#shape)

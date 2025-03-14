@@ -1,10 +1,9 @@
 ---
 title: WebSockets
 slug: Web/API/WebSockets_API
-original_slug: WebSockets
 ---
 
-{{ SeeCompatTable() }}
+{{DefaultAPISidebar("WebSockets API")}}{{ SeeCompatTable() }}
 
 WebSocket 是一種讓瀏覽器與伺服器進行一段互動通訊的技術。這個 API 在不必輪詢（poll）伺服器下，讓使用者傳送訊息至伺服器並接受事件驅動回應。
 
@@ -70,11 +69,11 @@ WebSocket 是一種讓瀏覽器與伺服器進行一段互動通訊的技術。�
   </tbody>
 </table>
 
-## 參見
-
-- [WebSocket API Specification](http://dev.w3.org/html5/websockets/)
-- [Server-Sent Events](/zh-TW/Server-sent_events)
-
-## 瀏覽器兼容
+## 瀏覽器相容性
 
 {{Compat}}
+
+## 參見
+
+- [WebSocket API Specification](https://websockets.spec.whatwg.org/)
+- [Server-Sent Events](/zh-TW/docs/Web/API/Server-sent_events)

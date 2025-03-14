@@ -1,24 +1,25 @@
 ---
 title: types
 slug: Mozilla/Add-ons/WebExtensions/API/types
+l10n:
+  sourceCommit: d6856a051d0ba078ec1d24b80908b1ca174917db
 ---
 
 {{AddonSidebar}}
 
-Defines the `BrowserSetting` type, which is used to represent a browser setting.
+定义了 `BrowserSetting` 类型，用于表示浏览器设置。
 
-## Types
+## 类型
 
 - {{WebExtAPIRef("types.BrowserSetting")}}
-  - : Represents a browser setting.
+  - : 表示浏览器设置。
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{WebExtExamples("h2")}}
 
-> **备注：** This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/extensions/types) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.types`](https://developer.chrome.google.cn/docs/extensions/reference/api/types) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

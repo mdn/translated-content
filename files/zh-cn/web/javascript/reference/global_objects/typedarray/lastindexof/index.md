@@ -5,12 +5,13 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf
 
 {{JSRef}}
 
-**`lastIndexOf()`** 方法返回在类型数组中可以找到给定元素的最后一个索引，如果不存在，则返回 -1。方法具有与 {{jsxref("Array.prototype.lastIndexOf()")}} 相同的算法。TypedArray 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)之一。
+**`lastIndexOf()`** 方法返回在类型数组中可以找到给定元素的最后一个索引，如果不存在，则返回 -1。方法具有与 {{jsxref("Array.prototype.lastIndexOf()")}} 相同的算法。TypedArray 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects)之一。
 
 ## 语法
 
-```plain
-typedarray.lastIndexOf(searchElement[, fromIndex = typedarray.length])
+```js-nolint
+lastIndexOf(searchElement)
+lastIndexOf(searchElement, fromIndex)
 ```
 
 ### 参数
@@ -26,16 +27,16 @@ typedarray.lastIndexOf(searchElement[, fromIndex = typedarray.length])
 
 ## 描述
 
-`lastIndexOf`使用[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) （由 === 或三等号运算符使用的相同方法）比较`searchElement`和类型化数组的元素。
+`lastIndexOf`使用[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators) （由 === 或三等号运算符使用的相同方法）比较`searchElement`和类型化数组的元素。
 
 ## 示例
 
 ```js
 var uint8 = new Uint8Array([2, 5, 9, 2]);
-uint8.lastIndexOf(2);     // 3
-uint8.lastIndexOf(7);     // -1
-uint8.lastIndexOf(2, 3);  // 3
-uint8.lastIndexOf(2, 2);  // 0
+uint8.lastIndexOf(2); // 3
+uint8.lastIndexOf(7); // -1
+uint8.lastIndexOf(2, 3); // 3
+uint8.lastIndexOf(2, 2); // 0
 uint8.lastIndexOf(2, -2); // 0
 uint8.lastIndexOf(2, -1); // 3
 ```
@@ -48,7 +49,7 @@ uint8.lastIndexOf(2, -1); // 3
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("TypedArray.prototype.indexOf()")}}
 - {{jsxref("Array.prototype.lastIndexOf()")}}

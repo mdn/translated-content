@@ -1,19 +1,9 @@
 ---
 title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
-tags:
-  - Clase
-  - Class
-  - Declaración
-  - Expresión
-  - Function
-  - JavaScript
-  - función
-translation_of: Web/JavaScript/Reference/Global_Objects/Function
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Function
 ---
 
-{{JSRef("Objetos_globales", "Function")}}
+{{JSRef}}
 
 Cada función de JavaScript en realidad es un objeto `Function`. Esto se puede ver con el código `(function() {}).constructor === Function`, que devuelve `true`.
 
@@ -59,35 +49,33 @@ Las funciones creadas con el constructor `Function` no crean cierres para sus co
 var x = 10;
 
 function createFunction1() {
-    var x = 20;
-    return new Function('return x;'); // esta |x| se refiere a la |x| global
+  var x = 20;
+  return new Function("return x;"); // esta |x| se refiere a la |x| global
 }
 
 function createFunction2() {
-    var x = 20;
-    function f() {
-        return x; // esta |x| se refiere a la |x| local
-    }
-    return f;
+  var x = 20;
+  function f() {
+    return x; // esta |x| se refiere a la |x| local
+  }
+  return f;
 }
 
 var f1 = createFunction1();
-console.log(f1());          // 10
+console.log(f1()); // 10
 var f2 = createFunction2();
-console.log(f2());          // 20
+console.log(f2()); // 20
 ```
 
 Si bien este código funciona en los navegadores web, `f1()` producirá un `ReferenceError` en Node.js, ya que no encontrará a `x`. Esto se debe a que el ámbito de nivel superior en Node no es el ámbito global, y `x` será local para el módulo.
 
 ## Especificaciones
 
-| Especificación                                                                   |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-function-objects', 'Function')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function")}}
+{{Compat}}
 
 ## Ve también
 

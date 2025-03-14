@@ -1,15 +1,6 @@
 ---
 title: Expressions et opérateurs
 slug: Web/JavaScript/Reference/Operators
-tags:
-  - JavaScript
-  - Landing page
-  - Operators
-  - Overview
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators
-original_slug: Web/JavaScript/Reference/Opérateurs
-browser-compat: javascript.operators
 ---
 
 {{jsSidebar("Operators")}}
@@ -53,14 +44,14 @@ Mots-clés de base et expressions générales en JavaScript.
 
 Les valeurs situées à gauche sont la cible de l'affectation.
 
-- [Accesseurs de propriété](/fr/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Accesseurs de propriété](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors)
   - : Les opérateurs d'accès aux membres permettent d'accéder à une propriété ou à une méthode d'un objet.
     (cela regroupe `objet.propriete` et `objet["propriete"]`).
 - [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new)
   - : L'opérateur `new` crée une instance grâce à un constructeur.
 - [`new.target`](/fr/docs/Web/JavaScript/Reference/Operators/new.target)
   - : Pour les constructeurs, `new.target` fait référence au constructeur invoqué avec [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new).
-- [`import.meta`](/fr/docs/Web/JavaScript/Reference/Statements/import.meta)
+- [`import.meta`](/fr/docs/Web/JavaScript/Reference/Operators/import.meta)
   - : Un objet qui expose des métadonnées spécifiques au contexte pour un module JavaScript.
 - [`super`](/fr/docs/Web/JavaScript/Reference/Operators/super)
   - : Le mot-clé `super` appelle le constructeur parent.
@@ -178,18 +169,18 @@ Les opérateurs logiques sont généralement utilisés avec des valeurs booléen
   - : Opérateur logique ET/AND.
 - [`||`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR)
   - : Opérateur logique OU/OR.
-- [`??`](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [`??`](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
   - : Opérateur de coalescence des nuls.
 
 ### Opérateur conditionnel ternaire
 
-- [`(condition ? ifTrue : ifFalse)`](/fr/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+- [`(condition ? ifTrue : ifFalse)`](/fr/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
   - : L'opérateur conditionnel renvoie une valeur parmi deux selon la valeur logique de la condition portée par le premier opérande.
 
 ### Opérateur de chaînage optionnel
 
 - [`?.`](/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-  - : L'opérateur de chaînage optionnel renvoie `undefined` plutôt que de causer une erreur si une référence vaut [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined).
+  - : L'opérateur de chaînage optionnel renvoie `undefined` plutôt que de causer une erreur si une référence vaut [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined).
 
 ### Opérateurs d'affectation
 
@@ -225,7 +216,7 @@ Un opérateur d'affectation permet d'affecter une valeur à son opérande gauche
   - : Opérateur booléen ET et d'affectation.
 - [`||=`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
   - : Opérateur booléen OU et d'affectation.
-- [`??=`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment)
+- [`??=`](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
   - : Opérateur d'affectation et de logique nulle.
 - [`[a, b] = [1, 2]`](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
   [`{a, b} = {a:1, b:2}`](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
@@ -233,7 +224,7 @@ Un opérateur d'affectation permet d'affecter une valeur à son opérande gauche
 
 ### Opérateur virgule
 
-- [`,`](/fr/docs/Web/JavaScript/Reference/Operators/Comma_Operator)
+- [`,`](/fr/docs/Web/JavaScript/Reference/Operators/Comma_operator)
   - : L'opérateur virgule permet d'évaluer plusieurs expressions dans une seule instruction et renvoie le résultat de la dernière expression.
 
 ## Spécifications
@@ -246,4 +237,4 @@ Un opérateur d'affectation permet d'affecter une valeur à son opérande gauche
 
 ## Voir aussi
 
-- [Précédence des opérateurs en JavaScript](/fr/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- [Précédence des opérateurs en JavaScript](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence)

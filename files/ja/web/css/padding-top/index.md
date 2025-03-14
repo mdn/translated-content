@@ -1,13 +1,58 @@
 ---
 title: padding-top
 slug: Web/CSS/padding-top
+l10n:
+  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
 {{CSSRef}}
 
-**`padding-top`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[パディング領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#パディング領域)における上側の高さを設定します。
+**`padding-top`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[パディング領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#パディング領域)における上側の高さを設定します。
 
-{{EmbedInteractiveExample("pages/css/padding-top.html")}}
+{{InteractiveExample("CSS Demo: padding-top")}}
+
+```css interactive-example-choice
+padding-top: 1em;
+```
+
+```css interactive-example-choice
+padding-top: 10%;
+```
+
+```css interactive-example-choice
+padding-top: 20px;
+```
+
+```css interactive-example-choice
+padding-top: 1ch;
+```
+
+```css interactive-example-choice
+padding-top: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+}
+```
 
 要素のパディング領域とは、コンテンツと境界との間の空間のことです。
 
@@ -30,6 +75,7 @@ padding-top: 10%;
 padding-top: inherit;
 padding-top: initial;
 padding-top: revert;
+padding-top: revert-layer;
 padding-top: unset;
 ```
 
@@ -40,7 +86,7 @@ padding-top: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : パディングの寸法を固定値で表したものです。負の数であってはいけません。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : パディングの寸法を包含ブロックの*幅*に対するパーセント値で表したものです。負の数であってはいけません。
+  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
 
 ## 公式定義
 
@@ -55,8 +101,12 @@ padding-top: unset;
 ### 上パディングをピクセル数とパーセント値で設定
 
 ```css
-.content { padding-top: 5%; }
-.sidebox { padding-top: 10px; }
+.content {
+  padding-top: 5%;
+}
+.sidebox {
+  padding-top: 10px;
+}
 ```
 
 ## 仕様書
@@ -69,6 +119,6 @@ padding-top: unset;
 
 ## 関連情報
 
-- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}} および {{cssxref("padding")}} 一括指定
 - 対応付けられる論理的プロパティ: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}} および一括指定の {{cssxref("padding-block")}} と {{cssxref("padding-inline")}}

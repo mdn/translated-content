@@ -1,14 +1,6 @@
 ---
 title: CustomElementRegistry
 slug: Web/API/CustomElementRegistry
-tags:
-  - API
-  - CustomElementRegistry
-  - Interface
-  - Reference
-  - Web Components
-browser-compat: api.CustomElementRegistry
-translation_of: Web/API/CustomElementRegistry
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -18,7 +10,7 @@ translation_of: Web/API/CustomElementRegistry
 ## 메서드
 
 - {{domxref("CustomElementRegistry.define()")}}
-  - : 새로운 [사용자 정의 요소](/ko/docs/Web/Web_Components/Using_custom_elements)를 정의합니다.
+  - : 새로운 [사용자 정의 요소](/ko/docs/Web/API/Web_components/Using_custom_elements)를 정의합니다.
 - {{domxref("CustomElementRegistry.get()")}}
   - : 주어진 이름을 붙인 사용자 정의 요소의 생성자를 반환합니다. 해당하는 이름에 정의된 요소가 존재하지 않으면 {{jsxref("undefined")}}를 대신 반환합니다.
 - {{domxref("CustomElementRegistry.upgrade()")}}
@@ -40,25 +32,28 @@ class WordCount extends HTMLParagraphElement {
     // 요소 부모의 단어 수 세기
     const wcParent = this.parentNode;
 
-    function countWords(node){
+    function countWords(node) {
       const text = node.innerText || node.textContent;
-      return text.trim().split(/\s+/g).filter(a => a.trim().length > 0).length;
+      return text
+        .trim()
+        .split(/\s+/g)
+        .filter((a) => a.trim().length > 0).length;
     }
 
     const count = `Words: ${countWords(wcParent)}`;
 
     // 섀도 루트 생성
-    const shadow = this.attachShadow({mode: 'open'});
+    const shadow = this.attachShadow({ mode: "open" });
 
     // 텍스트 노드 생성 후 단어 수로 채우기
-    const text = document.createElement('span');
+    const text = document.createElement("span");
     text.textContent = count;
 
     // 텍스트 노드를 섀도 루트에 추가
     shadow.appendChild(text);
 
     // 요소 콘텐츠가 바뀌면 단어 수 업데이트
-    setInterval(function() {
+    setInterval(function () {
       const count = `Words: ${countWords(wcParent)}`;
       text.textContent = count;
     }, 200);
@@ -66,12 +61,12 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // 새로운 요소 정의
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 > **참고:** `CustomElementRegistry`는 {{domxref("Window.customElements")}} 속성으로 접근할 수 있습니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

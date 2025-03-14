@@ -3,7 +3,9 @@ title: Content-Disposition
 slug: Web/HTTP/Headers/Content-Disposition
 ---
 
-{{HTTPSidebar}}Em uma resposta HTTP normal, o cabeçalho de resposta **`Content-Disposition`** indica se o conteúdo é esperado a ser exibido _inline_ no navegador, isso significa, como uma página Web ou parte de uma, ou como um anexo, que é baixado e salvo localmente.
+{{HTTPSidebar}}
+
+Em uma resposta HTTP normal, o cabeçalho de resposta **`Content-Disposition`** indica se o conteúdo é esperado a ser exibido _inline_ no navegador, isso significa, como uma página Web ou parte de uma, ou como um anexo, que é baixado e salvo localmente.
 
 Em um corpo `multipart/form-data`, o cabeçalho geral HTTP **`Content-Disposition`** é um cabeçalho que pode ser utilizado em uma subparte de um corpo multipartes para dar informações sobre o campo a que ele se aplica. A subparte é delimitada pelo limite definido no cabeçalho {{HTTPHeader("Content-Type")}}. Usado no corpo em si, `Content-Disposition` não tem efeito.
 
@@ -51,7 +53,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 
 - `name`
 
-  - : O nome é seguido por uma cadeia de caracteres contendo o nome do campo HTML no formulário que o conteúdo dessa subparte se refere. Quando lidando com múltiplos arquivos no mesmo campo (por exemplo, o atributo {{htmlattrxref("multiple", "input")}} de um elemento `{HTMLElement("input","<input type=\"file\">")}}`), podem haver diversas subpartes com o mesmo nome.
+  - : O nome é seguido por uma cadeia de caracteres contendo o nome do campo HTML no formulário que o conteúdo dessa subparte se refere. Quando lidando com múltiplos arquivos no mesmo campo (por exemplo, o atributo [`multiple`](/pt-BR/docs/Web/HTML/Element/input#multiple) de um elemento `{HTMLElement("input","<input type=\"file\">")}}`), podem haver diversas subpartes com o mesmo nome.
 
     Um `name` com o valor de `'_charset_'` indica que a parte não é um campo HTML, mas uma codificação para usar em partes sem explicitar a informação de codificação.
 
@@ -95,22 +97,22 @@ value2
 
 ## Especificações
 
-| Especificação        | Título                                                                                            |
-| -------------------- | ------------------------------------------------------------------------------------------------- |
+| Especificação   | Título                                                                                            |
+| --------------- | ------------------------------------------------------------------------------------------------- |
 | {{RFC("7578")}} | Returning Values from Forms: multipart/form-data                                                  |
 | {{RFC("6266")}} | Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP)             |
 | {{RFC("2183")}} | Communicating Presentation Information in Internet Messages: The Content-Disposition Header Field |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Content-Disposition")}}
+{{Compat}}
 
 ## Notas de compatibilidade
 
-- Firefox 5 lida com o cabeçalho de resposta HTTP `Content-Disposition` mais efetivamente se ambos parâmetros `filename` e `filename*` são providos; ele olha através de todos os nomes providenciados, usando o parâmetro `filename*` se um estiver disponível, mesmo se o parâmetro `filename` estiver incluído primeiro. Anteriormente, o primeiro parâmetro que combinasse seria utilizado, Previously, the first matching parameter would be used, desse modo prevenindo um nome mais apropriado de ser utilizado. Veja {{bug(588781)}}.
+- Firefox 5 lida com o cabeçalho de resposta HTTP `Content-Disposition` mais efetivamente se ambos parâmetros `filename` e `filename*` são providos; ele olha através de todos os nomes providenciados, usando o parâmetro `filename*` se um estiver disponível, mesmo se o parâmetro `filename` estiver incluído primeiro. Anteriormente, o primeiro parâmetro que combinasse seria utilizado, Previously, the first matching parameter would be used, desse modo prevenindo um nome mais apropriado de ser utilizado. Veja [Erro do Firefox 588781](https://bugzil.la/588781).
 
 ## Veja também
 
-- [Formulários HTML](/pt-BR/docs/Web/Guide/HTML/Forms)
+- [Formulários HTML](/pt-BR/docs/Learn/Forms)
 - O cabeçalho {{HTTPHeader("Content-Type")}} definindo o limite do corpo multipartes.
 - A interface {{domxref("FormData")}} usada para manipular dados de formulários para uso na API {{domxref("XMLHttpRequest")}}.

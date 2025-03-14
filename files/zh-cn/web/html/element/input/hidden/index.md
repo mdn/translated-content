@@ -1,6 +1,6 @@
 ---
 title: <input type="hidden">
-slug: Web/HTML/Element/Input/hidden
+slug: Web/HTML/Element/input/hidden
 ---
 
 {{HTMLSidebar}}
@@ -19,7 +19,7 @@ slug: Web/HTML/Element/Input/hidden
   </tr>
   <tr>
    <td><strong>支持的公共属性</strong></td>
-   <td>{{htmlattrxref("autocomplete", "input")}}</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a></td>
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>
@@ -36,13 +36,14 @@ slug: Web/HTML/Element/Input/hidden
  </tbody>
 </table>
 
-> **备注：** {{domxref("HTMLElement/input_event", "input")}} 和 {{domxref("HTMLElement/change_event", "change")}} 事件不适用于此输入类型。即使使用 JavaScript（如 `hiddenInput.focus()`），隐藏的 input 也无法获得焦点。
+> **备注：** {{domxref("Element/input_event", "input")}} 和 {{domxref("HTMLElement/change_event", "change")}} 事件不适用于此输入类型。即使使用 JavaScript（如 `hiddenInput.focus()`），隐藏的 input 也无法获得焦点。
 
 ## 值
 
-`{{HTMLElement("input")}}` 元素的 `{{htmlattrxref("value", "input")}}` 属性包含要提交到服务器的隐藏数据。尽管可以通过浏览器开发者工具编辑该值，但明确要求用户不能通过用户界面看到或编辑这个值。
+{{HTMLElement("input")}} 元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性包含要提交到服务器的隐藏数据。尽管可以通过浏览器开发者工具编辑该值，但明确要求用户不能通过用户界面看到或编辑这个值。
 
-> **警告：** 尽管该值并未作为页面内容中显示给用户，但仍然可以使用任何浏览器的开发者工具或“查看源代码”功能来查看并进行编辑。请不要将表单的安全性依赖于使用 `hidden` 输入上。
+> [!WARNING]
+> 尽管该值并未作为页面内容中显示给用户，但仍然可以使用任何浏览器的开发者工具或“查看源代码”功能来查看并进行编辑。请不要将表单的安全性依赖于使用 `hidden` 输入上。
 
 ## 额外属性
 
@@ -50,7 +51,7 @@ slug: Web/HTML/Element/Input/hidden
 
 ### name
 
-这实际上是常见属性之一，但它对于隐藏的 `{{HTMLElement("input")}}` 具有一个特殊含义。一般来说，`{{htmlattrxref("name", "input")}}` 属性在隐藏的 input 输入中与在非隐藏的 input 输入的表现是一样的；但是，在提交表单时，会自动包含一个 `name` 属性被设置为 `_charset_` 的隐藏 `input`，其值会被自动设置为被提交表单的字符编码。
+这实际上是常见属性之一，但它对于隐藏的 `{{HTMLElement("input")}}` 具有一个特殊含义。一般来说，[`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性在隐藏的 input 输入中与在非隐藏的 input 输入的表现是一样的；但是，在提交表单时，会自动包含一个 `name` 属性被设置为 `_charset_` 的隐藏 `input`，其值会被自动设置为被提交表单的字符编码。
 
 ## 使用隐藏 input
 
@@ -72,9 +73,10 @@ slug: Web/HTML/Element/Input/hidden
 
 隐藏输入表单还用于存储和提交安全令牌或机密信息，以提高网站的安全性。基本思路是，如果用户正在填写敏感的表单，例如在银行网站上将某笔款项转入另一个账户的表格，所提供的机密信息将证明他们的身份是真实的，并且使用了正确的表单来提交转账请求。
 
-这将阻止恶意用户创建伪造的表单，伪装成银行，然后通过电子邮件将表单发送给毫无戒备心的用户，以诱骗他们将钱转入错误的位置。这种攻击称为[跨站点请求伪造（CSRF）](/zh-CN/docs/Learn/Server-side/First_steps/Website_security#跨站请求伪造_csrf)；几乎任何知名的服务器端框架都使用隐藏机密来防止此类攻击。
+这将阻止恶意用户创建伪造的表单，伪装成银行，然后通过电子邮件将表单发送给毫无戒备心的用户，以诱骗他们将钱转入错误的位置。这种攻击称为[跨站点请求伪造（CSRF）](/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security#跨站请求伪造_csrf)；几乎任何知名的服务器端框架都使用隐藏机密来防止此类攻击。
 
-> **备注：** 如前所述，将密钥放置在隐藏的输入中并不能使其固有安全性。密钥的组成和编码已经可以做到这一点。隐藏输入的值是保持它与数据关联性，并在将表单发送到服务器时自动将其包含在内。你需要使用精心设计的密钥来真正保护您的网站。
+> [!NOTE]
+> 如前所述，将密钥放置在隐藏的输入中并不能使其固有安全性。密钥的组成和编码已经可以做到这一点。隐藏输入的值是保持它与数据关联性，并在将表单发送到服务器时自动将其包含在内。你需要使用精心设计的密钥来真正保护你的网站。
 
 ## 验证
 
@@ -147,13 +149,14 @@ textarea {
 
 {{ EmbedLiveSample('示例', '100%', 200) }}
 
-> **备注：** 您还可以在 GitHub 上找到示例（请参见[源代码](https://github.com/mdn/learning-area/blob/master/html/forms/hidden-input-example/index.html)，并可以[实时运行](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)）。
+> [!NOTE]
+> 你还可以在 GitHub 上找到示例（请参见[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/hidden-input-example/index.html)，并可以[实时运行](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)）。
 
 提交后，发送到服务器的表单数据将如下所示：
 
 `title=My+excellent+blog+post&content=This+is+the+content+of+my+excellent+blog+post.+I+hope+you+enjoy+it!&postId=34657`
 
-即使根本看不到隐藏的 `{{HTMLElement("input")}}`，它所包含的数据仍然会被提交给服务器。
+即使根本看不到隐藏的 {{HTMLElement("input")}}，它所包含的数据仍然会被提交给服务器。
 
 ## 规范
 
@@ -165,5 +168,5 @@ textarea {
 
 ## 参见
 
-- [HTML 表单指南](/zh-CN/docs/Learn/Forms)
+- [HTML 表单指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - 通用 {{HTMLElement("input")}} 元素和用于操作该元素的 {{domxref("HTMLInputElement")}} 接口

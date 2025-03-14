@@ -1,13 +1,58 @@
 ---
 title: font-optical-sizing
 slug: Web/CSS/font-optical-sizing
+l10n:
+  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
 {{CSSRef}}
 
 **`font-optical-sizing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの描画をそれぞれの大きさでの表示に最適化して表示するかどうかを設定します。
 
-{{EmbedInteractiveExample("pages/css/font-optical-sizing.html")}}
+{{InteractiveExample("CSS Demo: font-optical-sizing")}}
+
+```css interactive-example-choice
+font-optical-sizing: auto;
+```
+
+```css interactive-example-choice
+font-optical-sizing: none;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element" style="font-optical-sizing: auto">
+    <h2>Chapter 3</h2>
+    <p>
+      On this particular Thursday, something was moving quietly through the
+      ionosphere many miles above the surface of the planet; several somethings
+      in fact, several dozen huge yellow chunky slablike somethings, huge as
+      office blocks, silent as birds.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  font-family: Amstelvar;
+  font-style: normal;
+}
+
+#example-element {
+  font-family: Amstelvar;
+  text-align: left;
+}
+
+#example-element h2 {
+  font-size: 36px;
+}
+
+#example-element p {
+  font-size: 12px;
+}
+```
 
 ## 構文
 
@@ -20,6 +65,7 @@ font-optical-sizing: auto; /* default */
 font-optical-sizing: inherit;
 font-optical-sizing: initial;
 font-optical-sizing: revert;
+font-optical-sizing: revert-layer;
 font-optical-sizing: unset;
 ```
 
@@ -49,18 +95,21 @@ font-optical-sizing: unset;
 ### オプティカルサイズの変更を無効化
 
 ```html
-<p class="optical-sizing">This paragraph is optically sized.
- This is the default across browsers.</p>
+<p class="optical-sizing">
+  This paragraph is optically sized. This is the default across browsers.
+</p>
 
-<p class="no-optical-sizing">This paragraph is not optically sized.
- You should see a difference in supporting browsers.</p>
+<p class="no-optical-sizing">
+  This paragraph is not optically sized. You should see a difference in
+  supporting browsers.
+</p>
 ```
 
 ```css
 @font-face {
-    src: url('AmstelvarAlpha-VF.ttf');
-    font-family:'Amstelvar';
-    font-style: normal;
+  src: url("AmstelvarAlpha-VF.ttf");
+  font-family: "Amstelvar";
+  font-style: normal;
 }
 
 p {
@@ -73,7 +122,8 @@ p {
 }
 ```
 
-> **メモ:** 上記で参照されているフォント — 光学的サイズを含みライセンスフリーであるもの — がテストに適しています。 [GitHub からダウンロード](https://github.com/TypeNetwork/Amstelvar/releases)できます。
+> [!NOTE]
+> 上記で参照されているフォント — 光学的サイズを含みライセンスフリーであるもの — がテストに適しています。 [GitHub からダウンロード](https://github.com/googlefonts/amstelvar/releases)できます。
 
 ## 仕様書
 

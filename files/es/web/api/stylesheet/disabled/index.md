@@ -1,7 +1,6 @@
 ---
 title: Stylesheet.disabled
 slug: Web/API/StyleSheet/disabled
-translation_of: Web/API/StyleSheet/disabled
 ---
 
 {{ ApiRef() }}
@@ -27,4 +26,4 @@ if (stylesheet.disabled) {
 
 ### Especificación
 
-[disabled](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-disabled)
+[disabled](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-disabled)

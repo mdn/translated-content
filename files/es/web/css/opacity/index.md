@@ -9,7 +9,7 @@ slug: Web/CSS/opacity
 
 La propiedad CSS `opacity` define la transparencia de un elemento, esto es, en qué grado se superpone el fondo al elemento.
 
-Usar esta propiedad con un valor diferente a 1 situa al elemento en un nuevo [contexto de apilamiento](/en/CSS/Understanding_z-index/The_stacking_context).
+Usar esta propiedad con un valor diferente a 1 situa al elemento en un nuevo [contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
 
 {{cssinfo}}
 
@@ -73,25 +73,30 @@ pre {                               /* make the box translucent (80% opaque) */
 ```html
 <!doctype html>
 <html>
-<head>
-<style>
-img.opacity {
-   opacity: 1;
-   filter: alpha(opacity=50);
-   zoom: 1;
- }
+  <head>
+    <style>
+      img.opacity {
+        opacity: 1;
+        filter: alpha(opacity=50);
+        zoom: 1;
+      }
 
-img.opacity:hover {
-   opacity: 0.5;
-   filter: alpha(opacity=100);
-   zoom: 1;
- }
-</style>
-</head>
+      img.opacity:hover {
+        opacity: 0.5;
+        filter: alpha(opacity=100);
+        zoom: 1;
+      }
+    </style>
+  </head>
 
-<body>
-<img src="//developer.mozilla.org/media/img/mdn-logo.png" alt="MDN logo" width="128" height="146" class="opacity">
-</body>
+  <body>
+    <img
+      src="//developer.mozilla.org/media/img/mdn-logo.png"
+      alt="MDN logo"
+      width="128"
+      height="146"
+      class="opacity" />
+  </body>
 </html>
 ```
 
@@ -99,9 +104,9 @@ img.opacity:hover {
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.opacity")}}
+{{Compat}}
 
 ## Más información
 

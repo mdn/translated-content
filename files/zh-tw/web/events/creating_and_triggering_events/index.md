@@ -1,7 +1,6 @@
 ---
 title: 建立或觸發事件
 slug: Web/Events/Creating_and_triggering_events
-original_slug: Web/Guide/Events/Creating_and_triggering_events
 ---
 
 本文介紹如何建立和觸發事件。
@@ -29,14 +28,14 @@ elem.dispatchEvent(event);
 舉例來說，可以以下面方式建立事件：
 
 ```js
-var event = new CustomEvent('build', { 'detail': elem.dataset.time });
+var event = new CustomEvent("build", { detail: elem.dataset.time });
 ```
 
 它可以讓你傳送自訂資料到事件的監聽器：
 
 ```js
 function eventHandler(e) {
-  log('The time is: ' + e.detail);
+  log("The time is: " + e.detail);
 }
 ```
 
@@ -46,15 +45,19 @@ function eventHandler(e) {
 
 ```js
 // 建立事件
-var event = document.createEvent('Event');
+var event = document.createEvent("Event");
 
-// 設定事件名稱為 “build” 。
-event.initEvent('build', true, true);
+// 設定事件名稱為 「build」 。
+event.initEvent("build", true, true);
 
 // 監聽事件
-elem.addEventListener('build', function (e) {
-  // e.target matches elem
-}, false);
+elem.addEventListener(
+  "build",
+  function (e) {
+    // e.target matches elem
+  },
+  false,
+);
 
 // 事件對象可以是任一 HTML 元素或是 EventTarget 。
 elem.dispatchEvent(event);
@@ -62,16 +65,16 @@ elem.dispatchEvent(event);
 
 ## 觸發自定義事件
 
-下面的例子演示了一個複選框藉由 DOM 的 methods 模擬一次點擊（換言之，讓程式執行一次「點擊事件」。）。 [觀看實例](http://developer.mozilla.org/samples/domref/dispatchEvent.html)。
+下面的例子演示了一個複選框藉由 DOM 的 methods 模擬一次點擊（換言之，讓程式執行一次「點擊事件」。）。 [觀看實例](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html)。
 
 ```js
 function simulateClick() {
-  var event = new MouseEvent('click', {
-    'view': window,
-    'bubbles': true,
-    'cancelable': true
+  var event = new MouseEvent("click", {
+    view: window,
+    bubbles: true,
+    cancelable: true,
   });
-  var cb = document.getElementById('checkbox');
+  var cb = document.getElementById("checkbox");
   var canceled = !cb.dispatchEvent(event);
   if (canceled) {
     // A handler called preventDefault.
@@ -83,11 +86,7 @@ function simulateClick() {
 }
 ```
 
-## 瀏覽器的支援度
-
-{{Compat}}
-
-## 延伸閱讀
+## 參見
 
 - {{domxref("document.createEvent()")}}
 - {{domxref("Event.initEvent()")}}

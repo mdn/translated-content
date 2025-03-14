@@ -1,30 +1,41 @@
 ---
 title: <mask>
 slug: Web/SVG/Element/mask
+l10n:
+  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
 {{SVGRef}}
 
-The **`<mask>`** element defines an alpha mask for compositing the current object into the background. A mask is used/referenced using the {{SVGAttr("mask")}} property.
+**`<mask>`** 要素は、現在のオブジェクトを背景に合成するためのアルファマスクを定義します。マスクは {{SVGAttr("mask")}} プロパティを使用して使用/参照します。
+
+## 例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="-10 -10 120 120">
+  <rect x="-10" y="-10" width="120" height="120" fill="blue" />
   <mask id="myMask">
-    <!-- Everything under a white pixel will be visible -->
+    <!-- 白いピクセルの下はすべて表示される -->
     <rect x="0" y="0" width="100" height="100" fill="white" />
 
-    <!-- Everything under a black pixel will be invisible -->
-    <path d="M10,35 A20,20,0,0,1,50,35 A20,20,0,0,1,90,35 Q90,65,50,95 Q10,65,10,35 Z" fill="black" />
+    <!-- 黒いピクセルの下はすべて見えなくなる -->
+    <path
+      d="M10,35 A20,20,0,0,1,50,35 A20,20,0,0,1,90,35 Q90,65,50,95 Q10,65,10,35 Z"
+      fill="black" />
   </mask>
 
   <polygon points="-10,110 110,110 110,-10" fill="orange" />
 
-  <!-- with this mask applied, we "punch" a heart shape hole into the circle -->
-  <circle cx="50" cy="50" r="50" mask="url(#myMask)" />
+  <!-- このマスクを適用した状態で、ハートの図形の穴を円に「パンチ」する -->
+  <circle cx="50" cy="50" r="50" fill="purple" mask="url(#myMask)" />
 </svg>
 ```
 
@@ -33,48 +44,37 @@ html,body,svg { height:100% }
 ## 属性
 
 - {{SVGAttr("height")}}
-  - : This attribute defines the height of the masking area.
-    _Value type_: [**\<length>**](/ja/docs/Web/SVG/Content_type#Length) ; _Default value_: `120%`; _Animatable_: **yes**
+  - : この属性はマスク領域の高さを定義します。
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#length) ; _既定値_: `120%`; _アニメーション_: **可**
 - {{SVGAttr("maskContentUnits")}}
-  - : This attribute defines the coordinate system for the contents of the `<mask>`.
-    _Value type_: `userSpaceOnUse`|`objectBoundingBox` ; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
+  - : この属性は `<mask>` のコンテンツの座標系を定義します。
+    _値の型_: `userSpaceOnUse`|`objectBoundingBox` ; _既定値_: `userSpaceOnUse`; _アニメーション_: **可**
 - {{SVGAttr("maskUnits")}}
-  - : This attribute defines defines the coordinate system for attributes {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}} and {{SVGAttr("height")}} on the `<mask>`.
-    _Value type_: `userSpaceOnUse`|`objectBoundingBox` ; _Default value_: `objectBoundingBox`; _Animatable_: **yes**
+  - : この属性は `<mask>` の属性 {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}} の座標系を定義します。
+    _値の型_: `userSpaceOnUse`|`objectBoundingBox` ; _既定値_: `objectBoundingBox`; _アニメーション_: **可**
 - {{SVGAttr("x")}}
-  - : This attribute defines the x-axis coordinate of the top-left corner of the masking area.
-    _Value type_: [**\<coordinate>**](/ja/docs/Web/SVG/Content_type#Coordinate) ; _Default value_: `-10%`; _Animatable_: **yes**
+  - : この属性は、マスク領域の左上隅の x 軸座標を定義します。
+    _値の型_: [**\<coordinate>**](/ja/docs/Web/SVG/Content_type#coordinate) ; _既定値_: `-10%`; _アニメーション_: **可**
 - {{SVGAttr("y")}}
-  - : This attribute defines the y-axis coordinate of the top-left corner of the masking area.
-    _Value type_: [**\<coordinate>**](/ja/docs/Web/SVG/Content_type#Coordinate) ; _Default value_: `-10%`; _Animatable_: **yes**
+  - : この属性は、マスク領域の左上隅の y 軸座標を定義します。
+    _値の型_: [**\<coordinate>**](/ja/docs/Web/SVG/Content_type#coordinate) ; _既定値_: `-10%`; _アニメーション_: **可**
 - {{SVGAttr("width")}}
-  - : This attribute defines the width of the masking area.
-    _Value type_: [**\<length>**](/ja/docs/Web/SVG/Content_type#Length) ; _Default value_: `120%`; _Animatable_: **yes**
+  - : この属性はマスク領域の幅を定義します。
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#length) ; _既定値_: `120%`; _アニメーション_: **可**
 
-### Global attributes
-
-- [Core Attributes](/ja/docs/Web/SVG/Attribute/Core)
-  - : Most notably: {{SVGAttr('id')}}
-- [Styling Attributes](/ja/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Conditional Processing Attributes](/ja/docs/Web/SVG/Attribute/Conditional_Processing)
-  - : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- [Presentation Attributes](/ja/docs/Web/SVG/Attribute/Presentation)
-  - : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
-
-## Usage notes
+## 使用上のメモ
 
 {{svginfo}}
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
-{{Compat("svg.elements.mask")}}
+{{Compat}}
 
-## あわせて参照
+## 関連情報
 
-- Other clipping and masking SVG elements: {{SVGElement("clipPath")}}
-- Clipping and masking CSS properties: {{cssxref("mask")}}, {{cssxref("mask-image")}},{{cssxref("mask-mode")}}, {{cssxref("mask-repeat")}}, {{cssxref("mask-position")}}, {{cssxref("mask-clip")}}, {{cssxref("mask-origin")}}, {{cssxref("mask-composite")}}, {{cssxref("mask-size")}}, {{cssxref("pointer-events")}}
+- その他のクリッピングとマスクの SVG 要素: {{SVGElement("clipPath")}}
+- クリッピングとマスクの CSS プロパティ: {{cssxref("mask")}}, {{cssxref("mask-image")}}, {{cssxref("mask-mode")}}, {{cssxref("mask-repeat")}}, {{cssxref("mask-position")}}, {{cssxref("mask-clip")}}, {{cssxref("mask-origin")}}, {{cssxref("mask-composite")}}, {{cssxref("mask-size")}}, {{cssxref("pointer-events")}}

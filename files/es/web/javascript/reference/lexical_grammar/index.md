@@ -1,14 +1,6 @@
 ---
 title: Gramática léxica
 slug: Web/JavaScript/Reference/Lexical_grammar
-tags:
-  - Gramática léxica
-  - Guía
-  - JaveScript
-  - Literal
-  - Palabra clave
-translation_of: Web/JavaScript/Reference/Lexical_grammar
-original_slug: Web/JavaScript/Referencia/Gramatica_lexica
 ---
 
 {{JsSidebar("Más")}}
@@ -21,9 +13,9 @@ Los caracteres de control no tienen representación visual, pero se utilizan par
 
 | Punto de código | Nombre                  | Abreviatura | Descripción                                                                                                                                                                                                               |
 | --------------- | ----------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `U+200C`        | Separador de ancho cero | `<ZWNJ>`      | Colocado entre caracteres para evitar que se conecten a ligaduras en ciertos idiomas ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_non-joiner)).                                                                  |
-| `U+200D`        | Conector de ancho cero  | `<ZWJ>`       | Colocado entre caracteres que normalmente no estarían conectados para hacer que los caracteres se rendericen usando su forma conectada en ciertos idiomas ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_joiner)). |
-| `U+FEFF`        | Marca de orden de bytes | `<BOM>`       | Se usa al comienzo del script para marcarlo como Unicode y el orden de bytes del texto ([Wikipedia](https://en.wikipedia.org/wiki/Marca_de_orden_de_bytes)).                                                              |
+| `U+200C`        | Separador de ancho cero | `<ZWNJ>`    | Colocado entre caracteres para evitar que se conecten a ligaduras en ciertos idiomas ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_non-joiner)).                                                                  |
+| `U+200D`        | Conector de ancho cero  | `<ZWJ>`     | Colocado entre caracteres que normalmente no estarían conectados para hacer que los caracteres se rendericen usando su forma conectada en ciertos idiomas ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_joiner)). |
+| `U+FEFF`        | Marca de orden de bytes | `<BOM>`     | Se usa al comienzo del script para marcarlo como Unicode y el orden de bytes del texto ([Wikipedia](https://en.wikipedia.org/wiki/Marca_de_orden_de_bytes)).                                                              |
 
 ## Espacio en blanco
 
@@ -31,25 +23,25 @@ Los caracteres de {{Glossary("Espacio_en_blanco")}} mejoran la legibilidad del t
 
 | Punto de código | Nombre                              | Abreviatura | Descripción                                                                                               | Secuencia de escape |
 | --------------- | ----------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------- | ------------------- |
-| U+0009          | Caracter de tabulación              | `<HT>`        | Tabulación horizontal                                                                                     | \t                  |
-| U+000B          | Tabulación de línea                 | `<VT>`        | Tabulación vertical                                                                                       | \v                  |
-| U+000C          | Avance de Página                    | `<FF>`        | Carácter de control de salto de página ([Wikipedia](https://en.wikipedia.org/wiki/Page_break#Form_feed)). | \f                  |
-| U+0020          | Espacio                             | `<SP>`        | Espacio normal                                                                                            |                     |
-| U+00A0          | Espacio irrompible                  | `<NBSP>`      | Espacio normal, pero ningún punto en el que una línea se pueda romper                                     |                     |
-| Otros           | Otros caracteres de espacio Unicode | `<USP>`       | [Espacios Unicode en Wikipedia](<https://es.wikipedia.org/wiki/Espacio_(puntuaci%C3%B3n)>)                |                     |
+| U+0009          | Caracter de tabulación              | `<HT>`      | Tabulación horizontal                                                                                     | \t                  |
+| U+000B          | Tabulación de línea                 | `<VT>`      | Tabulación vertical                                                                                       | \v                  |
+| U+000C          | Avance de Página                    | `<FF>`      | Carácter de control de salto de página ([Wikipedia](https://en.wikipedia.org/wiki/Page_break#Form_feed)). | \f                  |
+| U+0020          | Espacio                             | `<SP>`      | Espacio normal                                                                                            |                     |
+| U+00A0          | Espacio irrompible                  | `<NBSP>`    | Espacio normal, pero ningún punto en el que una línea se pueda romper                                     |                     |
+| Otros           | Otros caracteres de espacio Unicode | `<USP>`     | [Espacios Unicode en Wikipedia](<https://es.wikipedia.org/wiki/Espacio_(puntuaci%C3%B3n)>)                |                     |
 
 ## Terminadores de línea
 
-Además de los caracteres de {{Glossary("Espacio_en_blanco", "espacio en blanco")}}, los caracteres de terminación de línea se utilizan para mejorar la legibilidad del texto fuente. Sin embargo, en algunos casos, los terminadores de línea pueden influir en la ejecución del código JavaScript, ya que hay algunos lugares donde están prohibidos. Los terminadores de línea también afectan el proceso de la [inserción automática de punto y coma](#Inserción_automática_de_punto_y_coma). Los terminadores de línea se corresponden con la clase **\s** en [expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions).
+Además de los caracteres de {{Glossary("Espacio_en_blanco", "espacio en blanco")}}, los caracteres de terminación de línea se utilizan para mejorar la legibilidad del texto fuente. Sin embargo, en algunos casos, los terminadores de línea pueden influir en la ejecución del código JavaScript, ya que hay algunos lugares donde están prohibidos. Los terminadores de línea también afectan el proceso de la [inserción automática de punto y coma](#inserción_automática_de_punto_y_coma). Los terminadores de línea se corresponden con la clase **\s** en [expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions).
 
 Solo los siguientes puntos de código Unicode se tratan como terminadores de línea en ECMAScript, otros caracteres de salto de línea se tratan como espacios en blanco (por ejemplo, `Next Line`, `NEL`, `U+0085` se consideran como espacios en blanco).
 
 | Punto de código | Nombre                | Abreviatura | Descripción                                                       | Secuencia de escape |
 | --------------- | --------------------- | ----------- | ----------------------------------------------------------------- | ------------------- |
-| U+000A          | Alimentación de linea | `<LF>`        | Caracter de nueva línea en sistemas UNIX.                         | \n                  |
-| U+000D          | Retorno de carro      | `<CR>`        | Caracter de nueva línea en Commodore y los primeros sistemas Mac. | \r                  |
-| U+2028          | Separador de línea    | `<LS>`        | [Wikipedia](https://es.wikipedia.org/wiki/Nueva_l%C3%ADnea)       |                     |
-| U+2029          | Separador de párrafos | `<PS>`        | [Wikipedia](https://es.wikipedia.org/wiki/Nueva_l%C3%ADnea)       |                     |
+| U+000A          | Alimentación de linea | `<LF>`      | Caracter de nueva línea en sistemas UNIX.                         | \n                  |
+| U+000D          | Retorno de carro      | `<CR>`      | Caracter de nueva línea en Commodore y los primeros sistemas Mac. | \r                  |
+| U+2028          | Separador de línea    | `<LS>`      | [Wikipedia](https://es.wikipedia.org/wiki/Nueva_l%C3%ADnea)       |                     |
+| U+2029          | Separador de párrafos | `<PS>`      | [Wikipedia](https://es.wikipedia.org/wiki/Nueva_l%C3%ADnea)       |                     |
 
 ## Comentarios
 
@@ -62,7 +54,7 @@ La primera forma son las dobles barras inclinadas `//` comentario**;** esta conv
 ```js
 function comment() {
   // Este es un comentario JavaScript de una línea
-  console.log('¡Hola mundo!');
+  console.log("¡Hola mundo!");
 }
 comment();
 ```
@@ -74,7 +66,7 @@ Por ejemplo, lo puedes usar en una sola línea:
 ```js
 function comment() {
   /* Este es un comentario JavaScript de una línea */
-  console.log('¡Hola mundo!');
+  console.log("¡Hola mundo!");
 }
 comment();
 ```
@@ -85,7 +77,7 @@ También puedes hacer comentarios de varias líneas, como este:
 function comment() {
   /* Este comentario abarca varias líneas. Aviso
      No necesitamos cerrar el comentario hasta que terminemos. */
-  console.log('¡Hola mundo!');
+  console.log("¡Hola mundo!");
 }
 comment();
 ```
@@ -94,9 +86,9 @@ También lo puedes usar en medio de una línea, si lo deseas, aunque esto puede 
 
 ```js
 function comment(x) {
-  console.log('¡Hola' + x /* inserta el valor de x */ + ' !');
+  console.log("¡Hola" + x /* inserta el valor de x */ + " !");
 }
-comment('mundo');
+comment("mundo");
 ```
 
 Además, lo puedes usar para deshabilitar el código y evitar que se ejecute, envolviendo el código en un comentario, como este:
@@ -124,9 +116,11 @@ El comentario `hashbang` especifica la ruta a un intérprete de JavaScript espec
 console.log("Hola mundo");
 ```
 
-> **Nota:** Los comentarios `hashbang` en JavaScript imitan a los [`shebangs` en Unix](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) utilizados para ejecutar archivos con el intérprete apropiado.
+> [!NOTE]
+> Los comentarios `hashbang` en JavaScript imitan a los [`shebangs` en Unix](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) utilizados para ejecutar archivos con el intérprete apropiado.
 
-> **Advertencia:** Aunque [BOM](https://https://es.wikipedia.org/wiki/Marca_de_orden_de_bytes) antes de que el comentario `hashbang` funcione en un navegador, no se recomienda utilizar BOM en un script con `hashbang`. BOM no funcionará cuando intentes ejecutar el script en Unix/Linux. Por lo tanto, usa UTF-8 sin BOM si deseas ejecutar scripts directamente desde el intérprete.
+> [!WARNING]
+> Aunque [BOM](https://https://es.wikipedia.org/wiki/Marca_de_orden_de_bytes) antes de que el comentario `hashbang` funcione en un navegador, no se recomienda utilizar BOM en un script con `hashbang`. BOM no funcionará cuando intentes ejecutar el script en Unix/Linux. Por lo tanto, usa UTF-8 sin BOM si deseas ejecutar scripts directamente desde el intérprete.
 
 ¡Solo debes usar el estilo de comentario `#!` para especificar un intérprete de JavaScript. En todos los demás casos, utiliza un comentario `//` (o un comentario multilínea).
 
@@ -246,7 +240,7 @@ Algunos identificadores tienen un significado especial en algunos contextos sin 
 Consulta también {{jsxref("null")}} para obtener más información.
 
 ```js
-null
+null;
 ```
 
 ### Booleanos literales
@@ -254,8 +248,8 @@ null
 Consulta también {{jsxref("Boolean", "Booleano")}} para obtener más información.
 
 ```js
-true
-false
+true;
+false;
 ```
 
 ### Literales numéricos
@@ -265,12 +259,12 @@ Los tipos {{jsxref("Number")}} y {{jsxref("BigInt")}} usan literales numéricos.
 #### Decimal
 
 ```js
-1234567890
-42
+1234567890;
+42;
 
 // Precaución al usar con un cero a la izquierda:
-0888 // 888 procesado como decimal
-0777 // procesado como octal, 511 en decimal
+0888; // 888 procesado como decimal
+0777; // procesado como octal, 511 en decimal
 ```
 
 Ten en cuenta que los decimales literales pueden comenzar con un cero (`0`) seguido de otro dígito decimal, pero si todos los dígitos después del `0` inicial son menores que 8, el número se interpreta como un número octal. Esto no arrojará JavaScript, consulta [error 957513](https://bugzilla.mozilla.org/show_bug.cgi?id=957513). Consulta también la página sobre {{jsxref("parseInt", "parseInt()")}}
@@ -280,12 +274,12 @@ Ten en cuenta que los decimales literales pueden comenzar con un cero (`0`) segu
 El literal exponencial decimal se especifica mediante el siguiente formato: `beN`; donde `b` es un número base (entero o flotante), seguido del caracter `e` (que sirve como separador o _indicador de exponente_) y `N`, que es un número _exponente_ o _potencia_: un entero con signo (según las especificaciones ECMA-262 de 2019):
 
 ```js
-0e-5   // => 0
-0e+5   // => 0
-5e1    // => 50
-175e-2 // => 1.75
-1e3    // => 1000
-1e-3   // => 0.001
+0e-5; // => 0
+0e5; // => 0
+5e1; // => 50
+175e-2; // => 1.75
+1e3; // => 1000
+1e-3; // => 0.001
 ```
 
 #### Binario
@@ -293,9 +287,9 @@ El literal exponencial decimal se especifica mediante el siguiente formato: `beN
 La sintaxis de números binarios utiliza un cero inicial seguido de una letra "B" latina en minúscula o mayúscula (`0b` o `0B`). Debido a que esta sintaxis es nueva en ECMAScript 2015, consulta la tabla de compatibilidad del navegador a continuación. Si los dígitos después de `0b` no son 0 o 1, se muestra el siguiente {{jsxref("SyntaxError")}}: "Faltan dígitos binarios después de 0b".
 
 ```js
-var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+var FLT_SIGNBIT = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
+var FLT_MANTISSA = 0b00000000011111111111111111111111; // 8388607
 ```
 
 #### Octal
@@ -303,12 +297,12 @@ var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
 La sintaxis de números octales utiliza un cero inicial seguido de una letra "O" latina en minúscula o mayúscula (`0o` o `0O`). Debido a que esta sintaxis es nueva en ECMAScript 2015, consulta la tabla de compatibilidad del navegador a continuación. Si los dígitos después del `0o` están fuera del rango (01234567), se lanza el siguiente {{jsxref("SyntaxError")}}: "Dígitos octales faltantes después del 0o".
 
 ```js
-var n = 0O755; // 493
+var n = 0o755; // 493
 var m = 0o644; // 420
 
 // También es posible con solo un cero inicial (ve la nota sobre los decimales arriba)
-0755
-0644
+0755;
+0644;
 ```
 
 #### Hexadecimal
@@ -316,9 +310,9 @@ var m = 0o644; // 420
 La sintaxis de números hexadecimales utiliza un cero inicial seguido de una letra "X" latina en minúscula o mayúscula (`0x` o `0X`). Si los dígitos después de 0x están fuera del rango (0123456789ABCDEF), se lanza el siguiente {{jsxref("SyntaxError")}}: "El identificador comienza inmediatamente después del literal numérico".
 
 ```js
-0xFFFFFFFFFFFFFFFFF // 295147905179352830000
-0x123456789ABCDEF   // 81985529216486900
-0XA                 // 10
+0xfffffffffffffffff; // 295147905179352830000
+0x123456789abcdef; // 81985529216486900
+0xa; // 10
 ```
 
 #### BigInt literal
@@ -326,10 +320,10 @@ La sintaxis de números hexadecimales utiliza un cero inicial seguido de una let
 El tipo {{jsxref("BigInt")}} es una primitiva numérica en JavaScript que puede representar números enteros con precisión arbitraria. Los BigInt literales se crean agregando `n` al final de un número entero.
 
 ```js
-123456789123456789n     // 123456789123456789
-0o777777777777n         // 68719476735
-0x123456789ABCDEFn      // 81985529216486895‬
-0b11101001010101010101n // 955733
+123456789123456789n; // 123456789123456789
+0o777777777777n; // 68719476735
+0x123456789abcdefn; // 81985529216486895
+0b11101001010101010101n; // 955733
 ```
 
 Ten en cuenta que los números octales heredados con solo un cero a la izquierda no funcionarán para `BigInt`:
@@ -342,10 +336,10 @@ Ten en cuenta que los números octales heredados con solo un cero a la izquierda
 Para números `BigInt` octales, siempre utiliza cero seguido de la letra "o" (mayúscula o minúscula):
 
 ```js example-good
-0o755n
+0o755n;
 ```
 
-Para obtener más información sobre `BigInt`, consulta también [estructuras de datos JavaScript](/es/docs/Web/JavaScript/Data_structures#BigInt_type).
+Para obtener más información sobre `BigInt`, consulta también [estructuras de datos JavaScript](/es/docs/Web/JavaScript/Data_structures#bigint_type).
 
 #### Separadores numéricos
 
@@ -353,20 +347,20 @@ Para mejorar la legibilidad de literales numéricos, se pueden usar guiones bajo
 
 ```js
 // separadores en números decimales
-1_000_000_000_000
-1_050.95
+1_000_000_000_000;
+1_050.95;
 
 // separadores en números binarios
-0b1010_0001_1000_0101
+0b1010_0001_1000_0101;
 
 // separadores en números octales
-0o2_2_5_6
+0o2_2_5_6;
 
 // separadores en números hexadecimales
-0xA0_B0_C0
+0xa0_b0_c0;
 
 // separadores en BigInts
-1_000_000_000_000_000_000_000n
+1_000_000_000_000_000_000_000n;
 ```
 
 Ten en cuenta estas limitaciones:
@@ -387,11 +381,13 @@ Ten en cuenta estas limitaciones:
 Consulta también {{jsxref("Object")}} e [Iniciador de objeto](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer) para obtener más información.
 
 ```js
-var o = { a: 'foo', b: 'bar', c: 42 };
+var o = { a: "foo", b: "bar", c: 42 };
 
 // notación abreviada. Nueva en ES2015
-var a = 'foo', b = 'bar', c = 42;
-var o = {a, b, c};
+var a = "foo",
+  b = "bar",
+  c = 42;
+var o = { a, b, c };
 
 // en vez de
 var o = { a: a, b: b, c: c };
@@ -402,7 +398,7 @@ var o = { a: a, b: b, c: c };
 Consulta también {{jsxref("Array")}} para obtener más información.
 
 ```js
-[1954, 1974, 1990, 2014]
+[1954, 1974, 1990, 2014];
 ```
 
 ### Cadenas literales
@@ -417,9 +413,9 @@ Antes de la [propuesta para hacer que todo el texto JSON sea ECMA-262 válido](h
 
 Cualquier punto de código puede aparecer en forma de secuencia de escape. Las cadenas literales se evalúan como valores de cadena de ECMAScript. Al generar estos valores de cadena, los puntos de código Unicode están codificados en UTF-16.
 
-```js
-'foo'
-"bar"
+```js-nolint
+'foo';
+"bar";
 ```
 
 #### Secuencias de escape hexadecimales
@@ -427,7 +423,7 @@ Cualquier punto de código puede aparecer en forma de secuencia de escape. Las c
 Las secuencias de escape hexadecimales constan de `\x` seguido de exactamente dos dígitos hexadecimales que representan una unidad de código o un punto de código en el rango de 0x0000 a 0x00FF.
 
 ```js
-'\xA9' // "©"
+"\xA9"; // "©"
 ```
 
 #### Secuencias de escape Unicode
@@ -437,7 +433,7 @@ Una secuencia de escape Unicode consta exactamente de cuatro dígitos hexadecima
 Consulta también {{jsxref("String.fromCharCode()")}} y {{jsxref("String.prototype.charCodeAt()")}}.
 
 ```js
-'\u00A9' // "©" (U+A9)
+"\u00A9"; // "©" (U+A9)
 ```
 
 #### Puntos de escape de código Unicode
@@ -447,10 +443,10 @@ Un punto de código de escape Unicode consta de `\u{`, seguido de un punto de c�
 Consulta también {{jsxref("String.fromCodePoint()")}} y {{jsxref("String.prototype.codePointAt()")}}.
 
 ```js
-'\u{2F804}' // CJK COMPATIBILIDAD IDEOGRÁFICA-2F804 (U+2F804)
+"\u{2F804}"; // CJK COMPATIBILIDAD IDEOGRÁFICA-2F804 (U+2F804)
 
 // el mismo caracter representado como un par suplente
-'\uD87E\uDC04'
+"\uD87E\uDC04";
 ```
 
 ### Expresión regular literal
@@ -468,9 +464,9 @@ Consulta también {{jsxref("RegExp")}} para obtener más información.
 
 ### Plantillas literales
 
-Consulta también [cadenas de plantilla](/es/docs/Web/JavaScript/Reference/template_strings) para obtener más información.
+Consulta también [cadenas de plantilla](/es/docs/Web/JavaScript/Reference/Template_literals) para obtener más información.
 
-```js
+```js-nolint
 `string text`
 
 `string text line 1
@@ -478,7 +474,7 @@ Consulta también [cadenas de plantilla](/es/docs/Web/JavaScript/Reference/templ
 
 `string text ${expression} string text`
 
-tag `string text ${expression} string text`
+tag`string text ${expression} string text`
 ```
 
 ## Inserción automática de punto y coma
@@ -495,7 +491,7 @@ Algunas [declaraciones JavaScript](/es/docs/Web/JavaScript/Reference/Statements)
 
 La especificación ECMAScript menciona [tres reglas de inserción de punto y coma](https://tc39.github.io/ecma262/#sec-rules-of-automatic-semicolon-insertion).
 
-1\. Se inserta un punto y coma antes, cuando se encuentra un [terminador de línea](#Line_terminators) o "}" que no está permitido por la gramática.
+1\. Se inserta un punto y coma antes, cuando se encuentra un [terminador de línea](#line_terminators) o "}" que no está permitido por la gramática.
 
 ```js
 { 1 2 } 3
@@ -507,11 +503,11 @@ La especificación ECMAScript menciona [tres reglas de inserción de punto y com
 
 2\. Se inserta un punto y coma al final, cuando se detecta el final del flujo de entrada de símbolos y el analizador no puede procesar el único flujo de entrada como un programa completo.
 
-Aquí `++` no se trata como un [operador sufijo](/es/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment) que se aplica a la variable `b`, porque se produce un terminador de línea entre `b` y `++`.
+Aquí `++` no se trata como un [operador sufijo](/es/docs/Web/JavaScript/Reference/Operators#increment) que se aplica a la variable `b`, porque se produce un terminador de línea entre `b` y `++`.
 
 ```js
-a = b
-++c
+a = b;
+++c;
 
 // IAPC lo transforma en
 
@@ -529,8 +525,8 @@ a = b;
 - `module`
 
 ```js
-return
-a + b
+return;
+a + b;
 
 // La IAPC lo transforma en
 
@@ -540,18 +536,16 @@ a + b;
 
 ## Especificaciones
 
-| Especificación                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-ecmascript-language-lexical-grammar', 'Gramática léxica')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.grammar")}}
+{{Compat}}
 
 ## Ve también
 
-- [Jeff Walden: números binarios y octales](http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
-- [Mathias Bynens: caracteres de secuencias de escape JavaScript](http://mathiasbynens.be/notes/javascript-escapes)
+- [Jeff Walden: números binarios y octales](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
+- [Mathias Bynens: caracteres de secuencias de escape JavaScript](https://mathiasbynens.be/notes/javascript-escapes)
 - {{jsxref("Boolean", "Booleanos")}}
 - {{jsxref("Number", "Números")}}
 - {{jsxref("RegExp")}}

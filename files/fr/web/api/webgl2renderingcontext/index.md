@@ -1,13 +1,6 @@
 ---
 title: WebGL2RenderingContext
 slug: Web/API/WebGL2RenderingContext
-tags:
-  - API
-  - Experimental
-  - Reference
-  - WebGL
-  - WebGL2
-translation_of: Web/API/WebGL2RenderingContext
 ---
 
 {{APIRef("WebGL")}} {{SeeCompatTable}}
@@ -17,17 +10,18 @@ L'interface **WebGL2RenderingContext** fournit le contexte de rendu OpenGL ES 3.
 Pour obtenir un objet de cette interface, appelez {{domxref ("HTMLCanvasElement.getContext()", "getContext()")}} sur un élément `<canvas>`, en fournissant "webgl2" comme argument :
 
 ```js
-var canevas = document.getElementById('monCanevas');
-var gl = canevas.getContext('webgl2');
+var canevas = document.getElementById("monCanevas");
+var gl = canevas.getContext("webgl2");
 ```
 
-> **Note :** WebGL 2 est une extension de WebGL 1. L'interface `WebGL2RenderingContext` implémente tous les membres de l'interface {{domxref("WebGLRenderingContext")}}. Certaines méthodes du contexte WebGL 1 peuvent accepter des valeurs supplémentaires lorsqu'elles sont utilisées dans un contexte WebGL 2. Vous trouverez cette information sur les pages de référence WebGL 1.
+> [!NOTE]
+> WebGL 2 est une extension de WebGL 1. L'interface `WebGL2RenderingContext` implémente tous les membres de l'interface {{domxref("WebGLRenderingContext")}}. Certaines méthodes du contexte WebGL 1 peuvent accepter des valeurs supplémentaires lorsqu'elles sont utilisées dans un contexte WebGL 2. Vous trouverez cette information sur les pages de référence WebGL 1.
 
-Le [didacticiel WebGL](/fr-FR/docs/Web/API/WebGL_API/Tutorial) contient plus d'informations, d'exemples et de ressources sur la façon de démarrer avec WebGL.
+Le [didacticiel WebGL](/fr/docs/Web/API/WebGL_API/Tutorial) contient plus d'informations, d'exemples et de ressources sur la façon de démarrer avec WebGL.
 
 ## Constantes
 
-Voir la page des [constantes WebGL](/fr-FR/docs/Web/API/WebGL_API/Constants).
+Voir la page des [constantes WebGL](/fr/docs/Web/API/WebGL_API/Constants).
 
 ## Informations d'état
 

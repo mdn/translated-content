@@ -1,21 +1,28 @@
 ---
 title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
-tags:
-  - Clase
-  - Class
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray
-original_slug: Web/JavaScript/Referencia/Objetos_globales/TypedArray
 ---
 
 {{JSRef}}
 
 Un objeto **_TypedArray_** describe una vista similar a un arreglo de un [búfer de datos binarios subyacente](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). No existe una propiedad global denominada `TypedArray`, ni existe un constructor `TypedArray` directamente visible. En cambio, hay una serie de diferentes propiedades globales, cuyos valores son constructores de arreglos tipados para tipos de elementos específicos, que se enumeran a continuación. En las siguientes páginas, encontrarás propiedades y métodos comunes que se pueden utilizar con cualquier arreglo tipado que contenga elementos de cualquier tipo.
 
-{{EmbedInteractiveExample("pages/js/typedarray-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray Constructor")}}
+
+```js interactive-example
+// Create a TypedArray with a size in bytes
+const typedArray1 = new Int8Array(8);
+typedArray1[0] = 32;
+
+const typedArray2 = new Int8Array(typedArray1);
+typedArray2[1] = 42;
+
+console.log(typedArray1);
+// Expected output: Int8Array [32, 0, 0, 0, 0, 0, 0, 0]
+
+console.log(typedArray2);
+// Expected output: Int8Array [32, 42, 0, 0, 0, 0, 0, 0]
+```
 
 La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
 
@@ -29,19 +36,19 @@ Al crear una instancia de `TypedArray` (p. ej., `Int8Array`), se crea un arreglo
 
 ### Objetos TypedArray
 
-| Tipo                                     | Intervalo de valores           | Tamaño en bytes | Descripción                                                                               | Tipo de IDL web           | Tipo C equivalente               |
-| ---------------------------------------- | ------------------------------ | --------------- | ----------------------------------------------------------------------------------------- | ------------------------- | -------------------------------- |
-| {{jsxref("Int8Array")}}         | `-128` a `127`                 | 1               | Dos enteros complementarios de 8 bits con signo                                           | `byte`                    | `int8_t`                         |
-| {{jsxref("Uint8Array")}}         | `0` a `255`                    | 1               | Entero de 8-bit sin signo                                                                 | `octet`                   | `uint8_t`                        |
-| {{jsxref("Uint8ClampedArray")}} | `0` a `255`                    | 1               | Entero de 8 bits sin signo (sujeto)                                                       | `octet`                   | `uint8_t`                        |
-| {{jsxref("Int16Array")}}         | `-32768` a `32767`             | 2               | Dos enteros complementarios de 16 bits con signo                                          | `short`                   | `int16_t`                        |
-| {{jsxref("Uint16Array")}}         | `0` a `65535`                  | 2               | Entero de 16 bits sin signo                                                               | `Short sin signo`         | `uint16_t`                       |
-| {{jsxref("Int32Array")}}         | `-2147483648` a `2147483647`   | 4               | dos enteros complementarios de 32 bits con signo                                          | `long`                    | `int32_t`                        |
-| {{jsxref("Uint32Array")}}         | `0` a `4294967295`             | 4               | Enteros de 32 bits sin signo                                                              | `long sin signo`          | `uint32_t`                       |
-| {{jsxref("Float32Array")}}     | `1.2`×`10^-38` a `3.4`×`10^38`   | 4               | Número de coma flotante IEEE de 32 bits (7 dígitos significativos, p. ej., `1.1234567`)   | `float sin restricciones` | `float`                          |
-| {{jsxref("Float64Array")}}     | `5.0`×`10^-324` a `1.8`×`10^308` | 8               | Número de coma flotante IEEE de 64 bits (16 dígitos significativos, p. Ej., `1.123...15`) | `doble sin restricciones` | `double`                         |
+| Tipo                            | Intervalo de valores             | Tamaño en bytes | Descripción                                                                               | Tipo de IDL web           | Tipo C equivalente               |
+| ------------------------------- | -------------------------------- | --------------- | ----------------------------------------------------------------------------------------- | ------------------------- | -------------------------------- |
+| {{jsxref("Int8Array")}}         | `-128` a `127`                   | 1               | Dos enteros complementarios de 8 bits con signo                                           | `byte`                    | `int8_t`                         |
+| {{jsxref("Uint8Array")}}        | `0` a `255`                      | 1               | Entero de 8-bit sin signo                                                                 | `octet`                   | `uint8_t`                        |
+| {{jsxref("Uint8ClampedArray")}} | `0` a `255`                      | 1               | Entero de 8 bits sin signo (sujeto)                                                       | `octet`                   | `uint8_t`                        |
+| {{jsxref("Int16Array")}}        | `-32768` a `32767`               | 2               | Dos enteros complementarios de 16 bits con signo                                          | `short`                   | `int16_t`                        |
+| {{jsxref("Uint16Array")}}       | `0` a `65535`                    | 2               | Entero de 16 bits sin signo                                                               | `Short sin signo`         | `uint16_t`                       |
+| {{jsxref("Int32Array")}}        | `-2147483648` a `2147483647`     | 4               | dos enteros complementarios de 32 bits con signo                                          | `long`                    | `int32_t`                        |
+| {{jsxref("Uint32Array")}}       | `0` a `4294967295`               | 4               | Enteros de 32 bits sin signo                                                              | `long sin signo`          | `uint32_t`                       |
+| {{jsxref("Float32Array")}}      | `1.2`×`10^-38` a `3.4`×`10^38`   | 4               | Número de coma flotante IEEE de 32 bits (7 dígitos significativos, p. ej., `1.1234567`)   | `float sin restricciones` | `float`                          |
+| {{jsxref("Float64Array")}}      | `5.0`×`10^-324` a `1.8`×`10^308` | 8               | Número de coma flotante IEEE de 64 bits (16 dígitos significativos, p. Ej., `1.123...15`) | `doble sin restricciones` | `double`                         |
 | {{jsxref("BigInt64Array")}}     | `-2^63` a `2^63-1`               | 8               | Dos enteros complementarios de 64 bits con signo                                          | `bigint`                  | `int64_t (long long con signo)`  |
-| {{jsxref("BigUint64Array")}}     | `0` a `2^64-1`                  | 8               | Entero de 64 bits sin signo                                                               | `bigint`                  | `uint64_t (long long sin signo)` |
+| {{jsxref("BigUint64Array")}}    | `0` a `2^64-1`                   | 8               | Entero de 64 bits sin signo                                                               | `bigint`                  | `uint64_t (long long sin signo)` |
 
 ## Constructor
 
@@ -195,17 +202,15 @@ Int8Array.prototype.foo = 'bar';
 
 ## Especificaciones
 
-| Especificación                                                                                   |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.TypedArray")}}
+{{Compat}}
 
 ## Ve también
 
-- [Arreglos tipados JavaScript](/es/docs/Web/JavaScript/Typed_arrays)
+- [Arreglos tipados JavaScript](/es/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
 - [TextDecoder](/es/docs/Web/API/TextDecoder) — Ayuda que decodifica cadenas a partir de datos numéricos

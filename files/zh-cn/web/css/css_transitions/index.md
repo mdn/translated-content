@@ -1,26 +1,26 @@
 ---
-title: CSS 变换
-slug: Web/CSS/CSS_Transitions
+title: CSS 过渡
+slug: Web/CSS/CSS_transitions
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-**CSS Transitions** 是一个 CSS 模块，定义了如何创建一个平滑地变换 CSS 属性值的方法。它不仅允许创建变换方法，同时也允许通过定时函数来控制变换方法。
+**CSS 过渡**这一 CSS 模块让你可以在特定的 CSS 属性值之间创建平缓过渡。可通过指定这些过渡的计时函数、时长和其他属性控制其行为。
 
 ## 参考
 
-### CSS 属性
+### 属性
 
-- {{cssxref("transition")}}
-- {{cssxref("transition-delay")}}
-- {{cssxref("transition-duration")}}
-- {{cssxref("transition-property")}}
-- {{cssxref("transition-timing-function")}}
+- {{CSSXref("transition")}}
+- {{CSSXref("transition-delay")}}
+- {{CSSXref("transition-duration")}}
+- {{CSSXref("transition-property")}}
+- {{CSSXref("transition-timing-function")}}
 
-## 向导
+## 指南
 
-- [使用 CSS 变换](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions)
-  - : 本教程将手把手展现如何通过 CSS 创建一个平滑的变换方法，这篇文章描述了每个相关的 CSS 属性是如何互相影响的。
+- [使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+  - : 关于如何使用 CSS 创建过渡的分步教程。此文描述了各相关 CSS 属性并解释了这些属性如何互相作用。
 
 ## 规范
 
@@ -28,4 +28,4 @@ slug: Web/CSS/CSS_Transitions
 
 ## 参见
 
-- 关于 CSS 变换，[CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations) 可以通过独立的属性值的改变来触发动画。
+- 与 CSS 过渡相关的 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)为动画性属性提供了更精细的控制

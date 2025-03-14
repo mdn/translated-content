@@ -5,20 +5,19 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
 
 {{JSRef}}
 
-**`reduce()`** 方法接受一个函数作为参数，这个函数作为一个累加器，从左到右遍历整个类型数组，最后返回一个单一的值。这个方法和{{jsxref("Array.prototype.reduce()")}}使用了同样的算法。_TypedArray_ 是一个 [类型数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects).
+**`reduce()`** 方法接受一个函数作为参数，这个函数作为一个累加器，从左到右遍历整个类型数组，最后返回一个单一的值。这个方法和{{jsxref("Array.prototype.reduce()")}}使用了同样的算法。_TypedArray_ 是一个 [类型数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).
 
 ## 语法
 
-```plain
-typedarray.reduce(callback[, initialValue])
+```js-nolint
+reduce(callbackFn)
+reduce(callbackFn, initialValue)
 ```
 
 ### 参数
 
 - `callback`
-
   - : 对类型数组的每一个值应用的函数，它接受以下参数：
-
     - `previousValue`
       - : 在上一次迭代中，调用 callback 的返回值，或者是提供的 `initialValue`。
     - `currentValue`
@@ -27,7 +26,6 @@ typedarray.reduce(callback[, initialValue])
       - : 类型化数组中要处理的当前元素的下标
     - `array`
       - : `reduce` 在其上调用的类型化数组。
-
 - `initialValue`
   - : 可选。用作 `callback` 首次调用`的第一个参数的对象。
 
@@ -48,7 +46,7 @@ typedarray.reduce(callback[, initialValue])
 ### 累加数组中的所有值
 
 ```js
-var total = new Uint8Array([0, 1, 2, 3]).reduce(function(a, b) {
+var total = new Uint8Array([0, 1, 2, 3]).reduce(function (a, b) {
   return a + b;
 });
 // total == 6
@@ -62,7 +60,7 @@ var total = new Uint8Array([0, 1, 2, 3]).reduce(function(a, b) {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("TypedArray.prototype.reduceRight()")}}
 - {{jsxref("Array.prototype.reduce()")}}

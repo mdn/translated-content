@@ -1,15 +1,8 @@
 ---
 title: X-Forwarded-For
 slug: Web/HTTP/Headers/X-Forwarded-For
-tags:
-  - HTTP
-  - HTTP 헤더
-  - Reference
-  - 비표준
-  - 요청 헤더
-  - 헤더
-translation_of: Web/HTTP/Headers/X-Forwarded-For
 ---
+
 {{HTTPSidebar}}
 
 **`X-Forwarded-For`** (XFF) 헤더는 HTTP 프록시나 로드 밸런서를 통해 웹 서버에 접속하는 클라이언트의 원 IP 주소를 식별하는 사실상의 표준 헤더다. 클라이언트와 서버 중간에서 트래픽이 프록시나 로드 밸런서를 거치면, 서버 접근 로그에는 프록시나 로드 밸런서의 IP 주소만을 담고 있다. 클라이언트의 원 IP 주소를 보기위해 X-Forwarded-For 요청 헤더가 사용된다.
@@ -66,10 +59,6 @@ X-ProxyUser-Ip: 203.0.113.19
 ## 기술명세
 
 현재 어떠한 표준 명세에도 속하지 않는다. 이 헤더의 표준화 버전은 {{HTTPHeader("Forwarded")}} 이다.
-
-## 브라우저 호환성
-
-{{Compat("http.headers.X-Forwarded-For")}}
 
 ## 함께 참고할 내용
 

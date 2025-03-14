@@ -1,23 +1,15 @@
 ---
 title: WebRTC
 slug: Glossary/WebRTC
-tags:
-  - Encodage
-  - Glossaire
-  - Infrastructure
-  - P2P
-  - VoIP
-  - Web
-  - WebRTC
-translation_of: Glossary/WebRTC
-original_slug: Glossaire/WebRTC
 ---
+
+{{GlossarySidebar}}
 
 **WebRTC** (_Web Real-Time Communication_) _(communication en temps réel web)_ est une {{Glossary("API")}} appelée par les applications web de tchat vidéo, d'appels vocaux et de partage de fichiers P2P.
 
 WebRTC est constitué principalement de ces éléments :
 
-- [getUserMedia](/fr/docs/NavigatorUserMedia.getUserMedia)
+- [getUserMedia](/fr/docs/Web/API/Navigator/getUserMedia)
   - : accorde l'accès à la caméra et / ou au microphone d'un appareil, et peut brancher leurs signaux à une connexion RTC.
 - [RTCPeerConnection](/fr/docs/Web/API/RTCPeerConnection)
   - : configure les appels vocaux ou tchat vidéo
@@ -29,5 +21,5 @@ WebRTC est constitué principalement de ces éléments :
 ### Culture générale
 
 - [WebRTC](https://fr.wikipedia.org/wiki/WebRTC) sur Wikipédia
-- [Guide WebRTC sur MDN](/fr/docs/Web/Guide/API/WebRTC)
+- [Guide WebRTC sur MDN](/fr/docs/Web/API/WebRTC_API)
 - [Support WebRTC des navigateurs](http://caniuse.com/#feat=rtcpeerconnection)

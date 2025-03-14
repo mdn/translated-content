@@ -33,15 +33,16 @@ Proxy-Authorization: <type> <credentials>
 ## ディレクティブ
 
 - \<type>
-  - : [認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)。一般的には ["Basic"](/ja/docs/Web/HTTP/Authentication#basic_認証方式) です。[認証方式の IANA レジストリ](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)も参照してください。
+  - : [認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)。一般的には ["Basic"](/ja/docs/Web/HTTP/Authentication#basic_認証方式) です。[認証方式の IANA レジストリ](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)も参照してください。
 - \<credentials>
 
   - : "Basic" 認証方式を使用している場合、認証情報は次のように構築されます。
 
     - コロンで結合したユーザー名とパスワード (`aladdin:opensesame`)。
-    - 結果の文字列は [Base64](/ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) でエンコードされます (`YWxhZGRpbjpvcGVuc2VzYW1l`)。
+    - 結果の文字列は [Base64](/ja/docs/Glossary/Base64) でエンコードされます (`YWxhZGRpbjpvcGVuc2VzYW1l`)。
 
-    > **メモ:** Base64 エンコードは暗号化でもハッシュでもありません。この方法の安全性はクリアテキストで認証情報を送るのと同等です (Base64 は可逆エンコーディングです)。 Basic 認証は HTTPS との組み合わせで使用することをお勧めします。
+    > [!NOTE]
+    > Base64 エンコードは暗号化でもハッシュでもありません。この方法の安全性はクリアテキストで認証情報を送るのと同等です (Base64 は可逆エンコーディングです)。 Basic 認証は HTTPS との組み合わせで使用することをお勧めします。
 
 ## 例
 
@@ -51,10 +52,10 @@ Proxy-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 
 ## 仕様書
 
-| 仕様書                                                       | 題名                                   |
-| ------------------------------------------------------------ | -------------------------------------- |
+| 仕様書                                        | 題名                                   |
+| --------------------------------------------- | -------------------------------------- |
 | {{RFC("7235", "Proxy-Authorization", "4.4")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                                         | The 'Basic' HTTP Authentication Scheme |
+| {{RFC("7617")}}                               | The 'Basic' HTTP Authentication Scheme |
 
 ## 関連情報
 

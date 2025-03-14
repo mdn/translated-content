@@ -1,14 +1,6 @@
 ---
 title: Float64Array
 slug: Web/JavaScript/Reference/Global_Objects/Float64Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/Float64Array
-original_slug: Web/JavaScript/Reference/Objets_globaux/Float64Array
 ---
 
 {{JSRef}}
@@ -25,7 +17,7 @@ new Float64Array(objet);
 new Float64Array(buffer [, positionOctet [, longueur]]);
 ```
 
-Pour plus d'informations sur la syntaxe du constructeur et ses paramètres, voir _[TypedArray](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntaxe)_.
+Pour plus d'informations sur la syntaxe du constructeur et ses paramètres, voir _[TypedArray](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntaxe)_.
 
 ## Propriétés
 
@@ -92,7 +84,7 @@ Tous les objets `Float64Array` héritent de {{jsxref("TypedArray.prototype", "Fl
   - : Renvoie le dernier indice (le plus élevé) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Float64Array.prototype.map()")}}
   - : Crée un nouveau tableau dont les éléments sont les images des éléments du tableau courant par une fonction donnée. Voir également {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Float64Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
+- {{jsxref("TypedArray.move", "Float64Array.prototype.move()")}} {{non-standard_inline}}
   - : Ancienne version, non-standard, de {{jsxref("TypedArray.copyWithin", "Float64Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.reduce", "Float64Array.prototype.reduce()")}}
   - : Applique une fonction sur un accumulateur et chaque élément du tableau (de gauche à droite) afin de réduire le tableau en une seule valeur. Voir également {{jsxref("Array.prototype.reduce()")}}.
@@ -132,7 +124,7 @@ console.log(float64.length); // 2
 console.log(float64.BYTES_PER_ELEMENT); // 8
 
 // Construction à partir d'un tableau
-var arr = new Float64Array([21,31]);
+var arr = new Float64Array([21, 31]);
 console.log(arr[1]); // 31
 
 // Construction à partir d'un autre tableau typé
@@ -145,7 +137,9 @@ var buffer = new ArrayBuffer(32);
 var z = new Float64Array(buffer, 0, 4);
 
 // Construction à partir d'un itérable
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var float64 = new Float64Array(iterable);
 // Float64Array[1, 2, 3]
 ```
@@ -173,6 +167,6 @@ var dv = new Float64Array([1, 2, 3]);
 
 ## Voir aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

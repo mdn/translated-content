@@ -1,12 +1,6 @@
 ---
 title: CSS 트랜지션 사용하기
-slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
-tags:
-  - Advanced
-  - CSS
-  - CSS Transitions
-  - Guide
-translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
+slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 ---
 
 {{CSSRef}}
@@ -21,11 +15,13 @@ CSS transitions는 여러분이 (명시적으로 목록을 작성해서) 어떤 
 
 ## 애니메이션 가능한 CSS 속성은?
 
-웹 작성자는 어떤 속성을 어떤 방식으로 움직일지를 정의할 수 있습니다. 이것은 복잡한 트랜지션을 생성할 수 있게 합니다. 어떤 속성은 움직이게 하는 것이 말이 되지 않으므로, [애니메이션 가능한 속성의 집합](/ko/docs/CSS/CSS_animated_properties)은 유한한 집합으로 제한됩니다.
+웹 작성자는 어떤 속성을 어떤 방식으로 움직일지를 정의할 수 있습니다. 이것은 복잡한 트랜지션을 생성할 수 있게 합니다. 어떤 속성은 움직이게 하는 것이 말이 되지 않으므로, [애니메이션 가능한 속성의 집합](/ko/docs/Web/CSS/CSS_animated_properties)은 유한한 집합으로 제한됩니다.
 
-> **참고:** 노트: 애니메이션 가능한 속성의 집합은 변할 수 있습니다. 개발자는 주의해서 진행해야 합니다.
+> [!NOTE]
+> 노트: 애니메이션 가능한 속성의 집합은 변할 수 있습니다. 개발자는 주의해서 진행해야 합니다.
 
-> **참고:** 또한, 종종 auto 값은 매우 복잡한 경우입니다. 스펙은 그러한 어떤 값에서 시작하고 끝나도록 움직이도록 요구하지 않습니다. Gecko 기반의 유저 에이전트처럼 몇몇은 이 요구사항을 구현했고, WebKit 기반의 유저 에이전트 같은 다른 것들은 덜 엄격합니다. 애니메이션에 auto를 사용하면 이는 브라우저와 버전에 따라 예상하지 못한 결과를 초래할 수 있으며 피해야 합니다.
+> [!NOTE]
+> 또한, 종종 auto 값은 매우 복잡한 경우입니다. 스펙은 그러한 어떤 값에서 시작하고 끝나도록 움직이도록 요구하지 않습니다. Gecko 기반의 유저 에이전트처럼 몇몇은 이 요구사항을 구현했고, WebKit 기반의 유저 에이전트 같은 다른 것들은 덜 엄격합니다. 애니메이션에 auto를 사용하면 이는 브라우저와 버전에 따라 예상하지 못한 결과를 초래할 수 있으며 피해야 합니다.
 
 ### 다수의 애니메이션이 적용된 속성 예제
 
@@ -33,8 +29,11 @@ CSS transitions는 여러분이 (명시적으로 목록을 작성해서) 어떤 
 
 ```html
 <body>
-    <p>아래 박스는 width, height, background-color, transform을 위한 트랜지션을 결합합니다. 박스 위에 마우스를 올려 속성들의 애니메이션을 보세요.</p>
-    <div class="box"></div>
+  <p>
+    아래 박스는 width, height, background-color, transform을 위한 트랜지션을
+    결합합니다. 박스 위에 마우스를 올려 속성들의 애니메이션을 보세요.
+  </p>
+  <div class="box"></div>
 </body>
 ```
 
@@ -42,25 +41,31 @@ CSS transitions는 여러분이 (명시적으로 목록을 작성해서) 어떤 
 
 ```css
 .box {
-    border-style: solid;
-    border-width: 1px;
-    display: block;
-    width: 100px;
-    height: 100px;
-    background-color: #0000FF;
-    -webkit-transition:width 2s, height 2s, background-color 2s, -webkit-transform 2s;
-    transition:width 2s, height 2s, background-color 2s, transform 2s;
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #0000ff;
+  -webkit-transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    -webkit-transform 2s;
+  transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    transform 2s;
 }
 .box:hover {
-    background-color: #FFCCCC;
-    width:200px;
-    height:200px;
-    -webkit-transform:rotate(180deg);
-    transform:rotate(180deg);
+  background-color: #ffcccc;
+  width: 200px;
+  height: 200px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 ```
-
-{{ EmbedLiveSample('%EB%8B%A4%EC%88%98%EC%9D%98_%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98%EC%9D%B4_%EC%A0%81%EC%9A%A9%EB%90%9C_%EC%86%8D%EC%84%B1_%EC%98%88%EC%A0%9C', '600', '300', '', 'Web/Guide/CSS/Using_CSS_transitions') }}
 
 ## 트랜지션 정의에 사용한 CSS 속성
 
@@ -79,46 +84,52 @@ CSS 트랜지션은 단축(shorthand) 속성 {{cssxref("transition")}}을 사용
     `transition-duration: 0.5s`
 
     ```html hidden
-     <div class="parent">
+    <div class="parent">
       <div class="box">Lorem</div>
     </div>
-
     ```
 
     ```css hidden
-    .parent { width: 250px; height:125px;}
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-        -webkit-transition-duration:0.5s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: width height background-color font-size left top transform -webkit-transform color;
-        transition-duration:0.5s;
-        transition-timing-function: ease-in-out;
+    .parent {
+      width: 250px;
+      height: 125px;
     }
-    .box1{
-        transform: rotate(270deg);
-        -webkit-transform: rotate(270deg);
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top:25px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-        -webkit-transition-duration:0.5s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: width height background-color font-size left top transform -webkit-transformv color;
-        transition-duration:0.5s;
-        transition-timing-function: ease-in-out;
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      font-size: 20px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top transform -webkit-transform color;
+      -webkit-transition-duration: 0.5s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-property: width height background-color font-size left top
+        transform -webkit-transform color;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-in-out;
+    }
+    .box1 {
+      transform: rotate(270deg);
+      -webkit-transform: rotate(270deg);
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      color: yellow;
+      font-size: 18px;
+      left: 150px;
+      top: 25px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top transform -webkit-transform color;
+      -webkit-transition-duration: 0.5s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-property: width height background-color font-size left top
+        transform -webkit-transformv color;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-in-out;
     }
     ```
 
@@ -144,46 +155,52 @@ CSS 트랜지션은 단축(shorthand) 속성 {{cssxref("transition")}}을 사용
     `transition-duration: 1s`
 
     ```html hidden
-     <div class="parent">
+    <div class="parent">
       <div class="box">Lorem</div>
     </div>
-
     ```
 
     ```css hidden
-    .parent { width: 250px; height:125px;}
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top -webkit-transform color;
-        -webkit-transition-duration:1s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: width height background-color font-size left top transform color;
-        transition-duration:1s;
-        transition-timing-function: ease-in-out;
+    .parent {
+      width: 250px;
+      height: 125px;
     }
-    .box1{
-        transform: rotate(270deg);
-        -webkit-transform: rotate(270deg);
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top:25px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top -webkit-transform transform color;
-        -webkit-transition-duration:1s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: width height background-color font-size left top transform -webkit-transform color;
-        transition-duration:1s;
-        transition-timing-function: ease-in-out;
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      font-size: 20px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top -webkit-transform color;
+      -webkit-transition-duration: 1s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-property: width height background-color font-size left top
+        transform color;
+      transition-duration: 1s;
+      transition-timing-function: ease-in-out;
+    }
+    .box1 {
+      transform: rotate(270deg);
+      -webkit-transform: rotate(270deg);
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      color: yellow;
+      font-size: 18px;
+      left: 150px;
+      top: 25px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top -webkit-transform transform color;
+      -webkit-transition-duration: 1s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-property: width height background-color font-size left top
+        transform -webkit-transform color;
+      transition-duration: 1s;
+      transition-timing-function: ease-in-out;
     }
     ```
 
@@ -209,46 +226,52 @@ CSS 트랜지션은 단축(shorthand) 속성 {{cssxref("transition")}}을 사용
     `transition-duration: 2s`
 
     ```html hidden
-     <div class="parent">
+    <div class="parent">
       <div class="box">Lorem</div>
     </div>
-
     ```
 
     ```css hidden
-    .parent { width: 250px; height:125px;}
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-        -webkit-transition-duration:2s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: width height background-color font-size left top transform -webkit-transform color;
-        transition-duration:2s;
-        transition-timing-function: ease-in-out;
+    .parent {
+      width: 250px;
+      height: 125px;
     }
-    .box1{
-        transform: rotate(270deg);
-        -webkit-transform: rotate(270deg);
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top:25px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-        -webkit-transition-duration:2s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: width height background-color font-size left top transform -webkit-transform color;
-        transition-duration:2s;
-        transition-timing-function: ease-in-out;
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      font-size: 20px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top transform -webkit-transform color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-property: width height background-color font-size left top
+        transform -webkit-transform color;
+      transition-duration: 2s;
+      transition-timing-function: ease-in-out;
+    }
+    .box1 {
+      transform: rotate(270deg);
+      -webkit-transform: rotate(270deg);
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      color: yellow;
+      font-size: 18px;
+      left: 150px;
+      top: 25px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top transform -webkit-transform color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-property: width height background-color font-size left top
+        transform -webkit-transform color;
+      transition-duration: 2s;
+      transition-timing-function: ease-in-out;
     }
     ```
 
@@ -274,46 +297,52 @@ CSS 트랜지션은 단축(shorthand) 속성 {{cssxref("transition")}}을 사용
     `transition-duration: 4s`
 
     ```html hidden
-     <div class="parent">
+    <div class="parent">
       <div class="box">Lorem</div>
     </div>
-
     ```
 
     ```css hidden
-    .parent { width: 250px; height:125px;}
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-        -webkit-transition-duration:4s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: width height background-color font-size left top transform -webkit-transform color;
-        transition-duration:4s;
-        transition-timing-function: ease-in-out;
+    .parent {
+      width: 250px;
+      height: 125px;
     }
-    .box1{
-        transform: rotate(270deg);
-        -webkit-transform: rotate(270deg);
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top:25px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-        -webkit-transition-duration:4s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: width height background-color font-size left top transform -webkit-transform color;
-        transition-duration:4s;
-        transition-timing-function: ease-in-out;
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      font-size: 20px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top transform -webkit-transform color;
+      -webkit-transition-duration: 4s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-property: width height background-color font-size left top
+        transform -webkit-transform color;
+      transition-duration: 4s;
+      transition-timing-function: ease-in-out;
+    }
+    .box1 {
+      transform: rotate(270deg);
+      -webkit-transform: rotate(270deg);
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      color: yellow;
+      font-size: 18px;
+      left: 150px;
+      top: 25px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top transform -webkit-transform color;
+      -webkit-transition-duration: 4s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-property: width height background-color font-size left top
+        transform -webkit-transform color;
+      transition-duration: 4s;
+      transition-timing-function: ease-in-out;
     }
     ```
 
@@ -338,49 +367,55 @@ CSS 트랜지션은 단축(shorthand) 속성 {{cssxref("transition")}}을 사용
 
 - {{ cssxref("transition-timing-function") }}
 
-  - : ![](/files/3434/TF_with_output_gt_than_1.png)속성의 중간값을 계산하는 방법을 정의하는 함수를 명시합니다. *Timing functions*는 트랜지션의 중간값을 계산하는 방법을 결정합니다. 대부분의 [타이밍 함수](/ko/docs/CSS/timing-function)는 큐빅 베이지어(cubic bezier)를 정의하는 네 점에 의해 정의되므로 상응하는 함수의 그래프로 제공해서 명시할 수 있습니다. [Easing Functions Cheat Sheet](http://easings.net/)에서 이징(easing, 역자주: 시간에 따른 파라미터 값의 변화율을 명시하는 함수)을 선택할 수도 있습니다.
+  - : ![](/files/3434/TF_with_output_gt_than_1.png)속성의 중간값을 계산하는 방법을 정의하는 함수를 명시합니다. *Timing functions*는 트랜지션의 중간값을 계산하는 방법을 결정합니다. 대부분의 [타이밍 함수](/ko/docs/Web/CSS/easing-function)는 큐빅 베이지어(cubic bezier)를 정의하는 네 점에 의해 정의되므로 상응하는 함수의 그래프로 제공해서 명시할 수 있습니다. [Easing Functions Cheat Sheet](https://easings.net/)에서 이징(easing, 역자주: 시간에 따른 파라미터 값의 변화율을 명시하는 함수)을 선택할 수도 있습니다.
 
     `transition-timing-function: ease`
 
     ```html hidden
-     <div class="parent">
+    <div class="parent">
       <div class="box">Lorem</div>
     </div>
-
     ```
 
     ```css hidden
-    .parent { width: 250px; height:125px;}
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration:2s;
-        -webkit-transition-timing-function: ease;
-        transition-property: width height background-color font-size left top color;
-        transition-duration:2s;
-        transition-timing-function: ease;
+    .parent {
+      width: 250px;
+      height: 125px;
     }
-    .box1{
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top:25px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration:2s;
-        -webkit-transition-timing-function: ease;
-        transition-property: width height background-color font-size left top color;
-        transition-duration:2s;
-        transition-timing-function: ease;
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      font-size: 20px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-timing-function: ease;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-timing-function: ease;
+    }
+    .box1 {
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      color: yellow;
+      font-size: 18px;
+      left: 150px;
+      top: 25px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-timing-function: ease;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-timing-function: ease;
     }
     ```
 
@@ -406,44 +441,50 @@ CSS 트랜지션은 단축(shorthand) 속성 {{cssxref("transition")}}을 사용
     `transition-timing-function: linear`
 
     ```html hidden
-     <div class="parent">
+    <div class="parent">
       <div class="box">Lorem</div>
     </div>
-
     ```
 
     ```css hidden
-    .parent { width: 250px; height:125px;}
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration:2s;
-        -webkit-transition-timing-function: linear;
-        transition-property: width height background-color font-size left top color;
-        transition-duration:2s;
-        transition-timing-function: linear;
+    .parent {
+      width: 250px;
+      height: 125px;
     }
-    .box1{
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top:25px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration:2s;
-        -webkit-transition-timing-function: linear;
-        transition-property: width height background-color font-size left top color;
-        transition-duration:2s;
-        transition-timing-function: linear;
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      font-size: 20px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-timing-function: linear;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-timing-function: linear;
+    }
+    .box1 {
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      color: yellow;
+      font-size: 18px;
+      left: 150px;
+      top: 25px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-timing-function: linear;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-timing-function: linear;
     }
     ```
 
@@ -469,44 +510,50 @@ CSS 트랜지션은 단축(shorthand) 속성 {{cssxref("transition")}}을 사용
     `transition-timing-function: step-end`
 
     ```html hidden
-     <div class="parent">
+    <div class="parent">
       <div class="box">Lorem</div>
     </div>
-
     ```
 
     ```css hidden
-    .parent { width: 250px; height:125px;}
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration:2s;
-        -webkit-transition-timing-function: step-end;
-        transition-property: width height background-color font-size left top color;
-        transition-duration:2s;
-        transition-timing-function: step-end;
+    .parent {
+      width: 250px;
+      height: 125px;
     }
-    .box1{
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top:25px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration:2s;
-        -webkit-transition-timing-function: step-end;
-        transition-property: width height background-color font-size left top color;
-        transition-duration:2s;
-        transition-timing-function: step-end;
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      font-size: 20px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-timing-function: step-end;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-timing-function: step-end;
+    }
+    .box1 {
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      color: yellow;
+      font-size: 18px;
+      left: 150px;
+      top: 25px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-timing-function: step-end;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-timing-function: step-end;
     }
     ```
 
@@ -532,44 +579,50 @@ CSS 트랜지션은 단축(shorthand) 속성 {{cssxref("transition")}}을 사용
     `transition-timing-function: steps(4, end)`
 
     ```html hidden
-     <div class="parent">
+    <div class="parent">
       <div class="box">Lorem</div>
     </div>
-
     ```
 
     ```css hidden
-    .parent { width: 250px; height:125px;}
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration:2s;
-        -webkit-transition-timing-function: steps(4, end);
-        transition-property: width height background-color font-size left top color;
-        transition-duration:2s;
-        transition-timing-function: steps(4, end);
+    .parent {
+      width: 250px;
+      height: 125px;
     }
-    .box1{
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top:25px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration:2s;
-        -webkit-transition-timing-function: steps(4, end);
-        transition-property: width height background-color font-size left top color;
-        transition-duration:2s;
-        transition-timing-function: steps(4, end);
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      font-size: 20px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-timing-function: steps(4, end);
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-timing-function: steps(4, end);
+    }
+    .box1 {
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      color: yellow;
+      font-size: 18px;
+      left: 150px;
+      top: 25px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-timing-function: steps(4, end);
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-timing-function: steps(4, end);
     }
     ```
 
@@ -599,48 +652,54 @@ CSS 트랜지션은 단축(shorthand) 속성 {{cssxref("transition")}}을 사용
     `transition-delay: 0.5s`
 
     ```html hidden
-     <div class="parent">
+    <div class="parent">
       <div class="box">Lorem</div>
     </div>
-
     ```
 
     ```css hidden
-    .parent { width: 250px; height:125px;}
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration:2s;
-        -webkit-transition-delay:0.5s;
-        -webkit-transition-timing-function: linear;
-        transition-property: width height background-color font-size left top color;
-        transition-duration:2s;
-        transition-delay:0.5s;
-        transition-timing-function: linear;
+    .parent {
+      width: 250px;
+      height: 125px;
     }
-    .box1{
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top:25px;
-        position:absolute;
-         -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration:2s;
-        -webkit-transition-delay:0.5s;
-        -webkit-transition-timing-function: linear;
-        transition-property: width height background-color font-size left top color;
-        transition-duration:2s;
-        transition-delay:0.5s;
-        transition-timing-function: linear;
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      font-size: 20px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-delay: 0.5s;
+      -webkit-transition-timing-function: linear;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-delay: 0.5s;
+      transition-timing-function: linear;
+    }
+    .box1 {
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      color: yellow;
+      font-size: 18px;
+      left: 150px;
+      top: 25px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-delay: 0.5s;
+      -webkit-transition-timing-function: linear;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-delay: 0.5s;
+      transition-timing-function: linear;
     }
     ```
 
@@ -666,48 +725,54 @@ CSS 트랜지션은 단축(shorthand) 속성 {{cssxref("transition")}}을 사용
     `transition-delay: 1s`
 
     ```html hidden
-     <div class="parent">
+    <div class="parent">
       <div class="box">Lorem</div>
     </div>
-
     ```
 
     ```css hidden
-    .parent { width: 250px; height:125px;}
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position:absolute;
-         -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration:2s;
-        -webkit-transition-delay:1s;
-        -webkit-transition-timing-function: linear;
-        transition-property: width height background-color font-size left top color;
-        transition-duration:2s;
-        transition-delay:1s;
-        transition-timing-function: linear;
+    .parent {
+      width: 250px;
+      height: 125px;
     }
-    .box1{
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top:25px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration:2s;
-        -webkit-transition-delay:1s;
-        -webkit-transition-timing-function: linear;
-        transition-property: width height background-color font-size left top color;
-        transition-duration:2s;
-        transition-delay:1s;
-        transition-timing-function: linear;
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      font-size: 20px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-delay: 1s;
+      -webkit-transition-timing-function: linear;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-delay: 1s;
+      transition-timing-function: linear;
+    }
+    .box1 {
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      color: yellow;
+      font-size: 18px;
+      left: 150px;
+      top: 25px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-delay: 1s;
+      -webkit-transition-timing-function: linear;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-delay: 1s;
+      transition-timing-function: linear;
     }
     ```
 
@@ -733,48 +798,54 @@ CSS 트랜지션은 단축(shorthand) 속성 {{cssxref("transition")}}을 사용
     `transition-delay: 2s`
 
     ```html hidden
-     <div class="parent">
+    <div class="parent">
       <div class="box">Lorem</div>
     </div>
-
     ```
 
     ```css hidden
-    .parent { width: 250px; height:125px;}
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration:2s;
-        -webkit-transition-delay:2s;
-        -webkit-transition-timing-function: linear;
-        transition-property: width height background-color font-size left top color;
-        transition-duration:2s;
-        transition-delay:2s;
-        transition-timing-function: linear;
+    .parent {
+      width: 250px;
+      height: 125px;
     }
-    .box1{
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top:25px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration:2s;
-        -webkit-transition-delay:2s;
-        -webkit-transition-timing-function: linear;
-        transition-property: width height background-color font-size left top color;
-        transition-duration:2s;
-        transition-delay:2s;
-        transition-timing-function: linear;
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      font-size: 20px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-delay: 2s;
+      -webkit-transition-timing-function: linear;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-delay: 2s;
+      transition-timing-function: linear;
+    }
+    .box1 {
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      color: yellow;
+      font-size: 18px;
+      left: 150px;
+      top: 25px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-delay: 2s;
+      -webkit-transition-timing-function: linear;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-delay: 2s;
+      transition-timing-function: linear;
     }
     ```
 
@@ -800,48 +871,54 @@ CSS 트랜지션은 단축(shorthand) 속성 {{cssxref("transition")}}을 사용
     `transition-delay: 4s`
 
     ```html hidden
-     <div class="parent">
+    <div class="parent">
       <div class="box">Lorem</div>
     </div>
-
     ```
 
     ```css hidden
-    .parent { width: 250px; height:125px;}
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        font-size: 20px;
-        left: 0px;
-        top: 0px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration:2s;
-        -webkit-transition-delay:4s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: width height background-color font-size left top color;
-        transition-duration:2s;
-        transition-delay:4s;
-        transition-timing-function: ease-in-out;
+    .parent {
+      width: 250px;
+      height: 125px;
     }
-    .box1{
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        color: yellow;
-        font-size: 18px;
-        left: 150px;
-        top:25px;
-        position:absolute;
-        -webkit-transition-property: width height background-color font-size left top color;
-        -webkit-transition-duration:2s;
-        -webkit-transition-delay:4s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: width height background-color font-size left top color;
-        transition-duration:2s;
-        transition-delay:4s;
-        transition-timing-function: ease-in-out;
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      font-size: 20px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-delay: 4s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-delay: 4s;
+      transition-timing-function: ease-in-out;
+    }
+    .box1 {
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      color: yellow;
+      font-size: 18px;
+      left: 150px;
+      top: 25px;
+      position: absolute;
+      -webkit-transition-property: width height background-color font-size left
+        top color;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-delay: 4s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-property: width height background-color font-size left top
+        color;
+      transition-duration: 2s;
+      transition-delay: 4s;
+      transition-timing-function: ease-in-out;
     }
     ```
 
@@ -868,7 +945,7 @@ CSS 트랜지션은 단축(shorthand) 속성 {{cssxref("transition")}}을 사용
 
 ```css
 div {
-    transition: <property> <duration> <timing-function> <delay>;
+  transition: <property> <duration> <timing-function> <delay>;
 }
 ```
 
@@ -952,7 +1029,7 @@ div {
 
 CSS의 흔한 사용은 사용자가 마우스 커서를 메뉴 위에 올려놓을 때 그 메뉴 아이템을 하이라이팅하는 것입니다. 트랜지션을 사용하여 효과를 훨씬 더 매력적으로 만들 수 있습니다.
 
-코드 스니핏(snippets, 역자주: 재활용이 가능한 소스 조각)을 보기 전에, (여러분의 브라우저가 트랜지션을 지원한다고 가정하면) [라이브 데모](/samples/cssref/transitions/sample2)를 보고 싶을지도 모르겠습니다. 그것이 사용한 [CSS를 직접](/samples/cssref/transitions/sample2/transitions.css) 볼 수도 있습니다.
+코드 스니핏(snippets, 역자주: 재활용이 가능한 소스 조각)을 보기 전에, (여러분의 브라우저가 트랜지션을 지원한다고 가정하면) [라이브 데모](https://mdn.dev/archives/media/samples/cssref/transitions/sample2)를 보고 싶을지도 모르겠습니다. 그것이 사용한 [CSS를 직접](https://mdn.dev/archives/media/samples/cssref/transitions/sample2/transitions.css) 볼 수도 있습니다.
 
 우선 HTML을 사용하여 메뉴를 설정합니다.
 
@@ -993,15 +1070,15 @@ CSS의 흔한 사용은 사용자가 마우스 커서를 메뉴 위에 올려놓
   transition-property: background-color, color;
   transition-duration: 1s;
   transition-timing-function: ease-out;
-  background-color:white;
-  color:black;
+  background-color: white;
+  color: black;
   box-shadow: 2px 2px 1px black;
 }
 ```
 
 이 CSS는 그 요소가 {{ cssxref(":hover") }} 상태일 때 배경과 텍스트 색상 모두를 변경하면서 메뉴의 모습을 설정합니다.
 
-그 효과를 장황하게 설명하는 대신, [브라우저가 트랜지션을 지원한다면](/en/CSS/CSS_transitions#Browser_compatibility), [라이브 샘플을 살펴보세요](/samples/cssref/transitions/sample2).
+그 효과를 장황하게 설명하는 대신, [브라우저가 트랜지션을 지원한다면](/en-US/CSS/CSS_transitions#browser_compatibility), [라이브 샘플을 살펴보세요](https://mdn.dev/archives/media/samples/cssref/transitions/sample2).
 
 ## 트랜지션을 이용하여 JavaScript 기능 부드럽게 하기
 
@@ -1015,11 +1092,15 @@ CSS의 흔한 사용은 사용자가 마우스 커서를 메뉴 위에 올려놓
 JavaScript를 사용하여 공을 어떤 위치로 움직이는 효과가 일어나게 할 수 있습니다.
 
 ```js
-var f = document.getElementById('foo');
-document.addEventListener('click', function(ev){
-    f.style.left = (ev.clientX-25)+'px';
-    f.style.top = (ev.clientY-25)+'px';
-},false);
+var f = document.getElementById("foo");
+document.addEventListener(
+  "click",
+  function (ev) {
+    f.style.left = ev.clientX - 25 + "px";
+    f.style.top = ev.clientY - 25 + "px";
+  },
+  false,
+);
 ```
 
 추가 노력 없이 CSS로 이것을 부드럽게 할 수 있습니다. 단순히 그 요소에 트랜지션을 추가하면 어떠한 변화도 부드럽게 일어날 것입니다.
@@ -1037,11 +1118,11 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  transition:  all 1s;
+  transition: all 1s;
 }
 ```
 
-여기에서 확인할 수 있습니다. <http://jsfiddle.net/RwtHn/5/>
+여기에서 확인할 수 있습니다. <https://jsfiddle.net/RwtHn/5/>
 
 ## 명세
 
@@ -1050,4 +1131,4 @@ p {
 ## 같이 보기
 
 - [CSS3 Dock Menu](http://techstream.org/Web-Design/Dock-Menu-with-CSS3) using CSS transitions
-- The {{ domxref("TransitionEvent") }} interface and the [`transitionend`](/ko/docs/Mozilla_event_reference/transitionend) event.
+- The {{ domxref("TransitionEvent") }} interface and the [`transitionend`](/ko/docs/Web/API/Element/transitionend_event) event.

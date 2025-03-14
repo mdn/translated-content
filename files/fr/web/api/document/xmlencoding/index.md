@@ -1,21 +1,14 @@
 ---
 title: Document.xmlEncoding
 slug: Web/API/Document/xmlEncoding
-tags:
-  - API
-  - DOM
-  - Document
-  - Encodage
-  - Propriétés
-  - XML
-translation_of: Web/API/Document/xmlEncoding
 ---
 
 {{APIRef("DOM")}}{{deprecated_header}}
 
 Renvoie le codage déterminé par la déclaration XML. Devrait être `null` si non précisé ou inconnu.
 
-> **Attention :** N'utilisez pas cet attribut ; il a été supprimé de la spécification DOM Niveau 4 et n'est plus pris en charge dans Gecko 10.0.
+> [!WARNING]
+> N'utilisez pas cet attribut ; il a été supprimé de la spécification DOM Niveau 4 et n'est plus pris en charge dans Gecko 10.0.
 
 Si la déclaration XML indique :
 

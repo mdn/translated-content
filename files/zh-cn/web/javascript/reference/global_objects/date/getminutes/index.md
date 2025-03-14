@@ -3,16 +3,23 @@ title: Date.prototype.getMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`getMinutes()`** 方法根据本地时间，返回一个指定的日期对象的分钟数。
 
-{{EmbedInteractiveExample("pages/js/date-getminutes.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getMinutes()")}}
+
+```js interactive-example
+const birthday = new Date("March 13, 08 04:20");
+
+console.log(birthday.getMinutes());
+// Expected output: 20
+```
 
 ## 语法
 
-```js
-dateObj.getMinutes()
+```js-nolint
+getMinutes()
 ```
 
 ### 参数
@@ -23,9 +30,9 @@ dateObj.getMinutes()
 
 `getMinutes` 返回一个 0 到 59 的整数值。
 
-## 例子
+## 示例
 
-### 例子：使用`getMinutes` 方法
+### 示例：使用`getMinutes` 方法
 
 下例中，第二行语句运行过后，变量 `minutes` 的值为 15，也就是说 `Xmas95` 这个日期对象的值为某时 15 分某秒。
 
@@ -42,7 +49,7 @@ var minutes = Xmas95.getMinutes();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCMinutes()")}}
 - {{jsxref("Date.prototype.setMinutes()")}}

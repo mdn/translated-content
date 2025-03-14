@@ -1,18 +1,11 @@
 ---
 title: border-inline
 slug: Web/CSS/border-inline
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/border-inline
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La propriété **`border-inline`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet de paramétrer les différentes propriétés logiques relatives à la bordure sur l'axe en ligne.
+La propriété **`border-inline`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de paramétrer les différentes propriétés logiques relatives à la bordure sur l'axe en ligne.
 
 ```css
 border-inline: 1px;

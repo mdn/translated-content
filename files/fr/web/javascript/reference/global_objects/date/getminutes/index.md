@@ -1,26 +1,25 @@
 ---
 title: Date.prototype.getMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getMinutes
 ---
 
 {{JSRef}}
 
 La méthode **`getMinutes()`** renvoie les minutes pour la date renseignée d'après l'heure locale.
 
-{{EmbedInteractiveExample("pages/js/date-getminutes.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getMinutes()")}}
+
+```js interactive-example
+const birthday = new Date("March 13, 08 04:20");
+
+console.log(birthday.getMinutes());
+// Expected output: 20
+```
 
 ## Syntaxe
 
 ```js
-dateObj.getMinutes()
+dateObj.getMinutes();
 ```
 
 ### Valeur de retour

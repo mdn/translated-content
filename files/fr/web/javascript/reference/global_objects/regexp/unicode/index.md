@@ -1,23 +1,32 @@
 ---
 title: RegExp.prototype.unicode
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/unicode
 ---
 
 {{JSRef}}
 
 La propriété **`unicode`** indique si le drapeau "`u`" a été utilisé avec l'expression rationnelle. `unicode` est une propriété en lecture seule et liée à une instance d'expression rationnelle.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-unicode.html", "taller")}}{{js_property_attributes(0, 0, 1)}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.unicode", "taller")}}
+
+```js interactive-example
+const regex1 = new RegExp("\u{61}");
+const regex2 = new RegExp("\u{61}", "u");
+
+console.log(regex1.unicode);
+// Expected output: false
+
+console.log(regex2.unicode);
+// Expected output: true
+
+console.log(regex1.source);
+// Expected output: "a"
+
+console.log(regex2.source);
+// Expected output: "a"
+```
+
+{{js_property_attributes(0, 0, 1)}}
 
 ## Description
 
@@ -28,7 +37,7 @@ Cette propriété ne peut pas être modifiée directement.
 ## Exemples
 
 ```js
-var regex = new RegExp('\u{61}', 'u');
+var regex = new RegExp("\u{61}", "u");
 
 console.log(regex.unicode); // true
 ```

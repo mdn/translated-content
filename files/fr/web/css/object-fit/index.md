@@ -1,19 +1,18 @@
 ---
 title: object-fit
 slug: Web/CSS/object-fit
-translation_of: Web/CSS/object-fit
-browser-compat: css.properties.object-fit
 ---
 
 {{CSSRef}}
 
-La propriété CSS **`object-fit`** définit la façon dont le contenu d'un [élément remplacé](/fr/docs/Web/CSS/Replaced_element) ([`<img>`](/fr/docs/Web/HTML/Element/Img) ou [`<video>`](/fr/docs/Web/HTML/Element/video) par exemple) doit s'adapter à son conteneur en utilisant sa largeur et sa hauteur.
+La propriété CSS **`object-fit`** définit la façon dont le contenu d'un [élément remplacé](/fr/docs/Web/CSS/Replaced_element) ([`<img>`](/fr/docs/Web/HTML/Element/img) ou [`<video>`](/fr/docs/Web/HTML/Element/video) par exemple) doit s'adapter à son conteneur en utilisant sa largeur et sa hauteur.
 
 {{EmbedInteractiveExample("pages/css/object-fit.html")}}
 
 Selon la valeur utilisée pour `object-fit`, l'élément peut être rogné, mis à l'échelle ou étiré, afin de remplir la boîte qui le contient.
 
-> **Note :** Il est possible de modifier l'alignement du contenu de l'élément remplacé au sein de la boîte de l'élément grâce à la propriété [`object-position`](/fr/docs/Web/CSS/object-position).
+> [!NOTE]
+> Il est possible de modifier l'alignement du contenu de l'élément remplacé au sein de la boîte de l'élément grâce à la propriété [`object-position`](/fr/docs/Web/CSS/object-position).
 
 ## Syntaxe
 
@@ -64,29 +63,29 @@ La propriété `object-fit` peut être définie grâce à l'un des mots-clés su
 ```html
 <section>
   <h2>object-fit: fill</h2>
-  <img class="fill" src="mdn_logo_only_color.png" alt="Logo MDN">
+  <img class="fill" src="mdn_logo_only_color.png" alt="Logo MDN" />
 
-  <img class="fill narrow" src="mdn_logo_only_color.png" alt="Logo MDN">
+  <img class="fill narrow" src="mdn_logo_only_color.png" alt="Logo MDN" />
 
   <h2>object-fit: contain</h2>
-  <img class="contain" src="mdn_logo_only_color.png" alt="Logo MDN">
+  <img class="contain" src="mdn_logo_only_color.png" alt="Logo MDN" />
 
-  <img class="contain narrow" src="mdn_logo_only_color.png" alt="Logo MDN">
+  <img class="contain narrow" src="mdn_logo_only_color.png" alt="Logo MDN" />
 
   <h2>object-fit: cover</h2>
-  <img class="cover" src="mdn_logo_only_color.png" alt="Logo MDN">
+  <img class="cover" src="mdn_logo_only_color.png" alt="Logo MDN" />
 
-  <img class="cover narrow" src="mdn_logo_only_color.png" alt="Logo MDN">
+  <img class="cover narrow" src="mdn_logo_only_color.png" alt="Logo MDN" />
 
   <h2>object-fit: none</h2>
-  <img class="none" src="mdn_logo_only_color.png" alt="Logo MDN">
+  <img class="none" src="mdn_logo_only_color.png" alt="Logo MDN" />
 
-  <img class="none narrow" src="mdn_logo_only_color.png" alt="Logo MDN">
+  <img class="none narrow" src="mdn_logo_only_color.png" alt="Logo MDN" />
 
   <h2>object-fit: scale-down</h2>
-  <img class="scale-down" src="mdn_logo_only_color.png" alt="Logo MDN">
+  <img class="scale-down" src="mdn_logo_only_color.png" alt="Logo MDN" />
 
-  <img class="scale-down narrow" src="mdn_logo_only_color.png" alt="Logo MDN">
+  <img class="scale-down narrow" src="mdn_logo_only_color.png" alt="Logo MDN" />
 </section>
 ```
 
@@ -94,7 +93,9 @@ La propriété `object-fit` peut être définie grâce à l'un des mots-clés su
 
 ```css
 h2 {
-  font-family: Courier New, monospace;
+  font-family:
+    Courier New,
+    monospace;
   font-size: 1em;
   margin: 1em 0 0.3em;
 }
@@ -151,5 +152,5 @@ img {
 - Les autres propriétés CSS liées aux images&nbsp;:
   - [`object-position`](/fr/docs/Web/CSS/object-position)
   - [`image-orientation`](/fr/docs/Web/CSS/image-orientation)
-  - [`image-rendering`](/fr/docs/Web/CSS/Image-rendering)
+  - [`image-rendering`](/fr/docs/Web/CSS/image-rendering)
   - [`image-resolution`](/fr/docs/Web/CSS/image-resolution)

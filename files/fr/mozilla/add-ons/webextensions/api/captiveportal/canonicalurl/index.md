@@ -1,28 +1,21 @@
 ---
 title: captivePortal.canonicalURL
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/canonicalURL
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - canonicalURL
-  - captivePortal
-translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/canonicalURL
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Renvoyer l'URL canonique de la page de détection du portail des prisonniers. En lecture seule.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.captivePortal.canonicalURL")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#property-TAB_ID_NONE) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code Chromium.
+> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#property-TAB_ID_NONE) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code Chromium.
 >
 > Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence américaine Creative Commons Attribution 3.0.
 

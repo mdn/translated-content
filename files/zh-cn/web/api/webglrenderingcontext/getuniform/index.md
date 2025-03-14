@@ -7,8 +7,8 @@ slug: Web/API/WebGLRenderingContext/getUniform
 
 ## 语法
 
-```
-any gl.getUniform(program, location);
+```js-nolint
+getUniform(program, location)
 ```
 
 ### 参数
@@ -163,7 +163,7 @@ any gl.getUniform(program, location);
 ## 示例
 
 ```js
-var loc = gl.getUniformLocation(program, 'u_foobar');
+var loc = gl.getUniformLocation(program, "u_foobar");
 gl.getUniform(program, loc);
 
 //code in vertex-shader

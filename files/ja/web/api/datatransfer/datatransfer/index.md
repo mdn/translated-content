@@ -10,7 +10,7 @@ slug: Web/API/DataTransfer/DataTransfer
 ## 構文
 
 ```js
-new DataTransfer()
+new DataTransfer();
 ```
 
 ### 引数

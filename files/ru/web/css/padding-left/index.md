@@ -1,20 +1,61 @@
 ---
 title: padding-left
 slug: Web/CSS/padding-left
-tags:
-  - CSS
-  - CSS-свойство
-translation_of: Web/CSS/padding-left
 ---
+
 {{CSSRef}}
 
 Свойство [CSS](/ru/docs/Web/CSS) **`padding-left`** определяет ширину левого внутреннего отступа элемента.
 
-{{EmbedInteractiveExample("pages/css/padding-left.html")}}
+{{InteractiveExample("CSS Demo: padding-left")}}
+
+```css interactive-example-choice
+padding-left: 1.5em;
+```
+
+```css interactive-example-choice
+padding-left: 10%;
+```
+
+```css interactive-example-choice
+padding-left: 20px;
+```
+
+```css interactive-example-choice
+padding-left: 1ch;
+```
+
+```css interactive-example-choice
+padding-left: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+}
+```
 
 Внутренний отступ элемента (англ. "padding") - это пространство между его содержимым и его границей.
 
-> **Примечание:** Свойство {{cssxref ("padding")}} можно использовать для установки внутренних отступов на всех четырёх сторонах элемента одним значением.
+> [!NOTE]
+> Свойство {{cssxref ("padding")}} можно использовать для установки внутренних отступов на всех четырёх сторонах элемента одним значением.
 
 ## Синтаксис
 
@@ -40,28 +81,29 @@ padding-left: unset;
 - {{cssxref("&lt;percentage&gt;")}}
   - : Размер заполнения зависит от ширины блока. Не может быть отрицательным.
 
-### Формальный синтаксис
+## Формальное определение
+
+{{cssinfo}}
+
+## Формальный синтаксис
 
 {{csssyntax}}
 
 ## Примеры
 
 ```css
-.content {padding-left: 5%; }
-.sidebox {padding-left: 10px; }
+.content {
+  padding-left: 5%;
+}
+.sidebox {
+  padding-left: 10px;
+}
 ```
 
-## Определения
+## Спецификации
 
-| Спецификация                                                                                     | Статус                                   | Комментарий                                             |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------- |
-| {{ SpecName('CSS3 Box', '#the-padding', 'padding-left') }}                     | {{ Spec2('CSS3 Box') }}         | Без изменений.                                          |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'padding-left') }}     | {{ Spec2('CSS3 Transitions') }} | Переопределяет `padding-left` как анимируемое свойство. |
-| {{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-left') }} | {{ Spec2('CSS2.1') }}             | Без изменений.                                          |
-| {{ Specname('CSS1', '#padding-left', 'padding-left') }}                         | {{ Spec2('CSS1') }}                 | Первоначальное определение.                             |
+{{Specifications}}
 
-{{cssinfo}}
-
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}

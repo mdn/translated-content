@@ -1,8 +1,6 @@
 ---
 title: list-style
 slug: Web/CSS/list-style
-translation_of: Web/CSS/list-style
-browser-compat: css.properties.list-style
 ---
 
 {{CSSRef}}
@@ -11,7 +9,8 @@ La propriété **`list-style`** est une [propriété raccourcie](/fr/docs/Web/CS
 
 {{EmbedInteractiveExample("pages/css/list-style.html")}}
 
-> **Note :** Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels [`display`](/fr/docs/Web/CSS/display) vaut `list-item`). [Par défaut](https://www.w3.org/TR/html5/rendering.html#lists), cela inclut les éléments [`<li>`](/fr/docs/Web/HTML/Element/li). Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à [`<ol>`](/fr/docs/Web/HTML/Element/ol) ou à [`<ul>`](/fr/docs/Web/HTML/Element/ul)).
+> [!NOTE]
+> Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels [`display`](/fr/docs/Web/CSS/display) vaut `list-item`). [Par défaut](https://www.w3.org/TR/html5/rendering.html#lists), cela inclut les éléments [`<li>`](/fr/docs/Web/HTML/Element/li). Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à [`<ol>`](/fr/docs/Web/HTML/Element/ol) ou à [`<ul>`](/fr/docs/Web/HTML/Element/ul)).
 
 ## Propriétés détaillées correspondantes
 
@@ -28,7 +27,7 @@ Cette propriété est une propriété raccourcie pour les propriétés CSS&nbsp;
 list-style: square;
 
 /* Image */
-list-style: url('../img/etoile.png');
+list-style: url("../img/etoile.png");
 
 /* Position */
 list-style: inside;
@@ -37,8 +36,7 @@ list-style: inside;
 list-style: georgian inside;
 
 /* type | image | position */
-list-style: lower-roman url('../img/etoile.png') outside;
-
+list-style: lower-roman url("../img/etoile.png") outside;
 
 /* Valeur avec un mot-clé */
 list-style: none;
@@ -84,13 +82,15 @@ ul li::before {
 Une autre approche consiste à affecter une valeur `url` à la propriété `list-style`&nbsp;:
 
 ```css
-nav ol, nav ul {
+nav ol,
+nav ul {
   list-style: none;
 }
 
 /* cela devient : */
 
-nav ol, nav ul {
+nav ol,
+nav ul {
   list-style: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E");
 }
 ```

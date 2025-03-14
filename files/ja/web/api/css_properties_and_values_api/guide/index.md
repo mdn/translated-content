@@ -1,36 +1,38 @@
 ---
-title: CSS properties and values API の使用
+title: CSS プロパティと値 API の使用
 slug: Web/API/CSS_Properties_and_Values_API/guide
+l10n:
+  sourceCommit: d74e7839bc166b9d652abc9cdcfe99de448efb2a
 ---
 
-{{SeeCompatTable}} **CSS Properties and Values API**（[CSS Houdini](/ja/docs/Web/Houdini) API の傘の一部）は、{{cssxref('--*', 'CSS カスタムプロパティ')}}の登録を可能にし、プロパティ型のチェック、デフォルト値、および値を継承するまたは継承しないプロパティを許可します。
+{{DefaultAPISidebar("CSS Properties and Values API")}}
+
+**CSS プロパティと値 API**（[CSS Houdini](/ja/docs/Web/API/Houdini_APIs) API の傘下）により、 {{cssxref('--*', 'CSS カスタムプロパティ')}}の登録において、プロパティの型チェック、既定値、プロパティの値を継承の有無の登録を行うことができます。
 
 ## カスタムプロパティの登録
 
-カスタムプロパティを登録すると、カスタムプロパティの振る舞い（許可される型、カスタムプロパティがその値を継承するかどうか、カスタムプロパティのデフォルト値は何か）をブラウザーに指示できます。 プロパティを登録するには、JavaScript と CSS の 2 つの方法があります。
-
-> **メモ:** JavaScript オプションには使える実装があります。 CSS オプションにはありません。
+カスタムプロパティを登録すると、カスタムプロパティがどのように動作するかをブラウザーに指示することができます。これは、どのような型が許可されるか、カスタムプロパティがその値を継承するかどうか、カスタムプロパティの既定値は何かです。 プロパティを登録するには、 [JavaScript](/ja/docs/Web/JavaScript) と [CSS](/ja/docs/Web/CSS) の 2 つの方法があります。
 
 ### CSS.registerProperty
 
-次の例では、{{domxref('CSS.registerProperty')}} を使用して、{{cssxref('--*', 'CSS カスタムプロパティ')}} `--my-prop` を色として登録し、デフォルト値を指定し、その値を継承しないようにします。
+次の例では、 {{cssxref('--*', 'CSS カスタムプロパティ')}} として `--my-prop` を {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} によって登録します。 `--my-prop` は CSS 色構文を使用し、既定値として `#c0ffee` があり、値を継承しないようにします。
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-prop',
-  syntax: '<color>',
+  name: "--my-prop",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 
 ### @property
 
-CSS で同じ登録を行うことができます。 次の例では、{{cssxref('@property')}} を使用して、{{cssxref('--*', 'CSS カスタムプロパティ')}} `--my-prop` を色として登録し、デフォルト値を指定し、その値を継承しないようにします。
+CSS で同じ登録を行うことができます。 次の例では、 {{cssxref('--*', 'CSS カスタムプロパティ')}} として `--my-prop` を {{cssxref('@property')}} [アットルール](/ja/docs/Web/CSS/At-rule)を使用して登録します。 `--my-prop` は CSS 色構文を使用し、既定値として `#c0ffee` があり、値を継承しないようにします。
 
 ```css
 @property --my-prop {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
@@ -38,40 +40,20 @@ CSS で同じ登録を行うことができます。 次の例では、{{cssxref
 
 ## 登録したカスタムプロパティの使用
 
-プロパティを登録することの利点の 1 つは、遷移（transition）などを通してカスタムプロパティを処理する方法をブラウザーが認識できるようになったことです！ プロパティが登録されていない場合、ブラウザーはその処理方法を知らず、任意の値を使用できるため、アニメーション化できないものと見なされます。 しかし、プロパティに構文（syntax）が登録されている場合、ブラウザーは、それをアニメーション化できるなど、その構文を中心に最適化できます！
+プロパティを登録する利点の 1 つは、ブラウザーがトランジションなどでカスタムプロパティを処理する方法を知っていることです。プロパティが登録されていない場合、ブラウザーはそのプロパティをどのように扱えばよいのか分からないため、どのような値でも使用できると仮定し、その結果、そのプロパティをアニメーションすることができません。しかし、プロパティに構文 (syntax) が登録されている場合、ブラウザーはその構文を最適化することができます。
 
-この例では、カスタムプロパティ `--registered` を構文 `<color>` を使用して登録し、線形グラデーションで使用しています。 そのプロパティは、ホバーまたはフォーカスで別の色に遷移します。 登録されたプロパティでは遷移が機能しますが、未登録のプロパティでは機能しないことに注意してください！
+この例では、カスタムプロパティ `--registered` が `<color>` の構文で登録され、線形グラデーションで使用されています。このプロパティは、ホバー時またはフォーカス時に異なる色に遷移します。トランジションは登録されたプロパティでは動作しますが、登録されていないプロパティでは動作しないことに注意してください。
+
+### HTML
+
+```html
+<button class="registered">登録されている背景色</button>
+<button class="unregistered">登録されていない背景色</button>
+```
+
+### CSS
 
 ```css
-.registered {
-  --registered: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--registered));
-  transition: --registered 1s ease-in-out;
-}
-
-.registered:hover,
-.registered:focus {
-  --registered: #b4d455;
-}
-
-.unregistered {
-  --unregistered: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--unregistered));
-  transition: --unregistered 1s ease-in-out;
-}
-
-.unregistered:hover,
-.unregistered:focus {
-  --unregistered: #b4d455;
-}
-```
-
-```html hidden
-<button class="registered">Background Registered</button>
-<button class="unregistered">Background Not Registered</button>
-```
-
-```css hidden
 .registered {
   --registered: #c0ffee;
   background-image: linear-gradient(to right, #fff, var(--registered));
@@ -102,21 +84,29 @@ button {
 }
 ```
 
-```js hidden
+### JavaScript
+
+```js
 window.CSS.registerProperty({
-  name: '--registered',
-  syntax: '<color>',
+  name: "--registered",
+  syntax: "<color>",
   inherits: false,
-  initialValue: 'red',
+  initialValue: "red",
 });
 ```
 
-{{EmbedLiveSample("registered", 320, 320)}}
+### 結果
 
-機能的には正確ではありませんが、上記の例の未登録のプロパティと登録されたプロパティの違いを考える良い方法は、{{cssxref('height')}} をアニメーション化する際の {{cssxref('custom-ident')}} と数値の違いです。 ブラウザーは、計算されるまで `auto` の値がわからないため、`auto` から数値に遷移またはアニメーション化することはできません。 未登録のプロパティを使用すると、ブラウザーは計算されるまで値が*何であるか*を同様に認識しません。 そのため、ある値から別の値への遷移を設定できません。 ただし、登録すると、ブラウザーにどのような種類の値を期待するかを伝えており、それを知っているため、遷移を適切に設定できます。
+{{EmbedLiveSample("Using_registered_custom_properties", 320, 320)}}
+
+機能的には正確ではありませんが、上記の例の未登録のプロパティと登録されたプロパティの違いを考える良い方法は、{{cssxref('height')}} をアニメーションする際の {{cssxref('custom-ident')}} と数値の違いです。ブラウザーは、計算されるまで `auto` の値がわからないため、`auto` から数値にトランジションまたはアニメーションすることはできません。未登録のプロパティを使用すると、ブラウザーは計算されるまで値が*何であるか*を同様に認識しません。 そのため、ある値から別の値へのトランジションを設定できません。しかし、登録された場合は、期待すべき値の型をブラウザーに指示したことになり、ブラウザーはそれを知っているため、トランジションを適切に設定することができます。
 
 ## 落とし穴
 
-プロパティの登録には 2 つの落とし穴があります。 1 つ目は、プロパティを一度登録すると更新する方法がなく、JavaScript で再登録しようとすると、プロパティが既に定義されていることを示すエラーがスローされることです。
+プロパティの登録には 2 つの落とし穴があります。 1 つ目は、プロパティを一度登録すると更新する方法がなく、JavaScript で再登録しようとすると、プロパティが既に定義されていることを示すエラーが発生することです。
 
-2 つ目は、標準のプロパティとは異なり、登録されたプロパティは解析時に検証されません。 むしろ、計算時に検証されます。 つまり、要素のプロパティを検査するときに無効な値が無効として表示されないことと、有効なプロパティの後に無効なプロパティを含めることは、有効なプロパティにフォールバックしないことを意味します。 ただし、無効なプロパティは、登録されているデフォルトにフォールバックします。
+2 つ目は、標準プロパティとは異なり、登録されたプロパティは構文解析されるときに検証されないことです。代わりに、計算時に検証されます。これは、不正な値が要素のプロパティの検査時に無効な値として現れないことと、有効なプロパティの後に無効なプロパティを記載しても、有効なプロパティに代替されないことになります。ただし、無効なプロパティは、登録された既定値に代替されます。
+
+## ブラウザーの互換性
+
+{{Compat}}

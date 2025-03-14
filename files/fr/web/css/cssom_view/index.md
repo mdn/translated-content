@@ -1,13 +1,6 @@
 ---
 title: CSSOM View
-slug: Web/CSS/CSSOM_View
-tags:
-  - Aperçu
-  - CSS
-  - CSSOM
-  - CSSOM View
-  - Reference
-translation_of: Web/CSS/CSSOM_View
+slug: Web/CSS/CSSOM_view
 ---
 
 {{CSSRef}}
@@ -22,7 +15,7 @@ translation_of: Web/CSS/CSSOM_View
 
 ## Guide
 
-- [Les systèmes de coordonnées](/fr/docs/Web/CSS/CSSOM_View/Systèmes_de_coordonnées)
+- [Les systèmes de coordonnées](/fr/docs/Web/CSS/CSSOM_view/Coordinate_systems)
   - : Un guide à propos des différents systèmes de coordonnées permettant de définir une position dans un contexte d'affichage : que ce soit un écran, une zone d'affichage, un appareil mobile ou bien une position sur une feuille de papier lors de l'impression.
 
 ## Spécifications

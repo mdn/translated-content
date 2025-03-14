@@ -1,37 +1,47 @@
 ---
-title: HTMLHyperlinkElementUtils.hash
+title: HTMLAnchorElement：hash 属性
 slug: Web/API/HTMLAnchorElement/hash
+l10n:
+  sourceCommit: 3e301467a02808e9fc488d7012f1f49eb66a5980
 ---
 
-{{ APIRef("URLUtils") }}
+{{ APIRef("HTML DOM") }}
 
-**`HTMLHyperlinkElementUtils.hash`** 属性返回一个包含“＃”的 {{domxref("DOMString")}} , 后跟 URL 的片段标识符。
+**`HTMLAnchorElement.hash`** 属性返回一个字符串，该字符串包含一个 `'#'` 符号，后面跟着 URL 的片段标识符。
 
-片段没有[百分比解码](/zh-CN/docs/Glossary/percent-encoding)。如果 URL 没有包含片段标识符，这个属性为一个空的字符串，`""`.
+片段是[百分号编码](/zh-CN/docs/Glossary/Percent-encoding)的。如果 URL 没有片段标识符，则此属性包含一个空字符串，即 `""`。
 
-## Syntax
+## 值
 
-```plain
-string = object.hash;
-object.hash = string;
+一个字符串。
+
+## 示例
+
+### 从锚点链接中获取哈希值
+
+给定 HTML
+
+```html
+<a id="myAnchor" href="/zh-CN/docs/Web/API/HTMLAnchorElement/hash#示例">
+  示例
+</a>
 ```
 
-## Examples
+你可以像这样获取锚点哈希值：
 
 ```js
-// Let's an <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.href#youhou"> element be in the document
-var anchor = document.getElementById("myAnchor");
-var result = anchor.hash; // Returns:'#youhou'
+const anchor = document.getElementById("myAnchor");
+anchor.hash; // “#%E7%A4%BA%E4%BE%8B”
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- The {{domxref("HTMLHyperlinkElementUtils")}} interface it belongs to.
+- 所属接口 {{domxref("HTMLAnchorElement")}}。

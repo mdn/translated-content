@@ -1,45 +1,44 @@
 ---
-title: HTMLButtonElement.labels
+title: "HTMLButtonElement : propriété labels"
 slug: Web/API/HTMLButtonElement/labels
-translation_of: Web/API/HTMLButtonElement/labels
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("DOM")}}
 
-La propriété en lecture seule **`HTMLButtonElement.labels`** renvoie une {{domxref("NodeList")}} (_liste de noeuds_) des éléments {{HTMLElement("label")}} (_étiquette_) associés avec l'élément {{HTMLElement("button")}} (_bouton_).
-
-## Syntaxe
-
-```js
-var labelElements = button.labels;
-```
+La propriété en lecture seule **`HTMLButtonElement.labels`** renvoie une liste de nœuds [`NodeList`](/fr/docs/Web/API/NodeList) contenant les éléments [`<label>`](/fr/docs/Web/HTML/Element/label) (les libellés) associés à l'élément [`<button>`](/fr/docs/Web/HTML/Element/button) courant.
 
 ### Valeur de retour
 
-Une {{domxref("NodeList")}} contenant les éléments `<label>` associés avec l'élément `<button>`.
+Un objet [`NodeList`](/fr/docs/Web/API/NodeList) contenant les éléments `<label>` associés avec l'élément `<button>`.
 
 ## Exemple
 
 ### HTML
 
 ```html
-<label id="label1" for="test">Label 1</label>
-<button id="test">Button</button>
-<label id="label2" for="test">Label 2</label>
+<label id="label1" for="test">Libellé 1</label>
+<label id="label2" for="test">Libellé 2</label>
+<button id="test">Bouton</button>
+<p>
+  Les libellés du bouton sont
+  <output id="result"></output>
+</p>
 ```
 
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
-  const button = document.getElementById("test");
-  for(var i = 0; i < button.labels.length; i++) {
-    console.log(button.labels[i].textContent); // "Label 1" et "Label 2"
-  }
-});
+const button = document.getElementById("test");
+for (const label of button.labels) {
+  document.getElementById("result").innerText += ` ${label.textContent}`;
+}
 ```
 
-{{EmbedLiveSample("Exemple", "100%", 30)}}
+### Résultat
+
+{{EmbedLiveSample("", "100%", 80)}}
 
 ## Spécifications
 

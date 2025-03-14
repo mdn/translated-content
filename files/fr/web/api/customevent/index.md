@@ -1,8 +1,6 @@
 ---
 title: CustomEvent
 slug: Web/API/CustomEvent
-translation_of: Web/API/CustomEvent
-browser-compat: api.CustomEvent
 ---
 
 {{APIRef("DOM")}}
@@ -23,7 +21,7 @@ L'interface **`CustomEvent`** représente un évènement initialisé par une app
 _Cette interface hérite des propriétés de son parent, [`Event`](/fr/docs/Web/API/Event)._
 
 - [`CustomEvent.detail`](/fr/docs/Web/API/CustomEvent/detail) {{readonlyinline}}
-  - : Renvoie toutes les données passées lor de l'initialisation de l'évènement.
+  - : Renvoie toutes les données passées lors de l'initialisation de l'évènement.
 
 ## Méthodes
 

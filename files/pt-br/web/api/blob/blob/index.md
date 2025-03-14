@@ -27,18 +27,16 @@ var aBlob = new Blob( array[, options]);
 
 ```js
 var aFileParts = ['<a id="a"><b id="b">hey!</b></a>']; // an array consisting of a single DOMString
-var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob
+var oMyBlob = new Blob(aFileParts, { type: "text/html" }); // the blob
 ```
 
 ## Especificação
 
-| Especificação                                                            | Status                       | Comentário         |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('File API', '#constructorBlob', 'Blob()')}} | {{Spec2('File API')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Blob.Blob")}}
+{{Compat}}
 
 ## Veja também
 

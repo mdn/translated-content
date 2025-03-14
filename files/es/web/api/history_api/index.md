@@ -1,8 +1,9 @@
 ---
 title: Manipulando el historial del navegador
 slug: Web/API/History_API
-original_slug: DOM/Manipulando_el_historial_del_navegador
 ---
+
+{{DefaultAPISidebar("History API")}}
 
 El objeto DOM {{ domxref("window") }} proporciona acceso al historial del navegador a través del objeto {{ domxref("window.history", "history") }} . Este da acceso a métodos y propiedades útiles que permiten avanzar y retroceder a través del historial del usuario, así como --a partir de HTML5-- manipular el contenido del historial.
 
@@ -59,13 +60,14 @@ Puedes obtener el número de páginas en la pila del historial consultando el va
 var numeroDeEntradas = window.history.length;
 ```
 
-> **Nota:** Internet Explorer admite el paso de cadenas de URL como parámetro para `go()`; esto no es estándar y no está implementado en Gecko.
+> [!NOTE]
+> Internet Explorer admite el paso de cadenas de URL como parámetro para `go()`; esto no es estándar y no está implementado en Gecko.
 
 ## Añadiendo y modificando entradas del historial
 
 HTML5 introduce los métodos `history.pushState()` y `history.replaceState()`, los cuales te permiten añadir y modificar entradas del historial, respectivamente. Estos métodos trabajan en conjunto con el evento {{ domxref("window.onpopstate") }}.
 
-Hacer uso de `history.pushState()` cambia el referer que es utilizado en la cabecera HTTP por los objetos [XMLHttpRequest](/es/docs/XMLHttpRequest) que hayan sido creados luego de cambiar el estado. El referer utilizará la URL del documento cuyo objeto window sea `this` al momento de la creación del objeto [XMLHttpRequest](/es/docs/XMLHttpRequest).
+Hacer uso de `history.pushState()` cambia el referer que es utilizado en la cabecera HTTP por los objetos [XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest) que hayan sido creados luego de cambiar el estado. El referer utilizará la URL del documento cuyo objeto window sea `this` al momento de la creación del objeto [XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest).
 
 ### Ejemplo
 
@@ -130,15 +132,15 @@ var currentState = history.state;
 
 ## Ejemplos
 
-Para un ejemplo completo de un sitio AJAX, ver: [Ejemplo de navegación AJAX](/es/docs/Web/Guide/API/DOM/Manipulating_the_browser_history/Example).
+Para un ejemplo completo de un sitio AJAX, ver: [Ejemplo de navegación AJAX](/es/docs/Web/API/History_API/Working_with_the_History_API).
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.History")}}
+{{Compat}}
 
 ## Ver también
 

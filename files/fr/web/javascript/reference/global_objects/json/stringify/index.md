@@ -1,20 +1,29 @@
 ---
 title: JSON.stringify()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
-tags:
-  - JSON
-  - JavaScript
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
-original_slug: Web/JavaScript/Reference/Objets_globaux/JSON/stringify
 ---
 
 {{JSRef}}
 
 La méthode **`JSON.stringify()`** convertit une valeur JavaScript en chaîne JSON. Optionnellement, elle peut remplacer des valeurs ou spécifier les propriétés à inclure si un tableau de propriétés a été fourni.
 
-{{EmbedInteractiveExample("pages/js/json-stringify.html")}}
+{{InteractiveExample("JavaScript Demo: JSON.stringify()")}}
+
+```js interactive-example
+console.log(JSON.stringify({ x: 5, y: 6 }));
+// Expected output: '{"x":5,"y":6}'
+
+console.log(
+  JSON.stringify([new Number(3), new String("false"), new Boolean(false)]),
+);
+// Expected output: '[3,"false",false]'
+
+console.log(JSON.stringify({ x: [10, undefined, function () {}, Symbol("")] }));
+// Expected output: '{"x":[10,null,null,null]}'
+
+console.log(JSON.stringify(new Date(2006, 0, 2, 15, 4, 5)));
+// Expected output: '"2006-01-02T15:04:05.000Z"'
+```
 
 ## Syntaxe
 
@@ -60,18 +69,18 @@ La fonction `JSON.stringify()` convertit un objet en JSON :
 - Pour les autres instances d'objets tels que {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}} et {{jsxref("WeakSet")}}, seules les propriétés énumérables sont sérialisées.
 
 ```js
-JSON.stringify({});                        // '{}'
-JSON.stringify(true);                      // 'true'
-JSON.stringify("toto");                    // '"toto"'
-JSON.stringify([1, "false", false]);       // '[1,"false",false]'
-JSON.stringify([NaN, null, Infinity]);   // '[null,null,null]'
-JSON.stringify({ x: 5 });                  // '{"x":5}'
+JSON.stringify({}); // '{}'
+JSON.stringify(true); // 'true'
+JSON.stringify("toto"); // '"toto"'
+JSON.stringify([1, "false", false]); // '[1,"false",false]'
+JSON.stringify([NaN, null, Infinity]); // '[null,null,null]'
+JSON.stringify({ x: 5 }); // '{"x":5}'
 
 JSON.stringify(new Date(2006, 0, 2, 15, 4, 5));
 // '"2006-01-02T23:04:05.000Z"'
 
 // Exemples
-JSON.stringify({x: 5, y: 6});
+JSON.stringify({ x: 5, y: 6 });
 // '{"x":5,"y":6}'
 JSON.stringify([new Number(3), new String("false"), new Boolean(false)]);
 // '[3,"false",false]'
@@ -84,57 +93,78 @@ JSON.stringify(a);
 // '["toto","truc"]'
 
 // Symboles
-JSON.stringify({x: undefined, y: Object, z: Symbol("")});
+JSON.stringify({ x: undefined, y: Object, z: Symbol("") });
 // '{}'
-JSON.stringify({[Symbol("toto")]: "toto"});
+JSON.stringify({ [Symbol("toto")]: "toto" });
 // '{}'
-JSON.stringify({[Symbol.for("toto")]: "toto"}, [Symbol.for("toto")]);
+JSON.stringify({ [Symbol.for("toto")]: "toto" }, [Symbol.for("toto")]);
 // '{}'
-JSON.stringify({[Symbol.for("toto")]: "toto"}, function (k, v) {
-  if (typeof k === "symbol"){
+JSON.stringify({ [Symbol.for("toto")]: "toto" }, function (k, v) {
+  if (typeof k === "symbol") {
     return "a symbol";
   }
 });
 // '{}'
-JSON.stringify({ x: [10, undefined, function(){}, Symbol('')] });
+JSON.stringify({ x: [10, undefined, function () {}, Symbol("")] });
 // '{"x":[10,null,null,null]}'
 
 // Structures de données classiques
-JSON.stringify([new Set([1]), new Map([[1, 2]]), new WeakSet([{a: 1}]), new WeakMap([[{a: 1}, 2]])]);
+JSON.stringify([
+  new Set([1]),
+  new Map([[1, 2]]),
+  new WeakSet([{ a: 1 }]),
+  new WeakMap([[{ a: 1 }, 2]]),
+]);
 // '[{},{},{},{}]'
 
 // TypedArray
 JSON.stringify([new Int8Array([1]), new Int16Array([1]), new Int32Array([1])]);
 // '[{"0":1},{"0":1},{"0":1}]'
-JSON.stringify([new Uint8Array([1]), new Uint8ClampedArray([1]), new Uint16Array([1]), new Uint32Array([1])]);
+JSON.stringify([
+  new Uint8Array([1]),
+  new Uint8ClampedArray([1]),
+  new Uint16Array([1]),
+  new Uint32Array([1]),
+]);
 // '[{"0":1},{"0":1},{"0":1},{"0":1}]'
 JSON.stringify([new Float32Array([1]), new Float64Array([1])]);
 // '[{"0":1},{"0":1}]'
 
 // toJSON()
-JSON.stringify({ x: 5, y: 6, toJSON(){ return this.x + this.y; } });
+JSON.stringify({
+  x: 5,
+  y: 6,
+  toJSON() {
+    return this.x + this.y;
+  },
+});
 // '11'
 
 // Symbols:
-JSON.stringify({ x: undefined, y: Object, z: Symbol('') });
+JSON.stringify({ x: undefined, y: Object, z: Symbol("") });
 // '{}'
-JSON.stringify({ [Symbol('foo')]: 'foo' });
+JSON.stringify({ [Symbol("foo")]: "foo" });
 // '{}'
-JSON.stringify({ [Symbol.for('foo')]: 'foo' }, [Symbol.for('foo')]);
+JSON.stringify({ [Symbol.for("foo")]: "foo" }, [Symbol.for("foo")]);
 // '{}'
-JSON.stringify({ [Symbol.for('foo')]: 'foo' }, function(k, v) {
-  if (typeof k === 'symbol') {
-    return 'a symbol';
+JSON.stringify({ [Symbol.for("foo")]: "foo" }, function (k, v) {
+  if (typeof k === "symbol") {
+    return "a symbol";
   }
 });
 // undefined
 
 // Propriétés non énumérables
-JSON.stringify(Object.create(null, { x: { value: 'x', enumerable: false }, y: { value: 'y', enumerable: true } }) );
+JSON.stringify(
+  Object.create(null, {
+    x: { value: "x", enumerable: false },
+    y: { value: "y", enumerable: true },
+  }),
+);
 // '{"y":"y"}'
 
 // Échec avec BigInt
-JSON.stringify({x: 2n});
+JSON.stringify({ x: 2n });
 // TypeError: BigInt value can't be serialized in JSON
 ```
 
@@ -149,9 +179,11 @@ L'argument `remplaçant` est une fonction ou un tableau. Si c'est une fonction, 
 - Si la valeur renvoyée est un autre objet, cet objet sera, de façon récursive, transformé en une chaîne JSON en appelant la fonction `remplaçant` sur chaque propriété sauf si l'objet est une fonction auquel cas, rien n'est ajouté à la chaîne JSON.
 - Si la valeur renvoyée est {{jsxref("undefined")}}, la propriété ne sera pas incluse dans la chaîne JSON.
 
-> **Note :** la fonction `remplaçant` ne peut pas être utilisée pour retirer des valeurs d'un tableau. Si on renvoie `undefined` ou une fonction, ce sera la valeur `null` qui sera utilisée.
+> [!NOTE]
+> La fonction `remplaçant` ne peut pas être utilisée pour retirer des valeurs d'un tableau. Si on renvoie `undefined` ou une fonction, ce sera la valeur `null` qui sera utilisée.
 
-> **Note :** Si on souhaite que la fonction `remplaçant` distingue un objet dont une propriété a un clé qui est « réellement » une chaîne vide, il faudra avoir un compteur pour le nombre d'itération. Si le compteur indique que la première itération est passée, alors il s'agit bien d'un clé avec une chaîne vide.
+> [!NOTE]
+> Si on souhaite que la fonction `remplaçant` distingue un objet dont une propriété a un clé qui est « réellement » une chaîne vide, il faudra avoir un compteur pour le nombre d'itération. Si le compteur indique que la première itération est passée, alors il s'agit bien d'un clé avec une chaîne vide.
 
 #### Exemple avec une fonction
 
@@ -163,7 +195,13 @@ function remplaçant(clé, valeur) {
   return valeur;
 }
 
-var toto = {fondation: "Mozilla", modèle: "boîte", semaine: 45, transport: "bus", mois: 7};
+var toto = {
+  fondation: "Mozilla",
+  modèle: "boîte",
+  semaine: 45,
+  transport: "bus",
+  mois: 7,
+};
 console.log(JSON.stringify(toto, remplaçant)); // {"semaine":45, "mois":7}
 ```
 
@@ -172,7 +210,7 @@ console.log(JSON.stringify(toto, remplaçant)); // {"semaine":45, "mois":7}
 Si `remplaçant` est un tableau, les valeurs du tableau indiquent les propriétés de l'objet à inclure dans la chaîne JSON.
 
 ```js
-JSON.stringify(toto, ['semaine', 'mois']);
+JSON.stringify(toto, ["semaine", "mois"]);
 // '{"semaine":45,"mois":7}', on ne garde que "semaines" et "mois"
 ```
 
@@ -184,7 +222,7 @@ L'argument `espace` est utilisé pour contrôler les espacements utilisés dans 
 - Si c'est une chaîne, les dix premiers caractères (ou la chaîne complète si elle est plus courte)
 
 ```js
-JSON.stringify({ a: 2 }, null, ' ');
+JSON.stringify({ a: 2 }, null, " ");
 // '{
 //  "a": 2
 // }'
@@ -193,7 +231,7 @@ JSON.stringify({ a: 2 }, null, ' ');
 Dans l'exemple suivant on utilise la tabulation pour rendre lisible le résultat :
 
 ```js
-JSON.stringify({ uno: 1, dos: 2 }, null, '\t');
+JSON.stringify({ uno: 1, dos: 2 }, null, "\t");
 // renverra
 // '{
 //   "uno": 1,
@@ -213,29 +251,29 @@ Ainsi :
 
 ```js
 var obj = {
-  data: 'data',
-  toJSON(clef){
-    if(clef) {
+  data: "data",
+  toJSON(clef) {
+    if (clef) {
       return `Un objet imbriqué sous la clef '${clef}'`;
     } else {
       return this;
     }
-  }
+  },
 };
 
 JSON.stringify(obj);
 // '{"data":"data"}'
 
-JSON.stringify({ obj })
+JSON.stringify({ obj });
 // '{"obj":"Un objet imbriqué sous la clef 'obj'"}'
 
-JSON.stringify([ obj ])
+JSON.stringify([obj]);
 // '["Un objet imbriqué sous la clef '0'"]'
 ```
 
 ### Le problème des références circulaires
 
-[Le format JSON](https://www.json.org/) ne prend pas en charge les références (bien [qu'un brouillon IETF existe](http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03)) et une exception {{jsxref("TypeError")}} sera levée si on tente d'encoder un objet possédant des références circulaires.
+[Le format JSON](https://www.json.org/) ne prend pas en charge les références (bien [qu'un brouillon IETF existe](https://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03)) et une exception {{jsxref("TypeError")}} sera levée si on tente d'encoder un objet possédant des références circulaires.
 
 ```js example-bad
 const circularReference = {};
@@ -254,15 +292,15 @@ Par le passé, JSON n'était pas un sous-ensemble strict de JavaScript. En effet
 Ainsi, si on souhaite avoir une compatibilité avec les anciens moteurs JavaScript, on pourra évaluer ou utiliser les données JSON avec [JSONP](https://fr.wikipedia.org/wiki/JSONP) et la fonction utilitaire suivante :
 
 ```js
-function jsFriendlyJSONStringify (s) {
-    return JSON.stringify(s).
-        replace(/\u2028/g, '\\u2028').
-        replace(/\u2029/g, '\\u2029');
+function jsFriendlyJSONStringify(s) {
+  return JSON.stringify(s)
+    .replace(/\u2028/g, "\\u2028")
+    .replace(/\u2029/g, "\\u2029");
 }
 
 var s = {
-    a: String.fromCharCode(0x2028),
-    b: String.fromCharCode(0x2029)
+  a: String.fromCharCode(0x2028),
+  b: String.fromCharCode(0x2029),
 };
 
 // dans Firefox, console.log enlève les échappements
@@ -270,12 +308,13 @@ var s = {
 alert(jsFriendlyJSONStringify(s)); // {"a":"\u2028","b":"\u2029"}
 ```
 
-> **Note :** Les propriétés des objets qui ne sont pas des tableaux ne sont pas transformées en chaînes de caractères selon un ordre particulier. Aussi, l'ordre des données en JSON ne saurait constituer une information utile.
+> [!NOTE]
+> Les propriétés des objets qui ne sont pas des tableaux ne sont pas transformées en chaînes de caractères selon un ordre particulier. Aussi, l'ordre des données en JSON ne saurait constituer une information utile.
 
 ```js
-var a = JSON.stringify({toto: "truc", bidule: "machin"});
+var a = JSON.stringify({ toto: "truc", bidule: "machin" });
 // '{"toto":"truc","bidule":"machin"}'
-var b = JSON.stringify({bidule: "machin", toto: "truc"});
+var b = JSON.stringify({ bidule: "machin", toto: "truc" });
 // '{"bidule":"machin","toto":"truc"}'
 console.log(a !== b); // true
 ```
@@ -284,28 +323,29 @@ console.log(a !== b); // true
 
 Dans le cas où on souhaite enregistrer un objet créé par l'utilisateur afin de le restorer plus tard (y compris après que le navigateur ait été fermé), on peut utiliser `JSON.stringify`.
 
-> **Attention :** Les fonctions n'ont pas de correspondances en JSON, il ne sera donc pas possible de les enregistrer de cette façon. En revanche, elles peuvent être affichées si elles ont été converties en texte avec la fonction de remplacement. De même, certains objets comme les dates seront transformées en chaîne de caractères après l'utilisation de JSON.parse().
+> [!WARNING]
+> Les fonctions n'ont pas de correspondances en JSON, il ne sera donc pas possible de les enregistrer de cette façon. En revanche, elles peuvent être affichées si elles ont été converties en texte avec la fonction de remplacement. De même, certains objets comme les dates seront transformées en chaîne de caractères après l'utilisation de JSON.parse().
 
 ```js
 // On crée un objet pour l'exemple
 var session = {
-    'screens' : [],
-    'state' : true
+  screens: [],
+  state: true,
 };
-session.screens.push({"name":"screenA", "width":450, "height":250});
-session.screens.push({"name":"screenB", "width":650, "height":350});
-session.screens.push({"name":"screenC", "width":750, "height":120});
-session.screens.push({"name":"screenD", "width":250, "height":60});
-session.screens.push({"name":"screenE", "width":390, "height":120});
-session.screens.push({"name":"screenF", "width":1240, "height":650});
+session.screens.push({ name: "screenA", width: 450, height: 250 });
+session.screens.push({ name: "screenB", width: 650, height: 350 });
+session.screens.push({ name: "screenC", width: 750, height: 120 });
+session.screens.push({ name: "screenD", width: 250, height: 60 });
+session.screens.push({ name: "screenE", width: 390, height: 120 });
+session.screens.push({ name: "screenF", width: 1240, height: 650 });
 
 // On convertit l'objet en une chaîne JSON
 // et on enregistre cette valeur avec le nom 'session'
-localStorage.setItem('session', JSON.stringify(session));
+localStorage.setItem("session", JSON.stringify(session));
 
 // Ici, on reconvertit la chaîne en un objet
 // JSON.stringify and saved in localStorage in JSON object again
-var sessionRestaurée = JSON.parse(localStorage.getItem('session'));
+var sessionRestaurée = JSON.parse(localStorage.getItem("session"));
 
 // La variable sessionRestaurée contient désormais l'objet précédent
 // qui avait été sauvegardé dans localStorage

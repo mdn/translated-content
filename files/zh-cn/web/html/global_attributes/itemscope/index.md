@@ -5,13 +5,15 @@ slug: Web/HTML/Global_attributes/itemscope
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`itemscope`** 是一个布尔值的 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 。它定义了一个与元数据关联的数据项。就是说一个元素的 **`itemscope`** 属性会创建一个项，包含了一组与元素相关的键值对。相关的属性 {{htmlattrxref("itemtype")}} 通常表示表中一个有效的 URL（比如 [schema.org](http://schema.org/)）来表述项目和上下文。下面每个例子中的概念表都来自 [schema.org](https://schema.org/).
+**`itemscope`** 是一个布尔值的 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 。它定义了一个与元数据关联的数据项。就是说一个元素的 **`itemscope`** 属性会创建一个项，包含了一组与元素相关的键值对。相关的属性 [`itemtype`](/zh-CN/docs/Web/HTML/Global_attributes#itemtype) 通常表示表中一个有效的 URL（比如 [schema.org](https://schema.org/)）来表述项目和上下文。下面每个例子中的概念表都来自 [schema.org](https://schema.org/).
 
 每个 HTML 元素都可以有指定的 `itemscope` 属性。一个具有 `itemscope` 属性的元素可以没有关联的 `itemtype` ，但必须有相关的 `itemref`。
 
-> **备注：** Schema.org 提供了一份共享的词汇表，站长可以使用它来标记网页，而这些标记则被主要的搜索引擎：Google，Microsoft，Yandex 和 Yahoo！所支持。
+> [!NOTE]
+> Schema.org 提供了一份共享的词汇表，站长可以使用它来标记网页，而这些标记则被主要的搜索引擎：Google，Microsoft，Yandex 和 Yahoo！所支持。
 
-> **备注：** 获取更多关于 `itemtype` 属性的信息： <http://schema.org/Thing>
+> [!NOTE]
+> 获取更多关于 `itemtype` 属性的信息： <http://schema.org/Thing>
 
 ### 简单示例
 
@@ -20,9 +22,12 @@ slug: Web/HTML/Global_attributes/itemscope
 下面一个例子指定的 `itemscope` 属性，设置了 `itemtype` 为 "http\://schema.org/Movie"，并且有 3 个关联的 `itemprop` 属性（name、director、genre）。
 
 ```html
-<div itemscope itemtype ="http://schema.org/Movie">
+<div itemscope itemtype="http://schema.org/Movie">
   <h1 itemprop="name">Avatar</h1>
-  <span>Director: <span itemprop="director">James Cameron</span> (born August 16, 1954)</span>
+  <span
+    >Director: <span itemprop="director">James Cameron</span> (born August 16,
+    1954)</span
+  >
   <span itemprop="genre">Science fiction</span>
   <a href="https://youtu.be/0AY1XIkX7bY" itemprop="trailer">Trailer</a>
 </div>
@@ -69,7 +74,7 @@ slug: Web/HTML/Global_attributes/itemscope
 
 ### `itemscope` id 属性
 
-当你表述一个元素的 `itemscope` 属性时，就创建了一个新的数据项。数据项包含了一组键值对。如果一个元素包含了 `itemscope` 和 `itemtype` 属性，你同时也就阐述了一个 {{htmlattrxref("id")}} 属性。你可以用 `id` 属性为数据项设置一个全局的身份识别。这样你就可以通过这个识别与页面中其他的数据进行交互。
+当你表述一个元素的 `itemscope` 属性时，就创建了一个新的数据项。数据项包含了一组键值对。如果一个元素包含了 `itemscope` 和 `itemtype` 属性，你同时也就阐述了一个 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 属性。你可以用 `id` 属性为数据项设置一个全局的身份识别。这样你就可以通过这个识别与页面中其他的数据进行交互。
 
 ### 示例
 
@@ -235,7 +240,8 @@ Directions: <br>
   </tbody>
 </table>
 
-> **备注：** Google 提供了一个方便地从 HTML 提取微数据结构的工具：[Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)。你可以通过上面的 HTML 试一下。
+> [!NOTE]
+> Google 提供了一个方便地从 HTML 提取微数据结构的工具：[结构化数据测试工具](https://developers.google.cn/search/docs/appearance/structured-data)。你可以通过上面的 HTML 试一下。
 
 ## 规范
 
@@ -247,11 +253,11 @@ Directions: <br>
 
 ## 参阅
 
-- [其它不同的全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+- [其他不同的全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 - 其他 microdata 相关的全局熟悉
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemscope")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemid`](/zh-CN/docs/Web/HTML/Global_attributes#itemid)
+  - [`itemprop`](/zh-CN/docs/Web/HTML/Global_attributes#itemprop)
+  - [`itemref`](/zh-CN/docs/Web/HTML/Global_attributes#itemref)
+  - [`itemscope`](/zh-CN/docs/Web/HTML/Global_attributes#itemscope)
+  - [`itemtype`](/zh-CN/docs/Web/HTML/Global_attributes#itemtype)

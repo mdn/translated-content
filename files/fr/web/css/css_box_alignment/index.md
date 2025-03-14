@@ -1,28 +1,24 @@
 ---
 title: CSS Box Alignment
-slug: Web/CSS/CSS_Box_Alignment
-tags:
-  - Alignement
-  - CSS
-  - Guide
-translation_of: Web/CSS/CSS_Box_Alignment
+slug: Web/CSS/CSS_box_alignment
 ---
 
 {{CSSRef}}
 
 Le module de spécification _CSS Box Alignment_ (alignement des boîtes en CSS) décrit les fonctionnalités relatives à l'alignement des boîtes pour les différents modes de disposition CSS : disposition en bloc, en tableau, disposition flexible et disposition en grille. L'objectif de ce module est d'obtenir des méthodes d'alignement cohérentes pour tout CSS. Dans ce guide, nous verrons les différents concepts utilisés par cette spécification.
 
-> **Note :** La documentation relative à chaque méthode de disposition explicitera comment le module d'alignement est appliqué pour cette méthode.
+> [!NOTE]
+> La documentation relative à chaque méthode de disposition explicitera comment le module d'alignement est appliqué pour cette méthode.
 
 ## Anciennes méthodes d'alignement
 
 Par le passé, CSS disposait de peu d'outils pour l'alignement. Le texte pouvait être aligné grâce à {{cssxref("text-align")}}, les blocs pouvaient être centrés avec des marges ({{cssxref("margin")}}) automatique et les tableaux ou éléments en affichage _inline-block_ pouvaient tirer parti de {{cssxref("vertical-align")}}. Désormais, l'alignement du texte est couvert par les modules [Inline Layout](https://www.w3.org/TR/css-inline-3/) et [CSS Text](https://www.w3.org/TR/css-text-3/) et, pour la première fois, avec le module _Box Alignment_, on dispose d'outils complets pour l'alignement vertical et horizontal.
 
-Si vous connaissez déjà [les boîtes flexibles (_flexbox_)](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout), vous reconnaitrez certaines propriétés faisant partie de la spécification de niveau 1 pour Flexbox. Toutefois, la spécification indique que la spécification _Box Alignment_ est prioritaire car elle peut décrire certaines fonctionnalités supplémentaires.
+Si vous connaissez déjà [les boîtes flexibles (_flexbox_)](/fr/docs/Web/CSS/CSS_flexible_box_layout), vous reconnaitrez certaines propriétés faisant partie de la spécification de niveau 1 pour Flexbox. Toutefois, la spécification indique que la spécification _Box Alignment_ est prioritaire car elle peut décrire certaines fonctionnalités supplémentaires.
 
 ## Exemples simples
 
-Dans les exemples suivants, nous allons voir comment certaines des propriétés d'alignement peuvent être appliquées sur des dispositions [en grille](/fr/docs/Web/CSS/CSS_Grid_Layout) ou utilisant [les boîtes flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout).
+Dans les exemples suivants, nous allons voir comment certaines des propriétés d'alignement peuvent être appliquées sur des dispositions [en grille](/fr/docs/Web/CSS/CSS_grid_layout) ou utilisant [les boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout).
 
 ### Alignement pour une disposition en grille
 
@@ -175,10 +171,10 @@ Attention, d'autres éléments peuvent rentrer en jeu et ajouter de l'espace (le
 
 Les propriétés d'alignement des boîtes CSS sont implémentées différemment selon le mode de disposition utilisé. Vous pouvez vous référer aux pages suivantes afin de connaître les détails de ces différences :
 
-- [L'alignement des boîtes avec Flexbox](/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
-- [L'alignement des boîtes avec les grilles CSS](/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout)
-- [L'alignement des boîtes avec une disposition en colonne](/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout)
-- [L'alignement des boîtes pour les dispositions en bloc, les dispositions absolues et en tableau](/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables)
+- [L'alignement des boîtes avec Flexbox](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [L'alignement des boîtes avec les grilles CSS](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
+- [L'alignement des boîtes avec une disposition en colonne](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout)
+- [L'alignement des boîtes pour les dispositions en bloc, les dispositions absolues et en tableau](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
 
 ## Référence
 
@@ -207,9 +203,9 @@ Les propriétés d'alignement des boîtes CSS sont implémentées différemment 
 
 ## Guides
 
-- Guide CSS sur Flexbox : _[Les concepts de base de Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- Guide CSS sur Flexbox : _[Aligner les éléments d'un conteneur flexible](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- Guide CSS sur les grilles : _[Aligner les boîtes dans une disposition en grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- Guide CSS sur Flexbox : _[Les concepts de base de Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- Guide CSS sur Flexbox : _[Aligner les éléments d'un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- Guide CSS sur les grilles : _[Aligner les boîtes dans une disposition en grille](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 
 ## Ressources externes
 

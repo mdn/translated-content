@@ -1,9 +1,11 @@
 ---
 title: NDEFReader
 slug: Web/API/NDEFReader
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 **`NDEFReader`** は[ウェブ NFC API](/ja/docs/Web/API/Web_NFC_API)のインターフェイスで、互換性のある NFC 機器、たとえば NDEF に対応している NFC タグなどがリーダーの磁気誘導範囲にあるときに、これらの機器からデータを読み取ったり、書き込んだりするために使用されます。
 
@@ -14,12 +16,12 @@ slug: Web/API/NDEFReader
 - {{DOMxRef("NDEFReader.NDEFReader", "NDEFReader()")}} {{Experimental_Inline}}
   - : 新しい `NDEFReader` オブジェクトです。
 
-## メソッド
+## インスタンスメソッド
 
 _`NDEFReader` インターフェイスは、親インターフェイスである {{domxref("EventTarget")}} からメソッドを継承しています。_
 
 - {{DOMxRef("NDEFReader.scan", "NDEFReader.scan()")}} {{Experimental_Inline}}
-  - : 読み取り機器をアクティブにして {{jsxref("Promise")}} を返します。このプロミスは NFC タグが読み取られれば解決し、ハードウェアまたは権限のエラーが発生したときは拒否されます。このメソッドは、 "nfc" の権限が事前に許可されていない場合は、許可を問い合わせるプロンプトを起動します。
+  - : 読み取り機器をアクティブにして {{jsxref("Promise")}} を返します。このプロミスは NFC タグの読み取り操作がスケジュールされたときに解決し、ハードウェアまたは権限のエラーが発生したときは拒否されます。このメソッドは、 "nfc" の権限が事前に許可されていない場合は、許可を問い合わせるプロンプトを起動します。
 - {{DOMxRef("NDEFReader.write", "NDEFReader.write()")}} {{Experimental_Inline}}
   - : NDEF メッセージをタグに書き込む操作を行い、 {{jsxref("Promise")}} を返します。このプロミスは、タグへのメッセージの書き込みが完了した場合は解決し、ハードウェアまたは権限のエラーが発生したときは拒否されます。このメソッドは、 "nfc" の権限が事前に許可されていない場合は、許可を問い合わせるプロンプトを起動します。
 
@@ -53,18 +55,25 @@ ndef.onreading = (event) => {
 function write(data) {
   ignoreRead = true;
   return new Promise((resolve, reject) => {
-    ndef.addEventListener("reading", event => {
-      // Check if we want to write to this tag, or reject.
-      ndef.write(data).then(resolve, reject).finally(() => ignoreRead = false);
-    }, { once: true });
+    ndef.addEventListener(
+      "reading",
+      (event) => {
+        // Check if we want to write to this tag, or reject.
+        ndef
+          .write(data)
+          .then(resolve, reject)
+          .finally(() => (ignoreRead = false));
+      },
+      { once: true },
+    );
   });
 }
 
 await ndef.scan();
 try {
   await write("Hello World");
-  console.log("We wrote to a tag!")
-} catch(err) {
+  console.log("We wrote to a tag!");
+} catch (err) {
   console.error("Something went wrong", err);
 }
 ```

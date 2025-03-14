@@ -7,9 +7,21 @@ slug: Web/HTML/Global_attributes/accesskey
 
 O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **`accesskey`** fornece uma dica para gerar um atalho de teclado no elemento atual. O valor do atributo deve consistir em um único caracter imprimível (que inclui caracteres acentuados e outros caracteres que podem ser gerados pelo teclado).
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-accesskey.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: accesskey", "tabbed-shorter")}}
 
-> **Note:** **Nota**: Na especificação do WHATWG, diz que você pode especificar vários caracteres separados por espaço, e o navegador usará primeiro o que ele suportar. No entanto, isso não funciona na maioria dos browsers. O IE/Edge usa o primeiro que ele suporta sem problemas, desde que não haja conflitos com outros comandos.
+```html interactive-example
+<p>If you need to relax, press the <b>S</b>tress reliever!</p>
+<button accesskey="s">Stress reliever</button>
+```
+
+```css interactive-example
+b {
+  text-decoration: underline;
+}
+```
+
+> [!NOTE]
+> Na especificação do WHATWG, diz que você pode especificar vários caracteres separados por espaço, e o navegador usará primeiro o que ele suportar. No entanto, isso não funciona na maioria dos browsers. O IE/Edge usa o primeiro que ele suporta sem problemas, desde que não haja conflitos com outros comandos.
 
 A maneira de ativar a tecla de acesso depende do navegador e de sua plataforma:
 
@@ -106,17 +118,11 @@ Devido a esses problemas, geralmente não é aconselhável usar o `accesskey`s p
 
 ## Especificações
 
-| Especificação                                                                                                    | Status                           | Comentário                                                                                                                                                                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML5.2', "editing.html#the-accesskey-attribute", "accesskey")}}             | {{Spec2('HTML5.2')}}     | Comportamento mais realista descrito para o que é implementado na realidade.                                                                                                                                                                                                          |
-| {{SpecName('HTML WHATWG', "interaction.html#the-accesskey-attribute", "accesskey")}} | {{Spec2('HTML WHATWG')}} | Nenhuma alteração das últimas especificações do W3C {{SpecName('HTML5.1')}} .                                                                                                                                                                                                |
-| {{SpecName('HTML5.1', "editing.html#the-accesskey-attribute", "accesskey")}}             | {{Spec2('HTML5.1')}}     | Nenhuma alteração em {{SpecName('HTML5 W3C')}}.                                                                                                                                                                                                                                |
-| {{SpecName('HTML5 W3C', "editing.html#the-accesskey-attribute", "accesskey")}}         | {{Spec2('HTML5 W3C')}}     | A partir da {{SpecName('HTML4.01')}}, vários caracteres podem ser definidios como teclas de atalho. Além disso, pode ser definido em qualquer elemento.                                                                                                                       |
-| {{SpecName('HTML4.01', "interact/forms.html#h-17.11.2", "accesskey")}}                     | {{Spec2('HTML4.01')}}     | Suportado apenas em {{ HTMLElement("a") }}, {{ HTMLElement("area") }}, {{ HTMLElement("button") }}, {{ HTMLElement("input") }}, {{ HTMLElement("label") }}, {{ HTMLElement("legend") }} e {{ HTMLElement("textarea") }} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.global_attributes.accesskey")}}
+{{Compat}}
 
 ## Veja também
 

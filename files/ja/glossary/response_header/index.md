@@ -3,6 +3,8 @@ title: Response header (レスポンスヘッダー)
 slug: Glossary/Response_header
 ---
 
+{{GlossarySidebar}}
+
 **レスポンスヘッダー**は、 HTTP レスポンスで使用できる {{glossary("header", "HTTP ヘッダー")}}で、メッセージの内容には関連しないものです。 {{HTTPHeader("Age")}}, {{HTTPHeader("Location")}}, {{HTTPHeader("Server")}} のようなレスポンスヘッダーは、レスポンスのものより詳細な文脈を提供するために使用されます。
 
 レスポンスに現れるすべてのヘッダーが仕様書で*レスポンスヘッダー*に分類されている訳ではありません。例えば {{HTTPHeader("Content-Length")}} ヘッダーは*表現メタデータヘッダー*であり、レスポンスメッセージの本文の長さを表します (そして、古いバージョンの仕様書では{{glossary("entity header", "エンティティヘッダー")}}でした)。しかし、これらのエンティティヘッダーもそのような場面ではレスポンスヘッダーと呼ばれることがよくあります。
@@ -31,14 +33,14 @@ x-frame-options: DENY
 
 1. Learn more
 
-    1. [すべての HTTP ヘッダーの一覧](/ja/docs/Web/HTTP/Headers)
+   1. [すべての HTTP ヘッダーの一覧](/ja/docs/Web/HTTP/Headers)
 
-2. [用語集](/ja/docs/Glossary)
+2. 関連用語:
 
-    1. {{Glossary("Entity header", "エンティティヘッダー")}}
-    2. {{Glossary("Header", "ヘッダー")}}
-    3. {{Glossary("Response header", "レスポンスヘッダー")}}
+   1. {{Glossary("Entity header", "エンティティヘッダー")}}
+   2. {{Glossary("Header", "ヘッダー")}}
+   3. {{Glossary("Response header", "レスポンスヘッダー")}}
 
-        1. {{Glossary("Fetch metadata response header", "フェッチメタデータレスポンスヘッダー")}}
+      1. {{Glossary("Fetch metadata response header", "フェッチメタデータレスポンスヘッダー")}}
 
-    4. {{Glossary("Request header", "リクエストヘッダー")}}
+   4. {{Glossary("Request header", "リクエストヘッダー")}}

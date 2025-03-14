@@ -10,7 +10,7 @@ slug: Web/API/CSSNumericValue/to
 ## 構文
 
 ```js
-to(unit)
+to(unit);
 ```
 
 ### 引数

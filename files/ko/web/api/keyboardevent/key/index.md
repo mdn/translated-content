@@ -1,15 +1,6 @@
 ---
 title: KeyboardEvent.key
 slug: Web/API/KeyboardEvent/key
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
-  - UI Events
-browser-compat: api.KeyboardEvent.key
 ---
 
 {{APIRef("UI Events")}}
@@ -23,14 +14,14 @@ browser-compat: api.KeyboardEvent.key
 이 값은 다음과 같이 결정됩니다.
 
 - 만약 눌린 키의 값이 인쇄 가능할 경우, 반환되는 값은 키의 인쇄 가능한 값을 나타내는 비어 있지 않은 유니코드 문자열입니다.
-- 만약 눌린 키가 제어 문자 또는 특수 문자라면, 반환되는 값은 [사전 정의된 key 값들의 목록](/ko/docs/Web/API/KeyboardEvent/key/Key_Values) 중의 하나입니다.
+- 만약 눌린 키가 제어 문자 또는 특수 문자라면, 반환되는 값은 [사전 정의된 key 값들의 목록](/ko/docs/Web/API/UI_Events/Keyboard_event_key_values) 중의 하나입니다.
 - 만약 `KeyboardEvent` 가 [dead key](https://wikipedia.org/wiki/Dead_key)의 눌림을 나타낸다면, 키의 값은 "`Dead`"여야 합니다.
 - Windows에서는 일부 특수 키보드의 키(멀티미디어 키보드에서 미디어를 제어하는 확장 키 등)들의 키 코드가 만들어지지 않습니다. 대신에 이 키들은 `WM_APPCOMMAND` 이벤트를 발생시킵니다. 이 이벤트들은 실제 키 코드가 아니더라도 DOM 키보드 이벤트에 매핑되어 있으며, Windows의 "Virtual key codes"에 명시되어 있습니다.
 - 키를 식별할 수 없는 경우, 반환되는 값은 `Unidentified`입니다.
 
 > **콜아웃:**
 >
-> [key 값들의 전체 목록을 확인하려면 누르세요](/ko/docs/Web/API/KeyboardEvent/key/Key_Values).
+> [key 값들의 전체 목록을 확인하려면 누르세요](/ko/docs/Web/API/UI_Events/Keyboard_event_key_values).
 
 ## KeyboardEvent 시퀀스
 
@@ -214,7 +205,7 @@ window.addEventListener(
     // 두 번 동작하는 것을 막기 위해 기본 동작을 취소합니다.
     event.preventDefault();
   },
-  true
+  true,
 );
 ```
 

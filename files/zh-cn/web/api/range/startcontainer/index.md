@@ -1,33 +1,35 @@
 ---
-title: Range.startContainer
+title: Range：startContainer 属性
 slug: Web/API/Range/startContainer
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-Range.startContainer 是只读属性，返回 Range 开始的节点。要更改节点的起始位置，请使用 Range.setStart() 方法。
+{{ApiRef("DOM")}}
 
-## Syntax
+**`Range.startContainer`** 只读属性返回 `Range` 开始所在的 {{domxref("Node")}}。要更改节点的起始位置，请使用 {{domxref("Range.setStart()")}} 方法。
 
-```plain
-startRangeNode = range.startContainer;
-```
+## 值
 
-## Example
+{{domxref("Node")}} 对象。
+
+## 示例
 
 ```js
 range = document.createRange();
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
 startRangeNode = range.startContainer;
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference)
+- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model)

@@ -1,13 +1,17 @@
 ---
-title: CSSRule.cssText
+title: "CSSRule: cssText プロパティ"
+short-title: cssText
 slug: Web/API/CSSRule/cssText
+l10n:
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
 {{APIRef("CSSOM") }}
 
 **`cssText`** は {{domxref("CSSRule")}} インターフェイスのプロパティで、 {{domxref("CSSStyleSheet")}} スタイルルールの実際のテキストを返します。
 
-> **メモ:** このプロパティを要素のスタイルの {{domxref("CSSStyleDeclaration.cssText")}} と混同しないでください。
+> [!NOTE]
+> このプロパティを要素のスタイルの {{domxref("CSSStyleDeclaration.cssText")}} と混同しないでください。
 
 このプロパティは、[仕様化](https://www.w3.org/TR/cssom-1/#changes-from-5-december-2013)されたとおり、*機能的に*変更のみで、かつ、暗黙的であることが指定されているため、直接設定することができなくなったことに注意してください。言い換えると、設定しようとしても警告もエラーもなく、_絶対に何も起こりません_。さらに、設定可能なサブプロパティもありません。従って、これを変更するには、スタイルシートの {{domxref("CSSRuleList", "cssRules")}}`[index]` プロパティおよび {{domxref("CSSStyleRule.selectorText", ".selectorText")}}、{{domxref("CSSStyleRule.style", ".style")}} （または、そのサブプロパティ）を使用してください。詳細は、[動的なスタイル情報の使用](/ja/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)を参照してください。
 

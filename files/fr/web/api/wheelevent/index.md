@@ -1,22 +1,17 @@
 ---
 title: WheelEvent
 slug: Web/API/WheelEvent
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-  - WheelEvent
-translation_of: Web/API/WheelEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 L'interface **`WheelEvent`** représente les évènements qui se produisent lorsque l'utilisateur déplace la molette de la souris ou un périphérique d'entrée similaire.
 
-> **Attention :** Il s'agit de l'interface d'évènement de roue standard à utiliser. Les anciennes versions des navigateurs implémentaient les interfaces {{DOMxRef("MouseWheelEvent")}} et {{DOMxRef("MouseScrollEvent")}} non standard et non compatibles avec plusierus navigateurs. Utilisez cette interface et évitez les non standard.
+> [!WARNING]
+> Il s'agit de l'interface d'évènement de roue standard à utiliser. Les anciennes versions des navigateurs implémentaient les interfaces {{DOMxRef("MouseWheelEvent")}} et {{DOMxRef("MouseScrollEvent")}} non standard et non compatibles avec plusierus navigateurs. Utilisez cette interface et évitez les non standard.
 
-> **Note :** Ne confondez pas l'évènement {{domxref("Element/wheel_event", "wheel")}} avec l'énénement {{domxref("Element/scroll_event", "scroll")}} : L'action par défaut d'un évènement `wheel` est définie par l'implantation. Ainsi, un évènement `wheel` ne distribue pas nécessairement un évènement `scroll`. Même lorsque c'est le cas, cela ne signifie pas que les valeurs `delta*` dans l'évènement `wheel` reflètent nécessairement la direction de défilement du contenu. Par conséquent, ne comptez pas sur les propriétés `delta*` pour obtenir la direction de défilement du contenu. Au lieu de cela, détectez les changements de valeurs de {{DOMxRef("Element.scrollLeft", "scrollLeft")}} et {{DOMxRef("Element.scrollTop", "scrollTop")}} de la cible dans l'évènement `scroll`.
+> [!NOTE]
+> Ne confondez pas l'évènement {{domxref("Element/wheel_event", "wheel")}} avec l'énénement {{domxref("Element/scroll_event", "scroll")}} : L'action par défaut d'un évènement `wheel` est définie par l'implantation. Ainsi, un évènement `wheel` ne distribue pas nécessairement un évènement `scroll`. Même lorsque c'est le cas, cela ne signifie pas que les valeurs `delta*` dans l'évènement `wheel` reflètent nécessairement la direction de défilement du contenu. Par conséquent, ne comptez pas sur les propriétés `delta*` pour obtenir la direction de défilement du contenu. Au lieu de cela, détectez les changements de valeurs de {{DOMxRef("Element.scrollLeft", "scrollLeft")}} et {{DOMxRef("Element.scrollTop", "scrollTop")}} de la cible dans l'évènement `scroll`.
 
 {{InheritanceDiagram}}
 
@@ -37,7 +32,7 @@ _Cette interface hérite des propriétés de ses ancêtres, {{DOMxRef("MouseEven
   - : Renvoie un `double` représentant le montant du défilement pour l'axe z.
 - {{DOMxRef("WheelEvent.deltaMode")}}{{ReadOnlyInline}}
 
-  - : Revnoie un `unsigned long` représentant l'unité du montant de défilement des valeurs `delta*`. Les valeurs autorisées sont :
+  - : Renvoie un `unsigned long` représentant l'unité du montant de défilement des valeurs `delta*`. Les valeurs autorisées sont :
 
     <table class="standard-table">
       <thead>

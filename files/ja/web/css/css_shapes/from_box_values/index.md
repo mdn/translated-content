@@ -1,6 +1,6 @@
 ---
 title: ボックス値からのシェイプ
-slug: Web/CSS/CSS_Shapes/From_box_values
+slug: Web/CSS/CSS_shapes/From_box_values
 ---
 
 {{CSSRef}}
@@ -60,4 +60,4 @@ slug: Web/CSS/CSS_Shapes/From_box_values
 
 {{EmbedGHLiveSample("css-examples/shapes/box/bottom-margin-box.html", '100%', 800)}}
 
-もっと複雑なシェイプについては、この章の他のガイドにあるように、[基本シェイプ](/ja/docs/Web/CSS/CSS_Shapes/Basic_Shapes)のうちの一つを値として使用するか、画像からシェイプを定義するかする必要があります。
+もっと複雑なシェイプについては、この章の他のガイドにあるように、[基本シェイプ](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes)のうちの一つを値として使用するか、画像からシェイプを定義するかする必要があります。

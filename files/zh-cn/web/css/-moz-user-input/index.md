@@ -1,13 +1,11 @@
 ---
-title: '-moz-user-input'
+title: -moz-user-input
 slug: Web/CSS/-moz-user-input
 ---
 
 {{Non-standard_header}}{{CSSRef}}
 
-## Summary
-
-在 Mozilla 应用程序中，**`-moz-user-input`** 决定元素是否将接受用户输入。A 类似的属性 **`user-focus`** 是在[CSS3 UI 规范的前身的早期草案](http://www.w3.org/TR/2000/WD-css3-userint-20000216)中提出的，但被工作组拒绝。
+在 Mozilla 应用程序中，**`-moz-user-input`** 决定元素是否将接受用户输入。A 类似的属性 **`user-focus`** 是在[CSS3 UI 规范的前身的早期草案](https://www.w3.org/TR/2000/WD-css3-userint-20000216)中提出的，但被工作组拒绝。
 
 {{cssinfo}}
 

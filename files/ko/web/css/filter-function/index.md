@@ -1,13 +1,8 @@
 ---
 title: <filter-function>
 slug: Web/CSS/filter-function
-tags:
-  - CSS
-  - CSS Data Type
-  - Filter Effects
-  - Reference
-translation_of: Web/CSS/filter-function
 ---
+
 {{cssref}}
 
 [CSS](/ko/docs/Web/CSS) **`<filter-function>`** [자료형](/ko/docs/Web/CSS/CSS_Types)은 입력 이미지의 모습을 변형할 수 있는 그래픽 효과를 나타냅니다. {{cssxref("filter")}}와 {{cssxref("backdrop-filter")}} 속성에서 사용합니다.
@@ -63,9 +58,7 @@ translation_of: Web/CSS/filter-function
       <option>sepia</option>
     </select>
   </li>
-  <li>
-    <input type="range"><output></output>
-  </li>
+  <li><input type="range" /><output></output></li>
   <li>
     <p>Current value: <code></code></p>
   </li>
@@ -78,7 +71,8 @@ translation_of: Web/CSS/filter-function
 div {
   width: 300px;
   height: 300px;
-  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center;
+  background: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png)
+    no-repeat center;
 }
 
 li {
@@ -89,7 +83,7 @@ li {
 }
 
 input {
-  width: 60%
+  width: 60%;
 }
 
 output {
@@ -106,66 +100,82 @@ select {
 #### JavaScript
 
 ```js
-const selectElem = document.querySelector('select');
-const divElem = document.querySelector('div');
-const slider = document.querySelector('input');
-const output = document.querySelector('output');
-const curValue = document.querySelector('p code');
+const selectElem = document.querySelector("select");
+const divElem = document.querySelector("div");
+const slider = document.querySelector("input");
+const output = document.querySelector("output");
+const curValue = document.querySelector("p code");
 
-selectElem.addEventListener('change', () => {
+selectElem.addEventListener("change", () => {
   setSlider(selectElem.value);
   setDiv(selectElem.value);
 });
 
-slider.addEventListener('input', () => {
+slider.addEventListener("input", () => {
   setDiv(selectElem.value);
 });
 
 function setSlider(filter) {
-  if(filter === 'blur') {
+  if (filter === "blur") {
     slider.value = 0;
     slider.min = 0;
     slider.max = 30;
     slider.step = 1;
-    slider.setAttribute('data-unit', 'px');
-  } else if(filter === 'brightness' || filter === 'contrast' || filter === 'saturate') {
+    slider.setAttribute("data-unit", "px");
+  } else if (
+    filter === "brightness" ||
+    filter === "contrast" ||
+    filter === "saturate"
+  ) {
     slider.value = 1;
     slider.min = 0;
     slider.max = 4;
     slider.step = 0.05;
-    slider.setAttribute('data-unit', '');
-  } else if(filter === 'drop-shadow') {
+    slider.setAttribute("data-unit", "");
+  } else if (filter === "drop-shadow") {
     slider.value = 0;
     slider.min = -20;
     slider.max = 40;
     slider.step = 1;
-    slider.setAttribute('data-unit', 'px');
-  } else if(filter === 'opacity') {
+    slider.setAttribute("data-unit", "px");
+  } else if (filter === "opacity") {
     slider.value = 1;
     slider.min = 0;
     slider.max = 1;
     slider.step = 0.01;
-    slider.setAttribute('data-unit', '');
-  } else if(filter === 'grayscale' || filter === 'invert' || filter === 'sepia') {
+    slider.setAttribute("data-unit", "");
+  } else if (
+    filter === "grayscale" ||
+    filter === "invert" ||
+    filter === "sepia"
+  ) {
     slider.value = 0;
     slider.min = 0;
     slider.max = 1;
     slider.step = 0.01;
-    slider.setAttribute('data-unit', '');
-  } else if(filter === 'hue-rotate') {
+    slider.setAttribute("data-unit", "");
+  } else if (filter === "hue-rotate") {
     slider.value = 0;
     slider.min = 0;
     slider.max = 360;
     slider.step = 1;
-    slider.setAttribute('data-unit', 'deg');
+    slider.setAttribute("data-unit", "deg");
   }
 }
 
 function setDiv(filter) {
-  if(filter === 'drop-shadow') {
-    divElem.style.filter = `${selectElem.value}(${Math.round(slider.value)}${slider.getAttribute('data-unit')} ${Math.round(slider.value)}${slider.getAttribute('data-unit')} ${Math.round(Math.abs(slider.value/2))}${slider.getAttribute('data-unit')})`;
+  if (filter === "drop-shadow") {
+    divElem.style.filter = `${selectElem.value}(${Math.round(
+      slider.value,
+    )}${slider.getAttribute("data-unit")} ${Math.round(
+      slider.value,
+    )}${slider.getAttribute("data-unit")} ${Math.round(
+      Math.abs(slider.value / 2),
+    )}${slider.getAttribute("data-unit")})`;
   } else {
-    divElem.style.filter = `${selectElem.value}(${slider.value}${slider.getAttribute('data-unit')}`;
+    divElem.style.filter = `${selectElem.value}(${
+      slider.value
+    }${slider.getAttribute("data-unit")}`;
   }
 
   updateOutput();
@@ -188,11 +198,9 @@ setDiv(selectElem.value);
 
 {{EmbedLiveSample('필터_함수_비교', '100%', 500)}}
 
-## 명세
+## 명세서
 
-| Specification                                                                                                    | Status                               | Comments            |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{ SpecName('Filters 1.0', '#typedef-filter-function', '&lt;filter-function&gt;') }} | {{ Spec2('Filters 1.0') }} | Initial definition. |
+{{Specifications}}
 
 ## 같이 보기
 

@@ -1,42 +1,101 @@
 ---
-title: gap (grid-gap)
+title: gap
 slug: Web/CSS/gap
+l10n:
+  sourceCommit: 50171049701b814d205e8750d9049593ddd29143
 ---
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`gap`** 属性是用来设置网格行与列之间的间隙（{{glossary("gutters")}}），该属性是 {{cssxref("row-gap")}} 和 {{cssxref("column-gap")}} 的简写形式。
+[CSS](/zh-CN/docs/Web/CSS) **`gap`** [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)用于设置行与列之间的间隙（{{glossary("gutters", "网格间距")}}）。
 
-{{EmbedInteractiveExample("pages/css/gap.html")}}
+规范的早期版本将该属性命名为 `grid-gap`，且为了保持与旧网站的兼容性，浏览器仍然会接受 `grid-gap` 作为 `gap` 的别名。
+
+{{InteractiveExample("CSS Demo: gap")}}
+
+```css interactive-example-choice
+gap: 0;
+```
+
+```css interactive-example-choice
+gap: 10%;
+```
+
+```css interactive-example-choice
+gap: 1em;
+```
+
+```css interactive-example-choice
+gap: 10px 20px;
+```
+
+```css interactive-example-choice
+gap: calc(20px + 10%);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 200px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
+
+## 组成属性
+
+该属性为以下 CSS 属性的简写：
+
+- {{cssxref("column-gap")}}
+- {{cssxref("row-gap")}}
 
 ## 语法
 
 ```css
-/* One <length> value */
+/* 一个 <length> 值 */
 gap: 20px;
 gap: 1em;
 gap: 3vmin;
 gap: 0.5cm;
 
-/* One <percentage> value */
+/* 一个 <percentage> 值 */
 gap: 16%;
 gap: 100%;
 
-/* Two <length> values */
+/* 两个 <length> 值 */
 gap: 20px 10px;
 gap: 1em 0.5em;
 gap: 3vmin 2vmax;
 gap: 0.5cm 2mm;
 
-/* One or two <percentage> values */
+/* 一个或两个 <percentage> 值 */
 gap: 16% 100%;
 gap: 21px 82%;
 
-/* calc() values */
+/* calc() 值 */
 gap: calc(10% + 20px);
 gap: calc(20px + 10%) calc(10% - 5px);
 
-/* Global values */
+/* 全局值 */
 gap: inherit;
 gap: initial;
 gap: revert;
@@ -44,16 +103,16 @@ gap: revert-layer;
 gap: unset;
 ```
 
-该属性用来表示 `<'row-gap'>` 和 `<'column-gap'>` 的值（`<'column-gap'>` 是可选的）。假如 `<'column-gap'>` 缺失的话，则会被设置成跟 `<'row-gap'>` 一样的的值。
+该属性用来表示 `<'row-gap'>` 和可选的 `<'column-gap'>` 的值。如果缺失 `<'column-gap'>`，则其会被设置成跟 `<'row-gap'>` 一样的值。
 
-`<'row-gap'>` 和 `<'column-gap'>` 都可以用 `<length>` 或者 `<percentage>` 来表示。
+`<'row-gap'>` 和 `<'column-gap'>` 都可以用 `<length>` 或者 `<percentage>` 来指定。
 
 ### 值
 
 - {{cssxref("&lt;length&gt;")}}
   - : 网格线之间的间隙宽度。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : 网格线直接的间隙宽度，相对网格容器的百分比。
+  - : 网格线之间的间隙宽度，为相对于当前元素尺寸的百分比。
 
 ## 形式定义
 
@@ -65,7 +124,7 @@ gap: unset;
 
 ## 示例
 
-### Flex 布局
+### 弹性布局
 
 #### HTML
 
@@ -96,15 +155,14 @@ gap: unset;
   flex: 1 1 auto;
   width: 100px;
   height: 50px;
-
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('Flex_布局', "auto", "120px")}}
+{{EmbedLiveSample("弹性布局", "auto", 250)}}
 
-### Grid 布局
+### 网格布局
 
 #### HTML
 
@@ -140,7 +198,7 @@ gap: unset;
 
 #### 结果
 
-{{EmbedLiveSample('Grid_布局', 'auto', 120)}}
+{{EmbedLiveSample("网格布局", "auto", 250)}}
 
 ### 多列布局
 
@@ -148,9 +206,8 @@ gap: unset;
 
 ```html
 <p class="content-box">
-  This is some multi-column text with a 40px column
-  gap created with the CSS <code>gap</code> property.
-  Don't you think that's fun and exciting? I sure do!
+  这是使用 CSS <code>gap</code> 属性创建的具有 40px
+  列间距的多栏文本。你不觉得这很有趣和令人兴奋吗？我当然是这么认为的！！！
 </p>
 ```
 
@@ -163,13 +220,13 @@ gap: unset;
 }
 ```
 
-#### Result
+#### 结果
 
 {{EmbedLiveSample("多列布局", "auto", "120px")}}
 
 ## 规范
 
-{{Specifications("css.properties.gap.grid_context")}}
+{{Specifications}}
 
 ## 浏览器兼容性
 
@@ -177,5 +234,5 @@ gap: unset;
 
 ## 参见
 
-- 相关 CSS 属性：{{cssxref("row-gap")}}、{{cssxref("column-gap")}}
-- 网格布局指南：_[网格布局基本概念 - 网格间距](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#网格间距)_
+- 相关 CSS 属性：{{CSSxRef("row-gap")}}、{{CSSxRef("column-gap")}}
+- 网格布局指南：_[网格布局的基本概念——网格间距](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#网格间距)_

@@ -3,7 +3,7 @@ title: 合成效果
 slug: Web/API/Canvas_API/Tutorial/Compositing
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
 在前述的範例中，新繪製的圖形總會覆蓋在之前的圖形上，對大多數情況來說這相當正常，不過它也限制了圖形繪製的順序。其實我們可以透過 globalCompositeOperation 屬性來改變這項預設行為。
 
@@ -14,17 +14,15 @@ slug: Web/API/Canvas_API/Tutorial/Compositing
 - `globalCompositeOperation = type`
   - : type 字串可指定為以下 12 種合成設定之一，每一種合成設定均將套用到新繪製的圖形上。
 
-See [compositing examples](/zh-TW/docs/Web/API/Canvas_API/Tutorial/Compositing/Example) for the code of the following examples.
-
-{{EmbedLiveSample("Compositing_example", 750, 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
-
 ## 裁剪路徑
 
-![](canvas_clipping_path.png)裁剪路徑就像是一般畫布圖形繪圖，但就如同遮罩一樣，會蓋掉不需要的部分，如右圖所示。紅邊星星是我們的裁剪路徑，在路徑區域以外部分都不會出現在畫布上。
+裁剪路徑就像是一般畫布圖形繪圖，但就如同遮罩一樣，會蓋掉不需要的部分，如右圖所示。紅邊星星是我們的裁剪路徑，在路徑區域以外部分都不會出現在畫布上。
+
+![](canvas_clipping_path.png)
 
 和上述 globalCompositeOperation 相比，可以發現 source-in 和 source-atop 這兩種構圖組合所達到的效果，和裁剪路徑類似，而其中最大差異在於裁剪路徑不需加入新圖形，消失的部分也不會出現在畫布上，所以，如果想要限定繪圖區域，裁剪路徑會是更理想的作法。
 
-在[繪畫圖形](/zh-TW/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes#Drawing_paths)一章中，我們只提到 stroke() 和 fill() 函式，但其實還有第三個函式，那就是 clip() 函式。
+在[繪畫圖形](/zh-TW/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#drawing_paths)一章中，我們只提到 stroke() 和 fill() 函式，但其實還有第三個函式，那就是 clip() 函式。
 
 - `clip()`
   - : 轉換目前繪圖路徑為裁剪路徑。
@@ -39,45 +37,49 @@ See [compositing examples](/zh-TW/docs/Web/API/Canvas_API/Tutorial/Compositing/E
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.fillRect(0,0,150,150);
-  ctx.translate(75,75);
+  const ctx = document.getElementById("canvas").getContext("2d");
+  ctx.fillRect(0, 0, 150, 150);
+  ctx.translate(75, 75);
 
-  // Create a circular clipping path
+  // 建立圓形裁剪路徑
   ctx.beginPath();
-  ctx.arc(0,0,60,0,Math.PI*2,true);
+  ctx.arc(0, 0, 60, 0, Math.PI * 2, true);
   ctx.clip();
 
-  // draw background
-  var lingrad = ctx.createLinearGradient(0,-75,0,75);
-  lingrad.addColorStop(0, '#232256');
-  lingrad.addColorStop(1, '#143778');
+  // 繪製背景
+  const lingrad = ctx.createLinearGradient(0, -75, 0, 75);
+  lingrad.addColorStop(0, "#232256");
+  lingrad.addColorStop(1, "#143778");
 
   ctx.fillStyle = lingrad;
-  ctx.fillRect(-75,-75,150,150);
+  ctx.fillRect(-75, -75, 150, 150);
 
-  // draw stars
-  for (var j=1;j<50;j++){
-    ctx.save();
-    ctx.fillStyle = '#fff';
-    ctx.translate(75-Math.floor(Math.random()*150),
-                  75-Math.floor(Math.random()*150));
-    drawStar(ctx,Math.floor(Math.random()*4)+2);
-    ctx.restore();
-  }
-
+  generateStars(ctx);
 }
 
-function drawStar(ctx,r){
+function generateStars(ctx) {
+  for (let j = 1; j < 50; j++) {
+    ctx.save();
+    ctx.fillStyle = "#fff";
+    ctx.translate(
+      75 - Math.floor(Math.random() * 150),
+      75 - Math.floor(Math.random() * 150),
+    );
+    drawStar(ctx, Math.floor(Math.random() * 4) + 2);
+    ctx.restore();
+  }
+}
+
+function drawStar(ctx, r) {
   ctx.save();
-  ctx.beginPath()
-  ctx.moveTo(r,0);
-  for (var i=0;i<9;i++){
-    ctx.rotate(Math.PI/5);
-    if(i%2 == 0) {
-      ctx.lineTo((r/0.525731)*0.200811,0);
+  ctx.beginPath();
+  ctx.moveTo(r, 0);
+  for (let i = 0; i < 9; i++) {
+    ctx.rotate(Math.PI / 5);
+    if (i % 2 === 0) {
+      ctx.lineTo((r / 0.525731) * 0.200811, 0);
     } else {
-      ctx.lineTo(r,0);
+      ctx.lineTo(r, 0);
     }
   }
   ctx.closePath();
@@ -98,6 +100,6 @@ draw();
 
 繪製裁剪路徑之後，所產生的所有圖形都只會出現在路徑以內，從後來繪製的漸層背景中可看出此特性。我們用自訂的 drawStar() 函數產生 50 個隨機散佈、大小不一的星星。這些星星同樣只會出現在裁剪路徑的範圍之內。
 
-{{EmbedLiveSample("A_clip_example", "180", "180", "canvas_clip.png")}}
+{{EmbedLiveSample("clip 範例", "", "160")}}
 
-{{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Transformations", "Web/Guide/HTML/Canvas_tutorial/Basic_animations")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

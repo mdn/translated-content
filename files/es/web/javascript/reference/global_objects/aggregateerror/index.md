@@ -1,14 +1,6 @@
 ---
 title: AggregateError
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError
-tags:
-  - AggregateError
-  - Clase
-  - Experimental
-  - Interfaz
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError
-original_slug: Web/JavaScript/Referencia/Objetos_globales/AggregateError
 ---
 
 {{JSRef}}
@@ -32,13 +24,11 @@ El objeto **`AggregateError`** representa un error cuando se deben agrupar vario
 ### Capturar un error agregado
 
 ```js
-Promise.any([
-  Promise.reject(new Error("algún error")),
-]).catch(e => {
+Promise.any([Promise.reject(new Error("algún error"))]).catch((e) => {
   console.log(e instanceof AggregateError); // true
-  console.log(e.message);                   // "Todas las promesas rechazadas"
-  console.log(e.name);                      // "AggregateError"
-  console.log(e.errors);                    // [ Error: "algún error" ]
+  console.log(e.message); // "Todas las promesas rechazadas"
+  console.log(e.name); // "AggregateError"
+  console.log(e.errors); // [ Error: "algún error" ]
 });
 ```
 
@@ -46,26 +36,22 @@ Promise.any([
 
 ```js
 try {
-  throw new AggregateError([
-    new Error("algún error"),
-  ], 'Hola');
+  throw new AggregateError([new Error("algún error")], "Hola");
 } catch (e) {
   console.log(e instanceof AggregateError); // true
-  console.log(e.message);                   // "Hola"
-  console.log(e.name);                      // "AggregateError"
-  console.log(e.errors);                    // [ Error: "algún error" ]
+  console.log(e.message); // "Hola"
+  console.log(e.name); // "AggregateError"
+  console.log(e.errors); // [ Error: "algún error" ]
 }
 ```
 
 ## Especificaciones
 
-| Especificación                                                                                           |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Promise.any', '#sec-aggregate-error-objects', 'AggregateError')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.AggregateError")}}
+{{Compat}}
 
 ## Ve también
 

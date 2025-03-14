@@ -1,7 +1,6 @@
 ---
 title: Window.length
 slug: Web/API/Window/length
-translation_of: Web/API/Window/length
 ---
 
 {{ ApiRef() }}

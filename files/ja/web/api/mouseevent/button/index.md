@@ -1,15 +1,16 @@
 ---
-title: MouseEvent.button
+title: "MouseEvent: button プロパティ"
+short-title: button
 slug: Web/API/MouseEvent/button
 l10n:
-  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("UI Events")}}
 
-**`MouseEvent.button`** は読み取り専用のプロパティで、イベントを引き起こすのにどのボタンが押されたのかを表します。
+**`MouseEvent.button`** は読み取り専用のプロパティで、イベントを引き起こすのにどのボタンが押されたまたは離されたのかを表します。
 
-このプロパティは、 1 つまたは複数のボタンを押したり離したりすることによって発生したイベント中に、どのボタンが押されたかを示すことのみを保証します。
+このプロパティは、 1 つまたは複数のボタンを押したり離したりすることによって発生したイベント中に、どのボタンが押されたまたは離されたかを示すことのみを保証します。
 したがって、 {{domxref("Element/mouseenter_event", "mouseenter")}}, {{domxref("Element/mouseleave_event", "mouseleave")}}, {{domxref("Element/mouseover_event", "mouseover")}}, {{domxref("Element/mouseout_event", "mouseout")}}, {{domxref("Element/mousemove_event", "mousemove")}} のようなイベントに対しては確かではありません。
 
 ユーザーはポインティングデバイスの設定を変更できるため、例えばイベントのボタンプロパティがゼロだった場合、必ずしも物理的な左ボタンによるものとは限りません。ただし、そのような場合でも標準設定における左ボタンと同じ動作をするべきです。
@@ -20,9 +21,9 @@ l10n:
 
 該当するボタンに対応する番号です。
 
-- `0`: 主ボタンが押された。通常は左ボタンか初期化されていない状態。
-- `1`: 補助ボタンが押された。通常はホイールボタンまたは中央のボタンが押された場合。
-- `2`: 副ボタンが押された。通常は右ボタン。
+- `0`: 主ボタン。通常は左ボタンか初期化されていない状態。
+- `1`: 補助ボタン。通常はホイールボタンまたは中央のボタンが押された場合。
+- `2`: 副ボタン。通常は右ボタン。
 - `3`: 第四ボタン。一般的にブラウザーの戻るボタン。
 - `4`: 第五ボタン。一般的にブラウザーの進むボタン。
 
@@ -36,30 +37,32 @@ l10n:
 ### HTML
 
 ```html
-<button id="button" oncontextmenu="event.preventDefault();">マウスでここをクリックしてください…</button>
+<button id="button" oncontextmenu="event.preventDefault();">
+  マウスでここをクリックしてください…
+</button>
 <p id="log"></p>
 ```
 
 ### JavaScript
 
 ```js
-let button = document.querySelector('#button');
-button.addEventListener('mouseup', (e) => {
-  let log = document.querySelector('#log');
+let button = document.querySelector("#button");
+button.addEventListener("mouseup", (e) => {
+  let log = document.querySelector("#log");
   switch (e.button) {
     case 0:
-      log.textContent = '左ボタンがクリックされました。';
+      log.textContent = "左ボタンがクリックされました。";
       break;
     case 1:
-      log.textContent = '中央ボタンがクリックされました。';
+      log.textContent = "中央ボタンがクリックされました。";
       break;
     case 2:
-      log.textContent = '右ボタンがクリックされました。';
+      log.textContent = "右ボタンがクリックされました。";
       break;
     default:
       log.textContent = `不明なボタンコード: ${e.button}`;
   }
-}
+});
 ```
 
 ### 結果

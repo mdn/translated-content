@@ -36,9 +36,9 @@ A melhor maneira de enviar conteúdo binário (por exemplo, em uploads de arquiv
 
 ### Exceções
 
-| Exceção             | Descrição                                                                             |
-| ------------------- | ------------------------------------------------------------------------------------- |
-| `InvalidStateError` | `send()` já foi invocado para a requisição, e/ou a requisição está completa.          |
+| Exceção             | Descrição                                                                        |
+| ------------------- | -------------------------------------------------------------------------------- |
+| `InvalidStateError` | `send()` já foi invocado para a requisição, e/ou a requisição está completa.     |
 | `NetworkError`      | O tipo de recurso a ser buscada é um {{domxref("Blob")}} e o método não é `GET`. |
 
 ## Exemplo: GET
@@ -79,15 +79,13 @@ xhr.send("foo=bar&lorem=ipsum");
 
 ## Especificações
 
-| Especificação                                                                        | Status                               | Comentário             |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-send()-method', 'send()')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.XMLHttpRequest.send")}}
+{{Compat}}
 
 ## Veja também
 
-- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest/Usando_XMLHttpRequest)
-- [Obter arquivo HTML usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Obter arquivo HTML usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)

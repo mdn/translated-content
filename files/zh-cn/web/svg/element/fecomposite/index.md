@@ -18,7 +18,7 @@ result = k1*i1*i2 + k2*i1 + k3*i2 + k4
 - `i1` 和 `i2` 标`示了输入图像相应的像素通道值，分别映射到{{SVGAttr("in")}}和{{SVGAttr("in2")}}。
 - `k1`、`k2`、`k3` 和 `k4` 标示了同名的属性值。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
@@ -28,9 +28,9 @@ result = k1*i1*i2 + k2*i1 + k3*i2 + k4
 
 ### 全局属性
 
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
-- [滤镜属性](/zh-CN/SVG/Attribute#Filter) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
+- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
+- [滤镜属性](/zh-CN/docs/SVG/Attribute#filter) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -46,7 +46,7 @@ result = k1*i1*i2 + k2*i1 + k3*i2 + k4
 
 ## DOM 接口
 
-该元素实现了[`SVGFECompositeElement`](/zh-CN/DOM/SVGFECompositeElement)接口。
+该元素实现了 [`SVGFECompositeElement`](/zh-CN/docs/DOM/SVGFECompositeElement) 接口。
 
 ## 参见
 
@@ -68,4 +68,4 @@ result = k1*i1*i2 + k2*i1 + k3*i2 + k4
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/zh-CN/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/SVG/Tutorial/Filter_effects)

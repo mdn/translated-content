@@ -1,34 +1,29 @@
 ---
 title: Techniques ARIA
 slug: Web/Accessibility/ARIA/ARIA_Techniques
-tags:
-  - ARIA
-  - Accessibilité
-  - Attributs
-  - Rôles
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques
-original_slug: Accessibilité/ARIA/Techniques_ARIA
 ---
+
+{{AccessibilitySidebar}}
 
 ### Rôles
 
-#### Rôles de composant d’interface
+#### Rôles de composant d'interface
 
 - [Alert](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_alert)
-- [Alertdialog](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_alertdialog)
+- [Alertdialog](/fr/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
 - [Button](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_button)
-- [Checkbox](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_checkbox)
+- [Checkbox](/fr/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
 - [Dialog](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_dialog)
-- [Link](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_link)
-- [Log](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_log)
+- [Link](/fr/docs/Web/Accessibility/ARIA/Roles/link_role)
+- [Log](/fr/docs/Web/Accessibility/ARIA/Roles/log_role)
 - Marquee
-- [Progressbar](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_progressbar)
+- [Progressbar](/fr/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
 - [Radio](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_radio)
 - Scrollbar
-- [Slider](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_slider)
+- [Slider](/fr/docs/Web/Accessibility/ARIA/Roles/slider_role)
 - Spinbutton
-- [status](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_status)
-- [textbox](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_textbox)
+- [status](/fr/docs/Web/Accessibility/ARIA/Roles/status_role)
+- [textbox](/fr/docs/Web/Accessibility/ARIA/Roles/textbox_role)
 - Timer
 - Tooltip
 
@@ -38,7 +33,7 @@ Les techniques ci-dessous décrivent chaque rôle composé ainsi que leurs rôle
 
 - Grid (tableau, contenant les rôles `row` (ligne), `gridcell` (cellule), `rowheader` (en-tête de ligne) et `columnheader` (en-tête de colonne))
 - Menubar / Menu (contenant les rôles `menuitem`, `menuitemcheckbox` et `menuitemradio`)
-- [Listbox](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_listbox) (boîte de liste, contenant le rôle `option`)
+- [Listbox](/fr/docs/Web/Accessibility/ARIA/Roles/listbox_role) (boîte de liste, contenant le rôle `option`)
 - Tablist (boîte à onglets, contenant les rôles `tab` et `tabpanel`)
 - Tree (arbre, contenant les rôles `group` et `treeitem`)
 - [Radiogroup (voir le rôle `Radio`)](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_radio)
@@ -50,13 +45,13 @@ Les techniques ci-dessous décrivent chaque rôle composé ainsi que leurs rôle
 - Definition
 - Directory
 - Document
-- [Group](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_group)
+- [Group](/fr/docs/Web/Accessibility/ARIA/Roles/group_role)
 - Heading
 - Img
 - List, listitem
 - Math
 - Note
-- [Presentation](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_presentation)
+- [Presentation](/fr/docs/Web/Accessibility/ARIA/Roles/presentation_role)
 - Region
 - Separator
 - [Toolbar](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_toolbar)
@@ -64,7 +59,7 @@ Les techniques ci-dessous décrivent chaque rôle composé ainsi que leurs rôle
 #### Rôles de points de repère
 
 - Application
-- [Banner](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_banner)
+- [Banner](/fr/docs/Web/Accessibility/ARIA/Roles/banner_role)
 - Complementary
 - Contentinfo
 - Form
@@ -74,7 +69,7 @@ Les techniques ci-dessous décrivent chaque rôle composé ainsi que leurs rôle
 
 ### États et propriétés
 
-#### Attributs de composants d’interface
+#### Attributs de composants d'interface
 
 - aria-autocomplete
 - aria-checked
@@ -90,7 +85,7 @@ Les techniques ci-dessous décrivent chaque rôle composé ainsi que leurs rôle
 - [aria-orientation](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-orientation)
 - aria-pressed
 - aria-readonly
-- [aria-required](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-required)
+- [aria-required](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-required)
 - aria-selected
 - aria-sort
 - [aria-valuemax](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemax)

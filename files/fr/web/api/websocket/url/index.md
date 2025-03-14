@@ -1,7 +1,6 @@
 ---
 title: WebSocket.url
 slug: Web/API/WebSocket/url
-browser-compat: api.WebSocket.url
 ---
 
 {{APIRef("Web Sockets API")}}
@@ -16,7 +15,7 @@ var url = aWebSocket.url;
 
 ## Valeur
 
-Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString).
+Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String).
 
 ## Spécifications
 

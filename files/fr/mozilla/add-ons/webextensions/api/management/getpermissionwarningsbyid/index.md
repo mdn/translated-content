@@ -1,31 +1,22 @@
 ---
 title: management.getPermissionWarningsById()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsById
-tags:
-  - API
-  - Add-ons
-  - Méthode
-  - Reference
-  - WebExtensions
-  - getPermissionWarningsById
-  - management
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsById
 ---
 
-{{AddonSidebar()}}Lorsque l'utilisateur installe ou met à jour une extension, le navigateur peut avertir l'utilisateur des [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) particulièrement puissantes que l'extension a demandée. Toutes les permissions ne donnent pas lieu à des alertes et ce comportement n'est pas normalisé dans les navigateurs.
+{{AddonSidebar}}Lorsque l'utilisateur installe ou met à jour une extension, le navigateur peut avertir l'utilisateur des [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) particulièrement puissantes que l'extension a demandée. Toutes les permissions ne donnent pas lieu à des alertes et ce comportement n'est pas normalisé dans les navigateurs.
 
 Compte tenu de l'ID d'une extension, cette fonction retourne les avertisseurs de permissions comme un tableau de chaînes.
 
-Cette API requière l'[API permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management"
+Cette API requière l'[API permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management"
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var gettingWarnings = browser.management.getPermissionWarningsById(
-  id                  // string
-)
+  id, // string
+);
 ```
 
 ### Paramètres
@@ -35,11 +26,11 @@ var gettingWarnings = browser.management.getPermissionWarningsById(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un ensemble de chaînes, chacune contenant un texte d'un avertissement de permissions.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un ensemble de chaînes, chacune contenant un texte d'un avertissement de permissions.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.getPermissionWarningsById")}}
+{{Compat}}
 
 ## Exemples
 
@@ -60,9 +51,9 @@ gettingWarnings.then(gotWarnings);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/extensions/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

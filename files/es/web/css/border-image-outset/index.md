@@ -2,6 +2,7 @@
 title: border-image-outset
 slug: Web/CSS/border-image-outset
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -32,7 +33,8 @@ border-image-outset: inherit;
 
 ### Valores
 
-> **Nota:** Cuando un valor se especifica como valor {{cssxref("&lt;number&gt;")}} sin unidad, el valor es multiplicado por el {{cssxref("border-width")}} calculado correspondiente, para determinar el valor de `border-image-outset`. Los valores negativos no son permitidos.
+> [!NOTE]
+> Cuando un valor se especifica como valor {{cssxref("&lt;number&gt;")}} sin unidad, el valor es multiplicado por el {{cssxref("border-width")}} calculado correspondiente, para determinar el valor de `border-image-outset`. Los valores negativos no son permitidos.
 
 - _sides_
   - : Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá de los límites de la caja, en las cuatro direcciones.
@@ -59,6 +61,6 @@ border-image-outset: inherit;
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-image-outset")}}
+{{Compat}}

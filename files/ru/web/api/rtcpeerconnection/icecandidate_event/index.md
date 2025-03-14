@@ -1,10 +1,9 @@
 ---
-title: 'RTCPeerConnection: icecandidate event'
+title: "RTCPeerConnection: icecandidate event"
 slug: Web/API/RTCPeerConnection/icecandidate_event
-translation_of: Web/API/RTCPeerConnection/icecandidate_event
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 Событие **`icecandidate`** отправляется {{domxref("RTCPeerConnection")}} когда {{domxref("RTCIceCandidate")}} был идентифицирован и добавлен к локальному клиенту (local peer) через вызов {{domxref("RTCPeerConnection.setLocalDescription()")}}. Обработчик события должен передать кандидата удалённому клиенту (remote peer) по каналу сигнализации (signaling channel), чтобы удалённый клиент (remote peer) смог добавить его в свой набор удалённых кандидатов (remote candidates).
 
@@ -40,11 +39,11 @@ translation_of: Web/API/RTCPeerConnection/icecandidate_event
 ```js
 rtcPeerConnection.onicecandidate = (event) => {
   if (event.candidate) {
-    sendCandidateToRemotePeer(event.candidate)
+    sendCandidateToRemotePeer(event.candidate);
   } else {
     /* there are no more candidates coming during this negotiation */
   }
-}
+};
 ```
 
 Удалённый клиент (peer), получив кандидата, добавит этого кандидата в свой пул кандидатов, используя вызов {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}, передавая в {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} строку, которую вы передали с помощью сервера сигнализации (signaling server).
@@ -66,8 +65,8 @@ This signal exists for backward compatibility purposes and does _not_ need to be
 If you need to perform any special actions when there are no further candidates expected, you're much better off watching the ICE gathering state by watching for {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} events:
 
 ```js
-pc.addEventListener("icegatheringstatechange", ev => {
-  switch(pc.iceGatheringState) {
+pc.addEventListener("icegatheringstatechange", (ev) => {
+  switch (pc.iceGatheringState) {
     case "new":
       /* gathering is either just starting or has been reset */
       break;
@@ -92,40 +91,42 @@ This example creates a simple handler for the `icecandidate` event that uses a f
 First, an example using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-pc.addEventListener("icecandidate", ev => {
-  if (ev.candidate) {
-    sendMessage({
-      type: "new-ice-candidate",
-      candidate: event.candidate
-    });
-  }
-}, false);
+pc.addEventListener(
+  "icecandidate",
+  (ev) => {
+    if (ev.candidate) {
+      sendMessage({
+        type: "new-ice-candidate",
+        candidate: event.candidate,
+      });
+    }
+  },
+  false,
+);
 ```
 
 You can also set the {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} event handler property directly:
 
 ```js
-pc.onicecandidate = ev => {
+pc.onicecandidate = (ev) => {
   if (ev.candidate) {
     sendMessage({
       type: "new-ice-candidate",
-      candidate: event.candidate
+      candidate: event.candidate,
     });
   }
 };
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                            | Status                           | Comment |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{ SpecName('WebRTC 1.0', '#event-icecandidate', 'icecandidate') }} | {{Spec2('WebRTC 1.0')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [WebRTC API](/ru/docs/Web/API/WebRTC_API)
 - [Signaling and video calling](/ru/docs/Web/API/WebRTC_API/Signaling_and_video_calling)

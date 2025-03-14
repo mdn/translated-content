@@ -1,11 +1,11 @@
 ---
-title: ':out-of-range'
+title: :out-of-range
 slug: Web/CSS/:out-of-range
 ---
 
 {{CSSRef}}
 
-A [pseudo classe](/pt-BR/docs/CSS/Pseudo-classes) de [CSS](/pt-BR/docs/Web/CSS) **`:out-of-range`** representa um elemento de {{htmlelement("entrada")}} cujo valor atual esta fora dos limites especificados pelo {{htmlattrxref("min", "entrada")}} e {{htmlattrxref("max","entrada")}} atributos
+A [pseudo classe](/pt-BR/docs/Web/CSS/Pseudo-classes) de [CSS](/pt-BR/docs/Web/CSS) **`:out-of-range`** representa um elemento de {{htmlelement("entrada")}} cujo valor atual esta fora dos limites especificados pelo [`min`](/pt-BR/docs/Web/HTML/Element/entrada#min) e [`max`](/pt-BR/docs/Web/HTML/Element/entrada#max) atributos
 
 ```css
 /* Selecione qualquer <entrada>, mas somente quando estiver dentros dos
@@ -17,7 +17,8 @@ input:out-of-range {
 
 Essa pseudo classe é muito útil por dar ao usuario uma indicacão visual de que o valor atual esta fora dos limites permitidos
 
-> **Note:** **Nota:** Esta pseudo classe se aplica somente a elementos que tem (ou podem ter) uma limitacao. Na falta dessa de algo como essa limitacao, o elemento nao tera como ficar "in-range"(dentro dos limites) ou "out-of-range" (fora dos limites).
+> [!NOTE]
+> Esta pseudo classe se aplica somente a elementos que tem (ou podem ter) uma limitacao. Na falta dessa de algo como essa limitacao, o elemento nao tera como ficar "in-range"(dentro dos limites) ou "out-of-range" (fora dos limites).
 
 ## Sintaxe
 
@@ -29,10 +30,17 @@ Essa pseudo classe é muito útil por dar ao usuario uma indicacão visual de qu
 
 ```html
 <form action="" id="form1">
- <p>Valores entre 1 e 10 são validos.</p>
+  <p>Valores entre 1 e 10 são validos.</p>
   <ul>
     <li>
-      <input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12">
+      <input
+        id="value1"
+        name="value1"
+        type="number"
+        placeholder="1 to 10"
+        min="1"
+        max="10"
+        value="12" />
       <label for="value1">Seu valor está </label>
     </li>
   </ul>
@@ -61,11 +69,11 @@ input:out-of-range {
 }
 
 input:in-range + label::after {
-  content: 'dentro dos limites.';
+  content: "dentro dos limites.";
 }
 
 input:out-of-range + label::after {
-  content: 'Fora dos limites!';
+  content: "Fora dos limites!";
 }
 ```
 
@@ -75,16 +83,13 @@ input:out-of-range + label::after {
 
 ## Specifications
 
-| Specification                                                                                                    | Status                               | Comment                                                        |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-out-of-range', ':out-of-range')}} | {{Spec2('HTML WHATWG')}}     | Define quando `:out-of-range` se iguala aos elementos em HTML. |
-| {{SpecName('CSS4 Selectors', '#out-of-range-pseudo', ':out-of-range')}}                 | {{Spec2('CSS4 Selectors')}} | Definicao inicial.                                             |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.out-of-range")}}
+{{Compat}}
 
 ## See also
 
 - {{cssxref(":in-range")}}
-- [Form data validation](/pt-BR/docs/Learn/HTML/Forms/Form_validation)
+- [Form data validation](/pt-BR/docs/Learn/Forms/Form_validation)

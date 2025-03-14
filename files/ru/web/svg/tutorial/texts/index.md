@@ -1,15 +1,15 @@
 ---
 title: Текст
 slug: Web/SVG/Tutorial/Texts
-translation_of: Web/SVG/Tutorial/Texts
 ---
-{{PreviousNext("Web/SVG/Tutorial/Patterns", "Web/SVG/Tutorial/Basic_Transformations")}}
+
+{{SVGRef}}{{PreviousNext("Web/SVG/Tutorial/Patterns", "Web/SVG/Tutorial/Basic_Transformations")}}
 
 Говоря о тексте в SVG мы должны различать две отдельные темы. Первая это добавление и отображение текста в изображении, а вторая - SVG шрифты. Последняя будет описана в следующем разделе этого туториала, а пока мы полностью сфокусируемся на первой части: добавление текста в SVG изображение.
 
 ## Основы
 
-В [getting started](ru/docs/Web/SVG/Tutorial/Getting_Started) мы уже видели, что элемент `text` может использоваться для размещения произвольного текста в SVG документах:
+В [getting started](/ru/docs/Web/SVG/Tutorial/Getting_Started) мы уже видели, что элемент `text` может использоваться для размещения произвольного текста в SVG документах:
 
 ```xml
 <text x="10" y="10">Hello World!</text>

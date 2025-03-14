@@ -7,10 +7,26 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
 
 **`Intl.PluralRules.prototype.resolvedOptions()`** メソッドは、この {{jsxref("Intl.PluralRules")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
+{{InteractiveExample("JavaScript Demo: Intl.PluralRules.prototype.resolvedOptions()")}}
+
+```js interactive-example
+const pluralRules1 = new Intl.PluralRules("uk");
+const options1 = pluralRules1.resolvedOptions();
+
+const pluralRules2 = new Intl.PluralRules("bn");
+const options2 = pluralRules2.resolvedOptions();
+
+console.log(options1.pluralCategories);
+// Expected output: Array ["few", "many", "one", "other"]
+
+console.log(options2.pluralCategories);
+// Expected output: Array ["one", "other"]
+```
+
 ## 構文
 
 ```js
-resolvedOptions()
+resolvedOptions();
 ```
 
 ### 返値
@@ -40,15 +56,15 @@ resolvedOptions()
 ### resolvedOptions() メソッドの使用
 
 ```js
-var de = new Intl.PluralRules('de-DE');
+var de = new Intl.PluralRules("de-DE");
 var usedOptions = de.resolvedOptions();
 
-usedOptions.locale;                // "de-DE"
+usedOptions.locale; // "de-DE"
 usedOptions.maximumFractionDigits; // 3
 usedOptions.minimumFractionDigits; // 0
-usedOptions.minimumIntegerDigits;  // 1
-usedOptions.pluralCategories;      // Array [ "one", "other" ]
-usedOptions.type;                  // "cardinal"
+usedOptions.minimumIntegerDigits; // 1
+usedOptions.pluralCategories; // Array [ "one", "other" ]
+usedOptions.type; // "cardinal"
 ```
 
 ## 仕様書

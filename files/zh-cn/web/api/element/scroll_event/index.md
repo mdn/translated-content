@@ -17,35 +17,35 @@ element.onscroll = functionReference
 
 functionReference 是一个函数的引用。当该元素滚动时，会执行该函数。
 
-> **备注：** 不要将 onscroll 与 {{domxref("GlobalEventHandlers.onwheel", "onwheel")}}混淆。onwheel 是鼠标滚轮旋转，而 onscroll 处理的是对象内部内容区的滚动事件。
+> [!NOTE]
+> 不要将 onscroll 与 {{domxref("GlobalEventHandlers.onwheel", "onwheel")}}混淆。onwheel 是鼠标滚轮旋转，而 onscroll 处理的是对象内部内容区的滚动事件。
 
 ## 示例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8" />
-  <style>
-  #container {
-    position: absolute;
-    height: auto;
-    top: 0;
-    bottom: 0;
-    width: auto;
-    left: 0;
-    right: 0;
-    overflow: auto;
-  }
+    <meta charset="UTF-8" />
+    <style>
+      #container {
+        position: absolute;
+        height: auto;
+        top: 0;
+        bottom: 0;
+        width: auto;
+        left: 0;
+        right: 0;
+        overflow: auto;
+      }
 
-  #foo {
-    height:1000px;
-    width:1000px;
-    background-color: #777;
-    display: block;
-  }
-
-  </style>
+      #foo {
+        height: 1000px;
+        width: 1000px;
+        background-color: #777;
+        display: block;
+      }
+    </style>
   </head>
   <body>
     <div id="container">
@@ -53,7 +53,7 @@ functionReference 是一个函数的引用。当该元素滚动时，会执行�
     </div>
 
     <script type="text/javascript">
-      document.getElementById('container').onscroll = function() {
+      document.getElementById("container").onscroll = function () {
         console.log("scrolling");
       };
     </script>
@@ -89,8 +89,8 @@ textarea {
 ### JavaScript
 
 ```js
-const textarea = document.querySelector('textarea');
-const log = document.getElementById('log');
+const textarea = document.querySelector("textarea");
+const log = document.getElementById("log");
 
 textarea.onscroll = logScroll;
 

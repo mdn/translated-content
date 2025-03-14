@@ -1,7 +1,6 @@
 ---
 title: NodeList.entries()
 slug: Web/API/NodeList/entries
-translation_of: Web/API/NodeList/entries
 ---
 
 {{APIRef("DOM")}}
@@ -32,7 +31,7 @@ node.appendChild(kid3);
 var list = node.childNodes;
 
 // Using for..of
-for(var entry of list.entries()) {
+for (var entry of list.entries()) {
   console.log(entry);
 }
 ```
@@ -45,11 +44,11 @@ Array [ 1, #text "hey" ]
 Array [ 2, <span> ]
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

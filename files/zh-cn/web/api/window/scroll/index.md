@@ -1,36 +1,49 @@
 ---
-title: Window.scroll()
+title: Window：scroll() 方法
 slug: Web/API/Window/scroll
+l10n:
+  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
 ---
 
 {{APIRef}}
 
-## 概述
-
-滚动窗口至文档中的特定位置。
+**`Window.scroll()`** 方法滚动窗口至文档中的特定位置。
 
 ## 语法
 
-```
-window.scroll(x-coord, y-coord)
-window.scroll(options)
+```js-nolint
+scroll(xCoord, yCoord)
+scroll(options)
 ```
 
 ### 参数
 
-- `x-coord` 值表示你想要置于左上角的像素点的横坐标。
-- `y-coord` 值表示你想要置于左上角的像素点的纵坐标。
+- `xCoord`
+  - : 你想要在左上角显示的文档水平轴像素。
+- `yCoord`
+  - : 你想要在左上角显示的文档垂直轴像素。
+- `options`
+  - : 包含以下属性的对象：
+    - `top`
+      - : 指定沿 Y 轴滚动窗口或元素的像素数。
+    - `left`
+      - : 指定沿 X 轴滚动窗口或元素的像素数。
+    - `behavior`
+      - : 确定滚动是即时完成还是以平滑动画进行。该选项是一个字符串，必须取以下值之一：
+        - `smooth`：滚动应该平滑地进行动画展示
+        - `instant`：滚动应在一次跳转中即时完成
+        - `auto`：滚动行为由 {{cssxref("scroll-behavior")}} 的计算值来决定
 
-\- 或者 -
+### 返回值
 
-- `options` 值是一个 {{domxref("ScrollToOptions")}} 字典
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
 ```html
 <!-- 把纵轴上第 100 个像素置于窗口顶部 -->
 
-<button onClick="scroll(0, 100);">点击以向下滚动 100 像素</button>
+<button onclick="scroll(0, 100);">点击以向下滚动到第 100 个像素</button>
 ```
 
 使用 `options`:
@@ -39,14 +52,26 @@ window.scroll(options)
 window.scroll({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 
 ## 备注
 
-[window.scrollTo](/zh-CN/docs/Web/API/Window/scrollTo) 实际上和该方法是相同的。想要重复地滚动某个距离，请使用 [window.scrollBy](/zh-CN/docs/Web/API/Window/scrollBy). 参见 [window.scrollByLines](/zh-CN/docs/Web/API/Window/scrollByLines), [window.scrollByPages](/zh-CN/docs/Web/API/Window/scrollByPages).
+{{domxref("Window.scrollTo()")}} 实际上和该方法是相同的。有关相对滚动，请参见 {{domxref("Window.scrollBy()")}}、{{domxref("Window.scrollByLines()")}} 和 {{domxref("Window.scrollByPages()")}}。
+
+有关滚动元素，请参见 {{domxref("Element.scrollTop")}} 和 {{domxref("Element.scrollLeft")}}。
 
 ## 规范
 
 {{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{domxref("Window.scrollByLines()")}}
+- {{domxref("Window.scrollByPages()")}}
+- {{domxref("Element.scrollIntoView()")}}

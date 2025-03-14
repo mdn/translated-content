@@ -40,11 +40,11 @@ l10n:
 接続されたポートの中にサイトからアクセスできるものが無い場合、ユーザーが有効化するのを待つ必要があります。この例では、このためにボタンの {{domxref("Element.click_event", "click")}} イベントハンドラーを用います。{{domxref("Serial.requestPort()","requestPort()")}} に USB ベンダー ID を入れたフィルターを渡し、ユーザーに提示するデバイスのリストを特定の生産者によって作られた USB デバイスのみに絞り込んでいます。
 
 ```js
-navigator.serial.addEventListener('connect', (e) => {
+navigator.serial.addEventListener("connect", (e) => {
   // `e.target` に接続する、すなわち利用可能なポートのリストに加えます。
 });
 
-navigator.serial.addEventListener('disconnect', (e) => {
+navigator.serial.addEventListener("disconnect", (e) => {
   // `e.target` を利用可能なポートのリストから外します。
 });
 
@@ -52,13 +52,16 @@ navigator.serial.getPorts().then((ports) => {
   // ページの読み込み時、`ports` を用いて利用可能なポートのリストを初期化します。
 });
 
-button.addEventListener('click', () => {
-  const usbVendorId = 0xABCD;
-  navigator.serial.requestPort({ filters: [{ usbVendorId }]}).then((port) => {
-    // `port` に接続する、すなわち利用可能なポートのリストに加えます。
-  }).catch((e) => {
-    // ユーザーがポートを選択しませんでした。
-  });
+button.addEventListener("click", () => {
+  const usbVendorId = 0xabcd;
+  navigator.serial
+    .requestPort({ filters: [{ usbVendorId }] })
+    .then((port) => {
+      // `port` に接続する、すなわち利用可能なポートのリストに加えます。
+    })
+    .catch((e) => {
+      // ユーザーがポートを選択しませんでした。
+    });
 });
 ```
 

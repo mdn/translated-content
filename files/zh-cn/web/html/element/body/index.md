@@ -1,53 +1,163 @@
 ---
 title: <body>：文档主体元素
 slug: Web/HTML/Element/body
+l10n:
+  sourceCommit: 8fbec5312b62d720f6ff6936024a09c859f2f0f1
 ---
 
 {{HTMLSidebar}}
 
-**HTML `body` 元素**表示文档的内容。{{domxref("document.body")}} 属性提供了可以轻松访问文档的 body 元素的脚本。
+**`<body>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示 HTML 文档的内容。文档中只能有一个 `<body>` 元素。
+
+## 属性
+
+这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)、事件属性和弃用属性：
+
+### 事件属性
+
+> [!NOTE]
+> 以下每个事件属性名称都链接到其对应的 {{domxref("Window")}} 接口事件。你可以使用 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 来监听这些事件，而不是将 `oneventname` 属性添加到 `<body>` 元素。
+
+- [`onafterprint`](/zh-CN/docs/Web/API/Window/afterprint_event)
+  - : 当用户打印文档后调用的函数。
+- [`onbeforeprint`](/zh-CN/docs/Web/API/Window/beforeprint_event)
+  - : 当用户要求打印文档时调用的函数。
+- [`onbeforeunload`](/zh-CN/docs/Web/API/Window/beforeunload_event)
+  - : 当文档即将卸载时调用的函数。
+- [`onblur`](/zh-CN/docs/Web/API/Window/blur_event)
+  - : 当文档失去焦点时调用的函数。
+- [`onerror`](/zh-CN/docs/Web/API/Window/error_event)
+  - : 当文档无法正常加载时调用的函数。
+- [`onfocus`](/zh-CN/docs/Web/API/Window/focus_event)
+  - : 当文档收到焦点时调用的函数。
+- [`onhashchange`](/zh-CN/docs/Web/API/Window/hashchange_event)
+  - : 当文档当前地址的片段标识符部分（以 `'#'` 字符开头）发生变化时调用的函数。
+- [`onlanguagechange`](/zh-CN/docs/Web/API/Window/languagechange_event)
+  - : 当首选语言发生变化时调用的函数。
+- [`onload`](/zh-CN/docs/Web/API/Window/load_event)
+  - : 当文档加载完成后调用的函数。
+- [`onmessage`](/zh-CN/docs/Web/API/Window/message_event)
+  - : 当文档收到消息时调用的函数。
+- [`onmessageerror`](/zh-CN/docs/Web/API/Window/messageerror_event)
+  - : 当文档收到无法反序列化的消息时调用的函数。
+- [`onoffline`](/zh-CN/docs/Web/API/Window/offline_event)
+  - : 当网络通信失败时调用的函数。
+- [`ononline`](/zh-CN/docs/Web/API/Window/online_event)
+  - : 当网络通信恢复后调用的函数。
+- [`onpageswap`](/zh-CN/docs/Web/API/Window/pageswap_event)
+  - : 当你浏览文档时，上一个文档即将卸载时调用的函数。
+- [`onpagehide`](/zh-CN/docs/Web/API/Window/pagehide_event)
+  - : 当浏览器在显示会话历史记录中的另一个页面时隐藏当前页面时调用的函数。
+- [`onpagereveal`](/zh-CN/docs/Web/API/Window/pagereveal_event)
+  - : 当文档首次渲染时调用的函数，无论是从网络加载新文档还是激活文档。
+- [`onpageshow`](/zh-CN/docs/Web/API/Window/pageshow_event)
+  - : 当浏览器因导航而显示窗口文档时调用的函数。
+- [`onpopstate`](/zh-CN/docs/Web/API/Window/popstate_event)
+  - : 当用户浏览会话历史时调用的函数。
+- [`onresize`](/zh-CN/docs/Web/API/Window/resize_event)
+  - : 当文档大小调整时调用的函数。
+- [`onrejectionhandled`](/zh-CN/docs/Web/API/Window/rejectionhandled_event)
+  - : 当 JavaScript {{jsxref("Promise")}} 被延迟处理时调用的函数。
+- [`onstorage`](/zh-CN/docs/Web/API/Window/storage_event)
+  - : 当存储区域发生变化时调用的函数。
+- [`onunhandledrejection`](/zh-CN/docs/Web/API/Window/unhandledrejection_event)
+  - : 当一个没有拒绝处理器的 JavaScript {{jsxref("Promise")}} 被拒绝时调用的函数。
+- [`onunload`](/zh-CN/docs/Web/API/Window/unload_event)
+  - : 当文档即将被卸载时调用的函数。
+
+### 已弃用的属性
+
+> [!WARNING]
+> 请勿使用这些已弃用的属性；应选择每个弃用属性所列的 CSS 替代方案。
+
+- `alink` {{deprecated_inline}}
+  - : 选中时超链接文本的颜色。请结合使用 CSS {{cssxref("color")}} 属性，配合 {{cssxref(":active")}} 和 {{cssxref(":focus")}} 伪类。
+- `background` {{deprecated_inline}}
+  - : 用作背景的图片的 URI。请改用 CSS 的 {{cssxref("background-image")}} 属性。
+- `bgcolor` {{deprecated_inline}}
+  - : 文档的背景颜色。请改用 CSS 的 {{cssxref("background-color")}} 属性。
+- `bottommargin` {{deprecated_inline}}
+  - : body 底部的外边距。请改用 CSS 的 {{cssxref("margin-bottom")}} 属性（或逻辑属性 {{cssxref("margin-block-end")}}）。
+- `leftmargin` {{deprecated_inline}}
+  - : body 左侧的外边距。请改用 CSS 的 {{cssxref("margin-left")}} 属性（或逻辑属性 {{cssxref("margin-inline-start")}}）。
+- `link` {{deprecated_inline}}
+  - : 未访问超文本链接文本的颜色。请结合使用 CSS {{cssxref("color")}} 属性和 {{cssxref(":link")}} 伪类来代替。
+- `rightmargin` {{deprecated_inline}}
+  - : body 右侧的外边距。请结合使用 CSS {{cssxref("margin-right")}} 属性（或逻辑属性 {{cssxref("margin-inline-end")}}）。
+- `text` {{deprecated_inline}}
+  - : 文字的前景色。请改用 CSS 的 {{cssxref("color")}} 属性。
+- `topmargin` {{deprecated_inline}}
+  - : body 顶部的外边距。请结合使用 CSS {{cssxref("margin-top")}} 属性（或逻辑属性 {{cssxref("margin-block-start")}}）。
+- `vlink` {{deprecated_inline}}
+  - : 已访问超文本链接文本的颜色。请结合使用 CSS {{cssxref("color")}} 属性和 {{cssxref(":visited")}} 伪类来代替。
+
+## 示例
+
+```html
+<html lang="zh-CN">
+  <head>
+    <title>文档标题</title>
+  </head>
+  <body>
+    <p>
+      <code>&lt;body&gt;</code> HTML 元素代表 HTML
+      文档的内容。一个文档中只能有一个 <code>&lt;body&gt;</code> 元素。
+    </p>
+  </body>
+</html>
+```
+
+### 结果
+
+{{EmbedLiveSample('示例')}}
+
+## 技术概要
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+          >内容分类</a
+        >
       </th>
       <td>
-        <a
-          href="/zh-CN/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_roots"
-          >Sectioning root</a
-        >.
+        无。
       </td>
     </tr>
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content"
-          >Flow content</a
-        >.
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >。
       </td>
     </tr>
     <tr>
-      <th scope="row">Tag omission</th>
+      <th scope="row">标签省略</th>
       <td>
-        The start tag may be omitted if the first thing inside it is not a space
-        character, comment, {{HTMLElement("script")}} element or
-        {{HTMLElement("style")}} element. The end tag may be omitted if
-        the <code>&#x3C;body></code> element has contents or has a start tag,
-        and is not immediately followed by a comment.
+        如果开始标签内的第一个内容不是空格符、注释、{{HTMLElement("script")}} 元素或 {{HTMLElement("style")}} 元素，则可以省略起始标签。如果 <code>&#x3C;body></code> 元素有内容或有开始标记，且后面没有紧跟注释，则可以省略结束标记。
       </td>
     </tr>
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        它必须是
-        <a href="/zh-CN/docs/Web/HTML/Element/html">html</a> 元素的直接子元素。
+        它必须是 {{HTMLElement("html")}} 元素的第二个元素。
       </td>
     </tr>
     <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>None</td>
+      <th scope="row">隐含的 ARIA 角色</th>
+      <td>
+        <code
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
+            >generic</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>没有允许的 <code>role</code></td>
     </tr>
     <tr>
       <th scope="row">DOM 接口</th>
@@ -55,92 +165,16 @@ slug: Web/HTML/Element/body
         {{domxref("HTMLBodyElement")}}
         <ul>
           <li>
-            <code>body</code> 元素接口 {{domxref("HTMLBodyElement")}}
-            。
+            <code>&#x3C;body></code> 元素使用 {{domxref("HTMLBodyElement")}} 接口。
           </li>
           <li>
-            你可以通过 {{domxref("document.body")}} 属性访问
-            <code>body</code> 元素。
+            你可以通过 {{domxref("document.body")}} 属性访问 <code>&#x3C;body></code> 元素。
           </li>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
-
-## 属性
-
-此元素包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 。
-
-- {{htmlattrdef("alink")}} {{Deprecated_Inline}}
-  - : 超链接选中之后的文本颜色。_此方法不符合规范，请使用 CSS 的 {{cssxref("color")}} 属性和 {{cssxref(":active")}} 伪类替代。_
-- {{htmlattrdef("background")}} {{Deprecated_Inline}}
-  - : 将 URI 所指向的图片作为背景。此方法不符合规范，请*使用* _CSS 的 {{cssxref("background")}} 属性替代。_
-- {{htmlattrdef("bgcolor")}} {{Deprecated_Inline}}
-  - : 文档的背景颜色。此方法不符合规范，请使用 _CSS 的 {{cssxref("background-color")}} 属性替代。_
-- {{htmlattrdef("bottommargin")}} {{Deprecated_Inline}}
-  - : `body` 的底外边距。此方法不符合规范，请使用 _CSS 的 {{cssxref("margin-bottom")}} 属性替代。_
-- {{htmlattrdef("leftmargin")}} {{Deprecated_Inline}}
-  - : `body` 的左外边距。此方法不符合规范，请使用 _CSS 的 {{cssxref("margin-left")}} 属性替代。_
-- {{htmlattrdef("link")}} {{Deprecated_Inline}}
-  - : 未访问过的超链接文本颜色。此方法不符合规范，请使用 _CSS 的 {{cssxref("color")}} 属性和 {{cssxref(":link")}} 伪类替代。_
-- {{htmlattrdef("onafterprint")}}
-  - : 用户完成文档打印之后调用的函数。
-- {{htmlattrdef("onbeforeprint")}}
-  - : 用户要求打印文档之前调用的函数。
-- {{htmlattrdef("onbeforeunload")}}
-  - : 文档即将被关闭之前调用的函数。
-- {{htmlattrdef("onblur")}}
-  - : 文档失去焦点时调用的函数。
-- {{htmlattrdef("onerror")}}
-  - : 文档加载失败时调用的函数。
-- {{htmlattrdef("onfocus")}}
-  - : 文档获得焦点时调用的函数。
-- {{htmlattrdef("onhashchange")}}
-  - : 文档当前地址的片段标识部分（以 (`'#'`) 开始的部分）发生改变时调用的函数。
-- {{htmlattrdef("onlanguagechange")}} {{experimental_inline}}
-  - : 用户选择的语言发生改变时调用的函数。
-- {{htmlattrdef("onload")}}
-  - : 文档完成加载时调用的函数。
-- {{htmlattrdef("onmessage")}}
-  - : 文档接收到消息时调用的函数。
-- {{htmlattrdef("onoffline")}}
-  - : 网络连接失败时调用的函数。
-- {{htmlattrdef("ononline")}}
-  - : 网络连接恢复时调用的函数。
-- {{htmlattrdef("onpopstate")}}
-  - : 用户回退历史记录时调用的函数。
-- {{htmlattrdef("onredo")}}
-  - : 用户重做操作时调用的函数。
-- {{htmlattrdef("onresize")}}
-  - : 文档尺寸发生改变时调用的函数。
-- {{htmlattrdef("onstorage")}}
-  - : 存储内容（`localStorage` / `sessionStorage`）发生改变时调用的函数。
-- {{htmlattrdef("onundo")}}
-  - : 用户撤销操作时调用的函数。
-- {{htmlattrdef("onunload")}}
-  - : 文档关闭时调用的函数。
-- {{htmlattrdef("rightmargin")}} {{Deprecated_Inline}}
-  - : `body` 的右外边距。此方法不符合规范，请使用 _CSS 的 {{cssxref("margin-right")}} 属性替代。_
-- {{htmlattrdef("text")}} {{Deprecated_Inline}}
-  - : 文本颜色。此方法不符合规范，请使用 _CSS 的 {{cssxref("color")}} 属性替代。_
-- {{htmlattrdef("topmargin")}} {{Deprecated_Inline}}
-  - : `body` 的上外边距。此方法不符合规范，请使用 _CSS 的 {{cssxref("margin-top")}} 属性替代。_
-- {{htmlattrdef("vlink")}} {{Deprecated_Inline}}
-  - : 访问过的超链接的文本颜色。此方法不符合规范，请使用 _CSS {{cssxref("color")}} 属性和 {{cssxref(":visited")}} 伪类替代。_
-
-## 例子
-
-```html
-<html>
-  <head>
-    <title>Document title</title>
-  </head>
-  <body>
-    <p>This is a paragraph</p>
-  </body>
-</html>
-```
 
 ## 规范
 
@@ -154,3 +188,4 @@ slug: Web/HTML/Element/body
 
 - {{HTMLElement("html")}}
 - {{HTMLElement("head")}}
+- [事件处理器（概述）](/zh-CN/docs/Web/Events/Event_handlers)

@@ -1,17 +1,9 @@
 ---
 title: floor
 slug: Web/XPath/Functions/floor
-tags:
-  - Fonction
-  - Reference
-  - Référence_XSLT
-  - XPath
-  - XSLT
-translation_of: Web/XPath/Functions/floor
-original_slug: Web/XPath/Fonctions/floor
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `floor` évalue un nombre décimal et retourne le plus grand nombre entier inférieur ou égal au nombre évalué.
 
@@ -32,7 +24,7 @@ Le plus grand nombre entier inférieur ou égal à `nombre`.
 
 ### Définition
 
-[XPath 1.0, section 4.4](http://www.w3.org/TR/xpath#function-floor).
+[XPath 1.0, section 4.4](https://www.w3.org/TR/xpath#function-floor).
 
 ### Support Gecko
 

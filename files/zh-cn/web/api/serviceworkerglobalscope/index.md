@@ -5,7 +5,7 @@ slug: Web/API/ServiceWorkerGlobalScope
 
 {{APIRef("Service Workers API")}}
 
-[ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API) 的`ServiceWorkerGlobalScope` 接口，代表一个 service worker 的全局执行上下文。
+[ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API) 的`ServiceWorkerGlobalScope` 接口，代表一个 service worker 的全局执行上下文。
 
 开发者应该知道，ServiceWorker 的状态在结束/重启的循环中不是一直保持不变的，所以每个事件处理器应该设定一个默认的全局状态。
 
@@ -68,28 +68,31 @@ This code snippet is from the [service worker prefetch sample](https://github.co
 The code also handles exceptions thrown from the {{domxref("GlobalFetch.fetch", "fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code set.
 
 ```js
-self.addEventListener('fetch', function(event) {
-  console.log('Handling fetch event for', event.request.url);
+self.addEventListener("fetch", function (event) {
+  console.log("Handling fetch event for", event.request.url);
 
   event.respondWith(
-    caches.match(event.request).then(function(response) {
+    caches.match(event.request).then(function (response) {
       if (response) {
-        console.log('Found response in cache:', response);
+        console.log("Found response in cache:", response);
 
         return response;
       }
-      console.log('No response found in cache. About to fetch from network...');
+      console.log("No response found in cache. About to fetch from network...");
 
-      return fetch(event.request).then(function(response) {
-        console.log('Response from network is:', response);
+      return fetch(event.request).then(
+        function (response) {
+          console.log("Response from network is:", response);
 
-        return response;
-      }, function(error) {
-        console.error('Fetching failed:', error);
+          return response;
+        },
+        function (error) {
+          console.error("Fetching failed:", error);
 
-        throw error;
-      });
-    })
+          throw error;
+        },
+      );
+    }),
   );
 });
 ```
@@ -102,10 +105,10 @@ self.addEventListener('fetch', function(event) {
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service worker 基本代码示例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
+- [是否支持 ServiceWorker](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web workers](/zh-CN/docs/Web/Guide/Performance/Using_web_workers)
+- [使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)

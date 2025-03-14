@@ -27,15 +27,16 @@ var source = audioCtx.createMediaElementSource(myMediaElement);
 
 ## 示例
 
-该示例由 {{htmlelement("audio") }} 元素，通过使用 `createMediaElementSource()` 方法，创建了一个音源，将其通过 {{ domxref("GainNode") }} 节点，输出到{{ domxref("AudioDestinationNode") }} 节点以播放。当鼠标指针移动时，`updatePage()` 函数被调用，该函数计算当前鼠标 Y 坐标与页面高度的比值，改变 {{ domxref("GainNode") }} 节点的值以调整音量。您就可以通过鼠标上下移动而改变音乐的音量了。
+该示例由 {{htmlelement("audio") }} 元素，通过使用 `createMediaElementSource()` 方法，创建了一个音源，将其通过 {{ domxref("GainNode") }} 节点，输出到{{ domxref("AudioDestinationNode") }} 节点以播放。当鼠标指针移动时，`updatePage()` 函数被调用，该函数计算当前鼠标 Y 坐标与页面高度的比值，改变 {{ domxref("GainNode") }} 节点的值以调整音量。你就可以通过鼠标上下移动而改变音乐的音量了。
 
-> **备注：** 您也可以 [浏览该示例的在线演示](http://mdn.github.io/webaudio-examples/media-source-buffer/), 或者 [浏览源代码](https://github.com/mdn/webaudio-examples/tree/master/media-source-buffer).
+> [!NOTE]
+> 也可以[浏览该示例的在线演示](https://mdn.github.io/webaudio-examples/media-source-buffer/), 或者[浏览源代码](https://github.com/mdn/webaudio-examples/tree/main/media-source-buffer)。
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var myAudio = document.querySelector('audio');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+var myAudio = document.querySelector("audio");
+var pre = document.querySelector("pre");
+var myScript = document.querySelector("script");
 
 pre.innerHTML = myScript.innerHTML;
 
@@ -57,11 +58,15 @@ var HEIGHT = window.innerHeight;
 document.onmousemove = updatePage;
 
 function updatePage(e) {
-    CurY = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+  CurY = window.Event
+    ? e.pageY
+    : event.clientY +
+      (document.documentElement.scrollTop
+        ? document.documentElement.scrollTop
+        : document.body.scrollTop);
 
-    gainNode.gain.value = CurY/HEIGHT;
+  gainNode.gain.value = CurY / HEIGHT;
 }
-
 
 // connect the AudioBufferSourceNode to the gainNode
 // and the gainNode to the destination, so we can play the
@@ -70,7 +75,8 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 ```
 
-> **备注：** 作为调用 `createMediaElementSource()` 的结果，{{domxref("HTMLMediaElement")}} 的播放将会由 AudioContext 的音频处理图接管。所以对媒体进行播放/暂停等操作仍可通过 media API 与播放器面板来进行。
+> [!NOTE]
+> 作为调用 `createMediaElementSource()` 的结果，{{domxref("HTMLMediaElement")}} 的播放将会由 AudioContext 的音频处理图接管。所以对媒体进行播放/暂停等操作仍可通过 media API 与播放器面板来进行。
 
 ## 规范
 
@@ -80,6 +86,6 @@ gainNode.connect(audioCtx.destination);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

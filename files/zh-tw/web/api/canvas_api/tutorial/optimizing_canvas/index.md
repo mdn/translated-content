@@ -3,7 +3,7 @@ title: 最佳化canvas
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 {{HTMLElement("canvas")}}在網頁 2D 繪圖上被大量運用於遊戲和複雜視覺化效果上。隨著繪圖複雜度越來越高，效能問題也會逐一浮現，所以最後我們在這邊列出一些最佳化畫布的方法，避免一些效能問題:
 
@@ -15,6 +15,6 @@ slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 - 對於複雜需求可以利用多個畫布分層構成
 - 盡量不要用 shadowBlur 屬性
 - 使用{{domxref("window.requestAnimationFrame()")}}
-- 用[JSPerf](http://jsperf.com)測試效能
+- 用[JSPerf](https://jsperf.com/)測試效能
 
 {{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Basic_animations")}}

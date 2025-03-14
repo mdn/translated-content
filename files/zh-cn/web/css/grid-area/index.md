@@ -3,6 +3,8 @@ title: grid-area
 slug: Web/CSS/grid-area
 ---
 
+{{CSSRef}}
+
 CSS 属性 **`grid-area`** 是一种对于 {{cssxref("grid-row-start")}}、{{cssxref("grid-column-start")}}、{{cssxref("grid-row-end")}} 和 {{cssxref("grid-column-end")}} 的简写，通过基线（line），跨度（span）或没有（自动）的网格放置在 {{glossary("grid rows", "grid row")}} 中指定一个网格项的大小和位置，继而确定 {{glossary("grid areas", "grid area")}} 的边界。
 
 ```css
@@ -55,8 +57,8 @@ grid-area: some-grid-area;
 grid-area: some-grid-area / another-grid-area;
 
 /* <integer> && <custom-ident>? values */
-grid-area:  4 some-grid-area;
-grid-area:  4 some-grid-area / 2 another-grid-area;
+grid-area: 4 some-grid-area;
+grid-area: 4 some-grid-area / 2 another-grid-area;
 
 /* span && [ <integer> || <custom-ident> ] values */
 grid-area: span 3;
@@ -92,13 +94,13 @@ grid-area: unset;
 
     如果忽略 \<integer> ，它就默认设为 `1`。它的值也不能为 0。
 
-### 形式文法
+### 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-### HTML 内容
+### HTML
 
 ```html
 <div id="grid">
@@ -108,7 +110,7 @@ grid-area: unset;
 </div>
 ```
 
-### CSS 内容
+### CSS
 
 ```css
 #grid {
@@ -131,7 +133,7 @@ grid-area: unset;
 }
 ```
 
-{{EmbedLiveSample("Example", "100%", "150px")}}
+{{EmbedLiveSample("示例", "100%", "150px")}}
 
 ## 规范
 
@@ -141,56 +143,8 @@ grid-area: unset;
 
 {{Compat}}
 
-## 另请参见
+## 参见
 
 - Related CSS properties: {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-template-areas")}}
-- Grid Layout Guide: _[Grid template areas](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
-- Video tutorial: _[Grid Template Areas](http://gridbyexample.com/video/grid-template-areas/)_
-
-1. [**CSS**](/zh-CN/docs/Web/CSS)
-2. [**CSS Reference**](/zh-CN/docs/Web/CSS/Reference)
-3. [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
-4. **Guides**
-
-    1. [Basics concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-    2. [Relationship to other layout methods](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-    3. [Line-based placement](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-    4. [Grid template areas](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-    5. [Layout using named grid lines](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-    6. [Auto-placement in grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7. [Box alignment in grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8. [Grids, logical values and writing modes](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9. [CSS Grid Layout and Accessibility](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-    10. [CSS Grid Layout and Progressive Enhancement](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-    11. [Realizing common layouts using grids](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
-
-5. **Properties**
-
-    1. [grid](/zh-CN/docs/Web/CSS/grid)
-    2. [grid-area](/zh-CN/docs/Web/CSS/grid-area)
-    3. [grid-auto-columns](/zh-CN/docs/Web/CSS/grid-auto-columns)
-    4. [grid-auto-flow](/zh-CN/docs/Web/CSS/grid-auto-flow)
-    5. [grid-auto-rows](/zh-CN/docs/Web/CSS/grid-auto-rows)
-    6. [grid-column](/zh-CN/docs/Web/CSS/grid-column)
-    7. [grid-column-end](/zh-CN/docs/Web/CSS/grid-column-end)
-    8. [grid-column-gap](/zh-CN/docs/Web/CSS/grid-column-gap)
-    9. [grid-column-start](/zh-CN/docs/Web/CSS/grid-column-start)
-    10. [grid-gap](/zh-CN/docs/Web/CSS/grid-gap)
-    11. [grid-row](/zh-CN/docs/Web/CSS/grid-row)
-    12. [grid-row-end](/zh-CN/docs/Web/CSS/grid-row-end)
-    13. [grid-row-gap](/zh-CN/docs/Web/CSS/grid-row-gap)
-    14. [grid-row-start](/zh-CN/docs/Web/CSS/grid-row-start)
-    15. [grid-template](/zh-CN/docs/Web/CSS/grid-template)
-    16. [grid-template-areas](/zh-CN/docs/Web/CSS/grid-template-areas)
-    17. [grid-template-columns](/zh-CN/docs/Web/CSS/grid-template-columns)
-    18. [grid-template-rows](/zh-CN/docs/Web/CSS/grid-template-rows)
-
-6. **Glossary**
-
-    1. [Grid lines](/zh-CN/docs/Glossary/Grid_lines)
-    2. [Grid tracks](/zh-CN/docs/Glossary/Grid_tracks)
-    3. [Grid cell](/zh-CN/docs/Glossary/Grid_cell)
-    4. [Grid areas](/zh-CN/docs/Glossary/Grid_areas)
-    5. [Gutters](/zh-CN/docs/Glossary/Gutters)
-    6. [Grid row](/zh-CN/docs/Glossary/Grid_rows)
-    7. [Grid column](/zh-CN/docs/Glossary/Grid_column)
+- Grid Layout Guide: _[Grid template areas](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)_
+- Video tutorial: _[Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)_

@@ -1,14 +1,6 @@
 ---
-title: 'Element : évènement mouseenter'
+title: "Element : évènement mouseenter"
 slug: Web/API/Element/mouseenter_event
-tags:
-  - API
-  - DOM
-  - Element
-  - Interface
-  - Reference
-  - mouseenter
-translation_of: Web/API/Element/mouseenter_event
 ---
 
 {{APIRef}}
@@ -56,17 +48,17 @@ Avec la combinaison de `mouseenter` et `mouseleave` (déclenché quand le pointe
 
 ## Exemples
 
-La documentation [`mouseover`](/fr/docs/Web/API/Element/mouseover_event#Exemples) illustre la différence entre `mouseover` et `mouseenter`.
+La documentation [`mouseover`](/fr/docs/Web/API/Element/mouseover_event#exemples) illustre la différence entre `mouseover` et `mouseenter`.
 
 Ici, on utilise `mouseenter` pour modifier la bordure d'un `div` lorsque la souris rentre sur cet espace. On ajoute alors un élément à la liste avec le nombre d'évènements `mouseenter` ouor `mouseleave` event.
 
 ### HTML
 
 ```html
-<div id='mouseTarget'>
- <ul id="unorderedList">
-  <li>No events yet!</li>
- </ul>
+<div id="mouseTarget">
+  <ul id="unorderedList">
+    <li>No events yet!</li>
+  </ul>
 </div>
 ```
 
@@ -77,8 +69,8 @@ On met en forme le `div` pour le rendre plus visible.
 ```css
 #mouseTarget {
   box-sizing: border-box;
-  width:15rem;
-  border:1px solid #333;
+  width: 15rem;
+  border: 1px solid #333;
 }
 ```
 
@@ -87,17 +79,17 @@ On met en forme le `div` pour le rendre plus visible.
 ```js
 var enterEventCount = 0;
 var leaveEventCount = 0;
-const mouseTarget = document.getElementById('mouseTarget');
-const unorderedList = document.getElementById('unorderedList');
+const mouseTarget = document.getElementById("mouseTarget");
+const unorderedList = document.getElementById("unorderedList");
 
-mouseTarget.addEventListener('mouseenter', e => {
-  mouseTarget.style.border = '5px dotted orange';
+mouseTarget.addEventListener("mouseenter", (e) => {
+  mouseTarget.style.border = "5px dotted orange";
   enterEventCount++;
   addListItem("C'est le " + enterEventCount + "ème mouseenter.");
 });
 
-mouseTarget.addEventListener('mouseleave', e => {
-  mouseTarget.style.border = '1px solid #333';
+mouseTarget.addEventListener("mouseleave", (e) => {
+  mouseTarget.style.border = "1px solid #333";
   leaveEventCount++;
   addListItem("C'est le " + leaveEventCount + "ème mouseleave.");
 });
@@ -131,7 +123,7 @@ function addListItem(text) {
 
 ## Voir aussi
 
-- [Une introduction aux évènements](/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements)
+- [Une introduction aux évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events)
 - D'autres évènements connexes
 
   - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)

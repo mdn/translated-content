@@ -1,22 +1,25 @@
 ---
-title: WheelEvent.deltaY
+title: WheelEvent：deltaY 属性
 slug: Web/API/WheelEvent/deltaY
+l10n:
+  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
-**`WheelEvent.deltaY`** 只读属性是一个 `double` 类型值，声明垂直滚动量以 [`WheelEvent.deltaMode`](/zh-CN/docs/Web/API/WheelEvent/deltaMode) 为单位。
+**`WheelEvent.deltaY`** 只读属性是一个表示以 {{domxref("WheelEvent.deltaMode")}} 为单位的垂直滚动量的 `double` 值。
 
-## 语法
+## 值
 
-```js
-var dY = event.deltaY;
-```
+数字。
 
-## 例子
+## 示例
 
 ```js
-var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaY": 4, "deltaMode": 0});
+const syntheticEvent = new WheelEvent("syntheticWheel", {
+  deltaY: 4,
+  deltaMode: 0,
+});
 
 console.log(syntheticEvent.deltaY);
 ```
@@ -29,7 +32,7 @@ console.log(syntheticEvent.deltaY);
 
 {{Compat}}
 
-## 另见
+## 参见
 
-- [`wheel`](/zh-CN/docs/Web/API/Element/wheel_event)
+- {{domxref("Element/wheel_event","wheel")}}
 - {{domxref("WheelEvent")}}

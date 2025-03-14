@@ -1,19 +1,64 @@
 ---
-title: '<figcaption>: 図キャプション要素'
+title: "<figcaption>: 図キャプション要素"
 slug: Web/HTML/Element/figcaption
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
 
-**HTML の `<figcaption>` 要素または図キャプション要素**は、親の {{HTMLElement("figure")}} 要素内にあるその他のコンテンツを説明するキャプションや凡例を表します。
+**`<figcaption>`** は [HTML](/ja/docs/Web/HTML) の要素で、親の {{HTMLElement("figure")}} 要素内にあるその他のコンテンツを説明するキャプションや凡例を表します。
 
-{{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;figcaption&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<figure>
+  <img
+    src="/shared-assets/images/examples/elephant.jpg"
+    alt="Elephant at sunset" />
+  <figcaption>An elephant at sunset</figcaption>
+</figure>
+```
+
+```css interactive-example
+figure {
+  border: thin #c0c0c0 solid;
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  max-width: 220px;
+  margin: auto;
+}
+
+img {
+  max-width: 220px;
+  max-height: 150px;
+}
+
+figcaption {
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
+}
+```
+
+## 属性
+
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+
+## 例
+
+`<figcaption>` の例については、 {{HTMLElement("figure")}} のページを参照して下さい。
+
+## 技術的概要
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
@@ -22,14 +67,14 @@ slug: Web/HTML/Element/figcaption
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
@@ -50,8 +95,8 @@ slug: Web/HTML/Element/figcaption
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("none")}},
-        {{ARIARole("presentation")}}
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -60,14 +105,6 @@ slug: Web/HTML/Element/figcaption
     </tr>
   </tbody>
 </table>
-
-## 属性
-
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
-
-## 例
-
-`<figcaption>` の例については、 {{HTMLElement("figure")}} のページを参照して下さい。
 
 ## 仕様書
 

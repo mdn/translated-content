@@ -1,15 +1,6 @@
 ---
 title: Notification.dir
-slug: Web/API/notification/dir
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-  - direction
-translation_of: Web/API/Notification/dir
+slug: Web/API/Notification/dir
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -19,7 +10,7 @@ La propriété en lecture seule **`dir`** de l'interface {{domxref ("Notificatio
 ## Syntaxe
 
 ```js
-Notification.dir
+Notification.dir;
 ```
 
 ### Valeur
@@ -30,7 +21,8 @@ Une {{domxref ("DOMString")}} spécifiant la direction du texte. Les valeurs pos
 - `ltr`: de gauche à droite.
 - `rtl` : de droite à gauche.
 
-> **Note :** La plupart des navigateurs semblent ignorer les paramètres explicites de ltr et rtl, et utilisent simplement le paramètre à l'échelle du navigateur.
+> [!NOTE]
+> La plupart des navigateurs semblent ignorer les paramètres explicites de ltr et rtl, et utilisent simplement le paramètre à l'échelle du navigateur.
 
 ## Spécifications
 

@@ -1,25 +1,11 @@
 ---
 title: Clients
 slug: Web/API/Clients
-tags:
-  - API
-  - Clients
-  - Experimental
-  - Expérimental(2)
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Référence(2)
-  - Service Workers
-  - ServiceWorker
-  - TopicStub
-  - Workers
-translation_of: Web/API/Clients
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-Интерфейс `Clients` [Service Workers API](/ru/docs/Web/API/ServiceWorker_API) представляет собой контейнер со списком объектов {{domxref("Client")}}.
+Интерфейс `Clients` [Service Workers API](/ru/docs/Web/API/Service_Worker_API) представляет собой контейнер со списком объектов {{domxref("Client")}}.
 
 ## Методы
 
@@ -35,9 +21,9 @@ translation_of: Web/API/Clients
 ## Примеры
 
 ```js
-clients.matchAll(options).then(function(clients) {
-  for (i = 0 ; i < clients.length ; i++) {
-    if (clients[i] === 'index.html') {
+clients.matchAll(options).then(function (clients) {
+  for (i = 0; i < clients.length; i++) {
+    if (clients[i] === "index.html") {
       clients.openWindow(clients[i]);
       // или сделать что-то другое, с учётом подошедшего клиента
     }
@@ -55,8 +41,8 @@ clients.matchAll(options).then(function(clients) {
 
 ## Смотрите также
 
-- [Using Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web workers](/ru/docs/Web/Guide/Performance/Using_web_workers)
+- [Using web workers](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)

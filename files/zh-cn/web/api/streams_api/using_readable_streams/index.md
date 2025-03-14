@@ -3,17 +3,15 @@ title: 使用可读流
 slug: Web/API/Streams_API/Using_readable_streams
 ---
 
-{{apiref("Streams")}}
+{{DefaultAPISidebar("Streams")}}
 
-作为一个 JavaScript 开发者，以编程的方式逐块地读取和操作从网络上获取的数据是非常实用的！但是你要如何使用 Streams API 的可读流功能呢？可以在这篇文章看到基本介绍。
+作为一个 JavaScript 开发者，以编程的方式逐块地读取和操作从网络上获取的数据是非常实用的！但是你要如何使用 Stream API 的可读流功能呢？可以在这篇文章看到基本介绍。
 
-> **备注：** 本文要求你已理解可读流相关知识，并了解相关的高级概念，如果还不了解，建议你先查看[流的概念和简介](/zh-CN/docs/Web/API/Streams_API#概念和用法)以及掌握 [Streams API 概念](/zh-CN/docs/Web/API/Streams_API/Concepts)然后再阅读此文。
+> [!NOTE]
+> 本文要求你已理解可读流相关知识，并了解相关的高级概念，如果还不了解，建议你先查看[流的概念和简介](/zh-CN/docs/Web/API/Streams_API#概念和用法)以及掌握 [Stream API 概念](/zh-CN/docs/Web/API/Streams_API/Concepts)然后再阅读此文。
 
-> **备注：** 如果你正在查询关于可写流的信息，你可以尝试阅读[使用可写流](/zh-CN/docs/Web/API/Streams_API/Using_writable_streams)。
-
-## 浏览器支持
-
-你可以将 Fetch body 对象作为流来使用，并在当前的大多数浏览器中你可以创建自定义的可读流。[链式管道传输](/zh-CN/docs/Web/API/Streams_API/Concepts#链式管道传输)的支持仍然不是很普遍，但是你可以检查浏览器兼容性表（例如，{{domxref("ReadableStream.pipeThrough()")}}）。
+> [!NOTE]
+> 如果你正在查询关于可写流的信息，你可以尝试阅读[使用可写流](/zh-CN/docs/Web/API/Streams_API/Using_writable_streams)。
 
 ## 寻找一些示例
 
@@ -29,9 +27,9 @@ slug: Web/API/Streams_API/Using_readable_streams
 
 ```js
 // Fetch the original image
-fetch('./tortoise.png')
+fetch("./tortoise.png")
   // Retrieve its body as ReadableStream
-  .then((response) => response.body)
+  .then((response) => response.body);
 ```
 
 这为我们提供了 {{domxref("ReadableStream")}} 对象。
@@ -42,7 +40,7 @@ fetch('./tortoise.png')
 
 ```js
 // Fetch the original image
-fetch('./tortoise.png')
+fetch("./tortoise.png")
   // Retrieve its body as ReadableStream
   .then((response) => response.body)
   .then((body) => {
@@ -57,7 +55,7 @@ fetch('./tortoise.png')
 
 ```js
 // Fetch the original image
-fetch('./tortoise.png')
+fetch("./tortoise.png")
   // Retrieve its body as ReadableStream
   .then((response) => {
     const reader = response.body.getReader();
@@ -71,7 +69,7 @@ fetch('./tortoise.png')
 
 ```js
 // Fetch the original image
-fetch('./tortoise.png')
+fetch("./tortoise.png")
   // Retrieve its body as ReadableStream
   .then((response) => {
     const reader = response.body.getReader();
@@ -90,8 +88,8 @@ fetch('./tortoise.png')
             return pump();
           });
         }
-      }
-    })
+      },
+    });
   })
   // Create a new response out of the stream
   .then((stream) => new Response(stream))
@@ -99,14 +97,16 @@ fetch('./tortoise.png')
   .then((response) => response.blob())
   .then((blob) => URL.createObjectURL(blob))
   // Update image
-  .then((url) => console.log(image.src = url))
+  .then((url) => console.log((image.src = url)))
   .catch((err) => console.error(err));
 ```
 
 让我们详细看看如何使用 `read()`。在 `pump()` 函数中，我们首先调用 `read()`，其返回一个包含对象的 promise——这里有我们要读去的结果，其形式为 `{ done, value }`：
 
 ```js
-reader.read().then(({ done, value }) => { /* … */ });
+reader.read().then(({ done, value }) => {
+  /* … */
+});
 ```
 
 这个结果可能是三种不同的类型之一：
@@ -141,7 +141,8 @@ return pump();
 3. 如果流中有更多的分块要读取，你可以处理当前的分块后，再次运行该函数。
 4. 你继续链接 `pipe` 函数，直到没有更多流要读取，在这种情况下，请遵循步骤 2。
 
-> **备注：** 该函数看起来像 `pump()` 调用自己并且导致一个潜在的深度递归。然而，因为 `pump` 是异步的并且每次调用 `pump()` 都是在 promise 处理程序的末尾，事实上，它类似于 promise 处理程序的链式结构。
+> [!NOTE]
+> 该函数看起来像 `pump()` 调用自己并且导致一个潜在的深度递归。然而，因为 `pump` 是异步的并且每次调用 `pump()` 都是在 promise 处理程序的末尾，事实上，它类似于 promise 处理程序的链式结构。
 
 ## 创建你自定义的可读流
 
@@ -154,29 +155,26 @@ return pump();
 通用的语法框架像这样：
 
 ```js
-const stream = new ReadableStream({
-  start(controller) {
-
+const stream = new ReadableStream(
+  {
+    start(controller) {},
+    pull(controller) {},
+    cancel() {},
+    type,
+    autoAllocateChunkSize,
   },
-  pull(controller) {
-
+  {
+    highWaterMark: 3,
+    size: () => 1,
   },
-  cancel() {
-
-  },
-  type,
-  autoAllocateChunkSize,
-}, {
-  highWaterMark: 3,
-  size: () => 1,
-});
+);
 ```
 
 构造函数需要两个对象作为参数。第一个对象时必需的，并在 JavaScript 中创建一个正在读取数据的底层源模型。第二个对象是可选的，并且允许你去指定一个[自定义的队列策略](/zh-CN/docs/Web/API/Streams_API/Concepts#内置队列和队列策略)用于自己的流。你将很少这么做，所以我们现在只要专注于第一个。
 
 第一个对象包含着五个成员，仅有第一个是必要的：
 
-1. `start(controller)`——一个在 `ReadableStream` 构建后，立即被调用一次的方法。在这个方法中，你应该包含设置流功能的代码，例如开始生成数据或者以其它的方式访问资源时。
+1. `start(controller)`——一个在 `ReadableStream` 构建后，立即被调用一次的方法。在这个方法中，你应该包含设置流功能的代码，例如开始生成数据或者以其他的方式访问资源时。
 2. `pull(controller)`——一个方法，当被包含时，它会被重复的调用直到填满流的内置队列。当排入更多的分块时，这可以用于控制流。
 3. `cancel()`——一个方法，当被包含时，如果应用发出流将被取消的信号，它将被调用（例如，调用 {{domxref("ReadableStream.cancel()")}}）。内容应该采取任何必要的措施释放对流源的访问。
 4. `type` 和 `autoAllocateChunkSize`——当它们被包含时，会被用来表示流将是一个字节流。字节流将在未来的教程中单独涵盖，因为它们在目的和用例上与常规的（默认的）流有些不同。它们也未在任何地方实施。
@@ -185,7 +183,7 @@ const stream = new ReadableStream({
 
 ```js
 // Fetch the original image
-fetch('./tortoise.png')
+fetch("./tortoise.png")
   // Retrieve its body as ReadableStream
   .then((response) => {
     const reader = response.body.getReader();
@@ -204,8 +202,8 @@ fetch('./tortoise.png')
             return pump();
           });
         }
-      }
-    })
+      },
+    });
   });
 ```
 
@@ -226,15 +224,16 @@ readableStream
   .then((stream) => new Response(stream))
   .then((response) => response.blob())
   .then((blob) => URL.createObjectURL(blob))
-  .then((url) => console.log(image.src = url))
+  .then((url) => console.log((image.src = url)))
   .catch((err) => console.error(err));
 ```
 
 但是一个自定义流仍然是 `ReadableStream` 实例，意味着你可以给它附着一个 reader。例如，看看我们的[简单随机流示例](https://github.com/mdn/dom-examples/blob/master/streams/simple-random-stream/index.html)（[也可以参见在线演示](https://mdn.github.io/dom-examples/streams/simple-random-stream/)），其创建了一个自定义的流，排入了一些随机的字符串，然后在按下 _Stop string generation_ 的按钮后，再次从流中读取数据。
 
-> **备注：** 为了使用 {{domxref("FetchEvent.respondWith()")}} 消费流，排入的流内容的类型必须是 {{jsxref("Uint8Array")}}；例如使用 {{domxref("TextEncoder")}} 进行编码。
+> [!NOTE]
+> 为了使用 {{domxref("FetchEvent.respondWith()")}} 消费流，排入的流内容的类型必须是 {{jsxref("Uint8Array")}}；例如使用 {{domxref("TextEncoder")}} 进行编码。
 
-自定义流的构造函数有一个 `start()` 方法，该方法使用 {{domxref("setInterval()")}} 去指定每秒生成一个随机的字符串。然后使用 {{domxref("ReadableStreamDefaultController.enqueue()")}} 将它排入流。当按下按钮，取消 interval，并调用名为 `readStream()` 函数再次将数据从流中读取回来。由于我们一直停止排入分块，所以我们也要关闭流。
+自定义流的构造函数有一个 `start()` 方法，该方法使用 {{domxref("Window.setInterval", "setInterval()")}} 去指定每秒生成一个随机的字符串。然后使用 {{domxref("ReadableStreamDefaultController.enqueue()")}} 将它排入流。当按下按钮，取消 interval，并调用名为 `readStream()` 函数再次将数据从流中读取回来。由于我们一直停止排入分块，所以我们也要关闭流。
 
 ```js
 const stream = new ReadableStream({
@@ -244,15 +243,15 @@ const stream = new ReadableStream({
       // Add the string to the stream
       controller.enqueue(string);
       // show it on the screen
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = string;
       list1.appendChild(listItem);
     }, 1000);
-    button.addEventListener('click', () => {
+    button.addEventListener("click", () => {
       clearInterval(interval);
       readStream();
       controller.close();
-    })
+    });
   },
   pull(controller) {
     // We don't really need a pull in this example
@@ -261,7 +260,7 @@ const stream = new ReadableStream({
     // This is called if the reader cancels,
     // so we should stop generating strings
     clearInterval(interval);
-  }
+  },
 });
 ```
 
@@ -271,7 +270,7 @@ const stream = new ReadableStream({
 function readStream() {
   const reader = stream.getReader();
   let charsReceived = 0;
-  let result = '';
+  let result = "";
 
   // read() returns a promise that resolves
   // when a value has been received
@@ -287,7 +286,7 @@ function readStream() {
 
     charsReceived += value.length;
     const chunk = value;
-    const listItem = document.createElement('li');
+    const listItem = document.createElement("li");
     listItem.textContent = `Read ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list2.appendChild(listItem);
 
@@ -309,9 +308,9 @@ function readStream() {
 
 有时候你可能想要同时读取两次流。该过程由调用 {{domxref("ReadableStream.tee()")}} 实现——它返回一个数组，包含对原始可读流的两个相同的副本可读流，然后可以独立的使用不同的 reader 读取。
 
-举例而言，你在 [ServiceWorker](/zh-CN/docs/Web/API/Service_Worker_API) 中可能会用到该方法，当你从服务器 fetch 资源，得到一个响应的可读流，你可能会想把这个流拆分成两个，一个流入到浏览器，另一个流入到 ServiceWorker 的缓存。由于 response 的 body 无法被消费两次，以及可读流无法被两个 reader 同时读取，你会需要两个可读流副本来实现需求。
+举例而言，你在 [ServiceWorker](/zh-CN/docs/Web/API/Service_Worker_API) 中可能会用到该方法，当你从服务器 fetch 资源，得到一个响应的可读流，你可能会想把这个流拆分成两个，一个流入到浏览器，另一个流入到 ServiceWorker 的缓存。由于响应的主体无法被消费两次，以及可读流无法被两个 reader 同时读取，你会需要两个可读流副本来实现需求。
 
-我们提供了一个示例，在我们的[简单 tee 示例](https://github.com/mdn/dom-examples/blob/master/streams/simple-tee-example/index.html)（[也可以参见在线演示](https://mdn.github.io/dom-examples/streams/simple-tee-example/)）。这个示例与我们的简单随机流示例的工作方式大致相同，只是当按钮按下停止生产随机字符串时，将采取自定义流并拷贝流，并且读取这两个生成的流：
+我们提供了一个示例，在我们的[简单拷贝示例](https://github.com/mdn/dom-examples/blob/master/streams/simple-tee-example/index.html)（[也可以参见在线演示](https://mdn.github.io/dom-examples/streams/simple-tee-example/)）。这个示例与我们的简单随机流示例的工作方式大致相同，只是当按钮按下停止生产随机字符串时，将采取自定义流并拷贝流，并且读取这两个生成的流：
 
 ```js
 function teeStream() {
@@ -329,13 +328,13 @@ function teeStream() {
 
 ```js
 // Fetch the original image
-fetch('png-logo.png')
+fetch("png-logo.png")
   // Retrieve its body as ReadableStream
   .then((response) => response.body)
   // Create a gray-scaled PNG stream out of the original
-  .then((rs) => logReadableStream('Fetch Response Stream', rs))
+  .then((rs) => logReadableStream("Fetch Response Stream", rs))
   .then((body) => body.pipeThrough(new PNGTransformStream()))
-  .then((rs) => logReadableStream('PNG Chunk Stream', rs))
+  .then((rs) => logReadableStream("PNG Chunk Stream", rs));
 ```
 
 我们仍然没有使用 {{domxref("TransformStream")}} 的例子。

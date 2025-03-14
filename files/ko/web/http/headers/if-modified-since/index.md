@@ -1,8 +1,8 @@
 ---
 title: If-Modified-Since
 slug: Web/HTTP/Headers/If-Modified-Since
-translation_of: Web/HTTP/Headers/If-Modified-Since
 ---
+
 {{HTTPSidebar}}
 
 **`If-Modified-Since`** HTTP 요청 헤더는 조건부 요청으로 서버는 지정된 날짜 이후 수정 된 경우에 {{HTTPStatus("200")}} 과 함께 요청된 리소스를 돌려 줍니다. 만약 수정되지 않는 리소스에 대한 요청시, 리소스 없이 {{HTTPStatus("304")}} 응답을 하게 됩니다. 이전 요청의 {{HTTPHeader ( "Last-Modified")}} 응답 헤더는 마지막으로 수정 한 날짜를 포함합니다.`If-Modified-Since`는 {{HTTPHeader("If-Unmodified-Since")}} 와는 다르게 {{HTTPMethod("GET")}} 또는 {{HTTPMethod("HEAD")}} 에서만 쓸수 있습니다.
@@ -57,13 +57,13 @@ If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## 기술 사양
 
-| 기술 사양                                                | 제목                                                         |
-| -------------------------------------------------------- | ------------------------------------------------------------ |
+| 기술 사양                                   | 제목                                                         |
+| ------------------------------------------- | ------------------------------------------------------------ |
 | {{RFC("7232", "If-Modified-Since", "3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.If-Modified-Since")}}
+{{Compat}}
 
 ## 함께 참고할 내용
 

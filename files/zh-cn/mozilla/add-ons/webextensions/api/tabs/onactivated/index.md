@@ -1,59 +1,60 @@
 ---
 title: tabs.onActivated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActivated
+l10n:
+  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar()}}当窗体的活动标签变化时触发。请注意事件触发时标签的 URL 可能尚未设置，但是你可以通过监听 {{WebExtAPIRef("tabs.onUpdated")}} 事件在 URL 被设置后得到通知。
+{{AddonSidebar}}
+
+当窗口中的活动标签页更改时触发。请注意，此事件触发时，标签页的 URL 可能尚未设置，但你可以监听 {{WebExtAPIRef("tabs.onUpdated")}} 事件，以便在设置 URL 时收到通知。
 
 ## 语法
 
-```js
+```js-nolint
 browser.tabs.onActivated.addListener(listener)
 browser.tabs.onActivated.removeListener(listener)
 browser.tabs.onActivated.hasListener(listener)
 ```
 
-此事件有三个方法：
+事件具有三个函数：
 
-- `addListener(callback)`
-  - : 向此事件添加一个监听。
+- `addListener(listener)`
+  - : 向此事件添加一个监听器。
 - `removeListener(listener)`
-  - : 停止监听此事件。 `listener` 参数是将要移除的监听。
+  - : 停止监听此事件。`listener` 参数是要移除的监听器。
 - `hasListener(listener)`
-  - : 检查 `listener` 是否在此事件中注册。如果正在监听返回 `true` ，否则 `false`。
+  - : 检查 `listener` 是否已注册此事件。如果正在监听，则返回 `true`，否则返回 `false`。
 
 ## addListener 语法
 
 ### 参数
 
-- `callback`
+- `listener`
 
-  - : 事件发生时被执行的方法。以下参数会被传递至该方法：
+  - : 此事件发生时调用的函数。该函数接收以下参数：
 
     - `activeInfo`
-      - : [`object`](#activeInfo). 被激活标签的 ID , 以及它的窗体的 ID。
+      - : `object`。被激活的标签页的 ID 及其窗口的 ID。详见 [activeInfo](#activeinfo_2) 部分。
 
-## 额外的对象
+## 附加对象
 
 ### activeInfo
 
+- `previousTabId`
+  - : `integer`。上一个被激活的标签页的 ID（如果该标签页仍然打开）。
 - `tabId`
-  - : `integer`. 被激活的标签的 ID。
+  - : `integer`。已被激活的标签页的 ID。
 - `windowId`
-  - : `integer`. 此标签的窗体的 ID。
-
-## 浏览器兼容性
-
-{{Compat}}
+  - : `integer`。标签页所属窗口的 ID。
 
 ## 示例
 
-监听并记录标签激活事件：
+监听并记录标签页激活事件：
 
 ```js
 function handleActivated(activeInfo) {
-  console.log("Tab " + activeInfo.tabId +
-              " was activated");
+  console.log(`标签页 ${activeInfo.tabId} 已激活`);
 }
 
 browser.tabs.onActivated.addListener(handleActivated);
@@ -61,9 +62,12 @@ browser.tabs.onActivated.addListener(handleActivated);
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#event-onActivated) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+## 浏览器兼容性
+
+{{Compat}}
+
+> [!NOTE]
+> 该 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#event-onActivated) API。此文档来自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

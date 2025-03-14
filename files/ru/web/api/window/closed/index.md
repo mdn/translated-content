@@ -1,8 +1,8 @@
 ---
 title: Window.closed
 slug: Web/API/Window/closed
-translation_of: Web/API/Window/closed
 ---
+
 {{APIRef}}
 
 ## Общая информация
@@ -26,12 +26,12 @@ isClosed = windowRef.closed;
 
 ### Изменение URL окна браузера со всплывающего окна
 
-Следующий пример демонстрирует, как всплывающее окно может изменять URL окна, которое его открыло. Перед тем, как изменить URL, оно проверяет, имеет ли текущее окно свойство [window.opener](/ru/docs/DOM/window.opener) и не закрыто ли оно:
+Следующий пример демонстрирует, как всплывающее окно может изменять URL окна, которое его открыло. Перед тем, как изменить URL, оно проверяет, имеет ли текущее окно свойство [window.opener](/ru/docs/Web/API/Window/opener) и не закрыто ли оно:
 
 ```js
 // проверяет, если window.opener существует и не закрыт
 if (window.opener && !window.opener.closed) {
-  window.opener.location.href = "http://www.mozilla.org";
+  window.opener.location.href = "https://www.mozilla.org";
 }
 ```
 
@@ -50,11 +50,11 @@ function refreshPopupWindow() {
     popupWindow.location.reload(true);
   } else {
     // открывает новое всплывающее окно
-    popupWindow = window.open("popup.html","dataWindow");
+    popupWindow = window.open("popup.html", "dataWindow");
   }
 }
 ```
 
-## Спецификация
+## Спецификации
 
 HTML5

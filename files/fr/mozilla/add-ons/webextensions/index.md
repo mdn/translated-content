@@ -1,14 +1,13 @@
 ---
 title: WebExtensions
 slug: Mozilla/Add-ons/WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions
 ---
 
 {{AddonSidebar}}
 
 Les extensions, ou modules complémentaires, peuvent étendre et modifier les fonctionnalités d'un navigateur. Les extensions pour Firefox sont construites avec l'API WebExtensions qui fonctionnent pour les différents navigateurs.
 
-La technologie d'extensions Firefox est, en grande partie, compatible avec l'[API d'extension](https://developer.chrome.com/extensions) prise en charge par les navigateurs Chromium tels que Google Chrome, Microsoft Edge et Opera. Dans la plupart des cas, les extensions écrites dans ces navigateurs fonctionnent sur Firefox avec [seulement quelques modifications](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/).
+La technologie d'extensions Firefox est, en grande partie, compatible avec l'[API d'extension](https://developer.chrome.com/docs/extensions) prise en charge par les navigateurs Chromium tels que Google Chrome, Microsoft Edge et Opera. Dans la plupart des cas, les extensions écrites dans ces navigateurs fonctionnent sur Firefox avec [seulement quelques modifications](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/).
 
 ## Ressources principales
 
@@ -19,11 +18,12 @@ La technologie d'extensions Firefox est, en grande partie, compatible avec l'[AP
 - Flux de travail pour Firefox
   - : Découvrez comment créer et publier des extensions pour Firefox : plongez dans le fonctionnement des outils de développement, de la publication, de la distribution, et du portage avec [l'atelier des extensions Firefox](https://extensionworkshop.com/).
 
-> **Note :** Si vous avez des idées, des questions ou si vous avez besoin d'aide, vous pouvez nous contacter sur [le forum communautaire](https://discourse.mozilla.org/c/add-ons) ou sur [le salon Add-ons](https://matrix.to/#/!CuzZVoCbeoDHsxMCVJ:mozilla.org?via=mozilla.org&via=matrix.org&via=humanoids.be) sur [Matrix](https://wiki.mozilla.org/Matrix).
+> [!NOTE]
+> Si vous avez des idées, des questions ou si vous avez besoin d'aide, vous pouvez nous contacter sur [le forum communautaire](https://discourse.mozilla.org/c/add-ons) ou sur [le salon Add-ons](https://matrix.to/#/!CuzZVoCbeoDHsxMCVJ:mozilla.org?via=mozilla.org&via=matrix.org&via=humanoids.be) sur [Matrix](https://wiki.mozilla.org/Matrix).
 
 ## Premiers pas
 
-Découvrez [ce que peuvent faire les extensions Firefox](/fr/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions) avant [de construire votre première extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension). Découvrez [la structure d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) et obtenez un aperçu [du processus de développement et de publication d'extension pour Firefox](/fr/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview). Explorez un peu plus en profondeur leur fonctionnement avec un large éventail d'[exemples d'extensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Examples) que vous pouvez exécuter directement sur Firefox.
+Découvrez [ce que peuvent faire les extensions Firefox](/fr/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions) avant [de construire votre première extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension). Découvrez [la structure d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) et obtenez un aperçu [du processus de développement et de publication d'extension pour Firefox](https://extensionworkshop.com/documentation/develop/firefox-workflow-overview/). Explorez un peu plus en profondeur leur fonctionnement avec un large éventail d'[exemples d'extensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Examples) que vous pouvez exécuter directement sur Firefox.
 
 ## Concepts
 

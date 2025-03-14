@@ -1,12 +1,6 @@
 ---
 title: RegExp.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
-tags:
-  - Expresion Regular
-  - Prototipo
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/toString
-original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/toString
 ---
 
 {{JSRef}}
@@ -34,11 +28,11 @@ El objeto {{jsxref("RegExp")}} reemplaza el método `toString()` del objeto {{js
 El siguiente ejemplo muestra la cadena de representación de un objeto {{jsxref("RegExp")}}:
 
 ```js
-var myExp = new RegExp('a+b+c');
-console.log(myExp.toString());  // '/a+b+c/'
+var myExp = new RegExp("a+b+c");
+console.log(myExp.toString()); // '/a+b+c/'
 
-var foo = new RegExp('bar', 'g');
-console.log(foo.toString());    // '/bar/g'
+var foo = new RegExp("bar", "g");
+console.log(foo.toString()); // '/bar/g'
 ```
 
 ### Expresiones regulares vacías y escapado
@@ -48,17 +42,17 @@ A partir de ECMAScript 5, una expresión regular vacía devuelve la cadena "/(?:
 ```js
 new RegExp().toString(); // "/(?:)/"
 
-new RegExp('\n').toString() === "/\n/";  // true, antes de ES5
-new RegExp('\n').toString() === "/\\n/"; // true, desde ES5
+new RegExp("\n").toString() === "/\n/"; // true, antes de ES5
+new RegExp("\n").toString() === "/\\n/"; // true, desde ES5
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.RegExp.toString")}}
+{{Compat}}
 
 ## Vea también
 

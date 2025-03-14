@@ -1,14 +1,14 @@
 ---
 title: HTMLCollection
 slug: Web/API/HTMLCollection
-translation_of: Web/API/HTMLCollection
 ---
 
 {{APIRef("HTML DOM")}}
 
 Интерфейс **`HTMLCollection`** является обобщённой коллекцией (объектом, ведущим себя подобно массиву) элементов (в порядке упоминания в документе) и предоставляет методы и свойства для получения хранящихся в нём элементов.
 
-> **Примечание:** **Замечание:** Интерфейс назван `HTMLCollection` по историческим причинам. До стандарта DOM4 коллекции, реализующие данный интерфейс, использовались только для хранения HTML-элементов.
+> [!NOTE]
+> Интерфейс назван `HTMLCollection` по историческим причинам. До стандарта DOM4 коллекции, реализующие данный интерфейс, использовались только для хранения HTML-элементов.
 
 `HTMLCollection`, хранящая элементы DOM, является динамической. При изменении документа она моментально отражает все произведённые изменения.
 
@@ -48,14 +48,13 @@ alert(elem1 === elem2); // выводит "true"
 elem1 = document.forms["named.item.with.periods"];
 ```
 
-## Поддержка браузерами
-
-Браузеры по разному ведут себя при наличии нескольких элементов с одинаковыми индексами, либо значениями свойств `namedItem`. Firefox 8 действует в соответствии с DOM2 и DOM4, возвращая первое совпадение. Internet Explorer и браузеры на основе WebKit возвращают новый экземпляр `HTMLCollection`. Opera возвращает {{domxref("NodeList")}} со всеми найденными элементами.
-
 ## Спецификации
 
-- [DOM Level 2 HTML, Section 1.4, Miscellaneous Object Definitions](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75708506)
-- [DOM4: HTMLCollection](http://www.w3.org/TR/domcore/#interface-htmlcollection)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
 
 ## Смотрите также
 

@@ -45,17 +45,17 @@ if (x) {
 不要用`Boolean`物件將非布林值轉換成布林值。反而要將`Boolean`視為函式去轉換非布林值：
 
 ```js
-var x = Boolean(expression);     // 較好
+var x = Boolean(expression); // 較好
 var x = new Boolean(expression); // 不要用
 ```
 
 如果你要指定任何物件，包括值為`false`的`Boolean`物件，作為`Boolean`物件的初始值，則該`Boolean`物件的值依舊為`true`。
 
 ```js
-var myFalse = new Boolean(false);   // 初始值給false，實際上為true
-var g = new Boolean(myFalse);       // 想當然耳，true
-var myString = new String('Hello'); // 字串物件，'Hello'
-var s = new Boolean(myString);      // 依舊為true
+var myFalse = new Boolean(false); // 初始值給false，實際上為true
+var g = new Boolean(myFalse); // 想當然耳，true
+var myString = new String("Hello"); // 字串物件，'Hello'
+var s = new Boolean(myString); // 依舊為true
 ```
 
 不要使用`Boolean`物件代替`Boolean`的原始型別！
@@ -75,13 +75,12 @@ var s = new Boolean(myString);      // 依舊為true
 
 所有 `Boolean` 實體會繼承 {{jsxref("Boolean.prototype")}} 。和所有建構式一樣，原型物件會指派給實體那些繼承的屬性和方法。
 
-### 屬性
-
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Properties')}}
-
 ### 方法
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Methods')}}
+- {{jsxref("Boolean.prototype.toString()")}}
+  - : Returns a string of either `true` or `false` depending upon the value of the object. Overrides the {{jsxref("Object.prototype.toString()")}} method.
+- {{jsxref("Boolean.prototype.valueOf()")}}
+  - : Returns the primitive value of the {{jsxref("Boolean")}} object. Overrides the {{jsxref("Object.prototype.valueOf()")}} method.
 
 ## 範例
 
@@ -91,7 +90,7 @@ var s = new Boolean(myString);      // 依舊為true
 var bNoParam = new Boolean();
 var bZero = new Boolean(0);
 var bNull = new Boolean(null);
-var bEmptyString = new Boolean('');
+var bEmptyString = new Boolean("");
 var bfalse = new Boolean(false);
 ```
 
@@ -99,9 +98,9 @@ var bfalse = new Boolean(false);
 
 ```js
 var btrue = new Boolean(true);
-var btrueString = new Boolean('true');
-var bfalseString = new Boolean('false');
-var bSuLin = new Boolean('Su Lin');
+var btrueString = new Boolean("true");
+var bfalseString = new Boolean("false");
+var bSuLin = new Boolean("Su Lin");
 var bArrayProto = new Boolean([]);
 var bObjProto = new Boolean({});
 ```
@@ -118,4 +117,4 @@ var bObjProto = new Boolean({});
 
 - {{jsxref("Boolean.prototype")}}
 - {{Glossary("Boolean")}}
-- [Boolean data type (Wikipedia)](http://en.wikipedia.org/wiki/Boolean_data_type)
+- [布林資料類型（維基百科）](<https://zh.wikipedia.org/wiki/布林_(資料類型)>)

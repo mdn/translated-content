@@ -9,7 +9,15 @@ l10n:
 
 **`toTimeString()`** メソッドは、英語の人間が読める形式で {{jsxref("Date")}} オブジェクトの「時刻」部を返します。
 
-{{EmbedInteractiveExample("pages/js/date-totimestring.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.toTimeString()", "shorter")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+console.log(event.toTimeString());
+// Expected output: "23:15:30 GMT+0200 (CEST)"
+// Note: your timezone may vary
+```
 
 ## 構文
 
@@ -25,13 +33,13 @@ toTimeString()
 
 {{jsxref("Date")}} インスタンスは特定の時点を参照します。`toTimeString()` は日付をローカルのタイムゾーンで解釈し、_時刻_ の部分を英語の書式にします。これは常に `hh:mm:ss GMT±xxxx (TZ)` の形式を使用します。
 
-| 書式文字列 | 説明                                                                                           |
-| ------------- | ----------------------------------------------------------------------------------------------------- |
-| `hh`          | 時間、2 桁（必要であれば先頭の 0 を含む）。                                                     |
-| `mm`          | 分、2 桁（必要であれば先頭の 0 を含む）。                                                   |
-| `ss`          | 秒、2 桁（必要であれば先頭の 0 を含む）。                                                  |
-| `±xxxx`       | ローカルタイムゾーンのオフセット - 時：2桁、分：2桁 (e.g. `-0500`, `+0800`) |
-| `TZ`          | ローカルタイムゾーンの名前（`PDT`, `PST` など）                                                               |
+| 書式文字列 | 説明                                                                        |
+| ---------- | --------------------------------------------------------------------------- |
+| `hh`       | 時間、2 桁（必要であれば先頭の 0 を含む）。                                 |
+| `mm`       | 分、2 桁（必要であれば先頭の 0 を含む）。                                   |
+| `ss`       | 秒、2 桁（必要であれば先頭の 0 を含む）。                                   |
+| `±xxxx`    | ローカルタイムゾーンのオフセット - 時：2桁、分：2桁 (e.g. `-0500`, `+0800`) |
+| `TZ`       | ローカルタイムゾーンの名前（`PDT`, `PST` など）                             |
 
 例: "04:42:04 GMT+0000 (Coordinated Universal Time)".
 
@@ -47,7 +55,7 @@ toTimeString()
 ```js
 const d = new Date(1993, 6, 28, 14, 39, 7);
 
-console.log(d.toString());     // Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
+console.log(d.toString()); // Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
 console.log(d.toTimeString()); // 14:39:07 GMT-0600 (PDT)
 ```
 

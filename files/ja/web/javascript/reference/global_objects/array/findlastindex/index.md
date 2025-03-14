@@ -2,92 +2,75 @@
 title: Array.prototype.findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 l10n:
-  sourceCommit: 968e6f1f3b6f977a09e116a0ac552459b741eac3
+  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
 ---
 
 {{JSRef}}
 
-**`findLastIndex()`** メソッドは、指定されたテスト関数を満たす配列の最後の要素の添字を返します。
+**`findLastIndex()`** は {{jsxref("Array")}} のメソッドで、この配列を逆順に反復処理し、指定されたテスト関数を満たす配列の最後の要素のインデックスを返します。
 テスト関数を満たす要素がなかった場合は、 -1 を返します。
-
-{{EmbedInteractiveExample("pages/js/array-findlastindex.html","shorter")}}
 
 {{jsxref("Array/findLast", "findLast()")}} メソッドも参照してください。こちらはテスト関数を満たす最後の要素の（位置ではなく）値を返します。
 
+{{InteractiveExample("JavaScript Demo: Array.findLastIndex()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 50, 130, 44];
+
+const isLargeNumber = (element) => element > 45;
+
+console.log(array1.findLastIndex(isLargeNumber));
+// Expected output: 3
+// Index of element with value: 130
+```
+
 ## 構文
 
-```js
-// アロー関数
-findLastIndex((element) => { /* … */ } )
-findLastIndex((element, index) => { /* … */ } )
-findLastIndex((element, index, array) => { /* … */ } )
-
-// コールバック関数
+```js-nolint
 findLastIndex(callbackFn)
 findLastIndex(callbackFn, thisArg)
-
-// インラインコールバック関数
-findLastIndex(function(element) { /* … */ })
-findLastIndex(function(element, index) { /* … */ })
-findLastIndex(function(element, index, array){ /* … */ })
-findLastIndex(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 引数
 
 - `callbackFn`
-
-  - : 配列内の要素をテストするのに使用される関数。
-
-    この関数は以下の引数で呼び出されます。
-
+  - : 配列のそれぞれの要素に対して実行する関数です。一致する要素が得られたことを示すには[真値](/ja/docs/Glossary/Truthy)を返し、そうでなければ[偽値](/ja/docs/Glossary/Falsy)を返してください。この関数は以下の引数で呼び出されます。
     - `element`
-      - : 配列内で現在処理されている要素。
+      - : 配列内で現在処理されている要素です。
     - `index`
-      - : 配列内で現在処理されている要素の位置。
+      - : 配列内で現在処理されている要素のインデックス（位置）です。
     - `array`
-      - : `findLastIndex()` を呼び出した元の配列。
-
-    コールバックは適切な要素が見つかったときに、[真値](/ja/docs/Glossary/Truthy)を返す必要があります。
-    この要素の位置が `findLastIndex()` から返されます。
-
+      - : `findLastIndex()` を呼び出した元の配列です。
 - `thisArg` {{optional_inline}}
-  - : `callbackFn` の実行時に `this` として使用するオブジェクト。
+  - : `callbackFn` 内で `this` として使われるオブジェクトです。[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)を参照してください。
 
 ### 返値
 
-配列内で、テストを満たした最後の（最も大きな）要素の添字。
-それ以外の場合は，一致する要素が見つからなければ -1 となります。
+配列内で、テストを満たした最後の（最も大きな）要素のインデックス。
+それ以外の場合は，一致する要素が見つからなければ `-1` となります。
 
 ## 解説
 
-`findLastIndex()` メソッドは、配列のそれぞれの要素に対して、添字の降順に一度ずつ `callbackFn` 関数を実行し、 `callbackFn` が[真値](/ja/docs/Glossary/Truthy)を返すまで続けます。
-そして、 `findLastIndex()` がその要素の添字を返し、配列の反復子を停止します。
-もし `callbackFn` が真値を返さなかった場合、 `findLastIndex()` は `-1` を返します。
+`findLastIndex()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。配列のそれぞれの要素に対して、インデックスの降順に一度ずつ指定された `callbackFn` 関数を実行し、 `callbackFn` が[真値](/ja/docs/Glossary/Truthy)を返すまで続けます。そして、 `findLastIndex()` がその要素のインデックスを返し、配列のイテレーターを停止します。もし `callbackFn` が真値を返さなかった場合、 `findLastIndex()` は `-1` を返します。
 
-`callbackFn` は値が割り当てられている要素だけではなく、配列の「すべての」添字に対して呼び出されます。
-すなわち、不連続な配列では、割り当てられた値のみを参照するメソッドと比較して、効率が悪くなります。
+`callbackFn` は値が割り当てられている要素だけではなく、配列の「すべての」インデックスに対して呼び出されます。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)で空のスロットは `undefined` と同じ動作をします。
 
-`thisArg` 引数が `findLastIndex()` に指定された場合、これを `this` の値として `callbackFn` のそれぞれの呼び出しが行われます。
-指定されなかった場合は、 {{jsxref("undefined")}} が使用されます。
+`findLastIndex()` メソッドは呼び出し元の配列を変更しませんが、 `callbackFn` に指定された関数は変更することがあります。ただし、配列の長さは `callbackFn` を最初に呼び出す前に保存されることに注意してください。したがって、
 
-`findLastIndex()` メソッドは呼び出し元の配列を変更しませんが、 `callbackFn` に指定された関数は変更することがあります。
-`findLastIndex()` が処理する要素は、 `callbackFn` の最初の呼び出しの「前」に設定されます。
-したがって、
+- `callbackFn` は `findLastIndex()` の呼び出しを始めたときの配列の長さを超えて追加された要素にはアクセスしません。
+- 既に訪問した位置を変更しても、 `callbackFn` が再度呼び出されることはありません。
+- まだ訪問していない既存の配列要素が `callbackFn` によって変更された場合、 `callbackFn` に渡される値はその要素が取得される時点の値になります。[削除された](/ja/docs/Web/JavaScript/Reference/Operators/delete) 要素は `undefined` であるかのように処理されます。
 
-- `callbackFn` は、 `findLastIndex()` の呼び出しが始まった後に配列に追加された要素に対しては呼び出されません。
-- 既に呼び出されたことのある添字に割り当てられた要素に対して、再び `callbackFn` が呼び出されることはありません。
-- 範囲外の添字に割り当てられた要素に対しては、 `callbackFn` は呼び出されません。
-- 既存の、まだ呼び出されていない配列の要素が `callbackFn` によって変更された場合、 `callbackFn` に渡される値は、 `findLastIndex()` がその要素の添字を呼び出したときの値になります。
-- {{jsxref("Operators/delete", "削除", "", 1)}}された要素に対しても呼び出されます。
+> [!WARNING]
+> 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
 
-> **警告:** 前項で説明したような同時進行の変更は、理解しにくいコードになることが多いので、（特殊な場合を除き）一般的には避けるべきです。
+`findLastIndex()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
 
 ## 例
 
 ### 配列内の最後の素数の位置を探す
 
-以下の例では、配列の最後の要素が素数である場合の添字を返します。は素数が存在しない場合は `-1` を返します。
+以下の例では、配列の最後の要素が素数である場合のインデックスを返します。素数が存在しない場合は `-1` を返します。
 
 ```js
 function isPrime(element) {
@@ -102,22 +85,33 @@ function isPrime(element) {
   return true;
 }
 
-console.log([4, 6, 8, 12].findLast(isPrime)); // undefined, not found
-console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
+console.log([4, 6, 8, 12].findLastIndex(isPrime)); // -1, not found
+console.log([4, 5, 7, 8, 9, 11, 12].findLastIndex(isPrime)); // 5
 ```
 
-### アロー関数を使用した添字の検索
+### 疎配列に対する findLastIndex() の使用
 
-以下の例では、アロー関数を使用して果物の添字を探します。
-結果は {{jsxref("Array/findIndex", "findIndex()")}} を使用した場合と同じになることに注意してください。
+疎配列から `undefined` を検索し、空のスロットのインデックスを取得することができます。
 
 ```js
-const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
+console.log([1, , 3].findLastIndex((x) => x === undefined)); // 1
+```
 
-const index = fruits.findLastIndex((fruit) => fruit === "blueberries");
+### 配列でないオブジェクトに対する findLastIndex() の呼び出し
 
-console.log(index); // 3
-console.log(fruits[index]); // blueberries
+`findLastIndex()` メソッドは `this` の `length` プロパティを読み込み、次にキーが `length` より小さい非負の整数である各プロパティにアクセスします。
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 7.3,
+  2: 4,
+  3: 3, // length が 3 であるため findLastIndex() から無視される
+};
+console.log(
+  Array.prototype.findLastIndex.call(arrayLike, (x) => Number.isInteger(x)),
+); // 2
 ```
 
 ## 仕様書
@@ -130,7 +124,12 @@ console.log(fruits[index]); // blueberries
 
 ## 関連情報
 
-- [`Array.prototype.findIndex` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array.prototype.findLast()")}}
+- [`Array.prototype.findLastIndex` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#array-find-from-last)
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("Array.prototype.findLast()")}}
 - {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxref("Array.prototype.lastIndexOf()")}}
+- {{jsxref("TypedArray.prototype.findLastIndex()")}}

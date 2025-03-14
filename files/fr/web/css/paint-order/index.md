@@ -1,14 +1,6 @@
 ---
 title: paint-order
 slug: Web/CSS/paint-order
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-  - SVG
-  - Web
-translation_of: Web/CSS/paint-order
 ---
 
 {{CSSRef}}{{seecompattable}}
@@ -42,7 +34,8 @@ La valeur par défaut, utilisée si aucune valeur n'est fournie, sera `fill`, `s
 
 Lorsqu'une seule valeur est indiquée, c'est celle-ci qui est appliquée par défaut suivi des deux autres selon l'ordre par défaut. Lorsque deux valeurs sont indiquées, elles sont appliquées dans cet ordre puis suivi de la troisième.
 
-> **Note :** Pour cette propriété, les marqueurs sont uniquement utilisés dans le cas de formes SVG qui utilisent les propriétés `marker-*` (e.g. [`marker-start`](/fr/docs/Web/SVG/Attribute/marker-start)) ou l'élément [`<marker>`](/fr/docs/Web/SVG/Element/marker). Les marqueurs ne sont pas appliqués sur le texte HTML, dans ce cas, seul l'ordre entre `stroke` et `fill` importe.
+> [!NOTE]
+> Pour cette propriété, les marqueurs sont uniquement utilisés dans le cas de formes SVG qui utilisent les propriétés `marker-*` (e.g. [`marker-start`](/fr/docs/Web/SVG/Attribute/marker-start)) ou l'élément [`<marker>`](/fr/docs/Web/SVG/Element/marker). Les marqueurs ne sont pas appliqués sur le texte HTML, dans ce cas, seul l'ordre entre `stroke` et `fill` importe.
 
 ### Valeurs
 

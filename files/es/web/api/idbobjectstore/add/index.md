@@ -5,7 +5,7 @@ slug: Web/API/IDBObjectStore/add
 
 {{ APIRef("IDBObjectStore") }}
 
-El metodo `add()` de la interfaz {{domxref("IDBObjectStore")}} retorna un objeto {{domxref("IDBRequest")}}, y, un hilo separado, crea un [clone estructurado](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) del valor, y almacena el valor clonado en el almacén de objetos. Esto es para agregar nevos registros a un almacén de objetos.
+El metodo `add()` de la interfaz {{domxref("IDBObjectStore")}} retorna un objeto {{domxref("IDBRequest")}}, y, un hilo separado, crea un [clone estructurado](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) del valor, y almacena el valor clonado en el almacén de objetos. Esto es para agregar nevos registros a un almacén de objetos.
 
 Para determinar si la operación de agregar fue completada satisfactoriamente, escucha el evento `complete` de la transaccion en adicion al evento `success` de la peticion `IDBojectStore.add`, porque la transaccion y todavía puede fallar después de lanzar el evento success. En otras palabras, el eventos success sólo es lanzado cuando la transacción ha sido puesta en cola satisfactoriamente.
 
@@ -45,14 +45,14 @@ Este método puede generar un {{domxref("DOMException")}} con un {{domxref("DOME
 
 ## Ejemplo
 
-En el siguiente código, abrimos una transacción read/write en nuestra base de datos y agregado algunos datos al almacén de datos usando `add()`. También ten en cuenta que las funciones adjuntas a los manejadores de eventos de la transacción para informar en la salida de la apertura de transacciones en el evento de éxito o falla. Para un ejemplo completo funcionando, mira nuestra aplicación [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([ver ejemplo](http://mdn.github.io/to-do-notifications/)).
+En el siguiente código, abrimos una transacción read/write en nuestra base de datos y agregado algunos datos al almacén de datos usando `add()`. También ten en cuenta que las funciones adjuntas a los manejadores de eventos de la transacción para informar en la salida de la apertura de transacciones en el evento de éxito o falla. Para un ejemplo completo funcionando, mira nuestra aplicación [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([ver ejemplo](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // Abrimos nuestra base de datos
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Database initialised.</li>";
 
   // Almacenar el resultado de la apertura de la base de datos en la variable db. Esta es usada mucho después
   db = DBOpenRequest.result;
@@ -63,19 +63,30 @@ DBOpenRequest.onsuccess = function(event) {
 
 function addData() {
   // Crea un nuevo objeto listo para ser insertado en la IDB
-  var newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  var newItem = [
+    {
+      taskTitle: "Walk dog",
+      hours: 19,
+      minutes: 30,
+      day: 24,
+      month: "December",
+      year: 2013,
+      notified: "no",
+    },
+  ];
 
   // Inicia una transacción de lectura/escritura db transaction, lista para agregar los datos
   var transaction = db.transaction(["toDoList"], "readwrite");
 
   // Informa sobre el éxito de la inicio de la transacción
-  transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
+  transaction.oncomplete = function (event) {
+    note.innerHTML +=
+      "<li>Transaction completed: database modification finished.</li>";
   };
 
-
-  transaction.onerror = function(event) {
-  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+  transaction.onerror = function (event) {
+    note.innerHTML +=
+      "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
   };
 
   // Crea una almacén de objetos en la transacción
@@ -84,11 +95,11 @@ function addData() {
   // Agrega nuestro objeto newItem al almacén de objetos
   var objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = function (event) {
     //Informa sobre el éxito de nuestro nuevo elemento en la base de datos
-    note.innerHTML += '<li>New item added to database.</li>';
+    note.innerHTML += "<li>New item added to database.</li>";
   };
-};
+}
 ```
 
 ## Parámetros
@@ -102,9 +113,9 @@ function addData() {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.IDBObjectStore.add")}}
+{{Compat}}
 
 ## Ver también
 
@@ -114,4 +125,4 @@ function addData() {
 - Estableciendo un rango de llaves: {{domxref("IDBKeyRange")}}
 - Obteniendo y haciendo cambios a tus datos: {{domxref("IDBObjectStore")}}
 - Usando cursores: {{domxref("IDBCursor")}}
-- Ejemplo de referencia: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([ver ejemplo](http://mdn.github.io/to-do-notifications/).)
+- Ejemplo de referencia: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([ver ejemplo](https://mdn.github.io/dom-examples/to-do-notifications/).)

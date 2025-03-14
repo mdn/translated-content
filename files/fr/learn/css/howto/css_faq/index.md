@@ -1,14 +1,9 @@
 ---
 title: Questions fréquentes en CSS
 slug: Learn/CSS/Howto/CSS_FAQ
-tags:
-  - CSS
-  - Débutant
-  - Exemple
-  - Guide
-translation_of: Learn/CSS/Howto/CSS_FAQ
-original_slug: Web/CSS/CSS_questions_frequentes
 ---
+
+{{LearnSidebar}}
 
 ## Pourquoi mon CSS, pourtant valide, ne fournit pas un rendu correct ?
 
@@ -24,21 +19,16 @@ Les navigateurs basés sur Gecko ont un troisième mode [Presque Standard](/fr/d
 Voici une liste des `DOCTYPE` les plus couramment utilisés, qui déclencheront les modes Standard et Presque Standard des navigateurs :
 
 ```html
-<!DOCTYPE html> /* Ceci est le doctype HTML5. Étant donné que chaque
-                   navigateur moderne utilise un parseur HTML5, c'est le
-                   doctype recommandé. */
+<!-- Ceci est le doctype HTML5. Étant donné que chaque navigateur moderne utilise un parseur HTML5, c'est le doctype recommandé. -->
+<!doctype html>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
-"https://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"https://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "https://www.w3.org/TR/html4/strict.dtd">
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 ```
 
 ## Pourquoi mon CSS, qui est valide, n'est pas affiché du tout ?
@@ -55,7 +45,7 @@ Quand vous voulez appliquer un style à plusieurs blocs ou éléments dans la m�
 
 Les feuilles de style avec le moins de règles sont les plus performantes. Par conséquent, il est recommandé d'utiliser le plus possible les classes et de réserver les id à des usages spécifiques - comme connecter des éléments de type `label` et `form` ou pour décorer des éléments qui doivent être sémantiquement uniques.
 
-Voire [Les sélecteurs CSS](/fr/docs/CSS/Premiers_pas/Les_sélecteurs).
+Voire [Les sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors).
 
 ## Comment revenir à la valeur par défaut d'un propriété ?
 
@@ -73,13 +63,16 @@ Il est possible d'assigner aux éléments HTML de multiples classes en les lista
 
 ```html
 <style type="text/css">
-.news { background: black; color: white; }
-.today { font-weight: bold; }
+  .news {
+    background: black;
+    color: white;
+  }
+  .today {
+    font-weight: bold;
+  }
 </style>
 
-<div class="news today">
-... content of today's news ...
-</div>
+<div class="news today">... content of today's news ...</div>
 ```
 
 Si la même propriété est déclarée dans les deux règles, le conflit est résolu de la manière suivante : premièrement selon la règle de spécificité, ensuite selon l'ordre de déclaration du CSS. L'ordre des classes dans l'attribut `class` n'est pas pris en compte.
@@ -107,8 +100,9 @@ La manière dont les styles CSS sont appliqués aux éléments HTML dépend auss
 <!-- Le texte de l'annonce est en noir
      mais le nom de l'entreprise est
      en rouge gras -->
-<div class="news"> (Reuters)
-   <span class="corpName">General Electric</span>
+<div class="news">
+  (Reuters)
+  <span class="corpName">General Electric</span>
   (GE.NYS) announced on Thursday...
 </div>
 ```
@@ -137,7 +131,7 @@ Pour les feuilles de style CSS, **l'ordre est important**. Si vous définissez u
 ```html
 <!-- La plupart du texte est en gras sauf "GE",
      qui est en rouge et sans graisse -->
-<div id="stockTicker"> NYS: <span class="stockSymbol">GE</span> +1.0 ... </div>
+<div id="stockTicker">NYS: <span class="stockSymbol">GE</span> +1.0 ...</div>
 ```
 
 Pour éviter ce type d'erreur, le mieux consiste à ne définir les règles qu'une seule fois pour un sélecteur donné et à grouper toutes les règles appartenant à ce sélecteur.
@@ -162,9 +156,7 @@ Les propriétés raccourcies sont un bon outil pour définir les règles CSS car
 ```html
 <div id="stockTicker">
   NYS:
-  <span class="stockSymbol">
-    GE
-  </span>
+  <span class="stockSymbol"> GE </span>
   +1.0 ...
 </div>
 ```
@@ -205,9 +197,7 @@ body * {
 <div id="section">
   NYS:
   <span class="corpName">
-    <span class="stockUp">
-      GE
-    </span>
+    <span class="stockUp"> GE </span>
   </span>
   +1.0 ...
 </div>
@@ -219,7 +209,7 @@ Le sélecteur `*` doit être utilisé aussi peu que possible car il s'agit d'un 
 
 ### La spécificité en CSS
 
-Lorsque plusieurs règles s'applique à un même élément. La règle choisie dépend de la [spécificité](/fr/Apprendre/CSS/Les_bases/La_cascade_et_l_héritage). Les styles _inline_ (ceux déclarés via l'attribut HTML `style`) sont pris en compte en priorité, suivis par ceux manipulés avec les sélecteurs d'identifiant, suivis ceux associés aux sélecteurs de classe et éventuellement par ceux associés aux sélecteurs de nom.
+Lorsque plusieurs règles s'applique à un même élément. La règle choisie dépend de la [spécificité](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance). Les styles _inline_ (ceux déclarés via l'attribut HTML `style`) sont pris en compte en priorité, suivis par ceux manipulés avec les sélecteurs d'identifiant, suivis ceux associés aux sélecteurs de classe et éventuellement par ceux associés aux sélecteurs de nom.
 
 ```css
 div {
@@ -241,7 +231,7 @@ div {
 </div>
 ```
 
-Les règles exactes sont plus complexes lorsque le sélecteur contient plusieurs composants. Pour plus de détails sur la façon dont la spécificité d'un sélecteur est calculé, on pourra lire [le chapitre de la spécification CSS 2.1](https://www.w3.org/TR/CSS21/cascade.html#specificity) ou [le chapitre correspondant de la section Apprendre](/fr/Apprendre/CSS/Les_bases/La_cascade_et_l_héritage).
+Les règles exactes sont plus complexes lorsque le sélecteur contient plusieurs composants. Pour plus de détails sur la façon dont la spécificité d'un sélecteur est calculé, on pourra lire [le chapitre de la spécification CSS 2.1](https://www.w3.org/TR/CSS21/cascade.html#specificity) ou [le chapitre correspondant de la section Apprendre](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
 
 ## Quid des propriétés -moz-\*, -ms-\*, -webkit-\*, -o-\* et -khtml-\* ?
 
@@ -249,7 +239,7 @@ Ces propriétés, appelées _propriétés préfixées_, sont des extensions au s
 
 Il n'est pas recommandé d'utilier ces propriétés pour des sites web en production. Si cela reste nécessaire, il est conseillé de prévoir une stratégie au cas où ces propriétés préfixées soient retirées. En effet, elles peuvent être modifiées voire supprimées lorsque le standard évolue.
 
-Pour plus d'informations [sur les extensions CSS de Mozilla, vous pouvez consulter la page associée](/fr/docs/Web/CSS/Extensions_Mozilla).
+Pour plus d'informations [sur les extensions CSS de Mozilla, vous pouvez consulter la page associée](/fr/docs/Web/CSS/Mozilla_Extensions).
 
 ## Quel est l'impact de `z-index` sur le positionnement des éléments ?
 

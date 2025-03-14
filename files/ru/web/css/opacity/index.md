@@ -1,25 +1,51 @@
 ---
 title: opacity
 slug: Web/CSS/opacity
-tags:
-  - CSS
-  - CSS-свойство
-  - Opacity
-  - Непрозрачность
-  - Прозрачность
-translation_of: Web/CSS/opacity
 ---
+
 {{CSSRef}}
 
 CSS-свойство **`opacity`** устанавливает непрозрачность элемента. Непрозрачность - это степень, в которой содержимое скрывается за элементом, является противоположностью прозрачности.
 
-{{EmbedInteractiveExample("pages/css/opacity.html")}}
+{{InteractiveExample("CSS Demo: opacity")}}
+
+```css interactive-example-choice
+opacity: 0;
+```
+
+```css interactive-example-choice
+opacity: 0.33;
+```
+
+```css interactive-example-choice
+opacity: 1;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #963770;
+  color: white;
+  padding: 1em;
+}
+```
 
 `opacity` применяется к элементу в целом, включая его содержимое, даже если значение не наследуется дочерними элементами. Таким образом, элемент и его потомки имеют одинаковую непрозрачность относительно фона элемента, даже если они имеют различную непрозрачность относительно друг друга.
 
-Использование `opacity` со значением, отличным от `1`, помещает элемент в новый [контекст наложения](/ru/docs/CSS/Understanding_z-index/The_stacking_context).
+Использование `opacity` со значением, отличным от `1`, помещает элемент в новый [контекст наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
 
-Если вы [не хотите применять opacity к дочерним элементам](http://stackoverflow.com/questions/13508877/resetting-the-opacity-of-a-child-elements-maple-browser-samsung-tv-app), используйте взамен свойство {{cssxref("background")}}. Например:
+Если вы [не хотите применять opacity к дочерним элементам](https://stackoverflow.com/questions/13508877/resetting-the-opacity-of-a-child-elements-maple-browser-samsung-tv-app), используйте взамен свойство {{cssxref("background")}}. Например:
 
 ```css
 background: rgba(0, 0, 0, 0.4);
@@ -30,11 +56,14 @@ background: rgba(0, 0, 0, 0.4);
 ### Значения
 
 - `<alpha-value>`
-  - | : {{cssxref("number", "число")}} в пределах от `0.0` до `1.0`, включительно, или {{cssxref("percentage", "проценты")}} в пределах от `0%` до `100%`, включительно, представляет непрозрачность канала (т.е. значение его альфа-канала). Любое значение вне интервала, хотя и является валидным, округляется до ближайшего предела в диапазоне. | Значение                                                         | Действие |
-    | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | -------- |
-    | `0`                                                                                                                                                                                                                                                                                                                                                                                     | Элемент полностью прозрачен (он становится невидимым).           |
-    | Любое {{cssxref("number", "число")}} строго между `0` и `1`                                                                                                                                                                                                                                                                                                           | Элемент полупрозрачный (т.е. содержимое элемента можно увидеть). |
-    | `1` (значение по умолчанию)                                                                                                                                                                                                                                                                                                                                                             | Элемент полностью непрозрачный (видимый).                        |
+
+  - : {{cssxref("number", "число")}} в пределах от `0.0` до `1.0`, включительно, или {{cssxref("percentage", "проценты")}} в пределах от `0%` до `100%`, включительно, представляет непрозрачность канала (т.е. значение его альфа-канала). Любое значение вне интервала, хотя и является валидным, округляется до ближайшего предела в диапазоне.
+
+    | Значение                                                    | Действие                                                         |
+    | ----------------------------------------------------------- | ---------------------------------------------------------------- |
+    | `0`                                                         | Элемент полностью прозрачен (он становится невидимым).           |
+    | Любое {{cssxref("number", "число")}} строго между `0` и `1` | Элемент полупрозрачный (т.е. содержимое элемента можно увидеть). |
+    | `1` (значение по умолчанию)                                 | Элемент полностью непрозрачный (видимый).                        |
 
 ### Формальный синтаксис
 
@@ -45,7 +74,9 @@ background: rgba(0, 0, 0, 0.4);
 ### Базовый пример
 
 ```css
-div { background-color: yellow; }
+div {
+  background-color: yellow;
+}
 .light {
   opacity: 0.2; /* Едва видимый текст на фоне */
 }
@@ -82,14 +113,17 @@ img.opacity:hover {
 ```
 
 ```html
-<img src="//developer.mozilla.org/static/img/opengraph-logo.png"
-  alt="MDN logo" width="128" height="146"
-  class="opacity">
+<img
+  src="https://developer.mozilla.org/mdn-social-share.png"
+  alt="MDN logo"
+  width="128"
+  height="146"
+  class="opacity" />
 ```
 
 {{EmbedLiveSample('Различная_непрозрачность_с_hover', '150', '175')}}
 
-## Проблемы доступности
+## Доступность
 
 Если непрозрачность текста регулируется, важно убедиться, что коэффициент контрастности между цветом текста и фоном, на котором размещён текст, достаточно высок, чтобы люди, испытывающие проблемы со слабым зрением, могли читать содержимое страницы.
 
@@ -105,7 +139,7 @@ img.opacity:hover {
 
 {{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

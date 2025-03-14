@@ -138,4 +138,4 @@ Report-To: { "group": "nel",
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.NEL")}}
+{{Compat}}

@@ -1,20 +1,14 @@
 ---
 title: accesskey
 slug: Web/HTML/Global_attributes/accesskey
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/accesskey
-original_slug: Web/HTML/Attributs_universels/accesskey
 ---
 
-{{HTMLSidebar("Global_attributes")}}L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`accesskey`** fournit une indication afin de générer un raccourci clavier pour l'élément courant. La valeur de cet attribut est une liste de caractères (un caractère étant ici un seul point de code Unicode) séparés par des espaces. Le navigateur utilisera le premier caractère qui est disponible selon la disposition du clavier utilisée.{{EmbedInteractiveExample("pages/tabbed/attribute-accesskey.html","tabbed-shorter")}}
+{{HTMLSidebar("Global_attributes")}}L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`accesskey`** fournit une indication afin de générer un raccourci clavier pour l'élément courant. La valeur de cet attribut est une liste de caractères (un caractère étant ici un seul point de code Unicode) séparés par des espaces. Le navigateur utilisera le premier caractère qui est disponible selon la disposition du clavier utilisée.{{EmbedInteractiveExample("pages/tabbed/attribute-accesskey.html","tabbed-shorter")}}
 
 La combinaison de touches utilisée pour le raccourci clavier dépend du navigateur et du système d'exploitation utilisés.
 
-> **Note :** La spécification WHATWG indique qu'il est possible d'indiquer des caractères séparés par plusieurs espaces, auquel cas le navigateur considèrera le premier qu'il prend en charge. Toutefois, cela ne fonctionne pas dans la plupart des navigateurs. Pour IE/Edge, c'est la première valeur prise en charge qui sera utilisée si celle-ci n'entre pas en conflit avec d'autres commandes.
+> [!NOTE]
+> La spécification WHATWG indique qu'il est possible d'indiquer des caractères séparés par plusieurs espaces, auquel cas le navigateur considèrera le premier qu'il prend en charge. Toutefois, cela ne fonctionne pas dans la plupart des navigateurs. Pour IE/Edge, c'est la première valeur prise en charge qui sera utilisée si celle-ci n'entre pas en conflit avec d'autres commandes.
 
 <table class="standard-table">
   <thead>
@@ -121,4 +115,4 @@ Au-delà de la prise en charge limitée des navigateurs, `accesskey` pose plusie
 
 - {{domxref("Element.accessKey")}}
 - {{domxref("HTMLElement.accessKeyLabel")}}
-- [Les différents attributs universels](/fr/docs/Web/HTML/Attributs_universels)
+- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)

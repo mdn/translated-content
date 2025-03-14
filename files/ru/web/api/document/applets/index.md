@@ -1,41 +1,25 @@
 ---
 title: Document.applets
 slug: Web/API/Document/applets
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Апплеты
-  - Документ
-translation_of: Web/API/Document/applets
+l10n:
+  sourceCommit: a468a537c0234a3035951e80af76715e1c36c8f7
 ---
-{{APIRef("DOM")}}
 
-**`applets`** возвращает массив апплетов, находящихся в документе.
+{{APIRef("DOM")}} {{Deprecated_Header}}
 
-> **Примечание:** The {{htmlelement("applet")}} element was removed in [Gecko 56](https://bugzilla.mozilla.org/show_bug.cgi?id=1279218) and [Chrome in late 2015](https://bugs.chromium.org/p/chromium/issues/detail?id=470301). Since then, calling `document.applets` in those browsers always returns an empty {{domxref("HTMLCollection")}}. Removal is being considered in [WebKit](https://bugs.webkit.org/show_bug.cgi?id=157926)and [Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/11946645/).
+Свойство **`applets`** объекта {{domxref("Document")}} возвращает пустую коллекцию {{domxref("HTMLCollection")}}. Это свойство сохраняется только для совместимости; в старых версиях браузеров оно возвращало список апплетов документа.
 
-## Синтаксис
-
-```
-nodeList = document.applets
-```
+> [!NOTE]
+> Поддержка элемента `<applet>` удалена во всех браузерах. Поэтому вызов `document.applets` всегда возвращает пустую коллекцию.
 
 ### Значение
 
-{{domxref("HTMLCollection")}}.
-
-## Пример
-
-```
-// Когда вы точно знаете, что вам нужен 2й апплет
-my_java_app = document.applets[1];
-```
+Пустая {{domxref("HTMLCollection")}}.
 
 ## Спецификации
 
 {{Specifications}}
 
-## Браузерная поддержка
+## Совместимость с браузерами
 
 {{Compat}}

@@ -1,7 +1,6 @@
 ---
 title: Intl.supportedValuesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf
-browser-compat: javascript.builtins.Intl.supportedValuesOf
 ---
 
 {{JSRef}} {{SeeCompatTable}}
@@ -13,12 +12,29 @@ Les doublons sont omis et le tableau est trié selon l'ordre lexicographique (pl
 Cette méthode peut être utilisée afin de tester les fonctionnalités prises en charge par une implémentation donnée afin de les surcharger par une prothèse d'implémentation si nécessaire.
 Elle peut également être utilisée pour construire des interfaces utilisateur permettant aux personnes de choisir leurs préférences pour la localisation (par exemple lorsque l'interface est construite dynamiquement en WebGL ou côté serveur).
 
-{{EmbedInteractiveExample("pages/js/intl-supportedvaluesof.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.supportedValuesOf")}}
+
+```js interactive-example
+console.log(Intl.supportedValuesOf("calendar"));
+console.log(Intl.supportedValuesOf("collation"));
+console.log(Intl.supportedValuesOf("currency"));
+console.log(Intl.supportedValuesOf("numberingSystem"));
+console.log(Intl.supportedValuesOf("timeZone"));
+console.log(Intl.supportedValuesOf("unit"));
+// Expected output: Array ['key'] (for each key)
+
+try {
+  Intl.supportedValuesOf("someInvalidKey");
+} catch (err) {
+  console.log(err.toString());
+  // Expected output: RangeError: invalid key: "someInvalidKey"
+}
+```
 
 ## Syntaxe
 
 ```js
-Intl.supportedValuesOf(cle)
+Intl.supportedValuesOf(cle);
 ```
 
 ### Paramètres
@@ -42,7 +58,7 @@ Un tableau trié, contenant des chaînes de caractères uniques indiquant les va
 On peut vérifier que la méthode est prise en charge en la comparant à `undefined`&nbsp;:
 
 ```js
-if (typeof Intl.supportedValuesOf !== 'undefined') { 
+if (typeof Intl.supportedValuesOf !== "undefined") {
   // la méthode est prise en charge
 }
 ```
@@ -52,34 +68,35 @@ if (typeof Intl.supportedValuesOf !== 'undefined') {
 Pour obtenir les valeurs prises en charge pour les représentations calendaires, on pourra appeler la méthode avec la clé `"calendar"` et parcourir le tableau obtenu&nbsp;:
 
 ```js
-Intl.supportedValuesOf("calendar").forEach(function(calendar) {
-   // "buddhist", "chinese", "coptic", "dangi", ...
+Intl.supportedValuesOf("calendar").forEach(function (calendar) {
+  // "buddhist", "chinese", "coptic", "dangi", ...
 });
 ```
 
-> **Note :** Le tableau renvoyé pour les calendriers contiendra toujours la valeur "gregory" (calendrier grégorien).
+> [!NOTE]
+> Le tableau renvoyé pour les calendriers contiendra toujours la valeur "gregory" (calendrier grégorien).
 
 Les autres valeurs peuvent être obtenues de la même façon&nbsp;:
 
 ```js
-Intl.supportedValuesOf("collation").forEach(function(collation) {
-   // "big5han", "compat", "dict", "emoji", ...
+Intl.supportedValuesOf("collation").forEach(function (collation) {
+  // "big5han", "compat", "dict", "emoji", ...
 });
 
-Intl.supportedValuesOf("currency").forEach(function(currency) {
-   // "ADP", "AED", "AFA", "AFN", "ALK", "ALL", "AMD", ...
+Intl.supportedValuesOf("currency").forEach(function (currency) {
+  // "ADP", "AED", "AFA", "AFN", "ALK", "ALL", "AMD", ...
 });
 
-Intl.supportedValuesOf("numberingSystem").forEach(function(numberingSystem) {
-   // "adlm", "ahom", "arab", "arabext", "bali", ...
+Intl.supportedValuesOf("numberingSystem").forEach(function (numberingSystem) {
+  // "adlm", "ahom", "arab", "arabext", "bali", ...
 });
 
-Intl.supportedValuesOf("timeZone").forEach(function(timeZone) {
-   // "Africa/Abidjan", "Africa/Accra", "Africa/Addis_Ababa", "Africa/Algiers", ...
+Intl.supportedValuesOf("timeZone").forEach(function (timeZone) {
+  // "Africa/Abidjan", "Africa/Accra", "Africa/Addis_Ababa", "Africa/Algiers", ...
 });
 
-Intl.supportedValuesOf("unit").forEach(function(unit) {
-   // "acre", "bit", "byte", "celsius", "centimeter", ...
+Intl.supportedValuesOf("unit").forEach(function (unit) {
+  // "acre", "bit", "byte", "celsius", "centimeter", ...
 });
 ```
 

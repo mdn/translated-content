@@ -1,9 +1,9 @@
 ---
 title: Preflight petición
 slug: Glossary/Preflight_request
-translation_of: Glossary/Preflight_request
-original_slug: Glossary/Preflight_peticion
 ---
+
+{{GlossarySidebar}}
 
 Una petición preflight CORS es una petición [CORS](/es/docs/Glossary/CORS) realizada para comprobar si el protocolo {{Glossary("CORS")}} es comprendido.
 
@@ -31,7 +31,7 @@ Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
 Access-Control-Max-Age: 86400
 ```
 
-## See also
+## Véase también
 
 - [CORS](/es/docs/Glossary/CORS)
 - {{HTTPMethod("OPTIONS")}}

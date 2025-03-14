@@ -1,19 +1,16 @@
 ---
 title: Constructeur pour WebAssembly.Tag()
 slug: WebAssembly/JavaScript_interface/Tag/Tag
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag/Tag
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag/Tag
-browser-compat: javascript.builtins.WebAssembly.Tag.Tag
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
-Le constructeur **`WebAssembly.Tag()`** crée un nouvel objet [`WebAssembly.Tag`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag).
+Le constructeur **`WebAssembly.Tag()`** crée un nouvel objet [`WebAssembly.Tag`](/fr/docs/WebAssembly/JavaScript_interface/Tag).
 
 ## Syntaxe
 
 ```js
-new WebAssembly.Tag(type)
+new WebAssembly.Tag(type);
 ```
 
 ### Paramètres

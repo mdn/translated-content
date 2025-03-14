@@ -17,7 +17,7 @@ Alternativamente, o elemento {{HTMLElement("meta")}} pode ser usado para configu
 
 Um objetivo primário do CSP é de mitigar e reportar ataques XSS. Os ataques de XSS exploram a confiaça do navegador sobre o conteúdo recebido pelo servidor. Scripts maliciosos são executados pelo navegador da vítima porque o navegador confia na origem do conteúdo, mesmo quando sua origem não está vindo de onde parece que está vindo.
 
-O CSP faz com que seja possível para administradores de servidores reduzirem ou eliminarem os vetores em que os ataques de XSS podem ocorrer, especificando os domínios que o navegador deve considerar como origens válidas de scripts para serem executados. Um navegador comátivel com o CSP só irá executar então scripts que vierem de arquivos que estejam presentes nos domínios que foram previamente especificados como confiáveis, ignorando todos os outros scripts (incluindo scripts inline e atributos HTML de manipulação de eventos).
+O CSP faz com que seja possível para administradores de servidores reduzirem ou eliminarem os vetores em que os ataques de XSS podem ocorrer, especificando os domínios que o navegador deve considerar como origens válidas de scripts para serem executados. Um navegador compatível com o CSP só irá executar então scripts que vierem de arquivos que estejam presentes nos domínios que foram previamente especificados como confiáveis, ignorando todos os outros scripts (incluindo scripts inline e atributos HTML de manipulação de eventos).
 
 Como uma forma de proteção final, os sites que querem nunca permitir a execução de scripts podem optar para desabilitar a execução globalmente.
 
@@ -39,13 +39,13 @@ Você pode usar o `Content-Security-Policy` HTTP header para especificar sua pol
 Content-Security-Policy: policy
 ```
 
-A política é uma string contendo as [diretivas de políticas](/pt-BR/Security/CSP/CSP_policy_directives) descrevendo seu Content Security Policy.
+A política é uma string contendo as [diretivas de políticas](/pt-BR/docs/Security/CSP/CSP_policy_directives) descrevendo seu Content Security Policy.
 
 ## Escrevendo uma política
 
-Uma politica é descrita usando uma série de [diretivas de políticas](/pt-BR/docs/Web/Security/CSP/CSP_policy_directives), cada uma descrevendo uma política para certos tipos de recursos ou áreas de política. Sua política deve incluir uma diretiva de política padrão `default-src`, que cobre os outros tipos de recursos quando eles não possuem política própria. (Para uma lista completa, veja a descrição da diretiva default-src.) Uma política precisa incluir uma diretiva `default-src` ou script-src para evitar que scripts inline sejam executados, assim como bloquear o uso de `eval()`. Uma política precisa incluir uma diretiva `default-src` ou `style-src`para restringir estilos inline de serem aplicados a partir de um elemento `<style>` ou um `.style` atributo.
+Uma politica é descrita usando uma série de [diretivas de políticas](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy), cada uma descrevendo uma política para certos tipos de recursos ou áreas de política. Sua política deve incluir uma diretiva de política padrão `default-src`, que cobre os outros tipos de recursos quando eles não possuem política própria. (Para uma lista completa, veja a descrição da diretiva default-src.) Uma política precisa incluir uma diretiva `default-src` ou script-src para evitar que scripts inline sejam executados, assim como bloquear o uso de `eval()`. Uma política precisa incluir uma diretiva `default-src` ou `style-src`para restringir estilos inline de serem aplicados a partir de um elemento `<style>` ou um `.style` atributo.
 
-A sintaxe para uma política é uma string de diretivas separadas por ponto e vírgula `;`, cada seguindo a sintaxe descrita em [Diretivas de políticas suportadas](/pt-BR/Security/CSP/CSP_policy_directives#Supported_policy_directives).
+A sintaxe para uma política é uma string de diretivas separadas por ponto e vírgula `;`, cada seguindo a sintaxe descrita em [Diretivas de políticas suportadas](/pt-BR/docs/Security/CSP/CSP_policy_directives#supported_policy_directives).
 
 ## Exemplos: Casos de uso comuns
 
@@ -99,7 +99,7 @@ A web site administrator of a web mail site wants to allow HTML in email, as wel
 Content-Security-Policy: default-src 'self' *.mailsite.com; img-src *
 ```
 
-Note that this example doesn't specify a [`script-src`](/pt-BR/Security/CSP/CSP_policy_directives#script-src); with the example CSP, this site uses the setting specified by the [`default-src`](/pt-BR/Security/CSP/CSP_policy_directives#allow) directive, which means that scripts can be loaded only from the originating server.
+Note that this example doesn't specify a [`script-src`](/pt-BR/docs/Security/CSP/CSP_policy_directives#script-src); with the example CSP, this site uses the setting specified by the [`default-src`](/pt-BR/docs/Security/CSP/CSP_policy_directives#allow) directive, which means that scripts can be loaded only from the originating server.
 
 ## Testando sua política
 
@@ -119,7 +119,7 @@ The [UserCSP Addon](https://addons.mozilla.org/en-us/firefox/addon/newusercspdes
 
 ## Veja também
 
-- [Introducing Content Security Policy](/pt-BR/Security/CSP/Introducing_Content_Security_Policy)
-- [CSP policy directives](/pt-BR/Security/CSP/CSP_policy_directives)
-- [Using CSP violation reports](/pt-BR/Security/CSP/Using_CSP_violation_reports)
+- [Introducing Content Security Policy](/pt-BR/docs/Security/CSP/Introducing_Content_Security_Policy)
+- [CSP policy directives](/pt-BR/docs/Security/CSP/CSP_policy_directives)
+- [Using CSP violation reports](/pt-BR/docs/Security/CSP/Using_CSP_violation_reports)
 - [Content Security Policy recommendation bookmarklet](http://brandon.sternefamily.net/posts/2010/10/content-security-policy-recommendation-bookmarklet/)

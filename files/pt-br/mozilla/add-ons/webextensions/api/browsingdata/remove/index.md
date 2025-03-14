@@ -2,7 +2,8 @@
 title: browsingData.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Remove o dado de navegação especificado.
 
@@ -16,9 +17,9 @@ Isso é uma função assíncrona que retorna uma [`Promise`](/pt-BR/docs/Web/Jav
 
 ```js
 let removing = browser.browsingData.remove(
-  removalOptions,            // RemovalOptions object
-  dataTypes                  // DataTypeSet object
-)
+  removalOptions, // RemovalOptions object
+  dataTypes, // DataTypeSet object
+);
 ```
 
 ### Parâmetros
@@ -49,12 +50,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-let oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+let oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.remove(
-  {since: oneWeekAgo},
-  {downloads: true, history: true}).
-then(onRemoved, onError);
+browser.browsingData
+  .remove({ since: oneWeekAgo }, { downloads: true, history: true })
+  .then(onRemoved, onError);
 ```
 
 Remove todo o histórico de download e navegação:
@@ -81,7 +81,8 @@ browser.browsingData
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

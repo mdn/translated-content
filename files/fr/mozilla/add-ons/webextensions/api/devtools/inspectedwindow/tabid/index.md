@@ -1,19 +1,9 @@
 ---
 title: devtools.inspectedWindow.tabId
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.inpectedWindow
-  - tabId
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 L'ID de {{WebExtAPIRef("tabs.Tab", "tab")}} est que cette instance des devtools est jointe, représenté comme un nombre.
 
@@ -27,7 +17,7 @@ const scriptToAttach = "document.body.innerHTML = 'Hi from the devtools';";
 attachContentScriptButton.addEventListener("click", () => {
   browser.runtime.sendMessage({
     tabId: browser.devtools.inspectedWindow.tabId,
-    script: scriptToAttach
+    script: scriptToAttach,
   });
 });
 ```
@@ -37,20 +27,20 @@ attachContentScriptButton.addEventListener("click", () => {
 
 function handleMessage(request, sender, sendResponse) {
   browser.tabs.executeScript(request.tabId, {
-    code: request.script
+    code: request.script,
   });
 }
 
 browser.runtime.onMessage.addListener(handleMessage);
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.inspectedWindow.tabId")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools`](https://developer.chrome.com/extensions/devtools).
 >

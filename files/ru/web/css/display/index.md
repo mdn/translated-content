@@ -1,19 +1,11 @@
 ---
 title: display
 slug: Web/CSS/display
-tags:
-  - CSS
-  - CSS Display
-  - CSS Property
-  - Reference
-  - display
-  - Справка
-translation_of: Web/CSS/display
 ---
 
 {{CSSRef}}
 
-Свойство **`display`** ([CSS](/ru/docs/Web/CSS)) определяет _тип отображения (display type)_ элемента, имеющий два основных свойства, определяющих генерацию боксов — **внешний тип отображения** определяет расположение бокса в [схеме потока (flow layout)](/ru/docs/Web/CSS/CSS_Flow_Layout) и **внутренний тип отображения** определяет расположение дочерних элементов бокса (бокс - это прямоугольная область, являющаяся изображением элемента).
+Свойство **`display`** ([CSS](/ru/docs/Web/CSS)) определяет _тип отображения (display type)_ элемента, имеющий два основных свойства, определяющих генерацию боксов — **внешний тип отображения** определяет расположение бокса в [схеме потока (flow layout)](/ru/docs/Web/CSS/CSS_flow_layout) и **внутренний тип отображения** определяет расположение дочерних элементов бокса (бокс - это прямоугольная область, являющаяся изображением элемента).
 
 Некоторые значения свойства `display` полностью определены в их индивидуальных спецификациях; смотрите таблицу в конце этого документа со ссылками на все релевантные спецификации. Полный список значений приведён ниже.
 
@@ -105,7 +97,7 @@ display: unset;
 
 ```css
 .container {
-    display: inline flex;
+  display: inline flex;
 }
 ```
 
@@ -113,7 +105,7 @@ display: unset;
 
 ```css
 .container {
-    display: inline-flex;
+  display: inline-flex;
 }
 ```
 
@@ -127,28 +119,28 @@ display: unset;
 
 Кроме того, вы можете найти подробные объяснения способов разметки для определённых значений `display` в других статьях на MDN:
 
-- [Разметка CSS Grid](/ru/docs/Web/CSS/CSS_Grid_Layout)
-- [Разметка CSS Flexible box](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [Разметка CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout)
+- [Разметка CSS Flexible box](/ru/docs/Web/CSS/CSS_flexible_box_layout)
 - [Разметка CSS](/ru/docs/Learn/CSS/CSS_layout) (Модуль обучения для начинающих)
 
 ## Доступность
 
 ### `display: none;`
 
-Если свойство `display` принимает значение `none` на элементе, то элемент удаляется из [дерева доступности](/ru/docs/Learn/Доступность/What_is_accessibility). Это приводит к тому, что элемент и все его дочерние элементы больше не будут восприниматься технологиями чтения экрана.
+Если свойство `display` принимает значение `none` на элементе, то элемент удаляется из [дерева доступности](/ru/docs/Learn/Accessibility/What_is_accessibility). Это приводит к тому, что элемент и все его дочерние элементы больше не будут восприниматься технологиями чтения экрана.
 
 Если вы хотите визуально скрыть элемент, более доступной альтернативой является использование [комбинации свойств](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) для визуального удаления изображения с экрана, но это сохраняет его для синтаксического анализа с помощью вспомогательных технологий, таких как считыватели экрана.
 
 ### `display: contents;`
 
-Браузеры удаляют любой элемент со свойством `display,` имеющим значение `contents` из [дерева доступности](/ru/docs/Learn/Доступность/What_is_accessibility). Это приводит к тому, что элемент (но не его дочерние элементы) больше не будут восприниматься технологиями чтения экрана. Дочерние элементы становятся дочерними элементами элемента следующего уровня в DOM.
+Браузеры удаляют любой элемент со свойством `display,` имеющим значение `contents` из [дерева доступности](/ru/docs/Learn/Accessibility/What_is_accessibility). Это приводит к тому, что элемент (но не его дочерние элементы) больше не будут восприниматься технологиями чтения экрана. Дочерние элементы становятся дочерними элементами элемента следующего уровня в DOM.
 
-- [Display: Contents Is Not a CSS Reset | Adrian Roselli](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+- [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
 - [More accessible markup with display: contents — hiddedevries.nl](https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents)
 
 ### Таблицы
 
-Если у элемента {{HTMLElement("table")}} изменить значение свойства `display` на `block`, `grid` или `flex`, это изменит его представление в [дереве доступности](/ru/docs/Learn/Доступность/What_is_accessibility). Это приводит к тому, что таблица не будет объявлена должным образом с помощью технологии чтения экрана.
+Если у элемента {{HTMLElement("table")}} изменить значение свойства `display` на `block`, `grid` или `flex`, это изменит его представление в [дереве доступности](/ru/docs/Learn/Accessibility/What_is_accessibility). Это приводит к тому, что таблица не будет объявлена должным образом с помощью технологии чтения экрана.
 
 - [Short note on what CSS display properties do to table semantics — The Paciello Group](https://developer.paciellogroup.com/blog/2018/03/short-note-on-what-css-display-properties-do-to-table-semantics/)
 - [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
@@ -166,6 +158,6 @@ display: unset;
 ## Смотрите также
 
 - [Блоковая и Inline разметка нормальном потоке](/ru/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [Formatting contexts explained](/ru/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained)
+- [Formatting contexts explained](/ru/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
 - {{CSSxRef("visibility")}}, {{CSSxRef("float")}}, {{CSSxRef("position")}}
 - {{CSSxRef("grid")}}, {{CSSxRef("flex")}}

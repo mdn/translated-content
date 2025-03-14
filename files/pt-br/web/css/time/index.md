@@ -9,9 +9,10 @@ O tipo de dado CSS **`<time>`** representa um valor de tempo expresso em segundo
 
 ## Sintaxe
 
-O tipo dado `<time>` consiste de um elemento ​​​​​​{{cssxref("&lt;number&gt;")}} seguido por uma das unidades listadas abaixo. Opcionalmente, pode ser precedido por um sinal de `+` ou `-`. Como em todas as dimensões, não há espaço entre uma unidade literal e o número.
+O tipo dado `<time>` consiste de um elemento {{cssxref("&lt;number&gt;")}} seguido por uma das unidades listadas abaixo. Opcionalmente, pode ser precedido por um sinal de `+` ou `-`. Como em todas as dimensões, não há espaço entre uma unidade literal e o número.
 
-> **Note:** **Nota:** Embora o número `0` seja sempre o mesmo, independente da unidade, essa última não pode ser omitida. Em outras palavras, `0` é invalido e não representa `0s` ou `0ms`.
+> [!NOTE]
+> Embora o número `0` seja sempre o mesmo, independente da unidade, essa última não pode ser omitida. Em outras palavras, `0` é invalido e não representa `0s` ou `0ms`.
 
 ### Unidades
 
@@ -20,7 +21,8 @@ O tipo dado `<time>` consiste de um elemento ​​​​​​{{cssxref("&lt;nu
 - **`ms`**
   - : Representa um tempo em milissegundos. Exemplos: `0ms`, `150.25ms`, `-60000ms`.
 
-> **Note:** **Nota:** A conversão entre `s` e `ms` segue a proporção `1s = 1000ms`.
+> [!NOTE]
+> A conversão entre `s` e `ms` segue a proporção `1s = 1000ms`.
 
 ## Exemplos
 
@@ -45,12 +47,8 @@ O tipo dado `<time>` consiste de um elemento ​​​​​​{{cssxref("&lt;nu
 
 ## Specifications
 
-| Especificação                                                                | Status                           | Comentário                         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ---------------------------------- |
-| {{SpecName('CSS4 Values','#time','&lt;time&gt;')}}         | {{Spec2('CSS4 Values')}} |                                    |
-| {{SpecName('CSS3 Values','#time','&lt;time&gt;')}}         | {{Spec2('CSS3 Values')}} | Definição normativa de `s` e `ms`. |
-| {{SpecName('CSS2.1','aural.html#times','&lt;time&gt;')}} | {{Spec2('CSS2.1')}}         | Difinição informal de `s` e `ms`.  |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.types.time")}}
+{{Compat}}

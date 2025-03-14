@@ -1,11 +1,6 @@
 ---
 title: table-layout
 slug: Web/CSS/table-layout
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/table-layout
 ---
 
 {{CSSRef}}
@@ -73,7 +68,8 @@ Cet exemple utilise `table-layout: fixed` et une largeur donnée (avec la propri
   border: 1px solid red;
 }
 
-tr, td {
+tr,
+td {
   border: solid;
 }
 

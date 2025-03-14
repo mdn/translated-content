@@ -23,7 +23,7 @@ animation.id = "newId";
 
 ## 示例
 
-在 [Follow the White Rabbit example](http://codepen.io/rachelnabors/pen/eJyWzm?editors=0010) 这个例子里，你可以像下面的方式一样，为 `rabbitDownAnimation` 分配一个 id:
+在 [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm?editors=0010) 这个例子里，你可以像下面的方式一样，为 `rabbitDownAnimation` 分配一个 id:
 
 ```js
 rabbitDownAnimation.effect.id = "rabbitGo";
@@ -33,11 +33,11 @@ rabbitDownAnimation.effect.id = "rabbitGo";
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 相关文档
+## 参见
 
 - [KeyframeEffect Interface](/zh-CN/docs/Web/API/KeyframeEffect)
 - [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)

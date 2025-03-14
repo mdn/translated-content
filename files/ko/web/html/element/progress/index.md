@@ -1,21 +1,26 @@
 ---
 title: <progress>
 slug: Web/HTML/Element/progress
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/progress
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<progress>` 요소**는 어느 작업의 완료 정도를 나타내며, 주로 진행 표시줄의 형태를 띕니다.
 
-{{EmbedInteractiveExample("pages/tabbed/progress.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;progress&gt;", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
+```html interactive-example
+<label for="file">File progress:</label>
+
+<progress id="file" max="100" value="70">70%</progress>
+```
+
+```css interactive-example
+label {
+  padding-right: 10px;
+  font-size: 1rem;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -46,7 +51,7 @@ translation_of: Web/HTML/Element/progress
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -71,14 +76,15 @@ translation_of: Web/HTML/Element/progress
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{ htmlattrdef("max") }}
+- `max`
   - : `<progress>` 요소가 나타내는 작업에 필요한 작업량. 지정하는 경우, 반드시 0보다 크고 유효한 부동소수점 숫자여야 합니다. 기본값은 1입니다.
-- {{ htmlattrdef("value") }}
+- `value`
   - : `<progress>` 요소가 나타내는 작업을 완료한 양. 유효한 부동소수점 숫자여야 하고, `max` 특성을 지정한 경우 0 이상 `max` 이하, 그렇지 않으면 0 이상 1 이하여야 합니다. `value` 특성이 없으면 미결정 상태로, 현재 작업의 종료 시점을 예측할 수 없음을 나타냅니다.
 
 > **참고:** {{htmlelement("meter")}} 요소와 달리, 최솟값은 항상 0이며 `min` 특성을 지정할 수 없습니다.
 
-> **참고:** CSS {{cssxref(":indeterminate")}} [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)를 사용하면 미결정 상태의 진행 표시줄을 선택할 수 있습니다. 값을 지정한 진행 표시줄을 미결정 상태로 바꾸려면 {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}}를 사용해 `value` 특성을 제거해야 합니다.
+> [!NOTE]
+> CSS {{cssxref(":indeterminate")}} [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)를 사용하면 미결정 상태의 진행 표시줄을 선택할 수 있습니다. 값을 지정한 진행 표시줄을 미결정 상태로 바꾸려면 {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}}를 사용해 `value` 특성을 제거해야 합니다.
 
 ## 예제
 
@@ -90,17 +96,13 @@ translation_of: Web/HTML/Element/progress
 
 {{ EmbedLiveSample("예제", 200, 50) }}
 
-Windows 7에서는 다음과 같은 모습으로 나타납니다.
-
-![progress-firefox.JPG](/@api/deki/files/6031/=progress-firefox.JPG)
-
 ## 명세
 
 {{Specifications}}
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.progress")}}
+{{Compat}}
 
 ## 같이 보기
 

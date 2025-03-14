@@ -59,7 +59,7 @@ _继承自父级，_ _{{domxref("AudioScheduledSourceNode")}}_, 自有方法如�
 
 ## 示例
 
-下面示例展示了 {{ domxref("AudioContext") }} 的基本使用 来创建一个 oscillator 节点 并使用它来播放音乐。这是已经在运行的例子，可以看这里 [Violent Theremin demo](http://mdn.github.io/violent-theremin/) ([see app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) 是相关代码).
+下面示例展示了 {{ domxref("AudioContext") }} 的基本使用 来创建一个 oscillator 节点 并使用它来播放音乐。这是已经在运行的例子，可以看这里 [Violent Theremin demo](https://mdn.github.io/violent-theremin/) ([see app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) 是相关代码).
 
 ```js
 // create web audio api context
@@ -68,7 +68,7 @@ var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 // create Oscillator node
 var oscillator = audioCtx.createOscillator();
 
-oscillator.type = 'square';
+oscillator.type = "square";
 oscillator.frequency.value = 440; // value in hertz
 oscillator.connect(audioCtx.destination);
 oscillator.start();
@@ -84,4 +84,4 @@ oscillator.start();
 
 ## See also
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

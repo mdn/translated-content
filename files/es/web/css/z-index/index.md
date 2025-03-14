@@ -1,7 +1,6 @@
 ---
 title: z-index
 slug: Web/CSS/z-index
-translation_of: Web/CSS/z-index
 ---
 
 {{CSSRef}}
@@ -33,8 +32,18 @@ z-index:  auto | <entero> | inherit
 ## Ejemplos
 
 ```html hidden
-<div style="border: dashed; position: relative; height: 8em; margin-bottom: 1em; margin-top: 2em;">position:relative; z-index:1; <span style="background: gold; left: 60px; position: absolute; top: 3em;">position:absolute; z-index:2; left:60px; top:3em;</span> <span style="background: lightgreen; height: 7em; left: 20em; opacity: 0.9; position: absolute; top: -25px;">position:absolute; z-index:3;<br>
-left:20em; top:-25px; opacity:0.9</span></div>
+<div
+  style="border: dashed; position: relative; height: 8em; margin-bottom: 1em; margin-top: 2em;">
+  position:relative; z-index:1;
+  <span style="background: gold; left: 60px; position: absolute; top: 3em;"
+    >position:absolute; z-index:2; left:60px; top:3em;</span
+  >
+  <span
+    style="background: lightgreen; height: 7em; left: 20em; opacity: 0.9; position: absolute; top: -25px;"
+    >position:absolute; z-index:3;<br />
+    left:20em; top:-25px; opacity:0.9</span
+  >
+</div>
 ```
 
 {{EmbedLiveSample}}
@@ -45,9 +54,9 @@ left:20em; top:-25px; opacity:0.9</span></div>
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.z-index")}}
+{{Compat}}
 
 ## Ver también
 
 - Propiedad CSS {{Cssxref("position")}}
-- [Entendiendo la propiedad CSS z-index](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index)
+- [Entendiendo la propiedad CSS z-index](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)

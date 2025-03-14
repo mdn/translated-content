@@ -1,9 +1,6 @@
 ---
 title: itemid
 slug: Web/HTML/Global_attributes/itemid
-translation_of: Web/HTML/Global_attributes/itemid
-original_slug: Web/HTML/Global_attributes/itemid
-browser-compat: html.global_attributes.itemid
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -14,7 +11,8 @@ Un atributo `itemid` solo se puede especificar para un elemento que tiene atribu
 
 El significado exacto de un identificador global de `itemtype` lo proporciona la definición de ese identificador dentro del vocabulario especificado. El vocabulario define si pueden coexistir varios elementos con el mismo identificador global y, de ser así, cómo se manejan los elementos con el mismo identificador.
 
-> **Nota:** La definición {{glossary("WHATWG")}} especifica que un `itemid` debe ser una {{glossary("URL")}}. Sin embargo, el siguiente ejemplo ilustra correctamente que también se puede usar un {{glossary("URN")}}. Esta inconsistencia puede reflejar la naturaleza incompleta de la especificación de Microdata.
+> [!NOTE]
+> La definición {{glossary("WHATWG")}} especifica que un `itemid` debe ser una {{glossary("URL")}}. Sin embargo, el siguiente ejemplo ilustra correctamente que también se puede usar un {{glossary("URN")}}. Esta inconsistencia puede reflejar la naturaleza incompleta de la especificación de Microdata.
 
 ## Ejemplo
 
@@ -50,19 +48,20 @@ Este ejemplo utiliza atributos de microdatos para representar los siguientes dat
 #### HTML
 
 ```html
-<dl itemscope
+<dl
+  itemscope
   itemtype="https://schema.org/Book"
   itemid="urn:isbn:0-374-22848-5<">
- <dt>Título
-   <dd
-    itemprop="title">Owls of the Eastern Ice
- <dt>Autor
-   <dd
-     itemprop="author">Jonathan C Slaght
- <dt>Fecha de publicación
- <dd><time
-   itemprop="datePublished"
-   datetime="2020-08-04">4 de Agosto del 2020</time>
+  <dt>Título</dt>
+  <dd itemprop="title">Owls of the Eastern Ice</dd>
+  <dt>Autor</dt>
+  <dd itemprop="author">Jonathan C Slaght</dd>
+  <dt>Fecha de publicación</dt>
+  <dd>
+    <time itemprop="datePublished" datetime="2020-08-04"
+      >4 de Agosto del 2020</time
+    >
+  </dd>
 </dl>
 ```
 

@@ -3,7 +3,7 @@ title: font-size-adjust
 slug: Web/CSS/font-size-adjust
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 ## 概述
 
@@ -50,12 +50,15 @@ font-size-adjust: inherit;
 
 ## 示例
 
-[查看在线演示](/samples/cssref/font-size-adjust.html)
+[查看在线演示](https://mdn.dev/archives/media/samples/cssref/font-size-adjust.html)
 
 ```css
 p {
-   font: 12px Verdana, "DejaVu Sans", sans-serif;
-   font-size-adjust: 0.58;
+  font:
+    12px Verdana,
+    "DejaVu Sans",
+    sans-serif;
+  font-size-adjust: 0.58;
 }
 ```
 
@@ -71,4 +74,4 @@ p {
 
 ## 参见
 
-- [David Baron about font-size-adjust](http://dbaron.org/log/20080613-firefox3-css#font-size-adjust)
+- [David Baron about font-size-adjust](https://dbaron.org/log/20080613-firefox3-css#font-size-adjust)

@@ -1,53 +1,58 @@
 ---
 title: TypedArray.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
-tags:
-  - ECMAScript6
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/values
-browser-compat: javascript.builtins.TypedArray.values
+l10n:
+  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
 ---
+
 {{JSRef}}
 
-**`values()`** 메서드는 배열 내 각 인덱스에 대한 값을 포함하는 새로운 `Array Iterator` 객체를 반환합니다.
+**`values()`** 메서드는 배열 내 각 인덱스에 대한 값을 포함하는 새로운 배열 반복자 객체를 반환합니다.
+
+{{InteractiveExample("JavaScript Demo: TypedArray.values()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+const array1 = uint8.values();
+
+array1.next();
+array1.next();
+
+console.log(array1.next().value);
+// Expected output: 30
+```
 
 ## 구문
 
-```js
-arr.values()
+```js-nolint
+values()
 ```
 
-## 예
+## 예제
 
-### `for...of` 루프를 사용한 반복
+### for...of 루프를 사용한 반복
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArray = arr.values();
-// 브라우저가 for..of 루프 및 for 루프에서
-// let 스코프인 변수를 지원해야 합니다
-for (let n of eArray) {
+const arr = new Uint8Array([10, 20, 30, 40, 50]);
+const values = arr.values();
+for (const n of values) {
   console.log(n);
 }
 ```
 
-### 대안 반복
+### 다른 반복 방법
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArr = arr.values();
-console.log(eArr.next().value); // 10
-console.log(eArr.next().value); // 20
-console.log(eArr.next().value); // 30
-console.log(eArr.next().value); // 40
-console.log(eArr.next().value); // 50
+const arr = new Uint8Array([10, 20, 30, 40, 50]);
+const values = arr.values();
+console.log(values.next().value); // 10
+console.log(values.next().value); // 20
+console.log(values.next().value); // 30
+console.log(values.next().value); // 40
+console.log(values.next().value); // 50
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
@@ -55,9 +60,10 @@ console.log(eArr.next().value); // 50
 
 {{Compat}}
 
-## 참조
+## 같이 보기
 
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [Polyfill of `TypedArray.prototype.values` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.keys()")}}

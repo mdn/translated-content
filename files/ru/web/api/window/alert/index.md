@@ -1,7 +1,6 @@
 ---
 title: Window.alert()
 slug: Web/API/Window/alert
-translation_of: Web/API/Window/alert
 ---
 
 {{ APIRef }}
@@ -42,13 +41,11 @@ The following text is shared between this article, DOM:window\.prompt and DOM:wi
 
 Начиная с Chrome 46.0 этот метод заблокирован в {{htmlelement("iframe")}} пока атрибут sandbox не установлен в значение `allow-modal`.
 
-{{gecko_minversion_inline("23.0")}} Аргумент является опциональным и необязательным согласно спецификации.
+Аргумент является опциональным и необязательным согласно спецификации.
 
 ## Спецификации
 
-| Спецификация                                                                                                 | Статус                           | Комментарий |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#dom-alert', 'alert()')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

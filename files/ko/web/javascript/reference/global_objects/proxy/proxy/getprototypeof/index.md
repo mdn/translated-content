@@ -1,20 +1,37 @@
 ---
 title: handler.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-browser-compat: javascript.builtins.Proxy.handler.getPrototypeOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
 ---
 
 {{JSRef}}
 
 **`handler.getPrototypeOf()`** 메서드는 `[[GetPrototypeOf]]` 내부 메서드에 대한 트랩입니다.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-getprototypeof.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.getPrototypeOf()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  eyeCount: 4,
+};
+
+const monsterPrototype = {
+  eyeCount: 2,
+};
+
+const handler = {
+  getPrototypeOf(target) {
+    return monsterPrototype;
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler);
+
+console.log(Object.getPrototypeOf(proxy1) === monsterPrototype);
+// Expected output: true
+
+console.log(Object.getPrototypeOf(proxy1).eyeCount);
+// Expected output: 2
+```
 
 ## 구문
 
@@ -22,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototype
 new Proxy(obj, {
   getPrototypeOf(target) {
     // …
-  }
+  },
 });
 ```
 
@@ -65,14 +82,14 @@ const obj = {};
 const proto = {};
 const handler = {
   getPrototypeOf(target) {
-    console.log(target === obj);   // true
+    console.log(target === obj); // true
     console.log(this === handler); // true
     return proto;
   },
 };
 
 const p = new Proxy(obj, handler);
-console.log(Object.getPrototypeOf(p) === proto);    // true
+console.log(Object.getPrototypeOf(p) === proto); // true
 ```
 
 ### getPrototypeOf 트랩을 싱핼 시키는 5가지 방법
@@ -85,11 +102,11 @@ const p = new Proxy(obj, {
   },
 });
 console.log(
-  Object.getPrototypeOf(p) === Array.prototype,  // true
+  Object.getPrototypeOf(p) === Array.prototype, // true
   Reflect.getPrototypeOf(p) === Array.prototype, // true
-  p.__proto__ === Array.prototype,               // true
-  Array.prototype.isPrototypeOf(p),              // true
-  p instanceof Array,                            // true
+  p.__proto__ === Array.prototype, // true
+  Array.prototype.isPrototypeOf(p), // true
+  p instanceof Array, // true
 );
 ```
 
@@ -99,8 +116,8 @@ console.log(
 const obj = {};
 const p = new Proxy(obj, {
   getPrototypeOf(target) {
-    return 'foo';
-  }
+    return "foo";
+  },
 });
 Object.getPrototypeOf(p); // TypeError: "foo" is not an object or null
 

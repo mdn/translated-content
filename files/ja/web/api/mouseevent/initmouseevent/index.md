@@ -1,15 +1,17 @@
 ---
-title: MouseEvent.initMouseEvent()
+title: "MouseEvent: initMouseEvent() メソッド"
+short-title: initMouseEvent()
 slug: Web/API/MouseEvent/initMouseEvent
 l10n:
-  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("UI Events")}}{{deprecated_header}}
 
 **`MouseEvent.initMouseEvent()`** メソッドは、いったん（通常は {{domxref("Document.createEvent()")}} メソッドで）生成されたマウスイベントの値を初期化します。
 
-> **警告:** このメソッドは非推奨になったので、今後は使用しないでください。
+> [!WARNING]
+> このメソッドは非推奨になったので、今後は使用しないでください。
 >
 > 代わりに {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} など、特定のイベントのコンストラクターを使用してください。
 > [イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)のページに、使用方法についての詳しい情報があります。
@@ -107,9 +109,25 @@ document.body.onclick = (event) => {
 
 const simulateClick = () => {
   const event = document.createEvent("MouseEvents");
-  event.initMouseEvent("click", true, true, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null);
+  event.initMouseEvent(
+    "click",
+    true,
+    true,
+    window,
+    0,
+    0,
+    0,
+    80,
+    20,
+    false,
+    false,
+    false,
+    false,
+    0,
+    null,
+  );
   document.body.dispatchEvent(event);
-}
+};
 
 simulateClick();
 ```

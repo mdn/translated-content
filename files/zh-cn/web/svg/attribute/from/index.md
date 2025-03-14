@@ -3,17 +3,17 @@ title: from
 slug: Web/SVG/Attribute/From
 ---
 
-« [SVG 属性参考](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
 这个属性是在 svg 动画发生过程中被修改的属性的初始值。当同时使用了这个属性和 [to](/zh-CN/docs/Web/SVG/Attribute/To) 属性，animation 将会修改这个这个设定的动画属性的值从 from 属性的值到 to 属性的值。
 
-## 用法
+## 使用说明
 
-| 类别       | 动画属性值                                                                   |
-| ---------- | ---------------------------------------------------------------------------- |
+| 类别       | 动画属性值                                                                    |
+| ---------- | ----------------------------------------------------------------------------- |
 | 值         | \<value>                                                                      |
-| 动画特征   | No                                                                           |
-| 标准化文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#FromAttribute) |
+| 动画特征   | No                                                                            |
+| 标准化文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#FromAttribute) |
 
 这个属性的准确的值类型取决于这个属性将要被用作动画的属性的值。
 

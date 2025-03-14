@@ -1,30 +1,20 @@
 ---
 title: sidebarAction.getPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getPanel
-  - sidebarAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient une URL vers le document HTML qui définit le contenu de la barre latérale.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var gettingPanel = browser.sidebarAction.getPanel(
-  details               // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -40,20 +30,16 @@ var gettingPanel = browser.sidebarAction.getPanel(
 
 <!---->
 
-- Si `windowId` et `tabId`  sont tous deux fournis, la fonction échoue et la promesse qu'elle renvoie est rejetée.
+- Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et la promesse qu'elle renvoie est rejetée.
 - Si `windowId` et `tabId` sont tous les deux omis, le panneau global est renvoyé.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une chaîne contenant l'URL du document du panel. Ce sera une URL entièrement qualifiée, telle que :
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec une chaîne contenant l'URL du document du panel. Ce sera une URL entièrement qualifiée, telle que :
 
 ```
 moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/sidebar.html
 ```
-
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.sidebarAction.getPanel",2)}}
 
 ## Exemples
 
@@ -68,9 +54,13 @@ var gettingPanel = browser.sidebarAction.getPanel({});
 gettingPanel.then(onGot);
 ```
 
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).
 >

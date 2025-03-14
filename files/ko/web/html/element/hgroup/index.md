@@ -1,20 +1,43 @@
 ---
 title: <hgroup>
 slug: Web/HTML/Element/hgroup
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/hgroup
 ---
 
 {{HTMLSidebar}}
 
 **HTML `<hgroup>` 요소**는 문서 구획의 다단계 제목을 나타냅니다. 다수의 `{{htmlelement("Heading_Elements", "&lt;h1&gt;-&lt;h6&gt;")}}` 요소를 묶을 때 사용합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;hgroup&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<hgroup>
+  <h1>Frankenstein</h1>
+  <p>Or: The Modern Prometheus</p>
+</hgroup>
+<p>
+  Victor Frankenstein, a Swiss scientist, has a great ambition: to create
+  intelligent life. But when his creature first stirs, he realizes he has made a
+  monster. A monster which, abandoned by his master and shunned by everyone who
+  sees it, follows Dr Frankenstein to the very ends of the earth.
+</p>
+```
+
+```css interactive-example
+hgroup {
+  text-align: right;
+  padding-right: 16px;
+  border-right: 10px solid #00c8d7;
+}
+
+hgroup h1 {
+  margin-bottom: 0;
+}
+
+hgroup p {
+  margin: 0;
+  font-weight: bold;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -41,7 +64,7 @@ translation_of: Web/HTML/Element/hgroup
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -53,7 +76,7 @@ translation_of: Web/HTML/Element/hgroup
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 규칙</th>
-      <td>{{ARIARole("tab")}}, {{ARIARole("presentation")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/tab_role'><code>tab</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 인터페이스</th>
@@ -93,7 +116,7 @@ translation_of: Web/HTML/Element/hgroup
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.hgroup")}}
+{{Compat}}
 
 ## 같이 보기
 

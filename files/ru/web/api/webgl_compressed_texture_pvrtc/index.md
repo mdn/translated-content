@@ -1,7 +1,6 @@
 ---
 title: WEBGL_compressed_texture_pvrtc
 slug: Web/API/WEBGL_compressed_texture_pvrtc
-translation_of: Web/API/WEBGL_compressed_texture_pvrtc
 ---
 
 {{APIRef("WebGL")}}
@@ -12,7 +11,8 @@ translation_of: Web/API/WEBGL_compressed_texture_pvrtc
 
 WebGL расширения доступны через метод {{domxref("WebGLRenderingContext.getExtension()")}}. Для подробностей смотри также [Использование расширений](/ru/docs/Web/API/WebGL_API/Using_Extensions) в [туториале по WebGL.](/ru/docs/Web/API/WebGL_API/Tutorial)
 
-> **Примечание:** **Доступность:** Обычно PVRTC доступен только на мобильных устройствах с чипсетом PowerVR. Используется во всех поколениях iPhone, iPod Touch и iPad и поддерживается на определённых Android устройствах, использующих PowerVR GPU.
+> [!NOTE]
+> Обычно PVRTC доступен только на мобильных устройствах с чипсетом PowerVR. Используется во всех поколениях iPhone, iPod Touch и iPad и поддерживается на определённых Android устройствах, использующих PowerVR GPU.
 >
 > Версии контекста, поддерживающие расширение: {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} , и {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}.
 
@@ -34,19 +34,27 @@ WebGL расширения доступны через метод {{domxref("Web
 ## Примеры
 
 ```js
-var ext = gl.getExtension('WEBGL_compressed_texture_pvrtc');
+var ext = gl.getExtension("WEBGL_compressed_texture_pvrtc");
 
 var texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
-gl.compressedTexImage2D(gl.TEXTURE_2D, 0, ext.COMPRESSED_RGB_PVRTC_4BPPV1_IMG, 512, 512, 0, textureData);
+gl.compressedTexImage2D(
+  gl.TEXTURE_2D,
+  0,
+  ext.COMPRESSED_RGB_PVRTC_4BPPV1_IMG,
+  512,
+  512,
+  0,
+  textureData,
+);
 ```
 
 ## Спецификации
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -1,33 +1,22 @@
 ---
 title: cookies.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/remove
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - remove
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La méthode **`remove()`** de l'API {{WebExtAPIRef("cookies")}} supprime un cookie, compte tenu de son nom et de son URL.
 
-L'appel réussit uniquement si vous incluez la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "cookies" dans votre fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json), ainsi que les [permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour l'URL indiquée dans son manifest.
+L'appel réussit uniquement si vous incluez la [permission de l'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "cookies" dans votre fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), ainsi que les [permissions d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour l'URL indiquée dans son manifest.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var removing = browser.cookies.remove(
-  details               // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -37,21 +26,21 @@ var removing = browser.cookies.remove(
   - : Un `objet` contenant des informations permettant d'identifier le cookie à supprimer. Il contient les propriétés suivantes :
 
     - `firstPartyDomain`{{optional_inline}}
-      - : Une `chaîne` représentant le domaine de première partie avec lequel le cookie sera associé. Cette propriété doit être fournie si l'isolation de la première partie est activée sur le navigateur. Voir [Isolement de la première partie](/fr/Add-ons/WebExtensions/API/cookies#Isolement_de_la_première_partie).
+      - : Une `chaîne` représentant le domaine de première partie avec lequel le cookie sera associé. Cette propriété doit être fournie si l'isolation de la première partie est activée sur le navigateur. Voir [Isolement de la première partie](/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies#isolement_de_la_première_partie).
     - `name`
       - : Une `chaîne` représenant le nom du cookie à supprimer.
     - `storeId`{{optional_inline}}
       - : Une `chaîne` représentant l'ID du cookie store pour trouver le cookie. Si elle n'est pas spécifiée, le cookie est recherché par défaut dans le cookie store du contexte d'exécution actuel.
     - `url`
-      - : Une `chaîne` représentant l'URL associée au cookie. Si l'extension n'a pas de [permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour cette URL, l'appel de l'API échouera.
+      - : Une `chaîne` représentant l'URL associée au cookie. Si l'extension n'a pas de [permissions d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour cette URL, l'appel de l'API échouera.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('cookies.Cookie')}} contenant des détails sur le cookie qui a été supprimé. Si un cookie correspondant au paramètre `details` n'a pas pu être trouvé, la promesse est remplie avec `null`. Si l'appel échoue pour une raison quelconque, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet {{WebExtAPIRef('cookies.Cookie')}} contenant des détails sur le cookie qui a été supprimé. Si un cookie correspondant au paramètre `details` n'a pas pu être trouvé, la promesse est remplie avec `null`. Si l'appel échoue pour une raison quelconque, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.cookies.remove")}}
+{{Compat}}
 
 ## Exemples
 
@@ -69,20 +58,20 @@ function onError(error) {
 function removeCookie(tabs) {
   var removing = browser.cookies.remove({
     url: tabs[0].url,
-    name: "favourite-colour"
+    name: "favourite-colour",
   });
   removing.then(onRemoved, onError);
 }
 
-var getActive = browser.tabs.query({active: true, currentWindow: true});
+var getActive = browser.tabs.query({ active: true, currentWindow: true });
 getActive.then(removeCookie);
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/extensions/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

@@ -29,7 +29,7 @@ TBD.
 
 ## ブラウザーの互換性
 
-{{Compat("api.GamepadHapticActuator")}}
+{{Compat}}
 
 ## 関連情報
 

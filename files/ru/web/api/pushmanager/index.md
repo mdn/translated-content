@@ -1,27 +1,16 @@
 ---
 title: PushManager
 slug: Web/API/PushManager
-tags:
-  - API
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - Push
-  - Push API
-  - Reference
-  - Référence(2)
-  - Service Workers
-  - TopicStub
-translation_of: Web/API/PushManager
 ---
 
-{{SeeCompatTable}}{{ApiRef("Push API")}}
+{{APIRef("Push API")}} {{SecureContext_Header}} {{AvailableInWorkers}}
 
 Интерфейс `PushManager` из [Push API](/ru/docs/Web/API/Push_API) предоставляет возможность получать уведомления от сторонних серверов, а также запрашивать URL для push уведомлений.
 
 Этот интерфейс доступен через свойство {{domxref("ServiceWorkerRegistration.pushManager")}}.
 
-> **Примечание:** Этот интерфейс заменил функциональность, предлагаемую устаревшим {{domxref("PushRegistrationManager")}}.
+> [!NOTE]
+> Этот интерфейс заменил функциональность, предлагаемую устаревшим {{domxref("PushRegistrationManager")}}.
 
 ## Свойства
 
@@ -51,28 +40,30 @@ translation_of: Web/API/PushManager
 ## Пример
 
 ```js
-this.onpush = function(event) {
+this.onpush = function (event) {
   console.log(event.data);
   // From here we can write the data to IndexedDB, send it to any open
   // windows, display a notification, etc.
-}
+};
 
-navigator.serviceWorker.register('serviceworker.js').then(
-  function(serviceWorkerRegistration) {
+navigator.serviceWorker
+  .register("serviceworker.js")
+  .then(function (serviceWorkerRegistration) {
     serviceWorkerRegistration.pushManager.subscribe().then(
-      function(pushSubscription) {
+      function (pushSubscription) {
         console.log(pushSubscription.subscriptionId);
         console.log(pushSubscription.endpoint);
         // The push subscription details needed by the application
         // server are now available, and can be sent to it using,
         // for example, an XMLHttpRequest.
-      }, function(error) {
+      },
+      function (error) {
         // During development it often helps to log errors to the
         // console. In a production environment it might make sense to
         // also report information about errors back to the
         // application server.
         console.log(error);
-      }
+      },
     );
   });
 ```
@@ -87,5 +78,5 @@ navigator.serviceWorker.register('serviceworker.js').then(
 
 ## Смотрите также
 
-- [Использование Push API](/ru/docs/Web/API/Push_API/Using_the_Push_API)
+- [Использование Push API](/ru/docs/Web/API/Push_API)
 - [Push сообщения в Open Web](http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web), Matt Gaunt

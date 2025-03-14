@@ -1,18 +1,6 @@
 ---
 title: AudioContext.createGain()
 slug: Web/API/BaseAudioContext/createGain
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - Contrôle du volume
-  - Méthode
-  - Son
-  - Volume
-  - Web Audio
-  - createGain
-translation_of: Web/API/BaseAudioContext/createGain
-original_slug: Web/API/AudioContext/createGain
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -34,7 +22,7 @@ Un {{domxref("GainNode")}} qui prend en entrée une ou plusieurs sources audio e
 
 L'exemple suivant montre l'utilisation d'un {{domxref("AudioContext")}} pour créer un {{ domxref("GainNode") }}, qui sert à activer et désactiver le son au clic d'un bouton, en changeant la valeur de la propriété gain.
 
-L'extrait de code ci-dessous ne fonctionne pas tel quel - pour un exemple complet qui fonctionne, consulter la démo [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/) ([et son code source](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js).)
+L'extrait de code ci-dessous ne fonctionne pas tel quel - pour un exemple complet qui fonctionne, consulter la démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) ([et son code source](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js).)
 
 ```html
 <div>
@@ -98,4 +86,4 @@ function couperSon () {
 
 ## Voir aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

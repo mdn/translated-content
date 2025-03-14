@@ -1,14 +1,36 @@
 ---
 title: min()
 slug: Web/CSS/min
-original_slug: Web/CSS/min()
 ---
 
 {{CSSRef}}
 
 **`min()`** は [CSS](/ja/docs/Web/CSS) 関数で、 CSS プロパティの値としてカンマで区切られた式のリストから最小の (最も負である) 値を設定できます。 `min()` 関数は {{CSSxRef("&lt;length&gt;")}}、{{CSSxRef("&lt;frequency&gt;")}},、{{CSSxRef("&lt;angle&gt;")}}、{{CSSxRef("&lt;time&gt;")}}、{{CSSxRef("&lt;percentage&gt;")}}、{{CSSxRef("&lt;number&gt;")}}、{{CSSxRef("&lt;integer&gt;")}} が利用できるところならばどこでも使用することができます。
 
-{{EmbedInteractiveExample("pages/css/function-min.html")}}
+{{InteractiveExample("CSS Demo: min()")}}
+
+```css interactive-example-choice
+width: min(50vw, 200px);
+```
+
+```css interactive-example-choice
+width: min(100vw, 4000px);
+```
+
+```css interactive-example-choice
+width: min(150vw, 100px);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <img
+      alt="Firefox logo"
+      class="logo"
+      src="/shared-assets/images/examples/firefox-logo.svg" />
+  </div>
+</section>
+```
 
 上の例では、幅は最大 80px ですが、ビューポートの幅が 800px 未満または em の幅が 20px 未満の場合は狭くなります。言い換えれば、最大幅は 80px です。 `min()` の値はプロパティが取りうる*最大の*値を提供するものとして考えてください。
 
@@ -24,7 +46,7 @@ original_slug: Web/CSS/min()
 
 - 表の列、列グループ、行、行グループ、セルの幅と高さのパーセント値を含む数式は、自動レイアウト表と固定レイアウト表のどちらでも、あたかも `auto` が指定されていたかのように扱われる<em>可能性があります</em>。
 - `max()` や他の `min()` 関数を式の値として入れ子にすることが認められています。式は完全な数式なので、 `calc()` 関数自体を使わずに直接加算、減算、乗算、除算を使うことができます。
-- 式は、標準的な演算子の優先順位規則を使用して、加算 ( + )、減算 ( - )、乗算 ( * )、除算 ( / ) の各演算子を組み合わせた値にすることができます。オペランドの + と - の両側には必ず空白を入れてください。式の中のオペランドは、任意の `<length>` 構文値を使用できます。
+- 式は、標準的な演算子の優先順位規則を使用して、加算 ( + )、減算 ( - )、乗算 ( \* )、除算 ( / ) の各演算子を組み合わせた値にすることができます。オペランドの + と - の両側には必ず空白を入れてください。式の中のオペランドは、任意の `<length>` 構文値を使用できます。
 - `min()` と `max()` の値を組み合わせたり、 `min()` を `clamp()` や `calc()` 関数の中で使用したりすることができます (そしてよく必要になります)。
 - 複数の制約を適用する場合は、3 つ以上の引数を与えることができます。
 
@@ -36,7 +58,7 @@ original_slug: Web/CSS/min()
 
 `min()` を使用して最大フォントサイズを設定する場合、読めるようにするためにフォントが少なくとも 200% まで拡大できるようにしてください (ズーム機能などの支援技術なしで)。
 
-- [MDN WCAG を理解する、ガイドライン 1.4 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN WCAG を理解する、ガイドライン 1.4 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## 例
@@ -48,7 +70,8 @@ CSS 関数のもう一つの使用例は、レスポンシブなフォームコ�
 いくらか CSS を見てください。
 
 ```css
-input, label {
+input,
+label {
   padding: 2px;
   box-sizing: border-box;
   display: inline-block;
@@ -68,7 +91,7 @@ form {
 ```html
 <form>
   <label>Type something:</label>
-  <input type="text">
+  <input type="text" />
 </form>
 ```
 

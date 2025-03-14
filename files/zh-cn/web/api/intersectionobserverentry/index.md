@@ -3,7 +3,7 @@ title: IntersectionObserverEntry
 slug: Web/API/IntersectionObserverEntry
 ---
 
-{{SeeCompatTable}}{{APIRef("Intersection Observer API")}}
+{{APIRef("Intersection Observer API")}}
 
 **`IntersectionObserverEntry 接口`** (从属于 [Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API) ) 描述了目标元素与其根元素容器在某一特定过渡时刻的交叉状态。`IntersectionObserverEntry` 的实例作为 `entries` 参数被传递到一个 {{domxref("IntersectionObserver")}} 的回调函数中; 此外，这些对象只能通过调用{{domxref("IntersectionObserver.takeRecords()")}} 来获取。
 
@@ -22,7 +22,7 @@ slug: Web/API/IntersectionObserverEntry
 - {{domxref("IntersectionObserverEntry.target")}} {{ReadOnlyInline}}
   - : 与根出现相交区域改变的元素 ({{domxref("Element")}}).
 - {{domxref("IntersectionObserverEntry.time")}} {{readonlyinline}}
-  - : 返回一个记录从 `IntersectionObserver` 的时间原点 ([time origin](/zh-CN/docs/Web/API/DOMHighResTimeStamp#The_time_origin)) 到交叉被触发的时间的时间戳 ({{domxref("DOMHighResTimeStamp")}}).
+  - : 返回一个记录从 `IntersectionObserver` 的时间原点 ([time origin](/zh-CN/docs/Web/API/DOMHighResTimeStamp#the_time_origin)) 到交叉被触发的时间的时间戳 ({{domxref("DOMHighResTimeStamp")}}).
 
 ## 方法
 
@@ -32,6 +32,6 @@ _此接口没有方法。_
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}

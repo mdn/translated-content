@@ -1,98 +1,115 @@
 ---
 title: clip
 slug: Web/CSS/clip
+l10n:
+  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
-{{CSSRef}}{{deprecated_header}}
+{{CSSRef}}{{Deprecated_Header}}
 
-## 總結
+> [!WARNING]
+> 若有可能，建議作者使用較新的 {{cssxref("clip-path")}} 屬性來取代。
 
-**`這個 clip`** [CSS](/zh-TW/docs/Web/CSS) 屬性用來定義元素的哪一個部分是可見的. `clip` 屬性只能被賦予在絕對位置的元素(element)上, 像是帶有這些的 CSS 屬性的元素 {{cssxref("position","position:absolute")}} or {{cssxref("position","position:fixed")}}.
+**`clip`** [CSS](/zh-TW/docs/Web/CSS) 屬性定義了元素的可見部分。`clip` 屬性僅適用於絕對定位的元素，即具有 {{cssxref("position","position:absolute")}} 或 {{cssxref("position","position:fixed")}} 的元素。
 
-> **警告：** 這個屬性被遺棄了. 請改用 {{cssxref("clip-path")}} .
-
-{{cssinfo}}
-
-## Syntax
+## 語法
 
 ```css
-/* Keyword value */
+/* 關鍵字值 */
 clip: auto;
 
-/* <shape> values */
-clip: rect(1px 10em 3rem 2ch);
+/* <shape> 值 */
 clip: rect(1px, 10em, 3rem, 2ch);
 
-/* Global values */
+/* 全域值 */
 clip: inherit;
 clip: initial;
+clip: revert;
+clip: revert-layer;
 clip: unset;
 ```
 
-### Values
+### 值
 
-- `<shape>`
-  - : A rectangular {{cssxref("&lt;shape&gt;")}} of the form `rect(<top>, <right>, <bottom>, <left>)` or of the form `rect(<top> <right> <bottom> <left>)` (which is a more backwards compatible syntax) `<top>` and `<bottom>` specify offsets from the _inside top border edge_ of the box, and `<right>`, and `<left>` specify offsets from the _inside left border edge_ of the box — that is, the extent of the padding box.`<top>`, `<right>`, `<bottom>`, and `<left>` may either have a {{cssxref("&lt;length&gt;")}} value or `auto`. If any side's value is `auto`, the element is clipped to that side's _inside border edge_.
+- {{cssxref("shape")}}
+
+  - : 一個矩形 {{cssxref("shape")}}，格式為 `rect(<top>, <right>, <bottom>, <left>)`。`<top>` 和 `<bottom>` 值是從盒子*內部上邊框邊緣*的偏移，而 `<right>` 和 `<left>` 是從*內部左邊框邊緣*的偏移，即填充區域的範圍。
+
+    `<top>`、`<right>`、`<bottom>` 和 `<left>` 的值可以是 {{cssxref("&lt;length&gt;")}} 或 `auto`。若任何邊的值為 `auto`，元素將會被裁切至該邊的*內部邊框邊緣*。
+
 - `auto`
-  - : The element does not clip (default value). Note that this is distinct from `rect(auto, auto, auto, auto)`, which does clip to the inside border edges of the element.
+  - : 元素不裁切（預設值）。這不同於 `rect(auto, auto, auto, auto)`，後者裁切至元素的內部邊框邊緣。
 
-### Formal syntax
+## 形式定義
+
+{{cssinfo}}
+
+## 形式語法
 
 {{csssyntax}}
 
-## Examples
+## 範例
 
-```css
-.dotted-border {
-   border: dotted;
-   position: relative;
-   width: 536px;
-   height: 350px;
-}
-
-#top-left, #middle, #bottom-right {
-   position: absolute;
-   top: 0px;
-}
-
-#top-left {
-   left: 360px;
-   clip: rect(0px, 175px, 113px, 0px);
-}
-
-
-#middle {
-   left: 280px;
-   clip: rect(119px, 255px, 229px, 80px);
-   /* standard syntax, unsupported by Internet Explorer 4-7 */
-}
-
-#bottom-right {
-   left: 200px;
-   clip: rect(235px 335px 345px 160px);
-   /* non-standard syntax, but supported by all major browsers*/
-}
-```
+### 裁切圖像
 
 ```html
 <p class="dotted-border">
-   <img src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Original Graphic" />
-   <img id="top-left" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to upper left">
-   <img id="middle" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped towards middle">
-   <img id="bottom-right" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to bottom right">
+  <img src="macarons.png" alt="原圖" />
+  <img id="top-left" src="macarons.png" alt="圖像被剪裁到左上角" />
+  <img id="middle" src="macarons.png" alt="圖像被剪裁到中間" />
+  <img id="bottom-right" src="macarons.png" alt="圖像被剪裁到右下角" />
 </p>
 ```
 
-{{EmbedLiveSample('Examples', '689px', '410px')}}
+```css
+.dotted-border {
+  border: dotted;
+  position: relative;
+  width: 390px;
+  height: 400px;
+}
 
-## Specifications
+#top-left,
+#middle,
+#bottom-right {
+  position: absolute;
+  top: 0;
+}
+
+#top-left {
+  left: 400px;
+  clip: rect(0, 130px, 90px, 0);
+}
+
+#middle {
+  left: 270px;
+  clip: rect(100px, 260px, 190px, 130px);
+}
+
+#bottom-right {
+  left: 140px;
+  clip: rect(200px, 390px, 290px, 260px);
+}
+```
+
+{{EmbedLiveSample('裁切圖像', '', '450px')}}
+
+## 規範
 
 {{Specifications}}
 
-## Browser compatibility
+## 瀏覽器相容性
 
 {{Compat}}
 
-## See also
+## 參見
 
-- Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("overflow")}}, {{Cssxref("display")}}, {{Cssxref("position")}}
+- 此屬性已被棄用，請改用 {{cssxref("clip-path")}}。
+- 相關的 CSS 屬性：
+  - {{cssxref("text-overflow")}}
+  - {{cssxref("white-space")}}
+  - {{cssxref("overflow-x")}}
+  - {{cssxref("overflow-y")}}
+  - {{cssxref("overflow")}}
+  - {{cssxref("display")}}
+  - {{cssxref("position")}}

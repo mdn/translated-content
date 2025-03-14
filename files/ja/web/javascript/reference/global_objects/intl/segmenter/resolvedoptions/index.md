@@ -9,12 +9,23 @@ l10n:
 
 **`Intl.Segmenter.prototype.resolvedOptions()`** メソッドは、この [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトの初期化時に計算されたロケールおよび粒度のオプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/intl-segmenter-prototype-resolvedoptions.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Segmenter.prototype.resolvedOptions")}}
+
+```js interactive-example
+const segmenter1 = new Intl.Segmenter("fr-FR");
+const options1 = segmenter1.resolvedOptions();
+
+console.log(options1.locale);
+// Expected output: "fr-FR"
+
+console.log(options1.granularity);
+// Expected output: "grapheme"
+```
 
 ## 構文
 
 ```js
-resolvedOptions()
+resolvedOptions();
 ```
 
 ### 引数
@@ -39,7 +50,7 @@ resolvedOptions()
 ### 基本的な使い方
 
 ```js
-const spanishSegmenter = new Intl.Segmenter("es", {granularity: "sentence"});
+const spanishSegmenter = new Intl.Segmenter("es", { granularity: "sentence" });
 const options = spanishSegmenter.resolvedOptions();
 console.log(options.locale); // "es"
 console.log(options.granularity); // "sentence"
@@ -60,8 +71,8 @@ console.log(options.granularity); // "grapheme"
 const banSegmenter = new Intl.Segmenter("ban");
 const options = banSegmenter.resolvedOptions();
 console.log(options.locale);
-// "fr" on a runtime where the Balinese locale
-// is not supported and French is the default locale
+// Balinese ロケールに対応しておらず、
+// デフォルトのロケールが French であるランタイムでは、"fr"
 console.log(options.granularity); // "grapheme"
 ```
 

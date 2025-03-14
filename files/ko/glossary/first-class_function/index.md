@@ -1,93 +1,72 @@
 ---
 title: 일급 함수
 slug: Glossary/First-class_Function
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
-함수를 다른 변수와 동일하게 다루는 언어는 **일급 함수**를 가졌다고 표현합니다. 예를 들어, 일급 함수를 가진 언어에서는 함수를 다른 함수에 인수로 제공하거나, 함수가 함수를 반환할 수 있으며, 변수에도 할당할 수 있습니다.
 
-## 예제 | 변수에 함수 할당
+{{GlossarySidebar}}
 
-### JavaScript
+프로그래밍 언어는 해당 언어의 함수들이 다른 변수처럼 다루어질 때 **일급 함수**를 가진다고 합니다.
+예를 들어, 일급 함수를 가진 언어에서 함수는 다른 함수들에 전달인자로 제공되고, 다른 함수에 의해 반환될 수 있으며, 변수에 값으로서 할당될 수 있습니다.
+
+## 예제
+
+### 변수에 함수 할당
 
 ```js
-const foo = function() {
-   console.log("foobar");
-}
-// 변수를 사용해 호출
-foo();
+const foo = () => {
+  console.log("foobar");
+};
+foo(); // 변수를 사용해 호출
+// foobar
 ```
 
-익명함수를 변수에 할당한 다음, 그 변수를 사용하여 끝에 괄호 `()`를 추가하여 함수를 호출했습니다.
+{{glossary("Variable", "변수")}}에 '익명함수'를 할당한 다음, 끝에 괄호 `()`를 추가하면서 함수를 호출할 해당 변수를 사용합니다.
 
-> **참고:** **함수가 이름을 가지고 있더라도** 할당한 변수 이름을 사용해 함수를 호출할 수 있습니다. 이름을 지정하면 코드를 디버깅할 때 유용합니다. 하지만 호출하는 방식에는 영향을 미치지 않습니다.
+> [!NOTE]
+> 함수가 이름을 가지고 있더라도, 변수 이름을 사용하여 함수를 호출할 수 있습니다. 함수에 이름을 지정하는 것은 코드를 디버깅할 때 도움이 됩니다. 하지만 함수를 호출하는 방식에는 영향을 미치지 않을 것입니다.
 
-## 예제 | 함수를 인자로 전달
-
-### JavaScript
+### 함수에 인자로 전달
 
 ```js
 function sayHello() {
-   return "Hello, ";
+  return "Hello, ";
 }
 function greeting(helloMessage, name) {
   console.log(helloMessage() + name);
 }
-// `sayHello`를 `greeting` 함수에 인자로 전달
+// `sayHello`를 전달인자로 `greeting` 함수에 전달
 greeting(sayHello, "JavaScript!");
+// Hello, JavaScript!
 ```
 
-`sayHello()` 함수를 `greeting()` 함수의 인자로 전달했습니다. 이것이 함수를 어떻게 변수처럼 다루는지 보여주는 예시입니다.
+`sayHello()` 함수를 `greeting()` 함수에 전달인자로 전달하는데, 이것은 함수를 값으로서 어떻게 다루는지 설명합니다.
 
-> **참고:** 다른 함수에 인자로 전달된 함수를 {{glossary("Callback function", "콜백 함수")}}라고 합니다. _`sayHello`는 콜백 함수입니다._
+> [!NOTE]
+> 다른 함수에 전달인자로 전달하는 함수를 {{glossary("Callback function", "콜백 함수")}}라고 합니다. `sayHello()`는 콜백 함수입니다.
 
-## 예제 | 함수 반환
-
-### JavaScript
+### 함수 반환
 
 ```js
 function sayHello() {
-   return function() {
-      console.log("Hello!");
-   }
+  return () => {
+    console.log("Hello!");
+  };
 }
 ```
 
-함수가 함수를 반환하는 예제입니다. _JavaScript에서는 함수를 변수처럼 취급하기 때문에 함수를 반환할 수 있습니다._
+이번 예제에서, 다른 함수로부터 함수를 반환합니다.
+JavaScript에서 함수들은 값들로서 다루어질 수 있기 때문에 함수를 반환할 수 있습니다.
 
-> **참고:** 함수를 반환하는 함수를 **고차 함수**라고 부릅니다.
+> [!NOTE]
+> 함수를 반환하거나 다른 함수들을 전달인자로서 사용하는 함수를 "고차 함수"라고 합니다.
 
-다시 예제로 돌아갑시다. `sayHello` 함수를 호출했을 때 반환하는 익명함수를 호출하려면 두 가지 방법이 있습니다.
+## 같이 보기
 
-### 1- 변수 사용
+- 위키피디아의 [일급 함수](https://en.wikipedia.org/wiki/First-class_function)
+- [MDN Web Docs 용어 사전](/ko/docs/Glossary)
 
-```js
-const sayHello = function() {
-   return function() {
-      console.log("Hello!");
-   }
-}
-const myFunc = sayHello();
-myFunc();
-```
-
-이렇게 하면 `Hello!` 메시지가 출력됩니다.
-
-> **참고:** 만약에 `sayHello` 함수를 직접 호출하면, **반환된 함수를 호출하지않고** 함수 자체를 반환합니다. 그러므로 반환된 함수를 다른 변수에 저장하여 사용해야합니다.
-
-### 2- 이중 괄호 사용
-
-```js
-function sayHello() {
-   return function() {
-      console.log("Hello!");
-   }
-}
-sayHello()();
-```
-
-이중 괄호 `()()`를 사용해 반환한 함수도 호출하고 있습니다.
-
-## 더 배우기
-
-### 일반 지식
-
-- 위키백과 [일급 객체](https://ko.wikipedia.org/wiki/%EC%9D%BC%EA%B8%89_%EA%B0%9D%EC%B2%B4)
+  - {{glossary("Callback function", "콜백 함수")}}
+  - {{glossary("Function", "함수")}}
+  - {{glossary("Variable", "변수")}}

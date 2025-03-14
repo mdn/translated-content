@@ -1,13 +1,6 @@
 ---
 title: text-transform
 slug: Web/CSS/text-transform
-tags:
-  - CSS
-  - Layout
-  - Propiedad CSS
-  - Referencia
-  - Texto
-translation_of: Web/CSS/text-transform
 ---
 
 {{CSSRef}}
@@ -30,7 +23,7 @@ Por otro lado, algunas reglas de mapeo específicas no son tomada en cuenta por 
 
 El idioma es definido por el atributo HTML `lang` o el atributo `xml:lang`.
 
-El soporte para estos casos específicos varía de un navegador a otro, véase la [tabla de compatibilidad de navegadores](#Compatibilidad_de_navegadores).
+El soporte para estos casos específicos varía de un navegador a otro, véase la [tabla de compatibilidad de navegadores](#compatibilidad_de_navegadores).
 
 {{cssinfo}}
 
@@ -56,7 +49,8 @@ text-transform: unset;
 
   - : Es una palabra clave que fuerza a que la primera _letra_ de cada palabra sea convertida a mayúscula. EL resto de caracteres no es modificado; eso significa que mantienen su tamaño original, como haya sido escrito en el texto del elemento. Una letra es cualquier caracter Unicode que sea parte de la categoría general de Letras o Números {{experimental_inline}}: esto excluye cualquier signo de puntuación o símbolos al principio de la palabra.
 
-    > **Nota:** Los autores no deben esperar que `capitalize` siga las convenciones de título específicas del lenguaje (como lo es en inglés el excluir artículos).
+    > [!NOTE]
+    > Los autores no deben esperar que `capitalize` siga las convenciones de título específicas del lenguaje (como lo es en inglés el excluir artículos).
 
 - `uppercase`
   - : Es una palabra clave que fuerza a todos los caracteres a ser convertidos a mayúsculas.
@@ -76,11 +70,17 @@ text-transform: unset;
 ### `none`
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
 </p>
-<p>text-transform: none
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+<p>
+  text-transform: none
+  <strong
+    ><span
+      >Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span
+    ></strong
+  >
 </p>
 ```
 
@@ -88,7 +88,9 @@ text-transform: unset;
 span {
   text-transform: none;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 Esto muestra ninguna transformación de texto.
@@ -98,11 +100,17 @@ Esto muestra ninguna transformación de texto.
 ### `capitalize` (General)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
 </p>
-<p>text-transform: capitalize
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+<p>
+  text-transform: capitalize
+  <strong
+    ><span
+      >Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span
+    ></strong
+  >
 </p>
 ```
 
@@ -110,7 +118,9 @@ Esto muestra ninguna transformación de texto.
 span {
   text-transform: capitalize;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 Esto muestra un texto con la primera letra de cada palabra en mayúsculas.
@@ -120,11 +130,21 @@ Esto muestra un texto con la primera letra de cada palabra en mayúsculas.
 ### `capitalize` (Puntuación)
 
 ```html
-<p>Initial String
-  <strong>(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</strong>
+<p>
+  Initial String
+  <strong
+    >(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize?
+    ?¡transform!</strong
+  >
 </p>
-<p>text-transform: capitalize
-  <strong><span>(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</span></strong>
+<p>
+  text-transform: capitalize
+  <strong
+    ><span
+      >(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize?
+      ?¡transform!</span
+    ></strong
+  >
 </p>
 ```
 
@@ -132,7 +152,9 @@ Esto muestra un texto con la primera letra de cada palabra en mayúsculas.
 span {
   text-transform: capitalize;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 Esto muestra cómo la puntuación inicial de una palabra es ignorada. La palabra clave busca la primera letra, que es el primer caracter Unicode que forma parte de la categoría general de Letras o Números.
@@ -142,10 +164,12 @@ Esto muestra cómo la puntuación inicial de una palabra es ignorada. La palabra
 ### `capitalize` (Símbolos)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong>ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkl</strong>
 </p>
-<p>text-transform: capitalize
+<p>
+  text-transform: capitalize
   <strong><span>ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkl</span></strong>
 </p>
 ```
@@ -154,7 +178,9 @@ Esto muestra cómo la puntuación inicial de una palabra es ignorada. La palabra
 span {
   text-transform: capitalize;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 Esto muestra cómo los símbolos iniciales son ignorados. La palabra clave busca la primera letra, que es primera caracter Unicode que forma parte de la categoría general de Letras o Números.
@@ -164,11 +190,17 @@ Esto muestra cómo los símbolos iniciales son ignorados. La palabra clave busca
 ### `capitalize` (Dígrafo ij holandés)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong lang="nl">The Dutch word: "ijsland" starts with a digraph.</strong>
 </p>
-<p>text-transform: capitalize
-  <strong><span lang="nl">The Dutch word: "ijsland" starts with a digraph.</span></strong>
+<p>
+  text-transform: capitalize
+  <strong
+    ><span lang="nl"
+      >The Dutch word: "ijsland" starts with a digraph.</span
+    ></strong
+  >
 </p>
 ```
 
@@ -176,7 +208,9 @@ Esto muestra cómo los símbolos iniciales son ignorados. La palabra clave busca
 span {
   text-transform: capitalize;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 Esto muestra cómo el dígrafo holandés _ij_ debe ser manejado como una sola letra.
@@ -186,11 +220,17 @@ Esto muestra cómo el dígrafo holandés _ij_ debe ser manejado como una sola le
 ### `uppercase` (General)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
 </p>
-<p>text-transform: uppercase
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+<p>
+  text-transform: uppercase
+  <strong
+    ><span
+      >Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span
+    ></strong
+  >
 </p>
 ```
 
@@ -198,7 +238,9 @@ Esto muestra cómo el dígrafo holandés _ij_ debe ser manejado como una sola le
 span {
   text-transform: uppercase;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 Esto muestra la transformación de texto a mayúsculas.
@@ -208,10 +250,12 @@ Esto muestra la transformación de texto a mayúsculas.
 ### `uppercase` (Vocales griegas)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong>Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</strong>
 </p>
-<p>text-transform: uppercase
+<p>
+  text-transform: uppercase
   <strong><span>Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</span></strong>
 </p>
 ```
@@ -220,7 +264,9 @@ Esto muestra la transformación de texto a mayúsculas.
 span {
   text-transform: uppercase;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 Esto muestra cómo las vocales griegas, excepto la disyuntiva _eta_ no deben tener acento, y el acento de la primera vocal en un par de vocales se convierte a diéresis en la segunda vocal.
@@ -230,11 +276,17 @@ Esto muestra cómo las vocales griegas, excepto la disyuntiva _eta_ no deben ten
 ### `lowercase` (General)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
 </p>
-<p>text-transform: lowercase
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+<p>
+  text-transform: lowercase
+  <strong
+    ><span
+      >Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span
+    ></strong
+  >
 </p>
 ```
 
@@ -242,7 +294,9 @@ Esto muestra cómo las vocales griegas, excepto la disyuntiva _eta_ no deben ten
 span {
   text-transform: lowercase;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 Esto muestra la transformación de texto a minúsculas.
@@ -252,11 +306,17 @@ Esto muestra la transformación de texto a minúsculas.
 ### `lowercase` (Σ griega)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong>Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.</strong>
 </p>
-<p>text-transform: lowercase
-  <strong><span>Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.</span></strong>
+<p>
+  text-transform: lowercase
+  <strong
+    ><span
+      >Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.</span
+    ></strong
+  >
 </p>
 ```
 
@@ -264,7 +324,9 @@ Esto muestra la transformación de texto a minúsculas.
 span {
   text-transform: lowercase;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 Esto muestra cómo el caracter griego sigma (`Σ`) es trsnformado a sigma minúscula regular (`σ`) o a la variante de final de palabra (`ς`), conforme al contexto.
@@ -274,11 +336,19 @@ Esto muestra cómo el caracter griego sigma (`Σ`) es trsnformado a sigma minús
 ### `full-width` (General)
 
 ```html
-<p>Initial String
-  <strong>0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</strong>
+<p>
+  Initial String
+  <strong
+    >0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</strong
+  >
 </p>
-<p>text-transform: full-width
-  <strong><span>0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</span></strong>
+<p>
+  text-transform: full-width
+  <strong
+    ><span
+      >0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</span
+    ></strong
+  >
 </p>
 ```
 
@@ -286,7 +356,10 @@ Esto muestra cómo el caracter griego sigma (`Σ`) es trsnformado a sigma minús
 span {
   text-transform: full-width;
 }
-strong { width: 100%; float: right; }
+strong {
+  width: 100%;
+  float: right;
+}
 ```
 
 Algunos caracteres existen en dos formas, de anchura normal y de anchura completa, con diferentes puntos de código en Unicode. La versión de anchura completa es usada para facilitar la mezcla con caracteres ideográficos asiáticos.
@@ -297,16 +370,16 @@ Algunos caracteres existen en dos formas, de anchura normal y de anchura complet
 
 Usuarios con discapacidades cognitivas como dislexia pueden encontrar dificultad al leer textos largos cuando se aplica la propiedad `text-transform` con el valor de `uppercase`.
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-transform")}}
+{{Compat}}
 
 ## Véase también
 

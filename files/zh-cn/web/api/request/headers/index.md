@@ -7,22 +7,16 @@ slug: Web/API/Request/headers
 
 {{domxref("Request")}}接口的只读属性 **`headers`** 包含与当前请求关联的{{domxref("Headers")}}对象。
 
-## 语法
-
-```
-var myHeaders = request.headers;
-```
-
-### 值
+## 值
 
 一个 {{domxref("Headers")}} 对象。
 
-## 例子
+## 示例
 
 在下面的代码段中，我们使用 {{domxref("Request.Request()")}} 构造函数（为获取与脚本处于同一目录的图片文件）创建新请求，然后将请求 headers 保存到变量中：
 
 ```js
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 var myHeaders = myRequest.headers; // Headers {}
 ```
 
@@ -30,16 +24,18 @@ var myHeaders = myRequest.headers; // Headers {}
 
 ```js
 var myHeaders = new Headers();
-myHeaders.append('Content-Type', 'image/jpeg');
+myHeaders.append("Content-Type", "image/jpeg");
 
-var myInit = { method: 'GET',
-                   headers: myHeaders,
-                   mode: 'cors',
-                   cache: 'default' };
+var myInit = {
+  method: "GET",
+  headers: myHeaders,
+  mode: "cors",
+  cache: "default",
+};
 
-var myRequest = new Request('flowers.jpg',myInit);
+var myRequest = new Request("flowers.jpg", myInit);
 
-myContentType = myRequest.headers.get('Content-Type'); // returns 'image/jpeg'
+myContentType = myRequest.headers.get("Content-Type"); // returns 'image/jpeg'
 ```
 
 ## 规范
@@ -50,8 +46,8 @@ myContentType = myRequest.headers.get('Content-Type'); // returns 'image/jpeg'
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

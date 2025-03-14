@@ -1,19 +1,16 @@
 ---
-title: XMLHttpRequest.response
+title: "XMLHttpRequest: response プロパティ"
+short-title: response
 slug: Web/API/XMLHttpRequest/response
+l10n:
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
-{{domxref("XMLHttpRequest")}} の **`response`** プロパティは、そのリクエストの本文の内容を、 {{jsxref("ArrayBuffer")}}, {{domxref("Blob")}}, {{domxref("Document")}}, JavaScript の {{jsxref("Object")}}, {{domxref("DOMString")}} など、リクエストの {{domxref("XMLHttpRequest.responseType", "responseType")}} プロパティの値に応じた形で返します。
+{{domxref("XMLHttpRequest")}} の **`response`** プロパティは、そのリクエストの本体の内容を、 {{jsxref("ArrayBuffer")}}、{{domxref("Blob")}}、{{domxref("Document")}}、JavaScript の {{jsxref("Object")}}、文字列など、リクエストの {{domxref("XMLHttpRequest.responseType", "responseType")}} プロパティの値に応じた形で返します。
 
-## 構文
-
-```js
-var body = XMLHttpRequest.response;
-```
-
-### 値
+## 値
 
 {{domxref("XMLHttpRequest.responseType", "responseType")}} の値に基づく適切なオブジェクト。 {{domxref("XMLHttpRequest.open", "open()")}} を呼び出してリクエストを初期化した後や、 {{domxref("XMLHttpRequest.send", "send()")}} を呼び出してリクエストをサーバーに送信する前に、 `responseType` の値を設定することで、特定の形式でデータを提供するようにリクエストができます。
 
@@ -27,19 +24,19 @@ var body = XMLHttpRequest.response;
 {{domxref("XMLHttpRequest.responseType", "responseType")}} を上書きするものがないため）。
 
 ```js
-var url = 'somePage.html'; //A local page
+const url = "somePage.html"; //A local page
 
 function load(url, callback) {
-  var xhr = new XMLHttpRequest();
+  const xhr = new XMLHttpRequest();
 
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = () => {
     if (xhr.readyState === 4) {
       callback(xhr.response);
     }
-  }
+  };
 
-  xhr.open('GET', url, true);
-  xhr.send('');
+  xhr.open("GET", url, true);
+  xhr.send("");
 }
 ```
 
@@ -53,5 +50,5 @@ function load(url, callback) {
 
 ## 関連情報
 
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - テキストと HTML/XML データの取得: {{domxref("XMLHttpRequest.responseText")}} および {{domxref("XMLHttpRequest.responseXML")}}

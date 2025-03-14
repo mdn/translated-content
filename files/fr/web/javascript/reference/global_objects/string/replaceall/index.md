@@ -1,8 +1,6 @@
 ---
 title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
-translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/replaceAll
 ---
 
 {{JSRef}}
@@ -11,7 +9,19 @@ La méthode **`replaceAll()`** retourne une nouvelle chaîne de caractères dans
 
 La chaîne de caractères initiale restera inchangée.
 
-{{EmbedInteractiveExample("pages/js/string-replaceall.html")}}
+{{InteractiveExample("JavaScript Demo: String.replaceAll()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+console.log(paragraph.replaceAll("dog", "monkey"));
+// Expected output: "I think Ruth's monkey is cuter than your monkey!"
+
+// Global flag required when calling replaceAll with regex
+const regex = /Dog/gi;
+console.log(paragraph.replaceAll(regex, "ferret"));
+// Expected output: "I think Ruth's ferret is cuter than your ferret!"
+```
 
 ## Syntaxe
 
@@ -19,7 +29,8 @@ La chaîne de caractères initiale restera inchangée.
 const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 ```
 
-> **Note :** Quand on utilise une expression rationnelle, il est nécessaire d'utiliser le marqueur global ("g"); autrement, l'exception `TypeError`: _"replaceAll must be called with a global RegExp"_ sera levée.
+> [!NOTE]
+> Quand on utilise une expression rationnelle, il est nécessaire d'utiliser le marqueur global ("g"); autrement, l'exception `TypeError`: _"replaceAll must be called with a global RegExp"_ sera levée.
 
 ### Paramètres
 
@@ -113,7 +124,7 @@ Le nombre d'arguments exact dépend du premier argument de `replaceAll()` : si c
 ### Utiliser replaceAll()
 
 ```js
-'aabbcc'.replaceAll('b', '.');
+"aabbcc".replaceAll("b", ".");
 // 'aa..cc'
 ```
 
@@ -129,8 +140,8 @@ TypeError: replaceAll must be called with a global RegExp
 L'exemple suivant, utilisant le marqueur `g`, fonctionnera :
 
 ```js example-good
-'aabbcc'.replaceAll(/b/g, '.');
-"aa..cc"
+"aabbcc".replaceAll(/b/g, ".");
+("aa..cc");
 ```
 
 ## Spécifications

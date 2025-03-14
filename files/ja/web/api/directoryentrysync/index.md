@@ -2,14 +2,15 @@
 title: DirectoryEntrySync
 slug: Web/API/DirectoryEntrySync
 l10n:
-  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
+  sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
 {{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 `DirectoryEntrySync` インターフェイスは、ファイルシステム内のディレクトリーを表します。ディレクトリー内のファイルの作成、読み込み、検索、および再帰的に削除するためのメソッドが含まれています。
 
-> **メモ:** このインターフェイスは非推奨で、標準路線ではなくなりました。
+> [!NOTE]
+> このインターフェイスは非推奨で、標準路線ではなくなりました。
 > _もう使用しないでください。_ 代わりに[ファイルおよびディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)を使用してください。
 
 ## 基本的なコンセプト
@@ -21,13 +22,13 @@ l10n:
 `getFile()` メソッドは、ファイルシステム内のファイルを表す `FileEntrySync` を返します。以下は、ルートディレクトリーに `logs.txt` という名前の空のファイルを作成します。
 
 ```js
-const fileEntry = fs.root.getFile('logs.txt', {create: true});
+const fileEntry = fs.root.getFile("logs.txt", { create: true });
 ```
 
 `getDirectory()` メソッドは、ファイルシステム内のファイルを表す `DirectoryEntrySync` を返します。以下は、ルートディレクトリーに `project_dir` という新しいディレクトリーを作成します。
 
 ```js
-const dirEntry = fs.root.getDirectory('project_dir', {create: true});
+const dirEntry = fs.root.getDirectory("project_dir", { create: true });
 ```
 
 ## メソッド概要
@@ -45,9 +46,8 @@ const dirEntry = fs.root.getDirectory('project_dir', {create: true});
 
 #### 構文
 
-```
-DirectoryReaderSync createReader (
-) raises (FileException);
+```js
+createReader();
 ```
 
 ##### 返値
@@ -63,10 +63,10 @@ DirectoryReaderSync createReader (
 
 このメソッドは、次のコードで {{domxref("DOMException")}} が発生する場合があります。
 
-| 例外            | 説明                                                                                            |
-| --------------- | ----------------------------------------------------------------------------------------------- |
+| 例外            | 説明                                                                                              |
+| --------------- | ------------------------------------------------------------------------------------------------- |
 | `NOT_FOUND_ERR` | ディレクトリーが存在しません。                                                                    |
-| `SECURITY_ERR`  | ブラウザはメタデータを検索するのは安全ではないと判断しました。\[ TODO: 理由を説明してください ] |
+| `SECURITY_ERR`  | ブラウザーはメタデータを検索するのは安全ではないと判断しました。\[ TODO: 理由を説明してください ] |
 
 ### getFile()
 
@@ -74,7 +74,7 @@ DirectoryReaderSync createReader (
 
 #### 構文
 
-```
+```js-nolint
 getFile(path)
 getFile(path, options)
 ```
@@ -142,11 +142,11 @@ getFile(path, options)
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------- |
 | `ENCODING_ERR`                | 指定されたパスは無効です。                                                                                    |
 | `NOT_FOUND_ERR`               | パスは構造的には正しいのですが、存在しないリソースを参照しています。                                          |
-| `NO_MODIFICATION_ALLOWED_ERR` | これはパーミッションの問題です。対象のディレクトリーまたはファイルは書き込み可能ではありません。                |
+| `NO_MODIFICATION_ALLOWED_ERR` | これはパーミッションの問題です。対象のディレクトリーまたはファイルは書き込み可能ではありません。              |
 | `PATH_EXISTS_ERR`             | ファイルは既に存在しています。同じパスで別のファイルを作成することはできません。                              |
 | `QUOTA_EXCEEDED_ERROR`        | この操作により、アプリケーションがストレージのクォータを超えてしまいます。                                    |
 | `SECURITY_ERR`                | アプリケーションは path で参照される要素にアクセスする権限を持っていません。\[ todo: 理由を説明してください ] |
-| `TYPE_MISMATCH_ERR`           | 指定されたパスは存在しますが、ディレクトリーではありません。                                                    |
+| `TYPE_MISMATCH_ERR`           | 指定されたパスは存在しますが、ディレクトリーではありません。                                                  |
 
 ### getDirectory()
 
@@ -154,7 +154,7 @@ getFile(path, options)
 
 #### 構文
 
-```
+```js-nolint
 getDirectory(path)
 getDirectory(path, options)
 ```
@@ -224,11 +224,11 @@ getDirectory(path, options)
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------- |
 | `ENCODING_ERR`                | 指定されたパスは無効です。                                                                                    |
 | `NOT_FOUND_ERR`               | パスは構造的には正しいのですが、存在しないリソースを参照しています。                                          |
-| `NO_MODIFICATION_ALLOWED_ERR` | これはパーミッションの問題です。対象のディレクトリーまたはファイルは書き込み可能ではありません。                |
+| `NO_MODIFICATION_ALLOWED_ERR` | これはパーミッションの問題です。対象のディレクトリーまたはファイルは書き込み可能ではありません。              |
 | `PATH_EXISTS_ERR`             | ファイルは既に存在しています。同じパスで別のファイルを作成することはできません。                              |
 | `QUOTA_EXCEEDED_ERROR`        | この操作により、アプリケーションがストレージのクォータを超えてしまいます。                                    |
 | `SECURITY_ERR`                | アプリケーションは path で参照される要素にアクセスする権限を持っていません。\[ todo: 理由を説明してください ] |
-| `TYPE_MISMATCH_ERR`           | 指定されたパスは存在しますが、ディレクトリーではありません。                                                    |
+| `TYPE_MISMATCH_ERR`           | 指定されたパスは存在しますが、ディレクトリーではありません。                                                  |
 
 ### removeRecursively()
 
@@ -238,7 +238,7 @@ getDirectory(path, options)
 
 #### 構文
 
-```
+```js-nolint
 removeRecursively()
 ```
 

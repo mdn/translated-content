@@ -3,7 +3,10 @@ title: 使用 SMIL 的 SVG 动画
 slug: Web/SVG/SVG_animation_with_SMIL
 ---
 
-> **警告：** 虽然 Chrome 45 弃用了 SMIL 而偏向于 CSS 动画和 Web 动画，但之后 Chrome 开发者[中止了](https://groups.google.com/a/chromium.org/d/msg/blink-dev/5o0yiO440LM/YGEJBsjUAwAJ)对 SMIL 的弃用。
+{{SVGRef}}
+
+> [!WARNING]
+> 虽然 Chrome 45 弃用了 SMIL 而偏向于 CSS 动画和 Web 动画，但之后 Chrome 开发者[中止了](https://groups.google.com/a/chromium.org/d/msg/blink-dev/5o0yiO440LM/YGEJBsjUAwAJ)对 SMIL 的弃用。
 
 Firefox 4 利用 [Synchronized Multimedia Integration Language](https://www.w3.org/TR/REC-smil/)（SMIL）引入了对 [SVG](/zh-CN/docs/Web/SVG) 动画的支持。SMIL 允许你：
 
@@ -35,8 +38,11 @@ Firefox 4 利用 [Synchronized Multimedia Integration Language](https://www.w3.o
   <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
   <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">
     <animate
-       attributeName="cx" from="0" to="500"
-       dur="5s" repeatCount="indefinite" />
+      attributeName="cx"
+      from="0"
+      to="500"
+      dur="5s"
+      repeatCount="indefinite" />
   </circle>
 </svg>
 ```
@@ -51,16 +57,22 @@ Firefox 4 利用 [Synchronized Multimedia Integration Language](https://www.w3.o
 <svg width="300" height="100">
   <title>SVG SMIL Animate with transform</title>
   <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
-  <rect x="0" y="50" width="15" height="34" fill="blue" stroke="black" stroke-width="1">
+  <rect
+    x="0"
+    y="50"
+    width="15"
+    height="34"
+    fill="blue"
+    stroke="black"
+    stroke-width="1">
     <animateTransform
-       attributeName="transform"
-       begin="0s"
-       dur="20s"
-       type="rotate"
-       from="0 60 60"
-       to="360 100 60"
-       repeatCount="indefinite"
-    />
+      attributeName="transform"
+      begin="0s"
+      dur="20s"
+      type="rotate"
+      from="0 60 60"
+      to="360 100 60"
+      repeatCount="indefinite" />
   </rect>
 </svg>
 ```
@@ -80,16 +92,14 @@ Firefox 4 利用 [Synchronized Multimedia Integration Language](https://www.w3.o
   <title>SVG SMIL Animate with Path</title>
   <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
   <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">
-    <animateMotion
-       path="M 0 0 H 300 Z"
-       dur="3s" repeatCount="indefinite" />
+    <animateMotion path="M 0 0 H 300 Z" dur="3s" repeatCount="indefinite" />
   </circle>
 </svg>
 ```
 
 {{ EmbedLiveSample('示例 1：线性运动', '100%', 120) }}
 
-[查看示例](https://media.prod.mdn.mozit.cloud/samples/svg/svganimdemo1.html)
+[查看示例](https://mdn.dev/archives/media/samples/svg/svganimdemo1.html)
 
 ### 示例 2：曲线运动
 
@@ -99,10 +109,19 @@ Firefox 4 利用 [Synchronized Multimedia Integration Language](https://www.w3.o
 <svg width="300" height="100">
   <title>SVG SMIL Animate with Path</title>
   <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
-  <rect x="0" y="0" width="20" height="20" fill="blue" stroke="black" stroke-width="1">
+  <rect
+    x="0"
+    y="0"
+    width="20"
+    height="20"
+    fill="blue"
+    stroke="black"
+    stroke-width="1">
     <animateMotion
-       path="M 250,80 H 50 Q 30,80 30,50 Q 30,20 50,20 H 250 Q 280,20,280,50 Q 280,80,250,80Z"
-       dur="3s" repeatCount="indefinite" rotate="auto" />
+      path="M 250,80 H 50 Q 30,80 30,50 Q 30,20 50,20 H 250 Q 280,20,280,50 Q 280,80,250,80Z"
+      dur="3s"
+      repeatCount="indefinite"
+      rotate="auto" />
   </rect>
 </svg>
 ```

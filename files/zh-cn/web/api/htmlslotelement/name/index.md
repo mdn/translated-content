@@ -23,10 +23,16 @@ htmlSlotElement.name = name
 下面的片段来自 [slotchange example](https://github.com/mdn/web-components-examples/tree/master/slotchange) ([see it live also](https://mdn.github.io/web-components-examples/slotchange/)).
 
 ```js
-let slots = this.shadowRoot.querySelectorAll('slot');
-slots[1].addEventListener('slotchange', function(e) {
+let slots = this.shadowRoot.querySelectorAll("slot");
+slots[1].addEventListener("slotchange", function (e) {
   let nodes = slots[1].assignedNodes();
-  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
+  console.log(
+    'Element in Slot "' +
+      slots[1].name +
+      '" changed to "' +
+      nodes[0].outerHTML +
+      '".',
+  );
 });
 ```
 

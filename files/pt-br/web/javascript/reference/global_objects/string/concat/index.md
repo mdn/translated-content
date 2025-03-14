@@ -30,7 +30,7 @@ Se o argumento passado não for do tipo string, o mesmo será convertido em uma 
 
 ## Performance
 
-É extremamente recomendado o uso dos [operadores de atribuição](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators) (`+`, `+=`) em detrimento do método `concat()`.
+É extremamente recomendado o uso dos [operadores de atribuição](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators) (`+`, `+=`) em detrimento do método `concat()`.
 
 ## Exemplos
 
@@ -39,23 +39,19 @@ Se o argumento passado não for do tipo string, o mesmo será convertido em uma 
 O exemplo a seguir concatena uma string à outra string originando uma terceira string.
 
 ```js
-var hello = 'Olá, ';
-console.log(hello.concat('Kevin', ' tenha um bom dia.'));
+var hello = "Olá, ";
+console.log(hello.concat("Kevin", " tenha um bom dia."));
 
 // retorna 'Olá, Kevin tenha um bom dia.'
 ```
 
 ## Especificações
 
-| Especificação                                                                                            | Status                   | Comentários                                        |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                 | {{Spec2('ES3')}}     | Definição inicial. Implementado no JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.6', 'String.prototype.concat')}}                 | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-string.prototype.concat', 'String.prototype.concat')}} | {{Spec2('ES6')}}     |                                                    |
+{{Specifications}}
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.concat")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,14 +1,6 @@
 ---
 title: <display-internal>
 slug: Web/CSS/display-internal
-tags:
-  - CSS
-  - CSS 데이터 타입
-  - CSS 디스플레이
-  - display-internal
-  - 자료형
-  - 참조
-translation_of: Web/CSS/display-internal
 ---
 
 {{CSSRef}}
@@ -56,11 +48,11 @@ translation_of: Web/CSS/display-internal
 <main>
   <div>
     <label for="name">Name</label>
-    <input type="text" id="name" name="name">
+    <input type="text" id="name" name="name" />
   </div>
   <div>
     <label for="age">Age</label>
-    <input type="text" id="age" name="age">
+    <input type="text" id="age" name="age" />
   </div>
 </main>
 ```
@@ -76,7 +68,8 @@ div {
   display: table-row;
 }
 
-label, input {
+label,
+input {
   display: table-cell;
   margin: 5px;
 }
@@ -86,11 +79,9 @@ label, input {
 
 {{EmbedLiveSample('CSS_tables_example', '100%', 100)}}
 
-## 사양
+## 명세서
 
-| 사양                                                                                                     | 상태                             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-internal', 'display-internal')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## 브라우저 호환성
 

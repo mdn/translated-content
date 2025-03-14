@@ -1,21 +1,13 @@
 ---
-title: ':root'
+title: :root
 slug: Web/CSS/:root
-tags:
-  - CSS
-  - CSS Pseudo-class
-  - Layout
-  - Reference
-  - Web
-  - Псевдоклассы
-translation_of: Web/CSS/:root
 ---
 
 {{CSSRef}}
 
 ## Описание
 
-CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:root` находит корневой элемент дерева документа. Применимо к HTML, `:root` находит элемент {{HTMLElement("html")}} и идентичен селектору по тегу `html`, но его [специфичность](/ru/docs/Web/CSS/Specificity) выше.
+CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:root` находит корневой элемент дерева документа. Применимо к HTML, `:root` находит элемент {{HTMLElement("html")}} и идентичен селектору по тегу `html`, но его [специфичность](/ru/docs/Web/CSS/Specificity) выше.
 
 ## Пример
 
@@ -32,6 +24,6 @@ CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:root`
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

@@ -1,11 +1,9 @@
 ---
 title: DOM
 slug: Glossary/DOM
-tags:
-  - Глоссарий
-translation_of: Glossary/DOM
-original_slug: Глоссарий/DOM
 ---
+
+{{GlossarySidebar}}
 
 DOM (Document Object Model) это {{glossary("API")}} который представляет и взаимодействует со всеми {{glossary("HTML")}} или {{glossary("XML")}} документами. DOM это модель документа загруженная в {{glossary("browser","браузер")}} и представляющая документ как дерево, где каждый узел представляет часть документа (например {{glossary("element","элемент")}}, строка текста, или комментарий).
 
@@ -15,11 +13,7 @@ DOM не был определён изначально — он пришёл к
 
 ## Узнать больше
 
-### Общие знания
-
-- {{interwiki("wikipedia", "Document_Object_Model", "Document Object Model")}} на Википедии.
-
 ### Техническая информация
 
-- [Документация DOM на MDN](/ru/docs/DOM)
-- [Различные спецификации DOM на сайте W3C](http://www.w3.org/DOM/DOMTR)
+- [Документация DOM на MDN](/ru/docs/Web/API/Document_Object_Model)
+- [Различные спецификации DOM на сайте W3C](https://www.w3.org/DOM/DOMTR)

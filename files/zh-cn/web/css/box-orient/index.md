@@ -5,7 +5,7 @@ slug: Web/CSS/box-orient
 
 {{CSSRef}}{{Non-standard_header}}
 
-这是原始的 css 弹性布局草案的一个属性，已经被最新的标准替代。查看 [flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) 了解现行标准。
+这是原始的 css 弹性布局草案的一个属性，已经被最新的标准替代。查看 [flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) 了解现行标准。
 
 **`box-orient`** [CSS](/zh-CN/docs/Web/CSS) 属性用来设置一个元素是水平还是垂直布局其内容。
 
@@ -39,11 +39,11 @@ box-orient: unset;
 
 内联轴和块轴取决于写入模式的关键字，在英语中，分别对应水平和垂直方向。
 
-## 规范
+## 形式定义
 
 {{CSSInfo}}
 
-## 正式语法
+## 形式语法
 
 {{CSSSyntax}}
 
@@ -66,14 +66,14 @@ box-orient: unset;
 
 ```css
 div.example {
-  display: -moz-box;                /* Mozilla */
-  display: -webkit-box;             /* WebKit */
-  display: box;                     /* As specified */
+  display: -moz-box; /* Mozilla */
+  display: -webkit-box; /* WebKit */
+  display: box; /* As specified */
 
   /* Children should be oriented vertically */
-  -moz-box-orient: horizontal;      /* Mozilla */
-  -webkit-box-orient: horizontal;   /* WebKit */
-  box-orient: horizontal;           /* As specified */
+  -moz-box-orient: horizontal; /* Mozilla */
+  -webkit-box-orient: horizontal; /* WebKit */
+  box-orient: horizontal; /* As specified */
 }
 ```
 

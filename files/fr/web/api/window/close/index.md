@@ -1,9 +1,6 @@
 ---
 title: window.close
 slug: Web/API/Window/close
-tags:
-  - Référence_du_DOM_Gecko
-translation_of: Web/API/Window/close
 ---
 
 {{ ApiRef() }}
@@ -22,7 +19,7 @@ window.close();
 
 Lorsque cette méthode est appelée, la fenêtre référencée est fermée.
 
-Cette méthode est uniquement autorisée à être appelée pour des fenêtres qui ont été ouvertes par un script à l'aide de la méthode [window.open](/fr/DOM/window.open). Si la fenêtre n'a pas été ouverte par un script, l'erreur suivante apparaît dans la console JavaScript&nbsp;: `Scripts may not close windows that were not opened by script.`
+Cette méthode est uniquement autorisée à être appelée pour des fenêtres qui ont été ouvertes par un script à l'aide de la méthode [window.open](/fr/docs/Web/API/Window/open). Si la fenêtre n'a pas été ouverte par un script, l'erreur suivante apparaît dans la console JavaScript&nbsp;: `Scripts may not close windows that were not opened by script.`
 
 #### Exemples
 
@@ -30,17 +27,15 @@ Cette méthode est uniquement autorisée à être appelée pour des fenêtres qu
 
 ```html
 <script type="text/javascript">
-// Variable globale pour stocker une référence vers la fenêtre ouverte
-var fenetreOuverte;
+  // Variable globale pour stocker une référence vers la fenêtre ouverte
+  var fenetreOuverte;
 
-function ouvrirFenetre()
-{
-  fenetreOuverte = window.open('details.html');
-}
-function fermerFenetreOuverte()
-{
-  fenetreOuverte.close();
-}
+  function ouvrirFenetre() {
+    fenetreOuverte = window.open("details.html");
+  }
+  function fermerFenetreOuverte() {
+    fenetreOuverte.close();
+  }
 </script>
 ```
 
@@ -48,10 +43,9 @@ function fermerFenetreOuverte()
 
 ```html
 <script type="text/javascript">
-function fermerFenetreCourante()
-{
-  window.close();
-}
+  function fermerFenetreCourante() {
+    window.close();
+  }
 </script>
 ```
 

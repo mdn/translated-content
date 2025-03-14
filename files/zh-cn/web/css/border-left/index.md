@@ -15,7 +15,8 @@ border-left: medium dashed green;
 
 这三种属性值的缩写需要按照顺序定义数值，也可以省略其中的一个或者两个。
 
-> **备注：** 和 CSS 所有的缩写属性一样，border-left 总是会设置该缩写属性所包含的全部属性值，即使开发者并没有一一指定这些值。CSS 缩写属性会给没有被定义的属性一个默认的属性值。那就意味着下面这个例子......
+> [!NOTE]
+> 和 CSS 所有的缩写属性一样，border-left 总是会设置该缩写属性所包含的全部属性值，即使开发者并没有一一指定这些值。CSS 缩写属性会给没有被定义的属性一个默认的属性值。那就意味着下面这个例子......
 >
 > ```css
 > border-left-style: dotted;
@@ -53,9 +54,7 @@ border-left: medium dashed green;
 ## Example
 
 ```html
-<div>
-  This box has a border on the left side.
-</div>
+<div>This box has a border on the left side.</div>
 ```
 
 ```css

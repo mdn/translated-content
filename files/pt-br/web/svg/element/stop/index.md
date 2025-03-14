@@ -14,9 +14,11 @@ A rampa de cores para utilizar em um gradiente é definido pelo elemento `stop` 
 ## Exemplo
 
 ```html
-<svg width="100%" height="100%" viewBox="0 0 80 40"
-     xmlns="https://www.w3.org/2000/svg">
-
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 80 40"
+  xmlns="https://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="MyGradient">
       <stop offset="5%" stop-color="#F60" />
@@ -25,12 +27,17 @@ A rampa de cores para utilizar em um gradiente é definido pelo elemento `stop` 
   </defs>
 
   <!-- Outline the drawing area in black -->
-  <rect fill="none" stroke="black"
-        x="0.5" y="0.5" width="79" height="39"/>
+  <rect fill="none" stroke="black" x="0.5" y="0.5" width="79" height="39" />
 
   <!-- The rectangle is filled using a linear gradient -->
-  <rect fill="url(#MyGradient)" stroke="black" stroke-width="1"
-        x="10" y="10" width="60" height="20"/>
+  <rect
+    fill="url(#MyGradient)"
+    stroke="black"
+    stroke-width="1"
+    x="10"
+    y="10"
+    width="60"
+    height="20" />
 </svg>
 ```
 
@@ -42,8 +49,8 @@ Resultado:
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/docs/Web/SVG/Attribute#Core) »
-- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Attribute#Presentation) »
+- [Atributos principais](/pt-BR/docs/Web/SVG/Attribute#core) »
+- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Attribute#presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 
@@ -59,7 +66,7 @@ Este elemento implementa a interface do [`SVGStopElement`](/pt-BR/docs/Web/API/S
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.stop")}}
+{{Compat}}
 
 ## Veja também
 

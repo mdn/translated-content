@@ -1,23 +1,16 @@
 ---
 title: VREyeParameters
 slug: Web/API/VREyeParameters
-tags:
-  - API
-  - Experimental
-  - Landing
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
-translation_of: Web/API/VREyeParameters
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 [WebVR API](/ko/docs/Web/API/WebVR_API)의 **`VREyeParameters`** 인터페이스는 시야 정보 필드를 포함하여 특정한 눈에 대한 장면을 정확하게 렌더링 하는 데 필요한 모든 정보를 나타냅니다.
 
 {{domxref("VRDisplay.getEyeParameters()")}} 방법을 통해 액세스 할 수 있습니다.
 
-> **경고:** The values in this interface should not be used to compute view or projection matrices. In order to ensure the widest possible hardware compatibility use the matrices provided by {{domxref("VRFrameData")}}.
+> [!WARNING]
+> The values in this interface should not be used to compute view or projection matrices. In order to ensure the widest possible hardware compatibility use the matrices provided by {{domxref("VRFrameData")}}.
 
 ## 속성
 
@@ -33,20 +26,20 @@ translation_of: Web/API/VREyeParameters
 ## 예제
 
 ```js
-navigator.getVRDisplays().then(function(displays) {
+navigator.getVRDisplays().then(function (displays) {
   // If a display is available, use it to present the scene
   vrDisplay = displays[0];
-  console.log('Display found');
+  console.log("Display found");
   // Starting the presentation when the button is clicked:
   //   It can only be called in response to a user gesture
-  btn.addEventListener('click', function() {
-    vrDisplay.requestPresent([{ source: canvas }]).then(function() {
-      console.log('Presenting to WebVR display');
+  btn.addEventListener("click", function () {
+    vrDisplay.requestPresent([{ source: canvas }]).then(function () {
+      console.log("Presenting to WebVR display");
 
       // Set the canvas size to the size of the vrDisplay viewport
 
-      var leftEye = vrDisplay.getEyeParameters('left');
-      var rightEye = vrDisplay.getEyeParameters('right');
+      var leftEye = vrDisplay.getEyeParameters("left");
+      var rightEye = vrDisplay.getEyeParameters("right");
 
       canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
       canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);
@@ -67,5 +60,4 @@ navigator.getVRDisplays().then(function(displays) {
 
 ## 같이 보기
 
-- [WebVR API homepage](/ko/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/ko/docs/Web/API/WebVR_API)

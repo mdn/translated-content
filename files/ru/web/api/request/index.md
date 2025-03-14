@@ -1,17 +1,6 @@
 ---
 title: Request
 slug: Web/API/Request
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - Interface
-  - NeedsTranslation
-  - Networking
-  - Reference
-  - TopicStub
-  - request
-translation_of: Web/API/Request
 ---
 
 {{APIRef("Fetch")}}
@@ -77,26 +66,27 @@ translation_of: Web/API/Request
 - {{domxref("Body.text()")}}
   - : Returns a promise that resolves with an {{domxref("USVString")}} (text) representation of the request body.
 
-> **Примечание:** The {{domxref("Body")}} functions can be run only once; subsequent calls will resolve with empty strings/ArrayBuffers.
+> [!NOTE]
+> The {{domxref("Body")}} functions can be run only once; subsequent calls will resolve with empty strings/ArrayBuffers.
 
 ## Examples
 
 In the following snippet, we create a new request using the `Request()` constructor (for an image file in the same directory as the script), then return some property values of the request:
 
 ```js
-const request = new Request('https://www.mozilla.org/favicon.ico');
+const request = new Request("https://www.mozilla.org/favicon.ico");
 
 const URL = request.url;
 const method = request.method;
 const credentials = request.credentials;
 ```
 
-You could then fetch this request by passing the `Request` object in as a parameter to a {{domxref("WindowOrWorkerGlobalScope.fetch()")}} call, for example:
+You could then fetch this request by passing the `Request` object in as a parameter to a {{domxref("fetch()")}} call, for example:
 
 ```js
 fetch(request)
-  .then(response => response.blob())
-  .then(blob => {
+  .then((response) => response.blob())
+  .then((blob) => {
     image.src = URL.createObjectURL(blob);
   });
 ```
@@ -104,7 +94,10 @@ fetch(request)
 In the following snippet, we create a new request using the `Request()` constructor with some initial data and body content for an api request which need a body payload:
 
 ```js
-const request = new Request('https://example.com', {method: 'POST', body: '{"foo": "bar"}'});
+const request = new Request("https://example.com", {
+  method: "POST",
+  body: '{"foo": "bar"}',
+});
 
 const URL = request.url;
 const method = request.method;
@@ -112,39 +105,39 @@ const credentials = request.credentials;
 const bodyUsed = request.bodyUsed;
 ```
 
-> **Примечание:** Типом тела может быть только {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} или {{domxref("ReadableStream")}} поэтому, для добавления объекта JSON в полезную нагрузку вам необходимо структурировать этот объект.
+> [!NOTE]
+> Типом тела может быть только {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} или {{domxref("ReadableStream")}} поэтому, для добавления объекта JSON в полезную нагрузку вам необходимо структурировать этот объект.
 
-Вы можете получить этот запрос API, передав объект Request в качестве параметра для вызова {{domxref("WindowOrWorkerGlobalScope.fetch()")}}, например, и получить ответ:
+Вы можете получить этот запрос API, передав объект Request в качестве параметра для вызова {{domxref("fetch()")}}, например, и получить ответ:
 
 ```js
 fetch(request)
-  .then(response => {
+  .then((response) => {
     if (response.status === 200) {
       return response.json();
     } else {
-      throw new Error('Что-то пошло не так на API сервере.');
+      throw new Error("Что-то пошло не так на API сервере.");
     }
   })
-  .then(response => {
+  .then((response) => {
     console.debug(response);
     // ...
-  }).catch(error => {
+  })
+  .catch((error) => {
     console.error(error);
   });
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                    | Status                   | Comment               |
-| ---------------------------------------------------------------- | ------------------------ | --------------------- |
-| {{SpecName('Fetch','#request-class','Request')}} | {{Spec2('Fetch')}} | Начальное определение |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Читай также
 
-- [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/ru/docs/Web/HTTP/CORS)
 - [HTTP](/ru/docs/Web/HTTP)

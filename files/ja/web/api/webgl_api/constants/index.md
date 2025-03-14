@@ -3,23 +3,23 @@ title: WebGL の定数
 slug: Web/API/WebGL_API/Constants
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 [WebGL API](/ja/docs/Web/API/WebGL_API) は、関数に渡されるか、または関数から返される様々な定数を提供しています。すべての定数は {{domxref("GLenum")}} 型です。
 
 標準の WebGL 定数は {{domxref("WebGLRenderingContext")}}, {{domxref("WebGL2RenderingContext")}} オブジェクトに用意されていますが、これは定数を `gl.CONSTANT_NAME` のように利用するためです:
 
 ```js
-var canvas = document.getElementById('myCanvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("myCanvas");
+var gl = canvas.getContext("webgl");
 
 gl.getParameter(gl.LINE_WIDTH);
 ```
 
-一部の定数については、[WebGL 拡張機能](/ja/docs/Web/API/WebGL_API/Using_Extensions)から提供されることもあります。[リスト](#Constants_defined_in_WebGL_extensions)が以下に記載されています。
+一部の定数については、[WebGL 拡張機能](/ja/docs/Web/API/WebGL_API/Using_Extensions)から提供されることもあります。[リスト](#constants_defined_in_webgl_extensions)が以下に記載されています。
 
 ```js
-var debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+var debugInfo = gl.getExtension("WEBGL_debug_renderer_info");
 var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 ```
 
@@ -27,9 +27,9 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 
 ## Table of contents
 
-- [Standard WebGL 1 constants](#Standard_WebGL_1_constants)
-- [Standard WebGL 2 constants](#Additional_constants_defined_WebGL_2)
-- [WebGL extension constants](#Constants_defined_in_WebGL_extensions)
+- [Standard WebGL 1 constants](#standard_webgl_1_constants)
+- [Standard WebGL 2 constants](#additional_constants_defined_webgl_2)
+- [WebGL extension constants](#constants_defined_in_webgl_extensions)
 
 ## Standard WebGL 1 constants
 
@@ -131,8 +131,8 @@ Constants passed to {{domxref("WebGLRenderingContext.getParameter()")}} to speci
 | `STENCIL_BACK_REF`                 | 0x8CA3 |                                                                                                                                                                                              |
 | `STENCIL_BACK_VALUE_MASK`          | 0x8CA4 |                                                                                                                                                                                              |
 | `STENCIL_BACK_WRITEMASK`           | 0x8CA5 |                                                                                                                                                                                              |
-| `VIEWPORT`                         | 0x0BA2 | Returns an {{jsxref("Int32Array")}} with four elements for the current viewport dimensions.                                                                                          |
-| `SCISSOR_BOX`                      | 0x0C10 | Returns an {{jsxref("Int32Array")}} with four elements for the current scissor box dimensions.                                                                                       |
+| `VIEWPORT`                         | 0x0BA2 | Returns an {{jsxref("Int32Array")}} with four elements for the current viewport dimensions.                                                                                                  |
+| `SCISSOR_BOX`                      | 0x0C10 | Returns an {{jsxref("Int32Array")}} with four elements for the current scissor box dimensions.                                                                                               |
 | `COLOR_CLEAR_VALUE`                | 0x0C22 |                                                                                                                                                                                              |
 | `COLOR_WRITEMASK`                  | 0x0C23 |                                                                                                                                                                                              |
 | `UNPACK_ALIGNMENT`                 | 0x0CF5 |                                                                                                                                                                                              |
@@ -243,11 +243,11 @@ Constants passed to {{domxref("WebGLRenderingContext.frontFace()")}}.
 
 Constants passed to {{domxref("WebGLRenderingContext.hint()")}}
 
-| Constant name          | Value  | Description                                                                                                                                    |
-| ---------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `DONT_CARE`            | 0x1100 | There is no preference for this behavior.                                                                                                      |
-| `FASTEST`              | 0x1101 | The most efficient behavior should be used.                                                                                                    |
-| `NICEST`               | 0x1102 | The most correct or the highest quality option should be used.                                                                                 |
+| Constant name          | Value  | Description                                                                                                                 |
+| ---------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------- |
+| `DONT_CARE`            | 0x1100 | There is no preference for this behavior.                                                                                   |
+| `FASTEST`              | 0x1101 | The most efficient behavior should be used.                                                                                 |
+| `NICEST`               | 0x1102 | The most correct or the highest quality option should be used.                                                              |
 | `GENERATE_MIPMAP_HINT` | 0x8192 | Hint for the quality of filtering when generating mipmap images with {{domxref("WebGLRenderingContext.generateMipmap()")}}. |
 
 ### データ型
@@ -963,13 +963,10 @@ Constants passed to {{domxref("WebGLRenderingContext.texParameteri()")}}, {{domx
 | `TIMESTAMP_EXT`              | 0x8E28 | The current time.                                                             |
 | `GPU_DISJOINT_EXT`           | 0x8FBB | A Boolean indicating whether or not the GPU performed any disjoint operation. |
 
-## Specifications
+## 仕様書
 
-| Specification                                                                | Status                   | Comment                       |
-| ---------------------------------------------------------------------------- | ------------------------ | ----------------------------- |
-| {{SpecName('WebGL', "#5.14", "WebGLRenderingContext")}}     | {{Spec2('WebGL')}} | Initial definition            |
-| {{SpecName('WebGL2', "#3.7", "WebGL2RenderingContext")}} | {{Spec2('WebGL2')}} | Defines additional constants. |
+{{Specifications}}
 
-## See also
+## 関連情報
 
 - {{domxref("WebGLRenderingContext")}}

@@ -1,7 +1,6 @@
 ---
 title: 文字列の一部が表示されずに見切れる
 slug: orphaned/Web/Compatibility_FAQ/Cut_Off_Text.html
-original_slug: Web/Compatibility_FAQ/Cut_Off_Text.html
 ---
 
 ## 概要
@@ -11,7 +10,7 @@ original_slug: Web/Compatibility_FAQ/Cut_Off_Text.html
 
 表示画面
 
-![](https://mdn.mozillademos.org/files/9967/0108.png)
+![](0108.png)
 
 ## 要因
 
@@ -46,6 +45,6 @@ original_slug: Web/Compatibility_FAQ/Cut_Off_Text.html
 ## メリット
 
 - 少ない調整で正しく表示を行えるようになります。
-  - 要素内の px 指定の変更のみなので、他ブラウザへの影響がありません。
+  - 要素内の px 指定の変更のみなので、他ブラウザーへの影響がありません。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

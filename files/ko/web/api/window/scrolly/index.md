@@ -1,14 +1,6 @@
 ---
 title: Window.scrollY
 slug: Web/API/Window/scrollY
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Reference
-  - Window
-  - 스크롤
-translation_of: Web/API/Window/scrollY
 ---
 
 {{APIRef("CSSOM View")}}
@@ -18,14 +10,15 @@ translation_of: Web/API/Window/scrollY
 ## 구문
 
 ```js
-var y = window.scrollY
+var y = window.scrollY;
 ```
 
 ### 값
 
 원점으로부터 문서를 수직방향으로 스크롤한 픽셀의 수를 나타내는, 배정밀도 부동소수점 값. 양의 값이 위쪽 스크롤을 의미합니다. 문서를 단일 픽셀보다 높은 정밀도의 장치에서 렌더링한 경우 반환값의 정밀도도 높아져 소숫값을 반환할 수 있습니다. 문서가 위나 아래로 전혀 움직이지 않은 상태면 `0`을 반환합니다.
 
-> **참고:** 정숫값이 필요하면 {{jsxref("Math.round()")}}를 사용해 반올림할 수 있습니다.
+> [!NOTE]
+> 정숫값이 필요하면 {{jsxref("Math.round()")}}를 사용해 반올림할 수 있습니다.
 
 더 기술적인 용어로, `scrollY`는 현재 {{Glossary("viewport", "뷰포트")}} 위쪽 모서리의 Y좌표를 반환하고, 뷰포트가 없으면 0을 반환합니다.
 
@@ -34,7 +27,7 @@ var y = window.scrollY
 ```js
 // make sure and go down to the second page
 if (window.scrollY) {
-  window.scroll(0, 0);  // reset the scroll position to the top left of the document.
+  window.scroll(0, 0); // reset the scroll position to the top left of the document.
 }
 
 window.scrollByPages(1);
@@ -54,10 +47,18 @@ window.pageYOffset === window.scrollY; // 항상 true
 
 ```js
 var supportPageOffset = window.pageXOffset !== undefined;
-var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+var isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
 
-var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
-var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+var x = supportPageOffset
+  ? window.pageXOffset
+  : isCSS1Compat
+    ? document.documentElement.scrollLeft
+    : document.body.scrollLeft;
+var y = supportPageOffset
+  ? window.pageYOffset
+  : isCSS1Compat
+    ? document.documentElement.scrollTop
+    : document.body.scrollTop;
 ```
 
 ## 명세

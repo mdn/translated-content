@@ -1,13 +1,6 @@
 ---
 title: AudioBufferSourceNode
 slug: Web/API/AudioBufferSourceNode
-tags:
-  - API
-  - Buffer
-  - Experimental
-  - Reference
-  - Web Audio API
-translation_of: Web/API/AudioBufferSourceNode
 ---
 
 {{APIRef("Web Audio API")}}
@@ -53,7 +46,7 @@ _Hérite des propriétés de son parent, {{domxref("AudioNode")}}._
 - {{domxref("AudioBufferSourceNode.buffer")}}
   - : {{domxref ("AudioBuffer")}} qui définit la ressource à jouer; lorsqu'il a la valeur NULL, définit un canal unique silencieux (dans lequel chaque échantillon vaut 0.0).
 - {{domxref("AudioBufferSourceNode.detune")}}
-  - : {{domxref("AudioParam")}} de type [k-rate](/fr/docs/DOM/AudioParam#k-rate) représentant le désaccordage de la fréquence exprimé en [cents](http://en.wikipedia.org/wiki/Cent_%28music%29). Cette valeur est composée à partir du `playbackRate` pour déterminer la vitesse à laquelle le son sera jouée. Sa valeur par défaut est `0` (qui correspond à aucun désaccordage), et son rang nominal va de -∞ à ∞.
+  - : {{domxref("AudioParam")}} de type [k-rate](/fr/docs/Web/API/AudioParam#k-rate) représentant le désaccordage de la fréquence exprimé en [cents](http://en.wikipedia.org/wiki/Cent_%28music%29). Cette valeur est composée à partir du `playbackRate` pour déterminer la vitesse à laquelle le son sera jouée. Sa valeur par défaut est `0` (qui correspond à aucun désaccordage), et son rang nominal va de -∞ à ∞.
 - {{domxref("AudioBufferSourceNode.loop")}}
   - : Attribut booléen indiquant si la ressource doit être lue de nouveau lorsque la fin de l'{{domxref ("AudioBuffer")}} est atteinte. Sa valeur par défaut est `false`.
 - {{domxref("AudioBufferSourceNode.loopStart")}} {{optional_inline}}
@@ -75,13 +68,14 @@ _Hérite des méthodes de son parent, {{domxref("AudioNode")}}._
 
 Cet exemple crée un tampon de deux secondes, le remplit avec du bruit blanc et le joue par l'intermédiaire d'un `AudioBufferSourceNode`.
 
-> **Note :** Vous pouvez aussi [exécuter the code](http://mdn.github.io/audio-buffer/), ou [regarder le code source](https://github.com/mdn/audio-buffer).
+> [!NOTE]
+> Vous pouvez aussi [exécuter the code](https://mdn.github.io/audio-buffer/), ou [regarder le code source](https://github.com/mdn/audio-buffer).
 
 ```js
 var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
-var bouton = document.querySelector('button');
-var pre = document.querySelector('pre');
-var monScript = document.querySelector('script');
+var bouton = document.querySelector("button");
+var pre = document.querySelector("pre");
+var monScript = document.querySelector("script");
 
 pre.innerHTML = monScript.innerHTML;
 
@@ -92,19 +86,23 @@ var canaux = 2;
 // au taux d'échantillonnage du AudioContext
 var compteurTrames = contexteAudio.sampleRate * 2.0;
 
-var myArrayBuffer = contexteAudio.createBuffer(2, compteurTrames, contexteAudio.sampleRate);
+var myArrayBuffer = contexteAudio.createBuffer(
+  2,
+  compteurTrames,
+  contexteAudio.sampleRate,
+);
 
-bouton.onclick = function() {
+bouton.onclick = function () {
   // remplit le tampon avec du bruit blanc;
   // valeurs aléatoires entre -1.0 et 1.0
   for (var canal = 0; canal < canaux; canal++) {
-   // crée le ArrayBuffer qui contient les données
-   var nowBuffering = myArrayBuffer.getChannelData(canal);
-   for (var i = 0; i < compteurTrames; i++) {
-     // Math.random() est compris entre [0; 1.0]
-     // audio doit être compris entre [-1.0; 1.0]
-     nowBuffering[i] = Math.random() * 2 - 1;
-   }
+    // crée le ArrayBuffer qui contient les données
+    var nowBuffering = myArrayBuffer.getChannelData(canal);
+    for (var i = 0; i < compteurTrames; i++) {
+      // Math.random() est compris entre [0; 1.0]
+      // audio doit être compris entre [-1.0; 1.0]
+      nowBuffering[i] = Math.random() * 2 - 1;
+    }
   }
 
   // crée AudioBufferSourceNode.
@@ -117,10 +115,11 @@ bouton.onclick = function() {
   source.connect(contexteAudio.destination);
   // lance la lecture de la source
   source.start();
-}
+};
 ```
 
-> **Note :** Pour un exemple de `decodeAudioData()`, voir la page {{domxref("AudioContext.decodeAudioData")}}.
+> [!NOTE]
+> Pour un exemple de `decodeAudioData()`, voir la page {{domxref("AudioContext.decodeAudioData")}}.
 
 ## Spécifications
 

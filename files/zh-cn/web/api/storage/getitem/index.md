@@ -5,22 +5,22 @@ slug: Web/API/Storage/getItem
 
 {{APIRef("Web Storage API")}}
 
-`getItem()` 作为 {{domxref("Storage")}} 接口的方法，接受一个键名（key name）作为参数，并返回对应键名的值（key's value）。
+{{domxref("Storage")}} 接口的 **`getItem()`** 方法，当传递一个键名时，将返回该键的值；而如果在给定的 `Storage` 对象中不存在该键，则返回 `null`。
 
 ## 语法
 
-```plain
-var aValue = storage.getItem(keyName);
+```js-nolint
+getItem(keyName)
 ```
 
 ### 参数
 
-- _`keyName`_
-  - : 一个包含键名的 {{domxref("DOMString")}}。
+- `keyName`
+  - : 一个包含你要检索的键名字符串。
 
 ### 返回值
 
-一个 {{domxref("DOMString")}}，键名对应的值。如果键名不存在于存储中，则返回 `null`。
+一个包含键值的字符串。如果该键名不存在，则返回 `null`。
 
 ## 示例
 
@@ -28,21 +28,22 @@ var aValue = storage.getItem(keyName);
 
 ```js
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  const currentColor = localStorage.getItem("bgcolor");
+  const currentFont = localStorage.getItem("font");
+  const currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = `#${currentColor}`;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 
-> **备注：** 一个实际的例子 [Web Storage Demo](https://github.com/mdn/web-storage-demo)。
+> [!NOTE]
+> 有关实际运行的例子，详见 [Web Storage 演示](https://mdn.github.io/dom-examples/web-storage/)。
 
 ## 规范
 

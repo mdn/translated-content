@@ -1,48 +1,62 @@
 ---
 title: baseline-shift
 slug: Web/SVG/Attribute/baseline-shift
+l10n:
+  sourceCommit: a7615ee2f9e22946edff7633962bc1d9eee9e0ad
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-属性`baseline-shift`允许相对于父文本内容元素的`dominant-baseline`重定位`dominant-baseline`。该切换对象必须是一个下标或上标。
+**`baseline-shift`** 属性允许相对于父文本内容元素的 dominant-baseline 重新定位 dominant-baseline。移动的对象可能是上标或下标。
 
-作为一个外观属性，它还可以直接作为 CSS 样式表内部的属性使用。请看{{ cssxref("baseline-shift","CSS baseline-shift") }}以了解更多信息。
+> [!NOTE]
+> 作为一个表现属性，`baseline-shift` 可以用作 CSS 属性。
 
-## 用法
+> [!NOTE]
+> 此属性将被弃用，建议作者改用 [`vertical-align`](/zh-CN/docs/Web/CSS/vertical-align)。
 
-| 类别     | 外观属性                                                                                                   |
-| -------- | ---------------------------------------------------------------------------------------------------------- |
-| 值       | **auto** \| baseline \| super \| sub \| \<percentage> \| [\<length>](/zh-CN/SVG/Content_type#Length) \| inherit |
-| 可变性   | Yes                                                                                                        |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/text.html#BaselineShiftProperty)                        |
+你可以将此属性与以下 SVG 元素一起使用：
 
-- baseline
-  - : 没有基线切换，`dominant-baseline`依然在原来的位置。
-- sub
-  - : `dominant-baseline`切换到下标的默认位置。
-- super
-  - : `dominant-baseline`切换到上标的默认位置
-- \<percentage>
-  - : 该属性的结果值是这个百分数乘以 {{ SVGElement("text") }}元素的{{ SVGAttr("line-height") }}。如果是正值，dominant-baseline 向 shift 同方向移动结果值；如果是负值，dominant-baseline 向 shift 反方向移动结果值，相对于父文本内容元素。值“0%”等于”baseline“。
-- [\<length>](/zh-CN/SVG/Content_type#Length)
-  - : 如果是正值，dominant-baseline 向 shift 同方向移动[\<length>](/zh-CN/SVG/Content_type#Length)距离；如果是负值，dominant-baseline 向 shift 反方向移动[\<length>](/zh-CN/SVG/Content_type#Length)距离。值”0cm“等于”baseline“。
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
-## 示例
+## 使用说明
 
-## 元素
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">值</th>
+      <td>
+        {{cssxref("length-percentage")}} | <code>sub</code> |
+        <code>super</code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">默认值</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">动画性</th>
+      <td>有</td>
+    </tr>
+  </tbody>
+</table>
 
-`下列这些元素可以使用 baseline-shift`属性。
+- `sub`
+  - : dominant-baseline 移动到下标的默认位置。
+- `super`
+  - : dominant-baseline 移动到上标的默认位置。
+- `<length-percentage>`
 
-- {{ SVGElement("tspan") }}
-- {{ SVGElement("tref") }}
-- {{ SVGElement("altGlyph") }}
-- {{ SVGElement("textPath") }}
+  - : 长度值，将父文本内容元素的 dominant-baseline 升高（正值）或降低（负值）指定的长度。
+
+    百分比值，将父文本内容元素的 dominant-baseline 升高（正值）或降低（负值）至 {{SVGAttr("line-height")}} 指定的百分比。
 
 ## 规范
 
 {{Specifications}}
 
-## 参见
+## 浏览器兼容性
 
-- {{ cssxref("baseline-shift","CSS baseline-shift") }}
+{{Compat}}

@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
 
 **`setUTCFullYear()`** 方法根据世界标准时间为一个具体日期设置年份。
 
-{{EmbedInteractiveExample("pages/js/date-setutcfullyear.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCFullYear()")}}
+
+```js interactive-example
+const event = new Date("December 31, 1975 23:15:30 GMT-3:00");
+
+console.log(event.getUTCFullYear());
+// Expected output: 1976
+
+console.log(event.toUTCString());
+// Expected output: "Thu, 01 Jan 1976 02:15:30 GMT"
+
+event.setUTCFullYear(1975);
+
+console.log(event.toUTCString());
+// Expected output: "Wed, 01 Jan 1975 02:15:30 GMT"
+```
 
 ## 语法
 
@@ -30,7 +45,7 @@ dateObj.setUTCFullYear(yearValue[, monthValue[, dayValue]])
 
 如果你指定的参数超出了期待范围，`setUTCFullYear()` 方法将会根据 `Date` 对象，更新其他参数和日期信息。例如，如果你将 `monthValue` 设定为 `15`，年份会增加 `1`，月份值则为为 `3`。
 
-## 例子
+## 示例
 
 ### 使用 `setUTCFullYear()`
 

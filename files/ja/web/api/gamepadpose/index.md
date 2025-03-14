@@ -1,46 +1,48 @@
 ---
 title: GamepadPose
 slug: Web/API/GamepadPose
+l10n:
+  sourceCommit: 5e98fd9cfbec6e28044a27c58bffca5ae464ec8b
 ---
 
-{{APIRef("Gamepad API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Gamepad API")}}{{SeeCompatTable}}
 
-The **`GamepadPose`** interface of the [Gamepad API](/ja/docs/Web/API/Gamepad_API) represents the pose of a [WebVR](/ja/docs/Web/API/WebVR_API) controller at a given timestamp (which includes orientation, position, velocity, and acceleration information.)
+[Gamepad API](/ja/docs/Web/API/Gamepad_API) の **`GamepadPose`** インターフェイスは、指定のタイムスタンプにおける [WebVR](/ja/docs/Web/API/WebVR_API) コントローラーの姿勢を表します。これには、向き・位置・速度・加速度の情報が含まれます。
 
-This interface is accessible through the {{domxref("Gamepad.pose")}} property.
+このインターフェイスは、{{domxref("Gamepad.pose")}} プロパティからアクセスできます。
 
-## Properties
+## インスタンスプロパティ
 
-- {{domxref("GamepadPose.hasOrientation")}} {{readonlyInline}}
-  - : Returns a boolean indicating whether the gamepad is capable of returning orientation information (`true`) or not (`false`).
-- {{domxref("GamepadPose.hasPosition")}} {{readonlyInline}}
-  - : Returns a boolean indicating whether the gamepad is capable of returning position information (`true`) or not (`false`).
-- {{domxref("GamepadPose.position")}} {{readonlyInline}}
-  - : Returns the position of the {{domxref("Gamepad")}} as a 3D vector.
-- {{domxref("GamepadPose.linearVelocity")}} {{readonlyInline}}
-  - : Returns the linear velocity of the {{domxref("Gamepad")}}, in meters per second.
-- {{domxref("GamepadPose.linearAcceleration")}} {{readonlyInline}}
-  - : Returns the linear acceleration of the {{domxref("Gamepad")}}, in meters per second per second.
-- {{domxref("GamepadPose.orientation")}} {{readonlyInline}}
-  - : Returns the orientation of the {{domxref("Gamepad")}}, as a quarternion value.
-- {{domxref("GamepadPose.angularVelocity")}} {{readonlyInline}}
-  - : Returns the angular velocity of the {{domxref("Gamepad")}}, in radians per second.
-- {{domxref("GamepadPose.angularAcceleration")}} {{readonlyInline}}
-  - : Returns the angular acceleration of the {{domxref("Gamepad")}}, in meters per second per second.
+- {{domxref("GamepadPose.hasOrientation")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : ゲームパッドが向きの情報を返すことができる (`true`) か否 (`false`) かを表す真理値を返します。
+- {{domxref("GamepadPose.hasPosition")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : ゲームパッドが位置の情報を返すことができる (`true`) か否 (`false`) かを表す真理値を返します。
+- {{domxref("GamepadPose.position")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : {{domxref("Gamepad")}} の位置を 3 次元ベクトルで返します。
+- {{domxref("GamepadPose.linearVelocity")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : {{domxref("Gamepad")}} の線速度 (メートル毎秒) を返します。
+- {{domxref("GamepadPose.linearAcceleration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : {{domxref("Gamepad")}} の線加速度 (メートル毎秒毎秒) を返します。
+- {{domxref("GamepadPose.orientation")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : {{domxref("Gamepad")}} の向きをクォータニオン値で返します。
+- {{domxref("GamepadPose.angularVelocity")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : {{domxref("Gamepad")}} の角速度 (ラジアン毎秒) を返します。
+- {{domxref("GamepadPose.angularAcceleration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : {{domxref("Gamepad")}} の角加速度 (メートル毎秒毎秒) を返します。
 
-## Examples
+## 例
 
-TBD.
+TBD
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
-{{Compat("api.GamepadPose")}}
+{{Compat}}
 
-## See also
+## 関連情報
 
 - [WebVR API](/ja/docs/Web/API/WebVR_API)
 - [Gamepad API](/ja/docs/Web/API/Gamepad_API)

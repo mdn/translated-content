@@ -1,46 +1,40 @@
 ---
-title: 'Document: DOMContentLoaded イベント'
+title: "Document: DOMContentLoaded イベント"
+short-title: DOMContentLoaded
 slug: Web/API/Document/DOMContentLoaded_event
+l10n:
+  sourceCommit: 0474b1e858a9d6261cbcd6763ec5e13a60cae2da
 ---
 
 {{APIRef}}
 
-**`DOMContentLoaded`** イベントは、 HTML の初期文書が完全に読み込まれ解釈された時点で発生し、スタイルシート、画像、サブフレームの読み込みが完了するのを待ちません。
+**`DOMContentLoaded`** イベントは、HTML の文書が完全に読み込まれ構文解析され、すべての遅延スクリプト（[`<script defer src="…">`](/ja/docs/Web/HTML/Element/script#defer) および [`<script type="module">`](/ja/docs/Web/HTML/Element/script#module)）がダウンロードされ、実行されたときに発生します。画像、サブフレーム、非同期スクリプトの読み込みの完了は待ちません。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>
-        可 (ただし、キャンセル可能ではない単純イベントとして定義されている)
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>なし</td>
-    </tr>
-  </tbody>
-</table>
+`DOMContentLoaded` はスタイルシートの読み込みを待ちませんが、遅延スクリプトはスタイルシートの読み込みを待ちますし、`DOMContentLoaded` イベントは遅延スクリプトの後にキューイングされます。また、遅延や非同期でないスクリプト（`<script>` など）は、すでに解釈できるスタイルシートの読み込みを待ちます。
 
 別なイベントである {{domxref("Window/load_event", "load")}} は、ページ全体が読み込まれたときにのみ使用します。 `load` を `DOMContentLoaded` がより適切である場面で使ってしまうことがよくある誤りです。
 
-同期 JavaScript は DOM の解析をいったん中断します。ユーザーがページをリクエストした後でできるだけ早く DOM が解析されるようにしたい場合は、 [JavaScript を非同期に](/ja/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)して、[スタイルシートの読み込みを最適化](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery)してください。ふつう通りに読み込むと、スタイルシートは HTML と並行で読み込まれ、中心となる HTML 文書の帯域を「盗む」ため、ふつう通りに読み込むと DOM 解析の速度を低下させます。
+このイベントはキャンセル不可です。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラーのプロパティを設定するかしてください。
+
+```js
+addEventListener("DOMContentLoaded", (event) => {});
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
 ### 基本的な使用
 
 ```js
-document.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
+document.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOM fully loaded and parsed");
 });
 ```
 
@@ -48,13 +42,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ```html
 <script>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
+  document.addEventListener("DOMContentLoaded", (event) => {
+    console.log("DOM は完全に読み込まれ解釈されました");
   });
 
-for( let i = 0; i < 1000000000; i++)
-{} // This synchronous script is going to delay parsing of the DOM,
-   // so the DOMContentLoaded event is going to launch later.
+  for (let i = 0; i < 1_000_000_000; i++);
+  // この同期スクリプトは DOM の構文解析を遅らせるので、
+  // DOMContentLoaded イベントはその後で起動することになります。
 </script>
 ```
 
@@ -64,35 +58,45 @@ for( let i = 0; i < 1000000000; i++)
 
 ```js
 function doSomething() {
-  console.info('DOM loaded');
+  console.info("DOM loaded");
 }
 
-if (document.readyState === 'loading') {  // Loading hasn't finished yet
-  document.addEventListener('DOMContentLoaded', doSomething);
-} else {  // `DOMContentLoaded` has already fired
+if (document.readyState === "loading") {
+  // Loading hasn't finished yet
+  document.addEventListener("DOMContentLoaded", doSomething);
+} else {
+  // `DOMContentLoaded` has already fired
   doSomething();
 }
 ```
 
-### ライブデモ
+> [!NOTE]
+> ここでは競合条件はありません。 `if` チェックと `addEventListener()` 呼び出しの間に文書が読み込まれることはあり得ません。JavaScript には run-to-completion という意味づけがあります。つまり、イベントループのある特定のタイミングで文書が読み込まれていたとしても、次のサイクルまで読み込まれることはなく、その時には `doSomething` ハンドラーはすでに取り付けられており、発生します。
+
+### ライブサンプル
 
 #### HTML
 
 ```html
 <div class="controls">
-  <button id="reload" type="button">Reload</button>
+  <button id="reload" type="button">再読み込み</button>
 </div>
 
 <div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+  <label for="eventLog">イベントログ:</label>
+  <textarea
+    readonly
+    class="event-log-contents"
+    rows="8"
+    cols="30"
+    id="eventLog"></textarea>
 </div>
 ```
 
 ```css hidden
 body {
   display: grid;
-  grid-template-areas: "control  log";
+  grid-template-areas: "control log";
 }
 
 .controls {
@@ -110,7 +114,8 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
@@ -119,35 +124,35 @@ label, button {
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
-const log = document.querySelector('.event-log-contents');
-const reload = document.querySelector('#reload');
+const log = document.querySelector(".event-log-contents");
+const reload = document.querySelector("#reload");
 
-reload.addEventListener('click', () => {
-  log.textContent ='';
-  window.setTimeout(() => {
-      window.location.reload(true);
+reload.addEventListener("click", () => {
+  log.textContent = "";
+  setTimeout(() => {
+    window.location.reload(true);
   }, 200);
 });
 
-window.addEventListener('load', (event) => {
-    log.textContent = log.textContent + 'load\n';
+window.addEventListener("load", (event) => {
+  log.textContent += "load\n";
 });
 
-document.addEventListener('readystatechange', (event) => {
-    log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
+document.addEventListener("readystatechange", (event) => {
+  log.textContent += `readystate: ${document.readyState}\n`;
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    log.textContent = log.textContent + `DOMContentLoaded\n`;
+document.addEventListener("DOMContentLoaded", (event) => {
+  log.textContent += "DOMContentLoaded\n";
 });
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Live_example', '100%', '160px') }}
+{{ EmbedLiveSample('ライブサンプル', '100%', '160px') }}
 
 ## 仕様書
 
@@ -160,4 +165,3 @@ document.addEventListener('DOMContentLoaded', (event) => {
 ## 関連情報
 
 - 関連イベント: {{domxref("Window/load_event", "load")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/beforeunload_event", "beforeunload")}}, {{domxref("Window/unload_event", "unload")}}
-- {{domxref("Window")}} を対象とした同じイベント: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}

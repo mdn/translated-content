@@ -1,7 +1,6 @@
 ---
 title: CSS Containment
-slug: Web/CSS/CSS_Containment
-translation_of: Web/CSS/CSS_Containment
+slug: Web/CSS/CSS_containment
 ---
 
 {{CSSRef}}
@@ -37,7 +36,7 @@ article {
 
 우리는 `contain` 속성을 통해 각 아티클이 독립적이라고 말했습니다.
 
-`content` 값은 `contain: layout paint`의 약어입니다. 브라주어에 요소의 내부 레이아웃이 페이지의 나머지 부분과 완전히 분리되어 있으며, 요소에 대한 모든 것이 경계 내부에 그려져 있음을 알려줍니다. overflow되어 보이는 것이 없습니다.
+`content` 값은 `contain: layout paint`의 약어입니다. 브라우저에 요소의 내부 레이아웃이 페이지의 나머지 부분과 완전히 분리되어 있으며, 요소에 대한 모든 것이 경계 내부에 그려져 있음을 알려줍니다. overflow되어 보이는 것이 없습니다.
 
 이 정보는 페이지를 작성하는 웹 개발자에게 일반적으로 알려져 있으며, 사실 매우 분명합니다. 그러나 브라우저는 귀하의 의도를 추측할 수 없고, 아티클이 완전히 독립적일 것이라고 가정할 수 없습니다. 따라서 이 속성은 브라우저에게 이 사실을 설명하고, 그 정보를 기반으로 성능 최적화를 수행할 수 있는 좋은 방법을 제공합니다.
 
@@ -94,11 +93,11 @@ article {
 }
 ```
 
-style containment 는 이름에도 불구하고 [Shadow DOM](/ko/docs/Web/Web_Components/Using_shadow_DOM)에서 얻을 수 있는 범위(scope) 스타일을 제공하지 않습니다. 주요 사용 사례는, 요소에서 [CSS Counter](/ko/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters) 가 변경되어 나머지 트리에 영향을 미칠 수 있는 상황을 방지하는 것입니다.
+style containment 는 이름에도 불구하고 [Shadow DOM](/ko/docs/Web/API/Web_components/Using_shadow_DOM)에서 얻을 수 있는 범위(scope) 스타일을 제공하지 않습니다. 주요 사용 사례는, 요소에서 [CSS Counter](/ko/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) 가 변경되어 나머지 트리에 영향을 미칠 수 있는 상황을 방지하는 것입니다.
 
 `contain: style` 을 사용하면 {{cssxref("counter-increment")}} 와 {{cssxref("counter-set")}} 속성이 해당 하위 트리로만 범위가 지정된 새 카운터를 만들 수 있습니다.
 
-> **참고:** **주의**: `style` containment 는 사양에서 "at-risk" 이며, 모든 곳에서 지원하지 않을 수 있습니다(현재 파이어폭스는 지원하지 않음).
+> **참고:** **주의**: `style` containment 는 사양에서 "at-risk" 이며, 모든 곳에서 지원하지 않을 수 있습니다(현재 Firefox는 지원하지 않음).
 
 ### Special values
 

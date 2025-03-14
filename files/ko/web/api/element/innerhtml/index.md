@@ -1,14 +1,13 @@
 ---
 title: Element.innerHTML
 slug: Web/API/Element/innerHTML
-translation_of: Web/API/Element/innerHTML
 ---
 
 {{APIRef("DOM")}}
 
 {{domxref("Element")}} 속성(property) **`innerHTML`** 은 요소(element) 내에 포함 된 HTML 또는 XML 마크업을 가져오거나 설정합니다.
 
-> **참고:** **주의:** {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("noembed")}} 노드가 (&), (<), (>) 문자를 포함하는 텍스트 노드를 자식으로 가지고 있다면, `innerHTML`은 이러한 문자들을 각각 `"&amp;"`, `"&lt;"` ,`"&gt;"`로 반환합니다. {{domxref("Node.textContent")}}를 사용하여 이러한 텍스트 노드 내용의 원본을 복사할 수 있습니다.
+> **경고:** {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("noembed")}} 노드가 (&), (<), (>) 문자를 포함하는 텍스트 노드를 자식으로 가지고 있다면, `innerHTML`은 이러한 문자들을 각각 `"&amp;"`, `"&lt;"` ,`"&gt;"`로 반환합니다. {{domxref("Node.textContent")}}를 사용하여 이러한 텍스트 노드 내용의 원본을 복사할 수 있습니다.
 
 요소(element)의 내용을 변경하는 대신 HTML을 문서(document)에 삽입하려면, {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}} 메서드를 사용하십시오.
 
@@ -45,7 +44,8 @@ let contents = myElement.innerHTML;
 
 이를 통해 요소의 컨텐트 노드에 대한 HTML 마크업을 볼 수 있습니다.
 
-> **참고:** **주의:** 반환 된 HTML, XML 파편은 요소의 현재 내용일 기반으로 생성됩니다. 따라서 반환 된 마크업과 양식이 본래의 페이지 마크업과 일치하지 않을 수 있습니다.
+> [!NOTE]
+> 반환 된 HTML, XML 파편은 요소의 현재 내용일 기반으로 생성됩니다. 따라서 반환 된 마크업과 양식이 본래의 페이지 마크업과 일치하지 않을 수 있습니다.
 
 ### Replacing the contents of an element
 
@@ -60,9 +60,8 @@ document.body.innerHTML = "";
 이 예제는 문서의 현재 HTML 마크업을 가져오고, `"<"` 문자를 HTML 엔터티 `"&lt;"` 로 대체하합니다. 그러면 HTML을 원시 텍스트(raw text - 파싱 이전의 모습)로 반환합니다. 이것을 {{HTMLElement("pre")}} 요소로 래핑합니다. 그러면 `innerHTML` 값은 새 문자열로 변경됩니다. 그 결과, 문서의 내용은 페이지의 전체 소스 코드의 출력으로 대체됩니다.
 
 ```js
-document.documentElement.innerHTML = "<pre>" +
-         document.documentElement.innerHTML.replace(/</g,"&lt;") +
-            "</pre>";
+document.documentElement.innerHTML =
+  "<pre>" + document.documentElement.innerHTML.replace(/</g, "&lt;") + "</pre>";
 ```
 
 #### Operational details
@@ -90,7 +89,7 @@ el.innerHTML = name; // harmless in this case
 
 이것은 [cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) 공격처럼 보일 수 있지만, 결과는 무해합니다. HTML5 는 `innerHTML` 과 함께 삽입된 {{HTMLElement("script")}} 태그가 [실행되지 않도록](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0) 지정합니다.
 
-그러나 {{HTMLElement("script")}} 요소를 사용하지 않고, 자바스크립트를 실행하는 방법이 있으므로, `innerHTML` 을 사용하여 제어할 수 없는 문자열을 설정할 때 마다 여전히 보안위험이 있습니다. 예를들어:
+그러나 {{HTMLElement("script")}} 요소를 사용하지 않고, JavaScript를 실행하는 방법이 있으므로, `innerHTML` 을 사용하여 제어할 수 없는 문자열을 설정할 때 마다 여전히 보안위험이 있습니다. 예를들어:
 
 ```js
 const name = "<img src='x' onerror='alert(1)'>";
@@ -99,7 +98,8 @@ el.innerHTML = name; // shows the alert
 
 따라서 일반 텍스트를 삽입 할 때는 `innerHTML` 을 사용하지 않는 것이 좋습니다. 대신 {{domxref("Node.textContent")}}를 사용하십시오. 이것은 전달 된 내용을 HTML로 파싱하지 않고 원시 텍스트(raw text)로 삽입합니다.
 
-> **경고:** 프로젝트가 보안 점검을 거치게 되는 프로젝트인 경우, `innerHTML` 을 사용하면 코드가 거부 될 가능성이 높습니다. 예를 들어, [브라우저 확장](/ko/docs/Mozilla/Add-ons/WebExtensions)에서 [`innerHTML`을 사용하고](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation) [addons.mozilla.org](https://addons.mozilla.org/)에 확장을 제출하면 자동 검토 프로세스를 통과하지 못합니다.
+> [!WARNING]
+> 프로젝트가 보안 점검을 거치게 되는 프로젝트인 경우, `innerHTML` 을 사용하면 코드가 거부 될 가능성이 높습니다. 예를 들어, [브라우저 확장](/ko/docs/Mozilla/Add-ons/WebExtensions)에서 [`innerHTML`을 사용하고](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation) [addons.mozilla.org](https://addons.mozilla.org/)에 확장을 제출하면 자동 검토 프로세스를 통과하지 못합니다.
 
 ## Example
 
@@ -121,12 +121,18 @@ log("Logging mouse events inside this container...");
 
 `log()` 함수는 {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}을 사용하여 {{jsxref("Date")}} 객체에서 현재 시간을 가져 오고, 타임 스탬프와 메시지 텍스트가 있는 문자열을 작성하여 로그 출력을 만듭니다. 그런 다음 메시지는 클래스 `"log"`가 있는 상자에 추가됩니다.
 
-{{domxref("MouseEvent")}} 기반 이벤트 ({{event("mousedown")}}, {{event("click")}}, {{event("mouseenter")}}와 같은) 정보를 기록하는 두 번째 메서드를 추가합니다:
+{{domxref("MouseEvent")}} 기반 이벤트 ({{domxref("Element/mousedown_event", "mousedown")}}, {{domxref("Element/click_event", "click")}}, {{domxref("Element/mouseenter_event", "mouseenter")}}와 같은) 정보를 기록하는 두 번째 메서드를 추가합니다:
 
 ```js
 function logEvent(event) {
-  var msg = "Event <strong>" + event.type + "</strong> at <em>" +
-            event.clientX + ", " + event.clientY + "</em>";
+  var msg =
+    "Event <strong>" +
+    event.type +
+    "</strong> at <em>" +
+    event.clientX +
+    ", " +
+    event.clientY +
+    "</em>";
   log(msg);
 }
 ```
@@ -182,17 +188,15 @@ HTML은 우리의 예제에서 아주 간단합니다.
 
 {{EmbedLiveSample("Example", 640, 350)}}
 
-## Specification
+## 명세서
 
-| Specification                                                                                        | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('DOM Parsing', '#dom-element-innerhtml', 'Element.innerHTML')}} | {{Spec2('DOM Parsing')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
 - {{domxref("Node.textContent")}} 과 {{domxref("Node.innerText")}}
 - {{domxref("Element.insertAdjacentHTML()")}}

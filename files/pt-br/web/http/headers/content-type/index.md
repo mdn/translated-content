@@ -36,7 +36,7 @@ Content-Type: multipart/form-data; boundary=something
 ## Diretivas
 
 - `media-type`
-  - : O [MIME type](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types) do recurso ou dado.
+  - : O [MIME type](/pt-BR/docs/Web/HTTP/MIME_types) do recurso ou dado.
 - charset
   - : O encoding da string
 - boundary
@@ -50,8 +50,8 @@ Em uma requisição {{HTTPMethod("POST")}}, resultado de uma submissão de um fo
 
 ```html
 <form action="/" method="post" enctype="multipart/form-data">
-  <input type="text" name="description" value="some text">
-  <input type="file" name="myFile">
+  <input type="text" name="description" value="some text" />
+  <input type="file" name="myFile" />
   <button type="submit">Submit</button>
 </form>
 ```
@@ -77,14 +77,14 @@ Content-Type: text/plain
 
 ## Especificações
 
-| Especificação                                                        | Título                                                        |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                                       | Título                                                        |
+| --------------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7233", "Content-Type in multipart", "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests        |
-| {{RFC("7231", "Content-Type", "3.1.1.5")}}             | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{RFC("7231", "Content-Type", "3.1.1.5")}}          | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Content-Type")}}
+{{Compat}}
 
 ## Ver também
 

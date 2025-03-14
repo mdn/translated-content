@@ -20,20 +20,19 @@ canvas.getContext(contextType, contextAttributes);
   - : É um {{domxref("DOMString")}} contendo o contexto identificador definindo o contexto de desenho associado ao canvas. Os valores possiveis são:
 
     - `"2d"`, levando a criação de um objeto {{domxref("CanvasRenderingContext2D")}} representando uma renderização bidimensional.
-    - `"webgl"` (or `"experimental-webgl"`) que criará um objeto {{domxref("WebGLRenderingContext")}} representando uma renderização tridimensional. Esse contexto está disponivel somente em browsers que implementam [WebGL](/pt-BR/docs/Web/WebGL) versão 1 (OpenGL ES 2.0).
-    - `"webgl2"` que criará um objeto {{domxref("WebGL2RenderingContext")}} representando uma renderização tridimensional. Esse contexto está disponivel somente em browsers que implementam [WebGL](/pt-BR/docs/Web/WebGL) versão 2 (OpenGL ES 3.0). {{experimental_inline}}
+    - `"webgl"` (or `"experimental-webgl"`) que criará um objeto {{domxref("WebGLRenderingContext")}} representando uma renderização tridimensional. Esse contexto está disponivel somente em browsers que implementam [WebGL](/pt-BR/docs/Web/API/WebGL_API) versão 1 (OpenGL ES 2.0).
+    - `"webgl2"` que criará um objeto {{domxref("WebGL2RenderingContext")}} representando uma renderização tridimensional. Esse contexto está disponivel somente em browsers que implementam [WebGL](/pt-BR/docs/Web/API/WebGL_API) versão 2 (OpenGL ES 3.0). {{experimental_inline}}
     - `"bitmaprenderer"` que criará um {{domxref("ImageBitmapRenderingContext")}} que apenas provê a funcionalidade de substituir o conteúdo do canvas pelo de um {{domxref("ImageBitmap")}}.
 
-    > **Nota:** O identificador "`experimental-webgl`" é usado em novas implementações do WebGL. Essas implementações ou ainda não passaram nos casos de teste, ou os drivers gráficos na plataforma ainda não estão estáveis. O [Khronos Group](https://www.khronos.org/) certifica as implementações do WebGL sob certas [regas de conformidade](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
+    > [!NOTE]
+    > O identificador "`experimental-webgl`" é usado em novas implementações do WebGL. Essas implementações ou ainda não passaram nos casos de teste, ou os drivers gráficos na plataforma ainda não estão estáveis. O [Khronos Group](https://www.khronos.org/) certifica as implementações do WebGL sob certas [regas de conformidade](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
 
 - `contextAttributes`
 
   - : Você pode usar alguns atributos de contexto quando criar o seu contexto de renderização, por exemplo:
 
     ```js
-    canvas.getContext('webgl',
-                     { antialias: false,
-                       depth: false });
+    canvas.getContext("webgl", { antialias: false, depth: false });
     ```
 
     Atributos de contexto 2d:
@@ -74,24 +73,20 @@ Dado este elemento {{HTMLElement("canvas")}}:
 Você pega um contexto `2d` do canvas com o código a seguir:
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 console.log(ctx); // CanvasRenderingContext2D { ... }
 ```
 
 Agora você tem [contexto de renderização 2d](/pt-BR/docs/Web/API/CanvasRenderingContext2D) para o canvas e você pode desenhar nele.
 
-## Specifications
+## Especificações
 
-| Specification                                                                                                                        | Status                           | Comment                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-canvas-getcontext", "HTMLCanvasElement.getContext")}} | {{Spec2('HTML WHATWG')}} | Nenhuma mudança desde o ultimo snapshot, {{SpecName('HTML5 W3C')}}      |
-| {{SpecName('HTML5.1', "scripting-1.html#dom-canvas-getcontext", "HTMLCanvasElement.getContext")}}     | {{Spec2('HTML5.1')}}     |                                                                                |
-| {{SpecName('HTML5 W3C', "scripting-1.html#dom-canvas-getcontext", "HTMLCanvasElement.getContext")}} | {{Spec2('HTML5 W3C')}}     | Snapshot do {{SpecName('HTML WHATWG')}} contendo a definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.HTMLCanvasElement.getContext")}}
+{{Compat}}
 
 ## See also
 

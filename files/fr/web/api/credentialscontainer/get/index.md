@@ -1,15 +1,6 @@
 ---
 title: CredentialsContainer.get()
 slug: Web/API/CredentialsContainer/get
-tags:
-  - API
-  - Credential Management API
-  - CredentialsContainer
-  - Méthode
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-translation_of: Web/API/CredentialsContainer/get
 ---
 
 {{APIRef("Credential Management")}}{{SeeCompatTable}}
@@ -20,12 +11,13 @@ Cette méthode collecte l'ensemble des informations d'authentification stockées
 
 Cette méthode récupère les informations d'authentification en appelant la méthode `CollectFromCredentialStore` pour chaque type d'authentification permis par l'argument **`options`**. Ainsi, si la propriété `options.password` existe dans l'argument passé, {{domxref("PasswordCredential")}}`.[[CollectFromCredentialStore]]` sera appelée.
 
-> **Note :** Cette méthode ne peut être utilisé que pour les contextes de navigation les plus hauts. Les appels lancés depuis une {{HTMLElement("iframe")}} résoudront la promesse sans aucun effet.
+> [!NOTE]
+> Cette méthode ne peut être utilisé que pour les contextes de navigation les plus hauts. Les appels lancés depuis une {{HTMLElement("iframe")}} résoudront la promesse sans aucun effet.
 
 ## Syntaxe
 
 ```js
-var promise = CredentialsContainer.get([options])
+var promise = CredentialsContainer.get([options]);
 ```
 
 ### Paramètres

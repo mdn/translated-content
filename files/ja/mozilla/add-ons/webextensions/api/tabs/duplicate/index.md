@@ -3,7 +3,7 @@ title: tabs.duplicate()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 ID で指定されたタブを複製します。
 
@@ -13,22 +13,22 @@ ID で指定されたタブを複製します。
 
 ```js
 var duplicating = browser.tabs.duplicate(
-  tabId              // integer
-)
+  tabId, // integer
+);
 ```
 
-### パラメータ
+### パラメーター
 
 - `tabId`
   - : `integer`. 複製するタブの ID を指定します。
 
 ### 戻り値
 
-A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the duplicated tab. The `Tab` object only contains `url`, `title` and `favIconUrl` if the extension has the [`"tabs"` permission](/ja/Add-ons/WebExtensions/manifest.json/permissions). If any error occurs the promise will be rejected with an error message.
+A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the duplicated tab. The `Tab` object only contains `url`, `title` and `favIconUrl` if the extension has the [`"tabs"` permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). If any error occurs the promise will be rejected with an error message.
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.tabs.duplicate")}}
+{{Compat}}
 
 ## 例
 
@@ -44,7 +44,8 @@ function onError(error) {
 }
 
 // Duplicate the first tab in the array
-function duplicateFirstTab(tabs) {console.log(tabs);
+function duplicateFirstTab(tabs) {
+  console.log(tabs);
   if (tabs.length > 0) {
     var duplicating = browser.tabs.duplicate(tabs[0].id);
     duplicating.then(onDuplicated, onError);
@@ -58,9 +59,11 @@ querying.then(duplicateFirstTab, onError);
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromiums の [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-duplicate) API に基づいています。 This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!NOTE]
+> この API は Chromiums の [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-duplicate) API に基づいています。 This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -87,4 +90,4 @@ querying.then(duplicateFirstTab, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

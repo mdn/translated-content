@@ -1,12 +1,6 @@
 ---
 title: mask-border-repeat
 slug: Web/CSS/mask-border-repeat
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/mask-border-repeat
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

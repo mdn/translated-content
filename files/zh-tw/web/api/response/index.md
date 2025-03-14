@@ -64,16 +64,18 @@ slug: Web/API/Response
 
 ## 範例
 
-在[基本 fetch 範例](https://github.com/mdn/fetch-examples/tree/master/basic-fetch) ([run example live](http://mdn.github.io/fetch-examples/basic-fetch/)) 中，我們使用 `fetch()` 呼叫來得到圖片，並使用 {{htmlelement("img")}} tag 顯示。 這裡的`fetch()` 呼叫返回了一個 promise，它使用與資源 fetch 操作有關的 `Response` 進行解析。你可能有發現，由於我們要求的是一張圖片，所以需要用 {{domxref("Body.blob")}} ({{domxref("Response")}} 時做了 body) 讓 response 有正確的 MIME 類型。
+在[基本 fetch 範例](https://github.com/mdn/dom-examples/tree/main/fetch/basic-fetch) ([run example live](https://mdn.github.io/dom-examples/fetch/basic-fetch/)) 中，我們使用 `fetch()` 呼叫來得到圖片，並使用 {{htmlelement("img")}} tag 顯示。 這裡的`fetch()` 呼叫返回了一個 promise，它使用與資源 fetch 操作有關的 `Response` 進行解析。你可能有發現，由於我們要求的是一張圖片，所以需要用 {{domxref("Body.blob")}} ({{domxref("Response")}} 時做了 body) 讓 response 有正確的 MIME 類型。
 
 ```js
-const image = document.querySelector('.my-image');
-fetch('flowers.jpg').then(function(response) {
-  return response.blob();
-}).then(function(blob) {
-  const objectURL = URL.createObjectURL(blob);
-  image.src = objectURL;
-});
+const image = document.querySelector(".my-image");
+fetch("flowers.jpg")
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (blob) {
+    const objectURL = URL.createObjectURL(blob);
+    image.src = objectURL;
+  });
 ```
 
 除此之外，你也能用 {{domxref("Response.Response()")}} 建構子去建立自己的客製化 `Response` 物件：
@@ -92,6 +94,6 @@ const response = new Response();
 
 ## 參考
 
-- [ServiceWorker API](/zh-TW/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-TW/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-TW/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/zh-TW/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-TW/docs/Web/HTTP)

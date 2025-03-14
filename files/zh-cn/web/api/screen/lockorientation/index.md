@@ -7,7 +7,8 @@ slug: Web/API/Screen/lockOrientation
 
 `lockOrientation` 此方法会把屏幕锁定为指定的方向。
 
-> **备注：** 此方法仅适用于已安装的 Web apps 或 [全屏模式](/zh-CN/docs/Web/Guide/DOM/Using_full_screen_mode) 的 Web 页面。
+> [!NOTE]
+> 此方法仅适用于已安装的 Web apps 或 [全屏模式](/zh-CN/docs/Web/API/Fullscreen_API) 的 Web 页面。
 
 ## 使用方法
 
@@ -37,7 +38,8 @@ lockedAllowed = window.screen.lockOrientation(orientation);
 - `default`
   - : 它代表 `portrait-primary` 和 `landscape-primary` 主要取决于设备的自然方向。例如，如果面板分辨率为 1280 \* 800，则 `default` 为横向，如果分辨率为 800 \* 1280，则 `default` 为纵向。
 
-> **备注：** 可同时设置多个锁定值。因此，如果锁定设置为只有一个方向，屏幕方向将永远不会改变，直到屏幕方向解锁。否则，只要方向在设备锁定的方向之中，屏幕方向就会从一个方向改变到另一个方向。
+> [!NOTE]
+> 可同时设置多个锁定值。因此，如果锁定设置为只有一个方向，屏幕方向将永远不会改变，直到屏幕方向解锁。否则，只要方向在设备锁定的方向之中，屏幕方向就会从一个方向改变到另一个方向。
 
 ## 返回值
 
@@ -48,7 +50,10 @@ lockedAllowed = window.screen.lockOrientation(orientation);
 ### 使用 `DOMString` 参数
 
 ```js
-screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+screen.lockOrientationUniversal =
+  screen.lockOrientation ||
+  screen.mozLockOrientation ||
+  screen.msLockOrientation;
 
 if (screen.lockOrientationUniversal("landscape-primary")) {
   // 方向已锁定成功
@@ -60,9 +65,14 @@ if (screen.lockOrientationUniversal("landscape-primary")) {
 ### 使用 `Array` 参数
 
 ```js
-screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+screen.lockOrientationUniversal =
+  screen.lockOrientation ||
+  screen.mozLockOrientation ||
+  screen.msLockOrientation;
 
-if (screen.lockOrientationUniversal(["landscape-primary", "landscape-secondary"])) {
+if (
+  screen.lockOrientationUniversal(["landscape-primary", "landscape-secondary"])
+) {
   // 方向已锁定成功
 } else {
   // 方向锁定失败
@@ -84,4 +94,4 @@ if (screen.lockOrientationUniversal(["landscape-primary", "landscape-secondary"]
 - {{domxref("Screen.orientation")}}
 - {{domxref("Screen.unlockOrientation()")}}
 - {{domxref("Screen.onorientationchange")}}
-- [控制屏幕方向](/zh-CN/docs/Managing_screen_orientation)
+- [控制屏幕方向](/zh-CN/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

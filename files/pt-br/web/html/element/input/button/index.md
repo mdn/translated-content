@@ -1,15 +1,53 @@
 ---
 title: <input type="button">
-slug: Web/HTML/Element/Input/button
+slug: Web/HTML/Element/input/button
 ---
 
 {{HTMLSidebar}}
 
-Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como um simples botão, que podem ser programados para controlar funcionalidades customizadas em qualquer lugar de uma página web quando for atribuído um evento (tipicamente para um evento {{event("click")}}).
+Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como um simples botão, que podem ser programados para controlar funcionalidades customizadas em qualquer lugar de uma página web quando for atribuído um evento (tipicamente para um evento [`click`](/pt-BR/docs/Web/API/Element/click_event)).
 
-{{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
 
-> **Note:** **Nota**: Enquanto elementos `<input>` do tipo `button` ainda são perfeitamente válidos, os novos elementos {{HTMLElement("button")}} são agora os favoráveis meios para criar botões. Uma etiqueta de texto (label) para um {{HTMLElement("button")}} pode ser inserida entre uma tag de abertura e outra de fechamento, podendo ser incluídas até imagens.
+```html interactive-example
+<input class="styled" type="button" value="Add to favorites" />
+```
+
+```css interactive-example
+.styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgb(220 0 0 / 100%);
+  background-image: linear-gradient(
+    to top left,
+    rgb(0 0 0 / 20%),
+    rgb(0 0 0 / 20%) 30%,
+    rgb(0 0 0 / 0%)
+  );
+  box-shadow:
+    inset 2px 2px 3px rgb(255 255 255 / 60%),
+    inset -2px -2px 3px rgb(0 0 0 / 60%);
+}
+
+.styled:hover {
+  background-color: rgb(255 0 0 / 100%);
+}
+
+.styled:active {
+  box-shadow:
+    inset -2px -2px 3px rgb(255 255 255 / 60%),
+    inset 2px 2px 3px rgb(0 0 0 / 60%);
+}
+```
+
+> [!NOTE]
+> Enquanto elementos `<input>` do tipo `button` ainda são perfeitamente válidos, os novos elementos {{HTMLElement("button")}} são agora os favoráveis meios para criar botões. Uma etiqueta de texto (label) para um {{HTMLElement("button")}} pode ser inserida entre uma tag de abertura e outra de fechamento, podendo ser incluídas até imagens.
 
 <table class="properties">
   <tbody>
@@ -23,13 +61,13 @@ Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como u
     </tr>
     <tr>
       <td><strong>Eventos</strong></td>
-      <td>{{event("click")}}</td>
+      <td>[`click`](/pt-BR/docs/Web/API/Element/click_event)</td>
     </tr>
     <tr>
       <td><strong>Atributos comuns suportados</strong></td>
       <td>
-        {{htmlattrxref("type", "input")}}, e
-        {{htmlattrxref("value", "input")}}
+        <a href="/pt-BR/docs/Web/HTML/Element/input#type"><code>type</code></a>, e
+        <a href="/pt-BR/docs/Web/HTML/Element/input#value"><code>value</code></a>
       </td>
     </tr>
     <tr>
@@ -45,10 +83,10 @@ Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como u
 
 ## Value
 
-Seu atributo {{htmlattrxref("value", "input")}} de um elemento `<input type="button">` contém uma {{domxref("DOMString")}} que é usado como uma etiqueta (label) de um botão
+Seu atributo [`value`](/pt-BR/docs/Web/HTML/Element/input#value) de um elemento `<input type="button">` contém uma {{domxref("DOMString")}} que é usado como uma etiqueta (label) de um botão
 
 ```html
-<input type="button" value="Click Me">
+<input type="button" value="Click Me" />
 ```
 
 {{EmbedLiveSample("summary-example3", 650, 30)}}
@@ -56,7 +94,7 @@ Seu atributo {{htmlattrxref("value", "input")}} de um elemento `<input type="but
 Se você não especificar um `value`, você obtém um botão vazio:
 
 ```html
-<input type="button">
+<input type="button" />
 ```
 
 {{EmbedLiveSample("summary-example1", 650, 30)}}
@@ -67,95 +105,96 @@ Elementos `<input type="button">` não possuem comportamento padrão (seu primos
 
 ### Um simples botão
 
-Nós iremos começar criando um simples botão com um evento {{event("click")}} que inicia nossa máquina (bem, ele altera o `value` do botão e o contéudo texto do seguinte parágrafo):
+Nós iremos começar criando um simples botão com um evento [`click`](/pt-BR/docs/Web/API/Element/click_event) que inicia nossa máquina (bem, ele altera o `value` do botão e o contéudo texto do seguinte parágrafo):
 
 ```html
 <form>
-  <input type="button" value="Start machine">
+  <input type="button" value="Start machine" />
 </form>
 <p>The machine is stopped.</p>
 ```
 
 ```js
-const button = document.querySelector('input');
-const paragraph = document.querySelector('p');
+const button = document.querySelector("input");
+const paragraph = document.querySelector("p");
 
-button.addEventListener('click', updateButton);
+button.addEventListener("click", updateButton);
 
 function updateButton() {
-  if (button.value === 'Start machine') {
-    button.value = 'Stop machine';
-    paragraph.textContent = 'The machine has started!';
+  if (button.value === "Start machine") {
+    button.value = "Stop machine";
+    paragraph.textContent = "The machine has started!";
   } else {
-    button.value = 'Start machine';
-    paragraph.textContent = 'The machine is stopped.';
+    button.value = "Start machine";
+    paragraph.textContent = "The machine is stopped.";
   }
 }
 ```
 
-O script recebe uma referência para o objeto {{domxref("HTMLInputElement")}} representando o `<input>` no DOM, salvando esta referência na variável `button`. {{domxref("EventTarget.addEventListener", "addEventListener()")}} é então usado para criar uma função que será chamada quando o evento {{event("click")}} for executado no botão.
+O script recebe uma referência para o objeto {{domxref("HTMLInputElement")}} representando o `<input>` no DOM, salvando esta referência na variável `button`. {{domxref("EventTarget.addEventListener", "addEventListener()")}} é então usado para criar uma função que será chamada quando o evento [`click`](/pt-BR/docs/Web/API/Element/click_event) for executado no botão.
 
 {{EmbedLiveSample("A_simple_button", 650, 100)}}
 
 ### Adicionando atalhos de teclados aos botões
 
-Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the {{htmlattrxref("accesskey")}} global attribute.
+Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the [`accesskey`](/pt-BR/docs/Web/HTML/Global_attributes#accesskey) global attribute.
 
 In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination; see [accesskey](/pt-BR/docs/Web/HTML/Global_attributes/accesskey) for a useful list of those).
 
 ```html
 <form>
-  <input type="button" value="Start machine" accesskey="s">
+  <input type="button" value="Start machine" accesskey="s" />
 </form>
 <p>The machine is stopped.</p>
 ```
 
 ```js hidden
-const button = document.querySelector('input');
-const paragraph = document.querySelector('p');
+const button = document.querySelector("input");
+const paragraph = document.querySelector("p");
 
-button.addEventListener('click', updateButton);
+button.addEventListener("click", updateButton);
 
 function updateButton() {
-  if (button.value === 'Start machine') {
-    button.value = 'Stop machine';
-    paragraph.textContent = 'The machine has started!';
+  if (button.value === "Start machine") {
+    button.value = "Stop machine";
+    paragraph.textContent = "The machine has started!";
   } else {
-    button.value = 'Start machine';
-    paragraph.textContent = 'The machine is stopped.';
+    button.value = "Start machine";
+    paragraph.textContent = "The machine is stopped.";
   }
 }
 ```
 
 {{EmbedLiveSample("Adding_keyboard_shortcuts_to_buttons", 650, 100)}}
 
-> **Note:** The problem with the above example of course is that the user will not know what the access key is! In a real site, you'd have to provide this information in a way that doesn't intefere with the site design (for example by providing an easily accessible link that points to information on what the site accesskeys are).
+> [!NOTE]
+> The problem with the above example of course is that the user will not know what the access key is! In a real site, you'd have to provide this information in a way that doesn't intefere with the site design (for example by providing an easily accessible link that points to information on what the site accesskeys are).
 
 ### Desativando e ativando um botão
 
-To disable a button, simply specify the {{htmlattrxref("disabled")}} global attribute on it, like so:
+To disable a button, simply specify the [`disabled`](/pt-BR/docs/Web/HTML/Global_attributes#disabled) global attribute on it, like so:
 
 ```html
-<input type="button" value="Disable me" disabled>
+<input type="button" value="Disable me" disabled />
 ```
 
 You can enable and disable buttons at run time by simply setting `disabled` to `true` or `false`. In this example our button starts off enabled, but if you press it, it is disabled using `button.disabled = true`. A {{domxref("WindowTimers.setTimeout","setTimeout()")}} function is then used to reset the button back to its enabled state after two seconds.
 
 ```html hidden
-<input type="button" value="Enabled">
+<input type="button" value="Enabled" />
 ```
 
 ```js hidden
-const button = document.querySelector('input');
+const button = document.querySelector("input");
 
-button.addEventListener('click', disableButton);
+button.addEventListener("click", disableButton);
 
 function disableButton() {
   button.disabled = true;
-  button.value = 'Disabled';
-  window.setTimeout(function() {
+  button.value = "Disabled";
+  window.setTimeout(function () {
     button.disabled = false;
-    button.value = 'Enabled';
+    button.value = "Enabled";
   }, 2000);
 }
 ```
@@ -169,21 +208,21 @@ The example below shows this in action. This is very similar to the previous exa
 ```html hidden
 <fieldset>
   <legend>Button group</legend>
-  <input type="button" value="Button 1">
-  <input type="button" value="Button 2">
-  <input type="button" value="Button 3">
+  <input type="button" value="Button 1" />
+  <input type="button" value="Button 2" />
+  <input type="button" value="Button 3" />
 </fieldset>
 ```
 
 ```js hidden
-const button = document.querySelector('input');
-const fieldset = document.querySelector('fieldset');
+const button = document.querySelector("input");
+const fieldset = document.querySelector("fieldset");
 
-button.addEventListener('click', disableButton);
+button.addEventListener("click", disableButton);
 
 function disableButton() {
   fieldset.disabled = true;
-  window.setTimeout(function() {
+  window.setTimeout(function () {
     fieldset.disabled = false;
   }, 2000);
 }
@@ -191,7 +230,8 @@ function disableButton() {
 
 {{EmbedLiveSample("Hidden_code_2", 650, 60)}}
 
-> **Note:** Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.
+> [!NOTE]
+> Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the [`autocomplete`](/pt-BR/docs/Web/HTML/Element/button#autocomplete) attribute to control this feature.
 
 ## Validação
 
@@ -203,9 +243,14 @@ The below example shows a very simple drawing app created using a {{htmlelement(
 
 ```html
 <div class="toolbar">
-  <input type="color" aria-label="select pen color">
-  <input type="range" min="2" max="50" value="30" aria-label="select pen size"><span class="output">30</span>
-  <input type="button" value="Clear canvas">
+  <input type="color" aria-label="select pen color" />
+  <input
+    type="range"
+    min="2"
+    max="50"
+    value="30"
+    aria-label="select pen size" /><span class="output">30</span>
+  <input type="button" value="Clear canvas" />
 </div>
 
 <canvas class="myCanvas">
@@ -227,7 +272,8 @@ body {
   padding: 5px;
 }
 
-input[type="color"], input[type="button"] {
+input[type="color"],
+input[type="button"] {
   width: 90%;
   margin: 0 auto;
   display: block;
@@ -244,29 +290,29 @@ span {
 ```
 
 ```js
-var canvas = document.querySelector('.myCanvas');
-var width = canvas.width = window.innerWidth;
-var height = canvas.height = window.innerHeight-85;
-var ctx = canvas.getContext('2d');
+var canvas = document.querySelector(".myCanvas");
+var width = (canvas.width = window.innerWidth);
+var height = (canvas.height = window.innerHeight - 85);
+var ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'rgb(0,0,0)';
-ctx.fillRect(0,0,width,height);
+ctx.fillStyle = "rgb(0,0,0)";
+ctx.fillRect(0, 0, width, height);
 
 var colorPicker = document.querySelector('input[type="color"]');
 var sizePicker = document.querySelector('input[type="range"]');
-var output = document.querySelector('.output');
+var output = document.querySelector(".output");
 var clearBtn = document.querySelector('input[type="button"]');
 
 // covert degrees to radians
 function degToRad(degrees) {
-  return degrees * Math.PI / 180;
-};
+  return (degrees * Math.PI) / 180;
+}
 
 // update sizepicker output value
 
-sizePicker.oninput = function() {
+sizePicker.oninput = function () {
   output.textContent = sizePicker.value;
-}
+};
 
 // store mouse pointer coordinates, and whether the button is pressed
 var curX;
@@ -274,29 +320,46 @@ var curY;
 var pressed = false;
 
 // update mouse pointer coordinates
-document.onmousemove = function(e) {
-  curX = (window.Event) ? e.pageX : e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
-  curY = (window.Event) ? e.pageY : e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
-}
+document.onmousemove = function (e) {
+  curX = window.Event
+    ? e.pageX
+    : e.clientX +
+      (document.documentElement.scrollLeft
+        ? document.documentElement.scrollLeft
+        : document.body.scrollLeft);
+  curY = window.Event
+    ? e.pageY
+    : e.clientY +
+      (document.documentElement.scrollTop
+        ? document.documentElement.scrollTop
+        : document.body.scrollTop);
+};
 
-canvas.onmousedown = function() {
+canvas.onmousedown = function () {
   pressed = true;
 };
 
-canvas.onmouseup = function() {
+canvas.onmouseup = function () {
   pressed = false;
-}
+};
 
-clearBtn.onclick = function() {
-  ctx.fillStyle = 'rgb(0,0,0)';
-  ctx.fillRect(0,0,width,height);
-}
+clearBtn.onclick = function () {
+  ctx.fillStyle = "rgb(0,0,0)";
+  ctx.fillRect(0, 0, width, height);
+};
 
 function draw() {
-  if(pressed) {
+  if (pressed) {
     ctx.fillStyle = colorPicker.value;
     ctx.beginPath();
-    ctx.arc(curX, curY-85, sizePicker.value, degToRad(0), degToRad(360), false);
+    ctx.arc(
+      curX,
+      curY - 85,
+      sizePicker.value,
+      degToRad(0),
+      degToRad(360),
+      false,
+    );
     ctx.fill();
   }
 
@@ -308,12 +371,9 @@ draw();
 
 {{EmbedLiveSample("Examples", '100%', 600)}}
 
-## Específicações
+## Especificações
 
-| Specification                                                                                                                        | Status                           | Comments |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}} | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}}     | {{Spec2('HTML5 W3C')}}     |          |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
@@ -323,4 +383,4 @@ draw();
 
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
 - The more modern {{HTMLElement("button")}} element.
-- [Compatibility of CSS properties](/pt-BR/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- [Compatibility of CSS properties](/pt-BR/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

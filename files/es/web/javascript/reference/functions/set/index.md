@@ -1,8 +1,6 @@
 ---
 title: setter
 slug: Web/JavaScript/Reference/Functions/set
-translation_of: Web/JavaScript/Reference/Functions/set
-original_slug: Web/JavaScript/Referencia/Funciones/set
 ---
 
 {{jsSidebar("Funciones")}}
@@ -19,6 +17,7 @@ La sintaxis **`set`** asocia la propiedad de un objeto a una función que será 
 ### Parámetros
 
 - _`prop`_
+
   - : El nombre de la propiedad a asociar con la función dada.
 
 - _`val`_
@@ -33,7 +32,7 @@ En JavaScript, un setter puede ser usado para ejecutar una función donde sea qu
 Tenga en cuenta lo siguiente al trabajar con setters:
 
 - Puede tener un identificador ya sea number o string;
-- Debe tener exactamente un parámentro (ver [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) para más información);
+- Debe tener exactamente un parámentro (ver [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) para más información);
 - No debe aparecer en un objeto de notación literal con otro `set` o con otra entrada de datos con la misma propiedad.
   ( `{ set x(v) { }, set x(v) { } }` y `{ x: ..., set x(v) { } }` están prohibidos )
 
@@ -48,12 +47,12 @@ var lenguaje = {
   set actual(mensaje) {
     this.log.push(mensaje);
   },
-  log: []
-}
-lenguaje.actual='ES';
+  log: [],
+};
+lenguaje.actual = "ES";
 console.log(lenguaje.log); // ['ES']
 
-lenguaje.actual='FR';
+lenguaje.actual = "FR";
 console.log(lenguaje.log); // ['ES', 'FR']
 ```
 
@@ -61,7 +60,7 @@ Note que `actual` no está definido y cualquier intento de accederlo devolverá 
 
 ### Eliminando un setter con el operador `delete`
 
-Si desea eliminar el setter, puede simplemente aplicar [`delete`](/es/docs/Web/JavaScript/Referencia/Operadores/delete) en él:
+Si desea eliminar el setter, puede simplemente aplicar [`delete`](/es/docs/Web/JavaScript/Reference/Operators/delete) en él:
 
 ```js
 delete lenguaje.actual;
@@ -72,30 +71,35 @@ delete lenguaje.actual;
 Para añadir un setter a un objeto _existente_, use {{jsxref("Object.defineProperty()")}}
 
 ```js
-consr o = {a: 0};
+const o = { a: 0 };
 
-Object.defineProperty(o, 'b', {
-  set: function (x) { this.a = x / 2; }
+Object.defineProperty(o, "b", {
+  set: function (x) {
+    this.a = x / 2;
+  },
 });
 
 o.b = 10; // Ejecuta el setter, el cual asigna 10 / 2 (5) a la propiedad 'a'
-console.log(o.a) // 5
+console.log(o.a); // 5
 ```
 
 ### Usando un nombre de propiedad computado
 
-> **Nota:** Propiedades computadas son 'experimental technology'_,_ parte de la propuesta para ECMAScript 6, y no está soportado en todos los navegadores. Dará error de sintaxis en entornos no soportados.
+> [!NOTE]
+> Propiedades computadas son 'experimental technology'_,_ parte de la propuesta para ECMAScript 6, y no está soportado en todos los navegadores. Dará error de sintaxis en entornos no soportados.
 
 ```js
-const expr = 'foo';
+const expr = "foo";
 
 var obj = {
-  baz: 'bar',
-  set [expr](v) { this.baz = v; }
+  baz: "bar",
+  set [expr](v) {
+    this.baz = v;
+  },
 };
 
 console.log(obj.baz); // "bar"
-obj.foo = "baz";      // ejecuta el setter
+obj.foo = "baz"; // ejecuta el setter
 console.log(obj.baz); // "baz"
 ```
 
@@ -105,12 +109,7 @@ console.log(obj.baz); // "baz"
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.functions.set")}}
-
-## Notas específicas para SpiderMonkey-specific
-
-- Comenzando con [JavaScript 1.8.1](/es/docs/Web/JavaScript/New_in_JavaScript/1.8.1), los setters ya no son llamados cuando se definen las propiedades en los inicializadores de objetos y arrays.
-- De SpiderMonkey 38 en adelante, un setter con un {{jsxref("Functions/rest_parameters", "rest parameter", "", 1)}} es un {{jsxref("SyntaxError")}} conforme a la especificación ES6.
+{{Compat}}
 
 ## Ver también
 
@@ -119,4 +118,4 @@ console.log(obj.baz); // "baz"
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Definiendo Getters y Setters](/es/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) en la Guía JavaScript
+- [Definiendo Getters y Setters](/es/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters) en la Guía JavaScript

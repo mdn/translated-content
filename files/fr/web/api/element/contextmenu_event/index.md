@@ -1,14 +1,6 @@
 ---
-title: 'Element : évènement contextmenu'
+title: "Element : évènement contextmenu"
 slug: Web/API/Element/contextmenu_event
-tags:
-  - API
-  - DOM
-  - Element
-  - Event
-  - Reference
-  - contextemenu
-translation_of: Web/API/Element/contextmenu_event
 ---
 
 {{APIRef}}
@@ -56,9 +48,9 @@ Dans cet exemple, on annule l'action par défaut de l'évènement `contextmenu` 
 ### JavaScript
 
 ```js
-noContext = document.getElementById('noContextMenu');
+noContext = document.getElementById("noContextMenu");
 
-noContext.addEventListener('contextmenu', e => {
+noContext.addEventListener("contextmenu", (e) => {
   e.preventDefault();
 });
 ```
@@ -77,7 +69,7 @@ noContext.addEventListener('contextmenu', e => {
 
 ## Voir aussi
 
-- [Une introduction aux évènements](/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements)
+- [Une introduction aux évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events)
 - D'autres évènements connexes
 
   - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)

@@ -1,14 +1,6 @@
 ---
 title: element.getAttribute
 slug: Web/API/Element/getAttribute
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Méthode
-  - Reference
-translation_of: Web/API/Element/getAttribute
 ---
 
 {{APIRef("DOM")}}
@@ -18,7 +10,7 @@ translation_of: Web/API/Element/getAttribute
 ## Syntaxe
 
 ```js
-let attribut = element.getAttribute(nom_attribut)
+let attribut = element.getAttribute(nom_attribut);
 ```
 
 où
@@ -30,8 +22,9 @@ où
 
 Soit l'HTML :
 
-```js
-const div1 = document.getElementById("div1");
+```html
+<!-- exemple de div en HTML -->
+<div id="div1">Hi Champ!</div>
 ```
 
 Exemple de JavaScript :
@@ -66,7 +59,7 @@ let nonce = script.getAttribute("nonce");
 // renvoie une chaine vide
 ```
 
-Plutôt que de tenter de lire le _nonce_ via l’attribut, utilisez la propriété {{domxref("HTMLOrForeignElement/nonce", "nonce")}} :
+Plutôt que de tenter de lire le _nonce_ via l'attribut, utilisez la propriété {{domxref("HTMLOrForeignElement/nonce", "nonce")}} :
 
 ```js
 let nonce = script.nonce;

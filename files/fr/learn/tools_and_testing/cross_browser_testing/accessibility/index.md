@@ -1,20 +1,6 @@
 ---
 title: Gérer les problèmes courants d'accessibilité
 slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
-tags:
-  - Accessibilité
-  - Apprentissage
-  - Article
-  - CSS
-  - Clavier
-  - Débutant
-  - HTML
-  - JavaScript
-  - Outils
-  - navigateur croisé
-  - test
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibilité
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -66,17 +52,19 @@ Toutefois, ce serait faux de réduire l'accessibilité uniquement aux handicaps.
 - Les utilisateurs de vieux appareils qui n'ont pas les derniers navigateurs.
 - Les utilisateurs avec des appareils aux caractéristiques basses qui peuvent avoir des processeurs lents.
 
-D'une certaine manière, la totalité de ce module concerne l'accessibilité — le test en navigateur croisé assure que vos sites peuvent être utilisé par le plus de personne possible. [Qu'est-ce que l'accessibilité ?](/fr/Apprendre/a11y/What_is_accessibility) décrit plus largement et précisément l'accessibilité que cet article ne le fait.
+D'une certaine manière, la totalité de ce module concerne l'accessibilité — le test en navigateur croisé assure que vos sites peuvent être utilisé par le plus de personne possible. [Qu'est-ce que l'accessibilité ?](/fr/docs/Learn/Accessibility/What_is_accessibility) décrit plus largement et précisément l'accessibilité que cet article ne le fait.
 
-Cela dit, cet article couvrira les problèmes en navigateur croisé et de test entourant les personnes avec des handicaps, et comment ils utilisent le Web. Nous avons déjà parlé des autres domaines comme le [responsive design](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS#Les_probl%C3%A8mes_de_responsive_design) et la [performance](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Les_probl%C3%A8mes_de_performance) à d'autres endroits dans ce module.
+Cela dit, cet article couvrira les problèmes en navigateur croisé et de test entourant les personnes avec des handicaps, et comment ils utilisent le Web. Nous avons déjà parlé des autres domaines comme le [responsive design](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#les_problèmes_de_responsive_design) et la [performance](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#les_problèmes_de_performance) à d'autres endroits dans ce module.
 
-> **Note :** Comme beaucoup de choses dans le développement web, l'accessibilité ne concerne pas la totale réussite ou échec ; l'accessibilité à 100% est quasiment impossible à atteindre pour tous les contenus, spécialement quand les sites deviennent plus complexes. Il s'agit plutôt de faire un effort pour rendre votre contenu accessible au plus grand nombre de personnes possible, avec du code de prévention, et se tenir aux meilleures pratiques.
+> [!NOTE]
+> Comme beaucoup de choses dans le développement web, l'accessibilité ne concerne pas la totale réussite ou échec ; l'accessibilité à 100% est quasiment impossible à atteindre pour tous les contenus, spécialement quand les sites deviennent plus complexes. Il s'agit plutôt de faire un effort pour rendre votre contenu accessible au plus grand nombre de personnes possible, avec du code de prévention, et se tenir aux meilleures pratiques.
 
 ## Problèmes d'accessibilité courants
 
 Dans cette section nous détaillerons certains des problèmes principaux qui se manifestent autour de l'accessibilité, liée à des technologies spécifiques, avec les bonnes pratiques à adopter, et quelques tests rapides que vous pouvez faire pour voir si vos sites vont dans le bon sens.
 
-> **Note :** L'accessibilité est moralement la bonne chose à faire, est bonne pour les affaires (nombre élevé d'utilisateurs handicapés, utilisateurs sur des appareils mobiles, etc. représentent un segment du marché signifiant), mais c'est aussi illégal dans de nombreuses régions de la planète de ne pas rendre les propriétés du web accessibles aux personnes avec des handicaps. Pour plus d'informations, lisez [Accessibility guidlines and the law](/fr/docs/Learn/Accessibility/What_is_accessibility#Accessibility_guidelines_and_the_law).
+> [!NOTE]
+> L'accessibilité est moralement la bonne chose à faire, est bonne pour les affaires (nombre élevé d'utilisateurs handicapés, utilisateurs sur des appareils mobiles, etc. représentent un segment du marché signifiant), mais c'est aussi illégal dans de nombreuses régions de la planète de ne pas rendre les propriétés du web accessibles aux personnes avec des handicaps. Pour plus d'informations, lisez [Accessibility guidlines and the law](/fr/docs/Learn/Accessibility/What_is_accessibility#accessibility_guidelines_and_the_law).
 
 ### HTML
 
@@ -87,19 +75,20 @@ La sémantique HTML (où les éléments sont utilisés à leur fin prévues) est
 Le quick win le plus important en sémantique HTML et d'utiliser une structure de rubriques et de paragraphes pour votre contenu ; parce que les utilisateurs de lecteurs d'écran ont tendance à utiliser les rubriques d'un document comme indications pour trouver le contenu qu'il recherche plus rapidement. Si votre contenu n'a pas de rubriques, tout ce qu'ils auraient c'est un énorme mur de texte sans aucune indication pour trouver quelque chose. Exemples de bon et de mauvais HTML :
 
 ```html example-bad
-<font size="7">My heading</font>
-<br><br>
+<font size="7">My heading</font> <br /><br />
 This is the first section of my document.
-<br><br>
+<br /><br />
 I'll add another paragraph here too.
-<br><br>
+<br /><br />
 <font size="5">My subheading</font>
-<br><br>
-This is the first subsection of my document. I'd love people to be able to find this content!
-<br><br>
+<br /><br />
+This is the first subsection of my document. I'd love people to be able to find
+this content!
+<br /><br />
 <font size="5">My 2nd subheading</font>
-<br><br>
-This is the second subsection of my content. I think is more interesting than the last one.
+<br /><br />
+This is the second subsection of my content. I think is more interesting than
+the last one.
 ```
 
 ```html example-good
@@ -111,11 +100,17 @@ This is the second subsection of my content. I think is more interesting than th
 
 <h2>My subheading</h2>
 
-<p>This is the first subsection of my document. I'd love people to be able to find this content!</p>
+<p>
+  This is the first subsection of my document. I'd love people to be able to
+  find this content!
+</p>
 
 <h2>My 2nd subheading</h2>
 
-<p>This is the second subsection of my content. I think is more interesting than the last one.</p>
+<p>
+  This is the second subsection of my content. I think is more interesting than
+  the last one.
+</p>
 ```
 
 De plus, votre contenu doit avoir un sens logique dans son code source — vous pourrez toujours le placer où vous voulez en utilisant du CSS plus tard, mais vous devez avoir un bon code source avec lequel commencer.
@@ -131,7 +126,7 @@ Comme test, vous pouvez désactiver le CSS d'un site et voir à quel point il es
 
 Certaines fonctionnalités HTML peuvent être sélectionnées en utilisant uniquement le clavier — c'est le comportement par défaut, disponible depuis les prémices du web. Les éléments qui ont cette capacité sont les plus communs qui permettent à l'utilisateur d'interagir avec les pages web, à savoir les liens, {{htmlelement("button")}}s, et les éléments des formulaire comme {{htmlelement("input")}}.
 
-Vous pouvez essayer ceci en utilisant notre exemple [native-keyboard-accessibility.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) — ouvrez le dans un nouvel onglet, et essayez de presser la touche tab ; après quelques pressions, vous devriez voir la focalisation du tab commencer à se déplacer entre les différents éléments focalisables ; les éléments focalisés ont un style de mise en avant par défaut dans tous les navigateurs (cela diffère peu entre les différents navigateurs) donc vous pouvez dire quel éléments est focalisé.
+Vous pouvez essayer ceci en utilisant notre exemple [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) — ouvrez le dans un nouvel onglet, et essayez de presser la touche tab ; après quelques pressions, vous devriez voir la focalisation du tab commencer à se déplacer entre les différents éléments focalisables ; les éléments focalisés ont un style de mise en avant par défaut dans tous les navigateurs (cela diffère peu entre les différents navigateurs) donc vous pouvez dire quel éléments est focalisé.
 
 ![](button-focused-unfocused.png)
 
@@ -142,50 +137,61 @@ Notez que différents navigateurs peuvent avoir différentes options de contrôl
 - Firefox pour Max ne tabule pas par défaut. Pour l'activer, vous devez aller dans _Préférences_ > _Avancées_ > _Général_, puis décochez "Toujours utiliser les curseurs pour naviguer dans une page". Ensuite, vous devez ouvrir les Préférences Système de votre Mac, puis sélectionnez le boutons radio _Tous les contrôles_.
 - Safari ne vous permet pas de naviguer avec tab par défaut ; pour l'activer, vous devez ouvrir les _Préférences_ de Safari, allez dans Avancées, et cochez la case à cocher _Presser tab pour mettre en avant chaque item sur une page web_.
 
-> **Attention :** Vous devez jouer ce genre de test sur toutes les pages que vous écrivez — assurez-vous que la fonctionnalité peut être accessible par le clavier.
+> [!WARNING]
+> Vous devez jouer ce genre de test sur toutes les pages que vous écrivez — assurez-vous que la fonctionnalité peut être accessible par le clavier.
 
 Cet exemple souligne l'importance de l'utilisation de la sémantique correcte d'élément pour le travail correct. C'est possible de styler _n'importe quel_ élément pour qu'il ressemble à un lien ou un bouton avec le CSS, et de le faire se comporter comme un lien ou un bouton avec JavaScript, mais ils ne seront toujours pas des liens ou des boutons, et vous perdrez beaucoup de l'accessibilité que ces éléments vous fournissent pour rien. Donc ne le faîte pas si vous pouvez l'éviter.
 
 Un autre conseil — comme vu dans notre exemple, vous pouvez contrôler comment vos éléments focalisables paraissent quand ils sont focalisés, en utilisant la pseudo-class [:focus](/fr/docs/Web/CSS/:focus). C'est une bonne idée de doubler les styles focus et hover, comme ça vos utilisateurs auront un indice visuel qu'un contrôle fera quelque chose lorsqu'il sera activé, qu'ils utilisent la souris ou le clavier :
 
 ```css
-a:hover, input:hover, button:hover, select:hover,
-a:focus, input:focus, button:focus, select:focus {
+a:hover,
+input:hover,
+button:hover,
+select:hover,
+a:focus,
+input:focus,
+button:focus,
+select:focus {
   font-weight: bold;
 }
 ```
 
-> **Note :** Si vous décidez de retirer le style focus par défaut en utilisant du CSS, assurez-vous de le remplacer par autre chose qui s'accorde au mieux avec votre design — c'est un outil d'accessibilité de grande valeur, qui ne doit pas être supprimé.
+> [!NOTE]
+> Si vous décidez de retirer le style focus par défaut en utilisant du CSS, assurez-vous de le remplacer par autre chose qui s'accorde au mieux avec votre design — c'est un outil d'accessibilité de grande valeur, qui ne doit pas être supprimé.
 
 #### Intégrer l'accessibilité clavier
 
 Parfois ça n'est pas possible d'éviter la perte de l'accessibilité clavier. Vous pouvez avoir hérité d'un site où la sémantique n'est pas parfaite (peut-être que vous vous êtes retrouvé avec un CMS horrible qui génère des boutons créés avec des `<div>`s), ou que vous utilisez un contrôle complexe qui n'a pas d'accessibilité clavier intégré, comme l'élément {{htmlelement("video")}} (étonnamment, Opera est le seul navigateur qui vous permet de tabuler dans l'élément `<video>` avec les contrôles par défaut du navigateur). Vous avez quelques options ici :
 
-1. Créer des contrôles personnalisés en utilisant les éléments `<button>` (sur lequel nous pouvons tabuler par défaut !) et JavaScript pour les relier à leur fonction. Pour des bons exemples voir [Creating a cross-browser video player](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player).
+1. Créer des contrôles personnalisés en utilisant les éléments `<button>` (sur lequel nous pouvons tabuler par défaut !) et JavaScript pour les relier à leur fonction. Pour des bons exemples voir [Creating a cross-browser video player](/fr/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player).
 2. Créer des raccourcis clavier en utilisant JavaScript, les fonctions sont activés quand vous appuyez sur une certaine touche du clavier. Voir [Desktop mouse and keyboard controls](/fr/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) pour des exemples en rapport avec le jeu qui peuvent être adaptés à d'autres fins.
-3. Utilisez des approches intéressantes pour simuler le comportement d'un bouton. Prenez par exemple notre exemple [fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Nous donnons à nos faux boutons `<div>` la capacité d'être focalisé (y compris avec la tabulation) en donnant à chacun d'entre eux l'attribut `tabindex="0"` (voir l'[article tabindex](https://webaim.org/techniques/keyboard/tabindex) de WebAIM pour plus de détails utiles). Cela nous permet de tabuler sur les boutons, mais pas de les activer avec la toucher Entrée/Retour. Pour faire cela, nous devons ajouter ce petit bout de tromperie en JavaScript :
+3. Utilisez des approches intéressantes pour simuler le comportement d'un bouton. Prenez par exemple notre exemple [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Nous donnons à nos faux boutons `<div>` la capacité d'être focalisé (y compris avec la tabulation) en donnant à chacun d'entre eux l'attribut `tabindex="0"` (voir l'[article tabindex](https://webaim.org/techniques/keyboard/tabindex) de WebAIM pour plus de détails utiles). Cela nous permet de tabuler sur les boutons, mais pas de les activer avec la toucher Entrée/Retour. Pour faire cela, nous devons ajouter ce petit bout de tromperie en JavaScript :
 
-    ```js
-    document.onkeydown = function(e) {
-      if(e.keyCode === 13) { // The Enter/Return key
-        document.activeElement.onclick(e);
-      }
-    };
-    ```
+   ```js
+   document.onkeydown = function (e) {
+     if (e.keyCode === 13) {
+       // The Enter/Return key
+       document.activeElement.onclick(e);
+     }
+   };
+   ```
 
-    Ici nous ajoutons un listener à l'objet `document` pour détecter quand une touche a été appuyée sur le clavier. Nous vérifions quelle touche a été pressée avec la propriété d'évènement d'objet [keyCode](/fr/docs/Web/API/KeyboardEvent/keyCode) ; si c'est le code de la touche qui retourne Entrée/Retour, on exécute la fonction stockée dans le `onclick` du bouton en utilisant `document.activeElement.onclick()`. [`activeElement`](/fr/docs/Web/API/Document/activeElement) nous donne l'élément courant qui est focalisé sur la page.
+   Ici nous ajoutons un listener à l'objet `document` pour détecter quand une touche a été appuyée sur le clavier. Nous vérifions quelle touche a été pressée avec la propriété d'évènement d'objet [keyCode](/fr/docs/Web/API/KeyboardEvent/keyCode) ; si c'est le code de la touche qui retourne Entrée/Retour, on exécute la fonction stockée dans le `onclick` du bouton en utilisant `document.activeElement.onclick()`. [`activeElement`](/fr/docs/Web/API/Document/activeElement) nous donne l'élément courant qui est focalisé sur la page.
 
-> **Note :** Cette technique ne fonctionnera que si vous configurer vos propres gestionnaires d'évènement avec les propriétés de gestion d'évènement (par ex. `onclick`). `addEventListener` ne fonctionnera pas. C'est beaucoup de prises de tête pour construire la fonctionnalité de retour. Et il y a d'autres problèmes rattachés avec. Vaut mieux commencer par utiliser les bons éléments pour leurs buts initiaux.
+> [!NOTE]
+> Cette technique ne fonctionnera que si vous configurer vos propres gestionnaires d'évènement avec les propriétés de gestion d'évènement (par ex. `onclick`). `addEventListener` ne fonctionnera pas. C'est beaucoup de prises de tête pour construire la fonctionnalité de retour. Et il y a d'autres problèmes rattachés avec. Vaut mieux commencer par utiliser les bons éléments pour leurs buts initiaux.
 
 #### Les textes alternatifs
 
 Les textes alternatifs sont très importants pour l'accessibilité — si une personne a un trouble visuel ou auditif qui l'empêche de voir ou d'entendre un contenu, alors c'est un problème. Le texte alternatif le plus simple disponible est le modeste attribut `alt`, que nous devrions inclure dans toutes les images qui contiennent un contenu pertinent. Il peut contenir une description de l'image qui transmet clairement son sens et son contenu sur la page, pour être récupéré par un lecteur d'écran et lu à l'utilisateur.
 
-> **Note :** Pour plus d'informations, lisez [Text alternatives](/fr/docs/Learn/Accessibility/HTML#Text_alternatives).
+> [!NOTE]
+> Pour plus d'informations, lisez [Text alternatives](/fr/docs/Learn/Accessibility/HTML#text_alternatives).
 
 L'oubli de texte alt peut être testé de bien des façons, par exemple en utilisant [les outils d'audit](#les_outils_daudit) d'accessibilité.
 
-Le texte alt est légèrement plus complexe pour du contenu vidéo ou audio. Il y a une manière de gérer l'affichage du texte (par ex. les sous-titres) et de les afficher quand la vidéo est jouée, sous le forme de l'élément {{htmlelement("track")}}, et du format [WebVTT](/fr/docs/Web/API/Web_Video_Text_Tracks_Format) (voir [Ajouter des légendes et des sous-titres à des vidéos HTML5](/fr/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) pour un tutoriel détaillé). [La compatibilité entre navigateur](/fr/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#Compatibilit%C3%A9_entre_navigateurs) pour cette fonction est assez bonne, mais si vous voulez fournir des textes alternatifs pour de l'audio ou supporter les vieux navigateurs, une simple transcription du texte présenté quelque part sur la page ou sur une page séparée peut être une bonne idée.
+Le texte alt est légèrement plus complexe pour du contenu vidéo ou audio. Il y a une manière de gérer l'affichage du texte (par ex. les sous-titres) et de les afficher quand la vidéo est jouée, sous le forme de l'élément {{htmlelement("track")}}, et du format [WebVTT](/fr/docs/Web/API/WebVTT_API) (voir [Ajouter des légendes et des sous-titres à des vidéos HTML5](/fr/docs/Web/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) pour un tutoriel détaillé). [La compatibilité entre navigateur](/fr/docs/Web/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#compatibilité_entre_navigateurs) pour cette fonction est assez bonne, mais si vous voulez fournir des textes alternatifs pour de l'audio ou supporter les vieux navigateurs, une simple transcription du texte présenté quelque part sur la page ou sur une page séparée peut être une bonne idée.
 
 #### Relations et contexte entre élément
 
@@ -195,13 +201,15 @@ La solution pour les textes de type lien c'est que les personnes utilisant des l
 
 Le suivant sur notre liste, l'élément de formulaire {{htmlelement("label")}} est une des fonctionnalités centrales qui nous permet de rendre les formulaires accessibles. Le problème avec les formulaires c'est que vous avez besoin de libellés pour dire quelle donnée doit être entrée dans chaque champs du formulaire. Chaque libellé doit être inclus dans un {{htmlelement("label")}} pour le relier clairement à son champs partenaire (chaque valeur de l'attribut `for` de `<label>` doit aller avec la valeur de l'`id` de l'élément du formulaire), et cela aura du sens même si le code source n'est pas totalement logique (ce qui pour être tout à fait juste devrait être fait).
 
-> **Note :** Lisez [Meaningful text labels](/fr/docs/Learn/Accessibility/HTML#Meaningful_text_labels), pour plus d'information à propos des textes de type lien et les libellés des formulaires.
+> [!NOTE]
+> Lisez [Meaningful text labels](/fr/docs/Learn/Accessibility/HTML#meaningful_text_labels), pour plus d'information à propos des textes de type lien et les libellés des formulaires.
 
-Pour terminer, un mot rapide sur les tableaux de données. Un tableau de données basique peut être écrit avec des indications très simples (voir `bad-table.html` [en direct](http://mdn.github.io/learning-area/accessibility/html/bad-table.html), et [la source](https://github.com/mdn/learning-area/blob/master/accessibility/html/bad-table.html)), mais il y a des problèmes — il n'y a aucun moyen pour un utilisateur de lecteur d'écran d'associer des lignes ou des colonnes ensembles comme un groupe de données — pour faire cela vous devez connaître les lignes d'en-têtes, et si elles se dirigent en lignes, colonnes, etc. Cela ne peut être fait qu'en visuel pour un tel tableau.
+Pour terminer, un mot rapide sur les tableaux de données. Un tableau de données basique peut être écrit avec des indications très simples (voir `bad-table.html` [en direct](https://mdn.github.io/learning-area/accessibility/html/bad-table.html), et [la source](https://github.com/mdn/learning-area/blob/master/accessibility/html/bad-table.html)), mais il y a des problèmes — il n'y a aucun moyen pour un utilisateur de lecteur d'écran d'associer des lignes ou des colonnes ensembles comme un groupe de données — pour faire cela vous devez connaître les lignes d'en-têtes, et si elles se dirigent en lignes, colonnes, etc. Cela ne peut être fait qu'en visuel pour un tel tableau.
 
 Si vous regardez plutôt notre exemple `punk-band-complete.html` ([direct](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html), [source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-complete.html)), vous pouvez voir plusieurs aides à l'accessibilité en place, comme les entêtes de tableau ({{htmlelement("th")}} et les attributs `scope`), l'élément {{htmlelement("caption")}}, etc.
 
-> **Note :** Lisez [Accessible data tables](/fr/docs/Learn/Accessibility/HTML#Accessible_data_tables), pour plus d'information à propos des tableaux accessibles.
+> [!NOTE]
+> Lisez [Accessible data tables](/fr/docs/Learn/Accessibility/HTML#accessible_data_tables), pour plus d'information à propos des tableaux accessibles.
 
 ### CSS
 
@@ -215,15 +223,16 @@ Il y a quelques autres considérations que vous devriez prendre en compte.
 
 #### Couleur et contraste
 
-Lorsque vous choisissez une palette de couleurs pour votre site web, vous devez vous assurer que la couleur du texte (au premier plan) contraste bien avec la couleur d'arrière-plan. Votre design peut avoir l'air cool, mais ce n'est pas bon si les personnes avec un handicap visuel comme le daltonisme ne peuvent pas lire votre contenu. Utilisez un outil comme le [Color Contrast Checker](http://webaim.org/resources/contrastchecker/) de WebAIM si votre palette contraste suffisamment.
+Lorsque vous choisissez une palette de couleurs pour votre site web, vous devez vous assurer que la couleur du texte (au premier plan) contraste bien avec la couleur d'arrière-plan. Votre design peut avoir l'air cool, mais ce n'est pas bon si les personnes avec un handicap visuel comme le daltonisme ne peuvent pas lire votre contenu. Utilisez un outil comme le [Color Contrast Checker](https://webaim.org/resources/contrastchecker/) de WebAIM si votre palette contraste suffisamment.
 
 Une autre astuce est de ne pas compter sur une couleur seule pour les indications/informations, comme ça ne sera pas bon pour ceux qui ne peuvent pas voir la couleur. Plutôt que de marquer en rouge les champs requis d'un formulaire, par exemple, marquez-les avec un astérisque et en rouge.
 
-> **Note :** un contraste élevé permettra également à toute personnes utilisant un smartphone ou une tablette avec un écran brillant de mieux lire les pages dans un environnement lumineux, comme avec la lumière du soleil.
+> [!NOTE]
+> Un contraste élevé permettra également à toute personnes utilisant un smartphone ou une tablette avec un écran brillant de mieux lire les pages dans un environnement lumineux, comme avec la lumière du soleil.
 
 #### Cacher du contenu
 
-Il y a plusieurs cas où un design visuel requerra que tout le contenu ne soit pas montré d'un seul coup. Par exemple, dans notre [Exemple de boîte d'info avec onglets](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)) nous avons trois panneau d'information, mais nous les [positionnons](/fr/docs/Learn/CSS/CSS_layout/Positioning) les uns sur les autres et fournissons des onglets qui peuvent être cliqués pour montrer chacun d'entre eux (c'est aussi accessible au clavier — vous pouvez utiliser alternativement Tab et Entrée/Retour pour les sélectionner).
+Il y a plusieurs cas où un design visuel requerra que tout le contenu ne soit pas montré d'un seul coup. Par exemple, dans notre [Exemple de boîte d'info avec onglets](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)) nous avons trois panneau d'information, mais nous les [positionnons](/fr/docs/Learn/CSS/CSS_layout/Positioning) les uns sur les autres et fournissons des onglets qui peuvent être cliqués pour montrer chacun d'entre eux (c'est aussi accessible au clavier — vous pouvez utiliser alternativement Tab et Entrée/Retour pour les sélectionner).
 
 ![](tabbed-info-box.png)
 
@@ -231,7 +240,7 @@ Les utilisateurs de lecteur d'écran ne se soucient pas vraiment de cela — ils
 
 D'un autre côté, vous ne devriez pas utiliser {{cssxref("visibility")}}`:hidden` ou {{cssxref("display")}}`:none`, parce qu'il cache le contenu aux lecteurs d'écran. A moins que, bien entendu, il y est une bonne raison qui justifie que ce contenu soit caché aux lecteurs d'écran.
 
-> **Note :** [Invisible Content Just for Screen Reader Users](http://webaim.org/techniques/css/invisiblecontent/) vous décrira beaucoup de détails utilesà propos de ce sujet.
+> **Note :** [Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/) vous décrira beaucoup de détails utilesà propos de ce sujet.
 
 ### JavaScript
 
@@ -244,9 +253,9 @@ Normalement, une fonctionnalité simple doit marcher uniquement avec le HTML en 
 - Fournir une validation de formulaire côté client, qui informe rapidement les utilisateurs des problèmes avec leurs entrées dans le formulaire, sans qu'ils aient à attendre que le serveur vérifie les données. Si ça n'est pas disponible, le formulaire marchera toujours, mais la validation sera peut-être plus lente.
 - Fournir des contrôles personnalisés pour les `<video>`s HTML5 qui sont accessibles pour les utilisateurs uniquement au clavier (comme nous l'avons dit auparavant, les contrôles par défaut de navigateur ne sont pas accessibles au clavier dans la plupart des navigateurs).
 
-> **Note :** [Accessible JavaScript](http://webaim.org/techniques/javascript/) de WebAIM fourni des renseignements approfondis à propos des considérations pour du JavaScript accessible.
+> **Note :** [Accessible JavaScript](https://webaim.org/techniques/javascript/) de WebAIM fourni des renseignements approfondis à propos des considérations pour du JavaScript accessible.
 
-Les implémentations JavaScript plus complexes peuvent mener à des problèmes avec l'accessibilité — vous devez faire ce que vous pouvez. par exemple, cela ne serait pas raisonnable d'attendre de vous que vous fassiez un jeu complexe 3D écrit avec [WebGL](/fr/Apprendre/WebGL) accessible à 100% pour une personne aveugle, mais vous pouvez implémenter des [contrôles clavier](/fr/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) pour qu'il soit utilisable pour un utilisateur sans souris, et réaliser une palette de couleurs suffisamment contrastée pour être utilisable par les personnes avec des lacunes pour percevoir les couleurs.
+Les implémentations JavaScript plus complexes peuvent mener à des problèmes avec l'accessibilité — vous devez faire ce que vous pouvez. par exemple, cela ne serait pas raisonnable d'attendre de vous que vous fassiez un jeu complexe 3D écrit avec [WebGL](/fr/docs/Apprendre/WebGL) accessible à 100% pour une personne aveugle, mais vous pouvez implémenter des [contrôles clavier](/fr/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) pour qu'il soit utilisable pour un utilisateur sans souris, et réaliser une palette de couleurs suffisamment contrastée pour être utilisable par les personnes avec des lacunes pour percevoir les couleurs.
 
 #### Fonctionnalité complexe
 
@@ -294,14 +303,15 @@ Il y a plusieurs outils d'audit disponibles que vous pouvez placer sur vos pages
 Observons un exemple, en utilisant Tenon.
 
 1. Aller sur la [page d'accueil de Tenon](https://tenon.io).
-2. Entrez l'URL de notre exemple de [bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html) dans l'entrée texte en haut de la page (ou l'URL d'une autre page que vous aimeriez analyser) et appuyez sur _Analyse your Webpage_.
+2. Entrez l'URL de notre exemple de [bad-semantics.html](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html) dans l'entrée texte en haut de la page (ou l'URL d'une autre page que vous aimeriez analyser) et appuyez sur _Analyse your Webpage_.
 3. Défilez vers le bas jusqu'à que vous trouviez la section d'erreur/signalement, comme montré ci-dessous.
 
 ![](tenon-screenshot.png)
 
 Il y a également des options que vous pouvez examiner (voir le lien _Show Options_ vers le haut de la page), ainsi qu'une API pour utiliser Tenon comme un programme.
 
-> **Note :** De tels outils ne sont pas suffisant pour résoudre tous vos problèmes d'accessibilité en tant que tel. Vous devrez les combiner, savoir et expérience, test utilisateur, etc. pour vous faire une image exacte.
+> [!NOTE]
+> De tels outils ne sont pas suffisant pour résoudre tous vos problèmes d'accessibilité en tant que tel. Vous devrez les combiner, savoir et expérience, test utilisateur, etc. pour vous faire une image exacte.
 
 ### Les outils d'automatisation
 
@@ -310,7 +320,7 @@ Il y a également des options que vous pouvez examiner (voir le lien _Show Optio
 - [aXe pour Chrome](http://bitly.com/aXe-Chrome)
 - [aXe pour Firefox](http://bit.ly/aXe-Firefox)
 
-Cela ajoute un onglet accessibilité aux outils de développeur du navigateur, nous avons installé la version pour Firefox, puis nous l'avons utilisé pour auditer notre exemple [bad-table.html](http://mdn.github.io/learning-area/accessibility/html/bad-table.html). Nous obtenons les résultats suivants :
+Cela ajoute un onglet accessibilité aux outils de développeur du navigateur, nous avons installé la version pour Firefox, puis nous l'avons utilisé pour auditer notre exemple [bad-table.html](https://mdn.github.io/learning-area/accessibility/html/bad-table.html). Nous obtenons les résultats suivants :
 
 ![](aXe-screenshot.png)
 
@@ -322,13 +332,13 @@ Il faut définitivement tester avec un lecteur d'écran pour s'habituer à comme
 
 - Certain sont des produits commerciaux payants, comme [JAWS](http://www.freedomscientific.com/Products/Blindness/JAWS) (Windows) et [Window Eyes](http://www.gwmicro.com/window-eyes/) (Windows).
 - Certains sont des produits gratuits, comme [NVDA](http://www.nvaccess.org/) (Windows), [ChromeVox](http://www.chromevox.com/) (Chrome, Windows, et Mac OS X), et [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
-- Certains sont compris dans le système d'exploitation, comme like [VoiceOver](http://www.apple.com/accessibility/osx/voiceover/) (Mac OS X et iOS), [ChromeVox](http://www.chromevox.com/) (sur les Chromebooks), et [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
+- Certains sont compris dans le système d'exploitation, comme like [VoiceOver](https://www.apple.com/accessibility/osx/voiceover/) (Mac OS X et iOS), [ChromeVox](http://www.chromevox.com/) (sur les Chromebooks), et [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
 La plupart du temps, les lecteurs d'écran sont des applis séparées, qui s'exécutent sur le système d'exploitation hôte et peuvent lire des pages web, mais aussi du texte dans d'autres appli. Ce n'est pas toujours le cas (ChromeVox est une extension navigateur), mais ça l'est souvent. Les lecteurs d'écran ont tendance à agir de manière légèrement différente et ont des contrôles différents, donc vous devrez consulter la documentation pour le lecteur d'écran que vous avez choisi pour obtenir tous les détails — cela dit, il fonctionne tous à peu près de la même manière.
 
 Commençons à effectuer quelques tests avec deux lecteurs d'écran différents pour vous donner une idée générale de comment ils fonctionnent et de comment tester avec eux.
 
-> **Note :** [Designing for Screen Reader Compatibility](http://webaim.org/techniques/screenreader/) de WebAIM fournit des informations utiles à propos de l'utilisation des lecteurs d'écran et qu'est-ce qui est le plus efficace pour les lecteurs d'écran. Aller également voir [Screen Reader User Survey #6 Results](http://webaim.org/projects/screenreadersurvey6/#used) pour des statistiques intéressantes concernant l'utilisation de lecteur d'écran.
+> **Note :** [Designing for Screen Reader Compatibility](https://webaim.org/techniques/screenreader/) de WebAIM fournit des informations utiles à propos de l'utilisation des lecteurs d'écran et qu'est-ce qui est le plus efficace pour les lecteurs d'écran. Aller également voir [Screen Reader User Survey #6 Results](https://webaim.org/projects/screenreadersurvey6/#used) pour des statistiques intéressantes concernant l'utilisation de lecteur d'écran.
 
 #### VoiceOver
 
@@ -336,7 +346,8 @@ VoiceOver (VO) est gratuit avec votre Mac/iPhone/iPad, donc c'est utile pour tes
 
 Pour le démarrer, pressez Cmd + Fn + F5. Si vous n'avez jamais utilisé VO auparavant, vous obtiendrez un écran de bienvenue où vous pouvez choisir de démarrer VO ou de ne pas le démarrer, et vous parcourrez un tutoriel utile pour apprendre à comment l'utiliser. Pour l'arrêter, pressez Cmd + Fn + F5 à nouveau.
 
-> **Note :** Vous devriez parcourir le tutoriel au moins une fois — il est vraiment très utile pour en apprendre à propos de VO.
+> [!NOTE]
+> Vous devriez parcourir le tutoriel au moins une fois — il est vraiment très utile pour en apprendre à propos de VO.
 
 Lorsque VO est démarré, l'affichage ressemblera à peu près à cela, mais vous verrez une boîte noire en bas à gauche de l'écran qui contient l'information sur quoi est-ce que VO est actuellement sélectionné. La sélection courante sera également mise en avant, avec une bordure noire — cette mise en avant est connue comme le **curseur VO**.
 
@@ -492,7 +503,8 @@ NVDA sera maintenant actif sur votre ordinateur.
 
 Pour utiliser NVDA, vous aller beaucoup utiliser le "modificateur NVDA" — c'est une touche que vous devez presser en plus de l'actuel raccourci NVDA pour qu'elles fonctionnent. Utiliser un modificateur comme celui-ci est courant avec les lecteurs d'écran, pour leur permettre de garder leurs propres commandes en évitant d'entrer en conflit avec d'autres commandes. Dans le cas de NVDA, le modificateur peut aussi être Insert (par défaut), ou VerrMaj (peut être choisi en cochant la première case à cocher dans la boîte de dialogue de bienvenue avant d'appuyer sur _OK_).
 
-> **Note :** NVDA est plus subtile que VoiceOver en termes de comment il met en valeur là où il est et qu'est-ce qu'il fait. Lorsque vous défilez à travers des rubriques, listes, etc. les éléments que vous sélectionnez seront généralement mis à avant avec un contour subtile, mais ça n'est pas toujours le cas pour toutes les choses. Si vous vous retrouvez complètement perdu, vous pouvez appuyer sur Ctrl + F5 pour rafraîchir la page courante et recommencer en haut de la page.
+> [!NOTE]
+> NVDA est plus subtile que VoiceOver en termes de comment il met en valeur là où il est et qu'est-ce qu'il fait. Lorsque vous défilez à travers des rubriques, listes, etc. les éléments que vous sélectionnez seront généralement mis à avant avec un contour subtile, mais ça n'est pas toujours le cas pour toutes les choses. Si vous vous retrouvez complètement perdu, vous pouvez appuyer sur Ctrl + F5 pour rafraîchir la page courante et recommencer en haut de la page.
 
 NVDA a beaucoup de commandes clavier, et nous n'allons pas toutes les lister ici. Les principales dont vous aurez besoin pour tester une page web sont dans le tableau suivant. Dans les raccourcis clavier, "NVDA" veut dire "le modificateur NVDA".
 
@@ -650,35 +662,35 @@ NVDA a beaucoup de commandes clavier, et nous n'allons pas toutes les lister ici
 
 Maintenant que vous vous êtes habitué à utiliser un lecteur d'écran, nous aimerions que vous vous habituiez à faire quelques tests d'accessibilité rapides, pour vous faire une idée de comment les lecteurs d'écran se débrouillent avec les bonnes et mauvaises caractéristiques d'une page web :
 
-- Regardez [good-semantics.html](http://mdn.github.io/learning-area/accessibility/html/good-semantics.html), et notez comment les titres sont trouvés pas le lecteur d'écran et rendus disponibles pour être utilisés en navigation. Regardez maintenant [bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html), et observez comme le lecteur d'écran n'obtient aucune de ces informations. Imaginez à quel point cela peut être pénible lorsque vous essayez de naviguer sur une page de texte vraiment longue.
-- Regardez [good-links.html](http://mdn.github.io/learning-area/accessibility/html/good-links.html), et notez comment est-ce qu'ils ont du sens vus hors contexte. Ce n'est pas le cas avec [bad-links.html](http://mdn.github.io/learning-area/accessibility/html/bad-links.html) — ceux sont juste tous des "click here".
-- Regardez [good-form.html](http://mdn.github.io/learning-area/accessibility/html/good-form.html), et regardez comment les entrées du formulaire sont décrites en utilisant leurs libellés parce que nous avons utilisé l'élément `<label>` correctement. Dans [bad-form.html](http://mdn.github.io/learning-area/accessibility/html/bad-form.html), ils ne sont que des "blank" sur toute la ligne, totalement inutiles.
-- Regardez notre exemple [punk-bands-complete.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html), et observez comment le lecteur d'écran est capable d'associer les colonnes et les lignes de contenu et de les lires toutes ensembles, parce que nous avons défini les entêtes correctement. Dans [bad-table.html](http://mdn.github.io/learning-area/accessibility/html/bad-table.html), aucune des cellules ne peut être associée du tout. Notez que NVDA a étonnamment l'air d'assez bien se comporter lorsque vous n'avez qu'un seul tableau sur une page ; à la place vous pouvez essayer [WebAIM's table test page](http://webaim.org/articles/nvda/tables.htm).
+- Regardez [good-semantics.html](https://mdn.github.io/learning-area/accessibility/html/good-semantics.html), et notez comment les titres sont trouvés pas le lecteur d'écran et rendus disponibles pour être utilisés en navigation. Regardez maintenant [bad-semantics.html](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html), et observez comme le lecteur d'écran n'obtient aucune de ces informations. Imaginez à quel point cela peut être pénible lorsque vous essayez de naviguer sur une page de texte vraiment longue.
+- Regardez [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html), et notez comment est-ce qu'ils ont du sens vus hors contexte. Ce n'est pas le cas avec [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html) — ceux sont juste tous des "click here".
+- Regardez [good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html), et regardez comment les entrées du formulaire sont décrites en utilisant leurs libellés parce que nous avons utilisé l'élément `<label>` correctement. Dans [bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html), ils ne sont que des "blank" sur toute la ligne, totalement inutiles.
+- Regardez notre exemple [punk-bands-complete.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html), et observez comment le lecteur d'écran est capable d'associer les colonnes et les lignes de contenu et de les lires toutes ensembles, parce que nous avons défini les entêtes correctement. Dans [bad-table.html](https://mdn.github.io/learning-area/accessibility/html/bad-table.html), aucune des cellules ne peut être associée du tout. Notez que NVDA a étonnamment l'air d'assez bien se comporter lorsque vous n'avez qu'un seul tableau sur une page ; à la place vous pouvez essayer [WebAIM's table test page](https://webaim.org/articles/nvda/tables.htm).
 - Jetez un œil à [WAI-ARIA live regions example](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm) que nous avons vu plus tôt, et observez comment le lecteur d'écran va continuer de lire la section qui se met à constamment à jour dès qu'elle se met à jour.
 
 ### Test utilisateur
 
-Comme mentionné plus haut, vous ne pouvez pas uniquement compter sur les outils automatisés pour déterminer les problèmes d'accessibilité sur votre site. Il est recommandé que lorsque vous établissez votre plan de test, vous devez inclure quelques groupes d'utilisateur d'accessibilité si c'est possible (voir notre section [Test Utilisateur](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Les_tests_utilisateurs) plus tôt dans ce cours pour plus de contexte). Essayez d'inclure des utilisateurs de lecteur d'écran, des utilisateurs exclusifs au clavier, des utilisateurs malentendants, et peut-être d'autres groupes encore, selon vos besoins.
+Comme mentionné plus haut, vous ne pouvez pas uniquement compter sur les outils automatisés pour déterminer les problèmes d'accessibilité sur votre site. Il est recommandé que lorsque vous établissez votre plan de test, vous devez inclure quelques groupes d'utilisateur d'accessibilité si c'est possible (voir notre section [Test Utilisateur](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#les_tests_utilisateurs) plus tôt dans ce cours pour plus de contexte). Essayez d'inclure des utilisateurs de lecteur d'écran, des utilisateurs exclusifs au clavier, des utilisateurs malentendants, et peut-être d'autres groupes encore, selon vos besoins.
 
 ## Checklist de tests d'accessibilité
 
 La liste suivante vous fournit une checklist à suivre pour vous assurer de mener à bien les tests d'accessibilité recommandés pour votre projet :
 
-1. Assurez-vous que votre HTML est sémantiquement correct au possible. [Le valider](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS#La_validation) est un bon début, comme utiliser un [outil d'Audit](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools).
+1. Assurez-vous que votre HTML est sémantiquement correct au possible. [Le valider](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#la_validation) est un bon début, comme utiliser un [outil d'Audit](#Auditing_tools).
 2. Vérifiez que votre contenu a du sens lorsque le CSS est désactivé.
-3. Assurez-vous que votre fonctionnalité est [accessible au clavier](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility). Testez en utilisant Tab, Retour/Entrée, etc.
-4. Assurez-vous que votre contenu non-textuel a un [texte alternatif](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Text_alternatives). Un [Outil d'audit](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools) est bien pour repérer ce type de problèmes.
-5. Assurez-vous que votre [contraste de couleurs](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Color_and_color_contrast) est acceptable, en utilisant un outil de vérification approprié.
-6. Assurez-vous que le [contenu caché](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Hiding_content) est visible par les lecteurs d'écran.
+3. Assurez-vous que votre fonctionnalité est [accessible au clavier](#Using_native_keyboard_accessibility). Testez en utilisant Tab, Retour/Entrée, etc.
+4. Assurez-vous que votre contenu non-textuel a un [texte alternatif](#Text_alternatives). Un [Outil d'audit](#Auditing_tools) est bien pour repérer ce type de problèmes.
+5. Assurez-vous que votre [contraste de couleurs](#Color_and_color_contrast) est acceptable, en utilisant un outil de vérification approprié.
+6. Assurez-vous que le [contenu caché](#Hiding_content) est visible par les lecteurs d'écran.
 7. Assurez-vous qu'une fonctionnalité est utilisable sans JavaScript autant que possible.
 8. Utilisez ARIA pour améliorer l'accessibilité quand c'est approprié.
-9. Exécutez votre site dans un [Outil d'audit](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools).
+9. Exécutez votre site dans un [Outil d'audit](#Auditing_tools).
 10. Testez avec un lecteur d'écran.
 11. Incluez une politique/déclaration d'accessibilité à un endroit que l'on peut trouver sur votre site pour dire ce que vous avez fait.
 
 ## Trouver de l'aide
 
-Il y a bien d'autres problèmes que vous allez rencontrer avec l'accessibilité ; la chose la plus importante à vraiment savoir est comment trouver des réponses en ligne. Consultez l'article [la section Trouver de l'aide](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS#Trouver_de_l'aide) de l'article sur le HTML et le CSS pour des bonnes directions.
+Il y a bien d'autres problèmes que vous allez rencontrer avec l'accessibilité ; la chose la plus importante à vraiment savoir est comment trouver des réponses en ligne. Consultez l'article [la section Trouver de l'aide](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#trouver_de_l'aide) de l'article sur le HTML et le CSS pour des bonnes directions.
 
 ## Résumé
 
@@ -687,14 +699,3 @@ Espérons que cet article vous aura donné des bonnes connaissances concernant l
 Dans le prochain article nous nous tournerons vers la fonctionnalité de détection dans plus de détail.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## Dans ce module
-
-- [Introduction au test en navigateur croisé](/fr/docs/)
-- [Stratégies pour mener à bien vos tests](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Gérer les problèmes courants en HTML et CSS](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS)
-- [Gérer les problèmes courants en JavaScript](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

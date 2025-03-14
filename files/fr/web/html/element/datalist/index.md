@@ -1,22 +1,33 @@
 ---
-title: '<datalist> : l''élément de liste des données'
+title: "<datalist> : l'élément de liste des données"
 slug: Web/HTML/Element/datalist
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - HTML5
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/datalist
-browser-compat: html.elements.datalist
 ---
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<datalist>`** contient un ensemble d'éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) qui représentent les valeurs possibles pour d'autres contrôles.
+L'élément HTML **`<datalist>`** contient un ensemble d'éléments [`<option>`](/fr/docs/Web/HTML/Element/option) qui représentent les valeurs possibles pour d'autres contrôles.
 
-{{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;datalist&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="ice-cream-choice">Choose a flavor:</label>
+<input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+
+<datalist id="ice-cream-flavors">
+  <option value="Chocolate"></option>
+  <option value="Coconut"></option>
+  <option value="Mint"></option>
+  <option value="Strawberry"></option>
+  <option value="Vanilla"></option>
+</datalist>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -95,15 +106,17 @@ Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Globa
 ### HTML
 
 ```html
-<label for="monNavigateur">Veuillez choisir un navigateur parmi ceux-ci :</label>
-<input list="navigateurs" id="monNavigateur" name="monNavigateur"/>
+<label for="monNavigateur"
+  >Veuillez choisir un navigateur parmi ceux-ci :</label
+>
+<input list="navigateurs" id="monNavigateur" name="monNavigateur" />
 <datalist id="navigateurs">
-  <option value="Chrome">
-  <option value="Firefox">
-  <option value="Internet Explorer">
-  <option value="Opera">
-  <option value="Safari">
-  <option value="Microsoft Edge">
+  <option value="Chrome"></option>
+  <option value="Firefox"></option>
+  <option value="Internet Explorer"></option>
+  <option value="Opera"></option>
+  <option value="Safari"></option>
+  <option value="Microsoft Edge"></option>
 </datalist>
 ```
 
@@ -121,5 +134,5 @@ Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Globa
 
 ## Voir aussi
 
-- L'élément [`<input>`](/fr/docs/Web/HTML/Element/Input) et plus précisément son attribut [`list`](/fr/docs/Web/HTML/Element/Input#attr-list).
-- L'élément [`<option>`](/fr/docs/Web/HTML/Element/Option).
+- L'élément [`<input>`](/fr/docs/Web/HTML/Element/input) et plus précisément son attribut [`list`](/fr/docs/Web/HTML/Element/input#attr-list).
+- L'élément [`<option>`](/fr/docs/Web/HTML/Element/option).

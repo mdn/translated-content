@@ -7,9 +7,9 @@ slug: Web/HTTP/Headers/Cross-Origin-Resource-Policy
 
 La respuesta del encabezado HTTP **`Cross-Origin-Resource-Policy`** transmite un deseo de que el navegador bloquee peticiones no-cors cross-origin/cross-site al recurso dado
 
-| Tipo de encabezado                                                                               | {{Glossary("Response header", "Respuesta del encabezado")}} |
-| ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name", "Nombre prohibido del encabezado")}} | no                                                                               |
+| Tipo de encabezado                                                       | {{Glossary("Response header", "Respuesta del encabezado")}} |
+| ------------------------------------------------------------------------ | ----------------------------------------------------------- |
+| {{Glossary("Forbidden header name", "Nombre prohibido del encabezado")}} | no                                                          |
 
 ## Sintaxis
 
@@ -29,9 +29,9 @@ Cross-Origin-Resource-Policy: same-origin
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Cross-Origin-Resource-Policy")}}
+{{Compat}}
 
 ## Ver también
 

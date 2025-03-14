@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat32
 
 **`setFloat32()`** 从 [`DataView`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView)起始位置以 byte 为计数的指定偏移量 (byteOffset) 处储存一个 32-bit 数 (浮点型)。
 
-{{EmbedInteractiveExample("pages/js/dataview-setfloat32.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.setFloat32()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setFloat32(1, Math.PI);
+
+console.log(view.getFloat32(1));
+// Expected output: 3.1415927410125732
+```
 
 ## 语法
 
@@ -33,7 +44,7 @@ dataview.setFloat32(byteOffset, value [, littleEndian])
 - {{jsxref("RangeError")}}
   - : 如果 byteOffset 超出了视图能储存的值，就会抛出错误。
 
-## 例子
+## 示例
 
 ```js
 var buffer = new ArrayBuffer(8);

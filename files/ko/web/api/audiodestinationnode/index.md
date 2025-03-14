@@ -1,10 +1,8 @@
 ---
 title: AudioDestinationNode
 slug: Web/API/AudioDestinationNode
-tags:
-  - 오디오
-translation_of: Web/API/AudioDestinationNode
 ---
+
 {{APIRef()}}
 
 `AudioDestinationNode` 은 주어진 컨택스트의 음원의 종착점을 나타냅니다. 보통 스피커를 가리킵니다. 이는 또한 `OfflineAudioContext` 를 사용해 데이터가 녹음되는 노드가 되기도 합니다.
@@ -42,13 +40,13 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 ```
 
-To see a more complete implementation, check out one of our MDN Web Audio examples, such as [Voice-change-o-matic](http://mdn.github.io/voice-change-o-matic/) or [Violent Theremin](http://mdn.github.io/violent-theremin/).
+To see a more complete implementation, check out one of our MDN Web Audio examples, such as [Voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) or [Violent Theremin](https://mdn.github.io/violent-theremin/).
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

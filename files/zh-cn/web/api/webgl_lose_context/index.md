@@ -9,7 +9,8 @@ slug: Web/API/WEBGL_lose_context
 
 WebGL 扩展可以通过 {{domxref("WebGLRenderingContext.getExtension()")}} 方法来使用。更多信息可参阅 [WebGL 教程](/zh-CN/docs/Web/API/WebGL_API/Tutorial) 中的 [使用 WebGL 扩展](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions) 。
 
-> **备注：** 该扩展在 {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} 和 {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} 上下文中都是可用的。
+> [!NOTE]
+> 该扩展在 {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} 和 {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} 上下文中都是可用的。
 
 ## 方法
 
@@ -23,14 +24,18 @@ WebGL 扩展可以通过 {{domxref("WebGLRenderingContext.getExtension()")}} 方
 使用这个扩展，你可以模拟 [`webglcontextlost`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextlost_event) 和 [`webglcontextrestored`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event) 事件：
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 
-canvas.addEventListener('webglcontextlost', function(e) {
-  console.log(e);
-}, false);
+canvas.addEventListener(
+  "webglcontextlost",
+  function (e) {
+    console.log(e);
+  },
+  false,
+);
 
-gl.getExtension('WEBGL_lose_context').loseContext();
+gl.getExtension("WEBGL_lose_context").loseContext();
 
 // 打印了 "webglcontextlost" 类型的 WebGLContextEvent 事件。
 ```

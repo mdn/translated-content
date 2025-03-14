@@ -1,18 +1,13 @@
 ---
 title: Crea el lienzo (canvas) y dibuja en él
-slug: >-
-  Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
-translation_of: >-
-  Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
-original_slug: >-
-  Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Create_the_Canvas_and_draw_on_it
+slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 ---
 
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola")}}
 
-Este es el **primero** de los 10 pasos del [Tutorial del Lienzo (Canvas) para desarrollar juegos (Gamedev Canvas Tutorial)](/es/docs/Games/Workflows/Breakout_game_from_scratch). Puedes encontrar el código fuente como debería quedar tras completar esta lección en [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html).
+Este es el **primero** de los 10 pasos del [Tutorial del Lienzo (Canvas) para desarrollar juegos (Gamedev Canvas Tutorial)](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente como debería quedar tras completar esta lección en [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html).
 
 Antes de que podamos programar la parte funcional del juego, necesitamos crear la estructura básica de la página que lo va a contener. Podemos hacerlo utilizando HTML y el elemento {{htmlelement("canvas")}}.
 
@@ -21,25 +16,30 @@ Antes de que podamos programar la parte funcional del juego, necesitamos crear l
 La estructura del documento HTML es muy simple, porque todo el juego se visualizará dentro del elemento {{htmlelement("canvas")}}. Con tu editor de textos favorito, prepara un documento en blanco, guárdalo como `index.html` en un lugar adecuado, y escribe el siguiente código:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-      * { padding: 0; margin: 0; }
-      canvas { background: #eee; display: block; margin: 0 auto; }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      canvas {
+        background: #eee;
+        display: block;
+        margin: 0 auto;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="480" height="320"></canvas>
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
-
-<script>
-  // JavaScript code goes here
-</script>
-
-</body>
+    <script>
+      // JavaScript code goes here
+    </script>
+  </body>
 </html>
 ```
 
@@ -72,7 +72,7 @@ Podemos dibujar otras cosas aparte de rectángulos. Aquí hay un fragmento de c�
 
 ```js
 ctx.beginPath();
-ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
 ctx.fillStyle = "green";
 ctx.fill();
 ctx.closePath();
@@ -105,10 +105,11 @@ Aquí está el código fuente completo de la primera lección, ejecutándose en 
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","370")}}
 
-> **Nota:** cambia el tamaño y el color de las figuras.
+> [!NOTE]
+> Cambia el tamaño y el color de las figuras.
 
 ## Pasos siguientes
 
-Hemos preparado la estructura HTML básica y hemos aprendido un poquito a manejar el canvas. Para continuar, en el segundo capítulo averiguaremos cómo mover la bola en nuestro juego ([Mueve la bola](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola)).
+Hemos preparado la estructura HTML básica y hemos aprendido un poquito a manejar el canvas. Para continuar, en el segundo capítulo averiguaremos cómo mover la bola en nuestro juego ([Mueve la bola](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball)).
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola")}}

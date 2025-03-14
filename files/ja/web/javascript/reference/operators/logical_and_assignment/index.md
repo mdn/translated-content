@@ -7,12 +7,25 @@ slug: Web/JavaScript/Reference/Operators/Logical_AND_assignment
 
 論理積代入 (`x &&= y`) 演算子は、`x` が{{Glossary("truthy", "真値")}}である場合にのみ代入を行います。
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-and-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical AND assignment")}}
+
+```js interactive-example
+let a = 1;
+let b = 0;
+
+a &&= 2;
+console.log(a);
+// Expected output: 2
+
+b &&= 2;
+console.log(b);
+// Expected output: 0
+```
 
 ## 構文
 
 ```js
-expr1 &&= expr2
+expr1 &&= expr2;
 ```
 
 ## 解説
@@ -62,7 +75,7 @@ y &&= 0; // 0
 ## 関連情報
 
 - [論理積演算子 (&&)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND)
-- [Null 合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Null 合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [ビット論理積代入 (`&=`)](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
 - {{Glossary("Truthy", "真値")}}
 - {{Glossary("Falsy", "偽値")}}

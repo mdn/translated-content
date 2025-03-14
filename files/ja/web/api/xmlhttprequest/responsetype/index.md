@@ -1,21 +1,16 @@
 ---
-title: XMLHttpRequest.responseType
+title: "XMLHttpRequest: responseType プロパティ"
+short-title: responseType
 slug: Web/API/XMLHttpRequest/responseType
+l10n:
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 {{domxref("XMLHttpRequest")}} (XHR) の **`responseType`** プロパティは列挙型の文字列値で、レスポンスに含まれているデータの型を示します。
 
 作者がレスポンスの型を変更することもできます。 `responseType` の値として空文字列が設定された場合は、既定値である `text` が使用されます。
-
-## 構文
-
-```js
-var type = XMLHttpRequest.responseType;
-
-XMLHttpRequest.responseType = type;
-```
 
 ### 値
 
@@ -28,20 +23,17 @@ XMLHttpRequest.responseType = type;
 - `"blob"`
   - : `response` はバイナリーデータを含む {{domxref("Blob")}} オブジェクトです。
 - `"document"`
-  - : `response` は {{Glossary("HTML")}} の {{domxref("Document")}} または {{Glossary("XML")}} の {{domxref("XMLDocument")}} で、受信したデータの MIME タイプに基づいて適切な方になります。 [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)で、 XHR を使用して HTML コンテンツを読み取ることについて詳しく確認することができます。
+  - : `response` は {{Glossary("HTML")}} の {{domxref("Document")}} または {{Glossary("XML")}} の {{domxref("XMLDocument")}} で、受信したデータの MIME タイプに基づいて適切な方になります。 [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)で、 XHR を使用して HTML コンテンツを読み取ることについて詳しく確認することができます。
 - `"json"`
   - : `response` は {{Glossary("JSON")}} として受信したデータの内容を解釈して生成された JavaScript オブジェクトです。
 - `"text"`
-  - : `response` は {{domxref("DOMString")}} オブジェクトに入ったテキストです。
-- `"ms-stream"` {{non-standard_inline}}
-  - : `response` はストリーミングダウンロードの一部です。このレスポンス型はダウンロードリクエストでのみ利用可能で、 Internet Explorer のみが対応しています。
+  - : `response` は文字列に入ったテキストです。
 
-> **メモ:** `responseType` を特定の値に設定する場合は、サーバーが実際にその形式と互換性のあるレスポンスを送信していることを確認してください。サーバーが `responseType` に設定された値と互換性のないデータを返した場合、 {{domxref("XMLHttpRequest.response", "response")}} の値は `null` になります。
-</div>
+> **メモ:** `responseType` を特定の値に設定する場合は、サーバーが実際にその形式と互換性のあるレスポンスを送信していることを確認してください。サーバーが `responseType` に設定された値と互換性のないデータを返した場合、{{domxref("XMLHttpRequest.response", "response")}} の値は `null` になります。
 
 ### 例外
 
-- `InvalidAccessError`
+- `InvalidAccessError` {{domxref("DOMException")}}
   - : `responseType` の値の変更が同期モードの `XMLHttpRequest` 上で試みられたものの、ワーカー ({{domxref("Worker")}}) の中ではなかった場合。詳細については、下記の[同期 XHR の制限](#同期_xhr_の制限)を参照してください。
 
 ## 使用上の注意
@@ -66,6 +58,6 @@ XHR のリクエストは既定では非同期です。同期モードは、 `fa
 
 ## 関連情報
 
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [XMLHttpRequest 内の HTML](/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [XMLHttpRequest 内の HTML](/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
 - レスポンスデータ: {{domxref("XMLHttpRequest.response", "response")}}, {{domxref("XMLHttpRequest.responseText", "responseText")}}, {{domxref("XMLHttpRequest.responseXML", "responseXML")}}

@@ -1,8 +1,6 @@
 ---
 title: Element.clientHeight
 slug: Web/API/Element/clientHeight
-translation_of: Web/API/Element/clientHeight
-browser-compat: api.Element.clientHeight
 ---
 
 {{APIRef("DOM")}}
@@ -13,7 +11,8 @@ La propriété en lecture seule **`Element.clientHeight`** vaut zéro pour les �
 
 Lorsque `clientHeight` est utilisée sur l'élément racine (l'élément `<html>`), (ou sur `<body>` si le document est en mode de compatibilité (<i lang="en">quirks mode</i>)), c'est la hauteur de la zone d'affichage (<i lang="en">viewport</i>) (sans tenir compte des barres de défilement) qui est renvoyée. [Il s'agit ici d'un cas aux limites pour `clientHeight`](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-clientheight).
 
-> **Note :** Cette propriété sera arrondie en un entier. Si vous souhaitez utiliser une valeur décimale, vous pouvez utiliser [`element.getBoundingClientRect()`](/fr/docs/Web/API/Element/getBoundingClientRect).
+> [!NOTE]
+> Cette propriété sera arrondie en un entier. Si vous souhaitez utiliser une valeur décimale, vous pouvez utiliser [`element.getBoundingClientRect()`](/fr/docs/Web/API/Element/getBoundingClientRect).
 
 ## Syntaxe
 

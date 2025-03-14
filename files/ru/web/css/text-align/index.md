@@ -1,7 +1,6 @@
 ---
 title: text-align
 slug: Web/CSS/text-align
-translation_of: Web/CSS/text-align
 ---
 
 {{CSSRef}}
@@ -14,7 +13,7 @@ translation_of: Web/CSS/text-align
 
 ## Синтаксис
 
-[Формальный синтаксис](/ru/docs/CSS/Value_definition_syntax): {{csssyntax("text-align")}}
+[Формальный синтаксис](/ru/docs/Web/CSS/Value_definition_syntax): {{csssyntax("text-align")}}
 
 ```css
 text-align: left
@@ -53,7 +52,7 @@ text-align: inherit
 
 ## Примеры
 
-[Посмотреть живые примеры](/samples/cssref/text-align.html)
+[Посмотреть живые примеры](https://mdn.dev/archives/media/samples/cssref/text-align.html)
 
 ### Живые примеры
 

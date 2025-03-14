@@ -1,16 +1,9 @@
 ---
 title: RIL
 slug: Glossary/RIL
-tags:
-  - Firefox OS
-  - Glossaire
-  - Infrastructure
-  - Intro
-  - Mobile
-  - Téléphonie
-translation_of: Glossary/RIL
-original_slug: Glossaire/RIL
 ---
+
+{{GlossarySidebar}}
 
 Le RIL (Radio Interface Layer) est un élément du système d'exploitation mobile qui fait communiquer le logiciel de l'appareil avec le matériel du téléphone, radio ou modem.
 

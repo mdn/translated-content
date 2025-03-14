@@ -1,27 +1,22 @@
 ---
-title: HTMLDataElement.value
+title: HTMLDataElement：value 属性
 slug: Web/API/HTMLDataElement/value
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLDataElement")}} 接口的 **`value`** 属性返回反映 {{htmlattrxref("value", "data")}} HTML 属性的{{domxref("DOMString")}} 。
+{{domxref("HTMLDataElement")}} 接口的 **`value`** 属性返回反映 [`value`](/zh-CN/docs/Web/HTML/Element/data#value) HTML 属性的字符串。
 
-## Syntax
+### 值
 
-```plain
-var aValue = htmlDataElement.value
-htmlDataElement.value = aValue
-```
+一个字符串。
 
-### Value
-
-A {{domxref("DOMString")}}.
-
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}

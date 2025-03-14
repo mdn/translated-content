@@ -1,14 +1,6 @@
 ---
-title: 'SyntaxError: function statement requires a name'
+title: "SyntaxError: function statement requires a name"
 slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
-tags:
-  - IIEF
-  - 객체 메소드
-  - 구문 에러
-  - 자바스크립트
-  - 콜백 함수
-  - 함수 이름
-translation_of: Web/JavaScript/Reference/Errors/Unnamed_function_statement
 ---
 
 {{jsSidebar("Errors")}}
@@ -45,17 +37,15 @@ function () {
 대신 [함수 표현식](/ko/docs/Web/JavaScript/Reference/Operators/function)을 사용할 수 있습니다:
 
 ```js example-good
-var greet = function() {
-  return 'Hello world';
+var greet = function () {
+  return "Hello world";
 };
 ```
 
 또는, 선언하자마자 바로 실행되는 [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (Immediately Invoked Function Expression)를 사용할 수 있습니다. 이 경우 몇 개의 괄호가 더 필요합니다:
 
 ```js example-good
-(function () {
-
-})();
+(function () {})();
 ```
 
 ### 레이블을 붙인 함수
@@ -89,7 +79,7 @@ function Greeter() {
 var greeter = {
   german: function () {
     return "Moin";
-  }
+  },
 };
 ```
 

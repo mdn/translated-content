@@ -1,14 +1,6 @@
 ---
 title: Jeux 3D sur le web
 slug: Games/Techniques/3D_on_the_web
-tags:
-  - 3D
-  - Images
-  - Jeux
-  - WebGL
-  - WebVR
-  - three.js
-translation_of: Games/Techniques/3D_on_the_web
 ---
 
 {{GamesSidebar}}
@@ -42,15 +34,15 @@ Il est difficile d'imaginer un jeu sans la détection de collision — nous devo
 
 ### Réalité virtuelle sur le web
 
-Le concept de réalité virtuelle n'est pas nouveau, mais il est en train de conquérir le web grâce à des avancées matérielles telles que l' [Oculus Rift](https://www.oculus.com/en-us/rift/) et l'[API WebVR](/fr/docs/Web/API/WebVR_API) (actuellement expérimental) pour capturer les informations du matériel de réalité virtuelle et les rendre disponibles pour les applications JavaScript. Pour en savoir plus, lisez [WebVR - Réalité virtuelle pour le Web](/fr/docs/Games/Techniques/3D_on_the_web/WebVR).
+Le concept de réalité virtuelle n'est pas nouveau, mais il est en train de conquérir le web grâce à des avancées matérielles telles que l' [Oculus Rift](https://www.oculus.com/en-us/rift/) et l'[API WebVR](/fr/docs/Web/API/WebVR_API) (actuellement expérimental) pour capturer les informations du matériel de réalité virtuelle et les rendre disponibles pour les applications JavaScript. Pour en savoir plus, lisez [WebVR - Réalité virtuelle pour le Web](/fr/docs/Games/Techniques/3D_on_the_web/WebXR).
 
-Il y a aussi la [construction d'une démo de base avec l'article A-Frame](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) qui montre comment il est facile de construire des environnements 3D pour la réalité virtuelle en utilisant le framework [A-Frame](http://aframe.io/) .
+Il y a aussi la [construction d'une démo de base avec l'article A-Frame](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) qui montre comment il est facile de construire des environnements 3D pour la réalité virtuelle en utilisant le framework [A-Frame](https://aframe.io//) .
 
 ## L'essor des bibliothèques et des cadres
 
 Le codage de WebGL brut est assez complexe, mais vous aurez envie de le maîtriser à long terme, car vos projets seront plus avancés (consultez notre [documentation WebGL](/fr/docs/Web/API/WebGL_API) pour commencer). Pour les projets de monde réel, vous utiliserez probablement aussi un "framework" pour accélérer le développement et vous aider à gérer le projet. L'utilisation d'un "framework" pour les jeux 3D permet également d'optimiser les performances, car les outils que vous utilisez vous permettent de vous concentrer sur la construction du jeu.
 
-La bibliothèque 3D JavaScript la plus populaire est [Three.js](http://threejs.org/), un outil polyvalent qui rend les techniques 3D plus simples à implémenter. Il existe d'autres bibliothèques et cadres de développement de jeux populaires qui valent la peine d'être regardés ; [A-Frame](https://aframe.io), [PlayCanvas](https://playcanvas.com/) et [Babylon.js](http://www.babylonjs.com/) sont parmi les plus reconnaissables avec une documentation riche, des éditeurs en ligne et des communautés actives.
+La bibliothèque 3D JavaScript la plus populaire est [Three.js](https://threejs.org/), un outil polyvalent qui rend les techniques 3D plus simples à implémenter. Il existe d'autres bibliothèques et cadres de développement de jeux populaires qui valent la peine d'être regardés ; [A-Frame](https://aframe.io/), [PlayCanvas](https://playcanvas.com/) et [Babylon.js](https://www.babylonjs.com/) sont parmi les plus reconnaissables avec une documentation riche, des éditeurs en ligne et des communautés actives.
 
 ### Construction d'une démo de base avec A-Frame
 
@@ -84,17 +76,17 @@ Vous pouvez trouver tous les codes source de cette série de [démos sur GitHub]
 
 ### API
 
-- [Canvas API](/fr/docs/Web/HTML/Canvas)
+- [Canvas API](/fr/docs/Web/API/Canvas_API)
 - [WebGL API](/fr/docs/Web/API/WebGL_API)
 - [WebVR API](/fr/docs/Web/API/WebVR_API)
 
 ### Frameworks
 
-- [Three.js](http://threejs.org/)
+- [Three.js](https://threejs.org/)
 - [Whitestorm.js](http://whitestormjs.xyz/) (basé sur Three.js)
 - [PlayCanvas](https://playcanvas.com/)
-- [Babylon.js](http://www.babylonjs.com/)
-- [A-Frame](http://aframe.io/)
+- [Babylon.js](https://www.babylonjs.com/)
+- [A-Frame](https://aframe.io//)
 
 ### Tutorials
 

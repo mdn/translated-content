@@ -1,8 +1,9 @@
 ---
 title: Criptografía de clave simétrica
 slug: Glossary/Symmetric-key_cryptography
-translation_of: Glossary/Symmetric-key_cryptography
 ---
+
+{{GlossarySidebar}}
 
 La criptografía de clave simétrica es un término utilizado para los algoritmos criptográficos que utilizan la misma clave para el cifrado y el descifrado. La clave se suele llamar "clave simétrica" o "clave secreta".
 

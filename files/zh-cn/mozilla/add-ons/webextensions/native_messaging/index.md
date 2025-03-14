@@ -20,7 +20,7 @@ extension 必须在 manifest.json 中获得"nativeMessaging" [权限](/zh-CN/doc
 - 在 WebExtensions 中，原生应用的清单中的 "allowed_extensions" 字段是一个由 extension ID 组成的数组，而在 Chrome 中，清单中的 "allowed_origins" 字段是一个由 "chrome-extension" URLs 组成的数组
 - 原生应用清单的存储位置不一样
 
-Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensions-examples)有一个[完整的关于 native messaging 的例子](https://github.com/mdn/webextensions-examples/tree/master/native-messaging)，文章中的大部分代码片段均出于此。
+Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensions-examples)有一个[完整的关于 native messaging 的例子](https://github.com/mdn/webextensions-examples/tree/main/native-messaging)，文章中的大部分代码片段均出于此。
 
 ## 安装
 
@@ -35,7 +35,6 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 
 ```json
 {
-
   "description": "Native messaging example extension",
   "manifest_version": 2,
   "name": "Native messaging example",
@@ -60,7 +59,6 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
   },
 
   "permissions": ["nativeMessaging"]
-
 }
 ```
 
@@ -72,7 +70,8 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 
 关于原生应用清单的详细语法和路径规则，可参考 [原生应用清单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_manifests)。
 
-> **警告：** 除清单外，原生应用还**必需**配置路径规则，你可以参考 [原生应用清单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) 来配置路径。
+> [!WARNING]
+> 除清单外，原生应用还**必需**配置路径规则，你可以参考 [原生应用清单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) 来配置路径。
 
 这有一个例子，是关于 "ping_pong" 原生应用的清单：
 
@@ -82,7 +81,7 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
   "type": "stdio",
-  "allowed_extensions": [ "ping_pong@example.org" ]
+  "allowed_extensions": ["ping_pong@example.org"]
 }
 ```
 
@@ -91,7 +90,8 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 - 这个原生应用允许 ID 为 "ping_pong\@example.org" 的 extension 连接，并通过{{WebExtAPIRef("runtime")}} API 来传入信息
 - 这个原生应用本身存放在本机的 "/path/to/native-messaging/app/ping_pong.py" 中
 
-> **备注：** 对于 Windows：在上面的例子中，原生应用是一个 Python 脚本，它在 Windows 下可能是无法运行的。一个代替方案是提供一个 .bat 文件，并且在清单中指向这个 .bat 文件：
+> [!NOTE]
+> 对于 Windows：在上面的例子中，原生应用是一个 Python 脚本，它在 Windows 下可能是无法运行的。一个代替方案是提供一个 .bat 文件，并且在清单中指向这个 .bat 文件：
 >
 > ```json
 > {
@@ -99,7 +99,7 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 >   "description": "Example host for native messaging",
 >   "path": "c:\\path\\to\\native-messaging\\app\\ping_pong_win.bat",
 >   "type": "stdio",
->   "allowed_extensions": [ "ping_pong@example.org" ]
+>   "allowed_extensions": ["ping_pong@example.org"]
 > }
 > ```
 >
@@ -117,7 +117,7 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 
 ### Extension 端
 
-你使用过 [messaging APIs](/zh-CN/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts) 与 content script 通信，与原生应用通信你应该非常熟悉，有 2 种方式：
+你使用过 [messaging APIs](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts) 与 content script 通信，与原生应用通信你应该非常熟悉，有 2 种方式：
 
 - 基于连接的通信
 - 无连接的通信（请求/响应 模式）
@@ -129,7 +129,7 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 当原生应用启动后，它被会传入 2 个参数：
 
 - 到原生应用清单的完整路径
-- （Firefox 55+）启动它的 [extension ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications)
+- （Firefox 55+）启动它的 [extension ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)
 
 原生应用会一直保持运行，直到 extension 调用 `Port.disconnect()` 或连接它的记录被结束。
 
@@ -170,7 +170,7 @@ browser.browserAction.onClicked.addListener(() => {
 每个消息都会创建一个新的原生应用实例。当原生应用启动时会被传入 2 个参数：
 
 - 到原生应用清单的完整路径
-- （Firefox 55+）启动它的 [extension ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications)
+- （Firefox 55+）启动它的 [extension ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)
 
 原生应用发送的第一条消息将会被作为对 `sendNativeMessage()` 响应，将会被传入回调函数中。
 
@@ -190,9 +190,7 @@ function onError(error) {
 */
 browser.browserAction.onClicked.addListener(() => {
   console.log("Sending:  ping");
-  var sending = browser.runtime.sendNativeMessage(
-    "ping_pong",
-    "ping");
+  var sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
   sending.then(onResponse, onError);
 });
 ```
@@ -253,7 +251,7 @@ while True:
 
 ## 常见问题 Troubleshooting
 
-如果有什么地方出错，可以检查[浏览器控制台](/zh-CN/Add-ons/WebExtensions/Debugging#Viewing_log_output)。原生应用发送的任何 stderr 都会被反应在浏览器控制台中。所以如果你已经运行了原生应用，你可以看到原生应用发出的所有错误信息。
+如果有什么地方出错，可以检查[浏览器控制台](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Debugging#viewing_log_output)。原生应用发送的任何 stderr 都会被反应在浏览器控制台中。所以如果你已经运行了原生应用，你可以看到原生应用发出的所有错误信息。
 
 如果你没有配置好原生应用，你应该会看到一些错误信息。
 

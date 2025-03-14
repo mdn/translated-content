@@ -1,14 +1,16 @@
 ---
 title: invalid
 slug: Web/API/HTMLInputElement/invalid_event
-translation_of: Web/API/HTMLInputElement/invalid_event
 ---
-Событие `invalid` запускается, когда отправляемый элемент был проверен, но его содержимое не удовлетворило установленные ограничения. Валидность отправляемого элемента проверяется до отправления формы или после вызова метода [`checkValidity()`](/en-US/docs/HTML/Forms_in_HTML#Constraint_Validation_API)на элементе.
+
+{{APIRef}}
+
+Событие `invalid` запускается, когда отправляемый элемент был проверен, но его содержимое не удовлетворило установленные ограничения. Валидность отправляемого элемента проверяется до отправления формы или после вызова метода [`checkValidity()`](/ru/docs/Learn/Forms#constraint_validation_api)на элементе.
 
 ## Общая информация
 
 - Спецификация
-  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#constraint-validation)
+  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#constraint-validation)
 - **Взаимодействие** {{domxref("Event")}}
 
   Всплытия
@@ -24,9 +26,9 @@ translation_of: Web/API/HTMLInputElement/invalid_event
 
 ## Свойства
 
-| Property                              | Type                                 | Description                                            |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| Property                        | Type                       | Description                                            |
+| ------------------------------- | -------------------------- | ------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |

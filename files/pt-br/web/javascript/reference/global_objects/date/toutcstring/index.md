@@ -9,7 +9,14 @@ O método **`toUTCString()`** converte uma data para uma cadeia de caracteres (_
 
 Baseado na [RFC7231](https://tools.ietf.org/html/rfc7231#section-7.1.1.1) e modificado de acordo com a [ECMA-262 toUTCString](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-date.prototype.toutcstring), ele pode ter valores negativos na [versão de 2021](https://tc39.es/ecma262/#sec-date.prototype.toutcstring).
 
-{{EmbedInteractiveExample("pages/js/date-toutcstring.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.toUTCString()", "shorter")}}
+
+```js interactive-example
+const event = new Date("14 Jun 2017 00:00:00 PDT");
+
+console.log(event.toUTCString());
+// Expected output: "Wed, 14 Jun 2017 07:00:00 GMT"
+```
 
 ## Sintaxe
 
@@ -42,19 +49,17 @@ Antes do ECMAScript 2018, o formato do valor de retorno variava de acordo com a 
 ### Usando `toUTCString()`
 
 ```js
-let today = new Date('Wed, 14 Jun 2017 00:00:00 PDT');
+let today = new Date("Wed, 14 Jun 2017 00:00:00 PDT");
 let UTCstring = today.toUTCString(); // Wed, 14 Jun 2017 07:00:00 GMT
 ```
 
 ## Especificações
 
-| Especificação                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.toUTCString")}}
+{{Compat}}
 
 ## Veja também
 

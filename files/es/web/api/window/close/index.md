@@ -1,7 +1,6 @@
 ---
 title: Window.close()
 slug: Web/API/Window/close
-translation_of: Web/API/Window/close
 ---
 
 {{ ApiRef() }}
@@ -30,18 +29,16 @@ Este es un ejemplo que demuestra como utilizar este método para cerrar una vent
 
 ```html
 <script type="text/javascript">
-//Global var to store a reference to the opened window
-var openedWindow;
+  //Global var to store a reference to the opened window
+  var openedWindow;
 
-function openWindow()
-{
-  openedWindow = window.open('moreinfo.htm');
-}
+  function openWindow() {
+    openedWindow = window.open("moreinfo.htm");
+  }
 
-function closeOpenedWindow()
-{
-  openedWindow.close();
-}
+  function closeOpenedWindow() {
+    openedWindow.close();
+  }
 </script>
 ```
 
@@ -51,10 +48,9 @@ Cuando se llama al método del objeto window close() directamente, en vez de lla
 
 ```html
 <script type="text/javascript">
-function closeCurrentWindow()
-{
-  window.close();
-}
+  function closeCurrentWindow() {
+    window.close();
+  }
 </script>
 ```
 
@@ -62,6 +58,6 @@ function closeCurrentWindow()
 
 {{Specifications}}
 
-## Referencia adicional
+## Compatibilidad con navegadores
 
-{{Compat("api.Window.close")}}
+{{Compat}}

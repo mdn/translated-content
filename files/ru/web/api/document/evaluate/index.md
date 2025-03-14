@@ -1,12 +1,11 @@
 ---
 title: Document.evaluate()
 slug: Web/API/Document/evaluate
-translation_of: Web/API/Document/evaluate
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
-Возвращает экземпляр объекта типа [`XPathResult`](/en-US/docs/XPathResult) исходя из данного [XPath](/ru/docs/XPath) и других входных параметров.
+Возвращает экземпляр объекта типа [`XPathResult`](/ru/docs/Web/API/XPathResult) исходя из данного [XPath](/ru/docs/Web/XPath) и других входных параметров.
 
 ## Синтаксис
 
@@ -23,13 +22,19 @@ var xpathResult = document.evaluate(
 - `xpathExpression` - строка, описывающая XPath, который должен быть исполнен.
 - `contextNode` указывает*контекстный узел* для запроса (см. \[<http://www.w3.org/TR/xpath> спецификация XPath). В качестве данного аргумента может быть задан объект _document_.
 - `namespaceResolver` - функция, которой будут переданы все префиксы пространств имён. Она должна возвращать строку, описывающую URI, ассоциированный с данным префиксом. It will be used to resolve prefixes within the XPath itself, so that they can be matched with the document. `null` is common for HTML documents or when no namespace prefixes are used.
-- `resultType` - число, описывающее тип возвращаемого `XPathResult` (см. ниже). Используйте [именные свойства-константы](#Result_types) конструктора класса `XPathResult` (эквивалентно численным значениям от 0 до 9), как например `XPathResult.ANY_TYPE`.
+- `resultType` - число, описывающее тип возвращаемого `XPathResult` (см. ниже). Используйте [именные свойства-константы](#result_types) конструктора класса `XPathResult` (эквивалентно численным значениям от 0 до 9), как например `XPathResult.ANY_TYPE`.
 - `result` - экземпляр объекта типа `XPathResult`, используемого для хранения результатов поиска по данному `xpathExpression`. Может принимать значение `null`
 
 ## Пример
 
 ```js
-var headings = document.evaluate("/html/body//h2", document, null, XPathResult.ANY_TYPE, null);
+var headings = document.evaluate(
+  "/html/body//h2",
+  document,
+  null,
+  XPathResult.ANY_TYPE,
+  null,
+);
 /* Найти в документе все элементы h2
  * В качестве результата будет получен узловой итератор. */
 var thisHeading = headings.iterateNext();
@@ -51,7 +56,7 @@ document.evaluate(".//h2", document.body, null, XPathResult.ANY_TYPE, null);
 
 Notice in the above `document.body` has been used as the context instead of `document` so the XPath starts from the body element. (In this example, the `"."` is important to indicate that the querying should start from the context node, document.body. If the "." was left out (leaving `//h2`) the query would start from the root node (`html`) which would be more wasteful.)
 
-Более детально данный материал описан в статье [Introduction to using XPath in JavaScript](/ru/docs/Introduction_to_using_XPath_in_JavaScript).
+Более детально данный материал описан в статье [Introduction to using XPath in JavaScript](/ru/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript).
 
 ## Примечания
 
@@ -89,6 +94,6 @@ Results of `NODE_SNAPSHOT` types are snapshots, which are essentially lists of m
 
 ## Смотрите также
 
-- [DOM:document.createExpression](/ru/docs/DOM/document.createExpression)
+- [DOM:document.createExpression](/ru/docs/Web/API/Document/createExpression)
 - [XPath Code Snippets](/ru/docs/Code_snippets/XPath)
-- [Check for browser support](http://codepen.io/johan/full/ckFgn)
+- [Check for browser support](https://codepen.io/johan/full/ckFgn)

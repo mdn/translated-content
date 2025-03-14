@@ -1,29 +1,25 @@
 ---
-title: Document.defaultView
+title: "Document: свойство defaultView"
 slug: Web/API/Document/defaultView
-tags:
-  - API
-  - DOM
-  - Property
-translation_of: Web/API/Document/defaultView
+l10n:
+  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
-{{ ApiRef() }}
+{{APIRef}}
 
-В браузерах возвращает объект [window](/ru/docs/DOM/window), который связан с document текущей страницы или `null` если document не доступен.
-
-## Синтаксис
-
-```
-var win = document.defaultView;
-```
+В браузерах **`document.defaultView`** возвращает объект
+{{domxref("Window", "window")}}, связанный с {{Glossary("Browsing_context", "документом")}}, или `null` если документ не доступен.
 
 Это свойство доступно только для чтения.
+
+## Значение
+
+Объект {{domxref("Window", "window")}}.
 
 ## Спецификации
 
 {{Specifications}}
 
-## Браузерная поддержка
+## Совместимость с браузерами
 
 {{Compat}}

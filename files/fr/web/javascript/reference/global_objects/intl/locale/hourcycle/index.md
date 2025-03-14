@@ -1,15 +1,6 @@
 ---
 title: Intl.Locale.prototype.hourCycle
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Locale
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/hourCycle
 ---
 
 {{JSRef}}
@@ -40,7 +31,7 @@ console.log(fr24hour.hourCycle); // Affichera "h23" dans la console
 
 ### Définir le format horaire grâce à un objet de configuration
 
-Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale) permet d'utiliser un objet de configuration comme deuxième argument. Les propriétés de cet objet permettent de définir différentes extensions, y compris celle pour le format horaire. Pour cela, on indiquera la propriété `hourCycle` sur l'objet de configuration avec la valeur souhaitée et on passera cet objet au constructeur.
+Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) permet d'utiliser un objet de configuration comme deuxième argument. Les propriétés de cet objet permettent de définir différentes extensions, y compris celle pour le format horaire. Pour cela, on indiquera la propriété `hourCycle` sur l'objet de configuration avec la valeur souhaitée et on passera cet objet au constructeur.
 
 ```js
 let us12hour = new Intl.Locale("en-US-u-hc-h12");
@@ -49,13 +40,11 @@ console.log(us12hour.hourCycle); // Affichera "h12" dans la console
 
 ## Spécifications
 
-| Spécification                                                                                                      | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------ | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.hourCycle) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.hourCycle")}}
+{{Compat}}
 
 ## Voir aussi
 

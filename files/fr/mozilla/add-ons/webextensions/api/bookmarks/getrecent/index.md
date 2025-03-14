@@ -1,31 +1,20 @@
 ---
 title: bookmarks.getRecent()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getRecent
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getRecent
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getRecent
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La méthode `bookmarks.getRecent()` récupère un nombre spécifié de signets ajoutés le plus récemment en tant que tableau d'objets {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}}.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var gettingRecent = browser.bookmarks.getRecent(
-  numberOfItems          // integer
-)
+  numberOfItems, // integer
+);
 ```
 
 ### Paramètres
@@ -35,7 +24,7 @@ var gettingRecent = browser.bookmarks.getRecent(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un tableau d'objets [`BookmarkTreeNode`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode).
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un tableau d'objets [`BookmarkTreeNode`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode).
 
 ## Exemples
 
@@ -58,13 +47,13 @@ gettingRecent.then(onFulfilled, onRejected);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.getRecent")}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

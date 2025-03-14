@@ -1,20 +1,52 @@
 ---
 title: border-width
 slug: Web/CSS/border-width
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
-translation_of: Web/CSS/border-width
 ---
 
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`border-width`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소 네 면 테두리의 너비를 설정합니다.
 
-{{EmbedInteractiveExample("pages/css/border-width.html")}}
+{{InteractiveExample("CSS Demo: border-width")}}
+
+```css interactive-example-choice
+border-width: thick;
+```
+
+```css interactive-example-choice
+border-width: 1em;
+```
+
+```css interactive-example-choice
+border-width: 4px 1.25em;
+```
+
+```css interactive-example-choice
+border-width: 2ex 1.25ex 0.5ex;
+```
+
+```css interactive-example-choice
+border-width: 0 4px 8px 12px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 구성 속성
 
@@ -70,7 +102,8 @@ border-width: unset;
     | `medium` |     | 중간 테두리 |
     | `thick`  |     | 굵은 테두리 |
 
-    > **참고:** 각 키워드의 굵기를 정의한 명세는 없기 때문에 결과는 구현별로 상이할 수 있습니다. 다만 굵기는 언제나 `thin ≤ medium ≤ thick`이고, 하나의 문서 내에서 동일합니다.
+    > [!NOTE]
+    > 각 키워드의 굵기를 정의한 명세는 없기 때문에 결과는 구현별로 상이할 수 있습니다. 다만 굵기는 언제나 `thin ≤ medium ≤ thick`이고, 하나의 문서 내에서 동일합니다.
 
 ## 형식 정의
 
@@ -87,14 +120,12 @@ border-width: unset;
 #### HTML
 
 ```html
-<p id="sval">
-    한 개의 값: 모든 네 면이 6px 테두리</p>
-<p id="bival">
-    두 개의 다른 값: 위아래에 2px 테두리, 좌우에 10px 테두리</p>
-<p id="treval">
-    세 개의 다른 값: 위에 0.3em, 아래에 9px, 좌우에 0</p>
+<p id="sval">한 개의 값: 모든 네 면이 6px 테두리</p>
+<p id="bival">두 개의 다른 값: 위아래에 2px 테두리, 좌우에 10px 테두리</p>
+<p id="treval">세 개의 다른 값: 위에 0.3em, 아래에 9px, 좌우에 0</p>
 <p id="fourval">
-    네 개의 다른 값: "얇은" 위, "중간" 오른쪽, "두꺼운" 아래, 왼쪽 1em</p>
+  네 개의 다른 값: "얇은" 위, "중간" 오른쪽, "두꺼운" 아래, 왼쪽 1em
+</p>
 ```
 
 #### CSS

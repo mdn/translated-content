@@ -1,8 +1,9 @@
 ---
-title: 'HTMLMediaElement: ended'
+title: "HTMLMediaElement: ended"
 slug: Web/API/HTMLMediaElement/ended_event
-translation_of: Web/API/HTMLMediaElement/ended_event
 ---
+
+{{APIRef("HTMLMediaElement")}}
 
 L'événement **ended** est déclenché lorsque la lecture ou le streaming s'est arrêté parce que la fin du média a été atteinte ou qu'aucune donnée n'est disponible.
 
@@ -19,7 +20,7 @@ L'événement se produit dans deux contextes liés mais unique:
 ## Informations générales
 
 - Spécification
-  - : [HTML5 media](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-ended) et [Media Capture and Streams](https://www.w3.org/TR/mediacapture-streams/#event-mediastreamtrack-ended)
+  - : [HTML5 media](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-ended) et [Media Capture and Streams](https://www.w3.org/TR/mediacapture-streams/#event-mediastreamtrack-ended)
 - Interface
   - : {{domxref("Event")}}
 - Propagation
@@ -31,16 +32,17 @@ L'événement se produit dans deux contextes liés mais unique:
 - Action par défaut
   - : Aucune
 
-> **Note :** Bien que cet événement soit défini dans deux spécifications, à ce moment-là, les deux spécifient cet événement de manière identique, nous avons donc documenté comme si elles ne faisaient qu'une. Si à un moment donné, cela change, la documentation sera révisée.
+> [!NOTE]
+> Bien que cet événement soit défini dans deux spécifications, à ce moment-là, les deux spécifient cet événement de manière identique, nous avons donc documenté comme si elles ne faisaient qu'une. Si à un moment donné, cela change, la documentation sera révisée.
 
 ## Propriétés
 
-| Property                              | Type                                 | Description                                            |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| Property                        | Type                       | Description                                            |
+| ------------------------------- | -------------------------- | ------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
 
 ## Evénements liés
 

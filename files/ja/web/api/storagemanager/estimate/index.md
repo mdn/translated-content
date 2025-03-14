@@ -39,17 +39,19 @@ const estimatePromise = StorageManager.estimate();
 
 ```html
 <label>
-  現在、使用可能なストレージの約 <output id="percent">
-  </output>% を使用しています。
+  現在、使用可能なストレージの約 <output id="percent"> </output>%
+  を使用しています。
 </label>
 ```
 
 ### JavaScript の内容
 
 ```js
-navigator.storage.estimate().then(function(estimate) {
-  document.getElementById("percent").value =
-      (estimate.usage / estimate.quota * 100).toFixed(2);
+navigator.storage.estimate().then(function (estimate) {
+  document.getElementById("percent").value = (
+    (estimate.usage / estimate.quota) *
+    100
+  ).toFixed(2);
 });
 ```
 
@@ -63,7 +65,7 @@ navigator.storage.estimate().then(function(estimate) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.StorageManager.estimate")}}
+{{Compat}}
 
 ## 関連情報
 

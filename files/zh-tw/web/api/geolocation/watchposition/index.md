@@ -11,8 +11,10 @@ slug: Web/API/Geolocation/watchPosition
 
 ## 語法
 
-```plain
-id = navigator.geolocation.watchPosition(success[, error[, options]])
+```js-nolint
+watchPosition(success)
+watchPosition(success, error)
+watchPosition(success, error, options)
 ```
 
 ### 參數
@@ -33,24 +35,24 @@ function success(pos) {
   var crd = pos.coords;
 
   if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log('Congratulations, you reached the target');
+    console.log("Congratulations, you reached the target");
     navigator.geolocation.clearWatch(id);
   }
 }
 
 function error(err) {
-  console.warn('ERROR(' + err.code + '): ' + err.message);
+  console.warn("ERROR(" + err.code + "): " + err.message);
 }
 
 target = {
-  latitude : 0,
-  longitude: 0
+  latitude: 0,
+  longitude: 0,
 };
 
 options = {
   enableHighAccuracy: false,
   timeout: 5000,
-  maximumAge: 0
+  maximumAge: 0,
 };
 
 id = navigator.geolocation.watchPosition(success, error, options);
@@ -70,7 +72,7 @@ id = navigator.geolocation.watchPosition(success, error, options);
 
 ## 請參考
 
-- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-TW/docs/Web/API/Geolocation_API)
 - 這個介面屬於{{domxref("Geolocation")}}. 並且存取他的方式為{{domxref("NavigatorGeolocation.geolocation")}}.
 - 相反的操作: {{domxref("Geolocation.clearWatch()")}}
 - 類似的方法: {{domxref("Geolocation.getCurrentPosition()")}}

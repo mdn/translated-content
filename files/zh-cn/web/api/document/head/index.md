@@ -1,39 +1,47 @@
 ---
-title: Document.head
+title: Document：head 属性
 slug: Web/API/Document/head
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef}}
+{{APIRef("DOM")}}
 
-## 概述
+{{domxref("Document")}} 接口的 **`head`** 只读属性返回当前文档的 {{HTMLElement("head")}} 元素。
 
-返回当前文档中的 {{ HTMLElement("head") }} 元素。如果有多个 `<head>` 元素，则返回第一个。
+## 值
 
-## 语法
-
-```plain
-var objRef = document.head;
-```
+{{domxref("HTMLHeadElement")}}。
 
 ## 示例
 
-```js
-// HTML 部分源码为：<head id="my-document-head">
-var aHead = document.head;
+```html
+<!doctype html>
+<head id="my-document-head">
+  <title>示例：使用 document.head</title>
+</head>
 
-alert(aHead.id); // "my-document-head";
+<script>
+  const theHead = document.head;
 
-alert( document.head === document.querySelector("head") ); // true
+  console.log(theHead.id); // "my-document-head";
+
+  console.log(theHead === document.querySelector("head")); // true
+</script>
 ```
 
-## 附注
+## 备注
 
-`document.head` 是个只读属性，为该属性赋值只会静默失败，如果在严格模式中，则会抛出`TypeError`异常。
+`document.head` 是只读的。尝试给这个属性赋值将会静默失败，或者在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下抛出 {{jsxref("TypeError")}}。
+
+## 规范
+
+{{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 规范
+## 参见
 
-- [HTML5: DOM Tree Accessors](http://www.w3.org/TR/html5/dom.html#dom-tree-accessors)
+- {{domxref("document.body")}}

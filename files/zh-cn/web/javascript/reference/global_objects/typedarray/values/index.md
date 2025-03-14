@@ -5,12 +5,12 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 
 {{JSRef}}
 
-**`values()`**返回新的 `Array Iterator` 对象，包含数组中每个下标处的值。
+**`values()`** 返回新的 `Array Iterator` 对象，包含数组中每个下标处的值。
 
 ## 语法
 
-```plain
-arr.values()
+```js-nolint
+values()
 ```
 
 ### 返回值
@@ -51,10 +51,13 @@ console.log(eArr.next().value); // 50
 
 {{Compat}}
 
-## 另见
+## 参见
 
-- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
+- [`core-js` 中 `TypedArray.prototype.values` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.keys()")}}
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- [`TypedArray.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
+- {{jsxref("Array.prototype.values()")}}
+- [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)

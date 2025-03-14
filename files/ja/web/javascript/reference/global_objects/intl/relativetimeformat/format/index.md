@@ -7,12 +7,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format
 
 **`Intl.RelativeTimeFormat.prototype.format()`** メソッドは `value` や `unit` を、この {{jsxref("Intl.RelativeTimeFormat")}} オブジェクトのロケールと整形オプションに従って整形します。
 
-{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-format.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.prototype.format")}}
+
+```js interactive-example
+const rtf1 = new Intl.RelativeTimeFormat("en", { style: "short" });
+
+console.log(rtf1.format(3, "quarter"));
+// Expected output: "in 3 qtrs."
+
+console.log(rtf1.format(-1, "day"));
+// Expected output: "1 day ago"
+
+console.log(rtf1.format(10, "seconds"));
+// Expected output: "in 10 sec."
+```
 
 ## 構文
 
 ```js
-relativeTimeFormat.format(value, unit)
+relativeTimeFormat.format(value, unit);
 ```
 
 ### 引数
@@ -39,9 +52,9 @@ relativeTimeFormat.format(value, unit)
 // ロケールで既定値を明確に指定して
 // 相対時間フォーマッターを作成
 const rtf = new Intl.RelativeTimeFormat("en", {
-    localeMatcher: "best fit", // other values: "lookup"
-    numeric: "always", // other values: "auto"
-    style: "long", // other values: "short" or "narrow"
+  localeMatcher: "best fit", // other values: "lookup"
+  numeric: "always", // other values: "auto"
+  style: "long", // other values: "short" or "narrow"
 });
 
 // 負の値 (-1) を使った相対時間の書式化
@@ -77,7 +90,7 @@ rtf.format(1, "day");
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Intl.RelativeTimeFormat.format")}}
+{{Compat}}
 
 ## 関連情報
 

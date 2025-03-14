@@ -1,12 +1,9 @@
 ---
 title: Premiers pas
 slug: Web/SVG/Tutorial/Getting_Started
-tags:
-  - SVG
-  - SVG:Tutoriel
-translation_of: Web/SVG/Tutorial/Getting_Started
-original_slug: Web/SVG/Tutoriel/Premiers_pas
 ---
+
+{{SVGRef}}
 
 {{PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions")}}
 
@@ -29,7 +26,7 @@ Commençons directement avec un exemple pratique. Jetez un coup d'œil au morcea
 </svg>
 ```
 
-Copiez le code précédent dans un document texte, puis enregistrez-le sous le nom de _demo1.svg_. Ouvrez le fichier dans Firefox. Vous obtiendrez alors l'image suivante (pour les utilisateurs de Firefox : cliquez [ici](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml))
+Copiez le code précédent dans un document texte, puis enregistrez-le sous le nom de _demo1.svg_. Ouvrez le fichier dans Firefox. Vous obtiendrez alors l'image suivante (pour les utilisateurs de Firefox : cliquez [ici](https://mdn.dev/archives/media/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml))
 
 ![une image avec un rectangle rouge contenant un disque vert dans lequel est écrit SVG en blanc](svgdemo1.png)
 
@@ -37,9 +34,9 @@ Quelques explications s'imposent quant au fonctionnement du rendu :
 
 1. Nous commençons avec l'élément [`svg`](/fr/docs/Web/SVG/Element/svg) à la racine :
 
-    - La déclaration du doctype que l'on voit en (X)HTML peut être enlevée, car la validation DTD du SVG provoque plus de problèmes qu'elle n'en résout.
-    - Avant SVG 2, pour identifier la version du SVG pour d'autre types de validation, les attributs `version` et `baseProfile` devaient toujours être utilisés. Ces deux attributs sont dépréciés en SVG 2.
-    - En tant que langage basé sur XML, l'espace de noms du document SVG doit être correct, d'où l'attribut `xmlns`. Pour plus d'informations, n'hésitez pas à consulter la page [Cours d'introduction aux espaces de noms.](/fr/docs/Web/SVG/Namespaces_Crash_Course)
+   - La déclaration du doctype que l'on voit en (X)HTML peut être enlevée, car la validation DTD du SVG provoque plus de problèmes qu'elle n'en résout.
+   - Avant SVG 2, pour identifier la version du SVG pour d'autre types de validation, les attributs `version` et `baseProfile` devaient toujours être utilisés. Ces deux attributs sont dépréciés en SVG 2.
+   - En tant que langage basé sur XML, l'espace de noms du document SVG doit être correct, d'où l'attribut `xmlns`. Pour plus d'informations, n'hésitez pas à consulter la page [Cours d'introduction aux espaces de noms.](/fr/docs/Web/SVG/Namespaces_Crash_Course)
 
 2. L'arrière-plan est défini par un rectangle rouge, déclaré grâce à la balise [`<rect>`](/fr/docs/Web/SVG/Element/rect) qui recouvre l'intégralité de l'espace.
 3. Un cercle ([`<circle>`](/fr/docs/Web/SVG/Element/circle)) vert d'un rayon de 80px est dessiné par-dessus le centre du rectangle rouge, avec un décalage de 30+120px vers l'intérieur et de 50+50px vers le haut.
@@ -92,7 +89,7 @@ Content-Encoding: gzip
 Vary: Accept-Encoding
 ```
 
-Vous pouvez vérifier que votre serveur envoie le bon en-tête HTTP avec vos fichiers SVG en utilisant [le Moniteur réseau](/fr/docs/Tools/Network_Monitor) ou un site comme [websniffer.cc](https://websniffer.cc/). Fournissez l'URL d'un de vos fichiers SVG et regardez les en-têtes HTTP de la réponse. Si vous remarquez que votre serveur n'envoie pas les en-têtes avec les valeurs ci-dessus, vous devriez contacter votre hébergeur. Si vous avez du mal à le convaincre de configurer correctement leurs serveurs pour le SVG, il y a peut-être moyen de le faire vous-même. Regardez [la page de configuration d'un serveur](https://www.w3.org/services/svg-server/) sur le site w3.org pour quelques solutions simples.
+Vous pouvez vérifier que votre serveur envoie le bon en-tête HTTP avec vos fichiers SVG en utilisant [le Moniteur réseau](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) ou un site comme [websniffer.com](https://websniffer.com/). Fournissez l'URL d'un de vos fichiers SVG et regardez les en-têtes HTTP de la réponse. Si vous remarquez que votre serveur n'envoie pas les en-têtes avec les valeurs ci-dessus, vous devriez contacter votre hébergeur. Si vous avez du mal à le convaincre de configurer correctement leurs serveurs pour le SVG, il y a peut-être moyen de le faire vous-même. Regardez [la page de configuration d'un serveur](https://www.w3.org/services/svg-server/) sur le site w3.org pour quelques solutions simples.
 
 La mauvaise configuration du serveur est souvent la cause de l'échec du chargement du SVG, donc assurez-vous bien d'avoir vérifié le vôtre. Si votre serveur n'est pas configuré pour envoyer les bons en-têtes avec les fichiers SVG qu'il fournit, alors Firefox affichera le contenu du fichier comme du texte ou comme du rebut encodé, ou demandera peut-être à l'utilisateur de choisir une application pour l'ouvrir.
 

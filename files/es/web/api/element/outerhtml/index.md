@@ -57,10 +57,10 @@ console.log(container.firstChild.nodeName); // logs "P"
 
 ## Notas
 
-Si el elemento no tiene elemento padre, esto es, si es el elemento raíz del documento, la asignación de su propiedad `outerHTML` lanzará una [`DOMException`](/en/DOM/DOMException) con el código de error `NO_MODIFICATION_ALLOWED_ERR`. Por ejemplo:
+Si el elemento no tiene elemento padre, esto es, si es el elemento raíz del documento, la asignación de su propiedad `outerHTML` lanzará una [`DOMException`](/es/docs/Web/API/DOMException) con el código de error `NO_MODIFICATION_ALLOWED_ERR`. Por ejemplo:
 
 ```js
-document.documentElement.outerHTML = "test";  // lanza una DOMException
+document.documentElement.outerHTML = "test"; // lanza una DOMException
 ```
 
 Además, aunque el elemento es reemplazado en el documento, la variable cuya propiedad `outerHTML` fue asignada continuará conteniendo una referencia al elemento original:

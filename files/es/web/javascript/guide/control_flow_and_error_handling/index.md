@@ -1,19 +1,6 @@
 ---
 title: Control de flujo y manejo de errores
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-tags:
-  - Control de flujo
-  - Guía
-  - JavaScript
-  - Lógica
-  - Manejo de errores
-  - Novato
-  - Principiantes
-  - Promesas
-  - declaraciones
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
-original_slug: Web/JavaScript/Guide/Control_de_flujo_y_manejo_de_errores
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
@@ -49,7 +36,8 @@ while (x < 10) {
 
 Aquí, `{ x++; }` es la declaración de bloque.
 
-> **Nota:** **Importante**: JavaScript anterior a ECMAScript2015 (6a edición) **no** tiene ámbito de bloque. En JavaScript más antiguo, las variables introducidas dentro de un bloque tienen como ámbito la función o script que las contiene, y los efectos de establecerlas persisten más allá del bloque en sí mismo. En otras palabras, las _declaraciones de bloque no definen un ámbito_.
+> [!NOTE]
+> JavaScript anterior a ECMAScript2015 (6a edición) **no** tiene ámbito de bloque. En JavaScript más antiguo, las variables introducidas dentro de un bloque tienen como ámbito la función o script que las contiene, y los efectos de establecerlas persisten más allá del bloque en sí mismo. En otras palabras, las _declaraciones de bloque no definen un ámbito_.
 >
 > Los bloques "independientes" en JavaScript pueden producir resultados completamente diferentes de los que producirían en C o Java. Por ejemplo:
 >
@@ -122,7 +110,7 @@ Por ejemplo, _no_ escribas un código como este:
 
 ```js example-bad
 // Propenso a ser mal interpretado como "x == y"
-if (x = y) {
+if ((x = y)) {
   /* expresiones aquí */
 }
 ```
@@ -148,7 +136,8 @@ Los siguientes valores se evalúan como `false` (también conocidos como valores
 
 Todos los demás valores, incluidos todos los objetos, se evalúan como `true` cuando se pasan a una declaración condicional.
 
-> **Nota:** **Precaución**: ¡No confundas los valores booleanos primitivos `true` y `false` con los valores `true` y `false` del objeto {{JSxRef("Boolean")}}!.Por ejemplo:```js
+> [!NOTE]
+> ¡No confundas los valores booleanos primitivos `true` y `false` con los valores `true` y `false` del objeto {{JSxRef("Boolean")}}!.Por ejemplo:```js
 > var b = new Boolean(false);
 > if (b) // esta condición se evalúa como verdadera
 > if (b == true) // esta condición se evalúa como false
@@ -168,7 +157,7 @@ function checkData() {
   } else {
     alert(
       "Introduce exactamente tres caracteres. " +
-        `${document.form1.threeChar.value} no es válido.`
+        `${document.form1.threeChar.value} no es válido.`,
     );
     return false;
   }
@@ -274,7 +263,8 @@ throw {
 };
 ```
 
-> **Nota:** Puedes especificar un objeto cuando lanzas una excepción. A continuación, puedes hacer referencia a las propiedades del objeto en el bloque `catch`.
+> [!NOTE]
+> Puedes especificar un objeto cuando lanzas una excepción. A continuación, puedes hacer referencia a las propiedades del objeto en el bloque `catch`.
 
 ```js
 // Crea un objeto tipo de UserException
@@ -361,7 +351,8 @@ try {
 }
 ```
 
-> **Nota:** **Mejores prácticas:** Cuando se registran errores en la consola dentro de un bloque `catch`, se usa `console.error()` en lugar de `console.log()` aconsejado para la depuración. Formatea el mensaje como un error y lo agrega a la lista de mensajes de error generados por la página.
+> [!NOTE]
+> Cuando se registran errores en la consola dentro de un bloque `catch`, se usa `console.error()` en lugar de `console.log()` aconsejado para la depuración. Formatea el mensaje como un error y lo agrega a la lista de mensajes de error generados por la página.
 
 #### El bloque `finally`
 

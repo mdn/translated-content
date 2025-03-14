@@ -1,27 +1,33 @@
 ---
-title: CanvasRenderingContext2D.getLineDash()
+title: CanvasRenderingContext2D：getLineDash() 方法
 slug: Web/API/CanvasRenderingContext2D/getLineDash
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.getLineDash()`** 是 Canvas 2D API 获取当前线段样式的方法。
+Canvas 2D API 的 {{domxref("CanvasRenderingContext2D")}} 接口的 **`getLineDash()`** 方法用于获取当前的虚线样式。
 
 ## 语法
 
+```js-nolint
+getLineDash()
 ```
-ctx.getLineDash();
-```
+
+### 参数
+
+无。
 
 ### 返回值
 
-一个 {{jsxref("Array")}}数组。一组描述交替绘制线段和间距（坐标空间单位）长度的数字。如果数组元素的数量是奇数，数组元素会被复制并重复。例如，设置线段为 `[5, 15, 25]` 将会得到以下返回值 `[5, 15, 25, 5, 15, 25]`。
+一个由数字组成的 {{jsxref("Array")}}，用于指定绘制虚线和空隙的距离（以坐标空间单位计算）。如果在设置数组元素时数组长度为奇数，则数组元素会被复制并连接起来。例如，将虚线设置为 `[5, 15, 25]` 将得到 `[5, 15, 25, 5, 15, 25]`。
 
 ## 示例
 
-### 使用 `getLineDash` 方法
+### 获取当前的虚线设置
 
-这是一段使用 `getLineDash` 方法的简单的代码片段。
+此示例演示了 `getLineDash` 方法。
 
 #### HTML
 
@@ -32,63 +38,24 @@ ctx.getLineDash();
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.setLineDash([5, 15]);
-console.log(ctx.getLineDash()); // [5, 15]
+ctx.setLineDash([10, 20]);
+console.log(ctx.getLineDash()); // [10, 20]
 
+// 画一条虚线
 ctx.beginPath();
-ctx.moveTo(0,100);
-ctx.lineTo(400, 100);
+ctx.moveTo(0, 50);
+ctx.lineTo(300, 50);
 ctx.stroke();
 ```
 
-修改下面的代码并在线查看 canvas 的变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.setLineDash([5, 15]);
-ctx.beginPath();
-ctx.moveTo(0,100);
-ctx.lineTo(400, 100);
-ctx.stroke();</textarea>
-```
+{{ EmbedLiveSample('获取当前的划线设置', 700, 180) }}
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 
@@ -98,6 +65,6 @@ window.addEventListener("load", drawCanvas);
 
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}
+- 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.setLineDash()")}}
 - {{domxref("CanvasRenderingContext2D.lineDashOffset")}}

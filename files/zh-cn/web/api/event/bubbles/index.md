@@ -1,38 +1,45 @@
 ---
-title: event.bubbles
+title: Event：bubbles 属性
 slug: Web/API/Event/bubbles
+l10n:
+  sourceCommit: 9428ff063d032a6ba39732cdbbb3d363d755ee9c
 ---
 
-{{ ApiRef() }}
+{{ApiRef("DOM")}}
 
-### 概述
+{{domxref("Event")}} 接口的 **`bubbles`** 只读属性表明事件是否会沿 DOM 树向上冒泡。
 
-返回一个布尔值，表明当前事件是否会向 DOM 树上层元素冒泡。
+> [!NOTE]
+> 有关冒泡的更多信息，请参阅[事件冒泡](/zh-CN/docs/Learn_web_development/Core/Scripting/Event_bubbling)。
 
-### 语法
+## 值
 
-```plain
-var bool = event.bubbles;
-```
+一个布尔值，若事件沿 DOM 树向上冒泡，则该属性为 `true`。
 
-### 备注
-
-一些特定的事件类型会冒泡。这时，该事件对象的`bubbles`属性为`true`. 你可以检查该属性的值来判断一个事件对象是否冒泡。
-
-### 例子
+## 示例
 
 ```js
- function goInput(e) {
-  // 检查事件对象是否冒泡
+function handleInput(e) {
+  // 检查事件是否沿冒泡阶段传播
   if (!e.bubbles) {
-     // 如果不冒泡，则手动传递事件
-     passItOn(e);
+    passItOn(e);
   }
-  // 如果冒泡的话
-  doOutput(e)
+
+  // 已经冒泡
+  doOutput(e);
 }
 ```
 
-### 规范
+## 规范
 
-[event.bubbles](http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-event-bubbles)
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{domxref("Event.stopPropagation", "stopPropagation()")}} 方法用于阻止当前事件在捕获和冒泡阶段的进一步传播
+- {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}} 方法用于阻止在同一 DOM 层级上针对同一事件调用任何后续监听器
+- {{domxref("Event.preventDefault", "preventDefault()")}} 方法用于在事件继续传播的同时，禁止浏览器在无监听器处理该事件时执行其默认操作

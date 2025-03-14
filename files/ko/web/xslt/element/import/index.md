@@ -1,12 +1,9 @@
 ---
 title: import
 slug: Web/XSLT/Element/import
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/import
-original_slug: Web/XSLT/import
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:import>` 요소는 한 스타일시트의 컨텐트를 다른 스타일시트로 가져오는 역할을 하는 최상위 요소입니다. 대체로, 가져올 스타일시트의 컨텐트는 가져오는 스타일시트의 컨텐트보다 가져오기 우선순위가 낮습니다. 이는 포함되는 스타일시트의 컨텐트가 포함하는 스타일시트의 컨텐트와 우선순위가 정확히 같은 `<xsl:include>`와는 뚜렷이 다릅니다.
 
@@ -31,7 +28,7 @@ original_slug: Web/XSLT/import
 
 ### 정의
 
-[XSLT section 2.6.2, Stylesheet Import](http://www.w3.org/TR/xslt#import)
+[XSLT section 2.6.2, Stylesheet Import](https://www.w3.org/TR/xslt#import)
 
 ### Gecko 지원
 

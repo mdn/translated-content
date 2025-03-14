@@ -1,27 +1,30 @@
 ---
-title: WebGL モデル ビュー 射影
+title: WebGL のモデル、ビュー、投影
 slug: Web/API/WebGL_API/WebGL_model_view_projection
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
-この記事では、[WebGL](/ja/docs/Web/API/WebGL_API) プロジェクト内でデータを取得し、それを適切な空間に投影して画面に表示する方法について説明します。並進、拡縮、回転行列を使用した基本的な行列計算の知識があることを前提としています。3D シーンを構成するときに通常使用される中心的な 3 つの行列である、モデル、ビュー、射影行列について説明します。
+この記事では、 [WebGL](/ja/docs/Web/API/WebGL_API) プロジェクト内でデータを取得し、それを適切な空間に投影して画面に表示する方法について説明します。並進、拡縮、回転行列を使用した基本的な行列計算の知識があることを前提としています。3D シーンを構成するときに通常使用される中心的な 3 つの行列である、モデル、ビュー、投影行列について説明します。
 
-> **メモ:** This article is also available as an [MDN content kit](https://github.com/TatumCreative/mdn-model-view-projection). It also uses a collection of [utility functions](https://github.com/TatumCreative/mdn-webgl) available under the `MDN` global object.
+> [!NOTE]
+> この記事は [MDN コンテンツキット](https://github.com/gregtatum/mdn-model-view-projection)としても利用可能です。また、 `MDN` グローバルオブジェクトの下で利用可能な[ユーティリティ関数](https://github.com/gregtatum/mdn-webgl)のコレクションを使用しています。
 
-## モデル、ビュー、射影行列
+## モデル、ビュー、投影行列
 
-WebGL の空間内の点とポリゴンの個々の変換は、並進、拡縮、回転などの基本的な変換行列によって処理されます。 これらの行列は、複雑な 3D シーンの描画に役立つように、一緒に構成し、特別な方法でグループ化できます。これらの構成された行列は、最終的に元のモデルデータを**クリップ空間**と呼ばれる特別な座標空間に移動します。これは 2 ユニットの幅の立方体で、中心が (0,0,0) 、対角が (-1,-1,-1) から (1,1,1) になります。このクリップ空間は 2 次元平面に圧縮され、画像へラスタライズされます。
+WebGL の空間内の点とポリゴンの個々の変換は、並進、拡縮、回転などの基本的な変換行列によって処理されます。 これらの行列は、複雑な 3D シーンの描画に役立つように、一緒に構成し、特別な方法でグループ化できます。これらの構成された行列は、最終的に元のモデルデータを**クリップ空間**と呼ばれる特別な座標空間に移動します。これは 2 ユニットの幅の立方体で、中心が (0,0,0)、対角が (-1,-1,-1) から (1,1,1) になります。このクリップ空間は 2 次元平面に圧縮され、画像へラスタライズされます。
 
-以下で説明する最初の行列は**モデル行列**です。これは、元のモデルデータを取得して 3 次元ワールド空間内で移動する方法を定義します。 **射影行列**は、ワールド空間座標をクリップ空間座標に変換するために使用されます。 一般的に使用される射影行列である**透視投影射影行列**は、3D 仮想世界の視聴者の代理として機能する一般的なカメラの*効果*を模倣するために使用されます。 **ビュー行列**は、変更されるカメラの位置をシミュレートし、シーン内のオブジェクトを移動して視聴者が現在何を見られるかを変更します。
+以下で説明する最初の行列は**モデル行列**です。これは、元のモデルデータを取得して 3 次元ワールド空間内で移動する方法を定義します。 **投影行列**は、ワールド空間座標をクリップ空間座標に変換するために使用されます。 一般的に使用される投影行列である**透視投影投影行列**は、3D 仮想世界の視聴者の代理として機能する一般的なカメラの*効果*を模倣するために使用されます。 **ビュー行列**は、変更されるカメラの位置をシミュレートし、シーン内のオブジェクトを移動して視聴者が現在何を見られるかを変更します。
 
-以下のセクションでは、モデル、ビュー、射影行列の背景にある考え方と実装について詳説します。 これらの行列は、画面上でデータを移動するための根幹であり、個々のフレームワークやエンジンを超える概念です。
+以下のセクションでは、モデル、ビュー、投影行列の背景にある考え方と実装について詳説します。 これらの行列は、画面上でデータを移動するための根幹であり、個々のフレームワークやエンジンを超える概念です。
 
 ## クリップ空間
 
 WebGL プログラムでは、通常、データは自分の座標系で GPU にアップロードされ、次に頂点シェーダーがそれらの点を**クリップ空間**と呼ばれる特別な座標系に変換します。クリップ空間の外側にあるデータは切り取られ、描画されません。ただし、三角形がこのスペースの境界を跨ぐ場合は、新しい三角形に分割され、クリップスペースにある新しい三角形の部分のみが残ります。
 
-![A 3d graph showing clip space in WebGL.](https://mdn.mozillademos.org/files/11371/clip-space-graph.svg)
+![WebGL でクリップ空間を示す 3D グラフ。](clip_space_graph.svg)
 
 上の図は、全ての点が収まる必要のあるクリップ空間を視覚化したものです。これは、各辺が 2 の立方体であり、片方の角が (-1,-1,-1) にあり、対角が (1,1,1) にあります。立方体の中心は点 (0,0,0) です。 クリップ空間に使用されるこの 8 立方メートルの座標系は、正規化デバイス座標（NDC）と呼ばれます。WebGL コードを調べて作業している間、その用語を時々耳にするかもしれません。
 
@@ -31,34 +34,38 @@ WebGL プログラムでは、通常、データは自分の座標系で GPU に
 
 この例では、画面上に 2D ボックスを描画するカスタム `WebGLBox` オブジェクトを作成します。
 
-> **メモ:** The code for each WebGLBox example is available in this [github repo](https://github.com/TatumCreative/mdn-model-view-projection/tree/master/lessons) and is organized by section. In addition there is a JSFiddle link at the bottom of each section.
+> [!NOTE]
+> WebGLBox のそれぞれの例のコードは、この [GitHub リポジトリー](https://github.com/gregtatum/mdn-model-view-projection/tree/master/lessons)にあり、セクションごとに整理されています。また、各セクションの一番下に JSFiddle へのリンクがあります。
 
-#### WebGLBox コンストラクタ
+#### WebGLBox コンストラクター
 
 コンストラクターは次のようになります。
 
 ```js
 function WebGLBox() {
   // Setup the canvas and WebGL context
-  this.canvas = document.getElementById('canvas');
+  this.canvas = document.getElementById("canvas");
   this.canvas.width = window.innerWidth;
   this.canvas.height = window.innerHeight;
   this.gl = MDN.createContext(canvas);
 
-  var gl = this.gl;
+  const gl = this.gl;
 
   // Setup a WebGL program, anything part of the MDN object is defined outside of this article
-  this.webglProgram = MDN.createWebGLProgramFromIds(gl, 'vertex-shader', 'fragment-shader');
+  this.webglProgram = MDN.createWebGLProgramFromIds(
+    gl,
+    "vertex-shader",
+    "fragment-shader",
+  );
   gl.useProgram(this.webglProgram);
 
   // Save the attribute and uniform locations
-  this.positionLocation = gl.getAttribLocation(this.webglProgram, 'position');
-  this.colorLocation = gl.getUniformLocation(this.webglProgram, 'color');
+  this.positionLocation = gl.getAttribLocation(this.webglProgram, "position");
+  this.colorLocation = gl.getUniformLocation(this.webglProgram, "color");
 
   // Tell WebGL to test the depth when drawing, so if a square is behind
   // another square it won't be drawn
   gl.enable(gl.DEPTH_TEST);
-
 }
 ```
 
@@ -67,21 +74,32 @@ function WebGLBox() {
 次に、画面上にボックスを描画するメソッドを作成します。
 
 ```js
-WebGLBox.prototype.draw = function(settings) {
+WebGLBox.prototype.draw = function (settings) {
   // Create some attribute data; these are the triangles that will end being
   // drawn to the screen. There are two that form a square.
 
-  var data = new Float32Array([
-
+  const data = new Float32Array([
     //Triangle 1
-    settings.left,  settings.bottom, settings.depth,
-    settings.right, settings.bottom, settings.depth,
-    settings.left,  settings.top,    settings.depth,
+    settings.left,
+    settings.bottom,
+    settings.depth,
+    settings.right,
+    settings.bottom,
+    settings.depth,
+    settings.left,
+    settings.top,
+    settings.depth,
 
     //Triangle 2
-    settings.left,  settings.top,    settings.depth,
-    settings.right, settings.bottom, settings.depth,
-    settings.right, settings.top,    settings.depth
+    settings.left,
+    settings.top,
+    settings.depth,
+    settings.right,
+    settings.bottom,
+    settings.depth,
+    settings.right,
+    settings.top,
+    settings.depth,
   ]);
 
   // Use WebGL to draw this onto the screen.
@@ -89,10 +107,10 @@ WebGLBox.prototype.draw = function(settings) {
   // Performance Note: Creating a new array buffer for every draw call is slow.
   // This function is for illustration purposes only.
 
-  var gl = this.gl;
+  const gl = this.gl;
 
   // Create a buffer and bind the data
-  var buffer = gl.createBuffer();
+  const buffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
   gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
 
@@ -105,10 +123,10 @@ WebGLBox.prototype.draw = function(settings) {
 
   // Draw the triangles to the screen
   gl.drawArrays(gl.TRIANGLES, 0, 6);
-}
+};
 ```
 
-シェーダーは GLSL で記述されたコードの一部であり、データポイントを取得して最終的に画面に描画します。便宜上、これらのシェーダーは、カスタム関数 `MDN.createWebGLProgramFromIds()` を介してプログラムに取り込まれる要素 {{htmlelement("script")}} に格納されます。この関数は、これらのチュートリアル用に作成された [ユーティリティ関数群](https://github.com/TatumCreative/mdn-webgl) の一部であり、ここでは詳しく説明しません。この関数は、いくつかの GLSL ソースコードを取得して WebGL プログラムにコンパイルする基本を処理します。関数は 3 つのパラメーターを取ります。プログラムをレンダリングするコンテキスト、頂点シェーダーを含む要素の ID {{htmlelement("script")}}、フラグメントシェーダーを含む要素の ID {{htmlelement("script")}} です。頂点シェーダーは頂点を配置し、フラグメントシェーダーは各ピクセルに色を付けます。
+シェーダーは GLSL で記述されたコードの一部であり、データポイントを取得して最終的に画面に描画します。便宜上、これらのシェーダーは、カスタム関数 `MDN.createWebGLProgramFromIds()` を介してプログラムに取り込まれる要素 {{htmlelement("script")}} に格納されます。この関数は、これらのチュートリアル用に作成された [ユーティリティ関数群](https://github.com/gregtatum/mdn-webgl) の一部であり、ここでは詳しく説明しません。この関数は、いくつかの GLSL ソースコードを取得して WebGL プログラムにコンパイルする基本を処理します。関数は 3 つのパラメーターを取ります。プログラムをレンダリングするコンテキスト、頂点シェーダーを含む要素の ID {{htmlelement("script")}}、フラグメントシェーダーを含む要素の ID {{htmlelement("script")}} です。頂点シェーダーは頂点を配置し、フラグメントシェーダーは各ピクセルに色を付けます。
 
 最初に、画面上で頂点を移動させる頂点シェーダーを見てみましょう。
 
@@ -136,20 +154,20 @@ void main() {
 これらの設定が含まれているので、クリップ空間座標を使用して画面に直接描画します。
 
 ```js
-var box = new WebGLBox();
+const box = new WebGLBox();
 ```
 
 最初に中央に赤いボックスを描きます。
 
 ```js
 box.draw({
-  top    : 0.5,             // x
-  bottom : -0.5,            // x
-  left   : -0.5,            // y
-  right  : 0.5,             // y
+  top: 0.5, // x
+  bottom: -0.5, // x
+  left: -0.5, // y
+  right: 0.5, // y
 
-  depth  : 0,               // z
-  color  : [1, 0.4, 0.4, 1] // red
+  depth: 0, // z
+  color: [1, 0.4, 0.4, 1], // red
 });
 ```
 
@@ -157,13 +175,13 @@ box.draw({
 
 ```js
 box.draw({
-  top    : 0.9,             // x
-  bottom : 0,               // x
-  left   : -0.9,            // y
-  right  : 0.9,             // y
+  top: 0.9, // x
+  bottom: 0, // x
+  left: -0.9, // y
+  right: 0.9, // y
 
-  depth  : 0.5,             // z
-  color  : [0.4, 1, 0.4, 1] // green
+  depth: 0.5, // z
+  color: [0.4, 1, 0.4, 1], // green
 });
 ```
 
@@ -171,27 +189,27 @@ box.draw({
 
 ```js
 box.draw({
-  top    : 1,               // x
-  bottom : -1,              // x
-  left   : -1,              // y
-  right  : 1,               // y
+  top: 1, // x
+  bottom: -1, // x
+  left: -1, // y
+  right: 1, // y
 
-  depth  : -1.5,            // z
-  color  : [0.4, 0.4, 1, 1] // blue
+  depth: -1.5, // z
+  color: [0.4, 0.4, 1, 1], // blue
 });
 ```
 
 #### 結果
 
-[JSFiddle で表示](https://jsfiddle.net/mff99yu5)
+[JSFiddle で表示](https://jsfiddle.net/tatumcreative/mff99yu5/)
 
-![The results of drawing to clip space using WebGL.](https://mdn.mozillademos.org/files/11373/part1.png)
+![The results of drawing to clip space using WebGL.](part1.png)
 
 #### 演習
 
 この時点で役立つ演習は、コードを変更してボックスをクリップ空間内で移動し、点がクリップ空間内でどのようにクリップされ、移動されるかを感じ取ることです。背景を持つボックス状のスマイルのような絵を描いてみてください。
 
-## 斉次座標
+## 同次座標
 
 前のクリップ空間の頂点シェーダのメインラインは、このコードを含んでいました。
 
@@ -199,14 +217,14 @@ box.draw({
 gl_Position = vec4(position, 1.0);
 ```
 
-変数 `position` は、 `draw()` メソッドで定義され、属性としてシェーダーに渡されました。これは 3 次元の点ですが、パイプラインを介して渡されることになる変数 `gl_Position` は実際には 4 次元です。すなわち、 `(x, y, z)` の代わりに `(x, y, z, w)` となっています。`z` の後には文字がないため、慣例により、この 4 番目の次元には `w` というラベルが付いています。 上記の例では、 `w` 座標は 1.0 に設定されています。
+変数 `position` は、 `draw()` メソッドで定義され、属性としてシェーダーに渡されました。これは三次元の点ですが、パイプラインを介して渡されることになる変数 `gl_Position` は実際には四次元です。すなわち、 `(x, y, z)` の代わりに `(x, y, z, w)` となっています。`z` の後には文字がないため、慣例により、この 4 番目の次元には `w` というラベルが付いています。 上記の例では、 `w` 座標は 1.0 に設定されています。
 
-明らかな疑問は、「なぜ余分な次元があるのか？」です。この追加により、3D データを操作するための多くの優れた手法が可能になることが分かります。この追加された次元により、遠近法の概念が座標系に導入されます。それを配置すると、3D 座標を 2D 空間にマッピングできます。これにより、2 本の平行線が遠くに離れるときに交差するようになります。値 `w` は、座標の他のコンポーネントの除数として使用されるため、 `x`、`y`、`z`の真の値は、`x/w`、`y/w`、`z/w`として計算されます（そして、`w`も `w/w`で 1 になる）。
+明らかな疑問は、「なぜ余分な次元があるのか？」です。この追加により、3D データを操作するための多くの優れた手法が可能になることが分かります。この追加された次元により、遠近法の概念が座標系に導入されます。それを配置すると、3D 座標を 2D 空間にマッピングできます。これにより、2 本の平行線が遠くに離れるときに交差するようになります。値 `w` は、座標の他のコンポーネントの除数として使用されるため、 `x`、`y`、`z` の真の値は、`x/w`、`y/w`、`z/w` として計算されます（そして、`w`も `w/w` で 1 になります）。
 
-A three dimensional point is defined in a typical Cartesian coordinate system. The added fourth dimension changes this point into a [homogeneous coordinate](https://en.wikipedia.org/wiki/homogeneous_coordinates). It still represents a point in 3D space and it can easily be demonstrated how to construct this type of coordinate through a pair of simple functions.
+三次元の点は、典型的なデカルト座標系で定義されます。四次元目が加わることで、この点は[同次座標](https://en.wikipedia.org/wiki/Homogeneous_coordinates)に変化します。これはまだ 3 次元空間の点を表しており、このような座標をどのように構築するかは、単純な関数の組によって簡単に示せます。
 
 ```js
-function cartesianToHomogeneous(point)
+function cartesianToHomogeneous(point) {
   let x = point[0];
   let y = point[1];
   let z = point[2];
@@ -220,46 +238,64 @@ function homogeneousToCartesian(point) {
   let z = point[2];
   let w = point[3];
 
-  return [x/w, y/w, z/w];
+  return [x / w, y / w, z / w];
 }
 ```
 
-As previously mentioned and shown in the functions above, the w component divides the x, y, and z components. When the w component is a non-zero real number then homogeneous coordinate easily translates back into a normal point in Cartesian space. Now what happens if the w component is zero? In JavaScript the value returned would be as follows.
+前述したように、また上の関数で示したように、 w 成分は x、y、z 成分を除算します。 w 成分がゼロでない実数であるとき、同次座標は直交空間の法線点に簡単に戻ります。では、 w 成分がゼロの場合はどうなるでしょうか。 JavaScript では次のような値が返されます。
 
 ```js
 homogeneousToCartesian([10, 4, 5, 0]);
 ```
 
-This evaluates to: `[Infinity, Infinity, Infinity]`.
+これは `[Infinity, Infinity, Infinity]` と評価されます。
 
-This homogeneous coordinate represents some point at infinity. This is a handy way to represent a ray shooting off from the origin in a specific direction. In addition to a ray, it could also be thought of as a representation of a directional vector. If this homogeneous coordinate is multiplied against a matrix with a translation then the translation is effectively stripped out.
+この同次座標は無限の位置にある点を表します。これは、原点から特定の方向に放たれる光線を表す便利な方法です。光線だけでなく、方向ベクトルの表現と考えることもできます。この同次座標を平行移動のある行列と掛け合わせると、平行移動は効果的に取り除かれます。
 
-When numbers are extremely large (or extremely small) on computers they begin to become less and less precise because there are only so many ones and zeros that are used to represent them. The more operations that are done on larger numbers, the more and more errors accumulate into the result. When dividing by w, this can effectively increase the precision of very large numbers by operating on two potentially smaller, less error-prone numbers.
+コンピューター上で数字が極端に大きく（あるいは極端に小さく）なると、それを表現するのに使われる 1 と 0 の数が限られるため、精度がどんどん落ちていきます。大きな数を運営する演算子が増えれば増えるほど、結果に誤差が蓄積されていきます。w で割る場合、 2 つの潜在的に小さくて誤差の少ない数を操作することで、非常に大きな数の精度を効果的に高めることができます。
 
-The final benefit of using homogeneous coordinates is that they fit very nicely for multiplying against 4x4 matrices. A vertex must match at least one of the dimensions of a matrix in order to be multiplied against it. The 4x4 matrix can be used to encode a variety of useful transformations. In fact, the typical perspective projection matrix uses the division by the w component to achieve its transformation.
+同次座標を使用する最後の好ましいことは、 4x4 行列に対して乗算するのにとてもうまく適合するということです。行列に対して乗算するためには、頂点は行列の少なくとも 1 つの次元と一致しなければなりません。 4x4 行列は、さまざまな有益な変換をエンコードするために使用することができます。実際，典型的な透視投影行列は，その変換を実現するために w 成分による除算を使用しています．
 
-The clipping of points and polygons from clip space actually happens after the homogeneous coordinates have been transformed back into Cartesian coordinates (by dividing by w). This final space is known as **normalized device coordinates** or NDC.
+クリップ空間からの点とポリゴンのクリッピングは、同次座標が（w で割ることによって）デカルト座標に変換される前に行われます。この最終空間は**正規化機器座標**または NDC として知られています。
 
-To start playing with this idea the previous example can be modified to allow for the use of the `w` component.
+このアイディアを遊び始めるには、前回の例を変更して `w` 成分を使用することができます。
 
 ```js
 //Redefine the triangles to use the W component
-var data = new Float32Array([
+const data = new Float32Array([
   //Triangle 1
-  settings.left,  settings.bottom, settings.depth, settings.w,
-  settings.right, settings.bottom, settings.depth, settings.w,
-  settings.left,  settings.top,    settings.depth, settings.w,
+  settings.left,
+  settings.bottom,
+  settings.depth,
+  settings.w,
+  settings.right,
+  settings.bottom,
+  settings.depth,
+  settings.w,
+  settings.left,
+  settings.top,
+  settings.depth,
+  settings.w,
 
   //Triangle 2
-  settings.left,  settings.top,    settings.depth, settings.w,
-  settings.right, settings.bottom, settings.depth, settings.w,
-  settings.right, settings.top,    settings.depth, settings.w
+  settings.left,
+  settings.top,
+  settings.depth,
+  settings.w,
+  settings.right,
+  settings.bottom,
+  settings.depth,
+  settings.w,
+  settings.right,
+  settings.top,
+  settings.depth,
+  settings.w,
 ]);
 ```
 
-Then the vertex shader uses the 4 dimensional point passed in.
+その後、頂点シェーダーは渡された 4 次元目の点を使用します。
 
-```js
+```glsl
 attribute vec4 position;
 
 void main() {
@@ -267,138 +303,141 @@ void main() {
 }
 ```
 
-First, we draw a red box in the middle, but set W to 0.7. As the coordinates get divided by 0.7 they will all be enlarged.
+最初に真ん中に赤い枠を描画しますが、 W は 0.7 に設定します。座標が 0.7 で分割されると、すべて拡大されます。
 
 ```js
 box.draw({
-  top    : 0.5,             // y
-  bottom : -0.5,            // y
-  left   : -0.5,            // x
-  right  : 0.5,             // x
-  w      : 0.7,             // w - enlarge this box
+  top: 0.5, // y
+  bottom: -0.5, // y
+  left: -0.5, // x
+  right: 0.5, // x
+  w: 0.7, // w - enlarge this box
 
-  depth  : 0,               // z
-  color  : [1, 0.4, 0.4, 1] // red
+  depth: 0, // z
+  color: [1, 0.4, 0.4, 1], // red
 });
 ```
 
-Now, we draw a green box up top, but shrink it by setting the w component to 1.1
+これで上部に緑色のボックスを描画しますが、 w 成分を 1.1 に設定するには縮小します。
 
 ```js
 box.draw({
-  top    : 0.9,             // y
-  bottom : 0,               // y
-  left   : -0.9,            // x
-  right  : 0.9,             // x
-  w      : 1.1,             // w - shrink this box
+  top: 0.9, // y
+  bottom: 0, // y
+  left: -0.9, // x
+  right: 0.9, // x
+  w: 1.1, // w - shrink this box
 
-  depth  : 0.5,             // z
-  color  : [0.4, 1, 0.4, 1] // green
+  depth: 0.5, // z
+  color: [0.4, 1, 0.4, 1], // green
 });
 ```
 
-This last box doesn't get drawn because it's outside of clip space. The depth is outside of the -1.0 to 1.0 range.
+この最後のボックスはクリップ空間の外なので描画されません。深さは -1.0 から 1.0 の範囲外です。
 
 ```js
 box.draw({
-  top    : 1,               // y
-  bottom : -1,              // y
-  left   : -1,              // x
-  right  : 1,               // x
-  w      : 1.5,             // w - Bring this box into range
+  top: 1, // y
+  bottom: -1, // y
+  left: -1, // x
+  right: 1, // x
+  w: 1.5, // w - Bring this box into range
 
-  depth  : -1.5,             // z
-  color  : [0.4, 0.4, 1, 1] // blue
+  depth: -1.5, // z
+  color: [0.4, 0.4, 1, 1], // blue
 });
 ```
 
-### The results
+### 結果
 
-[View on JSFiddle](https://jsfiddle.net/mff99yu)
+![WebGL でボックスを移動させるために同次座標を使用した結果。](part2.png)
 
-![The results of using homogeneous coordinates to move the boxes around in WebGL.](https://mdn.mozillademos.org/files/11375/part2.png)
+### 練習問題
 
-### Exercises
+- これらの値を操作して、画面に描画されるものにどのような影響があるか見てみましょう。前回クリップされていた青いボックスが、 w 成分を設定することで範囲内に戻ったことにメモしてください。
+- クリップ空間の外側に新しいボックスを作成し、 w で割って内側に戻してみてください。
 
-- Play around with these values to see how it affects what is rendered on the screen. Note how the previously clipped blue box is brought back into range by setting its w component.
-- Try creating a new box that is outside of clip space and bring it back in by dividing by w.
+## モデルの座標変換
 
-## Model transform
+クリップ空間に点を直接配置しても、使用することには限界があります。実際のアプリケーションでは、すべてのソース座標がクリップ空間座標にすでに収まっているとは限りません。そのため、ほとんどの場合、モデルデータや他の座標をクリップ空間に変換する必要があります。地味な立方体は、この方法の単純な例です。立方体のデータは、頂点位置、立方体の面の色、および個々の多角形を構成する頂点位置の順序（立方体の面を構成する三角形を構成する3つの頂点のグループ）で構成されます。位置と色は GL バッファに格納され、属性としてシェーダに送られ、個別に処理されます。
 
-Placing points directly into clip space is of limited use. In real world applications, you don't have all your source coordinates already in clip space coordinates. So most of the time, you need to transform the model data and other coordinates into clip space. The humble cube is an easy example of how to do this. Cube data consists of vertex positions, the colors of the faces of the cube, and the order of the vertex positions that make up the individual polygons (in groups of 3 vertices to construct the triangles composing the cube's faces). The positions and colors are stored in GL buffers, sent to the shader as attributes, and then operated upon individually.
+最後に、単一のモデル行列が計算され、設定されます。この行列は、モデルを構成するすべての点に対して、モデルを正しい空間に移動させ、モデルの各点に対して他にも必要な変換を行うために実行される変換を表します。これは、各頂点だけでなく、モデルのすべての面上の単一の点にも適用されます。
 
-Finally a single model matrix is computed and set. This matrix represents the transformations to be performed on every point making up the model in order to move it into the correct space, and to perform any other needed transforms on each point in the model. This applies not just to each vertex, but to every single point on every surface of the model as well.
+この場合、アニメーションのフレームごとに、一連の拡大縮小、回転、平行移動の行列がデータをクリップ空間の目的の場所に移動させます。立方体はクリップ空間のサイズ (-1,-1,-1) から (1,1,1) なので、クリップ空間全体を埋めないように縮小する必要があります。この行列は、あらかじめ JavaScript で乗算した後、直接シェーダーに送られます。
 
-In this case, for every frame of the animation a series of scale, rotation, and translation matrices move the data into the desired spot in clip space. The cube is the size of clip space (-1,-1,-1) to (1,1,1) so it will need to be shrunk down in order to not fill the entirety of clip space. This matrix is sent directly to the shader, having been multiplied in JavaScript beforehand.
-
-The following code sample defines a method on the `CubeDemo` object that will create the model matrix. It uses custom functions to create and multiply matrices as defined in the [MDN WebGL](https://github.com/TatumCreative/mdn-webgl) shared code. The new function looks like this:
+以下のコードサンプルでは、モデル行列を作成する `CubeDemo` オブジェクトのメソッドを定義します。 [MDN WebGL](https://github.com/gregtatum/mdn-webgl) の共有コードで定義されているように、行列を作成したり乗算したりするカスタム関数を使用しています。新しい関数は次のようになります。
 
 ```js
-CubeDemo.prototype.computeModelMatrix = function(now) {
+CubeDemo.prototype.computeModelMatrix = function (now) {
   //Scale down by 50%
-  var scale = MDN.scaleMatrix(0.5, 0.5, 0.5);
+  const scale = MDN.scaleMatrix(0.5, 0.5, 0.5);
 
   // Rotate a slight tilt
-  var rotateX = MDN.rotateXMatrix(now * 0.0003);
+  const rotateX = MDN.rotateXMatrix(now * 0.0003);
 
   // Rotate according to time
-  var rotateY = MDN.rotateYMatrix(now * 0.0005);
+  const rotateY = MDN.rotateYMatrix(now * 0.0005);
 
   // Move slightly down
-  var position = MDN.translateMatrix(0, -0.1, 0);
+  const position = MDN.translateMatrix(0, -0.1, 0);
 
   // Multiply together, make sure and read them in opposite order
   this.transforms.model = MDN.multiplyArrayOfMatrices([
     position, // step 4
-    rotateY,  // step 3
-    rotateX,  // step 2
-    scale     // step 1
+    rotateY, // step 3
+    rotateX, // step 2
+    scale, // step 1
   ]);
 };
 ```
 
-In order to use this in the shader it must be set to a uniform location. The locations for the uniforms are saved in the `locations` object shown below:
+これをシェーダーで使用するには、ユニフォームの位置に設定する必要があります。ユニフォームの位置は下記に示す `locations` オブジェクトに保存されます。
 
 ```js
-this.locations.model = gl.getUniformLocation(webglProgram, 'model');
+this.locations.model = gl.getUniformLocation(webglProgram, "model");
 ```
 
-And finally the uniform is set to that location. This hands off the matrix to the GPU.
+そして最後にユニフォームをその場所に設定します。これで行列が GPU に渡されます。
 
 ```js
-gl.uniformMatrix4fv(this.locations.model, false, new Float32Array(this.transforms.model));
+gl.uniformMatrix4fv(
+  this.locations.model,
+  false,
+  new Float32Array(this.transforms.model),
+);
 ```
 
-In the shader, each position vertex is first transformed into a homogeneous coordinate (a `vec4` object), and then multiplied against the model matrix.
+シェーダーでは、各位置の頂点は最初に同次座標（`vec4` オブジェクト）に変換され、次にモデル行列に対して乗算されます。
 
 ```glsl
 gl_Position = model * vec4(position, 1.0);
 ```
 
-> **メモ:** In JavaScript, matrix multiplication requires a custom function, while in the shader it is built into the language with the simple \* operator.
+> [!NOTE]
+> JavaScript で行列の乗算はカスタム関数を要求されますが、シェーダーでは単純な \* 演算子で言語に組み込まれています。
 
-### The results
+### 結果
 
-[View on JSFiddle](https://jsfiddle.net/5jofzgsh)
+[JSFiddle で表示](https://jsfiddle.net/tatumcreative/5jofzgsh/)
 
-![Using a model matrix](https://mdn.mozillademos.org/files/11377/part3.png)
+![モデルマトリックスの使用](part3.png)
 
-At this point the w value of the transformed point is still 1.0. The cube still doesn't have any perspective. The next section will take this setup and modify the w values to provide some perspective.
+この時点では、変換点の w 値は 1.0 のままです。立方体にはまだ視点位置がありません。次の章では、この設定をもとに、 w 値を変更して視点を提供します。
 
-### Exercises
+### 練習問題
 
-- Shrink down the box using the scale matrix and position it in different places within clip space.
-- Try moving it outside of clip space.
-- Resize the window and watch as the box skews out of shape.
-- Add a `rotateZ` matrix.
+- 縮小マトリックスを使ってボックスを縮小し、クリップ空間内の様々な場所に配置しましょう。
+- クリップ空間の外に移してみましょう。
+- ウィンドウのサイズを変更し、ボックスの図形が歪む様子を確認しましょう。
+- `rotateZ` 行列を追加しましょう。
 
-## Divide by W
+## W での除算
 
-An easy way to start getting some perspective on our model of the cube is to take the Z coordinate and copy it over to the w coordinate. Normally when converting a cartesian point to homogeneous it becomes `(x,y,z,1)`, but we're going to set it to something like `(x,y,z,z)`. In reality we want to make sure that z is greater than 0 for points in view, so we'll modify it slightly by changing the value to `((1.0 + z) * scaleFactor)`. This will take a point that is normally in clip space (-1 to 1) and move it into a space more like (0 to 1) depending on what the scale factor is set to. The scale factor changes the final w value to be either higher or lower overall.
+立方体のモデルの視点を始めるには、Z 座標を取り、それを w 座標にコピーするのが簡単です。通常、デカルト点を同値に変換するときは `(x,y,z,1)` となりますが、ここでは `(x,y,z,z)` のように設定します。実際には、 z が 0 より大きい点をビューに取り込みたいので、この値を少し変更して `((1.0 + z) * scaleFactor)` とします。これは通常クリップ空間 (-1 ～ 1) にある点を、スケール係数の設定に応じて (0 ～ 1) のような空間に移します。スケール係数は最終的な w の値を全体的に高くしたり低くしたりします。
 
-The shader code looks like this.
+シェーダーのコードはこんな感じです。
 
-```js
+```glsl
 // First transform the point
 vec4 transformedPosition = model * vec4(position, 1.0);
 
@@ -413,56 +452,56 @@ float w = (1.0 + transformedPosition.z) * scaleFactor;
 gl_Position = vec4(transformedPosition.xyz, w);
 ```
 
-### The results
+### 結果
 
-[View on JSFiddle](https://jsfiddle.net/vk9r8h2c)
+[JSFiddle で表示](https://jsfiddle.net/tatumcreative/vk9r8h2c/)
 
-![Filling the W component and creating some projection.](https://mdn.mozillademos.org/files/11379/part4.png)
+![W 成分を埋めて、自分のプロジェクトを作成しましょう。](part4.png)
 
-See that small dark blue triangle? That's an additional face added to our object because the rotation of our shape has caused that corner to extend outside clip space, thus causing the corner to be clipped away. See [Perspective projection matrix](#perspective_projection_matrix) below for an introduction to how to use more complex matrices to help control and prevent clipping.
+紺色の小さな三角形が見えますか？これはオブジェクトに追加された面です。図形が回転することによって、その角がクリップ空間の外にはみ出し、角がクリッピングされる現象が発生したからです。より複雑な行列を使用してクリッピングを制御したり防止したりする方法については、下記の[透視投影行列](#perspective_projection_matrix)を参照してください。
 
-### Exercise
+### 練習問題
 
-If that sounds a little abstract, open up the vertex shader and play around with the scale factor and watch how it shrinks vertices more towards the surface. Completely change the w component values for really trippy representations of space.
+少し抽象的に聞こえるなら、頂点シェーダーを開いてスケール係数を調整し、頂点がサーフェスに向かってどのように縮小するかを見てください。 w 成分の値を完全に変えると、実に巧妙な空間表現ができます。
 
-In the next section we'll take this step of copying Z into the w slot and turn it into a matrix.
+次の節では、この Z を w スロットにコピーする方法をとり、行列に変えます。
 
-## Simple projection
+## 単純な投影
 
-The last step of filling in the w component can actually be accomplished with a simple matrix. Start with the identity matrix:
+w 成分を埋める最後の手順は、実は単純な行列で実現できます。始めるには恒等行列を使います。
 
-```js
-var identity = [
+```js-nolint
+const identity = [
   1, 0, 0, 0,
   0, 1, 0, 0,
   0, 0, 1, 0,
-  0, 0, 0, 1,
+  0, 0, 0, 1
 ];
 
 MDN.multiplyPoint(identity, [2, 3, 4, 1]);
 //> [2, 3, 4, 1]
 ```
 
-Then move the last column's 1 up one space.
+そして最後の列の 1 を 1 つ上に移動します。
 
-```js
-var copyZ = [
+```js-nolint
+const copyZ = [
   1, 0, 0, 0,
   0, 1, 0, 0,
   0, 0, 1, 1,
-  0, 0, 0, 0,
+  0, 0, 0, 0
 ];
 
 MDN.multiplyPoint(copyZ, [2, 3, 4, 1]);
 //> [2, 3, 4, 4]
 ```
 
-However in the last example we performed `(z + 1) * scaleFactor`:
+しかし、最後の例では `(z + 1) * scaleFactor` を実行しました。
 
-```
-var scaleFactor = 0.5;
+```js-nolint
+const scaleFactor = 0.5;
 
-var simpleProjection = [
+const simpleProjection = [
   1, 0, 0, 0,
   0, 1, 0, 0,
   0, 0, 1, scaleFactor,
@@ -473,33 +512,33 @@ MDN.multiplyPoint(simpleProjection, [2, 3, 4, 1]);
 //> [2, 3, 4, 2.5]
 ```
 
-Breaking it out a little further we can see how this works:
+もう少し詳しく分析すると、これがどのように動作するのかがわかります。
 
 ```js
-var x = (2 * 1) + (3 * 0) + (4 * 0) + (1 * 0)
-var y = (2 * 0) + (3 * 1) + (4 * 0) + (1 * 0)
-var z = (2 * 0) + (3 * 0) + (4 * 1) + (1 * 0)
-var w = (2 * 0) + (3 * 0) + (4 * scaleFactor) + (1 * scaleFactor)
+let x = 2 * 1 + 3 * 0 + 4 * 0 + 1 * 0;
+let y = 2 * 0 + 3 * 1 + 4 * 0 + 1 * 0;
+let z = 2 * 0 + 3 * 0 + 4 * 1 + 1 * 0;
+let w = 2 * 0 + 3 * 0 + 4 * scaleFactor + 1 * scaleFactor;
 ```
 
-The last line could be simplified to:
+最後の行は単純化するとこうなります。
 
 ```js
-w = (4 * scaleFactor) + (1 * scaleFactor)
+w = 4 * scaleFactor + 1 * scaleFactor;
 ```
 
-Then factoring out the scaleFactor, we get this:
+そして、 scaleFactor を因数分解すると、このようになります。
 
 ```js
-w = (4 + 1) * scaleFactor
+w = (4 + 1) * scaleFactor;
 ```
 
-Which is exactly the same as the `(z + 1) * scaleFactor` that we used in the previous example.
+これは前回の例で使用した `(z + 1) * scaleFactor` と全く同じです。
 
-In the box demo, an additional `computeSimpleProjectionMatrix()` method is added. This is called in the `draw()` method and has the scale factor passed to it. The result should be identical to the last example:
+このデモでは、 `computeSimpleProjectionMatrix()` メソッドが追加されています。これは `draw()` メソッドの中で呼び出され、スケール係数が渡されます。結果は前回の例と同じになるはずです。
 
-```js
-CubeDemo.prototype.computeSimpleProjectionMatrix = function(scaleFactor) {
+```js-nolint
+CubeDemo.prototype.computeSimpleProjectionMatrix = function (scaleFactor) {
   this.transforms.projection = [
     1, 0, 0, 0,
     0, 1, 0, 0,
@@ -509,61 +548,66 @@ CubeDemo.prototype.computeSimpleProjectionMatrix = function(scaleFactor) {
 };
 ```
 
-Although the result is identical, the important step here is in the vertex shader. Rather than modifying the vertex directly, it gets multiplied by an additional **[projection matrix](#projection_matrix)**, which (as the name suggests) projects 3D points onto a 2D drawing surface:
+結果は同じですが、ここでの重要な手順は頂点シェーダーにあります。頂点を直接変更するのではなく、追加の **[投影行列](#投影行列)** と乗算します。この行列は（その名前が示すように） 3D 点を 2D の描画面に投影します。
 
 ```glsl
 // Make sure to read the transformations in reverse order
 gl_Position = projection * model * vec4(position, 1.0);
 ```
 
-### The results
+### 結果
 
-[View on JSFiddle](https://jsfiddle.net/zwyLLcbw)
+[JSFiddle で表示](https://jsfiddle.net/tatumcreative/zwyLLcbw/)
 
-![A simple projection matrix](https://mdn.mozillademos.org/files/11381/part5.png)
+![単純な投影行列](part5.png)
 
-## The viewing frustum
+## 視錐台
 
-Before we move on to covering how to compute a perspective projection matrix, we need to introduce the concept of the **[viewing frustum](https://en.wikipedia.org/wiki/viewing_frustum)** (also known as the **view frustum**). This is the region of space whose contents are visible to the user at the current time. It's the 3D region of space defined by the field of view and the distances specified as the nearest and farthest content that should be rendered.
+視点位置の投影行列の計算方法に移る前に、**[視錐台](https://en.wikipedia.org/wiki/Viewing_frustum)**（**view frustum** とも呼ばれます）の概念を紹介する必要があります。これは、現時点でユーザーにコンテンツが見えている空間の領域です。視野角と、レンダリングされるべき最も近いコンテンツと最も遠いコンテンツとして指定した距離によって定義される空間の 3D 領域です。
 
-While rendering, we need to determine which polygons need to be rendered in order to represent the scene. This is what the viewing frustum defines. But what's a frustum in the first place?
+レンダリング中に、シーンを表すためにどのポリゴンをレンダリングする必要があるかを決定する必要があります。これを定義するのが視錐台です。しかし、そもそも錐台とは何でしょうか？
 
-A [frustum](https://en.wikipedia.org/wiki/frustum) is the 3D solid that results from taking any solid and slicing off two sections of it using two parallel planes. Consider our camera, which is viewing an area that starts immediately in front of its lens and extends off into the distance. The viewable area is a four-sided pyramid with its peak at the lens, its four sides corresponding to the extents of its peripheral vision range, and its base at the farthest distance it can see, like this:
+[錐台](https://ja.wikipedia.org/wiki/錐台)とは、任意の立体を 2 つの平行する平面を使用して 2 つの部分に切り取った結果の 3D 立体のことです。私たちのカメラは、レンズのすぐ前から始まり、遠くへ広がっていく領域を見ているとします。見える範囲は四角錐で、頂点はレンズ、 4 つの辺は周辺視野の範囲に対応し、底辺はこのように最も遠くに見えます。
 
-![A depiction of the entire viewing area of a camera. This area is a four-sided pyramid with its peak at the lens and its base at the world's maximum viewable distance.](https://mdn.mozillademos.org/files/17295/FullCameraFOV.svg)
+![カメラの全視野領域を描いたもの。四角ピラミッドの頂点がレンズ、底辺が最大撮影距離。](fullcamerafov.svg)
 
-If we simply used this to determine the polygons to be rendered each frame, our renderer would need to render every polygon within this pyramid, all the way off into infinity, including also polygons that are very close to the lens—likely too close to be useful (and certainly including things that are so close that a real human wouldn't be able to focus on them in the same setting).
+これを使用してフレームごとにレンダリングするポリゴンを決定すると、レンダラーはこのピラミッド内のすべてのポリゴンをレンダリングする必要があり、レンズからとても近いポリゴンも含めて、無限遠までレンダリングする必要があります。
 
-So the first step in reducing the number of polygons we need to compute and render, we turn this pyramid into the viewing frustum. The two planes we'll use to chop away vertices in order to reduce the polygon count are the **near clipping plane** and the **far clipping plane**.
+そこで、計算とレンダリングに必要なポリゴン数を削減する最初の手順として、このピラミッドを視錐台にします。ポリゴン数を縮小するために、頂点を減らすのに使用する 2 枚の平面は、**前方クリッピング平面**と**後方クリッピング平面**です。
 
-In WebXR, the near and far clipping planes are defined by specifying the distance from the lens to the closest point on a plane which is perpendicular to the viewing direction. Anything closer to the lens than the near clipping plane or farther from it than the far clipping plane is removed. This results in the viewing frustum, which looks like this:
+WebGL では、前方および後方クリッピング面は、レンズから視線方向に垂直な面上の最も近いこの点までの距離を指定することで定義します。前方クリッピング面よりもレンズに近いものや、後方クリッピング面よりもレンズから遠いものは除去されます。この結果、視錐台は次のようになります。
 
-![A depiction of the camera's view frustum; the near and far planes have removed part of the volume, reducing the polygon count.](https://mdn.mozillademos.org/files/17296/CameraViewFustum.svg)
+![カメラの視錐台の描写。前方クリッピング面と後方クリッピング面によってボリュームの一部が除去され、ポリゴン数を削減しています。](camera_view_frustum.svg)
 
-The set of objects to be rendered for each frame is essentially created by starting with the set of all objects in the scene. Then any objects which are _entirely_ outside the viewing frustum are removed from the set. Next, objects which partially extrude outside the viewing frustum are clipped by dropping any polygons which are entirely outside the frustum, and by clipping the polygons which cross outside the frustrum so that they no longer exit it.
+各フレームでレンダリングされるオブジェクトの集合は、基本的にシーン内のすべてのオブジェクトの集合から作成し始めます。そして、視錐台の完全に外側にあるオブジェクトはその集合から除外されます。次に、部分的に視錐台の外側にはみ出しているオブジェクトは、視錐台の外側にあるポリゴンをすべて削除し、視錐台の外側を横切るポリゴンをクリップすることで、視錐台から出なくなります。
 
-Once that's been done, we have the largest set of polygons which are entirely within the viewing frustum. This list is usually further reduced using processes like [back-face_culling](https://en.wikipedia.org/wiki/back-face_culling)}} (removing polygons whose back side is facing the camera) and occlusion culling using [hidden-surface determination](https://en.wikipedia.org/wiki/hidden-surface_determination)}} (removing polygons which can't be seen because they're entirely blocked by polygons that are closer to the lens).
+これが完了すると、視錐台内にあるポリゴンの最大集合が得られます。このリストは通常、[背面カリング](https://en.wikipedia.org/wiki/Back-face_culling)（裏側がカメラに向いているポリゴンを除去）や、[陰面判定](https://en.wikipedia.org/wiki/Hidden-surface_determination) （レンズに近いポリゴンに完全に遮られて見えないポリゴンを除去する）を使用したオクルージョンカリングなどの処理を使って、さらに削減されます。
 
-## Perspective projection matrix
+## 透視投影行列
 
-Up to this point, we've built up our own 3D rendering setup, step by step. However the current code as we've built it has some issues. For one, it gets skewed whenever we resize our window. Another is that our simple projection doesn't handle a wide range of values for the scene data. Most scenes don't work in clip space. It would be helpful to define what distance is relevant to the scene so that precision isn't lost in converting the numbers. Finally it's very helpful to have a fine-tuned control over what points get placed inside and outside of clip space. In the previous examples the corners of the cube occasionally get clipped.
+この点まで、自分自身で 3D レンダリングのセットアップを段階的に構築してきました。しかし、現在のコードにはいくつかの課題があります。一つは、ウィンドウのサイズを変更するたびに歪んでしまうことです。もうひとつは、自分の単純なプロジェクトでは、シーンデータの値の広い範囲を処理しないことです。ほとんどのシーンはクリップ空間で動作しません。数値の変換で精度が失われないように、シーンに関連する距離を定義しておくと便利でしょう。最後に、どの点がクリップ空間の内側と外側に配置されるかを細かく制御するととても便利です。前回の例では、立方体の角がクリップされることがありました。
 
-The **perspective projection matrix** is a type of projection matrix that accomplishes all of these requirements. The math also starts to get a bit more involved and won't be fully explained in these examples. In short, it combines dividing by w (as done with the previous examples) with some ingenious manipulations based on [similar triangles](https://en.wikipedia.org/wiki/Similarity_%28geometry%29). If you want to read a full explanation of the math behind it check out some of the following links:
+**透視投影行列**は、これらの要求をすべて達成する投影行列の種類です。数学も少し複雑になり始めるので、この例では十分に説明しません。要するに、（前回例で行ったように） w で割ることと、[相似三角形](https://ja.wikipedia.org/wiki/図形の相似)に基づくいくつかの巧妙な操作を組み合わせたものです。その背後にある数学的に完全な説明を読むには、以下のリンクを調べてください。
 
-- [OpenGL Projection Matrix](http://www.songho.ca/opengl/gl_projectionmatrix.html)
-- [Perspective Projection](http://ogldev.atspace.co.uk/www/tutorial12/tutorial12.html)
-- [Trying to understand the math behind the perspective projection matrix in WebGL](http://stackoverflow.com/questions/28286057/trying-to-understand-the-math-behind-the-perspective-matrix-in-webgl/28301213#28301213)
+- [OpenGL Projection Matrix](https://www.songho.ca/opengl/gl_projectionmatrix.html)
+- [Perspective Projection](https://ogldev.org/)
+- [Trying to understand the math behind the perspective projection matrix in WebGL](https://stackoverflow.com/questions/28286057/trying-to-understand-the-math-behind-the-perspective-matrix-in-webgl/28301213#28301213)
 
-One important thing to note about the perspective projection matrix used below is that it flips the z axis. In clip space the z+ goes away from the viewer, while with this matrix it comes towards the viewer.
+下記で使用する視点位置投影行列で注意すべき重要なことは、 z 軸を反転させるということです。クリップ空間では z を増加させると見る人から遠ざかりますが、この行列では見る人の方に来ます。
 
-The reason to flip the z axis is that the clip space coordinate system is a left-handed coordinate system (wherein the z-axis points away from the viewer and into the screen), while the convention in mathematics, physics and 3D modeling, as well as for the view/eye coordinate system in OpenGL, is to use a right-handed coordinate system (z-axis points out of the screen towards the viewer) . More on that in the relevant Wikipedia articles: [Cartesian coordinate system](https://en.wikipedia.org/wiki/Cartesian_coordinate_system#Orientation_and_handedness), [Right-hand rule](https://en.wikipedia.org/wiki/Right-hand_rule).
+z 軸を反転させる理由は、クリップ空間座標系が左手座標系（z 軸が視聴者から画面の内側へ向く）であるのに対し、数学、物理学、 3D モデリング、 OpenGL のビュー/視線座標系では、右手座標系（z 軸が視聴者に向かって画面の外側を向く）を使用するのが慣例だからです。詳しくはウィキペディアの関連記事、[デカルト座標系](https://ja.wikipedia.org/wiki/直交座標系)、[右手の法則](https://ja.wikipedia.org/wiki/右手の法則)を参照してください。
 
-Let's take a look at a `perspectiveMatrix()` function, which computes the perspective projection matrix.
+それでは、透視投影行列を計算する関数 `perspectiveMatrix()` を見ていきましょう。
 
-```js
-MDN.perspectiveMatrix = function(fieldOfViewInRadians, aspectRatio, near, far) {
-  var f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
-  var rangeInv = 1 / (near - far);
+```js-nolint
+MDN.perspectiveMatrix = function (
+  fieldOfViewInRadians,
+  aspectRatio,
+  near,
+  far,
+) {
+  const f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
+  const rangeInv = 1 / (near - far);
 
   return [
     f / aspectRatio, 0,                          0,   0,
@@ -571,93 +615,91 @@ MDN.perspectiveMatrix = function(fieldOfViewInRadians, aspectRatio, near, far) {
     0,               0,    (near + far) * rangeInv,  -1,
     0,               0,  near * far * rangeInv * 2,   0
   ];
-}
+};
 ```
 
-The four parameters into this function are:
+この関数の 4 つの引数は以下の通りです。
 
-- `fieldOfviewInRadians`
-  - : An angle, given in radians, indicating how much of the scene is visible to the viewer at once. The larger the number is, the more is visible by the camera. The geometry at the edges becomes more and more distorted, equivalent to a wide angle lens. When the field of view is larger, the objects typically get smaller. When the field of view is smaller, then the camera can see less and less in the scene. The objects are distorted much less by perspective and objects seem much closer to the camera
+- `fieldOfViewInRadians`
+  - : ラジアン単位で指定された角度で、シーンのどの程度が一度に視聴者に見えるかを示します。数値が大きいほど、カメラから見える範囲が広くなります。広角レンズに相当し、周辺部の形状はどんどん歪んでいきます。視野角が大きくなると、一般的にオブジェクトは小さくなります。視野角が小さくなると、カメラで見える範囲が狭まっていきます。視点位置によるオブジェクトの歪みが少なくなり、オブジェクトがカメラに近く見えます。
 - `aspectRatio`
-  - : The scene's aspect ratio, which is equivalent to its width divided by its height. In these examples, that's the window's width divided by the window height. The introduction of this parameter finally solves the problem wherein the model gets warped as the canvas is resized and reshaped.
+  - : シーンのアスペクト比は、幅を高さで割ったものです。この例では、ウィンドウの幅をウィンドウの高さで割ったものです。この引数を導入することで、キャンバスのサイズが変更されたり、形が変わったりするとモデルがゆがんでしまうという問題が最終的に解決されます。
 - `nearClippingPlaneDistance`
-  - : A positive number indicating the distance into the screen to a plane which is perpendicular to the floor, nearer than which everything gets clipped away. This is mapped to -1 in clip space, and should not be set to 0.
+  - : 画面側へ、床に垂直な面までの距離を示す正の値で、これより近いすべてがクリップされます。これはクリップ空間では -1 に割り当てられており、0 に設定してはいけません。
 - `farClippingPlaneDistance`
-  - : A positive number indicating the distance to the plane beyond which geometry is clipped away. This is mapped to 1 in clip space. This value should be kept reasonably close to the distance of the geometry in order to avoid precision errors creeping in while rendering.
+  - : ジオメトリーが切り取られる平面までの距離を示す正の値。クリップ空間では 1 に割り当てられています。この値は、レンダリング中に精度の誤差が生じるのを避けるために、ジオメトリーの距離に適度に近い値に閉じられている必要があります。
 
-In the latest version of the box demo, the `computeSimpleProjectionMatrix()` method has been replaced with the `computePerspectiveMatrix()` method.
+このデモの最新バージョンでは、 `computeSimpleProjectionMatrix()` メソッドは `computePerspectiveMatrix()` メソッドに置き換えられています。
 
 ```js
-CubeDemo.prototype.computePerspectiveMatrix = function() {
-  var fieldOfViewInRadians = Math.PI * 0.5;
-  var aspectRatio = window.innerWidth / window.innerHeight;
-  var nearClippingPlaneDistance = 1;
-  var farClippingPlaneDistance = 50;
+CubeDemo.prototype.computePerspectiveMatrix = function () {
+  const fieldOfViewInRadians = Math.PI * 0.5;
+  const aspectRatio = window.innerWidth / window.innerHeight;
+  const nearClippingPlaneDistance = 1;
+  const farClippingPlaneDistance = 50;
 
   this.transforms.projection = MDN.perspectiveMatrix(
     fieldOfViewInRadians,
     aspectRatio,
     nearClippingPlaneDistance,
-    farClippingPlaneDistance
+    farClippingPlaneDistance,
   );
 };
 ```
 
-The shader code is identical to the previous example:
+シェーダーコードは前回の例と同じです。
 
 ```js
 gl_Position = projection * model * vec4(position, 1.0);
 ```
 
-Additionally (not shown), the position and scale matrices of the model have been changed to take it out of clip space and into the larger coordinate system.
+さらに（表示されていませんが）、モデルの位置と拡大縮小行列は、クリップ空間から大きな座標系に導くために変更されています。
 
-### The results
+### 結果
 
-[View on JSFiddle](https://jsfiddle.net/Lzxw7e1q)
+[JSFiddle で表示](https://jsfiddle.net/tatumcreative/Lzxw7e1q/)
 
-![A true perspective matrix](https://mdn.mozillademos.org/files/11383/part6.png)
+![真の視点位置行列](part6.png)
 
-### Exercises
+### 練習問題
 
-- Experiment with the parameters of the perspective projection matrix and the model matrix.
-- Swap out the perspective projection matrix to use [orthographic projection](https://en.wikipedia.org/wiki/orthographic_projection). In the MDN WebGL shared code you'll find the `MDN.orthographicMatrix()`. This can replace the `MDN.perspectiveMatrix()` function in `CubeDemo.prototype.computePerspectiveMatrix()`.
+- 透視投影行列とモデル行列の引数で実験しましょう。
+- 透視投影行列を入れ替えて、[正射投影](https://en.wikipedia.org/wiki/Orthographic_projection)を使用しましょう。 MDN WebGL 共有コードに `MDN.orthographicMatrix()` があります。これは `CubeDemo.prototype.computePerspectiveMatrix()` の `MDN.perspectiveMatrix()` 関数を置き換えることができます。
 
-## View matrix
+## ビュー行列
 
-While some graphics libraries have a virtual camera that can be positioned and pointed while composing a scene, OpenGL (and by extension WebGL) does not. This is where the **view matrix** comes in. Its job is to translate, rotate, and scale the objects in the scene so that they are located in the right place relative to the viewer given the viewer's position and orientation.
+グラフィックライブラリーの中には、シーンを構成する際に位置や点を指定できる仮想カメラを持っているものがありますが、OpenGL（ひいては WebGL）にはありません。そこで**ビュー行列**の出番です。その仕事は、シーンのオブジェクトを平行移動、回転、拡大縮小させ、ビューアーの位置と方向から見て相対的に正しい配置になるようにすることです。
 
-### Simulating a camera
+### カメラのシミュレーション
 
-This makes use of one of the fundamental facets of Einstein's special relativity theory: the principle of reference frames and relative motion says that, from the perspective of a viewer, you can simulate changing the position and orientation of the viewer by applying the opposite change to the objects in the scene. Either way, the result appears to be identical to the viewer.
+これは、アインシュタインの特殊相対性理論の基本的な側面の1つを使用しています。参照フレームと相対運動の原理は、閲覧者の視点から、シーン内のオブジェクトに反対の変更を適用することによって、閲覧者の位置と方向を変更することをシミュレーションできると言います。いずれにせよ、その結果は閲覧者には同じに現れます。
 
-Consider a box sitting on a table and a camera resting on the table one meter away, pointed at the box, the front of which is pointed toward the camera. Then consider moving the camera away from the box until it's two meters away (by adding a meter to the camera's Z position), then sliding it 10 centimeters to the its left. The box recedes from the camera by that amount and slides to the right slightly, thereby appearing smaller to the camera and exposing a small amount of its left side to the camera.
+テーブルの上に箱が置いてあり、 1 メートル離れたテーブルの上にカメラが置いてあり、箱の正面をカメラに向けているとします。次に、カメラを箱から 2 メートル離れるまで移動させ（カメラの Z の位置に 1 メートル足す）、 10 センチ左側にスライドさせるとします。箱はカメラからその分遠ざかり、少し右にスライドします。そうすることで、カメラには小さく現れ、カメラには箱の左側が少し公開されます。
 
-Now let's reset the scene, placing the box back in its starting point, with the camera two meters from, and directly facing, the box. This time, however, the camera is locked down on the table and cannot be moved or turned. This is what working in WebGL is like. So how do we simulate moving the camera through space?
+これでシーンはリセットされ、箱はこの開始点には戻され、カメラは箱から 2 メートル離れた真正面に配置されます。しかしこの時、カメラはテーブルの上に固定され、移動したり向きを変えたりすることはできません。これが WebGL で作業するときの状態です。では、空間を通してカメラを移動させるにはどうすればよいのでしょうか？
 
-Instead of moving the camera backward and to the left, we apply the inverse transform to the box: we move the _box_ backward one meter, and then 10 centimeters to its right. The result, from the perspective of each of the two objects, is identical.
+カメラを後方左に移動させる代わりに、逆変換を箱に適用します。箱を後方に 1 メートル移動させ、次にその右に 10 センチ移動させます。その結果、 2 つのオブジェクトそれぞれの視点位置は同じになります。
 
-**<<< insert image(s) here >>>**
+このすべての最終手順は、**ビュー行列**を作成することです。これは、シーン内のオブジェクトを変換して、カメラの現在の位置と方向をシミュレーションするように配置します。このままのコードでは、ワールド空間で立方体を動かして、すべてを視点位置があるように投影することはできますが、カメラを移動させることはできません。
 
-The final step in all of this is to create the **view matrix**, which transforms the objects in the scene so they're positioned to simulate the camera's current location and orientation. Our code as it stands can move the cube around in world space and project everything to have perspective, but we still can't move the camera.
+物理的なカメラで映画を撮影することを想像してみてください。カメラを基本的に好きな場所に配置し、好きな方向にカメラを向ける自由があります。これを3Dグラフィックでシミュレーションするために、私たちはビュー行列を使用して、物理的なカメラの位置と回転をシミュレーションします。
 
-Imagine shooting a movie with a physical camera. You have the freedom to place the camera essentially anywhere you wish, and to aim the camera in whichever direction you choose. To simulate this in 3D graphics, we use a view matrix to simulate the position and rotation of that physical camera.
+モデルの頂点を直接変換するモデル行列とは異なり、ビュー行列は抽象的なカメラを移動させます。実際には、頂点シェーダーはモデルを移動させるだけで、「カメラ」はその場に留まります。これをうまく行うには、変換行列の逆行列を使用しなければなりません。逆行列は本質的に変換を反転させるので、カメラビューを前方に移動させると、逆行列はシーン内のオブジェクトを後方に移動させます。
 
-Unlike the model matrix, which directly transforms the model vertices, the view matrix moves an abstract camera around. In reality, the vertex shader is still only moving the models while the "camera" stays in place. In order for this to work out correctly, the inverse of the transform matrix must be used. The inverse matrix essentially reverses a transformation, so if we move the camera view forward, the inverse matrix causes the objects in the scene to move back.
-
-The following `computeViewMatrix()` method animates the view matrix by moving it in and out, and left and right.
+以下の `computeViewMatrix()` メソッドでは、ビュー行列をアニメーションのように内と外、左と右に移動します。
 
 ```js
-CubeDemo.prototype.computeViewMatrix = function(now) {
-  var moveInAndOut = 20 * Math.sin(now * 0.002);
-  var moveLeftAndRight = 15 * Math.sin(now * 0.0017);
+CubeDemo.prototype.computeViewMatrix = function (now) {
+  const moveInAndOut = 20 * Math.sin(now * 0.002);
+  const moveLeftAndRight = 15 * Math.sin(now * 0.0017);
 
   // Move the camera around
-  var position = MDN.translateMatrix(moveLeftAndRight, 0, 50 + moveInAndOut );
+  const position = MDN.translateMatrix(moveLeftAndRight, 0, 50 + moveInAndOut);
 
   // Multiply together, make sure and read them in opposite order
-  var matrix = MDN.multiplyArrayOfMatrices([
+  const matrix = MDN.multiplyArrayOfMatrices([
     // Exercise: rotate the camera view
-    position
+    position,
   ]);
 
   // Inverse the operation for camera movements, because we are actually
@@ -666,41 +708,41 @@ CubeDemo.prototype.computeViewMatrix = function(now) {
 };
 ```
 
-The shader now uses three matrices.
+これで、シェーダーは 3 つの行列を使用するようになります。
 
 ```glsl
 gl_Position = projection * view * model * vec4(position, 1.0);
 ```
 
-After this step, the GPU pipeline will clip the out of range vertices, and send the model down to the fragment shader for rasterization.
+この手順の後、 GPU パイプラインは範囲外の頂点をクリップし、ラスタライズのためにモデルをフラグメントシェーダーに送ります。
 
-### The results
+### 結果
 
-[View on JSFiddle](https://jsfiddle.net/86fd797g)
+[JSFiddle で表示](https://jsfiddle.net/tatumcreative/86fd797g/)
 
-![The view matrix](https://mdn.mozillademos.org/files/11385/part7.png)
+![ビュー行列](part7.png)
 
-### Relating the coordinate systems
+### 相対座標系
 
-At this point it would be beneficial to take a step back and look at and label the various coordinate systems we use. First off, the cube's vertices are defined in **model space**. To move the model around the scene. these vertices need to be converted into **world space** by applying the model matrix.
+この時点で、一歩下がって、使用している様々な座標系を見てラベル付けすることが有益でしょう。まず最初に、立方体の頂点は **モデル空間** で定義します。モデルをシーンの周りで移されるためです。これらの頂点は、モデル行列を適用して**ワールド空間**に変換する必要があります。
 
-model space → model matrix → world space
+モデル空間 → モデル行列 → ワールド空間
 
-The camera hasn't done anything yet, and the points need to be moved again. Currently they are in world space, but they need to be moved to **view space** (using the view matrix) in order to represent the camera placement.
+カメラはまだ何らかの動きをしていないので、この点はもう一度移動する必要があります。現在はワールド空間にありますが、カメラの配置を表すために**ビュー空間**に移動する必要があります（ビュー行列を使用します）。
 
-world space → view matrix → view space
+ワールド空間 → ビュー行列 → ビュー空間
 
-Finally a **projection** (in our case the perspective projection matrix) needs to be added in order to map the world coordinates into clip space coordinates.
+最後に、ワールド座標をクリップ空間座標に割り当てるために、**投影**（ここでは視点位置投影行列）を追加する必要があります。
 
-view space → projection matrix → clip space
+ビュー空間 → 投影行列 → クリップ空間
 
-### Exercise
+### 練習問題
 
-- Move the camera around the scene.
-- Add some rotation matrices to the view matrix to look around.
-- Finally, track the mouse's position. Use 2 rotation matrices to have the camera look up and down based on where the user's mouse is on the screen.
+- シーン内でカメラを移動しましょう。
+- ビュー行列に回転行列を追加して、見回しましょう。
+- 最後に、マウスの位置を追跡しましょう。2つの回転行列を使用して、ユーザーのマウスが画面上のどこにあるかに基づいてカメラを上下に向けます。
 
-## See also
+## 関連情報
 
 - [WebGL](/ja/docs/Web/API/WebGL_API)
 - [3D projection](https://en.wikipedia.org/wiki/3D_projection)

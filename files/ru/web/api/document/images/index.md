@@ -1,42 +1,44 @@
 ---
-title: document.images
+title: "Document: свойство images"
 slug: Web/API/Document/images
-tags:
-  - DOM
-  - JavaScript
-translation_of: Web/API/Document/images
-original_slug: DOM/document.images
+l10n:
+  sourceCommit: 0af9a589170f1535622062de89bbf73507580b8f
 ---
-{{ ApiRef() }}
 
-### Кратко об объекте
+{{APIRef("DOM")}}
 
-`document.images` возвращает коллекцию [изображений](/ru/Web/API/HTMLImageElement) в текущем HTML документе.
+Доступное только для чтения свойство **`images`** интерфейса {{domxref("Document")}} возвращает [коллекцию](/ru/docs/Web/API/HTMLCollection) всех [изображений](/ru/docs/Web/API/HTMLImageElement) HTML-документа.
 
-### Синтаксис
+## Значение
 
-```
-var htmlCollection = document.images;
-```
+{{domxref("HTMLCollection")}} со всеми изображениями, которые содержит текущий документ. Каждая запись в коллекции является {{domxref("HTMLImageElement")}} и представляет отдельный элемент изображения.
 
-### Пример
+## Примечания по использованию
 
-```
-var images = document.images;
+Для доступа к элементам коллекции можно использовать нотацию массивов или метод {{domxref("HTMLCollection.item", "item()")}}. Следующие действия эквивалентны:
 
-for(var i = 0; i < images.length; i++) {
-    if(images[i].src == "banner.gif") {
-      alert('Баннер найден!');
-    };
-};
+```js
+firstImage = imageCollection.item(0);
+
+firstImage = imageCollection[0];
 ```
 
-### Примечания
+## Примеры
 
-`document.images.length` — возвращает количество изображений на странице.
+В этом примере в документе происходит поиск изображений с именем `"banner.gif"`.
 
-`document.images` является частью DOM HTML, и работает только в HTML документах.
+```js
+for (const image of document.images) {
+  if (image.src === "banner.gif") {
+    console.log("Найден баннер");
+  }
+}
+```
 
-### Спецификация
+## Спецификации
 
-[DOM Level 2 HTML: HTMLDocument.images](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-90379117)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}

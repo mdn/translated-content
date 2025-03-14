@@ -1,14 +1,13 @@
 ---
 title: translateY()
 slug: Web/CSS/transform-function/translateY
-original_slug: Web/CSS/transform-function/translateY()
 ---
 
 {{CSSRef}}
 
 `translateY()` 在页面垂直移动元素，结果是 CSS 数据类型 {{cssxref("&lt;transform-function&gt;")}}。
 
-![](https://mdn.mozillademos.org/files/12125/translateY.png)
+![](translatey.png)
 
 > **备注：** `translateY(ty)` 对应 `translate(0, ty)` 或`translate3d(0, ty, 0)`。
 
@@ -87,9 +86,9 @@ transform: translateY(50%);
   </tbody>
 </table>
 
-### 语法
+### 形式语法
 
-```
+```plain
 translateY({{cssxref("&lt;length-percentage&gt;")}})
 ```
 
@@ -97,7 +96,7 @@ translateY({{cssxref("&lt;length-percentage&gt;")}})
 
 ### HTML
 
-```
+```html
 <div>Static</div>
 <div class="moved">Moved</div>
 <div>Static</div>
@@ -105,7 +104,7 @@ translateY({{cssxref("&lt;length-percentage&gt;")}})
 
 ### CSS
 
-```
+```css
 div {
   width: 60px;
   height: 60px;
@@ -120,7 +119,7 @@ div {
 
 ### 结果
 
-{{EmbedLiveSample("Examples", 250, 250)}}
+{{EmbedLiveSample("示例", 250, 250)}}
 
 ## 规范
 
@@ -130,7 +129,7 @@ div {
 
 {{Compat}}
 
-## 了解更多
+## 参见
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}

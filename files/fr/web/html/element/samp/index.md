@@ -1,5 +1,5 @@
 ---
-title: '<samp> : l''élément d''échantillon en sortie'
+title: "<samp> : l'élément d'échantillon en sortie"
 slug: Web/HTML/Element/samp
 l10n:
   sourceCommit: 20f58e36e34d79bac99aa527865a754e9c29c81b
@@ -7,9 +7,23 @@ l10n:
 
 {{HTMLSidebar}}
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<samp>`** est un élément qui permet de représenter un résultat produit par un programme informatique en incise dans du texte. Il est généralement affiché avec la police à chasse fixe du navigateur (par exemple en [Courier](https://fr.wikipedia.org/wiki/Courier_(police_d%27%C3%A9criture)) ou en Lucida Console).
+L'élément [HTML](/fr/docs/Web/HTML) **`<samp>`** est un élément qui permet de représenter un résultat produit par un programme informatique en incise dans du texte. Il est généralement affiché avec la police à chasse fixe du navigateur (par exemple en [Courier](<https://fr.wikipedia.org/wiki/Courier_(police_d'écriture)>) ou en Lucida Console).
 
-{{EmbedInteractiveExample("pages/tabbed/samp.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;samp&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>I was trying to boot my computer, but I got this hilarious message:</p>
+
+<p>
+  <samp>Keyboard not found <br />Press F1 to continue</samp>
+</p>
+```
+
+```css interactive-example
+samp {
+  font-weight: bold;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -67,7 +81,8 @@ samp {
 }
 ```
 
-> **Note :** S'il vous faut un élément qui serve de conteneur pour une valeur produite par le site ou l'application, vous devriez utiliser [`<output>`](/fr/docs/Web/HTML/Element/output) plutôt que `<samp>`.
+> [!NOTE]
+> S'il vous faut un élément qui serve de conteneur pour une valeur produite par le site ou l'application, vous devriez utiliser [`<output>`](/fr/docs/Web/HTML/Element/output) plutôt que `<samp>`.
 
 ## Exemples
 
@@ -80,8 +95,8 @@ Dans cet exemple simple, un paragraphe contient une mention d'un résultat d'un 
 ```html
 <p>
   Lorsque le traitement est terminé, l'outil affichera le texte
-  <samp>Scan terminé. <em>N</em> résultats trouvés</samp>. Vous
-  pourrez alors passer à l'étape suivante.
+  <samp>Scan terminé. <em>N</em> résultats trouvés</samp>. Vous pourrez alors
+  passer à l'étape suivante.
 </p>
 ```
 

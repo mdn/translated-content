@@ -16,7 +16,8 @@ slug: Web/API/ResizeObserverEntry/contentBoxSize
 - `inlineSize`
   - : 被监听的元素在内联方向上内容盒的长度。对于具有水平 {{cssxref("writing-mode")}} 的盒子，这是水平尺寸或者宽度；如果 writing-mode 是垂直的，这是垂直的尺寸或者高度。
 
-> **备注：** 更多关于书写模式和块以及内联尺寸的解释，请阅读[处理不同方向的文本](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)。
+> [!NOTE]
+> 更多关于书写模式和块以及内联尺寸的解释，请阅读[处理不同方向的文本](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)。
 
 ## 示例
 
@@ -32,12 +33,12 @@ const resizeObserver = new ResizeObserver((entries) => {
     if (entry.borderBoxSize?.length > 0) {
       entry.target.style.borderRadius = calcBorderRadius(
         entry.borderBoxSize[0].inlineSize,
-        entry.borderBoxSize[0].blockSize
+        entry.borderBoxSize[0].blockSize,
       );
     } else {
       entry.target.style.borderRadius = calcBorderRadius(
         entry.contentRect.width,
-        entry.contentRect.height
+        entry.contentRect.height,
       );
     }
   }

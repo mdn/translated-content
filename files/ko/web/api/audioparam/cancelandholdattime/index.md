@@ -1,17 +1,6 @@
 ---
 title: AudioParam.cancelAndHoldAtTime()
 slug: Web/API/AudioParam/cancelAndHoldAtTime
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - Experimental
-  - Method
-  - Reference
-  - Web Audio API
-  - cancelAndHoldAtTime
-  - cancelValuesAndHoldAtTime
-browser-compat: api.AudioParam.cancelAndHoldAtTime
 ---
 
 {{APIRef("Web Audio API")}}
@@ -21,7 +10,7 @@ browser-compat: api.AudioParam.cancelAndHoldAtTime
 ## 구문
 
 ```js
-var audioParam = AudioParam.cancelAndHoldAtTime(cancelTime)
+var audioParam = AudioParam.cancelAndHoldAtTime(cancelTime);
 ```
 
 ### 매개변수

@@ -1,13 +1,6 @@
 ---
-title: 'SyntaxError: Unexpected token'
+title: "SyntaxError: Unexpected token"
 slug: Web/JavaScript/Reference/Errors/Unexpected_token
-tags:
-  - Erreurs
-  - JavaScript
-  - Reference
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Unexpected_token
-original_slug: Web/JavaScript/Reference/Erreurs/Unexpected_token
 ---
 
 {{jsSidebar("Errors")}}
@@ -72,12 +65,19 @@ Si on compte les parenthèses ouvrantes et fermantes, c'est correct mais on peut
 Pour corriger ce problème, il suffit d'ajouter une paire de parenthèses englobante :
 
 ```js example-good
-function round(n, upperBound, lowerBound){
-  if((n > upperBound) || (n < lowerBound)){
-    throw 'Number ' + String(n) + ' is more than ' + String(upperBound) + ' or less than ' + String(lowerBound);
-  }else if(n < ((upperBound + lowerBound)/2)){
+function round(n, upperBound, lowerBound) {
+  if (n > upperBound || n < lowerBound) {
+    throw (
+      "Number " +
+      String(n) +
+      " is more than " +
+      String(upperBound) +
+      " or less than " +
+      String(lowerBound)
+    );
+  } else if (n < (upperBound + lowerBound) / 2) {
     return lowerBound;
-  }else{
+  } else {
     return upperBound;
   }
 }

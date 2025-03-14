@@ -1,6 +1,8 @@
 ---
 title: image-resolution
 slug: Web/CSS/image-resolution
+l10n:
+  sourceCommit: fb2af1f15456199685a9f4fbaf8c9d003a2bf91f
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -17,10 +19,11 @@ image-resolution: 300dpi;
 image-resolution: from-image 300dpi;
 image-resolution: 300dpi snap;
 
-/* Global values */
+/* グローバル値 */
 image-resolution: inherit;
 image-resolution: initial;
 image-resolution: revert;
+image-resolution: revert-layer;
 image-resolution: unset;
 ```
 
@@ -33,7 +36,8 @@ image-resolution: unset;
 - `snap`
   - : `snap` キーワードが指定された場合、計算された解像度は、指定された解像度を、画像の 1 ピクセルを端末の整数のピクセルにマッピングする最も近い値に丸めたものになります。解像度が画像から取得された場合、使用される固有の解像度は、画像のネイティブ解像度を同様に調整したものになります。
 
-> **メモ:** SVG などのベクター形式は内在解像度を持たないので、このプロパティはベクター画像には影響しません。
+> [!NOTE]
+> SVG などのベクター形式は内在解像度を持たないので、このプロパティはベクター画像には影響しません。
 
 ## 公式定義
 
@@ -73,7 +77,7 @@ image-resolution: unset;
 
 ## ブラウザーの互換性
 
-{{Compat}}
+このプロパティに対応しているブラウザーは今のところありません。
 
 ## 関連情報
 

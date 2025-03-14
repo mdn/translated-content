@@ -9,11 +9,12 @@ slug: Web/CSS/border-bottom-left-radius
 
 La propiedad CSS **`border-bottom-left-radius`** establece el redondeo de la esquina inferior izquierda del elemento. El redondeo puede ser un círculo o una elipse, o si uno de los valores es `0`, no se redondeará la esquina, dejándola cuadrada.
 
-![border-bottom-left-radius.png](/@api/deki/files/6136/=border-bottom-left-radius.png)
+![border-bottom-left-radius.png](border-bottom-left-radius.png)
 
 Un fondo, siendo una imagen o color, está limitado a los bordes, incluso a los redondeados; la posición exacta del corte será definida por el valor de la propiedad {{cssxref("background-clip")}}.
 
-> **Nota:** Si el valor de esta propiedad no se establece en una propiedad reducida {{cssxref("border-radius")}} que es aplicada al elemento después de la propiedad `border-bottom-left-radius`, el valor de esta propiedad es restaurado a su valor inicial por la [propiedad de forma reducida](/es/docs/Web/CSS/Shorthand_properties).
+> [!NOTE]
+> Si el valor de esta propiedad no se establece en una propiedad reducida {{cssxref("border-radius")}} que es aplicada al elemento después de la propiedad `border-bottom-left-radius`, el valor de esta propiedad es restaurado a su valor inicial por la [propiedad de forma reducida](/es/docs/Web/CSS/Shorthand_properties).
 
 {{cssinfo}}
 
@@ -137,7 +138,7 @@ div {
   border-bottom-left-radius: 40%;
   height: 100px;
   width: 100px;
-  background-color: rgb(250,20,70);
+  background-color: rgb(250, 20, 70);
   background-clip: content-box;
 }
 ```
@@ -148,9 +149,9 @@ div {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-bottom-left-radius")}}
+{{Compat}}
 
 ## Véase también
 

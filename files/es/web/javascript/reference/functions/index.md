@@ -1,13 +1,6 @@
 ---
 title: Funciones
 slug: Web/JavaScript/Reference/Functions
-tags:
-  - Funciones
-  - Guia(2)
-  - JavaScript
-  - función
-translation_of: Web/JavaScript/Reference/Functions
-original_slug: Web/JavaScript/Referencia/Funciones
 ---
 
 {{jsSidebar("Functions")}}
@@ -28,36 +21,35 @@ Los parámetros en la llamada a una función son los argumentos de la función. 
 
 ```js
 /* Declarando la función 'myFunc' */
- function myFunc(elobjeto)
- {
-   elobjeto.marca= "Toyota";
- }
+function myFunc(elobjeto) {
+  elobjeto.marca = "Toyota";
+}
 
- /*
-  * Declarando la variable 'mycar';
-  * Se crea e inicializa el nuevo objeto;
-  * para hacer referencia a él mediante 'mycar'
-  */
- var mycar = {
-   marca: "Honda",
-   modelo: "Accord",
-   año: 1998
- };
+/*
+ * Declarando la variable 'mycar';
+ * Se crea e inicializa el nuevo objeto;
+ * para hacer referencia a él mediante 'mycar'
+ */
+var mycar = {
+  marca: "Honda",
+  modelo: "Accord",
+  año: 1998,
+};
 
- /* Mostrando 'Honda' */
- window.alert(mycar.marca);
+/* Mostrando 'Honda' */
+window.alert(mycar.marca);
 
- /* Paso por referencia del objeto 'mycar' a la función 'myFunc'*/
- myFunc(mycar);
+/* Paso por referencia del objeto 'mycar' a la función 'myFunc'*/
+myFunc(mycar);
 
- /*
-  * Muestra 'Toyota' como valor de la propiedad 'marca'
-  * del objeto, que ha sido cambiado por la función.
-  */
- window.alert(mycar.marca);
+/*
+ * Muestra 'Toyota' como valor de la propiedad 'marca'
+ * del objeto, que ha sido cambiado por la función.
+ */
+window.alert(mycar.marca);
 ```
 
-La palabra clave [`this`](/es/docs/Web/JavaScript/Referencia/Operadores/this) no hace referencia a la función que está ejecutandose actualmente, por lo que debes referirte a los objetos Function por nombre, incluso dentro del cuerpo de la función. Como alternativa, puedes utilizar la propiedad [arguments.callee](/es/Referencia_de_JavaScript_1.5/Funciones/arguments/callee) (que no se recomienda).
+La palabra clave [`this`](/es/docs/Web/JavaScript/Reference/Operators/this) no hace referencia a la función que está ejecutandose actualmente, por lo que debes referirte a los objetos Function por nombre, incluso dentro del cuerpo de la función. Como alternativa, puedes utilizar la propiedad [arguments.callee](/es/Referencia_de_JavaScript_1.5/Funciones/arguments/callee) (que no se recomienda).
 
 ## Definiendo funciones
 
@@ -67,8 +59,8 @@ Hay varias formas de definir funciones:
 
 Hay una sintaxis especial para declarar funciones (ver la instrucción {{jsxref("Sentencias/function","function")}} para más detalles):
 
-```
-function nombre([param[,param[, ...param]]]) {
+```js-nolint
+function nombre([param[, param[, ...param]]]) {
    instrucciones
 }
 ```
@@ -90,7 +82,7 @@ function nombre([param[,param[, ...param]]]) {
 
 Una expresión function es similar y tiene la misma sintaxis que una declaración de función (ver operador {{jsxref("Operadores/function", "function")}} para más detalles):
 
-```
+```js-nolint
 function [nombre]([param[, param[, ...param]]]) {
    instrucciones
 }
@@ -111,13 +103,13 @@ function [nombre]([param[, param[, ...param]]]) {
 
 ### La expresión de función flecha (=>)
 
-> **Nota:** Las expresiones de función Flecha son una tecnología experimental, parte de la proposición Harmony (EcmaScript 6) y no son ampliamente implementadas por los navegadores.
+> [!NOTE]
+> Las expresiones de función Flecha son una tecnología experimental, parte de la proposición Harmony (EcmaScript 6) y no son ampliamente implementadas por los navegadores.
 
 Una expresión de función flecha tiene una sintaxis más corta y su léxico se une a este valor (ver {{jsxref("Funciones/Arrow_functions", "arrow functions", "", 1)}} para más detalles):
 
-```html
+```js-nolint
 ([param] [, param]) => { instrucciones }
-
 param => expresión
 ```
 
@@ -144,7 +136,8 @@ new Function (arg1, arg2, ... argN, functionBody)
 
 Llamar al contructor Function como una función, sin el operador new, tiene el mismo efecto que llamarlo como un constructor.
 
-> **Nota:** Utilizar el constructor Function no se recomienda, ya que necesita el cuerpo de la función como una cadena, lo cual puede ocasionar que no se optimize correctamente por el motor JS, y puede también causar otros problemas.
+> [!NOTE]
+> Utilizar el constructor Function no se recomienda, ya que necesita el cuerpo de la función como una cadena, lo cual puede ocasionar que no se optimize correctamente por el motor JS, y puede también causar otros problemas.
 
 ## El objeto `arguments`
 
@@ -166,7 +159,7 @@ Por ejemplo, considere la siguiente definición de función:
 
 ```js
 var foo = function bar() {
-   // el cuerpo va aqui
+  // el cuerpo va aqui
 };
 ```
 
@@ -180,9 +173,10 @@ Una función que se llama a sí misma es llamada una _función recursiva._ En al
 
 ```js
 var x = 0;
-while (x < 10) { // "x < 10" es la condición
-   // haz algo
-   x++;
+while (x < 10) {
+  // "x < 10" es la condición
+  // haz algo
+  x++;
 }
 ```
 
@@ -190,24 +184,26 @@ puede ser convertida en una función recursiva y una llamada a esa función:
 
 ```js
 function loop(x) {
-   if (x >= 10) // "x >= 10" es la condición de salida (equivalente a "!(x < 10)")
-      return;
-   // haz algo
-   loop(x + 1); // la llamada recursiva
+  if (x >= 10)
+    // "x >= 10" es la condición de salida (equivalente a "!(x < 10)")
+    return;
+  // haz algo
+  loop(x + 1); // la llamada recursiva
 }
 loop(0);
 ```
 
-Sin embargo, algunos algoritmos no pueden ser bucles iterativos simples. Por ejemplo, obtener todos los nodos de una estructura de arbol (e.g. el [DOM](/es/docs/DOM)) es realizado de manera más fácil usando recursión:
+Sin embargo, algunos algoritmos no pueden ser bucles iterativos simples. Por ejemplo, obtener todos los nodos de una estructura de arbol (e.g. el [DOM](/es/docs/Web/API/Document_Object_Model)) es realizado de manera más fácil usando recursión:
 
 ```js
-function recorrerArbol (nodo) {
-   if (nodo == null) //
-      return;
-   // haz algo con el nodo
-   for (var i = 0; i < nodo.nodosHijos.length; i++) {
-       recorrerArbol(nodo.nodosHijos[i]);
-   }
+function recorrerArbol(nodo) {
+  if (nodo == null)
+    //
+    return;
+  // haz algo con el nodo
+  for (var i = 0; i < nodo.nodosHijos.length; i++) {
+    recorrerArbol(nodo.nodosHijos[i]);
+  }
 }
 ```
 
@@ -219,18 +215,17 @@ El comportamiento similar a la pila se puede ver en el ejemplo siguiente:
 
 ```js
 function foo(i) {
-   if (i < 0)
-      return;
-   document.writeln('inicio:' + i);
-   foo(i - 1);
-   document.writeln('fin:' + i);
+  if (i < 0) return;
+  document.writeln("inicio:" + i);
+  foo(i - 1);
+  document.writeln("fin:" + i);
 }
 foo(3);
 ```
 
 que produce:
 
-```html
+```plain
 inicio:3
 inicio:2
 inicio:1
@@ -245,7 +240,7 @@ fin:3
 
 - Puede anidar una función dentro de una función. La función anidada (inner) es privada a la función que la contiene (outer). También con la forma: aclosure.
   - : Un cierre es una expresión (normalmente una función) que puede tener variables libres junto con un entorno que enlaza esas variables (que "cierra" la expresión).
-    Dado que una función anidada es un cierre, esto significa que una función anidada puede "heredar" los argumentos y las variables de su función contenedora. En otras palabras, la función interna contiene el ámbito de la función externa.[](http://jibbering.com/faq/faq_notes/closures.html)
+    Dado que una función anidada es un cierre, esto significa que una función anidada puede "heredar" los argumentos y las variables de su función contenedora. En otras palabras, la función interna contiene el ámbito de la función externa.[](https://jibbering.com/faq/faq_notes/closures.html)
 
 Desde que la función anidada es un cierre (closure), esto significa que una función anidada puede "heredar" los argumentos y variables de su función contenedora. En otras palabras, la función interna contiene un scope (alcance) de la función externa.
 
@@ -259,26 +254,26 @@ Para resumir:
 
 El ejemplo siguiente muestra funciones anidadas:
 
-```
-function addCuadrado(a,b) {
-   function cuadrado(x) {
-      return x * x;
-   }
-   return cuadrado(a) + cuadrado(b);
+```js
+function addCuadrado(a, b) {
+  function cuadrado(x) {
+    return x * x;
+  }
+  return cuadrado(a) + cuadrado(b);
 }
-a = addCuadrado(2,3); // retorna 13
-b = addCuadrado(3,4); // retorna 25
-c = addCuadrado(4,5); // retorna 41
+a = addCuadrado(2, 3); // retorna 13
+b = addCuadrado(3, 4); // retorna 25
+c = addCuadrado(4, 5); // retorna 41
 ```
 
 Dado que la función interna forma un cierre, puede llamar a la función externa y especificar argumentos para la función externa e interna
 
-```
+```js
 function fuerade(x) {
-   function dentro(y) {
-      return x + y;
-   }
-   return dentro;
+  function dentro(y) {
+    return x + y;
+  }
+  return dentro;
 }
 resultado = fuerade(3)(5); // retorna 8
 ```
@@ -289,23 +284,23 @@ Observe cómo se conserva `x` cuando se devuelve dentro. Un cierre conserva los 
 
 Debido a esta ineficiencia, evite cierres siempre que sea posible, es decir, evite las funciones de anidamiento siempre que sea posible. Por ejemplo, considere el siguiente ejemplo:
 
-```
+```js
 function assignOnclick(elemento) {
-   element.onclick = function() {
-      this.style.backgroundColor = 'blue';
-   };
+  element.onclick = function () {
+    this.style.backgroundColor = "blue";
+  };
 }
 ```
 
 Esto se puede volver a escribir para evitar el cierre. Sin embargo, la función interna anónima necesitaría ser nombrada y ya no sería privada para `assignOnclick`:
 
-```
+```js
 function assignOnclick(elemento) {
-   elemento.onclick = elemento_onclick;
+  elemento.onclick = elemento_onclick;
 }
 
 function elemento_onclick() {
-   this.style.backgroundColor = 'blue';
+  this.style.backgroundColor = "blue";
 }
 ```
 
@@ -315,15 +310,15 @@ Las funciones pueden ser anidadas contigua de la otra, es decir, una función (A
 
 Considere el siguiente ejemplo:
 
-```
+```js
 function A(x) {
-   function B(y) {
-      function C(z) {
-         alert(x + y + z);
-      }
-      C(3);
-   }
-   B(2);
+  function B(y) {
+    function C(z) {
+      alert(x + y + z);
+    }
+    C(3);
+  }
+  B(2);
 }
 A(1); // alerts 6 (1 + 2 + 3)
 ```
@@ -340,54 +335,54 @@ Lo contrario, sin embargo, no es cierto. `A` no puede acceder a `C`, porque `A` 
 
 Cuando dos argumentos o variables en los ámbitos de un cierre tienen el mismo nombre, existe un conflicto de nombres("_name conflict_"). Más alcances internos tienen prioridad, por lo que el alcance más interno tiene la más alta precedencia, mientras que el alcance más externo toma el más bajo. Esta es la cadena de alcance. El primero en la cadena es el alcance más interno, y el último es el alcance más exterior. Considera lo siguiente:
 
-```
+```js
 function fuerade() {
-   var x = 10;
-   function dentro(x) {
-      return x;
-   }
-   return dentro;
+  var x = 10;
+  function dentro(x) {
+    return x;
+  }
+  return dentro;
 }
 resultado = fuerade()(20); // retorna 20 en lugar de 10
 ```
 
-El conflicto de nombres ocurre en la sentencia `return x` y está entre el parámetro `x` del `dentro` y la variable `x` del `fuerade`. La cadena de alcance aquí es {`dentro`, `fuerade`, global object}. Por lo tanto, la `x` de `inside` tiene precedentes sobre la `x` de `fuerade`, y 20 (`dentro` de `x`) se devuelve en lugar de 10 (`fuerade` de `x`).
+El conflicto de nombres ocurre en la sentencia `return x` y está entre el parámetro `x` de la función `dentro` y la variable `x` de la función `fuerade`. La cadena de alcance aquí es {`dentro`, `fuerade`, global object}. Por lo tanto, la `x` de `dentro` tiene precedentes sobre la `x` de `fuerade`, y 20 (`dentro` de `x`) se devuelve en lugar de 10 (`fuerade` de `x`).
 
 ## Constructor vs declaración vs expresión
 
-Las diferencias entre la `Function` constructora, la de declaración y la de expresión.
+Diferencias entre la función constructora `Function`, la de declaración y la de expresión.
 
 Compare lo siguiente:
 
 1. Una función definida con el constructor `Function` asignado a la variable `multiply`
 
-    ```
-    var multiply = new Function("x", "y", "return x * y;");
-    ```
+   ```js
+   var multiply = new Function("x", "y", "return x * y;");
+   ```
 
 2. Una declaración de una función denominada `multiply`
 
-    ```
-    function multiply(x, y) {
-       return x * y;
-    }
-    ```
+   ```js
+   function multiply(x, y) {
+     return x * y;
+   }
+   ```
 
 3. Una expresión de función anónima asignada a la variable `multiply`
 
-    ```
-    var multiply = function(x, y) {
-       return x * y;
-    }
-    ```
+   ```js
+   var multiply = function (x, y) {
+     return x * y;
+   };
+   ```
 
 4. Una declaración de una función denominada `func_name` asignada a la variable `multiply`
 
-    ```
-    var multiply = function func_name(x, y) {
-       return x * y;
-    }
-    ```
+   ```js
+   var multiply = function func_name(x, y) {
+     return x * y;
+   };
+   ```
 
 Todos hacen aproximadamente la misma cosa, con algunas diferencias sutiles:
 
@@ -396,7 +391,7 @@ Todos hacen aproximadamente la misma cosa, con algunas diferencias sutiles:
   - El nombre de la función no se puede cambiar, mientras que la variable a la que se asigna la función puede ser reasignada.
   - El nombre de la función sólo se puede utilizar en el cuerpo de la función. Intentar utilizarlo fuera del cuerpo de la función da como resultado un error (o `undefined` si el nombre de la función se declaró previamente mediante una instrucción `var`). Por ejemplo:
 
-    ```
+    ```js
     var y = function x() {};
     alert(x); // arroja un error
     ```
@@ -419,17 +414,16 @@ Todos hacen aproximadamente la misma cosa, con algunas diferencias sutiles:
   ```js
   function foo() {}
   alert(foo); // el string alterado contiene el nombre
-              // de la función "foo"
+  // de la función "foo"
   var bar = foo;
   alert(bar); // el string todavía contiene el nombre
-              // de la función "foo"
+  // de la función "foo"
   ```
 
 - Una función definida por un `Function` no tiene un nombre de función. Sin embargo, en el [SpiderMonkey](/es/docs/Mozilla/Projetos/SpiderMonkey) en el motor de JavaScript, la forma serializada de la función muestra como si tuviera el nombre "anónimo"("anonymous"). Por ejemplo, `alert(new Function())` salida:
 
   ```js
-  function anonymous() {
-  }
+  function anonymous() {}
   ```
 
   Dado que la función en realidad no tiene un nombre, `anonymous` no es una variable que se puede acceder dentro de la función. Por ejemplo, lo siguiente resultaría en un error:
@@ -444,7 +438,7 @@ Todos hacen aproximadamente la misma cosa, con algunas diferencias sutiles:
   ```js
   foo(); // alerts FOO!
   function foo() {
-     alert('FOO!');
+    alert("FOO!");
   }
   ```
 
@@ -457,18 +451,21 @@ Una declaración de función es muy fácilmente (ya menudo involuntariamente) co
 - Ya no es un "elemento fuente" de una función o el propio script. Un "elemento de origen" es una sentencia no anidada en el script o un cuerpo de función:
 
   ```js
-  var x = 0;               // elemento fuente
-  if (x == 0) {            // elemento fuente
-     x = 10;               // no es un elemento fuente
-     function boo() {}     // no es un elemento fuente
+  var x = 0; // elemento fuente
+  if (x == 0) {
+    // elemento fuente
+    x = 10; // no es un elemento fuente
+    function boo() {} // no es un elemento fuente
   }
-  function foo() {         // elemento fuente
-     var y = 20;           // elemento fuente
-     function bar() {}     // elemento fuente
-     while (y == 10) {     // elemento fuente
-        function blah() {} // no es un elemento fuente
-        y++;               // no es un elemento fuente
-     }
+  function foo() {
+    // elemento fuente
+    var y = 20; // elemento fuente
+    function bar() {} // elemento fuente
+    while (y == 10) {
+      // elemento fuente
+      function blah() {} // no es un elemento fuente
+      y++; // no es un elemento fuente
+    }
   }
   ```
 
@@ -479,28 +476,28 @@ Ejemplos:
   function foo() {}
 
   // expresión de una función
-  (function bar() {})
+  (function bar() {});
 
   // expresión de una función
-  x = function hello() {}
+  x = function hello() {};
   ```
 
 - ```js
   if (x) {
-     // expresión de la función
-     function world() {}
+    // expresión de la función
+    function world() {}
   }
   ```
 
 - ```js
   // instrucción de la función
   function a() {
-     // instrucción de la función
-     function b() {}
-     if (0) {
-        // expresión de la función
-        function c() {}
-     }
+    // instrucción de la función
+    function b() {}
+    if (0) {
+      // expresión de la función
+      function c() {}
+    }
   }
   ```
 
@@ -512,43 +509,46 @@ En la siguiente secuencia de comandos, la función `zero` nunca se define y no s
 
 ```js
 if (0)
-   function zero() {
-      document.writeln("Esto es zero.");
-   }
+  function zero() {
+    document.writeln("Esto es zero.");
+  }
 ```
 
 Si se cambia el script para que la condición se convierta en '`if (1)`', se define la función `zero`.
 
-> **Nota:** Aunque esto parece una declaración de función, ésta es en realidad una expresión de función ya que está anidada dentro de otra instrucción. Ver [las diferencias entre las funciones de declaración y de expresión](#constructor_versus_declaration_versus_expression).
+> [!NOTE]
+> Aunque esto parece una declaración de función, ésta es en realidad una expresión de función ya que está anidada dentro de otra instrucción. Ver [las diferencias entre las funciones de declaración y de expresión](#constructor_versus_declaration_versus_expression).
 
-> **Nota:** Algunos motores JavaScript, sin incluir [SpiderMonkey](/es/docs/Mozilla/Projetos/SpiderMonkey), tratan incorrectamente cualquier expresión de función con un nombre como una declaración de función. Esto llevaría a que se definiera `zero` incluso con el siempre-falso("_always-false_") condicional. Una manera más segura de definir funciones condicionalmente es definir la función anónimamente y asignarla a una variable:
+> [!NOTE]
+> Algunos motores JavaScript, sin incluir [SpiderMonkey](/es/docs/Mozilla/Projetos/SpiderMonkey), tratan incorrectamente cualquier expresión de función con un nombre como una declaración de función. Esto llevaría a que se definiera `zero` incluso con el siempre-falso("_always-false_") condicional. Una manera más segura de definir funciones condicionalmente es definir la función anónimamente y asignarla a una variable:
 
 ```js
 if (0)
-   var zero = function() {
-      document.writeln("Esto es zero.");
-   }
+  var zero = function () {
+    document.writeln("Esto es zero.");
+  };
 ```
 
 ## Funciones como manejadores de eventos
 
-En JavaScript, los controladores de eventos [DOM](/es/DOM) son funciones (en oposición a los objetos que contienen un método `handleEvent` en otros enlaces de idioma DOM). Las funciones se pasan un objeto de [evento](/es/DOM/event) como el primer y único parámetro. Como cualquier otro parámetro, si el objeto de evento no necesita ser utilizado, puede omitirse en la lista de parámetros formales.
+En JavaScript, los controladores de eventos [DOM](/es/docs/Web/API/Document_Object_Model) son funciones (en oposición a los objetos que contienen un método `handleEvent` en otros enlaces de idioma DOM). Las funciones se pasan un objeto de [evento](/es/docs/Web/API/Event) como el primer y único parámetro. Como cualquier otro parámetro, si el objeto de evento no necesita ser utilizado, puede omitirse en la lista de parámetros formales.
 
-Los posibles objetivos de eventos en un documento [HTML](/es/HTML) incluyen: `window` (`Window` objects("objeto de ventana"), including frames("marcos")), `document` (`HTMLDocument` objects("objetos HTMLDocument")), y elementos (`Element` objects("objetos Elemento")). En el [HTML DOM](http://www.w3.org/TR/DOM-Level-2-HTML/), los destinos de evento tienen propiedades de controlador de eventos. Estas propiedades son nombres de eventos en minúsculas con prefijo "on", e.g. `onfocus`. Los eventos [DOM Level 2 Events](http://www.w3.org/TR/DOM-Level-2-Events/) proporcionan una forma alternativa y más sólida de agregar oyentes de eventos.
+Los posibles objetivos de eventos en un documento [HTML](/es/docs/Web/HTML) incluyen: `window` (`Window` objects("objeto de ventana"), including frames("marcos")), `document` (`HTMLDocument` objects("objetos HTMLDocument")), y elementos (`Element` objects("objetos Elemento")). En el [HTML DOM](https://www.w3.org/TR/DOM-Level-2-HTML/), los destinos de evento tienen propiedades de controlador de eventos. Estas propiedades son nombres de eventos en minúsculas con prefijo "on", e.g. `onfocus`. Los eventos [DOM Level 2 Events](https://www.w3.org/TR/DOM-Level-2-Events/) proporcionan una forma alternativa y más sólida de agregar oyentes de eventos.
 
-> **Nota:** Los eventos son parte del DOM, no de JavaScript. (JavaScript simplemente proporciona un enlace al DOM.)
+> [!NOTE]
+> Los eventos son parte del DOM, no de JavaScript. (JavaScript simplemente proporciona un enlace al DOM.)
 
 El ejemplo siguiente asigna una función a un manejador de eventos de "foco"("focus") de ventana.
 
-```
-window.onfocus = function() {
-   document.body.style.backgroundColor = 'white';
-}
+```js
+window.onfocus = function () {
+  document.body.style.backgroundColor = "white";
+};
 ```
 
 Si se asigna una función a una variable, puede asignar la variable a un controlador de eventos. El siguiente código asigna una función a la variable `setBGColor`.
 
-```
+```js
 var setBGColor = new Function("document.body.style.backgroundColor = 'white';");
 ```
 
@@ -556,52 +556,53 @@ Puede utilizar esta variable para asignar una función a un controlador de event
 
 1. Escritura con propiedades de evento DOM HTML
 
-    ```
-    document.form1.colorButton.onclick = setBGColor;
-    ```
+   ```js
+   document.form1.colorButton.onclick = setBGColor;
+   ```
 
 2. Atributo de evento HTML
 
-    ```
-    <input name="colorBoton" type="button"
-       value="Cambia color de fondo"
-       onclick="setBGColor();"/>
-    ```
+   ```html
+   <input
+     name="colorBoton"
+     type="button"
+     value="Cambia color de fondo"
+     onclick="setBGColor();" />
+   ```
 
-    Un manejador de eventos establecido de esta manera es en realidad una función, denominada después del atributo, envuelta alrededor del código especificado. Esta es la razón por la que los paréntesis en "`setBGColor()`" son necesarios aquí (en lugar de sólo "`setBGColor`").
+   Un manejador de eventos establecido de esta manera es en realidad una función, denominada después del atributo, envuelta alrededor del código especificado. Esta es la razón por la que los paréntesis en "`setBGColor()`" son necesarios aquí (en lugar de sólo "`setBGColor`").
 
 Es equivalente a:
 
-```
+```js
 document.form1.colorButton.onclick = function onclick(event) {
-   setBGColor();
-}
+  setBGColor();
+};
 ```
 
 Observe cómo se pasa el objeto de evento a esta función anónima como `event` de parámetro. Esto permite que el código especificado utilice el objeto Evento("Event object)":
 
-```
-<input ...
-    onclick="alert(event.target.tagName);"/>
+```html
+<input ... onclick="alert(event.target.tagName);" />
 ```
 
 Al igual que cualquier otra propiedad que se refiere a una función, el controlador de eventos puede actuar como un método, y `this` se refiere al elemento que contiene el controlador de eventos. En el ejemplo siguiente, se llama a la función referida por `onfocus` con `this` igual a `window`.
 
-```
+```js
 window.onfocus();
 ```
 
 Un error común de principiante de JavaScript es el añadir paréntesis y / o parámetros al final de la variable, es decir, llamar al manejador de eventos cuando lo asigna. La adición de estos paréntesis asignará el _valor devuelto al llamar al manejador de eventos_, que a menudo es `undefined` (si la función no devuelve nada), en lugar del controlador de eventos en sí:
 
-```
+```js
 document.form1.button1.onclick = setBGColor();
 ```
 
 Para pasar parámetros a un manejador de eventos, el manejador debe ser envuelto en otra función de la siguiente manera:
 
-```
-document.form1.button1.onclick = function() {
-   setBGColor('Algun valor');
+```js
+document.form1.button1.onclick = function () {
+  setBGColor("Algun valor");
 };
 ```
 
@@ -627,41 +628,42 @@ No puede anidar una sentencia de función en otra instrucción o en sí misma.
 
 La siguiente función devuelve una cadena que contiene la representación formateada de un número rellenado con ceros a la izquierda.
 
-```
+```js
 // Esta función devuelve una cadena rellenada con ceros a la izquierda
 
 function padZeros(num, totalLen) {
-   var numStr = num.toString();             // Inicializa un valor de retorno como cadena
-   var numZeros = totalLen - numStr.length; // Calcula el no. de ceros
-   for (var i = 1; i <= numZeros; i++) {
-      numStr = "0" + numStr;
-   }
-   return numStr;
+  let numStr = num.toString(); // Inicializa un valor de retorno como cadena
+  let numZeros = totalLen - numStr.length; // Calcula el no. de ceros
+  for (let i = 1; i <= numZeros; i++) {
+    numStr = "0" + numStr;
+  }
+  return numStr;
 }
 ```
 
 Las siguientes sentencias llaman a la función padZeros.
 
-```
+```js
 var resultado;
-resultado = padZeros(42,4); // retorna "0042"
-resultado = padZeros(42,2); // retorna "42"
-resultado = padZeros(5,4);  // retorna "0005"
+resultado = padZeros(42, 4); // retorna "0042"
+resultado = padZeros(42, 2); // retorna "42"
+resultado = padZeros(5, 4); // retorna "0005"
 ```
 
 #### 2) Determinar si existe una función
 
 Puede determinar si existe una función utilizando el operador `typeof`. En el ejemplo siguiente, se realiza una prueba para determinar si el objeto `window` tiene una propiedad llamada `noFunc` que es una función. Si es así, se utiliza; de lo contrario, se tomarán otras medidas.
 
-```
- if ('function' == typeof window.noFunc) {
-   // utiliza noFunc()
- } else {
-   // hacer algo mas
- }
+```js
+if ("function" == typeof window.noFunc) {
+  // utiliza noFunc()
+} else {
+  // hacer algo mas
+}
 ```
 
-> **Nota:** Tenga en cuenta que en la prueba `if`, e utiliza una referencia a `noFunc` aquí no hay paréntesis "()" después del nombre de la función para que la función real no se llame.
+> [!NOTE]
+> Tenga en cuenta que en la prueba `if`, e utiliza una referencia a `noFunc` aquí no hay paréntesis "()" después del nombre de la función para que la función real no se llame.
 
 ### Ver también
 

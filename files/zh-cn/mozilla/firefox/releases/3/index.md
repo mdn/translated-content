@@ -1,144 +1,154 @@
 ---
-title: 致 Firefox 3 开发者
+title: Firefox 3 的开发者说明
 slug: Mozilla/Firefox/Releases/3
+l10n:
+  sourceCommit: 7f74644d98484c67817c1dd556a6e394f5a26a6f
 ---
 
 {{FirefoxSidebar}}
 
-如果你是一个 Web 开发人员，并且希望了解 Firefox 3 中所有的新特性，这里是一个很好的起点。这篇文章提供了一个覆盖所有 Firefox 3 新特性的列表。虽然他并不是能够包括所有微小的改动，但他能够帮助你学习到最主要的更新。
+如果你是一位开发者，并且希望了解 Firefox 3 中所有的新特性，这里是一个很好的起点。这篇文章提供了一个覆盖所有 Firefox 3 新特性的列表。虽然它并不能包括所有微小的改动，但它能够帮助你学习到最主要的改进。
 
-### Firefox 3 中新的开发人员特性
+## Firefox 3 中为开发者带来的新特性
 
-#### 对网站和程序开发者
+### 对网站和应用开发者
 
-- [更新 WEB 应用以适应 Firefox 3](/zh-CN/%E6%9B%B4%E6%96%B0WEB%E5%BA%94%E7%94%A8%E4%BB%A5%E9%80%82%E5%BA%94Firefox_3)
-  - : 提供了您用于更新 WEB 应用以受益于 Firefox 3 新特性所需的信息。
-- [上线与离线事件](/zh-CN/%E4%B8%8A%E7%BA%BF%E4%B8%8E%E7%A6%BB%E7%BA%BF%E4%BA%8B%E4%BB%B6)
-  - : Firefox 3 支持 WHATWG 的上线与离线事件，基于这一特性，程序可以检测当前是否有可用的互联网联接以及何时上线或下线。
-- [跨域的 XMLHttpRequest 请求](/zh-CN/%E8%B7%A8%E5%9F%9F%E7%9A%84XMLHttpRequest%E8%AF%B7%E6%B1%82)
-  - : Firefox 3 支持[W3C Access Control](http://www.w3.org/TR/access-control/)工作草案，使你有能够使用[XMLHttpRequests](/zh-CN/XMLHttpRequest)检索和操作其他站点的数据；使你能够创造令人印象深刻的以浏览器为基础的交互式应用（mashups）。
-- [交错格式样表](/zh-CN/%E4%BA%A4%E9%94%99%E6%A0%BC%E5%BC%8F%E6%A0%B7%E8%A1%A8)
-  - : Firefox 3 支持 CSS 层叠式样式表 API.
-- [基于 web 的协议处理](/zh-CN/DOM/window.navigator.registerProtocolHandler)
-  - : 你现在可以使用 `navigator.registerProtocolHandler()` 方法注册 web 应用
-- [在画布（canvas）中“绘”出文字](/zh-CN/%E5%9C%A8%E7%94%BB%E7%94%BB%E5%B8%83%EF%BC%88canvas%EF%BC%89%E4%B8%AD%E2%80%9C%E7%BB%98%E2%80%9D%E5%87%BA%E6%96%87%E5%AD%97)
-  - : 您可以使用 Firefox 3 支持的非标准 API 在 canvas 上绘制文字。
-- [支持画布变换](/zh-CN/Canvas_tutorial/Transformations#Transforms)
-  - : Firefox 现在的 canvas 支持 `transform()` 和 `setTransform()` 方法。
-- [使用微格式](/zh-CN/%E4%BD%BF%E7%94%A8%E5%BE%AE%E6%A0%BC%E5%BC%8F)
-  - : Firefox 现在有一组微格式的 API。
-- [拖放事件](/zh-CN/%E6%8B%96%E6%94%BE%E4%BA%8B%E4%BB%B6)
+- [更新 web 应用以适应 Firefox 3](/zh-CN/docs/Mozilla/Firefox/Releases/3/Updating_web_applications)
+  - : 提供了有关你可能需要对网站或 web 应用进行的更改以便利用 Firefox 3 中的新特性的信息。
+- [上线与离线事件](/zh-CN/docs/Web/API/Navigator/onLine)
+  - : Firefox 3 支持 WHATWG 的上线与离线事件，其允许应用程序和扩展检测当前是否有可用的互联网连接，以及何时上线和下线。
+- [基于 web 的协议处理](/zh-CN/docs/Web/API/Navigator/registerProtocolHandler)
+  - : 你现在可以使用 `navigator.registerProtocolHandler()` 方法将 web 应用注册为特定协议的处理器。
+- [在画布中绘制文本](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
+  - : 你可以使用 Firefox 3 支持的非标准 API 在 canvas 上绘制文本。
+- [支持画布变换](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Transformations#变形)
+  - : Firefox 现在支持 canvas 的 `transform()` 和 `setTransform()` 方法。
+- [使用微格式](/zh-CN/docs/Web/HTML/microformats)
+  - : Firefox 现在有一组用于微格式的 API。
+- [拖放事件](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
   - : Firefox 3 支持新的拖放事件，当拖放开始和结束时，该事件将会被发送至源节点。
-- [HTML 的焦点管理](/zh-CN/Focus_management_in_HTML)
-  - : 新的 HTML 5 支持 activeElement 和 hasFocus 属性
-- [离线浏览](/zh-CN/%E7%A6%BB%E7%BA%BF%E6%B5%8F%E8%A7%88)
-  - : 在 Firefox 中，WEB 程序现在可以在离线时使用之前被缓存的资源。
-- [在 Firefox 3 中 CSS 的改进](/zh-CN/%E5%9C%A8Firefox_3%E4%B8%ADCSS%E7%9A%84%E6%94%B9%E8%BF%9B)
-  - : Firefox 3 在支持 CSS 的功能上进行了一些完善。
-- [在 Firefox 3 中 DOM 的改进](/zh-CN/%E5%9C%A8Firefox_3%E4%B8%ADDOM%E7%9A%84%E6%94%B9%E8%BF%9B)
-  - : Firefox 3 在 Firefox3 DOM 执行方面提供了一些新的功能，包括支持一些扩展的浏览器的 DOM。
-- [JavaScript 1.8 的支持](/zh-CN/%E5%AF%B9_JavaScript_1.8)
-  - : Firefox 3 提供了 JavaScript 1.8 标准的支持。
-- [EXSLT 支持](/zh-CN/EXSLT)
-  - : Firefox 3 提供了对 [EXSLT](/zh-CN/EXSLT)（ [XSLT](/zh-CN/XSLT)的扩展）一个基本子集个支持。
-- [Firefox 3 中 SVG 的改进](/zh-CN/Firefox_3%E4%B8%ADSVG%E7%9A%84%E6%94%B9%E8%BF%9B)
-  - : Firefox 3 对 SVG 的支持有了长足的改进：支持二十余个新透镜、一些新元素、一些新属性以及一些其他改进。
-- [对 PNG 动画的支持](/zh-CN/%E5%AF%B9PNG%E5%8A%A8%E7%94%BB%E7%9A%84%E6%94%AF%E6%8C%81)
-  - : Firefox 3 提供了对色彩艳丽的 PNG (APNG) 图像格式的支持。
-- [`<a ping>`](/zh-CN/HTML/Element/a)
-  - : `现在可以使用 <a ping>` 功能 ping 一个 URL ,并且此功能默认启用。
+- [HTML 的焦点管理](/zh-CN/docs/Web/API/Document/hasFocus)
+  - : 支持新的 HTML 5 中的 `activeElement` 和 `hasFocus` 属性。
+- Firefox 中的离线资源
+  - : Firefox 现在允许 web 应用请求缓存的资源，以允许应用在离线时使用。
+- [在 Firefox 3 中 CSS 的改进](/zh-CN/docs/CSS_improvements_in_Firefox_3)
+  - : Firefox 3 在 CSS 支持上进行了多项改进。
+- [在 Firefox 3 中 DOM 的改进](/zh-CN/docs/Mozilla/Firefox/Releases/3/DOM_improvements)
+  - : Firefox 3 在 Firefox 3 的 DOM 实现中提供了许多新特性，包括对多个 Internet Explorer DOM 扩展的支持。
+- [JavaScript 1.8 的支持](/zh-CN/docs/New_in_JavaScript_1.8)
+  - : Firefox 3 提供了 JavaScript 1.8 的支持。
+- [EXSLT 支持](/zh-CN/docs/Web/EXSLT)
+  - : Firefox 3 提供了对 [EXSLT](/zh-CN/docs/Web/EXSLT)（[XSLT](/zh-CN/docs/Web/XML/XSLT) 的扩展）的一个基本子集的支持。
+- [Firefox 3 中 SVG 的改进](/zh-CN/docs/Mozilla/Firefox/Releases/3/SVG_improvements)
+  - : Firefox 3 对 SVG 的支持有了长足的改进：支持二十余个新滤镜、一些新的元素和属性，以及一些其他改进。
+- [动态可移植网络图形](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#apng（动态可移植网络图形）)
+  - : Firefox 3 提供了对动态可移植网络图形（APNG）图像格式的支持。
 
-#### 对 XUL 和扩展插件的开发者
+### 对 XUL 和扩展插件的开发者
 
-提供了你需要做的事情的向导，更新您的 Firefox 3 扩展。
+#### 需要注意的变更和改进
 
-- [更新扩展以兼容 Firefox 3](/zh-CN/%E6%9B%B4%E6%96%B0%E6%89%A9%E5%B1%95%E4%BB%A5%E5%85%BC%E5%AE%B9Firefox_3)
-  - : FUEL 使扩展开发者完成更有成效，更精悍的 XPCOM 规范代码并获得一些 "模式" JavaScript 思想。
-- [Firefox 3 在 XUL 上的改进](/zh-CN/XUL_improvements_in_Firefox_3)
-  - : Firefox 3 的提供了一些新的 XUL 元素，包括新的缩放法，日期和时间获取，以及旋转按钮。
-- [Firefox 3 的模板](/zh-CN/Templates_in_Firefox_3)
-  - : Firefox 3 的模板已显着改善。关键的改进是，允许使用自定义查询处理器，除数据源之外还可以使用 RDF。
-- [嵌入的 XBL 绑定](/zh-CN/XBL/XBL_1.0_Reference/Elements#binding)
-  - : 现在，您可以使用 data: 网络协议直接嵌入 XBL 绑定，而不是在单独的 XML 文件中使用他们。
-- [本地化扩展描述](/zh-CN/Localizing_extension_descriptions)
-  - : 这可让本地化的详细信息在附加组件被下载时或被禁用即时生效。
-- [可靠更新](/zh-CN/Extension_Versioning,_Update_and_Compatibility#Securing_Updates)
-  - : In order to provide a more secure add-on upgrade path for users, add-ons are now required to provide a secure method for obtaining updates before they can be installed. Add-ons hosted at [AMO](http://addons.mozilla.org/) automatically provide this. Any add-ons installed that do not provide a secure update method when the user upgrades to Firefox 3 will be automatically disabled. Firefox will however continue to check for updates to the extension over the insecure path and attempt to install any update offered (installation will fail if the update also fails to provide a secure update method).
-- [Idle service](/zh-CN/NsIIdleService)
-  - : Firefox 3 offers the new `nsIIdleService` interface, which lets extensions determine how long it's been since the user last pressed a key or moved their mouse.
-- [全屏缩放](/zh-CN/%E5%85%A8%E5%B1%8F%E7%BC%A9%E6%94%BE)
-  - : Firefox 3 improves the user experience by offering full page zoom in addition to text-only zoom.
-- [Interfacing with the XPCOM cycle collector](/zh-CN/Interfacing_with_the_XPCOM_cycle_collector)
-  - : XPCOM code can now take advantage of the cycle collector, which helps ensure that unused memory gets released instead of leaking.
-- [The Thread Manager](/zh-CN/The_Thread_Manager)
-  - : Firefox 3 provides the new `nsIThreadManager` interface, along with new interfaces for threads and thread events, which provides a convenient way to create and manage threads in your code.
-- [JavaScript 模块](/zh-CN/JavaScript%E6%A8%A1%E5%9D%97)
-  - : Firefox 3 now offers a new shared code module mechanism that lets you easily create modules in JavaScript that can be loaded by extensions and applications for use, much like shared libraries.
-- [Places](/zh-CN/Places)
-  - : The history and bookmarks APIs have been completely replaced by the new [Places](/zh-CN/Places) API.
-- [Making the transition to Places](/zh-CN/Making_the_transition_to_Places)
-  - : An article about how to update an existing extension to use the Places API.
-- [Firefox 3 中下载管理器的改进](/zh-CN/Firefox_3%E4%B8%AD%E4%B8%8B%E8%BD%BD%E7%AE%A1%E7%90%86%E5%99%A8%E7%9A%84%E6%94%B9%E8%BF%9B)
-  - : The Firefox 3 Download Manager features new and improved APIs, including support for multiple progress listeners.
-- [Using nsILoginManager](/zh-CN/Using_nsILoginManager)
-  - : 密码管理已经被新的登录管理所代替。
-- [Using content preferences](/zh-CN/Using_content_preferences)
-  - : Firefox 3 includes a new service for getting and setting arbitrary site-specific preferences that extensions as well as core code can use to keep track of their users' preferences for individual sites.
-- [Notable bugs fixed in Firefox 3](/zh-CN/Notable_bugs_fixed_in_Firefox_3)
-  - : 文章中所提供的相关 Bug 信息，已经在 Firefox 3 中进行了修改。
-- [Firefox 3 的界面改动](/zh-CN/Firefox_3_%E7%9A%84%E7%95%8C%E9%9D%A2%E6%94%B9%E5%8A%A8)
-  - : Notes and information of use to people who want to create themes for Firefox 3.
+- [Firefox 3 的扩展更新](/zh-CN/docs/Mozilla/Firefox/Releases/3/Updating_extensions)
+  - : 提供有关更新扩展程序以在 Firefox 3 上工作所需执行的操作的指南。
+- [Firefox 3 中 XUL 的改进](/zh-CN/docs/XUL_improvements_in_Firefox_3)
+  - : Firefox 3 提供了一系列新的 XUL 元素，包括新的滑动刻度、日期和时间选择器、旋转按钮。
+- [Firefox 3 的模板](/zh-CN/docs/Templates_in_Firefox_3)
+  - : Firefox 3 中的模板已经显著改进。关键的改进是：允许使用自定义查询处理器，除了 RDF 之外还可以使用其他数据源。
+- [安全更新](/zh-CN/docs/Extension_Versioning,_Update_and_Compatibility#securing_updates)
+  - : 为了向用户提供更安全的附加组件升级方法，现在附加组件需要提供一种安全的获取更新方法后才能被安装。在 [AMO](https://addons.mozilla.org) 上托管的附加组件会自动提供该功能。当用户升级到 Firefox 3 时，任何已安装且不提供安全更新方法的附加组件都将被自动禁用。但 Firefox 将继续通过不安全的方法检查扩展程序的更新，并尝试安装提供的任何更新（如果更新也没有提供安全的更新方法，则安装将会失败）。
+- [Places 迁移指南](/zh-CN/docs/Places_Developer_Guide)
+  - : 该文章介绍了如何更新现有扩展以使用 Places API。
+- [Firefox 3 中下载管理器的改进](/zh-CN/docs/Download_Manager_improvements_in_Firefox_3)
+  - : Firefox 3 下载管理器提供了新的、改进后的 API，包括对多个进度监听器的支持。
+- 使用 nsILoginManager
+  - : 密码管理器被新的登录管理器所取代。
+- [嵌入 XBL 绑定](/zh-CN/docs/XBL/XBL_1.0_Reference/Elements#binding)
+  - : 你现在可以使用 `data:` URL 方案在 chrome 代码中直接嵌入 XBL 绑定，而不是将它们放在单独的 XML 文件中。
+- [本地化扩展描述](/zh-CN/docs/Localizing_extension_descriptions)
+  - : Firefox 3 提供了新的方法来本地化附加组件元数据。这使得本地化的详细信息在附加组件下载后立刻可用，且其在附加组件被禁用后仍然可用。
+- [本地化和 Plurals](/zh-CN/docs/Localization_and_Plurals)
+  - : Firefox 3 添加了新的 PluralForm 模块，该模块提供了工具来帮助在多个本地化环境中正确地使用复数词。
+- [Firefox 3 主题更新](/zh-CN/docs/Theme_changes_in_Firefox_3)
+  - : 为那些想要为 Firefox 3 创建主题的人提供的说明和信息。
 
-### 最终用户将能体验到的新特性
+#### 新的组件和功能
 
-#### 用户体验
+- [FUEL 库](/zh-CN/docs/Toolkit_API/FUEL)
+  - : FUEL 使得扩展开发者更加高效，它通过最小化一些 XPCOM 的形式化和添加一些“现代”JavaScript 的思想来实现。
+- [Places](/zh-CN/docs/Places)
+  - : 历史记录和书签 API 已被新的 [Places](/zh-CN/docs/Places) API 完全替代。
+- [Idle 服务](/zh-CN/docs/nsIIdleService)
+  - : Firefox 3 提供了新的 `nsIIdleService` 接口，它允许扩展决定用户上一次按键或移动鼠标的时间。
+- [ZIP writer](/zh-CN/docs/nsIZipWriter)
+  - : 新的 `nsIZipWriter` 接口允许扩展创建 ZIP 归档。
+- [全页面缩放](/zh-CN/docs/Mozilla/Firefox/Releases/3/Full_page_zoom)
+  - : Firefox 3 在文本缩放之外提供了全页面缩放，从而提高了用户体验。
+- [XPCOM 周期回收器及接口](/zh-CN/docs/Interfacing_with_the_XPCOM_cycle_collector)
+  - : XPCOM 代码现在可以利用周期回收器，它有助于确保未使用的内存被释放而不会泄漏。
+- [线程管理器](/zh-CN/docs/The_Thread_Manager)
+  - : Firefox 3 提供了新的 `nsIThreadManager` 接口，以及用于线程和线程事件的新接口，它提供了一种方便的方法来创建和管理代码中的线程。
+- [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)
+  - : Firefox 3 现在提供了一种新的共享代码模块机制，它允许你轻松地创建 JavaScript 模块，这些模块可以被扩展和应用程序加载并使用，就像共享库一样。
+- [`nsIJSON` 接口](/zh-CN/docs/nsIJSON)
+  - : Firefox 3 提供了新的 `nsIJSON` 接口，它提供了高性能的 [JSON](/zh-CN/docs/Glossary/JSON) 字符串编码和解码。
+- `nsIParentalControlsService` 接口
+  - : Firefox 3 现已支持 Microsoft Windows Vista 家长控制功能，并允许代码与之交互。
+- [使用内容首选项](/zh-CN/docs/Using_content_preferences)
+  - : Firefox 3 包含了一个新的服务，用于获取和设置任意特定网站的首选项，扩展和核心代码都可以使用它来跟踪其用户对各个网站的偏好。
+- [插件监控](/zh-CN/docs/Monitoring_plugins)
+  - : 插件系统的一个新组件现在可用于测量插件（例如 Macromedia Flash）执行其调用所需的时间。
 
-- **更轻松的密码管理。** 当你成功登陆之后在浏览器顶端会出现一个信息栏，提示你是否保存此口令。
-- **附件组件安装更简便。** 你可以更容易的通过第三方下载附件组件并安装它。
-- **新的下载管理器。** 新的下载管理器使你更容易的定位下载文件。
-- **断点下载。** 现在可以在重启浏览器或重新获得网络连接时继续尚未完成的下载任务。
-- **全屏缩放。** 今后，你可以使用菜单或快捷键，可以缩放整个网页的内容 -- 这个比例取决除了文字排版，还取决于更合适的图片排版 .
-- **标签滚动和快捷菜单。** 通过新的标签滚动和标签快捷菜单可以更容易的定位标签。
-- **保存您当前的浏览内容。** 当你退出 Firefox 3 时，Firefox 3 会提示你是否保存当前标签。
-- **优化的标签打开方式。** 在标签中打开一个书签文件夹时，会创建一个新标签二不是覆盖现有的。
-- **轻松更改搜索引挚工具框的大小和位置。** 你可以简单的通过一个拖动鼠标改变搜索引擎工具栏和地址栏的分布。
-- **改进了文本选择。** 使用 Crtl (Macintosh 的 Command) 键选择多块文本。双击可以选中个词（中文为一句）三击选中一段。
-- **查找工具。** 查找工具以当前选中内容为默认查找内容。
-- **扩展管理。** 用户可以在附件组件管理器中单独显示插件。
-- **与 Windows Vista 的整合**。火狐菜单用一个 Vista 本地主题显示。
-- **与 Mac OS X 的整合**。Firefox 现在使用 Mac OS X 拼写检查器并使用 [Growl](http://growl.info/) 来通知下载完成或有可用更新。
-- **星按钮。** 地址栏上的“星”按钮使你通过一个点击添加一个新书签。一次双击保存并编辑你的新书签。
-- **标签。** 可以为你的书签指定关键词，并按主题排序。
-- **地址栏和自动地址补全。** 在地址栏键入页面标题或标签可以快速找到你在书签中的或是历史页面。图标、书签、标签可以帮助你判断结果的来源。
-- **智能书签菜单。** Firefox 的智能书签会按照最新，访问频率来排序书签。
-- **书签和历史管理器。** 书签和历史管理统一起来，让你可以通过多视图、按照频率组织的智能分组方便的同时检索书签及历史。
-- **基于 Web 的协议处理。** 网络应用，比如你最喜欢的电子邮件提供商可以代替本地邮件应用来处理 `mailto:` 链接。对于其他也提供相似的支持。 (注意网络应用需要向火狐注册)
-- **易于使用的下载。** 一个新的引用界面提供高级选项来配置对不同文件类型及协议策略的处理方案。
-- **改进的浏览器外观。** 新的图形及字体处理方案使网页在你的屏幕上显示的更漂亮。包括清晰的文字渲染、连体字、复杂文字的更好支持。另外 Mac 及 Linux (Gnome) 用户会发现 Firefox 感觉起来更像他们本地的应用或平台一样。
-- **支持颜色设置。** 通过设置 在 `about:config` 的 `gfx.color_management.enabled` 优先级，您可以要求 Firefox 的按照新的配置文件中对图像的颜色进行调整，以符合您电脑的显示器。
-- **支持离线浏览。**即使您没有 Internet 连接，Web 应用程序仍可使用。
+#### 错误修复
 
-#### 安全和隐私
+- [Firefox 3 中值得注意的错误修复](/zh-CN/docs/Mozilla/Firefox/Releases/3/Notable_bugs_fixed)
+  - : 本文提供有关已经在 Firefox 3 中修复的错误的信息。
 
-- **一键网站信息。** 想知道更多关于您所访问网站的信息？点击该网站的图标，在地址栏中看看是谁拥有它。信息更易理解。
-- **恶意软件防护。**如果你访问了一个已知的安装病毒，间谍软件，木马，或其他危险软件（也称为恶意软件）的网站 Firefox 3 会警告你。你可以[点这里](https://www.mozilla.com/firefox/its-an-attack.html)看看警告是怎样的。
-- **伪造网站保护加强。** 现在，当您访问的网站被怀疑是伪造时，会出现一个特殊的网页。[点击这里](https://www.mozilla.com/firefox/its-a-trap.html)看看是什么样子。
+## 面向终端用户的新特性
 
+### 用户体验
+
+- **更轻松的密码管理**。当你成功登陆之后在浏览器顶端会出现一个信息栏，提示你是否保存此口令。
+- **附件组件安装更简便**。由于删除了附加下载网站白名单，你现在可以通过更少的点击次数从第三方下载网站安装扩展。
+- **新的下载管理器**。下载管理器使你更容易的定位下载的文件。
+- **断点下载**。现在可以在重启浏览器或重新获得网络连接时继续尚未完成的下载任务。
+- **全屏缩放**。今后，你可以使用菜单或快捷键，可以缩放整个网页的内容——其不仅可以缩放文本，还可以缩放布局和图像。
+- **标签滚动和快捷菜单**。通过新的标签滚动和标签快捷菜单可以更容易的定位标签。
+- **保存你当前的浏览内容**。当你退出 Firefox 3 时，Firefox 3 会提示你是否保存当前标签。
+- **优化的标签打开方式**。在标签中打开一个书签文件夹时，会创建一个新标签而不是覆盖现有的。
+- **轻松更改地址栏和搜索栏的大小**。现在，你可以使用地址栏和搜索栏之间的简单调整大小手柄轻松调整它们的大小。
+- **改进了文本选择**。使用 Ctrl（Macintosh 的 Command）键选择多块文本。双击并拖动可以“逐词”选择，三击可以选中整个段落。
+- **查找工具**。查找工具以当前选中内容为默认查找内容。
+- **扩展管理**。用户可以在附件组件管理器中禁用单个插件。
+- **与 Windows Vista 的整合**。Firefox 的菜单现在使用 Vista 原生主题显示。
+- **与 Mac OS X 的整合**。Firefox 现在使用 Mac OS X 拼写检查器并使用 [Growl](https://growl.github.io/growl/) 来通知下载完成或有可用更新。
+- **星按钮**。地址栏上的“星”按钮使你只需单击一下即可快速添加新的书签。再单击一下，你就可以对新书签进行归档和标记。
+- **标签**。你现在可以将关键字与书签相关联，以便轻松地按主题对它们进行排序。
+- **地址栏和自动地址补全**。在地址栏中键入页面的标题或标签，即可在历史记录和书签中快速找到你要查找的站点。网站图标、书签和标签指示器可帮助你查看结果的来源。
+- **智能书签文件夹**。Firefox 的新智能书签文件夹可以快速访问你最近添加书签和标记的地址以及你经常访问的页面。
+- **书签和历史管理器**。新的书签和历史统一管理器让你可以通过多视图、智能文件夹轻松搜索历史记录和书签，降低你的搜索频率。
+- **基于 Web 的协议处理**。网络应用，比如你最喜欢的 web 邮件提供商可以代替桌面应用来处理其他站点的 `mailto:` 链接。也为其他协议提供类似的支持。（注意，Web 应用程序必须先向 Firefox 注册，然后才能正常工作。）
+- **易于使用的下载动作**。新的应用程序首选项页面提供了改进的用户界面，用于配置各种文件类型和协议方案的处理器。
+- **改进的外观**。图形和字体处理已得到改进，使网站在屏幕上看起来更好，包括更清晰的文本渲染以及对连字和复杂脚本字体的更好支持。另外 Mac 及 Linux（Gnome）用户会发现 Firefox 感觉起来更像他们使用平台的本地应用，具有全新的原生外观和感觉。
+- **色彩管理支持**。通过设置在 `about:config` 的 `gfx.color_management.enabled` 首选项，你可以要求 Firefox 使用图像中嵌入的色彩配置文件来调整颜色以匹配计算机的显示。
+- **支持离线浏览**。即使没有 Internet 连接，Web 应用程序也可以使用新特性来支持使用。
+
+### 安全和隐私
+
+- **一键网站信息**。想知道更多关于你所访问网站的信息？在地址栏中点击该网站的图标，看看是谁拥有它。标识信息清晰地显示并且比以往更容易理解。
+- **恶意软件防护**。如果你访问了一个已知的安装病毒、间谍软件、木马或其他危险软件（也称为恶意软件）的网站 Firefox 3 会警告你。
+- **增强 Web 伪造保护**。现在，当你访问涉嫌伪造的页面时，你会看到一个特殊页面，而不是带有警告的页面内容。
 - **更容易理解的 SSL 错误**。遇到无效的 SSL 证书时会包含清楚的错误描述，使其更易于理解是哪里发生了问题。
-- **过期附件组件防护。** 现在 Firefox 3 的自动检查插件和插件版本并禁用过时的，不安全的版本。
-- **安全附件更新**。附件更新安全性提高了，不允许使用不安全的更新机制。
-- **防病毒一体化。** Firefox 3 在下载文件的同时通知的反病毒软件。
-- **Windows Vista 的家长控制功能的支持。** Firefox 3 的支持 Vista 的全系统家长控制，禁用文件下载。
+- **过期附件组件防护**。现在 Firefox 3 自动检查附加组件和插件的版本并禁用旧的、不安全的版本。
+- **安全的附加组件更新**。通过禁用使用了不安全更新机制的附加组件，附加组件更新的安全性得到了提高。
+- **防病毒集成**。Firefox 3 现在会在下载可执行文件时通知防病毒软件。
+- **Windows Vista 的家长控制功能的支持**。Firefox 3 的支持 Vista 的系统级家长控制，禁用文件下载。
 
-#### 性能
+### 性能
 
-- **可靠性。**Firefox 3 使用安全的数据库格式保存书签，历史记录，cookies，及偏好。这意味着，即使系统崩溃，您的数据也免受损失。
-- **速度。** Firefox 3 有了较大的性能提升，完全取代了部分软件：包括图形屏幕处理，以及页面布局工作的处理等。
-- **更少的内存占用。** Firefox 3 的内存使用比以往任何时候都有效，有超过 300 个内存“泄漏”漏洞得以修复，以及可帮助自动查找和处置泄漏内存的新功能被添加进来。
+- **可靠性**。Firefox 3 现在以事务安全的数据库格式存储书签、历史记录、cookie 和首选项。这意味着，即使系统崩溃，你的数据也不会丢失。
+- **速度**。Firefox 3 通过完全替换软件中处理屏幕绘制的部分以及页面布局工作的处理方式，获得了性能提升。
+- **更少的内存占用**。Firefox 3 的内存使用比以往任何时候都更有效，有超过 300 个内存“泄漏”错误得到修复，并提供了新特性来帮助自动定位和处理泄漏的内存块。
 
-### 参见
+## 参见
 
-- [对 Firefox 3 的扩展进行更新](/zh-CN/Updating_extensions_for_Firefox_3)
-- [对 Firefox 3 的 Web 应用进行更新](/zh-CN/Updating_web_applications_for_Firefox_3)
-- [Firefox 2 for developers](/zh-CN/Firefox_2_for_developers)
-- [Firefox 1.5 for developers](/zh-CN/Firefox_1.5_for_developers)
+{{Firefox_for_developers}}

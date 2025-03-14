@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Operators/Bitwise_AND
 
 O operador bitwise AND (`&`) retorna `1` em cada posição do bit em que os bits corrrespondentes de ambos os operandos são `1`.
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-and.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise AND")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = 3; // 00000000000000000000000000000011
+
+console.log(a & b); // 00000000000000000000000000000001
+// Expected output: 1
+```
 
 ## Sintaxe
 
@@ -53,7 +61,7 @@ A operação AND bit a bit (Bitwase) de qualquer número `x` com `0` produz
 
 ### Usando bitwase AND
 
-``` js
+```js
 //  5: 00000000000000000000000000000101
 //  2: 00000000000000000000000000000010
 5  e  2 ; // 0
@@ -69,5 +77,5 @@ A operação AND bit a bit (Bitwase) de qualquer número `x` com `0` produz
 
 ## Veja também
 
-- [Operadores Bitwise no JS guide](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
+- [Operadores Bitwise no JS guide](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators)
 - [Operador de atribuição Bitwise AND](/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)

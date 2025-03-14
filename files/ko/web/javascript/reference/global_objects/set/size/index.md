@@ -1,40 +1,48 @@
 ---
 title: Set.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Set/size
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/size
+l10n:
+  sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
 ---
 
 {{JSRef}}
 
-**`size`** 접근자 속성은 {{jsxref("Set")}} 객체의 원소 수를 반환합니다.
+{{jsxref("Set")}} 인스턴스의 **`size`** 접근자 속성은 이 집합의 (고유한) 요소의 수를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-size.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.size")}}
+
+```js interactive-example
+const set1 = new Set();
+const object1 = {};
+
+set1.add(42);
+set1.add("forty two");
+set1.add("forty two");
+set1.add(object1);
+
+console.log(set1.size);
+// Expected output: 3
+```
 
 ## 설명
 
-`size`의 값은 `Set` 객체가 가진 원소의 수를 나타내는 정수입니다. `size` 값의 설정자는 {{jsxref("undefined")}}입니다. 즉 값을 직접 바꿀 수는 없습니다.
+`size`의 값은 `Set` 객체가 얼마나 많은 개체를 가졌는지 나타내는 정수 값입니다.
+`size`의 설정자는 `undefined`입니다. 즉, 이 속성을 변경할 수 없습니다.
 
 ## 예제
 
 ### `size` 사용하기
 
 ```js
-var mySet = new Set();
+const mySet = new Set();
 mySet.add(1);
 mySet.add(5);
-mySet.add('some text')
+mySet.add("some text");
 
-mySet.size; // 3
+console.log(mySet.size); // 3
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

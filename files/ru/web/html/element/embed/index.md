@@ -1,47 +1,46 @@
 ---
-title: '<embed>: Вложение расширенных элементов'
+title: "<embed>: элемент для встраивания внешнего содержимого"
 slug: Web/HTML/Element/embed
-tags:
-  - HTML
-  - HTML встраиваемый контент
-  - HTML5
-  - Web
-  - embed
-  - Встраиваемый контент
-  - Плагины
-  - Расширенный контент
-  - Ссылка
-  - Элемент
-translation_of: Web/HTML/Element/embed
 ---
 
-**HTML-элемент `<embed>` **вставляет расширенный контент в выбранное место документа. Этот контент может быть представлен от внешнего приложения или другого источника интерактивного контента, такого как плагин для браузера, например.
+{{HTMLSidebar}}
 
-{{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
+HTML-элемент **`<embed>`** встраивает внешнее содержимое в выбранное место документа. Это содержимое может быть предоставлено внешним приложением или плагином браузера.
 
-{{Note("Этот раздел посвящён только элементу, который является частью стандарта HTML5, и никак не касается ранних, нестандартизированных его реализаций.")}}
+{{InteractiveExample("HTML Demo: &lt;embed&gt;", "tabbed-standard")}}
 
-Имейте ввиду, что большинство современных браузеров посчитали устаревшей и удалили поддержку встраивания плагинов, так что использование `<embed>`, как правило, не рекомендуется, если вы хотите, чтобы ваш сайт одинаково работал у всех его пользователей.
+```html interactive-example
+<embed
+  type="video/mp4"
+  src="/shared-assets/videos/flower.mp4"
+  width="250"
+  height="200" />
+```
 
-| [Категории контента](ru/docs/Web/Guide/HTML/Content_categories) | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content), embedded content, interactive content, palpable content. |
-| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённое содержимое                                          | Отсутствует, это {{Glossary("empty element")}}.                                                                                                                                     |
-| Пропуск тега                                                    | Должен иметь открывающий тег, закрывающий тег должен быть пропущен                                                                                                                             |
-| Разрешённые родительские элементы                               | Любой элемент, который допускает встроенный контент                                                                                                                                            |
-| Разрешённые роли ARIA                                           | {{ARIARole("application")}}, {{ARIARole("document")}}, {{ARIARole("img")}}, {{ARIARole("presentation")}}                                                         |
-| DOM-интерфейс                                                   | {{domxref("HTMLEmbedElement")}}                                                                                                                                                       |
+> [!NOTE]
+> Этот раздел посвящён только элементу, который является частью стандарта [HTML Living Standard](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element), и не относится к ранним, нестандартизированным его реализациям.
+
+Следует иметь в виду, что большинство современных браузеров прекратили поддержку плагинов. Поэтому использование `<embed>` не рекомендуется, если необходима одинаковая работа сайта для большинства пользователей.
+
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content), embedded content, interactive content, palpable content.                                                                                                                                                                 |
+| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                      | Отсутствует, это {{Glossary("empty element")}}.                                                                                                                                                                                                                                                                                                                        |
+| Пропуск тегов                                              | Должен иметь открывающий тег, закрывающий тег должен быть пропущен                                                                                                                                                                                                                                                                                                     |
+| Допустимые родители                                        | Любой элемент, который допускает встроенный контент                                                                                                                                                                                                                                                                                                                    |
+| Допустимые ARIA-роли                                       | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/document_role">document</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/img_role">img</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code> |
+| DOM-интерфейс                                              | {{domxref("HTMLEmbedElement")}}                                                                                                                                                                                                                                                                                                                                        |
 
 ## Атрибуты
 
-Атрибуты этого элемента включают все [глобальные атрибуты](ru/docs/Web/HTML/Общие_атрибуты).
+Атрибуты этого элемента включают все [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("height")}}
+- `height`
   - : Отображает высоту ресурса в [CSS пикселях](https://drafts.csswg.org/css-values/#px). Это должно быть абсолютное значение; проценты _не_ допустимы.
-- {{htmlattrdef("src")}}
+- `src`
   - : Ссылка на встраиваемый ресурс.
-- {{htmlattrdef("type")}}
+- `type`
   - : MIME-тип, используемый для выбора подключаемого модуля для создания экземпляра.
-- {{htmlattrdef("width")}}
+- `width`
   - : Отображает ширину ресурса в [CSS пикселях](https://drafts.csswg.org/css-values/#px). Это должно быть абсолютное значение; проценты _не_ допустимы.
 
 ## Примечание
@@ -51,16 +50,14 @@ translation_of: Web/HTML/Element/embed
 ## Примеры
 
 ```html
-<embed type="video/quicktime" src="movie.mov" width="640" height="480">
+<embed type="video/quicktime" src="movie.mov" width="640" height="480" />
 ```
 
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
-
-> **Примечание:** До версии 45, Firefox не отображает содержимое HTML-ресурса, но сообщает о том, что для отображения контента требуется плагин (см. {{Bug("730768")}}).
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -68,5 +65,3 @@ translation_of: Web/HTML/Element/embed
 
 - Другие элементы, используемые для встраивания различного рода контента: {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}}, and {{HTMLElement("video")}}.
 - Свойства, для позиционирования и определения размера внедрённого контента в его фрейме: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
-
-{{HTMLSidebar}}

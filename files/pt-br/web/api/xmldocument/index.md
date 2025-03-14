@@ -20,15 +20,12 @@ _Esta interface não adiciona nenhum método novo._
 
 ## Especificações
 
-| Especificação                                                                | Status                           | Comentário         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("DOM WHATWG", "#xmldocument", "XMLDocument")}} | {{Spec2("DOM WHATWG")}} | Sem alterações.    |
-| {{SpecName("DOM4", "#xmldocument", "XMLDocument")}}         | {{Spec2("DOM4")}}         | Definição Inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.XMLDocument")}}
+{{Compat}}
 
 ## Veja também
 
-- [Indice de interfaces DOM](/pt-BR/docs/DOM/DOM_Reference)
+- [Indice de interfaces DOM](/pt-BR/docs/Web/API/Document_Object_Model)

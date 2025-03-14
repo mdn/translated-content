@@ -1,11 +1,6 @@
 ---
 title: Math.hypot()
 slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
-tags:
-  - JavaScript
-  - Math
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/hypot
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/hypot
 ---
 
 {{JSRef}}
@@ -14,7 +9,21 @@ La función **`Math.hypot()`** retorna la raíz cuadrada de la suma de los cuadr
 
 <math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.hypot</mo><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>v</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msqrt><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>v</mi><mi>i</mi><mn>2</mn></msubsup></mrow></msqrt><mo>=</mo><msqrt><mrow><msubsup><mi>v</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mo>…</mo><mo>+</mo><msubsup><mi>v</mi><mi>n</mi><mn>2</mn></msubsup></mrow></msqrt></mrow></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-hypot.html")}}
+{{InteractiveExample("JavaScript Demo: Math.hypot()")}}
+
+```js interactive-example
+console.log(Math.hypot(3, 4));
+// Expected output: 5
+
+console.log(Math.hypot(5, 12));
+// Expected output: 13
+
+console.log(Math.hypot(3, 4, 5));
+// Expected output: 7.0710678118654755
+
+console.log(Math.hypot(-5));
+// Expected output: 5
+```
 
 ## Sintaxis
 
@@ -50,13 +59,13 @@ Con sólo un argumento, `Math.hypot()` retornaría lo mismo que `Math.abs()`.
 ### Usando `Math.hypot()`
 
 ```js
-Math.hypot(3, 4);        // 5
-Math.hypot(3, 4, 5);     // 7.0710678118654755
-Math.hypot();            // 0
-Math.hypot(NaN);         // NaN
-Math.hypot(3, 4, 'foo'); // NaN, +'foo' => NaN
-Math.hypot(3, 4, '5');   // 7.0710678118654755, +'5' => 5
-Math.hypot(-3);          // 3, lo mismo que Math.abs(-3)
+Math.hypot(3, 4); // 5
+Math.hypot(3, 4, 5); // 7.0710678118654755
+Math.hypot(); // 0
+Math.hypot(NaN); // NaN
+Math.hypot(3, 4, "foo"); // NaN, +'foo' => NaN
+Math.hypot(3, 4, "5"); // 7.0710678118654755, +'5' => 5
+Math.hypot(-3); // 3, lo mismo que Math.abs(-3)
 ```
 
 ## Polyfill
@@ -64,11 +73,14 @@ Math.hypot(-3);          // 3, lo mismo que Math.abs(-3)
 Esto puede ser emulado usando la siguiente función:
 
 ```js
-Math.hypot = Math.hypot || function() {
-  var y = 0, i = arguments.length;
-  while (i--) y += arguments[i] * arguments[i];
-  return Math.sqrt(y);
-};
+Math.hypot =
+  Math.hypot ||
+  function () {
+    var y = 0,
+      i = arguments.length;
+    while (i--) y += arguments[i] * arguments[i];
+    return Math.sqrt(y);
+  };
 ```
 
 Un polyfill que evita subdesbordamientos (underflows) y desbordamientos (overflows):
@@ -94,9 +106,9 @@ Math.hypot = function (x, y) {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.hypot")}}
+{{Compat}}
 
 ## Ver también
 

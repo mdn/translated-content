@@ -1,5 +1,5 @@
 ---
-title: '-webkit-animation'
+title: -webkit-animation
 slug: Web/CSS/@media/-webkit-animation
 ---
 
@@ -9,7 +9,8 @@ slug: Web/CSS/@media/-webkit-animation
 
 Apple には [Safari CSS リファレンス](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3)に説明があります。eference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3).
 
-> **メモ:** このメディア特性は WebKit のみが対応しています。可能であれば、代わりに {{cssxref("@supports")}} 機能クエリーを使用してください。
+> [!NOTE]
+> このメディア特性は WebKit のみが対応しています。可能であれば、代わりに {{cssxref("@supports")}} 機能クエリーを使用してください。
 
 ## 構文
 

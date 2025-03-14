@@ -1,53 +1,55 @@
 ---
-title: CSS Properties and Values API
+title: CSS プロパティと値 API
 slug: Web/API/CSS_Properties_and_Values_API
+l10n:
+  sourceCommit: d74e7839bc166b9d652abc9cdcfe99de448efb2a
 ---
 
-CSS Properties and Values API（[CSS Houdini](/ja/docs/Web/Houdini) API の傘の一部）を使用すると、開発者は {{cssxref('--*', 'CSS カスタムプロパティ')}}を明示的に定義して、プロパティ型のチェック、デフォルト値、および値を継承するまたは継承しないプロパティを許可できます。
+{{DefaultAPISidebar("CSS Properties and Values API")}}
+
+**CSS プロパティと値 API**（[CSS Houdini](/ja/docs/Web/API/Houdini_APIs) API の傘下）により、 {{cssxref('--*', 'CSS カスタムプロパティ')}}の登録において、開発者は明示的に、プロパティの型チェック、既定値、プロパティの値を継承の有無の登録を行うことができます。
 
 ## インターフェイス
 
-- {{domxref('CSS.registerProperty')}}
-  - : ブラウザーが {{cssxref('--*', 'CSS カスタムプロパティ')}}を解析する方法を定義します。 JavaScript の {{domxref('CSS.registerProperty')}} を介してこのインターフェイスにアクセスします。
+- {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}}
+  - : ブラウザーが {{cssxref('--*', 'CSS カスタムプロパティ')}}を構文解析する方法を定義します。 [JavaScript](/ja/docs/Web/JavaScript) の {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} を介してこのインターフェイスにアクセスします。
 - {{cssxref('@property')}}
-  - : ブラウザーが {{cssxref('--*', 'CSS カスタムプロパティ')}}を解析する方法を定義します。 CSS の {{cssxref('@property')}} を介してこのインターフェイスにアクセスします。
-
-<!---->
+  - : ブラウザーが {{cssxref('--*', 'CSS カスタムプロパティ')}}を構文解析する方法を定義します。 [CSS](/ja/docs/Web/CSS) の {{cssxref('@property')}} [アットルール](/ja/docs/Web/CSS/At-rule)を介してこのインターフェイスにアクセスします。
 
 ## 例
 
-次の例では、JavaScript で {{domxref('CSS.registerProperty')}} を使用して、{{cssxref('--*', 'CSS カスタムプロパティ')}} `--my-color` を色とし、デフォルト値を指定し、値を継承できないようにします。
+次の例では、 {{cssxref('--*', 'CSS カスタムプロパティ')}} として `--my-prop` を {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} によって登録します。 `--my-prop` は CSS 色構文を使用し、既定値として `#c0ffee` があり、値を継承しないようにします。
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 
-次の {{cssxref('@property')}} を使用して、CSS で同じ登録を行うことができます。
+[CSS](/ja/docs/Web/CSS) では次の {{cssxref('@property')}} [アットルール](/ja/docs/Web/CSS/At-rule)を使用して、同じ登録を行うことができます。
 
 ```css
 @property --my-color {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-個々のインターフェイスを参照
+{{Compat}}
 
 ## 関連情報
 
-- [CSS properties and values API の使用](/ja/docs/Web/API/CSS_Properties_and_Values_API/guide)
-- [CSS Painting API](/ja/docs/Web/API/CSS_Painting_API)
-- [CSS Typed Object Model](/ja/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/ja/docs/Web/Houdini)
+- [CSS プロパティと値 API の使用](/ja/docs/Web/API/CSS_Properties_and_Values_API/guide)
+- [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
+- [CSS 型付きオブジェクトモデル](/ja/docs/Web/API/CSS_Typed_OM_API)
+- [CSS Houdini](/ja/docs/Web/API/Houdini_APIs)

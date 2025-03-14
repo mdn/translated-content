@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/pop
 
 **`pop()`** 方法會移除並回傳陣列的**最後一個**元素。此方法會改變陣列的長度。
 
-{{EmbedInteractiveExample("pages/js/array-pop.html")}}
+{{InteractiveExample("JavaScript Demo: Array.pop()")}}
+
+```js interactive-example
+const plants = ["broccoli", "cauliflower", "cabbage", "kale", "tomato"];
+
+console.log(plants.pop());
+// Expected output: "tomato"
+
+console.log(plants);
+// Expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+
+plants.pop();
+
+console.log(plants);
+// Expected output: Array ["broccoli", "cauliflower", "cabbage"]
+```
 
 ## 語法
 
@@ -34,7 +49,7 @@ arr.pop()
 下面的程式碼為一個包含四個元素的 `myFish` 陣列，接著移除此陣列的最後一個元素。
 
 ```js
-var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+var myFish = ["angel", "clown", "mandarin", "sturgeon"];
 
 var popped = myFish.pop();
 

@@ -5,7 +5,7 @@ slug: Web/CSS/border-end-start-radius
 
 {{CSSRef}}
 
-**`border-end-start-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的な境界の半径を定義します。これは要素の {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} に応じて、物理的な境界の半径に対応づけられます。これは[テキストの方向](/ja/docs/Web/CSS/text-orientation)や[書字方向](/ja/docs/Web/CSS/CSS_Writing_Modes)に依存せずにスタイルを構築する際に便利です。
+**`border-end-start-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的な境界の半径を定義します。これは要素の {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} に応じて、物理的な境界の半径に対応づけられます。これは[テキストの方向](/ja/docs/Web/CSS/text-orientation)や[書字方向](/ja/docs/Web/CSS/CSS_writing_modes)に依存せずにスタイルを構築する際に便利です。
 
 ```css
 /* <length> 値 */
@@ -21,6 +21,48 @@ border-end-start-radius: inherit;
 border-end-start-radius: initial;
 border-end-start-radius: revert;
 border-end-start-radius: unset;
+```
+
+{{InteractiveExample("CSS Demo: border-end-start-radius")}}
+
+```css interactive-example-choice
+border-end-start-radius: 80px 80px;
+```
+
+```css interactive-example-choice
+border-end-start-radius: 250px 100px;
+direction: rtl;
+```
+
+```css interactive-example-choice
+border-end-start-radius: 50%;
+writing-mode: vertical-lr;
+```
+
+```css interactive-example-choice
+border-end-start-radius: 50%;
+writing-mode: vertical-rl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a bottom left rounded corner.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  color: white;
+  padding: 10px;
+}
 ```
 
 このプロパティは、要素の block-end と inline-start の間の角に影響します。すなわち、書字方向が `horizontal-tb` で `ltr` の方向であれば、 {{CSSxRef("border-bottom-left-radius")}} プロパティに対応します。

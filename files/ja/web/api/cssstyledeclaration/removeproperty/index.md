@@ -1,6 +1,8 @@
 ---
 title: CSSStyleDeclaration.removeProperty()
 slug: Web/API/CSSStyleDeclaration/removeProperty
+l10n:
+  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
 ---
 
 {{ APIRef("CSSOM") }}
@@ -9,29 +11,31 @@ slug: Web/API/CSSStyleDeclaration/removeProperty
 
 ## 構文
 
-```js
-var oldValue = style.removeProperty(property);
+```js-nolint
+removeProperty(property)
 ```
 
 ### 引数
 
-- _`property`_ は {{domxref('DOMString')}} で、削除するプロパティ名を表します。なお、複数語からなるプロパティ名はハイフン区切りであって、キャメルケースではありません。
+- `property`
+  - 文字列で、削除するプロパティ名を表します。なお、複数語からなるプロパティ名はハイフン区切りであって、キャメルケースではありません。
 
 ### 返値
 
-- `oldValue` は {{domxref('DOMString')}} で、削除される前の CSS プロパティの値と等しいものです。
+文字列で、削除される前の CSS プロパティの値と等しいものです。
 
 ### 例外
 
-- {{domxref('DOMException')}} NO_MODIFICATION_ALLOWED_ERR: プロパティまたは宣言ブロックが読取専用の場合。
+- `NoModificationAllowedError` {{domxref('DOMException')}}
+  - : プロパティまたは宣言ブロックが読み取り専用の場合に発生します。
 
 ## 例
 
-次の JavaScript コードは、 CSS の `background-color` プロパティをセレクター規則から削除します。
+次の JavaScript コードは、 CSS の `background-color` プロパティをセレクタールールから削除します。
 
 ```js
-var declaration = document.styleSheets[0].rules[0].style;
-var oldValue = declaration.removeProperty('background-color');
+const declaration = document.styleSheets[0].rules[0].style;
+const oldValue = declaration.removeProperty("background-color");
 ```
 
 ## 仕様書

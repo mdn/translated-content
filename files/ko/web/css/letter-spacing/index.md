@@ -1,20 +1,52 @@
 ---
 title: letter-spacing
 slug: Web/CSS/letter-spacing
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - 글자 간격
-translation_of: Web/CSS/letter-spacing
 ---
 
 {{CSSRef}}
 
 **`letter-spacing`** [CSS](/ko/docs/Web/CSS) 속성은 글자 사이의 간격을 조절합니다.
 
-{{EmbedInteractiveExample("pages/css/letter-spacing.html")}}
+{{InteractiveExample("CSS Demo: letter-spacing")}}
+
+```css interactive-example-choice
+letter-spacing: normal;
+```
+
+```css interactive-example-choice
+letter-spacing: 0.2rem;
+```
+
+```css interactive-example-choice
+letter-spacing: 1px;
+```
+
+```css interactive-example-choice
+letter-spacing: -1px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    As much mud in the streets as if the waters had but newly retired from the
+    face of the earth, and it would not be wonderful to meet a Megalosaurus,
+    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  font-family: Amstelvar;
+  font-style: normal;
+}
+
+section {
+  font-size: 1.2em;
+  font-family: Amstelvar;
+}
+```
 
 ## 구문
 
@@ -25,7 +57,7 @@ letter-spacing: normal;
 /* <length> 값 */
 letter-spacing: 0.3em;
 letter-spacing: 3px;
-letter-spacing: .3px;
+letter-spacing: 0.3px;
 
 /* 전역 값 */
 letter-spacing: inherit;
@@ -59,11 +91,21 @@ letter-spacing: unset;
 ### CSS
 
 ```css
-.normal   { letter-spacing: normal; }
-.em-wide  { letter-spacing: 0.4em; }
-.em-wider { letter-spacing: 1em; }
-.em-tight { letter-spacing: -0.05em; }
-.px-wide  { letter-spacing: 6px; }
+.normal {
+  letter-spacing: normal;
+}
+.em-wide {
+  letter-spacing: 0.4em;
+}
+.em-wider {
+  letter-spacing: 1em;
+}
+.em-tight {
+  letter-spacing: -0.05em;
+}
+.px-wide {
+  letter-spacing: 6px;
+}
 ```
 
 ### 결과

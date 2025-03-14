@@ -7,18 +7,37 @@ slug: Web/JavaScript/Reference/Global_Objects/parseInt
 
 **`parseInt()`** 函式能將輸入的字串轉成整數。
 
-{{EmbedInteractiveExample("pages/js/globalprops-parseint.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseInt()")}}
+
+```js interactive-example
+console.log(parseInt("123"));
+// 123 (default base-10)
+console.log(parseInt("123", 10));
+// 123 (explicitly specify base-10)
+console.log(parseInt("   123 "));
+// 123 (whitespace is ignored)
+console.log(parseInt("077"));
+// 77 (leading zeros are ignored)
+console.log(parseInt("1.9"));
+// 1 (decimal part is truncated)
+console.log(parseInt("ff", 16));
+// 255 (lower-case hexadecimal)
+console.log(parseInt("0xFF", 16));
+// 255 (upper-case hexadecimal with "0x" prefix)
+console.log(parseInt("xyz"));
+// NaN (input can't be converted to an integer)
+```
 
 ## 語法
 
-```plain
+```js-nolint
 parseInt(string, radix);
 ```
 
 ### 參數
 
 - `string`
-  - : 待轉成數字的字串。若 `string` 參數類型不是字串的話，會先將其轉成字串（相當於先執行 [`ToString`](http://www.ecma-international.org/ecma-262/6.0/#sec-tostring) 再執行 `parseInt`）空白值會被忽略。
+  - : 待轉成數字的字串。若 `string` 參數類型不是字串的話，會先將其轉成字串（相當於先執行 [`ToString`](https://262.ecma-international.org/6.0/#sec-tostring) 再執行 `parseInt`）空白值會被忽略。
 - `radix`
   - : 從 2 到 36，能代表該進位系統的數字。例如說指定 `10` 就等於指定十進位。**一定要定義這個參數**以避免他人的困惑、也好預估函式的行為。如果沒有指定 radix 的話，給出的結果會按照實做不同而異，請注意，通常預設值**不是** 10 進位。
 
@@ -72,7 +91,7 @@ parseInt("12", 13);
 
 ```js
 parseInt("Hello", 8); // 根本不是數字
-parseInt("546", 2);   // 在二進位無效
+parseInt("546", 2); // 在二進位無效
 ```
 
 以下的範例，回傳的值均為 **`-15`**：
@@ -81,7 +100,7 @@ parseInt("546", 2);   // 在二進位無效
 parseInt("-F", 16);
 parseInt("-0F", 16);
 parseInt("-0XF", 16);
-parseInt(-15.1, 10)
+parseInt(-15.1, 10);
 parseInt(" -17", 8);
 parseInt(" -15", 10);
 parseInt("-1111", 2);
@@ -124,23 +143,22 @@ Many implementations have not adopted this behavior as of 2013, and because olde
 
 ## 嚴謹的解析 function
 
-有的時候，使用更嚴謹的 code 能夠更精確地轉換整數值。 Regular expressions 可以幫你：
+有的時候，使用更嚴謹的 code 能夠更精確地轉換整數值。Regular expression 可以幫你：
 
 ```js
 filterInt = function (value) {
-  if(/^(\-|\+)?([0-9]+|Infinity)$/.test(value))
-    return Number(value);
+  if (/^(\-|\+)?([0-9]+|Infinity)$/.test(value)) return Number(value);
   return NaN;
-}
+};
 
-console.log(filterInt('421'));               // 421
-console.log(filterInt('-421'));              // -421
-console.log(filterInt('+421'));              // 421
-console.log(filterInt('Infinity'));          // Infinity
-console.log(filterInt('421e+0'));            // NaN
-console.log(filterInt('421hop'));            // NaN
-console.log(filterInt('hop1.61803398875'));  // NaN
-console.log(filterInt('1.61803398875'));     // NaN
+console.log(filterInt("421")); // 421
+console.log(filterInt("-421")); // -421
+console.log(filterInt("+421")); // 421
+console.log(filterInt("Infinity")); // Infinity
+console.log(filterInt("421e+0")); // NaN
+console.log(filterInt("421hop")); // NaN
+console.log(filterInt("hop1.61803398875")); // NaN
+console.log(filterInt("1.61803398875")); // NaN
 ```
 
 ## 規範
@@ -151,7 +169,7 @@ console.log(filterInt('1.61803398875'));     // NaN
 
 {{Compat}}
 
-## 延伸閱讀
+## 參見
 
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
 - {{jsxref("Number.parseFloat()")}}

@@ -1,16 +1,14 @@
 ---
 title: FileList
 slug: Web/API/FileList
-tags:
-  - API
-  - File API
-  - Files
-translation_of: Web/API/FileList
 ---
 
-{{APIRef("File API")}}{{gecko_minversion_header("1.9")}}Объект этого типа возвращается свойством {{HTMLElement("input")}} элемента, что позволяет получить список выбранных файлов из `<input type="file">`. Также используется для получения списка файлов, брошенных в область веб-контента (**Web content**) по средствам drag and drop API. Смотрите [DataTransfer](/ru/docs/DragDrop/DataTransfer) для детального понимания как это использовать.
+{{APIRef("File API")}}
 
-> **Примечание:** До версии {{Gecko("1.9.2")}}, input элемент поддерживает только один выбранный файл, это значит что FileList содержит только один файл. Начиная с {{Gecko("1.9.2")}}, если input содержит атрибут multiple=true, то FileList может содержать несколько файлов.
+Объект этого типа возвращается свойством {{HTMLElement("input")}} элемента, что позволяет получить список выбранных файлов из `<input type="file">`. Также используется для получения списка файлов, брошенных в область веб-контента (**Web content**) по средствам drag and drop API. Смотрите [DataTransfer](/ru/docs/Web/API/DataTransfer) для детального понимания как это использовать.
+
+> [!NOTE]
+> До версии Gecko 1.9.2, input элемент поддерживает только один выбранный файл, это значит что FileList содержит только один файл. Начиная с Gecko 1.9.2, если input содержит атрибут multiple=true, то FileList может содержать несколько файлов.
 
 ## Использование FileList
 
@@ -23,7 +21,7 @@ translation_of: Web/API/FileList
 `Этот код извлекает первый File` object из списка:
 
 ```js
-var file = document.getElementById('fileItem').files[0];
+var file = document.getElementById("fileItem").files[0];
 ```
 
 ## Обзор методов
@@ -41,7 +39,7 @@ var file = document.getElementById('fileItem').files[0];
 
 ### item()
 
-Возвращает [`File`](/ru/docs/DOM/File) объект по его индексу в списке.
+Возвращает [`File`](/ru/docs/Web/API/File) объект по его индексу в списке.
 
 ```
  File item(
@@ -72,63 +70,58 @@ var file;
 
 // обходит файлы используя цикл
 for (var i = 0; i < files.length; i++) {
+  // получаем сам файл
+  file = files.item(i);
+  // или можно так
+  file = files[i];
 
-    // получаем сам файл
-    file = files.item(i);
-    // или можно так
-    file = files[i];
-
-    alert(file.name);
+  alert(file.name);
 }
 ```
 
 Здесь пример посложнее.
 
 ```html
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
-<head>
-</head>
-<body>
-<!--атрибут multiple позволяет выбрать сразу несколько файлов-->
+  <head> </head>
+  <body>
+    <!--атрибут multiple позволяет выбрать сразу несколько файлов-->
 
-<input id="myfiles" multiple type="file">
+    <input id="myfiles" multiple type="file" />
+  </body>
 
-</body>
+  <script>
+    var pullfiles = function () {
+      // выбираем файловые инпуты на странице
+      var fileInput = document.querySelector("#myfiles");
+      var files = fileInput.files;
+      // кешируем files.length
+      var fl = files.length;
+      var i = 0;
 
-<script>
-
-var pullfiles=function(){
-    // выбираем файловые инпуты на странице
-    var fileInput = document.querySelector("#myfiles");
-    var files = fileInput.files;
-    // кешируем files.length
-    var fl=files.length;
-    var i=0;
-
-    while ( i < fl) {
+      while (i < fl) {
         // локализуем файловую переменную в цикле
         var file = files[i];
         alert(file.name);
         i++;
-    }
-}
+      }
+    };
 
-// привязываем событие изменения input
-document.querySelector("#myfiles").onchange=pullfiles;
+    // привязываем событие изменения input
+    document.querySelector("#myfiles").onchange = pullfiles;
 
-//a.t
-</script>
-
+    //a.t
+  </script>
 </html>
 ```
 
-## Спецификация
+## Спецификации
 
-- [File upload state](http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected) (HTML5 working draft)
+- [File upload state](https://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected) (HTML5 working draft)
 
 ## Смотрите также
 
-- [Using files from web applications](/ru/docs/Using_files_from_web_applications)
-- [`File`](/en-US/docs/DOM/File)
-- [`FileReader`](/en-US/docs/DOM/FileReader)
+- [Using files from web applications](/ru/docs/Web/API/File_API/Using_files_from_web_applications)
+- [`File`](/ru/docs/Web/API/File)
+- [`FileReader`](/ru/docs/Web/API/FileReader)

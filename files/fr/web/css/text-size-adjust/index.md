@@ -1,12 +1,6 @@
 ---
 title: text-size-adjust
 slug: Web/CSS/text-size-adjust
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-size-adjust
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -67,5 +61,5 @@ La propriété `text-size-adjust` est définie avec le mot-clé `none` ou le mot
 ## Voir aussi
 
 - [La documentation d'Apple](https://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html)
-- [Le comportement de Gecko décrit par L. David Baron](http://dbaron.org/log/20111126-font-inflation)
+- [Le comportement de Gecko décrit par L. David Baron](https://dbaron.org/log/20111126-font-inflation)
 - [La documentation de Microsoft](<http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff462082(v=vs.105).aspx>)

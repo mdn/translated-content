@@ -1,11 +1,13 @@
 ---
-title: animateTransform
+title: <animateTransform>
 slug: Web/SVG/Element/animateTransform
+l10n:
+  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
 {{SVGRef}}
 
-`animateTransform` 要素は、 ターゲット要素に対して変換属性をアニメーション化し、これにより変形、スケーリング、回転およびまたはゆがみのアニメーションを制御することができます。
+`animateTransform` 要素は、 ターゲット要素に対して座標変換属性をアニメーションさせ、これにより平行移動、拡大縮小、回転、ゆがみなどのアニメーションを制御することができます。
 
 ## 使用可能な場所
 
@@ -14,56 +16,41 @@ slug: Web/SVG/Element/animateTransform
 ## 例
 
 ```html
-<?xml version="1.0"?>
-<svg width="120" height="120"  viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg" version="1.1"
-     xmlns:xlink="http://www.w3.org/1999/xlink" >
-
-    <polygon points="60,30 90,90 30,90">
-        <animateTransform attributeName="transform"
-                          attributeType="XML"
-                          type="rotate"
-                          from="0 60 70"
-                          to="360 60 70"
-                          dur="10s"
-                          repeatCount="indefinite"/>
-    </polygon>
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg">
+  <polygon points="60,30 90,90 30,90">
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="0 60 70"
+      to="360 60 70"
+      dur="10s"
+      repeatCount="indefinite" />
+  </polygon>
 </svg>
 ```
 
-**ライブサンプル**
+{{ EmbedLiveSample('Example','120','120') }}
 
-{{ EmbedLiveSample('例','120','120') }}
-
-## 属性
-
-### グローバル属性
-
-- [条件処理属性](/ja/docs/Web/SVG/Attribute#ConditionalProccessing) »
-- [コア属性](/ja/docs/Web/SVG/Attribute#Core) »
-- [アニメーションイベント属性](/ja/docs/Web/SVG/Attribute#AnimationEvent) »
-- [Xlink 属性](/ja/docs/Web/SVG/Attribute#XLink) »
-- [Animation attribute target attributes](/ja/docs/Web/SVG/Attribute#AnimationAttributeTarget) »
-- [アニメーションタイミング属性](/ja/docs/Web/SVG/Attribute#AnimationTiming) »
-- [Animation value attributes](/ja/docs/Web/SVG/Attribute#AnimationValue) »
-- [Animation addition attributes](/ja/docs/Web/SVG/Attribute#AnimationAddition) »
-- {{ SVGAttr("externalResourcesRequired") }}
-
-### 専用属性
+### 属性
 
 - {{ SVGAttr("by") }}
 - {{ SVGAttr("from") }}
 - {{ SVGAttr("to") }}
 - {{ SVGAttr("type") }}
 
-## DOM インターフェース
+## DOM インターフェイス
 
-この属性は [`SVGAnimateTransformElement`](/ja/docs/DOM/SVGAnimateTransformElement) インターフェースを提供します。
+この属性は [`SVGAnimateTransformElement`](/ja/docs/Web/API/SVGAnimateTransformElement) インターフェイスを提供します。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
-{{Compat("svg.elements.animateTransform")}}
+{{Compat}}

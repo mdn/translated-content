@@ -1,10 +1,8 @@
 ---
-title: >-
-  TypeError: Reduce of empty array with no initial value(Тип ошибки: уменьшение
-  пустого массива без начального значения)
+title: "TypeError: Reduce of empty array with no initial value(Тип ошибки: уменьшение пустого массива без начального значения)"
 slug: Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value
-translation_of: Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение
@@ -34,15 +32,19 @@ TypeError: уменьшение пустого массива без начал�
 
 ```js example-bad
 var ints = [0, -1, -2, -3, -4, -5];
-ints.filter(x => x > 0)         // удаление всех элементов
-    .reduce((x, y) => x + y)    // no more elements to use for the initial value.
+ints
+  .filter((x) => x > 0) // удаление всех элементов
+  .reduce((x, y) => x + y); // no more elements to use for the initial value.
 ```
 
 Аналогично, та же проблема может возникнуть, если в селекторе есть опечатка или непредвиденное количество элементов в списке:
 
 ```js example-bad
 var names = document.getElementsByClassName("names");
-var name_list = Array.prototype.reduce.call(names, (acc, name) => acc + ", " + name);
+var name_list = Array.prototype.reduce.call(
+  names,
+  (acc, name) => acc + ", " + name,
+);
 ```
 
 ### Правильные примеры
@@ -53,8 +55,9 @@ var name_list = Array.prototype.reduce.call(names, (acc, name) => acc + ", " + n
 
 ```js example-good
 var ints = [0, -1, -2, -3, -4, -5];
-ints.filter(x => x < 0)         // removes all elements
-    .reduce((x, y) => x + y, 0) // the initial value is the neutral element of the addition
+ints
+  .filter((x) => x < 0) // removes all elements
+  .reduce((x, y) => x + y, 0); // the initial value is the neutral element of the addition
 ```
 
 Другим способом было бы два для обработки пустого случая, или перед вызовом reduce, или в обратном вызове после добавления неожиданного фиктивного начального значения.
@@ -64,14 +67,22 @@ var names = document.getElementsByClassName("names");
 
 var name_list1 = "";
 if (names1.length >= 1)
-  name_list1 = Array.prototype.reduce.call(names, (acc, name) => acc + ", " + name);
+  name_list1 = Array.prototype.reduce.call(
+    names,
+    (acc, name) => acc + ", " + name,
+  );
 // name_list1 == "" when names is empty.
 
-var name_list2 = Array.prototype.reduce.call(names, (acc, name) => {
-  if (acc == "") // initial value
-    return name;
-  return acc + ", " + name;
-}, "");
+var name_list2 = Array.prototype.reduce.call(
+  names,
+  (acc, name) => {
+    if (acc == "")
+      // initial value
+      return name;
+    return acc + ", " + name;
+  },
+  "",
+);
 // name_list2 == "" when names is empty.
 ```
 

@@ -1,6 +1,9 @@
 ---
-title: Element.getElementsByTagName()
+title: "Element: getElementsByTagName() メソッド"
+short-title: getElementsByTagName()
 slug: Web/API/Element/getElementsByTagName
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{ APIRef("DOM") }}
@@ -15,24 +18,28 @@ HTML 文書内の HTML 要素に対して呼び出された場合、 `getElement
 
 ## 構文
 
-```js
-elements = element.getElementsByTagName(tagName)
+```js-nolint
+getElementsByTagName(tagName)
 ```
 
-- `elements` は*生きた* {{domxref("HTMLCollection")}} で、タグ名が一致する要素が出現順で入ります。要素が見つかアなかった場合は `HTMLCollection` は空になります。
-- `element` は検索を始める要素です。この要素の子孫のみが含まれ、この要素自身は含まれません。
-- `tagName` は検索する修飾名です。特別な文字列 `"*"` はすべての要素を表します。 XHTML との互換性のため、小文字を使用してください。
+### 引数
+
+- `tagName` は検索する修飾名です。特別な文字列 `"*"` はすべての要素を表します。XHTML との互換性のため、小文字を使用してください。
+
+### 返値
+
+_生きた_ {{domxref("HTMLCollection")}} で、タグ名が一致する要素が出現順で入ります。要素が見つからなかった場合は `HTMLCollection` は空になります。
 
 ## 例
 
 ```js
 // テーブル内のセルの数だけ反復処理します
-const table = document.getElementById('forecast-table');
-const cells = table.getElementsByTagName('td');
+const table = document.getElementById("forecast-table");
+const cells = table.getElementsByTagName("td");
 
-for (let cell of cells) {
-  let status = cell.getAttribute('data-status');
-  if (status === 'open') {
+for (const cell of cells) {
+  const status = cell.getAttribute("data-status");
+  if (status === "open") {
     // データを取得
   }
 }

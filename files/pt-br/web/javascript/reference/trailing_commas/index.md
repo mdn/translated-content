@@ -38,8 +38,8 @@ arr.length; // 3
 
 Se for utilizada mais do que uma trailing comma, é produzida uma elisão (ou buraco). Uma elisão
 com buracos é chamado de _sparse_ (uma matriz _densa_ não tem sparse). Quando
-arrays iteráveis por exemplo com {{jsxref("Array.prototype.forEach()")}}} ou
-{{jsxref("Array.prototype.map()")}}}, os buracos da matriz são saltados.
+arrays iteráveis por exemplo com {{jsxref("Array.prototype.forEach()")}} ou
+{{jsxref("Array.prototype.map()")}}, os buracos da matriz são saltados.
 
 ```js
 const arr = [1, 2, 3, , ,];
@@ -102,7 +102,7 @@ Math.max(10, 20);
 #### Trailing commas inválidas
 
 Definições de parâmetros de funções ou invocações de funções que contenham apenas uma vírgula
-lançam um {{{Jsxref("SyntaxError")}}}. Além disso, ao utilizar um [parâmetros rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters), não são permitidas trailling commas:
+lançam um {{jsxref("SyntaxError")}}. Além disso, ao utilizar um [parâmetros rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters), não são permitidas trailling commas:
 
 ```js example-bad
 function f(,) {} // SyntaxError: parâmetro formal em falta
@@ -128,7 +128,7 @@ const o = {
 const { p, q } = o;
 ```
 
-Mais uma vez, ao utilizar um elemento de rest, um {{jsxref("SyntaxError")}}} será lançado:
+Mais uma vez, ao utilizar um elemento de rest, um {{jsxref("SyntaxError")}} será lançado:
 
 ```js example-bad
 const [a, ...b] = [1, 2, 3];

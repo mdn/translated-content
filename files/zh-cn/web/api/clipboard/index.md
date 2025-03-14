@@ -13,7 +13,8 @@ slug: Web/API/Clipboard
 
 如果用户没有适时使用 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 授予 `"clipboard-read"` 或 `"clipboard-write"` 权限，调用 `Clipboard` 对象的方法不会成功。
 
-> **备注：** 实际上，现在浏览器对于访问剪贴板权限的索取各有不同，在章节的 [剪贴板可用性](#剪贴板可用性) 部分查看更多细节。
+> [!NOTE]
+> 实际上，现在浏览器对于访问剪贴板权限的索取各有不同，在章节的 [剪贴板可用性](#剪贴板可用性) 部分查看更多细节。
 
 所有 Clipboard API 的方法都是异步的；它们返回一个 {{jsxref("Promise")}} 对象，在剪贴板访问完成后被兑现。如果剪贴板访问被拒绝，promise 也会被拒绝。
 
@@ -23,7 +24,7 @@ slug: Web/API/Clipboard
 
 ## 方法
 
-*`Clipboard` 继承自 {{domxref("EventTarget")}} 接口，因此拥有它的方法。*
+_`Clipboard` 继承自 {{domxref("EventTarget")}} 接口，因此拥有它的方法。_
 
 - {{domxref("Clipboard.read()","read()")}}
   - : 从剪贴板读取数据（比如图片），返回一个 {{jsxref("Promise")}} 对象。在检索到数据后，promise 将兑现一个 {{domxref("ClipboardItem")}} 对象的数组来提供剪切板数据。

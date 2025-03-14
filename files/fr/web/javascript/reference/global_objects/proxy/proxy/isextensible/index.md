@@ -1,28 +1,51 @@
 ---
 title: handler.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Proxy
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/isExtensible
 ---
 
 {{JSRef}}
 
 La méthode **`handler.isExtensible()`** est une trappe pour intercepter les opérations de {{jsxref("Object.isExtensible()")}}.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-isextensible.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.isExtensible()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  canEvolve: true,
+};
+
+const handler1 = {
+  isExtensible(target) {
+    return Reflect.isExtensible(target);
+  },
+  preventExtensions(target) {
+    target.canEvolve = false;
+    return Reflect.preventExtensions(target);
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+console.log(Object.isExtensible(proxy1));
+// Expected output: true
+
+console.log(monster1.canEvolve);
+// Expected output: true
+
+Object.preventExtensions(proxy1);
+
+console.log(Object.isExtensible(proxy1));
+// Expected output: false
+
+console.log(monster1.canEvolve);
+// Expected output: false
+```
 
 ## Syntaxe
 
 ```js
 var p = new Proxy(cible, {
-  isExtensible: function(cible) {
-  }
+  isExtensible: function (cible) {},
 });
 ```
 
@@ -59,25 +82,31 @@ Si les invariants suivants ne sont pas respectés, le proxy renverra une excepti
 Dans l'exemple qui suit, on intercepte {{jsxref("Object.isExtensible()")}}.
 
 ```js
-var p = new Proxy({}, {
-  isExtensible: function(cible) {
-    console.log("appelée");
-    return true;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    isExtensible: function (cible) {
+      console.log("appelée");
+      return true;
+    },
+  },
+);
 
 console.log(Object.isExtensible(p)); // "appelée"
-                                     // true
+// true
 ```
 
 Le code suivante ne respecte pas l'invariant et entraîne donc une exception.
 
 ```js
-var p = new Proxy({}, {
-  isExtensible: function(cible) {
-    return false;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    isExtensible: function (cible) {
+      return false;
+    },
+  },
+);
 
 Object.isExtensible(p); // TypeError est levée
 ```

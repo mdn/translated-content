@@ -1,21 +1,16 @@
 ---
 title: theme
 slug: Mozilla/Add-ons/WebExtensions/API/theme
-tags:
-  - Extensions
-  - Themes
-  - WebExtensions
-  - add-on
-translation_of: Mozilla/Add-ons/WebExtensions/API/theme
 ---
 
 {{AddonSidebar}}
 
 Permet aux extensions du navigateur de mettre à jour le thème du navigateur.
 
-Pour utiliser cette API, une extension doit demander la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "theme" dans son fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json).
+Pour utiliser cette API, une extension doit demander la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "theme" dans son fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
-> **Note :** quand on met un thème en arrière plan, on doit déclarer la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) 'theme' et on ne peut pas utiliser la fonction [theme](/fr/Add-ons/WebExtensions/manifest.json/theme) du manifest, puisque ce n'est pas compatible.
+> [!NOTE]
+> Quand on met un thème en arrière plan, on doit déclarer la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 'theme' et on ne peut pas utiliser la fonction [theme](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) du manifest, puisque ce n'est pas compatible.
 
 ## Types
 
@@ -36,8 +31,8 @@ Pour utiliser cette API, une extension doit demander la [permission](/fr/Add-ons
 - {{WebExtAPIRef("theme.onUpdated")}}
   - : Emis quand le thème du navigateur change.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.theme")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}

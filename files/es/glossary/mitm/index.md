@@ -1,11 +1,9 @@
 ---
 title: MitM
 slug: Glossary/MitM
-tags:
-  - Glosario
-  - Seguridad
-translation_of: Glossary/MitM
 ---
+
+{{GlossarySidebar}}
 
 Un ataque de Intermediario \[**Man-in-the-middle attack** (MitM)] intercepta una comunicación entre dos sistemas. Por ejemplo, un router Wi-Fi puede estar en peligro.
 

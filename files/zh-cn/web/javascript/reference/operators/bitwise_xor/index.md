@@ -1,34 +1,42 @@
 ---
-title: Bitwise XOR (^)
+title: 按位异或（^）
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
 ---
 
 {{jsSidebar("Operators")}}
 
-The bitwise XOR operator (`^`) returns a `1` in each bit position for which the corresponding bits of either but not both operands are `1`s.
+**按位异或**（**`^`**）运算符在两个操作数有且仅有一个对应的二进制位为 `1` 时，该位的结果值为 `1`。
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-xor.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise XOR", "shorter")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = 3; // 00000000000000000000000000000011
+
+console.log(a ^ b); // 00000000000000000000000000000110
+// Expected output: 6
+```
 
 ## 语法
 
-```plain
+```js-nolint
 a ^ b
 ```
 
 ## 描述
 
-The operands are converted to 32-bit integers and expressed by a series of bits (zeroes and ones). Numbers with more than 32 bits get their most significant bits discarded. For example, the following integer with more than 32 bits will be converted to a 32 bit integer:
+操作数被转换为 32 位整数并由一系列二进制位（0 和 1）表示。超过 32 位的数字会丢弃其最高有效位。例如，以下超过 32 位的整数将被转换为 32 位整数：
 
-```js
+```plain
 Before: 11100110111110100000000000000110000000000001
 After:              10100000000000000110000000000001
 ```
 
-Each bit in the first operand is paired with the corresponding bit in the second operand: _first bit_ to _first bit_, _second bit_ to _second bit_, and so on.
+第一个操作数中的每个位都与第二个操作数中的相应位配对：*第一位*到*第一位*、*第二位*到*第二位*，以此类推。
 
-The operator is applied to each pair of bits, and the result is constructed bitwise.
+运算符应用于每一对位，结果按位构造。
 
-The truth table for the XOR operation is:
+异或或运算的真值表为：
 
 | a   | b   | a XOR b |
 | --- | --- | ------- |
@@ -37,19 +45,18 @@ The truth table for the XOR operation is:
 | 1   | 0   | 1       |
 | 1   | 1   | 0       |
 
-```js
-.    9 (base 10) = 00000000000000000000000000001001 (base 2)
+```plain
+     9 (base 10) = 00000000000000000000000000001001 (base 2)
     14 (base 10) = 00000000000000000000000000001110 (base 2)
                    --------------------------------
-
 14 ^ 9 (base 10) = 00000000000000000000000000000111 (base 2) = 7 (base 10)
 ```
 
-Bitwise XORing any number `x` with `0` yields `x`.
+将任意数字 `x` 与 `0` 进行按位异或运算得到 `x`。
 
-## Examples
+## 示例
 
-### Using bitwise XOR
+### 使用按位异或
 
 ```js
 // 9  (00000000000000000000000000001001)
@@ -69,5 +76,5 @@ Bitwise XORing any number `x` with `0` yields `x`.
 
 ## 参见
 
-- [Bitwise operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
-- [Bitwise XOR assignment operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)
+- [JS 指南中的位运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#位运算符)
+- [按位异或赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)

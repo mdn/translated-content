@@ -1,13 +1,50 @@
 ---
 title: transform-style
 slug: Web/CSS/transform-style
+l10n:
+  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
 {{CSSRef}}
 
 **`transform-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の子要素を 3D 空間に配置するのか、平面化して要素の平面に配置するのかを設定します。
 
-{{EmbedInteractiveExample("pages/css/transform-style.html")}}
+{{InteractiveExample("CSS Demo: transform-style")}}
+
+```css interactive-example-choice
+transform-style: flat;
+```
+
+```css interactive-example-choice
+transform-style: preserve-3d;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all layer" id="example-element">
+    <p>Parent</p>
+    <div class="numeral"><code>rotate3d(1, 1, 1, 45deg)</code></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.layer {
+  background: #623e3f;
+  border-radius: 0.75rem;
+  color: white;
+  transform: perspective(200px) rotateY(30deg);
+}
+
+.numeral {
+  background-color: #ffba08;
+  border-radius: 0.2rem;
+  color: #000;
+  margin: 1rem;
+  padding: 0.2rem;
+  transform: rotate3d(1, 1, 1, 45deg);
+}
+```
 
 平面化した場合、子要素は自身の 3D 空間に存在しなくなります。
 
@@ -24,6 +61,7 @@ transform-style: preserve-3d;
 transform-style: inherit;
 transform-style: initial;
 transform-style: revert;
+transform-style: revert-layer;
 transform-style: unset;
 ```
 
@@ -44,7 +82,7 @@ transform-style: unset;
 
 ## 例
 
-<h3 id="Transform_style_demonstration">座標変換スタイルのデモ</h3>
+### 座標変換スタイルのデモ
 
 この例では、座標変換を使用して 3D の立方体を作成しています。立方体の面の親コンテナーには、既定で `transform-style: preserve-3d` が設定されているため、3D 空間で座標変換され、意図したとおりに表示されます。
 
@@ -64,7 +102,7 @@ transform-style: unset;
 
 <div class="checkbox">
   <label for="preserve"><code>preserve-3d</code></label>
-  <input type="checkbox" id="preserve" checked>
+  <input type="checkbox" id="preserve" checked />
 </div>
 ```
 
@@ -92,32 +130,32 @@ transform-style: unset;
 }
 
 .front {
-    background: rgba(90,90,90,.7);
-    transform: translateZ(50px);
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(50px);
 }
 
 .back {
-    background: rgba(0,210,0,.7);
-    transform: rotateY(180deg) translateZ(50px);
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210,0,0,.7);
+  background: rgba(210, 0, 0, 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0,0,210,.7);
+  background: rgba(0, 0, 210, 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210,210,0,.7);
+  background: rgba(210, 210, 0, 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210,0,210,.7);
+  background: rgba(210, 0, 210, 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
@@ -125,16 +163,12 @@ transform-style: unset;
 #### JavaScript
 
 ```js
-const cube = document.getElementById('example-element');
-const checkbox = document.getElementById('preserve');
+const cube = document.getElementById("example-element");
+const checkbox = document.getElementById("preserve");
 
-checkbox.addEventListener('change', () => {
-  if(checkbox.checked) {
-    cube.style.transformStyle = 'preserve-3d';
-  } else {
-    cube.style.transformStyle = 'flat';
-  }
-})
+checkbox.addEventListener("change", () => {
+  cube.style.transformStyle = checkbox.checked ? "preserve-3d" : "flat";
+});
 ```
 
 #### 結果
@@ -151,4 +185,4 @@ checkbox.addEventListener('change', () => {
 
 ## 関連情報
 
-- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

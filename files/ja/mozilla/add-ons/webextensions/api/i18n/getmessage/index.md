@@ -3,7 +3,7 @@ title: i18n.getMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getMessage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 指定したメッセージのローカライズされた文字列を取得します。
 
@@ -11,9 +11,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n/getMessage
 
 ```js
 browser.i18n.getMessage(
-  messageName,  // 文字列
-  substitutions // 任意
-)
+  messageName, // 文字列
+  substitutions, // 任意
+);
 ```
 
 ### 引数
@@ -35,7 +35,7 @@ browser.i18n.getMessage(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.i18n.getMessage")}}
+{{Compat}}
 
 ## 例
 
@@ -54,9 +54,9 @@ console.log(message);
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
     "placeholders": {
-      "url" : {
-        "content" : "$1",
-        "example" : "https://developer.mozilla.org"
+      "url": {
+        "content": "$1",
+        "example": "https://developer.mozilla.org"
       }
     }
   }
@@ -71,9 +71,11 @@ console.log(message);
 
 {{WebExtExamples}}
 
-> **メモ:** この API は、Chromium の [`chrome.i18n`](https://developer.chrome.com/extensions/i18n#method-getMessage) API を基にしています。このドキュメンテーションは、Chromium コード内の [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) に由来しています。Microsoft Edge 互換性データは、Microsoft Corporation より供給され、Creative Commons Attribution 3.0 United States License の下で含まれています。
+> [!NOTE]
+> この API は、Chromium の [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n#method-getMessage) API を基にしています。このドキュメンテーションは、Chromium コード内の [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) に由来しています。Microsoft Edge 互換性データは、Microsoft Corporation より供給され、Creative Commons Attribution 3.0 United States License の下で含まれています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -100,4 +102,4 @@ console.log(message);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

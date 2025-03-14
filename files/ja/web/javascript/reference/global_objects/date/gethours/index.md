@@ -9,7 +9,14 @@ l10n:
 
 **`getHours()`** メソッドは、地方時に基づき、指定された日時の「時」を返します。
 
-{{EmbedInteractiveExample("pages/js/date-gethours.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.getHours()", "shorter")}}
+
+```js interactive-example
+const birthday = new Date("March 13, 08 04:20");
+
+console.log(birthday.getHours());
+// Expected output: 4
+```
 
 ## 構文
 
@@ -28,7 +35,7 @@ getHours()
 以下の 2 行目の文は、 {{jsxref("Global_Objects/Date", "Date")}} オブジェクトである `xmas95` の値に基づき、23 という値を変数 `hours` に代入します。
 
 ```js
-const xmas95 = new Date('December 25, 1995 23:15:30');
+const xmas95 = new Date("December 25, 1995 23:15:30");
 const hours = xmas95.getHours();
 
 console.log(hours); // 23

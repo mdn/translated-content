@@ -1,29 +1,20 @@
 ---
 title: management.onInstalled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onInstalled
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Reference
-  - WebExtensions
-  - management
-  - onInstalled
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/onInstalled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Action quand une extension est installée.
 
-Cette API requière l'[API de permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management".
+Cette API requière l'[API de permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management".
 
 ## Syntaxe
 
 ```js
-browser.management.onInstalled.addListener(listener)
-browser.management.onInstalled.removeListener(listener)
-browser.management.onInstalled.hasListener(listener)
+browser.management.onInstalled.addListener(listener);
+browser.management.onInstalled.removeListener(listener);
+browser.management.onInstalled.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -44,11 +35,11 @@ Les événements ont trois fonctions :
   - : fonction de rappel qui sera appelée quand l'événement se produira. La fonction passera l'argument suivant :
 
     - `info`
-      - : [`ExtensionInfo`](/fr/Add-ons/WebExtensions/API/management/ExtensionInfo): informations sur l'extension qui a été installée.
+      - : [`ExtensionInfo`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo): informations sur l'extension qui a été installée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.onInstalled")}}
+{{Compat}}
 
 ## Exemples
 
@@ -62,9 +53,9 @@ browser.management.onInstalled.addListener((info) => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/extensions/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

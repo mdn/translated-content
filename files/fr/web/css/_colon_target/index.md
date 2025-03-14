@@ -1,16 +1,11 @@
 ---
-title: ':target'
+title: :target
 slug: Web/CSS/:target
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:target
 ---
 
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:target`** permet de cibler l'unique élément (s'il existe) dont l'attribut {{htmlattrxref("id")}} correspond au fragment d'identifiant de l'URI du document.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:target`** permet de cibler l'unique élément (s'il existe) dont l'attribut [`id`](/fr/docs/Web/HTML/Global_attributes#id) correspond au fragment d'identifiant de l'URI du document.
 
 ```css
 /* Cible un élément dont l'identifiant      */
@@ -32,7 +27,8 @@ L'élément suivant sera donc ciblé par le sélecteur `:target` avec l'URL pré
 <section id="section2">Exemple</section>
 ```
 
-> **Note :** L'attribut `id` a été ajouté avec HTML 4 (décembre 1997). Dans les anciennes versions de HTML, `<a>` était nécessairement l'élément cible. La pseudo-classe `:target` permet également de gérer ces cibles.
+> [!NOTE]
+> L'attribut `id` a été ajouté avec HTML 4 (décembre 1997). Dans les anciennes versions de HTML, `<a>` était nécessairement l'élément cible. La pseudo-classe `:target` permet également de gérer ces cibles.
 
 ## Syntaxe
 
@@ -52,14 +48,17 @@ L'élément suivant sera donc ciblé par le sélecteur `:target` avec l'URL pré
 }
 
 :target:before {
-  font:           70% Arial,"Nimbus Sans L",sans-serif !important;
-  content:        "\25ba";  /* ► */
-  color:          red;
-  background:     gold;
-  border:         solid thin;
-  padding-left:   1px;
-  display:        inline-block;
-  margin-right:   0.13em;
+  font:
+    70% Arial,
+    "Nimbus Sans L",
+    sans-serif !important;
+  content: "\25ba"; /* ► */
+  color: red;
+  background: gold;
+  border: solid thin;
+  padding-left: 1px;
+  display: inline-block;
+  margin-right: 0.13em;
   vertical-align: 20%;
 }
 ```
@@ -86,8 +85,10 @@ La pseudo-classe `:target` s'accommode également des éléments qui ne sont pas
 <p><a href="#newcomment">Ajouter un commentaire</a></p>
 <div id="newcomment">
   <form>
-  <p>Saisir un commentaire :<br />
-  <textarea></textarea></p>
+    <p>
+      Saisir un commentaire :<br />
+      <textarea></textarea>
+    </p>
   </form>
 </div>
 ```
@@ -149,7 +150,8 @@ div.lightbox figure .closemsg {
   cursor: default;
 }
 
-div.lightbox figure .closemsg, div.lightbox figure figcaption {
+div.lightbox figure .closemsg,
+div.lightbox figure figcaption {
   width: 300px;
 }
 
@@ -190,20 +192,42 @@ div.lightbox figure .closemsg, div.lightbox figure figcaption {
 
 ```html
 <p>Un texte pour l'exemple&hellip;</p>
-<p>[ <a href="#exemple1">Ouvrir l'exemple n°1</a> | <a href="#exemple2"> Ouvrir l'exemple n°2</a> ]</p>
+<p>
+  [ <a href="#exemple1">Ouvrir l'exemple n°1</a> |
+  <a href="#exemple2"> Ouvrir l'exemple n°2</a> ]
+</p>
 <p>Un autre texte pour l'exemple&hellip;</p>
 <div class="lightbox" id="exemple1">
   <figure>
     <a href="#" class="closemsg"></a>
-    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis enim, placerat id eleifend eu, semper vel sem. Sed interdum commodo enim venenatis pulvinar. Proin mattis lorem vitae diam scelerisque hendrerit. Fusce cursus imperdiet mauris, vitae hendrerit velit dignissim a. Suspendisse potenti. Aenean feugiat facilisis diam, in posuere sapien mattis vel. Proin molestie rutrum diam, pharetra feugiat ligula sollicitudin sed. Etiam cursus diam quis tellus aliquam gravida. Aliquam erat volutpat.<br />
-    Etiam varius adipiscing mi eget imperdiet. Nulla quis vestibulum leo. Integer molestie massa ut massa commodo in blandit purus aliquam. Mauris sit amet posuere massa. Ut a eleifend augue. Proin sodales mauris nec tellus pharetra dictum.</figcaption>
+    <figcaption>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis enim,
+      placerat id eleifend eu, semper vel sem. Sed interdum commodo enim
+      venenatis pulvinar. Proin mattis lorem vitae diam scelerisque hendrerit.
+      Fusce cursus imperdiet mauris, vitae hendrerit velit dignissim a.
+      Suspendisse potenti. Aenean feugiat facilisis diam, in posuere sapien
+      mattis vel. Proin molestie rutrum diam, pharetra feugiat ligula
+      sollicitudin sed. Etiam cursus diam quis tellus aliquam gravida. Aliquam
+      erat volutpat.<br />
+      Etiam varius adipiscing mi eget imperdiet. Nulla quis vestibulum leo.
+      Integer molestie massa ut massa commodo in blandit purus aliquam. Mauris
+      sit amet posuere massa. Ut a eleifend augue. Proin sodales mauris nec
+      tellus pharetra dictum.
+    </figcaption>
   </figure>
 </div>
 
 <div class="lightbox" id="exemple2">
   <figure>
     <a href="#" class="closemsg"></a>
-    <figcaption>Cras risus odio, pharetra nec ultricies et, mollis ac augue. Nunc et diam quis sapien dignissim auctor. Quisque quis neque arcu, nec gravida magna. Etiam ullamcorper augue quis orci posuere et tincidunt augue semper. Maecenas varius augue eu orci auctor bibendum tristique ligula egestas. Morbi pharetra tortor iaculis erat porta id aliquam leo cursus. Ut nec elit vel mauris dapibus lacinia eget sed odio.</figcaption>
+    <figcaption>
+      Cras risus odio, pharetra nec ultricies et, mollis ac augue. Nunc et diam
+      quis sapien dignissim auctor. Quisque quis neque arcu, nec gravida magna.
+      Etiam ullamcorper augue quis orci posuere et tincidunt augue semper.
+      Maecenas varius augue eu orci auctor bibendum tristique ligula egestas.
+      Morbi pharetra tortor iaculis erat porta id aliquam leo cursus. Ut nec
+      elit vel mauris dapibus lacinia eget sed odio.
+    </figcaption>
   </figure>
 </div>
 ```

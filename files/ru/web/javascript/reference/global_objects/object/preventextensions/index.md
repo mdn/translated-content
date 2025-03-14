@@ -1,25 +1,33 @@
 ---
 title: Object.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
-tags:
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 Метод **`Object.preventExtensions()`** предотвращает добавление новых свойств к объекту (то есть, предотвращает расширение этого объекта в будущем).
 
-{{EmbedInteractiveExample("pages/js/object-preventextensions.html")}}
+{{InteractiveExample("JavaScript Demo: Object.preventExtensions()")}}
+
+```js interactive-example
+const object1 = {};
+
+Object.preventExtensions(object1);
+
+try {
+  Object.defineProperty(object1, "property1", {
+    value: 42,
+  });
+} catch (e) {
+  console.log(e);
+  // Expected output: TypeError: Cannot define property property1, object is not extensible
+}
+```
 
 ## Синтаксис
 
 ```js
-Object.preventExtensions(obj)
+Object.preventExtensions(obj);
 ```
 
 ### Параметры
@@ -35,7 +43,7 @@ Object.preventExtensions(obj)
 
 Объект называется расширяемым, если к нему могут быть добавлены новые свойства. `Object.preventExtensions()` помечает объект как нерасширяемый, так что он никогда не будет иметь других свойств, кроме тех, что были у него на момент пометки его нерасширяемым. Обратите внимание, что, в общем случае, свойства нерасширяемого объекта всё ещё могут быть _удалены_. Попытка добавить новые свойства к нерасширяемому объекту потерпит неудачу, либо молча, либо с выбрасыванием исключения {{jsxref("Global_Objects/TypeError", "TypeError")}} (как правило, но не обязательно, это происходит в {{jsxref("Functions_and_function_scope/Strict_mode", "строгом режиме", "", 1)}}).
 
-Метод `Object.preventExtensions()` предотвращает добавление только собственных свойств. Свойства всё ещё могут быть добавлены в прототип объекта. Однако, вызов `Object.preventExtensions()` на объекте также предотвращает расширение его свойства {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}}.
+Метод `Object.preventExtensions()` предотвращает добавление только собственных свойств. Свойства всё ещё могут быть добавлены в прототип объекта. Однако, вызов `Object.preventExtensions()` на объекте также предотвращает расширение его свойства [`Object.prototype.__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{deprecated_inline}}.
 
 Если превратить расширяемый объект в нерасширяемый возможно, в ECMAScript 5 нет никакого способа сделать обратную операцию.
 
@@ -58,12 +66,12 @@ assert(Object.isExtensible(empty) === false);
 // Object.defineProperty выбрасывает исключение при добавлении нового свойства в нерасширяемый объект.
 var nonExtensible = { removable: true };
 Object.preventExtensions(nonExtensible);
-Object.defineProperty(nonExtensible, 'new', { value: 8675309 }); // выбросит TypeError
+Object.defineProperty(nonExtensible, "new", { value: 8675309 }); // выбросит TypeError
 
 // В строгом режиме, попытки добавить новые свойства к нерасширяемому объекту, будут выбрасывать исключение TypeError.
 function fail() {
-  'use strict';
-  nonExtensible.newProperty = 'ОШИБКА'; // выбросит TypeError
+  "use strict";
+  nonExtensible.newProperty = "ОШИБКА"; // выбросит TypeError
 }
 fail();
 
@@ -71,7 +79,7 @@ fail();
 // (которое является устаревшим. Используйте вместо него метод Object.getPrototypeOf)):
 // нерасширяемые объекты неизменны.
 var fixed = Object.preventExtensions({});
-fixed.__proto__ = { oh: 'hai' }; // выбросит TypeError
+fixed.__proto__ = { oh: "hai" }; // выбросит TypeError
 ```
 
 ## Примечания

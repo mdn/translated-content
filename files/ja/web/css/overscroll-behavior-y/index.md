@@ -62,7 +62,7 @@ overscroll-behavior-y: unset;
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.overscroll-behavior-y")}}
+{{Compat}}
 
 ## 関連情報
 

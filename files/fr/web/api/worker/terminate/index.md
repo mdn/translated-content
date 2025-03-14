@@ -1,7 +1,6 @@
 ---
 title: Worker.terminate()
 slug: Web/API/Worker/terminate
-translation_of: Web/API/Worker/terminate
 ---
 
 {{ apiref("Worker") }}
@@ -32,6 +31,9 @@ var myWorker = new Worker("worker.js");
 myWorker.terminate();
 ```
 
+> [!NOTE]
+> Les <i lang="en">workers</i> dédiés ou partagés peuvent également être stoppés par l'instance même du [<i lang="en">worker</i>](/fr/docs/Web/API/Worker) en utilisant les méthodes [`DedicatedWorkerGlobalScope.close()`](/fr/docs/Web/API/DedicatedWorkerGlobalScope/close) ou [`SharedWorkerGlobalScope.close()`](/fr/docs/Web/API/SharedWorkerGlobalScope/close).
+
 ## Spécifications
 
 {{Specifications}}
@@ -42,4 +44,6 @@ myWorker.terminate();
 
 ## Voir aussi
 
-L'interface {{domxref("Worker")}} à laquelle elle appartient.
+- L'interface [`Worker`](/fr/docs/Web/API/Worker)
+- [`DedicatedWorkerGlobalScope.close()`](/fr/docs/Web/API/DedicatedWorkerGlobalScope/close)
+- [`SharedWorkerGlobalScope.close()`](/fr/docs/Web/API/SharedWorkerGlobalScope/close)

@@ -1,29 +1,57 @@
 ---
 title: box-shadow
 slug: Web/CSS/box-shadow
-tags:
-  - CSS
-  - CSS Backgrounds and Borders
-  - CSS Property
-  - CSS Styles
-  - HTML Colors
-  - Reference
-  - Shadows
-  - Styles
-  - Styling HTML
-  - box-shadow
-  - recipe:css-property
-browser-compat: css.properties.box-shadow
 ---
+
 {{CSSRef}}
 
 [CSS-свойство](/ru/docs/Web/CSS) **`box-shadow`** добавляет тень к элементу. Через запятую можно задать несколько теней. Тень описывается смещениями по оси X и Y относительно элемента, радиусом размытия и распространения, а также цветом.
 
-{{EmbedInteractiveExample("pages/css/box-shadow.html")}}
+{{InteractiveExample("CSS Demo: box-shadow")}}
+
+```css interactive-example-choice
+box-shadow: 10px 5px 5px red;
+```
+
+```css interactive-example-choice
+box-shadow: 60px -16px teal;
+```
+
+```css interactive-example-choice
+box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+```
+
+```css interactive-example-choice
+box-shadow: inset 5em 1em gold;
+```
+
+```css interactive-example-choice
+box-shadow:
+  3px 3px red,
+  -1em 0 0.4em olive;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <p>This is a box with a box-shadow around it.</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  margin: 20px auto;
+  padding: 0;
+  border: 2px solid #333;
+  width: 80%;
+  text-align: center;
+}
+```
 
 Свойство `box-shadow` включает отбрасывание тени от границ практически любого элемента. Если для элемента с тенью задан {{cssxref("border-radius")}}, то отбрасываемая тень также будет с закруглёнными углами. Порядок наложения нескольких теней такой же, что и у [текстовых теней](/ru/docs/Web/CSS/text-shadow): первая указанная тень будет поверх остальных.
 
-[Генератор теней](/ru/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator) — интерактивный инструмент, позволяющий сгенерировать значение для `box-shadow`.
+[Генератор теней](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator) — интерактивный инструмент, позволяющий сгенерировать значение для `box-shadow`.
 
 ## Синтаксис
 
@@ -44,7 +72,9 @@ box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 box-shadow: inset 5em 1em gold;
 
 /* Любое количество теней через запятую */
-box-shadow: 3px 3px red, -1em 0 0.4em olive;
+box-shadow:
+  3px 3px red,
+  -1em 0 0.4em olive;
 
 /* Глобальные значения */
 box-shadow: inherit;
@@ -108,11 +138,14 @@ box-shadow: unset;
 #### HTML
 
 ```html
-<blockquote><q>Меня уколют ваши речи,<br/>
-Об ваши взгляды обожгусь,<br/>
-И ранит ложь сильней картечи<br/>
-Но все равно я поднимусь.</q>
-<p>&mdash; Майя Энджелоу</p>
+<blockquote>
+  <q>
+    Меня уколют ваши речи,<br />
+    Об ваши взгляды обожгусь,<br />
+    И ранит ложь сильней картечи<br />
+    Но все равно я поднимусь.
+  </q>
+  <p>&mdash; Майя Энджелоу</p>
 </blockquote>
 ```
 
@@ -122,9 +155,9 @@ box-shadow: unset;
 blockquote {
   padding: 20px;
   box-shadow:
-       inset 0 -3em 3em rgba(0,0,0,0.1),
-             0 0  0 2px rgb(255,255,255),
-             0.3em 0.3em 1em rgba(0,0,0,0.3);
+    inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 ```
 
@@ -148,10 +181,11 @@ blockquote {
 
 ```css
 p {
-  box-shadow: 0 0 0 2em #F4AAB9,
-              0 0 0 4em #66CCFF;
+  box-shadow:
+    0 0 0 2em #f4aab9,
+    0 0 0 4em #66ccff;
   margin: 4em;
-  padding:1em;
+  padding: 1em;
 }
 ```
 
@@ -163,7 +197,7 @@ p {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -172,4 +206,4 @@ p {
 - Тип данных {{cssxref("&lt;color&gt;")}}
 - Другие свойства, относящиеся к цвету: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("caret-color")}} и {{cssxref("column-rule-color")}}
 - {{cssxref("text-shadow")}}
-- [Применение цвета к HTML-элементам с помощью CSS](/ru/docs/Web/HTML/Applying_color)
+- [Применение цвета к HTML-элементам с помощью CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color)

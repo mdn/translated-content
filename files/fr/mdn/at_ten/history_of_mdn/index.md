@@ -1,11 +1,9 @@
 ---
 title: L'histoire de MDN
 slug: MDN/At_ten/History_of_MDN
-tags:
-  - MDN
-translation_of: MDN_at_ten/History_of_MDN
-original_slug: MDN_a_dix_ans/Histoire_MDN
 ---
+
+{{MDNSidebar}}
 
 Lors de cette discussion (en anglais), plusieurs contributeurs au projet MDN regardent dans le rétroviseur des dix dernières années de [developer.mozilla.org](/) et imaginent la décennie à venir. Vous pourrez entendre l'histoire des différentes migrations entre les logiciels de wiki, la façon dont la communauté a été construite et découvrir de nombreuses anecdotes de l'histoire du site. Le groupe réuni discute également des défis actuels et des projets sur lesquels la communauté MDN travaille cette année.
 
@@ -13,13 +11,19 @@ Lors de cette discussion (en anglais), plusieurs contributeurs au projet MDN reg
 
 ```html hidden
 <audio controls="controls">
-  Il semblerait que votre navigateur ne dispose pas d'un lecteur audio intégré. Vous pouvez télécharger et l'utiliser depuis : https://videos.cdn.mozilla.net/uploads/mdn/MDN10/MDN_RoundTable.mp3
-  <source src="https://videos.cdn.mozilla.net/uploads/mdn/MDN10/MDN_RoundTable.mp3" type="audio/mp3">
+  Il semblerait que votre navigateur ne dispose pas d'un lecteur audio intégré.
+  Vous pouvez télécharger et l'utiliser depuis :
+  https://videos.cdn.mozilla.net/uploads/mdn/MDN10/MDN_RoundTable.mp3
+  <source
+    src="https://videos.cdn.mozilla.net/uploads/mdn/MDN10/MDN_RoundTable.mp3"
+    type="audio/mp3" />
 </audio>
 ```
 
 ```css hidden
- body{margin-top:8px;}
+body {
+  margin-top: 8px;
+}
 ```
 
 {{ EmbedLiveSample('Audio', 'auto', '50px') }}
@@ -82,7 +86,7 @@ Ali Spivak gère le contenu et la communauté du Mozilla Developer Network. Elle
 
 ## Kuma Le troisième (et actuel) moteur wiki
 
-[Kuma](https://github.com/mozilla/kuma), qui fut une fourche de [Kitsune](https://github.com/mozilla/kitsune) début 2011, fut lancé le 3 août 2012. C'est une plateforme construite par Mozilla pour gérer un wiki, celle-ci est basée sur Django et utilise son propre système de macro, appelé [KumaScript](/fr/docs/MDN/Kuma/Introduction_to_KumaScript) et qui est basé sur Node.js.
+[Kuma](https://github.com/mozilla/kuma), qui fut une fourche de [Kitsune](https://github.com/mozilla/kitsune) début 2011, fut lancé le 3 août 2012. C'est une plateforme construite par Mozilla pour gérer un wiki, celle-ci est basée sur Django et utilise son propre système de macro, appelé [KumaScript](https://github.com/mdn/yari/tree/main/docs/kumascript) et qui est basé sur Node.js.
 
 Le code étant disponible sur GitHub, la communauté commença également à contribuer au logiciel derrière MDN. Désormais, contribuer et bidouiller sur MDN concerne aussi bien la documentation que le développement sur Kuma.
 
@@ -120,7 +124,7 @@ Luke Crouch brasse sa propre bière, est fan de football et est développeur web
 
 ## Les communautés de localisation MDN sert un public mondial, dans de nombreuses langues
 
-La localisation est une pierre angulaire de la communauté Mozilla. Elle fait partie de presque tous les projets et tous les produits. Grâce à Kuma, MDN est localisable et répond aux besoin de [notre communauté l10n](/fr/docs/MDN/Contribute/Localize). Les spécifications W3C et les autres ressources qui décrivent les fonctionnalités du Web n'ont parfois pas d'autres fins et sont donc uniquement disponibles en anglais. Pour les développeurs avancés mais aussi et surtout pour les débutants, MDN peut permettre d'explorer les technologies du Web. C'est donc notre but que d'être disponible pour tout le monde. MDN possède un public mondial et ne vise pas uniquement les anglophones. Grâce aux efforts de traduction et de localisation, MDN est apprécié tout autour du globe.
+La localisation est une pierre angulaire de la communauté Mozilla. Elle fait partie de presque tous les projets et tous les produits. Grâce à Kuma, MDN est localisable et répond aux besoin de [notre communauté l10n](/fr/docs/MDN/Community/Contributing/Translated_content). Les spécifications W3C et les autres ressources qui décrivent les fonctionnalités du Web n'ont parfois pas d'autres fins et sont donc uniquement disponibles en anglais. Pour les développeurs avancés mais aussi et surtout pour les débutants, MDN peut permettre d'explorer les technologies du Web. C'est donc notre but que d'être disponible pour tout le monde. MDN possède un public mondial et ne vise pas uniquement les anglophones. Grâce aux efforts de traduction et de localisation, MDN est apprécié tout autour du globe.
 
 ## Julien (alias Sphinx) Localisation en français, MDN
 

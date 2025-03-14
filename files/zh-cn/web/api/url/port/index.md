@@ -1,28 +1,40 @@
 ---
-title: URL.port
+title: URL：port 属性
 slug: Web/API/URL/port
+l10n:
+  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{ApiRef("URL API")}}{{domxref("URL")}} 接口的端口属性是包含了 URL 的端口号信息的{{domxref("USVString")}}值，如果 URL 中不包含明确的端口号，这个属性将为`''`.
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-{{AvailableInWorkers}}
+{{domxref("URL")}} 接口的 **`port`** 属性是一个表示 URL 端口号的字符串。
 
-## **语法**
+> [!NOTE]
+> 如果传递给 [`URL()`](/zh-CN/docs/Web/API/URL/URL) 构造函数的输入字符串不包含显式端口号（例如 `https://localhost`），或者包含的端口号是与输入字符串的协议部分对应的默认端口号（例如 `https://localhost:443`），那么在构造函数返回的 [`URL`](/zh-CN/docs/Web/API/URL) 对象中，端口属性的值将为空字符串：`''`。
 
-```plain
-string = object.port;
-object.port = string;
-```
+## 值
 
-### 参数
-
-A {{domxref("USVString")}}.
+字符串。
 
 ## 示例
 
 ```js
-var url = new URL('https://mydomain.com:80/svn/Repos/');
-var result = url.port; // Returns:'80'
+// 使用非默认端口号的 https 协议
+new URL("https://example.com:5443/svn/Repos/").port; // '5443'
+// 使用非默认端口号的 http 协议
+new URL("http://example.com:8080/svn/Repos/").port; // '8080'
+// 使用默认端口号的 https 协议
+new URL("https://example.com:443/svn/Repos/").port; // ''（空字符串）
+// 使用默认端口号的 http 协议
+new URL("http://example.com:80/svn/Repos/").port; // ''（空字符串）
+// 没有明确端口号的 https 协议
+new URL("https://example.com/svn/Repos/").port; // ''（空字符串）
+// 没有明确端口号的 http 协议
+new URL("https://example.com/svn/Repos/").port; // ''（空字符串）
+// 使用非默认端口号的 ftp 协议
+new URL("ftp://example.com:221/svn/Repos/").port; // '221'
+// 使用默认端口号的 ftp 协议
+new URL("ftp://example.com:21/svn/Repos/").port; // ''（空字符串）
 ```
 
 ## 规范
@@ -33,6 +45,6 @@ var result = url.port; // Returns:'80'
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- The {{domxref("URL")}} interface it belongs to.
+- 所属的 {{domxref("URL")}} 接口。

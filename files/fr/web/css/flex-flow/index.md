@@ -1,20 +1,15 @@
 ---
 title: flex-flow
 slug: Web/CSS/flex-flow
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/flex-flow
 ---
 
 {{ CSSRef}}
 
-La propriété CSS **`flex-flow`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) pour les propriétés {{cssxref("flex-direction")}} et {{cssxref("flex-wrap")}}.
+La propriété CSS **`flex-flow`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) pour les propriétés {{cssxref("flex-direction")}} et {{cssxref("flex-wrap")}}.
 
 {{EmbedInteractiveExample("pages/css/flex-flow.html")}}
 
-Pour plus d'informations, voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox).
+Pour plus d'informations, voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
 
 ## Syntaxe
 
@@ -57,14 +52,12 @@ Voir {{cssxref("flex-direction")}} et {{cssxref("flex-wrap")}} pour plus d'infor
 
 ```css
 element {
-
   /* L'axe principal sera la direction de bloc  */
   /* et on commencera par le bas (main-start et */
   /* main-end inversés. Les éléments flexibles  */
   /* passent sur une nouvelle ligne si besoin   */
 
   flex-flow: column-reverse wrap;
-
 }
 ```
 
@@ -78,5 +71,5 @@ element {
 
 ## Voir aussi
 
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- Guide sur les boîtes flexibles : _[Ordonner les éléments flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
+- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- Guide sur les boîtes flexibles : _[Ordonner les éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_

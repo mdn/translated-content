@@ -1,7 +1,6 @@
 ---
 title: Concepts de WebAssembly
 slug: WebAssembly/Concepts
-translation_of: WebAssembly/Concepts
 ---
 
 {{WebAssemblySidebar}}
@@ -25,7 +24,8 @@ WebAssembly est en cours de création en tant que standard ouvert au sein du [W3
 - Conserver la sécurité — WebAssembly est conçu pour être exécuté dans un environnement sûr, en sandbox. Comme d'autres codes web, il imposera les règles de même origine du navigateur, ainsi que ses politiques d'autorisations.
 - Ne pas casser le web — WebAssembly est conçu de manière à facilement s'associer aux autres technologies web et à maintenir une rétrocompatibilité.
 
-> **Note :** WebAssembly aura également des usages en dehors du web et des environnements JavaScript (voir [Non-web embeddings](http://webassembly.org/docs/non-web/)).
+> [!NOTE]
+> WebAssembly aura également des usages en dehors du web et des environnements JavaScript (voir [Non-web embeddings](http://webassembly.org/docs/non-web/)).
 
 ## Comment WebAssembly s'intègre dans la plateforme web ?
 
@@ -88,7 +88,8 @@ En résumé, le principe de fonctionnement est le suivant :
 2. Emscripten transforme ensuite le résultat compilé par clang+LLVM en binaire .wasm.
 3. Par lui-même WebAssembly ne peut pour l'instant pas accéder directement au DOM ; Il peut seulement appeler JavaScript avec des données de type primitif entier ou flottant. Ainsi, pour accéder à toute API Web, WebAssembly a besoin d'appeler du JavaScript qui ensuite effectuera l'appel à l'API Web. C'est pourquoi Emscripten crée le document HTML et le code "passe-plat" JavaScript nécessaire pour atteindre cet objectif.
 
-> **Note :** Il existe des propositions futures pour [permettre au WebAssembly d'appeler directement l'API Web](https://github.com/WebAssembly/gc/blob/master/README.md).
+> [!NOTE]
+> Il existe des propositions futures pour [permettre au WebAssembly d'appeler directement l'API Web](https://github.com/WebAssembly/gc/blob/master/README.md).
 
 Le code "passe-plat" en JavaScript n'est pas aussi simple que vous pourriez l'imaginer. Pour le moment, Emscripten implémente des librairies C/C++ populaire comme [SDL](https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer), [OpenGL](https://en.wikipedia.org/wiki/OpenGL), [OpenAL](https://en.wikipedia.org/wiki/OpenAL), et une partie de [POSIX](https://en.wikipedia.org/wiki/POSIX). Ces bibliothèques sont implémentées sous forme d'API Web et donc chacune d'entre elles requiert un peu de code JavaScript "passe-plat" pour relier WebAssembly à l'API Web sous-jacente.
 
@@ -96,7 +97,7 @@ Ainsi le code "passe-plat" implémente les fonctionnalités de chaque librairie 
 
 Le document HTML généré charge le fichier JavaScript contenant le code "passe-plat" et écrit stdout dans un {{htmlelement("textarea")}}. Si l'application utilise OpenGL, le HTML contient aussi un élément {{htmlelement("canvas")}} qui est utilisé comme cible de rendu. Il est vraiment simple de modifier la sortie Emscripten pour en faire l'application web que vous souhaitez.
 
-Vous pouvez trouver toute la documentation sur Emscripten à l'adresse [emscripten.org](http://emscripten.org), et un guide pour exploiter la chaîne de compilation et ainsi compiler votre propre application C/C++ en wasm à l'adresse [Compiler du C/C++ en WebAssembly](/fr/docs/WebAssembly/C_to_wasm).
+Vous pouvez trouver toute la documentation sur Emscripten à l'adresse [emscripten.org](http://emscripten.org), et un guide pour exploiter la chaîne de compilation et ainsi compiler votre propre application C/C++ en wasm à l'adresse [Compiler du C/C++ en WebAssembly](/fr/docs/WebAssembly/C_to_Wasm).
 
 ### Écrire du WebAssembly directement
 

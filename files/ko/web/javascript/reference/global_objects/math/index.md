@@ -1,15 +1,11 @@
 ---
 title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
-tags:
-  - JavaScript
-  - Math
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math
 ---
+
 {{JSRef}}
 
-**`Math`**는 수학적인 상수와 함수를 위한 속성과 메서드를 가진 내장 객체입니다. 함수 객체가 아닙니다.
+**`Math`** 는 수학적인 상수와 함수를 위한 속성과 메서드를 가진 내장 객체입니다. 함수 객체가 아닙니다.
 
 `Math`는 {{jsxref("Number")}} 자료형만 지원하며 {{jsxref("BigInt")}}와는 사용할 수 없습니다.
 
@@ -38,9 +34,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math
 
 ## 메서드
 
-> **참고:** **참고:** 삼각 함수(`sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`)는 매개변수와 반환값 모두 호도법(라디안)을 사용합니다.라디안 값을 각도 값으로 변환하려면 `(Math.PI / 180)`으로 나누세요. 반대로 각도 값에 곱하면 라디안 값이 됩니다.
+> **참고:** **참고:** 삼각 함수(`sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`)는 매개변수와 반환값 모두 호도법(라디안)을 사용합니다.
+>
+> 라디안 값을 각도 값으로 변환하려면 `(Math.PI / 180)`으로 나누세요. 반대로 각도 값에 곱하면 라디안 값이 됩니다.
 
-> **참고:** 많은 수의 `Math` 함수 정확도는 구현에 따라 다를 수 있습니다. 즉, 각 브라우저의 결과가 다를 수 있으며, 서로 같은 JS 엔진이라도 운영체제나 아키텍쳐에 따라서 불일치하는 값을 반환할 수 있습니다.
+> [!NOTE]
+> 많은 수의 `Math` 함수 정확도는 구현에 따라 다를 수 있습니다.
+>
+> 즉, 각 브라우저의 결과가 다를 수 있으며, 서로 같은 JS 엔진이라도 운영체제나 아키텍쳐에 따라서 불일치하는 값을 반환할 수 있습니다.
 
 - {{jsxref("Global_Objects/Math/abs", "Math.abs(x)")}}
   - : 숫자의 절댓값을 반환합니다.

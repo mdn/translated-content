@@ -9,7 +9,8 @@ slug: Web/API/Worker/Worker
 
 如果 此 URL 有一个无效的语句，或者违反同源策略，一个 `SECURITY_ERR` 类型的{{domxref("DOMException")}}被抛出。
 
-> **备注：** 浏览器厂商对于 data URI 是否同源存在分歧。尽管 Gecko 10.0 和之后的版本接受 data URIs，但在所有其他浏览器中并非如此。
+> [!NOTE]
+> 浏览器厂商对于 data URI 是否同源存在分歧。尽管 Gecko 10.0 和之后的版本接受 data URIs，但在所有其他浏览器中并非如此。
 
 ## 语法
 
@@ -50,13 +51,13 @@ const myWorker = new Worker(aURL, options);
 ```js
 let myWorker = new Worker("worker.js");
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+first.onchange = function () {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 ```
 
-完整的例子请看 [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
+完整的例子请看 [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
 
 ## 规范
 
@@ -66,9 +67,10 @@ first.onchange = function() {
 
 {{Compat}}
 
-> **备注：** 浏览器可以被标记为对`Worker()`的完全支持尽管他并不支持一个以 modules 类型编写的脚本。截至 2019 年 8 月 1 日，暂无浏览器支持以模块类型编写的脚本。如果没有这种支持，moduleds 类型的脚本必须使用编译器翻译成无 module 代码才能在浏览器上运行。
+> [!NOTE]
+> 浏览器可以被标记为对`Worker()`的完全支持尽管他并不支持一个以 modules 类型编写的脚本。截至 2019 年 8 月 1 日，暂无浏览器支持以模块类型编写的脚本。如果没有这种支持，moduleds 类型的脚本必须使用编译器翻译成无 module 代码才能在浏览器上运行。
 
-另请参阅
+## 参见
 
 - {{domxref("Worker")}} 它所属的接口。
 - [Web Workers API](/zh-CN/docs/Web/API/Web_Workers_API)

@@ -1,157 +1,179 @@
 ---
 title: Intl.NumberFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
-tags:
-  - Internationalization
-  - JavaScript
-  - NumberFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
+l10n:
+  sourceCommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
 ---
 
-{{JSRef("Global_Objects", "NumberFormat", "Intl,Collator,DateTimeFormat")}}
+{{JSRef}}
 
-## Сводка
+Объект **`Intl.NumberFormat`** предоставляет возможности форматирования чисел в соответствии с языковыми правилами.
 
-Объект **`Intl.NumberFormat`** является конструктором объектов, включающих языка-зависимое форматирование чисел.
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat")}}
 
-## Синтаксис
+```js interactive-example
+const number = 123456.789;
 
+console.log(
+  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
+    number,
+  ),
+);
+// Expected output: "123.456,79 €"
+
+// The Japanese yen doesn't use a minor unit
+console.log(
+  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
+    number,
+  ),
+);
+// Expected output: "￥123,457"
+
+// Limit to three significant digits
+console.log(
+  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
+    number,
+  ),
+);
+// Expected output: "1,23,000"
 ```
-new Intl.NumberFormat([locales[, options]])
-Intl.NumberFormat.call(this[, locales[, options]])
-```
 
-### Параметры
+## Constructor
 
-- `locales`
+- {{jsxref("Intl/NumberFormat/NumberFormat", "Intl.NumberFormat()")}}
+  - : Создаёт новый объект `NumberFormat`.
 
-  - : Необязательный параметр. Строка с языковой меткой BCP 47, либо массив таких строк. Описание общей формы и интерпретации аргумента `locales` смотрите на {{jsxref("Global_Objects/Intl", "странице, посвящённой объекту Intl", "#Locale_identification_and_negotiation", 1)}}. Разрешены следующие ключи расширения Unicode:
+## Статические методы
 
-    - `nu`
-      - : Используемая система нумерации. Возможные значения включают в себя: `"arab"`, `"arabext"`, `"bali"`, `"beng"`, `"deva"`, `"fullwide"`, `"gujr"`, `"guru"`, `"hanidec"`, `"khmr"`, `"knda"`, `"laoo"`, `"latn"`, `"limb"`, `"mlym"`, `"mong"`, `"mymr"`, `"orya"`, `"tamldec"`, `"telu"`, `"thai"`, `"tibt"`.
+- {{jsxref("Intl/NumberFormat/supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
+  - : Возвращает массив, содержащий локали, которые поддерживаются без необходимости возврата к локали по умолчанию.
 
-- `options`
+## Свойства экземпляра
 
-  - : Необязательный параметр. Объект с некоторыми или всеми из следующих свойств:
+Эти свойства определены в `Intl.NumberFormat.prototype` и есть у всех экземпляров `Intl.NumberFormat`.
 
-    - `localeMatcher`
-      - : Используемый алгоритм сопоставления локалей. Возможными значениями являются `"lookup"` и `"best fit"`; значением по умолчанию является `"best fit"`. Информацию по этой опции смотрите на {{jsxref("Global_Objects/Intl", "странице, посвящённой объекту Intl", "#Locale_negotiation", 1)}}.
-    - `style`
-      - : Используемый стиль форматирования. Возможными значениями являются `"decimal"` для простого форматирования числа, `"currency"` для форматирования валюты и `"percent"` для форматирования процентов; значением по умолчанию является `"decimal"`.
-    - `currency`
-      - : Валюта, используемая при форматировании валют. Возможными значениями являются коды валют ISO 4217, например, `"USD"` для доллара США, `"EUR"` для евро или `"CNY"` для китайского юаня — смотрите [список кодов текущих валют и денежных средств](http://www.currency-iso.org/en/home/tables/table-a1.html). Свойство не имеет значения по умолчанию; если свойство `style` равно `"currency"`, свойство `currency` также должно присутствовать.
-    - `currencyDisplay`
-      - : Определяет, как отображать валюту при форматировании валют. Возможными значениями являются `"symbol"` для использования локализованного символа валюты, например € для евро, `"code"` для использования кода валюты ISO, `"name"` для использования локализованного названия валюты, например `"доллар США"` для доллара; значением по умолчанию является `"symbol"`.
-    - `useGrouping`
-      - : Определяет, использовать ли разделители групп разрядов, например, разделители тысяч или тысяч/лакх/крор. Возможными значениями являются `true` и `false`; значением по умолчанию является `true`.
+- {{jsxref("Object/constructor", "Intl.NumberFormat.prototype.constructor")}}
+  - : Функция-конструктор, создающая экземпляр объекта. Для экземпляров `Intl.NumberFormat` начальным значением является конструктор {{jsxref("Intl/NumberFormat/NumberFormat", "Intl.NumberFormat")}}.
+- `Intl.NumberFormat.prototype[@@toStringTag]`
+  - : Начальным значением свойства [`@@toStringTag`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) является строка `"Intl.NumberFormat"`. Это свойство используется в {{jsxref("Object.prototype.toString()")}}.
 
-    Следующие свойства разбиваются на две группы: `minimumIntegerDigits`, `minimumFractionDigits` и `maximumFractionDigits` входят в одну группу, а `minimumSignificantDigits` и `maximumSignificantDigits` — в другую. Если определено хотя бы одно свойство из второй группы, свойства первой группы будут проигнорированы.
+## Методы экземпляра
 
-    - `minimumIntegerDigits`
-      - : Минимальное используемое количество цифр целой части числа. Возможными значениями являются значения от 1 до 21; значением по умолчанию является 1.
-    - `minimumFractionDigits`
-      - : Минимальное используемое количество цифр дробной части числа. Возможными значениями являются значения от 0 до 20; значением по умолчанию для простого и процентного форматирования является 0; значением по умолчанию для форматирования валюты является число цифр младших единиц, определяемое в [списке кодов валют ISO 4217](http://www.currency-iso.org/en/home/tables/table-a1.html) (2, если данный список не предоставляет такой информации).
-    - `maximumFractionDigits`
-      - : Максимальное используемое количество цифр дробной части числа. Возможными значениями являются значения от 0 до 20; значением по умолчанию для простого форматирования является наибольшее значение из `minimumFractionDigits` и 3; значением по умолчанию для форматирования валюты является число цифр младших единиц, определяемое в [списке кодов валют ISO 4217](http://www.currency-iso.org/en/home/tables/table-a1.html) (2, если данный список не предоставляет такой информации); значением по умолчанию для процентного форматирования является наибольшее значение из `minimumFractionDigits` и 0.
-    - `minimumSignificantDigits`
-      - : Минимальное используемое количество значащих цифр числа. Возможными значениями являются значения от 1 до 21; значением по умолчанию является 1.
-    - `maximumSignificantDigits`
-      - : Максимальное используемое количество значащих цифр числа. Возможными значениями являются значения от 1 до 21; значением по умолчанию является `minimumSignificantDigits`.
-
-## Описание
-
-### Свойства
-
-- {{jsxref("NumberFormat.prototype", "Intl.NumberFormat.prototype")}}
-  - : Позволяет добавлять свойства ко всем объектам.
-
-## Методы
-
-- {{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
-  - : Возвращает массив, содержащий те из предоставленных локалей, которые поддерживаются без отката к локали по умолчанию среды выполнения.
-
-## Экземпляры объекта `NumberFormat`
-
-### Свойства
-
-Экземпляры `NumberFormat` наследуют следующие свойства из своего прототипа:
-
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Properties')}}
-
-### Методы
-
-Экземпляры `NumberFormat` наследуют следующие методы из своего прототипа:
-
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Methods')}}
+- {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format()")}}
+  - : Функция-геттер, которая форматирует число в соответствии с локалью и настройками форматирования этого объекта {{jsxref("Intl.NumberFormat")}}.
+- {{jsxref("Intl/NumberFormat/formatRange", "Intl.NumberFormat.prototype.formatRange()")}}
+  - : Функция-геттер, которая форматирует диапазон чисел в соответствии с локалью и настройками форматирования объекта {{jsxref("Intl.NumberFormat")}}, метод которого был вызван.
+- {{jsxref("Intl/NumberFormat/formatRangeToParts", "Intl.NumberFormat.prototype.formatRangeToParts()")}}
+  - : Возвращает {{jsxref("Array", "массив")}} объектов, представляющих диапазон числовых строк по частям, которые можно использовать для пользовательского форматирования с учетом локали.
+- {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}
+  - : Возвращает {{jsxref("Array", "массив")}} объектов, представляющих части числа, которые могут быть использованы для пользовательского форматирования с учётом локали.
+- {{jsxref("Intl/NumberFormat/resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
+  - : Возвращает новый объект со свойствами, представляющими локаль и настройки форматирования, определённые во время инициализации объекта.
 
 ## Примеры
 
-### Пример: базовое использование
+### Использование `NumberFormat`
 
-При базовом использовании без определения локали возвращается строка, отформатированная с помощью локали по умолчанию с опциями по умолчанию.
+При использовании без указания локали возвращается строка, отформатированная в соответствии с локалью и настройками по умолчанию.
 
 ```js
-var number = 3500;
+const number = 3500;
 
 console.log(new Intl.NumberFormat().format(number));
-// → '3,500' в локали US English
+// '3,500' в локали US English
 ```
 
-### Пример: использование аргумента `locales`
+### Использование параметра `locales`
 
-Этот пример показывает некоторые локализованные числовые форматы. Для получения формата языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) через аргумент `locales`:
+Этот пример показывает некоторые локализованные форматы чисел. Для получения формата языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) используя параметр `locales`:
 
 ```js
-var number = 123456.789;
+const number = 123456.789;
 
 // В Германии в качестве разделителя целой и дробной части используется запятая, а в качестве разделителя разрядов - точка
-console.log(new Intl.NumberFormat('de-DE').format(number));
-// → 123.456,789
+console.log(new Intl.NumberFormat("de-DE").format(number));
+// 123.456,789
 
 // В России в качестве разделителя целой и дробной части используется запятая, а в качестве разделителя разрядов - пробел
-console.log(new Intl.NumberFormat('ru-RU').format(number));
-// → 123 456,789
+console.log(new Intl.NumberFormat("ru-RU").format(number));
+// 123 456,789
 
-// В большинстве арабоговорящих стран используют настоящие арабские цифры
-console.log(new Intl.NumberFormat('ar-EG').format(number));
-// → ١٢٣٤٥٦٫٧٨٩
+// В большинстве арабоязычных стран используют настоящие арабские цифры
+console.log(new Intl.NumberFormat("ar-EG").format(number));
+// ١٢٣٤٥٦٫٧٨٩
 
 // В Индии используют разделители для тысяч/лакх/крор
-console.log(new Intl.NumberFormat('en-IN').format(number));
-// → 1,23,456.789
+console.log(new Intl.NumberFormat("en-IN").format(number));
+// 1,23,456.789
 
 // Ключ расширения nu запрашивает систему нумерации, например, китайскую десятичную
-console.log(new Intl.NumberFormat('zh-Hans-CN-u-nu-hanidec').format(number));
-// → 一二三,四五六.七八九
+console.log(new Intl.NumberFormat("zh-Hans-CN-u-nu-hanidec").format(number));
+// 一二三,四五六.七八九
 
 // Если запрашиваемый язык может не поддерживаться, например
 // балийский, откатываемся на запасной язык, в данном случае индонезийский
-console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
-// → 123.456,789
+console.log(new Intl.NumberFormat(["ban", "id"]).format(number));
+// 123.456,789
 ```
 
-### Пример: использование аргумента `options`
+### Использование параметра `options`
 
-Результат может быть настроен с помощью аргумента `options`:
+Результат может быть настроен с помощью параметра `options`:
 
 ```js
-var number = 123456.789;
+const number = 123456.789;
 
 // Запрашиваем формат валюты
-console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(number));
-// → 123.456,79 €
+console.log(
+  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
+    number,
+  ),
+);
+// 123.456,79 €
 
-console.log(new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB' }).format(number));
-// → 123 456,79 руб.
+console.log(
+  new Intl.NumberFormat("ru-RU", { style: "currency", currency: "RUB" }).format(
+    number,
+  ),
+);
+// 123 456,79 руб.
 
 // Японская йена не использует младшие единицы
-console.log(new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(number))
-// → ￥123,457
+console.log(
+  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
+    number,
+  ),
+);
+// ￥123,457
 
 // Ограничиваем до трёх значащих цифр
-console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(number));
-// → 1,23,000
+console.log(
+  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
+    number,
+  ),
+);
+// 1,23,000
+
+// Форматирование с единицами измерения
+console.log(
+  new Intl.NumberFormat("pt-PT", {
+    style: "unit",
+    unit: "kilometer-per-hour",
+  }).format(50),
+);
+// 50 km/h
+
+console.log(
+  (16).toLocaleString("en-GB", {
+    style: "unit",
+    unit: "liter",
+    unitDisplay: "long",
+  }),
+);
+// 16 litres
 ```
+
+Полный список настроек смотрите на странице [`Intl.NumberFormat()` constructor](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options).
 
 ## Спецификации
 
@@ -163,4 +185,5 @@ console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).form
 
 ## Смотрите также
 
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'See_also')}}
+- [Полифил `Intl.NumberFormat` в FormatJS](https://formatjs.io/docs/polyfills/intl-numberformat/)
+- {{jsxref("Intl")}}

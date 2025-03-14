@@ -7,11 +7,26 @@ slug: Web/JavaScript/Reference/Global_Objects/parseFloat
 
 **`parseFloat()`** 函数解析一个参数（必要时先转换为字符串）并返回一个浮点数。
 
-{{EmbedInteractiveExample("pages/js/globalprops-parsefloat.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseFloat()")}}
+
+```js interactive-example
+function circumference(r) {
+  return parseFloat(r) * 2.0 * Math.PI;
+}
+
+console.log(circumference(4.567));
+// Expected output: 28.695307297889173
+
+console.log(circumference("4.567abcdefgh"));
+// Expected output: 28.695307297889173
+
+console.log(circumference("abcdefgh"));
+// Expected output: NaN
+```
 
 ## 语法
 
-```plain
+```js-nolint
 parseFloat(string)
 ```
 
@@ -39,20 +54,24 @@ parseFloat(string)
 
 `parseFloat` 也可以转换一个已经定义了 `toString` 或者 `valueOf` 方法的对象，它返回的值和在调用该方法的结果上调用 `parseFloat` 值相同。
 
-## 例子
+## 示例
 
-### 例子：`parseFloat`返回正常数字
+### 示例：`parseFloat`返回正常数字
 
 下面的例子都返回 **3.14**
 
 ```js
 parseFloat(3.14);
-parseFloat('3.14');
-parseFloat('  3.14  ');
-parseFloat('314e-2');
-parseFloat('0.0314E+2');
-parseFloat('3.14some non-digit characters');
-parseFloat({ toString: function() { return "3.14" } });
+parseFloat("3.14");
+parseFloat("  3.14  ");
+parseFloat("314e-2");
+parseFloat("0.0314E+2");
+parseFloat("3.14some non-digit characters");
+parseFloat({
+  toString: function () {
+    return "3.14";
+  },
+});
 ```
 
 ### `parseFloat` 返回 NaN
@@ -69,7 +88,7 @@ parseFloat("FF2");
 
 ```js
 parseFloat(900719925474099267n);
-parseFloat('900719925474099267n');
+parseFloat("900719925474099267n");
 ```
 
 ## 规范
@@ -80,7 +99,7 @@ parseFloat('900719925474099267n');
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Global_Objects/parseInt", "parseInt()")}}
 - {{jsxref("Number.parseFloat()")}}

@@ -20,7 +20,8 @@ slug: Web/CSS/@media/any-pointer
 - `fine`
   - : 正確性が高いポインティングデバイスが、少なくとも一つ含まれています。
 
-> **メモ:** 異なる性質を持つ複数の機器が利用できる場合は、複数の値に一致することがありますが、 `none` はポインティングデバイスがない場合のみ一致します。
+> [!NOTE]
+> 異なる性質を持つ複数の機器が利用できる場合は、複数の値に一致することがありますが、 `none` はポインティングデバイスがない場合のみ一致します。
 
 ## 例
 
@@ -29,8 +30,7 @@ slug: Web/CSS/@media/any-pointer
 ### HTML
 
 ```html
-<input id="test" type="checkbox" />
-<label for="test">Look at me!</label>
+<input id="test" type="checkbox" /> <label for="test">Look at me!</label>
 ```
 
 ### CSS

@@ -1,11 +1,9 @@
 ---
 title: Viewport
 slug: Glossary/Viewport
-tags:
-  - Codificación
-  - Glosario
-translation_of: Glossary/Viewport
 ---
+
+{{GlossarySidebar}}
 
 Un viewport representa la región poligonal (normalmente rectangular) en gráficas de computación que está siendo visualizada en ese instante. En términos de navegadores web, se refiere a la parte del documento que usted está viendo, la cual es actualmente visible en su ventana (o la pantalla, si el documento está siendo visto en modo pantalla completa). El contenido fuera del viewport no es visible en la pantalla hasta que sea desplazado dentro de él.
 

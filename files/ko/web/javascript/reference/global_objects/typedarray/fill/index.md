@@ -1,19 +1,22 @@
 ---
 title: TypedArray.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
 ---
+
 {{JSRef}}
 
-**`fill()`** 메서드는 배열의 모든 요소를 지정한 시작 인덱스부터 종료 인덱스까지 정적인 값으로 채웁니다. `fill()`은 {{jsxref("Array.prototype.fill()")}}과 동일한 알고리즘을 가지고 있습니다. TypedArray 는 [typed array types](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 이곳에 있는 것 중 하나 입니다.
+**`fill()`** 메서드는 배열의 모든 요소를 지정한 시작 인덱스부터 종료 인덱스까지 정적인 값으로 채웁니다. `fill()`은 {{jsxref("Array.prototype.fill()")}}과 동일한 알고리즘을 가지고 있습니다. TypedArray 는 [typed array types](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) 이곳에 있는 것 중 하나 입니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-fill.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.fill()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([0, 0, 0, 0]);
+// Value, start position, end position
+uint8.fill(4, 1, 3);
+
+console.log(uint8);
+// Expected output: Uint8Array [0, 4, 4, 0]
+```
 
 ## 구문
 
@@ -41,10 +44,10 @@ start 와 end 사이에 요소들을 채웁니다.
 ## 예제
 
 ```js
-new Uint8Array([1, 2, 3]).fill(4);         // Uint8Array [4, 4, 4]
-new Uint8Array([1, 2, 3]).fill(4, 1);      // Uint8Array [1, 4, 4]
-new Uint8Array([1, 2, 3]).fill(4, 1, 2);   // Uint8Array [1, 4, 3]
-new Uint8Array([1, 2, 3]).fill(4, 1, 1);   // Uint8Array [1, 2, 3]
+new Uint8Array([1, 2, 3]).fill(4); // Uint8Array [4, 4, 4]
+new Uint8Array([1, 2, 3]).fill(4, 1); // Uint8Array [1, 4, 4]
+new Uint8Array([1, 2, 3]).fill(4, 1, 2); // Uint8Array [1, 4, 3]
+new Uint8Array([1, 2, 3]).fill(4, 1, 1); // Uint8Array [1, 2, 3]
 new Uint8Array([1, 2, 3]).fill(4, -3, -2); // Uint8Array [4, 2, 3]
 ```
 

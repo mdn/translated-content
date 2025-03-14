@@ -1,19 +1,30 @@
 ---
 title: Number.NEGATIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
-tags:
-  - JavaScript
-  - Number
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 ---
 
 {{JSRef}}
 
 **`Number.NEGATIVE_INFINITY`** 속성은 음의 무한대를 나타냅니다.
 
-{{EmbedInteractiveExample("pages/js/number-negative-infinity.html")}}{{js_property_attributes(0, 0, 0)}}
+{{InteractiveExample("JavaScript Demo: Number.NEGATIVE_INFINITY")}}
+
+```js interactive-example
+function checkNumber(smallNumber) {
+  if (smallNumber === Number.NEGATIVE_INFINITY) {
+    return "Process number as -Infinity";
+  }
+  return smallNumber;
+}
+
+console.log(checkNumber(-Number.MAX_VALUE));
+// Expected output: -1.7976931348623157e+308
+
+console.log(checkNumber(-Number.MAX_VALUE * 2));
+// Expected output: "Process number as -Infinity"
+```
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## 설명
 
@@ -42,7 +53,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 다음 코드에서 `smallNumber`는 JavaScript의 최솟값보다 작은 값을 할당받습니다. {{jsxref("Statements/if...else", "if")}} 문이 실행되면, `smallNumber`의 값이 `-Infinity`이므로 `smallNumber`는 계산에 좀 더 적합한 값을 다시 할당합니다.
 
 ```js
-var smallNumber = (-Number.MAX_VALUE) * 2;
+var smallNumber = -Number.MAX_VALUE * 2;
 
 if (smallNumber === Number.NEGATIVE_INFINITY) {
   smallNumber = returnFinite();

@@ -1,27 +1,23 @@
 ---
 title: XMLDocument
 slug: Web/API/XMLDocument
+l10n:
+  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---
 
 {{APIRef("DOM")}}
 
-The **XMLDocument** interface represents an XML document. It inherits from the generic {{DOMxRef("Document")}} and does not add any specific methods or properties to it: nevertheless, several algorithms behave differently with the two types of documents.
+**XMLDocument** 接口表示 XML 文档。它继承自通用的 {{DOMxRef("Document")}}，并未向其添加任何特定的方法或属性；然而，一些算法对于这两种类型的文档会有不同的行为。
 
 {{InheritanceDiagram}}
 
-## 属性
+## 实例属性
 
-_Also inherits properties from: {{DOMxRef("Document")}}_
+_同时继承 {{DOMxRef("Document")}} 的属性_。
 
-- {{DOMxRef("XMLDocument.async")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Used with {{DOMxRef("XMLDocument.load()")}} to indicate an asynchronous request.
+## 实例方法
 
-## 方法
-
-_Also inherits methods from: {{DOMxRef("Document")}}_
-
-- {{DOMxRef("XMLDocument.load()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Loads an XML document.
+_同时继承 {{DOMxRef("Document")}} 的方法_。
 
 ## 规范
 
@@ -31,6 +27,6 @@ _Also inherits methods from: {{DOMxRef("Document")}}_
 
 {{Compat}}
 
-## 另请参见
+## 参见
 
-- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model)
+- [文档对象模型（DOM）](/zh-CN/docs/Web/API/Document_Object_Model)

@@ -1,9 +1,6 @@
 ---
 title: URL
 slug: Web/API/URL
-page-type: web-api-interface
-translation_of: Web/API/URL
-browser-compat: api.URL
 ---
 
 {{ApiRef("URL API")}}
@@ -57,17 +54,17 @@ Pour les anciens navigateurs qui n'implémenteraient pas le constructeur [`URL()
 
 ## Méthodes statiques
 
-- [`createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL)
+- [`createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL_static)
   - : Renvoie une chaîne de caractères contenant une URL de blob unique, c'est-à-dire une URL dont le schéma est `blob:`, suivi d'une chaîne de caractères opaque identifiant de façon unique l'objet dans le navigateur.
-- [`revokeObjectURL()`](/fr/docs/Web/API/URL/revokeObjectURL)
-  - : Révoque un objet `URL` précédemment créé à l'aide de [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL).
+- [`revokeObjectURL()`](/fr/docs/Web/API/URL/revokeObjectURL_static)
+  - : Révoque un objet `URL` précédemment créé à l'aide de [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL_static).
 
 ## Notes d'utilisation
 
 Le constructeur prend un paramètre `url`, et un paramètre optionnel `base` utilisé si le paramètre `url` est une URL relative&nbsp;:
 
 ```js
-const url = new URL('../chats', 'http://www.example.com/chiens');
+const url = new URL("../chats", "http://www.example.com/chiens");
 console.log(url.hostname); // "www.example.com"
 console.log(url.pathname); // "/chats"
 ```
@@ -75,15 +72,15 @@ console.log(url.pathname); // "/chats"
 Les propriétés de l'objet peuvent être utilisées pour construire l'URL&nbsp;:
 
 ```js
-url.hash = 'spock';
+url.hash = "spock";
 console.log(url.href); // "http://www.example.com/chats#spock"
 ```
 
 Les URL sont encodées selon les règles édictées par [la RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986). Ainsi, on aura&nbsp;:
 
 ```js
-url.pathname = 'démonstration.html';
-console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"
+url.pathname = "démonstration.html";
+console.log(url.href); // "http://www.example.com/démonstration.html"
 ```
 
 L'interface [`URLSearchParams`](/fr/docs/Web/API/URLSearchParams) peut être utilisée pour construire et manipuler le fragment de la requête.
@@ -93,13 +90,15 @@ Pour obtenir les paramètres de recherche de l'URL de la fenêtre courante, on p
 ```js
 // https://mon.site/?id=123
 const parsedUrl = new URL(window.location.href);
-console.log(parsedUrl.searchParams.get('id')); // "123"
+console.log(parsedUrl.searchParams.get("id")); // "123"
 ```
 
 La méthode [`toString()`](/fr/docs/Web/API/URL/toString) de `URL` renvoie la valeur de la propriété [`href`](/fr/docs/Web/API/URL/href). On peut donc utiliser le constructeur pour normaliser et encoder une URL directement.
 
 ```js
-const response = await fetch(new URL('http://www.example.com/démonstration.html'));
+const response = await fetch(
+  new URL("http://www.example.com/démonstration.html"),
+);
 ```
 
 ## Spécifications
@@ -114,5 +113,5 @@ const response = await fetch(new URL('http://www.example.com/démonstration.html
 
 - [Une prothèse d'émulation pour `URL` avec la bibliothèque tierce `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - [L'API URL](/fr/docs/Web/API/URL_API)
-- [Qu'est-ce qu'une URL&nbsp;?](/fr/docs/Learn/Common_questions/What_is_a_URL)
+- [Qu'est-ce qu'une URL&nbsp;?](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 - [`URLSearchParams`](/fr/docs/Web/API/URLSearchParams).

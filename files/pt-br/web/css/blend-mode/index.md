@@ -5,7 +5,7 @@ slug: Web/CSS/blend-mode
 
 {{CSSRef}}
 
-[O tipo básico de dados](/pt-BR/docs/Web/CSS/CSS_Tipos) [CSS](/pt-BR/docs/Web/CSS) **`<blend-mode>`** (modo de mesclagem) descreve como as cores devem aparecer, quando objetos se sobrepõem. Usa-se nas propriedades {{cssxref("background-blend-mode")}} e {{cssxref("mix-blend-mode")}}.
+[O tipo básico de dados](/pt-BR/docs/Web/CSS/CSS_Types) [CSS](/pt-BR/docs/Web/CSS) **`<blend-mode>`** (modo de mesclagem) descreve como as cores devem aparecer, quando objetos se sobrepõem. Usa-se nas propriedades {{cssxref("background-blend-mode")}} e {{cssxref("mix-blend-mode")}}.
 
 Para cada pixel sobreposto, o **`blend-mode`** obtém o valor da cor do pixel da frente e do pixel do fundo, faz um cálculo com esses valores e devolve um novo valor de cor.
 
@@ -28,8 +28,7 @@ O tipo básico de dados **`<blend-mode>`** é definido usando uma palavra chave 
     #div {
       width: 300px;
       height: 300px;
-      background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                  url('https://mdn.mozillademos.org/files/8545/tr.png');
+      background: url("br.png"), url("tr.png");
       background-blend-mode: normal;
     }
     ```
@@ -50,8 +49,7 @@ O tipo básico de dados **`<blend-mode>`** é definido usando uma palavra chave 
     #div {
       width: 300px;
       height: 300px;
-      background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                  url('https://mdn.mozillademos.org/files/8545/tr.png');
+      background: url("br.png"), url("tr.png");
       background-blend-mode: multiply;
     }
     ```
@@ -72,8 +70,7 @@ O tipo básico de dados **`<blend-mode>`** é definido usando uma palavra chave 
     #div {
       width: 300px;
       height: 300px;
-      background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                  url('https://mdn.mozillademos.org/files/8545/tr.png');
+      background: url("br.png"), url("tr.png");
       background-blend-mode: screen;
     }
     ```
@@ -93,8 +90,7 @@ O tipo básico de dados **`<blend-mode>`** é definido usando uma palavra chave 
     #div {
       width: 300px;
       height: 300px;
-      background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                  url('https://mdn.mozillademos.org/files/8545/tr.png');
+      background: url("br.png"), url("tr.png");
       background-blend-mode: overlay;
     }
     ```
@@ -113,8 +109,7 @@ O tipo básico de dados **`<blend-mode>`** é definido usando uma palavra chave 
     #div {
       width: 300px;
       height: 300px;
-      background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                  url('https://mdn.mozillademos.org/files/8545/tr.png');
+      background: url("br.png"), url("tr.png");
       background-blend-mode: darken;
     }
     ```
@@ -133,8 +128,7 @@ O tipo básico de dados **`<blend-mode>`** é definido usando uma palavra chave 
     #div {
       width: 300px;
       height: 300px;
-      background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                  url('https://mdn.mozillademos.org/files/8545/tr.png');
+      background: url("br.png"), url("tr.png");
       background-blend-mode: lighten;
     }
     ```
@@ -155,8 +149,7 @@ O tipo básico de dados **`<blend-mode>`** é definido usando uma palavra chave 
     #div {
       width: 300px;
       height: 300px;
-      background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                  url('https://mdn.mozillademos.org/files/8545/tr.png');
+      background: url("br.png"), url("tr.png");
       background-blend-mode: color-dodge;
     }
     ```
@@ -177,8 +170,7 @@ O tipo básico de dados **`<blend-mode>`** é definido usando uma palavra chave 
     #div {
       width: 300px;
       height: 300px;
-      background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                  url('https://mdn.mozillademos.org/files/8545/tr.png');
+      background: url("br.png"), url("tr.png");
       background-blend-mode: color-burn;
     }
     ```
@@ -199,8 +191,7 @@ O tipo básico de dados **`<blend-mode>`** é definido usando uma palavra chave 
     #div {
       width: 300px;
       height: 300px;
-      background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                  url('https://mdn.mozillademos.org/files/8545/tr.png');
+      background: url("br.png"), url("tr.png");
       background-blend-mode: hard-light;
     }
     ```
@@ -220,8 +211,7 @@ O tipo básico de dados **`<blend-mode>`** é definido usando uma palavra chave 
     #div {
       width: 300px;
       height: 300px;
-      background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                  url('https://mdn.mozillademos.org/files/8545/tr.png');
+      background: url("br.png"), url("tr.png");
       background-blend-mode: soft-light;
     }
     ```
@@ -241,8 +231,7 @@ O tipo básico de dados **`<blend-mode>`** é definido usando uma palavra chave 
     #div {
       width: 300px;
       height: 300px;
-      background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                  url('https://mdn.mozillademos.org/files/8545/tr.png');
+      background: url("br.png"), url("tr.png");
       background-blend-mode: difference;
     }
     ```
@@ -262,8 +251,7 @@ O tipo básico de dados **`<blend-mode>`** é definido usando uma palavra chave 
     #div {
       width: 300px;
       height: 300px;
-      background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                  url('https://mdn.mozillademos.org/files/8545/tr.png');
+      background: url("br.png"), url("tr.png");
       background-blend-mode: exclusion;
     }
     ```
@@ -282,8 +270,7 @@ O tipo básico de dados **`<blend-mode>`** é definido usando uma palavra chave 
     #div {
       width: 300px;
       height: 300px;
-      background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                  url('https://mdn.mozillademos.org/files/8545/tr.png');
+      background: url("br.png"), url("tr.png");
       background-blend-mode: hue;
     }
     ```
@@ -303,8 +290,7 @@ O tipo básico de dados **`<blend-mode>`** é definido usando uma palavra chave 
     #div {
       width: 300px;
       height: 300px;
-      background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                  url('https://mdn.mozillademos.org/files/8545/tr.png');
+      background: url("br.png"), url("tr.png");
       background-blend-mode: saturation;
     }
     ```
@@ -324,8 +310,7 @@ O tipo básico de dados **`<blend-mode>`** é definido usando uma palavra chave 
     #div {
       width: 300px;
       height: 300px;
-      background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                  url('https://mdn.mozillademos.org/files/8545/tr.png');
+      background: url("br.png"), url("tr.png");
       background-blend-mode: color;
     }
     ```
@@ -345,8 +330,7 @@ O tipo básico de dados **`<blend-mode>`** é definido usando uma palavra chave 
     #div {
       width: 300px;
       height: 300px;
-      background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                  url('https://mdn.mozillademos.org/files/8545/tr.png');
+      background: url("br.png"), url("tr.png");
       background-blend-mode: luminosity;
     }
     ```
@@ -359,13 +343,11 @@ Changes between blends mode are not interpolated. Any change occurs immediately.
 
 ## Specifications
 
-| Specification                                                                                | Status                               | Comment             |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{ SpecName('Compositing', '#ltblendmodegt', '&lt;blend-mode&gt;') }} | {{ Spec2('Compositing') }} | Initial definition. |
+{{Specifications}}
 
 ## Browser Compatibility
 
-{{Compat("css.types.blend-mode")}}
+{{Compat}}
 
 ## See also
 

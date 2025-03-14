@@ -1,5 +1,5 @@
 ---
-title: 'InternalError: too much recursion'
+title: "InternalError: too much recursion"
 slug: Web/JavaScript/Reference/Errors/Too_much_recursion
 ---
 
@@ -25,7 +25,8 @@ InternalError: too much recursion
 
 ```js
 function loop(x) {
-  if (x >= 10) // "x >= 10" 是終止條件
+  if (x >= 10)
+    // "x >= 10" 是終止條件
     return;
   // do stuff
   loop(x + 1); // 遞迴呼叫
@@ -37,8 +38,7 @@ loop(0);
 
 ```js example-bad
 function loop(x) {
-  if (x >= 1000000000000)
-    return;
+  if (x >= 1000000000000) return;
   // do stuff
   loop(x + 1);
 }
@@ -50,4 +50,4 @@ loop(0);
 ## 參見
 
 - {{Glossary("Recursion")}}
-- [遞迴函式](/zh-TW/docs/Web/JavaScript/Guide/Functions#Recursion)
+- [遞迴函式](/zh-TW/docs/Web/JavaScript/Guide/Functions#recursion)

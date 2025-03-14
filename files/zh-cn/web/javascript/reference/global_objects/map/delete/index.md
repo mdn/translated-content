@@ -5,14 +5,26 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/delete
 
 {{JSRef}}
 
-`delete()` 方法用于移除 `Map` 对象中指定的元素。
+{{jsxref("Map")}} 实例的 **`delete()`** 方法从该 map 中删除指定键的元素。
 
-{{EmbedInteractiveExample("pages/js/map-prototype-delete.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.delete()")}}
+
+```js interactive-example
+const map1 = new Map();
+map1.set("bar", "foo");
+
+console.log(map1.delete("bar"));
+// Expected result: true
+// True indicates successful removal
+
+console.log(map1.has("bar"));
+// Expected result: false
+```
 
 ## 语法
 
 ```js-nolint
-delete(key)
+mapInstance.delete(key)
 ```
 
 ### 参数
@@ -33,7 +45,7 @@ const myMap = new Map();
 myMap.set("bar", "foo");
 
 console.log(myMap.delete("bar")); // 返回 true。成功地移除元素
-console.log(myMap.has("bar"));    // 返回 false。"bar" 元素将不再存在于 Map 实例中
+console.log(myMap.has("bar")); // 返回 false。"bar" 元素将不再存在于 Map 实例中
 ```
 
 ## 规范

@@ -1,29 +1,33 @@
 ---
 title: CSS グリッドレイアウト
-slug: Web/CSS/CSS_Grid_Layout
+slug: Web/CSS/CSS_grid_layout
+l10n:
+  sourceCommit: 5ced6d0b9636a1b904474d1546674b305346daa0
 ---
 
 {{CSSRef}}
 
-**CSS グリッドレイアウト**は、ページを大きな領域に分割することや、 HTML のプリミティブから構成されたコントロールの部品間の、寸法、位置、レイヤーに関する関係を定義することに優れています。
+**CSS グリッドレイアウト**モジュールは、ページを大きな領域に分割することや、 HTML のプリミティブから構成されたコントロールの部品間の、寸法、位置、レイヤーに関する関係を定義することに優れています。
 
 表と同様に、グリッドレイアウトによって要素を列と行に整列させることができます。しかし、 CSS グリッドを使用すると、表で実現するよりもより複雑なレイアウトが可能で、あるいは簡単に実現できます。例えば、グリッドのコンテナー内にある子要素は、 CSS の位置指定された要素と同様に自分自身の位置を決めることができるので、実際に重ね合わせてレイヤーになるように配置することができます。
 
-<h2 id="Basic_example">基本的な例</h2>
+## 基本的な例
 
 次の例では、最小値 100 ピクセル、最大値 auto で作成された列を含む、3 つの行を表示します。要素は線ベースの配置に従ってグリッド上に配置されます。
 
-```css hidden
-* {box-sizing: border-box;}
+```css hidden live-sample___basic_example
+* {
+  box-sizing: border-box;
+}
 .wrapper {
   max-width: 940px;
   margin: 0 auto;
 }
 
 .wrapper > div {
-  border: 2px solid rgb(233,171,88);
+  border: 2px solid rgb(233 171 88);
   border-radius: 5px;
-  background-color: rgba(233,171,88,.5);
+  background-color: rgb(233 171 88 / 50%);
   padding: 1em;
   color: #d9480f;
 }
@@ -31,7 +35,7 @@ slug: Web/CSS/CSS_Grid_Layout
 
 ### HTML
 
-```html
+```html live-sample___basic_example
 <div class="wrapper">
   <div class="one">One</div>
   <div class="two">Two</div>
@@ -44,7 +48,7 @@ slug: Web/CSS/CSS_Grid_Layout
 
 ### CSS
 
-```css
+```css live-sample___basic_example
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -81,8 +85,9 @@ slug: Web/CSS/CSS_Grid_Layout
 
 ## リファレンス
 
-### CSS プロパティ
+### プロパティ
 
+- {{CSSxRef("display")}}
 - {{CSSxRef("grid-template-columns")}}
 - {{CSSxRef("grid-template-rows")}}
 - {{CSSxRef("grid-template-areas")}}
@@ -101,59 +106,52 @@ slug: Web/CSS/CSS_Grid_Layout
 - {{CSSxRef("row-gap")}}
 - {{CSSxRef("column-gap")}}
 - {{CSSxRef("gap")}}
-- {{CSSxRef("masonry-auto-flow")}}{{Experimental_Inline}}
-- {{CSSxRef("align-tracks")}}{{Experimental_Inline}}
-- {{CSSxRef("justify-tracks")}}{{Experimental_Inline}}
 
-### CSS 関数
+### 関数
 
-- {{CSSxRef("repeat()", "repeat()")}}
-- {{CSSxRef("minmax()", "minmax()")}}
-- {{CSSxRef("fit-content()", "fit-content()")}}
+- {{CSSxRef("repeat", "repeat()")}}
+- {{CSSxRef("minmax", "minmax()")}}
+- {{CSSxRef("fit-content_function", "fit-content()")}}
 
-### CSS データ型
+### データ型
 
 - {{CSSxRef("&lt;flex&gt;")}}
 
-### 用語集
-
-- [グリッド](/ja/docs/Glossary/Grid)
-- [グリッド線](/ja/docs/Glossary/Grid_Lines)
-- [グリッドトラック](/ja/docs/Glossary/Grid_Tracks)
-- [グリッドセル](/ja/docs/Glossary/Grid_Cell)
-- [グリッド領域](/ja/docs/Glossary/Grid_Areas)
-- [溝](/ja/docs/Glossary/Gutters)
-- [グリッド軸](/ja/docs/Glossary/Grid_Axis)
-- [グリッド行](/ja/docs/Glossary/Grid_Rows)
-- [グリッド列](/ja/docs/Glossary/Grid_Column)
-
 ## ガイド
 
-- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-- [他のレイアウト方法との関係](/ja/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-- [線ベースの配置を使用したレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-- [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-- [名前付きグリッド線を使用したレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-- [CSS グリッドレイアウトにおける自動配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-- [CSS グリッドレイアウトにおけるボックス配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-- [CSS グリッド、論理値、書字方向](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-- [CSS グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-- [CSS グリッドとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-- [CSS グリッドを利用したよくあるレイアウトの実現](/ja/docs/Web/CSS/CSS_Grid_Layout/Realising_common_layouts_using_CSS_Grid_)
-- [サブグリッド](/ja/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
-- [メーソンリーレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout)
-
-## 外部リソース
-
-- [CSS Grid and IE11](http://tomrothe.de/posts/css_grid_and_ie11.html) ([polyfill](https://github.com/motine/css_grid_annotator))
-- [Examples from Jen Simmons](http://labs.jensimmons.com/)
-- [Grid by Example - a collection of usage examples and video tutorials](http://gridbyexample.com/)
-- [Codrops Grid Reference](https://tympanus.net/codrops/css_reference/grid/)
-- [Firefox DevTools CSS Grid Inspector](/ja/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
-- [CSS Grid Playground](https://mozilladevelopers.github.io/playground/)
-- [Grid Garden](http://cssgridgarden.com) - A game for learning CSS grid
+- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [グリッドレイアウトと他のレイアウト方法との関係](/ja/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+- [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [名前付きグリッド線を使用したレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+- [グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+- [グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+- [グリッドを使用したよくあるレイアウトの実現](/ja/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+- [サブグリッド](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [メイソンリーレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
 
 ## 仕様書
 
 {{Specifications}}
 
+## 関連情報
+
+- 用語集:
+  - [グリッド](/ja/docs/Glossary/Grid)
+  - [グリッド線](/ja/docs/Glossary/Grid_Lines)
+  - [グリッドトラック](/ja/docs/Glossary/Grid_Tracks)
+  - [グリッドセル](/ja/docs/Glossary/Grid_Cell)
+  - [グリッド領域](/ja/docs/Glossary/Grid_Areas)
+  - [溝](/ja/docs/Glossary/Gutters)
+  - [グリッド軸](/ja/docs/Glossary/Grid_Axis)
+  - [グリッド行](/ja/docs/Glossary/Grid_Row)
+  - [グリッド列](/ja/docs/Glossary/Grid_Column)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
+- [CSS 表示](/ja/docs/Web/CSS/CSS_display)モジュール
+- [Grid by example](https://gridbyexample.com/) - 使用例と動画チュートリアル集
+- [CSS grid reference](https://tympanus.net/codrops/css_reference/grid/) via Codrops
+- [CSS grid inspector - Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
+- [CSS grid playground](https://mozilladevelopers.github.io/playground/css-grid/)
+- [CSS grid garden](https://cssgridgarden.com/) - CSS グリッドを学ぶためのゲーム

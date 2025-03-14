@@ -1,56 +1,80 @@
 ---
 title: Array.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 ---
+
 {{JSRef}}
 
-**`some()`** 메서드는 배열 안의 어떤 요소라도 주어진 판별 함수를 통과하는지 테스트합니다.
+**`some()`** 메서드는 배열 안의 어떤 요소라도 주어진 판별 함수를 적어도 하나라도 통과하는지 테스트합니다. 만약 배열에서 주어진 함수가 true을 반환하면 true를 반환합니다. 그렇지 않으면 false를 반환합니다. 이 메서드는 배열을 변경하지 않습니다.
 
-> **참고:** 빈 배열에서 호출하면 무조건 `false`를 반환합니다.
+{{InteractiveExample("JavaScript Demo: Array.some()")}}
 
-{{EmbedInteractiveExample("pages/js/array-some.html")}}
+```js interactive-example
+const array = [1, 2, 3, 4, 5];
+
+// Checks whether an element is even
+const even = (element) => element % 2 === 0;
+
+console.log(array.some(even));
+// Expected output: true
+```
 
 ## 구문
 
-```js
-    arr.some(callback[, thisArg])
+```js-nolint
+// 화살표 함수
+some((element) => { /* … */ })
+some((element, index) => { /* … */ })
+some((element, index, array) => { /* … */ })
+
+// 콜백 함수
+some(callbackFn)
+some(callbackFn, thisArg)
+
+// 인라인 콜백 함수
+some(function (element) { /* … */ })
+some(function (element, index) { /* … */ })
+some(function (element, index, array) { /* … */ })
+some(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 매개변수
 
-- `callback`
-  - : 각 요소를 시험할 함수. 다음 세 가지 인수를 받습니다._ `currentValue`
-    _ : 처리할 현재 요소.
-    - `index` {{Optional_inline}}
-      - : 처리할 현재 요소의 인덱스.
-    - `array` {{Optional_inline}}
-      - : `some`을 호출한 배열.
-- `thisArg` {{Optional_inline}}
-  - : `callback`을 실행할 때 `this`로 사용하는 값.
+- `callbackFn`
+
+  - : 배열의 각 요소에 대해 실행할 함수. 이 함수는 요소가 시험을 통과하면 [참 같은 값](/ko/docs/Glossary/Truthy)을 반환하며, 그렇지 않으면 거짓인 값을 반환합니다.
+
+  다음의 인자와 함께 함수를 호출합니다.
+
+  - `element`
+    - : 처리할 배열 내 현재 요소
+  - `index`
+    - : 처리할 현재 요소의 인덱스
+  - `array`
+    - : `some`을 호출한 배열
+
+- `thisArg` {{optional_inline}}
+  - : `callbackFn`을 실행할 때 `this`로 사용하는 값. [반복 메소드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods)를 참고하세요.
 
 ### 반환 값
 
-`callback`이 어떤 배열 요소라도 대해 참인({{Glossary("truthy")}}) 값을 반환하는 경우 **`true`**, 그 외엔 **`false`**.
+콜백 함수가 적어도 배열 중 하나의 요소에 대해 {{Glossary("truthy", "참인 값")}}을 반환하면 `true`를 반환하며, 그렇지 않으면 `false`를 반환합니다.
 
 ## 설명
 
-`some`은 `callback`이 참(불린으로 변환했을 때 `true`가 되는 값)을 반환하는 요소를 찾을 때까지 배열에 있는 각 요소에 대해 한 번씩 `callback` 함수를 실행합니다. 해당하는 요소를 발견한 경우 `some`은 즉시 `true`를 반환합니다. 그렇지 않으면, 즉 모든 값에서 거짓을 반환하면 `false`를 반환합니다. 할당한 값이 있는 배열의 인덱스에서만 `callback`을 호출합니다. 삭제했거나 값을 할당한 적이 없는 인덱스에서는 호출하지 않습니다.
+`some` 메서드는 [반복 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods)입니다. 이 메서드는 주어진 `callbackFn`함수가 [참 같은 값](/ko/docs/Glossary/Truthy)을 반환할 때까지 배열 안에 있는 각각의 요소마다 한 번씩 호출합니다. 만약 그러한 요소를 찾았으면 `some()` 메서드는 그 즉시 `true`를 반환하며 배열 순회를 멈춥니다. 그렇지 않고 `callbackFn`이 모든 요소에 대해 [거짓같은 값](/ko/docs/Glossary/Falsy)을 반환하면 `some()`은 `false`를 반환합니다.
 
-`callback`은 요소의 값, 해당 요소의 인덱스 및 순회하고 있는 배열 세 가지 인수와 함께 호출됩니다.
+`some()`은 수학에서 존재 한정자와 같은 역할을 합니다. 특히 빈 배열의 경우 모든 조건에 대해 `false`를 반환합니다.
 
-`thisArg` 매개변수를 `some`에 제공한 경우 `callback`의 `this`로 사용됩니다. 그 외엔 {{jsxref("undefined")}}값을 사용합니다. 최종적으로 `callback`이 볼 수 있는 `this`의 값은 [함수가 볼 수 있는 `this`를 결정하는 평소 규칙](/ko/docs/Web/JavaScript/Reference/Operators/this)을 따릅니다.
+`callbackFn`는 값이 할당된 배열 인덱스에서만 실행됩니다. [희소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)의 빈 슬롯에서는 실행되지 않습니다.
 
-`some`은 호출한 배열을 변형하지 않습니다.
+`some()`은 호출된 배열의 값을 변경하지 않지만, 제공된 `callbackFn`에서는 가능합니다. 그럼에도 배열의 길이는 `callbackFn`의 첫 실행 이전에 저정된다는 점을 명심하시기 바랍니다.
 
-`some`이 처리하는 요소의 범위는 `callback`의 첫 호출 전에 설정됩니다. `some` 호출 이후로 배열에 추가하는 요소는 `callback`이 방문하지 않습니다. 배열에 원래 있었지만 아직 방문하지 않은 요소가 `callback`에 의해 변경된 경우, 그 인덱스를 방문하는 시점의 값을 사용합니다. 삭제한 요소는 방문하지 않습니다.
+- `callbackFn`은 `some()` 호출되어 시작할 당시 배열의 초기 길이를 넘어서는 요소는 방문하지 않습니다.
+- 이미 방문했던 인덱스를 변경해도 `callbackFn`은 해당 인덱스에 대해 `callbackFn`을 다시 실행하지 않습니다
+- 만약 존재하나 아직 방문하지 않은 배열의 요소는 `callbackFn`이 변경시킬 수 있습니다. 이 값은 `callbackFn`이 요소에 방문하는 시점에 `callbackFn`에 넘겨지는 값입니다. [삭제한](/ko/docs/Web/JavaScript/Reference/Operators/delete) 요소는 방문하지 않습니다.
+
+`some()` 메서드는 [제너릭](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods)입니다. `this` 값에 `length` 속성과 정수 키 속성만 있으면 됩니다.
 
 ## 예제
 
@@ -62,106 +86,77 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 function isBiggerThan10(element, index, array) {
   return element > 10;
 }
-[2, 5, 8, 1, 4].some(isBiggerThan10);  // false
+
+[2, 5, 8, 1, 4].some(isBiggerThan10); // false
 [12, 5, 8, 1, 4].some(isBiggerThan10); // true
 ```
 
 ### 화살표 함수를 사용한 배열의 요소 테스트
 
-[화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/애로우_펑션)는 같은 테스트에 대해 더 짧은 구문을 제공합니다.
+[화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)는 같은 테스트에 대해 더 짧은 구문을 제공합니다.
 
 ```js
-[2, 5, 8, 1, 4].some(elem => elem > 10);  // false
-[12, 5, 8, 1, 4].some(elem => elem > 10); // true
+[2, 5, 8, 1, 4].some((x) => x > 10); // false
+[12, 5, 8, 1, 4].some((x) => x > 10); // true
 ```
 
 ### 값이 배열 내 존재하는지 확인
 
-다음 예제는 요소가 하나라도 배열 내 존재하는 경우 `true`를 반환합니다.
+`includes()` 메서드의 기능을 모방하기 위해 이 사용자 지정 함수는 요소가 배열에 있는 경우 `true` 반환합니다.
 
 ```js
-var fruits = ['apple', 'banana', 'mango', 'guava'];
+const fruits = ["apple", "banana", "mango", "guava"];
 
 function checkAvailability(arr, val) {
-    return arr.some(function(arrVal) {
-        return val === arrVal;
-    });
+  return arr.some((arrVal) => val === arrVal);
 }
 
-checkAvailability(fruits, 'kela'); //false
-checkAvailability(fruits, 'banana'); //true
+checkAvailability(fruits, "kela"); // false
+checkAvailability(fruits, "banana"); // true
 ```
 
-### 화살표 함수를 사용하여 값이 존재하는지 확인
+### 어떠한 값이건 불리언으로 변환
 
 ```js
-var fruits = ['apple', 'banana', 'mango', 'guava'];
+const TRUTHY_VALUES = [true, "true", 1];
 
-function checkAvailability(arr, val) {
-    return arr.some(arrVal => val === arrVal);
-}
+function getBoolean(value) {
+  if (typeof value === "string") {
+    value = value.toLowerCase().trim();
+  }
 
-checkAvailability(fruits, 'kela'); //false
-checkAvailability(fruits, 'banana'); //true
-```
-
-### 모든 값을 불린으로 변환
-
-```js
-var TRUTHY_VALUES = [true, 'true', 1];
-
-function getBoolean(a) {
-    'use strict';
-
-    var value = a;
-
-    if (typeof value === 'string') {
-        value = value.toLowerCase().trim();
-    }
-
-    return TRUTHY_VALUES.some(function(t) {
-        return t === value;
-    });
+  return TRUTHY_VALUES.some((t) => t === value);
 }
 
 getBoolean(false); // false
-getBoolean('false'); // false
+getBoolean("false"); // false
 getBoolean(1); // true
-getBoolean('true'); // true
+getBoolean("true"); // true
 ```
 
-## 폴리필
+### 희소 배열에 some() 사용하기
 
-`some`은 ECMA-262 표준 제5판에 추가됐습니다. 따라서 어떤 표준 구현체에서는 사용할 수 없을 수도 있습니다. 다른 모든 코드 이전에 아래 코드를 포함하면 지원하지 않는 환경에서도 `some`을 사용할 수 있습니다. 아래 알고리즘은 {{jsxref("Object")}}와 {{jsxref("TypeError")}}가 변형되지 않고, `fun.call`의 계산 값이 원래의 {{jsxref("Function.prototype.call()")}}과 같은 경우 ECMA-262 제5판이 명시한 것과 동일합니다.
+`some()`은 빈 슬롯에 조건자를 실행하지 않습니다.
 
 ```js
-// ECMA-262 5판, 15.4.4.17항의 작성 과정
-// 출처: http://es5.github.io/#x15.4.4.17
-if (!Array.prototype.some) {
-  Array.prototype.some = function(fun/*, thisArg*/) {
-    'use strict';
+console.log([1, , 3].some((x) => x === undefined)); // false
+console.log([1, , 1].some((x) => x !== 1)); // false
+console.log([1, undefined, 1].some((x) => x !== 1)); // true
+```
 
-    if (this == null) {
-      throw new TypeError('Array.prototype.some called on null or undefined');
-    }
+### 배열이 아닌 객체에 some() 호출하기
 
-    if (typeof fun !== 'function') {
-      throw new TypeError();
-    }
+`some()` 메서드는 `this`의 `length` 속성을 읽고 객체의 마지막에 도달하거나 `callbackFn`이 `true`를 반환할 때 까지 정수 인덱스로 접근합니다.
 
-    var t = Object(this);
-    var len = t.length >>> 0;
-
-    var thisArg = arguments.length >= 2 ? arguments[1] : void 0;
-    for (var i = 0; i < len; i++) {
-      if (i in t && fun.call(thisArg, t[i], i, t)) {
-        return true;
-      }
-    }
-
-    return false;
-  };
-}
+```js
+const arrayLike = {
+  length: 3,
+  0: "a",
+  1: "b",
+  2: "c",
+};
+console.log(Array.prototype.some.call(arrayLike, (x) => typeof x === "number"));
+// false
 ```
 
 ## 명세
@@ -174,7 +169,8 @@ if (!Array.prototype.some) {
 
 ## 같이 보기
 
-- {{jsxref("Array.prototype.find()")}}
-- {{jsxref("Array.prototype.forEach()")}}
+- [Polyfill of `Array.prototype.some` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.find()")}}
 - {{jsxref("TypedArray.prototype.some()")}}

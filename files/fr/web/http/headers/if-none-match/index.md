@@ -1,14 +1,9 @@
 ---
 title: If-None-Match
 slug: Web/HTTP/Headers/If-None-Match
-tags:
-  - En-tête HTTP
-  - En-tête de requête
-  - HTTP
-  - Reference
-  - Requêtes Conditionnelles
-translation_of: Web/HTTP/Headers/If-None-Match
 ---
+
+{{HTTPSidebar}}
 
 L'en-tête de requête HTTP **`If-None-Match`** permet de conditionner la requête. Pour les méthodes {{HTTPMethod("GET")}} et {{HTTPMethod("HEAD")}}, le serveur renvoie la ressource demandée, avec un statut {{HTTPStatus("200")}}, seulement si elle n'a pas un {{HTTPHeader("ETag")}} correspondant à ceux fournis. Pour les autres méthodes, la requête ne sera traitée que si l'{{HTTPHeader("ETag")}} de l'éventuelle ressource existante ne correspond à aucune des valeurs listées.
 
@@ -63,13 +58,11 @@ If-None-Match: *
 
 ## Spécifications
 
-| Spécification                                        | Title                                                        |
-| ---------------------------------------------------- | ------------------------------------------------------------ |
-| {{RFC("7232", "If-None-Match", "3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("http.headers.If-None-Match")}}
+{{Compat}}
 
 ## Voir aussi
 

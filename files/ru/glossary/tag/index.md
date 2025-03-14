@@ -1,14 +1,9 @@
 ---
 title: Тег
 slug: Glossary/Tag
-tags:
-  - HTML
-  - Вступление
-  - Глоссарий
-  - Тег
-translation_of: Glossary/Tag
-original_slug: Глоссарий/Тег
 ---
+
+{{GlossarySidebar}}
 
 В {{Glossary("HTML")}} теги используются для создания {{Glossary("Элемент", "элементов")}}. **Имя** HTML-элемента - это **имя** заключённое в угловые скобки, как например \<p> для "абзаца". Обратите внимание, что концу **имени** предшествует символ косой черты (слеша), "\</p>", и что в пустых элементах закрывающий тег не требуется и не допускается. Если атрибуты не указаны, то для них применяются значения по умолчанию.
 
@@ -16,8 +11,7 @@ original_slug: Глоссарий/Тег
 
 ### Общие знания
 
-- {{Interwiki("wikipedia", "Элементы HTML")}} on Wikipedia
-- [HTML Теги на W3](http://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
+- [HTML Теги на W3](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
 
 ### Техническое руководство
 

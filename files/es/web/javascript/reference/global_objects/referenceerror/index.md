@@ -1,19 +1,9 @@
 ---
 title: ReferenceError
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
-tags:
-  - Clase
-  - Class
-  - JavaScript
-  - Object
-  - Objeto
-  - ReferenceError
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
-original_slug: Web/JavaScript/Referencia/Objetos_globales/ReferenceError
 ---
 
-{{JSRef("Objetos_globales", "ReferenceError")}}
+{{JSRef}}
 
 El objeto **`ReferenceError`** representa un error cuando se hace referencia a una variable inexistente.
 
@@ -43,15 +33,15 @@ El objeto **`ReferenceError`** representa un error cuando se hace referencia a u
 
 ```js
 try {
-  let a = undefinedVariable
+  let a = undefinedVariable;
 } catch (e) {
-  console.log(e instanceof ReferenceError)  // true
-  console.log(e.message)                    // "undefinedVariable no está definida"
-  console.log(e.name)                       // "ReferenceError"
-  console.log(e.fileName)                   // "Scratchpad/1"
-  console.log(e.lineNumber)                 // 2
-  console.log(e.columnNumber)               // 6
-  console.log(e.stack)                      // "@Scratchpad/2:2:7\n"
+  console.log(e instanceof ReferenceError); // true
+  console.log(e.message); // "undefinedVariable no está definida"
+  console.log(e.name); // "ReferenceError"
+  console.log(e.fileName); // "Scratchpad/1"
+  console.log(e.lineNumber); // 2
+  console.log(e.columnNumber); // 6
+  console.log(e.stack); // "@Scratchpad/2:2:7\n"
 }
 ```
 
@@ -59,27 +49,25 @@ try {
 
 ```js
 try {
-  throw new ReferenceError('Hola', 'someFile.js', 10)
+  throw new ReferenceError("Hola", "someFile.js", 10);
 } catch (e) {
-  console.log(e instanceof ReferenceError)  // true
-  console.log(e.message)                    // "Hola"
-  console.log(e.name)                       // "ReferenceError"
-  console.log(e.fileName)                   // "someFile.js"
-  console.log(e.lineNumber)                 // 10
-  console.log(e.columnNumber)               // 0
-  console.log(e.stack)                      // "@Scratchpad/2:2:9\n"
+  console.log(e instanceof ReferenceError); // true
+  console.log(e.message); // "Hola"
+  console.log(e.name); // "ReferenceError"
+  console.log(e.fileName); // "someFile.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 
 ## Especificaciones
 
-| Especificación                                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-referenceerror', 'ReferenceError')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.ReferenceError")}}
+{{Compat}}
 
 ## Ve también
 

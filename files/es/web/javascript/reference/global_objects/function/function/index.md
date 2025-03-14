@@ -1,21 +1,20 @@
 ---
 title: Function() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
-tags:
-  - Constructor
-  - Function
-  - JavaScript
-  - Referencia
-  - función
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/Function
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/Función
 ---
 
-{{JSRef("Objetos_globales", "Function")}}
+{{JSRef}}
 
 El constructor **`Function`** crea un nuevo **objeto** `Function`. Llamar al constructor directamente puede crear funciones dinámicamente, pero tiene problemas de seguridad y de rendimiento similares (pero mucho menos importantes) para {{jsxref("eval")}}. Sin embargo, a diferencia de eval, el constructor `Function` crea funciones que solo se ejecutan en el ámbito global.
 
-{{EmbedInteractiveExample("pages/js/function-constructor.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Function()", "shorter")}}
+
+```js interactive-example
+const sum = new Function("a", "b", "return a + b");
+
+console.log(sum(2, 6));
+// Expected output: 8
+```
 
 La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
 
@@ -50,7 +49,7 @@ El siguiente código crea un objeto `Function` que toma dos argumentos.
 // El ejemplo se puede ejecutar directamente en tu consola JavaScript
 
 // Crea una función que toma dos argumentos y devuelve la suma de esos argumentos
-const adder = new Function('a', 'b', 'return a + b');
+const adder = new Function("a", "b", "return a + b");
 
 // Llama a la función
 adder(2, 6);
@@ -61,13 +60,11 @@ Los argumentos "`a`" y "`b`" son nombres de argumentos formales que se utilizan 
 
 ## Especificaciones
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-function-constructor', 'Constructor Function')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function.Function")}}
+{{Compat}}
 
 ## Ve también
 

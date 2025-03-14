@@ -36,7 +36,8 @@ requestDevice(options)
     - `usage` {{optional_inline}}
       - : 要求するデバイスの HID 使用法の Usage ID 部分を表す整数です。
 
-> **メモ:** デバイスフィルターは、ユーザーに提示するデバイスリストを絞り込むために使われます。フィルターが無い場合、接続された全てのデバイスが表示されます。1 個以上のフィルターが含まれている場合、デバイスはいずれかのフィルターに当てはまればリストに入ります。フィルターに当てはまるには、そのフィルターに含まれるルール全てに当てはまる必要があります。
+> [!NOTE]
+> デバイスフィルターは、ユーザーに提示するデバイスリストを絞り込むために使われます。フィルターが無い場合、接続された全てのデバイスが表示されます。1 個以上のフィルターが含まれている場合、デバイスはいずれかのフィルターに当てはまればリストに入ります。フィルターに当てはまるには、そのフィルターに含まれるルール全てに当てはまる必要があります。
 
 ### 返値
 
@@ -59,30 +60,30 @@ requestDevice(options)
 
 ```js
 let requestButton = document.getElementById("request-hid-device");
-  requestButton.addEventListener("click", async () => {
-    let device;
-    try {
-      const devices = await navigator.hid.requestDevice({
-        filters: [
-          {
-            vendorId: 0xabcd,
-            productId: 0x1234,
-            usagePage: 0x0c,
-            usage: 0x01,
-          },
-        ],
-      });
-      device = devices[0];
-    } catch (error) {
-      console.log("エラーが発生しました。");
-    }
+requestButton.addEventListener("click", async () => {
+  let device;
+  try {
+    const devices = await navigator.hid.requestDevice({
+      filters: [
+        {
+          vendorId: 0xabcd,
+          productId: 0x1234,
+          usagePage: 0x0c,
+          usage: 0x01,
+        },
+      ],
+    });
+    device = devices[0];
+  } catch (error) {
+    console.log("エラーが発生しました。");
+  }
 
-    if (!device) {
-      console.log("デバイスが選択されませんでした。");
-    } else {
-      console.log(`HID: ${device.productName}`);
-    }
-  });
+  if (!device) {
+    console.log("デバイスが選択されませんでした。");
+  } else {
+    console.log(`HID: ${device.productName}`);
+  }
+});
 ```
 
 ### 2 種類のフィルターを用いる例
@@ -91,19 +92,19 @@ let requestButton = document.getElementById("request-hid-device");
 
 ```js
 // Nintendo Switch Joy-Con の USB ベンダー / プロダクト ID を持つデバイスを抽出します。
-  const filters = [
-    {
-      vendorId: 0x057e, // Nintendo Co., Ltd
-      productId: 0x2006 // Joy-Con Left
-    },
-    {
-      vendorId: 0x057e, // Nintendo Co., Ltd
-      productId: 0x2007 // Joy-Con Right
-    }
-  ];
+const filters = [
+  {
+    vendorId: 0x057e, // Nintendo Co., Ltd
+    productId: 0x2006, // Joy-Con Left
+  },
+  {
+    vendorId: 0x057e, // Nintendo Co., Ltd
+    productId: 0x2007, // Joy-Con Right
+  },
+];
 
-  // ユーザーに Joy-Con デバイスを選択するよう指示します。
-  const [device] = await navigator.hid.requestDevice({ filters });
+// ユーザーに Joy-Con デバイスを選択するよう指示します。
+const [device] = await navigator.hid.requestDevice({ filters });
 ```
 
 ## 仕様書

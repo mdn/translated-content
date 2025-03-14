@@ -5,38 +5,45 @@ slug: Web/API/Storage/key
 
 {{APIRef()}}
 
-`key()` 作为 {{domxref("Storage")}} 接口的方法，接受一个数值 n 作为参数，返回存储对象第 n 个数据项的键名。键的存储顺序是由用户代理定义的，所以尽可能不要依赖这个方法。
+{{domxref("Storage")}} 接口的 **`key()`** 方法，当传递一个数字 n 时，返回给定存储对象中第 n 个键的名称。键的顺序取决于用户代理，所以你不应该依赖它。
 
 ## 语法
 
-```plain
-var aKeyName = storage.key(key);
+```js-nolint
+key(index)
 ```
 
 ### 参数
 
-- _key_
-  - : 一个整数，表示要获取的键名索引。
+- `index`
+  - : 一个整数，表示要获取的键名索引。这是一个从零开始的索引。
 
 ### 返回值
 
-一个包含键名的 {{domxref("DOMString")}}。
+包含键名称的字符串。如果索引不存在，则返回 `null`。
 
 ## 示例
 
-下面的函数添加三个数据项到当前域名的本地存储里，然后返回第三个的键名：
+下面的函数遍历本地存储键：
 
 ```js
-function populateStorage() {
-  localStorage.setItem('bgcolor', 'yellow');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'cats.png');
-
-  localStorage.key(2); // 应该返回 'image'
+function forEachKey(callback) {
+  for (let i = 0; i < localStorage.length; i++) {
+    callback(localStorage.key(i));
+  }
 }
 ```
 
-> **备注：** 关于实际的例子，可以查看 [Web Storage Demo](https://github.com/mdn/dom-examples/tree/master/web-storage).
+下面的函数遍历本地存储键，并获得每个键的设定值：
+
+```js
+for (let i = 0; i < localStorage.length; i++) {
+  console.log(localStorage.getItem(localStorage.key(i)));
+}
+```
+
+> [!NOTE]
+> 有关实际运行的例子，详见 [Web Storage 演示](https://mdn.github.io/dom-examples/web-storage/)。
 
 ## 规范
 

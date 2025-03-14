@@ -1,26 +1,16 @@
 ---
 title: pageAction.openPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - close
-  - sidebarAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup
 ---
 
-{{AddonSidebar()}}Ouvrez le menu contextuel de l'action de la page.
+{{AddonSidebar}}Ouvrez le menu contextuel de l'action de la page.
 
-Vous pouvez uniquement appeler cette fonction à partir du gestionnaire pour une [action utilisateur](/fr/Add-ons/WebExtensions/User_actions).
+Vous pouvez uniquement appeler cette fonction à partir du gestionnaire pour une [action utilisateur](/fr/docs/Mozilla/Add-ons/WebExtensions/User_actions).
 
 ## Syntaxe
 
 ```js
-browser.pageAction.openPopup()
+browser.pageAction.openPopup();
 ```
 
 ### Paramètres
@@ -29,11 +19,11 @@ None.
 
 ### Valeur retourné
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue sans arguments.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue sans arguments.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pageAction.openPopup", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -43,7 +33,7 @@ Ouvrez la fenêtre contextuelle lorsque l'utilisateur sélectionne un élément 
 browser.menus.create({
   id: "open-popup",
   title: "open popup",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(() => {

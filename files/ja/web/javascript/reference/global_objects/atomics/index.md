@@ -75,7 +75,7 @@ Atomics.isLockFree(3); // false
 Atomics.isLockFree(4); // true
 
 Atomics.or(ta, 0, 1); // 12
-Atomics.load(ta, 0);  // 13
+Atomics.load(ta, 0); // 13
 
 Atomics.store(ta, 0, 12); // 12
 
@@ -121,7 +121,7 @@ Atomics.notify(int32, 0, 1);
 ## 関連情報
 
 - {{jsxref("ArrayBuffer")}}
-- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - [ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)
 - [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – 同期と分配の抽象化を行うシンプルなライブラリー。
 - [Shared Memory – 短いチュートリアル](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)

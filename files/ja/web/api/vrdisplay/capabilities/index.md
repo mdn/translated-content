@@ -1,14 +1,14 @@
 ---
 title: VRDisplay.capabilities
 slug: Web/API/VRDisplay/capabilities
-original_slug: Web/API/VRDevice/capabilities
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`capabilities`** は {{domxref("VRDisplay")}} インターフェイスの読み取り専用プロパティで、 `VRDisplay` の様々な利用可能な機能を示す {{domxref("VRDisplayCapabilities")}} オブジェクトを返します。
 
-> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!NOTE]
+> このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ### 値
 
@@ -30,5 +30,4 @@ original_slug: Web/API/VRDevice/capabilities
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

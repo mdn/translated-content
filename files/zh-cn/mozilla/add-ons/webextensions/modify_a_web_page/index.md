@@ -26,7 +26,6 @@ slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "modify-page",
   "version": "1.0",
@@ -37,13 +36,13 @@ slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
       "js": ["page-eater.js"]
     }
   ]
-
 }
 ```
 
 "content_scripts"指出符合 URL 格式的页面地址，然后让浏览器加载脚本 (“page-eater.js“) 到匹配的 URL 页面 ([https://developer.mozilla.org/](/) )。
 
-> **备注：** 由于 `content_scripts` 的 `"js"` 属性是一个数组，因此可以使用它将多个脚本注入匹配的页面。如果这样做，页面将按照数组中列出的顺序加载多个脚本。
+> [!NOTE]
+> 由于 `content_scripts` 的 `"js"` 属性是一个数组，因此可以使用它将多个脚本注入匹配的页面。如果这样做，页面将按照数组中列出的顺序加载多个脚本。
 
 > **备注：** `content_scripts` 键还具有一个 `"css"` 属性，可以使用它来注入 CSS 样式表。
 
@@ -52,16 +51,17 @@ slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 ```js
 document.body.textContent = "";
 
-var header = document.createElement('h1');
+var header = document.createElement("h1");
 header.textContent = "This page has been eaten";
 document.body.appendChild(header);
 ```
 
-现在安装这个[WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), 然后浏览 [https://developer.mozilla.org/](/)：
+现在安装这个[WebExtension](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), 然后浏览 [https://developer.mozilla.org/](/)：
 
 {{EmbedYouTube("lxf2Tkg6U1M")}}
 
-> **备注：** 请注意，虽然此视频显示在 [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) 工作的 content scripts，但目前该网站已禁止 content scripts。
+> [!NOTE]
+> 请注意，虽然此视频显示在 [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) 工作的 content scripts，但目前该网站已禁止 content scripts。
 
 ## 通过程序修改页面
 
@@ -71,40 +71,35 @@ document.body.appendChild(header);
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "modify-page",
   "version": "1.0",
 
-  "permissions": [
-    "activeTab",
-    "contextMenus"
-  ],
+  "permissions": ["activeTab", "contextMenus"],
 
   "background": {
     "scripts": ["background.js"]
   }
-
 }
 ```
 
 这里我们要移除"`content_scripts`"键值，并添加两个键：
 
-- [`permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions):要向页面中注入脚本，就需要拥有修改页面对应的权限。[`activeTab`](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)可以临时获得修改当前活动标签所加载的页面的权限。另外还通过 contextmenus 来获取添加右键菜单项的权限。
-- [`background`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background): 加载名为 "background.js" 的 ["background script"](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) （长期有效的后台脚本），在该脚本中，我们将设置注入右键菜单的内容脚本。
+- [`permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions):要向页面中注入脚本，就需要拥有修改页面对应的权限。[`activeTab`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission)可以临时获得修改当前活动标签所加载的页面的权限。另外还通过 contextmenus 来获取添加右键菜单项的权限。
+- [`background`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background): 加载名为 "background.js" 的 ["background script"](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) （长期有效的后台脚本），在该脚本中，我们将设置注入右键菜单的内容脚本。
 
 在 "modify-page" 文件夹下创建名为 "background.js"的新文件，内容如下：
 
 ```js
 browser.contextMenus.create({
   id: "eat-page",
-  title: "Eat this page"
+  title: "Eat this page",
 });
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "eat-page") {
     browser.tabs.executeScript({
-      file: "page-eater.js"
+      file: "page-eater.js",
     });
   }
 });
@@ -121,11 +116,12 @@ modify-page/
     page-eater.js
 ```
 
-重新加载[WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on), 打开页面 (这次可以是任何一个页面) 激活右键菜单，然后选择 "Eat this page"：
+重新加载[WebExtension](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#reloading_a_temporary_add-on), 打开页面 (这次可以是任何一个页面) 激活右键菜单，然后选择 "Eat this page"：
 
 {{EmbedYouTube("zX4Bcv8VctA")}}
 
-> **备注：** 请注意，虽然此视频显示在 [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) 工作的 content scripts，但目前该网站已禁止 content scripts。
+> [!NOTE]
+> 请注意，虽然此视频显示在 [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) 工作的 content scripts，但目前该网站已禁止 content scripts。
 
 ## 消息
 
@@ -182,24 +178,24 @@ modify-page/
 ```js
 browser.contextMenus.create({
   id: "eat-page",
-  title: "Eat this page"
+  title: "Eat this page",
 });
 
 function messageTab(tabs) {
   browser.tabs.sendMessage(tabs[0].id, {
-    replacement: "Message from the add-on!"
+    replacement: "Message from the add-on!",
   });
 }
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "eat-page") {
     browser.tabs.executeScript({
-      file: "page-eater.js"
+      file: "page-eater.js",
     });
 
     var querying = browser.tabs.query({
       active: true,
-      currentWindow: true
+      currentWindow: true,
     });
     querying.then(messageTab);
   }
@@ -214,7 +210,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 function eatPage(request, sender, sendResponse) {
   document.body.textContent = "";
 
-  var header = document.createElement('h1');
+  var header = document.createElement("h1");
   header.textContent = request.replacement;
   document.body.appendChild(header);
 }
@@ -226,7 +222,8 @@ browser.runtime.onMessage.addListener(eatPage);
 
 如果我们想将消息从内容脚本发送到后台页面，除了在内容脚本中使用 [`runtime.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) ，其他与上面的过程相反。
 
-> **备注：** 这些例子注入的都是 JavaScript; 想注入 CSS 可以使用 [`tabs.insertCSS()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) 函数。
+> [!NOTE]
+> 这些例子注入的都是 JavaScript; 想注入 CSS 可以使用 [`tabs.insertCSS()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) 函数。
 
 ## 了解更多
 
@@ -240,12 +237,11 @@ browser.runtime.onMessage.addListener(eatPage);
 - [`runtime.onMessage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
 - 使用`content_scripts`的例子：
 
-  - [borderify](https://github.com/mdn/webextensions-examples/tree/master/borderify)
-  - [inpage-toolbar-ui](https://github.com/mdn/webextensions-examples/tree/master/inpage-toolbar-ui)
-  - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
-  - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/master/page-to-extension-messaging)
+  - [borderify](https://github.com/mdn/webextensions-examples/tree/main/borderify)
+  - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n)
+  - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/main/page-to-extension-messaging)
 
 - 使用`tabs.executeScript()`的例子：
 
-  - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
-  - [context-menu-demo](https://github.com/mdn/webextensions-examples/tree/master/context-menu-demo)
+  - [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify)
+  - [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/main/context-menu-copy-link-with-types)

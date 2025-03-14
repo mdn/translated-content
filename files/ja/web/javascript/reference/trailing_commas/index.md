@@ -26,11 +26,7 @@ JavaScript は、当初から配列リテラルで末尾のカンマを使用で
 JavaScript は配列の末尾のカンマを無視します。
 
 ```js
-var arr = [
-  1,
-  2,
-  3,
-];
+var arr = [1, 2, 3];
 
 arr; // [1, 2, 3]
 arr.length; // 3
@@ -39,7 +35,7 @@ arr.length; // 3
 2 つ以上の末尾のカンマがある場合、省略 (または穴) が作られます。穴がある配列は*疎らな*配列と呼ばれます (*密集した*配列は穴がありません)。たとえば、{{jsxref("Array.prototype.forEach()")}} や {{jsxref("Array.prototype.map()")}} で配列を反復処理するとき、穴はスキップされます。
 
 ```js
-var arr = [1, 2, 3,,,];
+var arr = [1, 2, 3, , ,];
 arr.length; // 5
 ```
 
@@ -63,7 +59,7 @@ ECMAScript 2017 では、関数の引数リストで末尾のカンマが使用�
 
 次の 2 つの関数定義はともに有効で等しいものです。末尾のカンマは、関数の `length` プロパティや `arguments` オブジェクトに影響を与えません。
 
-```js
+```js-nolint
 function f(p) {}
 function f(p,) {}
 
@@ -73,7 +69,7 @@ function f(p,) {}
 
 末尾のカンマは、クラスやオブジェクトの[メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)でも使用できます。</p>
 
-```js
+```js-nolint
 class C {
   one(a,) {}
   two(a, b,) {}
@@ -89,7 +85,7 @@ var obj = {
 
 次の 2 つの関数呼び出しはともに有効で等しいものです。
 
-```js
+```js-nolint
 f(p);
 f(p,);
 
@@ -114,7 +110,7 @@ function f(...p,) {} // SyntaxError: parameter after rest parameter
 
 末尾のカンマは、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)の左辺でも使用できます。
 
-```js
+```js-nolint
 // 末尾のカンマ付きで配列を分割代入
 [a, b,] = [1, 2];
 
@@ -128,7 +124,7 @@ var {p, q,} = o;
 
 また、残余要素で使用すると、{{jsxref("SyntaxError")}} が発生します。
 
-```js example-bad
+```js-nolint example-bad
 var [a, ...b,] = [1, 2, 3];
 // SyntaxError: rest element may not have a trailing comma
 ```
@@ -140,7 +136,7 @@ var [a, ...b,] = [1, 2, 3];
 どちらの行も `SyntaxError` が発生します。
 
 ```js example-bad
-JSON.parse('[1, 2, 3, 4, ]');
+JSON.parse("[1, 2, 3, 4, ]");
 JSON.parse('{"foo" : 1, }');
 // SyntaxError JSON.parse: unexpected character
 // at line 1 column 14 of the JSON data
@@ -149,7 +145,7 @@ JSON.parse('{"foo" : 1, }');
 正しく JSON を解釈するには、カンマを省略してください。
 
 ```js example-good
-JSON.parse('[1, 2, 3, 4 ]');
+JSON.parse("[1, 2, 3, 4 ]");
 JSON.parse('{"foo" : 1 }');
 ```
 
@@ -160,29 +156,21 @@ JSON.parse('{"foo" : 1 }');
 #### 名前付きインポート
 
 ```js
-  import {
-    A,
-    B,
-    C,
-  } from 'D'
+import { A, B, C } from "D";
 
-  import { X, Y, Z } from 'W'
+import { X, Y, Z } from "W";
 
-  import { A as B, C as D, E as F } from 'Z'; // インポートの名前を変更
+import { A as B, C as D, E as F } from "Z"; // インポートの名前を変更
 ```
 
 #### 名前付きエクスポート
 
 ```js
-  export {
-    A,
-    B,
-    C
-  }
+export { A, B, C };
 
-  export { A, B, C };
+export { A, B, C };
 
-  export { A as B, C as D, E as F }; // エクスポートの名前を変更
+export { A as B, C as D, E as F }; // エクスポートの名前を変更
 ```
 
 ### 数量接頭辞

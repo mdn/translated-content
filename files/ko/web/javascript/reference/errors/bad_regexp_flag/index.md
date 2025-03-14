@@ -1,12 +1,6 @@
 ---
 title: 'SyntaxError: invalid regular expression flag "x"'
 slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
-tags:
-  - 구문 에러
-  - 자바스크립트
-  - 정규식
-  - 플래그
-translation_of: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 ---
 
 {{jsSidebar("Errors")}}
@@ -36,15 +30,15 @@ var re = /pattern/flags;
 또는
 
 ```js
-var re = new RegExp('pattern', 'flags');
+var re = new RegExp("pattern", "flags");
 ```
 
-| 플래그 | 설명                                                                                        |
-| ------ | ------------------------------------------------------------------------------------------- |
-| `g`    | 전역 검색.                                                                                  |
-| i      | 대소문자 구별 없이 검색.                                                                    |
-| m      | 여러 줄(Multi-line) 검색.                                                                   |
-| u      | 유니코드; 패턴을 유니코드 코드 포인트의 나열로 취급.                                        |
+| 플래그 | 설명                                                                             |
+| ------ | -------------------------------------------------------------------------------- |
+| `g`    | 전역 검색.                                                                       |
+| i      | 대소문자 구별 없이 검색.                                                         |
+| m      | 여러 줄(Multi-line) 검색.                                                        |
+| u      | 유니코드; 패턴을 유니코드 코드 포인트의 나열로 취급.                             |
 | y      | 현재 위치에서 검색. ("sticky" 검색). {{jsxref("RegExp.sticky", "sticky")}} 참조. |
 
 ## 예제
@@ -71,13 +65,13 @@ let obj = {
 
 ```js example-good
 let obj = {
-  url: '/docs/Web'
+  url: "/docs/Web",
 };
 ```
 
 ### 유효한 정규 표현식 플래그
 
-자바스크립트에서 허용하는 5개의 유효한 정규 표현식 플래그를 위의 표에서 확인하세요.
+JavaScript에서 허용하는 5개의 유효한 정규 표현식 플래그를 위의 표에서 확인하세요.
 
 ```js example-good
 /foo/g;
@@ -88,4 +82,4 @@ let obj = {
 ## 같이 보기
 
 - [정규 표현식](/ko/docs/Web/JavaScript/Guide/%EC%A0%95%EA%B7%9C%EC%8B%9D)
-- [XRegEx flags](http://xregexp.com/flags/) – 새로운 4개의 플래그(`n`, `s`, `x`, `A`)를 제공하는 정규 표현식 라이브러리
+- [XRegEx flags](https://xregexp.com/flags/) – 새로운 4개의 플래그(`n`, `s`, `x`, `A`)를 제공하는 정규 표현식 라이브러리

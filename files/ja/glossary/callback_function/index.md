@@ -5,27 +5,32 @@ l10n:
   sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
 
-コールバック関数とは、引数として他の関数に渡され、外側の関数の中で呼び出されて、何らかのルーチンやアクションを完了させる関数のことです。
+{{GlossarySidebar}}
 
-簡単な例を以下に示します。
+**コールバック関数**は、引数として他の関数に渡され、外側の関数の中で呼び出されて、何らかのルーチンやアクションを完了させる関数のことです。
+
+コールバックベースの API の利用者は、API に渡す関数を書きます。API の提供者（_caller_ と呼ばれる）は関数を受け取り、呼び出し側の本体内のある時点で関数をコールバック（実行）します。呼び出し側はコールバック関数に正しい引数を渡す責任があります。また、呼び出し側はコールバック関数からの特定のな返値を期待することがあり、呼び出し側のさらなる動作を指示するために使用します。
+
+コールバックの呼び出され方には、同期コールバックと非同期コールバックの 2 つの方法があります。同期コールバックは、外部関数の呼び出しの直後に呼び出され、非同期タスクは介在しません。一方、非同期コールバックは、{{glossary("asynchronous", "非同期")}}処理が完了した後のある時点で呼び出されます。
+
+コールバックが同期的に呼び出されるのか、非同期的に呼び出されるのかを理解することは、 副作用を分析する際に具体的な意味があります。次の例を見てください。
 
 ```js
-function greeting(name) {
-  alert(`Hello, ${name}`);
-}
+let value = 1;
 
-function processUserInput(callback) {
-  const name = prompt("Please enter your name.");
-  callback(name);
-}
+doSomething(() => {
+  value = 2;
+});
 
-processUserInput(greeting);
+console.log(value);
 ```
 
-上記の例はすぐに実行される{{glossary("synchronous", "同期型")}}コールバックです。
+もし `doSomething` がコールバックを同期的に呼び出すのであれば、`value = 2` が同期的に実行されるので、最後の文は `2` をログ出力します。もしコールバックが非同期的であれば、`value = 2` が実行されるのは `console.log` 文の後なので、最後の文は `1` をログ出力します。
 
-コールバックは{{glossary("asynchronous", "非同期")}}操作が完了した後に続いてコードが実行されることがよくあります。これを非同期コールバックといいます。コールバック関数の良い例は、プロミスが履行されたり拒否されたりした後に連鎖される [`.then()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) ブロックの中で実行されるものです。この構造は [`fetch()`](/ja/docs/Web/API/fetch)のような最近の Web API で良く使われています。
+同期コールバックの例としては、{{jsxref("Array.prototype.map()")}} や {{jsxref("Array.prototype.forEach()")}} などに渡されるコールバックが挙げられます。非同期コールバックの例としては、[`setTimeout()`](/ja/docs/Web/API/Window/setTimeout) や {{jsxref("Promise.prototype.then()")}} に渡すコールバックがあります。
+
+[プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises#タイミング)ガイドには、非同期コールバックのタイミングについての詳しい情報があります。
 
 ## 関連情報
 
-- Wikipedia の[コールバック](https://ja.wikipedia.org/wiki/コールバック_(情報工学))
+- [コールバック](<https://ja.wikipedia.org/wiki/コールバック_(情報工学)>)（ウィキペディア）

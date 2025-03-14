@@ -1,9 +1,6 @@
 ---
 title: Symbol.unscopables
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
-browser-compat: javascript.builtins.Symbol.unscopables
 l10n:
   sourceCommit: 552892d8fc6707c47ae879aef32e6ac3023166ee
 ---
@@ -12,7 +9,22 @@ l10n:
 
 El símbolo conocido como **`Symbol.unscopables`** se utiliza para especificar un valor de objeto cuyos nombres de propiedades propias y heredadas se excluyen de los enlaces de entorno [`with`](/es/docs/Web/JavaScript/Reference/Statements/with) del objeto asociado.
 
-{{EmbedInteractiveExample("pages/js/symbol-unscopables.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.unscopables")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+object1[Symbol.unscopables] = {
+  property1: true,
+};
+
+with (object1) {
+  console.log(property1);
+  // Expected output: Error: property1 is not defined
+}
+```
 
 ## Descripción
 
@@ -32,7 +44,7 @@ El siguiente código funciona bien en ES5 y posteriores. Sin embargo, en ECMAScr
 const keys = [];
 
 with (Array.prototype) {
-  keys.push('something');
+  keys.push("something");
 }
 
 Object.keys(Array.prototype[Symbol.unscopables]);
@@ -47,12 +59,12 @@ También puede establecer `unscopables` para sus propios objetos.
 ```js
 const obj = {
   foo: 1,
-  bar: 2
+  bar: 2,
 };
 
 obj[Symbol.unscopables] = {
   foo: false,
-  bar: true
+  bar: true,
 };
 
 with (obj) {

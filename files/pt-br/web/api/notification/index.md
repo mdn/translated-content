@@ -1,7 +1,6 @@
 ---
 title: Notificações
 slug: Web/API/Notification
-original_slug: Web/API/notificacoes
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -61,18 +60,18 @@ As propriedades a seguir estão listados na especificação mais up-to-date, mas
 #### Manipuladores de Eventos
 
 - {{domxref("Notification.onclick")}}
-  - : O manipulador para o evento {{event("click")}} é acionado cada vez que o usuário clica sobre a notificação.
+  - : O manipulador para o evento [`click`](/pt-BR/docs/Web/API/Element/click_event) é acionado cada vez que o usuário clica sobre a notificação.
 - {{domxref("Notification.onerror")}}
-  - : O manipulador para o evento {{event("error")}} é acionado quando a notificação encontra um erro.
+  - : O manipulador para o evento [`error`](/pt-BR/docs/Web/API/HTMLElement/error_event) é acionado quando a notificação encontra um erro.
 
 #### Manipuladores Obsoletos
 
 Os seguintes manipuladores de eventos ainda são suportados, conforme listado na seção [browser compatibility](#browser_compatibility). Estes serão listados abaixo, mas não são listados na especificação atual. Saiba que eles são obsoletos, e pode parar de funcionar em versões futuras do navegador.
 
 - {{domxref("Notification.onclose")}}
-  - : Manipulador do evento {{event("close")}} é acionado quando a notificação é fechada.
+  - : Manipulador do evento [`close`](/pt-BR/docs/Web/API/HTMLDialogElement/close_event) é acionado quando a notificação é fechada.
 - {{domxref("Notification.onshow")}}
-  - : Manipulador do evento {{event("show")}}. é acionado quando a notificação é exibida.
+  - : Manipulador do evento [`show`](/pt-BR/docs/Web/Events/show). é acionado quando a notificação é exibida.
 
 ## Métodos
 
@@ -85,7 +84,7 @@ Estes métodos estão disponíveis apenas no próprio objeto `Notification`.
 
 ### Métodos de instância
 
-Estas propriedades estão disponíveis apenas no objeto Notification ou através do seu [`prototype`](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain). O objeto de notificação também herda a interface {{domxref("EventTarget")}}.
+Estas propriedades estão disponíveis apenas no objeto Notification ou através do seu [`prototype`](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain). O objeto de notificação também herda a interface {{domxref("EventTarget")}}.
 
 - {{domxref("Notification.close()")}}
   - : Programaticamente fecha uma notificação.
@@ -114,7 +113,7 @@ function notifyMe() {
   }
 
   // Otherwise, we need to ask the user for permission
-  else if (Notification.permission !== 'denied') {
+  else if (Notification.permission !== "denied") {
     Notification.requestPermission(function (permission) {
       // If the user accepts, let's create a notification
       if (permission === "granted") {
@@ -130,7 +129,7 @@ function notifyMe() {
 
 {{EmbedLiveSample('Exemplo', '100%', 30)}}
 
-Em muitos casos, você não precisa estar presente detalhado. Por exemplo, na nosso [Emogotchi demo](http://mdn.github.io/emogotchi/) ([veja o código fonte](https://github.com/mdn/emogotchi)), basta simlesmente executar {{domxref("Notification.requestPermission")}} independentemente de se certificar de que pode obter permissão para enviar notificações:
+Em muitos casos, você não precisa estar presente detalhado. Por exemplo, na nosso [Emogotchi demo](https://mdn.github.io/emogotchi/) ([veja o código fonte](https://github.com/mdn/emogotchi)), basta simlesmente executar {{domxref("Notification.requestPermission")}} independentemente de se certificar de que pode obter permissão para enviar notificações:
 
 ```js
 Notification.requestPermission();
@@ -139,24 +138,22 @@ Notification.requestPermission();
 Em seguida executar um simples `spawnNotification()` quando queremos disparar uma notificação — este é passado argumentos para especificar o, ícone corpo e título que queremos, então ele cria as opções necessárias objeto e dispara a notificação usando o construtor {{domxref("Notification.Notification","Notification()")}}.
 
 ```js
-function spawnNotification(corpo,icone,titulo) {
+function spawnNotification(corpo, icone, titulo) {
   var opcoes = {
-      body: corpo,
-      icon: icone
-  }
-  var n = new Notification(titulo,opcoes);
+    body: corpo,
+    icon: icone,
+  };
+  var n = new Notification(titulo, opcoes);
 }
 ```
 
 ## Especificações
 
-| Especificação                                | Estado                                   | Comentário      |
-| -------------------------------------------- | ---------------------------------------- | --------------- |
-| {{SpecName('Web Notifications')}} | {{Spec2('Web Notifications')}} | Living standard |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## Veja também
 

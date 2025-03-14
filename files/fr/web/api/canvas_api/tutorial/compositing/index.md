@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 3c67eed7b0d2c91198ec95bcc9b1a570f6c0f585
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
 Dans tous nos [exemples précédents](/fr/docs/Web/API/Canvas_API/Tutorial/Transformations), les formes étaient toujours dessinées les unes au-dessus des autres. C'est plus que suffisant pour la plupart des situations, mais cela limite l'ordre dans lequel les formes composées sont construites. Nous pouvons cependant changer ce comportement en définissant la propriété `globalCompositeOperation`. En complément, la propriété `clip` nous permet de cacher les parties des formes que nous ne désirons pas.
 
@@ -16,7 +16,7 @@ Nous pouvons non seulement dessiner de nouvelles formes derrière des formes exi
 - [`globalCompositeOperation = type`](/fr/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation)
   - : Cela configure le type d'opération de composition à appliquer lorsqu'on dessine de nouvelles formes, où le type correspond à une chaîne de caractères faisant référence à une des douze opérations de composition possibles.
 
-Reportez-vous aux [exemples de composition](/fr/docs/Web/API/Canvas_API/Tutorial/Compositing/Example) pour le code des exemples suivants.
+Reportez-vous aux [exemples de composition](/fr/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation) pour le code des exemples suivants.
 
 {{EmbedLiveSample("Exemple_de_composition", 750, 7000, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
 
@@ -43,7 +43,7 @@ Dans cet exemple, nous allons utiliser un détourage circulaire pour restreindre
 
 ```js
 function draw() {
-  const ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById("canvas").getContext("2d");
   ctx.fillRect(0, 0, 150, 150);
   ctx.translate(75, 75);
 
@@ -54,8 +54,8 @@ function draw() {
 
   // On dessine l'arrière-plan
   const lingrad = ctx.createLinearGradient(0, -75, 0, 75);
-  lingrad.addColorStop(0, '#232256');
-  lingrad.addColorStop(1, '#143778');
+  lingrad.addColorStop(0, "#232256");
+  lingrad.addColorStop(1, "#143778");
 
   ctx.fillStyle = lingrad;
   ctx.fillRect(-75, -75, 150, 150);
@@ -63,13 +63,14 @@ function draw() {
   // On dessine les étoiles
   for (let j = 1; j < 50; j++) {
     ctx.save();
-    ctx.fillStyle = '#fff';
-    ctx.translate(75 - Math.floor(Math.random() * 150),
-                  75 - Math.floor(Math.random() * 150));
+    ctx.fillStyle = "#fff";
+    ctx.translate(
+      75 - Math.floor(Math.random() * 150),
+      75 - Math.floor(Math.random() * 150),
+    );
     drawStar(ctx, Math.floor(Math.random() * 4) + 2);
     ctx.restore();
   }
-
 }
 
 function drawStar(ctx, r) {

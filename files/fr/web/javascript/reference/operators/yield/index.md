@@ -1,30 +1,39 @@
 ---
 title: yield
 slug: Web/JavaScript/Reference/Operators/yield
-tags:
-  - ECMAScript 2015
-  - Générateurs
-  - Itérateur
-  - JavaScript
-  - Opérateur
-translation_of: Web/JavaScript/Reference/Operators/yield
-original_slug: Web/JavaScript/Reference/Opérateurs/yield
 ---
 
 {{jsSidebar("Operators")}}
 
-Le mot-clé `yield` est utilisé pour suspendre et reprendre une fonction génératrice ({{jsxref("Statements/function*", "function*")}} ou [une fonction génératrice historique](/fr/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)).
+Le mot-clé `yield` est utilisé pour suspendre et reprendre une fonction génératrice ({{jsxref("Statements/function*", "function*")}} ou [une fonction génératrice historique](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)).
 
-{{EmbedInteractiveExample("pages/js/expressions-yield.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - yield")}}
+
+```js interactive-example
+function* foo(index) {
+  while (index < 2) {
+    yield index;
+    index++;
+  }
+}
+
+const iterator = foo(0);
+
+console.log(iterator.next().value);
+// Expected output: 0
+
+console.log(iterator.next().value);
+// Expected output: 1
+```
 
 ## Syntaxe
 
 ```js
-[rv] = yield [expression]
+[rv] = yield[expression];
 ```
 
 - `expression`
-  - : Définit la valeur à retourner depuis la fonction génératrice via [le protocole itérateur](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérateur_»). Si omise, `undefined` sera retournée à la place.
+  - : Définit la valeur à retourner depuis la fonction génératrice via [le protocole itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérateur_»). Si omise, `undefined` sera retournée à la place.
 - `rv`
   - : Retourne la valeur optionnelle passée à la méthode `next()` pour reprendre son exécution.
 
@@ -52,7 +61,7 @@ Entre le chemin de code du générateur, ses opérateurs `yield`, et la possibil
 Le code suivant est la déclaration d'un exemple de fonction génératrice :
 
 ```js
-function* compteVentesPommes () {
+function* compteVentesPommes() {
   var listeVentes = [3, 7, 5];
   for (var i = 0; i < listeVentes.length; i++) {
     yield listeVentes[i];
@@ -80,7 +89,7 @@ console.log(magasinPommes.next()); // { value: undefined, done: true }
 
 ## Voir aussi
 
-- [Le protocole itérateur](/fr/docs/Web/JavaScript/Guide/Le_protocole_iterator)
+- [Le protocole itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
 - L'instruction {{jsxref("Instructions/function*", "function*")}}
 - L'expression {{jsxref("Opérateurs/function*", "function*")}}
 - L'opérateur {{jsxref("Opérateurs/yield*", "yield*")}}

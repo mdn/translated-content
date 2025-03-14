@@ -31,7 +31,8 @@ l10n:
 
 ウェブオーディオ API では、立体音響を制御することもできます。*ソースリスナーモデル*に基づいたシステムを使用することで、*パンモデル*を制御し、音源の移動 (またはリスナーの移動) によって引き起こされる*距離に起因する減衰*を処理することができます。
 
-> **メモ:** ウェブオーディオ API の理論に関する詳細は [ウェブオーディオ API の基本概念](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) をご覧ください。
+> [!NOTE]
+> ウェブオーディオ API の理論に関する詳細は [ウェブオーディオ API の基本概念](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) をご覧ください。
 
 ## ウェブオーディオ API が対象とする人
 
@@ -83,11 +84,11 @@ l10n:
 - {{domxref("AudioBuffer")}}
   - : **`AudioBuffer`** インターフェイスは、メモリー上に存在する短い音声資産を表します。音声ファイルから {{ domxref("BaseAudioContext.decodeAudioData") }} メソッドで作成したり、生のデータから {{ domxref("BaseAudioContext.createBuffer") }} で作成したりすることができます。この形式にデコードされた音声は、{{ domxref("AudioBufferSourceNode") }}に格納することができます。
 - {{domxref("AudioBufferSourceNode")}}
-  - : **`AudioBufferSourceNode`** インターフェイスは、{{domxref("AudioBuffer")}}に格納されたメモリー内の音声データからなる音声ソースを表します。音声ソースとして動作するのは、{{domxref("AudioNode")}}です。
+  - : **`AudioBufferSourceNode`** インターフェイスは、{{domxref("AudioBuffer")}} に格納されたメモリー内の音声データからなる音声ソースを表します。これは音源として機能する {{domxref("AudioNode")}} です。
 - {{domxref("MediaElementAudioSourceNode")}}
-  - : **`MediaElementAudioSourceNode`** インターフェイスは、 HTML の {{ htmlelement("audio") }} または {{ htmlelement("video") }} 要素からなる音声ソースを表現します。音声ソースとして動作するのは {{domxref("AudioNode")}} です。
+  - : **`MediaElementAudioSourceNode`** インターフェイスは、HTML の {{ htmlelement("audio") }} または {{ htmlelement("video") }} 要素からなる音声ソースを表現します。これは音源として機能する {{domxref("AudioNode")}} です。
 - {{domxref("MediaStreamAudioSourceNode")}}
-  - : **`MediaStreamAudioSourceNode`** インターフェイスは、 {{domxref("MediaStream")}} （ウェブカメラ、マイク、リモートコンピューターから送信されるストリームなど）で構成される音声ソースを表します。ストリーム上に複数の音声トラックが表示されている場合、辞書順（アルファベット順）に最初に {{domxref("MediaStreamTrack.id", "id")}} が来るトラックが使用されます。音声源として機能するのは{{domxref("AudioNode")}}です。
+  - : **`MediaStreamAudioSourceNode`** インターフェイスは、{{domxref("MediaStream")}} （ウェブカメラ、マイク、リモートコンピューターから送信されるストリームなど）で構成される音声ソースを表します。ストリーム上に複数の音声トラックが表示されている場合、辞書順（アルファベット順）に最初に {{domxref("MediaStreamTrack.id", "id")}} が来るトラックが使用されます。これは音源として機能する {{domxref("AudioNode")}} です。
 - {{domxref("MediaStreamTrackAudioSourceNode")}}
   - : {{domxref("MediaStreamTrackAudioSourceNode")}} 型のノードは、データが {{domxref("MediaStreamTrack")}} に由来する音声ソースを表します。ノードを作成するために {{domxref("AudioContext.createMediaStreamTrackSource", "createMediaStreamTrackSource()")}} メソッドを使用する際に、どのトラックを使用するのか指定します。これは `MediaStreamAudioSourceNode` よりも制御を提供します。
 
@@ -119,7 +120,7 @@ l10n:
 - {{domxref("AudioDestinationNode")}}
   - : **`AudioDestinationNode`** はコンテキスト内での出力先を表します。通常はスピーカーとなっています。
 - {{domxref("MediaStreamAudioDestinationNode")}}
-  - : **`MediaStreamAudioDestinationNode`** インターフェイスは、単一の `AudioMediaStreamTrack` を持つ [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} からなる音声出力先を表現し、 {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }} から得られる {{domxref("MediaStream") }}と同様の方法で使用することができます。 音声の出力先として動作する {{domxref("AudioNode")}} です。
+  - : **`MediaStreamAudioDestinationNode`** インターフェイスは、単一の `AudioMediaStreamTrack` を持つ [WebRTC](/ja/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} からなる音声出力先を表現し、 {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }} から得られる {{domxref("MediaStream") }}と同様の方法で使用することができます。 音声の出力先として動作する {{domxref("AudioNode")}} です。
 
 ### 分析と可視化
 
@@ -177,7 +178,7 @@ l10n:
 以下のようにすると、バックグラウンドで音声グラフを非常に高速に処理/レンダリングし、端末のスピーカーではなく {{domxref("AudioBuffer")}} にレンダリングすることができます。
 
 - {{domxref("OfflineAudioContext")}}
-  - : **`OfflineAudioContext`** は {{domxref("AudioContext")}} の一種で、{{domxref("AudioNode")}} を組み合わせて、音声処理を行うグラフを表現しています。通常の `AudioContext`と異なり`、`OfflineAudioContext` は音声を出力せず、バッファー内で高速に処理を行います。
+  - : **`OfflineAudioContext`** は {{domxref("AudioContext")}} の一種で、{{domxref("AudioNode")}} を組み合わせて、音声処理を行うグラフを表現しています。通常の `AudioContext`と異なり、`OfflineAudioContext` は音声を出力せず、バッファー内で高速に処理を行います。
 - {{domxref("OfflineAudioContext/complete_event", "complete")}} (イベント)
   - : `complete` イベントは {{domxref("OfflineAudioContext")}} の処理が終了した時に発火します。
 - {{domxref("OfflineAudioCompletionEvent")}}
@@ -211,11 +212,11 @@ GitHub の [webaudio-example リポジトリー](https://github.com/mdn/webaudio
 - [メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)
 - [Using IIR filters](/ja/docs/Web/API/Web_Audio_API/Using_IIR_filters)
 - [ウェブオーディオ API による視覚化](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-- [ウェブオーディオの空間設定の基本](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)
+- [ウェブオーディオの空間設定の基本](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - [ConstantSourceNode で複数の引数を制御する](/ja/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [Mixing Positional Audio and WebGL](https://www.html5rocks.com/tutorials/webaudio/positional_audio/)
 - [Developing Game Audio with the Web Audio API](https://www.html5rocks.com/tutorials/webaudio/games/)
-- [webkitAudioContext のコードを標準ベースの AudioContext に移植する](/ja/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext)
+- [webkitAudioContext のコードを標準ベースの AudioContext に移植する](/ja/docs/Web/API/Web_Audio_API)
 
 ### ライブラリー
 

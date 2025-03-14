@@ -1,16 +1,16 @@
 ---
 title: 스타일과 색 적용하기
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
-tags:
-  - HTML5
-  - 그래픽
-  - 캔버스
-translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
-original_slug: Web/HTML/Canvas/Tutorial/Applying_styles_and_colors
+l10n:
+  sourceCommit: 6e0d822711793e8672d2ebfeea779890525f7529
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
-[도형 그리기](/ko/docs/Web/HTML/Canvas/Tutorial/Drawing_shapes) 장에서는 기본 선과 채우기 스타일만 사용했습니다. 여기서 우리는 그리기를 조금 더 매력적으로 만들 수있는 캔버스 옵션을 살펴볼 것입니다. 그리기에 다른 색상, 선 스타일, 그라디언트, 패턴 및 그림자를 추가하는 방법을 배우게됩니다.
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
+
+[도형 그리기](/ko/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) 장에서는 기본 선과 채우기 스타일만 사용했습니다. 여기서 우리는 그리기를 조금 더 매력적으로 만들 수 있는 캔버스 옵션을 살펴볼 것입니다. 그리기에 다른 색상, 선 스타일, 그라디언트, 패턴 및 그림자를 추가하는 방법을 배우게 됩니다.
+
+> [!NOTE]
+> 캔버스 속 내용은 스크린 리더를 사용하는 유저가 접근할 수 없습니다. 만약 캔버스가 순수히 꾸미는 용으로 사용하는 경우, `<canvas>` 시작 태그에 `role="presentation"`을 넣어줘야 합니다. 그렇지 않다면 캔버스 요소에 설명하는 내용을 [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-label) 속성의 값으로 넣거나, 캔버스 태그 안에 대체 내용을 넣어야 합니다. 캔버스 속 내용은 DOM의 일부가 아니지만, 중첩 대체 내용은 일부가 될 수 있습니다.
 
 ## 색상
 
@@ -40,16 +40,22 @@ ctx.fillStyle = "rgba(255, 165, 0, 1)";
 
 이 예제에서 `for` 반복문을 두 번 사용하여 사각형 격자를 그릴 것입니다. 결과는 스크린샷과 같을 것입니다. 결과가 그리 대단한 것은 아닙니다. 각 사각형의 RGB 색상값에서 붉은색과 녹색 값만을 변수 `i`와 `j`를 사용하여 변경합니다. 파란색 채널은 고정된 값입니다. 채널 값들을 변경함으로써, 모든 종류의 팔레트를 생성할 수 있습니다. 단계를 늘리면 Photoshop에서 사용하는 색상 팔레트와 비슷한 모양을 얻을 수 있습니다.
 
-<pre class="brush: js;highlight[5,6]">function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i = 0; i &#x3C; 6; i++){
-    for (var j = 0; j &#x3C; 6; j++){
-      ctx.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ', ' +
-                       Math.floor(255 - 42.5 * j) + ', 0)';
-      ctx.fillRect(j*25,i*25,25,25);
+```js
+function draw() {
+  var ctx = document.getElementById("canvas").getContext("2d");
+  for (var i = 0; i < 6; i++) {
+    for (var j = 0; j < 6; j++) {
+      ctx.fillStyle =
+        "rgb(" +
+        Math.floor(255 - 42.5 * i) +
+        ", " +
+        Math.floor(255 - 42.5 * j) +
+        ", 0)";
+      ctx.fillRect(j * 25, i * 25, 25, 25);
     }
   }
-}</pre>
+}
+```
 
 ```html hidden
 <canvas id="canvas" width="150" height="150"></canvas>
@@ -61,24 +67,30 @@ draw();
 
 결과는 아래와 같습니다.
 
-{{EmbedLiveSample("A_fillStyle_example", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}
+{{EmbedLiveSample("A_fillStyle_example", 160, 160, "canvas_fillstyle.png")}}
 
 ### `strokeStyle` 예제
 
 이번 예제는 위에 나온 예제와 비슷하지만, `strokeStyle` 속성을 사용하여 윤곽선의 색을 바꿉니다. 사각형 대신, 원을 그리는 `arc()` 메소드를 사용합니다.
 
-<pre class="brush: js;highlight[5,6]">function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i = 0; i &#x3C; 6; i++) {
-    for (var j = 0; j &#x3C; 6; j++) {
-      ctx.strokeStyle = 'rgb(0, ' + Math.floor(255 - 42.5 * i) + ', ' +
-                       Math.floor(255 - 42.5 * j) + ')';
+```js
+function draw() {
+  var ctx = document.getElementById("canvas").getContext("2d");
+  for (var i = 0; i < 6; i++) {
+    for (var j = 0; j < 6; j++) {
+      ctx.strokeStyle =
+        "rgb(0, " +
+        Math.floor(255 - 42.5 * i) +
+        ", " +
+        Math.floor(255 - 42.5 * j) +
+        ")";
       ctx.beginPath();
       ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
       ctx.stroke();
     }
   }
-}</pre>
+}
+```
 
 ```html hidden
 <canvas id="canvas" width="150" height="150"></canvas>
@@ -90,14 +102,14 @@ draw();
 
 결과는 아래와 같습니다.
 
-{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}
+{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}
 
 ## 투명도
 
 캔버스에는 불투명한 도형을 그릴 수도 있고, 반투명한 도형도 그릴 수도 있습니다. `globalAlpha` 값을 설정하거나 윤곽선 또는 채움 스타일에 반투명 색을 적용하면 됩니다.
 
 - {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha = transparencyValue")}}
-  - : 투명도 값이 설정되면 이후 캔버스에 그려지는 모든 도형들의 투명도가 바뀝니다. 설정하는 값은 0.0(완전히 투명)과 1.0(완전히 불투명) 사이에 있어야 하며, 초기 설정값은 1.0(완전히 투명)입니다.
+  - : 투명도 값이 설정되면 이후 캔버스에 그려지는 모든 도형들의 투명도가 바뀝니다. 설정하는 값은 0.0(완전히 투명)과 1.0(완전히 불투명) 사이에 있어야 하며, 초기 설정값은 1.0(완전히 불투명)입니다.
 
 `globalAlpha`는 모두 같은 투명도로 캔버스에 많은 도형을 그릴 때 유용합니다. 하지만, 보통은 각각의 도형마다 투명도를 설정하는 것이 더 유용할 것입니다.
 
@@ -106,8 +118,8 @@ draw();
 ```js
 // 외곽선과 채움 스타일에 투명 적용
 
-ctx.strokeStyle = 'rgba(255, 0, 0, 0.5)';
-ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
+ctx.strokeStyle = "rgba(255, 0, 0, 0.5)";
+ctx.fillStyle = "rgba(255, 0, 0, 0.5)";
 ```
 
 `rgba()` 함수는 `rgb()` 함수와 비슷하지만, 인자가 하나 더 있습니다. 마지막 인자는 투명도 값을 설정하는 인자입니다. 올바른 범위는 0.0(완전히 투명)에서 1.0(완전히 불투명)입니다.
@@ -118,23 +130,23 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   // 배경을 그린다
-  ctx.fillStyle = '#FD0';
+  ctx.fillStyle = "#FD0";
   ctx.fillRect(0, 0, 75, 75);
-  ctx.fillStyle = '#6C0';
+  ctx.fillStyle = "#6C0";
   ctx.fillRect(75, 0, 75, 75);
-  ctx.fillStyle = '#09F';
+  ctx.fillStyle = "#09F";
   ctx.fillRect(0, 75, 75, 75);
-  ctx.fillStyle = '#F30';
+  ctx.fillStyle = "#F30";
   ctx.fillRect(75, 75, 75, 75);
-  ctx.fillStyle = '#FFF';
+  ctx.fillStyle = "#FFF";
 
   // 투명값을 설정한다
   ctx.globalAlpha = 0.2;
 
   // 반투명한 원을 그린다
-  for (var i = 0; i &#x3C; 7; i++){
+  for (var i = 0; i < 7; i++) {
     ctx.beginPath();
     ctx.arc(75, 75, 10 + 10 * i, 0, Math.PI * 2, true);
     ctx.fill();
@@ -150,7 +162,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}
+{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "canvas_globalalpha.png")}}
 
 ### `rgba()`를 사용한 예제
 
@@ -158,23 +170,23 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 배경을 그린다
-  ctx.fillStyle = 'rgb(255,221,0)';
-  ctx.fillRect(0,0,150,37.5);
-  ctx.fillStyle = 'rgb(102,204,0)';
-  ctx.fillRect(0,37.5,150,37.5);
-  ctx.fillStyle = 'rgb(0,153,255)';
-  ctx.fillRect(0,75,150,37.5);
-  ctx.fillStyle = 'rgb(255,51,0)';
-  ctx.fillRect(0,112.5,150,37.5);
+  ctx.fillStyle = "rgb(255,221,0)";
+  ctx.fillRect(0, 0, 150, 37.5);
+  ctx.fillStyle = "rgb(102,204,0)";
+  ctx.fillRect(0, 37.5, 150, 37.5);
+  ctx.fillStyle = "rgb(0,153,255)";
+  ctx.fillRect(0, 75, 150, 37.5);
+  ctx.fillStyle = "rgb(255,51,0)";
+  ctx.fillRect(0, 112.5, 150, 37.5);
 
   // 반투명한 사각형을 그린다
-  for (var i=0;i&#x3C;10;i++){
-    ctx.fillStyle = 'rgba(255,255,255,'+(i+1)/10+')';
-    for (var j=0;j&#x3C;4;j++){
-      ctx.fillRect(5+i*14,5+j*37.5,14,27.5)
+  for (var i = 0; i < 10; i++) {
+    ctx.fillStyle = "rgba(255,255,255," + (i + 1) / 10 + ")";
+    for (var j = 0; j < 4; j++) {
+      ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
     }
   }
 }
@@ -188,7 +200,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("An_example_using_rgba()", "180", "180", "https://mdn.mozillademos.org/files/246/Canvas_rgba.png")}}
+{{EmbedLiveSample("An_example_using_rgba()", "180", "180", "canvas_rgba.png")}}
 
 ## 선 모양
 
@@ -221,8 +233,8 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i = 0; i &#x3C; 10; i++){
+  var ctx = document.getElementById("canvas").getContext("2d");
+  for (var i = 0; i < 10; i++) {
     ctx.lineWidth = 1 + i;
     ctx.beginPath();
     ctx.moveTo(5 + i * 14, 5);
@@ -240,11 +252,11 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineWidth_example", "180", "180", "https://mdn.mozillademos.org/files/239/Canvas_linewidth.png")}}
+{{EmbedLiveSample("A_lineWidth_example", "180", "180", "canvas_linewidth.png")}}
 
 선명한 선을 얻으려면 경로에 획을 어떻게 그려지는지 이해해야 합니다. 아래의 이미지를 보면, 격자는 캔버스의 좌표 격자를 나타냅니다. 격자선 사이에 있는 사각형은 실제 픽셀과 딱 맞아 떨어집니다. 아래에 있는 첫번째 이미지를 보면, (2,1)에서 (5,5)로 사각형이 채워져 있습니다. 사각형의 전체 영역(연한 붉은 색)은 픽셀 경계선 사이에 딱 맞아 떨어지기 때문에 채워진 사각형은 선명한 가장자리를 갖습니다.
 
-![](https://mdn.mozillademos.org/files/201/Canvas-grid.png)
+![](canvas-grid.png)
 
 만일 (3,1)에서 (3,5)로 그리는 직선의 두께가 1.0이라면, 두번째 이미지와 같은 상황이 됩니다. 채워진 실제 영역 (진한 파란색)은 패스의 양쪽에있는 픽셀의 절반까지만 확장됩니다. 이것은 1 픽셀을 채우는 것이 아니므로 근사값으로 화면에 그려지게 됩니다. 그래서 양옆의 영역(연한 파란색과 짙은 파란 색)으로, 실제 설정한 색과는 다른 흐릿한 색으로 채워지는 것입니다. 이전 예제에서 보듯이 선 두께가 `1.0`인 선에서 일어난 일입니다.
 
@@ -260,7 +272,7 @@ draw();
 
 `lineCap` 속성은 그리려는 모든 선의 끝점 모양을 결정합니다. `butt`, `round`, `square`라는 세 가지 값을 가지며, 초기 설정값은 `butt`입니다.
 
-![](https://mdn.mozillademos.org/files/236/Canvas_linecap.png)
+![](canvas_linecap.png)
 
 - `butt`
   - : 선의 끝이 좌표에 딱맞게 잘립니다.
@@ -275,11 +287,11 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var lineCap = ['butt','round','square'];
+  var ctx = document.getElementById("canvas").getContext("2d");
+  var lineCap = ["butt", "round", "square"];
 
   // 안내선을 그린다
-  ctx.strokeStyle = '#09f';
+  ctx.strokeStyle = "#09f";
   ctx.beginPath();
   ctx.moveTo(10, 10);
   ctx.lineTo(140, 10);
@@ -288,13 +300,13 @@ function draw() {
   ctx.stroke();
 
   // 선을 그린다
-  ctx.strokeStyle = 'black';
-  for (var i=0;i&#x3C;lineCap.length;i++){
+  ctx.strokeStyle = "black";
+  for (var i = 0; i < lineCap.length; i++) {
     ctx.lineWidth = 15;
     ctx.lineCap = lineCap[i];
     ctx.beginPath();
     ctx.moveTo(25 + i * 50, 10);
-    ctx.lineTo(25 + i * 50,140);
+    ctx.lineTo(25 + i * 50, 140);
     ctx.stroke();
   }
 }
@@ -308,7 +320,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineCap_example", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}
+{{EmbedLiveSample("A_lineCap_example", "180", "180", "canvas_linecap.png")}}
 
 ### `lineJoin` 예제
 
@@ -316,7 +328,7 @@ draw();
 
 이 속성에는 세 가지 값이 있는데, `round`, `bevel`, `miter`이며, 초기 설정값은 `miter`입니다. 두 부분들이 같은 방향으로 연결되어 있는 경우에는, `lineJoin`을 설정해도 아무런 효과가 나타나지 않습니다.
 
-![](https://mdn.mozillademos.org/files/237/Canvas_linejoin.png)
+![](canvas_linejoin.png)
 
 - `round`
   - : 도형의 모서리를, 연결되는 부분들의 공통 끝점을 중심으로 하는 원 모양으로 만듭니다. 이때 원의 반지름은 선의 두께와 같습니다.
@@ -329,10 +341,10 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var lineJoin = ['round', 'bevel', 'miter'];
+  var ctx = document.getElementById("canvas").getContext("2d");
+  var lineJoin = ["round", "bevel", "miter"];
   ctx.lineWidth = 10;
-  for (var i=0;i&#x3C;lineJoin.length;i++){
+  for (var i = 0; i < lineJoin.length; i++) {
     ctx.lineJoin = lineJoin[i];
     ctx.beginPath();
     ctx.moveTo(-5, 5 + i * 40);
@@ -353,7 +365,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineJoin_example", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}
+{{EmbedLiveSample("A_lineJoin_example", "180", "180", "canvas_linejoin.png")}}
 
 ### `miterLimit` 속성 예제
 
@@ -375,33 +387,33 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 캔버스를 비운다
-  ctx.clearRect(0,0,150,150);
+  ctx.clearRect(0, 0, 150, 150);
 
   // 안내선을 그린다
-  ctx.strokeStyle = '#09f';
-  ctx.lineWidth   = 2;
-  ctx.strokeRect(-5,50,160,50);
+  ctx.strokeStyle = "#09f";
+  ctx.lineWidth = 2;
+  ctx.strokeRect(-5, 50, 160, 50);
 
   // 선 스타일을 설정한다
-  ctx.strokeStyle = '#000';
+  ctx.strokeStyle = "#000";
   ctx.lineWidth = 10;
 
   // 입력 값을 검사한다
-  if (document.getElementById('miterLimit').value.match(/\d+(\.\d+)?/)) {
-    ctx.miterLimit = parseFloat(document.getElementById('miterLimit').value);
+  if (document.getElementById("miterLimit").value.match(/\d+(\.\d+)?/)) {
+    ctx.miterLimit = parseFloat(document.getElementById("miterLimit").value);
   } else {
-    alert('Value must be a positive number');
+    alert("Value must be a positive number");
   }
 
   // 선을 그린다
   ctx.beginPath();
-  ctx.moveTo(0,100);
-  for (i=0;i&#x3C;24;i++){
-    var dy = i%2==0 ? 25 : -25 ;
-    ctx.lineTo(Math.pow(i,1.5)*2,75+dy);
+  ctx.moveTo(0, 100);
+  for (i = 0; i < 24; i++) {
+    var dy = i % 2 == 0 ? 25 : -25;
+    ctx.lineTo(Math.pow(i, 1.5) * 2, 75 + dy);
   }
   ctx.stroke();
   return false;
@@ -412,11 +424,13 @@ function draw() {
 <table>
   <tr>
     <td><canvas id="canvas" width="150" height="150"></canvas></td>
-    <td>Change the <code>miterLimit</code> by entering a new value below and clicking the redraw button.<br><br>
+    <td>
+      Change the <code>miterLimit</code> by entering a new value below and
+      clicking the redraw button.<br /><br />
       <form onsubmit="return draw();">
         <label>Miter limit</label>
-        <input type="text" size="3" id="miterLimit"/>
-        <input type="submit" value="Redraw"/>
+        <input type="text" size="3" id="miterLimit" />
+        <input type="submit" value="Redraw" />
       </form>
     </td>
   </tr>
@@ -424,11 +438,13 @@ function draw() {
 ```
 
 ```js hidden
-document.getElementById('miterLimit').value = document.getElementById('canvas').getContext('2d').miterLimit;
+document.getElementById("miterLimit").value = document
+  .getElementById("canvas")
+  .getContext("2d").miterLimit;
 draw();
 ```
 
-{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png")}}
+{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "canvas_miterlimit.png")}}
 
 ### 대시라인 사용하기
 
@@ -441,7 +457,7 @@ draw();
 ```
 
 ```js
-var ctx = document.getElementById('canvas').getContext('2d');
+var ctx = document.getElementById("canvas").getContext("2d");
 var offset = 0;
 
 function draw() {
@@ -463,7 +479,7 @@ function march() {
 march();
 ```
 
-{{EmbedLiveSample("Using_line_dashes", "120", "120", "https://mdn.mozillademos.org/files/9853/marching-ants.png")}}
+{{EmbedLiveSample("Using_line_dashes", "120", "120", "marching-ants.png")}}
 
 ## 그라디언트(Gradient)
 
@@ -490,8 +506,8 @@ var radialgradient = ctx.createRadialGradient(75, 75, 0, 75, 75, 100);
 
 ```js
 var lineargradient = ctx.createLinearGradient(0, 0, 150, 150);
-lineargradient.addColorStop(0, 'white');
-lineargradient.addColorStop(1, 'black');
+lineargradient.addColorStop(0, "white");
+lineargradient.addColorStop(1, "black");
 ```
 
 ### `createLinearGradient` 예제
@@ -500,18 +516,18 @@ lineargradient.addColorStop(1, 'black');
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 그레이디언트를 생성한다
   var lingrad = ctx.createLinearGradient(0, 0, 0, 150);
-  lingrad.addColorStop(0, '#00ABEB');
-  lingrad.addColorStop(0.5, '#fff');
-  lingrad.addColorStop(0.5, '#26C000');
-  lingrad.addColorStop(1, '#fff');
+  lingrad.addColorStop(0, "#00ABEB");
+  lingrad.addColorStop(0.5, "#fff");
+  lingrad.addColorStop(0.5, "#26C000");
+  lingrad.addColorStop(1, "#fff");
 
   var lingrad2 = ctx.createLinearGradient(0, 50, 0, 95);
-  lingrad2.addColorStop(0.5, '#000');
-  lingrad2.addColorStop(1, 'rgba(0, 0, 0, 0)');
+  lingrad2.addColorStop(0.5, "#000");
+  lingrad2.addColorStop(1, "rgba(0, 0, 0, 0)");
 
   // 외곽선과 채움 스타일에 그레이디언트를 적용한다
   ctx.fillStyle = lingrad;
@@ -520,7 +536,6 @@ function draw() {
   // 도형을 그린다
   ctx.fillRect(10, 10, 130, 130);
   ctx.strokeRect(50, 50, 50, 50);
-
 }
 ```
 
@@ -536,7 +551,7 @@ draw();
 
 두 번째 그래디언트에서는 시작 색상 (위치 0.0)을 지정하지 않았는데, 자동으로 다음 색상 중단점의 색상으로 가정하기 때문에 반드시 필요하지는 않기 때문입니다. 따라서 위치 0.5에 검은색을 지정하면 시작부터 중단점까지 자동으로 검정색 그라이언트를 만듭니다.
 
-{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "https://mdn.mozillademos.org/files/235/Canvas_lineargradient.png")}}
+{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "canvas_lineargradient.png")}}
 
 ### `createRadialGradient` 예제
 
@@ -544,38 +559,38 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 그라디언트를 생성한다
-  var radgrad = ctx.createRadialGradient(45,45,10,52,50,30);
-  radgrad.addColorStop(0, '#A7D30C');
-  radgrad.addColorStop(0.9, '#019F62');
-  radgrad.addColorStop(1, 'rgba(1,159,98,0)');
+  var radgrad = ctx.createRadialGradient(45, 45, 10, 52, 50, 30);
+  radgrad.addColorStop(0, "#A7D30C");
+  radgrad.addColorStop(0.9, "#019F62");
+  radgrad.addColorStop(1, "rgba(1,159,98,0)");
 
-  var radgrad2 = ctx.createRadialGradient(105,105,20,112,120,50);
-  radgrad2.addColorStop(0, '#FF5F98');
-  radgrad2.addColorStop(0.75, '#FF0188');
-  radgrad2.addColorStop(1, 'rgba(255,1,136,0)');
+  var radgrad2 = ctx.createRadialGradient(105, 105, 20, 112, 120, 50);
+  radgrad2.addColorStop(0, "#FF5F98");
+  radgrad2.addColorStop(0.75, "#FF0188");
+  radgrad2.addColorStop(1, "rgba(255,1,136,0)");
 
-  var radgrad3 = ctx.createRadialGradient(95,15,15,102,20,40);
-  radgrad3.addColorStop(0, '#00C9FF');
-  radgrad3.addColorStop(0.8, '#00B5E2');
-  radgrad3.addColorStop(1, 'rgba(0,201,255,0)');
+  var radgrad3 = ctx.createRadialGradient(95, 15, 15, 102, 20, 40);
+  radgrad3.addColorStop(0, "#00C9FF");
+  radgrad3.addColorStop(0.8, "#00B5E2");
+  radgrad3.addColorStop(1, "rgba(0,201,255,0)");
 
-  var radgrad4 = ctx.createRadialGradient(0,150,50,0,140,90);
-  radgrad4.addColorStop(0, '#F4F201');
-  radgrad4.addColorStop(0.8, '#E4C700');
-  radgrad4.addColorStop(1, 'rgba(228,199,0,0)');
+  var radgrad4 = ctx.createRadialGradient(0, 150, 50, 0, 140, 90);
+  radgrad4.addColorStop(0, "#F4F201");
+  radgrad4.addColorStop(0.8, "#E4C700");
+  radgrad4.addColorStop(1, "rgba(228,199,0,0)");
 
   // 도형을 그린다
   ctx.fillStyle = radgrad4;
-  ctx.fillRect(0,0,150,150);
+  ctx.fillRect(0, 0, 150, 150);
   ctx.fillStyle = radgrad3;
-  ctx.fillRect(0,0,150,150);
+  ctx.fillRect(0, 0, 150, 150);
   ctx.fillStyle = radgrad2;
-  ctx.fillRect(0,0,150,150);
+  ctx.fillRect(0, 0, 150, 150);
   ctx.fillStyle = radgrad;
-  ctx.fillRect(0,0,150,150);
+  ctx.fillRect(0, 0, 150, 150);
 }
 ```
 
@@ -591,7 +606,55 @@ draw();
 
 그레이디언트의 마지막 색 적용 지점에서는 투명도를 적용하였습니다. 투명도가 적용된 지점에서 이전 지점까지의 색 변화를 보기 좋게 만들려면, 두 지점에 똑같은 색을 적용하면 되는데, 이 예제에서는 색의 값을 다른 방식으로 입력하여 헷갈릴 수도 있습니다. 첫번째 그레이디언트에 사용된 `#019F62`와 `rgba(1,159,98,1)`은 같은 색입니다.
 
-{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "https://mdn.mozillademos.org/files/244/Canvas_radialgradient.png")}}
+{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "canvas_radialgradient.png")}}
+
+### `createConicGradient` 예제
+
+이 예제에서는 서로 다른 두개의 원뿔 (conic) 그레이디언트를 정의할 것입니다. 원뿔 그레이디언트는 원을 만드는 원형 그레이디언트와 다르게 점을 기준으로 원을 그립니다.
+
+```js
+function draw() {
+  const ctx = document.getElementById("canvas").getContext("2d");
+
+  // 그레이디언트를 생성한다
+  const conicGrad1 = ctx.createConicGradient(2, 62, 75);
+  conicGrad1.addColorStop(0, "#A7D30C");
+  conicGrad1.addColorStop(1, "#fff");
+
+  const conicGrad2 = ctx.createConicGradient(0, 187, 75);
+  // 도(degree)에서 라디안으로 변환하기 위해 값에 Math.PI/180 를 곱한다
+  conicGrad2.addColorStop(0, "black");
+  conicGrad2.addColorStop(0.25, "black");
+  conicGrad2.addColorStop(0.25, "white");
+  conicGrad2.addColorStop(0.5, "white");
+  conicGrad2.addColorStop(0.5, "black");
+  conicGrad2.addColorStop(0.75, "black");
+  conicGrad2.addColorStop(0.75, "white");
+  conicGrad2.addColorStop(1, "white");
+
+  // 도형을 그린다
+  ctx.fillStyle = conicGrad1;
+  ctx.fillRect(12, 25, 100, 100);
+  ctx.fillStyle = conicGrad2;
+  ctx.fillRect(137, 25, 100, 100);
+}
+```
+
+```html hidden
+<canvas id="canvas" width="250" height="150" role="presentation">
+  원뿔 그레이디언트
+</canvas>
+```
+
+```js hidden
+draw();
+```
+
+첫 번째 그레이디언트는 첫 번째 직사각형의 중앙에 위치하고 시작할 때 녹색 정지점을 끝에서 흰색 정지점으로 이동합니다. 각도는 2 라디안에서 시작하는데, 이는 남동쪽을 가리키는 시작 / 끝선 이기에 눈에 띕니다.
+
+두 번쨰 그레이디언트는 두 번째 사각형의 중앙에 위치합니다. 이 그레이디언트는 회전할 때마다 검은색에서 흰색으로 번갈아 가며 여러 가지 색상을 표현합니다. 이는 체크 효과를 나타나게 됩니다.
+
+{{EmbedLiveSample("A_createConicGradient_example", "180", "180", "canvas_conicgrad.png")}}
 
 ## 패턴(Patterns)
 
@@ -615,8 +678,8 @@ draw();
 
 ```js
 var img = new Image();
-img.src = 'someimage.png';
-var ptrn = ctx.createPattern(img, 'repeat');
+img.src = "someimage.png";
+var ptrn = ctx.createPattern(img, "repeat");
 ```
 
 > **참고:** `drawImage ()` 메서드와 마찬가지로 이 메소드를 호출하기 전에 이미지가 로드되었는지 확인해야합니다. 그렇지 않으면 패턴이 잘못 그려 질 수 있습니다.
@@ -627,33 +690,31 @@ var ptrn = ctx.createPattern(img, 'repeat');
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 패턴으로 사용할 이미지 오브젝트를 생성한다
   var img = new Image();
-  img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
-  img.onload = function() {
-
+  img.src = "canvas_createpattern.png";
+  img.onload = function () {
     // 패턴을 생성한다
-    var ptrn = ctx.createPattern(img,'repeat');
+    var ptrn = ctx.createPattern(img, "repeat");
     ctx.fillStyle = ptrn;
-    ctx.fillRect(0,0,150,150);
-
-  }
+    ctx.fillRect(0, 0, 150, 150);
+  };
 }
 ```
 
-```html
+```html hidden
 <canvas id="canvas" width="150" height="150"></canvas>
 ```
 
-```js
+```js hidden
 draw();
 ```
 
 The result looks like this:
 
-{{EmbedLiveSample("A_createPattern_example", "180", "180", "https://mdn.mozillademos.org/files/222/Canvas_createpattern.png")}}
+{{EmbedLiveSample("A_createPattern_example", "180", "180", "canvas_createpattern.png")}}
 
 ## 그림자
 
@@ -682,7 +743,7 @@ The result looks like this:
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   ctx.shadowOffsetX = 2;
   ctx.shadowOffsetY = 2;
@@ -703,7 +764,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "https://mdn.mozillademos.org/files/2505/shadowed-string.png")}}
+{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "shadowed-string.png")}}
 
 다음 장에서 [텍스트 그리기](/ko/docs/Web/API/Canvas_API/Tutorial/Drawing_text)에 대한 `font` 속성과 `fillText` 메소드를 살펴 보겠습니다.
 
@@ -718,15 +779,15 @@ draw();
 - `evenodd`
   - : [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule) 알고리즘.
 
-In this example we are using the `evenodd` rule.
+이 예제에서는 'evenodd' 규칙을 사용합니다.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.beginPath();
   ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
   ctx.arc(50, 50, 15, 0, Math.PI * 2, true);
-  ctx.fill('evenodd');
+  ctx.fill("evenodd");
 }
 ```
 
@@ -738,6 +799,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "https://mdn.mozillademos.org/files/9855/fill-rule.png")}}
+{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "fill-rule.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}

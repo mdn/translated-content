@@ -2,12 +2,13 @@
 title: Qu'est-ce que les WebExtensions ?
 slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 l10n:
-  source: 5d88855e1d963ca0b0c3c14aeaa6414f8386c64e
+  sourceCommit: 5d88855e1d963ca0b0c3c14aeaa6414f8386c64e
 ---
 
 {{AddonSidebar}}
 
-> **Note :** Si vous connaissez déjà les concepts de base pour les extensions de navigateur, vous pouvez passer cette section et voir directement [comment s'organisent les fichiers d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Ensuite, utilisez [la documentation de référence](/fr/docs/Mozilla/Add-ons/WebExtensions#référence) pour commencer à construire votre extension. [L'atelier des extensions Firefox (en anglais)](https://extensionworkshop.com) vous permettra d'en savoir plus à propos des outils et méthodes de tests et de publication des extensions pour Firefox.
+> [!NOTE]
+> Si vous connaissez déjà les concepts de base pour les extensions de navigateur, vous pouvez passer cette section et voir directement [comment s'organisent les fichiers d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Ensuite, utilisez [la documentation de référence](/fr/docs/Mozilla/Add-ons/WebExtensions#référence) pour commencer à construire votre extension. [L'atelier des extensions Firefox (en anglais)](https://extensionworkshop.com) vous permettra d'en savoir plus à propos des outils et méthodes de tests et de publication des extensions pour Firefox.
 
 Une extension permet d'ajouter des fonctionnalités à un navigateur. Elles sont fabriquées à l'aide des technologies web usuelles&nbsp;: HTML, CSS, et JavaScript. Une extension peut utiliser les mêmes API JavaScript qu'une page web et dispose d'API JavaScript supplémentaires. Cela signifie qu'il est possible de faire plus avec une extension que ce qu'on peut faire avec une page web. Voici quelques exemples de ce qu'on peut construire.
 

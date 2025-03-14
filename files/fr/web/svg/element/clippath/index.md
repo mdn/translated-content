@@ -1,10 +1,6 @@
 ---
 title: <clipPath>
 slug: Web/SVG/Element/clipPath
-tags:
-  - Element
-  - SVG
-translation_of: Web/SVG/Element/clipPath
 ---
 
 {{SVGRef}}
@@ -16,7 +12,11 @@ Le détourage limite la zone dans laquelle l'élément sur lequel il est appliqu
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -27,7 +27,9 @@ html,body,svg { height:100% }
   </clipPath>
 
   <!-- Le coeur sans détourage, pour référence -->
-  <path id="heart" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
+  <path
+    id="heart"
+    d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
 
   <!--
     Le coeur avec détourage.
@@ -41,7 +43,14 @@ html,body,svg { height:100% }
 /* Animation CSS pour les navigateurs *
  * qui implémentent la propriété de géométrie r. */
 
-@keyframes openYourHeart {from {r: 0} to {r: 60px}}
+@keyframes openYourHeart {
+  from {
+    r: 0;
+  }
+  to {
+    r: 60px;
+  }
+}
 
 #myClip circle {
   animation: openYourHeart 15s infinite;
@@ -64,13 +73,13 @@ Par défaut, les événements de pointeur ne sont pas déclenchés sur les régi
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute/Core)
+- [Attributs de base](/fr/docs/Web/SVG/Attribute)
   - : Notamment: {{SVGAttr('id')}}
-- [Attributs de style](/fr/docs/Web/SVG/Attribute/Styling)
+- [Attributs de style](/fr/docs/Web/SVG/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute/Conditional_Processing)
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute)
   - : Notamment: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute/Presentation)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute)
   - : Notamment: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 
 ## Notes d'usage

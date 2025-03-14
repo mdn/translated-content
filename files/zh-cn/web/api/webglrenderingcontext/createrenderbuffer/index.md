@@ -1,34 +1,36 @@
 ---
-title: WebGLRenderingContext.createRenderbuffer()
+title: WebGLRenderingContext：createRenderbuffer() 方法
 slug: Web/API/WebGLRenderingContext/createRenderbuffer
+l10n:
+  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
 {{APIRef("WebGL")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的**`WebGLRenderingContext.createRenderbuffer()`** 方法 创建并初始化一个 {{domxref("WebGLRenderbuffer")}} 对象。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.createRenderbuffer()`** 方法创建并初始化 {{domxref("WebGLRenderbuffer")}} 对象。
 
 ## 语法
 
-```plain
-WebGLRenderbuffer gl.createRenderbuffer();
+```js-nolint
+createRenderbuffer()
 ```
 
 ### 参数
 
-None.
+无。
 
 ### 返回值
 
-一个 {{domxref("WebGLRenderbuffer")}} 对象可以保存数据，例如一张图片，或者可以渲染操作的源或目标。
+{{domxref("WebGLRenderbuffer")}} 对象，可用于保存数据（例如图片）或者作为渲染操作的源或目标。
 
-## 例如
+## 示例
 
-### 创建一个渲染缓冲区
+### 创建渲染缓冲区
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var renderBuffer = gl.createRenderBuffer();
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
+const renderBuffer = gl.createRenderbuffer();
 ```
 
 ## 规范
@@ -39,9 +41,9 @@ var renderBuffer = gl.createRenderBuffer();
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
 - {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
 - {{domxref("WebGLRenderingContext.isRenderbuffer()")}}
-- Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLFramebuffer")}}
+- 其他缓冲区：{{domxref("WebGLBuffer")}}、{{domxref("WebGLFramebuffer")}}

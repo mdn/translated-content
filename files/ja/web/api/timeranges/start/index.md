@@ -10,7 +10,7 @@ slug: Web/API/TimeRanges/start
 ## 構文
 
 ```js
-start(index)
+start(index);
 ```
 
 ### 引数

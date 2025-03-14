@@ -1,20 +1,50 @@
 ---
 title: outline-style
 slug: Web/CSS/outline-style
-tags:
-  - CSS
-  - CSS Outline
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/outline-style
 ---
 
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`outline-style`** 속성은 요소 외곽선의 스타일을 설정합니다. 외곽선은 요소의 [테두리](/ko/docs/Web/CSS/border) 바깥에 그려지는 선입니다.
 
-{{EmbedInteractiveExample("pages/css/outline-style.html")}}
+{{InteractiveExample("CSS Demo: outline-style")}}
+
+```css interactive-example-choice
+outline-style: none;
+```
+
+```css interactive-example-choice
+outline-style: dotted;
+```
+
+```css interactive-example-choice
+outline-style: solid;
+```
+
+```css interactive-example-choice
+outline-style: groove;
+```
+
+```css interactive-example-choice
+outline-style: inset;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  outline: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 외곽선 외형을 설정할 땐 {{cssxref("outline")}} 단축 속성을 사용하는게 편리한 상황이 많습니다.
 
@@ -94,7 +124,10 @@ outline-style: unset;
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 #### 결과
@@ -124,7 +157,10 @@ outline-style: unset;
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 #### 결과
@@ -154,7 +190,10 @@ outline-style: unset;
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 #### 결과
@@ -184,7 +223,10 @@ outline-style: unset;
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 #### 결과
@@ -214,7 +256,10 @@ outline-style: unset;
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 #### 결과

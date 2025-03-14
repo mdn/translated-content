@@ -1,14 +1,6 @@
 ---
 title: Window.self
 slug: Web/API/Window/self
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Read-only
-  - Reference
-  - Window
-translation_of: Web/API/Window/self
 ---
 
 {{APIRef}}
@@ -21,7 +13,7 @@ translation_of: Web/API/Window/self
 
 ```js
 if (window.parent.frames[0] != window.self) {
-    // this window is not the first frame in the list
+  // this window is not the first frame in the list
 }
 ```
 

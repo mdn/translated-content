@@ -1,42 +1,36 @@
 ---
-title: URL.username
+title: "URL: username プロパティ"
+short-title: username
 slug: Web/API/URL/username
+l10n:
+  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-{{domxref("URL")}} インターフェイスの **`username`** プロパティは、ドメイン名の前に指定されたユーザー名を含む {{domxref("USVString")}} です。
+**`username`** は {{domxref("URL")}} インターフェイスのプロパティで、ドメイン名の前に指定されたユーザー名をの入った文字列です。
 
-{{AvailableInWorkers}}
+## 値
 
-## 構文
-
-```
-string = object.username;
-object.username = string;
-```
-
-### 値
-
-{{domxref("USVString")}}。
+文字列です。
 
 ## 例
 
 ```js
-var url = new URL("https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/username");
-var user = url.username; // 戻り値: 'anonymous'
+const url = new URL(
+  "https://anonymous:flabada@developer.mozilla.org/ja/docs/Web/API/URL/username",
+);
+console.log(url.username); // "anonymous" とログ出力
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                 | 状態                 | コメント |
-| -------------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#dom-url-username', 'username')}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.URL.username")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{domxref("URL")}} インターフェイスに属します。
+- 所属先の {{domxref("URL")}} インターフェイス

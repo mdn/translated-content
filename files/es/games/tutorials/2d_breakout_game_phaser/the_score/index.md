@@ -1,23 +1,13 @@
 ---
 title: The score
 slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
-tags:
-  - 2D
-  - JavaScript
-  - Lienzo
-  - Phaser
-  - Principiantes
-  - Puntuación
-  - Tutorial
-  - juegos
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/The_score
 ---
 
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Collision_detection", "Games/Workflows/2D_Breakout_game_Phaser/Win_the_game")}}
 
-Este es el paso **11º** de 16 del tutorial de [Gamedev Phaser](/es/docs/Games/Workflows/2D_Breakout_game_Phaser). Puedes encontrar el código fuente tal y como quedaría al completar la lección en [Gamedev-Phaser-Content-Kit/demos/lesson11.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson11.html).
+Este es el paso **11º** de 16 del tutorial de [Gamedev Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Puedes encontrar el código fuente tal y como quedaría al completar la lección en [Gamedev-Phaser-Content-Kit/demos/lesson11.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson11.html).
 
 Tener puntuación puede hacer el juego más interesante — puedes intentar batir tu mejor puntuación, a la de tus amigos. En este artículo añadiremos un sistema de puntuación al juego.
 
@@ -38,7 +28,10 @@ var score = 0;
 Ahora añade esta línea al final de la función `create()`:
 
 ```js
-scoreText = game.add.text(5, 5, 'Points: 0', { font: '18px Arial', fill: '#0095DD' });
+scoreText = game.add.text(5, 5, "Points: 0", {
+  font: "18px Arial",
+  fill: "#0095DD",
+});
 ```
 
 El método `text()` puede tomar cuatro parámetros:
@@ -55,9 +48,9 @@ Incrementaremos el número de puntos cada vez que la pelota golpee en un ladrill
 
 ```js
 function ballHitBrick(ball, brick) {
-    brick.kill();
-    score += 10;
-    scoreText.setText('Points: '+score);
+  brick.kill();
+  score += 10;
+  scoreText.setText("Points: " + score);
 }
 ```
 

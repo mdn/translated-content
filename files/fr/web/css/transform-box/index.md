@@ -1,13 +1,6 @@
 ---
 title: transform-box
 slug: Web/CSS/transform-box
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-  - Transformations CSS
-translation_of: Web/CSS/transform-box
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -67,7 +60,7 @@ p {
 }
 
 .premier {
-   border: 3px black solid;
+  border: 3px black solid;
 }
 
 .deuxieme {
@@ -90,6 +83,6 @@ p {
 
 ## Voir aussi
 
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Utilisation_des_transformations_CSS)
+- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - {{cssxref("transform")}}
 - {{cssxref("transform-origin")}}

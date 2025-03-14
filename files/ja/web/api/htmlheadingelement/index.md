@@ -1,6 +1,8 @@
 ---
 title: HTMLHeadingElement
 slug: Web/API/HTMLHeadingElement
+l10n:
+  sourceCommit: e87af7c2d48e6679acbb5172836e81fe2bc30f2d
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -9,14 +11,14 @@ slug: Web/API/HTMLHeadingElement
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
 _親である {{domxref("HTMLElement")}} から継承したプロパティもあります。_
 
 - {{domxref("HTMLHeadingElement.align")}} {{deprecated_inline}}
   - : 文字列で、列挙型の属性で周囲のコンテキストに対する見出しの配置を示します。指定可能な値は `"left"`, `"right"`, `"justify"`, `"center"` です。
 
-## メソッド
+## インスタンスメソッド
 
 _独自のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
 
@@ -30,4 +32,4 @@ _独自のメソッドはありません。親である {{domxref("HTMLElement")
 
 ## 関連情報
 
-- このインターフェイスを実装している HTML 要素: {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}
+- このインターフェイスを実装している HTML 要素: {{ HTMLElement("Heading_Elements", "h1")}}, {{ HTMLElement("Heading_Elements", "h2")}}, {{ HTMLElement("Heading_Elements", "h3")}}, {{ HTMLElement("Heading_Elements", "h4")}}, {{ HTMLElement("Heading_Elements", "h5")}}, {{ HTMLElement("Heading_Elements", "h6")}}

@@ -1,19 +1,13 @@
 ---
 title: Allow
 slug: Web/HTTP/Headers/Allow
-tags:
-  - Entête HTTP
-  - HTTP
-  - Reference
-  - entête
-translation_of: Web/HTTP/Headers/Allow
 ---
 
 {{HTTPSidebar}}
 
 L'entête **`Allow`** liste les méthodes supportées par une ressource.
 
-Cet entête doit être envoyée si le serveur répond avec un statut {{HTTPStatus("405")}} `Method Not Allowed` pour indiquer quelles méthodes peuvent être utilisées pour la requête. Une entête `Allow` vide indique que la ressource n'autorise aucune méthode, ce qui peut erriver temporairement pour une ressource donnée, par exemple.
+Cet entête doit être envoyée si le serveur répond avec un statut {{HTTPStatus("405")}} `Method Not Allowed` pour indiquer quelles méthodes peuvent être utilisées pour la requête. Une entête `Allow` vide indique que la ressource n'autorise aucune méthode, ce qui peut arriver temporairement pour une ressource donnée, par exemple.
 
 <table class="properties">
   <tbody>
@@ -47,9 +41,11 @@ Allow: GET, POST, HEAD
 
 ## Spécifications
 
-| Spécification                                | Titre                                                         |
-| -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Allow", "7.4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

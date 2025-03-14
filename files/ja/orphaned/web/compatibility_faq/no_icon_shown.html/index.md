@@ -1,7 +1,6 @@
 ---
 title: アイコンが表示されない
 slug: orphaned/Web/Compatibility_FAQ/No_Icon_Shown.html
-original_slug: Web/Compatibility_FAQ/No_Icon_Shown.html
 ---
 
 ## 概要
@@ -9,7 +8,7 @@ original_slug: Web/Compatibility_FAQ/No_Icon_Shown.html
 一部のアイコンやバナーが表示されません。
 メニューのボタンや、検索実行ボタン、バナーなどが Firefox のみで非表示となってしまいます。
 
-![](https://mdn.mozillademos.org/files/9989/0301.jpg)
+![](0301.jpg)
 
 ## 要因
 
@@ -72,10 +71,10 @@ original_slug: Web/Compatibility_FAQ/No_Icon_Shown.html
 各要因の解決策の代表例として以下があります。
 
 1. **ベンダープレフィックス**
-    webkit 指定の描画やサイズ指定を他ブラウザでも互換性を維持できるよう下記記載のものに修正することで正しく表示可能となります。
+    webkit 指定の描画やサイズ指定を他ブラウザーでも互換性を維持できるよう下記記載のものに修正することで正しく表示可能となります。
 
     - [border-radius](/ja/docs/Web/CSS/border-radius)プロパティ
-    - [linear-gradient()](/ja/docs/Web/CSS/linear-gradient)関数
+    - [linear-gradient()](/ja/docs/Web/CSS/gradient/linear-gradient)関数
     - [box-shadow](/ja/docs/Web/CSS/box-shadow)プロパティ
     - [transform](/ja/docs/Web/CSS/transform)プロパティ
     - [background-size](/ja/docs/Web/CSS/background-size)プロパティ
@@ -131,7 +130,7 @@ original_slug: Web/Compatibility_FAQ/No_Icon_Shown.html
 
 ## メリット
 
-・他のブラウザでも互換性を維持することができます。
+・他のブラウザーでも互換性を維持することができます。
 ・全体のレイアウトを見直すことにより、その後の変更修正も容易になります。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

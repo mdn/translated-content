@@ -1,14 +1,6 @@
 ---
 title: element.insertBefore
 slug: Web/API/Node/insertBefore
-tags:
-  - API
-  - DOM
-  - Enfant
-  - Insertion
-  - Méthodes
-  - Noeud
-translation_of: Web/API/Node/insertBefore
 ---
 
 {{APIRef("DOM")}}
@@ -34,7 +26,7 @@ var insertedNode = parentNode.insertBefore(newNode, referenceNode);
 - `referenceNode`
   - : Le nœud avant lequel `newNode` est inséré. Si c'est `null`, alors `newNode` est inséré à la fin des nœuds enfants de `parentNode`.
 
-> **Note :** _`referenceNode`_ **n'est pas** un paramètre facultatif -- vous devez explicitement transmettre un `Node` ou `null`. Ne pas le fournir ou transmettre des valeurs invalides provoque des [comportements différents](https://code.google.com/p/chromium/issues/detail?id=419780) selon les différentes versions des navigateurs.
+> **Note :** _`referenceNode`_ **n'est pas** un paramètre facultatif — vous devez explicitement transmettre un `Node` ou `null`. Ne pas le fournir ou transmettre des valeurs invalides provoque des [comportements différents](https://code.google.com/p/chromium/issues/detail?id=419780) selon les différentes versions des navigateurs.
 
 ### Valeur de retour
 
@@ -50,26 +42,26 @@ Renvoie l'enfant ajouté (sauf si `newNode` est un {{domxref("DocumentFragment")
 </div>
 
 <script>
-// Crée le nouveau nœud à insérer
-let newNode = document.createElement("span")
+  // Crée le nouveau nœud à insérer
+  let newNode = document.createElement("span");
 
-// Obtient une référence au nœud parent
-let parentDiv = document.getElementById("childElement").parentNode
+  // Obtient une référence au nœud parent
+  let parentDiv = document.getElementById("childElement").parentNode;
 
-// Commence le cas de test [ 1 ] : Existing childElement (tout fonctionne correctement)
-let sp2 = document.getElementById("childElement")
-parentDiv.insertBefore(newNode, sp2)
-// Fin du cas de test [ 1 ]
+  // Commence le cas de test [ 1 ] : Existing childElement (tout fonctionne correctement)
+  let sp2 = document.getElementById("childElement");
+  parentDiv.insertBefore(newNode, sp2);
+  // Fin du cas de test [ 1 ]
 
-// Commence le cas de test [ 2 ] : childElement est de Type undefined
-let sp2 = undefined // Noeud non existant de l'id "childElement".
-parentDiv.insertBefore(newNode, sp2) // Transfert dynamique implicite vers le type Node
-// Fin du cas de test [ 2 ]
+  // Commence le cas de test [ 2 ] : childElement est de Type undefined
+  let sp2 = undefined; // Noeud non existant de l'id "childElement".
+  parentDiv.insertBefore(newNode, sp2); // Transfert dynamique implicite vers le type Node
+  // Fin du cas de test [ 2 ]
 
-// Commence le cas de test [ 3 ] : childElement est de Type "undefined" ( string )
-let sp2 = "undefined" // Noeud non existant de l'id "childElement".
-parentDiv.insertBefore(newNode, sp2) // Génère "Erreur de type : Argument non valide".
-// Fin du cas de test [ 3 ]
+  // Commence le cas de test [ 3 ] : childElement est de Type "undefined" ( string )
+  let sp2 = "undefined"; // Noeud non existant de l'id "childElement".
+  parentDiv.insertBefore(newNode, sp2); // Génère "Erreur de type : Argument non valide".
+  // Fin du cas de test [ 3 ]
 </script>
 ```
 
@@ -81,16 +73,16 @@ parentDiv.insertBefore(newNode, sp2) // Génère "Erreur de type : Argument non 
 </div>
 
 <script>
-// Crée un nouvel élément simple de type <span>
-let sp1 = document.createElement("span")
+  // Crée un nouvel élément simple de type <span>
+  let sp1 = document.createElement("span");
 
-// Obtient l'élément de référence
-let sp2 = document.getElementById("childElement")
-// Get the parent element
-let parentDiv = sp2.parentNode
+  // Obtient l'élément de référence
+  let sp2 = document.getElementById("childElement");
+  // Get the parent element
+  let parentDiv = sp2.parentNode;
 
-// Insert le nouvel élément dans avant sp2
-parentDiv.insertBefore(sp1, sp2)
+  // Insert le nouvel élément dans avant sp2
+  parentDiv.insertBefore(sp1, sp2);
 </script>
 ```
 
@@ -110,16 +102,15 @@ Insérer un élément avant le premier élément enfant en utilisant la proprié
 
 ```js
 // Obtient l'élément parent
-  let parentElement = document.getElementById('parentElement')
-  // Obtient le premier enfant du parent
-  let theFirstChild = parentElement.firstChild
+let parentElement = document.getElementById("parentElement");
+// Obtient le premier enfant du parent
+let theFirstChild = parentElement.firstChild;
 
-  // Crée un nouvel élément
-  let newElement = document.createElement("div")
+// Crée un nouvel élément
+let newElement = document.createElement("div");
 
-  // Insert le nouvel élément avant le premier enfant
-  parentElement.insertBefore(newElement, theFirstChild)
-
+// Insert le nouvel élément avant le premier enfant
+parentElement.insertBefore(newElement, theFirstChild);
 ```
 
 Si l'élément n'a pas de premier enfant, alors `firstChild` est `null`. L'élément est toujours ajouté au parent après le dernier enfant. Comme l'élément parent n'avait pas de premier enfant, il n'avait pas non plus de dernier enfant. Par conséquent, le nouvel élément est le seul élément, après l'insertion.

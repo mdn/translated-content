@@ -1,11 +1,6 @@
 ---
 title: HTMLElement.outerText
 slug: Web/API/HTMLElement/outerText
-tags:
-  - API
-  - DOM
-  - Propriété
-translation_of: Web/API/HTMLElement/outerText
 ---
 
 {{APIRef("DOM")}}
@@ -18,7 +13,7 @@ translation_of: Web/API/HTMLElement/outerText
 
 ## Exemple
 
-Voir [cette réponse proposée sur StackOverflow](http://stackoverflow.com/questions/18481382/what-is-the-difference-between-innertext-and-outertext/18481435#18481435).
+Voir [cette réponse proposée sur StackOverflow](https://stackoverflow.com/questions/18481382/what-is-the-difference-between-innertext-and-outertext/18481435#18481435).
 
 ## Spécification
 
@@ -28,7 +23,7 @@ Microsoft en a publié [une description sur MSDN](<https://msdn.microsoft.com/en
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLElement.outerText")}}
+{{Compat}}
 
 ## Voir aussi
 

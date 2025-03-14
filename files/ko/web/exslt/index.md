@@ -1,23 +1,19 @@
 ---
 title: EXSLT
 slug: Web/EXSLT
-tags:
-  - EXSLT
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/EXSLT
 ---
-{{ XsltRef() }} EXSLT는 [XSLT](ko/XSLT)의 확장입니다. 많은 모듈이 있으며, Firefox에서 지원되는 것들은 다음과 같습니다.
 
-- [Common](#Common) (`exsl`)
+{{ XsltRef() }} EXSLT는 [XSLT](/ko/XSLT)의 확장입니다. 많은 모듈이 있으며, Firefox에서 지원되는 것들은 다음과 같습니다.
+
+- [Common](#common) (`exsl`)
   - : 기본적인 확장 요소와 함수를 제공합니다.
-- [Math](#Math) (`math`)
+- [Math](#math) (`math`)
   - : 노드를 비교하는 기능을 제공합니다.
-- [Regular expressions](#Regular_expressions) (`regexp`)
+- [Regular expressions](#regular_expressions) (`regexp`)
   - : JavaScript 구문 형식의 정규 표현식을 사용할 수 있는 기능을 제공합니다.
-- [Sets](#Sets) (`set`)
+- [Sets](#sets) (`set`)
   - : 집합을 처리하는 기능을 제공합니다.
-- [Strings](#Strings) (`str`)
+- [Strings](#strings) (`str`)
   - : 문자열을 처리하는 함수를 제공합니다.
 
 ### EXSLT 사용하기
@@ -43,8 +39,8 @@ EXSLT Common 꾸러미는 XSLT의 기능을 확장하는 기본적인 함수들�
 
 #### 함수
 
-- [exsl:node-set](ko/EXSLT/exsl/node-set)
-- [exsl:object-type](ko/EXSLT/exsl/object-type)
+- [exsl:node-set](/ko/EXSLT/exsl/node-set)
+- [exsl:object-type](/ko/EXSLT/exsl/object-type)
 
 ### Math
 
@@ -52,10 +48,10 @@ EXSLT Math 꾸러미는 숫자 값들에 대한 처리와 노드를 비교하는
 
 #### 함수
 
-- [math:highest](ko/EXSLT/math/highest)
-- [math:lowest](ko/EXSLT/math/lowest)
-- [math:max](ko/EXSLT/math/max)
-- [math:min](ko/EXSLT/math/min)
+- [math:highest](/ko/EXSLT/math/highest)
+- [math:lowest](/ko/EXSLT/math/lowest)
+- [math:max](/ko/EXSLT/math/max)
+- [math:min](/ko/EXSLT/math/min)
 
 ### Regular expressions
 
@@ -65,9 +61,9 @@ EXSLT 정규 표현식의 이름공간은 `http://exslt.org/regular-expressions`
 
 #### 함수
 
-- [regexp:match](ko/EXSLT/regexp/match)
-- [regexp:replace](ko/EXSLT/regexp/replace)
-- [regexp:test](ko/EXSLT/regexp/test)
+- [regexp:match](/ko/EXSLT/regexp/match)
+- [regexp:replace](/ko/EXSLT/regexp/replace)
+- [regexp:test](/ko/EXSLT/regexp/test)
 
 ### Sets
 
@@ -75,12 +71,12 @@ EXSLT Sets 꾸러미는 집합 연산을 수행하는 함수를 제공합니다.
 
 #### 함수
 
-- [set:difference](ko/EXSLT/set/difference)
-- [set:distinct](ko/EXSLT/set/distinct)
-- [set:intersection](ko/EXSLT/set/intersection)
-- [set:has-same-node](ko/EXSLT/set/has-same-node)
-- [set:leading](ko/EXSLT/set/leading)
-- [set:trailing](ko/EXSLT/set/trailing)
+- [set:difference](/ko/EXSLT/set/difference)
+- [set:distinct](/ko/EXSLT/set/distinct)
+- [set:intersection](/ko/EXSLT/set/intersection)
+- [set:has-same-node](/ko/EXSLT/set/has-same-node)
+- [set:leading](/ko/EXSLT/set/leading)
+- [set:trailing](/ko/EXSLT/set/trailing)
 
 ### Strings
 
@@ -88,9 +84,9 @@ EXSLT Strings 꾸러미는 문자열을 처리하는 함수를 제공합니다. 
 
 #### 함수
 
-- [str:concat](ko/EXSLT/str/concat)
-- [str:split](ko/EXSLT/str/split)
-- [str:tokenize](ko/EXSLT/str/tokenize)
+- [str:concat](/ko/EXSLT/str/concat)
+- [str:split](/ko/EXSLT/str/split)
+- [str:tokenize](/ko/EXSLT/str/tokenize)
 
 ### 참고
 

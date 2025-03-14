@@ -1,14 +1,6 @@
 ---
 title: MediaStreamTrack.clone()
 slug: Web/API/MediaStreamTrack/clone
-tags:
-  - API
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaStreamTrack
-  - Method
-  - Reference
-translation_of: Web/API/MediaStreamTrack/clone
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -18,7 +10,7 @@ translation_of: Web/API/MediaStreamTrack/clone
 ## 구문
 
 ```js
-const newTrack = track.clone()
+const newTrack = track.clone();
 ```
 
 ### 반환 값

@@ -1,12 +1,6 @@
 ---
 title: Navigator.doNotTrack
 slug: Web/API/Navigator/doNotTrack
-tags:
-  - API
-  - DOM
-  - Propriétés
-  - Reference
-translation_of: Web/API/Navigator/doNotTrack
 ---
 
 {{ApiRef("HTML DOM")}}{{SeeCompatTable}}
@@ -38,4 +32,4 @@ dump(window.navigator.doNotTrack);
 
 ## Voir aussi
 
-- [Le guide pratique Do Not Track](/fr/docs/Web/Security/Do_not_track_field_guide)
+- [Le guide pratique Do Not Track](/fr/docs/Web/HTTP/Headers/DNT)

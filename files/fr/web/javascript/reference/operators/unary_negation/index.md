@@ -1,25 +1,32 @@
 ---
 title: Négation unaire (-)
 slug: Web/JavaScript/Reference/Operators/Unary_negation
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Unary_negation
-browser-compat: javascript.operators.unary_negation
 ---
 
 {{jsSidebar("Operators")}}
 
 L'opérateur de négation unaire (`-`) se place devant son opérande et le transforme en son opposé.
 
-{{EmbedInteractiveExample("pages/js/expressions-unary-negation.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Unary negation operator")}}
+
+```js interactive-example
+const x = 4;
+const y = -x;
+
+console.log(y);
+// Expected output: -4
+
+const a = "4";
+const b = -a;
+
+console.log(b);
+// Expected output: -4
+```
 
 ## Syntaxe
 
 ```js
-Opérateur : -x
+Opérateur: -x;
 ```
 
 ## Exemples

@@ -55,12 +55,13 @@ Referrer-Policy: unsafe-url
 
   - : Se enviará un URL completo al realizarse una solicitud de origen equivalente o de origen transversal.
 
-    > **Nota:** Esta directiva filtrará los orígenes y las rutas de acceso de recursos protegidos por TLS a orígenes inseguros. Estudie atentamente el impacto resultante de esta configuración.
+    > [!NOTE]
+    > Esta directiva filtrará los orígenes y las rutas de acceso de recursos protegidos por TLS a orígenes inseguros. Estudie atentamente el impacto resultante de esta configuración.
 
 ## Ejemplos
 
 | Directiva                             | Documento                               | Navegación a                          | Referente                               |
-| ------------------------------------- | --------------------------------------  | ------------------------------------  | --------------------------------------  |
+| ------------------------------------- | --------------------------------------- | ------------------------------------- | --------------------------------------- |
 | **`no-referrer`**                     | <https://ejemplo.com/pagina.html>       | cualquier dominio o ruta de acceso    | ningún referente                        |
 | **`no-referrer-when-downgrade`**      | <https://ejemplo.com/pagina.html>       | <https://ejemplo.com/otrapagina.html> | <https://ejemplo.com/pagina.html>       |
 | **`no-referrer-when-downgrade`**      | <https://ejemplo.com/pagina.html>       | <https://mozilla.org>                 | <https://ejemplo.com/pagina.html>       |
@@ -81,25 +82,11 @@ Referrer-Policy: unsafe-url
 
 ## Especificaciones
 
-| Especificación                                                                                     | Estado                   |
-| -------------------------------------------------------------------------------------------------- | ------------------------ |
-| [Directiva de referentes](https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-header) | Anteproyecto de editores |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Referrer-Policy")}}
-
-> **Nota:** **Notas**:
->
-> - A partir de la versión 53 en adelante, Gecko incluye una preferencia de `about:config` para permitir a los usuarios definir su directiva `Referrer-Policy` predeterminada: `network.http.referer.userControlPolicy`.
-> - A partir de la versión 59 (consulte el informe n.º [587523](https://bugzilla.mozilla.org/show_bug.cgi?id=587523)), esta preferencia ha cambiado de nombre: ahora son `network.http.referer.defaultPolicy` y `network.http.referer.defaultPolicy.pbmode`.
->
-> Los valores posibles son:
->
-> - 0: `no-referrer`
-> - 1: `same-origin`
-> - 2: `strict-origin-when-cross-origin`
-> - 3: `no-referrer-when-downgrade` (la predeterminada)
+{{Compat}}
 
 ## Véase también
 
@@ -108,7 +95,7 @@ Referrer-Policy: unsafe-url
 
   - Un elemento {{HTMLElement("meta")}} con un [nombre de `referrer`](/es/docs/Web/HTML/Element/meta#attr-name).
   - Un atributo `referrerpolicy` en un elemento {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}} o {{HTMLElement("link")}}.
-  - La [relación de enlace](/es/docs/Web/HTML/Link_types) `noreferrer` en un elemento a, area o link (`rel="noreferrer"`).
+  - La [relación de enlace](/es/docs/Web/HTML/Attributes/rel) `noreferrer` en un elemento a, area o link (`rel="noreferrer"`).
   - Al utilizar [Fetch](/es/docs/Web/API/Fetch_API): {{domxref("Request.referrerPolicy")}}
 
 - [Directiva de origen equivalente](/es/docs/Web/Security/Same-origin_policy)

@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
 
 除了返回类型以外，静态方法 **`Reflect.setPrototypeOf()`** 与 {{jsxref("Object.setPrototypeOf()")}} 方法是一样的。它可设置对象的原型（即内部的 `[[Prototype]]` 属性）为另一个对象或 {{jsxref("null")}}，如果操作成功返回 `true`，否则返回 `false`。
 
-{{EmbedInteractiveExample("pages/js/reflect-setprototypeof.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.setPrototypeOf()")}}
+
+```js interactive-example
+const object1 = {};
+
+console.log(Reflect.setPrototypeOf(object1, Object.prototype));
+// Expected output: true
+
+console.log(Reflect.setPrototypeOf(object1, null));
+// Expected output: true
+
+const object2 = {};
+
+console.log(Reflect.setPrototypeOf(Object.freeze(object2), null));
+// Expected output: false
+```
 
 ## 语法
 
@@ -61,7 +76,7 @@ Reflect.setPrototypeOf(target, proto); // false
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.setPrototypeOf()")}}

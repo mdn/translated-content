@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.drawImage()
 slug: Web/API/CanvasRenderingContext2D/drawImage
-translation_of: Web/API/CanvasRenderingContext2D/drawImage
 ---
 
 {{APIRef}}
@@ -13,7 +12,17 @@ La méthode **`CanvasRenderingContext2D.drawImage()`** de l'API 2D des Canvas in
 ```js
 void ctx.drawImage(image, dx, dy);
 void ctx.drawImage(image, dx, dy, dLargeur, dHauteur);
-void ctx.drawImage(image, sx, sy, sLargeur, sHauteur, dx, dy, dLargeur, dHauteur);
+void ctx.drawImage(
+  image,
+  sx,
+  sy,
+  sLargeur,
+  sHauteur,
+  dx,
+  dy,
+  dLargeur,
+  dHauteur,
+);
 ```
 
 ![drawImage](canvas_drawimage.jpg)
@@ -28,7 +37,7 @@ void ctx.drawImage(image, sx, sy, sLargeur, sHauteur, dx, dy, dLargeur, dHauteur
   - : La coordonnée `y` dans le canvas de destination où placer le coin supérieur gauche de l'`image` source.
 - `dLargeur`
   - : La largeur de l'`image` dessinée dans le contexte de la balise canvas. Cela permet d'ajuster la taille de l'image. Si cet argument n'est pas spécifié, l'image prendra sa largeur normale.
-- dHauteur
+- `dHauteur`
   - : La hauteur de l'`image` dessinée dans le contexte de la balise canvas. Cela permet d'ajuster la taille de l'image. Si cet argument n'est pas spécifié, l'image prendra sa hauteur normale.
 - `sx`
   - : La coordonnée `x` du bord en haut à gauche de la partie de l'`image` source à dessiner dans le contexte du canvas.
@@ -92,7 +101,7 @@ ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);</textarea>
 ```js hidden
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-var image = document.getElementById('source');
+var image = document.getElementById("source");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
 var edit = document.getElementById("edit");
@@ -103,14 +112,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

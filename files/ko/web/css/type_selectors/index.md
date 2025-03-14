@@ -1,16 +1,9 @@
 ---
 title: 유형 선택자
 slug: Web/CSS/Type_selectors
-tags:
-  - CSS
-  - HTML
-  - Node
-  - Reference
-  - Selectors
-  - 선택자
-translation_of: Web/CSS/Type_selectors
 ---
-{{CSSRef("Selectors")}}
+
+{{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **유형 선택자**는 노드 이름을 사용해 요소를 선택합니다. 즉 문서 내에서 주어진 유형의 모든 요소를 선택합니다.
 

@@ -1,28 +1,39 @@
 ---
 title: handler.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Proxy
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/construct
 ---
 
 {{JSRef}}
 
 La méthode **`handler.construct()`** est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}. Afin que l'opération `new` puisse être valide sur le proxy correspondant, la cible utilisée doit avoir une méthode interne `[[Construct]]` (autrement dit, l'instruction `new cible` doit être valide).
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-construct.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.construct()", "taller")}}
+
+```js interactive-example
+function monster1(disposition) {
+  this.disposition = disposition;
+}
+
+const handler1 = {
+  construct(target, args) {
+    console.log(`Creating a ${target.name}`);
+    // Expected output: "Creating a monster1"
+
+    return new target(...args);
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+console.log(new proxy1("fierce").disposition);
+// Expected output: "fierce"
+```
 
 ## Syntaxe
 
 ```js
 var p = new Proxy(cible, {
-  construct: function(cible, listeArguments, newTarget) {
-  }
+  construct: function (cible, listeArguments, newTarget) {},
 });
 ```
 
@@ -63,24 +74,24 @@ Si les invariants suivants ne sont pas respectés, le proxy renverra une excepti
 Dans l'exemple qui suit, on piège l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}.
 
 ```js
-var p = new Proxy(function() {}, {
-  construct: function(target, argumentsList) {
+var p = new Proxy(function () {}, {
+  construct: function (target, argumentsList) {
     console.log("called: " + argumentsList.join(", "));
     return { value: argumentsList[0] * 10 };
-  }
+  },
 });
 
 console.log(new p(1).value); // "appel sur : 1"
-                             // 10
+// 10
 ```
 
 Dans cette version, on ne respecte pas la contrainte d'invariance :
 
 ```js
-var p = new Proxy(function() {}, {
-  construct: function(target, argumentsList) {
+var p = new Proxy(function () {}, {
+  construct: function (target, argumentsList) {
     return 1;
-  }
+  },
 });
 
 new p(); // Une exception TypeError est levée
@@ -89,11 +100,14 @@ new p(); // Une exception TypeError est levée
 Dans le code qui suit, le proxy n'est pas correctement initialisé. La cible du proxy doit être un constructeur valide qui puisse être utilisé avec `new`.
 
 ```js
-var p = new Proxy({}, {
-  construct: function(target, argumentsList, newTarget){
-    return {};
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    construct: function (target, argumentsList, newTarget) {
+      return {};
+    },
+  },
+);
 
 new p(); // TypeError: p is not a constructor
 ```

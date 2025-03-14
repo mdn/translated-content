@@ -1,8 +1,8 @@
 ---
 title: RTCPeerConnection.setIdentityProvider()
 slug: Web/API/RTCPeerConnection/setIdentityProvider
-translation_of: Web/API/RTCPeerConnection/setIdentityProvider
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCPeerConnection.setIdentityProvider()`** 메소드는 이름, 통신에 사용된 프로토콜 (옵션), 유저 이름 (옵션)으로 구성된 세 가지 매개변수에 식별 제공자 (Identity Provider, IdP)를 지정합니다. IdP는 주장 (assertion)이 필요한 순간에만 사용 될 것입니다.
@@ -44,4 +44,4 @@ pc.setIdentityAssertion("developer.mozilla.org");
 
 ## 참조
 
-- [WebRTC](/ko/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/ko/docs/Web/API/WebRTC_API)

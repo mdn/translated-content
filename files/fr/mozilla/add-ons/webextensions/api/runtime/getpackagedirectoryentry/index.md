@@ -1,29 +1,18 @@
 ---
 title: runtime.getPackageDirectoryEntry()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getPackageDirectoryEntry
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getPackageDirectoryEntry
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getPackageDirectoryEntry
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Renvoie un objet `DirectoryEntry` représentant le répertoire du package.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
-var gettingEntry = browser.runtime.getPackageDirectoryEntry()
+var gettingEntry = browser.runtime.getPackageDirectoryEntry();
 ```
 
 ### Paramètres
@@ -32,11 +21,11 @@ None.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet `DirectoryEntry` représentant le répertoire du package.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet `DirectoryEntry` représentant le répertoire du package.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.getPackageDirectoryEntry")}}
+{{Compat}}
 
 ## Exemples
 
@@ -51,9 +40,9 @@ gettingEntry.then(gotDirectoryEntry);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

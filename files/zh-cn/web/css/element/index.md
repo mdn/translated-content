@@ -1,7 +1,6 @@
 ---
 title: element
 slug: Web/CSS/element
-original_slug: Web/CSS/element()
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -14,7 +13,7 @@ original_slug: Web/CSS/element()
 
 ## 语法
 
-```
+```css
 element(id)
 ```
 
@@ -25,42 +24,61 @@ element(id)
 
 ## 示例
 
-在支持 `-moz-element()` 的 Firefox 中，可以[实地考察](/samples/cssref/moz-element.html)这些例子。
+在支持 `-moz-element()` 的 Firefox 中，可以[实地考察](https://mdn.dev/archives/media/samples/cssref/moz-element.html)这些例子。
 
 ### 一个比较现实的例子
 
 这个例子将文档中另一个隐藏的 {{HTMLElement("div")}} 元素作为背景。被隐藏的元素本身使用了渐变背景，也包含了一些文字，渐变背景和文字都成为了第一个元素的背景。
 
 ```html
-<div style="width:400px; height:400px; background:-moz-element(#myBackground1) no-repeat;">
+<div
+  style="width:400px; height:400px; background:-moz-element(#myBackground1) no-repeat;">
   <p>This box uses the element with the #myBackground1 ID as its background!</p>
 </div>
 
 <div style="overflow:hidden; height:0;">
-  <div id="myBackground1" style="width:1024px; height:1024px; background-image: linear-gradient(to right, red, orange, yellow, white);">
-  <p style="transform-origin:0 0; transform: rotate(45deg); color:white;">This text is part of the background. Cool, huh?</p>
+  <div
+    id="myBackground1"
+    style="width:1024px; height:1024px; background-image: linear-gradient(to right, red, orange, yellow, white);">
+    <p style="transform-origin:0 0; rotate: 45deg; color:white;">
+      This text is part of the background. Cool, huh?
+    </p>
   </div>
 </div>
 ```
 
+{{EmbedLiveSample("一个比较现实的例子")}}
+
 The {{HTMLElement("div")}} element with the ID "myBackground1" is used as the background for the content including the paragraph "This box uses the element with the #myBackground1 ID as its background!".
 
-![example1.png](/@api/deki/files/4624/=example1.png)
+### 页面预览
 
-### 一个有点怪怪的例子
+这个<a href="https://iamvdo.me/en/blog/css-element-function">基于 Vincent De Oliveira 的示例</a>在 `<div id="css-result">` 之中创建了 `<div id="css-source">` 的预览。
 
-This example uses a hidden {{HTMLElement("button")}} element in a repeating pattern as its background. This demonstrates that you can use arbitrary elements as background, but doesn't necessarily demonstrate good design practices.
+#### HTML
 
 ```html
-<div style="width:400px; height:100px; background:-moz-element(#myBackground2);">
+<div id="css-source">
+  <h1>Page Preview</h1>
 </div>
-
-<div style="overflow:hidden; height:0;">
-  <button id="myBackground2" type="button">Evil button!</button>
-</div>
+<div id="css-result"></div>
 ```
 
-![example2.png](/@api/deki/files/4625/=example2.png)
+#### CSS
+
+```css
+#css-result {
+  background: -moz-element(#css-source) no-repeat;
+  width: 256px;
+  height: 32px;
+  background-size: 80%;
+  border: dashed;
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample("页面预览")}}
 
 ## 规范
 

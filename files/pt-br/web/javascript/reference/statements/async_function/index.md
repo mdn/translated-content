@@ -1,7 +1,6 @@
 ---
 title: Funções assíncronas
 slug: Web/JavaScript/Reference/Statements/async_function
-original_slug: Web/JavaScript/Reference/Statements/funcoes_assincronas
 ---
 
 {{jsSidebar("Statements")}}
@@ -31,7 +30,8 @@ Quando uma função assíncrona é chamada, ela retorna uma {{jsxref("Promise")}
 
 Uma função assíncrona pode conter uma expressão {{jsxref("Operators/await", "await")}}, que pausa a execução da função assíncrona e espera pela resolução da `Promise` passada, e depois retoma a execução da função assíncrona e retorna o valor resolvido.
 
-> **Nota:** A proposta das funções `async/await` é de simplificar o uso de forma síncrona das `Promises` e executar alguns procedimentos em um grupo de `Promises`. Assim como `Promises` são similares a `callbacks` estruturados, funções `async/await` são similares à junção de `generators` com `Promises`.
+> [!NOTE]
+> A proposta das funções `async/await` é de simplificar o uso de forma síncrona das `Promises` e executar alguns procedimentos em um grupo de `Promises`. Assim como `Promises` são similares a `callbacks` estruturados, funções `async/await` são similares à junção de `generators` com `Promises`.
 
 ## Exemplos
 
@@ -39,7 +39,7 @@ Uma função assíncrona pode conter uma expressão {{jsxref("Operators/await", 
 
 ```js
 function resolverDepoisDe2Segundos(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
@@ -49,11 +49,11 @@ function resolverDepoisDe2Segundos(x) {
 async function adicionar1(x) {
   var a = resolverDepoisDe2Segundos(20);
   var b = resolverDepoisDe2Segundos(30);
-  return x + await a + await b;
+  return x + (await a) + (await b);
 }
 
-adicionar1(10).then(v => {
-  console.log(v);  // exibe 60 depois de 2 segundos.
+adicionar1(10).then((v) => {
+  console.log(v); // exibe 60 depois de 2 segundos.
 });
 
 async function adicionar2(x) {
@@ -62,8 +62,8 @@ async function adicionar2(x) {
   return x + a + b;
 }
 
-adicionar2(10).then(v => {
-  console.log(v);  // exibe 60 depois de 4 segundos.
+adicionar2(10).then((v) => {
+  console.log(v); // exibe 60 depois de 4 segundos.
 });
 ```
 
@@ -74,10 +74,10 @@ Uma API que retorna uma {{jsxref("Promise")}} vai resultar em uma cadeia de `Pro
 ```js
 function pegarDadosProcessados(url) {
   return baixarDados(url) // retorna uma Promise
-    .catch(e => {
-      return baixarDadosReservas(url) // retorna uma Promise
+    .catch((e) => {
+      return baixarDadosReservas(url); // retorna uma Promise
     })
-    .then(v => {
+    .then((v) => {
       return processarDadosNoWorker(v); // retorna uma Promise
     });
 }
@@ -90,7 +90,7 @@ async function pegarDadosProcessados(url) {
   let v;
   try {
     v = await baixarDados(url);
-  } catch(e) {
+  } catch (e) {
     v = await baixarDadosReservas(url);
   }
   return processarDadosNoWorker(v);
@@ -101,13 +101,11 @@ Note que no exemplo acima não tem a instrução `await` na instrução do `retu
 
 ## Especificações
 
-| Especificação                                                                                        | Situação                     | Comentário                   |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ESDraft')}} | Definição inicial no ES2017. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.async_function")}}
+{{Compat}}
 
 ### Notas específicas do Firefox
 

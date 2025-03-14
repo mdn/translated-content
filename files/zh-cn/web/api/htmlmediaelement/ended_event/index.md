@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: ended 事件'
+title: "HTMLMediaElement: ended 事件"
 slug: Web/API/HTMLMediaElement/ended_event
 ---
 
@@ -38,7 +38,8 @@ slug: Web/API/HTMLMediaElement/ended_event
   </tbody>
 </table>
 
-> **备注：** 该事件也在 [Media Capture and Streams](/zh-CN/docs/Web/API/Media_Streams_API) 和 [Web Audio](/zh-CN/docs/Web/API/Web_Audio_API) 这两个 API 中定义。
+> [!NOTE]
+> 该事件也在[媒体捕捉与媒体流](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)和 [Web Audio](/zh-CN/docs/Web/API/Web_Audio_API) 这两个 API 中定义。
 
 ## 示例
 
@@ -47,22 +48,26 @@ slug: Web/API/HTMLMediaElement/ended_event
 使用 `addEventListener()`：
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('ended', (event) => {
-  console.log('Video stopped either because 1) it was over, ' +
-      'or 2) no further data is available.');
+video.addEventListener("ended", (event) => {
+  console.log(
+    "Video stopped either because 1) it was over, " +
+      "or 2) no further data is available.",
+  );
 });
 ```
 
 使用 `onended` 事件处理器属性：
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onended = (event) => {
-  console.log('Video stopped either because 1) it was over, ' +
-      'or 2) no further data is available.');
+  console.log(
+    "Video stopped either because 1) it was over, " +
+      "or 2) no further data is available.",
+  );
 };
 ```
 
@@ -101,9 +106,9 @@ video.onended = (event) => {
 - {{domxref("HTMLVideoElement")}}
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
-- [Media Capture and Streams](/zh-CN/docs/Web/API/Media_Streams_API)
+- [媒体捕捉与媒体流](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)
 
-  - [Media Capture and Streams](/zh-CN/docs/Web/API/Media_Streams_API)[: ended 事件](/zh-CN/docs/Web/API/MediaStreamTrack/ended_event)
+  - [媒体捕捉与媒体流](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)[：ended 事件](/zh-CN/docs/Web/API/MediaStreamTrack/ended_event)
 
 - [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)
 

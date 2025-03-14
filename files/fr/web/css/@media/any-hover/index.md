@@ -1,11 +1,6 @@
 ---
 title: any-hover
 slug: Web/CSS/@media/any-hover
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
-translation_of: Web/CSS/@media/any-hover
 ---
 
 {{CSSRef}}

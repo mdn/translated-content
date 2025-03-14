@@ -1,12 +1,6 @@
 ---
 title: 'SyntaxError: "x" is a reserved identifier'
 slug: Web/JavaScript/Reference/Errors/Reserved_identifier
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Reserved_identifier
-original_slug: Web/JavaScript/Reference/Erreurs/Reserved_identifier
 ---
 
 {{jsSidebar("Errors")}}
@@ -25,7 +19,7 @@ SyntaxError: Unexpected reserved word (Chrome)
 
 ## Quel est le problème ?
 
-[Les mots-clés réservés](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Mots-clés_réservés_selon_ECMAScript_2015) lèveront une exception s'ils sont utilisés en tant qu'identifiants. Voici les mots-clés réservés en mode strict et en mode _sloppy_ :
+[Les mots-clés réservés](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#mots-clés_réservés_selon_ecmascript_2015) lèveront une exception s'ils sont utilisés en tant qu'identifiants. Voici les mots-clés réservés en mode strict et en mode _sloppy_ :
 
 - `enum`
 
@@ -68,7 +62,7 @@ var liste = ["pomme", "poire", "pêches"];
 
 ### Mettre à jour les anciens navigateurs
 
-Si vous utilisez un ancien navigateur qui n'implémente pas [`let`](/fr/docs/Web/JavaScript/Reference/Instructions/let) ou [`class`](/fr/docs/Web/JavaScript/Reference/Instructions/class), vous devrez mettre à jour votre navigateur :
+Si vous utilisez un ancien navigateur qui n'implémente pas [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) ou [`class`](/fr/docs/Web/JavaScript/Reference/Statements/class), vous devrez mettre à jour votre navigateur :
 
 ```js
 "use strict";

@@ -13,8 +13,8 @@ Este status de resposta indica que o verbo HTTP utilizado não é suportado, por
 
 ## Specifications
 
-| Specification                                                        | Title                                                         |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Specification                                       | Title                                                         |
+| --------------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "405 Method Not Allowed" , "6.5.5")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## See also

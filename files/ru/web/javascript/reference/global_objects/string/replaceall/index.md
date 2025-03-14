@@ -1,7 +1,6 @@
 ---
 title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
-translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 ---
 
 {{JSRef}}
@@ -10,7 +9,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 
 Исходная строка остаётся без изменений.
 
-{{EmbedInteractiveExample("pages/js/string-replaceall.html")}}
+{{InteractiveExample("JavaScript Demo: String.replaceAll()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+console.log(paragraph.replaceAll("dog", "monkey"));
+// Expected output: "I think Ruth's monkey is cuter than your monkey!"
+
+// Global flag required when calling replaceAll with regex
+const regex = /Dog/gi;
+console.log(paragraph.replaceAll(regex, "ferret"));
+// Expected output: "I think Ruth's ferret is cuter than your ferret!"
+```
 
 ## Syntax
 
@@ -18,7 +29,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 ```
 
-> **Примечание:** Когда вы используете `regexp` вы должны установить флаг глобального поиска ("g"), иначе вернётся ошибка `TypeError`: "replaceAll must be called with a global RegExp".
+> [!NOTE]
+> Когда вы используете `regexp` вы должны установить флаг глобального поиска ("g"), иначе вернётся ошибка `TypeError`: "replaceAll must be called with a global RegExp".
 
 ### Parameters
 
@@ -27,9 +39,9 @@ const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 - `substr`
   - : Подстрока, которая заменится `newSubstr`. Обрабатывается как буквенная строка, не интерпретируется как регулярное выражение.
 - `newSubstr` (replacement)
-  - : Новая строка, которая заменяет найденные подстроки указанные в `regexp` или `substr` параметрах. Поддерживается ряд специальных шаблонов замены; смотрите "[Specifying a string as a parameter](#Specifying_a_string_as_a_parameter)" блок ниже.
+  - : Новая строка, которая заменяет найденные подстроки указанные в `regexp` или `substr` параметрах. Поддерживается ряд специальных шаблонов замены; смотрите "[Specifying a string as a parameter](#specifying_a_string_as_a_parameter)" блок ниже.
 - `function` (replacement)
-  - : Функция вызванная при создании новой строки которая используется для замены совпадений указанных в `regexp` or `substr`. Аргументы применяемы в этой функции описываются в "[Specifying a function as a parameter](#Specifying_a_function_as_a_parameter)" блок ниже.
+  - : Функция вызванная при создании новой строки которая используется для замены совпадений указанных в `regexp` or `substr`. Аргументы применяемы в этой функции описываются в "[Specifying a function as a parameter](#specifying_a_function_as_a_parameter)" блок ниже.
 
 ### Return value
 
@@ -43,12 +55,12 @@ const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 
 Заменённая строка может включатся в следующие специальные шаблоны:
 
-| Pattern  | Inserts                                                                                                                                                                                                                                    |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `$$`     | Вставляет `"$"`.                                                                                                                                                                                                                           |
-| `$&`     | Вставлять совпадения.                                                                                                                                                                                                                      |
-| `` $` `` | Вставляет часть строки которая находится перед совпадениями (строка соответствующая шаблону).                                                                                                                                              |
-| `$'`     | Вставляет часть строки которая следует после совпадения (строка соответствующая шаблону).                                                                                                                                                  |
+| Pattern  | Inserts                                                                                                                                                                                                                            |
+| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$$`     | Вставляет `"$"`.                                                                                                                                                                                                                   |
+| `$&`     | Вставлять совпадения.                                                                                                                                                                                                              |
+| `` $` `` | Вставляет часть строки которая находится перед совпадениями (строка соответствующая шаблону).                                                                                                                                      |
+| `$'`     | Вставляет часть строки которая следует после совпадения (строка соответствующая шаблону).                                                                                                                                          |
 | `$n`     | Где `n` положительное цело число меньше чем 100, вставляет `n`th строки указанные в скобках, частичные совпадения, при условии, что первый аргумент был {{jsxref("RegExp")}} object. Обратите внимание, что это 1-индексированный. |
 
 ### Указание функции в качестве параметра
@@ -59,12 +71,12 @@ const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 
 Функция имеет следующие аргументы:
 
-| Possible name | Supplied value                                                                                                                                                                                                       |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `match`       | Найденная постройка. (Соответствует `$&` указанному выше)                                                                                                                                                            |
-| `p1, p2, ...` | _n_th количество строк найденных групповыми скобками указанные первым параметром в регулярном выражении. (Соответствует `$1`, `$2`, см. выше) Для примера, если `/(\a+)(\b+)/`, то `p1` это `\a+`, а `p2` это `\b+`. |
-| `offset`      | Смещение совпадающей подстроки в пределах всей исследуемой строки. (Например, если вся строка была 'abcd', а соответствующая подстрока была 'bc', то этот аргумент будет равен 1.)                                   |
-| `string`      | Исследуется вся цепочка.                                                                                                                                                                                             |
+| Possible name | Supplied value                                                                                                                                                                                                        |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `match`       | Найденная постройка. (Соответствует `$&` указанному выше)                                                                                                                                                             |
+| `p1, p2, ...` | \_n_th количество строк найденных групповыми скобками указанные первым параметром в регулярном выражении. (Соответствует `$1`, `$2`, см. выше) Для примера, если `/(\a+)(\b+)/`, то `p1` это `\a+`, а `p2` это `\b+`. |
+| `offset`      | Смещение совпадающей подстроки в пределах всей исследуемой строки. (Например, если вся строка была 'abcd', а соответствующая подстрока была 'bc', то этот аргумент будет равен 1.)                                    |
+| `string`      | Исследуется вся цепочка.                                                                                                                                                                                              |
 
 (Точное количество аргументов зависит от того, является ли первый аргумент регулярным выражением — и, если да, то аргументов будет столько сколько указанно в скобках.)
 
@@ -73,7 +85,7 @@ const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 ### Using replaceAll
 
 ```js
-'aabbcc'.replaceAll('b', '.');
+"aabbcc".replaceAll("b", ".");
 // 'aa..cc'
 ```
 
@@ -89,21 +101,19 @@ TypeError: replaceAll must be called with a global RegExp
 Это работает:
 
 ```js example-good
-'aabbcc'.replaceAll(/b/g, '.');
-"aa..cc"
+"aabbcc".replaceAll(/b/g, ".");
+("aa..cc");
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.replaceall', 'String.prototype.replaceAll')}} |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("String.prototype.replace", "String.prototype.replace()")}}
 - {{jsxref("String.prototype.match", "String.prototype.match()")}}

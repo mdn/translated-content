@@ -1,63 +1,370 @@
 ---
 title: stroke-linejoin
 slug: Web/SVG/Attribute/stroke-linejoin
+l10n:
+  sourceCommit: 4dec42ed700040565e8af0e14ff104054ebc20f5
 ---
 
-« [SVG 属性リファレンスホーム](/ja/docs/Web/SVG/Attribute)
+{{SVGRef}}
 
-`stroke-linejoin` 属性は線を引いた時のパスの曲がりまたは基本的な輪郭の形状を指定します。
+**`stroke-linejoin`** 属性は、ストローク（線）が描かれたときにパスの角に使用する形状を定義する表示属性です。
 
-プレゼンテーション属性のため、直接 CSS スタイルシートの中で定義したプロパティとして使うこともできます。
+> [!NOTE]
+> プレゼンテーション属性であるため、`stroke-linejoin` は CSS プロパティとして使用できます。
 
-**注意:** `miter` オプションの最終的な見た目は [`stroke-miterlimit`](/ja/docs/Web/SVG/Attribute/stroke-miterlimit) 属性の値の影響を受けます。
+この属性は次の SVG 要素で使用できます。
 
-## 使用可能な場所
-
-| カテゴリ       | プレゼンテーション属性                                                                 |
-| -------------- | -------------------------------------------------------------------------------------- |
-| 値             | **miter** \| round \| bevel \| inherit                                                 |
-| アニメーション | Yes                                                                                    |
-| 標準文書       | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#StrokeLinejoinProperty) |
+- {{SVGElement('path')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
 
 ## 例
 
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
 ```html
-<?xml version="1.0"?>
-<svg width="120" height="300"
-     viewBox="0 0 120 300" version="1.1"
-     xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+  <!--
+  左上のパス:
+  "miter" 値の効果
+  -->
+  <path
+    d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
+    stroke="black"
+    fill="none"
+    stroke-linejoin="miter" />
 
-    <polyline stroke-linejoin="miter"
-              points="-20,115 60,40 140,115"
-              stroke="black" stroke-width="40"
-              fill="none" />
+  <!--
+  中央のパス:
+  "round" 値の効果
+  -->
+  <path
+    d="M7,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
+    stroke="black"
+    fill="none"
+    stroke-linejoin="round" />
 
-    <polyline stroke-linejoin="round"
-              points="-20,200 60,125 140,200"
-              stroke="black" stroke-width="40"
-              fill="none" />
+  <!--
+  右上のパス:
+  "bevel" 値の効果
+  -->
+  <path
+    d="M13,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
+    stroke="black"
+    fill="none"
+    stroke-linejoin="bevel" />
 
-    <polyline stroke-linejoin="bevel"
-              points="-20,285 60,210 140,285"
-              stroke="black" stroke-width="40"
-              fill="none" />
+  <!--
+  左下のパス:
+  "miter-clip" 値の効果
+  対応していない場合は "miter" に代替される
+  -->
+  <path
+    d="M3,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
+    stroke="black"
+    fill="none"
+    stroke-linejoin="miter-clip" />
 
-    <path d="M-20,115 L60,40 L140,115 M-20,200 L60,125 L140,200 M-20,285 L60,210 L140,285"
-          stroke="white" fill="none" />
+  <!--
+  右下のパス:
+  "arcs" 値の効果
+  対応していない場合は "miter" に代替される
+  -->
+  <path
+    d="M9,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
+    stroke="black"
+    fill="none"
+    stroke-linejoin="arcs" />
+
+  <!--
+  次のピンクの線は、各ストロークのパスの位置を強調しています。
+  -->
+  <g id="highlight">
+    <path
+      d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
+      stroke="pink"
+      fill="none"
+      stroke-width="0.025" />
+    <circle cx="1" cy="5" r="0.05" fill="pink" />
+    <circle cx="3" cy="2" r="0.05" fill="pink" />
+    <circle cx="5" cy="5.5" r="0.05" fill="pink" />
+  </g>
+  <use href="#highlight" x="6" />
+  <use href="#highlight" x="12" />
+  <use href="#highlight" x="2" y="6" />
+  <use href="#highlight" x="8" y="6" />
 </svg>
 ```
 
-**Live sample**
+{{EmbedLiveSample("Example", '100%', 400)}}
 
-{{ EmbedLiveSample('Example','120','300') }}
+## 使用場面
 
-## 要素
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <code>arcs</code> | <code>bevel</code> |<code>miter</code> |
+        <code>miter-clip</code> | <code>round</code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><code>miter</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>離散的</td>
+    </tr>
+  </tbody>
+</table>
 
-以下の要素で `stroke-linejoin` 属性を使うことができます
+### arcs
 
-- [Shape 要素](/ja/SVG/Element#Shape) »
-- [Text content 要素](/ja/SVG/Element#TextContent) »
+> **メモ:** `arcs` は SVG2 で導入されたものであり、まだ広く対応されていません。詳しくは下記の[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
 
-## 関連
+`arcs` 値は、パスの区間同士を結合するために円弧のコーナーを使用することを示します。円弧の形状は、結合点のストロークの外側の辺を、結合点の外側の辺と同じ曲率の円弧で拡張することによって形成されます。
 
-- [stroke-miterlimit](/ja/docs/Web/SVG/Attribute/stroke-miterlimit)
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <!-- "arcs" 値の効果 -->
+  <path
+    d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3"
+    stroke="black"
+    fill="none"
+    stroke-linejoin="arcs" />
+
+  <!--
+  次のピンクの線は、各ストロークのパスの位置を強調しています。
+  -->
+  <g id="p">
+    <path
+      d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3"
+      stroke="pink"
+      fill="none"
+      stroke-width="0.025" />
+    <circle cx="1" cy="5" r="0.05" fill="pink" />
+    <circle cx="3" cy="2" r="0.05" fill="pink" />
+    <circle cx="5" cy="5" r="0.05" fill="pink" />
+  </g>
+</svg>
+```
+
+{{EmbedLiveSample('arcs', '100%', 200)}}
+
+### bevel
+
+`bevel` 値は、パスの区間同士を結合するために面取りされたコーナーを使用することを示します。
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <!-- Effect of the "bevel" value -->
+  <path
+    d="M1,5 l2,-3 l2,3"
+    stroke="black"
+    fill="none"
+    stroke-linejoin="bevel" />
+
+  <!--
+  次のピンクの線は、各ストロークのパスの位置を強調しています。
+  -->
+  <g id="p">
+    <path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" />
+    <circle cx="1" cy="5" r="0.05" fill="pink" />
+    <circle cx="3" cy="2" r="0.05" fill="pink" />
+    <circle cx="5" cy="5" r="0.05" fill="pink" />
+  </g>
+</svg>
+```
+
+{{EmbedLiveSample('bevel', '100%', 200)}}
+
+### miter
+
+`miter` 値は、パスの区間同士をつなぐために鋭いコーナーを使用することを示します。コーナーは、パスの区間同士のタンジェントで、ストロークの外縁を交差するまで伸ばすことで形成します。
+
+> [!NOTE]
+> これが {{SVGAttr('stroke-miterlimit')}} を超えると、結合点は `bevel` で代替されます。
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg">
+  <!-- Effect of the "miter" value -->
+  <path
+    d="M1,5 l2,-3 l2,3"
+    stroke="black"
+    fill="none"
+    stroke-linejoin="miter" />
+
+  <!-- 既定マイター制限を超えた鋭角に対する "miter" 値の効果 -->
+  <path
+    d="M7,5 l0.75,-3 l0.75,3"
+    stroke="black"
+    fill="none"
+    stroke-linejoin="miter" />
+
+  <!-- 以下の赤い点線は、miter 値が bevel 値に代替される位置を示す -->
+  <path
+    d="M0,0 h10"
+    stroke="red"
+    stroke-dasharray="0.05"
+    stroke-width="0.025" />
+
+  <!-- 次のピンクの線は、各ストロークのパスの位置を強調 -->
+  <g>
+    <path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" />
+    <circle cx="1" cy="5" r="0.05" fill="pink" />
+    <circle cx="3" cy="2" r="0.05" fill="pink" />
+    <circle cx="5" cy="5" r="0.05" fill="pink" />
+
+    <path
+      d="M7,5 l0.75,-3 l0.75,3"
+      stroke="pink"
+      fill="none"
+      stroke-width="0.025" />
+    <circle cx="7" cy="5" r="0.05" fill="pink" />
+    <circle cx="7.75" cy="2" r="0.05" fill="pink" />
+    <circle cx="8.5" cy="5" r="0.05" fill="pink" />
+  </g>
+</svg>
+```
+
+{{EmbedLiveSample('miter', '100%', 200)}}
+
+### miter-clip
+
+> **メモ:** `miter-clip` は SVG2 で導入されたものであり、まだ広く対応されていません。詳しくは下記の[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
+
+`miter-clip` 値は、パスの区間同士をつなぐために鋭いコーナーを使用することを示します。コーナーは、パスの区間同士のタンジェントでストロークの外縁を交差するまで伸ばすことで形成します。
+
+{{SVGAttr('stroke-miterlimit')}} を超えると、パスセグメントの交点から、{{SVGAttr('stroke-miterlimit')}} の値の半分にストローク幅を掛けた距離でマイターが切り取られます。これは、とても鋭いな結合やアニメーションの場合に `miter` よりも良い描画結果になります。
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg">
+  <!-- "miter-clip" 値の効果 -->
+  <path
+    d="M1,5 l2,-3 l2,3"
+    stroke="black"
+    fill="none"
+    stroke-linejoin="miter-clip" />
+
+  <!-- 既定マイター制限を超える鋭角での "miter-clip" 値の効果 -->
+  <path
+    d="M7,5 l0.75,-3 l0.75,3"
+    stroke="black"
+    fill="none"
+    stroke-linejoin="miter-clip" />
+
+  <!-- 以下の赤い点線は、クリップが起こるべき場所を示す -->
+  <path
+    d="M0,0 h10"
+    stroke="red"
+    stroke-dasharray="0.05"
+    stroke-width="0.025" />
+
+  <!-- 以下のピンクの行は、各ストロークのパスの位置を強調しています。 -->
+  <g>
+    <path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" />
+    <circle cx="1" cy="5" r="0.05" fill="pink" />
+    <circle cx="3" cy="2" r="0.05" fill="pink" />
+    <circle cx="5" cy="5" r="0.05" fill="pink" />
+
+    <path
+      d="M7,5 l0.75,-3 l0.75,3"
+      stroke="pink"
+      fill="none"
+      stroke-width="0.025" />
+    <circle cx="7" cy="5" r="0.05" fill="pink" />
+    <circle cx="7.75" cy="2" r="0.05" fill="pink" />
+    <circle cx="8.5" cy="5" r="0.05" fill="pink" />
+  </g>
+</svg>
+```
+
+{{EmbedLiveSample('miter-clip', '100%', 200)}}
+
+### round
+
+`round` 値は、パス区間を接続するのに丸い角を使用することを示します。
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <!-- Effect of the "round" value -->
+  <path
+    d="M1,5 l2,-3 l2,3"
+    stroke="black"
+    fill="none"
+    stroke-linejoin="round" />
+
+  <!--
+  次のピンクの線は、各ストロークのパスの位置を強調しています。
+  -->
+  <g id="p">
+    <path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" />
+    <circle cx="1" cy="5" r="0.05" fill="pink" />
+    <circle cx="3" cy="2" r="0.05" fill="pink" />
+    <circle cx="5" cy="5" r="0.05" fill="pink" />
+  </g>
+</svg>
+```
+
+{{EmbedLiveSample('round', '100%', 200)}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

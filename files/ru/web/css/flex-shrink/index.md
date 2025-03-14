@@ -1,15 +1,53 @@
 ---
 title: flex-shrink
 slug: Web/CSS/flex-shrink
-translation_of: Web/CSS/flex-shrink
 ---
+
 {{CSSRef}}
 
-**`flex-shrink`** — свойство [CSS](/ru/docs/CSS), которое определяет фактор сжатия flex-элемента. Flex-элементы будут заполнять контейнер в зависимости от значения `flex-shrink`, когда стандартная ширина flex-элементов шире, чем flex-контейнер.
+**`flex-shrink`** — свойство [CSS](/ru/docs/Web/CSS), которое определяет фактор сжатия flex-элемента. Flex-элементы будут заполнять контейнер в зависимости от значения `flex-shrink`, когда стандартная ширина flex-элементов шире, чем flex-контейнер.
 
 flex-shrink используется вместе со свойствами flex {{cssxref("flex-grow")}} и {{cssxref("flex-basis")}}. Обычно определяется с помощью сокращения {{cssxref("flex")}}.
 
-{{EmbedInteractiveExample("pages/css/flex-shrink.html")}}
+{{InteractiveExample("CSS Demo: flex-shrink")}}
+
+```css interactive-example-choice
+flex-shrink: 0;
+```
+
+```css interactive-example-choice
+flex-shrink: 1;
+```
+
+```css interactive-example-choice
+flex-shrink: 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">I shrink</div>
+  <div>Item Two</div>
+  <div>Item Three</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  border: 1px solid #c5c5c5;
+  width: auto;
+  max-height: 300px;
+  display: flex;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 300px;
+}
+```
 
 ## Синтаксис
 
@@ -18,7 +56,7 @@ flex-shrink используется вместе со свойствами flex
 flex-shrink: 2;
 flex-shrink: 0.6;
 
-/* Глобальное значение */
+/* Глобальные значения */
 flex-shrink: inherit;
 flex-shrink: initial;
 flex-shrink: unset;
@@ -62,7 +100,7 @@ flex-shrink: unset;
 
 #content div {
   flex-basis: 120px;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .box {
@@ -76,7 +114,7 @@ flex-shrink: unset;
 
 ### Результат
 
-{{ EmbedLiveSample('Пример', '500px', '300px', '', 'Web/CSS/flex-shrink') }}
+{{ EmbedLiveSample('Пример', '100%', '300') }}
 
 ## Спецификации
 
@@ -88,4 +126,4 @@ flex-shrink: unset;
 
 ## Смотрите также
 
-- [Using CSS flexible boxes](/ru/docs/CSS/Using_CSS_flexible_boxes)
+- [Using CSS flexible boxes](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)

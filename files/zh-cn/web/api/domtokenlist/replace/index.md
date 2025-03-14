@@ -9,8 +9,8 @@ slug: Web/API/DOMTokenList/replace
 
 ## 语法
 
-```
-tokenList.replace(oldToken, newToken);
+```js-nolint
+replace(oldToken, newToken)
 ```
 
 ### 参数
@@ -24,9 +24,10 @@ tokenList.replace(oldToken, newToken);
 
 boolean 类型，如果`oldToken`被成功替换，返回 `true` ，否则返回`false`
 
-> **备注：** In older browsers, `replace()` returns void.
+> [!NOTE]
+> In older browsers, `replace()` returns void.
 
-## Examples
+## 示例
 
 在下面的例子中，我们使用{{domxref("Element.classList")}}方法，将设置在{{htmlelement("span")}} 元素上的 class 列表检索为`DOMTokenList` 类型。接着我们替换一个字符串，并且将新列表写入到 `<span>` 的内容{{domxref("Node.textContent")}}中。
 
@@ -48,13 +49,13 @@ console.log(result);
 if (result) {
   span.textContent = classes;
 } else {
-  span.textContent = 'token not replaced successfully';
+  span.textContent = "token not replaced successfully";
 }
 ```
 
 输出如下：
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ EmbedLiveSample('示例', '100%', 60) }}
 
 ## 规范
 

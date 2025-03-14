@@ -1,14 +1,6 @@
 ---
 title: PublicKeyCredential
 slug: Web/API/PublicKeyCredential
-tags:
-  - API
-  - Interface
-  - PublicKeyCredential
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-translation_of: Web/API/PublicKeyCredential
 ---
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
@@ -27,7 +19,7 @@ Les autres interfaces qui héritent de {{domxref("Credential")}} sont :
 - {{domxref("PublicKeyCredential.type")}} {{ReadOnlyInline()}}
   - : Propriété héritée depuis {{domxref("Credential")}}. Dans le cas de `PublicKeyCredentials`, cette propriété vaut toujours `"public-key"`.
 - {{domxref("PublicKeyCredential.id")}} {{ReadOnlyInline()}}
-  - : Propriété héritée depuis {{domxref("Credential")}} et surchargée afin de correspondre à l'[encodage en base64url](/fr/docs/Web/API/WindowBase64/Décoder_encoder_en_base64) de `PublicKeyCredential.rawId`.
+  - : Propriété héritée depuis {{domxref("Credential")}} et surchargée afin de correspondre à l'[encodage en base64url](/fr/docs/Glossary/Base64) de `PublicKeyCredential.rawId`.
 - {{domxref("PublicKeyCredential.rawId")}} {{ReadOnlyInline()}}
   - : Un objet {{domxref("ArrayBuffer")}} qui contient l'identifiant unique global/universel pour cette instance `PublicKeyCredential`. Cet identifiant peut être utilisé afin de rechercher les informations d'authentification avec les futurs appels à {{domxref("CredentialsContainer.get")}}.
 - {{domxref("PublicKeyCredential.response")}} {{ReadOnlyInline()}}

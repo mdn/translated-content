@@ -43,7 +43,7 @@ shape-outside: unset;
   - : 该浮动区域不产生影响，行内元素以默认的方式包裹着该元素的 margin box。
 - `<shape-box>`
 
-  - : 根据浮动元素的边缘（通过 [CSS box model](/zh-CN/docs/Web/CSS/box_model) 来定义）形状计算出浮动的区域。可能是 `margin-box`, `border-box`, `padding-box`, 或者 `content-box`。这个形状包括了由 {{cssxref("border-radius")}} 属性制造出来的弧度（与 {{cssxref("background-clip")}} 的表现类似）。
+  - : 根据浮动元素的边缘（通过 [CSS box model](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) 来定义）形状计算出浮动的区域。可能是 `margin-box`, `border-box`, `padding-box`, 或者 `content-box`。这个形状包括了由 {{cssxref("border-radius")}} 属性制造出来的弧度（与 {{cssxref("background-clip")}} 的表现类似）。
 
     - `margin-box`
       - : 定义一个由外边距的外边缘封闭形成的形状。这个形状的角的半径由相应的{{cssxref("border-radius")}} 和{{cssxref("margin")}} 的值决定。如果 `border-radius / margin` 的比率大于等于 `1` , 那么这个 margin box 的角的弧度就是 `border-radius + margin` ；如果比率小于 `1`，那么这个 margin box 的角的弧度就是 `border-radius + (margin * (1 + (ratio-1)^3))` 。
@@ -85,10 +85,9 @@ shape-outside: unset;
   <div class="left"></div>
   <div class="right"></div>
   <p>
-    Sometimes a web page's text content appears to be
-    funneling your attention towards a spot on the page
-    to drive you to follow a particular link. Sometimes
-    you don't notice.
+    Sometimes a web page's text content appears to be funneling your attention
+    towards a spot on the page to drive you to follow a particular link.
+    Sometimes you don't notice.
   </p>
 </div>
 ```
@@ -142,11 +141,11 @@ p {
 
 ## 参见
 
-- [CSS Shapes](/zh-CN/docs/Web/CSS/CSS_Shapes)
-- [Overview of CSS Shapes](/zh-CN/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
-- [Shapes from Box Values](/zh-CN/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values)
-- [Basic Shapes](/zh-CN/docs/Web/CSS/CSS_Shapes/Basic_Shapes)
-- [Shapes from Images](/zh-CN/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
+- [CSS Shapes](/zh-CN/docs/Web/CSS/CSS_shapes)
+- [Overview of CSS Shapes](/zh-CN/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [Shapes from Box Values](/zh-CN/docs/Web/CSS/CSS_shapes/From_box_values)
+- [Basic Shapes](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_Shapes)
+- [Shapes from Images](/zh-CN/docs/Web/CSS/CSS_shapes/Shapes_from_images)
 - {{cssxref("&lt;basic-shape&gt;")}}
 - {{cssxref("shape-margin")}}
 - {{cssxref("shape-image-threshold")}}

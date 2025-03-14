@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 
 O símbolo conhecido **`Symbol.iterator`** especifíca o iterador padrão para um objeto. Usado por [`for...of`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of).
 
-{{EmbedInteractiveExample("pages/js/symbol-iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.iterator")}}
+
+```js interactive-example
+const iterable1 = {};
+
+iterable1[Symbol.iterator] = function* () {
+  yield 1;
+  yield 2;
+  yield 3;
+};
+
+console.log([...iterable1]);
+// Expected output: Array [1, 2, 3]
+```
 
 ## Descrição
 
@@ -27,21 +40,21 @@ Veja também [Iteration protocols](/pt-BR/docs/Web/JavaScript/Reference/Iteratio
 
 ## Exemplos
 
-### Iteráveis ​​definidos pelo usuário
+### Iteráveis definidos pelo usuário
 
 Podemos fazer nosso próprio iterável dessa forma:
 
 ```js
-var myIterable = {}
+var myIterable = {};
 myIterable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 };
-[...myIterable] // [1, 2, 3]
+[...myIterable]; // [1, 2, 3]
 ```
 
-Ou iteráveis podem ser definidos diretamente dentro de uma classe ou um objeto usando [computed property](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names):
+Ou iteráveis podem ser definidos diretamente dentro de uma classe ou um objeto usando [computed property](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names):
 
 ```js
 class Foo {
@@ -63,7 +76,7 @@ const someObj = {
 [...someObj] // [ 'a', 'b' ]
 ```
 
-### Iteráveis ​​não bem formados
+### Iteráveis não bem formados
 
 Se um método `@@iterator` não retornar um objeto iterador, então é um iterável não bem formado. Usando dessa forma é resultará em uma excessão de tempo ou comportamentos com erros:
 
@@ -75,13 +88,11 @@ nonWellFormedIterable[Symbol.iterator] = () => 1
 
 ## Especificações
 
-| Especificação                                                                            |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-symbol.iterator', 'Symbol.iterator')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.iterator")}}
+{{Compat}}
 
 ## Veja também
 

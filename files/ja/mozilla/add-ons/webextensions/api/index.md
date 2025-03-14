@@ -5,9 +5,9 @@ slug: Mozilla/Add-ons/WebExtensions/API
 
 {{AddonSidebar}}
 
-WebExtension 用の JavaScript API は拡張機能の[バックグラウンドスクリプト](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts)と、その他の拡張機能にバンドルした文書 ([ブラウザーアクション](/ja/Add-ons/WebExtensions/Browser_action)や[ページアクション](/ja/Add-ons/WebExtensions/Page_actions)ポップアップや[サイドバー](/ja/Add-ons/WebExtensions/Sidebars)や[オプションページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)や[新規タブページ](/ja/Add-ons/WebExtensions/manifest.json/chrome_url_overrides)を含む) で使用できます。いくつかの API は拡張機能の[コンテンツスクリプト](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts)からもアクセスできます ([コンテンツスクリプトガイドの表](/ja/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)を見てください)。
+WebExtension 用の JavaScript API は拡張機能の[バックグラウンドスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)と、その他の拡張機能にバンドルした文書 ([ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_action)や[ページアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/Page_actions)ポップアップや[サイドバー](/ja/docs/Mozilla/Add-ons/WebExtensions/Sidebars)や[オプションページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)や[新規タブページ](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides)を含む) で使用できます。いくつかの API は拡張機能の[コンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts)からもアクセスできます ([コンテンツスクリプトガイドの表](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis)を見てください)。
 
-もっと強力な API を使うには、拡張機能の `manifest.json` で[パーミッションをリクエストする](/ja/Add-ons/WebExtensions/manifest.json/permissions)必要があります。
+もっと強力な API を使うには、拡張機能の `manifest.json` で[パーミッションをリクエストする](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)必要があります。
 
 `browser` 名前空間内で API にアクセスできます:
 
@@ -16,7 +16,7 @@ function logTabs(tabs) {
   console.log(tabs);
 }
 
-browser.tabs.query({currentWindow: true}, logTabs);
+browser.tabs.query({ currentWindow: true }, logTabs);
 ```
 
 API の多くは非同期で、 {{JSxRef("Promise")}} を返します:
@@ -30,9 +30,7 @@ function logError(e) {
   console.error(e);
 }
 
-let setCookie = browser.cookies.set(
-  {url: "/"}
-);
+let setCookie = browser.cookies.set({ url: "/" });
 setCookie.then(logCookie, logError);
 ```
 

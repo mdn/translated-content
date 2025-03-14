@@ -1,21 +1,41 @@
 ---
 title: handler.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply
 ---
 
 {{JSRef}}
 
 **`handler.apply()`** 方法用于拦截函数的调用。
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-apply.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.apply()", "taller")}}
+
+```js interactive-example
+function sum(a, b) {
+  return a + b;
+}
+
+const handler = {
+  apply: function (target, thisArg, argumentsList) {
+    console.log(`Calculate sum: ${argumentsList}`);
+    // Expected output: "Calculate sum: 1,2"
+
+    return target(argumentsList[0], argumentsList[1]) * 10;
+  },
+};
+
+const proxy1 = new Proxy(sum, handler);
+
+console.log(sum(1, 2));
+// Expected output: 3
+console.log(proxy1(1, 2));
+// Expected output: 30
+```
 
 ## 语法
 
 ```js
 var p = new Proxy(target, {
-  apply: function(target, thisArg, argumentsList) {
-  }
+  apply: function (target, thisArg, argumentsList) {},
 });
 ```
 
@@ -57,15 +77,14 @@ var p = new Proxy(target, {
 以下代码演示如何捕获函数的调用。
 
 ```js
-var p = new Proxy(function() {}, {
-  apply: function(target, thisArg, argumentsList) {
-    console.log('called: ' + argumentsList.join(', '));
+var p = new Proxy(function () {}, {
+  apply: function (target, thisArg, argumentsList) {
+    console.log("called: " + argumentsList.join(", "));
     return argumentsList[0] + argumentsList[1] + argumentsList[2];
-  }
+  },
 });
 
-console.log(p(1, 2, 3)); // "called: 1, 2, 3"
-                         // 6
+console.log(p(1, 2, 3)); // "called: 1, 2, 3"; outputs 6
 ```
 
 ## 规范
@@ -76,7 +95,7 @@ console.log(p(1, 2, 3)); // "called: 1, 2, 3"
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("Proxy")}}
 - {{jsxref("Proxy.handler", "handler")}}

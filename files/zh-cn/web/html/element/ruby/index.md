@@ -19,7 +19,7 @@ slug: Web/HTML/Element/ruby
   </tr>
   <tr>
    <th scope="row">标签省略</th>
-   <td>{{no_tag_omission}}</td>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父级元素</th>
@@ -42,17 +42,14 @@ slug: Web/HTML/Element/ruby
 
 ```html
 <ruby>
-  汉 <rp>(</rp><rt>han</rt><rp>)</rp>
-  字 <rp>(</rp><rt>zi</rt><rp>)</rp>
+  汉 <rp>(</rp><rt>han</rt><rp>)</rp> 字 <rp>(</rp><rt>zi</rt><rp>)</rp>
 </ruby>
 ```
 
 ### 示例 2: 词
 
 ```html
-<ruby>
-  明 日 <rp>(</rp><rt>ming ri</rt><rp>)</rp>
-</ruby>
+<ruby> 明 日 <rp>(</rp><rt>ming ri</rt><rp>)</rp> </ruby>
 ```
 
 ## 规范

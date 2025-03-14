@@ -1,12 +1,6 @@
 ---
 title: border-inline-end-color
 slug: Web/CSS/border-inline-end-color
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-inline-end-color
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

@@ -14,13 +14,14 @@ slug: Mozilla/Firefox/Experimental_features
 
 実験的な機能は、 [Firefox 設定エディター](https://support.mozilla.org/ja/kb/about-config-editor-firefox) (Firefox のアドレスバーに `about:config` と入力) を使って、以下に示す関連する*設定*を変更することで、有効または無効にすることができます。
 
-> **メモ:** 編集者の方へ - これらの表に機能を追加する際には、 [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) マクロ `\{{bug(<em>バグ番号</em>)}}` を使って関連するバグへのリンクを含めるようにしてください。
+> [!NOTE]
+> 編集者の方へ - これらの表に機能を追加する際には、リンク `[Firefox バグ <number>](https://bugzil.la/<number>)` を使って関連するバグへのリンクを含めるようにしてください。
 
 ## HTML
 
 ### inert 属性
 
-{{domxref("HTMLElement")}} の {{DOMxRef("HTMLElement.inert")}} プロパティは論理値で、存在する場合、ブラウザーが支援技術、ページ検索、テキスト選択から要素を「無視」するようになります。この機能の状態についての詳細は、 {{bug(1655722)}} を参照してください。
+{{domxref("HTMLElement")}} の {{DOMxRef("HTMLElement.inert")}} プロパティは論理値で、存在する場合、ブラウザーが支援技術、ページ検索、テキスト選択から要素を「無視」するようになります。この機能の状態についての詳細は、 [Firefox バグ 1655722](https://bugzil.la/1655722) を参照してください。
 
 <table>
   <thead>
@@ -60,7 +61,7 @@ slug: Mozilla/Firefox/Experimental_features
 
 ### input type="search" のレイアウト
 
-`input type="search"` のレイアウトが更新されました。これにより、何らかの入力を始めたときに、他のブラウザーの実装と同様にクリアアイコンが現れるようになります。 (詳しくは {{bug(558594)}} を参照してください。)
+`input type="search"` のレイアウトが更新されました。これにより、何らかの入力を始めたときに、他のブラウザーの実装と同様にクリアアイコンが現れるようになります。 (詳しくは [Firefox バグ 558594](https://bugzil.la/558594) を参照してください。)
 
 <table>
   <thead>
@@ -100,7 +101,7 @@ slug: Mozilla/Firefox/Experimental_features
 
 ### パスワード表示のトグル切り替え
 
-HTML のパスワード入力要素 ([`<input type="password">`](/ja/docs/Web/HTML/Element/input/password)) に「目」のアイコンが入り、パスワードのテキストを表示したり隠したりすることができるようになります ({{bug(502258)}})。
+HTML のパスワード入力要素 ([`<input type="password">`](/ja/docs/Web/HTML/Element/input/password)) に「目」のアイコンが入り、パスワードのテキストを表示したり隠したりすることができるようになります ([Firefox バグ 502258](https://bugzil.la/502258))。
 
 <table>
   <thead>
@@ -142,7 +143,7 @@ HTML のパスワード入力要素 ([`<input type="password">`](/ja/docs/Web/HT
 
 ### CSS の迷子の制御文字を 16 進数のボックスで表示する
 
-この機能は、予期せずタブ (U+0009)、行送り (U+000A)、ページ送り (U+000C)、復改 (U+000D) 以外の制御文字 (Unicode の Cc カテゴリー) が現れていない場合に 16 進数で表示します。 (詳細は {{bug(1099557)}} を参照してください)。
+この機能は、予期せずタブ (U+0009)、行送り (U+000A)、ページ送り (U+000C)、復改 (U+000D) 以外の制御文字 (Unicode の Cc カテゴリー) が現れていない場合に 16 進数で表示します。 (詳細は [Firefox バグ 1099557](https://bugzil.la/1099557) を参照してください)。
 
 <table>
   <thead>
@@ -185,7 +186,7 @@ HTML のパスワード入力要素 ([`<input type="password">`](/ja/docs/Web/HT
 
 ### initial-letter プロパティ
 
-CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インラインレイアウト](https://drafts.csswg.org/css-inline/)仕様書に含まれており、先頭文字の表示方法を dropped, raise, sunken から指定することができます。 (詳細は {{bug(1223880)}} を参照してください。)
+CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インラインレイアウト](https://drafts.csswg.org/css-inline/)仕様書に含まれており、先頭文字の表示方法を dropped, raise, sunken から指定することができます。 (詳細は [Firefox バグ 1223880](https://bugzil.la/1223880) を参照してください。)
 
 <table>
   <thead>
@@ -225,7 +226,7 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 
 ### メディアクエリーで縦横比として 1 つの数値を使用
 
-[メディアクエリー](/ja/docs/Web/CSS/Media_queries)で縦横比を指定する際に、 1 つの {{cssxref("number")}} を {{cssxref("ratio")}} として使用できるようになりました。 (詳細は {{bug(1565562)}} を参照してください。)
+[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)で縦横比を指定する際に、 1 つの {{cssxref("number")}} を {{cssxref("ratio")}} として使用できるようになりました。 (詳細は [Firefox バグ 1565562](https://bugzil.la/1565562) を参照してください。)
 
 <table>
   <thead>
@@ -265,7 +266,7 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 
 ### backdrop-filter プロパティ
 
-{{cssxref("backdrop-filter")}} プロパティは、要素の背後の領域にフィルター効果を適用します。 (詳しくは {{bug(1178765)}} を参照してください。)
+{{cssxref("backdrop-filter")}} プロパティは、要素の背後の領域にフィルター効果を適用します。 (詳しくは [Firefox バグ 1178765](https://bugzil.la/1178765) を参照してください。)
 
 <table>
   <thead>
@@ -305,7 +306,7 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 
 ### fit-content() 関数の width など大きさを指定するプロパティでの使用
 
-{{cssxref("fit-content_function", "fit-content()")}} 関数は {{cssxref("width")}} やその他の寸法のプロパティに適用します。この関数は、 CSS グリッドレイアウトのトラックのサイズ調整ですでに十分対応しています。(詳細は {{bug(1312588)}} を参照してください。)
+{{cssxref("fit-content_function", "fit-content()")}} 関数は {{cssxref("width")}} やその他の寸法のプロパティに適用します。この関数は、 CSS グリッドレイアウトのトラックのサイズ調整ですでに十分対応しています。(詳細は [Firefox バグ 1312588](https://bugzil.la/1312588) を参照してください。)
 
 <table>
   <thead>
@@ -345,7 +346,7 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 
 ### グリッド: メイソンリーレイアウト
 
-グリッドレイアウトをベースにした[メイソンスタイルレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout)を追加しました。メイソンリーレイアウトスタイルレイアウトは、一方の軸がメイソンリーレイアウトスタイル、もう一方の軸が通常のグリッドレイアウトです。これにより、開発者は Pinterest のようなギャラリースタイルのレイアウトを簡単に作成できるようになります。詳しくは {{bug(1607954)}} を参照してください。
+グリッドレイアウトをベースにした[メイソンスタイルレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout)を追加しました。メイソンリーレイアウトスタイルレイアウトは、一方の軸がメイソンリーレイアウトスタイル、もう一方の軸が通常のグリッドレイアウトです。これにより、開発者は Pinterest のようなギャラリースタイルのレイアウトを簡単に作成できるようになります。詳しくは [Firefox バグ 1607954](https://bugzil.la/1607954) を参照してください。
 
 <table>
   <thead>
@@ -387,7 +388,7 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 
 ### math-style プロパティ
 
-{{cssxref("math-style")}} プロパティは、 MathML の数式の高さを通常にするかコンパクトにするかを示します。 (詳しくは {{bug(1665975)}} を参照してください。)
+{{cssxref("math-style")}} プロパティは、 MathML の数式の高さを通常にするかコンパクトにするかを示します。 (詳しくは [Firefox バグ 1665975](https://bugzil.la/1665975) を参照してください。)
 
 <table>
   <thead>
@@ -428,8 +429,8 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 ### スクロール連動レイアウト
 
 {{cssxref('@scroll-timeline')}} アットルールと {{cssxref('animation-timeline')}} プロパティで、（時間ではなく）コンテナーのスクロール進行に連動するアニメーションを定義することができます。
-指定されたスクロールタイムラインは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations) に `animation-timeline` プロパティを用いて関連付けられます。
-詳しくは {{bug(1676791)}} と {{bug(1676782)}} を参照してください。
+指定されたスクロールタイムラインは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations) に `animation-timeline` プロパティを用いて関連付けられます。
+詳しくは [Firefox バグ 1676791](https://bugzil.la/1676791) と [Firefox バグ 1676782](https://bugzil.la/1676782) を参照してください。
 
 <table>
   <thead>
@@ -473,7 +474,7 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 
 SVGPathSeg API はアンシッピングされ、設定に隠されて配置されています。
 これには `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/ja/docs/Web/API/SVGPathElement), `SVGAnimatedPathData` が含まれます。
-（詳しくは {{bug(1388931)}} を参照してください）。
+（詳しくは [Firefox バグ 1388931](https://bugzil.la/1388931) を参照してください）。
 
 <table>
   <thead>
@@ -517,7 +518,7 @@ SVGPathSeg API はアンシッピングされ、設定に隠されて配置さ�
 
 jsxref("Array.prototype.groupBy()")}} と {{jsxref("Array.prototype.groupByToMap()")}} メソッドは、それぞれテスト関数が返す文字列や値を使って配列の要素をグループ化するために使用されます。
 文字列で要素のグループを表現できる場合は `groupBy` メソッドを使用し、値をキーとして使用することが理にかなっている場合は `groupByToMap()` を使用する必要があります。
-（詳しくは {{bug(1739648)}} を参照してください。）
+（詳しくは [Firefox バグ 1739648](https://bugzil.la/1739648) を参照してください。）
 
 <table>
   <thead>
@@ -561,7 +562,7 @@ jsxref("Array.prototype.groupBy()")}} と {{jsxref("Array.prototype.groupByToMap
 
 ### OffscreenCanvas インターフェイス
 
-{{domxref("OffscreenCanvas")}} インターフェイスは、画面外で描画できるキャンバスを提供します。これは、ウィンドウと[ワーカー](/ja/docs/Web/API/Web_Workers_API)の両方のコンテキストで利用できます。（詳細は {{bug(1390089)}} を参照してください。）
+{{domxref("OffscreenCanvas")}} インターフェイスは、画面外で描画できるキャンバスを提供します。これは、ウィンドウと[ワーカー](/ja/docs/Web/API/Web_Workers_API)の両方のコンテキストで利用できます。（詳細は [Firefox バグ 1390089](https://bugzil.la/1390089) を参照してください。）
 
 <table>
   <thead>
@@ -645,7 +646,7 @@ jsxref("Array.prototype.groupBy()")}} と {{jsxref("Array.prototype.groupByToMap
 
 #### WebGPU API
 
-これは新しい API で、ユーザーの端末やコンピューターの GPU (Graphics Processing Unit) を使用して、計算やグラフィックのレンダリングを行うための低レベルのサポートを提供します。この[仕様](https://gpuweb.github.io/gpuweb/)はまだ完成していません。この API の進捗状況については、 {{bug(1602129)}} を参照してください。
+これは新しい API で、ユーザーの端末やコンピューターの GPU (Graphics Processing Unit) を使用して、計算やグラフィックのレンダリングを行うための低レベルのサポートを提供します。この[仕様](https://gpuweb.github.io/gpuweb/)はまだ完成していません。この API の進捗状況については、 [Firefox バグ 1602129](https://bugzil.la/1602129) を参照してください。
 
 <table>
   <thead>
@@ -687,7 +688,7 @@ jsxref("Array.prototype.groupBy()")}} と {{jsxref("Array.prototype.groupByToMap
 
 #### MediaDevices.selectAudioOutput()
 
-{{domxref("MediaDevices.selectAudioOutput()")}} は、ユーザーが希望する音声出力を選択できるようにプロンプトを表示します。 {{bug(1699026)}} を参照してください。
+{{domxref("MediaDevices.selectAudioOutput()")}} は、ユーザーが希望する音声出力を選択できるようにプロンプトを表示します。 [Firefox バグ 1699026](https://bugzil.la/1699026) を参照してください。
 
 <table>
   <thead>
@@ -727,11 +728,11 @@ jsxref("Array.prototype.groupBy()")}} と {{jsxref("Array.prototype.groupByToMap
 
 ### WebRTC とメディア
 
-[WebRTC API](/ja/docs/Web/API/WebRTC_API)、[Web Audio API](/ja/docs/Web/API/Web_Audio_API)、[Media Source Extensions API](/ja/docs/Web/API/Media_Source_Extensions_API)、[Encrypted Media Extensions API](/ja/docs/Web/API/Encrypted_Media_Extensions_API)、[Media Capture and Streams API](/ja/docs/Web/API/Media_Streams_API) にある以下の機能は実験的なものです。
+[WebRTC API](/ja/docs/Web/API/WebRTC_API)、[Web Audio API](/ja/docs/Web/API/Web_Audio_API)、[Media Source Extensions API](/ja/docs/Web/API/Media_Source_Extensions_API)、[Encrypted Media Extensions API](/ja/docs/Web/API/Encrypted_Media_Extensions_API)、[Media Capture and Streams API](/ja/docs/Web/API/Media_Capture_and_Streams_API) にある以下の機能は実験的なものです。
 
 非同期の SourceBuffer の追加と削除
 
-これにより、メディアソースバッファを追加および削除するためのプロミスベースのメソッド {{domxref("SourceBuffer.appendBufferAsync", "appendBufferAsync()")}} および {{domxref("SourceBuffer.removeAsync", "removeAsync()")}} が {{domxref("SourceBuffer")}} インターフェイスに追加されます。詳細については、 {{bug(1280613)}} および {{bug(778617)}} を参照してください。
+これにより、メディアソースバッファーを追加および削除するためのプロミスベースのメソッド {{domxref("SourceBuffer.appendBufferAsync", "appendBufferAsync()")}} および {{domxref("SourceBuffer.removeAsync", "removeAsync()")}} が {{domxref("SourceBuffer")}} インターフェイスに追加されます。詳細については、 [Firefox バグ 1280613](https://bugzil.la/1280613) および [Firefox バグ 778617](https://bugzil.la/778617) を参照してください。
 
 <table>
   <thead>
@@ -858,7 +859,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 #### JPEG XL 対応
 
-この機能を有効にすると、 Firefox は [JPEG XL](https://jpeg.org/jpegxl/) 画像に対応します。詳細は {{bug(1539075)}} を参照してください。
+この機能を有効にすると、 Firefox は [JPEG XL](https://jpeg.org/jpegxl/) 画像に対応します。詳細は [Firefox バグ 1539075](https://bugzil.la/1539075) を参照してください。
 
 <table>
   <thead>
@@ -984,7 +985,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 #### WebVR API （無効化）
 
 非推奨化された [WebVR API](/ja/docs/Web/API/WebVR_API) は削除途上にあります。
-これは既定ですべてのビルドで無効化されています {{bug(1750902)}}。
+これは既定ですべてのビルドで無効化されています [Firefox バグ 1750902](https://bugzil.la/1750902)。
 
 <table>
   <thead>
@@ -1026,7 +1027,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 #### HTMLMediaElement の setSinkId() メソッド
 
-{{domxref("HTMLMediaElement.setSinkId()")}} は、 {{domxref("HTMLMediaElement")}} に音声出力機器のシンク ID を設定することで、音声の出力先を変更することができます。詳細は {{bug(934425)}} を参照してください。
+{{domxref("HTMLMediaElement.setSinkId()")}} は、 {{domxref("HTMLMediaElement")}} に音声出力機器のシンク ID を設定することで、音声の出力先を変更することができます。詳細は [Firefox バグ 934425](https://bugzil.la/934425) を参照してください。
 
 <table>
   <thead>
@@ -1066,7 +1067,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 #### HTMLMediaElement の audioTracks および videoTracks プロパティ
 
-この機能を有効にすると、 HTML のすべてのメディア要素に {{domxref("HTMLMediaElement.audioTracks")}} および {{domxref("HTMLMediaElement.videoTracks")}} プロパティが追加されます。しかし、 Firefox は現在、複数の音声トラックや動画トラックに対応していないため、これらのプロパティの最も一般的な使用例は機能せず、既定では両方とも無効になっています。詳細については {{bug(1057233)}} を参照してください。
+この機能を有効にすると、 HTML のすべてのメディア要素に {{domxref("HTMLMediaElement.audioTracks")}} および {{domxref("HTMLMediaElement.videoTracks")}} プロパティが追加されます。しかし、 Firefox は現在、複数の音声トラックや動画トラックに対応していないため、これらのプロパティの最も一般的な使用例は機能せず、既定では両方とも無効になっています。詳細については [Firefox バグ 1057233](https://bugzil.la/1057233) を参照してください。
 
 <table>
   <thead>
@@ -1106,7 +1107,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 #### ClipboardItem
 
-{{domxref('Clipboard API')}} の {{domxref('ClipboardItem')}} インターフェイスに対応し、 {{domxref('Clipboard.write()')}} は{{domxref('ClipboardItem','クリップボードアイテム')}}の並びを、以前に実装されていた {{domxref('DataTransfer','dataTransfer オブジェクト')}} の代わりに受け入れます。これは、以前は `dom.events.asyncClipboard.dataTransfer` であった `dom.events.asyncClipboard.clipboardItem` を設定することで利用可能です。詳細については、 {{bug('1619947')}} を参照してください。
+{{domxref('Clipboard API')}} の {{domxref('ClipboardItem')}} インターフェイスに対応し、 {{domxref('Clipboard.write()')}} は{{domxref('ClipboardItem','クリップボードアイテム')}}の並びを、以前に実装されていた {{domxref('DataTransfer','dataTransfer オブジェクト')}} の代わりに受け入れます。これは、以前は `dom.events.asyncClipboard.dataTransfer` であった `dom.events.asyncClipboard.clipboardItem` を設定することで利用可能です。詳細については、 [Firefox バグ 1619947](https://bugzil.la/1619947) を参照してください。
 
 <table>
   <thead>
@@ -1146,7 +1147,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 #### ClipboardRead
 
-クリップボードインターフェイスの [Clipboard.read()](/ja/docs/Web/API/Clipboard/read) メソッドは、以前は `dom.events.asyncClipboard.clipboardItem` の下にあったものが、 `dom.events.asyncClipboard.read` の環境設定の下でも利用できるようになりました。(詳細は ({{bug(1701512)}}) を参照してください。)
+クリップボードインターフェイスの [Clipboard.read()](/ja/docs/Web/API/Clipboard/read) メソッドは、以前は `dom.events.asyncClipboard.clipboardItem` の下にあったものが、 `dom.events.asyncClipboard.read` の環境設定の下でも利用できるようになりました。(詳細は ([Firefox バグ 1701512](https://bugzil.la/1701512)) を参照してください。)
 
 <table>
   <thead>
@@ -1186,7 +1187,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 #### HTML Sanitizer API
 
-{{domxref('HTML Sanitizer API')}} は、開発者が信頼できない HTML 文字列を受け取り、文書の DOM に安全に挿入するためにそれらをサニタイズすることを可能にします。各設定プロパティ内の既定の要素 (サニタイズされる要素) はまだ検討中です。このため、 config 引数は実装されていません (詳しくは{{domxref('Sanitizer.sanitizer()', 'コンストラクター', '', 1)}}を参照してください)。詳細は、 {{bug('1673309')}} を参照してください。
+{{domxref('HTML Sanitizer API')}} は、開発者が信頼できない HTML 文字列を受け取り、文書の DOM に安全に挿入するためにそれらをサニタイズすることを可能にします。各設定プロパティ内の既定の要素 (サニタイズされる要素) はまだ検討中です。このため、 config 引数は実装されていません (詳しくは{{domxref('Sanitizer.sanitizer()', 'コンストラクター', '', 1)}}を参照してください)。詳細は、 [Firefox バグ 1673309](https://bugzil.la/1673309) を参照してください。
 
 <table>
   <thead>
@@ -1226,7 +1227,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 #### Document の autoplayPolicy プロパティ
 
-{{domxref("document")}} の {{domxref("Document.autoplayPolicy", "autoplayPolicy")}} プロパティは、 (メディア要素の {{domxref("HTMLMediaElement.autoplay", "autoplay")}} プロパティを使用するか、または JavaScript コードから再生を開始させようとする) メディアの自動再生のリクエストをブラウザーがどのように処理するかを示す文字列を返します。この API の仕様はまだ作成中です。この値は、ユーザーが何をしているか、ユーザーの好み、およびブラウザ全体の状態に応じて、時間とともに変化します。想定される値としては、 `allowed` (自動再生は現在許可されている)、 `allowed-muted` (自動再生は許可されているが、音声がないかミュートされている場合のみ)、`disallowed` (自動再生は現在許可されていない) などがあります。詳細は、 {{bug(1506289)}} を参照してください。
+{{domxref("document")}} の {{domxref("Document.autoplayPolicy", "autoplayPolicy")}} プロパティは、 (メディア要素の {{domxref("HTMLMediaElement.autoplay", "autoplay")}} プロパティを使用するか、または JavaScript コードから再生を開始させようとする) メディアの自動再生のリクエストをブラウザーがどのように処理するかを示す文字列を返します。この API の仕様はまだ作成中です。この値は、ユーザーが何をしているか、ユーザーの好み、およびブラウザー全体の状態に応じて、時間とともに変化します。想定される値としては、 `allowed` (自動再生は現在許可されている)、 `allowed-muted` (自動再生は許可されているが、音声がないかミュートされている場合のみ)、`disallowed` (自動再生は現在許可されていない) などがあります。詳細は、 [Firefox バグ 1506289](https://bugzil.la/1506289) を参照してください。
 
 <table>
   <thead>
@@ -1266,7 +1267,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 #### GeometryUtils の convertPointFromNode(), convertRectFromNode(), convertQuadFromNode() メソッド
 
-`GeometryUtils` の `convertPointFromNode()`、`convertRectFromNode()`、`convertQuadFromNode()` の各メソッドは、指定された点、矩形、または四角形を、呼び出されたノードから別のノードにマッピングします。 (詳細は {{bug(918189)}} を参照してください。)
+`GeometryUtils` の `convertPointFromNode()`、`convertRectFromNode()`、`convertQuadFromNode()` の各メソッドは、指定された点、矩形、または四角形を、呼び出されたノードから別のノードにマッピングします。 (詳細は [Firefox バグ 918189](https://bugzil.la/918189) を参照してください。)
 
 <table>
   <thead>
@@ -1306,7 +1307,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 #### GeometryUtils の getBoxQuads() メソッド
 
-`GeometryUtils` の `getBoxQuads()` メソッドは、他のノードやビューポートとの相対的な {{domxref("Node")}} の CSS ボックスを返します。(詳細は {{bug(917755)}} を参照してください。)
+`GeometryUtils` の `getBoxQuads()` メソッドは、他のノードやビューポートとの相対的な {{domxref("Node")}} の CSS ボックスを返します。(詳細は [Firefox バグ 917755](https://bugzil.la/917755) を参照してください。)
 
 <table>
   <thead>
@@ -1353,7 +1354,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 - {{domxref("ElementInternals.willValidate", "willValidate")}} プロパティははカスタムフォーム要素が検証されるかどうかをチェックします。
 - {{domxref("ElementInternals.setFormValue()", "setFormValue()")}} メソッドは、必要に応じてサニタイズ値とユーザー入力データをセットします。
 
-詳しくはこれらのバグを参照してください。{{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556365)}}, {{bug(1556449)}} をご覧下さい。
+詳しくはこれらのバグを参照してください。[Firefox バグ 1556362](https://bugzil.la/1556362), [Firefox バグ 1556373](https://bugzil.la/1556373), [Firefox バグ 1556365](https://bugzil.la/1556365), [Firefox バグ 1556449](https://bugzil.la/1556449) をご覧下さい。
 
 <table>
   <thead>
@@ -1391,11 +1392,11 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
   </tbody>
 </table>
 
-### 支払いリクエスト API
+### 決済リクエスト API
 
-#### 主要な支払いの扱い
+#### 主要な決済の扱い
 
-[支払いリクエスト API](/ja/docs/Web/API/Payment_Request_API) は、ウェブコンテンツやアプリ内でウェブベースの支払いを処理するためのサポートを提供します。ユーザーインターフェイスのテスト中にバグが発生したため、 API の変更を検討している間、この API の出荷を延期することにしました。作業は継続中です。(詳細は {{bug(1318984)}} をご参照ください。)
+[決済リクエスト API](/ja/docs/Web/API/Payment_Request_API) は、ウェブコンテンツやアプリ内でウェブベースの決済を処理するためのサポートを提供します。ユーザーインターフェイスのテスト中にバグが発生したため、 API の変更を検討している間、この API の出荷を延期することにしました。作業は継続中です。(詳細は [Firefox バグ 1318984](https://bugzil.la/1318984) をご参照ください。)
 
 <table>
   <thead>
@@ -1484,7 +1485,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 {{domxref("ScreenOrientation.lock()")}} メソッドは、端末が対応しており、ブラウザーの事前ロック要件で許可されていれば、端末を特定の向きにロックすることを可能にします。
 一般的に、向きのロックは、文書が全画面で表示されているモバイル端末でのみ許可されます。
-詳しくは {{bug(1697647)}} を参照してください。
+詳しくは [Firefox バグ 1697647](https://bugzil.la/1697647) を参照してください。
 
 画面の向きをロックすることはデスクトップシステムでは通常サポートされていないため、Android 用の Firefox Nightly ビルドを使用して `about:config` で設定を有効にする必要があることに注意してください。
 
@@ -1528,7 +1529,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 ### 暗号化されたページ上の Flash からのプレーンテキストのリクエストをブロックする
 
-暗号化されたページ上の Flash コンテンツによって引き起こされる中間者攻撃 (MitM) を軽減するために、 `OBJECT_SUBREQUEST` をアクティブなコンテンツとして扱う設定が追加されました。詳細については、 {{bug(1190623)}} を参照してください。
+暗号化されたページ上の Flash コンテンツによって引き起こされる中間者攻撃 (MitM) を軽減するために、 `OBJECT_SUBREQUEST` をアクティブなコンテンツとして扱う設定が追加されました。詳細については、 [Firefox バグ 1190623](https://bugzil.la/1190623) を参照してください。
 
 <table>
   <thead>
@@ -1570,7 +1571,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 ### 安全でないページのラベル付け
 
-この 2 つの環境設定では、安全でない方法でページが読み込まれた場合 ({{Glossary("HTTPS")}} ではなく {{Glossary("HTTP")}} を使用した場合) に、従来のロックアイコンの隣に「Not secure」というテキストラベルがアドレスバーに追加されます。詳細については、 {{bug(1335970)}} を参照してください。
+この 2 つの環境設定では、安全でない方法でページが読み込まれた場合 ({{Glossary("HTTPS")}} ではなく {{Glossary("HTTP")}} を使用した場合) に、従来のロックアイコンの隣に「Not secure」というテキストラベルがアドレスバーに追加されます。詳細については、 [Firefox バグ 1335970](https://bugzil.la/1335970) を参照してください。
 
 <table>
   <thead>
@@ -1615,7 +1616,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 ### 混合表示コンテンツのアップグレード
 
-この設定を有効にすると、 Firefox は安全なページでメディアコンテンツへの要求を HTTP から HTTPS に自動的にアップグレードします。これは、一部のコンテンツが安全に読み込まれる一方で、他のコンテンツが安全でないという混合コンテンツの状態を防ぐことを目的としています。(メディアのホストが HTTPS に対応していないために) アップグレードが失敗した場合、そのメディアは読み込まれません。(詳細については、 {{bug(1435733)}} を参照してください。)
+この設定を有効にすると、 Firefox は安全なページでメディアコンテンツへの要求を HTTP から HTTPS に自動的にアップグレードします。これは、一部のコンテンツが安全に読み込まれる一方で、他のコンテンツが安全でないという混合コンテンツの状態を防ぐことを目的としています。(メディアのホストが HTTPS に対応していないために) アップグレードが失敗した場合、そのメディアは読み込まれません。(詳細については、 [Firefox バグ 1435733](https://bugzil.la/1435733) を参照してください。)
 
 これはコンソールの警告も変更します。アップグレードが成功した場合、警告ではなく、リクエストがアップグレードされたことを示すメッセージを表示します。
 
@@ -1659,7 +1660,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 ### 機能ポリシー
 
-[機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)は、ウェブ開発者がブラウザーの特定の機能や API の動作を選択的に有効化、無効化、変更することを可能にします。 CSP と似ていますが、セキュリティの動作ではなく機能を制御します。
+[機能ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)は、ウェブ開発者がブラウザーの特定の機能や API の動作を選択的に有効化、無効化、変更することを可能にします。 CSP と似ていますが、セキュリティの動作ではなく機能を制御します。
 
 > **メモ:** `Feature-Policy` ヘッダーは、仕様書では `Permissions-Policy` に名称が変更されており、本記事もいずれその変更を反映して更新される予定です。
 
@@ -1705,7 +1706,8 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 [`Clear-Site-Data`](/ja/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP レスポンスヘッダーの `cache` ディレクティブは、リクエストしているウェブサイトのブラウザーキャッシュをクリアします。
 
-> **メモ:** これは元々既定で有効でしたが、バージョン 9 4で優先順位が付けられました ({{bug(1729291)}})。
+> [!NOTE]
+> これは元々既定で有効でしたが、バージョン 9 4で優先順位が付けられました ([Firefox バグ 1729291](https://bugzil.la/1729291))。
 
 <table>
   <thead>
@@ -1751,7 +1753,7 @@ Mozilla の開発者向けツールは常に進化しています。私たちは
 
 ### 実行コンテキストセレクター
 
-この機能では、コンソールのコマンドラインにボタンが表示され、入力した式が実行されるコンテキストを変更することができます。(詳細は、 {{bug(1605154)}} および {{bug(1605153)}} を参照してください。)
+この機能では、コンソールのコマンドラインにボタンが表示され、入力した式が実行されるコンテキストを変更することができます。(詳細は、 [Firefox バグ 1605154](https://bugzil.la/1605154) および [Firefox バグ 1605153](https://bugzil.la/1605153) を参照してください。)
 
 <table>
   <thead>
@@ -1791,7 +1793,7 @@ Mozilla の開発者向けツールは常に進化しています。私たちは
 
 ### レスポンシブデザインモードでのモバイルジェスチャーのサポート
 
-マウスジェスチャーを使用して、スワイプ/スクロール、ダブルタップやピンチズーム、長押しによるコンテキストメニューの選択/オープンなどのモバイルジェスチャーをシミュレートすることができます。 (詳細については {{bug(1621781)}}、{{bug(1245183)}}、{{bug(1401304)}} を参照してください。)
+マウスジェスチャーを使用して、スワイプ/スクロール、ダブルタップやピンチズーム、長押しによるコンテキストメニューの選択/オープンなどのモバイルジェスチャーをシミュレートすることができます。 (詳細については [Firefox バグ 1621781](https://bugzil.la/1621781)、[Firefox バグ 1245183](https://bugzil.la/1245183)、[Firefox バグ 1401304](https://bugzil.la/1401304) を参照してください。)
 
 <table>
   <thead>
@@ -1833,7 +1835,7 @@ Mozilla の開発者向けツールは常に進化しています。私たちは
 
 ### ネットワークモニターにおけるサーバー送信イベント
 
-ネットワークモニターが[サーバー送信](/ja/docs/Web/API/Server-sent_events)イベントについての情報を表示する機能です。 (詳細については {{bug(1405706)}} を参照してください。)
+ネットワークモニターが[サーバー送信](/ja/docs/Web/API/Server-sent_events)イベントについての情報を表示する機能です。 (詳細については [Firefox バグ 1405706](https://bugzil.la/1405706) を参照してください。)
 
 <table>
   <thead>
@@ -1921,7 +1923,7 @@ CSS ルールビューでは、既知の問題がある CSS プロパティの�
 
 ### デスクトップ版のズーム
 
-この機能により、デスクトップ PC では、モバイル端末のようにレイアウトの変更をすることなく、スムーズなピンチズームが可能になります。(詳細は {{bug(1245183)}} および {{bug(1620055)}} を参照してください。)
+この機能により、デスクトップ PC では、モバイル端末のようにレイアウトの変更をすることなく、スムーズなピンチズームが可能になります。(詳細は [Firefox バグ 1245183](https://bugzil.la/1245183) および [Firefox バグ 1620055](https://bugzil.la/1620055) を参照してください。)
 
 <table>
   <thead>

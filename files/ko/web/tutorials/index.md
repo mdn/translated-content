@@ -1,13 +1,8 @@
 ---
 title: 학습서
 slug: Web/Tutorials
-tags:
-  - 강좌
-  - 웹디자인
-  - 코드
-  - 학습서
-translation_of: Web/Tutorials
 ---
+
 이 페이지에는 다양한 학습서 및 교육 자료에 대한 링크가 있습니다. 여러분이 웹 개발을 이제 시작하는 사람이든지, 기초를 공부하는 사람이든지, 이미 개발을 해본 사람이든지 모범 사례에 대한 유용한 자료를 찾으실 수 있습니다. 이들 자료는 웹 개발의 개방형 표준 및 모범 사례를 채택한 미래 지향적 기업 및 웹 개발자가 창작한 것으로서 Creative Commons 등의 개방형 콘텐트 라이선스를 통해 번역을 제공 또는 허용합니다.
 
 ## 웹입문자를 위하여
@@ -84,7 +79,7 @@ translation_of: Web/Tutorials
             >
           </dt>
           <dd>
-            포괄적인 HTML요소에 대한 참조 및 파이어폭스와 다른 부라우저를
+            포괄적인 HTML요소에 대한 참조 및 Firefox와 다른 부라우저를
             지원하는 방법을 알려줍니다.
           </dd>
           <dt>
@@ -92,7 +87,7 @@ translation_of: Web/Tutorials
             (CodeAvengers.com)
           </dt>
           <dd>
-            Code Avengers는 HTML, CSS 및 자바스크립트를 사용하여 Code Wep
+            Code Avengers는 HTML, CSS 및 JavaScript를 사용하여 Code Wep
             에플리케이션 및 게임을 배우는 재미있고 효과적인 방법입니다.
           </dd>
         </dl>
@@ -184,7 +179,7 @@ translation_of: Web/Tutorials
             >(WebPlatform.org)
           </dt>
           <dd>
-            프로그래밍의 기본 중의 기본. 자바스크립트를 사용하고 더 많은 것을 할
+            프로그래밍의 기본 중의 기본. JavaScript를 사용하고 더 많은 것을 할
             수 있는 모범사례와 무엇을 할 수 있는지 소개하는 기사.
           </dd>
           <dt>
@@ -207,7 +202,7 @@ translation_of: Web/Tutorials
             (CodeAvengers.com)
           </dt>
           <dd>
-            Code Avengers는 HTML, CSS 및 자바스크립트를 사용하여 Code Wep
+            Code Avengers는 HTML, CSS 및 JavaScript를 사용하여 Code Wep
             에플리케이션 및 게임을 배우는 재미있고 효과적인 방법입니다.
           </dd>
         </dl>
@@ -263,7 +258,7 @@ translation_of: Web/Tutorials
             >
             (John Resig)
           </dt>
-          <dd>John Resig의 고급 자바스크립트 가이드.</dd>
+          <dd>John Resig의 고급 JavaScript 가이드.</dd>
           <dt>
             <a
               href="http://www.elated.com/articles/javascript-dom-intro/"
@@ -407,7 +402,7 @@ translation_of: Web/Tutorials
             (CodeAvengers.com)
           </dt>
           <dd>
-            Code Avengers는 HTML, CSS 및 자바스크립트를 사용하여 Code Wep
+            Code Avengers는 HTML, CSS 및 JavaScript를 사용하여 Code Wep
             에플리케이션 및 게임을 배우는 재미있고 효과적인 방법입니다.
           </dd>
         </dl>

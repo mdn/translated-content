@@ -1,8 +1,6 @@
 ---
 title: WorkerGlobalScope.onerror
 slug: Web/API/WorkerGlobalScope/error_event
-translation_of: Web/API/WorkerGlobalScope/onerror
-original_slug: Web/API/WorkerGlobalScope/onerror
 ---
 
 {{APIRef("Web Workers API")}}
@@ -20,9 +18,9 @@ self.onerror = function() { ... };
 L'extrait de code suivant montre un gestionnaire `onerror` placé au sein d'un worker :
 
 ```js
-self.onerror = function() {
-  console.log('There is an error inside your worker!');
-}
+self.onerror = function () {
+  console.log("There is an error inside your worker!");
+};
 ```
 
 ## Spécifications

@@ -1,21 +1,28 @@
 ---
 title: Date.prototype.setUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setUTCMonth
 ---
 
 {{JSRef}}
 
 La méthode **`setUTCMonth()`** définit le mois de la date, selon UTC.
 
-{{EmbedInteractiveExample("pages/js/date-setutcmonth.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCMonth()")}}
+
+```js interactive-example
+const event = new Date("December 31, 1975 23:15:30 GMT-3:00");
+
+console.log(event.toUTCString());
+// Expected output: "Thu, 01 Jan 1976 02:15:30 GMT"
+
+console.log(event.getUTCMonth());
+// Expected output: 0
+
+event.setUTCMonth(11);
+
+console.log(event.toUTCString());
+// Expected output: "Wed, 01 Dec 1976 02:15:30 GMT"
+```
 
 ## Syntaxe
 

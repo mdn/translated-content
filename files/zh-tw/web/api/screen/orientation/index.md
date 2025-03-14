@@ -20,13 +20,17 @@ var orientation = window.screen.orientation.type;
 ## 範例
 
 ```js
-var orientation = screen.orientation || screen.mozOrientation || screen.msOrientation;
+var orientation =
+  screen.orientation || screen.mozOrientation || screen.msOrientation;
 
 if (orientation.type === "landscape-primary") {
   console.log("That looks good.");
 } else if (orientation.type === "landscape-secondary") {
   console.log("Mmmh... the screen is upside down!");
-} else if (orientation.type === "portrait-secondary" || orientation.type === "portrait-primary") {
+} else if (
+  orientation.type === "portrait-secondary" ||
+  orientation.type === "portrait-primary"
+) {
   console.log("Mmmh... you should rotate your device to landscape");
 }
 ```

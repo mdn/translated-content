@@ -1,5 +1,5 @@
 ---
-title: '-webkit-transform-3d'
+title: -webkit-transform-3d
 slug: Web/CSS/@media/-webkit-transform-3d
 ---
 
@@ -7,13 +7,14 @@ slug: Web/CSS/@media/-webkit-transform-3d
 
 **`-webkit-transform-3d`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、ベンダー接頭辞付きの CSS 3D {{cssxref("transform")}} に対応していれば値が `true` になります。
 
-> **メモ:** このメディア特性は WebKit および Blink でのみ対応しています。可能であれば、 {{cssxref("@supports")}} 特性クエリーを代わりに使用してください。
+> [!NOTE]
+> このメディア特性は WebKit および Blink でのみ対応しています。可能であれば、 {{cssxref("@supports")}} 特性クエリーを代わりに使用してください。
 
 ## 構文
 
 `-webkit-transform-3d` は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、ベンダー接頭辞付きの CSS 3D {{cssxref("transform")}} に対応していれば値が `true` になります。
 
-### Values
+### 値
 
 - `true`
   - : ブラウザーは三次元の CSS 座標変換に `-webkit` の接頭辞つきで対応しています。
@@ -51,6 +52,6 @@ slug: Web/CSS/@media/-webkit-transform-3d
 - {{cssxref("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
 - {{cssxref("@media/-webkit-transition", "-webkit-transition")}}
 - {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
-- [Test page at quirksmode.org](http://www.quirksmode.org/css/tests/mediaqueries/animation.html)
+- [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
 
 {{ CSSRef }}

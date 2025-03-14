@@ -1,17 +1,54 @@
 ---
-title: ':optional'
+title: :optional
 slug: Web/CSS/:optional
 ---
 
 {{ CSSRef }}
 
-**`:optional`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{ htmlattrxref("required", "input") }} 属性が設定されていない {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素を表します。
+**`:optional`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [`required`](/ja/docs/Web/HTML/Element/input#required) 属性が設定されていない {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素を表します。
 
 ```css
 /* 任意の <input> をすべて選択 */
 input:optional {
   border: 1px dashed black;
 }
+```
+
+{{InteractiveExample("CSS Demo: :optional", "tabbed-standard")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+.req {
+  color: red;
+}
+
+*:optional {
+  background-color: palegreen;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="name">Name: <span class="req">*</span></label>
+  <input id="name" name="name" type="text" required />
+
+  <label for="birth">Date of Birth:</label>
+  <input id="birth" name="birth" type="date" />
+
+  <label for="origin"
+    >How did you find out about us? <span class="req">*</span></label
+  >
+  <select id="origin" name="origin" required>
+    <option>Google</option>
+    <option>Facebook</option>
+    <option>Advertisement</option>
+  </select>
+  <p><span class="req">*</span> - Required field</p>
+</form>
 ```
 
 この擬似クラスは。フォームを送信するにあたって必須ではない入力欄にスタイルを適用するのに便利です。
@@ -34,12 +71,12 @@ input:optional {
 <form>
   <div class="field">
     <label for="url_input">Enter a URL:</label>
-    <input type="url" id="url_input">
+    <input type="url" id="url_input" />
   </div>
 
   <div class="field">
     <label for="email_input">Enter an email address:</label>
-    <input type="email" id="email_input" required>
+    <input type="email" id="email_input" required />
   </div>
 </form>
 ```
@@ -70,7 +107,7 @@ input:optional {
 
 ## アクセシビリティの考慮
 
-[フォーム](/ja/docs/Web/HTML/Element/form)に必須ではない {{htmlelement("input")}} が含まれている場合、必須の入力欄には {{ htmlattrxref("required", "input") }} 属性を適用してください。これによって、読み上げソフトなどの支援技術を使用している人が、フォームを送信するためにどの入力欄が有効なコンテンツを必要とするかを理解することができます。
+[フォーム](/ja/docs/Web/HTML/Element/form)に必須ではない {{htmlelement("input")}} が含まれている場合、必須の入力欄には [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を適用してください。これによって、読み上げソフトなどの支援技術を使用している人が、フォームを送信するためにどの入力欄が有効なコンテンツを必要とするかを理解することができます。
 
 必須の入力欄を視覚的に示すのに、色だけに依存しないようにしてください。通常、説明する文字列やアイコンが使用されます。
 

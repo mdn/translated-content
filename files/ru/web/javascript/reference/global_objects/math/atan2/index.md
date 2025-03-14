@@ -1,15 +1,9 @@
 ---
 title: Math.atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan2
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -59,11 +53,7 @@ Math.atan2(±Infinity, +Infinity); // ±PI/4.
 
 ## Спецификации
 
-| Спецификация                                                         | Статус                   | Комментарии                                            |
-| -------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.5', 'Math.atan2')}} | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-math.atan2', 'Math.atan2')}} | {{Spec2('ES6')}}     |                                                        |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

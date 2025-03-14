@@ -1,19 +1,9 @@
 ---
 title: Масштабирование
 slug: Games/Tutorials/2D_breakout_game_Phaser/Scaling
-tags:
-  - 2D
-  - Canvas
-  - JavaScript
-  - Phaser
-  - Начинающий
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Scaling
-original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Scaling
 ---
 
-{{GamesSidebar}}{{IncludeSubnav("/ru/docs/Games")}}
-
-{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Load_the_assets_and_print_them_on_screen")}}
+{{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Load_the_assets_and_print_them_on_screen")}}
 
 Это **2-й урок** из 16, которые входят в руководство [2D игра на Phaser](/ru/docs/Games/Tutorials/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_2D_Breakout_%D0%B8%D0%B3%D1%80%D1%8B_%D0%BD%D0%B0_Phaser). Вы можете найти исходный код этого урока на [Gamedev-Phaser-Content-Kit/demos/lesson02.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson02.html).
 
@@ -25,9 +15,9 @@ original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser
 
 ```js
 function preload() {
-    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-    game.scale.pageAlignHorizontally = true;
-    game.scale.pageAlignVertically = true;
+  game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+  game.scale.pageAlignHorizontally = true;
+  game.scale.pageAlignVertically = true;
 }
 ```
 
@@ -46,7 +36,7 @@ function preload() {
 Мы также можем сделать фон нашего элемента {{htmlelement("canvas")}} таким, каким захотим, чтобы он не оставался постоянно чёрным. Объект `stage` имеет свойство `backgroundColor` для этого. Мы можем изменить значение, используя синтаксис CSS для цветов. Добавьте эту строку после трёх, недавно добавленных:
 
 ```js
-game.stage.backgroundColor = '#eee';
+game.stage.backgroundColor = "#eee";
 ```
 
 ## Сравните свой код

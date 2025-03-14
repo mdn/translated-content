@@ -1,12 +1,6 @@
 ---
 title: <feDistantLight>
 slug: Web/SVG/Element/feDistantLight
-tags:
-  - Element
-  - SVG
-  - SVG Filter
-  - SVG Light Source
-translation_of: Web/SVG/Element/feDistantLight
 ---
 
 {{SVGRef}}
@@ -21,7 +15,7 @@ La primitive de filtre **`<feDistantLight>`** définit une source de lumière di
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
 
 ### Attributs spécifiques
 
@@ -49,4 +43,4 @@ Cet élément implémente l'interface {{domxref("SVGFEDistantLightElement")}}.
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("fePointLight")}}
 - {{SVGElement("feSpotLight")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres)
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)

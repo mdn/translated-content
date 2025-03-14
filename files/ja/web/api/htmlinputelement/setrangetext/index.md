@@ -1,6 +1,9 @@
 ---
-title: HTMLInputElement.setRangeText()
+title: "HTMLInputElement: setRangeText() メソッド"
+short-title: setRangeText()
 slug: Web/API/HTMLInputElement/setRangeText
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,9 +12,11 @@ slug: Web/API/HTMLInputElement/setRangeText
 
 ## 構文
 
-```js
-element.setRangeText(replacement);
-element.setRangeText(replacement, start, end [, selectMode]);
+```js-nolint
+setRangeText(replacement)
+setRangeText(replacement, start)
+setRangeText(replacement, start, end)
+setRangeText(replacement, start, end, selectMode)
 ```
 
 ### 引数
@@ -32,6 +37,10 @@ element.setRangeText(replacement, start, end [, selectMode]);
     - `"end"`: 挿入したテキストの直後に選択範囲を移動します。
     - `"preserve"`: 選択範囲を保全しようとします。これが既定値です。
 
+### 返値
+
+なし ({{jsxref("undefined")}})。
+
 ## 例
 
 この例にあるボタンをクリックすると、テキストボックス内のテキストの一部を置き換えます。新しく挿入されたテキストは、その後で強調（選択）されます。
@@ -39,7 +48,11 @@ element.setRangeText(replacement, start, end [, selectMode]);
 ### HTML
 
 ```html
-<input type="text" id="text-box" size="30" value="このテキストは更新されていません。">
+<input
+  type="text"
+  id="text-box"
+  size="30"
+  value="このテキストは更新されていません。" />
 <button onclick="selectText()">テキストを更新</button>
 ```
 
@@ -47,15 +60,15 @@ element.setRangeText(replacement, start, end [, selectMode]);
 
 ```js
 function selectText() {
-  const input = document.getElementById('text-box');
+  const input = document.getElementById("text-box");
   input.focus();
-  input.setRangeText('ました', 11, 16, 'select');
+  input.setRangeText("ました", 11, 16, "select");
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## 仕様書
 

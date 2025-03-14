@@ -1,6 +1,6 @@
 ---
 title: 使用特性查询
-slug: Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
+slug: Web/CSS/CSS_conditional_rules/Using_feature_queries
 ---
 
 {{CSSRef}}
@@ -72,17 +72,17 @@ CSS 特性查询是 [CSS Conditional Rules module](https://drafts.csswg.org/css-
 
 ## 如何使用特性查询进行渐进式增强
 
-在逐步增强一个站点时，特性查询是一个非常有用的工具。它们使您能够为所有浏览器提供良好的解决方案，并为那些支持新特性的浏览器提供增强的解决方案。
+在逐步增强一个站点时，特性查询是一个非常有用的工具。它们使你能够为所有浏览器提供良好的解决方案，并为那些支持新特性的浏览器提供增强的解决方案。
 
 然而，某些浏览器既不支持特性查询，也不支持我们希望使用的特性。例如，我们也许希望使用 CSS Grid，但 IE11 不支持它。我们也不能为其创建一个针对没有 Grid 支持的浏览器的后备样式，因为 IE11 也不支持特性查询。然而在实践中，当使用特性查询进行渐进增强时，然而这并不重要。你确实需要有一个组织 CSS 的方式，那么应当先为不支持新特性的浏览器编写 CSS 样式，然后在特性查询中进行覆盖。
 
 让我们看一个非常简单的例子，在这个例子中，特性查询就派上用场了，它使用上述的方式来组织 CSS。
 
-假设我们想要创建一行三个盒子的布局，理想情况下，我们想要使用 [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) 布局。但是，我们希望有一个使用浮动（floats）的旧浏览器的布局。我们可以先用下面的代码创建浮动布局，它提供了三个列。
+假设我们想要创建一行三个盒子的布局，理想情况下，我们想要使用 [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout) 布局。但是，我们希望有一个使用浮动（floats）的旧浏览器的布局。我们可以先用下面的代码创建浮动布局，它提供了三个列。
 
 {{EmbedGHLiveSample("css-examples/feature-queries/step1.html", '100%', 900)}}
 
-浏览器会忽略其无法识别的 CSS 属性或者值。所以我们可以开始使用 CSS Grid 来增强我们的布局。不支持 Grid 的浏览器将会忽略 `display` 属性的 `grid` 值。一旦一个浮动项成为网格项，浮动就会被移除——你可以阅读 [Supporting Older Browsers](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers) 来了解更多。因此浮动的版本就会被网格的版本替代。
+浏览器会忽略其无法识别的 CSS 属性或者值。所以我们可以开始使用 CSS Grid 来增强我们的布局。不支持 Grid 的浏览器将会忽略 `display` 属性的 `grid` 值。一旦一个浮动项成为网格项，浮动就会被移除——你可以阅读 [Supporting Older Browsers](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers) 来了解更多。因此浮动的版本就会被网格的版本替代。
 
 然而问题来了，起因于我们为了使浮动项目显示为三列而在上面设置的 `width` 属性，它现在被网格解释为列在网格中的宽度，而不是容器的宽度（相对于浮动布局）。
 
@@ -102,11 +102,11 @@ CSS 特性查询是 [CSS Conditional Rules module](https://drafts.csswg.org/css-
 
 ## 总结
 
-功能查询可以帮助您开始使用更新的功能，它可以增强旧浏览器使用的简单的站点的显示。由于可以针对其支持的浏览器而打包 CSS，因此不会有后退显示使用的样式漏出的风险（原文：you do not run the risk of styles used for the fallback display leaking through），就像上面的 Grid 示例那样。
+功能查询可以帮助你开始使用更新的功能，它可以增强旧浏览器使用的简单的站点的显示。由于可以针对其支持的浏览器而打包 CSS，因此不会有后退显示使用的样式漏出的风险，就像上面的 Grid 示例那样。
 
-### 参见
+## 参见
 
-- [@supports](/zh-CN/docs/Web/CSS/@supports) 规则
-- 学习布局：[Supporting Older Browsers](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [CSS Grid Layout and Progressive Enhancement](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-- [Using Feature Queries in CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
+- [CSS 条件规则](/zh-CN/docs/Web/CSS/CSS_conditional_rules)模块
+- [使用 CSS 媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [支持旧浏览器：特性查询](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers#特性查询)
+- [浏览器特性检测：CSS `@supports`](/zh-CN/docs/Learn_web_development/Extensions/Testing/Feature_detection#supports)

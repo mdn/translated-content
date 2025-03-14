@@ -5,9 +5,10 @@ slug: Web/API/Element/setPointerCapture
 
 {{APIRef("DOM")}}
 
-{{domxref("Element")}}接口的**`setPointerCapture()`** 方法用于将特定元素指定为未来指针事件的捕获目标。指针的后续事件将以捕获元素为目标，直到捕获被释放（通过{{domxref("Element.releasePointerCapture()")}}）。
+{{domxref("Element")}}接口的 **`setPointerCapture()`** 方法用于将特定元素指定为未来指针事件的*捕获目标*。指针的后续事件将针对捕获元素，直到捕获被释放（通过 {{domxref("Element.releasePointerCapture()")}} 或触发 {{domxref("Element/pointerup_event", "pointerup")}} 事件）。
 
-> **备注：** 一旦设置了 pointer capture，`pointerover`、`pointerout`、`pointerenter` 和 `pointerleave` 事件将不会被触发，直到越过设置了 capture 的元素的边界。这是因为其他元素将不能再作为 pointer 事件的目标了。这会影响到这些事件在其他元素上的触发。
+> [!NOTE]
+> 一旦设置了 pointer capture，`pointerover`、`pointerout`、`pointerenter` 和 `pointerleave` 事件将不会被触发，直到越过设置了 capture 的元素的边界。这是因为其他元素将不能再作为 pointer 事件的目标了。这会影响到这些事件在其他元素上的触发。
 
 ### 指针捕获概述
 
@@ -15,8 +16,8 @@ slug: Web/API/Element/setPointerCapture
 
 ## 语法
 
-```
-targetElement.setPointerCapture(pointerId);
+```js-nolint
+setPointerCapture(pointerId)
 ```
 
 ### 参数
@@ -30,7 +31,7 @@ targetElement.setPointerCapture(pointerId);
 
 ## 示例
 
-当您按下它时，此示例在 {{HtmlElement("div")}} 上设置指针捕获。这使您可以滑动元素，即使指针移动到其边界之外也是如此。
+当你按下它时，此示例在 {{HtmlElement("div")}} 上设置指针捕获。这使你可以滑动元素，即使指针移动到其边界之外也是如此。
 
 ### HTML
 
@@ -68,7 +69,7 @@ function slide(e) {
   slider.style.transform = `translate(${e.clientX - 70}px)`;
 }
 
-const slider = document.getElementById('slider');
+const slider = document.getElementById("slider");
 
 slider.onpointerdown = beginSliding;
 slider.onpointerup = stopSliding;

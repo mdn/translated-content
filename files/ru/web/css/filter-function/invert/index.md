@@ -1,19 +1,43 @@
 ---
 title: invert()
 slug: Web/CSS/filter-function/invert
-tags:
-  - CSS
-  - CSS Function
-  - Filter Effects
-  - Function
-  - Reference
-browser-compat: css.types.filter-function.invert
 ---
+
 {{CSSRef}}
 
 [Функция](/ru/docs/Web/CSS/CSS_Functions) [CSS](/ru/docs/Web/CSS) **`invert()`** инвертирует цвета изображения. Его результатом является {{cssxref("&lt;filter-function&gt;")}}.
 
-{{EmbedInteractiveExample("pages/css/function-invert.html")}}
+{{InteractiveExample("CSS Demo: invert()")}}
+
+```css interactive-example-choice
+filter: invert(0);
+```
+
+```css interactive-example-choice
+filter: invert(0.3);
+```
+
+```css interactive-example-choice
+filter: invert(50%);
+```
+
+```css interactive-example-choice
+filter: invert(70%);
+```
+
+```css interactive-example-choice
+filter: invert(1);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## Синтаксис
 
@@ -40,7 +64,7 @@ invert(100%)  /* Полностью инвертированный цвет */
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

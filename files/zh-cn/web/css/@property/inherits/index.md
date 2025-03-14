@@ -1,67 +1,67 @@
 ---
-title: 继承性
+title: inherits
 slug: Web/CSS/@property/inherits
+l10n:
+  sourceCommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-**`inherits`** [CSS](/zh-CN/docs/Web/CSS) 描述符在使用{{cssxref("@property")}} {{cssxref("at-rule")}}时是必需的，它控制由 `@property`声明注册的自定义属性默认情况下是否会被继承。
+**`inherits`** [CSS](/zh-CN/docs/Web/CSS) 描述符是在使用 {{cssxref("@property")}} [At 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)时所必须的，它控制着由 `@property` 指定的自定义属性注册是否默认继承。
 
-## Syntax（类型描述符）
+## 语法
 
 ```css
 @property --property-name {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
 
 @property --property-name {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: true;
   initial-value: #c0ffee;
 }
 ```
 
-## 取值
+## 值
 
 - `true`
-  - : 属性默认继承
+  - : 该属性默认继承。
 - `false`
-  - : 属性默认不继承
+  - : 该属性默认不继承。
 
-## 规范定义
+## 形式定义
 
 {{cssinfo}}
 
-## 标准语法
+## 形式语法
 
-```css
 {{csssyntax}}
-```
 
-## 实例
+## 示例
 
-为 `--my-color` {{cssxref('--*', '自定义属性')}}添加颜色值类型检测、设置默认值并且设置属性值不允许被继承。
+为 `--my-color` [自定义属性](/zh-CN/docs/Web/CSS/--*)添加类型检查，将其限定为颜色类型，并设置默认值，同时禁止其继承值。
 
-使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('@property')}} [@规则](/zh-CN/docs/Web/CSS/At-rule):
+使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('@property')}} [At 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)：
 
 ```css
 @property --my-color {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
 ```
 
-使用 [JavaScript 中的](/zh-CN/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}函数：
+使用 [JavaScript](/zh-CN/docs/Web/JavaScript) {{domxref('CSS.registerProperty_static', 'CSS.registerProperty()')}}：
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 
@@ -73,9 +73,9 @@ window.CSS.registerProperty({
 
 {{Compat}}
 
-## 另见
+## 参见
 
-- [CSS 属性与值 API](/zh-CN/docs/Web/API/CSS_Properties_and_Values_API)
-- [CSS 绘图 API](/zh-CN/docs/Web/API/CSS_Painting_API)
+- [CSS 属性和值 API](/zh-CN/docs/Web/API/CSS_Properties_and_Values_API)
+- [CSS 绘制 API](/zh-CN/docs/Web/API/CSS_Painting_API)
 - [CSS 类型对象模型](/zh-CN/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/zh-CN/docs/Web/Houdini)
+- [Houdini API](/zh-CN/docs/Web/API/Houdini_APIs)

@@ -10,7 +10,7 @@ slug: Web/API/Element/setAttributeNS
 ## Sintaxis
 
 ```js
-elemento.setAttributeNS(namespace,nombre,valor)
+elemento.setAttributeNS(namespace, nombre, valor);
 ```
 
 - `namespace` es un string especificando el namespace del atributo.
@@ -23,10 +23,6 @@ elemento.setAttributeNS(namespace,nombre,valor)
 var d = document.getElementById("d1");
 d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
 ```
-
-## Notas
-
-{{ DOMAttributeMethods() }}
 
 ## Especificaciones
 

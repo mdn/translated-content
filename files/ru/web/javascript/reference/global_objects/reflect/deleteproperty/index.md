@@ -1,13 +1,30 @@
 ---
 title: Reflect.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 ---
+
 {{JSRef}}
 
 Статический метод **`Reflect.deleteProperty()`** позволяет удалять свойства из объекта. Реализация данной функции схожа с оператором [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete).
 
-{{EmbedInteractiveExample("pages/js/reflect-deleteproperty.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Reflect.deleteProperty()", "taller")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+Reflect.deleteProperty(object1, "property1");
+
+console.log(object1.property1);
+// Expected output: undefined
+
+const array1 = [1, 2, 3, 4, 5];
+Reflect.deleteProperty(array1, "3");
+
+console.log(array1);
+// Expected output: Array [1, 2, 3, undefined, 5]
+```
 
 ## Синтаксис
 
@@ -32,7 +49,7 @@ Reflect.deleteProperty(target, propertyKey)
 
 ## Описание
 
-Метод `Reflect.deleteProperty` позволяет вам удалить свойство объекта. Он возвращает {{jsxref("Boolean")}} указывающий, было ли свойство успешно удалено. Он так же идентичен оператору [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) без использования строгого режима.
+Метод `Reflect.deleteProperty` позволяет вам удалить свойство объекта. Он возвращает {{jsxref("Boolean")}} указывающий, было ли свойство успешно удалено. Он так же идентичен оператору [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete) без использования строгого режима.
 
 ## Примеры
 
@@ -40,18 +57,18 @@ Reflect.deleteProperty(target, propertyKey)
 
 ```js
 var obj = { x: 1, y: 2 };
-Reflect.deleteProperty(obj, 'x'); // true
+Reflect.deleteProperty(obj, "x"); // true
 obj; // { y: 2 }
 
 var arr = [1, 2, 3, 4, 5];
-Reflect.deleteProperty(arr, '3'); // true
+Reflect.deleteProperty(arr, "3"); // true
 arr; // [1, 2, 3, , 5]
 
 // Возвращает true даже если такого свойства не существует
-Reflect.deleteProperty({}, 'foo'); // true
+Reflect.deleteProperty({}, "foo"); // true
 
 // Возвращает false если такое свойство ненастраиваемое
-Reflect.deleteProperty(Object.freeze({foo: 1}), 'foo'); // false
+Reflect.deleteProperty(Object.freeze({ foo: 1 }), "foo"); // false
 ```
 
 ## Спецификации

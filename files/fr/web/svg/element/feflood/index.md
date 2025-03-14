@@ -1,10 +1,6 @@
 ---
 title: <feFlood>
 slug: Web/SVG/Element/feFlood
-tags:
-  - SVG
-  - SVG Filter
-translation_of: Web/SVG/Element/feFlood
 ---
 
 {{SVGRef}}
@@ -19,9 +15,9 @@ La primitive de filtre SVG **`<feFlood>`** remplit la région du filtre avec la 
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation)
-- [Attributs de primitives de filtre](/fr/docs/Web/SVG/Attribute#Attributs_de_primitives_de_filtre)
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
+- [Attributs de primitives de filtre](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 
@@ -40,12 +36,17 @@ Cet élément implémente l'interface {{domxref("SVGFEFloodElement")}}.
 <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
   <defs>
     <filter id="floodFilter" filterUnits="userSpaceOnUse">
-      <feFlood x="50" y="50" width="100" height="100"
-          flood-color="green" flood-opacity="0.5"/>
+      <feFlood
+        x="50"
+        y="50"
+        width="100"
+        height="100"
+        flood-color="green"
+        flood-opacity="0.5" />
     </filter>
   </defs>
 
-  <use style="filter: url(#floodFilter);"/>
+  <use style="filter: url(#floodFilter);" />
 </svg>
 ```
 
@@ -80,4 +81,4 @@ Cet élément implémente l'interface {{domxref("SVGFEFloodElement")}}.
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Les filtres](/fr/docs/Web/SVG/Tutoriel/filtres)
+- [Tutoriel SVG: Les filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)

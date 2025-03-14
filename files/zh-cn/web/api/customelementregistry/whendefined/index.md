@@ -1,63 +1,67 @@
 ---
-title: CustomElementRegistry.whenDefined()
+title: CustomElementRegistry：whenDefined() 方法
 slug: Web/API/CustomElementRegistry/whenDefined
+l10n:
+  sourceCommit: 0edb4dbed5c7bfbc1dc8f2efd43bb4a5fe52f2d1
 ---
 
-{{APIRef("CustomElementRegistry")}}
+{{APIRef("Web Components")}}
 
-当一个元素被定义时{{domxref("CustomElementRegistry")}} 中的方法**`whenDefined()`** 接口返回 {{jsxref("Promise")}}.
+{{domxref("CustomElementRegistry")}} 接口的 **`whenDefined()`** 方法返回一个在具名元素被定义时兑现的 {{jsxref("Promise")}}。
 
 ## 语法
 
-```plain
-Promise<> customElements.whenDefined(name);
+```js-nolint
+whenDefined(name)
 ```
 
 ### 参数
 
-- name
-  - : 自定义元素的名称
+- `name`
+  - : 自定义元素的名称。
 
 ### 返回值
 
-当自定义元素被定义时一个{{jsxref("Promise")}} 返回{jsxref("undefined")}}. 如果自定义元素已经被定义，则 resolve 立即执行。
+一个 {{jsxref("Promise")}}，会在使用给定名称定义[自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)时兑现该自定义元素的构造函数。如果已经定义了给定名称的自定义元素，则 promise 立刻兑现。
 
-### 例外
+如果名称不是[有效的自定义元素名](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)，则 promise 会以 `SyntaxError` {{domxref("DOMException")}} 被拒绝。
 
-| Exception     | Description                                                                                                                                                                                   |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `SyntaxError` | 如果提供的 **name** 不是一个有效的 [自定义元素名字](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name), promise 的 reject 回调会接收到一个 `SyntaxError`. |
+## 示例
 
-## 例子
-
-这个例子使用 `whenDefined()` 来检测生成菜单的自定义元素何时被定义。这个菜单显示占位符内容一直到菜单内容已经准备好显示。
+此示例使用 `whenDefined()` 来检测生成菜单的自定义元素何时被定义。这个菜单显示占位符内容一直到菜单内容已经准备好显示。
 
 ```html
 <nav id="menu-container">
-  <div class="menu-placeholder">Loading...</div>
+  <div class="menu-placeholder">加载中……</div>
   <nav-menu>
-    <menu-item>Item 1</menu-item>
-    <menu-item>Item 2</menu-item>
-     ...
-    <menu-item>Item N</menu-item>
+    <menu-item>项目 1</menu-item>
+    <menu-item>项目 2</menu-item>
+    ……
+    <menu-item>项目 N</menu-item>
   </nav-menu>
 </nav>
 ```
 
 ```js
-const container = document.getElementById('menu-container');
-const placeholder = container.querySelector('.menu-placeholder');
-// Fetch all the children of menu that are not yet defined.
-const undefinedElements = container.querySelectorAll(':not(:defined)');
+const container = document.getElementById("menu-container");
+const placeholder = container.querySelector(".menu-placeholder");
+// 获取菜单中尚未被定义的所有子元素。
+const undefinedElements = container.querySelectorAll(":not(:defined)");
 
-const promises = [...undefinedElements].map(
-  button => customElements.whenDefined(button.localName)
-);
+async function removePlaceholder() {
+  // 过滤出元素的唯一 localName
+  const tags = new Set(
+    [...undefinedElements].map((button) => button.localName),
+  );
+  const promises = [...tags].map((tag) => customElements.whenDefined(tag));
 
-// Wait for all the children to be upgraded,
-// then remove the placeholder.
-await Promise.all(promises);
-container.removeChild(placeholder);
+  // 等待所有的子元素升级
+  await Promise.all(promises);
+  // 然后移除占位符
+  container.removeChild(placeholder);
+}
+
+removePlaceholder();
 ```
 
 ## 规范

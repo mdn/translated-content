@@ -7,11 +7,12 @@ slug: Web/HTTP/Headers/Keep-Alive
 
 El encabezado **`Keep-Alive`** permite al remitente indicar como será la forma de conexión, se puede establecer un tiempo de espera y una cantidad máxima de solicitudes.
 
-> **Nota:** El encabezado {{HTTPHeader("Connection")}} se tiene que establecer en "keep-alive" para que este encabezado tenga sentido. Además, {{HTTPHeader("Connection")}} y {{HTTPHeader("Keep-Alive")}} son ignorados en HTTP/2; la administración de la conexión se realiza mediante otros mecanismos.
+> [!NOTE]
+> El encabezado {{HTTPHeader("Connection")}} se tiene que establecer en "keep-alive" para que este encabezado tenga sentido. Además, {{HTTPHeader("Connection")}} y {{HTTPHeader("Keep-Alive")}} son ignorados en HTTP/2; la administración de la conexión se realiza mediante otros mecanismos.
 
-| Header type                                      | {{Glossary("General header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("General header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | no                             |
 
 ## Sintaxis
 
@@ -45,14 +46,11 @@ Server: Apache
 
 ## Especificaciones
 
-| Specification                                                                                                                     | Title                                                              |
-| --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| [HyperText Transport Protocol Keep-Alive Header](https://tools.ietf.org/id/draft-thomson-hybi-http-timeout-01.html#rfc.section.2) | The Keep-Alive Header (Experimental specification)                 |
-| {{RFC("7230", "Keep-Alive", "appendix-A.1.2")}}                                                                  | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Keep-Alive")}}
+{{Compat}}
 
 ## Mirar tambien
 

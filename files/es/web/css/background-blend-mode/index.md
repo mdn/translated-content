@@ -3,7 +3,7 @@ title: background-blend-mode
 slug: Web/CSS/background-blend-mode
 ---
 
-{{CSSRef()}}
+{{CSSRef}}
 
 ## Resumen
 
@@ -59,18 +59,19 @@ background-blend-mode: unset;
 
 ```css
 #div {
-    width: 300px;
-    height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),url('https://mdn.mozillademos.org/files/8545/tr.png');
-    background-blend-mode: screen;
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: screen;
 }
 ```
 
 ```js
-document.getElementById("select").onchange = function(event) {
-    document.getElementById("div").style.backgroundBlendMode = document.getElementById("select").selectedOptions[0].innerHTML;
-}
-console.log(document.getElementById('div'));
+document.getElementById("select").onchange = function (event) {
+  document.getElementById("div").style.backgroundBlendMode =
+    document.getElementById("select").selectedOptions[0].innerHTML;
+};
+console.log(document.getElementById("div"));
 ```
 
 {{ EmbedLiveSample('Examples', "330", "330") }}
@@ -79,9 +80,9 @@ console.log(document.getElementById('div'));
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.background-blend-mode")}}
+{{Compat}}
 
 ## Véase también
 

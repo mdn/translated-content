@@ -50,22 +50,23 @@ El elemento insertado o `null`, si la inserción falla.
 <!-- afterend -->
 ```
 
-> **Nota:** Las posiciones `beforebegin` y `afterend` sólo funcionan si el nodo está en un árbol y tiene un padre.
+> [!NOTE]
+> Las posiciones `beforebegin` y `afterend` sólo funcionan si el nodo está en un árbol y tiene un padre.
 
 ## Ejemplo
 
 ```js
-beforeBtn.addEventListener('click', function() {
-  var tempDiv = document.createElement('div');
+beforeBtn.addEventListener("click", function () {
+  var tempDiv = document.createElement("div");
   tempDiv.style.backgroundColor = randomColor();
-  activeElem.insertAdjacentElement('beforebegin',tempDiv);
+  activeElem.insertAdjacentElement("beforebegin", tempDiv);
   setListener(tempDiv);
 });
 
-afterBtn.addEventListener('click', function() {
-  var tempDiv = document.createElement('div');
+afterBtn.addEventListener("click", function () {
+  var tempDiv = document.createElement("div");
   tempDiv.style.backgroundColor = randomColor();
-  activeElem.insertAdjacentElement('afterend',tempDiv);
+  activeElem.insertAdjacentElement("afterend", tempDiv);
   setListener(tempDiv);
 });
 ```

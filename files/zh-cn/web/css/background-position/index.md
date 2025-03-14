@@ -7,7 +7,46 @@ slug: Web/CSS/background-position
 
 **`background-position`** [CSS](/zh-CN/docs/Web/CSS) 属性为每一个背景图片设置初始位置。这个位置是相对于由 {{cssxref("background-origin")}} 定义的位置图层的。
 
-{{EmbedInteractiveExample("pages/css/background-position.html")}}
+{{InteractiveExample("CSS Demo: background-position")}}
+
+```css interactive-example-choice
+background-position: top;
+```
+
+```css interactive-example-choice
+background-position: left;
+```
+
+```css interactive-example-choice
+background-position: center;
+```
+
+```css interactive-example-choice
+background-position: 25% 75%;
+```
+
+```css interactive-example-choice
+background-position: bottom 50px right 100px;
+```
+
+```css interactive-example-choice
+background-position: right 35% bottom 45%;
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: navajowhite;
+  background-image: url("/shared-assets/images/examples/star.png");
+  background-repeat: no-repeat;
+  height: 100%;
+}
+```
 
 ## 语法
 
@@ -28,7 +67,9 @@ background-position: 1cm 2cm;
 background-position: 10ch 8em;
 
 /* Multiple images */
-background-position: 0 0, center;
+background-position:
+  0 0,
+  center;
 
 /* Edge offsets values */
 background-position: bottom 10px right 20px;
@@ -82,20 +123,20 @@ background-position: unset;
 
 基本上发生的情况是从相应的容器尺寸中*减去*背景图像尺寸，然后将结果值的百分比用作从左（或顶部）边界的直接偏移量。
 
-```
+```plain
 (container width - image width) * (position x%) = (x offset value)
 (container height - image height) * (position y%) = (y offset value)
 ```
 
 以 X 轴为例，假设我们有一个 300px 宽的图像，我们在一个 100px 宽的容器中使用它，`background-size` 设置为 `auto`：
 
-```
+```plain
 100px - 300px = -200px (container & image difference)
 ```
 
 因此，位置百分比为 -25%、0%、50%、100%、125%，我们得到这些图像到容器边界偏移值：
 
-```
+```plain
 -200px * -25% = 50px
 -200px * 0% = 0px
 -200px * 50% = -100px
@@ -111,7 +152,7 @@ background-position: unset;
 - \-200px (将图片相对容器左移 200px，这意味着图片右部分的 100px 内容将出现在容器中)
 - \-250px (将图片相对容器左移 250px，这意味着图片的右边界对齐容器的中线)
 
-值得一提的是，如果您的 `background-size` 等于给定轴的容器大小，那么该轴的 _百分比_ 位置将不起作用，因为“容器图像差异”将为零。您将需要使用绝对值进行偏移。
+值得一提的是，如果你的 `background-size` 等于给定轴的容器大小，那么该轴的 _百分比_ 位置将不起作用，因为“容器图像差异”将为零。你将需要使用绝对值进行偏移。
 
 ## 形式定义
 
@@ -149,16 +190,18 @@ div {
 
 /* 这些例子使用 `background` 缩写 */
 .exampleone {
-  background: url("startransparent.gif") #ffee99 2.5cm bottom no-repeat;
+  background: url("star-transparent.gif") #ffee99 2.5cm bottom no-repeat;
 }
 .exampletwo {
-  background: url("startransparent.gif") #ffee99 left 4em bottom 1em no-repeat;
+  background: url("star-transparent.gif") #ffee99 left 4em bottom 1em no-repeat;
 }
 
 /* 多背景图片：每个图片依次和相应的 `background-position` 匹配 */
 .examplethree {
-  background-image: url("startransparent.gif"), url("catfront.png");
-  background-position: 0px 0px, right 3em bottom 2em;
+  background-image: url("star-transparent.gif"), url("cat-front.png");
+  background-position:
+    0px 0px,
+    right 3em bottom 2em;
 }
 ```
 
@@ -178,5 +221,5 @@ div {
 
 - {{cssxref("background-position-x")}}
 - {{cssxref("background-position-y")}}
-- [Using multiple backgrounds](/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Using multiple backgrounds](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
 - {{cssxref("transform-origin")}}

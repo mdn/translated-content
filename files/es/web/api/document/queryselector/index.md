@@ -13,8 +13,8 @@ element = document.querySelector(selectores);
 
 Donde:
 
-- `element` es un objeto de tipo [element](/es/docs/DOM/element).
-- `selectores` es una cadena de caracteres que contiene uno o más [selectores CSS](/es/docs/Web/Guide/CSS/Getting_Started/Selectors) separados por coma.
+- `element` es un objeto de tipo [element](/es/docs/Web/API/Element).
+- `selectores` es una cadena de caracteres que contiene uno o más [selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors) separados por coma.
 
 ## Ejemplo
 
@@ -39,7 +39,7 @@ var el = document.querySelector("div.user-panel.main input[name='login']");
 - Lanza una excepción de tipo SYNTAX_ERR si el grupo de selectores especificado no es válido.
 - querySelector() se introdujo en la [API Selectors](https://www.w3.org/TR/selectors-api/).
 - La cadena de caracteres que se pasa como argumento a `querySelector debe seguir la sintaxis CSS.`
-- Las Pseudo-clases CSS nunca devolverán elementos, tal y como está especificado en la [`AP​I Selectors`](https://www.w3.org/TR/selectors-api/#grammar).
+- Las Pseudo-clases CSS nunca devolverán elementos, tal y como está especificado en la [`API Selectors`](https://www.w3.org/TR/selectors-api/#grammar).
 - Para que coincidan ID's o selectores que no siguen la sintáxis CSS (usando inapropiadamente dos puntos o un espacio por ejemplo), se debe 'escapar' el carácter con una barra invertida (\\). Como la barra invertida es un carácter de 'escape' en JavaScript, si estás indicando una cadena de caracteres literal, debes 'escaparla' dos veces (una para la cadena de caracteres JavaScript y otra para el querySelector):
 
 ```html
@@ -47,15 +47,15 @@ var el = document.querySelector("div.user-panel.main input[name='login']");
 <div id="foo:bar"></div>
 
 <script>
-  console.log('#foo\bar');               // "#fooar"
-  document.querySelector('#foo\bar');    // No coincide con nada
+  console.log("#foo\bar"); // "#fooar"
+  document.querySelector("#foo\bar"); // No coincide con nada
 
-  console.log('#foo\\bar');              // "#foo\bar"
-  console.log('#foo\\\\bar');            // "#foo\\bar"
-  document.querySelector('#foo\\\\bar'); // Coincide con el primer div
+  console.log("#foo\\bar"); // "#foo\bar"
+  console.log("#foo\\\\bar"); // "#foo\\bar"
+  document.querySelector("#foo\\\\bar"); // Coincide con el primer div
 
-  document.querySelector('#foo:bar');    // No coincide con nada
-  document.querySelector('#foo\\:bar');  // Coincide con el segundo div
+  document.querySelector("#foo:bar"); // No coincide con nada
+  document.querySelector("#foo\\:bar"); // Coincide con el segundo div
 </script>
 ```
 

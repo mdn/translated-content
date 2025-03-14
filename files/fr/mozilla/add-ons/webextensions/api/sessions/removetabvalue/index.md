@@ -1,31 +1,21 @@
 ---
 title: sessions.removeTabValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/removeTabValue
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - removeTabValue
-  - sessions
-translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/removeTabValue
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Supprime une valeur précédemment stockée par un appel à {{WebExtAPIRef("sessions.setTabValue")}}.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var removing = browser.sessions.removeTabValue(
-  tabId,    // integer
-  key       // string
-)
+  tabId, // integer
+  key, // string
+);
 ```
 
 ### Paramètres
@@ -37,11 +27,11 @@ var removing = browser.sessions.removeTabValue(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui ne sera résolue aucun argument si l'élément a été supprimé avec succès. Si l'appel a échoué (par exemple, parce que l'ID de l'onglet n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui ne sera résolue aucun argument si l'élément a été supprimé avec succès. Si l'appel a échoué (par exemple, parce que l'ID de l'onglet n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sessions.removeTabValue", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -49,13 +39,19 @@ Ce code ajoute deux éléments de menu contextuel: l'un stocke une valeur associ
 
 ```js
 async function setOnActiveTab() {
-  let tabArray = await browser.tabs.query({currentWindow: true, active: true});
+  let tabArray = await browser.tabs.query({
+    currentWindow: true,
+    active: true,
+  });
   let tabId = tabArray[0].id;
   await browser.sessions.setTabValue(tabId, "my-key", "my-value");
 }
 
 async function removeFromActiveTab() {
-  let tabArray = await browser.tabs.query({currentWindow: true, active: true});
+  let tabArray = await browser.tabs.query({
+    currentWindow: true,
+    active: true,
+  });
   let tabId = tabArray[0].id;
   await browser.sessions.removeTabValue(tabId, "my-key");
 }
@@ -63,13 +59,13 @@ async function removeFromActiveTab() {
 browser.menus.create({
   id: "add-my-item",
   title: "add item",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.create({
   id: "remove-my-item",
   title: "remove item",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener((info) => {

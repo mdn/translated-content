@@ -1,39 +1,51 @@
 ---
-title: element.onbeforescriptexecute
+title: Document：beforescriptexecute 事件
 slug: Web/API/Document/beforescriptexecute_event
+l10n:
+  sourceCommit: 3966c40a3917825e6e467f1592bc7f8d59458e74
 ---
 
-{{ApiRef}}
+{{APIRef}}{{non-standard_header}}
 
-## 概述
-
-当 HTML 文档中的[`<script>`](../HTML/Element/script)标签内的代码将要执行时触发该事件，如果这个`script`标签是用`appendChild()`等方法动态添加上去的，则不会触发该事件。
+`beforescriptexecute` 事件会在静态 {{HTMLElement("script")}} 元素开始脚本执行时触发。如果元素是动态添加的（例如使用 {{domxref("Node.appendChild()", "appendChild()")}}），则不会触发此事件。
 
 ## 语法
 
-```plain
-document.onbeforescriptexecute = funcRef;
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+
+```js
+addEventListener("beforescriptexecute", (event) => {});
+
+onbeforescriptexecute = (event) => {};
 ```
 
-当`beforescriptexecute`事件触发时，`funcRef`函数就会被调用。传入参数`event`的`target`属性指向触发该事件的那个`script`元素。
+## 事件类型
 
-## 例子
+通用的 {{domxref("Event")}}。
+
+## 示例
 
 ```js
 function starting(e) {
-  logMessage("Starting script with ID: " + e.target.id);
+  logMessage(`ID 值为 ${e.target.id} 的脚本已开始`);
 }
 
 document.addEventListener("beforescriptexecute", starting, true);
+// 或
+document.onbeforescriptexecute = starting;
 ```
 
-[查看在线演示](/samples/html/currentScript.html)
+[查看在线示例](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
 ## 规范
 
-- [HTML5](http://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
+不属于任何规范。
 
-## 相关链接
+## 浏览器兼容性
 
-- {{domxref("element.onafterscriptexecute")}}
-- {{domxref("document.currentScript")}}
+{{Compat}}
+
+## 参见
+
+- {{domxref("Document.afterscriptexecute_event")}}
+- {{domxref("Document.currentScript")}}

@@ -1,14 +1,11 @@
 ---
 title: Обнаружение столкновений
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Обнаружение_столкновений
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создаём_зону_кирпичей", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
+{{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создаём_зону_кирпичей", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
 
-Это 7 шаг из 10 в [Gamedev Canvas tutorial](/ru/docs/Games/Workflows/Breakout_game_from_scratch). Вы можете найти исходный код, как он будет выглядеть после завершения этого урока, тут [Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html).
+Это 7 шаг из 10 в [Gamedev Canvas tutorial](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Вы можете найти исходный код, как он будет выглядеть после завершения этого урока, тут [Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html).
 
 У нас уже есть кирпичи, появляющиеся на экране, но игра все ещё не так интересна, ведь мяч проходит сквозь них. Нам нужно подумать о добавлении обнаружения столкновений, чтобы он мог отскакивать от кирпичей и ломать их.
 
@@ -20,12 +17,12 @@ original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Обнаруже
 
 ```js
 function collisionDetection() {
-    for(var c=0; c<brickColumnCount; c++) {
-        for(var r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
-            // calculations
-        }
+  for (var c = 0; c < brickColumnCount; c++) {
+    for (var r = 0; r < brickRowCount; r++) {
+      var b = bricks[c][r];
+      // calculations
     }
+  }
 }
 ```
 
@@ -40,14 +37,14 @@ function collisionDetection() {
 
 ```js
 function collisionDetection() {
-    for(var c=0; c<brickColumnCount; c++) {
-        for(var r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
-            if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
-                dy = -dy;
-            }
-        }
+  for (var c = 0; c < brickColumnCount; c++) {
+    for (var r = 0; r < brickRowCount; r++) {
+      var b = bricks[c][r];
+      if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
+        dy = -dy;
+      }
     }
+  }
 }
 ```
 
@@ -59,11 +56,11 @@ function collisionDetection() {
 
 ```js
 var bricks = [];
-for(var c=0; c<brickColumnCount; c++) {
-    bricks[c] = [];
-    for(var r=0; r<brickRowCount; r++) {
-        bricks[c][r] = { x: 0, y: 0, status: 1 };
-    }
+for (var c = 0; c < brickColumnCount; c++) {
+  bricks[c] = [];
+  for (var r = 0; r < brickRowCount; r++) {
+    bricks[c][r] = { x: 0, y: 0, status: 1 };
+  }
 }
 ```
 
@@ -71,21 +68,21 @@ for(var c=0; c<brickColumnCount; c++) {
 
 ```js
 function drawBricks() {
-    for(var c=0; c<brickColumnCount; c++) {
-        for(var r=0; r<brickRowCount; r++) {
-            if(bricks[c][r].status == 1) {
-                var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
-                var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
-                bricks[c][r].x = brickX;
-                bricks[c][r].y = brickY;
-                ctx.beginPath();
-                ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                ctx.fillStyle = "#0095DD";
-                ctx.fill();
-                ctx.closePath();
-            }
-        }
+  for (var c = 0; c < brickColumnCount; c++) {
+    for (var r = 0; r < brickRowCount; r++) {
+      if (bricks[c][r].status == 1) {
+        var brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+        var brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+        bricks[c][r].x = brickX;
+        bricks[c][r].y = brickY;
+        ctx.beginPath();
+        ctx.rect(brickX, brickY, brickWidth, brickHeight);
+        ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();
+      }
     }
+  }
 }
 ```
 
@@ -95,17 +92,22 @@ function drawBricks() {
 
 ```js
 function collisionDetection() {
-    for(var c=0; c<brickColumnCount; c++) {
-        for(var r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
-            if(b.status == 1) {
-                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
-                    dy = -dy;
-                    b.status = 0;
-                }
-            }
+  for (var c = 0; c < brickColumnCount; c++) {
+    for (var r = 0; r < brickRowCount; r++) {
+      var b = bricks[c][r];
+      if (b.status == 1) {
+        if (
+          x > b.x &&
+          x < b.x + brickWidth &&
+          y > b.y &&
+          y < b.y + brickHeight
+        ) {
+          dy = -dy;
+          b.status = 0;
         }
+      }
     }
+  }
 }
 ```
 
@@ -123,10 +125,11 @@ collisionDetection();
 
 {{JSFiddleEmbed("https://jsfiddle.net/yumetodo/mkwtxgc3/3/","","395")}}
 
-> **Примечание:** измените цвет шара, когда он ударит по кирпичу.
+> [!NOTE]
+> Измените цвет шара, когда он ударит по кирпичу.
 
 ## Следующие шаги
 
-Мы уверенно движемся вперёд! Поехали! В восьмой главе мы будем учиться [отслеживать счёт и выигрывать](/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Track_the_score_and_win).
+Мы уверенно движемся вперёд! Поехали! В восьмой главе мы будем учиться [отслеживать счёт и выигрывать](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}

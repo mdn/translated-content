@@ -1,5 +1,5 @@
 ---
-title: 'Reason: CORS request not HTTP'
+title: "Reason: CORS request not HTTP"
 slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 ---
 
@@ -22,4 +22,4 @@ Para resolver este problema, simplemente asegúrate de usar direciones HTTPS cua
 - Errores de CORS
 - Glosario: {{Glossary("CORS")}}
 - [Introducción a CORS](/es/docs/Web/HTTP/CORS)
-- [¿Qué es una direccion?](/es/docs/Learn/Common_questions/What_is_a_URL)
+- [¿Qué es una direccion?](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)

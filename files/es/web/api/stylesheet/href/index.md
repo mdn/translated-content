@@ -1,7 +1,6 @@
 ---
 title: stylesheet.href
 slug: Web/API/StyleSheet/href
-translation_of: Web/API/StyleSheet/href
 ---
 
 {{ ApiRef() }}
@@ -47,4 +46,4 @@ Si la hoja de estilo es un enlace, el valor de este atributo es su localización
 
 ### Specification
 
-[href](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-href)
+[href](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-href)

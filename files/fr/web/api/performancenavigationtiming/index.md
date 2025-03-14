@@ -1,14 +1,6 @@
 ---
 title: PerformanceNavigationTiming
 slug: Web/API/PerformanceNavigationTiming
-tags:
-  - API
-  - Interface
-  - Navigation Timing API
-  - Performance Timeline API
-  - Reference
-  - Performance Web
-translation_of: Web/API/PerformanceNavigationTiming
 ---
 
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
@@ -56,7 +48,7 @@ L'interface prend également en charge les propriétés suivantes :
 - [`PerformanceNavigationTiming.responseStart`](/fr/docs/Web/API/PerformanceNavigationTiming/responseStart) {{readonlyInline}} {{Experimental_Inline}}
   - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant l'heure immédiatement après que l'analyseur HTTP de l'agent utilisateur ait reçu le premier octet de la réponse des caches d'application pertinents, ou des ressources locales ou du serveur.
 - [`PerformanceNavigationTiming.type`](/fr/docs/Web/API/PerformanceNavigationTiming/type) {{readonlyInline}} {{Experimental_Inline}}
-  - : Une chaîne de caractère [DOMString](/fr/docs/Web/API/DOMString) représentant le type de navigation. Doit être : « `navigate` », « `reload` », « `back_forward` » ou « `prerender` ».
+  - : Une chaîne de caractère [DOMString](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le type de navigation. Doit être : « `navigate` », « `reload` », « `back_forward` » ou « `prerender` ».
 - [`PerformanceNavigationTiming.unloadEventEnd`](/fr/docs/Web/API/PerformanceNavigationTiming/unloadEventEnd) {{readonlyInline}} {{Experimental_Inline}}
   - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant la valeur temporelle égale au temps immédiatement après que l'agent utilisateur ait terminé l'événement de déchargement du document précédent.
 - [`PerformanceNavigationTiming.unloadEventStart`](/fr/docs/Web/API/PerformanceNavigationTiming/unloadEventStart) {{readonlyInline}} {{Experimental_Inline}}
@@ -65,7 +57,7 @@ L'interface prend également en charge les propriétés suivantes :
 ## Méthodes
 
 - [`PerformanceNavigationTiming.toJSON()`](/fr/docs/Web/API/PerformanceNavigationTiming/toJSON) {{Experimental_Inline}}
-  - : Retourne une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) qui est la représentation JSON de l'objet [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming).
+  - : Retourne une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui est la représentation JSON de l'objet [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming).
 
 ## Spécifications
 

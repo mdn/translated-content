@@ -1,20 +1,14 @@
 ---
 title: offset
 slug: Web/CSS/offset
-tags:
-  - CSS
-  - Draft
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/offset
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`offset`** est une propriété raccourcie pour les propriétés {{cssxref("offset-path")}}, {{cssxref("offset-position")}}, {{cssxref("offset-distance")}}, {{cssxref("offset-rotate")}} et {{cssxref("offset-anchor")}}. Elle permet d'animer un élément sur un tracé défini.
 
-> **Note :** Dans les premières versions de la spécification, cette propriété était intitulée `motion`.
+> [!NOTE]
+> Dans les premières versions de la spécification, cette propriété était intitulée `motion`.
 
 ## Syntaxe
 

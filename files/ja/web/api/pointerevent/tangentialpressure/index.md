@@ -1,8 +1,9 @@
 ---
-title: PointerEvent.tangentialPressure
+title: "PointerEvent: tangentialPressure プロパティ"
+short-title: tangentialPressure
 slug: Web/API/PointerEvent/tangentialPressure
 l10n:
-  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{ APIRef("Pointer Events") }}
@@ -20,18 +21,22 @@ l10n:
 このスニペットでは、 {{domxref("Element/pointerdown_event", "pointerdown")}} イベントが発生すると、イベントの `tangentialPressure` プロパティの値に応じてさまざまな関数が呼び出されます。
 
 ```js
-someElement.addEventListener('pointerdown', (event) => {
-  if (event.tangentialPressure === 0) {
-    // 圧力なし
-    process_no_tanPressure(event);
-  } else if (event.tangentialPressure === 1) {
-    // 最大圧力
-    process_max_tanPressure(event);
-  } else {
-    // デフォルト
-    process_tanPressure(event);
-  }
-}, false);
+someElement.addEventListener(
+  "pointerdown",
+  (event) => {
+    if (event.tangentialPressure === 0) {
+      // 圧力なし
+      process_no_tanPressure(event);
+    } else if (event.tangentialPressure === 1) {
+      // 最大圧力
+      process_max_tanPressure(event);
+    } else {
+      // デフォルト
+      process_tanPressure(event);
+    }
+  },
+  false,
+);
 ```
 
 ## 仕様書

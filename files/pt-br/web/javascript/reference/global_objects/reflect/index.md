@@ -42,7 +42,7 @@ Alguns deste métodos são também os mesmos correspondentes aos métodos em {{j
 - {{jsxref("Reflect.set()", "Reflect.set(<var>target</var>, <var>propertyKey</var>, <var>value</var>[, <var>receiver</var>])")}}
   - : Uma função que atribui valores a propriedades. Retorna um {{jsxref ("Boolean")}} com o valor `true` se a atualização foi bem sucedida.
 - {{jsxref("Reflect.setPrototypeOf()", "Reflect.setPrototypeOf(<var>target</var>, <var>prototype</var>)")}}
-  - : Uma função que define o [protótipo de um objeto](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype). Retorna um {{jsxref ("Boolean")}} com o valor `true` se a atualização foi bem sucedida.
+  - : Uma função que define o [protótipo de um objeto](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object). Retorna um {{jsxref ("Boolean")}} com o valor `true` se a atualização foi bem sucedida.
 
 ## Exemplos
 
@@ -50,16 +50,16 @@ Alguns deste métodos são também os mesmos correspondentes aos métodos em {{j
 
 ```js
 const duck = {
-  name: 'Maurice',
-  color: 'white',
-  greeting: function() {
+  name: "Maurice",
+  color: "white",
+  greeting: function () {
     console.log(`Quaaaack! My name is ${this.name}`);
-  }
-}
+  },
+};
 
-Reflect.has(duck, 'color');
+Reflect.has(duck, "color");
 // true
-Reflect.has(duck, 'haircut');
+Reflect.has(duck, "haircut");
 // false
 ```
 
@@ -73,21 +73,18 @@ Reflect.ownKeys(duck);
 ### Adicionando uma nova propriedade ao objeto
 
 ```js
-Reflect.set(duck, 'eyes', 'black');
+Reflect.set(duck, "eyes", "black");
 // returns "true" if successful
 // "duck" now contains the property "eyes: 'black'"
 ```
 
 ## Especificações
 
-| Especificação                                                                | Situação                     | Comentário                      |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------------------- |
-| {{SpecName('ES6', '#sec-reflect-object', 'Reflect')}}     | {{Spec2('ES6')}}         | Definição Inicial               |
-| {{SpecName('ESDraft', '#sec-reflect-object', 'Reflect')}} | {{Spec2('ESDraft')}} | Reflect.enumerate foi removido. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Reflect")}}
+{{Compat}}
 
 ## Veja também
 

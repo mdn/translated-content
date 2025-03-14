@@ -1,13 +1,9 @@
 ---
 title: attribute-set
 slug: Web/XSLT/Element/attribute-set
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/attribute-set
-original_slug: Web/XSLT/attribute-set
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:attribute-set>` crée un ensemble nommé d'attributs, qui peut être appliqué dans son intégralité au document de sortie, de façon similaire aux styles CSS nommés.
 
@@ -22,7 +18,7 @@ L'élément `<xsl:attribute-set>` crée un ensemble nommé d'attributs, qui peut
 ### Attributs obligatoires
 
 - `name`
-  - : Définit le nom de l'ensemble d'attributs. Le nom doit être un [QName](http://www.w3.org/TR/REC-xml-names/#ns-qualnames) valide.
+  - : Définit le nom de l'ensemble d'attributs. Le nom doit être un [QName](https://www.w3.org/TR/REC-xml-names/#ns-qualnames) valide.
 
 ### Attributs optionnels
 
@@ -35,7 +31,7 @@ Haut niveau, doit être l'enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`.
 
 ### Défini
 
-[XSLT 1.0, section 7.1.4](http://www.w3.org/TR/xslt#attribute-sets).
+[XSLT 1.0, section 7.1.4](https://www.w3.org/TR/xslt#attribute-sets).
 
 ### Support Gecko
 

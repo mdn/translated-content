@@ -7,7 +7,8 @@ slug: Web/API/HTMLCollection
 
 La interfaz **`HTMLCollection`** representa una colección genérica (objeto tipo array similar a arguments) de elementos (en orden de documento) y ofrece métodos y propiedades para seleccionarlos de la lista.
 
-> **Nota:** Esta interfaz se llama `HTMLCollection` por razones históricas (antes del DOM moderno, las colecciones que implementaban esta interfaz sólo podían tener elementos HTML como sus ítems).
+> [!NOTE]
+> Esta interfaz se llama `HTMLCollection` por razones históricas (antes del DOM moderno, las colecciones que implementaban esta interfaz sólo podían tener elementos HTML como sus ítems).
 
 Una `HTMLCollection` en el DOM de HTML está viva; se actualiza automáticamente cuando el documento subyacente cambia.
 
@@ -53,7 +54,7 @@ elem1 = document.forms["named.item.with.periods"];
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.HTMLCollection")}}
+{{Compat}}
 
 ## Vea también
 

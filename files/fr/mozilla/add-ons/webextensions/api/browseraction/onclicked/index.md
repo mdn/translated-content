@@ -1,31 +1,20 @@
 ---
 title: browserAction.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - onClicked
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Action quand l'icone d'action du navigateur est cliqué. Cet événement ne déclenchera pas si l'action du navigateur comporte une fenêtre contextuelle.
 
-Pour définir une action de clic droit, utilisez l'API [`contextMenus`](/fr/Add-ons/WebExtensions/API/contextMenus) avec le [type de contexte](/fr/Add-ons/WebExtensions/API/contextMenus/ContextType) "browser_action".
+Pour définir une action de clic droit, utilisez l'API [`contextMenus`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus) avec le [type de contexte](/fr/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/ContextType) "browser_action".
 
 ## Syntaxe
 
 ```js
-browser.browserAction.onClicked.addListener(listener)
-browser.browserAction.onClicked.removeListener(listener)
-browser.browserAction.onClicked.hasListener(listener)
+browser.browserAction.onClicked.addListener(listener);
+browser.browserAction.onClicked.removeListener(listener);
+browser.browserAction.onClicked.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -48,9 +37,9 @@ Les événements ont trois fonctions :
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. L'onglet qui était actif lorsque l'icône a été cliquée .
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserAction.onClicked")}}
+{{Compat}}
 
 ## Exemples
 
@@ -67,7 +56,7 @@ browser.browserAction.onClicked.addListener((tab) => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
 >

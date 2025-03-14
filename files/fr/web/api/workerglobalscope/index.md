@@ -1,21 +1,13 @@
 ---
 title: WorkerGlobalScope
 slug: Web/API/WorkerGlobalScope
-tags:
-  - API
-  - Interface
-  - Reference
-  - TopicStub
-  - WorkerGlobalScope
-  - Workers
-translation_of: Web/API/WorkerGlobalScope
 ---
 
 {{APIRef("Web Workers API")}}
 
 L'interface **`WorkerGlobalScope`** de l'[API Web Workers](/fr/docs/Web/API/Web_Workers_API) est une interface représentant la portée de tout worker. Les Workers n'ont pas de contexte de navigation; cette portée contient les informations généralement véhiculées par les objets {{domxref("Window")}} — dans ce cas les gestionnaires d'événements, la console ou l'objet {{domxref("WorkerNavigator")}} associé. Chaque `WorkerGlobalScope` a sa propre boucle d'événements.
 
-Cette interface est généralement spécialisée par chaque type de worker : {{domxref("DedicatedWorkerGlobalScope")}} pour les workers dédiés, {{domxref("SharedWorkerGlobalScope")}} pour les workers partagés, et {{domxref("ServiceWorkerGlobalScope")}} pour [ServiceWorker](/fr/docs/Web/API/ServiceWorker_API). La propriété `self` renvoie la portée spécialisée pour chaque contexte.
+Cette interface est généralement spécialisée par chaque type de worker : {{domxref("DedicatedWorkerGlobalScope")}} pour les workers dédiés, {{domxref("SharedWorkerGlobalScope")}} pour les workers partagés, et {{domxref("ServiceWorkerGlobalScope")}} pour [ServiceWorker](/fr/docs/Web/API/Service_Worker_API). La propriété `self` renvoie la portée spécialisée pour chaque contexte.
 
 ## Propriétés
 
@@ -88,11 +80,12 @@ Cette interface hérite des méthodes de l'interface {{domxref ("EventTarget")}}
 Vous n'accéderez pas à `WorkerGlobalScope` directement dans votre code; cependant, ses propriétés et méthodes sont héritées par des portées globales plus spécifiques telles que {{domxref ("DedicatedWorkerGlobalScope")}} et {{domxref ("SharedWorkerGlobalScope")}}. Par exemple, vous pouvez importer un autre script dans le worker et imprimer le contenu de l'objet `navigator` de l'étendue du worker en utilisant les deux lignes suivantes:
 
 ```js
-importScripts('foo.js');
+importScripts("foo.js");
 console.log(navigator);
 ```
 
-> **Note :** Étant donné que la portée globale du script de worker est effectivement la portée globale du worker que vous exécutez ({{domxref ("DedicatedWorkerGlobalScope")}} ou autre) et que toutes les portées globales de worker héritent des méthodes, des propriétés, etc. À partir de `WorkerGlobalScope`, vous pouvez exécuter des lignes telles que celles ci-dessus sans spécifier d'objet parent.
+> [!NOTE]
+> Étant donné que la portée globale du script de worker est effectivement la portée globale du worker que vous exécutez ({{domxref ("DedicatedWorkerGlobalScope")}} ou autre) et que toutes les portées globales de worker héritent des méthodes, des propriétés, etc. À partir de `WorkerGlobalScope`, vous pouvez exécuter des lignes telles que celles ci-dessus sans spécifier d'objet parent.
 
 ## Spécifications
 
@@ -106,4 +99,4 @@ console.log(navigator);
 
 - Autre interface d'objet globale: {{domxref("Window")}}, {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, , {{domxref("ServiceWorkerGlobalScope")}}
 - Autres interfaces liées aux travailleurs: {{domxref("Worker")}}, {{domxref("WorkerLocation")}}, {{domxref("WorkerGlobalScope")}}, et {{domxref("ServiceWorkerGlobalScope")}}.
-- [Utilisation de web workers.](/fr/docs/Web/Guide/Performance/Using_web_workers)
+- [Utilisation de web workers.](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)

@@ -1,12 +1,9 @@
 ---
 title: Motifs
 slug: Web/SVG/Tutorial/Patterns
-tags:
-  - SVG
-  - SVG:Tutoriel
-translation_of: Web/SVG/Tutorial/Patterns
-original_slug: Web/SVG/Tutoriel/Motifs
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutoriel/Gradients", "Web/SVG/Tutoriel/Texts") }}
 
@@ -18,22 +15,27 @@ Les motifs (_patterns_ en anglais) sont sans aucun doute les types de remplissag
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="Gradient1">
-      <stop offset="5%" stop-color="white"/>
-      <stop offset="95%" stop-color="blue"/>
+      <stop offset="5%" stop-color="white" />
+      <stop offset="95%" stop-color="blue" />
     </linearGradient>
     <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="5%" stop-color="red"/>
-      <stop offset="95%" stop-color="orange"/>
+      <stop offset="5%" stop-color="red" />
+      <stop offset="95%" stop-color="orange" />
     </linearGradient>
-    
+
     <pattern id="Pattern" x="0" y="0" width=".25" height=".25">
-      <rect x="0" y="0" width="50" height="50" fill="skyblue"/>
-      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/>
-         <circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5"/>
+      <rect x="0" y="0" width="50" height="50" fill="skyblue" />
+      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)" />
+      <circle
+        cx="25"
+        cy="25"
+        r="20"
+        fill="url(#Gradient1)"
+        fill-opacity="0.5" />
     </pattern>
   </defs>
 
-  <rect fill="url(#Pattern)" stroke="black" width="200" height="200"/>
+  <rect fill="url(#Pattern)" stroke="black" width="200" height="200" />
 </svg>
 ```
 
@@ -62,25 +64,35 @@ La chose à retenir est que si l'objet change de taille, le motif lui-même sera
 ### Exemple
 
 ```html hidden
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg" id="svg" class="playable-svg">
+<svg
+  width="600"
+  height="200"
+  xmlns="http://www.w3.org/2000/svg"
+  id="svg"
+  class="playable-svg">
   <defs>
     <linearGradient id="Gradient1">
-      <stop offset="5%" stop-color="white"/>
-      <stop offset="95%" stop-color="blue"/>
+      <stop offset="5%" stop-color="white" />
+      <stop offset="95%" stop-color="blue" />
     </linearGradient>
     <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="5%" stop-color="red"/>
-      <stop offset="95%" stop-color="orange"/>
+      <stop offset="5%" stop-color="red" />
+      <stop offset="95%" stop-color="orange" />
     </linearGradient>
-    
+
     <pattern id="Pattern" x="0" y="0" width=".25" height=".25">
-      <rect x="0" y="0" width="50" height="50" fill="skyblue"/>
-      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/>
-         <circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5"/>
+      <rect x="0" y="0" width="50" height="50" fill="skyblue" />
+      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)" />
+      <circle
+        cx="25"
+        cy="25"
+        r="20"
+        fill="url(#Gradient1)"
+        fill-opacity="0.5" />
     </pattern>
   </defs>
 
-  <rect fill="url(#Pattern)" stroke="black" width="200" height="200"/>
+  <rect fill="url(#Pattern)" stroke="black" width="200" height="200" />
 </svg>
 
 <div class="playable-buttons">
@@ -88,31 +100,32 @@ La chose à retenir est que si l'objet change de taille, le motif lui-même sera
   <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
-rect.setAttribute('width', 300);</textarea>
+rect.setAttribute('width', 300);</textarea
+>
 ```
 
 ```js hidden
-var svg      = document.getElementById('svg'),
-    rect     = svg.lastElementChild;
+var svg = document.getElementById("svg"),
+  rect = svg.lastElementChild;
 
-var textarea = document.getElementById('code'),
-    reset    = document.getElementById('reset'),
-    edit     = document.getElementById('edit'),
-    code     = textarea.value;
+var textarea = document.getElementById("code"),
+  reset = document.getElementById("reset"),
+  edit = document.getElementById("edit"),
+  code = textarea.value;
 
 function drawSvg() {
   eval(textarea.value);
 }
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawSvg();
 });
-edit.addEventListener('click', function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', drawSvg);
-window.addEventListener('load', drawSvg);
+textarea.addEventListener("input", drawSvg);
+window.addEventListener("load", drawSvg);
 ```
 
 {{ EmbedLiveSample('Exemple_2','220','350') }}
@@ -144,7 +157,7 @@ Maintenant, parce le contenu du motif utilise le même système d'unité que le 
       <stop offset="5%" stop-color="red"/>
       <stop offset="95%" stop-color="orange"/>
     </linearGradient>
-    
+
     <pattern id="Pattern" width=".25" height=".25" patternContent
       <rect x="0" y="0" width=".25" height=".25" fill="skyblue"/>
       <rect x="0" y="0" width=".125" height=".125" fill="url(#Gradient2)"/>
@@ -164,32 +177,33 @@ rect.setAttribute('width', 300);</textarea>
 ```
 
 ```js hidden
-var svg      = document.getElementById('svg'),
-    rect     = svg.lastElementChild;
+var svg = document.getElementById("svg"),
+  rect = svg.lastElementChild;
 
-var textarea = document.getElementById('code'),
-    reset    = document.getElementById('reset'),
-    edit     = document.getElementById('edit'),
-    code     = textarea.value;
+var textarea = document.getElementById("code"),
+  reset = document.getElementById("reset"),
+  edit = document.getElementById("edit"),
+  code = textarea.value;
 
 function drawSvg() {
   eval(textarea.value);
 }
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawSvg();
 });
-edit.addEventListener('click', function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', drawSvg);
-window.addEventListener('load', drawSvg);
+textarea.addEventListener("input", drawSvg);
+window.addEventListener("load", drawSvg);
 ```
 
 {{ EmbedLiveSample('Code_jouable_2','220','350') }}
 
-> **Note :** Dans Gecko, les cercles semblent avoir du mal à être dessinés si le rayon est inférieur à 0.075 (on ignore s'il s'agit d'un bug de l'élément pattern ou non). Pour contourner ce problème, il est probablement préférable d'éviter de dessiner des cercles dans des unités "objectBoundingBox".
+> [!NOTE]
+> Dans Gecko, les cercles semblent avoir du mal à être dessinés si le rayon est inférieur à 0.075 (on ignore s'il s'agit d'un bug de l'élément pattern ou non). Pour contourner ce problème, il est probablement préférable d'éviter de dessiner des cercles dans des unités "objectBoundingBox".
 
 ## Unités du motif: userSpaceOnUse
 
@@ -208,25 +222,35 @@ Bien sûr, cela veut dire que le motif ne sera pas mis à l'échelle si vous mod
 ### Exemple jouable
 
 ```html hidden
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg" id="svg" class="playable-svg">
+<svg
+  width="600"
+  height="200"
+  xmlns="http://www.w3.org/2000/svg"
+  id="svg"
+  class="playable-svg">
   <defs>
     <linearGradient id="Gradient1">
-      <stop offset="5%" stop-color="white"/>
-      <stop offset="95%" stop-color="blue"/>
+      <stop offset="5%" stop-color="white" />
+      <stop offset="95%" stop-color="blue" />
     </linearGradient>
     <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="5%" stop-color="red"/>
-      <stop offset="95%" stop-color="orange"/>
+      <stop offset="5%" stop-color="red" />
+      <stop offset="95%" stop-color="orange" />
     </linearGradient>
-    
-    <pattern id="Pattern" x="10" y="10" width="50" height="50" 
-      <rect x="0" y="0" width="50" height="50" fill="skyblue"/>
-      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/>
-         <circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5"/>
+
+    <pattern id="Pattern" x="10" y="10" width="50" height="50">
+      <rect x="0" y="0" width="50" height="50" fill="skyblue" />
+      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)" />
+      <circle
+        cx="25"
+        cy="25"
+        r="20"
+        fill="url(#Gradient1)"
+        fill-opacity="0.5" />
     </pattern>
   </defs>
 
-  <rect fill="url(#Pattern)" stroke="black" width="200" height="200"/>
+  <rect fill="url(#Pattern)" stroke="black" width="200" height="200" />
 </svg>
 
 <div class="playable-buttons">
@@ -234,31 +258,32 @@ Bien sûr, cela veut dire que le motif ne sera pas mis à l'échelle si vous mod
   <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
-rect.setAttribute('width', 300);</textarea>
+rect.setAttribute('width', 300);</textarea
+>
 ```
 
 ```js hidden
-var svg      = document.getElementById('svg'),
-    rect     = svg.lastElementChild;
+var svg = document.getElementById("svg"),
+  rect = svg.lastElementChild;
 
-var textarea = document.getElementById('code'),
-    reset    = document.getElementById('reset'),
-    edit     = document.getElementById('edit'),
-    code     = textarea.value;
+var textarea = document.getElementById("code"),
+  reset = document.getElementById("reset"),
+  edit = document.getElementById("edit"),
+  code = textarea.value;
 
 function drawSvg() {
   eval(textarea.value);
 }
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawSvg();
 });
-edit.addEventListener('click', function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', drawSvg);
-window.addEventListener('load', drawSvg);
+textarea.addEventListener("input", drawSvg);
+window.addEventListener("load", drawSvg);
 ```
 
 {{ EmbedLiveSample('Exemple_jouable','220','350') }}

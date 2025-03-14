@@ -25,6 +25,6 @@ var perspective = DOMPoint.w;
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - 其他坐标属性：{{domxref("DOMPoint.x", "x")}}，{{domxref("DOMPoint.y", "y")}}，{{domxref("DOMPoint.z", "z")}}.

@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt8
 
 **`getInt8()`** 方法从 {{jsxref("DataView")}} 相对于起始位置偏移 n 个字节处开始，获取一个有符号的 8-bit 整数 (一个字节)。
 
-{{EmbedInteractiveExample("pages/js/dataview-getint8.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.getInt8()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setInt8(1, 127); // Max signed 8-bit integer
+
+console.log(view.getInt8(1));
+// Expected output: 127
+```
 
 ## 语法
 
@@ -29,7 +40,7 @@ dataview.getInt8(byteOffset)
 
 没有对齐约束; 多字节值可以从任何偏移量获取。
 
-## 例子
+## 示例
 
 ```js
 var buffer = new ArrayBuffer(8);

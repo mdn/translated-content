@@ -1,26 +1,16 @@
 ---
 title: downloads.DangerType
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DangerType
-tags:
-  - API
-  - Add-ons
-  - DangerType
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DangerType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type `DangerType` de l'API {{WebExtAPIRef("downloads")}} définit un ensemble de raisons possibles pour lesquelles un fichier téléchargeable peut être considéré comme dangereux..
 
 Une propriété de `danger` {{WebExtAPIRef('downloads.DownloadItem')}} contiendra une chaîne tirée des valeurs définies dans ce type.
 
-> **Note :** Ces constantes de chaîne ne changeront jamais, mais l'ensemble de DangerTypes peut changer.
+> [!NOTE]
+> Ces constantes de chaîne ne changeront jamais, mais l'ensemble de DangerTypes peut changer.
 
 ## Type
 
@@ -43,15 +33,15 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - `accepted`
   - : L'utilisateur a accepté le téléchargement dangereux.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.DangerType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

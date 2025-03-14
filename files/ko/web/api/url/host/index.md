@@ -1,13 +1,6 @@
 ---
 title: URL.host
 slug: Web/API/URL/host
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/host
 ---
 
 {{ApiRef("URL API")}}
@@ -19,8 +12,8 @@ translation_of: Web/API/URL/host
 ## 구문
 
 ```js
-const host = url.host
-url.host = newHost
+const host = url.host;
+url.host = newHost;
 ```
 
 ### 값
@@ -30,14 +23,14 @@ url.host = newHost
 ## 예제
 
 ```js
-let url = new URL('https://developer.mozilla.org/ko/docs/Web/API/URL/host');
+let url = new URL("https://developer.mozilla.org/ko/docs/Web/API/URL/host");
 console.log(url.host); // "developer.mozilla.org"
 
-url = new URL('https://developer.mozilla.org:443/ko/docs/Web/API/URL/host');
+url = new URL("https://developer.mozilla.org:443/ko/docs/Web/API/URL/host");
 console.log(url.host); // "developer.mozilla.org"
 // The port number is not included because 443 is the scheme's default port
 
-url = new URL('https://developer.mozilla.org:4097/ko/docs/Web/API/URL/host');
+url = new URL("https://developer.mozilla.org:4097/ko/docs/Web/API/URL/host");
 console.log(url.host); // "developer.mozilla.org:4097"
 ```
 

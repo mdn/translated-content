@@ -1,13 +1,8 @@
 ---
 title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
-tags:
-  - BigInt
-  - JavaScript
-  - методы BigInt
-  - свойства BigInt
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
+
 {{JSRef}}
 
 **`BigInt`** это встроенный объект, который предоставляет способ представлять целые числа больше 253 - 1, наибольшего числа, которое JavaScript может надёжно представить с {{JSxRef("Number")}} примитивом. Это максимальное значение можно получить, обратившись к {{JSxRef("Number.MAX_SAFE_INTEGER")}}.
@@ -28,7 +23,9 @@ const hugeString = BigInt("9007199254740991");
 const hugeHex = BigInt("0x1fffffffffffff");
 // ↪ 9007199254740991n
 
-const hugeBin = BigInt("0b11111111111111111111111111111111111111111111111111111");
+const hugeBin = BigInt(
+  "0b11111111111111111111111111111111111111111111111111111",
+);
 // ↪ 9007199254740991n
 ```
 
@@ -43,21 +40,21 @@ const hugeBin = BigInt("0b11111111111111111111111111111111111111111111111111111"
 При проверке с использованием оператора `typeof`, `BigInt` выдаёт тип `"bigint"`:
 
 ```js
-typeof 1n === 'bigint'; // true
-typeof BigInt('1') === 'bigint'; // true
+typeof 1n === "bigint"; // true
+typeof BigInt("1") === "bigint"; // true
 ```
 
 При оборачивании в объект, BigInt будет представлен как обычный объект:
 
 ```js
-typeof Object(1n) === 'object'; // true
+typeof Object(1n) === "object"; // true
 ```
 
 ### Операторы
 
 Следующие операторы могут использоваться с `BigInt` (или объектом-обёрткой `BigInt`): `+`, `*`, `-`, `**`, `%`.
 
-[Побитовые операции](/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) также поддерживаются, кроме `>>>` (сдвиг вправо с заполнением нулями).
+[Побитовые операции](/ru/docs/Web/JavaScript/Reference/Operators) также поддерживаются, кроме `>>>` (сдвиг вправо с заполнением нулями).
 
 Не поддерживаемый унарный оператор (`+`) [больше не ломает asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs).
 
@@ -89,7 +86,8 @@ bigN * -1n
 
 Оператор `/` также работает, как и ожидалось, с целыми числами. Однако, поскольку это BigInt, эта операция будет округляться в меньшую сторону, то есть она не будет возвращать какие-либо дробные цифры.
 
-> **Предупреждение:** Результат операции с дробным результатом будет округлён в **меньшую** сторону при использовании `BigInt`.
+> [!WARNING]
+> Результат операции с дробным результатом будет округлён в **меньшую** сторону при использовании `BigInt`.
 
 ```js
 const expected = 4n / 2n;
@@ -104,29 +102,29 @@ const rounded = 5n / 2n;
 `BigInt` равен {{JSxRef ("Number")}} только при нестрогом сравнении.
 
 ```js
-0n === 0
+0n === 0;
 // ↪ false
 
-0n == 0
+0n == 0;
 // ↪ true
 ```
 
 {{JSxRef("Global_Objects/Number", "Обычные числа")}} и `BigInt` можно сравнивать как обычно.
 
 ```js
-1n < 2
+1n < 2;
 // ↪ true
 
-2n > 1
+2n > 1;
 // ↪ true
 
-2 > 2
+2 > 2;
 // ↪ false
 
-2n > 2
+2n > 2;
 // ↪ false
 
-2n >= 2
+2n >= 2;
 // ↪ true
 ```
 
@@ -147,7 +145,7 @@ mixed.sort();
 Object(0n) === Object(0n); // false
 
 const o = Object(0n);
-o === o // true
+o === o; // true
 ```
 
 ### Условные выражения
@@ -160,35 +158,35 @@ o === o // true
 
 ```js
 if (0n) {
-  console.log('Привет из if!');
+  console.log("Привет из if!");
 } else {
-  console.log('Привет из else!');
+  console.log("Привет из else!");
 }
 
 // ↪ "Привет из else!"
 
-0n || 12n
+0n || 12n;
 // ↪ 12n
 
-0n && 12n
+0n && 12n;
 // ↪ 0n
 
-Boolean(0n)
+Boolean(0n);
 // ↪ false
 
-Boolean(12n)
+Boolean(12n);
 // ↪ true
 
-!12n
+!12n;
 // ↪ false
 
-!0n
+!0n;
 // ↪ true
 ```
 
 ## Конструктор
 
-- [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
+- [`BigInt()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
   - : Создаёт объект {{jsxref("BigInt")}}.
 
 ## Статические методы
@@ -222,13 +220,15 @@ Boolean(12n)
 Использование {{jsxref("JSON.stringify()")}} с любым значением типа `BigInt` приведёт к `TypeError`, поскольку значения `BigInt` не преобразуется в JSON по умолчанию, однако вы можете реализовать свой собственный метод `toJSON`, если вам необходимо:
 
 ```js
-BigInt.prototype.toJSON = function() { return this.toString() }
+BigInt.prototype.toJSON = function () {
+  return this.toString();
+};
 ```
 
 Теперь вместо ошибки, `JSON.stringify` будет создавать строку:
 
 ```js
-JSON.stringify(BigInt(1))
+JSON.stringify(BigInt(1));
 // '"1"'
 ```
 
@@ -261,7 +261,7 @@ function nthPrime(nth) {
   return prime;
 }
 
-nthPrime(20n)
+nthPrime(20n);
 // ↪ 73n
 ```
 
@@ -269,7 +269,7 @@ nthPrime(20n)
 
 {{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 

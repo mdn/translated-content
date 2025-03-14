@@ -7,18 +7,56 @@ slug: Web/HTML/Element/input/button
 
 Les éléments {{HTMLElement("input")}} de type **`button`** sont affichés comme des boutons poussoirs qui peuvent être programmés afin de contrôler des fonctionnalités de la page via un gestionnaire d'évènement (la plupart du temps pour l'évènement [`click`](/fr/docs/Web/API/Element/click_event)).
 
-{{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
 
-> **Note :** Bien que les éléments `<input>` de type `"button"` représentent toujours des éléments HTML valides, l'élément {{HTMLElement("button")}}, plus récent, est la meilleure méthode pour créer des boutons hors d'un formulaire. Il est aussi possible d'insérer des éléments HTML dans l'étiquette du bouton, ce qui permet notamment d'avoir des images.
+```html interactive-example
+<input class="styled" type="button" value="Add to favorites" />
+```
+
+```css interactive-example
+.styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgb(220 0 0 / 100%);
+  background-image: linear-gradient(
+    to top left,
+    rgb(0 0 0 / 20%),
+    rgb(0 0 0 / 20%) 30%,
+    rgb(0 0 0 / 0%)
+  );
+  box-shadow:
+    inset 2px 2px 3px rgb(255 255 255 / 60%),
+    inset -2px -2px 3px rgb(0 0 0 / 60%);
+}
+
+.styled:hover {
+  background-color: rgb(255 0 0 / 100%);
+}
+
+.styled:active {
+  box-shadow:
+    inset -2px -2px 3px rgb(255 255 255 / 60%),
+    inset 2px 2px 3px rgb(0 0 0 / 60%);
+}
+```
+
+> [!NOTE]
+> Bien que les éléments `<input>` de type `"button"` représentent toujours des éléments HTML valides, l'élément {{HTMLElement("button")}}, plus récent, est la meilleure méthode pour créer des boutons hors d'un formulaire. Il est aussi possible d'insérer des éléments HTML dans l'étiquette du bouton, ce qui permet notamment d'avoir des images.
 
 ## Valeur
 
-L'attribut {{htmlattrxref("value", "input")}} d'un t'el élément contient une chaîne de caractères qui est utilisée comme étiquette pour le bouton (autrement dit, comme texte affiché sur le bouton).
+L'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) d'un tel élément contient une chaîne de caractères qui est utilisée comme étiquette pour le bouton (autrement dit, comme texte affiché sur le bouton).
 
 ### Exemple 1
 
 ```html
-<input type="button" value="Bouton cliquer">
+<input type="button" value="Bouton cliquer" />
 ```
 
 {{EmbedLiveSample("Exemple_1", 650, 30)}}
@@ -28,7 +66,7 @@ L'attribut {{htmlattrxref("value", "input")}} d'un t'el élément contient une c
 Si on n'indique aucune valeur, le bouton sera vide :
 
 ```html
-<input type="button">
+<input type="button" />
 ```
 
 {{EmbedLiveSample("Exemple_2", 650, 30)}}
@@ -43,24 +81,24 @@ Dans cet exemple, commençons par créer un bouton simple avec un gestionnaire d
 
 ```html
 <form>
-  <input type="button" value="Démarrer la machine">
+  <input type="button" value="Démarrer la machine" />
 </form>
 <p>La machine est arrêtée.</p>
 ```
 
 ```js
-var btn = document.querySelector('input');
-var txt = document.querySelector('p');
+var btn = document.querySelector("input");
+var txt = document.querySelector("p");
 
-btn.addEventListener('click', updateBtn);
+btn.addEventListener("click", updateBtn);
 
 function updateBtn() {
-  if (btn.value === 'Démarrer la machine') {
-    btn.value = 'Arrêter la machine';
-    txt.textContent = 'La machine est démarrée !';
+  if (btn.value === "Démarrer la machine") {
+    btn.value = "Arrêter la machine";
+    txt.textContent = "La machine est démarrée !";
   } else {
-    btn.value = 'Démarrer la machine';
-    txt.textContent = 'La machine est arrêtée.';
+    btn.value = "Démarrer la machine";
+    txt.textContent = "La machine est arrêtée.";
   }
 }
 ```
@@ -71,65 +109,66 @@ Dans ce script, on récupère une référence à l'objet {{domxref("HTMLInputEle
 
 ### Ajouter des raccourcis clavier
 
-Les raccourcis clavier permettent à un utilisateur de déclencher une action grâce à une touche ou grâce à une combinaison de touches du clavier. Pour ajouter un raccourci clavier déclenchant le bouton, on pourra ajouter l'attribut universel [`accesskey`](/fr/docs/Web/HTML/Attributs_universels/accesskey) (qu'on peut d'ailleurs utiliser pour les autres éléments {{HTMLElement("input")}}).
+Les raccourcis clavier permettent à un utilisateur de déclencher une action grâce à une touche ou grâce à une combinaison de touches du clavier. Pour ajouter un raccourci clavier déclenchant le bouton, on pourra ajouter l'attribut universel [`accesskey`](/fr/docs/Web/HTML/Global_attributes/accesskey) (qu'on peut d'ailleurs utiliser pour les autres éléments {{HTMLElement("input")}}).
 
-Dans l'exemple qui suit, on définit <kbd>s</kbd> comme raccourci (autrement dit, il faudra appuyer sur la touche <kbd>s</kbd> avec une ou plusieurs touches supplémentaires qui dépendent du navigateur et du système d'exploitation, cf. [`accesskey`](/fr/docs/Web/HTML/Attributs_universels/accesskey) pour la liste de ces touches).
+Dans l'exemple qui suit, on définit <kbd>s</kbd> comme raccourci (autrement dit, il faudra appuyer sur la touche <kbd>s</kbd> avec une ou plusieurs touches supplémentaires qui dépendent du navigateur et du système d'exploitation, cf. [`accesskey`](/fr/docs/Web/HTML/Global_attributes/accesskey) pour la liste de ces touches).
 
 ```html
 <form>
-  <input type="button" value="Démarrer la machine" accesskey="s">
+  <input type="button" value="Démarrer la machine" accesskey="s" />
 </form>
 <p>La machine est arrêtée.</p>
 ```
 
 ```js hidden
-var btn = document.querySelector('input');
-var txt = document.querySelector('p');
+var btn = document.querySelector("input");
+var txt = document.querySelector("p");
 
-btn.addEventListener('click', updateBtn);
+btn.addEventListener("click", updateBtn);
 
 function updateBtn() {
-  if (btn.value === 'Démarrer la machine') {
-    btn.value = 'Arrêter la machine';
-    txt.textContent = 'La machine est démarrée !';
+  if (btn.value === "Démarrer la machine") {
+    btn.value = "Arrêter la machine";
+    txt.textContent = "La machine est démarrée !";
   } else {
-    btn.value = 'Démarrer la machine';
-    txt.textContent = 'La machine est arrêtée.';
+    btn.value = "Démarrer la machine";
+    txt.textContent = "La machine est arrêtée.";
   }
 }
 ```
 
 {{EmbedLiveSample("Ajouter_des_raccourcis_clavier", 650, 100)}}
 
-> **Note :** Un problème de cet exemple est que l'utilisateur ne saura pas quelle touche utiliser comme raccourci. Dans un cas concret, cette information serait affichée ou fournie via un lien simple d'accès qui décrirait les raccourcis disponibles.
+> [!NOTE]
+> Un problème de cet exemple est que l'utilisateur ne saura pas quelle touche utiliser comme raccourci. Dans un cas concret, cette information serait affichée ou fournie via un lien simple d'accès qui décrirait les raccourcis disponibles.
 
 ### Désactiver et activer un bouton
 
-Pour désactiver un bouton, il suffit d'ajouter l'attribut universel {{htmlattrxref("disabled")}} :
+Pour désactiver un bouton, il suffit d'ajouter l'attribut universel [`disabled`](/fr/docs/Web/HTML/Global_attributes#disabled) :
 
 ```html
-<input type="button" value="Je suis désactivé" disabled>
+<input type="button" value="Je suis désactivé" disabled />
 ```
 
-Il est possible d'activer ou de désactiver des boutons lors de de l'utilisation de la page en modifiant l'attribut `disabled` de l'élément dans le DOM. Dans l'exemple qui suit, le bouton est initialement activé et si on appuie dessus : il devient désactivé (c'est ce que fait la ligne de code `btn.disabled = true`). La fonction {{domxref("WindowTimers.setTimeout","setTimeout()")}} est ensuite utilisée afin de réinitialiser le bouton après deux secondes.
+Il est possible d'activer ou de désactiver des boutons lors de l'utilisation de la page en modifiant l'attribut `disabled` de l'élément dans le DOM. Dans l'exemple qui suit, le bouton est initialement activé et si on appuie dessus : il devient désactivé (c'est ce que fait la ligne de code `btn.disabled = true`). La fonction {{domxref("WindowTimers.setTimeout","setTimeout()")}} est ensuite utilisée afin de réinitialiser le bouton après deux secondes.
 
 #### Exemple 1
 
 ```html hidden
-<input type="button" value="Activé">
+<input type="button" value="Activé" />
 ```
 
 ```js hidden
-var btn = document.querySelector('input');
+var btn = document.querySelector("input");
 
-btn.addEventListener('click', disableBtn);
+btn.addEventListener("click", disableBtn);
 
 function disableBtn() {
   btn.disabled = true;
-  btn.value = 'Désactivé';
-  window.setTimeout(function() {
+  btn.value = "Désactivé";
+  window.setTimeout(function () {
     btn.disabled = false;
-    btn.value = 'Activé';
+    btn.value = "Activé";
   }, 2000);
 }
 ```
@@ -144,22 +183,22 @@ C'est ce qu'illustre l'exemple suivant. Il est semblable à l'exemple précéden
 
 ```html hidden
 <fieldset>
-  <legend>Groupe de boutons </legend>
-  <input type="button" value="Bouton 1">
-  <input type="button" value="Bouton 2">
-  <input type="button" value="Bouton 3">
+  <legend>Groupe de boutons</legend>
+  <input type="button" value="Bouton 1" />
+  <input type="button" value="Bouton 2" />
+  <input type="button" value="Bouton 3" />
 </fieldset>
 ```
 
 ```js hidden
-var btn = document.querySelector('input');
-var fieldset = document.querySelector('fieldset');
+var btn = document.querySelector("input");
+var fieldset = document.querySelector("fieldset");
 
-btn.addEventListener('click', disableBtn);
+btn.addEventListener("click", disableBtn);
 
 function disableBtn() {
   fieldset.disabled = true;
-  window.setTimeout(function() {
+  window.setTimeout(function () {
     fieldset.disabled = false;
   }, 2000);
 }
@@ -167,7 +206,8 @@ function disableBtn() {
 
 {{EmbedLiveSample("Exemple_2", 650, 60)}}
 
-> **Note :** À la différence des autres navigateurs, [Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). L'attribut {{htmlattrxref("autocomplete","button")}} peut être utilisé afin de contrôler cette fonctionnalité.
+> [!NOTE]
+> À la différence des autres navigateurs, [Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). L'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/button#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
 
 ## Validation
 
@@ -179,9 +219,17 @@ Dans l'exemple qui suit, on montre une application de dessin très simple qui ut
 
 ```html
 <div class="toolbar">
-  <input type="color" aria-label="Sélectionner la couleur du crayon">
-  <input type="range" min="2" max="50" value="30" aria-label="Sélectionner la taille de la pointe du crayon"><span class="output">30</span>
-  <input type="button" value="Réinitialiser le canevas">
+  <input type="color" aria-label="Sélectionner la couleur du crayon" />
+  <input
+    type="range"
+    min="2"
+    max="50"
+    value="30"
+    aria-label="Sélectionner la taille de la pointe du crayon" /><span
+    class="output"
+    >30</span
+  >
+  <input type="button" value="Réinitialiser le canevas" />
 </div>
 
 <canvas class="myCanvas">
@@ -203,7 +251,8 @@ body {
   padding: 5px;
 }
 
-input[type="color"], input[type="button"] {
+input[type="color"],
+input[type="button"] {
   width: 90%;
   margin: 0 auto;
   display: block;
@@ -213,36 +262,36 @@ input[type="range"] {
   width: 70%;
 }
 
- span {
-   position: relative;
-   bottom: 5px;
- }
+span {
+  position: relative;
+  bottom: 5px;
+}
 ```
 
 ```js
-var canvas = document.querySelector('.myCanvas');
-var width = canvas.width = window.innerWidth;
-var height = canvas.height = window.innerHeight-85;
-var ctx = canvas.getContext('2d');
+var canvas = document.querySelector(".myCanvas");
+var width = (canvas.width = window.innerWidth);
+var height = (canvas.height = window.innerHeight - 85);
+var ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'rgb(0,0,0)';
-ctx.fillRect(0,0,width,height);
+ctx.fillStyle = "rgb(0,0,0)";
+ctx.fillRect(0, 0, width, height);
 
 var colorPicker = document.querySelector('input[type="color"]');
 var sizePicker = document.querySelector('input[type="range"]');
-var output = document.querySelector('.output');
+var output = document.querySelector(".output");
 var clearBtn = document.querySelector('input[type="button"]');
 
 // On convertit des degrés en radians
 function degToRad(degrees) {
-  return degrees * Math.PI / 180;
-};
+  return (degrees * Math.PI) / 180;
+}
 
 // On met à jour la valeur pour le sélecteur
 // de taille
-sizePicker.oninput = function() {
+sizePicker.oninput = function () {
   output.textContent = sizePicker.value;
-}
+};
 
 // On enregistre les coordonnées du pointeur de la souris
 // emouse pointer coordinates, and whether the button is pressed
@@ -251,29 +300,46 @@ var curY;
 var pressed = false;
 
 // On met à jour les coordonnées du pointeur
-document.onmousemove = function(e) {
-  curX = (window.Event) ? e.pageX : e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
-  curY = (window.Event) ? e.pageY : e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
-}
+document.onmousemove = function (e) {
+  curX = window.Event
+    ? e.pageX
+    : e.clientX +
+      (document.documentElement.scrollLeft
+        ? document.documentElement.scrollLeft
+        : document.body.scrollLeft);
+  curY = window.Event
+    ? e.pageY
+    : e.clientY +
+      (document.documentElement.scrollTop
+        ? document.documentElement.scrollTop
+        : document.body.scrollTop);
+};
 
-canvas.onmousedown = function() {
+canvas.onmousedown = function () {
   pressed = true;
 };
 
-canvas.onmouseup = function() {
+canvas.onmouseup = function () {
   pressed = false;
-}
+};
 
-clearBtn.onclick = function() {
-  ctx.fillStyle = 'rgb(0,0,0)';
-  ctx.fillRect(0,0,width,height);
-}
+clearBtn.onclick = function () {
+  ctx.fillStyle = "rgb(0,0,0)";
+  ctx.fillRect(0, 0, width, height);
+};
 
 function draw() {
-  if(pressed) {
+  if (pressed) {
     ctx.fillStyle = colorPicker.value;
     ctx.beginPath();
-    ctx.arc(curX, curY-85, sizePicker.value, degToRad(0), degToRad(360), false);
+    ctx.arc(
+      curX,
+      curY - 85,
+      sizePicker.value,
+      degToRad(0),
+      degToRad(360),
+      false,
+    );
     ctx.fill();
   }
 
@@ -298,10 +364,9 @@ draw();
       <td><a href="/fr/docs/Web/API/Element/click_event"><code>click</code></a></td>
     </tr>
     <tr>
-      <td><strong>Attributs pris en Supported common attributes</strong></td>
+      <td><strong>Attributs pris en charge</strong></td>
       <td>
-        {{htmlattrxref("type", "input")}}, and
-        {{htmlattrxref("value", "input")}}
+        <a href="/fr/docs/Web/HTML/Element/input#type"><code>type</code></a> et <a href="/fr/docs/Web/HTML/Element/input#value"><code>value</code></a>
       </td>
     </tr>
     <tr>

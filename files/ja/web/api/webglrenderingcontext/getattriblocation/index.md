@@ -1,46 +1,47 @@
 ---
-title: WebGLRenderingContext.getAttribLocation()
+title: "WebGLRenderingContext: getAttribLocation() メソッド"
+short-title: getAttribLocation()
 slug: Web/API/WebGLRenderingContext/getAttribLocation
+l10n:
+  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
 {{APIRef("WebGL")}}
 
-[WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.getAttribLocation()`** メソッドは指定された{{domxref("WebGLProgram")}}内の属性の場所を返します。
+**`WebGLRenderingContext.getAttribLocation()`** は [WebGL API](/ja/docs/Web/API/WebGL_API) のメソッドで、指定された {{domxref("WebGLProgram")}} 内の属性の場所を返します。
 
 ## 構文
 
-```
-GLint gl.getAttribLocation(program, name);
+```js-nolint
+getAttribLocation(program, name)
 ```
 
 ### 引数
 
-- program
-  - : 属性の変数を含む{{domxref("WebGLProgram")}}
-- name
-  - : 場所を取得する属性の変数名を指定する{{domxref("DOMString")}}
+- `program`
+  - : 属性の変数の入った {{domxref("WebGLProgram")}} です。
+- `name`
+  - : 場所を取得する属性の変数名を指定する文字列です。
 
-### 返り値
+### 返値
 
-見つかった場合、変数名の場所を示す{{domxref("GLint")}}番号を、それ以外の場合は-1 を返します。
+見つかった場合、変数名の場所を示す {{domxref("WebGL_API/Types", "GLint")}} 番号を返します。
+それ以外の場合は -1 を返します。
 
 ## 例
 
 ```js
-gl.getAttribLocation(program, 'vColor');
+gl.getAttribLocation(program, "vColor");
 ```
 
-## 仕様策定状況
+## 仕様書
 
-| Specification                                                                                            | Status                               | Comment                       |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------- |
-| {{SpecName('WebGL', "#5.14.10", "getAttribLocation")}}                                 | {{Spec2('WebGL')}}             | 初回定義                      |
-| {{SpecName('OpenGL ES 2.0', "glGetAttribLocation.xml", "glGetAttribLocation")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API のマニュアルページ |
+{{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
-{{Compat("api.WebGLRenderingContext.getAttribLocation")}}
+{{Compat}}
 
-## 関連項目
+## 関連情報
 
 - {{domxref("WebGLRenderingContext.getUniformLocation()")}}

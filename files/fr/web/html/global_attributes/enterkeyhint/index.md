@@ -1,8 +1,6 @@
 ---
 title: enterkeyhint
 slug: Web/HTML/Global_attributes/enterkeyhint
-translation_of: Web/HTML/Global_attributes/enterkeyhint
-browser-compat: html.global_attributes.enterkeyhint
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -10,7 +8,13 @@ browser-compat: html.global_attributes.enterkeyhint
 [L'attribut universel](/fr/docs/Web/HTML/Global_attributes) **`enterkeyhint`**
 est un attribut à valeur contrainte définissant le libellé d'action (ou l'icône) à présenter pour la touche entrée sur le clavier virtuel.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-enterkeyhint.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: enterkeyhint", "tabbed-shorter")}}
+
+```html interactive-example
+<input enterkeyhint="go" />
+
+<p contenteditable enterkeyhint="go">https://example.org</p>
+```
 
 ## Description
 

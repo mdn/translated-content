@@ -9,26 +9,20 @@ slug: Web/API/IDBObjectStore/indexNames
 
 {{AvailableInWorkers}}
 
-## Syntax
+## 值
 
-```
-var myindexNames = objectStore.indexNames;
-```
+一个 {{domxref("DOMStringList")}}。
 
-### Value
+## 示例
 
-一个 {{domxref("DOMStringList")}}.
-
-## Example
-
-在下面的代码片段中，我们在数据库上打开一个读/写事务并使用 `add()` 向对象存储添加一些数据。创建对象存储后，我们将打印 `objectStore.indexNames` 到控制台。有关完整的工作示例，请参阅我们的 [待办事项通知](https://github.com/mdn/to-do-notifications/)应用程序 ( [实时查看示例](http://mdn.github.io/to-do-notifications/) )
+在下面的代码片段中，我们在数据库上打开一个读/写事务并使用 `add()` 向对象存储添加一些数据。创建对象存储后，我们将打印 `objectStore.indexNames` 到控制台。有关完整的工作示例，请参阅我们的 [待办事项通知](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)应用程序 ( [实时查看示例](https://mdn.github.io/dom-examples/to-do-notifications/) )
 
 ```js
 // 让我们来打开我们的数据库
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Database initialised.</li>";
 
   // 将打开数据库的结果存储在 db 变量中
   // 下面经常用到这个
@@ -40,19 +34,29 @@ DBOpenRequest.onsuccess = function(event) {
 
 function addData() {
   // 创建一个新对象以准备插入到 IDB 中
-  var newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  var newItem = [
+    {
+      taskTitle: "Walk dog",
+      hours: 19,
+      minutes: 30,
+      day: 24,
+      month: "December",
+      year: 2013,
+      notified: "no",
+    },
+  ];
 
   // 打开读/写数据库事务，准备添加数据
   var transaction = db.transaction(["toDoList"], "readwrite");
 
   // 当所有事情都完成时，报告事务完成的成功情况
-  transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction completed.</li>';
+  transaction.oncomplete = function (event) {
+    note.innerHTML += "<li>Transaction completed.</li>";
   };
 
-
-  transaction.onerror = function(event) {
-  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+  transaction.onerror = function (event) {
+    note.innerHTML +=
+      "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
   };
 
   // 在事务上创建对象存储
@@ -62,11 +66,11 @@ function addData() {
   // 请求将 newItem 对象 添加到对象存储区
   var objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = function (event) {
     // 报告我们请求的成功
-    note.innerHTML += '<li>Request successful.</li>';
+    note.innerHTML += "<li>Request successful.</li>";
   };
-};
+}
 ```
 
 ## 规范
@@ -77,7 +81,7 @@ function addData() {
 
 {{Compat}}
 
-## 查看其它内容
+## 查看其他内容
 
 - [使用 IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - 启动事务 : {{domxref("IDBDatabase")}}
@@ -85,4 +89,4 @@ function addData() {
 - 设置键的范围 : {{domxref("IDBKeyRange")}}
 - 检索和更改数据 : {{domxref("IDBObjectStore")}}
 - 使用游标 : {{domxref("IDBCursor")}}
-- 参考示例 : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- 参考示例 : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

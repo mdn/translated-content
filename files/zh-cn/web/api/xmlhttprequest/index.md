@@ -11,7 +11,7 @@ slug: Web/API/XMLHttpRequest
 
 尽管名称如此，`XMLHttpRequest` 可以用于获取任何类型的数据，而不仅仅是 XML。它甚至支持 [HTTP](/zh-CN/docs/Web/HTTP) 以外的协议（包括 file:// 和 FTP），尽管可能受到更多出于安全等原因的限制。
 
-如果您的通信流程需要从服务器端接收事件或消息数据，请考虑通过 {{domxref("EventSource")}} 接口使用 [server-sent events](/zh-CN/docs/Web/API/Server-sent_events)。对于全双工的通信， [WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 可能是更好的选择。
+如果你的通信流程需要从服务器端接收事件或消息数据，请考虑通过 {{domxref("EventSource")}} 接口使用[服务器发送事件](/zh-CN/docs/Web/API/Server-sent_events)。对于全双工的通信，[WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 可能是更好的选择。
 
 ## 构造函数
 
@@ -39,14 +39,14 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 - {{domxref("XMLHttpRequest.status")}} {{readonlyinline}}
   - : 返回一个无符号短整型（`unsigned short`）数字，代表请求的响应状态。
 - {{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}
+
   - : 返回一个 {{domxref("DOMString")}}，其中包含 HTTP 服务器返回的响应状态。与 {{domxref("XMLHTTPRequest.status")}} 不同的是，它包含完整的响应状态文本（例如，"`200 OK`"）。
 
-    > **备注：** 根据 HTTP/2 规范（[8.1.2.4](https://http2.github.io/http2-spec/#rfc.section.8.1.2.4) [Response Pseudo-Header Fields](https://http2.github.io/http2-spec/#HttpResponse)，响应伪标头字段），HTTP/2 没有定义任何用于携带 HTTP/1.1 状态行中包含的版本（version）或者原因短语（reason phrase）的方法。
+    > [!NOTE]
+    > 根据 HTTP/2 规范（[8.1.2.4](https://http2.github.io/http2-spec/#rfc.section.8.1.2.4) [Response Pseudo-Header Fields](https://http2.github.io/http2-spec/#HttpResponse)，响应伪标头字段），HTTP/2 没有定义任何用于携带 HTTP/1.1 状态行中包含的版本（version）或者原因短语（reason phrase）的方法。
 
 - {{domxref("XMLHttpRequest.timeout")}}
   - : 一个无符号长整型（`unsigned long`）数字，表示该请求的最大请求时间（毫秒），若超出该时间，请求会自动终止。
-- {{domxref("XMLHttpRequestEventTarget.ontimeout")}}
-  - : 当请求超时调用的事件处理器。
 - {{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}
   - : {{domxref("XMLHttpRequestUpload")}}，代表上传进度。
 - {{domxref("XMLHttpRequest.withCredentials")}}
@@ -62,20 +62,16 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
   - : 一个布尔值，如果为真，则在请求时不会强制执行同源策略。
 - {{domxref("XMLHttpRequest.mozBackgroundRequest")}}
   - : 一个布尔值，它指示对象是否是后台服务器端的请求。
-- {{domxref("XMLHttpRequest.mozResponseArrayBuffer")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : 一个 {{jsxref("ArrayBuffer")}}，把请求的响应作为一个 JavaScript TypedArray。
-- {{domxref("XMLHttpRequest.multipart")}}{{Deprecated_Inline}}
-  - : 这是一个 Gecko 专有属性，是一个布尔值，已在 Firefox/Gecko 22 中被删除。请考虑使用 [Server-Sent Event](/zh-CN/docs/Web/API/Server-sent_events)、[Web Socket](/zh-CN/docs/Web/API/WebSockets_API)、或来自进度事件的 `responseText` 代替。
 
 ### 事件处理器
 
 作为 `XMLHttpRequest` 实例的属性之一，所有浏览器都支持 `onreadystatechange`。
 
-后来，许多浏览器实现了一些额外的事件（`onload`、`onerror`、`onprogress` 等）。详见[Using XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)。
+后来，许多浏览器实现了一些额外的事件（`onload`、`onerror`、`onprogress` 等）。详见[使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)。
 
 更多现代浏览器，包括 Firefox，除了可以设置 `on*` 属性外，也提供标准的监听器 {{domxref("EventTarget.addEventListener", "addEventListener()")}} API 来监听`XMLHttpRequest` 事件。
 
-## 方法
+## 实例方法
 
 - {{domxref("XMLHttpRequest.abort()")}}
   - : 如果请求已被发出，则立刻中止请求。
@@ -84,26 +80,13 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 - {{domxref("XMLHttpRequest.getResponseHeader()")}}
   - : 返回包含指定响应头的字符串，如果响应尚未收到或响应中不存在该报头，则返回 `null`。
 - {{domxref("XMLHttpRequest.open()")}}
-  - : 初始化一个请求。该方法只能在 JavaScript 代码中使用，若要在 native code 中初始化请求，请使用 [`openRequest()`](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest)。
+  - : 初始化一个请求。
 - {{domxref("XMLHttpRequest.overrideMimeType()")}}
   - : 覆写由服务器返回的 MIME 类型。
 - {{domxref("XMLHttpRequest.send()")}}
   - : 发送请求。如果请求是异步的（默认），那么该方法将在请求发送后立即返回。
 - {{domxref("XMLHttpRequest.setRequestHeader()")}}
-  - : 设置 HTTP 请求头的值。必须在 `open()` 之后、`send()` 之前调用 `setRequestHeader()` 方法。
-
-### 非标准方法
-
-- {{domxref("XMLHttpRequest.init()")}}
-
-  - : 在 C++ 代码中初始化一个 XHR 对象。
-
-    > **警告：** 该方法不能在 JavaScript 代码中使用。
-
-- {{domxref("XMLHttpRequest.openRequest()")}}
-  - : 初始化一个请求。这个方法只能在原生 C++ 代码中使用；如果用 JavaScript 代码来初始化请求，使用 [`open()`](</zh-cn/nsIXMLHttpRequest#open()>) 代替。可参考 `open()` 的文档。
-- {{domxref("XMLHttpRequest.sendAsBinary()")}}{{deprecated_inline()}}
-  - : `send()` 方法的变体，用来发送二进制数据。
+  - : 设置 HTTP 请求标头的值。必须在 {{domxref("XMLHttpRequest.open", "open()")}} 之后、{{domxref("XMLHttpRequest.send", "send()")}} 之前调用 `setRequestHeader()` 方法。
 
 ## 事件
 
@@ -140,11 +123,5 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 ## 参见
 
 - {{domxref("XMLSerializer")}}：将 DOM 树解析为 XML 对象
-- MDN 教程中的 `XMLHttpRequest`：
-
-  - [Ajax — Getting Started](/zh-CN/docs/AJAX/Getting_Started)
-  - [Using XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-  - [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-
-- [HTML5 Rocks — New Tricks in XMLHttpRequest2](http://www.html5rocks.com/en/tutorials/file/xhr2/)
-- HTTP Feature-Policy 指令 {{httpheader("Feature-Policy/sync-xhr", "sync-xhr")}}
+- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Fetch API](/zh-CN/docs/Web/API/Fetch_API)

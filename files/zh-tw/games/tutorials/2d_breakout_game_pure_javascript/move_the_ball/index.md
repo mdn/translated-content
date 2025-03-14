@@ -7,19 +7,19 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
 
-這一篇是[Gamedev Canvas tutorial](/zh-TW/docs/Games/Workflows/Breakout_game_from_scratch)十個步驟中的第二步。當完成此步驟你的程式碼應該會與[Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html)差不多
+這一篇是[Gamedev Canvas tutorial](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)十個步驟中的第二步。當完成此步驟你的程式碼應該會與[Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html)差不多
 
 完成上一個步驟，你已經知道如何畫出一顆球，現在讓他動起來吧。藉由繪製球在螢幕上然後再清除，然後在每個影格中繪製球在偏移一點點的位置上（如果在同一個位置上就等於沒動），造成物體移動的感覺，就如同電影中物體移動的方式。
 
 ## 定義一個繪製用的迴圈
 
-為了固定更新 canvas 繪圖區域的每一個影格，我們需要定義一個繪製函式（drawing function），它將會重複執行，用不同的變數改變球的位置或其他物的位置。重複執行一個函式，其中使用 JavaScript timing function，像是 {{domxref("WindowTimers.setInterval()", "setInterval()")}} 或是 {{domxref("window.requestAnimationFrame()", "requestAnimationFrame()")}}.
+為了固定更新 canvas 繪圖區域的每一個影格，我們需要定義一個繪製函式（drawing function），它將會重複執行，用不同的變數改變球的位置或其他物的位置。重複執行一個函式，其中使用 JavaScript timing function，像是 {{domxref("Window.setInterval()", "setInterval()")}} 或是 {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame()")}}。
 
 除了前兩行的 JavaScript，其餘的都刪除，並將以下的程式碼加入在前兩行之後。draw()函數每十毫秒會被 setInterval 執行一次:
 
 ```js
 function draw() {
-    // drawing code
+  // drawing code
 }
 setInterval(draw, 10);
 ```
@@ -28,7 +28,7 @@ setInterval(draw, 10);
 
 ```js
 ctx.beginPath();
-ctx.arc(50, 50, 10, 0, Math.PI*2);
+ctx.arc(50, 50, 10, 0, Math.PI * 2);
 ctx.fillStyle = "#0095DD";
 ctx.fill();
 ctx.closePath();
@@ -43,19 +43,19 @@ ctx.closePath();
 首先將下面兩行程式碼加到你的 `draw()` 函數用以定義 `x` 和 `y`:
 
 ```js
-var x = canvas.width/2;
-var y = canvas.height-30;
+var x = canvas.width / 2;
+var y = canvas.height - 30;
 ```
 
 接著修改 `draw()` 函數，在 {{domxref("CanvasRenderingContext2D.arc()","arc()")}} 方法裡使用了變數 x 和 y，就像下面被強調的那行程式碼：
 
 ```js
 function draw() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
 }
 ```
 
@@ -70,13 +70,13 @@ var dy = -2;
 
 ```js
 function draw() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
-    x += dx;
-    y += dy;
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+  x += dx;
+  y += dy;
 }
 ```
 
@@ -92,14 +92,14 @@ function draw() {
 
 ```js
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
-    x += dx;
-    y += dy;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+  x += dx;
+  y += dy;
 }
 ```
 
@@ -113,18 +113,18 @@ function draw() {
 
 ```js
 function drawBall() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
 }
 
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawBall();
-    x += dx;
-    y += dy;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBall();
+  x += dx;
+  y += dy;
 }
 ```
 
@@ -138,6 +138,6 @@ Exercise: 練習改變球的移動速度或行進方向。
 
 ## 下一步
 
-我們繪製了球並且讓他可以移動，但他仍會消失在 canvas 的邊緣。在第三章我們將會實作 [讓球碰到牆壁後反彈](/zh-TW/docs/Games/Workflows/Breakout_game_from_scratch/Bounce_off_the_walls).
+我們繪製了球並且讓他可以移動，但他仍會消失在 canvas 的邊緣。在第三章我們將會實作 [讓球碰到牆壁後反彈](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}

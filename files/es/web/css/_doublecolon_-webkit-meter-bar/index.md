@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-meter-bar'
+title: ::-webkit-meter-bar
 slug: Web/CSS/::-webkit-meter-bar
 ---
 
@@ -9,10 +9,6 @@ slug: Web/CSS/::-webkit-meter-bar
 
 La pseudo-clase `::-webkit-meter-bar` establece el estilo para el fondo del elemento meter que contiene el valor.
 
-## Especificaciones
-
-No es parte de ninguna especificación. Es un elemento propietario y específico de WebKit/Blink.
-
 ## Ejemplos
 
 ```html
@@ -21,13 +17,13 @@ No es parte de ninguna especificación. Es un elemento propietario y específico
 
 ```css
 meter {
-   /* Resetea a la apariencia por defecto */
+  /* Resetea a la apariencia por defecto */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-meter::-webkit-meter-bar  {
+meter::-webkit-meter-bar {
   background: #eee;
   box-shadow: 0 2px 3px rgba (0, 0, 0, 0.2) inset;
   border-radius: 3px;
@@ -36,11 +32,16 @@ meter::-webkit-meter-bar  {
 
 {{ EmbedLiveSample('Ejemplos', '100%', 50) }}
 
-> **Nota:** Sólo funciona en navegadores basados en Webkit/Blink.
+> [!NOTE]
+> Sólo funciona en navegadores basados en Webkit/Blink.
 
-## Compatibilidad con los distintos navegadores
+## Especificaciones
 
-{{Compat("css.selectors.-webkit-meter-bar")}}
+No es parte de ninguna especificación. Es un elemento propietario y específico de WebKit/Blink.
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver además
 

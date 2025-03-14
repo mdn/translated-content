@@ -1,19 +1,28 @@
 ---
 title: return
 slug: Web/JavaScript/Reference/Statements/return
-tags:
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/return
-original_slug: Web/JavaScript/Reference/Instructions/return
 ---
 
 {{jsSidebar("Statements")}}
 
 L'instruction **`return`** met fin à l'exécution d'une fonction et définit une valeur à renvoyer à la fonction appelante.
 
-{{EmbedInteractiveExample("pages/js/statement-return.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Return")}}
+
+```js interactive-example
+function getRectArea(width, height) {
+  if (width > 0 && height > 0) {
+    return width * height;
+  }
+  return 0;
+}
+
+console.log(getRectArea(3, 4));
+// Expected output: 12
+
+console.log(getRectArea(-3, 4));
+// Expected output: 0
+```
 
 ## Syntaxe
 
@@ -48,10 +57,10 @@ return x + y / 3;
 
 ### Ajout automatique de point-virgule
 
-L'instruction `return` peut être impactée par [l'ajout automatique de point-virgule (_ASI_ en anglais)](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Insertion_automatique_de_points-virgules). Il est interdit d'avoir un caractère de fin de ligne entre le mot-clé `return` et l'expression :
+L'instruction `return` peut être impactée par [l'ajout automatique de point-virgule (_ASI_ en anglais)](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#insertion_automatique_de_points-virgules). Il est interdit d'avoir un caractère de fin de ligne entre le mot-clé `return` et l'expression :
 
 ```js
-return
+return;
 a + b;
 ```
 
@@ -64,7 +73,8 @@ a + b;
 // après une instruction return sans point-virgule"
 ```
 
-> **Note :** À partir de Gecko 40, un avertissement sera affiché dans la console si l'analyse du code trouve une instruction semblable à une expression après une instruction `return` sans point-virgule. Voir le {{bug(1005110)}} pour plus d'informations.
+> [!NOTE]
+> À partir de Gecko 40, un avertissement sera affiché dans la console si l'analyse du code trouve une instruction semblable à une expression après une instruction `return` sans point-virgule. Voir le [bug Firefox 1005110](https://bugzil.la/1005110) pour plus d'informations.
 
 Pour éviter ce problème et l'insertion automatique, on peut, si besoin, utiliser des parenthèses.
 
@@ -82,7 +92,7 @@ La fonction suivante renvoie le carré de son argument :
 
 ```js
 function carré(x) {
-   return x * x;
+  return x * x;
 }
 ```
 
@@ -92,14 +102,15 @@ Une fonction s'arrête immédiatement à l'instant où l'instruction `return` es
 
 ```js
 function compteur() {
-  for (var compte = 1; ; compte++) {  // boucle infinie
+  for (var compte = 1; ; compte++) {
+    // boucle infinie
     console.log(compte + "A"); // jusqu'à 5
-      if (compte === 5) {
-        return;
-      }
-      console.log(compte + "B");  // jusqu'à 4
+    if (compte === 5) {
+      return;
     }
-  console.log(compte + "C");  // cette instruction n'est jamais utilisée
+    console.log(compte + "B"); // jusqu'à 4
+  }
+  console.log(compte + "C"); // cette instruction n'est jamais utilisée
 }
 
 compteur();
@@ -122,7 +133,9 @@ Pour en savoir plus sur les fermetures (_closures_), voir [cet article sur les f
 
 ```js
 function magique() {
-  return function calc(x) { return x * 42 };
+  return function calc(x) {
+    return x * 42;
+  };
 }
 
 var réponse = magique();

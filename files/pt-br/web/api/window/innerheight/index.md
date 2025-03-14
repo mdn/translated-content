@@ -7,7 +7,8 @@ slug: Web/API/Window/innerHeight
 
 Altura (em pixels) da janela de visualização do navegador, incluindo, se renderizado, a barra de rolagem horizontal.
 
-> **Nota:** If you use `nsIDOMWindowUtils.setCSSViewport()` to set the virtual window size for page layout purposes, the value returned by this property corresponds to the viewport height set using that method.
+> [!NOTE]
+> If you use `nsIDOMWindowUtils.setCSSViewport()` to set the virtual window size for page layout purposes, the value returned by this property corresponds to the viewport height set using that method.
 
 ## Syntax
 
@@ -44,7 +45,7 @@ var intOuterFramesetHeight = top.innerHeight;
 // will return the height of the viewport of the outermost frameset
 ```
 
-{{todo("link to an interactive demo here")}}
+<!-- TODO: add content -->
 
 To change the size of a window, see {{domxref("window.resizeBy()")}} and {{domxref("window.resizeTo()")}}.
 
@@ -54,17 +55,15 @@ To get the outer height of a window, i.e. the height of the whole browser window
 
 The following figure shows the difference between `outerHeight` and `innerHeight`.
 
-![innerHeight vs outerHeight illustration](/@api/deki/files/213/=FirefoxInnerVsOuterHeight2.png)
+![innerHeight vs outerHeight illustration](firefoxinnervsouterheight2.png)
 
-## Specification
+## Especificações
 
-| Specification                                                                                        | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSSOM View', '#dom-window-innerheight', 'window.innerHeight')}} | {{Spec2('CSSOM View')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Window.innerHeight")}}
+{{Compat}}
 
 ## See also
 

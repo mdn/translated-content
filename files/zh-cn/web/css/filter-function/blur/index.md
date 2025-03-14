@@ -1,14 +1,35 @@
 ---
 title: blur()
 slug: Web/CSS/filter-function/blur
-original_slug: Web/CSS/filter-function/blur()
 ---
 
-{{cssref}}
+{{CSSRef}}
 
 **`blur()`** [CSS](/zh-CN/docs/Web/CSS) 方法将[高斯模糊](https://en.wikipedia.org/wiki/Gaussian_blur)应用于输出图片。结果为 {{cssxref("&lt;filter-function&gt;")}}.
 
-{{EmbedInteractiveExample("pages/css/function-blur.html")}}
+{{InteractiveExample("CSS Demo: blur()")}}
+
+```css interactive-example-choice
+filter: blur(0);
+```
+
+```css interactive-example-choice
+filter: blur(4px);
+```
+
+```css interactive-example-choice
+filter: blur(1.5rem);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## 语法
 
@@ -36,7 +57,7 @@ blur(1.17rem)  /* Blur with 1.17rem radius */
 - {{cssxref("filter-function/contrast", "contrast()")}}
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
 - {{cssxref("filter-function/grayscale", "grayscale()")}}
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}​​​​​​​
+- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
 - {{cssxref("filter-function/invert", "invert()")}}
 - {{cssxref("filter-function/opacity", "opacity()")}}
 - {{cssxref("filter-function/saturate", "saturate()")}}

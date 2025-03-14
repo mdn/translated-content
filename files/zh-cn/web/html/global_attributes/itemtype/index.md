@@ -5,14 +5,15 @@ slug: Web/HTML/Global_attributes/itemtype
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`itemtype`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 指定了词汇的 URL，它将会用于定义数据结构中的 `itemprop`（条目属性）。{{htmlattrxref("itemscope")}} 用于设置词汇的生效范围，其中词汇在数据结构中由 `itemtype` 设置。
+**`itemtype`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 指定了词汇的 URL，它将会用于定义数据结构中的 `itemprop`（条目属性）。[`itemscope`](/zh-CN/docs/Web/HTML/Global_attributes#itemscope) 用于设置词汇的生效范围，其中词汇在数据结构中由 `itemtype` 设置。
 
-Google 和其它主流搜索引擎支持 [schema.org](http://schema.org/) 结构化数据词汇。这个词汇定义了一组标准的类型名称和属性名称。例如，[`MusicEvent`](http://schema.org/MusicEvent) 表示音乐会的名称，[`startDate`](http://schema.org/startDate) 和 [`location`](http://schema.org/location) 属性指定了音乐会的关键信息。这里，[`MusicEvent`](http://schema.org/MusicEvent) 应该是用于 `itemtype` 的 URL，而 `startDate` 和 `location` 作为 [`MusicEvent`](http://schema.org/MusicEvent) 所定义的 `itemprop`。
+Google 和其他主流搜索引擎支持 [schema.org](https://schema.org/) 结构化数据词汇。这个词汇定义了一组标准的类型名称和属性名称。例如，[`MusicEvent`](https://schema.org/MusicEvent) 表示音乐会的名称，[`startDate`](https://schema.org/startDate) 和 [`location`](https://schema.org/location) 属性指定了音乐会的关键信息。这里，[`MusicEvent`](https://schema.org/MusicEvent) 应该是用于 `itemtype` 的 URL，而 `startDate` 和 `location` 作为 [`MusicEvent`](https://schema.org/MusicEvent) 所定义的 `itemprop`。
 
-> **备注：** 更多 `itemtype` 属性的信息请见 <http://schema.org/Thing>
+> [!NOTE]
+> 更多 `itemtype` 属性的信息请见 <http://schema.org/Thing>
 
 - **itemtype** 属性必须拥有这样的值，它是唯一标识的无序集合，这些标识是大小写敏感的，每个标识都是有效的绝对 URL，并且所有都使用相同词汇定义。属性的值必须至少拥有一个标识。
-- 条目的类型必须全部为定义在适用规范（例如 [schema.org](http://schema.org/)）中的类型，并且必须使用相同词汇定义。
+- 条目的类型必须全部为定义在适用规范（例如 [schema.org](https://schema.org/)）中的类型，并且必须使用相同词汇定义。
 - itemtype 属性只能在指定了 itemscope 属性的元素上指定。
 - itemid 属性只能在同时指定了 itemscope 和 itemtype 属性的元素上指定。它们必须仅仅在拥有 itemscope 属性的元素上指定，它的 itemtype 属性指定了不支持全局标识符的词汇，根据该词汇规范的定义。
 - 全局标识符的准确含义，由词汇的规范决定。它留给这种规范，来定义全局标识符相同的多个条目（位于相同页面或不同页面）是否允许存在，以及对于处理 ID 相同的多个条目，使用什么处理规则。
@@ -203,7 +204,8 @@ Google 和其它主流搜索引擎支持 [schema.org](http://schema.org/) 结构
   </tbody>
 </table>
 
-> **备注：** 一个工具，用于从 HTML 提取 microdata 结构，是 Google 的 [结构化数据测试工具](https://developers.google.com/structured-data/testing-tool/)。在上面展示的 HTML 上尝试吧。
+> [!NOTE]
+> 一个工具，用于从 HTML 提取 microdata 结构，是 Google 的[结构化数据测试工具](https://developers.google.cn/search/docs/appearance/structured-data)。在上面展示的 HTML 上尝试吧。
 
 ## 规范
 
@@ -213,13 +215,13 @@ Google 和其它主流搜索引擎支持 [schema.org](http://schema.org/) 结构
 
 {{Compat}}
 
-## 另见
+## 参见
 
-- [其它不同的全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
-- 其它 microdata 相关的全局属性
+- [其他不同的全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+- 其他 microdata 相关的全局属性
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemscope")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemid`](/zh-CN/docs/Web/HTML/Global_attributes#itemid)
+  - [`itemprop`](/zh-CN/docs/Web/HTML/Global_attributes#itemprop)
+  - [`itemref`](/zh-CN/docs/Web/HTML/Global_attributes#itemref)
+  - [`itemscope`](/zh-CN/docs/Web/HTML/Global_attributes#itemscope)
+  - [`itemtype`](/zh-CN/docs/Web/HTML/Global_attributes#itemtype)

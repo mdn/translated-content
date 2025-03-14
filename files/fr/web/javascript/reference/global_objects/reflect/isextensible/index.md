@@ -1,26 +1,35 @@
 ---
 title: Reflect.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
-original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/isExtensible
 ---
 
 {{JSRef}}
 
 La méthode statique **`Reflect.isExtensible()`** permet de déterminer si un objet est extensible (i.e. si on peut lui ajouter de nouvelles propriétés). Elle est semblable à la méthode {{jsxref("Object.isExtensible()")}} (modulo [quelques différences](#diffs)).
 
-{{EmbedInteractiveExample("pages/js/reflect-isextensible.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Reflect.isExtensible()", "taller")}}
+
+```js interactive-example
+const object1 = {};
+
+console.log(Reflect.isExtensible(object1));
+// Expected output: true
+
+Reflect.preventExtensions(object1);
+
+console.log(Reflect.isExtensible(object1));
+// Expected output: false
+
+const object2 = Object.seal({});
+
+console.log(Reflect.isExtensible(object2));
+// Expected output: false
+```
 
 ## Syntaxe
 
 ```js
-Reflect.isExtensible(cible)
+Reflect.isExtensible(cible);
 ```
 
 ### Paramètres

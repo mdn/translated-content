@@ -1,14 +1,13 @@
 ---
 title: translate()
 slug: Web/CSS/transform-function/translate
-original_slug: Web/CSS/transform-function/translate()
 ---
 
 {{CSSRef}}
 
 A função [CSS](/pt-BR/docs/Web/CSS) **`translate()`** reposiciona um elemento na direção horizontal e/ou vertical. O seu resultado é um tipo de dado {{cssxref("&lt;transform-function&gt;")}}.
 
-![](https://mdn.mozillademos.org/files/12121/translate.png)
+![](translate.png)
 
 Esta transformação é caracterizada por um vetor bidimensional. Suas coordenadas definem o quanto o elemento se move em cada direção.
 
@@ -121,7 +120,9 @@ div {
 }
 
 .moved {
-  transform: translate(10px); /* Igual a: translateX(10px) ou translate(10px, 0) */
+  transform: translate(
+    10px
+  ); /* Igual a: translateX(10px) ou translate(10px, 0) */
   background-color: pink;
 }
 ```
@@ -161,9 +162,7 @@ div {
 
 ## Especificações
 
-| Especificações                                                                                           | Estado                               | Comentário        |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------- |
-| {{SpecName('CSS3 Transforms', '#funcdef-transform-translate', 'translate()')}} | {{Spec2('CSS3 Transforms')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

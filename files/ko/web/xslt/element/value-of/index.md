@@ -1,12 +1,9 @@
 ---
 title: value-of
 slug: Web/XSLT/Element/value-of
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/value-of
-original_slug: Web/XSLT/value-of
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:value-of>` 요소는 XPath 식을 평가하여 그것을 문자열로 바꾸고 문자열을 결과 트리에 씁니다.
 
@@ -32,7 +29,7 @@ original_slug: Web/XSLT/value-of
 
 ### 정의
 
-[XSLT section 7.6.1, Generating Text with xsl:value-of](http://www.w3.org/TR/xslt#value-of)
+[XSLT section 7.6.1, Generating Text with xsl:value-of](https://www.w3.org/TR/xslt#value-of)
 
 ### Gecko 지원
 

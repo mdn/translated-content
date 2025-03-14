@@ -1,8 +1,6 @@
 ---
 title: Sélecteurs de type, de classe et d'ID
 slug: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
-translation_of: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
-original_slug: Apprendre/CSS/Building_blocks/Selectors/Sélecteurs_de_type_classe_ID
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
@@ -55,21 +53,19 @@ On peut rencontrer ce type de comportement dans les "feuilles de style de réini
 
 ### Utiliser le sélecteur universel pour rendre les sélecteurs plus lisibles
 
-On peut utiliser `*` pour rendre les sélecteurs plus lisibles, pour clarifier leur fonctionnement. Par exemple, si je veux sélectionner le premier descendant de chaque élément `<article>` pour le mettre en gras, je peux utiliser le sélecteur {{cssxref(":first-child")}}, qu'on verra dans la leçon sur les [pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)&nbsp;:
+On peut utiliser `*` pour rendre les sélecteurs plus lisibles, pour clarifier leur fonctionnement. Par exemple, si je veux sélectionner tout élément descendant de l'élément `<article>`, qui est le premier enfant de son parent, pour le mettre en gras, je peux utiliser le sélecteur {{cssxref(":first-child")}}, qu'on verra dans la leçon sur les [pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)&nbsp;:
 
 ```css
 article :first-child {
-
 }
 ```
 
-On peut néanmoins confondre ce sélecteur avec `article:first-child` ciblant les éléments `<article>`  qui sont le premier descendant d'un élément.
+On peut néanmoins confondre ce sélecteur avec `article:first-child` ciblant les éléments `<article>` qui sont le premier descendant d'un élément.
 
-Pour éviter cette confusion, on peut ajouter le sélecteur universel `*` à `:first-child`, le fonctionnement de ce dernier sera plus clair : il cible *tout* élément premier descendant d'un élément `<article>` :
+Pour éviter cette confusion, on peut ajouter le sélecteur universel `*` à `:first-child`, le fonctionnement de ce dernier sera plus clair : il cible _tout_ élément premier descendant d'un élément `<article>` :
 
 ```css
 article *:first-child {
-
 }
 ```
 
@@ -103,31 +99,11 @@ Un sélecteur d'ID commence par un `#` plutôt que par un point, mais est essent
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/id.html", '100%', 750)}}
 
-> **Note :** Comme on l'a vu dans la leçon sur la spécificité, on attribue une haute spécificité aux ID, les sélecteurs d'ID l'emportent donc sur la plupart des autres. Cela peut rendre leur usage compliqué. La plupart du temps il est préférable de passer par des sélecteurs de classe plutôt que d'ID, cependant si l'utilisation d'une ID est la seule façon de cibler un élément — peut-être que vous n'avez pas accès au balisage, que vous ne pouvez pas l'éditer — cela fonctionnera.
+> [!NOTE]
+> Comme on l'a vu dans la leçon sur la spécificité, on attribue une haute spécificité aux ID, les sélecteurs d'ID l'emportent donc sur la plupart des autres. Cela peut rendre leur usage compliqué. La plupart du temps il est préférable de passer par des sélecteurs de classe plutôt que d'ID, cependant si l'utilisation d'une ID est la seule façon de cibler un élément — peut-être que vous n'avez pas accès au balisage, que vous ne pouvez pas l'éditer — cela fonctionnera.
 
 ## Prochain article
 
-Notre exploration des sélecteurs se poursuit par l'étude des [sélecteurs d'attributs](/fr/docs/Apprendre/CSS/Building_blocks/Selectors/Sélecteurs_d_atrribut).
+Notre exploration des sélecteurs se poursuit par l'étude des [sélecteurs d'attributs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
-
-## Dans ce cours
-
-1. [Cascade and inheritance](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class, and ID selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [The box model](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizing your CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)

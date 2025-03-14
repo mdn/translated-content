@@ -1,5 +1,5 @@
 ---
-title: ':first-of-type'
+title: :first-of-type
 slug: Web/CSS/:first-of-type
 ---
 
@@ -15,7 +15,8 @@ p:first-of-type {
 }
 ```
 
-> **Nota:** Como se definió originalmente, el elemento seleccionado tenía que tener un padre. Comenzando con el Nivel 4 de Selectores, esto ya no es necesario.
+> [!NOTE]
+> Como se definió originalmente, el elemento seleccionado tenía que tener un padre. Comenzando con el Nivel 4 de Selectores, esto ya no es necesario.
 
 ## Sintaxis
 
@@ -56,7 +57,10 @@ Este ejemplo muestra cómo los elementos anidados también pueden utilizarse. Te
 <article>
   <div>!Este `div` es primero!</div>
   <div>¡Este <span>`span` anidado es el primero</span>!</div>
-  <div>¡Este <em>`em` anidado es el primero</em>, pero este <em>`em` anidado es el último</em>!</div>
+  <div>
+    ¡Este <em>`em` anidado es el primero</em>, pero este
+    <em>`em` anidado es el último</em>!
+  </div>
   <div>¡Este <span>`span` anidado tiene estilo</span>!</div>
   <b>¡Este `b` califica!</b>
   <div>Este es el `div` final.</div>
@@ -81,7 +85,7 @@ article :first-of-type {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.first-of-type")}}
+{{Compat}}
 
 ## Ver también
 

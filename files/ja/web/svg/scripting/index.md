@@ -3,6 +3,8 @@ title: スクリプティング
 slug: Web/SVG/Scripting
 ---
 
+{{SVGRef}}
+
 ブラウザーの既定の動作を `evt.preventDefault( )` メソッドで上書きしたり、イベントリスナーを `element.addEventListener(event, function, useCapture)` という構文でオブジェクトに追加したり、要素のプロパティを `svgElement.style.setProperty("fill-opacity", "0.0", "")` などで設定することが可能です。 3 つの引数がすべてプロパティを設定していることに注意してください。
 
 ### イベントコードの既定の挙動を防ぐ
@@ -15,24 +17,24 @@ slug: Web/SVG/Scripting
 
 ```js
 function myRect(x, y, w, h, message) {
-  this.message=message
+  this.message = message;
 
-  this.rect=document.createElementNS("http://www.w3.org/2000/svg","rect")
-  this.rect.setAttributeNS(null,"x",x)
-  this.rect.setAttributeNS(null,"y",y)
-  this.rect.setAttributeNS(null,"width",w)
-  this.rect.setAttributeNS(null,"height",h)
-  document.documentElement.appendChild(this.rect)
+  this.rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+  this.rect.setAttributeNS(null, "x", x);
+  this.rect.setAttributeNS(null, "y", y);
+  this.rect.setAttributeNS(null, "width", w);
+  this.rect.setAttributeNS(null, "height", h);
+  document.documentElement.appendChild(this.rect);
 
-  this.rect.addEventListener("click",this,false)
+  this.rect.addEventListener("click", this, false);
 
-  this.handleEvent= function(evt){
-    switch (evt.type){
-    case "click":
-      alert(this.message)
-      break;
+  this.handleEvent = function (evt) {
+    switch (evt.type) {
+      case "click":
+        alert(this.message);
+        break;
     }
-  }
+  };
 }
 ```
 
@@ -41,7 +43,7 @@ function myRect(x, y, w, h, message) {
 HTML 内で SVG を使用する場合、Adobe の SVG Viewer 3.0 は自動的に `svgDocument` という SVG 文書を指すウィンドウのプロパティを含みます。これは、Mozilla のネイティブ SVG 実装には当てはまりません。したがって、 `window.svgDocument` を使用しても Mozilla ではうまくいきません。その代わりに、
 
 ```js
-var svgDoc=document.embeds["name_of_svg"].getSVGDocument();
+var svgDoc = document.embeds["name_of_svg"].getSVGDocument();
 ```
 
 を使用して埋め込まれた SVG 文書の参照を取得することができます。

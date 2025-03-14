@@ -1,18 +1,6 @@
 ---
-title: 'CSP: default-src'
+title: "CSP: default-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/default-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - Sécurité
-  - default
-  - default-src
-  - source
-translation_of: Web/HTTP/Headers/Content-Security-Policy/default-src
 ---
 
 {{HTTPSidebar}}
@@ -78,8 +66,8 @@ La \<source> peut être une des suivantes :
 
   - : Un protocole tel que `http:` ou `https:`. Les deux-points sont nécessaires. Contrairement à d'autres valeurs ci-bas, les guillemets ne devraient pas être employés. Vous pouvez aussi spécifier des schémas de données (quoi que ce ne soit pas recommandé).
 
-    - `data:` permet aux [URI `data:`](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) d'être utilisées comme sources de contenu. _Cette pratique manque de sécurité ; une personne malveillante peut aussi injecter des URI data: arbitraires. Utilisez cette valeur avec parcimonie certainement pas pour des scripts._
-    - `mediastream:` permet aux [URI `mediastream:`](/fr/docs/Web/API/MediaStream_API) d'être utilisées comme source de contenu.
+    - `data:` permet aux [URI `data:`](/fr/docs/Web/URI/Schemes/data) d'être utilisées comme sources de contenu. _Cette pratique manque de sécurité ; une personne malveillante peut aussi injecter des URI data: arbitraires. Utilisez cette valeur avec parcimonie certainement pas pour des scripts._
+    - `mediastream:` permet aux [URI `mediastream:`](/fr/docs/Web/API/Media_Capture_and_Streams_API) d'être utilisées comme source de contenu.
     - `blob:` permet aux [URI `blob:`](/fr/docs/Web/API/Blob) d'être utilisées comme source de contenu.
     - `filesystem:` Allows [URI `filesystem:`](/fr/docs/Web/API/FileSystem) d'être utilisées comme source de contenu.
 
@@ -88,15 +76,15 @@ La \<source> peut être une des suivantes :
 - `'unsafe-eval'`
   - : Permet l'usage de la fonction `eval()` et de méthodes similaires pour créer du code à partir de chaines de caractères. Vous devez mettre cette valeur entre guillemets.
 - `'unsafe-hashes'`
-  - : Permet l'usage de certains [écouteurs d'évènements](/fr/docs/Web/Guide/Events/Event_handlers) par attributs. Si vous n'avez besoin que d'écouteurs d'évènements par attributs et non d'éléments {{HTMLElement("script")}} embarqués ou d'URL `javascript:`, cette valeur est plus sécurisée que `unsafe-inline`.
+  - : Permet l'usage de certains [écouteurs d'évènements](/fr/docs/Web/Events/Event_handlers) par attributs. Si vous n'avez besoin que d'écouteurs d'évènements par attributs et non d'éléments {{HTMLElement("script")}} embarqués ou d'URL `javascript:`, cette valeur est plus sécurisée que `unsafe-inline`.
 - `'unsafe-inline'`
   - : Permet l'usage de ressources embarquées, tels que des éléments {{HTMLElement("script")}} (sans `src`), d'URL `javascript:`, de gestionnaire d'évènement par attributs (`on<eventName>`), et d'éléments {{HTMLElement("style")}}. Vous devez mettre cette valeur entre guillemets.
 - `'none'`
   - : Aucune source n'est admise. Vous devez mettre cette valeur entre guillemets.
 - 'nonce-\<base64-value>'
-  - : Une liste de permissions pour des scripts embarqués spécifiques en utilisant un nonce (_number used once_, nombre à usage unique) cryptographique. Le serveur doit générer un nonce à chaque fois qu'il transmet une réponse. Il est extrèmement important de fournir des nonces non prédictibles, puisque le contraire permettrait aisément de contourner la stratégie de sécurité. Voir [inline script non fiables](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#Unsafe_inline_script) pour avoir un exemple. Spécifier un nonce implique que les navigateurs modernes ignoreront la valeur `'unsafe-inline'`, qui peut toutefois être laissée pour les anciens navigateurs ne supportant pas les nonces.
+  - : Une liste de permissions pour des scripts embarqués spécifiques en utilisant un nonce (_number used once_, nombre à usage unique) cryptographique. Le serveur doit générer un nonce à chaque fois qu'il transmet une réponse. Il est extrèmement important de fournir des nonces non prédictibles, puisque le contraire permettrait aisément de contourner la stratégie de sécurité. Voir [inline script non fiables](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script) pour avoir un exemple. Spécifier un nonce implique que les navigateurs modernes ignoreront la valeur `'unsafe-inline'`, qui peut toutefois être laissée pour les anciens navigateurs ne supportant pas les nonces.
 - '\<hash-algorithm>-\<base64-value>'
-  - : Un hash sha256, sha384 ou sha512 d'un `<script>` ou d'un `<style>`. Cette source est composée de deux parties séparées par un tiret : le nom de l'algorithme de chiffrage utilisé pour générer le hash à gauche et le hash encodé en base 64 à droite. Lors de la génération du hash, il ne faut pas inclure les balises `<script>` or `<style>` et tenir compte de la casse et des caractères blancs (espaces, retours à la ligne, etc.). Voir [inline script non fiables](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#Unsafe_inline_script) pour en avoir un exemple. En CSP 2.0, cette valeur ne s'applique qu'aux scripts embarqués. CSP 3.0 le permet aussi dans le cas de scripts externes.
+  - : Un hash sha256, sha384 ou sha512 d'un `<script>` ou d'un `<style>`. Cette source est composée de deux parties séparées par un tiret : le nom de l'algorithme de chiffrage utilisé pour générer le hash à gauche et le hash encodé en base 64 à droite. Lors de la génération du hash, il ne faut pas inclure les balises `<script>` or `<style>` et tenir compte de la casse et des caractères blancs (espaces, retours à la ligne, etc.). Voir [inline script non fiables](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script) pour en avoir un exemple. En CSP 2.0, cette valeur ne s'applique qu'aux scripts embarqués. CSP 3.0 le permet aussi dans le cas de scripts externes.
 - 'strict-dynamic'
   - : La valeur `strict-dynamic` spécifie que la confiance explicitement donnée à un script de la page, par le biais d'un nonce ou d'un hash, doit être propagée à tous les scripts chargés par celui-ci. En conséquence, toute les valeurs telles que `'self'` ou `'unsafe-inline'` et listes de permissions sont ignorées. Voir [script-src](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#strict-dynamic) pour en avoir un exemple.
 - 'report-sample'
@@ -146,4 +134,4 @@ Content-Security-Policy: connect-src 'self';
   - {{Glossary("Reporting directive")}}
   - [`upgrade-insecure-requests`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests)
   - [`block-all-mixed-content`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content)
-  - [`require-sri-for`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for) {{experimental_inline}}
+  - [`require-sri-for`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) {{experimental_inline}}

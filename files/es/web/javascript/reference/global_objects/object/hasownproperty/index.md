@@ -1,16 +1,9 @@
 ---
 title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/hasOwnProperty
 ---
 
-{{JSRef("Objetos_globales", "Object")}}
+{{JSRef}}
 
 ## Resumen
 
@@ -39,16 +32,16 @@ El siguiente ejemplo determina si el objeto `o` contiene una propiedad llamada `
 
 ```js
 o = new Object();
-o.prop = 'exists';
+o.prop = "exists";
 
 function changeO() {
   o.newprop = o.prop;
   delete o.prop;
 }
 
-o.hasOwnProperty('prop');   // returns true
+o.hasOwnProperty("prop"); // returns true
 changeO();
-o.hasOwnProperty('prop');   // returns false
+o.hasOwnProperty("prop"); // returns false
 ```
 
 ### Ejemplo: Directo versus propiedades heredadas
@@ -57,10 +50,10 @@ El siguiente ejemplo diferencia entre propiedades directas y propiedades heredad
 
 ```js
 o = new Object();
-o.prop = 'exists';
-o.hasOwnProperty('prop');             // returns true
-o.hasOwnProperty('toString');         // returns false
-o.hasOwnProperty('hasOwnProperty');   // returns false
+o.prop = "exists";
+o.hasOwnProperty("prop"); // returns true
+o.hasOwnProperty("toString"); // returns false
+o.hasOwnProperty("hasOwnProperty"); // returns false
 ```
 
 ### Ejemplo: Iterando sobre las propiedades de un objeto
@@ -69,16 +62,15 @@ El siguiente ejemplo muestra como iterar sobre las propiedades de un objeto sin 
 
 ```js
 var buz = {
-    fog: 'stack'
+  fog: "stack",
 };
 
 for (var name in buz) {
-    if (buz.hasOwnProperty(name)) {
-        alert("this is fog (" + name + ") for sure. Value: " + buz[name]);
-    }
-    else {
-        alert(name); // toString or something else
-    }
+  if (buz.hasOwnProperty(name)) {
+    alert("this is fog (" + name + ") for sure. Value: " + buz[name]);
+  } else {
+    alert(name); // toString or something else
+  }
 }
 ```
 
@@ -88,19 +80,19 @@ JavaScript no protege el nombre de la propiedad `hasOwnProperty`; en consecuenci
 
 ```js
 var foo = {
-    hasOwnProperty: function() {
-        return false;
-    },
-    bar: 'Here be dragons'
+  hasOwnProperty: function () {
+    return false;
+  },
+  bar: "Here be dragons",
 };
 
-foo.hasOwnProperty('bar'); // always returns false
+foo.hasOwnProperty("bar"); // always returns false
 
 // Use another Object's hasOwnProperty and call it with 'this' set to foo
-({}).hasOwnProperty.call(foo, 'bar'); // true
+({}).hasOwnProperty.call(foo, "bar"); // true
 
 // It's also possible to use the hasOwnProperty property from the Object property for this purpose
-Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
+Object.prototype.hasOwnProperty.call(foo, "bar"); // true
 ```
 
 Observe que en el último caso no han habido nuevos objetos creados.
@@ -109,14 +101,14 @@ Observe que en el último caso no han habido nuevos objetos creados.
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.hasOwnProperty")}}
+{{Compat}}
 
 ## Véase también
 
-- [Enumerability and ownership of properties](/es/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - [for...in](/es/docs/Web/JavaScript/Reference/Statements/for...in)
 - {{jsxref("Operators/in", "in")}}
-- [JavaScript Guide: Inheritance revisted](/es/docs/Web/JavaScript/Guide/Inheritance_Revisited)
+- [JavaScript Guide: Inheritance revisted](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

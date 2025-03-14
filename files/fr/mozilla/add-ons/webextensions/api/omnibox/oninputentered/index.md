@@ -1,19 +1,9 @@
 ---
 title: omnibox.onInputEntered
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputEntered
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - omnibox
-  - onInputEntered
-translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputEntered
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsque l'utilisateur a sélectionné l'une des suggestions que votre extension a ajoutées à la liste déroulante de la barre d'adresse.
 
@@ -25,9 +15,9 @@ Utilisez cet événement pour gérer la sélection de l'utilisateur, généralem
 ## Syntaxe
 
 ```js
-browser.omnibox.onInputEntered.addListener(listener)
-browser.omnibox.onInputEntered.removeListener(listener)
-browser.omnibox.onInputEntered.hasListener(listener)
+browser.omnibox.onInputEntered.addListener(listener);
+browser.omnibox.onInputEntered.removeListener(listener);
+browser.omnibox.onInputEntered.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -50,19 +40,19 @@ La fonction d'écouteur recevra deux paramètres: une chaine de `text`, et un {{
 - `disposition`
   - : {{WebExtAPIRef("omnibox.OnInputEnteredDisposition", "OnInputEnteredDisposition")}}. Une {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}} énumération, indiquant si l'extension doit ouvrir la page dans l'onglet en cours, dans un nouvel onglet de premier plan ou dans un nouvel onglet d'arrière-plan.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.omnibox.onInputEntered")}}
+{{Compat}}
 
 ## Exemples
 
 Cet exemple interprète l'entrée de l'utilisateur en tant que nom de propriété CSS et remplit la liste déroulante avec un objet {{WebExtAPIRef("omnibox.SuggestResult")}} pour chaque propriété CSS correspondant à l'entrée. La `description SuggestResult` est le nom complet de la propriété et le `contenu` est la page MDN de cette propriété.
 
-L'exemple écoute également {{WebExtAPIRef("omnibox.onInputEntered")}}, et ouvre la page MDN correspondant à la sélection, conformément à l'argument   {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}.
+L'exemple écoute également {{WebExtAPIRef("omnibox.onInputEntered")}}, et ouvre la page MDN correspondant à la sélection, conformément à l'argument {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}.
 
 ```js
 browser.omnibox.setDefaultSuggestion({
-  description: "Type the name of a CSS property"
+  description: "Type the name of a CSS property",
 });
 
 /*
@@ -86,10 +76,10 @@ const props = [
   "padding",
   "position",
   "transform",
-  "transition"
+  "transition",
 ];
 
-const baseURL = "https://developer.mozilla.org/en-US/docs/Web/CSS/";
+const baseURL = "https://developer.mozilla.org/fr/docs/Web/CSS/";
 
 /*
 Return an array of SuggestResult objects,
@@ -102,8 +92,8 @@ function getMatchingProperties(input) {
       console.log(prop);
       let suggestion = {
         content: baseURL + prop,
-        description: prop
-      }
+        description: prop,
+      };
       result.push(suggestion);
     } else {
       if (result.length != 0) {
@@ -121,13 +111,13 @@ browser.omnibox.onInputChanged.addListener((input, suggest) => {
 browser.omnibox.onInputEntered.addListener((url, disposition) => {
   switch (disposition) {
     case "currentTab":
-      browser.tabs.update({url});
+      browser.tabs.update({ url });
       break;
     case "newForegroundTab":
-      browser.tabs.create({url});
+      browser.tabs.create({ url });
       break;
     case "newBackgroundTab":
-      browser.tabs.create({url, active: false});
+      browser.tabs.create({ url, active: false });
       break;
   }
 });
@@ -135,8 +125,8 @@ browser.omnibox.onInputEntered.addListener((url, disposition) => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/extensions/omnibox).
+> Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

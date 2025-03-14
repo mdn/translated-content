@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
 
 静态方法 **`Reflect.ownKeys()`** 返回一个由目标对象自身的属性键组成的数组。
 
-{{EmbedInteractiveExample("pages/js/reflect-ownkeys.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.ownKeys()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+  property2: 13,
+};
+
+const array1 = [];
+
+console.log(Reflect.ownKeys(object1));
+// Expected output: Array ["property1", "property2"]
+
+console.log(Reflect.ownKeys(array1));
+// Expected output: Array ["length"]
+```
 
 ## 语法
 
@@ -37,13 +52,21 @@ Reflect.ownKeys(target)
 ### 使用 `Reflect.ownKeys()`
 
 ```js
-Reflect.ownKeys({z: 3, y: 2, x: 1}); // [ "z", "y", "x" ]
+Reflect.ownKeys({ z: 3, y: 2, x: 1 }); // [ "z", "y", "x" ]
 Reflect.ownKeys([]); // ["length"]
 
 var sym = Symbol.for("comet");
 var sym2 = Symbol.for("meteor");
-var obj = {[sym]: 0, "str": 0, "773": 0, "0": 0,
-           [sym2]: 0, "-1": 0, "8": 0, "second str": 0};
+var obj = {
+  [sym]: 0,
+  str: 0,
+  773: 0,
+  0: 0,
+  [sym2]: 0,
+  "-1": 0,
+  8: 0,
+  "second str": 0,
+};
 Reflect.ownKeys(obj);
 // [ "0", "8", "773", "str", "-1", "second str", Symbol(comet), Symbol(meteor) ]
 // Indexes in numeric order,
@@ -59,7 +82,7 @@ Reflect.ownKeys(obj);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.getOwnPropertyNames()")}}

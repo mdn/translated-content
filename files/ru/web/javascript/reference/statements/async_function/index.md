@@ -1,7 +1,6 @@
 ---
 title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
-translation_of: Web/JavaScript/Reference/Statements/async_function
 ---
 
 {{jsSidebar("Statements")}}
@@ -39,7 +38,8 @@ async function name([param[, param[, ... param]]]) {
 
 Ключевое слово `await` допустимо только в асинхронных функциях. В другом контексте вы получите ошибку `SyntaxError`.
 
-> **Примечание:** Цель функций async/await упростить использование promises синхронно и воспроизвести некоторое действие над группой `Promises`. Точно так же как `Promises` подобны структурированным колбэкам, async/await подобна комбинации генераторов и promises.
+> [!NOTE]
+> Цель функций async/await упростить использование promises синхронно и воспроизвести некоторое действие над группой `Promises`. Точно так же как `Promises` подобны структурированным колбэкам, async/await подобна комбинации генераторов и promises.
 
 ## Примеры
 
@@ -47,7 +47,7 @@ async function name([param[, param[, ... param]]]) {
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
@@ -60,45 +60,47 @@ async function add1(x) {
   return x + a + b;
 }
 
-add1(10).then(v => {
-  console.log(v);  // prints 60 after 4 seconds.
+add1(10).then((v) => {
+  console.log(v); // prints 60 after 4 seconds.
 });
 
 async function add2(x) {
   const a = resolveAfter2Seconds(20);
   const b = resolveAfter2Seconds(30);
-  return x + await a + await b;
+  return x + (await a) + (await b);
 }
 
-add2(10).then(v => {
-  console.log(v);  // prints 60 after 2 seconds.
+add2(10).then((v) => {
+  console.log(v); // prints 60 after 2 seconds.
 });
 ```
 
-> **Предупреждение:** #### Не путайте await и Promise.allФункция `add1` приостанавливается на 2 секунды для первого `await` и ещё на 2 для второго. Второй таймер создаётся только после срабатывания первого. В функции `add2` создаются оба и оба же переходят в состояние `await`. В результате функция `add2` завершится скорее через две, чем через четыре секунды, поскольку таймеры работают одновременно. Однако запускаются они всё же не параллельно, а друг за другом - такая конструкция не означает автоматического использования `Promise.all`. Если два или более Promise должны разрешаться параллельно, следует использовать `Promise.all`.
+> [!WARNING]
+> Не путайте await и Promise.allФункция `add1` приостанавливается на 2 секунды для первого `await` и ещё на 2 для второго. Второй таймер создаётся только после срабатывания первого. В функции `add2` создаются оба и оба же переходят в состояние `await`. В результате функция `add2` завершится скорее через две, чем через четыре секунды, поскольку таймеры работают одновременно. Однако запускаются они всё же не параллельно, а друг за другом - такая конструкция не означает автоматического использования `Promise.all`. Если два или более Promise должны разрешаться параллельно, следует использовать `Promise.all`.
 
 ### Когда функция `async` выбрасывает исключение
 
 ```js
 async function throwsValue() {
-    throw new Error('oops');
+  throw new Error("oops");
 }
-throwsValue()
-    .then((resolve) => {
-            console.log("resolve:" + resolve);
-        },
-        (reject) => {
-            console.log("reject:" + reject);
-        });
+throwsValue().then(
+  (resolve) => {
+    console.log("resolve:" + resolve);
+  },
+  (reject) => {
+    console.log("reject:" + reject);
+  },
+);
 //prints "reject:Error: oops"
 //or
 throwsValue()
-    .then((resolve) => {
-        console.log("resolve:" + resolve);
-    })
-    .catch((reject) => {
-        console.log("reject:" + reject);
-    });
+  .then((resolve) => {
+    console.log("resolve:" + resolve);
+  })
+  .catch((reject) => {
+    console.log("reject:" + reject);
+  });
 //prints "reject:Error: oops"
 ```
 
@@ -109,10 +111,10 @@ API, которое возвращает {{jsxref("Promise")}}, будет во�
 ```js
 function getProcessedData(url) {
   return downloadData(url) // returns a promise
-    .catch(e => {
-      return downloadFallbackData(url) // returns a promise
+    .catch((e) => {
+      return downloadFallbackData(url); // returns a promise
     })
-    .then(v => {
+    .then((v) => {
       return processDataInWorker(v); // returns a promise
     });
 }
@@ -125,7 +127,7 @@ async function getProcessedData(url) {
   let v;
   try {
     v = await downloadData(url);
-  } catch(e) {
+  } catch (e) {
     v = await downloadFallbackData(url);
   }
   return processDataInWorker(v);
@@ -138,7 +140,7 @@ async function getProcessedData(url) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

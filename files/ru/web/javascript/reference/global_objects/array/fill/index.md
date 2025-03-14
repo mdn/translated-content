@@ -1,23 +1,28 @@
 ---
 title: Array.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
-tags:
-  - Array
-  - ECMAScript2015
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 ---
 
 {{JSRef}}
 
 Метод **`fill()`** заполняет все элементы массива от начального до конечного индексов одним значением.
 
-{{EmbedInteractiveExample("pages/js/array-fill.html")}}
+{{InteractiveExample("JavaScript Demo: Array.fill()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3, 4];
+
+// Fill with 0 from position 2 until position 4
+console.log(array1.fill(0, 2, 4));
+// Expected output: Array [1, 2, 0, 0]
+
+// Fill with 5 from position 1
+console.log(array1.fill(5, 1));
+// Expected output: Array [1, 5, 5, 5]
+
+console.log(array1.fill(6));
+// Expected output: Array [6, 6, 6, 6]
+```
 
 ## Синтаксис
 
@@ -50,7 +55,7 @@ arr.fill(value[, start = 0[, end = this.length]])
 
 Метод **`fill`** является _изменяющим методом_, он изменит объект `this` и вернёт его, а не просто вернёт копию.
 
-Если аргумент value​​​​​ является объектом, то метод **`fill`** заполнит массив ссылками на этот объект.
+Если аргумент value является объектом, то метод **`fill`** заполнит массив ссылками на этот объект.
 
 ## Примеры
 

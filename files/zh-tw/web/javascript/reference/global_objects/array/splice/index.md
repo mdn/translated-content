@@ -7,11 +7,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/splice
 
 **`splice()`** 方法可以藉由刪除既有元素並／或加入新元素來改變一個陣列的內容。
 
-{{EmbedInteractiveExample("pages/js/array-splice.html")}}
+{{InteractiveExample("JavaScript Demo: Array.splice()")}}
+
+```js interactive-example
+const months = ["Jan", "March", "April", "June"];
+months.splice(1, 0, "Feb");
+// Inserts at index 1
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+months.splice(4, 1, "May");
+// Replaces 1 element at index 4
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+```
 
 ## 語法
 
-```plain
+```js-nolint
 array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
 ```
 
@@ -37,8 +50,8 @@ array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
 ### 從索引 2 的位置開始，刪除 0 個元素並插入「drum」
 
 ```js
-var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
-var removed = myFish.splice(2, 0, 'drum');
+var myFish = ["angel", "clown", "mandarin", "sturgeon"];
+var removed = myFish.splice(2, 0, "drum");
 
 // myFish 為 ["angel", "clown", "drum", "mandarin", "sturgeon"]
 // removed 為 [], 沒有元素被刪除
@@ -47,7 +60,7 @@ var removed = myFish.splice(2, 0, 'drum');
 ### 從索引 3 的位置開始，刪除 1 個元素
 
 ```js
-var myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
+var myFish = ["angel", "clown", "drum", "mandarin", "sturgeon"];
 var removed = myFish.splice(3, 1);
 
 // removed 為 ["mandarin"]
@@ -57,8 +70,8 @@ var removed = myFish.splice(3, 1);
 ### 從索引 2 的位置開始，刪除 1 個元素並插入「trumpet」
 
 ```js
-var myFish = ['angel', 'clown', 'drum', 'sturgeon'];
-var removed = myFish.splice(2, 1, 'trumpet');
+var myFish = ["angel", "clown", "drum", "sturgeon"];
+var removed = myFish.splice(2, 1, "trumpet");
 
 // myFish 為 ["angel", "clown", "trumpet", "sturgeon"]
 // removed 為 ["drum"]
@@ -67,8 +80,8 @@ var removed = myFish.splice(2, 1, 'trumpet');
 ### 從索引 0 的位置開始，刪除 2 個元素並插入「parrot」、「anemone」和「blue」
 
 ```js
-var myFish = ['angel', 'clown', 'trumpet', 'sturgeon'];
-var removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
+var myFish = ["angel", "clown", "trumpet", "sturgeon"];
+var removed = myFish.splice(0, 2, "parrot", "anemone", "blue");
 
 // myFish 為 ["parrot", "anemone", "blue", "trumpet", "sturgeon"]
 // removed 為 ["angel", "clown"]
@@ -77,7 +90,7 @@ var removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
 ### 從索引 2 的位置開始，刪除 2 個元素
 
 ```js
-var myFish = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon'];
+var myFish = ["parrot", "anemone", "blue", "trumpet", "sturgeon"];
 var removed = myFish.splice(myFish.length - 3, 2);
 
 // myFish 為 ["parrot", "anemone", "sturgeon"]
@@ -87,7 +100,7 @@ var removed = myFish.splice(myFish.length - 3, 2);
 ### 從索引 -2 的位置開始，刪除 1 個元素
 
 ```js
-var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+var myFish = ["angel", "clown", "mandarin", "sturgeon"];
 var removed = myFish.splice(-2, 1);
 
 // myFish 為 ["angel", "clown", "sturgeon"]
@@ -97,7 +110,7 @@ var removed = myFish.splice(-2, 1);
 ### 從索引 2 的位置開始，刪除所有元素（含索引 2）
 
 ```js
-var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+var myFish = ["angel", "clown", "mandarin", "sturgeon"];
 var removed = myFish.splice(2);
 
 // myFish 為 ["angel", "clown"]

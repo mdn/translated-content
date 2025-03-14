@@ -1,19 +1,29 @@
 ---
 title: Math.round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/round
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/round
 ---
 
 {{JSRef}}
 
 **`Math.round()`** 함수는 입력값을 반올림한 수와 가장 가까운 정수 값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/math-round.html")}}
+{{InteractiveExample("JavaScript Demo: Math.round()")}}
+
+```js interactive-example
+console.log(Math.round(0.9));
+// Expected output: 1
+
+console.log(Math.round(5.95), Math.round(5.5), Math.round(5.05));
+// Expected output: 6 6 5
+
+console.log(Math.round(-5.05), Math.round(-5.5), Math.round(-5.95));
+// Expected output: -5 -5 -6
+```
 
 ## 문법
 
 ```js
-    Math.round(x)
+Math.round(x);
 ```
 
 ### 매개 변수
@@ -34,18 +44,18 @@ Because `round()` is a static method of `Math`, you always use it as `Math.round
 ## Examples
 
 ```js
-Math.round( 20.49); //  20
-Math.round( 20.5 ); //  21
-Math.round( 42   ); //  42
-Math.round(-20.5 ); // -20
+Math.round(20.49); //  20
+Math.round(20.5); //  21
+Math.round(42); //  42
+Math.round(-20.5); // -20
 Math.round(-20.51); // -21
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

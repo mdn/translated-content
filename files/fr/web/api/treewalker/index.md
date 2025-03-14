@@ -1,13 +1,6 @@
 ---
 title: TreeWalker
 slug: Web/API/TreeWalker
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Itérateur
-  - Noeuds
-translation_of: Web/API/TreeWalker
 ---
 
 {{ APIRef("DOM") }}
@@ -150,7 +143,8 @@ _Cette interface n'hérite d'aucune propriété._
 
 _Cette interface n'hérite d'aucune méthode._
 
-> **Note :** Le TreeWalker considère uniquement les nœuds DOM visibles.
+> [!NOTE]
+> Le TreeWalker considère uniquement les nœuds DOM visibles.
 
 - {{domxref("TreeWalker.parentNode()")}}
   - : Déplace le {{domxref("Node")}} actuel vers le premier noeud ancêtre _visible_ dans l'ordre du document et renvoie le noeud trouvé. Il déplace également le noeud actuel vers celui-ci. Si aucun noeud n'existe ou s'il est antérieur au _noeud racine_ défini lors de la construction de l'objet, renvoie `null` et le noeud courant n'est pas modifié.

@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.addIceCandidate()
 slug: Web/API/RTCPeerConnection/addIceCandidate
-translation_of: Web/API/RTCPeerConnection/addIceCandidate
 ---
 
 {{APIRef("WebRTC")}}
@@ -72,7 +71,7 @@ ICE candidate 추가 시도 중 에러가 발생하면, 이 메소드에서 반�
 //   }
 // }
 
-signalingChannel.onmessage = receivedString => {
+signalingChannel.onmessage = (receivedString) => {
   const message = JSON.parse(receivedString);
   if (message.ice) {
     // A typical value of ice here might look something like this:
@@ -81,19 +80,19 @@ signalingChannel.onmessage = receivedString => {
     //
     // Pass the whole thing to addIceCandidate:
 
-    pc.addIceCandidate(message.ice).catch(e => {
+    pc.addIceCandidate(message.ice).catch((e) => {
       console.log("Failure during addIceCandidate(): " + e.name);
     });
   } else {
     // handle other things you might be signaling, like sdp
   }
-}
+};
 ```
 
 원격 유저에 의해 이러한 방식으로 신호를 전달한 마지막 candiate는 "candidate 종료"를 나타내는 특수한 candidate가 됩니다. "candidate 종료"를 수동으로 설정하려면 다음과 같이 하면 됩니다:
 
 ```js
-pc.addIceCandidate({candidate:''});
+pc.addIceCandidate({ candidate: "" });
 ```
 
 하지만, 대부분의 경우 {{domxref("RTCPeerConnection")}}가 적절한 이벤트를 보내서 처리해주기 때문에 이를 수동으로 확인해야 할 필요는 없습니다.
@@ -110,6 +109,6 @@ pc.addIceCandidate({candidate:''});
 
 - [WebRTC API](/ko/docs/Web/API/WebRTC_API)
 - [Signaling and video calling](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
-- [WebRTC architecture overview](/ko/docs/Web/API/WebRTC_API/Architecture)
+- [WebRTC architecture overview](/ko/docs/Web/API/WebRTC_API/Protocols)
 - [WebRTC connectivity](/ko/docs/Web/API/WebRTC_API/Connectivity)
 - [Lifetime of a WebRTC session](/ko/docs/Web/API/WebRTC_API/Session_lifetime)

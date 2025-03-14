@@ -1,11 +1,6 @@
 ---
 title: font-size
 slug: Web/CSS/font-size
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/font-size
 ---
 
 {{CSSRef}}
@@ -61,7 +56,8 @@ La propriété `font-size` peut être définie de deux façons :
 - `<percentage>`
   - : Les valeurs exprimées en pourcentages (type {{cssxref("&lt;percentage&gt;")}}) sont proportionnelles à la taille de fonte de l'élément parent.
 
-> **Note :** Il est généralement préférable d'utiliser des valeurs relatives à la taille par défaut choisie par l'utilisateur.
+> [!NOTE]
+> Il est généralement préférable d'utiliser des valeurs relatives à la taille par défaut choisie par l'utilisateur.
 
 ## Définition formelle
 
@@ -103,7 +99,7 @@ Un autre aspect important est la **composition** des valeurs exprimées avec cet
 <div>
   <span>
     Extérieur
-      <span>Intérieur</span>
+    <span>Intérieur</span>
     Extérieur
   </span>
 </div>
@@ -146,7 +142,7 @@ On utilisera le même fragment de HTML :
 ```html
 <span>
   Extérieur
-    <span>Intérieur</span>
+  <span>Intérieur</span>
   Extérieur
 </span>
 ```
@@ -162,15 +158,21 @@ Dans cet exemple, si la taille par défaut du navigateur vaut `16px`, tous les m
 ```css
 /* Le paragraphe sera écrit avec une grande */
 /* fonte.                                   */
-p { font-size: xx-large }
+p {
+  font-size: xx-large;
+}
 
 /* La taille du texte des h1 sera 2.5 fois plus */
 /* grande que le texte autour.                  */
-h1 { font-size: 250% }
+h1 {
+  font-size: 250%;
+}
 
 /* Le texte contenu dans des éléments span */
 /* mesurera 16px                           */
-span { font-size: 16px; }
+span {
+  font-size: 16px;
+}
 ```
 
 ### Démonstration

@@ -1,10 +1,9 @@
 ---
 title: Animating textures in WebGL
 slug: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 ---
 
-{{WebGLSidebar("Tutorial") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{DefaultAPISidebar("WebGL") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 En esta demostración nos basamos en el ejemplo anterior, solo que ahora reemplazaremos nuestra textura estática con los fotogramas de un video Ogg.
 
@@ -16,9 +15,10 @@ Podemos utilizar un código similar para usar, como fuente para las texturas, ot
 
 El primer paso es añadir el HTML para crear el elemento {{ HTMLElement("video") }} que usaremos para obtener los fotogramas de video:
 
-```js
+```html
 <video id="video">
-  Parece ser que tu navegador no soporta el elemento HTML5. <code>&lt;video&gt;</code>
+  Parece ser que tu navegador no soporta el elemento HTML5.
+  <code>&lt;video&gt;</code>
 </video>
 ```
 
@@ -94,8 +94,14 @@ La función updateTexture() quedaría así; Aquí es donde se realiza el trabajo
 function updateTexture() {
   gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
   gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
-  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA,
-        gl.UNSIGNED_BYTE, videoElement);
+  gl.texImage2D(
+    gl.TEXTURE_2D,
+    0,
+    gl.RGBA,
+    gl.RGBA,
+    gl.UNSIGNED_BYTE,
+    videoElement,
+  );
 }
 ```
 
@@ -105,12 +111,12 @@ Has visto este código antes. Es prácticamente idéntico a la rutina de handleT
 
 ¡Esto es todo al respecto!
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-[Ver el código completo](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8) | [Abrir esta demo en una nueva página](http://mdn.github.io/webgl-examples/tutorial/sample8/)
+[Ver el código completo](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) | [Abrir esta demo en una nueva página](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)
 
 ## Artículos relacionados
 
-- [Usar audio y video en Firefox](/es/Using_HTML5_audio_and_video)
+- [Usar audio y video en Firefox](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 
 {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

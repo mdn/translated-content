@@ -1,27 +1,18 @@
 ---
 title: permissions.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Permissions
-  - Reference
-  - WebExtensions
-  - onRemoved
-translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Activé lorsque certaines permissions sont supprimés de l'extension.
 
 ## Syntaxe
 
 ```js
-browser.permissions.onRemoved.addListener(listener)
-browser.permissions.onRemoved.removeListener(listener)
-browser.permissions.onRemoved.hasListener(listener)
+browser.permissions.onRemoved.addListener(listener);
+browser.permissions.onRemoved.removeListener(listener);
+browser.permissions.onRemoved.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -44,9 +35,9 @@ Les événements ont trois fonctions :
     - `permissions`
       - : L'objet {{WebExtAPIRef("permissions.Permissions")}} contenant les permissions qui ont été supprimées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.permissions.onRemoved")}}
+{{Compat}}
 
 ## Exemples
 
@@ -61,8 +52,8 @@ browser.permissions.onRemoved.addListener(handleRemoved);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/extensions/permissions).
+> Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

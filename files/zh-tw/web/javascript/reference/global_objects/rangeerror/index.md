@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RangeError
 
 ## 語法
 
-```plain
+```js-nolint
 new RangeError([message[, fileName[, lineNumber]]])
 ```
 
@@ -39,59 +39,58 @@ new RangeError([message[, fileName[, lineNumber]]])
 
 ### 屬性
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Properties')}}
-
-### 方法
-
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Methods')}}
+- {{jsxref("Error.prototype.message", "RangeError.prototype.message")}}
+  - : Error message. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.name", "RangeError.prototype.name")}}
+  - : Error name. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.cause", "RangeError.prototype.cause")}}
+  - : Error cause. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.fileName", "RangeError.prototype.fileName")}} {{non-standard_inline}}
+  - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.lineNumber", "RangeError.prototype.lineNumber")}} {{non-standard_inline}}
+  - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.columnNumber", "RangeError.prototype.columnNumber")}} {{non-standard_inline}}
+  - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.stack", "RangeError.prototype.stack")}} {{non-standard_inline}}
+  - : Stack trace. Inherited from {{jsxref("Error")}}.
 
 ## 範例
 
-### 使用 `RangeError` (數值)
+### 使用 `RangeError`（數值）
 
 ```js
-function check(n)
-{
-    if(!(n >= -500 && n <= 500))
-    {
-        throw new RangeError("The argument must be between -500 and 500.");
-    }
+function check(n) {
+  if (!(n >= -500 && n <= 500)) {
+    throw new RangeError("The argument must be between -500 and 500.");
+  }
 }
 
-try
-{
-    check(2000);
-}
-catch(error)
-{
-    if(error instanceof RangeError)
-    {
-        // Handle the error.
-    }
+try {
+  check(2000);
+} catch (error) {
+  if (error instanceof RangeError) {
+    // Handle the error.
+  }
 }
 ```
 
-### 使用 `RangeError` (非數值)
+### 使用 `RangeError`（非數值）
 
 ```js
-function check(value)
-{
-    if(["apple", "banana", "carrot"].includes(value) === false)
-    {
-        throw new RangeError("The argument must be an \"apple\", \"banana\", or \"carrot\".");
-    }
+function check(value) {
+  if (["apple", "banana", "carrot"].includes(value) === false) {
+    throw new RangeError(
+      'The argument must be an "apple", "banana", or "carrot".',
+    );
+  }
 }
 
-try
-{
-    check("cabbage");
-}
-catch(error)
-{
-    if(error instanceof RangeError)
-    {
-        // Handle the error.
-    }
+try {
+  check("cabbage");
+} catch (error) {
+  if (error instanceof RangeError) {
+    // Handle the error.
+  }
 }
 ```
 
@@ -103,7 +102,7 @@ catch(error)
 
 {{Compat}}
 
-## 另見
+## 參見
 
 - {{jsxref("Error")}}
 - {{jsxref("RangeError.prototype")}}

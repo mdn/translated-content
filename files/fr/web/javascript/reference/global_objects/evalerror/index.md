@@ -1,9 +1,6 @@
 ---
 title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
-translation_of: Web/JavaScript/Reference/Global_Objects/EvalError
-original_slug: Web/JavaScript/Reference/Objets_globaux/EvalError
-browser-compat: javascript.builtins.EvalError
 ---
 
 {{JSRef}}
@@ -27,7 +24,7 @@ L'objet **`EvalError`** indique une erreur relative à la fonction [`eval()`](/f
   - : Le numéro de la ligne dans le fichier qui a déclenché l'erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
 - [`EvalError.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber)
   - : Le numéro de la colonne de la ligne du fichier qui a déclenché l'erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`EvalError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack)
+- [`EvalError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/stack)
   - : La pile d'appels, héritée depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
 
 ## Exemples
@@ -38,15 +35,15 @@ L'objet **`EvalError`** indique une erreur relative à la fonction [`eval()`](/f
 
 ```js
 try {
-  throw new EvalError('Coucou', 'unFichier.js', 10);
+  throw new EvalError("Coucou", "unFichier.js", 10);
 } catch (e) {
   console.log(e instanceof EvalError); // true
-  console.log(e.message);              // "Coucou"
-  console.log(e.name);                 // "EvalError"
-  console.log(e.fileName);             // "unFichier.js"
-  console.log(e.lineNumber);           // 10
-  console.log(e.columnNumber);         // 0
-  console.log(e.stack);                // "@Scratchpad/2:2:9\n"
+  console.log(e.message); // "Coucou"
+  console.log(e.name); // "EvalError"
+  console.log(e.fileName); // "unFichier.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 

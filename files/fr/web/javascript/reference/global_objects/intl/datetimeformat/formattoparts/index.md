@@ -1,17 +1,6 @@
 ---
 title: Intl.DateTimeFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
-tags:
-  - DateTimeFormat
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - i18n
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/DateTimeFormat/formatToParts
 ---
 
 {{JSRef}}
@@ -21,7 +10,7 @@ La méthode **`Intl.DateTimeFormat.prototype.formatToParts()`** permet de mettre
 ## Syntaxe
 
 ```js
-Intl.DateTimeFormat.prototype.formatToParts(date)
+Intl.DateTimeFormat.prototype.formatToParts(date);
 ```
 
 ### Paramètres
@@ -77,15 +66,15 @@ Les types possibles sont :
 var date = Date.UTC(2012, 11, 17, 3, 0, 42);
 
 var formatter = new Intl.DateTimeFormat("en-us", {
-  weekday: 'long',
-  year: 'numeric',
-  month: 'numeric',
-  day: 'numeric',
-  hour: 'numeric',
-  minute: 'numeric',
-  second: 'numeric',
+  weekday: "long",
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
   hour12: true,
-  timeZone: "UTC"
+  timeZone: "UTC",
 });
 
 formatter.format(date);
@@ -99,33 +88,38 @@ formatter.formatToParts(date);
 
 // return value:
 [
-  { type: 'weekday',   value: 'Monday' },
-  { type: 'separator', value: ', '     },
-  { type: 'month',     value: '12'     },
-  { type: 'literal', value: '/'      },
-  { type: 'day',       value: '17'     },
-  { type: 'literal', value: '/'      },
-  { type: 'year',      value: '2012'   },
-  { type: 'literal', value: ', '     },
-  { type: 'hour',      value: '3'      },
-  { type: 'literal', value: ':'      },
-  { type: 'minute',    value: '00'     },
-  { type: 'literal', value: ':'      },
-  { type: 'second',    value: '42'     },
-  { type: 'literal', value: ' '      },
-  { type: 'dayPeriod', value: 'AM'     }
-]
+  { type: "weekday", value: "Monday" },
+  { type: "separator", value: ", " },
+  { type: "month", value: "12" },
+  { type: "literal", value: "/" },
+  { type: "day", value: "17" },
+  { type: "literal", value: "/" },
+  { type: "year", value: "2012" },
+  { type: "literal", value: ", " },
+  { type: "hour", value: "3" },
+  { type: "literal", value: ":" },
+  { type: "minute", value: "00" },
+  { type: "literal", value: ":" },
+  { type: "second", value: "42" },
+  { type: "literal", value: " " },
+  { type: "dayPeriod", value: "AM" },
+];
 ```
 
 L'information étant décomposée, on peut alors la mettre en forme et la recomposée de façon adaptée :
 
 ```js
-var dateString = formatter.formatToParts(date).map(({type, value}) => {
-  switch (type) {
-    case 'dayPeriod': return `<strong>${value}</strong>`;
-    default : return value;
-  }
-}).reduce((string, part) => string + part);
+var dateString = formatter
+  .formatToParts(date)
+  .map(({ type, value }) => {
+    switch (type) {
+      case "dayPeriod":
+        return `<strong>${value}</strong>`;
+      default:
+        return value;
+    }
+  })
+  .reduce((string, part) => string + part);
 
 console.log(formatter.format(date));
 // "Monday, 12/17/2012, 3:00:42 AM"

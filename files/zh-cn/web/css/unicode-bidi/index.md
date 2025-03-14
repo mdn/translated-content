@@ -9,7 +9,8 @@ slug: Web/CSS/unicode-bidi
 
 `unicode-bidi` 与 {{cssxref("direction")}} 是仅有的两个不受 {{cssxref("all")}} 简写影响的属性。
 
-> **警告：** 此属性是文档类型定义（Document Type Definition, DTD）的设计者专用的。Web 设计者与其他类似的人员不应覆盖此属性。
+> [!WARNING]
+> 此属性是文档类型定义（Document Type Definition, DTD）的设计者专用的。Web 设计者与其他类似的人员不应覆盖此属性。
 
 ```css
 /* 关键字值 */
@@ -45,11 +46,11 @@ unicode-bidi: unset;
   - : 这个关键字在计算元素方向的时候，不考虑父元素的双向状态，也不考虑 {{cssxref("direction")}} 属性的值。它是使用 Unicode 双向算法的 P2 和 P3 规则计算的。
     这个值允许按照 Unicode 双向算法显示已经格式化的数据。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### CSS
 
@@ -63,17 +64,13 @@ unicode-bidi: unset;
 ### HTML
 
 ```html
-<div class="bible-quote">
-  A line of text
-</div>
-<div>
-  Another line of text
-</div>
+<div class="bible-quote">A line of text</div>
+<div>Another line of text</div>
 ```
 
 ### 结果
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 

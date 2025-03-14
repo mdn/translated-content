@@ -18,10 +18,8 @@ slug: Web/API/StorageManager
 
 ## Especificações
 
-| Especificação                                                                | Status                       | Comentário         |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('Storage','#storagemanager','StorageManger')}} | {{Spec2('Storage')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.StorageManager")}}
+{{Compat}}

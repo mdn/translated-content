@@ -1,25 +1,26 @@
 ---
-title: 'XMLHttpRequest: readystatechange イベント'
+title: "XMLHttpRequest: readystatechange イベント"
+short-title: readystatechange
 slug: Web/API/XMLHttpRequest/readystatechange_event
-original_slug: Web/API/XMLHttpRequest/onreadystatechange
 l10n:
-  sourceCommit: 073f70e052ff92ab715df3c20678c11c9b51747f
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef}}
+{{APIRef("XMLHttpRequest API")}}
 
 `readystatechange` イベントは、 {{domxref("XMLHttpRequest")}} の {{domxref("XMLHttpRequest.readyState", "readyState")}} プロパティが変化するたびに発生します。
 
-> **警告:** これは同期リクエストで使用してはいけません。また、ネイティブコードから使用してはいけません。
+> [!WARNING]
+> これは同期リクエストで使用してはいけません。また、ネイティブコードから使用してはいけません。
 
 ## 構文
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('readystatechange', (event) => { })
+addEventListener("readystatechange", (event) => {});
 
-onreadystatechange = (event) => { }
+onreadystatechange = (event) => {};
 ```
 
 ## イベント型

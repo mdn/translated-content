@@ -40,7 +40,7 @@ The `font-variant-position` property is specified as one of the keyword values l
 - `super`
   - : Activates superscript alternate glyphs. If, in a given run, one such glyph is not available for a character, all the characters in the run are rendered using synthesized glyphs.
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -74,9 +74,9 @@ p {
 }
 ```
 
-### Result
+### 结果
 
-{{ EmbedLiveSample('Examples') }}
+{{ EmbedLiveSample('示例') }}
 
 ## 规范
 

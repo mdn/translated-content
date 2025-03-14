@@ -1,13 +1,6 @@
 ---
 title: Element.clientWidth
 slug: Web/API/Element/clientWidth
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - Property
-  - Reference
-browser-compat: api.Element.clientWidth
 ---
 
 {{APIRef("DOM")}}
@@ -16,7 +9,8 @@ browser-compat: api.Element.clientWidth
 
 `clientWidth`를 루트 요소(`<html>` 요소 또는 [호환 모드](/ko/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) 상에서의 `<body>` 요소)에서 사용하면 스크롤바를 제외한 뷰포트의 너비를 반환합니다. [이 방식은 `clientWidth`의 특별한 사용법입니다.](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-clientwidth)
 
-> **참고:** 이 속성은 integer로 반올림됩니다. 소수점이 포함된 값이 필요하다면 {{ domxref("element.getBoundingClientRect()") }}를 사용하시기 바랍니다.
+> [!NOTE]
+> 이 속성은 integer로 반올림됩니다. 소수점이 포함된 값이 필요하다면 {{ domxref("element.getBoundingClientRect()") }}를 사용하시기 바랍니다.
 
 ## 값
 

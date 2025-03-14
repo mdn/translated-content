@@ -1,11 +1,13 @@
 ---
-title: 'CSP: manifest-src'
+title: "CSP: manifest-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/manifest-src
+l10n:
+  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
 {{HTTPSidebar}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}}`: manifest-src` ディレクティブは、どの<a href="/ja/docs/Web/Manifest">マニフェスト</a>がリソースに適用されるかを指定します。
+HTTP の {{HTTPHeader("Content-Security-Policy")}}`: manifest-src` ディレクティブは、どの[マニフェスト](/ja/docs/Web/Manifest)がリソースに適用されるかを指定します。
 
 <table class="properties">
   <tbody>
@@ -37,13 +39,13 @@ Content-Security-Policy: manifest-src <source> <source>;
 
 ### ソース
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#ソース)にあるいずれかの値を取ることができます。
+`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#関連ディレクティブ)）で使用できます。
+なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
 
 ## 例
 
-## 違反例
+### 違反する場合
 
 この CSP ヘッダーがある場合、
 
@@ -54,7 +56,7 @@ Content-Security-Policy: manifest-src https://example.com/
 以下の {{HTMLElement("link")}} の各要素はブロックされ、読み込まれません。
 
 ```html
-<link rel="manifest" href="https://not-example.com/manifest">
+<link rel="manifest" href="https://not-example.com/manifest" />
 ```
 
 ## 仕様書

@@ -1,13 +1,9 @@
 ---
 title: param
 slug: Web/XSLT/Element/param
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/param
-original_slug: Web/XSLT/param
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:param>` définit un paramètre par son nom et, éventuellement, lui attribue une valeur par défaut. Lorsqu'il est utilisé comme élément de premier niveau, le paramètre est global. Utilisé dans un élément `<xsl:template>`, le paramètre est local à ce modèle. Dans ce dernier cas, il doit être le premier élément enfant du modèle.
 
@@ -35,7 +31,7 @@ Instruction, peut apparaître comme élément de premier niveau ou dans un modè
 
 ### Définition
 
-[XSLT 1.0, section 11](http://www.w3.org/TR/xslt#variables).
+[XSLT 1.0, section 11](https://www.w3.org/TR/xslt#variables).
 
 ### Support Gecko
 

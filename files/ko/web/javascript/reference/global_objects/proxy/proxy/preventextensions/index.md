@@ -1,27 +1,43 @@
 ---
 title: handler.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-browser-compat: javascript.builtins.Proxy.handler.preventExtensions
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
 ---
 
 {{JSRef}}
 
 **`handler.preventExtensions()`** 메서드는 {{jsxref("Object.preventExtensions()")}}에 대한 트랩입니다.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-preventextensions.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.preventExtensions()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  canEvolve: true,
+};
+
+const handler1 = {
+  preventExtensions(target) {
+    target.canEvolve = false;
+    Object.preventExtensions(target);
+    return true;
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+console.log(monster1.canEvolve);
+// Expected output: true
+
+Object.preventExtensions(proxy1);
+
+console.log(monster1.canEvolve);
+// Expected output: false
+```
 
 ## 구문
 
 ```js
 new Proxy(target, {
-  preventExtensions(target) {
-  }
+  preventExtensions(target) {},
 });
 ```
 
@@ -62,26 +78,32 @@ new Proxy(target, {
 다음 코드는 {{jsxref("Object.preventExtensions()")}}를 트랩합니다.
 
 ```js
-const p = new Proxy({}, {
-  preventExtensions(target) {
-    console.log('called');
-    Object.preventExtensions(target);
-    return true;
-  }
-});
+const p = new Proxy(
+  {},
+  {
+    preventExtensions(target) {
+      console.log("called");
+      Object.preventExtensions(target);
+      return true;
+    },
+  },
+);
 
 console.log(Object.preventExtensions(p)); // "called"
-                                          // false
+// false
 ```
 
 다음 코드는 불변 조건을 위반합니다.
 
 ```js example-bad
-const p = new Proxy({}, {
-  preventExtensions(target) {
-    return true;
-  }
-});
+const p = new Proxy(
+  {},
+  {
+    preventExtensions(target) {
+      return true;
+    },
+  },
+);
 
 Object.preventExtensions(p); // TypeError is thrown
 ```

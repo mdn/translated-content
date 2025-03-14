@@ -5,9 +5,10 @@ slug: Web/API/FileList
 
 {{APIRef("File API")}}
 
-Um objeto desse tipo é retornado pela propriedade `files` do elemento HTML {{HTMLElement("input")}}; isso permite acessar a lista de arquivos selecionados com o elemento `<input type="file">`. Também é usado para uma lista de arquivos soltos no conteúdo web usando a API drag and drop; consulte o objeto [`DataTransfer`](/pt-BR/docs/DragDrop/DataTransfer) para detalhes de seu uso.
+Um objeto desse tipo é retornado pela propriedade `files` do elemento HTML {{HTMLElement("input")}}; isso permite acessar a lista de arquivos selecionados com o elemento `<input type="file">`. Também é usado para uma lista de arquivos soltos no conteúdo web usando a API drag and drop; consulte o objeto [`DataTransfer`](/pt-BR/docs/Web/API/DataTransfer) para detalhes de seu uso.
 
-> **Nota:** Antes do {{Gecko("1.9.2")}}, o elemento input suportava apenas um arquivo selecionado por vez, ou seja, o array FileList conteria apenas um arquivo. A partir do {{Gecko("1.9.2")}}, se o atributo multiple do elemento for definido, FileList pode conter múltiplos arquivos.
+> [!NOTE]
+> Antes do Gecko 1.9.2, o elemento input suportava apenas um arquivo selecionado por vez, ou seja, o array FileList conteria apenas um arquivo. A partir do Gecko 1.9.2, se o atributo multiple do elemento for definido, FileList pode conter múltiplos arquivos.
 
 ## Utilizando a lista de arquivos
 
@@ -17,10 +18,10 @@ Todo elemento `<input>` possui um array `files` que permite o acesso aos seus ar
 <input id="fileItem" type="file">
 ```
 
-O código a seguir acessa o primeiro elemento da lista de arquivos como um objeto [`File`](/pt-BR/docs/DOM/File):
+O código a seguir acessa o primeiro elemento da lista de arquivos como um objeto [`File`](/pt-BR/docs/Web/API/File):
 
 ```js
-var file = document.getElementById('fileItem').files[0];
+var file = document.getElementById("fileItem").files[0];
 ```
 
 ## Visão geral dos métodos
@@ -38,7 +39,7 @@ var file = document.getElementById('fileItem').files[0];
 
 ### item()
 
-Retorna um objeto [`File`](/pt-BR/docs/DOM/File) representando o arquivo no índice especificado na lista.
+Retorna um objeto [`File`](/pt-BR/docs/Web/API/File) representando o arquivo no índice especificado na lista.
 
 ```
  File item(
@@ -53,7 +54,7 @@ Retorna um objeto [`File`](/pt-BR/docs/DOM/File) representando o arquivo no índ
 
 ###### Valor de retorno
 
-O objeto [`File`](/pt-BR/docs/DOM/File) representando o arquivo requisitado.
+O objeto [`File`](/pt-BR/docs/Web/API/File) representando o arquivo requisitado.
 
 ## Exemplo
 
@@ -69,50 +70,49 @@ var file;
 
 // percorre os arquivos
 for (var i = 0; i < files.length; i++) {
+  // obtém o item
+  file = files.item(i);
+  // ou
+  file = files[i];
 
-    // obtém o item
-    file = files.item(i);
-    // ou
-    file = files[i];
-
-    alert(file.name);
+  alert(file.name);
 }
 ```
 
 A seguir, um exemplo completo.
 
 ```html
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
+  <head> </head>
 
-<head>
-</head>
+  <body>
+    <!--multiple é definido para que múltiplos arquivos possam ser selecionados-->
 
-<body>
-<!--multiple é definido para que múltiplos arquivos possam ser selecionados-->
+    <input id="myfiles" multiple type="file" />
+  </body>
 
-<input id="myfiles" multiple type="file">
+  <script>
+    var puxarArquivos = function () {
+      var fileInput = document.querySelector("#myfiles");
+      var files = fileInput.files;
 
-</body>
-
-<script>
-var puxarArquivos = function() {
-    var fileInput = document.querySelector("#myfiles");
-    var files = fileInput.files;
-
-    for (var i = 0; i < files.length; i++) {
+      for (var i = 0; i < files.length; i++) {
         var file = files[i];
         alert(file.name);
-    }
-}
+      }
+    };
 
-// seta o 'onchange' do elemento input para chamar a função puxarArquivos
-document.querySelector("#myfiles").onchange = puxarArquivos;
-</script>
-
+    // seta o 'onchange' do elemento input para chamar a função puxarArquivos
+    document.querySelector("#myfiles").onchange = puxarArquivos;
+  </script>
 </html>
 ```
 
-## Especificação
+## Especificações
 
-- [File upload state](http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected) (inglês)
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

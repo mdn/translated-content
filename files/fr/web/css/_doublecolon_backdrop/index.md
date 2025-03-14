@@ -1,16 +1,11 @@
 ---
-title: '::backdrop'
+title: ::backdrop
 slug: Web/CSS/::backdrop
-tags:
-  - CSS
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::backdrop
 ---
 
 {{CSSRef}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-%C3%A9l%C3%A9ments) **`::backdrop`** est une boîte de la taille de la zone d'affichage (_viewport_) qui est affichée immédiatement sous un élément lorsque ce dernier est affiché en plein écran. Cela correspond aux éléments passés en plein écran via l'[API Fullscreen](/fr/docs/Web/API/Fullscreen_API) et aux éléments {{HTMLElement("dialog")}}.
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::backdrop`** est une boîte de la taille de la zone d'affichage (_viewport_) qui est affichée immédiatement sous un élément lorsque ce dernier est affiché en plein écran. Cela correspond aux éléments passés en plein écran via l'[API Fullscreen](/fr/docs/Web/API/Fullscreen_API) et aux éléments {{HTMLElement("dialog")}}.
 
 Lorsque plusieurs éléments sont en plein écran, ce pseudo-élément est dessiné derrière l'élément qui est le plus en avant et par dessus les autres éléments.
 
@@ -22,7 +17,8 @@ dialog::backdrop {
 }
 ```
 
-> **Note :** L'élément `::backdrop` peut être utilisé comme un arrière-plan/masque pour l'élément afin de cacher le document en-dessous lorsque l'élément est affiché en plein écran selon la spécification.
+> [!NOTE]
+> L'élément `::backdrop` peut être utilisé comme un arrière-plan/masque pour l'élément afin de cacher le document en-dessous lorsque l'élément est affiché en plein écran selon la spécification.
 
 Ce pseudo-élément n'hérite d'aucun autre élément et aucun autre élément n'hérite de ce pseudo-élément. Aucune restriction ne s'applique pour les propriétés qui peuvent être appliquées à ce pseudo-élément.
 

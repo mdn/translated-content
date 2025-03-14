@@ -1,10 +1,11 @@
 ---
 title: Шаблоны грид-областей
-slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
-translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
-original_slug: Web/CSS/CSS_Grid_Layout/Грид-области
+slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 ---
-В [предыдущем обзоре](/ru/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid) мы рассмотрели грид-линии и то, как с их помощью размещать элементы в гридах. Когда вы работаете с CSS Grid Layout, у вас всегда есть грид-линии, поэтому они - быстрый, прямой и надёжный способ расположить элементы. Как бы то ни было, существует альтернативный метод, и этот метод можно использовать как в одиночку, так и в сочетании с расположением элементов по грид-линиям. В этом методе элементы располагаются с помощью именованных, заранее определённых грид-областей. Давайте рассмотрим, как он работает, и вы скоро поймёте, почему его называют методом ascii-искусства в концепции макетов на гридах!
+
+{{CSSRef}}
+
+В [предыдущем обзоре](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement) мы рассмотрели грид-линии и то, как с их помощью размещать элементы в гридах. Когда вы работаете с CSS Grid Layout, у вас всегда есть грид-линии, поэтому они - быстрый, прямой и надёжный способ расположить элементы. Как бы то ни было, существует альтернативный метод, и этот метод можно использовать как в одиночку, так и в сочетании с расположением элементов по грид-линиям. В этом методе элементы располагаются с помощью именованных, заранее определённых грид-областей. Давайте рассмотрим, как он работает, и вы скоро поймёте, почему его называют методом ascii-искусства в концепции макетов на гридах!
 
 ## Имя для грид-области
 
@@ -12,13 +13,13 @@ original_slug: Web/CSS/CSS_Grid_Layout/Грид-области
 
 ```css
 .box1 {
-   grid-area: 1 / 1 / 4 / 2;
+  grid-area: 1 / 1 / 4 / 2;
 }
 ```
 
 Что мы делаем, когда задаём все четыре значения? Мы определяем область, ограниченную данными грид-линиями.
 
-![The Grid Area defined by lines](https://mdn.mozillademos.org/files/14667/4_Area.png)
+![Грид область, определенная грид-линиями](4_area.png)
 
 Другой способ определить грид-область, - задать ей имя и определить местоположение как значения свойства {{cssxref("grid-template-areas")}}. Вы можете выбрать для грид-области любое имя. Например, если нам нужно создать макет согласно картинке ниже, мы можем назвать четыре основных области следующим образом:
 
@@ -27,22 +28,22 @@ original_slug: Web/CSS/CSS_Grid_Layout/Грид-области
 - sidebar
 - основное содержимое content
 
-![An image showing a simple two column layout with header and footer](https://mdn.mozillademos.org/files/14669/4_Layout.png)
+![На изображении показан простой двухколоночный макет с заголовком и подвалом](4_layout.png)
 
 С помощью свойства {{cssxref("grid-area")}} мы можем назначить каждой из этих областей своё собственное имя. Именование областей ещё не создаёт никакого макета, однако теперь у нас есть именованные области, которые мы можем в нем использовать.
 
 ```css
 .header {
-    grid-area: hd;
+  grid-area: hd;
 }
 .footer {
-    grid-area: ft;
+  grid-area: ft;
 }
 .content {
-    grid-area: main;
+  grid-area: main;
 }
 .sidebar {
-    grid-area: sd;
+  grid-area: sd;
 }
 ```
 
@@ -50,42 +51,44 @@ original_slug: Web/CSS/CSS_Grid_Layout/Грид-области
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    grid-template-areas:
-      "hd hd hd hd   hd   hd   hd   hd   hd"
-      "sd sd sd main main main main main main"
-      "ft ft ft ft   ft   ft   ft   ft   ft";
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    "hd hd hd hd   hd   hd   hd   hd   hd"
+    "sd sd sd main main main main main main"
+    "ft ft ft ft   ft   ft   ft   ft   ft";
 }
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 940px;
-    margin: 0 auto;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 940px;
+  margin: 0 auto;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-    <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Content</div>
+  <div class="footer">Footer</div>
 </div>
 ```
 
@@ -99,57 +102,59 @@ original_slug: Web/CSS/CSS_Grid_Layout/Грид-области
 
 ```css
 .header {
-    grid-area: hd;
+  grid-area: hd;
 }
 .footer {
-    grid-area: ft;
+  grid-area: ft;
 }
 .content {
-    grid-area: main;
+  grid-area: main;
 }
 .sidebar {
-    grid-area: sd;
+  grid-area: sd;
 }
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 940px;
-    margin: 0 auto;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 940px;
+  margin: 0 auto;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    grid-template-areas:
-      "hd hd hd hd   hd   hd   hd   hd   hd"
-      "sd sd sd main main main main main main"
-      ".  .  .  ft   ft   ft   ft   ft   ft";
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    "hd hd hd hd   hd   hd   hd   hd   hd"
+    "sd sd sd main main main main main main"
+    ".  .  .  ft   ft   ft   ft   ft   ft";
 }
 ```
 
 ```html
 <div class="wrapper">
-    <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Content</div>
+  <div class="footer">Footer</div>
 </div>
 ```
 
@@ -165,57 +170,59 @@ original_slug: Web/CSS/CSS_Grid_Layout/Грид-области
 
 ```css
 .header {
-    grid-area: hd;
+  grid-area: hd;
 }
 .footer {
-    grid-area: ft;
+  grid-area: ft;
 }
 .content {
-    grid-area: main;
+  grid-area: main;
 }
 .sidebar {
-    grid-area: sd;
+  grid-area: sd;
 }
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 940px;
-    margin: 0 auto;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 940px;
+  margin: 0 auto;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    grid-template-areas:
-      "hd hd hd hd   hd   hd   hd   hd   hd"
-      "sd sd sd main main main main main main"
-      "sd sd sd  ft  ft   ft   ft   ft   ft";
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    "hd hd hd hd   hd   hd   hd   hd   hd"
+    "sd sd sd main main main main main main"
+    "sd sd sd  ft  ft   ft   ft   ft   ft";
 }
 ```
 
 ```html hidden
 <div class="wrapper">
-    <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Content</div>
+  <div class="footer">Footer</div>
 </div>
 ```
 
@@ -232,48 +239,50 @@ original_slug: Web/CSS/CSS_Grid_Layout/Грид-области
 Мы можем теперь изменить наш макет для узкой ширины экрана на более простой, где все грид-области будут друг над другом в одном столбце.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 940px;
-    margin: 0 auto;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 940px;
+  margin: 0 auto;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .header {
-    grid-area: hd;
+  grid-area: hd;
 }
 .footer {
-    grid-area: ft;
+  grid-area: ft;
 }
 .content {
-    grid-area: main;
+  grid-area: main;
 }
 .sidebar {
-    grid-area: sd;
+  grid-area: sd;
 }
 
 .wrapper {
-    display: grid;
-    grid-auto-rows: minmax(100px, auto);
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "hd"
-      "main"
-      "sd"
-      "ft";
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "hd"
+    "main"
+    "sd"
+    "ft";
 }
 ```
 
@@ -281,29 +290,29 @@ original_slug: Web/CSS/CSS_Grid_Layout/Грид-области
 
 ```css
 @media (min-width: 500px) {
-    .wrapper {
-        grid-template-columns: repeat(9, 1fr);
-        grid-template-areas:
-          "hd hd hd hd   hd   hd   hd   hd   hd"
-          "sd sd sd main main main main main main"
-          "sd sd sd  ft  ft   ft   ft   ft   ft";
-    }
+  .wrapper {
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas:
+      "hd hd hd hd   hd   hd   hd   hd   hd"
+      "sd sd sd main main main main main main"
+      "sd sd sd  ft  ft   ft   ft   ft   ft";
+  }
 }
 @media (min-width: 700px) {
-    .wrapper {
-        grid-template-areas:
-          "hd hd hd   hd   hd   hd   hd   hd hd"
-          "sd sd main main main main main ft ft";
-    }
+  .wrapper {
+    grid-template-areas:
+      "hd hd hd   hd   hd   hd   hd   hd hd"
+      "sd sd main main main main main ft ft";
+  }
 }
 ```
 
 ```html hidden
 <div class="wrapper">
-    <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Content</div>
+  <div class="footer">Footer</div>
 </div>
 ```
 
@@ -315,46 +324,48 @@ original_slug: Web/CSS/CSS_Grid_Layout/Грид-области
 
 В качестве очень простого примера мы можем создать «медиа-объект». Это компонент с пространством для изображения или другого носителя с одной стороны, а контент - с другой. Изображение может отображаться справа или слева от окна.
 
-![Images showing an example media object design](https://mdn.mozillademos.org/files/14671/4_Media_objects.png)
+![На изображении показан простой пример «медиа-объекта»](4_media_objects.png)
 
 Наша сетка представляет собой двухколоночную трековую сетку, со столбцом для изображения размером `1fr` и текстом `3fr`. Если вы хотите область с фиксированной шириной изображения, тогда вы можете установить столбец изображения как ширину пикселя и назначить текстовую область `1fr`. Одна колонка трека `1fr` затем займёт оставшуюся часть пространства.
 
 Мы предоставляем области изображения имя области сетки `img` и содержимое текстовой области, затем мы можем выложить их, используя свойство `grid-template-areas`.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .media {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 400px;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 400px;
 }
 .media {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-areas: "img content";
-    margin-bottom: 1em;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "img content";
+  margin-bottom: 1em;
 }
 
 .media .image {
-    grid-area: img;
-    background-color: #ffd8a8;
+  grid-area: img;
+  background-color: #ffd8a8;
 }
 
 .media .text {
-    grid-area: content;
-    padding: 10px;
-
+  grid-area: content;
+  padding: 10px;
 }
 ```
 
 ```html
 <div class="media">
-    <div class="image"></div>
-    <div class="text">This is a media object example.
-      We can use grid-template-areas to switch around the image and text part of the media object.
-    </div>
+  <div class="image"></div>
+  <div class="text">
+    This is a media object example. We can use grid-template-areas to switch
+    around the image and text part of the media object.
+  </div>
 </div>
 ```
 
@@ -365,44 +376,46 @@ original_slug: Web/CSS/CSS_Grid_Layout/Грид-области
 Возможно, нам захочется отобразить нашу коробку с изображением наоборот. Для этого мы переопределим сетку, чтобы поместить последний трек `1fr` и просто переверните значения {{cssxref ("grid-template-areas")}}.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .media {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 400px;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 400px;
 }
 .media {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-areas: "img content";
-    margin-bottom: 1em;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "img content";
+  margin-bottom: 1em;
 }
 
 .media.flipped {
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas: "content img";
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "content img";
 }
 
 .media .image {
-    grid-area: img;
-    background-color: #ffd8a8;
+  grid-area: img;
+  background-color: #ffd8a8;
 }
 
 .media .text {
-    grid-area: content;
-    padding: 10px;
-
+  grid-area: content;
+  padding: 10px;
 }
 ```
 
 ```html
 <div class="media flipped">
-    <div class="image"></div>
-    <div class="text">This is a media object example.
-      We can use grid-template-areas to switch around the image and text part of the media object.
-    </div>
+  <div class="image"></div>
+  <div class="text">
+    This is a media object example. We can use grid-template-areas to switch
+    around the image and text part of the media object.
+  </div>
 </div>
 ```
 
@@ -432,12 +445,12 @@ original_slug: Web/CSS/CSS_Grid_Layout/Грид-области
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template:
-      "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
-      "sd sd sd main main main main main main" minmax(100px, auto)
-      "ft ft ft ft   ft   ft   ft   ft   ft" minmax(100px, auto)
-             / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+  display: grid;
+  grid-template:
+    "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
+    "sd sd sd main main main main main main" minmax(100px, auto)
+    "ft ft ft ft   ft   ft   ft   ft   ft" minmax(100px, auto)
+    / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 ```
 
@@ -462,11 +475,12 @@ original_slug: Web/CSS/CSS_Grid_Layout/Грид-области
 
 ```css
 .wrapper {
-    display: grid;
-    grid: "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
+  display: grid;
+  grid:
+    "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
     "sd sd sd main main main main main main" minmax(100px, auto)
     "ft ft ft ft   ft   ft   ft   ft   ft" minmax(100px, auto)
-    / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 ```
 

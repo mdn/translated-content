@@ -1,21 +1,26 @@
 ---
 title: Date.prototype.setMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setMinutes
 ---
 
 {{JSRef}}
 
 La méthode **`setMinutes()`** définit les minutes pour la date donnée, selon l'heure locale.
 
-{{EmbedInteractiveExample("pages/js/date-setminutes.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setMinutes()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+event.setMinutes(45);
+
+console.log(event.getMinutes());
+// Expected output: 45
+
+console.log(event);
+// Expected output: "Tue Aug 19 1975 23:45:30 GMT+0200 (CEST)"
+// Note: your timezone may vary
+```
 
 ## Syntaxe
 
@@ -26,7 +31,7 @@ dateObj.setMinutes(valeurMinutes[, valeurSecondes[, valeurMs]])
 ### Versions antérieures à JavaScript 1.3
 
 ```js
-dateObj.setMinutes(valeurMinutes)
+dateObj.setMinutes(valeurMinutes);
 ```
 
 ### Paramètres

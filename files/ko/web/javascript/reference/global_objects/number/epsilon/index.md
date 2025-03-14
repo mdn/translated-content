@@ -1,12 +1,6 @@
 ---
 title: Number.EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Number
-  - 속성
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 ---
 
 {{JSRef}}
@@ -26,8 +20,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 ### 동일성 확인하기
 
 ```js
-const x = 0.2, y = 0.3, z = 0.1;
-let equal = (Math.abs(x - y + z) < Number.EPSILON);
+const x = 0.2,
+  y = 0.3,
+  z = 0.1;
+let equal = Math.abs(x - y + z) < Number.EPSILON;
 ```
 
 ## 명세

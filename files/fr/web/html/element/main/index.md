@@ -1,25 +1,43 @@
 ---
 title: <main>
 slug: Web/HTML/Element/main
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/main
 ---
 
 {{HTMLSidebar}}
 
-L’élément HTML **`<main>`** représente le contenu majoritaire du {{HTMLElement("body")}} du document. Le contenu principal de la zone est constitué de contenu directement en relation, ou qui étend le sujet principal du document ou de la fonctionnalité principale d'une application.
+L'élément HTML **`<main>`** représente le contenu majoritaire du {{HTMLElement("body")}} du document. Le contenu principal de la zone est constitué de contenu directement en relation, ou qui étend le sujet principal du document ou de la fonctionnalité principale d'une application.
 
-Un document ne peut pas avoir plus d'un seul élément `<main>` sans attribut {{htmlattrxref("hidden")}}.
+Un document ne peut pas avoir plus d'un seul élément `<main>` sans attribut [`hidden`](/fr/docs/Web/HTML/Global_attributes#hidden).
 
-{{EmbedInteractiveExample("pages/tabbed/main.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;main&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<header>Gecko facts</header>
+
+<main>
+  <p>
+    Geckos are a group of usually small, usually nocturnal lizards. They are
+    found on every continent except Antarctica.
+  </p>
+
+  <p>
+    Many species of gecko have adhesive toe pads which enable them to climb
+    walls and even windows.
+  </p>
+</main>
+```
+
+```css interactive-example
+header {
+  font:
+    bold 7vw Arial,
+    sans-serif;
+}
+```
 
 ## Attributs
 
-Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes
 
@@ -39,18 +57,22 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 
   <article>
     <h2>Pomme rouge</h2>
-    <p>Ce sont des pommes rouges vives très communes dans les supermarchés.<p>
-    <p>... </p>
-    <p>... </p>
+    <p>Ce sont des pommes rouges vives très communes dans les supermarchés.</p>
+    <p></p>
+    <p>...</p>
+    <p>...</p>
   </article>
 
   <article>
     <h2>La Granny Smith</h2>
-    <p>Ces pommes juteuses, vertes, font une très belle garniture pour les tartes aux pommes.<p>
-    <p>... </p>
-    <p>... </p>
+    <p>
+      Ces pommes juteuses, vertes, font une très belle garniture pour les tartes
+      aux pommes.
+    </p>
+    <p></p>
+    <p>...</p>
+    <p>...</p>
   </article>
-
 </main>
 
 <!-- Autre contenu -->
@@ -64,13 +86,13 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 
 ### Balisage du document
 
-L'élément `<main>` a le rôle d'une [balise `main`](/fr/docs/Web/Accessibility/ARIA/Roles/Main_role). Dans le contexte de l'accessibilité, les [balises](/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA) peuvent être utilisées par les outils d'assistance afin d'identifier et de naviguer rapidement entre les grandes sections d'un document. On privilégiera l'élément `<main>` à l'ajout du `role="main"`, à moins qu'il faille [prendre en charge d'anciens navigateurs](/fr/docs/Web/HTML/Element/main#Compatibilité_des_navigateurs).
+L'élément `<main>` a le rôle d'une [balise `main`](/fr/docs/Web/Accessibility/ARIA/Roles/Main_role). Dans le contexte de l'accessibilité, les [balises](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques) peuvent être utilisées par les outils d'assistance afin d'identifier et de naviguer rapidement entre les grandes sections d'un document. On privilégiera l'élément `<main>` à l'ajout du `role="main"`, à moins qu'il faille [prendre en charge d'anciens navigateurs](#Compatibilité_des_navigateurs).
 
 ### Navigation rapide
 
 La navigation rapide (aussi appelée _skip navigation_ ou _skipnav_ en anglais) est une technique permettant aux outils d'assistance de passer certaines sections de contenu répétés (menu de navigation, bannières, etc.). Cela permet à l'utilisateur d'accéder plus rapidement au contenu principal de la page.
 
-Ajouter un attribut {{htmlattrxref("id")}} à l'élément `<main>` lui permet d'être une cible pour la navigation rapide.
+Ajouter un attribut [`id`](/fr/docs/Web/HTML/Global_attributes#id) à l'élément `<main>` lui permet d'être une cible pour la navigation rapide.
 
 ```html
 <body>
@@ -88,7 +110,7 @@ Ajouter un attribut {{htmlattrxref("id")}} à l'élément `<main>` lui permet d'
 
 ### Mode lecture
 
-Les fonctionnalités « mode lecture » d'un navigateur vérifient la présence d'un élément `<main>` ainsi que la présence de [titres](/fr/docs/Web/HTML/Element/Heading_Elements) et de [sections](/fr/docs/Web/HTML/Element#Sectionnement_du_contenu) lors de la convertion du document pour le mode lecture.
+Les fonctionnalités « mode lecture » d'un navigateur vérifient la présence d'un élément `<main>` ainsi que la présence de [titres](/fr/docs/Web/HTML/Element/Heading_Elements) et de [sections](/fr/docs/Web/HTML/Element#sectionnement_du_contenu) lors de la convertion du document pour le mode lecture.
 
 - [Construire des sites web pour le mode lecture de Safari et pour les autres applications de lecture (en anglais)](https://medium.com/@mandy.michael/building-websites-for-safari-reader-mode-and-other-reading-apps-1562913c86c9)
 
@@ -148,7 +170,7 @@ Les fonctionnalités « mode lecture » d'un navigateur vérifient la présence 
         Le rôle <code>main</code> est appliqué à <code>&#x3C;main></code> par
         défaut, et le rôle <code
           ><a
-            href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role"
+            href="https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role"
             >presentation</a
           ></code
         > est également autorisé.

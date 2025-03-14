@@ -1,12 +1,9 @@
 ---
 title: Propriété (CSS)
-slug: Glossary/property/CSS
-tags:
-  - Encodage
-  - Glossaire
-translation_of: Glossary/property/CSS
-original_slug: Glossaire/Propriete_CSS
+slug: Glossary/Property/CSS
 ---
+
+{{GlossarySidebar}}
 
 Une **propriété CSS** est une caractéristique (telle que `color`) dont la valeur associée définit un aspect de la manière dont le navigateur doit afficher l'élément.
 
@@ -30,9 +27,9 @@ div {
 
 ### Culture générale
 
-- [Apprendre CSS](/fr/Apprendre/CSS)
+- [Apprendre CSS](/fr/docs/Learn/CSS)
 
 ### Références techniques
 
 - [Référence CSS](/fr/docs/Web/CSS/Reference) sur MDN
-- [The CSS Working Group current work](http://www.w3.org/Style/CSS/current-work) (en)
+- [The CSS Working Group current work](https://www.w3.org/Style/CSS/current-work) (en)

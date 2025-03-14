@@ -1,13 +1,52 @@
 ---
 title: font-variant-ligatures
 slug: Web/CSS/font-variant-ligatures
+l10n:
+  sourceCommit: 8d8f3f44b498aef7b8cf2729d5656f96d2ff6ae5
 ---
 
 {{CSSRef}}
 
-**`font-variant-ligatures`** は CSS のプロパティで、適用される用途の文字コンテンツで使われる{{Glossary("ligature", "合字")}}および{{Glossary("contextual forms", "文脈に合わせた字形")}}を制御します。これにより、結果のテキストでより調和した形を利用することができます。
+**`font-variant-ligatures`** は [CSS](/ja/docs/Web/CSS) のプロパティで、適用される用途の文字コンテンツで使われる{{Glossary("ligature", "合字")}}および{{Glossary("contextual forms", "文脈に合わせた字形")}}を制御します。これにより、結果のテキストでより調和した形を利用することができます。
 
-{{EmbedInteractiveExample("pages/css/font-variant-ligatures.html")}}
+{{InteractiveExample("CSS Demo: font-variant-ligatures")}}
+
+```css interactive-example-choice
+font-variant-ligatures: normal;
+```
+
+```css interactive-example-choice
+font-variant-ligatures: no-common-ligatures;
+```
+
+```css interactive-example-choice
+font-variant-ligatures: common-ligatures;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>Difficult waffles</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+section {
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+```
 
 ## 構文
 
@@ -15,14 +54,21 @@ slug: Web/CSS/font-variant-ligatures
 /* キーワード値 */
 font-variant-ligatures: normal;
 font-variant-ligatures: none;
-font-variant-ligatures: common-ligatures;           /* <common-lig-values> */
-font-variant-ligatures: no-common-ligatures;        /* <common-lig-values> */
-font-variant-ligatures: discretionary-ligatures;    /* <discretionary-lig-values> */
+font-variant-ligatures: common-ligatures; /* <common-lig-values> */
+font-variant-ligatures: no-common-ligatures; /* <common-lig-values> */
+font-variant-ligatures: discretionary-ligatures; /* <discretionary-lig-values> */
 font-variant-ligatures: no-discretionary-ligatures; /* <discretionary-lig-values> */
-font-variant-ligatures: historical-ligatures;       /* <historical-lig-values> */
-font-variant-ligatures: no-historical-ligatures;    /* <historical-lig-values> */
-font-variant-ligatures: contextual;                 /* <contextual-alt-values> */
-font-variant-ligatures: no-contextual;              /* <contextual-alt-values> */
+font-variant-ligatures: historical-ligatures; /* <historical-lig-values> */
+font-variant-ligatures: no-historical-ligatures; /* <historical-lig-values> */
+font-variant-ligatures: contextual; /* <contextual-alt-values> */
+font-variant-ligatures: no-contextual; /* <contextual-alt-values> */
+
+/* 2 つのキーワード値 */
+font-variant-ligatures: no-contextual common-ligatures;
+
+/* 4 つのキーワード値 */
+font-variant-ligatures: common-ligatures no-discretionary-ligatures
+  historical-ligatures contextual;
 
 /* グローバル値 */
 font-variant-ligatures: inherit;
@@ -32,36 +78,36 @@ font-variant-ligatures: revert-layer;
 font-variant-ligatures: unset;
 ```
 
-`font-variant-ligatures` プロパティは、以下の一覧のキーワード値のうち一つで指定します。
+`font-variant-ligatures` プロパティは、 `normal`、`none` または以下の一覧のキーワード値のうちのいずれかで指定します。
 
 ### 値
 
 - `normal`
-  - : 正しいレンダリングに必要な通常の合字や文脈書式を有効にします。有効になる合字と書式は、フォント、言語、および書法の種類によって異なります。これが既定値です。
+  - : このキーワードは、正しいレンダリングに必要な通常の合字や文脈書式を有効にします。有効になる合字と書式は、フォント、言語、および書法の種類によって異なります。これが既定値です。
 - `none`
-  - : 一般的なものであっても、すべての合字や文脈書式を無効にします。
-- _\<common-lig-values>_
+  - : 。このキーワードは、一般的なものであっても、すべての合字や文脈書式を無効にします。
+- _`<common-lig-values>`_
 
   - : `fi`, `ffi`, `th` などの、よくある合字を制御します。 OpenType の値 `liga` および `clig` に対応します。2 つの値が指定できます。
 
     - `common-ligatures`: これらの合字を有効にします。なお、キーワード `normal` はこれらの合字を有効にします。
     - `no-common-ligatures`: これらの合字を無効にします。
 
-- _\<discretionary-lig-values>_
+- _`<discretionary-lig-values>`_
 
   - : フォントに依存し文字デザイナーが定義する特定の合字を制御します。対応する OpenType の値は `dlig` です。2 つの値が指定できます。
 
     - `discretionary-ligatures`: これらの合字を有効にします。
     - `no-discretionary-ligatures`: これらの合字を無効にします。なお、キーワード `normal` はふつう、これらの合字を無効にします。
 
-- _\<historical-lig-values>_
+- _`<historical-lig-values>`_
 
   - : 古い本で歴史的に使用された、ドイツ語の tz を ꜩ と表示するような合字です。対応する OpenType の値は `hlig` です。2 つの値が指定できます。
 
     - `historical-ligatures`: これらの合字を有効にします。
     - `no-historical-ligatures` これらの合字を無効にします。なお、キーワード `normal` はふつう、これらの合字を無効にします。
 
-- _\<contextual-alt-values>_
+- _`<contextual-alt-values>`_
 
   - : 字形を文脈に合わせるかどうかを制御します。つまり、字形を周囲の文字に合わせるかどうかです。対応する OpenType の値は `calt` です。2 つの値が指定できます。
 
@@ -83,49 +129,45 @@ font-variant-ligatures: unset;
 #### HTML
 
 ```html
-<link href="//fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Lora" rel="stylesheet" />
 <p class="normal">
-  normal<br>
+  normal<br />
   if fi ff tf ft jf fj
 </p>
 <p class="none">
-  none<br>
+  none<br />
   if fi ff tf ft jf fj
 </p>
 <p class="common-ligatures">
-  common-ligatures<br>
+  common-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-common-ligatures">
-  no-common-ligatures<br>
+  no-common-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="discretionary-ligatures">
-  discretionary-ligatures<br>
+  discretionary-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-discretionary-ligatures">
-  no-discretionary-ligatures<br>
+  no-discretionary-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="historical-ligatures">
-  historical-ligatures<br>
+  historical-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-historical-ligatures">
-  no-historical-ligatures<br>
+  no-historical-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="contextual">
-  contextual<br>
+  contextual<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-contextual">
-  no-contextual<br>
-  if fi ff tf ft jf fj
-</p>
-<p class="contextual">
-  contextual<br>
+  no-contextual<br />
   if fi ff tf ft jf fj
 </p>
 ```
@@ -175,10 +217,6 @@ p {
 .no-contextual {
   font-variant-ligatures: no-contextual;
 }
-
-.contextual {
-  font-variant-ligatures: contextual;
-}
 ```
 
 #### 結果
@@ -195,8 +233,10 @@ p {
 
 ## 関連情報
 
-- {{cssxref("font-variant-alternates")}}
-- {{cssxref("font-variant-caps")}}
-- {{cssxref("font-variant-east-asian")}}
-- {{cssxref("font-variant")}}
-- {{cssxref("font-variant-numeric")}}
+- [`font-variant`](/ja/docs/Web/CSS/font-variant)
+- [`font-variant-caps`](/ja/docs/Web/CSS/font-variant-caps)
+- [`font-variant-emoji`](/ja/docs/Web/CSS/font-variant-emoji)
+- [`font-variant-east-asian`](/ja/docs/Web/CSS/font-variant-east-asian)
+- [`font-variant-numeric`](/ja/docs/Web/CSS/font-variant-numeric)
+- [`font-variant-position`](/ja/docs/Web/CSS/font-variant-position)
+- [CSS フォントモジュール](/ja/docs/Web/CSS/CSS_fonts)

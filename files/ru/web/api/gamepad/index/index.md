@@ -1,8 +1,8 @@
 ---
 title: Gamepad.index
 slug: Web/API/Gamepad/index
-translation_of: Web/API/Gamepad/index
 ---
+
 {{APIRef("Gamepad API")}}
 
 Свойство **`Gamepad.index`** интерфейса {{domxref("Gamepad") }} возвращает целое автоинкрементируемое значение, уникальное для каждого устройства, подключённого к системе.
@@ -18,9 +18,10 @@ readonly    attribute long                index;
 ## Пример
 
 ```js
-window.addEventListener("gamepadconnected", function() {
+window.addEventListener("gamepadconnected", function () {
   var gp = navigator.getGamepads()[0];
-  gamepadInfo.innerHTML = "Gamepad connected at index " + gp.index + ": " + gp.id + ".";
+  gamepadInfo.innerHTML =
+    "Gamepad connected at index " + gp.index + ": " + gp.id + ".";
 });
 ```
 
@@ -38,4 +39,4 @@ window.addEventListener("gamepadconnected", function() {
 
 ## Смотрите также
 
-[Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)
+[Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

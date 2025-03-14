@@ -1,45 +1,47 @@
 ---
-title: MouseEvent.clientX
+title: MouseEvent：clientX 属性
 slug: Web/API/MouseEvent/clientX
+l10n:
+  sourceCommit: f452e53438ee1fc54baa7bf4eac147c354615702
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
-**`MouseEvent.clientX`** 是只读属性，它提供事件发生时的应用客户端区域的水平坐标 (与页面坐标不同)。例如，不论页面是否有水平滚动，当你点击客户端区域的左上角时，鼠标事件的 `clientX` 值都将为 0。最初这个属性被定义为长整型（long integer），如今 **CSSOM** 视图模块将其重新定义为双精度浮点数（double float）。你可以查阅浏览器兼容性部分的文档来进一步了解有关信息。
+{{domxref("MouseEvent")}} 接口的 **`clientX`** 只读属性提供了事件发生时应用程序{{glossary("viewport", "视口")}}内的水平坐标（而不是页面中的坐标）。
 
-## 语法
+例如，单击视口的左边缘时，无论页面是否水平滚动，都会触发一个 `clientX` 值为 `0` 的鼠标事件。
 
-```plain
+## 值
 
-var x = instanceOfMouseEvent.clientX
-```
-
-### `返回值`
-
-被 CSSOM View Module 重新定义为一个 `double` 类型的浮点值。原来这个属性是被定义为一个 `long` 整数。可以在 "浏览器兼容性" 那里查看详细内容。
+一个以像素为单位的 `double` 类型浮点值。
 
 ## 示例
 
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>clientX/clientY example</title>
+此示例在触发 {{domxref("Element/mousemove_event", "mousemove")}} 事件时显示鼠标的坐标。
 
-    <script>
-      function showCoords(evt){
-        alert(
-          "clientX value: " + evt.clientX + "\n" +
-          "clientY value: " + evt.clientY + "\n"
-        );
-      }
-    </script>
-  </head>
-  <body onmousedown="showCoords(event)">
-    <p>To display the mouse coordinates click anywhere on the page.</p>
-  </body>
-</html>
+### HTML
+
+```html
+<p>移动鼠标以查看其位置。</p>
+<p id="screen-log"></p>
 ```
+
+### JavaScript
+
+```js
+let screenLog = document.querySelector("#screen-log");
+document.addEventListener("mousemove", logKey);
+
+function logKey(e) {
+  screenLog.innerText = `
+    屏幕 X/Y：${e.screenX}，${e.screenY}
+    视口 X/Y：${e.clientX}，${e.clientY}`;
+}
+```
+
+### 结果
+
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 
@@ -49,8 +51,9 @@ var x = instanceOfMouseEvent.clientX
 
 {{Compat}}
 
-## 相关
+## 参见
 
-- `{{ domxref("MouseEvent") }}`
-- `{{domxref("event.clientY","clientY")}}`
-- `{{domxref("event.screenX","screenX")}} / {{domxref("event.screenY","screenY")}}`
+- {{ domxref("MouseEvent") }}
+- {{domxref("MouseEvent.clientY","clientY")}}
+- {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}}
+- [坐标系](/zh-CN/docs/Web/CSS/CSSOM_view/Coordinate_systems)

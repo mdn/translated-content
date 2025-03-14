@@ -1,21 +1,22 @@
 ---
 title: Array.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
-tags:
-  - Array
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 ---
 
 {{JSRef}}
 
-**`toLocaleString()`** 메서드는 배열의 요소를 나타내는 문자열을 반환합니다. 요소는 `toLocaleString` 메서드를 사용하여 문자열로 변환되고 이 문자열은 locale 고유 문자열(가령 쉼표 “,”)에 의해 분리됩니다.
+**`toLocaleString()`** 메서드는 배열의 요소를 나타내는 문자열을 반환합니다. 요소는 `toLocaleString` 메서드를 사용하여 문자열로 변환되고 이 문자열은 locale 고유 문자열(가령 쉼표 ",")에 의해 분리됩니다.
 
-{{EmbedInteractiveExample("pages/js/array-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: Array.toLocaleString()")}}
+
+```js interactive-example
+const array1 = [1, "a", new Date("21 Dec 1997 14:12:00 UTC")];
+const localeString = array1.toLocaleString("en", { timeZone: "UTC" });
+
+console.log(localeString);
+// Expected output: "1,a,12/21/1997, 2:12:00 PM",
+// This assumes "en" locale and UTC timezone - your results may vary
+```
 
 ## 구문
 
@@ -49,7 +50,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 ```js
 var number = 1337;
 var date = new Date();
-var myArr = [number, date, 'foo'];
+var myArr = [number, date, "foo"];
 
 var str = myArr.toLocaleString();
 
@@ -63,8 +64,8 @@ console.log(str);
 ```js
 // https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
 if (!Array.prototype.toLocaleString) {
-  Object.defineProperty(Array.prototype, 'toLocaleString', {
-    value: function(locales, options) {
+  Object.defineProperty(Array.prototype, "toLocaleString", {
+    value: function (locales, options) {
       // 1. Let O be ? ToObject(this value).
       if (this == null) {
         throw new TypeError('"this" is null or not defined');
@@ -80,11 +81,11 @@ if (!Array.prototype.toLocaleString) {
       //    host environment's current locale (this is
       //    derived in an implementation-defined way).
       // NOTE: In this case, we will use a comma
-      var separator = ',';
+      var separator = ",";
 
       // 4. If len is zero, return the empty String.
       if (len === 0) {
-        return '';
+        return "";
       }
 
       // 5. Let firstElement be ? Get(A, "0").
@@ -100,8 +101,10 @@ if (!Array.prototype.toLocaleString) {
       //        « locales, options »
       //       )
       //     )
-      var r = firstElement == null ?
-        '' : firstElement.toLocaleString(locales, options);
+      var r =
+        firstElement == null
+          ? ""
+          : firstElement.toLocaleString(locales, options);
 
       // 8. Let k be 1.
       var k = 1;
@@ -126,8 +129,10 @@ if (!Array.prototype.toLocaleString) {
         //        « locales, options »
         //       )
         //     )
-        r = nextElement == null ?
-          '' : nextElement.toLocaleString(locales, options);
+        r =
+          nextElement == null
+            ? ""
+            : nextElement.toLocaleString(locales, options);
 
         // e. Let R be a String value produced by
         //   concatenating S and R.
@@ -139,7 +144,7 @@ if (!Array.prototype.toLocaleString) {
 
       // 10. Return R.
       return r;
-    }
+    },
   });
 }
 ```

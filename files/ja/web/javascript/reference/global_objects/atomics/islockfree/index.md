@@ -9,12 +9,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
 **`Atomics.isLockFree()`**
 メソッドは、 `Atomics` のメソッドが、要素のバイト数が指定された大きさである型付き配列に適用された場合、ロックまたは不可分のハードウェア操作を使用するかどうかを見極めるために使用されます。指定された大きさが整数型の TypedArray 型の [BYTES_PER_ELEMENT](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT) プロパティのいずれでもない場合は、 `false` を返します。
 
-{{EmbedInteractiveExample("pages/js/atomics-islockfree.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.isLockFree()")}}
+
+```js interactive-example
+console.log(Atomics.isLockFree(3));
+// 3 is not one of the BYTES_PER_ELEMENT values
+// Expected output: false
+
+console.log(Atomics.isLockFree(4));
+// 4 is one of the BYTES_PER_ELEMENT values
+// Expected output: true
+```
 
 ## 構文
 
 ```js
-Atomics.isLockFree(size)
+Atomics.isLockFree(size);
 ```
 
 ### 引数

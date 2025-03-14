@@ -1,27 +1,17 @@
 ---
-title: Document.dir
+title: "Document: свойство dir"
 slug: Web/API/Document/dir
-tags:
-  - API
-  - Document
-  - Property
-translation_of: Web/API/Document/dir
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
-{{ApiRef("")}}
 
-Свойство **`Document.dir`** является строкой {{domxref("DOMString")}} показывает направление текста на странице (слева направо или справа налево).
+{{APIRef("HTML DOM")}}
 
-**Возможные значения:**
+Свойство **`Document.dir`** — это строка, представляющая направление текста документа: слева направо (по умолчанию) или справа налево. Возможные значения: `'rtl'` (справа налево) и `'ltr'` (слева направо).
 
-- `'ltr'` - слева направо
-- `'rtl'` - справа налево
+## Значение
 
-## Синтаксис
-
-```js
-dirStr = document.dir;
-document.dir = dirStr;
-```
+Строка.
 
 ## Спецификации
 
@@ -31,6 +21,6 @@ document.dir = dirStr;
 
 {{Compat}}
 
-## Связанные события
+## Смотрите также
 
-- <http://msdn.microsoft.com/en-us/library/ms533731.aspx>
+- Глобальный атрибут [`dir`](/ru/docs/Web/HTML/Global_attributes/dir)

@@ -5,9 +5,48 @@ slug: Web/CSS/border-left-width
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/CSS) 的 **`border-left-width`** 属性用来设置盒子的左边框的宽度。
+[CSS](/zh-CN/docs/Web/CSS) 的 **`border-left-width`** 属性用来设置盒子的左边框的宽度。
 
-{{EmbedInteractiveExample("pages/css/border-left-width.html")}}
+{{InteractiveExample("CSS Demo: border-left-width")}}
+
+```css interactive-example-choice
+border-left-width: thick;
+```
+
+```css interactive-example-choice
+border-left-width: 2em;
+```
+
+```css interactive-example-choice
+border-left-width: 4px;
+```
+
+```css interactive-example-choice
+border-left-width: 2ex;
+```
+
+```css interactive-example-choice
+border-left-width: 0;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 语法
 
@@ -38,13 +77,14 @@ border-left-width: unset;
     - `medium` 一个中等边框
     - `thick` 一个粗边框
 
-    > **备注：** 因为规范没有定义每个关键字表示的确切厚度，当使用其中之一的关键字时，需要具体实施才知道确切结果。不过，它们通常遵循下面的模式 `thin ≤ medium ≤ thick`, 在单独文档中这些值内部是恒定不变的。
+    > [!NOTE]
+    > 因为规范没有定义每个关键字表示的确切厚度，当使用其中之一的关键字时，需要具体实施才知道确切结果。不过，它们通常遵循下面的模式 `thin ≤ medium ≤ thick`, 在单独文档中这些值内部是恒定不变的。
 
 ### 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -71,7 +111,7 @@ div:nth-child(2) {
 
 ### 结果
 
-{{EmbedLiveSample('Example', '100%')}}
+{{EmbedLiveSample('示例', '100%')}}
 
 ## 规范
 
@@ -83,7 +123,7 @@ div:nth-child(2) {
 
 {{Compat}}
 
-## 其他
+## 参见
 
 - The other border-width-related CSS properties: {{Cssxref("border-bottom-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}, and {{Cssxref("border-width")}}.
 - The other border-left-related CSS properties: {{Cssxref("border")}}, {{Cssxref("border-left")}}, {{Cssxref("border-left-style")}}, and {{Cssxref("border-left-color")}}.

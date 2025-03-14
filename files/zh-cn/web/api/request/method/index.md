@@ -22,7 +22,7 @@ A {{domxref("ByteString")}} indicating the method of the request.
 In the following snippet, we create a new request using the {{domxref("Request.Request()")}} constructor (for an image file in the same directory as the script), then save the method of the request in a variable:
 
 ```js
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 var myMethod = myRequest.method; // GET
 ```
 
@@ -36,6 +36,6 @@ var myMethod = myRequest.method; // GET
 
 ## See also
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

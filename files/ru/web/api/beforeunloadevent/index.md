@@ -1,10 +1,6 @@
 ---
 title: BeforeUnloadEvent
 slug: Web/API/BeforeUnloadEvent
-tags:
-  - Диалог
-  - Окно
-translation_of: Web/API/BeforeUnloadEvent
 ---
 
 {{APIRef}}
@@ -37,12 +33,12 @@ translation_of: Web/API/BeforeUnloadEvent
 ## Примеры
 
 ```js
-window.addEventListener("beforeunload", function( event ) {
-  event.returnValue = "\o/";
+window.addEventListener("beforeunload", function (event) {
+  event.returnValue = "\\o/";
 });
 
 //is equivalent to
-window.addEventListener("beforeunload", function( event ) {
+window.addEventListener("beforeunload", function (event) {
   event.preventDefault();
 });
 ```
@@ -51,22 +47,26 @@ Webkit-based browsers не следуют спецификации диалог�
 
 ```js
 window.addEventListener("beforeunload", function (e) {
-  var confirmationMessage = "\o/";
+  var confirmationMessage = "\\o/";
 
-  (e || window.event).returnValue = confirmationMessage;     //Gecko + IE
-  return confirmationMessage;                                //Webkit, Safari, Chrome etc.
+  (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+  return confirmationMessage; //Webkit, Safari, Chrome etc.
 });
 ```
 
-## Совместимость браузеров
+## Спецификации
+
+{{Specifications}}
+
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- {{Event("DOMContentLoaded")}}
-- {{Event("readystatechange")}}
-- {{Event("load")}}
-- {{Event("beforeunload")}}
-- {{Event("unload")}}
-- [Выгрузка Документов - Запрос на выгрузку документа](http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)
+- [`DOMContentLoaded`](/ru/docs/Web/API/Document/DOMContentLoaded_event)
+- [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event)
+- [`load`](/ru/docs/Web/API/Window/load_event)
+- [`beforeunload`](/ru/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/ru/docs/Web/API/Window/unload_event)
+- [Выгрузка Документов - Запрос на выгрузку документа](https://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)

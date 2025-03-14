@@ -21,7 +21,7 @@ Les liens sortants vers des sites commerciaux qui sont pertinents pour le sujet 
 
 ### Neutralité
 
-Les articles de MDN doivent respecter [une neutralité de point de vue](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Neutralit%C3%A9_de_point_de_vue), notamment pour les différences entre les navigateurs. Tout commentaire dénigrant sur quelque navigateur ou agent utilisateur que ce soit est inacceptable.
+Les articles de MDN doivent respecter [une neutralité de point de vue](https://fr.wikipedia.org/wiki/Wikipédia:Neutralité_de_point_de_vue), notamment pour les différences entre les navigateurs. Tout commentaire dénigrant sur quelque navigateur ou agent utilisateur que ce soit est inacceptable.
 
 ### Sujets web ouverts
 
@@ -58,7 +58,8 @@ Les sujets sur lesquels nous nous concentrons avant tout sont les technologies w
 
 Nous documentons également d'autres sujets comme [SVG](/fr/docs/Web/SVG), [XML](/fr/docs/Web/XML), [WebAssembly](/fr/docs/WebAssembly), [l'accessibilité](/fr/docs/Learn/Accessibility). De plus, nous écrivons [des guides d'apprentissage](/fr/docs/Learn) pour ces technologies et disposons également [d'un glossaire](/fr/docs/Glossary).
 
-> **Note :** Les technologies côté serveur ont, la plupart du temps, leur propre documentation et MDN n'a pas pour but de maintenir une autre version. Toutefois, [il existe certaines exceptions](/fr/docs/Learn/Server-side).
+> [!NOTE]
+> Les technologies côté serveur ont, la plupart du temps, leur propre documentation et MDN n'a pas pour but de maintenir une autre version. Toutefois, [il existe certaines exceptions](/fr/docs/Learn/Server-side).
 
 Le contenu présent sur MDN doit être pertinent pour la section dans laquelle il est situé. On attend des personnes qui contribuent à ce qu'elles suivent [les règles d'écritures sur MDN](/fr/docs/MDN/Writing_guidelines) tant pour la forme, les exemples de code que pour d'autres sujets.
 
@@ -106,7 +107,7 @@ Voici quelques scénarios qui décrivent des situations où le contenu peut êtr
 - Des articles avec du contenu inapproprié pour MDN.
 - Des sections de MDN qui ne portent pas sur les technologies web ouvertes et qui sont un fardeau en termes de maintenance.
 
-Pour plus d'informations sur _comment_ supprimer des documents, voir [le guide sur la création, le déplacement et la suppression des pages](/fr/docs/MDN/Writing_guidelines/Creating_moving_deleting).
+Pour plus d'informations sur _comment_ supprimer des documents, voir [le guide sur la création, le déplacement et la suppression des pages](/fr/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting).
 
 ## Types de documents autorisés sur MDN
 

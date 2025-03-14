@@ -1,12 +1,10 @@
 ---
 title: Promise
 slug: Glossary/Promise
-tags:
-  - Глоссарий
-  - асинхронный
-translation_of: Glossary/Promise
-original_slug: Глоссарий/Promise
 ---
+
+{{GlossarySidebar}}
+
 **{{jsxref("Promise")}}** - это {{Glossary("Object")}}, возвращаемый {{Glossary("function")}}, которая ещё не завершила свою работу. Промис буквально представляет собой "обещание", сделанное функцией, которая через объект промиса вернет результат.
 
 Когда вызванная функция {{Glossary("asynchronous", "asynchronously")}} завершает работу, вызывается функция объекта промиса, называемая обработчиком решения (или выполнения, или завершения) чтобы исходный объект вызова знал, что задача выполнена
@@ -14,10 +12,6 @@ original_slug: Глоссарий/Promise
 ## Узнать больше
 
 Чтобы узнать больше, пройдите по ссылкам
-
-### General knowledge
-
-- {{interwiki("wikipedia", "Futures and promises")}}
 
 ### Technical reference
 

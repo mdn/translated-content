@@ -1,185 +1,241 @@
 ---
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
+l10n:
+  sourceCommit: 56cbe48e4426172461d9297523b68716922690e5
 ---
 
 {{APIRef("HTML DOM")}}
 
-HTMLFormElement 接口可以创建或者修改{{HTMLElement("form")}}对象;它继承了{{domxref("HTMLElement")}}接口的方法和属性。
+**`HTMLFormElement`** 接口表示 DOM 中的 {{HTMLElement("form")}} 元素。它允许访问和（在某些情况下）修改表单的各个方面，以及访问其组成元素。
 
-## 属性
+{{InheritanceDiagram}}
 
-_继承自父类的属性，{{domxref("HTMLElement")}}._
+## 实例属性
 
-- {{domxref("HTMLFormElement.acceptCharset")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("accept-charset", "form") }} HTML attribute, containing a list of character encodings that the server accepts.
-- {{domxref("HTMLFormElement.action")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("action", "form") }} HTML attribute, containing the URI of a program that processes the information submitted by the form.
-- {{domxref("HTMLFormElement.autocomplete")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("autocomplete", "form") }} HTML attribute, containing a string that indicates whether the controls in this form can have their values automatically populated by the browser.
-- {{domxref("HTMLFormElement.elements")}} {{readonlyinline}}
-  - : Returns a live {{domxref("HTMLFormControlsCollection")}} containing all the form controls belonging to this form element.
-- {{domxref("HTMLFormElement.encoding")}}
-  - : Is a synonym for `enctype`.
-- {{domxref("HTMLFormElement.enctype")}}
-  - : Is a {{domxref("DOMString")}} reflects the {{ htmlattrxref("enctype", "form") }} HTML attribute, indicating the type of content that is used to transmit the form to the server. Only specified values can be set.
-- {{domxref("HTMLFormElement.length")}} {{readonlyinline}}
-  - : Returns a `long` that represents the number of controls in the form.
-- {{domxref("HTMLFormElement.method")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("method", "form") }} HTML attribute, indicating the HTTP method used to submit the form. Only specified values can be set.
+_此接口还从其父接口 {{domxref("HTMLElement")}} 继承属性。_
+
+- {{domxref("HTMLFormElement.elements")}} {{ReadOnlyInline}}
+  - : 包含所有属于此表单元素的表单控件的 {{domxref("HTMLFormControlsCollection")}}。
+- {{domxref("HTMLFormElement.length")}} {{ReadOnlyInline}}
+  - : 反映表单中控件的数量的 `long` 值。
 - {{domxref("HTMLFormElement.name")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("name", "form") }} HTML attribute, containing the name of the form.
-- {{domxref("HTMLFormElement.noValidate")}}
-  - : Is a {{jsxref("Boolean")}} that reflects the {{ htmlattrxref("novalidate", "form") }} HTML attribute, indicating that the form should not be validated.
+  - : 反映表单的 [`name`](/zh-CN/docs/Web/HTML/Element/form#name) HTML 属性值的字符串，包含表单的名称。
+- {{domxref("HTMLFormElement.method")}}
+  - : 反映表单的 [`method`](/zh-CN/docs/Web/HTML/Element/form#method) HTML 属性值的字符串，表示用于提交表单的 HTTP 方法。只能设置特定的值。
 - {{domxref("HTMLFormElement.target")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("target", "form") }} HTML attribute, indicating where to display the results received from submitting the form.
+  - : 反映表单的 [`target`](/zh-CN/docs/Web/HTML/Element/form#target) HTML 属性值的字符串，表示用于显示提交表单的结果的位置。
+- {{domxref("HTMLFormElement.action")}}
+  - : 反映表单的 [`action`](/zh-CN/docs/Web/HTML/Element/form#action) HTML 属性值的字符串，包含处理表单提交的信息的程序的 URI。
+- {{domxref("HTMLFormElement.encoding")}} 或 {{domxref("HTMLFormElement.enctype")}}
+  - : 反映表单的 [`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype) HTML 属性值的字符串，表示用于将表单传输到服务器的内容类型。只能设置特定的值。这两个属性是同义词。
+- {{domxref("HTMLFormElement.acceptCharset")}}
+  - : 反映表单的 [`accept-charset`](/zh-CN/docs/Web/HTML/Element/form#accept-charset) HTML 属性值的字符串。
+- {{domxref("HTMLFormElement.autocomplete")}}
+  - : 反映表单的 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/form#autocomplete) HTML 属性值的字符串，表示此表单中的控件是否可以由浏览器自动填充其值。
+- {{domxref("HTMLFormElement.noValidate")}}
+  - : 反映表单的 [`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate) HTML 属性值的布尔值，表示是否不应对表单进行验证。
 
-## 方法
+具名输入会被作为属性添加到其所属表单的实例中，且如果它们共享相同的名称（例如，具有名为 `action` 的输入的表单将使其 `action` 属性返回该输入，而不是表单的 [`action`](/zh-CN/docs/Web/HTML/Element/form#action) HTML 属性）。
 
-_这个元素继承了 {{domxref("HTMLElement")}} 的属性。_
+## 实例方法
 
-- {{domxref("HTMLFormElement.checkValidity()")}}
-  - : Returns a {{jsxref("Boolean")}} that is `true` if the element's child controls are subject to constraint validation and satify those contraints, or `false` if some controls do not satisfy their constraints. Fires an event named [`invalid`](/zh-CN/docs/Web/API/HTMLInputElement/invalid_event) at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to `false`.
-- {{domxref("HTMLFormElement.item()")}}
-  - : Gets the item in the `elements` collection at the specified index, or null if there is no item at that index. You can also specify the index in array-style brackets or parentheses after the form object name, without calling this method explicitly.
-- {{domxref("HTMLFormElement.namedItem()")}}
-  - : 从元素集合中获取 `name` 或者 `id` 与指定名称匹配的项，没有匹配项则返回 null。您也可以像调用数组那样用圆括号或方括号来指定名称，而不必显式地调用这个方法。
-- {{domxref("HTMLFormElement.submit()")}}
-  - : Submits the form to the server.
-- {{domxref("HTMLFormElement.reset()")}}
-  - : Resets the forms to its initial state.
-- {{domxref("HTMLFormElement.reportValidity()")}}
-  - : Returns `true` if the element's child controls satisfy their validation constraints. When `false` is returned, cancelable [`invalid`](/zh-CN/docs/Web/Events/invalid) events are fired for each invalid child and validation problems are reported to the user.
+_此接口还从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 
-## Examples
+- {{domxref("HTMLFormElement.checkValidity", "checkValidity()")}}
+  - : 如果元素的子控件受到[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)并满足这些约束，则返回 `true`；如果某些控件不满足其约束，则返回 `false`。在不满足其约束的任何控件上触发名为 {{domxref("HTMLInputElement/invalid_event", "invalid")}} 的事件；如果未取消事件，则这些控件被视为无效。由程序员决定如何响应 `false`。
+- {{domxref("HTMLFormElement.reportValidity", "reportValidity()")}}
+  - : 如果元素的子控件满足其[验证约束](/zh-CN/docs/Web/HTML/Constraint_validation)，则返回 `true`。当返回 `false` 时，将为每个无效的子控件触发可取消的 {{domxref("HTMLInputElement/invalid_event", "invalid")}} 事件，并将验证问题报告给用户。
+- {{domxref("HTMLFormElement.requestSubmit", "requestSubmit()")}}
+  - : 请求使用指定的提交按钮及其相应的配置来提交表单。
+- {{domxref("HTMLFormElement.reset", "reset()")}}
+  - : 将表单重置为其初始状态。
+- {{domxref("HTMLFormElement.submit", "submit()")}}
+  - : 将表单提交至服务器。
 
-The following example shows how to create a new form element, modify its attributes and submit it.
+## 事件
+
+使用 `addEventListener()` 或将事件监听器赋值给此接口的 `oneventname` 属性来监听这些事件。
+
+- {{domxref("HTMLFormElement/formdata_event", "formdata")}}
+  - : 在构建表示表单数据的条目列表之后触发 `formdata` 事件。
+- {{domxref("HTMLFormElement/reset_event", "reset")}}
+  - : 在表单重置时触发 `reset` 事件。
+- {{domxref("HTMLFormElement/submit_event", "submit")}}
+  - : 在表单提交时触发 `submit` 事件。
+
+## 使用说明
+
+### 获得表单元素对象
+
+要获取 `HTMLFormElement` 对象，你可以使用 [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)和 {{domxref("Document.querySelector", "querySelector()")}}，或者使用文档的 {{domxref("Document.forms", "forms")}} 属性获取文档中所有表单的列表。
+
+{{domxref("Document.forms")}} 返回 `HTMLFormElement` 对象数组，其中列出了页面上的每个表单。然后，你可以使用以下任何语法来获取单个表单：
+
+- `document.forms[index]`
+  - : 返回数组中指定索引（`index`）的表单。
+- `document.forms[id]`
+  - : 返回 ID 为 `id` 的表单。
+- `document.forms[name]`
+  - : 返回 `name` 属性值为 `name` 的表单。
+
+### 访问表单的元素
+
+你可以通过检查表单的 {{domxref("HTMLFormElement.elements", "elements")}} 属性来访问表单中用于包含数据的元素列表。这将返回一个 {{domxref("HTMLFormControlsCollection")}}，其中列出了表单的所有用户数据输入元素，包括 `<form>` 的后代元素，以及使用其 `form` 属性而成为表单成员的元素。
+
+你也可以通过将表单元素 `name` 属性作为 `form` 的键来获取该表单的元素，但使用 `elements` 是一个更好的方法——它*只*包含表单的元素，并且不能与 `form` 的其他属性混合使用。
+
+### 元素命名问题
+
+有些名称会干扰 JavaScript 访问表单的属性和元素。
+
+例如：
+
+- `<input name="id">` 会优先于 `<form id="…">`。这意味着 `form.id` 不会引用表单的 id，而是引用名称为 `"id"` 的元素。这也适用于其他表单属性，例如 `<input name="action">` 或 `<input name="post">`。
+- `<input name="elements">` 会使表单的 `elements` 集合无法访问。引用 `form.elements` 现在将引用单个元素。
+
+要避免这些元素名称的问题，你应该：
+
+- *始终*使用 `elements` 集合来避免元素名称和表单属性之间的歧义。
+- *切勿*将 `"elements"` 作为元素名称。
+
+如果你不使用 JavaScript，这不会造成问题。
+
+### 被视为表单控件的元素
+
+`HTMLFormElement.elements` 和 `HTMLFormElement.length` 包含以下元素：
+
+- {{HTMLElement("button")}}
+- {{HTMLElement("fieldset")}}
+- {{HTMLElement("input")}}（但由于历史原因，[`type`](/zh-CN/docs/Web/HTML/Element/input#type) 为 `"image"` 的元素会被忽略）
+- {{HTMLElement("object")}}
+- {{HTMLElement("output")}}
+- {{HTMLElement("select")}}
+- {{HTMLElement("textarea")}}
+
+`elements` 返回的列表不包含其他元素，这使得它成为处理表单时获取最重要元素的绝佳方法。
+
+## 示例
+
+创建一个新的表单元素，修改其属性，然后提交：
 
 ```js
-// Create a form
-var f = document.createElement("form");
-
-// Add it to the document body
-document.body.appendChild(f);
-
-// Add action and method attributes
-f.action = "/cgi-bin/some.cgi";
-f.method = "POST"
-
-// Call the form's submit method
-f.submit();
+const f = document.createElement("form"); // 创建表单
+document.body.appendChild(f); // 将其添加到文档主体
+f.action = "/cgi-bin/some.cgi"; // 添加 action 和 method 属性
+f.method = "POST";
+f.submit(); // 调用表单的 submit() 方法
 ```
 
-In addition, the following complete HTML document shows how to extract information from a form element and to set some of its attributes.
+从 `<form>` 元素中提取信息并设置一些属性：
 
 ```html
-<title>Form example</title>
-<script type="text/javascript">
-  function getFormInfo() {
-    var info;
+<form name="formA" action="/cgi-bin/test" method="post">
+  <p>点击“信息”以获得表单详细信息，或点击“设置”以改变这些信息。</p>
+  <p>
+    <button type="button" onclick="getFormInfo();">信息</button>
+    <button type="button" onclick="setFormInfo(this.form);">设置</button>
+    <button type="reset">重置</button>
+  </p>
 
-    // Get a reference using the forms collection
-    var f = document.forms["formA"];
-    info = "f.elements: " + f.elements + "\n"
-         + "f.length: " + f.length + "\n"
-         + "f.name: " + f.name + "\n"
-         + "f.acceptCharset: " + f.acceptCharset + "\n"
-         + "f.action: " + f.action + "\n"
-         + "f.enctype: " + f.enctype + "\n"
-         + "f.encoding: " + f.encoding + "\n"
-         + "f.method: " + f.method + "\n"
-         + "f.target: " + f.target;
-    document.forms["formA"].elements['tex'].value = info;
+  <textarea id="form-info" rows="15" cols="20"></textarea>
+</form>
+
+<script>
+  function getFormInfo() {
+    // 通过表单名称获取对其的引用
+    const f = document.forms["formA"];
+    // 我们感兴趣的表单属性
+    const properties = [
+      "elements",
+      "length",
+      "name",
+      "charset",
+      "action",
+      "acceptCharset",
+      "action",
+      "enctype",
+      "method",
+      "target",
+    ];
+    // 迭代这些属性，将它们转换为一个字符串，以便我们可以显示给用户
+    const info = properties
+      .map((property) => `${property}：${f[property]}`)
+      .join("\n");
+
+    // 设置表单的 <textarea> 以显示表单的属性
+    document.forms["formA"].elements["form-info"].value = info; // 也可以使用 document.forms["formA"]['form-info'].value
   }
 
-  // A reference to the form is passed from the
-  // button's onclick attribute using 'this.form'
   function setFormInfo(f) {
-    f.method = "GET";
-    f.action = "/cgi-bin/evil_executable.cgi";
-    f.name   = "totally_new";
+    // 参数应该是表单元素的引用。
+    f.action = "a-different-url.cgi";
+    f.name = "a-different-name";
   }
 </script>
-
-<h1>Form  example</h1>
-
-<form name="formA" id="formA"
- action="/cgi-bin/test" method="POST">
- <p>Click "Info" to see information about the form.
-    Click set to change settings, then info again
-    to see their effect</p>
- <p>
-  <input type="button" value="info"
-   onclick="getFormInfo();">
-  <input type="button" value="set"
-   onclick="setFormInfo(this.form);">
-  <input type="reset" value="reset">
-  <br>
-  <textarea id="tex" style="height:15em; width:20em">
-  </textarea>
- </p>
-</form>
 ```
 
-The following example shows how to submit a form in a [popup window](/zh-CN/docs/DOM/window.open).
+在新窗口中提交表单（`<form>`）：
 
 ```html
 <!doctype html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>MDN Example</title>
-<script type="text/javascript">
-function popupSend (oFormElement) {
-  if (oFormElement.method && oFormElement.method.toLowerCase() !== "get") {
-    alert("This script supports the GET method only.");
-    return;
-  }
-  var oField, sFieldType, nFile, sSearch = "";
-  for (var nItem = 0; nItem < oFormElement.elements.length; nItem++) {
-    oField = oFormElement.elements[nItem];
-    if (!oField.hasAttribute("name")) { continue; }
-    sFieldType = oField.nodeName.toUpperCase() === "INPUT" ? oField.getAttribute("type").toUpperCase() : "TEXT";
-    if (sFieldType === "FILE") {
-      for (nFile = 0; nFile < oField.files.length; sSearch += "&" + escape(oField.name) + "=" + escape(oField.files[nFile++].name));
-    } else if ((sFieldType !== "RADIO" && sFieldType !== "CHECKBOX") || oField.checked) {
-      sSearch += "&" + escape(oField.name) + "=" + escape(oField.value);
-    }
-  }
-  open(oFormElement.action.replace(/(?:\?.*)?$/, sSearch.replace(/^&/, "?")), "submit-" + (oFormElement.name || Math.floor(Math.random() * 1e6)), "resizable=yes,scrollbars=yes,status=yes");
-}
-</script>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>在新窗口提交表单的示例</title>
+  </head>
+  <body>
+    <form action="test.php" target="_blank">
+      <p>
+        <label>名字：<input type="text" name="first-name" /></label>
+      </p>
+      <p>
+        <label>姓氏：<input type="text" name="last-name" /></label>
+      </p>
+      <p>
+        <label><input type="password" name="pwd" /></label>
+      </p>
 
-</head>
+      <fieldset>
+        <legend>宠物偏好</legend>
 
-<body>
+        <p>
+          <label><input type="radio" name="pet" value="cat" />猫</label>
+        </p>
+        <p>
+          <label><input type="radio" name="pet" value="dog" />狗</label>
+        </p>
+      </fieldset>
 
-<form name="yourForm" action="test.php" method="get" onsubmit="popupSend(this); return false;">
-  <p>First name: <input type="text" name="firstname" /><br />
-  Last name: <input type="text" name="lastname" /><br />
-  Password: <input type="password" name="pwd" /><br />
-  <input type="radio" name="sex" value="male" /> Male <input type="radio" name="sex" value="female" /> Female</p>
-  <p><input type="checkbox" name="vehicle" value="Bike" />I have a bike<br />
-  <input type="checkbox" name="vehicle" value="Car" />I have a car</p>
-  <p><input type="submit" value="Submit" /></p>
-</form>
+      <fieldset>
+        <legend>拥有的车辆</legend>
 
-</body>
+        <p>
+          <label
+            ><input type="checkbox" name="vehicle" value="Bike" />自行车</label
+          >
+        </p>
+        <p>
+          <label
+            ><input type="checkbox" name="vehicle" value="Car" />汽车</label
+          >
+        </p>
+      </fieldset>
+
+      <p><button>提交</button></p>
+    </form>
+  </body>
 </html>
 ```
 
-### Submitting forms and uploading files using `XMLHttpRequest`
-
-If you want to know how to serialize and submit a form using the [`XMLHttpRequest`](/zh-CN/docs/DOM/XMLHttpRequest) API, please read [this paragraph](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files).
-
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- The HTML element implementing this interface: {{ HTMLElement("form") }}.
+- 实现此接口的 HTML 元素：{{HTMLElement("form")}}。

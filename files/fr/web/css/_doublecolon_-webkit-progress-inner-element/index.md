@@ -1,15 +1,14 @@
 ---
-title: '::-webkit-progress-inner-element'
+title: ::-webkit-progress-inner-element
 slug: Web/CSS/::-webkit-progress-inner-element
-browser-compat: css.selectors.-webkit-progress-inner-element
-translation_of: Web/CSS/::-webkit-progress-inner-element
 ---
 
 {{CSSRef}}{{Non-standard_header}}
 
-Le pseudo-élément **`::-webkit-progress-inner-element`** représente le cadre extérieur de l'élément [`<progress>`](/fr/docs/Web/HTML/Element/Progress). C'est un pseudo-élément parent du pseudo-élément [`::-webkit-progress-bar`](/fr/docs/Web/CSS/::-webkit-progress-bar).
+Le pseudo-élément **`::-webkit-progress-inner-element`** représente le cadre extérieur de l'élément [`<progress>`](/fr/docs/Web/HTML/Element/progress). C'est un pseudo-élément parent du pseudo-élément [`::-webkit-progress-bar`](/fr/docs/Web/CSS/::-webkit-progress-bar).
 
-> **Note :** Afin que `::-webkit-progress-value` ait un effet, il faut que [`-webkit-appearance`](/fr/docs/Web/CSS/-webkit-appearance) vaille `none` sur l'élément `<progress>`.
+> [!NOTE]
+> Afin que `::-webkit-progress-value` ait un effet, il faut que [`-webkit-appearance`](/fr/docs/Web/CSS/appearance) vaille `none` sur l'élément `<progress>`.
 
 ## Exemples
 
@@ -28,7 +27,7 @@ progress {
 ### HTML
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 ### Résultat
@@ -49,7 +48,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Voir aussi
 
-- Les pseudo-éléments relatifs à WebKit/Blink qui permettent de mettre en forme les autres parties des éléments [`<progress>`](/fr/docs/Web/HTML/Element/Progress)
+- Les pseudo-éléments relatifs à WebKit/Blink qui permettent de mettre en forme les autres parties des éléments [`<progress>`](/fr/docs/Web/HTML/Element/progress)
 
   - [`::-webkit-progress-bar`](/fr/docs/Web/CSS/::-webkit-progress-bar)
   - [`::-webkit-progress-value`](/fr/docs/Web/CSS/::-webkit-progress-value)

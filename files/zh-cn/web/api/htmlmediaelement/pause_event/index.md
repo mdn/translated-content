@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: pause event'
+title: "HTMLMediaElement: pause event"
 slug: Web/API/HTMLMediaElement/pause_event
 ---
 
@@ -54,22 +54,26 @@ slug: Web/API/HTMLMediaElement/pause_event
 使用 `addEventListener()：`
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('pause', (event) => {
-  console.log('The Boolean paused property is now true. Either the ' +
-  'pause() method was called or the autoplay attribute was toggled.');
+video.addEventListener("pause", (event) => {
+  console.log(
+    "The Boolean paused property is now true. Either the " +
+      "pause() method was called or the autoplay attribute was toggled.",
+  );
 });
 ```
 
 使用 `onpause` 事件监听属性：
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onpause = (event) => {
-  console.log('The Boolean paused property is now true. Either the ' +
-  'pause() method was called or the autoplay attribute was toggled.');
+  console.log(
+    "The Boolean paused property is now true. Either the " +
+      "pause() method was called or the autoplay attribute was toggled.",
+  );
 };
 ```
 

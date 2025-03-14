@@ -1,13 +1,6 @@
 ---
 title: Précédence des opérateurs
-slug: Web/JavaScript/Reference/Operators/Operator_Precedence
-tags:
-  - JavaScript
-  - Opérateur
-  - Reference
-  - precedence
-translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
-original_slug: Web/JavaScript/Reference/Opérateurs/Précédence_des_opérateurs
+slug: Web/JavaScript/Reference/Operators/Operator_precedence
 ---
 
 {{jsSidebar("Operators")}}
@@ -16,7 +9,21 @@ La **précédence des opérateurs** détermine l'ordre dans lequel les opérateu
 
 Ainsi, l'opérateur de multiplication (« `*` ») (ayant une précédence plus haute que l'opérateur d'addition (« `+` »)) est évalué en premier et l'expression `6 * 4 + 2` renverra 26 (et pas 36).
 
-{{EmbedInteractiveExample("pages/js/expressions-operatorprecedence.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Operator precedence")}}
+
+```js interactive-example
+console.log(3 + 4 * 5); // 3 + 20
+// Expected output: 23
+
+console.log(4 * 3 ** 2); // 4 * 9
+// Expected output: 36
+
+let a;
+let b;
+
+console.log((a = b = 5));
+// Expected output: 5
+```
 
 ## Associativité
 
@@ -37,10 +44,10 @@ avec le résultat attendu que `a` et `b` obtiennent la même valeur de 5. C'est 
 ## Exemples
 
 ```js
-3 > 2 && 2 > 1
+3 > 2 && 2 > 1;
 // renvoie true
 
-3 > 2 > 1
+3 > 2 > 1;
 // renvoie false car 3 > 2 vaut true et que true > 1 vaut false
 // En ajoutant des parenthèses, on y voit plus clair (3 > 2) > 1
 ```

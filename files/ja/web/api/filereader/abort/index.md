@@ -1,31 +1,36 @@
 ---
 title: FileReader.abort()
 slug: Web/API/FileReader/abort
+l10n:
+  sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
 ---
 
 {{APIRef("File API")}}
 
-**`abort`** メソッドは読み取り操作を中止します。戻る時に、 {{domxref("FileReader.readyState","readyState")}} が `DONE` になります。
+**`abort`** メソッドは、読み取り操作を中止します。戻る時に、 {{domxref("FileReader.readyState","readyState")}} が `DONE` になります。
 
 ## 構文
 
+```js-nolint
+abort()
 ```
-instanceOfFileReader.abort();
-```
 
-### 例外
+### 引数
 
-- `DOM_FILE_ABORT_ERR`
-  - : 読み込み操作が実行されていない間に `abort` が呼び出されたとき (つまり、状態が `LOADING` でないとき) にスローされます。
+なし。
 
-## 仕様
+### 返値
+
+なし ({{jsxref("undefined")}})。
+
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
-{{Compat("api.FileReader.abort")}}
+{{Compat}}
 
-## あわせて参照
+## 関連情報
 
 - {{domxref("FileReader")}}

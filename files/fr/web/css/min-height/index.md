@@ -1,8 +1,6 @@
 ---
 title: min-height
 slug: Web/CSS/min-height
-translation_of: Web/CSS/min-height
-browser-compat: css.properties.min-height
 ---
 
 {{CSSRef}}
@@ -64,9 +62,13 @@ min-height: unset;
 ### Définition de min-height
 
 ```css
-table { min-height: 75%; }
+table {
+  min-height: 75%;
+}
 
-form { min-height: 0; }
+form {
+  min-height: 0;
+}
 ```
 
 ## Spécifications

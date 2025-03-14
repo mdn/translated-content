@@ -1,12 +1,6 @@
 ---
 title: <noscript>
 slug: Web/HTML/Element/noscript
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/noscript
 ---
 
 {{HTMLSidebar}}
@@ -15,7 +9,7 @@ L'élément HTML **`<noscript>`** définit un fragment HTML qui doit être affic
 
 ## Attributs
 
-On peut uniquement utiliser [les attributs universels](/fr/docs/Web/HTML/Attributs_universels) sur cet élément.
+On peut uniquement utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur cet élément.
 
 ## Exemples
 
@@ -51,14 +45,14 @@ Elle est où, la poulette&nbsp;?
       </th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_m%C3%A9ta-donn%C3%A9es"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_méta-données"
           >Contenu de métadonnées</a
         >,
-        <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
           >contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>
@@ -79,14 +73,14 @@ Elle est où, la poulette&nbsp;?
         mais sans élément <code>&#x3C;noscript></code> parmi les descendants.<br />Sinon
         : du contenu de flux ou du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>
@@ -94,7 +88,7 @@ Elle est où, la poulette&nbsp;?
         <p>
           Tout élément qui accepte du
           <a
-            href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+            href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
             >contenu phrasé</a
           >
           et qui n'a pas d'ancêtre qui soit un élément

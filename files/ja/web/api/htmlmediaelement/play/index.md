@@ -1,6 +1,9 @@
 ---
-title: HTMLMediaElement.play()
+title: "HTMLMediaElement: play() メソッド"
+short-title: play()
 slug: Web/API/HTMLMediaElement/play
+l10n:
+  sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
 {{APIRef("HTML DOM")}}
@@ -8,11 +11,11 @@ slug: Web/API/HTMLMediaElement/play
 {{domxref("HTMLMediaElement")}} の **`play()`** メソッドは、メディアの再生を開始しようとします。
 再生が正常に開始されると解決するプロミス ({{jsxref("Promise")}}) を返します。
 
-パーミッションの問題など、何らかの理由で再生を開始しなかった場合、そのプロミスは拒否されます。
+権限の問題など、何らかの理由で再生を開始しなかった場合、そのプロミスは拒否されます。
 
 ## 構文
 
-```js
+```js-nolint
 play()
 ```
 
@@ -24,14 +27,16 @@ play()
 
 再生が開始されたときに解決される、または何らかの理由で再生を開始できない場合は拒否されるプロミス ({{jsxref("Promise")}}) です。
 
-> **メモ:** 古いブラウザーは `play()` から値を返さない可能性があります。
+> [!NOTE]
+> 古いブラウザーは `play()` から値を返さない可能性があります。
 
 ### 例外
 
-プロミスの**拒否ハンドラー**は，唯一の引数として渡された例外名で呼び出されます（従来の例外が投げられるのとは対照的です）。想定されるエラーは以下の通りです。
+プロミスの**拒否ハンドラー**は、 {{domxref("DOMException")}} オブジェクトと唯一の引数として渡された例外名で呼び出されます（従来の例外が投げられるのとは対照的です）。想定されるエラーは以下の通りです。
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : ユーザーエージェント（ブラウザー）またはオペレーティングシステムが、現在のコンテキストまたは状況においてメディアの再生を許可しない場合に提供さ れます。これは、例えば、ユーザーが「再生」ボタンをクリックして明示的にメディアの再生を開始することを要求している場合に発生する可能性があります。
+  - : ユーザーエージェント（ブラウザー）またはオペレーティングシステムが、現在のコンテキストまたは状況においてメディアの再生を許可しない場合に提供されます。
+    ブラウザーは、例えば[許可ポリシー](/ja/docs/Web/HTTP/Permissions_Policy) のため、ユーザーが明示的に "play" ボタンをクリックしてメディア再生を始めるように要求することがあります。
 - `NotSupportedError` {{domxref("DOMException")}}
   - : メディアソース（例えば {{domxref("MediaStream")}}, {{domxref("MediaSource")}}, {{domxref("Blob")}}, または {{domxref("File")}} として指定可能）が、対応しているメディア形式を表していない場合に提供されます。
 
@@ -62,7 +67,7 @@ async function playVideo() {
   try {
     await videoElem.play();
     playButton.classList.add("playing");
-  } catch(err) {
+  } catch (err) {
     playButton.classList.remove("playing");
   }
 }

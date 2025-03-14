@@ -16,43 +16,58 @@ También podría ser usada para crear rectángulos con esquinas redondeadas.
 
 ### Uso simple de `rect`
 
-```xml
-<?xml version="1.0"?>
-<svg width="120" height="120"
-     viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg">
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
 
-  <rect x="10" y="10" width="100" height="100"/>
+```html
+<?xml version="1.0"?>
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="100" height="100" />
 </svg>
 ```
 
-» [rect-1.svg](https://mdn.mozillademos.org/files/8893/rect-1.svg)
+{{EmbedLiveSample}}
 
 ### `rect` con esquinas redondeados
 
-```xml
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
 <?xml version="1.0"?>
-<svg width="120" height="120"
-     viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg">
-
-  <rect x="10" y="10"
-        width="100" height="100"
-        rx="15" ry="15"/>
-
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="100" height="100" rx="15" ry="15" />
 </svg>
 ```
 
-» [rect-2.svg](https://mdn.mozillademos.org/files/8897/rect-2.svg)
+{{EmbedLiveSample}}
 
 ## Atributos
 
 ### Atributos globales
 
-- [Conditional processing attributes](/en/SVG/Attribute#ConditionalProccessing) »
-- [Core attributes](/en/SVG/Attribute#Core) »
-- [Graphical event attributes](/en/SVG/Attribute#GraphicalEvent) »
-- [Presentation attributes](/en/SVG/Attribute#Presentation) »
+- [Conditional processing attributes](/es/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [Core attributes](/es/docs/Web/SVG/Attribute#core) »
+- [Graphical event attributes](/es/docs/Web/SVG/Attribute#graphicalevent) »
+- [Presentation attributes](/es/docs/Web/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -69,11 +84,15 @@ También podría ser usada para crear rectángulos con esquinas redondeadas.
 
 ## Interfaz DOM
 
-Este elemento implementa la interfaz [`SVGRectElement`](/en/DOM/SVGRectElement).
+Este elemento implementa la interfaz [`SVGRectElement`](/es/docs/Web/API/SVGRectElement).
 
-## Compatibilidad de los Navegadores
+## Especificaciones
 
-{{Compat("svg.elements.rect")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

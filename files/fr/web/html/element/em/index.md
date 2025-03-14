@@ -1,15 +1,27 @@
 ---
-title: '<em> : l''élément d''emphase'
+title: "<em> : l'élément d'emphase"
 slug: Web/HTML/Element/em
-translation_of: Web/HTML/Element/em
-browser-compat: html.elements.em
 ---
 
 {{HTMLSidebar}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<em>`** (pour emphase) est utilisé afin de marquer un texte sur lequel on veut insister. Les éléments `<em>` peuvent être imbriqués, chaque degré d'imbrication indiquant un degré d'insistance plus élevé.
 
-{{EmbedInteractiveExample("pages/tabbed/em.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;em&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>Get out of bed <em>now</em>!</p>
+
+<p>We <em>had</em> to do something about it.</p>
+
+<p>This is <em>not</em> a drill!</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+em {
+}
+```
 
 <table class="properties">
   <tbody>
@@ -104,14 +116,14 @@ Un exemple pour `<em>` pourrait être&nbsp;: «&nbsp;_Faites_-le déjà&nbsp;!&n
 
 Un exemple pour `<i>` pourrait être&nbsp;: «&nbsp;Le <i lang="en">Queen Mary</i> a pris la mer la nuit dernière&nbsp;». Ici, il n'y a pas d'accentuation ou d'importance supplémentaire sur le mot «&nbsp;Queen Mary&nbsp;». Il est simplement indiqué que l'objet en question n'est pas une reine nommée Mary, mais un navire nommé <i lang="en">Queen Mary</i>. Un autre exemple de `<i>` pourrait être&nbsp;: «&nbsp;Le mot <i lang="en">the</i> est un article&nbsp;».
 
-## Exemple
+## Exemples
 
 L'élément `<em>` est souvent utilisé pour indiquer un contraste, implicite ou explicite.
 
 ```html
 <p>
-  Dans HTML5, ce qui était appelé contenu de <em>type bloc</em>
-  est maintenant appelé contenu de <em>flux</em>.
+  Dans HTML5, ce qui était appelé contenu de <em>type bloc</em> est maintenant
+  appelé contenu de <em>flux</em>.
 </p>
 ```
 

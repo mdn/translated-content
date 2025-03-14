@@ -1,27 +1,27 @@
 ---
-title: Coordinates.speed
+title: GeolocationCoordinates：speed 屬性
 slug: Web/API/GeolocationCoordinates/speed
+l10n:
+  sourceCommit: 066d55a090927fa19ba19c2a4b2417470e1a979f
 ---
 
-{{APIRef("Geolocation API")}}
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-**`Coordinates.speed`** 回傳唯讀的正複數代表速度，單位為公尺/秒。 如果裝置無法測量這個值則回傳 null。
+{{domxref("GeolocationCoordinates")}} 介面的 **`speed`** 唯讀屬性是一個 `double` 值，表示裝置的速度（單位為公尺每秒）。如果無法測量，則此值為 `null`。
 
-## 語法
+## 值
 
-```plain
-speed = coordinates.speed
-```
+一個 `double`，表示裝置的速度（單位為公尺每秒）。
 
-## 規格
+## 規範
 
 {{Specifications}}
 
-## 瀏覽器的相容性
+## 瀏覽器相容性
 
 {{Compat}}
 
-## 請參考
+## 參見
 
-- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
-- 屬於 {{domxref("Coordinates")}} 介面。
+- [使用地理定位 API](/zh-TW/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- {{domxref("GeolocationCoordinates")}}

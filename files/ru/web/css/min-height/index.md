@@ -1,30 +1,66 @@
 ---
 title: min-height
 slug: Web/CSS/min-height
-translation_of: Web/CSS/min-height
 ---
+
 {{CSSRef}}
 
-Свойство [CSS](ru/docs/Web/CSS)** `min-height`** устанавливает минимальную высоту элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("height") }} от становления меньше, чем значение, указанное для `min-height`.
+Свойство [CSS](/ru/docs/Web/CSS) **`min-height`** устанавливает минимальную высоту элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("height") }} от становления меньше, чем значение, указанное для `min-height`.
 
-{{EmbedInteractiveExample("pages/css/min-height.html")}}
+{{InteractiveExample("CSS Demo: min-height")}}
+
+```css interactive-example-choice
+min-height: 150px;
+```
+
+```css interactive-example-choice
+min-height: 7em;
+```
+
+```css interactive-example-choice
+min-height: 75%;
+```
+
+```css interactive-example-choice
+min-height: 10px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the minimum height. <br />If there is
+    more content than the minimum the box will grow to the height needed by the
+    content.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 Высота элемента принимает значение `min-height` всякий раз, когда `min-height` больше чем {{ Cssxref("max-height") }} или {{Cssxref("height")}}.
 
 ## Синтаксис
 
 ```css
+/* Ключевые слова */
+min-height: max-content;
+min-height: min-content;
+min-height: fit-content;
+min-height: fill-available;
+
 /* <length> значения */
 min-height: 3.5em;
 
 /* <percentage> значения */
 min-height: 10%;
-
-/* Значения-ключевые слова */
-min-height: max-content;
-min-height: min-content;
-min-height: fit-content;
-min-height: fill-available;
 
 /* Глобальные значения */
 min-height: inherit;
@@ -62,9 +98,13 @@ min-height: unset;
 ## Примеры
 
 ```css
-table { min-height: 75%; }
+table {
+  min-height: 75%;
+}
 
-form { min-height: 0; }
+form {
+  min-height: 0;
+}
 ```
 
 ## Спецификации
@@ -73,11 +113,11 @@ form { min-height: 0; }
 
 {{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - {{ Cssxref("height") }}, {{ Cssxref("max-height") }}
-- [Блочная модель](/ru/docs/CSS/box_model), {{ Cssxref("box-sizing") }}
+- [Блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{ Cssxref("box-sizing") }}

@@ -1,16 +1,11 @@
 ---
 title: align-content
 slug: Web/CSS/align-content
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/align-content
 ---
 
 {{CSSRef}}
 
-La propriété CSS **`align-content`** définit la façon dont l'espace est réparti entre et autour des éléments le long de l'axe en bloc du conteneur (c'est-à-dire l'axe orthogonal à l'axe d'écriture) lorsque celui-ci est [un conteneur de boîte flexible](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout) et le long de l'axe principal lorsque le conteneur est une grille.
+La propriété CSS **`align-content`** définit la façon dont l'espace est réparti entre et autour des éléments le long de l'axe en bloc du conteneur (c'est-à-dire l'axe orthogonal à l'axe d'écriture) lorsque celui-ci est [un conteneur de boîte flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout) et le long de l'axe principal lorsque le conteneur est une grille.
 
 L'exemple qui suit utilise une grille comme conteneur afin d'illustrer le comportement des valeurs de cette propriété.
 
@@ -23,11 +18,11 @@ Cette propriété n'aura aucun effet sur les boîtes flexibles disposées sur un
 ```css
 /* Alignement le long de l'axe */
 /* Note : align-content ne prend pas en charge les valeurs left et right */
-align-content: center;     /* Les éléments sont groupés au centre */
-align-content: start;      /* Les éléments sont groupés au début  */
-align-content: end;        /* Les éléments sont groupés à la fin */
+align-content: center; /* Les éléments sont groupés au centre */
+align-content: start; /* Les éléments sont groupés au début  */
+align-content: end; /* Les éléments sont groupés à la fin */
 align-content: flex-start; /* Les éléments flexibles sont groupés au début */
-align-content: flex-end;   /* Les éléments flexibles sont groupés à la fin */
+align-content: flex-end; /* Les éléments flexibles sont groupés à la fin */
 
 /* Alignement normal */
 align-content: normal;
@@ -42,12 +37,12 @@ align-content: space-between; /* L'espace est réparti entre
                                  les éléments, le premier est
                                  accolé au bord et le dernier
                                  également. */
-align-content: space-around;  /* L'espace est réparti entre les
+align-content: space-around; /* L'espace est réparti entre les
                                  éléments avec un demi-espace
                                  au début et à la fin */
-align-content: space-evenly;  /* L'espace est réparti entre les
+align-content: space-evenly; /* L'espace est réparti entre les
                                  éléments et autour */
-align-content: stretch;       /* Les éléments dimensionnés avec
+align-content: stretch; /* Les éléments dimensionnés avec
                                  auto sont étirés également
                                  afin de remplir le conteneur*/
 
@@ -106,7 +101,7 @@ align-content: unset;
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   align-content: center; /* Cette valeur peut être changée dans la démonstration */
   background-color: #8c8c8c;
@@ -225,15 +220,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.alignContent = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```
@@ -252,8 +247,8 @@ display.addEventListener('change', function (evt) {
 
 ## Voir aussi
 
-- [Utiliser les boîtes flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
-- Guide sur les grilles : _[Aligner des objets dans une grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- Guide sur les boîtes flexibles : _[Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)
+- [Utiliser les boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- Guide sur les grilles : _[Aligner des objets dans une grille](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- Guide sur les boîtes flexibles : _[Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/CSS_box_alignment)

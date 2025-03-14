@@ -1,13 +1,15 @@
 ---
-title: Canvas チュートリアル
+title: キャンバスのチュートリアル
 slug: Web/API/Canvas_API/Tutorial
+l10n:
+  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 このチュートリアルは、 [**`<canvas>`**](/ja/docs/Web/HTML/Element/canvas) 要素を使用して二次元のグラフィックを描画する方法を、基本から説明します。ここでの例は、キャンバスで何ができるかを明確に示すものであり、独自のコンテンツを作成するためのコードスニペットも提供しています。
 
-`<canvas>` は [HTML](/ja/docs/Web/HTML) の要素であり、スクリプト（ふつうは [JavaScript](/ja/docs/Glossary/JavaScript)）を使ってグラフィックを描くことができます。これは例えば、グラフを描いたり、写真を合成する、または簡単なアニメーションを（[あまり簡単ではない](/ja/docs/Web/API/Canvas_API/A_basic_ray-caster)ものも）作成したりすることができます。このページにある画像は、このチュートリアルで作成する [**`<canvas>`**](/ja/docs/Web/HTML/Element/canvas) の実装の例を示しています。
+`<canvas>` は [HTML](/ja/docs/Web/HTML) の要素であり、スクリプト（ふつうは [JavaScript](/ja/docs/Glossary/JavaScript)）を使ってグラフィックを描くことができます。これは例えば、グラフを描いたり、写真を合成したり、簡単なアニメーションを作成したりすることができます。
 
 `<canvas>` は Apple が macOS Dashboard のために WebKit に初めて導入した後、ブラウザーに実装されました。現在は、あらゆる主要ブラウザーが対応しています。
 

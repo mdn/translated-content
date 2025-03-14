@@ -33,21 +33,22 @@ animation-duration: 10s, 30s, 230ms
 - `<time>`
   - : El tiempo que tarda la animación en terminar su secuencia. Podemos especificarlo en segundos (usando `s`) o milisegundos (usando `ms`). Si no especificamos la unidad, la sentencia no será válida.
 
-> **Nota:** No acepta valores negativos, si los ponemos la sentencia se ignorará. Algunas implementaciones antiguas (con prefijos) pueden considerar los valores negativos como si fueran `0s`.
+> [!NOTE]
+> No acepta valores negativos, si los ponemos la sentencia se ignorará. Algunas implementaciones antiguas (con prefijos) pueden considerar los valores negativos como si fueran `0s`.
 
 ## Ejemplos
 
-Visitar [CSS animations](/es/CSS/Usando_animaciones_CSS) para ver algunos ejemplos.
+Visitar [CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations) para ver algunos ejemplos.
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.animation-duration")}}
+{{Compat}}
 
 ## Consultar también
 
-- [Usando animaciones CSS](/es/docs/CSS/Usando_animaciones_CSS)
+- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

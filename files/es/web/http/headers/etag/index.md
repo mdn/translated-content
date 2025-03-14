@@ -9,9 +9,9 @@ El encabezado de respuesta de HTTP **`ETag`** es un identificador para una versi
 
 Si el recurso en una URL dada cambia, un valor Etag debe ser generado. De esta forma los Etags son muy similares a las huellas digitales y pueden también usarse para propósitos de rastreo por algunos servidores. Un comparativo de ellos permite rápidamente determinar cuándo dos representaciones de un recurso son las mismas, pero podrían también configurarse para persistir indefinidamente por un servidor en rastreo.
 
-| Tipo de Encabezado                               | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Tipo de Encabezado                    | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## Sintaxis
 
@@ -23,7 +23,7 @@ ETag: "<valor_etag>"
 ## Directivas
 
 - `W/` {{optional_inline}}
-  - : `'W/'` (sensible a mayúsculas) indica que se usa un [validador débil](/es/docs/Web/HTTP/Conditional_requests#Weak_validation). Los validadores débiles son fáciles de generar pero son menos útiles para realizar comparativos. Los validadores fuertes son ideales para realizar comparativos pero pueden ser muy difíciles de generar de forma eficiente. Los valores Etag débiles de dos representaciones de los mismos recursos podrían ser semánticamente equivalentes, pero no idénticos byte por byte. Esto significa que los Etag débiles previenen el almacenamiento en caché cuando el [range request por byte](/es/docs/Web/HTTP/Headers/Accept-Ranges) es usado, a su vez los Etag fuertes permiten que los range request puedan utilizar el almacenamiendo en caché.
+  - : `'W/'` (sensible a mayúsculas) indica que se usa un [validador débil](/es/docs/Web/HTTP/Conditional_requests#weak_validation). Los validadores débiles son fáciles de generar pero son menos útiles para realizar comparativos. Los validadores fuertes son ideales para realizar comparativos pero pueden ser muy difíciles de generar de forma eficiente. Los valores Etag débiles de dos representaciones de los mismos recursos podrían ser semánticamente equivalentes, pero no idénticos byte por byte. Esto significa que los Etag débiles previenen el almacenamiento en caché cuando el [range request por byte](/es/docs/Web/HTTP/Headers/Accept-Ranges) es usado, a su vez los Etag fuertes permiten que los range request puedan utilizar el almacenamiendo en caché.
 - "\<valor_etag>"
   - : Las Etiquetas de Entidad (ETags) representan de forma única a los recursos. Son una cadena de caracteres ASCII puestas entre comillas dobles (Como `"675af34563dc-tr34"`). El método por el cual se generan los valores `ETag` no está especificado. Muchas veces, se usa una etiqueda del contenido, una etiqueta de la fecha y hora de la última modificación, o sólo una revisión. Por ejemplo, MDN usa una etiqueda de dígitos hexadecimales para el contenido wiki.
 
@@ -64,13 +64,11 @@ El servidor compara el `ETag` del cliente (enviado con un `If-None-Match`) con e
 
 ## Especificaciones
 
-| Especificación                           | Título                                                                         |
-| ---------------------------------------- | ------------------------------------------------------------------------------ |
-| {{RFC("7232", "ETag", "2.3")}} | Protocolo de Transferencia por Hipertexto (HTTP/1.1): Peticiones Condicionales |
+{{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.ETag")}}
+{{Compat}}
 
 ## Vea también
 

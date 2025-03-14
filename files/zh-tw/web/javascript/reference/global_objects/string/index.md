@@ -3,7 +3,7 @@ title: 字串
 slug: Web/JavaScript/Reference/Global_Objects/String
 ---
 
-{{JSRef("Global_Objects", "String")}}
+{{JSRef}}
 
 **`String`** 全域物件為字串的構造函數，或是一個字符序列。
 
@@ -38,40 +38,43 @@ String(thing)
 
 除了常規的、可印出來的字元，特殊字元也可以被跳脫符號來表示編碼。
 
-| 代碼                     | 輸出                                          |
-| ------------------------ | --------------------------------------------- |
-| `\0`                     | 空字元                                        |
-| `\'`                     | 單引號                                        |
-| `\"`                     | 雙引號                                        |
-| `\\`                     | 反斜線                                        |
-| `\n`                     | 斷行                                          |
-| `\r`                     | 回車                                          |
-| `\v`                     | 垂直制表                                      |
-| `\t`                     | 制表                                          |
-| `\b`                     | 退格                                          |
-| `\f`                     | 饋頁                                          |
-| `\uXXXX`                 | unicode 代碼                                  |
+| 代碼                     | 輸出                                 |
+| ------------------------ | ------------------------------------ |
+| `\0`                     | 空字元                               |
+| `\'`                     | 單引號                               |
+| `\"`                     | 雙引號                               |
+| `\\`                     | 反斜線                               |
+| `\n`                     | 斷行                                 |
+| `\r`                     | 回車                                 |
+| `\v`                     | 垂直制表                             |
+| `\t`                     | 制表                                 |
+| `\b`                     | 退格                                 |
+| `\f`                     | 饋頁                                 |
+| `\uXXXX`                 | unicode 代碼                         |
 | `\u{X}` ... `\u{XXXXXX}` | unicode 代碼 {{experimental_inline}} |
-| `\xXX`                   | Latin-1 字元                                  |
+| `\xXX`                   | Latin-1 字元                         |
 
-> **備註：** 和其他語言不同，JavaScript 將單引號字串和雙引號字串是做相同；因此，上述的序列可以在單引號或雙引號中作用。
+> [!NOTE]
+> 和其他語言不同，JavaScript 將單引號字串和雙引號字串是做相同；因此，上述的序列可以在單引號或雙引號中作用。
 
 ### 長字面值字串
 
 有些時候，你的程式碼會包含非常長的字串。 為了不讓長字串無止盡地往下長，抑或是在你心血來潮的時候，你可能希望將這樣長的字串能夠斷成多行卻不影響到實際的內容。
 
-你可以用 [+](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#字串運算子) 運算子附加多個字串在一起，像是這樣：
+你可以用 [+](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators#字串運算子) 運算子附加多個字串在一起，像是這樣：
 
 ```js
-let longString = "This is a very long string which needs " +
-                 "to wrap across multiple lines because " +
-                 "otherwise my code is unreadable.";
+let longString =
+  "This is a very long string which needs " +
+  "to wrap across multiple lines because " +
+  "otherwise my code is unreadable.";
 ```
 
-或者，你可以在每一行尾端用反斜線字元("\\")表示字串會繼續被顯示在下一列。 你必須要確定在反斜線後面沒有任何空白或其他字元，甚至是縮排；否則這個方法將失效。 這個形式看起來像這樣：
+或者，你可以在每一行尾端用反斜線字元（"\\"）表示字串會繼續被顯示在下一列。 你必須要確定在反斜線後面沒有任何空白或其他字元，甚至是縮排；否則這個方法將失效。 這個形式看起來像這樣：
 
-```plain
-let longString = "This is a very long string which needs \
+```js
+let longString =
+  "This is a very long string which needs \
 to wrap across multiple lines because \
 otherwise my code is unreadable.";
 ```
@@ -87,30 +90,29 @@ otherwise my code is unreadable.";
 有兩個方法可以存取字串中個別的字元。第一個是用 {{jsxref("String.charAt", "charAt")}} 方法：
 
 ```js
-return 'cat'.charAt(1); // 回傳 "a"
+return "cat".charAt(1); // 回傳 "a"
 ```
 
 另一個(在 ECMAScript 5 中被提到)方法是將字串當作一個類似陣列的物件，直接存取字串中對應的數值索引。
 
 ```js
-return 'cat'[1]; // 回傳 "a"
+return "cat"[1]; // 回傳 "a"
 ```
 
 對於存取字元使用的括號表達式，沒辦法去刪除或指派一個值給這些屬性。 這些屬性既非可寫的，也非可設定的。(參見 {{jsxref("Object.defineProperty")}})
 
 ### 比較字串
 
-C 語言的開發者有 `strcmp()` 函式可以用來比較字串。 在 JavaScript 中，你只能用[小於和大於運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)：
+C 語言的開發者有 `strcmp()` 函式可以用來比較字串。 在 JavaScript 中，你只能用[小於和大於運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators)：
 
 ```js
 var a = "a";
 var b = "b";
-if (a < b) // true
+if (a < b)
+  // true
   print(a + " 小於 " + b);
-else if (a > b)
-  print(a + " 大於 " + b);
-else
-  print(a + " 和 " + b + " 相等");
+else if (a > b) print(a + " 大於 " + b);
+else print(a + " 和 " + b + " 相等");
 ```
 
 這樣類似的結果，也能使用繼承 `String` 實體的 {{jsxref("String.localeCompare", "localeCompare")}} 方法來實現。
@@ -126,16 +128,16 @@ var s_prim = "foo";
 var s_obj = new String(s_prim);
 
 console.log(typeof s_prim); // 印出 "string"
-console.log(typeof s_obj);  // 印出 "object"
+console.log(typeof s_obj); // 印出 "object"
 ```
 
 字串原始型別和 `String` 物件也會在使用 {{jsxref("Global_Objects/eval", "eval")}} 時給出不同的結果。 原始型別傳進 `eval` 會被視為原始代碼；`String` 物件則會回傳，且被視作是其他物件。舉個例子：
 
 ```js
-s1 = "2 + 2";               // 建立一個字串原始型別
-s2 = new String("2 + 2");   // 建立一個字串物件
-console.log(eval(s1));      // 回傳數字 4
-console.log(eval(s2));      // 回傳字串 "2 + 2"
+s1 = "2 + 2"; // 建立一個字串原始型別
+s2 = new String("2 + 2"); // 建立一個字串物件
+console.log(eval(s1)); // 回傳數字 4
+console.log(eval(s2)); // 回傳字串 "2 + 2"
 ```
 
 因為一些原因，程式碼也許在遇到 `String` 物件時，但需要的卻是字串原始型別；儘管如此，通常作者們不需要擔心它的差異。
@@ -145,8 +147,6 @@ console.log(eval(s2));      // 回傳字串 "2 + 2"
 ```js
 console.log(eval(s2.valueOf())); // 回傳數字 4
 ```
-
-> **備註：** 對於在 JavaScript 中其他可用的字串方法，請參閱這篇文章[`StringView` – a C-like representation of strings based on typed arrays](/zh-TW/docs/Web/JavaScript/Typed_arrays/StringView)。
 
 ## 屬性
 
@@ -162,16 +162,17 @@ console.log(eval(s2.valueOf())); // 回傳數字 4
 
 ## `String` 通用方法
 
-> **警告：** 字串通用方法是非標準化的、被棄用的，也有近期將被刪除的。
+> [!WARNING]
+> 字串通用方法是非標準化的、被棄用的，也有近期將被刪除的。
 
 The `String` instance methods are also available in Firefox as of JavaScript 1.6 (though not part of the ECMAScript standard) on the String object for applying String methods to any object:
 
 ```js
 var num = 15;
-alert(String.replace(num, /5/, '2'));
+alert(String.replace(num, /5/, "2"));
 ```
 
-[Generics](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_generic_methods) are also available on {{jsxref("Global_Objects/Array", "Array")}} methods.
+[Generics](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#array_generic_methods) are also available on {{jsxref("Global_Objects/Array", "Array")}} methods.
 
 The following is a shim to provide support to non-supporting browsers:
 
@@ -180,41 +181,163 @@ The following is a shim to provide support to non-supporting browsers:
 // Assumes all supplied String instance methods already present
 // (one may use shims for these if not available)
 (function () {
-    'use strict';
+  "use strict";
 
-    var i,
-        // We could also build the array of methods with the following, but the
-        //   getOwnPropertyNames() method is non-shimable:
-        // Object.getOwnPropertyNames(String).filter(function (methodName)
-        //  {return typeof String[methodName] === 'function'});
-        methods = [
-            'quote', 'substring', 'toLowerCase', 'toUpperCase', 'charAt',
-            'charCodeAt', 'indexOf', 'lastIndexOf', 'startsWith', 'endsWith',
-            'trim', 'trimLeft', 'trimRight', 'toLocaleLowerCase',
-            'toLocaleUpperCase', 'localeCompare', 'match', 'search',
-            'replace', 'split', 'substr', 'concat', 'slice'
-        ],
-        methodCount = methods.length,
-        assignStringGeneric = function (methodName) {
-            var method = String.prototype[methodName];
-            String[methodName] = function (arg1) {
-                return method.apply(arg1, Array.prototype.slice.call(arguments, 1));
-            };
-        };
+  var i,
+    // We could also build the array of methods with the following, but the
+    //   getOwnPropertyNames() method is non-shimable:
+    // Object.getOwnPropertyNames(String).filter(function (methodName)
+    //  {return typeof String[methodName] === 'function'});
+    methods = [
+      "quote",
+      "substring",
+      "toLowerCase",
+      "toUpperCase",
+      "charAt",
+      "charCodeAt",
+      "indexOf",
+      "lastIndexOf",
+      "startsWith",
+      "endsWith",
+      "trim",
+      "trimLeft",
+      "trimRight",
+      "toLocaleLowerCase",
+      "toLocaleUpperCase",
+      "localeCompare",
+      "match",
+      "search",
+      "replace",
+      "split",
+      "substr",
+      "concat",
+      "slice",
+    ],
+    methodCount = methods.length,
+    assignStringGeneric = function (methodName) {
+      var method = String.prototype[methodName];
+      String[methodName] = function (arg1) {
+        return method.apply(arg1, Array.prototype.slice.call(arguments, 1));
+      };
+    };
 
-    for (i = 0; i < methodCount; i++) {
-        assignStringGeneric(methods[i]);
-    }
-}());
+  for (i = 0; i < methodCount; i++) {
+    assignStringGeneric(methods[i]);
+  }
+})();
 ```
 
 ## `String` instances
 
 ### Properties
 
-{{page('en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Properties')}}
+- {{jsxref("String.prototype.length")}}
+  - : Reflects the `length` of the string. Read-only.
 
-{{page('en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Methods')}}
+### Methods
+
+- {{jsxref("String.prototype.at()")}}
+  - : Returns the character (exactly one UTF-16 code unit) at the specified `index`. Accepts negative integers, which count back from the last string character.
+- {{jsxref("String.prototype.charAt()")}}
+  - : Returns the character (exactly one UTF-16 code unit) at the specified
+    `index`.
+- {{jsxref("String.prototype.charCodeAt()")}}
+  - : Returns a number that is the UTF-16 code unit value at the given
+    `index`.
+- {{jsxref("String.prototype.codePointAt()")}}
+  - : Returns a nonnegative integer Number that is the code point value of the UTF-16
+    encoded code point starting at the specified `pos`.
+- {{jsxref("String.prototype.concat()")}}
+  - : Combines the text of two (or more) strings and returns a new string.
+- {{jsxref("String.prototype.includes()")}}
+  - : Determines whether the calling string contains `searchString`.
+- {{jsxref("String.prototype.endsWith()")}}
+  - : Determines whether a string ends with the characters of the string
+    `searchString`.
+- {{jsxref("String.prototype.indexOf()")}}
+  - : Returns the index within the calling {{jsxref("String")}} object of the first
+    occurrence of `searchValue`, or `-1` if not found.
+- {{jsxref("String.prototype.lastIndexOf()")}}
+  - : Returns the index within the calling {{jsxref("String")}} object of the last
+    occurrence of `searchValue`, or `-1` if not found.
+- {{jsxref("String.prototype.localeCompare()")}}
+  - : Returns a number indicating whether the reference string
+    `compareString` comes before, after, or is equivalent to the
+    given string in sort order.
+- {{jsxref("String.prototype.match()")}}
+  - : Used to match regular expression `regexp` against a string.
+- {{jsxref("String.prototype.matchAll()")}}
+  - : Returns an iterator of all `regexp`'s matches.
+- {{jsxref("String.prototype.normalize()")}}
+  - : Returns the Unicode Normalization Form of the calling string value.
+- {{jsxref("String.prototype.padEnd()")}}
+  - : Pads the current string from the end with a given string and returns a new string of
+    the length `targetLength`.
+- {{jsxref("String.prototype.padStart()")}}
+  - : Pads the current string from the start with a given string and returns a new string
+    of the length `targetLength`.
+- {{jsxref("String.prototype.repeat()")}}
+  - : Returns a string consisting of the elements of the object repeated
+    `count` times.
+- {{jsxref("String.prototype.replace()")}}
+  - : Used to replace occurrences of `searchFor` using
+    `replaceWith`. `searchFor` may be a string
+    or Regular Expression, and `replaceWith` may be a string or
+    function.
+- {{jsxref("String.prototype.replaceAll()")}}
+  - : Used to replace all occurrences of `searchFor` using
+    `replaceWith`. `searchFor` may be a string
+    or Regular Expression, and `replaceWith` may be a string or
+    function.
+- {{jsxref("String.prototype.search()")}}
+  - : Search for a match between a regular expression `regexp` and
+    the calling string.
+- {{jsxref("String.prototype.slice()")}}
+  - : Extracts a section of a string and returns a new string.
+- {{jsxref("String.prototype.split()")}}
+  - : Returns an array of strings populated by splitting the calling string at occurrences
+    of the substring `sep`.
+- {{jsxref("String.prototype.startsWith()")}}
+  - : Determines whether the calling string begins with the characters of string
+    `searchString`.
+- {{jsxref("String.prototype.substring()")}}
+  - : Returns a new string containing characters of the calling string from (or between)
+    the specified index (or indices).
+- {{jsxref("String.prototype.toLocaleLowerCase()")}}
+
+  - : The characters within a string are converted to lowercase while respecting the
+    current locale.
+
+    For most languages, this will return the same as
+    {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}.
+
+- {{jsxref("String.prototype.toLocaleUpperCase()", "String.prototype.toLocaleUpperCase( [<var>locale</var>, ...<var>locales</var>])")}}
+
+  - : The characters within a string are converted to uppercase while respecting the
+    current locale.
+
+    For most languages, this will return the same as
+    {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}}.
+
+- {{jsxref("String.prototype.toLowerCase()")}}
+  - : Returns the calling string value converted to lowercase.
+- {{jsxref("String.prototype.toString()")}}
+  - : Returns a string representing the specified object. Overrides the
+    {{jsxref("Object.prototype.toString()")}} method.
+- {{jsxref("String.prototype.toUpperCase()")}}
+  - : Returns the calling string value converted to uppercase.
+- {{jsxref("String.prototype.trim()")}}
+  - : Trims whitespace from the beginning and end of the string.
+- {{jsxref("String.prototype.trimStart()")}}
+  - : Trims whitespace from the beginning of the string.
+- {{jsxref("String.prototype.trimEnd()")}}
+  - : Trims whitespace from the end of the string.
+- {{jsxref("String.prototype.valueOf()")}}
+  - : Returns the primitive value of the specified object. Overrides the
+    {{jsxref("Object.prototype.valueOf()")}} method.
+- [`String.prototype[Symbol.iterator]()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)
+  - : Returns a new iterator object that iterates over the code points of a String value,
+    returning each code point as a String value.
 
 ## Examples
 
@@ -240,5 +363,5 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 ## 參見
 
 - {{domxref("DOMString")}}
-- [`StringView` — a C-like representation of strings based on typed arrays](/zh-TW/Add-ons/Code_snippets/StringView)
+- [`StringView` — a C-like representation of strings based on typed arrays](/zh-TW/docs/Mozilla/Add-ons/Code_snippets/StringView)
 - [Binary strings](/zh-TW/docs/Web/API/DOMString/Binary)

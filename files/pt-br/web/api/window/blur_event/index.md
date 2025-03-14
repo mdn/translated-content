@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onblur
 slug: Web/API/Window/blur_event
-original_slug: Web/API/GlobalEventHandlers/onblur
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -24,46 +23,45 @@ element.onblur = function() { console.log("evento onblur detectado!"); };
 
 ```html
 <html>
+  <head>
+    <title>exemplo de evento onblur</title>
 
-<head>
-<title>exemplo de evento onblur</title>
+    <script type="text/javascript">
+      var elem = null;
 
-<script type="text/javascript">
+      function initElement() {
+        elem = document.getElementById("foo");
+        // NOTA: doEvent(); ou doEvent(param); NÃO irão funcionar aqui.
+        // Deve ser uma referência ao nome da função, não à chamada da função.
+        elem.onblur = doEvent;
+      }
 
-var elem = null;
+      function doEvent() {
+        elem.value = "Tchauzinho";
+        console.log("Evento onblur detectado!");
+      }
+    </script>
 
-function initElement()
-{
-  elem = document.getElementById("foo");
-  // NOTA: doEvent(); ou doEvent(param); NÃO irão funcionar aqui.
-  // Deve ser uma referência ao nome da função, não à chamada da função.
-  elem.onblur = doEvent;
-};
+    <style type="text/css">
+      <!--
+      #foo {
+      border: solid blue 2px;
+      }
+      -->
+    </style>
+  </head>
 
-function doEvent()
-{
-  elem.value = 'Tchauzinho';
-  console.log("Evento onblur detectado!")
-}
-</script>
+  <body onload="initElement();">
+    <form>
+      <input type="text" id="foo" value="Olá!" />
+    </form>
 
-<style type="text/css">
-<!--
-#foo {
-border: solid blue 2px;
-}
--->
-</style>
-</head>
-
-<body onload="initElement();">
-<form>
-<input type="text" id="foo" value="Olá!" />
-</form>
-
-<p>Clique no elemento acima para dá-lo focus, depois clique fora do elemento.<br /> Recarregue a pagina através do NavBar.</p>
-
-</body>
+    <p>
+      Clique no elemento acima para dá-lo focus, depois clique fora do
+      elemento.<br />
+      Recarregue a pagina através do NavBar.
+    </p>
+  </body>
 </html>
 ```
 
@@ -75,6 +73,8 @@ Em contraste cp, MSIE--O qual faz quase todos os elementos receberem o evento bl
 
 ## Especificações
 
-| Especificação                                                                                | Status                           | Comentário |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onblur','onblur')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

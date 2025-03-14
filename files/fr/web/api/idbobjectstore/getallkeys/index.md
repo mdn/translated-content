@@ -1,13 +1,6 @@
 ---
 title: IDBObjectStore.getAllKeys()
 slug: Web/API/IDBObjectStore/getAllKeys
-tags:
-  - API
-  - IDBObjectStore
-  - IndexedDB
-  - Méthode
-  - Référence(2)
-translation_of: Web/API/IDBObjectStore/getAllKeys
 ---
 
 {{APIRef("IndexedDB")}}
@@ -90,10 +83,10 @@ Cette méthode peut déclencher une exception {{domxref("DOMException")}} ayant 
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Initier une connexion : {{domxref("IDBDatabase")}}
 - Utiliser les transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

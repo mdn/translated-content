@@ -5,7 +5,7 @@ slug: Web/API/MediaDevices/getUserMedia
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-El método **`MediaDevices.getUserMedia()`** solicita al usuario permisos para usar un dispositivo de entrada de vídeo y/o uno de audio como una cámara o compartir la pantalla y/o micrófono. Si el usuario proporciona los permisos, entonces le retornará un {{domxref("Promise")}} que es resuelto por el resultado del objeto [`MediaStream`](/en-US/docs/WebRTC/MediaStream_API#LocalMediaStream). Si el usuario niega el permiso, o si el recurso multimedia no es válido, entonces el promise es rechazado con `PermissionDeniedError` o `NotFoundError` respectivamente. Nótese que es posible que el promise retornado no sea ni resuelto ni rechazado, ya que no se requiere que el usuario tome una decisión.
+El método **`MediaDevices.getUserMedia()`** solicita al usuario permisos para usar un dispositivo de entrada de vídeo y/o uno de audio como una cámara o compartir la pantalla y/o micrófono. Si el usuario proporciona los permisos, entonces le retornará un {{domxref("Promise")}} que es resuelto por el resultado del objeto [`MediaStream`](/es/docs/Web/API/Media_Capture_and_Streams_API#localmediastream). Si el usuario niega el permiso, o si el recurso multimedia no es válido, entonces el promise es rechazado con `NotAllowedError` o `NotFoundError` respectivamente. Nótese que es posible que el promise retornado no sea ni resuelto ni rechazado, ya que no se requiere que el usuario tome una decisión.
 
 ## Sintaxis
 
@@ -37,7 +37,7 @@ navigator.mediaDevices.getUserMedia(myConstraints).then(function(mediaStream) {
     { audio: true, video: true }
     ```
 
-    Mientras que la información acerca de las cámaras y micrófonos de los usuarios se encuentran inaccesibles por razones de privacidad, una aplicación puede solicitar la cámara y las capacidades del micrófono que este requiera, usando restricciones adicionales. El siguiente código es para mosrtar una resolución de una cámara de 1280x720.
+    Mientras que la información acerca de las cámaras y micrófonos de los usuarios se encuentran inaccesibles por razones de privacidad, una aplicación puede solicitar la cámara y las capacidades del micrófono que este requiera, usando restricciones adicionales. El siguiente código es para mostrar una resolución de una cámara de 1280x720.
 
     ```js
     {
@@ -138,53 +138,54 @@ p.catch(function(err) { console.log(err.name); }); // always check for errors at
 He aquí un ejemplo del uso de `mediaDevices.getUserMedia()`, incluyendo un polyfill para hacer frente a los navegadores más antiguos.
 
 ```js
-var promisifiedOldGUM = function(constraints, successCallback, errorCallback) {
-
+var promisifiedOldGUM = function (constraints, successCallback, errorCallback) {
   // First get ahold of getUserMedia, if present
-  var getUserMedia = (navigator.getUserMedia ||
-      navigator.webkitGetUserMedia ||
-      navigator.mozGetUserMedia);
+  var getUserMedia =
+    navigator.getUserMedia ||
+    navigator.webkitGetUserMedia ||
+    navigator.mozGetUserMedia;
 
   // Some browsers just don't implement it - return a rejected promise with an error
   // to keep a consistent interface
-  if(!getUserMedia) {
-    return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+  if (!getUserMedia) {
+    return Promise.reject(
+      new Error("getUserMedia is not implemented in this browser"),
+    );
   }
 
   // Otherwise, wrap the call to the old navigator.getUserMedia with a Promise
-  return new Promise(function(successCallback, errorCallback) {
+  return new Promise(function (successCallback, errorCallback) {
     getUserMedia.call(navigator, constraints, successCallback, errorCallback);
   });
-
-}
+};
 
 // Older browsers might not implement mediaDevices at all, so we set an empty object first
-if(navigator.mediaDevices === undefined) {
+if (navigator.mediaDevices === undefined) {
   navigator.mediaDevices = {};
 }
 
 // Some browsers partially implement mediaDevices. We can't just assign an object
 // with getUserMedia as it would overwrite existing properties.
 // Here, we will just add the getUserMedia property if it's missing.
-if(navigator.mediaDevices.getUserMedia === undefined) {
+if (navigator.mediaDevices.getUserMedia === undefined) {
   navigator.mediaDevices.getUserMedia = promisifiedOldGUM;
 }
-
 
 // Prefer camera resolution nearest to 1280x720.
 var constraints = { audio: true, video: { width: 1280, height: 720 } };
 
-navigator.mediaDevices.getUserMedia(constraints)
-.then(function(stream) {
-  var video = document.querySelector('video');
-  video.src = window.URL.createObjectURL(stream);
-  video.onloadedmetadata = function(e) {
-    video.play();
-  };
-})
-.catch(function(err) {
-  console.log(err.name + ": " + err.message);
-});
+navigator.mediaDevices
+  .getUserMedia(constraints)
+  .then(function (stream) {
+    var video = document.querySelector("video");
+    video.src = window.URL.createObjectURL(stream);
+    video.onloadedmetadata = function (e) {
+      video.play();
+    };
+  })
+  .catch(function (err) {
+    console.log(err.name + ": " + err.message);
+  });
 ```
 
 ### Cuadros por segundo
@@ -201,14 +202,16 @@ En telefonos moviles.
 
 ```js
 var front = false;
-document.getElementById('flip-button').onclick = function() { front = !front; };
+document.getElementById("flip-button").onclick = function () {
+  front = !front;
+};
 
-var constraints = { video: { facingMode: (front? "user" : "environment") } };
+var constraints = { video: { facingMode: front ? "user" : "environment" } };
 ```
 
 ## Permisos
 
-Para usar `getUserMedia()` en una app instalable (por ejemplo, una [Firefox OS app](/en-US/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)), necesitas especificar uno o ambos de los siguientes campos dentro de tu archivo manifest:
+Para usar `getUserMedia()` en una app instalable (por ejemplo, una [Firefox OS app](/es/docs/Web/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)), necesitas especificar uno o ambos de los siguientes campos dentro de tu archivo manifest:
 
 ```js
 "permissions": {
@@ -221,7 +224,7 @@ Para usar `getUserMedia()` en una app instalable (por ejemplo, una [Firefox OS a
 }
 ```
 
-Ver [permission: audio-capture](/en-US/Apps/Developing/App_permissions#audio-capture) y [permission: video-capture](/en-US/Apps/Developing/App_permissions#video-capture) para más información.
+Ver [permission: audio-capture](/es/docs/Web/Apps/Developing/App_permissions#audio-capture) y [permission: video-capture](/es/docs/Web/Apps/Developing/App_permissions#video-capture) para más información.
 
 ## Especificaciones
 
@@ -229,12 +232,12 @@ Ver [permission: audio-capture](/en-US/Apps/Developing/App_permissions#audio-cap
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.MediaDevices.getUserMedia")}}
+{{Compat}}
 
 ## Ver También
 
 - The older [navigator.getUserMedia](/es/docs/Web/API/Navigator/getUserMedia) legacy API.
 - [navigator.enumerateDevices](/es/docs/Web/API/MediaDevices/enumerateDevices) - learn the types and number of devices the user has available.
-- [WebRTC](/es/docs/WebRTC) - the introductory page to the API
-- [MediaStream API](/es/docs/WebRTC/MediaStream_API) - the API for the media stream objects
-- [Taking webcam photos](/es/docs/WebRTC/taking_webcam_photos) - a tutorial on using `getUserMedia() for taking photos rather than video.`
+- [WebRTC](/es/docs/Web/API/WebRTC_API) - the introductory page to the API
+- [MediaStream API](/es/docs/Web/API/Media_Capture_and_Streams_API) - the API for the media stream objects
+- [Taking webcam photos](/es/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - a tutorial on using `getUserMedia() for taking photos rather than video.`

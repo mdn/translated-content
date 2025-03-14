@@ -1,28 +1,42 @@
 ---
 title: handler.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Proxy
-browser-compat: javascript.builtins.Proxy.handler.setPrototypeOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 ---
 
 {{JSRef}}
 
 **`handler.setPrototypeOf()`** 메서드는 {{jsxref("Object.setPrototypeOf()")}}에 대한 트랩입니다.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-setprototypeof.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.setPrototypeOf()", "taller")}}
+
+```js interactive-example
+const handler1 = {
+  setPrototypeOf(monster1, monsterProto) {
+    monster1.geneticallyModified = true;
+    return false;
+  },
+};
+
+const monsterProto = {};
+const monster1 = {
+  geneticallyModified: false,
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+// Object.setPrototypeOf(proxy1, monsterProto); // Throws a TypeError
+
+console.log(Reflect.setPrototypeOf(proxy1, monsterProto));
+// Expected output: false
+
+console.log(monster1.geneticallyModified);
+// Expected output: true
+```
 
 ## 구문
 
 ```js
 new Proxy(target, {
-  setPrototypeOf(target, prototype) {
-  }
+  setPrototypeOf(target, prototype) {},
 });
 ```
 
@@ -73,7 +87,8 @@ const handlerReturnsFalse = {
   },
 };
 
-const newProto = {}, target = {};
+const newProto = {},
+  target = {};
 
 const p1 = new Proxy(target, handlerReturnsFalse);
 Object.setPrototypeOf(p1, newProto); // throws a TypeError
@@ -87,14 +102,15 @@ Reflect.setPrototypeOf(p1, newProto); // returns false
 ```js
 const handlerThrows = {
   setPrototypeOf(target, newProto) {
-    throw new Error('custom error');
+    throw new Error("custom error");
   },
 };
 
-const newProto = {}, target = {};
+const newProto = {},
+  target = {};
 
 const p2 = new Proxy(target, handlerThrows);
-Object.setPrototypeOf(p2, newProto);  // throws new Error("custom error")
+Object.setPrototypeOf(p2, newProto); // throws new Error("custom error")
 Reflect.setPrototypeOf(p2, newProto); // throws new Error("custom error")
 ```
 

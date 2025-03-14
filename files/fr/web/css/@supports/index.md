@@ -1,11 +1,6 @@
 ---
-title: '@supports'
+title: "@supports"
 slug: Web/CSS/@supports
-tags:
-  - CSS
-  - Reference
-  - Règle @
-translation_of: Web/CSS/@supports
 ---
 
 {{CSSRef}}
@@ -30,7 +25,7 @@ La règle **`@supports`** permet de définir des déclarations qui dépendent de
 
 `@supports` permet ainsi au moteur de rendu de tester la présence d'une fonctionnalité (on parle de _feature query_).
 
-La règle @ `@supports` peut être utilisée au niveau le plus haut de la feuille de style et également à l'intérieur d'[un groupe de règle conditionnel](/fr/docs/Web/CSS/Règles_@#R.C3.A8gles_conditionnelles_de_groupe). Cette règle @ peut être manipulée via le modèle d'objets CSS et JavaScript, notamment via l'interface {{domxref("CSSSupportsRule")}}.
+La règle @ `@supports` peut être utilisée au niveau le plus haut de la feuille de style et également à l'intérieur d'[un groupe de règle conditionnel](/fr/docs/Web/CSS/At-rule#r.c3.a8gles_conditionnelles_de_groupe). Cette règle @ peut être manipulée via le modèle d'objets CSS et JavaScript, notamment via l'interface {{domxref("CSSSupportsRule")}}.
 
 ## Syntaxe
 
@@ -41,7 +36,8 @@ Une condition de prise en charge se compose d'une ou plusieurs déclarations com
 La plus simple expression est une déclaration CSS, c'est-à-dire un nom de propriété CSS suivi par deux points (:) puis une valeur. Ainsi, l'expression suivante :
 
 ```css
-@supports ( transform-origin: 5% 5% ) { }
+@supports (transform-origin: 5% 5%) {
+}
 ```
 
 renvoie le booléen vrai si la propriété {{cssxref("transform-origin")}} du navigateur considère que la valeur `5% 5%` est valide.
@@ -54,10 +50,11 @@ La deuxième syntaxe permet d'utiliser une fonction. Cette syntaxe est prise en 
 
 #### `selector()` {{Experimental_inline}}
 
-Dans l'exemple qui suit, on teste si le navigateur prend en charge la syntaxe du sélecteur passé en argument. Ici, le code renvoie VRAI si le navigateur prend en charge les [sélecteurs enfants](/fr/docs/Web/CSS/Sélecteurs_enfant)
+Dans l'exemple qui suit, on teste si le navigateur prend en charge la syntaxe du sélecteur passé en argument. Ici, le code renvoie VRAI si le navigateur prend en charge les [sélecteurs enfants](/fr/docs/Web/CSS/Child_combinator)
 
 ```css
-@supports selector(A > B) { }
+@supports selector(A > B) {
+}
 ```
 
 ### L'opérateur `not`
@@ -65,7 +62,8 @@ Dans l'exemple qui suit, on teste si le navigateur prend en charge la syntaxe du
 L'opérateur `not` peut être utilisée avant une expression afin de créer un expression dont le résultat logique est la négation du résultat de l'expression originale. Ainsi, l'expression suivante :
 
 ```css
-@supports not ( transform-origin: 10em 10em 10em ) { }
+@supports not (transform-origin: 10em 10em 10em) {
+}
 ```
 
 renvoie VRAI si la propriété {{cssxref("transform-origin")}} du navigateur ne considère pas la valeur `10em 10em 10em` comme valide.
@@ -73,30 +71,36 @@ renvoie VRAI si la propriété {{cssxref("transform-origin")}} du navigateur ne 
 Comme pour les autres opérateurs, on peut appliquer l'opérateur `not` à une déclaration, quelle que soit sa complexité. Les exemples qui suivent sont donc des expressions valides :
 
 ```css
-@supports not ( not ( transform-origin: 2px ) ) { }
-@supports (display: grid) and ( not (display: inline-grid) ) { }
+@supports not (not (transform-origin: 2px)) {
+}
+@supports (display: grid) and (not (display: inline-grid)) {
+}
 ```
 
-> **Note :** Au niveau le plus haut, il n'est pas nécessaire d'encadrer l'opérateur `not` entre parenthèses. Si on souhaite le combiner avec d'autres opérateurs comme `and` ou `or`, il faudra utiliser des parenthèses.
+> [!NOTE]
+> Au niveau le plus haut, il n'est pas nécessaire d'encadrer l'opérateur `not` entre parenthèses. Si on souhaite le combiner avec d'autres opérateurs comme `and` ou `or`, il faudra utiliser des parenthèses.
 
 ### L'opérateur `and`
 
 L'opérateur `and` peut être utilisé pour former une nouvelle expression à partir de deux expressions. L'expression résultante sera la conjonction des deux expressions originelles. Autrement dit, le résultat de cette nouvelle expression sera VRAI si et seulement si les deux expressions de départ sont vraies et FAUX sinon. Dans l'exemple suivant, l'expression complète ne sera vérifiée que si les deux expressions sont vérifiées :
 
 ```css
-@supports (display: table-cell) and (display: list-item) { }
+@supports (display: table-cell) and (display: list-item) {
+}
 ```
 
 On peut enchaîner plusieurs conjonctions sans avoir à ajouter de parenthèses (l'opérateur est commutatif).
 
 ```css
-@supports (display: table-cell) and (display: list-item) and (display:run-in) { }
+@supports (display: table-cell) and (display: list-item) and (display: run-in) {
+}
 ```
 
 sera équivalente à :
 
 ```css
-@supports (display: table-cell) and ((display: list-item) and (display:run-in)) { }
+@supports (display: table-cell) and ((display: list-item) and (display: run-in)) {
+}
 ```
 
 ### L'opérateur `or`
@@ -104,24 +108,34 @@ sera équivalente à :
 L'opérateur `or` peut être utilisé pour former une nouvelle expression à partir de deux expressions. L'expression résultante sera la disjonction des deux expressions originelles. Autrement dit, le résultat de cette nouvelle expression sera VRAI si au moins une des deux expressions est vraie. Dans l'exemple qui suit, l'expression complète est vérifiée si au moins une des deux (ce peuvent être les deux) expressions est vérifiée :
 
 ```css
-@supports ( transform-style: preserve ) or ( -moz-transform-style: preserve ) { }
+@supports (transform-style: preserve) or (-moz-transform-style: preserve) {
+}
 ```
 
 On peut enchaîner plusieurs disjonctions sans qu'il soit nécessaire d'ajouter des parenthèses.
 
 ```css
-@supports ( transform-style: preserve ) or ( -moz-transform-style: preserve ) or
-          ( -o-transform-style: preserve ) or ( -webkit-transform-style: preserve  ) { }
+@supports (transform-style: preserve) or (-moz-transform-style: preserve) or
+  (-o-transform-style: preserve) or (-webkit-transform-style: preserve) {
+}
 ```
 
 sera ainsi équivalente à :
 
 ```css
-@supports ( transform-style: preserve-3d ) or (( -moz-transform-style: preserve-3d ) or
-          (( -o-transform-style: preserve-3d ) or ( -webkit-transform-style: preserve-3d  ))) { }
+@supports (transform-style: preserve-3d) or
+  (
+    (-moz-transform-style: preserve-3d) or
+      (
+        (-o-transform-style: preserve-3d) or
+          (-webkit-transform-style: preserve-3d)
+      )
+  ) {
+}
 ```
 
-> **Note :** Lorsqu'on utilise à la fois l'opérateur `and` et l'opérateur `or`, il devient nécessaire d'utiliser des parenthèses pour que l'ordre d'application des opérateurs soit défini. Si on n'utilise pas de parenthèses, la condition sera considérée comme invalide et l'ensemble de la règle @ sera ignorée.
+> [!NOTE]
+> Lorsqu'on utilise à la fois l'opérateur `and` et l'opérateur `or`, il devient nécessaire d'utiliser des parenthèses pour que l'ordre d'application des opérateurs soit défini. Si on n'utilise pas de parenthèses, la condition sera considérée comme invalide et l'ensemble de la règle @ sera ignorée.
 
 ### Syntaxe formelle
 

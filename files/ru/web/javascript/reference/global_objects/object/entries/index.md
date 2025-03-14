@@ -1,14 +1,28 @@
 ---
 title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 ---
 
 {{JSRef}}
 
 **`Object.entries()`** метод возвращает массив собственных перечисляемых свойств указанного объекта в формате `[key, value]`, в том же порядке, что и в цикле {{jsxref("Statements/for...in", "for...in")}} (разница в том, что for-in перечисляет свойства из цепочки прототипов). Порядок элементов в массиве который возвращается **`Object.entries()`** не зависит от того как объект объявлен. Если существует необходимость в определённом порядке, то массив должен быть отсортирован до вызова метода, например `Object.entries(obj).sort((a, b) => a[0] - b[0]);`.
 
-{{EmbedInteractiveExample("pages/js/object-entries.html")}}
+{{InteractiveExample("JavaScript Demo: Object.entries()")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+};
+
+for (const [key, value] of Object.entries(object1)) {
+  console.log(`${key}: ${value}`);
+}
+
+// Expected output:
+// "a: somestring"
+// "b: 42"
+```
 
 ## Синтаксис
 
@@ -36,15 +50,24 @@ var obj = { foo: "bar", baz: 42 };
 console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
 
 // массив как объект
-var obj = { 0: 'a', 1: 'b', 2: 'c' };
+var obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.entries(obj)); // [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ]
 
 // массив как объект c random сортировкой ключей
-var an_obj = { 100: 'a', 2: 'b', 7: 'c' };
+var an_obj = { 100: "a", 2: "b", 7: "c" };
 console.log(Object.entries(an_obj)); // [ ['2', 'b'], ['7', 'c'], ['100', 'a'] ]
 
 // getFoo is property which isn't enumerable
-var my_obj = Object.create({}, { getFoo: { value: function() { return this.foo; } } });
+var my_obj = Object.create(
+  {},
+  {
+    getFoo: {
+      value: function () {
+        return this.foo;
+      },
+    },
+  },
+);
 my_obj.foo = "bar";
 console.log(Object.entries(my_obj)); // [ ['foo', 'bar'] ]
 

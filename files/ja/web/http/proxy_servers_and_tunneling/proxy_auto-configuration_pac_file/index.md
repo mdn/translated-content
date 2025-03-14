@@ -1,7 +1,6 @@
 ---
 title: プロキシー自動設定ファイル
 slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
-original_slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file
 ---
 
 {{HTTPSidebar}}
@@ -84,7 +83,7 @@ application/x-ns-proxy-autoconfig
 
 次に、 .pac 拡張子をこの MIME タイプに結び付けるようサーバーを設定してください。
 
-> **メモ:**
+> [!NOTE]
 >
 > - JavaScript 関数は常に単体のファイルで保存し、 HTML ファイルやその他のファイルに埋め込まないでください。
 > - この文書の最後にある例は完全なものです。ファイルを保存して使用するのに追加する必要がある構文はありません。 (もちろん、 JavaScript を編集して自分のサイトのドメイン名やサブネットマスクに合わせる必要があります。)
@@ -126,17 +125,18 @@ PAC ファイルを作成するために、以下の関数を使用できます�
 
   - `ProxyConfig.bindings` {{deprecated_inline}}
 
-> **メモ:** 以下の例をテストするために、 pactester ([pacparser](https://github.com/manugarg/pacparser) パッケージの一部) を使用しました。
+> [!NOTE]
+> 以下の例をテストするために、 pactester ([pacparser](https://github.com/manugarg/pacparser) パッケージの一部) を使用しました。
 >
 > - PAC ファイルは `proxy.pac` という名前です
-> - コマンドライン: `pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org` (引数 `host` に `www.mozilla.org` を、引数 `url` に `http://www.mozilla.org` を渡します)
+> - コマンドライン: `pactester -p ~/pacparser-master/tests/proxy.pac -u https://www.mozilla.org` (引数 `host` に `www.mozilla.org` を、引数 `url` に `https://www.mozilla.org` を渡します)
 
 ### isPlainHostName()
 
 #### 構文
 
 ```js
-isPlainHostName(host)
+isPlainHostName(host);
 ```
 
 #### 引数
@@ -151,8 +151,8 @@ isPlainHostName(host)
 #### 例
 
 ```js
-isPlainHostName("www.mozilla.org") // false
-isPlainHostName("www") // true
+isPlainHostName("www.mozilla.org"); // false
+isPlainHostName("www"); // true
 ```
 
 ### `dnsDomainIs()`
@@ -160,7 +160,7 @@ isPlainHostName("www") // true
 #### 構文
 
 ```js
-dnsDomainIs(host, domain)
+dnsDomainIs(host, domain);
 ```
 
 #### 引数
@@ -177,8 +177,8 @@ dnsDomainIs(host, domain)
 #### 例
 
 ```js
-dnsDomainIs("www.mozilla.org", ".mozilla.org") // true
-dnsDomainIs("www", ".mozilla.org") // false
+dnsDomainIs("www.mozilla.org", ".mozilla.org"); // true
+dnsDomainIs("www", ".mozilla.org"); // false
 ```
 
 ### localHostOrDomainIs()
@@ -186,7 +186,7 @@ dnsDomainIs("www", ".mozilla.org") // false
 #### 構文
 
 ```js
-localHostOrDomainIs(host, hostdom)
+localHostOrDomainIs(host, hostdom);
 ```
 
 #### 引数
@@ -203,10 +203,10 @@ localHostOrDomainIs(host, hostdom)
 #### 例
 
 ```js
-localHostOrDomainIs("www.mozilla.org" , "www.mozilla.org") // true (exact match)
-localHostOrDomainIs("www"             , "www.mozilla.org") // true (hostname match, domain not specified)
-localHostOrDomainIs("www.google.com"  , "www.mozilla.org") // false (domain name mismatch)
-localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mismatch)
+localHostOrDomainIs("www.mozilla.org", "www.mozilla.org"); // true (exact match)
+localHostOrDomainIs("www", "www.mozilla.org"); // true (hostname match, domain not specified)
+localHostOrDomainIs("www.google.com", "www.mozilla.org"); // false (domain name mismatch)
+localHostOrDomainIs("home.mozilla.org", "www.mozilla.org"); // false (hostname mismatch)
 ```
 
 ### isResolvable()
@@ -214,7 +214,7 @@ localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mi
 #### 構文
 
 ```js
-isResolvable(host)
+isResolvable(host);
 ```
 
 #### 引数
@@ -227,7 +227,7 @@ isResolvable(host)
 #### 例
 
 ```js
-isResolvable("www.mozilla.org") // true
+isResolvable("www.mozilla.org"); // true
 ```
 
 ### isInNet()
@@ -235,7 +235,7 @@ isResolvable("www.mozilla.org") // true
 #### 構文
 
 ```js
-isInNet(host, pattern, mask)
+isInNet(host, pattern, mask);
 ```
 
 #### 引数
@@ -254,9 +254,11 @@ isInNet(host, pattern, mask)
 #### 例
 
 ```js
-function alert_eval(str) { alert(str + ' is ' + eval(str)) }
+function alert_eval(str) {
+  alert(str + " is " + eval(str));
+}
 function FindProxyForURL(url, host) {
-  alert_eval('isInNet(host, "63.245.213.24", "255.255.255.255")')
+  alert_eval('isInNet(host, "63.245.213.24", "255.255.255.255")');
   // "PAC-alert: isInNet(host, "63.245.213.24", "255.255.255.255") is true"
 }
 ```
@@ -264,7 +266,7 @@ function FindProxyForURL(url, host) {
 ### dnsResolve()
 
 ```js
-dnsResolve(host)
+dnsResolve(host);
 ```
 
 #### 引数
@@ -285,7 +287,7 @@ dnsResolve("www.mozilla.org"); // returns the string "104.16.41.2"
 #### 構文
 
 ```js
-convert_addr(ipaddr)
+convert_addr(ipaddr);
 ```
 
 #### 引数
@@ -306,7 +308,7 @@ convert_addr("104.16.41.2"); // returns the decimal number 1745889538
 #### 構文
 
 ```js
-myIpAddress()
+myIpAddress();
 ```
 
 #### 引数
@@ -317,12 +319,13 @@ myIpAddress()
 
 Firefox が動作しているマシンのサーバー IP アドレスを、ドット区切りの整数形式の文字列で返します。
 
-> **警告:** myIpAddress() は Linux マシンでは、 **`nslookup localhost`** が返すサーバーアドレスと同じ IP アドレスを返します。パブリック IP アドレスは返しません。
+> [!WARNING]
+> myIpAddress() は Linux マシンでは、 **`nslookup localhost`** が返すサーバーアドレスと同じ IP アドレスを返します。パブリック IP アドレスは返しません。
 
 #### 例
 
 ```js
-myIpAddress() //returns the string "127.0.1.1" if you were running Firefox on that localhost
+myIpAddress(); //returns the string "127.0.1.1" if you were running Firefox on that localhost
 ```
 
 ### dnsDomainLevels()
@@ -330,7 +333,7 @@ myIpAddress() //returns the string "127.0.1.1" if you were running Firefox on th
 #### 構文
 
 ```js
-dnsDomainLevels(host)
+dnsDomainLevels(host);
 ```
 
 #### 引数
@@ -343,8 +346,8 @@ dnsDomainLevels(host)
 #### 例
 
 ```js
-dnsDomainLevels("www");             // 0
-dnsDomainLevels("mozilla.org");     // 1
+dnsDomainLevels("www"); // 0
+dnsDomainLevels("mozilla.org"); // 1
 dnsDomainLevels("www.mozilla.org"); // 2
 ```
 
@@ -353,7 +356,7 @@ dnsDomainLevels("www.mozilla.org"); // 2
 #### 構文
 
 ```js
-shExpMatch(str, shexp)
+shExpMatch(str, shexp);
 ```
 
 #### 引数
@@ -367,7 +370,8 @@ shExpMatch(str, shexp)
 
 特定のグロブ式の構文に対応しているかどうかは、ブラウザーによって異なります。 `*` （任意の数の文字に一致）と `?` （1 文字に一致）は常に対応していますが、 `[characters]` と `[^characters]` は（Firefoxを含む）いくつかの実装で追加的に対応しています。
 
-> **メモ:** クライアントが対応している場合、JavaScript の正規表現は通常 URL (および他の文字列) をパターン一致させるより強力で一貫した方法を提供します。
+> [!NOTE]
+> クライアントが対応している場合、JavaScript の正規表現は通常 URL (および他の文字列) をパターン一致させるより強力で一貫した方法を提供します。
 
 #### 例
 
@@ -381,10 +385,11 @@ shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); //
 #### 構文
 
 ```js
-weekdayRange(wd1, wd2, [gmt])
+weekdayRange(wd1, wd2, [gmt]);
 ```
 
-> **メモ:** （Firefox 49以前） 関数でこれらの引数を範囲として評価したい場合は、 wd1 が wd2 より小さくなければなりません。以下の警告を参照してください。
+> [!NOTE]
+> （Firefox 49以前） 関数でこれらの引数を範囲として評価したい場合は、 wd1 が wd2 より小さくなければなりません。以下の警告を参照してください。
 
 #### 引数
 
@@ -406,11 +411,11 @@ weekdayRange(wd1, wd2, [gmt])
 #### 例
 
 ```js
-weekdayRange("MON", "FRI");        // returns true Monday through Friday (local timezone)
+weekdayRange("MON", "FRI"); // returns true Monday through Friday (local timezone)
 weekdayRange("MON", "FRI", "GMT"); // returns true Monday through Friday (GMT timezone)
-weekdayRange("SAT");               // returns true on Saturdays local time
-weekdayRange("SAT", "GMT");        // returns true on Saturdays GMT time
-weekdayRange("FRI", "MON");        // returns true Friday and Monday only (note, order does matter!)
+weekdayRange("SAT"); // returns true on Saturdays local time
+weekdayRange("SAT", "GMT"); // returns true on Saturdays GMT time
+weekdayRange("FRI", "MON"); // returns true Friday and Monday only (note, order does matter!)
 ```
 
 ### dateRange()
@@ -427,7 +432,8 @@ dateRange(<month1>, <year1>, <month2>, <year2>, [gmt])
 dateRange(<day1>, <month1>, <year1>, <day2>, <month2>, <year2>, [gmt])
 ```
 
-> **メモ:** （Firefox 49 以前）関数がこれらの引数を範囲として評価したい場合、 day1 は day2 よりも小さく、 month1 は month2 よりも小さく、 year1 は year2 よりも小さくなければなりません。以下の警告を参照してください。
+> [!NOTE]
+> （Firefox 49 以前）関数がこれらの引数を範囲として評価したい場合、 day1 は day2 よりも小さく、 month1 は month2 よりも小さく、 year1 は year2 よりも小さくなければなりません。以下の警告を参照してください。
 
 #### 引数
 
@@ -450,17 +456,17 @@ dateRange(<day1>, <month1>, <year1>, <day2>, <month2>, <year2>, [gmt])
 - gmt
   - : 文字列 "GMT" を指定すると、GMT タイムゾーンで時刻の比較を行います。指定しない場合は、ローカルタイムゾーンでの時刻と見なされます。
 
-1つの値のみが指定された場合（日、月、年のカテゴリーから）、この関数はその指定に一致する日にのみ真値を返します。両方の値が指定された場合、結果はそれらの時間の間で true となり、境界も含まれますが、境界は順序付けされます_。
+1つの値のみが指定された場合（日、月、年のカテゴリーから）、この関数はその指定に一致する日にのみ真値を返します。両方の値が指定された場合、結果はそれらの時間の間で true となり、境界も含まれますが、境界は順序付けされます\_。
 
 > **警告:** **日、月、年の順序が重要です**。 Firefox 49 以前では、 `dateRange("JAN", "DEC")` は常に `true` と評価されます。現在では、 `dateRange("DEC", "JAN")` は現在の月が 12 月か 1 月のときのみ、 true と評価されます。
 
 #### 例
 
 ```js
-dateRange(1);            // returns true on the first day of each month, local timezone
-dateRange(1, "GMT")      // returns true on the first day of each month, GMT timezone
-dateRange(1, 15);        // returns true on the first half of each month
-dateRange(24, "DEC");    // returns true on 24th of December each year
+dateRange(1); // returns true on the first day of each month, local timezone
+dateRange(1, "GMT"); // returns true on the first day of each month, GMT timezone
+dateRange(1, 15); // returns true on the first half of each month
+dateRange(24, "DEC"); // returns true on 24th of December each year
 dateRange("JAN", "MAR"); // returns true on the first quarter of the year
 
 dateRange(1, "JUN", 15, "AUG");
@@ -485,12 +491,13 @@ dateRange(1995, 1997);
 
 #### 構文
 
-```html
+```js
 // The full range of expansions is analogous to dateRange.
 timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
 ```
 
-> **メモ:** （Firefox 49以前）関数がこれらの引数を範囲として評価したい場合、カテゴリー hour1, min1, sec1 は、カテゴリー hour2, min2, sec2 よりも小さくなければなりません。下記の警告を参照してください。
+> [!NOTE]
+> （Firefox 49以前）関数がこれらの引数を範囲として評価したい場合、カテゴリー hour1, min1, sec1 は、カテゴリー hour2, min2, sec2 よりも小さくなければなりません。下記の警告を参照してください。
 
 #### 引数
 
@@ -503,18 +510,18 @@ timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
 - gmt
   - : GMTタイムゾーンを表す文字列 "GMT"、またはローカルタイムゾーンを表す指定なしのどちらかです。
 
-1 つの値のみが指定された場合（各カテゴリー：時、分、秒）、この関数は、その指定に一致する時間でのみ真値を返します。両方の値が指定された場合、結果はそれらの時間の間で真となり、境界を含みますが、境界は順序付けされます_。
+1 つの値のみが指定された場合（各カテゴリー：時、分、秒）、この関数は、その指定に一致する時間でのみ真値を返します。両方の値が指定された場合、結果はそれらの時間の間で真となり、境界を含みますが、境界は順序付けされます\_。
 
 > **警告:** **時、分、秒の順序が重要です**。 Firefox 49 以前では、 `timeRange(0, 23)` は常に true と評価されます。現在は `timeRange(23, 0)` は現在の時刻が 23:00 か 0:00 のときだけ true と評価されます。
 
 #### 例
 
 ```js
-timerange(12);                // returns true from noon to 1pm
-timerange(12, 13);            // returns true from noon to 1pm
-timerange(12, "GMT");         // returns true from noon to 1pm, in GMT timezone
-timerange(9, 17);             // returns true from 9am to 5pm
-timerange(8, 30, 17, 00);     // returns true from 8:30am to 5:00pm
+timerange(12); // returns true from noon to 1pm
+timerange(12, 13); // returns true from noon to 1pm
+timerange(12, "GMT"); // returns true from noon to 1pm, in GMT timezone
+timerange(9, 17); // returns true from 9am to 5pm
+timerange(8, 30, 17, 00); // returns true from 8:30am to 5:00pm
 timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds past midnight
 ```
 
@@ -536,15 +543,16 @@ alert(message)
 #### 例
 
 ```js
-alert(host + " = " + dnsResolve(host));            // logs the host name and its IP address
-alert("Error: shouldn't reach this clause.");      // log a simple message
+alert(host + " = " + dnsResolve(host)); // logs the host name and its IP address
+alert("Error: shouldn't reach this clause."); // log a simple message
 ```
 
 ## 例 1
 
 ### ローカルホスト以外ではプロキシーを使用する
 
-> **メモ:** この後の例はすべて非常に特殊なものであるため、テストはしていません。
+> [!NOTE]
+> この後の例はすべて非常に特殊なものであるため、テストはしていません。
 
 完全修飾されていないホストや、ローカルドメインにあるホストはすべて直接接続されます。それ以外はすべて `w3proxy.mozilla.org:8080` を介して接続されます。プロキシーがダウンした場合、自動的に直接接続になります。
 
@@ -558,7 +566,8 @@ function FindProxyForURL(url, host) {
 }
 ```
 
-> **メモ:** これは、プロキシーが 1 つしかない場合の、最も単純で最も効率的な自動設定ファイルです。
+> [!NOTE]
+> これは、プロキシーが 1 つしかない場合の、最も単純で最も効率的な自動設定ファイルです。
 
 ## 例 2
 
@@ -582,7 +591,8 @@ function FindProxyForURL(url, host) {
 
 上記の例では、mozilla.org ドメインのローカルホスト以外のすべてにプロキシーを使用します。さらに例外として、ホスト `www.mozilla.org` と `merchant.mozilla.org` はプロキシーを経由して接続されることになります。
 
-> **メモ:** 効率化のための例外処理、 `localHostOrDomainIs()` の関数はローカルドメインにある URL に対してのみ実行され、すべての URL に対して実行されるわけではありません。上記の効率的な動作を実現するために、 _and_ 式の前に _or_ 式を括弧で囲むことに注意してください。
+> [!NOTE]
+> 効率化のための例外処理、 `localHostOrDomainIs()` の関数はローカルドメインにある URL に対してのみ実行され、すべての URL に対して実行されるわけではありません。上記の効率的な動作を実現するために、 _and_ 式の前に _or_ 式を括弧で囲むことに注意してください。
 
 ## 例 3
 
@@ -592,10 +602,8 @@ function FindProxyForURL(url, host) {
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isResolvable(host))
-    return "DIRECT";
-  else
-    return "PROXY proxy.mydomain.com:8080";
+  if (isResolvable(host)) return "DIRECT";
+  else return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -623,10 +631,8 @@ function FindProxyForURL(url, host) {
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isInNet(host, "198.95.0.0", "255.255.0.0"))
-    return "DIRECT";
-  else
-    return "PROXY proxy.mydomain.com:8080";
+  if (isInNet(host, "198.95.0.0", "255.255.0.0")) return "DIRECT";
+  else return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -652,32 +658,31 @@ function FindProxyForURL(url, host) {
 
 この例はより洗練されています。4 台のプロキシサーバがあり、そのうちの 1 台は他のすべてのプロキシーサーバーの ホットスタンバイとなっていて、残りの 3 台のうちの 1 台がダウンすると、 4 台目が見なされます。さらに、残りの 3 つのプロキシーサーバーは URL パターンに基づいて負荷を分担し、キャッシュをより効果的にしています（3 つのサーバーにはどの文書も 1 つのコピーしかありません - それぞれに 1 つのコピーがあるのとは対照的です）。負荷はこのように配分されます。
 
-| プロキシー | 目的           |
-| ----- | ----------------- |
-| #1    | .com ドメイン       |
-| #2    | .edu ドメイン       |
-| #3    | その他のすべてのドメイン |
-| #4    | ホットスタンバイ      |
+| プロキシー | 目的                     |
+| ---------- | ------------------------ |
+| #1         | .com ドメイン            |
+| #2         | .edu ドメイン            |
+| #3         | その他のすべてのドメイン |
+| #4         | ホットスタンバイ         |
 
 ローカルからのアクセスはすべて直接であることが望まれます。すべてのプロキシサーバーは 8080 番ポートで動作します（要件ではありません。ポートを変更すればいいのです。ただし、両側の設定を変更するのを忘れないでください）。 JavaScript の **`+`** 演算子で文字列を連結することができることに注意してください。
 
 ```js
 function FindProxyForURL(url, host) {
-
   if (isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com"))
     return "DIRECT";
-
   else if (shExpMatch(host, "*.com"))
-    return "PROXY proxy1.mydomain.com:8080; " +
-           "PROXY proxy4.mydomain.com:8080";
-
+    return (
+      "PROXY proxy1.mydomain.com:8080; " + "PROXY proxy4.mydomain.com:8080"
+    );
   else if (shExpMatch(host, "*.edu"))
-    return "PROXY proxy2.mydomain.com:8080; " +
-           "PROXY proxy4.mydomain.com:8080";
-
+    return (
+      "PROXY proxy2.mydomain.com:8080; " + "PROXY proxy4.mydomain.com:8080"
+    );
   else
-    return "PROXY proxy3.mydomain.com:8080; " +
-           "PROXY proxy4.mydomain.com:8080";
+    return (
+      "PROXY proxy3.mydomain.com:8080; " + "PROXY proxy4.mydomain.com:8080"
+    );
 }
 ```
 
@@ -689,26 +694,18 @@ function FindProxyForURL(url, host) {
 
 ```js
 function FindProxyForURL(url, host) {
-
-  if (url.startsWith("http:"))
-    return "PROXY http-proxy.mydomain.com:8080";
-
-  else if (url.startsWith("ftp:"))
-    return "PROXY ftp-proxy.mydomain.com:8080";
-
+  if (url.startsWith("http:")) return "PROXY http-proxy.mydomain.com:8080";
+  else if (url.startsWith("ftp:")) return "PROXY ftp-proxy.mydomain.com:8080";
   else if (url.startsWith("gopher:"))
     return "PROXY gopher-proxy.mydomain.com:8080";
-
   else if (url.startsWith("https:") || url.startsWith("snews:"))
     return "PROXY security-proxy.mydomain.com:8080";
-
-  else
-    return "DIRECT";
-
+  else return "DIRECT";
 }
 ```
 
-> **メモ:** 同じことは、先に記述した [`shExpMatch()`](#shexpmatch) 関数を使って実現することができます。
+> [!NOTE]
+> 同じことは、先に記述した [`shExpMatch()`](#shexpmatch) 関数を使って実現することができます。
 
 例:
 
@@ -718,7 +715,8 @@ if (shExpMatch(url, "http:*")) {
 }
 ```
 
-> **メモ:** autoconfig ファイルは CGI スクリプトによって出力することができます。これは例えば、クライアントの IP アドレス（CGI では `REMOTE_ADDR` 環境変数）に基づいて autoconfig ファイルが異なる動作をするようにする場合に便利です。
+> [!NOTE]
+> autoconfig ファイルは CGI スクリプトによって出力することができます。これは例えば、クライアントの IP アドレス（CGI では `REMOTE_ADDR` 環境変数）に基づいて autoconfig ファイルが異なる動作をするようにする場合に便利です。
 >
 > `isInNet()`, `isResolvable()`, `dnsResolve()` 関数の使用は、 DNS サーバーを参照する必要があるため、慎重に検討されるべきです。その他の autoconfig 関連の関数はすべて、 DNS サーバーを使用する必要のない単なる文字列一致関数である。プロキシーを使用した場合は、プロキシーが DNS ルックアップを行うため、 DNS サーバーへの影響が倍増する。ほとんどの場合、これらの関数は目的の結果を得るためには必要ない。
 

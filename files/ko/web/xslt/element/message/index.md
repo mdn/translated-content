@@ -1,14 +1,11 @@
 ---
 title: message
 slug: Web/XSLT/Element/message
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/message
-original_slug: Web/XSLT/message
 ---
-{{ XsltRef() }}
 
-`<xsl:message>` 요소는 (NS에서 자바스크립트 콘솔에) 메시지를 출력하고 선택에 따라 스타일시트 실행을 끝냅니다. 디버깅에 유용할 수 있습니다.
+{{XsltSidebar}}{{ XsltRef() }}
+
+`<xsl:message>` 요소는 (NS에서 JavaScript 콘솔에) 메시지를 출력하고 선택에 따라 스타일시트 실행을 끝냅니다. 디버깅에 유용할 수 있습니다.
 
 ### 문법
 
@@ -33,7 +30,7 @@ original_slug: Web/XSLT/message
 
 ### 정의
 
-[XSLT section 13, Messages](http://www.w3.org/TR/xslt#message)
+[XSLT section 13, Messages](https://www.w3.org/TR/xslt#message)
 
 ### Gecko 지원
 

@@ -1,13 +1,48 @@
 ---
 title: background-origin
 slug: Web/CSS/background-origin
+l10n:
+  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
 ---
 
 {{CSSRef}}
 
-[CSS](/ja/docs/Web/CSS) の **`background-origin`** プロパティは、背景配置領域を境界の開始位置、境界の内部、パディングの内部から設定します。
+**`background-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、背景配置領域を境界の開始位置、境界の内部、パディングの内部から設定します。
 
-{{EmbedInteractiveExample("pages/css/background-origin.html")}}
+{{InteractiveExample("CSS Demo: background-origin")}}
+
+```css interactive-example-choice
+background-origin: border-box;
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-origin: padding-box;
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-origin: content-box;
+background-repeat: no-repeat;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is the content of the element.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-image: url("/shared-assets/images/examples/leopard.jpg");
+  color: #d73611;
+  text-shadow: 2px 2px black;
+  padding: 20px;
+  border: 10px dashed #333;
+  font-size: 2em;
+  font-weight: bold;
+}
+```
 
 {{cssxref("background-attachment")}} が `fixed` のときは `background-origin` が無視されることに注意してください。
 
@@ -23,6 +58,7 @@ background-origin: content-box;
 background-origin: inherit;
 background-origin: initial;
 background-origin: revert;
+background-origin: revert-layer;
 background-origin: unset;
 ```
 
@@ -53,7 +89,7 @@ background-origin: unset;
 .example {
   border: 10px double;
   padding: 10px;
-  background: url('image.jpg');
+  background: url("image.jpg");
   background-position: center left;
   background-origin: content-box;
 }
@@ -63,7 +99,7 @@ background-origin: unset;
 #example2 {
   border: 4px solid black;
   padding: 10px;
-  background: url('image.gif');
+  background: url("image.gif");
   background-repeat: no-repeat;
   background-origin: border-box;
 }
@@ -71,13 +107,16 @@ background-origin: unset;
 
 ```css
 div {
-  background-image: url('logo.jpg'), url('mainback.png'); /* 背景に 2 つの画像を適用 */
-  background-position: top right, 0px 0px;
+  background-image:
+    url("logo.jpg"), url("mainback.png"); /* 背景に 2 つの画像を適用 */
+  background-position:
+    top right,
+    0px 0px;
   background-origin: content-box, padding-box;
 }
 ```
 
-<h3 id="Using_two_gradients">2 つのグラデーションの使用</h3>
+### 2 つのグラデーションの使用
 
 この例では、ボックスに太い点線の境界線が付いています。最初のグラデーションでは、 `padding-box` を `background-origin` として使用しているため、背景は境界線の内側に表示されます。2 つ目のグラデーションは、`content-box`を使用しているため、コンテンツの後ろにのみ表示されます。
 
@@ -85,8 +124,14 @@ div {
 .box {
   margin: 10px 0;
   color: #fff;
-  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,0.6) 60%, rgba(252,176,69,1) 100%),
-  radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 28%);
+  background:
+    linear-gradient(
+      90deg,
+      rgb(131 58 180 / 100%) 0%,
+      rgb(253 29 29 / 60%) 60%,
+      rgb(252 176 69 / 100%) 100%
+    ),
+    radial-gradient(circle, rgb(255 255 255 / 100%) 0%, rgb(0 0 0 / 100%) 28%);
   border: 20px dashed black;
   padding: 20px;
   width: 400px;

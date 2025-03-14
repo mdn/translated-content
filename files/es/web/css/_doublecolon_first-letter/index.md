@@ -1,11 +1,11 @@
 ---
-title: '::first-letter (:first-letter)'
+title: ::first-letter (:first-letter)
 slug: Web/CSS/::first-letter
 ---
 
 {{CSSRef}}
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) **`::first-letter`** aplica estilos a la primera letra de la primera línea un [elemento de bloque](/es/docs/Web/HTML/Block-level_elements), sólo cuando no es precedido de otro contenido (como imágenes o tablas).
+El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) **`::first-letter`** aplica estilos a la primera letra de la primera línea un [elemento de bloque](/es/docs/Glossary/Block-level_content), sólo cuando no es precedido de otro contenido (como imágenes o tablas).
 
 ```css
 /* Selecciona la primera letra de <p> */
@@ -20,7 +20,8 @@ La primera letra de un elemento no es siempre fácil de identificar:
 - Algunos idiomas tienen dígrafos que siempre se capitalizan juntos, como el `IJ` en holandés. En estos casos, ambas letras del dígrafo deben coincidir con el pseudo-elemento `::first-letter`. (Esto pobremente implementado en los navegadores; consulte la tabla de compatibilidad).
 - La combinación del pseudoelemento {{ cssxref("::before") }} y la propiedad {{ cssxref("content") }} podría inyectar texto al inico del elemento. En dicho caso, `::first-letter` se aplicaría a la primera letra de este contenido generado.
 
-> **Nota:** CSS3 introdujo la notación`::first-letter` (con doble dos puntos) para distinguir [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) de [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores también aceptan`:first-letter`, introducido en CSS2.
+> [!NOTE]
+> CSS3 introdujo la notación`::first-letter` (con doble dos puntos) para distinguir [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) de [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores también aceptan`:first-letter`, introducido en CSS2.
 
 ## Propiedades permitidas
 
@@ -45,13 +46,21 @@ Hace que la primera letra de cada párrafo sea roja y grande.
 ### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-  ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-  dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
-<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-  aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit
-  esse molestie consequat.</p>
+<p>
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+  kasd gubergren, no sea takimata sanctus est.
+</p>
+<p>
+  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+  consequat.
+</p>
+<p>
+  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat.
+</p>
 <p>-El comienzo es un signo de puntuación especial.</p>
 <p>_El comienzo es un signo de puntuación especial.</p>
 <p>"El comienzo es un signo de puntuación especial.</p>
@@ -80,9 +89,9 @@ p::first-letter {
 
 {{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.first-letter")}}
+{{Compat}}
 
 ## Ver También
 

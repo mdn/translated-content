@@ -3,7 +3,7 @@ title: RegExp.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 ---
 
-{{JSRef("Global_Objects", "RegExp")}}
+{{JSRef}}
 
 ## 概述
 
@@ -25,7 +25,7 @@ regexObj.toString()
 
 ## 示例
 
-### 例子：使用 `toString`
+### 示例：使用 `toString`
 
 下例输出 `RegExp` 对象的字符串值：
 
@@ -45,6 +45,6 @@ alert(foo.toString());         // 显示 "/bar/g"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Object.prototype.toString()")}}

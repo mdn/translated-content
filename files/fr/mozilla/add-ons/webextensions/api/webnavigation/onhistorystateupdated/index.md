@@ -1,20 +1,9 @@
 ---
 title: webNavigation.onHistoryStateUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onHistoryStateUpdated
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onHistoryStateUpdated
-  - webNavigation
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onHistoryStateUpdated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsque la page a utilisé l'[API history](http://diveintohtml5.info/history.html) pour mettre à jour l'URL affichée dans la barre d'adresse du navigateur. Tous les événements futurs de ce cadre utiliseront l'URL mise à jour.
 
@@ -22,11 +11,11 @@ Lancé lorsque la page a utilisé l'[API history](http://diveintohtml5.info/hist
 
 ```js
 browser.webNavigation.onHistoryStateUpdated.addListener(
-  listener,                   // function
-  filter                      // optional object
-)
-browser.webNavigation.onHistoryStateUpdated.removeListener(listener)
-browser.webNavigation.onHistoryStateUpdated.hasListener(listener)
+  listener, // function
+  filter, // optional object
+);
+browser.webNavigation.onHistoryStateUpdated.removeListener(listener);
+browser.webNavigation.onHistoryStateUpdated.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -71,9 +60,9 @@ Les événements ont trois fonctions :
 - `transitionQualifiers`
   - : `Array` de `{{WebExtAPIRef("webNavigation.transitionQualifier", "transitionQualifier")}}`. Informations supplémentaires sur la navigation : par exemple, s'il existait une redirection de serveur ou de client.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.onHistoryStateUpdated")}}
+{{Compat}}
 
 ## Examples
 
@@ -81,12 +70,8 @@ Logs les URL cibles et les informations de transition supplémentaires pour `onH
 
 ```js
 var filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnHistoryStateUpdated(details) {
   console.log("onHistoryStateUpdated: " + details.url);
@@ -94,14 +79,17 @@ function logOnHistoryStateUpdated(details) {
   console.log("Transition qualifiers: " + details.transitionQualifiers);
 }
 
-browser.webNavigation.onHistoryStateUpdated.addListener(logOnHistoryStateUpdated, filter);
+browser.webNavigation.onHistoryStateUpdated.addListener(
+  logOnHistoryStateUpdated,
+  filter,
+);
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

@@ -1,38 +1,35 @@
 ---
 title: VRDisplayCapabilities.hasPosition
 slug: Web/API/VRDisplayCapabilities/hasPosition
-tags:
-  - Виртуальная реальность
-translation_of: Web/API/VRDisplayCapabilities/hasPosition
+l10n:
+  sourceCommit: 532ecbca7b68e7defa4612bc7b00885a13163641
 ---
 
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The **`hasPosition`** read-only property of the {{domxref("VRDisplayCapabilities")}} interface returns a {{domxref("Boolean")}} stating whether the VR display can track and return position information.
+Доступное только для чтения свойство **`hasPosition`** интерфейса {{domxref("VRDisplayCapabilities")}} возвращает `true` если VR-устройство может отслеживать и возвращать информацию о своём местоположении.
 
-## Синтаксис
+> [!NOTE]
+> Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-```js
-var hasItGotPosition = vrDisplayCapabilitiesInstance.hasPosition;
-```
+### Значение
 
-### Value
-
-A {{domxref("Boolean")}}.
+{{domxref("Boolean")}}.
 
 ## Примеры
 
-{{page("/Web/API/VRDisplayCapabilities", "Examples")}}
+Смотрите примеры использования в [`VRDisplayCapabilities`](/ru/docs/Web/API/VRDisplayCapabilities#examples).
 
 ## Спецификации
 
-{{Specifications}}
+Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/). Больше не планируется сделать его стандартом.
 
-## Browser compatibility
+Пока все браузеры не реализуют новые [WebXR API](/ru/docs/Web/API/WebXR_Device_API/Fundamentals), рекомендуется использовать такие фреймворки как [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), [Three.js](https://threejs.org/) или [полифил](https://github.com/immersive-web/webxr-polyfill) для разработки приложений WebXR, которые будут работать [во всех браузерах](https://developer.oculus.com/documentation/web/port-vr-xr/).
+
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [WebVR API homepage](/ru/docs/Web/API/WebVR_API).
-- [MozVr.com](http://mozvr.com/) — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/ru/docs/Web/API/WebVR_API).

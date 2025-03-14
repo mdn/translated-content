@@ -7,7 +7,71 @@ slug: Web/CSS/caption-side
 
 **`caption-side`** は [CSS](/ja/docs/Web/CSS) のプロパティで、表 ({{htmlelement("table")}}) の {{HTMLElement("caption")}} の中身を指定された側に配置します。この値は表の {{cssxref('writing-mode')}} に対する相対値です。
 
-{{EmbedInteractiveExample("pages/css/caption-side.html")}}
+{{InteractiveExample("CSS Demo: caption-side")}}
+
+```css interactive-example-choice
+caption-side: top;
+```
+
+```css interactive-example-choice
+caption-side: bottom;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <table class="transition-all" id="example-element">
+    <caption>
+      Famous animals
+    </caption>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+    </tr>
+    <tr>
+      <td>Giraffe</td>
+      <td>Africa</td>
+    </tr>
+    <tr>
+      <td>Penguin</td>
+      <td>Antarctica</td>
+    </tr>
+    <tr>
+      <td>Sloth</td>
+      <td>South America</td>
+    </tr>
+    <tr>
+      <td>Tiger</td>
+      <td>Asia</td>
+    </tr>
+  </table>
+</section>
+```
+
+```css interactive-example
+table {
+  font-size: 1.2rem;
+  text-align: left;
+  color: #000;
+}
+
+th,
+td {
+  padding: 0.2rem 1rem;
+}
+
+caption {
+  background: #fc3;
+  padding: 0.5rem 1rem;
+}
+
+tr {
+  background: #eee;
+}
+
+tr:nth-child(even) {
+  background: #ccc;
+}
+```
 
 ## 構文
 
@@ -16,9 +80,7 @@ slug: Web/CSS/caption-side
 caption-side: top;
 caption-side: bottom;
 
-/* 警告: 非標準の値 */
-caption-side: block-start;
-caption-side: block-end;
+/* 倫理値 */
 caption-side: inline-start;
 caption-side: inline-end;
 
@@ -34,12 +96,8 @@ caption-side: unset;
 ### 値
 
 - `top`
-  - : キャプションボックスを表の上方に配置します。
-- `bottom`
-  - : キャプションボックスを表の下方に配置します。
-- `block-start`
   - : キャプションボックスを表のブロック方向の先頭に配置します。
-- `block-end`
+- `bottom`
   - : キャプションボックスを表のブロック方向の末尾に配置します。
 - `inline-start`
   - : キャプションボックスを表のインライン方向の先頭に配置します。
@@ -62,17 +120,21 @@ caption-side: unset;
 
 ```html
 <table class="top">
-  <caption>Caption ABOVE the table</caption>
+  <caption>
+    Caption ABOVE the table
+  </caption>
   <tr>
     <td>Some data</td>
     <td>Some more data</td>
   </tr>
 </table>
 
-<br>
+<br />
 
 <table class="bottom">
-  <caption>Caption BELOW the table</caption>
+  <caption>
+    Caption BELOW the table
+  </caption>
   <tr>
     <td>Some data</td>
     <td>Some more data</td>

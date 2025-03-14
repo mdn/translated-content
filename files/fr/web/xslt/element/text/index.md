@@ -1,13 +1,9 @@
 ---
 title: text
 slug: Web/XSLT/Element/text
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/text
-original_slug: Web/XSLT/text
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:text>` écrit un texte littéral dans l'arbre de sortie. Il peut contenir des `#PCDATA`, du texte littéral, et des références aux entités.
 
@@ -34,7 +30,7 @@ Instruction, apparaît dans un modèle.
 
 ### Définition
 
-[XSLT 1.0, section 7.2](http://www.w3.org/TR/xslt#section-Creating-Text).
+[XSLT 1.0, section 7.2](https://www.w3.org/TR/xslt#section-Creating-Text).
 
 ### Support Gecko
 

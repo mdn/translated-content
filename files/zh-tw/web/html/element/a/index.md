@@ -1,225 +1,538 @@
 ---
-title: <a>
+title: <a>：超連結元素
 slug: Web/HTML/Element/a
 ---
 
-**HTML `<a>` 元素**（意為 Anchor）建立了通往其他頁面、檔案、Email 地址、或其他 URL 的超連結。
+{{HTMLSidebar}}
 
-| [內容類型](/zh-TW/docs/HTML/Content_categories) | [流型內容](/zh-TW/docs/HTML/Content_categories#Flow_content)、[phrasing content](/zh-TW/docs/HTML/Content_categories#Phrasing_content), [interactive content](/zh-TW/docs/Web/Guide/HTML/Content_categories#interactive_content), palpable content.                                                                                                                                                                           |
-| ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 內容省略                                        | [Transparent](/zh-TW/docs/HTML/Content_categories#Transparent_content_model), containing either [flow content](/zh-TW/docs/HTML/Content_categories#Flow_content) (excluding [interactive content](/zh-TW/docs/Web/Guide/HTML/Content_categories#interactive_content)) or [phrasing content](/zh-TW/docs/HTML/Content_categories#Phrasing_content).                                                                            |
-| 標籤省略                                        | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                      |
-| 允許的父元素                                    | 任何允許 [phrasing content](/zh-TW/docs/HTML/Content_categories#Phrasing_content) 或 [flow content](/zh-TW/docs/HTML/Content_categories#Flow_content) 的內容，但 <a> 永遠例外（according to the logical principle of symmetry, if <a> tag, as a parent, can not have [interactive content](/zh-TW/docs/Web/Guide/HTML/Content_categories#interactive_content), then the same <a> content can not have <a> tag as its parent） |
-| Permitted ARIA roles                            | {{ARIARole("button")}}, {{ARIARole("checkbox")}}, {{ARIARole("menuitem")}}, {{ARIARole("menuitemcheckbox")}}, {{ARIARole("menuitemradio")}}, {{ARIARole("option")}}, {{ARIARole("radio")}}, {{ARIARole("switch")}}, {{ARIARole("tab")}}, {{ARIARole("treeitem")}}                                                                                |
-| DOM 介面                                        | {{domxref("HTMLAnchorElement")}}                                                                                                                                                                                                                                                                                                                                                                                  |
+**`<a>`** [HTML](/zh-TW/docs/Web/HTML) 元素（或稱*錨點*元素），具有[其 `href` 屬性](#href)，用於創建指向網頁、文件、電子郵件地址、同一頁面中的位置或任何其他 URL 可定位的東西。
+
+每個 `<a>` 元素內的內容*應該*指示連結的目的地。如果存在 `href` 屬性，則在焦點位於 `<a>` 元素上時按下 Enter 鍵將激活它。
+
+{{InteractiveExample("HTML Demo: &lt;a&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>You can reach Michael at:</p>
+
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul>
+```
+
+```css interactive-example
+li {
+  margin-bottom: 0.5rem;
+}
+```
 
 ## 屬性
 
-本元素包含[全域屬性](/zh-TW/docs/HTML/Global_attributes)。
+此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
-- {{HTMLAttrDef("download")}}
+- `download`
 
-  - : Causes the browser to treat the linked URL as a download. Can be used with or without a value:
+  - : 導致瀏覽器將連結的 URL 視為下載。可與或不與 `filename` 值一起使用：
 
-    - Without a value, the browser will suggest a filename/extension, generated from various sources:
+    - 沒有值時，瀏覽器將從各種來源生成的文件名/擴展名提供建議：
 
-      - The {{HTTPHeader("Content-Disposition")}} HTTP header
-      - The final segment in the URL [path](/zh-TW/docs/Web/API/URL/pathname)
-      - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), or {{domxref("Blob.type")}} for a [`blob:` URL](/zh-TW/docs/Web/API/URL/createObjectURL))
+      - {{HTTPHeader("Content-Disposition")}} HTTP 標頭
+      - URL [路徑](/zh-TW/docs/Web/API/URL/pathname)中的最終段落
+      - {{HTTPHeader("Content-Type")}} 標頭中的{{Glossary("MIME_type", "媒體類型")}}，以及 [`data:` URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 的開頭，或是 [`blob:` URL](/zh-TW/docs/Web/API/URL/createObjectURL_static) 的 {{domxref("Blob.type")}}。
 
-    - Defining a value suggests it as the filename. `/` and `\` characters are converted to underscores (`_`). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.
+    - `filename`：定義值可建議作為文件名。`/` 和 `\` 字符將轉換為底線（`_`）。檔案系統可能禁止文件名中的其他字符，因此如果需要，瀏覽器將調整建議的名稱。
 
-    > **Note:**
+    > [!NOTE]
     >
-    > - `download` only works for [same-origin URLs](/zh-TW/docs/Web/Security/Same-origin_policy), or the `blob:` and `data:` schemes.
-    > - How browsers treat downloads varies by browser, user settings, and other factors. The user may be prompted before a download starts, or the file may be saved automatically, or it may open automatically, either in an external application or in the browser itself.
-    > - If the `Content-Disposition` header has different information from the `download` attribute, resulting behavior may differ:
+    > - `download` 只適用於[同源 URL](/zh-TW/docs/Web/Security/Same-origin_policy)，或者 `blob:` 和 `data:` 方案。
+    > - 瀏覽器如何處理下載因瀏覽器、用戶設置和其他因素而異。用戶在下載開始之前可能會收到提示，文件可能會自動保存，或者它可能會自動打開，無論是在外部應用程序中還是在瀏覽器本身中。
+    > - 如果 `Content-Disposition` 標頭與 `download` 屬性的信息不同，則結果行為可能不同：
     >
-    >   - If the header specifies a `filename`, it takes priority over a filename specified in the `download` attribute.
-    >   - If the header specifies a disposition of `inline`, Chrome and Firefox prioritize the attribute and treat it as a download. Old Firefox versions (before 82) prioritize the header and will display the content inline.
+    >   - 如果標頭指定了 `filename`，則優先於 `download` 屬性中指定的文件名。
+    >   - 如果標頭指定了 `inline` 的配置，Chrome 和 Firefox 會將屬性視為下載並優先處理它。舊版 Firefox（82 版之前）會優先處理標頭並在內聯中顯示內容。
 
-- {{HTMLAttrDef("href")}}
+- `href`
 
-  - : The URL that the hyperlink points to. Links are not restricted to HTTP-based URLs — they can use any URL scheme supported by browsers:
+  - : 超連結指向的 URL。連結不限於基於 HTTP 的 URL——它們可以使用瀏覽器支持的任何 URL 方案：
 
-    - Sections of a page with fragment URLs
-    - Pieces of media files with media fragments
-    - Telephone numbers with `tel:` URLs
-    - Email addresses with `mailto:` URLs
-    - While web browsers may not support other URL schemes, web sites can with [`registerProtocolHandler()`](/zh-TW/docs/Web/API/Navigator/registerProtocolHandler)
+    - 具有文件片段的頁面部分
+    - 具有[文字片段](/zh-TW/docs/Web/URI/Reference/Fragment/Text_fragments)的特定文本部分
+    - 具有媒體片段的媒體文件部分
+    - 使用 `tel:` URL 的電話號碼
+    - 使用 `mailto:` URL 的電子郵件地址
+    - 使用 `sms:` URL 的短信文字消息
+    - 儘管網頁瀏覽器可能不支持其他 URL 方案，但網站可以使用 [`registerProtocolHandler()`](/zh-TW/docs/Web/API/Navigator/registerProtocolHandler) 進行設置
 
-- {{HTMLAttrDef("hreflang")}}
-  - : Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as [the global `lang` attribute](/zh-TW/docs/Web/HTML/Global_attributes/lang).
-- {{HTMLAttrDef("ping")}}
-  - : A space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body `PING` to the URLs. Typically for tracking.
-- {{HTMLAttrDef("referrerpolicy")}}
+- `hreflang`
+  - : 指示連結 URL 的人類語言的提示。沒有內建功能。允許的值與[全域 `lang` 屬性](/zh-TW/docs/Web/HTML/Global_attributes/lang)相同。
+- `ping`
+  - : URL 的空格分隔列表。當點擊連結時，瀏覽器將向這些 URL 發送 {{HTTPMethod("POST")}} 請求，內容為 `PING`。通常用於跟蹤。
+- `referrerpolicy`
 
-  - : How much of the [referrer](/zh-TW/docs/Web/HTTP/Headers/Referer) to send when following the link.
+  - : 跟隨連結時發送的[引用者](/zh-TW/docs/Web/HTTP/Reference/Headers/Referer)的程度。
 
-    - `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
-    - `no-referrer-when-downgrade`: The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
-    - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/zh-TW/docs/Learn/Common_questions/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
-    - `origin-when-cross-origin`: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
-    - `same-origin`: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.
-    - `strict-origin`: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).
-    - `strict-origin-when-cross-origin` (default): Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
-    - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/zh-TW/docs/Web/API/HTMLAnchorElement/hash), [password](/zh-TW/docs/Web/API/HTMLAnchorElement/password), or [username](/zh-TW/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
+    - `no-referrer`：不發送 {{HTTPHeader("Referer")}} 標頭。
+    - `no-referrer-when-downgrade`：不發送 {{HTTPHeader("Referer")}} 標頭至沒有 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的[來源](/zh-TW/docs/Web/Security/Same-origin_policy)。
+    - `origin`：發送的引用者將僅限於引用頁面的來源：其[協定](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "主機")}}和{{Glossary("port", "通訊埠")}}。
+    - `origin-when-cross-origin`：發送給其他來源的引用者將僅限於協定、主機和端口。對同一來源的導航仍將包含路徑。
+    - `same-origin`：對於{{Glossary("Same-origin policy", "同一來源")}}，將發送引用者，但跨來源請求將不包含引用者信息。
+    - `strict-origin`：僅在協定安全級別保持不變時（HTTPS→HTTPS）發送文件的源作為引用者，但不要將其發送給不太安全的目的地（HTTPS→HTTP）。
+    - `strict-origin-when-cross-origin`（默認值）：對於同一來源請求，發送完整的 URL；僅在協定安全級別保持不變時（HTTPS→HTTPS）發送源；對於不太安全的目的地（HTTPS→HTTP），不發送標頭。
+    - `unsafe-url`：引用者將包括來源*和*路徑（但不包括[片段](/zh-TW/docs/Web/API/HTMLAnchorElement/hash)、[密碼](/zh-TW/docs/Web/API/HTMLAnchorElement/password)或[用戶名](/zh-TW/docs/Web/API/HTMLAnchorElement/username)）。**此值不安全**，因為它將來自 TLS 保護資源的來源和路徑洩露給不安全的來源。
 
-- {{HTMLAttrDef("rel")}}
-  - : The relationship of the linked URL as space-separated [link types](/zh-TW/docs/Web/HTML/Link_types).
-- {{HTMLAttrDef("target")}}
+- `rel`
+  - : 連結 URL 的關係，作為空格分隔的連結類型。
+- `target`
 
-  - : Where to display the linked URL, as the name for a _browsing context_ (a tab, window, or {{HTMLElement("iframe")}}). The following keywords have special meanings for where to load the URL:
+  - : 要在何處顯示連結 URL，作為*瀏覽上下文*（一個選項卡、窗口或 {{HTMLElement("iframe")}}）的名稱。以下關鍵字對於加載 URL 的位置具有特殊意義：
 
-    - `_self`: the current browsing context. (Default)
-    - `_blank`: usually a new tab, but users can configure browsers to open a new window instead.
-    - `_parent`: the parent browsing context of the current one. If no parent, behaves as `_self`.
-    - `_top`: the topmost browsing context (the "highest" context that's an ancestor of the current one). If no ancestors, behaves as `_self`.
+    - `_self`：當前瀏覽上下文。（默認）
+    - `_blank`：通常是一個新選項卡，但用戶可以配置瀏覽器以打開新窗口。
+    - `_parent`：當前瀏覽上下文的父級。如果沒有父級，則與 `_self` 行為相同。
+    - `_top`：最上層的瀏覽上下文。具體來說，這意味著當前上下文的祖先中的「最高」上下文。如果沒有祖先，則與 `_self` 行為相同。
+    - `_unfencedTop`：允許嵌入的[有圍欄框架](/zh-TW/docs/Web/API/Fenced_frame_API)導航到最頂層框架（即超出有圍欄框架根的遍歷，與其他保留目標不同）。請注意，如果在有圍欄框架上下文之外使用此選項，則導航仍將成功，但它不會像保留關鍵字那樣運作。
 
-    > **Note:** Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/zh-TW/docs/Web/HTML/Link_types/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
+    > [!NOTE]
+    > 將 `target="_blank"` 設置在 `<a>` 元素上，隱含提供了與設置 [`rel="noopener"`](/zh-TW/docs/Web/HTML/Attributes/rel/noopener) 相同的 `rel` 行為，它不設置 `window.opener`。
 
-- {{HTMLAttrDef("type")}}
-  - : Hints at the linked URL's format with a {{Glossary("MIME type")}}. No built-in functionality.
+- `type`
+  - : 提示連結 URL 的格式，使用 {{Glossary("MIME type", "MIME 類型")}}。沒有內建功能。
 
-### Obsolete
+### 已棄用的屬性
 
-- {{htmlattrdef("charset")}} {{Deprecated_inline}}
-  - : This attribute defined the [character encoding](/zh-TW/docs/Glossary/character_encoding) of the linked URL. The value should be a space- and/or comma-delimited list of character sets defined in [RFC 2045](https://tools.ietf.org/html/rfc2045). The default value is `ISO-8859-1`.
+- `charset` {{Deprecated_Inline}}
 
-    > **備註：** This attribute is obsolete in HTML5 and **should not be used by authors**. To achieve its effect, use the HTTP [`Content-Type:`](/zh-TW/docs/Web/HTTP/Headers/Content-Type) header on the linked URL.
-- {{htmlattrdef("coords")}} {{Deprecated_Inline}}
-  - : For use with the below `shape` attribute, this attribute used a comma-separated list of numbers to define the coordinates of the link on the page.
-- {{htmlattrdef("name")}} {{Deprecated_Inline}}
-  - : This attribute was required for anchors defining a possible target location within a page. In HTML 4.01, `id` and `name` could be used simultaneously on a `<a>` element as long as they have identical values.
+  - : 指示連結 URL 的 {{Glossary("character encoding")}}。
 
-    > **備註：** This attribute is obsolete in HTML5, use the [global attribute `id`](/zh-TW/docs/HTML/Global_attributes#attr-id) instead.
-- {{htmlattrdef("rev")}} {{Deprecated_Inline}}
-  - : This attribute specified a reverse link, the inverse relationship of the **rel** attribute. It was deprecated for being very confusing.
-- {{htmlattrdef("shape")}} {{Deprecated_Inline}}
-  - : This attribute was used to define a region for hyperlinks to create an image map. The values are `circle`, `default`, `polygon`, and `rect`. The format of the **coords** attribute depends on the value of shape. For `circle`, the value is `x,y,r` where `x` and `y` are the pixel coordinates for the center of the circle and `r` is the radius value in pixels. For `rect`, the **coords** attribute should be `x,y,w,h`. The `x,y` values define the upper-left-hand corner of the rectangle, while `w` and `h` define the width and height respectively. A value of `polygon` for **shape** requires `x1,y1,x2,y2,...` values for **coords**. Each of the `x,y` pairs defines a point in the polygon, with successive points being joined by straight lines and the last point joined to the first. The value `default` for shape requires that the entire enclosed area, typically an image, be used.
+    > [!NOTE]
+    > 這個屬性已棄用，**不應該被作者使用**。請在連結的 URL 上使用 HTTP {{HTTPHeader("Content-Type")}} 標頭。
 
-    > **備註：** Use the [`usemap` attribute](/zh-TW/docs/Web/HTML/Element/img#attr-usemap) for the {{HTMLElement("img")}} element and the associated {{HTMLElement("map")}} element to define hotspots instead of the `shape` attribute.
+- `coords` {{Deprecated_Inline}}
+  - : 與 [`shape` 屬性](#shape)一起使用。逗號分隔的座標列表。
+- `name` {{Deprecated_Inline}}
 
-## Examples
+  - : 用於在頁面中定義可能的目標位置。在 HTML 4.01 中，`id` 和 `name` 都可以在 `<a>` 上使用，只要它們具有相同的值。
 
-### Linking to an external location
+    > [!NOTE]
+    > 請改用全域屬性 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id)。
 
-```html
-<!-- anchor linking to external file -->
-<a href="https://www.mozilla.com/">
-External Link
-</a>
-```
+- `rev` {{Deprecated_Inline}}
+  - : 指定反向連結；與[形狀屬性](#rel)相反。由於非常混亂而被棄用。
+- `shape` {{Deprecated_Inline}}
 
-#### Result
+  - : 圖像地圖中超連結區域的形狀。
 
-[External Link](https://www.mozilla.com/)
+    > [!NOTE]
+    > 請改用 {{HTMLElement("area")}} 元素代替圖像地圖。
 
-### Linking to another section on the same page
+## 範例
 
-```html
-<!-- links to element on this page with id="attr-href" -->
-<a href="#attr-href">
-Description of Same-Page Links
-</a>
-```
+### 鏈接到絕對 URL
 
-#### Result
-
-[Description of Same Page Links](#attr-href)
-
-### Creating a clickable image
-
-This example uses an image to link to the MDN home page. The home page will open in a new browsing context, that is, a new page or a new tab.
+#### HTML
 
 ```html
-<a href="https://developer.mozilla.org/en-US/" target="_blank">
-  <img src="https://mdn.mozillademos.org/files/6851/mdn_logo.png"
-       alt="MDN logo" />
-</a>
+<a href="https://www.mozilla.com">Mozilla</a>
 ```
 
-#### Result
+#### 結果
 
-{{EmbedLiveSample("Creating_a_clickable_image", "320", "64")}}
+{{EmbedLiveSample('鏈接到絕對 URL')}}
 
-### Creating an email link
+### 鏈接到相對 URL
 
-It's common to create links that open in the user's email program to allow them to send a new message. This is done with a `mailto:` link. Here's a simple example:
+#### HTML
+
+```html
+<a href="//example.com">Scheme-relative URL</a>
+<a href="/zh-TW/docs/Web/HTML">Origin-relative URL</a>
+<a href="./p">Directory-relative URL</a>
+```
+
+```css hidden
+a {
+  display: block;
+  margin-bottom: 0.5em;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('鏈接到相對 URL')}}
+
+### 鏈接到同一頁面上的元素
+
+```html
+<!-- <a> element links to the section below -->
+<p><a href="#Section_further_down">Jump to the heading below</a></p>
+
+<!-- Heading to link to -->
+<h2 id="Section_further_down">Section further down</h2>
+```
+
+#### 結果
+
+{{EmbedLiveSample('鏈接到同一頁面上的元素')}}
+
+> [!NOTE]
+> 你可以使用 `href="#top"` 或空片段（`href="#"`）來鏈接到當前頁面的頂部，[如 HTML 規範中所定義](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)。
+
+### 鏈接到電子郵件地址
+
+要創建鏈接，讓用戶可以使用他們的電子郵件程序打開新消息，請使用 `mailto:` 方案：
 
 ```html
 <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
 ```
 
-#### Result
+#### 結果
 
-[Send email to nowhere](mailto:nowhere@mozilla.org)
+{{EmbedLiveSample('鏈接到電子郵件地址')}}
 
-For additional details about the `mailto` URL scheme, such as including the subject, body, or other predetermined content, see [Email links](/zh-TW/docs/Web/Guide/HTML/Email_links) or {{RFC(6068)}}.
+有關 `mailto:` URL 的詳細信息，例如包括主題或正文，請參見[電子郵件鏈接](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Creating_links#e-mail_連結)或 {{RFC(6068)}}。
 
-### Creating a phone link
-
-Offering phone links is helpful for users viewing web documents and laptops connected to phones.
+### 鏈接到電話號碼
 
 ```html
-<a href="tel:+491570156">+49 157 0156</a>
+<a href="tel:+49.157.0156">+49 157 0156</a>
+<a href="tel:+1(800)555-0123">(800) 555-0123</a>
 ```
 
-For additional details about the `tel` URL scheme, see {{RFC(3966)}}.
+#### 結果
 
-### Using the `download` attribute to save a `<canvas>` as a PNG
+{{EmbedLiveSample('鏈接到電話號碼')}}
 
-If you want to let users download an HTML {{HTMLElement("canvas")}} element as an image, you can create a link with a `download` attribute and the canvas data as a file URL:
+`tel:` 鏈接的行為因設備能力而異：
+
+- 手機設備會自動撥打號碼。
+- 大多數操作系統都有可以撥打電話的程序，如 Skype 或 FaceTime。
+- 網站可以使用 {{domxref("Navigator/registerProtocolHandler", "registerProtocolHandler")}} 來打電話，例如 `web.skype.com`。
+- 其他行為包括將號碼保存到聯繫人中，或將號碼發送到另一個設備。
+
+有關 `tel:` URL 方案的語法、其他功能和詳細信息，請參見 {{RFC(3966)}}。
+
+### 使用 download 屬性將 \<canvas> 另存為 PNG
+
+要將 {{HTMLElement("canvas")}} 元素的內容保存為圖像，你可以創建一個鏈接，其中 `href` 是使用 JavaScript 創建的 `data:` URL 的畫布數據，而 `download` 屬性提供下載的 PNG 文件的文件名：
+
+#### 具有處存鏈接的範例繪畫應用程式
+
+##### HTML
+
+```html
+<p>
+  Paint by holding down the mouse button and moving it.
+  <a href="" download="my_painting.png">Download my painting</a>
+</p>
+
+<canvas width="300" height="300"></canvas>
+```
+
+##### CSS
+
+```css
+html {
+  font-family: sans-serif;
+}
+canvas {
+  background: #fff;
+  border: 1px dashed;
+}
+a {
+  display: inline-block;
+  background: #69c;
+  color: #fff;
+  padding: 5px 10px;
+}
+```
+
+##### JavaScript
 
 ```js
-var link = document.createElement('a');
-link.textContent = 'download image';
+const canvas = document.querySelector("canvas");
+const c = canvas.getContext("2d");
+c.fillStyle = "hotpink";
+let isDrawing;
 
-link.addEventListener('click', function(ev) {
-    link.href = canvas.toDataURL();
-    link.download = "mypainting.png";
-}, false);
+function draw(x, y) {
+  if (isDrawing) {
+    c.beginPath();
+    c.arc(x, y, 10, 0, Math.PI * 2);
+    c.closePath();
+    c.fill();
+  }
+}
 
-document.body.appendChild(link);
+canvas.addEventListener("mousemove", (event) =>
+  draw(event.offsetX, event.offsetY),
+);
+canvas.addEventListener("mousedown", () => (isDrawing = true));
+canvas.addEventListener("mouseup", () => (isDrawing = false));
+
+document
+  .querySelector("a")
+  .addEventListener(
+    "click",
+    (event) => (event.target.href = canvas.toDataURL()),
+  );
 ```
 
-You can see this in action at [jsfiddle.net/codepo8/V6ufG/2/](https://jsfiddle.net/codepo8/V6ufG/2/).
+##### 結果
 
-## Notes
+{{EmbedLiveSample('具有處存鏈接的範例繪畫應用程式', '100%', '400')}}
 
-HTML 3.2 defines only the `name`, `href`, `rel`, `rev`, and `title` attributes.
+## 安全性和隱私
 
-### Accessibility recommendations
+`<a>` 元素可能對用戶的安全性和隱私造成影響。有關信息，請參見 [Referer 標頭：隱私和安全問題](/zh-TW/docs/Web/Security/Referer_header:_privacy_and_security_concerns)。
 
-Anchor tags are often abused with the `onclick` event to create pseudo-buttons by setting **href** to `"#"` or `"javascript:void(0)"` to prevent the page from refreshing. These values cause unexpected behavior when copying/dragging links, opening links in a new tabs/windows, bookmarking, and when JavaScript is still downloading, errors out, or is disabled. This also conveys incorrect semantics to assistive technologies (e.g., screen readers). In these cases, it is recommended to use a {{HTMLElement("button")}} instead. In general you should only use an anchor for navigation using a proper URL.
+在不使用 [`rel="noreferrer"`](/zh-TW/docs/Web/HTML/Attributes/rel/noreferrer) 和 [`rel="noopener"`](/zh-TW/docs/Web/HTML/Attributes/rel/noopener) 的情況下使用 `target="_blank"` 會使網站容易受到 {{domxref("window.opener")}} API 攻擊，但請注意，在新版瀏覽器中，設置 `target="_blank"` 隱含地提供了與設置 `rel="noopener"` 相同的保護機制。詳細信息請參見[瀏覽器相容性](#瀏覽器相容性)。
 
-### Clicking and focus
+## 無障礙議題
 
-Whether clicking on an {{HTMLElement("a")}} causes it to become focused varies by browser and OS.
+### 強鏈接文字
 
-| Desktop Browsers                                                                               | Windows 8.1 | OS X 10.9                     |
-| ---------------------------------------------------------------------------------------------- | ----------- | ----------------------------- |
-| Firefox 30.0                                                                                   | Yes         | Yes                           |
-| Chrome ≥39 ([Chromium bug 388666](https://code.google.com/p/chromium/issues/detail?id=388666)) | Yes         | Yes                           |
-| Safari 7.0.5                                                                                   | N/A         | Only when it has a `tabindex` |
-| Internet Explorer 11                                                                           | Yes         | N/A                           |
-| Presto (Opera 12)                                                                              | Yes         | Yes                           |
+**鏈接內容應指示鏈接的目的地**，即使是在上下文之外。
 
-| Mobile Browsers | iOS 7.1.2                     | Android 4.4.4                 |
-| --------------- | ----------------------------- | ----------------------------- |
-| Safari Mobile   | Only when it has a `tabindex` | N/A                           |
-| Chrome 35       | ???                           | Only when it has a `tabindex` |
+#### 無障礙性差的弱鏈接文字
 
-## Specifications
+一個常見的錯誤是只將「點擊此處」或「這裡」之類的詞作為鏈接：
+
+```html example-bad
+<p>Learn more about our products <a href="/products">here</a>.</p>
+```
+
+##### 結果
+
+{{EmbedLiveSample('無障礙性差的弱鏈接文字')}}
+
+#### 強鏈接文字
+
+幸運的是，這是一個容易解決的問題，而且實際上比無法訪問的版本還要短！
+
+```html example-good
+<p>Learn more <a href="/products">about our products</a>.</p>
+```
+
+##### 結果
+
+{{EmbedLiveSample('強鏈接文字')}}
+
+輔助軟件有捷徑可以列出頁面上的所有鏈接。然而，強鏈接文字有益於所有用戶——「列出所有鏈接」的快捷方式模擬了視覺用戶快速掃描頁面的方式。
+
+### 點擊事件
+
+常常將錨點元素誤用為假按鈕，將它們的 `href` 設置為 `#` 或 `javascript:void(0)` 以防止頁面刷新，然後監聽它們的 `click` 事件。
+
+這些虛假的 `href` 值在複製/拖動鏈接、在新標籤/窗口中打開鏈接、書籤或當 JavaScript 加載、錯誤或禁用時會引起意外行為。它們也向輔助技術（如螢幕閱讀器）傳遞了不正確的語義。
+
+請改用 {{HTMLElement("button")}}。一般來說，**你應該僅將超鏈接用於導航到實際 URL**。
+
+### 外部鏈接和鏈接到非 HTML 資源
+
+通過 `target="_blank"` 在新標籤/窗口中打開的鏈接，或者指向下載文件的鏈接應該指示當鏈接被點擊時會發生什麼。
+
+視力受損的人、使用螢幕閱讀技術進行導航的人或存在認知問題的人，在新標籤、窗口或應用程序意外打開時可能會感到困惑。較舊的螢幕閱讀軟件甚至可能不會宣告這種行為。
+
+#### 在新標籤/窗口中打開的鏈接
+
+```html
+<a target="_blank" href="https://www.wikipedia.org">
+  Wikipedia (opens in new tab)
+</a>
+```
+
+##### 結果
+
+{{EmbedLiveSample('在新標籤/窗口中打開的鏈接')}}
+
+#### 鏈接到非 HTML 資源
+
+```html
+<a href="2017-annual-report.ppt">2017 Annual Report (PowerPoint)</a>
+```
+
+如果使用圖標來表示鏈接行為，請確保它具有 [_alt 文本_](/zh-TW/docs/Web/HTML/Element/img#alt)：
+
+```html
+<a target="_blank" href="https://www.wikipedia.org">
+  Wikipedia
+  <img alt="(opens in new tab)" src="newtab.svg" />
+</a>
+
+<a href="2017-annual-report.ppt">
+  2017 Annual Report
+  <img alt="(PowerPoint file)" src="ppt-icon.svg" />
+</a>
+```
+
+##### 結果
+
+{{EmbedLiveSample('鏈接到非 HTML 資源')}}
+
+- [WebAIM: 鏈接和超文本——超文本鏈接](https://webaim.org/techniques/hypertext/hypertext_links)
+- [MDN / 了解 WCAG，指導方針 3.2](/zh-TW/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+- [G200: 僅在必要時從鏈接中打開新窗口和新標籤](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
+- [G201: 在打開新窗口時給予用戶高級警告](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
+
+### 跳轉鏈接
+
+**跳轉鏈接**是一個盡可能放在 {{HTMLElement("body")}} 內容的最前面的鏈接，指向頁面主要內容的開頭。通常，CSS 將跳轉鏈接隱藏在螢幕之外，直到被聚焦為止。
+
+```html
+<body>
+  <a href="#content" class="skip-link">Skip to main content</a>
+
+  <header>…</header>
+
+  <!-- The skip link jumps to here -->
+  <main id="content"></main>
+</body>
+```
+
+```css
+.skip-link {
+  position: absolute;
+  top: -3em;
+  background: #fff;
+}
+.skip-link:focus {
+  top: 0;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('跳轉鏈接')}}
+
+跳轉鏈接讓使用鍵盤的用戶可以跳過在多個頁面中重複出現的內容，例如頭部導航。
+
+對於使用輔助技術，如切換控制、語音命令或口杖/頭桿進行導航的人來說，跳轉鏈接尤其有用，因為移動過程中重複鏈接的行為可能很費勁。
+
+- [WebAIM：「跳轉導航」鏈接](https://webaim.org/techniques/skipnav/)
+- [如何使用跳過導航鏈接](https://www.a11yproject.com/posts/skip-nav-links/)
+- [MDN / 了解 WCAG，指導方針 2.4 說明](/zh-TW/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [理解成功標準 2.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
+
+### 尺寸與相近性
+
+#### 尺寸
+
+互動元素，例如連結，應該提供足夠大的區域，以便輕鬆地啟動它們。這有助於各種人，包括那些有運動控制問題的人以及使用不精確輸入（例如觸摸螢幕）的人。建議的最小尺寸為 44×44 [CSS 像素](https://www.w3.org/TR/WCAG21/#dfn-css-pixels)。
+
+在散文內容中僅包含文本的鏈接不受此要求的限制，但確保有足夠的文本被超鏈接以便輕鬆啟動仍然是一個好主意。
+
+- [理解成功標準 2.5.5：目標尺寸](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
+- [目標尺寸和 2.5.5](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
+- [快速測試：大觸摸目標](https://www.a11yproject.com/posts/large-touch-targets/)
+
+#### 相近性
+
+放置在視覺上相鄰的互動元素，例如連結，應該有空間將它們分開。間距有助於運動控制問題的人，否則他們可能會意外啟動錯誤的互動內容。
+
+間距可以使用 CSS 屬性如 {{CSSxRef("margin")}} 創建。
+
+- [手抖和大按鈕問題](https://axesslab.com/hand-tremors/)
+
+## 技術摘要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+          >內容類型</a
+        >
+      </th>
+      <td>
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+          >流內容</a
+        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+          >段落型內容</a
+        >、 <a
+          href="/zh-TW/docs/Web/HTML/Content_categories#互動型內容"
+          >互動型內容</a
+        >、捫及內容。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允許的內容</th>
+      <td>
+        <a
+          href="/zh-TW/docs/Web/HTML/Content_categories#透明內容模型"
+          >透明內容模型</a
+        >，除了沒有子孫可以是<a
+          href="/zh-TW/docs/Web/HTML/Content_categories#互動型內容"
+          >互動型內容</a
+        >或一個 <a href="/zh-TW/docs/Web/HTML/Element/a"
+          >a</a
+        > 元素，並且沒有子孫可以具有指定的
+        <a
+          href="/zh-TW/docs/Web/HTML/Global_attributes/tabindex"
+          >tabindex</a
+        > 屬性。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">標籤省略</th>
+      <td>不允許，開始和結束標籤都是必須的。</td>
+    </tr>
+    <tr>
+      <th scope="row">允許的父元素</th>
+      <td>
+        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+          >流內容</a
+        >的元素，但不包括其他 <code>&#x3C;a></code> 元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隱含的 ARIA 角色</th>
+      <td>
+        當存在 <code>href</code> 屬性時為 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a>，否則為
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"><code>generic</code></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允許的 ARIA 角色</th>
+      <td>
+        <p>當存在 <code>href</code> 屬性時：</p>
+        <ul>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"><code>button</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"><code>checkbox</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role"><code>radio</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role"><code>switch</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"><code>tab</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role"><code>treeitem</code></a></li>
+        </ul>
+        <p>當不存在 <code>href</code> 屬性時：</p>
+        <ul>
+          <li>任何</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 介面</th>
+      <td>{{DOMxRef("HTMLAnchorElement")}}</td>
+    </tr>
+  </tbody>
+</table>
+
+## 規範
 
 {{Specifications}}
 
-## Browser compatibility
+## 瀏覽器相容性
 
 {{Compat}}
 
-## See also
+## 參見
 
-- Other elements conveying [text-level semantics](/zh-TW/docs/HTML/Text_level_semantics_conveying_elements): {{HTMLElement("abbr")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
-
-{{HTMLSidebar}}
+- {{HTMLElement("link")}} 類似於 `<a>`，但用於對用戶不可見的元數據超鏈接。
+- {{CSSxRef(":link")}} 是一個 CSS 虛擬類，將匹配 `<a>` 元素，其中 `href` 屬性中的 URL 尚未被用戶訪問過。
+- {{CSSxRef(":visited")}} 是一個 CSS 虛擬類，將匹配 `<a>` 元素，其中 `href` 屬性中的 URL 曾經被用戶訪問過。
+- {{CSSxRef(":any-link")}} 是一個 CSS 虛擬類，將匹配具有 `href` 屬性的 `<a>` 元素。
+- [文字片段](/zh-TW/docs/Web/URI/Reference/Fragment/Text_fragments)是添加到 URL 中的用戶代理指令，允許內容作者鏈接到頁面上的特定文本，而不需要 ID。

@@ -1,9 +1,6 @@
 ---
 title: translateZ()
 slug: Web/CSS/transform-function/translateZ
-translation_of: Web/CSS/transform-function/translateZ()
-original_slug: Web/CSS/transform-function/translateZ()
-browser-compat: css.types.transform-function.translateZ
 ---
 
 {{CSSRef}}
@@ -112,6 +109,6 @@ Si la valeur fournie à `perspective()` est inférieure à l'argument de `transl
 ## Voir aussi
 
 - [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [Les transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - [`transform`](/fr/docs/Web/CSS/transform)
-- [`translateX()`](/fr/docs/Web/CSS/transform-function/translateX()) et [`translateY()`](/fr/docs/Web/CSS/transform-function/translateY())
+- [`translateX()`](</fr/docs/Web/CSS/transform-function/translateX()>) et [`translateY()`](</fr/docs/Web/CSS/transform-function/translateY()>)

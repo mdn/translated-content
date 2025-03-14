@@ -9,7 +9,8 @@ O cabeçalho de resposta [HTTP](/pt-BR/docs/Web/HTTP) **`X-Frame-Options`** pode
 
 A segurança adicionada é provida somente se o usuário acessando o documento está usando o navegador que suporte `X-Frame-Options`.
 
-> **Nota:** O cabeçalho HTTP {{HTTPHeader("Content-Security-Policy")}}possui uma diretiva [`frame-ancestors`](/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) que torna este cabeçalho obsoleto para navegadores que o suportam.
+> [!NOTE]
+> O cabeçalho HTTP {{HTTPHeader("Content-Security-Policy")}}possui uma diretiva [`frame-ancestors`](/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) que torna este cabeçalho obsoleto para navegadores que o suportam.
 
 <table class="properties">
   <tbody>
@@ -40,13 +41,14 @@ Se você especifica `DENY`, não somente tentativas em carregar a página em um 
 - `DENY`
   - : A página não pode ser mostrada em um enquadramento, independente do site que esteja tentando fazer isso.
 - `SAMEORIGIN`
-  - : A página só pode ser exibida em um enquadramento se for da mesma origem da página em si. A especificação deixa a cargo do navegador para decidir se esta opção se aplica ao nível mais alto, ao parente, ou à cadeia inteira, entretanto é discutido se a opção não é muito útil a não ser que todos os ancestrias estejam na mesma origem (veja {{bug(725490)}}). Veja também [Browser compatibility](#browser_compatibility) para mais detalhes de suporte.
-- `ALLOW-FROM uri` {{obsolete_inline()}}
+  - : A página só pode ser exibida em um enquadramento se for da mesma origem da página em si. A especificação deixa a cargo do navegador para decidir se esta opção se aplica ao nível mais alto, ao parente, ou à cadeia inteira, entretanto é discutido se a opção não é muito útil a não ser que todos os ancestrias estejam na mesma origem (veja [Erro do Firefox 725490](https://bugzil.la/725490)). Veja também [Browser compatibility](#browser_compatibility) para mais detalhes de suporte.
+- `ALLOW-FROM uri`
   - : Esta é uma diretiva obsoleta que não funciona mais em navegadores modernos. Não a utilize. Em navegadores legado que a suportam, a página pode ser mostrada em um enquadramento somente na URI de origem especificada. Note que implementação legada do Firefox isso ainda sofria do mesmo problema que a `SAMEORIGIN` sofreu — ela não checa se os enquadramentos ancestrais para ver se eles são da mesma origem. O cabeçalho HTTP {{HTTPHeader("Content-Security-Policy")}} tem a diretiva `frame-ancestors` que você pode usar ao invés disso.
 
 ## Exemplos
 
-> **Nota:** Colocar X-Frame-Options dentro de um elemento {{HTMLElement("meta")}} é inútil! Por enquanto, `<meta http-equiv="X-Frame-Options" content="deny">` não tem nenhum efeito. Não o utilize! `X-Frame-Options` funciona somenete colocando a configuração através do cabeçalho HTTP, como nos exemplos abaixo.
+> [!NOTE]
+> Colocar X-Frame-Options dentro de um elemento {{HTMLElement("meta")}} é inútil! Por enquanto, `<meta http-equiv="X-Frame-Options" content="deny">` não tem nenhum efeito. Não o utilize! `X-Frame-Options` funciona somente colocando a configuração através do cabeçalho HTTP, como nos exemplos abaixo.
 
 ### Configurando o Apache
 
@@ -109,27 +111,27 @@ http-response set-header X-Frame-Options SAMEORIGIN
 Para configurar o Express para enviar o cabeçalho `X-Frame-Options`, você pode usar o [helmet](https://helmetjs.github.io/) que utiliza o [frameguard](https://helmetjs.github.io/docs/frameguard/) para colocar o cabeçalho. Adicione isto na configuração do seu servidor:
 
 ```js
-const helmet = require('helmet');
+const helmet = require("helmet");
 const app = express();
-app.use(helmet.frameguard({ action: 'SAMEORIGIN' }));
+app.use(helmet.frameguard({ action: "SAMEORIGIN" }));
 ```
 
 Alternativamente, você pode usar o _frameguard_ diretamente:
 
 ```js
-const frameguard = require('frameguard')
-app.use(frameguard({ action: 'SAMEORIGIN' }))
+const frameguard = require("frameguard");
+app.use(frameguard({ action: "SAMEORIGIN" }));
 ```
 
 ## Especificações
 
-| Especificação        | Título                            |
-| -------------------- | --------------------------------- |
+| Especificação   | Título                            |
+| --------------- | --------------------------------- |
 | {{RFC("7034")}} | HTTP Header Field X-Frame-Options |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.X-Frame-Options")}}
+{{Compat}}
 
 ## Veja também
 

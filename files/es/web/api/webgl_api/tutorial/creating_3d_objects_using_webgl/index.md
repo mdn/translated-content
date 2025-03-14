@@ -1,16 +1,9 @@
 ---
 title: Creación de objetos 3D utilizando WebGL
 slug: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
-tags:
-  - Cubo 3D
-  - Objetos 3D
-  - Tutorial
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
-original_slug: Web/API/WebGL_API/Tutorial/Objetos_3D_utilizando_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
 
 Vamos a llevar nuestro cuadrado hacia la tercera dimensión agregando cinco caras más para crear el cubo. Para hacer esto de manera eficiente, vamos a cambiar el dibujado por medio de vertices utilizando el método {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} por el uso de un arreglo de vértices como tabla, esto por medio del llamado hacia {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}}.
 
@@ -23,40 +16,22 @@ Primero, construiremos el buffer para la posición de los vértices actualizando
 ```js
 var vertices = [
   // Cara delantera
-  -1.0, -1.0,  1.0,
-   1.0, -1.0,  1.0,
-   1.0,  1.0,  1.0,
-  -1.0,  1.0,  1.0,
+  -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, 1.0, 1.0, -1.0, 1.0, 1.0,
 
   // Cara trasera
-  -1.0, -1.0, -1.0,
-  -1.0,  1.0, -1.0,
-   1.0,  1.0, -1.0,
-   1.0, -1.0, -1.0,
+  -1.0, -1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0, -1.0, -1.0,
 
   // Top face
-  -1.0,  1.0, -1.0,
-  -1.0,  1.0,  1.0,
-   1.0,  1.0,  1.0,
-   1.0,  1.0, -1.0,
+  -1.0, 1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0,
 
   // Bottom face
-  -1.0, -1.0, -1.0,
-   1.0, -1.0, -1.0,
-   1.0, -1.0,  1.0,
-  -1.0, -1.0,  1.0,
+  -1.0, -1.0, -1.0, 1.0, -1.0, -1.0, 1.0, -1.0, 1.0, -1.0, -1.0, 1.0,
 
   // Right face
-   1.0, -1.0, -1.0,
-   1.0,  1.0, -1.0,
-   1.0,  1.0,  1.0,
-   1.0, -1.0,  1.0,
+  1.0, -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, 1.0, 1.0, -1.0, 1.0,
 
   // Left face
-  -1.0, -1.0, -1.0,
-  -1.0, -1.0,  1.0,
-  -1.0,  1.0,  1.0,
-  -1.0,  1.0, -1.0
+  -1.0, -1.0, -1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0, -1.0,
 ];
 ```
 
@@ -66,27 +41,31 @@ Necesitamos construir un arreglo de colores por cada uno de los 24 vertices. Est
 
 ```js
 var colors = [
-  [1.0,  1.0,  1.0,  1.0],    // Cara delantera: blanco
-  [1.0,  0.0,  0.0,  1.0],    // Cara trasera: rojo
-  [0.0,  1.0,  0.0,  1.0],    // Cara superior: verde
-  [0.0,  0.0,  1.0,  1.0],    // Cara inferior: azul
-  [1.0,  1.0,  0.0,  1.0],    // Cara derecha: amarillo
-  [1.0,  0.0,  1.0,  1.0]     // Cara izquierda: morado
+  [1.0, 1.0, 1.0, 1.0], // Cara delantera: blanco
+  [1.0, 0.0, 0.0, 1.0], // Cara trasera: rojo
+  [0.0, 1.0, 0.0, 1.0], // Cara superior: verde
+  [0.0, 0.0, 1.0, 1.0], // Cara inferior: azul
+  [1.0, 1.0, 0.0, 1.0], // Cara derecha: amarillo
+  [1.0, 0.0, 1.0, 1.0], // Cara izquierda: morado
 ];
 
 var generatedColors = [];
 
-for (j=0; j<6; j++) {
+for (j = 0; j < 6; j++) {
   var c = colors[j];
 
-  for (var i=0; i<4; i++) {
+  for (var i = 0; i < 4; i++) {
     generatedColors = generatedColors.concat(c);
   }
 }
 
 var cubeVerticesColorBuffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesColorBuffer);
-gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(generatedColors), gl.STATIC_DRAW);
+gl.bufferData(
+  gl.ARRAY_BUFFER,
+  new Float32Array(generatedColors),
+  gl.STATIC_DRAW,
+);
 ```
 
 ## Definir el elemento arreglo
@@ -102,18 +81,51 @@ gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cubeVerticesIndexBuffer);
 // para especificar cada posición en los tríangulos.
 
 var cubeVertexIndices = [
-  0,  1,  2,      0,  2,  3,    // enfrente
-  4,  5,  6,      4,  6,  7,    // atrás
-  8,  9,  10,     8,  10, 11,   // arriba
-  12, 13, 14,     12, 14, 15,   // fondo
-  16, 17, 18,     16, 18, 19,   // derecha
-  20, 21, 22,     20, 22, 23    // izquierda
+  0,
+  1,
+  2,
+  0,
+  2,
+  3, // enfrente
+  4,
+  5,
+  6,
+  4,
+  6,
+  7, // atrás
+  8,
+  9,
+  10,
+  8,
+  10,
+  11, // arriba
+  12,
+  13,
+  14,
+  12,
+  14,
+  15, // fondo
+  16,
+  17,
+  18,
+  16,
+  18,
+  19, // derecha
+  20,
+  21,
+  22,
+  20,
+  22,
+  23, // izquierda
 ];
 
 // Ahora enviamos el elemento arreglo a  GL
 
-gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,
-    new Uint16Array(cubeVertexIndices), gl.STATIC_DRAW);
+gl.bufferData(
+  gl.ELEMENT_ARRAY_BUFFER,
+  new Uint16Array(cubeVertexIndices),
+  gl.STATIC_DRAW,
+);
 ```
 
 El arreglo `cubeVertexIndices` define cada cara como un par de triángulos, especificando cada vértice del triángulo como un índice dentro del arreglo de vértices en el cubo. Así el cubo es descrito como una colección de 12 triángulos.
@@ -132,8 +144,8 @@ Desde que cada cara de nuestro cubo está compuesto de dos triángulos, tenemos 
 
 En este punto ahora tenemos un cubo animado rebotando y rotando, cuenta con seis caras coloreadas vívidamente.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample5/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample5/index.html', 670, 510) }}
 
-[Ver el Código completo](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample5) | [Abrir esta demostración en una página nueva](http://mdn.github.io/webgl-examples/tutorial/sample5/)
+[Ver el Código completo](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample5) | [Abrir esta demostración en una página nueva](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample5/)
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}

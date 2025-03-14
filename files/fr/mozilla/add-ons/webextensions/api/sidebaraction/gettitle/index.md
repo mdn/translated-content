@@ -1,32 +1,22 @@
 ---
 title: sidebarAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getTitle
-  - sidebarAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient le titre de la barre latérale.
 
 Tout comme vous pouvez définir le titre par tabulation à l'aide de {{WebExtAPIRef("sidebarAction.setTitle()")}},vous pouvez ainsi récupérer un titre spécifique à un onglet en lui transmettant l'ID de l'onglet.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var gettingTitle = browser.sidebarAction.getTitle(
-  details               // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -47,11 +37,7 @@ var gettingTitle = browser.sidebarAction.getTitle(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une chaîne contenant le titre de la barre latérale.
-
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.sidebarAction.getTitle",2)}}
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec une chaîne contenant le titre de la barre latérale.
 
 ## Exemples
 
@@ -60,9 +46,9 @@ Ce code bascule le titre entre "this" et "that" chaque fois que l'utilisateur cl
 ```js
 function toggleTitle(title) {
   if (title == "this") {
-    browser.sidebarAction.setTitle({title: "that"});
+    browser.sidebarAction.setTitle({ title: "that" });
   } else {
-    browser.sidebarAction.setTitle({title: "this"});
+    browser.sidebarAction.setTitle({ title: "this" });
   }
 }
 
@@ -72,9 +58,13 @@ browser.browserAction.onClicked.addListener(() => {
 });
 ```
 
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).
 >

@@ -1,12 +1,9 @@
 ---
 title: Récursion
 slug: Glossary/Recursion
-tags:
-  - CodingScripting
-  - Glossaire
-translation_of: Glossary/Recursion
-original_slug: Glossaire/Récursion
 ---
+
+{{GlossarySidebar}}
 
 Une fonction qui agit en s'appelant elle-même. Une récursion est utilisée pour résoudre des problèmes qui contiennent des sous-problèmes plus petits. Une fonction récursive peut prendre deux entrées : un cas de base (qui met fin à la récursion) ou un cas de propagation (qui poursuit la récursion).
 
@@ -14,5 +11,5 @@ Une fonction qui agit en s'appelant elle-même. Une récursion est utilisée pou
 
 ### Culture générale
 
-- [Algorithme récursif](https://fr.wikipedia.org/wiki/Algorithme_r%C3%A9cursif) sur Wikipédia
-- [Plus de détails sur la récursion en JavaScript](/fr/docs/Web/JavaScript/Guide/Fonctions#La_récursivité)
+- [Algorithme récursif](https://fr.wikipedia.org/wiki/Algorithme_récursif) sur Wikipédia
+- [Plus de détails sur la récursion en JavaScript](/fr/docs/Web/JavaScript/Guide/Functions#la_récursivité)

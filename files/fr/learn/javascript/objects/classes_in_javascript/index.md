@@ -1,18 +1,6 @@
 ---
 title: L'héritage au sein de JavaScript
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-tags:
-  - Apprendre
-  - Article
-  - Débutant
-  - Héritage
-  - JS Orienté Objet
-  - JavaScript
-  - Objet
-  - Programmation orientée objet
-  - Prototype
-translation_of: Learn/JavaScript/Objects/Inheritance
-original_slug: Learn/JavaScript/Objects/Inheritance
 ---
 
 {{LearnSidebar}}
@@ -60,19 +48,19 @@ Tout d'abord, faites une copie du fichier [`oojs-class-inheritance-start.html`](
 function Personne(prenom, nom, age, genre, interets) {
   this.nom = {
     prenom,
-    nom
+    nom,
   };
   this.age = age;
   this.genre = genre;
   this.interets = interets;
-};
+}
 ```
 
 L'ensemble des méthodes est défini dans le prototype :
 
 ```js
-Personne.prototype.saluer = function() {
-  alert('Salut! Je suis ' + this.nom.prenom + '.');
+Personne.prototype.saluer = function () {
+  alert("Salut! Je suis " + this.nom.prenom + ".");
 };
 ```
 
@@ -105,7 +93,7 @@ Notez que nous aurions très bien pu écrire tout simplement ceci :
 function Professeur(prenom, nom, age, genre, interets, matiere) {
   this.nom_complet = {
     prenom,
-    nom
+    nom,
   };
   this.age = age;
   this.genre = genre;
@@ -134,7 +122,7 @@ function BlueGlassBrick() {
   Brick.call(this);
 
   this.opacity = 0.5;
-  this.color = 'blue';
+  this.color = "blue";
 }
 ```
 
@@ -156,9 +144,9 @@ Professeur.prototype = Object.create(Personne.prototype);
 2. Nous avons également besoin de faire encore une chose avant de continuer. Après avoir ajouté la ligne précédente, le constructeur du prototype de `Professeur()` est désormais équivalent à celui de `Personne()`, parce que nous avons défini `Professeur.prototype` pour référencer un objet qui hérite ses propriétés de `Personne.prototype`&nbsp;! Essayez, après avoir sauvegardé votre code et rechargé la page, d'entrer `Professeur.prototype.constructor` dans la console pour vérifier.
 3. Cela peut devenir problématique, autant le corriger dès maintenant. C'est possible via l'ajout de la ligne de code suivante à la fin&nbsp;:
 
-    ```js
-    Professeur.prototype.constructor = Professeur;
-    ```
+   ```js
+   Professeur.prototype.constructor = Professeur;
+   ```
 
 4. À présent, si vous sauvegardez et rafraichissez après avoir écrit `Professeur.prototype.constructor`, cela devrait retourner `Professeur()`, et en plus nous héritons maintenant de `Personne()`&nbsp;!
 
@@ -169,18 +157,36 @@ Pour terminer notre code, nous devons définir une nouvelle fonction `saluer()` 
 La façon la plus facile d'accomplir cela est de la définir sur le prototype de Professeur() — ajoutez ceci à la suite de votre code :
 
 ```js
-Professeur.prototype.saluer = function() {
+Professeur.prototype.saluer = function () {
   var prefix;
 
-  if (this.genre === 'mâle' || this.genre === 'Mâle' || this.genre === 'm' || this.genre === 'M') {
-    prefix = 'M.';
-  } else if (this.genre === 'femelle' || this.genre === 'Femelle' || this.genre === 'f' || this.genre === 'F') {
-    prefix = 'Mme';
+  if (
+    this.genre === "mâle" ||
+    this.genre === "Mâle" ||
+    this.genre === "m" ||
+    this.genre === "M"
+  ) {
+    prefix = "M.";
+  } else if (
+    this.genre === "femelle" ||
+    this.genre === "Femelle" ||
+    this.genre === "f" ||
+    this.genre === "F"
+  ) {
+    prefix = "Mme";
   } else {
-    prefix = '';
+    prefix = "";
   }
 
-  alert('Bonjour. Mon nom est ' + prefix + ' ' + this.nom_complet.nom + ', et j\'enseigne ' + this.matiere + '.');
+  alert(
+    "Bonjour. Mon nom est " +
+      prefix +
+      " " +
+      this.nom_complet.nom +
+      ", et j'enseigne " +
+      this.matiere +
+      ".",
+  );
 };
 ```
 
@@ -191,7 +197,14 @@ Ceci affiche la salutation du professeur, qui utilise le titre de civilité appr
 Une fois tout le code saisi, essayez de créer une instance d'objet `Professeur()` en ajoutant à la fin de votre JavaScript (ou à l'endroit de votre choix) :
 
 ```js
-var professeur1 = new Professeur('Cédric', 'Villani', 44, 'm', ['football', 'cuisine'], 'les mathématiques');
+var professeur1 = new Professeur(
+  "Cédric",
+  "Villani",
+  44,
+  "m",
+  ["football", "cuisine"],
+  "les mathématiques",
+);
 ```
 
 Sauvegardez et actualisez, et essayez d'accéder aux propriétés et méthodes de votre nouvel objet `professeur1`, par exemple :
@@ -206,7 +219,7 @@ professeur1.saluer();
 
 Tout cela devrait parfaitement fonctionner. Les instructions des lignes 1, 2, 3 et 6 accèdent à des membres hérités de la classe générique `Personne()` via son constructeur, tandis que la ligne 4 accède de façon plus spécifique à un membre qui n'est disponible que via le constructeur de la classe spécialisée `Professeur()`.
 
-**Note :** Si vous rencontrez un problème pour faire fonctionner ce code, comparez-le à notre [version finalisée](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html) (ou regardez tourner [notre démo en ligne](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html)).
+**Note :** Si vous rencontrez un problème pour faire fonctionner ce code, comparez-le à notre [version finalisée](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html) (ou regardez tourner [notre démo en ligne](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html)).
 
 La méthode que nous avons détaillée ici n'est pas la seule permettant de mettre en place l'héritage de classes en JavaScript, mais elle fonctionne parfaitement et vous permet d'avoir une bonne idée de comment implémenter l'héritage en JavaScript.
 
@@ -218,7 +231,7 @@ Un moyen habituel est d'utiliser les bibliothèques JavaScript — la plupart de
 
 ## Un exercice plus complexe
 
-Dans notre [section sur la programmation orientée objet](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters), nous avons également inclus une classe `Etudiant` comme un concept qui hérite de toutes les fonctionnalités de la classe `Personne` et qui a également une méthode `saluer()` différente de celle de `Personne`, beaucoup moins formelle que la méthode `saluer()` de `Professeur()`. Jetez un œil à ce à quoi ressemble la méthode `saluer()` de la classe `Etudiant` dans cette section et essayez d'implémenter votre propre constructeur `Etudiant()` qui hérite de toutes les fonctionnalités de `Personne()` et la fonction `saluer()` différente.
+Dans notre [section sur la programmation orientée objet](/fr/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#object-oriented_programming_from_10000_meters), nous avons également inclus une classe `Etudiant` comme un concept qui hérite de toutes les fonctionnalités de la classe `Personne` et qui a également une méthode `saluer()` différente de celle de `Personne`, beaucoup moins formelle que la méthode `saluer()` de `Professeur()`. Jetez un œil à ce à quoi ressemble la méthode `saluer()` de la classe `Etudiant` dans cette section et essayez d'implémenter votre propre constructeur `Etudiant()` qui hérite de toutes les fonctionnalités de `Personne()` et la fonction `saluer()` différente.
 
 **Note :** Si vous rencontrez un problème pour faire fonctionner ce code, comparez-le à notre [version finalisée](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) (ou regardez tourner [notre démo en ligne](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html)).
 
@@ -259,13 +272,3 @@ Dans le prochain article, nous jetterons un regard sur comment travailler avec l
 - [You Don't Know JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes) — une partie de l'excellente série de manuels sur le JavaScript de Kyle Simpson. Le chapitre 5 en particulier jette un regard beaucoup plus approfondi sur les prototypes que nous ne l'avons fait ici. Nous avons présenté ici une vue simplifiée dans cette série d'articles dédiée aux débutants, tandis que Kyle est allé dans les détails les plus profonds et fournit une image beaucoup plus complexe et plus précise.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
-
-## Dans ce module
-
-- [Les bases de l'Objet](/fr/docs/Learn/JavaScript/Objects/Basics)
-- [JavaScript Orienté Objet pour débutants](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Prototypes d'Objet](/fr/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [L'héritage en JavaScript](/fr/docs/Learn/JavaScript/Objects/Inheritance)
-- [Travailler avec les données JSON](/fr/docs/Learn/JavaScript/Objects/JSON)
-- [Construire les Objets dans la pratique](/fr/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Ajouter des fonctionnalités à la démo de nos balles bondissantes](/fr/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

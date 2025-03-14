@@ -7,7 +7,7 @@ slug: Web/API/Window/matchMedia
 
 ## 概要
 
-指定された [メディアクエリ](/ja/docs/Web/Guide/CSS/Media_queries)文字列のパース結果を表す、新しい {{domxref("MediaQueryList")}} オブジェクトを返します。
+指定された [メディアクエリ](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)文字列のパース結果を表す、新しい {{domxref("MediaQueryList")}} オブジェクトを返します。
 
 ## 構文
 
@@ -20,7 +20,7 @@ mql = window.matchMedia(mediaQueryString)
 ## 例
 
 ```js
-if (window.matchMedia( "(min-width: 400px)" ).matches) {
+if (window.matchMedia("(min-width: 400px)").matches) {
   /* ビューポートの幅が 400 ピクセル以上の場合のコードをここに */
 } else {
   /* ビューポートの幅は 400 ピクセル未満の場合のコードをここに */
@@ -29,21 +29,19 @@ if (window.matchMedia( "(min-width: 400px)" ).matches) {
 
 このコードでは、ウィンドウが非常に狭いときに、何か別の処理を行うことができます。
 
-他にも『[コード内でのメディアクエリの使用](/ja/docs/Web/Guide/CSS/Testing_media_queries)』にいくつか例があります。
+他にも『[コード内でのメディアクエリの使用](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)』にいくつか例があります。
 
-## 仕様
+## 仕様書
 
-| 仕様書                                                                                               | 策定状況                         | コメント |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("CSSOM View", "#dom-window-matchmedia", "Window.matchMedia()")}} | {{Spec2("CSSOM View")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザ互換性
 
-{{Compat("api.Window.matchMedia")}}
+{{Compat}}
 
 ## 関連記事
 
-- [メディアクエリ](/ja/docs/Web/Guide/CSS/Media_queries)
-- [コード内でのメディアクエリの使用](/ja/docs/Web/CSS/Using_media_queries_from_code)
+- [メディアクエリ](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [コード内でのメディアクエリの使用](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{domxref("MediaQueryList")}}
 - {{domxref("MediaQueryListListener")}}

@@ -1,5 +1,5 @@
 ---
-title: '-webkit-text-fill-color'
+title: -webkit-text-fill-color
 slug: Web/CSS/-webkit-text-fill-color
 ---
 
@@ -13,9 +13,9 @@ La propiedad CSS -**`webkit-text-fill-color`** especifica el [color](/es/docs/We
 
 {{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.-webkit-text-fill-color")}}
+{{Compat}}
 
 ## Ver además
 

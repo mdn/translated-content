@@ -7,9 +7,86 @@ slug: Web/CSS/list-style-type
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 `list-style-type` 可以设置列表元素的 marker（比如圆点、符号、或者自定义计数器样式）。
 
-{{EmbedInteractiveExample("pages/css/list-style-type.html")}}
+{{InteractiveExample("CSS Demo: list-style-type")}}
 
-The [color](/zh-CN/docs/CSS/color_value) of the marker will be the same as the computed color of the element it applies to.
+```css interactive-example-choice
+list-style-type: space-counter;
+```
+
+```css interactive-example-choice
+list-style-type: disc;
+```
+
+```css interactive-example-choice
+list-style-type: circle;
+```
+
+```css interactive-example-choice
+list-style-type: "\1F44D";
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div>
+    <p>NASA Notable Missions</p>
+    <ul class="transition-all unhighlighted" id="example-element">
+      <li>Apollo</li>
+      <li>Hubble</li>
+      <li>Chandra</li>
+      <li>Cassini-Huygens</li>
+    </ul>
+  </div>
+  <hr />
+  <div class="note">
+    <p>
+      <code>space-counter</code> is defined with
+      <a
+        href="//developer.mozilla.org/docs/Web/CSS/@counter-style"
+        target="_parent"
+        ><code>@counter-style</code></a
+      >
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  font-size: 1.2rem;
+}
+
+#example-element {
+  width: 100%;
+  background: #be094b;
+  color: white;
+}
+
+section {
+  text-align: left;
+  flex-direction: column;
+}
+
+hr {
+  width: 50%;
+  color: lightgray;
+  margin: 0.5em;
+}
+
+.note {
+  font-size: 0.8rem;
+}
+
+.note a {
+  color: #009e5f;
+}
+
+@counter-style space-counter {
+  symbols: "\1F680" "\1F6F8" "\1F6F0" "\1F52D";
+  suffix: " ";
+}
+```
+
+The [color](/zh-CN/docs/Web/CSS/color_value) of the marker will be the same as the computed color of the element it applies to.
 
 只有几个元素 ({{HTMLElement("li")}} 和 {{HTMLElement("summary")}}) 的默认值为 `display: list-item`。但是， `list-style-type` 属性可以应用在任何 {{cssxref("display")}} 的值为 `list-item` 的元素上。此外，由于这个属性是可继承的，它可以设置在父元素上 (通常是 {{HTMLElement("ol")}} 或 {{HTMLElement("ul")}}) 以便应用于所有子元素 ({{HTMLElement("li")}})。
 
@@ -26,7 +103,7 @@ list-style-type: trad-chinese-informal;
 list-style-type: kannada;
 
 /* <string> value */
-list-style-type: '-';
+list-style-type: "-";
 
 /* Identifier matching an @counter-style rule */
 list-style-type: custom-counter-style;
@@ -45,7 +122,7 @@ list-style-type 的属性值可以是以下任意一项：
 - a [`<custom-ident>`](/zh-CN/docs/Web/CSS/list-style-type#%3Ccustom-ident%3E) value
 - a [`symbols()`](</zh-CN/docs/Web/CSS/list-style-type#symbols()>) value
 - a [`<string>`](/zh-CN/docs/Web/CSS/list-style-type#%3Cstring%3E) value
-- the keyword [`none`](/zh-CN/docs/Web/CSS/list-style-type#none).
+- the keyword [`none`](#none).
 
 ### 取值
 
@@ -92,9 +169,9 @@ list-style-type 的属性值可以是以下任意一项：
 - `katakana` {{experimental_inline}}
   - : Dictionary-order katakana lettering
 - `hiragana-iroha` {{experimental_inline}}
-  - : [Iroha](https://zh.wikipedia.org/wiki/Iroha) is the old japanese ordering of syllabs.
+  - : [Iroha](https://zh.wikipedia.org/wiki/伊呂波歌) is the old japanese ordering of syllabs.
 - `katakana-iroha` {{experimental_inline}}
-  - : [Iroha](https://zh.wikipedia.org/wiki/Iroha) is the old japanese ordering of syllabs.
+  - : [Iroha](https://zh.wikipedia.org/wiki/伊呂波歌) is the old japanese ordering of syllabs.
 - `japanese-informal` {{experimental_inline}}
   - : Japanese informal numbering
 - `japanese-formal` {{experimental_inline}}
@@ -167,13 +244,15 @@ ol.shortcut {
 ### HTML
 
 ```html
-<ol class="normal">List 1
+<ol class="normal">
+  List 1
   <li>Hello</li>
   <li>World</li>
   <li>What's up?</li>
 </ol>
 
-<ol class="shortcut">List 2
+<ol class="shortcut">
+  List 2
   <li>Looks</li>
   <li>Like</li>
   <li>The</li>
@@ -200,7 +279,7 @@ ul li::before {
 ```
 
 - [VoiceOver and list-style-type: none – Unfettered Thoughts](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/)
-- [MDN Understanding WCAG, Guideline 1.3 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- [MDN Understanding WCAG, Guideline 1.3 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
 ## 注释

@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onfocus
 slug: Web/API/Window/focus_event
-original_slug: Web/API/GlobalEventHandlers/onfocus
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -22,6 +21,8 @@ Oposta à MSIE, em que quase todos os tipos de elementos recebem o evento _focus
 
 ## Especificações
 
-| especificaçãos                                                                                   | Status                           | Comentario |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onfocus','onfocus')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

@@ -1,16 +1,9 @@
 ---
 title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
-tags:
-  - '@media'
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
-translation_of: Web/CSS/@media/prefers-reduced-motion
 ---
 
-[CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/Media_Queries/Using_media_queries) **`prefers-reduced-motion`** может использоваться для определения того, запросил ли пользователь, чтобы ОС минимизировала количество анимации или движения, которые она использует.
+[CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries) **`prefers-reduced-motion`** может использоваться для определения того, запросил ли пользователь, чтобы ОС минимизировала количество анимации или движения, которые она использует.
 
 ## Синтаксис
 
@@ -49,7 +42,10 @@ translation_of: Web/CSS/@media/prefers-reduced-motion
 .animation {
   background-color: rebeccapurple;
   color: #fff;
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
   width: 200px;
   padding: 1em;
   border-radius: 1em;
@@ -69,53 +65,53 @@ translation_of: Web/CSS/@media/prefers-reduced-motion
 @-webkit-keyframes vibrate {
   0% {
     -webkit-transform: translate(0);
-            transform: translate(0);
+    transform: translate(0);
   }
   20% {
     -webkit-transform: translate(-2px, 2px);
-            transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
   }
   40% {
     -webkit-transform: translate(-2px, -2px);
-            transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
   }
   60% {
     -webkit-transform: translate(2px, 2px);
-            transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
   }
   80% {
     -webkit-transform: translate(2px, -2px);
-            transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
   }
   100% {
     -webkit-transform: translate(0);
-            transform: translate(0);
+    transform: translate(0);
   }
 }
 @keyframes vibrate {
   0% {
     -webkit-transform: translate(0);
-            transform: translate(0);
+    transform: translate(0);
   }
   20% {
     -webkit-transform: translate(-2px, 2px);
-            transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
   }
   40% {
     -webkit-transform: translate(-2px, -2px);
-            transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
   }
   60% {
     -webkit-transform: translate(2px, 2px);
-            transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
   }
   80% {
     -webkit-transform: translate(2px, -2px);
-            transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
   }
   100% {
     -webkit-transform: translate(0);
-            transform: translate(0);
+    transform: translate(0);
   }
 }
 ```
@@ -124,7 +120,7 @@ translation_of: Web/CSS/@media/prefers-reduced-motion
 
 {{EmbedLiveSample("Примеры")}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
@@ -132,8 +128,8 @@ translation_of: Web/CSS/@media/prefers-reduced-motion
 
 {{Compat}}
 
-## [Смотрите также](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight#See_also)
+## [Смотрите также](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight#see_also)
 
 - [An introduction to the reduced motion media query](https://css-tricks.com/introduction-reduced-motion-media-query/)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}
+{{QuickLinksWithSubpages("/ru/docs/Web/CSS/@media/")}}

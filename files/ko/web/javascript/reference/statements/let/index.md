@@ -1,22 +1,27 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Statement
-  - Variable declaration
-  - Variables
-  - let
-browser-compat: javascript.statements.let
-translation_of: Web/JavaScript/Reference/Statements/let
 ---
+
 {{jsSidebar("Statements")}}
 
 **`let`** 명령문은 블록 스코프의 범위를 가지는 지역 변수를 선언하며, 선언과 동시에 임의의 값으로 초기화할 수도 있습니다.
 
-{{EmbedInteractiveExample("pages/js/statement-let.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Let")}}
+
+```js interactive-example
+let x = 1;
+
+if (x === 1) {
+  let x = 2;
+
+  console.log(x);
+  // Expected output: 2
+}
+
+console.log(x);
+// Expected output: 1
+```
 
 ## 구문
 
@@ -40,7 +45,7 @@ let { bar } = foo; // foo = { bar: 10, baz: 12 };
 
 ## 설명
 
-`let`을 사용하면 {{jsxref("statements/block", "블록 명령문", "", 1)}}이나 `let`을 사용한 표현식 내로 범위가 제한되는 변수를 선언할 수 있습니다. 이는 `let`이 {{jsxref("statements/var", "var")}} 키워드와 다른 점으로, `var`는 변수를 블록을 고려하지 않고 현재 함수 (또는 전역 스코프) 어디에서나 접근할 수 있는 변수를 선언합니다. 또한 `let`은 [파서가 구문을 평가해야만 변수를 값으로 초기화](#시간상_사각지대)(아래 참고)한다는 점도 `var`와 다릅니다.
+`let`을 사용하면 {{jsxref("statements/block", "블록 명령문", "", 1)}}이나 `let`을 사용한 표현식 내로 범위가 제한되는 변수를 선언할 수 있습니다. 이는 `let`이 {{jsxref("statements/var", "var")}} 키워드와 다른 점으로, `var`는 변수를 블록을 고려하지 않고 현재 함수 (또는 전역 스코프) 어디에서나 접근할 수 있는 변수를 선언합니다. 또한 `let`은 [파서가 구문을 평가해야만 변수를 값으로 초기화](#일시적_사각지대)(아래 참고)한다는 점도 `var`와 다릅니다.
 
 {{jsxref("statements/const", "const")}}와 마찬가지로 `let` 역시 전역 범위 선언에 사용(최상위 스코프 선언)해도 {{domxref("window")}} 객체에 새로운 속성을 추가하지 않습니다.
 
@@ -78,8 +83,8 @@ function letTest() {
 프로그램 최상위에서 사용할 경우 `var`는 전역 객체에 속성을 추가하지만 `let`은 추가하지 않습니다.
 
 ```js
-var x = 'global';
-let y = 'global';
+var x = "global";
+let y = "global";
 console.log(this.x); // "global"
 console.log(this.y); // undefined
 ```
@@ -95,19 +100,19 @@ var Thing;
   let privateScope = new WeakMap();
   let counter = 0;
 
-  Thing = function() {
-    this.someProperty = 'foo';
+  Thing = function () {
+    this.someProperty = "foo";
 
     privateScope.set(this, {
       hidden: ++counter,
     });
   };
 
-  Thing.prototype.showPublic = function() {
+  Thing.prototype.showPublic = function () {
     return this.someProperty;
   };
 
-  Thing.prototype.showPrivate = function() {
+  Thing.prototype.showPrivate = function () {
     return privateScope.get(this).hidden;
   };
 }
@@ -144,7 +149,7 @@ if (x) {
 
 ```js example-bad
 let x = 1;
-switch(x) {
+switch (x) {
   case 0:
     let foo;
     break;
@@ -160,7 +165,7 @@ switch(x) {
 ```js
 let x = 1;
 
-switch(x) {
+switch (x) {
   case 0: {
     let foo;
     break;
@@ -172,13 +177,13 @@ switch(x) {
 }
 ```
 
-### 시간상 사각지대
+### 일시적 사각지대
 
 `let` 변수는 초기화하기 전에는 읽거나 쓸 수 없습니다(선언 구문에 초기 값을 지정하지 않은 경우 `undefined`로 초기화함). 초기화 전에 접근을 시도하면 {{jsxref("ReferenceError")}}가 발생합니다.
 
 > **참고:** {{jsxref("Statements/var", "var")}} 변수와 다른 점으로, `var`의 경우 선언 전에 접근할 시 `undefined`입니다.
 
-변수 스코프의 맨 위에서 변수의 초기화 완료 시점까지의 변수는 "시간상 사각지대"(Temporal Dead Zone, TDZ)에 들어간 변수라고 표현합니다.
+변수 스코프의 맨 위에서 변수의 초기화 완료 시점까지의 변수는 "일시적 사각지대"(Temporal Dead Zone, TDZ)에 들어간 변수라고 표현합니다.
 
 ```js example-bad
 function do_something() {
@@ -189,17 +194,17 @@ function do_something() {
 }
 ```
 
-"시간상" 사각지대인 이유는, 사각지대가 코드의 작성 순서(위치)가 아니라 코드의 실행 순서(시간)에 의해 형성되기 때문입니다. 예컨대 아래 코드의 경우 `let` 변수 선언 코드가 그 변수에 접근하는 함수보다 아래에 위치하지만, 함수의 호출 시점이 사각지대 밖이므로 정상 동작합니다.
+"일시적" 사각지대인 이유는, 사각지대가 코드의 작성 순서(위치)가 아니라 코드의 실행 순서(시간)에 의해 형성되기 때문입니다. 예컨대 아래 코드의 경우 `let` 변수 선언 코드가 그 변수에 접근하는 함수보다 아래에 위치하지만, 함수의 호출 시점이 사각지대 밖이므로 정상 동작합니다.
 
 ```js
 {
-    // TDZ가 스코프 맨 위에서부터 시작
-    const func = () => console.log(letVar); // OK
+  // TDZ가 스코프 맨 위에서부터 시작
+  const func = () => console.log(letVar); // OK
 
-    // TDZ 안에서 letVar에 접근하면 ReferenceError
+  // TDZ 안에서 letVar에 접근하면 ReferenceError
 
-    let letVar = 3; // letVar의 TDZ 종료
-    func(); // TDZ 밖에서 호출함
+  let letVar = 3; // letVar의 TDZ 종료
+  func(); // TDZ 밖에서 호출함
 }
 ```
 
@@ -223,11 +228,11 @@ console.log(typeof undeclaredVariable); // undefined 출력
 아래 코드는 주석으로 표기한 지점에서 `ReferenceError`가 발생합니다.
 
 ```js example-bad
-function test(){
-   var foo = 33;
-   if(foo) {
-      let foo = (foo + 55); // ReferenceError
-   }
+function test() {
+  var foo = 33;
+  if (foo) {
+    let foo = foo + 55; // ReferenceError
+  }
 }
 test();
 ```
@@ -241,12 +246,13 @@ function go(n) {
   // 이 n은 매개변수 n
   console.log(n); // Object {a: [1,2,3]}
 
-  for (let n of n.a) { // ReferenceError
+  for (let n of n.a) {
+    // ReferenceError
     console.log(n);
   }
 }
 
-go({a: [1, 2, 3]});
+go({ a: [1, 2, 3] });
 ```
 
 ### 기타 예제
@@ -261,8 +267,8 @@ if (a === 1) {
   var a = 11; // 전역 변수
   let b = 22; // if 블록 변수
 
-  console.log(a);  // 11
-  console.log(b);  // 22
+  console.log(a); // 11
+  console.log(b); // 22
 }
 
 console.log(a); // 11

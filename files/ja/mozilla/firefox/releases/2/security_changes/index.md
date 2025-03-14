@@ -18,12 +18,12 @@ If SSLv2 support must be enabled, it can be by setting the appropriate `security
 ## New features
 
 - Firefox 2 supports [Elliptic Curve Cryptography](http://en.wikipedia.org/wiki/Elliptic_curve_cryptography) in TLS. Support is presently limited to curves of 256, 384, and 521 (yes, 521) bits.
-- Firefox 2 supports the TLS server name indication extension to facilitate secure connections to servers hosting multiple virtual servers on a single underlying network address, as per [RFC 3546](http://tools.ietf.org/html/rfc3546).
+- Firefox 2 supports the TLS server name indication extension to facilitate secure connections to servers hosting multiple virtual servers on a single underlying network address, as per [RFC 3546](https://tools.ietf.org/html/rfc3546).
 - When Firefox 2 makes an [OCSP](http://en.wikipedia.org/wiki/Ocsp) request to validate a web server's certificate, it now uses the proxy that has been configured for normal HTTP traffic.
 
 ## Determining what ciphers are available
 
-As always, you can find out what ciphers are supported -- and which are enabled or disabled -- by going to about:config and searching on "ssl" or "tls".
+As always, you can find out what ciphers are supported — and which are enabled or disabled — by going to about:config and searching on "ssl" or "tls".
 
 ## Security improved for the jar: protocol
 

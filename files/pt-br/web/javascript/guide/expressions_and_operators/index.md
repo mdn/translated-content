@@ -1,6 +1,6 @@
 ---
 title: Expressões e operadores
-slug: Web/JavaScript/Guide/Expressions_and_Operators
+slug: Web/JavaScript/Guide/Expressions_and_operators
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
@@ -11,16 +11,16 @@ Este artigo descreve expressões e operadores de JavaScript, incluindo operadore
 
 O JavaScript possui os tipos de operadores a seguir. Esta seção descreve os operadores e contém informações sobre precedência de operadores.
 
-- [Operadores de atribuição](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operador_atribuicao)
-- [Operadores de comparação](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operador_comparacao)
-- [Operadores aritméticos](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_aritmeticos)
-- [Operadores bit a bit](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_bit_a_bit)
-- [Operadores lógicos](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_logicos)
-- [Operadores de string](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_string)
-- [Operador condicional (ternário)](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operador_condicional_ternario)
-- [Operador vírgula](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operador_virgula)
-- [Operadores unário](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_unario)
-- [Operadores relacionais](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operador_virgula)
+- [Operadores de atribuição](#operador_atribuicao)
+- [Operadores de comparação](#operador_comparacao)
+- [Operadores aritméticos](#operadores_aritmeticos)
+- [Operadores bit a bit](#operadores_bit_a_bit)
+- [Operadores lógicos](#operadores_logicos)
+- [Operadores de string](#operadores_string)
+- [Operador condicional (ternário)](#operador_condicional_ternario)
+- [Operador vírgula](#operador_virgula)
+- [Operadores unário](#operadores_unario)
+- [Operadores relacionais](#operador_virgula)
 
 O JavaScript possui tanto operadores _binários_ quanto _unários_ e um operador ternário, o operador condicional. Um operador binário exige dois operandos, um antes do operador e outro depois:
 
@@ -75,22 +75,23 @@ var var1 = 3;
 var var2 = 4;
 ```
 
-| Operador                       | Descrição                                                                                                                                                                                                                   | Exemplos que retornam verdadeiro     |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| Igual (`==`)                   | Retorna verdadeiro caso os operandos sejam iguais.                                                                                                                                                                          | `3 == var1` `"3" == var1` `3 == '3'` |
-| Não igual (`!=`)               | Retorna verdadeiro caso os operandos não sejam iguais.                                                                                                                                                                      | `var1 != 4 var2 != "3"`              |
-| Estritamente igual (`===`)     | Retorna verdadeiro caso os operandos sejam iguais e do mesmo tipo. Veja também [`Object.is`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is) e [igualdade em JS](/pt-BR/docs/Web/JavaScript/Guide/Sameness). | `3 === var1`                         |
-| Estritamente não igual (`!==`) | Retorna verdadeiro caso os operandos não sejam iguais e/ou não sejam do mesmo tipo.                                                                                                                                         | `var1 !== "3" 3 !== '3'`             |
-| Maior que (`>`)                | Retorna verdadeiro caso o operando da esquerda seja maior que o da direita.                                                                                                                                                 | `var2 > var1 "12" > 2`               |
-| Maior que ou igual (`>=`)      | Retorna verdadeiro caso o operando da esquerda seja maior ou igual ao da direita.                                                                                                                                           | `var2 >= var1 var1 >= 3`             |
-| Menor que (`<`)                | Retorna verdadeiro caso o operando da esquerda seja menor que o da direita.                                                                                                                                                 | `var1 < var2 "12" < "2"`             |
-| Menor que ou igual (`<=`)      | Retorna verdadeiro caso o operando da esquerda seja menor ou igual ao da direita.                                                                                                                                           | `var1 <= var2 var2 <= 5`             |
+| Operador                       | Descrição                                                                                                                                                                                                                                      | Exemplos que retornam verdadeiro     |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| Igual (`==`)                   | Retorna verdadeiro caso os operandos sejam iguais.                                                                                                                                                                                             | `3 == var1` `"3" == var1` `3 == '3'` |
+| Não igual (`!=`)               | Retorna verdadeiro caso os operandos não sejam iguais.                                                                                                                                                                                         | `var1 != 4 var2 != "3"`              |
+| Estritamente igual (`===`)     | Retorna verdadeiro caso os operandos sejam iguais e do mesmo tipo. Veja também [`Object.is`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is) e [igualdade em JS](/pt-BR/docs/Web/JavaScript/Equality_comparisons_and_sameness). | `3 === var1`                         |
+| Estritamente não igual (`!==`) | Retorna verdadeiro caso os operandos não sejam iguais e/ou não sejam do mesmo tipo.                                                                                                                                                            | `var1 !== "3" 3 !== '3'`             |
+| Maior que (`>`)                | Retorna verdadeiro caso o operando da esquerda seja maior que o da direita.                                                                                                                                                                    | `var2 > var1 "12" > 2`               |
+| Maior que ou igual (`>=`)      | Retorna verdadeiro caso o operando da esquerda seja maior ou igual ao da direita.                                                                                                                                                              | `var2 >= var1 var1 >= 3`             |
+| Menor que (`<`)                | Retorna verdadeiro caso o operando da esquerda seja menor que o da direita.                                                                                                                                                                    | `var1 < var2 "12" < "2"`             |
+| Menor que ou igual (`<=`)      | Retorna verdadeiro caso o operando da esquerda seja menor ou igual ao da direita.                                                                                                                                                              | `var1 <= var2 var2 <= 5`             |
 
-> **Nota:** (**=>**) não é um operador, mas a notação para [função de seta](/pt-BR/docs/Web/JavaScript/Guide/Funções#Arrow_functions)
+> [!NOTE]
+> (**=>**) não é um operador, mas a notação para [função de seta](/pt-BR/docs/Web/JavaScript/Guide/Functions#arrow_functions)
 
 ### Operadores aritméticos
 
-Operadores aritméticos tomam valores numéricos (sejam literais ou variáveis) como seus operandos e retornam um único valor númerico. Os operadores aritméticos padrão são os de soma (`+`), subtração (`-`), multiplicação (`*`) e divisão (`/`). Estes operadores trabalham da mesma forma como na maioria das linguagens de programação quando utilizados com números de ponto flutuante (em particular, repare que divisão por zero produz um [`NaN`](/pt-BR/docs/JavaScript/Reference/Global_Objects/NaN)). Por exemplo:
+Operadores aritméticos tomam valores numéricos (sejam literais ou variáveis) como seus operandos e retornam um único valor númerico. Os operadores aritméticos padrão são os de soma (`+`), subtração (`-`), multiplicação (`*`) e divisão (`/`). Estes operadores trabalham da mesma forma como na maioria das linguagens de programação quando utilizados com números de ponto flutuante (em particular, repare que divisão por zero produz um [`NaN`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NaN)). Por exemplo:
 
 ```js
 console.log(1 / 2); /* imprime 0.5 */
@@ -99,13 +100,13 @@ console.log(1 / 2 == 1.0 / 2.0); /* isto também é verdadeiro */
 
 Em complemento às operações aritméticas padrões (+, -, \* /), o JavaScript disponibiliza os operadores aritméticos listados na tabela a seguir.
 
-| Operador                                                          | Descrição                                                                                                                                                                                                                         | Exemplo                                                                                                              |
-| ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Módulo (%)                                                        | Operador binário. Retorna o inteiro restante da divisão dos dois operandos.                                                                                                                                                       | 12 % 5 retorna 2.                                                                                                    |
-| Incremento (++)                                                   | Operador unário. Adiciona um ao seu operando. Se usado como operador prefixado (`++x`), retorna o valor de seu operando após a adição. Se usado como operador pósfixado (`x++`), retorna o valor de seu operando antes da adição. | Se `x` é 3, então `++x` define `x` como 4 e retorna 4, enquanto `x++` retorna 3 e, somente então, define `x` como 4. |
-| Decremento (--)                                                   | Operador unário. Subtrai um de seu operando. O valor de retorno é análogo àquele do operador de incremento.                                                                                                                       | Se `x` é 3, então `--x` define `x` como 2 e retorna 2, enquanto `x--` retorna 3 e, somente então, define `x` como 2. |
-| Negação (-)                                                       | Operador unário. Retorna a negação de seu operando.                                                                                                                                                                               | Se `x` é 3, então `-x` retorna -3.                                                                                   |
-| Adição (+)                                                        | Operador unário. Tenta converter o operando em um número, sempre que possível.                                                                                                                                                    | +"3" retorna 3.+true retorna 1.                                                                                      |
+| Operador                                                 | Descrição                                                                                                                                                                                                                         | Exemplo                                                                                                              |
+| -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Módulo (%)                                               | Operador binário. Retorna o inteiro restante da divisão dos dois operandos.                                                                                                                                                       | 12 % 5 retorna 2.                                                                                                    |
+| Incremento (++)                                          | Operador unário. Adiciona um ao seu operando. Se usado como operador prefixado (`++x`), retorna o valor de seu operando após a adição. Se usado como operador pósfixado (`x++`), retorna o valor de seu operando antes da adição. | Se `x` é 3, então `++x` define `x` como 4 e retorna 4, enquanto `x++` retorna 3 e, somente então, define `x` como 4. |
+| Decremento (--)                                          | Operador unário. Subtrai um de seu operando. O valor de retorno é análogo àquele do operador de incremento.                                                                                                                       | Se `x` é 3, então `--x` define `x` como 2 e retorna 2, enquanto `x--` retorna 3 e, somente então, define `x` como 2. |
+| Negação (-)                                              | Operador unário. Retorna a negação de seu operando.                                                                                                                                                                               | Se `x` é 3, então `-x` retorna -3.                                                                                   |
+| Adição (+)                                               | Operador unário. Tenta converter o operando em um número, sempre que possível.                                                                                                                                                    | +"3" retorna 3.+true retorna 1.                                                                                      |
 | Operador de exponenciação (\*\*) {{experimental_inline}} | Calcula a base elevada á potência do expoente, que é, base`expoente`                                                                                                                                                              | 2 \*\* 3 retorna 8.10 \*\* -1 retorna 0.1                                                                            |
 
 ### Operadores bit a bit
@@ -148,7 +149,8 @@ Por exemplo, a representação binária de nove é 1001 e a representação bin�
 | `~15`     | `-16`     | `~ 0000 0000 … 0000 1111 = 1111 1111 … 1111 0000` |
 | `~9`      | `-10`     | `~ 0000 0000 … 0000 1001 = 1111 1111 … 1111 0110` |
 
-> **Nota:** No quadro acima perceba que todos os 32 bits são invertidos quando usa-se o operador bit a bit NOT, e que os bits mais significativos (extrema esquerda) são definidos com 1 que representam valores negativos (representação complemento de dois).
+> [!NOTE]
+> No quadro acima perceba que todos os 32 bits são invertidos quando usa-se o operador bit a bit NOT, e que os bits mais significativos (extrema esquerda) são definidos com 1 que representam valores negativos (representação complemento de dois).
 
 #### Operadores de deslocamento bit a bit
 
@@ -179,32 +181,32 @@ Exemplos de expressões que podem ser convertidas para falso são aquelas que s�
 O código a seguir mostra exemplos do operador && (E lógico).
 
 ```js
-var a1 =  true && true;     // t && t retorna true
-var a2 =  true && false;    // t && f retorna false
-var a3 = false && true;     // f && t retorna false
-var a4 = false && (3 == 4); // f && f retorna false
-var a5 = "Gato" && "Cão";   // t && t retorna Cão
-var a6 = false && "Gato";   // f && t retorna false
-var a7 = "Gato" && false;   // t && f retorna false
+var a1 = true && true; // t && t retorna true
+var a2 = true && false; // t && f retorna false
+var a3 = false && true; // f && t retorna false
+var a4 = false && 3 == 4; // f && f retorna false
+var a5 = "Gato" && "Cão"; // t && t retorna Cão
+var a6 = false && "Gato"; // f && t retorna false
+var a7 = "Gato" && false; // t && f retorna false
 ```
 
 O código a seguir mostra exemplos do operador || (OU lógico).
 
 ```js
-var o1 =  true || true;     // t || t retorna true
-var o2 = false || true;     // f || t retorna true
-var o3 =  true || false;    // t || f retorna true
-var o4 = false || (3 == 4); // f || f retorna false
-var o5 = "Gato" || "Cão";   // t || t retorna Gato
-var o6 = false || "Gato";   // f || t retorna Gato
-var o7 = "Gato" || false;   // t || f retorna Gato
+var o1 = true || true; // t || t retorna true
+var o2 = false || true; // f || t retorna true
+var o3 = true || false; // t || f retorna true
+var o4 = false || 3 == 4; // f || f retorna false
+var o5 = "Gato" || "Cão"; // t || t retorna Gato
+var o6 = false || "Gato"; // f || t retorna Gato
+var o7 = "Gato" || false; // t || f retorna Gato
 ```
 
 O código a seguir mostra exemplos do operador ! (negação lógica).
 
 ```js
-var n1 = !true;   // !t retorna false
-var n2 = !false;  // !f retorna true
+var n1 = !true; // !t retorna false
+var n2 = !false; // !f retorna true
 var n3 = !"Gato"; // !t retorna false
 ```
 
@@ -249,7 +251,7 @@ Se `condicao` for verdadeira, o operador terá o valor de `valor1`. Caso contrá
 Por exemplo,
 
 ```js
-var status = (idade >= 18) ? "adulto" : "menor de idade";
+var status = idade >= 18 ? "adulto" : "menor de idade";
 ```
 
 Esta declaração atribui o valor "adulto" à variável `status` caso `idade` seja dezoito ou mais. Caso contrário, atribui o valor "menor de idade".
@@ -292,12 +294,12 @@ Se o operador `delete` for bem-sucedido, ele define a propriedade ou elemento pa
 x = 42;
 var y = 43;
 meuobj = new Number();
-meuobj.h = 4;    // cria a propriedade h
-delete x;        // retorna true (pode apagar se declarado implicitamente)
-delete y;        // retorna false (não pode apagar se declarado com var)
-delete Math.PI;  // retorna false (não pode apagar propriedades predefinidas)
+meuobj.h = 4; // cria a propriedade h
+delete x; // retorna true (pode apagar se declarado implicitamente)
+delete y; // retorna false (não pode apagar se declarado com var)
+delete Math.PI; // retorna false (não pode apagar propriedades predefinidas)
 delete meuobj.h; // retorna true (pode apagar propriedades definidas pelo usuário)
-delete meuobj;   // retorna true (pode apagar se declarado implicitamente)
+delete meuobj; // retorna true (pode apagar se declarado implicitamente)
 ```
 
 ##### Apagando elementos de array
@@ -307,7 +309,13 @@ Quando você apaga um elemento de um array, o tamanho do array não é afetado. 
 Quando o operador `delete` remove um elemento do array, aquele elemento não pertence mais ao array. No exemplo a seguir, `arvores[3]` é removido com `delete`. Entretanto, `arvores[3]` ainda é endereçável e retorna `undefined`.
 
 ```js
-var arvores = new Array("pau-brasil", "loureiro", "cedro", "carvalho", "sicômoro");
+var arvores = new Array(
+  "pau-brasil",
+  "loureiro",
+  "cedro",
+  "carvalho",
+  "sicômoro",
+);
 delete arvores[3];
 if (3 in arvores) {
   // isto não é executado
@@ -317,7 +325,13 @@ if (3 in arvores) {
 Se você quer que um elemento do array exista, mas tenha um valor indefinido, utilize a palavra-chave `undefined` em vez do operador `delete`. No exemplo a seguir, o valor `undefined` é atribuído a `arvores[3]`, mas o elemento da matriz ainda existe:
 
 ```js
-var arvores = new Array("pau-brasil", "loureiro", "cedro", "carvalho", "sicômoro");
+var arvores = new Array(
+  "pau-brasil",
+  "loureiro",
+  "cedro",
+  "carvalho",
+  "sicômoro",
+);
 arvores[3] = undefined;
 if (3 in arvores) {
   // isto será executado
@@ -328,9 +342,9 @@ if (3 in arvores) {
 
 O operador `typeof` é utilizado em qualquer uma das seguintes formas:
 
-```js
-typeof operando
-typeof (operando)
+```js-nolint
+typeof operando;
+typeof (operando);
 ```
 
 O operador `typeof` retorna uma string indicando o tipo do operando sem avaliação. `operando` é uma string, variável, palavra-chave ou objeto cujo tipo deve ser retornado. Os parênteses são opcionais.
@@ -347,10 +361,10 @@ var hoje = new Date();
 O operador `typeof` retornaria o seguinte resultado para aquelas variáveis:
 
 ```js
-typeof meuLazer;  // retorna "function"
-typeof forma;     // retorna "string"
-typeof tamanho;   // retorna "number"
-typeof hoje;      // retorna "object"
+typeof meuLazer; // retorna "function"
+typeof forma; // retorna "string"
+typeof tamanho; // retorna "number"
+typeof hoje; // retorna "object"
 typeof naoExiste; // retorna "undefined"
 ```
 
@@ -364,44 +378,44 @@ typeof null; // retorna "object"
 Para um número ou uma string, o `typeof` retorna os seguintes resultados:
 
 ```js
-typeof 62;          // retorna "number"
-typeof 'Olá mundo'; // retorna "string"
+typeof 62; // retorna "number"
+typeof "Olá mundo"; // retorna "string"
 ```
 
 Para valores de propriedades, o `typeof` retorna o tipo do valor que a propriedade possui:
 
 ```js
 typeof document.lastModified; // retorna "string"
-typeof window.length;         // retorna "number"
-typeof Math.LN2;              // retorna "number"
+typeof window.length; // retorna "number"
+typeof Math.LN2; // retorna "number"
 ```
 
 Para métodos e funções, o `typeof` retorna os seguintes resultados:
 
 ```js
-typeof blur;        // retorna "function"
-typeof eval;        // retorna "function"
-typeof parseInt;    // retorna "function"
+typeof blur; // retorna "function"
+typeof eval; // retorna "function"
+typeof parseInt; // retorna "function"
 typeof forma.split; // retorna "function"
 ```
 
 Para objetos predefinidos, o `typeof` retorna os seguintes resultados:
 
 ```js
-typeof Date;     // retorna "function"
+typeof Date; // retorna "function"
 typeof Function; // retorna "function"
-typeof Math;     // retorna "object"
-typeof Option;   // retorna "function"
-typeof String;   // retorna "function"
+typeof Math; // retorna "object"
+typeof Option; // retorna "function"
+typeof String; // retorna "function"
 ```
 
 #### `void`
 
 O operador `void` é utilizado de qualquer uma das seguintes formas:
 
-```js
-void (expressao)
-void expressao
+```js-nolint
+void (expressao);
+void expressao;
 ```
 
 O operador `void` especifica que uma expressão deve ser avaliada sem retorno de valor. `expressao` é uma expressão JavaScript que deve ser avaliada. Os parênteses em torno da expressão são opcionais, mas é uma boa prática utilizá-los.
@@ -417,8 +431,7 @@ O código a seguir cria um link de hipertexto que não faz coisa alguma quando c
 O código a seguir cria um link de hipertexto que submete um formulário quando clicado pelo usuário.
 
 ```html
-<a href="javascript:void(document.form.submit())">
-Clique aqui para enviar</a>
+<a href="javascript:void(document.form.submit())">Clique aqui para enviar</a>
 ```
 
 ### Operadores relacionais
@@ -430,7 +443,7 @@ Um operador relacional compara seus operando e retorna um valor booleano baseado
 O operador `in` retorna verdadeiro se a propriedade especificada estiver no objeto especificado. A sintaxe é:
 
 ```js
-nomePropriedadeOuNumero in nomeObjeto
+nomePropriedadeOuNumero in nomeObjeto;
 ```
 
 onde `nomePropriedadeOuNumero` é uma string ou uma expressão numérica que representa um nome de propriedade ou um índice de um array, e `nomeObjeto` é o nome de um objeto.
@@ -439,22 +452,28 @@ Os exemplos a seguir mostram alguns usos do operador `in`.
 
 ```js
 // Arrays
-var arvores = new Array("pau-brasil", "loureiro", "cedro", "carvalho", "sicômoro");
-0 in arvores;        // retorna verdadeiro
-3 in arvores;        // retorna verdadeiro
-6 in arvores;        // retorna falso
-"cedro" in arvores;  // retorna falso (você deve especificar o número do índice,
-                     // não o valor naquele índice)
+var arvores = new Array(
+  "pau-brasil",
+  "loureiro",
+  "cedro",
+  "carvalho",
+  "sicômoro",
+);
+0 in arvores; // retorna verdadeiro
+3 in arvores; // retorna verdadeiro
+6 in arvores; // retorna falso
+"cedro" in arvores; // retorna falso (você deve especificar o número do índice,
+// não o valor naquele índice)
 "length" in arvores; // retorna verdadeiro (length é uma propriedade de Array)
 
 // Objetos predefinidos
-"PI" in Math;            // retorna verdadeiro
+"PI" in Math; // retorna verdadeiro
 var minhaString = new String("coral");
 "length" in minhaString; // retorna verdadeiro
 
 // Objetos personalizados
-var meucarro = {marca: "Honda", modelo: "Accord", ano: 1998};
-"marca" in meucarro;  // retorna verdadeiro
+var meucarro = { marca: "Honda", modelo: "Accord", ano: 1998 };
+"marca" in meucarro; // retorna verdadeiro
 "modelo" in meucarro; // retorna verdadeiro
 ```
 
@@ -463,7 +482,7 @@ var meucarro = {marca: "Honda", modelo: "Accord", ano: 1998};
 O operador `instanceof` retorna verdadeiro se o objeto especificado for do tipo de objeto especificado. A sintaxe é:
 
 ```js
-nomeObjeto instanceof tipoObjeto
+nomeObjeto instanceof tipoObjeto;
 ```
 
 onde `nomeObjeto` é o nome do objeto a ser comparado com `tipoObjeto`, e `tipoObjeto` é um tipo de objeto como `Date` ou `Array`.
@@ -504,7 +523,7 @@ A tabela a seguir descreve a precedência de operadores, da mais alta para a mai
 | atribuição                                | `= += -= *= /= %= <<= >>= >>>= &= ^= \|=` |
 | vírgula                                   | `,`                                       |
 
-Uma versão mais detalhada desta tabela, com links adicionais para detalhes de cada operador, pode ser vista em [Referência do JavaScript](/pt-BR/docs/JavaScript/Reference/Operators/Operator_Precedence#Table).
+Uma versão mais detalhada desta tabela, com links adicionais para detalhes de cada operador, pode ser vista em [Referência do JavaScript](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table).
 
 ## Expressões
 
@@ -518,9 +537,9 @@ O código `3 + 4` é um exemplo do segundo tipo de expressão. Esta expressão u
 
 O JavaScript possui as seguintes categorias de expressão:
 
-- Aritmética: é avaliada como um número, por exemplo 3.14159. (Geralmente utiliza [operadores aritméticos](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_aritmeticos)).
-- String: é avaliada como uma string de caracteres, por exemplo, "Fred" ou "234". (Geralmente utiliza [operadores de string](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_string)).
-- Lógica: é avaliada como verdadeira ou falsa. (Costuma envolver[operadores lógicos](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_logicos)).
+- Aritmética: é avaliada como um número, por exemplo 3.14159. (Geralmente utiliza [operadores aritméticos](#operadores_aritmeticos)).
+- String: é avaliada como uma string de caracteres, por exemplo, "Fred" ou "234". (Geralmente utiliza [operadores de string](#operadores_string)).
+- Lógica: é avaliada como verdadeira ou falsa. (Costuma envolver[operadores lógicos](#operadores_logicos)).
 - Expressões primárias: Palavras reservadas e expressões gerais do JavaScript.
 - Expressão lado esquerdo: atribuição à esquerda de valores.
 
@@ -533,16 +552,15 @@ Palavras reservadas e expressões gerais do JavaScript.
 Utilize a palavra reservada `this` para se referir ao objeto atual. Em geral, o `this` se refere ao objeto chamado em um método. Utilize o `this` das seguintes formas:
 
 ```js
-this["nomePropriedade"]
-this.nomePropriedade
+this["nomePropriedade"];
+this.nomePropriedade;
 ```
 
 Suponha uma função chamada `valide` que valida a propriedade `valor` de um objeto, dado o objeto e os valores máximo e mínimo:
 
 ```js
-function valide(obj, minimo, maximo){
-  if ((obj.valor < minimo) || (obj.valor > maximo))
-    alert("Valor inválido!");
+function valide(obj, minimo, maximo) {
+  if (obj.valor < minimo || obj.valor > maximo) alert("Valor inválido!");
 }
 ```
 
@@ -550,30 +568,29 @@ Você poderia chamar `valide` em cada manipulador de evento `onChange` de um for
 
 ```html
 <b>Informe um número entre 18 e 99:</b>
-<input type="text" name="idade" size=3
-   onChange="valide(this, 18, 99);">
+<input type="text" name="idade" size="3" onChange="valide(this, 18, 99);" />
 ```
 
 #### Operador de agrupamento
 
 O operador de agrupamento `( )` controla a precedência de avaliação de expressões. Por exemplo, você pode substituir a precedência da divisão e multiplicação para que a adição e subtração sejam avaliadas primeiro.
 
-```js
+```js-nolint
 var a = 1;
 var b = 2;
 var c = 3;
 
 // Precedência padrão
-a + b * c     // 7
+a + b * c; // 7
 // a avaliação padrão pode ser assim
-a + (b * c)   // 7
+a + (b * c); // 7
 
 // Agora substitui a precedência
 // soma antes de multiplicar
-(a + b) * c   // 9
+(a + b) * c; // 9
 
 // o que é equivalente a
-a * c + b * c // 9
+a * c + b * c; // 9
 ```
 
 #### Comprehensions
@@ -583,7 +600,7 @@ Comprehensions são uma característica experimental de JavaScript, marcada para
 {{experimental_inline}}**[`[for (x of y) x]`](/pt-BR/docs/Web/JavaScript/Reference/Operators/Array_comprehensions)**
 Comprehensions de array.
 
-{{experimental_inline}}**[`(for (x of y) y)`](/pt-BR/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions)
+{{experimental_inline}}**[`(for (x of y) y)`](/pt-BR/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
 ** `gerador de` comprehensions
 
 Comprehensions existem em muitas linguagens de programação e permitem que você rapidamente monte um novo array com base em um existente, por exemplo:
@@ -625,14 +642,14 @@ O operador `spread` permite que uma expressão seja expandido em locais onde sã
 Exemplo: Se você tem um array e deseja criar um novo array com os elementos do array já existente sendo parte do novo array, a sintaxe do array não será suficiente e você terá de usar uma combinação de push, splice, concat, etc. Com a sintaxe `spread`, isto torna-se muito mais sucinto:
 
 ```js
-var partes = ['ombro', 'joelhos'];
-var musica = ['cabeca', ...partes, 'e', 'pés'];
+var partes = ["ombro", "joelhos"];
+var musica = ["cabeca", ...partes, "e", "pés"];
 ```
 
 Da mesma forma, o operador `spread` funciona com chamadas de função:
 
 ```js
-function f(x, y, z) { }
+function f(x, y, z) {}
 var args = [0, 1, 2];
 f(...args);
 ```

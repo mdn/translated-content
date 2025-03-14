@@ -1,23 +1,33 @@
 ---
 title: parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/parseFloat
-tags:
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
-original_slug: Web/JavaScript/Reference/Objets_globaux/parseFloat
 ---
 
 {{jsSidebar("Objects")}}
 
 La fonction **`parseFloat()`** permet de transformer une chaîne de caractères en un nombre flottant après avoir analysée celle-ci (_parsing_).
 
-{{EmbedInteractiveExample("pages/js/globalprops-parsefloat.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseFloat()")}}
+
+```js interactive-example
+function circumference(r) {
+  return parseFloat(r) * 2.0 * Math.PI;
+}
+
+console.log(circumference(4.567));
+// Expected output: 28.695307297889173
+
+console.log(circumference("4.567abcdefgh"));
+// Expected output: 28.695307297889173
+
+console.log(circumference("abcdefgh"));
+// Expected output: NaN
+```
 
 ## Syntaxe
 
 ```js
-parseFloat(string)
+parseFloat(string);
 ```
 
 ### Paramètres
@@ -35,7 +45,8 @@ Un nombre flottant obtenu à partir de l'analyse de la chaîne de caractères. S
 
 `parseFloat` analyse l'argument fourni sous la forme d'une chaîne de caractères et renvoie un nombre flottant correspondant. L'analyse de la chaîne s'arrête dès qu'un caractère qui n'est pas +,-, un chiffre, un point ou un exposant. Ce caractère, ainsi que les suivants, seront ignorés. Les blancs en début et en fin de chaîne sont autorisés.
 
-> **Note :** Si on souhaite avoir un outil de conversion plus strict, on pourra utiliser {{jsxref("Number", "Number(<em>valeur</em>)")}} qui utilise une analyse plus stricte et qui fournit {{jsxref("NaN")}} pour les valeurs qui contiennent des caractères invalides, quelle que soit leur position.
+> [!NOTE]
+> Si on souhaite avoir un outil de conversion plus strict, on pourra utiliser {{jsxref("Number", "Number(<em>valeur</em>)")}} qui utilise une analyse plus stricte et qui fournit {{jsxref("NaN")}} pour les valeurs qui contiennent des caractères invalides, quelle que soit leur position.
 
 Si le premier caractère de la chaîne ne peut pas être converti en un nombre, `parseFloat()` renverra `NaN`.
 
@@ -60,7 +71,9 @@ parseFloat("0.0314E+2");
 parseFloat("3.14d'autres caractères non numériques");
 
 var titi = Object.create(null);
-titi.valueOf = function () { return "3.14"; };
+titi.valueOf = function () {
+  return "3.14";
+};
 parseFloat(titi);
 ```
 
@@ -85,20 +98,19 @@ Si on souhaite éviter de convertir des chaînes qui contiennent des caractères
 
 ```js
 var filterFloat = function (value) {
-    if (/^(\-|\+)?([0-9]+(\.[0-9]+)?|Infinity)$/
-      .test(value))
-      return Number(value);
+  if (/^(\-|\+)?([0-9]+(\.[0-9]+)?|Infinity)$/.test(value))
+    return Number(value);
   return NaN;
-}
+};
 
-console.log(filterFloat('421'));               // 421
-console.log(filterFloat('-421'));              // -421
-console.log(filterFloat('+421'));              // 421
-console.log(filterFloat('Infinity'));          // Infinity
-console.log(filterFloat('1.61803398875'));     // 1.61803398875
-console.log(filterFloat('421e+0'));            // NaN
-console.log(filterFloat('421hop'));            // NaN
-console.log(filterFloat('hop1.61803398875'));  // NaN
+console.log(filterFloat("421")); // 421
+console.log(filterFloat("-421")); // -421
+console.log(filterFloat("+421")); // 421
+console.log(filterFloat("Infinity")); // Infinity
+console.log(filterFloat("1.61803398875")); // 1.61803398875
+console.log(filterFloat("421e+0")); // NaN
+console.log(filterFloat("421hop")); // NaN
+console.log(filterFloat("hop1.61803398875")); // NaN
 ```
 
 Attention : ce code n'est qu'un exemple et renverra `NaN` pour des valeurs pourtant valides comme `1.` ou `.5`.

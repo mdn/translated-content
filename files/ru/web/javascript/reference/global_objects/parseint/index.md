@@ -1,17 +1,32 @@
 ---
 title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
-tags:
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 ---
 
 {{jsSidebar("Objects")}}
 
 Функция **`parseInt()`** принимает строку в качестве аргумента и возвращает целое число в соответствии с указанным основанием системы счисления.
 
-{{EmbedInteractiveExample("pages/js/globalprops-parseint.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseInt()")}}
+
+```js interactive-example
+console.log(parseInt("123"));
+// 123 (default base-10)
+console.log(parseInt("123", 10));
+// 123 (explicitly specify base-10)
+console.log(parseInt("   123 "));
+// 123 (whitespace is ignored)
+console.log(parseInt("077"));
+// 77 (leading zeros are ignored)
+console.log(parseInt("1.9"));
+// 1 (decimal part is truncated)
+console.log(parseInt("ff", 16));
+// 255 (lower-case hexadecimal)
+console.log(parseInt("0xFF", 16));
+// 255 (upper-case hexadecimal with "0x" prefix)
+console.log(parseInt("xyz"));
+// NaN (input can't be converted to an integer)
+```
 
 ## Синтаксис
 
@@ -22,7 +37,7 @@ parseInt(string, radix);
 ### Параметры
 
 - `string`
-  - : Значение, которое необходимо проинтерпретировать. Если значение параметра `string` не принадлежит строковому типу, оно преобразуется в него (с помощью абстрактной операции [`ToString`](http://www.ecma-international.org/ecma-262/6.0/#sec-tostring)). Пробелы в начале строки не учитываются.
+  - : Значение, которое необходимо проинтерпретировать. Если значение параметра `string` не принадлежит строковому типу, оно преобразуется в него (с помощью абстрактной операции [`ToString`](https://www.ecma-international.org/ecma-262/6.0/#sec-tostring)). Пробелы в начале строки не учитываются.
 
 <!---->
 
@@ -64,7 +79,7 @@ parseInt(" 0xF", 16);
 parseInt(" F", 16);
 parseInt("17", 8);
 parseInt(021, 8);
-parseInt("015", 10);  //parseInt(015, 10); вернёт 15
+parseInt("015", 10); //parseInt(015, 10); вернёт 15
 parseInt(15.99, 10);
 parseInt("FXX123", 16);
 parseInt("1111", 2);
@@ -78,7 +93,7 @@ parseInt("12", 13);
 
 ```js
 parseInt("Hello", 8); // Не является числом
-parseInt("546", 2);   // Неверное число в двоичной системе счисления
+parseInt("546", 2); // Неверное число в двоичной системе счисления
 ```
 
 Все следующие примеры возвращают **`-15`**:
@@ -87,7 +102,7 @@ parseInt("546", 2);   // Неверное число в двоичной сис�
 parseInt("-F", 16);
 parseInt("-0F", 16);
 parseInt("-0XF", 16);
-parseInt(-15.1, 10)
+parseInt(-15.1, 10);
 parseInt(" -17", 8);
 parseInt(" -15", 10);
 parseInt("-1111", 2);
@@ -134,26 +149,25 @@ parseInt("08"); // 0, '8' не является цифрой в восьмери
 
 ```js
 var filterInt = function (value) {
-  if (/^(\-|\+)?([0-9]+|Infinity)$/.test(value))
-    return Number(value);
+  if (/^(\-|\+)?([0-9]+|Infinity)$/.test(value)) return Number(value);
   return NaN;
-}
+};
 
-console.log(filterInt('421'));               // 421
-console.log(filterInt('-421'));              // -421
-console.log(filterInt('+421'));              // 421
-console.log(filterInt('Infinity'));          // Infinity
-console.log(filterInt('421e+0'));            // NaN
-console.log(filterInt('421hop'));            // NaN
-console.log(filterInt('hop1.61803398875'));  // NaN
-console.log(filterInt('1.61803398875'));     // NaN
+console.log(filterInt("421")); // 421
+console.log(filterInt("-421")); // -421
+console.log(filterInt("+421")); // 421
+console.log(filterInt("Infinity")); // Infinity
+console.log(filterInt("421e+0")); // NaN
+console.log(filterInt("421hop")); // NaN
+console.log(filterInt("hop1.61803398875")); // NaN
+console.log(filterInt("1.61803398875")); // NaN
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

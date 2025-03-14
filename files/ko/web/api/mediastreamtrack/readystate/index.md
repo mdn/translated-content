@@ -1,14 +1,6 @@
 ---
 title: MediaStreamTrack.readyState
 slug: Web/API/MediaStreamTrack/readyState
-tags:
-  - API
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Property
-  - Read-only
-  - Reference
-translation_of: Web/API/MediaStreamTrack/readyState
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -18,7 +10,7 @@ translation_of: Web/API/MediaStreamTrack/readyState
 ## 구문
 
 ```js
-const state = track.readyState
+const state = track.readyState;
 ```
 
 ### 값

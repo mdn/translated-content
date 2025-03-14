@@ -1,12 +1,11 @@
 ---
 title: 为 Firefox 3 升级扩展
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
-original_slug: Updating_extensions_for_Firefox_3
 ---
 
 {{FirefoxSidebar}}
 
-英文原文取自于 [http://developer.mozilla.org/en/docs/Extensions](/zh-CN/docs/Extensions) 这篇文章将对于那些想把他们的扩展在 Firefox 3 中正常运行的开发者提供一些有用的信息。
+这篇文章为那些想更新其扩展以在 Firefox 3 中正常运行的开发者提供了一些有用的信息。
 
 在进入主题之前，首先要提示一下：如果你的扩展所需要的唯一改变只是安装文件中的`maxVersion`信息，并且你的扩展所在的主机是[addons.mozilla.org](https://addons.mozilla.org)，事实上你不需要上传你的新的版本的扩展！只需要在 AMO 中使用开发者控制面板调整`maxVersion`。通过这种方式你可以避免你的扩展被再次审核。
 
@@ -30,11 +29,13 @@ original_slug: Updating_extensions_for_Firefox_3
 
 注意，在 Firefox3 的本版号中没有额外的“.0”，所以请使用“3.0.\*”，而非“3.0.0.\*”。
 
-> **备注：** Note that at this point more changes in Firefox 3 are expected. These changes may break some extensions, so you shouldn't release an extension with `3.0.*` `maxVersion` to the users until the Firefox 3 release candidate is out. During the Firefox 3 Beta period, you should use `3.0b5` as your `maxVersion`.
+> [!NOTE]
+> Note that at this point more changes in Firefox 3 are expected. These changes may break some extensions, so you shouldn't release an extension with `3.0.*` `maxVersion` to the users until the Firefox 3 release candidate is out. During the Firefox 3 Beta period, you should use `3.0b5` as your `maxVersion`.
 
 There have been (and will continue to be) a number of API changes that will likely break some extensions. We're still working on compiling a complete list of these changes.
 
-> **备注：** If your extension still uses an [`Install.js`](cn/Install.js) script instead of an [install manifest](), you need to make the transition to an install manifest now. Firefox 3 no longer supports `install.js` scripts in XPI files.
+> [!NOTE]
+> If your extension still uses an [`Install.js`](cn/Install.js) script instead of an [install manifest](), you need to make the transition to an install manifest now. Firefox 3 no longer supports `install.js` scripts in XPI files.
 
 #### Add localizations to the install manifest
 
@@ -51,7 +52,7 @@ Several APIs have been changed in significant ways. The most significant of thes
 #### DOM
 
 将外部文档的节点插入当前文档之前，你必须使用 [`document.importNode()`](/zh-CN/docs/Web/API/Document/importNode) 从外部文档导入源节点，或者使用 [`document.adoptNode()`](/zh-CN/docs/Web/API/Document/adoptNode)导入源节点，
-想要了解更多的 [`Node.ownerDocument`](/zh-CN/docs/Web/API/Node/ownerDocument) 问题，请参考 [W3C DOM FAQ](http://www.w3.org/DOM/faq.html#ownerdoc).
+想要了解更多的 [`Node.ownerDocument`](/zh-CN/docs/Web/API/Node/ownerDocument) 问题，请参考 [W3C DOM FAQ](https://www.w3.org/DOM/faq.html#ownerdoc).
 
 即使你不执行导入动作，就执行插入外部文档中的节点.Firefox 目前也不会报错 (如果严格按标准执行，很多已有的网站都无法正常运行).
 我们鼓励开发者严格按标准修改自己已有的不符合上述标准的代码。
@@ -133,7 +134,8 @@ Or use the following technique to make your overlay work on both Firefox 2 and F
 </window>
 ```
 
-> **备注：** This change is effective for Firefox 3 beta 4 and the pre-beta 4 nightlies.
+> [!NOTE]
+> This change is effective for Firefox 3 beta 4 and the pre-beta 4 nightlies.
 
 ### 其他方面的修改
 
@@ -150,6 +152,6 @@ _Add simple changes you had to make while updating your extension to work with F
 
 - `window.addEventListener("load", myFunc, true)` is not fired when loading web content (browser page loads). This is due to [bug 296639](https://bugzilla.mozilla.org/show_bug.cgi?id=296639) which changes the way inner and outer windows communicate. The simple fix here is to use `gBrowser.addEventListener("load", myFunc, true)` as described [here](/zh-CN/Code_snippets/Tabbed_browser#Detecting_page_load) and works in Firefox 2 as well.
 - `content.window.getSelection()` gives an object (which can be converted to a string by `toString()`), unlike the now deprecated `content.document.getSelection()` which returns a string
-- `event.preventBubble()` was deprecated in Firefox 2 and has been removed in Firefox 3. Use [`event.stopPropagation()`](/zh-CN/DOM/event.stopPropagation), which works in Firefox 2 as well.
+- `event.preventBubble()` was deprecated in Firefox 2 and has been removed in Firefox 3. Use [`event.stopPropagation()`](/zh-CN/docs/Web/API/Event/stopPropagation), which works in Firefox 2 as well.
 - Timers that are initiated using `setTimeout()` are now blocked by modal windows due to the fix made for [bug 52209](https://bugzilla.mozilla.org/show_bug.cgi?id=52209). You may use `nsITimer` instead.
 - If your extension needs to allow an untrusted source (e.g., a web site) to access the extension's chrome, then you must use the new [`contentaccessible` flag](/zh-CN/Chrome_Registration#contentaccessible).

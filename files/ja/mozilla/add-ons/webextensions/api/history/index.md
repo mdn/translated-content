@@ -7,21 +7,22 @@ slug: Mozilla/Add-ons/WebExtensions/API/history
 
 ブラウザー履歴とやりとりする `history` API を使用します。
 
-> **メモ:** downloads は [`HistoryItem`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem) オブジェクトとして扱われるのに注意します。このため、ダウンロードのために [`history.onVisited`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited) も発火します。
+> [!NOTE]
+> downloads は [`HistoryItem`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem) オブジェクトとして扱われるのに注意します。このため、ダウンロードのために [`history.onVisited`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited) も発火します。
 
 ブラウザー履歴はユーザーが訪れたページの時間順の記録です。history API では次の事ができます:
 
-- [ブラウザー履歴に出てくるページの検索](/ja/Add-ons/WebExtensions/API/history/search)
-- [ブラウザー履歴から個々のページを削除](/ja/Add-ons/WebExtensions/API/history/deleteUrl)
-- [ブラウザー履歴にページを追加](/ja/Add-ons/WebExtensions/API/history/addUrl)
-- [ブラウザー履歴から全ページを削除](/ja/Add-ons/WebExtensions/API/history/deleteAll)
+- [ブラウザー履歴に出てくるページの検索](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/search)
+- [ブラウザー履歴から個々のページを削除](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteUrl)
+- [ブラウザー履歴にページを追加](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/addUrl)
+- [ブラウザー履歴から全ページを削除](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteAll)
 
 しかしながら、ユーザーは１つのページを何度も訪問することがあるので、この API は「訪問数」の概念もあります。したがってこの API を次のようにも使えます:
 
-- [ユーザーが特定のページを訪問した完全なセットを取得する](/ja/Add-ons/WebExtensions/API/history/getVisits)
-- [所定の期間に訪問したあらゆるページの訪問を削除する](/ja/Add-ons/WebExtensions/API/history/deleteRange)
+- [ユーザーが特定のページを訪問した完全なセットを取得する](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/getVisits)
+- [所定の期間に訪問したあらゆるページの訪問を削除する](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteRange)
 
-この API を使うには [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルで指定する "history" [パーミッション](/JA/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)が必要です。
+この API を使うには [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルで指定する "history" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)が必要です。
 
 ## 型
 
@@ -35,7 +36,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/history
 ## 関数
 
 - {{WebExtAPIRef("history.search()")}}
-  - : ブラウザー履歴を検索して、所与の条件にマッチする [`history.HistoryItem`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/History/HistoryItem) オブジェクトを得る
+  - : ブラウザー履歴を検索して、所与の条件にマッチする [`history.HistoryItem`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem) オブジェクトを得る
 - {{WebExtAPIRef("history.getVisits()")}}
   - : 所定のページへの訪問についての情報を取得する
 - {{WebExtAPIRef("history.addUrl()")}}
@@ -58,13 +59,15 @@ slug: Mozilla/Add-ons/WebExtensions/API/history
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.history")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **メモ:** この API は Chromium の [`chrome.history`](https://developer.chrome.com/extensions/history) API に基づいています。また、このドキュメントは [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!NOTE]
+> この API は Chromium の [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history) API に基づいています。また、このドキュメントは [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -91,4 +94,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/history
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

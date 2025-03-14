@@ -1,9 +1,9 @@
 ---
 title: PATCH
 slug: Web/HTTP/Methods/PATCH
-translation_of: Web/HTTP/Methods/PATCH
-original_slug: Web/HTTP/Méthode/PATCH
 ---
+
+{{HTTPSidebar}}
 
 La **méthode `PATCH` d'une requête HTTP** applique des modifications partielles à une ressource.
 
@@ -80,9 +80,11 @@ ETag: "e0023aa4f"
 
 ## Spécifications
 
-| Spécification                    | Titre                                           |
-| -------------------------------- | ----------------------------------------------- |
-| {{RFC("5789", "PATCH")}} | Méthode PATCH pour HTTP (PATCH Method for HTTP) |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

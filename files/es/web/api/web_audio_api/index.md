@@ -1,8 +1,6 @@
 ---
 title: Web Audio API
 slug: Web/API/Web_Audio_API
-translation_of: Web/API/Web_Audio_API
-original_slug: Web_Audio_API
 ---
 
 {{apiref("Web Audio API")}}
@@ -25,13 +23,14 @@ Un diagrama de flujo simple y típico para el audio web se vería algo como esto
 4. Escoge el destino final del audio, por ejemplo tu sistema de altavoces
 5. Conecta las fuentes a los efectos, y los efectos al destino.
 
-![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](https://mdn.mozillademos.org/files/12241/webaudioAPI_en.svg)
+![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](audio-context_.png)
 
 El tiempo es controlado con alta precisión baja latencia, permitiendo a los desarrolladores escribir código que responda con precisión a los eventos y sea capaz de apuntar a muestras específicas, incluso en una alta frecuencia de muestreo. Por lo tanto, las aplicaciones como las cajas de ritmos y los secuenciadores están a su alcance.
 
 El API de Audio Web también nos permite controlar cómo el audio es _espacializado_. Usando un sistema basado en un _modelo fuente-oyente_, esto permite controlar el _modeo de paneo_ y que se ocupa de la _atenuación inducida por distancia_ o _desplazamiento doppler_ inducido por una fuente en movimiento (o un oyente en movimiento).
 
-> **Nota:** Puedes leear sobre la teoría del API de Audio Web con más detalle en nuestro artículo [Conceptos Básicos detrás del API de Audio Web](/es/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API).
+> [!NOTE]
+> Puedes leear sobre la teoría del API de Audio Web con más detalle en nuestro artículo [Conceptos Básicos detrás del API de Audio Web](/es/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API).
 
 ## Interfaces del API de Audio Web
 
@@ -51,7 +50,7 @@ Contenedores y definiciones generales que dan forma a los gráficos de audio en 
   - : Provee una interfaz como para mapear a un grupo de interfaces {{domxref("AudioParam")}}, lo que significa que proporciona los métodos `forEach()`, `get()`, `has()`, `keys()`, y `values()`, como también una propiedad `size`.
 - {{domxref("BaseAudioContext")}}
   - : La interfaz **`BaseAudioContext`** actúa como una definición base para procesamiento de gráficos de audio en y fuera de línea, como lo representa {{domxref("AudioContext")}} y {{domxref("OfflineAudioContext")}} resepectivamente. No tendrás que usar `BaseAudioContext` directamente — tendrás que usar sus características a través de una de éstas dos interfaces heredadas.
-- El evento [`ended`](/es/docs/Web/Reference/Events/ended)
+- El evento [`ended`](/es/docs/Web/API/HTMLMediaElement/ended_event)
   - : El evento `ended` es lanzado cuando la reproducción se detiene porque se alcanzó el fin del archivo de medio.
 
 ### Definiendo fuentes de audio
@@ -72,7 +71,7 @@ Las interfaces que definen fuentes de audio para usar en la API de Web.
 - {{domxref("MediaElementAudioSourceNode")}}
   - : La interfaz **`MediaElementAudioSourceNode`** representa una fuente de audio que consiste en un elemento {{ htmlelement("audio") }} o {{ htmlelement("video") }} de HTML5. Es un {{domxref("AudioNode")}} que actúa como una fuente de audio.
 - {{domxref("MediaStreamAudioSourceNode")}}
-  - : La interfaz **`MediaStreamAudioSourceNode`** representa una fuente de audio que consiste en un {{domxref("MediaStream")}} de [WebRTC](/es/docs/WebRTC) (como una cámara web, micrófono, o una transmisión siendo enviada a una computadora remota). Es un {{domxref("AudioNode")}} que actúa como una fuente de audio.
+  - : La interfaz **`MediaStreamAudioSourceNode`** representa una fuente de audio que consiste en un {{domxref("MediaStream")}} de [WebRTC](/es/docs/Web/API/WebRTC_API) (como una cámara web, micrófono, o una transmisión siendo enviada a una computadora remota). Es un {{domxref("AudioNode")}} que actúa como una fuente de audio.
 
 ### Definiendo filtros de efectos de audio
 
@@ -102,7 +101,7 @@ Una vez que haya terminado de procesar su audio, estas interfaces definen dónde
 - {{domxref("AudioDestinationNode")}}
   - : La interfaz **`AudioDestinationNode`** representa el destino final de una fuente de audio en contexto determinado — usualmente los altavoces de tu dispositivo.
 - {{domxref("MediaStreamAudioDestinationNode")}}
-  - : La interfaz **`MediaStreamAudioDestinationNode`** representa un destino de audio que consiste en un {{domxref("MediaStream")}} de [WebRTC](/es/docs/WebRTC) con un `AudioMediaStreamTrack` sencillo, que puede ser usado de una manera similiar a un {{domxref("MediaStream")}} obtenido desde {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}. Es un {{domxref("AudioNode")}} que actúa como un destino de audio.
+  - : La interfaz **`MediaStreamAudioDestinationNode`** representa un destino de audio que consiste en un {{domxref("MediaStream")}} de [WebRTC](/es/docs/Web/API/WebRTC_API) con un `AudioMediaStreamTrack` sencillo, que puede ser usado de una manera similiar a un {{domxref("MediaStream")}} obtenido desde {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}. Es un {{domxref("AudioNode")}} que actúa como un destino de audio.
 
 ### Análisis y visualización de datos
 
@@ -148,10 +147,10 @@ Antes de que se definieran los worklets de audio, la API de Web Audio usó `Scri
 
 - {{domxref("ScriptProcessorNode")}} {{deprecated_inline}}
   - : La interfaz **`ScriptProcessorNode`** permite la generación, procesamiento, o análisis de audio usando JavaScript. Es un módulo de procesamiento de audio {{domxref("AudioNode")}} que está enlazado a dos buffers, uno conteniendo la actual entrada, uno conteniendo la salida. Un evento, implementando la interfaz {{domxref("AudioProcessingEvent")}}, es enviado al objeto cada vez que el buffer de entrada contiene nuevos datos, y el manejador del evento termina cuando ha llenado el buffer de salida con datos.
-- [`audioprocess`](/es/docs/Web/Reference/Events/audioprocess) (event) {{deprecated_inline}}
+- [`audioprocess`](/es/docs/Web/API/ScriptProcessorNode/audioprocess_event) (event) {{deprecated_inline}}
   - : El evento `audioprocess` es lanzado cuando un buffer de entrada de un {{domxref("ScriptProcessorNode")}} del API del Audio Web está listo para ser procesado.
 - {{domxref("AudioProcessingEvent")}} {{deprecated_inline}}
-  - : El evento `AudioProcessingEvent` del [API de Audio Web](/es/docs/Web_Audio_API) representa los eventos que ocurren cuando un buffer de entrada {{domxref("ScriptProcessorNode")}} está listo para ser procesado.
+  - : El evento `AudioProcessingEvent` del [API de Audio Web](/es/docs/Web/API/Web_Audio_API) representa los eventos que ocurren cuando un buffer de entrada {{domxref("ScriptProcessorNode")}} está listo para ser procesado.
 
 ### Procesamiento de audio offline/en segundo plano
 
@@ -159,10 +158,10 @@ Es posible procesar/renderizar un gráfico de muy rápidamente en segundo plano 
 
 - {{domxref("OfflineAudioContext")}}
   - : La interfaz **`OfflineAudioContext`** es una interfaz {{domxref("AudioContext")}} representando un gráfico de procesamiento de audio construido a partir de varios {{domxref("AudioNode")}} enlazados juntos. En contraste con un `AudioContext` estándar, un `OfflineAudioContext` realmente no procesa el audio sino que lo genera, _lo más rápido que puede_, en un buffer.
-- [`complete`](/es/docs/Web/Reference/Events/complete) (event)
+- [`complete`](/es/docs/Web/API/OfflineAudioContext/complete_event) (event)
   - : El evento `complete` es lanzado cuando el renderizado de un {{domxref("OfflineAudioContext")}} está terminado.
 - {{domxref("OfflineAudioCompletionEvent")}}
-  - : La interfaz `OfflineAudioCompletionEvent` representa los eventos que ocurren cuando procesamiento de un {{domxref("OfflineAudioContext")}} is terminado. El evento [`complete`](/es/docs/Web/Reference/Events/complete) implementa esta interfaz.
+  - : La interfaz `OfflineAudioCompletionEvent` representa los eventos que ocurren cuando procesamiento de un {{domxref("OfflineAudioContext")}} is terminado. El evento [`complete`](/es/docs/Web/API/OfflineAudioContext/complete_event) implementa esta interfaz.
 
 ## Interfaces obsoletas
 
@@ -185,7 +184,7 @@ var audioCtx = new (window.AudioContext || window.webkitAudioContext)(); // defi
 
 var voiceSelect = document.getElementById("voice"); // caja de selección para la selección de opciones de efectos de voz
 var visualSelect = document.getElementById("visual"); // caja de selección para la selección de opciones de visualización de audio
-var mute = document.querySelector('.mute'); // botón de silencio
+var mute = document.querySelector(".mute"); // botón de silencio
 var drawVisual; // requestAnimationFrame
 
 var analyser = audioCtx.createAnalyser();
@@ -193,28 +192,29 @@ var distortion = audioCtx.createWaveShaper();
 var gainNode = audioCtx.createGain();
 var biquadFilter = audioCtx.createBiquadFilter();
 
-function makeDistortionCurve(amount) { // función para hacer que la forma de curva para distorsión / nodo modificador de onda para usar
-  var k = typeof amount === 'number' ? amount : 50,
+function makeDistortionCurve(amount) {
+  // función para hacer que la forma de curva para distorsión / nodo modificador de onda para usar
+  var k = typeof amount === "number" ? amount : 50,
     n_samples = 44100,
     curve = new Float32Array(n_samples),
     deg = Math.PI / 180,
     i = 0,
     x;
-  for ( ; i < n_samples; ++i ) {
-    x = i * 2 / n_samples - 1;
-    curve[i] = ( 3 + k ) * x * 20 * deg / ( Math.PI + k * Math.abs(x) );
+  for (; i < n_samples; ++i) {
+    x = (i * 2) / n_samples - 1;
+    curve[i] = ((3 + k) * x * 20 * deg) / (Math.PI + k * Math.abs(x));
   }
   return curve;
-};
+}
 
-navigator.getUserMedia (
+navigator.getUserMedia(
   // restricciones - solo el audio es necesario para esta aplicación
   {
-    audio: true
+    audio: true,
   },
 
   // Retrollamada de éxito
-  function(stream) {
+  function (stream) {
     source = audioCtx.createMediaStreamSource(stream);
     source.connect(analyser);
     analyser.connect(distortion);
@@ -224,13 +224,12 @@ navigator.getUserMedia (
 
     visualize(stream);
     voiceChange();
-
   },
 
   // Retrollamada de error
-  function(err) {
-    console.log('Se produjo el siguiente error gUM: ' + err);
-  }
+  function (err) {
+    console.log("Se produjo el siguiente error gUM: " + err);
+  },
 );
 
 function visualize(stream) {
@@ -240,7 +239,7 @@ function visualize(stream) {
   var visualSetting = visualSelect.value;
   console.log(visualSetting);
 
-  if(visualSetting == "sinewave") {
+  if (visualSetting == "sinewave") {
     analyser.fftSize = 2048;
     var bufferLength = analyser.frequencyBinCount; // la mitad del valor de FFT
     var dataArray = new Uint8Array(bufferLength); // crear una matriz para almacenar los datos
@@ -248,28 +247,26 @@ function visualize(stream) {
     canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
 
     function draw() {
-
       drawVisual = requestAnimationFrame(draw);
 
       analyser.getByteTimeDomainData(dataArray); // obtener datos de forma de onda y ponerlo en la matriz creada arriba
 
-      canvasCtx.fillStyle = 'rgb(200, 200, 200)'; // dibujar onda con canvas
+      canvasCtx.fillStyle = "rgb(200, 200, 200)"; // dibujar onda con canvas
       canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
       canvasCtx.lineWidth = 2;
-      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+      canvasCtx.strokeStyle = "rgb(0, 0, 0)";
 
       canvasCtx.beginPath();
 
-      var sliceWidth = WIDTH * 1.0 / bufferLength;
+      var sliceWidth = (WIDTH * 1.0) / bufferLength;
       var x = 0;
 
-      for(var i = 0; i < bufferLength; i++) {
-
+      for (var i = 0; i < bufferLength; i++) {
         var v = dataArray[i] / 128.0;
-        var y = v * HEIGHT/2;
+        var y = (v * HEIGHT) / 2;
 
-        if(i === 0) {
+        if (i === 0) {
           canvasCtx.moveTo(x, y);
         } else {
           canvasCtx.lineTo(x, y);
@@ -278,54 +275,52 @@ function visualize(stream) {
         x += sliceWidth;
       }
 
-      canvasCtx.lineTo(canvas.width, canvas.height/2);
+      canvasCtx.lineTo(canvas.width, canvas.height / 2);
       canvasCtx.stroke();
-    };
+    }
 
     draw();
-
-  } else if(visualSetting == "off") {
+  } else if (visualSetting == "off") {
     canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
     canvasCtx.fillStyle = "red";
     canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
   }
-
 }
 
 function voiceChange() {
-  distortion.curve = new Float32Array;
+  distortion.curve = new Float32Array();
   biquadFilter.gain.value = 0; // restablecer los efectos cada vez que se ejecuta la función VoiceChange
 
   var voiceSetting = voiceSelect.value;
   console.log(voiceSetting);
 
-  if(voiceSetting == "distortion") {
+  if (voiceSetting == "distortion") {
     distortion.curve = makeDistortionCurve(400); // aplicar distorsión al sonido usando el nodo waveshaper
-  } else if(voiceSetting == "biquad") {
+  } else if (voiceSetting == "biquad") {
     biquadFilter.type = "lowshelf";
     biquadFilter.frequency.value = 1000;
     biquadFilter.gain.value = 25; // aplicar el filtro lowshelf a los sonidos usando biquad
-  } else if(voiceSetting == "off") {
+  } else if (voiceSetting == "off") {
     console.log("Voice settings turned off"); // no hacer nada, ya que se eligió la opción de apagado
   }
-
 }
 
 // oyentes de eventos para cambiar la visualización y la configuración de voz
 
-visualSelect.onchange = function() {
+visualSelect.onchange = function () {
   window.cancelAnimationFrame(drawVisual);
   visualize(stream);
-}
+};
 
-voiceSelect.onchange = function() {
+voiceSelect.onchange = function () {
   voiceChange();
-}
+};
 
 mute.onclick = voiceMute;
 
-function voiceMute() { // alternar para silenciar y activar el sonido
-  if(mute.id == "") {
+function voiceMute() {
+  // alternar para silenciar y activar el sonido
+  if (mute.id == "") {
     gainNode.gain.value = 0; // ganancia establecida en 0 para silenciar el sonido
     mute.id = "activated";
     mute.innerHTML = "Unmute";
@@ -341,21 +336,21 @@ function voiceMute() { // alternar para silenciar y activar el sonido
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.AudioContext", 0)}}
+{{Compat}}
 
 ## También ver
 
 - [Usando el API de Audio Web](/es/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Visualizaciones con el API de Audio Web](/es/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-- [Voice-change-O-matic example](http://mdn.github.io/voice-change-o-matic/)
-- [Violent Theremin example](http://mdn.github.io/violent-theremin/)
+- [Voice-change-O-matic example](https://mdn.github.io/voice-change-o-matic/)
+- [Violent Theremin example](https://mdn.github.io/violent-theremin/)
 - [Bases de la espacialización de audio Web](/es/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
-- [Mixing Positional Audio and WebGL](http://www.html5rocks.com/tutorials/webaudio/positional_audio/)
-- [Developing Game Audio with the Web Audio API](http://www.html5rocks.com/tutorials/webaudio/games/)
-- [Porting webkitAudioContext code to standards based AudioContext](/es/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext)
+- [Mixing Positional Audio and WebGL](https://www.html5rocks.com/tutorials/webaudio/positional_audio/)
+- [Developing Game Audio with the Web Audio API](https://www.html5rocks.com/tutorials/webaudio/games/)
+- [Porting webkitAudioContext code to standards based AudioContext](/es/docs/Web/API/Web_Audio_API)
 - [Tonos](https://github.com/bit101/tones): Una sencilla librería para reproducción de tonos/notas específicas usando el API de Audio Web.
-- [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html) and falls back to [HTML5 Audio](http://www.whatwg.org/specs/web-apps/current-work/#the-audio-element), as well as providing other useful features.
+- [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html) and falls back to [HTML5 Audio](https://www.whatwg.org/specs/web-apps/current-work/#the-audio-element), as well as providing other useful features.
 - [Mooog](https://github.com/mattlima/mooog): jQuery-style chaining of AudioNodes, mixer-style sends/returns, and more.
 - [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML5 video language lab web application using the Web Audio API to record and combine video and audio from different sources into a single file ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))

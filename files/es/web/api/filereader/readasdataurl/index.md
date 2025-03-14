@@ -3,9 +3,12 @@ title: FileReader.readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
 ---
 
-El método `readAsDataURL` es usado para leer el contenido del especificado {{domxref("Blob")}} o {{domxref("File")}}. Cuando la operación de lectura es terminada, el {{domxref("FileReader.readyState","readyState")}} se convierte en `DONE`, y el [`loadend`](/es/docs/Web/Reference/Events/loadend) es lanzado. En ese momento, el atributo {{domxref("FileReader.result","result")}} contiene la información como un [datos: URL](/es/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) representando la información del archivo como una cadena de caracteres codificados en base64.
+{{APIRef("File API")}}
 
-> **Nota:** El {{domxref("FileReader.result","result")}} de blob no puede ser
+El método `readAsDataURL` es usado para leer el contenido del especificado {{domxref("Blob")}} o {{domxref("File")}}. Cuando la operación de lectura es terminada, el {{domxref("FileReader.readyState","readyState")}} se convierte en `DONE`, y el [`loadend`](/es/docs/Web/API/XMLHttpRequest/loadend_event) es lanzado. En ese momento, el atributo {{domxref("FileReader.result","result")}} contiene la información como un [datos: URL](/es/docs/Web/URI/Schemes/data) representando la información del archivo como una cadena de caracteres codificados en base64.
+
+> [!NOTE]
+> El {{domxref("FileReader.result","result")}} de blob no puede ser
 > directamente decodificado como Base64 sin primero remover la delaración de Datos-URL
 > de la información codificada en Base64. Para recuperar únicamente la cadena codifidicada
 > en Base64, primero remueve `data:*/*;base64`, del resultado.
@@ -26,22 +29,26 @@ instanceOfFileReader.readAsDataURL(blob);
 ### HTML
 
 ```html
-<input type="file" onchange="previewFile()"><br>
-<img src="" height="200" alt="Image preview...">
+<input type="file" onchange="previewFile()" /><br />
+<img src="" height="200" alt="Image preview..." />
 ```
 
 ### JavaScript
 
 ```js
 function previewFile() {
-  const preview = document.querySelector('img');
-  const file = document.querySelector('input[type=file]').files[0];
+  const preview = document.querySelector("img");
+  const file = document.querySelector("input[type=file]").files[0];
   const reader = new FileReader();
 
-  reader.addEventListener("load", function () {
-    // convierte la imagen a una cadena en base64
-    preview.src = reader.result;
-  }, false);
+  reader.addEventListener(
+    "load",
+    function () {
+      // convierte la imagen a una cadena en base64
+      preview.src = reader.result;
+    },
+    false,
+  );
 
   if (file) {
     reader.readAsDataURL(file);
@@ -58,7 +65,7 @@ function previewFile() {
 ### HTML
 
 ```html
-<input id="browse" type="file" onchange="previewFiles()" multiple>
+<input id="browse" type="file" onchange="previewFiles()" multiple />
 <div id="preview"></div>
 ```
 
@@ -66,40 +73,35 @@ function previewFile() {
 
 ```js
 function previewFiles() {
-
-  var preview = document.querySelector('#preview');
-  var files   = document.querySelector('input[type=file]').files;
+  var preview = document.querySelector("#preview");
+  var files = document.querySelector("input[type=file]").files;
 
   function readAndPreview(file) {
-
     // Asegurate que `file.name` coincida con el criterio de extensiones
-    if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
+    if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
       var reader = new FileReader();
 
-      reader.addEventListener("load", function () {
-        var image = new Image();
-        image.height = 100;
-        image.title = file.name;
-        image.src = this.result;
-        preview.appendChild(image);
-      }, false);
+      reader.addEventListener(
+        "load",
+        function () {
+          var image = new Image();
+          image.height = 100;
+          image.title = file.name;
+          image.src = this.result;
+          preview.appendChild(image);
+        },
+        false,
+      );
 
       reader.readAsDataURL(file);
     }
-
   }
 
   if (files) {
     [].forEach.call(files, readAndPreview);
   }
-
 }
 ```
-
-> **Nota:** El constructor [`FileReader()`](/es/docs/Web/API/FileReader) no es soportado por Internet
-> Explorer versión anterior a la 10. Para una completa compatibilidad de código puedes ver nuestra
-> [imagen previa para una posible solucion entre navegadores](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html).
-> Véase también [este ejemplo más completo](https://mdn.mozillademos.org/files/3698/image_upload_preview.html).
 
 ## Especificaciones
 

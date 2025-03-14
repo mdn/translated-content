@@ -1,13 +1,8 @@
 ---
 title: translate
 slug: Web/HTML/Global_attributes/translate
-tags:
-  - Experimental
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/translate
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`translate`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 페이지를 지역화할 때 요소의 {{domxref("Text")}} 노드 자식 및 번역 가능한 특성의 값을 번역해야 되는지, 아니면 그대로 유지해야 하는지 나타내는 열거형 속성입니다. 가능한 값은 다음과 같습니다.
@@ -33,7 +28,7 @@ translation_of: Web/HTML/Global_attributes/translate
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.translate")}}
+{{Compat}}
 
 ## 같이 보기
 

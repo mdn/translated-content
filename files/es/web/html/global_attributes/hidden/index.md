@@ -1,12 +1,6 @@
 ---
 title: hidden
 slug: Web/HTML/Global_attributes/hidden
-tags:
-  - Atributos globales
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Global_attributes/hidden
-original_slug: Web/HTML/Atributos_Globales/hidden
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -17,15 +11,16 @@ Esta atributo no debe de usarse para ocultar contenido que pudera ser legítimam
 
 Los elementos ocultos no deben de ser vinculados desde elementos no ocultos y elementos que son descendientes de un elemento oculto todavía activo ; lo que significa que los elementos del script pueden todavía ejecutarse y los elementos de formulario pueden todavía enviarse .
 
-> **Nota:** Cambiando el valor de la propiedad CSS {{cssxref("display")}} de un elemento con el atributo `hidden` sobrecarga el comportamiento . For ejemplo , un elemeneto diseñado `display : flex` será mostrado en la pantalla independientemente de que el atributo `hidden` esté presente .
+> [!NOTE]
+> Cambiando el valor de la propiedad CSS {{cssxref("display")}} de un elemento con el atributo `hidden` sobrecarga el comportamiento . For ejemplo , un elemeneto diseñado `display : flex` será mostrado en la pantalla independientemente de que el atributo `hidden` esté presente .
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad en exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.hidden")}}
+{{Compat}}
 
 ## Ver también
 

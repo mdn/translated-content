@@ -1,7 +1,6 @@
 ---
 title: <script>
 slug: Web/SVG/Element/script
-original_slug: Web/HTML/Elemento/script
 ---
 
 ## Resumen
@@ -15,24 +14,24 @@ Los scripts sin atributo `async` o `defer`, así como las secuencias de comandos
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/Web/HTML/Content_categories"
+          href="/es/docs/Web/HTML/Content_categories"
           title="HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#Metadata_content"
+          href="/es/docs/Web/HTML/Content_categories#Metadata_content"
           title="HTML/Content_categories#Metadata_content"
           >Metadata content</a
         >,
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+          href="/es/docs/Web/HTML/Content_categories#Flow_content"
           title="HTML/Content_categories#Flow_content"
           >Flow content</a
         >,
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+          href="/es/docs/Web/HTML/Content_categories#Phrasing_content"
           title="HTML/Content_categories#Phrasing_content"
           >Phrasing content</a
         >.
@@ -44,18 +43,18 @@ Los scripts sin atributo `async` o `defer`, así como las secuencias de comandos
     </tr>
     <tr>
       <th scope="row">Omision de etiquetas</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th scope="row">Elementos padre permitidos</th>
       <td>
         Cualquier elemento que acepte
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#Metadata_content"
+          href="/es/docs/Web/HTML/Content_categories#Metadata_content"
           title="HTML/Content_categories#Metadata_content"
           >metadata content</a
         >, o cualquier elemento que acepte
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/Web/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -69,19 +68,19 @@ Los scripts sin atributo `async` o `defer`, así como las secuencias de comandos
 
 ## Atributos
 
-Este elemento contiene los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
+Este elemento contiene los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("async")}}
+- `async`
 
   - : Establece este atributo booleano para indicar al navegador, si es posible, ejecutar el código asincrónicamente. Esto no afecta a los scripts escritos dentro de la etiqueta (es decir a aquellos que no tienen el atributo **src**).
 
     Ver [Browser compatibility](#browser_compatibility) para notas acerca de compatibilidad. Ver tambien [Scripts asincrónicos para asm.js](/es/docs/Games/Techniques/Async_scripts).
 
-- {{htmlattrdef("integrity")}}
+- `integrity`
   - : Contiene información de metadatos que es usada por el user agent del navegador para verificar el recurso captado fue entregado libre de manipulación inesperada. Ver [Subresource Integrity](/es/docs/Web/Security/Subresource_Integrity).
-- {{htmlattrdef("src")}}
+- `src`
   - : Este atributo especifica la URI del script externo; este puede ser usado como alternativa a scripts embebidos directamente en el documento. Si el script tiene el atributo src, no debería tener código dentro de la etiqueta.
-- {{htmlattrdef("type")}}
+- `type`
 
   - : Este atributo identifica el lenguaje de scripting en que está escrito el código embebido dentro de la etiqueta script, o referenciada utilizando el atributo src. Los valores posibles están especificados como un MIME type (tipo MIME).
     Algunos ejemplos de tipos MIME que pueden ser utilizados son: `text/javascript`, `text/ecmascript`, `application/javascript`, y `application/ecmascript.`Si el atributo se encuentra ausente, el valor por defecto será un script JavaScript.
@@ -94,14 +93,14 @@ Este elemento contiene los [atributos globales](/es/docs/Web/HTML/Atributos_Glob
 
     Para incluir lenguajes de programación exóticos, lee acerca de [Rosetta](/es/Ap-ons/Code_snippets/Rosetta).
 
-- {{htmlattrdef("text")}}
+- `text`
   - : Este atributo actúa como el atributo `textContent`, establece el texto contenido del elemento. Pero a diferencia de `textContent`, este atributo se evalúa como ejecutable luego de ser insertado como nodo en el DOM.
-- {{htmlattrdef("language")}} {{Deprecated_inline}}
+- `language` {{Deprecated_inline}}
   - : Este atributo actúa como el atributo `type`, identifica el tipo de lenguaje que se utiliza. A diferencia del atributo `type`, los posibles valores de este atributo nunca fueron estandarizados. El atributo `type` debe ser utilizado en lugar de `language`.
-- {{htmlattrdef("defer")}}
+- `defer`
   - : Este atributo establece si el script debe ser ejecutado luego de que el documento entero sea analizado. Dado que esta función aún no fue implementada por todos los navegadores relevantes, los autores no deberían asumir que el script realmente será ejecutado luego de la carga y analisis del documento. Desde Gecko 1.9.2 el atributo defer es ignorado en los scripts que no tienen el atributo src. Sin embargo, en Gecko 1.9.1 incluso se difieren los scripts escritos dentro de la etiqueta.
-- {{htmlattrdef("crossorigin")}} {{Non-standard_inline}}
-  - : Elementos normales script pasan información mínima al {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} para scripts que no pasan las revisiones del estándar [CORS](/es/docs/Web/HTTP/Access_control_CORS). Para permitir registrar errores en los sitios que usan dominios separados para recursos estáticos, usar este atributo.
+- `crossorigin` {{Non-standard_inline}}
+  - : Elementos normales script pasan información mínima al {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} para scripts que no pasan las revisiones del estándar [CORS](/es/docs/Web/HTTP/CORS). Para permitir registrar errores en los sitios que usan dominios separados para recursos estáticos, usar este atributo.
 
 ## Ejemplos
 
@@ -117,13 +116,13 @@ Este elemento contiene los [atributos globales](/es/docs/Web/HTML/Atributos_Glob
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("svg.elements.script")}}
+{{Compat}}
 
 ## Ver también
 
 - {{domxref("document.currentScript")}}
-- [Ryan Grove's \<script> and \<link> node event compatibility chart](http://pieisgood.org/test/script-link-events/)
+- [Ryan Grove's \<script> and \<link> node event compatibility chart](https://pieisgood.org/test/script-link-events/)
 
 {{HTMLSidebar}}

@@ -1,49 +1,42 @@
 ---
-title: afterprint
+title: Window：afterprint 事件
 slug: Web/API/Window/afterprint_event
 ---
 
-在相关联的文档已开始打印或打印预览已关闭之后，触发 `afterprint`事件。
+{{APIRef}}
 
-## 基本信息
+在关联的文档开始打印或关闭打印预览后，将触发 **`afterprint`** 事件。
 
-- Specification
-  - : [HTML5](https://html.spec.whatwg.org/multipage/webappapis.html#printing)
-- Interface
-  - : Event
-- Bubbles
-  - : No
-- Cancelable
-  - : No
-- Target
-  - : DefaultView (`<window>`)
-- Default Action
-  - : None
+{{domxref("Window.beforeprint_event", "beforeprint")}} 和 `afterprint` 事件允许页面在打印开始之前更改其内容（例如，也许是移除 banner）然后在打印完成后还原这些更改。一般来说，你应该更倾向于使用 [`@media print`](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries) CSS at 规则，但在某些情况下可能有必要使用这些事件。
 
-## 属性
+## 语法
 
-| Property                              | Type                                 | Description                                            |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
-
-## 例子
-
-使用 `addEventListener()`:
+在像 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 的方法中使用事件名称，或设置事件处理属性。
 
 ```js
-window.addEventListener('afterprint', (event) => {
-  console.log('After print');
+addEventListener("afterprint", (event) => {});
+onafterprint = (event) => {};
+```
+
+## 事件类型
+
+一个通用的 {{domxref("Event")}}。
+
+## 示例
+
+使用 `addEventListener()`：
+
+```js
+window.addEventListener("afterprint", (event) => {
+  console.log("打印后");
 });
 ```
 
-使用 `onafterprint` 时间监听属性：
+使用 `onafterprint` 事件处理属性：
 
 ```js
 window.onafterprint = (event) => {
-  console.log('After print');
+  console.log("打印后");
 };
 ```
 
@@ -55,6 +48,6 @@ window.onafterprint = (event) => {
 
 {{Compat}}
 
-## 相关事件
+## 参见
 
-- [beforeprint](/zh-CN/docs/Web/Events/beforeprint)
+- 相关事件：{{domxref("Window/beforeprint_event", "beforeprint")}}

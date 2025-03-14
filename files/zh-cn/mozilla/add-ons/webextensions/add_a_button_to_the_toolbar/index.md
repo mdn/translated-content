@@ -21,7 +21,6 @@ slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 
 ```json
 {
-
   "description": "Demonstrating toolbar buttons",
   "manifest_version": 2,
   "name": "button-demo",
@@ -37,7 +36,6 @@ slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
       "32": "icons/page-32.png"
     }
   }
-
 }
 ```
 
@@ -57,7 +55,7 @@ These icons are from the [bitsies!](https://www.iconfinder.com/iconsets/bitsies)
 ```js
 function openPage() {
   browser.tabs.create({
-    url: "https://developer.mozilla.org"
+    url: "https://developer.mozilla.org",
   });
 }
 
@@ -77,7 +75,7 @@ button/
     manifest.json
 ```
 
-安装这个[WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) ，然后单击按钮：
+安装这个[WebExtension](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) ，然后单击按钮：
 
 {{EmbedYouTube("kwwTowgT-Ys")}}
 
@@ -87,7 +85,6 @@ button/
 
 ```json
 {
-
   "description": "Demonstrating toolbar buttons",
   "manifest_version": 2,
   "name": "button-demo",
@@ -101,7 +98,6 @@ button/
       "32": "icons/page-32.png"
     }
   }
-
 }
 ```
 
@@ -114,21 +110,20 @@ button/
 现在我们要创建弹出菜单。新建名为 "popup" 的文件夹，然后在文件夹内创建"choose_page.html" 文件，该文件内容如下：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="choose_page.css"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="choose_page.css" />
   </head>
 
-<body>
-  <div class="page-choice">developer.mozilla.org</div>
-  <div class="page-choice">support.mozilla.org</div>
-  <div class="page-choice">addons.mozilla.org</div>
-  <script src="choose_page.js"></script>
-</body>
-
+  <body>
+    <div class="page-choice">developer.mozilla.org</div>
+    <div class="page-choice">support.mozilla.org</div>
+    <div class="page-choice">addons.mozilla.org</div>
+    <script src="choose_page.js"></script>
+  </body>
 </html>
 ```
 
@@ -137,7 +132,8 @@ button/
 在 "popup" 文件夹下，创建名为 "choose_page.css" 的文件，内容如下：
 
 ```css
-html, body {
+html,
+body {
   width: 300px;
 }
 
@@ -150,7 +146,7 @@ html, body {
 }
 
 .page-choice:hover {
-  background-color: #CFF2F2;
+  background-color: #cff2f2;
 }
 ```
 
@@ -159,16 +155,15 @@ html, body {
 接着，在 "popup" 文件夹下，创建名为 "choose_page.js" 的文件，内容如下：
 
 ```js
-document.addEventListener("click", function(e) {
+document.addEventListener("click", function (e) {
   if (!e.target.classList.contains("page-choice")) {
     return;
   }
 
   var chosenPage = "https://" + e.target.textContent;
   browser.tabs.create({
-    url: chosenPage
+    url: chosenPage,
   });
-
 });
 ```
 
@@ -176,7 +171,7 @@ document.addEventListener("click", function(e) {
 
 附加组件的结构最后看上去应该像下面这样：
 
-```
+```plain
 button/
     icons/
         page-16.png
@@ -194,7 +189,7 @@ button/
 
 ## 页面行为
 
-页面行为[（Page actions）](/zh-CN/Add-ons/WebExtensions/User_interface_components#Page_actions) 类似浏览器行为，只是页面行为仅针对特定页面，而浏览器行为则全局有效。
+页面行为[（Page actions）](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/User_interface_components#page_actions) 类似浏览器行为，只是页面行为仅针对特定页面，而浏览器行为则全局有效。
 
 由于浏览器行为总是发生，而页面行为只在特定页面显示。所以页面行为按钮在 URL 地址栏中显示，而浏览器行为按钮则在浏览器工具栏中显示。
 
@@ -204,14 +199,14 @@ button/
 - [`browserAction`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API
 - Browser action examples:
 
-  - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
-  - [Bookmark it!](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it)
-  - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
-  - [inpage-toolbar-ui](https://github.com/mdn/webextensions-examples/tree/master/inpage-toolbar-ui)
-  - [open-my-page-button](https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button)
+  - [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify)
+  - [Bookmark it!](https://github.com/mdn/webextensions-examples/tree/main/bookmark-it)
+  - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour)
+  - [inpage-toolbar-ui](https://github.com/mdn/webextensions-examples/tree/main/inpage-toolbar-ui)
+  - [open-my-page-button](https://github.com/mdn/webextensions-examples/tree/main/open-my-page-button)
 
 - [`page_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key
 - [`pageAction`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API
 - Page action examples:
 
-  - [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out)
+  - [chill-out](https://github.com/mdn/webextensions-examples/tree/main/chill-out)

@@ -1,5 +1,5 @@
 ---
-title: 'InternalError: too much recursion'
+title: "InternalError: too much recursion"
 slug: Web/JavaScript/Reference/Errors/Too_much_recursion
 ---
 
@@ -31,8 +31,10 @@ RangeError: Maximum call stack size exceeded (Chrome)
 
 ```js
 function loop(x) {
-  if (x >= 10) // "x >= 10" は終了条件
+  if (x >= 10) {
+    // "x >= 10" は終了条件
     return;
+  }
   // 何かを実行
   loop(x + 1); // 再帰呼び出し
 }
@@ -43,8 +45,7 @@ loop(0);
 
 ```js example-bad
 function loop(x) {
-  if (x >= 1000000000000)
-    return;
+  if (x >= 1000000000000) return;
   // 何かを実行
   loop(x + 1);
 }
@@ -57,9 +58,9 @@ loop(0);
 
 ```js example-bad
 function loop(x) {
- // The base case is missing
+  // The base case is missing
 
-loop(x + 1); // 再帰呼び出し
+  loop(x + 1); // 再帰呼び出し
 }
 
 loop(0);
@@ -70,9 +71,9 @@ loop(0);
 ### Class error: too much recursion
 
 ```js example-bad
-class Person{
-  constructor(){}
-  set name(name){
+class Person {
+  constructor() {}
+  set name(name) {
     this.name = name; // 再帰呼び出し
   }
 }
@@ -89,7 +90,8 @@ set name(name){
 }
 ```
 
-> **メモ:** この例では、セッターが呼び出されたとき、同じことを再度行うように指示されます。*つまり、処理しているのと同じプロパティに設定します。*これにより、関数は何度も何度も自分自身を呼び出し、無限に再帰が行われます。
+> [!NOTE]
+> この例では、セッターが呼び出されたとき、同じことを再度行うように指示されます。*つまり、処理しているのと同じプロパティに設定します。*これにより、関数は何度も何度も自分自身を呼び出し、無限に再帰が行われます。
 
 この問題は同じ変数がゲッターに使用される場合にも発生します。
 
@@ -102,12 +104,12 @@ get name(){
 この問題を防ぐには、セッター関数の内部で代入しようとしているプロパティが、もともとセッターを起動したものと異なっていることを確認してください。同じことがゲッターにも言えます。
 
 ```js
-class Person{
-  constructor(){}
-  set name(name){
+class Person {
+  constructor() {}
+  set name(name) {
     this._name = name;
   }
-  get name(){
+  get name() {
     return this._name;
   }
 }

@@ -7,9 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
 
 **`Math.hypot()`** 函数返回所有参数的平方和的平方根，即：
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.hypot</mo><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>v</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msqrt><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>v</mi><mi>i</mi><mn>2</mn></msubsup></mrow></msqrt><mo>=</mo><msqrt><mrow><msubsup><mi>v</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mo>…</mo><mo>+</mo><msubsup><mi>v</mi><mi>n</mi><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.hypot}(v*1, v_2, \dots, v_n)} = \sqrt{\sum*{i=1}^n v_i^2} = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2}</annotation></semantics></math>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚑𝚢𝚙𝚘𝚝</mo><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>v</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mstyle><mo>=</mo><msqrt><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>v</mi><mi>i</mi><mn>2</mn></msubsup></mrow></msqrt><mo>=</mo><msqrt><mrow><msubsup><mi>v</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mo>…</mo><mo>+</mo><msubsup><mi>v</mi><mi>n</mi><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.hypot}(v_1, v_2, \dots, v_n)} = \sqrt{\sum\_{i=1}^n v_i^2} = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2}</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-hypot.html")}}
+{{InteractiveExample("JavaScript Demo: Math.hypot()")}}
+
+```js interactive-example
+console.log(Math.hypot(3, 4));
+// Expected output: 5
+
+console.log(Math.hypot(5, 12));
+// Expected output: 13
+
+console.log(Math.hypot(3, 4, 5));
+// Expected output: 7.0710678118654755
+
+console.log(Math.hypot(-5));
+// Expected output: 5
+```
 
 ## 语法
 
@@ -47,13 +61,13 @@ Math.hypot([value1[,value2, ...]])
 ### Using `Math.hypot()`
 
 ```js
-Math.hypot(3, 4);        // 5
-Math.hypot(3, 4, 5);     // 7.0710678118654755
-Math.hypot();            // 0
-Math.hypot(NaN);         // NaN
-Math.hypot(3, 4, 'foo'); // NaN, +'foo' => NaN
-Math.hypot(3, 4, '5');   // 7.0710678118654755, +'5' => 5
-Math.hypot(-3);          // 3, the same as Math.abs(-3)
+Math.hypot(3, 4); // 5
+Math.hypot(3, 4, 5); // 7.0710678118654755
+Math.hypot(); // 0
+Math.hypot(NaN); // NaN
+Math.hypot(3, 4, "foo"); // NaN, +'foo' => NaN
+Math.hypot(3, 4, "5"); // 7.0710678118654755, +'5' => 5
+Math.hypot(-3); // 3, the same as Math.abs(-3)
 ```
 
 ## 向下兼容
@@ -61,30 +75,33 @@ Math.hypot(-3);          // 3, the same as Math.abs(-3)
 此函数可以使用如下代码模拟：
 
 ```js
-if (!Math.hypot) Math.hypot = function() {
-  var y = 0, i = arguments.length;
-  while (i--) y += arguments[i] * arguments[i];
-  return Math.sqrt(y);
-};
+if (!Math.hypot)
+  Math.hypot = function () {
+    var y = 0,
+      i = arguments.length;
+    while (i--) y += arguments[i] * arguments[i];
+    return Math.sqrt(y);
+  };
 ```
 
 另一种避免结果溢出的实现：
 
 ```js
-if (!Math.hypot) Math.hypot = function (x, y) {
-  // https://bugzilla.mozilla.org/show_bug.cgi?id=896264#c28
-  var max = 0;
-  var s = 0;
-  for (var i = 0; i < arguments.length; i += 1) {
-    var arg = Math.abs(Number(arguments[i]));
-    if (arg > max) {
-      s *= (max / arg) * (max / arg);
-      max = arg;
+if (!Math.hypot)
+  Math.hypot = function (x, y) {
+    // https://bugzilla.mozilla.org/show_bug.cgi?id=896264#c28
+    var max = 0;
+    var s = 0;
+    for (var i = 0; i < arguments.length; i += 1) {
+      var arg = Math.abs(Number(arguments[i]));
+      if (arg > max) {
+        s *= (max / arg) * (max / arg);
+        max = arg;
+      }
+      s += arg === 0 && max === 0 ? 0 : (arg / max) * (arg / max);
     }
-    s += arg === 0 && max === 0 ? 0 : (arg / max) * (arg / max);
-  }
-  return max === 1 / 0 ? 1 / 0 : max * Math.sqrt(s);
-};
+    return max === 1 / 0 ? 1 / 0 : max * Math.sqrt(s);
+  };
 ```
 
 ## 规范
@@ -95,7 +112,7 @@ if (!Math.hypot) Math.hypot = function (x, y) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Math.abs()")}}
 - {{jsxref("Math.pow()")}}

@@ -1,17 +1,55 @@
 ---
 title: overflow-wrap
 slug: Web/CSS/overflow-wrap
+l10n:
+  sourceCommit: 1db74391e637d69ede247bb4e4a4f0585a2f11c6
 ---
 
 {{CSSRef}}
 
 **`overflow-wrap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、インライン要素に対して、テキストが行ボックスをあふれないように、ブラウザーが分割できない文字列の途中で改行を入れるかどうかの設定を適用します。
 
-{{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}
+> [!NOTE]
+> このプロパティはもともと、標準外かつ接頭辞のない `word-wrap` と呼ばれる Microsoft 拡張であり、多くのブラウザーはこの名前で実装していました。 `overflow-wrap` に改名されたため、 `word-wrap` は別名になりました。
+
+{{InteractiveExample("CSS Demo: overflow-wrap")}}
+
+```css interactive-example-choice
+overflow-wrap: normal;
+```
+
+```css interactive-example-choice
+overflow-wrap: anywhere;
+```
+
+```css interactive-example-choice
+overflow-wrap: break-word;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    Most words are short &amp; don't need to break. But
+    <strong class="transition-all" id="example-element"
+      >Antidisestablishmentarianism</strong
+    >
+    is long. The width is set to min-content, with a max-width of 11em.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid #663399;
+  padding: 0.75em;
+  width: min-content;
+  max-width: 11em;
+  height: 200px;
+}
+```
 
 > **メモ:** {{cssxref("word-break")}} とは対照的に、 `overflow-wrap` は単語全体があふれずに行内に配置できない場合にのみ、改行を生成します。
-
-このプロパティはもともと、標準外かつ接頭辞のない `word-wrap` と呼ばれる Microsoft 拡張であり、多くのブラウザーはこの名前で実装していました。 `overflow-wrap` に改名されたため、 `word-wrap` は別名になりました。
 
 ## 構文
 
@@ -25,6 +63,7 @@ overflow-wrap: anywhere;
 overflow-wrap: inherit;
 overflow-wrap: initial;
 overflow-wrap: revert;
+overflow-wrap: revert-layer;
 overflow-wrap: unset;
 ```
 
@@ -49,59 +88,74 @@ overflow-wrap: unset;
 
 ## 例
 
-<h3 id="Comparing_overflow-wrap_word-break_and_hyphens">overflow-wrap, word-break, hyphens の比較</h3>
+### overflow-wrap, word-break, hyphens の比較
 
 この例は、長い単語が分割されるときの `overflow-wrap`, `word-break`, `hyphens` の結果を比較するものです。
 
 #### HTML
 
-```html
-<p>They say the fishing is excellent at
-  Lake <em class="normal">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>normal</code>)</p>
-<p>They say the fishing is excellent at
-  Lake <em class="ow-anywhere">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>overflow-wrap: anywhere</code>)</p>
-<p>They say the fishing is excellent at
-  Lake <em class="ow-break-word">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>overflow-wrap: break-word</code>)</p>
-<p>They say the fishing is excellent at
-  Lake <em class="word-break">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>word-break</code>)</p>
-<p>They say the fishing is excellent at
-  Lake <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>hyphens</code>, without <code>lang</code> attribute)</p>
-<p lang="en">They say the fishing is excellent at
-  Lake <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>hyphens</code>, English rules)</p>
-<p class="hyphens" lang="de">They say the fishing is excellent at
-  Lake <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>hyphens</code>, German rules)</p>
+```html live-sample___comparing_overflow-wrap_word-break_and_hyphens
+<p>
+  They say the fishing is excellent at Lake
+  <em class="normal">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
+  I've never been there myself. (<code>normal</code>)
+</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="ow-anywhere">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>overflow-wrap: anywhere</code>)
+</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="ow-break-word">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>overflow-wrap: break-word</code>)
+</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="word-break">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>word-break</code>)
+</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
+  I've never been there myself. (<code>hyphens</code>, without
+  <code>lang</code> attribute)
+</p>
+<p lang="en">
+  They say the fishing is excellent at Lake
+  <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
+  I've never been there myself. (<code>hyphens</code>, English rules)
+</p>
+<p class="hyphens" lang="de">
+  They say the fishing is excellent at Lake
+  <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
+  I've never been there myself. (<code>hyphens</code>, German rules)
+</p>
 ```
 
 #### CSS
 
-```css
+```css live-sample___comparing_overflow-wrap_word-break_and_hyphens
 p {
-   width: 13em;
-   margin: 2px;
-   background: gold;
+  width: 13em;
+  margin: 2px;
+  background: gold;
 }
 
 .ow-anywhere {
-   overflow-wrap: anywhere;
+  overflow-wrap: anywhere;
 }
 
 .ow-break-word {
-   overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .word-break {
-   word-break: break-all;
+  word-break: break-all;
 }
 
 .hyphens {
-   hyphens: auto;
+  hyphens: auto;
 }
 ```
 
@@ -120,6 +174,7 @@ p {
 ## 関連情報
 
 - {{cssxref("word-break")}}
+- {{cssxref("white-space")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("text-overflow")}}
-- [テキストの分割と折り返しのガイド](/ja/docs/Web/CSS/CSS_Text/Wrapping_Text)
+- [テキストの分割と折り返しのガイド](/ja/docs/Web/CSS/CSS_text/Wrapping_breaking_text)

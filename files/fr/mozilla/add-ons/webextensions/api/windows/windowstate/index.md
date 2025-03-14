@@ -1,20 +1,9 @@
 ---
 title: windows.WindowState
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - WindowState
-  - Windows
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 L'état de cette fenêtre du navigateur.
 
@@ -35,15 +24,15 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont:
 
 Compatibilité macOS : A partir de macOS 10.10, le comportement de maximisation par défaut pour les fenêtres a été modifié pour exécuter les applications en plein écran au lieu des fenêtres "zoomées". `fullscreen` fait référence à la fois au navigateur fonctionnant en plein écran et lorsque le contenu dans un onglet utilise l'API Fullscreen.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.WindowState")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/extensions/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
 >
 > Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 

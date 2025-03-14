@@ -1,7 +1,6 @@
 ---
 title: HTMLFormElement.enctype
 slug: Web/API/HTMLFormElement/enctype
-translation_of: Web/API/HTMLFormElement/enctype
 ---
 
 {{APIRef("HTML DOM")}}
@@ -13,8 +12,8 @@ Le type d'encodage généralement utilisé est "application/x-www-form-urlencode
 ## Syntaxe
 
 ```js
-string = form.enctype
-form.enctype = string
+string = form.enctype;
+form.enctype = string;
 ```
 
 ## Exemple
@@ -25,6 +24,6 @@ form.enctype = "application/x-www-form-urlencoded";
 
 ## Spécification
 
-[HTML 5, Section 4.10.19.6, Form submission](http://www.w3.org/TR/html5/forms.html#attr-fs-enctype)
+[HTML 5, Section 4.10.19.6, Form submission](https://www.w3.org/TR/html5/forms.html#attr-fs-enctype)
 
-[DOM Level 2 HTML: enctype](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-84227810)
+[DOM Level 2 HTML: enctype](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-84227810)

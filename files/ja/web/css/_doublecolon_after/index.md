@@ -1,11 +1,11 @@
 ---
-title: '::after (:after)'
+title: ::after (:after)
 slug: Web/CSS/::after
 ---
 
 {{CSSRef}}
 
-CSS において **`::after`** は、選択した要素の最後の子要素として[擬似要素](/ja/docs/CSS/Pseudo-elements)を生成します。よく {{cssxref("content")}} プロパティを使用して、要素に装飾的な内容を追加するために用いられます。この要素は既定でインラインです。
+CSS において **`::after`** は、選択した要素の最後の子要素として[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を生成します。よく {{cssxref("content")}} プロパティを使用して、要素に装飾的な内容を追加するために用いられます。この要素は既定でインラインです。
 
 ```css
 /* リンクの後に矢印を追加 */
@@ -14,13 +14,49 @@ a::after {
 }
 ```
 
+{{InteractiveExample("CSS Demo: ::after", "tabbed-standard")}}
+
+```css interactive-example
+a::after {
+  content: " (" attr(href) ")";
+}
+
+.dead-link {
+  text-decoration: line-through;
+}
+
+.dead-link::after {
+  content: url("/shared-assets/images/examples/warning.svg");
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+}
+```
+
+```html interactive-example
+<p>
+  The sailfish is named for its sail-like dorsal fin and is widely considered
+  the fastest fish in the ocean.
+  <a href="https://en.wikipedia.org/wiki/Sailfish"
+    >You can read more about it here</a
+  >.
+</p>
+
+<p>
+  The red lionfish is a predatory scorpionfish that lives on coral reefs of the
+  Indo-Pacific Ocean and more recently in the western Atlantic.
+  <a href="" class="dead-link">You can read more about it here</a>.
+</p>
+```
+
 > **メモ:** `::before` および `::after` によって作成される擬似要素は[要素の整形ボックスに含まれるため](https://www.w3.org/TR/CSS2/generate.html#before-after-content)、 {{htmlelement("img")}} や {{htmlelement("br")}} のような[置換要素](/ja/docs/Web/CSS/Replaced_element)には適用されません。
 
 ## 構文
 
 {{CSSSyntax}}
 
-> **メモ:** CSS3 では[疑似クラス](/ja/docs/Web/CSS/Pseudo-classes)と[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を見分けやすくするために、 `::after` の表記法（二重コロン付き）が導入されました。ブラウザーでは CSS2 で導入された `:after` も使用できます。
+> [!NOTE]
+> CSS3 では[疑似クラス](/ja/docs/Web/CSS/Pseudo-classes)と[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を見分けやすくするために、 `::after` の表記法（二重コロン付き）が導入されました。ブラウザーでは CSS2 で導入された `:after` も使用できます。
 
 ## 例
 
@@ -68,12 +104,12 @@ a::after {
 
 ```css
 .ribbon {
-  background-color: #5BC8F7;
+  background-color: #5bc8f7;
 }
 
 .ribbon::after {
   content: "かわいいオレンジのボックスです。";
-  background-color: #FFBA10;
+  background-color: #ffba10;
   border-color: black;
   border-style: dotted;
 }
@@ -92,9 +128,15 @@ a::after {
 #### HTML
 
 ```html
-<p>Here we have some
-  <span tabindex="0" data-descr="collection of words and punctuation">text</span> with a few
-  <span tabindex="0" data-descr="small popups that appear when hovering">tooltips</span>.
+<p>
+  Here we have some
+  <span tabindex="0" data-descr="collection of words and punctuation"
+    >text</span
+  >
+  with a few
+  <span tabindex="0" data-descr="small popups that appear when hovering"
+    >tooltips</span
+  >.
 </p>
 ```
 
@@ -104,7 +146,7 @@ a::after {
 span[data-descr] {
   position: relative;
   text-decoration: underline;
-  color: #00F;
+  color: #00f;
   cursor: help;
 }
 
@@ -131,7 +173,7 @@ span[data-descr]:focus::after {
 
 ## アクセシビリティの考慮
 
-`::after` 擬似要素を使用してコンテンツを追加することは、画面リーダーからアクセスできなくなる可能性があるため推奨されません。
+`::after` 擬似要素を使用してコンテンツを追加することは、スクリーンリーダーからアクセスできなくなる可能性があるため推奨されません。
 
 ## 仕様書
 

@@ -1,14 +1,6 @@
 ---
 title: Sélecteurs CSS
-slug: Web/CSS/CSS_Selectors
-tags:
-  - Aperçu
-  - CSS
-  - CSS Selectors
-  - Reference
-  - Sélecteur
-translation_of: Web/CSS/CSS_Selectors
-original_slug: Web/CSS/Sélecteurs_CSS
+slug: Web/CSS/CSS_selectors
 ---
 
 {{CSSRef}}
@@ -40,11 +32,11 @@ original_slug: Web/CSS/Sélecteurs_CSS
 
 ## Les combinateurs
 
-- [Les sélecteurs de voisin direct](/fr/docs/Web/CSS/Adjacent_sibling_combinator)
+- [Les sélecteurs de voisin direct](/fr/docs/Web/CSS/Next-sibling_combinator)
   - : Le combinateur `'+'` permet de sélectionner les nœuds qui suivent immédiatement un élément donné.
     **Syntaxe :** `A + B`
     **Exemple :** `div + p` permettra de cibler n'importe quel élément {{HTMLElement('p')}} qui suit immédiatement un élément {{HTMLElement('div')}}.
-- [Les sélecteurs de voisins](/fr/docs/Web/CSS/General_sibling_combinator)
+- [Les sélecteurs de voisins](/fr/docs/Web/CSS/Subsequent-sibling_combinator)
   - : Le combinateur `'~'` permet de sélectionner les nœuds qui suivent un élément et qui ont le même parent.
     **Syntaxe :** `A ~ B`
     **Exemple :** `p ~ span` permettra de cibler les éléments {{HTMLElement('span')}} qui suivent (immédiatement ou non) un élément {{HTMLElement('p')}} et qui ont le même élément parent.

@@ -1,13 +1,59 @@
 ---
 title: transition-delay
 slug: Web/CSS/transition-delay
+l10n:
+  sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
 ---
 
 {{CSSRef}}
 
-CSS の `transition-delay` プロパティは、値が変更されたときにプロパティの[トランジション効果](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)が始まるまでの待ち時間を指定します。
+[CSS](/ja/docs/Web/CSS) の **`transition-delay`** プロパティは、値が変更されたときにプロパティの[トランジション効果](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)が始まるまでの待ち時間を指定します。
 
-{{EmbedInteractiveExample("pages/css/transition-delay.html")}}
+{{InteractiveExample("CSS Demo: transition-delay")}}
+
+```css interactive-example-choice
+transition-delay: 250ms;
+transition-property: margin-right;
+```
+
+```css interactive-example-choice
+transition-delay: 1s;
+transition-property: background-color;
+```
+
+```css interactive-example-choice
+transition-delay: 1s;
+transition-property: margin-right, color;
+```
+
+```css interactive-example-choice
+transition-delay: 1s, 250ms;
+transition-property: margin-right, color;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">Hover to see<br />the transition.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #e4f0f5;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: 1em monospace;
+  width: 100%;
+  transition: margin-right 2s;
+}
+
+#default-example:hover > #example-element {
+  background-color: #909;
+  color: #fff;
+  margin-right: 40%;
+}
+```
 
 待ち時間はゼロ、正の数、負の数で指定します。
 
@@ -28,6 +74,7 @@ transition-delay: 2s, 4ms;
 transition-delay: inherit;
 transition-delay: initial;
 transition-delay: revert;
+transition-delay: revert-layer;
 transition-delay: unset;
 ```
 
@@ -51,13 +98,13 @@ transition-delay: unset;
 #### HTML
 
 ```html
-  <div class="box delay-1">0.5 seconds</div>
+<div class="box delay-1">0.5 seconds</div>
 
-  <div class="box delay-2">2 seconds</div>
+<div class="box delay-2">2 seconds</div>
 
-  <div class="box delay-3">4 seconds</div>
+<div class="box delay-3">4 seconds</div>
 
-  <button id="change">Change</button>
+<button id="change">Change</button>
 ```
 
 #### CSS
@@ -71,7 +118,7 @@ transition-delay: unset;
   height: 100px;
   background-color: red;
   font-size: 18px;
-  transition-property: background-color font-size transform color;
+  transition-property: background-color, font-size, transform, color;
   transition-timing-function: ease-in-out;
   transition-duration: 3s;
 }
@@ -81,7 +128,7 @@ transition-delay: unset;
   background-color: blue;
   color: yellow;
   font-size: 12px;
-  transition-property: background-color font-size transform color;
+  transition-property: background-color, font-size, transform, color;
   transition-timing-function: ease-in-out;
   transition-duration: 3s;
 }
@@ -104,7 +151,7 @@ transition-delay: unset;
 ```js
 function change() {
   const elements = document.querySelectorAll("div.box");
-  for (let element of elements) {
+  for (const element of elements) {
     element.classList.toggle("transformed-state");
   }
 }
@@ -127,5 +174,5 @@ changeButton.addEventListener("click", change);
 
 ## 関連情報
 
-- [CSS トランジションの利用](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{domxref("TransitionEvent")}}

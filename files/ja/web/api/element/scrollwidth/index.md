@@ -1,30 +1,31 @@
 ---
-title: Element.scrollWidth
+title: "Element: scrollWidth プロパティ"
+short-title: scrollWidth
 slug: Web/API/Element/scrollWidth
+l10n:
+  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
 {{APIRef("DOM")}}
 
 **`Element.scrollWidth`** は読み取り専用のプロパティで、あふれたために画面に表示されない部分を含めた、要素の中身の幅の寸法です。
 
-`scrollWidth` の値は、水平スクロールバーを使用せずにすべてのコンテンツをビューポート内に合わせるために要素が必要とする最小幅に等しくなります。幅は {{domxref("Element.clientWidth", "clientWidth")}} と同じ方法で定めます。要素のパディングは含みますが、境界線、マージン、 (もしあれば) 垂直スクロールバーは含みません。これには {{cssxref("::before")}} または {{cssxref("::after")}} のような疑似要素の幅を含むことがあります。要素の内容が水平スクロールバーが必要なく合うのであれば、 `scrollWidth` は {{domxref("Element.clientWidth", "clientWidth")}} と等しくなります。
+`scrollWidth` の値は、水平スクロールバーを使用せずにすべてのコンテンツをビューポート内に合わせるために要素が必要とする最小幅に等しくなります。幅は {{domxref("Element.clientWidth", "clientWidth")}} と同じ方法で測定されます。要素のパディングは含みますが、境界線、マージン、垂直スクロールバー（ある場合）は含みません。これには {{cssxref("::before")}} または {{cssxref("::after")}} のような擬似要素の幅を含むことがあります。要素の内容が水平スクロールバーが必要なく合うのであれば、 `scrollWidth` は {{domxref("Element.clientWidth", "clientWidth")}} と等しくなります。
 
-> **メモ:** このプロパティは値を整数値に丸めます。小数値が必要であれば、 {{ domxref("element.getBoundingClientRect()") }} を使用してください。
+> [!NOTE]
+> このプロパティは値を整数値に丸めます。小数値が必要であれば、 {{ domxref("element.getBoundingClientRect()") }} を使用してください。
 
-## 構文
+## 値
 
-```js
-var xScrollWidth = element.scrollWidth;
-```
-
-`xScrollWidth` はピクセル単位の `element` のコンテンツの幅です。
+文字列です。
 
 ## 例
 
 ```html
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en-US">
   <head>
+    <meta charset="UTF-8" />
     <title>Example</title>
     <style>
       div {
@@ -44,44 +45,36 @@ var xScrollWidth = element.scrollWidth;
   </head>
 
   <body>
-    <div id="aDiv">
-      FooBar-FooBar-FooBar-FooBar
-    </div>
-    <button id="aButton">
-      Check for overflow
-    </button>
+    <div id="aDiv">FooBar-FooBar-FooBar-FooBar</div>
+    <button id="aButton">Check for overflow</button>
 
-    <div id="anotherDiv">
-      FooBar-FooBar-FooBar-FooBar
-    </div>
-    <button id="anotherButton">
-      Check for overflow
-    </button>
+    <div id="anotherDiv">FooBar-FooBar-FooBar-FooBar</div>
+    <button id="anotherButton">Check for overflow</button>
   </body>
   <script>
-    var buttonOne = document.getElementById('aButton'),
-    buttonTwo = document.getElementById('anotherButton'),
-    divOne = document.getElementById('aDiv'),
-    divTwo = document.getElementById('anotherDiv');
+    const buttonOne = document.getElementById("aButton");
+    const buttonTwo = document.getElementById("anotherButton");
+    const divOne = document.getElementById("aDiv");
+    const divTwo = document.getElementById("anotherDiv");
 
     //check to determine if an overflow is happening
     function isOverflowing(element) {
-      return (element.scrollWidth > element.offsetWidth);
+      return element.scrollWidth > element.offsetWidth;
     }
 
     function alertOverflow(element) {
       if (isOverflowing(element)) {
-        alert('Contents are overflowing the container.');
+        alert("Contents are overflowing the container.");
       } else {
-        alert('No overflows!');
+        alert("No overflows!");
       }
     }
 
-    buttonOne.addEventListener('click', function() {
+    buttonOne.addEventListener("click", () => {
       alertOverflow(divOne);
     });
 
-    buttonTwo.addEventListener('click', function() {
+    buttonTwo.addEventListener("click", () => {
       alertOverflow(divTwo);
     });
   </script>
@@ -90,7 +83,7 @@ var xScrollWidth = element.scrollWidth;
 
 ### 結果
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## 仕様書
 

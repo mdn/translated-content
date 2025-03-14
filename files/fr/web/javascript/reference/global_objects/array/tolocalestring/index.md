@@ -1,24 +1,22 @@
 ---
 title: Array.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
-tags:
-  - Array
-  - Internationalisation
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - i18n
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/toLocaleString
 ---
 
 {{JSRef}}
 
 La méthode **`toLocaleString()`** renvoie une chaîne de caractères qui représente les éléments du tableau. Les éléments sont convertis en chaînes de caractères grâce à leurs méthodes `toLocaleString` et chacune de ces chaînes est séparée des autres avec un séparateur propre à la locale courante (par exemple une virgule ou un point).
 
-{{EmbedInteractiveExample("pages/js/array-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: Array.toLocaleString()")}}
+
+```js interactive-example
+const array1 = [1, "a", new Date("21 Dec 1997 14:12:00 UTC")];
+const localeString = array1.toLocaleString("en", { timeZone: "UTC" });
+
+console.log(localeString);
+// Expected output: "1,a,12/21/1997, 2:12:00 PM",
+// This assumes "en" locale and UTC timezone - your results may vary
+```
 
 ## Syntaxe
 
@@ -53,7 +51,7 @@ Ici, on voit qu'on affiche le symbole de la devise de la locale pour chacun des 
 
 ```js
 var prix = ["￥7", 500, 8123, 12];
-prix.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
+prix.toLocaleString("ja-JP", { style: "currency", currency: "JPY" });
 
 // "￥7,￥500,￥8,123,￥12"
 ```
@@ -65,8 +63,8 @@ Pour plus d'exemples, on peut se référer aux pages {{jsxref("Intl")}}, {{jsxre
 ```js
 // https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
 if (!Array.prototype.toLocaleString) {
-  Object.defineProperty(Array.prototype, 'toLocaleString', {
-    value: function(locales, options) {
+  Object.defineProperty(Array.prototype, "toLocaleString", {
+    value: function (locales, options) {
       // 1. Let O be ? ToObject(this value).
       if (this == null) {
         throw new TypeError('"this" is null or not defined');
@@ -82,11 +80,11 @@ if (!Array.prototype.toLocaleString) {
       //    host environment's current locale (this is
       //    derived in an implementation-defined way).
       // NOTE: In this case, we will use a comma
-      var separator = ',';
+      var separator = ",";
 
       // 4. If len is zero, return the empty String.
       if (len === 0) {
-        return '';
+        return "";
       }
 
       // 5. Let firstElement be ? Get(A, "0").
@@ -102,8 +100,10 @@ if (!Array.prototype.toLocaleString) {
       //        « locales, options »
       //       )
       //     )
-      var r = firstElement == null ?
-        '' : firstElement.toLocaleString(locales, options);
+      var r =
+        firstElement == null
+          ? ""
+          : firstElement.toLocaleString(locales, options);
 
       // 8. Let k be 1.
       var k = 1;
@@ -128,8 +128,10 @@ if (!Array.prototype.toLocaleString) {
         //        « locales, options »
         //       )
         //     )
-        r = nextElement == null ?
-          '' : nextElement.toLocaleString(locales, options);
+        r =
+          nextElement == null
+            ? ""
+            : nextElement.toLocaleString(locales, options);
 
         // e. Let R be a String value produced by
         //   concatenating S and R.
@@ -141,7 +143,7 @@ if (!Array.prototype.toLocaleString) {
 
       // 10. Return R.
       return r;
-    }
+    },
   });
 }
 ```

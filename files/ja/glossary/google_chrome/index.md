@@ -3,7 +3,9 @@ title: Google Chrome
 slug: Glossary/Google_Chrome
 ---
 
-Google Chrome は Google が開発した無償の{{glossary("browser", "ブラウザー")}}です。オープンソースプロジェクトである [Chromium](http://www.chromium.org/) がベースとなっています。重要な違いについては [Chromium wiki](https://code.google.com/p/chromium/wiki/ChromiumBrowserVsGoogleChrome) で説明されています。 Chrome は独自のレイアウトエンジンである {{glossary("Blink")}} に対応しています。なお、 iOS 版の Chrome は Blink ではなくプラットフォームの WebView を使用しています。
+{{GlossarySidebar}}
+
+Google Chrome は Google が開発した無償の{{glossary("browser", "ブラウザー")}}です。オープンソースプロジェクトである [Chromium](https://www.chromium.org/) がベースとなっています。重要な違いについては [Chromium wiki](https://code.google.com/p/chromium/wiki/ChromiumBrowserVsGoogleChrome) で説明されています。 Chrome は独自のレイアウトエンジンである {{glossary("Blink")}} に対応しています。なお、 iOS 版の Chrome は Blink ではなくプラットフォームの WebView を使用しています。
 
 ## Learn more
 
@@ -21,7 +23,7 @@ Google Chrome は Google が開発した無償の{{glossary("browser", "ブラ�
 
 ### Web 開発者へ
 
-もし Chrome の最新機能が必要な場合は安定版より先にリリースされるものをインストールしてください。 Google は頻繁ににアップデートをし、安定版とは別に動作するよう設計しています。最新情報については [Chrome Release Blog](http://goo.gl/CCPRW) でご確認ください。
+もし Chrome の最新機能が必要な場合は安定版より先にリリースされるものをインストールしてください。 Google は頻繁にアップデートをし、安定版とは別に動作するよう設計しています。最新情報については [Chrome Release Blog](http://goo.gl/CCPRW) でご確認ください。
 
 - [Android 版 Chrome Dev](https://play.google.com/store/apps/details?id=com.chrome.dev)
 - [デスクトップ版 Chrome Canary](https://www.google.com/chrome/browser/canary.html)

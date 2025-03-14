@@ -1,17 +1,11 @@
 ---
 title: place-self
 slug: Web/CSS/place-self
-tags:
-  - CSS
-  - Propriété
-  - Propriété raccourcie
-  - Reference
-translation_of: Web/CSS/place-self
 ---
 
 {{CSSRef}}
 
-La propriété **`place-self`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui permet de paramétrer les valeurs des propriétés {{cssxref("align-self")}} et {{cssxref("justify-self")}}. La première valeur sera utilisée pour `align-self` et la seconde pour `justify-self`. S'il n'y a pas de seconde valeur, la première sera également utilisée pour `justify-self`.
+La propriété **`place-self`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de paramétrer les valeurs des propriétés {{cssxref("align-self")}} et {{cssxref("justify-self")}}. La première valeur sera utilisée pour `align-self` et la seconde pour `justify-self`. S'il n'y a pas de seconde valeur, la première sera également utilisée pour `justify-self`.
 
 {{EmbedInteractiveExample("pages/css/place-self.html")}}
 
@@ -91,10 +85,10 @@ place-self: unset;
 
 ## Voir aussi
 
-- Guide sur les grilles : _[Aligner des objets dans une grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_CSS)_
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox)_
-- Guide sur les boîtes flexibles : _[Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_éléments_dans_un_conteneur_flexible)_
-- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)
+- Guide sur les grilles : _[Aligner des objets dans une grille](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- Guide sur les boîtes flexibles : _[Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/CSS_box_alignment)
 - Les propriétés détaillées correspondantes
 
   - {{cssxref("align-self")}}

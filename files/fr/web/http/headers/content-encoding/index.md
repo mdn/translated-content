@@ -1,11 +1,6 @@
 ---
 title: Content-Encoding
 slug: Web/HTTP/Headers/Content-Encoding
-tags:
-  - En-têtes
-  - HTTP
-  - Reference
-translation_of: Web/HTTP/Headers/Content-Encoding
 ---
 
 {{HTTPSidebar}}
@@ -52,7 +47,7 @@ Content-Encoding: deflate, gzip
 - `compress`
   - : Un format utilisant l'algorithme [Lempel-Ziv-Welch](http://en.wikipedia.org/wiki/LZW) (LZW). Le nom de la valeur a été tiré du programme de compression UNIX, qui a mis en œuvre cet algorithme. Comme le programme de compression, qui a disparu de la plupart des distributions UNIX, ce codage de contenu n'est pas utilisé par de nombreux navigateurs aujourd'hui, en partie à cause d'un problème de brevet (il a expiré en 2003).
 - `deflate`
-  - : Utilisant la structure [zlib](http://en.wikipedia.org/wiki/Zlib) (définie dans la [RFC 1950](http://tools.ietf.org/html/rfc1950)) avec l'algorithme de compression _[deflate](http://en.wikipedia.org/wiki/DEFLATE)_ (défini dans la [RFC 1951](http://tools.ietf.org/html/rfc1951)).
+  - : Utilisant la structure [zlib](http://en.wikipedia.org/wiki/Zlib) (définie dans la [RFC 1950](https://tools.ietf.org/html/rfc1950)) avec l'algorithme de compression _[deflate](http://en.wikipedia.org/wiki/DEFLATE)_ (défini dans la [RFC 1951](https://tools.ietf.org/html/rfc1951)).
 - `identity`
   - : Indicates the identity function (c'est-à-dire qu'il n'y a eu aucune compression ou modification). Sauf mention contraire, cette valeur est toujours considérée comme acceptable.
 - `br`
@@ -78,15 +73,11 @@ Content-Encoding: gzip
 
 ## Spécifications
 
-| Spécification                                                    | Titre                                                         |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7932", "Brotli Compressed Data Format")}} | Brotli Compressed Data Format                                 |
-| {{RFC("7231", "Content-Encoding", "3.1.2.2")}}     | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
-| {{RFC("2616", "Content-Encoding", "14.11")}}     | Content-Encoding                                              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Content-Encoding")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,14 +1,9 @@
 ---
 title: Ajouter une carte de zones cliquables sur une image
 slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
-tags:
-  - Guide
-  - HTML
-  - Intermediate
-  - Navigation
-translation_of: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
-original_slug: Apprendre/HTML/Comment/Ajouter_carte_zones_cliquables_sur_image
 ---
+
+{{QuickLinksWithSubpages("/fr/docs/Learn/HTML/Howto")}}
 
 Dans cet article, nous verrons comment construire une carte imagée cliquable en commençant par les inconvénients de cette méthode.
 
@@ -37,7 +32,8 @@ Dans cet article, nous verrons comment construire une carte imagée cliquable en
   </tbody>
 </table>
 
-> **Attention :** Cet article n'aborde que les cartes générées côté client. Les cartes de zones générées côté serveur ne doivent pas être utilisée car elles ne sont accessibles qu'aux utilisateurs ayant des souris.
+> [!WARNING]
+> Cet article n'aborde que les cartes générées côté client. Les cartes de zones générées côté serveur ne doivent pas être utilisée car elles ne sont accessibles qu'aux utilisateurs ayant des souris.
 
 ## Les cartes imagées cliquables et leurs inconvénients
 
@@ -45,7 +41,7 @@ Lorsque vous imbriquez une image dans un élément {{htmlelement("a")}}, l'image
 
 Auparavant, les cartes imagées était assez populaires mais, malgré cette popularité, elles posent quelques problèmes en termes de performances et d'accessibilité.
 
-[Les liens textuels](/fr/Apprendre/HTML/Comment/Créer_un_hyperlien) (éventuellement mis en formes avec CSS) sont préférables à ces cartes car ils sont plus légers, plus faciles à maintenir, plus utiles pour le référencement et qu'ils sont supportés par les outils d'accessibilité.
+[Les liens textuels](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) (éventuellement mis en formes avec CSS) sont préférables à ces cartes car ils sont plus légers, plus faciles à maintenir, plus utiles pour le référencement et qu'ils sont supportés par les outils d'accessibilité.
 
 ## Comment insérer une carte imagée
 
@@ -57,34 +53,29 @@ N'importe quelle image ne fera pas l'affaire pour construire une telle carte.
 - L'image doit indiquer de façon claire où commencent et où se terminent les différentes régions.
 - Les différentes zones de la cartes doivent être suffisamment grandes pour qu'on puisse cliquer ou appuyer dessus, quelle que soit la taille de l'écran utilisé. [Une image de 72 pixels CSS de long et de large](http://uxmovement.com/mobile/finger-friendly-design-ideal-mobile-touch-target-sizes/) est un minimum acceptable (pour voir le problème posé par de trop petites régions : [50languages.com](http://www.goethe-verlag.com/book2/), où les grandes régions sont suffisamment grande mais où, pour l'Albanie et l'Estonie, c'est beaucoup plus compliqué
 
-On insère une image [de la même façon que d'habitude](/fr/Learn/HTML/Howto/Add_images_to_a_webpage) (avec un élément {{htmlelement("img")}} et un texte dans l'attribut {{htmlattrxref("alt",'img')}}). Si l'image n'est présente qu'à des fins de navigations, `alt` peut être laissé vide : `alt=""`, si les valeurs pour les différents {{htmlattrxref("alt",'area')}} sont bien renseignés dans les éléments {{htmlelement('area')}} que nous allons présenter.
+On insère une image [de la même façon que d'habitude](/fr/docs/Learn/HTML/Howto/Add_images_to_a_webpage) (avec un élément {{htmlelement("img")}} et un texte dans l'attribut [`alt`](/fr/docs/Web/HTML/Element/img#alt)). Si l'image n'est présente qu'à des fins de navigations, `alt` peut être laissé vide : `alt=""`, si les valeurs pour les différents [`alt`](/fr/docs/Web/HTML/Element/area#alt) sont bien renseignés dans les éléments {{htmlelement('area')}} que nous allons présenter.
 
-Cette image contiendra une attribut spécial {{htmlattrxref("usemap","img")}}. Celui-ci doit désigner avec un nom unique et sans espace la carte imagée. C'est ce nom qu'on placera dans cet attribut `usemap` :
+Cette image contiendra une attribut spécial [`usemap`](/fr/docs/Web/HTML/Element/img#usemap). Celui-ci doit désigner avec un nom unique et sans espace la carte imagée. C'est ce nom qu'on placera dans cet attribut `usemap` :
 
 ```html
-<img
-  src="image-map.png"
-  alt=""
-  usemap="#exemple-map-1" />
+<img src="image-map.png" alt="" usemap="#exemple-map-1" />
 ```
 
 ### Étape 2 : Activer les régions actives
 
-Dans cette étape, nous allons remplir le code de l'élément {{htmlelement('map')}}. Celui-ci n'a besoin que d'un seul attribut : {{htmlattrxref("name","map")}} dont la valeur doit correspondre à celle utilisée pour l'attribut `usemap` vue juste avant :
+Dans cette étape, nous allons remplir le code de l'élément {{htmlelement('map')}}. Celui-ci n'a besoin que d'un seul attribut : [`name`](/fr/docs/Web/HTML/Element/map#name) dont la valeur doit correspondre à celle utilisée pour l'attribut `usemap` vue juste avant :
 
 ```html
-<map name="exemple-map-1">
-
-</map>
+<map name="exemple-map-1"> </map>
 ```
 
 Dans cet élément `<map>`, on aura besoin d'utiliser les éléments {{htmlelement('area')}}. Chacun de ces éléments correspondra à une région donnée. Afin que la navigation au clavier reste intuitive, il faudra veiller à ce que l'ordre de ces éléments HTML corresponde bien à l'ordre visuel des régions.
 
 Les éléments `<area>` sont des éléments vides mais qui utilisent quatres attributs :
 
-- {{htmlattrxref('shape','area')}}
+- [shape](/fr/docs/Web/HTML/Element/area#shape)
 
-  {{htmlattrxref('coords','area')}}
+  [coords](/fr/docs/Web/HTML/Element/area#coords)
 
   - : `shape` (« forme » en anglais) prend l'une de ces quatre valeurs : `circle` (pour un cercle), `rect` (pour un rectangle), `poly` (pour un polygone) ou `default` (une zone `default` occupera l'image entière à laquelle on aura retiré les autres zones déjà définies). La forme choisie détermine les informations de coordonnées qui seront utiles dans `coords`.
 
@@ -96,22 +87,27 @@ Les éléments `<area>` sont des éléments vides mais qui utilisent quatres att
 
     Dans le cas où les définitions de certaines régions se chevauchent, ce sera l'ordre des zones qui donnera la priorité.
 
-- {{htmlattrxref('href','area')}}
+- [`href`](/fr/docs/Web/HTML/Element/area#href)
   - : Cet attribut est l'URL de la ressource vers laquelle on crée un lien. Elle peut être laissée vide si on ne souhaite pas créer de lien pour cette région.
-- {{htmlattrxref('alt','area')}}
+- [`alt`](/fr/docs/Web/HTML/Element/area#alt)
 
-  - : Un attribut obligatoire qui indique aux personnes la direction ou le rôle du lien. Ce texte `alt` ne sera affiché que lorsque l'image ne sera pas disponible. Pour plus d'informations, voir [nos conseils pour écrire des hyperliens accessibles.](/fr/Apprendre/HTML/Comment/Créer_un_hyperlien#Écrire_des_liens_accessibles)
+  - : Un attribut obligatoire qui indique aux personnes la direction ou le rôle du lien. Ce texte `alt` ne sera affiché que lorsque l'image ne sera pas disponible. Pour plus d'informations, voir [nos conseils pour écrire des hyperliens accessibles.](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#écrire_des_liens_accessibles)
 
     Vous pouvez écrire `alt=""` si l'attribut `href` est vide _et_ que l'image entière possède déjà un attribut `alt` renseigné.
 
 ```html
 <map name="exemple-map-1">
-  <area shape="circle" coords="200,250,25"
-    href="page-2.html" alt="exemple de cercle" />
+  <area
+    shape="circle"
+    coords="200,250,25"
+    href="page-2.html"
+    alt="exemple de cercle" />
 
-  <area shape="rect" coords="10, 5, 20, 15"
-    href="page-3.html" alt="exemple de rectangle" />
-
+  <area
+    shape="rect"
+    coords="10, 5, 20, 15"
+    href="page-3.html"
+    alt="exemple de rectangle" />
 </map>
 ```
 

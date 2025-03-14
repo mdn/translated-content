@@ -1,14 +1,6 @@
 ---
 title: var()
 slug: Web/CSS/var
-tags:
-  - CSS
-  - Experimental
-  - Fonction CSS
-  - Reference
-  - Variables CSS
-translation_of: Web/CSS/var()
-original_slug: Web/CSS/var()
 ---
 
 {{CSSRef}}
@@ -27,7 +19,8 @@ Le premier argument de la fonction est le nom de la propriété qu'on veut subst
 
 {{csssyntax}}
 
-> **Note :** La syntaxe de la valeur de recours permet d'utiliser des virgules. Aussi, si on a `var(--toto, red, blue)`, la valeur de recours sera bien `red, blue` (autrement dit, tout ce qui est situé après la première virgule sert de valeur de recours).
+> [!NOTE]
+> La syntaxe de la valeur de recours permet d'utiliser des virgules. Aussi, si on a `var(--toto, red, blue)`, la valeur de recours sera bien `red, blue` (autrement dit, tout ce qui est situé après la première virgule sert de valeur de recours).
 
 ### Valeurs
 
@@ -39,7 +32,7 @@ Le premier argument de la fonction est le nom de la propriété qu'on veut subst
 ## Exemples
 
 ```css
-:root{
+:root {
   --main-bg-color: pink;
 }
 

@@ -1,24 +1,26 @@
 ---
 title: Array.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
-tags:
-  - Array
-  - ECMAScript5
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/some
 ---
 
 {{JSRef}}
 
 El método **`some()`** comprueba si al menos un elemento del array cumple con la condición implementada por la función proporcionada.
 
-> **Nota:** Este método devuelve `false` para cualquier condición puesta en un array vacío.
+> [!NOTE]
+> Este método devuelve `false` para cualquier condición puesta en un array vacío.
 
-{{EmbedInteractiveExample("pages/js/array-some.html")}}
+{{InteractiveExample("JavaScript Demo: Array.some()")}}
+
+```js interactive-example
+const array = [1, 2, 3, 4, 5];
+
+// Checks whether an element is even
+const even = (element) => element % 2 === 0;
+
+console.log(array.some(even));
+// Expected output: true
+```
 
 ## Sintaxis
 
@@ -64,7 +66,7 @@ El siguiente ejemplo verifica si algún elemento del array es mayor a 10.
 function isBiggerThan10(element, index, array) {
   return element > 10;
 }
-[2, 5, 8, 1, 4].some(isBiggerThan10);  // false
+[2, 5, 8, 1, 4].some(isBiggerThan10); // false
 [12, 5, 8, 1, 4].some(isBiggerThan10); // true
 ```
 
@@ -73,8 +75,8 @@ function isBiggerThan10(element, index, array) {
 [Las funciones flecha (Arrow functions)](/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions) brindan una sintáxis más corta para el mismo test.
 
 ```js
-[2, 5, 8, 1, 4].some(elem => elem > 10);  // false
-[12, 5, 8, 1, 4].some(elem => elem > 10); // true
+[2, 5, 8, 1, 4].some((elem) => elem > 10); // false
+[12, 5, 8, 1, 4].some((elem) => elem > 10); // true
 ```
 
 ### Comprobando si un elemento existe en un array
@@ -82,52 +84,52 @@ function isBiggerThan10(element, index, array) {
 Para imitar la función del método `includes()`, esta función personalizada devuelve `true` si el elemento existe en el array:
 
 ```js
-var fruits = ['apple', 'banana', 'mango', 'guava'];
+var fruits = ["apple", "banana", "mango", "guava"];
 
 function checkAvailability(arr, val) {
-  return arr.some(function(arrVal) {
+  return arr.some(function (arrVal) {
     return val === arrVal;
   });
 }
 
-checkAvailability(fruits, 'kela');   // false
-checkAvailability(fruits, 'banana'); // true
+checkAvailability(fruits, "kela"); // false
+checkAvailability(fruits, "banana"); // true
 ```
 
 ### Comprobando si un elemento existe en un array con funciones flecha
 
 ```js
-var fruits = ['apple', 'banana', 'mango', 'guava'];
+var fruits = ["apple", "banana", "mango", "guava"];
 
 function checkAvailability(arr, val) {
-  return arr.some(arrVal => val === arrVal);
+  return arr.some((arrVal) => val === arrVal);
 }
 
-checkAvailability(fruits, 'kela');   // false
-checkAvailability(fruits, 'banana'); // true
+checkAvailability(fruits, "kela"); // false
+checkAvailability(fruits, "banana"); // true
 ```
 
 ### Convirtiendo cualquier valor a Boolean
 
 ```js
-var TRUTHY_VALUES = [true, 'true', 1];
+var TRUTHY_VALUES = [true, "true", 1];
 
 function getBoolean(value) {
-  'use strict';
+  "use strict";
 
-  if (typeof value === 'string') {
+  if (typeof value === "string") {
     value = value.toLowerCase().trim();
   }
 
-  return TRUTHY_VALUES.some(function(t) {
+  return TRUTHY_VALUES.some(function (t) {
     return t === value;
   });
 }
 
-getBoolean(false);   // false
-getBoolean('false'); // false
-getBoolean(1);       // true
-getBoolean('true');  // true
+getBoolean(false); // false
+getBoolean("false"); // false
+getBoolean(1); // true
+getBoolean("true"); // true
 ```
 
 ## Polyfill
@@ -138,14 +140,14 @@ getBoolean('true');  // true
 // Pasos de producción de ECMA-262, Edición 5, 15.4.4.17
 // Referencia: http://es5.github.io/#x15.4.4.17
 if (!Array.prototype.some) {
-  Array.prototype.some = function(fun/*, thisArg*/) {
-    'use strict';
+  Array.prototype.some = function (fun /*, thisArg*/) {
+    "use strict";
 
     if (this == null) {
-      throw new TypeError('Array.prototype.some called on null or undefined');
+      throw new TypeError("Array.prototype.some called on null or undefined");
     }
 
-    if (typeof fun !== 'function') {
+    if (typeof fun !== "function") {
       throw new TypeError();
     }
 
@@ -168,9 +170,9 @@ if (!Array.prototype.some) {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.some")}}
+{{Compat}}
 
 ## Ver también
 

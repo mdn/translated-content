@@ -5,7 +5,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Generator
 
 {{JSRef}}
 
-**`Generator`** オブジェクトは{{JSxRef("Statements/function*", "ジェネレーター関数", "", 1)}}によって返され、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)と[反復子プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復子_iterator_プロトコル)の両方に準拠しています。
+**`Generator`** オブジェクトは{{JSxRef("Statements/function*", "ジェネレーター関数", "", 1)}}によって返され、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)と[イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)の両方に準拠しています。
+
+{{InteractiveExample("JavaScript Demo: Expressions - function* expression", "taller")}}
+
+```js interactive-example
+const foo = function* () {
+  yield "a";
+  yield "b";
+  yield "c";
+};
+
+let str = "";
+for (const val of foo()) {
+  str = str + val;
+}
+
+console.log(str);
+// Expected output: "abc"
+```
 
 ## コンストラクター
 
@@ -36,11 +54,11 @@ const gen = generator(); // "Generator { }"
 
 ```js
 function* infinite() {
-    let index = 0;
+  let index = 0;
 
-    while (true) {
-        yield index++;
-    }
+  while (true) {
+    yield index++;
+  }
 }
 
 const generator = infinite(); // "Generator { }"
@@ -51,17 +69,17 @@ console.log(generator.next().value); // 2
 // ...
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザー実装状況
 
-{{Compat("javascript.builtins.Generator")}}
+{{Compat}}
 
 ## 関連情報
 
 - {{JSxRef("Statements/function*", "function*")}}
 - {{JSxRef("Operators/function*", '<code>function*</code> 式', "", 1)}}
 - {{JSxRef("GeneratorFunction")}}
-- [反復処理プロトコル](/ja/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)

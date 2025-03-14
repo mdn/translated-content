@@ -3,7 +3,7 @@ title: MouseEvent.shiftKey
 slug: Web/API/MouseEvent/shiftKey
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 El evento de **`MouseEvent.shiftKey`** es una propiedad de solo lectura que indica si la tecla de <kbd>shift</kbd> se presionó (`true`) o no (`false`).
 
@@ -51,7 +51,7 @@ También puede utilizar SHIFT junto a la tecla ALT.</p>
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.MouseEvent.shiftKey")}}
+{{Compat}}
 
 ## Ver más
 

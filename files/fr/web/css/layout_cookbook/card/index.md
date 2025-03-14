@@ -1,13 +1,6 @@
 ---
 title: Carte
 slug: Web/CSS/Layout_cookbook/Card
-tags:
-  - CSS
-  - CSS Grid
-  - Guide
-  - Recette
-translation_of: Web/CSS/Layout_cookbook/Card
-original_slug: Web/CSS/Layout_cookbook/Carte
 ---
 
 {{CSSRef}}
@@ -32,7 +25,7 @@ Lorsqu'on ajoute des cartes à un ensemble de cartes, celles-ci devraient s'orga
 
 ## Choix effectués
 
-Chaque carte est organisée en utilisant [une grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout) bien qu'elle ne soit que sur une seule dimension. Cela permet en effet d'utiliser le dimensionnement du contenu pour les pistes de la grille. Pour avoir une grille avec une seule colonne, on utilise ce fragment de CSS :
+Chaque carte est organisée en utilisant [une grille CSS](/fr/docs/Web/CSS/CSS_grid_layout) bien qu'elle ne soit que sur une seule dimension. Cela permet en effet d'utiliser le dimensionnement du contenu pour les pistes de la grille. Pour avoir une grille avec une seule colonne, on utilise ce fragment de CSS :
 
 ```css
 .card {
@@ -45,13 +38,14 @@ La piste pour le titre est définie avec {{cssxref("max-content")}} ce qui empê
 
 Si la carte possède un pied de page, celui-ci sera dimensionné automatiquement car les lignes ajoutées sur la grille implicite sont dimensionnés automatiquement. Aussi, le pied de page sera suffisamment grand pour contenir l'ensemble de son texte.
 
-> **Note :** Les éléments de différentes cartes ne seront pas alignés les uns avec les autres car chaque carte est une grille indépendante. La fonctionnalité de sous-grille (_subgrid_), proposée pour la version de niveau 2 du module de spécification CSS Grid, pourrait apporter une solution à ce problème.
+> [!NOTE]
+> Les éléments de différentes cartes ne seront pas alignés les uns avec les autres car chaque carte est une grille indépendante. La fonctionnalité de sous-grille (_subgrid_), proposée pour la version de niveau 2 du module de spécification CSS Grid, pourrait apporter une solution à ce problème.
 
 ## Méthodes alternatives
 
-On pourrait également utiliser [les boîtes flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout) pour organiser le contenu d'une carte. Dans cette configuration, il faut laisser la zone dédiée au contenu s'étendre et ne pas rendre les autres éléments flexibles. On pourrait ainsi obtenir simplement cette disposition. Les grilles permettent de dimensionner les pistes au niveau du conteneur, pour les boîtes flexibles, il faut dimensionner chaque élément séparément.
+On pourrait également utiliser [les boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout) pour organiser le contenu d'une carte. Dans cette configuration, il faut laisser la zone dédiée au contenu s'étendre et ne pas rendre les autres éléments flexibles. On pourrait ainsi obtenir simplement cette disposition. Les grilles permettent de dimensionner les pistes au niveau du conteneur, pour les boîtes flexibles, il faut dimensionner chaque élément séparément.
 
-Pour l'organisation de l'ensemble des cartes (et pas des cartes individuelles), on pourrait également utiliser les boîtes flexibles mais on aurait alors la dernière carte qui occuperait tout le reste d'une ligne et qui serait potentiellement plus larges que les autres cartes. Une autre méthode consisterait à utiliser [une disposition multi-colonnes](/fr/docs/Web/CSS/CSS_Columns) où les cartes s'empileraient sur les différentes colonnes (un point qui peut être souhaitable ou indésirable selon l'effet désiré).
+Pour l'organisation de l'ensemble des cartes (et pas des cartes individuelles), on pourrait également utiliser les boîtes flexibles mais on aurait alors la dernière carte qui occuperait tout le reste d'une ligne et qui serait potentiellement plus larges que les autres cartes. Une autre méthode consisterait à utiliser [une disposition multi-colonnes](/fr/docs/Web/CSS/CSS_multicol_layout) où les cartes s'empileraient sur les différentes colonnes (un point qui peut être souhaitable ou indésirable selon l'effet désiré).
 
 Voir [la recette sur les colonnes](/fr/docs/Web/CSS/Layout_cookbook/Column_layouts) pour observer ces méthodes en action.
 
@@ -61,15 +55,7 @@ Selon le contenu des cartes, il est possible voire souhaitable d'appliquer quelq
 
 ## Compatibilité des navigateurs
 
-Les différentes méthodes évoquées plus haut peuvent disposer d'une prise en charge différente selon les navigateurs, se référer à chacun des tableaux suivant pour plus de détails sur la prise en charge de chaque propriété.
-
-### grid-template-columns
-
-{{Compat("css.properties.grid-template-columns")}}
-
-### grid-template-rows
-
-{{Compat("css.properties.grid-template-rows")}}
+{{Compat}}
 
 ## Voir aussi
 

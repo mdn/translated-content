@@ -1,22 +1,53 @@
 ---
-title: '<nav>: 탐색 구획 요소'
+title: "<nav>: 탐색 구획 요소"
 slug: Web/HTML/Element/nav
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - HTML5
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/nav
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<nav>` 요소**는 문서의 부분 중 현재 페이지 내, 또는 다른 페이지로의 링크를 보여주는 구획을 나타냅니다. 자주 쓰이는 예제는 메뉴, 목차, 색인입니다.
 
-{{EmbedInteractiveExample("pages/tabbed/nav.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;nav&gt;", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
+```html interactive-example
+<nav class="crumbs">
+  <ol>
+    <li class="crumb"><a href="#">Bikes</a></li>
+    <li class="crumb"><a href="#">BMX</a></li>
+    <li class="crumb">Jump Bike 3000</li>
+  </ol>
+</nav>
+
+<h1>Jump Bike 3000</h1>
+<p>
+  This BMX bike is a solid step into the pro world. It looks as legit as it
+  rides and is built to polish your skills.
+</p>
+```
+
+```css interactive-example
+nav {
+  border-bottom: 1px solid black;
+}
+
+.crumbs ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.crumb {
+  display: inline-block;
+}
+
+.crumb a::after {
+  display: inline-block;
+  color: #000;
+  content: ">";
+  font-size: 80%;
+  font-weight: bold;
+  padding: 0 3px;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -46,7 +77,7 @@ translation_of: Web/HTML/Element/nav
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -95,4 +126,4 @@ translation_of: Web/HTML/Element/nav
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.nav")}}
+{{Compat}}

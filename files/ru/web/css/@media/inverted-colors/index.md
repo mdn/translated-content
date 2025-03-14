@@ -1,18 +1,11 @@
 ---
 title: inverted-colors
 slug: Web/CSS/@media/inverted-colors
-tags:
-  - '@media'
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
-translation_of: Web/CSS/@media/inverted-colors
 ---
 
 {{cssref}}
 
-[CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/Media_Queries/Using_media_queries) **`inverted-colors`** может использоваться для проверки, инвертирует ли {{glossary("user agent")}} или ОС цвета.
+[CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries) **`inverted-colors`** может использоваться для проверки, инвертирует ли {{glossary("user agent")}} или ОС цвета.
 
 ## Синтаксис
 
@@ -28,8 +21,15 @@ translation_of: Web/CSS/@media/inverted-colors
 ### HTML
 
 ```html
-<p>Если вы используете инвертированные цвета, этот текст должен быть синим по белому (инверсия жёлтого по чёрному). Если нет, он должен быть красным на светло-сером.</p>
-<p>Если текст серого цвета, ваш браузер не поддерживает медиа-функцию `inverted-colors`.</p>
+<p>
+  Если вы используете инвертированные цвета, этот текст должен быть синим по
+  белому (инверсия жёлтого по чёрному). Если нет, он должен быть красным на
+  светло-сером.
+</p>
+<p>
+  Если текст серого цвета, ваш браузер не поддерживает медиа-функцию
+  `inverted-colors`.
+</p>
 ```
 
 ### CSS
@@ -58,7 +58,7 @@ p {
 
 {{EmbedLiveSample("Пример")}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

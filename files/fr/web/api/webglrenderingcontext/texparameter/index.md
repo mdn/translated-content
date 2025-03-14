@@ -1,19 +1,11 @@
 ---
 title: WebGLRenderingContext.texParameter[fi]()
 slug: Web/API/WebGLRenderingContext/texParameter
-tags:
-  - API
-  - Méthode
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/texParameter
 ---
 
 {{APIRef("WebGL")}}
 
-Les méthodes **`WebGLRenderingContext.texParameter[fi]()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) définissent les paramètres de texture.
+Les méthodes **`WebGLRenderingContext.texParameter[fi]()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) définissent les paramètres de texture.
 
 ## Syntaxe
 
@@ -158,7 +150,11 @@ Aucune.
 
 ```js
 gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST);
+gl.texParameteri(
+  gl.TEXTURE_2D,
+  gl.TEXTURE_MIN_FILTER,
+  gl.LINEAR_MIPMAP_NEAREST,
+);
 ```
 
 ## Spécifications

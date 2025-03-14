@@ -1,22 +1,14 @@
 ---
 title: RegisteredUserScript.unregister()
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister
-tags:
-  - Add-ons
-  - Extensions
-  - Method
-  - User Scripts API
-  - WebExtensions
-  - unregister
-  - userScripts
-translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister
 ---
 
 {{AddonSidebar}}
 
 La méthode `unregister()` de l'interface {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} désenregistre le script utilisateur représenté par cette instance d'interface et précédemment enregistré via {{WebExtAPIRef("userScripts.register","userScripts.register()")}}.
 
-> **Note :** Les scripts utilisateur sont automatiquement désenregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts utilisateur ont été enregistrés) est déchargée, vous devez donc enregistrer un script utilisateur depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts utilisateur restent enregistrés..
+> [!NOTE]
+> Les scripts utilisateur sont automatiquement désenregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts utilisateur ont été enregistrés) est déchargée, vous devez donc enregistrer un script utilisateur depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts utilisateur restent enregistrés..
 
 ## Syntaxe
 
@@ -36,9 +28,9 @@ Aucun
 
 Une {{JSxRef("Promise")}} qui sera résolu une fois le script utilisateur désenregistré. La promesse ne rapporte rien.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.userScripts.RegisteredUserScript.unregister")}}
+{{Compat}}
 
 ## Voir aussi
 

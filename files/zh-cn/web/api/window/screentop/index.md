@@ -9,13 +9,7 @@ slug: Web/API/Window/screenTop
 
 > **备注：** `screenTop` is an alias of the older {{domxref("Window.screenY")}} property. `screenTop` was originally supported only in IE but was introduced everywhere due to popularity.
 
-## 语法
-
-```
-topWindowPos = window.screenTop
-```
-
-### 返回值
+## 值
 
 A number equal to the number of CSS pixels from the top edge of the browser viewport to the top edge of the screen.
 
@@ -34,14 +28,25 @@ function positionElem() {
   let leftUpdate = initialLeft - newLeft;
   let topUpdate = initialTop - newTop;
 
-  ctx.fillStyle = 'rgb(0, 0, 0)';
+  ctx.fillStyle = "rgb(0, 0, 0)";
   ctx.fillRect(0, 0, width, height);
-  ctx.fillStyle = 'rgb(0, 0, 255)';
+  ctx.fillStyle = "rgb(0, 0, 255)";
   ctx.beginPath();
-  ctx.arc(leftUpdate + (width/2), topUpdate + (height/2) + 35, 50, degToRad(0), degToRad(360), false);
+  ctx.arc(
+    leftUpdate + width / 2,
+    topUpdate + height / 2 + 35,
+    50,
+    degToRad(0),
+    degToRad(360),
+    false,
+  );
   ctx.fill();
 
-  pElem.textContent = 'Window.screenLeft: ' + window.screenLeft + ', Window.screenTop: ' + window.screenTop;
+  pElem.textContent =
+    "Window.screenLeft: " +
+    window.screenLeft +
+    ", Window.screenTop: " +
+    window.screenTop;
 
   window.requestAnimationFrame(positionElem);
 }
@@ -52,7 +57,7 @@ window.requestAnimationFrame(positionElem);
 Also in the code we include a snippet that detects whether `screenLeft` is supported, and if not, polyfills in `screenLeft`/`screenTop` using {{domxref("Window.screenX")}}/{{domxref("Window.screenY")}}.
 
 ```js
-if(!window.screenLeft) {
+if (!window.screenLeft) {
   window.screenLeft = window.screenX;
   window.screenTop = window.screenY;
 }

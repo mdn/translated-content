@@ -1,5 +1,5 @@
 ---
-title: ':focus'
+title: :focus
 slug: Web/CSS/:focus
 ---
 
@@ -14,7 +14,8 @@ input:focus {
 }
 ```
 
-> **Nota:** Esta pseudo-clase se aplica solo al elemento enfocado en sí mismo. Utilice {{cssxref(":focus-within")}} si desea seleccionar un elemento que contenga un elemento enfocado.
+> [!NOTE]
+> Esta pseudo-clase se aplica solo al elemento enfocado en sí mismo. Utilice {{cssxref(":focus-within")}} si desea seleccionar un elemento que contenga un elemento enfocado.
 
 ## Sintaxis
 
@@ -25,8 +26,10 @@ input:focus {
 ### HTML
 
 ```html
-<input class="red-input" value="Voy a ser de color rojo cuando enfoque."><br>
-<input class="blue-input" value="Voy a ser de color azul cuando enfoque.">
+<input
+  class="red-input"
+  value="Voy a ser de color rojo cuando enfoque." /><br />
+<input class="blue-input" value="Voy a ser de color azul cuando enfoque." />
 ```
 
 ### CSS
@@ -65,7 +68,7 @@ Nunca elimines el outline de un foco sin reemplazarlo por otro tipo de indicador
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.focus")}}
+{{Compat}}
 
 ## Ver también
 

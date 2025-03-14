@@ -1,27 +1,45 @@
 ---
 title: handler.has()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-browser-compat: javascript.builtins.Proxy.handler.has
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 ---
 
 {{JSRef}}
 
 **`handler.has()`** 메서드는 {{jsxref("Operators/in", "in")}} 연산자에 대한 트랩입니다.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-has.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.has()", "taller")}}
+
+```js interactive-example
+const handler1 = {
+  has(target, key) {
+    if (key[0] === "_") {
+      return false;
+    }
+    return key in target;
+  },
+};
+
+const monster1 = {
+  _secret: "easily scared",
+  eyeCount: 4,
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+console.log("eyeCount" in proxy1);
+// Expected output: true
+
+console.log("_secret" in proxy1);
+// Expected output: false
+
+console.log("_secret" in monster1);
+// Expected output: true
+```
 
 ## 구문
 
 ```js
 new Proxy(target, {
-  has(target, prop) {
-  }
+  has(target, prop) {},
 });
 ```
 
@@ -65,15 +83,18 @@ new Proxy(target, {
 다음 코드는 {{jsxref("Operators/in", "in")}} 연산자를 트랩합니다.
 
 ```js
-const p = new Proxy({}, {
-  has(target, prop) {
-    console.log(`called: ${prop}`);
-    return true;
+const p = new Proxy(
+  {},
+  {
+    has(target, prop) {
+      console.log(`called: ${prop}`);
+      return true;
+    },
   },
-});
+);
 
-console.log('a' in p); // "called: a"
-                       // true
+console.log("a" in p); // "called: a"
+// true
 ```
 
 다음 코드는 불변 조건을 위반합니다.
@@ -88,7 +109,7 @@ const p = new Proxy(obj, {
   },
 });
 
-'a' in p; // TypeError is thrown
+"a" in p; // TypeError is thrown
 ```
 
 ## 명세서

@@ -40,7 +40,7 @@ console.log(japan.baseName); // "ja-JP" と表示
 // 入力文字列は言語がオランダ語、地域がベルギーであることを示していますが、
 
 // ただし、オプションオブジェクトで地域を上書きしており、オランダに設定しています
-let dutch = new Intl.Locale("nl-Latn-BE", {region: "NL"});
+let dutch = new Intl.Locale("nl-Latn-BE", { region: "NL" });
 
 console.log(dutch.baseName); // "nl-Latn-NL" と表示
 ```

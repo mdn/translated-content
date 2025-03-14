@@ -1,59 +1,38 @@
 ---
-title: Window.statusbar
+title: "Window: statusbar プロパティ"
+short-title: statusbar
 slug: Web/API/Window/statusbar
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}}
 
-**`Window.statusbar`** プロパティはステータスバーオブジェクトを返します。これにより、ウィンドウ内で表示/非表示を切り替えることができます。
+`statusbar` オブジェクトを返します。
+
+これは `Window` プロパティのうちの論理値を持つ `visible` プロパティの 1 つであり、ウェブブラウザーのユーザーインターフェイスの特定の部分が可視であるかどうかを表すものでした。
+
+プライバシーと相互運用性の理由から、これで `visible` プロパティの値は、この `Window` がポップアップの場合は `false` となり、そうでない場合は `true` となるようになりました。
 
 ## 構文
 
-```js
-objRef = window.statusbar
-```
+単一のプロパティを持つオブジェクトです。
 
-## 例
-
-次の完全な HTML の例は、様々な "bar" オブジェクトの visible プロパティを利用する方法を示しています。既存のウィンドウのあらゆるバーの visible プロパティを書き換えるには、権限が必要です。
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>様々な DOM テスト</title>
-
-<script>
-     // 存在するウィンドウのバーの状態を変更します
-    netscape.security.PrivilegeManager.
-        enablePrivilege("UniversalBrowserWrite");
-    window.statusbar.visible=!window.statusbar.visible;
-  </script>
-</head>
-<body>
-  <p>様々な DOM テスト</p>
-</body>
-</html>
-```
-
-## 注
-
-上記の例のページを読み込むと、ブラウザーは次のようなダイアログを表示します。![](modify_any_open_window_dialog.png)
-
-これらのバーの表示状態を切り替えるには、上記の例のように、スクリプトに署名を入れるか適切な権限を有効にするかしなければなりません。また、様々なツールバーの表示状態を動的に変更すると、ウィンドウの大きさを劇的に変化させ、ページのレイアウトに影響を与える可能性があることに注意してください。
+- `visible` {{ReadOnlyInline}}
+  - : 論理値のプロパティで、 `false` は `Window` がポップアップの場合、 `true` はそれ以外を表します。
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-statusbar', 'Window.statusbar')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-window-statusbar', 'Window.statusbar')}}     | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.statusbar")}}
+{{Compat}}
 
 ## 関連情報
 
-- [window.locationbar](/ja/docs/Web/API/Window/locationbar), [window.menubar](/ja/docs/Web/API/Window/menubar), [window.personalbar](/ja/docs/Web/API/Window/personalbar), [window.scrollbars](/ja/docs/Web/API/Window/scrollbars), [window.toolbar](/ja/docs/Web/API/Window/toolbar)
+- {{domxref("window.locationbar")}}
+- {{domxref("window.menubar")}}
+- {{domxref("window.personalbar")}}
+- {{domxref("window.scrollbars")}}
+- {{domxref("window.toolbar")}}

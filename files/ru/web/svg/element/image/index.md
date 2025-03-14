@@ -1,12 +1,8 @@
 ---
 title: <image>
 slug: Web/SVG/Element/image
-tags:
-  - NeedsUpdate
-  - SVG
-translation_of: Web/SVG/Element/image
-original_slug: Web/SVG/Элемент/image
 ---
+
 {{SVGRef}}
 
 Элемент \<image> позволяет включить растровые изображения в SVG документ.
@@ -17,20 +13,6 @@ original_slug: Web/SVG/Элемент/image
 
 ## Атрибуты
 
-### Глобальные атрибуты
-
-- [Conditional processing attributes](/ru/docs/Web/SVG/Attribute#ConditionalProccessing) »
-- [Core attributes](/ru/docs/Web/SVG/Attribute#Core) »
-- [Graphical event attributes](/ru/docs/Web/SVG/Attribute#GraphicalEvent) »
-- [Xlink attributes](/ru/docs/Web/SVG/Attribute#XLink) »
-- [Presentation attributes](/ru/docs/Web/SVG/Attribute#Presentation) »
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("externalResourcesRequired")}}
-- {{SVGAttr("transform")}}
-
-### Специфичные атрибуты
-
 - {{SVGAttr("x")}}
 - {{SVGAttr("y")}}
 - {{SVGAttr("width")}}
@@ -40,7 +22,7 @@ original_slug: Web/SVG/Элемент/image
 
 ## DOM Interface
 
-This element implements the [`SVGImageElement`](/en-US/docs/Web/API/SVGImageElement) interface.
+This element implements the [`SVGImageElement`](/ru/docs/Web/API/SVGImageElement) interface.
 
 ## Пример
 
@@ -49,9 +31,8 @@ This element implements the [`SVGImageElement`](/en-US/docs/Web/API/SVGImageElem
 ### SVG
 
 ```html
-<svg width="200" height="200"
-  xmlns="http://www.w3.org/2000/svg">
-  <image href="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" height="200" width="200"/>
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <image href="mdn_logo_only_color.png" height="200" width="200" />
 </svg>
 ```
 
@@ -63,6 +44,6 @@ This element implements the [`SVGImageElement`](/en-US/docs/Web/API/SVGImageElem
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

@@ -1,14 +1,14 @@
 ---
 title: Internet
 slug: Glossary/Internet
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-The Internet is a worldwide network of networks that uses the Internet protocol suite (also named {{glossary("TCP")}}/{{glossary("IPv6","IP")}} from its two most important {{glossary("protocol","protocols")}}).
+{{GlossarySidebar}}
 
-인터넷은 인터넷 프로토콜 제품군(두 가지 가장 중요한 프로토콜에서 이름을 딴 {{glossary("TCP")}} // {{glossary("IPv6","IP")}}라고도 함)을 사용하는 세계적인 네트워크이다.
+인터넷은 가장 중요한 두 가지 {{glossary("protocol","프로토콜")}}인 {{glossary("TCP")}}/{{glossary("IPv6","IP")}}라는 인터넷 프로토콜 제품군을 사용하는 전 세계 네트워크입니다.
 
-## 더 알아보기
+## 같이 보기
 
-### 이것에 대해 알아보기
-
-- [How the Internet works](/en-US/Learn/How_the_Internet_works) (introduction for beginners)
+- [인터넷 작동 원리](/ko/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work) (초보자를 위한 소개)

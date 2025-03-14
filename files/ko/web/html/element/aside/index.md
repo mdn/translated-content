@@ -1,23 +1,47 @@
 ---
-title: '<aside>: 별도 구획 요소'
+title: "<aside>: 별도 구획 요소"
 slug: Web/HTML/Element/aside
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - HTML5
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/aside
 ---
 
 {{HTMLSidebar}}
 
 **HTML `<aside>` 요소**는 문서의 주요 내용과 간접적으로만 연관된 부분을 나타냅니다. 주로 사이드바 혹은 콜아웃 박스로 표현합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/aside.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;aside&gt;", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
+```html interactive-example
+<p>
+  Salamanders are a group of amphibians with a lizard-like appearance, including
+  short legs and a tail in both larval and adult forms.
+</p>
+
+<aside>
+  <p>The Rough-skinned Newt defends itself with a deadly neurotoxin.</p>
+</aside>
+
+<p>
+  Several species of salamander inhabit the temperate rainforest of the Pacific
+  Northwest, including the Ensatina, the Northwestern Salamander and the
+  Rough-skinned Newt. Most salamanders are nocturnal, and hunt for insects,
+  worms and other small creatures.
+</p>
+```
+
+```css interactive-example
+aside {
+  width: 40%;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  float: right;
+  box-shadow: inset 5px 0 5px -5px #29627e;
+  font-style: italic;
+  color: #29627e;
+}
+
+aside > p {
+  margin: 0.5rem;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -50,12 +74,12 @@ translation_of: Web/HTML/Element/aside
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/ko/docs/Web/HTML/Content_categories#Flow_content"
           >플로우 콘텐츠</a
         >를 허용하는 모든 요소.<br /><code>&#x3C;aside></code> 요소는
         {{HTMLElement("address")}}의 후손이 될 수 없음에 주의하세요.
@@ -74,9 +98,9 @@ translation_of: Web/HTML/Element/aside
     <tr>
       <th scope="row">가능한 ARIA 요소</th>
       <td>
-        {{ARIARole("feed")}}, {{ariarole("none")}},
-        {{ARIARole("note")}}, {{ARIARole("presentation")}},
-        {{ARIARole("region")}}, {{ARIARole("search")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/feed_role'><code>feed</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/none_role'><code>none</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/note_role'><code>note</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/region_role'><code>region</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/search_role'><code>search</code></a>
       </td>
     </tr>
     <tr>
@@ -102,16 +126,9 @@ translation_of: Web/HTML/Element/aside
 
 ```html
 <article>
-  <p>
-    디즈니 만화영화 <em>인어 공주</em>는
-    1989년 처음 개봉했습니다.
-  </p>
-  <aside>
-    인어 공주는 첫 개봉 당시 8700만불의 흥행을 기록했습니다.
-  </aside>
-  <p>
-    영화에 대한 정보...
-  </p>
+  <p>디즈니 만화영화 <em>인어 공주</em>는 1989년 처음 개봉했습니다.</p>
+  <aside>인어 공주는 첫 개봉 당시 8700만불의 흥행을 기록했습니다.</aside>
+  <p>영화에 대한 정보...</p>
 </article>
 ```
 
@@ -125,7 +142,7 @@ translation_of: Web/HTML/Element/aside
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.aside")}}
+{{Compat}}
 
 ## 같이 보기
 

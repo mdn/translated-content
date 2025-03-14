@@ -1,8 +1,6 @@
 ---
 title: La relation Client-Serveur
 slug: Learn/Server-side/First_steps/Client-Server_overview
-translation_of: Learn/Server-side/First_steps/Client-Server_overview
-original_slug: Learn/Server-side/Premiers_pas/Client-Serveur
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
@@ -64,7 +62,8 @@ Les sites web dynamiques ou statiques (voir sections suivantes) utilisent les m�
 
 Vous faites une simple requête `GET` en cliquant sur un lien ou en faisant une recherche sur un site (sur une page de moteur de recherche par exemple). Une requête HTTP envoyée lorsque vous effectuez une recherche sur MDN pour les termes : "La relation Client-Serveur" ressemblera beaucoup à ce qui suit mais ne sera pas identique car des parties du message dépendent des paramètres de votre navigateur.
 
-> **Note :** Le format des messsages HTTP est défini par un standard web ([RFC7230](http://www.rfc-editor.org/rfc/rfc7230.txt)). Vous n'avez pas besoin de connaître ce niveau de détails mais vous saurez au moins d'où vient tout ça !
+> [!NOTE]
+> Le format des messsages HTTP est défini par un standard web ([RFC7230](https://www.rfc-editor.org/rfc/rfc7230.txt)). Vous n'avez pas besoin de connaître ce niveau de détails mais vous saurez au moins d'où vient tout ça !
 
 #### La requête
 
@@ -94,7 +93,7 @@ Les premières et secondes lignes contiennent la plupart des données déjà év
 - Le site web cible/hôte (developer.mozilla.org).
 - La fin de la première ligne inclut aussi une petite chaîne identifiant la version spécifique du protocole (`HTTP/1.1`).
 
-La dernière ligne contient des données sur les cookies côté client — vous observerez que dans ce cas, le cookie a une id pour gérer la session :    (`Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; ...`).
+La dernière ligne contient des données sur les cookies côté client — vous observerez que dans ce cas, le cookie a une id pour gérer la session : (`Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; ...`).
 
 Les lignes restantes concernent le navigateur utilisé et les sortes de réponses qu'il peut accepter. Par exemple, vous pouvez voir ceci :
 
@@ -116,7 +115,7 @@ La première partie de la réponse à cette requête est détaillée ci-dessous.
 
 À la fin du message nous avons le contenu du corps — lequel contient le "vrai" HTML demandé par la requête.
 
-```html
+```http
 HTTP/1.1 200 OK
 Server: Apache
 X-Backend-Server: developer1.webapp.scl3.mozilla.com
@@ -130,15 +129,27 @@ Allow: GET
 X-Cache-Info: caching
 Content-Length: 41823
 
+```
 
-
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
-<head prefix="og: http://ogp.me/ns#">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
-  ...
+```html
+<!doctype html>
+<html
+  lang="en-US"
+  dir="ltr"
+  class="redesign no-js"
+  data-ffo-opensanslight="false"
+  data-ffo-opensans="false">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <script>
+      (function (d) {
+        d.className = d.className.replace(/\bno-js/, "");
+      })(document.documentElement);
+    </script>
+    ...
+  </head>
+</html>
 ```
 
 Le reste de l'en-tête de la réponse contient des informations sur la réponse elle-même (quand elle a été générée), sur le serveur et comment le navigateur doit gérer la page ( `X-Frame-Options: DENY` cette ligne dit au navigateur de ne pas autoriser cette page a être intégrée dans une {{htmlelement("iframe")}} dans un autre site).
@@ -151,7 +162,7 @@ Un `POST` HTTP est effectué lorsque vous soumettez un formulaire contenant des 
 
 Le texte ci-dessous montre une requête HTTP faite quand un utlisateur soumet un nouveaux profil sur ce site. Le format de la requête est presque le même que celui de la requête `GET` vue précédemment, bien que la première ligne identifie cette requête comme un `POST`.
 
-```html
+```http
 POST https://developer.mozilla.org/en-US/profiles/hamishwillee/edit HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
@@ -177,7 +188,7 @@ La principale différence est que l'URL ne comporte pas de paramètres. Comme vo
 
 La réponse à la requête est expliquée dessous. Le statut "`302 Found`" dit au navigateur que le post a abouti et qu'il peut délivrer une deuxième requête HTTP pour charger la page spécifiée dans le champ `Location`. L'information est donc en cela similaire à une réponse de requête `GET`.
 
-```html
+```http
 HTTP/1.1 302 FOUND
 Server: Apache
 X-Backend-Server: developer3.webapp.scl3.mozilla.com
@@ -193,13 +204,15 @@ X-Cache-Info: not cacheable; request wasn't a GET or HEAD
 Content-Length: 0
 ```
 
-> **Note :** Les requêtes et réponses montrées dans ces exemples ont été capturées avec l'application [Fiddler](https://www.telerik.com/download/fiddler) , mais vous pouvez avoir des informations similaires en utilisant des "renifleurs" web (e.g. [Websniffer](http://websniffer.cc/), [Wireshark](https://www.wireshark.org/)) ou des extensions de navigateur comme [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/). Vous pouvez essayer seul. Utilisez tous les outils recommandés, naviguez sur des sites et éditez des profils de données pour explorer les différentes requêtes et réponses. La plupart des navigateurs modernes ont aussi des outils qui gérent les requêtes réseau, par exemple le [Network Monitor](/fr/docs/Tools/Network_Monitor) dans Firefox).
+> [!NOTE]
+> Les requêtes et réponses montrées dans ces exemples ont été capturées avec l'application [Fiddler](https://www.telerik.com/download/fiddler) , mais vous pouvez avoir des informations similaires en utilisant des "renifleurs" web (e.g. [WebSniffer](https://websniffer.com/), [Wireshark](https://www.wireshark.org/)) ou des extensions de navigateur comme [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/). Vous pouvez essayer seul. Utilisez tous les outils recommandés, naviguez sur des sites et éditez des profils de données pour explorer les différentes requêtes et réponses. La plupart des navigateurs modernes ont aussi des outils qui gérent les requêtes réseau, par exemple le [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) dans Firefox).
 
 ## Les sites statiques
 
 Un site statique renvoie le même contenu codé en dur depuis le serveur quelle que soit la ressource demandée. Si vous avez une page concernant un produit à l'adresse `/static/myproduct1.html`, cette même page sera retournée à chaque utilisateur. Si vous ajoutez un nouveau produit, vous devez ajouter une nouvelle page (par ex : `myproduct2.html`) et ainsi de suite. Cela peut être vraiment inefficace — Comment faire quand vous avez des milliers de pages "produit" à faire ? Vous allez répéter beaucoup de code identique dans chaque page (le modèle de base de la page, sa structure, etc.) et si vous voulez changer quoique ce soit dans la structure de la page — comme une section "produits dérivés" par exemple — alors, il faudra changer chaque page individuellement..
 
-> **Note :** Les sites statiques sont trés efficace quand vous avez un petit nombre de pages et que vous voulez envoyer le même contenu à chaque utilisateur. De toutes façons, ils peuvent avoir un coût certain de maintenance au fur et à mesure de l'augmentation du nombre de pages.
+> [!NOTE]
+> Les sites statiques sont trés efficace quand vous avez un petit nombre de pages et que vous voulez envoyer le même contenu à chaque utilisateur. De toutes façons, ils peuvent avoir un coût certain de maintenance au fur et à mesure de l'augmentation du nombre de pages.
 
 Voyons comment tout cela marche en révisant un diagramme d'architecture de site statique vu dans l'article précédent.
 
@@ -223,25 +236,25 @@ Employer des gabarits HTML facilite la façon de changer la structure HTML parce
 
 Cette section présente une vue d'ensemble du cycle dynamique HTTP de requête/réponse, construit avec ce que nous avons vu précédemment avec de plus amples détails. Toujours dans l'optique de "faire les choses en réel" nous utiliserons le contexte du site d'une équipe de sport où l'entraîneur peut sélectionner le nom de l'équipe et le nombre de joueurs dans un formulaire HTML et avoir en retour une suggestion "Meilleure composition" pour le prochain match.
 
-Le diagramme ci-dessous montre les principaux éléments du site Web "entraîneur d'équipe", ainsi que des étiquettes numérotées pour la séquence des opérations lorsque l'entraîneur accède à la liste "meilleure équipe". Les parties du site qui le rendent dynamique sont l’application Web (c’est ainsi que nous nous référerons au code côté serveur qui traite les requêtes HTTP et renvoie les réponses HTTP), la base de données, qui contient des informations sur les joueurs, les équipes, les entraîneurs et leurs partenaires. relations, et les modèles HTML.
+Le diagramme ci-dessous montre les principaux éléments du site Web "entraîneur d'équipe", ainsi que des étiquettes numérotées pour la séquence des opérations lorsque l'entraîneur accède à la liste "meilleure équipe". Les parties du site qui le rendent dynamique sont l'application Web (c'est ainsi que nous nous référerons au code côté serveur qui traite les requêtes HTTP et renvoie les réponses HTTP), la base de données, qui contient des informations sur les joueurs, les équipes, les entraîneurs et leurs partenaires. relations, et les modèles HTML.
 
 ![This is a diagram of a simple web server with step numbers for each of step of the client-server interaction.](Web%20Application%20with%20HTML%20and%20Steps.png)
 
-Une fois que l’entraîneur a soumis le formulaire avec le nom de l’équipe et le nombre de joueurs, la séquence des opérations est la suivante:
+Une fois que l'entraîneur a soumis le formulaire avec le nom de l'équipe et le nombre de joueurs, la séquence des opérations est la suivante:
 
-1. Le navigateur Web crée une requête HTTP GET au serveur en utilisant l’URL de base de la ressource (/ best) et en codant l’équipe et le numéro du joueur sous forme de paramètres d’URL (par exemple / best? team=my_team_name\&show = 11) ou dans le cadre de l’URL modèle (par exemple / best / my_team_name / 11 /). Une requête GET est utilisée car la requête extrait uniquement des données (sans les modifier).
+1. Le navigateur Web crée une requête HTTP GET au serveur en utilisant l'URL de base de la ressource (/ best) et en codant l'équipe et le numéro du joueur sous forme de paramètres d'URL (par exemple / best? team=my_team_name\&show = 11) ou dans le cadre de l'URL modèle (par exemple / best / my_team_name / 11 /). Une requête GET est utilisée car la requête extrait uniquement des données (sans les modifier).
 2. Le serveur Web détecte que la demande est "dynamique" et la transmet à l'application Web pour traitement (le serveur Web détermine comment gérer différentes URL en fonction des règles de correspondance de modèle définies dans sa configuration).
 3. L'application Web identifie l'objectif de la demande d'obtenir la "meilleure liste d'équipes" en fonction de l'URL (/ best /) et recherche le nom d'équipe requis et le nombre de joueurs à partir de l'URL. L'application Web obtient alors les informations requises de la base de données (en utilisant des paramètres "internes" supplémentaires pour définir quels joueurs sont les "meilleurs", et éventuellement en obtenant également l'identité de l'entraîneur connecté à partir d'un cookie côté client).
 4. L'application Web crée dynamiquement une page HTML en plaçant les données (de la base de données) dans des espaces réservés dans un modèle HTML.
 5. L'application Web renvoie le code HTML généré au navigateur Web (via le serveur Web), ainsi qu'un code d'état HTTP de 200 ("success"). Si quoi que ce soit empêche le code HTML d'être renvoyé, l'application Web renvoie un autre code, par exemple "404" pour indiquer que l'équipe n'existe pas.
-6. Le navigateur Web commence alors à traiter le code HTML renvoyé, en envoyant des demandes distinctes pour obtenir tous les fichiers CSS ou JavaScript qu’il référence (voir étape 7).
+6. Le navigateur Web commence alors à traiter le code HTML renvoyé, en envoyant des demandes distinctes pour obtenir tous les fichiers CSS ou JavaScript qu'il référence (voir étape 7).
 7. Le serveur Web charge les fichiers statiques à partir du système de fichiers et les renvoie directement au navigateur (là encore, le traitement correct des fichiers est basé sur les règles de configuration et la correspondance des types d'URL).
 
 Une opération de mise à jour d'un enregistrement dans la base de données serait gérée de la même manière, sauf que, comme toute mise à jour de base de données, la demande HTTP du navigateur devrait être codée en tant que demande POST.
 
 ### Que faire d'autre?
 
-Le travail d'une application Web consiste à recevoir des requêtes HTTP et à renvoyer des réponses HTTP. Bien que l'interaction avec une base de données pour obtenir ou mettre à jour des informations soit une tâche très courante, le code peut faire d'autres choses en même temps, ou ne pas interagir du tout avec une base de données.Un bon exemple de tâche supplémentaire qu'une application Web pourrait exécuter serait l'envoi d'un courrier électronique aux utilisateurs pour confirmer leur inscription sur le site. Le site peut également effectuer une journalisation ou d’autres opérations.
+Le travail d'une application Web consiste à recevoir des requêtes HTTP et à renvoyer des réponses HTTP. Bien que l'interaction avec une base de données pour obtenir ou mettre à jour des informations soit une tâche très courante, le code peut faire d'autres choses en même temps, ou ne pas interagir du tout avec une base de données.Un bon exemple de tâche supplémentaire qu'une application Web pourrait exécuter serait l'envoi d'un courrier électronique aux utilisateurs pour confirmer leur inscription sur le site. Le site peut également effectuer une journalisation ou d'autres opérations.
 
 ### Renvoyer autre chose que du HTML
 
@@ -249,7 +262,7 @@ Le code de site Web côté serveur ne doit pas nécessairement renvoyer des extr
 
 ## Les frameworks Web simplifient la programmation Web côté serveur
 
-Les infrastructures Web côté serveur facilitent beaucoup la rédaction de code permettant de gérer les opérations décrites ci-dessus.L’une des opérations les plus importantes qu’ils effectuent consiste à fournir des mécanismes simples pour mapper les URL de différentes ressources / pages à des fonctions de gestionnaire spécifiques. Cela facilite la séparation du code associé à chaque type de ressource. Cela présente également des avantages en termes de maintenance, car vous pouvez modifier l'URL utilisée pour fournir une fonctionnalité particulière à un endroit, sans avoir à changer la fonction de gestionnaire.Par exemple, considérons le code Django (Python) suivant qui mappe deux modèles d'URL à deux fonctions d'affichage. Le premier modèle garantit qu'une requête HTTP avec une URL de ressource / best sera transmise à une fonction nommée index () dans le module views. Une demande qui a pour motif "/ best / junior" sera plutôt transmise à la fonction d'affichage junior ().
+Les infrastructures Web côté serveur facilitent beaucoup la rédaction de code permettant de gérer les opérations décrites ci-dessus.L'une des opérations les plus importantes qu'ils effectuent consiste à fournir des mécanismes simples pour mapper les URL de différentes ressources / pages à des fonctions de gestionnaire spécifiques. Cela facilite la séparation du code associé à chaque type de ressource. Cela présente également des avantages en termes de maintenance, car vous pouvez modifier l'URL utilisée pour fournir une fonctionnalité particulière à un endroit, sans avoir à changer la fonction de gestionnaire.Par exemple, considérons le code Django (Python) suivant qui mappe deux modèles d'URL à deux fonctions d'affichage. Le premier modèle garantit qu'une requête HTTP avec une URL de ressource / best sera transmise à une fonction nommée index () dans le module views. Une demande qui a pour motif "/ best / junior" sera plutôt transmise à la fonction d'affichage junior ().
 
 ```python
 # file: best/urls.py
@@ -267,9 +280,10 @@ urlpatterns = [
 ]
 ```
 
-> **Note :** Les premiers paramètres des fonctions url () peuvent paraître un peu bizarres (par exemple, r '^ junior / $') car ils utilisent une technique de correspondance de modèle appelée "expressions régulières" (RegEx ou RE). Vous n'avez pas besoin de savoir comment fonctionnent les expressions régulières à ce stade, car elles nous permettent également de faire correspondre les modèles de l'URL (plutôt que les valeurs codées en dur ci-dessus) et de les utiliser comme paramètres dans nos fonctions d'affichage. À titre d'exemple, un RegEx très simple pourrait dire "faire correspondre une seule lettre majuscule, suivie de 4 à 7 lettres minuscules".
+> [!NOTE]
+> Les premiers paramètres des fonctions url () peuvent paraître un peu bizarres (par exemple, r '^ junior / $') car ils utilisent une technique de correspondance de modèle appelée "expressions régulières" (RegEx ou RE). Vous n'avez pas besoin de savoir comment fonctionnent les expressions régulières à ce stade, car elles nous permettent également de faire correspondre les modèles de l'URL (plutôt que les valeurs codées en dur ci-dessus) et de les utiliser comme paramètres dans nos fonctions d'affichage. À titre d'exemple, un RegEx très simple pourrait dire "faire correspondre une seule lettre majuscule, suivie de 4 à 7 lettres minuscules".
 
-L'infrastructure Web permet également à une fonction d'affichage d'extraire facilement des informations de la base de données. La structure de nos données est définie dans des modèles, qui sont des classes Python qui définissent les champs à stocker dans la base de données sous-jacente. Si nous avons un modèle nommé Team avec un champ "team_type", nous pouvons utiliser une syntaxe de requête simple pour récupérer toutes les équipes ayant un type particulier.L’exemple ci-dessous donne la liste de toutes les équipes ayant le type d’équipe exact (sensible à la casse) de "junior" - notez le format: nom du champ (team_type) suivi du double underscore, puis du type de match à utiliser (ici nous utilisons: exact). ). Il existe de nombreux autres types de match et nous pouvons les enchaîner. Nous pouvons également contrôler l'ordre et le nombre de résultats retournés.
+L'infrastructure Web permet également à une fonction d'affichage d'extraire facilement des informations de la base de données. La structure de nos données est définie dans des modèles, qui sont des classes Python qui définissent les champs à stocker dans la base de données sous-jacente. Si nous avons un modèle nommé Team avec un champ "team_type", nous pouvons utiliser une syntaxe de requête simple pour récupérer toutes les équipes ayant un type particulier.L'exemple ci-dessous donne la liste de toutes les équipes ayant le type d'équipe exact (sensible à la casse) de "junior" - notez le format: nom du champ (team_type) suivi du double underscore, puis du type de match à utiliser (ici nous utilisons: exact). ). Il existe de nombreux autres types de match et nous pouvons les enchaîner. Nous pouvons également contrôler l'ordre et le nombre de résultats retournés.
 
 ```python
 #best/views.py
@@ -294,10 +308,3 @@ Une fois que la fonction junior () a obtenu la liste des équipes juniors, elle 
 Dans un module suivant, nous vous aiderons à choisir le meilleur framework Web pour votre premier site.
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
-
-## In this module
-
-- [Introduction to the server side](/fr/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/fr/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/fr/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/fr/docs/Learn/Server-side/First_steps/Website_security)

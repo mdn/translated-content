@@ -1,13 +1,11 @@
 ---
 title: Dessin de texte avec canvas
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
-translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
-original_slug: Web/API/Canvas_API/Tutoriel_canvas/Dessin_de_texte_avec_canvas
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Tutoriel_canvas/Ajout_de_styles_et_de_couleurs", "Tutoriel_canvas/Utilisation_d'images")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Ajout_de_styles_et_de_couleurs", "Tutoriel_canvas/Utilisation_d'images")}}
 
-Après avoir vu comment [appliquer les styles et les couleurs](/fr/docs/Tutoriel_canvas/Ajout_de_styles_et_de_couleurs) dans le chapitre précédent, nous allons maintenant voir comment dessiner du texte sur canvas.
+Après avoir vu comment [appliquer les styles et les couleurs](/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) dans le chapitre précédent, nous allons maintenant voir comment dessiner du texte sur canvas.
 
 ## Dessin de texte
 
@@ -24,9 +22,9 @@ Le texte est rempli en utilisant le `fillStyle` actuel.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.font = '48px serif';
-  ctx.fillText('Hello world', 10, 50);
+  var ctx = document.getElementById("canvas").getContext("2d");
+  ctx.font = "48px serif";
+  ctx.fillText("Hello world", 10, 50);
 }
 ```
 
@@ -46,9 +44,9 @@ Le texte est rempli en utilisant le `strokeStyle` courant.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.font = '48px serif';
-  ctx.strokeText('Hello world', 10, 50);
+  var ctx = document.getElementById("canvas").getContext("2d");
+  ctx.font = "48px serif";
+  ctx.strokeText("Hello world", 10, 50);
 }
 ```
 
@@ -77,7 +75,7 @@ Dans les exemples ci-dessus, nous utilisons déjà la propriété de police pour
 
 Ces propriétés peuvent vous être familières si vous avez déjà travaillé avec CSS.
 
-Le diagramme suivant du [WHATWG](http://www.whatwg.org/) illustre les différentes lignes de base prises en charge par la propriété `textBaseline.`
+Le diagramme suivant du [WHATWG](https://www.whatwg.org/) illustre les différentes lignes de base prises en charge par la propriété `textBaseline.`
 
 ![The top of the em square is
 roughly at the top of the glyphs in a font, the hanging baseline is
@@ -95,9 +93,9 @@ baselines, due to glyphs extending far outside the em square.](http://www.whatwg
 Modifiez le code ci-dessous et visualisez vos mises à jour en direct dans le canevas :
 
 ```js
-ctx.font = '48px serif';
-ctx.textBaseline = 'hanging';
-ctx.strokeText('Hello world', 0, 100);
+ctx.font = "48px serif";
+ctx.textBaseline = "hanging";
+ctx.strokeText("Hello world", 0, 100);
 ```
 
 #### Code jouable
@@ -111,15 +109,16 @@ ctx.strokeText('Hello world', 0, 100);
 <textarea id="code" class="playable-code">
 ctx.font = "48px serif";
 ctx.textBaseline = "hanging";
-ctx.strokeText("Hello world", 0, 100);</textarea>
+ctx.strokeText("Hello world", 0, 100);</textarea
+>
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
 var code = textarea.value;
 
 function drawCanvas() {
@@ -127,17 +126,17 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', drawCanvas);
-window.addEventListener('load', drawCanvas);
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);
 ```
 
 {{ EmbedLiveSample('Code_jouable', 700, 360) }}
@@ -153,8 +152,8 @@ L'extrait de code suivant montre comment vous pouvez mesurer un texte et obtenir
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var text = ctx.measureText('foo'); // objet TextMetrics
+  var ctx = document.getElementById("canvas").getContext("2d");
+  var text = ctx.measureText("foo"); // objet TextMetrics
   text.width; // 16;
 }
 ```

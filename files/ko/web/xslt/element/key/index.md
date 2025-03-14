@@ -1,12 +1,9 @@
 ---
 title: key
 slug: Web/XSLT/Element/key
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/key
-original_slug: Web/XSLT/key
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:key>` 요소는 `key( )` 함수가 있는 스타일시트 어디서나 쓸 수 있는 이름 붙은 키를 선언합니다.
 
@@ -36,7 +33,7 @@ original_slug: Web/XSLT/key
 
 ### 정의
 
-[XSLT section 12.2, Keys](http://www.w3.org/TR/xslt#key)
+[XSLT section 12.2, Keys](https://www.w3.org/TR/xslt#key)
 
 ### Gecko 지원
 

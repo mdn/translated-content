@@ -1,11 +1,13 @@
 ---
 title: グリッドレイアウトの基本概念
-slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
+l10n:
+  sourceCommit: 21ed195dd72d2f11c0c7e0fdd0ed0aaf31068de1
 ---
 
 {{CSSRef}}
 
-[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)は、二次元グリッドシステムを CSS にもたらします。グリッドは、主要なページ領域や小さなユーザーインターフェイス要素のレイアウトに利用できます。この記事では、 CSS グリッドレイアウトと、 CSS Grid Layout Level 1 仕様の一部の用語について紹介します。この記事では、その概要を紹介し、この一連のガイドの残りで詳細を説明します。
+[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)は、二次元グリッドシステムを CSS にもたらします。グリッドは、主要なページ領域や小さなユーザーインターフェイス要素のレイアウトに利用できます。この記事では、 CSS グリッドレイアウトと、 CSS Grid Layout Level 1 仕様の一部の用語について紹介します。この記事では、その概要を紹介し、この一連のガイドの残りで詳細を説明します。
 
 ## グリッドとは何か？
 
@@ -13,27 +15,27 @@ slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 ### 固定のトラックサイズと可変のトラックサイズ
 
-例えばピクセル単位を使って、固定トラックサイズのグリッドを作成することができます。これであるグリッドに好きなレイアウトに合うようなピクセルを設定できます。また、可変サイズのグリッドを作成するためにパーセントやこの目的で新たに制定された `fr` 単位を使用することができます。
+例えばピクセル単位を使って、固定トラックサイズのグリッドを作成することができます。これであるグリッドに好きなレイアウトに合うようなピクセルを設定できます。また、可変サイズのグリッドを作成するために、パーセントやこの目的で制定された `fr` 単位を使用することができます。
 
 ### アイテムの配置
 
 グリッドの線番号や名前を使って、グリッドのある位置を指定してアイテムを配置することができます。グリッドには、位置が明示されていないアイテムの配置を制御するアルゴリズムも含まれています。
 
-### 内容物を保持するための追加のトラックの作成
+### 内容物を保持するための追加トラックの作成
 
-グリッドレイアウトでは、明確にグリッドを定義することができます。グリッドレイアウトの仕様では、必要に応じて柔軟に行や列を追加できるようになっています。「コンテナーに収まるだけ多い数の列」を追加するような機能もあります。
+グリッドレイアウトでは、明確にグリッドを定義することができます。グリッドレイアウトの仕様では、必要に応じて柔軟に行や列を追加できるようになっています。「コンテナーに収まるだけ多く数の列」を追加するような機能もあります。
 
 ### 配置の制御
 
 グリッドには配置機能が含まれており、あるグリッド領域内でアイテムがどのように配置されるのか、グリッド全体がどのように配置されるかを制御できます。
 
-### 重複内容物の制御
+### 重複する内容物の制御
 
-グリッドセルやグリッド領域内には複数のアイテムも配置でき、それらはお互いに部分的に重複できます。この階層化は、 {{cssxref("z-index")}} プロパティで制御できます。
+グリッドセルやグリッド領域内には複数のアイテムも配置でき、それらはお互いに部分的に重複できます。この階層は、 {{cssxref("z-index")}} プロパティで制御できます。
 
-グリッドは強力な仕様であり、[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)など CSS の他の部品と組み合わせると、以前は CSS での構築が不可能であったレイアウトを作成することができます。これはすべて、**グリッドコンテナー**にグリッドを作成することから始まります。
+グリッドは強力な仕様であり、[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)など CSS の他の部品と組み合わせると、以前は CSS での構築が不可能であったレイアウトを作成することができます。これはすべて、**グリッドコンテナー**にグリッドを作成することから始まります。
 
-<h2 id="The_Grid_container">グリッドコンテナー</h2>
+## グリッドコンテナー
 
 *グリッドコンテナー*を作成するには、要素に対して `display: grid` か `display: inline-grid` を指定します。グリッドコンテナーを作成すると、*直接の*子要素がすべて*グリッドアイテム*へと変わります。
 
@@ -58,7 +60,9 @@ slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -77,9 +81,9 @@ slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 {{ EmbedLiveSample('The_Grid_container', '200', '330') }}
 
-すべての直接の子要素がグリッド要素になりました。それらの要素をグリッドにする前とウェブブラウザー上での見た目に変化は無いでしょう。グリッドには単一列のグリッドが作成されただけだからです。この時点で、 Firefox の開発者ツールの一つである[グリッドインスペクター](/ja/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)機能が便利であることを確認できます。上記の例を Firefox で表示してグリッドを調査すると、`grid` 値の隣に小さなアイコンが表示されているでしょう。これをクリックすると、その要素上のグリッドがブラウザーウィンドウ内にオーバーレイ表示されます。
+すべての直接の子要素がグリッド要素になりました。それらの要素をグリッドにする前とウェブブラウザー上での見た目に変化は無いでしょう。グリッドには単一列のグリッドが作成されただけだからです。この時点で、 Firefox の開発者ツールの一つである[グリッドインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)機能が便利であることを確認できます。上記の例を Firefox で表示してグリッドを調査すると、`grid` 値の隣に小さなアイコンが表示されているでしょう。これをクリックすると、その要素上のグリッドがブラウザーウィンドウ内にオーバーレイ表示されます。
 
-![Using the Grid Highlighter in DevTools to view a grid](1-grid-inspector.png)
+![開発ツールのグリッドハイライターを使用したグリッドの表示](1-grid-inspector.png)
 
 CSS グリッドレイアウトについて学び、使っていく中で、このツールは、グリッドに何が起こっているかを視覚的に理解する助けになるでしょう。
 
@@ -87,11 +91,13 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 
 ## グリッドトラック
 
-ここでは、{{cssxref("grid-template-columns")}} および {{cssxref("grid-template-rows")}} プロパティを使用してグリッド上に行と列を定義します。これらはグリッドトラックを定義します。*グリッドトラック*は、グリッド上の任意の 2 本の線の間にある空間です。下の画像で、グリッド内の最初の行トラックが強調表示されているのが確認できるでしょう。
+ここでは、{{cssxref("grid-template-rows")}} および {{cssxref("grid-template-columns")}} プロパティを使用してグリッド上に行と列を定義します。これらはグリッドトラックを定義します。*グリッドトラック*は、グリッド上の任意の 2 本の線の間にある空間です。下の画像で、グリッド内の最初の行トラックが強調表示されているのが確認できるでしょう。
 
-![](1_grid_track.png)
+![3 つのグリッドアイテムがあるボックス。 3 つのアイテムの上には、トラックである薄緑色の領域があります。](1_grid_track.png)
 
-<h3 id="Basic_example">基本的な例</h3>
+グリッドトラックは `grid-template-columns` プロパティと `grid-template-rows` プロパティ、または省略形の `grid` プロパティと `grid-template` プロパティで定義します。トラックは、明示的グリッドで作成されたトラックの外側にグリッドアイテムを配置することで、暗黙的グリッドでも作成されます。
+
+### 基本的な例
 
 先述の例に対して `grid-template-columns` プロパティを追加すると、列トラックのサイズが定義できます。
 
@@ -115,7 +121,9 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -134,7 +142,7 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 
 {{ EmbedLiveSample('Basic_example', '610', '140') }}
 
-<h3 id="The_fr_Unit">単位 fr</h3>
+### 単位 fr
 
 トラックは、どの長さの単位でも定義できます。グリッドには、柔軟なグリッドトラックを作成できるようにするため、追加の長さの単位が導入されています。新しい単位 `fr` は、グリッドコンテナー内の利用可能な空間の比を表します。次のグリッド定義は、利用可能なスペースに応じて伸縮する、幅が 3 等分されたトラックを作成します。
 
@@ -156,7 +164,9 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -175,7 +185,7 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 
 {{ EmbedLiveSample('The_fr_unit', '220', '140') }}
 
-<h3 id="Unequal_sizes">等しくない大きさ</h3>
+### 等しくない大きさ
 
 この次の例では、1 つの `2fr` のトラックと 2 つの `1fr` のトラックの定義を作成します。利用可能な空間は、4 つに分割されます。そのうち 2 つが最初のトラックに与えられ、残りはそれぞれ次の 2 つのトラックに与えられます。
 
@@ -197,7 +207,9 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -216,7 +228,7 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 
 {{ EmbedLiveSample('Unequal_sizes', '220', '140') }}
 
-<h3 id="Mixing_flexible_and_absolute_sizes">変動する大きさと絶対的な大きさの混合</h3>
+### 変動する大きさと絶対的な大きさの混合
 
 最後の例では、絶対サイズのトラックを `fr` 単位と混ぜて使用します。最初のトラックは 500px なので、この固定幅は利用可能な空間から除外されます。残りの領域は 3 つに分割され、比率に応じて 2 つの変動幅のトラックに割り当てられます。
 
@@ -238,7 +250,9 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -257,7 +271,7 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 
 {{ EmbedLiveSample('Mixing_flexible_and_absolute_sizes', '220', '140') }}
 
-<h3 id="Track_listings_with_repeat_notation">repeat() 記法によるトラック列挙</h3>
+### repeat() 記法によるトラック列挙
 
 多くのトラックを持つ大きなグリッドのため、`repeat()` 記法を使用して、トラック列挙のすべてまたは一部を繰り返すことができます。例えば、以下のグリッド定義を参照してください。
 
@@ -295,7 +309,7 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 }
 ```
 
-<h3 id="The_implicit_and_explicit_grid">暗黙的と明示的なグリッド</h3>
+### 暗黙的および明示的なグリッド
 
 上でグリッドの例を作成した時、列トラックを {{cssxref("grid-template-columns")}} プロパティで具体的に定義しましたが、グリッドは勝手に行も作っていました。これらの行は暗黙的のグリッドの一部です。一方、明示的なグリッドは、{{cssxref("grid-template-columns")}} または {{cssxref("grid-template-rows")}} で定義された行と列から構成されます。
 
@@ -324,7 +338,9 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -343,11 +359,11 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 
 {{ EmbedLiveSample('The_implicit_and_explicit_grid', '230', '450') }}
 
-<h3 id="Track_sizing_and_minmax">トラックのサイズ指定と minmax()</h3>
+### トラックのサイズ指定と minmax()
 
 明示的なグリッドのセットアップ時または自動生成された行や列のサイズを定義する時、最小サイズのトラックを与えておき、追加された内容物に合わせて広げられるようにしたいでしょう。例えば、行を 100 ピクセルより小さくしたくないが、内容物の高さが 300 ピクセルに引き伸ばされた場合は行の高さをそのサイズに引き伸ばしたい場合です。
 
-グリッドでは、それを {{cssxref("minmax()")}} 関数で解決できます。この次の例では、{{cssxref("grid-auto-rows")}} の値に `minmax()` を使用しています。自動生成された行の高さの最小値は 100 ピクセル、最大値は `auto` になります。値に `auto` を使うと、この行のセルが内容物のサイズに応じて空間が引き伸ばされ、その高さに合わせられます。
+グリッドでは、それを {{cssxref("minmax", "minmax()")}} 関数で解決できます。この次の例では、{{cssxref("grid-auto-rows")}} の値に `minmax()` を使用しています。自動生成された行の高さの最小値は 100 ピクセル、最大値は `auto` になります。値に `auto` を使うと、この行のセルが内容物のサイズに応じて空間が引き伸ばされ、その高さに合わせられます。
 
 ```css
 .wrapper {
@@ -358,7 +374,9 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -378,9 +396,11 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 ```html
 <div class="wrapper">
   <div>One</div>
-  <div>Two
-    より多くの内容物があります。
-    <p>これによって、高さが 100 ピクセルよりも高くになります。</div>
+  <div>
+    Two
+    <p>より多くのコンテンツがあります。</p>
+    <p>これによって、高さが 100 ピクセルよりも高くなります。</p>
+  </div>
   <div>Three</div>
   <div>Four</div>
   <div>Five</div>
@@ -397,7 +417,7 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 
 グリッド線の番号は、文書の書字方向に従って付けられます。左書き (left-to-right) の言語では、線 1 はグリッドの左手側にあり、右書き (right-to-left) の言語では、グリッドの右手側にあります。グリッド線には名前を付けることもできます。この方法については後のガイドで解説します。
 
-<h3 id="Positioning_items_against_lines">グリッド線に対するアイテムの配置</h3>
+### グリッド線に対するアイテムの配置
 
 グリッド線を基にした配置の詳細は、後の記事で解説します。次の例は、その簡単な方法のデモンストレーションです。アイテムを配置するとき、私たちはトラックではなくグリッド線を対象にします。
 
@@ -437,7 +457,9 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -456,7 +478,8 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 
 {{ EmbedLiveSample('Positioning_items_against_lines', '230', '450') }}
 
-Firefox の開発者ツールで[グリッドインスペクター](/ja/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)が使えることを忘れないでください。アイテムがグリッド線に対してどのように配置されるか知ることができます。
+> [!NOTE]
+> Firefox の開発者ツールで[グリッドインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)が使えることを忘れないでください。アイテムがグリッド線に対してどのように配置されるか知ることができます。
 
 ### 線による配置の一括指定
 
@@ -482,21 +505,21 @@ Firefox の開発者ツールで[グリッドインスペクター](/ja/docs/Too
 }
 ```
 
-<h2 id="Grid_cells">グリッドセル</h2>
+## グリッドセル
 
-*グリッドセル* は、グリッド上の最も小さな単位です。コンセプトとしては、表のセルのようなものです。先述の例で、親要素のグリッドが定義されると、子アイテムが定義されたグリッドの各セルにレイアウトされる様を見てきました。下の画像では、グリッドの最初のセルをハイライトしています。
+_グリッドセル_ は、グリッド上の最も小さな単位です。コンセプトとしては、表のセルのようなものです。先述の例で、親要素のグリッドが定義されると、子アイテムが定義されたグリッドの各セルにレイアウトされる様を見てきました。下の画像では、グリッドの最初のセルをハイライトしています。
 
 ![グリッドの最初のセルをハイライト表示](1_grid_cell.png)
 
-<h2 id="Grid_areas">グリッド領域</h2>
+## グリッド領域
 
-アイテムは、行と列の複数のセルにまたがって配置でき、*グリッド領域* を作ることができます。グリッド領域は四角形でなければなりません。例えば L 字型の領域は作れません。ハイライトされた領域は、2 行と 2 列にまたがるトラックです。
+アイテムは、行と列の複数のセルにまたがって配置でき、_グリッド領域_ を作ることができます。グリッド領域は四角形でなければなりません。例えば L 字型の領域は作れません。ハイライトされた領域は、2 行と 2 列にまたがるトラックです。
 
 ![グリッド領域](1_grid_area.png)
 
-<h2 id="Gutters" name="Gutters">セル間隔</h2>
+## 溝
 
-グリッドセル間の *溝* (Gutters) または *路地* (alleys) は、 {{cssxref("column-gap")}} および {{cssxref("row-gap")}} プロパティを使用するか、一括指定の {{cssxref("gap")}} で作成できます。下の例では、列間 10 ピクセル、行間 `1em` の溝を作っています。
+グリッドセル間の _溝_ (Gutters) または _路地_ (alleys) は、 {{cssxref("column-gap")}} および {{cssxref("row-gap")}} プロパティを使用するか、一括指定の {{cssxref("gap")}} で作成できます。下の例では、列間 10 ピクセル、行間 `1em` の隙間を作っています。
 
 ```css
 .wrapper {
@@ -507,9 +530,10 @@ Firefox の開発者ツールで[グリッドインスペクター](/ja/docs/Too
 }
 ```
 
-> **メモ:** グリッドが最初にブラウザーに実装されたとき、 {{cssxref("column-gap")}}, {{cssxref("row-gap")}}, {{cssxref("gap")}} に `grid-` の接頭辞がつき、それぞれ `grid-column-gap`, `grid-row-gap`, `grid-gap` のようになっていました。
+> [!NOTE]
+> グリッドが最初にブラウザーに実装されたとき、 {{cssxref("column-gap")}}, {{cssxref("row-gap")}}, {{cssxref("gap")}} に `grid-` の接頭辞がつき、それぞれ `grid-column-gap`, `grid-row-gap`, `grid-gap` のようになっていました。
 >
-> ブラウザーは接頭辞を外すよう更新されつつありますが、接頭辞付きの版も安全に利用できるよう保守されるでしょう。
+> ブラウザーはすべて接頭辞なしの値に対応しましたが、接頭辞付きの版も安全に利用できるよう保守されるでしょう。
 
 ```html
 <div class="wrapper">
@@ -522,7 +546,9 @@ Firefox の開発者ツールで[グリッドインスペクター](/ja/docs/Too
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   column-gap: 10px;
@@ -568,24 +594,27 @@ Firefox の開発者ツールで[グリッドインスペクター](/ja/docs/Too
 
 ```html hidden
 <div class="wrapper">
-    <div class="box box1">
-      <div class="nested">a</div>
-      <div class="nested">b</div>
-      <div class="nested">c</div>
-    </div>
-    <div class="box box2">Two</div>
-    <div class="box box3">Three</div>
-    <div class="box box4">Four</div>
-    <div class="box box5">Five</div>
+  <div class="box box1">
+    <div class="nested">a</div>
+    <div class="nested">b</div>
+    <div class="nested">c</div>
   </div>
+  <div class="box box2">Two</div>
+  <div class="box box3">Three</div>
+  <div class="box box4">Four</div>
+  <div class="box box5">Five</div>
+</div>
 ```
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
   border-radius: 5px;
+  gap: 3px;
   background-color: #fff4e6;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -617,11 +646,9 @@ Firefox の開発者ツールで[グリッドインスペクター](/ja/docs/Too
 
 ### サブグリッド
 
-Level 2 のグリッド仕様書の草稿では、サブグリッド (subgrid) と呼ばれる機能があり、親グリッドのトラック定義を利用した入れ子状のグリッドを作成できます。
+通常のグリッドに加えて、サブグリッドでは、親グリッドのトラック定義を使用するネストされたグリッドを作成することができます。
 
-> **メモ:** この機能は Firefox 71 で初めて搭載され、これがサブグリッドを実装している唯一のブラウザーです。
-
-現在の仕様書では、入れ子上のグリッドの例を編集して、 `grid-template-columns: repeat(3, 1fr)` のトラック定義を `grid-template-columns: subgrid` へ変更します。入れ子状のグリッドは親グリッドのトラックを利用してアイテムをレイアウトします。
+使用するには、入れ子上のグリッドの例を編集して、 `grid-template-columns: repeat(3, 1fr)` のトラック定義を `grid-template-columns: subgrid` へ変更しましょう。入れ子状のグリッドは親グリッドのトラックを利用してアイテムをレイアウトします。
 
 ```css
 .box1 {
@@ -634,11 +661,11 @@ Level 2 のグリッド仕様書の草稿では、サブグリッド (subgrid) �
 }
 ```
 
-## `z-index` による項目のレイヤー化
+## z-index によるアイテムのレイヤー化
 
 グリッドアイテムは、同じセルを占有することがあり、この場合は {{cssxref("z-index")}} を使用してアイテムの重ね合わせの順序を制御することができます。
 
-<h3 id="">z-index のない重ね合わせ</h3>
+### z-index のない重ね合わせ
 
 先ほどの行番号順にアイテムを配置する例に戻ると、これを変更して 2 つのアイテムを重ねることができます。
 
@@ -674,7 +701,9 @@ Level 2 のグリッド仕様書の草稿では、サブグリッド (subgrid) �
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -695,7 +724,7 @@ Level 2 のグリッド仕様書の草稿では、サブグリッド (subgrid) �
 
 アイテム `box2` が `box1` に重なり、ソースコードに書かれた順に、後のものが先のものの上に表示されます。
 
-<h3 id="Controlling_the_order">順序の制御</h3>
+### 順序の制御
 
 アイテムを上に積む順序は、配置が指定されたアイテムと同様に、`z-index` プロパティを使用して制御できます。`box2` の `z-index` を `box1` より小さくすると、`box1` の奥に表示されるようになります。
 
@@ -733,7 +762,9 @@ Level 2 のグリッド仕様書の草稿では、サブグリッド (subgrid) �
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -752,6 +783,6 @@ Level 2 のグリッド仕様書の草稿では、サブグリッド (subgrid) �
 
 {{ EmbedLiveSample('Controlling_the_order', '230', '460') }}
 
-## 次のステップへ
+## 次のステップ
 
-この記事では、グリッドレイアウト仕様の要点だけを見てきました。コードの例を試してみてから、[次のパートでは CSS グリッドレイアウトの詳細](/ja/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)に進みます。
+この記事では、グリッドレイアウト仕様の要点だけを見てきました。コード例を試してみてから、[このガイドの次の部分](/ja/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)に進みましょう。ここで本当に CSS グリッドレイアウトの詳細を掘り下げ始めます。

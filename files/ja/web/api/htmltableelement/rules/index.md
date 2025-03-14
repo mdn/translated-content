@@ -1,22 +1,18 @@
 ---
-title: HTMLTableElement.rules
+title: "HTMLTableElement: rules プロパティ"
+short-title: rules
 slug: Web/API/HTMLTableElement/rules
+l10n:
+  sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 **`HTMLTableElement.rules`** プロパティは、表の中でセルのどの境界を描画するかを示します。
 
-## 構文
+## 値
 
-```js
-HTMLTableElement.rules = rules;
-var rules = HTMLTableElement.rules;
-```
-
-### 引数
-
-`rules` は文字列で、以下の値のうちの一つを取ります。
+以下のいずれかです。
 
 - `none`
   - : 境界なし
@@ -33,13 +29,13 @@ var rules = HTMLTableElement.rules;
 
 ```js
 // テーブルの内部の境界をすべてオンにする
-var t = document.getElementById("TableID");
+const t = document.getElementById("TableID");
 t.rules = "all";
 ```
 
 ## 仕様書
 
-- W3C DOM 2 HTML Specification
+{{Specifications}}
 
 ## ブラウザーの互換性
 

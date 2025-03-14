@@ -1,15 +1,6 @@
 ---
 title: DOMRect()
 slug: Web/API/DOMRect/DOMRect
-tags:
-  - API
-  - Constructor
-  - DOM Reference
-  - DOMRect
-  - Geometry
-  - Reference
-browser-compat: api.DOMRect.DOMRect
-translation_of: Web/API/DOMRect/DOMRect
 ---
 
 {{APIRef("Geometry Interfaces")}}

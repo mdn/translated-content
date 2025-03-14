@@ -1,14 +1,13 @@
 ---
 title: SVGAElement
 slug: Web/API/SVGAElement
-translation_of: Web/API/SVGAElement
 ---
 
 {{APIRef("SVG")}}
 
 {{SeeCompatTable}}
 
-Интерфейс **`SVGAElement`**` предоставляет доступ к свойствам `{{ SVGElement("a") }} элемента а также к методам манипулирования ими.
+Интерфейс **`SVGAElement`**`предоставляет доступ к свойствам`{{ SVGElement("a") }} элемента а также к методам манипулирования ими.
 
 Интерфейс наследует следующие интерфейсы: {{ domxref("SVGElement") }}, {{ domxref("SVGURIReference") }}, {{ domxref("SVGTests") }}, {{ domxref("SVGLangSpace") }}, {{ domxref("SVGExternalResourcesRequired") }}, {{ domxref("SVGStylable") }}, {{ domxref("SVGTransformable") }}.
 
@@ -47,27 +46,22 @@ _Этот интерфейс не имеет методов, но наследу
 В примере ниже, атрибуту {{SVGAttr("target")}} элемента {{SVGElement('a')}} присвоено значение _\_blank_ и при клике по ссылке, при соблюдении условий, выведется сообщение в модальном окне.
 
 ```js
-var linkRef = document.querySelector('a');
-linkRef.target ='_self';
+var linkRef = document.querySelector("a");
+linkRef.target = "_self";
 
-linkRef.onclick = function(){
-    if (linkRef.target == '_blank') {
-        alert("BLANK !");
-        linkRef.target = '_self';
-    }
-    else
-        alert("SORRY! not _blank");
-}
+linkRef.onclick = function () {
+  if (linkRef.target == "_blank") {
+    alert("BLANK !");
+    linkRef.target = "_self";
+  } else alert("SORRY! not _blank");
+};
 ```
 
-## Характеристики
+## Спецификации
 
-| Спецификация                                                                     | Статус                   | Коммент                                                                                                                                                                                                                                                                                                                                                                                                       |
-| -------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("SVG2", "linking.html#InterfaceSVGAElement")}}     | {{Spec2("SVG2")}} | Заменено наследование от {{domxref("SVGElement")}} {{domxref("SVGGraphicsElement")}} и удалены реализации интерфейса {{domxref("SVGTests")}}, {{domxref("SVGLangSpace")}}, {{domxref("SVGExternalResourcesRequired")}}, {{domxref("SVGStylable")}} и {{domxref("SVGTransformable")}} {{domxref ("HTMLHyperlinkElementUI")}} |
-| {{SpecName('SVG1.1', 'linking.html#InterfaceSVGAElement')}} | {{Spec2('SVG1.1')}} | Начальное определение                                                                                                                                                                                                                                                                                                                                                                                         |
+{{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -22,7 +22,7 @@ Shadow DOM API 的 **`ShadowRoot`** 接口是一个 DOM 子树的根节点，它
 
 ### 从 DocumentOrShadowRoot 中包含的属性
 
-_`ShadowRoot` 接口包含了下列从{{domxref("DocumentOrShadowRoot")}} mixin 中定义的属性。请注意它现在仅在 Chrome 浏览器中应用; 其它的浏览器仍在{{domxref("Document")}}接口实现。_
+_`ShadowRoot` 接口包含了下列从{{domxref("DocumentOrShadowRoot")}} mixin 中定义的属性。请注意它现在仅在 Chrome 浏览器中应用; 其他的浏览器仍在{{domxref("Document")}}接口实现。_
 
 - {{domxref("DocumentOrShadowRoot.activeElement")}} {{readonlyInline}}
   - : 返回含有获取焦点了的 shadow tree 的 {{domxref('Element')}}
@@ -31,7 +31,7 @@ _`ShadowRoot` 接口包含了下列从{{domxref("DocumentOrShadowRoot")}} mixin 
 
 ## 方法
 
-_`ShadowRoot` 接口包含了下列几个在 {{domxref("DocumentOrShadowRoot")}} mixin 中定义的方法。请注意它现在仅在 Chrome 浏览器中应用; 其它的浏览器仍在{{domxref("Document")}}接口实现。_
+_`ShadowRoot` 接口包含了下列几个在 {{domxref("DocumentOrShadowRoot")}} mixin 中定义的方法。请注意它现在仅在 Chrome 浏览器中应用; 其他的浏览器仍在{{domxref("Document")}}接口实现。_
 
 - {{domxref("DocumentOrShadowRoot.getSelection()")}}
   - : 返回一个 {{domxref('Selection')}} 类来表明用户选择的文本选区或者光标所在的位置
@@ -66,14 +66,20 @@ In the `updateStyle()` function itself, we get a reference to the shadow DOM usi
 function updateStyle(elem) {
   var shadow = elem.shadowRoot;
   var childNodes = shadow.childNodes;
-  for(var i = 0; i < childNodes.length; i++) {
-    if(childNodes[i].nodeName === 'STYLE') {
+  for (var i = 0; i < childNodes.length; i++) {
+    if (childNodes[i].nodeName === "STYLE") {
       childNodes[i].textContent =
-        'div {' +
-          'width: ' + elem.getAttribute('l') + 'px;' +
-          'height: ' + elem.getAttribute('l') + 'px;' +
-          'background-color: ' + elem.getAttribute('c') + ';' +
-        '}';
+        "div {" +
+        "width: " +
+        elem.getAttribute("l") +
+        "px;" +
+        "height: " +
+        elem.getAttribute("l") +
+        "px;" +
+        "background-color: " +
+        elem.getAttribute("c") +
+        ";" +
+        "}";
     }
   }
 }

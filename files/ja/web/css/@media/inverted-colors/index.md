@@ -21,8 +21,14 @@ slug: Web/CSS/@media/inverted-colors
 ### HTML
 
 ```html
-<p>If you're using inverted colors, this text should be blue on white (the inverse of yellow on black). If you're not, it should be red on light gray.</p>
-<p>If the text is gray, your browser doesn't support the `inverted-colors` media feature.</p>
+<p>
+  If you're using inverted colors, this text should be blue on white (the
+  inverse of yellow on black). If you're not, it should be red on light gray.
+</p>
+<p>
+  If the text is gray, your browser doesn't support the `inverted-colors` media
+  feature.
+</p>
 ```
 
 ### CSS
@@ -61,5 +67,5 @@ p {
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/ja/docs/Web/CSS/@media)

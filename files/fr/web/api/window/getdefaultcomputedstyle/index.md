@@ -1,12 +1,6 @@
 ---
 title: Window.getDefaultComputedStyle()
 slug: Web/API/Window/getDefaultComputedStyle
-tags:
-  - API
-  - CSS
-  - Method
-  - Reference
-translation_of: Web/API/window/getDefaultComputedStyle
 ---
 
 {{APIRef("CSSOM")}}{{Non-standard_header}}
@@ -24,7 +18,7 @@ var miseEnForme = window.getDefaultComputedStyle(element[, pseudoElt]);
 - pseudoElt {{optional_inline}}
   - : Une chaîne indiquant le pseudo-élément à rechercher. Doit être `null` (ou non indiqué) pour les éléments ordinaires.
 
-Le `style` retourné est un objet [`CSSStyleDeclaration`](/fr-FR/docs/Web/API/CSSStyleDeclaration).
+Le `style` retourné est un objet [`CSSStyleDeclaration`](/fr/docs/Web/API/CSSStyleDeclaration).
 
 ## Exemples
 
@@ -35,21 +29,21 @@ var miseEnForme = window.getDefaultComputedStyle(elem1);
 
 ```html
 <style>
-#conteneur-elem {
-   position: absolute;
-   left:     100px;
-   top:      200px;
-   height:   100px;
- }
+  #conteneur-elem {
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    height: 100px;
+  }
 </style>
 
 <div id="conteneur-elem">factice</div>
 <div id="sortie"></div>
 
 <script>
-    var elem = document.getElementById("conteneur-elem");
-    var laPropCSS = window.getDefaultComputedStyle(elem).position;
-    document.getElementById("sortie").innerHTML = laPropCSS; // affichera "static"
+  var elem = document.getElementById("conteneur-elem");
+  var laPropCSS = window.getDefaultComputedStyle(elem).position;
+  document.getElementById("sortie").innerHTML = laPropCSS; // affichera "static"
 </script>
 ```
 
@@ -63,24 +57,24 @@ L'objet retourné est du même type que l'objet retourné par `getComputedStyle`
 
 ```html
 <style>
- h3:after {
-   content: ' déchire !';
- }
+  h3:after {
+    content: " déchire !";
+  }
 </style>
 
 <h3>contenu généré</h3>
 
 <script>
-  var h3       = document.querySelector('h3'),
-      resultat = getDefaultComputedStyle(h3, ':after').content;
+  var h3 = document.querySelector("h3"),
+    resultat = getDefaultComputedStyle(h3, ":after").content;
 
-  console.log('le contenu généré est : ', resultat); // retourne 'none'
+  console.log("le contenu généré est : ", resultat); // retourne 'none'
 </script>
 ```
 
 ## Notes
 
-La valeur retournée est, dans certains cas connus, expressément incorrecte par intention délibérée. En particulier, pour éviter le problème de sécurité appelé CSS History Leak, les navigateurs peuvent "mentir" sur la valeur utilisée pour un lien et toujours retourner des valeurs comme si l'utilisateur n'avait jamais visité le site concerné, et/ou limiter les styles qui peuvent être appliqués via l'utilisation du pseudo-sélecteur `:visited`. Voir <http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/> et [http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-visited/](http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) pour le détail des exemples de la manière dont cela est implémenté.
+La valeur retournée est, dans certains cas connus, expressément incorrecte par intention délibérée. En particulier, pour éviter le problème de sécurité appelé CSS History Leak, les navigateurs peuvent "mentir" sur la valeur utilisée pour un lien et toujours retourner des valeurs comme si l'utilisateur n'avait jamais visité le site concerné, et/ou limiter les styles qui peuvent être appliqués via l'utilisation du pseudo-sélecteur `:visited`. Voir <http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/> et [http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-visited/](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) pour le détail des exemples de la manière dont cela est implémenté.
 
 ## Spécifications
 
@@ -88,4 +82,4 @@ Proposé au groupe de travail CSS.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.getDefaultComputedStyle")}}
+{{Compat}}

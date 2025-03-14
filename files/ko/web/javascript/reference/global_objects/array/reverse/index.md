@@ -1,25 +1,32 @@
 ---
 title: Array.prototype.reverse()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/reverse
-browser-compat: javascript.builtins.Array.reverse
 ---
 
 {{JSRef}}
 
 **`reverse()`** 메서드는 배열의 순서를 반전합니다. 첫 번째 요소는 마지막 요소가 되며 마지막 요소는 첫 번째 요소가 됩니다.
 
-{{EmbedInteractiveExample("pages/js/array-reverse.html")}}
+{{InteractiveExample("JavaScript Demo: Array.reverse()")}}
+
+```js interactive-example
+const array1 = ["one", "two", "three"];
+console.log("array1:", array1);
+// Expected output: "array1:" Array ["one", "two", "three"]
+
+const reversed = array1.reverse();
+console.log("reversed:", reversed);
+// Expected output: "reversed:" Array ["three", "two", "one"]
+
+// Careful: reverse is destructive -- it changes the original array.
+console.log("array1:", array1);
+// Expected output: "array1:" Array ["three", "two", "one"]
+```
 
 ## 구문
 
 ```js
-    a.reverse()
+a.reverse();
 ```
 
 ### 반환 값
@@ -37,11 +44,11 @@ browser-compat: javascript.builtins.Array.reverse
 다음 예시는 3개의 요소가 든 myArray 배열을 만든 후, 반전시킵니다.
 
 ```js
-    const a = [1, 2, 3];
-    console.log(a); // [1, 2, 3]
+const a = [1, 2, 3];
+console.log(a); // [1, 2, 3]
 
-    a.reverse();
-    console.log(a); // [3, 2, 1]
+a.reverse();
+console.log(a); // [3, 2, 1]
 ```
 
 ## 명세

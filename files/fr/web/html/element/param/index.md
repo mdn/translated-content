@@ -1,12 +1,6 @@
 ---
-title: '<param> : l''élément paramètre d''un objet'
+title: "<param> : l'élément paramètre d'un objet"
 slug: Web/HTML/Element/param
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/param
 ---
 
 {{HTMLSidebar}}
@@ -15,18 +9,18 @@ L'élément HTML **`<param>`** définit les paramètres qui peuvent être employ
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("name")}}
+- `name`
   - : Le nom du paramètre
-- {{htmlattrdef("value")}}
+- `value`
   - : Cet attribut définit la valeur du paramètre.
 
 ### Attributs obsolètes
 
-- {{htmlattrdef("type")}} {{deprecated_inline}}
+- `type` {{deprecated_inline}}
   - : Cet attribut est uniquement utilisé si l'attribut `valuetype` vaut `"ref"`. Il définit le type MIME des valeurs trouvées à l'URI.
-- {{htmlattrdef("valuetype")}} {{deprecated_inline}}
+- `valuetype` {{deprecated_inline}}
 
   - : Cet attribut définit le type de la valeur indiquée par l'attribut `value`. Les valeurs possibles sont :
 
@@ -38,7 +32,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ```html
 <object data="animation.swf" type="application/x-shockwave-flash">
-  <param name="param11" value="valeurConf">
+  <param name="param11" value="valeurConf" />
 </object>
 ```
 

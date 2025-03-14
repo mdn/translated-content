@@ -9,11 +9,11 @@ IndexedDB api 中的 IDBRequest 接口提供了根据绑定事件处理函数访
 
 该 request 对象初始时不包括任何关于操作结果的信息，当 request 上的事件触发时，可以通过 IDBRequest 实例上的事件处理函数访问相关信息。
 
-继承自：[EventTarget](/zh-CN/DOM/EventTarget)
+继承自：[EventTarget](/zh-CN/docs/Web/API/EventTarget)
 
 ## About this document
 
-This document was last updated on August 17, 2012 and follows the [W3C Specifications (Editor's Draft)](http://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#request-api) drafted on July 24, 2012. It has not yet been verified.
+This document was last updated on August 17, 2012 and follows the [W3C Specifications (Editor's Draft)](https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#request-api) drafted on July 24, 2012. It has not yet been verified.
 
 ## 基础概念
 
@@ -178,7 +178,8 @@ request.onupgradeneeded= function(event) {
 
 ### `readyState` constants
 
-> **警告：** These constants are no longer available. You should use directly the string constants instead. ({{ bug(887524) }})
+> [!WARNING]
+> These constants are no longer available. You should use directly the string constants instead. ([Firefox bug 887524](https://bugzil.la/887524))
 
 | Constant      | Value     | Description                                                         |
 | ------------- | --------- | ------------------------------------------------------------------- |

@@ -1,19 +1,9 @@
 ---
 title: downloads.DownloadQuery
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadQuery
-tags:
-  - API
-  - Add-ons
-  - DownloadQuery
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadQuery
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type `DownloadQuery` de l'API {{WebExtAPIRef("downloads")}} définit un ensemble de paramètres pouvant être utilisés pour rechercher dans le gestionnaire de téléchargements un ensemble spécifique de téléchargements.
 
@@ -74,15 +64,15 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `exists`{{optional_inline}}
   - : Un `boolean` si un fichier téléchargé existe toujours (`true`) ou non (`false`). Inclure seulement {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} avec cette valeur `existe`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.DownloadQuery")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

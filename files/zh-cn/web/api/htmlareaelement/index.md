@@ -14,9 +14,9 @@ _从它的父对象{{domxref("HTMLElement")}}继承的，还有从{{domxref("URL
 - {{domxref("HTMLAreaElement.accessKey")}}
   - : 值为一个 {{domxref("DOMString")}} 类型，包含了一个简单的字符代表键盘上的一个按键，相当于快捷键。
 - {{domxref("HTMLAreaElement.alt")}}
-  - : 值为一个{{domxref("DOMString")}} 类型，代表了 {{ htmlattrxref("alt", "area") }} HTML 属性，包含一个 area 对象显示异常的情况下显示的备用文本字符串。
+  - : 值为一个{{domxref("DOMString")}} 类型，代表了 [`alt`](/zh-CN/docs/Web/HTML/Element/area#alt) HTML 属性，包含一个 area 对象显示异常的情况下显示的备用文本字符串。
 - {{domxref("HTMLAreaElement.coords")}}
-  - : 值为一个 {{domxref("DOMString")}} 类型，代表了 {{ htmlattrxref("coords", "area") }} HTML 属性，包含了定义热区相关的坐标。
+  - : 值为一个 {{domxref("DOMString")}} 类型，代表了 [`coords`](/zh-CN/docs/Web/HTML/Element/area#coords) HTML 属性，包含了定义热区相关的坐标。
 - {{domxref("HTMLAreaElement.download")}} {{experimental_inline}}
   - : 值为一个 {{domxref("DOMString")}} 类型，表明此资源是将要被下载的资源而不是显示在浏览器页面中。值为下载保存文件的推荐文件名。如果名字在操作系统里不是一个合格的文件名格式，浏览器将会做相应的修改。
 - {{domxref("URLUtils.hash")}}
@@ -26,11 +26,11 @@ _从它的父对象{{domxref("HTMLElement")}}继承的，还有从{{domxref("URL
 - {{domxref("URLUtils.hostname")}}
   - : Is a {{domxref("DOMString")}} containing the hostname in the referenced URL.
 - {{domxref("URLUtils.href")}}
-  - : Is a {{domxref("DOMString")}} containing that reflects the {{ htmlattrxref("href", "area") }} HTML attribute, containing a valid URL of a linked resource.
+  - : Is a {{domxref("DOMString")}} containing that reflects the [`href`](/zh-CN/docs/Web/HTML/Element/area#href) HTML attribute, containing a valid URL of a linked resource.
 - {{domxref("HTMLAreaElement.hreflang")}}
-  - : Is a {{domxref("DOMString")}} containing that reflects the {{ htmlattrxref("hreflang", "area") }} HTML attribute, indicating the language of the linked resource.
+  - : Is a {{domxref("DOMString")}} containing that reflects the [`hreflang`](/zh-CN/docs/Web/HTML/Element/area#hreflang) HTML attribute, indicating the language of the linked resource.
 - {{domxref("HTMLAreaElement.media")}}
-  - : Is a {{domxref("DOMString")}} containing that reflects the {{ htmlattrxref("media", "area") }} HTML attribute, indicating target media of the linked resource.
+  - : Is a {{domxref("DOMString")}} containing that reflects the [`media`](/zh-CN/docs/Web/HTML/Element/area#media) HTML attribute, indicating target media of the linked resource.
 - {{domxref("HTMLAreaElement.noHref")}} {{Deprecated_Inline}}
   - : Is a {{domxref("Boolean")}} flag indicating if the area is inactive (`true`) or active (`false`).
 - {{domxref("URLUtils.password")}}
@@ -44,19 +44,19 @@ _从它的父对象{{domxref("HTMLElement")}}继承的，还有从{{domxref("URL
 - {{domxref("URLUtils.protocol")}}
   - : Is a {{domxref("DOMString")}} containing the protocol component (including trailing colon `':'`), of the referenced URL.
 - {{domxref("HTMLAreaElement.rel")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("rel", "area") }} HTML attribute, indicating relationships of the current document to the linked resource.
+  - : Is a {{domxref("DOMString")}} that reflects the [`rel`](/zh-CN/docs/Web/HTML/Element/area#rel) HTML attribute, indicating relationships of the current document to the linked resource.
 - {{domxref("HTMLAreaElement.relList")}} {{readOnlyInline}}
-  - : Returns a {{domxref("DOMTokenList")}} that reflects the {{ htmlattrxref("rel", "area") }} HTML attribute, indicating relationships of the current document to the linked resource, as a list of tokens.
+  - : Returns a {{domxref("DOMTokenList")}} that reflects the [`rel`](/zh-CN/docs/Web/HTML/Element/area#rel) HTML attribute, indicating relationships of the current document to the linked resource, as a list of tokens.
 - {{domxref("HTMLAreaElement.search")}}
   - : Is a {{domxref("DOMString")}} containing the search element (including leading question mark `'?'`), if any, of the referenced URL.
 - {{domxref("HTMLAreaElement.shape")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("shape", "area") }} HTML attribute, indicating the shape of the hot-spot, limited to known values.
+  - : Is a {{domxref("DOMString")}} that reflects the [`shape`](/zh-CN/docs/Web/HTML/Element/area#shape) HTML attribute, indicating the shape of the hot-spot, limited to known values.
 - {{domxref("HTMLAreaElement.tabIndex")}}
   - : Is a `long` containing the element's position in the tabbing order.
 - {{domxref("HTMLAreaElement.target")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("target", "area") }} HTML attribute, indicating the browsing context in which to open the linked resource.
+  - : Is a {{domxref("DOMString")}} that reflects the [`target`](/zh-CN/docs/Web/HTML/Element/area#target) HTML attribute, indicating the browsing context in which to open the linked resource.
 - {{domxref("HTMLAreaElement.type")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("type", "area") }} HTML attribute, indicating the MIME type of the linked resource.
+  - : Is a {{domxref("DOMString")}} that reflects the [`type`](/zh-CN/docs/Web/HTML/Element/area#type) HTML attribute, indicating the MIME type of the linked resource.
 - {{domxref("URLUtils.username")}}
   - : Is a {{domxref("DOMString")}} containing the username specified before the domain name.
 

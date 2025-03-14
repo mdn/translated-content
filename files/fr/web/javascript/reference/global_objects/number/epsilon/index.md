@@ -1,15 +1,6 @@
 ---
 title: Number.EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Number
-  - Propriété
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/EPSILON
 ---
 
 {{JSRef}}
@@ -18,7 +9,19 @@ La propriété **`Number.EPSILON`** représente la différence entre le chiffre 
 
 Il n'est pas nécessaire de créer un objet {{jsxref("Number")}} pour accéder à cette propriété statique, elle est accessible avec `Number.EPSILON`.
 
-{{EmbedInteractiveExample("pages/js/number-epsilon.html")}}{{js_property_attributes(0,0,0)}}
+{{InteractiveExample("JavaScript Demo: Number.EPSILON")}}
+
+```js interactive-example
+const result = Math.abs(0.2 - 0.3 + 0.1);
+
+console.log(result);
+// Expected output: 2.7755575615628914e-17
+
+console.log(result < Number.EPSILON);
+// Expected output: true
+```
+
+{{js_property_attributes(0,0,0)}}
 
 ## Description
 
@@ -31,14 +34,14 @@ La propriété `EPSILON` vaut environ `2.2204460492503130808472633361816E-16` (c
 ```js
 x = 0.2;
 y = 0.3;
-equal = (Math.abs(x - y) < Number.EPSILON);
+equal = Math.abs(x - y) < Number.EPSILON;
 ```
 
 ## Prothèse d'émulation (_polyfill_)
 
 ```js
 if (Number.EPSILON === undefined) {
-  Number.EPSILON  =  Math.pow(2, -52);
+  Number.EPSILON = Math.pow(2, -52);
 }
 ```
 

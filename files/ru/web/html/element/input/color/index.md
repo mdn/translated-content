@@ -1,18 +1,6 @@
 ---
 title: <input type="color">
-slug: Web/HTML/Element/Input/color
-tags:
-  - Color Picker
-  - Element
-  - Form input
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML input
-  - Input
-  - Reference
-  - color
-translation_of: Web/HTML/Element/input/color
+slug: Web/HTML/Element/input/color
 ---
 
 {{HTMLSidebar}}
@@ -21,20 +9,48 @@ translation_of: Web/HTML/Element/input/color
 
 Представление элемента может существенно отличаться от одного браузера и/или платформы к другой — это может быть простой текстовый ввод, который автоматически проверяет правильность ввода информации о цвете в соответствующем формате, или стандартный для платформы выбор цвета, или какое-то пользовательское окно выбора цвета.
 
-{{EmbedInteractiveExample("pages/tabbed/input-color.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;color&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Choose your monster's colors:</p>
+
+<div>
+  <input type="color" id="head" name="head" value="#e66465" />
+  <label for="head">Head</label>
+</div>
+
+<div>
+  <input type="color" id="body" name="body" value="#f6b73c" />
+  <label for="body">Body</label>
+</div>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 | **[Value](#value)**               | 7-значная {{domxref("DOMString")}} , указывающая {{cssxref("&lt;color&gt;")}} в строчной шестнадцатеричной системе счисления |
-| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| **События**                       | {{domxref("HTMLElement/change_event", "change")}} и {{domxref("HTMLElement/input_event", "input")}}          |
-| **Поддерживаемые общие атрибуты** | {{htmlattrxref("autocomplete", "input")}} и {{htmlattrxref("list", "input")}}                                      |
-| **IDL атрибуты**                  | `list` и `value`                                                                                                                             |
-| **Методы**                        | {{domxref("HTMLInputElement.select", "select()")}}                                                                         |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| **События**                       | {{domxref("HTMLElement/change_event", "change")}} и {{domxref("HTMLElement/input_event", "input")}}                          |
+| **Поддерживаемые общие атрибуты** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete) и [`list`](/ru/docs/Web/HTML/Element/input#list)              |
+| **IDL атрибуты**                  | `list` и `value`                                                                                                             |
+| **Методы**                        | {{domxref("HTMLInputElement.select", "select()")}}                                                                           |
 
 ## Value
 
-{{Htmlattrxref ("value","input")}} элемента {{HTMLElement ("input")}} типа `color` всегда является {{domxref ("DOMString")}}, который содержит 7-символьную строку, задающую цвет RGB в шестнадцатеричном формате. Хотя вы можете ввести цвет в верхнем или нижнем регистре, он будет сохранён в виде нижнего регистра. Value никогда не бывает в какой-либо другой форме и никогда не бывает пустым.
+[`value`](/ru/docs/Web/HTML/Element/input#value) элемента {{HTMLElement ("input")}} типа `color` всегда является {{domxref ("DOMString")}}, который содержит 7-символьную строку, задающую цвет RGB в шестнадцатеричном формате. Хотя вы можете ввести цвет в верхнем или нижнем регистре, он будет сохранён в виде нижнего регистра. Value никогда не бывает в какой-либо другой форме и никогда не бывает пустым.
 
-> **Примечание:** установка значения на всё, что не является допустимым, полностью непрозрачным цветом RGB в шестнадцатеричной системе счисления, приведёт к тому, что значение будет установлено на #000000. В частности, вы не можете использовать стандартные имена цветов CSS или любой синтаксис функций CSS для установки значения. Это имеет смысл, если иметь в виду, что HTML и CSS-это отдельные языки и спецификации. Кроме того, цвета с альфа-каналом не поддерживаются; указание цвета в 9-символьной шестнадцатеричной системе счисления (например, #009900aa) также приведёт к тому, что цвет будет установлен на #000000.
+> [!NOTE]
+> Установка значения на всё, что не является допустимым, полностью непрозрачным цветом RGB в шестнадцатеричной системе счисления, приведёт к тому, что значение будет установлено на #000000. В частности, вы не можете использовать стандартные имена цветов CSS или любой синтаксис функций CSS для установки значения. Это имеет смысл, если иметь в виду, что HTML и CSS-это отдельные языки и спецификации. Кроме того, цвета с альфа-каналом не поддерживаются; указание цвета в 9-символьной шестнадцатеричной системе счисления (например, #009900aa) также приведёт к тому, что цвет будет установлен на #000000.
 
 ## Использование настроек цвета
 
@@ -45,7 +61,7 @@ translation_of: Web/HTML/Element/input/color
 Вы можете обновить простой пример выше, чтобы установить значение по умолчанию, так что цветовая заливка будет предварительно заполнена цветом по умолчанию, и палитра цветов (если таковая имеется) также будет по умолчанию использовать этот цвет:
 
 ```html
-<input type="color" value="#ff0000">
+<input type="color" value="#ff0000" />
 ```
 
 {{EmbedLiveSample("Предоставление_цвета_по_умолчанию", 700, 30)}}
@@ -63,7 +79,7 @@ colorPicker.addEventListener("input", updateFirst, false);
 colorPicker.addEventListener("change", watchColorPicker, false);
 
 function watchColorPicker(event) {
-  document.querySelectorAll("p").forEach(function(p) {
+  document.querySelectorAll("p").forEach(function (p) {
     p.style.color = event.target.value;
   });
 }
@@ -79,13 +95,13 @@ colorWell.select();
 
 ### Вариации внешнего вида
 
-Как уже упоминалось ранее, когда браузер не поддерживает интерфейс выбора цвета, его реализация цветовых входов будет представлять собой текстовое поле, которое автоматически проверяет содержимое, чтобы убедиться, что значение находится в правильном формате. Например, в Safari 10.1 вы увидите что-то похожее на это:![Screenshot of the example taken in Safari.](https://mdn.mozillademos.org/files/14899/input-color-safari.png)
+Как уже упоминалось ранее, когда браузер не поддерживает интерфейс выбора цвета, его реализация цветовых входов будет представлять собой текстовое поле, которое автоматически проверяет содержимое, чтобы убедиться, что значение находится в правильном формате. Например, в Safari 10.1 вы увидите что-то похожее на это:![Screenshot of the example taken in Safari.](input-color-safari.png)
 
-То же самое можно увидеть и в Firefox 55:![Screenshot of the example taken in Firefox 55 for macOS](https://mdn.mozillademos.org/files/14901/input-color-firefox.png)
+То же самое можно увидеть и в Firefox 55:![Screenshot of the example taken in Firefox 55 for macOS](input-color-firefox.png)
 
 В этом случае при нажатии на цветовой колодец отображается палитра цветов платформы, из которой вы можете выбрать нужный цвет (в данном случае это палитра macOS):
 
-![Screenshot of the element with the color picker open in Firefox Mac.](https://mdn.mozillademos.org/files/14903/input-with-picker-firefox-mac.png)
+![Screenshot of the element with the color picker open in Firefox Mac.](input-with-picker-firefox-mac.png)
 
 ## Validation
 
@@ -100,18 +116,21 @@ colorWell.select();
 HTML довольно прост — пара абзацев описательного материала с {{HTMLElement ("input")}} типа `color` с идентификатором `colorWell`, который мы будем использовать для изменения цвета текста абзацев.
 
 ```html
-<p>An example demonstrating the use of the <code>&lt;input type="color"&gt;</code>
-   control.</p>
+<p>
+  An example demonstrating the use of the
+  <code>&lt;input type="color"&gt;</code> control.
+</p>
 
 <label for="colorWell">Color:</label>
-<input type="color" value="#ff0000" id="colorWell">
+<input type="color" value="#ff0000" id="colorWell" />
 
-<p>Watch the paragraph colors change when you adjust the color picker.
-   As you make changes in the color picker, the first paragraph's
-   color changes, as a preview (this uses the <code>input</code>
-   event). When you close the color picker, the <code>change</code>
-   event fires, and we detect that to change every paragraph to
-   the selected color.</p>
+<p>
+  Watch the paragraph colors change when you adjust the color picker. As you
+  make changes in the color picker, the first paragraph's color changes, as a
+  preview (this uses the <code>input</code> event). When you close the color
+  picker, the <code>change</code> event fires, and we detect that to change
+  every paragraph to the selected color.
+</p>
 ```
 
 ### JavaScript
@@ -161,7 +180,7 @@ function updateFirst(event) {
 
 ```js
 function updateAll(event) {
-  document.querySelectorAll("p").forEach(function(p) {
+  document.querySelectorAll("p").forEach(function (p) {
     p.style.color = event.target.value;
   });
 }
@@ -179,10 +198,10 @@ function updateAll(event) {
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Изучите также
 
-- [Compatibility of CSS properties](/ru/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- [Compatibility of CSS properties](/ru/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

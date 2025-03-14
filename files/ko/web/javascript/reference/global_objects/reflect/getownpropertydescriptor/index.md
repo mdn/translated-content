@@ -1,24 +1,33 @@
 ---
 title: Reflect.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 **`Reflect.getOwnPropertyDescriptor()`** 정적 메서드는 객체에 주어진 속성이 존재하면, 해당 속성의 서술자를 반환합니다. {{jsxref("Object.getOwnPropertyDescriptor()")}}와 유사합니다.
 
-{{EmbedInteractiveExample("pages/js/reflect-getownpropertydescriptor.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.getOwnPropertyDescriptor()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+console.log(Reflect.getOwnPropertyDescriptor(object1, "property1").value);
+// Expected output: 42
+
+console.log(Reflect.getOwnPropertyDescriptor(object1, "property2"));
+// Expected output: undefined
+
+console.log(Reflect.getOwnPropertyDescriptor(object1, "property1").writable);
+// Expected output: true
+```
 
 ## 구문
 
 ```js
-Reflect.getOwnPropertyDescriptor(target, propertyKey)
+Reflect.getOwnPropertyDescriptor(target, propertyKey);
 ```
 
 ### 매개변수
@@ -45,13 +54,13 @@ Reflect.getOwnPropertyDescriptor(target, propertyKey)
 ### `Reflect.getOwnPropertyDescriptor()` 사용하기
 
 ```js
-Reflect.getOwnPropertyDescriptor({x: 'hello'}, 'x');
+Reflect.getOwnPropertyDescriptor({ x: "hello" }, "x");
 // {value: "hello", writable: true, enumerable: true, configurable: true}
 
-Reflect.getOwnPropertyDescriptor({x: 'hello'}, 'y');
+Reflect.getOwnPropertyDescriptor({ x: "hello" }, "y");
 // undefined
 
-Reflect.getOwnPropertyDescriptor([], 'length');
+Reflect.getOwnPropertyDescriptor([], "length");
 // {value: 0, writable: true, enumerable: false, configurable: false}
 ```
 
@@ -60,10 +69,10 @@ Reflect.getOwnPropertyDescriptor([], 'length');
 `Reflect.getOwnPropertyDescriptor()`의 첫 번째 매개변수가 객체가 아니고 {{glossary("Primitive", "원시값")}}이라면 {{jsxref("TypeError")}}가 발생합니다. 반면 {{jsxref("Object.getOwnPropertyDescriptor()")}}는 같은 상황에서 값을 우선 객체로 변환합니다.
 
 ```js
-Reflect.getOwnPropertyDescriptor('foo', 0);
+Reflect.getOwnPropertyDescriptor("foo", 0);
 // TypeError: "foo" is not non-null object
 
-Object.getOwnPropertyDescriptor('foo', 0);
+Object.getOwnPropertyDescriptor("foo", 0);
 // { value: "f", writable: false, enumerable: true, configurable: false }
 ```
 

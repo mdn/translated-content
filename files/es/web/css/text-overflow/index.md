@@ -1,14 +1,54 @@
 ---
 title: text-overflow
 slug: Web/CSS/text-overflow
-translation_of: Web/CSS/text-overflow
 ---
 
 {{CSSRef}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`text-overflow`** determina como el contenido que se desborda y que no es mostrado, va a hacérsele notar a los usuarios. Puede ser cortado, mostrar una elipsis ('`…`', `U+2026 Horizontal Ellipsis`), o mostrar una cadena de texto personalizada.
 
-{{EmbedInteractiveExample("pages/css/text-overflow.html")}}
+{{InteractiveExample("CSS Demo: text-overflow")}}
+
+```css interactive-example-choice
+text-overflow: clip;
+```
+
+```css interactive-example-choice
+text-overflow: ellipsis;
+```
+
+```css interactive-example-choice
+text-overflow: "-";
+```
+
+```css interactive-example-choice
+text-overflow: "";
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element-container">
+    <p id="example-element">"Is there any tea on this spaceship?" he asked.</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element-container {
+  width: 100%;
+  max-width: 18em;
+}
+
+#example-element {
+  line-height: 50px;
+  border: 1px solid #c5c5c5;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: sans-serif;
+  padding: 0 0.5em;
+  text-align: left;
+}
+```
 
 La propiedad `text-overflow` no fuerza a que ocurra un desbordamiento. Para hacer que un texto desborde a su contenedor debes poner algunas otras propiedades de CSS. Por ejemplo:
 
@@ -29,21 +69,21 @@ Cada valor se especificará como una de las siguientes opciones:
 - La función [`fade()`](<#fade( \<length\> | \<percentage\> )>), que recibe {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}} para controlar la distancia de desvanecimiento
 - Un [`<string>`](#string).
 
-### Values
+### Valores
 
 - `clip`
-  - : The default for this property. This keyword value will truncate the text at the limit of the [content area](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), therefore the truncation can happen in the middle of a character. To clip at the transition between characters you can specify `text-overflow` as an empty string, if that is supported in your target browsers: `text-overflow: '';`.
+  - : Este es el valor predeterminado para esta propiedad. El valor de la palabra clave truncará el texto en el límite del [área de contenido](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), por lo tanto el corte puede darse en medio de una palabra. Para recortar justo en la transición entre caracteres se puede especificar con `text-overflow` como una cadena vacía, si eso es compatible con sus navegadores: `text-overflow: '';`.
 - `ellipsis`
-  - : This keyword value will display an ellipsis (`'…'`, `U+2026 Horizontal Ellipsis`) to represent clipped text. The ellipsis is displayed inside the [content area](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), decreasing the amount of text displayed. If there is not enough space to display the ellipsis, it is clipped.
+  - : El valor de la palabra clave mostrará puntos suspensivos (`'…'`, `U+2026 Horizontal Ellipsis`) para representar texto recortado. Los puntos suspensivos se muestran dentro del [área de contenido](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), disminuyendo la cantidad de texto mostrado. Si no hay suficiente espacio para mostrar los puntos suspensivos, se recorta.
 - `<string>` {{experimental_inline}}
-  - : The {{cssxref("&lt;string&gt;")}} to be used to represent clipped text. The string is displayed inside the [content area](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), shortening the size of the displayed text. If there is not enough space to display the string itself, it is clipped.
+  - : El {{cssxref("&lt;string&gt;")}} que será utilizado para representar texto recortado. La cadena se muestra dentro del [área de contenido](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), disminuyendo el tamaño del texto mostrado. Si no hay suficiente espacio para mostrar la cadena, se recorta.
 - `fade` {{experimental_inline}}
-  - : This keyword clips the overflowing inline content and applies a fade-out effect near the edge of the line box with complete transparency at the edge.
+  - : El valor de esta palabra clave recorta el contenido en línea del texto que se desborda y aplica un efecto de atenuación cerca del borde de la linea de la caja con total transparencia en el borde.
 - `fade( <length> | <percentage> )` {{experimental_inline}}
 
-  - : This function clips the overflowing inline content and applies a fade-out effect near the edge of the line box with complete transparency at the edge.
+  - : Esta función recorta el contenido desbordante en línea y aplica un efecto de atenuación cerca del límite de la caja con total transparencia en el borde.
 
-    The argument determines the distance over which the fade effect is applied. The {{cssxref("&lt;percentage&gt;")}} is resolved against the width of the line box. Values lower than `0` are clipped to `0`. Values greater than the width of the line box are clipped to the width of the line box.
+    El argumento determina la distancia sobre la que se aplica el efecto de atenuación. El {{cssxref("&lt;percentage&gt;")}} se revuelve contra la anchura de la línea de la caja. Los valore menores que `0` se truncan a `0`. Los valores mayores que el ancho de la caja se recortan al ancho de la caja.
 
 ### Formal syntax
 
@@ -86,10 +126,18 @@ p {
 ### HTML
 
 ```html
-<p class="overflow-visible">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-<p class="overflow-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-<p class="overflow-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-<p class="overflow-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p class="overflow-visible">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
+<p class="overflow-clip">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
+<p class="overflow-ellipsis">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
+<p class="overflow-string">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
 ```
 
 ### Result
@@ -151,7 +199,7 @@ p {
         <img
           alt="t-o_clip.png"
           class="default internal"
-          src="/@api/deki/files/6056/=t-o_clip.png"
+          src="t-o_clip.png"
         />
       </td>
       <td style="direction: ltr">
@@ -172,7 +220,7 @@ p {
         <img
           alt="t-o_clip_rtl.png"
           class="default internal"
-          src="/@api/deki/files/6057/=t-o_clip_rtl.png"
+          src="t-o_clip_rtl.png"
         />
       </td>
       <td style="direction: rtl">
@@ -426,9 +474,9 @@ p {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-overflow")}}
+{{Compat}}
 
 ## See also
 

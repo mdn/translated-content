@@ -1,12 +1,6 @@
 ---
 title: element.textContent
 slug: Web/API/Node/textContent
-tags:
-  - API
-  - DOM
-  - Noeuds
-  - Propriétés
-translation_of: Web/API/Node/textContent
 ---
 
 {{APIRef("DOM")}}
@@ -22,7 +16,7 @@ element.textContent = "ceci est un simple exemple de texte";
 
 ## Description
 
-- `textContent` renvoie `null` si l'élément est un [document](/fr/docs/Web/API/document), un type de document (doctype) ou une notation. Pour saisir toutes les données textuelles et CDATA pour l'ensemble du document, on peut utiliser `document.documentElement.textContent` .
+- `textContent` renvoie `null` si l'élément est un [document](/fr/docs/Web/API/Document), un type de document (doctype) ou une notation. Pour saisir toutes les données textuelles et CDATA pour l'ensemble du document, on peut utiliser `document.documentElement.textContent` .
 - Si le nœud est une section CDATA, un commentaire, une instruction de traitement ou un nœud texte, `textContent` renvoie le texte à l'intérieur du nœud (la valeur [nodeValue](/fr/docs/Web/API/Node/nodeValue)).
 - Pour les autres types de nœuds, `textContent` renvoie la concaténation des valeurs de propriété `textContent` de chaque nœud enfant, à l'exception des commentaires et nœuds d'instructions de traitement. Si le nœud n'a pas d'enfants, il s'agira d'une chaîne vide.
 - En définissant cette propriété sur un nœud, on enlève tous ses enfants et ceux-ci sont remplacés par un seul nœud texte avec la valeur donnée.
@@ -59,31 +53,38 @@ document.getElementById("divA").textContent = "Ceci est un exemple de texte";
 
 ```js
 // Source: Eli Grey @ http://eligrey.com/blog/post/textcontent-in-ie8
-if (Object.defineProperty
-  && Object.getOwnPropertyDescriptor
-  && Object.getOwnPropertyDescriptor(Element.prototype, "textContent")
-  && !Object.getOwnPropertyDescriptor(Element.prototype, "textContent").get) {
-  (function() {
-    var innerText = Object.getOwnPropertyDescriptor(Element.prototype, "innerText");
-    Object.defineProperty(Element.prototype, "textContent",
-     // Passing innerText or innerText.get directly does not work,
-     // wrapper function is required.
-     {
-       get: function() {
-         return innerText.get.call(this);
-       },
-       set: function(s) {
-         return innerText.set.call(this, s);
-       }
-     }
-   );
+if (
+  Object.defineProperty &&
+  Object.getOwnPropertyDescriptor &&
+  Object.getOwnPropertyDescriptor(Element.prototype, "textContent") &&
+  !Object.getOwnPropertyDescriptor(Element.prototype, "textContent").get
+) {
+  (function () {
+    var innerText = Object.getOwnPropertyDescriptor(
+      Element.prototype,
+      "innerText",
+    );
+    Object.defineProperty(
+      Element.prototype,
+      "textContent",
+      // Passing innerText or innerText.get directly does not work,
+      // wrapper function is required.
+      {
+        get: function () {
+          return innerText.get.call(this);
+        },
+        set: function (s) {
+          return innerText.set.call(this, s);
+        },
+      },
+    );
   })();
 }
 ```
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.textContent")}}
+{{Compat}}
 
 ## Spécifications
 

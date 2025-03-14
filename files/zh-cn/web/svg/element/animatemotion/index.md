@@ -7,10 +7,20 @@ slug: Web/SVG/Element/animateMotion
 
 `<animateMotion>` 元素定义了一个元素如何沿着运动路径进行移动。
 
-> **备注：** 为了复用一个已经定义的路径，就有必要使用一个 {{SVGElement("mpath")}} 元素嵌入到 `<animateMotion>` 中，而不是使用 {{SVGAttr("path")}}。
+> [!NOTE]
+> 为了复用一个已经定义的路径，就有必要使用一个 {{SVGElement("mpath")}} 元素嵌入到 `<animateMotion>` 中，而不是使用 {{SVGAttr("path")}}。
+
+## 示例
 
 ```css
-html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
+html,
+body,
+svg {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
 ```
 
 ```xml
@@ -25,9 +35,9 @@ html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 150, '100%')}}
+{{EmbedLiveSample('示例', 150, '100%')}}
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
@@ -35,13 +45,13 @@ html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
 
 ### Global 属性
 
-- [条件处理属性](/zh-CN/docs/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/zh-CN/docs/SVG/Attribute#Core) »
-- [动画事件属性](/zh-CN/docs/SVG/Attribute#AnimationEvent) »
-- [Xlink 属性](/zh-CN/docs/SVG/Attribute#XLink) »
-- [动画定时属性](/zh-CN/docs/SVG/Attribute#AnimationTiming) »
-- [动画值属性](/zh-CN/docs/SVG/Attribute#AnimationValue) »
-- [An 动画累加属性](/zh-CN/docs/SVG/Attribute#AnimationAddition) »
+- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Attribute#core) »
+- [动画事件属性](/zh-CN/docs/Web/SVG/Attribute#animationevent) »
+- [Xlink 属性](/zh-CN/docs/Web/SVG/Attribute#xlink) »
+- [动画定时属性](/zh-CN/docs/Web/SVG/Attribute#animationtiming) »
+- [动画值属性](/zh-CN/docs/Web/SVG/Attribute#animationvalue) »
+- [An 动画累加属性](/zh-CN/docs/Web/SVG/Attribute#animationaddition) »
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### 专有属性

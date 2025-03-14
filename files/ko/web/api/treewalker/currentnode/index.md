@@ -1,13 +1,6 @@
 ---
 title: TreeWalker.currentNode
 slug: Web/API/TreeWalker/currentNode
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
-  - TreeWalker
-translation_of: Web/API/TreeWalker/currentNode
 ---
 
 {{ APIRef("DOM") }}
@@ -25,10 +18,14 @@ treeWalker.currentNode = node;
 
 ```js
 var treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode: function (node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 root = treeWalker.currentNode; // 첫번째 엘리먼트인 루트 엘리먼트!
 ```

@@ -1,25 +1,26 @@
 ---
 title: OU logique (||)
 slug: Web/JavaScript/Reference/Operators/Logical_OR
-tags:
-  - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
-browser-compat: javascript.operators.logical_or
 ---
 
 {{jsSidebar("Operators")}}
 
 L'opérateur OU logique (`||`) (disjonction logique) renvoie vrai si et seulement si au moins un de ses opérandes est vrai. Cet opérateur est généralement utilisé avec des valeurs booléennes et, lorsque c'est le cas, il renvoie une valeur booléenne. Toutefois, `||` peut aussi être utilisé avec des valeurs non-booléennes et, dans ce cas, renverra une valeur non-booléenne.
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-or.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical OR", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(a > 0 || b > 0);
+// Expected output: true
+```
 
 ## Syntaxe
 
 ```js
-expr1 || expr2
+expr1 || expr2;
 ```
 
 ## Description
@@ -47,17 +48,17 @@ L'expression utilisant un OU logique est évaluée de gauche à droite. Le moteu
 Cette notion de court-circuit indique que la partie `expr` ci-avant **n'est pas évaluée**, tout effet de bord lié à cette évaluation n'aura pas lieu (par exemple, si `expr` est un appel de fonction, la fonction n'est pas appelée). Ce fonctionnement a lieu, car la valeur du résultat peut d'office être déterminée par l'évaluation du premier opérande. Par exemple :
 
 ```js
-function A(){
-  console.log('A a été appelée');
+function A() {
+  console.log("A a été appelée");
   return false;
 }
 
-function B(){
-  console.log('B a été appelée');
+function B() {
+  console.log("B a été appelée");
   return true;
 }
 
-console.log( B() || A() );
+console.log(B() || A());
 // affichera "B a été appelée" dans la console via l'appel de la fonction
 // puis affichera true (la valeur du résultat de l'expression avec l'opérateur)
 // on voit que la fonction A n'est pas du tout appelée
@@ -65,12 +66,11 @@ console.log( B() || A() );
 
 ### Précédence des opérateurs
 
-Les expressions suivantes peuvent sembler équivalentes mais ne le sont pas. En effet, l'opérateur `&&` est exécuté avant l'opérateur `||` (voir [l'article sur la précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
+Les expressions suivantes peuvent sembler équivalentes mais ne le sont pas. En effet, l'opérateur `&&` est exécuté avant l'opérateur `||` (voir [l'article sur la précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
 
-```js
-true || false && false      // renvoie true, car && est exécuté en premier
-(true || false) && false    // renvoie false, car la précédence par défaut ne s'applique pas
-                                    // avec les parenthèses
+```js-nolint
+true || false && false; // renvoie true, car && est exécuté en premier
+(true || false) && false; // renvoie false, car la précédence par défaut ne s'applique pas avec les parenthèses
 ```
 
 ## Exemples
@@ -80,19 +80,20 @@ true || false && false      // renvoie true, car && est exécuté en premier
 Le code suivant illustre quelques usages de l'opérateur OU logique `||`.
 
 ```js
-o1 = true   || true      // t || t renvoie true
-o2 = false  || true      // f || t renvoie true
-o3 = true   || false     // t || f renvoie true
-o4 = false  || (3 == 4)  // f || f renvoie false
-o5 = 'Chat' || 'Chien'   // t || t renvoie "Chat"
-o6 = false  || 'Chat'    // f || t renvoie "Chat"
-o7 = 'Chat' || false     // t || f renvoie "Chat"
-o8 = ''     || false     // f || f renvoie false
-o9 = false  || ''        // f || f renvoie ""
-o10 = false || varObject // f || object renvoie varObject
+o1 = true || true; // t || t renvoie true
+o2 = false || true; // f || t renvoie true
+o3 = true || false; // t || f renvoie true
+o4 = false || 3 == 4; // f || f renvoie false
+o5 = "Chat" || "Chien"; // t || t renvoie "Chat"
+o6 = false || "Chat"; // f || t renvoie "Chat"
+o7 = "Chat" || false; // t || f renvoie "Chat"
+o8 = "" || false; // f || f renvoie false
+o9 = false || ""; // f || f renvoie ""
+o10 = false || varObject; // f || object renvoie varObject
 ```
 
-> **Note :** Si vous utilisez cet opérateur afin de fournir une valeur par défaut à une variable. Soyez conscient⋅e qu'une valeur équivalente à `false` ne pourra pas être utilisée ainsi. Si vous souhaitez uniquement écarter [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), privilégiez l'utilisation de [l'opérateur de coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator).
+> [!NOTE]
+> Si vous utilisez cet opérateur afin de fournir une valeur par défaut à une variable. Soyez conscient⋅e qu'une valeur équivalente à `false` ne pourra pas être utilisée ainsi. Si vous souhaitez uniquement écarter [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), privilégiez l'utilisation de [l'opérateur de coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing).
 
 ### Règles de conversion booléennes
 
@@ -101,13 +102,13 @@ o10 = false || varObject // f || object renvoie varObject
 L'opération suivante, utilisant des **booléens** :
 
 ```js
-bCondition1 && bCondition2
+bCondition1 && bCondition2;
 ```
 
 sera toujours équivalente à :
 
 ```js
-!(!bCondition1 || !bCondition2)
+!(!bCondition1 || !bCondition2);
 ```
 
 #### Convertir OU en ET
@@ -115,13 +116,13 @@ sera toujours équivalente à :
 L'opération suivante, utilisant des **booléens** :
 
 ```js
-bCondition1 || bCondition2
+bCondition1 || bCondition2;
 ```
 
 sera toujours équivalente à :
 
 ```js
-!(!bCondition1 && !bCondition2)
+!(!bCondition1 && !bCondition2);
 ```
 
 ### Retrait des parenthèses imbriquées
@@ -131,13 +132,13 @@ Les expressions logiques sont évaluées de gauche à droite, il est donc possib
 L'opération composite suivante, utilisant des **booléens** :
 
 ```js
-bCondition1 && (bCondition2 || bCondition3)
+bCondition1 && (bCondition2 || bCondition3);
 ```
 
 sera toujours équivalente à :
 
 ```js
-!(!bCondition1 || !bCondition2 && !bCondition3)
+!(!bCondition1 || (!bCondition2 && !bCondition3));
 ```
 
 ## Spécifications
@@ -150,7 +151,7 @@ sera toujours équivalente à :
 
 ## Voir aussi
 
-- [L'opérateur de coalescence des nuls (`??`)](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [L'opérateur de coalescence des nuls (`??`)](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
 - [_Truthy_](/fr/docs/Glossary/Truthy)
 - [_Falsy_](/fr/docs/Glossary/Falsy)

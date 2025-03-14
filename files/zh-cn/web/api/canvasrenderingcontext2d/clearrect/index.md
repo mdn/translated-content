@@ -1,21 +1,24 @@
 ---
-title: CanvasRenderingContext2D.clearRect()
+title: CanvasRenderingContext2D：clearRect() 方法
 slug: Web/API/CanvasRenderingContext2D/clearRect
+l10n:
+  sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
 ---
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.clearRect()`**是 Canvas 2D API 的方法，这个方法通过把像素设置为透明以达到擦除一个矩形区域的目的。
+Canvas 2D API 的 **`CanvasRenderingContext2D.clearRect()`** 方法用于通过把像素设置为透明黑色以达到擦除一个矩形区域的目的。
 
-> **备注：** 如果没有依照 [绘制路径](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#%E7%BB%98%E5%88%B6%E8%B7%AF%E5%BE%84) 的步骤，使用 `clearRect()` 会导致意想之外的结果。请确保在调用 `clearRect()`之后绘制新内容前调用{{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} 。
+> [!NOTE]
+> 如果没有[正确使用路径](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#绘制路径)，`clearRect()` 可能会导致意想之外的结果。请确保在调用 `clearRect()` 之后开始绘制新内容前调用 {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} 。
 
 ## 语法
 
-```
-void ctx.clearRect(x, y, width, height);
+```js-nolint
+clearRect(x, y, width, height)
 ```
 
-`clearRect()` 方法在一个矩形区域内设置所有像素都是透明的 (`rgba(0,0,0,0)`)。这个矩形范围的左上角在 `(x, y)`，宽度和高度分别由 `width` 和`height`确定。
+`clearRect()` 方法在一个矩形区域内将所有像素都设置成透明黑色（`rgba(0,0,0,0)`）。矩形区域的左上角在 `(x, y)`，其大小由 `width` 和`height` 指定。
 
 ### 参数
 
@@ -24,25 +27,29 @@ void ctx.clearRect(x, y, width, height);
 - `y`
   - : 矩形起点的 y 轴坐标。
 - `width`
-  - : 矩形的宽度。
+  - : 矩形的宽度。正值向右，负值向左。
 - `height`
-  - : 矩形的高度。
+  - : 矩形的高度。正值向下，负值向上。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
-### 清除整个画布
+### 擦除整个画布
 
-这段代码清除整个画布。这段代码通常在动画的每一帧开始被执行。清除的范围涵覆盖了整个 {{HtmlElement("canvas")}} 元素。
+这段代码片段用于擦除整个画布。这通常在动画的每一帧开始时需要执行。清除的区域尺寸设置为与 `<canvas>` 元素的 `width` 和 `height` 属性相等。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 ```
 
-### 清除一部分画布
+### 擦除一部分画布
 
-这仅是一段简单地使用 `clearRect` 方法的代码片段。
+此示例在黄色背景上绘制了一个蓝色三角形，然后使用 `clearRect()` 方法擦除了画布的部分内容。
 
 #### HTML
 
@@ -52,20 +59,20 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 #### JavaScript
 
-下面代码中被清除的区域是一个矩形，它的左上点坐标在 (10, 10)，宽度和高度分别是 120 和 100 像素。
+被清除的区域是一个矩形，它的左上点坐标在 (10, 10)。清除区域的宽度为 120，高度为 100。
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // 绘制黄色背景
 ctx.beginPath();
-ctx.fillStyle = '#ff6';
+ctx.fillStyle = "#ff6";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 // 绘制蓝色三角形
 ctx.beginPath();
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.moveTo(20, 20);
 ctx.lineTo(180, 20);
 ctx.lineTo(130, 130);
@@ -78,9 +85,9 @@ ctx.clearRect(10, 10, 120, 100);
 
 #### 结果
 
-{{EmbedLiveSample('Erasing_part_of_a_canvas', 700, 180)}}
+{{EmbedLiveSample('擦除一部分画布', 700, 180)}}
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 
@@ -90,6 +97,6 @@ ctx.clearRect(10, 10, 120, 100);
 
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}
+- 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.fillRect()")}}
 - {{domxref("CanvasRenderingContext2D.strokeRect()")}}

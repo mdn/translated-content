@@ -11,13 +11,14 @@ slug: Web/API/DataTransfer/clearData
 
 このメソッドはドラッグ操作からファイルを削除*しない*ので、ドラッグに含まれるファイルがある場合、 `"Files"` 型の項目がオブジェクトの {{domxref("DataTransfer.types")}} の一覧に残る可能性があります。
 
-> **メモ:** このメソッドは、 {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントのハンドラーでのみ使用できます。ドラッグ操作のデータストアが書き込み可能なのはその時だけだからです。
+> [!NOTE]
+> このメソッドは、 {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントのハンドラーでのみ使用できます。ドラッグ操作のデータストアが書き込み可能なのはその時だけだからです。
 
 ## 構文
 
 ```js
-clearData()
-clearData(format)
+clearData();
+clearData(format);
 ```
 
 ### 引数
@@ -66,26 +67,26 @@ span.tweaked {
 ### JavaScript
 
 ```js
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener("DOMContentLoaded", function () {
   // HTML 要素を選択する
-  const draggable = document.getElementById('source');
-  const droppable = document.getElementById('target');
-  const status = document.getElementById('status');
-  const data = document.getElementById('data');
+  const draggable = document.getElementById("source");
+  const droppable = document.getElementById("target");
+  const status = document.getElementById("status");
+  const data = document.getElementById("data");
   let dropped = false;
 
   // イベントハンドラーを登録する
-  draggable.addEventListener('dragstart', dragStartHandler);
-  draggable.addEventListener('dragend', dragEndHandler);
-  droppable.addEventListener('dragover', dragOverHandler);
-  droppable.addEventListener('dragleave', dragLeaveHandler);
-  droppable.addEventListener('drop', dropHandler);
+  draggable.addEventListener("dragstart", dragStartHandler);
+  draggable.addEventListener("dragend", dragEndHandler);
+  droppable.addEventListener("dragover", dragOverHandler);
+  droppable.addEventListener("dragleave", dragLeaveHandler);
+  droppable.addEventListener("drop", dropHandler);
 
-  function dragStartHandler (event) {
-    status.textContent = 'ドラッグ中';
+  function dragStartHandler(event) {
+    status.textContent = "ドラッグ中";
 
     // ドラッグが開始されたことを示すように、ターゲット要素の境界線を変更する
-    event.currentTarget.style.border = '1px dashed blue';
+    event.currentTarget.style.border = "1px dashed blue";
 
     // 既存のクリップボードをクリアすることから始めます。
     // 特定のタイプを指定していないので、これはすべてのタイプに影響します。
@@ -93,62 +94,63 @@ window.addEventListener('DOMContentLoaded', function () {
     event.dataTransfer.clearData();
 
     // ドラッグのフォーマットとデータを設定する（データにはイベントターゲットの id を使用する）
-    event.dataTransfer.setData('text/plain', event.target.id);
+    event.dataTransfer.setData("text/plain", event.target.id);
 
-    data.textContent = event.dataTransfer.getData('text/plain');
+    data.textContent = event.dataTransfer.getData("text/plain");
   }
 
-  function dragEndHandler (event) {
+  function dragEndHandler(event) {
     if (!dropped) {
-      status.textContent = 'ドラッグのキャンセル';
+      status.textContent = "ドラッグのキャンセル";
     }
 
-    data.textContent = event.dataTransfer.getData('text/plain') || 'empty';
+    data.textContent = event.dataTransfer.getData("text/plain") || "empty";
 
     // ドラッグ中ではないことを示すために境界線を変更する
-    event.currentTarget.style.border = '1px solid black';
+    event.currentTarget.style.border = "1px solid black";
 
     if (dropped) {
       // すべてのイベントリスナーを削除
-      draggable.removeEventListener('dragstart', dragStartHandler);
-      draggable.removeEventListener('dragend', dragEndHandler);
-      droppable.removeEventListener('dragover', dragOverHandler);
-      droppable.removeEventListener('dragleave', dragLeaveHandler);
-      droppable.removeEventListener('drop', dropHandler);
+      draggable.removeEventListener("dragstart", dragStartHandler);
+      draggable.removeEventListener("dragend", dragEndHandler);
+      droppable.removeEventListener("dragover", dragOverHandler);
+      droppable.removeEventListener("dragleave", dragLeaveHandler);
+      droppable.removeEventListener("drop", dropHandler);
     }
   }
 
-  function dragOverHandler (event) {
-    status.textContent = 'ドロップ可能';
+  function dragOverHandler(event) {
+    status.textContent = "ドロップ可能";
 
     event.preventDefault();
   }
 
-  function dragLeaveHandler (event) {
-    status.textContent = 'ドラッグ中（ドロップは可能）';
+  function dragLeaveHandler(event) {
+    status.textContent = "ドラッグ中（ドロップは可能）";
 
     event.preventDefault();
   }
 
-  function dropHandler (event) {
+  function dropHandler(event) {
     dropped = true;
 
-    status.textContent = 'ドロップしました。';
+    status.textContent = "ドロップしました。";
 
     event.preventDefault();
 
     // イベント形式に連動したデータを取得する « text »
-    const _data = event.dataTransfer.getData('text/plain');
+    const _data = event.dataTransfer.getData("text/plain");
     const element = document.getElementById(_data);
 
     // イベントのターゲット要素にドラッグソース要素を追加する
     event.target.appendChild(element);
 
     // CSS スタイルと表示テキストを変更する
-    element.style.cssText = 'border: 1px solid black;display: block; color: red';
+    element.style.cssText =
+      "border: 1px solid black;display: block; color: red";
     element.textContent = "ドロップゾーンに入りました!";
   }
-})
+});
 ```
 
 ### 結果
@@ -168,5 +170,5 @@ window.addEventListener('DOMContentLoaded', function () {
 - [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [複数の項目のドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [複数の項目のドラッグ＆ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

@@ -3,11 +3,25 @@ title: Date.prototype.setFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`setFullYear()`** 方法根据本地时间为一个日期对象设置年份。
 
-{{EmbedInteractiveExample("pages/js/date-setfullyear.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setFullYear()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+event.setFullYear(1969);
+
+console.log(event.getFullYear());
+// Expected output: 1969
+
+event.setFullYear(0);
+
+console.log(event.getFullYear());
+// Expected output: 0
+```
 
 ## 语法
 
@@ -30,9 +44,9 @@ dateObj.setFullYear(yearValue[, monthValue[, dayValue]])
 
 如果有一个参数超出了合理的范围，`setFullYear` 方法会更新其他参数值，日期对象的日期值也会被相应更新。例如，为 `monthValue` 指定 15，则年份会加 1，月份值会为 3。
 
-## 例子
+## 示例
 
-### 例子：使用`setFullYear`方法
+### 示例：使用`setFullYear`方法
 
 ```js
 var theBigDay = new Date();
@@ -47,7 +61,7 @@ theBigDay.setFullYear(1997);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCFullYear()")}}
 - {{jsxref("Date.prototype.setUTCFullYear()")}}

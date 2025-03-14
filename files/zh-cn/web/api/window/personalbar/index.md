@@ -1,55 +1,37 @@
 ---
-title: Window.personalbar
+title: Window：personalbar 属性
 slug: Web/API/Window/personalbar
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}}
 
-## 概要
+返回 `personalbar` 对象。
 
-返回 `personalbar` 对象，其可见性可以在窗口中切换。
+这是包含布尔属性 `visible` 的一组 `Window` 属性之一，用于表示 web 浏览器用户界面的特定部分是否可见。
 
-## 语法
+由于隐私和互操作性的原因，如果 `Window` 是弹出窗口，则 `visible` 属性的值为 `false`，反之为 `true`。
 
-```plain
-objRef =window.personalbar
-```
+## 值
 
-## 示例
+包含单个属性的对象：
 
-{{todo('https://bugzilla.mozilla.org/show_bug.cgi?id=790023')}}
-
-{{deprecated_inline}} The following complete HTML example shows the way that the visible property of the various "bar" objects is used, and also the change to the privileges necessary to write to the visible property of any of the bars on an existing window. Due to [deprecation of enablePrivilege](/zh-CN/docs/Bypassing_Security_Restrictions_and_Signing_Code) this functionality can not be used in web pages. EnablePrivilege is disabled in Firefox 15 and will be removed in Firefox 17.
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Various DOM Tests</title>
-
-<script>
-// changing bar states on the existing window
-netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserWrite");
-window.personalbar.visible = !window.personalbar.visible;
-</script>
-
-</head>
-<body>
-  <p>Various DOM Tests</p>
-</body>
-</html>
-```
-
-## 笔记
-
-When you load the example page above, the browser displays the following dialog: ![](modify_any_open_window_dialog.png)
-
-To toggle the visibility of these bars, you must either sign your scripts or enable the appropriate privileges, as in the example above. Also be aware that dynamically updating the visibilty of the various toolbars can change the size of the window rather dramatically, and may affect the layout of your page.
+- `visible` {{ReadOnlyInline}}
+  - : 一个布尔属性，如果 `Window` 是弹出窗口，则为 `false`，反之为 `true`。
 
 ## 规范
 
 {{Specifications}}
 
-## 相关链接
+## 浏览器兼容性
 
-- {{domxref("window.locationbar")}}, {{domxref("window.menubar")}}, {{domxref("window.scrollbars")}}, {{domxref("window.statusbar")}}, {{domxref("window.toolbar")}}
+{{Compat}}
+
+## 参见
+
+- {{domxref("window.locationbar")}}
+- {{domxref("window.menubar")}}
+- {{domxref("window.scrollbars")}}
+- {{domxref("window.statusbar")}}
+- {{domxref("window.toolbar")}}

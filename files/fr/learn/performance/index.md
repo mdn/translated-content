@@ -1,31 +1,21 @@
 ---
 title: Performance Web
 slug: Learn/Performance
-tags:
-  - Apprendre
-  - CSS
-  - HTML
-  - HTTP
-  - JavaScript
-  - Performance
-  - Performance Web
-  - TopicStub
-translation_of: Learn/Performance
 ---
 
 {{LearnSidebar}}
 
 La création de sites Web nécessite HTML, CSS, et JavaScript. Pour créer des sites Web et des applications que les gens veulent utiliser, qui attirent et fidélisent les utilisateurs, vous devez créer une bonne expérience utilisateur. Une bonne expérience utilisateur consiste à s'assurer que le contenu est rapide à charger et réactif à l'interaction de l'utilisateur. Ceci est connu sous le nom de **performance web**, et dans ce module, vous vous concentrerez sur les principes fondamentaux de la création de sites Web performants.
 
-Le reste de notre matériel d'apprentissage pour débutants a essayé de s'en tenir autant que possible aux meilleures pratiques du Web telles que les performances et l'[accessibilité](/fr/docs/Apprendre/a11y),cependant, il est bon de se concentrer spécifiquement sur ces sujets et de s'assurer que vous les connaissez bien.
+Le reste de notre matériel d'apprentissage pour débutants a essayé de s'en tenir autant que possible aux meilleures pratiques du Web telles que les performances et l'[accessibilité](/fr/docs/Learn/Accessibility),cependant, il est bon de se concentrer spécifiquement sur ces sujets et de s'assurer que vous les connaissez bien.
 
 ## Parcours d'apprentissage
 
-Bien que la connaissance de HTML, CSS et JavaScript soit nécessaire pour mettre en œuvre de nombreuses recommandations d'amélioration des performances Web, savoir comment créer des applications n'est pas une condition préalable nécessaire pour comprendre et mesurer les performances Web. Nous vous recommandons cependant, avant de commencer à utiliser ce module, d'avoir au moins une idée de base du développement Web en consultant notre module [Commencer avec le web](/fr/docs/Apprendre/Commencer_avec_le_web).
+Bien que la connaissance de HTML, CSS et JavaScript soit nécessaire pour mettre en œuvre de nombreuses recommandations d'amélioration des performances Web, savoir comment créer des applications n'est pas une condition préalable nécessaire pour comprendre et mesurer les performances Web. Nous vous recommandons cependant, avant de commencer à utiliser ce module, d'avoir au moins une idée de base du développement Web en consultant notre module [Commencer avec le web](/fr/docs/Learn/Getting_started_with_the_web).
 
 Il serait également utile d'approfondir un peu ces sujets, avec des modules tels que:
 
-- [Introduction au HTML](/fr/docs/Apprendre/HTML/Introduction_à_HTML)
+- [Introduction au HTML](/fr/docs/Learn/HTML/Introduction_to_HTML)
 - [Premiers pas avec CSS](/fr/docs/Learn/CSS/First_steps)
 - [Premiers pas en JavaScript](/fr/docs/Learn/JavaScript/First_steps)
 
@@ -35,7 +25,7 @@ Une fois que vous aurez parcouru ce module, vous serez probablement ravi d'appro
 
 Cette rubrique contient les guides suivants. Voici un ordre suggéré pour les parcourir; vous devriez certainement commencer par le premier.
 
-- [Le "pourquoi" des performances Web](/fr/docs/Learn/Performance/pourquoi_performance_web)
+- [Le "pourquoi" des performances Web](/fr/docs/Learn/Performance/why_web_performance)
   - : Cet article explique pourquoi les performances Web sont importantes pour l'accessibilité, l'expérience utilisateur et vos objectifs commerciaux.
 - [Qu'est-ce que la performance Web&nbsp;?](/fr/docs/Learn/Performance/What_is_web_performance)
   - : Vous savez que les performances Web sont importantes, mais en quoi consistent les performances Web&nbsp;? Cet article présente les composants de la performance, du chargement et du rendu de la page Web, en passant par la manière dont votre contenu est intégré dans le navigateur de votre utilisateur pour être visualisé, aux groupes de personnes dont nous devons tenir compte lors de la réflexion sur les performances.
@@ -71,6 +61,6 @@ Cette rubrique contient les guides suivants. Voici un ordre suggéré pour les p
 - [Ressources de performance Web](/fr/docs/Learn/Performance/Web_Performance_Basics)
   - : Outre les composants frontaux des fichiers HTML, CSS, JavaScript et multimédia, il existe des fonctionnalités qui peuvent ralentir les applications et des fonctionnalités qui peuvent rendre les applications subjectivement et objectivement plus rapides. Il existe de nombreuses API, outils de développement, bonnes pratiques et mauvaises pratiques relatives aux performances Web. Ici, nous présenterons bon nombre de ces fonctionnalités au niveau de base et fournirons des liens vers des plongées plus approfondies pour améliorer les performances de chaque sujet.
 - [Images responsives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-  - : Dans cet article, nous découvrirons le concept d'images responsives - des images qui fonctionnent bien sur des appareils avec des tailles d'écran, des résolutions et d'autres fonctionnalités très différentes - et nous examinerons les outils fournis par HTML pour les implémenter. Cela permet d'améliorer les performances sur différents appareils. Les images responsives ne sont qu'une partie du [responsive design](/fr/docs/Apprendre/CSS/CSS_layout/Responsive_Design), un futur sujet CSS à apprendre.
+  - : Dans cet article, nous découvrirons le concept d'images responsives - des images qui fonctionnent bien sur des appareils avec des tailles d'écran, des résolutions et d'autres fonctionnalités très différentes - et nous examinerons les outils fournis par HTML pour les implémenter. Cela permet d'améliorer les performances sur différents appareils. Les images responsives ne sont qu'une partie du [responsive design](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design), un futur sujet CSS à apprendre.
 - [Section principale des performances Web sur MDN](/fr/docs/Web/Performance)
   - : Notre section principale sur les performances Web - vous trouverez ici beaucoup plus de détails sur les performances Web, y compris des aperçus des API de performance, des outils de test et d'analyse et des problèmes de goulots d'étranglement des performances.

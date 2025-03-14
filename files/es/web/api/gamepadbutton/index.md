@@ -9,7 +9,8 @@ La interfaz **`GamepadButton`** define un botón individual de un gamepad u otro
 
 Un objeto `GamepadButton` se devuelve al solicitar cualquier valor del array devuelto por la propiedad `buttons` de la interfaz {{domxref("Gamepad")}}.
 
-> **Nota:** Este es el caso en Firefox Gecko 28 en adelante; Chrome y versiones anteriores de Firefox continúan devolviendo un array de valores dobles cuando se accede a esta propiedad.
+> [!NOTE]
+> Este es el caso en Firefox Gecko 28 en adelante; Chrome y versiones anteriores de Firefox continúan devolviendo un array de valores dobles cuando se accede a esta propiedad.
 
 ## Propiedades
 
@@ -24,47 +25,47 @@ El siguiente código se toma de mi demostración del botón del API de Gamepad (
 
 ```js
 function gameLoop() {
-  if(navigator.webkitGetGamepads) {
+  if (navigator.webkitGetGamepads) {
     var gp = navigator.webkitGetGamepads()[0];
 
-    if(gp.buttons[0] == 1) {
+    if (gp.buttons[0] == 1) {
       b--;
-    } else if(gp.buttons[1] == 1) {
+    } else if (gp.buttons[1] == 1) {
       a++;
-    } else if(gp.buttons[2] == 1) {
+    } else if (gp.buttons[2] == 1) {
       b++;
-    } else if(gp.buttons[3] == 1) {
+    } else if (gp.buttons[3] == 1) {
       a--;
     }
   } else {
     var gp = navigator.getGamepads()[0];
 
-    if(gp.buttons[0].value > 0 || gp.buttons[0].pressed == true) {
+    if (gp.buttons[0].value > 0 || gp.buttons[0].pressed == true) {
       b--;
-    } else if(gp.buttons[1].value > 0 || gp.buttons[1].pressed == true) {
+    } else if (gp.buttons[1].value > 0 || gp.buttons[1].pressed == true) {
       a++;
-    } else if(gp.buttons[2].value > 0 || gp.buttons[2].pressed == true) {
+    } else if (gp.buttons[2].value > 0 || gp.buttons[2].pressed == true) {
       b++;
-    } else if(gp.buttons[3].value > 0 || gp.buttons[3].pressed == true) {
+    } else if (gp.buttons[3].value > 0 || gp.buttons[3].pressed == true) {
       a--;
     }
   }
 
-  ball.style.left = a*2 + "px";
-  ball.style.top = b*2 + "px";
+  ball.style.left = a * 2 + "px";
+  ball.style.top = b * 2 + "px";
 
   var start = rAF(gameLoop);
-};
+}
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.GamepadButton")}}
+{{Compat}}
 
 ## Recomendado
 
-[Usando la API de Gamepad](/es/docs/Web/Guide/API/Gamepad)
+[Usando la API de Gamepad](/es/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

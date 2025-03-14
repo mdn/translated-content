@@ -1,21 +1,6 @@
 ---
 title: Prise en charge des anciens navigateurs
 slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
-tags:
-  - Apprendre
-  - Beginner
-  - CSS
-  - Débutant
-  - Guide
-  - Layout
-  - Learn
-  - feature queries
-  - flexbox
-  - float
-  - grid
-  - legacy
-translation_of: Learn/CSS/CSS_layout/Supporting_Older_Browsers
-original_slug: Apprendre/CSS/CSS_layout/Prise_En_Charge_Des_Anciens_Navigateurs
 ---
 
 {{LearnSidebar}}
@@ -88,7 +73,7 @@ Dans l'exemple ci-dessous, nous avons fait flotter trois `<div>` pour les affich
 }
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -98,7 +83,7 @@ Dans l'exemple ci-dessous, nous avons fait flotter trois `<div>` pour les affich
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
@@ -115,7 +100,8 @@ Dans l'exemple ci-dessous, nous avons fait flotter trois `<div>` pour les affich
 
 {{EmbedLiveSample('Exemple', '', '150')}}
 
-> **Note :** La propriété {{cssxref("clear")}} n'a également aucun effet une fois que l'élément dégagé devient un élément de grille. Vous pouvez donc avoir une mise en page avec un pied de page dégagé, qui est ensuite transformée en une mise en page sur une grille CSS.
+> [!NOTE]
+> La propriété {{cssxref("clear")}} n'a également aucun effet une fois que l'élément dégagé devient un élément de grille. Vous pouvez donc avoir une mise en page avec un pied de page dégagé, qui est ensuite transformée en une mise en page sur une grille CSS.
 
 ### Méthodes de substitution
 
@@ -136,17 +122,13 @@ Pour de nombreux ajustements de mise en page dans les navigateurs plus anciens, 
 
 Dans la disposition flottante, le pourcentage est calculé à partir du conteneur — 33,333 % correspond à un tiers de la largeur du conteneur. Dans la grille, cependant, ces 33,333 % sont calculés à partir de la zone de la grille dans laquelle l'élément est placé, de sorte qu'il devient en fait un tiers de la taille souhaitée une fois que la disposition en grille est introduite.
 
-### Exemple
-
-#### CSS
-
 ```css
 * {
   box-sizing: border-box;
 }
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -156,13 +138,11 @@ Dans la disposition flottante, le pourcentage est calculé à partir du conteneu
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
 ```
-
-#### HTML
 
 ```html
 <div class="wrapper">
@@ -172,7 +152,7 @@ Dans la disposition flottante, le pourcentage est calculé à partir du conteneu
 </div>
 ```
 
-{{EmbedLiveSample('Exemple_2', '', '150')}}
+{{EmbedLiveSample('Méthodes de substitution', '100%', '200')}}
 
 Pour résoudre ce problème, nous devons trouver un moyen de détecter si la grille est prise en charge et donc si elle remplacera la largeur. CSS a une solution pour nous ici.
 
@@ -182,17 +162,13 @@ Les requêtes de fonctionnalités vous permettent de vérifier si un navigateur 
 
 Si nous ajoutons une requête de fonctionnalité à l'exemple ci-dessus, nous pouvons l'utiliser pour remettre les largeurs de nos éléments sur `auto` si nous savons que nous avons un support de grille.
 
-### Exemple
-
-#### CSS
-
 ```css
 * {
   box-sizing: border-box;
 }
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -202,19 +178,17 @@ Si nous ajoutons une requête de fonctionnalité à l'exemple ci-dessus, nous po
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
 
 @supports (display: grid) {
   .item {
-      width: auto;
+    width: auto;
   }
 }
 ```
-
-#### HTML
 
 ```html
 <div class="wrapper">
@@ -224,7 +198,7 @@ Si nous ajoutons une requête de fonctionnalité à l'exemple ci-dessus, nous po
 </div>
 ```
 
-{{EmbedLiveSample('Exemple_3', '', '150')}}
+{{EmbedLiveSample('Requêtes de fonctionnalités', '100%', '200') }}
 
 La prise en charge des requêtes de caractéristiques est très bonne dans les navigateurs modernes. Toutefois, vous devez noter que ce sont les navigateurs qui ne prennent pas en charge la grille CSS, qui ne prennent pas non plus en charge les requêtes de fonctionnalités. Cela signifie qu'une approche telle que celle décrite ci-dessus fonctionnera pour ces navigateurs. Ce que nous faisons, c'est écrire notre ancien CSS en premier, en dehors de toute requête de fonctionnalité. Les navigateurs qui ne prennent pas en charge la grille et la requête de fonctionnalité utiliseront les informations de mise en page qu'ils peuvent comprendre et ignoreront complètement tout le reste. Les navigateurs qui prennent en charge la requête de fonctionnalité prennent également en charge CSS Grid et exécuteront donc le code de la grille et le code contenu dans la requête de fonctionnalité.
 
@@ -238,7 +212,7 @@ Dans les anciennes versions des navigateurs, vous pouvez trouver des itérations
 
 La spécification CSS Grid a été initialement prototypée dans Internet Explorer 10 ; cela signifie que si IE10 et IE11 ne disposent pas du support de la grille _moderne_, ils disposent d'une version de la mise en page Grid qui est très utilisable, bien que différente de la spécification moderne documentée sur ce site. Les implémentations d'IE10 et 11 sont préfixées `-ms-`, ce qui signifie que vous pouvez les utiliser pour ces navigateurs et qu'elles seront ignorées par les navigateurs non-Microsoft. Edge comprend toujours l'ancienne syntaxe, cependant, alors faites attention à ce que tout soit écrasé en toute sécurité dans votre grille CSS moderne.
 
-Le guide [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement) peut vous aider à comprendre la version IE de la grille, et nous avons inclus quelques liens utiles supplémentaires à la fin de cette leçon. Cependant, à moins que vous n'ayez un nombre très élevé de visiteurs dans des versions IE plus anciennes, il est préférable de vous concentrer sur la création d'une solution de substitution qui fonctionne pour tous les navigateurs non pris en charge.
+Le guide [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement) peut vous aider à comprendre la version IE de la grille, et nous avons inclus quelques liens utiles supplémentaires à la fin de cette leçon. Cependant, à moins que vous n'ayez un nombre très élevé de visiteurs dans des versions IE plus anciennes, il est préférable de vous concentrer sur la création d'une solution de substitution qui fonctionne pour tous les navigateurs non pris en charge.
 
 ## Test des anciens navigateurs
 
@@ -253,8 +227,8 @@ Vous disposez désormais des connaissances nécessaires pour utiliser en toute c
 ## Voir aussi
 
 - [Utilisation des requêtes de fonctionnalités en CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/) (en)
-- [Mises en page avancées avec les boîtes flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
-- [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+- [Mises en page avancées avec les boîtes flexibles](/fr/docs/Glossary/Flexbox)
+- [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [Utilisation de la grille CSS : Prise en charge des navigateurs sans Grid](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/) (en)
 - [Un tutoriel qui utilise la version IE10 et 11 de Grid](https://24ways.org/2012/css3-grid-layout/) (en)
 - [Dois-je essayer d'utiliser la mise en œuvre de la grille dans IE10 ?](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/) (en)
@@ -262,18 +236,3 @@ Vous disposez désormais des connaissances nécessaires pour utiliser en toute c
 - [Utilisation des requêtes de fonctionnalités (vidéo)](https://gridbyexample.com/learn/2016/12/24/learning-grid-day24/) (en)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
-
-## Dans ce module
-
-- [Introduction à la mise en page en CSS](/fr/docs/Learn/CSS/CSS_layout/Introduction)
-- [Cours normal](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/fr/docs/Learn/CSS/CSS_layout/Grids)
-- [Les boîtes flottantes](/fr/docs/Learn/CSS/CSS_layout/Floats)
-- [Le positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning)
-- [Disposition sur plusieurs colonnes](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Responsive design](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Guide du débutant des Media Queries](/fr/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Méthodes de mises en page traditionnelles](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Prise en charge des anciens navigateurs](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Compréhension fondamentale de la mise en page](/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

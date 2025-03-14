@@ -5,9 +5,22 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView
 
 {{JSRef}}
 
-O **`DataView`** provê uma interface de baixo nível para leitura e escrita de múltiplos tipos de número em um {{jsxref("ArrayBuffer")}}, independentemente da [extremidade (_endianness_) da plataforma](/pt-BR/docs/Glossario/Endianness).
+O **`DataView`** provê uma interface de baixo nível para leitura e escrita de múltiplos tipos de número em um {{jsxref("ArrayBuffer")}}, independentemente da [extremidade (_endianness_) da plataforma](/pt-BR/docs/Glossary/Endianness).
 
-{{EmbedInteractiveExample("pages/js/dataview-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: DataView Constructor")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+// Create a couple of views
+const view1 = new DataView(buffer);
+const view2 = new DataView(buffer, 12, 4); // From byte 12 for the next 4 bytes
+view1.setInt8(12, 42); // Put 42 in slot 12
+
+console.log(view2.getInt8(0));
+// Expected output: 42
+```
 
 ## Sintaxe
 
@@ -45,7 +58,7 @@ Você pode pensar nesse objeto retornado como um "intérprete" de um array buffe
 Formatos de números _Multi-byte_ são representados de maneira diferente na memória, dependendo da arquitetura da máquina, veja {{Glossary("Endianness")}} para mais informações. Assessores de `DataView` fornecem controle explícito de como o dado será acessado, independente do _endianness_ da arquitetura em execução.
 
 ```js
-var littleEndian = (function() {
+var littleEndian = (function () {
   var buffer = new ArrayBuffer(2);
   new DataView(buffer).setInt16(0, 256, true /* littleEndian */);
   // Int16Array uses the platform's endianness.
@@ -61,14 +74,16 @@ Como JavaScript atualmente não inclui suporte padrão para valores inteiros de 
 ```js
 function getUint64(dataview, byteOffset, littleEndian) {
   // split 64-bit number into two 32-bit (4-byte) parts
-  const left =  dataview.getUint32(byteOffset, littleEndian);
-  const right = dataview.getUint32(byteOffset+4, littleEndian);
+  const left = dataview.getUint32(byteOffset, littleEndian);
+  const right = dataview.getUint32(byteOffset + 4, littleEndian);
 
   // combine the two 32-bit values
-  const combined = littleEndian? left + 2**32*right : 2**32*left + right;
+  const combined = littleEndian
+    ? left + 2 ** 32 * right
+    : 2 ** 32 * left + right;
 
   if (!Number.isSafeInteger(combined))
-    console.warn(combined, 'exceeds MAX_SAFE_INTEGER. Precision may be lost');
+    console.warn(combined, "exceeds MAX_SAFE_INTEGER. Precision may be lost");
 
   return combined;
 }
@@ -83,9 +98,9 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
   const right = dataview.getUint32(byteOffset + 4, littleEndian);
 
   // combine the two 32-bit values as their hex string representations
-  const combined = littleEndian ?
-    right.toString(16) + left.toString(16).padStart(8, '0') :
-    left.toString(16) + right.toString(16).padStart(8, '0');
+  const combined = littleEndian
+    ? right.toString(16) + left.toString(16).padStart(8, "0")
+    : left.toString(16) + right.toString(16).padStart(8, "0");
 
   return BigInt(`0x${combined}`);
 }
@@ -95,11 +110,11 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 
 Todas as instâncias de `DataView` herdam {{jsxref("DataView.prototype")}} e permitem a adição de propriedades a todos os objetos DataView.
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Properties')}}
+<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Properties') -->
 
 ## Métodos
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Methods')}}
+<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Methods') -->
 
 ## Exemplo
 
@@ -113,15 +128,11 @@ dv.getInt16(1); //42
 
 ## Especificações
 
-| Especificação                                                                        | Status                           | Comentário                         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------- |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Substituído pelo ECMAScript 6      |
-| {{SpecName('ES6', '#sec-dataview-constructor', 'DataView')}}     | {{Spec2('ES6')}}             | Definição inicial no ECMA standard |
-| {{SpecName('ESDraft', '#sec-dataview-constructor', 'DataView')}} | {{Spec2('ESDraft')}}     |                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.DataView")}}
+{{Compat}}
 
 ## Notas de compatibilidade
 

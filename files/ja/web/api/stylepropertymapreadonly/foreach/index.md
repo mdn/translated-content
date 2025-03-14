@@ -41,7 +41,7 @@ StylePropertyMapReadOnly.forEach(function callback(currentValue[, index[, array]
 
 ```js
 // button 要素を取得
-const buttonEl = document.querySelector('.example');
+const buttonEl = document.querySelector(".example");
 
 // `computedStyleMap` ですべての計算済みスタイルが取得できます
 const allComputedStyles = buttonEl.computedStyleMap();
@@ -49,7 +49,7 @@ const allComputedStyles = buttonEl.computedStyleMap();
 // forEach ですべてのプロパティ/値の組に対してコードを実行することができます
 allComputedStyles.forEach((elem, index, arr) => {
   // code to run for each pair
-})
+});
 ```
 
 ## 仕様書

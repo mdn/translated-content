@@ -1,26 +1,52 @@
 ---
 title: rotateX()
 slug: Web/CSS/transform-function/rotateX
-original_slug: Web/CSS/transform-function/rotateX()
 ---
 
 {{CSSRef}}
 
 **`rotateX()`** 函数定义了一个转换，它可以让一个元素围绕横坐标 (水平轴) 旋转，而不会对其进行变形。它的结果是一个{{cssxref("&lt;transform-function&gt;")}}数据类型。
 
-{{EmbedInteractiveExample("pages/css/function-rotateX.html")}}
+{{InteractiveExample("CSS Demo: rotateX()")}}
+
+```css interactive-example-choice
+transform: rotateX(0);
+```
+
+```css interactive-example-choice
+transform: rotateX(45deg);
+```
+
+```css interactive-example-choice
+transform: rotateX(-0.2turn);
+```
+
+```css interactive-example-choice
+transform: rotateX(3.142rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 旋转轴围绕原点旋转，而这个原点通过{{cssxref("transform-origin")}} 属性来定义。
 
 > **备注：** `rotateX(a)` 相当于 `rotate3d(1, 0, 0, a)`.
 
-> **备注：** 与二维平面上的旋转不同，三维旋转的组合通常是不可交换的。换句话说，三维旋转的应用顺序，将会影响最终结果。
+> [!NOTE]
+> 与二维平面上的旋转不同，三维旋转的组合通常是不可交换的。换句话说，三维旋转的应用顺序，将会影响最终结果。
 
 ## 语法
 
 **`rotateX()`** 引起的旋转量由{{cssxref("&lt;angle&gt;")}}指定。如果为正，则顺时针方向移动；如果为负，则逆时针方向移动。
 
-```
+```css
 rotateX(a)
 ```
 
@@ -112,7 +138,7 @@ div {
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}

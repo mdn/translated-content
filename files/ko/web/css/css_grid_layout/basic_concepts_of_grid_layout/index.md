@@ -1,13 +1,11 @@
 ---
 title: Basic concepts of grid layout
-slug: Web/CSS/CSS_Grid_Layout/Basic_concepts_of_grid_layout
-tags:
-  - CSS
-  - CSS 그리드
-  - 가이드
-  - 레이아웃
+slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 ---
-[CSS 그리드 레이아웃(Grid Layout)](/ko/docs/Web/CSS/CSS_Grid_Layout)은 CSS에 2차원의 그리드 시스템을 도입했습니다. 그리드는 주요 페이지 영역을 설계하거나 작은 사용자 인터페이스 요소를 배치하는 데 사용할 수 있습니다. 이 문서에서는 CSS 그리드 레이아웃 및 CSS 그리드 레이아웃 레벨 1 명세서에 포함된 새로운 기술 용어를 소개합니다. 이번 개요에 소개된 기능은 나머지 안내 문서에서 자세히 설명합니다.
+
+{{CSSRef}}
+
+[CSS 그리드 레이아웃(Grid Layout)](/ko/docs/Web/CSS/CSS_grid_layout)은 CSS에 2차원의 그리드 시스템을 도입했습니다. 그리드는 주요 페이지 영역을 설계하거나 작은 사용자 인터페이스 요소를 배치하는 데 사용할 수 있습니다. 이 문서에서는 CSS 그리드 레이아웃 및 CSS 그리드 레이아웃 레벨 1 명세서에 포함된 새로운 기술 용어를 소개합니다. 이번 개요에 소개된 기능은 나머지 안내 문서에서 자세히 설명합니다.
 
 ## 그리드가 무엇인가요?
 
@@ -23,7 +21,7 @@ tags:
 
 ### 콘텐츠를 담기 위한 추가 트랙의 생성
 
-그리드 레이아웃으로 그리드를 명시적으로 정의할 수 있지만, 지정된 그리드 밖에 따로 추가되는 콘텐츠에 대응하여 필요에 따라 행과 열을 추가할 수 있도록 표준 문서에서 기술하고 있습니다. 일 예로 “컨테이너에 들어갈 수 있는 만큼의 세로 열”을 추가하는 기능이 포함되었습니다.
+그리드 레이아웃으로 그리드를 명시적으로 정의할 수 있지만, 지정된 그리드 밖에 따로 추가되는 콘텐츠에 대응하여 필요에 따라 행과 열을 추가할 수 있도록 표준 문서에서 기술하고 있습니다. 일 예로 "컨테이너에 들어갈 수 있는 만큼의 세로 열"을 추가하는 기능이 포함되었습니다.
 
 ### 정렬 제어
 
@@ -33,7 +31,7 @@ tags:
 
 그리드 셀에 하나 이상의 아이템을 배치하거나 그리드 영역을 부분적으로 서로 겹치게 할 수 있습니다. 이렇게 생긴 중첩의 우선순위는 나중에 {{cssxref("z-index")}} 프로퍼티로 제어할 수 있습니다.
 
-그리드는 아주 강력한 기능을 담은 표준이라서 [플랙스박스(flexbox)](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout)와 같은 CSS의 다른 부분과 결합하면, 이전에는 CSS에서 불가능했던 레이아웃을 만들 수 있도록 도와줍니다. 이 모든 것은 **그리드 컨테이너**에서 그리드를 생성하는 것부터 시작합니다.
+그리드는 아주 강력한 기능을 담은 표준이라서 [플랙스박스(flexbox)](/ko/docs/Web/CSS/CSS_flexible_box_layout)와 같은 CSS의 다른 부분과 결합하면, 이전에는 CSS에서 불가능했던 레이아웃을 만들 수 있도록 도와줍니다. 이 모든 것은 **그리드 컨테이너**에서 그리드를 생성하는 것부터 시작합니다.
 
 ## 그리드 컨테이너
 
@@ -60,7 +58,9 @@ tags:
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -86,9 +86,9 @@ tags:
 
 {{ EmbedLiveSample('그리드_컨테이너', '200', '330') }}
 
-바로 밑에 있는 모든 자식 요소는 이제 그리드 아이템이 됩니다. 이렇게 하면 웹 브라우저에서 보이는 모습이 그리드로 전환하기 전과 별 차이가 없는데, 이는 그리드가 우선 아이템을 단일 열 형태의 구조를 가진 그리드를 생성하였기 때문입니다. 이 시점에서 Firefox Developer Edition에서 작업하는 것이 유용하실 텐데, 여기엔 개발자 도구의 일부로 [Grid Inspector](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) 기능을 제공합니다. Firefox에서 이 예제의 그리드를 검사해보면, `grid` 값 바로 옆에 작은 아이콘이 보이실 겁니다. 이 아이콘을 클릭하면 해당 요소의 그리드가 브라우저 창 위에 중첩되어 표시됩니다.
+바로 밑에 있는 모든 자식 요소는 이제 그리드 아이템이 됩니다. 이렇게 하면 웹 브라우저에서 보이는 모습이 그리드로 전환하기 전과 별 차이가 없는데, 이는 그리드가 우선 아이템을 단일 열 형태의 구조를 가진 그리드를 생성하였기 때문입니다. 이 시점에서 Firefox Developer Edition에서 작업하는 것이 유용하실 텐데, 여기엔 개발자 도구의 일부로 [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) 기능을 제공합니다. Firefox에서 이 예제의 그리드를 검사해보면, `grid` 값 바로 옆에 작은 아이콘이 보이실 겁니다. 이 아이콘을 클릭하면 해당 요소의 그리드가 브라우저 창 위에 중첩되어 표시됩니다.
 
-![그리드를 살펴보기 위해 개발자 도구에 있는 그리드 하이라이터를 사용하는 모습](https://mdn.mozillademos.org/files/14631/1-grid-inspector.png)
+![그리드를 살펴보기 위해 개발자 도구에 있는 그리드 하이라이터를 사용하는 모습](1-grid-inspector.png)
 
 CSS 그리드 레이아웃을 배우면서 작업하실 때 이 도구를 사용하면 그리드에서 발생하는 상황을 시각적으로 더 잘 파악하실 수 있습니다.
 
@@ -98,7 +98,7 @@ CSS 그리드 레이아웃을 배우면서 작업하실 때 이 도구를 사용
 
 그리드의 행과 열은 {{cssxref("grid-template-columns")}} 및 {{cssxref("grid-template-rows")}} 프로퍼티로 정의합니다. 이렇게 하면, 그리드 트랙도 함께 정의됩니다. *그리드 트랙*은 그리드에 그려진 두 라인 사이의 공간을 나타냅니다. 아래 그림에서는 그리드의 첫 번째 가로 행에 놓여있는 트랙이 돋보이게 표시된 것을 확인하실 수 있습니다.
 
-![](https://mdn.mozillademos.org/files/14637/1_Grid_Track.png)
+![](1_grid_track.png)
 
 앞의 예제에서 `grid-template-columns` 프로퍼티를 추가하고 세로 열에 놓이게 될 트랙의 크기를 정의해 줍니다.
 
@@ -122,7 +122,9 @@ CSS 그리드 레이아웃을 배우면서 작업하실 때 이 도구를 사용
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -170,7 +172,9 @@ CSS 그리드 레이아웃을 배우면서 작업하실 때 이 도구를 사용
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -279,7 +283,9 @@ CSS 그리드 레이아웃을 배우면서 작업하실 때 이 도구를 사용
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -320,7 +326,9 @@ CSS 그리드 레이아웃을 배우면서 작업하실 때 이 도구를 사용
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -347,7 +355,8 @@ CSS 그리드 레이아웃을 배우면서 작업하실 때 이 도구를 사용
 ```html
 <div class="wrapper">
   <div>One</div>
-  <div>Two
+  <div>
+    Two
     <p>I have some more content in.</p>
     <p>This makes me taller than 100 pixels.</p>
   </div>
@@ -363,7 +372,7 @@ CSS 그리드 레이아웃을 배우면서 작업하실 때 이 도구를 사용
 
 그리드를 정의할 때 라인이 아닌 그리드 트랙을 정의한다는 점을 명심해야 합니다. 그러면 그리드는 아이템을 배치할 때 쓸 수 있게 번호가 매겨진 라인을 자동으로 제공합니다. 아래 그림처럼, 그리드가 세 개의 세로 열(Column)과 두 개의 가로 행(Row)으로 이루어져 있다면, 네 개의 Grid Line이 Column으로 자리 잡게 됩니다.
 
-![번호가 매겨진 그리드 라인을 보여주는 다이어그램.](https://mdn.mozillademos.org/files/14761/1_diagram_numbered_grid_lines.png)
+![번호가 매겨진 그리드 라인을 보여주는 다이어그램.](1_diagram_numbered_grid_lines.png)
 
 라인은 문서의 작성 모드에 따라 번호가 매겨집니다. 왼쪽에서 오른쪽으로 쓰는 언어에서는 라인 1이 그리드의 왼쪽에 있습니다. 반대로 오른쪽에서 왼쪽으로 쓰는 언어에서는 그리드의 오른쪽에 있게 됩니다. 또한, 라인에 이름도 지정할 수 있으며, 자세한 방법은 이 시리즈의 후반부에서 살펴보겠습니다.
 
@@ -407,7 +416,9 @@ CSS 그리드 레이아웃을 배우면서 작업하실 때 이 도구를 사용
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -433,19 +444,19 @@ CSS 그리드 레이아웃을 배우면서 작업하실 때 이 도구를 사용
 
 {{ EmbedLiveSample('라인을_이용한_아이템_배치', '230', '420') }}
 
-파이어폭스 개발자 도구에 있는 [Grid Inspector](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)를 사용하면 아이템이 그리드 라인에 어떻게 배치되어 있는지 이해하기 훨씬 쉽다는 점도 잊지 마십시오.
+Firefox 개발자 도구에 있는 [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)를 사용하면 아이템이 그리드 라인에 어떻게 배치되어 있는지 이해하기 훨씬 쉽다는 점도 잊지 마십시오.
 
 ## 그리드 셀
 
 *그리드 셀*은 그리드에 있는 가장 작은 구성원입니다. 개념상 테이블에 있는 셀과 비슷합니다. 앞의 예제에서 보셨듯이, 부모 요소에 그리드를 정의하면 자식 아이템은 지정된 그리드 셀에 각자 하나씩 나열되어 배치됩니다. 아래 그림에서는 그리드의 첫 번째 셀을 강조 표시했습니다.
 
-![강조 표시된 그리드의 첫 번째 셀](https://mdn.mozillademos.org/files/14643/1_Grid_Cell.png)
+![강조 표시된 그리드의 첫 번째 셀](1_grid_cell.png)
 
 ## 그리드 영역
 
 아이템은 행 또는 열 방향 어느 쪽으로든 하나 이상의 셀에 걸쳐있을 수 있으며 이렇게 해서 *그리드 영역*을 만듭니다. 그리드 영역은 직사각형이어야 하며, 예를 들어 L 자 형태의 영역을 생성할 수 없습니다. 아래 강조 표시된 그리드 영역은 2개의 행과 2개의 열 트랙에 걸쳐 있습니다.
 
-![그리드 영역의 예](https://mdn.mozillademos.org/files/14645/1_Grid_Area.png)
+![그리드 영역의 예](1_grid_area.png)
 
 ## 경계 여백
 
@@ -471,7 +482,9 @@ CSS 그리드 레이아웃을 배우면서 작업하실 때 이 도구를 사용
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -517,7 +530,7 @@ CSS 그리드 레이아웃을 배우면서 작업하실 때 이 도구를 사용
 </div>
 ```
 
-![문서 흐름에 따라 표시된 중첩 그리드](https://mdn.mozillademos.org/files/14641/1_Nested_Grids_in_flow.png)
+![문서 흐름에 따라 표시된 중첩 그리드](1_nested_grids_in_flow.png)
 
 만약에 `box1에` `display: grid를` 설정하면, 여기에 트랙을 정의할 수 있게 되면서 또 하나의 그리드를 생성하게 됩니다. 이렇게 해서 그 밑의 아이템들은 새 그리드 정의에 따라 배치됩니다.
 
@@ -533,7 +546,9 @@ CSS 그리드 레이아웃을 배우면서 작업하실 때 이 도구를 사용
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -565,7 +580,8 @@ CSS 그리드 레이아웃을 배우면서 작업하실 때 이 도구를 사용
 
 레벨 1 그리드 표준에는 *서브 그리드(subgrid)*라는 기능이 있어서 부모 요소에 있는 그리드 트랙의 정의를 중첩된 그리드에도 적용해서 생성할 수 있도록 하였습니다.
 
-> **참고:** 서브 그리드는 아직 모든 브라우저에서 구현되지 않았고 나중에 표준이 변경될 수도 있습니다.
+> [!NOTE]
+> 서브 그리드는 아직 모든 브라우저에서 구현되지 않았고 나중에 표준이 변경될 수도 있습니다.
 
 최근 작성된 표준에 따르면, 위 중첩 그리드 예시에 썼던 `display: grid` 대신 `display: subgrid`를 써주고 트랙의 정의는 제거합니다. 이렇게 하면 중첩된 그리드는 부모 요소의 그리드 트랙을 그대로 참고해서 아이템을 배치하게 됩니다.
 
@@ -617,7 +633,9 @@ CSS 그리드 레이아웃을 배우면서 작업하실 때 이 도구를 사용
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -683,7 +701,9 @@ CSS 그리드 레이아웃을 배우면서 작업하실 때 이 도구를 사용
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -711,54 +731,54 @@ CSS 그리드 레이아웃을 배우면서 작업하실 때 이 도구를 사용
 
 ## 다음 단계
 
-이 글에서는 Grid 레이아웃 표준 문서에 나와 있는 내용을 아주 간단히 살펴보았습니다. 코드 예제를 좀 더 연구해 보시고, [안내서의 다음 부분으로 넘어가서 CSS 그리드 레이아웃의 세부 사항을 조금 더 심도 있게 살펴보시기 바랍니다](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃과_다른_레이아웃_방법과의_관계).
+이 글에서는 Grid 레이아웃 표준 문서에 나와 있는 내용을 아주 간단히 살펴보았습니다. 코드 예제를 좀 더 연구해 보시고, [안내서의 다음 부분으로 넘어가서 CSS 그리드 레이아웃의 세부 사항을 조금 더 심도 있게 살펴보시기 바랍니다](/ko/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods).
 
 1. [**CSS**](/ko/docs/Web/CSS)
 2. [**CSS Reference**](/ko/docs/Web/CSS/Reference)
-3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout)
+3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout)
 4. **가이드**
 
-    1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃의_기본_개념)
-    2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃과_다른_레이아웃_방법과의_관계)
-    3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_그리드의_라인을_기준으로_한_아이템_배치)
-    4. [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_템플릿_영역)
-    5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout/이름이_주어진_그리드_라인을_이용한_레이아웃)
-    6. [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7. [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8. [Grids, logical values and writing modes](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9. [CSS Grid Layout and Accessibility](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-    10. [CSS Grid Layout and Progressive Enhancement](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-    11. [Realizing common layouts using grids](/ko/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+   1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+   2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+   3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+   4. [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+   5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+   6. [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+   7. [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+   8. [Grids, logical values and writing modes](/ko/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+   9. [CSS Grid Layout and Accessibility](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+   10. [CSS Grid Layout and Progressive Enhancement](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+   11. [Realizing common layouts using grids](/ko/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 5. **프로퍼티**
 
-    1. [grid](/ko/docs/Web/CSS/grid)
-    2. [grid-area](/ko/docs/Web/CSS/grid-area)
-    3. [grid-auto-columns](/ko/docs/Web/CSS/grid-auto-columns)
-    4. [grid-auto-flow](/ko/docs/Web/CSS/grid-auto-flow)
-    5. [grid-auto-rows](/ko/docs/Web/CSS/grid-auto-rows)
-    6. [grid-column](/ko/docs/Web/CSS/grid-column)
-    7. [grid-column-end](/ko/docs/Web/CSS/grid-column-end)
-    8. [grid-column-gap](/ko/docs/Web/CSS/grid-column-gap)
-    9. [grid-column-start](/ko/docs/Web/CSS/grid-column-start)
-    10. [grid-gap](/ko/docs/Web/CSS/grid-gap)
-    11. [grid-row](/ko/docs/Web/CSS/grid-row)
-    12. [grid-row-end](/ko/docs/Web/CSS/grid-row-end)
-    13. [grid-row-gap](/ko/docs/Web/CSS/grid-row-gap)
-    14. [grid-row-start](/ko/docs/Web/CSS/grid-row-start)
-    15. [grid-template](/ko/docs/Web/CSS/grid-template)
-    16. [grid-template-areas](/ko/docs/Web/CSS/grid-template-areas)
-    17. [grid-template-columns](/ko/docs/Web/CSS/grid-template-columns)
-    18. [grid-template-rows](/ko/docs/Web/CSS/grid-template-rows)
+   1. [grid](/ko/docs/Web/CSS/grid)
+   2. [grid-area](/ko/docs/Web/CSS/grid-area)
+   3. [grid-auto-columns](/ko/docs/Web/CSS/grid-auto-columns)
+   4. [grid-auto-flow](/ko/docs/Web/CSS/grid-auto-flow)
+   5. [grid-auto-rows](/ko/docs/Web/CSS/grid-auto-rows)
+   6. [grid-column](/ko/docs/Web/CSS/grid-column)
+   7. [grid-column-end](/ko/docs/Web/CSS/grid-column-end)
+   8. [grid-column-gap](/ko/docs/Web/CSS/column-gap)
+   9. [grid-column-start](/ko/docs/Web/CSS/grid-column-start)
+   10. [grid-gap](/ko/docs/Web/CSS/gap)
+   11. [grid-row](/ko/docs/Web/CSS/grid-row)
+   12. [grid-row-end](/ko/docs/Web/CSS/grid-row-end)
+   13. [grid-row-gap](/ko/docs/Web/CSS/row-gap)
+   14. [grid-row-start](/ko/docs/Web/CSS/grid-row-start)
+   15. [grid-template](/ko/docs/Web/CSS/grid-template)
+   16. [grid-template-areas](/ko/docs/Web/CSS/grid-template-areas)
+   17. [grid-template-columns](/ko/docs/Web/CSS/grid-template-columns)
+   18. [grid-template-rows](/ko/docs/Web/CSS/grid-template-rows)
 
 6. **용어집**
 
-    1. [Grid](/ko/docs/Glossary/Grid)
-    2. [Grid lines](/ko/docs/Glossary/Grid_lines)
-    3. [Grid tracks](/ko/docs/Glossary/Grid_tracks)
-    4. [Grid cell](/ko/docs/Glossary/Grid_cell)
-    5. [Grid areas](/ko/docs/Glossary/Grid_areas)
-    6. [Gutters](/ko/docs/Glossary/Gutters)
-    7. [Grid Axis](/ko/docs/Glossary/Grid_Axis)
-    8. [Grid row](/ko/docs/Glossary/Grid_rows)
-    9. [Grid column](/ko/docs/Glossary/Grid_column)
+   1. [Grid](/ko/docs/Glossary/Grid)
+   2. [Grid lines](/ko/docs/Glossary/Grid_Lines)
+   3. [Grid tracks](/ko/docs/Glossary/Grid_Tracks)
+   4. [Grid cell](/ko/docs/Glossary/Grid_Cell)
+   5. [Grid areas](/ko/docs/Glossary/Grid_Areas)
+   6. [Gutters](/ko/docs/Glossary/Gutters)
+   7. [Grid Axis](/ko/docs/Glossary/Grid_Axis)
+   8. [Grid row](/ko/docs/Glossary/Grid_Row)
+   9. [Grid column](/ko/docs/Glossary/Grid_Column)

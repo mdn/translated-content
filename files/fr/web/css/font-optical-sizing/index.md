@@ -1,11 +1,6 @@
 ---
 title: font-optical-sizing
 slug: Web/CSS/font-optical-sizing
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/font-optical-sizing
 ---
 
 {{CSSRef}}
@@ -14,7 +9,8 @@ La propriété CSS **`font-optical-sizing`** permet de contrôler la façon dont
 
 Par exemple, les textes de petites tailles sont généralement affichés avec des traits plus épais et des empattements (_serifs_) plus grands. En revanche, les textes plus grands sont souvent plus fins et utilisent plus de contrastes entre les traits fins et épais.
 
-> **Note :** L'axe de variation pour la taille optique est représenté par `opsz` dans {{cssxref("font-variation-settings")}}.
+> [!NOTE]
+> L'axe de variation pour la taille optique est représenté par `opsz` dans {{cssxref("font-variation-settings")}}.
 
 ## Syntaxe
 
@@ -50,9 +46,9 @@ font-optical-sizing: unset;
 
 ```css
 @font-face {
-    src: url('AmstelvarAlpha-VF.ttf');
-    font-family:'Amstelvar';
-    font-style: normal;
+  src: url("AmstelvarAlpha-VF.ttf");
+  font-family: "Amstelvar";
+  font-style: normal;
 }
 
 p {
@@ -68,15 +64,20 @@ p {
 ### HTML
 
 ```html
-<p class="optical-sizing">Ce paragraphe est dimensionné pour une meilleure
- lecture. C'est le comportement par défaut.</p>
+<p class="optical-sizing">
+  Ce paragraphe est dimensionné pour une meilleure lecture. C'est le
+  comportement par défaut.
+</p>
 
-<p class="no-optical-sizing">Ce paragraphe n'est pas adapté pour une
- meilleure lecture. Vous devriez voir une différence avec les navigateurs
- qui prennent en charge cette fonctionnalité.</p>
+<p class="no-optical-sizing">
+  Ce paragraphe n'est pas adapté pour une meilleure lecture. Vous devriez voir
+  une différence avec les navigateurs qui prennent en charge cette
+  fonctionnalité.
+</p>
 ```
 
-> **Note :** La police utilisée dans cet exemple possède un dimensionnement optique et est disponible sous licence libre [en téléchargement sur GitHub](https://github.com/TypeNetwork/Amstelvar/releases).
+> [!NOTE]
+> La police utilisée dans cet exemple possède un dimensionnement optique et est disponible sous licence libre [en téléchargement sur GitHub](https://github.com/TypeNetwork/Amstelvar/releases).
 
 ## Spécifications
 

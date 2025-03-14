@@ -1,35 +1,46 @@
 ---
 title: filterUnits
 slug: Web/SVG/Attribute/filterUnits
+l10n:
+  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
 ---
 
-« [SVG Attribute reference home](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-filterUnits 属性定义{{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }} 和{{ SVGAttr("height") }}使用的坐标系系统。
+**`filterUnits`** 属性定义了 {{SVGAttr("x")}}、{{SVGAttr("y")}}、{{SVGAttr("width")}} 和 {{SVGAttr("height")}} 属性的坐标系。
 
-如果 filterUnits 属性未指定，那么效果如同指定了值为`objectBoundingBox.`
+该属性可用于以下 SVG 元素：
 
-## Usage context
+- {{SVGElement("filter")}}
 
-| Categories         | _None_                                                                                             |
-| ------------------ | -------------------------------------------------------------------------------------------------- |
-| Value              | `userSpaceOnUse` \| **`objectBoundingBox`**                                                        |
-| Animatable         | Yes                                                                                                |
-| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/filters.html#FilterElementFilterUnitsAttribute) |
+## 使用说明
 
-- userSpaceOnUse
-  - : {{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }} 和 {{ SVGAttr("height") }} 表示当前坐标系统中的值，这些值表示{{ SVGElement("filter") }}元素在当前用户坐标系中的位置和大小 (例如通过{{ SVGAttr("filter") }}引用该{{ SVGElement("filter") }}元素的元素所在的坐标系系统).
-- objectBoundingBox
-  - : 在这种情况下，{{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }} 和 {{ SVGAttr("height") }}biao 表示引用{{ SVGElement("filter") }}元素的元素的 baow 包围盒的分数或百分比。
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">值</th>
+      <td><code>userSpaceOnUse</code> | <code>objectBoundingBox</code></td>
+    </tr>
+    <tr>
+      <th scope="row">默认值</th>
+      <td><code>objectBoundingBox</code></td>
+    </tr>
+    <tr>
+      <th scope="row">动画性</th>
+      <td>是</td>
+    </tr>
+  </tbody>
+</table>
 
-## Examples
-
-## Elements
-
-下面这些元素可以使用 filterUnits 属性：
-
-- {{ SVGElement("filter") }}
+- `userSpaceOnUse`
+  - : {{SVGAttr("x")}}、{{SVGAttr("y")}}、{{SVGAttr("width")}} 和 {{SVGAttr("height")}} 表示当前坐标系中的数值，该坐标系基于引用 {{SVGElement("filter")}} 元素时的用户坐标系（即通过 {{SVGAttr("filter")}} 属性引用 {{SVGElement("filter")}} 元素的元素所处的用户坐标系）。
+- `objectBoundingBox`
+  - : 在这种情况下，{{SVGAttr("x")}}、{{SVGAttr("y")}}、{{SVGAttr("width")}} 和 {{SVGAttr("height")}} 表示引用元素边界框的分数或百分比。
 
 ## 规范
 
 {{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}

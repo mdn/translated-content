@@ -1,12 +1,12 @@
 ---
 title: tabindex
 slug: Web/HTML/Global_attributes/tabindex
-translation_of: Web/HTML/Global_attributes/tabindex
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
-> **Примечание:** Максимальное значение для tabindex не должно превышать 32767 (W3C 17.11.1)
+> [!NOTE]
+> Максимальное значение для tabindex не должно превышать 32767 (W3C 17.11.1)
 
 [Глобальный атрибут](/ru/docs/Web/HTML/%D0%9E%D0%B1%D1%89%D0%B8%D0%B5_%D0%B0%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D1%8B) **tabindex** - целое число, определяющее должен ли данный элемент участвовать в последовательной навигации по всей странице с помощью клавиатуры, в каком порядке. Содержит одно из нескольких видов значений:
 
@@ -16,7 +16,7 @@ translation_of: Web/HTML/Global_attributes/tabindex
 
 Элементы со значением 0, некорректным значением, или элементы с отсутствующим значением **tabindex** должны быть расположены после элементов с положительным целым числом.
 
-Для более полного объяснения навигации смотри [данную статью](/ru/docs/Web/HTML/Focus_management_in_HTML).
+Для более полного объяснения навигации смотри [данную статью](/ru/docs/Web/API/Document/hasFocus).
 
 ## Спецификации
 
@@ -30,4 +30,4 @@ translation_of: Web/HTML/Global_attributes/tabindex
 
 - Все [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 - {{domxref("HTMLElement.tabindex")}} отражает этот атрибут.
-- Проблемы доступности (юзабилити): смотри [Don’t Use Tabindex Greater than 0 | Adrian Roselli](http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html).
+- Проблемы доступности (юзабилити): смотри [Don't Use Tabindex Greater than 0 | Adrian Roselli](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html).

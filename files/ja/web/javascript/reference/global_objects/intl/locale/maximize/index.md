@@ -7,12 +7,27 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
 
 **`Intl.Locale.prototype.maximize()`** メソッドは、既存の値に基づいてロケールの言語、文字体系、地域の最も可能性の近い値を取得します。
 
-{{EmbedInteractiveExample("pages/js/intl-locale-prototype-maximize.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Locale.prototype.maximize()")}}
+
+```js interactive-example
+const english = new Intl.Locale("en");
+const korean = new Intl.Locale("ko");
+const arabic = new Intl.Locale("ar");
+
+console.log(english.maximize().baseName);
+// Expected output: "en-Latn-US"
+
+console.log(korean.maximize().baseName);
+// Expected output: "ko-Kore-KR"
+
+console.log(arabic.maximize().baseName);
+// Expected output: "ar-Arab-EG"
+```
 
 ## 構文
 
 ```js
-maximize()
+maximize();
 ```
 
 ### 返値
@@ -28,7 +43,7 @@ maximize()
 ### maximize の使用
 
 ```js
-let myLocale = new Intl.Locale("ja", {hourCycle: "h24", calendar: "gregory"});
+let myLocale = new Intl.Locale("ja", { hourCycle: "h24", calendar: "gregory" });
 console.log(myLocale.baseName); // "ja" と表示
 console.log(myLocale.toString()); // "ja-u-ca-gregory-hc-h24" と表示
 let myLocMaximized = myLocale.maximize();

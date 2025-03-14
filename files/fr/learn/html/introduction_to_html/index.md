@@ -1,18 +1,6 @@
 ---
 title: Introduction au HTML
 slug: Learn/HTML/Introduction_to_HTML
-tags:
-  - Codage
-  - HTML
-  - Introduction au HTML
-  - Landing
-  - Liens
-  - Structure
-  - Texte
-  - head
-  - sémantique
-translation_of: Learn/HTML/Introduction_to_HTML
-original_slug: Apprendre/HTML/Introduction_à_HTML
 ---
 
 {{LearnSidebar}}
@@ -23,7 +11,8 @@ Dans son cœur, {{glossary("HTML")}} est un langage vraiment simple, composé d'
 
 Il n'y a pas besoin de connaissances préalables en HTML pour parcourir ce module, mais vous devez au moins être familier des ordinateurs et d'une utilisation passive du Web (càd. juste le parcourir et consommer son contenu). Vous devriez avoir un environnement de travail en place tel que détaillé dans [cet article](/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software) et comprendre comment créer et gérer des fichiers tel qu'expliqué dans [cet autre article](/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files) — ces deux articles font partie du module [Démarrer avec le Web](/fr/docs/Learn/Getting_started_with_the_web) qui s'adresse aux débutants.
 
-> **Note :** Si vous travaillez sur un ordinateur, tablette ou autre appareil sur lequel il n'est pas posssible de créer vos propres fichiers, vous pourrez essayer (la plupart) des exemples de code grâce à des outils en ligne comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
+> [!NOTE]
+> Si vous travaillez sur un ordinateur, tablette ou autre appareil sur lequel il n'est pas posssible de créer vos propres fichiers, vous pourrez essayer (la plupart) des exemples de code grâce à des outils en ligne comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guides
 

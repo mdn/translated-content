@@ -42,7 +42,7 @@ _Herda propriedades de seus parentes {{domxref("Node")}}, e seu próprio parente
 - {{ domxref("NonDocumentTypeChildNode.nextElementSibling") }}
   - : É um {{ domxref("Element") }}, o elemento seguido imediatamente do dito na árvore, ou `null` se não há nó irmão.
 - {{ domxref("Element.outerHTML") }} {{experimental_inline}}
-  - : É um {{domxref("DOMString")}} representando a marcação do elemento incluindo seu conteúdo. Quando usado como um [setter](/pt-BR/docs/Web/JavaScript/Reference/Functions/set), substitui o elemento com nós analisados a partir de uma determinada [string](/pt-BR/docs/Glossario/String).
+  - : É um {{domxref("DOMString")}} representando a marcação do elemento incluindo seu conteúdo. Quando usado como um [setter](/pt-BR/docs/Web/JavaScript/Reference/Functions/set), substitui o elemento com nós analisados a partir de uma determinada [string](/pt-BR/docs/Glossary/String).
 - {{ domxref("NonDocumentTypeChildNode.previousElementSibling") }}
   - : É um {{ domxref("Element") }}, o elemento precedido imediatamente do dito na árvore, ou `nulo` se não há elemento irmão.
 - {{ domxref("Element.scrollHeight") }} {{experimental_inline}} {{readOnlyInline}}
@@ -97,9 +97,9 @@ _Herda métodos de seus parentes {{domxref("Node")}}, e seu proprío parente, {{
   - : Recupera o valor do atributo nomeado do nó atual e o retorna como um {{jsxref("Object")}}.
 - {{ domxref("Element.getAttributeNS()") }}
   - : Recupera o valor do atributo com o nome especificado e [namespace](/pt-BR/docs/Mozilla/Tech/XUL/Namespaces), do nó atual e o retorna como um {{jsxref("Object")}}.
-- {{ domxref("Element.getAttributeNode()") }} {{obsolete_inline}}
+- {{ domxref("Element.getAttributeNode()") }}
   - : Recupera a representação do nó de um atributo nomeado do nó atual e o retorna como um {{ domxref("Attr") }}.
-- {{ domxref("Element.getAttributeNodeNS()") }} {{obsolete_inline}}
+- {{ domxref("Element.getAttributeNodeNS()") }}
   - : Recupera a representação de nó do atributo com o nome especificado e [namespace](/pt-BR/docs/Mozilla/Tech/XUL/Namespaces), do nó atual e o retorna como um {{ domxref("Attr") }}.
 - {{ domxref("Element.getBoundingClientRect()") }} {{experimental_inline}}
   - : ...
@@ -133,7 +133,7 @@ _Herda métodos de seus parentes {{domxref("Node")}}, e seu proprío parente, {{
   - : Remove um atributo nomeado do nó atual.
 - {{ domxref("Element.removeAttributeNS()") }}
   - : Remove o atributo com o nome especificado ou [namespace](/pt-BR/docs/Mozilla/Tech/XUL/Namespaces), do nó atual.
-- {{ domxref("Element.removeAttributeNode()") }} {{obsolete_inline}}
+- {{ domxref("Element.removeAttributeNode()") }}
   - : Remove a representação do nó do atributo nomeado do nó atual.
 - {{ domxref("EventTarget.removeEventListener()") }}
   - : Remove um ouvinte de eventos do elemento.
@@ -147,9 +147,9 @@ _Herda métodos de seus parentes {{domxref("Node")}}, e seu proprío parente, {{
   - : Define o valor de um atributo nomeado do nó atual.
 - {{ domxref("Element.setAttributeNS()") }}
   - : Define o valor do atributo com o nome especificado e [namespace](/pt-BR/docs/Mozilla/Tech/XUL/Namespaces), do nó atual.
-- {{ domxref("Element.setAttributeNode()") }} {{obsolete_inline}}
+- {{ domxref("Element.setAttributeNode()") }}
   - : Define a representação do nó de um atributo nomeado do nó atual.
-- {{ domxref("Element.setAttributeNodeNS()") }} {{obsolete_inline}}
+- {{ domxref("Element.setAttributeNodeNS()") }}
   - : Define a representação do nó do atributo com o nome especificado e [namespace](/pt-BR/docs/Mozilla/Tech/XUL/Namespaces), do nó atual.
 - {{ domxref("Element.setCapture()") }} {{non-standard_inline}}
   - : Define a captura de evento do mouse, redirecionando todos os eventos de mouse para este elemento.
@@ -158,23 +158,8 @@ _Herda métodos de seus parentes {{domxref("Node")}}, e seu proprío parente, {{
 
 ## Especificações
 
-| Specification                                                                                                | Status                                       | Comment                                                                                                                                                                                                                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("Web Animations", '', '')}}                                                         | {{Spec2("Web Animations")}}         | Adicionado o método `getAnimationPlayers()`.                                                                                                                                                                                                                                                                                    |
-| {{SpecName('Undo Manager', '', 'Element')}}                                                     | {{Spec2('Undo Manager')}}             | Adicionadas as propriedades `undoScope` e `undoManager`.                                                                                                                                                                                                                                                                        |
-| {{SpecName('Pointer Events', '#extensions-to-the-element-interface', 'Element')}} | {{Spec2('Pointer Events')}}         | Adicionados os seguintes manipuladores de evento: `ongotpointercapture` e `onlostpointercapture`. Adicionados os seguintes métodos: `setPointerCapture()` e `releasePointerCapture()`.                                                                                                                                          |
-| {{SpecName('Selectors API Level 2', '#interface-definitions', 'Element')}}         | {{Spec2('Selectors API Level 2')}} | Adicionados os seguintes métodos: `matches()` (implementado como `mozMatchesSelector()`), `find()`, `findAll()`.                                                                                                                                                                                                                |
-| {{SpecName('Selectors API Level 1', '#interface-definitions', 'Element')}}         | {{Spec2('Selectors API Level 1')}} | Adicionados os seguintes métodos: `querySelector()` e `querySelectorAll()`.                                                                                                                                                                                                                                                     |
-| {{SpecName('Pointer Lock', 'index.html#element-interface', 'Element')}}             | {{Spec2('Pointer Lock')}}             | Adicionado o método `requestPointerLock()`.                                                                                                                                                                                                                                                                                     |
-| {{SpecName('Fullscreen', '#api', 'Element')}}                                                 | {{Spec2('Fullscreen')}}             | Adicionado o método `requestFullscreen()`.                                                                                                                                                                                                                                                                                      |
-| {{SpecName('DOM Parsing', '#extensions-to-the-element-interface', 'Element')}}     | {{Spec2('DOM Parsing')}}             | Adicionadas as seguintes propriedades: `innerHTML`, e `outerHTML`. Adicionado o seguinte método: `insertAdjacentHTML()`.                                                                                                                                                                                                        |
-| {{SpecName('CSSOM View', '#extensions-to-the-element-interface', 'Element')}}     | {{Spec2('CSSOM View')}}             | Adicionadas as seguintes propriedades: `scrollTop`, `scrollLeft`, `scrollWidth`, `scrollHeight`, `clientTop`, `clientLeft`, `clientWidth`, e `clientHeight`. Adicionados os seguintes métodos: `getClientRects()`, `getBoundingClientRect()`, e `scrollIntoView()`.                                                             |
-| {{SpecName('Element Traversal', '#ecmascript-bindings', 'Element')}}                 | {{Spec2('Element Traversal')}}     | Adicionada herança da interface {{domxref("ElementTraversal")}}.                                                                                                                                                                                                                                                       |
-| {{SpecName('DOM WHATWG', '#interface-element', 'Element')}}                             | {{Spec2('DOM WHATWG')}}             | Removidos os seguintes métodos: `closest()`, `setIdAttribute()`, `setIdAttributeNS()`, e `setIdAttributeNode()`. Removida a propriedade `schemaTypeInfo`. Modificado o valor de retorno de `getElementsByTag()` e `getElementsByTagNS()`. Movida `hasAttributes()` da interface `Node` para esta.                               |
-| {{SpecName('DOM3 Core', 'core.html#ID-745549614', 'Element')}}                         | {{Spec2('DOM3 Core')}}                 | Adicionados os seguintes métodos: `setIdAttribute()`, `setIdAttributeNS()`, e `setIdAttributeNode()`. Estes métodos nunca foram implementados e foram removidos em especificações posteriores. Adicionada a propriedade `schemaTypeInfo`. Esta propriedade nunca foi implementada e foi removida em especificações posteriores. |
-| {{SpecName('DOM2 Core', 'core.html#ID-745549614', 'Element')}}                         | {{Spec2('DOM2 Core')}}                 | O método `normalize()` foi movido para {{domxref("Node")}}.                                                                                                                                                                                                                                                                |
-| {{SpecName('DOM1', 'level-one-core.html#ID-745549614', 'Element')}}                     | {{Spec2('DOM1')}}                     | Definição inicial.                                                                                                                                                                                                                                                                                                              |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Element")}}
+{{Compat}}

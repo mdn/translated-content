@@ -5,35 +5,97 @@ slug: Web/CSS/scroll-margin-top
 
 {{CSSRef}}
 
-`scroll-margin-top` 属性定义了滚动捕捉区域的顶边距，用于在捕捉视口上捕捉该盒子。滚动捕捉区域是由变换后的边框决定的，找到它的矩形边界框（在滚动容器的坐标空间轴中轴对齐），然后添加指定的起始点。
+**`scroll-margin-top`** 属性定义了滚动吸附区域的上外边距，此区域用于将此盒吸附至滚动口。滚动吸附区域的确定方法为：取变换后的边框盒，求其矩形包围盒（与滚动容器的坐标空间中的轴对齐），再加上指定的外边距。
 
-{{EmbedInteractiveExample("pages/css/scroll-margin-top.html")}}
+{{InteractiveExample("CSS Demo: scroll-margin-top")}}
+
+```css interactive-example-choice
+scroll-margin-top: 0;
+```
+
+```css interactive-example-choice
+scroll-margin-top: 20px;
+```
+
+```css interactive-example-choice
+scroll-margin-top: 2em;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="scroller">
+    <div>1</div>
+    <div id="example-element">2</div>
+    <div>3</div>
+  </div>
+  <div class="info">Scroll »</div>
+</section>
+```
+
+```css interactive-example
+.default-example .info {
+  inline-size: 100%;
+  padding: 0.5em 0;
+  font-size: 90%;
+  writing-mode: vertical-rl;
+}
+
+.scroller {
+  text-align: left;
+  height: 250px;
+  width: 270px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid black;
+  scroll-snap-type: y mandatory;
+}
+
+.scroller > div {
+  flex: 0 0 250px;
+  background-color: rebeccapurple;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.scroller > div:nth-child(even) {
+  background-color: #fff;
+  color: rebeccapurple;
+}
+```
 
 ## 语法
 
 ```css
-/* <length> values */
+/* <length> 值 */
 scroll-margin-top: 10px;
 scroll-margin-top: 1em;
 
-/* Global values */
+/* 全局值 */
 scroll-margin-top: inherit;
 scroll-margin-top: initial;
+scroll-margin-top: revert;
+scroll-margin-top: revert-layer;
 scroll-margin-top: unset;
 ```
 
-### 值
+### 取值
 
-- `<length>`
-  - : 滚动容器顶部边缘的起点
+- {{CSSXref("&lt;length&gt;")}}
+  - : 滚动容器的上外边距。
 
-## 标准定义
+## 形式定义
 
-{{cssinfo}}
+{{CSSInfo}}
 
-## 标准语法
+## 形式语法
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## 规范
 
@@ -42,3 +104,8 @@ scroll-margin-top: unset;
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [CSS 滚动吸附](/zh-CN/docs/Web/CSS/CSS_scroll_snap)
+- [用 CSS 滚动吸附明确控制滚动](https://web.developers.google.cn/articles/css-scroll-snap)

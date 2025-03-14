@@ -1,19 +1,26 @@
 ---
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
-tags:
-  - Característica del lenguaje
-  - Declaración
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Statements/for...in
-original_slug: Web/JavaScript/Referencia/Sentencias/for...in
 ---
 
 {{jsSidebar("Statements")}}
 
 La instrucción {{JSxRef("Sentencias/for...in", "for-in")}} itera sobre todas las {{JSxRef("../Enumerability_and_ownership_of_properties", "propiedades enumerables")}} de un objeto que está codificado por cadenas (ignorando los codificados por {{JSxRef("Objetos_globales/Symbol", "Símbolos")}}, incluidas las propiedades enumerables heredadas.
 
-{{EmbedInteractiveExample("pages/js/statement-forin.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For...In")}}
+
+```js interactive-example
+const object = { a: 1, b: 2, c: 3 };
+
+for (const property in object) {
+  console.log(`${property}: ${object[property]}`);
+}
+
+// Expected output:
+// "a: 1"
+// "b: 2"
+// "c: 3"
+```
 
 La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
 
@@ -66,7 +73,7 @@ Es posible que se utilice de forma más práctica con fines de depuración, ya q
 El siguiente bucle `for...in` itera sobre todas las propiedades enumerables que no son símbolos del objeto y registra una cadena de los nombres de propiedad y sus valores.
 
 ```js
-var obj = {a: 1, b: 2, c: 3};
+var obj = { a: 1, b: 2, c: 3 };
 
 for (const prop in obj) {
   console.log(`obj.${prop} = ${obj[prop]}`);
@@ -83,10 +90,10 @@ for (const prop in obj) {
 La siguiente función ilustra el uso de {{JSxRef("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} — las propiedades heredadas no se muestran.
 
 ```js
-var triangle = {a: 1, b: 2, c: 3};
+var triangle = { a: 1, b: 2, c: 3 };
 
 function ColoredTriangle() {
-  this.color = 'red';
+  this.color = "red";
 }
 
 ColoredTriangle.prototype = triangle;
@@ -105,31 +112,11 @@ for (const prop in obj) {
 
 ## Especificaciones
 
-| Especificación                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'declaración for...in')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.for_in")}}
-
-### Compatibilidad: expresiones iniciadoras en modo estricto
-
-Antes de Firefox 40, era posible utilizar una expresión iniciadora (`i=0`) en un bucle `for...in`:
-
-```js example-bad
-var obj = {a: 1, b: 2, c: 3};
-for (var i = 0 in obj) {
-  console.log(obj[i]);
-}
-// 1
-// 2
-// 3
-```
-
-Este comportamiento no estándar ahora se ignora en la versión 40 y posteriores, y presentará un {{JSxRef("SyntaxError")}} ("{{JSxRef("errors/Invalid_for-in_initializer", "iniciador for...in no válido", "las declaraciones de encabezado del bucle for-in posiblemente no tengan iniciadores")}} en {{JSxRef("Strict_mode", "modo estricto")}} ({{bug(748550)}} y {{bug(1164741)}}").
-
-Otros motores como v8 (Chrome), Chakra (IE/Edge) y JSC (WebKit/Safari) están investigando si eliminar también el comportamiento no estándar.
+{{Compat}}
 
 ## Ve también
 

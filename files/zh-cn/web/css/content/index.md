@@ -3,36 +3,57 @@ title: content
 slug: Web/CSS/content
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 ## 概要
 
-CSS 的 `content` CSS 属性用于在元素的 {{ cssxref("::before") }} 和 {{ cssxref("::after") }} 伪元素中插入内容。使用`content` 属性插入的内容都是匿名的*[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)。*
-
-{{cssinfo}}
+CSS 的 `content` CSS 属性用于在元素的 {{ cssxref("::before") }} 和 {{ cssxref("::after") }} 伪元素中插入内容。使用 `content` 属性插入的内容都是匿名的[_可替换元素_](/zh-CN/docs/Web/CSS/Replaced_element)。
 
 ## 语法
 
-```
-Formal syntax: {{csssyntax("content")}}
-```
+```css
+/* 不能与其他值组合的关键字 */
+content: normal;
+content: none;
 
-```
-content: normal                                /* Keywords that cannot be combined with other values */
-content: none
+/* <content-replacement>：<image> 值 */
+content: url("http://www.example.com/test.png");
+content: linear-gradient(#e66465, #9198e5);
+content: image-set("image1x.png" 1x, "image2x.png" 2x);
 
-content: 'prefix'                              /* <string> value, non-latin characters must be encoded e.g. \00A0 for &nbsp; */
-content: url(http://www.example.com/test.html) /* <uri> value */
-content: chapter_counter                       /* <counter> values */
-content: attr(value string)                    /* attr() value linked to the HTML attribute value */
-content: open-quote                            /* Language- and position-dependant keywords */
-content: close-quote
-content: no-open-quote
-content: no-close-quote
+/* 语音输出：“/”后为替代文本  */
+content: url("../img/test.png") / "这是替代文本";
 
-content: open-quote chapter_counter            /* Except for normal and none, several values can be used simultaneously */
+/* <string> 值 */
+content: "unparsed text";
 
-content: inherit
+/* <counter> 值，后跟可选的 <list-style-type> */
+content: counter(chapter_counter);
+content: counter(chapter_counter, upper-roman);
+content: counters(section_counter, ".");
+content: counters(section_counter, ".", decimal-leading-zero);
+
+/* attr() 值会链接到 HTML 属性值 */
+content: attr(href);
+
+/* <quote> 值 */
+content: open-quote;
+content: close-quote;
+content: no-open-quote;
+content: no-close-quote;
+
+/* <content-list>：content 值的列表。
+可以同时使用多个值 */
+content: "prefix" url(http://www.example.com/test.png);
+content: "prefix" url("/img/test.png") "suffix" / "Alt text";
+content: open-quote counter(chapter_counter);
+
+/* 全局值 */
+content: inherit;
+content: initial;
+content: revert;
+content: revert-layer;
+content: unset;
 ```
 
 ### 值
@@ -54,23 +75,41 @@ content: inherit
 - `no-open-quote` | `no-close-quote`
   - : 不会生产任何内容，但是会改变（增加或降低）引号层级。
 
+## 形式定义
+
+{{cssinfo}}
+
+## 形式语法
+
+{{csssyntax}}
+
 ## 示例
 
-### 代码举例 - 标题和引号
+### 标题和引号
 
 #### HTML
 
 ```html
 <h1>5</h1>
-<p> We shall start this with a quote from Sir Tim Berners-Lee,
-    <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">
-        I was lucky enough to invent the Web at the time when the Internet already existed - and had for a decade and a half.</q>  We must understand that there is nothing fundamentally wrong with building on the contributions of others.
+<p>
+  We shall start this with a quote from Sir Tim Berners-Lee,
+  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">
+    I was lucky enough to invent the Web at the time when the Internet already
+    existed - and had for a decade and a half.</q
+  >
+  We must understand that there is nothing fundamentally wrong with building on
+  the contributions of others.
 </p>
 
 <h1>6</h1>
-<p> Here we shall quote the Mozilla Manifesto,
-    <q cite="http://www.mozilla.org/en-US/about/manifesto/">
-        Individuals must have the ability to shape the Internet and their own experiences on the Internet.</q> And so, we can infer that contributing to the open web, can protect our own individual experiences on it.
+<p>
+  Here we shall quote the Mozilla Manifesto,
+  <q cite="http://www.mozilla.org/en-US/about/manifesto/">
+    Individuals must have the ability to shape the Internet and their own
+    experiences on the Internet.</q
+  >
+  And so, we can infer that contributing to the open web, can protect our own
+  individual experiences on it.
 </p>
 ```
 
@@ -78,21 +117,27 @@ content: inherit
 
 ```css
 q {
-    color: #00008B;
-    font-style: italic;
+  color: #00008b;
+  font-style: italic;
 }
 
-q::before   { content: open-quote }
-q::after    { content: close-quote }
+q::before {
+  content: open-quote;
+}
+q::after {
+  content: close-quote;
+}
 
-h1::before  { content: "Chapter "; }
+h1::before {
+  content: "Chapter ";
+}
 ```
 
-#### 输出
+#### 结果
 
-{{ EmbedLiveSample('代码举例_-_标题和引号', 460, 100) }}
+{{ EmbedLiveSample('标题和引号', 460, 100) }}
 
-### 代码举例 - link 前面加一个 icon
+### link 前面加一个 icon
 
 #### HTML
 
@@ -103,18 +148,21 @@ h1::before  { content: "Chapter "; }
 #### CSS
 
 ```css
-a::before{
-    content: url(http://www.mozilla.org/favicon.ico) " MOZILLA: ";
-    font:    x-small Arial,freeSans,sans-serif;
-    color:   gray;
+a::before {
+  content: url(http://www.mozilla.org/favicon.ico) " MOZILLA: ";
+  font:
+    x-small Arial,
+    freeSans,
+    sans-serif;
+  color: gray;
 }
 ```
 
-#### 输出
+#### 结果
 
-{{ EmbedLiveSample('代码举例_link_前面加一个_icon', 200, 60) }}
+{{ EmbedLiveSample('link 前面加一个 icon', 200, 60) }}
 
-### 代码举例 - 自定义列表后面加加文字
+### 自定义列表后面加加文字
 
 #### HTML
 
@@ -133,31 +181,31 @@ a::before{
 /* first import the icon from a suitable site */
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 
-.brightIdea li::after{
-    content: '\1f4a1';
-    font-family: 'entypo', sans-serif;
+.brightIdea li::after {
+  content: "\1f4a1";
+  font-family: "entypo", sans-serif;
 }
 ```
 
-#### 输出
+#### 结果
 
-{{EmbedLiveSample('代码举例_-_自定义列表后面加加文字', 300, 100)}}
+{{EmbedLiveSample('自定义列表后面加加文字', 300, 100)}}
 
-### Code sample - class based example
+### class based example
 
-#### HTML Content
+#### HTML
 
 ```html
 <h2>Paperback best sellers</h2>
 <ol>
-    <li>Political thriller</li>
-    <li class="newEntry">Halloween Stories</li>
-    <li>My Biography</li>
-    <li class="newEntry">Vampire Romance</li>
+  <li>Political thriller</li>
+  <li class="newEntry">Halloween Stories</li>
+  <li>My Biography</li>
+  <li class="newEntry">Vampire Romance</li>
 </ol>
 ```
 
-#### CSS Content
+#### CSS
 
 ```css
 /* use a class rather that an element selector to give more flexibility.
@@ -165,62 +213,59 @@ Simple string example, but don't forget add a leading space in the text string
 for spacing purposes  */
 
 .newEntry::after {
-    content: " New!";
-    color: red;
+  content: " New!";
+  color: red;
 }
 ```
 
-#### Output
+#### 结果
 
-{{ EmbedLiveSample('Code_sample_-_class_based_example', 300, 200) }}
+{{ EmbedLiveSample('class based example', 300, 200) }}
 
-### Code sample - rich link styling
+### rich link styling
 
-#### HTML Content
+#### HTML
 
 ```html
 <ul>
-    <li><a id="moz" href="http://www.mozilla.org/">
-        Mozilla Home Page</a></li>
-    <li><a id="mdn" href="https://developer.mozilla.org/">
-        Mozilla Developer Network</a></li>
-    <li><a id="w3c" href="http://www.w3c.org/">
-        World Wide Web Consortium</a></li>
+  <li><a id="moz" href="http://www.mozilla.org/"> Mozilla Home Page</a></li>
+  <li>
+    <a id="mdn" href="https://developer.mozilla.org/">
+      Mozilla Developer Network</a
+    >
+  </li>
+  <li><a id="w3c" href="http://www.w3c.org/"> World Wide Web Consortium</a></li>
 </ul>
 ```
 
-#### CSS Content
+#### CSS
 
 ```css
 a {
-    text-decoration: none;
-    border-bottom: 3px dotted navy;
+  text-decoration: none;
+  border-bottom: 3px dotted navy;
 }
 
 a::after {
-    content: " (" attr(id) ")";
+  content: " (" attr(id) ")";
 }
 
 #moz::before {
-    content:url(https://mozorg.cdn.mozilla.net/media/img/favicon.ico) ;
+  content: url(https://mozorg.cdn.mozilla.net/media/img/favicon.ico);
 }
 
 #mdn::before {
-    content:url(https://mdn.mozillademos.org/files/7691/mdn-favicon16.png) ;
-}
-
-#w3c::before {
-    content:url(http://w3c.org/2008/site/images/favicon.ico) ;
+  content: url(mdn-favicon16.png);
 }
 
 li {
-    margin: 1em;
+  margin: 1em;
 }
 ```
 
-#### Output
+#### 结果
 
-{{ EmbedLiveSample('Code_sample_-_rich_link_styling', 340, 200) }}
+{{ EmbedLiveSample('rich link styling', 340, 200) }}
 
 ## 规范
 
@@ -230,6 +275,6 @@ li {
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - {{ Cssxref("::after") }}, {{ Cssxref("::before") }}, {{ Cssxref("quotes") }}

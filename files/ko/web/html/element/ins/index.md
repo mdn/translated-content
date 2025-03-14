@@ -1,21 +1,61 @@
 ---
 title: <ins>
 slug: Web/HTML/Element/ins
-tags:
-  - Element
-  - HTML
-  - HTML edits
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/ins
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<ins>` 요소**는 문서에 추가된 텍스트의 범위를 나타냅니다. {{htmlelement("del")}} 요소를 사용하면 삭제된 텍스트의 범위를 나타낼 수 있습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/ins.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;ins&gt;", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
+```html interactive-example
+<p>&ldquo;You're late!&rdquo;</p>
+<del>
+  <p>&ldquo;I apologize for the delay.&rdquo;</p>
+</del>
+<ins cite="../howtobeawizard.html" datetime="2018-05">
+  <p>&ldquo;A wizard is never late &hellip;&rdquo;</p>
+</ins>
+```
+
+```css interactive-example
+del,
+ins {
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+
+del {
+  background-color: #fbb;
+}
+
+ins {
+  background-color: #d4fcbc;
+}
+
+del::before,
+ins::before {
+  position: absolute;
+  left: 0.5rem;
+  font-family: monospace;
+}
+
+del::before {
+  content: "−";
+}
+
+ins::before {
+  content: "+";
+}
+
+p {
+  margin: 0 1.8rem 0;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -38,7 +78,7 @@ translation_of: Web/HTML/Element/ins
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -63,9 +103,9 @@ translation_of: Web/HTML/Element/ins
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : 회의록, 이슈 추적 시스템의 티켓 번호 등 변경점을 설명하는 리소스의 {{glossary("URI")}}.
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : 변경이 발생한 일시. 유효한 날짜 문자열이어야 하며, 시간을 지정할 경우 역시 유효해야 합니다. 유효하지 않은 값을 지정할 경우 일시를 지정하지 않은 것과 같습니다. 유효한 문자열의 종류는 [HTML에서 사용하는 날짜와 시간 형식](/ko/docs/Web/HTML/Date_and_time_formats) 문서에서 확인할 수 있습니다.
 
 ## 예제
@@ -106,7 +146,7 @@ ins::after {
 스크린 리더 사용자 일부는 지나치게 자세한 안내를 유발할 수 있는 콘텐츠의 표현을 의도적으로 꺼놓습니다. 그러므로 이 방식을 남용해선 안되며, 콘텐츠의 이해에 삽입 여부가 꼭 필요할 때만 사용해야 합니다.
 
 - [Short note on making your mark (more accessible) | The Paciello Group](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
-- [Tweaking Text Level Styles | Adrian Roselli](http://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## 명세
 
@@ -114,7 +154,7 @@ ins::after {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.ins")}}
+{{Compat}}
 
 ## 같이 보기
 

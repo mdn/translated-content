@@ -3,22 +3,24 @@ title: CSS 選擇器
 slug: Glossary/CSS_Selector
 ---
 
+{{GlossarySidebar}}
+
 **CSS 選擇器**是 CSS 規則的一部分。它能讓你選定要調整哪個（或哪些）元素的樣式。
 
 ## 範例
 
 ```html
-<div> I am inside of a div element. </div>
-<p> I am inside of a paragraph element. </p>
+<div>I am inside of a div element.</div>
+<p>I am inside of a paragraph element.</p>
 ```
 
 ```css
 div {
- color: green;
+  color: green;
 }
 
 p {
- color: red;
+  color: red;
 }
 ```
 
@@ -41,10 +43,10 @@ p {
 
 - 複合選擇器
 
-  - [鄰接同層選擇器](/zh-TW/docs/Web/CSS/Adjacent_sibling_selectors) `A + B`
-  - [通用同層選擇器](/zh-TW/docs/Web/CSS/General_sibling_selectors) `A ~ B`
-  - [直屬選擇器](/zh-TW/docs/Web/CSS/Child_selectors) `A > B`
-  - [後代選擇器](/zh-TW/docs/Web/CSS/Descendant_selectors) `A B`
+  - [鄰接同層選擇器](/zh-TW/docs/Web/CSS/Next-sibling_combinator) `A + B`
+  - [通用同層選擇器](/zh-TW/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
+  - [直屬選擇器](/zh-TW/docs/Web/CSS/Child_combinator) `A > B`
+  - [後代選擇器](/zh-TW/docs/Web/CSS/Descendant_combinator) `A B`
 
 - [虛擬元素](/zh-TW/docs/Web/CSS/Pseudo-elements)
 - [虛擬類別](/zh-TW/docs/Web/CSS/Pseudo-classes)

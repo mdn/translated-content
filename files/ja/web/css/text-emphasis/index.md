@@ -1,13 +1,47 @@
 ---
 title: text-emphasis
 slug: Web/CSS/text-emphasis
+l10n:
+  sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
 {{CSSRef}}
 
 **`text-emphasis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 (空白や制御文字を除く) テキストに圏点を適用します。これは {{cssxref("text-emphasis-style")}} と {{cssxref("text-emphasis-color")}} の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)です。
 
-{{EmbedInteractiveExample("pages/css/text-emphasis.html")}}
+{{InteractiveExample("CSS Demo: text-emphasis")}}
+
+```css interactive-example-choice
+text-emphasis: none;
+```
+
+```css interactive-example-choice
+text-emphasis: filled red;
+```
+
+```css interactive-example-choice
+text-emphasis: "x";
+```
+
+```css interactive-example-choice
+text-emphasis: filled double-circle #ffb703;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+```
 
 `text-emphasis` プロパティは、 {{cssxref("text-decoration")}} とは大きく異なります。 `text-decoration` プロパティは継承されず、指定される装飾は要素全体にわたって適用されます。しかし、 `text-emphasis` は継承されます。これは、子孫に対して圏点を変更できることを意味します。
 
@@ -29,11 +63,11 @@ slug: Web/CSS/text-emphasis
 text-emphasis: none; /* 圏点なし */
 
 /* <string> 値 */
-text-emphasis: 'x';
-text-emphasis: '点';
-text-emphasis: '\25B2';
-text-emphasis: '*' #555;
-text-emphasis: 'foo'; /* 使用するべきではない。 'f' のみとして計算や表示が行われる */
+text-emphasis: "x";
+text-emphasis: "点";
+text-emphasis: "\25B2";
+text-emphasis: "*" #555;
+text-emphasis: "foo"; /* 使用するべきではない。 'f' のみとして計算や表示が行われる */
 
 /* キーワード値 */
 text-emphasis: filled;
@@ -48,6 +82,7 @@ text-emphasis: filled sesame #555;
 text-emphasis: inherit;
 text-emphasis: initial;
 text-emphasis: revert;
+text-emphasis: revert-layer;
 text-emphasis: unset;
 ```
 
@@ -82,9 +117,9 @@ text-emphasis: unset;
 
 {{csssyntax}}
 
-## Examples
+## 例
 
-<h3 id="A_heading_with_emphasis_shape_and_color">強調して色を付けた見出し</h3>
+### 強調して色を付けた見出し
 
 この例は、見出しの各文字に三角形の圏点を付けて描画します。
 
@@ -92,8 +127,7 @@ text-emphasis: unset;
 
 ```css
 h2 {
-  -webkit-text-emphasis: triangle #D55;
-  text-emphasis: triangle #D55;
+  text-emphasis: triangle #d55;
 }
 ```
 
@@ -103,7 +137,7 @@ h2 {
 <h2>これは重要です！</h2>
 ```
 
-#### Result
+#### 結果
 
 {{EmbedLiveSample("A_heading_with_emphasis_shape_and_color", 500, 90)}}
 

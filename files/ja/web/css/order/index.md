@@ -7,7 +7,60 @@ slug: Web/CSS/order
 
 **`order`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスコンテナーやグリッドコンテナーの中で、アイテムを並べる順序を設定します。コンテナー内のアイテムは `order` の値の昇順に配置され、さらにソースコード内の順序で配置されます。
 
-{{EmbedInteractiveExample("pages/css/order.html")}}
+{{InteractiveExample("CSS Demo: order")}}
+
+```css interactive-example-choice
+order: 0;
+```
+
+```css interactive-example-choice
+order: 3;
+```
+
+```css interactive-example-choice
+order: -1;
+```
+
+```css interactive-example-choice
+order: 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Box 1:</div>
+  <div style="order: 1">Box 2: <code>order: 1;</code></div>
+  <div style="order: 2">Box 3: <code>order: 2;</code></div>
+  <div style="order: 2">Box 4: <code>order: 2;</code></div>
+  <div style="order: 3">Box 5: <code>order: 3;</code></div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  max-height: 300px;
+  display: flex;
+  flex-flow: column;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  flex: 1;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+
+#example-element::after {
+  content: attr(style);
+  outline: 2px dashed;
+  font-family: monospace;
+}
+```
 
 ## 構文
 
@@ -32,11 +85,11 @@ order: unset;
 
 ## アクセシビリティの考慮事項
 
-`order` プロパティを使うと、視覚上の表示と DOM の順序が一致しなくなります。これは、画面リーダーなどの支援技術を使っている視覚障害者に不利な影響を及ぼします。視覚的な (CSS の) 順序が重要である場合は、画面リーダーの利用者は正しい読み上げ順序でアクセスすることができなくなります。
+`order` プロパティを使うと、視覚上の表示と DOM の順序が一致しなくなります。これは、スクリーンリーダーなどの支援技術を使っている視覚障害者に不利な影響を及ぼします。視覚的な (CSS の) 順序が重要である場合は、スクリーンリーダーの利用者は正しい読み上げ順序でアクセスすることができなくなります。
 
 - [Flexbox & the keyboard navigation disconnect — Tink](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
 - [Source Order Matters | Adrian Roselli](https://adrianroselli.com/2015/09/source-order-matters.html)
-- [MDN "WCAG を理解する ― ガイドライン 1.3 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways)
+- [MDN "WCAG を理解する ― ガイドライン 1.3 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
 - [Understanding Success Criterion 1.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
 
 ## 公式定義
@@ -68,10 +121,22 @@ order: unset;
 #### CSS
 
 ```css
-main { display: flex;  text-align:center; }
-main > article { flex:1;        order: 2; }
-main > nav     { width: 200px;  order: 1; }
-main > aside   { width: 200px;  order: 3; }
+main {
+  display: flex;
+  text-align: center;
+}
+main > article {
+  flex: 1;
+  order: 2;
+}
+main > nav {
+  width: 200px;
+  order: 1;
+}
+main > aside {
+  width: 200px;
+  order: 3;
+}
 ```
 
 #### 結果
@@ -88,6 +153,6 @@ main > aside   { width: 200px;  order: 3; }
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS フレックスボックスガイド: _[フレックスアイテムの並べ替え](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
-- CSS グリッドガイド: _[CSS グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)_
+- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS フレックスボックスガイド: _[フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_
+- CSS グリッドガイド: _[グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)_

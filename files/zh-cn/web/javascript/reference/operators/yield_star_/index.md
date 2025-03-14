@@ -53,7 +53,7 @@ console.log(iterator.next()); // { value: undefined, done: true }
 
 ### 委托给其他可迭代对象
 
-除了生成器对象这一种可迭代对象，`yield*` 还可以 `yield` 其它任意的可迭代对象，比如说数组、字符串、`arguments` 对象等等。
+除了生成器对象这一种可迭代对象，`yield*` 还可以 `yield` 其他任意的可迭代对象，比如说数组、字符串、`arguments` 对象等等。
 
 ```js
 function* g3() {
@@ -95,9 +95,9 @@ console.log(iterator.next()); // { value: 1, done: false }
 console.log(iterator.next()); // { value: 2, done: false }
 console.log(iterator.next()); // { value: 3, done: false }
 console.log(iterator.next()); // { value: undefined, done: true },
-                              // 此时 g4() 返回了 { value: "foo", done: true }
+// 此时 g4() 返回了 { value: "foo", done: true }
 
-console.log(result);          // "foo"
+console.log(result); // "foo"
 ```
 
 ## 规范
@@ -108,9 +108,9 @@ console.log(result);          // "foo"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [迭代器协议](/zh-CN/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
-- {{jsxref("Operators/function*", "function* expression")}}
+- [`function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("Operators/yield", "yield")}}

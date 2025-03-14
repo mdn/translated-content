@@ -1,25 +1,50 @@
 ---
-title: ':only-child'
+title: :only-child
 slug: Web/CSS/:only-child
 ---
 
 {{CSSRef}}
 
-CSS[伪类](/zh-CN/docs/CSS/Pseudo-classes)`:only-child` 匹配没有任何兄弟元素的元素。等效的选择器还可以写成 `:first-child:last-child`或者`:nth-child(1):nth-last-child(1)`,当然，前者的权重会低一点。
+**`:only-child`** CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示没有任何兄弟元素的元素。这与 `:first-child:last-child` 或 `:nth-child(1):nth-last-child(1)` 相同，但前者具有更小的权重性。
 
-```css
-/* Selects each <p>, but only if it is the */
-/* only child of its parent */
-p:only-child {
-  background-color: lime;
+{{InteractiveExample("CSS Demo: :only-child", "tabbed-shorter")}}
+
+```css interactive-example
+li:only-child {
+  color: fuchsia;
+}
+
+b:only-child {
+  text-decoration: underline;
 }
 ```
 
-> **备注：** 在起初定义，被选择的元素必须拥有一个父级元素。从 Selectors Level 4 开始，这不再是必须的了。
+```html interactive-example
+<p>Stars expected to attend:</p>
+<ol>
+  <li>Robert Downey, Jr.</li>
+</ol>
+
+<p>Stars yet to confirm:</p>
+<ol>
+  <li>Scarlett Johansson</li>
+  <li>Samuel L. Jackson</li>
+  <li>Chris Pratt</li>
+</ol>
+
+<p>The ceremony is going to be held in <b>The Dolby Theatre</b>.</p>
+```
+
+> [!NOTE]
+> 按照最初的定义，被选择的元素必须拥有一个父级元素。从选择器 Level 4 开始，这不再是必须的了。
 
 ## 语法
 
-{{csssyntax}}
+```css
+:only-child {
+  /* ... */
+}
+```
 
 ## 示例
 
@@ -28,24 +53,31 @@ p:only-child {
 #### HTML
 
 ```html
-<main>
-  <div>
-    <i>I am a lonely only child.</i>
-  </div>
+<div>
+  <div>我是唯一子元素。</div>
+</div>
 
+<div>
+  <div>我是第一个兄弟元素。</div>
+  <div>我是第二个兄弟元素。</div>
   <div>
-    <i>I have siblings.</i><br>
-    <b>So do I!</b><br>
-    <span>I also have siblings, <span>but this is an only child.</span></span>
+    我是第三个兄弟元素。
+    <div>但这又是唯一的子元素。</div>
   </div>
-</main>
+</div>
 ```
 
 #### CSS
 
 ```css
-main :only-child {
+div:only-child {
   color: red;
+}
+
+div {
+  display: inline-block;
+  margin: 6px;
+  outline: 1px solid;
 }
 ```
 
@@ -59,16 +91,18 @@ main :only-child {
 
 ```html
 <ol>
-  <li>First
+  <li>
+    第一
     <ul>
-      <li>This list has just one element.</li>
+      <li>该列表仅有一个元素。</li>
     </ul>
   </li>
-  <li>Second
+  <li>
+    第二
     <ul>
-      <li>This list has three elements.</li>
-      <li>This list has three elements.</li>
-      <li>This list has three elements.</li>
+      <li>该列表有三个元素。</li>
+      <li>该列表有三个元素。</li>
+      <li>该列表有三个元素。</li>
     </ul>
   </li>
 </ol>
@@ -80,6 +114,7 @@ main :only-child {
 li li {
   list-style-type: disc;
 }
+
 li:only-child {
   color: red;
   list-style-type: square;

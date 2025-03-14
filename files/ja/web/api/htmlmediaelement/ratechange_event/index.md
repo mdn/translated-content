@@ -1,62 +1,52 @@
 ---
-title: 'HTMLMediaElement: ratechange イベント'
+title: "HTMLMediaElement: ratechange イベント"
+short-title: ratechange
 slug: Web/API/HTMLMediaElement/ratechange_event
+l10n:
+  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
 {{APIRef("HTMLMediaElement")}}
 
 `ratechange` イベントは、再生レートが変更されたときに発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">対象</th>
-      <td>要素</td>
-    </tr>
-    <tr>
-      <th scope="row">既定のアクション</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>{{domxref("GlobalEventHandlers.onratechange")}}</td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("ratechange", (event) => {});
+
+onratechange = (event) => {};
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
-これらの例では、`HTMLMediaElement` の `ratechange` イベントのイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。
+これらの例では、`HTMLMediaElement` の `ratechange` イベントのイベントリスナーを追加し、そのイベントハンドラーがイベントの発生に反応したときにメッセージを投稿します。
 
-`addEventListener()` を使用する場合
+`addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('ratechange', (event) => {
-  console.log('再生レートが変わりました。');
+video.addEventListener("ratechange", (event) => {
+  console.log("再生レートが変わりました。");
 });
 ```
 
-`onratechange` イベントハンドラープロパティを使用する場合
+`onratechange` イベントハンドラープロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onratechange = (event) => {
-  console.log('再生レートが変わりました。');
+  console.log("再生レートが変わりました。");
 };
 ```
 
@@ -83,7 +73,6 @@ video.onratechange = (event) => {
 - HTMLMediaElement {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.play_event", 'play')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.pause_event", 'pause')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.suspend_event", 'suspend')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.emptied_event", 'emptied')}} イベント

@@ -1,20 +1,19 @@
 ---
 title: contextMenus
 slug: Mozilla/Add-ons/WebExtensions/API/menus
-original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 ---
 
 {{AddonSidebar}}
 
 브라우저의 메뉴 시스템에 항목을 추가한다.
 
-이 API는 크롬의 ["contextMenus"](https://developer.chrome.com/extensions/contextMenus) API를 모델로 했다. 크롬 확장앱이 브라우저의 콘텍스트 메뉴에 항목을 추가하는 API인데, 파이어폭스의 `browser.menus` API는 여기에 몇 가지 특징을 더했다.
+이 API는 크롬의 ["contextMenus"](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) API를 모델로 했다. 크롬 확장앱이 브라우저의 콘텍스트 메뉴에 항목을 추가하는 API인데, Firefox의 `browser.menus` API는 여기에 몇 가지 특징을 더했다.
 
-파이어폭스 55 이전에 이 API의 원래 이름은 `contextMenus`였고, 지금도 이 이름은 별명으로 유지되므로 다른 브라우저에서도 동작하는 코드를 작성한다면 `contextMenus`를 사용할 수 있다.
+Firefox 55 이전에 이 API의 원래 이름은 `contextMenus`였고, 지금도 이 이름은 별명으로 유지되므로 다른 브라우저에서도 동작하는 코드를 작성한다면 `contextMenus`를 사용할 수 있다.
 
 이 API를 사용하려면 '`menus`' [권한](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)이 필요하다. `menus` 대신에 `contextMenus`를 사용해도 된다. `contextMenus`를 사용했으면 API도 `browser.contextMenus`를 써야 한다.
 
-콘텐트 스크립트에서는 [`menus.getTargetElement()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement)만 사용할 수 있다.
+콘텐트 스크립트에서는 [`menus.getTargetElement()`](/ko/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement)만 사용할 수 있다.
 
 ## 메뉴 항목 만들기
 
@@ -31,76 +30,94 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 
 메뉴 항목을 하나 이상 만들면 그 항목들은 서버메뉴로 표시되고, 상위메뉴의 라벨은 확장의 이름이 된다. 예를 들어, "Menu demo"라는 확장이 있고, 그것이 두 개의 콘텍스트 메뉴 항목을 추가했다면:
 
-![](https://mdn.mozillademos.org/files/15431/menus-1.png)
+![](menus-1.png)
 
 ## 아이콘
 
-["icons" manifest 키](/en-US/Add-ons/WebExtensions/manifest.json/icons)로 확장이 아이콘을 가졌으면, 콘텍스트 메뉴 항목은 라벨 옆에 아이콘을 함께 표시한다. 보통의 경우 16x16 픽셀이 표시되고, 고해상도이면 32x32 픽셀의 아이콘이 표시된다.
+["icons" manifest 키](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)로 확장이 아이콘을 가졌으면, 콘텍스트 메뉴 항목은 라벨 옆에 아이콘을 함께 표시한다. 보통의 경우 16x16 픽셀이 표시되고, 고해상도이면 32x32 픽셀의 아이콘이 표시된다.
 
-![](https://mdn.mozillademos.org/files/15433/menus-2.png)
+![](menus-2.png)
 
 서버메뉴에 대해서만 {{WebExtAPIRef("menus.create()")}}에 `icons` 옵션을 전달해서 아이콘을 지정할 수 있다.
 
-![](https://mdn.mozillademos.org/files/15435/menus-3.png)
+![](menus-3.png)
 
 ## 예제
 
 아래 콘텍스트 메뉴에는 4개 항목이 있다: 보통 항목 하나, 위-아래가 구분선인 두 개의 라디오 항목, 그리고 체크박스 항목 하나다. 라디오 항목에는 따로 아이콘이 지정되었다.
 
-![](https://mdn.mozillademos.org/files/15437/menus-4.png)이 서버메뉴는 아래 코드로 만들 수 있다:
+![](menus-4.png)이 서버메뉴는 아래 코드로 만들 수 있다:
 
 ```js
-browser.menus.create({
-  id: "remove-me",
-  title: browser.i18n.getMessage("menuItemRemoveMe"),
-  contexts: ["all"]
-}, onCreated);
+browser.menus.create(
+  {
+    id: "remove-me",
+    title: browser.i18n.getMessage("menuItemRemoveMe"),
+    contexts: ["all"],
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "separator-1",
-  type: "separator",
-  contexts: ["all"]
-}, onCreated);
+browser.menus.create(
+  {
+    id: "separator-1",
+    type: "separator",
+    contexts: ["all"],
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "greenify",
-  type: "radio",
-  title: browser.i18n.getMessage("menuItemGreenify"),
-  contexts: ["all"],
-  checked: true,
-  icons: {
-    "16": "icons/paint-green-16.png",
-    "32": "icons/paint-green-32.png"
-  }
-}, onCreated);
+browser.menus.create(
+  {
+    id: "greenify",
+    type: "radio",
+    title: browser.i18n.getMessage("menuItemGreenify"),
+    contexts: ["all"],
+    checked: true,
+    icons: {
+      16: "icons/paint-green-16.png",
+      32: "icons/paint-green-32.png",
+    },
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "bluify",
-  type: "radio",
-  title: browser.i18n.getMessage("menuItemBluify"),
-  contexts: ["all"],
-  checked: false,
-  icons: {
-    "16": "icons/paint-blue-16.png",
-    "32": "icons/paint-blue-32.png"
-  }
-}, onCreated);
+browser.menus.create(
+  {
+    id: "bluify",
+    type: "radio",
+    title: browser.i18n.getMessage("menuItemBluify"),
+    contexts: ["all"],
+    checked: false,
+    icons: {
+      16: "icons/paint-blue-16.png",
+      32: "icons/paint-blue-32.png",
+    },
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "separator-2",
-  type: "separator",
-  contexts: ["all"]
-}, onCreated);
+browser.menus.create(
+  {
+    id: "separator-2",
+    type: "separator",
+    contexts: ["all"],
+  },
+  onCreated,
+);
 
 var checkedState = true;
 
-browser.menus.create({
-  id: "check-uncheck",
-  type: "checkbox",
-  title: browser.i18n.getMessage("menuItemUncheckMe"),
-  contexts: ["all"],
-  checked: checkedState
-}, onCreated);
+browser.menus.create(
+  {
+    id: "check-uncheck",
+    type: "checkbox",
+    title: browser.i18n.getMessage("menuItemUncheckMe"),
+    contexts: ["all"],
+    checked: checkedState,
+  },
+  onCreated,
+);
 ```
 
 ## 타입
@@ -135,11 +152,11 @@ browser.menus.create({
 
 ## 브라우저 호환성
 
-{{ Compat("webextensions.api.menus", 1, "true") }}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **참고:** **Acknowledgements**This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> **참고:** **Acknowledgements**This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
 ```
 // Copyright 2015 The Chromium Authors. All rights reserved.

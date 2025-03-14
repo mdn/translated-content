@@ -1,18 +1,13 @@
 ---
 title: Math.pow()
 slug: Web/JavaScript/Reference/Global_Objects/Math/pow
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/pow
 ---
-{{JSRef("Global_Objects", "Math")}}
+
+{{JSRef}}
 
 ## Сводка
 
-Метод **`Math.pow()`** возвращает `основание`, возведённое в степень `показатель`, то есть, значение выражения `основаниепоказатель`.
+Метод **`Math.pow()`** возвращает `основание`, возведённое в степень `показатель`, то есть, значение выражения: **основание<sup>показатель</sup>**.
 
 ## Синтаксис
 

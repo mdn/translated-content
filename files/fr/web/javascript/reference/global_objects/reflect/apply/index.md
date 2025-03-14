@@ -1,26 +1,36 @@
 ---
 title: Reflect.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
-original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/apply
 ---
 
 {{JSRef}}
 
 La méthode statique **`Reflect.apply()`** permet d'appeler une fonction cible avec des arguments donnés.
 
-{{EmbedInteractiveExample("pages/js/reflect-apply.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.apply()")}}
+
+```js interactive-example
+console.log(Reflect.apply(Math.floor, undefined, [1.75]));
+// Expected output: 1
+
+console.log(
+  Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]),
+);
+// Expected output: "hello"
+
+console.log(
+  Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index,
+);
+// Expected output: 4
+
+console.log(Reflect.apply("".charAt, "ponies", [3]));
+// Expected output: "i"
+```
 
 ## Syntaxe
 
 ```js
-Reflect.apply(cible, argumentThis, listeArguments)
+Reflect.apply(cible, argumentThis, listeArguments);
 ```
 
 ### Paramètres

@@ -1,15 +1,20 @@
 ---
-title: 'HTML 属性: min'
+title: "HTML 属性: min"
+short-title: min
 slug: Web/HTML/Attributes/min
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
 
-**`min`** 属性は、その属性を含む入力欄に対して許容できる有効な最小値を定義します。要素の値 ([`value`](/ja/docs/Web/HTML/Element/input#attr-value)) がこれより大きい場合、その要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。この値は、 `max` 属性の値以下でなければなりません。 `min` 属性が指定されていないか無効であった場合、最小値は適用されません。
+**`min`** 属性は、その属性を含む入力欄に対して許容できる有効な最小値を定義します。要素の値 ([`value`](/ja/docs/Web/HTML/Element/input#value)) がこれより小さい場合、その要素は[制約検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)に失敗します。この値は、`max` 属性の値以下でなければなりません。
+
+入力欄の種類によっては既定の最小値があるものもあります。入力欄に既定の最小値がなく、 `min` に有効な数値に変換できない値が指定された場合（あるいは最小値が設定されなかった場合）、その入力には最小値が設定されません。
 
 これは数値入力型、例えば {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}}, {{HTMLElement("input/range", "range")}} 型や {{htmlelement('meter')}} 要素で有効であり、 `min` 属性はフォームコントロールで妥当と見なされる最も小さな値を指定する数値です。
 
-### 構文
+## 構文
 
 <table class="no-markdown">
   <caption>
@@ -40,14 +45,14 @@ slug: Web/HTML/Attributes/min
     </tr>
     <tr>
       <td>{{HTMLElement("input/time", "time")}}</td>
-      <td><code>hh:mm</code></td>
+      <td><code>HH:mm</code></td>
       <td><code>&#x3C;input type="time" min="09:00" step="900"></code></td>
     </tr>
     <tr>
       <td>
         {{HTMLElement("input/datetime-local", "datetime-local")}}
       </td>
-      <td><code>yyyy-mm-ddThh:mm</code></td>
+      <td><code>yyyy-mm-ddTHH:mm</code></td>
       <td>
         <code>&#x3C;input type="datetime-local" min="2019-12-25T19:30"></code>
       </td>
@@ -69,9 +74,10 @@ slug: Web/HTML/Attributes/min
   </tbody>
 </table>
 
-> **メモ:** ユーザーが入力したデータが設定された最大値を満たしていない場合、制約検証では無効とみなされ、 {{cssxref(':invalid')}} の擬似クラスに一致するようになります。
+> [!NOTE]
+> ユーザーが入力したデータが設定された最大値を満たしていない場合、制約検証では無効とみなされ、 {{cssxref(':invalid')}} や {{cssxref(':out-of-range')}} の擬似クラスに一致するようになります。
 
-詳しくは [クライアント側検証](/ja/docs/Web/Guide/HTML/Constraint_validation)と {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} を参照してください。
+詳しくは [クライアント側検証](/ja/docs/Web/HTML/Constraint_validation)と {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} を参照してください。
 
 {{htmlelement('meter')}} 要素における `min` 属性は、測定範囲の上限の数値を定義します。これは、指定されている場合、最大値 ([`max`](/ja/docs/Web/HTML/Attributes/max) 属性) よりも小さくなければなりません。どちらの場合も、省略された場合、値は既定で 1 となります。
 
@@ -115,7 +121,7 @@ input:invalid {
 それから入力欄の最小値を 7.2 と定義し、 step 属性は省略しているので、既定値が 1 になります。
 
 ```html
-<input id="myNumber" name="myNumber" type="number" min="7.2" value="8">
+<input id="myNumber" name="myNumber" type="number" min="7.2" value="8" />
 ```
 
 `step` の既定値は 1 なので、有効な値は `7.2`, `8.2`, `9.2`, などになります。 8 の値は有効ではありません。無効な値が入っているので、対応しているブラウザーは値が無効であることを表示します。
@@ -141,8 +147,8 @@ input:invalid {
 - [`step`](/ja/docs/Web/HTML/Attributes/step)
 - [`max`](/ja/docs/Web/HTML/Attributes/max)
 - その他の meter 属性: [`low`](/ja/docs/Web/HTML/Attributes/low), [`high`](/ja/docs/Web/HTML/Attributes/high), [`optimum`](/ja/docs/Web/HTML/Attributes/optimum)
-- [制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)
-- [制約検証 API](/ja/docs/Web/API/Constraint_validation)
+- [制約検証](/ja/docs/Web/HTML/Constraint_validation)
+- [制約検証 API](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{domxref('validityState.rangeUnderflow')}}
 - {{cssxref(':out-of-range')}}
 - {{htmlelement('input')}}

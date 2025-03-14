@@ -1,16 +1,11 @@
 ---
-title: ':out-of-range'
+title: :out-of-range
 slug: Web/CSS/:out-of-range
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:out-of-range
 ---
 
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:out-of-range`** cible un élément {{HTMLElement("input")}} lorsque la valeur de son attribut `value` est en dehors de l'intervalle autorisé par les attributs {{htmlattrxref("min", "input")}} et {{htmlattrxref("max","input")}} attributes. Ceci permet d'informer l'utilisateur que la valeur actuellement renseignée dans l'élément est hors des limites acceptables.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:out-of-range`** cible un élément {{HTMLElement("input")}} lorsque la valeur de son attribut `value` est en dehors de l'intervalle autorisé par les attributs [`min`](/fr/docs/Web/HTML/Element/input#min) et [`max`](/fr/docs/Web/HTML/Element/input#max). Ceci permet d'informer l'utilisateur que la valeur actuellement renseignée dans l'élément est hors des limites acceptables.
 
 ```css
 /* Cible n'importe quel élément <input> qui possède un */
@@ -21,7 +16,8 @@ input:out-of-range {
 }
 ```
 
-> **Note :** Cette pseudo-classe s'applique seulement aux éléments qui ont des valeurs limites.
+> [!NOTE]
+> Cette pseudo-classe s'applique seulement aux éléments qui ont des valeurs limites.
 
 ## Syntaxe
 
@@ -33,9 +29,17 @@ input:out-of-range {
 
 ```html
 <form action="" id="form1">
-  <ul>Les valeurs entre 1 et 10 sont autorisées.
+  <ul>
+    Les valeurs entre 1 et 10 sont autorisées.
     <li>
-      <input id="valeur1" name="valeur1" type="number" placeholder="1 à 10" min="1" max="10" value="12">
+      <input
+        id="valeur1"
+        name="valeur1"
+        type="number"
+        placeholder="1 à 10"
+        min="1"
+        max="10"
+        value="12" />
       <label for="valeur1">Votre valeur est </label>
     </li>
   </ul>
@@ -64,11 +68,11 @@ input:out-of-range {
 }
 
 input:in-range + label::after {
-  content:' OK';
+  content: " OK";
 }
 
 input:out-of-range + label::after {
-    content:'hors des limites !';
+  content: "hors des limites !";
 }
 ```
 

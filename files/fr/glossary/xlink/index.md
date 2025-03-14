@@ -1,12 +1,9 @@
 ---
 title: XLink
 slug: Glossary/XLink
-tags:
-  - Encodage
-  - Glossaire
-translation_of: Glossary/XLink
-original_slug: Glossaire/XLink
 ---
+
+{{GlossarySidebar}}
 
 XLink est un standard du W3C qui sert à décrire des liens entre documents XML ou entre XML et d'autres documents. Un certain nombre de ses comportements est laissé à l'implémentation qui détermine comment ils doivent être gérés.
 
@@ -18,8 +15,8 @@ XLink est utilisé dans [SVG](/fr/docs/Web/SVG), [MathML](/fr/docs/Web/MathML) e
 
 ### Spécification
 
-- [XLink 1.0](http://www.w3.org/TR/xlink/)
-- [XLink 1.1](http://www.w3.org/TR/xlink11/) (actuellement au stade de brouillon de travail)
+- [XLink 1.0](https://www.w3.org/TR/xlink/)
+- [XLink 1.1](https://www.w3.org/TR/xlink11/) (actuellement au stade de brouillon de travail)
 
 ### Voir aussi
 

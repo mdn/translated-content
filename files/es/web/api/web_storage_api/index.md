@@ -1,15 +1,6 @@
 ---
 title: API de almacenamiento web
 slug: Web/API/Web_Storage_API
-tags:
-  - API
-  - API de almacenamiento web
-  - Almacenamiento web
-  - Storage
-  - localStorage
-  - sessionStorage
-translation_of: Web/API/Web_Storage_API
-original_slug: Web/API/API_de_almacenamiento_web
 ---
 
 {{DefaultAPISidebar("Web Storage API")}}
@@ -25,9 +16,8 @@ Los dos mecanismos en el almacenamiento web son los siguientes:
 
 Estos mecanismos están disponibles mediante las propiedades [`Window.sessionStorage`](/es/docs/Web/API/Window/sessionStorage) y [`Window.localStorage`](/es/docs/Web/API/Window/localStorage) (dicho con más precisión, en navegadores con soporte, el objeto `Window` implementa los objetos `WindowLocalStorage` y `WindowSessionStorage`, en los cuales se basan las propiedades `localStorage` y `sessionStorage`). Al invocar uno de éstos, se creará una instancia del objeto [`Storage`](/es/docs/Web/API/Storage), a través del cual los datos pueden ser creados, recuperados y eliminados. sessionStorage y localStorage utilizan un objeto de almacenamiento diferente según su origen — funcionan y son controlados por separado.
 
-> **Nota:** Acceder al Almacenamiento web desde IFrames de terceros está prohibido si el usuario tiene [deshabilitadas las cookies de terceros](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (Firefox implementa este comportamiento a partir de la [versión 43](/es/docs/Mozilla/Firefox/Releases/43)).
-
-> **Nota:** El almacenamiento web no es lo mismo que [mozStorage](/es/docs/Storage) (interfaces Mozilla's XPCOM para SQLite) o la [Session store API](/es/docs/Session_store_API) (una utilidad de almacenamiento [XPCOM](/es/docs/XPCOM) usada por extensiones).
+> [!NOTE]
+> Acceder al Almacenamiento web desde IFrames de terceros está prohibido si el usuario tiene [deshabilitadas las cookies de terceros](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (Firefox implementa este comportamiento a partir de la [versión 43](/es/docs/Mozilla/Firefox/Releases/43)).
 
 ## Interfaces de almacenamiento web
 
@@ -40,27 +30,17 @@ Estos mecanismos están disponibles mediante las propiedades [`Window.sessionSto
 
 ## Ejemplos
 
-Para ilustrar algunos usos típicos del almacenamiento web, hemos creado un ejemplo simple, llamado [Demo de almacenamiento web](https://github.com/mdn/web-storage-demo). La [página de inicio](http://mdn.github.io/web-storage-demo/) proporciona controles que puedes utilizar para personalizar el color, la tipografía y la imagen decorativa. Cuando seleccionas una opción diferente, la página se actualiza instantáneamente; además, tus opciones se almacenan en `localStorage`, de forma que si abandonas la página y la vuelves a cargar, tus opciones son recordadas.
+Para ilustrar algunos usos típicos del almacenamiento web, hemos creado un ejemplo simple, llamado [Demo de almacenamiento web](https://github.com/mdn/dom-examples/tree/main/web-storage). La [página de inicio](https://mdn.github.io/dom-examples/web-storage/) proporciona controles que puedes utilizar para personalizar el color, la tipografía y la imagen decorativa. Cuando seleccionas una opción diferente, la página se actualiza instantáneamente; además, tus opciones se almacenan en `localStorage`, de forma que si abandonas la página y la vuelves a cargar, tus opciones son recordadas.
 
-También creamos una[página de salida del evento](http://mdn.github.io/web-storage-demo/event.html) — si cargas esta página en otra pestaña y luego haces cambios a tus opciones en la página de inicio, verás que se muestra la información almacenada actualizada puesto que se dispara un evento [`StorageEvent`](/es/docs/Web/Reference/Events/StorageEvent).
+También creamos una[página de salida del evento](https://mdn.github.io/dom-examples/web-storage/event.html) — si cargas esta página en otra pestaña y luego haces cambios a tus opciones en la página de inicio, verás que se muestra la información almacenada actualizada puesto que se dispara un evento [`StorageEvent`](/es/docs/Web/API/StorageEvent).
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-### `Window.localStorage`
-
-{{Compat("api.Window.localStorage")}}
-
-### `Window.sessionStorage`
-
-{{Compat("api.Window.sessionStorage")}}
-
-Todos los navegadores tienen distintos niveles de capacidad tanto para localStorage como para sessionStorage. Aquí está una [análisis detallado de todas las capacidades de almacenamiento de diferentes navegadores](http://dev-test.nemikor.com/web-storage/support-test/).
-
-> **Nota:** Desde iOS 5.1, Safari Mobile almacena los datos de localStorage en la carpeta de caché, la cual está sujeta a limpiezas ocasionales, a petición del sistema operativo, típicamente cuando el espacio es reducido.
+{{Compat}}
 
 ## Navegación privada / Modo incógnito
 

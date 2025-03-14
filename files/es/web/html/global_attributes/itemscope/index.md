@@ -1,21 +1,16 @@
 ---
 title: itemscope
 slug: Web/HTML/Global_attributes/itemscope
-tags:
-  - Ejemplo
-  - itemscope
-  - itemtype
-translation_of: Web/HTML/Global_attributes/itemscope
-original_slug: Web/HTML/Atributos_Globales/itemscope
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`itemscope`** es un [atributo global](/es/docs/Web/HTML/Global_attributes) booleano que define el scope asociado del metadata. Especificando el atributo **`itemscope`** en un elemento crea un nuevo item, cuyos resultados estan en los numeros de pares name-value asociados con el elemento. Un atributo relativo, {{htmlattrxref("itemtype")}}, es usado para especificar el URL valido de un medio/recipe (como lo es [schema.org](http://schema.org/)) que describe que el item es de propiedad contextual. En cada uno de los siguientes ejemplos, el medio/recipe es de [schema.org](https://schema.org/).
+**`itemscope`** es un [atributo global](/es/docs/Web/HTML/Global_attributes) booleano que define el scope asociado del metadata. Especificando el atributo **`itemscope`** en un elemento crea un nuevo item, cuyos resultados estan en los numeros de pares name-value asociados con el elemento. Un atributo relativo, [`itemtype`](/es/docs/Web/HTML/Global_attributes#itemtype), es usado para especificar el URL valido de un medio/recipe (como lo es [schema.org](https://schema.org/)) que describe que el item es de propiedad contextual. En cada uno de los siguientes ejemplos, el medio/recipe es de [schema.org](https://schema.org/).
 
 Todos los elementos HTML pueden tener un atributo `itemscope` especifico. Un elemento `itemscope` no tiene un asociado `itemtype` pero tiene un sociado `itemref`.
 
-> **Nota:** Encuentra mas acerca del atributo `itemtype` en <http://schema.org/Thing>
+> [!NOTE]
+> Encuentra mas acerca del atributo `itemtype` en <http://schema.org/Thing>
 
 ### Ejemplo simple
 
@@ -26,7 +21,10 @@ El siguiente ejemplo especifica que el atributo `itemscope`. El ejemplo especifi
 ```html
 <div itemscope itemtype="http://schema.org/Movie">
   <h1 itemprop="nombre">Avatar</h1>
-  <span>Director: <span itemprop="director">James Cameron</span> (born August 16, 1954)</span>
+  <span
+    >Director: <span itemprop="director">James Cameron</span> (born August 16,
+    1954)</span
+  >
   <span itemprop="genero">Ciencia ficcion</span>
   <a href="https://youtu.be/0AY1XIkX7bY" itemprop="trailer">Trailer</a>
 </div>
@@ -73,7 +71,7 @@ La siguiente tabla muestran los datos esctructurados mostrados en el anterior ej
 
 ### `itemscope` Atributos ID
 
-Cuando especificas el atributo `itemscope` para un elemento, un nuevo item es creado. El item consiste de un grupo de pares de name-value. Para elementos con un atributo `itemscope` y un atributo `itemtype`, podrias tambien especificar un {{htmlattrxref("id")}} attribute. Puedes usar el atributo `id` para establecer un identificador global para el nuevo item. Un identificador global permite que los items relativos a otros items encuentren paginas atraves de la Web.
+Cuando especificas el atributo `itemscope` para un elemento, un nuevo item es creado. El item consiste de un grupo de pares de name-value. Para elementos con un atributo `itemscope` y un atributo `itemtype`, podrias tambien especificar un [`id`](/es/docs/Web/HTML/Global_attributes#id) attribute. Puedes usar el atributo `id` para establecer un identificador global para el nuevo item. Un identificador global permite que los items relativos a otros items encuentren paginas atraves de la Web.
 
 ### Ejemplo
 
@@ -235,23 +233,23 @@ Los siguientes son un ejemplo renderizado resultado del codigo del anterior ejem
   </tbody>
 </table>
 
-> **Nota:** Una herramienta practica para extraer estructuras microdata del HTML es [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/) de Google. Pruebalo en el HTML del ejemplo anterior.
+> [!NOTE]
+> Una herramienta practica para extraer estructuras microdata del HTML es [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/) de Google. Pruebalo en el HTML del ejemplo anterior.
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Navegadores compatibles
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.itemscope")}}
+{{Compat}}
 
 ## Ver tambien
 
 - [Otros atributos globales diferentes](/es/docs/Web/HTML/Global_attributes)
 - Otro, microdata relativo, atributos globales:
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemscope")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemid`](/es/docs/Web/HTML/Global_attributes#itemid)
+  - [`itemprop`](/es/docs/Web/HTML/Global_attributes#itemprop)
+  - [`itemref`](/es/docs/Web/HTML/Global_attributes#itemref)
+  - [`itemtype`](/es/docs/Web/HTML/Global_attributes#itemtype)

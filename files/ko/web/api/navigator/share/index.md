@@ -1,7 +1,6 @@
 ---
 title: Navigator.share
 slug: Web/API/Navigator/share
-translation_of: Web/API/Navigator/share
 ---
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
@@ -33,15 +32,15 @@ var sharePromise = window.navigator.share(data);
 ```js
 navigator.share({
   title: document.title,
-  text: 'Hello World',
-  url: 'https://developer.mozilla.org',
+  text: "Hello World",
+  url: "https://developer.mozilla.org",
 }); // share the URL of MDN
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

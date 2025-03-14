@@ -1,16 +1,6 @@
 ---
 title: DocumentOrShadowRoot.activeElement
 slug: Web/API/Document/activeElement
-tags:
-  - API
-  - Document
-  - DocumentOrShadowRoot
-  - Focus
-  - Property
-  - Reference
-  - ShadowRoot
-translation_of: Web/API/DocumentOrShadowRoot/activeElement
-original_slug: Web/API/DocumentOrShadowRoot/activeElement
 ---
 
 {{APIRef("Shadow DOM")}}
@@ -21,12 +11,13 @@ original_slug: Web/API/DocumentOrShadowRoot/activeElement
 
 보통 사용자는 포커스 가능한 요소를 Tab 키를 사용해 탐색할 수 있고, 스페이스 바를 사용해 활성화(버튼을 누르거나 라디오 버튼을 켜는 등)할 수 있습니다. 포커스 가능한 요소는 현재 플랫폼과 브라우저 설정에 따라 다릅니다. 가령 macOS의 경우, 기본값에서는 텍스트 입력 칸이 아니면 보통 포커스 할 수 없습니다.
 
-> **참고:** 포커스(사용자의 입력 이벤트를 받는 요소)와 선택(문서 내에서 강조하고 있는 부분)은 다릅니다. 현재 선택 영역은 {{domxref("window.getSelection()")}}을 사용해 가져올 수 있습니다.
+> [!NOTE]
+> 포커스(사용자의 입력 이벤트를 받는 요소)와 선택(문서 내에서 강조하고 있는 부분)은 다릅니다. 현재 선택 영역은 {{domxref("window.getSelection()")}}을 사용해 가져올 수 있습니다.
 
 ## 구문
 
 ```js
-element = DocumentOrShadowRoot.activeElement
+element = DocumentOrShadowRoot.activeElement;
 ```
 
 ### 값
@@ -41,8 +32,12 @@ element = DocumentOrShadowRoot.activeElement
 <p>아래 두 영역에서 텍스트를 선택해보세요.</p>
 
 <form>
-  <textarea name="ta-example-one" id="ta-example-one" rows="7" cols="40">텍스트 영역 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui.</textarea>
-  <textarea name="ta-example-two" id="ta-example-two" rows="7" cols="40">텍스트 영역 2. Fusce ullamcorper, nisl ac porttitor adipiscing, urna orci egestas libero, ut accumsan orci lacus laoreet diam. Morbi sed euismod diam.</textarea>
+  <textarea name="ta-example-one" id="ta-example-one" rows="7" cols="40">
+텍스트 영역 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui.</textarea
+  >
+  <textarea name="ta-example-two" id="ta-example-two" rows="7" cols="40">
+텍스트 영역 2. Fusce ullamcorper, nisl ac porttitor adipiscing, urna orci egestas libero, ut accumsan orci lacus laoreet diam. Morbi sed euismod diam.</textarea
+  >
 </form>
 
 <p>활성화된 요소 ID: <b id="output-element"></b></p>
@@ -55,26 +50,27 @@ element = DocumentOrShadowRoot.activeElement
 function onMouseUp(e) {
   const activeTextarea = document.activeElement;
   const selection = activeTextarea.value.substring(
-    activeTextarea.selectionStart, activeTextarea.selectionEnd
+    activeTextarea.selectionStart,
+    activeTextarea.selectionEnd,
   );
 
-  const outputElement = document.getElementById('output-element');
-  const outputText = document.getElementById('output-text');
+  const outputElement = document.getElementById("output-element");
+  const outputText = document.getElementById("output-text");
   outputElement.innerHTML = activeTextarea.id;
   outputText.innerHTML = selection;
 }
 
-const textarea1 = document.getElementById('ta-example-one');
-const textarea2 = document.getElementById('ta-example-two');
-textarea1.addEventListener('mouseup', onMouseUp, false);
-textarea2.addEventListener('mouseup', onMouseUp, false);
+const textarea1 = document.getElementById("ta-example-one");
+const textarea2 = document.getElementById("ta-example-two");
+textarea1.addEventListener("mouseup", onMouseUp, false);
+textarea2.addEventListener("mouseup", onMouseUp, false);
 ```
 
 ### 결과
 
 {{ EmbedLiveSample('예제', '400', '400') }}
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

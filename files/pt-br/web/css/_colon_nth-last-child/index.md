@@ -1,5 +1,5 @@
 ---
-title: ':nth-last-child()'
+title: :nth-last-child()
 slug: Web/CSS/:nth-last-child
 ---
 
@@ -16,7 +16,8 @@ A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS)
 }
 ```
 
-> **Note:** **Nota:** Essa pseudo-classe é essencialmente o mesmo que usar {{Cssxref(":nth-child")}}, porém conta os itens de trás para a frente, e não do início para o final.
+> [!NOTE]
+> Essa pseudo-classe é essencialmente o mesmo que usar {{Cssxref(":nth-child")}}, porém conta os itens de trás para a frente, e não do início para o final.
 
 ## Sintaxe
 
@@ -93,7 +94,7 @@ table {
 }
 
 /* Seleciona os últimos três elementos */
-tr:nth-last-child(-n+3) {
+tr:nth-last-child(-n + 3) {
   background-color: pink;
 }
 ```
@@ -104,14 +105,11 @@ tr:nth-last-child(-n+3) {
 
 ## Especificações
 
-| Especificação                                                                                        | Status                               | Comentário                                                  |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#nth-last-child-pseudo', ':nth-last-child')}} | {{Spec2('CSS4 Selectors')}} | Elementos correspondentes não precisam ter um elemento-pai. |
-| {{SpecName('CSS3 Selectors', '#nth-last-child-pseudo', ':nth-last-child')}} | {{Spec2('CSS3 Selectors')}} | Definição inicial.                                          |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.nth-last-child")}}
+{{Compat}}
 
 ## Ver também
 

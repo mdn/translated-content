@@ -1,20 +1,18 @@
 ---
 title: HTMLElement.click()
 slug: Web/API/HTMLElement/click
-translation_of: Web/API/HTMLElement/click
-browser-compat: api.HTMLElement.click
 ---
 
 {{APIRef("HTML DOM")}}
 
 La méthode **`HTMLElement.click()`** simule un clic de souris sur un élément.
 
-Lorsque `click()` est appelée sur les éléments qui la prenne en charge (par exemple un élément [`<input>`](/fr/docs/Web/HTML/Element/Input)), elle déclenche l'évènement `click` de cet élément. L'évènement remonte alors vers les éléments situés plus haut dans l'arbre du document (ou le long de la chaîne d'évènement) et déclenche leurs évènements `click` respectifs.
+Lorsque `click()` est appelée sur les éléments qui la prenne en charge (par exemple un élément [`<input>`](/fr/docs/Web/HTML/Element/input)), elle déclenche l'évènement `click` de cet élément. L'évènement remonte alors vers les éléments situés plus haut dans l'arbre du document (ou le long de la chaîne d'évènement) et déclenche leurs évènements `click` respectifs.
 
 ## Syntaxe
 
 ```js
-click()
+click();
 ```
 
 ### Paramètres
@@ -33,7 +31,11 @@ Dans cet exemple, on simule un clic de souris lorsque le pointeur de la souris s
 
 ```html
 <form>
-  <input type="checkbox" id="maCaseACocher" onmouseover="maFonction()" onclick="console.log('un évènement click a eu lieu')">
+  <input
+    type="checkbox"
+    id="maCaseACocher"
+    onmouseover="maFonction()"
+    onclick="console.log('un évènement click a eu lieu')" />
 </form>
 ```
 
@@ -42,7 +44,7 @@ Dans cet exemple, on simule un clic de souris lorsque le pointeur de la souris s
 ```js
 // Lorsque l'évènement mouseover est déclenché, exécuter maFonction
 function maFonction() {
-  document.getElementById('maCaseACocher').click();
+  document.getElementById("maCaseACocher").click();
 }
 ```
 
@@ -57,6 +59,6 @@ function maFonction() {
 ## Voir aussi
 
 - Les gestionnaires d'évènements associés&nbsp;:
-  - [`GlobalEventHandlers.onclick`](/fr/docs/Web/API/GlobalEventHandlers/onclick)
-  - [`GlobalEventHandlers.ondblclick`](/fr/docs/Web/API/GlobalEventHandlers/ondblclick)
-  - [`GlobalEventHandlers.onauxclick`](/fr/docs/Web/API/GlobalEventHandlers/onauxclick)
+  - [`GlobalEventHandlers.onclick`](/fr/docs/Web/API/Element/click_event)
+  - [`GlobalEventHandlers.ondblclick`](/fr/docs/Web/API/Element/dblclick_event)
+  - [`GlobalEventHandlers.onauxclick`](/fr/docs/Web/API/Element/auxclick_event)

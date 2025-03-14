@@ -1,6 +1,8 @@
 ---
 title: ファイル API
 slug: Web/API/File_API
+l10n:
+  sourceCommit: a122e87245c624ba56197641b4d7b21b643a6021
 ---
 
 {{DefaultAPISidebar("File API")}}
@@ -22,7 +24,7 @@ slug: Web/API/File_API
 - {{domxref("File")}}
   - : ファイルに関する情報を提供し、ウェブページ内の JavaScript がそのコンテンツにアクセスできるようにします。
 - {{domxref("FileList")}}
-  - : HTML の {{HTMLElement("input")}} 要素の `files` プロパティが返す値です。これにより、 `<input type="file">` 要素で選択されたファイルのリストにアクセスすることができます。また、ドラッグ＆ドロップ API を用いてウェブコンテンツにドロップされたファイルのリストにも使用されます。この使用方法の詳細については、 {{domxref("DataTransfer")}} オブジェクトを参照してください。
+  - : HTML の {{HTMLElement("input")}} 要素の `files` プロパティが返す値です。これにより、 `<input type="file">` 要素で選択されたファイルのリストにアクセスすることができます。また、ドラッグ & ドロップ API を用いてウェブコンテンツにドロップされたファイルのリストにも使用されます。この使用方法の詳細については、 {{domxref("DataTransfer")}} オブジェクトを参照してください。
 - {{domxref("FileReader")}}
   - : ウェブアプリケーションが、ユーザーのコンピューターに保存されているファイル（または生データバッファー）の内容を、 {{domxref("File")}} または {{domxref("Blob")}} オブジェクトを使って非同期に読み込むことができるようにするもので、ファイルまたはデータを指定して読み込みます。
 - {{domxref("FileReaderSync")}}
@@ -44,7 +46,7 @@ slug: Web/API/File_API
 #### HTML
 
 ```html
-<input type="file">
+<input type="file" />
 <div class="output"></div>
 ```
 
@@ -62,7 +64,7 @@ slug: Web/API/File_API
 
 ```js
 const fileInput = document.querySelector("input[type=file]");
-const output = document.querySelector('.output');
+const output = document.querySelector(".output");
 
 fileInput.addEventListener("change", () => {
   const [file] = fileInput.files;
@@ -73,7 +75,7 @@ fileInput.addEventListener("change", () => {
     });
     reader.readAsText(file);
   }
-})
+});
 ```
 
 ### 結果

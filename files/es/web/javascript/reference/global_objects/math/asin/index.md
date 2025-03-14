@@ -1,8 +1,6 @@
 ---
 title: Math.asin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asin
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/asin
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/asin
 ---
 
 {{JSRef}}
@@ -37,12 +35,12 @@ Because `asin()` is a static method of `Math`, you always use it as `Math.asin()
 ### Usando `Math.asin()`
 
 ```js
-Math.asin(-2);  // NaN
-Math.asin(-1);  // -1.5707963267948966 (-pi/2)
-Math.asin(0);   // 0
+Math.asin(-2); // NaN
+Math.asin(-1); // -1.5707963267948966 (-pi/2)
+Math.asin(0); // 0
 Math.asin(0.5); // 0.5235987755982989
-Math.asin(1);   // 1.5707963267948966 (pi/2)
-Math.asin(2);   // NaN
+Math.asin(1); // 1.5707963267948966 (pi/2)
+Math.asin(2); // NaN
 ```
 
 For values less than -1 or greater than 1, `Math.asin()` returns {{jsxref("NaN")}}.
@@ -51,9 +49,9 @@ For values less than -1 or greater than 1, `Math.asin()` returns {{jsxref("NaN")
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.asin")}}
+{{Compat}}
 
 ## Ver Mas
 

@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Exponentiation
 
 **幂**（**`**`**）运算符返回第一个操作数取第二个操作数的幂的结果。它等价于 {{jsxref("Math.pow()")}}，不同之处在于，它还接受 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 作为操作数。
 
-{{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation operator")}}
+
+```js interactive-example
+console.log(3 ** 4);
+// Expected output: 81
+
+console.log(10 ** -2);
+// Expected output: 0.01
+
+console.log(2 ** (3 ** 2));
+// Expected output: 512
+
+console.log((2 ** 3) ** 2);
+// Expected output: 64
+```
 
 ## 语法
 
@@ -34,21 +48,21 @@ x ** y
 ### 基本求幂
 
 ```js
-2 ** 3   // 8
-3 ** 2   // 9
-3 ** 2.5 // 15.588457268119896
-10 ** -1 // 0.1
-NaN ** 2 // NaN
-NaN ** 0 // 1
-1 ** Infinity // NaN
+2 ** 3; // 8
+3 ** 2; // 9
+3 ** 2.5; // 15.588457268119896
+10 ** -1; // 0.1
+NaN ** 2; // NaN
+NaN ** 0; // 1
+1 ** Infinity; // NaN
 ```
 
 ### 结合性
 
-```js
-2 ** 3 ** 2   // 512
-2 ** (3 ** 2) // 512
-(2 ** 3) ** 2 // 64
+```js-nolint
+2 ** 3 ** 2; // 512
+2 ** (3 ** 2); // 512
+(2 ** 3) ** 2; // 64
 ```
 
 ### 与一元运算符一起使用
@@ -56,13 +70,13 @@ NaN ** 0 // 1
 取幂表达式的值的相反数：
 
 ```js
--(2 ** 2) // -4
+-(2 ** 2); // -4
 ```
 
 将幂表达式的底数转化为一个负数：
 
 ```js
-(-2) ** 2 // 4
+(-2) ** 2; // 4
 ```
 
 ## 规范

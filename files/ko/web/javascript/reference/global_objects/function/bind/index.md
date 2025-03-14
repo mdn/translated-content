@@ -1,20 +1,30 @@
 ---
 title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
-tags:
-  - ECMAScript 2015
-  - Function
-  - JavaScript
-  - Method
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 ---
 
 {{JSRef}}
 
 **`bind()`** 메소드가 호출되면 새로운 함수를 생성합니다. 받게되는 첫 인자의 value로는 `this` 키워드를 설정하고, 이어지는 인자들은 바인드된 함수의 인수에 제공됩니다.
 
-{{EmbedInteractiveExample("pages/js/function-bind.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Function.bind()", "taller")}}
+
+```js interactive-example
+const module = {
+  x: 42,
+  getX: function () {
+    return this.x;
+  },
+};
+
+const unboundGetX = module.getX;
+console.log(unboundGetX()); // The function gets invoked at the global scope
+// Expected output: undefined
+
+const boundGetX = unboundGetX.bind(module);
+console.log(boundGetX());
+// Expected output: 42
+```
 
 ## 구문
 
@@ -58,7 +68,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 this.x = 9;
 var module = {
   x: 81,
-  getX: function() { return this.x; }
+  getX: function () {
+    return this.x;
+  },
 };
 
 module.getX(); // 81
@@ -79,33 +91,32 @@ boundGetX(); // 81
 `bind()`의 다음으로 간단한 사용법은 미리 지정된 초기 인수가 있는 함수를 만드는 겁니다. 지정될 초기 인수가 있다면 제공된 `this` 값을 따르고, 바인딩 된 함수에 전달되어 바인딩 된 함수가 호출될 때마다 대상 함수의 인수 앞에 삽입됩니다.
 
 ```js
-    function list() {
-      return Array.prototype.slice.call(arguments);
-    }
+function list() {
+  return Array.prototype.slice.call(arguments);
+}
 
-    var list1 = list(1, 2, 3); // [1, 2, 3]
+var list1 = list(1, 2, 3); // [1, 2, 3]
 
-    // 선행될 인수를 설정하여 함수를 생성합니다.
-    var leadingThirtysevenList = list.bind(null, 37);
+// 선행될 인수를 설정하여 함수를 생성합니다.
+var leadingThirtysevenList = list.bind(null, 37);
 
-    var list2 = leadingThirtysevenList();  // [37]
+var list2 = leadingThirtysevenList(); // [37]
 
-    var list3 = leadingThirtysevenList(1, 2, 3);  // [37, 1, 2, 3]
+var list3 = leadingThirtysevenList(1, 2, 3); // [37, 1, 2, 3]
 
+function addArguments(arg1, arg2) {
+  return arg1 + arg2;
+}
 
-    function addArguments(arg1, arg2) {
-        return arg1 + arg2
-    }
+var result1 = addArguments(1, 2); // 3
 
-    var result1 = addArguments(1, 2); // 3
+// 첫 번째 인수를 지정하여 함수를 생성합니다.
+var addThirtySeven = addArguments.bind(null, 37);
 
-    // 첫 번째 인수를 지정하여 함수를 생성합니다.
-    var addThirtySeven = addArguments.bind(null, 37);
+var result2 = addThirtySeven(5); // 37 + 5 = 42
 
-    var result2 = addThirtySeven(5); // 37 + 5 = 42
-
-    // 두 번째 인수는 무시됩니다.
-    var result3 = addThirtySeven(5, 10); // 37 + 5 = 42
+// 두 번째 인수는 무시됩니다.
+var result3 = addThirtySeven(5, 10); // 37 + 5 = 42
 ```
 
 ### `setTimeout`과 함께 사용
@@ -118,13 +129,12 @@ function LateBloomer() {
 }
 
 // 1초 지체 후 bloom 선언
-LateBloomer.prototype.bloom = function() {
+LateBloomer.prototype.bloom = function () {
   window.setTimeout(this.declare.bind(this), 1000);
 };
 
-LateBloomer.prototype.declare = function() {
-  console.log('I am a beautiful flower with ' +
-    this.petalCount + ' petals!');
+LateBloomer.prototype.declare = function () {
+  console.log("I am a beautiful flower with " + this.petalCount + " petals!");
 };
 
 var flower = new LateBloomer();
@@ -134,7 +144,8 @@ flower.bloom();
 
 ### 생성자로 쓰이는 바인딩된 함수
 
-> **경고:** 이 부분은 JavaScript 능력을 보이고 `bind()` 메소드의 일부 극단 상황(edge case)을 기록합니다. 아래 보이는 메소드는 일을 하는 가장 좋은 방법은 아니며 아마도 상용 환경에서 전혀 사용되지 않을 겁니다.
+> [!WARNING]
+> 이 부분은 JavaScript 능력을 보이고 `bind()` 메소드의 일부 극단 상황(edge case)을 기록합니다. 아래 보이는 메소드는 일을 하는 가장 좋은 방법은 아니며 아마도 상용 환경에서 전혀 사용되지 않을 겁니다.
 
 바인딩된 함수는 자동으로 대상 함수에 의해 생성되는 새로운 인스턴스를 생성하는 {{jsxref("Operators/new", "new")}} 연산자와 함께 쓰기에 적합합니다. 바인딩된 함수가 값을 생성하는 데 쓰이는 경우, 제공된 `this`는 무시됩니다. 그러나, 제공된 인수는 여전히 생성자 호출에 (인수부) 앞에 붙습니다:
 
@@ -144,8 +155,8 @@ function Point(x, y) {
   this.y = y;
 }
 
-Point.prototype.toString = function() {
-  return this.x + ',' + this.y;
+Point.prototype.toString = function () {
+  return this.x + "," + this.y;
 };
 
 var p = new Point(1, 2);
@@ -155,11 +166,10 @@ p.toString(); // '1,2'
 
 // 원 bind와는 잘 작동:
 
-var YAxisPoint = Point.bind(null, 0/*x*/);
-
+var YAxisPoint = Point.bind(null, 0 /*x*/);
 
 var emptyObj = {};
-var YAxisPoint = Point.bind(emptyObj, 0/*x*/);
+var YAxisPoint = Point.bind(emptyObj, 0 /*x*/);
 
 var axisPoint = new YAxisPoint(5);
 axisPoint.toString(); // '0,5'
@@ -179,7 +189,7 @@ new Point(17, 42) instanceof YAxisPoint; // true
 // (보통 이를 원하지 않더라도)
 YAxisPoint(13);
 
-emptyObj.x + ',' + emptyObj.y;
+emptyObj.x + "," + emptyObj.y;
 // >  '0,13'
 ```
 
@@ -217,22 +227,24 @@ slice(arguments);
 
 ```js
 if (!Function.prototype.bind) {
-  Function.prototype.bind = function(oThis) {
-    if (typeof this !== 'function') {
+  Function.prototype.bind = function (oThis) {
+    if (typeof this !== "function") {
       // ECMAScript 5 내부 IsCallable 함수와
       // 가능한 가장 가까운 것
-      throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
+      throw new TypeError(
+        "Function.prototype.bind - what is trying to be bound is not callable",
+      );
     }
 
-    var aArgs   = Array.prototype.slice.call(arguments, 1),
-        fToBind = this,
-        fNOP    = function() {},
-        fBound  = function() {
-          return fToBind.apply(this instanceof fNOP
-                 ? this
-                 : oThis,
-                 aArgs.concat(Array.prototype.slice.call(arguments)));
-        };
+    var aArgs = Array.prototype.slice.call(arguments, 1),
+      fToBind = this,
+      fNOP = function () {},
+      fBound = function () {
+        return fToBind.apply(
+          this instanceof fNOP ? this : oThis,
+          aArgs.concat(Array.prototype.slice.call(arguments)),
+        );
+      };
 
     if (this.prototype) {
       // Function.prototype은 prototype 속성이 없음
@@ -248,13 +260,13 @@ if (!Function.prototype.bind) {
 이 알고리즘과 스펙화된 알고리즘 간 많은 차이(충분히 다른 차이가 있을 수 있습니다, 이 목록은 정말 철저히 하지 않았기에) 중 일부는 다음입니다:
 
 - 부분 구현은 {{jsxref("Array.prototype.slice()")}}, {{jsxref("Array.prototype.concat()")}}, {{jsxref("Function.prototype.call()")}} 및 {{jsxref("Function.prototype.apply()")}}, 원래 값을 갖는 내장 메소드에 의존합니다.
-- 부분 구현은 불변(immutable) "poison pill" {{jsxref("Function.caller", "caller")}} 및 get, set 또는 삭제 시 {{jsxref("Global_Objects/TypeError", "TypeError")}}가 발생하는 `arguments` 속성이 없는 함수를 만듭니다. (이는 구현이 {{jsxref("Object.defineProperty")}}를 지원하는 경우 추가 또는 구현이 {{jsxref("Object.defineGetter", "__defineGetter__")}} 및 {{jsxref("Object.defineSetter", "__defineSetter__")}} 메소드를 지원하는 경우 \[삭제 시 오류 발생(throw-on-delete) 동작(behavior) 없이] 부분 구현될 수 있습니다.)
+- 부분 구현은 불변(immutable) "poison pill" {{jsxref("Function.caller", "caller")}} 및 get, set 또는 삭제 시 {{jsxref("Global_Objects/TypeError", "TypeError")}}가 발생하는 `arguments` 속성이 없는 함수를 만듭니다. (이는 구현이 {{jsxref("Object.defineProperty")}}를 지원하는 경우 추가 또는 구현이 [`Object.prototype.__defineGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) 및 [`Object.prototype.__defineSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) 메소드를 지원하는 경우 \[삭제 시 오류 발생(throw-on-delete) 동작(behavior) 없이] 부분 구현될 수 있습니다.)
 - 부분 구현은 `prototype` 속성이 있는 함수를 만듭니다. (고유 바인딩된 함수는 없습니다.)
 - 부분 구현은 {{jsxref("Function.length", "length")}} 속성이 ECMA-262에 의해 부여된(mandated) 그것과 일치하지 않는 바인딩된 함수를 만듭니다: 길이 0인 함수를 만듭니다, 반면에 전체 구현은 대상 함수의 길이 및 미리 지정된 인수의 수에 따라 0이 아닌 길이를 반환할 수 있습니다.
 
 이 부분 구현을 쓰기로 고른 경우, **동작이 ECMA-262 제5판을 벗어난 경우에 의존하지 않아야 합니다!** 그러나 주의 약간(과 아마도 특정 요구에 맞추기 위한 추가 수정)으로, 이 부분 구현은 `bind()`가 스펙에 따라 널리 구현될 때까지 적당한 다리가 될 수 있습니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

@@ -1,13 +1,13 @@
 ---
 title: RTCPeerConnection.addTrack()
 slug: Web/API/RTCPeerConnection/addTrack
-translation_of: Web/API/RTCPeerConnection/addTrack
 ---
+
 {{APIRef("WebRTC")}}
 
-{{domxref("RTCPeerConnection")}}의 메소드인 **`addTrack()`**은 다른 유저에게 전송될 트랙들의 묶음에 신규 미디어 트랙을 추가합니다.
+{{domxref("RTCPeerConnection")}}의 메소드인 **`addTrack()`** 은 다른 유저에게 전송될 트랙들의 묶음에 신규 미디어 트랙을 추가합니다.
 
-> **참고:** **참조:** 연결 인터페이스에 트랙을 추가하게되면, {{event("negotiationneeded")}} 이벤트를 발생시켜 renegotiation을 하게 만듭니다. 자세한 사항은 {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling", "Starting negotiation")}} 를 참조하십시오.
+> **참고:** **참조:** 연결 인터페이스에 트랙을 추가하게되면, {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} 이벤트를 발생시켜 renegotiation을 하게 만듭니다. 자세한 사항은 [Starting negotiation](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling#starting_negotiation) 를 참조하십시오.
 
 ## Syntax
 
@@ -62,12 +62,12 @@ async openCall(pc) {
 }
 ```
 
-위 함수의 결과로 트랙 묶음이 스트림 없이 원격 유저에게 전달됩니다. 모든 트랙들이 동일한 스트림에 추가된다 하더라도, 원격 유저의 {{event("track")}}이벤트 핸들러가 각 트랙을 어느 스트림에 추가 할지를 결정합니다. {{domxref("RTCPeerConnection.ontrack", "ontrack")}} 핸들러는 아래와 같이 작성 될 수 있습니다:
+위 함수의 결과로 트랙 묶음이 스트림 없이 원격 유저에게 전달됩니다. 모든 트랙들이 동일한 스트림에 추가된다 하더라도, 원격 유저의 {{DOMxRef("RTCPeerConnection/track_event", "track")}} 이벤트 핸들러가 각 트랙을 어느 스트림에 추가 할지를 결정합니다. {{domxref("RTCPeerConnection.ontrack", "ontrack")}} 핸들러는 아래와 같이 작성 될 수 있습니다:
 
 ```js
 let inboundStream = null;
 
-pc.ontrack = ev => {
+pc.ontrack = (ev) => {
   if (ev.streams && ev.streams[0]) {
     videoElem.srcObject = ev.streams[0];
   } else {
@@ -77,7 +77,7 @@ pc.ontrack = ev => {
     }
     inboundStream.addTrack(ev.track);
   }
-}
+};
 ```
 
 여기서 `track` 이벤트 핸들러는 스트림을 명시한 경우, 이 이벤트에서 명시한 첫 번째 스트림에 트랙을 추가합니다. 그렇지 않은 경우에는 `ontrack`이 처음 호출되는 순간에 신규 스트림이 생성되고 비디오 엘리먼트에 부착된 다음에서야 트랙이 신규 스트림에 추가됩니다. 이때부터 신규 랙이 해당 스트림에 추가됩니다.
@@ -85,14 +85,14 @@ pc.ontrack = ev => {
 또한, 각각의 트랙을 받을 때 마다, 신규 스트림을 만들 수 있습니다:
 
 ```js
-pc.ontrack = ev => {
+pc.ontrack = (ev) => {
   if (ev.streams && ev.streams[0]) {
     videoElem.srcObject = ev.streams[0];
   } else {
     let inboundStream = new MediaStream(track);
     videoElem.srcObject = inboundStream;
   }
-}
+};
 ```
 
 #### 특정 스트림에 트랙 연동하기
@@ -111,7 +111,7 @@ async openCall(pc) {
 }
 ```
 
-아래와 같이, 원격 유저는 {{event("track")}} 이벤트 핸들러를 사용 할 수 있습니다:
+아래와 같이, 원격 유저는 {{DOMxRef("RTCPeerConnection/track_event", "track")}} 이벤트 핸들러를 사용 할 수 있습니다:
 
 ```js
 pc.ontrack = ({streams: [stream]} => videoElem.srcObject = stream;
@@ -150,20 +150,21 @@ pc.ontrack = ({streams: [stream]} => videoElem.srcObject = stream;
 
 ```js
 var mediaConstraints = {
-  audio: true,            // We want an audio track
-  video: true             // ...and we want a video track
+  audio: true, // We want an audio track
+  video: true, // ...and we want a video track
 };
 
 var desc = new RTCSessionDescription(sdp);
 
-pc.setRemoteDescription(desc).then(function () {
-  return navigator.mediaDevices.getUserMedia(mediaConstraints);
-})
-.then(function(stream) {
-  previewElement.srcObject = stream;
+pc.setRemoteDescription(desc)
+  .then(function () {
+    return navigator.mediaDevices.getUserMedia(mediaConstraints);
+  })
+  .then(function (stream) {
+    previewElement.srcObject = stream;
 
-  stream.getTracks().forEach(track => pc.addTrack(track, stream));
-})
+    stream.getTracks().forEach((track) => pc.addTrack(track, stream));
+  });
 ```
 
 위의 코드는 SDP를 원격 유저로부터 수신 받아서 신규 {{domxref("RTCSessionDescription")}}를 만들고 {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}로 전달합니다. `pc.setRemoteDescription(desc)`의 실행이 성공하게되면, {{domxref("MediaDevices.getUserMedia()")}}를 사용해서 로컬 유저의 웹캠과 마이크에 대한접근 권한을 얻습니다. 앞의 과정이 성공하게되면, 스트림은 {{HTMLElement("video")}} 엘리먼트를 위한 소스로 지정됩니다. 이 스트림은 `previewElement`변수를 통해 참조가 가능해집니다.
@@ -180,7 +181,7 @@ pc.setRemoteDescription(desc).then(function () {
 
 ## 참조
 
-- [WebRTC](/ko/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/ko/docs/Web/API/WebRTC_API)
 - [Introduction to the Real-time Transport Protocol (RTP)](/ko/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - {{domxref("RTCPeerConnection.ontrack")}}
-- {{event("track")}}
+- {{DOMxRef("RTCPeerConnection/track_event", "track")}}

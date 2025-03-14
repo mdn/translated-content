@@ -19,7 +19,7 @@ HTML 的 **`<del>`** 标签表示一些被从文档中删除的文字内容。�
   </tr>
   <tr>
    <th scope="row">标签省略</th>
-   <td>{{no_tag_omission}}</td>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
@@ -40,16 +40,16 @@ HTML 的 **`<del>`** 标签表示一些被从文档中删除的文字内容。�
 
 这个标签包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : 提供一个 URI，其中的资源解释作出修改的原因（比如：根据某次会议讨论）。
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : 这个属性说明修改的时间和日期，这里的时间和日期格式要符合[规范](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-date-string-with-optional-time)。如果设置的值不符合该规范，那么它将没有任何意义。
 
 ## 示例
 
 ```html
 <p><del>This text has been deleted</del>, here is the rest of the paragraph.</p>
-<del ><p >This paragraph has been deleted.</p ></del >
+<del><p>This paragraph has been deleted.</p></del>
 ```
 
 ### 结果

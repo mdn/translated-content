@@ -1,6 +1,9 @@
 ---
-title: 'HTMLMediaElement: canplay イベント'
+title: "HTMLMediaElement: canplay イベント"
+short-title: canplay
 slug: Web/API/HTMLMediaElement/canplay_event
+l10n:
+  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
 {{APIRef("HTMLMediaElement")}}
@@ -14,9 +17,9 @@ slug: Web/API/HTMLMediaElement/canplay_event
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('canplay', event => { });
+addEventListener("canplay", (event) => {});
 
-oncanplay = event => { };
+oncanplay = (event) => {};
 ```
 
 ## イベント型
@@ -30,20 +33,24 @@ oncanplay = event => { };
 `addEventListener()` を使用した例:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('canplay', (event) => {
-  console.log('動画は開始できますが、最後まで再生されるかどうかはわかりません。');
+video.addEventListener("canplay", (event) => {
+  console.log(
+    "動画は開始できますが、最後まで再生されるかどうかはわかりません。",
+  );
 });
 ```
 
 イベントハンドラープロパティ `oncanplay` を使用した例:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.oncanplay = (event) => {
-  console.log('動画は開始できますが、最後まで再生されるかどうかはわかりません。');
+  console.log(
+    "動画は開始できますが、最後まで再生されるかどうかはわかりません。",
+  );
 };
 ```
 
@@ -64,7 +71,6 @@ video.oncanplay = (event) => {
 - HTMLMediaElement {{domxref("HTMLMediaElement.ended_event", 'ended')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.canplay_event", 'canplay')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}} イベント

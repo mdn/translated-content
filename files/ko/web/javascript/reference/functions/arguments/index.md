@@ -1,21 +1,34 @@
 ---
 title: arguments 객체
 slug: Web/JavaScript/Reference/Functions/arguments
-tags:
-  - Functions
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Functions/arguments
 ---
+
 {{jsSidebar("Functions")}}
 
 **`arguments`** 객체는 함수에 전달된 인수에 해당하는 `Array` 형태의 객체입니다.
 
-> **참고:** ES6 호환 코드를 작성 중이라면 되도록 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters) 구문을 사용해야 합니다.
+> [!NOTE]
+> ES6 호환 코드를 작성 중이라면 되도록 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters) 구문을 사용해야 합니다.
 
-> **참고:** "`Array` 형태"란 `arguments`가 {{jsxref("Array.length", "length")}} 속성과 더불어 0부터 인덱스 된 다른 속성을 가지고 있지만, {{jsxref("Array")}}의 {{jsxref("Array.prototype.forEach()", "forEach")}}, {{jsxref("Array.prototype.map()", "map")}}과 같은 내장 메서드를 가지고 있지 않다는 뜻입니다.
+> [!NOTE]
+> "`Array` 형태"란 `arguments`가 {{jsxref("Array.length", "length")}} 속성과 더불어 0부터 인덱스 된 다른 속성을 가지고 있지만, {{jsxref("Array")}}의 {{jsxref("Array.prototype.forEach()", "forEach")}}, {{jsxref("Array.prototype.map()", "map")}}과 같은 내장 메서드를 가지고 있지 않다는 뜻입니다.
 
-{{EmbedInteractiveExample("pages/js/functions-arguments.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Arguments")}}
+
+```js interactive-example
+function func1(a, b, c) {
+  console.log(arguments[0]);
+  // Expected output: 1
+
+  console.log(arguments[1]);
+  // Expected output: 2
+
+  console.log(arguments[2]);
+  // Expected output: 3
+}
+
+func1(1, 2, 3);
+```
 
 ## 구문
 
@@ -30,15 +43,15 @@ translation_of: Web/JavaScript/Reference/Functions/arguments
 예를 들어, 함수가 세 개의 인수를 받은 경우 다음과 같이 접근할 수 있습니다.
 
 ```js
-arguments[0]
-arguments[1]
-arguments[2]
+arguments[0];
+arguments[1];
+arguments[2];
 ```
 
 각 인수를 설정하거나 재할당할 수도 있습니다.
 
 ```js
-arguments[1] = 'new value';
+arguments[1] = "new value";
 ```
 
 `arguments` 객체는 {{jsxref("Array")}}가 아닙니다. `Array`와 비슷하지만, {{jsxref("Array.prototype.length", "length")}} 빼고는 {{jsxref("Array.prototype.pop", "pop()")}}과 같은 어떤 `Array` 속성도 없습니다. 그러나 실제 `Array`로 변환할 수 있습니다:
@@ -48,14 +61,14 @@ var args = Array.prototype.slice.call(arguments);
 var args = [].slice.call(arguments);
 ```
 
-`arguments`를 실제 `Array`로 변환하기 위해 ES2015의 {{jsxref("Array.from()")}} 메서드 또는 [전개 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Spread_operator)를 사용할 수도 있습니다.
+`arguments`를 실제 `Array`로 변환하기 위해 ES2015의 {{jsxref("Array.from()")}} 메서드 또는 [전개 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)를 사용할 수도 있습니다.
 
 ```js
 var args = Array.from(arguments);
 var args = [...arguments];
 ```
 
-당신이 형식상 받기로 선언된 것보다 많은 인수로 함수를 호출하는 경우 `arguments` 객체를 사용할 수 있습니다. 이 기법은 가변 인수가 전달될 수 있는 함수에 유용합니다. 함수에 전달된 인수의 수를 결정하기 위해 [`arguments.length`](/ko/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length)를 쓰세요, 그 뒤에 `arguments` 객체를 사용하여 각 인수를 처리하세요. 함수 [signature](/ko/docs/Glossary/Signature/Function)에 매개변수의 수를 결정하기 위해서는, [`Function.length`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/length) 속성을 쓰세요.
+당신이 형식상 받기로 선언된 것보다 많은 인수로 함수를 호출하는 경우 `arguments` 객체를 사용할 수 있습니다. 이 기법은 가변 인수가 전달될 수 있는 함수에 유용합니다. 함수에 전달된 인수의 수를 결정하기 위해 [`arguments.length`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/length)를 쓰세요, 그 뒤에 `arguments` 객체를 사용하여 각 인수를 처리하세요. 함수 [signature](/ko/docs/Glossary/Signature/Function)에 매개변수의 수를 결정하기 위해서는, [`Function.length`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/length) 속성을 쓰세요.
 
 ## 속성
 
@@ -135,7 +148,7 @@ foo(1, 2, 3); // { "0": 1, "1": 2, "2": 3 }
 그러나, 비엄격 함수에서는 **mapped `arguments` 객체**는 함수가 어떤 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters) 또는 [비구조화된 매개변수](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)든 포함하지 **않는** 경우에만 제공됩니다. 예를 들어, 기본 매개변수를 사용하는 다음 함수에서는, 100 대신에 `10`이 반환됩니다:
 
 ```js
-function bar(a=1) {
+function bar(a = 1) {
   arguments[0] = 100;
   return a;
 }

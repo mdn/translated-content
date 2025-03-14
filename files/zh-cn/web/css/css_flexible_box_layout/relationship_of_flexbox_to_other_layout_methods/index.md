@@ -1,41 +1,38 @@
 ---
 title: 弹性盒子与其他布局方法的联系
-slug: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
-original_slug: Web/CSS/CSS_Flexible_Box_Layout/弹性盒子与其他布局方法的联系
+slug: Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
+l10n:
+  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
 {{CSSRef}}
 
-在本文中，我们将了解弹性盒子（Flexbox）如何与所有其他 CSS 模块相适应。如果您想学习 flexbox，我们将一起找出需要注意的规范和 flexbox 与一些其他模块不同的原因。
+在本文中，我们将了解弹性盒子（Flexbox）如何与所有其他 CSS 模块配合使用。如果你想学习弹性盒子，我们将一起找出需要注意的规范以及弹性盒子与其他的模块不同的原因。
 
-> **备注：** CSS 1 和 CSS 2 是一个单一的整体规范，其中所有 CSS 都定义在一个文档中。随着 CSS 成为一种功能更加丰富的语言，各个部分有不同的发展速度，如何维护一个庞大的规范就成了问题。因此现在的 CSS 是模块化的，不同的 CSS 模块有不同的规范，一起构成了现在的 CSS。这些模块之间相互关联，并且处于不同的开发阶段。
+> [!NOTE]
+> CSS 1 和 CSS 2 是单一的整体规范，其中所有 CSS 都定义在一个文档中。随着 CSS 成为一种特性更加丰富的语言，各个部分有不同的发展速度，如何维护一个庞大的规范就成了问题。因此 CSS 已被模块化，不同的 CSS 规范构成的模块构成了如今的 CSS。这些模块之间相互关联，并且处于不同的开发阶段。
 
-## box alignment 模块
+## 盒子对齐模块
 
-许多人开始关注 flexbox 的最初原因是在 flex 容器中能够很好的对齐其中的元素。flexbox 可以设置在其交叉轴以及主轴上的对齐属性。
+许多人开始关注弹性盒子的最初原因是在弹性容器中能够很好地对齐其中的元素。弹性盒子可以设置在其交叉轴以及主轴上对齐元素的属性。
 
-这些属性最开始出现在 flexbox 规范中，现在已经成为[Box Alignment 规范](https://www.w3.org/TR/css-align-3/)的一部分。这个规范详细说明了在所有布局中（不仅仅是 flexbox）对齐属性是如何起作用的。对齐属性用于设置元素对齐方式和沿轴的空间分配。
+这些属性最开始出现在弹性盒子规范中，现在已经成为[盒子对齐规范](https://www.w3.org/TR/css-align-3/)的一部分。这个规范详细说明了在所有布局中（不仅仅是弹性盒子）对齐属性是如何起作用的。盒子对齐用于处理对齐方式以及内容调整（包括在弹性元素之间创建间隙或上下间距）。
 
-之所以在 flexbox 规范和 box alignment 模块规范中都有对对齐属性的详细描述，是为了确保 flexbox 规范的完成不会受 box alignment 模块规范的影响，因为后者需要详细说明所有的布局类型中的对齐方法。flexbox 规范中有一条注释指出将来一旦 Box Alignment Level 3 完成，它将会取代 flexbox 规范中的相关定义：
+之所以在弹性盒子规范和盒子对齐规范中都有有关盒子对齐属性的详细描述，是为了确保弹性盒子规范的完成不会受盒子对齐规范的影响，因为后者需要详细说明所有的布局类型中的对齐方法。弹性盒子规范中有一条注释指出：将来，弹性盒子第 3 版规范一旦完成，它将会取代弹性盒子规范中的相关定义：
 
-> “注意：虽然对齐属性是在 CSS Box Alignment \[CSS-ALIGN-3] 中定义的，但“Flexible Box Layout”在此处重现了相关属性的定义，以免形成规范性的依赖关系，而这可能会减慢规范的发展。这些属性仅适用于 Flex 布局，直到 CSS Box Alignment Level 3 完成并定义其对其他布局模式的效果；此外，在 Box Alignment 模块中定义的任何新值都将应用于 Flexible Box Layout；换句话说，一旦 Box Alignment 模块完成，其中的相关定义将取代此处的定义。”
+> “注意：虽然对齐属性是在 CSS 弹性盒子 \[CSS-ALIGN-3] 中定义的，但弹性盒子布局在此处重现了相关属性的定义，以免形成规范性的依赖关系，而这可能会减慢规范的发展。在 CSS 弹性盒子第 3 级规范完成并定义其对其他布局模式的效果之前，这些属性仅适用于弹性布局。此外，在盒子对齐模块中定义的任何新值都将适用于弹性盒子布局；换句话说，一旦盒子对齐模块完成，其中的相关定义将取代此处的定义。”
 
-在本系列的后续文章（在 flex 容器中对齐元素）中，我们将彻底研究 Box Alignment 属性如何应用于 flex 元素。
+在本系列的后续文章——[在弹性容器中对齐元素](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)——中，我们将全面了解盒子对齐属性如何应用于弹性元素。
 
-### gap 属性
+## 书写模式
 
-属性{{cssxref("row-gap")}} 和 {{cssxref("column-gap")}}，其简写为{{cssxref("gap")}}，近期添加到了盒子布局规范中。这些属性（名称为`grid-row-gap`, `grid-column-gap` and `grid-gap`）最初定义在 CSS 网格布局中。但是他们被重命名并移入盒子布局规范。这样的话，所有的布局方法都可以使用这些属性。不过在浏览器实现 Flex 的这些属性之前只能通过{{cssxref("margin")}} 来控制元素之间的间隙距离。
+在[弹性盒子的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)文章中，我们解释了弹性盒子是**会感知书写模式的**。书写模式在 CSS [书写模式规范](https://www.w3.org/TR/css-writing-modes-3/)中有详细说明，其中详细说明了 CSS 如何支持国际上存在的各种不同的书写模式。我们需要了解这将如何影响我们的弹性布局，因为书写模式会改变文档中块的布局方向。了解**块**与**行**的方向对于新的布局方法至关重要。
 
-## Writing Modes
+值得注意的是，除了发布使用不同书写模式的语言的内容之外，我们可能还想改变文档的书写模式。请参阅[这篇文章](https://24ways.org/2016/css-writing-modes/)，了解书写模式及其使用方法的完整描述，无论是针对其他语言的内容还是出于创意原因。
 
-In the [Basic concepts of flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) article, I explained that flexbox is **writing mode aware**. Writing modes are fully detailed in the CSS [Writing Modes specification](https://www.w3.org/TR/css-writing-modes-3/), which details how CSS supports the various different writing modes that exist internationally. We need to be aware of how this will impact our flex layouts as writing mode changes the direction that blocks are laid out in our document. Understanding **block** and **inline** directions is key to new layout methods.
+### 书写模式属性
 
-It is worth noting that we might want to change the writing mode of our document for reasons other than publishing content in a language that uses a different writing mode. See [this article](https://24ways.org/2016/css-writing-modes/) for a full description of writing modes and ways to use them, both for content in other languages and for creative reasons.
-
-### The writing modes
-
-The writing modes specification defines the following values of the {{cssxref("writing-mode")}} property, which serve to change the direction that blocks are laid out on the page, to match the direction that blocks lay out when content is formatted in that particular writing mode. You can change the live example below to these modes in order to see what happens to the flex layout.
+书写模式规范定义了以下 {{cssxref("writing-mode")}} 属性的值，这些值用于改变块在页面上的布局方向，以匹配内容在特定书写模式下的格式化方向。你可以更改下面的实时示例的书写模式，以查看弹性布局的变化。
 
 - `horizontal-tb`
 - `vertical-rl`
@@ -45,66 +42,67 @@ The writing modes specification defines the following values of the {{cssxref("w
 
 {{EmbedGHLiveSample("css-examples/flexbox/relationship/writing-modes.html", '100%', 360)}}
 
-Note that `sideways-rl` and `sideways-lr` have support only in Firefox currently. There are also some known issues with regard to `writing-mode` and flexbox. You can see more information on browser support in the [MDN documentation for writing-mode](/zh-CN/docs/Web/CSS/writing-mode). However if you are planning on using writing modes in your layout, carefully testing the results is advisable — not least because it would be easy to make things hard to read!
+请注意目前只有 Firefox 支持 `sideways-rl` 和 `sideways-lr`。关于 `writing-mode` 和弹性盒子还有一些已知的问题。你可以在 [MDN 有关 writing-mode 的文档](/zh-CN/docs/Web/CSS/writing-mode)中查看有关浏览器支持的更多信息。然而，如果你打算在你的布局中使用书写模式，我们建议仔细测试结果——尤其是因为它很容易使内容变得难以阅读！
 
-Note that you would not normally use CSS and the `writing-mode` property to change an entire document to another writing mode. This would be done via HTML, by adding a `dir` and `lang` attribute to the `html` element to indicate the document language and default text direction. This would mean that the document would display correctly even if CSS did not load.
+注意，你通常不会使用 CSS 和 `writing-mode` 属性来将整个文档更改为另一种书写模式。这应该通过 HTML 完成，通过为 `html` 元素添加 `dir` 和 `lang` 属性来指示文档语言和默认文本方向。这意味着即使 CSS 没有加载，文档也会正确显示。
 
-## Flexbox and other layout methods
+## 弹性盒子和其他布局方式
 
-The flexbox specification contains a [definition of what happens](https://www.w3.org/TR/css-flexbox-1/#flex-containers) if an item uses another layout method and then becomes a flex item. For example, if an item is floated and then its parent becomes a flex container. Or, how a flex container behaves as part of layout.
+弹性盒子规范包含了对如果一个元素使用了其他布局方式然后变成了弹性元素的这种情况[会发生什么的定义](https://www.w3.org/TR/css-flexbox-1/#flex-containers)。例如，如果一个元素是浮动的，那么它的父元素就会变成弹性容器。或者，弹性容器在不同布局中的行为。
 
-An element set to `display: flex` behaves in most ways like any other block level container that establishes a containing block. Floats will not intrude, and the containers' margins will not collapse.
+设置了 `display: flex` 的元素在大多数情况下都会像其他块级容器一样，它会创建一个包含块。浮动不会侵入，容器的外边距也不会折叠。
 
-With regard to flex items, if an item was floated or cleared and then becomes a flex item due to the parent having `display: flex` applied, the floating and clearing will no longer happen, and the item will not be taken out of normal flow in the way that floats are. If you have used the {{cssxref("vertical-align")}} property, as used with `inline-block` or table layout for alignment, this will no longer affect the item and you can use the alignment properties of flexbox instead.
+对于弹性元素，如果元素是浮动的或者清除了浮动，然后因父元素应用了 `display: flex` 而变成弹性元素，那么浮动和清除也将不再发生，该元素也不会像浮动元素那样脱离常规流。如果你使用了 {{cssxref("vertical-align")}} 属性（与 `inline-block` 或表格布局一起用于对齐），这将不再影响该元素，可以改用弹性盒子的对齐属性来代替。
 
-In this next live example the child elements have been floated, and then their container has had `display: flex` added. If you remove `display: flex`, you should see that the `.box` element collapses as we have no clearing applied. This demonstrates that the float is happening. Re-apply `display: flex` and the collapsing does not happen. This is because the items no longer have a float applied, as they have been transformed into flex items.
+在下面的实时示例中，子元素应用了浮动，而它们的容器应用了 `display: flex`。如果你移除 `display: flex`，你应该会看到 `.box` 元素会折叠，因为我们没有清除浮动。这证明了浮动的存在。重新应用 `display: flex`，折叠就不会发生。这是因为元素不再浮动——它们已经变成了弹性元素。
 
 {{EmbedGHLiveSample("css-examples/flexbox/relationship/floats.html", '100%', 430)}}
 
-## Flexbox and Grid Layout
+## 弹性盒子和网格布局
 
-[CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) and Flexbox generally act in the same way with regards to overwriting other methods. You might however want to use flexbox as a fallback for grid layout, as there is better support for flexbox in older browsers. This approach works very well. If a flex item becomes a grid item, then the `flex` properties that may have been assigned to the child elements will be ignored.
+[CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)和弹性盒子在覆盖其他方法方面的行为通常是一样的。然而，你可能想要将弹性盒子作为网格布局的回退布局，因为旧版浏览器对弹性盒子有更好的支持。这种方法非常有效。如果一个弹性元素变成了网格元素，那么（可能）分配给子元素的 `flex` 属性将被忽略。
 
-You can use the Box Alignment properties across both layout methods, so using flexbox as a fallback for grid layout can work very well.
+你可以同时在两种布局方式中使用盒子对齐属性，因此将弹性盒子作为网格布局的回退布局可以有效地工作。
 
-### Flex and grid — what's the difference?
+### 弹性和网格的区别
 
-A common question is to ask what the difference is between Flexbox and CSS Grid Layout — why do we have two specifications that sometimes appear to be doing the same thing?
+一个常见的问题是：弹性盒子和 CSS 网格布局之间有什么区别？为什么我们有两个规范，它们有时看起来做着相同的事情？
 
-The most straightforward answer to this question is defined in the specifications themselves. Flexbox is a one-dimensional layout method whereas Grid Layout is a two-dimensional layout method. The example below has a flex layout. As already described in the Basic concepts article, flex items can be allowed to wrap but, once they do so, each line becomes a flex container of its own. When space is distributed flexbox does not look at the placement of items in other rows and tries to line things up with each other.
+这个问题最直接的答案定义在规范中。弹性盒子是一维布局方法，而网格布局是二维布局方法。下面的示例使用了弹性布局。正如在[基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)文章中描述的那样，弹性元素允许换行，但是一旦这样做，每一行都会变成一个新的弹性容器。当空间被分配时，弹性盒子不会参考其他行中的元素的位置，而只是将元素彼此对齐。
 
 {{EmbedGHLiveSample("css-examples/flexbox/relationship/flex-layout.html", '100%', 750)}}
 
-If we create a very similar layout using Grid, we can control the layout in both rows and columns.
+如果我们使用网格布局创建一个非常相似的布局，我们可以控制行和列的布局。
 
 {{EmbedGHLiveSample("css-examples/flexbox/relationship/grid-layout.html", '100%', 700)}}
 
-These examples point to another key difference between these layout methods. In Grid Layout you do the majority of sizing specification on the container, setting up tracks and then placing items into them. In flexbox, while you create a flex container and set the direction at that level, any control over item sizing needs to happen on the items themselves.
+这些示例指出了两个布局方法之间的另一个关键区别。在网格布局中，你需要在容器上设置大部分尺寸规范，设置轨道然后将元素放入其中。在弹性盒子中，虽然你创建了弹性容器并设置了该级别的方向，但是对元素大小的任何控制都需要在元素本身之上进行。
 
-In some cases you could happily use either layout method, but as you become confident with both you will find each one suiting different layout needs, and you will end up with both methods in your CSS. There is rarely a right or wrong answer.
+在某些情况下，你可以使用任意一种布局方法，但你会发现每一种方法都适用于不同的布局需求，你的 CSS 中会有多种方法。这很少有一个正确或错误的答案。
 
-As a rule of thumb, if you are adding widths to flex items in order to make items in one row of a wrapped flex container line up with the items above them you really want two-dimensional layout. In this case it is likely that the component would be better laid out using CSS Grid Layout. It isn't the case that you should use flexbox for small components and grid layout for larger ones; a tiny component can be two dimensional, and a large layout can be represented better with layout in one dimension. Try things out — we have a choice in layout method for the first time, so take advantage of it.
+作为基本规则，如果你要为弹性元素设置宽度，以便使包装的弹性容器中的一排元素与其上方的元素对齐，那么你真正需要的其实是二维布局。在这种情况下，很可能使用 CSS 网格布局更好。对于较小的组件，你不应该使用弹性盒子，而对于较大的组件，你不应该使用网格布局；较小的组件可以是二维的，而一维布局则可以更好地表示较大的布局。尝试一下它们——我们第一次有了布局方法的选择，所以要好好利用它。
 
-For more comparisons of grid and flexbox see the article [Relationship of Grid Layout to other layout methods](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout). This article details many of the ways that Grid Layout differs from flex layout, and demonstrates some of the extra functionality you get when using Grid Layout such as layering of items on the grid. This may also help in your decision as to which layout method to use.
+可以参考[网格布局和其他布局方法的关系](/zh-CN/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)这篇文章，以更为全面地比较网格和弹性盒子。这篇文章详细解释了网格布局和弹性布局的不同之处，并展示了使用网格布局的一些其他功能，例如在网格上层叠放置元素。这篇文章还可以帮助你决定使用哪种布局方法。
 
-## Flexbox and display: contents
+## 弹性盒子和 display: contents
 
-The `contents` value of the {{cssxref("display")}} property is a new value that is described in the spec as follows:
+{{cssxref("display")}} 属性的 `contents` 值是一个新值，规范中对它的描述如下：
 
-> “The element itself does not generate any boxes, but its children and pseudo-elements still generate boxes as normal. For the purposes of box generation and layout, the element must be treated as if it had been replaced with its children and pseudo-elements in the document tree.”
+> “元素本身并不会生成任何盒子，但它的子元素和伪元素仍然会像通常的那样生成盒子。对于盒子的生成和布局，元素必须被视作已经被替换为其子元素和伪元素。”
 
-This value of `display` controls box generation, and whether the element should generate a box that we can style and see on the page, or whether instead the box it would normally create should be removed and the child elements essentially moved up to participate in whatever layout method the parent would have been part of. This is much easier to see with an example.
+`display` 的值控制盒子的生成，以及元素是否应该生成一个我们可以添加样式并在页面上看到的盒子，或者是否应该移除它通常会创建的盒子，并将子元素在层面上向上移动以参与其父元素所参与的布局方法。通过一个示例，这将更易于理解。
 
-In the following live example I have a flex container with three child elements. One of these flex items has two elements nested inside it, which would not ordinarily participate in flex layout. Flex layout only applies to the direct children of a flex container.
+在下面的实时示例中，我们有一个带有三个子元素的弹性容器。其中的一个弹性元素有两个嵌套在其中的元素，它们通常不会参与弹性布局。弹性布局仅适用于弹性容器的直接子元素。
 
-By adding `display: contents` to the wrapper around the nested elements, you can see that that item has disappeared from the layout, allowing the two sub-children to be laid out as if they were direct children of the flex container. You can try removing the `display: contents` line to see it return.
+通过为嵌套元素的包装器添加 `display: contents`，你可以看到该元素已从布局中消失，从而允许两个子元素被布局，就像它们是弹性容器的直接子元素一样。你可以尝试移除 `display: contents` 这行来查看其结果。
 
-Note that this only removes the box from the layout; the sub-children don't become direct children in any other way. You can see that as I have used a direct child selector to add the background and borders to the flex items, this has not been applied to our nested children. They have been laid out as flex items, but as they are not direct children they do not get the other styling.
+请注意，这只会从布局中删除该盒子；子元素并不会以任何其他方式成为直接子元素。你可以看到，我们使用了直接子元素选择器来为弹性元素添加背景和边框，因此这些样式并没有应用到嵌套的子元素上。它们已经被布局为弹性元素，但由于它们不是直接子元素，所以它们不会获得其他样式。
 
-> **警告：** Use of `display: contents` will also remove the element from the accessibility tree – screen readers will not see what's inside, just the same as if you used `display: none`. Use of `contents` should only be for presentational, not content, elements.
+> [!WARNING]
+> 大多数浏览器的当前实现会从无障碍树中移除任何具有 `display: contents` 的元素（但会保留其后代）。这将导致屏幕阅读技术不再宣告该元素。根据规范，这是不正确的行为，参见 [`display: contents`](/zh-CN/docs/Web/CSS/display#display_contents)。
 
-Also, having removed the box you cannot then use it to — for example — add a background colour behind the nested sub children. If you remove `display: contents` in this live example you will see that the direct child we are removing has an orange background colour. This also disappears when the box disappears.
+此外，删除了盒子后，你就无法使用它来——例如——为嵌套的子元素添加背景色。如果你在该实时示例中删除 `display: contents`，你会看到我们要删除属性的元素的直接子元素的背景色为橙色。当盒子消失时，这个背景色也会消失。
 
 {{EmbedGHLiveSample("css-examples/flexbox/relationship/display-contents.html", '100%', 650)}}
 
-Browser support for `display:contents` is limited and required for this demo to work. Firefox supports `display: contents` already, and the value is being implemented in Chrome. Once there is better browser support this feature will be very useful in circumstances where you need the markup for semantic reasons but do not want to display the box that it would generate by default.
+浏览器对 `display:contents` 的支持是有限的，这个示例需要相应支持才能正常工作。Firefox 已经支持了 `display: contents`，而 Chrome 正在实现该值。一旦有了更好的浏览器支持，这个特性在需要语义标记但又不想显示默认生成的盒子的情况下将非常有用。

@@ -3,16 +3,23 @@ title: Date.prototype.getHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`getHours()`** 方法根据本地时间，返回一个指定的日期对象的小时。
 
-{{EmbedInteractiveExample("pages/js/date-gethours.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getHours()")}}
+
+```js interactive-example
+const birthday = new Date("March 13, 08 04:20");
+
+console.log(birthday.getHours());
+// Expected output: 4
+```
 
 ## 语法
 
-```js
-dateObj.getHours()
+```js-nolint
+getHours()
 ```
 
 ### 参数
@@ -23,9 +30,9 @@ dateObj.getHours()
 
 `getHours` 返回一个 0 到 23 之间的整数值。
 
-## 例子
+## 示例
 
-### 例子：使用`getHours`方法
+### 示例：使用`getHours`方法
 
 下面第二条语句，基于日期对象 `Xmas95` 的值，把 23 赋值给了变量 `hours`。
 
@@ -44,7 +51,7 @@ alert(hours); // 23
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCHours()")}}
 - {{jsxref("Date.prototype.setHours()")}}

@@ -1,19 +1,23 @@
 ---
-title: ':picture-in-picture'
+title: :picture-in-picture
 slug: Web/CSS/:picture-in-picture
+l10n:
+  sourceCommit: 04ebe57066db2cff350018649bdb15b2a10c67ba
 ---
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 的[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:picture-in-picture`** 匹配当前处于画中画模式的元素。
+**`:picture-in-picture`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)匹配当前处于画中画模式的元素。
 
 ## 语法
 
-```
-:picture-in-picture
+```css
+:picture-in-picture {
+  /* ... */
+}
 ```
 
-## 用法说明
+## 使用说明
 
 `:picture-in-picture` 伪类允许你配置样式表，以便视频在画中画或者传统播放模式来回切换时自动调整内容的大小、样式或布局。
 
@@ -26,10 +30,12 @@ slug: Web/CSS/:picture-in-picture
 页面的 HTML 如下所示：
 
 ```html
-<h1>MDN Web Docs Demo: :picture-in-picture pseudo-class</h1>
+<h1>MDN Web Docs 演示：:picture-in-picture 伪类</h1>
 
-<p>This demo uses the <code>:picture-in-picture</code> pseudo-class to automatically
-  change the style of a video entirely using CSS.</p>
+<p>
+  此演示使用 CSS <code>:picture-in-picture</code>
+  伪类自动改变视频的完整样式。
+</p>
 
 <video id="pip-video"></video>
 ```
@@ -58,7 +64,6 @@ ID 为 `"pip-video"` 的 {{HTMLElement("video")}} 会根据是否在画中画浮
 
 - [Picture-in-picture API](/zh-CN/docs/Web/API/Picture-in-Picture_API)
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
 - {{DOMxRef("Document.exitPictureInPicture()")}}

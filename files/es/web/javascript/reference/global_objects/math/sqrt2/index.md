@@ -1,8 +1,6 @@
 ---
 title: Math.SQRT2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/SQRT2
 ---
 
 {{JSRef}}La propiedad **Math.SQRT2** representa la raíz cuadrada de de 2, aproximadamente 1.414:
@@ -33,9 +31,9 @@ getRoot2(); // 1.4142135623730951
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.SQRT2")}}
+{{Compat}}
 
 ## Ver también
 

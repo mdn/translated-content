@@ -1,8 +1,6 @@
 ---
 title: Element.closest()
 slug: Web/API/Element/closest
-translation_of: Web/API/Element/closest
-browser-compat: api.Element.closest
 ---
 
 {{APIRef('DOM')}}
@@ -12,7 +10,7 @@ La méthode **`closest()`** traverse [l'élément](/fr/docs/Web/API/Element) cou
 ## Syntaxe
 
 ```js
-closest(selecteurs)
+closest(selecteurs);
 ```
 
 ### Paramètres
@@ -34,8 +32,10 @@ Une exception [`SyntaxError`](/fr/docs/Web/API/DOMException#syntaxerror) est lev
 
 ```html
 <article>
-  <div id="div-01">Voici div-01
-    <div id="div-02">Voici div-02
+  <div id="div-01">
+    Voici div-01
+    <div id="div-02">
+      Voici div-02
       <div id="div-03">Voici div-03</div>
     </div>
   </div>
@@ -45,20 +45,20 @@ Une exception [`SyntaxError`](/fr/docs/Web/API/DOMException#syntaxerror) est lev
 ### JavaScript
 
 ```js
-const el = document.getElementById('div-03');
+const el = document.getElementById("div-03");
 
-const r1 = el.closest('#div-02');
+const r1 = el.closest("#div-02");
 // Renvoie l'élément avec l'identifiant div-02
 
-const r2 = el.closest('div div');
+const r2 = el.closest("div div");
 // Renvoie le plus proche ancêtre qui est un div dans un div
 // Ici, c'est div-03 lui-même
 
-const r3 = el.closest('article > div');
+const r3 = el.closest("article > div");
 // Renvoie le plus proche ancêtre qui est un div et qui a un
 // article parent, il s'agit ici de div-01
 
-const r4 = el.closest(':not(div)');
+const r4 = el.closest(":not(div)");
 // Renvoie le plus proche ancêtre qui n'est pas un div,
 // c'est l'article englobant
 ```
@@ -75,7 +75,7 @@ if (!Element.prototype.matches) {
 }
 
 if (!Element.prototype.closest) {
-  Element.prototype.closest = function(s) {
+  Element.prototype.closest = function (s) {
     var el = this;
 
     do {
@@ -91,14 +91,14 @@ Si la prise en charge d'IE8 est nécessaire, le fragment de code qui suit fera l
 
 ```js
 if (window.Element && !Element.prototype.closest) {
-  Element.prototype.closest = function(s) {
+  Element.prototype.closest = function (s) {
     var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-        i,
-        el = this;
+      i,
+      el = this;
     do {
       i = matches.length;
-      while (--i >= 0 && matches.item(i) !== el) {};
-    } while ((i < 0) && (el = el.parentElement));
+      while (--i >= 0 && matches.item(i) !== el) {}
+    } while (i < 0 && (el = el.parentElement));
     return el;
   };
 }

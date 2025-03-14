@@ -1,19 +1,79 @@
 ---
 title: backface-visibility
 slug: Web/CSS/backface-visibility
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transforms
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/backface-visibility
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`backface-visibility`** 속성은 요소의 뒷면이 사용자를 향할 때 보여야 하는지 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/backface-visibility.html")}}
+{{InteractiveExample("CSS Demo: backface-visibility")}}
+
+```css interactive-example-choice
+backface-visibility: visible;
+```
+
+```css interactive-example-choice
+backface-visibility: hidden;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  perspective: 550px;
+  perspective-origin: 220% 220%;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgb(230, 0, 0);
+  color: white;
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgba(0, 0, 0, 0.6);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgba(0, 0, 0, 0.6);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+```
 
 요소의 뒷면은 앞면의 거울상입니다. 2D 상태에서는 볼 수 없지만 변형을 통해 3D 공간에서 회전되면 노출될 수 있습니다. (2D 변형에는 원근이 없으므로 효과가 없습니다.)
 
@@ -74,9 +134,8 @@ backface-visibility: unset;
         </div>
       </div>
       <p>
-        Since all faces are partially transparent,
-        the back faces (2, 4, 5) are visible
-        through the front faces (1, 3, 6).
+        Since all faces are partially transparent, the back faces (2, 4, 5) are
+        visible through the front faces (1, 3, 6).
       </p>
     </td>
     <td>
@@ -90,10 +149,7 @@ backface-visibility: unset;
           <div class="face bottom">6</div>
         </div>
       </div>
-      <p>
-        The three back faces (2, 4, 5) are
-        hidden.
-      </p>
+      <p>The three back faces (2, 4, 5) are hidden.</p>
     </td>
   </tr>
 </table>
@@ -174,8 +230,10 @@ backface-visibility: unset;
 }
 
 /* Make the table a little nicer */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   margin: 0px;
   padding: 6px;
   font-family: sans-serif;
@@ -197,4 +255,4 @@ th, p, td {
 
 ## 같이 보기
 
-- [CSS 변형 사용하기](/ko/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [CSS 변형 사용하기](/ko/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

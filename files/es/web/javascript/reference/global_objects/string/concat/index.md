@@ -1,21 +1,24 @@
 ---
 title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
-tags:
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/concat
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/concat
 ---
 
 {{JSRef}}
 
 El método **`concat()`** combina dos o más cadenas de texto y devuelve una cadena de texto nueva.
 
-{{EmbedInteractiveExample("pages/js/string-concat.html")}}
+{{InteractiveExample("JavaScript Demo: String.concat()")}}
+
+```js interactive-example
+const str1 = "Hello";
+const str2 = "World";
+
+console.log(str1.concat(" ", str2));
+// Expected output: "Hello World"
+
+console.log(str2.concat(", ", str1));
+// Expected output: "World, Hello"
+```
 
 ## Sintaxis
 
@@ -49,29 +52,27 @@ Es altamente recomendado que se utilicen {{jsxref("Operators/Assignment_Operator
 El siguiente ejemplo combina cadenas de texto en una nueva.
 
 ```js
-let hello = 'Hello, '
-console.log(hello.concat('Kevin', '. Have a nice day.'))
+let hello = "Hello, ";
+console.log(hello.concat("Kevin", ". Have a nice day."));
 // Hello, Kevin. Have a nice day.
 
-let greetList = ['Hello', ' ', 'Venkat', '!']
-"".concat(...greetList)  // "Hello Venkat!"
+let greetList = ["Hello", " ", "Venkat", "!"];
+"".concat(...greetList); // "Hello Venkat!"
 
-"".concat({})    // [object Object]
-"".concat([])    // ""
-"".concat(null)  // "null"
-"".concat(true)  // "true"
-"".concat(4, 5)  // "45"
+"".concat({}); // [object Object]
+"".concat([]); // ""
+"".concat(null); // "null"
+"".concat(true); // "true"
+"".concat(4, 5); // "45"
 ```
 
 ## Especificaciones
 
-| Especificación                                                                                               |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.concat', 'String.prototype.concat')}} |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.concat")}}
+{{Compat}}
 
 ## Ver también
 

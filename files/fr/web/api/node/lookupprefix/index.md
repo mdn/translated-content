@@ -1,14 +1,6 @@
 ---
 title: Node.lookupPrefix()
 slug: Web/API/Node/lookupPrefix
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - Noeuds
-  - Préfixes
-  - URI
-translation_of: Web/API/Node/lookupPrefix
 ---
 
 {{APIRef("DOM")}}
@@ -19,4 +11,4 @@ En raison du [bug 312019](https://bugzilla.mozilla.org/show_bug.cgi?id=312019), 
 
 ## Voir aussi
 
-- [http://www.w3.org/TR/DOM-Level-3-Cor...amespacePrefix](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-lookupNamespacePrefix)
+- [http://www.w3.org/TR/DOM-Level-3-Cor...amespacePrefix](https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-lookupNamespacePrefix)

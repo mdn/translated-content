@@ -1,29 +1,33 @@
 ---
 title: Intl.Collator.prototype.compare
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
-tags:
-  - Collator
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - i18n
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Collator/compare
 ---
 
 {{JSRef}}
 
 La méthode **`Intl.Collator.prototype.compare()`** compare deux chaînes de caractères en tenant compte des options spécifiées pour la locale et l'ordre de tri dans l'objet {{jsxref("Collator")}}.
 
-{{EmbedInteractiveExample("pages/js/intl-collator-prototype-compare.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Collator.prototype.compare")}}
+
+```js interactive-example
+const enCollator = new Intl.Collator("en");
+const deCollator = new Intl.Collator("de");
+const svCollator = new Intl.Collator("sv");
+
+console.log(enCollator.compare("z", "a") > 0);
+// Expected output: true
+
+console.log(deCollator.compare("z", "ä") > 0);
+// Expected output: true
+
+console.log(svCollator.compare("z", "ä") > 0);
+// Expected output: false
+```
 
 ## Syntaxe
 
 ```js
-collator.compare(chaine1, chaine2)
+collator.compare(chaine1, chaine2);
 ```
 
 ### Paramètres
@@ -55,10 +59,13 @@ Ici, on utilise la fonction de l'accesseur `compare` pour trouver les chaînes �
 
 ```js
 var a = ["Congrès", "congres", "Assemblée", "poisson"];
-var collator = new Intl.Collator("fr", {usage: "search", sensitivity: "base"});
+var collator = new Intl.Collator("fr", {
+  usage: "search",
+  sensitivity: "base",
+});
 var s = "congres";
 var matches = a.filter(function (v) {
-    return collator.compare(v, s) === 0;
+  return collator.compare(v, s) === 0;
 });
 console.log(matches.join(", "));
 // → "Congrès, congres"

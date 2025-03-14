@@ -28,9 +28,10 @@ getRegistration(clientURL)
 ## 例
 
 ```js
-navigator.serviceWorker.getRegistration('/app').then((registration) => {
+navigator.serviceWorker.getRegistration("/app").then((registration) => {
   if (registration) {
-    document.querySelector('#status').textContent = 'ServiceWorkerRegistration が見つかりました。';
+    document.querySelector("#status").textContent =
+      "ServiceWorkerRegistration が見つかりました。";
   }
 });
 ```

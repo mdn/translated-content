@@ -1,17 +1,27 @@
 ---
 title: Декремент (--)
 slug: Web/JavaScript/Reference/Operators/Decrement
-tags:
-  - Декремент
-  - Оператор
-translation_of: Web/JavaScript/Reference/Operators/Decrement
 ---
 
 {{jsSidebar("Operators")}}
 
 Оператор декремента (`--`) уменьшает (вычитает единицу) свой операнд и возвращает значение.
 
-{{EmbedInteractiveExample("pages/js/expressions-decrement.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Decrement operator")}}
+
+```js interactive-example
+let x = 3;
+const y = x--;
+
+console.log(`x:${x}, y:${y}`);
+// Expected output: "x:2, y:3"
+
+let a = 3;
+const b = --a;
+
+console.log(`a:${a}, b:${b}`);
+// Expected output: "a:2, b:2"
+```
 
 ## Синтаксис
 
@@ -49,12 +59,9 @@ b = --a;
 
 ## Характеристики
 
-Спецификация
+{{Specifications}}
 
-| {{SpecName('ESDraft', '#sec-postfix-decrement-operator', 'Decrement operator')}} |
-| ------------------------------------------------------------------------------------------------------------ |
-
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

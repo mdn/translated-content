@@ -1,17 +1,6 @@
 ---
 title: <body>
 slug: Web/HTML/Element/body
-tags:
-  - Element
-  - HTML
-  - Web
-  - Веб
-  - Корневой элемент
-  - Разделы
-  - Секционирование
-  - Справка
-  - Элемент
-translation_of: Web/HTML/Element/body
 ---
 
 {{HTMLSidebar}}
@@ -34,7 +23,7 @@ translation_of: Web/HTML/Element/body
       </td>
     </tr>
     <tr>
-      <th scope="row">Разрешённое содержимое</th>
+      <th scope="row">Допустимое содержимое</th>
       <td>
         <a href="/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент"
           >Потоковый контент</a
@@ -42,7 +31,7 @@ translation_of: Web/HTML/Element/body
       </td>
     </tr>
     <tr>
-      <th scope="row">Пропуск тега</th>
+      <th scope="row">Пропуск тегов</th>
       <td>
         Открывающий тег может быть пропущен, если первое, что находится внутри
         него, не является пробелом, комментарием, элементом
@@ -53,14 +42,14 @@ translation_of: Web/HTML/Element/body
       </td>
     </tr>
     <tr>
-      <th scope="row">Разрешённые родительские элементы</th>
+      <th scope="row">Допустимые родители</th>
       <td>
         Этот элемент должен быть вторым в элементе
         {{HTMLElement("html")}}
       </td>
     </tr>
     <tr>
-      <th scope="row">Разрешённые роли ARIA</th>
+      <th scope="row">Допустимые ARIA-роли</th>
       <td>Отсутствуют</td>
     </tr>
     <tr>
@@ -84,63 +73,63 @@ translation_of: Web/HTML/Element/body
 
 ## Атрибуты
 
-К этому элементу применимы [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
+К этому элементу применимы [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("alink")}} {{obsolete_inline}}
+- `alink`
   - : Цвет текста гиперссылок, когда они выделены. _Этот метод не согласован, вместо него используйте CSS-свойство {{cssxref("color")}} вместе с псевдоклассом {{cssxref(":active")}}._
-- {{htmlattrdef("background")}} {{obsolete_inline}}
+- `background`
   - : URI изображения для использования в качестве фона. _Этот метод не согласован, вместо него используйте CSS-свойство {{cssxref("background")}}._
-- {{htmlattrdef("bgcolor")}} {{obsolete_inline}}
+- `bgcolor`
   - : Цвет фона документа. _Этот метод не согласован, вместо него используйте CSS-свойство {{cssxref("background-color")}}._
-- {{htmlattrdef("bottommargin")}} {{obsolete_inline}}
+- `bottommargin`
   - : Отступ от нижнего края элемента `<body>`. _Этот метод не согласован, вместо него используйте CSS-свойство {{cssxref("margin-bottom")}}._
-- {{htmlattrdef("leftmargin")}} {{obsolete_inline}}
+- `leftmargin`
   - : Отступ от левого края элемента `<body>`. _Этот метод не согласован, вместо него используйте CSS-свойство {{cssxref("margin-left")}}._
-- {{htmlattrdef("link")}} {{obsolete_inline}}
+- `link`
   - : Цвет текста непосещенных гипертекстовых ссылок. _Этот метод не согласован, вместо него используйте CSS-свойство {{cssxref("color")}} вместе с псевдоклассом {{cssxref(":link")}}._
-- {{htmlattrdef("onafterprint")}}
+- `onafterprint`
   - : Функция для вызова после того, как пользователь распечатал документ.
-- {{htmlattrdef("onbeforeprint")}}
+- `onbeforeprint`
   - : Функция для вызова, когда пользователь отправляет документ на печать.
-- {{htmlattrdef("onbeforeunload")}}
+- `onbeforeunload`
   - : Функция для вызова перед закрытием окна документа или переходом на другую, внешнюю, страницу в этой же вкладке.
-- {{htmlattrdef("onblur")}}
+- `onblur`
   - : Функция для вызова при потери документом фокуса.
-- {{htmlattrdef("onerror")}}
+- `onerror`
   - : Функция для вызова, когда документ не загружается должным образом.
-- {{htmlattrdef("onfocus")}}
+- `onfocus`
   - : Функция для вызова, когда документ получает фокус.
-- {{htmlattrdef("onhashchange")}}
+- `onhashchange`
   - : Функция для вызова, когда изменяется часть идентификатора фрагмента (начинается с символа `'#'`) текущего адреса документа.
-- {{htmlattrdef("onlanguagechange")}} {{experimental_inline}}
+- `onlanguagechange` {{experimental_inline}}
   - : Функция для вызова при изменении предпочитаемых языков.
-- {{htmlattrdef("onload")}}
+- `onload`
   - : Функция для вызова, когда документ закончил загрузку (страницы загружена).
-- {{htmlattrdef("onmessage")}}
+- `onmessage`
   - : Функция для вызова, когда документ получил сообщение.
-- {{htmlattrdef("onoffline")}}
+- `onoffline`
   - : Функция для вызова, когда происходит сбой сетевого соединения.
-- {{htmlattrdef("ononline")}}
+- `ononline`
   - : Функция для вызова, когда произошло восстановление сетевого соединения.
-- {{htmlattrdef("onpopstate")}}
+- `onpopstate`
   - : Функция для вызова, когда пользователь осуществил управление историей сеанса.
-- {{htmlattrdef("onredo")}}
+- `onredo`
   - : Функция для вызова, когда произошло продвижение пользователя вперёд по истории транзакций (например, обновление страницы).
-- {{htmlattrdef("onresize")}}
+- `onresize`
   - : Функция для вызова, когда размер документа был изменён.
-- {{htmlattrdef("onstorage")}}
+- `onstorage`
   - : Функция для вызова, когда изменяется содержимое хранилища ([Web Storage](/ru/docs/Web/API/Web_Storage_API)).
-- {{htmlattrdef("onundo")}}
+- `onundo`
   - : Функция для вызова, когда произошло продвижение пользователя назад по истории транзакций (например, переход на предыдущую страницу в активной вкладке).
-- {{htmlattrdef("onunload")}}
+- `onunload`
   - : Функция для вызова, когда пользователь покидает страницу (закрытие вкладки или окна браузера).
-- {{htmlattrdef("rightmargin")}} {{obsolete_inline}}
+- `rightmargin`
   - : Отступ от правого края элемента `<body>`. _Этот метод не согласован, вместо него используйте CSS-свойство {{cssxref("margin-right")}}._
-- {{htmlattrdef("text")}} {{obsolete_inline}}
+- `text`
   - : Основной цвет текста. _Этот метод не согласован, вместо него используйте CSS-свойство {{cssxref("color")}}._
-- {{htmlattrdef("topmargin")}} {{obsolete_inline}}
+- `topmargin`
   - : Отступ от верхнего края элемента `<body>`. _Этот метод не согласован, вместо него используйте CSS-свойство {{cssxref("margin-top")}}._
-- {{htmlattrdef("vlink")}} {{obsolete_inline}}
+- `vlink`
   - : Цвет текста посещённой гипертекстовой ссылки. _Этот метод не согласован, вместо него используйте CSS-свойство {{cssxref("color")}} вместе с псевдоклассом {{cssxref(":visited")}}._
 
 ## Пример
@@ -160,7 +149,7 @@ translation_of: Web/HTML/Element/body
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

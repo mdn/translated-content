@@ -1,16 +1,6 @@
 ---
 title: TypedArray.from()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/from
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/from
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/from
 ---
 
 {{JSRef}}
@@ -54,8 +44,8 @@ Une nouvelle instance de {{jsxref("TypedArray")}}.
 
 `TypedArray.from()` permet de créer des tableaux typés à partir :
 
-- d'[objets semblables à des tableaux](/fr/docs/Web/JavaScript/Guide/Objets_élémentaires_JavaScript#Manipuler_des_objets_semblables_aux_tableaux) (qui disposent d'une propriété `length` et d'éléments indexés) ou
-- d'[objets itérables](/fr/docs/Web/JavaScript/Guide/iterable) (par exemple des objets {{jsxref("Map")}} ou {{jsxref("Set")}}).
+- d'[objets semblables à des tableaux](/fr/docs/Web/JavaScript/Guide#manipuler_des_objets_semblables_aux_tableaux) (qui disposent d'une propriété `length` et d'éléments indexés) ou
+- d'[objets itérables](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) (par exemple des objets {{jsxref("Map")}} ou {{jsxref("Set")}}).
 
 `Array.from` possède un paramètre optionnel `fonctionMap`, qui permet d'exécuter une fonction {{jsxref("Array.prototype.map", "map")}} sur chacun des éléments du tableau typé (ou de l'instance de la classe fille) qui est créé. Autrement dit `TypedArray.from(obj, fonctionMap, thisArg)` correspond exactement à `TypedArray.from(obj).map(fonctionMap, thisArg)`.
 
@@ -74,20 +64,17 @@ var s = new Set([1, 2, 3]);
 Uint8Array.from(s);
 // Uint8Array [ 1, 2, 3 ]
 
-
 // String
 Int16Array.from("123");
 // Int16Array [ 1, 2, 3 ]
 
-
 // En utilisant un fonction fléchée en tant que
 // fonctionMap pour manipuler les éléments
-Float32Array.from([1, 2, 3], x => x + x);
+Float32Array.from([1, 2, 3], (x) => x + x);
 // Float32Array [ 2, 4, 6 ]
 
-
 // Pour construire une séquence de nombres
-Uint8Array.from({length: 5}, (v, k) => k);
+Uint8Array.from({ length: 5 }, (v, k) => k);
 // Uint8Array [ 0, 1, 2, 3, 4 ]
 ```
 

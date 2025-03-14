@@ -1,15 +1,6 @@
 ---
 title: Object.prototype.__lookupSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
-tags:
-  - Déprécié
-  - JavaScript
-  - Méthode
-  - Object
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/lookupSetter
 ---
 
 {{JSRef}}{{deprecated_header}}
@@ -19,7 +10,7 @@ La méthode **`__lookupSetter__`** renvoie la fonction définie comme mutateur p
 ## Syntaxe
 
 ```js
-obj.__lookupSetter__(sprop)
+obj.__lookupSetter__(sprop);
 ```
 
 ### Paramètres
@@ -43,14 +34,12 @@ Cette méthode ne doit plus être utilisée et peut être remplacée avec la mé
 var obj = {
   set toto(valeur) {
     this.truc = value;
-  }
+  },
 };
 
-
 // Méthode non-standard et dépréciée
-obj.__lookupSetter__('toto')
+obj.__lookupSetter__("toto");
 // (function(valeur) { this.truc = valeur; })
-
 
 // Méthode standard
 Object.getOwnPropertyDescriptor(obj, "toto").set;
@@ -72,4 +61,4 @@ Object.getOwnPropertyDescriptor(obj, "toto").set;
 - {{jsxref("Object.getOwnPropertyDescriptor()")}} et {{jsxref("Object.getPrototypeOf()")}}
 - [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Guide JavaScript : Utiliser des _getters_ et _setters_](/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#D.C3.A9finir_des_getters_et_setters)
+- [Guide JavaScript : Utiliser des _getters_ et _setters_](/fr/docs/Web/JavaScript/Guide/Working_with_objects#d.c3.a9finir_des_getters_et_setters)

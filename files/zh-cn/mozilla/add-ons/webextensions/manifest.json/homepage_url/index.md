@@ -1,7 +1,8 @@
 ---
 title: homepage_url
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
-original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/主页地址
+l10n:
+  sourceCommit: 6b7f22c8cc81515d9a17d988f4bb8006357dcd59
 ---
 
 {{AddonSidebar}}
@@ -17,6 +18,10 @@ original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/主页地址
       <td>非强制</td>
     </tr>
     <tr>
+      <th scope="row">Manifest 版本</th>
+      <td>2 或更高</td>
+    </tr>
+    <tr>
       <th scope="row">示例</th>
       <td>
         <pre class="brush: json">
@@ -29,14 +34,14 @@ original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/主页地址
 
 该扩展的主页地址。
 
-如果 [developer](/zh-CN/Add-ons/WebExtensions/manifest.json/developer) 键存在且包含“url”属性，它将会覆盖 `homepage_url` 键。
+如果 [developer](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) 键包含“url”属性并且“homepage_url”被定义，Firefox 会使用“developer.url”然而 Opera 会使用“homepage_url”。Chrome 和 Safari 不支持“developer”键。
 
-这是一个 [localizable property](/zh-CN/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
+这是一个[可本地化属性](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json)。
 
 ## 示例
 
 ```json
-"homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify"
+"homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/beastify"
 ```
 
 ## 浏览器兼容性

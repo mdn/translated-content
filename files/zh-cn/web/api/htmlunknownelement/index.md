@@ -25,4 +25,4 @@ _没有指定方法;继承来自父级的属性，{{domxref("HTMLElement")}}._
 
 ## 相关内容
 
-- Obsolete or non-standard HTML elements implementing this interface: {{HTMLElement("bgsound")}}, {{HTMLElement("blink")}}, {{HTMLElement("isindex")}}, {{HTMLElement("multicol")}}, {{HTMLElement("nextid")}}, {{HTMLElement("rb")}}, {{HTMLElement("spacer")}}
+- Obsolete or non-standard HTML elements implementing this interface: {{HTMLElement("isindex")}}, {{HTMLElement("multicol")}}, {{HTMLElement("nextid")}}, {{HTMLElement("rb")}}

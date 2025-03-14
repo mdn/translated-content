@@ -1,20 +1,9 @@
 ---
 title: webNavigation.onCommitted
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCommitted
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onCommitted
-  - webNavigations
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCommitted
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsqu'une navigation est validée. Au moins une partie du nouveau document a été reçue du serveur et le navigateur a décidé de passer au nouveau document.
 
@@ -22,11 +11,11 @@ Lancé lorsqu'une navigation est validée. Au moins une partie du nouveau docume
 
 ```js
 browser.webNavigation.onCommitted.addListener(
-  listener,                 // function
-  filter                    // optional object
-)
-browser.webNavigation.onCommitted.removeListener(listener)
-browser.webNavigation.onCommitted.hasListener(listener)
+  listener, // function
+  filter, // optional object
+);
+browser.webNavigation.onCommitted.removeListener(listener);
+browser.webNavigation.onCommitted.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -63,7 +52,7 @@ Les événements ont trois fonctions :
 - `processId`
   - : `integer`. L'ID du processus dans lequel cet onglet est rendu.
 - `frameId`
-  - : `integer`. Frame dans lequel la navigation aura lieu. 0 indique que la navigation se déroule dans le contexte de navigation de niveau supérieur de l'onglet, et non dans un [iframe](/frS/docs/Web/HTML/Element/iframe) imbriqué. A positive value indicates that navigation happens in a nested iframe. Les ID de frame sont uniques pour un onglet et un processus donnés.
+  - : `integer`. Frame dans lequel la navigation aura lieu. 0 indique que la navigation se déroule dans le contexte de navigation de niveau supérieur de l'onglet, et non dans un [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué. A positive value indicates that navigation happens in a nested iframe. Les ID de frame sont uniques pour un onglet et un processus donnés.
 - `parentFrameId`
   - : `integer`. ID du parent de cette image. Réglez à -1 s'il s'agit d'un cadre de niveau supérieur.
 - `timeStamp`
@@ -73,9 +62,9 @@ Les événements ont trois fonctions :
 - `transitionQualifiers`
   - : `Array` de `{{WebExtAPIRef("webNavigation.transitionQualifier", "transitionQualifier")}}`. Informations supplémentaires sur la navigation : par exemple, s'il existait une redirection de serveur ou de client.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.onCommitted")}}
+{{Compat}}
 
 ## Exemples
 
@@ -83,12 +72,8 @@ Logs les URL cibles et les informations de transition supplémentaires pour `onC
 
 ```js
 var filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnCommitted(details) {
   console.log("target URL: " + details.url);
@@ -101,9 +86,9 @@ browser.webNavigation.onCommitted.addListener(logOnCommitted, filter);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

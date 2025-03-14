@@ -1,12 +1,14 @@
 ---
 title: Visualisations avec la Web Audio API
 slug: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
-translation_of: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 ---
+
+{{DefaultAPISidebar("Web Audio API")}}
 
 L'une des fonctionnalités les plus intéressantes de la Web Audio API est la possibilité d'extraire de la source audio la fréquence, la forme d'onde et d'autres données, qui permettent de créer des visualisations. Cet article explique comment, et fournit quelques exemples basiques.
 
-> **Note :** Vous pouvez trouver des exemples de tous les extraits de the code dans notre démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/).
+> [!NOTE]
+> Vous pouvez trouver des exemples de tous les extraits de the code dans notre démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/).
 
 ## Concepts de base
 
@@ -26,11 +28,13 @@ analyseur.connect(distortion);
 // etc.
 ```
 
-> **Note :** il n'est pas nécessaire de connecter la sortie de l'analyseur à un noeud pour qu'il fonctionne, il suffit que l'entrée soit connectée à la source, directement ou via un autre noeud.
+> [!NOTE]
+> Il n'est pas nécessaire de connecter la sortie de l'analyseur à un noeud pour qu'il fonctionne, il suffit que l'entrée soit connectée à la source, directement ou via un autre noeud.
 
 L'analyseur va alors capturer les données audio en usant une Transformation de Fourier Rapide (fft) à une certaine fréquence, en fonction de ce qui est spécifié dans la propriété {{ domxref("AnalyserNode.fftSize") }} (la valeur par défaut est 2048).
 
-> **Note :** Vous pouvez aussi spécifier des valeurs de puissance minimum et maximum pour la plage de mise à l'échelle fft, en utilisant {{ domxref("AnalyserNode.minDecibels") }} et {{ domxref("AnalyserNode.maxDecibels") }}, et plusieurs valeurs de transition en utilisant {{ domxref("AnalyserNode.smoothingTimeConstant") }}.
+> [!NOTE]
+> Vous pouvez aussi spécifier des valeurs de puissance minimum et maximum pour la plage de mise à l'échelle fft, en utilisant {{ domxref("AnalyserNode.minDecibels") }} et {{ domxref("AnalyserNode.maxDecibels") }}, et plusieurs valeurs de transition en utilisant {{ domxref("AnalyserNode.smoothingTimeConstant") }}.
 
 Pour capturer des données, il faut utiliser les méthodes {{ domxref("AnalyserNode.getFloatFrequencyData()") }} et {{ domxref("AnalyserNode.getByteFrequencyData()") }} pour la fréquence, et {{ domxref("AnalyserNode.getByteTimeDomainData()") }} et {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} pour la forme d'onde.
 
@@ -56,7 +60,7 @@ Regardons quelques exemples précis.
 
 ## Création d'une forme d'onde / oscilloscope
 
-Pour visualiser un oscilloscope (chapeau à [Soledad Penadés](http://soledadpenades.com/) pour le code original sur [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), nous commençons par suivre la procédure standard décrite dans le paragraphe précédent pour mettre en place le tampon :
+Pour visualiser un oscilloscope (chapeau à [Soledad Penadés](https://soledadpenades.com/) pour le code original sur [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), nous commençons par suivre la procédure standard décrite dans le paragraphe précédent pour mettre en place le tampon :
 
 ```js
 analyseur.fftSize = 2048;
@@ -79,54 +83,53 @@ function dessiner() {
 Dans cette fonction, nous utilisons `requestAnimationFrame()` pour faire boucler la fonction une fois qu'elle a été appelée :
 
 ```js
-      dessin = requestAnimationFrame(dessiner);
+dessin = requestAnimationFrame(dessiner);
 ```
 
 Ensuite, nous récupérons les données et les passons dans notre tableau :
 
 ```js
-      analyseur.getByteTimeDomainData(tableauDonnees);
+analyseur.getByteTimeDomainData(tableauDonnees);
 ```
 
 Nous remplissons le canvas avec une couleur de fond :
 
 ```js
-      contexteCanvas.fillStyle = 'rgb(200, 200, 200)';
-      contexteCanvas.fillRect(0, 0, LARGEUR, HAUTEUR);
+contexteCanvas.fillStyle = "rgb(200, 200, 200)";
+contexteCanvas.fillRect(0, 0, LARGEUR, HAUTEUR);
 ```
 
 Nous définissons l'épaisseur et la couleur du trait pour la forme d'onde que nous allons dessiner, et commençons le tracé :
 
 ```js
-      contexteCanvas.lineWidth = 2;
-      contexteCanvas.strokeStyle = 'rgb(0, 0, 0)';
+contexteCanvas.lineWidth = 2;
+contexteCanvas.strokeStyle = "rgb(0, 0, 0)";
 
-      contexteCanvas.beginPath();
+contexteCanvas.beginPath();
 ```
 
 Pour déterminer la largeur de chacun des segments qui composent la ligne, nous divisons la largeur du canvas par la taille du tableau de données (laquelle est égale à FrequencyBinCount, comme nous l'avons dit plus haut), puis nous définissons une variable x pour stocker la position à laquelle il faut se déplacer pour chaque segment.
 
 ```js
-      var largeurSegment = LARGEUR * 1.0 / tailleMemoireTampon;
-      var x = 0;
+var largeurSegment = (LARGEUR * 1.0) / tailleMemoireTampon;
+var x = 0;
 ```
 
 Nous parcourons une boucle, qui définit la position du segment de l'onde pour chaque valeur du tableau: la hauteur (y) est basée sur cette valeur, tandis que la position en x correspond à une largeur de segment supplémentaire à chaque itération :
 
 ```js
-      for(var i = 0; i < tailleMemoireTampon; i++) {
+for (var i = 0; i < tailleMemoireTampon; i++) {
+  var v = tableauDonnees[i] / 128.0;
+  var y = (v * HAUTEUR) / 2;
 
-        var v = tableauDonnees[i] / 128.0;
-        var y = v * HAUTEUR/2;
+  if (i === 0) {
+    contexteCanvas.moveTo(x, y);
+  } else {
+    contexteCanvas.lineTo(x, y);
+  }
 
-        if(i === 0) {
-          contexteCanvas.moveTo(x, y);
-        } else {
-          contexteCanvas.lineTo(x, y);
-        }
-
-        x += largeurSegment;
-      }
+  x += largeurSegment;
+}
 ```
 
 Finally, quand le tracé de la ligne a atteint le bord droit du canvas, nous l'affichons:
@@ -140,7 +143,7 @@ Finally, quand le tracé de la ligne a atteint le bord droit du canvas, nous l'a
 Nous pouvons maintenant appeler la fonction `draw()` que nous venons de définir pour lancer le processus:
 
 ```js
-    dessiner();
+dessiner();
 ```
 
 Ce qui nous donne un affichage de forme d'onde, actualisé plusieurs fois par seconde :
@@ -154,12 +157,12 @@ Un autre exemple de visualisation assez simple à créer est le graphique à bar
 Tout d'abord, nous mettons de nouveau en place notre analyseur et notre tableau de données, et nous effaçons le contenu du canvas avec `clearRect()`. La seule différence est que la valeur de la propriété fftSize est beaucoup plus petite, de façon à ce que chaque barre soit assez grosse pour ressembler à une barre et non à un fil.
 
 ```js
-    analyseur.fftSize = 256;
-    var tailleMemoireTampon = analyseur.frequencyBinCount;
-    console.log(tailleMemoireTampon);
-    var tableauDonnees = new Uint8Array(tailleMemoireTampon);
+analyseur.fftSize = 256;
+var tailleMemoireTampon = analyseur.frequencyBinCount;
+console.log(tailleMemoireTampon);
+var tableauDonnees = new Uint8Array(tailleMemoireTampon);
 
-    canvasCtx.clearRect(0, 0, LARGEUR, HAUTEUR);
+canvasCtx.clearRect(0, 0, LARGEUR, HAUTEUR);
 ```
 
 Ensuite, nous passons à la fonction `dessiner()`, là encore avec une boucle `requestAnimationFrame()` qui efface l'affichage et le met à jour.
@@ -179,9 +182,9 @@ A présent nous calculons la largeur d'une barre, à savoir la largeur du canvas
 Nous déclarons une variable `hauteurBarre`, ainsi qu'une variable `x` pour mémoriser la posiiton à laquelle il faudra dessiner la barre.
 
 ```js
-      var largeurBarre = (LARGEUR / tailleMemoireTampon) * 2.5;
-      var hauteurBarre;
-      var x = 0;
+var largeurBarre = (LARGEUR / tailleMemoireTampon) * 2.5;
+var hauteurBarre;
+var x = 0;
 ```
 
 Nous créons maintenant une boucle et itérons sur chaque valeur de `tableauDonnees` : `hauteurBarre` correspond à la valeur du tableau, la couleur de fond est aussi basée sur cette valeur (plus elle est grande plus la barre est lumineuse), et la barre est placée à `x` pixels du bord gauche du canvas, sa largeur est `largeurBarre` et sa hauteur est `hauteurBarre/2` (nous avons finalement décidé de diviser cette valeur par deux pour que les barres rentrent mieux dans le canvas).
@@ -203,11 +206,12 @@ La position verticale de la barre est calculée comme tel : `HAUTEUR-hauteurBarr
 Là encore, nous invoquons la fonction `dessiner()` pour lancer le processus.
 
 ```js
-    dessiner();
+dessiner();
 ```
 
 Ce code donne le résultat suivant:
 
 ![Une série de barres rouges dans un barre-graphe qui illustre l'intensité des différentes fréquences d'un signal audio](bar-graph.png)
 
-> **Note :** Les exemples de cet article montrent l'utilisation de [`AnalyserNode.getByteFrequencyData()`](/fr/docs/Web/API/AnalyserNode/getByteFrequencyData) et [`AnalyserNode.getByteTimeDomainData()`](/fr/docs/Web/API/AnalyserNode/getByteTimeDomainData). Pour des exemples montrant [`AnalyserNode.getFloatFrequencyData()`](/fr/docs/Web/API/AnalyserNode/getFloatFrequencyData) et [`AnalyserNode.getFloatTimeDomainData()`](/fr/docs/Web/API/AnalyserNode/getFloatTimeDomainData), voir notre démo [<i lang="en">Voice-change-O-matic-float-data</i>](https://mdn.github.io/voice-change-o-matic-float-data/) (et son [code source](https://github.com/mdn/voice-change-o-matic-float-data)) — elle est identique à la [<i lang="en">Voice-change-O-matic</i>](https://mdn.github.io/voice-change-o-matic/) originale, à ceci près qu'elle utilise des données à virgule flottante, au lieu de données non signées.
+> [!NOTE]
+> Les exemples de cet article montrent l'utilisation de [`AnalyserNode.getByteFrequencyData()`](/fr/docs/Web/API/AnalyserNode/getByteFrequencyData) et [`AnalyserNode.getByteTimeDomainData()`](/fr/docs/Web/API/AnalyserNode/getByteTimeDomainData). Pour des exemples montrant [`AnalyserNode.getFloatFrequencyData()`](/fr/docs/Web/API/AnalyserNode/getFloatFrequencyData) et [`AnalyserNode.getFloatTimeDomainData()`](/fr/docs/Web/API/AnalyserNode/getFloatTimeDomainData), voir notre démo [<i lang="en">Voice-change-O-matic-float-data</i>](https://mdn.github.io/voice-change-o-matic-float-data/) (et son [code source](https://github.com/mdn/voice-change-o-matic-float-data)) — elle est identique à la [<i lang="en">Voice-change-O-matic</i>](https://mdn.github.io/voice-change-o-matic/) originale, à ceci près qu'elle utilise des données à virgule flottante, au lieu de données non signées.

@@ -1,25 +1,25 @@
 ---
 title: Date.prototype.getMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 ---
 
 {{JSRef}}
 
-**`getMonth()` **메서드는 `Date` 객체의 월 값을 현지 시간에 맞춰 반환합니다. 월은 0부터 시작합니다.
+**`getMonth()`** 메서드는 `Date` 객체의 월 값을 현지 시간에 맞춰 반환합니다. 월은 0부터 시작합니다.
 
-{{EmbedInteractiveExample("pages/js/date-getmonth.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getMonth()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+
+console.log(moonLanding.getMonth()); // (January gives 0)
+// Expected output: 6
+```
 
 ## 구문
 
 ```js
-    dateObj.getMonth()
+dateObj.getMonth();
 ```
 
 ### 반환 값
@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 다음 예제는 {{jsxref("Date")}} 객체 `Xmas95`의 값을 사용해 변수 `month`에 11을 할당합니다.
 
 ```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
+var Xmas95 = new Date("December 25, 1995 23:15:30");
 var month = Xmas95.getMonth();
 
 console.log(month); // 11
@@ -42,10 +42,10 @@ console.log(month); // 11
 > **참고:** **참고:** 필요한 경우 {{jsxref("DateTimeFormat", "Intl.DateTimeFormat()")}}과 `options` 매개변수를 사용해 해당하는 달의 이름(`"January"` 등)을 가져올 수 있습니다. 이 방법을 사용하면 국제화도 보다 편리합니다.
 
 ```js
-var options = { month: 'long'};
-console.log(new Intl.DateTimeFormat('ko-KR', options).format(Xmas95));
+var options = { month: "long" };
+console.log(new Intl.DateTimeFormat("ko-KR", options).format(Xmas95));
 // 12월
-console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
+console.log(new Intl.DateTimeFormat("en-US", options).format(Xmas95));
 // December
 ```
 

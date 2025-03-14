@@ -1,6 +1,8 @@
 ---
 title: object-fit
 slug: Web/CSS/object-fit
+l10n:
+  sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
 ---
 
 {{CSSRef}}
@@ -9,7 +11,44 @@ slug: Web/CSS/object-fit
 
 要素のボックス内における置換要素の中身のオブジェクトの配置を変更するには、 {{cssxref("object-position")}} プロパティを使用することができます。
 
-{{EmbedInteractiveExample("pages/css/object-fit.html")}}
+{{InteractiveExample("CSS Demo: object-fit")}}
+
+```css interactive-example-choice
+object-fit: fill;
+```
+
+```css interactive-example-choice
+object-fit: contain;
+```
+
+```css interactive-example-choice
+object-fit: cover;
+```
+
+```css interactive-example-choice
+object-fit: none;
+```
+
+```css interactive-example-choice
+object-fit: scale-down;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/plumeria-146x200.jpg" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 100%;
+  width: 100%;
+  border: 2px dotted #888;
+}
+```
 
 ## 構文
 
@@ -24,6 +63,7 @@ object-fit: scale-down;
 object-fit: inherit;
 object-fit: initial;
 object-fit: revert;
+object-fit: revert-layer;
 object-fit: unset;
 ```
 
@@ -32,7 +72,7 @@ object-fit: unset;
 ### 値
 
 - `contain`
-  - : 置換コンテンツはアスペクト比を維持したまま、要素のコンテンツボックスに収まるように拡大縮小されます。オブジェクト全体がボックス内に表示され、アスペクト比が維持されるので、オブジェクトのアスペクト比とボックスのアスペクト比が合わない場合は、[レターボックス](https://ja.wikipedia.org/wiki/%E3%83%AC%E3%82%BF%E3%83%BC%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9_(%E6%98%A0%E5%83%8F%E6%8A%80%E8%A1%93))表示になります。
+  - : 置換コンテンツはアスペクト比を維持したまま、要素のコンテンツボックスに収まるように拡大縮小されます。オブジェクト全体がボックス内に表示され、アスペクト比が維持されるので、オブジェクトのアスペクト比とボックスのアスペクト比が合わない場合は、[レターボックス](<https://ja.wikipedia.org/wiki/%E3%83%AC%E3%82%BF%E3%83%BC%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9_(%E6%98%A0%E5%83%8F%E6%8A%80%E8%A1%93)>)表示になります。
 - `cover`
   - : 置換コンテンツはアスペクト比を維持したまま、要素のコンテンツボックス全体を埋めるように拡大縮小されます。オブジェクトのアスペクト比がボックスのアスペクト比と合わない場合は、オブジェクトの方が合うように切り取られます。
 - `fill`
@@ -52,36 +92,36 @@ object-fit: unset;
 
 ## 例
 
-<h3 id="Setting_object-fit_for_an_image">画像に object-fit を設定</h3>
+### 画像に object-fit を設定
 
 #### HTML
 
 ```html
 <section>
   <h2>object-fit: fill</h2>
-  <img class="fill" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="fill" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
-  <img class="fill narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="fill narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
   <h2>object-fit: contain</h2>
-  <img class="contain" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="contain" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
-  <img class="contain narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="contain narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
   <h2>object-fit: cover</h2>
-  <img class="cover" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="cover" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
-  <img class="cover narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="cover narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
   <h2>object-fit: none</h2>
-  <img class="none" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="none" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
-  <img class="none narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="none narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
   <h2>object-fit: scale-down</h2>
-  <img class="scale-down" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="scale-down" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
-  <img class="scale-down narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="scale-down narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
 </section>
 ```
 
@@ -89,7 +129,9 @@ object-fit: unset;
 
 ```css
 h2 {
-  font-family: Courier New, monospace;
+  font-family:
+    Courier New,
+    monospace;
   font-size: 1em;
   margin: 1em 0 0.3em;
 }

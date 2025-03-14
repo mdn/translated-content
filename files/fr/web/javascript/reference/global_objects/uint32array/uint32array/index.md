@@ -1,8 +1,6 @@
 ---
 title: Constructeur Uint32Array()
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array/Uint32Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint32Array/Uint32Array
-browser-compat: javascript.builtins.Uint32Array.Uint32Array
 ---
 
 {{JSRef}}
@@ -46,7 +44,7 @@ console.log(uint32.length); // 2
 console.log(uint32.BYTES_PER_ELEMENT); // 4
 
 // À partir d'un tableau
-let arr = new Uint32Array([21,31]);
+let arr = new Uint32Array([21, 31]);
 console.log(arr[1]); // 31
 
 // À partir d'un autre tableau typé
@@ -59,7 +57,9 @@ let buffer = new ArrayBuffer(16);
 let z = new Uint32Array(buffer, 0, 4);
 
 // À partir d'un itérable
-let iterable = function*(){ yield* [1,2,3]; }();
+let iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 let uint32 = new Uint32Array(iterable);
 // Uint32Array[1, 2, 3]
 ```
@@ -89,6 +89,6 @@ let dv = new Uint32Array([1, 2, 3]);
 ## Voir aussi
 
 - [Prothèse d'émulation pour `Uint32Array` avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Typed_arrays)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 - [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)

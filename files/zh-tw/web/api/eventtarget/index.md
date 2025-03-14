@@ -3,13 +3,13 @@ title: EventTarget
 slug: Web/API/EventTarget
 ---
 
-{{ ApiRef("DOM Events") }}
+{{APIRef("DOM")}}
 
 **`EventTarget`** 介面定義了其實作的物件具有接收事件的能力，也可能擁有處理事件的監聽器。
 
 除了最為常見的 {{domxref("Element")}}、{{domxref("Document")}} 與 {{domxref("Window")}} 繼承或實作了 `EventTarget` 介面之外，其它的物件還有 {{domxref("XMLHttpRequest")}}、{{domxref("AudioNode")}}、{{domxref("AudioContext")}}⋯ 等等。
 
-許多 `EventTarget`（包括 Element、Document 和 Window）除了透過 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} 方法外，還可藉由 {{domxref("Document_Object_Model", "DOM")}} 物件的屬性（{{Glossary("property/JavaScript", "property")}}）或 [HTML 元素](/zh-TW/docs/Web/HTML/Element)屬性（{{Glossary("attribute")}}）來設定[事件處理器](/zh-TW/docs/Web/Guide/DOM/Events/Event_handlers)。
+許多 `EventTarget`（包括 Element、Document 和 Window）除了透過 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} 方法外，還可藉由 {{domxref("Document_Object_Model", "DOM")}} 物件的屬性（{{Glossary("property/JavaScript", "property")}}）或 [HTML 元素](/zh-TW/docs/Web/HTML/Element)屬性（{{Glossary("attribute")}}）來設定[事件處理器](/zh-TW/docs/Web/Events/Event_handlers)。
 
 {{InheritanceDiagram}}
 
@@ -34,32 +34,32 @@ Mozilla extensions for use by JS-implemented event targets to implement on prope
 ### Simple implementation of EventTarget
 
 ```js
-var EventTarget = function() {
+var EventTarget = function () {
   this.listeners = {};
 };
 
 EventTarget.prototype.listeners = null;
-EventTarget.prototype.addEventListener = function(type, callback) {
+EventTarget.prototype.addEventListener = function (type, callback) {
   if (!(type in this.listeners)) {
     this.listeners[type] = [];
   }
   this.listeners[type].push(callback);
 };
 
-EventTarget.prototype.removeEventListener = function(type, callback) {
+EventTarget.prototype.removeEventListener = function (type, callback) {
   if (!(type in this.listeners)) {
     return;
   }
   var stack = this.listeners[type];
   for (var i = 0, l = stack.length; i < l; i++) {
-    if (stack[i] === callback){
+    if (stack[i] === callback) {
       stack.splice(i, 1);
       return;
     }
   }
 };
 
-EventTarget.prototype.dispatchEvent = function(event) {
+EventTarget.prototype.dispatchEvent = function (event) {
   if (!(event.type in this.listeners)) {
     return true;
   }
@@ -72,7 +72,7 @@ EventTarget.prototype.dispatchEvent = function(event) {
 };
 ```
 
-{{ EmbedLiveSample('_Simple_implementation_of_EventTarget') }}
+{{ EmbedLiveSample('Simple implementation of EventTarget') }}
 
 ## 規範
 
@@ -84,6 +84,6 @@ EventTarget.prototype.dispatchEvent = function(event) {
 
 ## 參見
 
-- [Event reference](/docs/Web/Reference/Events) - the events available in the platform.
+- [Event reference](/zh-TW/docs/Web/Events) - the events available in the platform.
 - [Event developer guide](/docs/Web/Guide/DOM/Events)
 - {{domxref("Event")}} interface

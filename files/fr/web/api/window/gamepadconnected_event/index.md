@@ -1,15 +1,16 @@
 ---
 title: gamepadconnected
 slug: Web/API/Window/gamepadconnected_event
-translation_of: Web/API/Window/gamepadconnected_event
 ---
+
+{{APIRef}}
 
 L'événement gamepadconnected est déclenché lorsque le navigateur détecte quand une manette a été connecté ou qu'un button/axe de la manette a été utilisé pour la première fois.
 
 ## Informations générales
 
 - Spécification
-  - : [Gamepad](http://www.w3.org/TR/gamepad/#the-gamepadconnected-event)
+  - : [Gamepad](https://www.w3.org/TR/gamepad/#the-gamepadconnected-event)
 - Interface
   - : Event
 - Propagation
@@ -23,30 +24,28 @@ L'événement gamepadconnected est déclenché lorsque le navigateur détecte qu
 
 ## Propriétés
 
-| Property                              | Type                                 | Description                                                                                 |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------- |
+| Property                        | Type                       | Description                                                                                 |
+| ------------------------------- | -------------------------- | ------------------------------------------------------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree).                                      |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                                                          |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.                                                  |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.                                                    |
-| `gamepad` {{readonlyInline}}    | {{domxref("Gamepad")}}         | The single gamepad attribute provides access to the associated gamepad data for this event. |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                                                          |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.                                                  |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.                                                    |
+| `gamepad` {{readonlyInline}}    | {{domxref("Gamepad")}}     | The single gamepad attribute provides access to the associated gamepad data for this event. |
 
 ## Exemple
 
 ```js
 // Noter que l'API a toujours des préfixes vendeur dans les navigateurs l'implémentant
-window.addEventListener("gamepadconnected", function( event ) {
-
-    // Toutes la valeurs d'axes et les buttons sont accessibles à travers:
-    event.gamepad;
-
+window.addEventListener("gamepadconnected", function (event) {
+  // Toutes la valeurs d'axes et les buttons sont accessibles à travers:
+  event.gamepad;
 });
 ```
 
 ## Evénements liés
 
-- [gamepaddisconnected](/fr/docs/Web/Reference/Events/gamepaddisconnected)
+- [gamepaddisconnected](/fr/docs/Web/API/Window/gamepaddisconnected_event)
 
 ## Voir aussi
 
-- [Utilisation de l'API Gamepad](/fr/docs/API/Gamepad/Using_Gamepad_API)
+- [Utilisation de l'API Gamepad](/fr/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

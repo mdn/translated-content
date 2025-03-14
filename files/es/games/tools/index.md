@@ -1,13 +1,6 @@
 ---
 title: Herramientas para desarrolladores de juegos
 slug: Games/Tools
-tags:
-  - NeedsContent
-  - NeedsTranslation
-  - aplicaciones
-  - juegos
-translation_of: Games/Tools
-original_slug: Games/Herramients
 ---
 
 {{GamesSidebar}}
@@ -29,5 +22,5 @@ En esta pagina puedes encontrar enlaces a nuestros articulos de desarrollo de ju
   - , pero aqui te vamos a proveer una cadena de herramientas practicas para depurar juegos con links a las cosas de Will:
 
     - Basic tools overview
-    - [Shader editor](/es/docs/Tools/Shader_Editor)
+    - [Shader editor](https://firefox-source-docs.mozilla.org/devtools-user/shader_editor/index.html)
     - Performance tools (still in production, estimated early 2014)

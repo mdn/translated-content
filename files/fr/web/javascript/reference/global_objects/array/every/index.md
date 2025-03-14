@@ -1,25 +1,25 @@
 ---
 title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/every
 ---
 
 {{JSRef}}
 
 La méthode **`every()`** permet de tester si tous les éléments d'un tableau vérifient une condition donnée par une fonction en argument. Cette méthode renvoie un booléen pour le résultat du test.
 
-> **Note :** Cette méthode renvoie `true` pour n'importe quelle condition utilisée sur un tableau vide.
+> [!NOTE]
+> Cette méthode renvoie `true` pour n'importe quelle condition utilisée sur un tableau vide.
 
-{{EmbedInteractiveExample("pages/js/array-every.html")}}
+{{InteractiveExample("JavaScript Demo: Array.every()")}}
+
+```js interactive-example
+const isBelowThreshold = (currentValue) => currentValue < 40;
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(isBelowThreshold));
+// Expected output: true
+```
 
 ## Syntaxe
 
@@ -53,7 +53,7 @@ La méthode `every` exécute la fonction `callback` fournie sur chacun des élé
 
 `callback` est appelée avec trois arguments : la valeur de l'élément en cours de traitement, l'indice de l'élément dans le tableau et le tableau qui est parcouru.
 
-Si un paramètre `thisArg` est fourni à la méthode `every`, ce sera la valeur `this` de la fonction `callback`. Si ce paramètre n'est pas fourni, la valeur `undefined` sera utilisée comme valeur pour `this`. La valeur `this` « définitivement » utilisée par la fonction `callback` est déterminée selon [les règles usuelles de détermination de `this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this).
+Si un paramètre `thisArg` est fourni à la méthode `every`, ce sera la valeur `this` de la fonction `callback`. Si ce paramètre n'est pas fourni, la valeur `undefined` sera utilisée comme valeur pour `this`. La valeur `this` « définitivement » utilisée par la fonction `callback` est déterminée selon [les règles usuelles de détermination de `this`](/fr/docs/Web/JavaScript/Reference/Operators/this).
 
 `every` ne modifie pas le tableau sur lequel elle a été appelée.
 
@@ -71,19 +71,25 @@ Dans l'exemple suivant, on teste si tous les éléments du tableau sont supérie
 function estAssezGrand(element, index, array) {
   return element >= 10;
 }
-[12, 5, 8, 130, 44].every(estAssezGrand);   // false
+[12, 5, 8, 130, 44].every(estAssezGrand); // false
 [12, 54, 18, 130, 44].every(estAssezGrand); // true
 ```
 
 ### Utiliser les fonctions fléchées avec `every`
 
-{{jsxref("Fonctions/Fonctions_fl%C3%A9ch%C3%A9es","Les fonctions fléchées","","1")}} permettent d'utiliser une syntaxe plus concise pour effectuer le même test.
+{{jsxref("Fonctions/Fonctions_fléchées","Les fonctions fléchées","",1)}} permettent d'utiliser une syntaxe plus concise pour effectuer le même test.
 
 ```js
-[12, 5, 8, 130, 44].every(elem => elem >= 10); // false
-[12, 54, 18, 130, 44].every(elem => elem >= 10); // true
-[{a:1, b:2}, {a:1, b:3}].every(elem => elem.a === 1); // true
-[{a:2, b:2}, {a:1, b:3}].every(elem => elem.a === 1); // false
+[12, 5, 8, 130, 44].every((elem) => elem >= 10); // false
+[12, 54, 18, 130, 44].every((elem) => elem >= 10); // true
+[
+  { a: 1, b: 2 },
+  { a: 1, b: 3 },
+].every((elem) => elem.a === 1); // true
+[
+  { a: 2, b: 2 },
+  { a: 1, b: 3 },
+].every((elem) => elem.a === 1); // false
 ```
 
 ## Prothèse d'émulation (_polyfill_)
@@ -92,12 +98,12 @@ function estAssezGrand(element, index, array) {
 
 ```js
 if (!Array.prototype.every) {
-  Array.prototype.every = function(callbackfn, thisArg) {
-    'use strict';
+  Array.prototype.every = function (callbackfn, thisArg) {
+    "use strict";
     var T, k;
 
     if (this == null) {
-      throw new TypeError('this vaut null ou n est pas défini');
+      throw new TypeError("this vaut null ou n est pas défini");
     }
 
     // 1. Soit O le résultat de l'appel à ToObject auquel on a
@@ -111,7 +117,7 @@ if (!Array.prototype.every) {
 
     // 4. Si IsCallable(callbackfn) est faux, on lève une exception
     // TypeError.
-    if (typeof callbackfn !== 'function') {
+    if (typeof callbackfn !== "function") {
       throw new TypeError();
     }
 
@@ -125,7 +131,6 @@ if (!Array.prototype.every) {
 
     // 7. On répète tant que k < len
     while (k < len) {
-
       var kValue;
 
       // a. Soit Pk la valeur de ToString(k).
@@ -135,7 +140,6 @@ if (!Array.prototype.every) {
       //    Cette étape peut être combinée avec l'étape c
       // c. Si kPresent vaut true, alors
       if (k in O) {
-
         // i. Soit kValue le résultat de l'appel de la méthode
         //    interne Get de O avec l'argument Pk.
         kValue = O[k];

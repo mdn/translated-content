@@ -7,7 +7,8 @@ slug: Web/API/Element/animate
 
 Um {{domxref("Element")}} de interface do método **`animate()`** é um método de atalho o qual cria uma nova {{domxref("Animation")}}, e a aplica ao elemento, então executa a animação. Retorna a instância do objeto {{domxref("Animation")}} criado.
 
-> **Nota:** Elementos podem ter múltiplas animações aplicadas a eles. Você pode obter uma lista de animações que afetam um elemento chamando {{domxref("Element.getAnimations()")}}.
+> [!NOTE]
+> Elementos podem ter múltiplas animações aplicadas a eles. Você pode obter uma lista de animações que afetam um elemento chamando {{domxref("Element.getAnimations()")}}.
 
 ## Syntax
 
@@ -20,12 +21,14 @@ var animation = element.animate(keyframes, options);
 - `keyframes`
   - : An [Object formatted to represent a set of keyframes](/pt-BR/docs/Web/API/Web_Animations_API/Keyframe_Formats).
 - `opções`
+
   - : Ou um inteiro representando a duração da animação (em milisegundos), ou um objeto contendo uma ou mais propriedades de tempo:
+
     - `id {{optional_inline}}`
 
       - : Um propriedade única á animate(): uma `DOMString` com a qual a animação é referenciada.
 
-        {{Page("/pt-BR/docs/Web/API/Web_Animations_API/Animation_timing_properties", "Properties")}}
+        <!-- TODO: page macro not supported: Page("/pt-BR/docs/Web/API/Web_Animations_API/Animation_timing_properties", "Properties") -->
 
 #### Opções Futuras
 
@@ -60,26 +63,27 @@ Na demonstração [Down the Rabbit Hole (with the Web Animation API)](https://co
 Note o array de quadros-chave passado e também o bloco de opções de temporização.
 
 ```js
-document.getElementById("tunnel").animate([
-  // keyframes
-  { transform: 'translateY(0px)' },
-  { transform: 'translateY(-300px)' }
-], {
-  // timing options
-  duration: 1000,
-  iterations: Infinity
-});
+document.getElementById("tunnel").animate(
+  [
+    // keyframes
+    { transform: "translateY(0px)" },
+    { transform: "translateY(-300px)" },
+  ],
+  {
+    // timing options
+    duration: 1000,
+    iterations: Infinity,
+  },
+);
 ```
 
 ## Especificações
 
-| Specification                                                                                    | Status                               | Comment            |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName('Web Animations', '#the-animatable-interface', 'animate()' )}} | {{Spec2('Web Animations')}} | Initial definition |
+{{Specifications}}
 
-## Compatibildade entre Navegadores
+## Compatibilidade com navegadores
 
-{{Compat("api.Element.animate")}}
+{{Compat}}
 
 ## Veja Também
 

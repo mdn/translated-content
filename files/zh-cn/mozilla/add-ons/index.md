@@ -17,9 +17,9 @@ slug: Mozilla/Add-ons
 
 ## 开发扩展
 
-在过去，有几种工具集用于开发 Firefox 扩展，但是到 2017 年 11 月底，扩展必须使用 [WebExtensions APIs](/zh-CN/docs/Add-ons/WebExtensions) 构建。其余工具集「包括 overlay add-ons、bootstrapped add-ons 和 Add-on SDK」将会同时被废弃。
+在过去，有几种工具集用于开发 Firefox 扩展，但是到 2017 年 11 月底，扩展必须使用 [WebExtensions APIs](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) 构建。其余工具集「包括 overlay add-ons、bootstrapped add-ons 和 Add-on SDK」将会同时被废弃。
 
-使用 Firefox WebExtensions APIs 编写的扩展设计为跨浏览器兼容。在大多数情况下它也能在 Chrome，Edge 和 Opera 中运行，几乎没有任何变化。它们也完全兼容多进程 Firefox。你可以查看[目前在 Firefox 和其他浏览器中支持的 APIs](/zh-CN/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)。
+使用 Firefox WebExtensions APIs 编写的扩展设计为跨浏览器兼容。在大多数情况下它也能在 Chrome，Edge 和 Opera 中运行，几乎没有任何变化。它们也完全兼容多进程 Firefox。你可以查看[目前在 Firefox 和其他浏览器中支持的 APIs](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)。
 
 ### 扩展工坊
 

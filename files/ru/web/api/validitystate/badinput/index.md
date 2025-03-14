@@ -1,14 +1,6 @@
 ---
 title: validityState.badInput
 slug: Web/API/ValidityState/badInput
-tags:
-  - API
-  - Constraints API
-  - HTML DOM
-  - Свойство
-  - Только для чтения
-  - ValidityState
-browser-compat: api.ValidityState.badInput
 ---
 
 {{APIRef("HTML DOM")}}
@@ -18,7 +10,7 @@ browser-compat: api.ValidityState.badInput
 ## Пример
 
 ```html
-<input type="number" id="age">
+<input type="number" id="age" />
 ```
 
 ```js
@@ -40,5 +32,5 @@ if (input.validity.badInput) {
 
 ## Смотрите также
 
-- [Руководство: Валидация ограничений](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Руководство: Валидация ограничений](/ru/docs/Web/HTML/Constraint_validation)
 - [Учебник: Валидация форм](/ru/docs/Learn/Forms/Form_validation)

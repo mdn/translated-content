@@ -1,20 +1,51 @@
 ---
 title: background-color
 slug: Web/CSS/background-color
-tags:
-  - CSS
-  - CSS-свойства
-  - CSS фоны
-  - Графика
-  - Определение
-  - Раскладка
-translation_of: Web/CSS/background-color
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS)-свойство **`background-color`** [CSS](/ru/docs/Web/CSS) устанавливает цвет фона элемента.
 
-{{EmbedInteractiveExample("pages/css/background-color.html")}}
+{{InteractiveExample("CSS Demo: background-color")}}
+
+```css interactive-example-choice
+background-color: brown;
+```
+
+```css interactive-example-choice
+background-color: #74992e;
+```
+
+```css interactive-example-choice
+background-color: rgb(255, 255, 128);
+```
+
+```css interactive-example-choice
+background-color: rgba(255, 255, 128, 0.5);
+```
+
+```css interactive-example-choice
+background-color: hsl(50, 33%, 25%);
+```
+
+```css interactive-example-choice
+background-color: hsla(50, 33%, 25%, 0.75);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 ## Синтаксис
 
@@ -33,9 +64,9 @@ background-color: #11ffeeff; /* ff - непрозрачный */
 background-color: rgb(255, 255, 128);
 
 /* RGBA-значение или RGB с alpha-каналом */
-background-color: rgba(117, 190, 218, 0.0); /* 0.0 - полностью прозрачный */
+background-color: rgba(117, 190, 218, 0); /* 0.0 - полностью прозрачный */
 background-color: rgba(117, 190, 218, 0.5); /* 0.5 - полупрозрачный */
-background-color: rgba(117, 190, 218, 1.0); /* 1.0 - непрозрачный */
+background-color: rgba(117, 190, 218, 1); /* 1.0 - непрозрачный */
 
 /* HSLA-значение */
 background-color: hsla(50, 33%, 25%, 0.75);
@@ -66,17 +97,11 @@ background-color: unset;
 ### HTML
 
 ```html
-<div class="exampleone">
- Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exampleone">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="exampletwo">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exampletwo">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="examplethree">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="examplethree">Lorem ipsum dolor sit amet, consectetuer</div>
 ```
 
 ### CSS
@@ -94,7 +119,7 @@ background-color: unset;
 
 .examplethree {
   background-color: #777799;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 ```
 
@@ -102,7 +127,7 @@ background-color: unset;
 
 {{EmbedLiveSample("Примеры","200","150")}}
 
-## Проблемы доступности
+## Доступность
 
 Важно обеспечить достаточный цветовой контраст между цветом текста и фоном, чтобы люди со слабым зрением могли его прочитать, но при этом должна быть достаточная разница между введённым текстом и текстом placeholder, чтобы пользователь не путал их.
 
@@ -124,7 +149,7 @@ background-color: unset;
 
 ## Смотрите также
 
-- [Множественные фоны](/ru/docs/Web/CSS/CSS_Background_and_Borders/Множественные_фоны)
+- [Множественные фоны](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
 - Тип данных {{cssxref("&lt;color&gt;")}}
 - Другие свойства, связанные с цветом: {{cssxref("color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, и {{cssxref("column-rule-color")}}
-- [Применение цвета к HTML элементам с помощью CSS](/ru/docs/Web/HTML/Applying_color)
+- [Применение цвета к HTML элементам с помощью CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color)

@@ -1,15 +1,8 @@
 ---
 title: Storage.length
 slug: Web/API/Storage/length
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Storage
-  - Web Storage
-translation_of: Web/API/Storage/length
 ---
+
 {{APIRef("Web Storage API")}}
 
 {{domxref("Storage")}} 인터페이스의 `length` 읽기 전용 속성은 `Storage` 객체에 저장된 데이터 항목의 수를 반환합니다.
@@ -30,15 +23,16 @@ length = storage.length;
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'yellow');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'cats.png');
+  localStorage.setItem("bgcolor", "yellow");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "cats.png");
 
   return localStorage.length; // Should return 3
 }
 ```
 
-> **참고:** 실제 사용 예제를 보시려면 저희의 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/)를 방문하세요.
+> [!NOTE]
+> 실제 사용 예제를 보시려면 저희의 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/)를 방문하세요.
 
 ## 명세
 

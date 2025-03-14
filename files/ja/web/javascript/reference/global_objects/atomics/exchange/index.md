@@ -7,12 +7,26 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
 
 静的な **`Atomics.exchange()`** メソッドは、指定された値を配列内の指定した位置に格納し、その値を返します。これは不可分操作で、古い値を読み取ってから新しい値を書き込むまでの間に他の物が書き込まないことを保証します。
 
-{{EmbedInteractiveExample("pages/js/atomics-exchange.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.exchange()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 5
+
+Atomics.exchange(uint8, 0, 2); // Returns 5
+console.log(Atomics.load(uint8, 0));
+// Expected output: 2
+```
 
 ## 構文
 
 ```js
-Atomics.exchange(typedArray, index, value)
+Atomics.exchange(typedArray, index, value);
 ```
 
 ### 引数

@@ -62,7 +62,7 @@ Cache-Control: s-maxage=<segundos>
 
 ### Diretivas `Cache-Control` Extendidas
 
-Diretivas `Cache-Control` extendidas não são parte do cerne do documento HTTP caching standards. Verifique a [tabela de compatibilidade](#Browser_compatibility) para certificar-se do seu suporte.
+Diretivas `Cache-Control` extendidas não são parte do cerne do documento HTTP caching standards. Verifique a [tabela de compatibilidade](#browser_compatibility) para certificar-se do seu suporte.
 
 ```
 Cache-Control: immutable
@@ -134,19 +134,19 @@ Cache-Control: public, max-age=31536000
 
 ## Especificações
 
-| Especificação        | Título                                          |
-| -------------------- | ----------------------------------------------- |
+| Especificação   | Título                                          |
+| --------------- | ----------------------------------------------- |
 | {{RFC("7234")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
 | {{RFC("5861")}} | HTTP Cache-Control Extensions for Stale Content |
 | {{RFC("8246")}} | HTTP Immutable Responses                        |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Cache-Control")}}
+{{Compat}}
 
 ## Veja também
 
-- [HTTP Caching FAQ](/pt-BR/docs/Web/HTTP/Caching_FAQ)
+- [HTTP Caching FAQ](/pt-BR/docs/Web/HTTP/Caching)
 - {{HTTPHeader("Age")}}
 - {{HTTPHeader("Expires")}}
 - {{HTTPHeader("Pragma")}}

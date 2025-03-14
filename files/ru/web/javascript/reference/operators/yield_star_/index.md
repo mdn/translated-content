@@ -1,7 +1,6 @@
 ---
 title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
-translation_of: Web/JavaScript/Reference/Operators/yield*
 ---
 
 {{jsSidebar("Operators")}}
@@ -62,7 +61,7 @@ function* g3() {
   yield* "34";
   yield* Array.from(arguments);
   // Определение этого итератора ниже
-  yield* new PowesOfTwo(4)
+  yield* new PowesOfTwo(4);
 }
 
 var iterator = g3(5, 6);
@@ -87,20 +86,20 @@ console.log(iterator.next()); // { value: undefined, done: true }
 // до maximum включительно
 class PowersOfTwo {
   constructor(maximum) {
-    this.maximum = maximum
-    this.value = 1
+    this.maximum = maximum;
+    this.value = 1;
   }
   [Symbol.iterator]() {
-    const self = this
+    const self = this;
     return {
       next() {
-        if(self.value > self.maximum) return { done: true }
+        if (self.value > self.maximum) return { done: true };
 
-        const value = self.value
-        self.value *= 2
-        return { done: false, value }
-      }
-    }
+        const value = self.value;
+        self.value *= 2;
+        return { done: false, value };
+      },
+    };
   }
 }
 ```
@@ -127,25 +126,22 @@ console.log(iterator.next()); // { value: 1, done: false }
 console.log(iterator.next()); // { value: 2, done: false }
 console.log(iterator.next()); // { value: 3, done: false }
 console.log(iterator.next()); // { value: undefined, done: true },
-                              // g4() в этой точке вернёт { value: "foo", done: true }
+// g4() в этой точке вернёт { value: "foo", done: true }
 
-console.log(result);          // "foo"
+console.log(result); // "foo"
 ```
 
 ## Спецификации
 
-| Specification                                    | Status                       | Comment             |
-| ------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#', 'Yield')}}     | {{Spec2('ES6')}}         | Initial definition. |
-| {{SpecName('ESDraft', '#', 'Yield')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Специфичные для Firefox примечания
 
-- Начиная с Gecko 33 {{geckoRelease(33)}}, разбор выражений yield было приведено к соответствию с последними спецификациями ES6 ({{bug(981599)}}):
+- Начиная с Gecko 33, разбор выражений yield было приведено к соответствию с последними спецификациями ES6 ([Firefox bug 981599](https://bugzil.la/981599)):
 
   - Реализована корректная обработка разрыва строки. Разрыва строки между "yield" и "\*" быть не может. Такой код вызовет {{jsxref("SyntaxError")}}:
 
@@ -156,9 +152,9 @@ console.log(result);          // "foo"
     }
     ```
 
-## See also
+## Смотрите также
 
-- [The Iterator protocol](/ru/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/ru/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield", "yield")}}

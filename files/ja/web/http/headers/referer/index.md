@@ -7,7 +7,8 @@ slug: Web/HTTP/Headers/Referer
 
 **`Referer`** リクエストヘッダーには、現在リクエストされているページへのリンク先を持った直前のウェブページのアドレスが含まれています。 `Referer` ヘッダーにより、サーバーは人々がどこから訪問しに来たかを識別し、分析、ログ、キャッシュの最適化などに利用することができます。
 
-> **警告:** このヘッダーには無害な用途が多数ありますが、ユーザーのセキュリティとプライバシーに望ましくない結果をもたらす可能性もあります。 詳細情報と緩和策については [Referer header: privacy and security concerns](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns) を参照してください。
+> [!WARNING]
+> このヘッダーには無害な用途が多数ありますが、ユーザーのセキュリティとプライバシーに望ましくない結果をもたらす可能性もあります。 詳細情報と緩和策については [Referer header: privacy and security concerns](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns) を参照してください。
 
 なお、 referer は実際には "referrer" という単語のスペルミスです。詳しくは [Wikipedia の HTTP リファラ](https://ja.wikipedia.org/wiki/HTTPリファラ)を参照してください。
 
@@ -47,20 +48,20 @@ Referer: <url>
 ## 例
 
 ```
-Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+Referer: https://developer.mozilla.org/ja/docs/Web/JavaScript
 Referer: https://example.com/page?q=123
 Referer: https://example.com/
 ```
 
 ## 仕様書
 
-| 仕様書                                           | 題名                                                          |
-| ------------------------------------------------ | ------------------------------------------------------------- |
+| 仕様書                              | 題名                                                          |
+| ----------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Referer", "5.5.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Referer")}}
+{{Compat}}
 
 ## 関連情報
 

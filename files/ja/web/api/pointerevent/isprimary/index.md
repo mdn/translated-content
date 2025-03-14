@@ -1,8 +1,9 @@
 ---
-title: PointerEvent.isPrimary
+title: "PointerEvent: isPrimary プロパティ"
+short-title: isPrimary
 slug: Web/API/PointerEvent/isPrimary
 l10n:
-  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
+  sourceCommit: c29cee3dcb0d0e66093dd0c18aa82e0eab9d6d14
 ---
 
 {{ APIRef("Pointer Events") }}
@@ -13,7 +14,7 @@ l10n:
 
 ポインターがマウスを表している場合、そのポインターが主と見なされます。 ペン入力を表すポインターは、その {{domxref("Element/pointerdown_event", "pointerdown")}} イベントが、ペン入力を表す他のアクティブなポインターがないときに送出された場合、主ペン入力と見なされます。タッチ入力を表すポインターは、その {{domxref("Element/pointerdown_event", "pointerdown")}} イベントが、タッチ入力を表す他のアクティブなポインターが存在しないときに送出された場合、主タッチ入力と見なされます。
 
-2 種類以上のポインター機器が同時に使用されている場合、複数のポインター（{{domxref("PointerEvent.pointerType", "pointerType")}} ごとに 1 つ）が主と見なされます。 例えば、タッチ接触とマウスカーソルが同時に動かされると、両方とも主と見なされるポインターが生成されます。 複数の主ポインターがある場合、これらのポインターはすべて*互換マウスイベント*を生成します（ポインター、マウス、およびタッチの相互作用の詳細については、{{domxref("Pointer_events", "ポインターイベント", "", 1)}} を参照）。
+2 種類以上のポインター機器が同時に使用されている場合、複数のポインター（{{domxref("PointerEvent.pointerType", "pointerType")}} ごとに 1 つ）が主と見なされます。 例えば、タッチ接触とマウスカーソルが同時に動かされると、両方とも主と見なされるポインターが生成されます。 複数の主ポインターがある場合、これらのポインターはすべて*互換マウスイベント*を生成します（ポインター、マウス、およびタッチの相互作用の詳細については、[ポインターイベント](/ja/docs/Web/API/Pointer_events)を参照）。
 
 ## 値
 
@@ -24,13 +25,17 @@ l10n:
 この例は、`isPrimary` の値を使用して、適切な処理関数を呼び出す方法を示しています。
 
 ```js
-target.addEventListener('pointerdown', (event) => {
-  if (event.isPrimary) {
-    process_primary_pointer(event);
-  } else {
-    process_secondary_pointer(event);
-  }
-}, false);
+target.addEventListener(
+  "pointerdown",
+  (event) => {
+    if (event.isPrimary) {
+      process_primary_pointer(event);
+    } else {
+      process_secondary_pointer(event);
+    }
+  },
+  false,
+);
 ```
 
 ## 仕様書

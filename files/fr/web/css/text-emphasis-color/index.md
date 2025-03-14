@@ -1,11 +1,6 @@
 ---
 title: text-emphasis-color
 slug: Web/CSS/text-emphasis-color
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-emphasis-color
 ---
 
 {{CSSRef}}
@@ -80,4 +75,4 @@ em {
 - {{cssxref('text-emphasis-position')}}
 - Le type de données {{cssxref("&lt;color&gt;")}}
 - D'autres propriétés relatives aux couleurs {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}
-- [Appliquer des couleurs sur des éléments HTML](/fr/docs/Web/HTML/Applying_color)
+- [Appliquer des couleurs sur des éléments HTML](/fr/docs/Web/CSS/CSS_colors/Applying_color)

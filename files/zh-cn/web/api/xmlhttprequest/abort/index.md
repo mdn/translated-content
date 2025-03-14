@@ -25,8 +25,8 @@ xhrInstance.abort();
 
 ```js
 var xhr = new XMLHttpRequest(),
-    method = "GET",
-    url = "https://developer.mozilla.org/";
+  method = "GET",
+  url = "https://developer.mozilla.org/";
 xhr.open(method, url, true);
 
 xhr.send();
@@ -44,6 +44,6 @@ if (OH_NOES_WE_NEED_TO_CANCEL_RIGHT_NOW_OR_ELSE) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

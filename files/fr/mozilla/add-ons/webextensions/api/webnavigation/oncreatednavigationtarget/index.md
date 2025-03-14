@@ -1,20 +1,9 @@
 ---
 title: webNavigation.onCreatedNavigationTarget
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCreatedNavigationTarget
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onCreatedNavigationTarget
-  - webNavigation
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCreatedNavigationTarget
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsqu'une nouvelle fenêtre ou un nouvel onglet dans une fenêtre existante est créé pour héberger la cible d'une navigation. Par exemple, cet événement est envoyé lorsque :
 
@@ -29,11 +18,11 @@ Si cet événement est déclenché, il sera déclenché avant {{WebExtAPIRef("we
 
 ```js
 browser.webNavigation.onCreatedNavigationTarget.addListener(
-  listener,                   // function
-  filter                      // optional object
-)
-browser.webNavigation.onCreatedNavigationTarget.removeListener(listener)
-browser.webNavigation.onCreatedNavigationTarget.hasListener(listener)
+  listener, // function
+  filter, // optional object
+);
+browser.webNavigation.onCreatedNavigationTarget.removeListener(listener);
+browser.webNavigation.onCreatedNavigationTarget.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -78,9 +67,9 @@ Les événements ont trois fonctions :
 - `windowId`
   - : number. L'ID de la fenêtre dans laquelle le nouvel onglet est créé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.onCreatedNavigationTarget")}}
+{{Compat}}
 
 ## Exemples
 
@@ -88,12 +77,8 @@ Logs l'URL cible, l'ID de la table source et l'ID de la trame source pour `onCre
 
 ```js
 var filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnCreatedNavigationTarget(details) {
   console.log("onCreatedNavigationTarget: " + details.url);
@@ -101,14 +86,17 @@ function logOnCreatedNavigationTarget(details) {
   console.log(details.sourceFrameId);
 }
 
-browser.webNavigation.onCreatedNavigationTarget.addListener(logOnCreatedNavigationTarget, filter);
+browser.webNavigation.onCreatedNavigationTarget.addListener(
+  logOnCreatedNavigationTarget,
+  filter,
+);
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

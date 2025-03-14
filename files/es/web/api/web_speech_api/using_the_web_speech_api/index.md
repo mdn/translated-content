@@ -1,9 +1,9 @@
 ---
 title: Uso de la Web Speech API
 slug: Web/API/Web_Speech_API/Using_the_Web_Speech_API
-translation_of: Web/API/Web_Speech_API/Using_the_Web_Speech_API
-original_slug: Web/API/Web_Speech_API/Uso_de_la_Web_Speech_API
 ---
+
+{{DefaultAPISidebar("Web Speech API")}}
 
 La API Web Speech API proporciona dos funcionalidades distintas — reconocimiento de voz, y síntesis de voz (también conocido como texto a voz o tts) — lo que nos ofrece nuevas e interesantes posibilidades para accesibilidad y otros mecanismos. Este artículo ofrece una breve introducción en las dos áreas, así como unas demos.
 
@@ -13,15 +13,16 @@ El reconocimiento de voz implica recibir voz a través del micrófono de un disp
 
 La API Web Speech tiene una interfaz principal de control para el - {{domxref ("SpeechRecognition")}} -, además de una serie de interfaces estrechamente relacionadas para representar la gramática, los resultados, etc. Normalmente, el sistema de reconocimiento de voz predeterminado que dispone el dispositivo se utilizará para el reconocimiento de voz: la mayoría de los sistemas operativos modernos tienen un sistema de reconocimiento de voz para emitir comandos de voz. Piense en Dictado en macOS, Siri en iOS, Cortana en Windows 10, Android Speech, etc.
 
-> **Nota:** En algunos navegadores como Chrome, el uso del reconocimiento de voz implica el uso de un motor de reconocimiento basado en un servidor. Tu audio se envía a un servicio de reconocimiento web para ser procesado, por lo que no funcionará offline.
+> [!NOTE]
+> En algunos navegadores como Chrome, el uso del reconocimiento de voz implica el uso de un motor de reconocimiento basado en un servidor. Tu audio se envía a un servicio de reconocimiento web para ser procesado, por lo que no funcionará offline.
 
 ### Demo
 
-Para mostrar un uso sencillo del reconocimiento de voz Web, hemos escrito una demo llamada [Speech color changer](https://github.com/mdn/web-speech-api/tree/master/speech-color-changer). Cuando se toca o hace click en la pantalla, se puede decir un color HTML, y el color de fondo de la aplicación cambiará a ese color.
+Para mostrar un uso sencillo del reconocimiento de voz Web, hemos escrito una demo llamada [Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer). Cuando se toca o hace click en la pantalla, se puede decir un color HTML, y el color de fondo de la aplicación cambiará a ese color.
 
-![The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that colour. In this case it has turned the background red.](https://mdn.mozillademos.org/files/11975/speech-color-changer.png)
+![The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that colour. In this case it has turned the background red.](speech-color-changer.png)
 
-Para ejecutar la demo, se puede clonar (o [directamente descargar](https://github.com/mdn/web-speech-api/archive/master.zip)) el repositorio Github donde se encuentra, abrir el fichero index HTML en un navegador de escritorio compatible, o navegar a través del enlace [live demo URL](https://mdn.github.io/web-speech-api/speech-color-changer/) en un navegador de móvil compatible como Chrome.
+Para ejecutar la demo, se puede clonar (o [directamente descargar](https://github.com/mdn/dom-examples/archive/refs/heads/main.zip)) el repositorio Github donde se encuentra, abrir el fichero index HTML en un navegador de escritorio compatible, o navegar a través del enlace [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) en un navegador de móvil compatible como Chrome.
 
 ### Compatibilidad de navegadores
 
@@ -50,9 +51,10 @@ Miremos el JavaScript con un poco más de detalle.
 Como se ha mencionado anteriormente, Chrome actualmente admite el reconocimiento de voz con propiedades 'prefixed', por lo tanto, al principio de nuestro código incluiremos las siguientes líneas para usar los objetos que correspondan a Chrome, y así cualquier implementación en el futuro pueda admitir estas características sin ningún 'prefixed':
 
 ```js
-var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
-var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
-var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
+var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
+var SpeechRecognitionEvent =
+  SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
 ```
 
 #### La gramática -grammar-
@@ -64,7 +66,7 @@ var colors = [ 'aqua' , 'azure' , 'beige', 'bisque', 'black', 'blue', 'brown', '
 var grammar = '#JSGF V1.0; grammar colors; public <color> = ' + colors.join(' | ') + ' ;'
 ```
 
-El formato usado para 'grammar' es [JSpeech Grammar Format](http://www.w3.org/TR/jsgf/) (**JSGF**) — Se puede encontrar más sobre las especificaciones de este formato en el anterior enlace. Sin embargo y por ahora vamos a echarle un vistazo rápidamente:
+El formato usado para 'grammar' es [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**) — Se puede encontrar más sobre las especificaciones de este formato en el anterior enlace. Sin embargo y por ahora vamos a echarle un vistazo rápidamente:
 
 - Las líneas se separan con punto y coma como en JavaScript.
 - La primera línea — `#JSGF V1.0;` — establece el formato y versión utilizados. Esto siempre se debe incluir primero.
@@ -96,7 +98,7 @@ Después añadimos la lista {{domxref("SpeechGrammarList")}} a la instancia del 
 ```js
 recognition.grammars = speechRecognitionList;
 recognition.continuous = false;
-recognition.lang = 'en-US';
+recognition.lang = "en-US";
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 ```
@@ -106,21 +108,24 @@ recognition.maxAlternatives = 1;
 Tomamos las referencias de la salida {{htmlelement("div")}} y del elemento HTML (para que podamos enviar mensajes de diagnostico y actualizar el color de fondo de la aplicación más adelante), e implementamos un manejador onclick para que cuando se haga click o se toque la pantalla, se inicie el reconocimiento de voz. Esto se logra llamando al método {{domxref("SpeechRecognition.start()")}}. El método `forEach()` se usa para visualizar indicadores de colores que muestran qué colores intenta decir.
 
 ```js
-var diagnostic = document.querySelector('.output');
-var bg = document.querySelector('html');
-var hints = document.querySelector('.hints');
+var diagnostic = document.querySelector(".output");
+var bg = document.querySelector("html");
+var hints = document.querySelector(".hints");
 
-var colorHTML= '';
-colors.forEach(function(v, i, a){
+var colorHTML = "";
+colors.forEach(function (v, i, a) {
   console.log(v, i);
-  colorHTML += '<span style="background-color:' + v + ';"> ' + v + ' </span>';
+  colorHTML += '<span style="background-color:' + v + ';"> ' + v + " </span>";
 });
-hints.innerHTML = 'Tap/click then say a color to change the background color of the app. Try ' + colorHTML + '.';
+hints.innerHTML =
+  "Tap/click then say a color to change the background color of the app. Try " +
+  colorHTML +
+  ".";
 
-document.body.onclick = function() {
+document.body.onclick = function () {
   recognition.start();
-  console.log('Ready to receive a color command.');
-}
+  console.log("Ready to receive a color command.");
+};
 ```
 
 #### Recepción y manejo de resultados
@@ -128,12 +133,12 @@ document.body.onclick = function() {
 Una vez que comienza el reconocimiento de voz, hay muchos manejadores de eventos que se pueden usar para recuperar los resultados, así como otros elementos de información adicional (ver [`SpeechRecognition` event handlers list](/es/docs/Web/API/SpeechRecognition#Event_handlers).) El más común que probablemente usarás es {{domxref("SpeechRecognition.onresult")}}, el cual es lanzado cuando se recibe el resultado con éxito:
 
 ```js
-recognition.onresult = function(event) {
+recognition.onresult = function (event) {
   var color = event.results[0][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color + '.';
+  diagnostic.textContent = "Result received: " + color + ".";
   bg.style.backgroundColor = color;
-  console.log('Confidence: ' + event.results[0][0].confidence);
-}
+  console.log("Confidence: " + event.results[0][0].confidence);
+};
 ```
 
 La tercera línea es un poco más compleja, así que vamos a explicarla paso a paso. La propiedad {{domxref("SpeechRecognitionEvent.results")}} devuelve un objeto {{domxref("SpeechRecognitionResultList")}} que contiene los objetos {{domxref("SpeechRecognitionResult")}}. Tiene un getter para que pueda ser accesible como si fuera un array — así el primer `[0]` devuelve el `SpeechRecognitionResult` en la posición 0. Cada objeto `SpeechRecognitionResult` contiene objetos {{domxref("SpeechRecognitionAlternative")}} que contienen palabras individuales reconocidas. Estos también tienen getters para que se puedan acceder a ellos como arrays — por lo tanto el segundo `[0]` devuelve `SpeechRecognitionAlternative` en la posición 0. Luego devolvemos su propiedad `transcript` para obtener una cadena que contenga el resultado individual reconocido como un string, estableciendo el color de fondo a ese color, e informando del color reconocido como un mensaje de diagnóstico en el IU.
@@ -141,9 +146,9 @@ La tercera línea es un poco más compleja, así que vamos a explicarla paso a p
 También usamos el manejador {{domxref("SpeechRecognition.onspeechend")}} para parar el servicio de reconocimiento de voz (usando {{domxref("SpeechRecognition.stop()")}}) cuando se ha reconocido una sola palabra y se ha finalizado de hablar:
 
 ```js
-recognition.onspeechend = function() {
+recognition.onspeechend = function () {
   recognition.stop();
-}
+};
 ```
 
 #### Manejo de errores y voz no reconocida
@@ -151,17 +156,17 @@ recognition.onspeechend = function() {
 Los dos últimos manejadores son para controlar los casos donde no se reconoce ninguna de las palabras definidas en la gramática, o cuando ocurre un error. {{domxref("SpeechRecognition.onnomatch")}} maneja el primer caso mencionado, pero tenga en cuenta que de momento no parece que se dispare correctamente; solo devuelve lo que ha reconocido:
 
 ```js
-recognition.onnomatch = function(event) {
-  diagnostic.textContent = 'I didnt recognise that color.';
-}
+recognition.onnomatch = function (event) {
+  diagnostic.textContent = "I didnt recognise that color.";
+};
 ```
 
 {{domxref("SpeechRecognition.onerror")}} maneja los casos donde se ha producido en error en el reconocimiento — la propiedad {{domxref("SpeechRecognitionError.error")}} contiene el error devuelto:
 
 ```js
-recognition.onerror = function(event) {
-  diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
-}
+recognition.onerror = function (event) {
+  diagnostic.textContent = "Error occurred in recognition: " + event.error;
+};
 ```
 
 ## Síntesis de voz
@@ -172,11 +177,11 @@ La Web Speech API tiene una interface principal controladora — {{domxref("Spee
 
 ### Demo
 
-Para mostrar un uso sencillo de la síntesis de voz Web, tenemos la demo llamada [Speak easy synthesis](https://mdn.github.io/web-speech-api/speak-easy-synthesis/). Esta incluye un juego de controles de formulario para introducir texto a sintetizar, configurar el tono, velocidad de reproducción y la voz a usar cuando el texto sea pronunciado. Después de introducir el texto se puede presionar <kbd>Enter</kbd>/<kbd>Return</kbd> para escucharlo.
+Para mostrar un uso sencillo de la síntesis de voz Web, tenemos la demo llamada [Speak easy synthesis](https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/). Esta incluye un juego de controles de formulario para introducir texto a sintetizar, configurar el tono, velocidad de reproducción y la voz a usar cuando el texto sea pronunciado. Después de introducir el texto se puede presionar <kbd>Enter</kbd>/<kbd>Return</kbd> para escucharlo.
 
-![UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesised, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices.](https://mdn.mozillademos.org/files/11977/speak-easy-synthesis.png)
+![UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesised, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices.](speak-easy-synthesis.png)
 
-Para ejecutar la demo, se puede clonar (o [directamente descargar](https://github.com/mdn/web-speech-api/archive/master.zip)) el repositorio Github donde se encuentra, abrir el fichero index HTML en un navegador de escritorio compatible, o navegar a través del enlace [live demo URL](https://mdn.github.io/web-speech-api/speech-color-changer/) en un navegador de móvil compatible como Chrome.
+Para ejecutar la demo, se puede clonar (o [directamente descargar](https://github.com/mdn/dom-examples/archive/refs/heads/main.zip)) el repositorio Github donde se encuentra, abrir el fichero index HTML en un navegador de escritorio compatible, o navegar a través del enlace [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) en un navegador de móvil compatible como Chrome.
 
 ### Compatibilidad de navegadores
 
@@ -193,23 +198,26 @@ El HTML y CSS de nuevo no son fundamentales, simplemente contiene un titulo, alg
 ```html
 <h1>Speech synthesiser</h1>
 
-<p>Enter some text in the input below and press return to hear it. change voices using the dropdown menu.</p>
+<p>
+  Enter some text in the input below and press return to hear it. change voices
+  using the dropdown menu.
+</p>
 
 <form>
-  <input type="text" class="txt">
+  <input type="text" class="txt" />
   <div>
-    <label for="rate">Rate</label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+    <label for="rate">Rate</label
+    ><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate" />
     <div class="rate-value">1</div>
     <div class="clearfix"></div>
   </div>
   <div>
-    <label for="pitch">Pitch</label><input type="range" min="0" max="2" value="1" step="0.1" id="pitch">
+    <label for="pitch">Pitch</label
+    ><input type="range" min="0" max="2" value="1" step="0.1" id="pitch" />
     <div class="pitch-value">1</div>
     <div class="clearfix"></div>
   </div>
-  <select>
-
-  </select>
+  <select></select>
 </form>
 ```
 
@@ -224,14 +232,14 @@ En primer lugar, capturamos las referencias de todos los elementos DOM involucra
 ```js
 var synth = window.speechSynthesis;
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('.txt');
-var voiceSelect = document.querySelector('select');
+var inputForm = document.querySelector("form");
+var inputTxt = document.querySelector(".txt");
+var voiceSelect = document.querySelector("select");
 
-var pitch = document.querySelector('#pitch');
-var pitchValue = document.querySelector('.pitch-value');
-var rate = document.querySelector('#rate');
-var rateValue = document.querySelector('.rate-value');
+var pitch = document.querySelector("#pitch");
+var pitchValue = document.querySelector(".pitch-value");
+var rate = document.querySelector("#rate");
+var rateValue = document.querySelector(".rate-value");
 
 var voices = [];
 ```
@@ -246,16 +254,16 @@ Para cada opción también creamos atributos `data-`, conteniendo el nombre y le
 function populateVoiceList() {
   voices = synth.getVoices();
 
-  for(i = 0; i < voices.length ; i++) {
-    var option = document.createElement('option');
-    option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+  for (i = 0; i < voices.length; i++) {
+    var option = document.createElement("option");
+    option.textContent = voices[i].name + " (" + voices[i].lang + ")";
 
-    if(voices[i].default) {
-      option.textContent += ' -- DEFAULT';
+    if (voices[i].default) {
+      option.textContent += " -- DEFAULT";
     }
 
-    option.setAttribute('data-lang', voices[i].lang);
-    option.setAttribute('data-name', voices[i].name);
+    option.setAttribute("data-lang", voices[i].lang);
+    option.setAttribute("data-name", voices[i].name);
     voiceSelect.appendChild(option);
   }
 }
@@ -272,7 +280,7 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 
 #### Reproduciendo el texto introducido
 
-A continuación, creamos un manejador de eventos para comenzar a reproducir el texto introducido en el campo de texto. Usamos un manejador [onsubmit](/es/docs/Web/API/GlobalEventHandlers/onsubmit) en el formulario para que la acción ocurra cuando se presione <kbd>Enter</kbd>/<kbd>Return</kbd>. Primero creamos una nueva instancia de {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "SpeechSynthesisUtterance()")}} usando su constructor — a este se le pasa el valor de la entrada de texto como parámetro.
+A continuación, creamos un manejador de eventos para comenzar a reproducir el texto introducido en el campo de texto. Usamos un manejador [onsubmit](/es/docs/Web/API/HTMLFormElement/submit_event) en el formulario para que la acción ocurra cuando se presione <kbd>Enter</kbd>/<kbd>Return</kbd>. Primero creamos una nueva instancia de {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "SpeechSynthesisUtterance()")}} usando su constructor — a este se le pasa el valor de la entrada de texto como parámetro.
 
 A continuación, debemos obtener la voz que queremos utilizar. Usamos la propiedad {{domxref("HTMLSelectElement")}} `selectedOptions` para devolver el elemento seleccionado {{htmlelement("option")}}. Entonces usamos el atributo de este elemento `data-name`, encontrando el objeto {{domxref("SpeechSynthesisVoice")}} cuyo nombre coincida con el valor del atributo. Y configuramos la propiedad de {{domxref("SpeechSynthesisUtterance.voice")}} con el valor que coincida con la opción seleccionada.
 
@@ -297,11 +305,18 @@ inputForm.onsubmit = function(event) {
 Al final del manejador incluimos un manejador {{domxref("SpeechSynthesisUtterance.onpause")}} para mostrar cómo usar {{domxref("SpeechSynthesisEvent")}}. Cuando se invoca a {{domxref("SpeechSynthesis.pause()")}},este devuelve un mensaje informando del número y nombre del carácter en el que se detuvo la reproducción.
 
 ```js
-   utterThis.onpause = function(event) {
-    var char = event.utterance.text.charAt(event.charIndex);
-    console.log('Speech paused at character ' + event.charIndex + ' of "' +
-    event.utterance.text + '", which is "' + char + '".');
-  }
+utterThis.onpause = function (event) {
+  var char = event.utterance.text.charAt(event.charIndex);
+  console.log(
+    "Speech paused at character " +
+      event.charIndex +
+      ' of "' +
+      event.utterance.text +
+      '", which is "' +
+      char +
+      '".',
+  );
+};
 ```
 
 Por último, llamamos a [blur()](/es/docs/Web/API/HTMLElement/blur) en la entrada de texto. Esto permite ocultar la entrada de texto en Firefox OS.
@@ -316,11 +331,11 @@ Por último, llamamos a [blur()](/es/docs/Web/API/HTMLElement/blur) en la entrad
 La última parte del código simplemente actualiza los valores `pitch`/`rate` mostrados en la IU, cada vez que el slider cambia de posición.
 
 ```js
-pitch.onchange = function() {
+pitch.onchange = function () {
   pitchValue.textContent = pitch.value;
-}
+};
 
-rate.onchange = function() {
+rate.onchange = function () {
   rateValue.textContent = rate.value;
-}
+};
 ```

@@ -1,23 +1,15 @@
 ---
 title: Object.prototype.__proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
-tags:
-  - Deprecated
-  - ECMAScript 2015
-  - JavaScript
-  - Object
-  - Propriété
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/proto
 ---
 
 {{JSRef}}{{Deprecated_header}}
 
-> **Attention :** Étant donnée la façon dont la plupart des moteurs JavaScript optimisent les performances, modifier le `[[Prototype]]` d'un objet est une opération lente pour chaque navigateur et moteur JavaScript. Les impacts liés aux performances sur ce point sont vastes et subtiles : ils concernent pas uniquement le temps passé à effectuer `obj.__proto__ = ...`, mais peuvent concerner n'importe quel code pour n'importe quel objet dont `[[Prototype]]` a été modifié. Si vous souhaitez obtenir des performances optimales, évitez de modifier le `[[Prototype]]` d'un objet. À la place, il est conseillé de créer un objet avec le prototype voulu en utilisant {{jsxref("Object.create()")}}.
+> [!WARNING]
+> Étant donnée la façon dont la plupart des moteurs JavaScript optimisent les performances, modifier le `[[Prototype]]` d'un objet est une opération lente pour chaque navigateur et moteur JavaScript. Les impacts liés aux performances sur ce point sont vastes et subtiles : ils concernent pas uniquement le temps passé à effectuer `obj.__proto__ = ...`, mais peuvent concerner n'importe quel code pour n'importe quel objet dont `[[Prototype]]` a été modifié. Si vous souhaitez obtenir des performances optimales, évitez de modifier le `[[Prototype]]` d'un objet. À la place, il est conseillé de créer un objet avec le prototype voulu en utilisant {{jsxref("Object.create()")}}.
 
-> **Attention :** Bien que la propriété `Object.prototype.__proto__` soit déjà supportée dans la plupart des navigateurs à l'heure actuelle, son comportement n'a été standardisé que récemment avec la spécification ECMAScript 2015. Si vous avez besoin d'utiliser cette propriété dans des environnements antérieurs à ES2015, il est recommandé d'utiliser {{jsxref("Object.getPrototypeOf()")}}.
+> [!WARNING]
+> Bien que la propriété `Object.prototype.__proto__` soit déjà supportée dans la plupart des navigateurs à l'heure actuelle, son comportement n'a été standardisé que récemment avec la spécification ECMAScript 2015. Si vous avez besoin d'utiliser cette propriété dans des environnements antérieurs à ES2015, il est recommandé d'utiliser {{jsxref("Object.getPrototypeOf()")}}.
 
 La propriété `__proto__` de {{jsxref("Object.prototype")}} est une propriété accesseur (un couple de fonction avec un accesseur (_getter_) et un mutateur (_setter_)) qui expose le `[[Prototype]]` interne (qui est soit un objet, soit {{jsxref("null")}}) de l'objet courant.
 
@@ -31,7 +23,8 @@ La propriété `__proto__` peut également être utilisée avec un littéral obj
 var proto = obj.__proto__;
 ```
 
-> **Note :** le nom de la propriété est composé de deux tirets bas, suivis de « proto », suivis par deux tirets bas (_underscores_)
+> [!NOTE]
+> Le nom de la propriété est composé de deux tirets bas, suivis de « proto », suivis par deux tirets bas (_underscores_)
 
 ## Description
 
@@ -45,7 +38,7 @@ L'accesseur `__proto__` expose la valeur du `[[Prototype]]` interne d'un objet.
 
 Le mutateur `__proto__` permet de changer le `[[Prototype]]` d'un objet. Cet objet doit être extensible selon {{jsxref("Object.isExtensible")}}, si ce n'est pas le cas, une exception {{jsxref("TypeError")}} sera renvoyée. La valeur fournie pour le nouveau prototype doit être un objet ou {{jsxref("null")}}. Toute autre valeur entraînera un échec silencieux.
 
-Pour plus d'éléments sur le fonctionnement de l'héritage et des prototypes, voir la page sur [l'héritage et les chaînes de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
+Pour plus d'éléments sur le fonctionnement de l'héritage et des prototypes, voir la page sur [l'héritage et les chaînes de prototypes](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 Le propriété `__proto__` n'est qu'une propriété accesseur (composée d'une fonction accesseur (_getter_) et d'une fonction mutateur (_setter_)) pour {{jsxref("Object.prototype")}}. Si l'accès à `__proto__` consulte {{jsxref("Object.prototype")}}, on trouvera la propriété. Un accesseur qui ne consulte pas {{jsxref("Object.prototype")}} ne pourra pas trouver le prototype. Si une propriété `__proto__` est trouvée avant que {{jsxref("Object.prototype")}} ne soit consulté, cette propriété « cachera » {{jsxref("Object.prototype")}}.
 
@@ -61,8 +54,12 @@ console.log(aucunProto.__proto__); // 17
 console.log(Object.getPrototypeOf(aucunProto)); // null
 
 var protoCaché = {};
-Object.defineProperty(protoCaché, "__proto__",
-                      { value: 42, writable: true, configurable: true, enumerable: true });
+Object.defineProperty(protoCaché, "__proto__", {
+  value: 42,
+  writable: true,
+  configurable: true,
+  enumerable: true,
+});
 
 console.log(protoCaché.__proto__); // 42
 console.log(Object.getPrototypeOf(protoCaché) === Object.prototype); // true
@@ -72,7 +69,8 @@ console.log(Object.getPrototypeOf(protoCaché) === Object.prototype); // true
 
 Dans ce qui suit, on crée un nouvelle instance d'`Employé` et on teste si `__proto__` est bien le même objet que le prototype de son constructeur.
 
-> **Attention :** Les remarques données plus haut sur les atteintes à la performance restent valables pour ces exemples. Ces exemples permettent uniquement d'illustrer le fonctionnement de `__proto__`, ils ne font pas office de recommandations.
+> [!WARNING]
+> Les remarques données plus haut sur les atteintes à la performance restent valables pour ces exemples. Ces exemples permettent uniquement d'illustrer le fonctionnement de `__proto__`, ils ne font pas office de recommandations.
 
 ```js
 // On déclare une fonction à utiliser comme constructeur
@@ -110,9 +108,16 @@ On notera que même la propriété `__proto__` de `Object.prototype` peut être 
 ```js
 var b = {};
 
-Object.prototype.__proto__ =
-    Object.create(null, //[[Prototype]]
-                  { salut: { value: function () {console.log('salut');}}});
+Object.prototype.__proto__ = Object.create(
+  null, //[[Prototype]]
+  {
+    salut: {
+      value: function () {
+        console.log("salut");
+      },
+    },
+  },
+);
 
 b.salut();
 ```

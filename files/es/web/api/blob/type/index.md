@@ -43,9 +43,9 @@ for (i = 0; i < files.length; i++) {
 
 {{Specifications}}
 
-## Compatibilidad con browsers
+## Compatibilidad con navegadores
 
-{{Compat("api.Blob.type")}}
+{{Compat}}
 
 ## Ver también
 

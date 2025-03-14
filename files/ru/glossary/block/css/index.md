@@ -1,13 +1,9 @@
 ---
 title: Блок (CSS)
 slug: Glossary/Block/CSS
-tags:
-  - CSS
-  - HTML
-  - Глоссарий
-  - Дизайн
-translation_of: Glossary/Block/CSS
 ---
+
+{{GlossarySidebar}}
 
 **Блок** на Веб-странице это {{glossary("HTML")}} {{glossary("element", "элемент")}}, который начинается с новой строки, т.е. под предыдущим элементом и над следующим (обычно называется _блочным элементом_). Например, {{htmlelement("p")}} по умолчанию блочный элемент, в то время как {{htmlelement("a")}} — _строчной элемент_: можно разместить несколько ссылок (одну за другой) в вашем HTML-коде и они все будут выводиться на одной и той же строке.
 
@@ -17,4 +13,4 @@ translation_of: Glossary/Block/CSS
 
 ### Общая информация
 
-- [Visual formatting model](/ru/docs/Web/Guide/CSS/Visual_formatting_model)
+- [Visual formatting model](/ru/docs/Web/CSS/Visual_formatting_model)

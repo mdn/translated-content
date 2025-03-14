@@ -1,15 +1,8 @@
 ---
 title: 사용자 지정 CSS 속성 사용하기 (변수)
 slug: Web/CSS/Using_CSS_custom_properties
-tags:
-  - CSS
-  - CSS Variable
-  - CSS 변수
-  - Custom Properties
-  - Guide
-  - Web
-translation_of: Web/CSS/Using_CSS_custom_properties
 ---
+
 {{cssref}}
 
 **사용자 지정 속성**(**CSS 변수**, **종속 변수**)은 CSS 저작자가 정의하는 개체로, 문서 전반적으로 재사용할 임의의 값을 담습니다. 사용자 지정 속성은 전용 표기법을 사용해 정의하고, (`--main-color: black;`) {{cssxref("var", "var()")}} 함수를 사용해 접근할 수 있습니다. (`color: var(--main-color);`)
@@ -38,7 +31,8 @@ element {
 
 그러나 반드시 이렇게 선언해야 하는 것은 아닙니다. 범위를 제한해야 하는 적절한 이유가 있을 수도 있으니까요.
 
-> **참고:** 사용자 지정 속성의 이름은 대소문자를 구분합니다. 따라서 `--my-color`와 `--My-color`는 서로 다른 속성으로써 처리합니다.
+> [!NOTE]
+> 사용자 지정 속성의 이름은 대소문자를 구분합니다. 따라서 `--my-color`와 `--My-color`는 서로 다른 속성으로써 처리합니다.
 
 위에서 언급했듯, 사용자 지정 속성의 값을 사용할 때에는 일반적인 값의 자리에 {{cssxref("var()")}} 함수를 지정하고, 그 매개변수로는 사용자 지정 속성의 이름을 제공합니다.
 
@@ -94,7 +88,7 @@ HTML에 적용해보겠습니다.
 <div>
   <div class="one">1:</div>
   <div class="two">2: Text <span class="five">5 - more text</span></div>
-  <input class="three">
+  <input class="three" />
   <textarea class="four">4: Lorem Ipsum</textarea>
 </div>
 ```
@@ -105,7 +99,7 @@ HTML에 적용해보겠습니다.
 
 반복되는 CSS에 주목해보세요. 배경 색을 여러 곳에서 `brown`으로 지정하고 있습니다. 일부 CSS 선언의 경우 더 상위 단계로 반복되는 항목을 옮겨서 CSS의 상속을 통해 자연스럽게 해결할 수도 있습니다. 그러나 보다 복잡한 프로젝트의 경우 항상 이렇게 할 수 있는 것은 아닙니다. 이 때 {{cssxref(":root")}} 의사 클래스에 사용자 지정 속성을 선언하고, 필요한 곳에서 그 속성을 참조함으로써 반복 코드의 필요를 줄일 수 있습니다.
 
-```html
+```css
 :root {
   --main-bg-color: brown;
 }
@@ -193,11 +187,18 @@ HTML에 적용해보겠습니다.
 }
 
 .three {
-  background-color: var(--my-var, var(--my-background, pink)); /* my-var와 --my-background가 정의되지 않았을 경우 pink로 표시됨 */
+  background-color: var(
+    --my-var,
+    var(--my-background, pink)
+  ); /* my-var와 --my-background가 정의되지 않았을 경우 pink로 표시됨 */
 }
 
 .three {
-  background-color: var(--my-var, --my-background, pink); /* 유효하지 않음: "--my-background, pink" */
+  background-color: var(
+    --my-var,
+    --my-background,
+    pink
+  ); /* 유효하지 않음: "--my-background, pink" */
 }
 ```
 
@@ -224,9 +225,15 @@ _각 속성과 연관된 기본 CSS 개념의 유효성은 사용자 지정 속�
 ### CSS
 
 ```css
-:root { --text-color: 16px; }
-p { color: blue; }
-p { color: var(--text-color); }
+:root {
+  --text-color: 16px;
+}
+p {
+  color: blue;
+}
+p {
+  color: var(--text-color);
+}
 ```
 
 예상대로 브라우저는 `--text-color` 의 값으로 `var(--text-color)` 를 대체했지만 `16px` 는 {{cssxref("color")}}에 유효한 값이 아니다. 대체한 결과, 그 속성은 의미가 통하지 않는다. 브라우저는 이 상황을 두 단계로 처리한다:
@@ -240,7 +247,8 @@ p { color: var(--text-color); }
 
 단락의 color 값은 blue가 되지 못한다. 유효하지 않은 값이 폴백 (fallback)이 아닌 초기설정 디포트값으로 대체되었기 때문이다. 만일 사용자가 어떠한 매개변수값 없이 `color: 16px` 를 쓴다면 에러(syntax error)를 받게 될 것이다. 대신 그 전에 지정된 선언이 사용된다.
 
-> **참고:** CSS 속성/값 쌍에서 에러(syntax error)가 나면 그 라인은 무시되지만 계단식으로 지정된 값, 유효하지 않은 대체적용(substitution) - 유효하지 않은 사용자 지정값을 사용하는 것 - 은 무시되지 않으며, 그 값은 상속된다.
+> [!NOTE]
+> CSS 속성/값 쌍에서 에러(syntax error)가 나면 그 라인은 무시되지만 계단식으로 지정된 값, 유효하지 않은 대체적용(substitution) - 유효하지 않은 사용자 지정값을 사용하는 것 - 은 무시되지 않으며, 그 값은 상속된다.
 
 ## JavaScript에서의 값
 
@@ -256,10 +264,6 @@ getComputedStyle(element).getPropertyValue("--my-var");
 // 인라인 스타일에 변수 설정하기
 element.style.setProperty("--my-var", jsVar + 4);
 ```
-
-## 브라우저 호환성
-
-{{Compat}}
 
 ## 같이 보기
 

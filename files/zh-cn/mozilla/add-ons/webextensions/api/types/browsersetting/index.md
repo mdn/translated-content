@@ -1,37 +1,40 @@
 ---
 title: BrowserSetting
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting
+l10n:
+  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-A `BrowserSetting` is an object representing a browser setting.
+`BrowserSetting` 是一个表示浏览器设置的对象。
 
-It provides methods to set and get the setting's underlying value, to clear any change you've made to it, and to listen for changes to its value.
+它提供了方法来设置和获取设置的基础值，清除扩展程序对其进行的任何更改，和监听其值的变化。
 
-Note that while this object is based on the [ChromeSetting](https://developer.chrome.com/extensions/types#type-ChromeSetting) type, this object does not distinguish between setting the value in normal browsing windows and in private browsing windows. This means that all parts of the API relating to private browsing (such as the `scope` option to `ChromeSetting.set()`) are not implemented.
+请注意，虽然此对象基于 [ChromeSetting](https://developer.chrome.google.cn/docs/extensions/reference/api/types#type-ChromeSetting) 类型，但它不区分在普通浏览窗口和私密浏览窗口中设置值。这意味着所有与无痕浏览相关的 API 部分（例如 `ChromeSetting.set()` 的 `scope` 选项）未实现。
 
-## Methods
+## 方法
 
 - {{WebExtAPIRef("types.BrowserSetting.get()")}}
-  - : Get the current value of the setting, and an enumeration representing how the setting is currently controlled.
+  - : 获取设置的当前值，并返回一个表示当前设置可以如何控制的枚举值。
 - {{WebExtAPIRef("types.BrowserSetting.set()")}}
-  - : Set the setting to a new value.
+  - : 将设置设定为新值。
 - {{WebExtAPIRef("types.BrowserSetting.clear()")}}
-  - : Clear any change made to the setting by this extension.
+  - : 清除扩展程序对设置所做的任何更改。
 
-## Events
+## 事件
 
 - {{WebExtAPIRef("types.BrowserSetting.onChange")}}
-  - : Fired when the setting's value changes.
+  - : 当设置的值发生变化时触发。
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/extensions/types) API.
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.types`](https://developer.chrome.google.cn/docs/extensions/reference/api/types) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

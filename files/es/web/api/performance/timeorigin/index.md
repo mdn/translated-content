@@ -23,6 +23,6 @@ Una marca de tiempo de alta precisión.
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Performance.timeOrigin")}}
+{{Compat}}

@@ -1,26 +1,32 @@
 ---
 title: Atomics.load()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/load
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/load
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/load
 ---
 
 {{JSRef}}
 
 La méthode statique **`Atomics.load()`** renvoie une valeur située à une position donnée du tableau.
 
-{{EmbedInteractiveExample("pages/js/atomics-load.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.load()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+// 5 + 2 = 7
+console.log(Atomics.add(uint8, 0, 2));
+// Expected output: 5
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 7
+```
 
 ## Syntaxe
 
 ```js
-Atomics.load(typedArray, index)
+Atomics.load(typedArray, index);
 ```
 
 ### Paramètres

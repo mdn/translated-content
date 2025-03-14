@@ -1,31 +1,20 @@
 ---
 title: tabs.getZoom()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getZoom
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getZoom
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/getZoom
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient le facteur de zoom actuel pour l'onglet spécifié.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var gettingZoom = browser.tabs.getZoom(
-  tabId                     // optional integer
-)
+  tabId, // optional integer
+);
 ```
 
 ### Paramètres
@@ -35,7 +24,7 @@ var gettingZoom = browser.tabs.getZoom(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera satisfaite avec le facteur de zoom actuel de l'onglet, sous la forme d'un nombre compris entre 0,3 et 3. Si l'onglet n'a pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera satisfaite avec le facteur de zoom actuel de l'onglet, sous la forme d'un nombre compris entre 0,3 et 3. Si l'onglet n'a pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
 ## Exemples
 
@@ -71,13 +60,13 @@ gettingZoom.then(onGot, onError);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.getZoom")}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l’API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

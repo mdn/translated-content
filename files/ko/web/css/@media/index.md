@@ -1,20 +1,14 @@
 ---
-title: '@media'
+title: "@media"
 slug: Web/CSS/@media
-tags:
-  - '@media'
-  - At-rule
-  - CSS
-  - Reference
-  - 미디어 쿼리
-translation_of: Web/CSS/@media
 ---
 
 {{CSSRef}}
 
-**`@media`** [CSS](/ko/docs/Web/CSS) [@규칙](/ko/docs/Web/CSS/At-rule)은 스타일 시트의 일부를 하나 이상의 [미디어 쿼리](/ko/docs/Web/Guide/CSS/Media_queries) 결과에 따라 적용할 때 사용할 수 있습니다. `@media`를 사용해 미디어 쿼리를 지정하면 해당 쿼리를 만족하는 장치에서만 CSS 블록을 적용할 수 있습니다.
+**`@media`** [CSS](/ko/docs/Web/CSS) [@규칙](/ko/docs/Web/CSS/At-rule)은 스타일 시트의 일부를 하나 이상의 [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries) 결과에 따라 적용할 때 사용할 수 있습니다. `@media`를 사용해 미디어 쿼리를 지정하면 해당 쿼리를 만족하는 장치에서만 CSS 블록을 적용할 수 있습니다.
 
-> **참고:** JavaScript에서는 `@media`를 {{domxref("CSSMediaRule")}} CSS 객체 모델 인터페이스로 접근할 수 있습니다.
+> [!NOTE]
+> JavaScript에서는 `@media`를 {{domxref("CSSMediaRule")}} CSS 객체 모델 인터페이스로 접근할 수 있습니다.
 
 ## 구문
 
@@ -38,7 +32,7 @@ translation_of: Web/CSS/@media
 }
 ```
 
-미디어 쿼리 구문에 관한 내용은 [미디어 쿼리 사용하기](/ko/docs/Web/Guide/CSS/Media_queries#구문) 문서를 참고하세요.
+미디어 쿼리 구문에 관한 내용은 [미디어 쿼리 사용하기](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries#구문) 문서를 참고하세요.
 
 ## 접근성 고려사항
 
@@ -64,22 +58,27 @@ Level 4 미디어 쿼리를 통한 사용자 경험 향상도 고려해보세요
 
 ```css
 @media print {
-  body { font-size: 10pt; }
+  body {
+    font-size: 10pt;
+  }
 }
 
 @media screen {
-  body { font-size: 13px; }
+  body {
+    font-size: 13px;
+  }
 }
 
 @media screen, print {
-  body { line-height: 1.2; }
+  body {
+    line-height: 1.2;
+  }
 }
 
-@media only screen
-  and (min-width: 320px)
-  and (max-width: 480px)
-  and (resolution: 150dpi) {
-    body { line-height: 1.4; }
+@media only screen and (min-width: 320px) and (max-width: 480px) and (resolution: 150dpi) {
+  body {
+    line-height: 1.4;
+  }
 }
 ```
 
@@ -87,15 +86,19 @@ Media Queries Level 4부터는 새로운 범위 표현 구문을 사용해 더 �
 
 ```css
 @media (height > 600px) {
-    body { line-height: 1.4; }
+  body {
+    line-height: 1.4;
+  }
 }
 
 @media (400px <= width <= 700px) {
-    body { line-height: 1.4; }
+  body {
+    line-height: 1.4;
+  }
 }
 ```
 
-더 많은 예제는 [미디어 쿼리 사용하기](/ko/docs/Web/CSS/Media_Queries/Using_media_queries)를 참고하세요.
+더 많은 예제는 [미디어 쿼리 사용하기](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)를 참고하세요.
 
 ## 명세
 
@@ -107,7 +110,7 @@ Media Queries Level 4부터는 새로운 범위 표현 구문을 사용해 더 �
 
 ## 같이 보기
 
-- [미디어 쿼리 사용하기](/ko/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [미디어 쿼리 사용하기](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - JavaScript에서 `@media`에 접근할 때 사용할 수 있는 CSS 객체 모델 인터페이스 {{domxref("CSSMediaRule")}}
 - [Mozilla 미디어 특성 확장](/ko/docs/Web/CSS/Mozilla_Extensions#Media_features)
 - [WebKit 미디어 특성 확장](/ko/docs/Web/CSS/Webkit_Extensions#Media_features)

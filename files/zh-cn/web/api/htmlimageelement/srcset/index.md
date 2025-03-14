@@ -1,65 +1,62 @@
 ---
-title: HTMLImageElement.srcset
+title: HTMLImageElement：srcset 属性
 slug: Web/API/HTMLImageElement/srcset
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLImageElement")}} 的 **`srcset`** 的值是一个字符串，用来定义一个或多个图像候选地址，以 `,` 分割，每个候选地址将在特定条件下得以使用。候选地址包含图片 URL 和一个可选的宽度描述符和像素密度描述符，该候选地址用来在特定条件下替代原始地址成为 {{domxref("HTMLImageElement.src", "src")}} 的属性。
+{{domxref("HTMLImageElement")}} 的 **`srcset`** 属性的值是一个字符串，用于标识一个或多个以逗号（`,`）分割的**图像候选字符串**，每个候选地址将在特定条件下得以使用。
 
-`srcset`属性和{{domxref("HTMLImageElement.sizes", "sizes")}} 属性是响应式网页设计中至关重要的组件，可以搭配使用来创建根据展示场景使用图像的页面。
+每个图像候选字符串包含图像 URL 和一个可选的宽度描述符或像素密度描述符，用于在特定条件下替代由 {{domxref("HTMLImageElement.src", "src")}} 属性指定的图像。
 
-## 语法
+`srcset` 属性和 {{domxref("HTMLImageElement.sizes", "sizes")}} 属性是响应式网站设计中至关重要的组件，可以搭配使用来创建根据展示场景使用图像的页面。
 
-```plain
-htmlImageElement.srcset = imageCandidateStrings;
-let srcset = htmlImageElement.srcset;
-```
+> [!NOTE]
+> 如果 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 属性使用了宽度描述符，则 `sizes` 属性必须也同时存在，否则 `srcset` 将会被忽略。
 
-### 值
+## 值
 
-一个包含单个或多个以逗号分隔的图像候选列表{{domxref("USVString")}} ，表示在{{HTMLElement("img")}}里可以展示哪些图片。
+一个字符串，包含一个或多个图像候选字符串的逗号分隔列表，用于确定在由 `HTMLImageElement` 表示的 {{HTMLElement("img")}} 元素中显示哪个图像资源。
 
-每个图像候选字符串必须以有效 URL 开头，指向一个非交互的图形资源。紧接着是一个逗号 (`,`) 字符。最后是一个条件描述符，该描述符定义了在什么环境下使用该图像。除了分隔 URL 和相应条件描述符的空格之外的空格字符都将被忽略，包括头部和末尾的空格，以及每个逗号前后的空格。
+每个候选图像字符串必须以引用非交互式图形资源的有效 URL 开始。其后是空白字符，然后是一个条件描述符，说明应在何种情况下使用指定的图像。除了分隔 URL 和相应条件描述符的空白字符外，其他空格字符都将被忽略；这包括前导空格和尾部空格，以及每个逗号前后的空格。
 
-如果没有提供条件描述符（也就是说，图像候选字符只含一个 URL），并没有命中的其他候选，则使用该候选作为回退方案。否则，条件描述符可以采用以下两种形式之一：
+条件描述符可能是以下两种形式之一：
 
-- 要指定在某个宽度下使用特定图像候选代表的图像资源，请提供 **宽度描述符**，包含表示该宽度的数字（以像素为单位）+ 小写字母“w”。例如，渲染一个 450 像素宽的图像对应的描述符字符串： `450w`。指定的宽度必须是正数、非零整数，并且*必须*与引用图像的固有宽度相匹配。
-- 或者，您可以使用**像素密度描述符**，它指定了在什么样的显示器像素密度下应用相应的图像资源。它是通过将像素密度声明为正的非零浮点值，后跟小写字母“x”来编写的。例如，要指定在像素密度是标准密度的两倍时使用相应的图像，您可以提供像素密度描述符 `2x` 或 `2.0x`。< /li>
+- 要指明候选图像字符串指定的图像资源应在以特定宽度（像素）渲染图像时使用，请提供**宽度描述符**，由给出该宽度（像素）的数字和小写字母“w”组成。例如，要在渲染器需要 450 像素宽的图像时使用图像资源，请使用宽度描述符字符串 `450w`。指定的宽度必须是一个非零的正整数，并且*必须*与引用图像的固有宽度相匹配。当“srcset”包含“w”描述符时，浏览器会使用这些描述符和 {{domxref("HTMLImageElement.sizes", "sizes")}} 属性来选择资源。
+- 或者，也可以使用**像素密度描述符**，指定在何种情况下应将相应的图像资源用作显示屏的像素密度。写法是将像素密度写成一个非零的正浮点数值，后面跟一个小写字母“x”。例如，要说明像素密度是标准密度的两倍时应使用相应的图像，可以给出像素密度描述符 `2x` 或 `2.0x`。
 
-您可以混合使用这两种类型的描述符。但是，您不能为同一个描述符指定多个图像候选字符。以下都是有效的图像候选字符串：
+如果没有提供条件描述符（或者说，图像候选只提供了一个 URL），那么候选字符串具有默认描述符“1x”。
 
 ```plain
-"images/team-photo.jpg 1x, images/team-photo-retina.jpg 2x, images/team-photo-full 2048w"
+"images/team-photo.jpg, images/team-photo-retina.jpg 2x"
 ```
 
-此字符串指定了在标准像素密度 (`1x`) 以及两倍像素密度 (`2x`) 下使用的图像版本。还可以使用宽度为 2048 像素 (`2048w`) 的图像版本。
+此字符串提供了以标准像素密度（未定义，默认为 `1x`）和双倍像素密度（`2x`）使用的图像版本。
+
+当图像元素的 `srcset` 包含“x”描述符时，浏览器还会考虑 {{domxref("HTMLImageElement.src", "src")}}属性中的 URL（如果存在）作为候选，并将其默认描述符指定为 `1x`。
 
 ```plain
-"header640.png 640w, header960.png 960w, header1024.png 1024w, header.png"
+"header640.png 640w, header960.png 960w, header1024.png 1024w"
 ```
 
-此字符串指定了在 {{Glossary("user agent", "user agent's")}} 需要渲染宽度为 640px、960px 或 1024px 的图像时使用的图像版本。以及一个额外的备用图像候选，没有任何条件，可用于任意宽度。
+此字符串指定了在{{Glossary("user agent", "用户代理的")}}渲染器需要渲染宽度为 640px、960px 或 1024px 的图像时使用的图像版本。
 
-```plain
-"icon32px.png 32w, icon64px.png 64w, icon-retina.png 2x icon-ultra.png 3x icon.svg"
-```
+请注意，如果“srcset”中的任何资源使用了“w”描述符，则该“srcset”中的所有资源也必须使用“w”描述符，图像元素的 {{domxref("HTMLImageElement.src", "src")}} 不被视为候选资源。
 
-这里，为宽度为 32 像素和 64 像素以及像素密度为 2 倍和 3 倍的图标提供了选项。备用图像以 SVG 文件的形式提供，它可在所有情况下使用。请注意，图像候选可使用不同的图像类型。
-
-有关可用于 {{HTMLElement("img")}} 元素的图像格式的详细信息，请参阅 [图片文件类型和格式指南](/zh-CN/docs/Web/Media/Formats/Image_types) 。
-
-## 例子
+## 示例
 
 ### HTML
 
-下面的 HTML 表明图像的默认宽度是 200 像素。 `srcset` 属性还指定了 200 像素版本应用于 1x 显示器，而 400 像素版本应用于 2x 显示器。
+下面的 HTML 表明默认图像资源（包含在 {{domxref("HTMLImageElement.src", "src")}} 属性中）应该用于 1x 显示器，而 400 像素版本（包含在 `srcset` 属性中，并分配了 `2x` 描述符）应该用于 2x 显示器。
 
 ```html
 <div class="box">
-  <img src="https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/web/html/element/img/clock-demo-200px.png"
-       alt="Clock"
-       srcset="https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/web/html/element/img/clock-demo-200px.png 1x, https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/web/html/element/img/clock-demo-400px.png 2x">
+  <img
+    src="/zh-CN/docs/Web/HTML/Element/img/clock-demo-200px.png"
+    alt="钟表"
+    srcset="/zh-CN/docs/Web/HTML/Element/img/clock-demo-400px.png 2x" />
 </div>
 ```
 
@@ -70,7 +67,7 @@ CSS 仅指定图像及其父盒子的宽为 200 像素，并有一个简单的�
 ```css
 .box {
   width: 200px;
-  border: 2px solid rgba(150, 150, 150, 255);
+  border: 2px solid rgb(150 150 150);
   padding: 0.5em;
   word-break: break-all;
 }
@@ -82,26 +79,28 @@ CSS 仅指定图像及其父盒子的宽为 200 像素，并有一个简单的�
 
 ### JavaScript
 
-The following code is run within a handler for the {{domxref("Window", "window")}}'s {{domxref("Window.load_event", "load")}} event. It uses the image's {{domxref("HTMLImageElement.currentSrc", "currentSrc")}} property to fetch and display the URL selected by the browser from the `srcset`.
-
 以下代码在 {{domxref("Window", "window")}} 的 {{domxref("Window.load_event", "load")}} 事件的处理程序中运行。它使用图像的 {{domxref("HTMLImageElement.currentSrc", "currentSrc")}} 属性来获取并显示浏览器从 `srcset` 中选择的 URL。
 
 ```js
-let box = document.querySelector(".box");
-let image = box.querySelector("img");
+window.addEventListener("load", () => {
+  const box = document.querySelector(".box");
+  const image = box.querySelector("img");
 
-let newElem = document.createElement("p");
-newElem.innerHTML = `Image: <code>${image.currentSrc}</code>`;
-box.appendChild(newElem);
+  const newElem = document.createElement("p");
+  newElem.textContent = "图像：";
+  newElem.appendChild(document.createElement("code")).textContent =
+    image.currentSrc;
+  box.appendChild(newElem);
+});
 ```
 
 ### 结果
 
-输出展示在下面，所选 URL 将取决于您显示的图像版本，1x 版本还是 2x 版本？。如果您碰巧有标准和高密度显示器，请尝试在它们之间移动此窗口并重新加载页面以查看结果变化。
+在下面显示的输出中，所选 URL 将对应于你的显示结果是选择 1x 还是 2x 版本的图像。如果你同时拥有标准显示屏和高密度显示屏，请尝试在两者之间移动该窗口并重新加载页面，看看结果会有什么变化。
 
-{{EmbedLiveSample("Example", 640, 320)}}
+{{EmbedLiveSample("示例", 640, 320)}}
 
-有关其他示例，请参阅我们的[响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)指南。
+有关其他示例，请参阅我们的[响应式图片](/zh-CN/docs/Web/HTML/Responsive_images)指南。
 
 ## 规范
 
@@ -111,8 +110,8 @@ box.appendChild(newElem);
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Images in HTML](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Responsive images](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Image file type and format guide](/zh-CN/docs/Web/Media/Formats/Image_types)
+- [HTML 中的图像](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images)
+- [响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)
+- [图像文件类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats/Image_types)

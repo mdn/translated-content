@@ -1,26 +1,34 @@
 ---
 title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/abs
-browser-compat: javascript.builtins.Math.abs
+l10n:
+  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
 {{JSRef}}
 
-**`Math.abs()`** 함수는 주어진 숫자의 절대값을
-반환합니다. `x`가 양수이거나 0이라면 `x`를 리턴하고,
-`x`가 음수라면 `x`의 반대값, 즉 양수를 반환합니다.
+**`Math.abs()`** 정적 메서드는 숫자의 절대 값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/math-abs.html")}}
+{{InteractiveExample("JavaScript Demo: Math.abs()")}}
+
+```js interactive-example
+function difference(a, b) {
+  return Math.abs(a - b);
+}
+
+console.log(difference(3, 5));
+// Expected output: 2
+
+console.log(difference(5, 3));
+// Expected output: 2
+
+console.log(difference(1.23456, 7.89012));
+// Expected output: 6.6555599999999995
+```
 
 ## 구문
 
-```js
+```js-nolint
 Math.abs(x)
 ```
 
@@ -31,37 +39,43 @@ Math.abs(x)
 
 ### 반환 값
 
-주어진 숫자의 절대값.
+`x`의 절대 값. `x`가 음수라면(`-0` 포함) `-x`를 반환합니다. 그렇지 않으면 `x`를 반환합니다. 따라서 결과는 언제나 양수 혹은 `0`입니다.
 
 ## 설명
 
-`abs()`는 `Math`의 정적 메서드이므로, 사용자가 생성한
-`Math` 객체의 메서드로 호출할 수 없고 항상
-`Math.abs()`를 사용해야 합니다. (`Math`는 생성자가
-아닙니다)
+`abs()`는 `Math`의 정적 메서드이기 때문에, 생성한 `Math` 객체(`Math`는 생성자가 아닙니다)의 메서드 대신 언제나 `Math.abs()`를 사용해야 합니다.
 
 ## 예제
 
-### Math.abs()의 작동 방식
-
-빈 객체, 하나 이상의 요소를 가진 배열, 숫자가 아닌 문자열,
-{{jsxref("undefined")}}나 빈 매개변수를 받으면 {{jsxref("NaN")}}을 반환합니다.
-{{jsxref("null")}}, 빈 문자열이나 빈 배열을 제공하면 0을 반환합니다.
+### Math.abs() 사용하기
 
 ```js
-Math.abs('-1');     // 1
-Math.abs(-2);       // 2
-Math.abs(null);     // 0
-Math.abs('');       // 0
-Math.abs([]);       // 0
-Math.abs([2]);      // 2
-Math.abs([1,2]);    // NaN
-Math.abs({});       // NaN
-Math.abs('string'); // NaN
-Math.abs();         // NaN
+Math.abs(-Infinity); // Infinity
+Math.abs(-1); // 1
+Math.abs(-0); // 0
+Math.abs(0); // 0
+Math.abs(1); // 1
+Math.abs(Infinity); // Infinity
 ```
 
-## 명세
+### 매개변수의 강제 변환
+
+`Math.abs()` [매개변수를 숫자로 강제 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)시킵니다. 변환할 수 없는 값은 `NaN`이 되며, `Math.abs()`도 `NaN`을 반환합니다.
+
+```js
+Math.abs("-1"); // 1
+Math.abs(-2); // 2
+Math.abs(null); // 0
+Math.abs(""); // 0
+Math.abs([]); // 0
+Math.abs([2]); // 2
+Math.abs([1, 2]); // NaN
+Math.abs({}); // NaN
+Math.abs("string"); // NaN
+Math.abs(); // NaN
+```
+
+## 명세서
 
 {{Specifications}}
 

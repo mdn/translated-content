@@ -1,36 +1,25 @@
 ---
 title: downloads.erase()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/erase
-tags:
-  - API
-  - Add-ons
-  - Effacer
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - erase
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/erase
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`erase()`** de l'API {{WebExtAPIRef("downloads")}} efface la correspondance {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} de l'historique de téléchargement du navigateur sans supprimer les fichiers téléchargés du disque.
 
 Pour supprimer les fichiers du disque, vous devez utiliser {{WebExtAPIRef("downloads.removeFile()")}}.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-> **Note :** Si vous souhaitez supprimer un fichier téléchargé du disque et l'effacer de l'historique, vous devez appeler {{WebExtAPIRef("downloads.removeFile()")}} before you call `erase()`. Si vous l'essayez dans l'autre sens, vous obtiendrez une erreur lors de l'appel de {{WebExtAPIRef("downloads.removeFile()")}}, car il n'existe plus selon le navigateur.
+> [!NOTE]
+> Si vous souhaitez supprimer un fichier téléchargé du disque et l'effacer de l'historique, vous devez appeler {{WebExtAPIRef("downloads.removeFile()")}} before you call `erase()`. Si vous l'essayez dans l'autre sens, vous obtiendrez une erreur lors de l'appel de {{WebExtAPIRef("downloads.removeFile()")}}, car il n'existe plus selon le navigateur.
 
 ## Syntaxe
 
 ```js
 var erasing = browser.downloads.erase(
-  query                    // DownloadQuery
-)
+  query, // DownloadQuery
+);
 ```
 
 ### Paramètres
@@ -40,11 +29,11 @@ var erasing = browser.downloads.erase(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si l'appel a réussi, la promesse sera remplie avec un tableau d'entiers représentant les identifiants des {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} effacés. Si aucun élément correspondant au paramètre de requête n'a pu être trouvé, le tableau sera vide. Si l'appel a échoué, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si l'appel a réussi, la promesse sera remplie avec un tableau d'entiers représentant les identifiants des {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} effacés. Si aucun élément correspondant au paramètre de requête n'a pu être trouvé, le tableau sera vide. Si l'appel a échoué, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.erase")}}
+{{Compat}}
 
 ## Exemples
 
@@ -61,7 +50,7 @@ function onError(error) {
 
 var erasing = browser.downloads.erase({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 
 erasing.then(onErased, onError);
@@ -84,9 +73,9 @@ erasing.then(onErased, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

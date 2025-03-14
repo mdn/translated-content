@@ -1,30 +1,34 @@
 ---
 title: IDBCursor
 slug: Web/API/IDBCursor
+l10n:
+  sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
-[IndexedDB API](/ja/docs/IndexedDB) の **`IDBCursor`** インターフェイスはデータベースの複数レコードを横断したり繰り返すための[カーソル](/ja/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor)です。
+> **メモ:** {{domxref("IDBCursorWithValue")}} と混同しないでください。これは **`IDBCursor`** インターフェイスに **`value`** プロパティを追加しただけのものです。
 
-このカーソルはどのインデックスやオブジェクトをループしているかを示す元です。これは範囲内の位置を示し、レコードのキー順に増/減して動きます。カーソルはアプリケーションからカーソル範囲内の全レコードに非同期に処理できるようにします。
+**`IDBCursor`** は [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) のインターフェイスで、複数レコードを走査したり繰り返し処理をしたりするための[カーソル](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#%E3%82%AB%E3%83%BC%E3%82%BD%E3%83%AB)です。
+
+このカーソルはどのインデックスやオブジェクトをループしているかを示す情報源です。これは範囲内の位置を示し、レコードのキー順に増減して動きます。カーソルにより、アプリケーションからカーソル範囲内の全レコードに非同期に処理できます。
 
 一度に無制限の数のカーソルを持つことができます。あるカーソルを表す同一の `IDBCursor` オブジェクトを取得できます。操作はインデックスやオブジェクトストアに対して実行されます。
 
-{{AvailableInWorkers}}
-
 ## インスタンスプロパティ
 
-- {{domxref("IDBCursor.source")}} {{readonlyInline}}
+> **メモ:** {{domxref("IDBCursorWithValue")}} は **`IDBCursor`** インターフェイスに **`value`** プロパティを追加したものです。
+
+- {{domxref("IDBCursor.source")}} {{ReadOnlyInline}}
   - : カーソルが繰り返している{{domxref("IDBObjectStore")}} か {{domxref("IDBIndex")}} を返します。この関数は、カーソルが現在繰り返されていたり、繰り返しが終わりを過ぎたり、トランザクションがアクティブでなくても、`null` や例外を返しません。
-- {{domxref("IDBCursor.direction")}} {{readonlyInline}}
-  - : カーソルの横断の向きを返します。取りうる値については[定数](/ja/docs/Web/API/IDBCursor#%E5%AE%9A%E6%95%B0)を見てください。
-- {{domxref("IDBCursor.key")}} {{readonlyInline}}
+- {{domxref("IDBCursor.direction")}} {{ReadOnlyInline}}
+  - : カーソルの走査の移動方向を返します。
+- {{domxref("IDBCursor.key")}} {{ReadOnlyInline}}
   - : カーソル位置のレコードのキーを返します。カーソルが範囲外の場合、`undefined` にセットされます。カーソルキーはあらゆるデータ型となりえます。
-- {{domxref("IDBCursor.value")}} {{readonlyInline}}
-  - : カーソル位置のレコードの値を返します。カーソルの値はあらゆるデータ型となりえます。
-- {{domxref("IDBCursor.primaryKey")}} {{readonlyInline}}
+- {{domxref("IDBCursor.primaryKey")}} {{ReadOnlyInline}}
   - : カーソルの現在有効な主キーを返します。カーソルが現在繰り返されていたり範囲外で繰り返されていた場合、これは `undefined` にセットされます。カーソルの主キーはあらゆるデータ型となりえます。
+- {{domxref("IDBCursor.request")}} {{ReadOnlyInline}}
+  - : カーソルを使用した {{domxref("IDBRequest")}} を返します。
 
 ## インスタンスメソッド
 
@@ -41,9 +45,10 @@ slug: Web/API/IDBCursor
 
 ## 定数
 
-{{ deprecated_header(13) }}
+{{Deprecated_Header}}
 
-> **警告:** これらの定数は利用できません。Gecko 25 で削除されました。代わりに文字列定数を直接使う必要があります。({{ bug(891944) }})
+> [!WARNING]
+> これらの定数は利用できません。Gecko 25 で削除されました。代わりに文字列定数を直接使う必要があります。([Firefox バグ 891944](https://bugzil.la/891944))
 
 - `NEXT`: `"next"` : カーソルは重複を含む全てのレコードを提示します。キーの範囲の下限から開始し、上方向に動きます。(キーの順番に単調増加します)
 - `NEXTUNIQUE` : `"nextunique"` : カーソルは重複を除いた全てのレコードを提示します。同じキーを持つ複数のレコードが存在する場合、走査の順で最初のレコードのみを取得できます。キーの範囲の下限から開始し、上方向に動きます。
@@ -56,19 +61,19 @@ slug: Web/API/IDBCursor
 
 ```js
 function displayData() {
-  var transaction = db.transaction(['rushAlbumList'], "readonly");
-  var objectStore = transaction.objectStore('rushAlbumList');
+  const transaction = db.transaction(["rushAlbumList"], "readonly");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
-  objectStore.openCursor().onsuccess = function(event) {
-    var cursor = event.target.result;
-    if(cursor) {
-      var listItem = document.createElement('li');
-      listItem.innerHTML = cursor.value.albumTitle + ', ' + cursor.value.year;
+  objectStore.openCursor().onsuccess = (event) => {
+    const cursor = event.target.result;
+    if (cursor) {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
 
       cursor.continue();
     } else {
-      console.log('全エントリーを表示しました。');
+      console.log("項目をすべて表示しました。");
     }
   };
 }
@@ -80,14 +85,13 @@ function displayData() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.IDBCursor")}}
+{{Compat}}
 
 ## 関連情報
 
 - [IndexedDB を使用する](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションを開始する : {{domxref("IDBDatabase")}}
-- トランザクションを使用する : {{domxref("IDBTransaction")}}
-- キーの範囲をセットする : {{domxref("IDBKeyRange")}}
-- データを取得、変更する : {{domxref("IDBObjectStore")}}
-- カーソルを使用する : {{domxref("IDBCursor")}}
-- リファレンスの例 : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- トランザクションの開始: {{domxref("IDBDatabase")}}
+- トランザクションの使用: {{domxref("IDBTransaction")}}
+- キーの範囲の設定: {{domxref("IDBKeyRange")}}
+- データを取得・変更: {{domxref("IDBObjectStore")}}
+- 参考例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))

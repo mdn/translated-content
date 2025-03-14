@@ -1,43 +1,47 @@
 ---
-title: WebGLRenderingContext.compileShader()
+title: "WebGLRenderingContext: compileShader() メソッド"
+short-title: compileShader()
 slug: Web/API/WebGLRenderingContext/compileShader
+l10n:
+  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
 {{APIRef("WebGL")}}
 
-[WebGL API](/ja/docs/Web/API/WebGL_API) の **WebGLRenderingContext.compileShader()** メソッドは、GLSL シェーダーをバイナリへコンパイルします。これは {{domxref("WebGLProgram")}} に使用することができます。
+**WebGLRenderingContext.compileShader()** は [WebGL API](/ja/docs/Web/API/WebGL_API) のメソッドで、 GLSL シェーダーをバイナリーへコンパイルします。これは {{domxref("WebGLProgram")}} で使用することができます。
 
 ## 構文
 
-```
-void gl.compileShader(shader);
+```js-nolint
+compileShader(shader)
 ```
 
 ### 引数
 
 - `shader`
-  - : フラグメントか頂点の {{domxref("WebGLShader")}}。
+  - : フラグメントまたは頂点の {{domxref("WebGLShader")}}。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
 ```js
-var shader = gl.createShader(gl.VERTEX_SHADER);
+const shader = gl.createShader(gl.VERTEX_SHADER);
 gl.shaderSource(shader, shaderSource);
 gl.compileShader(shader);
 ```
 
-## 仕様策定状況
+## 仕様書
 
-| 仕様                                                                                             | 策定状況                             | コメント                  |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------- |
-| {{SpecName('WebGL', "#5.14.9", "compileShader")}}                                 | {{Spec2('WebGL')}}             | 初回定義。                |
-| {{SpecName('OpenGL ES 2.0', "glCompileShader.xml", "glCompileShader")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL マニュアルページ。 |
+{{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
-{{Compat("api.WebGLRenderingContext.compileShader")}}
+{{Compat}}
 
-## 関連項目
+## 関連情報
 
 - {{domxref("WebGLProgram")}}
 - {{domxref("WebGLShader")}}

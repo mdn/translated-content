@@ -1,16 +1,18 @@
 ---
-title: CanvasRenderingContext2D.bezierCurveTo()
+title: CanvasRenderingContext2D：bezierCurveTo() 方法
 slug: Web/API/CanvasRenderingContext2D/bezierCurveTo
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.bezierCurveTo()`** 是 Canvas 2D API 绘制三次贝赛尔曲线路径的方法。该方法需要三个点。第一、第二个点是控制点，第三个点是结束点。起始点是当前路径的最后一个点，绘制贝赛尔曲线前，可以通过调用 `moveTo()` 进行修改。
+Canvas 2D API 的 **`CanvasRenderingContext2D.bezierCurveTo()`** 方法用于将三次[贝赛尔曲线](/zh-CN/docs/Glossary/Bezier_curve)添加到当前子路径中。该方法需要三个点：前两个点是控制点，第三个点是结束点。起始点是当前路径的最后一个点，绘制贝赛尔曲线前，可以通过调用 {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} 进行修改。
 
 ## 语法
 
-```
-void ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
+```js-nolint
+bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
 ```
 
 ### 参数
@@ -28,11 +30,15 @@ void ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
 - `y`
   - : 结束点的 y 轴坐标。
 
+### 返回值
+
+无（{{jsxref("undefined")}}）。
+
 ## 示例
 
-### 使用 `bezierCurveTo` 方法
+### 如何使用 bezierCurveTo 方法
 
-这是一段绘制贝赛尔曲线的简单的代码片段。控制点是红色的，开始和结束点是蓝色的。
+此示例展示了如何绘制三次贝塞尔曲线。
 
 #### HTML
 
@@ -43,74 +49,72 @@ void ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+// 定义画布和上下文
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
+// 定义点的坐标 {x, y}
+let start = { x: 50, y: 20 };
+let cp1 = { x: 230, y: 30 };
+let cp2 = { x: 150, y: 80 };
+let end = { x: 250, y: 100 };
+
+// 三次贝塞尔曲线
 ctx.beginPath();
-ctx.moveTo(50,20);
-ctx.bezierCurveTo(230, 30, 150, 60, 50, 100);
+ctx.moveTo(start.x, start.y);
+ctx.bezierCurveTo(cp1.x, cp1.y, cp2.x, cp2.y, end.x, end.y);
 ctx.stroke();
 
-ctx.fillStyle = 'blue';
-// start point
-ctx.fillRect(50, 20, 10, 10);
-// end point
-ctx.fillRect(50, 100, 10, 10);
-
-ctx.fillStyle = 'red';
-// control point one
-ctx.fillRect(230, 30, 10, 10);
-// control point two
-ctx.fillRect(150, 70, 10, 10);
-```
-
-{{ EmbedLiveSample('使用_bezierCurveTo_方法', 315, 165) }}
-
-### 尝试 `bezierCurveTo` 参数
-
-修改下面的代码并在线查看 canvas 的变化：
-
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
+// 起点和终点
+ctx.fillStyle = "blue";
 ctx.beginPath();
-ctx.bezierCurveTo(50, 100, 180, 10, 20, 10);
-ctx.stroke();</textarea>
+ctx.arc(start.x, start.y, 5, 0, 2 * Math.PI); // 起点
+ctx.arc(end.x, end.y, 5, 0, 2 * Math.PI); // 终点
+ctx.fill();
+
+// 控制点
+ctx.fillStyle = "red";
+ctx.beginPath();
+ctx.arc(cp1.x, cp1.y, 5, 0, 2 * Math.PI); // 控制点一
+ctx.arc(cp2.x, cp2.y, 5, 0, 2 * Math.PI); // 控制点二
+ctx.fill();
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+#### 结果
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
+在这个例子中，控制点是红色的，起点和终点是蓝色的。
 
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
+{{ EmbedLiveSample('如何使用_bezierCurveTo_方法', 315, 165) }}
 
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
+### 简单的贝塞尔曲线
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+此示例使用 `bezierCurveTo()` 绘制了一条简单的贝塞尔曲线。
+
+#### HTML
+
+```html
+<canvas id="canvas"></canvas>
 ```
 
-{{ EmbedLiveSample('尝试_bezierCurveTo_参数', 700, 360) }}
+#### JavaScript
 
-## 规范描述
+曲线从指定的起点开始，使用 `moveTo()` 方法：(30, 30)。第一个控制点位于 (120, 160)，第二个控制点位于 (180, 10)。曲线在 (220, 140) 结束。
+
+```js
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+ctx.beginPath();
+ctx.moveTo(30, 30);
+ctx.bezierCurveTo(120, 160, 180, 10, 220, 140);
+ctx.stroke();
+```
+
+#### 结果
+
+{{ EmbedLiveSample('简单的贝塞尔曲线', 700, 180) }}
+
+## 规范
 
 {{Specifications}}
 
@@ -120,5 +124,5 @@ window.addEventListener("load", drawCanvas);
 
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}
-- [维基百科关于贝赛尔曲线](http://en.wikipedia.org/wiki/B%C3%A9zier_curve)。
+- 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}
+- [贝赛尔曲线](/zh-CN/docs/Glossary/Bezier_curve)

@@ -7,11 +7,33 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 **`slice()`** 方法會回傳一個新陣列物件，為原陣列選擇之 `begin` 至 `end`（不含 `end`）部分的淺拷貝（shallow copy）。而原本的陣列將不會被修改。
 
-{{EmbedInteractiveExample("pages/js/array-slice.html")}}
+{{InteractiveExample("JavaScript Demo: Array.slice()")}}
+
+```js interactive-example
+const animals = ["ant", "bison", "camel", "duck", "elephant"];
+
+console.log(animals.slice(2));
+// Expected output: Array ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4));
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice(1, 5));
+// Expected output: Array ["bison", "camel", "duck", "elephant"]
+
+console.log(animals.slice(-2));
+// Expected output: Array ["duck", "elephant"]
+
+console.log(animals.slice(2, -1));
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice());
+// Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
+```
 
 ## 語法
 
-```plain
+```js-nolint
 arr.slice([begin[, end]])
 ```
 
@@ -40,7 +62,7 @@ arr.slice([begin[, end]])
 ### Return a portion of an existing array
 
 ```js
-var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 var citrus = fruits.slice(1, 3);
 
 // fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
@@ -53,24 +75,24 @@ In the following example, `slice` creates a new array, `newCar`, from `myCar`. B
 
 ```js
 // Using slice, create newCar from myCar.
-var myHonda = { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } };
-var myCar = [myHonda, 2, 'cherry condition', 'purchased 1997'];
+var myHonda = { color: "red", wheels: 4, engine: { cylinders: 4, size: 2.2 } };
+var myCar = [myHonda, 2, "cherry condition", "purchased 1997"];
 var newCar = myCar.slice(0, 2);
 
 // Display the values of myCar, newCar, and the color of myHonda
 //  referenced from both arrays.
-console.log('myCar = ' + JSON.stringify(myCar));
-console.log('newCar = ' + JSON.stringify(newCar));
-console.log('myCar[0].color = ' + myCar[0].color);
-console.log('newCar[0].color = ' + newCar[0].color);
+console.log("myCar = " + JSON.stringify(myCar));
+console.log("newCar = " + JSON.stringify(newCar));
+console.log("myCar[0].color = " + myCar[0].color);
+console.log("newCar[0].color = " + newCar[0].color);
 
 // Change the color of myHonda.
-myHonda.color = 'purple';
-console.log('The new color of my Honda is ' + myHonda.color);
+myHonda.color = "purple";
+console.log("The new color of my Honda is " + myHonda.color);
 
 // Display the color of myHonda referenced from both arrays.
-console.log('myCar[0].color = ' + myCar[0].color);
-console.log('newCar[0].color = ' + newCar[0].color);
+console.log("myCar[0].color = " + myCar[0].color);
+console.log("newCar[0].color = " + newCar[0].color);
 ```
 
 This script writes:
@@ -113,7 +135,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
 ## Streamlining cross-browser behavior
 
-Although host objects (such as DOM objects) are not required by spec to follow the Mozilla behavior when converted by `Array.prototype.slice` and IE < 9 does not do so, versions of IE starting with version 9 do allow this. “Shimming” it can allow reliable cross-browser behavior. As long as other modern browsers continue to support this ability, as currently do IE, Mozilla, Chrome, Safari, and Opera, developers reading (DOM-supporting) slice code relying on this shim will not be misled by the semantics; they can safely rely on the semantics to provide the now apparently _de facto_ standard behavior. (The shim also fixes IE to work with the second argument of `slice()` being an explicit {{jsxref("null")}}/{{jsxref("undefined")}} value as earlier versions of IE also did not allow but all modern browsers, including IE >= 9, now do.)
+Although host objects (such as DOM objects) are not required by spec to follow the Mozilla behavior when converted by `Array.prototype.slice` and IE < 9 does not do so, versions of IE starting with version 9 do allow this. 「Shimming」 it can allow reliable cross-browser behavior. As long as other modern browsers continue to support this ability, as currently do IE, Mozilla, Chrome, Safari, and Opera, developers reading (DOM-supporting) slice code relying on this shim will not be misled by the semantics; they can safely rely on the semantics to provide the now apparently _de facto_ standard behavior. (The shim also fixes IE to work with the second argument of `slice()` being an explicit {{jsxref("null")}}/{{jsxref("undefined")}} value as earlier versions of IE also did not allow but all modern browsers, including IE >= 9, now do.)
 
 ```js
 /**
@@ -126,36 +148,39 @@ Although host objects (such as DOM objects) are not required by spec to follow t
  * called on other DOM objects.
  */
 (function () {
-  'use strict';
+  "use strict";
   var _slice = Array.prototype.slice;
 
   try {
     // Can't be used with DOM elements in IE < 9
     _slice.call(document.documentElement);
-  } catch (e) { // Fails in IE < 9
+  } catch (e) {
+    // Fails in IE < 9
     // This will work for genuine arrays, array-like objects,
     // NamedNodeMap (attributes, entities, notations),
     // NodeList (e.g., getElementsByTagName), HTMLCollection (e.g., childNodes),
     // and will not fail on other DOM objects (as do DOM elements in IE < 9)
-    Array.prototype.slice = function(begin, end) {
+    Array.prototype.slice = function (begin, end) {
       // IE < 9 gets unhappy with an undefined end argument
-      end = (typeof end !== 'undefined') ? end : this.length;
+      end = typeof end !== "undefined" ? end : this.length;
 
       // For native Array objects, we use the native slice function
-      if (Object.prototype.toString.call(this) === '[object Array]'){
+      if (Object.prototype.toString.call(this) === "[object Array]") {
         return _slice.call(this, begin, end);
       }
 
       // For array like object we handle it ourselves.
-      var i, cloned = [],
-        size, len = this.length;
+      var i,
+        cloned = [],
+        size,
+        len = this.length;
 
       // Handle negative value for "begin"
       var start = begin || 0;
-      start = (start >= 0) ? start : Math.max(0, len + start);
+      start = start >= 0 ? start : Math.max(0, len + start);
 
       // Handle negative value for "end"
-      var upTo = (typeof end == 'number') ? Math.min(end, len) : len;
+      var upTo = typeof end == "number" ? Math.min(end, len) : len;
       if (end < 0) {
         upTo = len + end;
       }
@@ -179,7 +204,7 @@ Although host objects (such as DOM objects) are not required by spec to follow t
       return cloned;
     };
   }
-}());
+})();
 ```
 
 ## 規範

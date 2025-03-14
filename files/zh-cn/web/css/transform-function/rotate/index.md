@@ -1,12 +1,39 @@
 ---
 title: rotate()
 slug: Web/CSS/transform-function/rotate
-original_slug: Web/CSS/transform-function/rotate()
 ---
 
 {{CSSRef}}
 
 CSS 的 **`rotate()`** 函数定义了一种将元素围绕一个定点（由{{ Cssxref("transform-origin") }}属性指定）旋转而不变形的转换。指定的角度定义了旋转的量度。若角度为正，则顺时针方向旋转，否则逆时针方向旋转。旋转 180° 也被称为点反射。
+
+{{InteractiveExample("CSS Demo: rotate()")}}
+
+```css interactive-example-choice
+transform: rotate(0);
+```
+
+```css interactive-example-choice
+transform: rotate(90deg);
+```
+
+```css interactive-example-choice
+transform: rotate(-0.25turn);
+```
+
+```css interactive-example-choice
+transform: rotate(3.142rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 元素旋转的固定点 - 如上所述 - 也称为**变换原点**。这默认为元素的中心，但你可以使用{{ cssxref("transform-origin") }}属性设置自己的自定义变换原点。
 
@@ -14,7 +41,7 @@ CSS 的 **`rotate()`** 函数定义了一种将元素围绕一个定点（由{{ 
 
 {{cssxref("&lt;angle&gt;")}} 指定了 `rotate()` 的旋转程度。参数为正时，顺时针旋转；参数为负时，逆时针旋转。180° 旋转称为*点反演*。
 
-```
+```css
 rotate(a)
 ```
 

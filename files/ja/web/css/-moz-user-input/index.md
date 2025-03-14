@@ -1,17 +1,24 @@
 ---
-title: '-moz-user-input'
+title: -moz-user-input
 slug: Web/CSS/-moz-user-input
+l10n:
+  sourceCommit: 016ea3d6160143ec4a05d12be1bff9cad594f0e5
 ---
 
 {{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-Mozilla アプリケーションでは、 **`-moz-user-input`** はある要素がユーザの入力を受け付けるかどうかを決定します。
+Mozilla アプリケーションでは、 **`-moz-user-input`** はある要素がユーザーの入力を受け付けるかどうかを決定します。
+
+Firefox 60 以降、このプロパティでは、通常はユーザー入力を受け入れられない要素に、ユーザー入力を受け入れられるようにすることはできなくなりました。ユーザー入力を無効にする場合のみ、このプロパティを使用することができます。
+
+> **メモ:** `-moz-user-input` は、 CSS 3 の {{cssxref("user-input")}} プロパティの先行実装案の一つでしたが、これはまだ（実装を呼びかける）勧告候補に達していません。類似のプロパティ `user-focus` が [CSS3 UI 仕様の前身であった初期の草稿](https://www.w3.org/TR/2000/WD-css3-userint-20000216) で提案されましたが、作業グループによって却下されました。
+
+## 構文
 
 ```css
 /* キーワード値 */
+-moz-user-input: auto;
 -moz-user-input: none;
--moz-user-input: enabled;
--moz-user-input: disabled;
 
 /* グローバル値 */
 -moz-user-input: inherit;
@@ -19,20 +26,12 @@ Mozilla アプリケーションでは、 **`-moz-user-input`** はある要素�
 -moz-user-input: unset;
 ```
 
-{{HTMLElement("textarea")}} のようなユーザーからの入力を通常受け付ける要素では `-moz-user-input` の初期値は `enabled` です。
-
-> **メモ:** `-moz-user-input` は、 CSS 3 の {{cssxref("user-input")}} プロパティの先行実装案の一つでしたが、これはまだ (実装を要求する) 勧告候補に達していません。類似のプロパティ `user-focus` が [CSS3 UI 仕様の前身であった初期の草稿](https://www.w3.org/TR/2000/WD-css3-userint-20000216) で提案されましたが、作業グループによって却下されました。
-
-## 構文
-
 ### 値
 
-- none
-  - : 要素はユーザーからの入力に反応せず {{CSSxRef(":active")}} にならない。
-- enabled
-  - : 要素はユーザーからの入力を受け付ける。テキストボックスではこれが標準の動作。**この値は Firefox 60 以降は対応していませんので注意してください ({{bug(1405087)}})。**
-- disabled
-  - : 要素はユーザーからの入力を受け付けない。しかし、これは `disabled` を true にするのとは等しくなく、要素は普通に (無効にならずに) 描画される。**この値は Firefox 60 以降は対応していませんので注意してください ({{bug(1405087)}})。**
+- `auto`
+  - : {{HTMLElement("textarea")}} のように、通常ユーザー入力を受け付ける要素は、ユーザー入力に応答します。
+- `none`
+  - : 要素はユーザーからの入力に反応せず {{CSSxRef(":active")}} になりません。
 
 ## 公式定義
 
@@ -40,7 +39,10 @@ Mozilla アプリケーションでは、 **`-moz-user-input`** はある要素�
 
 ## 形式文法
 
-{{CSSSyntax}}
+```plain
+-moz-user-input =
+  auto | none
+```
 
 ## 例
 
@@ -49,7 +51,7 @@ Mozilla アプリケーションでは、 **`-moz-user-input`** はある要素�
 ```css
 input.example {
   /* ユーザーはテキストの選択はできますが変更はできません。 */
-  -moz-user-input: disabled;
+  -moz-user-input: none;
 }
 ```
 

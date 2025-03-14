@@ -2,20 +2,30 @@
 title: Symbol.matchAll
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 ---
+
 {{JSRef}}
 
 O símbolo **`Symbol.matchAll`** é conhecido por retornar um iterador, que produz conrrespondências de uma expressão regular com uma string. Essa função é usada pelo método {{jsxref("String.prototype.matchAll()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-matchall.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Symbol.matchAll", "shorter")}}
+
+```js interactive-example
+const re = /[0-9]+/g;
+const str = "2016-01-02|2019-03-07";
+const result = re[Symbol.matchAll](str);
+
+console.log(Array.from(result, (x) => x[0]));
+// Expected output: Array ["2016", "01", "02", "2019", "03", "07"]
+```
 
 ## Descrição
 
 Esse símbolo é usado pelo {{jsxref("String.prototype.matchAll()")}} e especificado no {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}. Os próximos dois exemplos retornam o mesmo resultado:
 
 ```js
-'abc'.matchAll(/a/);
+"abc".matchAll(/a/);
 
-/a/[Symbol.matchAll]('abc');
+/a/[Symbol.matchAll]("abc");
 ```
 
 Esse método existe para costumizar o comportamento conrrespondente com as subclasses {{jsxref("RegExp")}}.
@@ -28,13 +38,12 @@ Esse método existe para costumizar o comportamento conrrespondente com as subcl
 
 ```js
 let re = /[0-9]+/g;
-let str = '2016-01-02|2019-03-07';
+let str = "2016-01-02|2019-03-07";
 
 const numbers = {
-  *[Symbol.matchAll] (str) {
-    for (const n of str.matchAll(/[0-9]+/g))
-      yield n[0];
-  }
+  *[Symbol.matchAll](str) {
+    for (const n of str.matchAll(/[0-9]+/g)) yield n[0];
+  },
 };
 
 console.log(Array.from(str.matchAll(numbers)));
@@ -45,13 +54,11 @@ Veja {{jsxref("String.prototype.matchAll()")}} e {{jsxref("RegExp.@@matchAll", "
 
 ## Especificações
 
-| Especificação                                                                            |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-symbol.matchall', 'Symbol.matchAll')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.matchAll")}}
+{{Compat}}
 
 ## Veja também
 

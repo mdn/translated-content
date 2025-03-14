@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/yield*
 
 {{jsSidebar("Operators")}}
 
-A **expressão** **`yield*`** é usada para delegar para outro objeto {{jsxref("Statements/function*", "generator")}} ou iterable.
+A **expressão `yield*`** é usada para delegar para outro objeto {{jsxref("Statements/function*", "generator")}} ou iterable.
 
 ## Sintaxe
 
@@ -58,7 +58,7 @@ Além de objetos generator, `yield*` também podem `yield` outros tipos de objet
 ```js
 function* g3() {
   yield* [1, 2];
-  yield* '34';
+  yield* "34";
   yield* Array.from(arguments);
 }
 
@@ -80,7 +80,7 @@ console.log(iterator.next()); // {value: undefined, done: true}
 ```js
 function* g4() {
   yield* [1, 2, 3];
-  return 'foo';
+  return "foo";
 }
 
 var result;
@@ -95,25 +95,22 @@ console.log(iterator.next()); // {value: 1, done: false}
 console.log(iterator.next()); // {value: 2, done: false}
 console.log(iterator.next()); // {value: 3, done: false}
 console.log(iterator.next()); // {value: undefined, done: true},
-                              // g4() returned {value: 'foo', done: true} nesse ponto
+// g4() returned {value: 'foo', done: true} nesse ponto
 
-console.log(result);          // "foo"
+console.log(result); // "foo"
 ```
 
 ## Especificações
 
-| Especificação                                    | Situação                     | Comentário         |
-| ------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#', 'Yield')}} | {{Spec2('ES2015')}}     | Definição inicial. |
-| {{SpecName('ESDraft', '#', 'Yield')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.yield_star")}}
+{{Compat}}
 
 ## Notas específicas do Firefox
 
-- A partir do Gecko 33 {{geckoRelease(33)}}, o tratamento da expressão yield foi atualizado para se conformar com a espeficação do ES2015 ({{bug(981599)}}):
+- A partir do Gecko 33, o tratamento da expressão yield foi atualizado para se conformar com a espeficação do ES2015 ([Erro do Firefox 981599](https://bugzil.la/981599)):
 
   - A restrição de linha finalizadora agora está implementada. Nenhuma linha finalizadora entre "yield" e "\*" é permitida. Código como o a seguir irá invocar uma exception {{jsxref("SyntaxError")}}:
 
@@ -126,7 +123,7 @@ console.log(result);          // "foo"
 
 ## Veja também
 
-- [O protocolo Iterator](/pt-BR/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [O protocolo Iterator](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield", "yield")}}

@@ -1,31 +1,43 @@
 ---
-title: 指數運算子 (**)
+title: 指數運算子（**）
 slug: Web/JavaScript/Reference/Operators/Exponentiation
 ---
 
 {{jsSidebar("Operators")}}
 
-指數運算子 (`**`) 會回傳以第一個數字作為底數；第二個數字做為指數的運算結果。
+指數運算子（`**`）會回傳以第一個數字作為底數；第二個數字做為指數的運算結果。
 
-它類同於 `Math.pow`，不一樣的是 `**` 可以用於 BigInts 的計算而 `Math.pow` 不行。
+它類同於 `Math.pow`，不一樣的是 `**` 可以用於 BigInt 的計算而 `Math.pow` 不行。
 
-{{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation operator")}}
+
+```js interactive-example
+console.log(3 ** 4);
+// Expected output: 81
+
+console.log(10 ** -2);
+// Expected output: 0.01
+
+console.log(2 ** (3 ** 2));
+// Expected output: 512
+
+console.log((2 ** 3) ** 2);
+// Expected output: 64
+```
 
 ## 語法
 
-```js
+```js-nolint
 x ** y
 ```
 
 ## 簡介
 
-指數運算子是 right-associative：
-`a ** b ** c` 相當於
-`a ** (b ** c)`.
+指數運算子是 right-associative：`a ** b ** c` 相當於 `a ** (b ** c)`。
 
 在絕大多數的程式語言，例如 PHP、Python……等等，指數運算的優先順序比一元運算子（ `+` 或 `-` ）較高。但並非所有程式語言均是如此。
 
-舉例來說，在 Bash， `**` 的優先順序就低於一元運算子。
+舉例來說，在 Bash，`**` 的優先順序就低於一元運算子。
 
 在 Javascript，模棱兩可的求冪運算式。說得清楚一點，`+/-/~/!/delete/void/typeof` 這類一元運算子均不能置於底數之前，否則會出現 `SyntaxError`。
 
@@ -45,19 +57,19 @@ x ** y
 ### 指數的基本運算
 
 ```js
-2 ** 3   // 8
-3 ** 2   // 9
-3 ** 2.5 // 15.588457268119896
-10 ** -1 // 0.1
-NaN ** 2 // NaN
+2 ** 3; // 8
+3 ** 2; // 9
+3 ** 2.5; // 15.588457268119896
+10 ** -1; // 0.1
+NaN ** 2; // NaN
 ```
 
 ### 連續使用
 
 ```js
-2 ** 3 ** 2   // 512
-2 ** (3 ** 2) // 512
-(2 ** 3) ** 2 // 64
+2 ** (3 ** 2); // 512
+2 ** (3 ** 2); // 512
+(2 ** 3) ** 2; // 64
 ```
 
 ### 與一元運算子一同使用
@@ -65,13 +77,13 @@ NaN ** 2 // NaN
 反轉指數運算結果之正負：
 
 ```js
--(2 ** 2) // -4
+-(2 ** 2); // -4
 ```
 
 計算底數為負數的指數運算：
 
 ```js
-(-2) ** 2 // 4
+(-2) ** 2; // 4
 ```
 
 ## 規範

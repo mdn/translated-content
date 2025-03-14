@@ -1,25 +1,35 @@
 ---
 title: Reflect.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 ---
 
 {{JSRef}}
 
 **`Reflect.deleteProperty()`** 정적 메서드는 속성을 제거할 수 있습니다. [`delete` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/delete)의 함수판이라고 할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/reflect-deleteproperty.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Reflect.deleteProperty()", "taller")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+Reflect.deleteProperty(object1, "property1");
+
+console.log(object1.property1);
+// Expected output: undefined
+
+const array1 = [1, 2, 3, 4, 5];
+Reflect.deleteProperty(array1, "3");
+
+console.log(array1);
+// Expected output: Array [1, 2, 3, undefined, 5]
+```
 
 ## 구문
 
 ```js
-Reflect.deleteProperty(target, propertyKey)
+Reflect.deleteProperty(target, propertyKey);
 ```
 
 ### 매개변수
@@ -47,18 +57,18 @@ Reflect.deleteProperty(target, propertyKey)
 
 ```js
 var obj = { x: 1, y: 2 };
-Reflect.deleteProperty(obj, 'x'); // true
+Reflect.deleteProperty(obj, "x"); // true
 obj; // { y: 2 }
 
 var arr = [1, 2, 3, 4, 5];
-Reflect.deleteProperty(arr, '3'); // true
+Reflect.deleteProperty(arr, "3"); // true
 arr; // [1, 2, 3, , 5]
 
 // 주어진 속성이 존재하지 않으면 true 반환
-Reflect.deleteProperty({}, 'foo'); // true
+Reflect.deleteProperty({}, "foo"); // true
 
 // 주어진 속성이 설정 불가능하면 false 반환
-Reflect.deleteProperty(Object.freeze({foo: 1}), 'foo'); // false
+Reflect.deleteProperty(Object.freeze({ foo: 1 }), "foo"); // false
 ```
 
 ## 명세

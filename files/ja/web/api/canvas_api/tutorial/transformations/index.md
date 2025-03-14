@@ -1,10 +1,11 @@
 ---
 title: 座標変換
 slug: Web/API/Canvas_API/Tutorial/Transformations
-original_slug: Web/Guide/HTML/Canvas_tutorial/Transformations
+l10n:
+  sourceCommit: 6ecd7270275030fac931e168d987d209b7237351
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
 
 これまでのチュートリアルで、[キャンバスのグリッド](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)や**座標空間**について学びました。今までは既定のグリッドしか使用しておらず、また必要に応じてキャンバス全体のサイズを変更していました。座標変換 (transformations) には、原点を別の場所に移したり、回転したり、拡大縮小したりといった、より強力な手段があります。
 
@@ -19,36 +20,52 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Transformations
 
 キャンバスの状態は、スタックに保存されます。 `save()` メソッドを呼び出すたびに、現在の描画状態をスタックにプッシュします。描画状態は以下の情報で構成されます。
 
-- 適用された座標変換操作 (すなわち、後述する `translate`、`rotate`、`scale`)。
-- {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}、{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}、{{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}、{{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}、{{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}、{{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}、{{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}、{{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}、{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}、{{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}、{{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}、{{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}、{{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}、{{domxref("CanvasRenderingContext2D.font", "font")}}、{{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}、{{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}、{{domxref("CanvasRenderingContext2D.direction", "direction")}}、{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} 属性の現在の値。
-- 現在の[クリッピングパス](/ja/docs/Web/API/Canvas_API/Tutorial/Compositing#Clipping_paths)。これは次の章で説明します。
+- 適用される座標変換（すなわち、後述する `translate`、`rotate`、`scale`）。
+- 以下の属性の現在の値。
+  - {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}
+  - {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}
+  - {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}
+  - {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}
+  - {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}
+  - {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}
+  - {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}
+  - {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}
+  - {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}
+  - {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}
+  - {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}
+  - {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}
+  - {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}
+  - {{domxref("CanvasRenderingContext2D.font", "font")}}
+  - {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}
+  - {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}
+  - {{domxref("CanvasRenderingContext2D.direction", "direction")}}
+  - {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.
+- 現在の[クリッピングパス](/ja/docs/Web/API/Canvas_API/Tutorial/Compositing#クリッピングパス)。これは次の章で説明します。
 
 `save()` メソッドは、何回でも呼び出すことができます。`restore()` メソッドを呼び出すたびに、最後に保存された状態をスタックからポップして、すべての保存済み設定を復元します。
 
 ### `save` および `restore` の例
 
-この例は、連続した一連の矩形を描画するときに、描画状態のスタックがどのように機能するかを示します。
-
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById("canvas").getContext("2d");
 
-  ctx.fillRect(0, 0, 150, 150);   // 既定の設定で矩形を描画
-  ctx.save();                  // 既定の状態を保存
+  ctx.fillRect(0, 0, 150, 150); // 既定の設定で黒い長方形を描画
+  ctx.save(); // 当初の既定の状態を保存
 
-  ctx.fillStyle = '#09F';      // 設定変更
-  ctx.fillRect(15, 15, 120, 120); // 新たな設定で矩形を描画
+  ctx.fillStyle = "#09F"; // 保存した設定を変更
+  ctx.fillRect(15, 15, 120, 120); // 新たな設定で青い長方形を描画
+  ctx.save(); // 現在の状態を保存
 
-  ctx.save();                  // 現在の状態を保存
-  ctx.fillStyle = '#FFF';      // 設定変更
+  ctx.fillStyle = "#FFF"; // 保存した設定を変更
   ctx.globalAlpha = 0.5;
-  ctx.fillRect(30, 30, 90, 90);   // 新たな設定で矩形を描画
+  ctx.fillRect(30, 30, 90, 90); // 新たな設定で 50% 白の長方形を描画
 
-  ctx.restore();               // 以前の状態を復元
-  ctx.fillRect(45, 45, 60, 60);   // 復元した設定で矩形を描画
+  ctx.restore(); // 以前の状態を復元
+  ctx.fillRect(45, 45, 60, 60); // 復元した青の設定で長方形を描画
 
-  ctx.restore();               // 以前の状態を復元
-  ctx.fillRect(60, 60, 30, 30);   // 復元した設定で矩形を描画
+  ctx.restore(); // 以前の状態を復元
+  ctx.fillRect(60, 60, 30, 30); // 復元した黒の設定で長方形を描画
 }
 ```
 
@@ -60,13 +77,13 @@ function draw() {
 draw();
 ```
 
-最初のステップで、大きな矩形を既定の設定で描きます。次にこの状態を保存して、塗りつぶし色を変更します。そして、 2 番目のやや小さい青色の矩形を描いて、状態を保存します。もう一度描画設定を変更して、 3 番目の半透明な白色の矩形を描きます。
+最初のステップで、大きな長方形を既定の設定で描きます。次にこの状態を保存して、塗りつぶし色を変更します。そして、 2 番目のやや小さい青色の長方形を描いて、状態を保存します。もう一度描画設定を変更して、 3 番目の半透明な白色の長方形を描きます。
 
 ここまでは、これまでの章で行ってきたことによく似ています。しかし最初に `restore()` 文を呼び出したとき、スタックの先頭の描画状態が削除されて、その設定が復元されます。`save()` を使用して状態を保存しなければ、前の状態に戻すために塗りつぶし色や透過性を手動で変更しなければなりません。ここではプロパティが 2 つであり容易ですが、プロパティが多ければコードが一気にとても長くなります。
 
-2 番目の `restore()` 文を呼び出すと、元の状態（1 番目の `save` を呼び出す前に設定した状態）を復元して、最後の矩形を再び黒色で描きます。
+2 番目の `restore()` 文を呼び出すと、元の状態（1 番目の `save` を呼び出す前に設定した状態）を復元して、最後の長方形を再び黒色で描きます。
 
-{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "canvas_savestate.png")}}
+{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "", "160")}}
 
 ## 移動
 
@@ -75,23 +92,23 @@ draw();
 - {{domxref("CanvasRenderingContext2D.translate", "translate(x, y)")}}
   - : キャンバスやその原点をグリッド上で移動します。`x` は水平方向の移動距離、`y` はグリッドを垂直方向の移動距離を示します。
 
-![](canvas_grid_translate.png)
+![キャンバスはグリッド上の元点から水平方向に `x` 単位、垂直方向に `y` 単位だけ押し下げられ、右に移動します。](canvas_grid_translate.png)
 
 座標変換を行う前にキャンバスの状態を保存しておくことは、よいアイデアです。ほとんどの場合、元の状態に戻すためには逆の座標変換を行うよりも `restore` メソッドを呼び出すほうが簡単です。また、ループ内で座標変換を行っているときにキャンバスの状態の保存や復元を行わなければ、キャンバスの端の外側に描画することになり、描いたものの一部を失ってしまうかもしれません。
 
 ### `translate` の例
 
-この例は、キャンバスの原点を移動する利点をいくつか示しています。 `translate()` メソッドを使用しなければ、すべての矩形が同じ位置 (0,0) に描かれます。また `translate()` によって、 `fillRect()` 関数で座標を手動で調整する必要なく、どこにでも自由に矩形を置くことができます。これにより若干理解しやすく、また使いやすくなります。
+この例は、キャンバスの原点を移動する利点をいくつか示しています。 `translate()` メソッドを使用しなければ、すべての長方形が同じ位置 (0,0) に描かれます。また `translate()` によって、 `fillRect()` 関数で座標を手動で調整する必要なく、どこにでも自由に長方形を置くことができます。これにより若干理解しやすく、また使いやすくなります。
 
-`draw()` 関数で、`for` ループを使用して `fillRect()` 関数を 9 回呼び出しています。それぞれのループで canvas を移動して矩形を描き、その後に元の状態を復元します。描画位置を調節する `translate()` を頼って、`fillRect()` は毎回同じ座標を使用していることに注目してください。
+`draw()` 関数で、`for` ループを使用して `fillRect()` 関数を 9 回呼び出しています。それぞれのループで canvas を移動して長方形を描き、その後に元の状態を復元します。描画位置を調節する `translate()` を頼って、`fillRect()` は毎回同じ座標を使用していることに注目してください。
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i = 0; i < 3; i++) {
-    for (var j = 0; j < 3; j++) {
+  const ctx = document.getElementById("canvas").getContext("2d");
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
       ctx.save();
-      ctx.fillStyle = 'rgb(' + (51 * i) + ', ' + (255 - 51 * i) + ', 255)';
+      ctx.fillStyle = `rgb(${51 * i} ${255 - 51 * i} 255)`;
       ctx.translate(10 + j * 50, 10 + i * 50);
       ctx.fillRect(0, 0, 25, 25);
       ctx.restore();
@@ -108,7 +125,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_translate_example", "160", "160", "translate.png")}}
+{{EmbedLiveSample("A_translate_example", "", "160")}}
 
 ## 回転
 
@@ -117,49 +134,50 @@ draw();
 - {{domxref("CanvasRenderingContext2D.rotate", "rotate(angle)")}}
   - : 現在の原点を中心にしてラジアンで示した `angle` の分、キャンバスを時計回りに回転します。
 
-![](canvas_grid_rotate.png)
+![既定で原点は左上、0 度は水平で右方向です。回転点は原点から時計回りに始めます。](canvas_grid_rotate.png)
 
 回転の中心は、常にキャンバスの原点です。中心を変更するには、`translate()` メソッドを使用してキャンバスを移動しなければなりません。
 
 ### `rotate` の例
 
-この例は、まずはキャンバスの原点で矩形を回転するために `rotate()` メソッドを使用して、次に矩形自身の中心で回転するために `translate()` の助けを借りています。
+この例は、まずはキャンバスの原点で長方形を回転するために `rotate()` メソッドを使用して、次に長方形自身の中心で回転するために `translate()` の助けを借りています。
 
-> **メモ:** 角度はラジアン (radians) で表しており、度数 (degrees) ではありません。これは `radians = (Math.PI/180)*degrees` のようにすると変換できます。
+> [!NOTE]
+> 角度はラジアン (radians) で表しており、度数 (degrees) ではありません。これは `radians = (Math.PI/180)*degrees` のようにすると変換できます。
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById("canvas").getContext("2d");
 
-  // 左の矩形を canvas の原点で回転する
+  // 左の長方形を canvas の原点で回転する
   ctx.save();
-  // 青い矩形
-  ctx.fillStyle = '#0095DD';
+  // 青い長方形
+  ctx.fillStyle = "#0095DD";
   ctx.fillRect(30, 30, 100, 100);
   ctx.rotate((Math.PI / 180) * 25);
-  // 灰色の矩形
-  ctx.fillStyle = '#4D4E53';
+  // 灰色の長方形
+  ctx.fillStyle = "#4D4E53";
   ctx.fillRect(30, 30, 100, 100);
   ctx.restore();
 
-  // 右の矩形を矩形の中心で回転する
+  // 右の長方形を長方形の中心で回転する
   // draw blue rect
-  ctx.fillStyle = '#0095DD';
+  ctx.fillStyle = "#0095DD";
   ctx.fillRect(150, 30, 100, 100);
 
-  ctx.translate(200, 80); // 矩形の中心に移動する
-                          // x = x + 0.5 * 幅
-                          // y = y + 0.5 * 高さ
+  ctx.translate(200, 80); // 長方形の中心に移動する
+  // x = x + 0.5 * 幅
+  // y = y + 0.5 * 高さ
   ctx.rotate((Math.PI / 180) * 25); // 回転する
   ctx.translate(-200, -80); // 元の位置に移動する
 
-  // 灰色の矩形を描く
-  ctx.fillStyle = '#4D4E53';
+  // 灰色の長方形を描く
+  ctx.fillStyle = "#4D4E53";
   ctx.fillRect(150, 30, 100, 100);
 }
 ```
 
-矩形を中心で回転するために、キャンバスを矩形の中心へ移動した後にキャンバスを回転しています。そして canvas を 0,0 へ移動した後に矩形を描きます。
+長方形を中心で回転するために、キャンバスを長方形の中心へ移動した後にキャンバスを回転しています。そして canvas を 0,0 へ移動した後に長方形を描きます。
 
 ```html hidden
 <canvas id="canvas" width="300" height="200"></canvas>
@@ -169,7 +187,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_rotate_example", "310", "210", "rotate.png")}}
+{{EmbedLiveSample("A_rotate_example", "", "220")}}
 
 ## 拡大縮小
 
@@ -188,7 +206,7 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById("canvas").getContext("2d");
 
   // シンプルな図形を描いて、拡大する
   ctx.save();
@@ -198,8 +216,8 @@ function draw() {
 
   // 水平方向に反転する
   ctx.scale(-1, 1);
-  ctx.font = '48px serif';
-  ctx.fillText('MDN', -135, 120);
+  ctx.font = "48px serif";
+  ctx.fillText("MDN", -135, 120);
 }
 ```
 
@@ -211,7 +229,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_scale_example", "160", "160", "scale.png")}}
+{{EmbedLiveSample("A_scale_example", "", "160")}}
 
 ## 座標変換
 
@@ -229,7 +247,7 @@ draw();
 
 - `a (m11)`
   - : 水平方向の拡大。
-- _`b (m12)`_
+- `b (m12)`
   - : 水平方向の歪み。
 - `c (m21)`
   - : 垂直方向の歪み。
@@ -248,21 +266,21 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById("canvas").getContext("2d");
 
-  var sin = Math.sin(Math.PI / 6);
-  var cos = Math.cos(Math.PI / 6);
+  const sin = Math.sin(Math.PI / 6);
+  const cos = Math.cos(Math.PI / 6);
   ctx.translate(100, 100);
-  var c = 0;
-  for (var i = 0; i <= 12; i++) {
-    c = Math.floor(255 / 12 * i);
-    ctx.fillStyle = 'rgb(' + c + ', ' + c + ', ' + c + ')';
+  let c = 0;
+  for (let i = 0; i <= 12; i++) {
+    c = Math.floor((255 / 12) * i);
+    ctx.fillStyle = `rgb(${c} ${c} ${c})`;
     ctx.fillRect(0, 0, 100, 10);
     ctx.transform(cos, sin, -sin, cos, 0, 0);
   }
 
   ctx.setTransform(-1, 0, 0, 1, 100, 100);
-  ctx.fillStyle = 'rgba(255, 128, 255, 0.5)';
+  ctx.fillStyle = "rgb(255 128 255 / 50%)";
   ctx.fillRect(0, 50, 100, 100);
 }
 ```
@@ -275,6 +293,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Example_for_transform_and_setTransform", "230", "280", "canvas_transform.png")}}
+{{EmbedLiveSample("Example_for_transform_and_setTransform", "", "260")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

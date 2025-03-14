@@ -9,7 +9,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
 
 此方法替代 {{jsxref("Date.prototype.getYear()", "getYear()")}} 。
 
-{{EmbedInteractiveExample("pages/js/date-getfullyear.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getFullYear()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+
+console.log(moonLanding.getFullYear());
+// Expected output: 1969
+```
 
 ## 语法
 
@@ -25,7 +32,7 @@ dateObj.getFullYear()
 
 `getFullYear()`返回的值是绝对数。对于 1000 到 9999 之间的日期，`getFullYear()`返回一个四位数字，如 1995。使用此函数确保在 2000 年后兼容。
 
-## 例子
+## 示例
 
 ### 使用`getFullYear()`
 
@@ -44,7 +51,7 @@ var year = today.getFullYear();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCFullYear()")}}
 - {{jsxref("Date.prototype.setFullYear()")}}

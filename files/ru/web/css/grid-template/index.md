@@ -1,19 +1,73 @@
 ---
 title: grid-template
 slug: Web/CSS/grid-template
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
-browser-compat: css.properties.grid-template
 ---
+
 {{CSSRef}}
 
 [Сокращённое CSS-свойство](/ru/docs/Web/CSS/Shorthand_properties) **`grid-template`** определяет {{glossary("grid column", "колонки")}}, {{glossary("grid rows", "ряды")}} и {{glossary("grid areas", "области")}} грид-раскладки.
 
-{{EmbedInteractiveExample("pages/css/grid-template.html")}}
+{{InteractiveExample("CSS Demo: grid-template")}}
+
+```css interactive-example-choice
+grid-template:
+  "a a a" 40px
+  "b c c" 40px
+  "b c c" 40px / 1fr 1fr 1fr;
+```
+
+```css interactive-example-choice
+grid-template:
+  "b b a" auto
+  "b b c" 2ch
+  "b b c" 1em / 20% 20px 1fr;
+```
+
+```css interactive-example-choice
+grid-template:
+  "a a ." minmax(50px, auto)
+  "a a ." 80px
+  "b b c" auto / 2em 3em auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-gap: 10px;
+  width: 200px;
+}
+
+#example-element :nth-child(1) {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  grid-area: a;
+}
+
+#example-element :nth-child(2) {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+  grid-area: b;
+}
+
+#example-element :nth-child(3) {
+  background-color: rgba(94, 255, 0, 0.2);
+  border: 3px solid green;
+  grid-area: c;
+}
+```
 
 ## Составные свойства
 
@@ -26,7 +80,7 @@ browser-compat: css.properties.grid-template
 ## Синтаксис
 
 ```css
-/* Ключевые слова в качестве значения */
+/* Ключевые слова */
 grid-template: none;
 
 /* Значения в формате grid-template-rows / grid-template-columns */
@@ -36,13 +90,16 @@ grid-template: [linename] 100px / [columnname1] 30% [columnname2] 70%;
 grid-template: fit-content(100px) / fit-content(40%);
 
 /* Значения в формате grid-template-areas grid-template-rows / grid-template-columns */
-grid-template: "a a a"
-               "b b b";
-grid-template: "a a a" 20%
-               "b b b" auto;
-grid-template: [header-top] "a a a"     [header-bottom]
-                 [main-top] "b b b" 1fr [main-bottom]
-                            / auto 1fr auto;
+grid-template:
+  "a a a"
+  "b b b";
+grid-template:
+  "a a a" 20%
+  "b b b" auto;
+grid-template:
+  [header-top] "a a a" [header-bottom]
+  [main-top] "b b b" 1fr [main-bottom]
+  / auto 1fr auto;
 
 /* Глобальные значения */
 grid-template: inherit;
@@ -63,7 +120,8 @@ grid-template: unset;
 
 **Примечание:** при перечислении грид-полос нельзя использовать функцию {{cssxref("repeat()")}}, поскольку предполагается, что ряды и колонки будут располагаться вместе другом с другом в стиле "ASCII-рисунков".
 
-> **Примечание:** сокращённое свойство {{cssxref("grid")}} имеет тот же самый формат значений, но также сбрасывает неявные грид-свойства к их первоначальным значениям. Используйте `grid` (в отличие от `grid-template`), чтобы предотвратить каскадирование этих значений по отдельности.
+> [!NOTE]
+> Сокращённое свойство {{cssxref("grid")}} имеет тот же самый формат значений, но также сбрасывает неявные грид-свойства к их первоначальным значениям. Используйте `grid` (в отличие от `grid-template`), чтобы предотвратить каскадирование этих значений по отдельности.
 
 ## Формальное определение
 
@@ -84,10 +142,11 @@ grid-template: unset;
   display: grid;
   width: 100%;
   height: 200px;
-  grid-template: [header-left] "head head" 30px [header-right]
-                 [main-left]   "nav  main" 1fr  [main-right]
-                 [footer-left] "nav  foot" 30px [footer-right]
-                 / 120px 1fr;
+  grid-template:
+    [header-left] "head head" 30px [header-right]
+    [main-left] "nav  main" 1fr [main-right]
+    [footer-left] "nav  foot" 30px [footer-right]
+    / 120px 1fr;
 }
 
 header {
@@ -130,13 +189,13 @@ footer {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - Связанные CSS-свойства: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}
-- Руководство по грид-раскладке: _[Расположение элементов по грид-линиям с помощью CSS Grid](/ru/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
-- Руководство по грид-раскладке: _[Шаблоны грид-областей - сокращённое определение грида](/ru/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#grid_definition_shorthands)_
-- Обучающее видео: _[Grid Template shorthand](http://gridbyexample.com/video/grid-template-shorthand/)_
+- Руководство по грид-раскладке: _[Расположение элементов по грид-линиям с помощью CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
+- Руководство по грид-раскладке: _[Шаблоны грид-областей - сокращённое определение грида](/ru/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#grid_definition_shorthands)_
+- Обучающее видео: _[Grid Template shorthand](https://gridbyexample.com/video/grid-template-shorthand/)_

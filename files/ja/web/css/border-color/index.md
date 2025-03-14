@@ -1,17 +1,58 @@
 ---
 title: border-color
 slug: Web/CSS/border-color
+l10n:
+  sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
 {{CSSRef}}
 
 **`border-color`** は[一括指定](/ja/docs/Web/CSS/Shorthand_properties)を行う [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の色を設定します。
 
-{{EmbedInteractiveExample("pages/css/border-color.html")}}
+{{InteractiveExample("CSS Demo: border-color")}}
+
+```css interactive-example-choice
+border-color: red;
+```
+
+```css interactive-example-choice
+border-color: red #32a1ce;
+```
+
+```css interactive-example-choice
+border-color: red rgba(170, 50, 220, 0.6) green;
+```
+
+```css interactive-example-choice
+border-color: red yellow green hsla(60, 90%, 50%, 0.8);
+```
+
+```css interactive-example-choice
+border-color: red yellow green transparent;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 各辺を個々に設定する場合は、 {{CSSxRef("border-top-color")}}、 {{CSSxRef("border-right-color")}}、 {{CSSxRef("border-bottom-color")}}、 {{CSSxRef("border-left-color")}}、 または書字方向を意識した{{CSSxRef("border-block-start-color")}}、 {{CSSxRef("border-block-end-color")}}、 {{CSSxRef("border-inline-start-color")}}、 {{CSSxRef("border-inline-end-color")}} を使用します。
 
-境界線の色についての詳細な情報は、 {{SectionOnPage("/ja/docs/Web/HTML/Applying_color", "Borders")}} にあります。
+境界線の色についての詳細な情報は、 [HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color#境界線_2)にあります。
 
 ## 構成要素のプロパティ
 
@@ -32,7 +73,7 @@ border-color: red;
 border-color: red #f015ca;
 
 /* 上辺 | 垂直線 | 下辺 */
-border-color: red rgb(240,30,50,.7) green;
+border-color: red rgb(240 30 50 / 70%) green;
 
 /* 上辺 | 右辺 | 下辺 | 左辺 */
 border-color: red yellow green blue;
@@ -41,6 +82,7 @@ border-color: red yellow green blue;
 border-color: inherit;
 border-color: initial;
 border-color: revert;
+border-color: revert-layer;
 border-color: unset;
 ```
 
@@ -66,38 +108,42 @@ border-color: unset;
 
 ## 例
 
-<h3 id="Complete_border-color_usage">完全な border-color の使用法</h3>
+### 完全な border-color の使用法
 
 #### HTML
 
-```html
+```html-nolint
 <div id="justone">
-  <p><code>border-color: red;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <p><code>border-color: red;</code> は以下のものと等価です。</p>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: red;</code></li>
     <li><code>border-left-color: red;</code></li>
   </ul>
 </div>
 <div id="horzvert">
-  <p><code>border-color: gold red;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: gold;</code></li>
+  <p><code>border-color: gold red;</code> は以下のものと等価です。</p>
+  <ul>
+    <li><code>border-top-color: gold;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: red;</code></li>
   </ul>
 </div>
 <div id="topvertbott">
-  <p><code>border-color: red cyan gold;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <p><code>border-color: red cyan gold;</code> は以下のものと等価です。</p>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: cyan;</code></li>
   </ul>
 </div>
 <div id="trbl">
-  <p><code>border-color: red cyan black gold;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <p><code>border-color: red cyan black gold;</code> は以下のものと等価です。</p>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: black;</code></li>
     <li><code>border-left-color: gold;</code></li>
@@ -140,7 +186,7 @@ ul {
 
 #### 結果
 
-{{EmbedLiveSample("Complete_border-color_usage", 600, 300)}}
+{{EmbedLiveSample("Complete_border-color_usage", 600, 700)}}
 
 ## 仕様書
 
@@ -156,4 +202,4 @@ ul {
 - その他の境界線に関する CSS プロパティ: {{CSSxRef("border-width")}}, {{CSSxRef("border-style")}}
 - {{CSSxRef("&lt;color&gt;")}} データ型
 - その他の色に関するプロパティ: {{CSSxRef("color")}}, {{CSSxRef("background-color")}}, {{CSSxRef("outline-color")}}, {{CSSxRef("text-decoration-color")}}, {{CSSxRef("text-emphasis-color")}}, {{CSSxRef("text-shadow")}}, {{CSSxRef("caret-color")}}, and {{CSSxRef("column-rule-color")}}
-- [CSS を使用した HTML の要素への色の適用](/ja/docs/Web/HTML/Applying_color)
+- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)

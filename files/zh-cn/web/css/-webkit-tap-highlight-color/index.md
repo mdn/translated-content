@@ -1,9 +1,9 @@
 ---
-title: '-webkit-tap-highlight-color'
+title: -webkit-tap-highlight-color
 slug: Web/CSS/-webkit-tap-highlight-color
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 {{ Non-standard_header() }}
 
@@ -31,6 +31,6 @@ A {{Cssxref("color value")}}.
 
 _不属于规范的一部分。_ Apple [有自己的 safari web 内容指南的文档](https://developer.apple.com/library/mac/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW5)。
 
-## 浏览器兼容
+## 浏览器兼容性
 
 webkit/safari, Blink/Chrome，以及[IE 的一些版本。](<https://msdn.microsoft.com/en-us//library/dn806275(v=vs.85).aspx>)

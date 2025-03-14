@@ -1,25 +1,45 @@
 ---
 title: <gradient>
 slug: Web/CSS/gradient
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Images
-  - Graphics
-  - Layout
-  - Reference
-  - 그라데이션
-  - 그레이디언트
-translation_of: Web/CSS/gradient
 ---
 
 {{CSSRef}}
 
 **`<gradient>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_Types)은 {{cssxref("&lt;image&gt;")}}의 특별한 종류로 여러 색의 점진적인 변화를 나타냅니다.
 
-{{EmbedInteractiveExample("pages/css/type-gradient.html")}}
+{{InteractiveExample("CSS Demo: &amp;lt;gradient&amp;gt;")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+```css interactive-example-choice
+background: linear-gradient(#f69d3c, #3f87a6);
+```
+
+```css interactive-example-choice
+background: radial-gradient(#f69d3c, #3f87a6);
+```
+
+```css interactive-example-choice
+background: repeating-linear-gradient(#f69d3c, #3f87a6 50px);
+```
+
+```css interactive-example-choice
+background: repeating-radial-gradient(#f69d3c, #3f87a6 50px);
+```
+
+```css interactive-example-choice
+background: conic-gradient(#f69d3c, #3f87a6);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 CSS 그레이디언트는 [원본 크기가 없습니다](/ko/docs/Web/CSS/image#no_intrinsic). 즉 실제 크기나 선호 크기가 없습니다. 그레이디언트의 크기는 적용하는 요소의 크기와 동일해집니다.
 
@@ -46,8 +66,16 @@ div {
 
 ```css
 .linear-gradient {
-  background: linear-gradient(to right,
-      red, orange, yellow, green, blue, indigo, violet);
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
 }
 ```
 
@@ -82,7 +110,7 @@ div {
 
 ```html hidden
 <div class="linear-repeat">반복하는 선형 그레이디언트</div>
-<br>
+<br />
 <div class="radial-repeat">반복하는 원형 그레이디언트</div>
 ```
 
@@ -95,12 +123,22 @@ div {
 
 ```css
 .linear-repeat {
-  background: repeating-linear-gradient(to top left,
-      lightpink, lightpink 5px, white 5px, white 10px);
+  background: repeating-linear-gradient(
+    to top left,
+    lightpink,
+    lightpink 5px,
+    white 5px,
+    white 10px
+  );
 }
 
 .radial-repeat {
-  background: repeating-radial-gradient(powderblue, powderblue 8px, white 8px, white 16px);
+  background: repeating-radial-gradient(
+    powderblue,
+    powderblue 8px,
+    white 8px,
+    white 16px
+  );
 }
 ```
 
@@ -143,5 +181,5 @@ div {
 
 ## 같이 보기
 
-- [CSS 그레이디언트 사용하기](/ko/docs/CSS/Using_CSS_gradients)
+- [CSS 그레이디언트 사용하기](/ko/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - 그레이디언트 함수: {{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}

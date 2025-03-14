@@ -1,33 +1,67 @@
 ---
-title: Navigator.battery
+title: "Navigator: метод getBattery()"
 slug: Web/API/Navigator/getBattery
-translation_of: Web/API/Navigator/battery
-original_slug: Web/API/Navigator/battery
+l10n:
+  sourceCommit: cf05364b23bc44af37a350319a1dd47485746a9c
 ---
 
-{{ ApiRef("Battery API") }}{{deprecated_header}}
+{{APIRef("Battery API")}} {{SecureContext_Header}}
 
-Свойство `battery` только для чтения возвращающее {{DOMxRef("BatteryManager")}} которое даёт информацию об уровне заряда системной батареи; предоставляет также некоторые новые события, которые вы можете обрабатывать и контролируя состояние батареи.Оно реализует [API состояния батареи](/ru/docs/WebAPI/Battery_Status); смотрите документацию для получения дополнительной информации, руководство по использованию API и примеры кода.
+Метод `getBattery` предоставляет информацию о батарее устройства. Он возвращает промис, результатом обработки которого будет объект {{domxref("BatteryManager")}}, содержащий свойства с информацией о состоянии батареи и события, которые можно обрабатывать для его контроля. Для получения более подробной информации и примеров смотрите {{domxref("Battery Status API")}}.
 
-> **Примечание:** Свойство `battery` устарело и было заменено {{DOMxRef("Navigator.getBattery()")}}. Метод возвращает {{DOMxRef("Promise")}}. Хотя оно частично поддерживается.
+> [!NOTE]
+> Доступ к этой функциональности контролируется директивой {{HTTPHeader("Permissions-Policy/battery", "battery")}} из {{HTTPHeader("Permissions-Policy")}}.
 
 ## Синтаксис
 
+```js-nolint
+getBattery()
 ```
-var battery = navigator.battery;
+
+### Параметры
+
+Отсутствуют.
+
+### Возвращаемое значение
+
+{{JSxRef("Promise")}}, который будет содержать объект {{DOMxRef("BatteryManager")}}.
+
+### Исключения
+
+- `NotAllowedError` {{domxref("DOMException")}}
+
+  - : Использование этой функциональности заблокировано [Permissions Policy](/ru/docs/Web/HTTP/Permissions_Policy).
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Агент пользователя не предоставляет информацию о батарее в небезопасном контексте, и этот метод был вызван из такого контекста.
+
+## Примеры
+
+В этом примере показано получение текущего состояния зарядки батареи и установка обработчика события {{domxref("BatteryManager/chargingchange_event", "chargingchange")}}, чтобы можно было записать состояние, когда оно изменится.
+
+```js
+let batteryIsCharging = false;
+
+navigator.getBattery().then((battery) => {
+  batteryIsCharging = battery.charging;
+
+  battery.addEventListener("chargingchange", () => {
+    batteryIsCharging = battery.charging;
+  });
+});
 ```
+
+Для подробностей и дополнительных примеров смотрите {{domxref("Battery Status API")}}.
 
 ## Спецификации
 
-{{page("/en-US/docs/Web/API/BatteryManager","Specifications")}}
+{{Specifications}}
 
-## Доступность в браузере
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- Состояние [Battery API](/ru/docs/WebAPI/Battery_Status).
-- [Пост в блоге - использование Battery API.](http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
-- [David Walsh Battery Api в JavaScript](http://davidwalsh.name/battery-api).
-- [battery.js - крошечная кросс-браузерная обёртка.](https://github.com/pstadler/battery.js)
+- {{domxref("Battery Status API", "", "", "nocode")}}
+- Директива {{HTTPHeader("Permissions-Policy/battery", "battery")}} из {{HTTPHeader("Permissions-Policy")}}

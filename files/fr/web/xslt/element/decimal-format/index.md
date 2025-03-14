@@ -1,13 +1,9 @@
 ---
 title: decimal-format
 slug: Web/XSLT/Element/decimal-format
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/decimal-format
-original_slug: Web/XSLT/decimal-format
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:decimal-format>` définit les caractères et symboles à utiliser lors de la conversion de nombres en chaînes à l'aide de la fonction `format-number( )`.
 
@@ -93,7 +89,7 @@ Haut niveau, doit être l'enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`.
 
 ### Définition
 
-[XSLT 1.0, section 12.3](http://www.w3.org/TR/xslt#format-number).
+[XSLT 1.0, section 12.3](https://www.w3.org/TR/xslt#format-number).
 
 ### Support Gecko
 

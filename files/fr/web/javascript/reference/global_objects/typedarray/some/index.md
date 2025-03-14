@@ -1,23 +1,28 @@
 ---
 title: TypedArray.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/some
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/some
 ---
 
 {{JSRef}}
 
-La méthode **`some()`** teste si certains éléments du tableau typé remplissent une condition décrite par la fonction de test donnée. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.some()")}}_._ Dans le reste de cet article _TypedArray_ correspond à un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
+La méthode **`some()`** teste si certains éléments du tableau typé remplissent une condition décrite par la fonction de test donnée. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.some()")}}_._ Dans le reste de cet article _TypedArray_ correspond à un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
 
-{{EmbedInteractiveExample("pages/js/typedarray-some.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.some()")}}
+
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([-10, 20, -30, 40, -50]);
+const positives = new Int8Array([10, 20, 30, 40, 50]);
+
+console.log(int8.some(isNegative));
+// Expected output: true
+
+console.log(positives.some(isNegative));
+// Expected output: false
+```
 
 ## Syntaxe
 
@@ -51,7 +56,7 @@ La méthode `some` exécute la fonction `callback` fournie pour chaque élément
 
 `callback` est appelé avec trois arguments : la valeur de l'élément, l'indice de cet élément et le tableau qui est parcouru.
 
-Si le paramètre `thisArg` est utilisé, il sera passé à la fonction `callback` en tant que valeur `this`. Sinon, la valeur `undefined` sera utilisée comme valeur `this`. La valeur `this` définitivement prise en compte par la fonction `callback` est déterminée selon [les règles usuelles de détermination de `this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this).
+Si le paramètre `thisArg` est utilisé, il sera passé à la fonction `callback` en tant que valeur `this`. Sinon, la valeur `undefined` sera utilisée comme valeur `this`. La valeur `this` définitivement prise en compte par la fonction `callback` est déterminée selon [les règles usuelles de détermination de `this`](/fr/docs/Web/JavaScript/Reference/Operators/this).
 
 `some` ne modifie pas le tableau typé sur lequel elle a été appelée.
 
@@ -65,7 +70,7 @@ Dans l'exemple qui suit, on teste s'il existe au moins un élément du tableau t
 function supérieurÀ10(élément, index, array) {
   return élément > 10;
 }
-new Uint8Array([2, 5, 8, 1, 4]).some(supérieurÀ10);  // false
+new Uint8Array([2, 5, 8, 1, 4]).some(supérieurÀ10); // false
 new Uint8Array([12, 5, 8, 1, 4]).some(supérieurÀ10); // true
 ```
 
@@ -74,8 +79,8 @@ new Uint8Array([12, 5, 8, 1, 4]).some(supérieurÀ10); // true
 [Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) permettent d'utiliser une syntaxe plus concise pour arriver au même résultat :
 
 ```js
-new Uint8Array([2, 5, 8, 1, 4]).some(elem => elem > 10); // false
-new Uint8Array([12, 5, 8, 1, 4]).some(elem => elem > 10); // true
+new Uint8Array([2, 5, 8, 1, 4]).some((elem) => elem > 10); // false
+new Uint8Array([12, 5, 8, 1, 4]).some((elem) => elem > 10); // true
 ```
 
 ## Prothèse d'émulation (_polyfill_)
@@ -85,8 +90,8 @@ Il n'existe pas d'objet global intitulé _TypedArray_, la prothèse doit donc un
 ```js
 // https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.slice
 if (!Uint8Array.prototype.some) {
-  Object.defineProperty(Uint8Array.prototype, 'some', {
-    value: Array.prototype.some
+  Object.defineProperty(Uint8Array.prototype, "some", {
+    value: Array.prototype.some,
   });
 }
 ```

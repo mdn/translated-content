@@ -1,7 +1,6 @@
 ---
 title: <msub>
 slug: Web/MathML/Element/msub
-translation_of: Web/MathML/Element/msub
 ---
 
 {{MathMLRef}}
@@ -11,15 +10,15 @@ L'élément MathML `<msub>` est utilisé pour attaché un indice à une expressi
 ## Attributes
 
 - class, id, style
-  - : Fournit pour être utilisé avec [stylesheets](/fr/docs/CSS).
+  - : Fournit pour être utilisé avec [stylesheets](/fr/docs/Web/CSS).
 - href
   - : Utilisé pour ajouter un hyperlien vers une URI.
 - mathbackground
-  - : La couleur d'arrière plan. Vous pouvez utiliser `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Type_color#Les_mots-cl%C3%A9s).
+  - : La couleur d'arrière plan. Vous pouvez utiliser `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#les_mots-clés).
 - mathcolor
-  - : La couleur du texte. Vous pouvez utiliser `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Type_color#Les_mots-cl%C3%A9s).
+  - : La couleur du texte. Vous pouvez utiliser `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#les_mots-clés).
 - subscriptshift
-  - : The minimum space by which to shift the subscript below the baseline of the expression, as a [length value](/fr/docs/MathML/Attributes/Values#Lengths).
+  - : The minimum space by which to shift the subscript below the baseline of the expression, as a [length value](/fr/docs/Web/MathML/Values#lengths).
 
 ## Example
 
@@ -29,12 +28,10 @@ Rendu dans votre navigateur: <math><msub><mi>X</mi> <mn>1</mn></msub></math>
 
 ```html
 <math>
-
   <msub>
     <mi>X</mi>
     <mn>1</mn>
   </msub>
-
 </math>
 ```
 

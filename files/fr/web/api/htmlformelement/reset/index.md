@@ -1,13 +1,6 @@
 ---
 title: HTMLFormElement.reset()
 slug: Web/API/HTMLFormElement/reset
-tags:
-  - API
-  - HTML DOM
-  - HTMLFormElement
-  - Méthode
-  - Reference
-translation_of: Web/API/HTMLFormElement/reset
 ---
 
 {{APIRef("HTML DOM")}}
@@ -19,7 +12,7 @@ Si un élément du formulaire (comme un bouton reset par exemple) a un `name` ou
 ## Syntaxe
 
 ```js
-HTMLFormElement.reset()
+HTMLFormElement.reset();
 ```
 
 ## Exemple

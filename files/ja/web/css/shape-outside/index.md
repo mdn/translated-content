@@ -7,7 +7,56 @@ slug: Web/CSS/shape-outside
 
 **`shape-outside`** は [CSS](/ja/docs/Web/CSS) のプロパティで、隣接するインラインコンテンツが回り込むシェイプ (形状) を — 矩形でない場合もありますが — 定義します。既定では、インラインコンテンツはマージンボックスを回り込みます。`shape-outside` によって、この回り込みをカスタマイズし、テキストが単純なボックスではなく複雑なオブジェクトの周りを回り込めるようにします。
 
-{{EmbedInteractiveExample("pages/css/shape-outside.html")}}
+{{InteractiveExample("CSS Demo: shape-outside")}}
+
+```css interactive-example-choice
+shape-outside: circle(50%);
+```
+
+```css interactive-example-choice
+shape-outside: ellipse(130px 140px at 20% 20%);
+```
+
+```css interactive-example-choice
+shape-outside: url(/shared-assets/images/examples/round-balloon.png);
+```
+
+```css interactive-example-choice
+shape-outside: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <img
+      class="transition-all"
+      id="example-element"
+      src="/shared-assets/images/examples/round-balloon.png"
+      width="150" />
+    We had agreed, my companion and I, that I should call for him at his house,
+    after dinner, not later than eleven o’clock. This athletic young Frenchman
+    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
+    as a pastime. After having exhausted all the sensations that are to be found
+    in ordinary sports, even those of “automobiling” at a breakneck speed, the
+    members of the “Aéro Club” now seek in the air, where they indulge in all
+    kinds of daring feats, the nerve-racking excitement that they have ceased to
+    find on earth.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  text-align: left;
+  padding: 20px;
+}
+
+#example-element {
+  float: left;
+  width: 150px;
+  margin: 20px;
+}
+```
 
 ## 構文
 
@@ -24,7 +73,9 @@ shape-outside: circle();
 shape-outside: ellipse();
 shape-outside: inset(10px 10px 10px 10px);
 shape-outside: polygon(10px 10px, 20px 20px, 30px 30px);
-shape-outside: path('M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z');
+shape-outside: path(
+  "M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z"
+);
 
 /* <url> 値 */
 shape-outside: url(image.png);
@@ -47,7 +98,7 @@ shape-outside: unset;
   - : 浮動領域は影響を受けません。インラインコンテンツは通常通り、要素のマージンボックスを回り込みます。
 - `<shape-box>`
 
-  - : 浮動領域は浮動要素の辺の形状に従って ([CSS ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) で定義された通りに) 計算されます。これは`margin-box`、`border-box`、`padding-box`、`content-box` の何れかになります。この形状は {{cssxref("border-radius")}} プロパティで生成された丸い角も含みます ({{cssxref("background-clip")}} と同様の動作です)。
+  - : 浮動領域は浮動要素の辺の形状に従って ([CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) で定義された通りに) 計算されます。これは`margin-box`、`border-box`、`padding-box`、`content-box` の何れかになります。この形状は {{cssxref("border-radius")}} プロパティで生成された丸い角も含みます ({{cssxref("background-clip")}} と同様の動作です)。
 
     - `margin-box`
       - : マージンの外側の縁で囲まれた形状を定義します。この形状の角の半径は、対応する {{cssxref("border-radius")}} および {{cssxref("margin")}} の値で決定されます。 `border-radius / margin` の比率が `1` 以上の場合、マージンの角の半径は `border-radius + margin` です。この比率が `1` 未満の場合、マージンの角の半径は `border-radius + (margin * (1 + (ratio-1)^3))` となります。
@@ -94,10 +145,9 @@ shape-outside: unset;
   <div class="left"></div>
   <div class="right"></div>
   <p>
-    Sometimes a web page's text content appears to be
-    funneling your attention towards a spot on the page
-    to drive you to follow a particular link. Sometimes
-    you don't notice.
+    Sometimes a web page's text content appears to be funneling your attention
+    towards a spot on the page to drive you to follow a particular link.
+    Sometimes you don't notice.
   </p>
 </div>
 ```
@@ -151,11 +201,11 @@ p {
 
 ## 関連情報
 
-- [CSS シェイプ](/ja/docs/Web/CSS/CSS_Shapes)
-- [CSS シェイプの概要](/ja/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
-- [ボックス値からのシェイプ](/ja/docs/Web/CSS/CSS_Shapes/From_box_values)
-- [基本シェイプ](/ja/docs/Web/CSS/CSS_Shapes/Basic_Shapes)
-- [画像からのシェイプ](/ja/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
+- [CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes)
+- [CSS シェイプの概要](/ja/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [ボックス値からのシェイプ](/ja/docs/Web/CSS/CSS_shapes/From_box_values)
+- [基本シェイプ](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [画像からのシェイプ](/ja/docs/Web/CSS/CSS_shapes/Shapes_from_images)
 - {{cssxref("&lt;basic-shape&gt;")}}
 - {{cssxref("shape-margin")}}
 - {{cssxref("shape-image-threshold")}}

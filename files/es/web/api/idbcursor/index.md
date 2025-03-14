@@ -5,7 +5,7 @@ slug: Web/API/IDBCursor
 
 {{APIRef("IndexedDB")}}
 
-La interfaz **`IDBCursor`** de la [IndexedDB API](/es/docs/IndexedDB) representa un [cursor](/es/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor) para atravesar o iterar varios registros de una base de datos.
+La interfaz **`IDBCursor`** de la [IndexedDB API](/es/docs/Web/API/IndexedDB_API) representa un [cursor](/es/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_cursor) para atravesar o iterar varios registros de una base de datos.
 
 El cursor tiene una fuente que indica el índice o el almacén de objetos sobre el que se está iterando. Tiene una posición dentro del rango y se mueve en una dirección que aumenta o disminuye en el orden de las Keys de registro. El cursor permite a una aplicación procesar asincrónicamente todos los registros del rango del cursor.
 
@@ -33,7 +33,7 @@ Puede tener un número ilimitado de cursores al mismo tiempo. Siempre se obtiene
 ## Propiedades
 
 - {{domxref("IDBCursor.source")}} {{readonlyInline}}
-  - : Devuelve {{domxref("IDBObjectStore")}} o {{domxref("IDBIndex")}}} que el cursor está iterando. Esta función nunca devuelve nulo o lanza una excepción, incluso si el cursor está siendo iterado, ha iterado más allá de su final, o su transacción no está activa.
+  - : Devuelve {{domxref("IDBObjectStore")}} o {{domxref("IDBIndex")}} que el cursor está iterando. Esta función nunca devuelve nulo o lanza una excepción, incluso si el cursor está siendo iterado, ha iterado más allá de su final, o su transacción no está activa.
 - {{domxref("IDBCursor.direction")}} {{readonlyInline}}
   - : Devuelve la dirección de desplazamiento del cursor. Ver [Constants](#const_next) para valores posibles.
 - {{domxref("IDBCursor.key")}} {{readonlyInline}}
@@ -45,7 +45,8 @@ Puede tener un número ilimitado de cursores al mismo tiempo. Siempre se obtiene
 
 {{ deprecated_header(13) }}
 
-> **Advertencia:** These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ({{ bug(891944) }})
+> [!WARNING]
+> These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ([Error 891944 en Firefox](https://bugzil.la/891944))
 
 - `NEXT`: `"next"` : The cursor shows all records, including duplicates. It starts at the lower bound of the key range and moves upwards (monotonically increasing in the order of keys).
 - `NEXTUNIQUE` : `"nextunique"` : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the lower bound of the key range and moves upwards.
@@ -58,19 +59,19 @@ En este simple fragmento creamos una transacción, recuperamos un almacén de ob
 
 ```js
 function displayData() {
-  var transaction = db.transaction(['rushAlbumList'], "readonly");
-  var objectStore = transaction.objectStore('rushAlbumList');
+  var transaction = db.transaction(["rushAlbumList"], "readonly");
+  var objectStore = transaction.objectStore("rushAlbumList");
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = function (event) {
     var cursor = event.target.result;
-    if(cursor) {
-      var listItem = document.createElement('li');
-      listItem.innerHTML = cursor.value.albumTitle + ', ' + cursor.value.year;
+    if (cursor) {
+      var listItem = document.createElement("li");
+      listItem.innerHTML = cursor.value.albumTitle + ", " + cursor.value.year;
       list.appendChild(listItem);
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
 }
@@ -80,9 +81,9 @@ function displayData() {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.IDBCursor")}}
+{{Compat}}
 
 ## See also
 
@@ -92,4 +93,4 @@ function displayData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

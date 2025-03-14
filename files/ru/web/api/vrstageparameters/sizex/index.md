@@ -1,42 +1,37 @@
 ---
-title: VRStageParameters.sizeX
+title: "VRStageParameters: свойство sizeX"
 slug: Web/API/VRStageParameters/sizeX
-tags:
-  - Виртуальная реальность
-translation_of: Web/API/VRStageParameters/sizeX
+l10n:
+  sourceCommit: ccbc5d4100e0a5de844e060b025883ef1611d7b8
 ---
 
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-Неизменяемое свойство **sizeX** (только для чтения) интерфейса "VRStageParameters" возвращает ширину границ игровой зоны в метрах.
+Доступное только для чтения свойство **`sizeX`** интерфейса {{domxref("VRStageParameters")}} возвращает ширину границ игровой зоны в метрах.
 
-В целях безопасности границы определяются как прямоугольник, ориентированный по оси основания. Контент не должен требовать от пользователя выхода за эти пределы; однако пользователь может игнорировать границы, что приводит к значениям положения вне этого прямоугольника. Центр прямоугольника находится в точке с координатами (0,0,0).
+> [!NOTE]
+> Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
+В целях безопасности границы определяются как прямоугольник на полу. Приложение не должно требовать от пользователя выходить за эти границы, однако пользователь может игнорировать границы, что будет приводит к выходу значений за границы этого прямоугольника. Центр прямоугольника находится в точке с координатами (0,0,0).
 
-```js
-var mySizeX = vrStageParametersInstance.sizeX;
-```
+### Значение
 
-### Value
-
-Параметр типа float, представляющий ширину в метрах..
+Число типа float, представляющее ширину в метрах.
 
 ## Examples
 
-{{page("/Web/API/VRStageParameters", "Examples")}}
+Смотрите примеры использования в [`VRStageParameters`](/ru/docs/Web/API/VRStageParameters#examples).
 
-## Specifications
+## Спецификации
 
-| Specification                                                                            | Status                       | Comment            |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('WebVR 1.1', '#dom-vrstageparameters-sizex', 'sizeX')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
+Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/). Больше не планируется сделать его стандартом.
 
-## Browser compatibility
+Пока все браузеры не реализуют новые [WebXR API](/ru/docs/Web/API/WebXR_Device_API/Fundamentals), рекомендуется использовать такие фреймворки как [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), [Three.js](https://threejs.org/) или [полифил](https://github.com/immersive-web/webxr-polyfill) для разработки приложений WebXR, которые будут работать [во всех браузерах](https://developer.oculus.com/documentation/web/port-vr-xr/).
+
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — демонстрационные, материалы для загрузки и другие ресурсы команды Mozilla VR team.
+- [WebVR API](/ru/docs/Web/API/WebVR_API)

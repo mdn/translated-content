@@ -9,11 +9,11 @@ slug: Web/API/ReadableStreamDefaultReader/releaseLock
 
 如果释放锁时关联流出错，reader 随后会以同样的方式发生错误；此外，reader 将关闭。
 
-reader 的锁在仍有待处理的读取请求时无法释放，即，如果 reader 的 {{domxref("ReadableStreamDefaultReader.read()")}} 方法返回的 promise 尚未完成，这将导致抛出 `TypeError`。
+如果在 reader 仍有待处理的读取请求时释放了锁，那么 reader 的 {{domxref("ReadableStreamDefaultReader.read()")}} 方法返回的 promise 将立刻使用 `TypeError` 拒绝。未读的分块将会保留在内部队列中，并且稍后可以通过获取一个新的 reader 读取。
 
 ## 语法
 
-```js
+```js-nolint
 releaseLock()
 ```
 
@@ -28,16 +28,19 @@ releaseLock()
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 如果源对象不是一个 `ReadableStreamDefaultReader`，或者仍有读取请求处于等待状态。
+  - : 如果源对象不是 `ReadableStreamDefaultReader` 则抛出该异常。
 
 ## 示例
 
 ```js
 function fetchStream() {
   const reader = stream.getReader();
-  ...
-  reader.releaseLock()
-  ...
+
+  // ...
+
+  reader.releaseLock();
+
+  // ...
 }
 ```
 
@@ -48,3 +51,8 @@ function fetchStream() {
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("ReadableStreamDefaultReader.ReadableStreamDefaultReader", "ReadableStreamDefaultReader()")}} 构造函数
+- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)

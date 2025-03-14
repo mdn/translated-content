@@ -9,17 +9,61 @@ La propiedad de [CSS](/es/docs/Web/CSS) **`padding-block-end`** define el rellen
 
 Esto se relaciona con {{cssxref("padding-block-start")}}, {{cssxref("padding-inline-start")}}, y {{cssxref("padding-inline-end")}}, que define los otros rellenos del elemento.
 
-{{EmbedInteractiveExample("pages/css/padding-block-end.html")}}
+{{InteractiveExample("CSS Demo: padding-block-end")}}
+
+```css interactive-example-choice
+padding-block-end: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+padding-block-end: 20px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+padding-block-end: 5em;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+padding-block-end: 5em;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## Sintaxis
 
 ```css
 /* <length> values */
-padding-block-end: 10px;      /* An absolute length */
-padding-block-end: 1em;       /* A length relative to the text size */
+padding-block-end: 10px; /* An absolute length */
+padding-block-end: 1em; /* A length relative to the text size */
 
 /* <percentage> value */
-padding-block-end: 5%;        /* A padding relative to the block container's width */
+padding-block-end: 5%; /* A padding relative to the block container's width */
 
 /* Global values */
 padding-block-end: inherit;
@@ -59,7 +103,7 @@ div {
 .exampleText {
   writing-mode: vertical-lr;
   padding-block-end: 20px;
-  background-color: #C8C800;
+  background-color: #c8c800;
 }
 ```
 
@@ -69,9 +113,9 @@ div {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.padding-block-end")}}
+{{Compat}}
 
 ## Mira también
 

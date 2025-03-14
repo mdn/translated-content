@@ -1,49 +1,57 @@
 ---
-title: 'SyntaxError: identifier starts immediately after numeric literal'
+title: "SyntaxError: identifier starts immediately after numeric literal"
 slug: Web/JavaScript/Reference/Errors/Identifier_after_number
+l10n:
+  sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{JSSidebar("Errors")}}
+{{jsSidebar("Errors")}}
 
-## Message
+当标识符以数字开头时，JavaScript 会出现“identifier starts immediately after numeric literal”的异常。标识符只能以字母、下划线（\_）或美元符号（$）开头。
+
+## 错误信息
 
 ```plain
+SyntaxError: Unexpected identifier after numeric literal (Edge)
 SyntaxError: identifier starts immediately after numeric literal (Firefox)
 SyntaxError: Unexpected number (Chrome)
 ```
 
-## Error type
+## 错误类型
 
 {{jsxref("SyntaxError")}}
 
-## What went wrong?
+## 什么地方出错了？
 
-变量名叫{{Glossary("Identifier", "identifiers")}}，它符合某些规则，而你打破了这些规则！
+变量的名称（也称为[标识符](/zh-CN/docs/Glossary/Identifier)）需遵循特定的规则，而这些规则是你的代码必须遵循的！
 
-一个 JavaScript 标识符必须以字母开头，下划线（\_）或美元符号（$）。他们不能以数字开头。只有后续字符可以是数字（0-9）。
+JavaScript 标识符必须以字母、下划线（\_）或美元符号（$）开头。不能以数字开头！只有后续的字符可以是数字（0-9）。
 
-## Examples
+## 示例
 
-### Variable names starting with numeric literals
+### 以数字文字开头的变量名
 
-Variable names can't start with numbers in JavaScript. The following fails:
+在 JavaScript 中，变量名不能以数字开头。以下表达式会失败：
 
-```js example-bad
-var 1life = 'foo';
+```js-nolint example-bad
+const 1life = "foo";
 // SyntaxError: identifier starts immediately after numeric literal
 
-var foo = 1life;
+const foo = 1life;
+// SyntaxError: identifier starts immediately after numeric literal
+
+alert(1.foo);
 // SyntaxError: identifier starts immediately after numeric literal
 ```
 
-You will need to rename your variable to avoid the leading number.
+你需要重新命名变量以避免前导数字。
 
 ```js example-good
-var life1 = 'foo';
-var foo = life1;
+const life1 = "foo";
+const foo = life1;
 ```
 
-## See also
+## 参见
 
-- [Lexical grammar](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Variables](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#Variables) in the [JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide)
+- [词法语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [语法与类型](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types)指南

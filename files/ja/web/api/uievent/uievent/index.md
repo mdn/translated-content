@@ -1,34 +1,45 @@
 ---
-title: UIEvent()
+title: "UIEvent: UIEvent() コンストラクター"
+short-title: UIEvent()
 slug: Web/API/UIEvent/UIEvent
+l10n:
+  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`UIEvent()`** コンストラクターは新しい {{domxref("UIEvent")}} を生成します。
 
+> [!NOTE]
+> このコンストラクターを使用して合成イベントを作成した場合、セキュリティ上の理由から、そのイベントは信頼されません。
+> ブラウザーで生成された `UIEvent`` オブジェクトのみが信頼され、信頼されたイベントのみが既定のアクションを発生させます。
+
 ## 構文
 
-```js
-event = new UIEvent(typeArg [, UIEventInit])
+```js-nolint
+new UIEvent(type)
+new UIEvent(type, options)
 ```
 
 ### 値
 
-- `typeArg`
-  - : {{domxref("DOMString")}} で、このイベントの名前を表します。
-- `UIEventInit` {{optional_inline}}
+- `type`
+  - : 文字列で、このイベントの名前を表します。
+    大文字小文字の区別があり、ブラウザーは `load`, `unload`, `abort`, `error`, `select` の何れかに設定します。
+- `options` {{optional_inline}}
 
-  - : `UIEventInit` 辞書で、以下のフィールドを持ちます。
+  - : _{{domxref("Event/Event", "Event()")}} で定義されたプロパティに加え_、以下のプロパティを持つすることができるオブジェクトです。
+    - `detail` {{optional_inline}}
+      - : 数値で、このイベントに関連付けられたイベント依存の値です。
+        既定値は `0` であり {{domxref("UIEvent.detail")}} は、標準イベントのセマンティックを列挙します。
+    - `view` {{optional_inline}}
+      - : イベントに関連付けられた {{domxref("Window")}} です。既定値は `null` です。
+    - `sourceCapabilities` {{optional_inline}} {{non-standard_inline}}
+      - : {{domxref("InputDeviceCapabilities")}} オブジェクトで、タッチイベントを生成する原因となった物理的な機器についての情報を提供します。
 
-    - **`detail`**: 省略可能で、既定値は `0` です。
-      `long` 型で、このイベントに結びつけられたイベント依存の値です。 {{domxref("UIEvent.detail")}} は、標準イベントのセマンティックを列挙します。
-    - **`view`**: 省略可能で、既定値は `null` です。
-      {{domxref("WindowProxy")}} 型で、イベントに関連付けられた {{domxref("Window")}} です。
-    - **`sourceCapabilities`**: {{non-standard_inline}}
-      {{domxref("InputDeviceCapabilities")}} インターフェイスのインスタンスで、タッチイベントを生成する原因となった物理的な危機についての情報を提供します。
+### 返値
 
-    > **メモ:** `UIEventInit` は {{domxref("Event.Event", "EventInit")}} 辞書のフィールドも受け入れます。
+新しい {{domxref("UIEvent")}} オブジェクト。
 
 ## 仕様書
 

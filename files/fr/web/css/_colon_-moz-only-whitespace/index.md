@@ -1,12 +1,12 @@
 ---
-title: ':-moz-only-whitespace'
+title: :-moz-only-whitespace
 slug: Web/CSS/:-moz-only-whitespace
-translation_of: Web/CSS/:-moz-only-whitespace
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-> **Note :** Dans la spécification CSS4 Selectors, le sélecteur {{CSSxRef(":empty")}} a été modifié pour se comporter comme `:-moz-only-whitespace` mais aucun navigateur ne prend actuellement en charge cette fonctionnalité.
+> [!NOTE]
+> Dans la spécification CSS4 Selectors, le sélecteur {{CSSxRef(":empty")}} a été modifié pour se comporter comme `:-moz-only-whitespace` mais aucun navigateur ne prend actuellement en charge cette fonctionnalité.
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:-moz-only-whitespace`** correspond aux éléments qui n'ont aucun nœud enfant, aux nœuds texte vides ou aux nœuds texte ne possédant que des espaces.
 
@@ -19,7 +19,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:-moz-only-whitespace`** 
 ### HTML
 
 ```html
-<div> </div>
+<div></div>
 ```
 
 ### CSS

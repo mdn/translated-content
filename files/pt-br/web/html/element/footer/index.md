@@ -12,21 +12,21 @@ O elemento HTML de Rodapé (\<footer>) representa um rodapé para o seu sectioni
 > - Coloque informações sobre o autor em um elemento {{HTMLElement("address")}} que pode ser incluído no elemento `<footer>`.
 > - O elemento `<footer>` não é sectioning content portanto, não introduz uma nova seção no [outline](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document).
 
-## Contexto de uso:
+## Contexto de uso
 
-| Conteúdo permitido         | [Flow content](/pt-BR/docs/HTML/Content_categories#flow_content), mas não o `<footer>` ou {{HTMLElement("header")}} descendentes.                                                                                                                                |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omissão de tag             | Nenhuma, ambas as tags de início e fim são obrigatórias.                                                                                                                                                                                                                                                       |
-| Parent Elements permitidos | Qualquer elemento que aceite [flow content](/pt-BR/docs/HTML/Content_categories#flow_content). Note-se que um elemento \<footer> não deve ser um descendente de um {{HTMLElement("address")}}, {{HTMLElement("header")}} ou outro elemento `<footer>`. |
-| Documento normativo        | [HTML5, section 4.4.9](http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-footer-element)                                                                                                                                                                                           |
+| Conteúdo permitido         | [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), mas não o `<footer>` ou {{HTMLElement("header")}} descendentes.                                                                                                                      |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omissão de tag             | Nenhuma, ambas as tags de início e fim são obrigatórias.                                                                                                                                                                                                   |
+| Parent Elements permitidos | Qualquer elemento que aceite [flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content). Note-se que um elemento \<footer> não deve ser um descendente de um {{HTMLElement("address")}}, {{HTMLElement("header")}} ou outro elemento `<footer>`. |
+| Documento normativo        | [HTML5, section 4.4.9](https://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-footer-element)                                                                                                                                      |
 
 ## Atributos
 
-Este elemento não tem outros atributos que os [global attributes](/pt-BR/docs/HTML/Global_attributes), comuns a todos os elementos.
+Este elemento não tem outros atributos que os [global attributes](/pt-BR/docs/Web/HTML/Global_attributes), comuns a todos os elementos.
 
 ## DOM Interface
 
-Este elemento implementa a interface [`HTMLElement`](/pt-BR/docs/DOM/element).
+Este elemento implementa a interface [`HTMLElement`](/pt-BR/docs/Web/API/Element).
 
 ## Exemplos
 
@@ -38,7 +38,7 @@ Este elemento implementa a interface [`HTMLElement`](/pt-BR/docs/DOM/element).
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.footer")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,15 +1,18 @@
 ---
-title: Document.enableStyleSheetsForSet()
+title: "Document: enableStyleSheetsForSet() メソッド"
+short-title: enableStyleSheetsForSet()
 slug: Web/API/Document/enableStyleSheetsForSet
+l10n:
+  sourceCommit: 3966c40a3917825e6e467f1592bc7f8d59458e74
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}
+{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 現在のスタイルシートセットの中で指定された名前に一致するスタイルシートを有効化し、それ以外のスタイルシートを (常に有効になるタイトルなしのものを除いて) 無効化します。
 
 ## 構文
 
-```js
+```js-nolint
 enableStyleSheetsForSet(name)
 ```
 
@@ -35,6 +38,10 @@ enableStyleSheetsForSet(name)
 document.enableStyleSheetsForSet("Some style sheet set name");
 ```
 
+## 仕様書
+
+どの仕様書にも含まれていません。
+
 ## ブラウザーの互換性
 
 {{Compat}}
@@ -47,4 +54,3 @@ document.enableStyleSheetsForSet("Some style sheet set name");
 - {{domxref("document.preferredStyleSheetSet")}}
 - {{domxref("document.selectedStyleSheetSet")}}
 - {{domxref("document.enableStyleSheetsForSet()")}}
-- [外部スタイルシートでタイトルを正しく使用する](/ja/docs/Archive/Web_Standards/Correctly_Using_Titles_With_External_Stylesheets)

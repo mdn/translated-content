@@ -1,34 +1,37 @@
 ---
-title: Request.credentials
+title: "Request: credentials プロパティ"
+short-title: credentials
 slug: Web/API/Request/credentials
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: d6528c3d7881662e6aaa77cd2a1a49e3af349088
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-**`credentials`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、オリジン間リクエストの場合に、ユーザーエージェントが他のドメインからクッキーを送信または受信するべきかどうかを示すものです。
+**`credentials`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、[`credentials`](/ja/docs/Web/API/RequestInit#credentials) オプションで指定された {{domxref("Request.Request()", "Request()")}} コンストラクターの値を反映します。このプロパティは、ブラウザーがリクエストに資格情報を送信するかどうか、また、**`Set-Cookie`** レスポンスヘッダーが尊重されるかどうかを決定します。
+
+資格情報とは、クッキー、TLS クライアント証明書、ユーザー名とパスワードを格納する認証ヘッダーなどです。
+
+詳しくは[資格情報を含める](/ja/docs/Web/API/Fetch_API/Using_Fetch#資格情報を含める)を参照してください。
 
 ### 値
 
-`RequestCredentials` 辞書の値で、オリジン間リクエストの場合、ユーザーエージェントが他のドメインからクッキーを送信するか受信するかを示します。使用可能な値は以下の通りです。
+文字列で、以下の値のうちのいずれかです。
 
 - `omit`
-  - : クッキーを送受信しません。
+  - : リクエストに資格情報を記載したり、レスポンスに資格情報を含めたりしません。
 - `same-origin`
-  - : URL が呼び出し元のスクリプトと同一オリジンだった場合のみ、ユーザーの資格情報 (HTTP Basic 認証、など) を送信します。 **これが既定値です。**
+  - : 同一オリジンリクエストにのみ、資格情報を送信したり含めたりします。
 - `include`
-  - : オリジン間の呼び出しであっても、常にユーザーの資格情報 (クッキー、HTTP Basic 認証、、など) を送信します。
-
-これは XHR の [`withCredentials`](/ja/docs/Web/API/XMLHttpRequest/withCredentials) フラグと似ていますが、有効な値が 2 つではなく 3 つあります。
+  - : オリジン間のリクエストであっても、常に資格情報を含めます。
 
 ## 例
 
-次のスニペットは、{{domxref("Request.Request()")}} コンストラクターを使って（スクリプトと同じディレクトリーにある画像ファイルのために）新しいリクエストを生成してから、リクエストの資格情報を変数に保存しています。
+次のスニペットは、{{domxref("Request.Request", "Request()")}} コンストラクターを使って（スクリプトと同じディレクトリーにある画像ファイルのために）新しいリクエストを生成してから、リクエストの資格情報を変数に保存しています。
 
 ```js
-const myRequest = new Request('flowers.jpg');
-const myCred = myRequest.credentials; // 既定で "same-origin" を返す
+const request = new Request("flowers.jpg");
+const credentials = request.credentials; // 既定で "same-origin" を返す
 ```
 
 ## 仕様書

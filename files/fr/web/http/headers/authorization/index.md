@@ -1,12 +1,6 @@
 ---
 title: Authorization
 slug: Web/HTTP/Headers/Authorization
-tags:
-  - HTTP
-  - Reference
-  - en-tête
-  - requête
-translation_of: Web/HTTP/Headers/Authorization
 ---
 
 {{HTTPSidebar}}
@@ -40,18 +34,19 @@ Authorization: <type> <credentials>
 
 - _\<type>_
 
-  - : [Le type d'authentification](/fr/docs/Web/HTTP/Authentication#Schéma_d'authentification). Le type [`"Basic"`](/fr/docs/Web/HTTP/Authentication#Basic_authentication_scheme) est souvent utilisé. Pour connaître les autres types :
+  - : [Le type d'authentification](/fr/docs/Web/HTTP/Authentication#schéma_d'authentification). Le type [`"Basic"`](/fr/docs/Web/HTTP/Authentication#basic_authentication_scheme) est souvent utilisé. Pour connaître les autres types :
 
-    - [IANA registry of Authentication schemes](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
+    - [IANA registry of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
 
 - _\<credentials>_
 
   - : Si c'est le type d'authentification `"Basic"` qui est utilisé, les identifiants sont construits de la manière suivante :
 
     - L'identifiant de l'utilisateur et le mot de passe sont combinés avec deux-points : (`aladdin:sesameOuvreToi`).
-    - Cette chaîne de caractères est ensuite encodée en [base64](/fr/docs/Web/API/WindowBase64/Décoder_encoder_en_base64) (`YWxhZGRpbjpzZXNhbWVPdXZyZVRvaQ==`).
+    - Cette chaîne de caractères est ensuite encodée en [base64](/fr/docs/Glossary/Base64) (`YWxhZGRpbjpzZXNhbWVPdXZyZVRvaQ==`).
 
-    > **Note :** L'encodage en Base64 n'est pas un chiffrement ou un hachage ! Cette méthode est aussi peu sûre que d'envoyer les identifiants en clair (l'encodage base64 est un encodage réversible). Il faudra privilégier HTTPS lorsqu'on emploie une authentification "basique".
+    > [!NOTE]
+    > L'encodage en Base64 n'est pas un chiffrement ou un hachage ! Cette méthode est aussi peu sûre que d'envoyer les identifiants en clair (l'encodage base64 est un encodage réversible). Il faudra privilégier HTTPS lorsqu'on emploie une authentification "basique".
 
 ## Exemples
 
@@ -63,10 +58,11 @@ Voir aussi l'article [authentification HTTP](/fr/docs/Web/HTTP/Authentication) a
 
 ## Spécifications
 
-| Spécification                                        | Titre                                  |
-| ---------------------------------------------------- | -------------------------------------- |
-| {{RFC("7235", "Authorization", "4.2")}} | HTTP/1.1 : Authentification            |
-| {{RFC("7617")}}                                 | Schéma d'Authentification HTTP 'Basic' |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir
 

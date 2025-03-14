@@ -9,19 +9,17 @@ slug: Web/API/Window/clearImmediate
 
 此方法用来清除 {{ domxref("window.setImmediate") }}.
 
-> **备注：** 该方法最近刚刚被微软提出，可能不会被 w3c 批准成为标准，目前只有最新版 Internet Explorer 实现了该方法。
-
 ## 语法
 
-```js
-window.clearImmediate(immediateID)
+```js-nolint
+clearImmediate(immediateID)
 ```
 
 这里的 immediateID 是由{{ domxref("window.setImmediate") }}返回的。
 
 ## 例子
 
-```
+```js
 var immediateID = setImmediate(function () {
   // Run some code
 }

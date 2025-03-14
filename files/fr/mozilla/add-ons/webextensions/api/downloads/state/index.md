@@ -1,20 +1,9 @@
 ---
 title: downloads.State
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/State
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
-  - state
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/State
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type d'`état` de l'API {{WebExtAPIRef("downloads")}} définit différents états dans lesquels un téléchargement en cours peut se trouver.
 
@@ -31,17 +20,18 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - `complete`
   - : Le téléchargement s'est terminé avec succès.
 
-> **Note :** Ces constantes de chaîne ne changeront jamais, mais de nouvelles constantes peuvent être ajoutées.
+> [!NOTE]
+> Ces constantes de chaîne ne changeront jamais, mais de nouvelles constantes peuvent être ajoutées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.State")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

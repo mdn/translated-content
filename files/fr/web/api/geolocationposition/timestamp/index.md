@@ -1,7 +1,6 @@
 ---
 title: GeolocationPosition.timestamp
 slug: Web/API/GeolocationPosition/timestamp
-translation_of: Web/API/GeolocationPosition/timestamp
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
@@ -11,7 +10,7 @@ La propriété en lecture seule **`GeolocationPosition.timestamp`** retourne un 
 ## Syntaxe
 
 ```js
-var timestamp = geolocationPositionInstance.timestamp
+var timestamp = geolocationPositionInstance.timestamp;
 ```
 
 ### Valeur
@@ -28,5 +27,5 @@ Un objet {{domxref("DOMTimeStamp")}}.
 
 ## Voir aussi
 
-- [Utiliser l'API de Geolocation](/fr/docs/Web/API/Geolocation_API/Using)
+- [Utiliser l'API de Geolocation](/fr/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - {{domxref("GeolocationPosition")}}

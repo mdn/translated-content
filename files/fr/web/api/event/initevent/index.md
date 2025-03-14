@@ -1,13 +1,6 @@
 ---
 title: event.initEvent
 slug: Web/API/Event/initEvent
-tags:
-  - API
-  - DOM
-  - Evènement
-  - Méthode
-  - Reference
-translation_of: Web/API/Event/initEvent
 ---
 
 {{ApiRef("DOM")}}{{deprecated_header}}
@@ -16,14 +9,15 @@ La méthode **`Event.initEvent()`** est utilisée pour initialiser la valeur d'u
 
 Les évènements initialisés par ce moyen ont été créés par la méthode {{domxref("Document.createEvent()")}}. Celle-ci doit être appelée à définir l'évènement avant qu'il ne soit distribué, en utilisant {{domxref("EventTarget.dispatchEvent()")}}. Une fois l'évènement transmis, la méthode ne fait plus rien.
 
-> **Note :** Ne pas utiliser cette méthode qui est dépréciée.
+> [!NOTE]
+> Ne pas utiliser cette méthode qui est dépréciée.
 >
-> À la place, utilisez un constructeur d'évènements spécifique comme {{domxref("Event.Event", "Event()")}} . La page [Création et déclenchement d'évènements](/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events) vous donne plus d'informations sur la manière de les utiliser.
+> À la place, utilisez un constructeur d'évènements spécifique comme {{domxref("Event.Event", "Event()")}} . La page [Création et déclenchement d'évènements](/fr/docs/Web/Events/Creating_and_triggering_events) vous donne plus d'informations sur la manière de les utiliser.
 
 ## Syntaxe
 
 ```js
-event.initEvent(type, bubbles, cancelable)
+event.initEvent(type, bubbles, cancelable);
 ```
 
 - `type`
@@ -37,16 +31,20 @@ event.initEvent(type, bubbles, cancelable)
 
 ```js
 // Crée un évènement.
-var event = document.createEvent('Event');
+var event = document.createEvent("Event");
 
 // Crée un évènement click qui doit se propager vers le haut
 // et ne peut être annulé
-event.initEvent('click', true, false);
+event.initEvent("click", true, false);
 
 // Écoute les évènements.
-elem.addEventListener('click', function (e) {
-  // e.target matches elem
-}, false);
+elem.addEventListener(
+  "click",
+  function (e) {
+    // e.target matches elem
+  },
+  false,
+);
 
 elem.dispatchEvent(event);
 ```

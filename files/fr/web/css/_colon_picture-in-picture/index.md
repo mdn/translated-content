@@ -1,8 +1,6 @@
 ---
-title: ':picture-in-picture'
+title: :picture-in-picture
 slug: Web/CSS/:picture-in-picture
-translation_of: Web/CSS/:picture-in-picture
-browser-compat: css.selectors.picture-in-picture
 l10n:
   sourceCommit: 257486f64b2472dda4996a4ea7b6b5305e46f863
 ---
@@ -45,7 +43,7 @@ Dans cet exemple, la boîte de la vidéo aura une ombre portée rouge ou non sel
 
 - [API <i lang="en">Picture-in-picture</i>](/fr/docs/Web/API/Picture-in-Picture_API)
 - [`HTMLVideoElement.requestPictureInPicture()`](/fr/docs/Web/API/HTMLVideoElement/requestPictureInPicture)
-- [`HTMLVideoElement.autoPictureInPicture`](/fr/docs/Web/API/HTMLVideoElement/autoPictureInPicture)
+- [`HTMLVideoElement.autoPictureInPicture`](/fr/docs/Web/API/HTMLVideoElement)
 - [`HTMLVideoElement.disablePictureInPicture`](/fr/docs/Web/API/HTMLVideoElement/disablePictureInPicture)
 - [`Document.pictureInPictureEnabled`](/fr/docs/Web/API/Document/pictureInPictureEnabled)
 - [`Document.exitPictureInPicture()`](/fr/docs/Web/API/Document/exitPictureInPicture)

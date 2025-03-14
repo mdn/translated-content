@@ -35,7 +35,7 @@ window.scrollTo(0, 1000);
 window.scrollTo({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 
@@ -47,10 +47,8 @@ window.scrollTo({
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{ SpecName('CSSOM View', '#dom-window-scroll', 'window.scroll()') }} | {{ Spec2('CSSOM View') }} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.scrollTo")}}
+{{Compat}}

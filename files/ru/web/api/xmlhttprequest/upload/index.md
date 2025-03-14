@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.upload
 slug: Web/API/XMLHttpRequest/upload
-translation_of: Web/API/XMLHttpRequest/upload
 ---
 
 {{APIRef('XMLHttpRequest')}}
@@ -24,6 +23,6 @@ translation_of: Web/API/XMLHttpRequest/upload
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

@@ -1,20 +1,28 @@
 ---
 title: 설정자
 slug: Web/JavaScript/Reference/Functions/set
-tags:
-  - ECMAScript 5
-  - Functions
-  - JavaScript
-  - Language feature
-  - Reference
-browser-compat: javascript.functions.set
-translation_of: Web/JavaScript/Reference/Functions/set
 ---
+
 {{jsSidebar("Functions")}}
 
 **`set`** 구문은 객체의 속성에 할당을 시도할 때 호출할 함수를 바인딩합니다.
 
-{{EmbedInteractiveExample("pages/js/functions-setter.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Setter")}}
+
+```js interactive-example
+const language = {
+  set current(name) {
+    this.log.push(name);
+  },
+  log: [],
+};
+
+language.current = "EN";
+language.current = "FA";
+
+console.log(language.log);
+// Expected output: Array ["EN", "FA"]
+```
 
 ## 구문
 
@@ -67,13 +75,13 @@ const language = {
   set current(name) {
     this.log.push(name);
   },
-  log: []
-}
+  log: [],
+};
 
-language.current = 'EN';
+language.current = "EN";
 console.log(language.log); // ['EN']
 
-language.current = 'FA';
+language.current = "FA";
 console.log(language.log); // ['EN', 'FA']
 ```
 
@@ -92,33 +100,37 @@ delete language.current;
 이미 존재하는 객체에 설정자를 추가하려면 {{jsxref("Object.defineProperty()")}}를 사용하세요.
 
 ```js
-const o = {a: 0};
+const o = { a: 0 };
 
-Object.defineProperty(o, 'b', {
-  set: function(x) { this.a = x / 2; }
+Object.defineProperty(o, "b", {
+  set: function (x) {
+    this.a = x / 2;
+  },
 });
 
 o.b = 10;
 // 설정자 실행, a 속성에 10 / 2 = 5 할당
 
-console.log(o.a)
+console.log(o.a);
 // 5
 ```
 
 ### 계산된 속성 이름 사용하기
 
 ```js
-const expr = 'foo';
+const expr = "foo";
 
 const obj = {
-  baz: 'bar',
-  set [expr](v) { this.baz = v; }
+  baz: "bar",
+  set [expr](v) {
+    this.baz = v;
+  },
 };
 
 console.log(obj.baz);
 //  "bar"
 
-obj.foo = 'baz';
+obj.foo = "baz";
 //  run the setter
 
 console.log(obj.baz);
@@ -138,6 +150,6 @@ console.log(obj.baz);
 - [접근자](/ko/docs/Web/JavaScript/Reference/Functions/get)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
-- JavaScript 안내서의 [접근자와 설정자 정의하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
+- [`Object.prototype.__defineGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
+- JavaScript 안내서의 [접근자와 설정자 정의하기](/ko/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)

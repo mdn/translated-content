@@ -1,14 +1,9 @@
 ---
 title: SGML
 slug: Glossary/SGML
-tags:
-  - CodingScripting
-  - Composing
-  - Glossary
-  - SGML
-  - es
-translation_of: Glossary/SGML
 ---
+
+{{GlossarySidebar}}
 
 El _Lenguaje de marcado generalizado estándar_ (**SGML**) es una especificación {{Glossary("ISO")}} para definir lenguajes de marcado declarativos.
 

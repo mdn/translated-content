@@ -1,9 +1,6 @@
 ---
 title: extend
 slug: Web/API/Selection/extend
-tags:
-  - páginas_a_traducir
-translation_of: Web/API/Selection/extend
 ---
 
 {{ ApiRef("DOM") }}

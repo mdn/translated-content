@@ -1,15 +1,54 @@
 ---
 title: <header>
 slug: Web/HTML/Element/header
-translation_of: Web/HTML/Element/header
-browser-compat: html.elements.header
 ---
 
 {{HTMLSidebar}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<header>`** représente du contenu introductif, généralement un groupe de contenu introductif ou de contenu aidant à la navigation. Il peut contenir des éléments de titre, mais aussi d'autres éléments tels qu'un logo, un formulaire de recherche, le nom d'auteur, etc.
 
-{{EmbedInteractiveExample("pages/tabbed/header.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;header&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<header>
+  <a class="logo" href="#">Cute Puppies Express!</a>
+</header>
+
+<article>
+  <header>
+    <h1>Beagles</h1>
+    <time>08.12.2014</time>
+  </header>
+  <p>
+    I love beagles <em>so</em> much! Like, really, a lot. They’re adorable and
+    their ears are so, so snugly soft!
+  </p>
+</article>
+```
+
+```css interactive-example
+.logo {
+  background: left / cover
+    url("/shared-assets/images/examples/puppy-header.jpg");
+  display: flex;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  font:
+    bold calc(1em + 2 * (100vw - 120px) / 100) "Dancing Script",
+    fantasy;
+  color: #ff0083;
+  text-shadow: #000 2px 2px 0.2rem;
+}
+
+header > h1 {
+  margin-bottom: 0;
+}
+
+header > time {
+  font: italic 0.7rem sans-serif;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -88,9 +127,13 @@ Cet élément ne possède que les [attributs universels](/fr/docs/Web/HTML/Globa
 ```html
 <header>
   <h1>Titre principal</h1>
-  <img src="mdn-logo-sm.png" alt="Logo de MDN">
+  <img src="mdn-logo-sm.png" alt="Logo de MDN" />
 </header>
 ```
+
+#### Résultat
+
+{{EmbedLiveSample('','100%', '430')}}
 
 ### En-tête d'un article
 
@@ -98,16 +141,25 @@ Cet élément ne possède que les [attributs universels](/fr/docs/Web/HTML/Globa
 <article>
   <header>
     <h2>La planète Terre</h2>
-    <p>Publié le mercredi <time datetime="2017-10-04">4 octobre 2017</time> par Jeanne Smith</p>
+    <p>
+      Publié le mercredi <time datetime="2017-10-04">4 octobre 2017</time> par
+      Jeanne Smith
+    </p>
   </header>
   <p>Nous vivons sur une planète bleue et verte</p>
-  <p><a href="https://example.com/the-planet-earth/">Poursuivre la lecture…</a></p>
+  <p>
+    <a href="https://example.com/the-planet-earth/">Poursuivre la lecture…</a>
+  </p>
 </article>
 ```
 
+#### Résultat
+
+{{EmbedLiveSample('','100%','270')}}
+
 ## Accessibilité
 
-L'élément `<header>` définit un point de repère [`banner`](/fr/docs/Web/Accessibility/ARIA/Roles/Banner_role) lorsque son contexte est un élément [`<body>`](/fr/docs/Web/HTML/Element/body). Lorsqu'un élément HTML `<header>` descend de certains éléments (tels que [`<article>`](/fr/docs/Web/HTML/Element/article), [`<aside>`](/fr/docs/Web/HTML/Element/aside), [`<main>`](/fr/docs/Web/HTML/Element/main), [`<nav>`](/fr/docs/Web/HTML/Element/nav) ou [`<section>`](/fr/docs/Web/HTML/Element/section)), il n'est pas considéré comme un repère `banner`.
+L'élément `<header>` définit un point de repère [`banner`](/fr/docs/Web/Accessibility/ARIA/Roles/banner_role) lorsque son contexte est un élément [`<body>`](/fr/docs/Web/HTML/Element/body). Lorsqu'un élément HTML `<header>` descend de certains éléments (tels que [`<article>`](/fr/docs/Web/HTML/Element/article), [`<aside>`](/fr/docs/Web/HTML/Element/aside), [`<main>`](/fr/docs/Web/HTML/Element/main), [`<nav>`](/fr/docs/Web/HTML/Element/nav) ou [`<section>`](/fr/docs/Web/HTML/Element/section)), il n'est pas considéré comme un repère `banner`.
 
 ## Spécifications
 

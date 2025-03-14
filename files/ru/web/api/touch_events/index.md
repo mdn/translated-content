@@ -1,8 +1,8 @@
 ---
 title: События касаний (тач-события)
 slug: Web/API/Touch_events
-translation_of: Web/API/Touch_events
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 Чтобы предоставить качественную поддержку пользовательского интерфейса, связанного с касаниями, тач-события предлагают возможность интерпретировать действия пальца (или стилуса) на сенсорных экранах или трекпадах.
@@ -34,7 +34,8 @@ translation_of: Web/API/Touch_events
 
 В этом примере отслеживаются несколько касаний одновременно, позволяя пользователю рисовать в {{HTMLElement("canvas")}} несколькими пальцами одновременно. Это будет работать лишь в браузере, который поддерживает touch-события.
 
-> **Примечание:** В тексте ниже для описания контакта с поверхностью используется понятие "палец", но это также может быть стилус или другой способ контакта.
+> [!NOTE]
+> В тексте ниже для описания контакта с поверхностью используется понятие "палец", но это также может быть стилус или другой способ контакта.
 
 ### Создание canvas
 
@@ -42,8 +43,9 @@ translation_of: Web/API/Touch_events
 <canvas id="canvas" width="600" height="600" style="border:solid black 1px;">
   Ваш браузер не поддерживает элемент canvas.
 </canvas>
-<br>
-Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
+<br />
+Log:
+<pre id="log" style="border: 1px solid #ccc;"></pre>
 ```
 
 ### Добавление обработчиков событий
@@ -72,7 +74,7 @@ document.addEventListener("DOMContentLoaded", startup);
 var ongoingTouches = [];
 ```
 
-Когда возникает событие {{event("touchstart")}}, свидетельствующее о новом касании к поверхности, вызывается приведённая ниже функция `handleStart()`.
+Когда возникает событие, свидетельствующее о новом касании к поверхности, вызывается приведённая ниже функция `handleStart()`.
 
 ```js
 function handleStart(evt) {
@@ -87,7 +89,7 @@ function handleStart(evt) {
     ongoingTouches.push(copyTouch(touches[i]));
     var color = colorForTouch(touches[i]);
     ctx.beginPath();
-    ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // a circle at the start
+    ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false); // a circle at the start
     ctx.fillStyle = color;
     ctx.fill();
     console.log("touchstart:" + i + ".");
@@ -101,7 +103,7 @@ function handleStart(evt) {
 
 #### Рисование движением
 
-Каждый раз, когда двигается один или несколько пальцев, срабатывает событие {{event("touchmove")}}, в результате чего вызывается наша функция `handleMove()`.В этом примере данная функция ответственна за обновление данных о касании и рисование линии от предыдущей до текущей точки касания.
+Каждый раз, когда двигается один или несколько пальцев, вызывается наша функция `handleMove()`.В этом примере данная функция ответственна за обновление данных о касании и рисование линии от предыдущей до текущей точки касания.
 
 ```js
 function handleMove(evt) {
@@ -115,17 +117,25 @@ function handleMove(evt) {
     var idx = ongoingTouchIndexById(touches[i].identifier);
 
     if (idx >= 0) {
-      console.log("continuing touch "+idx);
+      console.log("continuing touch " + idx);
       ctx.beginPath();
-      console.log("ctx.moveTo(" + ongoingTouches[idx].pageX + ", " + ongoingTouches[idx].pageY + ");");
+      console.log(
+        "ctx.moveTo(" +
+          ongoingTouches[idx].pageX +
+          ", " +
+          ongoingTouches[idx].pageY +
+          ");",
+      );
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-      console.log("ctx.lineTo(" + touches[i].pageX + ", " + touches[i].pageY + ");");
+      console.log(
+        "ctx.lineTo(" + touches[i].pageX + ", " + touches[i].pageY + ");",
+      );
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
       ctx.lineWidth = 4;
       ctx.strokeStyle = color;
       ctx.stroke();
 
-      ongoingTouches.splice(idx, 1, copyTouch(touches[i]));  // swap in the new touch record
+      ongoingTouches.splice(idx, 1, copyTouch(touches[i])); // swap in the new touch record
       console.log(".");
     } else {
       console.log("can't figure out which touch to continue");
@@ -162,8 +172,8 @@ function handleEnd(evt) {
       ctx.beginPath();
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
-      ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8);  // and a square at the end
-      ongoingTouches.splice(idx, 1);  // remove it; we're done
+      ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8); // and a square at the end
+      ongoingTouches.splice(idx, 1); // remove it; we're done
     } else {
       console.log("can't figure out which touch to end");
     }
@@ -185,7 +195,7 @@ function handleCancel(evt) {
 
   for (var i = 0; i < touches.length; i++) {
     var idx = ongoingTouchIndexById(touches[i].identifier);
-    ongoingTouches.splice(idx, 1);  // remove it; we're done
+    ongoingTouches.splice(idx, 1); // remove it; we're done
   }
 }
 ```
@@ -209,7 +219,9 @@ function colorForTouch(touch) {
   g = g.toString(16); // make it a hex digit
   b = b.toString(16); // make it a hex digit
   var color = "#" + r + g + b;
-  console.log("color for touch with identifier " + touch.identifier + " = " + color);
+  console.log(
+    "color for touch with identifier " + touch.identifier + " = " + color,
+  );
   return color;
 }
 ```
@@ -239,7 +251,7 @@ function ongoingTouchIndexById(idToFind) {
       return i;
     }
   }
-  return -1;    // not found
+  return -1; // not found
 }
 ```
 
@@ -247,14 +259,14 @@ function ongoingTouchIndexById(idToFind) {
 
 ```js
 function log(msg) {
-  var p = document.getElementById('log');
+  var p = document.getElementById("log");
   p.innerHTML = msg + "\n" + p.innerHTML;
 }
 ```
 
 Если ваш браузер поддерживает это, вы можете {{LiveSampleLink('Example', 'посмотреть живой пример')}}.
 
-[Пример sFiddle](http://jsfiddle.net/Darbicus/z3Xdx/10/)
+[Пример sFiddle](https://jsfiddle.net/Darbicus/z3Xdx/10/)
 
 ## Дополнительные советы
 
@@ -262,14 +274,17 @@ function log(msg) {
 
 ### Обработка кликов
 
-Поскольку вызов `preventDefault()` для события {{event("touchstart")}} или первого события из серии событий {{domxref("Element/touchmove_event", "touchmove")}} предотвращает запуск соответствующих событий мыши, более распространена практика вызова `preventDefault()` именно для события `touchmove`, а не `touchstart`. Таким образом, события мыши всё ещё будут вызываться, а такие элементы, как ссылки, будут продолжать работать. В качестве альтернативы, в некоторых фреймворках для этой же цели события касаний дублируются событиями мыши.
+Поскольку вызов `preventDefault()` для первого из серии событий {{domxref("Element/touchmove_event", "touchmove")}} предотвращает запуск соответствующих событий мыши, более распространена практика вызова `preventDefault()` именно для события `touchmove`, а не `touchstart`. Таким образом, события мыши всё ещё будут вызываться, а такие элементы, как ссылки, будут продолжать работать. В качестве альтернативы, в некоторых фреймворках для этой же цели события касаний дублируются событиями мыши.
 
 Данный пример очень упрощён и может привести к странному поведению. Он уместен исключительно как учебный пример.
 
 ```js
 function onTouch(evt) {
   evt.preventDefault();
-  if (evt.touches.length > 1 || (evt.type == "touchend" && evt.touches.length > 0))
+  if (
+    evt.touches.length > 1 ||
+    (evt.type == "touchend" && evt.touches.length > 0)
+  )
     return;
 
   var newEvt = document.createEvent("MouseEvents");
@@ -291,9 +306,23 @@ function onTouch(evt) {
       break;
   }
 
-  newEvt.initMouseEvent(type, true, true, evt.originalTarget.ownerDocument.defaultView, 0,
-    touch.screenX, touch.screenY, touch.clientX, touch.clientY,
-    evt.ctrlKey, evt.altKey, evt.shiftKey, evt.metaKey, 0, null);
+  newEvt.initMouseEvent(
+    type,
+    true,
+    true,
+    evt.originalTarget.ownerDocument.defaultView,
+    0,
+    touch.screenX,
+    touch.screenY,
+    touch.clientX,
+    touch.clientY,
+    evt.ctrlKey,
+    evt.altKey,
+    evt.shiftKey,
+    evt.metaKey,
+    0,
+    null,
+  );
   evt.originalTarget.dispatchEvent(newEvt);
 }
 ```
@@ -302,15 +331,11 @@ function onTouch(evt) {
 
 Один из способов запретить использовать на странице `pinchZoom` (зум с помощью щипка), – вызвать `preventDefault()` для второго касания, когда одно касание уже активно. Такое поведение плохо прописано в спецификации событий касаний и приводит к разному поведению в разных браузерах. Например, iOS предотвратит зум, но всё ещё будет позволять перетаскивание (panning) двумя пальцами; в Android, наоборот, можно будет осуществлять перетаскивание (panning), но не зум; Opera и Firefox на данный момент предотвращают и перетаскивание (panning) и зум. На данный момент для запрета использования зума рекомендуется полагаться не на какое-то конкретное поведение, а на meta-данные для "viewport".
 
-## Спецификация
+## Спецификации
 
-| Specification                                       |
-| --------------------------------------------------- |
-| [Touch Events](https://w3c.github.io/touch-events/) |
+{{Specifications}}
 
-## Совместимость с браузером
-
-### Touch
+## Совместимость с браузерами
 
 События касаний обычно доступны на устройствах с сенсорными экранами, но многие браузеры делают API событий касаний недоступными на всех компьютерах, даже имеющих сенсорный экран.
 
@@ -318,12 +343,4 @@ function onTouch(evt) {
 
 Для поддержки и касаний и мыши на всех типах устройств, используйте вместо этого [события указателя](/ru/docs/Web/API/Pointer_events)
 
-{{Compat("api.Touch")}}
-
-### Firefox, события касаний и многопроцессность (e10s)
-
-В Firefox события касания отключены, когда отключён e10s (электролиз; [многопроцессорный Firefox](/ru/docs/Mozilla/Firefox/Multiprocess_Firefox)). e10s включён по умолчанию в Firefox, но может в конечном итоге отключаться в определённых ситуациях, например, когда установлены определённые инструменты специальных возможностей или надстройки Firefox, для работы которых требуется отключение e10s. Это означает, что даже на настольном компьютере / ноутбуке с сенсорным экраном сенсорные события не будут включены.
-
-Вы можете проверить, отключён ли e10s, перейдя в `about:support` и посмотрев на запись «Многопроцессорная Windows» в разделе «Основы приложения». 1/1 означает, что он включён, 0/1 означает отключён.
-
-Если вы хотите принудительно включить e10s - чтобы явно повторно включить поддержку сенсорных событий - вам нужно перейти к `about:config` и создать новое логическое предпочтение `browser.tabs.remote.force-enable`. Установите значение `true`, перезапустите браузер, и e10s будет включён независимо от любых других настроек.
+{{Compat}}

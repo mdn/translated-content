@@ -33,8 +33,8 @@ slug: Web/API/Element/attachShadow
 
 ## 语法
 
-```
-var shadowroot = element.attachShadow(shadowRootInit);
+```js-nolint
+attachShadow(options)
 ```
 
 ### 参数
@@ -49,13 +49,15 @@ var shadowroot = element.attachShadow(shadowRootInit);
 
         - `open` shadow root 元素可以从 js 外部访问根节点，例如使用 {{domxref("Element.shadowRoot")}}:
 
-        ```
+        ```js
+        element.attachShadow({ mode: "open" });
         element.shadowRoot; // 返回一个 ShadowRoot 对象
         ```
 
         - `closed` 拒绝从 js 外部访问关闭的 shadow root 节点
 
-        ```
+        ```js
+        element.attachShadow({ mode: "closed" });
         element.shadowRoot; // 返回 null
         ```
 
@@ -71,8 +73,8 @@ var shadowroot = element.attachShadow(shadowRootInit);
 
 | 异常                             | 说明                                                                                                 |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `InvalidStateError 无效状态错误` | 您添加的元素已经是一个 shadow host（影子主机）.                                                      |
-| `NotSupportedError 不被支持错误` | 您应该添加 HTML 元素的命名空间之外的 shadow root，或者这个元素不能有其他 shadow 挂载到它上面 (见上). |
+| `InvalidStateError 无效状态错误` | 你添加的元素已经是一个 shadow host（影子主机）.                                                      |
+| `NotSupportedError 不被支持错误` | 你应该添加 HTML 元素的命名空间之外的 shadow root，或者这个元素不能有其他 shadow 挂载到它上面 (见上). |
 
 ## 示例
 
@@ -88,33 +90,33 @@ class WordCount extends HTMLParagraphElement {
     // 计数器指向元素的父级
     var wcParent = this.parentNode;
 
-    function countWords(node){
-      var text = node.innerText || node.textContent
+    function countWords(node) {
+      var text = node.innerText || node.textContent;
       return text.trim().split(/\s+/g).length;
     }
 
-    var count = 'Words: ' + countWords(wcParent);
+    var count = "Words: " + countWords(wcParent);
 
     // 创建一个 shadow root
-    var shadow = this.attachShadow({mode: 'open'});
+    var shadow = this.attachShadow({ mode: "open" });
 
     // 创建文本节点并向其添加计数器
-    var text = document.createElement('span');
+    var text = document.createElement("span");
     text.textContent = count;
 
     // 将其添加到 shadow root 上
     shadow.appendChild(text);
 
     // 当元素内容发生变化时更新计数
-    setInterval(function() {
-      var count = 'Words: ' + countWords(wcParent);
+    setInterval(function () {
+      var count = "Words: " + countWords(wcParent);
       text.textContent = count;
     }, 200);
   }
 }
 
 // 定义新元素
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 ## 规范

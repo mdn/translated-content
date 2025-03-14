@@ -1,9 +1,6 @@
 ---
 title: Event.explicitOriginalTarget
 slug: Web/API/Event/explicitOriginalTarget
-page-type: web-api-instance-property
-translation_of: Web/API/Event/explicitOriginalTarget
-browser-compat: api.Event.explicitOriginalTarget
 l10n:
   sourceCommit: 95b52aa7aeabbd2670f762da4fb7c0b0133f4d9f
 ---
@@ -32,4 +29,4 @@ Il s'agit d'une propriété spécifique à Mozilla qui ne fait partie d'aucune s
 
 ## Voir aussi
 
-- [Comparaison des cibles d'évènements](/fr/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [Comparaison des cibles d'évènements](/fr/docs/Learn/JavaScript/Building_blocks/Event_bubbling)

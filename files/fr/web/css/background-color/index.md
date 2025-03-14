@@ -1,11 +1,6 @@
 ---
 title: background-color
 slug: Web/CSS/background-color
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/background-color
 ---
 
 {{CSSRef}}
@@ -20,22 +15,21 @@ La propriété **`background-color`** permet de définir la couleur utilisée po
 /* Valeurs avec un mot-clé */
 background-color: red;
 
-
 /* Valeur hexadécimale */
-background-color: #bbff00;    /* Complètement opaque */
-background-color: #bf0;       /* Complètement opaque - notation raccourcie */
-background-color: #11ffee00;  /* Complètement transparent */
-background-color: #1fe0;      /* Complètement transparent - notation raccourcie */
-background-color: #11ffeeff;  /* Complètement opaque */
-background-color: #1fef;      /* Complètement opaque - notation raccourcie */
+background-color: #bbff00; /* Complètement opaque */
+background-color: #bf0; /* Complètement opaque - notation raccourcie */
+background-color: #11ffee00; /* Complètement transparent */
+background-color: #1fe0; /* Complètement transparent - notation raccourcie */
+background-color: #11ffeeff; /* Complètement opaque */
+background-color: #1fef; /* Complètement opaque - notation raccourcie */
 
 /* Valeur RGB */
 background-color: rgb(255, 255, 128);
 
 /* Valeur RGBA : une valeur RGB avec un canal alpha */
-background-color: rgba(117, 190, 218, 0.0); /* 0.0 - transparent */
+background-color: rgba(117, 190, 218, 0); /* 0.0 - transparent */
 background-color: rgba(117, 190, 218, 0.5); /* 0.5 - semi-transparent */
-background-color: rgba(117, 190, 218, 1.0); /* 1.0 - opaque */
+background-color: rgba(117, 190, 218, 1); /* 1.0 - opaque */
 
 /* Valeur HSLA */
 background-color: hsla(50, 33%, 25%, 0.75);
@@ -76,30 +70,24 @@ La propriété `background-color` se définit grâce à une valeur de type `<col
 }
 
 .exemple_deux {
-  background-color: rgb(153,102,153);
-  color: rgb(255,255,204);
+  background-color: rgb(153, 102, 153);
+  color: rgb(255, 255, 204);
 }
 
 .exemple_trois {
   background-color: #777799;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 ```
 
 ### HTML
 
 ```html
-<div class="exemple_un">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exemple_un">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="exemple_deux">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exemple_deux">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="exemple_trois">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exemple_trois">Lorem ipsum dolor sit amet, consectetuer</div>
 ```
 
 ### Résultat
@@ -113,7 +101,7 @@ Il est important de vérifier que le contraste entre la couleur d'arrière-plan 
 Le ratio de contraste entre les couleurs est déterminé en comparant la luminosité de la couleur du texte et celle de la couleur d'arrière-plan. Pour respecter les règles d'accessibilité [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag), il faut avoir un ratio de 4.5:1 pour le contenu textuel normal et un ratio de 3:1 pour les textes plus grands comme les titres (un texte sera considéré comme grand s'il est en gras et mesure au moins 18.66px ou s'il mesure au moins 24 pixels).
 
 - [Vérificateur de contraste WebAIM](https://webaim.org/resources/contrastchecker/)
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [_Understanding Success Criterion 1.4.3, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## Spécifications
@@ -126,7 +114,7 @@ Le ratio de contraste entre les couleurs est déterminé en comparant la luminos
 
 ## Voir aussi
 
-- [Gérer plusieurs arrières-plans](/fr/docs/Web/CSS/CSS_Background_and_Borders/Utiliser_des_fonds_multiples)
+- [Gérer plusieurs arrières-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
 - Le type de données {{cssxref("&lt;color&gt;")}}
 - Les autres propriétés relatives aux couleurs : {{cssxref("color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}
-- [Appliquer des couleurs à des éléments HTML grâce à CSS](/fr/docs/Web/HTML/Applying_color)
+- [Appliquer des couleurs à des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)

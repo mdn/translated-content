@@ -1,24 +1,40 @@
 ---
 title: Object.getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
+l10n:
+  sourceCommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
 ---
 
 {{JSRef}}
 
-**`Object.getOwnPropertyDescriptors()`** メソッドは、指定したオブジェクトのすべてのプロパティ記述子を返します。
+**`Object.getOwnPropertyDescriptors()`** 静的メソッドは、指定したオブジェクトのすべてのプロパティ記述子を返します。
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptors.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyDescriptors()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+const descriptors1 = Object.getOwnPropertyDescriptors(object1);
+
+console.log(descriptors1.property1.writable);
+// Expected output: true
+
+console.log(descriptors1.property1.value);
+// Expected output: 42
+```
 
 ## 構文
 
-```
+```js-nolint
 Object.getOwnPropertyDescriptors(obj)
 ```
 
 ### 引数
 
 - `obj`
-  - : すべてのプロパティディスクリプタを取得するオブジェクト。
+  - : すべてのプロパティ記述子を取得するオブジェクト。
 
 ### 返値
 
@@ -28,16 +44,16 @@ Object.getOwnPropertyDescriptors(obj)
 
 このメソッドは、オブジェクトのすべての独自のプロパティの正確な記述の検査を可能にします。 JavaScript では、*プロパティ*は文字列値による名前または {{jsxref("Symbol")}} とプロパティ記述子で構成されています。プロパティ記述子の型と属性についての詳細情報は、{{jsxref("Object.defineProperty()")}} で確認してください。
 
-_プロパティディスクリプタ_ は、次の属性のいくつかを持ちます。
+_プロパティ記述子_ は、次の属性のいくつかを持ちます。
 
 - `value`
-  - : プロパティに関連づけられた値です (データディスクリプタのみ)。
+  - : プロパティに関連づけられた値です（データ記述子のみ）。
 - `writable`
-  - : `true` である場合、プロパティに関連づけられた値は変更することができます (データ記述子のみ)。
+  - : `true` である場合、プロパティに関連づけられた値は変更することができます（データ記述子のみ）。
 - `get`
-  - : プロパティのゲッターとして提供する関数、あるいはゲッターがない場合は {{jsxref("undefined")}} です (アクセサ記述子のみ)。
+  - : プロパティのゲッターとして提供する関数、あるいはゲッターがない場合は {{jsxref("undefined")}} です（アクセサー記述子のみ）。
 - `set`
-  - : プロパティのセッターとして提供する関数、あるいはセッターがない場合は {{jsxref("undefined")}} です (アクセサ記述子のみ)。
+  - : プロパティのセッターとして提供する関数、あるいはセッターがない場合は {{jsxref("undefined")}} です（アクセサー記述子のみ）。
 - `configurable`
   - : `true` である場合、この種の記述子を変更することや、対応するオブジェクトからプロパティを削除することができます。
 - `enumerable`
@@ -45,14 +61,14 @@ _プロパティディスクリプタ_ は、次の属性のいくつかを持�
 
 ## 例
 
-### 浅いコピーの生成
+### シャローコピーの生成
 
-{{jsxref("Object.assign()")}} メソッドは、ソースオブジェクトから対象のオブジェクトに対して enumerable とプロパティのみコピーできる一方、2 つの未知のオブジェクト間の浅いコピーのために、このメソッドと {{jsxref("Object.create()")}} を使用できます：
+{{jsxref("Object.assign()")}} メソッドは、ソースオブジェクトから対象のオブジェクトに対して列挙可能かつ自身のプロパティのみコピーできる一方、2 つの未知のオブジェクト間の[シャローコピー](/ja/docs/Glossary/Shallow_copy)のために、このメソッドと {{jsxref("Object.create()")}} を使用できます。
 
 ```js
 Object.create(
   Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(obj)
+  Object.getOwnPropertyDescriptors(obj),
 );
 ```
 
@@ -63,15 +79,12 @@ Object.create(
 ```js
 function superclass() {}
 superclass.prototype = {
-  // Define your methods and properties here
+  // ここで superclass のコンストラクター、メソッド、プロパティを定義
 };
 function subclass() {}
-subclass.prototype = Object.create(
-  superclass.prototype,
-  {
-    // Define your methods and properties here
-  }
-);
+subclass.prototype = Object.create(superclass.prototype, {
+  // ここで subclass のコンストラクター、メソッド、プロパティを定義
+});
 ```
 
 ## 仕様書
@@ -80,10 +93,10 @@ subclass.prototype = Object.create(
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.getOwnPropertyDescriptors")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`Object.getOwnPropertyDescriptors` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - {{jsxref("Object.defineProperty()")}}
-- [Polyfill](https://github.com/tc39/proposal-object-getownpropertydescriptors)

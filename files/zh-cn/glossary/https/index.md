@@ -1,7 +1,11 @@
 ---
 title: HTTPS
-slug: Glossary/https
+slug: Glossary/HTTPS
+l10n:
+  sourceCommit: 83f30ecaaeb6227dc0d4551f71eb8be1cacb8e94
 ---
+
+{{GlossarySidebar}}
 
 **HTTPS**（**_超文本传输安全协议_**）是 {{Glossary("HTTP")}} 协议的加密版本。它使用 {{Glossary("SSL")}} 或 {{Glossary("TLS")}} 协议来加密客户端和服务器之间所有的通信。安全连接允许客户端与服务器安全地交换敏感数据，例如网上银行或者在线商城等涉及金钱的操作。
 

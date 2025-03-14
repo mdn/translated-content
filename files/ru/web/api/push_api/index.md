@@ -1,16 +1,9 @@
 ---
 title: Push API
 slug: Web/API/Push_API
-tags:
-  - API
-  - Push
-  - Landing
-  - Сервис-воркеры
-  - Экспериментальная технология
-  - Уведомления
-  - Определение
 ---
-{{ApiRef("Push API")}}
+
+{{DefaultAPISidebar("Push API")}} {{AvailableInWorkers}}
 
 **Push API** предоставляет веб-приложениям возможность принимать сообщения с сервера независимо от того, запущено веб-приложение прямо сейчас или нет. Что в свою очередь позволяет разработчикам оперативно уведомлять пользователей, которые разрешили присылать себе уведомления о новом контенте.
 
@@ -34,7 +27,7 @@ tags:
 ## Интерфейсы
 
 - {{domxref("PushEvent")}}
-  - : Описывает действие, направленное в [глобальную область видимости](/en-US/docs/Web/API/ServiceWorkerGlobalScope) {{domxref("ServiceWorker", "сервис-воркера")}}. Включает информацию, переданную сервером {{domxref("PushSubscription", "подписчикам")}}.
+  - : Описывает действие, направленное в [глобальную область видимости](/ru/docs/Web/API/ServiceWorkerGlobalScope) {{domxref("ServiceWorker", "сервис-воркера")}}. Включает информацию, переданную сервером {{domxref("PushSubscription", "подписчикам")}}.
 - {{domxref("PushManager")}}
   - : Предоставляет возможность подписаться на сообщения от сторонних серверов и получить URL-адрес для отправки push-уведомлений.
 - {{domxref("PushMessageData")}}
@@ -51,9 +44,9 @@ tags:
 - {{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}
   - : Позволяет обратиться к интерфейсу по управлению подписками {{domxref("PushManager")}}, в том числе для добавления подписки, получения информации о текущей подписке, а также позволяет узнать о возможности отправки сообщений. Работа с push-сообщениями начинается с этого свойства сервис-воркера.
 - {{domxref("ServiceWorkerGlobalScope.onpush")}}
-  - : Обработчик событий, срабатывает всякий раз, когда происходит событие {{Event("push")}}; то есть при получении push-сообщений от сервера.
+  - : Обработчик событий, срабатывает всякий раз, когда происходит событие [`push`](/ru/docs/Web/API/ServiceWorkerGlobalScope/push_event); то есть при получении push-сообщений от сервера.
 - {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange")}}
-  - : Обработчик событий, срабатывает всякий раз, когда происходит событие {{Event("pushsubscriptionchange")}}; будет полезен в ситуациях, когда подписка была просрочена или вот-вот будет просрочена (при условии, что для подписки был указан срок действия).
+  - : Обработчик событий, срабатывает всякий раз, когда происходит событие [`pushsubscriptionchange`](/ru/docs/Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event); будет полезен в ситуациях, когда подписка была просрочена или вот-вот будет просрочена (при условии, что для подписки был указан срок действия).
 
 ## Примеры
 
@@ -65,20 +58,14 @@ tags:
 | ------------------------------------------- |
 | [Push API](https://w3c.github.io/push-api/) |
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
-### `PushEvent`
-
-{{Compat("api.PushEvent")}}
-
-### `PushMessageData`
-
-{{Compat("api.PushMessageData")}}
+{{Compat}}
 
 ## Смотрите также
 
 - [Sending VAPID identified WebPush Notifications via Mozilla's Push Service](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/)
 - [Web Push Notifications: Timely, Relevant, and Precise](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/), Joseph Medley
-- [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
+- [Service Worker API](/ru/docs/Web/API/Service_Worker_API)
 
 {{DefaultAPISidebar("Push API")}}

@@ -1,26 +1,32 @@
 ---
 title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
-tags:
-  - JavaScript
-  - Méthode
-  - Object
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/hasOwnProperty
 ---
 
 {{JSRef}}
 
 La méthode **`hasOwnProperty()`** retourne un booléen indiquant si l'objet possède la propriété spécifiée "en propre", sans que celle-ci provienne de la chaîne de prototypes de l'objet.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.hasOwnProperty()")}}
+
+```js interactive-example
+const object1 = {};
+object1.property1 = 42;
+
+console.log(object1.hasOwnProperty("property1"));
+// Expected output: true
+
+console.log(object1.hasOwnProperty("toString"));
+// Expected output: false
+
+console.log(object1.hasOwnProperty("hasOwnProperty"));
+// Expected output: false
+```
 
 ## Syntaxe
 
 ```js
-obj.hasOwnProperty(prop)
+obj.hasOwnProperty(prop);
 ```
 
 ### Paramètres
@@ -44,9 +50,9 @@ L'exemple suivant détermine si l'objet `o` contient une propriété appelée `p
 
 ```js
 o = new Object();
-o.hasOwnProperty('prop'); // false
-o.prop = 'exists';
-o.hasOwnProperty('prop'); // true
+o.hasOwnProperty("prop"); // false
+o.prop = "exists";
+o.hasOwnProperty("prop"); // true
 ```
 
 ### Propriétés directes et propriétés héritées
@@ -55,15 +61,15 @@ L'exemple suivant illustre la différence entre les propriétés directes et les
 
 ```js
 o = new Object();
-o.prop = 'exists';
+o.prop = "exists";
 
-o.hasOwnProperty('prop');
+o.hasOwnProperty("prop");
 // retourne true
 
-o.hasOwnProperty('toString');
+o.hasOwnProperty("toString");
 // retourne false
 
-o.hasOwnProperty('hasOwnProperty');
+o.hasOwnProperty("hasOwnProperty");
 // retourne false
 ```
 
@@ -73,20 +79,18 @@ L'exemple suivant montre comment parcourir les propriétés d'un objet sans trai
 
 ```js
 var bidule = {
-    truc: 'stack'
+  truc: "stack",
 };
 
 for (var nom in bidule) {
-    if (bidule.hasOwnProperty(nom)) {
-        console.log("C'est bien la propriété (" +
-                     nom +
-                     "), sa valeur : " + bidule[nom]
-                    );
-    }
-    else {
-        console.log(nom);
-        // toString ou autre
-    }
+  if (bidule.hasOwnProperty(nom)) {
+    console.log(
+      "C'est bien la propriété (" + nom + "), sa valeur : " + bidule[nom],
+    );
+  } else {
+    console.log(nom);
+    // toString ou autre
+  }
 }
 ```
 
@@ -96,20 +100,20 @@ JavaScript ne protège pas le nom de propriété `hasOwnProperty`, ainsi il est 
 
 ```js
 var toto = {
-  hasOwnProperty: function() {
+  hasOwnProperty: function () {
     return false;
   },
-  truc: 'Voici les dragons'
+  truc: "Voici les dragons",
 };
 
-toto.hasOwnProperty('truc'); // renvoie toujours false
+toto.hasOwnProperty("truc"); // renvoie toujours false
 
 // On utilise une méthode d'un autre objet
 // et on l'appelle avec this qui vaut toto
-({}).hasOwnProperty.call(toto, 'truc'); // true
+({}).hasOwnProperty.call(toto, "truc"); // true
 
 // On peut aussi utiliser la propriété hasOwnProperty de Object prototype
-Object.prototype.hasOwnProperty.call(toto, 'truc'); // true
+Object.prototype.hasOwnProperty.call(toto, "truc"); // true
 ```
 
 La dernière version utilisée permet de ne pas créer d'objet supplémentaire.
@@ -124,8 +128,8 @@ La dernière version utilisée permet de ne pas créer d'objet supplémentaire.
 
 ## Voir aussi
 
-- [Caractère énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)
+- [Caractère énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Instructions/for...in", "for...in")}}
 - {{jsxref("Opérateurs/L_opérateur_in", "in")}}
-- [Guide JavaScript : Retours sur l'héritage](/fr/docs/Web/JavaScript/Guide/Retours_sur_héritage)
+- [Guide JavaScript : Retours sur l'héritage](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

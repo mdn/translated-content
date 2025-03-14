@@ -1,12 +1,11 @@
 ---
 title: font-weight
 slug: Web/SVG/Attribute/font-weight
-tags:
-  - SVG
-translation_of: Web/SVG/Attribute/font-weight
 ---
 
-« [SVG Attribute reference home](/en/SVG/Attribute)
+{{SVGRef}}
+
+« [SVG Attribute reference home](/en-US/SVG/Attribute)
 
 `Атрибут font-weight` позволяет выбрать из шрифтового семейства начертание шрифта с указанной насыщенностью (иначе говоря, толщиной линий знаков, "жирностью") .
 
@@ -18,7 +17,7 @@ translation_of: Web/SVG/Attribute/font-weight
 | -------------------- | ----------------------------------------------------------------------------------------------------------------- |
 | Значения             | **normal** \| bold \| bolder \| lighter \| 100 \| 200 \| 300 \| 400 \| 500 \| 600 \| 700 \| 800 \| 900 \| inherit |
 | Анимируемость        | Да                                                                                                                |
-| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/text.html#FontWeightProperty)                                  |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/text.html#FontWeightProperty)                                 |
 
 ## Значение ключевых слов
 
@@ -36,9 +35,15 @@ translation_of: Web/SVG/Attribute/font-weight
 ### css
 
 ```css
-p.normal {font-weight:normal;}
-p.thick {font-weight:bold;}
-p.thicker {font-weight:900;}
+p.normal {
+  font-weight: normal;
+}
+p.thick {
+  font-weight: bold;
+}
+p.thicker {
+  font-weight: 900;
+}
 ```
 
 ### html
@@ -54,9 +59,9 @@ p.thicker {font-weight:900;}
 
 Следующие элементы могут использовать атрибут `font-weight`.
 
-- [Text content elements](/en/SVG/Element#Text_content_elements)
+- [Text content elements](/en-US/SVG/Element#text_content_elements)
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

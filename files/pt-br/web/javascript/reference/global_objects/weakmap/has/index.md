@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 
 O método **`has()`** retorna um booleano indicando se um elemento com a chave especificada existe no objeto `WeakMap` ou não.
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: WeakMap.prototype.has()")}}
+
+```js interactive-example
+const weakmap1 = new WeakMap();
+const object1 = {};
+const object2 = {};
+
+weakmap1.set(object1, "foo");
+
+console.log(weakmap1.has(object1));
+// Expected output: true
+
+console.log(weakmap1.has(object2));
+// Expected output: false
+```
 
 ## Sintaxe
 
@@ -31,22 +45,19 @@ wm.has(chave);
 
 ```js
 var wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.has(window); // retorna true
-wm.has('baz');  // retorna false
+wm.has("baz"); // retorna false
 ```
 
 ## Especificações
 
-| Specification                                                                                            | Status                       | Comment             |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-weakmap.prototype.has', 'WeakMap.prototype.has')}} | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.has', 'WeakMap.prototype.has')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.WeakMap.has")}}
+{{Compat}}
 
 ## Ver também
 

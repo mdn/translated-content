@@ -1,11 +1,6 @@
 ---
 title: browser_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 ---
 
 {{AddonSidebar}}
@@ -50,9 +45,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 
 Une action de navigateur est un bouton que votre extension ajoute à la barre d'outils du navigateur. Le bouton comporte une icône et peut éventuellement avoir une fenêtre contextuelle dont le contenu est spécifié à l'aide de HTML, CSS et JavaScript.
 
-Si vous fournissez une fenêtre contextuelle, la fenêtre contextuelle est ouverte lorsque l'utilisateur clique sur le bouton, et votre JavaScript s'exécute dans la fenêtre contextuelle permettant l'interaction de l'utilisateur avec elle. Si vous ne fournissez pas de popup, un événement de clic est envoyé aux [scripts d'arrière-plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) de votre extension lorsque l'utilisateur clique sur le bouton.
+Si vous fournissez une fenêtre contextuelle, la fenêtre contextuelle est ouverte lorsque l'utilisateur clique sur le bouton, et votre JavaScript s'exécute dans la fenêtre contextuelle permettant l'interaction de l'utilisateur avec elle. Si vous ne fournissez pas de popup, un événement de clic est envoyé aux [scripts d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) de votre extension lorsque l'utilisateur clique sur le bouton.
 
-Vous pouvez également créer et manipuler des actions de navigateur de manière programmée à l'aide de l'[API browserAction](/fr/Add-ons/WebExtensions/API/browserAction).
+Vous pouvez également créer et manipuler des actions de navigateur de manière programmée à l'aide de l'[API browserAction](/fr/docs/Mozilla/Add-ons/WebExtensions/API/browserAction).
 
 ## Syntaxe
 
@@ -132,7 +127,7 @@ La clé `browser_action` est un objet qui peut avoir l'une des propriétés suiv
           </li>
         </ul>
         <p>Cette propriété est seulement supportée dans Firefox.</p>
-        <p>Cett propriété est facultative, et defaut à "navbar".</p>
+        <p>Cette propriété est facultative et a pour valeur par défaut "menupanel".</p>
         <p>
           Firefox se souvient des paramètres <code>default_area</code> d'une
           extension, même si cette extension est désinstallée et réinstallée
@@ -344,7 +339,7 @@ Si Firefox ne peut pas trouver une correspondance exacte pour la taille qu'il ve
 Une action de navigateur avec juste une icône, spécifiée en 2 tailles différentes. Les scripts d'arrière-plan de l'extension peuvent recevoir des événements de clic lorsque l'utilisateur clique sur l'icône en utilisant un code comme celui-ci :
 
 ```js
- browser.browserAction.onClicked.addListener(handleClick);
+browser.browserAction.onClicked.addListener(handleClick);
 ```
 
 ```json
@@ -360,14 +355,14 @@ Une action de navigateur avec juste une icône, spécifiée en 2 tailles différ
 
 Une action de navigateur avec une icône, un titre et une fenêtre contextuelle. Celle-ci s'affiche lorsque l'utilisateur clique sur le bouton.
 
-Pour une extension simple, mais complète, qui utilise une action de navigateur, consultez le [tutoriel pas à pas](/fr/Add-ons/WebExtensions/Your_second_WebExtension).
+Pour une extension simple, mais complète, qui utilise une action de navigateur, consultez le [tutoriel pas à pas](/fr/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.browser_action", 10)}}
+{{Compat}}
 
 ## Voir aussi
 
-- [`page_action`](/fr/Add-ons/WebExtensions/manifest.json/page_action)
-- [`sidebar_action`](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action)
-- [Browser styles](/fr/Add-ons/WebExtensions/user_interface/Browser_styles)
+- [`page_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)
+- [`sidebar_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action)
+- [Browser styles](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)

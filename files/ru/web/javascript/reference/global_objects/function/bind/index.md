@@ -1,18 +1,9 @@
 ---
 title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
-tags:
-  - ECMAScript5
-  - ECMAScript6
-  - Function
-  - JavaScript
-  - Method
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 ---
 
-{{JSRef("Global_Objects", "Function")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -44,9 +35,9 @@ fun.bind(thisArg[, arg1[, arg2[, ...]]])
 
 Когда **ПФ** вызывается, исполняется её внутренний метод **\[\[Call]]** со следующими аргументами **Call(_target_, _boundThis_, _args_).**
 
-- **_target_** - **\[\[BoundTargetFunction]]**;
-- _**boundThis** - **\[\[BoundThis]]**;
-- _**args** _- **\[\[BoundArguments]].**
+- _**target**_ - **\[\[BoundTargetFunction]]**;
+- _**boundThis**_ - **\[\[BoundThis]]**;
+- _**args**_ - **\[\[BoundArguments]].**
 
 Привязанная функция также может быть сконструирована с помощью оператора {{jsxref("Operators/new", "new")}}: это работает так, как если бы вместо неё конструировалась целевая функция. Предоставляемое значение `this` в этом случае игнорируется, хотя ведущие аргументы всё ещё передаются в эмулируемую функцию.
 
@@ -60,7 +51,9 @@ fun.bind(thisArg[, arg1[, arg2[, ...]]])
 this.x = 9;
 var module = {
   x: 81,
-  getX: function() { return this.x; }
+  getX: function () {
+    return this.x;
+  },
 };
 
 module.getX(); // 81
@@ -101,19 +94,19 @@ function LateBloomer() {
 }
 
 // Объявляем цветение с задержкой в 1 секунду
-LateBloomer.prototype.bloom = function() {
+LateBloomer.prototype.bloom = function () {
   window.setTimeout(this.declare.bind(this), 1000);
 };
 
-LateBloomer.prototype.declare = function() {
-  console.log('Я прекрасный цветок с ' +
-    this.petalCount + ' лепестками!');
+LateBloomer.prototype.declare = function () {
+  console.log("Я прекрасный цветок с " + this.petalCount + " лепестками!");
 };
 ```
 
 ### Пример: привязывание функций, используемых в качестве конструкторов
 
-> **Предупреждение:** этот раздел демонстрирует возможности JavaScript и документирует некоторые граничные случаи использования метода `bind()`. Показанные ниже методы не являются лучшей практикой и, вероятно, их не следует использовать в рабочем окружении.
+> [!WARNING]
+> Этот раздел демонстрирует возможности JavaScript и документирует некоторые граничные случаи использования метода `bind()`. Показанные ниже методы не являются лучшей практикой и, вероятно, их не следует использовать в рабочем окружении.
 
 Привязанные функции автоматически подходят для использования вместе с оператором {{jsxref("Operators/new", "new")}} для конструирования новых экземпляров, создаваемых целевой функцией. Когда привязанная функция используется для конструирования значения, предоставляемое значение `this` игнорируется. Однако, предоставляемые аргументы всё так же вставляются перед аргументами конструктора:
 
@@ -123,19 +116,18 @@ function Point(x, y) {
   this.y = y;
 }
 
-Point.prototype.toString = function() {
-  return this.x + ',' + this.y;
+Point.prototype.toString = function () {
+  return this.x + "," + this.y;
 };
 
 var p = new Point(1, 2);
 p.toString(); // '1,2'
 
-
 var emptyObj = {};
-var YAxisPoint = Point.bind(emptyObj, 0/*x*/);
+var YAxisPoint = Point.bind(emptyObj, 0 /*x*/);
 // не поддерживается полифилом, приведённым ниже,
 // но отлично работает с родным bind:
-var YAxisPoint = Point.bind(null, 0/*x*/);
+var YAxisPoint = Point.bind(null, 0 /*x*/);
 
 var axisPoint = new YAxisPoint(5);
 axisPoint.toString(); // '0,5'
@@ -155,7 +147,7 @@ new Point(17, 42) instanceof YAxisPoint; // true
 // (хотя обычно это не предполагается)
 YAxisPoint(13);
 
-emptyObj.x + ',' + emptyObj.y;
+emptyObj.x + "," + emptyObj.y;
 // >  '0,13'
 ```
 
@@ -193,22 +185,24 @@ slice(arguments);
 
 ```js
 if (!Function.prototype.bind) {
-  Function.prototype.bind = function(oThis) {
-    if (typeof this !== 'function') {
+  Function.prototype.bind = function (oThis) {
+    if (typeof this !== "function") {
       // ближайший аналог внутренней функции
       // IsCallable в ECMAScript 5
-      throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
+      throw new TypeError(
+        "Function.prototype.bind - what is trying to be bound is not callable",
+      );
     }
 
     var aArgs = Array.prototype.slice.call(arguments, 1),
-        fToBind = this,
-        fNOP    = function() {},
-        fBound  = function() {
-          return fToBind.apply(this instanceof fNOP && oThis
-                 ? this
-                 : oThis,
-                 aArgs.concat(Array.prototype.slice.call(arguments)));
-        };
+      fToBind = this,
+      fNOP = function () {},
+      fBound = function () {
+        return fToBind.apply(
+          this instanceof fNOP && oThis ? this : oThis,
+          aArgs.concat(Array.prototype.slice.call(arguments)),
+        );
+      };
 
     fNOP.prototype = this.prototype;
     fBound.prototype = new fNOP();
@@ -221,7 +215,7 @@ if (!Function.prototype.bind) {
 Некоторые из многих отличий (так же могут быть и другие, данный список далеко не исчерпывающий) между этой реализацией и реализацией по умолчанию:
 
 - Частичная реализация предполагает, что методы {{jsxref("Array.prototype.slice()")}}, {{jsxref("Array.prototype.concat()")}}, {{jsxref("Function.prototype.call()")}} и {{jsxref("Function.prototype.apply()")}} являются встроенными, имеют своё первоначальное значение.
-- Частичная реализация создаёт функции, не имеющие неизменяемых свойств «отравленной пилюли» — {{jsxref("Function.caller", "caller")}} и `arguments` — которые выбрасывают исключение {{jsxref("Global_Objects/TypeError", "TypeError")}} при попытке получить, установить или удалить эти свойства. (Такие свойства могут быть добавлены, если реализация поддерживает {{jsxref("Object.defineProperty")}}, либо частично реализованы \[без поведения исключение-при-попытке-удаления], если реализация поддерживает расширения {{jsxref("Object.defineGetter", "__defineGetter__")}} и {{jsxref("Object.defineSetter", "__defineSetter__")}}.)
+- Частичная реализация создаёт функции, не имеющие неизменяемых свойств «отравленной пилюли» — {{jsxref("Function.caller", "caller")}} и `arguments` — которые выбрасывают исключение {{jsxref("Global_Objects/TypeError", "TypeError")}} при попытке получить, установить или удалить эти свойства. (Такие свойства могут быть добавлены, если реализация поддерживает {{jsxref("Object.defineProperty")}}, либо частично реализованы \[без поведения исключение-при-попытке-удаления], если реализация поддерживает расширения [`Object.prototype.__defineGetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) и [`Object.prototype.__defineSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__).)
 - Частичная реализация создаёт функции, имеющие свойство `prototype`. (Правильная привязанная функция его не имеет.)
 - Частичная реализация создаёт привязанные функции, чьё свойство {{jsxref("Function.length", "length")}} не соответствует с определением в ECMA-262; оно равно 0, в то время, как полная реализация, в зависимости от значения свойства `length` целевой функции и количества предопределённых аргументов, может вернуть значение, отличное от нуля.
 

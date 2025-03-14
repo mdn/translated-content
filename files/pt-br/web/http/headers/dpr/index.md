@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/DPR
 
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
-O cabeçalho **`DPR`** é um cabeçalho de requisição _[Client Hints](/pt-BR/docs/Glossary/Client_hints)_ que representa a razão de pixeis do dispositivo do cliente, por isso ({{Glossary("DPR")}})(_device pixel ratio_), que é o número de pixeis físicos do dispositivo correspondendo a cada pixel CSS.
+O cabeçalho **`DPR`** é um cabeçalho de requisição _[Client Hints](/pt-BR/docs/Web/HTTP/Client_hints)_ que representa a razão de pixeis do dispositivo do cliente, por isso ({{Glossary("DPR")}})(_device pixel ratio_), que é o número de pixeis físicos do dispositivo correspondendo a cada pixel CSS.
 
 <table class="properties">
   <tbody>
@@ -45,7 +45,7 @@ DPR: 1.0
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.DPR")}}
+{{Compat}}
 
 ## Veja também
 

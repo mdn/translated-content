@@ -1,13 +1,6 @@
 ---
-title: >-
-  SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //#
-  instead
+title: "SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead"
 slug: Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma
-tags:
-  - Error
-  - Fuente
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma
 ---
 
 {{jsSidebar("Errors")}}
@@ -58,5 +51,5 @@ X-SourceMap: /path/to/file.js.map
 
 ## Vea También
 
-- [Como utilizar un mapa de Fuentes - Documentación de Herramientas de Firefox](/es/docs/Tools/Debugger/How_to/Use_a_source_map)
-- [Introducción a las fuentes – HTML5 rocks](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)
+- [Como utilizar un mapa de Fuentes - Documentación de Herramientas de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
+- [Introducción a las fuentes – HTML5 rocks](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)

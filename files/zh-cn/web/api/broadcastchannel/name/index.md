@@ -1,27 +1,25 @@
 ---
-title: BroadcastChannel.name
+title: BroadcastChannel：name 属性
 slug: Web/API/BroadcastChannel/name
+l10n:
+  sourceCommit: 50a45d52fd9f45f1ca30b546af5920d0ccda82dc
 ---
 
-{{APIRef("BroadCastChannel API")}}
+{{APIRef("BroadCastChannel API")}} {{AvailableInWorkers}}
 
-**`BroadcastChannel.name`** 是类型为 {{domxref("DOMString")}} 的只读属性，是频道的唯一标识。属性 name 是在创建时传入 {{domxref("BroadcastChannel.BroadCastChannel", "BroadcastChannel()")}} 构造函数的，所以是只读的。
+{{domxref("BroadcastChannel")}} 接口的 **`name`** 只读属性返回一个字符串，该字符串使用其名称唯一标识给定频道。此名称在创建时传递给 {{domxref("BroadcastChannel.BroadCastChannel", "BroadcastChannel()")}} 构造函数，因此是只读的。
 
-{{AvailableInWorkers}}
+## 值
 
-## 语法
-
-```plain
-var str = channel.name;
-```
+一个字符串。
 
 ## 示例
 
 ```js
 // 连接到指定频道
-var bc = new BroadcastChannel('test_channel');
+const bc = new BroadcastChannel("test_channel");
 
-// 其它操作 (如：postMessage, …)
+// 其他操作（如：postMessage、……）
 
 // 在控制台打印频道名称
 console.log(bc.name); // "test_channel"

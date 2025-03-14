@@ -29,7 +29,8 @@ O tempo é controlado com alta precisão e baixa latência, permitindo que os de
 
 A API de áudio da Web também nos permite controlar como o áudio é _espacializado_. Utilizando um sistema baseado em um _modelo de ouvinte-fonte_, permite o controle do _modelo panorâmico_ e trata da _atenuação induzida por distância_ induzida por uma fonte em movimento (ou ouvinte em movimento).
 
-> **Observação:** você pode ler sobre a teoria da API de áudio da Web com muito mais detalhes em nosso artigo [Conceitos básicos por trás da API de áudio da Web](/pt-BR/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) .
+> [!CALLOUT]
+> você pode ler sobre a teoria da API de áudio da Web com muito mais detalhes em nosso artigo [Conceitos básicos por trás da API de áudio da Web](/pt-BR/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) .
 
 ## Público-alvo da API de áudio da Web
 
@@ -213,7 +214,7 @@ Você pode encontrar vários exemplos em nosso [repositório webaudio-example](h
 - [Controlando vários parâmetros com ConstantSourceNode](/pt-BR/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [Misturando áudio posicional e WebGL (2012)](https://web.dev/webaudio-positional-audio/)
 - [Desenvolvendo o áudio do jogo com a API de áudio da Web (2012)](https://auth.web.dev/webaudio-games/)
-- [Migrando código webkitAudioContext para padrões baseados em AudioContext](/pt-BR/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext)
+- [Migrando código webkitAudioContext para padrões baseados em AudioContext](/pt-BR/docs/Web/API/Web_Audio_API)
 
 ### Bibliotecas
 
@@ -222,7 +223,7 @@ Você pode encontrar vários exemplos em nosso [repositório webaudio-example](h
 - [howler.js](https://github.com/goldfire/howler.js/): uma biblioteca de áudio JS que tem como padrão [Web Audio API](https://webaudio.github.io/web-audio-api/) e retorna para [HTML Audio](https://html.spec.whatwg.org/multipage/media.html#the-audio-element), além de fornecer outros recursos úteis.
 - [Mooog](https://github.com/mattlima/mooog): encadeamento de AudioNodes no estilo jQuery, envios/retornos no estilo do mixer e muito mais.
 - [XSound](https://xsound.jp/): Biblioteca Web Audio API para Sintetizador, Efeitos, Visualização, Gravação, etc.
-- [OpenLang](https://github.com/chrisjohndigital/OpenLang): aplicativo da Web do laboratório de linguagem de vídeo HTML usando a API de áudio da Web para gravar e combinar vídeo e áudio de diferentes fontes em um único arquivo ([fonte no GitHub]( https://github.com/chrisjohndigital/OpenLang))
+- [OpenLang](https://github.com/chrisjohndigital/OpenLang): aplicativo da Web do laboratório de linguagem de vídeo HTML usando a API de áudio da Web para gravar e combinar vídeo e áudio de diferentes fontes em um único arquivo ([fonte no GitHub](https://github.com/chrisjohndigital/OpenLang))
 - [Pts.js](https://ptsjs.org/): Simplifica a visualização de áudio na web ([guide](https://ptsjs.org/guide/sound-0800))
 
 ### Tópicos relacionados

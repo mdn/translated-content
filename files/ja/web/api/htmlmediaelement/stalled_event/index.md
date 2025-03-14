@@ -1,62 +1,52 @@
 ---
-title: 'HTMLMediaElement: stalled イベント'
+title: "HTMLMediaElement: stalled イベント"
+short-title: stalled
 slug: Web/API/HTMLMediaElement/stalled_event
+l10n:
+  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
 {{APIRef("HTMLMediaElement")}}
 
 `stalled` イベントは、ユーザーエージェントがメディアデータをフェッチしようとして、データが予期せずに来なかったときに発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">対象</th>
-      <td>要素</td>
-    </tr>
-    <tr>
-      <th scope="row">既定のアクション</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>{{domxref("GlobalEventHandlers.onstalled")}}</td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("stalled", (event) => {});
+
+onstalled = (event) => {};
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
-これらの例では、`HTMLMediaElement` の `stalled` イベントのイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。
+これらの例では、`HTMLMediaElement` の `stalled` イベントのイベントリスナーを追加し、そのイベントハンドラーがイベントの発生に反応したときにメッセージを投稿します。
 
-`addEventListener()` を使用する場合
+`addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('stalled', (event) => {
-  console.log('データのフェッチに失敗しました。');
+video.addEventListener("stalled", (event) => {
+  console.log("データのフェッチに失敗しました。");
 });
 ```
 
-`onstalled` イベントハンドラープロパティを使用する場合
+`onstalled` イベントハンドラープロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onstalled = (event) => {
-  console.log('データのフェッチに失敗しました。');
+  console.log("データのフェッチに失敗しました。");
 };
 ```
 
@@ -87,7 +77,6 @@ video.onstalled = (event) => {
 - HTMLMediaElement {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.suspend_event", 'suspend')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.emptied_event", 'emptied')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.stalled_event", 'stalled')}} イベント
 
 ## 関連情報
 

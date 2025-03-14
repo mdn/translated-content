@@ -1,19 +1,21 @@
 ---
-title: HTMLInputElement.webkitdirectory
+title: "HTMLInputElement: webkitdirectory プロパティ"
+short-title: webkitdirectory
 slug: Web/API/HTMLInputElement/webkitdirectory
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("HTML DOM")}}{{non-standard_header}}
+{{APIRef("File and Directory Entries API")}}
 
-**`HTMLInputElement.webkitdirectory`** はプロパティで、 {{htmlattrxref("webkitdirectory", "input")}} という HTML 属性の値を反映し、 {{HTMLElement("input")}} 要素によってユーザーがファイルの代わりにディレクトリーを選択できることを示します。ディレクトリーが選択された場合、ディレクトリーとその内容の階層構造が選択されたアイテムのセットに含まれます。選択されているファイルシステムのファイルアイテムは、 {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} を使用して受け取ることができます。
+**`HTMLInputElement.webkitdirectory`** はプロパティで、 [`webkitdirectory`](/ja/docs/Web/HTML/Element/input/file#webkitdirectory) という HTML 属性の値を反映し、 {{HTMLElement("input")}} 要素によってユーザーがファイルの代わりにディレクトリーを選択できることを示します。
+ディレクトリーが選択された場合、ディレクトリーとその内容の階層構造が選択されたアイテムのセットに含まれます。
+選択されているファイルシステムの項目は、 {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} を使用して受け取ることができます。
 
-## 構文
+> [!NOTE]
+> このプロパティは、Google Chrome 固有の API として元々存在していたため、仕様書では `webkitEntries` と呼ばれています。いつか改名される可能性があります。
 
-```js
- HTMLInputElement.webkitdirectory = boolValue
-```
-
-### 値
+## 値
 
 論理型で、 `true` は {{HTMLElement("input")}} 要素がディレクトリーのみを選択することができることを、 `false` はファイルのみが選択できることを示します。
 
@@ -50,43 +52,43 @@ slug: Web/API/HTMLInputElement/webkitdirectory
 
 ユーザーが `PhotoAlbums` を選択すると、 files によって報告されるリストは上記のすべてのファイルに対する {{domxref("File")}} オブジェクトを含みます。 — しかし、ディレクトリーは含みません。 `PIC2343.jpg` の項目では `webkitRelativePath` が `PhotoAlbums/Birthdays/Don's 40th birthday/PIC2343.jpg` となります。これによって {{domxref("FileList")}} が平坦でも階層構造を知ることができます。
 
-> **メモ:** `webkitRelativePath` の挙動は *Chromium 72 より前*では異なります。詳しくは[このバグ](https://bugs.chromium.org/p/chromium/issues/detail?id=124187)を参照してください。
+> **メモ:** `webkitRelativePath` の挙動は *Chromium 72 より前*では異なります。詳しくは[このバグ](https://crbug.com/124187)を参照してください。
 
 ## 例
 
 この例では、ユーザーが 1 つまたは複数のディレクトリーを選択することができるディレクトリーピッカーが表示されます。 {{domxref("HTMLElement/change_event", "change")}} イベントが発生すると、選択されたディレクトリー階層ないのすべてのファイルを含むリストが生成され、表示されます。
 
-### HTML content
+### HTML
 
 ```html
 <input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
 <ul id="listing"></ul>
 ```
 
-### JavaScript content
+### JavaScript
 
 ```js
-document.getElementById("filepicker").addEventListener("change", function(event) {
-  let output = document.getElementById("listing");
-  let files = event.target.files;
-
-  for (let i=0; i<files.length; i++) {
-    let item = document.createElement("li");
-    item.innerHTML = files[i].webkitRelativePath;
-    output.appendChild(item);
-  };
-}, false);
+document.getElementById("filepicker").addEventListener(
+  "change",
+  (event) => {
+    let output = document.getElementById("listing");
+    for (const file of event.target.files) {
+      let item = document.createElement("li");
+      item.textContent = file.webkitRelativePath;
+      output.appendChild(item);
+    }
+  },
+  false,
+);
 ```
 
 ### 結果
 
-{{ EmbedLiveSample('Example') }}
+{{ EmbedLiveSample('Examples') }}
 
 ## 仕様書
 
 {{Specifications}}
-
-この API は公式な W3C または WHATWG の仕様書にはありません。
 
 ## ブラウザーの互換性
 

@@ -9,8 +9,8 @@ slug: Web/API/Selection/modify
 
 ## 语法
 
-```
-sel.modify(alter, direction, granularity)
+```js-nolint
+modify(alter, direction, granularity)
 ```
 
 ### 参数
@@ -22,27 +22,29 @@ sel.modify(alter, direction, granularity)
 - _granularity_
   - : 调整的距离颗粒度。可选值有 `"character"`、`"word"`、`"sentence"`、`"line"`、`"paragraph"`、`"lineboundary"`、`"sentenceboundary"`、`"paragraphboundary"`、`"documentboundary"`。
 
-> **备注：** Gecko **不支持** `"sentence"`, `"paragraph"`, `"sentenceboundary"`, `"paragraphboundary"` 和 `"documentboundary"`. Webkit 和 Blink 支持。
+> [!NOTE]
+> Gecko **不支持** `"sentence"`, `"paragraph"`, `"sentenceboundary"`, `"paragraphboundary"` 和 `"documentboundary"`. Webkit 和 Blink 支持。
 
-> **备注：** 从{{Gecko("5.0")}}开始，不管是不是浏览器的默认行为，`"word"颗粒度不再包括`单词后面的空格。这让这个行为变得更加稳定，这也和之前的 Webkit 保持一致，然而不幸的是他们最近修改了这个默认行为。
+> [!NOTE]
+> 从 Gecko 5.0 开始，不管是不是浏览器的默认行为，`"word"` 颗粒度不再包括单词后面的空格。这让这个行为变得更加稳定，这也和之前的 Webkit 保持一致，然而不幸的是他们最近修改了这个默认行为。
 
-## 例子
+## 示例
 
 使当前选区往语言书写方向扩大一个单词（word）的选择范围
 
-```
+```js
 var selection = window.getSelection();
 selection.modify("extend", "forward", "word");
 ```
 
 ## 规范
 
-_无_
+_无。_
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{domxref("Selection")}}，本方法所属的接口。
+- 此方法所属的接口：{{domxref("Selection")}}。

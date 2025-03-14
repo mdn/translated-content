@@ -1,17 +1,6 @@
 ---
 title: Request.credentials
 slug: Web/API/Request/credentials
-tags:
-  - API
-  - Cookies
-  - Fetch
-  - Networking
-  - Property
-  - Reference
-  - Security
-  - credentials
-  - request
-translation_of: Web/API/Request/credentials
 ---
 
 {{APIRef("Fetch")}}
@@ -37,20 +26,20 @@ var myCred = request.credentials;
 다음의 snippet 에서, 우리는 {{domxref("Request.Request()")}} constructor 를 사용하여 (스크립트와 동일한 디렉토리의 이미지 파일을 위한) 새로운 요청(request)를 생성하고, 변수에 요청(request) credentials 을 저장한다.
 
 ```js
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 var myCred = myRequest.credentials; // returns "same-origin" by default
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
 ## See also
 
-- [ServiceWorker API](/ko/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ko/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/ko/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/ko/docs/Web/HTTP/CORS)
 - [HTTP](/ko/docs/Web/HTTP)

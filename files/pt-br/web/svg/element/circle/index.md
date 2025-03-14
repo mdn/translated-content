@@ -21,16 +21,16 @@ O elemento `circle` é uma forma básica do SVG, utilizada para criar círculos 
 </svg>
 ```
 
-» [circle.svg](https://mdn.mozillademos.org/files/7707/circle2.svg)
+» [circle.svg](circle2.svg)
 
 ## Atributos
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing) »
-- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
-- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent) »
-- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
+- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#conditionalproccessing) »
+- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#graphicalevent) »
+- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -48,7 +48,7 @@ Este elemento implementa a interface do {{ domxref("SVGCircleElement") }} interf
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.circle")}}
+{{Compat}}
 
 ## Relacionado
 

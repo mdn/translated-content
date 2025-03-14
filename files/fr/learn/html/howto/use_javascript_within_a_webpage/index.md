@@ -1,14 +1,9 @@
 ---
 title: Utiliser JavaScript au sein d'une page web
 slug: Learn/HTML/Howto/Use_JavaScript_within_a_webpage
-tags:
-  - Beginner
-  - HTML
-  - JavaScript
-  - OpenPractices
-translation_of: Learn/HTML/Howto/Use_JavaScript_within_a_webpage
-original_slug: Apprendre/HTML/Comment/Utiliser_JavaScript_au_sein_d_une_page_web
 ---
+
+{{QuickLinksWithSubpages("/fr/docs/Learn/HTML/Howto")}}
 
 Dans cet article, nous verrons comment améliorer les pages web en ajoutant du code JavaScript dans des documents HTML.
 
@@ -38,7 +33,8 @@ Dans cet article, nous verrons comment améliorer les pages web en ajoutant du c
 
 {{Glossary("JavaScript")}} est un langage de programmation principalement utilisé côté client et qui peut également être utilisé côté serveur. Il permet entre autres de rendre les pages web interactives. JavaScript offre une myriade de possibilités.
 
-> **Note :** Dans cet article, nous verrons le code HTML nécessaire pour utiliser du code JavaScript. Si vous souhaitez apprendre JavaScript, vous pouvez démarrer par notre article sur [les bases de JavaScript](/fr/Learn/Getting_started_with_the_web/JavaScript_basics). Si vous connaissez déjà JavaScript en partie ou que vous connaissez un autre langage de programmation, vous pouvez consulter [le Guide JavaScript](/fr/docs/Web/JavaScript/Guide).
+> [!NOTE]
+> Dans cet article, nous verrons le code HTML nécessaire pour utiliser du code JavaScript. Si vous souhaitez apprendre JavaScript, vous pouvez démarrer par notre article sur [les bases de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics). Si vous connaissez déjà JavaScript en partie ou que vous connaissez un autre langage de programmation, vous pouvez consulter [le Guide JavaScript](/fr/docs/Web/JavaScript/Guide).
 
 ## Comment déclencher le code JavaScript depuis le document HTML
 
@@ -58,9 +54,11 @@ Il est également possible d'insérer du code JavaScript directement dans la bal
 
 ```html
 <script>
-window.addEventListener('load', function () {
-  console.log('Cette fonction est exécutée une fois quand la page est chargée.');
-});
+  window.addEventListener("load", function () {
+    console.log(
+      "Cette fonction est exécutée une fois quand la page est chargée.",
+    );
+  });
 </script>
 ```
 
@@ -74,7 +72,7 @@ Cette méthode peut s'avérer pratique quand on n'utilise qu'un code très court
 
 L'accessibilité est un enjeu majeur du développement logiciel. JavaScript peut rendre un site web plus accessible lorsqu'il est utilisé correctement. Il peut aussi détruire toute trace d'accessibilité s'il est utilisé sans aucune considération. Voici quelques pratiques qui vous permettront de tirer le meilleur parti de JavaScript pour l'accessibilité :
 
-- **Tout le contenu d'un document doit être disponible sous forme de texte (structuré).** HTML doit être utilisé le plus possible pour stocker le contenu. Par exemple, si vous avez implémenté une super barre de chargement, n'oubliez pas de fournir les pourcentages en texte dans le HTML. De la même façon, les menus déroulants doivent être structurées en [listes non ordonnées](/fr/Learn/HTML/Howto/Create_list_of_items_with_HTML) de [liens](/fr/Learn/HTML/Howto/Create_a_hyperlink).
+- **Tout le contenu d'un document doit être disponible sous forme de texte (structuré).** HTML doit être utilisé le plus possible pour stocker le contenu. Par exemple, si vous avez implémenté une super barre de chargement, n'oubliez pas de fournir les pourcentages en texte dans le HTML. De la même façon, les menus déroulants doivent être structurées en [listes non ordonnées](/fr/docs/Learn/HTML/Howto/Create_list_of_items_with_HTML) de [liens](/fr/docs/Learn/HTML/Howto/Create_a_hyperlink).
 - **Toutes les fonctionnalités doivent être accessibles depuis le clavier.**
 
   - Les utilisateurs doivent pouvoir utiliser la touche de tabulation pour naviguer entre les différents contrôles (les liens, les entrées de formulaires, etc.) en suivant un ordre logique.
@@ -82,7 +80,7 @@ L'accessibilité est un enjeu majeur du développement logiciel. JavaScript peut
   - Testez votre site en utilisant uniquement le clavier.
 
 - **N'utilisez pas de limites de temps arbitraires.** Cela prend plus de temps de naviguer au clavier ou d'écouter le contenu lu par un lecteur d'écran. Il est donc impossible de prévoir combien de temps cela prendra pour qu'un utilisateur ou pour que le navigateur accomplisse une tâche donnée.
-- **Les animations doivent être courtes et légères, sans clignotement.** Les clignotements peuvent agacer, ou pire, [entraîner des crises d'épilepsie](http://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html). Si une animation dure plus longtemps que quelques secondes, il faudra fournir une méthode pour l'annuler.
+- **Les animations doivent être courtes et légères, sans clignotement.** Les clignotements peuvent agacer, ou pire, [entraîner des crises d'épilepsie](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html). Si une animation dure plus longtemps que quelques secondes, il faudra fournir une méthode pour l'annuler.
 - **Laissez les utilisateurs initier les interactions.** Cela signifie qu'il ne faut pas mettre à jour du contenu, rediriger vers un autre document ou rafraîchir la page automatiquement. Il ne faut pas utiliser de caroussels ou afficher des pop-ups sans aucun avertissement.
 - **Ayez un plan de secours pour les utilisateurs qui n'ont pas JavaScript activé.** Certaines personnes désactivent JavaScript afin d'améliorer les performances ou la sécurité. D'autres peuvent rencontrer des problèmes de connectivité qui empêcheraient le chargement des scripts. De plus, certains scripts tiers (publicités, scripts de tracking, extensions de navigateurs) peuvent casser les scripts que vous avez écrit.
 
@@ -95,5 +93,5 @@ L'accessibilité est un enjeu majeur du développement logiciel. JavaScript peut
 
 - {{htmlelement("script")}}
 - {{htmlelement("noscript")}}
-- [Une introduction pour utiliser JavaScript de façon accessible, par James Edwards (en anglais)](http://www.sitepoint.com/javascript-accessibility-101/)
-- [Les consignes d'accessibilité préconisées par le W3C](http://www.w3.org/TR/WCAG20/)
+- [Une introduction pour utiliser JavaScript de façon accessible, par James Edwards (en anglais)](https://www.sitepoint.com/javascript-accessibility-101/)
+- [Les consignes d'accessibilité préconisées par le W3C](https://www.w3.org/TR/WCAG20/)

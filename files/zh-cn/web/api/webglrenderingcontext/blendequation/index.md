@@ -70,7 +70,7 @@ gl.getParameter(gl.BLEND_EQUATION_ALPHA) === gl.FUNC_ADD;
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.blendColor()")}}
 - {{domxref("WebGLRenderingContext.blendFunc()")}}

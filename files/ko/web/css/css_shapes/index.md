@@ -1,12 +1,6 @@
 ---
 title: CSS Shapes
-slug: Web/CSS/CSS_Shapes
-tags:
-  - CSS
-  - CSS Shapes
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Shapes
+slug: Web/CSS/CSS_shapes
 ---
 
 {{CSSRef}}
@@ -33,11 +27,11 @@ translation_of: Web/CSS/CSS_Shapes
 
 ## 안내서
 
-- [Overview of CSS Shapes](/ko/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
-- [Shapes from Box Values](/ko/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values)
+- [Overview of CSS Shapes](/ko/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [Shapes from Box Values](/ko/docs/Web/CSS/CSS_shapes/From_box_values)
 - [Basic Shapes](/ko/docs/Web/CSS/CSS_Shapes/Basic_Shapes)
 - [Shapes from Images](/ko/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
-- [Edit Shape Paths in CSS — Firefox Developer Tools](/ko/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes)
+- [Edit Shape Paths in CSS — Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)
 
 ## 외부 자료
 

@@ -1,15 +1,6 @@
 ---
-title: 'Window: paste 이벤트'
+title: "Window: paste 이벤트"
 slug: Web/API/Window/paste_event
-tags:
-  - API
-  - Event
-  - Reference
-  - Web
-  - Window
-  - paste
-browser-compat: api.Window.paste_event
-translation_of: Web/API/Window/paste_event
 ---
 
 {{APIRef}}
@@ -42,8 +33,8 @@ translation_of: Web/API/Window/paste_event
 ## 예제
 
 ```js
-window.addEventListener('paste', (event) => {
-    console.log('붙여넣기 동작 실행')
+window.addEventListener("paste", (event) => {
+  console.log("붙여넣기 동작 실행");
 });
 ```
 

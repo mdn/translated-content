@@ -1,16 +1,15 @@
 ---
 title: viewBox
 slug: Web/SVG/Attribute/viewBox
-tags:
-  - SVG
-translation_of: Web/SVG/Attribute/viewBox
 ---
 
-« [SVG Attribute reference home](/en/SVG/Attribute)
+{{SVGRef}}
 
-`Аттрибут viewBox` определяет расположение и размеры окна отображения SVG.
+Аттрибут `viewBox` определяет расположение и размеры окна отображения SVG.
 
 Значение атрибута `viewBox` — это набор четырёх чисел: `min-x`, `min-y`, `width` и `height`, — разделённых пробелами и/или запятой, которые задают прямоугольник в пользовательском пространстве, стороны которого определяют границы окна отображения элемента SVG (не [браузера](/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/Viewport)).
+
+## Пример
 
 ```
 html, body, svg {
@@ -29,7 +28,7 @@ svg:not(:root) {
   размер квадрата не меняется в зависимости от
   значения viewBox
   -->
-  <rect x="0" y="0" width="100%" height="100%"/>
+  <rect x="0" y="0" width="100%" height="100%" />
 
   <!--
   При больших значениях viewBox круг получается
@@ -37,19 +36,19 @@ svg:not(:root) {
   единицах: расстояние 4 получается маленьким относительно
   размера окна 100, указанного во viewBox
   -->
-  <circle cx="50%" cy="50%" r="4" fill="white"/>
+  <circle cx="50%" cy="50%" r="4" fill="white" />
 </svg>
 
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
   <!-- Также не зависит от viewBox, как и в предыдущем примере -->
-  <rect x="0" y="0" width="100%" height="100%"/>
+  <rect x="0" y="0" width="100%" height="100%" />
 
   <!--
   С маленьким значением размера viewBox круг получается
   большим, потому что радиус 4 намного больше, если размер
   области отображения равен 10, чем если он равен 100
   -->
-  <circle cx="50%" cy="50%" r="4" fill="white"/>
+  <circle cx="50%" cy="50%" r="4" fill="white" />
 </svg>
 
 <svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg">
@@ -59,7 +58,7 @@ svg:not(:root) {
   области отображения (10 на 10), поэтому квадрат выглядит
   сдвинутым в правый нижний угол
   -->
-  <rect x="0" y="0" width="100%" height="100%"/>
+  <rect x="0" y="0" width="100%" height="100%" />
 
   <!--
   Так как точка (0, 0) находится в центре, а координаты круга,
@@ -67,15 +66,16 @@ svg:not(:root) {
   принимаются равными 5, круг оказывается с центром
   в правом нижнем углу
   -->
-  <circle cx="50%" cy="50%" r="4" fill="white"/>
+  <circle cx="50%" cy="50%" r="4" fill="white" />
 </svg>
 ```
 
-{{EmbedLiveSample('topExample', '100%', 200)}}
+{{EmbedLiveSample("Пример", '100%', 200)}}
 
 На отображение с `viewBox` также влияет атрибут {{ SVGAttr("preserveAspectRatio") }}.
 
-> **Примечание:** **Обратите внимание:** при значениях `width` и `height` меньших или равных `0` элемент не отображается
+> [!NOTE]
+> При значениях `width` и `height` меньших или равных `0` элемент не отображается
 
 Пять элементов используют этот атрибут: {{SVGElement("marker")}}, {{SVGElement("pattern")}}, {{ SVGElement("svg") }}, {{ SVGElement("symbol") }} и {{ SVGElement("view") }}.
 
@@ -126,4 +126,4 @@ svg:not(:root) {
 
 ## Смотрите также
 
-- [SVG Getting Started: Positions](/en/SVG/Tutorial/Positions)
+- [SVG Getting Started: Positions](/ru/docs/Web/SVG/Tutorial/Positions)

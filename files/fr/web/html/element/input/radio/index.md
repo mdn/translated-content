@@ -7,7 +7,41 @@ slug: Web/HTML/Element/input/radio
 
 Les éléments `<input>` dont l'attribut `type` vaut **`radio`** sont généralement utilisés pour construire des groupes d'options parmi lesquelles on ne peut choisir qu'une valeur. Les « boutons radio » sont représentés par des cercles remplis lorsqu'ils sont sélectionnés.
 
-{{EmbedInteractiveExample("pages/tabbed/input-radio.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;radio&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<fieldset>
+  <legend>Select a maintenance drone:</legend>
+
+  <div>
+    <input type="radio" id="huey" name="drone" value="huey" checked />
+    <label for="huey">Huey</label>
+  </div>
+
+  <div>
+    <input type="radio" id="dewey" name="drone" value="dewey" />
+    <label for="dewey">Dewey</label>
+  </div>
+
+  <div>
+    <input type="radio" id="louie" name="drone" value="louie" />
+    <label for="louie">Louie</label>
+  </div>
+</fieldset>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 On les appelle boutons radios par analogie avec les boutons qui étaient utilisés sur les anciens postes de radios.
 
@@ -19,11 +53,11 @@ L'attribut `value` est une chaîne de caractères (un objet {{domxref("DOMString
 
 ### Définir un groupe de boutons radio
 
-Pour définir un groupe de boutons radio, on leur donne le même nom via l'attribut {{htmlattrxref("name", "input")}}. Une fois qu'on a formé un groupe de boutons radio, on ne pourra sélectionner qu'une seule des options de ce groupes (cliquer sur une option désélectionnera automatiquement l'option précédemment choisie dans ce groupe).
+Pour définir un groupe de boutons radio, on leur donne le même nom via l'attribut [`name`](/fr/docs/Web/HTML/Element/input#name). Une fois qu'on a formé un groupe de boutons radio, on ne pourra sélectionner qu'une seule des options de ce groupes (cliquer sur une option désélectionnera automatiquement l'option précédemment choisie dans ce groupe).
 
 Il est possible d'avoir autant de groupes que nécessaire, il suffit que chaque groupe ait un nom (l'attribut `name`) unique.
 
-Ainsi, si on souhaite utiliser un formulaire afin de demander à l'utilisateur sa méthode de contact préférée, on pourra créer trois boutons radio avec l'attribut `name` qui vaut `contact` et pour lesquels l'attribut {{htmlattrxref("value", "input")}} varie : `email` pour le premier, `telephone` pour le deuxième et `courrier` pour le dernier. Cette valeur et le nom du groupe ne sont pas affichés (ce sera le rôle de l'élément {{HTMLElement("label")}} de fournir un intitulé).
+Ainsi, si on souhaite utiliser un formulaire afin de demander à l'utilisateur sa méthode de contact préférée, on pourra créer trois boutons radio avec l'attribut `name` qui vaut `contact` et pour lesquels l'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) varie : `email` pour le premier, `telephone` pour le deuxième et `courrier` pour le dernier. Cette valeur et le nom du groupe ne sont pas affichés (ce sera le rôle de l'élément {{HTMLElement("label")}} de fournir un intitulé).
 
 Voici le fragment de code HTML correspondant à cet exemple :
 
@@ -31,16 +65,13 @@ Voici le fragment de code HTML correspondant à cet exemple :
 <form>
   <p>Veuillez choisir la meilleure méthode pour vous contacter :</p>
   <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email">
+    <input type="radio" id="contactChoice1" name="contact" value="email" />
     <label for="contactChoice1">Email</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="telephone">
+    <input type="radio" id="contactChoice2" name="contact" value="telephone" />
     <label for="contactChoice2">Téléphone</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="courrier">
+    <input type="radio" id="contactChoice3" name="contact" value="courrier" />
     <label for="contactChoice3">Courrier</label>
   </div>
   <div>
@@ -49,19 +80,20 @@ Voici le fragment de code HTML correspondant à cet exemple :
 </form>
 ```
 
-On voit ici trois boutons radio dont l'attribut `name` vaut `contact` et dont chacun possède une valeur unique pour l'attribut `value`. Ils possèdent également un identifiant unique ({{domxref("Element.id", "id")}}) qui est utilisé pour rattacher le libellé fourni par l'élément {{HTMLElement("label")}} via l'attribut {{htmlattrxref("for", "label")}}.
+On voit ici trois boutons radio dont l'attribut `name` vaut `contact` et dont chacun possède une valeur unique pour l'attribut `value`. Ils possèdent également un identifiant unique ({{domxref("Element.id", "id")}}) qui est utilisé pour rattacher le libellé fourni par l'élément {{HTMLElement("label")}} via l'attribut [`for`](/fr/docs/Web/HTML/Element/label#for).
 
 Voici le résultat obtenu :
 
 {{EmbedLiveSample('Définir_un_groupe_de_boutons_radio', 600, 130)}}
 
-### La représentation des données d’un groupe de boutons radio
+### La représentation des données d'un groupe de boutons radio
 
 Lorsqu'on envoie le formulaire précédent avec une option sélectionnée, les données du formulaire contiendront une valeur sous la forme `"contact=valeur"`. Ainsi, si l'utilisateur clique sur le bouton radio « Téléphone » et envoie le formulaire, les données du formulaire contiendront `"contact=telephone"`.
 
 Si l'attribut `value` n'est pas fourni dans le document HTML, la valeur par défaut utilisée sera `on` pour l'ensemble du groupe. Si c'était le cas avec notre exemple précédent et que l'utilisateur avait cliqué sur l'option « Téléphone » et envoyé le formulaire, les données envoyées auraient contenu `"contact=on"` ce qui ne s'avère pas très utile. Aussi, mieux vaut ne pas oublier les attributs `value` !
 
-> **Note :** Si aucun bouton radio n'est sélectionné au moment de l'envoi du formulaire, le groupe radio n'est pas inclus dans les données envoyées par le formulaire car il n'y a aucune valeur à fournir.
+> [!NOTE]
+> Si aucun bouton radio n'est sélectionné au moment de l'envoi du formulaire, le groupe radio n'est pas inclus dans les données envoyées par le formulaire car il n'y a aucune valeur à fournir.
 
 Généralement, on souhaite qu'au moins une option soit sélectionné parmi les boutons d'un groupe et on inclue donc souvent un attribut `checked` sur l'un des boutons afin d'avoir une option sélectionnée par défaut.
 
@@ -71,24 +103,20 @@ Ajoutant un peu de code à notre exemple pour étudier les données générées 
 <form>
   <p>Veuillez choisir la meilleure méthode pour vous contacter :</p>
   <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email">
+    <input type="radio" id="contactChoice1" name="contact" value="email" />
     <label for="contactChoice1">Email</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="telephone">
+    <input type="radio" id="contactChoice2" name="contact" value="telephone" />
     <label for="contactChoice2">Téléphone</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="courrier">
+    <input type="radio" id="contactChoice3" name="contact" value="courrier" />
     <label for="contactChoice3">Courrier</label>
   </div>
   <div>
     <button type="submit">Envoyer</button>
   </div>
 </form>
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 Ensuite, on ajoute du code [JavaScript](/fr/docs/Web/JavaScript) pour rattacher un gestionnaire d'évènement sur l'évènement [`submit`](/fr/docs/Web/API/HTMLFormElement/submit_event) qui est déclenché lorsque l'utilisateur clique sur le bouton « Envoyer » :
@@ -97,37 +125,41 @@ Ensuite, on ajoute du code [JavaScript](/fr/docs/Web/JavaScript) pour rattacher 
 var form = document.querySelector("form");
 var log = document.querySelector("#log");
 
-form.addEventListener("submit", function(event) {
-  var data = new FormData(form);
-  var output = "";
-  for (const entry of data) {
-    output = entry[0] + "=" + entry[1] + "\r";
-  };
-  log.innerText = output;
-  event.preventDefault();
-}, false);
+form.addEventListener(
+  "submit",
+  function (event) {
+    var data = new FormData(form);
+    var output = "";
+    for (const entry of data) {
+      output = entry[0] + "=" + entry[1] + "\r";
+    }
+    log.innerText = output;
+    event.preventDefault();
+  },
+  false,
+);
 ```
 
 Vous pouvez manipuler cet exemple et voir qu'il n'y a jamais plus 'un résultat pour le groupe `"contact"`.
 
-{{EmbedLiveSample("La_représentation_des_données_d’un_groupe_de_boutons_radio", 600, 130)}}
+{{EmbedLiveSample("La_représentation_des_données_d'un_groupe_de_boutons_radio", 600, 130)}}
 
 ## Attributs supplémentaires
 
 En complément des attributs partagés par l'ensemble des éléments {{HTMLElement("input")}}, les boutons radio peuvent utiliser les attributs suivants :
 
-| Attribut                   | Definition                                                                                                     |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Attribut              | Definition                                                                                                     |
+| --------------------- | -------------------------------------------------------------------------------------------------------------- |
 | [`checked`](#checked) | Un attribut booléen qui indique si le bouton radio est l'élément sélectionné du groupe.                        |
-| [`value`](#value) | Une chaîne à utiliser comme valeur pour le bouton radio lors de l'envoi du formulaire si ce bouton est choisi. |
+| [`value`](#value)     | Une chaîne à utiliser comme valeur pour le bouton radio lors de l'envoi du formulaire si ce bouton est choisi. |
 
-### {{htmlattrdef("checked")}}
+### `checked`
 
 Un attribut booléen qui indique si c'est ce champ radio qui est sélectionné parmi le groupe.
 
-À la différence des autres navigateurs, Firefox conservera [l'état coché dynamique](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) d'un bouton radio au fur et à mesure des chargements de la page. On pourra utiliser l'attribut {{htmlattrxref("autocomplete","input")}} afin de contrôler cette fonctionnalité.
+À la différence des autres navigateurs, Firefox conservera [l'état coché dynamique](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) d'un bouton radio au fur et à mesure des chargements de la page. On pourra utiliser l'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/input#autocomplete) afin de contrôler cette fonctionnalité.
 
-### {{htmlattrdef("value")}}
+### `value`
 
 L'attribut `value` est partagé par l'ensemble des types d'élément {{HTMLElement("input")}}. Dans le cas d'un bouton radio, il a un rôle spécifique et permet d'associer un texte qui sera envoyé avec le formulaire pour représenter la valeur sélectionnée. Si la valeur de `value` n'est pas définie, ce sera la chaîne de caractères `"on"` qui sera envoyée.
 
@@ -143,16 +175,18 @@ Pour qu'un bouton radio soit sélectionné par défaut, on ajoutera l'attribut b
 <form>
   <p>Veuillez choisir la meilleure méthode pour vous contacter :</p>
   <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email" checked>
+    <input
+      type="radio"
+      id="contactChoice1"
+      name="contact"
+      value="email"
+      checked />
     <label for="contactChoice1">Email</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="telephone">
+    <input type="radio" id="contactChoice2" name="contact" value="telephone" />
     <label for="contactChoice2">Téléphone</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="courrier">
+    <input type="radio" id="contactChoice3" name="contact" value="courrier" />
     <label for="contactChoice3">Courrier</label>
   </div>
   <div>
@@ -165,7 +199,8 @@ Pour qu'un bouton radio soit sélectionné par défaut, on ajoutera l'attribut b
 
 Ici, c'est le premier bouton radio qui sera sélectionné par défaut.
 
-> **Note :** Si l'attribut `checked` est placé sur plus d'un bouton, c'est le dernier bouton contenant l'attribut qui sera sélectionné. C'est donc l'ordre des valeurs qui déterminera la valeur par défaut. Pour rappel, il ne peut y avoir qu'un seul bouton radio du groupe qui soit sélectionné à un instant donné.
+> [!NOTE]
+> Si l'attribut `checked` est placé sur plus d'un bouton, c'est le dernier bouton contenant l'attribut qui sera sélectionné. C'est donc l'ordre des valeurs qui déterminera la valeur par défaut. Pour rappel, il ne peut y avoir qu'un seul bouton radio du groupe qui soit sélectionné à un instant donné.
 
 ### Fournir une plus grande zone de sélection
 
@@ -186,16 +221,22 @@ L'exemple qui suit est une version légèrement plus détaillée de l'exemple pr
   <fieldset>
     <legend>Veuillez choisir la meilleure méthode pour vous contacter :</legend>
     <div>
-      <input type="radio" id="contactChoice1"
-       name="contact" value="email" checked>
+      <input
+        type="radio"
+        id="contactChoice1"
+        name="contact"
+        value="email"
+        checked />
       <label for="contactChoice1">Email</label>
 
-      <input type="radio" id="contactChoice2"
-       name="contact" value="telephone">
+      <input
+        type="radio"
+        id="contactChoice2"
+        name="contact"
+        value="telephone" />
       <label for="contactChoice2">Téléphone</label>
 
-      <input type="radio" id="contactChoice3"
-       name="contact" value="courrier">
+      <input type="radio" id="contactChoice3" name="contact" value="courrier" />
       <label for="contactChoice3">Courrier</label>
     </div>
     <div>
@@ -293,7 +334,7 @@ De plus, la légende et le bouton d'envoi ont été mis en forme pour avoir un c
     </tr>
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
-      <td>{{htmlattrxref("checked", "input")}}</td>
+      <td><a href="/fr/docs/Web/HTML/Element/input#checked"><code>checked</code></a></td>
     </tr>
     <tr>
       <td><strong>Attributs IDL</strong></td>

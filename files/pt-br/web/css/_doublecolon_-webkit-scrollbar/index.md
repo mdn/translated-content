@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-scrollbar'
+title: ::-webkit-scrollbar
 slug: Web/CSS/::-webkit-scrollbar
 ---
 
@@ -7,7 +7,8 @@ slug: Web/CSS/::-webkit-scrollbar
 
 O pseudo-elemento CSS `:-webkit-scrollbar` afeta o estilo de um elemento referente a barra de rolagem quando se tem por definido `overflow:scroll;`.
 
-> **Nota:** Se o `overflow:scroll;` não estiver definido nenhuma barra de rolagem será exibida.
+> [!NOTE]
+> Se o `overflow:scroll;` não estiver definido nenhuma barra de rolagem será exibida.
 
 > **Nota:** `::-webkit-scrollbar` está disponível somente em navegadores baseados em [Blink](https://www.chromium.org/blink) - e [WebKit](https://webkit.org) - (Chrome, Edge, Opera, Safari, todos os navegadores para iOS, e [outros](https://en.wikipedia.org/wiki/List_of_web_browsers#WebKit-based)). Um método padronizado para estilização de barras de rolagem está disponível com {{cssxref("scrollbar-color")}} e {{cssxref("scrollbar-width")}}.
 
@@ -94,31 +95,31 @@ Não é parte de nenhum padrão.
 
 ### `::-webkit-scrollbar`
 
-{{Compat("css.selectors.-webkit-scrollbar")}}
+{{Compat}}
 
 ### `::-webkit-scrollbar-button`
 
-{{Compat("css.selectors.-webkit-scrollbar-button")}}
+{{Compat}}
 
 ### `::-webkit-scrollbar-thumb`
 
-{{Compat("css.selectors.-webkit-scrollbar-thumb")}}
+{{Compat}}
 
 ### `::-webkit-scrollbar-track`
 
-{{Compat("css.selectors.-webkit-scrollbar-track")}}
+{{Compat}}
 
 ### `::-webkit-scrollbar-track-piece`
 
-{{Compat("css.selectors.-webkit-scrollbar-track-piece")}}
+{{Compat}}
 
 ### `::-webkit-scrollbar-corner`
 
-{{Compat("css.selectors.-webkit-scrollbar-corner")}}
+{{Compat}}
 
 ### `::-webkit-resizer`
 
-{{Compat("css.selectors.-webkit-resizer")}}
+{{Compat}}
 
 ## Veja Também
 

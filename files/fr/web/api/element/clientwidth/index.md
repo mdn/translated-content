@@ -1,12 +1,6 @@
 ---
 title: element.clientWidth
 slug: Web/API/Element/clientWidth
-tags:
-  - API
-  - CSSOM View
-  - Propriété
-  - Reference
-translation_of: Web/API/Element/clientWidth
 ---
 
 {{APIRef("DOM")}}
@@ -15,7 +9,8 @@ La propriété **`Element.clientWidth`** vaut zéro pour les éléments en ligne
 
 Lorsque `clientWidth` est utilisée sur l'élément racine (l'élément `<html>` par défaut ou `<body>` si le document utilise le mode _quirks_), c'est la largeur de la zone d'affichage (_viewport_) à l'exception des barres de défilement qui est renvoyée. [Il s'agit d'un cas au limite pour `clientWidth`](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-clientwidth).
 
-> **Note :** La valeur de cette propriété sera arondie en un entier. Si vous devez utiliser une valeur décimale, privilégiez {{domxref("element.getBoundingClientRect()")}}.
+> [!NOTE]
+> La valeur de cette propriété sera arondie en un entier. Si vous devez utiliser une valeur décimale, privilégiez {{domxref("element.getBoundingClientRect()")}}.
 
 ## Syntaxe
 

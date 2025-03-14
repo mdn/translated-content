@@ -1,26 +1,33 @@
 ---
 title: Number.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toString
-tags:
-  - JavaScript
-  - Méthode
-  - Number
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/toString
 ---
 
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaîne de caractère représentant l'objet Number.
 
-{{EmbedInteractiveExample("pages/js/number-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toString()")}}
+
+```js interactive-example
+function hexColour(c) {
+  if (c < 256) {
+    return Math.abs(c).toString(16);
+  }
+  return 0;
+}
+
+console.log(hexColour(233));
+// Expected output: "e9"
+
+console.log(hexColour("11"));
+// Expected output: "b"
+```
 
 ## Syntaxe
 
 ```js
-numObj.toString([base])
+numObj.toString([base]);
 ```
 
 ### Paramètre
@@ -56,17 +63,16 @@ Si l'objet `Number` n'est pas un nombre entier, le point (.) sera utilisé pour 
 ```js
 var compte = 10;
 
-console.log(compte.toString());   // affiche "10"
-console.log((17).toString());     // affiche "17"
-console.log((17.2).toString());   // affiche "17.2"
+console.log(compte.toString()); // affiche "10"
+console.log((17).toString()); // affiche "17"
+console.log((17.2).toString()); // affiche "17.2"
 
 var x = 6;
 
-console.log(x.toString(2));       // affiche "110"
-console.log((254).toString(16));  // affiche "fe"
+console.log(x.toString(2)); // affiche "110"
+console.log((254).toString(16)); // affiche "fe"
 
-
-console.log((-10).toString(2));   // affiche "-1010"
+console.log((-10).toString(2)); // affiche "-1010"
 console.log((-0xff).toString(2)); // affiche "-11111111"
 ```
 

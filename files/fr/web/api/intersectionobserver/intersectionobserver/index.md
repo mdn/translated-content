@@ -1,15 +1,6 @@
 ---
 title: IntersectionObserver.IntersectionObserver()
 slug: Web/API/IntersectionObserver/IntersectionObserver
-tags:
-  - API
-  - Constructor
-  - Intersection Observer API
-  - IntersectionObserver
-  - Reference
-  - Visibility
-  - Visible
-translation_of: Web/API/IntersectionObserver/IntersectionObserver
 ---
 
 {{APIRef("Intersection Observer API")}}
@@ -42,7 +33,7 @@ let observer = new IntersectionObserver(callback[, options]);
     - `rootMargin`
       - : Une chaîne de caractères spécifiant un ensemble de décalages à ajouter à la zone englobante pour le calcul des intersections. La zone effective utilisées pour les calculs peut ainsi être réduite ou étendue. La syntaxe est proche de celle utilisée pour la propriété CSS [`margin`](/fr/docs/Web/CSS/margin). Voir [L'élément racine et sa marge externe](/fr/docs/Web/API/Intersection_Observer_API) pour plus d'informations sur le fonctionnement des marges et la syntaxe. Sa valeur par défaut est `"0px 0px 0px 0px"`.
     - `threshold`
-      - : Un nombre ou un tableau de nombres entre 0.0 et 1.0 (inclus), spécifiant des seuils définis comme ratios de la part visible d'un élément cible observé par rapport à sa surface totale. Une valeur de 0.0 signifie que tout pixel visible de l'élément le rend visible et 1.0 que l'entièreté de l'élément doit être visible. Voir [cette section sur les seuils](/fr/docs/Web/API/Intersection_Observer_API#Thresholds) pour une description plus approfondie de l'usage des seuils d'intersection. Le seuil par défaut est 0.0.
+      - : Un nombre ou un tableau de nombres entre 0.0 et 1.0 (inclus), spécifiant des seuils définis comme ratios de la part visible d'un élément cible observé par rapport à sa surface totale. Une valeur de 0.0 signifie que tout pixel visible de l'élément le rend visible et 1.0 que l'entièreté de l'élément doit être visible. Voir [cette section sur les seuils](/fr/docs/Web/API/Intersection_Observer_API#thresholds) pour une description plus approfondie de l'usage des seuils d'intersection. Le seuil par défaut est 0.0.
 
 ### Valeur de retour
 
@@ -61,7 +52,7 @@ Cet exemple crée un nouvel observateur d'intersection qui appelle la fonction `
 
 ```js
 let observer = new IntersectionObserver(myObserverCallback, {
-  threshold: 0.1
+  threshold: 0.1,
 });
 ```
 

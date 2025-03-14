@@ -1,20 +1,9 @@
 ---
 title: downloads.DownloadItem
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
-tags:
-  - API
-  - Add-ons
-  - DownloadItem
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type `DownloadItem` de l'API {{WebExtAPIRef("downloads")}} représente un fichier téléchargé.
 
@@ -63,15 +52,15 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `url`
   - : Un `string` représentant l'URL absolue à partir de laquelle le fichier a été téléchargé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.DownloadItem")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

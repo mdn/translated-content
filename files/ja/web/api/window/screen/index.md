@@ -25,10 +25,8 @@ if (screen.pixelDepth < 8) {
 
 ## 仕様書
 
-| 仕様書                                                                                   | 状態                             | 備考     |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('CSSOM View', '#dom-window-screen', 'window.screen')}} | {{Spec2('CSSOM View')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.screen")}}
+{{Compat}}

@@ -9,7 +9,21 @@ l10n:
 
 **`toLocaleTimeString()`** メソッドは、日付の時間部分を言語に依存して表現した文字列を返します。[`Intl.DateTimeFormat` API](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) に対応している実装では、このメソッドは単に `Intl.DateTimeFormat` を呼び出すだけです。
 
-{{EmbedInteractiveExample("pages/js/date-tolocaletimestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toLocaleTimeString()")}}
+
+```js interactive-example
+// Depending on timezone, your results will vary
+const event = new Date("August 19, 1975 23:15:30 GMT+00:00");
+
+console.log(event.toLocaleTimeString("en-US"));
+// Expected output: "1:15:30 AM"
+
+console.log(event.toLocaleTimeString("it-IT"));
+// Expected output: "01:15:30"
+
+console.log(event.toLocaleTimeString("ar-EG"));
+// Expected output: "١٢:١٥:٣٠ ص"
+```
 
 ## 構文
 
@@ -75,24 +89,24 @@ const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // 米国のアメリカ大陸/ロサンゼルス
 
 // 米国英語は AM/PM 表記の 12 時間制
-console.log(date.toLocaleTimeString('en-US'));
+console.log(date.toLocaleTimeString("en-US"));
 // → "7:00:00 PM"
 
 // 英国英語は AM/PM 表記なしの 24 時間制
-console.log(date.toLocaleTimeString('en-GB'));
+console.log(date.toLocaleTimeString("en-GB"));
 // → "03:00:00"
 
 // 韓国は AM/PM 表記の 12 時間制
-console.log(date.toLocaleTimeString('ko-KR'));
+console.log(date.toLocaleTimeString("ko-KR"));
 // → "오후 12:00:00"
 
 // 多くのアラビア語圏ではアラビア数字を使用
-console.log(date.toLocaleTimeString('ar-EG'));
+console.log(date.toLocaleTimeString("ar-EG"));
 // → "٧:٠٠:٠٠ م"
 
 // 対応していない可能性のある言語を要求した場合、例えば
 // バリ語とし、フォールバック言語にインドネシア語を指定した場合
-console.log(date.toLocaleTimeString(['ban', 'id']));
+console.log(date.toLocaleTimeString(["ban", "id"]));
 // → "11.00.00"
 ```
 
@@ -104,16 +118,18 @@ console.log(date.toLocaleTimeString(['ban', 'id']));
 const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // アプリケーションで UTC を用い、それを表示したい場合
-const options = { timeZone: 'UTC', timeZoneName: 'short' };
-console.log(date.toLocaleTimeString('en-US', options));
+const options = { timeZone: "UTC", timeZoneName: "short" };
+console.log(date.toLocaleTimeString("en-US", options));
 // → "3:00:00 AM GMT"
 
 // 米国でも 24 時間制を使うことがある
-console.log(date.toLocaleTimeString('en-US', { hour12: false }));
+console.log(date.toLocaleTimeString("en-US", { hour12: false }));
 // → "19:00:00"
 
 // 既定のロケールのオプション - 空の配列を使用して時と分のみを表示
-console.log(date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+console.log(
+  date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+);
 // → "20:01"
 ```
 

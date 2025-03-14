@@ -3,93 +3,81 @@ title: WebDriver
 slug: Web/WebDriver
 ---
 
-WebDriver 是远程控制接口，可以对用户代理进行控制。它提供了一个平台和语言中性线协议，作为进程外程序远程指导 web 浏览器行为的方法
+{{QuickLinksWithSubpages}}
 
-能够编写可在不同平台上的许多浏览器中交替运行的指令集，对于向用户提供一致的体验至关重要。随着 web 平台上新一轮的开发浪潮、设备的多样化以及对技术之间真正的互操作性的需求，WebDriver 为跨浏览器测试提供了工具。
+WebDriver 是远程控制接口，可以对用户代理进行控制。它提供了一个平台和中立语言协议结构，作为进程外程序远程指导 web 浏览器行为的方法。
 
-提供了一组接口，用于发现和操作 web 文档中的 DOM 元素，并控制用户代理的行为。它的主要目的是允许 web 作者编写从单独的控制过程中自动执行用户代理的测试，但也可以这样使用，允许浏览器内脚本控制一个（可能是单独的）浏览器。
+具备编写可以在不同平台上的许多浏览器中互换运行的指令集的能力，对于向用户提供一致的体验至关重要。随着网络平台的新一轮发展，设备多样性的增加以及对技术之间真正的互操作性的要求，WebDriver 提供了[跨浏览器测试](/zh-CN/docs/Learn_web_development/Extensions/Testing/Introduction)的工具。
 
-## 概念
+WebDriver 所提供的是一组接口，用于发现和操作网络文档中的 DOM 元素，并控制用户代理的行为。它的主要目的是让 web 作者编写测试，从单独的控制过程中实现用户代理的自动化，但也可以用这样的方式，让浏览器内的脚本控制一个（单独的）浏览器。
 
-要使用 WebDriver，您需要 ... 提供如何使用它的高级描述，而不是低级的细节，然后链接到提供安装细节的其他页面。
+## 使用方法
 
-WebDriver 主要涉及四个方面：
+那么，WebDriver 可以让你做什么，它又是什么样子的？由于 WebDriver 是编程语言中立的，这个问题的答案取决于你所使用的 WebDriver 客户端和语言的选择。
 
-- a
-- b
-- c
-- d
+使用一个用流行的 Python 语言编写的客户端，与 WebDriver 的互动可能看起来像这样：
 
-这些东西一起工作就像 ... 解释命令、动作等的工作流程。
-
-## 使用
-
-那么 WebDriver 允许你做什么？它看起来是什么样子？因为 WebDriver 是编程语言中立的，所以这个问题的答案取决于您使用的是哪个 WebDriver 客户端和语言的选择。
-
-但是使用 Python 编写的流行客户端，您与 WebDriver 的交互可能如下所示：
-
-```plain
+```python
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
 
-wait = WebDriverWait(driver, 10)
+
 
 with webdriver.Firefox() as driver:
+
     driver.get("http://google.com/ncr")
-    driver.find_element_by_name("q").send_keys("cheese" + Keys.RETURN)
+    wait = WebDriverWait(driver, 10)
+    driver.find_element(By.NAME, "q").send_keys("cheese" + Keys.RETURN)
+    wait.until(presence_of_element_located((By.XPATH, '//*[@id="rcnt"]')))
+    results = driver.find_elements(By.XPATH, "//a[@href]")
 
-    wait.until(presence_of_element_located((By.CSS_SELECTOR, "h3>a")))
-
-    results = driver.find_elements_by_css_selector("h3>a")
-    for i, result in results.iteritems():
-        print("#{}: {} ({})".format(i, result.text, result.get_property("href")))
+    for i, elem in enumerate(results):
+        print(f'#{i} {elem.text} ({elem.get_attribute("href")})')
 ```
 
-这可能会产生与此类似的输出：
+它可能会输出：
 
 ```plain
 #1 Cheese - Wikipedia (https://en.wikipedia.org/wiki/Cheese)
 ```
 
-## Reference
+## 参考
 
-### [Commands](/zh-CN/docs/Web/WebDriver/Commands)
+### 命令
 
-{{ListSubpages("/en-US/docs/Web/WebDriver/Commands")}}
+[命令](/zh-CN/docs/Web/WebDriver/Commands)
 
-### [Types](/zh-CN/docs/Web/WebDriver/Types)
+{{ListSubpages("/zh-CN/docs/Web/WebDriver/Commands")}}
 
-- [Error object](/zh-CN/docs/Web/WebDriver/Errors#payload)
-- [Timeouts object](/zh-CN/docs/Web/WebDriver/Timeouts)
+### 类型
+
+[类型](/zh-CN/docs/Web/WebDriver/Types)
+
+- [错误对象](/zh-CN/docs/Web/WebDriver/Errors#payload)
+- [超时对象](/zh-CN/docs/Web/WebDriver/Timeouts)
 - [WebElement](/zh-CN/docs/Web/WebDriver/WebElement)
 - [WebWindow](/zh-CN/docs/Web/WebDriver/WebWindow)
 
-### [Capabilities](/zh-CN/docs/Web/WebDriver/Capabilities)
+### 能力
+
+[能力](/zh-CN/docs/Web/WebDriver/Capabilities)
 
 {{ListSubpages("/zh-CN/docs/Web/WebDriver/Capabilities")}}
 
-### [Errors](/zh-CN/docs/Web/WebDriver/Errors)
+### 错误
+
+[错误](/zh-CN/docs/Web/WebDriver/Errors)
 
 {{ListSubpages("/zh-CN/docs/Web/WebDriver/Errors")}}
 
-## Tutorials
+## 规范
 
-List of links to tutorials? We could delete this for now, or link to tutorial elsewhere, until ours are written.
+- [WebDriver](https://w3c.github.io/webdriver/)
 
-## Examples
+## 参见
 
-Include list of links to examples, preferrably in different languages. Don't include actual code blocks here.
-
-## Specifications
-
-[WebDriver](https://w3c.github.io/webdriver/)
-
-## See also
-
-- [Cross browser testing](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)
-- [Selenium documentation](https://seleniumhq.github.io/docs/) (work in progress)
-
-{{QuickLinksWithSubpages}}
+- [跨浏览器测试](/zh-CN/docs/Learn_web_development/Extensions/Testing)
+- [Selenium 文档](https://www.selenium.dev/documentation/)

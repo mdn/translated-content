@@ -1,8 +1,6 @@
 ---
 title: Atomics.waitAsync()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/waitAsync
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/waitAsync
-browser-compat: javascript.builtins.Atomics.waitAsync
 ---
 
 {{JSRef}}
@@ -11,13 +9,14 @@ La méthode statique **`Atomics.waitAsync()`** permet d'attendre de façon async
 
 À la différence de [`Atomics.wait()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wait), `waitAsync()` n'est pas bloquante et peut être utilisée sur le fil d'exécution principal.
 
-> **Note :** Cette opération ne fonctionne qu'avec un tableau typé partagé entier [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array) ou [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array).
+> [!NOTE]
+> Cette opération ne fonctionne qu'avec un tableau typé partagé entier [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array) ou [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array).
 
 ## Syntaxe
 
 ```js
-Atomics.waitAsync(typedArray, index, value)
-Atomics.waitAsync(typedArray, index, value, timeout)
+Atomics.waitAsync(typedArray, index, value);
+Atomics.waitAsync(typedArray, index, value, timeout);
 ```
 
 ### Paramètres
@@ -37,7 +36,7 @@ Un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) d
 
 ```js
 { async: false, value: 'ok' }
-{ async: false, value: 'not-equal' } 
+{ async: false, value: 'not-equal' }
 { async: false, value: 'timed-out' }
 { async: true, value: promise }
 ```

@@ -13,7 +13,7 @@ A sintaxe de `<number>` estende a sintaxe de {{CSSxRef("&lt;integer&gt;")}}. Um 
 
 ## Interpolação
 
-Quando animado, os valores de `<number>` são interpolados como números reais e de ponto flutuante. A velocidade da interpolação é determinada pelo [tempo da função](/pt-BR/docs/Web/CSS/timing-function) associada à animação.
+Quando animado, os valores de `<number>` são interpolados como números reais e de ponto flutuante. A velocidade da interpolação é determinada pelo [tempo da função](/pt-BR/docs/Web/CSS/easing-function) associada à animação.
 
 ## Exemplos
 
@@ -41,16 +41,11 @@ Quando animado, os valores de `<number>` são interpolados como números reais e
 
 ## Especificações
 
-| Especificações                                                                       | Status                           | Comentário                    |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------- |
-| {{SpecName("CSS4 Values", "#numbers", "&lt;number&gt;")}}         | {{Spec2("CSS4 Values")}} | Nenhuma mudança significante. |
-| {{SpecName("CSS3 Values", "#numbers", "&lt;number&gt;")}}         | {{Spec2("CSS3 Values")}} | Nenhuma mudança significante. |
-| {{SpecName("CSS2.1", "syndata.html#numbers", "&lt;number&gt;")}} | {{Spec2("CSS2.1")}}         | Definição explícita.          |
-| {{SpecName("CSS1", "", "&lt;number&gt;")}}                             | {{Spec2("CSS1")}}         | Definição implícita..         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.types.number")}}
+{{Compat}}
 
 ## Veja também
 

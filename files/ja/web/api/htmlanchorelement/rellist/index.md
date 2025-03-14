@@ -1,30 +1,32 @@
 ---
-title: HTMLAnchorElement.relList
+title: "HTMLAnchorElement: relList プロパティ"
 slug: Web/API/HTMLAnchorElement/relList
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLAnchorElement.relList`** 読み取り専用プロパティは、{{htmlattrxref("rel", "a")}} 属性を反映しています。 これは生きた {{domxref("DOMTokenList")}} で、{{HTMLElement("a")}} 要素で表されるリソースと現在のドキュメントの間の関係を示す[リンク種別](/ja/docs/Web/HTML/Link_types)のセットが入ります。
+**`HTMLAnchorElement.relList`** は読み取り専用プロパティで、[`rel`](/ja/docs/Web/HTML/Attributes/rel) 属性を反映します。 これは生きた {{domxref("DOMTokenList")}} で、{{HTMLElement("a")}} 要素で表されるリソースと現在のドキュメントの間の関係を示すリンク種別のセットが入ります。
 
 このプロパティ自体は読み取り専用です。 つまり、 {{domxref("DOMTokenList")}} を別のものに置き換えることはできませんが、その内容は変更できます。
 
 ## 値
 
-文字列です。
+文字列の生きた {{domxref("DOMTokenList")}} です。
 
 ## 例
 
 ```js
-var anchors = document.getElementsByTagName("a");
-var length = anchors.length;
-for (var i = 0; i < length; i++) {
-  var list = anchors[i].relList;
-  var listLength = list.length;
-  console.log("relList に", listLength, "個のリンク種別がある新しいアンカーノードが見つかりました。");
-  for (var j = 0; j < listLength; j++) {
-    console.log(list[j]);
-  }
+const anchors = document.getElementsByTagName("a");
+for (const anchor of anchors) {
+  const list = anchor.relList;
+  console.log(
+    `relList に ${list.length} 個のリンク種別がある新しいアンカーノードが見つかりました。`,
+  );
+  list.forEach((relValue) => {
+    console.log(relValue);
+  });
 }
 ```
 

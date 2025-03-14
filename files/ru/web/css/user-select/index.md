@@ -1,18 +1,16 @@
 ---
 title: user-select
 slug: Web/CSS/user-select
-tags:
-  - Вёрстка
-  - Свойство
-translation_of: Web/CSS/user-select
 ---
 
 {{CSSRef}}
 
 Свойство [CSS](/ru/docs/Web/CSS) **`user-select`** определяет может ли пользователь выбрать текст. Оно не влияет на контент, загруженный как {{Glossary("Chrome", "chrome")}}, за исключением текстовых блоков.
 
+## Синтаксис
+
 ```css
-/* Ключевые слова в значении */
+/* Ключевые слова */
 user-select: none;
 user-select: auto;
 user-select: text;
@@ -22,29 +20,12 @@ user-select: all;
 /* Глобальные значения */
 user-select: inherit;
 user-select: initial;
+user-select: revert;
+user-select: revert-layer;
 user-select: unset;
-
-/* Специфичные для Mozilla значения */
--moz-user-select: none;
--moz-user-select: text;
--moz-user-select: all;
-
-/* Специфичные для WebKit значения */
--webkit-user-select: none;
--webkit-user-select: text;
--webkit-user-select: all; /*Не работает Safari; используйте только
-                             "none" или "text", или, в противном случае, оно
-                             будет разрешать ввод в <html> контейнер */
-
-/* Специфичные для Microsoft значения */
--ms-user-select: none;
--ms-user-select: text;
--ms-user-select: element;
 ```
 
-{{cssinfo}}
-
-## Синтаксис
+## Значения
 
 - `none`
   - : Текст элемента и вложенных в него элементов не выбирается. Обратите внимание, что объект {{domxref("Selection")}} может содержать эти элементы.
@@ -64,9 +45,14 @@ user-select: unset;
 - `element`{{non-standard_inline}} (IE-specific alias)
   - : Аналогичен `contain`. Поддерживается только в Internet Explorer.
 
-> **Примечание:** CSS UI 4 [renames user-select: element to contain](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05).
+> [!NOTE]
+> CSS UI 4 [renames user-select: element to contain](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05).
 
-### Формальный синтаксис
+## Формальное определение
+
+{{CSSInfo}}
+
+## Формальный синтаксис
 
 {{csssyntax}}
 
@@ -106,7 +92,7 @@ user-select: unset;
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -114,4 +100,4 @@ user-select: unset;
 
 - {{Cssxref("::selection")}}
 - Объект JavaScript {{domxref("Selection")}}.
-- [user-select](http://www.w3.org/TR/css-ui-4/#propdef-user-select) in [CSS Basic User Interface Module Level 4](http://www.w3.org/TR/css-ui-4/).
+- [user-select](https://www.w3.org/TR/css-ui-4/#propdef-user-select) in [CSS Basic User Interface Module Level 4](https://www.w3.org/TR/css-ui-4/).

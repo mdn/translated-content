@@ -1,23 +1,16 @@
 ---
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
-tags:
-  - Function
-  - JavaScript
-  - Method
-  - función
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/apply
 ---
 
-{{JSRef("Objetos_globales", "Function")}}
+{{JSRef}}
 
 ## Resumen
 
-El método **apply()** invoca una determinada función asignando explícitamente el objeto **this** y un array o similar ([array like object](/es/docs/JavaScript/Guide/Predefined_Core_Objects#Working_with_Array-like_objects)) como parámetros (**argumentos)** para dicha función.
+El método **apply()** invoca una determinada función asignando explícitamente el objeto **this** y un array o similar ([array like object](/es/docs/Web/JavaScript/Guide#working_with_array-like_objects)) como parámetros (**argumentos)** para dicha función.
 
-> **Nota:** Aunque la sintaxis de esta función es casi idéntica a {{jsxref("Function.call", "call()")}}, la diferencia fundamental es que `call()` acepta una lista de argumentos, mientras que `apply()` acepta un simple array con los argumentos.
+> [!NOTE]
+> Aunque la sintaxis de esta función es casi idéntica a {{jsxref("Function.call", "call()")}}, la diferencia fundamental es que `call()` acepta una lista de argumentos, mientras que `apply()` acepta un simple array con los argumentos.
 
 ## Sintaxis
 
@@ -30,7 +23,7 @@ fun.apply(thisArg[, argsArray])
 - `thisArg`
   - : El valor del objeto **this** a utilizar dentro de la llamada a _fun_. Cabe mencionar que éste puede no ser el valor visto por el método: si el método es una función del tipo {{jsxref("Functions_and_function_scope/Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Global_Objects/null", "null")}} o {{jsxref("Global_Objects/undefined", "undefined")}} será reemplazado por el objeto global, y los valores primitivos serán encapsulados.
 - `argsArray`
-  - : Un objeto similar a un array ([array like object](/es/docs/JavaScript/Guide/Predefined_Core_Objects#Working_with_Array-like_objects)), que contiene los parámetros con los que será llamada _`fun`_, o `null` o {{jsxref("undefined")}} si ningún argumento es estipulado. Desde la versión 5 de ECMAScript estos parámetros pueden estar en un objeto similar a un array en lugar de un array. Véase [browser compatibility](#browser_compatibility) para mayor información.
+  - : Un objeto similar a un array ([array like object](/es/docs/Web/JavaScript/Guide#working_with_array-like_objects)), que contiene los parámetros con los que será llamada _`fun`_, o `null` o {{jsxref("undefined")}} si ningún argumento es estipulado. Desde la versión 5 de ECMAScript estos parámetros pueden estar en un objeto similar a un array en lugar de un array. Véase [browser compatibility](#browser_compatibility) para mayor información.
 
 ### Valor de retorno
 
@@ -46,7 +39,8 @@ Puede también utilizarse {{jsxref("Functions/arguments", "arguments")}} como pa
 
 Desde la 5ta edición de ECMAScript se puede utilizar también cualquier tipo de objeto similar a un arreglo, que en términos prácticos significa que tendrá una propiedad `length` y propiedades integer en el rango (`0...length)`. Por ejemplo, ahora puede utilizarse un {{domxref("NodeList")}} o un objeto personalizado como: `{'length': 2, '0': 'eat', '1': 'bananas'}`.
 
-> **Nota:** La mayoría de los navegadores, incluidos Chrome 14 e Internet Explorer 9, aún no soportan el uso de objetos similares a un array y arrojarán una excepción.
+> [!NOTE]
+> La mayoría de los navegadores, incluidos Chrome 14 e Internet Explorer 9, aún no soportan el uso de objetos similares a un array y arrojarán una excepción.
 
 ## Ejemplos
 
@@ -56,19 +50,22 @@ Puedes utilizar `apply` para encadenar {{jsxref("Operators/new", "constructors")
 
 ```js
 Function.prototype.construct = function (aArgs) {
-    var fConstructor = this, fNewConstr = function () { fConstructor.apply(this, aArgs); };
-    fNewConstr.prototype = fConstructor.prototype;
-    return new fNewConstr();
+  var fConstructor = this,
+    fNewConstr = function () {
+      fConstructor.apply(this, aArgs);
+    };
+  fNewConstr.prototype = fConstructor.prototype;
+  return new fNewConstr();
 };
 ```
 
 Ejemplo de uso:
 
 ```js
-function MyConstructor () {
-    for (var nProp = 0; nProp < arguments.length; nProp++) {
-        this["property" + nProp] = arguments[nProp];
-    }
+function MyConstructor() {
+  for (var nProp = 0; nProp < arguments.length; nProp++) {
+    this["property" + nProp] = arguments[nProp];
+  }
 }
 
 var myArray = [4, "Hello world!", false];
@@ -79,7 +76,8 @@ alert(myInstance instanceof MyConstructor); // alerts "true"
 alert(myInstance.constructor); // alerts "MyConstructor"
 ```
 
-> **Nota:** El método `Function.construct` no nativo no funcionará con algunos constructores nativos (como {{jsxref("Date")}}, por ejemplo). En estos casos se deberá utilizar el método {{jsxref("Function.bind")}} (por ejemplo, supóngase un arreglo como el siguiente para utilizar con el constructor `Date`: `[2012, 11, 4]`; en este caso se tendría que escribir algo como: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` – de cualquier manera, ésta no es la mejor manera de hacerlo y probablemente no debería utilizarse en ningún entorno en producción).
+> [!NOTE]
+> El método `Function.construct` no nativo no funcionará con algunos constructores nativos (como {{jsxref("Date")}}, por ejemplo). En estos casos se deberá utilizar el método {{jsxref("Function.bind")}} (por ejemplo, supóngase un arreglo como el siguiente para utilizar con el constructor `Date`: `[2012, 11, 4]`; en este caso se tendría que escribir algo como: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` – de cualquier manera, ésta no es la mejor manera de hacerlo y probablemente no debería utilizarse en ningún entorno en producción).
 
 ### `apply` y funciones built-in
 
@@ -90,17 +88,18 @@ El uso inteligente de **`apply`** permite utilizar funciones built-in para algun
 var numbers = [5, 6, 2, 3, 7];
 
 /* using Math.min/Math.max apply */
-var max = Math.max.apply(null, numbers); /* This about equal to Math.max(numbers[0], ...) or Math.max(5, 6, ..) */
+var max = Math.max.apply(
+  null,
+  numbers,
+); /* This about equal to Math.max(numbers[0], ...) or Math.max(5, 6, ..) */
 var min = Math.min.apply(null, numbers);
 
 /* vs. simple loop based algorithm */
-max = -Infinity, min = +Infinity;
+(max = -Infinity), (min = +Infinity);
 
 for (var i = 0; i < numbers.length; i++) {
-  if (numbers[i] > max)
-    max = numbers[i];
-  if (numbers[i] < min)
-    min = numbers[i];
+  if (numbers[i] > max) max = numbers[i];
+  if (numbers[i] < min) min = numbers[i];
 }
 ```
 
@@ -130,24 +129,24 @@ var min = minOfArray([5, 6, 2, 3, 7]);
 
 ```js
 var originalfoo = someobject.foo;
-someobject.foo = function() {
+someobject.foo = function () {
   // Haz algo antes de llamar a la función
   console.log(arguments);
   // Llama a la función como la hubieras llamado normalmente
   originalfoo.apply(this, arguments);
   // Aquí, ejecuta algo después
-}
+};
 ```
 
-Este método es especialmente útil cuando quieres depurar eventos, o interfaces con algún elemento que no tiene API, al igual que los diversos `.on` (eventos` [event]..., `como los que se usan en el [Devtools Inspector](/es/docs/Tools/Page_Inspector#Developer_API))
+Este método es especialmente útil cuando quieres depurar eventos, o interfaces con algún elemento que no tiene API, al igual que los diversos `.on` (eventos`[event]...,`como los que se usan en el [Devtools Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#developer_api))
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function.apply")}}
+{{Compat}}
 
 ## Véase también
 

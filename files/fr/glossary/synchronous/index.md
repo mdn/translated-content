@@ -1,13 +1,9 @@
 ---
 title: Synchrone
 slug: Glossary/Synchronous
-tags:
-  - Glossaire
-  - Mécanismes web
-  - Web
-translation_of: Glossary/Synchronous
-original_slug: Glossaire/Synchronous
 ---
+
+{{GlossarySidebar}}
 
 _Synchrone_ fait référence à une communication en temps réel pendant laquelle chaque partie reçoit les messages (et, si nécessaire, les traite et y répond) dès que possible après qu'ils aient été envoyés.
 
@@ -20,4 +16,4 @@ De nombreuses commandes de programmation sont synchrones, par exemple quand vous
 ### Référence technique
 
 - {{glossary("Asynchronous")}}
-- [Requêtes synchrones et asynchrones](/fr/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) avec l'{{glossary("API")}} [XMLHttpRequest()](/fr/docs/Web/API/XMLHttpRequest)
+- [Requêtes synchrones et asynchrones](/fr/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests) avec l'{{glossary("API")}} [XMLHttpRequest()](/fr/docs/Web/API/XMLHttpRequest)

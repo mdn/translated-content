@@ -5,7 +5,8 @@ slug: Web/CSS/box-orient
 
 {{CSSRef}}{{Non-standard_header}}
 
-> **警告:** これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)を参照してください。
+> [!WARNING]
+> これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)を参照してください。
 
 **`box-orient`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がその中身をレイアウトする方向が、水平か垂直かを指定します。
 
@@ -61,8 +62,8 @@ HTML DOM 要素は既定で中身をインライン軸に沿ってレイアウ�
 
 ```html
 <div class="example">
-    <p>I will be to the left of my sibling.</p>
-    <p>I will be to the right of my sibling.</p>
+  <p>I will be to the left of my sibling.</p>
+  <p>I will be to the right of my sibling.</p>
 </div>
 ```
 
@@ -70,14 +71,14 @@ HTML DOM 要素は既定で中身をインライン軸に沿ってレイアウ�
 
 ```css
 div.example {
-  display: -moz-box;                /* Mozilla */
-  display: -webkit-box;             /* WebKit */
-  display: box;                     /* 仕様書通り */
+  display: -moz-box; /* Mozilla */
+  display: -webkit-box; /* WebKit */
+  display: box; /* 仕様書通り */
 
   /* 子は垂直に向けられる */
-  -moz-box-orient: horizontal;      /* Mozilla */
-  -webkit-box-orient: horizontal;   /* WebKit */
-  box-orient: horizontal;           /* 仕様書通り */
+  -moz-box-orient: horizontal; /* Mozilla */
+  -webkit-box-orient: horizontal; /* WebKit */
+  box-orient: horizontal; /* 仕様書通り */
 }
 ```
 

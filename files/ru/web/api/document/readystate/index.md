@@ -1,16 +1,13 @@
 ---
 title: Document.readyState
 slug: Web/API/Document/readyState
-tags:
-  - API
-  - Property
-translation_of: Web/API/Document/readyState
 ---
-{{APIRef("DOM")}}{{gecko_minversion_header("1.9.2")}}
 
-Свойство** `Document.readyState`** описывает состояние загрузки {{domxref("document")}}.
+{{APIRef("DOM")}}
 
-Когда значение этого свойства изменяется, в объекте {{domxref("document")}} запускается событие {{event("readystatechange")}}.
+Свойство **`Document.readyState`** описывает состояние загрузки {{domxref("document")}}.
+
+Когда значение этого свойства изменяется, в объекте {{domxref("document")}} возникает событие [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event).
 
 ## Синтаксис
 
@@ -27,9 +24,9 @@ var string = document.readyState;
 - `interactive`
   - : Страница уже загружена и [DOM](/ru/docs/Glossary/DOM) дерево построено, но дополнительные ресурсы, такие как изображения и [iframe](/ru/docs/Web/HTML/Element/iframe), все ещё загружаются.
 - `complete`
-  - : Страница и все дополнительные ресурсы уже загружены. Это состояние указывает, что событие {{event("load")}} уже вызвано.
+  - : Страница и все дополнительные ресурсы уже загружены. Это состояние указывает, что событие [`load`](/ru/docs/Web/API/Window/load_event) уже вызвано.
 
-При изменении значения, данного свойства, вызывается событие {{event("readystatechange")}} на объекте {{ domxref("document") }}.
+При изменении значения, данного свойства, вызывается событие [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event) на объекте {{ domxref("document") }}.
 
 ## Примеры
 
@@ -48,7 +45,9 @@ switch (document.readyState) {
     break;
   case "complete":
     // Страница загружена вместе с дополнительными ресурсами.
-    console.log("The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText);
+    console.log(
+      "The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText,
+    );
     break;
 }
 ```
@@ -61,7 +60,7 @@ document.onreadystatechange = function () {
   if (document.readyState == "interactive") {
     initApplication();
   }
-}
+};
 ```
 
 ### readystatechange как альтернатива событию load
@@ -72,19 +71,19 @@ document.onreadystatechange = function () {
   if (document.readyState == "complete") {
     initApplication();
   }
-}
+};
 ```
 
 ## Спецификации
 
 {{Specifications}}
 
-## Браузерная поддержка
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- Событие {{event("readystatechange")}}
-- Событие {{event("DOMContentLoaded")}}
-- Событие {{event("load")}}
+- Событие [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event)
+- Событие [`DOMContentLoaded`](/ru/docs/Web/API/Document/DOMContentLoaded_event)
+- Событие [`load`](/ru/docs/Web/API/Window/load_event)

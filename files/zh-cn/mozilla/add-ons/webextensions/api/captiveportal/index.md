@@ -1,34 +1,36 @@
 ---
 title: captivePortal
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal
+l10n:
+  sourceCommit: eec174a08a5003da32f53e694c45eda3377b4d18
 ---
 
 {{AddonSidebar}}
 
-Determine the captive portal state of the user's connection. A captive portal is a web page displayed when a user first connects to a Wi-Fi network. The user provides information or acts on the captive portal web page to gain broader access to network resources, such as accepting terms and conditions or making a payment.
+确定用户连接的强制门户状态。强制门户页面是在用户首次连接到 Wi-Fi 网络时显示的网页。用户在强制门户页面上提供信息或执行操作以获得更广泛的网络资源访问权限，例如接受条款和条件或进行付款。
 
-To use this API you need to have the "captivePortal" [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+使用此 API 需要具有“captivePortal”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
-## Properties
+## 属性
 
 - {{WebExtAPIRef("captivePortal.canonicalURL")}}
-  - : Return the canonical URL of the captive-portal detection page. Read-only.
+  - : 返回强制门户检测页面的规范 URL。只读。
 
-## Functions
+## 函数
 
 - {{WebExtAPIRef("captivePortal.getLastChecked()")}}
-  - : Returns the time, in milliseconds, since the last request was completed.
+  - : 返回自上次请求完成以来的时间，以毫秒为单位。
 - {{WebExtAPIRef("captivePortal.getState()")}}
-  - : Returns the portal state as one of `unknown`, `not_captive`, `unlocked_portal`, or `locked_portal`.
+  - : 返回门户状态，值可以是 `unknown`、`not_captive`、`unlocked_portal` 或 `locked_portal` 之一。
 
-## Events
+## 事件
 
 - {{WebExtAPIRef("captivePortal.onConnectivityAvailable")}}
-  - : Fires when the captive portal service determines that the user can connect to the internet.
+  - : 当强制门户服务确定用户可以连接到互联网时触发。
 - {{WebExtAPIRef("captivePortal.onStateChanged")}}
-  - : Fires when the captive portal state changes.
+  - : 当强制门户状态改变时触发。
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 

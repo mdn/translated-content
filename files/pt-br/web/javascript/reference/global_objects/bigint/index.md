@@ -36,7 +36,9 @@ const hugeString = BigInt("9007199254740991");
 const hugeHex = BigInt("0x1fffffffffffff");
 // ↪ 9007199254740991n
 
-const hugeBin = BigInt("0b11111111111111111111111111111111111111111111111111111");
+const hugeBin = BigInt(
+  "0b11111111111111111111111111111111111111111111111111111",
+);
 // ↪ 9007199254740991n
 ```
 
@@ -51,14 +53,14 @@ Isso é parecido com um {{jsxref("Number")}} em algumas partes, mas difere-se em
 Quando testado com `typeof` , um `BigInt` vai devolver "bigint":
 
 ```js
-typeof 1n === 'bigint'; // true
-typeof BigInt('1') === 'bigint'; // true
+typeof 1n === "bigint"; // true
+typeof BigInt("1") === "bigint"; // true
 ```
 
 Quando envolvido em um `Object`, um `BigInt` vai ser considerado como um tipo normal de "object".
 
 ```js
-typeof Object(1n) === 'object'; // true
+typeof Object(1n) === "object"; // true
 ```
 
 ### Operadores
@@ -93,7 +95,8 @@ bigN * -1n
 
 O operador `/` também funciona com o esperado com números inteiros. No entanto, desde que esses sejam `BigInt`s e não `BigDecimal`s, essa operação vai arredondar para 0, o que significa que não vai retornar qualquer valor fracional.
 
-> **Aviso:** Uma operação com um resultado fracional será arredondado com `BigInt.`
+> [!WARNING]
+> Uma operação com um resultado fracional será arredondado com `BigInt.`
 
 ```js
 const expected = 4n / 2n;
@@ -108,29 +111,29 @@ const rounded = 5n / 2n;
 Um `BigInt` não é estritamente igual a um {{jsxref("Global_Objects/Number", "Number")}}, mas é mais ou menos assim.
 
 ```js
-0n === 0
+0n === 0;
 // ↪ false
 
-0n == 0
+0n == 0;
 // ↪ true
 ```
 
 Um {{jsxref("Global_Objects/Number", "Number")}} e um `BigInt` podem ser comparado normalmente.
 
 ```js
-1n < 2
+1n < 2;
 // ↪ true
 
-2n > 1
+2n > 1;
 // ↪ true
 
-2 > 2
+2 > 2;
 // ↪ false
 
-2n > 2
+2n > 2;
 // ↪ false
 
-2n >= 2
+2n >= 2;
 // ↪ true
 ```
 
@@ -151,7 +154,7 @@ Observe que comparações com `BigInt`s envolvidos em `Object` atuam com outros 
 Object(0n) === Object(0n); // false
 
 const o = Object(0n);
-o === o // true
+o === o; // true
 ```
 
 ### Condicionais
@@ -160,29 +163,29 @@ A `BigInt` comporta-se como {{jsxref("Global_Objects/Number", "Number")}} nos ca
 
 ```js
 if (0n) {
-  console.log('Olá de um if!');
+  console.log("Olá de um if!");
 } else {
-  console.log('Olá de um else!');
+  console.log("Olá de um else!");
 }
 
 // ↪ "Olá de um else!"
 
-0n || 12n
+0n || 12n;
 // ↪ 12n
 
-0n && 12n
+0n && 12n;
 // ↪ 0n
 
-Boolean(0n)
+Boolean(0n);
 // ↪ false
 
-Boolean(12n)
+Boolean(12n);
 // ↪ true
 
-!12n
+!12n;
 // ↪ false
 
-!0n
+!0n;
 // ↪ true
 ```
 
@@ -204,7 +207,7 @@ Todas as instâncias `BigInt` são herdades de BigInt.prototype. O protótipo do
 
 ### Métodos
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/BigInt/prototype', 'Methods')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/BigInt/prototype', 'Methods') -->
 
 ## Exemplos
 
@@ -234,6 +237,6 @@ function nthPrime(nth) {
   return prime;
 }
 
-nthPrime(20n)
+nthPrime(20n);
 // ↪ 73n
 ```

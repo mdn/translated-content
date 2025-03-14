@@ -5,25 +5,23 @@ slug: Web/API/Node/hasChildNodes
 
 {{ApiRef}}
 
-### 概述
-
-**hasChildNodes**方法返回一个[布尔值](/zh-CN/docs/JavaScript/Reference/Global_Objects/Boolean),表明当前[节点](/zh-CN/docs/DOM/Node)是否包含有[子节点](/zh-CN/docs/DOM/Node.childNodes).
+**hasChildNodes**方法返回一个[布尔值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean),表明当前[节点](/zh-CN/docs/Web/API/Node)是否包含有[子节点](/zh-CN/docs/Web/API/Node/childNodes).
 
 ## 语法
 
-```
-element.hasChildNodes()
+```js-nolint
+hasChildNodes()
 ```
 
-## 例子
+## 示例
 
 下面的例子演示了：如果 id 为 foo 的这个元素有子节点，则从 dom 树中删除它的第一个子节点。
 
 ```js
 var foo = document.getElementById("foo");
 
-if ( foo.hasChildNodes() ) {
-  foo.removeChild( foo.childNodes[0] );
+if (foo.hasChildNodes()) {
+  foo.removeChild(foo.childNodes[0]);
 }
 ```
 
@@ -40,7 +38,7 @@ if ( foo.hasChildNodes() ) {
 ## 规范
 
 - [WHATWG: hasChildNodes](https://dom.spec.whatwg.org/#dom-node-haschildnodes)
-- [hasChildNodes](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-810594187)
+- [hasChildNodes](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-810594187)
 
 ## 相关链接
 

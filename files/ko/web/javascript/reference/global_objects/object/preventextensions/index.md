@@ -1,24 +1,33 @@
 ---
 title: Object.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 ---
+
 {{JSRef}}
 
 **`Object.preventExtensions()`** 메서드는 새로운 속성이 이제까지 객체에 추가되는 것을 방지합니다 (즉 객체의 장래 확장을 막습니다).
 
-{{EmbedInteractiveExample("pages/js/object-preventextensions.html")}}
+{{InteractiveExample("JavaScript Demo: Object.preventExtensions()")}}
+
+```js interactive-example
+const object1 = {};
+
+Object.preventExtensions(object1);
+
+try {
+  Object.defineProperty(object1, "property1", {
+    value: 42,
+  });
+} catch (e) {
+  console.log(e);
+  // Expected output: TypeError: Cannot define property property1, object is not extensible
+}
+```
 
 ## 구문
 
 ```js
-Object.preventExtensions(obj)
+Object.preventExtensions(obj);
 ```
 
 ### 매개변수
@@ -30,7 +39,7 @@ Object.preventExtensions(obj)
 
 객체는 새로운 속성이 추가될 수 있는 경우 확장 가능입니다. `Object.preventExtensions()`는 객체를 이제 확장 불가로 표시하므로 표시된 그 시점에 있던 것 이외의 속성을 갖지 않습니다. 보통 확장 불가인 객체의 속성은 여전히 _삭제될_ 수 있음을 주의하세요. 확장 불가인 객체에 새로운 속성을 추가하려는 시도는 실패합니다, 조용히든 {{jsxref("TypeError")}}가 발생해서든 (가장 흔하나 오로지 {{jsxref("Functions_and_function_scope/Strict_mode", "엄격 모드", "", 1)}}인 경우에서만은 아님).
 
-`Object.preventExtensions()`는 자신의 속성 추가만을 방지합니다. 속성은 여전히 객체의 프로토타입에 추가될 수 있습니다. 그러나, 객체에 `Object.preventExtensions()`를 호출하면 그 {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}} 속성의 확장 또한 막습니다.
+`Object.preventExtensions()`는 자신의 속성 추가만을 방지합니다. 속성은 여전히 객체의 프로토타입에 추가될 수 있습니다. 그러나, 객체에 `Object.preventExtensions()`를 호출하면 그 [`Object.prototype.__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{deprecated_inline}} 속성의 확장 또한 막습니다.
 
 ECMAScript 5에서 확장 가능 객체를 확장 불가로 바꾸는 법이 있더라도, 반대로 하는 법은 없습니다.
 
@@ -53,12 +62,12 @@ Object.isExtensible(empty); // === false
 // Object.defineProperty는 확장 불가 객체에 새 속성을 추가할 때 오류가 발생합니다.
 var nonExtensible = { removable: true };
 Object.preventExtensions(nonExtensible);
-Object.defineProperty(nonExtensible, 'new', { value: 8675309 }); // TypeError 발생
+Object.defineProperty(nonExtensible, "new", { value: 8675309 }); // TypeError 발생
 
 // 엄격 모드에서, 확장 불가 객체에 새 속성을 추가하려는 시도는 TypeError가 발생합니다.
 function fail() {
-  'use strict';
-  nonExtensible.newProperty = 'FAIL'; // TypeError 발생
+  "use strict";
+  nonExtensible.newProperty = "FAIL"; // TypeError 발생
 }
 fail();
 
@@ -66,7 +75,7 @@ fail();
 // 지원하는 엔진에서만 동작합니다):
 // 확장 불가 객체의 프로토타입은 불변합니다.
 var fixed = Object.preventExtensions({});
-fixed.__proto__ = { oh: 'hai' }; // TypeError 발생
+fixed.__proto__ = { oh: "hai" }; // TypeError 발생
 ```
 
 ## 참고

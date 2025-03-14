@@ -1,11 +1,6 @@
 ---
 title: break
 slug: Web/JavaScript/Reference/Statements/break
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/break
-original_slug: Web/JavaScript/Referencia/Sentencias/break
 ---
 
 {{jsSidebar("Statements")}}
@@ -35,13 +30,12 @@ La siguiente función tiene una sentencia que termina el bucle {{jsxref("Sentenc
 
 ```js
 function comprobarBreak(x) {
-   var i = 0;
-   while (i < 6) {
-      if (i == 3)
-         break;
-      i++;
-   }
-   return i * x;
+  var i = 0;
+  while (i < 6) {
+    if (i == 3) break;
+    i++;
+  }
+  return i * x;
 }
 ```
 

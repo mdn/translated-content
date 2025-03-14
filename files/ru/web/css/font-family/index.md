@@ -1,19 +1,55 @@
 ---
 title: font-family
 slug: Web/CSS/font-family
-tags:
-  - CSS
-  - CSS-свойства
-  - CSS-свойство
-  - семейства-шрифтов
-translation_of: Web/CSS/font-family
 ---
 
 {{CSSRef}}
 
 CSS-свойство **`font-family`** определяет приоритетный список из одного или нескольких названий семейства шрифтов и/или общее имя шрифта для выбранного элемента.
 
-{{EmbedInteractiveExample("pages/css/font-family.html")}}
+{{InteractiveExample("CSS Demo: font-family")}}
+
+```css interactive-example-choice
+font-family: Georgia, serif;
+```
+
+```css interactive-example-choice
+font-family: "Gill Sans", sans-serif;
+```
+
+```css interactive-example-choice
+font-family: sans-serif;
+```
+
+```css interactive-example-choice
+font-family: serif;
+```
+
+```css interactive-example-choice
+font-family: cursive;
+```
+
+```css interactive-example-choice
+font-family: system-ui;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+section {
+  font-size: 1.2em;
+}
+```
 
 Значения разделены запятыми, чтобы указать, что они являются альтернативами. Браузер выберет из списка первый шрифт, который установлен или может быть скачан используя правило {{cssxref("@font-face")}} .
 
@@ -27,7 +63,9 @@ CSS-свойство **`font-family`** определяет приоритетн
 
 ```css
 /* Имя шрифта и общие семейства шрифтов */
-font-family: Gill Sans Extrabold, sans-serif;
+font-family:
+  Gill Sans Extrabold,
+  sans-serif;
 font-family: "Goudy Bookletter 1911", sans-serif;
 
 /* Только общие семейства */
@@ -52,7 +90,9 @@ font-family: unset;
 В приведённом ниже примере перечислены два семейства шрифтов, первое [`<family-name>`](#family-name), а второе как `<generic-name>`:
 
 ```css
-font-family: Gill Sans Extrabold, sans-serif;
+font-family:
+  Gill Sans Extrabold,
+  sans-serif;
 ```
 
 ### Значения
@@ -63,7 +103,7 @@ font-family: Gill Sans Extrabold, sans-serif;
   - : Общие семейства шрифтов используются как резервный механизм для сохранения некоторого авторского стиля в момент, когда ни один из желаемых шрифтов недоступен. Общие семейства шрифтов являются ключевыми словами и **не** должны браться в кавычки. Общее семейство шрифтов должно определяться последним в списке семейств шрифтов. Определены следующие ключевые слова:
     - `serif`
       - : Глифы имеют завершающие штрихи, расширяющиеся или сужающиеся концы, или имеют фактически зазубренные окончания.
-    Например, "Lucida Bright", "Lucida Fax", Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif.
+        Например, "Lucida Bright", "Lucida Fax", Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif.
     - `sans-serif`
       - : Глифы имеют гладкие окончания.
         Например, "Open Sans", "Fira Sans", "Lucida Sans", "Lucida Sans Unicode", "Trebuchet MS", "Liberation Sans", "Nimbus Sans L", sans-serif.
@@ -90,20 +130,30 @@ font-family: Gill Sans Extrabold, sans-serif;
 Например, следующие объявления являются валидными:
 
 ```css
-font-family: Gill Sans Extrabold, sans-serif;
+font-family:
+  Gill Sans Extrabold,
+  sans-serif;
 font-family: "Goudy Bookletter 1911", sans-serif;
 ```
 
 Следующие объявления являются **не валидными**:
 
 ```css example-bad
-font-family: Goudy Bookletter 1911, sans-serif;
+font-family:
+  Goudy Bookletter 1911,
+  sans-serif;
 font-family: Red/Black, sans-serif;
-font-family: "Lucida" Grande, sans-serif;
+font-family:
+  "Lucida" Grande,
+  sans-serif;
 font-family: Ahem!, sans-serif;
-font-family: test@foo, sans-serif;
+font-family:
+  test @foo,
+  sans-serif;
 font-family: #POUND, sans-serif;
-font-family: Hawaii 5-0, sans-serif;
+font-family:
+  Hawaii 5-0,
+  sans-serif;
 ```
 
 ### Формальный синтаксис
@@ -116,7 +166,11 @@ font-family: Hawaii 5-0, sans-serif;
 
 ```css
 .serif {
-  font-family: Times, Times New Roman, Georgia, serif;
+  font-family:
+    Times,
+    Times New Roman,
+    Georgia,
+    serif;
 }
 
 .sansserif {
@@ -124,7 +178,10 @@ font-family: Hawaii 5-0, sans-serif;
 }
 
 .monospace {
-  font-family: Lucida Console, Courier, monospace;
+  font-family:
+    Lucida Console,
+    Courier,
+    monospace;
 }
 
 .cursive {
@@ -149,37 +206,21 @@ font-family: Hawaii 5-0, sans-serif;
 ```
 
 ```html hidden
-<div class="serif">
-  This is an example of a serif font.
-</div>
+<div class="serif">This is an example of a serif font.</div>
 
-<div class="sansserif">
-  This is an example of a sans-serif font.
-</div>
+<div class="sansserif">This is an example of a sans-serif font.</div>
 
-<div class="monospace">
-  This is an example of a monospace font.
-</div>
+<div class="monospace">This is an example of a monospace font.</div>
 
-<div class="cursive">
-  This is an example of a cursive font.
-</div>
+<div class="cursive">This is an example of a cursive font.</div>
 
-<div class="fantasy">
-  This is an example of a fantasy font.
-</div>
+<div class="fantasy">This is an example of a fantasy font.</div>
 
-<div class="math">
-  This is an example of a math font.
-</div>
+<div class="math">This is an example of a math font.</div>
 
-<div class="emoji">
-  This is an example of an emoji font.
-</div>
+<div class="emoji">This is an example of an emoji font.</div>
 
-<div class="fangsong">
-  This is an example of a fangsong font.
-</div>
+<div class="fangsong">This is an example of a fangsong font.</div>
 ```
 
 {{ EmbedLiveSample('Некоторые_общие_семейства_шрифтов','600','120') }}
@@ -194,8 +235,8 @@ font-family: Hawaii 5-0, sans-serif;
 
 {{Compat}}
 
-\[1] `system-ui` в данный момент не реализовано, смотри {{bug(1226042)}}.
+\[1] `system-ui` в данный момент не реализовано, смотри [Firefox bug 1226042](https://bugzil.la/1226042).
 
 \[2] `system-ui` реализовано в Safari ([wkbug.com/151493](https://bugs.webkit.org/show_bug.cgi?id=151493)), возможно будет выпущено в ближайшем времени.
 
-\[3] префиксный алиас `-apple-system` поддерживается в Safari, начиная с OS X 10.11 и iOS 9, а также в Firefox 43 на macOS ({{bug(1201318)}}).
+\[3] префиксный алиас `-apple-system` поддерживается в Safari, начиная с OS X 10.11 и iOS 9, а также в Firefox 43 на macOS ([Firefox bug 1201318](https://bugzil.la/1201318)).

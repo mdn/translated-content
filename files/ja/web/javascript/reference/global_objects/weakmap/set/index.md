@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 
 **`set()`** メソッドは、指定されたキーと値をもつ新しい要素を `WeakMap` オブジェクトへ追加します。
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-set.html")}}
+{{InteractiveExample("JavaScript Demo: WeakMap.prototype.set()")}}
+
+```js interactive-example
+const weakmap1 = new WeakMap();
+const object1 = {};
+const object2 = {};
+
+weakmap1.set(object1, "foo");
+weakmap1.set(object2, "bar");
+
+console.log(weakmap1.get(object1));
+// Expected output: "foo"
+
+console.log(weakmap1.get(object2));
+// Expected output: "bar"
+```
 
 ## 構文
 
@@ -35,10 +50,10 @@ var wm = new WeakMap();
 var obj = {};
 
 // Add new elements to the WeakMap
-wm.set(obj, 'foo').set(window, 'bar'); // chainable
+wm.set(obj, "foo").set(window, "bar"); // chainable
 
 // Update an element in the WeakMap
-wm.set(obj, 'baz');
+wm.set(obj, "baz");
 ```
 
 ## 仕様書
@@ -47,7 +62,7 @@ wm.set(obj, 'baz');
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakMap.set")}}
+{{Compat}}
 
 ## 関連情報
 

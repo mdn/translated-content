@@ -1,13 +1,11 @@
 ---
 title: GamepadButton
 slug: Web/API/GamepadButton
-translation_of: Web/API/GamepadButton
 ---
+
 {{APIRef("Gamepad API")}}Интерфейс **`GamepadButton`** определяет отдельную кнопку геймпада или другого контроллера, позволяя получить доступ к текущему состоянию различных типов кнопок, доступных на устройстве
 
 Объект **`GamepadButton`** возвращается путём получения любого элемента в массиве `buttons`, который является свойством интерфейса {{domxref("Gamepad")}}.
-
-> **Примечание:** Это работает только в Firefox Gecko 28 и выше; Chrome и более ранние версии Firefox по-прежнему возвращают массив чисел с плавающей точкой
 
 ## Свойства
 
@@ -22,49 +20,47 @@ translation_of: Web/API/GamepadButton
 
 ```js
 function gameLoop() {
-  if(navigator.webkitGetGamepads) {
+  if (navigator.webkitGetGamepads) {
     var gp = navigator.webkitGetGamepads()[0];
 
-    if(gp.buttons[0] == 1) {
+    if (gp.buttons[0] == 1) {
       b--;
-    } else if(gp.buttons[1] == 1) {
+    } else if (gp.buttons[1] == 1) {
       a++;
-    } else if(gp.buttons[2] == 1) {
+    } else if (gp.buttons[2] == 1) {
       b++;
-    } else if(gp.buttons[3] == 1) {
+    } else if (gp.buttons[3] == 1) {
       a--;
     }
   } else {
     var gp = navigator.getGamepads()[0];
 
-    if(gp.buttons[0].value > 0 || gp.buttons[0].pressed == true) {
+    if (gp.buttons[0].value > 0 || gp.buttons[0].pressed == true) {
       b--;
-    } else if(gp.buttons[1].value > 0 || gp.buttons[1].pressed == true) {
+    } else if (gp.buttons[1].value > 0 || gp.buttons[1].pressed == true) {
       a++;
-    } else if(gp.buttons[2].value > 0 || gp.buttons[2].pressed == true) {
+    } else if (gp.buttons[2].value > 0 || gp.buttons[2].pressed == true) {
       b++;
-    } else if(gp.buttons[3].value > 0 || gp.buttons[3].pressed == true) {
+    } else if (gp.buttons[3].value > 0 || gp.buttons[3].pressed == true) {
       a--;
     }
   }
 
-  ball.style.left = a*2 + "px";
-  ball.style.top = b*2 + "px";
+  ball.style.left = a * 2 + "px";
+  ball.style.top = b * 2 + "px";
 
   var start = window.requestAnimationFrame(gameLoop);
-};
+}
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                | Status                       | Comment            |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("Gamepad", "#gamepadbutton-interface", "GamepadButton")}} | {{Spec2("Gamepad")}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-[Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)
+[Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

@@ -10,7 +10,7 @@ slug: Web/API/StylePropertyMapReadOnly/size
 ## 構文
 
 ```js
-var size = StylePropertyMapReadOnly.size
+var size = StylePropertyMapReadOnly.size;
 ```
 
 ### 値
@@ -23,7 +23,7 @@ var size = StylePropertyMapReadOnly.size
 
 ```js
 // 要素を取得
-const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector("button");
 
 // `computedStyleMap` ですべての計算済みスタイルが取得できます
 const allComputedStyles = buttonEl.computedStyleMap();

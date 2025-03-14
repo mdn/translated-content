@@ -3,7 +3,7 @@ title: Data in WebGL
 slug: Web/API/WebGL_API/Data
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 GLSL 为 Shader 提供了三种不同作用的数据存储，每种都有一个特定的用例。每种数据依作用不同可以被一种或者全部 shader 访问（取决于数据存储类型），也可能通过站点的 Javascript 代码进行访问，这取决于变量的特定类型。
 
@@ -22,14 +22,14 @@ GLSL 中有三种类型的“变量”或者说数据存储类型。每一种类
 ```js
 // init colors
 const vertexColors = [
-  vec4(0.0, 0.0, 0.0, 1.0),  // black
-  vec4(1.0, 0.0, 0.0, 1.0),  // red
-  vec4(1.0, 1.0, 0.0, 1.0),  // yellow
-  vec4(0.0, 1.0, 0.0, 1.0),  // green
-  vec4(0.0, 0.0, 0.0, 1.0),  // black
-  vec4(1.0, 0.0, 0.0, 1.0),  // red
-  vec4(1.0, 1.0, 0.0, 1.0),  // yellow
-  vec4(0.0, 1.0, 0.0, 1.0),  // green
+  vec4(0.0, 0.0, 0.0, 1.0), // black
+  vec4(1.0, 0.0, 0.0, 1.0), // red
+  vec4(1.0, 1.0, 0.0, 1.0), // yellow
+  vec4(0.0, 1.0, 0.0, 1.0), // green
+  vec4(0.0, 0.0, 0.0, 1.0), // black
+  vec4(1.0, 0.0, 0.0, 1.0), // red
+  vec4(1.0, 1.0, 0.0, 1.0), // yellow
+  vec4(0.0, 1.0, 0.0, 1.0), // green
 ];
 const cBuffer = gl.createBuffer();
 ```
@@ -57,7 +57,7 @@ void main()
 
 ### Varyings
 
-**Varyings** 在 vertex shader 中定义，用于从 vertex shader 向 fragment shader 传递数据。通常传递 [normal vector](<https://zh.wikipedia.org/wiki/Normal_(geometry)>) 等在 vertex shader 中计算生成的数据会使用 varying。
+**Varyings** 在 vertex shader 中定义，用于从 vertex shader 向 fragment shader 传递数据。通常传递[法向量](https://zh.wikipedia.org/wiki/法线)等在 vertex shader 中计算生成的数据会使用 varying。
 
 <\<how to use>>
 

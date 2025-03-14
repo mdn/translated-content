@@ -1,23 +1,13 @@
 ---
 title: identity.launchWebAuthFlow
 slug: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Identity
-  - Method
-  - Reference
-  - WebExtensions
-  - launchWebAuthFlow
-translation_of: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Effectue la première partie d'un flux [OAuth2](https://oauth.net/2/) y compris l'authentification de l'utilisateur et l'autorisation du client.
 
-Le seul paramètre obligatoire de cette fonction est l'URL d'autorisation du fournisseur de services, qui doit contenir un certain nombre de paramètres d'URL, y compris l'[URL de redirection](/fr/Add-ons/WebExtensions/API/identity#Getting_the_redirect_URL) et l'[ID client](/fr/Add-ons/WebExtensions/API/identity#Registering_your_add-on) de l'extension. Le fournisseur de service alors :
+Le seul paramètre obligatoire de cette fonction est l'URL d'autorisation du fournisseur de services, qui doit contenir un certain nombre de paramètres d'URL, y compris l'[URL de redirection](/fr/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url) et l'[ID client](/fr/docs/Mozilla/Add-ons/WebExtensions/API/identity#registering_your_add-on) de l'extension. Le fournisseur de service alors :
 
 - authentifie l'utilisateur auprès du fournisseur de services, si nécessaire (c'est-à-dire: s'ils ne sont pas déjà connectés)
 - demande à l'utilisateur d'autoriser l'extension à accéder aux données demandées, si nécessaire (c'est-à-dire : si l'utilisateur n'a pas déjà autorisé l'extension)
@@ -26,7 +16,7 @@ Notez que si aucune authentification ou autorisation n'est nécessaire, cette fo
 
 Cette fonction prend également un paramètre facultatif `interactif`: si cette valeur est omise ou définie sur false, le flux est forcé de se terminer en mode silencieux. Dans ce cas, si l'utilisateur doit s'authentifier ou autoriser, l'opération échouera tout simplement.
 
-Cette fonction renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise): si l'authentification et l'autorisation ont abouti, la promesse est remplie avec une URL de redirection contenant un certain nombre de paramètres d'URL. En fonction du flux OAuth2 implémenté par le fournisseur de services en question, l'extension devra passer par d'autres étapes pour obtenir un code d'accès valide, qu'elle pourra ensuite utiliser pour accéder aux données de l'utilisateur.
+Cette fonction renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise): si l'authentification et l'autorisation ont abouti, la promesse est remplie avec une URL de redirection contenant un certain nombre de paramètres d'URL. En fonction du flux OAuth2 implémenté par le fournisseur de services en question, l'extension devra passer par d'autres étapes pour obtenir un code d'accès valide, qu'elle pourra ensuite utiliser pour accéder aux données de l'utilisateur.
 
 S'il y a une erreur, la promesse est rejetée avec un message d'erreur. Les conditions d'erreur peuvent inclure :
 
@@ -41,8 +31,8 @@ S'il y a une erreur, la promesse est rejetée avec un message d'erreur. Les cond
 
 ```js
 var authorizing = browser.identity.launchWebAuthFlow(
-  details   // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -55,7 +45,7 @@ var authorizing = browser.identity.launchWebAuthFlow(
 
       - : `string`. URL fournie par le fournisseur de services OAuth2 pour obtenir un jeton d'accès. Les détails de cette URL doivent figurer dans la documentation du fournisseur de services en question, mais les paramètres d'URL doivent toujours inclure :
 
-        - redirect_uri: ceci représente l'URI que votre extension est redirigée lorsque le flux est terminé. Il n'est pas nécessaire pour que le flux fonctionne du côté navigateur s'il correspond à l'URL de redirection générée. Voir [Obtenir l'URL de redirection](/fr/Add-ons/WebExtensions/API/identity#Getting_the_redirect_URL).
+        - redirect_uri: ceci représente l'URI que votre extension est redirigée lorsque le flux est terminé. Il n'est pas nécessaire pour que le flux fonctionne du côté navigateur s'il correspond à l'URL de redirection générée. Voir [Obtenir l'URL de redirection](/fr/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url).
 
     - `interactive` {{optional_inline}}
 
@@ -69,11 +59,11 @@ var authorizing = browser.identity.launchWebAuthFlow(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si l'extension est autorisée avec succès, elle sera remplie avec une chaîne contenant l'URL de redirection. L'URL inclura un paramètre qui est un jeton d'accès ou qui peut être échangé contre un jeton d'accès, en utilisant le flux documenté pour le fournisseur de services particulier.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si l'extension est autorisée avec succès, elle sera remplie avec une chaîne contenant l'URL de redirection. L'URL inclura un paramètre qui est un jeton d'accès ou qui peut être échangé contre un jeton d'accès, en utilisant le flux documenté pour le fournisseur de services particulier.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.identity.launchWebAuthFlow")}}
+{{Compat}}
 
 ## Exemples
 
@@ -86,17 +76,18 @@ function validate(redirectURL) {
 
 function authorize() {
   const redirectURL = browser.identity.getRedirectURL();
-  const clientID = "664583959686-fhvksj46jkd9j5v96vsmvs406jgndmic.apps.googleusercontent.com";
+  const clientID =
+    "664583959686-fhvksj46jkd9j5v96vsmvs406jgndmic.apps.googleusercontent.com";
   const scopes = ["openid", "email", "profile"];
   let authURL = "https://accounts.google.com/o/oauth2/auth";
   authURL += `?client_id=${clientID}`;
   authURL += `&response_type=token`;
   authURL += `&redirect_uri=${encodeURIComponent(redirectURL)}`;
-  authURL += `&scope=${encodeURIComponent(scopes.join(' '))}`;
+  authURL += `&scope=${encodeURIComponent(scopes.join(" "))}`;
 
   return browser.identity.launchWebAuthFlow({
     interactive: true,
-    url: authURL
+    url: authURL,
   });
 }
 
@@ -107,8 +98,8 @@ function getAccessToken() {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.identity`](https://developer.chrome.com/extensions/identity).
+> Cette API est basée sur l'API Chromium [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/api/identity).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

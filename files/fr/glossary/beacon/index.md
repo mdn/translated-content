@@ -1,9 +1,9 @@
 ---
 title: beacon
-slug: Glossary/beacon
-translation_of: Glossary/beacon
-original_slug: Glossaire/beacon
+slug: Glossary/Beacon
 ---
+
+{{GlossarySidebar}}
 
 Un **beacon** Web est un petit objet, tel qu'un gif de 1 pixel, intégré au balisage, utilisé pour communiquer des informations au serveur Web ou à des serveurs tiers. Les beacons sont généralement inclus pour fournir des informations sur l'utilisateur à des fins statistiques. Les beacons sont souvent inclus dans des scripts tiers pour collecter des données utilisateur, des mesures de performance et des rapports d'erreurs.
 
@@ -11,4 +11,4 @@ Il existe un projet de [spécification de beacon W3C](https://w3c.github.io/beac
 
 ## Voir aussi
 
-- [Surveillance des utilisateurs réels (RUM)](/fr/docs/Glossaire/Real_User_Monitoring)
+- [Surveillance des utilisateurs réels (RUM)](/fr/docs/Glossary/Real_User_Monitoring)

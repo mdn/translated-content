@@ -1,16 +1,6 @@
 ---
 title: Le "pourquoi" des performances Web
 slug: Learn/Performance/why_web_performance
-tags:
-  - Apprendre
-  - Débutant
-  - Introduction
-  - Performance
-  - Performance Web
-  - Reference
-  - Tutoriel
-translation_of: Learn/Performance/why_web_performance
-original_slug: Learn/Performance/pourquoi_performance_web
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
@@ -46,7 +36,7 @@ Les performances Web font référence à la rapidité avec laquelle le contenu d
 
 ## Pourquoi se soucier de la performance?
 
-Les performances Web et les meilleurs pratiques associées sont essentielles pour que les visiteurs de votre site Web aient une bonne expérience. En un sens, les performances Web peuvent être considérées comme un sous-ensemble de l'[accessibilité web](/fr/docs/Apprendre/a11y). Avec les performaces comme avec l'accessibilité, vous considérez que appareil un visiteur du site utilise pour accéder au site et la vitesse de connexion de l'appareil.
+Les performances Web et les meilleurs pratiques associées sont essentielles pour que les visiteurs de votre site Web aient une bonne expérience. En un sens, les performances Web peuvent être considérées comme un sous-ensemble de l'[accessibilité web](/fr/docs/Learn/Accessibility). Avec les performaces comme avec l'accessibilité, vous considérez que appareil un visiteur du site utilise pour accéder au site et la vitesse de connexion de l'appareil.
 
 À titre d'exemple, considérons l'expérience de chargement de CNN.com, qui, au moment de la rédaction de cet article, avait plus de 400 requêtes HTTP avec une taille de fichier supérieure à 22.6Mo.
 
@@ -75,7 +65,7 @@ Voici quelques exemples concrets d'améliorations des performances:
 
 Pour créer des sites Web et des applications que les gens veulent utiliser; pour attirer et fidéliser les visiteurs du site, vous devez créer un site accessible qui offre une bonne expérience utilisateur. La création de sites Web nécessite HTML, CSS et JavaScript, y compris généralement des types de fichiers binaires tels que des images et des vidéos. Les décisions que vous prenez et les outils que vous choisissez lors de la création de votre site peuvent grandement affecter les performances du travail fini.
 
-Une bonne performance est un atout. Une mauvaise performance est une responsabilité. La vitesse du site affecte directement les taux de rebond, la conversion, les revenus, la satisfaction des utilisateurs et le classement des moteurs de recherche. Il a été démontré que les sites performants augmentent la rétention des visiteurs et la satisfaction des utilisateurs. Il a été démontré que la lenteur du contenu conduit à l'abandon du site, certains visiteurs partant pour ne jamais revenir. La réduction de la quantité de données qui passe entre le client et le serveur réduit les coûts pour toutes les parties. La réduction de la taille des fichiers HTML/CSS/JavaScript et multimédia réduit à la fois le temps de chargement et la consommation d'énergie d'un site (voir [performance budgets](/fr/docs/Web/Performance/Budgets_de_performance)).
+Une bonne performance est un atout. Une mauvaise performance est une responsabilité. La vitesse du site affecte directement les taux de rebond, la conversion, les revenus, la satisfaction des utilisateurs et le classement des moteurs de recherche. Il a été démontré que les sites performants augmentent la rétention des visiteurs et la satisfaction des utilisateurs. Il a été démontré que la lenteur du contenu conduit à l'abandon du site, certains visiteurs partant pour ne jamais revenir. La réduction de la quantité de données qui passe entre le client et le serveur réduit les coûts pour toutes les parties. La réduction de la taille des fichiers HTML/CSS/JavaScript et multimédia réduit à la fois le temps de chargement et la consommation d'énergie d'un site (voir [performance budgets](/fr/docs/Web/Performance/Performance_budgets)).
 
 Le suivi des performances est important. Plusieurs facteurs, notamment la vitesse du réseau et les capacités de l'appareil, affectent les performances. Il n'y a pas de mesure de performance unique; et des objectifs commerciaux différents peuvent signifier que différentes mesures sont plus pertinentes pour les objectifs du site ou de l'organisation qu'il prend en charge. La perception de la performance de votre site est l'expérience utilisateur!
 
@@ -84,18 +74,3 @@ Le suivi des performances est important. Plusieurs facteurs, notamment la vitess
 Les performances Web sont importantes pour l'accessibilité et également pour d'autres mesures de site Web qui servent les objectifs d'une organisation ou d'une entreprise. Les bonnes ou mauvaises performances du site Web sont fortement corrélées à l'expérience utilisateur, ainsi qu'à l'efficacité globale de la plupart des sites. C'est pourquoi vous devez vous soucier des performances Web.
 
 {{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
-
-## Dans ce module
-
-- [The "why" of web performance](/fr/docs/Learn/Performance/why_web_performance)
-- [What is web performance?](/fr/docs/Learn/Performance/What_is_web_performance)
-- [How do users perceive performance?](/fr/docs/Learn/Performance/Perceived_performance)
-- [Measuring performance](/fr/docs/Learn/Performance/Measuring_performance)
-- [Multimedia: images](/fr/docs/Learn/Performance/Multimedia)
-- [Multimedia: video](/fr/docs/Learn/Performance/video)
-- [JavaScript performance best practices](/fr/docs/Learn/Performance/JavaScript).
-- [HTML performance features](/fr/docs/Learn/Performance/HTML)
-- [Optimisation des performances en CSS](/fr/docs/Learn/Performance/CSS)
-- [Fonts and performance](/fr/docs/Learn/Performance/Fonts)
-- [Mobile performance](/fr/docs/Learn/Performance/Mobile)
-- [Focusing on performance](/fr/docs/Learn/Performance/business_case_for_performance)

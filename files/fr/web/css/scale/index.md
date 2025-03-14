@@ -1,7 +1,6 @@
 ---
 title: scale
 slug: Web/CSS/scale
-translation_of: Web/CSS/scale
 ---
 
 {{CSSRef}}{{seecompattable}}

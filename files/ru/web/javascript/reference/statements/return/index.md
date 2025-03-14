@@ -1,17 +1,28 @@
 ---
 title: return
 slug: Web/JavaScript/Reference/Statements/return
-tags:
-  - JavaScript
-  - Оператор
-translation_of: Web/JavaScript/Reference/Statements/return
 ---
 
 {{jsSidebar("Statements")}}
 
-Оператор **`return` **завершает выполнение текущей функции и возвращает её значение.
+Оператор **`return`** завершает выполнение текущей функции и возвращает её значение.
 
-{{EmbedInteractiveExample("pages/js/statement-return.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Return")}}
+
+```js interactive-example
+function getRectArea(width, height) {
+  if (width > 0 && height > 0) {
+    return width * height;
+  }
+  return 0;
+}
+
+console.log(getRectArea(3, 4));
+// Expected output: 12
+
+console.log(getRectArea(-3, 4));
+// Expected output: 0
+```
 
 ## Синтаксис
 
@@ -28,7 +39,7 @@ return [[выражение]];
 
 ```js
 function square(x) {
-   return x * x;
+  return x * x;
 }
 var demo = square(3);
 // значение demo будет равняться 9
@@ -48,9 +59,9 @@ return x + y / 3;
 
 ### Автоматическая расстановка точек с запятыми
 
-На выражение `return` влияет [автоматическая расстановка точек с запятыми (ASI)](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion). Разрыв строки не допускается между ключевым словом `return` и выражением.
+На выражение `return` влияет [автоматическая расстановка точек с запятыми (ASI)](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion). Разрыв строки не допускается между ключевым словом `return` и выражением.
 
-```js
+```js-nolint
 return
 a + b;
 ```
@@ -64,7 +75,8 @@ a + b;
 
 В консоли появится предупреждение "unreachable code after return statement".
 
-> **Примечание:** Начиная с Gecko 40 {{geckoRelease(40)}}, предупреждение в консоли появляется, если обнаружен недостижимый код после `return`.
+> [!NOTE]
+> Начиная с Gecko 40, предупреждение в консоли появляется, если обнаружен недостижимый код после `return`.
 
 Для того, чтобы избежать данной проблемы (предотвратить ASI), можно использовать скобки:
 
@@ -82,14 +94,15 @@ return (
 
 ```js
 function counter() {
-  for (var count = 1; ; count++) {  // бесконечный цикл
+  for (var count = 1; ; count++) {
+    // бесконечный цикл
     console.log(count + "A"); // до 5
-      if (count === 5) {
-        return;
-      }
-      console.log(count + "B");  // до 4
+    if (count === 5) {
+      return;
     }
-  console.log(count + "C");  // никогда не появляется
+    console.log(count + "B"); // до 4
+  }
+  console.log(count + "C"); // никогда не появляется
 }
 
 counter();
@@ -112,7 +125,9 @@ counter();
 
 ```js
 function magic(x) {
-  return function calc(x) { return x * 42 };
+  return function calc(x) {
+    return x * 42;
+  };
 }
 
 var answer = magic();

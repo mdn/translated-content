@@ -7,9 +7,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 
 ブラウザーのツールバーにボタンを追加します。
 
-[ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_action)はブラウザーのツールバー内のボタンです。
+[ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)はブラウザーのツールバー内のボタンです。
 
-これをボタンつきポップアップと関連付けられます。ポップアップは通常のウェブページ同様に、HTML, CSS, JavaScript を使って指定できます。ポップアップの中で動く JavaScript はバックグラウンドスクリプトとすべて同じ WebExtension API にアクセスできますが、グローバルコンテキストはブラウザーに表示される現在のページではなく、ポップアップになります。ウェブページに影響するには [messages](/ja/Add-ons/WebExtensions/Modify_a_web_page#Messaging) 経由で通信する必要があります。
+これをボタンつきポップアップと関連付けられます。ポップアップは通常のウェブページ同様に、HTML, CSS, JavaScript を使って指定できます。ポップアップの中で動く JavaScript はバックグラウンドスクリプトとすべて同じ WebExtension API にアクセスできますが、グローバルコンテキストはブラウザーに表示される現在のページではなく、ポップアップになります。ウェブページに影響するには [messages](/ja/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging) 経由で通信する必要があります。
 
 ユーザーがアイコンをクリックした時に、ポップアップを指定していると、表示され — そしてコンテンツが読み込まれるでしょう 。ポップアップを指定していない時は、ユーザーがアイコンをクリックした時、拡張機能にイベントがディスパッチされます。
 
@@ -63,13 +63,15 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.browserAction")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **メモ:** この API は Chromium の [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction) API に基づいています。この文書は Chromium コードの [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) から得ています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!NOTE]
+> この API は Chromium の [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction) API に基づいています。この文書は Chromium コードの [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) から得ています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -96,4 +98,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

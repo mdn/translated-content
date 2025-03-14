@@ -47,7 +47,7 @@ Transfer-Encoding: gzip, chunked
   - : Um formato usando o algoritmo [Lempel-Ziv-Welch](http://en.wikipedia.org/wiki/LZW) (LZW). O nome do valor foi pego do programa UNIX _compress_, que implementa o algoritmo.
     Como o programa de compressão, que desapareceu da maioria das distribuições UNIX, esta codificação de conteúdo não é usada por quase nenhum navegador atualmente, em partes por causa do seu problema de patente (que expirou em 2003).
 - `deflate`
-  - : Usando a estrutura [zlib](http://en.wikipedia.org/wiki/Zlib) (definida na [RFC 1950](http://tools.ietf.org/html/rfc1950)), com o algoritmo de compressão [_deflate_](http://en.wikipedia.org/wiki/DEFLATE) (definido em [RFC 1951](http://tools.ietf.org/html/rfc1952)).
+  - : Usando a estrutura [zlib](http://en.wikipedia.org/wiki/Zlib) (definida na [RFC 1950](https://tools.ietf.org/html/rfc1950)), com o algoritmo de compressão [_deflate_](http://en.wikipedia.org/wiki/DEFLATE) (definido em [RFC 1951](https://tools.ietf.org/html/rfc1952)).
 - `gzip`
   - : O formato usando a [codificação Lempel-Ziv](http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77) (LZ77), com CRC 32-bit. Este é originalmente o formato do programa UNIX _gzip_. O padrão HTTP/1.1 também recomenda que os servidores que suportem esta codificação de conteúdo devem reconhecer `x-gzip` como um pseudônimo, para propósitos de compatibilidade.
 - `identity`
@@ -76,13 +76,13 @@ Network\r\n
 
 ## Especificações
 
-| Especificação                                                | Título                                                             |
-| ------------------------------------------------------------ | ------------------------------------------------------------------ |
+| Especificação                                 | Título                                                             |
+| --------------------------------------------- | ------------------------------------------------------------------ |
 | {{RFC("7230", "Transfer-Encoding", "3.3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Transfer-Encoding")}}
+{{Compat}}
 
 ## Veja também
 

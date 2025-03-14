@@ -1,35 +1,34 @@
 ---
-title: HTMLHyperlinkElementUtils.href
+title: HTMLAnchorElement：href 属性
 slug: Web/API/HTMLAnchorElement/href
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("HTML DOM")}}
 
-**`HTMLHyperlinkElementUtils.href`** 属性是一个包含整个 URL 的 {{domxref("USVString")}}。
+**`HTMLAnchorElement.href`** 属性是一个{{Glossary("stringifier", "字符串化器")}}，它返回一个包含完整 URL 的字符串，并且允许更新 `href` 属性。
 
-## Syntax
+## 值
 
-```plain
-string = object.href;
-object.href = string;
-```
+一个字符串。
 
-## Examples
+## 示例
 
 ```js
-// Lets imagine an <a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils/href"> element is in the document
-var anchor = document.getElementById("myAnchor");
-var result = anchor.href; // Returns: 'https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils/href'
+// 文档中有一个 <a id="myAnchor" href="https://developer.mozilla.org/zh-CN/HTMLAnchorElement"> 元素
+const anchor = document.getElementById("myAnchor");
+anchor.href; // 返回“https://developer.mozilla.org/zh-CN/HTMLAnchorElement”
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- The {{domxref("HTMLHyperlinkElementUtils")}} mixin it belongs to.
+- 所属接口 {{domxref("HTMLAnchorElement")}}。

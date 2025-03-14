@@ -1,13 +1,6 @@
 ---
 title: Detalhes do modelo de objeto
 slug: conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
-tags:
-  - Entidade
-  - Modelo
-  - Objeto
-  - Orientação á Objeto
-translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
-original_slug: Web/JavaScript/Guide/Details_of_the_Object_Model
 ---
 
 JavaScript é uma linguagem orientada a objetos com base em protótipos, em vez de ser baseada em classes. Devido a essa base diferente, pode ser menos evidente como o JavaScript permite criar hierarquias de objetos e ter herança de propriedades e seus valores. Este capítulo tenta esclarecer essa situação.
@@ -58,7 +51,7 @@ O restante deste capítulo usa a hierarquia employee como mostrado na figura aba
 
 Uma simples hierarquia de objetos:
 
-![](https://mdn.mozillademos.org/files/3060/figure8.1.png)
+![](figure8.1.png)
 
 - `Employee` tem a propriedade `name` (cujo valor padrão é uma string vazia) e `dept` (cujo valor padrão e o "general").
 - `Manager` é baseado no `Employee`. É adicionada a propriedade `reports` (cujo valor padrão é um array vazio, planejado para ter um array do objeto `Employee como valor`).
@@ -72,7 +65,7 @@ Há muitas formas de definir funções construtoras apropriadas para implementar
 
 Esta seção mostra definições simples de como trabalhar com heranças. Nestas definições, você não pode especificar nenhum valor de propriedade quando criar um objeto. O recém-criado objeto terá os valores padrão, que você poderá alterar mais tarde.
 
-Na aplicação real, você poderia definir construtores que permitem que você forneça valores de propriedade no momento da criação do objeto (veja [Construtores flexíveis](#Construtores_flexíveis) para saber mais). Por enquanto, estas simples definições demonstram como a herança ocorre.
+Na aplicação real, você poderia definir construtores que permitem que você forneça valores de propriedade no momento da criação do objeto (veja [Construtores flexíveis](#construtores_flexíveis) para saber mais). Por enquanto, estas simples definições demonstram como a herança ocorre.
 
 As seguintes definições Java e JavaScript `Employee` são similares. A única diferença é que você precisa especificar o tipo de cada propriedade em Java, mas não em JavaScript (devido ao Java ser uma [linguagem fortemente tipada](http://en.wikipedia.org/wiki/Strong_and_weak_typing) enquanto o JavaScript é linguagem fracamente tipada).
 
@@ -165,7 +158,8 @@ public class Engineer extends WorkerBee {
 
 Usando estas definições, você pode criar instâncias desses objetos que obterão valores padrão para suas propriedades. A próxima imagem mostra o uso destas definições JavaScript para criar novos objetos e mostrar os valores das propriedades dos novos objetos.
 
-> **Nota:** O termo _instancia_ tem significado específicamente técnico em linguagens baseadas em classe. Nessas linguagens, uma instância é uma instanciação individual de uma classe e é fundamentalmente diferente de uma classe. Em JavaScript, "instância" não tem esse significado técnico porque JavaScript não tem essa diferença entre classes e instâncias. No entanto, falando sobre JavaScript, "instância" pode ser usada informalmente para significar um objeto criado usando uma função construtora particular. Então, neste exemplo, você pode informalmente dizer que `jane` é uma instância de `Engineer`. Similarmente, embora os termos **parent*, \_child*, \_ancestor**, e **descendant** não tenham significados formais em JavaScript; você pode usá-los informalmente para referir a objetos altos ou baixos na cadeia de protótipos.
+> [!NOTE]
+> O termo _instancia_ tem significado específicamente técnico em linguagens baseadas em classe. Nessas linguagens, uma instância é uma instanciação individual de uma classe e é fundamentalmente diferente de uma classe. Em JavaScript, "instância" não tem esse significado técnico porque JavaScript não tem essa diferença entre classes e instâncias. No entanto, falando sobre JavaScript, "instância" pode ser usada informalmente para significar um objeto criado usando uma função construtora particular. Então, neste exemplo, você pode informalmente dizer que `jane` é uma instância de `Engineer`. Similarmente, embora os termos **parent*, \_child*, \_ancestor**, e **descendant** não tenham significados formais em JavaScript; você pode usá-los informalmente para referir a objetos altos ou baixos na cadeia de protótipos.
 
 ### Criando objetos com definições simples
 
@@ -173,7 +167,7 @@ Usando estas definições, você pode criar instâncias desses objetos que obter
 
 A hierarquia abaixo foi criada utilizando o código ao lado.
 
-![](https://mdn.mozillademos.org/files/10412/=figure8.3.png)
+![](=figure8.3.png)
 
 #### Objetos individuais = Jim, Sally, Mark, Fred, Jane, etc. "Instancias" criadas a partir do construtor.
 
@@ -227,7 +221,7 @@ mark.dept = "general";
 mark.projects = [];
 ```
 
-The `mark` object inherits values for the `name` and `dept` properties from the prototypical object in `mark.__proto__`. It is assigned a local value for the `projects` property by the `WorkerBee` constructor. This gives you inheritance of properties and their values in JavaScript. Some subtleties of this process are discussed in [Property inheritance revisited](#Property_inheritance_revisited).
+The `mark` object inherits values for the `name` and `dept` properties from the prototypical object in `mark.__proto__`. It is assigned a local value for the `projects` property by the `WorkerBee` constructor. This gives you inheritance of properties and their values in JavaScript. Some subtleties of this process are discussed in [Property inheritance revisited](#property_inheritance_revisited).
 
 Because these constructors do not let you supply instance-specific values, this information is generic. The property values are the default ones shared by all new objects created from `WorkerBee`. You can, of course, change the values of any of these properties. So, you could give specific information for `mark` as follows:
 
@@ -255,14 +249,14 @@ Employee.prototype.specialty = "none";
 
 As soon as JavaScript executes this statement, the `mark` object also has the `specialty` property with the value of `"none"`. The following figure shows the effect of adding this property to the `Employee` prototype and then overriding it for the `Engineer` prototype.
 
-![](/@api/deki/files/4422/=figure8.4.png)
+![](figure8.4.png)
 **Adding properties**
 
 ## More flexible constructors
 
 The constructor functions shown so far do not let you specify property values when you create an instance. As with Java, you can provide arguments to constructors to initialize property values for instances. The following figure shows one way to do this.
 
-![](/@api/deki/files/4423/=figure8.5.png)
+![](figure8.5.png)
 **Specifying properties in a constructor, take 1**
 
 The following table shows the Java and JavaScript definitions for these objects.
@@ -345,7 +339,8 @@ this.name = name || "";
 
 The JavaScript logical OR operator (`||`) evaluates its first argument. If that argument converts to true, the operator returns it. Otherwise, the operator returns the value of the second argument. Therefore, this line of code tests to see if `name` has a useful value for the `name` property. If it does, it sets `this.name` to that value. Otherwise, it sets `this.name` to the empty string. This chapter uses this idiom for brevity; however, it can be puzzling at first glance.
 
-> **Nota:** This may not work as expected if the constructor function is called with arguments which convert to `false` (like `0` (zero) and empty string (`""`). In this case the default value will be chosen.
+> [!NOTE]
+> This may not work as expected if the constructor function is called with arguments which convert to `false` (like `0` (zero) and empty string (`""`). In this case the default value will be chosen.
 
 With these definitions, when you create an instance of an object, you can specify values for the locally defined properties. You can use the following statement to create a new `Engineer`:
 
@@ -366,7 +361,7 @@ Notice that with these definitions, you cannot specify an initial value for an i
 
 So far, the constructor function has created a generic object and then specified local properties and values for the new object. You can have the constructor add more properties by directly calling the constructor function for an object higher in the prototype chain. The following figure shows these new definitions.
 
-![](/@api/deki/files/4430/=figure8.6.png)
+![](figure8.6.png)
 **Specifying properties in a constructor, take 2**
 
 Let's look at one of these definitions in detail. Here's the new definition for the `Engineer` constructor:
@@ -422,7 +417,7 @@ Employee.prototype.specialty = "none";
 
 Now the value of the `jane` object's `specialty` property is "none".
 
-Another way of inheriting is by using the [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call "en-US/docs/JavaScript/Reference/Global Objects/Function/call") / [`apply()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply "en-US/docs/JavaScript/Reference/Global Objects/Function/apply") methods. Below are equivalent:
+Another way of inheriting is by using the [`call()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/call "en-US/docs/JavaScript/Reference/Global Objects/Function/call") / [`apply()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply "en-US/docs/JavaScript/Reference/Global Objects/Function/apply") methods. Below are equivalent:
 
 ```js
 function Engineer (name, projs, mach) {
@@ -527,7 +522,7 @@ var f = new Foo();
 var isTrue = (f instanceof Foo);
 ```
 
-For a more detailed example, suppose you have the same set of definitions shown in [Inheriting properties](#Inheriting_properties). Create an `Engineer` object as follows:
+For a more detailed example, suppose you have the same set of definitions shown in [Inheriting properties](#inheriting_properties). Create an `Engineer` object as follows:
 
 ```js
 var chris = new Engineer("Pigman, Chris", ["jsd"], "fiji");
@@ -560,9 +555,11 @@ function instanceOf(object, constructor) {
 }
 ```
 
-> **Nota:** The implementation above checks the type of the object against "xml" in order to work around a quirk of how XML objects are represented in recent versions of JavaScript. See {{ bug(634150) }} if you want the nitty-gritty details.
+> [!NOTE]
+> The implementation above checks the type of the object against "xml" in order to work around a quirk of how XML objects are represented in recent versions of JavaScript. See [Firefox bug 634150](https://bugzil.la/634150) if you want the nitty-gritty details.
 
-> **Nota:** Using the `instanceOf` function defined above, these expressions are true:
+> [!NOTE]
+> Using the `instanceOf` function defined above, these expressions are true:
 
 ```js
 instanceOf (chris, Engineer)

@@ -1,11 +1,11 @@
 ---
 title: RTCSessionDescription.type
 slug: Web/API/RTCSessionDescription/type
-translation_of: Web/API/RTCSessionDescription/type
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-읽기 전용 값인 **`RTCSessionDescription.type`**은 세션 설명의 타입을 알려주는 `RTCSdpType`타입의 값입니다.
+읽기 전용 값인 **`RTCSessionDescription.type`** 은 세션 설명의 타입을 알려주는 `RTCSdpType`타입의 값입니다.
 
 ## Syntax
 
@@ -43,4 +43,4 @@ alert(pc.remoteDescription.type);
 
 ## 참조
 
-- [WebRTC](/ko/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/ko/docs/Web/API/WebRTC_API)

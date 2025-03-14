@@ -1,12 +1,6 @@
 ---
 title: NodeIterator
 slug: Web/API/NodeIterator
-tags:
-  - API
-  - DOM
-  - Itérateur
-  - Noeuds
-translation_of: Web/API/NodeIterator
 ---
 
 {{APIRef("DOM")}}

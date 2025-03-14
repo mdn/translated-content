@@ -1,7 +1,6 @@
 ---
 title: Math.sqrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sqrt
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sqrt
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/sqrt
 ## 문법
 
 ```js
-    Math.sqrt(x)
+Math.sqrt(x);
 ```
 
 ### 매개변수
@@ -39,19 +38,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/sqrt
 Math.sqrt(9); // 3
 Math.sqrt(2); // 1.414213562373095
 
-Math.sqrt(1);  // 1
-Math.sqrt(0);  // 0
+Math.sqrt(1); // 1
+Math.sqrt(0); // 0
 Math.sqrt(-1); // NaN
 ```
 
-## 표준
+## 명세서
 
-| 표준                                                                     | 상태                         | 비고                                               |
-| ------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.17', 'Math.sqrt')}}     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-math.sqrt', 'Math.sqrt')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-math.sqrt', 'Math.sqrt')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## 브라우저 호환성
 

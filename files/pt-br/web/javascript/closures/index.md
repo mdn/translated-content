@@ -1,7 +1,6 @@
 ---
 title: Closures
 slug: Web/JavaScript/Closures
-original_slug: Web/JavaScript/Guide/Closures
 ---
 
 {{jsSidebar("Intermediate")}}
@@ -26,7 +25,7 @@ init();
 
 A função `init()` cria uma variável local chamada `name`, e depois define uma função chamada `displayName()`. `displayName()` é uma função aninhada (uma _closure_) — ela é definida dentro da função `init()`, e está disponivel apenas dentro do corpo daquela função. Diferente de init(), `displayName()` não tem variáveis locais próprias, e ao invés disso reusa a variável `name` declarada na função pai.
 
-[Rode](http://jsfiddle.net/xAFs9/3/) o código e veja que isso funciona. Este é um exemplo de _escopo léxico:_ em JavaScript, o escopo de uma variável é definido por sua localização dentro do código fonte (isto é aparentemente _léxico_) e funções aninhadas têm acesso às variáveis declaradas em seu escopo externo.
+[Rode](https://jsfiddle.net/xAFs9/3/) o código e veja que isso funciona. Este é um exemplo de _escopo léxico:_ em JavaScript, o escopo de uma variável é definido por sua localização dentro do código fonte (isto é aparentemente _léxico_) e funções aninhadas têm acesso às variáveis declaradas em seu escopo externo.
 
 ## Closure
 
@@ -55,7 +54,7 @@ Aqui temos um exemplo um pouco mais interessante, a função `makeAdder`:
 
 ```js
 function makeAdder(x) {
-  return function(y) {
+  return function (y) {
     return x + y;
   };
 }
@@ -63,7 +62,7 @@ function makeAdder(x) {
 var add5 = makeAdder(5);
 var add10 = makeAdder(10);
 
-print(add5(2));  // 7
+print(add5(2)); // 7
 print(add10(2)); // 12
 ```
 
@@ -103,8 +102,8 @@ O código JavaScript:
 
 ```js
 function makeSizer(size) {
-  return function() {
-    document.body.style.fontSize = size + 'px';
+  return function () {
+    document.body.style.fontSize = size + "px";
   };
 }
 
@@ -116,9 +115,9 @@ var size16 = makeSizer(16);
 `size12`, `size14` e `size16` agora são funções que devem redimensionar o texto do elemento body para 12, 14 e 16 pixels respectivamente. Nós podemos designá-las a botões (neste caso, links) como feito a seguir:
 
 ```js
-document.getElementById('size-12').onclick = size12;
-document.getElementById('size-14').onclick = size14;
-document.getElementById('size-16').onclick = size16;
+document.getElementById("size-12").onclick = size12;
+document.getElementById("size-14").onclick = size14;
+document.getElementById("size-16").onclick = size16;
 ```
 
 ```html
@@ -135,25 +134,25 @@ Linguagens como Java oferecem a habilidade de declarar métodos privados, o que 
 
 O JavaScript não oferece uma maneira nativa de fazer isso, mas é possível emular métodos privados usando closures. Métodos privados não são somente úteis para restringir acesso ao código: eles também oferecem uma maneira eficaz de gerenciar seu namespace global, evitando que métodos não essenciais baguncem a interface pública do seu código.
 
-Veja como definir algumas funções públicas que acessam funções e variáveis privadas, usando closures que também é conhecido como [module pattern](http://www.google.com/search?q=javascript+module+pattern):
+Veja como definir algumas funções públicas que acessam funções e variáveis privadas, usando closures que também é conhecido como [module pattern](https://www.google.com/search?q=javascript+module+pattern):
 
 ```js
-var Counter = (function() {
+var Counter = (function () {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
   }
   return {
-    increment: function() {
+    increment: function () {
       changeBy(1);
     },
-    decrement: function() {
+    decrement: function () {
       changeBy(-1);
     },
-    value: function() {
+    value: function () {
       return privateCounter;
-    }
-  }
+    },
+  };
 })();
 
 alert(Counter.value()); /* Alerts 0 */
@@ -170,25 +169,26 @@ O ambiente compartilhado é criado no corpo de uma função anônima, da qual é
 
 Aquelas três funções públicas são closures que compartilham o mesmo ambiente. Graças ao escopo léxico do JavaScript, cada uma delas tem acesso a variável `privateCounter` e à função `changeBy`.
 
-> **Nota:** Você perceberá que estamos definindo uma função anônima que cria um contador , e então o executamos imediatamente e atribuímos o resultado à variável `Counter`. Poderíamos armazenar essa função em uma variável separada e usá-la para criar diversos contadores.
+> [!NOTE]
+> Você perceberá que estamos definindo uma função anônima que cria um contador , e então o executamos imediatamente e atribuímos o resultado à variável `Counter`. Poderíamos armazenar essa função em uma variável separada e usá-la para criar diversos contadores.
 
 ```js
-var makeCounter = function() {
+var makeCounter = function () {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
   }
   return {
-    increment: function() {
+    increment: function () {
       changeBy(1);
     },
-    decrement: function() {
+    decrement: function () {
       changeBy(-1);
     },
-    value: function() {
+    value: function () {
       return privateCounter;
-    }
-  }
+    },
+  };
 };
 
 var Counter1 = makeCounter();
@@ -204,37 +204,38 @@ alert(Counter2.value()); /* Alerts 0 */
 
 Observe como cada um dos contadores mantém a sua independência em relação ao outro. Seu ambiente durante a execução da função `makeCounter()` é diferente a cada vez que ocorre. A variável `privateCounter` contém uma instância diferente a cada vez.
 
-> **Nota:** Usar closures desta maneira oferece uma série de benefícios que estão normalmente associados a programação orientada a objetos, em particular encapsulamento e ocultação de dados.
+> [!NOTE]
+> Usar closures desta maneira oferece uma série de benefícios que estão normalmente associados a programação orientada a objetos, em particular encapsulamento e ocultação de dados.
 
 ## Criando closures dentro de loops: Um erro comum
 
-Antes da introdução da palavra chave [`let`](/pt-BR/docs/JavaScript/Reference/Statements/let) no JavaScript 1.7, um problema comum ocorria com closures quando eram criadas dentro de um loop. Considere o exemplo:
+Antes da introdução da palavra chave [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let) no JavaScript 1.7, um problema comum ocorria com closures quando eram criadas dentro de um loop. Considere o exemplo:
 
 ```html
 <p id="help">Notas úteis aparecerão aqui</p>
-<p>E-mail: <input type="text" id="email" name="email"></p>
-<p>Nome: <input type="text" id="name" name="name"></p>
-<p>Idade: <input type="text" id="age" name="age"></p>
+<p>E-mail: <input type="text" id="email" name="email" /></p>
+<p>Nome: <input type="text" id="name" name="name" /></p>
+<p>Idade: <input type="text" id="age" name="age" /></p>
 ```
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').innerHTML = help;
+  document.getElementById("help").innerHTML = help;
 }
 
 function setupHelp() {
   var helpText = [
-    {'id': 'email', 'help': 'Seu e-mail'},
-    {'id': 'name', 'help': 'Seu nome completo'},
-    {'id': 'age', 'help': 'Sua idade (você deve ter mais de 16 anos)'}
+    { id: "email", help: "Seu e-mail" },
+    { id: "name", help: "Seu nome completo" },
+    { id: "age", help: "Sua idade (você deve ter mais de 16 anos)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
     // O culpado é o uso do `var` nesta linha
     var item = helpText[i];
-    document.getElementById(item.id).onfocus = function() {
+    document.getElementById(item.id).onfocus = function () {
       showHelp(item.help);
-    }
+    };
   }
 }
 
@@ -253,20 +254,20 @@ Uma solução seria neste caso usar mais closures: em particular, usar uma fábr
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function makeHelpCallback(help) {
-  return function() {
+  return function () {
     showHelp(help);
   };
 }
 
 function setupHelp() {
   var helpText = [
-    {'id': 'email', 'help': 'Seu e-mail'},
-    {'id': 'name', 'help': 'Seu nome completo'},
-    {'id': 'age', 'help': 'Sua idade (você deve ter mais de 16 anos)'}
+    { id: "email", help: "Seu e-mail" },
+    { id: "name", help: "Seu nome completo" },
+    { id: "age", help: "Sua idade (você deve ter mais de 16 anos)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -286,14 +287,14 @@ Uma outra maneira de escrever o mesmo usando closures anônimas é:
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-    {'id': 'email', 'help': 'Seu e-mail'},
-    {'id': 'name', 'help': 'Seu nome completo'},
-    {'id': 'age', 'help': 'Sua idade (você deve ter mais de 16 anos)'}
+    { id: "email", help: "Seu e-mail" },
+    { id: "name", help: "Seu nome completo" },
+    { id: "age", help: "Sua idade (você deve ter mais de 16 anos)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -309,18 +310,18 @@ function setupHelp() {
 setupHelp();
 ```
 
-Se você não quiser usar mais closures, você pode usar a palavra-chave [`let`](/pt-BR/docs/JavaScript/Reference/Statements/let) ou [`const`](/pt-BR/docs/Web/JavaScript/Reference/Statements/const):
+Se você não quiser usar mais closures, você pode usar a palavra-chave [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let) ou [`const`](/pt-BR/docs/Web/JavaScript/Reference/Statements/const):
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-    {'id': 'email', 'help': 'Seu e-mail'},
-    {'id': 'name', 'help': 'Seu nome completo'},
-    {'id': 'age', 'help': 'Sua idade (você deve ter mais de 16 anos)'}
+    { id: "email", help: "Seu e-mail" },
+    { id: "name", help: "Seu nome completo" },
+    { id: "age", help: "Sua idade (você deve ter mais de 16 anos)" },
   ];
 
   for (let i = 0; i < helpText.length; i++) {
@@ -340,14 +341,14 @@ Outra alternativa poderia ser usar `forEach()` para iterar sobre o array `helpTe
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-    {'id': 'email', 'help': 'Seu e-mail'},
-    {'id': 'name', 'help': 'Seu nome completo'},
-    {'id': 'age', 'help': 'Sua idade (você deve ter mais de 16 anos)'}
+    { id: "email", help: "Seu e-mail" },
+    { id: "name", help: "Seu nome completo" },
+    { id: "age", help: "Sua idade (você deve ter mais de 16 anos)" },
   ];
 
   helpText.forEach(function (text) {
@@ -372,11 +373,11 @@ Considere o seguinte exemplo pouco prático porém demonstrativo:
 function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
-  this.getName = function() {
+  this.getName = function () {
     return this.name;
   };
 
-  this.getMessage = function() {
+  this.getMessage = function () {
     return this.message;
   };
 }
@@ -390,12 +391,12 @@ function MyObject(name, message) {
   this.message = message.toString();
 }
 MyObject.prototype = {
-  getName: function() {
+  getName: function () {
     return this.name;
   },
-  getMessage: function() {
+  getMessage: function () {
     return this.message;
-  }
+  },
 };
 ```
 
@@ -406,12 +407,12 @@ function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
 }
-MyObject.prototype.getName = function() {
+MyObject.prototype.getName = function () {
   return this.name;
 };
-MyObject.prototype.getMessage = function() {
+MyObject.prototype.getMessage = function () {
   return this.message;
 };
 ```
 
-Nos dois exemplos anteriores, o protótipo herdado pode ser compartilhado por todos os objetos, e as definições de métodos não precisam ocorrer sempre que o objeto for criado. Veja [Detalhes do modelo de objeto](/pt-BR/docs/JavaScript/Guide/Details_of_the_Object_Model) para mais detalhes.
+Nos dois exemplos anteriores, o protótipo herdado pode ser compartilhado por todos os objetos, e as definições de métodos não precisam ocorrer sempre que o objeto for criado. Veja [Detalhes do modelo de objeto](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) para mais detalhes.

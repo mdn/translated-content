@@ -5,7 +5,7 @@ slug: Web/API/Document/images
 
 {{APIRef("DOM")}}
 
-{{domxref("Document")}} 接口的只读属性 images 返回当前文档中所有 [image](/zh-CN/DOM/Image) 元素的集合。
+{{domxref("Document")}} 接口的只读属性 images 返回当前文档中所有 [image](/zh-CN/docs/DOM/Image) 元素的集合。
 
 ## 语法
 
@@ -33,10 +33,10 @@ firstImage = imageCollection[0];
 
 ```js
 var ilist = document.images;
-for(var i = 0; i < ilist.length; i++) {
-    if(ilist[i].src == "banner.gif") {
-         // 发现了 banner 图片
-    }
+for (var i = 0; i < ilist.length; i++) {
+  if (ilist[i].src == "banner.gif") {
+    // 发现了 banner 图片
+  }
 }
 ```
 

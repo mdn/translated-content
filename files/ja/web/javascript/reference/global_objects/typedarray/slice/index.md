@@ -1,78 +1,58 @@
 ---
 title: TypedArray.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
+l10n:
+  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
 ---
 
 {{JSRef}}
 
-**`slice()`** メソッドは、元の型付き配列の部分的なコピーを含む新しい型付き配列 (新しいバッファーによる) を返します。このメソッドは {{jsxref("Array.prototype.slice()")}} と同じアルゴリズムを持ちます。 _TypedArray_ は、ここでは[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)の一つです。
+**`slice()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の一部を `start` から `end` （`end` は含まれない）まで選択された新しい型付き配列オブジェクトにコピーして返します。元の型付き配列は変更されません。このメソッドは {{jsxref("Array.prototype.slice()")}} と同じアルゴリズムです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-slice.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.slice()", "shorter")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+const array1 = uint8.slice(1, 3);
+
+console.log(array1);
+// Expected output: Uint8Array [20, 30]
+```
 
 ## 構文
 
-```
-typedarray.slice([begin[, end]])
+```js-nolint
+slice()
+slice(start)
+slice(start, end)
 ```
 
 ### 引数
 
-- `begin` {{optional_inline}}
-  - : 抽出範囲の先頭の位置を示す 0 から始まる添字です。
-
-    負の添字を使って、配列の末尾からの相対位置を表すことができます。
-
-    `slice(-2)` は配列の最後から 2 番目の要素と最後の要素を抽出します。
-
-    `begin` を省略した場合、 `slice` は `0` 番目の要素から開始します。
+- `start` {{optional_inline}}
+  - : 抽出を始める位置を示すゼロ基点のインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
 - `end` {{optional_inline}}
-  - : 抽出範囲の末尾の _直前_ の位置を示す 0 から始まる添字です。 `slice` は
-    `end` 自体は含めず、その直前まで抽出します。
-
-    `slice(1,4)` は 2 番目の要素から 4 番目の要素まで (添字が 1, 2, 3 の要素) を取り出します。
-
-    負の添字を使って、配列の末尾からの相対位置を表すことができます。 `slice(2,-1)` は配列の 3 番目の要素から、最後から 2 番目の要素まで取り出します。
-
-    `end` が省略された場合、 `slice` は配列の最後 (`typedarray.length`) まで取り出します。
+  - : 抽出を終了する位置を示すゼロ基点のインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。 `slice()` はここまでを抽出しますが、 `end` は含みません。
 
 ### 返値
 
-抽出された要素が入った新しい型付き配列。
+抽出された要素が入った新しい型付き配列です。
 
 ## 解説
 
-`slice` メソッドは元の配列を変更しません。元の配列から取り出された要素のコピーを含む浅いコピーを返します。
-
-一方の型付き配列に新しい要素が追加されても、他方の型付き配列に影響はしません。
+詳細については、 {{jsxref("Array.prototype.slice()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
 
 ## 例
 
 ### 例: 既存の配列の一部を返す
 
 ```js
-var uint8 = new Uint8Array([1,2,3]);
-uint8.slice(1);   // Uint8Array [ 2, 3 ]
-uint8.slice(2);   // Uint8Array [ 3 ]
-uint8.slice(-2);  // Uint8Array [ 2, 3 ]
-uint8.slice(0,1); // Uint8Array [ 1 ]
+const uint8 = new Uint8Array([1, 2, 3]);
+uint8.slice(1); // Uint8Array [ 2, 3 ]
+uint8.slice(2); // Uint8Array [ 3 ]
+uint8.slice(-2); // Uint8Array [ 2, 3 ]
+uint8.slice(0, 1); // Uint8Array [ 1 ]
 ```
-
-## ポリフィル
-
-_TypedArray_ という名前のグローバルオブジェクトはないため、ポリフィルの使用は「必要に応じて」の原則で行う必要があります。
-
-```js
-if (!Uint8Array.prototype.slice) {
-  Object.defineProperty(Uint8Array.prototype, 'slice', {
-    value: function (begin, end)
-     {
-        return new Uint8Array(Array.prototype.slice.call(this, begin, end));
-     }
-  });
-}
-```
-
-{{jsxref("Object.defineProperty")}} に対応していない本当に古い JavaScript エンジンに対応する必要がある場合は、列挙不可能にすることができないため、 `Array.prototype` メソッドのポリフィルを行わないことが適切です。
 
 ## 仕様書
 
@@ -80,8 +60,12 @@ if (!Uint8Array.prototype.slice) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.TypedArray.slice")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`TypedArray.prototype.slice` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
+- {{jsxref("TypedArray")}}
 - {{jsxref("Array.prototype.slice()")}}
+- {{jsxref("String.prototype.slice()")}}

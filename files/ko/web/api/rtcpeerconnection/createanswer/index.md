@@ -1,8 +1,8 @@
 ---
 title: RTCPeerConnection.createAnswer()
 slug: Web/API/RTCPeerConnection/createAnswer
-translation_of: Web/API/RTCPeerConnection/createAnswer
 ---
+
 {{APIRef("WebRTC")}}
 
 {{domxref("RTCPeerConnection")}} 인터페이스의 **`createAnswer()`** 메소드는 WebRTC 연결 중 발생하는 offer/answer 네고시에이션에서 원격 유저로부터 받은 offer에 대한 {{Glossary("SDP")}} answer를 생성합니다. 이 answer는 세션이 이미 부착된 미디어, 브라우저에서 지원하는 코덱 및 옵션, 그리고 이미 수집된 {{Glossary("ICE")}} candidate에 대한 정보를 담고 잇습니다. Answer는 반환 된 {{jsxref("Promise")}}에 전달되고, 그 다음에는 네고시에이션 과정을 계속 진행하기 위해서 offer의 소스에게 전달되야합니다.
@@ -46,23 +46,25 @@ RTCPeerConnection.createAnswer(successCallback, failureCallback[, options]);
 
 아래는 [Signaling and video calling](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling) 문서에서 나오는 코드의 일부입니다. 이 코드는 시그널링 채널을 통해 다른 유저에게 offer는 전달하는 메세지를 다루는 핸들러에서 나옵니다.
 
-> **참고:** 주의 할 점은 이것이 시그널링 과정의 일부이며, 전송계층 구현에 대한 세부사항은 전적으로 개발자에게 달려있다는 것 입니다. 여기서는 [WebSocket](/ko/docs/Web/API/WebSocket_API) 연결을 사용해서 다른 유저에게 "video-answer" 값이 있는 `type` 필드 및 offer를 보낸 장치에게 전달 할 answer를 담은 {{Glossary("JSON")}} 메세지를 보냅니다. 프로미스 fulfillment 핸들러의 다른 모든 항목들과 함께 `sendToServer()`함수로 전달되는 객체의 내용을 어떻게 할 지는 개발자의 디자인에 달려잇습니다.
+> [!NOTE]
+> 주의 할 점은 이것이 시그널링 과정의 일부이며, 전송계층 구현에 대한 세부사항은 전적으로 개발자에게 달려있다는 것 입니다. 여기서는 [WebSocket](/ko/docs/Web/API/WebSockets_API) 연결을 사용해서 다른 유저에게 "video-answer" 값이 있는 `type` 필드 및 offer를 보낸 장치에게 전달 할 answer를 담은 {{Glossary("JSON")}} 메세지를 보냅니다. 프로미스 fulfillment 핸들러의 다른 모든 항목들과 함께 `sendToServer()`함수로 전달되는 객체의 내용을 어떻게 할 지는 개발자의 디자인에 달려잇습니다.
 
 ```js
-pc.createAnswer().then(function(answer) {
-  return pc.setLocalDescription(answer);
-})
-.then(function() {
-  // Send the answer to the remote peer through the signaling server.
-})
-.catch(handleGetUserMediaError);
+pc.createAnswer()
+  .then(function (answer) {
+    return pc.setLocalDescription(answer);
+  })
+  .then(function () {
+    // Send the answer to the remote peer through the signaling server.
+  })
+  .catch(handleGetUserMediaError);
 ```
 
 위의 예제는 {{domxref("RTCPeerConnection")}}가 신규 answer를 만들고 반환하도록 요청합니다. 프로미스 핸들러에 반환된 answer는 {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} 호출에 의해 연결의 로컬 엔드에 대한 description으로 설정됩니다.
 
 이 과정이 성공하면, answer는 적당한 아무 프로토콜을 사용해서 시그널링 서버에 전달됩니다. 그리고 {{jsxref("Promise.catch()")}}는 에러를 잡아내고 처리하기 위해 사용됩니다.
 
-{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling", "Handling the invitation")}}를 확인해서 전체 코드를 확인해보십시오. 이 문서를 보면 시그널링 과정 및 answer가 어떻게 작동하는지를 이해 할 수 있습니다.
+[Handling the invitation](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling#handling_the_invitation)를 확인해서 전체 코드를 확인해보십시오. 이 문서를 보면 시그널링 과정 및 answer가 어떻게 작동하는지를 이해 할 수 있습니다.
 
 ## 명세
 

@@ -34,8 +34,8 @@ CSS 接口是一个工具接口，无法创建该类型的对象：其内部只�
 
   - : 可以用来返回一个 [`CSSUnitValue`](/zh-CN/docs/Web/API/CSSUnitValue)。它的值由传入的数值以及调用的 factory 方法名称组成。
 
-    ```
-    CSS.em(3) // CSSUnitValue {value: 3, unit: "em"}
+    ```js
+    CSS.em(3); // CSSUnitValue {value: 3, unit: "em"}
     ```
 
 ## 规范
@@ -46,6 +46,6 @@ CSS 接口是一个工具接口，无法创建该类型的对象：其内部只�
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [Components.utils.importGlobalProperties](/zh-CN/docs/Components.utils.importGlobalProperties)

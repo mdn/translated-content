@@ -1,11 +1,6 @@
 ---
 title: <integer>
 slug: Web/CSS/integer
-tags:
-  - CSS
-  - Reference
-  - Type
-translation_of: Web/CSS/integer
 ---
 
 {{CSSRef}}
@@ -18,11 +13,12 @@ Un entier se compose d'un ou de plusieurs chiffres, de 0 à 9, éventuellement p
 
 Toutes les valeurs de type `<integer>` sont également des valeurs de type {{cssxref("&lt;number&gt;")}}, bien que l'inverse ne soit pas vrai.
 
-> **Note :** Il n'y a pas de bornes à l'ensemble des valeurs de type `<entier>` valides. Opera supporte des valeurs jusqu'à 2^15-1, IE jusqu'à 2^20-1 et d'autres navigateurs des valeurs encore plus hautes. Durant le cycle CSS3 Values, il y a eu de nombreuses discussions pour définir une valeur minimale à supporter : la dernière décision, en date d'avril 2012 pendant la phase LC, était \[-2^27-1; 2^27-1] [#](https://lists.w3.org/Archives/Public/www-style/2012Apr/0633.html) mais d'autres valeurs comme 2^24-1 et 2^30-1 ont aussi été proposées [#](https://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html) [#](https://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html). Le dernier brouillon ne fait plus apparaître de limite.
+> [!NOTE]
+> Il n'y a pas de bornes à l'ensemble des valeurs de type `<entier>` valides. Opera supporte des valeurs jusqu'à 2^15-1, IE jusqu'à 2^20-1 et d'autres navigateurs des valeurs encore plus hautes. Durant le cycle CSS3 Values, il y a eu de nombreuses discussions pour définir une valeur minimale à supporter : la dernière décision, en date d'avril 2012 pendant la phase LC, était \[-2^27-1; 2^27-1] [#](https://lists.w3.org/Archives/Public/www-style/2012Apr/0633.html) mais d'autres valeurs comme 2^24-1 et 2^30-1 ont aussi été proposées [#](https://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html) [#](https://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html). Le dernier brouillon ne fait plus apparaître de limite.
 
 ## Interpolation
 
-Les valeurs du type `<entier>` peuvent être interpolées de manière à rendre les animations possibles. Dans ce cas l'interpolation se fait par incrémentation discrète. Le calcul est réalisé comme si les valeurs étaient des nombres réels, en virgule flottante et la valeur discrète est obtenue en utilisant la fonction [partie entière](https://fr.wikipedia.org/wiki/Partie_enti%C3%A8re_et_partie_fractionnaire#Fonction_partie_enti.C3.A8re). La rapidité de l'interpolation est déterminée par la {{cssxref("easing-function","fonction de temporisation")}} associée à l'animation.
+Les valeurs du type `<entier>` peuvent être interpolées de manière à rendre les animations possibles. Dans ce cas l'interpolation se fait par incrémentation discrète. Le calcul est réalisé comme si les valeurs étaient des nombres réels, en virgule flottante et la valeur discrète est obtenue en utilisant la fonction [partie entière](https://fr.wikipedia.org/wiki/Partie_entière_et_partie_fractionnaire#Fonction_partie_enti.C3.A8re). La rapidité de l'interpolation est déterminée par la {{cssxref("easing-function","fonction de temporisation")}} associée à l'animation.
 
 ## Exemples
 

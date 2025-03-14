@@ -1,18 +1,21 @@
 ---
-title: Node.contains()
+title: "Node: contains() メソッド"
 slug: Web/API/Node/contains
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
 
 **`contains()`** は {{domxref("Node")}} インターフェイスのメソッドで、あるノードが指定されたノードの子孫であるか、すなわち、このノード自体であるか、直接の子ノード ({{domxref("Node.childNodes", "childNodes")}}) の何れかであるか、直接の子ノードの子ノードの何れかであるか（以下同様）を示す論理値を返します。
 
-> **メモ:** ノードは自分自身に**含まれます**。
+> [!NOTE]
+> ノードは自分自身に**含まれます**。
 
 ## 構文
 
-```js
-contains(otherNode);
+```js-nolint
+contains(otherNode)
 ```
 
 ### 引数
@@ -34,7 +37,7 @@ contains(otherNode);
 
 ```js
 function isInPage(node) {
-  return (node === document.body) ? false : document.body.contains(node);
+  return node === document.body ? false : document.body.contains(node);
 }
 ```
 

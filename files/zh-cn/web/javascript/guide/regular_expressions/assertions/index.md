@@ -1,13 +1,29 @@
 ---
 title: Assertions
-slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
+slug: Web/JavaScript/Guide/Regular_expressions/Assertions
 ---
 
 {{jsSidebar("JavaScript Guide")}}
 
 断言的组成之一是边界。对于文本、词或模式，边界可以用来表明它们的起始或终止部分（如先行断言，后行断言以及条件表达式）。
 
-{{EmbedInteractiveExample("pages/js/regexp-assertions.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp Assertions", "taller")}}
+
+```js interactive-example
+const text = "A quick fox";
+
+const regexpLastWord = /\w+$/;
+console.log(text.match(regexpLastWord));
+// Expected output: Array ["fox"]
+
+const regexpWords = /\b\w+\b/g;
+console.log(text.match(regexpWords));
+// Expected output: Array ["A", "quick", "fox"]
+
+const regexpFoxQuality = /\w+(?= fox)/;
+console.log(text.match(regexpFoxQuality));
+// Expected output: Array ["quick"]
+```
 
 ## 类型
 
@@ -29,14 +45,13 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
           在换行符后也能立即匹配，比如 <code>/^A/</code> 匹配不了 "an A" 里面的
           "A"，但是可以匹配 "An A" 里面第一个 "A"。
         </p>
-        <div class="note">
+        <div class="notecard note">
           <p>
             <strong>备注：</strong
-            ><code>^</code> 出现在集合或范围开头时的含义与此不同（参见
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges"
-              >group</a
-            >）。
+            >此字符出现在<a
+              href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes"
+              >字符类</a
+            >开头时的含义与此不同。
           </p>
         </div>
       </td>
@@ -76,7 +91,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
         <p>
           匹配退格字符 (<code>[\b]</code>), 查看
           <a
-            href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes"
+            href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes"
             >字符类</a
           >
         </p>
@@ -188,119 +203,120 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
 
 ### 一般边界类型概述示例
 
-```plain
-// 使用 正则表达式边界修复错误字符串
+```js
+// 使用正则表达式边界修复错误字符串
 buggyMultiline = `tey, ihe light-greon apple
 tangs on ihe greon traa`;
 
-// 1) 使用 ^ 修正字符串开始处和换行后的匹配。
-buggyMultiline = buggyMultiline.replace(/^t/gim,'h');
-console.log(1, buggyMultiline); // 修复 'tey'=>'hey'(字符串开始) , 'tangs'=>'hangs'(换行后)
+// 1) 使用 $ 修正字符串结尾处的匹配。
+buggyMultiline = buggyMultiline.replace(/^t/gim, "h");
+console.log(1, buggyMultiline); // 修复 'tey' => 'hey' 和 'tangs' => 'hangs'，而不对 'traa' 做改动。
 
 // 2) 使用 $ 修正字符串结尾处的匹配。
-buggyMultiline = buggyMultiline.replace(/aa$/gim,'ee.');
-console.log(2, buggyMultiline); // 修复 'traa' => 'tree'.
+buggyMultiline = buggyMultiline.replace(/aa$/gim, "ee.");
+console.log(2, buggyMultiline); // 修复 'traa' => 'tree.'。
 
 // 3) 使用 \b 修正单词和空格边界上的字符。
-buggyMultiline = buggyMultiline.replace(/\bi/gim,'t');
-console.log(3, buggyMultiline); // 修复 'ihe' => 'the'  不影响 'light'.
+buggyMultiline = buggyMultiline.replace(/\bi/gim, "t");
+console.log(3, buggyMultiline); // 修复 'ihe' => 'the'，而不对 'light' 做改动。
 
 // 4) 使用 \B 匹配实体边界内的字符。
-fixedMultiline = buggyMultiline.replace(/\Bo/gim,'e');
-console.log(4, fixedMultiline); // 修复  'greon'  不影响'on'.
+fixedMultiline = buggyMultiline.replace(/\Bo/gim, "e");
+console.log(4, fixedMultiline); // 修复 'greon' => 'green'，而不对 'on' 做改动。
 ```
 
 ### 使用 ^（控制字符）匹配输入的开头
 
-使用 `^`匹配输入的开头。在这个例子中，我们可以通过 /^A/ 正则表达式得到以 A 开头的水果。为了选择合适的水果，我们可以使用带有箭头函数的过滤方法。
+使用 `^`匹配输入的开头。在这个例子中，我们可以通过 `/^A/` 正则表达式得到以 A 开头的水果。为了选择合适的水果，我们可以使用带有箭头函数的过滤方法。
 
-```plain
-let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
+```js
+const fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
 // 使用正则 /^A/ 选择以'A'开头的水果。
 // 这里的 '^' 只有一种含义：匹配输入的开头。
 
-let fruitsStartsWithA = fruits.filter(fruit => /^A/.test(fruit));
+const fruitsStartsWithA = fruits.filter((fruit) => /^A/.test(fruit));
 console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]
 ```
 
-在第二个示例中，^用于在输入的开始处匹配，以及在内部使用时用于创建否定或被补充的字符集 [组和范围](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges).
+在第二个示例中，`^` 既用于在输入开头进行匹配，也用于在[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)中使用时创建字符类补集。
 
-```plain
-let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
+```js
+const fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
 // 使用正则 /^[^A]/ 选择 不是以‘A’开头的水果
-// 在这个例子中，“^”控件符号表示两种含义：
+// 在这个例子中，“^”控制符号表示两种含义：
 // 1) 匹配输入的开头
-// 2) 一个否定的字符集：[^A] ，意思是匹配不是‘A’的字符
+// 2) 一个否定的字符集：[^A]，意思是匹配不是‘A’的字符
 
-let fruitsStartsWithNotA = fruits.filter(fruit => /^[^A]/.test(fruit));
+const fruitsStartsWithNotA = fruits.filter((fruit) => /^[^A]/.test(fruit));
 
 console.log(fruitsStartsWithNotA); // [ 'Watermelon', 'Orange', 'Strawberry' ]
 ```
 
 ### 匹配字边界
 
-```plain
-let fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
+```js
+const fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
 
 // 选择包含以“en”或“ed”结尾的单词的描述：
-let enEdSelection = fruitsWithDescription.filter(descr => /(en|ed)\b/.test(descr));
+const enEdSelection = fruitsWithDescription.filter((descr) =>
+  /(en|ed)\b/.test(descr),
+);
 
 console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]
 ```
 
 ### 先行断言
 
-```plain
+```js
 // JS 先行断言 x(?=y) 匹配被 y 跟随的 x
 
-let regex = /First(?= test)/g;
+const regex = /First(?= test)/g;
 
-console.log('First test'.match(regex)); // [ 'First' ]
-console.log('test First peach'.match(regex)); // null
-console.log('This is a First test in a year.'.match(regex)); // [ 'First' ]
-console.log('This is a First peach in a month.'.match(regex)); // null
+console.log("First test".match(regex)); // [ 'First' ]
+console.log("First peach".match(regex)); // null
+console.log("This is a First test in a year.".match(regex)); // [ 'First' ]
+console.log("This is a First peach in a month.".match(regex)); // null
 ```
 
 ### 先行否定断言
 
 例如， `/\d+(?!\.)/` 匹配没有被小数点跟随且至少有一位的数字。 `/\d+(?!\.)/.exec('3.141')` 匹配 "141" 而不是 "3"
 
-```plain
-console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
+```js
+console.log(/\d+(?!\.)/g.exec("3.141")); // [ '141', index: 2, input: '3.141' ]
 ```
 
-### 不同含义的'?!'：断言和范围的组合用法
+### 不同含义的“?!”：在断言和字符集中的组合用法
 
-不同含义的`?!` 结合使用 [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) `/x(?!y)/` 和 [范围](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) `[^?!]`.
+在像 `/x(?!y)/` 这样的断言和 `[^?!]` 这样的[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)中，`?!` 组合具有不同的含义。
 
-```plain
-let orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";
+```js
+const orangeNotLemon =
+  "Do you want to have an orange? Yes, I do not want to have a lemon!";
 
-let selectNotLemonRegex = /[^?!]+have(?! a lemon)[^?!]+[?!]/gi
+// 断言 /x(?!y)/ 和范围 /[^?!]/ 中“?!”组合用法的不同含义
+const selectNotLemonRegex = /[^?!]+have(?! a lemon)[^?!]+[?!]/gi;
 console.log(orangeNotLemon.match(selectNotLemonRegex)); // [ 'Do you want to have an orange?' ]
 
-let selectNotOrangeRegex = /[^?!]+have(?! an orange)[^?!]+[?!]/gi
+const selectNotOrangeRegex = /[^?!]+have(?! an orange)[^?!]+[?!]/gi;
 console.log(orangeNotLemon.match(selectNotOrangeRegex)); // [ ' Yes, I do not want to have a lemon!' ]
 ```
 
 ### 后行断言
 
-```plain
-let oranges = ['ripe orange A ', 'green orange B', 'ripe orange C',];
+```js
+const oranges = ["ripe orange A", "green orange B", "ripe orange C"];
 
-let ripe_oranges = oranges.filter( fruit => fruit.match(/(?<=ripe )orange/));
-console.log(ripe_oranges); // [ 'ripe orange A ', 'ripe orange C' ]
+const ripeOranges = oranges.filter((fruit) => /(?<=ripe )orange/.test(fruit));
+console.log(ripeOranges); // [ 'ripe orange A', 'ripe orange C' ]
 ```
 
-## 另请参阅
+## 参见
 
-- [正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
-
-  - [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
-  - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
-  - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
-  - [组和范围](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
-
-- [RegExp() 构造器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- [正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
+- [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)指南
+- [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)指南
+- [组和反向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)指南
+- [`RegExp`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)

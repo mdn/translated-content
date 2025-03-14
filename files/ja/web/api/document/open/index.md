@@ -1,6 +1,9 @@
 ---
-title: Document.open()
+title: "Document: open() メソッド"
+short-title: open()
 slug: Web/API/Document/open
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}
@@ -14,8 +17,8 @@ slug: Web/API/Document/open
 
 ## 構文
 
-```
-document.open();
+```js-nolint
+open()
 ```
 
 ### 引数
@@ -38,17 +41,13 @@ document.write("<p>The number is 42</p>");
 document.close();
 ```
 
-## 注
+## メモ
 
 ページが読み込まれたあとで {{domxref("document.write()")}} が呼び出されると、自動的に `document.open()` が呼び出されます。
 
-Firefox や Internet Explorer では何年も前から、すべてのノードの削除に加えて、 JavaScript の変数なども追加で消去していました。今はそうではありません。document non-spec'ed parameters to document.open
+### コンテンツのセキュリティ
 
-### Gecko 固有のメモ
-
-Gecko 1.9 以降、このメソッドは他のプロパティと同一オリジンポリシーが同じになるようになり、文書のオリジンを変更しようとした場合に動作しません。
-
-Gecko 1.9.2 以降、 `document.open()` は[プリンシパル](/ja/docs/Security_check_basics)をスタックからフェッチするのではなく、 URI を使用する文書のプリンシパルを使用します。その結果、 [`wrappedJSObject`](/ja/wrappedJSObject) を使用しても、 {{domxref("document.write()")}} を{{Glossary("chrome", "クローム")}}からの信頼できない文書に呼び出すことはできません。考え方については[セキュリティチェックの基本](/ja/Security_check_basics)を参照してください。
+このメソッドは他のプロパティと同じ[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)に従います。このメソッドによって文書のオリジンが変更される場合は動作しません。
 
 ## 引数 3 つの document.open()
 
@@ -57,7 +56,7 @@ Gecko 1.9.2 以降、 `document.open()` は[プリンシパル](/ja/docs/Securit
 この呼び出しは、例えば github.com を新しいウィンドウで開き、オープナーは `null` に設定してみます。
 
 ```js
-document.open('https://www.github.com','', 'noopener=true')
+document.open("https://www.github.com", "", "noopener=true");
 ```
 
 ## 引数 2 つの document.open()
@@ -65,10 +64,10 @@ document.open('https://www.github.com','', 'noopener=true')
 ブラウザーは以下の形で、引数 2 つの `document.open()` に対応してきました。
 
 ```js
-document.open(type, replace)
+document.open(type, replace);
 ```
 
-`type` は書き込もうとしているデータの MIME タイプ (`text/html` など) を指定し、 replace が設定されていれば (すなわち "replace" の文字列)、新しい文書の履歴エントリが書き込まれている文書の現在の履歴エントリを置き換えることを指定していました。
+`type` は書き込もうとしているデータの MIME タイプ (`text/html` など) を指定し、 replace が設定されていれば (すなわち "replace" の文字列)、新しい文書の履歴エントリーが書き込まれている文書の現在の履歴エントリーを置き換えることを指定していました。
 
 この形式は現在では廃止されています。エラーは発生せず、代わりに `document.open()` に転送されます (つまり、引数なしで実行した場合と同等です)。 履歴の置換動作は常に行われるようになりました。
 
@@ -80,7 +79,7 @@ document.open(type, replace)
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{domxref("Document")}}
 - {{domxref("Window.open()")}}

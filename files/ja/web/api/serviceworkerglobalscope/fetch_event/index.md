@@ -1,13 +1,14 @@
 ---
 title: "ServiceWorkerGlobalScope: fetch イベント"
+short-title: fetch
 slug: Web/API/ServiceWorkerGlobalScope/fetch_event
 l10n:
-  sourceCommit: 6f2391b536a4db607ea94e4ce07396b2cead6a88
+  sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
-**fetch** イベントは {{domxref("fetch()")}} メソッドが呼び出されたときに発生します。
+**`fetch`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスのイベントで、メインアプリスレッドがネットワークリクエストを発行したときに、サービスワーカーのグローバルスコープで発生します。これにより、サービスワーカーがネットワークリクエストを傍受し、独自のレスポンス（例えば、ローカルキャッシュからのレスポンス）を送信できるようになります。
 
 このイベントはキャンセル不可で、バブリングしません。
 
@@ -21,40 +22,98 @@ addEventListener("fetch", (event) => {});
 onfetch = (event) => {};
 ```
 
+## 解説
+
+この `fetch` イベントは、メインスレッドがネットワークリクエストを行う際に、サービスワーカーのグローバルスコープで発生します。これはメインスレッドからの明示的な {{domxref("Window/fetch", "fetch()")}} 呼び出しだけではなく、ページナビゲーションや JavaScript、CSS、画像などのリソースの取得による暗黙的なリクエストでも発生します。
+
+イベントハンドラーは {{domxref("FetchEvent")}} オブジェクトを受け取り、{{domxref("Request")}} インスタンスを通じてリクエストにアクセスできます。
+
+`FetchEvent` はパラメーターに {{domxref("Response")}} 、または `Response` で解決する `Promise` を受け取る {{domxref("FetchEvent.respondWith()", "respondWith()")}} メソッドを持っています。これにより、サービスワーカーのイベントハンドラーはメインスレッドでリクエストに返されるレスポンスを差し替えることができます。
+
+例えばサービスワーカーは以下のような値へ差し替えることができます。
+
+- {{domxref("Cache")}} インターフェイスから取得したレスポンスのローカルキャッシュ
+- {{domxref("Response.json()")}} や {{domxref("Response.Response()", "Response()")}} コンストラクターなどのメソッドでサービスワーカーが合成したレスポンス。
+- {{domxref("Response.error_static()", "Response.error()")}} による ネットワークエラー。これは `fetch()` 呼び出しを拒否させます。
+
+`respondWith()` メソッドは、一つのリクエストに対して一度だけ呼び出すことができます。複数の `fetch` イベントリスナーが設定された場合、`respondWith()` が呼び出されるまで、登録された順に呼び出されます。
+
+`respondWith()` メソッドは同期的に呼び出す必要があります。つまり `then` ハンドラーから呼び出すことはできません。
+
+通常、`fetch` イベントハンドラーは URL などのリクエスト特徴に応じて異なる戦略をとります。
+
+```js
+function strategy1() {
+  return fetch("picnic.jpg");
+}
+
+function strategy2() {
+  return Response.error();
+}
+
+const pattern1 = /^\/salamander/;
+const pattern2 = /^\/lizard/;
+
+self.addEventListener("fetch", (event) => {
+  const url = new URL(event.request.url);
+  if (pattern1.test(url.pathname)) {
+    event.respondWith(strategy1());
+  } else if (pattern2.test(url.pathname)) {
+    event.respondWith(strategy2());
+  }
+});
+```
+
+ハンドラー内で `respondWith()` が呼び出されなかった場合、ユーザーエージェントは自動的に元のネットワークリクエストを行います。例えば上記のコードでは `pattern1` または `pattern2` にマッチしないリクエストはすべて、サービスワーカーが存在しなかったかのように振る舞います。
+
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+{{domxref("FetchEvent")}} です。
 
 ## 例
 
-このコードスニペットは、[service worker prefetch の例](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js)（[prefetch の例のライブ版](https://googlechrome.github.io/samples/service-worker/prefetch/)を参照してください）からのものです。 {{domxref("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} イベントハンドラーは `fetch` イベントを監視します。イベントが発生した時、コードは {{domxref("Cache")}} オブジェクト内で、最初に一致したリクエストに対して解決するプロミスを返します。もし、何も一致しなかった場合は、コードはネットワークからレスポンスを読み取ります。
+### キャッシュからネットワークへのフォールバック
 
-さらに、このコードは {{domxref("fetch()")}} 操作で発生した例外を処理しています。 HTTP のエラーレスポンス（たとえば、404）は、例外を引き起こさないことに注意してください。適切なエラーコードセットを持った通常のレスポンスオブジェクトを返します。
+この `fetch` イベントハンドラーは、まずキャッシュ済みのレスポンスを探します。レスポンスが見つかった場合はキャッシュ済みのレスポンスを返します。そうでない場合はネットワークからリソースを取得しようとします。
 
 ```js
+async function cacheThenNetwork(request) {
+  const cachedResponse = await caches.match(request);
+  if (cachedResponse) {
+    console.log("Found response in cache:", cachedResponse);
+    return cachedResponse;
+  }
+  console.log("Falling back to network");
+  return fetch(request);
+}
+
 self.addEventListener("fetch", (event) => {
   console.log(`Handling fetch event for ${event.request.url}`);
+  event.respondWith(cacheThenNetwork(event.request));
+});
+```
 
-  event.respondWith(
-    caches.match(event.request).then((response) => {
-      if (response) {
-        console.log("Found response in cache:", response);
-        return response;
-      }
-      console.log("No response found in cache. About to fetch from network…");
+### キャッシュのみ
 
-      return fetch(event.request)
-        .then((response) => {
-          console.log("Response from network is:", response);
+この `fetch` イベントハンドラーは、スクリプトとスタイルシートに対して「キャッシュのみ」ポリシーを実装します。リクエストの {{domxref("Request.destination", "destination")}} が `"script"` または `"style"` である場合、ハンドラーはキャッシュだけを探し、レスポンスが見つからない場合はエラーを返します。その他のリクエストはすべてネットワークを通して行われます。
 
-          return response;
-        })
-        .catch((error) => {
-          console.error(`Fetching failed: ${error}`);
-          throw error;
-        });
-    })
-  );
+```js
+async function cacheOnly(request) {
+  const cachedResponse = await caches.match(request);
+  if (cachedResponse) {
+    console.log("Found response in cache:", cachedResponse);
+    return cachedResponse;
+  }
+  return Response.error();
+}
+
+self.addEventListener("fetch", (event) => {
+  if (
+    event.request.destination === "script" ||
+    event.request.destination === "style"
+  ) {
+    event.respondWith(cacheOnly(event.request));
+  }
 });
 ```
 
@@ -70,6 +129,6 @@ self.addEventListener("fetch", (event) => {
 
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
-- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
+- {{domxref("WorkerGlobalScope/fetch", "fetch()")}} メソッド
+- {{domxref("Request")}} インターフェイス
+- {{domxref("Response")}} インターフェイス

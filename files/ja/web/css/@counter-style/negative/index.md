@@ -11,11 +11,11 @@ slug: Web/CSS/@counter-style/negative
 
 ```css
 /* <symbol> 値 */
-negative: "-";       /* 負の値の場合に先頭に '-' を付ける */
-negative: "(" ")";   /* 負の値の場合に '(' と ')' で囲む */
+negative: "-"; /* 負の値の場合に先頭に '-' を付ける */
+negative: "(" ")"; /* 負の値の場合に '(' と ')' で囲む */
 ```
 
-### Values
+### 値
 
 - first `<symbol>`
   - : カウンターが負の時に、この記号がその表現の前に付きます。

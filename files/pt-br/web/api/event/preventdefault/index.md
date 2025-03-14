@@ -20,36 +20,34 @@ event.preventDefault();
 Alternar é a ação padrão de clicar em uma caixa de seleção. Este exemplo demonstra como impedir que isso aconteça:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<title>preventDefault example</title>
+  <head>
+    <title>preventDefault example</title>
 
-<script>
-function stopDefAction(evt) {
-    evt.preventDefault();
-}
+    <script>
+      function stopDefAction(evt) {
+        evt.preventDefault();
+      }
 
-document.getElementById('my-checkbox').addEventListener(
-    'click', stopDefAction, false
-);
-</script>
-</head>
+      document
+        .getElementById("my-checkbox")
+        .addEventListener("click", stopDefAction, false);
+    </script>
+  </head>
 
-<body>
+  <body>
+    <p>Please click on the checkbox control.</p>
 
-<p>Please click on the checkbox control.</p>
-
-<form>
-    <input type="checkbox" id="my-checkbox" />
-    <label for="my-checkbox">Checkbox</label>
-</form>
-
-</body>
+    <form>
+      <input type="checkbox" id="my-checkbox" />
+      <label for="my-checkbox">Checkbox</label>
+    </form>
+  </body>
 </html>
 ```
 
-Você pode ver o `preventDefault` em ação [aqui](/samples/domref/dispatchEvent.html).
+Você pode ver o `preventDefault` em ação [aqui](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html).
 
 O exemplo a seguir demonstra como um input com texto inválido pode ser parado ao chegar ao campo de entrada com o preventDefault().
 
@@ -63,22 +61,25 @@ O exemplo a seguir demonstra como um input com texto inválido pode ser parado a
 ```
 
 ```js
-function Init () {
-    var myTextbox = document.getElementById('my-textbox');
-    myTextbox.addEventListener( 'keypress', checkName, false );
+function Init() {
+  var myTextbox = document.getElementById("my-textbox");
+  myTextbox.addEventListener("keypress", checkName, false);
 }
 
 function checkName(evt) {
-    var charCode = evt.charCode;
-    if (charCode != 0) {
-        if (charCode < 97 || charCode > 122) {
-            evt.preventDefault();
-            alert(
-                "Please use lowercase letters only."
-                + "\n" + "charCode: " + charCode + "\n"
-            );
-        }
+  var charCode = evt.charCode;
+  if (charCode != 0) {
+    if (charCode < 97 || charCode > 122) {
+      evt.preventDefault();
+      alert(
+        "Please use lowercase letters only." +
+          "\n" +
+          "charCode: " +
+          charCode +
+          "\n",
+      );
     }
+  }
 }
 ```
 
@@ -102,12 +103,17 @@ Aqui está o resultado do código anterior:
 
 Chamar preventDefault durante qualquer fase do fluxo de eventos cancela o evento, o que significa que qualquer ação padrão normalmente feita pela aplicação como um resultado do evento não ocorrerá.
 
-> **Nota:** A partir do {{Gecko("6.0")}}, chamar o `preventDefault()` faz com que o {{ domxref("event.defaultPrevented") }} se torne true.
+> [!NOTE]
+> A partir do Gecko 6.0, chamar o `preventDefault()` faz com que o {{ domxref("event.defaultPrevented") }} se torne true.
 
-Você pode usar o [event.cancelable](/pt-BR/docs/Web/API/event.cancelable) para checar se o evento é cancelável. Chamar o `preventDefault` para um evento não cancelável não fará efeito.
+Você pode usar o [event.cancelable](/pt-BR/docs/Web/API/Event/cancelable) para checar se o evento é cancelável. Chamar o `preventDefault` para um evento não cancelável não fará efeito.
 
 `Se o preventDefault não parar a propagação do evento através do DOM. event.stopPropagation deve ser usada para isso.`
 
-## Especificação
+## Especificações
 
-- [DOM Level 2 Events: preventDefault](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-preventDefault)
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

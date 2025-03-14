@@ -1,26 +1,31 @@
 ---
 title: Atomics.store()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/store
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/store
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/store
 ---
 
 {{JSRef}}
 
 La méthode statique **`Atomics.store()`** enregistre une valeur donnée à un emplacement donné du tableau partagé et renvoie cette valeur.
 
-{{EmbedInteractiveExample("pages/js/atomics-store.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.store()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+console.log(Atomics.store(uint8, 0, 2));
+// Expected output: 2
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 2
+```
 
 ## Syntaxe
 
 ```js
-Atomics.store(typedArray, index, valeur)
+Atomics.store(typedArray, index, valeur);
 ```
 
 ### Paramètres
@@ -45,14 +50,14 @@ La valeur qui a été enregistrée.
 ## Exemples
 
 ```js
-var buffer = new ArrayBuffer(4);         // Buffer classique
-var float32 = new Float32Array(buffer);  // Nombre flottant
-var uint32 = new Uint32Array(buffer);    // Représentation IEEE754
+var buffer = new ArrayBuffer(4); // Buffer classique
+var float32 = new Float32Array(buffer); // Nombre flottant
+var uint32 = new Uint32Array(buffer); // Représentation IEEE754
 
 float32[0] = 0.5;
 console.log("0x" + uint32[0].toString(16));
 
-uint32[0] = 0x3f000000;   /// Représentation sur 32 bits de 0.5 (IEEE754)
+uint32[0] = 0x3f000000; /// Représentation sur 32 bits de 0.5 (IEEE754)
 console.log(float32[0]);
 ```
 

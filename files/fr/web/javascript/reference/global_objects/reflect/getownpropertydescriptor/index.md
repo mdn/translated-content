@@ -1,26 +1,33 @@
 ---
 title: Reflect.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
-original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/getOwnPropertyDescriptor
 ---
 
 {{JSRef}}
 
 La méthode statique **`Reflect.getOwnPropertyDescriptor()`** est similaire à {{jsxref("Object.getOwnPropertyDescriptor()")}}. Elle renvoie un descripteur de propriété pour la propriété visée si elle existe sur l'objet, sinon, elle renvoie {{jsxref("undefined")}}.
 
-{{EmbedInteractiveExample("pages/js/reflect-getownpropertydescriptor.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.getOwnPropertyDescriptor()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+console.log(Reflect.getOwnPropertyDescriptor(object1, "property1").value);
+// Expected output: 42
+
+console.log(Reflect.getOwnPropertyDescriptor(object1, "property2"));
+// Expected output: undefined
+
+console.log(Reflect.getOwnPropertyDescriptor(object1, "property1").writable);
+// Expected output: true
+```
 
 ## Syntaxe
 
 ```js
-Reflect.getOwnPropertyDescriptor(cible, cléPropriété)
+Reflect.getOwnPropertyDescriptor(cible, cléPropriété);
 ```
 
 ### Paramètres
@@ -47,10 +54,10 @@ La méthode `Reflect.getOwnPropertyDescriptor` renvoie un descripteur pour la pr
 ### Utiliser `Reflect.getOwnPropertyDescriptor()`
 
 ```js
-Reflect.getOwnPropertyDescriptor({x: "coucou"}, "x");
+Reflect.getOwnPropertyDescriptor({ x: "coucou" }, "x");
 // {value: "coucou", writable: true, enumerable: true, configurable: true}
 
-Reflect.getOwnPropertyDescriptor({x: "coucou"}, "y");
+Reflect.getOwnPropertyDescriptor({ x: "coucou" }, "y");
 // undefined
 
 Reflect.getOwnPropertyDescriptor([], "length");

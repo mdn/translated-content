@@ -1,20 +1,51 @@
 ---
 title: background
 slug: Web/CSS/background
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
-translation_of: Web/CSS/background
 ---
 
-{{CSSRef("CSS Background")}}
+{{CSSRef}}
 
 [CSS](/ko/docs/Web/API/CSS) **`background`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 색상, 이미지, 원점, 크기, 반복 등 여러 배경 스타일을 한 번에 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/background.html")}}
+{{InteractiveExample("CSS Demo: background")}}
+
+```css interactive-example-choice
+background: green;
+```
+
+```css interactive-example-choice
+background: content-box radial-gradient(crimson, skyblue);
+```
+
+```css interactive-example-choice
+background: no-repeat url("/shared-assets/images/examples/lizard.png");
+```
+
+```css interactive-example-choice
+background: left 5% / 15% 60% repeat-x
+  url("/shared-assets/images/examples/star.png");
+```
+
+```css interactive-example-choice
+background:
+  center / contain no-repeat
+    url("/shared-assets/images/examples/firefox-logo.svg"),
+  #eee 35% url("/shared-assets/images/examples/lizard.png");
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 ## 구성 속성
 
@@ -101,11 +132,12 @@ background: no-repeat center/80% url("../img/image.png");
 
 ```html
 <p class="topbanner">
-  작은 별<br/>
-  반짝 반짝<br/>
+  작은 별<br />
+  반짝 반짝<br />
   작은 별
 </p>
-<p class="warning">문단 하나<p>
+<p class="warning">문단 하나</p>
+<p></p>
 ```
 
 #### CSS
@@ -116,7 +148,7 @@ background: no-repeat center/80% url("../img/image.png");
 }
 
 .topbanner {
-  background: url("https://mdn.mozillademos.org/files/11983/starsolid.gif") #99f repeat-y fixed;
+  background: url("star-solid.gif") #99f repeat-y fixed;
 }
 ```
 
@@ -135,5 +167,5 @@ background: no-repeat center/80% url("../img/image.png");
 ## 같이 보기
 
 - {{cssxref("box-decoration-break")}}
-- [CSS 그레이디언트 사용하기](/ko/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
-- [한 번에 여러 배경 사용하기](/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [CSS 그레이디언트 사용하기](/ko/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [한 번에 여러 배경 사용하기](/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

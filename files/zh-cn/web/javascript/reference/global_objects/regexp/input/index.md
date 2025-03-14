@@ -26,12 +26,12 @@ RegExp.$_
 
 ```js
 var re = /hi/g;
-re.test('hi there!');
-RegExp.input;         // "hi there!"
-re.test('foo');       // 新测试，不匹配
-RegExp.$_;            // "hi there!"
-re.test('hi world!'); // 新测试，匹配
-RegExp.$_;            // "hi world!"
+re.test("hi there!");
+RegExp.input; // "hi there!"
+re.test("foo"); // 新测试，不匹配
+RegExp.$_; // "hi there!"
+re.test("hi world!"); // 新测试，匹配
+RegExp.$_; // "hi world!"
 ```
 
 ## 规范
@@ -42,7 +42,7 @@ RegExp.$_;            // "hi world!"
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{non-standard_inline}} {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
 - {{non-standard_inline}} {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}

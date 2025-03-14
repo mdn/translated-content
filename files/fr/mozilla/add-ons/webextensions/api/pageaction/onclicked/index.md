@@ -1,17 +1,6 @@
 ---
 title: pageAction.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onCliecked
-  - pageAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked
 ---
 
 {{AddonSidebar}}
@@ -23,9 +12,9 @@ Pour définir une action de clic droit, utilisez l'API {{WebExtAPIRef('contextMe
 ## Syntaxe
 
 ```js
-browser.pageAction.onClicked.addListener(listener)
-browser.pageAction.onClicked.removeListener(listener)
-browser.pageAction.onClicked.hasListener(listener)
+browser.pageAction.onClicked.addListener(listener);
+browser.pageAction.onClicked.removeListener(listener);
+browser.pageAction.onClicked.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -48,9 +37,9 @@ Les événements ont trois fonctions :
     - `tab`
       - : Un objet {{WebExtAPIRef('tabs.Tab')}} représentant l'onglet dont l'action de la page a été cliquée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pageAction.onClicked")}}
+{{Compat}}
 
 ## Exemples
 
@@ -61,16 +50,15 @@ var CATGIFS = "http://chilloutandwatchsomecatgifs.com/";
 
 browser.pageAction.onClicked.addListener((tab) => {
   browser.pageAction.hide(tab.id);
-  browser.tabs.update({url: CATGIFS});
+  browser.tabs.update({ url: CATGIFS });
 });
 
-browser.pageAction.onClicked.addListener(function () {
-});
+browser.pageAction.onClicked.addListener(function () {});
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
 >

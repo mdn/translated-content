@@ -1,20 +1,16 @@
 ---
 title: Référence des événements
 slug: Web/Events
-tags:
-  - Event
-  - Overview
-  - Reference
-translation_of: Web/Events
 ---
 
-Les [événements DOM](/fr/docs/Web/API/Document_Object_Model/Events) sont déclenchés pour notifier au code des « changements intéressants » qui peuvent affecter l'exécution du code. Ces changements peuvent résulter d'interactions avec l'utilisateur, comme l'utilisation de la souris ou le redimensionnement d'une fenêtre, de changements dans l'état de l'environnement sous-jacent (par exemple, une batterie faible ou des événements médiatiques provenant du système d'exploitation), et d'autres causes.
+Les [événements DOM](/fr/docs/Learn/JavaScript/Building_blocks/Events) sont déclenchés pour notifier au code des « changements intéressants » qui peuvent affecter l'exécution du code. Ces changements peuvent résulter d'interactions avec l'utilisateur, comme l'utilisation de la souris ou le redimensionnement d'une fenêtre, de changements dans l'état de l'environnement sous-jacent (par exemple, une batterie faible ou des événements médiatiques provenant du système d'exploitation), et d'autres causes.
 
 Chaque événement est représenté par un objet implémentant l'interface [`Event`](/fr/docs/Web/API/Event), et peut avoir d'autres propriétés et/ou champs, permettant d'obtenir des informations supplémentaires au sujet de ce qui s'est produit. La documentation de chaque événement comporte un tableau (en haut de la page) qui comprend un lien vers l'interface de l'événement associé et d'autres informations pertinentes. Une liste complète des différents types d'événements est donnée dans [Event >Événement `Interfaces basées sur`](/fr/docs/Web/API/Event#introduction).
 
 Cette rubrique fournit un index des principales _sortes_ d'événements qui peuvent vous intéresser (animation, presse-papiers, workers, etc.) ainsi que les principales classes qui implémentent ces sortes d'événements. À la fin se trouve une liste exhaustive de tous les événements documentés.
 
-> **Note :** Cette page répertorie les événements les plus courants que vous rencontrerez sur le Web. Si vous recherchez un événement qui n'est pas répertorié ici, essayez de rechercher son nom, son domaine ou les spécifications associées sur le reste du MDN.
+> [!NOTE]
+> Cette page répertorie les événements les plus courants que vous rencontrerez sur le Web. Si vous recherchez un événement qui n'est pas répertorié ici, essayez de rechercher son nom, son domaine ou les spécifications associées sur le reste du MDN.
 
 ## Index des événements
 
@@ -820,52 +816,52 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
 
 - {{DOMxRef("Document")}}
 
-  - [animationcancel](/fr/docs/Web/API/Document/animationcancel_event)
-  - [animationend](/fr/docs/Web/API/Document/animationend_event)
-  - [animationiteration](/fr/docs/Web/API/Document/animationiteration_event)
-  - [animationstart](/fr/docs/Web/API/Document/animationstart_event)
+  - [animationcancel](/fr/docs/Web/API/Element/animationcancel_event)
+  - [animationend](/fr/docs/Web/API/Element/animationend_event)
+  - [animationiteration](/fr/docs/Web/API/Element/animationiteration_event)
+  - [animationstart](/fr/docs/Web/API/Element/animationstart_event)
   - [copy](/fr/docs/Web/API/Document/copy_event)
   - [cut](/fr/docs/Web/API/Document/cut_event)
   - [DOMContentLoaded](/fr/docs/Web/API/Document/DOMContentLoaded_event)
-  - [dragend](/fr/docs/Web/API/Document/dragend_event)
-  - [dragenter](/fr/docs/Web/API/Document/dragenter_event)
-  - [dragleave](/fr/docs/Web/API/Document/dragleave_event)
-  - [dragover](/fr/docs/Web/API/Document/dragover_event)
-  - [dragstart](/fr/docs/Web/API/Document/dragstart_event)
-  - [drag](/fr/docs/Web/API/Document/drag_event)
-  - [drop](/fr/docs/Web/API/Document/drop_event)
+  - [dragend](/fr/docs/Web/API/HTMLElement/dragend_event)
+  - [dragenter](/fr/docs/Web/API/HTMLElement/dragenter_event)
+  - [dragleave](/fr/docs/Web/API/HTMLElement/dragleave_event)
+  - [dragover](/fr/docs/Web/API/HTMLElement/dragover_event)
+  - [dragstart](/fr/docs/Web/API/HTMLElement/dragstart_event)
+  - [drag](/fr/docs/Web/API/HTMLElement/drag_event)
+  - [drop](/fr/docs/Web/API/HTMLElement/drop_event)
   - [fullscreenchange](/fr/docs/Web/API/Document/fullscreenchange_event)
   - [fullscreenerror](/fr/docs/Web/API/Document/fullscreenerror_event)
-  - [gotpointercapture](/fr/docs/Web/API/Document/gotpointercapture_event)
-  - [keydown](/fr/docs/Web/API/Document/keydown_event)
-  - [keypress](/fr/docs/Web/API/Document/keypress_event)
-  - [keyup](/fr/docs/Web/API/Document/keyup_event)
-  - [lostpointercapture](/fr/docs/Web/API/Document/lostpointercapture_event)
+  - [gotpointercapture](/fr/docs/Web/API/Element/gotpointercapture_event)
+  - [keydown](/fr/docs/Web/API/Element/keydown_event)
+  - [keypress](/fr/docs/Web/API/Element/keypress_event)
+  - [keyup](/fr/docs/Web/API/Element/keyup_event)
+  - [lostpointercapture](/fr/docs/Web/API/Element/lostpointercapture_event)
   - [paste](/fr/docs/Web/API/Document/paste_event)
-  - [pointercancel](/fr/docs/Web/API/Document/pointercancel_event)
-  - [pointerdown](/fr/docs/Web/API/Document/pointerdown_event)
-  - [pointerenter](/fr/docs/Web/API/Document/pointerenter_event)
-  - [pointerleave](/fr/docs/Web/API/Document/pointerleave_event)
+  - [pointercancel](/fr/docs/Web/API/Element/pointercancel_event)
+  - [pointerdown](/fr/docs/Web/API/Element/pointerdown_event)
+  - [pointerenter](/fr/docs/Web/API/Element/pointerenter_event)
+  - [pointerleave](/fr/docs/Web/API/Element/pointerleave_event)
   - [pointerlockchange](/fr/docs/Web/API/Document/pointerlockchange_event)
   - [pointerlockerror](/fr/docs/Web/API/Document/pointerlockerror_event)
-  - [pointermove](/fr/docs/Web/API/Document/pointermove_event)
-  - [pointerout](/fr/docs/Web/API/Document/pointerout_event)
-  - [pointerover](/fr/docs/Web/API/Document/pointerover_event)
-  - [pointerup](/fr/docs/Web/API/Document/pointerup_event)
+  - [pointermove](/fr/docs/Web/API/Element/pointermove_event)
+  - [pointerout](/fr/docs/Web/API/Element/pointerout_event)
+  - [pointerover](/fr/docs/Web/API/Element/pointerover_event)
+  - [pointerup](/fr/docs/Web/API/Element/pointerup_event)
   - [readystatechange](/fr/docs/Web/API/Document/readystatechange_event)
   - [scroll](/fr/docs/Web/API/Document/scroll_event)
   - [selectionchange](/fr/docs/Web/API/Document/selectionchange_event)
-  - [selectstart](/fr/docs/Web/API/Document/selectstart_event)
-  - [touchcancel](/fr/docs/Web/API/Document/touchcancel_event)
-  - [touchend](/fr/docs/Web/API/Document/touchend_event)
-  - [touchmove](/fr/docs/Web/API/Document/touchmove_event)
-  - [touchstart](/fr/docs/Web/API/Document/touchstart_event)
-  - [transitioncancel](/fr/docs/Web/API/Document/transitioncancel_event)
-  - [transitionend](/fr/docs/Web/API/Document/transitionend_event)
-  - [transitionrun](/fr/docs/Web/API/Document/transitionrun_event)
-  - [transitionstart](/fr/docs/Web/API/Document/transitionstart_event)
+  - [selectstart](/fr/docs/Web/API/Node/selectstart_event)
+  - [touchcancel](/fr/docs/Web/API/Element/touchcancel_event)
+  - [touchend](/fr/docs/Web/API/Element/touchend_event)
+  - [touchmove](/fr/docs/Web/API/Element/touchmove_event)
+  - [touchstart](/fr/docs/Web/API/Element/touchstart_event)
+  - [transitioncancel](/fr/docs/Web/API/Element/transitioncancel_event)
+  - [transitionend](/fr/docs/Web/API/Element/transitionend_event)
+  - [transitionrun](/fr/docs/Web/API/Element/transitionrun_event)
+  - [transitionstart](/fr/docs/Web/API/Element/transitionstart_event)
   - [visibilitychange](/fr/docs/Web/API/Document/visibilitychange_event)
-  - [wheel](/fr/docs/Web/API/Document/wheel_event)
+  - [wheel](/fr/docs/Web/API/Element/wheel_event)
 
 - {{DOMxRef("Element")}}
 
@@ -883,7 +879,7 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [dblclick](/fr/docs/Web/API/Element/dblclick_event)
   - [DOMActivate](/fr/docs/Web/API/Element/DOMActivate_event)
   - [DOMMouseScroll](/fr/docs/Web/API/Element/DOMMouseScroll_event)
-  - [error](/fr/docs/Web/API/Element/error_event)
+  - [error](/fr/docs/Web/API/HTMLElement/error_event)
   - [focusin](/fr/docs/Web/API/Element/focusin_event)
   - [focusout](/fr/docs/Web/API/Element/focusout_event)
   - [focus](/fr/docs/Web/API/Element/focus_event)
@@ -914,7 +910,7 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [overflow](/fr/docs/Web/API/Element/overflow_event)
   - [paste](/fr/docs/Web/API/Element/paste_event)
   - [scroll](/fr/docs/Web/API/Element/scroll_event)
-  - [select](/fr/docs/Web/API/Element/select_event)
+  - [select](/fr/docs/Web/API/HTMLInputElement/select_event)
   - [show](/fr/docs/Web/API/Element/show_event)
   - [touchcancel](/fr/docs/Web/API/Element/touchcancel_event)
   - [touchend](/fr/docs/Web/API/Element/touchend_event)
@@ -950,7 +946,7 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
 
 - {{DOMxRef("HTMLDetailsElement")}}
 
-  - [toggle](/fr/docs/Web/API/HTMLDetailsElement/toggle_event)
+  - [toggle](/fr/docs/Web/API/HTMLElement/toggle_event)
 
 - {{DOMxRef("HTMLDialogElement")}}
 
@@ -959,27 +955,27 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
 
 - {{DOMxRef("HTMLElement")}}
 
-  - [animationcancel](/fr/docs/Web/API/HTMLElement/animationcancel_event)
-  - [animationend](/fr/docs/Web/API/HTMLElement/animationend_event)
-  - [animationiteration](/fr/docs/Web/API/HTMLElement/animationiteration_event)
-  - [animationstart](/fr/docs/Web/API/HTMLElement/animationstart_event)
-  - [beforeinput](/fr/docs/Web/API/HTMLElement/beforeinput_event)
+  - [animationcancel](/fr/docs/Web/API/Element/animationcancel_event)
+  - [animationend](/fr/docs/Web/API/Element/animationend_event)
+  - [animationiteration](/fr/docs/Web/API/Element/animationiteration_event)
+  - [animationstart](/fr/docs/Web/API/Element/animationstart_event)
+  - [beforeinput](/fr/docs/Web/API/Element/beforeinput_event)
   - [change](/fr/docs/Web/API/HTMLElement/change_event)
-  - [gotpointercapture](/fr/docs/Web/API/HTMLElement/gotpointercapture_event)
-  - [input](/fr/docs/Web/API/HTMLElement/input_event)
-  - [lostpointercapture](/fr/docs/Web/API/HTMLElement/lostpointercapture_event)
-  - [pointercancel](/fr/docs/Web/API/HTMLElement/pointercancel_event)
-  - [pointerdown](/fr/docs/Web/API/HTMLElement/pointerdown_event)
-  - [pointerenter](/fr/docs/Web/API/HTMLElement/pointerenter_event)
-  - [pointerleave](/fr/docs/Web/API/HTMLElement/pointerleave_event)
-  - [pointermove](/fr/docs/Web/API/HTMLElement/pointermove_event)
-  - [pointerout](/fr/docs/Web/API/HTMLElement/pointerout_event)
-  - [pointerover](/fr/docs/Web/API/HTMLElement/pointerover_event)
-  - [pointerup](/fr/docs/Web/API/HTMLElement/pointerup_event)
-  - [transitioncancel](/fr/docs/Web/API/HTMLElement/transitioncancel_event)
-  - [transitionend](/fr/docs/Web/API/HTMLElement/transitionend_event)
-  - [transitionrun](/fr/docs/Web/API/HTMLElement/transitionrun_event)
-  - [transitionstart](/fr/docs/Web/API/HTMLElement/transitionstart_event)
+  - [gotpointercapture](/fr/docs/Web/API/Element/gotpointercapture_event)
+  - [input](/fr/docs/Web/API/Element/input_event)
+  - [lostpointercapture](/fr/docs/Web/API/Element/lostpointercapture_event)
+  - [pointercancel](/fr/docs/Web/API/Element/pointercancel_event)
+  - [pointerdown](/fr/docs/Web/API/Element/pointerdown_event)
+  - [pointerenter](/fr/docs/Web/API/Element/pointerenter_event)
+  - [pointerleave](/fr/docs/Web/API/Element/pointerleave_event)
+  - [pointermove](/fr/docs/Web/API/Element/pointermove_event)
+  - [pointerout](/fr/docs/Web/API/Element/pointerout_event)
+  - [pointerover](/fr/docs/Web/API/Element/pointerover_event)
+  - [pointerup](/fr/docs/Web/API/Element/pointerup_event)
+  - [transitioncancel](/fr/docs/Web/API/Element/transitioncancel_event)
+  - [transitionend](/fr/docs/Web/API/Element/transitionend_event)
+  - [transitionrun](/fr/docs/Web/API/Element/transitionrun_event)
+  - [transitionstart](/fr/docs/Web/API/Element/transitionstart_event)
 
 - {{DOMxRef("HTMLFormElement")}}
 
@@ -1032,9 +1028,9 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
 
 - {{DOMxRef("IDBDatabase")}}
 
-  - [abort](/fr/docs/Web/API/IDBDatabase/abort_event)
+  - [abort](/fr/docs/Web/API/IDBTransaction/abort_event)
   - [close](/fr/docs/Web/API/IDBDatabase/close_event)
-  - [error](/fr/docs/Web/API/IDBDatabase/error_event)
+  - [error](/fr/docs/Web/API/IDBTransaction/error_event)
   - [versionchange](/fr/docs/Web/API/IDBDatabase/versionchange_event)
 
 - {{DOMxRef("IDBOpenDBRequest")}}
@@ -1239,10 +1235,10 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
 - {{DOMxRef("Window")}}
 
   - [afterprint](/fr/docs/Web/API/Window/afterprint_event)
-  - [animationcancel](/fr/docs/Web/API/Window/animationcancel_event)
-  - [animationend](/fr/docs/Web/API/Window/animationend_event)
-  - [animationiteration](/fr/docs/Web/API/Window/animationiteration_event)
-  - [animationstart](/fr/docs/Web/API/Window/animationstart_event)
+  - [animationcancel](/fr/docs/Web/API/Element/animationcancel_event)
+  - [animationend](/fr/docs/Web/API/Element/animationend_event)
+  - [animationiteration](/fr/docs/Web/API/Element/animationiteration_event)
+  - [animationstart](/fr/docs/Web/API/Element/animationstart_event)
   - [appinstalled](/fr/docs/Web/API/Window/appinstalled_event)
   - [beforeprint](/fr/docs/Web/API/Window/beforeprint_event)
   - [beforeunload](/fr/docs/Web/API/Window/beforeunload_event)
@@ -1251,7 +1247,7 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [cut](/fr/docs/Web/API/Window/cut_event)
   - [devicemotion](/fr/docs/Web/API/Window/devicemotion_event)
   - [deviceorientation](/fr/docs/Web/API/Window/deviceorientation_event)
-  - [DOMContentLoaded](/fr/docs/Web/API/Window/DOMContentLoaded_event)
+  - [DOMContentLoaded](/fr/docs/Web/API/Document/DOMContentLoaded_event)
   - [error](/fr/docs/Web/API/Window/error_event)
   - [focus](/fr/docs/Web/API/Window/focus_event)
   - [gamepadconnected](/fr/docs/Web/API/Window/gamepadconnected_event)
@@ -1271,20 +1267,20 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [rejectionhandled](/fr/docs/Web/API/Window/rejectionhandled_event)
   - [resize](/fr/docs/Web/API/Window/resize_event)
   - [storage](/fr/docs/Web/API/Window/storage_event)
-  - [transitioncancel](/fr/docs/Web/API/Window/transitioncancel_event)
-  - [transitionend](/fr/docs/Web/API/Window/transitionend_event)
-  - [transitionrun](/fr/docs/Web/API/Window/transitionrun_event)
-  - [transitionstart](/fr/docs/Web/API/Window/transitionstart_event)
+  - [transitioncancel](/fr/docs/Web/API/Element/transitioncancel_event)
+  - [transitionend](/fr/docs/Web/API/Element/transitionend_event)
+  - [transitionrun](/fr/docs/Web/API/Element/transitionrun_event)
+  - [transitionstart](/fr/docs/Web/API/Element/transitionstart_event)
   - [unhandledrejection](/fr/docs/Web/API/Window/unhandledrejection_event)
   - [unload](/fr/docs/Web/API/Window/unload_event)
   - [vrdisplayactivate](/fr/docs/Web/API/Window/vrdisplayactivate_event)
-  - [vrdisplayblur](/fr/docs/Web/API/Window/vrdisplayblur_event)
+  - [vrdisplayblur](/fr/docs/Web/API/Window)
   - [vrdisplayconnect](/fr/docs/Web/API/Window/vrdisplayconnect_event)
   - [vrdisplaydeactivate](/fr/docs/Web/API/Window/vrdisplaydeactivate_event)
   - [vrdisplaydisconnect](/fr/docs/Web/API/Window/vrdisplaydisconnect_event)
-  - [vrdisplayfocus](/fr/docs/Web/API/Window/vrdisplayfocus_event)
-  - [vrdisplaypointerrestricted](/fr/docs/Web/API/Window/vrdisplaypointerrestricted_event)
-  - [vrdisplaypointerunrestricted](/fr/docs/Web/API/Window/vrdisplaypointerunrestricted_event)
+  - [vrdisplayfocus](/fr/docs/Web/API/Window)
+  - [vrdisplaypointerrestricted](/fr/docs/Web/API/Window)
+  - [vrdisplaypointerunrestricted](/fr/docs/Web/API/Window)
   - [vrdisplaypresentchange](/fr/docs/Web/API/Window/vrdisplaypresentchange_event)
 
 - {{DOMxRef("Worker")}}

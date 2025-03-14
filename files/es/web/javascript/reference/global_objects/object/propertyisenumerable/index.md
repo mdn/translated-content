@@ -1,13 +1,6 @@
 ---
 title: Object.prototype.propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
-tags:
-  - JavaScript
-  - Objecto
-  - Property
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/propertyIsEnumerable
 ---
 
 {{JSRef}}
@@ -38,11 +31,11 @@ El siguiente ejemplo muestra el uso de `propertyIsEnumerable` en objetos y array
 ```js
 var o = {};
 var a = [];
-o.prop = 'es enumerable';
-a[0] = 'es enumerable';
+o.prop = "es enumerable";
+a[0] = "es enumerable";
 
-o.propertyIsEnumerable('prop');   // regresa true
-a.propertyIsEnumerable(0);        // regresa true
+o.propertyIsEnumerable("prop"); // regresa true
+a.propertyIsEnumerable(0); // regresa true
 ```
 
 ### Definidas por usuario vs predefinidas
@@ -50,60 +43,62 @@ a.propertyIsEnumerable(0);        // regresa true
 El siguiente ejemplo demuestra la enumerabilidad de las propiedades definidas por el usuario contra las predefinidas:
 
 ```js
-var a = ['es enumerable'];
+var a = ["es enumerable"];
 
-a.propertyIsEnumerable(0);          // regresa true
-a.propertyIsEnumerable('length');   // regresa false
+a.propertyIsEnumerable(0); // regresa true
+a.propertyIsEnumerable("length"); // regresa false
 
-Math.propertyIsEnumerable('random');   // regresa false
-this.propertyIsEnumerable('Math');     // regresa false
+Math.propertyIsEnumerable("random"); // regresa false
+this.propertyIsEnumerable("Math"); // regresa false
 ```
 
 ### Directa vs heredadas
 
 ```js
 var a = [];
-a.propertyIsEnumerable('constructor');         // regresa false
+a.propertyIsEnumerable("constructor"); // regresa false
 
 function primerConstructor() {
-  this.propiedad = 'no es enumerable';
+  this.propiedad = "no es enumerable";
 }
 
-primerConstructor.prototype.primerMetodo = function() {};
+primerConstructor.prototype.primerMetodo = function () {};
 
 function segundoConstructor() {
-  this.metodo = function() { return 'es enumerable'; };
+  this.metodo = function () {
+    return "es enumerable";
+  };
 }
 
-secondConstructor.prototype = new primerConstructor;
+secondConstructor.prototype = new primerConstructor();
 secondConstructor.prototype.constructor = segundoConstructor;
 
 var o = new segundoConstructor();
-o.propiedadArbitraria = 'is enumerable';
+o.propiedadArbitraria = "is enumerable";
 
-o.propertyIsEnumerable('propiedadArbitraria ');   // regresa true
-o.propertyIsEnumerable('metodo');                 // regresa true
-o.propertyIsEnumerable('propiedad');              // regresa false
+o.propertyIsEnumerable("propiedadArbitraria "); // regresa true
+o.propertyIsEnumerable("metodo"); // regresa true
+o.propertyIsEnumerable("propiedad"); // regresa false
 
-o.propiedad = 'es enumerable';
+o.propiedad = "es enumerable";
 
-o.propertyIsEnumerable('propiedad');              // regresa true
+o.propertyIsEnumerable("propiedad"); // regresa true
 
 // Regresan false por estar en el prototipo el cual no es
 // considerado por propertyIsEnumerable (a pesar de que las dos ultimas son
 // iterables con un for-in)
-o.propertyIsEnumerable('prototype');   // regresa false (como en JS 1.8.1/FF3.6)
-o.propertyIsEnumerable('constructor'); // regresa false
-o.propertyIsEnumerable('firstMethod'); // regresa false
+o.propertyIsEnumerable("prototype"); // regresa false (como en JS 1.8.1/FF3.6)
+o.propertyIsEnumerable("constructor"); // regresa false
+o.propertyIsEnumerable("firstMethod"); // regresa false
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.propertyIsEnumerable")}}
+{{Compat}}
 
 ## Notas específicas para Gecko
 
@@ -111,7 +106,7 @@ Al inicio de JavaScript 1.8.1 (in Firefox 3.6), `propertyIsEnumerable('prototype
 
 ## Véase también
 
-- [Enumerability and ownership of properties](/es/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.defineProperty()")}}

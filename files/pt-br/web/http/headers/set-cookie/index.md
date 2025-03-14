@@ -52,6 +52,7 @@ Set-Cookie: <nome-cookie>=<valor-cookie>; Domain=<domain-value>; Secure; HttpOnl
     - **`Prefixo __Host-`**: Cookies com o nome começando com `__Host-` (hífen faz parte do prefixoprecisam ser atribuidos com a flag de segurança, precisam ser de uma página segura (HTTPS), não precisam ter um domínio especificado (portanto não são enviados para subdomínios) e o caminho (path) precisa ser "/".
 
 - Expires=\<data> {{optional_inline}}
+
   - : O tempo de vida máximo do cookie como uma marcação de tempo (timestamp) HTTP. Veja {{HTTPHeader("Date")}} para a formatação detalhada.
 
     Se não especificado, o cookie terá o tempo de vida de uma **sessão de cookie.** Uma sessão é finalizada quando o cliente é desligado, significando que as sessões de cookies serão removidos nesse momento. Contudo, muitos navegadores web têm uma característica denominada de "restaurar sessão" que salvará todas suas abas e as trará de volta na próxima vez em que você utilizar o navegador. Os cookies estarão também presentes e será como se o navegador nunca tivesse sido fechado.
@@ -74,7 +75,8 @@ Set-Cookie: <nome-cookie>=<valor-cookie>; Domain=<domain-value>; Secure; HttpOnl
 
   - : Um cookie seguro apenas será enviado para o servidor quando uma requisição utilizando os protocol SSL e HTTPS for realizada. No entanto, informações confidenciais ou sensíveis não deverão ser armazenadas ou transmitidas em Cookies HTTP pois todo o mecanismo é inerentemente inseguro e isso não significa, por exemplo que qualquer informação é criptografada.
 
-    > **Nota:** Sites inseguros (`http:`) não podem mais atribuir cookies com a diretiva "secure" (novo em Chrome 52+ firefox Firefox 52+).
+    > [!NOTE]
+    > Sites inseguros (`http:`) não podem mais atribuir cookies com a diretiva "secure" (novo em Chrome 52+ firefox Firefox 52+).
 
 - HttpOnly {{optional_inline}}
   - : Cookies HttpOnly não são acessíveis via JavaScript através da propriedade {{domxref("Document.cookie")}}, as API's {{domxref("XMLHttpRequest")}} e {{domxref("Request")}} são utilizadas para aliviar ataques de cross-site scripting ({{Glossary("XSS")}}).
@@ -129,16 +131,16 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 
 ## Especificações
 
-| Especificação                                                    | Título                          |
-| ---------------------------------------------------------------- | ------------------------------- |
-| {{RFC("6265", "Set-Cookie", "4.1")}}                 | HTTP State Management Mechanism |
-| {{RFC("draft-ietf-httpbis-cookie-prefixes-00")}} | Cookie Prefixes                 |
+| Especificação                                     | Título                          |
+| ------------------------------------------------- | ------------------------------- |
+| {{RFC("6265", "Set-Cookie", "4.1")}}              | HTTP State Management Mechanism |
+| {{RFC("draft-ietf-httpbis-cookie-prefixes-00")}}  | Cookie Prefixes                 |
 | {{RFC("draft-ietf-httpbis-cookie-same-site-00")}} | Same-Site Cookies               |
 | {{RFC("draft-ietf-httpbis-cookie-alone-01")}}     | Strict Secure Cookies           |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Set-Cookie")}}
+{{Compat}}
 
 ## Notas de compatibilidade
 

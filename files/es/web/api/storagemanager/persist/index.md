@@ -1,13 +1,6 @@
 ---
 title: StorageManager.persist()
 slug: Web/API/StorageManager/persist
-tags:
-  - Contexto seguro
-  - Referencia
-  - Storage API
-  - metodo
-  - persist()
-translation_of: Web/API/StorageManager/persist
 ---
 
 {{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
@@ -32,7 +25,7 @@ Una {{jsxref('Promise')}} que se resuelve en un {{jsxref('Boolean')}}.
 
 ```js
 if (navigator.storage && navigator.storage.persist)
-  navigator.storage.persist().then(function(persistent) {
+  navigator.storage.persist().then(function (persistent) {
     if (persistent)
       console.log("Storage will not be cleared except by explicit user action");
     else
@@ -46,4 +39,4 @@ if (navigator.storage && navigator.storage.persist)
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.StorageManager.persist")}}
+{{Compat}}

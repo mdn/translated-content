@@ -1,15 +1,6 @@
 ---
 title: Navigator
 slug: Web/API/Navigator
-tags:
-  - API
-  - DOM
-  - Interface
-  - Navigator
-  - Reference
-  - Web
-  - Web Performance
-translation_of: Web/API/Navigator
 ---
 
 {{APIRef("DOM")}}
@@ -20,7 +11,7 @@ Un objet instanciant `Navigator` peut être récupéré grâce à la propriété
 
 ## Propriétés
 
-_Cette interface n'hérite d'aucune propriété mais implémente celles définies par [`NavigatorID`](/fr/docs/Web/API/NavigatorID), [`NavigatorLanguage`](/fr/docs/Web/API/NavigatorLanguage), [`NavigatorOnLine`](/fr/docs/Web/API/NavigatorOnLine), [`NavigatorContentUtils`](/fr/docs/Web/API/NavigatorContentUtils), [`NavigatorStorage`](/fr/docs/Web/API/NavigatorStorage), [`NavigatorStorageUtils`](/fr/docs/Web/API/NavigatorStorageUtils), [`NavigatorConcurrentHardware`](/fr/docs/Web/API/NavigatorConcurrentHardware), [`NavigatorPlugins`](/fr/docs/Web/API/NavigatorPlugins) et [`NavigatorUserMedia`](/fr/docs/Web/API/NavigatorUserMedia)._
+_Cette interface n'hérite d'aucune propriété mais implémente celles définies par [`NavigatorID`](/fr/docs/Web/API/Navigator), [`NavigatorLanguage`](/fr/docs/Web/API/Navigator), [`NavigatorOnLine`](/fr/docs/Web/API/Navigator), [`NavigatorContentUtils`](/fr/docs/Web/API/NavigatorContentUtils), [`NavigatorStorage`](/fr/docs/Web/API/Navigator), [`NavigatorStorageUtils`](/fr/docs/Web/API/NavigatorStorageUtils), [`NavigatorConcurrentHardware`](/fr/docs/Web/API/Navigator), [`NavigatorPlugins`](/fr/docs/Web/API/Navigator) et [`NavigatorUserMedia`](/fr/docs/Web/API/NavigatorUserMedia)._
 
 ### Propriétés standard
 
@@ -38,14 +29,14 @@ _Cette interface n'hérite d'aucune propriété mais implémente celles définie
   - : Renvoie un objet [`Geolocation`](/fr/docs/Web/API/Geolocation) permettant l'accès à l'emplacement géographique de l'appareil.
 - [`NavigatorConcurrentHardware.hardwareConcurrency`](/fr/docs/Web/API/NavigatorConcurrentHardware.hardwareConcurrency) {{readonlyInline}}
   - : Renvoie le nombre de cœurs logiques du processeur.
-- [`NavigatorPlugins.javaEnabled`](/fr/docs/Web/API/NavigatorPlugins.javaEnabled) {{readonlyInline}}
+- [`NavigatorPlugins.javaEnabled`](/fr/docs/Web/API/Navigator/javaEnabled) {{readonlyInline}}
   - : Renvoie le booléen `false`.
 - [`Navigator.keyboard`](/fr/docs/Web/API/Navigator.keyboard) {{readonlyinline}} {{experimental_inline}}
   - : Renvoie un objet [`Keyboard`](/fr/docs/Web/API/Keyboard) qui permet d'accéder à des fonctions pour récupérer des informations sur la disposition du clavier et la capture de touches du clavier physique.
-- [`NavigatorLanguage.language`](/fr/docs/Web/API/NavigatorLanguage.language) {{readonlyInline}}
-  - : Renvoie une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) indiquant la langue préférée de l'utilisateur (qui correspond généralement à la langue utilisée pour l'interface utilisateur du navigateur). La valeur `null` est renvoyée si cette information est inconnue.
-- [`NavigatorLanguage.languages`](/fr/docs/Web/API/NavigatorLanguage.languages) {{readonlyInline}} {{experimental_inline}}
-  - : Renvoie un tableau de chaînes [`DOMString`](/fr/docs/Web/API/DOMString) qui représente les langues connues de l'utilisateur, triées par ordre de préférence.
+- [`NavigatorLanguage.language`](/fr/docs/Web/API/Navigator/language) {{readonlyInline}}
+  - : Renvoie une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) indiquant la langue préférée de l'utilisateur (qui correspond généralement à la langue utilisée pour l'interface utilisateur du navigateur). La valeur `null` est renvoyée si cette information est inconnue.
+- [`NavigatorLanguage.languages`](/fr/docs/Web/API/Navigator/languages) {{readonlyInline}} {{experimental_inline}}
+  - : Renvoie un tableau de chaînes [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui représente les langues connues de l'utilisateur, triées par ordre de préférence.
 - [`Navigator.locks`](/fr/docs/Web/API/Navigator/locks) {{readonlyinline}} {{experimental_inline}}
   - : Renvoie un objet [`LockManager`](/fr/docs/Web/API/LockManager) qui fournit des méthodes pour demander un nouvel objet [`Lock`](/fr/docs/Web/API/Lock) ou s'enquérir d'un objet [`Lock`](/fr/docs/Web/API/Lock) existant.
 - [`Navigator.maxTouchPoints`](/fr/docs/Web/API/Navigator/maxTouchPoints) {{readonlyInline}}
@@ -56,13 +47,13 @@ _Cette interface n'hérite d'aucune propriété mais implémente celles définie
   - : Renvoie une référence vers un objet [`MediaDevices`](/fr/docs/Web/API/MediaDevices) permettant d'obtenir des informations à propos des appareils médias disponibles ([`MediaDevices.enumerateDevices()`](</fr/docs/Web/API/MediaDevices.enumerateDevices()>)), de déterminer les propriétés et contraintes prises en charge pour les médias sur cet agent utilisateur et cet ordinateur ([`MediaDevices.getSupportedConstraints()`](</fr/docs/Web/API/MediaDevices.getSupportedConstraints()>)), de demander l'accès au média via [`MediaDevices.getUserMedia()`](</fr/docs/Web/API/MediaDevices.getUserMedia()>).
 - [`Navigator.mediaSession`](/fr/docs/Web/API/Navigator/mediaSession) {{readonlyinline}} {{experimental_inline}}
   - : Renvoie un objet [`MediaSession`](/fr/docs/Web/API/MediaSession) pouvant être utilisé afin de fournir des métadonnées utilisées par le navigateur afin de présenter des informations sur le média en cours de lecture (par exemple pour les interfaces utilisateurs générales de contrôle des médias).
-- [`NavigatorPlugins.mimeTypes`](/fr/docs/Web/API/NavigatorPlugins.mimeTypes) {{readonlyInline}}{{deprecated_inline}}
+- [`NavigatorPlugins.mimeTypes`](/fr/docs/Web/API/Navigator/mimeTypes) {{readonlyInline}}{{deprecated_inline}}
   - : Renvoie une liste [`MimeTypeArray`](/fr/docs/Web/API/MimeTypeArray) des types MIME pris en charge par le navigateur.
-- [`NavigatorOnLine.onLine`](/fr/docs/Web/API/NavigatorOnLine.onLine) {{readonlyInline}}
+- [`NavigatorOnLine.onLine`](/fr/docs/Web/API/Navigator/onLine) {{readonlyInline}}
   - : Renvoie un booléen indiquant si le navigateur est en ligne.
 - [`Navigator.permissions`](/fr/docs/Web/API/Navigator/permissions) {{readonlyinline}} {{experimental_inline}}
   - : Renvoie un objet [`Permissions`](/fr/docs/Web/API/Permissions) pouvant être utilisé pour demander ou mettre à jour les informations de permissions pour les API couvertes par l'API [Permissions](/fr/docs/Web/API/Permissions_API).
-- [`NavigatorPlugins.plugins`](/fr/docs/Web/API/NavigatorPlugins.plugins) {{readonlyInline}}{{deprecated_inline}}
+- [`NavigatorPlugins.plugins`](/fr/docs/Web/API/Navigator/plugins) {{readonlyInline}}{{deprecated_inline}}
   - : Renvoie une liste [`PluginArray`](/fr/docs/Web/API/PluginArray) indiquant les plugins installés sur le navigateur.
 - [`Navigator.presentation`](/fr/docs/Web/API/Navigator/presentation) {{readonlyInline}} {{experimental_inline}}
   - : Renvoie une référence à l'API [`Presentation`](/fr/docs/Web/API/Presentation) .
@@ -72,7 +63,7 @@ _Cette interface n'hérite d'aucune propriété mais implémente celles définie
   - : Renvoie un objet [`ServiceWorkerContainer`](/fr/docs/Web/API/ServiceWorkerContainer) qui permet d'enregistrer, de supprimer, de mettre à jour ou de communiquer avec des objets [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker) pour le [document associé](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
 - [`NavigatorStorage.storage`](/fr/docs/Web/API/NavigatorStorage.storage) {{readonlyinline}}
   - : Renvoie le singleton [`StorageManager`](/fr/docs/Web/API/StorageManager) utilisé pour la persistence des permissions et la gestion du stockage disponible site par site/application par application.
-- [`NavigatorID.userAgent`](/fr/docs/Web/API/NavigatorID/userAgent) {{readonlyInline}}
+- [`NavigatorID.userAgent`](/fr/docs/Web/API/Navigator/userAgent) {{readonlyInline}}
   - : Renvoie la chaîne de caractères de l'agent utilisateur pour le navigateur courant.
 - [`Navigator.vendor`](/fr/docs/Web/API/Navigator/vendor) {{readonlyInline}}
   - : Renvoie le nom de l'éditeur du navigateur courant (par exemple "Netscape6").
@@ -96,21 +87,21 @@ _Cette interface n'hérite d'aucune propriété mais implémente celles définie
 
 ### Propriétés dépréciées
 
-- [`NavigatorID.appCodeName`](/fr/docs/Web/API/NavigatorID/appCodeName) {{readonlyInline}} {{deprecated_inline}}
+- [`NavigatorID.appCodeName`](/fr/docs/Web/API/Navigator/appCodeName) {{readonlyInline}} {{deprecated_inline}}
   - : Renvoie le nom de code interne du navigateur. Ne vous attendez pas à ce que cette propriété renvoie une valeur correcte.
-- [`NavigatorID.appName`](/fr/docs/Web/API/NavigatorID/appName) {{readonlyInline}} {{deprecated_inline}}
-  - : Renvoie une chaîne [`DOMString`](/fr/docs/Web/API/DOMString) contenant le nom officiel du navigateur. Ne vous attendez pas à ce que cette propriété renvoie une valeur correcte.
-- [`NavigatorID.appVersion`](/fr/docs/Web/API/NavigatorID/appVersion) {{readonlyInline}} {{deprecated_inline}}
-  - : Renvoie la version du navigateur sous la forme d'une chaîne [`DOMString`](/fr/docs/Web/API/DOMString). Ne vous attendez pas à ce que cette propriété renvoie une valeur correcte.
+- [`NavigatorID.appName`](/fr/docs/Web/API/Navigator/appName) {{readonlyInline}} {{deprecated_inline}}
+  - : Renvoie une chaîne [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) contenant le nom officiel du navigateur. Ne vous attendez pas à ce que cette propriété renvoie une valeur correcte.
+- [`NavigatorID.appVersion`](/fr/docs/Web/API/Navigator/appVersion) {{readonlyInline}} {{deprecated_inline}}
+  - : Renvoie la version du navigateur sous la forme d'une chaîne [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String). Ne vous attendez pas à ce que cette propriété renvoie une valeur correcte.
 - [`Navigator.activeVRDisplays`](/fr/docs/Web/API/Navigator/activeVRDisplays) {{readonlyInline}} {{deprecated_inline}}
   - : Renvoie un tableau contenant chaque objet [`VRDisplay`](/fr/docs/Web/API/VRDisplay) actuellement utilisé pour afficher (autrement dit, pour chaque objet où [`VRDisplay.ispresenting`](/fr/docs/Web/API/VRDisplay.ispresenting) vaut `true`).
-- [`Navigator.battery`](/fr/docs/Web/API/Navigator/battery) {{readonlyInline}} {{deprecated_inline}}
+- [`Navigator.battery`](/fr/docs/Web/API/Navigator/getBattery) {{readonlyInline}} {{deprecated_inline}}
   - : Renvoie un objet [`BatteryManager`](/fr/docs/Web/API/BatteryManager) permettant d'avoir des informations sur le statut de charge de la batterie.
 - [`Navigator.oscpu`](/fr/docs/Web/API/Navigator/oscpu) {{readonlyInline}} {{deprecated_inline}}
   - : Renvoie une chaîne de caractères qui représente le système d'exploitation courant.
-- [`NavigatorID.platform`](/fr/docs/Web/API/NavigatorID/platform) {{readonlyInline}} {{deprecated_inline}}
+- [`NavigatorID.platform`](/fr/docs/Web/API/Navigator/platform) {{readonlyInline}} {{deprecated_inline}}
   - : Renvoie une chaîne de caractères représentant la plateforme du navigateur. N'utilisez pas cette fonction afin d'obtenir une valeur significative.
-- [`NavigatorID.product`](/fr/docs/Web/API/NavigatorID/product) {{readonlyInline}} {{deprecated_inline}}
+- [`NavigatorID.product`](/fr/docs/Web/API/Navigator/product) {{readonlyInline}} {{deprecated_inline}}
   - : Renvoie toujours `'Gecko'` quel que soit le navigateur. Cette propriété est uniquement conservée à des fins de compatibilité.
 - [`Navigator.productSub`](/fr/docs/Web/API/Navigator/productSub) {{readonlyInline}} {{deprecated_inline}}
   - : Renvoie le numéro de _build_ précis du navigateur (par exemple "20060909").
@@ -119,7 +110,7 @@ _Cette interface n'hérite d'aucune propriété mais implémente celles définie
 
 ## Méthodes
 
-_Cette interface n'hérite d'aucune méthode mais implémente celles définies par [`NavigatorID`](/fr/docs/Web/API/NavigatorID), [`NavigatorContentUtils`](/fr/docs/Web/API/NavigatorContentUtils), [`NavigatorUserMedia`](/fr/docs/Web/API/NavigatorUserMedia), and [`NavigatorStorageUtils`](/fr/docs/Web/API/NavigatorStorageUtils)._
+_Cette interface n'hérite d'aucune méthode mais implémente celles définies par [`NavigatorID`](/fr/docs/Web/API/Navigator), [`NavigatorContentUtils`](/fr/docs/Web/API/NavigatorContentUtils), [`NavigatorUserMedia`](/fr/docs/Web/API/NavigatorUserMedia), and [`NavigatorStorageUtils`](/fr/docs/Web/API/NavigatorStorageUtils)._
 
 - [`Navigator.canShare()`](</fr/docs/Web/API/Navigator/canShare()>)
   - : Renvoie `true` si un appel à `Navigator.share()` réussirait.

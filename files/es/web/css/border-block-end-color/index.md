@@ -9,7 +9,7 @@ La propiedad [CSS](/es/docs/Web/CSS) `border-block-end-color` define el color de
 
 ```css
 border-block-end-color: yellow;
-border-block-end-color: #F5F6F7;
+border-block-end-color: #f5f6f7;
 ```
 
 Está relacionada con {{cssxref("border-block-start-color")}}, {{cssxref("border-inline-start-color")}}, y {{cssxref("border-inline-end-color")}}, que definen las otras propiedades de color de borde del elemento.
@@ -59,9 +59,9 @@ div {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-block-end-color")}}
+{{Compat}}
 
 ## Mira también
 

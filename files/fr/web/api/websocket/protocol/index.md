@@ -1,7 +1,6 @@
 ---
 title: WebSocket.protocol
 slug: Web/API/WebSocket/protocol
-browser-compat: api.WebSocket.protocol
 ---
 
 {{APIRef("Web Sockets API")}}
@@ -16,7 +15,7 @@ var protocol = uneWebSocket.protocol;
 
 ## Valeur
 
-Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString).
+Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String).
 
 ## Spécifications
 

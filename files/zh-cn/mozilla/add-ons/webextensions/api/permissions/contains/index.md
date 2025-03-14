@@ -1,81 +1,78 @@
 ---
 title: permissions.contains()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/contains
+l10n:
+  sourceCommit: 697597718a002a37e2fb8bfdaeeb8ee4c95bddb7
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-检查扩展名是否具有给定 {{WebExtAPIRef("permissions.Permissions")}} 对象中列出的权限。
+判断扩展是否有给定 {{WebExtAPIRef("permissions.Permissions")}} 对象中列出的权限。
 
-The `Permissions` argument may contain either an origins property, which is an array of [host permissions](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions), or a `permissions` property, which is an array of [API permissions](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#API_permissions), or both.
+`Permissions` 参数可以包含 `origins` 属性（[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)数组），或者可以包含 `permissions` 属性（[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)数组），又或者同时包含两个属性。
 
-This is an asynchronous function that returns a [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise). The promise is fulfilled with true only if all the extension currently has all the given permissions. For host permissions, if the extension's permissions [pattern-match](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) the permissions listed in `origins`, then they are considered to match.
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。如果扩展已经有了指定的权限，那么 promise 会兑现为 `true`。对于主机权限，如果扩展的权限[模式匹配](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `origins` 中列出的权限，那么它们被认为是匹配的。
 
-## Syntax
+## 语法
 
-```js
-var getContains = browser.permissions.contains(
-  permissions                // Permissions object
+```js-nolint
+let getContains = browser.permissions.contains(
+  permissions                // Permissions 对象
 )
 ```
 
-### Parameters
+### 参数
 
 - `permissions`
-  - : A {{WebExtAPIRef("permissions.Permissions")}} object.
+  - : {{WebExtAPIRef("permissions.Permissions")}} 对象。
 
-### Return value
+### 返回值
 
-A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension already has all the permissions listed in the `permissions` argument, or `false` otherwise.
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，如果扩展已经取得 `permissions` 参数中列出的所有权限则将兑现为 `true`，否则兑现为 `false`。
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## Examples
+## 示例
 
 ```js
-// Extension permissions are:
-// "webRequest", "tabs", "*://*.mozilla.org/*"
+// 扩展已取得的权限：
+// “webRequest”、“tabs”、“*://*.mozilla.org/*”
 
-var testPermissions1 = {
+let testPermissions1 = {
   origins: ["*://mozilla.org/"],
-  permissions: ["tabs"]
+  permissions: ["tabs"],
 };
 
-browser.permissions.contains(testPermissions1).then((result) => {
-  console.log(result);    // true
-});
+const testResult1 = await browser.permissions.contains(testPermissions1);
+console.log(testResult1); // true
 
-var testPermissions2 = {
+let testPermissions2 = {
   origins: ["*://mozilla.org/"],
-  permissions: ["tabs", "alarms"]
+  permissions: ["tabs", "alarms"],
 };
 
-browser.permissions.contains(testPermissions2).then((result) => {
-  console.log(result);   // false, "alarms" doesn't match
-});
+const testResult2 = await browser.permissions.contains(testPermissions2);
+console.log(testResult2); // false：“alarms”权限不匹配
 
-var testPermissions3 = {
+let testPermissions3 = {
   origins: ["https://developer.mozilla.org/"],
-  permissions: ["tabs", "webRequest"]
+  permissions: ["tabs", "webRequest"],
 };
 
-browser.permissions.contains(testPermissions3).then((result) => {
-  console.log(result);   // true: "https://developer.mozilla.org/"
-});                      // matches: "*://*.mozilla.org/*"
+const testResult3 = await browser.permissions.contains(testPermissions3);
+console.log(testResult3); // true：“https://developer.mozilla.org/”与“*://*.mozilla.org/*”相匹配
 
-var testPermissions4 = {
-  origins: ["https://example.org/"]
+let testPermissions4 = {
+  origins: ["https://example.org/"],
 };
 
-browser.permissions.contains(testPermissions4).then((result) => {
-  console.log(result);   // false, "https://example.org/"
-});                      // does not match
+const testResult4 = await browser.permissions.contains(testPermissions4);
+console.log(testResult4); // false：`origins` 的“https://example.org/”并不匹配
 ```
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/extensions/permissions) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.permissions`](https://developer.chrome.google.cn/docs/extensions/reference/api/permissions) API。

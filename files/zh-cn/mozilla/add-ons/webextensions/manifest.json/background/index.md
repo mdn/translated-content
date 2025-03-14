@@ -28,13 +28,13 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
   </tbody>
 </table>
 
-通过 background 键来给您的扩展程序引入一个或者多个后台脚本文件，以及一个可选的后台页面文件。
+通过 background 键来给你的扩展程序引入一个或者多个后台脚本文件，以及一个可选的后台页面文件。
 
 后台脚本放置的是需要长期保持状态，或者需要执行长期的操作，并且与任意特定网页或者浏览器窗口的生命周期无关的代码。
 
-后台脚本会在扩展程序被加载后立即被加载，并且一直保持被加载状态，只有在扩展程序被禁止或者卸载的时候才停止运行。只要您获得了必要的许可[permissions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)，您可以在该脚本中使用任意的扩展程序 API。
+后台脚本会在扩展程序被加载后立即被加载，并且一直保持被加载状态，只有在扩展程序被禁止或者卸载的时候才停止运行。只要你获得了必要的许可[permissions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)，你可以在该脚本中使用任意的扩展程序 API。
 
-浏览[Anatomy of a WebExtension](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_pages)中的 Background pages 部分以获取更多的细节。
+浏览[Anatomy of a WebExtension](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_pages)中的 Background pages 部分以获取更多的细节。
 
 background 键最多只能拥有以下的两个属性，两个属性都是可选属性：
 
@@ -53,7 +53,7 @@ background 键最多只能拥有以下的两个属性，两个属性都是可选
         <p>
           <strong>注意在低于 Firefox 50 版本的浏览器下会出现一个问题：</strong
           >当 Firefox debugger
-          已经打开时，脚本并不能总是按照数组中定义的顺序进行加载。若要解决这个问题，您可以使用
+          已经打开时，脚本并不能总是按照数组中定义的顺序进行加载。若要解决这个问题，你可以使用
           page
           属性，用&#x3C;script>标签将后台脚本文件从页面中加载进来。这个问题已经在
           Firefox 50 中被修复。
@@ -64,13 +64,13 @@ background 键最多只能拥有以下的两个属性，两个属性都是可选
       <td><code>"page"</code></td>
       <td>
         <p>
-          如果您仅仅指定了“scripts”属性，将生成一个空白的页面来运行指定的脚本。
+          如果你仅仅指定了“scripts”属性，将生成一个空白的页面来运行指定的脚本。
         </p>
         <p>
-          如果您需要在页面中显示某些特定的内容，您可以使用“page”属性来定义自己的页面。
+          如果你需要在页面中显示某些特定的内容，你可以使用“page”属性来定义自己的页面。
         </p>
         <p>
-          如果您使用此属性，您仍然可以使用“script”属性来指定后台脚本，但您也可以就像在普通网页中一样在页面中包含自己的脚本。
+          如果你使用此属性，你仍然可以使用“script”属性来指定后台脚本，但你也可以就像在普通网页中一样在页面中包含自己的脚本。
         </p>
       </td>
     </tr>

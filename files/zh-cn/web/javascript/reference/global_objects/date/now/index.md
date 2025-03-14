@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/now
 
 **`Date.now()`** 方法返回自 1970 年 1 月 1 日 00:00:00 (UTC) 到当前时间的毫秒数。
 
-{{EmbedInteractiveExample("pages/js/date-now.html")}}
+{{InteractiveExample("JavaScript Demo: Date.now()")}}
+
+```js interactive-example
+// This example takes 2 seconds to run
+const start = Date.now();
+
+console.log("starting timer...");
+// Expected output: "starting timer..."
+
+setTimeout(() => {
+  const millis = Date.now() - start;
+
+  console.log(`seconds elapsed = ${Math.floor(millis / 1000)}`);
+  // Expected output: "seconds elapsed = 2"
+}, 2000);
+```
 
 ## 语法
 
@@ -30,12 +45,11 @@ var timeInMs = Date.now();
 
 ```js
 // reduced time precision (2ms) in Firefox 60
-Date.now()
+Date.now();
 // 1519211809934
 // 1519211810362
 // 1519211811670
 // ...
-
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 Date.now();
@@ -46,18 +60,6 @@ Date.now();
 ```
 
 在 Firefox 中，还可以通过启用 `privacy.resistFingerprinting` 来进一步降低精度。启用后，精度将为 100 毫秒或者 `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 的值，取决于这两个值中哪一个更大，也就是，精度更低一些。
-
-## Polyfill
-
-该方法在 ECMA-262 第五版中被标准化，可以通过下面的代码端来兼容那些不支持该方法的引擎：
-
-```js
-if (!Date.now) {
-  Date.now = function now() {
-    return new Date().getTime();
-  };
-}
-```
 
 ## 规范
 

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/n
 
 {{JSRef}} {{non-standard_header}}
 
-非标准**$1, $2, $3, $4, $5, $6, $7, $8, $9** 属性是包含括号子串匹配的正则表达式的静态和只读属性。
+非标准 **$1, $2, $3, $4, $5, $6, $7, $8, $9** 属性是包含括号子串匹配的正则表达式的静态和只读属性。
 
 ## 语法
 
@@ -31,7 +31,7 @@ $1, ..., $9 属性是静态的，他不是独立的正则表达式属性。所�
 
 这些属性可以在{{jsxref("String.replace")}} 方法中替换字符串。在这种情况下，不用在前面加上 RegExp。下面的例子将详细说明。当正则表达式中不包含括号，脚本中的 `$n`'s 就是字面上的意思 (当 n 是正整数).
 
-## 例子
+## 示例
 
 ### `$n` 在 `String.replace 中的应用`
 
@@ -39,8 +39,8 @@ $1, ..., $9 属性是静态的，他不是独立的正则表达式属性。所�
 
 ```js
 var re = /(\w+)\s(\w+)/;
-var str = 'John Smith';
-str.replace(re, '$2, $1'); // "Smith, John"
+var str = "John Smith";
+str.replace(re, "$2, $1"); // "Smith, John"
 RegExp.$1; // "John"
 RegExp.$2; // "Smith"
 ```

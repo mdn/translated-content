@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/length
 
 **`length`** プロパティは、関数が期待する引数の数を示します。
 
-{{EmbedInteractiveExample("pages/js/function-length.html")}}{{js_property_attributes(0,0,1)}}
+{{InteractiveExample("JavaScript Demo: Function.length")}}
+
+```js interactive-example
+function func1() {}
+
+function func2(a, b) {}
+
+console.log(func1.length);
+// Expected output: 0
+
+console.log(func2.length);
+// Expected output: 2
+```
+
+{{js_property_attributes(0,0,1)}}
 
 ## 解説
 
@@ -28,14 +42,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/length
 ```js
 console.log(Function.length); /* 1 */
 
-console.log((function()        {}).length); /* 0 */
-console.log((function(a)       {}).length); /* 1 */
-console.log((function(a, b)    {}).length); /* 2 etc. */
+console.log(function () {}.length); /* 0 */
+console.log(function (a) {}.length); /* 1 */
+console.log(function (a, b) {}.length); /* 2 etc. */
 
-console.log((function(...args) {}).length);
+console.log(function (...args) {}.length);
 // 0, rest parameter は数に含まれない
 
-console.log((function(a, b = 1, c) {}).length);
+console.log(function (a, b = 1, c) {}.length);
 // 1, 既定値を持つ引数が最初に登場する前までの
 // 引数だけが数に含まれる
 ```
@@ -46,7 +60,7 @@ console.log((function(a, b = 1, c) {}).length);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Function.length")}}
+{{Compat}}
 
 ## 関連情報
 

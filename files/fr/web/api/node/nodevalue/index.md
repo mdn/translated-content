@@ -1,12 +1,6 @@
 ---
 title: element.nodeValue
 slug: Web/API/Node/nodeValue
-tags:
-  - API
-  - DOM
-  - Noeuds
-  - Propriétés
-translation_of: Web/API/Node/nodeValue
 ---
 
 {{APIRef("DOM")}}
@@ -84,8 +78,8 @@ Lorsque `nodeValue` est défini comme étant `null`, l'assignation n'a aucun eff
 
 ## Spécification
 
-- [DOM Level 2 Core: Node.nodeValue](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D080) — [traduction](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-F68D080) (non normative)
+- [DOM Level 2 Core: Node.nodeValue](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D080) — [traduction](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-F68D080) (non normative)
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.nodeValue")}}
+{{Compat}}

@@ -1,13 +1,9 @@
 ---
 title: template
 slug: Web/XSLT/Element/template
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/template
-original_slug: Web/XSLT/template
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:template>` définit un modèle produisant une sortie. Au moins l'un des atttributs match et set doit posséder une valeur.
 
@@ -54,7 +50,7 @@ Haut niveau, doit être l'enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`.
 
 ### Définition
 
-[XSLT 1.0, section 5.3](http://www.w3.org/TR/xslt#section-Defining-Template-Rules).
+[XSLT 1.0, section 5.3](https://www.w3.org/TR/xslt#section-Defining-Template-Rules).
 
 ### Support Gecko
 

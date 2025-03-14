@@ -1,15 +1,6 @@
 ---
 title: Navigator.language
 slug: Web/API/Navigator/language
-tags:
-  - API
-  - Language
-  - Navigator
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.Navigator.language
-translation_of: Web/API/Navigator/language
 ---
 
 {{APIRef("HTML DOM")}}
@@ -19,7 +10,7 @@ translation_of: Web/API/Navigator/language
 ## 구문
 
 ```js
-const lang = navigator.language
+const lang = navigator.language;
 ```
 
 ### 값

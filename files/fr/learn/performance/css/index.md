@@ -1,7 +1,6 @@
 ---
 title: Optimisation des performances en CSS
 slug: Learn/Performance/CSS
-translation_of: Learn/Performance/CSS
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}
@@ -13,12 +12,18 @@ Peindre une page non stylisée, puis la repeindre une fois les styles analysés 
 Les CSS peuvent adapter les styles à des conditions particulières grâce aux requêtes média. Les requêtes média sont importantes pour une conception Web adaptative et nous aident à optimiser un chemin de rendu critique. Le navigateur bloque le rendu jusqu'à ce qu'il analyse tous ces styles, mais il ne bloque pas le rendu des styles qu'il sait qu'il n'utilisera pas, comme les feuilles de style d'impression. En divisant le CSS en plusieurs fichiers basés sur des requêtes média, vous pouvez empêcher le blocage du rendu pendant le téléchargement du CSS inutilisé. Pour créer un lien CSS non bloquant, déplacez les styles qui ne sont pas immédiatement utilisés, tels que les styles d'impression, dans un fichier distinct, ajoutez une balise HTML [`<link>`](/fr/docs/Web/HTML/Element/link), et ajoutez une requête média, indiquant dans ce cas qu'il s'agit d'une feuille de style d'impression.
 
 ```html
-<link rel="stylesheet" href="styles.css"> <!-- bloquant -->
-<link rel="stylesheet" href="print.css" media="print"> <!-- non bloquant -->
-<link rel="stylesheet" href="mobile.css" media="screen and (max-width: 480px)"> <!-- non bloquant sur grand écran -->
+<link rel="stylesheet" href="styles.css" />
+<!-- bloquant -->
+<link rel="stylesheet" href="print.css" media="print" />
+<!-- non bloquant -->
+<link
+  rel="stylesheet"
+  href="mobile.css"
+  media="screen and (max-width: 480px)" />
+<!-- non bloquant sur grand écran -->
 ```
 
-Par défaut, le navigateur suppose que chaque feuille de style spécifiée bloque le rendu. Indiquez au navigateur quand la feuille de style doit être appliquée en ajoutant un attribut `media` avec la [requête média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries). Lorsque le navigateur voit une feuille de style, il sait qu'il n'a besoin de l'appliquer que pour un scénario spécifique, il télécharge quand même la feuille de style, mais ne rend pas le bloc. En séparant la feuille de style en plusieurs fichiers, le fichier principal bloquant le rendu, dans ce cas `styles.css`, est beaucoup plus petit, ce qui réduit le temps de blocage du rendu.
+Par défaut, le navigateur suppose que chaque feuille de style spécifiée bloque le rendu. Indiquez au navigateur quand la feuille de style doit être appliquée en ajoutant un attribut `media` avec la [requête média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries). Lorsque le navigateur voit une feuille de style, il sait qu'il n'a besoin de l'appliquer que pour un scénario spécifique, il télécharge quand même la feuille de style, mais ne rend pas le bloc. En séparant la feuille de style en plusieurs fichiers, le fichier principal bloquant le rendu, dans ce cas `styles.css`, est beaucoup plus petit, ce qui réduit le temps de blocage du rendu.
 
 ### Les animations sur le GPU
 
@@ -39,7 +44,7 @@ Insérée dans une règle [`@font-face`](/fr/docs/Web/CSS/@font-face), la propri
 ```css
 @font-face {
   font-family: someFont;
-  src: url(/path/to/fonts/someFont.woff) format('woff');
+  src: url(/path/to/fonts/someFont.woff) format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
@@ -62,21 +67,6 @@ Optimiser les performances en CSS revient ainsi à améliorer deux étapes cruci
 Enfin, les outils de développement du navigateur sont à votre disposition pour vous aider à cibler les étapes chronophages qui ralentissent le rendu de vos pages et gagner encore en efficacité, au prix parfois de quelques compromis.
 
 {{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}
-
-## Dans ce module
-
-- [Le « pourquoi » des performances web](/fr/docs/Learn/Performance/why_web_performance)
-- [Que sont les performances web ?](/fr/docs/Learn/Performance/What_is_web_performance)
-- [Comment les internautes perçoivent-ils les performances ?](/fr/docs/Learn/Performance/Perceived_performance)
-- [Mesurer les performances](/fr/docs/Learn/Performance/Measuring_performance)
-- [Multimédia : images](/fr/docs/Learn/Performance/Multimedia)
-- [Multimédia : vidéos](/fr/docs/Learn/Performance/video)
-- [Bonnes pratiques Javascript en matière de performance](/fr/docs/Learn/Performance/JavaScript)
-- [Fonctionnalité HTML pour la performance](/fr/docs/Learn/Performance/HTML)
-- [Optimisation des performances en CSS](/fr/docs/Learn/Performance/CSS)
-- [Performance et polices](/fr/docs/Learn/Performance/Fonts)
-- [Performance sur mobile](/fr/docs/Learn/Performance/Mobile)
-- [Placer le focus sur les performances](/fr/docs/Learn/Performance/business_case_for_performance)
 
 ## Voir aussi
 

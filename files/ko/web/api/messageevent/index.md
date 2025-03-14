@@ -1,8 +1,8 @@
 ---
 title: MessageEvent
 slug: Web/API/MessageEvent
-translation_of: Web/API/MessageEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`MessageEvent`** 는 {{domxref("WebSocket")}} 또는 WebRTC {{domxref("RTCDataChannel")}} 으로 된 타겟으로 부터 전달받은 메시지를 보여주는 interface 입니다.
@@ -44,5 +44,5 @@ _이 interface는 부모 객체인 {{domxref("Event")}}의 메서드를 상속�
 ## See also
 
 - {{domxref("ExtendableMessageEvent")}}, 와 유사한 interface이며, 개발자에게 더 유연성을 제공하기 위해 사용되는 interface 입니다.
-- [WebSocket API](/ko/docs/Web/API/WebSocket_API)
+- [WebSocket API](/ko/docs/Web/API/WebSockets_API)
 - [WebRTC API](/ko/docs/Web/API/WebRTC_API)

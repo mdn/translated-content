@@ -1,18 +1,27 @@
 ---
 title: Reflect.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
-tags:
-  - ECMAScript 2015
-  - Method
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 ---
 
 {{JSRef}}
 
 Статический метод **`Reflect.defineProperty()`** похож на {{jsxref("Object.defineProperty()")}}, но возвращает {{jsxref("Boolean")}}.
 
-{{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.defineProperty()")}}
+
+```js interactive-example
+const object1 = {};
+
+if (Reflect.defineProperty(object1, "property1", { value: 42 })) {
+  console.log("property1 created!");
+  // Expected output: "property1 created!"
+} else {
+  console.log("problem creating property1");
+}
+
+console.log(object1.property1);
+// Expected output: 42
+```
 
 ## Синтаксис
 
@@ -47,13 +56,13 @@ Reflect.defineProperty(target, propertyKey, attributes)
 
 ```js
 var obj = {};
-Reflect.defineProperty(obj, 'x', {value: 7}); // true
+Reflect.defineProperty(obj, "x", { value: 7 }); // true
 obj.x; // 7
 ```
 
 ### Проверка успешно ли было определено свойство
 
-При использовании {{jsxref("Object.defineProperty")}}, который возвращал объект в случае успеха, либо выбрасывал исключение {{jsxref("TypeError")}}, вы должны были использовать конструкцию [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) для того, чтобы поймать ошибку, которая случилась при определении свойства. Потому что `Reflect.defineProperty` возвращает {{jsxref("Boolean")}} в любом случае, вы можете использовать конструкцию [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else):
+При использовании {{jsxref("Object.defineProperty")}}, который возвращал объект в случае успеха, либо выбрасывал исключение {{jsxref("TypeError")}}, вы должны были использовать конструкцию [`try...catch`](/ru/docs/Web/JavaScript/Reference/Statements/try...catch) для того, чтобы поймать ошибку, которая случилась при определении свойства. Потому что `Reflect.defineProperty` возвращает {{jsxref("Boolean")}} в любом случае, вы можете использовать конструкцию [`if...else`](/ru/docs/Web/JavaScript/Reference/Statements/if...else):
 
 ```js
 if (Reflect.defineProperty(target, property, attributes)) {
@@ -63,7 +72,7 @@ if (Reflect.defineProperty(target, property, attributes)) {
 }
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

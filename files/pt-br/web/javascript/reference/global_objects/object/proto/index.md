@@ -30,68 +30,60 @@ console.log(shape.__proto__ === circle); // true
 ```
 
 ```js
-var shape = function () {
-};
+var shape = function () {};
 var p = {
-    a: function () {
-        console.log('aaa');
-    }
+  a: function () {
+    console.log("aaa");
+  },
 };
 shape.prototype.__proto__ = p;
 
 var circle = new shape();
 
-circle.a();//aaa
+circle.a(); //aaa
 
-console.log(shape.prototype === circle.__proto__);//true
+console.log(shape.prototype === circle.__proto__); //true
 
 //ou
 
-var shape = function () {
-};
+var shape = function () {};
 var p = {
-    a: function () {
-        console.log('a');
-    }
+  a: function () {
+    console.log("a");
+  },
 };
 
 var circle = new shape();
 circle.__proto__ = p;
 
-
 circle.a(); //  a
 
-console.log(shape.prototype === circle.__proto__);//false
+console.log(shape.prototype === circle.__proto__); //false
 
 //ou
 
-function test() {
-}
+function test() {}
 test.prototype.myname = function () {
-    console.log('myname');
+  console.log("myname");
+};
+var a = new test();
 
-}
-var a = new test()
+console.log(a.__proto__ === test.prototype); //true
 
-console.log(a.__proto__ === test.prototype);//true
-
-a.myname();//myname
-
+a.myname(); //myname
 
 //ou
 
-var fn = function () {
-};
+var fn = function () {};
 fn.prototype.myname = function () {
-    console.log('myname');
-}
+  console.log("myname");
+};
 
 var obj = {
-    __proto__: fn.prototype
+  __proto__: fn.prototype,
 };
 
-
-obj.myname();//myname
+obj.myname(); //myname
 ```
 
 Nota: são dois underscores(underlines), seguidos de cinco caracteres "proto", seguidos por mais dois underscores(underlines).
@@ -102,7 +94,7 @@ A função getter de `__proto__` expõe o valor interno de `[[Prototype]]` de um
 
 O setter `__proto__` permite ao `[[Prototype]]` de um objeto sejá mutável. O objeto deve ser extensível de acordo com {{jsxref("Object.isExtensible()")}}: se não for, um erro {{jsxref("Global_Objects/TypeError", "TypeError")}} é emitido. O valor fornecido deve ser um objeto ou {{jsxref("Global_Objects/null", "null")}}. Fornecer qualquer outro valor não fará nada.
 
-Para entender como os prototypes são usados para herança, veja o artigo:[Inheritance and the prototype chain](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
+Para entender como os prototypes são usados para herança, veja o artigo:[Inheritance and the prototype chain](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 A propriedade `__proto__` é simplesmente uma propriedade acessora {{jsxref("Object.prototype")}} consistindo de uma função getter e setter. Um acesso de propriedade para `__proto__` que eventualmente consulte {{jsxref("Object.prototype")}} irá encontrar esta propriedade, mas um acesso que não consulta {{jsxref("Object.prototype")}} não a encontrará. Se alguma outra propriedade `__proto__` for encontrada antes de consultar {{jsxref("Object.prototype")}}, essa propriedade irá ocultar a que encontrou {{jsxref("Object.prototype")}}.
 
@@ -112,7 +104,7 @@ A propriedade `__proto__` é simplesmente uma propriedade acessora {{jsxref("Obj
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.proto")}}
+{{Compat}}
 
 ## Notas de compatibilidade
 

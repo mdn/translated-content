@@ -1,12 +1,6 @@
 ---
 title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
-tags:
-  - JavaScript
-  - Math
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math
 ---
 
 {{JSRef}}
@@ -45,9 +39,11 @@ Les constantes sont définies avec la précision des nombres réels en JavaScrip
 
 ## Méthodes
 
-> **Note :** Les fonctions trigonométriques (`sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`) acceptent ou retournent des angles en radians. Pour convertir des degrés en radians, multipliez la valeur en degrés par (`Math.PI / 180`). Pour passer des radians en degrés, divisez la valeur en radians par (`Math.PI / 180`).
+> [!NOTE]
+> Les fonctions trigonométriques (`sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`) acceptent ou retournent des angles en radians. Pour convertir des degrés en radians, multipliez la valeur en degrés par (`Math.PI / 180`). Pour passer des radians en degrés, divisez la valeur en radians par (`Math.PI / 180`).
 
-> **Note :** La précision des fonctions mathématiques dépend notamment de l'implémentation. Cela signifie que différents navigateurs peuvent fournir des résultats différents. On peut même avoir un même moteur JavaScript qui, sur des architectures et/ou des systèmes d'exploitation différents, fournit des résultats différents.
+> [!NOTE]
+> La précision des fonctions mathématiques dépend notamment de l'implémentation. Cela signifie que différents navigateurs peuvent fournir des résultats différents. On peut même avoir un même moteur JavaScript qui, sur des architectures et/ou des systèmes d'exploitation différents, fournit des résultats différents.
 
 - {{jsxref("Objets_globaux/Math/abs", "Math.abs(x)")}}
   - : Retourne la valeur absolue d'un nombre.

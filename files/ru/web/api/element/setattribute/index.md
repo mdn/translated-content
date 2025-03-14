@@ -1,50 +1,89 @@
 ---
-title: Element.setAttribute()
+title: "Element: метод setAttribute()"
 slug: Web/API/Element/setAttribute
-translation_of: Web/API/Element/setAttribute
+l10n:
+  sourceCommit: 674ac8f0b0c639967d29951b5e6f3f65c656f164
 ---
-{{APIRef("DOM")}}Добавляет новый атрибут или изменяет значение существующего атрибута у выбранного элемента.
+
+{{APIRef("DOM")}}
+
+Метод **`setAttribute()`** интерфейса {{domxref("Element")}} устанавливает значение атрибута для указанного элемента. Если атрибут уже существует, то его значение будет обновлено, а если нет, то будет добавлен атрибут с соответствующим именем и значением.
+
+Для получения текущего значения атрибута используйте {{domxref("Element.getAttribute", "getAttribute()")}}, для удаления нужно вызвать {{domxref("Element.removeAttribute", "removeAttribute()")}}.
+
+Если необходимо поработать с {{domxref("Attr", "атрибутами")}} узла (например, при клонировании другого элемента) перед его добавлением, можно использовать метод {{domxref("Element.setAttributeNode()", "setAttributeNode()")}}.
 
 ## Синтаксис
 
+```js-nolint
+setAttribute(name, value)
 ```
-element.setAttribute(name, value);
-```
 
-- `name` - имя атрибута (строка).
-- `value` - значение атрибута.
+### Параметры
 
-## Пример
+- `name`
+  - : Строка, представляющая имя атрибута, для которого устанавливается значение. Имя атрибута автоматически преобразуется в нижний регистр если `setAttribute()` вызывается для HTML-элемента в HTML-документе.
+- `value`
+  - : Строка, содержащая значение для установки. Любое нестроковое значение автоматически преобразуется в строку.
 
-В следующем примере, `setAttribute()` используется, чтобы установить атрибут {{htmlattrxref("disabled")}} кнопки {{htmlelement("button")}}, делая её отключённой.
+Логические атрибуты считаются равными `true`, если они есть у элемента, вне зависимости от значения. Следует устанавливать в качестве значения для `value` пустую строку (`""`) или имя атрибута без пробелов в начале и конце. Смотрите [пример](#примеры) ниже для наглядной демонстрации.
+
+Поскольку значение `value` преобразуется в строку, присвоение значения `null` не приводит к удалению атрибута или установке его значения в [`null`](/ru/docs/Web/JavaScript/Reference/Operators/null). Вместо этого произойдёт установка значения равного строке `"null"`. Для удаления атрибута необходимо вызвать {{domxref("Element.removeAttribute", "removeAttribute()")}}.
+
+### Возвращаемое значение
+
+Нет ({{jsxref("undefined")}}).
+
+### Исключения
+
+- `InvalidCharacterError` {{domxref("DOMException")}}
+  - : Возникает если значение [`name`](#name) не является корректным [именем XML](https://www.w3.org/TR/REC-xml/#dt-name) (например, начинается с цифры, дефиса или точки или содержит символы, отличные от буквенно-цифровых символов, символов подчеркивания, дефисов и точек).
+
+## Примеры
+
+В следующем примере `setAttribute()` используется для установки атрибута элемента {{HTMLElement("button")}}.
+
+### HTML
 
 ```html
-<button>Hello World</button>
+<button>Привет, мир!</button>
 ```
+
+```css hidden
+button {
+  height: 30px;
+  width: 100px;
+  margin: 1em;
+}
+```
+
+### JavaScript
 
 ```js
-var b = document.querySelector("button");
+const button = document.querySelector("button");
 
-b.setAttribute("disabled", "disabled");
+button.setAttribute("name", "helloButton");
+button.setAttribute("disabled", "");
 ```
 
-{{ EmbedLiveSample('Пример', '300', '50', '', 'Web/API/Element/setAttribute') }}
+{{ EmbedLiveSample('Примеры', '300', '50') }}
 
-## Примечания
+Этот пример иллюстрирует два аспекта:
 
-При вызове на элементе внутри HTML документа, setAttribute переведёт имя атрибута в нижний регистр.
+- Первый вызов `setAttribute()` изменяет значение атрибута `name` на "helloButton". Это можно увидеть с помощью инспектора кода в браузере ([Chrome](https://developer.chrome.com/docs/devtools/dom/properties), [Edge](https://learn.microsoft.com/ru-ru/microsoft-edge/devtools-guide-chromium/css/inspect), [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html), [Safari](https://support.apple.com/en-us/guide/safari-developer/welcome/mac)).
+- Используемое значение при установке логического атрибута не важно. Само наличие атрибута означает, что он равен `true`, а отсутствие — `false`. Таким образом, присваивая значению атрибута `disabled` пустую строку (`""`), мы переключаем `disabled` в `true`, что приводит к отключению кнопки. В качестве значения для логических атрибутов рекомендуется использовать пустую строку или имя самого атрибута.
 
-Если указанный атрибут уже существует, его значение изменится на новое. Если атрибута ранее не существовало, он будет создан.
+## Спецификации
 
-Несмотря на то, что метод [`getAttribute()`](/ru/docs/DOM/element.getAttribute) возвращает null у удалённых атрибутов, вы должны использовать [removeAttribute()](/ru/docs/DOM/element.removeAttribute) вместо _elt_.setAttribute(_attr_, null), чтобы удалить атрибут. Последний заставит значение `null` быть строкой `"null"`, которая, вероятно, не то, что вы хотите.
+{{Specifications}}
 
-Использование setAttribute() для изменения определённых атрибутов особенно значимо в XUL, так как работает непоследовательно, а атрибут определяет значение по умолчанию. Для того, чтобы получить или изменить текущие значения, вы должны использовать свойства. Например, elt.value вместо elt.setAttribure('value', val).
+## Совместимость с браузерами
 
-Чтобы установить атрибут, которому значение не нужно, такой как, например, атрибут `autoplay` элемента {{HTMLElement("audio")}}, используйте null или пустое значение. Например: `elt.setAttribute('autoplay', '')`
+{{Compat}}
 
-{{DOMAttributeMethods}}
+## Смотрите также
 
-## Спецификация
-
-- [DOM Level 2 Core: setAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68F082) (представлено в [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttribute))
-- [HTML5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/#apis-in-html-documents)
+- {{domxref("Element.hasAttribute()")}}
+- {{domxref("Element.getAttribute()")}}
+- {{domxref("Element.removeAttribute()")}}
+- {{domxref("Element.toggleAttribute()")}}

@@ -5,17 +5,19 @@ slug: Web/API/IDBDatabase
 
 {{APIRef("IndexedDB")}}
 
-IndexedDB 中的 **`IDBDatabase`** 接口提供一个到 [数据库的连接](/zh-CN/docs/IndexedDB#database_connection); 你可以使用 `IDBDatabase` 对象在数据库中打开一个[transaction](/zh-CN/docs/IndexedDB#gloss_transaction) , 然后进行操作或者删除数据库中的对象。这是唯一一个能够访问和管理数据库版本的接口。
+IndexedDB 中的 **`IDBDatabase`** 接口提供一个到 [数据库的连接](/zh-CN/docs/Web/API/IndexedDB_API#database_connection); 你可以使用 `IDBDatabase` 对象在数据库中打开一个[transaction](/zh-CN/docs/Web/API/IndexedDB_API#gloss_transaction) , 然后进行操作或者删除数据库中的对象。这是唯一一个能够访问和管理数据库版本的接口。
 
 {{AvailableInWorkers}}
 
-> **备注：** 在 IndexedDB 中所做的所有事情总是发生在[事务](/zh-CN/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction)的上下文中，表示与数据库中的数据的交互。IndexedDB 中的所有对象——包括对象存储、索引和游标——都与特定事务绑定。因此，在事务之外您不能执行命令、访问数据或打开任何东西。
+> [!NOTE]
+> 在 IndexedDB 中所做的所有事情总是发生在[事务](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_transaction)的上下文中，表示与数据库中的数据的交互。IndexedDB 中的所有对象——包括对象存储、索引和游标——都与特定事务绑定。因此，在事务之外你不能执行命令、访问数据或打开任何东西。
 
-> **备注：** 请注意，从 Firefox 40 开始，IndexedDB 事务具有宽松的持久性保证以提高性能（请参阅[bug 1112702](https://bugzilla.mozilla.org/show_bug.cgi?id=1112702)）以前在`readwrite`事务中[`IDBTransaction.oncomplete`](/zh-CN/docs/Web/API/IDBTransaction/oncomplete)被触发只有当所有数据都保证已刷新到磁盘时。在 Firefox 40+ 中，`complete`事件在操作系统被告知写入数据之后被触发，但可能在该数据实际上被刷新到磁盘之前。该`complete`因此，事件可以比以前更快地传递，但是，如果操作系统崩溃或者在将数据刷新到磁盘之前系统电源丢失，则整个事务将丢失的可能性很小。由于这种灾难性事件很少见，大多数消费者不应该进一步关注自己。如果由于某种原因必须确保持久性（例如，您要存储以后无法重新计算的关键数据），则可以`complete`通过使用实验（非标准）`readwriteflush`模式创建事务来强制事务在传递事件之前刷新到磁盘（请参阅[`IDBDatabase.transaction`](/zh-CN/docs/Web/API/IDBDatabase/transaction)）。
+> [!NOTE]
+> 请注意，从 Firefox 40 开始，IndexedDB 事务具有宽松的持久性保证以提高性能（请参阅[bug 1112702](https://bugzilla.mozilla.org/show_bug.cgi?id=1112702)）以前在`readwrite`事务中[`IDBTransaction.oncomplete`](/zh-CN/docs/Web/API/IDBTransaction/complete_event)被触发只有当所有数据都保证已刷新到磁盘时。在 Firefox 40+ 中，`complete`事件在操作系统被告知写入数据之后被触发，但可能在该数据实际上被刷新到磁盘之前。该`complete`因此，事件可以比以前更快地传递，但是，如果操作系统崩溃或者在将数据刷新到磁盘之前系统电源丢失，则整个事务将丢失的可能性很小。由于这种灾难性事件很少见，大多数消费者不应该进一步关注自己。如果由于某种原因必须确保持久性（例如，你要存储以后无法重新计算的关键数据），则可以`complete`通过使用实验（非标准）`readwriteflush`模式创建事务来强制事务在传递事件之前刷新到磁盘（请参阅[`IDBDatabase.transaction`](/zh-CN/docs/Web/API/IDBDatabase/transaction)）。
 
 ## 方法
 
-继承自：[EventTarget](/zh-CN/docs/DOM/EventTarget)
+继承自：[EventTarget](/zh-CN/docs/Web/API/EventTarget)
 
 - {{domxref("IDBDatabase.close()")}}
   - : 在一个单独的线程中关闭数据库连接并立即返回。
@@ -49,58 +51,58 @@ IndexedDB 中的 **`IDBDatabase`** 接口提供一个到 [数据库的连接](/z
 
 ## 示例
 
-在下面的代码中，异步打开了一个数据库连接 ({{domxref("IDBFactory")}}), 并处理成功或者异常事件，如果触发了 upgrade 事件就需要创建一个新的 object store ({{ domxref("IDBdatabase") }})。如果想看完整的例子，可以使用 [To-do Notifications](https://github.com/mdn/to-do-notifications/) 应用 ([view example live](http://mdn.github.io/to-do-notifications/).)
+在下面的代码中，异步打开了一个数据库连接 ({{domxref("IDBFactory")}}), 并处理成功或者异常事件，如果触发了 upgrade 事件就需要创建一个新的 object store ({{ domxref("IDBdatabase") }})。如果想看完整的例子，可以使用 [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) 应用 ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
 
 ```js
 // 我们先打开一个数据库
-  var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-  // 当数据库打开出错/成功时，以下两个事件处理程序将分别对 IDBDatabase 对象进行下一步操作
-  DBOpenRequest.onerror = function(event) {
-    note.innerHTML += '<li>Error loading database.</li>';
+// 当数据库打开出错/成功时，以下两个事件处理程序将分别对 IDBDatabase 对象进行下一步操作
+DBOpenRequest.onerror = function (event) {
+  note.innerHTML += "<li>Error loading database.</li>";
+};
+
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Database initialised.</li>";
+
+  // 将打开数据库的结果存储在 db 变量中，该变量将在后面的代码中被频繁使用
+  db = DBOpenRequest.result;
+
+  // 运行 displayData() 方法，用 IDB 中已经存在的所有待办事项列表数据填充到任务列表中
+  displayData();
+};
+
+// 当试图打开一个尚未被创建的数据库，或者试图连接一个数据库还没被创立的版本时，onupgradeneeded 事件会被触发
+
+DBOpenRequest.onupgradeneeded = function (event) {
+  var db = event.target.result;
+
+  db.onerror = function (event) {
+    note.innerHTML += "<li>Error loading database.</li>";
   };
 
-  DBOpenRequest.onsuccess = function(event) {
-    note.innerHTML += '<li>Database initialised.</li>';
+  // 使用 IDBDatabase.createObjectStore 方法，可创建一个对象存储区
 
-    // 将打开数据库的结果存储在 db 变量中，该变量将在后面的代码中被频繁使用
-    db = DBOpenRequest.result;
+  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
 
-    // 运行 displayData() 方法，用 IDB 中已经存在的所有待办事项列表数据填充到任务列表中
-    displayData();
-  };
+  // 定义 objectStore 将包含哪些数据项
 
-  // 当试图打开一个尚未被创建的数据库，或者试图连接一个数据库还没被创立的版本时，onupgradeneeded 事件会被触发
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
 
-  DBOpenRequest.onupgradeneeded = function(event) {
-    var db = event.target.result;
+  objectStore.createIndex("notified", "notified", { unique: false });
 
-    db.onerror = function(event) {
-      note.innerHTML += '<li>Error loading database.</li>';
-    };
-
-    // 使用 IDBDatabase.createObjectStore 方法，可创建一个对象存储区
-
-    var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
-
-    // 定义 objectStore 将包含哪些数据项
-
-    objectStore.createIndex("hours", "hours", { unique: false });
-    objectStore.createIndex("minutes", "minutes", { unique: false });
-    objectStore.createIndex("day", "day", { unique: false });
-    objectStore.createIndex("month", "month", { unique: false });
-    objectStore.createIndex("year", "year", { unique: false });
-
-    objectStore.createIndex("notified", "notified", { unique: false });
-
-    note.innerHTML += '<li>Object store created.</li>';
-  };
+  note.innerHTML += "<li>Object store created.</li>";
+};
 ```
 
 下一行打开数据库上的事务，然后打开一个对象存储，然后我们可以在其中操作数据。
 
 ```js
-    var objectStore = db.transaction('toDoList').objectStore('toDoList');
+var objectStore = db.transaction("toDoList").objectStore("toDoList");
 ```
 
 ## 规范
@@ -119,4 +121,4 @@ IndexedDB 中的 **`IDBDatabase`** 接口提供一个到 [数据库的连接](/z
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

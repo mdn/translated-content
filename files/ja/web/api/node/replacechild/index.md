@@ -1,30 +1,32 @@
 ---
-title: Node.replaceChild
+title: "Node: replaceChild() メソッド"
 slug: Web/API/Node/replaceChild
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
 
-**`replaceChild()`** は {{domxref("Node")}} 要素のメソッドで、この（親）ノードの中の子ノードを置き換えます。
-
-**`Node.replaceChild()`** メソッドは指定ノードの子ノードを別のノードに置き換えます。
+**`replaceChild()`** は {{domxref("Node")}} インターフェイスのメソッドで、この（親）ノードの中の子ノードを置き換えます。
 
 ## 構文
 
-```js
-replaceChild(newChild, oldChild);
+```js-nolint
+replaceChild(newChild, oldChild)
 ```
 
 ### 引数
 
 - `newChild`
   - : `oldChild` を置き換える新しいノードです。
-    > **警告:** 新しいノードが既に DOM のどこか別なところにある場合は、まずその位置から取り除かれます。
+    > [!WARNING]
+    > 新しいノードが既に DOM のどこか別なところにある場合は、まずその位置から取り除かれます。
 - `oldChild`
   - : 置き換えられる子ノードです。
 
-> **メモ:** 引数の順序で、*新しい*ものの前に*古い*ものが来るのは異例です。
-[`Element.replaceWith()`](/ja/docs/Web/API/Element/replaceWith) は、要素であるノードのみに適用されるものですが、読んだり使用したりしやすいかもしれません。
+> [!NOTE]
+> 引数の順序で、*新しい*ものの前に*古い*ものが来るのは異例です。
+> [`Element.replaceWith()`](/ja/docs/Web/API/Element/replaceWith) は、要素であるノードのみに適用されるものですが、読んだり使用したりしやすいかもしれません。
 
 ### 返値
 

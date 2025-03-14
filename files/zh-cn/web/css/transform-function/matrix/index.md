@@ -1,18 +1,20 @@
 ---
 title: matrix()
 slug: Web/CSS/transform-function/matrix
-original_slug: Web/CSS/transform-function/matrix()
 ---
+
+{{CSSRef}}
 
 CSS 函数 `matrix()` 指定了一个由指定的 6 个值组成的 2D 变换矩阵。这种矩阵的常量值是隐含的，而不是由参数传递的；其他的参数是以列优先的顺序描述的。
 
 `matrix(a, b, c, d, tx, ty)` 是 `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)` 的简写。
 
-> **备注：** 直到 Firefox 16, Gecko 才接受对于 **tx** 和 **ty** 的 {{cssxref("&lt;length&gt;")}} 值。
+> [!NOTE]
+> 直到 Firefox 16, Gecko 才接受对于 **tx** 和 **ty** 的 {{cssxref("&lt;length&gt;")}} 值。
 
 ## 语法
 
-```
+```css
 matrix(a, b, c, d, tx, ty)
 ```
 
@@ -103,22 +105,20 @@ matrix(a, b, c, d, tx, ty)
   </tbody>
 </table>
 
-这些值表示以下函数：
-
-matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() )
+这些值表示以下函数：`matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())`
 
 ## 示例
 
 ### HTML
 
-```
-<div>Normal</div>
-<div class="changed">Changed</div>
+```html
+<div>正常</div>
+<div class="changed">改变后</div>
 ```
 
 ### CSS
 
-```
+```css
 div {
   width: 80px;
   height: 80px;
@@ -133,7 +133,7 @@ div {
 
 ### 结果
 
-请看英文版案例 [/zh-CN/docs/Web/CSS/transform-function/matrix#Result](/zh-CN/docs/Web/CSS/transform-function/matrix#Result)
+{{EmbedLiveSample("示例", 350, 350)}}
 
 ## 规范
 

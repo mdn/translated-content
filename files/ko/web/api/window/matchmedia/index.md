@@ -1,23 +1,16 @@
 ---
 title: Window.matchMedia()
 slug: Web/API/Window/matchMedia
-tags:
-  - API
-  - CSSOM View
-  - JavaScript
-  - Media Queries
-  - Method
-  - Reference
-translation_of: Web/API/Window/matchMedia
 ---
+
 {{APIRef}}
 
-**`Window.matchMedia()`** 메서드는 주어진 [미디어 쿼리](/ko/docs/Web/Guide/CSS/Media_queries) 문자열의 분석 결과를 나타내는 {{domxref("MediaQueryList")}} 객체를 반환합니다.
+**`Window.matchMedia()`** 메서드는 주어진 [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries) 문자열의 분석 결과를 나타내는 {{domxref("MediaQueryList")}} 객체를 반환합니다.
 
 ## 구문
 
 ```js
-window.matchMedia(mediaQueryString)
+window.matchMedia(mediaQueryString);
 ```
 
 ### 매개변수
@@ -41,7 +34,7 @@ if (window.matchMedia("(min-width: 400px)").matches) {
 }
 ```
 
-더 많은 예제는 [Testing media queries programmatically](/ko/docs/Web/CSS/Media_Queries/Testing_media_queries)를 참고하세요.
+더 많은 예제는 [Testing media queries programmatically](/ko/docs/Web/CSS/CSS_media_queries/Testing_media_queries)를 참고하세요.
 
 ## 명세
 
@@ -53,7 +46,7 @@ if (window.matchMedia("(min-width: 400px)").matches) {
 
 ## 같이 보기
 
-- [미디어 쿼리 사용하기](/ko/docs/Web/Guide/CSS/Media_queries)
-- [Using media queries from code](/ko/docs/DOM/Using_media_queries_from_code)
+- [미디어 쿼리 사용하기](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using media queries from code](/ko/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{domxref("MediaQueryList")}}
 - {{domxref("MediaQueryListListener")}}

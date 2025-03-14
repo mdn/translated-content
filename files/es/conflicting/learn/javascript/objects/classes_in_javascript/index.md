@@ -1,25 +1,6 @@
 ---
 title: JavaScript orientado a objetos para principiantes
 slug: conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
-tags:
-  - Aprender
-  - Artículo
-  - Constructor
-  - Crear
-  - Create
-  - JSOO
-  - JavaScript
-  - OOJS
-  - OOP
-  - Object
-  - Objeto
-  - Orientado a Objeto
-  - Principiante
-  - Programación orientada a objetos
-  - instance
-  - instanciar
-  - l10n:priority
-translation_of: Learn/JavaScript/Objects/Object-oriented_JS
 original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 ---
 
@@ -45,7 +26,7 @@ Para empezar, podríamos volver a ver al objeto `Persona` de nuestro [artículo 
 
 Esto es conocido como **abstracción** — crear un modelo simple de algo complejo que represente sus aspectos más importantes y que sea fácil de manipular para el propósito de nuestro programa.
 
-![](https://mdn.mozillademos.org/files/13889/person-diagram.png)
+![](person-diagram.png)
 
 En algunos lenguajes de POO, esta definición de tipo de objeto se la llama **class** (JavaScript utiliza diferentes mecanismos y terminologías, como verás a continuación) — esto no es en realidad un objeto, en vez de esto es un modelo que define las características que un objeto debería tener.
 
@@ -53,7 +34,7 @@ En algunos lenguajes de POO, esta definición de tipo de objeto se la llama **cl
 
 Partiendo de nuestra clase, podemos crear **instancias de objetos** — objetos que contienen los datos y funcionalidades definidas en la clase original. Teniendo a nuestra clase `Persona`, ahora podemos crear gente con características más específicas:
 
-![](https://mdn.mozillademos.org/files/15163/MDN-Graphics-instantiation-2-fixed.png)
+![](mdn-graphics-instantiation-2-fixed.png)
 
 Cuando una instancia del objeto es creada a partir de una clase, se ejecuta **la función constructora** (constructor en inglés) de la clase para crearla. El proceso de crear una instancia del objeto desde una clase se llama **instanciación**.
 
@@ -61,15 +42,16 @@ Cuando una instancia del objeto es creada a partir de una clase, se ejecuta **la
 
 En este caso nosotros no queremos personas genericas — queremos docentes y estudiantes, que son los dos tipos más específicos de personas. En POO, podemos crear nuevas clases basadas en otras clases, estas nuevas **clases secundarias** se pueden hacer para **heredar** los datos y código de su **clase primaria**, de modo que pueden reutilizar la funcionalidad común a todos los tipos de objetos en lugar de tener que duplicarla. Cuando la funcionalidad difiere entre clases, puedes definir funciones especializadas directamente en ellas según sea necesario.
 
-![](https://mdn.mozillademos.org/files/13881/MDN-Graphics-inherited-3.png)
+![](mdn-graphics-inherited-3.png)
 
 Esto es realmente útil, los profesores y los estudiantes comparten muchas características comunes como el nombre, el género y la edad, por lo que es conveniente tener que definir esas características solo una vez. También puedes definir la misma característica por separado en diferentes clases, ya que cada definición de esa característica estará en un espacio de nombres diferente. Por ejemplo, el saludo de un estudiante puede tener la forma "Yo, soy \[Nombre]" (por ejemplo, Yo, soy Sam), mientras que un profesor puede usar algo más formal, como "Hola, mi nombre es \[Prefix] \[lastName], y enseño \[Asunto] ". (Por ejemplo, Hola, mi nombre es Sr. Griffiths, y yo enseño Química).
 
-> **Nota:** la palabra elegante para la capacidad de múltiples tipos de objetos de implementar la misma funcionalidad es **polimorfismo.** Por si acaso te preguntabas.
+> [!NOTE]
+> La palabra elegante para la capacidad de múltiples tipos de objetos de implementar la misma funcionalidad es **polimorfismo.** Por si acaso te preguntabas.
 
 Ahora puedes crear instancias de objetos de las clases "hijo". Por ejemplo:
 
-![](https://mdn.mozillademos.org/files/13885/MDN-Graphics-instantiation-teacher-3.png)
+![](mdn-graphics-instantiation-teacher-3.png)
 
 En el resto del articulo, comenzaremos a ver como podemos practicar la teoría de POO en JavaScript.
 
@@ -79,7 +61,8 @@ Algunas personas sostienen que JavaScript no es un verdadero lenguaje orientado 
 
 Cuando se crea una nueva instancia del objeto a partir de una función constructora, su funcionalidad central (tal como se define en su prototipo, que exploraremos en el [artículo Prototipos](/es/docs/Learn/JavaScript/Objects/Object_prototypes) de objetos) no se copia en el nuevo objeto como lenguajes OO "clásicos", sino que la funcionalidad está vinculada a través de una cadena de referencia llamada cadena prototipo. Así que esto no es una verdadera instanciación, estrictamente hablando, JavaScript usa un mecanismo diferente para compartir funcionalidad entre objetos.
 
-> **Nota:** no ser "POO clásica" no es necesariamente algo malo; Como se mencionó anteriormente, la POO puede ser muy compleja muy rápidamente, y JavaScript tiene algunas agradables formas de aprovechar las características de la OO sin tener que profundizar demasiado en ello.
+> [!NOTE]
+> No ser "POO clásica" no es necesariamente algo malo; Como se mencionó anteriormente, la POO puede ser muy compleja muy rápidamente, y JavaScript tiene algunas agradables formas de aprovechar las características de la OO sin tener que profundizar demasiado en ello.
 
 Exploremos la creación de clases a través de constructores y la creación de instancias de objetos a partir de ellas en JavaScript. En primer lugar, nos gustaría que hicieras una nueva copia local del archivo `oojs.html` que vimos en nuestro primer artículo de Objetos.
 
@@ -121,7 +104,8 @@ Exploremos la creación de clases a través de constructores y la creación de i
 
 La función constructora es la versión de JavaScript de una clase. Notarás que tiene todas las características que esperas en una función, aunque no devuelve nada o crea explícitamente un objeto — básicamente sólo define propiedades y métodos. Verás que la palabra clave `this` se está usando aquí también — es básicamente decir que cuando se crea una de estas instancias de objeto, la propiedad `name` del objeto será igual al valor del nombre pasado a la llamada del constructor, y el método `greeting()` usará también el valor del nombre pasado a la llamada del constructor.
 
-> **Nota:** Un nombre de función constructora generalmente comienza con una letra mayúscula — esta convención se utiliza para hacer que las funciones constructoras sean más fáciles de reconocer en el código.
+> [!NOTE]
+> Un nombre de función constructora generalmente comienza con una letra mayúscula — esta convención se utiliza para hacer que las funciones constructoras sean más fáciles de reconocer en el código.
 
 Entonces, ¿cómo llamamos a un constructor para crear algunos objetos?
 
@@ -220,7 +204,8 @@ person1.bio()
 // etc.
 ```
 
-> **Nota:** Si tienes problemas para lograr que funcione, puedes comparar tu código con nuestra versión — ve [oojs-class-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html) (también lo puedes ver [corriendo en vivo](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html)).
+> [!NOTE]
+> Si tienes problemas para lograr que funcione, puedes comparar tu código con nuestra versión — ve [oojs-class-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html) (también lo puedes ver [corriendo en vivo](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html)).
 
 ### Ejercicios adicionales
 
@@ -228,11 +213,12 @@ Para empezar, intenta añadir un par de líneas de creación de objetos propias,
 
 Además, hay un par de problemas con nuestro método `bio()` — la salida siempre incluye el pronombre "He", incluso para personas de otros géneros. Y `bio` solamente incluye dos intereses, sin importar la cantidad que hay en el arreglo `interests`. ¿Podrías corregir esto en la definición de la clase (constructor)? Puedes poner cualquier código dentro de un constructor (probablemente necesites algunos condicionales y un bucle). Piensa como se deben estructurar las declaraciones dependiendo del género, y de la cantidad de intereses.
 
-> **Nota:** Si estás atascado, hay una [respuesta en nuestro repositorio de GitHub](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html) ([see it live](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)) — igualmente ¡intentea resolverla primero!
+> [!NOTE]
+> Si estás atascado, hay una [respuesta en nuestro repositorio de GitHub](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html) ([see it live](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)) — igualmente ¡intentea resolverla primero!
 
 ## Otras formas de crear instancias de objetos
 
-Hasta ahora hemos visto dos diferentes formas de crear una instancia de objeto — [declarando un objeto literal](/es/docs/Learn/JavaScript/Objects/Basics#Object_basics), y usando una función constructora (ver arriba).
+Hasta ahora hemos visto dos diferentes formas de crear una instancia de objeto — [declarando un objeto literal](/es/docs/Learn/JavaScript/Objects/Basics#object_basics), y usando una función constructora (ver arriba).
 
 Esto tiene sentido, pero hay otras formas — se muestran aquí para que te vayas familiarizando en caso de encontrarte con ellas.
 
@@ -306,9 +292,9 @@ En el próximo artículo, exploraremos los prototipos de objeto JavaScript.
 ## En este modulo
 
 - [Objetos básicos](/es/docs/Learn/JavaScript/Objects/Basics)
-- [JavaScript orientedo a objetos para principiantes](/es/docs/Learn/JavaScript/Objects/Object-oriented_JS)
+- [JavaScript orientedo a objetos para principiantes](/es/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript)
 - [Prototipos de Objetos](/es/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Herencia en JavaScript](/es/docs/Learn/JavaScript/Objects/Inheritance)
+- [Herencia en JavaScript](/es/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
 - [Trabajando con datos JSON](/es/docs/Learn/JavaScript/Objects/JSON)
 - [Práctica de construcción de objetos](/es/docs/Learn/JavaScript/Objects/Object_building_practice)
 - [Agregar funciones a nuestro demo de pelotas que rebotan](/es/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

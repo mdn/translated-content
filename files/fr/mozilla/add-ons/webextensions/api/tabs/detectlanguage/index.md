@@ -1,32 +1,21 @@
 ---
 title: tabs.detectLanguage()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/detectLanguage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - detectLanguage
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/detectLanguage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Détecte la langue principale du contenu dans un onglet, en utilisant le [détecteur de langue compact](https://github.com/CLD2Owners/cld2) (CLD).
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var detecting = browser.tabs.detectLanguage(
-  tabId,                  // optional integer
-  callback                // optional function
-)
+  tabId, // optional integer
+  callback, // optional function
+);
 ```
 
 ### Paramètres
@@ -38,7 +27,7 @@ var detecting = browser.tabs.detectLanguage(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise)qui sera remplie avec une chaîne représentant un code de langue ISO tel que `en` ou `fr`. Pour une liste complète des langues prises en charge par cette méthode, see [kLanguageInfoTable](https://src.chromium.org/viewvc/chrome/trunk/src/third_party/cld/languages/internal/languages.cc#l23). Pour une langue inconnue, `"und"` sera retourné (mais voir [bug 1288263](https://bugzilla.mozilla.org/show_bug.cgi?id=1288263)). Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)qui sera remplie avec une chaîne représentant un code de langue ISO tel que `en` ou `fr`. Pour une liste complète des langues prises en charge par cette méthode, see [kLanguageInfoTable](https://src.chromium.org/viewvc/chrome/trunk/src/third_party/cld/languages/internal/languages.cc#l23). Pour une langue inconnue, `"und"` sera retourné (mais voir [bug 1288263](https://bugzilla.mozilla.org/show_bug.cgi?id=1288263)). Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
 ## Exemples
 
@@ -53,13 +42,13 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(function () {
   var detecting = browser.tabs.detectLanguage();
   detecting.then(onLanguageDetected, onError);
 });
 ```
 
-Détecter et enregistrer la langue de chaque onglet ouvert lorsque l'utilisateur clique sur une action du navigateur (notez que cet exemple nécessite l [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions)) :
+Détecter et enregistrer la langue de chaque onglet ouvert lorsque l'utilisateur clique sur une action du navigateur (notez que cet exemple nécessite l [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)) :
 
 ```js
 function onLanguageDetected(url, lang) {
@@ -78,7 +67,7 @@ function detectLanguages(tabs) {
   }
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(function () {
   var querying = browser.tabs.query({});
   querying.then(detectLanguages, onError);
 });
@@ -86,13 +75,13 @@ browser.browserAction.onClicked.addListener(function() {
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.detectLanguage")}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l’API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

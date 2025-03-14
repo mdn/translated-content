@@ -1,39 +1,41 @@
 ---
 title: HTMLProgressElement
 slug: Web/API/HTMLProgressElement
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLProgressElement`** interface provides special properties and methods (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of {{HTMLElement("progress")}} elements.
+**`HTMLProgressElement`** 接口提供用于操作 {{HTMLElement("progress")}} 元素布局和呈现的特定属性和方法（除了常规 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承来使用）。
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
-## Properties
+## 实例属性
 
-_Inherits properties from its parent, {{domxref("HTMLElement")}}._
+_从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 - {{domxref("HTMLProgressElement.max")}}
-  - : Is a `double` value reflecting the content attribute of the same name, limited to numbers greater than zero. Its default value is `1.0`.
-- {{domxref("HTMLProgressElement.position")}}{{readonlyInline}}
-  - : Returns a `double` value returning the result of dividing the current value (`value`) by the maximum value (`max`); if the progress bar is an indeterminate progress bar, it returns `-1`.
+  - : 一个反映同名内容属性的 `double` 值，仅限于大于零的数字。其默认值是 `1.0`。
+- {{domxref("HTMLProgressElement.position")}} {{ReadOnlyInline}}
+  - : 返回一个 `double` 值，返回当前值（`value`）除以最大值（`max`）的结果；如果进度条是不确定的进度条，它返回 `-1`。
 - {{domxref("HTMLProgressElement.value")}}
-  - : Is a `double` value that reflects the current value; if the progress bar is an indeterminate progress bar, it returns `0`.
-- {{domxref("HTMLProgressElement.labels")}}{{readonlyInline}}
-  - : Returns {{domxref("NodeList")}} containing the list of {{HTMLElement("label")}} elements that are labels for this element.
+  - : 一个反映当前值的 `double` 值；如果进度条是不确定的进度条，它返回 `0`。
+- {{domxref("HTMLProgressElement.labels")}} {{ReadOnlyInline}}
+  - : 返回包含此元素的 {{HTMLElement("label")}} 元素列表的 {{domxref("NodeList")}} 。
 
-## Methods
+## 实例方法
 
-_No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}._
+_无特定方法；从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- The HTML element implementing this interface: {{HTMLElement("progress")}}
+- 实现此接口的 HTML 元素：{{HTMLElement("progress")}}

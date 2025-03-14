@@ -1,19 +1,9 @@
 ---
 title: notifications.NotificationOptions
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions
-tags:
-  - AP
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - NotificationOptions
-  - Refere
-  - Type
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Ce type contient les données nécessaires pour :
 
@@ -33,7 +23,7 @@ Les trois premières propriétés - `type`, `title`, `message` - sont obligatoir
 - `title`
   - : `string`. Le titre de la notification
 - `iconUrl`{{optional_inline}}
-  - : `string`. Une URL correspondant vers une icône à afficher dans la notification. Ça peut être une URL de donnée, une URL blob, une URL http ou https, ou une [l'URL relative](/fr/Add-ons/WebExtensions/Chrome_incompatibilities#Relative_URLs) d'un fichier de l'extension.
+  - : `string`. Une URL correspondant vers une icône à afficher dans la notification. Ça peut être une URL de donnée, une URL blob, une URL http ou https, ou une [l'URL relative](/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#relative_urls) d'un fichier de l'extension.
 - `contextMessage`{{optional_inline}}
   - : `string`. Du texte supplémentaire à afficher.
 - `priority`{{optional_inline}}
@@ -51,7 +41,7 @@ Les trois premières propriétés - `type`, `title`, `message` - sont obligatoir
 
 - `imageUrl`
 
-  - : `string`. Une URL pointant vers une image à utiliser dans la notification. Ça peut être une URL de donnée, une URL blob, une URL http ou https, ou une [l'URL relative](/fr/Add-ons/WebExtensions/Chrome_incompatibilities#Relative_URLs) d'un fichier de l'extension.
+  - : `string`. Une URL pointant vers une image à utiliser dans la notification. Ça peut être une URL de donnée, une URL blob, une URL http ou https, ou une [l'URL relative](/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#relative_urls) d'un fichier de l'extension.
 
     _Cette propriété est utilisable seuleument si le `type` de la notification est `'image'`. Dans ce cas, cette propriété sera obligatoire si l'objet `NotificationOptions` est utilisé avec {{WebExtAPIRef("notifications.create()")}}, mais optionel avec_ _{{WebExtAPIRef("notifications.update()")}}._
 
@@ -71,14 +61,14 @@ Les trois premières propriétés - `type`, `title`, `message` - sont obligatoir
 
 Notez que les propriétés `appIconMaskUrl` et `isClickable` ne sont pas supportées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.NotificationOptions")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).
+> Cette API est basée sur l'API chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

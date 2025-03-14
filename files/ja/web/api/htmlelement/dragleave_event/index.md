@@ -1,38 +1,39 @@
 ---
-title: 'HTMLElement: dragleave イベント'
+title: "HTMLElement: dragleave イベント"
+short-title: dragleave
 slug: Web/API/HTMLElement/dragleave_event
+l10n:
+  sourceCommit: ea4425b74ae0dc1ec17737b4e28d8df2b73f1eae
 ---
 
 {{APIRef}}
 
 `dragleave` イベントは、ドラッグしている要素や選択中のテキストが妥当なドロップターゲットを離れたときに発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">既定のアクション</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("DragEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("GlobalEventHandlers/ondragleave", "ondragleave")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、{{domxref("Document")}} オブジェクトと {{domxref("Window")}} オブジェクトまでバブルアップする可能性があります。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
+
+```js
+addEventListener("dragleave", (event) => {});
+
+ondragleave = (event) => {};
+```
+
+## イベント型
+
+{{domxref("DragEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("DragEvent")}}
+
+## イベントプロパティ
+
+_以下に挙げたプロパティに加えて、親である {{domxref("Event")}} から継承したプロパティもあります。_
+
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+  - : ドラッグ＆ドロップ操作の間に転送されるデータです。
 
 ## 例
 
@@ -42,15 +43,13 @@ slug: Web/API/HTMLElement/dragleave_event
 
 ドラッグ可能な要素がコンテナーの上にある間は、もう一方のコンテナーの背景を紫色にし、ドラッグ可能な要素がコンテナーの上にドロップされる可能性があることを知らせます。 `dragleave` イベントを待ち受けて、ドラッグ可能な要素がコンテナーからドラッグされたときにコンテナーの背景をリセットするようにします。
 
-ドラッグ＆ドロップの完全な例については、[`drag`](/ja/docs/Web/API/HTMLElement/drag_event) イベントのページを参照してください。
+しかし、この例ではドロップは実装していません。ドラッグ＆ドロップの完全な例については、[`drag`](/ja/docs/Web/API/HTMLElement/drag_event) イベントのページを参照してください。
 
 #### HTML
 
 ```html
 <div class="dropzone">
-  <div id="draggable" draggable="true">
-    この div はドラッグ可
-  </div>
+  <div id="draggable" draggable="true">この div はドラッグ可</div>
 </div>
 <div class="dropzone" id="droptarget"></div>
 ```
@@ -85,14 +84,14 @@ body {
 
 ```js
 const target = document.getElementById("droptarget");
-target.addEventListener("dragenter", event => {
+target.addEventListener("dragenter", (event) => {
   // ドラッグ可能な要素がドロップ先に入ったときに、ドロップ先の候補を強調表示する。
   if (event.target.classList.contains("dropzone")) {
     event.target.classList.add("dragover");
   }
 });
 
-target.addEventListener("dragleave", event => {
+target.addEventListener("dragleave", (event) => {
   // ドラッグ可能な要素がドロップ先から離れたときに、ドロップ先の候補の背景をリセットする
   if (event.target.classList.contains("dropzone")) {
     event.target.classList.remove("dragover");
@@ -122,9 +121,3 @@ target.addEventListener("dragleave", event => {
   - {{domxref("HTMLElement/dragover_event", "dragover")}}
   - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
   - {{domxref("HTMLElement/drop_event", "drop")}}
-
-- 他を対象としたこのイベント
-
-  - {{domxref("Window")}}: {{domxref("Window/dragleave_event", "dragleave")}} イベント
-  - {{domxref("Document")}}: {{domxref("Document/dragleave_event", "dragleave")}} イベント
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragleave_event", "dragleave")}} イベント

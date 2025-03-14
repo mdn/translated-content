@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/Greater_than
 
 大于运算符（`>`）在左操作数大于右操作数时返回 `true`，否则返回 `false`。
 
-{{EmbedInteractiveExample("pages/js/expressions-greater-than.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Greater than operator")}}
+
+```js interactive-example
+console.log(5 > 3);
+// Expected output: true
+
+console.log(3 > 3);
+// Expected output: false
+
+// Compare bigint to number
+console.log(3n > 5);
+// Expected output: false
+
+console.log("ab" > "aa");
+// Expected output: true
+```
 
 ## 语法
 
@@ -24,57 +39,57 @@ x > y
 ### 字符串与字符串比较
 
 ```js
-console.log("a" > "b");        // false
-console.log("a" > "a");        // false
-console.log("a" > "3");        // true
+console.log("a" > "b"); // false
+console.log("a" > "a"); // false
+console.log("a" > "3"); // true
 ```
 
 ### 字符串与数值比较
 
 ```js
-console.log("5" > 3);          // true
-console.log("3" > 3);          // false
-console.log("3" > 5);          // false
+console.log("5" > 3); // true
+console.log("3" > 3); // false
+console.log("3" > 5); // false
 
-console.log("hello" > 5);      // false
-console.log(5 > "hello");      // false
+console.log("hello" > 5); // false
+console.log(5 > "hello"); // false
 
-console.log("5" > 3n);         // true
-console.log("3" > 5n);         // false
+console.log("5" > 3n); // true
+console.log("3" > 5n); // false
 ```
 
 ### 数值与数值比较
 
 ```js
-console.log(5 > 3);            // true
-console.log(3 > 3);            // false
-console.log(3 > 5);            // false
+console.log(5 > 3); // true
+console.log(3 > 3); // false
+console.log(3 > 5); // false
 ```
 
 ### 数值与大整型比较
 
 ```js
-console.log(5n > 3);           // true
-console.log(3 > 5n);           // false
+console.log(5n > 3); // true
+console.log(3 > 5n); // false
 ```
 
 ### 比较 Boolean、null、undefined 和 NaN
 
 ```js
-console.log(true > false);     // true
-console.log(false > true);     // false
+console.log(true > false); // true
+console.log(false > true); // false
 
-console.log(true > 0);         // true
-console.log(true > 1);         // false
+console.log(true > 0); // true
+console.log(true > 1); // false
 
-console.log(null > 0);         // false
-console.log(1 > null);         // true
+console.log(null > 0); // false
+console.log(1 > null); // true
 
-console.log(undefined > 3);    // false
-console.log(3 > undefined);    // false
+console.log(undefined > 3); // false
+console.log(3 > undefined); // false
 
-console.log(3 > NaN);          // false
-console.log(NaN > 3);          // false
+console.log(3 > NaN); // false
+console.log(NaN > 3); // false
 ```
 
 ## 规范

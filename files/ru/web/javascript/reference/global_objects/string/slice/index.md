@@ -1,21 +1,31 @@
 ---
 title: String.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 ---
-{{JSRef("Global_Objects", "String")}}
+
+{{JSRef}}
 
 ## Сводка
 
 Метод **`slice()`** извлекает часть строки и возвращает новую строку без изменения оригинальной строки.
 
-{{EmbedInteractiveExample("pages/js/string-slice.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.slice()", "taller")}}
+
+```js interactive-example
+const str = "The quick brown fox jumps over the lazy dog.";
+
+console.log(str.slice(31));
+// Expected output: "the lazy dog."
+
+console.log(str.slice(4, 19));
+// Expected output: "quick brown fox"
+
+console.log(str.slice(-4));
+// Expected output: "dog."
+
+console.log(str.slice(-9, -5));
+// Expected output: "lazy"
+```
 
 ## Синтаксис
 
@@ -58,7 +68,7 @@ str.slice(beginIndex[, endIndex])
 В следующем примере метод `slice()` используется для создания новой строки.
 
 ```js
-let str1 = 'Приближается утро.';
+let str1 = "Приближается утро.";
 let str2 = str1.slice(1, 8);
 let str3 = str1.slice(4, -2);
 let str4 = str1.slice(12);
@@ -75,10 +85,10 @@ console.log(str5); // ВЫВОД: ""
 В следующем примере метод `slice()` используется вместе с отрицательными индексами.
 
 ```js
-let str = 'Приближается утро.';
-str.slice(-3);     // вернёт 'ро.'
+let str = "Приближается утро.";
+str.slice(-3); // вернёт 'ро.'
 str.slice(-3, -1); // вернёт 'ро'
-str.slice(0, -1);  // вернёт 'Приближается утро'
+str.slice(0, -1); // вернёт 'Приближается утро'
 ```
 
 В этом примере начальным индексом считается `11`-й символ с конца строки, а конечным - `16`-й с начала.

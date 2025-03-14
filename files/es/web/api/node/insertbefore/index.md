@@ -1,7 +1,6 @@
 ---
 title: Node.insertBefore()
 slug: Web/API/Node/insertBefore
-original_slug: Web/API/Node/insertarAntes
 ---
 
 {{APIRef("DOM")}}
@@ -27,7 +26,7 @@ var insertedNode = parentNode.insertBefore(newNode, referenceNode);
 
 Si `referenceNode` es `null`, el `newNode` se insertará al final de la lista de nodos hijos.
 
-> **Nota:** `referenceNode` **no** es un parámetro opcional -- debes pasar explícitamente un `Node` o `null`. No proporcionándolo o pasando valores no válidos podría provocar un [comportamiento](https://code.google.com/p/chromium/issues/detail?id=419780) [distinto](https://bugzilla.mozilla.org/show_bug.cgi?id=119489) en diferentes versiones de navegadores.
+> **Nota:** `referenceNode` **no** es un parámetro opcional — debes pasar explícitamente un `Node` o `null`. No proporcionándolo o pasando valores no válidos podría provocar un [comportamiento](https://code.google.com/p/chromium/issues/detail?id=419780) [distinto](https://bugzilla.mozilla.org/show_bug.cgi?id=119489) en diferentes versiones de navegadores.
 
 ### Valor devuelto
 
@@ -39,30 +38,30 @@ El valor devuelto es el hijo añadido excepto cuando `newNode` es un {{domxref("
 
 ```html
 <div id="parentElement">
-   <span id="childElement">foo bar</span>
+  <span id="childElement">foo bar</span>
 </div>
 
 <script>
-// Crear el nodo a insertar
-var newNode = document.createElement("span");
+  // Crear el nodo a insertar
+  var newNode = document.createElement("span");
 
-// Obtener una referencia al nodo padre
-var parentDiv = document.getElementById("childElement").parentNode;
+  // Obtener una referencia al nodo padre
+  var parentDiv = document.getElementById("childElement").parentNode;
 
-// Comienzo del test [ 1 ] : Existe un childElement --> Todo funciona correctamente
-var sp2 = document.getElementById("childElement");
-parentDiv.insertBefore(newNode, sp2);
-// Fin del test [ 1 ]
+  // Comienzo del test [ 1 ] : Existe un childElement --> Todo funciona correctamente
+  var sp2 = document.getElementById("childElement");
+  parentDiv.insertBefore(newNode, sp2);
+  // Fin del test [ 1 ]
 
-// Comienzo del test [ 2 ] : childElement no es del tipo undefined
-var sp2 = undefined; // No existe un nodo con id "childElement"
-parentDiv.insertBefore(newNode, sp2); // Implicit dynamic cast to type Node
-// Fin del test [ 2 ]
+  // Comienzo del test [ 2 ] : childElement no es del tipo undefined
+  var sp2 = undefined; // No existe un nodo con id "childElement"
+  parentDiv.insertBefore(newNode, sp2); // Implicit dynamic cast to type Node
+  // Fin del test [ 2 ]
 
-// Comienzo del test [ 3 ] : childElement es de Tipo "undefined" ( string )
-var sp2 = "undefined"; // No existe un nodo con id "childElement"
-parentDiv.insertBefore(newNode, sp2); // Genera "Type Error: Invalid Argument"
-// Fin del test [ 3 ]
+  // Comienzo del test [ 3 ] : childElement es de Tipo "undefined" ( string )
+  var sp2 = "undefined"; // No existe un nodo con id "childElement"
+  parentDiv.insertBefore(newNode, sp2); // Genera "Type Error: Invalid Argument"
+  // Fin del test [ 3 ]
 </script>
 ```
 
@@ -74,16 +73,16 @@ parentDiv.insertBefore(newNode, sp2); // Genera "Type Error: Invalid Argument"
 </div>
 
 <script>
-// Crea un nuevo, elemento <span>
-var sp1 = document.createElement("span");
+  // Crea un nuevo, elemento <span>
+  var sp1 = document.createElement("span");
 
-// Obtener una referencia al elemento, antes de donde queremos insertar el elemento
-var sp2 = document.getElementById("childElement");
-// Obtener una referencia al nodo padre
-var parentDiv = sp2.parentNode;
+  // Obtener una referencia al elemento, antes de donde queremos insertar el elemento
+  var sp2 = document.getElementById("childElement");
+  // Obtener una referencia al nodo padre
+  var parentDiv = sp2.parentNode;
 
-// Inserta un nuevo elemento en el DOM antes de sp2
-parentDiv.insertBefore(sp1, sp2);
+  // Inserta un nuevo elemento en el DOM antes de sp2
+  parentDiv.insertBefore(sp1, sp2);
 </script>
 ```
 
@@ -99,11 +98,11 @@ Si `sp2` no tiene ningún hermano depués de él, entonces debe ser el último h
 
 ### Ejemplo 3
 
-Inserta un elemento antes del primer elemento hijo, utilizando la propiedad [firstChild](/es/docs/DOM/Node.firstChild).
+Inserta un elemento antes del primer elemento hijo, utilizando la propiedad [firstChild](/es/docs/Web/API/Node/firstChild).
 
 ```js
 // Obtener una referencia al elemento en el que se quiere insertar un nuevo nodo
-var parentElement = document.getElementById('parentElement');
+var parentElement = document.getElementById("parentElement");
 // Obtener una referencia al primer hijo
 var theFirstChild = parentElement.firstChild;
 
@@ -116,13 +115,13 @@ parentElement.insertBefore(newElement, theFirstChild);
 
 Cuando el elemento no tiene ub primer hijo, entonces `firstChild` es `null`. Aun así, el elemento se añade al padre después del último hijo. Puesto que el elemento padre no tenía primer hijo, tampoco tiene último hijo. Por tanto, el nuevo elemento es el único elemento después de ser insertado.
 
-## Compatibilidad en navegadores
-
-{{Compat("api.Node.insertBefore")}}
-
 ## Especificaciones
 
 {{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

@@ -1,13 +1,12 @@
 ---
 title: box-flex-group
 slug: Web/CSS/box-flex-group
-browser-compat: css.properties.box-flex-group
-translation_of: Web/CSS/box-flex-group
 ---
 
 {{CSSRef}}{{Non-standard_header}}
 
-> **Attention :** Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<i lang="en">flexbox</i>) et a été remplacée dans une version plus récente de la spécification. Voir la page [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) pour plus d'informations.
+> [!WARNING]
+> Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<i lang="en">flexbox</i>) et a été remplacée dans une version plus récente de la spécification. Voir la page [Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) pour plus d'informations.
 
 La propriété [CSS](/fr/docs/Web/CSS) **`box-flex-group`** permet d'affecter un élément fils de la boîte flexible à un groupe.
 

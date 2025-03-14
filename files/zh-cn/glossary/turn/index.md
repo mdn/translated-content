@@ -1,18 +1,17 @@
 ---
 title: TURN
 slug: Glossary/TURN
+l10n:
+  sourceCommit: fbc9980c0718c3ead40863b20a74fc8535ebcc85
 ---
 
-**TURN** (NAT 的中继穿越) 是一个能够让位于{{glossary("NAT", "Network Address Translator")}}(NAT) 或者防火墙之后的主机接受和发送数据的{{Glossary('protocol')}}(协议)。
+{{GlossarySidebar}}
 
-## 学习更多
+**TURN**（使用中继器穿透 NAT）是一个能够让位于{{glossary("NAT", "网络地址转换")}}（NAT）或者防火墙之后的主机接受和发送数据的{{Glossary("protocol", "协议")}}。{{Glossary("WebRTC")}} 使用 TURN 允许互联网上的任何两台设备进入点对点连接。
 
-### 通用知识
+## 参见
 
-- [TURN](https://zh.wikipedia.org/wiki/TURN) 在 Wikipedia
+- 维基百科上的 [TURN](https://zh.wikipedia.org/wiki/TURN)
 - [WebRTC 协议](/zh-CN/docs/Web/API/WebRTC_API/Protocols)
-
-### 技术参考
-
-- [详细说明书](https://www.ietf.org/rfc/rfc5766.txt)
-- [IPv6 版 最新详细说明书](https://www.ietf.org/rfc/rfc6156.txt)
+- [规范](https://datatracker.ietf.org/doc/html/rfc5766)
+- [IPv6 版最新规范](https://datatracker.ietf.org/doc/html/rfc6156.txt)

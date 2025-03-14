@@ -1,12 +1,6 @@
 ---
 title: Fonctionnalités expérimentales dans Firefox
 slug: Mozilla/Firefox/Experimental_features
-tags:
-  - Experimental
-  - Firefox
-  - Preferences
-  - features
-translation_of: Mozilla/Firefox/Experimental_features
 ---
 
 {{FirefoxSidebar}}
@@ -346,7 +340,7 @@ Le descripteur CSS [`@font-face/size-adjust`](/fr/docs/Web/CSS/@font-face/size-a
 
 ### Nombres seuls pour les proportions dans les requêtes média
 
-Il s'agit ici de la prise en charge permettant d'utiliser un seul nombre ([`number`](/fr/docs/Web/CSS/number)) pour exprimer le [ratio](/fr/docs/Web/CSS/ratio) lors de la définition d'une [requête média](/fr/docs/Web/CSS/Media_Queries). Voir [le bug 1565562](https://bugzilla.mozilla.org/show_bug.cgi?id=1565562) pour plus de détails.
+Il s'agit ici de la prise en charge permettant d'utiliser un seul nombre ([`number`](/fr/docs/Web/CSS/number)) pour exprimer le [ratio](/fr/docs/Web/CSS/ratio) lors de la définition d'une [requête média](/fr/docs/Web/CSS/CSS_media_queries). Voir [le bug 1565562](https://bugzilla.mozilla.org/show_bug.cgi?id=1565562) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -426,7 +420,7 @@ La propriété [`backdrop-filter`](/fr/docs/Web/CSS/backdrop-filter) permet d'ap
 
 ### Grilles : disposition en maçonnerie
 
-Cette fonctionnalité ajoute la prise en charge pour [les dispositions « en maçonnerie »](/fr/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) basées sur les grilles où un axe est organisé avec une disposition donnée et où l'autre suit une disposition de grille normale. Cela permet aux développeuses et développeurs de créer plus facilement des dispositions pour des galeries. Voir [le bug 1607954](https://bugzilla.mozilla.org/show_bug.cgi?id=1607954) pour plus de détails.
+Cette fonctionnalité ajoute la prise en charge pour [les dispositions « en maçonnerie »](/fr/docs/Web/CSS/CSS_grid_layout/Masonry_layout) basées sur les grilles où un axe est organisé avec une disposition donnée et où l'autre suit une disposition de grille normale. Cela permet aux développeuses et développeurs de créer plus facilement des dispositions pour des galeries. Voir [le bug 1607954](https://bugzilla.mozilla.org/show_bug.cgi?id=1607954) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -588,7 +582,7 @@ La méthode `at()` qui permet d'utiliser une indexation relative a été ajouté
 
 ### Champs de classe privés
 
-Voir la page [sur les champs de classe privés](/fr/docs/Web/JavaScript/Reference/Classes/Private_class_fields) pour plus d'informations.
+Voir la page [sur les champs de classe privés](/fr/docs/Web/JavaScript/Reference/Classes/Private_properties) pour plus d'informations.
 
 <table class="standard-table">
   <thead>
@@ -1213,7 +1207,7 @@ L'API [Visual Viewport](/fr/docs/Web/API/Visual_Viewport_API) (qu'on peut tradui
 
 ### Constructeur pour les feuilles de style
 
-Cette fonctionnalité ajoute un constructeur pour l'interface [`CSSStyleSheet`](/fr/docs/Web/API/CSSStyleSheet) et d'autres modifications permettant de créer de nouvelles feuilles de style sans avoir à ajouter la feuille au HTML. Cela permet de créer des feuilles de style réutilisables beaucoup plus facilement afin de les utiliser avec [Shadow DOM](/fr/docs/Web/Web_Components/Using_shadow_DOM). L'implémentation actuelle n'est pas encore terminée. Voir [le bug 1520690](https://bugzilla.mozilla.org/show_bug.cgi?id=1520690) pour plus de détails.
+Cette fonctionnalité ajoute un constructeur pour l'interface [`CSSStyleSheet`](/fr/docs/Web/API/CSSStyleSheet) et d'autres modifications permettant de créer de nouvelles feuilles de style sans avoir à ajouter la feuille au HTML. Cela permet de créer des feuilles de style réutilisables beaucoup plus facilement afin de les utiliser avec [Shadow DOM](/fr/docs/Web/API/Web_components/Using_shadow_DOM). L'implémentation actuelle n'est pas encore terminée. Voir [le bug 1520690](https://bugzilla.mozilla.org/show_bug.cgi?id=1520690) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -1255,7 +1249,7 @@ Cette fonctionnalité ajoute un constructeur pour l'interface [`CSSStyleSheet`](
 
 ### WebRTC et média
 
-Les fonctionnalités expérimentales qui suivent incluent celles relatives aux API suivantes [WebRTC](/fr/docs/Web/API/WebRTC_API), [Web Audio](/fr/docs/Web/API/Web_Audio_API), [Media Source Extensions](/fr/docs/Web/API/Media_Source_Extensions_API), [Encrypted Media Extensions](/fr/docs/Web/API/Encrypted_Media_Extensions_API), et [Media Capture and Streams](/fr/docs/Web/API/Media_Streams_API).
+Les fonctionnalités expérimentales qui suivent incluent celles relatives aux API suivantes [WebRTC](/fr/docs/Web/API/WebRTC_API), [Web Audio](/fr/docs/Web/API/Web_Audio_API), [Media Source Extensions](/fr/docs/Web/API/Media_Source_Extensions_API), [Encrypted Media Extensions](/fr/docs/Web/API/Encrypted_Media_Extensions_API), et [Media Capture and Streams](/fr/docs/Web/API/Media_Capture_and_Streams_API).
 
 #### Méthodes asynchrones pour l'ajout et le retrait sur SourceBuffer
 
@@ -1423,7 +1417,7 @@ Afin d'atténuer le risque d'attaque de l'homme du milieu (MitM) pour le contenu
 
 #### Indication des pages non-sécurisées
 
-Les deux préférences suivantes permettent d'ajouter un libellé « Non-sécurisé » dans la barre d'adresse à côté de l'icône de cadenas lorsqu'une page est chargée de façon non-sécurisée (via [HTTP](/fr/docs/Glossary/HTTP) plutôt qu'avec [HTTPS](/fr/docs/Glossary/https)). Voir [le bug 1335970](https://bugzilla.mozilla.org/show_bug.cgi?id=1335970) pour plus de détails.
+Les deux préférences suivantes permettent d'ajouter un libellé « Non-sécurisé » dans la barre d'adresse à côté de l'icône de cadenas lorsqu'une page est chargée de façon non-sécurisée (via [HTTP](/fr/docs/Glossary/HTTP) plutôt qu'avec [HTTPS](/fr/docs/Glossary/HTTPS)). Voir [le bug 1335970](https://bugzilla.mozilla.org/show_bug.cgi?id=1335970) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -1512,9 +1506,9 @@ Cela modifie également l'avertissement de la console : si la mise à niveau ré
 
 #### En-tête Feature-Policy
 
-[Feature-Policy](/fr/docs/Web/HTTP/Feature_Policy) est un en-tête HTTP qui permet de choisir l'activation, la désactivation ou certaines des fonctionnalités et API dans le navigateur. Cet en-tête est similaire au CSP mais permet de contrôler des fonctionnalités plutôt que des traits liés à la sécurité.
+[Feature-Policy](/fr/docs/Web/HTTP/Permissions_Policy) est un en-tête HTTP qui permet de choisir l'activation, la désactivation ou certaines des fonctionnalités et API dans le navigateur. Cet en-tête est similaire au CSP mais permet de contrôler des fonctionnalités plutôt que des traits liés à la sécurité.
 
-> **Note :**
+> [!NOTE]
 >
 > L'en-tête `Feature-Policy` a été renommé en `Permissions-Policy` dans la spécification. Cet article sera mis à jour afin de refléter ce changement.
 
@@ -1684,7 +1678,7 @@ Cette fonctionnalité permet au moniteur réseau d'afficher des informations sur
 
 #### Bulles d'informations pour la compatibilité CSS des navigateurs
 
-La vue pour les règles CSS peut afficher des bulles d'informations pour la compatibilité des navigateurs pour les propriétés qui ont des problèmes connus. Pour plus d'informations, voir : [Examiner et éditer le HTML > Avertissements de compatibilité navigateur](/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#browser_compat_warnings).
+La vue pour les règles CSS peut afficher des bulles d'informations pour la compatibilité des navigateurs pour les propriétés qui ont des problèmes connus. Pour plus d'informations, voir : [Examiner et éditer le HTML > Avertissements de compatibilité navigateur](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to#browser_compat_warnings).
 
 <table class="standard-table">
   <thead>

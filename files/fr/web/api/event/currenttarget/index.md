@@ -1,13 +1,6 @@
 ---
 title: Event.currentTarget
 slug: Web/API/Event/currentTarget
-tags:
-  - API
-  - Cible
-  - DOM
-  - Evènement
-  - Propriété
-translation_of: Web/API/Event/currentTarget
 ---
 
 {{APIRef("DOM")}}
@@ -31,24 +24,25 @@ var currentEventTarget = event.currentTarget;
 ```js
 // Cette fonction masque la cible courante de l'évènement
 // et l'affiche dans la console.
-function hide(e){
-  e.currentTarget.style.visibility = 'hidden';
+function hide(e) {
+  e.currentTarget.style.visibility = "hidden";
   console.log(e.currentTarget);
   // Lorsque cette fonction est utilisée en gestionnaire d'évènement
   // on aura this === e.currentTarget
 }
 
-var ps = document.getElementsByTagName('p');
+var ps = document.getElementsByTagName("p");
 
-for(var i = 0; i < ps.length; i++){
+for (var i = 0; i < ps.length; i++) {
   // On affiche l'élément <p> qui a été cliqué dans la console
-  ps[i].addEventListener('click', hide, false);
+  ps[i].addEventListener("click", hide, false);
 }
 // On affiche l'élément <body> dans la console
-document.body.addEventListener('click', hide, false);
+document.body.addEventListener("click", hide, false);
 ```
 
-> **Note :** La valeur de `event.currentTarget` est **uniquement** disponible lorsque l'évènement est géré. Ainsi, on ne pourra pas observer la valeur de `currentTarget` _a posteriori_ (ex. si on a stocké la valeur d'`event` dans une variable lors de la gestion de l'évènement puis qu'on utilise celle-ci plus tard, `event.currentTarget` aura la valeur `null`).
+> [!NOTE]
+> La valeur de `event.currentTarget` est **uniquement** disponible lorsque l'évènement est géré. Ainsi, on ne pourra pas observer la valeur de `currentTarget` _a posteriori_ (ex. si on a stocké la valeur d'`event` dans une variable lors de la gestion de l'évènement puis qu'on utilise celle-ci plus tard, `event.currentTarget` aura la valeur `null`).
 
 ## Spécifications
 
@@ -60,4 +54,4 @@ document.body.addEventListener('click', hide, false);
 
 ## Voir aussi
 
-- [Comparaison des différentes cibles pour les évènements](/fr/docs/Web/API/Event/Comparaison_des_cibles_d_évènements)
+- [Comparaison des différentes cibles pour les évènements](/fr/docs/Learn/JavaScript/Building_blocks/Event_bubbling)

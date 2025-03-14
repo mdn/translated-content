@@ -1,19 +1,13 @@
 ---
 title: DOMParser
 slug: Web/API/DOMParser
-tags:
-  - API
-  - DOM
-  - XML
-  - Экспериментальное
-translation_of: Web/API/DOMParser
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
-`DOMParser` может парсить XML или HTML источник содержащийся в строке в DOM [Document](/ru/docs/DOM/document). Спецификация `DOMParser находится в` [DOM Parsing and Serialization](https://w3c.github.io/DOM-Parsing/).
+`DOMParser` может парсить XML или HTML источник содержащийся в строке в DOM [Document](/ru/docs/Web/API/Document). Спецификация `DOMParser находится в` [DOM Parsing and Serialization](https://w3c.github.io/DOM-Parsing/).
 
-Заметьте, что [XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest) поддерживает парсинг XML и HTML из интернет ресурсов (по ссылке)
+Заметьте, что [XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest) поддерживает парсинг XML и HTML из интернет ресурсов (по ссылке)
 
 ## Создание DOMParser
 
@@ -32,7 +26,7 @@ var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 
 ### Обработка ошибок
 
-Заметьте, если процесс парсинга не удастся , `DOMParser` теперь не выдаёт исключение, но вместо этого выдаёт документ ошибки (see {{Bug(45566)}}):
+Заметьте, если процесс парсинга не удастся , `DOMParser` теперь не выдаёт исключение, но вместо этого выдаёт документ ошибки (see [Firefox bug 45566](https://bugzil.la/45566)):
 
 ```xml
 <parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml">
@@ -45,7 +39,7 @@ var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 
 ## Разбор SVG или HTML
 
-`DOMParser` так же может быть использован для разбора SVG документа {{geckoRelease("10.0")}} или HTML документа {{geckoRelease("12.0")}}. На выходе возможны 3 варианта, в зависимости от переданного MIME типа. Если MIME тип передан как `text/xml`, результирующий объект будет типа `XMLDocument`, если `image/svg+xml`, соответственно `SVGDocument`, а для MIME типа `text/html` - `HTMLDocument`.
+`DOMParser` так же может быть использован для разбора SVG документа Gecko 10.0 или HTML документа Gecko 12.0. На выходе возможны 3 варианта, в зависимости от переданного MIME типа. Если MIME тип передан как `text/xml`, результирующий объект будет типа `XMLDocument`, если `image/svg+xml`, соответственно `SVGDocument`, а для MIME типа `text/html` - `HTMLDocument`.
 
 ```js
 var parser = new DOMParser();
@@ -76,40 +70,34 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 /*! @source https://gist.github.com/1129031 */
 /*global document, DOMParser*/
 
-(function(DOMParser) {
+(function (DOMParser) {
   "use strict";
 
-  var
-    proto = DOMParser.prototype
-  , nativeParse = proto.parseFromString
-  ;
-
+  var proto = DOMParser.prototype,
+    nativeParse = proto.parseFromString;
   // Firefox/Opera/IE throw errors on unsupported types
   try {
     // WebKit returns null on unsupported types
-    if ((new DOMParser()).parseFromString("", "text/html")) {
+    if (new DOMParser().parseFromString("", "text/html")) {
       // text/html parsing is natively supported
       return;
     }
   } catch (ex) {}
 
-  proto.parseFromString = function(markup, type) {
+  proto.parseFromString = function (markup, type) {
     if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
-      var
-        doc = document.implementation.createHTMLDocument("")
-      ;
-            if (markup.toLowerCase().indexOf('<!doctype') > -1) {
-              doc.documentElement.innerHTML = markup;
-            }
-            else {
-              doc.body.innerHTML = markup;
-            }
+      var doc = document.implementation.createHTMLDocument("");
+      if (markup.toLowerCase().indexOf("<!doctype") > -1) {
+        doc.documentElement.innerHTML = markup;
+      } else {
+        doc.body.innerHTML = markup;
+      }
       return doc;
     } else {
       return nativeParse.apply(this, arguments);
     }
   };
-}(DOMParser));
+})(DOMParser);
 ```
 
 ### DOMParser from Chrome/JSM/XPCOM/Privileged Scope
@@ -120,13 +108,13 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Анализ и сериализация XML](/ru/docs/Parsing_and_serializing_XML)
-- [XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest)
-- [XMLSerializer](/ru/docs/XMLSerializer)
-- [Parsing HTML to DOM](/en-US/Add-ons/Code_snippets/HTML_to_DOM)
+- [Анализ и сериализация XML](/ru/docs/Web/XML/Parsing_and_serializing_XML)
+- [XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest)
+- [XMLSerializer](/ru/docs/Web/API/XMLSerializer)
+- [Parsing HTML to DOM](/ru/docs/Mozilla/Add-ons/Code_snippets/HTML_to_DOM)

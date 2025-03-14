@@ -50,13 +50,11 @@ inputForm.onsubmit = function(event) {
 
 ## Especificações
 
-| Especificação                                                                        | Status                               | Comentário |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
-| {{SpecName('Web Speech API', '#dfn-utterancevoice', 'voice')}} | {{Spec2('Web Speech API')}} |            |
+{{Specifications}}
 
-## Compatiblidade dos navegadores
+## Compatibilidade com navegadores
 
-{{Compat("api.SpeechSynthesisUtterance.voice")}}
+{{Compat}}
 
 ## Veja também
 

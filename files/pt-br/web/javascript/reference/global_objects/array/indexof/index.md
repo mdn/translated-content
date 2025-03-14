@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 
 O método **`indexOf()`** retorna o primeiro índice em que o elemento pode ser encontrado no array, retorna -1 caso o mesmo não esteja presente.
 
-{{EmbedInteractiveExample("pages/js/array-indexof.html")}}
+{{InteractiveExample("JavaScript Demo: Array.indexOf()")}}
+
+```js interactive-example
+const beasts = ["ant", "bison", "camel", "duck", "bison"];
+
+console.log(beasts.indexOf("bison"));
+// Expected output: 1
+
+// Start from index 2
+console.log(beasts.indexOf("bison", 2));
+// Expected output: 4
+
+console.log(beasts.indexOf("giraffe"));
+// Expected output: -1
+```
 
 ## Sintaxe
 
@@ -24,7 +38,7 @@ array.indexOf(elementoDePesquisa, [pontoInicial = 0])
 
 ## Descrição
 
-`indexOf()` compara o `elementoDePesquisa` com os elementos do Array usando [igualdade estrita](/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) (o mesmo método usado pelo ===, ou triple-equals operator).
+`indexOf()` compara o `elementoDePesquisa` com os elementos do Array usando [igualdade estrita](/pt-BR/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators) (o mesmo método usado pelo ===, ou triple-equals operator).
 
 ## Exemplos
 
@@ -34,9 +48,9 @@ array.indexOf(elementoDePesquisa, [pontoInicial = 0])
 
 ```js
 var array = [2, 5, 9];
-array.indexOf(2);     // 0
-array.indexOf(7);     // -1
-array.indexOf(9, 2);  // 2
+array.indexOf(2); // 0
+array.indexOf(7); // -1
+array.indexOf(9, 2); // 2
 array.indexOf(2, -1); // -1
 array.indexOf(2, -3); // 0
 ```
@@ -45,8 +59,8 @@ array.indexOf(2, -3); // 0
 
 ```js
 var indices = [];
-var array = ['a', 'b', 'a', 'c', 'a', 'd'];
-var elemento = 'a';
+var array = ["a", "b", "a", "c", "a", "d"];
+var elemento = "a";
 var idx = array.indexOf(elemento);
 while (idx != -1) {
   indices.push(idx);
@@ -59,20 +73,20 @@ console.log(indices);
 ### Encontrar se um elemento existe ou não e atualizar o array
 
 ```js
-function atualizarColecaoVegetais (vegetais, vegetal) {
-    if (vegetais.indexOf(vegetal) === -1) {
-        vegetais.push(vegetal);
-        console.log('Nova coleção de vegetais é : ' + vegetais);
-    } else if (vegetais.indexOf(vegetal) > -1) {
-        console.log(vegetal + ' já existe na coleção de vegetais.');
-    }
+function atualizarColecaoVegetais(vegetais, vegetal) {
+  if (vegetais.indexOf(vegetal) === -1) {
+    vegetais.push(vegetal);
+    console.log("Nova coleção de vegetais é : " + vegetais);
+  } else if (vegetais.indexOf(vegetal) > -1) {
+    console.log(vegetal + " já existe na coleção de vegetais.");
+  }
 }
 
-var vegetais = ['batata', 'tomate', 'pimenta', 'pimentao'];
+var vegetais = ["batata", "tomate", "pimenta", "pimentao"];
 
-atualizarColecaoVegetais(vegetais, 'espinafre');
+atualizarColecaoVegetais(vegetais, "espinafre");
 // Nova coleção de vegatais é : batata,tomate,pimenta,pimentao,espinafre
-atualizarColecaoVegetais(vegetais, 'espinafre');
+atualizarColecaoVegetais(vegetais, "espinafre");
 // espinafre já existe na coleção de vegetais.
 ```
 
@@ -84,14 +98,15 @@ atualizarColecaoVegetais(vegetais, 'espinafre');
 // Passos para a produção do ECMA-262, Edition 5, 15.4.4.14
 // Referência: http://es5.github.io/#x15.4.4.14
 if (!Array.prototype.indexOf) {
-  Array.prototype.indexOf = function(elementoDePesquisa, pontoInicial) {
-
+  Array.prototype.indexOf = function (elementoDePesquisa, pontoInicial) {
     var k;
 
     //1. Deixe-o ser o resultado da chamada de toObject
     // passando o valor de this como argumento.
     if (this == null) {
-      throw new TypeError('"this" é nulo (null) ou não foi definido (undefined)');
+      throw new TypeError(
+        '"this" é nulo (null) ou não foi definido (undefined)',
+      );
     }
 
     var O = Object(this);
@@ -109,7 +124,7 @@ if (!Array.prototype.indexOf) {
 
     // 5. Se o argumento pontoInicial for passado,
     // use o ToInteger(pontoInicial); senao use 0.
-    var n = + pontoInicial || 0;
+    var n = +pontoInicial || 0;
 
     if (Math.abs(n) === Infinity) {
       n = 0;
@@ -152,14 +167,11 @@ if (!Array.prototype.indexOf) {
 
 ## Especificações
 
-| Especificação                                                                                            | Status                   | Comentários                                       |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.14', 'Array.prototype.indexOf')}}                 | {{Spec2('ES5.1')}} | Definição inicial implementada no Javascript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}} | {{Spec2('ES6')}}     |                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.indexOf")}}
+{{Compat}}
 
 ## Veja também
 

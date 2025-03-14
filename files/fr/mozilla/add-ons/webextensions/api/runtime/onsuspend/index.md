@@ -1,31 +1,21 @@
 ---
 title: runtime.onSuspend
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspend
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onSuspend
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspend
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Envoyé sur la page de l'événement juste avant son déchargement. Cela donne à l'extension l'opportunité de faire un peu de nettoyage. Notez que, comme la page est en cours de déchargement, les opérations asynchrones démarrées lors de la gestion de cet événement ne sont pas garanties.
 
-> **Note :** Si quelque chose empêche le déchargement de la page d'événement, l'événement {{WebExtAPIRef("runtime.onSuspendCanceled")}} sera envoyé et la page ne sera pas déchargée.
+> [!NOTE]
+> Si quelque chose empêche le déchargement de la page d'événement, l'événement {{WebExtAPIRef("runtime.onSuspendCanceled")}} sera envoyé et la page ne sera pas déchargée.
 
 ## Syntaxe
 
 ```js
-browser.runtime.onSuspend.addListener(listener)
-browser.runtime.onSuspend.removeListener(listener)
-browser.runtime.onSuspend.hasListener(listener)
+browser.runtime.onSuspend.addListener(listener);
+browser.runtime.onSuspend.removeListener(listener);
+browser.runtime.onSuspend.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -44,9 +34,9 @@ Les événements ont trois fonctions :
 - `callback`
   - : Fonction dui sera appelée lorsque cet événement se produit
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.onSuspend")}}
+{{Compat}}
 
 ## Exemples
 
@@ -63,9 +53,9 @@ browser.runtime.onSuspend.addListener(handleSuspend);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

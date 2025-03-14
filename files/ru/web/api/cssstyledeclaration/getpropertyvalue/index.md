@@ -1,7 +1,6 @@
 ---
 title: CSSStyleDeclaration.getPropertyValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyValue
-translation_of: Web/API/CSSStyleDeclaration/getPropertyValue
 ---
 
 {{ APIRef("CSSOM") }}
@@ -28,13 +27,13 @@ var value = style.getPropertyValue(property);
 
 ```js
 var declaration = document.styleSheets[0].rules[0].style;
-var value = declaration.getPropertyValue('margin'); // "1px 2px"
+var value = declaration.getPropertyValue("margin"); // "1px 2px"
 ```
 
 ## Спецификации
 
 {{Specifications}}
 
-**Браузерная совместимость**
+## Совместимость с браузерами
 
 {{Compat}}

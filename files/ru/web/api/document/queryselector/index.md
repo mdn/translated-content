@@ -1,23 +1,14 @@
 ---
 title: Document.querySelector()
 slug: Web/API/Document/querySelector
-tags:
-  - CSS
-  - DOM
-  - Selector
-  - querySelector
-  - выборка
-  - поиск элемента
-  - поиск элементов
-  - селектор
-translation_of: Web/API/Document/querySelector
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
 {{domxref("Document")}} метод **`querySelector()`** возвращает первый элемент ({{domxref("Element")}}) документа, который соответствует указанному селектору или группе селекторов. Если совпадений не найдено, возвращает значение `null`.
 
-> **Примечание:** Сопоставление выполняется с использованием обхода по предварительному порядку в глубину узлов документа, начиная с первого элемента в разметке документа и повторяя последовательные узлы по порядку количества дочерних узлов.
+> [!NOTE]
+> Сопоставление выполняется с использованием обхода по предварительному порядку в глубину узлов документа, начиная с первого элемента в разметке документа и повторяя последовательные узлы по порядку количества дочерних узлов.
 
 ## Синтаксис
 
@@ -28,9 +19,10 @@ element = document.querySelector(selectors);
 ### Параметры
 
 - _селекторы_
-  - : {{domxref("DOMString")}}, содержащий один или более селекторов для сопоставления. Эта строка должна быть допустимой строкой селектора CSS; если же нет, генерируется исключение `SYNTAX_ERR`. Смотрите [Расположение элементов DOM с использованием селекторов](/ru/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) для того, чтобы узнать больше о селекторах и о том, как ими управлять.
+  - : {{domxref("DOMString")}}, содержащий один или более селекторов для сопоставления. Эта строка должна быть допустимой строкой селектора CSS; если же нет, генерируется исключение `SYNTAX_ERR`. Смотрите [Расположение элементов DOM с использованием селекторов](/ru/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors) для того, чтобы узнать больше о селекторах и о том, как ими управлять.
 
-> **Примечание:** Символы, которые не являются частью стандартного синтаксиса CSS должны быть экранированы символом обратной косой черты. Поскольку JavaScript также использует экранирование символом обратной косой черты, будьте особенно внимательны при написании строковых литералов с использованием этих символов. См. [Escaping special characters](#escaping_special_characters) для получения дополнительной информации.
+> [!NOTE]
+> Символы, которые не являются частью стандартного синтаксиса CSS должны быть экранированы символом обратной косой черты. Поскольку JavaScript также использует экранирование символом обратной косой черты, будьте особенно внимательны при написании строковых литералов с использованием этих символов. См. [Escaping special characters](#escaping_special_characters) для получения дополнительной информации.
 
 ### Возвращаемое значение
 
@@ -47,7 +39,7 @@ element = document.querySelector(selectors);
 
 Если указанный селектор соответствует идентификатору, который неправильно используется более одного раза в документе, возвращается первый элемент с этим идентификатором.
 
-[Псевдо-элементы CSS](/ru/docs/Web/CSS/Pseudo-elements) никогда не вернут никаких элементов, как указано в [API селекторов](http://www.w3.org/TR/selectors-api/#grammar).
+[Псевдо-элементы CSS](/ru/docs/Web/CSS/Pseudo-elements) никогда не вернут никаких элементов, как указано в [API селекторов](https://www.w3.org/TR/selectors-api/#grammar).
 
 ### Экранирование специальных символов
 
@@ -58,15 +50,15 @@ element = document.querySelector(selectors);
 <div id="foo:bar"></div>
 
 <script>
-  console.log('#foo\bar');               // "#fooar" (\b is the backspace control character)
-  document.querySelector('#foo\bar');    // Does not match anything
+  console.log("#foo\bar"); // "#fooar" (\b is the backspace control character)
+  document.querySelector("#foo\bar"); // Does not match anything
 
-  console.log('#foo\\bar');              // "#foo\bar"
-  console.log('#foo\\\\bar');            // "#foo\\bar"
-  document.querySelector('#foo\\bar'); // Match the first div
+  console.log("#foo\\bar"); // "#foo\bar"
+  console.log("#foo\\\\bar"); // "#foo\\bar"
+  document.querySelector("#foo\\bar"); // Match the first div
 
-  document.querySelector('#foo:bar');    // Does not match anything
-  document.querySelector('#foo\\:bar');  // Match the second div
+  document.querySelector("#foo:bar"); // Does not match anything
+  document.querySelector("#foo\\:bar"); // Match the second div
 </script>
 ```
 
@@ -98,7 +90,7 @@ var el = document.querySelector("div.user-panel.main input[name=login]");
 
 ## Смотрите также
 
-- [Locating DOM elements using selectors](/ru/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Locating DOM elements using selectors](/ru/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - {{domxref("document.querySelectorAll()")}}
 - {{domxref("element.querySelector()")}}
 - {{domxref("element.querySelectorAll()")}}

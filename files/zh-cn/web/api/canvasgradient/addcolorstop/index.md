@@ -1,95 +1,69 @@
 ---
-title: CanvasGradient.addColorStop()
+title: CanvasGradient：addColorStop() 方法
 slug: Web/API/CanvasGradient/addColorStop
+l10n:
+  sourceCommit: daeff1a2efaae366bcc8b6d911d86985646e665e
 ---
 
-{{APIRef("Canvas")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
-**`CanvasGradient.addColorStop()`** 方法添加一个由**偏移值**和**颜色值**指定的断点到渐变。如果偏移值不在`0`到`1`之间，将抛出`INDEX_SIZE_ERR`错误，如果颜色值不能被解析为有效的 CSS 颜色值 {{cssxref("&lt;color&gt;")}}，将抛出`SYNTAX_ERR`错误。
+**`CanvasGradient.addColorStop()`** 方法为给定的 canvas 渐变添加一个由偏移值（`offset`）和颜色值（`color`）指定的色标。
 
 ## 语法
 
-```js
-void gradient.addColorStop(offset, color);
+```js-nolint
+addColorStop(offset, color)
 ```
 
 ### 参数
 
-- offset
-  - : `0`到`1`之间的值，超出范围将抛出`INDEX_SIZE_ERR`错误
-- color
-  - : CSS 颜色值 {{cssxref("&lt;color&gt;")}}。如果颜色值不能被解析为有效的 CSS 颜色值 `<color>`，将抛出`SYNTAX_ERR`错误。
+- `offset`
+  - : 一个在 `0` 到 `1` 之间（包含边界）的数字，表示色标的位置。`0` 表示渐变的起始位置，`1` 表示渐变的结束位置。
+- `color`
+  - : 一个 [CSS](/zh-CN/docs/Web/CSS) {{cssxref("&lt;color&gt;")}} 值，表示色标的颜色。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
+
+### 异常
+
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : 如果 `offset` 不在 0 和 1 之间（包括边界），则抛出此异常。
+- `SyntaxError` {{domxref("DOMException")}}
+  - : 如果 `color` 无法解析为 CSS {{cssxref("&lt;color&gt;")}} 值，则抛出此异常。
 
 ## 示例
 
-### 使用`addColorStop`方法
+### 向渐变中添加色标
 
-一个使用{{domxref("CanvasGradient")}}对象的`addColorStop` 方法的简单例子
+此示例使用 `addColorStop` 方法向线性 {{domxref("CanvasGradient")}} 对象中添加色标。然后使用该渐变填充矩形。
 
 #### HTML
 
 ```html
- <canvas id="canvas"></canvas>
+<canvas id="canvas"></canvas>
 ```
 
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-var gradient = ctx.createLinearGradient(0,0,200,0);
-gradient.addColorStop(0,"green");
-gradient.addColorStop(1,"white");
+let gradient = ctx.createLinearGradient(0, 0, 200, 0);
+gradient.addColorStop(0, "green");
+gradient.addColorStop(0.7, "white");
+gradient.addColorStop(1, "pink");
 ctx.fillStyle = gradient;
-ctx.fillRect(10,10,200,100);
+ctx.fillRect(10, 10, 200, 100);
 ```
 
-编辑以下代码可看到画布变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-var gradient = ctx.createLinearGradient(0,0,200,0);
-gradient.addColorStop(0,"green");
-gradient.addColorStop(1,"white");
-ctx.fillStyle = gradient;
-ctx.fillRect(10,10,200,100);</textarea>
-```
+{{ EmbedLiveSample('向渐变中添加色标', 700, 180) }}
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 标准
+## 规范
 
 {{Specifications}}
 
@@ -97,7 +71,7 @@ window.addEventListener("load", drawCanvas);
 
 {{Compat}}
 
-## 请参阅
+## 参见
 
 - 接口定义 {{domxref("CanvasGradient")}}
 - {{domxref("CanvasRenderingContext2D.createLinearGradient()")}}

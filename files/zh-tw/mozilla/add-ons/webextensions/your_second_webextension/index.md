@@ -5,13 +5,13 @@ slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 
 {{AddonSidebar}}
 
-假如你已經讀過了 [你的第一個 WebExtension](/zh-TW/Add-ons/WebExtensions/Your_first_WebExtension)，你也已經知道該如何寫一個 extension（外掛），在這篇文章中我們將會教你寫一個稍微複雜一點的 extension，來 demo 一些 API 的使用。
+假如你已經讀過了 [你的第一個 WebExtension](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)，你也已經知道該如何寫一個 extension（外掛），在這篇文章中我們將會教你寫一個稍微複雜一點的 extension，來 demo 一些 API 的使用。
 
 在這個 extension 中，將會新增一個按鈕到 Firefox 的工具列上，當使用者按下按鈕後，將會顯示一個彈出視窗 (pop-up) 並可選擇一個動物。當使用者選擇了一個動物後，將會在當前的網頁中顯示使用者所選的動物圖片。
 
 為了實作這個，我們將需要：
 
-- **定義一個 [browser action](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Browser_action) 給新增於 Firefox 工具列的按鈕。**
+- **定義一個 [browser action](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) 給新增於 Firefox 工具列的按鈕。**
   這個按鈕，我們將提供以下功能：
 
   - 按鈕的 icon，命名為 "beasts-32.png"
@@ -35,7 +35,7 @@ slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 - 內容腳本與整個 extension 間的溝通
 - 打包 extension 所需的資源，讓網頁可以存取
 
-也可以在 GitHub 上找到範例的原始碼： <https://github.com/mdn/webextensions-examples/tree/master/beastify>
+也可以在 GitHub 上找到範例的原始碼： <https://github.com/mdn/webextensions-examples/tree/main/beastify>
 
 實作這個 extension 前，請先確認你的 Firefox 有 45.0 或更新的版本。
 
@@ -54,20 +54,17 @@ cd beastify
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Beastify",
   "version": "1.0",
 
   "description": "Adds a browser action icon to the toolbar. Click the button to choose a beast. The active tab's body content is then replaced with a picture of the chosen beast. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#beastify",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/beastify",
   "icons": {
     "48": "icons/beasts-48.png"
   },
 
-  "permissions": [
-    "activeTab"
-  ],
+  "permissions": ["activeTab"],
 
   "browser_action": {
     "default_icon": "icons/beasts-32.png",
@@ -80,14 +77,13 @@ cd beastify
     "beasts/turtle.jpg",
     "beasts/snake.jpg"
   ]
-
 }
 ```
 
-- 最前面的三個 key：[`manifest_version`](/zh-TW/Add-ons/WebExtensions/manifest.json/manifest_version)、[`name`](/zh-TW/Add-ons/WebExtensions/manifest.json/name)、[`version`](/zh-TW/Add-ons/WebExtensions/manifest.json/version) 必須寫進去，它包含了附加元件的基本詮釋資料（metadata）。
+- 最前面的三個 key：[`manifest_version`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)、[`name`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)、[`version`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) 必須寫進去，它包含了附加元件的基本詮釋資料（metadata）。
 - [`description`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) 和 [`homepage_url`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) 為非必要但建議加上：主要在說明該 extension。
 - [`icons`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) 為非必要但建議加上：它允許附加元件指定圖示、也會在附加元件的管理員顯示
-- [`permissions`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 列出了該 extension 所需要的權限。這邊我們只會要求 [`activeTab` permission](/zh-TW/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) 。
+- [`permissions`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 列出了該 extension 所需要的權限。這邊我們只會要求 [`activeTab` permission](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) 。
 - [`browser_action`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 定義工具列的按鈕，在這邊我們將會提供三種 key：
 
   - `default_icon` 為必要的：告訴 button 該使用的 icon 為何
@@ -115,7 +111,7 @@ cd beastify
 
 ### 工具列按鈕(The toolbar button)
 
-工具列按鈕也需要一個 icon，在 manifest.json 裡 "browser_action" 物件中的 "default_icon" 中告訴他要使用 "icons/beasts-32.png" 路徑下的 icon。。
+工具列按鈕也需要一個 icon，在 manifest.json 裡 "browser_action" 物件中的 "default_icon" 中告訴他要使用 "icons/beasts-32.png" 路徑下的 icon。
 
 準備一個命名為 "beasts-32.png" 的 icon，並存在 "beastify/icons" 資料夾中（你可以使用[範例圖檔](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-32.png)，圖檔來源：[IconBeast Lite icon set](http://www.iconbeast.com/free)，遵守[使用條款](http://www.iconbeast.com/faq/)來使用）。
 
@@ -142,27 +138,27 @@ touch choose_beast.html choose_beast.css choose_beast.js
 HTML 內容長得像這樣：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="choose_beast.css"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="choose_beast.css" />
   </head>
 
-<body>
-  <div id="popup-content">
-    <div class="button beast">Frog</div>
-    <div class="button beast">Turtle</div>
-    <div class="button beast">Snake</div>
-    <div class="button reset">Reset</div>
-  </div>
-  <div id="error-content" class="hidden">
-    <p>Can't beastify this web page.</p><p>Try a different page.</p>
-  </div>
-  <script src="choose_beast.js"></script>
-</body>
-
+  <body>
+    <div id="popup-content">
+      <div class="button beast">Frog</div>
+      <div class="button beast">Turtle</div>
+      <div class="button beast">Snake</div>
+      <div class="button reset">Reset</div>
+    </div>
+    <div id="error-content" class="hidden">
+      <p>Can't beastify this web page.</p>
+      <p>Try a different page.</p>
+    </div>
+    <script src="choose_beast.js"></script>
+  </body>
 </html>
 ```
 
@@ -175,7 +171,8 @@ HTML 內容長得像這樣：
 CSS 定義了 pop-up 的大小，並確保三個選項有填滿整個 pop-up，並給他們幾個基本的 style：
 
 ```css
-html, body {
+html,
+body {
   width: 100px;
 }
 
@@ -188,19 +185,19 @@ html, body {
 }
 
 .beast:hover {
-  background-color: #CFF2F2;
+  background-color: #cff2f2;
 }
 
 .beast {
- background-color: #E5F2F2;
+  background-color: #e5f2f2;
 }
 
 .clear {
- background-color: #FBFBC9;
+  background-color: #fbfbc9;
 }
 
 .clear:hover {
- background-color: #EAEAC9;
+  background-color: #eaeac9;
 }
 ```
 
@@ -243,15 +240,17 @@ document.addEventListener("click", (e) => {
     var chosenBeastURL = beastNameToURL(chosenBeast);
 
     browser.tabs.executeScript(null, {
-      file: "/content_scripts/beastify.js"
+      file: "/content_scripts/beastify.js",
     });
 
-    var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
-    gettingActiveTab.then((tabs) => {
-      browser.tabs.sendMessage(tabs[0].id, {beastURL: chosenBeastURL});
+    var gettingActiveTab = browser.tabs.query({
+      active: true,
+      currentWindow: true,
     });
-  }
-  else if (e.target.classList.contains("clear")) {
+    gettingActiveTab.then((tabs) => {
+      browser.tabs.sendMessage(tabs[0].id, { beastURL: chosenBeastURL });
+    });
+  } else if (e.target.classList.contains("clear")) {
     browser.tabs.reload();
     window.close();
   }
@@ -318,7 +317,7 @@ browser.runtime.onMessage.addListener(beastify);
 
 最後，我們需要將動物的照片放進來
 
-新增一個名為 "beasts" 的資料夾，並把三張動物的圖片放進此資料夾中，請取相對應的檔名。可以使用[範例圖片](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts) ，或從這邊下載：
+新增一個名為「beasts」的資料夾，並把三張動物的圖片放進此資料夾中，請取相對應的檔名。可以使用[範例圖片](https://github.com/mdn/webextensions-examples/tree/main/beastify/beasts)，或從這邊下載：
 
 ![](frog.jpg)![](snake.jpg)![](turtle.jpg)
 
@@ -326,7 +325,7 @@ browser.runtime.onMessage.addListener(beastify);
 
 首先，請再三的確認檔案有放到相對應的資料夾中：
 
-```
+```plain
 beastify/
 
     beasts/
@@ -361,7 +360,7 @@ beastify/
 
 ## 透過命令行佈署
 
-你可以利用[web-ext](/zh-TW/Add-ons/WebExtensions/Getting_started_with_web-ext)自動化暫時載入。
+你可以利用 [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) 自動化暫時載入。
 試試看:
 
 ```bash

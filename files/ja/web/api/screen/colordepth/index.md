@@ -15,7 +15,7 @@ slug: Web/API/Screen/colorDepth
 
 ```js
 // 画面の色深度を確認
-if ( window.screen.colorDepth < 8) {
+if (window.screen.colorDepth < 8) {
   // 少色版のページを使用
 } else {
   // 通常の多色のページを使用

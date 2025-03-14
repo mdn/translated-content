@@ -1,11 +1,8 @@
 ---
 title: Comments
 slug: Web/CSS/Comments
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/Comments
 ---
+
 {{CSSRef}}
 
 CSS **주석**은 코드에 설명을 넣거나, 브라우저가 스타일 시트의 특정 부분을 읽지 못하도록 방지할 때 사용합니다. 주석은 문서의 레이아웃에 영향을 주지 않습니다.
@@ -46,7 +43,7 @@ span {
 
 ## 명세
 
-{{Specifications}}
+- [CSS 2.1 구문과 기본 데이터 형식 #comments](https://www.w3.org/TR/CSS21/syndata.html#comments)
 
 ## 같이 보기
 
@@ -56,11 +53,11 @@ span {
   - [@규칙](/ko/docs/Web/CSS/At-rule)
   - [주석](/ko/docs/Web/CSS/Comments)
   - [명시도](/ko/docs/Web/CSS/Specificity)
-  - [상속](/ko/docs/Web/CSS/inheritance)
-  - [박스 모델](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [상속](/ko/docs/Web/CSS/Inheritance)
+  - [박스 모델](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [레이아웃 모드](/ko/docs/Web/CSS/Layout_mode)
   - [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)
-  - [마진 중첩](/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [마진 중첩](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 값
 
     - [초깃값](/ko/docs/Web/CSS/initial_value)

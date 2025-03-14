@@ -1,12 +1,6 @@
 ---
 title: 'TypeError: invalid assignment to const "x"'
 slug: Web/JavaScript/Reference/Errors/Invalid_const_assignment
-tags:
-  - Erreurs
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Invalid_const_assignment
-original_slug: Web/JavaScript/Reference/Erreurs/Invalid_const_assignment
 ---
 
 {{jsSidebar("Errors")}}
@@ -25,7 +19,7 @@ TypeError: Redeclaration of const 'x' (Edge)
 
 ## Quel est le problème ?
 
-Une constante est une valeur qui ne peut pas être modifiée lors de l'exécution du programme. Elle ne peut pas être modifiée grâce à une réaffectation ou grâce à une redéclaration. En JavaScript, les constantes sont déclarées grâce au mot-clé [`const`](/fr/docs/Web/JavaScript/Reference/Instructions/const).
+Une constante est une valeur qui ne peut pas être modifiée lors de l'exécution du programme. Elle ne peut pas être modifiée grâce à une réaffectation ou grâce à une redéclaration. En JavaScript, les constantes sont déclarées grâce au mot-clé [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const).
 
 ## Exemples
 
@@ -56,7 +50,7 @@ const WIDE_COLUMNS = 120;
 
 #### `const`, `let` ou `var` ?
 
-`const` ne doit pas être utilisé si on ne souhaite pas déclarer de constante. Peut-être qu'on souhaite simplement déclarer une variable avec une portée de bloc grâce à [`let`](/fr/docs/Web/JavaScript/Reference/Instructions/let) ou une variable globale avec [`var`](/fr/docs/Web/JavaScript/Reference/Instructions/var).
+`const` ne doit pas être utilisé si on ne souhaite pas déclarer de constante. Peut-être qu'on souhaite simplement déclarer une variable avec une portée de bloc grâce à [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) ou une variable globale avec [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var).
 
 ```js example-good
 let columns = 80;
@@ -83,19 +77,19 @@ function setupBigScreenEnvironment() {
 La déclaration `const` crée une référence en lecture seule vers une valeur. Elle ne signifie pas que la valeur en question est immuable mais uniquement que l'identifiant de la référence ne peut pas recevoir de nouvelle valeur. Ainsi, si le contenu est un objet, celui-ci pourra toujours être modifié :
 
 ```js example-bad
-const obj = {toto: 'truc'};
-obj = {toto: 'bidule'}; // TypeError: invalid assignment to const `obj'
+const obj = { toto: "truc" };
+obj = { toto: "bidule" }; // TypeError: invalid assignment to const `obj'
 ```
 
 En revanche, on peut modifier les propriétés :
 
 ```js example-good
-obj.toto = 'bidule';
+obj.toto = "bidule";
 obj; // Object { toto: "bidule" }
 ```
 
 ## Voir aussi
 
-- [`const`](/fr/docs/Web/JavaScript/Reference/Instructions/const)
-- [`let`](/fr/docs/Web/JavaScript/Reference/Instructions/let)
-- [`var`](/fr/docs/Web/JavaScript/Reference/Instructions/var)
+- [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const)
+- [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let)
+- [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var)

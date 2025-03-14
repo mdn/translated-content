@@ -22,14 +22,18 @@ gl.getExtension('WEBGL_lose_context').restoreContext();
 你可以用这个方法模拟 [`webglcontextrestored`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event) 事件：
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 
-canvas.addEventListener('webglcontextrestored', function(e) {
-  console.log(e);
-}, false);
+canvas.addEventListener(
+  "webglcontextrestored",
+  function (e) {
+    console.log(e);
+  },
+  false,
+);
 
-gl.getExtension('WEBGL_lose_context').restoreContext();
+gl.getExtension("WEBGL_lose_context").restoreContext();
 ```
 
 ## 规范

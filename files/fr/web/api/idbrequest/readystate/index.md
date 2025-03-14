@@ -1,13 +1,6 @@
 ---
 title: IDBRequest.readyState
 slug: Web/API/IDBRequest/readyState
-tags:
-  - API
-  - IDBRequest
-  - IndexedDB
-  - Propriété
-  - Reference
-translation_of: Web/API/IDBRequest/readyState
 ---
 
 {{APIRef("IndexedDB")}}
@@ -30,18 +23,20 @@ La valeur {{domxref("IDBRequestReadyState")}} de la requête, qui peut être l'u
 
 ## Exemples
 
-Dans l'exemple qui suit, on effectue une requête sur un enregistrement avec un titre donné et on recupère l'enregistrement associé grâce au gestionnaire d'évènement `onsuccess` à partir du magasin d'objets {{domxref("IDBObjectStore")}}. Ensuite, on met à jour une des propriétés de cet enregistrement et on replace cet objet mis à jour dans le magasin d'objets via une autre requête. La valeur de la propriété `readyState` pour la deuxième requête est affichée dans la console. Pour consulter un exemple fonctionnel complet, vous pouvez vous référer à notre appliction [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([cf. également l'exemple _live_](https://mdn.github.io/to-do-notifications/)).
+Dans l'exemple qui suit, on effectue une requête sur un enregistrement avec un titre donné et on recupère l'enregistrement associé grâce au gestionnaire d'évènement `onsuccess` à partir du magasin d'objets {{domxref("IDBObjectStore")}}. Ensuite, on met à jour une des propriétés de cet enregistrement et on replace cet objet mis à jour dans le magasin d'objets via une autre requête. La valeur de la propriété `readyState` pour la deuxième requête est affichée dans la console. Pour consulter un exemple fonctionnel complet, vous pouvez vous référer à notre appliction [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([cf. également l'exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 var title = "Walk dog";
 
 // On ouvre une transaction
-var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+var objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
 
 // On récupère l'enregistrement avec le titre souhaité
 var objectStoreTitleRequest = objectStore.get(title);
 
-objectStoreTitleRequest.onsuccess = function() {
+objectStoreTitleRequest.onsuccess = function () {
   // On récupère les données du résultat de la requête
   var data = objectStoreTitleRequest.result;
 
@@ -59,7 +54,7 @@ objectStoreTitleRequest.onsuccess = function() {
   // Lorsque cette deuxième requête est appliquée,
   // on exécute la fonction displayData() afin d'afficher
   // les données à jour
-  updateTitleRequest.onsuccess = function() {
+  updateTitleRequest.onsuccess = function () {
     displayData();
   };
 };
@@ -75,10 +70,10 @@ objectStoreTitleRequest.onsuccess = function() {
 
 ## Voir aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Démarrer des transactions : {{domxref("IDBDatabase")}}
 - Manipuler des transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
 - Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)

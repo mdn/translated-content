@@ -1,10 +1,9 @@
 ---
 title: devtools.inspectedWindow.tabId
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 devtools のこのインスタンスがアタッチされる {{WebExtAPIRef("tabs.Tab", "tab")}} の ID。番号で表されます。
 
@@ -18,7 +17,7 @@ const scriptToAttach = "document.body.innerHTML = 'Hi from the devtools';";
 attachContentScriptButton.addEventListener("click", () => {
   browser.runtime.sendMessage({
     tabId: browser.devtools.inspectedWindow.tabId,
-    script: scriptToAttach
+    script: scriptToAttach,
   });
 });
 ```
@@ -28,22 +27,24 @@ attachContentScriptButton.addEventListener("click", () => {
 
 function handleMessage(request, sender, sendResponse) {
   browser.tabs.executeScript(request.tabId, {
-    code: request.script
+    code: request.script,
   });
 }
 
 browser.runtime.onMessage.addListener(handleMessage);
 ```
 
-## ブラウザの対応状況
+## ブラウザーの対応状況
 
-{{Compat("webextensions.api.devtools.inspectedWindow.tabId")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API に基づいています。Microsoft Edge の互換性データは Microsoft Corporation によって提供され、Creative Commons Attribution 3.0 United States License に含まれています。
+> [!NOTE]
+> この API は Chromium の [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API に基づいています。Microsoft Edge の互換性データは Microsoft Corporation によって提供され、Creative Commons Attribution 3.0 United States License に含まれています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -70,4 +71,4 @@ browser.runtime.onMessage.addListener(handleMessage);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

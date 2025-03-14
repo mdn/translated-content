@@ -1,17 +1,18 @@
 ---
-title: Headers.append()
+title: "Headers: append() メソッド"
+short-title: append()
 slug: Web/API/Headers/append
 l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 **`append()`** は {{domxref("Headers")}} インターフェイスのメソッドで、 `Headers` オブジェクト内の既存のヘッダーに新しい値を追加します。または、既存のヘッダーがない場合には、ヘッダーを追加します。
 
 {{domxref("Headers.set", "set()")}} と `append()` の違いは、指定されたヘッダーがすでに存在し、複数の値を受け入れる場合、`set()` は既存の値を新しい値で上書きするのに対し、`append()` は新しい値を値の集合の最後に追加するという点です。
 
-セキュリティ上の理由から、いくつかのヘッダーはユーザーエージェントでしか制御できません。これには、{{Glossary("Forbidden_header_name", "禁止ヘッダー名", 1)}}と{{Glossary("Forbidden_response_header_name", "禁止レスポンスヘッダー名", 1)}}があります。
+セキュリティ上の理由から、いくつかのヘッダーはユーザーエージェントでしか制御できません。これには、{{Glossary("Forbidden_header_name", "禁止ヘッダー名")}}と{{Glossary("Forbidden_response_header_name", "禁止レスポンスヘッダー名")}}があります。
 
 ## 構文
 
@@ -41,16 +42,16 @@ const myHeaders = new Headers(); // 現在は空
 `append()` を使用してヘッダーを追加することができます。
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.get('Content-Type'); // 'image/jpeg' を返します。
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.get("Content-Type"); // 'image/jpeg' を返します。
 ```
 
 指定されたヘッダーがすでに存在する場合、`append()` はその値を指定された値に変更します。指定したヘッダーが既に存在し、複数の値を受け入れられる場合、`append()` は新しい値を値の集合の最後に追加します。
 
 ```js
-myHeaders.append('Accept-Encoding', 'deflate');
-myHeaders.append('Accept-Encoding', 'gzip');
-myHeaders.get('Accept-Encoding'); // 'deflate, gzip' を返します。
+myHeaders.append("Accept-Encoding", "deflate");
+myHeaders.append("Accept-Encoding", "gzip");
+myHeaders.get("Accept-Encoding"); // 'deflate, gzip' を返します。
 ```
 
 古い値を新しい値で上書きするには、 {{domxref("Headers.set")}} を使います。

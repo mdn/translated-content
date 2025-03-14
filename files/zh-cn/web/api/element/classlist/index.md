@@ -18,8 +18,8 @@ slug: Web/API/Element/classList
 ## 示例
 
 ```js
-const div = document.createElement('div');
-div.className = 'foo';
+const div = document.createElement("div");
+div.className = "foo";
 
 // 初始状态：<div class="foo"></div>
 console.log(div.outerHTML);
@@ -35,7 +35,7 @@ console.log(div.outerHTML);
 div.classList.toggle("visible");
 
 // add/remove visible, depending on test conditional, i less than 10
-div.classList.toggle("visible", i < 10 );
+div.classList.toggle("visible", i < 10);
 
 console.log(div.classList.contains("foo"));
 
@@ -52,7 +52,8 @@ div.classList.remove(...cls);
 div.classList.replace("foo", "bar");
 ```
 
-> **备注：** Firefox 26 之前的版本没有在 add/remove/toggle 实现使用多个参数。参见 <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
+> [!NOTE]
+> Firefox 26 之前的版本没有在 add/remove/toggle 实现使用多个参数。参见 <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
 
 ## 规范
 

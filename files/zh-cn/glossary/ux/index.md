@@ -1,14 +1,16 @@
 ---
 title: UX
 slug: Glossary/UX
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-UX(User eXperience) 是用户体验的首字母缩写。它是研究用户和系统之间的交互。其目标是使系统易于从用户的角度进行交互。
+{{GlossarySidebar}}
 
-该系统可以是用户最终可以交互的任何类型的产品或应用程序。例如，在网页上进行的 UX 研究可以证明用户是否容易理解页面，引导到不同的页面并完成一般操作，以及减少这些过程中用户的操作步骤。
+**UX** 是 User eXperience 的缩写，意为用户体验。它是对用户与系统之间的交互的研究。其目标是从用户的角度使系统易于交互。
 
-## 更多
+系统可以是任何一种用户应该与之交互的产品或应用。例如，对网页进行的 UX 研究可以展示用户是否容易理解页面、导航到不同区域以及完成常见任务，以及哪些过程可以减少摩擦。
 
-### 基本知识
+## 参见
 
-- 维基百科[User experience](https://zh.wikipedia.org/wiki/User_experience)
+- 维基百科上的[用户体验](https://zh.wikipedia.org/wiki/使用者經驗)

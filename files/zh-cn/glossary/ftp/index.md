@@ -1,15 +1,17 @@
 ---
 title: FTP
 slug: Glossary/FTP
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-**FTP**（File Transfer Protocol，文件传输协议）曾在过去许多年里是在 Internet 上主机（{{glossary("host")}}）之间传输文件的标准协议（{{glossary("protocol")}}）。现在越来越多的组织和主机账户不允许使用 FTP，而是使用诸如 Git 那样的版本控制系统。您仍可以在一些旧的主机系统上看到它，但可以肯定地说，使用 FTP 不再被认为是最好的做法。
+{{GlossarySidebar}}
 
-**FTP** 是 TCP/IP 协议组中的协议之一。FTP 协议包括两个组成部分，其一为[FTP 服务器](https://baike.sogou.com/lemma/ShowInnerLink.htm?lemmaId=449752&ss_c=ssc.citiao.link)，其二为 FTP 客户端。其中 FTP 服务器用来存储文件，用户可以使用 FTP 客户端通过 FTP 协议访问位于 FTP 服务器上的资源。在开发网站的时候，通常利用 FTP 协议把网页或程序传到[Web 服务器](https://baike.sogou.com/lemma/ShowInnerLink.htm?lemmaId=267249&ss_c=ssc.citiao.link)上。此外，由于 FTP 传输效率非常高，在网络上传输大的文件时，一般也采用该协议。
+**FTP**（文件传输协议）是一种用于在互联网上将文件从一个{{glossary("host", "主机")}}传输到另一个主机的不安全的{{glossary("protocol", "协议")}}。
 
-## 了解更多
+多年来，FTP 一直是传输文件的事实标准方式，但由于其固有的不安全性，许多托管账户不再支持它。相反，你应该使用 SFTP（FTP 的安全、加密版本）或其他安全的文件传输方法，如通过 SSH 的 Rsync。
 
-### 总体了解
+## 参见
 
-- [Beginner's guide to uploading files via FTP](/zh-CN/Learn/Upload_files_to_a_web_server)
-- 维基百科上的 [FTP](https://zh.wikipedia.org/wiki/File_Transfer_Protocol)
+- [通过 FTP 上传文件的初学者教程](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
+- 维基百科上的[文件传输协议](https://zh.wikipedia.org/wiki/文件传输协议)

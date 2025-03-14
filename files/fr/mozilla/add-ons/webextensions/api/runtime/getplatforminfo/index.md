@@ -1,29 +1,18 @@
 ---
 title: runtime.getPlatformInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getPlatformInfo
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getPlatformInfo
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getPlatformInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Renvoies des informations sur la plate-forme actuelle. Ceci ne peut être appelé que dans le contexte du script d'arrière-plan.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
-var getting = browser.runtime.getPlatformInfo()
+var getting = browser.runtime.getPlatformInfo();
 ```
 
 ### Paramètres
@@ -32,11 +21,11 @@ None.
 
 ### Valeur rentournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une valeur {{WebExtAPIRef('runtime.PlatformInfo')}} représentant la plate-forme actuelle.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec une valeur {{WebExtAPIRef('runtime.PlatformInfo')}} représentant la plate-forme actuelle.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.getPlatformInfo")}}
+{{Compat}}
 
 ## Exemples
 
@@ -53,9 +42,9 @@ gettingInfo.then(gotPlatformInfo);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

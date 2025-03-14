@@ -7,15 +7,37 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
 
 **`format()`** メソッドは、リストの言語固有の表現を文字列で返します。
 
-{{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.ListFormat", "taller")}}
+
+```js interactive-example
+const vehicles = ["Motorcycle", "Bus", "Car"];
+
+const formatter = new Intl.ListFormat("en", {
+  style: "long",
+  type: "conjunction",
+});
+console.log(formatter.format(vehicles));
+// Expected output: "Motorcycle, Bus, and Car"
+
+const formatter2 = new Intl.ListFormat("de", {
+  style: "short",
+  type: "disjunction",
+});
+console.log(formatter2.format(vehicles));
+// Expected output: "Motorcycle, Bus oder Car"
+
+const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
+console.log(formatter3.format(vehicles));
+// Expected output: "Motorcycle Bus Car"
+```
 
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## 構文
 
 ```js
-format()
-format(list)
+format();
+format(list);
 ```
 
 ### 引数
@@ -38,15 +60,25 @@ format(list)
 以下の例では、英語を使用したリストのフォーマッターの作り方を紹介します。
 
 ```js
-const list = ['Motorcycle', 'Bus', 'Car'];
+const list = ["Motorcycle", "Bus", "Car"];
 
- console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "long", type: "conjunction" }).format(
+    list,
+  ),
+);
 // > Motorcycle, Bus and Car
 
- console.log(new Intl.ListFormat('en-GB', { style: 'short', type: 'disjunction' }).format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "short", type: "disjunction" }).format(
+    list,
+  ),
+);
 // > Motorcycle, Bus or Car
 
- console.log(new Intl.ListFormat('en-GB', { style: 'narrow', type: 'unit' }).format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "narrow", type: "unit" }).format(list),
+);
 // > Motorcycle Bus Car
 ```
 

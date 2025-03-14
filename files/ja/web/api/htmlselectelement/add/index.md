@@ -1,6 +1,9 @@
 ---
-title: HTMLSelectElement.add()
+title: "HTMLSelectElement: add() メソッド"
+short-title: add()
 slug: Web/API/HTMLSelectElement/add
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,15 +12,22 @@ slug: Web/API/HTMLSelectElement/add
 
 ## 構文
 
-```js
-collection.add(item[, before]);
+```js-nolint
+add(item)
+add(item, before)
 ```
 
 ### 引数
 
-- _item_ は {{domxref("HTMLOptionElement")}} または
-  {{domxref("HTMLOptGroupElement")}} です
-- _before_ は省略可能で、集合内の要素または _long_ 型の位置を指定し、_item_ を挿入する直後のい位置を表します。この引数が `null` (または存在しない位置) であった場合、新しい要素は集合の末尾に追加されます。
+- `item`
+  - : {{domxref("HTMLOptionElement")}} または
+    {{domxref("HTMLOptGroupElement")}} です
+- `before` {{optional_inline}}
+  - : 集合内の要素または _long_ 型で位置を指定します。_item_ はその直前に挿入されます。この引数が `null`（または存在しない位置）であった場合、新しい要素は集合の末尾に追加されます。
+
+### 返値
+
+なし（{{jsxref("undefined")}}）。
 
 ### 例外
 
@@ -29,9 +39,9 @@ collection.add(item[, before]);
 ### 一から要素を作成
 
 ```js
-var sel = document.createElement("select");
-var opt1 = document.createElement("option");
-var opt2 = document.createElement("option");
+const sel = document.createElement("select");
+const opt1 = document.createElement("option");
+const opt2 = document.createElement("option");
 
 opt1.value = "1";
 opt1.text = "Option: Value 1";
@@ -55,18 +65,16 @@ sel.add(opt2, null);
 before 引数は省略可能ですので、以下のようにすることもできます。
 
 ```js
-...
 sel.add(opt1);
 sel.add(opt2);
-...
 ```
 
 ### 既存の集合に追加
 
 ```js
-var sel = document.getElementById("existingList");
+const sel = document.getElementById("existingList");
 
-var opt = document.createElement("option");
+const opt = document.createElement("option");
 opt.value = "3";
 opt.text = "Option: Value 3";
 
@@ -93,17 +101,15 @@ sel.add(opt, null);
 before 引数は省略可能ですので、以下のようにすることもできます。
 
 ```js
-...
 sel.add(opt);
-...
 ```
 
 ### 既存の集合への挿入
 
 ```js
-var sel = document.getElementById("existingList");
+const sel = document.getElementById("existingList");
 
-var opt = document.createElement("option");
+const opt = document.createElement("option");
 opt.value = "3";
 opt.text = "Option: Value 3";
 

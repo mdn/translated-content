@@ -52,7 +52,7 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 
 ## 警告コード
 
-[HTTP Warn Codes registry at iana.org](http://www.iana.org/assignments/http-warn-codes/http-warn-codes.xhtml) では、警告コードの名前空間を定義しています。
+[HTTP Warn Codes registry at iana.org](https://www.iana.org/assignments/http-warn-codes/http-warn-codes.xhtml) では、警告コードの名前空間を定義しています。
 
 | コード | テキスト                         | 説明                                                                                               |
 | ------ | -------------------------------- | -------------------------------------------------------------------------------------------------- |
@@ -75,13 +75,13 @@ Warning: 112 - "cache down" "Wed, 21 Oct 2015 07:28:00 GMT"
 
 ## 仕様書
 
-| 仕様書                                       | 題名                                            |
-| -------------------------------------------- | ----------------------------------------------- |
+| 仕様書                            | 題名                                            |
+| --------------------------------- | ----------------------------------------------- |
 | {{RFC("7234", "Warning", "5.5")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Warning")}}
+{{Compat}}
 
 ## 関連情報
 

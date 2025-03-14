@@ -1,7 +1,6 @@
 ---
 title: WorkerGlobalScope.location
 slug: Web/API/WorkerGlobalScope/location
-translation_of: Web/API/WorkerGlobalScope/location
 ---
 
 {{APIRef("Web Workers API")}}
@@ -44,7 +43,8 @@ WorkerLocation {hash: "", search: "", pathname: "/worker.js", port: "8000", host
 
 Vous pouvez utiliser l'objet location pour récupérer des informations supplémentaires sur la localisation du document, comme vous pourriez le faire avec un objet {{domxref("Location")}} normal.
 
-> **Note :** Firefox rencontre un bogue avec l'utilisation de `console.log` à l'intérieur des workers partagés/service (voir {{Bug("1058644")}}), ce qui peut occasionner d'étranges résultats, mais cela devrait être bientôt corrigé.
+> [!NOTE]
+> Firefox rencontre un bogue avec l'utilisation de `console.log` à l'intérieur des workers partagés/service (voir [bug Firefox 1058644](https://bugzil.la/1058644)), ce qui peut occasionner d'étranges résultats, mais cela devrait être bientôt corrigé.
 
 ## Spécifications
 

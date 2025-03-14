@@ -1,7 +1,6 @@
 ---
 title: asm.js
 slug: Games/Tools/asm.js
-translation_of: Games/Tools/asm.js
 ---
 
 {{GamesSidebar}}

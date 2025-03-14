@@ -1,7 +1,6 @@
 ---
 title: Document.getElementsByName()
 slug: Web/API/Document/getElementsByName
-translation_of: Web/API/Document/getElementsByName
 ---
 
 {{APIRef("DOM")}}
@@ -20,17 +19,17 @@ var elements = document.getElementsByName(name);
 ## Пример
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<title>Example: using document.getElementsByName</title>
+  <title>Example: using document.getElementsByName</title>
 
-<input type="hidden" name="up">
-<input type="hidden" name="down">
+  <input type="hidden" name="up" />
+  <input type="hidden" name="down" />
 
-<script>
-  var up_names = document.getElementsByName("up");
-  console.log(up_names[0].tagName); // displays "INPUT"
-</script>
+  <script>
+    var up_names = document.getElementsByName("up");
+    console.log(up_names[0].tagName); // displays "INPUT"
+  </script>
 </html>
 ```
 
@@ -40,24 +39,24 @@ The {{domxref("element.name","name")}} attribute can only be applied in (X)HTML 
 
 The returned {{domxref("NodeList")}} Collection contains _all_ elements with the given `name`, such as {{htmlelement("meta")}}, {{htmlelement("object")}}, and even elements which do not support the `name` attribute at all.
 
-> **Предупреждение:** The **getElementsByName** method works differently in IE10 and below. There, `getElementsByName()` also returns elements that have an [`id` attribute](/ru/docs/Web/HTML/Global_attributes/id) with the specified value. Be careful not to use the same string as both a `name` and an `id`.
+> [!WARNING]
+> The **getElementsByName** method works differently in IE10 and below. There, `getElementsByName()` also returns elements that have an [`id` attribute](/ru/docs/Web/HTML/Global_attributes/id) with the specified value. Be careful not to use the same string as both a `name` and an `id`.
 
-> **Предупреждение:** The **getElementsByName** method works differently in IE. There, `getElementsByName()` does not return all elements which may not have a `name` attribute (such as `<span>`).
+> [!WARNING]
+> The **getElementsByName** method works differently in IE. There, `getElementsByName()` does not return all elements which may not have a `name` attribute (such as `<span>`).
 
-> **Предупреждение:** Both IE and Edge return an {{domxref("HTMLCollection")}}, not a {{domxref("NodeList")}}
+> [!WARNING]
+> Both IE and Edge return an {{domxref("HTMLCollection")}}, not a {{domxref("NodeList")}}
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                                | Status                               | Comment            |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('HTML WHATWG', '#dom-document-getelementsbyname', "Document.getElementsByName()")}} | {{ Spec2('HTML WHATWG') }} |                    |
-| {{SpecName("DOM2 HTML", "html.html#ID-71555259", "Document.getElementsByName()")}}                 | {{Spec2("DOM2 HTML")}}         | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("document.getElementById()")}} to return a reference to an element by its unique `id`
 - {{domxref("document.getElementsByTagName()")}} to return references to elements with the same [tag name](/ru/docs/Web/API/Element/tagName)

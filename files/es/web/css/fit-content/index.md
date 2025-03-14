@@ -18,7 +18,7 @@ fit-content(100ch)
 fit-content(40%)
 ```
 
-La función se puede usar como un tamaño de track en las propiedades de [CSS Grid](/es/docs/Web/CSS/CSS_Grid_Layout), donde el tamaño máximo es definido por [`max-content`](/en-US/docs/Web/CSS/grid-template-columns#max-content) y el mínimo por [`auto`](/en-US/docs/Web/CSS/grid-template-columns#auto), el cual es calculado por "`auto"` (ej. [`minmax(auto, max-content)`](/en-US/docs/Web/CSS/minmax)), excepto que el tamaño del track se restringe al argumento si éste es mas grande que el "auto" mínimo .
+La función se puede usar como un tamaño de track en las propiedades de [CSS Grid](/es/docs/Web/CSS/CSS_grid_layout), donde el tamaño máximo es definido por [`max-content`](/es/docs/Web/CSS/grid-template-columns#max-content) y el mínimo por [`auto`](/es/docs/Web/CSS/grid-template-columns#auto), el cual es calculado por "`auto"` (ej. [`minmax(auto, max-content)`](/es/docs/Web/CSS/minmax)), excepto que el tamaño del track se restringe al argumento si éste es mas grande que el "auto" mínimo .
 
 También puede usarse como tamaño de caja disponible para {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} y {{cssxref("max-height")}}, donde el tamañó máximo se refiere al tamaño máximo contenido y el mínimo al tamaño mínimo contenido.
 
@@ -68,9 +68,8 @@ Función que acepta un `<length>` o un `<percentage>` como un argumento.
 <div id="container">
   <div>Item as wide as the content.</div>
   <div>
-    Item con más texto en él. Porque el contenido que es
-    mas grande que el ancho máximo, está restringido a los
-    300 pixeles.
+    Item con más texto en él. Porque el contenido que es mas grande que el ancho
+    máximo, está restringido a los 300 pixeles.
   </div>
   <div>Flexible item</div>
 </div>

@@ -9,7 +9,19 @@ l10n:
 
 **`getTimezoneOffset()`** メソッドは、（ホストシステム上における）現在のロケールから協定世界時 (UTC) までのタイムゾーンの差を分単位で返します。
 
-{{EmbedInteractiveExample("pages/js/date-gettimezoneoffset.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getTimezoneOffset()")}}
+
+```js interactive-example
+const date1 = new Date("August 19, 1975 23:15:30 GMT+07:00");
+const date2 = new Date("August 19, 1975 23:15:30 GMT-02:00");
+
+console.log(date1.getTimezoneOffset());
+// Expected output: your local timezone offset in minutes
+// (e.g., -120). NOT the timezone offset of the date object.
+
+console.log(date1.getTimezoneOffset() === date2.getTimezoneOffset());
+// Expected output: true
+```
 
 ## 構文
 
@@ -27,13 +39,13 @@ UTC タイムゾーンで評価された日時とローカルタイムゾーン�
 
 ### 負の値と正の値
 
-getTimezoneOffset()` が返す分の値は、ローカルのタイムゾーンが UTC よりも後の場合は正の値、先の場合は負の値になります。例えば、UTC+10 の場合、 `-600` を返します。
+`getTimezoneOffset()` が返す分の値は、ローカルのタイムゾーンが UTC よりも後の場合は正の値、先の場合は負の値になります。例えば、UTC+10 の場合、`-600` を返します。
 
 | 現在のタイムゾーン | 返値 |
-| ----------------- | ------------ |
-| UTC-8             | 480          |
-| UTC               | 0            |
-| UTC+3             | -180         |
+| ------------------ | ---- |
+| UTC-8              | 480  |
+| UTC                | 0    |
+| UTC+3              | -180 |
 
 ### 夏時間適用地域で変化する結果
 
@@ -51,8 +63,9 @@ getTimezoneOffset()` が返す分の値は、ローカルのタイムゾーン�
 // 現在の時刻を表す Date インスタンスを作成する
 const currentLocalDate = new Date();
 // 2016 年 5 月 1 日 03:24 GMT-0200 の Date インスタンスを作成する
-const laborDay2016at0324GMTminus2 = new Date('2016-05-01T03:24:00Z-02:00');
-currentLocalDate.getTimezoneOffset() === laborDay2016at0324GMTminus2.getTimezoneOffset();
+const laborDay2016at0324GMTminus2 = new Date("2016-05-01T03:24:00-02:00");
+currentLocalDate.getTimezoneOffset() ===
+  laborDay2016at0324GMTminus2.getTimezoneOffset();
 // 夏時間に毎年移行しないタイムゾーンでは常に true となります。
 // 毎年夏時間に移行するあらゆるタイムゾーンは、 false になることがあります。
 ```
@@ -62,8 +75,8 @@ currentLocalDate.getTimezoneOffset() === laborDay2016at0324GMTminus2.getTimezone
 夏時間が使用されている地域では、 `date` がある時期によって返値が変わることがあります。下記は、タイムゾーンが UTC-05:00 であるニューヨークでの実行時の出力結果です。
 
 ```js
-const nyOffsetSummer = new Date('2022-02-01').getTimezoneOffset(); // 300
-const nyOffsetWinter = new Date('2022-08-01').getTimezoneOffset(); // 240
+const nyOffsetSummer = new Date("2022-02-01").getTimezoneOffset(); // 300
+const nyOffsetWinter = new Date("2022-08-01").getTimezoneOffset(); // 240
 ```
 
 ### getTimezoneOffset() と歴史的なデータ
@@ -71,8 +84,8 @@ const nyOffsetWinter = new Date('2022-08-01').getTimezoneOffset(); // 240
 歴史的な理由により、ある地域が属するタイムゾーンが、夏時間によらなくても変化していることがあります。例えば、下記はタイムゾーンが UTC+08:00 である上海での実行時の出力です。
 
 ```js
-const shModernOffset = new Date('2022-01-27').getTimezoneOffset(); // -480
-const shHistoricalOffset = new Date('1943-01-27').getTimezoneOffset(); // -540
+const shModernOffset = new Date("2022-01-27").getTimezoneOffset(); // -480
+const shHistoricalOffset = new Date("1943-01-27").getTimezoneOffset(); // -540
 ```
 
 これは、[日中戦争](https://ja.wikipedia.org/wiki/日中戦争)中で上海が日本の統制下にあった時、日本に合わせてタイムゾーンを UTC+09:00 に変更しており（実質的には「通年夏時間」）、そのことが IANA データベースに記録されていたためです。

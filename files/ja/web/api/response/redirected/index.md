@@ -1,16 +1,18 @@
 ---
-title: Response.redirected
+title: "Response: redirected プロパティ"
+short-title: redirected
 slug: Web/API/Response/redirected
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: 802b6063046dffb7634d2138aadcd92cb22ed40c
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 **`redirected`** は {{domxref("Response")}} インターフェイスの読み取り専用プロパティで、このレスポンスがリダイレクトされたリクエストの結果であるかどうかを示します。
 
-> **メモ:** redirected に頼ってリダイレクトをフィルタリングしていると、偽造されたリダイレクトによって、コンテンツが期待通りに動作しなくなることが簡単に起こります。
-> その代わり、 {{domxref("fetch()")}} を呼び出すときにフィルタリングを行うべきです。
+> [!NOTE]
+> redirected に頼ってリダイレクトをフィルタリングしていると、偽造されたリダイレクトによって、コンテンツが期待通りに動作しなくなることが簡単に起こります。
+> その代わり、 {{domxref("Window/fetch", "fetch()")}} を呼び出すときにフィルタリングを行うべきです。
 > これを行う例を示した[リダイレクトの禁止](#リダイレクトの禁止)を参照してください。
 
 ## 値
@@ -25,11 +27,15 @@ l10n:
 下記のコードでは、取得処理中にリダイレクトが発生した場合、要素にテキストメッセージが挿入されます。
 ただし、下記の[リダイレクトの禁止](#リダイレクトの禁止)で記述しているように、予想外のリダイレクトが発生した場合に完全に拒否するほど安全ではないことに注意してください。
 
+{{domxref("Response.url", "url")}} プロパティは、リダイレクト後の最終的な URL を返します。
+
 ```js
 fetch("awesome-picture.jpg")
   .then((response) => {
     const elem = document.getElementById("warning-message-box");
-    elem.textContent = response.redirected ? "Unexpected redirect" : "";
+    elem.textContent = response.redirected ? "予期しないリダイレクト" : "";
+    // リダイレクト後の最終 URL
+    console.log(response.url);
     return response.blob();
   })
   .then((imageBlob) => {
@@ -40,7 +46,7 @@ fetch("awesome-picture.jpg")
 
 ### リダイレクトの禁止
 
-redirected を使用して手動でリダイレクトをフィルタリングすると、リダイレクトの偽造が可能になるため、代わりに {{domxref("fetch()")}} を呼び出す際に `init` 引数でリダイレクトモードを `"error"` に設定する必要があります、例えば次のようにします。
+redirected を使用して手動でリダイレクトをフィルタリングすると、リダイレクトの偽造が可能になるため、代わりに {{domxref("Window/fetch", "fetch()")}} を呼び出す際に `init` 引数でリダイレクトモードを `"error"` に設定する必要があります、例えば次のようにします。
 
 ```js
 fetch("awesome-picture.jpg", { redirect: "error" })

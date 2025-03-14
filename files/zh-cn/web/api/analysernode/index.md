@@ -9,7 +9,7 @@ slug: Web/API/AnalyserNode
 
 `AnalyzerNode` 只有一个输入和输出，即使未连接到输出它也能正常工作。
 
-![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](https://mdn.mozillademos.org/files/5119/WebAudioFFT.png)
+![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](webaudiofft.png)
 
 <table class="properties">
   <tbody>
@@ -79,7 +79,8 @@ _继承方法自_ _{{domxref("AudioNode")}}_.
 
 ## 例子
 
-> **备注：** 查看 [Visualizations with Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) 指南以获得更多关于创建音频可视化效果的信息。
+> [!NOTE]
+> 查看 [Visualizations with Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) 指南以获得更多关于创建音频可视化效果的信息。
 
 ### 基础用法
 
@@ -88,7 +89,7 @@ _继承方法自_ _{{domxref("AudioNode")}}_.
 更多的例子/信息，查看 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 演示 (相关代码在 [app.js 的 128 行\~205 行](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
 
 ```js
-var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 
 // ...
@@ -105,26 +106,24 @@ var canvasCtx = canvas.getContext("2d");
 // 绘制一个当前音频源的示波器
 
 function draw() {
-
   drawVisual = requestAnimationFrame(draw);
 
   analyser.getByteTimeDomainData(dataArray);
 
-  canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+  canvasCtx.fillStyle = "rgb(200, 200, 200)";
   canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
 
   canvasCtx.lineWidth = 2;
-  canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+  canvasCtx.strokeStyle = "rgb(0, 0, 0)";
 
   canvasCtx.beginPath();
 
-  var sliceWidth = canvas.width * 1.0 / bufferLength;
+  var sliceWidth = (canvas.width * 1.0) / bufferLength;
   var x = 0;
 
   for (var i = 0; i < bufferLength; i++) {
-
     var v = dataArray[i] / 128.0;
-    var y = v * canvas.height / 2;
+    var y = (v * canvas.height) / 2;
 
     if (i === 0) {
       canvasCtx.moveTo(x, y);
@@ -137,7 +136,7 @@ function draw() {
 
   canvasCtx.lineTo(canvas.width, canvas.height / 2);
   canvasCtx.stroke();
-};
+}
 
 draw();
 ```
@@ -152,4 +151,4 @@ draw();
 
 ## 相关内容
 
-- [Web Audio API 的运用](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Web Audio API 的运用](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

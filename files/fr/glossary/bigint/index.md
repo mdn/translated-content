@@ -1,15 +1,9 @@
 ---
 title: BigInt
 slug: Glossary/BigInt
-tags:
-  - BigInt
-  - Glossaire
-  - JavaScript
-  - Reference
-  - format de précision arbitraire
-translation_of: Glossary/BigInt
-original_slug: Glossaire/BigInt
 ---
+
+{{GlossarySidebar}}
 
 Dans {{Glossary("JavaScript")}}, **BigInt** est un type de données numériques qui peut représenter des entiers au [format de précision arbitraire](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic). Dans d'autres langages de programmation, différents types numériques peuvent exister, par exemple : Entiers, Flottants, Doubles, ou Bignums.
 
@@ -17,9 +11,9 @@ Dans {{Glossary("JavaScript")}}, **BigInt** est un type de données numériques 
 
 ### Culture générale
 
-- [Les types d'entier en informatique](https://fr.wikipedia.org/wiki/Entier_(informatique)#Types_d'entiers_courants) sur Wikipédia
+- [Les types d'entier en informatique](<https://fr.wikipedia.org/wiki/Entier_(informatique)#Types_d'entiers_courants>) sur Wikipédia
 
 ### Référence technique
 
-- La structure de données JavaScript : [`BigInt`](/fr/docs/Web/JavaScript/Data_structures#BigInt_type)
+- La structure de données JavaScript : [`BigInt`](/fr/docs/Web/JavaScript/Data_structures#bigint_type)
 - L'objet global JavaScript {{jsxref("BigInt")}}

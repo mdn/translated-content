@@ -7,9 +7,9 @@ slug: Web/CSS/box-shadow
 
 La propiedad CSS `box-shadow` añade efectos de sombra alrededor del marco de un elemento. Se pueden definir múltiples efectos separados por comas. La caja de la sombra se describe por los desplazamientos en X e Y, los radios de desenfoque y dispersión, y el color relativos al elemento.
 
-La propiedad `box-shadow` permite proyectar una sombra difuminada desde el marco de casi cualquier elemento. Si {{cssxref("border-radius")}} es especificado en un elemento con la propiedad box-shadow, la sombra adopta la misma curva en las esquinas. El z-orden de múltiples cajas de sombra es la misma que de múltiples [sombras de texto](/en-US/CSS/text-shadow) (la primera sombra definida se ubica hasta arriba).
+La propiedad `box-shadow` permite proyectar una sombra difuminada desde el marco de casi cualquier elemento. Si {{cssxref("border-radius")}} es especificado en un elemento con la propiedad box-shadow, la sombra adopta la misma curva en las esquinas. El z-orden de múltiples cajas de sombra es la misma que de múltiples [sombras de texto](/es/docs/Web/CSS/text-shadow) (la primera sombra definida se ubica hasta arriba).
 
-[Generador de Box-shadow](/es/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator) es una herramienta interactiva que permite generar una `box-shadow`.
+[Generador de Box-shadow](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator) es una herramienta interactiva que permite generar una `box-shadow`.
 
 ## Sintaxis
 
@@ -30,7 +30,9 @@ box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 box-shadow: inset 5em 1em gold;
 
 /* Any number of shadows, separated by commas */
-box-shadow: 3px 3px red, -1em 0 0.4em olive;
+box-shadow:
+  3px 3px red,
+  -1em 0 0.4em olive;
 
 /* Global keywords */
 box-shadow: inherit;
@@ -40,7 +42,7 @@ box-shadow: unset;
 
 Especifica una sola box-shadow utilizando:
 
-- Dos, tres, o cuatro valores [`<length>`](/en-US/docs/Web/CSS/length).
+- Dos, tres, o cuatro valores [`<length>`](/es/docs/Web/CSS/length).
 
   - Si solo dos valores son definidos, son interpretados como valores [`<offset-x><offset-y>`](#offset-x).
   - Si un tercer valor es dado, es interpretado como un [`<blur-radius>`](#blur-radius).
@@ -73,11 +75,14 @@ Especifica una sola box-shadow utilizando:
 En nuestro ejemplo, se incluyen tres sombras: una sombra interior, una sombra difuminada normal, y una sombra de 2px que crea un efecto de borde (podría haberse usado un {{cssxref('outline')}} en lugar de una tercera sombra).
 
 ```html
-<blockquote><q>You may shoot me with your words,<br/>
-You may cut me with your eyes,<br/>
-You may kill me with your hatefulness,<br/>
-But still, like air, I'll rise.</q>
-<p>&mdash; Maya Angelou</p>
+<blockquote>
+  <q
+    >You may shoot me with your words,<br />
+    You may cut me with your eyes,<br />
+    You may kill me with your hatefulness,<br />
+    But still, like air, I'll rise.</q
+  >
+  <p>&mdash; Maya Angelou</p>
 </blockquote>
 ```
 
@@ -91,9 +96,9 @@ y aún, como el aire, levantarme._
 blockquote {
   padding: 20px;
   box-shadow:
-       inset 0 -3em 3em rgba(0,0,0,0.1),
-             0 0  0 2px rgb(255,255,255),
-             0.3em 0.3em 1em rgba(0,0,0,0.3);
+    inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 ```
 
@@ -107,10 +112,11 @@ blockquote {
 
 ```css
 p {
-  box-shadow: 0 0 0 2em #F4AAB9,
-              0 0 0 4em #66CCFF;
+  box-shadow:
+    0 0 0 2em #f4aab9,
+    0 0 0 4em #66ccff;
   margin: 4em;
-  padding:1em;
+  padding: 1em;
 }
 ```
 
@@ -118,19 +124,19 @@ p {
 
 Cuando el `x-offset`, `y-offset`, y `blur` son todos cero, la sombra sera un contorno unifrome. Las sombras son dibujadas desde el fondo hasta el frente, así que la primera sombra se encuentra encima de sombras posteriores. Cuando el `border-radius` es 0, como por defecto, las esquinas de la sombra serán, bien, esquinas. De haberse definido un `border-radius` de cualquier otro valor, las esquinas habrían sido redondeadas.
 
-Se ha añadido un margen del tamaño de la sombra más ancha para asegurarse de que la sombra no se superponga a los elementos adyacentes o vaya más allá del borde de la caja de contención. Una sombra de caja no afeta a las dimensiones del [modelo de caja](/es/docs/Web/CSS/CSS_Box_Model).
+Se ha añadido un margen del tamaño de la sombra más ancha para asegurarse de que la sombra no se superponga a los elementos adyacentes o vaya más allá del borde de la caja de contención. Una sombra de caja no afeta a las dimensiones del [modelo de caja](/es/docs/Web/CSS/CSS_box_model).
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.box-shadow")}}
+{{Compat}}
 
 ## Ver también
 
 - El tipo de dato {{cssxref("&lt;color&gt;")}}
 - Otras propiedades relacionadas al color: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("caret-color")}}, y {{cssxref("column-rule-color")}}
 - {{cssxref("text-shadow")}}
-- [Aplicando color a los elementos HTML utilizando CSS](/es/docs/Web/HTML/Applying_color)
+- [Aplicando color a los elementos HTML utilizando CSS](/es/docs/Web/CSS/CSS_colors/Applying_color)

@@ -1,13 +1,47 @@
 ---
 title: font-size
 slug: Web/CSS/font-size
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
 
 **`font-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの大きさを定義します。フォントの大きさを変更すると、フォントの大きさに相対的な {{cssxref("&lt;length&gt;")}} の単位例えば `em`, `ex`, なども更新されます。
 
-{{EmbedInteractiveExample("pages/css/font-size.html")}}
+{{InteractiveExample("CSS Demo: font-size")}}
+
+```css interactive-example-choice
+font-size: 1.2rem;
+```
+
+```css interactive-example-choice
+font-size: x-small;
+```
+
+```css interactive-example-choice
+font-size: smaller;
+```
+
+```css interactive-example-choice
+font-size: 12px;
+```
+
+```css interactive-example-choice
+font-size: 80%;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
 
 ## 構文
 
@@ -33,34 +67,42 @@ font-size: 0.8em;
 /* <percentage>  値 */
 font-size: 80%;
 
+/* math 値 */
+font-size: math;
+
 /* グローバル値 */
 font-size: inherit;
 font-size: initial;
 font-size: revert;
+font-size: revert-layer;
 font-size: unset;
 ```
-
-`font-size` プロパティは、以下の何れかの方法で指定します。
-
-- 絶対的サイズまたは相対的サイズのキーワードのうちの一つ
-- `<length>` または親要素のフォントサイズからの相対的な `<percentage>`
 
 ### 値
 
 - `xx-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`, `xxx-large`
-  - : 絶対的なサイズのキーワードで、ユーザーの既定のフォントサイズ (つまり `medium`) を基準とします。
+
+  - : [絶対的なサイズ](/ja/docs/Web/CSS/absolute-size)のキーワードで、ユーザーの既定のフォントサイズ (つまり `medium`) を基準としたものです。
+
 - `larger`, `smaller`
-  - : 相対的なサイズのキーワードです。フォントは親要素のフォントサイズから相対的に、上記の絶対的サイズのキーワードで使われている倍率におよそ沿う形で拡大または縮小されます。
+
+  - : [相対的なサイズ](/ja/docs/Web/CSS/relative-size)のキーワードです。フォントは親要素のフォントサイズから相対的に、上記の絶対的サイズのキーワードで使われている倍率におよそ沿う形で拡大または縮小されます。
+
 - {{cssxref("&lt;length&gt;")}}
 
   - : 正の {{cssxref("&lt;length&gt;")}} の値。 (`em` や `ex` などの) フォント相対単位のほとんどは、親要素のフォントサイズに対する相対値です。
 
-    (`rem` などの) ルートを基準としたフォント相対単位では、フォントサイズは {{HTMLElement("html")}} (ルート) 要素で使われているフォントのサイズからの相対値です。
+    (`rem` などの) ルートを基準としたフォント相対単位では、フォントサイズは {{HTMLElement("html")}} （ルート）要素で使われているフォントのサイズからの相対値です。
 
 - {{cssxref("&lt;percentage&gt;")}}
-  - : 正の {{cssxref("&lt;percentage&gt;")}} 値で、親要素のフォントサイズからの相対値です。
 
-> **メモ:** アクセシビリティを最大化するために、一般的に最適なのは、ユーザーの既定のフォントサイズからの相対値を使用することです。
+  - : 正の {{cssxref("&lt;percentage&gt;")}} 値で、親要素のフォントサイズからの相対値です。
+    > [!NOTE]
+    > アクセシビリティを最大化するために、一般的に最適なのは、ユーザーの既定のフォントサイズからの相対値を使用することです。
+
+- `math`
+  - : math 要素の `font-size` プロパティの計算値を、親要素の `font-size` から相対的に決定する際に、[変倍ルール](https://w3c.github.io/mathml-core/#the-math-script-level-property)が適用されます。
+    詳細は、[math-depth](/ja/docs/Web/CSS/math-depth) プロパティを参照してください。
 
 ## 解説
 
@@ -76,13 +118,14 @@ font-size: unset;
 
 フォントサイズの指定を組み合わせることもできます。例えば親要素のフォントサイズを `16px` 、子要素を `larger` とした場合、子要素のフォントサイズは親要素の `16px` より大きくレンダリングされます。
 
-> **メモ:** フォントサイズを `px` で定義すると、ブラウザーによってはユーザーがフォントサイズを変更することができないため、[_アクセシブル_](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B7%E3%83%93%E3%83%AA%E3%83%86%E3%82%A3)ではありません。例えば、弱視の人は、ウェブデザイナーが選んだサイズより大きなフォントにしたがるかもしれません。こうした配慮のあるデザインをしたい場合は、フォントサイズにピクセルを使わないようにしてください。
+> [!NOTE]
+> フォントサイズを `px` で定義すると、ブラウザーによってはユーザーがフォントサイズを変更することができないため、[アクセシブル](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B7%E3%83%93%E3%83%AA%E3%83%86%E3%82%A3)ではありません。例えば、弱視の人は、ウェブデザイナーが選んだサイズより大きなフォントにしたがるかもしれません。こうした配慮のあるデザインをしたい場合は、フォントサイズにピクセルを使わないようにしてください。
 
-<h3 id="Ems">em</h3>
+### em
 
 `em` の値を使用すると、動的または計算されたフォントサイズが作成されます (歴史的には、`em` の単位は、ある書体の大文字の "M" の幅に由来していました)。この数値は、それが使われている要素の `font-size` プロパティの乗数として機能します。この例を見てください。
 
-```css
+```css live-sample___ems
 p {
   font-size: 2em;
 }
@@ -104,36 +147,36 @@ em = 要素に設定したい pixel 値 / 親要素のピクセル単位での�
 
 em 値が複合的であるということは、覚えておくべき重要な事実です。以下の HTML と CSS をご覧ください。
 
-```css
+```css live-sample___ems
 html {
-  font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
+  font-size: 100%;
 }
 span {
   font-size: 1.6em;
 }
 ```
 
-```html
+```html live-sample___ems
 <div>
-<span>Outer <span>inner</span> outer</span>
+  <span>Outer <span>inner</span> outer</span>
 </div>
 ```
 
 結果は以下のようになります。
 
-{{EmbedLiveSample("Ems", 400, 40)}}
+{{EmbedLiveSample("Ems", 400, 100)}}
 
-ブラウザーの既定の `font-size` が 16px と仮定すると、単語 “outer” は 16px で描画され、単語 “inner” は 25.6px で描画されます。これは、内側の {{HTMLElement("span")}} 要素の `font-size` は 1.6em ですが、これは親要素の `font-size` からの相対値で、さらにその親要素の `font-size` からの相対値になるからです。これはよく**複合** (compounding) と呼ばれます。
+ブラウザーの既定の `font-size` が 16px と仮定すると、単語 "outer" は 25.6px で描画されますが、単語 "inner" は 40.96px で描画されます。これは、内側の {{HTMLElement("span")}} 要素の `font-size` は 1.6em ですが、これは親要素の `font-size` からの相対値で、さらにその親要素の `font-size` からの相対値になるからです。これはよく**複合** (compounding) と呼ばれます。
 
-<h3 id="Rems" name="Rems">rem</h3>
+### rem
 
 `rem` 値は、複合の問題を避けるために考案されました。 `rem` 値は親要素ではなく、ルート `html` 要素に対して相対的です。言い換えると、親要素のサイズの影響を受けることなく相対的な方法でフォントサイズを指定できますので、複合が発生しません。
 
 以下の CSS は、先ほどの例とほぼ同じです。唯一の違いは、単位を `rem` に変更したことです。
 
-```css
+```css live-sample___rems
 html {
-  font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
+  font-size: 100%;
 }
 span {
   font-size: 1.6rem;
@@ -142,17 +185,17 @@ span {
 
 この CSS を同じ HTML に適用すると、以下のようになります。
 
-```html
+```html live-sample___rems
 <span>Outer <span>inner</span> outer</span>
 ```
 
-{{EmbedLiveSample("Rems", 400, 40)}}
+{{EmbedLiveSample("Rems", 400, 100)}}
 
-この例では、単語 “outer inner outer” はすべて 16px で表示されます (ブラウザーの `font-size` は既定値が 16px のままであるとします)。
+この例では、単語 "outer inner outer" はすべて 25.6px で表示されます（ブラウザーの `font-size` は既定値が 16px のままであるとした場合）。
 
 ### ex
 
-`em` の単位と同様に、`ex` の単位を使用して設定された要素の `font-size` は、計算または動的に行われます。全く同じように動作しますが、`ex` の単位を使用して `font-size` プロパティを設定する場合、`font-size` はページで使用されている[最初に利用可能なフォント](https://www.w3.org/TR/css3-fonts/#first-available-font)の x-height に等しいことを除いては、同じように動作します。数値は、要素の継承された `font-size` と `font-size` の複合体を相対的に乗算します。
+`em` の単位と同様に、`ex` の単位を使用して設定された要素の `font-size` は、計算または動的に行われます。全く同じように動作しますが、`ex` の単位を使用して `font-size` プロパティを設定する場合、`font-size` はページで使用されている[最初に利用可能なフォント](https://www.w3.org/TR/css-fonts-3/#first-available-font)の x-height に等しいことを除いては、同じように動作します。数値は、要素の継承された `font-size` と `font-size` の複合体を相対的に乗算します。
 
 `ex` などの[フォントに関する長さの単位](https://drafts.csswg.org/css-values-4/#font-relative-length)の詳細な説明はW3C Editor's Draftを参照してください。
 
@@ -166,7 +209,7 @@ span {
 
 ## 例
 
-<h3 id="Setting_font_sizes">フォントサイズの設定</h3>
+### フォントサイズの設定
 
 #### CSS
 
@@ -196,7 +239,7 @@ span {
 
 #### 結果
 
-{{EmbedLiveSample('Setting_font_sizes','600','200')}}
+{{EmbedLiveSample('Setting_font_sizes', 600, 250)}}
 
 ## 仕様書
 
@@ -211,4 +254,6 @@ span {
 - {{cssxref("font-size-adjust")}}
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
-- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
+- {{cssxref("math-depth")}}
+- {{cssxref("math-style")}}
+- [学習: 基本的なテキストとフォントのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)

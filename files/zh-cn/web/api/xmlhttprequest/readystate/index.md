@@ -26,23 +26,21 @@ slug: Web/API/XMLHttpRequest/readyState
 - DONE
   - : 请求操作已经完成。这意味着数据传输已经彻底完成或失败。
 
-> **备注：** 在 IE 中，状态有着不同的名称，并不是 `UNSENT`，`OPENED` ，`HEADERS_RECEIVED` ，`LOADING` 和 `DONE`，而是 `READYSTATE_UNINITIALIZED` (0)，`READYSTATE_LOADING` (1) ，`READYSTATE_LOADED` (2) ，`READYSTATE_INTERACTIVE` (3) `和 READYSTATE_COMPLETE` (4) 。
-
 ## 示例
 
 ```js
 var xhr = new XMLHttpRequest();
-console.log('UNSENT', xhr.readyState); // readyState 为 0
+console.log("UNSENT", xhr.readyState); // readyState 为 0
 
-xhr.open('GET', '/api', true);
-console.log('OPENED', xhr.readyState); // readyState 为 1
+xhr.open("GET", "/api", true);
+console.log("OPENED", xhr.readyState); // readyState 为 1
 
 xhr.onprogress = function () {
-    console.log('LOADING', xhr.readyState); // readyState 为 3
+  console.log("LOADING", xhr.readyState); // readyState 为 3
 };
 
 xhr.onload = function () {
-    console.log('DONE', xhr.readyState); // readyState 为 4
+  console.log("DONE", xhr.readyState); // readyState 为 4
 };
 
 xhr.send(null);

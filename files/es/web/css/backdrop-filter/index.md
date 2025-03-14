@@ -1,20 +1,67 @@
 ---
 title: backdrop-filter
 slug: Web/CSS/backdrop-filter
+l10n:
+  sourceCommit: 84d5320ca6c8d0925995083de66abacb98922ced
 ---
 
 {{CSSRef}}
 
-La propiedad [CSS](/es/docs/Web/CSS) de **`backdrop-filter`** le permite aplicar efectos gráficos como el desenfoque o el cambio de color al área detrás de un elemento. Debido a que se aplica a todo lo que está _detrás_ del elemento, para ver el efecto debe hacer que el elemento o su fondo sean al menos parcialmente transparentes.
+La propiedad [CSS](/es/docs/Web/CSS) **`backdrop-filter`** le permite aplicar efectos gráficos como desenfoque o cambio de color al área detrás de un elemento. Debido a que se aplica a todo lo que hay detrás del elemento, para ver el efecto debe hacer que el elemento o su fondo sean al menos parcialmente transparentes.
+
+{{InteractiveExample("CSS Demo: backdrop-filter()")}}
+
+```css interactive-example-choice
+backdrop-filter: blur(10px);
+```
+
+```css interactive-example-choice
+backdrop-filter: invert(80%);
+```
+
+```css interactive-example-choice
+backdrop-filter: sepia(90%);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div id="example-element">Example</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-image: url("/shared-assets/images/examples/balloon.jpg");
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+#example-element {
+  font-weight: bold;
+  flex: 1;
+  text-align: center;
+  padding: 20px 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+```
+
+## Sintaxis
 
 ```css
-/* Valor de palabra clave */
+/* Valor de la palabra clave */
 backdrop-filter: none;
 
-/* URL al filtro SVG */
+/* URL a filtro SVG */
 backdrop-filter: url(commonfilters.svg#filter);
 
-/* valores <filter-function> */
+/* valores de <filter-function> */
 backdrop-filter: blur(2px);
 backdrop-filter: brightness(60%);
 backdrop-filter: contrast(40%);
@@ -33,25 +80,26 @@ backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
 backdrop-filter: inherit;
 backdrop-filter: initial;
 backdrop-filter: revert;
+backdrop-filter: revert-layer;
 backdrop-filter: unset;
 ```
-
-{{cssinfo}}
-
-## Sintaxis
 
 ### Valores
 
 - `none`
-  - : No se aplica filtro al fondo.
+  - : No se aplica ningún filtro al fondo.
 - `<filter-function-list>`
-  - : Una lista separada por espacios de {{cssxref("&lt;filter-function&gt;")}} o un [filtro SVG](/es/docs/Web/SVG/Element/filter) que se aplicará al fondo.
+  - : Una lista de {{cssxref("&lt;filter-function&gt;")}} separada por espacios o un [filtro SVG](/es/docs/Web/SVG/Element/filter) que se aplicará al fondo.
 
-### Sintaxis formal
+## Definicion formal
+
+{{cssinfo}}
+
+## Sintaxis formal
 
 {{csssyntax}}
 
-## Ejemplo
+## Ejemplos
 
 ### CSS
 
@@ -62,8 +110,8 @@ backdrop-filter: unset;
   font-family: sans-serif;
   text-align: center;
   line-height: 1;
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   max-width: 50%;
   max-height: 50%;
   padding: 20px 40px;
@@ -76,7 +124,8 @@ body {
 }
 
 body {
-  background-image: url('https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg');
+  background-image:
+    url("anemones.jpg"), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -103,7 +152,7 @@ body {
 
 ### Resultado
 
-{{EmbedLiveSample("Ejemplo", 600, 400)}}
+{{EmbedLiveSample("Examples", 600, 400)}}
 
 ## Especificaciones
 
@@ -111,8 +160,8 @@ body {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.backdrop-filter")}}
+{{Compat}}
 
-## Ver también
+## Véase también
 
 - {{cssxref("filter")}}

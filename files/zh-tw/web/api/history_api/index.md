@@ -3,6 +3,8 @@ title: 操控瀏覽器歷史紀錄
 slug: Web/API/History_API
 ---
 
+{{DefaultAPISidebar("History API")}}
+
 DOM {{ domxref("window") }} 物件透過 {{ domxref("window.history", "history") }} 物件，提供了進入瀏覽歷史的方式。他透過一些方便的屬性與方法，讓你可以在歷史紀錄中往上一步或往下一步移動，並且讓你——從 HTML5 開始——能操作歷史紀錄堆疊（history stack）的內容。
 
 ## 在歷史紀錄中移動
@@ -49,7 +51,8 @@ window.history.go(1);
 var numberOfEntries = window.history.length;
 ```
 
-> **備註：** Internet Explorer 支援在 `go()` 中以 URL 的值作為參數；這不在標準中，Gecko 也不支援。
+> [!NOTE]
+> Internet Explorer 支援在 `go()` 中以 URL 的值作為參數；這不在標準中，Gecko 也不支援。
 
 ## 加入和修改歷史紀錄
 
@@ -83,7 +86,8 @@ history.pushState(stateObj, "page 2", "bar.html");
 - **title**——Firefox 目前忽略了這個參數，雖然他以後有可能會採用。如果以後改變了這個作法，傳送空白的字串應該還會是安全的。另外，你可以傳送一個短的標題來敘述你想要到的 state。
 - **URL**——這個新歷史紀錄的 URL 從這個參數做設定。值得注意的是，在 `pushState()` 被呼叫之後，瀏覽器並不會馬上嘗試載入這個 URL ，但是它可能在以後嘗試載入這個 URL ，例如使用者重新開啟瀏覽器之後。新的 URL 不一定需要為一個絕對的路徑；如果是相對路徑，會依據目前的 URL 來解析。新的 URL 需要與目前 URL 的 origin 是一樣的；否則，pushState() 會丟出一個錯誤的例外。這個參數是選擇性的；如果沒有被指定的話，他會設定為目前文件的 URL。
 
-> **備註：** 在 Gecko 2.0 到 Gecko 5.0，是採用 JSON 來序列化這個傳送的物件。從 Gecko 6.0 開始,這個物件是以 [the structured clone algorithm](/zh-TW/DOM/The_structured_clone_algorithm) 序列化。這會允許更多種不同的物件可以被安全的傳送。
+> [!NOTE]
+> 在 Gecko 2.0 到 Gecko 5.0，是採用 JSON 來序列化這個傳送的物件。從 Gecko 6.0 開始,這個物件是以 [the structured clone algorithm](/zh-TW/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) 序列化。這會允許更多種不同的物件可以被安全的傳送。
 
 從某種意義上，呼叫 `pushState()` 與設定 `window.location = "#foo"` 是類似的，兩個都會去建立和啟用另一個和目前文件有關的歷史紀錄。但是 `pushState()` 有一些優勢：
 
@@ -104,7 +108,8 @@ In other documents, it creates an element with a `null` namespace URI.
 
 `replaceState()` 很實用的時機是當你要更新目前歷史紀錄的 state object 或是 URL 來反應一些使用者的動作時。
 
-> **備註：** 在 Gecko 2.0 到 Gecko 5.0，是採用 JSON 來序列化這個傳送的物件。從 Gecko 6.0 開始, 這個物件是以 [the structured clone algorithm](/zh-TW/DOM/The_structured_clone_algorithm) 序列化。這會允許更多種不同的物件可以被安全的傳送。
+> [!NOTE]
+> 在 Gecko 2.0 到 Gecko 5.0，是採用 JSON 來序列化這個傳送的物件。從 Gecko 6.0 開始, 這個物件是以 [the structured clone algorithm](/zh-TW/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) 序列化。這會允許更多種不同的物件可以被安全的傳送。
 
 ### replaceState() 方法範例
 
@@ -143,7 +148,7 @@ var currentState = history.state;
 
 ## 範例
 
-完整的 AJAX 網站範例 ，請參閱：[Ajax navigation example](/zh-TW/docs/DOM/Manipulating_the_browser_history/Example)。
+完整的 AJAX 網站範例 ，請參閱：[Ajax navigation example](/zh-TW/docs/Web/API/History_API/Working_with_the_History_API)。
 
 ## 規範
 

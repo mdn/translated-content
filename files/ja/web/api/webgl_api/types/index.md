@@ -1,36 +1,107 @@
 ---
 title: WebGL の型
 slug: Web/API/WebGL_API/Types
+l10n:
+  sourceCommit: 621c7978886787ca66bc5e90e457cf1466e58d35
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
-[WebGL](/ja/docs/Web/API/WebGL_API) インターフェースでは次の型が使用されます。
+以下の型が [WebGL](/ja/docs/Web/API/WebGL_API) のインターフェイスで使用されます。
 
 ## WebGL 1
 
 これらの型は {{domxref("WebGLRenderingContext")}} 内で使用されます。
 
-| 型           | Web IDL 型           | 説明                                                                                                                              |
-| ------------ | -------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `GLenum`     | `unsigned long`      | 列挙に使用されます。[定数](/ja/docs/Web/API/WebGL_API/Constants)のリストも参照してください。                                      |
-| `GLboolean`  | `boolean`            | A {{jsxref("Boolean")}}.                                                                                                   |
-| `GLbitfield` | `unsigned long`      | A bit field that stores multiple, logical bits. Used for example in {{domxref("WebGLRenderingContext.clear()")}}. |
-| `GLbyte`     | `byte`               | 8-bit twos complement signed integer.                                                                                             |
-| `GLshort`    | `short`              | 16-bit twos complement signed integer.                                                                                            |
-| `GLint`      | `long`               | 32-bit twos complement signed integer.                                                                                            |
-| `GLsizei`    | `long`               | Used for sizes (e.g. width and height of the drawing buffer).                                                                     |
-| `GLintptr`   | `long long`          | Special type for pointer arithmetic.                                                                                              |
-| `GLsizeiptr` | `long long`          | Special type for pointer arithmetic.                                                                                              |
-| `GLubyte`    | `octet`              | 8-bit twos complement unsigned integer.                                                                                           |
-| `GLushort`   | `unsigned short`     | 16-bit twos complement unsigned integer.                                                                                          |
-| `GLuint`     | `unsigned long`      | 32-bit twos complement unsigned integer.                                                                                          |
-| `GLfloat`    | `unrestricted float` | 32-bit IEEE floating point number.                                                                                                |
-| `GLclampf`   | `unrestricted float` | Clamped 32-bit IEEE floating point number.                                                                                        |
+<table class="no-markdown">
+  <thead>
+    <tr>
+      <th>型</th>
+      <th>Web IDL 型</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>GLenum</code></td>
+      <td><code>unsigned long</code></td>
+      <td>
+        列挙型に使用します。<a href="/ja/docs/Web/API/WebGL_API/Constants">定数</a>の一覧もご覧ください。
+      </td>
+    </tr>
+    <tr>
+      <td><code>GLboolean</code></td>
+      <td><code>boolean</code></td>
+      <td>論理値です。</td>
+    </tr>
+    <tr>
+      <td><code>GLbitfield</code></td>
+      <td><code>unsigned long</code></td>
+      <td>
+        複数の論理ビットを格納するビットフィールドです。例えば {{domxref("WebGLRenderingContext.clear()")}} で使用されます。
+      </td>
+    </tr>
+    <tr>
+      <td><code>GLbyte</code></td>
+      <td><code>byte</code></td>
+      <td>8 ビット 2 の補数符号付き整数です。</td>
+    </tr>
+    <tr>
+      <td><code>GLshort</code></td>
+      <td><code>short</code></td>
+      <td>16 ビット 2 の補数符号付き整数です。</td>
+    </tr>
+    <tr>
+      <td><code>GLint</code></td>
+      <td><code>long</code></td>
+      <td>32 ビット 2 の補数符号付き整数です。</td>
+    </tr>
+    <tr>
+      <td><code>GLsizei</code></td>
+      <td><code>long</code></td>
+      <td>サイズ（描画バッファーの幅や高さなど）に使用します。</td>
+    </tr>
+    <tr>
+      <td><code>GLintptr</code></td>
+      <td><code>long long</code></td>
+      <td>ポインター演算用の特殊型です。</td>
+    </tr>
+    <tr>
+      <td><code>GLsizeiptr</code></td>
+      <td><code>long long</code></td>
+      <td>ポインター演算用の特殊型です。</td>
+    </tr>
+    <tr>
+      <td><code>GLubyte</code></td>
+      <td><code>octet</code></td>
+      <td>8 ビット符号なし整数です。</td>
+    </tr>
+    <tr>
+      <td><code>GLushort</code></td>
+      <td><code>unsigned short</code></td>
+      <td>16 ビット符号なし整数です。</td>
+    </tr>
+    <tr>
+      <td><code>GLuint</code></td>
+      <td><code>unsigned long</code></td>
+      <td>32 ビット符号なし整数です。</td>
+    </tr>
+    <tr>
+      <td><code>GLfloat</code></td>
+      <td><code>unrestricted float</code></td>
+      <td>32 ビット IEEE 浮動小数点数です。</td>
+    </tr>
+    <tr>
+      <td><code>GLclampf</code></td>
+      <td><code>unrestricted float</code></td>
+      <td>限界つき 32 ビット IEEE 浮動小数点数です。</td>
+    </tr>
+  </tbody>
+</table>
 
 ## WebGL 2
 
-これらの型は {{domxref("WebGL2RenderingContext")}} で使用されます。すべての WebGL 1 タイプも使用されます。
+これらの型は {{domxref("WebGL2RenderingContext")}} で使用されます。すべての WebGL 1 の型も使用されます。
 
 | 型        | Web IDL 型  | 説明                   |
 | --------- | ----------- | ---------------------- |
@@ -44,14 +115,10 @@ slug: Web/API/WebGL_API/Types
 | ------------- | ----------- | ---------------------- |
 | `GLuint64EXT` | `long long` | 符号なし 64 ビット整数 |
 
-## 仕様
+## 仕様書
 
-| 仕様書                                                                           | ステータス                                       | コメント             |
-| -------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName('WebGL', "#5.1", "Types")}}                             | {{Spec2('WebGL')}}                         | 初期定義             |
-| {{SpecName('WebGL2', "#3.1", "Types")}}                             | {{Spec2('WebGL2')}}                         | 追加のタイプを定義   |
-| {{SpecName('EXT_disjoint_timer_query', "", "GLuint64EXT")}} | {{Spec2('EXT_disjoint_timer_query')}} | `GLuint64EXT` の追加 |
+{{Specifications}}
 
-## あわせて参照
+## 関連情報
 
 - {{domxref("WebGLRenderingContext")}}

@@ -1,10 +1,9 @@
 ---
-title: Window.sessionStorage
+title: "Window: свойство sessionStorage"
 slug: Web/API/Window/sessionStorage
-translation_of: Web/API/Window/sessionStorage
 ---
 
-{{APIRef()}}
+{{APIRef("Web Storage API")}}
 
 `Свойство sessionStorage` позволяет получить доступ к объекту {{domxref("Storage")}} текущей сессии. Свойство sessionStorage очень похоже на свойство {{domxref("Window.localStorage")}}, единственное различие заключается в том, что все данные, сохранённые в localStorage не имеют определённого времени жизни, а данные в sessionStorage очищаются в момент окончания сессии текущий страницы. Сессия страницы остаётся активной все время пока окно браузера открыто и сохраняется между перезагрузками страниц. **Открытие той же страницы в новом окне браузера или новой вкладке приводит к созданию новой сессии страницы,** что отличается от поведения session cookies**.**
 
@@ -12,10 +11,10 @@ translation_of: Web/API/Window/sessionStorage
 
 ```js
 // Сохранение данных в sessionStorage
-sessionStorage.setItem('key', 'value');
+sessionStorage.setItem("key", "value");
 
 // Получение данных из sessionStorage
-var data = sessionStorage.getItem('key');
+var data = sessionStorage.getItem("key");
 ```
 
 ### Значение
@@ -27,7 +26,7 @@ var data = sessionStorage.getItem('key');
 Следующий код получает доступ к объекту {{domxref("Storage")}} текущей сессии домена и добавляет данные в него используя {{domxref("Storage.setItem()")}}.
 
 ```js
-sessionStorage.setItem('myCat', 'Tom');
+sessionStorage.setItem("myCat", "Tom");
 ```
 
 Следующий пример автоматически сохраняет содержимое текстового поля. Если страница случайно будет обновлена значение текстового поля будет восстановлено. Таким образом ничего из введённого пользователем не потеряется даже в этом случае.
@@ -45,19 +44,20 @@ if (sessionStorage.getItem("autosave")) {
 }
 
 // Отслеживаем все изменения в текстовом поле
-field.addEventListener("change", function() {
+field.addEventListener("change", function () {
   // И сохраняем их в объект session storage
   sessionStorage.setItem("autosave", field.value);
 });
 ```
 
-> **Примечание:** **Замечание**: Обратитесь к статье [Using the Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API), чтобы изучить полный пример.
+> [!NOTE]
+> Обратитесь к статье [Using the Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API), чтобы изучить полный пример.
 
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

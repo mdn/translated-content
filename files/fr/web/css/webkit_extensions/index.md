@@ -1,13 +1,6 @@
 ---
 title: Extensions WebKit
 slug: Web/CSS/WebKit_Extensions
-tags:
-  - Aperçu
-  - CSS
-  - Non-standard
-  - Reference
-  - WebKit
-translation_of: Web/CSS/WebKit_Extensions
 ---
 
 {{CSSRef}}
@@ -16,7 +9,8 @@ Les applications basées sur WebKit ou Blink, telles que Safari et Chrome, prenn
 
 ## Propriétés spécifiques WebKit (ne pas utiliser sur le Web)
 
-> **Note :** Ces propriétés ne fonctionneront que pour les applications WebKit et ne sont pas en voie de standardisation.
+> [!NOTE]
+> Ces propriétés ne fonctionneront que pour les applications WebKit et ne sont pas en voie de standardisation.
 
 ### A
 
@@ -182,7 +176,8 @@ Les applications basées sur WebKit ou Blink, telles que Safari et Chrome, prenn
 
 ## Anciennes propriétés spécifiques désormais standardisées
 
-> **Note :** Afin d'obtenir la meilleure compatibilité possible, vous devriez utiliser les versions standards, non-préfixées, de ces propriétés plutôt que les versions spécifiques. Généralement, lorsqu'une propriété est standardisée et implémentée, la version préfixée est généralement abandonnée ensuite.
+> [!NOTE]
+> Afin d'obtenir la meilleure compatibilité possible, vous devriez utiliser les versions standards, non-préfixées, de ces propriétés plutôt que les versions spécifiques. Généralement, lorsqu'une propriété est standardisée et implémentée, la version préfixée est généralement abandonnée ensuite.
 
 ### A
 
@@ -293,7 +288,8 @@ Les applications basées sur WebKit ou Blink, telles que Safari et Chrome, prenn
 
 Les propriétés suivantes peuvent être utilisées avec le préfixe `-webkit-` sous Firefox. La plupart de ces propriétés peuvent également s'utiliser sans préfixes (voir la section sur les [propriétés anciennement spécifiques et désormais standard](#spe_std) ci-avant).
 
-> **Note :** En raison du code historique utilisé dans de nombreux sites web et contenant des propriétés préfixées avec `-webkit-`, Edge et Firefox redirigent de nombreuses propriétés préfixées avec `-webkit-` vers les équivalents sans préfixe ou avec `-moz-` ou `-ms-`.
+> [!NOTE]
+> En raison du code historique utilisé dans de nombreux sites web et contenant des propriétés préfixées avec `-webkit-`, Edge et Firefox redirigent de nombreuses propriétés préfixées avec `-webkit-` vers les équivalents sans préfixe ou avec `-moz-` ou `-ms-`.
 
 ### A
 

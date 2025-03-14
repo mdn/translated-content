@@ -1,30 +1,20 @@
 ---
 title: tabs.show()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/show
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - show
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/show
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Affiche un ou plusieurs onglets précédemment masqués par un appel à {{WebExtAPIRef("tabs.hide")}}.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var showing = browser.tabs.show(
-  tabIds          // integer or integer array
-)
+  tabIds, // integer or integer array
+);
 ```
 
 ### Paramètres
@@ -34,7 +24,7 @@ var showing = browser.tabs.show(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera accomplie sans arguments. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera accomplie sans arguments. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
 ## Exemples
 
@@ -68,6 +58,6 @@ browser.tabs.show([15, 14, 1]).then(onShown, onError);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.show")}}
+{{Compat}}

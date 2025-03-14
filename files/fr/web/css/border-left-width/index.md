@@ -1,11 +1,6 @@
 ---
 title: border-left-width
 slug: Web/CSS/border-left-width
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-left-width
 ---
 
 {{CSSRef}}
@@ -59,17 +54,17 @@ border-left-width: unset;
 ### CSS
 
 ```css
-.element1{
+.element1 {
   border-left-width: thick;
   border-left-style: solid;
   border-left-color: red;
 }
-.element2{
+.element2 {
   border-left-width: medium;
   border-left-style: solid;
   border-left-color: orange;
 }
-.element3{
+.element3 {
   border-left-width: thin;
   border-left-style: solid;
   border-left-color: green;
@@ -79,17 +74,11 @@ border-left-width: unset;
 ### HTML
 
 ```html
-<p class="element1">
-  Une bordure épaisse rouge.
-</p>
+<p class="element1">Une bordure épaisse rouge.</p>
 
-<p class="element2">
-  Une bordure moyenne orange.
-</p>
+<p class="element2">Une bordure moyenne orange.</p>
 
-<p class="element3">
-  Et une bordure fine verte.
-</p>
+<p class="element3">Et une bordure fine verte.</p>
 ```
 
 ### Résultat

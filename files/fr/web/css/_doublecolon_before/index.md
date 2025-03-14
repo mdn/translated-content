@@ -1,16 +1,11 @@
 ---
-title: '::before (:before)'
+title: ::before (:before)
 slug: Web/CSS/::before
-tags:
-  - CSS
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::before
 ---
 
 {{CSSRef}}
 
-**`::before`** crée un [pseudo-élément](/fr/docs/Web/CSS/Pseudo-éléments) qui sera le premier enfant de l'élément ciblé. Généralement utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS {{cssxref("content")}}. Par défaut, l'élément créé est de type en-ligne (_inline_).
+**`::before`** crée un [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) qui sera le premier enfant de l'élément ciblé. Généralement utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS {{cssxref("content")}}. Par défaut, l'élément créé est de type en-ligne (_inline_).
 
 ```css
 /* On ajoute un coeur avant les liens */
@@ -19,13 +14,14 @@ a::before {
 }
 ```
 
-> **Note :** Les pseudo-éléments générés par `::before` et `::after` sont contenus dans la boîte de mise en forme de l'élément. Aussi, `::before` et `::after` ne s'appliquent pas [aux éléments remplacés](/fr/docs/Web/CSS/Élément_remplacé) tels que {{HTMLElement("img")}} ou {{HTMLElement("br")}}.
+> [!NOTE]
+> Les pseudo-éléments générés par `::before` et `::after` sont contenus dans la boîte de mise en forme de l'élément. Aussi, `::before` et `::after` ne s'appliquent pas [aux éléments remplacés](/fr/docs/Web/CSS/Replaced_element) tels que {{HTMLElement("img")}} ou {{HTMLElement("br")}}.
 
 ## Syntaxe
 
 {{csssyntax}}
 
-La notation `::before` a été introduite par CSS 3 pour différencier les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) et les [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-éléments). Les navigateurs acceptent aussi la notation `:before` introduite par CSS 2.
+La notation `::before` a été introduite par CSS 3 pour différencier les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) et les [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements). Les navigateurs acceptent aussi la notation `:before` introduite par CSS 2.
 
 ## Exemples
 
@@ -70,12 +66,12 @@ Il est possible de mettre du style à du texte ou des images, dans la propriét�
 
 ```css
 .ribbon {
-  background-color: #5BC8F7;
+  background-color: #5bc8f7;
 }
 
 .ribbon::before {
   content: "Regardez cette boite orange.";
-  background-color: #FFBA10;
+  background-color: #ffba10;
   border-color: black;
   border-style: dotted;
 }
@@ -115,11 +111,11 @@ li {
 }
 
 li.done {
-  background: #CCFF99;
+  background: #ccff99;
 }
 
 li.done::before {
-  content: '';
+  content: "";
   position: absolute;
   border-color: #009933;
   border-style: solid;
@@ -136,12 +132,16 @@ li.done::before {
 #### JavaScript
 
 ```js
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if( ev.target.tagName === 'LI') {
-     ev.target.classList.toggle('done');
-  }
-}, false);
+var list = document.querySelector("ul");
+list.addEventListener(
+  "click",
+  function (ev) {
+    if (ev.target.tagName === "LI") {
+      ev.target.classList.toggle("done");
+    }
+  },
+  false,
+);
 ```
 
 #### Résultat

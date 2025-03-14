@@ -1,22 +1,12 @@
 ---
 title: Gérer les fichiers
 slug: Learn/Getting_started_with_the_web/Dealing_with_files
-tags:
-  - Création site
-  - Débutant
-  - Fichiers
-  - Guide
-  - HTML
-  - Site Web
-  - Theorie
-translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
-original_slug: Apprendre/Commencer_avec_le_web/Gérer_les_fichiers
 ---
 
 {{LearnSidebar}}
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site", "Apprendre/Commencer_avec_le_web/Les_bases_HTML","Apprendre/Commencer_avec_le_web")}}
 
-Un site web est composé de nombreux fichiers : contenu textuel, code, feuilles de styles, contenus média, etc. Lors de la construction d'un site web, ces fichiers doivent être organisés et rangés sur votre ordinateur afin qu'ils puissent interagir les uns avec les autres et que le contenu s'affiche correctement. Une fois que c'est fait, vous pourrez alors [téléverser ces fichiers sur un serveur](/fr/Apprendre/Commencer_avec_le_web/Publier_votre_site_web). _Gérer les fichiers_ aborde certains problèmes auxquels vous devez faire attention pour mettre en place une organisation judicieuse des fichiers de votre site web.
+Un site web est composé de nombreux fichiers : contenu textuel, code, feuilles de styles, contenus média, etc. Lors de la construction d'un site web, ces fichiers doivent être organisés et rangés sur votre ordinateur afin qu'ils puissent interagir les uns avec les autres et que le contenu s'affiche correctement. Une fois que c'est fait, vous pourrez alors [téléverser ces fichiers sur un serveur](/fr/docs/Learn/Getting_started_with_the_web/Publishing_your_website). _Gérer les fichiers_ aborde certains problèmes auxquels vous devez faire attention pour mettre en place une organisation judicieuse des fichiers de votre site web.
 
 ## Où placer votre site web sur votre ordinateur&nbsp;?
 
@@ -43,27 +33,28 @@ Cela dit, regardons la structure que le site de test devrait avoir. Les élémen
 3. **un dossier `styles`**&nbsp;: ce dossier contiendra le code des CSS utilisé pour la mise en forme du contenu (par exemple pour définir les couleurs à utiliser pour le texte et l'arrière-plan). Créez un dossier nommé `styles` dans votre dossier `site-test`.
 4. **un dossier `scripts`** : ce dossier contiendra le code JavaScript utilisé pour ajouter des fonctionnalités interactives sur votre site (par exemple, des boutons qui permettent de charger des données lorsqu'on clique dessus). Créez un dossier nommé `scripts` dans votre dossier `site-test`.
 
-> **Note :** Sur Windows, vous aurez peut être des problèmes pour voir le nom des fichiers en entier. En effet, Windows possède une option, activée par défaut&nbsp;: **Masquer les extensions pour les types de fichiers connus**. Généralement, il est possible de la désactiver en allant dans l'explorateur de fichiers, en sélectionnant   **Options des dossiers...**, en enlevant la coche de **Masquer les extensions pour les types de fichier connus** puis en cliquant sur **OK**. Pour des informations propres à votre version de Windows, recherchez sur le Web !
+> [!NOTE]
+> Sur Windows, vous aurez peut être des problèmes pour voir le nom des fichiers en entier. En effet, Windows possède une option, activée par défaut&nbsp;: **Masquer les extensions pour les types de fichiers connus**. Généralement, il est possible de la désactiver en allant dans l'explorateur de fichiers, en sélectionnant **Options des dossiers...**, en enlevant la coche de **Masquer les extensions pour les types de fichier connus** puis en cliquant sur **OK**. Pour des informations propres à votre version de Windows, recherchez sur le Web !
 
 ## Les chemins de fichiers
 
-Pour que les fichiers puissent converser entre eux, il faut préciser le chemin pour les trouver — en résumé, la route qu'un fichier doit connaître pour situer l'autre fichier. Nous allons illustrer cela avec un peu de HTML dans `index.html` pour que la page affiche l'image choisie dans l'article « [Quel aspect pour votre site web&nbsp;?](/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site)&nbsp;».
+Pour que les fichiers puissent converser entre eux, il faut préciser le chemin pour les trouver — en résumé, la route qu'un fichier doit connaître pour situer l'autre fichier. Nous allons illustrer cela avec un peu de HTML dans `index.html` pour que la page affiche l'image choisie dans l'article « [Quel aspect pour votre site web&nbsp;?](/fr/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)&nbsp;».
 
 1. Copiez l'image précédemment choisie dans votre dossier `images`.
 2. Ouvrez le fichier `index.html` et insérez le code suivant exactement comme indiqué. Ne vous préoccupez pas de sa signification pour le moment — nous verrons les structures plus en détail par la suite.
 
-    ```html
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>Ma page de test</title>
-      </head>
-      <body>
-        <img src="" alt="Mon image de test">
-      </body>
-    </html>
-    ```
+   ```html
+   <!doctype html>
+   <html>
+     <head>
+       <meta charset="utf-8" />
+       <title>Ma page de test</title>
+     </head>
+     <body>
+       <img src="" alt="Mon image de test" />
+     </body>
+   </html>
+   ```
 
 3. La ligne qui contient `<img src="" alt="Mon image de test">` correspond au code HTML qui insère une image dans la page. Il faut indiquer au HTML là où l'image se trouve. Cette image est à l'intérieur du dossier `images` et ce dossier se situe dans le même dossier qu'`index.html`. Pour parcourir l'arborescence des fichiers depuis `index.html` jusqu'à l'image, le chemin à utiliser est `images/votre‑fichier‑image`. Par exemple, si l'image est nommée `firefox‑icon.png`, le chemin sera `images/firefox-icon.png`.
 4. Insérez le chemin vers le fichier image dans le code HTML, entre les guillemets dans `src=""`.
@@ -80,21 +71,11 @@ Quelques règles générales à propos des chemins de fichier :
 
 Pour le moment, c'est tout ce qu'il y a à savoir.
 
-> **Note :** Le système de fichiers Windows utilise des barres obliques inversées (_backslash_ : « \ ») et non des barres obliques (_slash_ : « / »), par exemple `C:\windows`. Cela n'intervient pas en HTML — même si vous développez votre site sur Windows, vous devez toujours utiliser des barres obliques (« / ») dans votre code..
+> [!NOTE]
+> Le système de fichiers Windows utilise des barres obliques inversées (_backslash_ : « \ ») et non des barres obliques (_slash_ : « / »), par exemple `C:\windows`. Cela n'intervient pas en HTML — même si vous développez votre site sur Windows, vous devez toujours utiliser des barres obliques (« / ») dans votre code..
 
 ## Autre chose ?
 
 C'est tout ce qu'il y a à faire pour le moment en ce qui concerne les fichiers. Votre arborescence de fichiers devrait ressembler à cela :
 
 ![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](file-structure.png){{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site", "Apprendre/Commencer_avec_le_web/Les_bases_HTML","Apprendre/Commencer_avec_le_web")}}
-
-## Dans ce module
-
-- [Installer les logiciels de base](/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base)
-- [Quel aspect pour votre site Web&nbsp;?](/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site)
-- [Gérer les fichiers](/fr/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers)
-- [Bases du HTML](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_HTML)
-- [Bases des CSS](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_CSS)
-- [Bases du JavaScript](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_JavaScript)
-- [Publier votre site Web](/fr/Apprendre/Commencer_avec_le_web/Publier_votre_site_web)
-- [Comment fonctionne le Web](/fr/Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web)

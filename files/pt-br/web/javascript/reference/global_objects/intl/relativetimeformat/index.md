@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 
 O objeto **`Intl.RelativeTimeFormat`** é um construtor de objetos que permitem uma formatação de tempo relativa sensível ao idioma.
 
-{{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat")}}
+
+```js interactive-example
+const rtf1 = new Intl.RelativeTimeFormat("en", { style: "short" });
+
+console.log(rtf1.format(3, "quarter"));
+// Expected output: "in 3 qtrs."
+
+console.log(rtf1.format(-1, "day"));
+// Expected output: "1 day ago"
+
+const rtf2 = new Intl.RelativeTimeFormat("es", { numeric: "auto" });
+
+console.log(rtf2.format(2, "day"));
+// Expected output: "pasado mañana"
+```
 
 ## Sintaxe
 
@@ -24,7 +39,7 @@ new Intl.RelativeTimeFormat([locales[, options]])
   - : Opcional. Um objeto com algumas ou todas as seguintes propriedades:
 
     - `localeMatcher`
-      O algoritmo para comparação de local a ser usado. Os valores possíveis são `"lookup"` e `"best fit"`; o padrão é `"best fit"`. Para informações sobre esta opção, veja [`Intl`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation).
+      O algoritmo para comparação de local a ser usado. Os valores possíveis são `"lookup"` e `"best fit"`; o padrão é `"best fit"`. Para informações sobre esta opção, veja [`Intl`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_negotiation).
     - `numeric`
       O formato de saída da mensagem. Valores possíveis são:
 
@@ -56,13 +71,13 @@ new Intl.RelativeTimeFormat([locales[, options]])
 
 Instâncias `RelativeTimeFormat` herdam as seguintes propriedades do seu protótipo:
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/prototype', 'Properties')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/prototype', 'Properties') -->
 
 ### Métodos
 
 Instâncias `RelativeTimeFormat` herdam as seguintes propriedades do seu protótipo:
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/prototype', 'Methods')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/prototype', 'Methods') -->
 
 ## Exemplos
 
@@ -74,9 +89,9 @@ O exemplo a seguir mostra como criar um formatador de tempo relativo usando a l�
 // Crie um formatador de tempo relativo no seu local
 // com os valores padrão sendo passados explicitamente.
 const rtf = new Intl.RelativeTimeFormat("pt", {
-    localeMatcher: "best fit", // outros valores: "lookup"
-    numeric: "always", // outros valores: "auto"
-    style: "long", // outros valores: "short" ou "narrow"
+  localeMatcher: "best fit", // outros valores: "lookup"
+  numeric: "always", // outros valores: "auto"
+  style: "long", // outros valores: "short" ou "narrow"
 });
 
 // Formatação de tempo relativa usando valor negativo (-1).
@@ -131,7 +146,7 @@ rtf.formatToParts(100, "day");
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Intl.RelativeTimeFormat")}}
+{{Compat}}
 
 ## Veja também
 

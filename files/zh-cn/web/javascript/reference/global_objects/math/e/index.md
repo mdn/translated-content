@@ -1,17 +1,38 @@
 ---
 title: Math.E
 slug: Web/JavaScript/Reference/Global_Objects/Math/E
+l10n:
+  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
-## 概述
+**`Math.E`** 静态数据属性表示欧拉数，即自然对数的底数 e，其值约为 2.718。
 
-**`Math.E`** 属性表示自然对数的底数（或称为基数），e，约等于 2.718。
+{{InteractiveExample("JavaScript Demo: Math.E")}}
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.E</mi></mstyle><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2.718</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.E}} = e \approx 2.718</annotation></semantics></math>
+```js interactive-example
+function compoundOneYear(interestRate, currentVal) {
+  return currentVal * Math.E ** interestRate;
+}
 
-{{js_property_attributes(0,0,0)}}
+console.log(Math.E);
+// Expected output: 2.718281828459045
+
+console.log((1 + 1 / 1000000) ** 1000000);
+// Expected output: 2.718280469 (approximately)
+
+console.log(compoundOneYear(0.05, 100));
+// Expected output: 105.12710963760242
+```
+
+## 值
+
+<math display="block">
+  <semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝙴</mi><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2.718</mn></mrow><annotation encoding="TeX">\mathtt{Math.E} = e \approx 2.718</annotation></semantics>
+</math>
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## 描述
 
@@ -19,16 +40,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/E
 
 ## 示例
 
-### 例子：使用 `Math.E`
+### 使用 Math.E
 
-下面的函数返回 e：
+以下函数返回 e 的值：
 
 ```js
 function getNapier() {
-   return Math.E
+  return Math.E;
 }
 
-getNapier() // 2.718281828459045
+getNapier(); // 2.718281828459045
 ```
 
 ## 规范
@@ -39,6 +60,8 @@ getNapier() // 2.718281828459045
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log1p()")}}

@@ -5,16 +5,17 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 
 {{AddonSidebar}}
 
-扩展程序包含的某些 UI 组件，例如： [popups](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [sidebars](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), [options pages](/zh-CN/Add-ons/WebExtensions/user_interface/Options_pages) ，实际上可以用如下方式统一定义：
+扩展程序包含的某些 UI 组件，例如： [popups](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [sidebars](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), [options pages](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) ，实际上可以用如下方式统一定义：
 
 1. 创建一个 HTML 文件用于描述该 UI 组件的页面结构
 2. 在 manifest.json 中添加字段 ([`browser_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action), [`page_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), [`sidebar_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action), 或 [`options_ui`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)) 以指向其对应的页面
 
-这种方式面临的一个挑战是如何使用浏览器自带的样式，以使得组件的 UI 表现与浏览器的 UI 风格相符。要解决这个问题，可以在该字段的配置中增加一个可字段 `browser_sytle` ，如果设置了这个字段并且值为 `true` , 那么该 UI 组件的 HTML 将会被插入一个或多个样式表，样式表会使你的扩展程序的 UI 表现与浏览器的风格一致 (并且与其它同样应用了这个字段的扩展程序一致)。
+这种方式面临的一个挑战是如何使用浏览器自带的样式，以使得组件的 UI 表现与浏览器的 UI 风格相符。要解决这个问题，可以在该字段的配置中增加一个可字段 `browser_sytle` ，如果设置了这个字段并且值为 `true` , 那么该 UI 组件的 HTML 将会被插入一个或多个样式表，样式表会使你的扩展程序的 UI 表现与浏览器的风格一致 (并且与其他同样应用了这个字段的扩展程序一致)。
 
 若使用了 `browser_style: true` , 你需要在不同的浏览器主题中测试你的扩展程序，以确保其 UI 表现和期望的一致。
 
-> **备注：** 谷歌浏览器 **Google Chrome** 和 欧朋浏览器 **Opera** 使用字段名 `chrome_style` 而非`browser_style`, 因此如果要适配它们，你需要同时添加这两个字段。
+> [!NOTE]
+> 谷歌浏览器 **Google Chrome** 和 欧朋浏览器 **Opera** 使用字段名 `chrome_style` 而非`browser_style`, 因此如果要适配它们，你需要同时添加这两个字段。
 
 在火狐浏览器中，这个样式文件可以在 `chrome://browser/content/extension.css`查看。为 Mac OS X 系统额外准备的样式文件也可以在 `chrome://browser/content/extension-mac.css` 查看。
 
@@ -91,13 +92,15 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 &#x3C;label for="op2">Option 2&#x3C;/label>
 &#x3C;/div></pre
         >
+
 </td>
 </tr>
 
   </tbody>
 </table>
 
-> **备注：** 查看 {{bug(1465256)}} 以了解相关修订
+> [!NOTE]
+> 查看 [Firefox bug 1465256](https://bugzil.la/1465256) 以了解相关修订
 
 ## 浏览器兼容性
 
@@ -105,7 +108,8 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 
 ## 火狐面板组件 Firefox Panel Components
 
-> **备注：** 此功能不是通用标准，仅支持在 firefox 中使用
+> [!NOTE]
+> 此功能不是通用标准，仅支持在 firefox 中使用
 
 `chrome://browser/content/extension.css` 样式文件中也包含了火狐面板组件的样式
 
@@ -222,6 +226,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 &#x3C;/div>
 &#x3C;/div></pre
         >
+
 </td>
 </tr>
 
@@ -386,7 +391,7 @@ button.panel-section-tabs-button {
 .panel-list-item > .text-shortcut {
   color: #808080;
   font-family: "Lucida Grande", caption;
-  font-size: .847em;
+  font-size: 0.847em;
   justify-content: flex-end;
 }
 
@@ -417,7 +422,7 @@ button.panel-section-tabs-button {
 .panel-section-footer-button > .text-shortcut {
   color: #808080;
   font-family: "Lucida Grande", caption;
-  font-size: .847em;
+  font-size: 0.847em;
 }
 
 .panel-section-footer-button:hover {
@@ -456,10 +461,12 @@ button.panel-section-tabs-button {
 body {
   background: #fcfcfc;
   background-clip: padding-box;
-  border: 1px solid rgba(24,26,27,.2);
-  box-shadow: 0 3px 5px rgba(24,26,27,.1),0 0 7px rgba(24,26,27,.1);
+  border: 1px solid rgba(24, 26, 27, 0.2);
+  box-shadow:
+    0 3px 5px rgba(24, 26, 27, 0.1),
+    0 0 7px rgba(24, 26, 27, 0.1);
   box-sizing: content-box;
-  margin: 2em auto .5em;
+  margin: 2em auto 0.5em;
   width: 384px;
 }
 

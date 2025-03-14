@@ -1,26 +1,29 @@
 ---
 title: BigInt.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toString
-tags:
-  - BigInt
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/toString
-original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt/toString
 ---
 
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the specified {{jsxref("BigInt")}} object. The trailing "n" is not part of the string.
 
-{{EmbedInteractiveExample("pages/js/bigint-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: BigInt.toString()")}}
+
+```js interactive-example
+console.log(1024n.toString());
+// Expected output: "1024"
+
+console.log(1024n.toString(2));
+// Expected output: "10000000000"
+
+console.log(1024n.toString(16));
+// Expected output: "400"
+```
 
 ## Syntaxe
 
 ```js
-bigIntObj.toString([base])
+bigIntObj.toString([base]);
 ```
 
 ### Paramètres
@@ -52,11 +55,11 @@ Si `bigIntObj` est négatif, le signe est conservé, y compris lorsque la base e
 ### Utiliser `toString()`
 
 ```js
-17n.toString();      // '17'
-66n.toString(2);     // '1000010'
-254n.toString(16);   // 'fe'
--10n.toString(2);    // -1010'
--0xffn.toString(2);  // '-11111111'
+17n.toString(); // '17'
+66n.toString(2); // '1000010'
+254n.toString(16); // 'fe'
+-10n.toString(2); // -1010'
+-0xffn.toString(2); // '-11111111'
 ```
 
 ### Gestion du zéro négatif en `BigInt`
@@ -64,19 +67,17 @@ Si `bigIntObj` est négatif, le signe est conservé, y compris lorsque la base e
 Il n'existe pas de zéro négatif pour `BigInt` car les entiers ne gèrent pas de concept de zéro négatif. `-0.0` est un concept relatif à la représentation flottante IEEE et n'est présent que pour le type {{jsxref("Number")}}.
 
 ```js
-(-0n).toString();      // '0'
+(-0n).toString(); // '0'
 BigInt(-0).toString(); // '0'
 ```
 
 ## Spécifications
 
-| Spécification                                                                                      | État                    |
-| -------------------------------------------------------------------------------------------------- | ----------------------- |
-| [Proposition pour `BigInt`](https://tc39.github.io/proposal-bigint/#sec-bigint.prototype.tostring) | Proposition de niveau 3 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.BigInt.toString")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,7 +1,6 @@
 ---
 title: user-select
 slug: Web/CSS/user-select
-translation_of: Web/CSS/user-select
 ---
 
 {{CSSRef}}
@@ -63,7 +62,8 @@ user-select: unset;
 - `element`{{non-standard_inline}} (IE-specific alias)
   - : Igual que `contain`. Solo lo soportado en Internet Explorer.
 
-> **Nota:** CSS UI 4 [renombra user-select: a contain](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05).
+> [!NOTE]
+> CSS UI 4 [renombra user-select: a contain](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05).
 
 ### Formal syntax
 
@@ -107,13 +107,10 @@ user-select: unset;
 
 ## Compatibilidad con navegadores
 
-La tabla de compatibilidad de esta página se genera a partir de datos estructurados. Si desea contribuir con los datos, visite
-<https://github.com/mdn/browser-compat-data> y envíenos una solicitud.
-
-{{Compat("css.properties.user-select")}}
+{{Compat}}
 
 ## Véase también
 
 - {{Cssxref("::selection")}}
 - The JavaScript {{domxref("Selection")}} object.
-- [user-select](http://www.w3.org/TR/css-ui-4/#propdef-user-select) in [CSS Basic User Interface Module Level 4](http://www.w3.org/TR/css-ui-4/).
+- [user-select](https://www.w3.org/TR/css-ui-4/#propdef-user-select) in [CSS Basic User Interface Module Level 4](https://www.w3.org/TR/css-ui-4/).

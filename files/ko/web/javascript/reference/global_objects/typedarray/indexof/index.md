@@ -1,13 +1,27 @@
 ---
 title: TypedArray.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf
 ---
+
 {{JSRef}}
 
 **`indexOf()`** 메소드는 형식화 배열(typed array)에서 주어진 값과 일치하는 첫 번째 인덱스를 반환한다. 일치하는 값이 없으면 -1을 반환한다. 이 메소드는 {{jsxref("Array.prototype.indexOf()")}} 와 동일한 알고리즘을 가지고 있다*.* *TypedArray*는 [TypedArray 객체 유형](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_%EA%B0%9D%EC%B2%B4) 중 하나이다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-indexof.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.indexOf()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+
+console.log(uint8.indexOf(50));
+// Expected output: 4
+
+// From position 3
+console.log(uint8.indexOf(20, 3));
+// Expected output: -1
+
+console.log(uint8.indexOf(51));
+// Expected output: -1
+```
 
 ## 구문
 
@@ -28,15 +42,15 @@ typedarray.indexOf(searchElement[, fromIndex = 0])
 
 ## 설명
 
-`indexOf` 메소드는 배열의 요소를 `searchElement` 와 비교할 때, [strict equality](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators)(===, _트리플 equals_) 를 사용하여 자료형의 일치 여부까지 비교한다.
+`indexOf` 메소드는 배열의 요소를 `searchElement` 와 비교할 때, [strict equality](/ko/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators)(===, _트리플 equals_) 를 사용하여 자료형의 일치 여부까지 비교한다.
 
 ## 예시
 
 ```js
 var uint8 = new Uint8Array([2, 5, 9]);
-uint8.indexOf(2);     // 0
-uint8.indexOf(7);     // -1
-uint8.indexOf(9, 2);  // 2
+uint8.indexOf(2); // 0
+uint8.indexOf(7); // -1
+uint8.indexOf(9, 2); // 2
 uint8.indexOf(2, -1); // -1
 uint8.indexOf(2, -3); // 0
 ```

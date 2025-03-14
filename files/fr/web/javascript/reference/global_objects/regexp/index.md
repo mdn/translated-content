@@ -1,16 +1,13 @@
 ---
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp
-browser-compat: javascript.builtins.RegExp
 ---
 
 {{JSRef}}
 
 Un objet **RegExp** est utilisé pour étudier les correspondances d'un texte avec un motif donné.
 
-Pour une introduction aux expressions rationnelles, lire [le chapitre Expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions) dans [le Guide JavaScript](/fr/docs/Web/JavaScript/Guide/Regular_Expressions).
+Pour une introduction aux expressions rationnelles, lire [le chapitre Expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) dans [le Guide JavaScript](/fr/docs/Web/JavaScript/Guide/Regular_expressions).
 
 ## Description
 
@@ -24,9 +21,9 @@ Il existe deux façons de créer un objet `RegExp`&nbsp;: une _notation littéra
 Ainsi, les expressions suivantes créent le même objet d'expression rationnelle&nbsp;:
 
 ```js
-/ab+c/i;                 // notation littérale
-new RegExp('ab+c', 'i'); // constructeur
-new RegExp(/ab+c/, 'i'); // notation littérale dans un constructeur
+/ab+c/i; // notation littérale
+new RegExp("ab+c", "i"); // constructeur
+new RegExp(/ab+c/, "i"); // notation littérale dans un constructeur
 ```
 
 La notation littérale effectue la compilation de l'expression rationnelle lorsque l'expression est évaluée. Utilisez la notation littérale lorsque l'expression rationnelle reste constante. Par exemple, si vous utilisez la notation littérale pour construire une expression rationnelle utilisée dans une boucle, l'expression rationnelle ne sera pas recompilée à chaque itération.
@@ -43,7 +40,7 @@ Par exemple, les définitions suivantes sont équivalentes&nbsp;:
 
 ```js
 var re = /\w+/;
-var re = new RegExp('\\w+');
+var re = new RegExp("\\w+");
 ```
 
 ### Propriétés semblables à Perl
@@ -114,8 +111,8 @@ On utilise des parenthèses capturantes pour pouvoir utiliser les correspondance
 
 ```js
 let re = /(\w+)\s(\w+)/;
-let chaine = 'Alain Dupont';
-let nouvelleChaine = chaine.replace(re, '$2, $1');
+let chaine = "Alain Dupont";
+let nouvelleChaine = chaine.replace(re, "$2, $1");
 console.log(nouvelleChaine);
 // Dupont, Alain
 ```
@@ -125,7 +122,7 @@ console.log(nouvelleChaine);
 La fin de ligne par défaut dépend de la plateforme (Unix, Windows, etc.). Cette méthode de découpage fournie permet de découper indépendamment de la plateforme utilisée.
 
 ```js
-let texte = 'Un texte\net un autre\r\npuis ensuite\rla fin';
+let texte = "Un texte\net un autre\r\npuis ensuite\rla fin";
 let lignes = texte.split(/\r\n|\r|\n/);
 console.log(lignes); // affiche [ 'Un texte', 'et un autre', 'puis ensuite', 'la fin' ]
 ```
@@ -135,7 +132,7 @@ On notera que l'ordre des modèles dans l'expression rationnelle est important.
 ### Utiliser une expression rationnelle sur plusieurs lignes
 
 ```js
-let s = 'Et voici\nune autre ligne !';
+let s = "Et voici\nune autre ligne !";
 
 s.match(/voici.*ligne/);
 // Renvoie null
@@ -149,7 +146,7 @@ s.match(/voici[^]*ligne/);
 Cet exemple illustre comment on peut utiliser le marqueur [`sticky`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) qui recherche une correspondance après [`RegExp.prototype.lastIndex`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex).
 
 ```js
-let str = '#toto#';
+let str = "#toto#";
 let regex = /toto/y;
 
 regex.lastIndex = 1;
@@ -165,7 +162,8 @@ Avec le marqueur d'adhérence `y`, la prochaine correspondance doit être placé
 
 ```js
 re = /\d/y;
-while (r = re.exec("123 456")) console.log(r, "ET re.lastIndex", re.lastIndex);
+while ((r = re.exec("123 456")))
+  console.log(r, "ET re.lastIndex", re.lastIndex);
 
 // [ '1', index: 0, input: '123 456', groups: undefined ] ET re.lastIndex 1
 // [ '2', index: 1, input: '123 456', groups: undefined ] ET re.lastIndex 2
@@ -184,30 +182,31 @@ Pour effectuer des correspondances sur d'autres caractères (par exemple les car
 Cet exemple illustre comment il est possible de séparer les caractères Unicode d'un mot.
 
 ```js
-let texte = 'Образец text на русском языке';
+let texte = "Образец text на русском языке";
 let regex = /[\u0400-\u04FF]+/g;
 
 let corresp = regex.exec(texte);
-console.log(corresp[0]);      // affiche 'Образец'
+console.log(corresp[0]); // affiche 'Образец'
 console.log(regex.lastIndex); // affiche '7'
 
 let corresp2 = regex.exec(texte);
-console.log(corresp2[0]);     // affiche 'на' (n'affiche pas text
+console.log(corresp2[0]); // affiche 'на' (n'affiche pas text
 console.log(regex.lastIndex); // affiche '15'
 
 // et ainsi de suite
 ```
 
-Les [échappements de propriété Unicode](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), plus récents, permettent une solution plus élégante en utilisant `\p{scx=Cyrl}` à la place.
+Les [échappements de propriété Unicode](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape), plus récents, permettent une solution plus élégante en utilisant `\p{scx=Cyrl}` à la place.
 
 ### Extraire un sous-domaine d'une URL
 
 ```js
-let url = 'http://xxx.domaine.com';
+let url = "http://xxx.domaine.com";
 console.log(/[^.]+/.exec(url)[0].substr(7)); // affiche 'xxx'
 ```
 
-> **Note :** Cet exemple est uniquement illustratif. Pour analyser une URL, mieux vaudra utiliser les outils adaptés et notamment [l'API URL](/fr/docs/Web/API/URL_API).
+> [!NOTE]
+> Cet exemple est uniquement illustratif. Pour analyser une URL, mieux vaudra utiliser les outils adaptés et notamment [l'API URL](/fr/docs/Web/API/URL_API).
 
 ## Spécifications
 
@@ -223,12 +222,12 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // affiche 'xxx'
 
 ```js
 // Firefox 33 ou antérieur
-'x'.replace(/x(.)?/g, function(m, group) {
+"x".replace(/x(.)?/g, function (m, group) {
   console.log("'group:" + group + "'");
 }); // 'group:'
 
 // Firefox 34 ou supérieur
-'x'.replace(/x(.)?/g, function(m, group) {
+"x".replace(/x(.)?/g, function (m, group) {
   console.log("'group:" + group + "'");
 }); // 'group:undefined'
 ```
@@ -238,7 +237,7 @@ Pour des raisons de compatibilité web, `RegExp.$N` renverra une chaîne vide au
 ## Voir aussi
 
 - [Une prothèse d'émulation pour les différentes fonctionnalités récentes des `RegExp` (marqueurs `dotAll` et `sticky`, groupes de capture nommés, etc.) avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [Le chapitre sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions) au sein du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide)
+- [Le chapitre sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) au sein du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide)
 - [`String.prototype.match()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match)
 - [`String.prototype.replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
 - [`String.prototype.split()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split)

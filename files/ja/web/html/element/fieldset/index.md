@@ -1,39 +1,71 @@
 ---
-title: '<fieldset>: フィールドセット要素'
+title: "<fieldset>: フィールドセット要素"
 slug: Web/HTML/Element/fieldset
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
 
-**HTML の `<fieldset>` 要素**は、ウェブフォーム内のラベル ({{HTMLElement("label")}}) などのようにいくつかのコントロールをグループ化するために使用します。
+**`<fieldset>`** は [HTML](/ja/docs/Web/HTML) の要素で、ウェブフォーム内のラベル ({{HTMLElement("label")}}) などのようにいくつかのコントロールをグループ化するために使用します。
 
-{{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;fieldset&gt;", "tabbed-standard")}}
 
-上記の例にあるように、 `<fieldset>` 要素は HTML フォームの一部をグループ化し、内側の {{htmlelement("legend")}} 要素で `<fieldset>` のキャプションを提供しています。いくつかの属性を取りますが、特に重要なものとして `form` は、同じページの {{htmlelement("form")}} の `id` を含むことができ、 `<fieldset>` が `<form>` の中になくてもその一部として扱うことができたり、 `disabled` は、 `<fieldset>` およびその中身を一度に無効にすることができたりします。
+```html interactive-example
+<form>
+  <fieldset>
+    <legend>Choose your favorite monster</legend>
+
+    <input type="radio" id="kraken" name="monster" value="K" />
+    <label for="kraken">Kraken</label><br />
+
+    <input type="radio" id="sasquatch" name="monster" value="S" />
+    <label for="sasquatch">Sasquatch</label><br />
+
+    <input type="radio" id="mothman" name="monster" value="M" />
+    <label for="mothman">Mothman</label>
+  </fieldset>
+</form>
+```
+
+```css interactive-example
+legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
+
+上記の例にあるように、`<fieldset>` 要素は HTML フォームの一部をグループ化し、内側の {{htmlelement("legend")}} 要素で `<fieldset>` のキャプションを提供します。いくつかの属性を取りますが、特に重要なものとして `form` は、同じページの {{htmlelement("form")}} の `id` を含むことができ、`<fieldset>` が `<form>` の中になくてもその一部として扱うことができたり、`disabled` は、`<fieldset>` およびその中身を一度に無効にすることができたりします。
 
 ## 属性
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("disabled")}}
-  - : この論理型属性が設定されている場合、 \<fieldset> の子孫要素として配置したフォームコントロールはすべて無効になり、つまり編集したり {{htmlelement("form")}} と一緒に送信したりすることができなくなります。マウスクリックやフォーカス関連のイベントのような閲覧イベントを受け取らなくなります。既定では、ブラウザーはそのようなコントロールを灰色で表示します。なお、子孫の {{HTMLElement("legend")}} 要素の中のフォーム要素は無効になりません。
-- {{htmlattrdef("form")}}
-  - : {{HTMLElement("form")}} 要素の {{htmlattrxref("id")}} 属性を指定し、 `<fieldset>` 要素はたとえその中になくても、その一部とすることができます。なお、 `<fieldset>` 内の {{HTMLElement("input")}} 要素をフォームに関連付けたい場合は、それらの要素に直接 `form` 属性を使用する必要があります。どの要素がフォームに関連付けられているかは、 JavaScript で {{domxref("HTMLFormElement.elements")}} を使用して確認することができます。
-- {{htmlattrdef("name")}}
+- `disabled`
+  - : この論理属性が設定されている場合、`<fieldset>` の子孫要素として配置したフォームコントロールはすべて無効になり、つまり編集したり {{htmlelement("form")}} と一緒に送信したりすることができなくなります。マウスクリックやフォーカス関連のイベントのような閲覧イベントを受け取らなくなります。既定では、ブラウザーはそのようなコントロールを灰色で表示します。なお、子孫の {{HTMLElement("legend")}} 要素内のフォーム要素は無効になりません。
+- `form`
+  - : {{HTMLElement("form")}} 要素の [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性を指定し、たとえ `<fieldset>` 要素がその中になくても、その一部とすることができます。なお、 `<fieldset>` 内の {{HTMLElement("input")}} 要素をフォームに関連付けたい場合は、それらの要素に直接 `form` 属性を使用する必要があります。どの要素がフォームに関連付けられているかは、 JavaScript で {{domxref("HTMLFormElement.elements")}} を使用して確認することができます。
+- `name`
 
   - : グループに関連付けられた名前です。
 
-    > **メモ:** fieldset 要素自身のラベルの役割は、その最初の子要素として配置した {{HTMLElement("legend")}} 要素が担います。
+    > [!NOTE]
+    > fieldset 要素自身のラベルの役割は、その最初の子要素として配置した {{HTMLElement("legend")}} 要素が担います。
 
 ## CSS でのスタイル付け
 
 `<fieldset>` には、スタイル付けの特殊な考慮事項がいくつかあります。
 
-{{cssxref("display")}} の値は既定で `block` であり、[ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)を確立します。 `<fieldset>` がインラインレベルの `display` の値でスタイル付けされた場合は `inline-block` として動作し、そうでなければ `block` として動作します。既定では、コンテンツを囲む `2px` `groove` の境界線があり、少量の既定のパディングがあります。要素は既定で {{cssxref("min-inline-size", "min-inline-size: min-content")}} を持ちます。
+{{cssxref("display")}} の値は既定で `block` であり、[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)を確立します。 `<fieldset>` がインラインレベルの `display` の値でスタイル付けされた場合は `inline-block` として動作し、そうでなければ `block` として動作します。既定では、コンテンツを囲む `2px` `groove` の境界線があり、少量の既定のパディングがあります。要素は既定で {{cssxref("min-inline-size", "min-inline-size: min-content")}} を持ちます。
 
-{{htmlelement("legend")}} が存在する場合は、 `block-start` 境界線の上に配置されます。 `<legend>` は縮小折り返しであり、整形コンテキストを確立します。 `display` の値はブロック的です。 (例えば、 `display: inline` は `block` として動作します。)
+{{htmlelement("legend")}} が存在する場合は、`block-start` 境界線の上に配置されます。 `<legend>` は縮小折り返しであり、整形コンテキストを確立します。`display` の値はブロック的です。（例えば、`display: inline` は `block` として動作します。）
 
-`<fieldset>` の内容を保持する無名のボックスが生成され、 `<fieldset>` から特定のプロパティを継承します。 `<fieldset>` が `display: grid` または `display: inline-grid` でスタイル付けされていた場合、無名ボックスはグリッド整形コンテキストになり、 `<fieldset>` が `display: flex` または `display: inline-flex` でスタイル付けされていた場合、無名ボックスはフレックス整形コンテキストになります。それ以外の場合はブロック整形コンテキストになります。
+`<fieldset>` の内容を保持する無名のボックスが生成され、`<fieldset>` から特定のプロパティを継承します。`<fieldset>` が `display: grid` または `display: inline-grid` でスタイル付けされていた場合、無名ボックスはグリッド整形コンテキストになり、`<fieldset>` が `display: flex` または `display: inline-flex` でスタイル付けされていた場合、無名ボックスはフレックス整形コンテキストになります。それ以外の場合はブロック整形コンテキストになります。
 
 `<fieldset>` および `<legend>` に対しては、ページデザインに合うあらゆる方法で気軽にスタイル付けしてください。
 
@@ -46,34 +78,38 @@ slug: Web/HTML/Element/fieldset
 ```html
 <form action="#">
   <fieldset>
-    <legend>Simple fieldset</legend>
-    <input type="radio" id="radio">
-    <label for="radio">Spirit of radio</label>
+    <legend>Do you agree?</legend>
+    <input type="checkbox" id="chbx" name="agree" value="Yes!" />
+    <label for="chbx">I agree</label>
   </fieldset>
 </form>
 ```
 
+#### 結果
+
 {{ EmbedLiveSample('Simple_fieldset', '100%', '80') }}
 
-### 無効化したフィールドセット
+### 無効化されたフィールドセット
 
 この例は無効化した `<fieldset>` で、二つのコントロールが中にあります。なお、両方のコントロールは無効化した `<fieldset>` の中にあるので、無効になります。
 
 ```html
 <form action="#">
   <fieldset disabled>
-    <legend>Disabled fieldset</legend>
+    <legend>Disabled login fieldset</legend>
     <div>
       <label for="name">Name: </label>
-      <input type="text" id="name" value="Chris">
+      <input type="text" id="name" value="Chris" />
     </div>
     <div>
       <label for="pwd">Archetype: </label>
-      <input type="password" id="pwd" value="Wookie">
+      <input type="password" id="pwd" value="Wookie" />
     </div>
   </fieldset>
 </form>
 ```
+
+#### 結果
 
 {{ EmbedLiveSample('Disabled_fieldset', '100%', '110') }}
 
@@ -90,9 +126,12 @@ slug: Web/HTML/Element/fieldset
           >フローコンテンツ</a
         >,
         <a
-          href="/ja/docs/Sections_and_Outlines_of_an_HTML5_document#Sectioning_root"
+          href="/ja/docs/Web/HTML/Element/Heading_Elements#区分化ルート"
           >区分化ルート</a
-        >, <a href="/ja/docs/Web/HTML/Content_categories#リスト化">リスト化</a>,
+        >,
+        <a href="/ja/docs/Web/HTML/Content_categories#リスト化"
+          >リスト化</a
+        >,
         <a href="/ja/docs/Web/HTML/Content_categories#フォーム関連コンテンツ"
           >フォーム関連</a
         >要素, 知覚可能コンテンツ
@@ -107,7 +146,7 @@ slug: Web/HTML/Element/fieldset
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
@@ -119,13 +158,13 @@ slug: Web/HTML/Element/fieldset
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td>{{ARIARole("group")}}</td>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("radiogroup")}},
-        {{ARIARole("presentation")}}, {{ARIARole("none")}}
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
       </td>
     </tr>
     <tr>
@@ -141,7 +180,7 @@ slug: Web/HTML/Element/fieldset
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.fieldset")}}
+{{Compat}}
 
 ## 関連情報
 

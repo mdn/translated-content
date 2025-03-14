@@ -1,25 +1,28 @@
 ---
-title: '<b> : l''élément portant à l''attention'
+title: "<b> : l'élément portant à l'attention"
 slug: Web/HTML/Element/b
-tags:
-  - Attention
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/b
-browser-compat: html.elements.b
 ---
 
 {{HTMLSidebar}}
 
 L'élément HTML **`<b>`** permet d'attirer l'attention du lecteur sur un contenu qui n'a pas, pour autant, d'importance significative. Anciennement utilisé pour mettre le texte en gras. Cet élément ne doit pas être utilisé pour mettre en forme des éléments, c'est la propriété CSS [`font-weight`](/fr/docs/Web/CSS/font-weight) qu'il faut utiliser. Si l'élément est d'une importance particulière, on utilisera l'élément HTML [`<strong>`](/fr/docs/Web/HTML/Element/strong).
 
-{{EmbedInteractiveExample("pages/tabbed/b.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;b&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The two most popular science courses offered by the school are
+  <b class="term">chemistry</b> (the study of chemicals and the composition of
+  substances) and <b class="term">physics</b> (the study of the nature and
+  properties of matter and energy).
+</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+b {
+}
+```
 
 <table class="properties">
   <tbody>
@@ -99,15 +102,15 @@ Seuls [les attributs universels](/fr/docs/Web/HTML/Global_attributes) peuvent ê
 - Historiquement, l'élément `<b>` a été pensé pour rendre du texte avec une police grasse. Les éléments à seul but stylistique ont été dépréciés avec HTML 4. Ainsi, le sens de l'élément `<b>` a évolué.
 - S'il n'y a aucune raison particulière d'utiliser l'élément `<b>`, en dehors de son apparence en gras, l'utilisation de la propriété [CSS](/fr/docs/Web/CSS) [`font-weight`](/fr/docs/Web/CSS/font-weight) avec une valeur `bold` est à privilégier.
 
-## Exemple
+## Exemples
 
 ```html
 <p>
-  Cet article décrit plusieurs éléments <b class="keyword">texte</b>.
-  Il explique leur usage dans un document <b class="keyword">HTML</b>.
+  Cet article décrit plusieurs éléments <b class="keyword">texte</b>. Il
+  explique leur usage dans un document <b class="keyword">HTML</b>.
 </p>
-Les mots-clés sont affichés avec le style par défaut de
-l'élément &lt;b&gt;, sûrement en gras.
+Les mots-clés sont affichés avec le style par défaut de l'élément &lt;b&gt;,
+sûrement en gras.
 ```
 
 ### Résultat

@@ -1,15 +1,6 @@
 ---
 title: URLSearchParams.get()
 slug: Web/API/URLSearchParams/get
-page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - URL API
-  - URLSearchParams
-  - get
-browser-compat: api.URLSearchParams.get
-translation_of: Web/API/URLSearchParams/get
 ---
 
 {{ApiRef("URL API")}}
@@ -21,7 +12,7 @@ translation_of: Web/API/URLSearchParams/get
 ## 구문
 
 ```js
-get(name)
+get(name);
 ```
 
 ### 매개변수
@@ -43,7 +34,7 @@ let name = params.get("name"); // 문자열 "Jonathan"
 let age = parseInt(params.get("age"), 10); // 숫자 18
 ```
 
-쿼리 문자열에 존재하지 않는 매개변수를 가져오려고 시도하면 **`null`**을 반환합니다.
+쿼리 문자열에 존재하지 않는 매개변수를 가져오려고 시도하면 **`null`** 을 반환합니다.
 
 ```js
 let address = params.get("address"); // null

@@ -1,13 +1,6 @@
 ---
 title: La sécurité d'un site Web
 slug: Learn/Server-side/First_steps/Website_security
-tags:
-  - Débutant
-  - Guide
-  - Sécurité
-  - Sécurité Web
-translation_of: Learn/Server-side/First_steps/Website_security
-original_slug: Learn/Server-side/Premiers_pas/Website_security
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/Premiers_pas")}}
@@ -41,7 +34,8 @@ La sécurité efficace d'un site web nécessite un effort de conception sur l'en
 
 Le reste de cet article détaille les menaces les plus courantes qui pèsent sur les sites web et quelques étapes simples pour protèger votre site.
 
-> **Note :** ceci est un article d'introduction, conçu pour vous aider à réflechir à la sécurité de votre site web. Il n'est en rien exhaustif.
+> [!NOTE]
+> Ceci est un article d'introduction, conçu pour vous aider à réflechir à la sécurité de votre site web. Il n'est en rien exhaustif.
 
 ## Menaces visant la sécurité des sites web
 
@@ -51,12 +45,13 @@ Cette section n'énumère que quelques-unes des menaces les plus courantes visan
 
 XSS est un terme utilisé pour décrire une classe d'attaque qui permet à l'attaquant d'injecter des scripts, exécutés côté-client, _au travers_ du site web pour viser le navigateur web des autres utilisateurs. Comme le code injecté provient du site web le navigateur web le considère comme sûr, il peut de ce fait faire des choses comme transmettre le cookie d'authentification de l'utilisateur à l'attaquant. Une fois que l'attaquant obtient ce cookie il peut se connecter sur le site comme si il était l'utilisateur attaqué et peut faire tout ce que l'utilisateur pourrait faire. En fonction du site sur lequel l'attaque se produit, cela peut inclure l'accès aux détails de carte bancaire, les informations des contacts, la modification du mot de passe, etc.
 
-> **Note :** les vulnérabilités XSS ont historiquement été les plus courantes.
+> [!NOTE]
+> Les vulnérabilités XSS ont historiquement été les plus courantes.
 
 Il y a deux manières principales pour demander au site de retourner un script injecté vers un navigateur web — elles sont désignées en tant que vulnérabilités XSS _réfléchie_ et _persistante_.
 
 - Une vulnérabilité XSS réfléchie se produit quand le contenu de l'utilisateur transmis au serveur est immédiatement retourné, sans avoir été modifié, pour être affiché dans le navigateur — tout les scripts présents dans le contenu d'origine seront exécutés quand la nouvelle page sera chargée!
-  On prendra par exemple une fonction de recherche dans un site où les termes recherchés sont encodés en tant que paramètres dans l'URL, et que ces termes sont affichés en permanence avec les résultats. Un attaquant peut construire un lien de recherche contenant un script malicieux en tant que paramètre (ex: `http://mysite.com?q=beer<script%20src="http://sitedangereux.com/malicieux.js"></script>`) et le transmettre par e-mail à un autre utilisateur. Si l'utilisateur ciblé clique sur ce "lien intéressant", le script sera exécuté quand les résultats de la recherche seront affichés. Comme vu auparavant, cela donne à l'attaquant toute les informations dont il a besoin pour se connecter sur le site avec le compte de la victime — potentiellement faire des achats en tant que cet utilisateur ou accèder à la liste de contacts..
+  On prendra par exemple une fonction de recherche dans un site où les termes recherchés sont encodés en tant que paramètres dans l'URL, et que ces termes sont affichés en permanence avec les résultats. Un attaquant peut construire un lien de recherche contenant un script malicieux en tant que paramètre (ex: `https://developer.mozilla.org?q=beer<script%20src="http://example.com/script_malveillant.js"></script>`) et le transmettre par e-mail à un autre utilisateur. Si l'utilisateur ciblé clique sur ce "lien intéressant", le script sera exécuté quand les résultats de la recherche seront affichés. Comme vu auparavant, cela donne à l'attaquant toute les informations dont il a besoin pour se connecter sur le site avec le compte de la victime — potentiellement faire des achats en tant que cet utilisateur ou accèder à la liste de contacts..
 - Une vulnérabilité XSS _persistante_ sera celle où le script malicieux est stocké sur le site web puis affiché, sans modification, un peu plus tard par les autres utilisateurs et exécuté à leur insu.
   Par exemple, un écran de discussion qui accepte les commentaires contenant du code HTML pur peuvent stocker le script malicieux de l'attaquant. Quand les commentaires sont affichés le script est exécuté et peut ensuite transmettre à l'attaquant les informations nécessaires pour accèder au compte de l'utilisateur. Cette méthode d'attaque est extrêmement courante et efficace, parce que l'attaquant n'a pas besoin d'avoir une relation directe avec les victimes.
 
@@ -64,7 +59,7 @@ Il y a deux manières principales pour demander au site de retourner un script i
 
 La meilleur défense contre les vulnérabilités XSS est de supprimer ou désactiver toutes les balises qui peuvent potentiellement contenir des instructions pour exécuter du code. Pour HTML cela inclut les tags comme `<script>`, `<object>`, `<embed>`, et `<link>`.
 
-Il est nécessaire de traiter les données saisies par l'utilisateur pour être sûr qu'il ne puisse ni exécuter de scripts ni pertuber le fonctionnement normal du site (ce procédé est appelé *input sanitization* en anglais). De nombreux frameworks proposent par défaut cette vérification sur les entrées des formulaires.
+Il est nécessaire de traiter les données saisies par l'utilisateur pour être sûr qu'il ne puisse ni exécuter de scripts ni pertuber le fonctionnement normal du site (ce procédé est appelé _input sanitization_ en anglais). De nombreux frameworks proposent par défaut cette vérification sur les entrées des formulaires.
 
 ### Injection SQL
 
@@ -82,9 +77,10 @@ Si l'utilisateur entre un nom correct cela marchera comme voulu. Cependant un ut
 SELECT * FROM users WHERE name = 'a';DROP TABLE users; SELECT * FROM userinfo WHERE 't' = 't';
 ```
 
-Le moyen pour éviter ce type d'attaque est de s'assurer que toute saisie de l'utilisateur transmise à une requête SQL ne peut pas changer la nature de cette requête. Un moyen de faire cela est d'[échapper](https://fr.wikipedia.org/wiki/Caract%C3%A8re_d%27%C3%A9chappement) tous les caractères de la saisie utilisateur quand ils ont un sens particulier en SQL.
+Le moyen pour éviter ce type d'attaque est de s'assurer que toute saisie de l'utilisateur transmise à une requête SQL ne peut pas changer la nature de cette requête. Un moyen de faire cela est d'[échapper](https://fr.wikipedia.org/wiki/Caractère_d%27échappement) tous les caractères de la saisie utilisateur quand ils ont un sens particulier en SQL.
 
-> **Note :** la requête SQL considère le symbole ' comme le début et la fin d'une chaine de texte. En ajoutant le caractère \ nous allons "échapper" ce symbole, et dire à SQL de le traiter comme une simple partie de la chaîne de caractères.
+> [!NOTE]
+> La requête SQL considère le symbole ' comme le début et la fin d'une chaine de texte. En ajoutant le caractère \ nous allons "échapper" ce symbole, et dire à SQL de le traiter comme une simple partie de la chaîne de caractères.
 
 Dans la requête ci-dessous nous avons échappé le caractère '. Le SQL va donc interpréter la chaine complète (en gras) comme un nom (un nom étrange en effet, mais pas nuisible).
 
@@ -94,7 +90,8 @@ SELECT * FROM users WHERE name = 'a\';DROP TABLE users; SELECT * FROM userinfo W
 
 Les frameworks web se chargent bien souvent d'échapper ces caractères à votre place. Django, par exemple, s'assure que toute saisie d'un utilisateur transmise au modèle est bien échappée.
 
-> **Note :** Cette section s'inspire beaucoup des informations de [Wikipedia ici](https://en.wikipedia.org/wiki/SQL_injection).
+> [!NOTE]
+> Cette section s'inspire beaucoup des informations de [Wikipedia ici](https://en.wikipedia.org/wiki/SQL_injection).
 
 ### Falsification de requête inter-sites (CSRF)
 
@@ -106,7 +103,8 @@ Si un utilisateur clique sur le bouton de validation, une requête HTTP POST, co
 
 Au final tout utilisateur qui va cliquer sur le bouton de validation, alors qu'il sera connecté sur le site d'échange d'argent, va autoriser la transaction. John va devenir riche !
 
-> **Note :** l'astuce ici est que John n'a pas besoin d'accéder aux cookies de l'utilisateur (ou à ses identifiants), le navigateur web stocke cette information et l'inclut automatiquement dans toute les requêtes destinées au serveur associé.
+> [!NOTE]
+> L'astuce ici est que John n'a pas besoin d'accéder aux cookies de l'utilisateur (ou à ses identifiants), le navigateur web stocke cette information et l'inclut automatiquement dans toute les requêtes destinées au serveur associé.
 
 Un moyen de prévenir ce type d'attaque est que le serveur demande que chaque requête POST possède un secret généré par le serveur et spécifique à l'utilisateur (le secret serait transmis par le serveur lors de l'envoi du formulaire de transaction). Cette approche empêche John de créer son propre formulaire car il n'est pas capable de connaitre le secret que le serveur founit à l'utilisateur. Même si il venait à trouver ce secret et créer un formulaire pour un utilisateur particulier, il ne pourrait pas utiliser ce formulaire pour attaquer d'autres utilisateurs
 
@@ -117,7 +115,7 @@ Les framework web incluent souvent des mécanismes afin de prévenir les attaque
 Les autres attaques et vulnérabilités courantes incluent:
 
 - [Clickjacking](https://www.owasp.org/index.php/Clickjacking). Dans cette attaque un utilisateur malveillant détourne les clics destinés à un site visible et les envoie dans une page cachée en dessous. Cette technique peut être utilisée, par exemple, pour afficher le site légitime d'une banque mais capturer les identifiants d'authentification dans une \<iframe> invisible controlée par l'attaquant. Sinon cela peut être utilisé pour obtenir de l'utilisateur qu'il clique sur le bouton visible d'un site, mais en le faisant il va en fait cliquer involontairement sur un bouton différent. Comme défense, votre site peut se prévenir d'être inclut dans une iframe d'un autre site en configurant les bonnes en-têtes HTTP.
-- [Déni de Service](/fr/docs/Glossaire/Déni_de_service_distribué) (DoS). Le déni de service est souvent pratiqué en surchargeant de fausses requêtes un site cible avec afin que l'accès au site soit perturbé pour les usagers légitimes. Les requêtes peuvent simplement être nombreuses, ou elles peuvent individuellement nécessiter une grande quantité de ressource (ex: chargement de fichiers lourds, etc). La défense contre cette attaque se base souvent sur l'identification et le blocage du mauvais trafic tout en autorisant l'arrivée des messages légitimes. Ces défenses sont généralement intégrées ou en amont du serveur web (elle ne font pas partie de l'application web).
+- [Déni de Service](/fr/docs/Glossary/Distributed_Denial_of_Service) (DoS). Le déni de service est souvent pratiqué en surchargeant de fausses requêtes un site cible avec afin que l'accès au site soit perturbé pour les usagers légitimes. Les requêtes peuvent simplement être nombreuses, ou elles peuvent individuellement nécessiter une grande quantité de ressource (ex: chargement de fichiers lourds, etc). La défense contre cette attaque se base souvent sur l'identification et le blocage du mauvais trafic tout en autorisant l'arrivée des messages légitimes. Ces défenses sont généralement intégrées ou en amont du serveur web (elle ne font pas partie de l'application web).
 - [Découverte via la navigation dans les répertoires et fichiers](https://en.wikipedia.org/wiki/Directory_traversal_attack). Dans cette famille d'attaque un utilisateur malveillant va tenter d'accèder aux fichiers du serveur web auxquels il ne devrait pas avoir accès. Cette vulnérabilité se produit quand l'utilisateur peut transmettre le nom d'un fichier qui comprend les caractères de navigation dans le système de fichier (par exemple: `../../`). La solution est de désinfecter la saisie avant de l'utiliser.
 - [Inclusion de fichiers](https://fr.wikipedia.org/wiki/Remote_File_Inclusion). Dans cette attaque un utilisateur est capable de spécifier un fichier "involontaire" pour être affiché ou exécuté dans les données transmises au serveur. Une fois chargé ce fichier peut être exécuté sur le serveur web ou du côté client (menant à une attaque XSS). La solution est de vérifier les saisies avant de les utiliser.
 - [Injection de commandes](https://www.owasp.org/index.php/Command_Injection). Les attaques par injection de commande permettent à un utilisateur malveillant d'exécuter des commandes systèmes frauduleuses sur le système hôte. La solution est de vérifier chaque saisie des utilisateurs avant de les utiliser dans les appels systèmes.
@@ -128,13 +126,14 @@ Il y en a beaucoup d'autres. Pour une liste plus exhaustive vous pouvez consulte
 
 La majorité des attaques citées précédement réusissent lorsque l'application web fait confiance aux données provenant du navigateur web. Quoique vous fassiez d'autre pour améliorer la sécurité de votre site web, vous devez désinfecter toutes les saisies des utilisateurs avant de les afficher, de les utiliser dans les requêtes SQL ou de les transmettre dans les appels du système ou du système de fichier.
 
-> **Attention :** la leçon la plus importante à retenir concernant la sécurité d'un site web est de ne **jamais faire confiance aux données du navigateur web**. Cela comprend les requêtes `GET` avec la présence des paramètres dans l'URL, les données envoyées avec les `POST`, les en-têtes HTTP, les cookies, les fichiers chargés par l'utilisateur, etc. Il faut toujours vérifier et assainir les données. Il faut toujours s'attendre au pire.
+> [!WARNING]
+> La leçon la plus importante à retenir concernant la sécurité d'un site web est de ne **jamais faire confiance aux données du navigateur web**. Cela comprend les requêtes `GET` avec la présence des paramètres dans l'URL, les données envoyées avec les `POST`, les en-têtes HTTP, les cookies, les fichiers chargés par l'utilisateur, etc. Il faut toujours vérifier et assainir les données. Il faut toujours s'attendre au pire.
 
 Quelques autres points que vous pouvez mettre en place :
 
 - Utilisez une politique de gestion des mots de passe efficace. Encouragez les mots de passe solides avec leur renouvellement fréquent. Prenez en compte une authentification à deux facteurs sur votre site (l'utilisateur, en plus du mot de passe, devra fournir un autre code d'authentification généralement fourni par un matériel physique, que seul l'utilisateur possède, comme un code envoyé sur le téléphone par SMS).
-- Configurez vos serveurs web pour utiliser [HTTPS](/fr/docs/Glossary/https) et [HTTP Strict Transport Security](/fr/docs/Web/Security/HTTP_strict_transport_security) (HSTS). HTTPS chiffre les données transmises entre le client et le serveur. Cela garantit que les données d'authentification, les cookies, les données transistant avec `POST` et les informations d'en-têtes deviennent moins disponibles pour l'attaquant.
-- Tenez vous informé des dernières menaces ([la liste actuelle d'OWASP est ici](/fr/docs/)) et préoccupez vous toujours des vulnerabilités les plus courantes en premier.
+- Configurez vos serveurs web pour utiliser [HTTPS](/fr/docs/Glossary/HTTPS) et [HTTP Strict Transport Security](/fr/docs/Web/HTTP/Headers/Strict-Transport-Security) (HSTS). HTTPS chiffre les données transmises entre le client et le serveur. Cela garantit que les données d'authentification, les cookies, les données transistant avec `POST` et les informations d'en-têtes deviennent moins disponibles pour l'attaquant.
+- Tenez vous informé des dernières menaces ([la liste actuelle d'OWASP est ici](/fr/docs/Web)) et préoccupez vous toujours des vulnerabilités les plus courantes en premier.
 - Utilisez [des outils de recherche de vulnérabilités](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) pour faire automatiquement des recherches de bug sur votre site (votre site pourra également proposer un programme de _buf bounty_ pour déceler des bugs, [comme le fait Mozilla ici](https://www.mozilla.org/en-US/security/bug-bounty/faq-webapp/)).
 - Ne stockez et n'affichez que les données nécessaires. Par exemple, si votre utilisateur doit stocker des données sensibles comme des informations bancaires, affichez seulement ce qui sera suffisant pour être identifié par l'utilisateur, mais pas suffisament pour être copié par un attaquant et être utilisé sur un autre site. La méthode la plus courante en ce moment est de n'afficher que les quatre derniers chiffres du numéro de carte bancaire.
 

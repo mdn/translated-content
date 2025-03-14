@@ -1,24 +1,21 @@
 ---
 title: caption
 slug: Web/HTML/Element/caption
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/caption
-original_slug: Web/HTML/Elemento/caption
 ---
+
+{{HTMLSidebar}}
 
 ### Definición
 
 - Es el encargado de darle un título descriptivo a las tablas.
+
   - : **Sus etiquetas son**: `<caption>` y `</caption>` (ambas obligatorias).
-  
+
     **Crea una caja**: .
 
-    **Está definido como**: Elemento [para tablas](/es/HTML/Elemento/Tipos_de_elementos#para_tablas).
+    **Está definido como**: Elemento [para tablas](/es/docs/HTML/Elemento/Tipos_de_elementos#para_tablas).
 
-    **Puede contener**: Texto y/o cero o más elementos [en línea](/es/HTML/Elemento/Tipos_de_elementos#en_l.C3.ADnea).
+    **Puede contener**: Texto y/o cero o más elementos [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_l.c3.adnea).
 
 #### Atributos
 
@@ -225,9 +222,13 @@ original_slug: Web/HTML/Elemento/caption
 El siguiente código:
 
 ```html
-<table border='1'>
-  <caption>Tabla con caption</caption>
-  <tr> <td> tabla de una celda. </td>  </tr>
+<table border="1">
+  <caption>
+    Tabla con caption
+  </caption>
+  <tr>
+    <td>tabla de una celda.</td>
+  </tr>
 </table>
 ```
 
@@ -257,7 +258,8 @@ Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html
 
 ---
 
-> **Nota:** Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!NOTE]
+> Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
 >
 > ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.
 

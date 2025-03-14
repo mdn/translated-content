@@ -5,9 +5,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/join
 
 {{JSRef}}
 
-**`join()`** 方法将一个数组（或一个[类数组对象](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#使用类数组对象_array-like_objects)）的所有元素连接成一个字符串并返回这个字符串，用逗号或指定的分隔符字符串分隔。如果数组只有一个元素，那么将返回该元素而不使用分隔符。
+**`join()`** 方法将一个数组（或一个[类数组对象](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#使用类数组对象)）的所有元素连接成一个字符串并返回这个字符串，用逗号或指定的分隔符字符串分隔。如果数组只有一个元素，那么将返回该元素而不使用分隔符。
 
-{{EmbedInteractiveExample("pages/js/array-join.html")}}
+{{InteractiveExample("JavaScript Demo: Array.join()")}}
+
+```js interactive-example
+const elements = ["Fire", "Air", "Water"];
+
+console.log(elements.join());
+// Expected output: "Fire,Air,Water"
+
+console.log(elements.join(""));
+// Expected output: "FireAirWater"
+
+console.log(elements.join("-"));
+// Expected output: "Fire-Air-Water"
+```
 
 ## 语法
 
@@ -23,7 +36,7 @@ join(separator)
 
 ### 返回值
 
-一个所有数组元素连接的字符串。如果 `arr.length` 为 0，则返回空字符串。
+一个所有数组元素连接的字符串。如果 `arr.length` 为 `0`，则返回空字符串。
 
 ## 描述
 
@@ -31,9 +44,9 @@ join(separator)
 
 [`Array.prototype.toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) 会在内部访问 `join` 方法，不带参数。覆盖一个数组实例的 `join` 也将覆盖它的 `toString` 行为。
 
-当在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)上使用时，`join()` 方法迭代空槽，就像它们的值为 `undefined` 一样。
+当在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)上使用时，`join()` 方法迭代空槽，就像它们的值为 `undefined` 一样。
 
-`join()` 方法是[通用](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods)的。它只要求 `this` 值具有 `length` 属性和整数键的属性。
+`join()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
 
 ## 示例
 
@@ -42,11 +55,11 @@ join(separator)
 下面的示例创建一个数组 `a`，其中包含三个元素，然后用四种不同的分隔符连接所有数组元素。首先是默认的分隔符逗号，然后是一个逗号加空格，接下来是一个加号前后加空格，最后是一个空字符串。
 
 ```js
-const a = ['Wind', 'Water', 'Fire'];
-a.join();      // 'Wind,Water,Fire'
-a.join(', ');  // 'Wind, Water, Fire'
-a.join(' + '); // 'Wind + Water + Fire'
-a.join('');    // 'WindWaterFire'
+const a = ["Wind", "Water", "Fire"];
+a.join(); // 'Wind,Water,Fire'
+a.join(", "); // 'Wind, Water, Fire'
+a.join(" + "); // 'Wind + Water + Fire'
+a.join(""); // 'WindWaterFire'
 ```
 
 ### 在稀疏数组上使用 join()
@@ -55,7 +68,7 @@ a.join('');    // 'WindWaterFire'
 
 ```js
 console.log([1, , 3].join()); // '1,,3'
-console.log([1, undefined, 3].join()); // '1,,3' 
+console.log([1, undefined, 3].join()); // '1,,3'
 ```
 
 ### 在非数组对象上调用 join()
@@ -85,6 +98,9 @@ console.log(Array.prototype.join.call(arrayLike, "."));
 
 ## 参见
 
-- {{jsxref("String.prototype.split()")}}
+- [`core-js` 中 `Array.prototype.join` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.toString()")}}
 - {{jsxref("TypedArray.prototype.join()")}}
+- {{jsxref("String.prototype.split()")}}

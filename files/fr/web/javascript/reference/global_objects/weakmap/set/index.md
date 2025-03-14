@@ -1,22 +1,28 @@
 ---
 title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/set
-original_slug: Web/JavaScript/Reference/Objets_globaux/WeakMap/set
 ---
 
 s{{JSRef}}
 
 La méthode **`set()`** permet d'ajouter un nouvel élément avec une `clé` et une `valeur` à un objet `WeakMap`.
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-set.html")}}
+{{InteractiveExample("JavaScript Demo: WeakMap.prototype.set()")}}
+
+```js interactive-example
+const weakmap1 = new WeakMap();
+const object1 = {};
+const object2 = {};
+
+weakmap1.set(object1, "foo");
+weakmap1.set(object2, "bar");
+
+console.log(weakmap1.get(object1));
+// Expected output: "foo"
+
+console.log(weakmap1.get(object2));
+// Expected output: "bar"
+```
 
 ## Syntaxe
 

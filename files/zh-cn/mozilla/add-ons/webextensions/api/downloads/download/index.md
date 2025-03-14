@@ -3,7 +3,7 @@ title: downloads.download()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 {{WebExtAPIRef("downloads")}} API 的 **`download()`** 函数根据给出的 URL 和其他首选项下载一个文件。
 
@@ -16,8 +16,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
 
 ```js
 var downloading = browser.downloads.download(
-  options                   // object
-)
+  options, // object
+);
 ```
 
 ### 参数
@@ -47,11 +47,12 @@ var downloading = browser.downloads.download(
       - : 一个 `string`，表示`url`使用 HTTP\[S] 协议时使用的 HTTP 方法。其值可能是 "GET" 或 "POST"。
     - `saveAs`{{optional_inline}}
 
-      - : 一个`boolean` 指定是 (`true`) 否 (`false`) 提供一个文件选择对话框允许用户选择文件名。.
+      - : 一个`boolean` 指定是 (`true`) 否 (`false`) 提供一个文件选择对话框允许用户选择文件名。
 
-        如果该选项省略，浏览器会根据用户对于该行为的偏好设置决定是否提供一个文件选择对话框 (在火狐这项设置标签在 about:preferences 里为"每次都问您要存到哪" ，或者 about:config 里 `browser.download.useDownloadDir` )。
+        如果该选项省略，浏览器会根据用户对于该行为的偏好设置决定是否提供一个文件选择对话框 (在火狐这项设置标签在 about:preferences 里为"每次都问你要存到哪" ，或者 about:config 里 `browser.download.useDownloadDir` )。
 
-        > **备注：** 如果 `saveAs` 被设置为 `true`，Firefox for Android 将会引发一个错误。当 `saveAs` 为 `false` 或空时这个参数会被忽略。
+        > [!NOTE]
+        > 如果 `saveAs` 被设置为 `true`，Firefox for Android 将会引发一个错误。当 `saveAs` 为 `false` 或空时这个参数会被忽略。
 
     - `url`
       - : 一个 `string`，表示需要下载的链接地址。
@@ -60,7 +61,7 @@ var downloading = browser.downloads.download(
 
 一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise). 如果成功开始下载，promise 会被新创建的{{WebExtAPIRef("downloads.DownloadItem")}} 的 `id` 填充。否则 promise 会被拒绝并产生一条{{WebExtAPIRef("downloads.InterruptReason")}}错误信息。
 
-如果你使用 [URL.createObjectURL()](/zh-CN/docs/Web/API/URL/createObjectURL) 下载由 JavaScript 创建的数据并且之后想要 (使用 [revokeObjectURL](/zh-CN/docs/Web/API/URL/revokeObjectURL)) 撤销对象链接 (并且强烈推荐这么做)，你必须在下载完成后再这么做。监听 [downloads.onChanged](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged) 事件来判断是否下载完成。
+如果你使用 [URL.createObjectURL()](/zh-CN/docs/Web/API/URL/createObjectURL_static) 下载由 JavaScript 创建的数据并且之后想要 (使用 [revokeObjectURL](/zh-CN/docs/Web/API/URL/revokeObjectURL_static)) 撤销对象链接 (并且强烈推荐这么做)，你必须在下载完成后再这么做。监听 [downloads.onChanged](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged) 事件来判断是否下载完成。
 
 ## 浏览器兼容性
 
@@ -82,9 +83,9 @@ function onFailed(error) {
 var downloadUrl = "https://example.org/image.png";
 
 var downloading = browser.downloads.download({
-  url : downloadUrl,
-  filename : 'my-image-again.png',
-  conflictAction : 'uniquify'
+  url: downloadUrl,
+  filename: "my-image-again.png",
+  conflictAction: "uniquify",
 });
 
 downloading.then(onStartedDownload, onFailed);
@@ -92,7 +93,8 @@ downloading.then(onStartedDownload, onFailed);
 
 {{WebExtExamples}}
 
-> **备注：** 这个 API 基于 Chromium 的 [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-download) API.
+> [!NOTE]
+> 这个 API 基于 Chromium 的 [`chrome.downloads`](https://developer.chrome.google.cn/docs/extensions/reference/api/downloads#method-download) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

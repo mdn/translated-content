@@ -1,13 +1,6 @@
 ---
 title: Document.URL
 slug: Web/API/Document/URL
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-translation_of: Web/API/Document/URL
 ---
 
 {{APIRef("DOM")}}
@@ -26,7 +19,7 @@ document.getElementById("url").textContent = document.URL;
 
 ```html
 <p id="urlText">
-  URL:<br/>
+  URL:<br />
   <span id="url">URL이 여기 보입니다</span>
 </p>
 ```

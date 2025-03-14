@@ -5,7 +5,7 @@ slug: Web/API/DOMStringList
 
 {{ APIRef("DOM") }}
 
-Um tipo retornado por algumas APIs, que contém uma lista de [DOMString](/En/DOM/DOMString) (strings).
+Um tipo retornado por algumas APIs, que contém uma lista de [DOMString](/en-US/DOM/DOMString) (strings).
 
 ## Propriedades
 
@@ -21,6 +21,8 @@ Um tipo retornado por algumas APIs, que contém uma lista de [DOMString](/En/DOM
 
 ## Especificações
 
-| Especificação                                                                                                                            | Status                           | Comentário            |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------- |
-| {{SpecName("HTML WHATWG", "common-dom-interfaces.html#the-domstringlist-interface", "DOMStringList")}} | {{Spec2("HTML WHATWG")}} | Especificação Inicial |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

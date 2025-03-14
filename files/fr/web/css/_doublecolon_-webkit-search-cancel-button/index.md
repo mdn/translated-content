@@ -1,12 +1,6 @@
 ---
-title: '::-webkit-search-cancel-button'
+title: ::-webkit-search-cancel-button
 slug: Web/CSS/::-webkit-search-cancel-button
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::-webkit-search-cancel-button
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -25,7 +19,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-webkit-search-cancel-button")}}
+{{Compat}}
 
 ## Voir aussi
 

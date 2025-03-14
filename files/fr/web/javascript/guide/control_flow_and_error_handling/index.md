@@ -1,19 +1,6 @@
 ---
 title: Contrôle du flux d'instructions et gestion des erreurs
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-tags:
-  - Beginner
-  - Decision making
-  - Error Handling
-  - Flow control
-  - Guide
-  - JavaScript
-  - Logic
-  - control
-  - l10n:priority
-  - statements
-translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
-original_slug: Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
@@ -22,7 +9,7 @@ JavaScript supporte nativement un ensemble d'instructions. Ces instructions perm
 
 Les [Références de JavaScript](/fr/docs/Web/JavaScript/Reference/Statements) contiennent plus de détails sur les différentes instructions décrites dans ce chapitre.
 
-Toute expression est une instruction, voir la page [Expressions et opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators) pour plus d'informations sur les expressions. En JavaScript, le point-virgule (`;`) est utilisé afin de séparer des instructions dans le code.
+Toute expression est une instruction, voir la page [Expressions et opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators) pour plus d'informations sur les expressions. En JavaScript, le point-virgule (`;`) est utilisé afin de séparer des instructions dans le code.
 
 ## Les blocs d'instruction
 
@@ -49,7 +36,8 @@ while (x < 10) {
 
 Ici, `{ x++; }` représente le bloc.
 
-> **Note :** En JavaScript, avant ECMAScript 2015 (aussi appelé ES6), les blocs **n'introduisaient pas de nouvelles portées**. Les variables introduites dans le bloc avec l'instruction `var` font partie de la portée de la fonction englobante ou du script. Les effets de leur définition persistent en dehors du bloc. Les blocs seuls utilisés avec `var` (et non `let`) pourront laisser penser que ce bloc se comportera comme en C ou en Java. Par exemple :
+> [!NOTE]
+> En JavaScript, avant ECMAScript 2015 (aussi appelé ES6), les blocs **n'introduisaient pas de nouvelles portées**. Les variables introduites dans le bloc avec l'instruction `var` font partie de la portée de la fonction englobante ou du script. Les effets de leur définition persistent en dehors du bloc. Les blocs seuls utilisés avec `var` (et non `let`) pourront laisser penser que ce bloc se comportera comme en C ou en Java. Par exemple :
 >
 > ```js
 > var x = 1;
@@ -115,7 +103,7 @@ Attention à ne pas utiliser des instructions d'affectation dans les expressions
 
 Voici un exemple de ce qu'il ne faut **pas** faire :
 
-```js example-bad
+```js-nolint example-bad
 if (x = y) {
   /* exécuter des instructions */
 }
@@ -142,7 +130,8 @@ Les valeurs suivantes sont évaluées à `false` (également connues sous le nom
 
 Les autres valeurs, y compris les objets, seront équivalents à `true`.
 
-> **Attention :** Ne pas confondre les valeurs booléennes « primitives » `true` et `false` avec les valeurs créées grâce à un objet [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean).
+> [!WARNING]
+> Ne pas confondre les valeurs booléennes « primitives » `true` et `false` avec les valeurs créées grâce à un objet [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean).
 >
 > Par exemple, on aura :
 >
@@ -154,15 +143,16 @@ Les autres valeurs, y compris les objets, seront équivalents à `true`.
 
 #### Exemple
 
-Dans l'exemple qui suit, la fonction` checkData `renvoie `true` si une chaîne de caractères mesure trois caractères. Sinon, elle affiche une alerte et renvoie `false`.
+Dans l'exemple qui suit, la fonction `checkData` renvoie `true` si une chaîne de caractères mesure trois caractères. Sinon, elle affiche une alerte et renvoie `false`.
 
 ```js
 function checkData(maChaîne) {
   if (maChaîne.length == 3) {
     return true;
   } else {
-    alert("Veuillez saisir trois caractères. " +
-      maChaîne + " n'est pas valide.");
+    alert(
+      "Veuillez saisir trois caractères. " + maChaîne + " n'est pas valide.",
+    );
     return false;
   }
 }
@@ -254,13 +244,18 @@ throw expression;
 Il est possible d'utiliser n'importe quelle expression, sans restriction de type. Le fragment de code qui suit illustre les différentes possibilités :
 
 ```js
-throw "Erreur2";  //type String
-throw 42;         //type Number
-throw true;       //type Boolean
-throw {toString: function () { return "je suis un objet !"; } };
+throw "Erreur2"; //type String
+throw 42; //type Number
+throw true; //type Boolean
+throw {
+  toString: function () {
+    return "je suis un objet !";
+  },
+};
 ```
 
-> **Note :** Vous pouvez spécifier un objet lorsque vous lancez une exception. Vous pouvez alors faire référence aux propriétés de l'objet dans le bloc `catch`.
+> [!NOTE]
+> Vous pouvez spécifier un objet lorsque vous lancez une exception. Vous pouvez alors faire référence aux propriétés de l'objet dans le bloc `catch`.
 
 ```js
 // On crée le constructeur pour cet objet
@@ -271,9 +266,9 @@ function ExceptionUtilisateur(message) {
 
 // On surcharge la méthode toString pour afficher
 // un message plus explicite (par exemple dans la console)
-ExceptionUtilisateur.prototype.toString = function() {
+ExceptionUtilisateur.prototype.toString = function () {
   return this.name + ': "' + this.message + '"';
-}
+};
 
 // On crée une instance pour ce type d'objet
 // et on renvoie une exception avec cette instance
@@ -293,16 +288,29 @@ Dans l'exemple qui suit, on utilise une instruction `try...catch`. On définit u
 ```js
 function getNomMois(numMois) {
   numMois = numMois - 1; // On décale de 1 car les indices du tableaux commencent à 0
-  var mois = ["Janvier", "Février", "Mars", "Avril" ,"Mai", "Juin", "Juillet",
-              "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+  var mois = [
+    "Janvier",
+    "Février",
+    "Mars",
+    "Avril",
+    "Mai",
+    "Juin",
+    "Juillet",
+    "Août",
+    "Septembre",
+    "Octobre",
+    "Novembre",
+    "Décembre",
+  ];
   if (mois[numMois] != null) {
     return mois[numMois];
   } else {
-    throw "NuméroMoisInvalide";  // Ici on utilise l'instruction throw
+    throw "NuméroMoisInvalide"; // Ici on utilise l'instruction throw
   }
 }
 
-try { // les instructions à essayer si tout se passe bien
+try {
+  // les instructions à essayer si tout se passe bien
   nomMois = getNomMois(maVarMois); // La fonction peut renvoyer une exception
 } catch (e) {
   nomMois = "inconnu";
@@ -335,7 +343,8 @@ try {
 }
 ```
 
-> **Note :** Quand on souhaite afficher des erreurs dans la console, on privilégiera [`console.error()`](/fr/docs/Web/API/Console/error) plutôt que [`console.log()`](/fr/docs/Web/API/Console/log). En effet, cette première méthode est plus adaptée et indiquera plus d'informations.
+> [!NOTE]
+> Quand on souhaite afficher des erreurs dans la console, on privilégiera [`console.error()`](/fr/docs/Web/API/console/error_static) plutôt que [`console.log()`](/fr/docs/Web/API/console/log_static). En effet, cette première méthode est plus adaptée et indiquera plus d'informations.
 
 #### Le bloc `finally`
 
@@ -351,7 +360,7 @@ Dans l'exemple suivant, on écrit dans un fichier, si une exception se produit l
 ouvrirFichier();
 try {
   écrireFichier(données); // Une erreur peut se produire
-} catch(e) {
+} catch (e) {
   gérerException(e); // On gère le cas où on a une exception
 } finally {
   fermerFichier(); // On n'oublie jamais de fermer le flux.
@@ -365,7 +374,7 @@ function f() {
   try {
     console.log(0);
     throw "bug";
-  } catch(e) {
+  } catch (e) {
     console.log(1);
     return true; // Cette instruction est bloquée jusqu'à la fin du bloc finally
     console.log(2); // Ne pourra jamais être exécuté
@@ -387,10 +396,10 @@ Lorsqu'on surcharge les valeurs de retour avec le bloc `finally`, cela s'appliqu
 function f() {
   try {
     throw "problème";
-  } catch(e) {
+  } catch (e) {
     console.log('"problème" interne intercepté');
     throw e; // cette instruction est mise en attente
-             // tant que le bloc finally n'est pas fini
+    // tant que le bloc finally n'est pas fini
   } finally {
     return false; // surcharge le "throw" précédent
   }
@@ -399,7 +408,7 @@ function f() {
 
 try {
   f();
-} catch(e) {
+} catch (e) {
   // ce bloc n'est jamais utilisé car le throw
   // utilisé dans le bloc catch a été surchargé
   // par l'instruction return de finally

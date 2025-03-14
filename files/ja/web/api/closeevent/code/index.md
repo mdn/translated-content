@@ -1,6 +1,9 @@
 ---
-title: CloseEvent.code
+title: "CloseEvent: code プロパティ"
+short-title: code
 slug: Web/API/CloseEvent/code
+l10n:
+  sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
 ---
 
 {{APIRef("Websockets API")}}
@@ -9,7 +12,7 @@ slug: Web/API/CloseEvent/code
 
 ## 値
 
-整数の [WebSocket 接続クローズコード](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)であり、 `1000`-`4999` の範囲でサーバーが接続を閉じた理由を示します。
+整数の [WebSocket 接続クローズコード](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)であり、 `1000` - `4999` の範囲でサーバーが接続を閉じた理由を示します。
 
 <table class="no-markdown">
   <thead>
@@ -50,7 +53,7 @@ slug: Web/API/CloseEvent/code
       <td><code>1003</code></td>
       <td>未対応のデータ</td>
       <td>
-        エンドポイントが受け付けない種類のデータを受信したため、接続を終了した。（例えば、テキストのみのエンドポイントがバイナリデータを受信した場合など。）
+        エンドポイントが受け付けない種類のデータを受信したため、接続を終了した。（例えば、テキストのみのエンドポイントがバイナリーデータを受信した場合など。）
       </td>
     </tr>
     <tr>
@@ -111,14 +114,14 @@ slug: Web/API/CloseEvent/code
     </tr>
     <tr>
       <td><code>1012</code></td>
-      <td><a href="http://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">サービス再起動</a></td>
+      <td><a href="https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">サービス再起動</a></td>
       <td>
         サーバーが再起動するため、接続を終了しようとしている。
       </td>
     </tr>
     <tr>
       <td><code>1013</code></td>
-      <td><a href="http://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">後で再試行</a></td>
+      <td><a href="https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">後で再試行</a></td>
       <td>
         サーバーが過負荷のため、一部のクライアントを切断するなど、一時的な状態により接続を終了している。
       </td>
@@ -155,7 +158,7 @@ slug: Web/API/CloseEvent/code
       <td><code>4000</code>–<code>4999</code></td>
       <td></td>
       <td>
-         私的利用向けのものであり、登録はできない。このコードは、 WebSocket アプリケーション間の事前の合意により使用することができる。これらのコードの解釈は、 WebSocket プロトコルでは未定義。
+         私的用途向けのものであり、登録はできない。このコードは、WebSocket アプリケーション間の事前の合意により使用することができる。これらのコードの解釈は、WebSocket プロトコルでは未定義。
       </td>
     </tr>
   </tbody>
@@ -166,7 +169,7 @@ slug: Web/API/CloseEvent/code
 次の例は、 `code` の値をコンソールに表示します。
 
 ```js
-WebSocket.onclose = function(event) {
+WebSocket.onclose = (event) => {
   console.log(event.code);
 };
 ```

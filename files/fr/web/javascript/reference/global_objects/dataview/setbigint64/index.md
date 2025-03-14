@@ -1,22 +1,27 @@
 ---
 title: DataView.prototype.setBigInt64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setBigInt64
-tags:
-  - BigInt
-  - DataView
-  - JavaScript
-  - Méthode
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setBigInt64
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/setBigInt64
 ---
 
 {{JSRef}}
 
 La méthode **`setBigInt64()`** permet d'enregister un entier signé sur 64 bits (type _long long_ par analogie avec C) à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.
 
-{{EmbedInteractiveExample("pages/js/dataview-setbigint64.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.setBigInt64()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+// Highest possible BigInt value that fits in a signed 64-bit integer
+const max = 2n ** (64n - 1n) - 1n;
+
+const view = new DataView(buffer);
+view.setBigInt64(1, max);
+
+console.log(view.getBigInt64(1));
+// Expected output: 9223372036854775807n
+```
 
 ## Syntaxe
 
@@ -55,13 +60,11 @@ dataview.getInt32(0); // 3n
 
 ## Spécifications
 
-| Spécification                                                                                                                     | État |
-| --------------------------------------------------------------------------------------------------------------------------------- | ---- |
-| [Proposition pour `DataView.prototype.setBigInt64()`](https://tc39.github.io/proposal-bigint/#sec-dataview.prototype.setbigint64) |      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.setBigInt64")}}
+{{Compat}}
 
 ## Voir aussi
 

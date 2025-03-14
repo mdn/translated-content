@@ -1,11 +1,11 @@
 ---
 title: 掌握弹性物件的包装
-slug: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
+slug: Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items
 ---
 
 {{CSSRef}}
 
-Flexbox 被设计为一维的布局工具，这意味着在处理元素布局方式时只能设计为行或者设计为列— 两者不能兼顾。然而 Flex 拥有一种将 flex 元素包围在新的一行内的特性，创建一个新的行如果设置了{{cssxref("flex-direction")}} 为 `row` 以及创建新的一列如果设置了 `flex-direction` 为 `column`。在这篇教程中，我将解释这个特性的内部工作原理，以及它设计的目的是什么和在什么情况下要使用 [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) 而不是 flexbox.
+Flexbox 被设计为一维的布局工具，这意味着在处理元素布局方式时只能设计为行或者设计为列——两者不能兼顾。然而 Flex 拥有一种将 flex 元素包围在新的一行内的特性，创建一个新的行如果设置了 {{cssxref("flex-direction")}} 为 `row` 以及创建新的一列如果设置了 `flex-direction` 为 `column`。在这篇教程中，我将解释这个特性的内部工作原理，以及它设计的目的是什么和在什么情况下要使用 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)而不是弹性盒子。
 
 ## 把物件包装起来
 
@@ -21,7 +21,7 @@ Flexbox 被设计为一维的布局工具，这意味着在处理元素布局方
 
 ## 包装和弹性方向
 
-当结合 `flex-direction` 属性，包装就如您所期待的方式工作。如果 `flex-direction` 被设置成 row-reverse 那么物件就会从容器的底边开始并且以行的反向顺序堆叠自身。
+当结合 `flex-direction` 属性，包装就如你所期待的方式工作。如果 `flex-direction` 被设置成 row-reverse 那么物件就会从容器的底边开始并且以行的反向顺序堆叠自身。
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/row-reverse-wrap.html", '100%', 750)}}
 
@@ -41,7 +41,7 @@ Flexbox 被设计为一维的布局工具，这意味着在处理元素布局方
 
 ## 基于弹性盒子的网格系统如何工作？
 
-基本上基于弹性盒子的网格系统，是通过将弹性盒子带回到我们所熟悉的基于浮层布局的世界，来工作的。如果你对弹性物件设置了百分比的宽度—— `flex-basis` 或是通过对物件增加宽度同时让 `flex-basis` 的值保持为`auto` ——你就能获得二维布局的印象。你可以在下面的例子中看到这样的运作。
+基本上基于弹性盒子的网格系统，是通过将弹性盒子带回到我们所熟悉的基于浮层布局的世界，来工作的。如果你对弹性物件设置了百分比的宽度——`flex-basis` 或是通过对物件增加宽度同时让 `flex-basis` 的值保持为`auto`——你就能获得二维布局的印象。你可以在下面的例子中看到这样的运作。
 
 这里我有设置 `flex-grow` 和 `flex-shrink` 为 `0` 来使固定弹性物件，并且接着使用百分比来控制弹性，正如我们在浮动布局里所使用的那样。
 
@@ -69,7 +69,8 @@ Flexbox 被设计为一维的布局工具，这意味着在处理元素布局方
 
 在下面的实时例子里，我有一个非包装的弹性容器。第三个物件相比其他的有跟多的内容被设置 `visibility: collaps` 并且因此弹性盒子会保持一个高度的结构来满足显示物件的需要。如果你从 CSS 里移除`visibility: collapse` 或是将值改变为 `visible`，你会看到物件消失了并且空间在非包装的物件之间重新分配；弹性容器的高度不应该改变。
 
-> **备注：** 对下面的两个例子使用 Firefox 浏览器，因为 Chrome 和 Safari 会把折叠处理为隐藏。
+> [!NOTE]
+> 对下面的两个例子使用 Firefox 浏览器，因为 Chrome 和 Safari 会把折叠处理为隐藏。
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/visibility-collapse.html", '100%', 650)}}
 

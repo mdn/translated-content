@@ -1,16 +1,11 @@
 ---
 title: outline-width
 slug: Web/CSS/outline-width
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/outline-width
 ---
 
 {{CSSRef}}
 
-La propriété CSS **`outline-width`** est utilisée afin de définir l'épaisseur de la bordure (_outline_) d'un élément. Cette bordure est dessinée autour des éléments et délimite [la boîte de bordure](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte). Visuellement, cela permet de faire ressortir l'élément.
+La propriété CSS **`outline-width`** est utilisée afin de définir l'épaisseur de la bordure (_outline_) d'un élément. Cette bordure est dessinée autour des éléments et délimite [la boîte de bordure](/fr/docs/Learn/CSS/Building_blocks/The_box_model). Visuellement, cela permet de faire ressortir l'élément.
 
 {{EmbedInteractiveExample("pages/css/outline-width.html")}}
 

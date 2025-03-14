@@ -1,8 +1,9 @@
 ---
-title: PointerEvent.twist
+title: "PointerEvent: twist プロパティ"
+short-title: twist
 slug: Web/API/PointerEvent/twist
 l10n:
-  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{ APIRef("Pointer Events") }}
@@ -18,15 +19,19 @@ l10n:
 {{domxref("Element/pointerdown_event", "pointerdown")}} イベントが発生すると、イベントの `twist` プロパティの値に応じてさまざまな関数が呼び出されます。
 
 ```js
-someElement.addEventListener('pointerdown', (event) => {
-  if (event.twist === 0) {
-    // ねじれなし
-    process_no_twist(event);
-  } else {
-    // デフォルト
-    process_twist(event);
-  }
-}, false);
+someElement.addEventListener(
+  "pointerdown",
+  (event) => {
+    if (event.twist === 0) {
+      // ねじれなし
+      process_no_twist(event);
+    } else {
+      // デフォルト
+      process_twist(event);
+    }
+  },
+  false,
+);
 ```
 
 ## 仕様書

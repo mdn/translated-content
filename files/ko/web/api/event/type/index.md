@@ -1,20 +1,15 @@
 ---
 title: Event.type
 slug: Web/API/Event/type
-tags:
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.Event.type
-translation_of: Web/API/Event/type
 ---
+
 {{APIRef}}
 
 {{domxref("Event")}} 인터페이스의 **`type`** 읽기 전용 속성은 이벤트의 유형을 나타내는 문자열을 반환합니다. 이 속성은 이벤트를 생성할 때 설정되며, `click`, `load`, `error`처럼 특정 이벤트를 지칭할 때 사용하는 이름과 같은 값을 반환합니다.
 
 ## 값
 
-{{domxref("Event")}}의 유형을 나타내는 {{jdxref("String")}}입니다.
+{{domxref("Event")}}의 유형을 나타내는 {{jsxref("String")}}입니다.
 
 ## 예제
 
@@ -31,19 +26,19 @@ translation_of: Web/API/Event/type
 
 ```js
 function getEventType(event) {
-  const log = document.getElementById('log');
-  log.innerText = event.type + '\n' + log.innerText;
+  const log = document.getElementById("log");
+  log.innerText = event.type + "\n" + log.innerText;
 }
 
 // 키보드 이벤트
-document.addEventListener('keydown', getEventType, false);  // 1번
-document.addEventListener('keypress', getEventType, false); // 2번
-document.addEventListener('keyup', getEventType, false);    // 3번
+document.addEventListener("keydown", getEventType, false); // 1번
+document.addEventListener("keypress", getEventType, false); // 2번
+document.addEventListener("keyup", getEventType, false); // 3번
 
 // 마우스 이벤트
-document.addEventListener('mousedown', getEventType, false); // 1번
-document.addEventListener('mouseup', getEventType, false);   // 2번
-document.addEventListener('click', getEventType, false);     // 3번
+document.addEventListener("mousedown", getEventType, false); // 1번
+document.addEventListener("mouseup", getEventType, false); // 2번
+document.addEventListener("click", getEventType, false); // 3번
 ```
 
 ### 결과

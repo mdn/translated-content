@@ -1,5 +1,5 @@
 ---
-title: ':only-of-type'
+title: :only-of-type
 slug: Web/CSS/:only-of-type
 ---
 
@@ -15,7 +15,8 @@ p:only-of-type {
 }
 ```
 
-> **Nota:** Como se definió originalmente, el elemento seleccionado tenía que tener un padre. Comenzando con el Nivel 4 de Selectores, esto ya no es necesario.
+> [!NOTE]
+> Como se definió originalmente, el elemento seleccionado tenía que tener un padre. Comenzando con el Nivel 4 de Selectores, esto ya no es necesario.
 
 ## Sintaxis
 
@@ -30,7 +31,8 @@ p:only-of-type {
   <div>Soy un `div` #1.</div>
   <p>Yo soy el único `p` entre mis hermanos.</p>
   <div>Soy un `div` #2.</div>
-  <div>Soy un `div` #3.
+  <div>
+    Soy un `div` #3.
     <i>Yo soy el único hijo `i`.</i>
     <em>Soy un `em` #1.</em>
     <em>Soy un `em` #2.</em>
@@ -56,7 +58,7 @@ main :only-of-type {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.only-of-type")}}
+{{Compat}}
 
 ## Ver también
 

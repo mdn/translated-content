@@ -1,16 +1,20 @@
 ---
-title: 抽象编程（Abstraction）
+title: 抽象编程
 slug: Glossary/Abstraction
+l10n:
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-在{{Glossary("computer programming", "计算机编程")}}领域中，抽象编程指在研发大型复杂软件系统时，通过抽象的方法来降低编程复杂度，实现系统快速高效设计和开发的编程模式。它将系统各功能实现的技术细节隐藏在相对简单的 {{Glossary("API", "API 接口")}}之后。
+{{GlossarySidebar}}
+
+在{{Glossary("computer programming", "计算机编程")}}中，**抽象编程**是一种在复杂的软件系统中，降低复杂度、实现系统高效设计与实现的方法。它将系统各功能实现的技术细节隐藏在相对简单的 {{Glossary("API", "API 接口")}}中。
 
 ## 数据抽象的好处
 
 - 使用户避免撰写低等级代码。
 - 避免代码重复，增加代码的复用性。
 - 在不影响用户的前提下可以独立修改类的内部实现。
-- 有效提升应用程序的安全性，因为只向用户提供重要的细节。
+- 有助于提高应用程序的安全性，因为只用向用户提供重要的细节。
 
 ## 示例
 
@@ -35,4 +39,4 @@ obj.display();
 
 ## 参见
 
-- 维基百科上的[抽象化](https://zh.wikipedia.org/wiki/抽象化_(計算機科學))
+- 维基百科上的[抽象化](<https://zh.wikipedia.org/wiki/抽象化_(計算機科學)>)

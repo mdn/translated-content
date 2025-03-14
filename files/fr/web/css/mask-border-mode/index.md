@@ -1,12 +1,6 @@
 ---
 title: mask-border-mode
 slug: Web/CSS/mask-border-mode
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/mask-border-mode
 ---
 
 {{cssref}}{{SeeCompatTable}}

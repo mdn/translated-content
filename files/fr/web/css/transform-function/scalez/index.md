@@ -1,9 +1,6 @@
 ---
 title: scaleZ()
 slug: Web/CSS/transform-function/scaleZ
-translation_of: Web/CSS/transform-function/scaleZ()
-original_slug: Web/CSS/transform-function/scaleZ()
-browser-compat: css.types.transform-function.scaleZ
 ---
 
 {{CSSRef}}
@@ -119,8 +116,8 @@ div {
 
 ## Voir aussi
 
-- [`scaleX()`](/fr/docs/Web/CSS/transform-function/scaleX())
-- [`scaleY()`](/fr/docs/Web/CSS/transform-function/scaleY())
+- [`scaleX()`](</fr/docs/Web/CSS/transform-function/scaleX()>)
+- [`scaleY()`](</fr/docs/Web/CSS/transform-function/scaleY()>)
 - [`transform`](/fr/docs/Web/CSS/transform)
 - [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
 - [`transform-origin`](/fr/docs/Web/CSS/transform-origin)

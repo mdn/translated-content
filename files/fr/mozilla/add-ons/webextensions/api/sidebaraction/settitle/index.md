@@ -1,25 +1,15 @@
 ---
 title: sidebarAction.setTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - setTitle
-  - sidebarAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Définit le titre de la barre latérale. Le titre est affiché n'importe où dans les barres latérales du navigateur. Par exemple, Firefox l'affichera dans le menu "Affichage > Barre latérale". Il est également affiché en haut de la barre latérale lorsque la barre latérale est ouverte.
 
 ## Types de titres
 
-Votre extension doit spécifier un titre pour la barre latérale dans la clé de manifest [sidebar_action](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action). C'est ce qu'on appelle le _"titre du manifest"_. Si vous ne spécifiez pas le titre du manifest, il sera par défaut le nom de l'extension
+Votre extension doit spécifier un titre pour la barre latérale dans la clé de manifest [sidebar_action](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action). C'est ce qu'on appelle le _"titre du manifest"_. Si vous ne spécifiez pas le titre du manifest, il sera par défaut le nom de l'extension
 
 Si vous définissez un nouveau titre à l'aide de `setTitle()`, et incluez l'option `tabId` le titre est défini uniquement pour l'onglet donné. Ce titre est appelé _"titre spécifique à l'onglet"_.
 
@@ -31,8 +21,8 @@ Si vous définissez un nouveau titre à l'aide de `setTitle()`, et omettre les o
 
 ```js
 browser.sidebarAction.setTitle(
-  details // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -45,7 +35,7 @@ browser.sidebarAction.setTitle(
 
       - : `string` ou `null`. Le nouveau titre de la barre latérale.
 
-        si le `titre`  est une chaîne vide, le titre utilisé sera le nom de l'extension, mais {{WebExtAPIRef("sidebarAction.getTitle")}} fournira toujours la chaîne vide.
+        si le `titre` est une chaîne vide, le titre utilisé sera le nom de l'extension, mais {{WebExtAPIRef("sidebarAction.getTitle")}} fournira toujours la chaîne vide.
 
         Si le `titre` est `null`, alors un titre précédemment défini sera supprimé, de sorte que :
 
@@ -63,10 +53,6 @@ browser.sidebarAction.setTitle(
 - Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et le titre n'est pas défini.
 - SI `windowId` et `tabId` sont tous les deux omis, le titre global est définit.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.sidebarAction.setTitle",2)}}
-
 ## Exemples
 
 Ce code modifie le titre de la barre latérale lorsque l'utilisateur clique sur une action du navigateur, mais uniquement pour l'onglet en cours :
@@ -75,15 +61,19 @@ Ce code modifie le titre de la barre latérale lorsque l'utilisateur clique sur 
 var title = "A different title";
 
 function setTitleForTab(tab) {
-  browser.sidebarAction.setTitle({title, tabId: tab.id});
+  browser.sidebarAction.setTitle({ title, tabId: tab.id });
 }
 
 browser.browserAction.onClicked.addListener(setTitleForTab);
 ```
 
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).
 

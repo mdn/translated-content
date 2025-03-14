@@ -1,23 +1,11 @@
 ---
 title: Monétisation du jeu
 slug: Games/Publishing_games/Game_monetization
-tags:
-  - Games
-  - HTML5
-  - JavaScript
-  - Jeux
-  - Licence
-  - Monétisation
-  - annonces
-  - iap
-  - image de marque
-translation_of: Games/Publishing_games/Game_monetization
-original_slug: Jeux/Publier_jeux/Game_monetization
 ---
 
 {{GamesSidebar}}
 
-Lorsque vous avez passé votre temps à créer un jeu, à le [distribuer](/fr/docs/Games/Techniques/Publishing_games/Game_distribution) et à en faire la [promotion](/fr/docs/Games/Techniques/Publishing_games/Game_promotion), vous devriez envisager d'en gagner de l'argent. Si votre travail est une entreprise sérieuse sur la voie de devenir un développeur de jeux indépendant capable de gagner sa vie, lisez la suite et voyez quelles sont vos options. La technologie est suffisamment mature; maintenant, il s'agit simplement de choisir la bonne approche.
+Lorsque vous avez passé votre temps à créer un jeu, à le [distribuer](/fr/docs/Games/Publishing_games/Game_distribution) et à en faire la [promotion](/fr/docs/Games/Publishing_games/Game_promotion), vous devriez envisager d'en gagner de l'argent. Si votre travail est une entreprise sérieuse sur la voie de devenir un développeur de jeux indépendant capable de gagner sa vie, lisez la suite et voyez quelles sont vos options. La technologie est suffisamment mature; maintenant, il s'agit simplement de choisir la bonne approche.
 
 ## Jeux payants
 
@@ -29,7 +17,7 @@ Le prix que vous facturez pour votre jeu dépend du marché, de la qualité de v
 
 Au lieu de faire payer votre jeu à l'avance, vous pouvre proposer un jeu gratuit avec des achats intégrés (IAPs). Dans ce cas, le jeu peut être acquis sans dépenser un centime — donnez le jeu aux joueurs, mais offrez de la monnaie du jeu, des bonus ou des avantages en argent réel. Des exemples spécifiques peuvent inclure des niveaux bonus, de meilleurs armes ou sorts, ou le remplissage de l'énergie nécessaire pour jouer. Concevoir un bon système IAP est un art en soi.
 
-N'oubliez pas que vous avez besoin de milliers de téléchargements de votre jeu pour rendre les IAP efficaces — seule une petite fraction des joueurs paiera réellement pour les IAP. Comment petit? Cela varie, mais environ une personne sur mille est dans la moyenne. Plus il y a de personnes qui jouent à votre jeu, plus les chances que quelqu'un paie est élevée, donc vos revenus dépendent fortement de vos activités de [promotion](/fr/docs/Games/Techniques/Publishing_games/Game_promotion).
+N'oubliez pas que vous avez besoin de milliers de téléchargements de votre jeu pour rendre les IAP efficaces — seule une petite fraction des joueurs paiera réellement pour les IAP. Comment petit? Cela varie, mais environ une personne sur mille est dans la moyenne. Plus il y a de personnes qui jouent à votre jeu, plus les chances que quelqu'un paie est élevée, donc vos revenus dépendent fortement de vos activités de [promotion](/fr/docs/Games/Publishing_games/Game_promotion).
 
 ### Freemium
 
@@ -41,7 +29,7 @@ Les Add-ons et les DLCs sont un bon moyen de fournir une valeur supplémentaire 
 
 ## Advertisements
 
-Au lieu de vendre activement les jeux, vous pouvez également essayer de vous procurer un revenu passif — afficher des publicités et s'appuyer sur des activités précédentes liées à la [promotion](/fr/docs/Games/Techniques/Publishing_games/Game_promotion) de votre jeu peut en bénéficier, mais votre jeu doit crée une dépendance, ce qui n'est pas aussi facile qu'il y paraît. Vous devez encore le planifier, et à un moment donné vous aurez également besoin d'un peu de chance. Si votre jeu devient viral et que les gens commencent à le partager, vous pouvez obtenir beaucoup de téléchargements et d'argent grâce aux publicités.
+Au lieu de vendre activement les jeux, vous pouvez également essayer de vous procurer un revenu passif — afficher des publicités et s'appuyer sur des activités précédentes liées à la [promotion](/fr/docs/Games/Publishing_games/Game_promotion) de votre jeu peut en bénéficier, mais votre jeu doit crée une dépendance, ce qui n'est pas aussi facile qu'il y paraît. Vous devez encore le planifier, et à un moment donné vous aurez également besoin d'un peu de chance. Si votre jeu devient viral et que les gens commencent à le partager, vous pouvez obtenir beaucoup de téléchargements et d'argent grâce aux publicités.
 
 De nombreuses entreprises proposent des systèmes de publicité - vous vous inscrivez et leur permettez de diffuser des publicités en échange d'un pourcentage des revenus. On dit que Google AdSense est le plus efficace, mais il n'est pas conçu pour les jeux et c'est une très mauvaise pratique de l'utiliser à cette fin. Au lieu de risquer de fermer votre compte et de bloquer tout l'argent, essayez d'utiliser les portails habituels ciblés par gamedev comme [LeadBolt](https://www.leadbolt.com/). Ils offrent des systèmes faciles à mettre en œuvre pour afficher les publicités dans vos jeux et partager les gains avec vous.
 
@@ -51,11 +39,11 @@ Les publicités vidéo sont de plus en plus populaires, en particulier sous la f
 
 Il existe une approche qui peut fonctionner comme un modèle de monétisation à elle seule, et qui consiste à vendre des licences pour la distribution de votre jeu. Il y a de plus en plus de portails intéressés à montrer vos jeux sur leurs sites Web. Ils suivent diverses stratégies pour gagner de l'argent via vos jeux, mais vous n'avez pas à vous soucier de tout cela car la vente de la licence est généralement une transaction unique. Vous obtenez de l'argent et ils peuvent faire preuve de créativité en utilisant votre jeu pour gagner de l'argent.
 
-Trouver des éditeurs peut être difficile au début — esssayez de les rechercher sur les [forums HTML5 Gamedevs](http://www.html5gamedevs.com/). Si vous êtes bien connu, ils peuvent vous contacter. La plupart des offres sont conclues par e-mail lorsque vous parlez à une personne dédiée du côté de l'éditeur. Certains sites Web d'éditeurs ont ces informations facilement disponibles, tandis que d'autres sont plus difficiles à trouver. Lorsque vous atteignez un éditeur, essayez d'être gentil et direct - ce sont des gens occupés.
+Trouver des éditeurs peut être difficile au début — esssayez de les rechercher sur les [forums HTML5 Gamedevs](https://www.html5gamedevs.com/). Si vous êtes bien connu, ils peuvent vous contacter. La plupart des offres sont conclues par e-mail lorsque vous parlez à une personne dédiée du côté de l'éditeur. Certains sites Web d'éditeurs ont ces informations facilement disponibles, tandis que d'autres sont plus difficiles à trouver. Lorsque vous atteignez un éditeur, essayez d'être gentil et direct - ce sont des gens occupés.
 
 ### Licences exclusives
 
-La licence exclusive est un type de licence pour un éditeur — vous avez créé un jeu et vous en vendez tous les droits à une seule entité ainsi que les droits de le redistribuer — [Softgames](http://www.softgames.de/) est un exemple d'un tel éditeur. Vous ne pouvez pas le revendre sous quelque forme que ce soit tant que l'éditeur en a les droits - c'est pourquoi les accords exclusifs valent beaucoup d'argent. Combien exactement? Cela dépend de la qualité du jeu, de son genre, de son éditeur et de bien d'autres, mais généralement, ce sera entre 2000 et 5000 USD. Une fois que vous avez vendu une licence exclusive, vous pouvez oublier la promotion de ce jeu particulier car vous ne gagnerez pas plus, alors ne concluez un tel accord que si vous êtes sûr qu'il est suffisamment rentable.
+La licence exclusive est un type de licence pour un éditeur — vous avez créé un jeu et vous en vendez tous les droits à une seule entité ainsi que les droits de le redistribuer — [Softgames](https://www.softgames.com/) est un exemple d'un tel éditeur. Vous ne pouvez pas le revendre sous quelque forme que ce soit tant que l'éditeur en a les droits - c'est pourquoi les accords exclusifs valent beaucoup d'argent. Combien exactement? Cela dépend de la qualité du jeu, de son genre, de son éditeur et de bien d'autres, mais généralement, ce sera entre 2000 et 5000 USD. Une fois que vous avez vendu une licence exclusive, vous pouvez oublier la promotion de ce jeu particulier car vous ne gagnerez pas plus, alors ne concluez un tel accord que si vous êtes sûr qu'il est suffisamment rentable.
 
 ### Licences non exclusives
 
@@ -83,11 +71,11 @@ Il existe d'autres façons de gagner de l'argent lors de la création de jeux HT
 
 ### Vendre des ressources
 
-Si vous êtes graphiste, vous pouvez vendre les actifs des jeux que vous avez créés ou quelque chose de nouveau exclusivement à cette fin dans des boutiques en ligne comme [Envato Market](http://market.envato.com/). Ce n'est pas beaucoup, mais si vous êtes un designer connu, cela peut être un flux de revenus passif supplémentaire.
+Si vous êtes graphiste, vous pouvez vendre les actifs des jeux que vous avez créés ou quelque chose de nouveau exclusivement à cette fin dans des boutiques en ligne comme [Envato Market](https://themeforest.net/). Ce n'est pas beaucoup, mais si vous êtes un designer connu, cela peut être un flux de revenus passif supplémentaire.
 
 ### Rédaction d'articles et de tutoriels
 
-Il est possible d'écrire des articles sur vos jeux et même d'être payé pour eux. La [promotion](/fr/docs/Games/Techniques/Publishing_games/Game_promotion) et la monétisation de jeux en même temps sont gagnant-gagnant, et si vous n'en abusez pas avec trop de publicité, les lecteurs apprécieront de les lire et d'apprendre une chose ou deux. Si vous vous concentrez d'abord sur le partage des connaissances et que vous utilisez vos jeux comme des exemples, cela devrait être correct. Consultez [Tuts+ Game Development](http://gamedevelopment.tutsplus.com/) ou des sites Web similaires pour des opportunités d'écriture.
+Il est possible d'écrire des articles sur vos jeux et même d'être payé pour eux. La [promotion](/fr/docs/Games/Publishing_games/Game_promotion) et la monétisation de jeux en même temps sont gagnant-gagnant, et si vous n'en abusez pas avec trop de publicité, les lecteurs apprécieront de les lire et d'apprendre une chose ou deux. Si vous vous concentrez d'abord sur le partage des connaissances et que vous utilisez vos jeux comme des exemples, cela devrait être correct. Consultez [Tuts+ Game Development](https://gamedevelopment.tutsplus.com/) ou des sites Web similaires pour des opportunités d'écriture.
 
 ### Marchandise
 
@@ -95,7 +83,7 @@ Vous pouvez vendre des t-shirts, des [autocollants](https://www.stickermule.com/
 
 ### Donations
 
-Lorsque tout le reste échoue, vous pouvez essayer de mettre un bouton de don sur la page de votre jeu et demander le soutien de la communauté. Parfois, cela fonctionne, mais seulement si le joueur vous connaît et estime que cela vous aidera dans votre situation. C'est pourquoi il est si important de gérer soigneusement votre communauté. Cela a fonctionné avec la compétition [js13kGames](http://js13kgames.com/) — chaque participant a reçu un t-shirt gratuit, et certains ont même rendu quelques dollars pour l'aider à continuer dans les années à venir.
+Lorsque tout le reste échoue, vous pouvez essayer de mettre un bouton de don sur la page de votre jeu et demander le soutien de la communauté. Parfois, cela fonctionne, mais seulement si le joueur vous connaît et estime que cela vous aidera dans votre situation. C'est pourquoi il est si important de gérer soigneusement votre communauté. Cela a fonctionné avec la compétition [js13kGames](https://js13kgames.com/) — chaque participant a reçu un t-shirt gratuit, et certains ont même rendu quelques dollars pour l'aider à continuer dans les années à venir.
 
 ## Résumé
 

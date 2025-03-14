@@ -19,8 +19,8 @@ Esse status não é gerado pelos servidores de origem, mas pela interceptação 
 
 ## Especificações
 
-| Especificação                                                                    | Título                            |
-| -------------------------------------------------------------------------------- | --------------------------------- |
+| Especificação                                                | Título                            |
+| ------------------------------------------------------------ | --------------------------------- |
 | {{RFC("6585", "511 Network Authentication Required" , "6")}} | Códigos adicionais de estado HTTP |
 
 ## Veja também

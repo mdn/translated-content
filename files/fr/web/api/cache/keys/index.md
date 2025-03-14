@@ -1,16 +1,6 @@
 ---
 title: Cache.keys()
 slug: Web/API/Cache/keys
-tags:
-  - API
-  - Cache
-  - Experimental
-  - Méthode
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - keys
-translation_of: Web/API/Cache/keys
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
@@ -19,12 +9,13 @@ La méthode **`keys()`** de l'interface {{domxref("Cache")}} retourne une {{jsxr
 
 Les requêtes sont retournées dans le même ordre que l'ordre d'insertion.
 
-> **Note :** Les requêtes avec des URLs déjà présentes mais des headers différents peuvent être retournées si leurs réponses comportent le header `VARY`.
+> [!NOTE]
+> Les requêtes avec des URLs déjà présentes mais des headers différents peuvent être retournées si leurs réponses comportent le header `VARY`.
 
 ## Syntaxe
 
 ```js
-cache.keys(request,{options}).then(function(response) {
+cache.keys(request, { options }).then(function (response) {
   // fait quelque chose avec votre tableau de réponses
 });
 ```
@@ -49,13 +40,13 @@ Une {{jsxref("Promise", "Promesse")}} qui est résolue en un tableau de clé de 
 ## Exemples
 
 ```js
-caches.open('v1').then(function(cache) {
-  cache.keys().then(function(keys) {
-    keys.forEach(function(request, index, array) {
+caches.open("v1").then(function (cache) {
+  cache.keys().then(function (keys) {
+    keys.forEach(function (request, index, array) {
       cache.delete(request);
     });
   });
-})
+});
 ```
 
 ## Spécifications

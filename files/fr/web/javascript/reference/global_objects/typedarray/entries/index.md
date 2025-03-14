@@ -1,28 +1,29 @@
 ---
 title: TypedArray.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/entries
 ---
 
 {{JSRef}}
 
 La méthode **`entries()`** renvoie un nouvel objet `Array Iterator` qui contient les paires clé/valeur pour chaque indice du tableau.
 
-{{EmbedInteractiveExample("pages/js/typedarray-entries.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.entries()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+const eArr = uint8.entries();
+
+eArr.next();
+eArr.next();
+
+console.log(eArr.next().value);
+// Expected output: Array [2, 30]
+```
 
 ## Syntaxe
 
 ```js
-arr.entries()
+arr.entries();
 ```
 
 ### Valeur de retour
@@ -66,7 +67,7 @@ console.log(eArr.next().value); // [4, 50]
 
 ## Voir aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.keys()")}}
 - {{jsxref("TypedArray.prototype.values()")}}

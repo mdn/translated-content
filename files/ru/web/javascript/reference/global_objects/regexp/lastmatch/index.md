@@ -1,7 +1,6 @@
 ---
 title: RegExp.lastMatch ($&)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -21,7 +20,7 @@ RegExp['$&']
 
 Значение свойства `lastMatch` доступно только для чтение и изменяется при успешном совпадении с регулярным выражением.
 
-Поскольку использование символа "&" приведёт к выбрасыванию ошибки {{jsxref("SyntaxError")}}, обратиться к данному свойству с помощью точечной нотации(`RegExp.$&`) нельзя. Вместо этого стоит использовать [скобочную нотацию](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors) (`RegExp['$&']`).
+Поскольку использование символа "&" приведёт к выбрасыванию ошибки {{jsxref("SyntaxError")}}, обратиться к данному свойству с помощью точечной нотации(`RegExp.$&`) нельзя. Вместо этого стоит использовать [скобочную нотацию](/ru/docs/Web/JavaScript/Reference/Operators/Property_accessors) (`RegExp['$&']`).
 
 ## Примеры
 
@@ -29,16 +28,16 @@ RegExp['$&']
 
 ```js
 var re = /hi/g;
-re.test('hi there!');
+re.test("hi there!");
 RegExp.lastMatch; // "hi"
-RegExp['$&'];     // "hi"
+RegExp["$&"]; // "hi"
 ```
 
-## Спецификация
+## Спецификации
 
 Не стандартизированной. Не является частью какой-либо спецификации.
 
-## Поддержка в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 

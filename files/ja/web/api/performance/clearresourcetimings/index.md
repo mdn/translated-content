@@ -1,60 +1,59 @@
 ---
-title: performance.clearResourceTimings()
+title: "Performance: clearResourceTimings() メソッド"
+short-title: clearResourceTimings()
 slug: Web/API/Performance/clearResourceTimings
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}
 
-**`clearResourceTimings()`** メソッドは、{{domxref("PerformanceEntry.entryType","entryType")}} が "`resource`" のすべての {{domxref("PerformanceEntry","パフォーマンスエントリー")}}をブラウザーのパフォーマンスデータバッファーから削除し、パフォーマンスデータバッファーのサイズをゼロに設定します。ブラウザーのパフォーマンスデータバッファーのサイズを設定するには、{{domxref("Performance.setResourceTimingBufferSize()")}} メソッドを使用してください。
+**`clearResourceTimings()`** メソッドは、{{domxref("PerformanceEntry.entryType","entryType")}} が "`resource`" のすべてのパフォーマンス項目をブラウザーのパフォーマンスタイムラインから削除し、パフォーマンスリソースデータバッファーのサイズをゼロに設定します。
 
-{{AvailableInWorkers}}
+ブラウザーのリソースデータバッファーのサイズを設定するには、{{domxref("Performance.setResourceTimingBufferSize()")}} メソッドを使用してください。
+
+ブラウザーのリソースタイミングバッファーがいっぱいになったときに通知を取得するには、 {{domxref("Performance.resourcetimingbufferfull_event", "resourcetimingbufferfull")}} イベントを待ち受けしてください。
 
 ## 構文
 
-```js
-performance.clearResourceTimings();
+```js-nolint
+clearResourceTimings()
 ```
 
 ### 引数
 
-- void
-  - :
+なし。
 
 ### 返値
 
-- なし
-  - : このメソッドに返値はありません。
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
-```js
-function load_resource() {
-  var image = new Image();
-  image.src = "https://developer.mozilla.org/static/img/opengraph-logo.png";
-}
-function clear_performance_timings() {
-  if (performance === undefined) {
-    log("Browser does not support Web Performance");
-    return;
-  }
-  // Create a resource timing performance entry by loading an image
-  load_resource();
+### パフォーマンスリソースバッファーをクリア
 
-  var supported = typeof performance.clearResourceTimings == "function";
-  if (supported) {
-    console.log("Run: performance.clearResourceTimings()");
-    performance.clearResourceTimings();
-  } else {
-    console.log("performance.clearResourceTimings() NOT supported");
-    return;
-  }
-  // getEntries should now return zero
-  var p = performance.getEntriesByType("resource");
-  if (p.length == 0)
-    console.log("... Performance data buffer cleared");
-  else
-    console.log("... Performance data buffer NOT cleared!");
+すべてのリソースパフォーマンス項目をバッファーから除去するには、コードの適切な位置で `clearResourceTimings()` を呼び出すか、コンソールに貼り付けてください。
+
+```js
+performance.clearResourceTimings();
+performance.getEntriesByType("resource").length; // 0
+```
+
+### 記録を取り、パフォーマンスオブザーバーを空にする
+
+{{domxref("PerformanceObserver")}} オブジェクトを使用する場合（特に `buffered` フラグを `true` に設定した場合）、パフォーマンスリソースバッファーがすばやくいっぱいになることがあります。しかし、バッファーをクリアする代わりに、現在のパフォーマンス項目のリストを格納し、 {{domxref("PerformanceObserver.takeRecords()")}} メソッドを使用してパフォーマンスオブザーバーを空にすることもできます。これは "`resource`" 項目だけでなく、すべてのパフォーマンス項目型で動作します。
+
+```js
+function perfObserver(list, observer) {
+  list.getEntries().forEach((entry) => {
+    // do something with the entries
+  });
 }
+const observer = new PerformanceObserver(perfObserver);
+observer.observe({ type: "resource", buffered: true });
+
+// Store entries and empty performance observer
+const records = observer.takeRecords();
 ```
 
 ## 仕様書
@@ -64,3 +63,8 @@ function clear_performance_timings() {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("Performance.setResourceTimingBufferSize()")}}
+- {{domxref("Performance.resourcetimingbufferfull_event", "resourcetimingbufferfull")}}

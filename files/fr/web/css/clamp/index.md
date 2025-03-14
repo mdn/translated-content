@@ -1,19 +1,14 @@
 ---
 title: clamp()
 slug: Web/CSS/clamp
-tags:
-  - CSS
-  - Fonction
-  - Reference
-translation_of: Web/CSS/clamp()
-original_slug: Web/CSS/clamp()
 ---
 
 {{CSSRef}}
 
 La fonction CSS **`clamp()`** permet de ramener (d'écrêter) une valeur entre deux bornes inférieure et supérieure. Cette fonction utilise trois paramètres : une valeur minimale, la valeur à tester et une valeur maximale. La fonction `clamp()` peut être utilisée à tout endroit où une valeur de type {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}} ou {{cssxref("&lt;integer&gt;")}} peut être utilisée.
 
-> **Note :** l'expression `clamp(MIN, VAL, MAX)` sera résolue comme `max(MIN, min(VAL, MAX)))`.
+> [!NOTE]
+> L'expression `clamp(MIN, VAL, MAX)` sera résolue comme `max(MIN, min(VAL, MAX)))`.
 
 ```css
 width: clamp(10px, 4em, 80px);
@@ -43,7 +38,7 @@ La valeur préférée correspond à la valeur qui sera utilisée si elle est sup
 
 La valeur maximale est la borne supérieure des valeurs autorisées. C'est cette valeur qui sera utilisée si la valeur préférée lui est supérieure.
 
-Les expressions passées en paramètres peuvent utiliser des fonctions mathématiques (voir {{CSSxRef("calc")}} pour plus d'informationsn), des valeurs littérales ou d'autres expressions ( {{CSSxRef("attr", "attr()")}} par exemple) tant que le résultat de cette expression est évalué avec un type valide. Il est aussi possible d'utiliser des expressions mathématiques sans `calc()` et il est également possible d'ajouter des parenthèses pour prioriser correctement les opérations imbriquées.
+Les expressions passées en paramètres peuvent utiliser des fonctions mathématiques (voir {{CSSxRef("calc")}} pour plus d'informations), des valeurs littérales ou d'autres expressions ( {{CSSxRef("attr", "attr()")}} par exemple) tant que le résultat de cette expression est évalué avec un type valide. Il est aussi possible d'utiliser des expressions mathématiques sans `calc()` et il est également possible d'ajouter des parenthèses pour prioriser correctement les opérations imbriquées.
 
 Il est possible d'utiliser différentes unités pour chacune des valeurs des expressions.
 
@@ -80,7 +75,9 @@ Ici on utilise l'unité `rem` pour fixer un maximum correspondant à deux fois l
 
 ```html
 <h1>Ce texte est toujours lisible mais sa taille ne change pas.</h1>
-<h1 class="responsive">Ce texte est toujours lisible et s'adapte dans une certaine mesure.</h1>
+<h1 class="responsive">
+  Ce texte est toujours lisible et s'adapte dans une certaine mesure.
+</h1>
 ```
 
 #### Résultat
@@ -100,4 +97,4 @@ Ici on utilise l'unité `rem` pour fixer un maximum correspondant à deux fois l
 - {{CSSxRef("calc")}}
 - {{CSSxRef("max")}}
 - {{CSSxRef("min")}}
-- [Valeurs CSS](/fr/docs/Apprendre/CSS/Introduction_à_CSS/Values_and_units)
+- [Valeurs CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)

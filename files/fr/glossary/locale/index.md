@@ -1,9 +1,9 @@
 ---
 title: Locale
 slug: Glossary/Locale
-translation_of: Glossary/Locale
-original_slug: Glossaire/Locale
 ---
+
+{{GlossarySidebar}}
 
 Les **locales** sont un ensemble de paramètres régionaux pour l'interface utilisateur basés sur la langue ou le pays.
 
@@ -11,4 +11,4 @@ Un programme tire ses règles de locale de la langue du système hôte. Entres a
 
 ## Voir aussi
 
-- [Paramètres régionaux](http://fr.wikipedia.org/wiki/Param%C3%A8tres_r%C3%A9gionaux)
+- [Paramètres régionaux](http://fr.wikipedia.org/wiki/Paramètres_régionaux)

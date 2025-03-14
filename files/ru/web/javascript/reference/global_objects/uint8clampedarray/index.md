@@ -1,12 +1,11 @@
 ---
 title: Uint8ClampedArray
 slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 ---
 
 {{JSRef}}
 
-Типизированный массив**` Uint8ClampedArray `**— это массив, служащий для хранения 8-битных беззнаковых чисел, обрезаемых до диапазона от 0 до 255. Если значение меньше 0, то оно будет приведено к 0 , и к 255, если оно больше 255. Числа с плавающей точкой округляются с помощью математического округления. Массив инициализируется нулями. После того как значение установлено, вы можете ссылаться на него с помощью методов объекта или через стандартный синтаксис массивов (то есть, брать значения с помощью квадратных скобок).
+Типизированный массив **`Uint8ClampedArray`** — это массив, служащий для хранения 8-битных беззнаковых чисел, обрезаемых до диапазона от 0 до 255. Если значение меньше 0, то оно будет приведено к 0 , и к 255, если оно больше 255. Числа с плавающей точкой округляются с помощью математического округления. Массив инициализируется нулями. После того как значение установлено, вы можете ссылаться на него с помощью методов объекта или через стандартный синтаксис массивов (то есть, брать значения с помощью квадратных скобок).
 
 ## Syntax
 
@@ -17,7 +16,7 @@ new Uint8ClampedArray(object);
 new Uint8ClampedArray(buffer [, byteOffset [, length]]);
 ```
 
-Для более подробной информации, смотрите _[TypedArray](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+Для более подробной информации, смотрите _[TypedArray](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntax)_.
 
 ## Properties
 
@@ -84,8 +83,6 @@ All `Uint8ClampedArray` objects inherit from {{jsxref("TypedArray.prototype", "%
   - : Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found. See also {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Uint8ClampedArray.prototype.map()")}}
   - : Creates a new array with the results of calling a provided function on every element in this array. See also {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Uint8ClampedArray.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
-  - : Former non-standard version of {{jsxref("TypedArray.copyWithin", "Uint8ClampedArray.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.reduce", "Uint8ClampedArray.prototype.reduce()")}}
   - : Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value. See also {{jsxref("Array.prototype.reduce()")}}.
 - {{jsxref("TypedArray.reduceRight", "Uint8ClampedArray.prototype.reduceRight()")}}
@@ -124,7 +121,7 @@ console.log(uintc8.length); // 2
 console.log(uintc8.BYTES_PER_ELEMENT); // 1
 
 // From an array
-var arr = new Uint8ClampedArray([21,31]);
+var arr = new Uint8ClampedArray([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
@@ -137,15 +134,11 @@ var buffer = new ArrayBuffer(8);
 var z = new Uint8ClampedArray(buffer, 1, 4);
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                        | Status                           | Comment                                                                   |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Superseded by ECMAScript 6.                                               |
-| {{SpecName('ES6', '#table-49', 'TypedArray constructors')}}     | {{Spec2('ES6')}}             | Initial definition in an ECMA standard. Specified that `new` is required. |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     |                                                                           |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -163,8 +156,8 @@ var dv = Uint8ClampedArray([1, 2, 3]);
 var dv = new Uint8ClampedArray([1, 2, 3]);
 ```
 
-## See also
+## Смотрите также
 
-- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

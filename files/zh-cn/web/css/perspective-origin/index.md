@@ -5,9 +5,98 @@ slug: Web/CSS/perspective-origin
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/CSS) 属性 **`perspective-origin`** 指定了观察者的位置，用作 {{cssxref("perspective")}} 属性的消失点。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`perspective-origin`** 指定了观察者的位置，用作 {{cssxref("perspective")}} 属性的消失点。
 
-{{EmbedInteractiveExample("pages/css/perspective-origin.html")}}
+{{InteractiveExample("CSS Demo: perspective-origin")}}
+
+```css interactive-example-choice
+perspective-origin: center;
+```
+
+```css interactive-example-choice
+perspective-origin: top;
+```
+
+```css interactive-example-choice
+perspective-origin: bottom right;
+```
+
+```css interactive-example-choice
+perspective-origin: -170%;
+```
+
+```css interactive-example-choice
+perspective-origin: 500% 200%;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+  perspective: 550px;
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  perspective: 250px;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgba(210, 0, 0, 0.7);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+  background: rgba(0, 0, 210, 0.7);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+  background: rgba(210, 210, 0, 0.7);
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgba(210, 0, 210, 0.7);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+```
 
 ## 语法
 
@@ -48,11 +137,11 @@ perspective-origin: unset;
     - `center`, 关键字，50% 的简记。
     - `bottom`, 关键字，100% 的简记。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
-## 举例
+## 示例
 
 ### 修改 perspective origin
 
@@ -60,7 +149,7 @@ perspective-origin: unset;
 
 #### 结果
 
-{{EmbedLiveSample('Changing_the_perspective_origin', '100%', 700)}}
+{{EmbedLiveSample('修改 perspective origin', '100%', 700)}}
 
 #### HTML
 
@@ -328,7 +417,7 @@ perspective-origin: unset;
 .top {
   background: rgba(196, 196, 0, 0.7);
   transform: rotateX(90deg) translateZ(50px);
-  -webkit-transform: rotateX(90deg) translateZ(50px)
+  -webkit-transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
@@ -338,8 +427,10 @@ perspective-origin: unset;
 }
 
 /* Make the table a little nicer */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   padding: 10px;
   font-family: sans-serif;
   text-align: left;
@@ -356,6 +447,6 @@ th, p, td {
 
 {{Compat}}
 
-## 相关连接
+## 参见
 
-- [Using CSS Transforms](/zh-CN/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Using CSS Transforms](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

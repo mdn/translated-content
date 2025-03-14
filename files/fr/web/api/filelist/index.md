@@ -1,126 +1,68 @@
 ---
 title: FileList
 slug: Web/API/FileList
-tags:
-  - API
-  - File API
-  - Files
-translation_of: Web/API/FileList
+l10n:
+  sourceCommit: de2a90fe1c1cd578faaee3c7e2ff7c96bae9a545
 ---
 
 {{APIRef("File API")}}
 
-Un objet **`FileList`** est renvoyé par la propriété `files` d'un élément HTML {{HTMLElement("input")}}. Il permet d'accéder à la liste des fichiers sélectionnés via l'élément `<input type="file">`. Cet objet peut également être utilisé pour les fichiers glissés-déposés dans du contenu web via l'[API Drag & Drop](/fr/docs/Web/API/API_HTML_Drag_and_Drop) (voir l'objet [`DataTransfer`](/fr/docs/Web/API/DataTransfer) pour plus de détails).
+On pourra obtenir un objet de type `FileList` grâce à la propriété `files` d'un objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) (qui représente un élément HTML [`<input>`](/fr/docs/Web/HTML/Element/input)) du DOM. Un objet `FileList` permet d'accéder à la liste des fichiers sélectionnés via un élément `<input type="file">`. Il est également utilisé pour manipuler une liste de fichiers déposé dans du contenu web en glisser/déposer. Voir [la page sur l'objet `DataTransfer`](/fr/docs/Web/API/DataTransfer) pour plus de détails sur ce deuxième usage.
 
-## Utiliser une liste de fichiers
-
-Tous les éléments `<input>` possèdent un attribut `files` de type `FileList` qui permet d'accéder aux éléments de cette liste. Ainsi, si le code HTML utilisé est :
+Tous les nœuds qui sont des éléments `<input>` possèdent un attribut `files` de type `FileList` qui permet d'accéder aux éléments de cette liste. Ainsi, avec le fragment de HTML qui suit&nbsp;:
 
 ```html
-<input id="fileItem" type="file">
+<input id="fileItem" type="file" />
 ```
 
-On pourra utiliser la ligne suivant pour récupérer le premier fichier de la liste sous la forme d'un objet [`File`](/fr/docs/Web/API/File) :
+On pourra utiliser la ligne de code suivante pour récupérer le premier fichier de la liste des fichiers pour ce nœud dans un objet [`File`](/fr/docs/Web/API/File)&nbsp;:
 
 ```js
-var file = document.getElementById('fileItem').files[0]
+const file = document.getElementById("fileItem").files[0];
 ```
 
-## Propriétés
+> [!NOTE]
+> Cette interface [se voulait une tentative de modélisation d'une liste non-modifiable](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156) et continue uniquement d'être prise en charge pour ne pas casser le code qui l'utilise encore. Les API plus récentes utilisent des types qui se basent sur le type ECMAScript [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array), afin que les objets puissent être traités comme des tableaux tout en imposant une sémantique additionnelle correspondant à leur utilisation (par exemple, en marquant leurs éléments comme étant en lecture seule).
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td class="header">Attribut</td>
-      <td class="header">Type</td>
-      <td class="header">Description</td>
-    </tr>
-    <tr>
-      <td><code>length</code></td>
-      <td><code>integer</code></td>
-      <td>
-        Une valeur en lecture seule qui indique le nombre de fichier dans la
-        liste.
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Propriétés des instances
 
-## Méthodes
+- [`length`](/fr/docs/Web/API/FileList/length) {{ReadOnlyInline}}
+  - : Une valeur en lecture seule qui indique le nombre de fichiers dans la liste.
 
-### `item()`
+## Méthodes des instances
 
-Cette méthode renvoie un objet [`File`](/fr/docs/Web/API/File) qui représente le fichier à l'indice fourni.
+- [`item()`](/fr/docs/Web/API/FileList/item) {{ReadOnlyInline}}
+  - : Renvoie un objet [`File`](/fr/docs/Web/API/File) qui représente le fichier situé à l'indice indiqué dans la liste.
 
-```
-File item(
-  index
-);
-```
+## Exemple
 
-#### Paramètres
+### Afficher le nom des fichiers
 
-- `index`
-  - : Un indice (commençant à partir de zéro) indiquant le fichier qu'on souhaite récupérer de la liste.
-
-#### Valeur de retour
-
-L'objet [`File`](/fr/docs/Web/API/File) qui représente le fichier demandé.
-
-## Exemples
-
-Dans cet exemple, on parcourt l'ensemble des fichiers sélectionnés par l'utilisateur via un élément {{HTMLElement("input")}} :
-
-```js
-// fileInput est un élément HTML input : <input type="file" id="myfileinput" multiple>
-var fileInput = document.getElementById("myfileinput");
-
-// files est un objet FileList (semblable à NodeList)
-var files = fileInput.files;
-var file;
-
-// on parcourt les fichiers
-for (var i = 0; i < files.length; i++) {
-    // on récupère le i-ème fichier
-    file = files.item(i);
-    // ou encore
-    file = files[i];
-    console.log(file.name);
-}
-```
-
-### Exemple complet
+Dans cet exemple, nous allons afficher le nom des fichiers sélectionnés par l'utilisatrice ou l'utilisateur.
 
 #### HTML
 
 ```html
-<input id="myfiles" multiple type="file">
+<input id="mesfichiers" multiple type="file" />
+<pre class="sortie">Fichiers sélectionnés :</pre>
 ```
 
 #### JavaScript
 
 ```js
-var recupererFichiers = function() {
-  var fichiersInput = document.querySelector("#myFiles");
-  var fichiers = fichiersInput.files;
+const sortie = document.querySelector(".sortie");
+const fileInput = document.querySelector("#mesfichiers");
 
-  var nbFichiers = fichiers.length;
-  var i = 0;
-  while(i < nbFichiers){
-    var fichier = fichiers[i];
-    console.log(fichier.name);
-    i++;
+fileInput.addEventListener("change", () => {
+  for (const file of fileInput.files) {
+    sortie.innerText += `\n${file.name}`;
   }
-}
-
-// On invoque cette fonction pour chaque modification apportée à l'élément
-// input
-document.querySelector("#myFiles").onchange = recupererFichiers;
+});
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Exemple_complet")}}
+{{EmbedLiveSample("")}}
 
 ## Spécifications
 
@@ -132,6 +74,6 @@ document.querySelector("#myFiles").onchange = recupererFichiers;
 
 ## Voir aussi
 
-- [Utiliser des fichiers dans des applications web](/fr/docs/Web/API/File/Using_files_from_web_applications)
+- [Utiliser des fichiers dans les applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications)
 - [`File`](/fr/docs/Web/API/File)
 - [`FileReader`](/fr/docs/Web/API/FileReader)

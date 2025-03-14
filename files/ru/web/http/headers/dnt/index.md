@@ -1,8 +1,6 @@
 ---
 title: DNT
 slug: Web/HTTP/Headers/DNT
-translation_of: Web/HTTP/Headers/DNT
-original_slug: Web/HTTP/Заголовки/DNT
 ---
 
 {{HTTPSidebar}}
@@ -46,11 +44,11 @@ DNT предпочтение пользователя может быть счи
 navigator.doNotTrack; // "0" or "1"
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

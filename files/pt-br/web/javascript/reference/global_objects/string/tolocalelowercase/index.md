@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 
 O método `toLocaleLowerCase()` retorna o valor da string em minúsculas, de acordo com qualquer mapeamento de caixa de texto específico da localidade.
 
-{{EmbedInteractiveExample("pages/js/string-tolocalelowercase.html")}}
+{{InteractiveExample("JavaScript Demo: String.toLocaleLowerCase()")}}
+
+```js interactive-example
+const dotted = "İstanbul";
+
+console.log(`EN-US: ${dotted.toLocaleLowerCase("en-US")}`);
+// Expected output: "i̇stanbul"
+
+console.log(`TR: ${dotted.toLocaleLowerCase("tr")}`);
+// Expected output: "istanbul"
+```
 
 ## Sintaxe
 
@@ -40,25 +50,22 @@ O método `toLocaleLowerCase()` retorna o valor da string convertida em minúscu
 ### Usando `toLocaleLowerCase()`
 
 ```js
-'ALFABETO'.toLocaleLowerCase(); // 'alfabeto'
+"ALFABETO".toLocaleLowerCase(); // 'alfabeto'
 
-'\u0130'.toLocaleLowerCase('tr') === 'i';    // true
-'\u0130'.toLocaleLowerCase('en-US') === 'i'; // false
+"\u0130".toLocaleLowerCase("tr") === "i"; // true
+"\u0130".toLocaleLowerCase("en-US") === "i"; // false
 
-let locales = ['tr', 'TR', 'tr-TR', 'tr-u-co-search', 'tr-x-turkish'];
-'\u0130'.toLocaleLowerCase(locales) === 'i'; // true
+let locales = ["tr", "TR", "tr-TR", "tr-u-co-search", "tr-x-turkish"];
+"\u0130".toLocaleLowerCase(locales) === "i"; // true
 ```
 
 ## Especificações
 
-| Especificação                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.tolocalelowercase', 'String.prototype.toLocaleLowerCase')}}     |
-| {{SpecName('ES Int Draft', '#sup-string.prototype.tolocalelowercase', 'String.prototype.toLocaleLowerCase')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.toLocaleLowerCase")}}
+{{Compat}}
 
 ## Veja também
 

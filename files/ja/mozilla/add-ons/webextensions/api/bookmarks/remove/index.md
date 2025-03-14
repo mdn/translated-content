@@ -3,31 +3,31 @@ title: bookmarks.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-**`bookmarks.remove()`** は、ブックマークや空のブックマークフォルダを削除するメソッドです。
+**`bookmarks.remove()`** は、ブックマークや空のブックマークフォルダーを削除するメソッドです。
 
-ブックマークが見つからなかった、またはフォルダが空ではなかった場合には {{WebExtAPIRef("runtime.lastError")}} がセットされ、エラーの有無はコールバック内で確認できます。
+ブックマークが見つからなかった、またはフォルダーが空ではなかった場合には {{WebExtAPIRef("runtime.lastError")}} がセットされ、エラーの有無はコールバック内で確認できます。
 
 ## 構文
 
 ```js
 browser.bookmarks.remove(
-  id,      // 文字列
-  callback // 関数（省略可）
-)
+  id, // 文字列
+  callback, // 関数（省略可）
+);
 ```
 
 ### 引数
 
 - `id`
-  - : 削除したいブックマーク / 空フォルダの ID を指定する {{jsxref("string")}} です。
+  - : 削除したいブックマーク / 空フォルダーの ID を指定する {{jsxref("string")}} です。
 - `callback`{{optional_inline}}
-  - : ブックマークやフォルダが削除された際に実行される関数です。この関数に渡される引数はありません。
+  - : ブックマークやフォルダーが削除された際に実行される関数です。この関数に渡される引数はありません。
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.remove")}}
+{{Compat}}
 
 ## 使用例
 
@@ -48,9 +48,11 @@ chrome.bookmarks.remove(bookmarkItemId");
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> [!NOTE]
+> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -77,4 +79,4 @@ chrome.bookmarks.remove(bookmarkItemId");
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

@@ -1,47 +1,72 @@
 ---
 title: attributeName
 slug: Web/SVG/Attribute/attributeName
+l10n:
+  sourceCommit: 54eb3a678b4d4cbc94588d2234103e74dfa063a0
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-该属性标识了在一个动画动作环节中，父元素的需要被改变的属性名。
+**`attributeName`** 属性表示动画期间将要更改的目标元素的 CSS 属性或属性的名称。
 
-## 用法
+你可以将此属性与以下 SVG 元素一起使用：
 
-| 类别     | 动画属性目标属性                                                                      |
-| -------- | ------------------------------------------------------------------------------------- |
-| 值       | \<attributeName>                                                                       |
-| 可变性   | No                                                                                    |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#AttributeNameAttribute) |
+- {{SVGElement("animate")}}
+- {{SVGElement("animateTransform")}}
+- {{SVGElement("set")}}
 
 ## 示例
 
-下面的示例使用了 y 作为`attributeName`，通过改变一个矩形在 Y 轴上的位置来变动这个矩形。
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
 
-```xml
-<?xml version="1.0"?>
-<svg width="250" height="250"
-  viewPort="0 0 250 250" version="1.1"
-  xmlns="http://www.w3.org/2000/svg">
+```html
+<svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
   <rect x="50" y="50" width="100" height="100">
-    <animate attributeType="XML"
+    <animate
+      attributeType="XML"
       attributeName="y"
-      from="0" to="50"
-      dur="5s"/>
+      from="0"
+      to="50"
+      dur="5s"
+      repeatCount="indefinite" />
   </rect>
 </svg>
 ```
 
-## 元素
+{{EmbedLiveSample("示例", "400", "250")}}
 
-下列元素可以使用`attributeName`属性：
+## 使用说明
 
-- {{ SVGElement("animate") }}
-- {{ SVGElement("animateColor") }}
-- {{ SVGElement("animateTransform") }}
-- {{ SVGElement("set") }}
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">值</th>
+      <td><code>&#x3C;name></code></td>
+    </tr>
+    <tr>
+      <th scope="row">默认值</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">动画性</th>
+      <td>无</td>
+    </tr>
+  </tbody>
+</table>
+
+- `<name>`
+  - ：此值表示要动画化的目标元素的 CSS 属性或属性的名称。
 
 ## 规范
 
 {{Specifications}}
+
+## 参见
+
+- [SMIL 动画规范](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AccumulateAttribute)

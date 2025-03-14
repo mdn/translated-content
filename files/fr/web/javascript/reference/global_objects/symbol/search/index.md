@@ -1,14 +1,6 @@
 ---
 title: Symbol.search
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/search
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/search
 ---
 
 {{JSRef}}
@@ -17,7 +9,23 @@ Le symbole connu **`Symbol.search`** définit la méthode qui renvoie l'indice i
 
 Pour plus d'informations, se référer aux pages sur {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}} et {{jsxref("String.prototype.search()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-search.html")}}{{js_property_attributes(0,0,0)}}
+{{InteractiveExample("JavaScript Demo: Symbol.search")}}
+
+```js interactive-example
+class Search1 {
+  constructor(value) {
+    this.value = value;
+  }
+  [Symbol.search](string) {
+    return string.indexOf(this.value);
+  }
+}
+
+console.log("foobar".search(new Search1("bar")));
+// Expected output: 3
+```
+
+{{js_property_attributes(0,0,0)}}
 
 ## Spécifications
 

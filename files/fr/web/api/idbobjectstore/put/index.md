@@ -1,13 +1,6 @@
 ---
 title: IDBObjectStore.put()
 slug: Web/API/IDBObjectStore/put
-tags:
-  - API
-  - IDBObjectStore
-  - IndexedDB
-  - Méthode
-  - Reference
-translation_of: Web/API/IDBObjectStore/put
 ---
 
 {{APIRef("IndexedDB")}}
@@ -118,12 +111,14 @@ Dans l'exemple suivant, on effectue une requête pour obtenir l'enregistrement c
 var title = "Walk dog";
 
 // On ouvre une transaction
-var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+var objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
 
 // On obtient la liste to-do dont le titre correspond
 var objectStoreTitleRequest = objectStore.get(title);
 
-objectStoreTitleRequest.onsuccess = function() {
+objectStoreTitleRequest.onsuccess = function () {
   // On récupère les données de l'objet associé
   // à l'enregistrement
   var data = objectStoreTitleRequest.result;
@@ -137,11 +132,13 @@ objectStoreTitleRequest.onsuccess = function() {
 
   // On imprime la transaction à l'origine
   // de la requête
-  console.log("La transaction originelle est " + updateTitleRequest.transaction);
+  console.log(
+    "La transaction originelle est " + updateTitleRequest.transaction,
+  );
 
   // Lorsque cette nouvelle requête a réussi. On affiche
   // les données grâce à la fonction displayData()
-  updateTitleRequest.onsuccess = function() {
+  updateTitleRequest.onsuccess = function () {
     displayData();
   };
 };
@@ -157,10 +154,10 @@ objectStoreTitleRequest.onsuccess = function() {
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Initier une connexion : {{domxref("IDBDatabase")}}
 - Utiliser les transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

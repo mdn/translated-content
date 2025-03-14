@@ -1,7 +1,6 @@
 ---
 title: <defs>
 slug: Web/SVG/Element/defs
-translation_of: Web/SVG/Element/defs
 ---
 
 {{SVGRef}}
@@ -37,10 +36,10 @@ Les éléments définis grâce à `defs` ne sont jamais directement générés (
 
 ### Attributs globaux
 
-- [Conditional processing attributes](/fr/docs/Web/SVG/Attribute#ConditionalProccessing)&nbsp;»
-- [Core attributes](/fr/docs/Web/SVG/Attribute#Core)&nbsp;»
-- [Graphical event attributes](/fr/docs/Web/SVG/Attribute#GraphicalEvent)&nbsp;»
-- [Presentation attributes](/fr/docs/Web/SVG/Attribute#Presentation)&nbsp;»
+- [Conditional processing attributes](/fr/docs/Web/SVG/Attribute#conditionalproccessing)&nbsp;»
+- [Core attributes](/fr/docs/Web/SVG/Attribute#core)&nbsp;»
+- [Graphical event attributes](/fr/docs/Web/SVG/Attribute#graphicalevent)&nbsp;»
+- [Presentation attributes](/fr/docs/Web/SVG/Attribute#presentation)&nbsp;»
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}

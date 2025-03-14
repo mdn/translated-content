@@ -1,33 +1,39 @@
 ---
-title: '<bdo> : l''élément de remplacement bidirectionnelle'
+title: "<bdo> : l'élément de remplacement bidirectionnelle"
 slug: Web/HTML/Element/bdo
-tags:
-  - BiDi
-  - Bidirectional Text
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Left to Right
-  - Reference
-  - Right to Left
-  - Text
-  - Text Direction
-  - Text Rendering
-  - Web
-  - ltr
-  - rtl
-translation_of: Web/HTML/Element/bdo
-browser-compat: html.elements.bdo
 ---
 
 {{HTMLSidebar}}
 
 L'élément HTML **`<bdo>`** (pour élément de remplacement du texte bidirectionnel) est utilisé afin d'outrepasser la direction du texte. Cela permet d'imposer une direction donnée à un texte. L'orientation du texte est inversée mais pas celle des caractères.
 
-{{EmbedInteractiveExample("pages/tabbed/bdo.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;bdo&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>Famous seaside songs</h1>
+
+<p>The English song "Oh I do like to be beside the seaside"</p>
+
+<p>
+  Looks like this in Hebrew:
+  <span dir="rtl">אה, אני אוהב להיות ליד חוף הים</span>
+</p>
+
+<p>
+  In the computer's memory, this is stored as
+  <bdo dir="ltr">אה, אני אוהב להיות ליד חוף הים</bdo>
+</p>
+```
+
+```css interactive-example
+html {
+  font-family: sans-serif;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+bdo {
+}
+```
 
 Les caractères du texte sont dessinés à partir du point de départ dans la direction donnée ; l'orientation des caractères individuels n'est pas affectée (les caractères ne sont donc pas dessinés vers l'arrière, par exemple).
 
@@ -123,7 +129,7 @@ Comme pour tous les éléments, on peut appliquer [les attributs universels](/fr
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","100%",120)}}
+{{EmbedLiveSample("","100%")}}
 
 ## Notes
 

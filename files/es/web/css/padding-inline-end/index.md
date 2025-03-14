@@ -9,17 +9,57 @@ La propiedad de [CSS](/es/docs/Web/CSS) **`padding-inline-end`** define el relle
 
 Esto se relaciona con {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, and {{cssxref("padding-inline-start")}}, que define los otros rellenos del elemento.
 
-{{EmbedInteractiveExample("pages/css/padding-inline-end.html")}}
+{{InteractiveExample("CSS Demo: padding-inline-end")}}
+
+```css interactive-example-choice
+padding-inline-end: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+padding-inline-end: 20px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+padding-inline-end: 5em;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## Sintaxis
 
 ```css
 /* <length> values */
-padding-inline-end: 10px;   /* An absolute length */
-padding-inline-end: 1em;    /* A length relative to the text size */
+padding-inline-end: 10px; /* An absolute length */
+padding-inline-end: 1em; /* A length relative to the text size */
 
 /* <percentage> value */
-padding-inline-end: 5%;     /* A padding relative to the block container's width */
+padding-inline-end: 5%; /* A padding relative to the block container's width */
 
 /* Global values */
 padding-inline-end: inherit;
@@ -59,7 +99,7 @@ div {
 .exampleText {
   writing-mode: vertical-lr;
   padding-inline-end: 20px;
-  background-color: #C8C800;
+  background-color: #c8c800;
 }
 ```
 
@@ -69,9 +109,9 @@ div {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.padding-inline-end")}}
+{{Compat}}
 
 ## Mira también
 

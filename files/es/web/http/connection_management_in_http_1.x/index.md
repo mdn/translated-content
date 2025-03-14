@@ -1,7 +1,6 @@
 ---
 title: Gestión de la conexión en  HTTP/1.x
 slug: Web/HTTP/Connection_management_in_HTTP_1.x
-original_slug: Web/HTTP/Gestion_de_la_conexion_en_HTTP_1.x
 ---
 
 {{HTTPSidebar}}
@@ -14,9 +13,10 @@ Este sencillo modelo tenía una limitación intrínseca en su rendimiento: abrir
 
 Dos nuevos modelos se presentaron en HTTP/1.1. La conexión persistente, mantiene las conexiones abiertas, entre peticiones sucesivas, eliminando así el tiempo necesario para abrir nuevas conexiones. El modelo 'pipelining' va un paso más allá, y envía varias peticiones sucesivas, sin esperar por la respuesta, reduciendo significativamente la latencia en la red.
 
-![Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining.](https://mdn.mozillademos.org/files/13727/HTTP1_x_Connections.png)
+![Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining.](http1_x_connections.png)
 
-> **Nota:** HTTP/2 añade nuevos modelos para la gestión de la conexión.
+> [!NOTE]
+> HTTP/2 añade nuevos modelos para la gestión de la conexión.
 
 Un punto significativo a tener en cuenta en la gestión de la conexión de HTTP, es que este se refiere a la conexión establecida entre dos nodos consecutivos de la red, esto se denomina [hop-by-hop](/es/docs/Web/HTTP/Headers#hbh), en contraposición al concepto de [end-to-end](/es/docs/Web/HTTP/Headers#e2e). El modelo de conexión entre un cliente y su primer proxy, puede ser distinto que la comunicación entre el proxy y el servidor de destino (u otro proxy intermedio). Las cabeceras de HTTP utilizadas para definir el modelo de conexión como {{HTTPHeader("Connection")}} y {{HTTPHeader("Keep-Alive")}}, se refieren a una conexión [hop-by-hop](/es/docs/Web/HTTP/Headers#hbh), y estos parámetros, pueden variar en las comunicaciones de los nodos intermedios.
 
@@ -24,13 +24,14 @@ Un tema también relativo a esto, es el concepto de conexiones con protocolos HT
 
 ## Conexiones breves
 
-El modelo original de HTTP, y el modelo de HTTP/1.0, está basado, en conexiones breves. Cada petición HTTP, se completa estableciendo (iniciando, estableciendo y cerrando) su propia conexión. Esto supone que la coordinación en el protocolo HTTP (handshake), sucede de forma previa a cada petición HTTP.
+El modelo original de HTTP, y el modelo de HTTP/1.0, está basado, en conexiones breves. Cada petición HTTP, se completa estableciendo (iniciando, estableciendo y cerrando) su propia conexión. Esto supone que la coordinación en el protocolo TCP (handshake), sucede de forma previa a cada petición HTTP.
 
 La coordinación o inicialización de una comunicación en el protocolo TCP, requiere un tiempo dado, pero al adaptarse el protocolo TCP a su carga de transmisión de datos, este incrementa su eficiencia cuando se mantiene la conexión en el tiempo, utilizándose una conexión para transmitir numerosos peticiones de datos. Las conexiones breves, no utilizan esta característica del protocolo TCP, y el rendimiento de la conexión es peor que en el caso óptimo, al estar constantemente necesitando iniciar conexiones para transmitir cada mensaje (esto se conoce como conexiones 'en frio', o en inglés: 'cold connections').
 
 La conexión breve es la conexión usada por defecto en HTTP/1.0 (únicamente en el caso de no esté definida la cabecera {{HTTPHeader("Connection")}}, o su valor sea `close` entonces, no se utilizaria el modelo de conexiones breves). En HTTP/1.1, este modelo de conexión unicamente se utiliza al definir la cabecera {{HTTPHeader("Connection")}} como `close` .
 
-> **Nota:** A menos que se de la situación en que se ha de trabajar con sistemas antiguos que no soportan conexiones persistentes, no hay otra razón para el uso de este modelo de conexiones.
+> [!NOTE]
+> A menos que se de la situación en que se ha de trabajar con sistemas antiguos que no soportan conexiones persistentes, no hay otra razón para el uso de este modelo de conexiones.
 
 ## Conexiones persistentes
 
@@ -46,11 +47,12 @@ En HTTP/1.1 las conexiones son persistentes por defecto, así que esa cabecera n
 
 ## HTTP pipelining
 
-> **Nota:** HTTP pipelining no está activado por defecto en los navegacdores modernos:\* [Proxies](https://en.wikipedia.org/wiki/Proxy_server) con defectos de implementación son habituales y provocan comportamientos extraños y erráticos, que los desarrolladores de Webs, no pueden predecir, ni corregir fácilmente.
+> [!NOTE]
+> HTTP pipelining no está activado por defecto en los navegacdores modernos:\* [Proxies](https://en.wikipedia.org/wiki/Proxy_server) con defectos de implementación son habituales y provocan comportamientos extraños y erráticos, que los desarrolladores de Webs, no pueden predecir, ni corregir fácilmente.
 >
 > - HTTP Pipelining es complicado de implementar correctamente: el tamaño del recurso pedido, el correcto [RTT](https://en.wikipedia.org/wiki/Round-trip_delay_time) que será utilizado, así como el ancho de banda efectivo, tienen un impacto directo en la en la mejora de rendimiento de este método. Sin conocer estos valores, puede que mensajes importantes, se vean retrasados, por mensajes que no lo son. El concepto de "importante" incluso cambia según se carga la maquetación (layout) de la página. De ahí que este método solamente presente una mejora marginal en la mayoría de los casos.
 > - HTTP Pipelining presenta un problema conocido como [HOL](https://en.wikipedia.org/wiki/Head-of-line_blocking)
-> Así, debido a estas razones este método ha sido relevado por un algoritmo mejor, la **multiplexación**, que es el que usa HTTP/2.
+>   Así, debido a estas razones este método ha sido relevado por un algoritmo mejor, la **multiplexación**, que es el que usa HTTP/2.
 
 Por defecto, las peticiones HTTP son realizadas de manera sequencial. La siguiente petición es realizada una vez que la respuesta a la petición actual ha sido recibida. Debido a que se ven afectadas por latencias en la red y limitaciones en el ancho de banda, ésto puede llevar a retardos significativos hasta que la siguiente petición es _vista_ por el servidor.
 
@@ -62,13 +64,14 @@ Hoy en día, todo proxy y servidor que cumpla con HTTP/1.1 debería dar soporte 
 
 ## Domain sharding
 
-> **Nota:** Unless you have a very specific immediate need, don't use this deprecated technique; switch to HTTP/2 instead. In HTTP/2, domain sharding is no more useful: the HTTP/2 connection is able to handle parallel unprioritized requests very well. Domain sharding is even detrimental to performance. Most HTTP/2 implementation use a technique called [connection coalescing](<I wonder if it's related to the nobash/nobreak/nopick secret exit s of Elrond's chambers.>) to revert eventual domain sharding.
+> [!NOTE]
+> Unless you have a very specific immediate need, don't use this deprecated technique; switch to HTTP/2 instead. In HTTP/2, domain sharding is no more useful: the HTTP/2 connection is able to handle parallel unprioritized requests very well. Domain sharding is even detrimental to performance. Most HTTP/2 implementation use a technique called [connection coalescing](<I wonder if it's related to the nobash/nobreak/nopick secret exit s of Elrond's chambers.>) to revert eventual domain sharding.
 
 As an HTTP/1.x connection is serializing requests, even without any ordering, it can't be optimal without large enough available bandwidth. As a solution, browsers open several connections to each domain, sending parallel requests. Default was once 2 to 3 connections, but this has now increased to a more common use of 6 parallel connections. There is a risk of triggering [DoS](/es/docs/Glossary/DOS_attack) protection on the server side if attempting more than this number.
 
 If the server wishes a faster Web site or application response, it is possible for the server to force the opening of more connections. For example, Instead of having all resources on the same domain, say `www.example.com`, it could split over several domains, `www1.example.com`, `www2.example.com`, `www3.example.com`. Each of these domains resolve to the _same_ server, and the Web browser will open 6 connections to each (in our example, boosting the connections to 18). This technique is called _domain sharding_.
 
-![](https://mdn.mozillademos.org/files/13783/HTTPSharding.png)
+![](httpsharding.png)
 
 ## Conclusión
 

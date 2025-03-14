@@ -1,17 +1,16 @@
 ---
 title: unescape()
 slug: Web/JavaScript/Reference/Global_Objects/unescape
-translation_of: Web/JavaScript/Reference/Global_Objects/unescape
 ---
-{{jsSidebar("Objects")}} {{deprecated_header()}}
 
-## Описание
+{{jsSidebar("Objects")}} {{deprecated_header()}}
 
 Устаревший метод **`unescape(str)`** создаёт новую строку в которой шестнадцатеричная последовательность символов вида %xx заменяется эквивалентами из кодировки ASCII. Знаки, закодированные в формате %uxxxx (знаки Юникода), заменяются знаками Юникода в шестнадцатеричной кодировке xxxx.
 
 Последовательность может быть результатом работы функции вроде {{jsxref("Global_Objects/escape", "escape")}}. Т.к. {{jsxref("Global_Objects/decodeURIComponent", "unescape")}} является устаревшей, используйте {{jsxref("Global_Objects/decodeURI", "decodeURI")}} или {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} вместо неё.
 
-> **Примечание:** **Обратите внимание:** Не рекомендуется использовать `unescape` чтобы декодировать URI, используйте `decodeURI` вместо него.
+> [!NOTE]
+> Не рекомендуется использовать `unescape` чтобы декодировать URI, используйте `decodeURI` вместо него.
 
 ## Синтаксис
 
@@ -31,16 +30,16 @@ unescape(str)
 ## Примеры
 
 ```js
-unescape("abc123");     // "abc123"
-unescape("%E4%F6%FC");  // "äöü"
-unescape("%u0107");     // "ć"
+unescape("abc123"); // "abc123"
+unescape("%E4%F6%FC"); // "äöü"
+unescape("%u0107"); // "ć"
 ```
 
 ## Спецификации
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

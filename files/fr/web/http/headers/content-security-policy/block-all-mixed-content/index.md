@@ -1,17 +1,6 @@
 ---
-title: 'CSP: block-all-mixed-content'
+title: "CSP: block-all-mixed-content"
 slug: Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Mixed Content
-  - Reference
-  - Security
-  - Sécurité
-  - block-all-mixed-content
-translation_of: Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content
 ---
 
 {{HTTPSidebar}}
@@ -20,7 +9,8 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`block-all-m
 
 Toutes les requêtes vers des [contenus mixtes](/fr/docs/Sécurité/MixedContent) sont alors bloquées, y compris les ressources actives et passives. Cela s'applique aussi aux documents {{HTMLElement("iframe")}}, assurant que la page est complètement protégée contre les contenus mixtes.
 
-> **Note :** La directive {{CSP("upgrade-insecure-requests")}} est évaluée avant `block-all-mixed-content`. Si elle est définie, alors `block-all-mixed-content` n'est pas nécessaire, à moins que vous souhaitiez forcer HTTPS sur les anciens navigateurs qui ne le font pas après une redirection vers HTTP.
+> [!NOTE]
+> La directive {{CSP("upgrade-insecure-requests")}} est évaluée avant `block-all-mixed-content`. Si elle est définie, alors `block-all-mixed-content` n'est pas nécessaire, à moins que vous souhaitiez forcer HTTPS sur les anciens navigateurs qui ne le font pas après une redirection vers HTTP.
 
 ## Syntaxe
 

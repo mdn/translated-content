@@ -1,20 +1,66 @@
 ---
 title: all
 slug: Web/CSS/all
-tags:
-  - CSS
-  - CSS Cascade
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/all
 ---
 
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`all`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소의 {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, [CSS 사용자 지정 속성](/ko/docs/Web/CSS/Using_CSS_custom_properties)을 제외한 모든 속성을 초기화합니다. 초깃값, 상속값, 아니면 다른 스타일시트 출처의 값으로 설정할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/css/all.html")}}
+{{InteractiveExample("CSS Demo: all")}}
+
+```css interactive-example-choice
+/*no all property*/
+```
+
+```css interactive-example-choice
+all: initial;
+```
+
+```css interactive-example-choice
+all: inherit;
+```
+
+```css interactive-example-choice
+all: unset;
+```
+
+```css interactive-example-choice
+all: revert;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container-bg">
+    <div class="example-container">
+      <p id="example-element">
+        This paragraph has a font size of 1.5rem and a color of gold. It also
+        has 1rem of vertical margin set by the user-agent. The parent of the
+        paragraph is a &lt;div&gt; with a dashed blue border.
+      </p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  color: gold;
+  padding: 10px;
+  font-size: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+.example-container {
+  border: 2px dashed #2d5ae1;
+}
+
+.example-container-bg {
+  background-color: #77767b;
+  padding: 20px;
+}
+```
 
 ## 구문
 
@@ -35,7 +81,7 @@ all: revert;
 - {{cssxref("initial")}}
   - : 요소의 모든 속성을 [초깃값](/ko/docs/Web/CSS/initial_value)으로 변경합니다.
 - {{cssxref("inherit")}}
-  - : 요소의 모든 속성을 [상속값](/ko/docs/Web/CSS/inheritance)으로 변경합니다.
+  - : 요소의 모든 속성을 [상속값](/ko/docs/Web/CSS/Inheritance)으로 변경합니다.
 - {{cssxref("unset")}}
   - : 요소의 모든 속성을, 속성이 값을 상속하는 경우 상속값으로, 아니면 초깃값으로 변경합니다.
 - {{cssxref("revert")}}
@@ -73,7 +119,7 @@ Phasellus eget velit sagittis.
 ```css
 body {
   font-size: small;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   color: blue;
 }
 
@@ -88,12 +134,22 @@ blockquote {
 #### `all` 속성 없음
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
 ```
 
 {{EmbedLiveSample("ex0", "200", "125")}}
@@ -103,13 +159,25 @@ The {{HTMLElement("blockquote")}}가 브라우저 기본 스타일과 함께, �
 #### `all:unset`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
-blockquote { all: unset; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
+blockquote {
+  all: unset;
+}
 ```
 
 {{EmbedLiveSample("ex1", "200", "125")}}
@@ -119,13 +187,25 @@ blockquote { all: unset; }
 #### `all:initial`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
-blockquote { all: initial; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
+blockquote {
+  all: initial;
+}
 ```
 
 {{EmbedLiveSample("ex2", "200", "125")}}
@@ -135,13 +215,25 @@ blockquote { all: initial; }
 #### `all:inherit`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue; color: red; }
-blockquote { all: inherit; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
+blockquote {
+  all: inherit;
+}
 ```
 
 {{EmbedLiveSample("ex3", "200", "125")}}

@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction
 
 拡張機能のサイドバーのプロパティを取得、設定します。
 
-[サイドバー](/ja/docs/Mozilla/Add-ons/WebExtensions/Sidebars) はブラウザーウィンドウのウェブページの隣の、右側か左側にあるペインです。ブラウザーはユーザーが利用できるサイドバーを見て、表示するサイドバーを選択できる UI を提供します。manifest.json の [`sidebar_action`](/ja/Add-ons/WebExtensions/manifest.json/sidebar_action) キーを使って、拡張機能は自身のサイドバーを定義できます。ここで述べる `sidebarAction` API を使って、拡張機能はサイドバーのプロパティを設定、取得できます。
+[サイドバー](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars) はブラウザーウィンドウのウェブページの隣の、右側か左側にあるペインです。ブラウザーはユーザーが利用できるサイドバーを見て、表示するサイドバーを選択できる UI を提供します。manifest.json の [`sidebar_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) キーを使って、拡張機能は自身のサイドバーを定義できます。ここで述べる `sidebarAction` API を使って、拡張機能はサイドバーのプロパティを設定、取得できます。
 
 `sidebarAction` API は {{WebExtAPIRef("browserAction")}} API と緊密にモデリングされています。
 
@@ -39,15 +39,17 @@ sidebarAction API は Opera の [sidebarAction API](https://dev.opera.com/extens
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.sidebarAction")}}
+{{Compat}}
 
 ## add-ons の例
 
 - [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page)
 
-> **メモ:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -74,4 +76,4 @@ sidebarAction API は Opera の [sidebarAction API](https://dev.opera.com/extens
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

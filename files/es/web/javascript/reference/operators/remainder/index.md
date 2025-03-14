@@ -1,19 +1,31 @@
 ---
 title: Resto (%)
 slug: Web/JavaScript/Reference/Operators/Remainder
-translation_of: Web/JavaScript/Reference/Operators/Remainder
-original_slug: Web/JavaScript/Referencia/Operadores/Resto
 ---
 
 {{jsSidebar("Operators")}}
 
 El operador resto (`%`) devuelve el resto de la división entre dos operandos. Siempre toma el signo del dividendo.
 
-{{EmbedInteractiveExample("pages/js/expressions-remainder.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Remainder operator")}}
+
+```js interactive-example
+console.log(13 % 5);
+// Expected output: 3
+
+console.log(-13 % 5);
+// Expected output: -3
+
+console.log(4 % 2);
+// Expected output: 0
+
+console.log(-4 % 2);
+// Expected output: -0
+```
 
 El código fuente para este ejemplo interactivo se encuentra en un repositorio de GitHub. Si quieres contribuir al proyecto de ejemplos interactivas, por favor clona <https://github.com/mdn/interactive-examples> y realiza un pull request.
 
-Tener en cuenta que en la mayoría de los lenguajes de programación, el operador de resto es ‘%’, pero en otros (como [Python, Perl](https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages)) es el operador módulo. Ambos son iguales para valores positivos, pero cuando el divisor y el dividendo son de signos distintos, se obtienen distintos resultados. Para obtener el módulo en JavaScript, en lugar de `a % n`, usa `((a % n ) + n ) % n`.
+Tener en cuenta que en la mayoría de los lenguajes de programación, el operador de resto es '%', pero en otros (como [Python, Perl](https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages)) es el operador módulo. Ambos son iguales para valores positivos, pero cuando el divisor y el dividendo son de signos distintos, se obtienen distintos resultados. Para obtener el módulo en JavaScript, en lugar de `a % n`, usa `((a % n ) + n ) % n`.
 
 ## Sintaxis
 
@@ -26,16 +38,16 @@ Operador: var1 % var2
 ### Resto con dividendo positivo
 
 ```js
- 12 % 5  //  2
- 1 % -2 //  1
- 1 % 2  //  1
- 2 % 3  //  2
-5.5 % 2 // 1.5
+12 % 5; //  2
+1 % -2; //  1
+1 % 2; //  1
+2 % 3; //  2
+5.5 % 2; // 1.5
 ```
 
 ### Resto con dividendo negativo
 
-```js
+```js-nolint
 -12 % 5 // -2
 -1 % 2  // -1
 -4 % 2  // -0
@@ -44,26 +56,24 @@ Operador: var1 % var2
 ### Resto con NaN
 
 ```js
-NaN % 2 // NaN
+NaN % 2; // NaN
 ```
 
 ### Resto con Infinity
 
 ```js
-Infinity % 2 // NaN
-Infinity % 0 // NaN
-Infinity % Infinity // NaN
+Infinity % 2; // NaN
+Infinity % 0; // NaN
+Infinity % Infinity; // NaN
 ```
 
 ## Especificaciones
 
-| Especificación                                                                                           |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-multiplicative-operators', 'Remainder operator')}} |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.remainder")}}
+{{Compat}}
 
 ## Ver también
 

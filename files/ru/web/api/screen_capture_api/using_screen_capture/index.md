@@ -1,14 +1,14 @@
 ---
 title: Использование интерфейса Screen Capture API
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
-translation_of: Web/API/Screen_Capture_API/Using_Screen_Capture
 ---
 
 {{DefaultAPISidebar("Screen Capture API")}}
 
 В этой статье изучается использование программного интерфейса Screen Capture и его метода {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} для захвата потока экрана (всего или его части), его записи или передачи через сессию [WebRTC](/ru/docs/Web/API/WebRTC_API) .
 
-> **Примечание:** **Примечание :** Полезно отметить, что последние версии библиотеки [WebRTC adapter.js](https://github.com/webrtcHacks/adapter) включают реализацию метода `getDisplayMedia()` для обмена изображениями с экрана на браузерах, которые его поддерживают, но ещё не реализуют текущий стандартный интерфейс, который реализован в последних версиях Chrome, Edge, и Firefox.
+> [!NOTE]
+> Полезно отметить, что последние версии библиотеки [WebRTC adapter.js](https://github.com/webrtcHacks/adapter) включают реализацию метода `getDisplayMedia()` для обмена изображениями с экрана на браузерах, которые его поддерживают, но ещё не реализуют текущий стандартный интерфейс, который реализован в последних версиях Chrome, Edge, и Firefox.
 
 ## Захват содержимого экрана
 
@@ -21,24 +21,29 @@ async function startCapture(displayMediaOptions) {
   let captureStream = null;
 
   try {
-    captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-  } catch(err) {
+    captureStream =
+      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+  } catch (err) {
     console.error("Error: " + err);
   }
   return captureStream;
 }
 ```
 
-Можно написать этот код, используя асинхронную функцию и оператор [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) , как показано выше, или использовать тип {{jsxref("Promise")}} непосредственно, пример ниже.
+Можно написать этот код, используя асинхронную функцию и оператор [`await`](/ru/docs/Web/JavaScript/Reference/Operators/await) , как показано выше, или использовать тип {{jsxref("Promise")}} непосредственно, пример ниже.
 
 **_Запуска захвата с экрана: в стиле `Promise`_**
 
 ```js
 function startCapture(displayMediaOptions) {
- let captureStream = null;
+  let captureStream = null;
 
- return navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
-    .catch(err => { console.error("Error:" + err); return null; });
+  return navigator.mediaDevices
+    .getDisplayMedia(displayMediaOptions)
+    .catch((err) => {
+      console.error("Error:" + err);
+      return null;
+    });
 }
 ```
 
@@ -48,7 +53,7 @@ function startCapture(displayMediaOptions) {
 
 **_Пример окна, позволяющего пользователю выбрать поверхность дисплея для захвата_**
 
-[![Screenshot of Chrome's window for picking a source surface](https://mdn.mozillademos.org/files/16365/Chrome-Screen-Capture-Window.png)](https://mdn.mozillademos.org/files/16365/Chrome-Screen-Capture-Window.png)
+[![Screenshot of Chrome's window for picking a source surface](chrome-screen-capture-window.png)](chrome-screen-capture-window.png)
 
 Затем можно использовать захваченный поток `captureStream`, везде, где принимается тип потока в качестве входных параметров. Пример [examples](#examples) ниже показывает несколько способов использования полученного типа потока
 
@@ -66,7 +71,8 @@ function startCapture(displayMediaOptions) {
 
 Объект ограничений, передающийся в метод {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} является объектом типа {{domxref("DisplayMediaStreamConstraints")}} , который используется для конфигурации получаемого объекта потока.
 
-> **Примечание:** **Примечание :** В отличие от большинства применений ограничений в медиа-API, здесь он используется исключительно для определения конфигурации потока, а не для фильтрации доступных вариантов.
+> [!NOTE]
+> В отличие от большинства применений ограничений в медиа-API, здесь он используется исключительно для определения конфигурации потока, а не для фильтрации доступных вариантов.
 
 Существуют три новых ограничения, добавленные в объект типа `MediaTrackConstraints` (а так же в {{domxref("MediaTrackSupportedConstraints")}} и {{domxref("MediaTrackSettings")}}) для конфигурирования потока захвата экрана:
 
@@ -88,25 +94,27 @@ function startCapture(displayMediaOptions) {
 
 К примеру, если определить ограничение {{domxref("MediaTrackConstraints.width", "width")}} для видео, оно применится как масштабирование видео, после того, как пользователь выберет область, и не устанавливает ограничение на размер самого источника.
 
-> **Примечание:** **Примечание :** Ограничения никогда не вызывают изменений в списке источников, доступных для захвата API Sharing Screen. Это гарантирует, что веб-приложения не могут заставить пользователя делиться определённым контентом, ограничивая исходный список, пока не останется только один элемент.
+> [!NOTE]
+> Ограничения никогда не вызывают изменений в списке источников, доступных для захвата API Sharing Screen. Это гарантирует, что веб-приложения не могут заставить пользователя делиться определённым контентом, ограничивая исходный список, пока не останется только один элемент.
 
 В процессе захвата экрана машина, которая обменивается содержимым экрана, будет отображать какую-то форму индикатора, чтобы пользователь знал, что обмен находиться в процессе.
 
-> **Примечание:** **Примечание :** Из соображений конфиденциальности и безопасности источники совместного использования экрана не перечисляются с использованием метода {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}. По той-же причине, событие {{event("devicechange")}} никогда не вызывается, когда есть изменения в доступных источниках при выполнении `getDisplayMedia()`.
+> [!NOTE]
+> Из соображений конфиденциальности и безопасности источники совместного использования экрана не перечисляются с использованием метода {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}. По той-же причине, событие [`devicechange`](/ru/docs/Web/API/MediaDevices/devicechange_event) никогда не вызывается, когда есть изменения в доступных источниках при выполнении `getDisplayMedia()`.
 
 ### Захват передаваемого аудио
 
 Метод {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} в основном используется для захвата видео пользовательского экрана или его части. Однако {{Glossary("user agent", "user agents")}} может позволить захватить аудио вместе с видео контентом. Источником аудио может быть выбранное окно, вся аудио система компьютера, или пользовательский микрофон (или их комбинация) .
 
-До запуска скрипта, который будет запрашивать возможность обмена аудио, проверьте реализацию {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getDisplayMedia", "Browser compatibility", "code")}} , для понимания браузерной совместимости с функциональностью захвата аудио в поток захвата экрана.
+До запуска скрипта, который будет запрашивать возможность обмена аудио, проверьте реализацию [Browser compatibility](/ru/docs/Web/API/MediaDevices/getDisplayMedia#browser_compatibility), для понимания браузерной совместимости с функциональностью захвата аудио в поток захвата экрана.
 
 Чтобы запросить доступ к экрану с включённым звуком, параметры ниже передаются в метод `getDisplayMedia()`:
 
 ```js
 const gdmOptions = {
   video: true,
-  audio: true
-}
+  audio: true,
+};
 ```
 
 Это даёт пользователю полную свободу выбора того, что он хочет, в пределах того, что поддерживает пользовательский агент. Это можно уточнить, указав дополнительную информацию для каждого свойства `audio` и `video`:
@@ -114,29 +122,26 @@ const gdmOptions = {
 ```js
 const gdmOptions = {
   video: {
-    cursor: "always"
+    cursor: "always",
   },
   audio: {
     echoCancellation: true,
     noiseSuppression: true,
-    sampleRate: 44100
-  }
-}
+    sampleRate: 44100,
+  },
+};
 ```
 
 В этом примере курсор всегда будет виден при захвате, и на звуковой дорожке в идеале должны быть включены функции подавления шума и эхоподавления, а также идеальная частота дискретизации звука 44,1 кГц
 
 Захват аудио всегда необязателен, и даже когда веб-контент запрашивает поток с аудио и видео, возвращаемый {{domxref ("MediaStream")}} может по-прежнему иметь только одну видеодорожку без звука.
 
-> **Примечание:** **Примечание :** Некоторые свойства не реализованы широко и могут не использоваться движком. К примеру, `cursor` [имеет ограниченную поддержку](/ru/docs/Web/API/MediaTrackConstraints/cursor#Browser_compatibility).
+> [!NOTE]
+> Некоторые свойства не реализованы широко и могут не использоваться движком. К примеру, `cursor` [имеет ограниченную поддержку](/ru/docs/Web/API/MediaTrackConstraints#browser_compatibility).
 
 ## Using the captured stream
 
 The {{jsxref("promise")}} returned by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} resolves to a {{domxref("MediaStream")}} that contains at least one video stream that contains the screen or screen area, and which is adjusted or filtered based upon the constraints specifed when `getDisplayMedia()` was called.
-
-## Security
-
-As is always the case when sharing content over a network, it's important to consider the privacy and safety implications of screen sharing.
 
 ### Potential risks
 
@@ -166,7 +171,8 @@ First, some constants are set up to reference the elements on the page to which 
 
 The object `displayMediaOptions` contains the {{domxref("MediaStreamConstraints")}} to pass into `getDisplayMedia()`; here, the {{domxref("MediaTrackConstraints.cursor", "cursor")}} property is set to `always`, indicating that the mouse cursor should always be included in the captured media.
 
-> **Примечание:** Some properties are not widely implemented and might not be used by the engine. `cursor`, for example, [has limited support](/ru/docs/Web/API/MediaTrackConstraints/cursor#Browser_compatibility).
+> [!NOTE]
+> Some properties are not widely implemented and might not be used by the engine. `cursor`, for example, [has limited support](/ru/docs/Web/API/MediaTrackConstraints#browser_compatibility).
 
 Finally, event listeners are established to detect user clicks on the start and stop buttons.
 
@@ -180,19 +186,27 @@ const stopElem = document.getElementById("stop");
 
 var displayMediaOptions = {
   video: {
-    cursor: "always"
+    cursor: "always",
   },
-  audio: false
+  audio: false,
 };
 
 // Set event listeners for the start and stop buttons
-startElem.addEventListener("click", function(evt) {
-  startCapture();
-}, false);
+startElem.addEventListener(
+  "click",
+  function (evt) {
+    startCapture();
+  },
+  false,
+);
 
-stopElem.addEventListener("click", function(evt) {
-  stopCapture();
-}, false);
+stopElem.addEventListener(
+  "click",
+  function (evt) {
+    stopCapture();
+  },
+  false,
+);
 ```
 
 ##### Logging content
@@ -200,10 +214,13 @@ stopElem.addEventListener("click", function(evt) {
 To make logging of errors and other issues easy, this example overrides certain {{domxref("Console")}} methods to output their messages to the {{HTMLElement("pre")}} block whose ID is `log`.
 
 ```js
-console.log = msg => logElem.innerHTML += `${msg}<br>`;
-console.error = msg => logElem.innerHTML += `<span class="error">${msg}</span><br>`;
-console.warn = msg => logElem.innerHTML += `<span class="warn">${msg}<span><br>`;
-console.info = msg => logElem.innerHTML += `<span class="info">${msg}</span><br>`;
+console.log = (msg) => (logElem.innerHTML += `${msg}<br>`);
+console.error = (msg) =>
+  (logElem.innerHTML += `<span class="error">${msg}</span><br>`);
+console.warn = (msg) =>
+  (logElem.innerHTML += `<span class="warn">${msg}<span><br>`);
+console.info = (msg) =>
+  (logElem.innerHTML += `<span class="info">${msg}</span><br>`);
 ```
 
 This allows us to use the familiar {{domxref("console.log()")}}, {{domxref("console.error()")}}, and so on to log information to the log box in the document.
@@ -217,9 +234,10 @@ async function startCapture() {
   logElem.innerHTML = "";
 
   try {
-    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+    videoElem.srcObject =
+      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
     dumpOptionsInfo();
-  } catch(err) {
+  } catch (err) {
     console.error("Error: " + err);
   }
 }
@@ -231,7 +249,7 @@ The stream is connected to the {{HTMLElement("video")}} element by storing the r
 
 The `dumpOptionsInfo()` function—which we will look at in a moment—dumps information about the stream to the log box for educational purposes.
 
-If any of that fails, the [`catch()`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) clause outputs an error message to the log box.
+If any of that fails, the [`catch()`](/ru/docs/Web/JavaScript/Reference/Statements/try...catch) clause outputs an error message to the log box.
 
 ##### Stopping display capture
 
@@ -241,7 +259,7 @@ The `stopCapture()` method is called when the "Stop Capture" button is clicked. 
 function stopCapture(evt) {
   let tracks = videoElem.srcObject.getTracks();
 
-  tracks.forEach(track => track.stop());
+  tracks.forEach((track) => track.stop());
   videoElem.srcObject = null;
 }
 ```
@@ -268,16 +286,22 @@ The track list is obtained by calling {{domxref("MediaStream.getVideoTracks", "g
 The HTML starts with a simple introductory paragraph, then gets into the meat of things.
 
 ```html
-<p>This example shows you the contents of the selected part of your display.
-Click the Start Capture button to begin.</p>
+<p>
+  This example shows you the contents of the selected part of your display.
+  Click the Start Capture button to begin.
+</p>
 
-<p><button id="start">Start Capture</button>&nbsp;<button id="stop">Stop Capture</button></p>
+<p>
+  <button id="start">Start Capture</button>&nbsp;<button id="stop">
+    Stop Capture
+  </button>
+</p>
 
 <video id="video" autoplay></video>
-<br>
+<br />
 
 <strong>Log:</strong>
-<br>
+<br />
 <pre id="log"></pre>
 ```
 
@@ -322,7 +346,7 @@ The final product looks like this. If your browser supports Screen Capture API, 
 
 ## Security
 
-In order to function when [Feature Policy](/ru/docs/Web/HTTP/Feature_Policy) is enabled, you will need the `display-capture` permission. This can be done using the {{HTTPHeader("Feature-Policy")}} {{Glossary("HTTP")}} header or—if you're using the Screen Capture API in an {{HTMLElement("iframe")}}, the `<iframe>` element's {{htmlattrxref("allow", "iframe")}} attribute.
+In order to function when [Feature Policy](/ru/docs/Web/HTTP/Permissions_Policy) is enabled, you will need the `display-capture` permission. This can be done using the {{HTTPHeader("Feature-Policy")}} {{Glossary("HTTP")}} header or—if you're using the Screen Capture API in an {{HTMLElement("iframe")}}, the `<iframe>` element's [`allow`](/ru/docs/Web/HTML/Element/iframe#allow) attribute.
 
 For example, this line in the HTTP headers will enable Screen Capture API for the document and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same origin:
 
@@ -333,13 +357,12 @@ Feature-Policy: display-capture 'self'
 If you're performing screen capture within an `<iframe>`, you can request permission just for that frame, which is clearly more secure than requesting a more general permission:
 
 ```html
-<iframe src="https://mycode.example.net/etc" allow="display-capture">
-</iframe>
+<iframe src="https://mycode.example.net/etc" allow="display-capture"> </iframe>
 ```
 
-## See also
+## Смотрите также
 
 - [Screen Capture API](/ru/docs/Web/API/Screen_Capture_API)
-- [Media Capture and Streams API](/ru/docs/Web/API/Media_Streams_API)
-- [Taking still photos with WebRTC](/ru/docs/Web/API/WebRTC_API/Taking_still_photos)
+- [Media Capture and Streams API](/ru/docs/Web/API/Media_Capture_and_Streams_API)
+- [Taking still photos with WebRTC](/ru/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos)
 - {{domxref("HTMLCanvasElement.captureStream()")}} to obtain a {{domxref("MediaStream")}} with the live contents of a {{HTMLElement("canvas")}}

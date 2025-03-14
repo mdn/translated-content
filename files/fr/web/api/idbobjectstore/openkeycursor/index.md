@@ -1,13 +1,6 @@
 ---
 title: IDBObjectStore.openKeyCursor()
 slug: Web/API/IDBObjectStore/openKeyCursor
-tags:
-  - API
-  - IDBObjectStore
-  - IndexedDB
-  - Méthode
-  - Reference
-translation_of: Web/API/IDBObjectStore/openKeyCursor
 ---
 
 {{APIRef("IndexedDB")}}
@@ -37,11 +30,11 @@ Un objet {{domxref("IDBRequest")}} sur lequel seront déclenchés les différent
 
 Cette méthode peut déclencher une exception {{domxref("DOMException")}} ayant l'un des types suivants :
 
-| Exception                  | Description                                                                                                                 |
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Exception                  | Description                                                                                             |
+| -------------------------- | ------------------------------------------------------------------------------------------------------- |
 | `InvalidStateError`        | Le magasin d'objets ({{domxref("IDBObjectStore")}} ou l'index ({{domxref("IDBIndex")}}) a été supprimé. |
-| `TransactionInactiveError` | La transaction associée au magasin d'objet ({{domxref("IDBObjectStore")}}) est inactive.                         |
-| `DataError`                | La clé ou l'intervalle de clés indiqué est invalide.                                                                        |
+| `TransactionInactiveError` | La transaction associée au magasin d'objet ({{domxref("IDBObjectStore")}}) est inactive.                |
+| `DataError`                | La clé ou l'intervalle de clés indiqué est invalide.                                                    |
 
 ## Exemples
 
@@ -51,9 +44,9 @@ Dans le fragment de code suivant, on crée une transaction, on l'utilise sur un 
 var transaction = db.transaction("name", "readonly");
 var objectStore = transaction.objectStore("name");
 var request = objectStore.openKeyCursor();
-request.onsuccess = function(event) {
+request.onsuccess = function (event) {
   var cursor = event.target.result;
-  if(cursor) {
+  if (cursor) {
     // cursor.key contient la clé de l'enregistrement courant
     // à la différence de openCursor, il n'y a pas de cursor.value
     cursor.continue();
@@ -73,10 +66,10 @@ request.onsuccess = function(event) {
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Initier une connexion : {{domxref("IDBDatabase")}}
 - Utiliser les transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

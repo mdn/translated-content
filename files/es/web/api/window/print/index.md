@@ -1,15 +1,6 @@
 ---
 title: Window.print()
 slug: Web/API/Window/print
-tags:
-  - API
-  - Compatibilidad
-  - Compatibilidad en móviles
-  - DOM
-  - Referencia
-  - Window
-  - metodo
-translation_of: Web/API/Window/print
 ---
 
 {{ ApiRef() }}
@@ -25,7 +16,7 @@ Abre el _Diálogo de Impresión_ para imprimir el documento actual.
 ## Sintaxis
 
 ```js
-window.print()
+window.print();
 ```
 
 ## Notas
@@ -38,6 +29,6 @@ Empezando con Chrome 46.0 este método esta bloqueado dentro de un {{htmlelement
 
 ## Ver también
 
-- [Impresión](/en/Printing)
+- [Impresión](/en-US/Printing)
 - {{ domxref("window.onbeforeprint") }}
 - {{ domxref("window.onafterprint") }}

@@ -1,11 +1,11 @@
 ---
 title: 格線佈局的基本概念
-slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 ---
 
 {{CSSRef}}
 
-[CSS 格線佈局](/zh-TW/docs/Web/CSS/CSS_Grid_Layout)介紹了二維的 CSS 格線系統。格線可以用來佈置頁面的主要區域、或小型用戶介面。本文介紹 CSS 格線 Level 1 規範的其中一部份。這份概觀顯示的某些功能，將在教學的其他部份詳細解釋。
+[CSS 格線佈局](/zh-TW/docs/Web/CSS/CSS_grid_layout)介紹了二維的 CSS 格線系統。格線可以用來佈置頁面的主要區域、或小型用戶介面。本文介紹 CSS 格線 Level 1 規範的其中一部份。這份概觀顯示的某些功能，將在教學的其他部份詳細解釋。
 
 ## 什麽是格線？
 
@@ -31,7 +31,7 @@ slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 數個單位也能被放進 grid cell、或是區域的一部分相互重疊。我們可以透過 {{cssxref("z-index")}} 控制該分層。
 
-格線是個強大的規範、它在與諸如[彈性盒子](/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout)之類的 CSS 結合時，也有助於用 CSS 建立前所尚未有的排版。一切都建立要從建立**格線容器**（grid container）開始。
+格線是個強大的規範、它在與諸如[彈性盒子](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout)之類的 CSS 結合時，也有助於用 CSS 建立前所尚未有的排版。一切都建立要從建立**格線容器**（grid container）開始。
 
 ## 格線容器
 
@@ -41,11 +41,11 @@ slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 
@@ -58,24 +58,26 @@ slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('The_Grid_container', '200', '330') }}
+{{ EmbedLiveSample('格線容器', '200', '330') }}
 
-在它下面的直接子元素，現在都是格線單元了。從網路瀏覽器來看，各單元變成格線的前後，似乎沒什麼不同，因為目前格線只有建立一個格線列，來放所有的格線單元。這時候，你會發現[格線檢測器](/zh-TW/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)相當好用。如果在 Firefox 檢查這個示例的格線，你會發現在 `grid` 值旁邊，有一個小圖標。點選這個小圖標，瀏覽器視窗的元素，就會被一個圖層覆蓋。
+在它下面的直接子元素，現在都是格線單元了。從網路瀏覽器來看，各單元變成格線的前後，似乎沒什麼不同，因為目前格線只有建立一個格線列，來放所有的格線單元。這時候，你會發現[格線檢測器](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)相當好用。如果在 Firefox 檢查這個示例的格線，你會發現在 `grid` 值旁邊，有一個小圖標。點選這個小圖標，瀏覽器視窗的元素，就會被一個圖層覆蓋。
 
 ![Using the Grid Highlighter in DevTools to view a grid](1-grid-inspector.png)
 
@@ -95,11 +97,11 @@ I have now created a grid with three 200-pixel-wide column tracks. The child ite
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 
@@ -111,28 +113,30 @@ I have now created a grid with three 200-pixel-wide column tracks. The child ite
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 .nested {
-    border: 2px solid #ffec99;
-    border-radius: 5px;
-    background-color: #fff9db;
-    padding: 1em;
+  border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('grid_first', '610', '200') }}
+{{ EmbedLiveSample('格線軌道（Grid Track）', '610', '200') }}
 
 ### fr 單位
 
@@ -140,11 +144,11 @@ I have now created a grid with three 200-pixel-wide column tracks. The child ite
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 
@@ -156,28 +160,30 @@ I have now created a grid with three 200-pixel-wide column tracks. The child ite
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 .nested {
-    border: 2px solid #ffec99;
-    border-radius: 5px;
-    background-color: #fff9db;
-    padding: 1em;
+  border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('fr_unit_ls', '220', '180') }}
+{{ EmbedLiveSample('fr 單位', '220', '180') }}
 
 接著下例將創建有一個 `2fr` 的軌道，接著還有兩個 `1fr` 的軌道。可用空間會因此被分為四塊：其中兩塊給第一個軌道、剩下兩塊給兩個軌道各一個。
 
@@ -245,11 +251,11 @@ I have now created a grid with three 200-pixel-wide column tracks. The child ite
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 
@@ -262,28 +268,30 @@ I have now created a grid with three 200-pixel-wide column tracks. The child ite
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 .nested {
-    border: 2px solid #ffec99;
-    border-radius: 5px;
-    background-color: #fff9db;
-    padding: 1em;
+  border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('The_implicit_and_explicit_grid', '210', '410') }}
+{{ EmbedLiveSample('明式與暗式格線', '210', '410') }}
 
 ### 軌道縮放與 `minmax()`
 
@@ -300,7 +308,9 @@ I have now created a grid with three 200-pixel-wide column tracks. The child ite
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -320,7 +330,8 @@ I have now created a grid with three 200-pixel-wide column tracks. The child ite
 ```html
 <div class="wrapper">
   <div>One</div>
-  <div>Two
+  <div>
+    Two
     <p>I have some more content in.</p>
     <p>This makes me taller than 100 pixels.</p>
   </div>
@@ -330,7 +341,7 @@ I have now created a grid with three 200-pixel-wide column tracks. The child ite
 </div>
 ```
 
-{{ EmbedLiveSample('Track_sizing_and_minmax()', '230', '490') }}
+{{ EmbedLiveSample('軌道縮放與_minmax', '230', '490') }}
 
 ## Grid Lines
 
@@ -350,58 +361,60 @@ The second item starts on grid column line 1, and spans one track. This is the d
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
-   <div class="box5">Five</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
+  <div class="box5">Five</div>
 </div>
 ```
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
 }
 .box1 {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 .box2 {
-    grid-column-start: 1;
-    grid-row-start: 3;
-    grid-row-end: 5;
+  grid-column-start: 1;
+  grid-row-start: 3;
+  grid-row-end: 5;
 }
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 .nested {
-    border: 2px solid #ffec99;
-    border-radius: 5px;
-    background-color: #fff9db;
-    padding: 1em;
+  border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
 }
 ```
 
 {{ EmbedLiveSample('Positioning_items_against_lines', '220', '410') }}
 
-Don't forget that you can use the [Grid Inspector](/zh-TW/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) in Firefox Developer Tools to see how the items are positioned against the lines of the grid.
+Don't forget that you can use the [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) in Firefox Developer Tools to see how the items are positioned against the lines of the grid.
 
 ## Grid Cells
 
@@ -411,7 +424,7 @@ A _grid cell_ is the smallest unit on a grid, conceptually it is like a table ce
 
 ## Grid areas
 
-Items can span one or more cells both by row or by column, and this creates a _grid area_. Grid areas have to be rectangular – it isn’t possible to create an L-shaped area for example. The highlighted grid area spans two row and two column tracks.
+Items can span one or more cells both by row or by column, and this creates a _grid area_. Grid areas have to be rectangular – it isn't possible to create an L-shaped area for example. The highlighted grid area spans two row and two column tracks.
 
 ![A grid area](1_grid_area.png)
 
@@ -421,42 +434,44 @@ _Gutters_ or _alleys_ between grid cells can be created using the {{cssxref("gri
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-column-gap: 10px;
-   grid-row-gap: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 1em;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 .nested {
-    border: 2px solid #ffec99;
-    border-radius: 5px;
-    background-color: #fff9db;
-    padding: 1em;
+  border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
 }
 ```
 
@@ -470,15 +485,15 @@ A grid item can become a grid container. In the following example I have the thr
 
 ```html
 <div class="wrapper">
-   <div class="box box1">
-       <div class="nested">a</div>
-       <div class="nested">b</div>
-        <div class="nested">c</div>
-    </div>
-    <div class="box box2">Two</div>
-    <div class="box box3">Three</div>
-    <div class="box box4">Four</div>
-    <div class="box box5">Five</div>
+  <div class="box box1">
+    <div class="nested">a</div>
+    <div class="nested">b</div>
+    <div class="nested">c</div>
+  </div>
+  <div class="box box2">Two</div>
+  <div class="box box3">Three</div>
+  <div class="box box4">Four</div>
+  <div class="box box5">Five</div>
 </div>
 ```
 
@@ -488,38 +503,40 @@ If I set `box1` to `display: grid` I can give it a track definition and it too w
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 4;
-   grid-row-start: 1;
-   grid-row-end: 3;
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 .box {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 .nested {
-    border: 2px solid #ffec99;
-    border-radius: 5px;
-    background-color: #fff9db;
-    padding: 1em;
+  border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('nesting', '600', '410') }}
+{{ EmbedLiveSample('Nesting grids', '600', '410') }}
 
 In this case the nested grid has no relationship to the parent. As you can see in the example it has not inherited the {{cssxref("grid-gap")}} of the parent and the lines in the nested grid do not align to the lines in the parent grid.
 
@@ -527,7 +544,8 @@ In this case the nested grid has no relationship to the parent. As you can see i
 
 In the level 1 grid specification there is a feature called _subgrid_ which would let us create nested grids that use the track definition of the parent grid.
 
-> **備註：** Subgrids are not yet implemented in any browsers, and the specification is subject to change.
+> [!NOTE]
+> Subgrids are not yet implemented in any browsers, and the specification is subject to change.
 
 In the current specification, we would edit the above nested grid example to use `display: subgrid` rather than `display: grid`, then remove the track definition. The nested grid will use the parent grid tracks to lay out items.
 
@@ -535,11 +553,11 @@ It should be noted that the nested grid is in both dimensions—rows and columns
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 4;
-   grid-row-start: 1;
-   grid-row-end: 3;
-   display: subgrid;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: subgrid;
 }
 ```
 
@@ -549,56 +567,58 @@ Grid items can occupy the same cell. If we return to our example with items posi
 
 ```html
 <div class="wrapper">
-   <div class="box box1">One</div>
-   <div class="box box2">Two</div>
-   <div class="box box3">Three</div>
-   <div class="box box4">Four</div>
-   <div class="box box5">Five</div>
+  <div class="box box1">One</div>
+  <div class="box box2">Two</div>
+  <div class="box box3">Three</div>
+  <div class="box box4">Four</div>
+  <div class="box box5">Five</div>
 </div>
 ```
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-auto-rows: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
 }
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 4;
-   grid-row-start: 1;
-   grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 .box2 {
-   grid-column-start: 1;
-   grid-row-start: 2;
-   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 4;
 }
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 .box {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 .nested {
-    border: 2px solid #ffec99;
-    border-radius: 5px;
-    background-color: #fff9db;
-    padding: 1em;
+  border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('l_ex', '210', '410') }}
+{{ EmbedLiveSample('Layering items with z-index', '210', '410') }}
 
 The item `box2` is now overlapping `box1`, it displays on top as it comes later in the source order.
 
@@ -608,54 +628,56 @@ We can control the order in which items stack up by using the `z-index` property
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-auto-rows: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
 }
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 4;
-   grid-row-start: 1;
-   grid-row-end: 3;
-   z-index: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  z-index: 2;
 }
 .box2 {
-   grid-column-start: 1;
-   grid-row-start: 2;
-   grid-row-end: 4;
-   z-index: 1;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  z-index: 1;
 }
 ```
 
 ```html hidden
 <div class="wrapper">
-    <div class="box box1">One</div>
-    <div class="box box2">Two</div>
-   <div class="box box3">Three</div>
-   <div class="box box4">Four</div>
-   <div class="box box5">Five</div>
+  <div class="box box1">One</div>
+  <div class="box box2">Two</div>
+  <div class="box box3">Three</div>
+  <div class="box box4">Four</div>
+  <div class="box box5">Five</div>
 </div>
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 .box {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 .nested {
-    border: 2px solid #ffec99;
-    border-radius: 5px;
-    background-color: #fff9db;
-    padding: 1em;
+  border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
 }
 ```
 
@@ -663,6 +685,4 @@ We can control the order in which items stack up by using the `z-index` property
 
 ## 下一步
 
-In this article we have had a very quick look through the Grid Layout Specification. Have a play with the code examples, and then move onto [the next part of this guide where we will really start to dig into the detail of CSS Grid Layout](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout).
-
-<section id="Quick_links"><ol><li><a href="/zh-TW/docs/Web/CSS"><strong>CSS</strong></a></li><li><a href="/zh-TW/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li><li data-default-state="open"><a href="#"><strong>Guides</strong></a><ol><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li></ol></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="/zh-TW/docs/Web/CSS/grid">grid</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-area">grid-area</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-column">grid-column</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-column-end">grid-column-end</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-column-start">grid-column-start</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-gap">grid-gap</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-row">grid-row</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-row-end">grid-row-end</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-row-start">grid-row-start</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-template">grid-template</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li></ol></li><li data-default-state="open"><a href="#"><strong>Glossary</strong></a><ol><li><a href="/zh-TW/docs/Glossary/Grid">Grid</a></li><li><a href="/zh-TW/docs/Glossary/Grid_lines">Grid lines</a></li><li><a href="/zh-TW/docs/Glossary/Grid_tracks">Grid tracks</a></li><li><a href="/zh-TW/docs/Glossary/Grid_cell">Grid cell</a></li><li><a href="/zh-TW/docs/Glossary/Grid_areas">Grid areas</a></li><li><a href="/zh-TW/docs/Glossary/Gutters">Gutters</a></li><li><a href="/zh-TW/docs/Glossary/Grid_Axis">Grid Axis</a></li><li><a href="/zh-TW/docs/Glossary/Grid_rows">Grid row</a></li><li><a href="/zh-TW/docs/Glossary/Grid_column">Grid column</a></li></ol></li></ol></section>
+In this article we have had a very quick look through the Grid Layout Specification. Have a play with the code examples, and then move onto [the next part of this guide where we will really start to dig into the detail of CSS Grid Layout](/zh-TW/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods).

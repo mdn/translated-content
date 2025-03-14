@@ -1,19 +1,84 @@
 ---
-title: <span>
+title: "<span>: コンテンツ区間要素"
 slug: Web/HTML/Element/span
+l10n:
+  sourceCommit: a46d4d15ea85b4bbb83df145228bc40f658868be
 ---
 
 {{HTMLSidebar}}
 
-**HTML の `<span>` 要素**は、記述コンテンツの汎用的な行内コンテナーであり、何かを表すものではありません。スタイル付けのため ({{htmlattrxref("class")}} または {{htmlattrxref("id")}} 属性を使用して)、または {{htmlattrxref("lang")}} のような属性値を共有したりするために要素をグループ化する用途で使用することができます。他に適切な意味的要素がない時にのみ使用してください。 `<span>` は {{HTMLElement("div")}} 要素ととても似ていますが、 {{HTMLElement("div")}} が[ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)であるのに対し、 `<span>` は[インライン要素](/ja/docs/Web/HTML/Inline_elements)です。
+**`<span>`** は [HTML](/ja/docs/Web/HTML) の要素で、記述コンテンツの汎用的なインラインコンテナーであり、何かを表すものではありません。スタイル付けのため（[`class`](/ja/docs/Web/HTML/Global_attributes#class) または [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性を使用して）、または [`lang`](/ja/docs/Web/HTML/Global_attributes#lang) のような属性値を共有したりするために要素をグループ化する用途で使用することができます。他に適切な意味的要素がない時にのみ使用してください。 `<span>` は {{HTMLElement("div")}} 要素ととても似ていますが、 {{HTMLElement("div")}} が[ブロックレベルの要素](/ja/docs/Glossary/Block-level_content)であるのに対し、 `<span>` は[インラインレベルの要素](/ja/docs/Glossary/Inline-level_content)です。
 
-{{EmbedInteractiveExample("pages/tabbed/span.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;span&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  Add the <span class="ingredient">basil</span>,
+  <span class="ingredient">pine nuts</span> and
+  <span class="ingredient">garlic</span> to a blender and blend into a paste.
+</p>
+
+<p>
+  Gradually add the <span class="ingredient">olive oil</span> while running the
+  blender slowly.
+</p>
+```
+
+```css interactive-example
+span.ingredient {
+  color: #f00;
+}
+```
+
+## 属性
+
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+
+## 例
+
+### 例 1
+
+#### HTML
+
+```html
+<p><span>Some text</span></p>
+```
+
+#### 結果
+
+{{EmbedLiveSample('Example_1')}}
+
+### 例 2
+
+#### HTML
+
+```html
+<li>
+  <span>
+    <a href="portfolio.html" target="_blank">See my portfolio</a>
+  </span>
+</li>
+```
+
+#### CSS
+
+```css
+li span {
+  background: gold;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('Example_2')}}
+
+## 技術的概要
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
@@ -34,7 +99,7 @@ slug: Web/HTML/Element/span
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
@@ -62,52 +127,11 @@ slug: Web/HTML/Element/span
     <tr>
       <th scope="row">DOM インターフェイス</th>
       <td>
-        {{domxref("HTMLSpanElement")}} ({{glossary("HTML5")}}
-        より前は {{domxref("HTMLElement")}})
+        {{domxref("HTMLSpanElement")}}
       </td>
     </tr>
   </tbody>
 </table>
-
-## 属性
-
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
-
-## 例
-
-### 例 1
-
-#### HTML
-
-```html
-<p><span>Some text</span></p>
-```
-
-#### 結果
-
-{{EmbedLiveSample('Example_1')}}
-
-### 例 2
-
-#### HTML
-
-```html
-<li><span>
-    <a href="portfolio.html" target="_blank">See my portfolio</a>
-</span></li>
-```
-
-#### CSS
-
-```css
-li span {
-  background: gold;
- }
-```
-
-#### 結果
-
-{{EmbedLiveSample('Example_2')}}
 
 ## 仕様書
 
@@ -115,7 +139,7 @@ li span {
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.span")}}
+{{Compat}}
 
 ## 関連情報
 

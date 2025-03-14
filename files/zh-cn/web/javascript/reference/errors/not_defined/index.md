@@ -1,70 +1,76 @@
 ---
 title: 'ReferenceError: "x" is not defined'
 slug: Web/JavaScript/Reference/Errors/Not_defined
+l10n:
+  sourceCommit: 1b2c87c20466d2a3eec9b3551c269f9aff8f5762
 ---
 
 {{jsSidebar("Errors")}}
 
+当某个地方引用了一个不存在的变量时，就会出现“_variable_ is not defined”JavaScript 异常。
+
 ## 错误信息
 
 ```plain
-ReferenceError: "x" is not defined
+ReferenceError: "x" is not defined (V8-based & Firefox)
+ReferenceError: Can't find variable: x (Safari)
 ```
 
 ## 错误类型
 
-{{jsxref("ReferenceError")}}.
+{{jsxref("ReferenceError")}}。
 
 ## 什么地方出错了？
 
-在某些地方引用一个不存在的变量的时候。当你使用变量的时候，这个变量必须是已经被声明的，或者你可以确保它在你当前的脚本或作用域 ({{Glossary("scope")}}) 中可用。
+在某处引用了一个不存在的变量。需要声明该变量，或确保它在当前脚本或[作用域](/zh-CN/docs/Glossary/Scope)中可用。
 
-> **备注：** 当你加载一个库的时候（例如 jQuery），请确保你在这个库加载完毕后再使用这个库中的变量，如“$”。将你想加载的库的 {{HTMLElement("script")}} 标签放置在你的代码前面。
+> [!NOTE]
+> 在加载库（例如 jQuery）时，确保在访问库变量（例如“$”）之前先加载该库。将加载库的 {{HTMLElement("script")}} 元素放在使用该库的代码之前。
 
 ## 示例
 
-### 变量没有被声明
+### 未声明的变量
 
 ```js example-bad
 foo.substring(1); // ReferenceError: foo is not defined
 ```
 
-“foo”变量没有在任何地方被声明。它需要是某种字符串，这样 {{jsxref("String.prototype.substring()")}} 方法才可以正常工作。
+“foo”变量在任何地方都没有定义。它需要是一个字符串，以便 {{jsxref("String.prototype.substring()")}} 方法能够正常工作。
 
 ```js example-good
-var foo = 'bar';
+const foo = "bar";
 foo.substring(1); // "ar"
 ```
 
 ### 错误的作用域
 
-变量必须是在它当前的执行环境中可用的。在一个函数（[function](/zh-CN/docs/Web/JavaScript/Reference/Functions)）中定义的变量不能从这个函数外部的任何地方访问，因为这个变量的作用域仅在这个函数的内部。
+变量需要在当前执行上下文中可用。在[函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)内部定义的变量无法在函数外部访问，因为该变量只在函数的作用域内定义。
 
 ```js example-bad
-function numbers () {
-  var num1 = 2,
-      num2 = 3;
+function numbers() {
+  const num1 = 2;
+  const num2 = 3;
   return num1 + num2;
 }
 
 console.log(num1); // ReferenceError num1 is not defined.
 ```
 
-然而，一个函数可用使用在它所被定义的作用域中的所有变量。换句话说，当一个函数被定义在全局作用域的时候，它可以访问所有在全局作用域中定义的变量。
+然而，函数可以访问在其定义的作用域内定义的所有变量和函数。换句话说，定义在全局作用域中的函数可以访问在全局作用域中定义的所有变量。
 
 ```js example-good
-var num1 = 2,
-    num2 = 3;
+const num1 = 2;
+const num2 = 3;
 
-function numbers () {
+function numbers() {
   return num1 + num2;
 }
 
-console.log(num1); // 2
+console.log(numbers()); // 5
 ```
 
-## 相关页面
+## 参见
 
-- {{Glossary("Scope")}}
-- [Declaring variables in the JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#Declaring_variables)
-- [Function scope in the JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Functions#Function_scope/en-US/docs/)
+- [作用域](/zh-CN/docs/Glossary/Scope)
+- [JavaScript 指南中的变量声明](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#声明变量)
+- [JavaScript 指南中的函数作用域](/zh-CN/docs/Web/JavaScript/Guide/Functions#函数作用域)

@@ -9,8 +9,8 @@ slug: Web/API/MediaDevices/getSupportedConstraints
 
 ## 语法
 
-```
-var supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
+```js-nolint
+getSupportedConstraints()
 ```
 
 ### 参数
@@ -28,13 +28,14 @@ var supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
 ```html hidden
 <p>The following media constraints are supported by your browser:</p>
 
-<ul id="constraintList">
-</ul>
+<ul id="constraintList"></ul>
 ```
 
 ```css hidden
 body {
-  font: 15px Arial, sans-serif;
+  font:
+    15px Arial,
+    sans-serif;
 }
 ```
 
@@ -54,7 +55,7 @@ for (let constraint in supportedConstraints) {
 
 ### 结果
 
-{{ EmbedLiveSample('Example', 600, 350) }}
+{{ EmbedLiveSample('示例', 600, 350) }}
 
 ## 规范
 

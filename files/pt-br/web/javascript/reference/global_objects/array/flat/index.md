@@ -7,19 +7,37 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 
 O método **`flat()`** cria um novo array com todos elementos sub-arrays concatenados nele de forma recursiva até a profundidade especificada.
 
-{{EmbedInteractiveExample("pages/js/array-flat.html")}}
+{{InteractiveExample("JavaScript Demo: Array.flat()")}}
+
+```js interactive-example
+const arr1 = [0, 1, 2, [3, 4]];
+
+console.log(arr1.flat());
+// expected output: Array [0, 1, 2, 3, 4]
+
+const arr2 = [0, 1, [2, [3, [4, 5]]]];
+
+console.log(arr2.flat());
+// expected output: Array [0, 1, 2, Array [3, Array [4, 5]]]
+
+console.log(arr2.flat(2));
+// expected output: Array [0, 1, 2, 3, Array [4, 5]]
+
+console.log(arr2.flat(Infinity));
+// expected output: Array [0, 1, 2, 3, 4, 5]
+```
 
 ## Sintaxe
 
 ```js
-  flat()
-  flat(depth)
+flat();
+flat(depth);
 ```
 
 ### Parâmetros
 
 - `depth` {{optional_inline}}
-  - : O nível de profundidade especifíca o quão profundo um array aninhando deve ser achatado. O padrão é 1.
+  - : O nível de profundidade especifíca o quão profundo um array aninhando deve ser achatado. O padrão é 1.
 
 ### Retorno
 
@@ -74,15 +92,21 @@ arr.reduce((acc, val) => acc.concat(val), []);
 const flattened = (arr) => [].concat(...arr);
 ```
 
-### `reduce` + `concat` + `isArray` + recursividade
+### `reduce` + `concat` + `isArray` + recursividade
 
 ```js
 var arr = [1, 2, [3, 4, [5, 6]]];
 
 // Para achatamentos mais profundos, use recursividade com reduce e concat
 function flatDeep(arr, d = 1) {
-   return d > 0 ? arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), []) : arr.slice();
-};
+  return d > 0
+    ? arr.reduce(
+        (acc, val) =>
+          acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val),
+        [],
+      )
+    : arr.slice();
+}
 
 flatDeep(arr, Infinity);
 // [1, 2, 3, 4, 5, 6]
@@ -96,7 +120,7 @@ flatDeep(arr, Infinity);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.flat")}}
+{{Compat}}
 
 ## Veja Também
 

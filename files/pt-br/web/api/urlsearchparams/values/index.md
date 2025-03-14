@@ -7,7 +7,8 @@ slug: Web/API/URLSearchParams/values
 
 O m*étodo* **`URLSearchParams.values()`**retorna um {{jsxref("Iteration_protocols",'iterator')}} que permite passar por todos os valores do objeto. Os valores são objetos {{domxref("USVString")}}.
 
-> **Nota:** Esse método está disponível no [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Esse método está disponível no [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
 ## Sintaxe
 
@@ -26,7 +27,7 @@ Retorna um {{jsxref("Iteration_protocols","iterator")}}.
 var searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // Mostra os pares de chave/valor
-for(var value of searchParams.values()) {
+for (var value of searchParams.values()) {
   console.log(value);
 }
 ```
@@ -40,13 +41,11 @@ value2
 
 ## Especificações
 
-| Specification                                                                                    | Status               | Comment            |
-| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------ |
-| {{SpecName('URL', '#urlsearchparams','values() (as iterator&lt;&gt;)')}} | {{Spec2('URL')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.URLSearchParams.values")}}
+{{Compat}}
 
 ## Veja também
 

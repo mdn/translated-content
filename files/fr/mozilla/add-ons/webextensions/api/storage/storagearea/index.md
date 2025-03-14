@@ -1,20 +1,9 @@
 ---
 title: storage.StorageArea
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Storage
-  - StorageArea
-  - Type
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 StorageArea est un objet représentant une zone de stockage.
 
@@ -35,15 +24,15 @@ Les valeurs de ce type sont des objets.
 - {{WebExtAPIRef("storage.StorageArea.clear()")}}
   - : Supprime tous les éléments de la zone de stockage.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.storage.StorageArea")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/extensions/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

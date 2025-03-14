@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/String/blink
 
 O método **`blink()`** cria um elemento HTML [\<blink>](/pt-BR/docs/Web/HTML/Element/blink) que faz uma string piscar.
 
-> **Aviso:** A criação de textos que piscam é desaprovada por vários padrões de acessibilidade. O próprio elemento `<blink>` não é padrão e está obsoleto!
+> [!WARNING]
+> A criação de textos que piscam é desaprovada por vários padrões de acessibilidade. O próprio elemento `<blink>` não é padrão e está obsoleto!
 
 ## Sintaxe
 
@@ -31,23 +32,21 @@ O método `blink()` cria uma string dentro de uma tag `<blink>`:
 Os exemplos abaixo usam métodos do objeto [String](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#M%C3%A9todos_gen%C3%A9ricos_de_Strings) para alterar a formatação de uma string:
 
 ```js
-var worldString = 'Olá, mundo';
+var worldString = "Olá, mundo";
 
-console.log(worldString.blink());   // <blink>Olá, mundo</blink>
-console.log(worldString.bold());    // <b>Olá, mundo</b>
+console.log(worldString.blink()); // <blink>Olá, mundo</blink>
+console.log(worldString.bold()); // <b>Olá, mundo</b>
 console.log(worldString.italics()); // <i>Olá, mundo</i>
-console.log(worldString.strike());  // <strike>Olá, mundo</strike>
+console.log(worldString.strike()); // <strike>Olá, mundo</strike>
 ```
 
 ## Especificações
 
-| Specification                                                                                                |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.blink', 'String.prototype.blink')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.blink")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,24 +1,27 @@
 ---
 title: globalThis
 slug: Web/JavaScript/Reference/Global_Objects/globalThis
-tags:
-  - JavaScript
-  - Reference
-  - globalThis
-translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
-original_slug: Web/JavaScript/Reference/Objets_globaux/globalThis
 ---
 
 {{jsSidebar("Objects")}}
 
 La propriété globale **`globalThis`** renvoie l'objet global de plus haut niveau.
 
-{{EmbedInteractiveExample("pages/js/globalprops-globalthis.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - globalThis")}}
+
+```js interactive-example
+function canMakeHTTPRequest() {
+  return typeof globalThis.XMLHttpRequest === "function";
+}
+
+console.log(canMakeHTTPRequest());
+// Expected output (in a browser): true
+```
 
 ## Syntaxe
 
 ```js
-globalThis
+globalThis;
 ```
 
 ## Description
@@ -44,15 +47,21 @@ Avant l'introduction de `globalThis`, la seule façon qui permettait d'obtenir l
 
 ```js
 var getGlobal = function () {
-  if (typeof self !== 'undefined') { return self; }
-  if (typeof window !== 'undefined') { return window; }
-  if (typeof global !== 'undefined') { return global; }
+  if (typeof self !== "undefined") {
+    return self;
+  }
+  if (typeof window !== "undefined") {
+    return window;
+  }
+  if (typeof global !== "undefined") {
+    return global;
+  }
   throw new Error("impossible de trouver l'objet global");
 };
 
 var globals = getGlobal();
 
-if (typeof globals.setTimeout !== 'function') {
+if (typeof globals.setTimeout !== "function") {
   // pas de setTimeout pour cet environnement
 }
 ```
@@ -60,17 +69,15 @@ if (typeof globals.setTimeout !== 'function') {
 Avec `globalThis`, il n'est plus nécessaire de parcourir les différents mots-clés des différents environnements :
 
 ```js
-if (typeof globalThis.setTimeout !== 'function') {
+if (typeof globalThis.setTimeout !== "function") {
   // pas de setTimeout pour cet environnement
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                             | État                                | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | ------------ |
-| [Proposition pour `globalThis`](https://tc39.github.io/proposal-global/#sec-other-properties-of-the-global-object-global) | Proposition de niveau 3 (_stage 3_) |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.globalThis")}}
+{{Compat}}

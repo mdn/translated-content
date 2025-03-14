@@ -1,11 +1,6 @@
 ---
 title: animation-iteration-count
 slug: Web/CSS/animation-iteration-count
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/animation-iteration-count
 ---
 
 {{CSSRef}}
@@ -42,7 +37,8 @@ La propriété `animation-iteration-count` est définie avec une ou plusieurs va
 - `<number>`
   - : Le nombre de répétitions pour l'animation. La valeur par défaut est `1` (elle n'est exécutée qu'une seule fois). Les valeurs négatives sont considérées comme invalides. Il est possible d'utiliser des valeurs qui ne sont pas entières pour indiquer des fragments d'un cycle (ainsi `0.5` indiquera une moitié du cycle de l'animation).
 
-> **Note :** Lorsqu'on utilise plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/Animations_CSS/Utiliser_les_animations_CSS).
+> [!NOTE]
+> Lorsqu'on utilise plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations).
 
 ## Définition formelle
 
@@ -88,15 +84,15 @@ p {
 
 ```html
 <p class="infini">
-  La Chenille et Alice se considérèrent un instant en silence.
-  Enfin la Chenille sortit le houka de sa bouche, et lui adressa
-  la parole d’une voix endormie et traînante.
+  La Chenille et Alice se considérèrent un instant en silence. Enfin la Chenille
+  sortit le houka de sa bouche, et lui adressa la parole d’une voix endormie et
+  traînante.
 </p>
 
 <p class="dix">
-  Voyons si je me souviendrai de tout ce que je savais&nbsp;: quatre fois
-  cinq font douze, quatre fois six font treize, quatre fois sept font
-  — je n’arriverai jamais à vingt de ce train-là.
+  Voyons si je me souviendrai de tout ce que je savais&nbsp;: quatre fois cinq
+  font douze, quatre fois six font treize, quatre fois sept font — je
+  n’arriverai jamais à vingt de ce train-là.
 </p>
 ```
 
@@ -114,5 +110,5 @@ p {
 
 ## Voir aussi
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Utiliser_les_animations_CSS)
+- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

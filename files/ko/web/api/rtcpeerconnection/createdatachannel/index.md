@@ -1,13 +1,13 @@
 ---
 title: RTCPeerConnection.createDataChannel()
 slug: Web/API/RTCPeerConnection/createDataChannel
-translation_of: Web/API/RTCPeerConnection/createDataChannel
 ---
+
 {{APIRef("WebRTC")}}
 
 {{domxref("RTCPeerConnection")}} 인터페이스의 **`createDataChannel()`** 메소드는 어떤 형식의 데이터든 송신 할 수 있도록 원격 유저와 연결하는 신규 채널을 생성합니다.이 방법은 이미지, 파일 전송, 문자 채팅, 게임 패킷 업데이트 등과 같은 백채널 컨텐츠에 유용하게 사용 가능합니다.
 
-연결 인터페이스에 신규 채널이 처음 추가되면, 재협상 과정이 {{event("negotiationneeded")}} 이벤트를 전달하여 시작됩니다.
+연결 인터페이스에 신규 채널이 처음 추가되면, 재협상 과정이 {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} 이벤트를 전달하여 시작됩니다.
 
 ## Syntax
 
@@ -20,7 +20,7 @@ dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
 - `label`
   - : 사람이 읽을 수 있는 채널 이름입니다. 이름의 문자열은 65,535 바이트 보다 작아야합니다.
 - `options` {{optional_inline}}
-  - : [`RTCDataChannelInit` dictionary](#RTCDataChannelInit_dictionary)가 데이터 채널에 대한 설정 옵션들을 제공합니다.
+  - : [`RTCDataChannelInit` dictionary](#rtcdatachannelinit_dictionary)가 데이터 채널에 대한 설정 옵션들을 제공합니다.
 
 ### RTCDataChannelInit 딕셔너리
 
@@ -29,9 +29,9 @@ dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
 - `ordered` {{optional_inline}}
   - : 이 옵션은 {{domxref("RTCDataChannel")}}에 전달된 메세지가 보내진 순서대로 상대방에게 도착해야하는지 (`true`) 아니면 순서가 달라도 허용 (`false`)이 되는지를 결정합니다. **기본 값: `true`.**
 - **`maxPacketLifeTime` {{optional_inline}}**
-  - : 불안정한 모드에서 메세지를 전송 할 때 최대 몇 초 동안 전송을 시도 할 것인지를 결정하는 옵션입니다. 이 값은 16bit의 부호가 없는 정수형이지만, 각 유저 에이전트는 적절하다고 판단되는 최대 값으로 지정 할 수 있습니다. (**주의**: **`maxPacketLifeTime`** 혹은 **`maxRetransmits` **옵션 둘 중 하나만 사용해야함.) **기본 값: `null`.**
+  - : 불안정한 모드에서 메세지를 전송 할 때 최대 몇 초 동안 전송을 시도 할 것인지를 결정하는 옵션입니다. 이 값은 16bit의 부호가 없는 정수형이지만, 각 유저 에이전트는 적절하다고 판단되는 최대 값으로 지정 할 수 있습니다. (**주의**: **`maxPacketLifeTime`** 혹은 **`maxRetransmits`** 옵션 둘 중 하나만 사용해야함.) **기본 값: `null`.**
 - `maxRetransmits` {{optional_inline}}
-  - : 불안정한 모드에서 메세지 전송이 실패하면 최대 몇 번을 재시도 할 것인지를 결정하는 옵션입니다. 이 값은 16bit의 부호가 없는 정수형이지만, 각 유저 에이전트는 적절하다고 판단되는 최대 값으로 지정 할 수 있습니다. (**주의**: **`maxPacketLifeTime`** 혹은 **`maxRetransmits` **옵션 둘 중 하나만 사용해야함.) **기본 값: `null`.**
+  - : 불안정한 모드에서 메세지 전송이 실패하면 최대 몇 번을 재시도 할 것인지를 결정하는 옵션입니다. 이 값은 16bit의 부호가 없는 정수형이지만, 각 유저 에이전트는 적절하다고 판단되는 최대 값으로 지정 할 수 있습니다. (**주의**: **`maxPacketLifeTime`** 혹은 **`maxRetransmits`** 옵션 둘 중 하나만 사용해야함.) **기본 값: `null`.**
 - `protocol` {{optional_inline}}
   - : {{domxref("RTCDataChannel")}}에 사용되는 서브 프로토콜의 이름입니다. 존재하지 않으면 이 옵션은 빈 문자열 (`""`)입니다. **기본 값: 빈 문자열, `""`.** 이 문자열은 65,535 바이트 보다 작아야합니다.
 - `negotiated` {{optional_inline}}
@@ -61,34 +61,34 @@ dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
 
 ## 예시
 
-아래의 예제에서는 어떻게 데이터 채널을 생성하고, 생성 할 때 메세지를 전송하고 수신하는 이벤트인 {{event("open")}}와 {{event("message")}}에대한 핸들러를 설정합니다. (onnegotiationneeded는 이미 설정이 되었다고 가정하고 간소화한 예입니다.)
+아래의 예제에서는 어떻게 데이터 채널을 생성하고, 생성 할 때 메세지를 전송하고 수신하는 이벤트인 {{DOMxRef("RTCDataChannel/open_event", "open")}}와 {{DOMxRef("RTCDataChannel/message_event", "message")}}에대한 핸들러를 설정합니다. (onnegotiationneeded는 이미 설정이 되었다고 가정하고 간소화한 예입니다.)
 
 ```js
 // Offerer side
 
 var pc = new RTCPeerConnection(options);
 var channel = pc.createDataChannel("chat");
-channel.onopen = function(event) {
-  channel.send('Hi you!');
-}
-channel.onmessage = function(event) {
+channel.onopen = function (event) {
+  channel.send("Hi you!");
+};
+channel.onmessage = function (event) {
   console.log(event.data);
-}
+};
 ```
 
 ```js
 // Answerer side
 
 var pc = new RTCPeerConnection(options);
-pc.ondatachannel = function(event) {
+pc.ondatachannel = function (event) {
   var channel = event.channel;
-﻿  channel.onopen = function(event) {
-    channel.send('Hi back!');
-  }
-  channel.onmessage = function(event) {
+  channel.onopen = function (event) {
+    channel.send("Hi back!");
+  };
+  channel.onmessage = function (event) {
     console.log(event.data);
-  }
-}
+  };
+};
 ```
 
 다른 방법으로는 양쪽에서 합의한 id를 사용하여 보다 대칭적인 대역 밴드 외 협상이 가능합니다. (id는 0입니다):
@@ -97,13 +97,13 @@ pc.ondatachannel = function(event) {
 // Both sides
 
 var pc = new RTCPeerConnection(options);
-var channel = pc.createDataChannel("chat", {negotiated: true, id: 0});
-channel.onopen = function(event) {
-  channel.send('Hi!');
-}
-channel.onmessage = function(event) {
+var channel = pc.createDataChannel("chat", { negotiated: true, id: 0 });
+channel.onopen = function (event) {
+  channel.send("Hi!");
+};
+channel.onmessage = function (event) {
   console.log(event.data);
-}
+};
 ```
 
 연결 및 채널이 구성되는 예를 더 자세히 알고 싶다면, [A simple RTCDataChannel sample](/ko/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)를 참조하십시오.

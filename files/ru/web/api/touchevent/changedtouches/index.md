@@ -1,7 +1,6 @@
 ---
 title: TouchEvent.changedTouches
 slug: Web/API/TouchEvent/changedTouches
-translation_of: Web/API/TouchEvent/changedTouches
 ---
 
 {{ APIRef("Touch Events") }}
@@ -31,22 +30,31 @@ var changes = touchEvent.changedTouches;
 
 Этот пример демонстрирует свойство {{domxref("TouchEvent.changedTouches")}} объекта {{domxref("TouchEvent")}}. Свойство {{domxref("TouchEvent.changedTouches")}} это — объект {{domxref("TouchList")}}, который содержит объект {{domxref("Touch")}} для каждой точки, где произошло событие.
 
-В этом фрагменте кода обработчик события {{event("touchmove")}} выполняет перебор списка `changedTouches` и выводит в консоль идентификатор каждой точки касания, где произошло изменение с последнего события.
+В этом фрагменте кода обработчик события [`touchmove`](/ru/docs/Web/API/Element/touchmove_event) выполняет перебор списка `changedTouches` и выводит в консоль идентификатор каждой точки касания, где произошло изменение с последнего события.
 
 ```js
-someElement.addEventListener('touchmove', function(e) {
-   // Iterate through the list of touch points that changed
-   // since the last event and print each touch point's identifier.
-   for (var i=0; i < e.changedTouches.length; i++) {
-     console.log("changedTouches[" + i + "].identifier = " + e.changedTouches[i].identifier);
-   }
-}, false);
+someElement.addEventListener(
+  "touchmove",
+  function (e) {
+    // Iterate through the list of touch points that changed
+    // since the last event and print each touch point's identifier.
+    for (var i = 0; i < e.changedTouches.length; i++) {
+      console.log(
+        "changedTouches[" +
+          i +
+          "].identifier = " +
+          e.changedTouches[i].identifier,
+      );
+    }
+  },
+  false,
+);
 ```
 
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

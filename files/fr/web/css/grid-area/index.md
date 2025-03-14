@@ -1,11 +1,6 @@
 ---
 title: grid-area
 slug: Web/CSS/grid-area
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/grid-area
 ---
 
 {{CSSRef}}
@@ -60,7 +55,8 @@ grid-area: unset;
 
   - : S'il existe une ligne nommée avec '\<custom-ident>-start', la première ligne correspondante contribue au placement de l'élément sur la grille.
 
-    > **Note :** Les noms des zones de grille sont générés implicitement. Ainsi, en utilisant `grid-area: foo;` cela sélectionnera le début de la grille nommée correspondante (sauf si une autre ligne `foo-start` a été explicitement déclarée).
+    > [!NOTE]
+    > Les noms des zones de grille sont générés implicitement. Ainsi, en utilisant `grid-area: foo;` cela sélectionnera le début de la grille nommée correspondante (sauf si une autre ligne `foo-start` a été explicitement déclarée).
 
     Sinon, la valeur est traitée comme si on avait utilisé `<custom-ident>` et la valeur `1`.
 
@@ -143,5 +139,5 @@ grid-area: unset;
 - {{cssxref("grid-column")}}
 - {{cssxref("grid-column-start")}}
 - {{cssxref("grid-column-end")}}
-- [Guide : les zones des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+- [Guide : les zones des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
 - Tutoriel vidéo : [les zones des grilles CSS (en anglais)](https://gridbyexample.com/video/grid-template-areas/)

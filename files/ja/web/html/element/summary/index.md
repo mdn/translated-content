@@ -1,46 +1,48 @@
 ---
-title: '<summary>: 概要明示要素'
+title: "<summary>: 概要明示要素"
 slug: Web/HTML/Element/summary
+l10n:
+  sourceCommit: f3fc83168e55e161650b73755db53ecadfe816b7
 ---
 
 {{HTMLSidebar}}
 
-**`<summary>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("details")}} 要素の折り畳みボックスの要約、キャプション、説明、凡例を表します。 `<summary>` 要素をクリックすると、親の `<details>` 要素の開閉状態を切り替えることができます。
+**`<summary>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("details")}} 要素の折りたたみボックスの要約、キャプション、説明、凡例を表します。 `<summary>` 要素をクリックすると、親の `<details>` 要素の開閉状態を切り替えることができます。
 
-{{EmbedInteractiveExample("pages/tabbed/summary.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;summary&gt;", "tabbed-shorter")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>。または <a href="/ja/docs/Web/Guide/HTML/Content_categories#見出しコンテンツ">見出しコンテンツ</a> のうちひとつの要素
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
-      <td>不可。開始タグと終了タグの両方が必要。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>{{HTMLElement("details")}} 要素</td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>許可されている <code>role</code> なし</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
-  </tbody>
-</table>
+```html interactive-example
+<details>
+  <summary>
+    I have keys but no doors. I have space but no room. You can enter but can’t
+    leave. What am I?
+  </summary>
+  A keyboard.
+</details>
+```
+
+```css interactive-example
+details {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+```
 
 ## 属性
 
@@ -50,15 +52,17 @@ slug: Web/HTML/Element/summary
 
 `<summary>` 要素の中身には、見出しコンテンツ、プレーンテキスト、段落内で使用できる HTML が入れられます。
 
-`<summary>` 要素は、 `<details>` 要素の最初の子として*のみ*使用できます。ユーザーが概要をクリックすると、親の `<details>` 要素が開閉し、 {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} イベントが `<details>` 要素に送信され、状態が変化したことを知るために使用することができます。
+`<summary>` 要素は、 `<details>` 要素の最初の子として*のみ*使用できます。ユーザーがこの概要をクリックすると、親の `<details>` 要素が開閉し、 {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} イベントが `<details>` 要素に送信され、状態が変化したことを知ることができます。
 
-## 既定のラベルテキスト
+`<details>` の内容は、`<summary>` の{{glossary("accessible description", "アクセシブル説明")}}となります。
 
-`<details>` 要素の最初の子が `<summary>` 要素でな{{Glossary("user agent", "ユーザーエージェント")}}は既定の文字列（ふつうは「詳細」）を折りたたみボックスのラベルとして使用します。
+### 既定のラベルテキスト
 
-## 既定のスタイル
+`<details>` 要素の最初の子が `<summary>` 要素でない場合、{{Glossary("user agent", "ユーザーエージェント")}}は既定の文字列（ふつうは「詳細」）を折りたたみボックスのラベルとして使用します。
 
-HTML 仕様書では、`<summary>` の既定のスタイルに `display: list-item` が含まれています。これで、ラベルの隣に既定で（多くは三角形で）表示される折りたたみウィジェットのとして表示さえるアイコンを変更したり削除したりすることができます。
+### 既定のスタイル
+
+HTML 仕様書では、`<summary>` の既定のスタイルに `display: list-item` が含まれています。これで、ラベルの隣に既定で（多くは三角形で）表示される折りたたみウィジェットとして表示されるアイコンを変更したり削除したりすることができます。
 
 スタイルを `display: block` に変更すると、展開用の三角印を削除することができます。
 
@@ -68,9 +72,9 @@ Safari などの Webkit ベースのブラウザーでは、標準外の CSS 擬
 
 ## 例
 
-以下に `<summary>` を使用している例をいくつか示します。 {{HTMLElement("details")}} 要素のドキュメントにもいくつか例があります。
+以下に `<summary>` を使用している例をいくつか示します。{{HTMLElement("details")}} 要素のドキュメントにもいくつか例があります。
 
-## 基本的な例
+### 基本的な例
 
 {{HTMLElement("details")}} 要素の中で `<summary>` の使用を示す簡単な例です。
 
@@ -85,9 +89,11 @@ Safari などの Webkit ベースのブラウザーでは、標準外の CSS 擬
 </details>
 ```
 
+#### 結果
+
 {{EmbedLiveSample("Basic_example", 650, 120)}}
 
-## 見出しとしての概要
+### 見出しとしての概要
 
 次のように、 `<summary>` の中で見出し要素を使用することができます。
 
@@ -102,14 +108,15 @@ Safari などの Webkit ベースのブラウザーでは、標準外の CSS 擬
 </details>
 ```
 
+#### 結果
+
 {{EmbedLiveSample("Summaries_as_headings", 650, 120)}}
 
 これは現在のところ、間隔の問題をいくつか抱えており、 CSS を使用して修正することができます。
 
-> **警告:** `<summary>` 要素の既定のロールは [button](/ja/docs/Web/Accessibility/ARIA/Roles/button_role)（子要素からはすべてのロールを外す）ですので、この例は画面リーダーのような支援技術のユーザーには動作しません。 `<h4>` のロールが削除されますので、これらのユーザーからは見出しとして扱われなくなります。
-</div>
+> **警告:** `<summary>` 要素の既定のロールは [button](/ja/docs/Web/Accessibility/ARIA/Roles/button_role)（子要素からはすべてのロールを外す）ですので、この例はスクリーンリーダーのような支援技術のユーザーには動作しません。`<h4>` のロールが削除されますので、これらのユーザーからは見出しとして扱われなくなります。
 
-## 概要の中の HTML
+### 概要の中の HTML
 
 この例は、 `<summary>` 要素にいくらか意味を追加して、ラベルを重要であると示します。
 
@@ -124,7 +131,56 @@ Safari などの Webkit ベースのブラウザーでは、標準外の CSS 擬
 </details>
 ```
 
+#### 結果
+
 {{EmbedLiveSample("HTML_in_summaries", 650, 120)}}
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories"
+          >コンテンツカテゴリー</a
+        >
+      </th>
+      <td>
+        なし
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >、任意で<a href="/ja/docs/Web/HTML/Content_categories#見出しコンテンツ"
+          >見出しコンテンツ</a
+        >を交ぜることができる
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>不可。開始タグと終了タグの両方が必要。</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>{{HTMLElement("details")}} 要素</td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td> <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>許可されている <code>role</code> なし</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

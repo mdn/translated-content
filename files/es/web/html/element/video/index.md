@@ -1,14 +1,9 @@
 ---
 title: video
 slug: Web/HTML/Element/video
-tags:
-  - HTML
-  - HTML5
-  - Multimedia
-  - para_revisar
-translation_of: Web/HTML/Element/video
-original_slug: Web/HTML/Elemento/video
 ---
+
+{{HTMLSidebar}}
 
 El elemento `video` se utiliza para incrustar vídeos en un documento HTML o XHTML.
 
@@ -16,31 +11,32 @@ Para obtener una lista de formatos compatibles, consulta [Formatos multimedia ad
 
 ## Contexto de uso
 
-| Contenido permitido            | [Contenido transparente](/en/HTML/Content_categories#transparent_content) , que contiene un atributo **src** o uno o más elementos {{ HTMLElement ("source") }}, seguidos por [contenido dinámico](/en/HTML/Content_categories#flow_content) o [el contenido estático](/en/HTML/Content_categories#phrasing_content) , sin elementos `<video>` ni {{ HTMLElement ("audio") }}. |
-| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omisión de etiquetas           | Ninguna, deben estar presentes tanto las etiquetas de inicio como las de cierre                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Elementos primarios permitidos | Cualquier elemento que acepte [contenido dinámico](/en/HTML/Content_categories#flow_content) o cualquier otro elemento que acepte [contenido estático](/en/HTML/Content_categories#phrasing_content) .                                                                                                                                                                                                                                           |
-| Documento normativo            | [HTML 5, sección 4.8.6](http://www.w3.org/TR/html5/video.html#video)                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Contenido permitido            | [Contenido transparente](/es/docs/Web/HTML/Content_categories#transparent_content) , que contiene un atributo **src** o uno o más elementos {{ HTMLElement ("source") }}, seguidos por [contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content) o [el contenido estático](/es/docs/Web/HTML/Content_categories#phrasing_content) , sin elementos `<video>` ni {{ HTMLElement ("audio") }}. |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omisión de etiquetas           | Ninguna, deben estar presentes tanto las etiquetas de inicio como las de cierre                                                                                                                                                                                                                                                                                                                           |
+| Elementos primarios permitidos | Cualquier elemento que acepte [contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content) o cualquier otro elemento que acepte [contenido estático](/es/docs/Web/HTML/Content_categories#phrasing_content) .                                                                                                                                                                                  |
+| Documento normativo            | [HTML 5, sección 4.8.6](https://www.w3.org/TR/html5/video.html#video)                                                                                                                                                                                                                                                                                                                                     |
 
 ## Atributos
 
-- {{ htmlattrdef("autoplay") }}
+- `autoplay`
   - : Un atributo booleano; si se especifica, el video comenzará a reproducirse automáticamente tan pronto como sea posible, sin detenerse para terminar de cargar los datos.
-- {{ htmlattrdef("autobuffer") }} {{ Non-standard_inline() }} {{deprecated_inline}}
+- `autobuffer` {{ Non-standard_inline() }} {{deprecated_inline}}
 
   - : Un atributo booleano; si se especifica, el video comenzará automáticamente a almacenarse en el búfer, incluso si no está listo para reproducirse de forma automática. Esto se debe utilizar para los casos en los que se considera probable que el video se reproduzca (por ejemplo, si el usuario accedió a esa página específica para reproducir el video, no si hay un video insertado junto con otros contenidos). El video se almacena en el búfer hasta que el caché de medios esté lleno.
 
-    > **Nota:** **Nota de implementación:** aunque forma parte de los primeros borradores de la especificación HTML 5, el atributo **autobuffer** se ha eliminado en versiones posteriores. Se ha quitado de Gecko 2.0 y otros navegadores, y en algunos nunca llegó a implementarse. La especificación define un nuevo atributo enumerado, **preload,** para sustituir el atributo **autobuffer,** con una sintaxis diferente. {{ bug (548523) }}
+    > [!NOTE]
+    > Aunque forma parte de los primeros borradores de la especificación HTML 5, el atributo **autobuffer** se ha eliminado en versiones posteriores. Se ha quitado de Gecko 2.0 y otros navegadores, y en algunos nunca llegó a implementarse. La especificación define un nuevo atributo enumerado, **preload,** para sustituir el atributo **autobuffer,** con una sintaxis diferente. [Error 548523 en Firefox](https://bugzil.la/548523)
 
-- {{ htmlattrdef("buffered") }}
+- `buffered`
   - : Un atributo que se puede leer para determinar qué intervalos de tiempo del multimedia se han almacenado en búfer. Este atributo contiene un objeto {{ domxref("TimeRanges") }} .
-- {{ htmlattrdef("controls") }}
+- `controls`
   - : Si está presente este atributo, Gecko ofrecerá controles para permitir que el usuario controle la reproducción de video, incluyendo volumen, búsqueda y pausar/reanudar reproducción.
-- {{ htmlattrdef("height") }}
+- `height`
   - : La altura del área de visualización del vídeo en píxeles CSS.
-- {{ htmlattrdef("loop") }}
+- `loop`
   - : Un atributo booleano; si se especifica, al alcanzar el final del video, buscaremos automáticamente hasta el principio.
-- {{ htmlattrdef("preload") }} {{ bug(548523) }}
+- `preload` [Error 548523 en Firefox](https://bugzil.la/548523)
 
   - : El objetivo de este atributo enumerado es proporcionar una sugerencia al navegador sobre qué cree el autor que llevará a la mejor experiencia para el usuario . Puede tener uno de los siguientes valores:
 
@@ -51,21 +47,22 @@ Para obtener una lista de formatos compatibles, consulta [Formatos multimedia ad
 
     Si no está configurado, su valor predeterminado está definido por el navegador (es decir, cada navegador puede elegir su propio valor predeterminado), aunque la especificación aconseje que se establezca a metadata.
 
-    > **Nota:**
+    > [!NOTE]
     >
     > - El atributo **autoplay** tiene prioridad sobre éste si se desea reproducir automáticamente un video, el navegador obviamente tendrá que descargarlo. La especificación permite establecer los atributos **autoplay** y **preload**.
     > - La especificación no fuerza al navegador a seguir el valor de este atributo; es tan sólo una sugerencia.
 
-- {{ htmlattrdef("poster") }}
+- `poster`
   - : Una URL que indica un marco de póster para mostrar el resultado hasta que el usuario reproduzca o busque. Si este atributo no se especifica, no se muestra nada hasta que el primer cuadro está disponible, entonces se muestra el primer marco como el marco de póster.
-- {{ htmlattrdef("src") }}
+- `src`
   - : La URL del vídeo que se va a insertar. Es opcional; podrás optar, en su lugar, por el elemento {{ HTMLElement("source") }} dentro del bloque de vídeo para especificar el video que se va a incrustar.
-- {{ htmlattrdef("width") }}
+- `width`
   - : La anchura del área de visualización del vídeo en píxeles CSS.
 
 Las compensaciones de tiempo se especifican actualmente como valores float que representan el número de segundos que se va a compensar.
 
-> **Nota:** **Nota:** la definición del valor de compensación de tiempo no se ha completado en HTML 5 aún y está sujeta a cambios.
+> [!NOTE]
+> La definición del valor de compensación de tiempo no se ha completado en HTML 5 aún y está sujeta a cambios.
 
 ## Ejemplos
 
@@ -93,15 +90,15 @@ Su proveedor de alojamiento web puede proporcionar una interfaz fácil para los 
 
 ## Interfaz DOM
 
-- [HTMLVideoElement](/en/DOM/HTMLVideoElement)
+- {{domxref("HTMLVideoElement")}}
 
 ## Consulta también
 
 - [Formatos multimedia admitidos por los elementos de audio y video](/es/Formatos_multimedia_admitidos_por_los_elementos_de_video_y_audio)
-- [`audio`](/es/HTML/Elemento/Audio)
+- [`audio`](/es/docs/Web/HTML/Element/audio)
 - [Usar audio y vídeo en Firefox](/Es/Usar_audio_y_vídeo_en_Firefox)
-- [Manipular vídeo por medio de canvas](/En/Manipulating_video_using_canvas)
-- [`nsIDOMHTMLMediaElement`](/En/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement)
+- [Manipular vídeo por medio de canvas](/en-US/Manipulating_video_using_canvas)
+- [`nsIDOMHTMLMediaElement`](/en-US/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement)
 - [TinyVid](http://tinyvid.tv/):ejemplos de uso de ogg en HTML 5.
-- [El elemento `video`](http://www.whatwg.org/specs/web-apps/current-work/#video) (especificación de HTML 5)
-- [Configuración de servidores para medios Ogg](/en/Configuring_servers_for_Ogg_media)
+- [El elemento `video`](https://www.whatwg.org/specs/web-apps/current-work/#video) (especificación de HTML 5)
+- [Configuración de servidores para medios Ogg](/en-US/Configuring_servers_for_Ogg_media)

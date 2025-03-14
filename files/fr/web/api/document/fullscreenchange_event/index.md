@@ -1,8 +1,9 @@
 ---
 title: fullscreenchange
 slug: Web/API/Document/fullscreenchange_event
-translation_of: Web/API/Document/fullscreenchange_event
 ---
+
+{{APIRef}}
 
 L'événement **`onfullscreenchange`** est déclenché lorsque le navigateur alterne entre le mode fenêtré et plein écran.
 
@@ -23,35 +24,32 @@ L'événement **`onfullscreenchange`** est déclenché lorsque le navigateur alt
 
 ## Propriétés
 
-| Property                              | Type                                 | Description                                          |
-| ------------------------------------- | ------------------------------------ | ---------------------------------------------------- |
+| Property                        | Type                       | Description                                          |
+| ------------------------------- | -------------------------- | ---------------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | L'élément recevant l'événement.                      |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | Le type de l'événement.                              |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Indique si l'événement bubble habituellement ou non. |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Indique si l'événement est annulable ou non.         |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Le type de l'événement.                              |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Indique si l'événement bubble habituellement ou non. |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Indique si l'événement est annulable ou non.         |
 
 ## Exemple
 
 ```js
 // Noter que l'API est toujours vendor-prefixed dans les navigateurs l'implémentant
-document.addEventListener("fullscreenchange", function( event ) {
-
-    // L'objet event ne porte pas l'information à propos du mode plein écran
-    // Cependant, il est possible de la trouver à travers l'API fullscreen
-    if ( document.fullscreen ) {
-
-        // La cible de l'événement est toujours le document,
-        // mais il est possible de retrouver l'élément fullscreen à travers l'API
-        document.fullscreenElement;
-    }
-
+document.addEventListener("fullscreenchange", function (event) {
+  // L'objet event ne porte pas l'information à propos du mode plein écran
+  // Cependant, il est possible de la trouver à travers l'API fullscreen
+  if (document.fullscreen) {
+    // La cible de l'événement est toujours le document,
+    // mais il est possible de retrouver l'élément fullscreen à travers l'API
+    document.fullscreenElement;
+  }
 });
 ```
 
 ## Evénements liés
 
-- [`fullscreenerror`](/fr/docs/Mozilla_event_reference/fullscreenerror)
+- [`fullscreenerror`](/fr/docs/Web/API/Document/fullscreenerror_event)
 
 ## Voir aussi
 
-- [Utilisation du mode plein écran](/fr/docs/DOM/Using_full-screen_mode)
+- [Utilisation du mode plein écran](/fr/docs/Web/API/Fullscreen_API)

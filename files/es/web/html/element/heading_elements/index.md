@@ -1,35 +1,26 @@
 ---
 title: Elementos títulos
 slug: Web/HTML/Element/Heading_Elements
-tags:
-  - HTML
-  - HTML:Elemento
-  - Referencia
-  - Secciones HTML
-  - Todas_las_Categorías
-  - Web
-translation_of: Web/HTML/Element/Heading_Elements
-original_slug: Web/HTML/Elemento/Elementos_títulos
 ---
 
 Los elementos de **encabezado** implementan seis niveles de encabezado del documento, `<h1>` es el más importante, y `<h6>`, el menos importante. Un elemento de encabezado describe brevemente el tema de la sección que presenta. La información de encabezado puede ser usada por los agentes usuarios, por ejemplo, para construir una tabla de contenidos para un documento automáticamente.
 
-> **Nota:**
+> [!NOTE]
 >
 > - No se deben usar niveles inferiores para reducir el tamaño de la fuente: use la propiedad [CSS](/es/docs/Web/CSS) {{cssxref("font-size")}} para eso.
 > - Evite omitir niveles de encabezado: siempre comience con `<h1>`, después use `<h2>` y así sucesivamente.
 > - Con el elemento {{HTMLElement("section")}}, debe considerar evitar usar \<h1> más de una vez en una página; por costumbre, se usa para mostrar el título de la página, con todos los encabezados debajo de éste comenzando con `<h2>`. Cuando se usan secciones, debe usarse un `<h1>` por sección. Véase [Definiendo secciones](/es/docs/Sections_and_Outlines_of_an_HTML5_document#Definiendo_secciones_en_HTML5) en [Secciones y esquema de un documento HTML5](/es/docs/Sections_and_Outlines_of_an_HTML5_document) para más información.
 
-| [Categorías de contenido](/es/docs/Web/Guide/HTML/categorias_de_contenido) | [Contenido dinámico](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico), contenido de encabezados, contenido palpable.                                                                               |
-| -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                                        | [Contenido textual o estático](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_textual_o_estático).                                                                                                         |
-| Omisión de etiquetas                                                       | {{no_tag_omission}}                                                                                                                                                                                              |
-| Elementos padres permitidos                                                | Cualquier elemento que acepte [contenido dinámico](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico); no debe usarse como hijo del elemento {{HTMLElement("hgroup")}}, pues éste es obsoleto |
-| Interfaz DOM                                                               | {{domxref("HTMLHeadingElement")}}                                                                                                                                                                          |
+| [Categorías de contenido](/es/docs/Web/HTML/Content_categories) | [Contenido dinámico](/es/docs/Web/HTML/Content_categories#contenido_dinámico), contenido de encabezados, contenido palpable.                                                                        |
+| --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Contenido permitido                                             | [Contenido textual o estático](/es/docs/Web/HTML/Content_categories#contenido_textual_o_estático).                                                                                                  |
+| Omisión de etiquetas                                            | Ninguna, tanto la etiqueta inicial como la final son obligatorias.                                                                                                                                  |
+| Elementos padres permitidos                                     | Cualquier elemento que acepte [contenido dinámico](/es/docs/Web/HTML/Content_categories#contenido_dinámico); no debe usarse como hijo del elemento {{HTMLElement("hgroup")}}, pues éste es obsoleto |
+| Interfaz DOM                                                    | {{domxref("HTMLHeadingElement")}}                                                                                                                                                                   |
 
 ## Atributos
 
-Estos elementos incluyen los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
+Estos elementos incluyen los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
 El atributo `align` es obsoleto; no debe usarse.
 
@@ -104,35 +95,35 @@ Las etiquetas de cabecera pueden anidarse para generar sub-secciones en nuestros
 
 1. `h1` Harry Potter
 
-    1. `h2` Sinopsis
-    2. `h2` Novelas
+   1. `h2` Sinopsis
+   2. `h2` Novelas
 
-        1. `h3` Harry Potter y la Piedra Filosofal
-        2. `h3` Harry Potter y la Cámara de los Secretos
-        3. `h3` Harry Potter y el Prisionero de Azkaban
-        4. `h3` Harry Potter y el Cáliz de Fuego
-        5. `h3` Harry Potter y la Orden del Fenix
-        6. `h3` Harry Potter y el Príncipe Mestizo
-        7. `h3` Harry Potter y las Reliquias de la Muerte
+      1. `h3` Harry Potter y la Piedra Filosofal
+      2. `h3` Harry Potter y la Cámara de los Secretos
+      3. `h3` Harry Potter y el Prisionero de Azkaban
+      4. `h3` Harry Potter y el Cáliz de Fuego
+      5. `h3` Harry Potter y la Orden del Fenix
+      6. `h3` Harry Potter y el Príncipe Mestizo
+      7. `h3` Harry Potter y las Reliquias de la Muerte
 
-    3. `h2` Películas
+   3. `h2` Películas
 
-        1. `h3` Harry Potter y la Piedra Filosofal
-        2. `h3` Harry Potter y la Cámara de los Secretos
-        3. `h3` Harry Potter y el Prisionero de Azkaban
-        4. `h3` Harry Potter y el Cáliz de Fuego
-        5. `h3` Harry Potter y la Orden del Fenix
-        6. `h3` Harry Potter y el Príncipe Mestizo
-        7. `h3` Harry Potter y las Reliquias de la Muerte (Parte 1)
-        8. `h3` Harry Potter y las Reliquias de la Muerte (Parte 2)
+      1. `h3` Harry Potter y la Piedra Filosofal
+      2. `h3` Harry Potter y la Cámara de los Secretos
+      3. `h3` Harry Potter y el Prisionero de Azkaban
+      4. `h3` Harry Potter y el Cáliz de Fuego
+      5. `h3` Harry Potter y la Orden del Fenix
+      6. `h3` Harry Potter y el Príncipe Mestizo
+      7. `h3` Harry Potter y las Reliquias de la Muerte (Parte 1)
+      8. `h3` Harry Potter y las Reliquias de la Muerte (Parte 2)
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.h1")}}
+{{Compat}}
 
 ## Véase también
 

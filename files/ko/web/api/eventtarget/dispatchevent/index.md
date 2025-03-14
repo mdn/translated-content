@@ -1,11 +1,6 @@
 ---
 title: EventTarget.dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
-tags:
-  - Method
-  - Reference
-browser-compat: api.EventTarget.dispatchEvent
-translation_of: Web/API/EventTarget/dispatchEvent
 ---
 
 {{APIRef("DOM")}}
@@ -16,12 +11,12 @@ translation_of: Web/API/EventTarget/dispatchEvent
 
 > **참고:** `dispatchEvent()` 사용 시, {{domxref("Event.target")}} 속성은 현재 `EventTarget`으로 초기화됩니다.
 
-브라우저가 발송하는 "네이티브" 이벤트는 [이벤트 루프](/ko/docs/Web/JavaScript/EventLoop)를 통해 비동기적으로 처리기들을 호출하지만, `dispatchEvent()`로 발송된 이벤트는 처리기를 동기적으로 호출합니다. 즉, 모든 적합한 처리기의 호출과 반환이 끝나야 `dispatchEvent()` 역시 반환합니다.
+브라우저가 발송하는 "네이티브" 이벤트는 [이벤트 루프](/ko/docs/Web/JavaScript/Event_loop)를 통해 비동기적으로 처리기들을 호출하지만, `dispatchEvent()`로 발송된 이벤트는 처리기를 동기적으로 호출합니다. 즉, 모든 적합한 처리기의 호출과 반환이 끝나야 `dispatchEvent()` 역시 반환합니다.
 
 ## 구문
 
 ```js
-dispatchEvent(event)
+dispatchEvent(event);
 ```
 
 ### 매개변수
@@ -38,7 +33,8 @@ dispatchEvent(event)
 - `InvalidStateError` {{domxref("DomException")}}
   - : 이벤트 초기화 시 이벤트 유형을 지정하지 않은 경우 발생합니다.
 
-> **경고:** 이벤트 처리기에서 발생한 예외는 처리하지 않은 예외로 보고됩니다. 이벤트 처리기는 중첩 호출 스택에서 동작하므로, 실행이 끝날 때까지 호출자는 대기하지만, 예외는 호출자로 전파되지 않습니다.
+> [!WARNING]
+> 이벤트 처리기에서 발생한 예외는 처리하지 않은 예외로 보고됩니다. 이벤트 처리기는 중첩 호출 스택에서 동작하므로, 실행이 끝날 때까지 호출자는 대기하지만, 예외는 호출자로 전파되지 않습니다.
 
 ## 예외
 

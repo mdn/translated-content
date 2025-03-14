@@ -1,29 +1,35 @@
 ---
-title: URL.toJSON()
+title: URL：toJSON() 方法
 slug: Web/API/URL/toJSON
+l10n:
+  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{APIRef("URL API")}}
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
-{{domxref("URL")}}接口的 **toJSON()** 方法返回一个{{domxref("USVString")}}，其中包含一个序列化的 URL 版本，尽管在实践中它似乎与{{domxref("URL.toString()")}}有相同的效果。
-
-{{AvailableInWorkers}}
+{{domxref("URL")}} 接口的 **`toJSON()`** 方法返回一个包含 URL 序列化版本的字符串，但实际上它似乎与 {{domxref("URL.toString()")}} 的效果相同。
 
 ## 语法
 
+```js-nolint
+toJSON()
 ```
-const href = url.toJSON()
-```
+
+### 参数
+
+无。
 
 ### 返回值
 
-一个 {{domxref("USVString")}}.
+字符串。
 
-## 例子
+## 示例
 
-```
-const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
-url.toJSON(); // 应该以字符串形式返回 URL
+```js
+const url = new URL(
+  "https://developer.mozilla.org/zh-CN/docs/Web/API/URL/toString",
+);
+url.toJSON(); // 应以字符串形式返回 URL
 ```
 
 ## 规范
@@ -33,3 +39,7 @@ url.toJSON(); // 应该以字符串形式返回 URL
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [`core-js` 中 `URL.prototype.toJSON` 的 Polyfill](https://github.com/zloirock/core-js#url-and-urlsearchparams)

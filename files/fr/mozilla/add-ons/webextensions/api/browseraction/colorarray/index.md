@@ -1,20 +1,9 @@
 ---
 title: browserAction.ColorArray
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/ColorArray
-tags:
-  - API
-  - Add-ons
-  - ColorArray
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - browserAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/ColorArray
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 ## Type
 
@@ -27,13 +16,13 @@ Un tableau de quatre nombres entiers entre 0-255 définie une couleur RGBA. Les 
 
 Par exemple , le rouge opaque est `[255, 0, 0, 255]`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserAction.ColorArray")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
 >

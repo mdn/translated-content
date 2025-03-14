@@ -1,8 +1,6 @@
 ---
 title: Le positionnement
 slug: Learn/CSS/CSS_layout/Positioning
-translation_of: Learn/CSS/CSS_layout/Positioning
-original_slug: Apprendre/CSS/CSS_layout/Le_positionnement
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
@@ -39,7 +37,7 @@ Le positionnement statique est celui reçu par défaut par chaque élément. Cel
 Pour illustrer ce positionnement (et disposer d'exemple qui nous servira pour les prochaines sections), ajoutez tout d'abord une classe `positioned` pour le deuxième [`<p>`](/fr/docs/Web/HTML/Element/p) dans le HTML&nbsp;:
 
 ```html
-<p class="positioned"> … </p>
+<p class="positioned">…</p>
 ```
 
 Puis ajoutez la règle suivante au bas de votre CSS&nbsp;:
@@ -53,7 +51,8 @@ Puis ajoutez la règle suivante au bas de votre CSS&nbsp;:
 
 Si vous sauvegardez et actualisez, vous verrez qu'il n'y a aucune différence, à l'exception de la mise à jour de la couleur de l'arrière-plan du deuxième paragraphe. C'est correct, comme nous l'avons vu plus tôt, le positionnement statique est le comportement par défaut&nbsp;!
 
-> **Note :** Vous pouvez voir cet exemple fonctionner sur la page [`1_static-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) ([voir le code source correspondant](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/1_static-positioning.html)).
+> [!NOTE]
+> Vous pouvez voir cet exemple fonctionner sur la page [`1_static-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) ([voir le code source correspondant](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/1_static-positioning.html)).
 
 ## Positionnement relatif
 
@@ -74,20 +73,43 @@ top: 30px;
 left: 30px;
 ```
 
-> **Note :** Les valeurs de ces propriétés peuvent prendre n'importe quelle [unité](/fr/docs/Learn/CSS/Building_blocks/Values_and_units) logiquement attendue ici&nbsp;: pixels, mm, rem, %, etc.
+> [!NOTE]
+> Les valeurs de ces propriétés peuvent prendre n'importe quelle [unité](/fr/docs/Learn/CSS/Building_blocks/Values_and_units) logiquement attendue ici&nbsp;: pixels, mm, rem, %, etc.
 
 Si vous enregistrez et actualisez maintenant, vous verrez ce résultat&nbsp;:
 
 ```html hidden
 <h1>Positionnement relatif</h1>
 
-<p>Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.</p>
+<p>
+  Je suis élément de base de niveau bloc. Les éléments de niveau de bloc
+  adjacents se trouvent sur de nouvelles lignes en dessous de moi.
+</p>
 
-<p class="positioned">Par défaut, je couvre 100% de la largeur de mon élément parent et je suis aussi haut que mon contenu enfant. Mes largeur et hauteur totales sont égales aux largeur et hauteur du contenu, plus celles du remplissage, plus celles de l'encadrement.</p>
+<p class="positioned">
+  Par défaut, je couvre 100% de la largeur de mon élément parent et je suis
+  aussi haut que mon contenu enfant. Mes largeur et hauteur totales sont égales
+  aux largeur et hauteur du contenu, plus celles du remplissage, plus celles de
+  l'encadrement.
+</p>
 
-<p>Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.</p>
+<p>
+  Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la
+  fusion des marges, nous sommes séparés par la largeur de la plus grande de nos
+  marges, et non par la somme des deux.
+</p>
 
-<p>Les éléments «&nbsp;inline&nbsp;» <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les nœuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments «&nbsp;inline&nbsp;» débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span>&nbsp;; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
+<p>
+  Les éléments «&nbsp;inline&nbsp;» <span>comme celui-ci </span>ou
+  <span>cet autre</span> sont sur une même ligne que les nœuds de texte
+  adjacents, s'il y a de la place sur la même ligne. Les éléments
+  «&nbsp;inline&nbsp;» débordants
+  <span
+    >se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant
+    du texte</span
+  >&nbsp;; sinon, ils passent simplement à une nouvelle ligne, un peu comme
+  cette image le fait : <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -120,7 +142,8 @@ span {
 
 Cool, n'est-ce pas&nbsp;? Oui, mais ce n'était probablement pas ce à quoi vous vous attendiez. Pourquoi le déplacement s'est‑il effectué vers le bas et à droite si nous avons défini `top` (haut) et `left` (gauche)&nbsp;? Même si cela peut paraître illogique, c'est la façon dont fonctionne le positionnement relatif. Songez à une force invisible poussant le côté spécifié de l'élément à positionner, le déplaçant ainsi dans la direction opposée. Par exemple, si nous spécifions `top: 30px;`, une force pousse le haut de la boîte, entraînant son déplacement vers le bas de 30px.
 
-> **Note :** À ce stade de l'article, vous pouvez retrouver un exemple ici [`2_relative-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/2_relative-positioning.html)).
+> [!NOTE]
+> À ce stade de l'article, vous pouvez retrouver un exemple ici [`2_relative-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/2_relative-positioning.html)).
 
 ## Positionnement absolu
 
@@ -139,11 +162,33 @@ Si vous enregistrez et actualisez maintenant, vous verrez quelque chose comme ce
 ```html hidden
 <h1>Positionnement absolu</h1>
 
-<p>Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.</p>
+<p>
+  Je suis élément de base de niveau bloc. Les éléments de niveau de bloc
+  adjacents se trouvent sur de nouvelles lignes en dessous de moi.
+</p>
 
-<p class="positioned">Par défaut, je couvre 100% de la largeur de mon élément parent et je suis aussi haut que mon contenu enfant. Mes largeur et hauteur totales sont égales aux largeur et hauteur du contenu, plus celles du remplissage, plus celles de l'encadrement.</p>
-<p>Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.</p>
-<p>Les éléments «&nbsp;inline&nbsp;» <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments «&nbsp;inline&nbsp;» débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span>&nbsp;; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
+<p class="positioned">
+  Par défaut, je couvre 100% de la largeur de mon élément parent et je suis
+  aussi haut que mon contenu enfant. Mes largeur et hauteur totales sont égales
+  aux largeur et hauteur du contenu, plus celles du remplissage, plus celles de
+  l'encadrement.
+</p>
+<p>
+  Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la
+  fusion des marges, nous sommes séparés par la largeur de la plus grande de nos
+  marges, et non par la somme des deux.
+</p>
+<p>
+  Les éléments «&nbsp;inline&nbsp;» <span>comme celui-ci </span>ou
+  <span>cet autre</span> sont sur une même ligne que les noeuds de texte
+  adjacents, s'il y a de la place sur la même ligne. Les éléments
+  «&nbsp;inline&nbsp;» débordants
+  <span
+    >se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant
+    du texte</span
+  >&nbsp;; sinon, ils passent simplement à une nouvelle ligne, un peu comme
+  cette image le fait : <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -178,11 +223,14 @@ Tout d'abord, notez que l'emplacement où l'élément à positionner aurait dû 
 
 Ensuite, notez que la position de l'élément a changé. [`top`](/fr/docs/Web/CSS/top), [`bottom`](/fr/docs/Web/CSS/bottom), [`left`](/fr/docs/Web/CSS/left) et [`right`](/fr/docs/Web/CSS/right) se comportent différemment avec le positionnement absolu. Au lieu de positionner l'élément en fonction de sa position relative dans la mise en page du document, ils définissent la distance à laquelle l'élément doit se situer par rapport aux côtés de l'élément contenant. Dans ce cas, nous indiquons que l'élément à positionner de manière absolue doit se placer à 30px du haut et à 30px de la gauche de «&nbsp;l'élément conteneur&nbsp;» (il s'agit dans ce cas, l'élément conteneur est le bloc conteneur initial, voir la section ci-dessous pour plus d'informations).
 
-> **Note :** Vous pouvez utiliser [`top`](/fr/docs/Web/CSS/top), [`bottom`](/fr/docs/Web/CSS/bottom), [`left`](/fr/docs/Web/CSS/left) et [`right`](/fr/docs/Web/CSS/right) pour redimensionner les éléments selon vos besoins. Définissez `top: 0; bottom: 0; left: 0; right: 0;` et `margin: 0;` sur les éléments à positionner et voyez ce qui se produit&nbsp;! Réinitialisez le tout ensuite…
+> [!NOTE]
+> Vous pouvez utiliser [`top`](/fr/docs/Web/CSS/top), [`bottom`](/fr/docs/Web/CSS/bottom), [`left`](/fr/docs/Web/CSS/left) et [`right`](/fr/docs/Web/CSS/right) pour redimensionner les éléments selon vos besoins. Définissez `top: 0; bottom: 0; left: 0; right: 0;` et `margin: 0;` sur les éléments à positionner et voyez ce qui se produit&nbsp;! Réinitialisez le tout ensuite…
 
-> **Note :** Les marges affectent toujours les éléments à positionner. Toutefois, la fusion de marges ne se fait pas.
+> [!NOTE]
+> Les marges affectent toujours les éléments à positionner. Toutefois, la fusion de marges ne se fait pas.
 
-> **Note :** À ce stade de l'article, vous pouvez voir un exemple ici [`3_absolute-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/3_absolute-positioning.html)).
+> [!NOTE]
+> À ce stade de l'article, vous pouvez voir un exemple ici [`3_absolute-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/3_absolute-positioning.html)).
 
 ### Contextes de positionnement
 
@@ -201,13 +249,35 @@ Cela devrait vous donner le résultat suivant&nbsp;:
 ```html hidden
 <h1>Contextes de positionnement</h1>
 
-<p>Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.</p>
+<p>
+  Je suis élément de base de niveau bloc. Les éléments de niveau de bloc
+  adjacents se trouvent sur de nouvelles lignes en dessous de moi.
+</p>
 
-<p class="positioned">Maintenant je suis positionné de manière absolue par rapport à l'élément <code>&lt;body&gt;</code>, et non par rapport à l'élément <code>&lt;html&gt;</code> !</p>
+<p class="positioned">
+  Maintenant je suis positionné de manière absolue par rapport à l'élément
+  <code>&lt;body&gt;</code>, et non par rapport à l'élément
+  <code>&lt;html&gt;</code> !
+</p>
 
-<p>Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.</p>
+<p>
+  Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la
+  fusion des marges, nous sommes séparés par la largeur de la plus grande de nos
+  marges, et non par la somme des deux.
+</p>
 
-<p>Les éléments « inline » <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span> ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
+<p>
+  Les éléments « inline » <span>comme celui-ci </span>ou
+  <span>cet autre</span> sont sur une même ligne que les noeuds de texte
+  adjacents, s'il y a de la place sur la même ligne. Les éléments « inline »
+  débordants
+  <span
+    >se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant
+    du texte</span
+  >
+  ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image
+  le fait : <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -241,7 +311,8 @@ span {
 
 À présent, l'élément a été positionné par rapport à l'élément [`<body>`](/fr/docs/Web/HTML/Element/body).
 
-> **Note :** À ce stade, vous pouvez voir cet exemple ici [`4_positioning-context.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/4_positioning-context.html)).
+> [!NOTE]
+> À ce stade, vous pouvez voir cet exemple ici [`4_positioning-context.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/4_positioning-context.html)).
 
 ### Introduction au `z-index`
 
@@ -275,13 +346,35 @@ Voici maintenant l'exemple terminé où vous devriez voir le paragraphe vert par
 ```html hidden
 <h1>z-index</h1>
 
-<p>Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.</p>
+<p>
+  Je suis élément de base de niveau bloc. Les éléments de niveau de bloc
+  adjacents se trouvent sur de nouvelles lignes en dessous de moi.
+</p>
 
-<p class="positioned">Maintenant je suis positionné de manière absolue par rapport à l'élément <code>&lt;body&gt;</code>, et non par rapport à l'élément <code>&lt;html&lt;html&gt;</code> !</p>
+<p class="positioned">
+  Maintenant je suis positionné de manière absolue par rapport à l'élément
+  <code>&lt;body&gt;</code>, et non par rapport à l'élément
+  <code>&lt;html&lt;html&gt;</code> !
+</p>
 
-<p>Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.</p>
+<p>
+  Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la
+  fusion des marges, nous sommes séparés par la largeur de la plus grande de nos
+  marges, et non par la somme des deux.
+</p>
 
-<p>Les éléments « inline » <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span> ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
+<p>
+  Les éléments « inline » <span>comme celui-ci </span>ou
+  <span>cet autre</span> sont sur une même ligne que les noeuds de texte
+  adjacents, s'il y a de la place sur la même ligne. Les éléments « inline »
+  débordants
+  <span
+    >se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant
+    du texte</span
+  >
+  ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image
+  le fait : <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -323,7 +416,8 @@ p:nth-of-type(1) {
 
 Notez que `z-index` n'accepte que des valeurs d'index sans unité&nbsp;; vous ne pouvez pas préciser que vous voulez qu'un élément soit à 23 pixels sur l'axe des z — cela ne fonctionne pas ainsi. Les plus grandes valeurs vont au‑dessus des valeurs plus faibles et c'est à vous d'indiquer les valeurs. Utiliser 2 et 3 aura le même effet que 300 et 40000.
 
-> **Note :** Sur ce sujet, vous pouvez voir l'exemple [`5_z-index.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/5_z-index.html)).
+> [!NOTE]
+> Sur ce sujet, vous pouvez voir l'exemple [`5_z-index.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/5_z-index.html)).
 
 ## Positionnement fixe
 
@@ -369,13 +463,30 @@ Voici l'exemple terminé&nbsp;:
 ```html hidden
 <h1>Positionnement fixe</h1>
 
-<p>Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.</p>
+<p>
+  Je suis élément de base de niveau bloc. Les éléments de niveau de bloc
+  adjacents se trouvent sur de nouvelles lignes en dessous de moi.
+</p>
 
 <p class="positioned">Je ne suis plus positionné...</p>
 
-<p>Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.</p>
+<p>
+  Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la
+  fusion des marges, nous sommes séparés par la largeur de la plus grande de nos
+  marges, et non par la somme des deux.
+</p>
 
-<p>Les éléments «&nbsp;inline&nbsp;» <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments «&nbsp;inline&nbsp;» débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span>&nbsp;; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
+<p>
+  Les éléments «&nbsp;inline&nbsp;» <span>comme celui-ci </span>ou
+  <span>cet autre</span> sont sur une même ligne que les noeuds de texte
+  adjacents, s'il y a de la place sur la même ligne. Les éléments
+  «&nbsp;inline&nbsp;» débordants
+  <span
+    >se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant
+    du texte</span
+  >&nbsp;; sinon, ils passent simplement à une nouvelle ligne, un peu comme
+  cette image le fait : <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -412,7 +523,8 @@ p:nth-of-type(1) {
 
 {{EmbedLiveSample('', '100%', 400)}}
 
-> **Note :** À ce stade de l'article, vous pouvez voir un exemple en direct ici [`6_fixed-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/6_fixed-positioning.html)).
+> [!NOTE]
+> À ce stade de l'article, vous pouvez voir un exemple en direct ici [`6_fixed-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/6_fixed-positioning.html)).
 
 ## Positionnement adhérent (<i lang="en">sticky</i>)
 
@@ -425,13 +537,41 @@ Ce positionnement s'utilise par exemple pour faire défiler une barre de navigat
 ```html hidden
 <h1>Positionnement adhérent</h1>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 
 <div class="positioned">adhérent : relatif en deça, fixe au delà</div>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 ```
 
 ```css hidden
@@ -441,8 +581,8 @@ body {
 }
 
 .positioned {
-  background: rgba(255,84,104,.3);
-  border: 2px solid rgb(255,84,104);
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -467,31 +607,31 @@ Une utilisation courante et pleine d'intérêt de `position: sticky` consiste à
 <h1>Positionnement adhérent</h1>
 
 <dl>
-    <dt>A</dt>
-    <dd>Abeille</dd>
-    <dd>Abricot</dd>
-    <dd>Altimètre</dd>
-    <dd>Avion</dd>
-    <dt>B</dt>
-    <dd>Banane</dd>
-    <dd>Betterave</dd>
-    <dd>Bœuf</dd>
-    <dd>Bouvreuil</dd>
-    <dd>Buzzard</dd>
-    <dt>C</dt>
-    <dd>Calculateur</dd>
-    <dd>Camera</dd>
-    <dd>Cane</dd>
-    <dd>Chameau</dd>
-    <dt>D</dt>
-    <dd>Dime</dd>
-    <dd>Dindon</dd>
-    <dd>Drapeau</dd>
-    <dd>Drone</dd>
-    <dt>E</dt>
-    <dd>Eau</dd>
-    <dd>Éléphant</dd>
-    <dd>Escadrille</dd>
+  <dt>A</dt>
+  <dd>Abeille</dd>
+  <dd>Abricot</dd>
+  <dd>Altimètre</dd>
+  <dd>Avion</dd>
+  <dt>B</dt>
+  <dd>Banane</dd>
+  <dd>Betterave</dd>
+  <dd>Bœuf</dd>
+  <dd>Bouvreuil</dd>
+  <dd>Buzzard</dd>
+  <dt>C</dt>
+  <dd>Calculateur</dd>
+  <dd>Camera</dd>
+  <dd>Cane</dd>
+  <dd>Chameau</dd>
+  <dt>D</dt>
+  <dd>Dime</dd>
+  <dd>Dindon</dd>
+  <dd>Drapeau</dd>
+  <dd>Drone</dd>
+  <dt>E</dt>
+  <dd>Eau</dd>
+  <dd>Éléphant</dd>
+  <dd>Escadrille</dd>
 </dl>
 ```
 
@@ -521,7 +661,8 @@ body {
 
 Les éléments ainsi positionnés «&nbsp;adhèrent&nbsp;» au plus proche ancêtre qui dispose d'un mécanisme de défilement, ce qui est déterminé d'après la propriété [position](/fr/docs/Web/CSS/position) de ses ancêtres.
 
-> **Note :** À ce stade de l'article, vous pouvez voir un exemple en direct ici [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/7_sticky-positioning.html)).
+> [!NOTE]
+> À ce stade de l'article, vous pouvez voir un exemple en direct ici [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/7_sticky-positioning.html)).
 
 ## Testez vos compétences&nbsp;!
 
@@ -537,18 +678,3 @@ On espère que vous vous êtes amusé⋅e à jouer avec le positionnement de bas
 - [Exemples pratiques de positionnement](/fr/docs/Learn/CSS/CSS_layout/Practical_positioning_examples), pour quelques idées utiles supplémentaires.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
-
-## Dans ce module
-
-- [Introduction à la disposition en CSS](/fr/docs/Learn/CSS/CSS_layout/Introduction)
-- [Le flux normal](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Les boîtes flexibles (<i lang="en">Flexbox</i>)](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Les grilles CSS](/fr/docs/Learn/CSS/CSS_layout/Grids)
-- [Le flottement](/fr/docs/Learn/CSS/CSS_layout/Floats)
-- **Le positionnement**
-- [La disposition avec plusieurs colonnes](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Conception adaptative (<i lang="en">responsive design</i>)](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Guide pour débuter avec les requêtes média](/fr/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Méthodes de disposition historiques](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Prendre en charge les anciens navigateurs](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Compréhension des fondamentaux de la disposition](/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

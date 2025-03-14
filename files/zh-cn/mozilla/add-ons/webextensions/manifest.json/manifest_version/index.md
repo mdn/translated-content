@@ -24,8 +24,6 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version
 
 此键指定扩展使用的 manifest.json 的版本。
 
-目前，此值必须为 2。
-
 ## 示例
 
 ```json

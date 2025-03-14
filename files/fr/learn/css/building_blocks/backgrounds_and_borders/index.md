@@ -1,8 +1,6 @@
 ---
 title: Arrière-plans et bordures
 slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
-translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
-original_slug: Apprendre/CSS/Building_blocks/Backgrounds_and_borders
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
@@ -41,8 +39,15 @@ La propriété CSS [`background`](/fr/docs/Web/CSS/background) est un raccourci 
 
 ```css
 .box {
-  background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
-  url(big-star.png) center no-repeat, rebeccapurple;
+  background:
+    linear-gradient(
+        105deg,
+        rgba(255, 255, 255, 0.2) 39%,
+        rgba(51, 56, 57, 1) 96%
+      )
+      center center / 400px 200px no-repeat,
+    url(big-star.png) center no-repeat,
+    rebeccapurple;
 }
 ```
 
@@ -104,7 +109,8 @@ Essayez ce qui suit :
 
 La propriété [`background-position`](/fr/docs/Web/CSS/background-position) permet de choisir la position de l'arrière-plan à l'intérieur de la boîte dans laquelle il est appliqué. On utilise pour cela un système de coordonnées avec l'origine `(0,0)` au coin en haut à gauche de la boîte, l'axe (`x`) étant horizontal, l'axe (`y`) vertical.
 
-> **Note :** La valeur par défaut de `background-position` est `(0,0)`.
+> [!NOTE]
+> La valeur par défaut de `background-position` est `(0,0)`.
 
 Les valeurs les plus communes pour `background-position` se présentent sous la forme d'un couple — une valeur horizontale suivie d'une valeur verticale.
 
@@ -170,14 +176,18 @@ Il est aussi possible d'ajouter plusieurs images en arrière-plan — il suffit 
 
 Quand vous faites cela, il est possible de se retrouver avec plusieurs arrière-plans qui se chevauchent. Les arrière-plans se superposeront les uns sur les autres, avec le dernier se retrouvant sur le dessus, chacun suivant à leur tour, jusqu'au premier.
 
-> **Note :** On peut joyeusement mélanger dégradés et images de fond classiques.
+> [!NOTE]
+> On peut joyeusement mélanger dégradés et images de fond classiques.
 
 Les autres propriétés `background-*` peuvent aussi avoir une série de valeurs séparées de virgules, de la même manière que `background-image`:
 
 ```css
-background-image: url(image1.png), url(image2.png), url(image3.png), url(image1.png);
+background-image:
+  url(image1.png), url(image2.png), url(image3.png), url(image1.png);
 background-repeat: no-repeat, repeat-x, repeat;
-background-position: 10px 20px,  top right;
+background-position:
+  10px 20px,
+  top right;
 ```
 
 Chaque valeur des différentes propriétés va correspondre aux valeurs placées à la même position dans les autres propriétés. Au-dessus, par exemple, la valeur `background-repeat` de l' `image1` sera `no-repeat`. Cependant, qu'arrive-t-il quand différentes propriétés ont différents nombres de valeurs? La réponse est que s'il y a moins de valeurs, elles seront réutilisées — dans l'exemple au-dessus il y a quatre images de fond mais seulement deux valeurs `background-position`. Les deux premières valeurs seront appliquées aux deux premières images, puis elles seront réutilisées pour les images suivantes — l'`image3` recevra la première valeur, et l'`image4` recevra la seconde valeur.
@@ -262,7 +272,8 @@ Pour la propriété qui concerne un des côtés&nbsp;:
 }
 ```
 
-> **Note :** Ces propriétés pour les bordures des côtés haut, droit, bas et gauche ont également des propriétés équivalentes _logiques_ qui ciblent les différents côtés de la boîte en fonction du mode d'écriture du document (par exemple de gauche à droite, de droite à gauche ou bien encore de haut en bas). Nous aborderons celles-ci dans la prochaine leçon qui traitera [de la directionnalité du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
+> [!NOTE]
+> Ces propriétés pour les bordures des côtés haut, droit, bas et gauche ont également des propriétés équivalentes _logiques_ qui ciblent les différents côtés de la boîte en fonction du mode d'écriture du document (par exemple de gauche à droite, de droite à gauche ou bien encore de haut en bas). Nous aborderons celles-ci dans la prochaine leçon qui traitera [de la directionnalité du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
 **Il existe différents styles qui peuvent être utilisés pour les bordures. Dans l'exemple qui suit, nous avons utilisé un style différent pour chacun des côtés de la boîte. N'hésitez pas à modifier l'exemple pour modifier le style, l'épaisseur et la couleur afin de voir comment les bordures fonctionnent.**
 
@@ -302,7 +313,8 @@ Testons vos nouvelles connaissances : en partant de l'exemple fourni plus bas :
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/task.html", '100%', 700)}}
 
-> **Note :** Vous pouvez [jeter un œil à la solution ici](https://github.com/mdn/css-examples/blob/master/learn/solutions.md) — mais essayez d'abord de la trouver par vous-même !
+> [!NOTE]
+> Vous pouvez [jeter un œil à la solution ici](https://github.com/mdn/css-examples/blob/master/learn/solutions.md) — mais essayez d'abord de la trouver par vous-même !
 
 ## Résumé
 
@@ -311,24 +323,3 @@ Nous avons vu beaucoup de choses dans cette leçon, ajouter un arrière-plan à 
 Dans la leçon suivante nous découvrirons comment le mode d'écriture de votre document interagit avec CSS. Que se passe-t-il quand le texte ne se déroule pas de la gauche vers la droite ?
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
-
-## Dans ce cours
-
-1. [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Sélecteurs de classe, de type et d'identifiant](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [Le modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-4. Arrières-plans et bordures
-5. [Gérer la directionnalité du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Le dépassement du contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Valeurs et unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Dimensionnement des objets en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, médias, et formulaires](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Mettre en forme les tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Déboguer CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organiser son code CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)

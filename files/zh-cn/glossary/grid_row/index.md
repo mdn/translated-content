@@ -1,16 +1,19 @@
 ---
-title: Grid Row
+title: 网格行
 slug: Glossary/Grid_Row
-original_slug: Glossary/Grid_Rows
+l10n:
+  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
-**网格行**是[Grid 布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)中的水平轨道，即两个水平网格线之间的空间。它通过属性 {{cssxref("grid-template-rows")}} 或者简写属性 {{cssxref("grid")}}， {{cssxref("grid-template")}} 定义。
+{{GlossarySidebar}}
 
-另外，当项目被放置到显示网格中创建的行外面时，可以在隐式网格中创建网格行。默认情况这些行自动调整大小，也可以使用 {{cssxref("grid-auto-rows")}} 属性指定其大小。
+**网格行**是[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)中的水平轨道，即两个水平网格线之间的空间。它通过属性 {{cssxref("grid-template-rows")}} 或者简写属性 {{cssxref("grid")}}、{{cssxref("grid-template")}} 定义。
 
-在[Grid 布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)中使用对齐方式时，网格行沿着横轴运行。
+另外，当项目被放置到*显式网格*中创建的行外面时，可能会在*隐式网格*中创建网格行。默认情况这些行会自动调整自己的大小，但你也可以使用 {{cssxref("grid-auto-rows")}} 属性指定其大小。
 
-## 了解更多
+在[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)中使用对齐方式时，网格行沿着行轴前进。
+
+## 参见
 
 ### 属性参考
 
@@ -21,4 +24,4 @@ original_slug: Glossary/Grid_Rows
 
 ### 扩展阅读
 
-- CSS Grid Layout Guide: _[Basic concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- CSS 网格布局指南：_[网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_

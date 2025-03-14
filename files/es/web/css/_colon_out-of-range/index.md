@@ -1,11 +1,11 @@
 ---
-title: ':out-of-range'
+title: :out-of-range
 slug: Web/CSS/:out-of-range
 ---
 
 {{CSSRef}}
 
-La [pseudo-clase](/es/docs/CSS/Pseudo-classes) **`:out-of-range`** de [CSS](/es/docs/Web/CSS) representa un elemento {{htmlelement("input")}} cuyo valor actual está fuera de los límites de rango especificados por los atributos {{htmlattrxref("min", "input")}} y {{htmlattrxref("max","input")}}.
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:out-of-range`** de [CSS](/es/docs/Web/CSS) representa un elemento {{htmlelement("input")}} cuyo valor actual está fuera de los límites de rango especificados por los atributos [`min`](/es/docs/Web/HTML/Element/input#min) y [`max`](/es/docs/Web/HTML/Element/input#max).
 
 ```css
 /* Selecciona cualquier <input>, pero solo cuando tiene un
@@ -17,7 +17,8 @@ input:out-of-range {
 
 Esta pseudo-clase es útil para dar al usuario una indicación visual de que el valor actual de un campo está fuera de los límites permitidos.
 
-> **Nota:** Esta pseudo-clase solo se aplica a los elementos que tienen (y pueden tomar) una limitación de rango. En ausencia de tal limitación, el elemento no puede estar "dentro del rango" ni "fuera de rango".
+> [!NOTE]
+> Esta pseudo-clase solo se aplica a los elementos que tienen (y pueden tomar) una limitación de rango. En ausencia de tal limitación, el elemento no puede estar "dentro del rango" ni "fuera de rango".
 
 ## Sintaxis
 
@@ -29,9 +30,17 @@ Esta pseudo-clase es útil para dar al usuario una indicación visual de que el 
 
 ```html
 <form action="" id="form1">
-  <ul>Los valores entre 1 y 10 son válidos.
+  <ul>
+    Los valores entre 1 y 10 son válidos.
     <li>
-      <input id="value1" name="value1" type="number" placeholder="1 a 10" min="1" max="10" value="12">
+      <input
+        id="value1"
+        name="value1"
+        type="number"
+        placeholder="1 a 10"
+        min="1"
+        max="10"
+        value="12" />
       <label for="value1">Tu valor esta </label>
     </li>
   </ul>
@@ -60,11 +69,11 @@ input:out-of-range {
 }
 
 input:in-range + label::after {
-  content: 'bien.';
+  content: "bien.";
 }
 
 input:out-of-range + label::after {
-  content: '¡fuera de rango!';
+  content: "¡fuera de rango!";
 }
 ```
 
@@ -78,9 +87,9 @@ input:out-of-range + label::after {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.out-of-range")}}
+{{Compat}}
 
 ## Ver también
 
 - {{cssxref(":in-range")}}
-- [Validación de datos de formulario](/es/docs/Learn/HTML/Forms/Form_validation)
+- [Validación de datos de formulario](/es/docs/Learn/Forms/Form_validation)

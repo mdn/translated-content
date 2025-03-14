@@ -2,56 +2,46 @@
 title: Array.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 l10n:
-  sourceCommit: 968e6f1f3b6f977a09e116a0ac552459b741eac3
+  sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
 ---
 
 {{JSRef}}
 
-**`findIndex()`** メソッドは、配列内の**指定されたテスト関数に合格する**最初の要素の**位置**を返します。テスト関数に合格する要素がない場合を含め、それ以外の場合は `-1` を返します。
+**`findIndex()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列内の指定されたテスト関数に合格する最初の要素のインデックスを返します。
+テスト関数に合格する要素がなかった場合は `-1` を返します。
 
-{{EmbedInteractiveExample("pages/js/array-findindex.html","shorter")}}
+{{jsxref("Array/find", "find()")}} メソッドも参照してください。こちらのメソッドは、配列内で見つかった要素の位置ではなく、値を返します。
 
-{{jsxref("Array/find", "find()")}} メソッドも参照してください。このメソッドは、配列内で見つかった要素の位置ではなく、**値**を返します。
+{{InteractiveExample("JavaScript Demo: Array.findIndex()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const isLargeNumber = (element) => element > 13;
+
+console.log(array1.findIndex(isLargeNumber));
+// Expected output: 3
+```
 
 ## 構文
 
-```js
-// アロー関数
-findIndex((element) => { /* … */ } )
-findIndex((element, index) => { /* … */ } )
-findIndex((element, index, array) => { /* … */ } )
-
-// コールバック関数
+```js-nolint
 findIndex(callbackFn)
 findIndex(callbackFn, thisArg)
-
-// インラインコールバック関数
-findIndex(function(element) { /* … */ })
-findIndex(function(element, index) { /* … */ })
-findIndex(function(element, index, array){ /* … */ })
-findIndex(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 引数
 
 - `callbackFn`
-
-  - : 配列内のそれぞれの値に対して実行される関数で、条件を満たす要素が発見されたことを示す `true` が返るまで続けられます。
-
-    この関数は以下の引数と共に呼び出されます。
-
+  - : 配列のそれぞれの要素に対して実行する関数です。一致する要素が得られたことを示すには[真値](/ja/docs/Glossary/Truthy)を返し、そうでなければ[偽値](/ja/docs/Glossary/Falsy)を返してください。この関数は以下の引数で呼び出されます。
     - `element`
-      - : 配列内で現在処理されている要素。
+      - : 配列内で現在処理されている要素です。
     - `index`
-      - : 配列内で現在処理されている要素の位置。
+      - : 配列内で現在処理されている要素のインデックス（位置）です。
     - `array`
-      - : `findIndex()` を呼び出した元の配列。
-
-    コールバックは適切な要素が見つかったときに、[真値](/ja/docs/Glossary/Truthy)を返す必要があります。
-    この要素の位置が `findIndex()` から返されます。
-
+      - : `findIndex()` を呼び出した元の配列です。
 - `thisArg` {{optional_inline}}
-  - : 任意で、 `callbackFn` を実行する時に `this` として使うオブジェクト。
+  - : `callbackFn` 内で `this` として使われるオブジェクトです。[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)を参照してください。
 
 ### 返値
 
@@ -59,23 +49,20 @@ findIndex(function(element, index, array) { /* … */ }, thisArg)
 
 ## 解説
 
-`findIndex()` メソッドは、配列のそれぞれの位置に対して `callbackFn` を 1 回ずつ呼び出し、 `callbackFn` が{{Glossary("truthy", "真値")}}を返すものを見つけるまで繰り返します。
+`findIndex()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。配列の要素のそれぞれに対して、インデックスの昇順に一度ずつ `callbackFn` 関数を実行し、`callbackFn` 関数が[真値](/ja/docs/Glossary/Truthy)を返すまで繰り返します。 `findIndex()` はその要素を返し、配列の反復処理を停止します。もし `callbackFn` が真値を返さない場合、 `findIndex()` は `-1` を返します。
 
-そのような要素が見つかったら、 `findIndex()` はすぐにその要素の位置を返します。 `callbackFn` が真値を返すものがなかった場合（または配列の `length` が `0` であった場合）、 `findIndex()` は `-1` を返します。
+`callbackFn` は、値が割り当てられているものに限らず、配列中の*すべて*のインデックスに対して呼び出されます。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)では、空のスロットは `undefined` と同じ動作をします。
 
-> **メモ:** {{jsxref("Array/some", "some()")}} などの他の配列メソッドとは異なり、 `callbackFn` は値が割り当てられていない位置でも実行されます。
+`findIndex()` は、呼び出した配列を変更 (mutate) しませんが、`callbackFn` で提供された関数は変更する可能性があります。しかし、配列の長さは最初に `callbackFn` が呼び出される*前に*設定されます。したがって、
 
-`callbackFn` は 3 つの引数で呼び出されます。
+- `callbackFn` は `findIndex()` の呼び出しを始めたときの配列の長さを超えて追加された要素にはアクセスしません。
+- 既に訪問した位置を変更しても、 `callbackFn` が再度呼び出されることはありません。
+- まだ訪問していない既存の配列要素が `callbackFn` によって変更された場合、 `callbackFn` に渡される値はその要素が取得される時点の値になります。[削除された](/ja/docs/Web/JavaScript/Reference/Operators/delete) 要素は `undefined` であるかのように処理されます。
 
-1. その要素の値
-2. その要素の位置
-3. 走査されている配列オブジェクト
+> [!WARNING]
+> 上で説明したような同時進行の変更は、理解しにくいコードになることが多いので、（特別な場合を除いて）避けるのが一般的です。
 
-`thisArg` 引数を `findIndex()` に与えた場合、それぞれの `callbackFn` の呼び出し時に、その与えたオブジェクトが `this` として使用されます。この引数を省略した場合は {{jsxref("undefined")}} になります。
-
-`findIndex()` で処理される要素の範囲は、 `callbackFn` が最初に呼び出される前に設定されます。既に処理済みの位置に割り当てられた要素や、その範囲を超えた要素に対しては、 `callbackFn` が実行されません。 `callbackFn` は最初の `findIndex()` の呼び出し以降に配列に追加された要素は処理しません。配列内で未処理の既存の要素が `callbackFn` によって変更された場合、 `callbackFn` へ渡される値は `findIndex()` がその要素の位置を処理する時点での値になります。{{jsxref("Operators/delete", "削除", "", 1)}}された値も処理対象になります。
-
-> **警告:** 前の段落で説明したような同時進行の修正は、理解しにくいコードになることが多いので、一般的には避けるべきです（特殊な場合を除く）。
+`findIndex()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
 
 ## 例
 
@@ -100,17 +87,29 @@ console.log([4, 6, 8, 9, 12].findIndex(isPrime)); // -1, not found
 console.log([4, 6, 7, 9, 12].findIndex(isPrime)); // 2 (array[2] is 7)
 ```
 
-### アロー関数を使用して位置を検索する
+### 疎配列における find() の使用
 
-次の例では、アロー関数を使用してフルーツの位置を検索しています。
+疎配列で `undefined` を検索することで、空スロットのインデックスを取得することができます。
 
 ```js
-const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
+console.log([1, , 3].findIndex((x) => x === undefined)); // 1
+```
 
-const index = fruits.findIndex((fruit) => fruit === "blueberries");
+### 配列でないオブジェクトに対する find() の呼び出し
 
-console.log(index); // 3
-console.log(fruits[index]); // blueberries
+`findIndex()` メソッドは `this` の `length` プロパティを読み込み、そのキーが `length` よりも小さい非負の整数である各プロパティにアクセスします。
+
+```js
+const arrayLike = {
+  length: 3,
+  "-1": 0.1, // -1 < 0 なので findIndex() 空は無視される
+  0: 2,
+  1: 7.3,
+  2: 4,
+};
+console.log(
+  Array.prototype.findIndex.call(arrayLike, (x) => !Number.isInteger(x)),
+); // 1
 ```
 
 ## 仕様書
@@ -124,5 +123,11 @@ console.log(fruits[index]); // blueberries
 ## 関連情報
 
 - [`Array.prototype.findIndex` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.findLast()")}}
+- {{jsxref("Array.prototype.findLastIndex()")}}
 - {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxref("Array.prototype.lastIndexOf()")}}
+- {{jsxref("TypedArray.prototype.findIndex()")}}

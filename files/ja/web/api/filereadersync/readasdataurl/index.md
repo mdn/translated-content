@@ -1,6 +1,9 @@
 ---
-title: FileReaderSync.readAsDataURL()
+title: "FileReaderSync: readAsDataURL() メソッド"
+short-title: readAsDataURL()
 slug: Web/API/FileReaderSync/readAsDataURL
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("File API")}}
@@ -9,9 +12,9 @@ slug: Web/API/FileReaderSync/readAsDataURL
 
 ## 構文
 
-```js
-readAsDataURL(File);
-readAsDataURL(Blob);
+```js-nolint
+readAsDataURL(File)
+readAsDataURL(Blob)
 ```
 
 ### 引数
@@ -49,8 +52,8 @@ readAsDataURL(Blob);
 
 ## 関連情報
 
-- [ファイル API](/ja/docs/Web/API/File_API)
+- [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
 - {{DOMxRef("File")}}
 - {{DOMxRef("FileReaderSync")}}
 - {{DOMxRef("FileReader")}}
-- {{DOMxRef("BlobBuilder")}}, {{ domxref("Blob") }}
+- {{ domxref("Blob") }}

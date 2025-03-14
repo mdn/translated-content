@@ -1,16 +1,8 @@
 ---
-title: 'Document: событие scroll'
+title: "Document: событие scroll"
 slug: Web/API/Document/scroll_event
-tags:
-  - API
-  - DOM
-  - Document
-  - Event
-  - Scroll
-  - UIEvent
-  - Источник
-translation_of: Web/API/Document/scroll_event
 ---
+
 {{APIRef}}
 
 Событие **`scroll`** возникает при прокрутке области просмотра документа или элемента.
@@ -39,13 +31,14 @@ translation_of: Web/API/Document/scroll_event
   </tbody>
 </table>
 
-> **Примечание:** В iOS UIWebViews события `scroll` не срабатывают во время самого прокручивания, только по его завершении. См. [issue в Bootstrap #16202](https://github.com/twbs/bootstrap/issues/16202). Safari и WKWebViews не подвержены этому багу.
+> [!NOTE]
+> В iOS UIWebViews события `scroll` не срабатывают во время самого прокручивания, только по его завершении. См. [issue в Bootstrap #16202](https://github.com/twbs/bootstrap/issues/16202). Safari и WKWebViews не подвержены этому багу.
 
 ## Примеры
 
 ### Пропуск тактов события прокрутки
 
-Поскольку события прокрутки могут запускаться с высокой скоростью, обработчик событий не должен выполнять вычислительно-ёмкие операции, такие как модификации DOM. Вместо этого рекомендуется пропускать такты события, используя {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{DOMxRef("WindowOrWorkerGlobalScope.setTimeout()", "setTimeout()")}} или {{DOMxRef("CustomEvent")}}, как показано ниже.
+Поскольку события прокрутки могут запускаться с высокой скоростью, обработчик событий не должен выполнять вычислительно-ёмкие операции, такие как модификации DOM. Вместо этого рекомендуется пропускать такты события, используя {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{DOMxRef("setTimeout()")}} или {{DOMxRef("CustomEvent")}}, как показано ниже.
 
 Обратите внимание, однако, что входные события и кадры анимации запускаются примерно с одинаковой скоростью, и поэтому приведённая ниже оптимизация зачастую не требуется. В примере ниже оптимизируется событие `scroll` для `requestAnimationFrame`:
 
@@ -59,11 +52,11 @@ function doSomething(scroll_pos) {
   // Делаем что-нибудь с позицией скролла
 }
 
-window.addEventListener('scroll', function(e) {
+window.addEventListener("scroll", function (e) {
   last_known_scroll_position = window.scrollY;
 
   if (!ticking) {
-    window.requestAnimationFrame(function() {
+    window.requestAnimationFrame(function () {
       doSomething(last_known_scroll_position);
       ticking = false;
     });
@@ -75,7 +68,7 @@ window.addEventListener('scroll', function(e) {
 
 Больше похожих примеров можно найти на странице события [`resize`](/ru/docs/Web/API/Window/resize_event).
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

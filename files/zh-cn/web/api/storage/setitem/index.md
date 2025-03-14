@@ -5,24 +5,24 @@ slug: Web/API/Storage/setItem
 
 {{APIRef("Web Storage API")}}
 
-{{domxref("Storage")}} 接口的 **`setItem()`** 方法，接受一个键名和值作为参数，将会把键名添加到给定的 `Storage` 对象中，如果键名已存在，则更新其对应的值。
+{{domxref("Storage")}} 接口的 **`setItem()`** 方法，当传递了一个键名和值时，将会把键名添加到给定的 `Storage` 对象中，如果键名已存在，则更新其对应的值。
 
 ## 语法
 
-```js
-storage.setItem(keyName, keyValue);
+```js-nolint
+setItem(keyName, keyValue)
 ```
 
 ## 参数
 
 - `keyName`
-  - : 一个 {{domxref("DOMString")}}，表示要创建或更新的键名。
+  - : 包含要创建或更新的键名字符串。
 - `keyValue`
-  - : 一个 {{domxref("DOMString")}}，表示要创建或更新的键名对应的值。
+  - : 包含要创建或更新的键名对应的值字符串。
 
 ### 返回值
 
-{{jsxref("undefined")}}。
+无 {{jsxref("undefined")}}。
 
 ### 异常
 
@@ -34,13 +34,14 @@ storage.setItem(keyName, keyValue);
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'red');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'myCat.png');
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "myCat.png");
 }
 ```
 
-> **备注：** 一个实际的例子：[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/)。
+> [!NOTE]
+> 有关实际运行的例子，详见 [Web Storage 演示](https://mdn.github.io/dom-examples/web-storage/)。
 
 ## 规范
 

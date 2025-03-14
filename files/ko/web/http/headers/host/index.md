@@ -1,8 +1,8 @@
 ---
 title: Host
 slug: Web/HTTP/Headers/Host
-translation_of: Web/HTTP/Headers/Host
 ---
+
 {{HTTPSidebar}}
 
 **`Host`** 요청 헤더는 (가상 호스팅을 위해) 서버의 도메인명과 서버가 리스닝하는 (부가적인) TCP 포트를 특정합니다.

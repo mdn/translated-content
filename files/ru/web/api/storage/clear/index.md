@@ -1,7 +1,6 @@
 ---
 title: Storage.clear()
 slug: Web/API/Storage/clear
-translation_of: Web/API/Storage/clear
 ---
 
 {{APIRef("Web Storage API")}}
@@ -28,21 +27,22 @@ _Метод не возвращает значение._
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'red');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'myCat.png');
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "myCat.png");
 
   localStorage.clear();
 }
 ```
 
-> **Примечание:** Чтобы вживую посмотреть на работу функции, посетите страницу демонстрации [Web Storage](https://github.com/mdn/web-storage-demo).
+> [!NOTE]
+> Чтобы вживую посмотреть на работу функции, посетите страницу демонстрации [Web Storage](https://github.com/mdn/web-storage-demo).
 
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

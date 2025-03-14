@@ -1,7 +1,6 @@
 ---
 title: <color>
 slug: Web/CSS/color_value
-translation_of: Web/CSS/color_value
 ---
 
 {{CSSRef}}
@@ -14,13 +13,14 @@ translation_of: Web/CSS/color_value
 - Использование [кубической системы координат RGB](https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation) (via the #-hexadecimal or the `rgb()` and `rgba()` functional notations)![Цветовая модель представлена виде куба](https://en.wikipedia.org/wiki/RGB_color_model#/media/File:RGB_color_solid_cube.png)
 - Использование [цилиндрической системы координат HSL](https://en.wikipedia.org/wiki/HSL_and_HSV) (через функциональные обозначения `hsl()` и `hsla()`)
 
-> **Примечание:**В этой статье подробно описывается тип данных \<color>. Дополнительные сведения об использовании цвета в HTML см. В разделе применение цвета к [элементам HTML с помощью CSS](/ru/docs/Web/HTML/Applying_color).
+> **Примечание:**В этой статье подробно описывается тип данных \<color>. Дополнительные сведения об использовании цвета в HTML см. В разделе применение цвета к [элементам HTML с помощью CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color).
 
 ## Синтаксис
 
 Для типа данных задаётся `<color>` с помощью одного из следующих параметров.
 
-> **Примечание:** значения `<color>` точно определены, их фактический внешний вид может отличаться (иногда значительно) от устройства к устройству. Это связано с тем что большинство устройств не откалиброваны, а некоторые браузеры не поддерживают цветовые профили [устройств вывода](https://en.wikipedia.org/wiki/ICC_profile).
+> [!NOTE]
+> Значения `<color>` точно определены, их фактический внешний вид может отличаться (иногда значительно) от устройства к устройству. Это связано с тем что большинство устройств не откалиброваны, а некоторые браузеры не поддерживают цветовые профили [устройств вывода](https://en.wikipedia.org/wiki/ICC_profile).
 
 ### Ключевые цвета
 
@@ -45,13 +45,6 @@ translation_of: Web/CSS/color_value
 
 - Хотя многие ключевые слова были адаптированы из [X11](https://en.wikipedia.org/wiki/X_Window_System), их значения RGB могут отличаться от соответствующего цвета в системах X11, поскольку производители иногда адаптируют цвета X11 к своему конкретному оборудованию.
 
-> **Примечание:** Список принятых ключевых слов претерпел много изменений в ходе эволюции CSS:
->
-> - CSS Level 1 включал только 16 основных цветов, называемых цветами [VGA](https://en.wikipedia.org/wiki/VGA), поскольку они были взяты из набора отображаемых цветов на видеокартах VGA
-> - CSS Level 2 добавил ключевое слово `orange`.
-> - Хотя различные цвета не в спецификации (в основном адаптированные из списка цветов X11) поддерживались ранними браузерами, они не были формально определены до уровня SVG 1.0 и CSS Colors 3. Они называются расширенными цветовыми _ключевыми_ словами, _цветами X11_ или цветами SVG.
-> - CSS Colors Level 4 добавил ключевое слово rebeccapurple, [чтобы почтить пионера веб-Эрика Мейера.](https://codepen.io/trezy/post/honoring-a-great-man)
-
 <table>
   <thead>
     <tr>
@@ -64,7 +57,7 @@ translation_of: Web/CSS/color_value
   </thead>
   <tbody>
     <tr style="position: relative">
-      <td rowspan="16">{{SpecName("CSS1")}}</td>
+      <td rowspan="16"><a href="https://www.w3.org/TR/CSS1/">CSS Level 1</a></td>
       <td style="background: #000"></td>
       <td style="text-align: center"><code>black</code></td>
       <td><code>#000000</code></td>
@@ -161,14 +154,14 @@ translation_of: Web/CSS/color_value
       <td style="background: aqua"></td>
     </tr>
     <tr>
-      <td>{{SpecName("CSS2.1")}}</td>
+      <td><a href="https://www.w3.org/TR/CSS2/">CSS Level 2 (Revision 1)</a></td>
       <td style="background: #ffa500"></td>
       <td style="text-align: center"><code>orange</code></td>
       <td><code>#ffa500</code></td>
       <td style="background: orange"></td>
     </tr>
     <tr>
-      <td rowspan="130">{{SpecName("CSS3 Colors")}}</td>
+      <td rowspan="130"><a href="https://drafts.csswg.org/css-color-3/">CSS Color Module Level 3</a></td>
       <td style="background: #f0f8ff"></td>
       <td style="text-align: center"><code>aliceblue</code></td>
       <td><code>#f0f8ff</code></td>
@@ -953,7 +946,7 @@ translation_of: Web/CSS/color_value
       <td style="background: yellowgreen"></td>
     </tr>
     <tr>
-      <td>{{SpecName("CSS4 Colors")}}</td>
+      <td><a href="https://drafts.csswg.org/css-color/">CSS Color Module Level 4</a></td>
       <td style="background: #639"></td>
       <td style="text-align: center">
         <a href="https://en.wikipedia.org/wiki/Eric_A._Meyer#Personal_life"
@@ -969,10 +962,6 @@ translation_of: Web/CSS/color_value
 ### [`Прозрачное`]() ключевое слово
 
 Ключевое слово `transparent` представляет собой полностью прозрачный цвет. Это делает фон позади цветного элемента полностью видимым. Технически `transparent`- это ярлык для `rgba (0,0,0,0)`.
-
-> **Примечание:** **Примечание по совместимости:** чтобы предотвратить непредвиденное поведение, например, в {{cssxref ("градиент")}}, текущая спецификация CSS утверждает, что `transparent` должен быть вычислен в [Альфа-предварительно умноженном цветовом пространстве](https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax). Однако имейте в виду, что старые браузеры могут рассматривать его как чёрный с Альфа-значением `0`.
-
-> **Примечание:** **Историческая запись:** `transparent` не был истинным цветом на уровне CSS 2 (Редакция 1). Это было специальное ключевое слово, которое можно было использовать вместо обычного значения `<color>` для двух свойств CSS: {{Cssxref("background")}} и {{Cssxref("border")}}. Он был существенно добавлен, чтобы позволить разработчикам переопределить унаследованный сплошной цвет. С появлением Альфа-каналов в CSS Colors Level 3, `transparent` был переопределён как истинный цвет. Теперь его можно использовать везде, где можно использовать значение `<color>`.
 
 ### [`currentColor`]() ключевое слово
 
@@ -999,8 +988,6 @@ translation_of: Web/CSS/color_value
 #### Синтаксис
 
 Цвета RGB могут быть выражены как шестнадцатеричными (с префиксом #), так и функциональными (`rgb ()`, `rgba ()`) нотациями.
-
-> **Примечание:** начиная с уровня цветов CSS 4, `rgba()` является псевдонимом для `rgb()`. В браузерах, реализующих стандарт уровня 4, они принимают одни и те же параметры и ведут себя одинаково.
 
 - Шестнадцатеричное представление: `#RRGGBB[AA]`
   - : `R` (red), `G` (green), `B` (blue), and `A` (alpha) are hexadecimal characters (0-9, A-F). `A` is optional. For example, `#ff0000` is equivalent to `#ff0000ff`. `R` (красный), G (зелёный), B (синий) и A (Альфа) являются шестнадцатеричными символами (0-9, A-F). Это не является обязательным. Например, `#ff0000` эквивалентно `#ff0000ff`.
@@ -1088,10 +1075,8 @@ rgba(1e2, .5e1, .5e0, +.25e2%)
 
 Цвета HSL выражаются через функциональные обозначения `hsl()` и `hsla()`.
 
-> **Примечание:** Начиная с уровня цветов CSS 4, `hsla()` является псевдонимом для `hsl()`. В браузерах, реализующих стандарт уровня 4, они принимают одни и те же параметры и ведут себя одинаково.
-
 - Функциональная нотация: `hsl(H, S, L[, A])` или `hsla(H, S, L, A)`
-  - : `H` (hue) - это {{cssxref("&lt;угол&gt;")}} цветового круга, заданного в `deg`S, `rad`s, градусах или поворотах {{SpecName("CSS4 Colors","#The-HSL-notation")}}. При записи в виде unitless {{cssxref ("&lt;number&gt;")}} он интерпретируется как Градусы, как указано в {{SpecName ("CSS3 Colors","#hsl-color")}}. По определению, red=deg=360 град, с другими цветами, распространёнными по кругу, поэтому green=120deg град, blue=240deg град и т. д. В качестве < угла > он неявно обёртывается таким образом, что -120deg=240deg, 480deg=120deg, -1turn=1turn, и т. д.`S` (`насыщенность`) и `L` (`лёгкость`) являются процентами. `100%` насыщенность полностью насыщена, в то время как 0% полностью ненасыщен (серый). `100%` лёгкость белый, `0%` лёгкость чёрный, и `50%` лёгкость “нормально”. `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity). `A` (Альфа) может быть {{cssxref("&lt;number&gt;")}} между `0` и `1` или {{cssxref("&lt;percentage&gt;")}}, где число `1` соответствует `100%` (полная непрозрачность).
+  - : `H` (hue) - это {{cssxref("&lt;угол&gt;")}} цветового круга, заданного в `deg`S, `rad`s, градусах или поворотах [CSS Color Module Level 4](https://drafts.csswg.org/css-color/#The-HSL-notation). При записи в виде unitless {{cssxref ("&lt;number&gt;")}} он интерпретируется как Градусы, как указано в [CSS Color Module Level 3](https://drafts.csswg.org/css-color-3/#hsl-color). По определению, red=deg=360 град, с другими цветами, распространёнными по кругу, поэтому green=120deg град, blue=240deg град и т. д. В качестве < угла > он неявно обёртывается таким образом, что -120deg=240deg, 480deg=120deg, -1turn=1turn, и т. д.`S` (`насыщенность`) и `L` (`лёгкость`) являются процентами. `100%` насыщенность полностью насыщена, в то время как 0% полностью ненасыщен (серый). `100%` лёгкость белый, `0%` лёгкость чёрный, и `50%` лёгкость "нормально". `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity). `A` (Альфа) может быть {{cssxref("&lt;number&gt;")}} между `0` и `1` или {{cssxref("&lt;percentage&gt;")}}, где число `1` соответствует `100%` (полная непрозрачность).
 - Функциональная нотация: `hsl(H S L[ A])` or `hsla(H S L A)`
   - : CSS Colors Level 4 добавляет поддержку разделённых пробелами значений в функциональной нотации.
 
@@ -1244,9 +1229,9 @@ hsla(240 100% 50% / 5%)       /*  непрозрачный синий на 5% */
 - \-moz-CellHighlightText
   - : Цвет текста для выбранного элемента в дереве. Следует использовать с цветом фона `moz-CellHighlight background`. Смотрите также `-moz-html-CellHighlightText` выделения ячейки.
 - \-moz-Combobox
-  - : {{Gecko_minversion_inline ("1.9.2")}} цвет фона для комбинированных полей `-moz-ComboboxText`. Должен использоваться с цветом переднего плана текста-moz-Combobox. В версиях до 1.9.2 вместо этого используйте `-moz-Field`.
+  - : цвет фона для комбинированных полей `-moz-ComboboxText`. Должен использоваться с цветом переднего плана текста-moz-Combobox. В версиях до 1.9.2 вместо этого используйте `-moz-Field`.
 - \-moz-ComboboxText
-  - : {Gecko_minversion_inline ("1.9.2")}} цвет текста для комбинированных полей. Следует использовать с цветом фона `-moz-Combobox`. В версиях до 1.9.2 вместо этого используйте `-moz-FieldText`.
+  - : цвет текста для комбинированных полей. Следует использовать с цветом фона `-moz-Combobox`. В версиях до 1.9.2 вместо этого используйте `-moz-FieldText`.
 - \-moz-Dialog
   - : Цвет фона для диалоговых окон. Должен использоваться с цветом переднего плана -`-moz-DialogText`.
 - \-moz-DialogText
@@ -1255,16 +1240,16 @@ hsla(240 100% 50% / 5%)       /*  непрозрачный синий на 5% */
 
   \-moz-EvenTreeRow
 
-  - : {{gecko_minversion_inline("1.9")}} цвет фона для чётных строк в дереве. Должен использоваться с цветом переднего плана `-moz-FieldText`. В версиях Gecko до 1.9, используйте-moz-поле. Смотрите также `-moz-OddTreeRow`.
+  - : цвет фона для чётных строк в дереве. Должен использоваться с цветом переднего плана `-moz-FieldText`. В версиях Gecko до 1.9, используйте-moz-поле. Смотрите также `-moz-OddTreeRow`.
 
 - \-moz-Field
   - : Text field background color. Should be used with the `-moz-FieldText` foreground color. Цвет фона текстового поля. Должен использоваться с цветом переднего плана`-moz-FieldText`.
 - \-moz-FieldText
   - : Text field text color. Should be used with the `-moz-Field`, `-moz-EvenTreeRow`, or `-moz-OddTreeRow` background color. Текстовое поле цвет текста. Следует использовать с `-moz-Field`, `-moz-EvenTreeRow` или `-moz-OddTreeRow` цветом фона строки дерева.
 - \-moz-html-CellHighlight
-  - : {{gecko_minversion_inline("1.9")}} Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlightText` foreground color. Prior to Gecko 1.9, use `-moz-CellHighlight`. {{gecko_minversion_inline ("1.9")}} цвет фона для выделенного элемента в HTML {{HTMLElement ("select")}} s. должен использоваться с цветом переднего плана `-moz-html-CellHighlight`. До Gecko 1.9, используйте `-moz-CellHighlightText`.
+  - : Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlightText` foreground color. Prior to Gecko 1.9, use `-moz-CellHighlight`. цвет фона для выделенного элемента в HTML {{HTMLElement ("select")}} s. должен использоваться с цветом переднего плана `-moz-html-CellHighlight`. До Gecko 1.9, используйте `-moz-CellHighlightText`.
 - \-moz-html-CellHighlightText
-  - : {{gecko_minversion_inline ("1.9")}} цвет текста для `-moz-html-CellHighlight` выделенных элементов в HTML {{HTMLElement ("select")}} s. должен использоваться с цветом фона. До Gecko 1.9, используйте `moz-html-CellHighlight`.
+  - : цвет текста для `-moz-html-CellHighlight` выделенных элементов в HTML {{HTMLElement ("select")}} s. должен использоваться с цветом фона. До Gecko 1.9, используйте `moz-html-CellHighlight`.
 - \-moz-mac-accentdarkestshadow
 
   \-moz-mac-accentdarkshadow
@@ -1281,10 +1266,7 @@ hsla(240 100% 50% / 5%)       /*  непрозрачный синий на 5% */
 
   \-moz-mac-chrome-active
 
-  - : {{Gecko_minversion_inline("1.9.1")}}
-
 - \-moz-mac-chrome-inactive
-  - : {{Gecko_minversion_inline("1.9.1")}}
 - \-moz-mac-focusring
 
   \-moz-mac-menuselect
@@ -1300,32 +1282,30 @@ hsla(240 100% 50% / 5%)       /*  непрозрачный синий на 5% */
 - \-moz-MenuHoverText
   - : Text color for hovered menu items. Often similar to `HighlightText`. Should be used with the `-moz-MenuHover` background color. Цвет текста для зависших пунктов меню. Часто похоже на выделение текста `HighlightText`. Следует использовать с `-moz-MenuHover` наведите цвет фона.
 - \-moz-MenuBarText
-  - : {{Gecko_minversion_inline ("1.9.2")}} цвет текста в строках меню. Часто похоже на текст меню "`MenuText`". Должен использоваться поверх фона `Menu`.
+  - : цвет текста в строках меню. Часто похоже на текст меню "`MenuText`". Должен использоваться поверх фона `Menu`.
 - \-moz-MenuBarHoverText
   - : Цвет для зависшего текста в строках меню. Часто похоже на `-moz-MenuHoverText` меню наведения текста. Следует использовать поверх `-moz-MenuHover` наведите фон.
 - \-moz-nativehyperlinktext
-  - : {{Gecko_minversion_inline ("1.9.1")}} цвет гиперссылки платформы по умолчанию.
+  - : цвет гиперссылки платформы по умолчанию.
 - \-moz-OddTreeRow
-  - : {{gecko_minversion_inline("1.9")}} цвет фона для нечётных строк в дереве. Должен использоваться с цветом переднего плана `-moz-FieldText`. В версиях Gecko до 1.9, используйте `-moz-Field`. Смотрите также `-moz-EvenTreeRow`.
+  - : цвет фона для нечётных строк в дереве. Должен использоваться с цветом переднего плана `-moz-FieldText`. В версиях Gecko до 1.9, используйте `-moz-Field`. Смотрите также `-moz-EvenTreeRow`.
 - \-moz-win-communicationstext
-  - : {{gecko_minversion_inline ("1.9")}} следует использовать для текста в объектах с `{{cssxref ("- moz-appearance")}}:- moz-win-communications-toolbox;`.
+  - : следует использовать для текста в объектах с `{{cssxref ("- moz-appearance")}}:- moz-win-communications-toolbox;`.
 - \-moz-win-mediatext
-  - : {{gecko_minversion_inline ("1.9")}} следует использовать для текста в объектах с `{{cssxref ("- moz-appearance")}}:- moz-win-media-toolbox`.
+  - : следует использовать для текста в объектах с `{{cssxref ("- moz-appearance")}}:- moz-win-media-toolbox`.
 - \-moz-win-accentcolor
-  - : {{gecko_minversion_inline ("56")}}
-    Используется для доступа к пользовательскому цвету акцента Windows 10, который можно установить в меню Пуск, панели задач, заголовках и т. д.
+  - : Используется для доступа к пользовательскому цвету акцента Windows 10, который можно установить в меню Пуск, панели задач, заголовках и т. д.
 - \-moz-win-accentcolortext
-  - : {{gecko_minversion_inline ("56")}}
-    Используется для доступа к цвету текста, размещённого над цветом пользовательского акцента Windows 10 в меню Пуск, панели задач, заголовках и т. д.
+  - : Используется для доступа к цвету текста, размещённого над цветом пользовательского акцента Windows 10 в меню Пуск, панели задач, заголовках и т. д.
 
 ### Расширения Цветовых Предпочтений Mozilla
 
 - \-moz-activehyperlinktext
   - : Пользовательское предпочтение цвета текста активных ссылок. Должен использоваться с цветом фона документа по умолчанию.
 - \-moz-default-background-color
-  - : {{Gecko_minversion_inline ("5.0")}} предпочтения пользователя для цвета фона документа.
+  - : предпочтения пользователя для цвета фона документа.
 - \-moz-default-color
-  - : {{Gecko_minversion_inline ("5.0")}} предпочтения пользователя для цвета текста.
+  - : предпочтения пользователя для цвета текста.
 - \-moz-hyperlinktext
   - : Предпочтения пользователя для цвета текста непрошеных ссылок. Должен использоваться с цветом фона документа по умолчанию.
 - \-moz-visitedhyperlinktext
@@ -1333,27 +1313,22 @@ hsla(240 100% 50% / 5%)       /*  непрозрачный синий на 5% */
 
 ## Интерполяция
 
-В анимации и [градиентах](/ru/docs/Web/CSS/CSS_Images/Using_CSS_gradients) значения `<color>` интерполируются на каждый из их [красных, зелёных и синих компонентов](https://www.gimp.org/docs/plug-in/appendix-alpha.html). Каждый компонент интерполируется как реальное число с плавающей запятой. Обратите внимание, что интерполяция цветов происходит в Альфа-предварительно умноженном цветовом пространстве rgba, чтобы предотвратить появление неожиданных серых цветов. В анимации, скорость интерполяции определяется [функцией времени](/ru/docs/Web/CSS/single-transition-timing-function).
+В анимации и [градиентах](/ru/docs/Web/CSS/CSS_images/Using_CSS_gradients) значения `<color>` интерполируются на каждый из их [красных, зелёных и синих компонентов](https://www.gimp.org/docs/plug-in/appendix-alpha.html). Каждый компонент интерполируется как реальное число с плавающей запятой. Обратите внимание, что интерполяция цветов происходит в Альфа-предварительно умноженном цветовом пространстве rgba, чтобы предотвратить появление неожиданных серых цветов. В анимации, скорость интерполяции определяется [функцией времени](/ru/docs/Web/CSS/easing-function).
 
 ## Соображения доступности
 
-Некоторые люди с трудом различают цвета. Рекомендация [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) настоятельно рекомендует не использовать цвет в качестве единственного средства передачи определённого сообщения, действия или результата. Дополнительную информацию см. В [разделе цвет и цветовой контраст](/ru/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast).
+Некоторые люди с трудом различают цвета. Рекомендация [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) настоятельно рекомендует не использовать цвет в качестве единственного средства передачи определённого сообщения, действия или результата. Дополнительную информацию см. В [разделе цвет и цветовой контраст](/ru/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast).
 
-## Технические характеристики
+## Спецификации
 
-| Спецификация                                                                                     | Статус                           | Пояснения                                                                                                                                                                                                                                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Colors', '#colorunits', '&lt;color&gt;')}}                 | {{Spec2('CSS4 Colors')}} | Добавляет `rebeccapurple`, четырёхзначные (`#RGBA`) и восьмизначные (`#RRGGBBAA`) шестнадцатеричные обозначения, `rgba()` и `hsla()` в качестве псевдонимов `rgb()` и `hsl()` (оба с одинаковым синтаксисом параметров), разделённые пробелами параметры функции в качестве альтернативы запятым, проценты для Альфа-значений и углы для компонента оттенка в цветах `hsl()`. |
-| {{SpecName('CSS3 Colors', '#colorunits', '&lt;color&gt;')}}                 | {{Spec2('CSS3 Colors')}} | Устаревает системные цвета. Добавляет цвета SVG и функциональные обозначения `rgb()`, `hsl ()` и `hsla()`.                                                                                                                                                                                                                                                                       |
-| {{SpecName('CSS2.1', 'syndata.html#value-def-color', '&lt;color&gt;')}} | {{Spec2('CSS2.1')}}         | Добавляет `orange` keyword(ключевое слово) и системные цвета.                                                                                                                                                                                                                                                                                                                    |
-| {{SpecName('CSS1', '#color-units', '&lt;color&gt;')}}                         | {{Spec2('CSS1')}}         | Первоначальное определение. Включает в себя 16 основных ключевых слов цвета.                                                                                                                                                                                                                                                                                                     |
+{{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 
-## Смотреть также
+## Смотрите также
 
 - Свойство {{Cssxref("непрозрачность")}} позволяет определить прозрачность на уровне элемента.
 - Некоторые общие свойства, которые используют этот тип данных: {{Cssxref("цвет")}}, {{Cssxref("фон")}}, {{Cssxref("бордюр-колор")}}, {{Cssxref("окно-тень")}}, {{Cssxref("контур-цвет")}}, {{Cssxref("текст-тень")}}
-- [Применение цвета к элементам HTML с помощью CSS](/ru/docs/Web/HTML/Applying_color)
+- [Применение цвета к элементам HTML с помощью CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color)

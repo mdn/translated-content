@@ -1,19 +1,27 @@
 ---
 title: continue
 slug: Web/JavaScript/Reference/Statements/continue
-tags:
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/continue
-original_slug: Web/JavaScript/Reference/Instructions/continue
 ---
 
 {{jsSidebar("Statements")}}
 
 L'instruction **`continue`** arrête l'exécution des instructions pour l'itération de la boucle courante ou de la boucle étiquetée. L'exécution est reprise à l'itération suivante.
 
-{{EmbedInteractiveExample("pages/js/statement-continue.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Continue")}}
+
+```js interactive-example
+let text = "";
+
+for (let i = 0; i < 10; i++) {
+  if (i === 3) {
+    continue;
+  }
+  text = text + i;
+}
+
+console.log(text);
+// Expected output: "012456789"
+```
 
 ## Syntaxe
 
@@ -71,46 +79,46 @@ vérifIetJ: while (i < 4) {
   i += 1;
 
   vérifJ: while (j > 4) {
-    console.log("j : "+ j);
+    console.log("j : " + j);
     j -= 1;
-    if ((j % 2) == 0){
+    if (j % 2 == 0) {
       continue vérifJ;
     }
     console.log(j + " est impaire.");
-   }
-   console.log("i = " + i);
-   console.log("j = " + j);
+  }
+  console.log("i = " + i);
+  console.log("j = " + j);
 }
 ```
 
 En utilisant le fragment ci-avant, on aura le résultat suivant :
 
 ```js
-"i : 0"
+"i : 0";
 
 // début de vérifJ
-"j : 8"
-"7 est impair"
-"j : 7"
-"j : 6"
-"5 est impair."
-"j : 5"
+"j : 8";
+"7 est impair";
+"j : 7";
+"j : 6";
+"5 est impair.";
+"j : 5";
 // fin de vérifJ
 
-"i = 1"
-"j = 4"
+"i = 1";
+"j = 4";
 
-"i : 1"
-"i = 2"
-"j = 4"
+"i : 1";
+"i = 2";
+"j = 4";
 
-"i : 2"
-"i = 3"
-"j = 4"
+"i : 2";
+"i = 3";
+"j = 4";
 
-"i : 3"
-"i = 4"
-"j = 4"
+"i : 3";
+"i = 4";
+"j = 4";
 ```
 
 ## Spécifications

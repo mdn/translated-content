@@ -1,47 +1,59 @@
 ---
-title: ':nth-last-of-type'
+title: :nth-last-of-type
 slug: Web/CSS/:nth-last-of-type
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:nth-last-of-type
+l10n:
+  sourceCommit: f22e72998f4e8f48b18ef358521bfc9ad1ae9446
 ---
 
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/CSS/Pseudo-classes) **`:nth-last-of-type`** permet de cibler des éléments qui possèdent `an+b-1` nœud frères étant les mêmes éléments à partir de la fin de l'arbre et qui ont le même élément parent (l'indice `n` sera incrémenté à partir de 0). Autrement dit, la pseudo-classe parcourra les éléments d'un type donné en partant de la fin de l'élément parent, selon le motif passé en argument.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-last-of-type`** permet de cibler les éléments selon leur position parmi les voisins qui sont du même type (les mêmes balises) en partant de la fin.
 
-```css
-/* Cible les éléments <div> qui sont les 4e */
-/* 8e, 16e, 20e, à partir du dernier élément */
-/* <div> d'un élément parent */
-div:nth-last-of-type(4n) {
-  background-color: lime;
+{{InteractiveExample("CSS Demo: :nth-last-of-type", "tabbed-shorter")}}
+
+```css interactive-example
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 3px;
+}
+
+dd:nth-last-of-type(3n) {
+  border: 2px solid orange;
 }
 ```
 
-Pour plus de détails sur les arguments passés à cette pseudo-classe, voir {{cssxref(":nth-child")}}.
+```html interactive-example
+<dl>
+  <dt>Vegetables:</dt>
+  <dd>1. Tomatoes</dd>
+  <dd>2. Cucumbers</dd>
+  <dd>3. Mushrooms</dd>
+  <dt>Fruits:</dt>
+  <dd>4. Apples</dd>
+  <dd>5. Mangos</dd>
+  <dd>6. Pears</dd>
+  <dd>7. Oranges</dd>
+</dl>
+```
 
 ## Syntaxe
 
 La pseudo-classe `nth-last-of-type` prend un seul argument qui représente le motif de répétition des éléments correspondants, comptés à partir de la fin.
 
-### Syntaxe formelle
+Voir [`:nth-last-child`](/fr/docs/Web/CSS/:nth-last-child) pour une explication plus détaillée de sa syntaxe.
 
-{{csssyntax}}
+```css-nolint
+:nth-last-of-type(<an-plus-b> | even | odd) {
+  /* ... */
+}
+```
 
 ## Exemples
 
-Ici, on souhaite mettre en avant le deuxième élément {{HTMLElement("span")}} en partant de la fin&nbsp;:
-
-### CSS
-
-```css
-span:nth-last-of-type(2) {
-  background-color: lime;
-}
-```
+Ici, on souhaite mettre en avant le deuxième élément [`<span>`](/fr/docs/Web/HTML/Element/span) en partant de la fin&nbsp;:
 
 ### HTML
 
@@ -56,9 +68,17 @@ span:nth-last-of-type(2) {
 </div>
 ```
 
+### CSS
+
+```css
+span:nth-last-of-type(2) {
+  background-color: lime;
+}
+```
+
 ### Résultat
 
-{{EmbedLiveSample('Exemples')}}
+{{EmbedLiveSample('')}}
 
 ## Spécifications
 
@@ -70,5 +90,5 @@ span:nth-last-of-type(2) {
 
 ## Voir aussi
 
-- {{cssxref(":last-of-type")}}
-- {{cssxref(":nth-of-type")}}
+- [`:nth-last-child`](/fr/docs/Web/CSS/:nth-last-child)
+- [`:nth-of-type`](/fr/docs/Web/CSS/:nth-of-type)

@@ -1,20 +1,9 @@
 ---
 title: tabs.Tab
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Tab
-  - Type
-  - WebExtensions
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type **`tabs.Tab`** contient des informations sur un onglet. Cela donne accès à des informations sur le contenu de l'onglet, la taille du contenu, les états spéciaux ou les restrictions en vigueur, etc.
 
@@ -31,24 +20,24 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `attention` {{optional_inline}}
   - : `boolean`. Indique si l'onglet attire l'attention. Par exemple, lorsque l'onglet affiche un dialogue modal, `attention` sera à `true`.
 - `audible` {{optional_inline}}
-  - : `boolean`. Si l'onglet n'est pas coupé: si l'onglet produit du son. Si l'onglet est coupé: si l'onglet produit un son, s'il n'est pas muet.
+  - : `boolean`. Si l'onglet n'est pas coupé&nbsp;: si l'onglet produit du son. Si l'onglet est coupé&nbsp;: si l'onglet produit un son, s'il n'est pas muet.
 - `autoDiscardable` {{optional_inline}}
-  - : `boolean`. Si l'onglet peut être supprimé automatiquement par le navigateur lorsque les ressources sont faibles.
+  - : `boolean`. Si l'onglet peut être déchargé automatiquement par le navigateur. La valeur par défaut est `true`. Si la valeur est `false`, le navigateur ne peut pas décharger automatiquement l'onglet. Cependant, l'onglet peut être déchargé par {{WebExtAPIRef("tabs.discard")}}.
 - `cookieStoreId` {{optional_inline}}
-  - : `string`. Le magasin de cookies de l'onglet. Si différents onglets peuvent avoir différents magasins de cookies (par exemple, pour prendre en charge l'[identitié contextuelle](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers)), vous pouvez passer cette option `storeId` dans différentes méthodes de l'API {{WebExtAPIRef("cookies")}}, pour définir et obtenir des cookies associés à Le magasin de cookies de cet onglet. Seulement présent si l'extension a la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `"cookies".`
+  - : `string`. Le magasin de cookies de l'onglet. Si différents onglets peuvent avoir différents magasins de cookies (par exemple, pour prendre en charge l'[identitié contextuelle](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers)), vous pouvez passer cette option `storeId` dans différentes méthodes de l'API {{WebExtAPIRef("cookies")}}, pour définir et obtenir des cookies associés à Le magasin de cookies de cet onglet. Seulement présent si l'extension a la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"cookies"`.
 - `discarded` {{optional_inline}}
   - : `boolean`. Si l'onglet est ignoré. Un onglet supprimé est celui dont le contenu a été déchargé de la mémoire, mais est toujours visible dans la bande d'onglets. Son contenu est rechargé la prochaine fois qu'il est activé.
 - `favIconUrl` {{optional_inline}}
-  - : `string`. L'URL de la favicon de l'onglet. Seulement présent si l'extension a la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `"tabs"`. Il peut également s'agir d'une chaîne vide si l'onglet est en cours de chargement.
+  - : `string`. L'URL de la favicon de l'onglet. Seulement présent si l'extension a la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"tabs"`. Il peut également s'agir d'une chaîne vide si l'onglet est en cours de chargement.
 - `height` {{optional_inline}}
   - : `integer`. La hauteur de l'onglet en pixels.
 - `hidden`
   - : `boolean`. Si l'onglet est caché.
 - `highlighted`
 
-  - : `boolean`. Si l'onglet est en surbrillance, c'est-à-dire une partie de la sélection de l'onglet en cours. Un onglet actif est toujours mis en surbrillance, mais certains navigateurs peuvent permettre de mettre en surbrillance des onglets supplémentaires, par exemple en cliquant dessus tout en maintenant les touches <kbd>Ctrl</kbd>, <kbd>Shift</kbd> ou <kbd>⌘ Command</kbd> .
+  - : `boolean`. Si l'onglet est en surbrillance, c'est-à-dire une partie de la sélection de l'onglet en cours. Un onglet actif est toujours mis en surbrillance, mais certains navigateurs peuvent permettre de mettre en surbrillance des onglets supplémentaires, par exemple en cliquant dessus tout en maintenant les touches <kbd>Ctrl</kbd>, <kbd>Maj</kbd> ou <kbd>⌘ Commande</kbd>.
 
-    Firefox pour Android ne prend pas en charge la mise en surbrillance de plusieurs onglets, et le bureau Firefox nécessite la préférence `browser.tabs.multiselect` (activé par défaut).
+    Firefox pour Android ne prend pas en charge la mise en surbrillance de plusieurs onglets et Firefox pour ordinateur nécessite la préférence `browser.tabs.multiselect` (activée par défaut).
 
 - `id` {{optional_inline}}
   - : `integer`. L'ID de l'onglet. Les ID d'onglet sont uniques dans une session de navigateur. L'ID d'onglet peut également être défini sur {{WebExtAPIRef('tabs.TAB_ID_NONE')}} pour les fenêtres de navigateur qui n'hébergent pas d'onglets de contenu (par exemple, les fenêtres devtools).
@@ -57,9 +46,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `index`
   - : `integer`. L'indice de base zéro de l'onglet dans sa fenêtre.
 - `isArticle`
-  - : `boolean`. Vrai si l'onglet peut être [rendu en mode lecteur](/fr/Add-ons/WebExtensions/API/tabs/toggleReaderMode), sinon faux.
+  - : `boolean`. Vrai si l'onglet peut être [rendu en mode lecteur](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode), sinon faux.
 - `isInReaderMode`
-  - : `boolean`. Vrai si l'onglet en cours de [rendu en mode lecteur](/fr/Add-ons/WebExtensions/API/tabs/toggleReaderMode), sinon faux.
+  - : `boolean`. Vrai si l'onglet en cours de [rendu en mode lecteur](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode), sinon faux.
 - `lastAccessed`
   - : `double`. Heure à laquelle l'onglet a été accédé pour la dernière fois, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
 - `mutedInfo` {{optional_inline}}
@@ -71,29 +60,29 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `selected` {{deprecated_inline}}
   - : `boolean`. Si l'onglet est sélectionné. Cette propriété a été remplacée par `active` et `highlighted`.
 - `sessionId` {{optional_inline}}
-  - : `string`. L'identifiant de session utilisé pour identifier de façon unique un `onglet`  obtenu à partir de l'API {{WebExtAPIRef('sessions')}}.
+  - : `string`. L'identifiant de session utilisé pour identifier de façon unique un `onglet` obtenu à partir de l'API {{WebExtAPIRef('sessions')}}.
 - `status` {{optional_inline}}
   - : `string`. Soit _charger_ ou _compléter_.
 - `successorId` {{optional_inline}}
   - : `integer` L'ID du successeur de l'onglet.
 - `title` {{optional_inline}}
-  - : `string`. Le titre de l'onglet. Seulement présent si l'extension à la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"tabs".`
+  - : `string`. Le titre de l'onglet. Seulement présent si l'extension à la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"tabs"`.
 - `url` {{optional_inline}}
-  - : `string`. L'URL du document que l'onglet affiche. Seulement présent si l'extension à la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `"tabs"`.
+  - : `string`. L'URL du document que l'onglet affiche. Seulement présent si l'extension à la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"tabs"`.
 - `width` {{optional_inline}}
-  - : `integer`. La largeur de l'onglet en pixels
+  - : `integer`. La largeur de l'onglet en pixels.
 - `windowId`
   - : `integer`. L'ID de la fenêtre qui héberge cet onglet.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.Tab", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

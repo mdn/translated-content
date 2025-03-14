@@ -7,12 +7,14 @@ slug: Web/API/Element/scrollHeight
 
 **`Element.scrollHeight`** 是衡量元素包含因為 overflow 而沒顯示在螢幕上的內容高度的唯讀屬性. `scrollHeight` 的值相等於元素要求 `clientHeight` 在視域中沒有使用滾動條顯示所有內容的最小高度值 . 這當中只包含 padding, 並不包含 margin.
 
-> **備註：** 這個屬性會以四捨五入進位取整數. 如果要使用非整數值, 使用 {{ domxref("Element.getBoundingClientRect()") }}.
+> [!NOTE]
+> 這個屬性會以四捨五入進位取整數. 如果要使用非整數值, 使用 {{ domxref("Element.getBoundingClientRect()") }}.
 
 ## 表達式
 
 ```js
-var intElemScrollHeight = document.getElementById(id_attribute_value).scrollHeight;
+var intElemScrollHeight =
+  document.getElementById(id_attribute_value).scrollHeight;
 ```
 
 _intElemScrollHeight_ 是個儲存了元素 scrollHeight 的正整數變數. scrollHeight 是唯讀的屬性.
@@ -29,7 +31,7 @@ padding-bottom
 
 **Left** **Top** **Right** **Bottom** _margin-top_ _margin-bottom_ _border-top_ _border-bottom_
 
-![Image:scrollHeight.png](/@api/deki/files/840/=ScrollHeight.png)
+![Image:scrollHeight.png](scrollheight.png)
 
 ## 問題與解決方法
 
@@ -38,19 +40,20 @@ padding-bottom
 下面的等式代表`如果元素被完全滾過將會`回傳 `true`, 否則回傳 `false`.
 
 ```js
-element.scrollHeight - element.scrollTop === element.clientHeight
+element.scrollHeight - element.scrollTop === element.clientHeight;
 ```
 
 ## scrollHeight 範例
 
-藉由 [`onscroll`](/zh-TW/docs/DOM/element.onscroll) 事件, 這個等式對於決定使用者是否已經讀完文字內容是很有用 (參見 [`element.scrollTop`](/zh-TW/docs/DOM/element.scrollTop), [`element.clientHeight`](/zh-TW/docs/DOM/element.clientHeight) 屬性). 範例:
+藉由 [`onscroll`](/zh-TW/docs/Web/API/Element/scroll_event) 事件, 這個等式對於決定使用者是否已經讀完文字內容是很有用 (參見 [`element.scrollTop`](/zh-TW/docs/Web/API/Element/scrollTop), [`element.clientHeight`](/zh-TW/docs/Web/API/Element/clientHeight) 屬性). 範例:
 
 ### HTML
 
 ```html
 <form name="registration">
   <p>
-    <textarea id="rules">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
+    <textarea id="rules">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
 Aliquam erat volutpat. Praesent molestie, dolor ut eleifend aliquam, mi ligula ultrices sapien, quis cursus
 neque dui nec risus. Duis tincidunt lobortis purus eu aliquet. Quisque in dignissim magna. Aenean ac lorem at
 velit ultrices consequat. Nulla luctus nisi ut libero cursus ultrices. Pellentesque nec dignissim enim. Phasellus
@@ -91,14 +94,14 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
   border-radius: 5px;
   width: 600px;
   padding: 5px;
-  border: 2px #7FDF55 solid;
+  border: 2px #7fdf55 solid;
 }
 
 #rules {
   width: 600px;
   height: 130px;
   padding: 5px;
-  border: #2A9F00 solid 2px;
+  border: #2a9f00 solid 2px;
   border-radius: 5px;
 }
 ```
@@ -106,13 +109,17 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
 ### JavaScript
 
 ```js
-function checkReading () {
+function checkReading() {
   if (checkReading.read) {
     return;
   }
   checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
-  document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
-  checkReading.noticeBox.innerHTML = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
+  document.registration.accept.disabled = document.getElementById(
+    "nextstep",
+  ).disabled = !checkReading.read;
+  checkReading.noticeBox.innerHTML = checkReading.read
+    ? "Thank you."
+    : "Please, scroll and read the following text.";
 }
 
 onload = function () {
@@ -124,10 +131,10 @@ onload = function () {
   oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
   oToBeRead.onscroll = checkReading;
   checkReading.call(oToBeRead);
-}
+};
 ```
 
-{{ EmbedLiveSample('scrollHeight_Demo', '640', '400') }}
+{{ EmbedLiveSample('scrollHeight 範例', '640', '400') }}
 
 ## 規範
 
@@ -139,7 +146,7 @@ onload = function () {
 
 ## 參見
 
-- [MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
+- [MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9](<https://learn.microsoft.com/zh-tw/previous-versions/hh781509(v=vs.85)>)
 - {{domxref("Element.clientHeight")}}
 - {{domxref("Element.offsetHeight")}}
-- [Determining the dimensions of elements](/zh-TW/docs/Determining_the_dimensions_of_elements)
+- [Determining the dimensions of elements](/zh-TW/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

@@ -1,7 +1,6 @@
 ---
 title: Event.createEvent()
 slug: Web/API/Document/createEvent
-original_slug: Web/API/Event/createEvent
 ---
 
 {{APIRef("DOM")}}

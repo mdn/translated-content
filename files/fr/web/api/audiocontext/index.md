@@ -1,14 +1,6 @@
 ---
 title: AudioContext
 slug: Web/API/AudioContext
-tags:
-  - API
-  - Audio
-  - Buffer
-  - Experimental
-  - Reference
-  - Web Audio API
-translation_of: Web/API/AudioContext
 ---
 
 {{APIRef("Web Audio API")}}
@@ -123,7 +115,7 @@ _Met également en œuvre des méthodes de l'interface {{domxref("EventTarget")}
 Déclaration basique d'un audio context :
 
 ```js
-var contexteAudio = new AudioContext;
+var contexteAudio = new AudioContext();
 ```
 
 Variante avec gestion de la compatibilité navigateur:
@@ -148,5 +140,5 @@ var finish = contexteAudio.destination;
 
 ## Voir aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - {{domxref("OfflineAudioContext")}}

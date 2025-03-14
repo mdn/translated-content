@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 
 O método **`get()`** retorna um elemento especificado de um objeto `WeakMap`.
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-get.html")}}
+{{InteractiveExample("JavaScript Demo: WeakMap.prototype.get()")}}
+
+```js interactive-example
+const weakmap1 = new WeakMap();
+const object1 = {};
+const object2 = {};
+
+weakmap1.set(object1, 42);
+
+console.log(weakmap1.get(object1));
+// Expected output: 42
+
+console.log(weakmap1.get(object2));
+// Expected output: undefined
+```
 
 ## Sintaxe
 
@@ -30,22 +44,19 @@ O elemento associado à chave especificada no objeto `WeakMap`. Se a chave não 
 
 ```js
 var wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.get(window); // Retorna "foo".
-wm.get('baz');  // Retorna undefined.
+wm.get("baz"); // Retorna undefined.
 ```
 
 ## Especificações
 
-| Specification                                                                                            | Status                       | Comment             |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}} | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.WeakMap.get")}}
+{{Compat}}
 
 ## Ver também
 

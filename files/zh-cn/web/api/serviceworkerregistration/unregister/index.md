@@ -5,42 +5,45 @@ slug: Web/API/ServiceWorkerRegistration/unregister
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-{{domxref("ServiceWorkerRegistration")}} 接口的 **`unregister`** 方法用于取消对 service worker 的注册并返回一个 {{jsxref("Promise")}}。没有找到注册时，这个 promise 返回 `false` ，否则，不论取消成功与否都返回 `true` （当其他人在同一作用域调用了 {{domxref("ServiceWorkerContainer.register")}} 可能取消失败）service worker 会在取消注册前完成一切正在进行的操作。
+{{domxref("ServiceWorkerRegistration")}} 接口的 **`unregister`** 方法用于取消对 service worker 的注册并返回一个 {{jsxref("Promise")}}。没有找到注册时，这个 promise 返回 `false`，否则，不论取消成功与否都返回 `true` （当其他人在同一作用域调用了 {{domxref("ServiceWorkerContainer.register")}} 可能取消失败）service worker 会在取消注册前完成一切正在进行的操作。
 
-> **备注：** 这一特性同样适用于 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> 这一特性同样适用于 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API)。
 
 ## 语法
 
-```
-ServiceWorkerRegistration.unregister().then(function(boolean) {
-});
+```js-nolint
+unregister()
 ```
 
 ### 参数
 
-None.
+无。
 
-### 返回
+### 返回值
 
-Promise 返回一个 bool 值表示 service worker 是否被取消注册。
+{{jsxref("Promise")}}，会兑现一个表示 service worker 是否被取消注册的布尔值。
 
-## 例子
+## 示例
 
 下面的简单例子中注册了一个 service worker，然后立即取消了：
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then(function(registration) {
-    // registration worked
-    console.log('Registration succeeded.');
-    registration.unregister().then(function(boolean) {
-      // if boolean = true, unregister is successful
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/sw.js", { scope: "/" })
+    .then((registration) => {
+      // 注册成功
+      console.log("Registration succeeded.");
+      registration.unregister().then((boolean) => {
+        // 如果 boolean = true，取消注册成功
+      });
+    })
+    .catch((error) => {
+      // 注册失败
+      console.error(`Registration failed with ${error}`);
     });
-  }).catch(function(error) {
-    // registration failed
-    console.log('Registration failed with ' + error);
-  });
-};
+}
 ```
 
 ## 规范
@@ -53,8 +56,8 @@ if ('serviceWorker' in navigator) {
 
 ## 参见
 
-- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service worker 基本代码示例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
+- [是否支持 ServiceWorker](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web workers](/zh-CN/docs/Web/Guide/Performance/Using_web_workers)
+- [使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)

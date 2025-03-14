@@ -1,17 +1,29 @@
 ---
 title: Остаточные параметры (rest parameters)
-slug: Web/JavaScript/Reference/Functions/Rest_parameters
-tags:
-  - JavaScript
-  - Остаточные параметры
-  - Функции
-translation_of: Web/JavaScript/Reference/Functions/rest_parameters
+slug: Web/JavaScript/Reference/Functions/rest_parameters
 ---
+
 {{jsSidebar("Functions")}}
 
 Синтаксис **остаточных параметров** функции позволяет представлять неограниченное множество аргументов в виде массива.
 
-{{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Rest Parameters")}}
+
+```js interactive-example
+function sum(...theArgs) {
+  let total = 0;
+  for (const arg of theArgs) {
+    total += arg;
+  }
+  return total;
+}
+
+console.log(sum(1, 2, 3));
+// Expected output: 6
+
+console.log(sum(1, 2, 3, 4));
+// Expected output: 10
+```
 
 ## Синтаксис
 
@@ -56,7 +68,6 @@ myFun("один", "два", "три", "четыре", "пять", "шесть");
 // До появления остаточных параметров "arguments" конвертировали в обычный массив используя:
 
 function f(a, b) {
-
   var normalArray = Array.prototype.slice.call(arguments);
   // -- или --
   var normalArray = [].slice.call(arguments);
@@ -65,7 +76,6 @@ function f(a, b) {
 
   var first = normalArray.shift(); // OK, даёт первый аргумент
   var first = arguments.shift(); // ERROR (arguments не является обычным массивом)
-
 }
 
 // Теперь мы можем легко получить остаточные параметры как обычный массив
@@ -139,7 +149,7 @@ function fun1(...theArgs) {
   console.log(theArgs.length);
 }
 
-fun1();  // 0
+fun1(); // 0
 fun1(5); // 1
 fun1(5, 6, 7); // 3
 ```
@@ -148,7 +158,7 @@ fun1(5, 6, 7); // 3
 
 ```js
 function multiply(multiplier, ...theArgs) {
-  return theArgs.map(function(element) {
+  return theArgs.map(function (element) {
     return multiplier * element;
   });
 }
@@ -171,7 +181,6 @@ function sortArguments() {
   var sortedArgs = arguments.sort();
   return sortedArgs; // это никогда не выполнится
 }
-
 
 console.log(sortArguments(5, 3, 7, 1)); // TypeError (arguments.sort is not a function)
 ```
@@ -200,6 +209,6 @@ console.log(sortArguments(5, 3, 7, 1)); // 1, 3, 5, 7
 - [Объект arguments](/ru/docs/Web/JavaScript/Reference/Functions/arguments)
 - [Array](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array)
 - [Функции](/ru/docs/Web/JavaScript/Reference/Functions)
-- [Оператор распространения](/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+- [Оператор распространения](/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 - [Оригинальное предложение на ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
-- [JavaScript arguments object and beyond](http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
+- [JavaScript arguments object and beyond](https://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)

@@ -1,16 +1,12 @@
 ---
 title: Class fields
 slug: Web/JavaScript/Reference/Classes/Public_class_fields
-tags:
-  - Clases
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Classes/Public_class_fields
-original_slug: Web/JavaScript/Referencia/Classes/Class_fields
 ---
 
 {{JsSidebar("Classes")}}
 
-> **Nota:** Las declaraciones de campos públicos y privados son una [característica experimental (en estado 3)](https://github.com/tc39/proposal-class-fields) propuesta por el [TC39](https://tc39.github.io/beta/), el comite de estandares de JavaScript. El soporte y funcionamiento en navegadores es limitado, pero la funcionalidad puede ser usada a través de un paso durante el proceso del build por medio de sistemas como [Babel](https://babeljs.io/). Revise [compat information](#Browser_compatibility) mas abajo.
+> [!NOTE]
+> Las declaraciones de campos públicos y privados son una [característica experimental (en estado 3)](https://github.com/tc39/proposal-class-fields) propuesta por el [TC39](https://tc39.github.io/beta/), el comite de estandares de JavaScript. El soporte y funcionamiento en navegadores es limitado, pero la funcionalidad puede ser usada a través de un paso durante el proceso del build por medio de sistemas como [Babel](https://babeljs.io/). Revise [compat information](#browser_compatibility) mas abajo.
 
 Los campos públicos y estáticos son propieades editables, enumerables, y configurables. A diferencia de su contraparte privada, estos participan en la herencia de prototipo.
 
@@ -18,16 +14,16 @@ Los campos públicos y estáticos son propieades editables, enumerables, y confi
 
 ```js
 class ClassWithInstanceField {
-  instanceField = 'instance field'
+  instanceField = "instance field";
 }
 
 class ClassWithStaticField {
-  static staticField = 'static field'
+  static staticField = "static field";
 }
 
 class ClassWithPublicInstanceMethod {
   publicMethod() {
-    return 'hello world'
+    return "hello world";
   }
 }
 ```
@@ -42,11 +38,11 @@ Los campos estáticos públicos se declaran utilizando la palabra clave `static`
 
 ```js
 class ClassWithStaticField {
-  static staticField = 'static field';
+  static staticField = "static field";
 }
 
 console.log(ClassWithStaticField.staticField);
-// expected output: "static field"​
+// expected output: "static field"
 ```
 
 Campos sin inicializadores son inicializados como `undefined`.
@@ -56,7 +52,7 @@ class ClassWithStaticField {
   static staticField;
 }
 
-console.assert(ClassWithStaticField.hasOwnProperty('staticField'));
+console.assert(ClassWithStaticField.hasOwnProperty("staticField"));
 console.log(ClassWithStaticField.staticField);
 // expected output: "undefined"
 ```
@@ -65,11 +61,11 @@ Los campos estáticos públicos no se reinicializan en las subclases, pero se pu
 
 ```js
 class ClassWithStaticField {
-  static baseStaticField = 'base field';
+  static baseStaticField = "base field";
 }
 
 class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = 'sub class field';
+  static subStaticField = "sub class field";
 }
 
 console.log(SubClassWithStaticField.subStaticField);
@@ -83,10 +79,12 @@ Cuando se inicializasn campos `this` se refiere al constuctor de clase. Tambien 
 
 ```js
 class ClassWithStaticField {
-  static baseStaticField = 'base static field';
+  static baseStaticField = "base static field";
   static anotherBaseStaticField = this.baseStaticField;
 
-  static baseStaticMethod() { return 'base static method output'; }
+  static baseStaticMethod() {
+    return "base static method output";
+  }
 }
 
 class SubClassWithStaticField extends ClassWithStaticField {
@@ -108,7 +106,7 @@ Los campos de instancia públicos son agregados with [Object.defineProperty](/es
 
 ```js
 class ClassWithInstanceField {
-  instanceField = 'instance field';
+  instanceField = "instance field";
 }
 
 const instance = new ClassWithInstanceField();
@@ -124,7 +122,7 @@ class ClassWithInstanceField {
 }
 
 const instance = new ClassWithInstanceField();
-console.assert(instance.hasOwnProperty('instanceField'));
+console.assert(instance.hasOwnProperty("instanceField"));
 console.log(instance.instanceField);
 // expected output: "undefined"
 ```
@@ -132,10 +130,10 @@ console.log(instance.instanceField);
 Al igual que las propiedades, los nombres de campos pueden ser calculados (computed)
 
 ```js
-const PREFIX = 'prefix';
+const PREFIX = "prefix";
 
 class ClassWithComputedFieldName {
-    [`${PREFIX}Field`] = 'prefixed field';
+  [`${PREFIX}Field`] = "prefixed field";
 }
 
 const instance = new ClassWithComputedFieldName();
@@ -147,9 +145,11 @@ Cuando se inicializan campos `this` se refiere a la instancia de clase que esta 
 
 ```js
 class ClassWithInstanceField {
-  baseInstanceField = 'base field';
+  baseInstanceField = "base field";
   anotherBaseInstanceField = this.baseInstanceField;
-  baseInstanceMethod() { return 'base method output'; }
+  baseInstanceMethod() {
+    return "base method output";
+  }
 }
 
 class SubClassWithInstanceField extends ClassWithInstanceField {
@@ -175,7 +175,7 @@ La palabra reservada **`static`** define un metodo estático para una clase. Los
 ```js
 class ClassWithStaticMethod {
   static staticMethod() {
-    return 'static method has been called.';
+    return "static method has been called.";
   }
 }
 
@@ -192,13 +192,13 @@ Como su nombre lo indica, los métodos publicos de instancia son metodos que est
 ```js
 class ClassWithPublicInstanceMethod {
   publicMethod() {
-    return 'hello world';
+    return "hello world";
   }
 }
 
 const instance = new ClassWithPublicInstanceMethod();
 console.log(instance.publicMethod());
-// expected output: "hello worl​d"
+// expected output: "hello world"
 ```
 
 Los métodos públicos de instancia son agregeados al prototipo de clase durante la evaluacón de la clase usando [Object.defineProperty](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Estos metodos son "escribibles" (writable), no-enumerables y configurables.
@@ -207,9 +207,9 @@ Usted puede usar un generador, async y funciones generadoras asincronas
 
 ```js
 class ClassWithFancyMethods {
-  *generatorMethod() { }
-  async asyncMethod() { }
-  async *asyncGeneratorMethod() { }
+  *generatorMethod() {}
+  async asyncMethod() {}
+  async *asyncGeneratorMethod() {}
 }
 ```
 
@@ -217,7 +217,7 @@ Dentro de un metodo de instancia, `this` se referie a la instancia como tal. En 
 
 ```js
 class BaseClass {
-  msg = 'hello world';
+  msg = "hello world";
   basePublicMethod() {
     return this.msg;
   }
@@ -231,14 +231,14 @@ class SubClass extends BaseClass {
 
 const instance = new SubClass();
 console.log(instance.subPublicMethod());
-// expected output: "hello worl​d"
+// expected output: "hello world"
 ```
 
 Existen metodos especiales llamados "Getters" y "Setters" que se vinculan a una propiedad de una clase, y que son ejecutados o llamados cuando esa propiedad es consultada o moditficada. Puede usar las palabras reservaddas [get](/es/docs/Web/JavaScript/Reference/Functions/get) y [set](/es/docs/Web/JavaScript/Reference/Functions/set) para declarar una instancia pública de "getter" or "setter". [N.T. preferí decir Getter/Setter que decir Consultadores/Mofificadores]
 
 ```js
 class ClassWithGetSet {
-  #msg = 'hello world';
+  #msg = "hello world";
   get msg() {
     return this.#msg;
   }
@@ -249,9 +249,9 @@ class ClassWithGetSet {
 
 const instance = new ClassWithGetSet();
 console.log(instance.msg);
-// expected output: "hello worl​d"
+// expected output: "hello world"
 
-instance.msg = 'cake';
+instance.msg = "cake";
 console.log(instance.msg);
 // expected output: "hello cake"
 ```
@@ -291,7 +291,7 @@ class BaseClassWithPrivateStaticField {
   }
 }
 
-class SubClass extends BaseClassWithPrivateStaticField { }
+class SubClass extends BaseClassWithPrivateStaticField {}
 
 assertThrows(() => SubClass.basePublicStaticMethod(), TypeError);
 ```
@@ -326,13 +326,13 @@ Private static methods may be generator, async and async generator functions.
 
 ```js
 class ClassWithPrivateStaticMethod {
-    static #privateStaticMethod() {
-        return 42;
-    }
+  static #privateStaticMethod() {
+    return 42;
+  }
 
-    static publicStaticMethod() {
-        return ClassWithPrivateStaticMethod.#privateStaticMethod();
-    }
+  static publicStaticMethod() {
+    return ClassWithPrivateStaticMethod.#privateStaticMethod();
+  }
 }
 
 assert(ClassWithPrivateStaticField.publicStaticMethod() === 42);
@@ -355,7 +355,7 @@ class ClassWithPrivateMethod {
 
 const instance = new ClassWithPrivateMethod();
 console.log(instance.getPrivateMessage());
-// expected output: "hello worl​d"
+// expected output: "hello world"
 ```
 
 Private instance methods may be generator, async or async generator functions. Private getters and setters are also possible:
@@ -372,30 +372,22 @@ class ClassWithPrivateAccessor {
   }
 
   constructor() {
-    this.#decoratedMessage = 'hello world';
+    this.#decoratedMessage = "hello world";
     console.log(this.#decoratedMessage);
   }
 }
 
 new ClassWithPrivateAccessor();
-// expected output: "✨hello worl​d✨"
+// expected output: "✨hello world✨"
 ```
 
 ## Especificaciones
 
-| Especificación                                                                            | Estado  | Comentario |
-| ----------------------------------------------------------------------------------------- | ------- | ---------- |
-| [FieldDefinition production](https://tc39.es/proposal-class-fields/#prod-FieldDefinition) | Stage 3 |            |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-### Campos públicos de clse
-
-{{Compat("javascript.classes.public_class_fields")}}
-
-### Campos privados de clase
-
-{{Compat("javascript.classes.private_class_fields")}}
+{{Compat}}
 
 ## Ver también
 

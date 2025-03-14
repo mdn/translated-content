@@ -1,15 +1,11 @@
 ---
 title: X-Content-Type-Options
 slug: Web/HTTP/Headers/X-Content-Type-Options
-tags:
-  - En-tête HTTP
-  - En-tête de réponse
-  - HTTP
-  - Réponse
-translation_of: Web/HTTP/Headers/X-Content-Type-Options
 ---
 
-L'entête **`X-Content-Type-Options`** est un marqueur utilisé par le serveur pour indiquer que les [types MIME](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types) annoncés dans les en-têtes {{HTTPHeader("Content-Type")}} ne doivent pas être modifiés ou et suivis. Cela permet de se détacher du sniffing de type [MIME](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types#détection_de_type_mime), ou, en d'autres termes, c'est une façon de dire que les webmasters savaient ce qu'ils faisaient.
+{{HTTPSidebar}}
+
+L'entête **`X-Content-Type-Options`** est un marqueur utilisé par le serveur pour indiquer que les [types MIME](/fr/docs/Web/HTTP/MIME_types) annoncés dans les en-têtes {{HTTPHeader("Content-Type")}} ne doivent pas être modifiés ou et suivis. Cela permet de se détacher du sniffing de type [MIME](/fr/docs/Web/HTTP/MIME_types#détection_de_type_mime), ou, en d'autres termes, c'est une façon de dire que les webmasters savaient ce qu'ils faisaient.
 
 Cet en-tête a été introduit par Microsoft dans IE 8 comme un moyen pour les webmasters de bloquer le reniflement de contenu qui se passait et pouvait transformer les types MIME non exécutables en types MIME exécutables. Depuis, d'autres navigateurs l'ont introduit, même si leurs algorithmes de reniflage MIME étaient moins agressifs.
 
@@ -66,7 +62,7 @@ X-Content-Type-Options: nosniff
 
 - {{HTTPHeader("Content-Type")}}
 - La [définition originale](https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/) de X-Content-Type-Options par Microsoft.
-- L'[Outil Obserservatoire Mozilla](https://observatory.mozilla.org/) teste la configuration (y compris en-tête) des sites Web pour la sécurité et la sûreté.
+- L'[Outil Observatoire Mozilla](https://observatory.mozilla.org/) teste la configuration (y compris en-tête) des sites Web pour la sécurité et la sûreté.
 - [Atténuer les attaques MIME Confusion dans Firefox.](https://blog.mozilla.org/security/2016/08/26/mitigating-mime-confusion-attacks-in-firefox/)
 - [Blocage de la lecture croisée (CORB)](https://fetch.spec.whatwg.org/#corb)
 - [Google Docs CORB explicatif](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md)

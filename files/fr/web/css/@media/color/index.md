@@ -1,11 +1,6 @@
 ---
 title: color
 slug: Web/CSS/@media/color
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
-translation_of: Web/CSS/@media/color
 ---
 
 {{CSSRef}}
@@ -16,7 +11,8 @@ translation_of: Web/CSS/@media/color
 
 La caractéristique `color` est définie avec un entier (type CSS {{cssxref("&lt;integer&gt;")}}) et représente le nombre de bits utiisé par l'appareil d'affichage pour représenter chaque composante de couleur. Si l'appareil ne gère pas les couleurs, la valeur sera zéro. C'est une caractéristique d'intervalle ce qui signifie qu'on peut utiliser les variantes préfixées **`min-color`** et **`max-color`** afin de cibler des règles en fonction d'un minimum ou d'un maximum.
 
-> **Note :** Si les différentes composantes sont représentées sur un nombre différent de bits, c'est le plus petit de ces nombres qui est utilisé. Par exemple, si un affichage utilise 5 bits pour le bleu et le rouge mais 6 bits pour le vert, on considèrera que l'appareil utilise 5 bits par couleur. Si l'appareil utilise des couleur indexées, c'est le nombre minimal de bits par composantes parmi les couleurs de l'index qui est utilisé.
+> [!NOTE]
+> Si les différentes composantes sont représentées sur un nombre différent de bits, c'est le plus petit de ces nombres qui est utilisé. Par exemple, si un affichage utilise 5 bits pour le bleu et le rouge mais 6 bits pour le vert, on considèrera que l'appareil utilise 5 bits par couleur. Si l'appareil utilise des couleur indexées, c'est le nombre minimal de bits par composantes parmi les couleurs de l'index qui est utilisé.
 
 ## Exemples
 
@@ -24,9 +20,8 @@ La caractéristique `color` est définie avec un entier (type CSS {{cssxref("&lt
 
 ```html
 <p>
-   Ce texte sera noir pour les appareils qui ne prennent en charge
-   aucune couleur, rouge pour ceux qui prennent peu de couleurs en
-   charge et vert sinon.
+  Ce texte sera noir pour les appareils qui ne prennent en charge aucune
+  couleur, rouge pour ceux qui prennent peu de couleurs en charge et vert sinon.
 </p>
 ```
 
@@ -67,6 +62,6 @@ p {
 
 ## Voir aussi
 
-- [Appliquer des couleurs HTML à CSS](/fr/docs/Web/HTML/Applying_color)
+- [Appliquer des couleurs HTML à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
 - La propriété CSS {{cssxref("color")}}
 - Le type de donnée CSS {{cssxref("&lt;color&gt;")}}

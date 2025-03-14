@@ -1,15 +1,6 @@
 ---
 title: browsingData
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browsingData
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData
 ---
 
 {{AddonSidebar}}
@@ -36,7 +27,7 @@ Toutes les fonctions `browsingData.remove[X]()` prennent un objet {{WebExtAPIRef
 
 Enfin, cette API vous donne une fonction {{WebExtAPIRef("browsingData.settings()")}} qui vous donne la valeur actuelle des paramètres de la fonction "Effacer l'historique" du navigateur.
 
-Pour utiliser cette API, vous devez disposer de l'[API permission](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "browseData".
+Pour utiliser cette API, vous devez disposer de l'[API permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "browseData".
 
 ## Types
 
@@ -68,15 +59,15 @@ Pour utiliser cette API, vous devez disposer de l'[API permission](/fr/Add-ons/W
 - {{WebExtAPIRef("browsingData.settings()")}}
   - : Obtient la valeur actuelle des paramètres dans la fonction "Effacer l'historique" du navigateur
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData", 2)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

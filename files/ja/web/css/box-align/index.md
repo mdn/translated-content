@@ -7,11 +7,12 @@ l10n:
 
 {{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
 
-> **警告:** このプロパティは、当初の CSS Flexible Box Layout Module の草案段階のものでしたが、より新しい標準で置き換えられました。
+> [!WARNING]
+> このプロパティは、当初の CSS Flexible Box Layout Module の草案段階のものでしたが、より新しい標準で置き換えられました。
 
 **`box-align`** は [CSS](/ja/docs/Web/CSS) のプロパティで、交差軸方向に子要素をどう整列させるかを定義します。ボックス内に余分な空間がある場合にかぎり、その効果を確認することができます。
 
-現在の標準仕様に関する情報については、[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)を確認してください。
+現在の標準仕様に関する情報については、[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)を確認してください。
 
 ```css
 /* キーワード値 */
@@ -73,7 +74,7 @@ box-align =
 ### ボックス配置の設定
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

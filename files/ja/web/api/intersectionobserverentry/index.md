@@ -1,37 +1,41 @@
 ---
 title: IntersectionObserverEntry
 slug: Web/API/IntersectionObserverEntry
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
-{{SeeCompatTable}}{{APIRef("Intersection Observer API")}}
+{{APIRef("Intersection Observer API")}}
 
-[Intersection Observer API](/ja/docs/Web/API/Intersection_Observer_API) の **`IntersectionObserverEntry`** インターフェイスは、特定の遷移時点でのターゲット要素とそのルートコンテナ間の共通部分を記述します。 `IntersectionObserverEntry` のインスタンスは、その `entries` パラメータで {{domxref("IntersectionObserver")}} コールバックに渡されます。それ以外の場合、これらのオブジェクトは {{domxref("IntersectionObserver.takeRecords()")}} を呼び出すことによってのみ取得できます。
+**`IntersectionObserverEntry`** は[交差オブザーバー API](/ja/docs/Web/API/Intersection_Observer_API) のインターフェイスで、遷移の特定の瞬間における対象要素とそのルートコンテナー間の交差状態を表します。
+
+`IntersectionObserverEntry` のインスタンスは、 {{domxref("IntersectionObserver")}} のコールバックに `entries` 引数で渡されます。それ以外でこれらのオブジェクト取得することができるのは、 {{domxref("IntersectionObserver.takeRecords()")}} を呼び出した場合のみです。
 
 ## プロパティ
 
-- {{domxref("IntersectionObserverEntry.boundingClientRect")}} {{readonlyinline}}
-  - : ターゲット要素の矩形の境界を {{domxref("DOMRectReadOnly")}} として返します。境界は {{domxref("Element.getBoundingClientRect()")}} のドキュメントで説明されているのと同様に計算されます。
-- {{domxref("IntersectionObserverEntry.intersectionRatio")}} {{readonlyinline}}
+- {{domxref("IntersectionObserverEntry.boundingClientRect")}} {{ReadOnlyInline}}
+  - : 対象要素の外接矩形を {{domxref("DOMRectReadOnly")}} として返します。境界は {{domxref("Element.getBoundingClientRect()")}} の記事で説明されているのと同様に計算されます。
+- {{domxref("IntersectionObserverEntry.intersectionRatio")}} {{ReadOnlyInline}}
   - : `intersectionRect` と `boundingClientRect` の比率を返します。
-- {{domxref("IntersectionObserverEntry.intersectionRect")}} {{readonlyinline}}
-  - : ターゲットの表示領域を表す {{domxref("DOMRectReadOnly")}} を返します。
+- {{domxref("IntersectionObserverEntry.intersectionRect")}} {{ReadOnlyInline}}
+  - : 対象の表示領域の矩形を表す {{domxref("DOMRectReadOnly")}} を返します。
 - {{domxref("IntersectionObserverEntry.isIntersecting")}} {{ReadOnlyInline}}
-  - : ターゲットの要素が、交差を監視しているルートを超えたら `true` を返す真偽値です。 `true` の場合、 `IntersectionObserverEntry` は交差状態の変わり目にあります。 `false` の場合、交差から非交差への変わり目であることがわかります。
-- {{domxref("IntersectionObserverEntry.rootBounds")}} {{readonlyinline}}
-  - : 交差を監視しているルートの {{domxref("DOMRectReadOnly")}} を返します。
+  - : 論理値で、対象要素が、この交差オブザーバーのルートに対象要素が交差したときは `true` になります。この値が `true` の場合、 `IntersectionObserverEntry` は交差状態への変わり目にあることを示します。 `false` の場合、交差状態から交差なしへの変わり目であることがわかります。
+- {{domxref("IntersectionObserverEntry.rootBounds")}} {{ReadOnlyInline}}
+  - : この交差オブザーバーのルートの矩形である {{domxref("DOMRectReadOnly")}} を返します。
 - {{domxref("IntersectionObserverEntry.target")}} {{ReadOnlyInline}}
-  - : ルートとの交差が変化する {{domxref("Element")}} 。
-- {{domxref("IntersectionObserverEntry.time")}} {{readonlyinline}}
-  - : `IntersectionObserver` の[時刻の起点](/ja/docs/Web/API/DOMHighResTimeStamp#The_time_origin)を基準にして、交差が記録された時刻を示す {{domxref("DOMHighResTimeStamp")}} 。
+  - : ルートとの交差状態が変化した {{domxref("Element")}} です。
+- {{domxref("IntersectionObserverEntry.time")}} {{ReadOnlyInline}}
+  - : {{domxref("DOMHighResTimeStamp")}} で、この `IntersectionObserver` の[時刻の起点](/ja/docs/Web/API/DOMHighResTimeStamp#時刻の起点)を基準にして、交差が記録された時刻を示します。
 
 ## メソッド
 
-_このインタフェースにはメソッドがありません。_
+_このインターフェイスにはメソッドがありません。_
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
-{{Compat("api.IntersectionObserverEntry")}}
+{{Compat}}

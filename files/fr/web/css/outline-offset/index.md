@@ -1,16 +1,11 @@
 ---
 title: outline-offset
 slug: Web/CSS/outline-offset
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/outline-offset
 ---
 
 {{CSSRef}}
 
-La propriété **`outline-offset`** définit l'espace qu'il y a entre la bordure dessinée par {{cssxref("outline")}} et le bord de [la boîte de bordure](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) d'un élément. Cet espace est transparent et la couleur visible en arrière-plan sera déterminée par l'élément parent.
+La propriété **`outline-offset`** définit l'espace qu'il y a entre la bordure dessinée par {{cssxref("outline")}} et le bord de [la boîte de bordure](/fr/docs/Learn/CSS/Building_blocks/The_box_model) d'un élément. Cet espace est transparent et la couleur visible en arrière-plan sera déterminée par l'élément parent.
 
 {{EmbedInteractiveExample("pages/css/outline-offset.html")}}
 
@@ -59,7 +54,7 @@ outline-offset: unset;
 ### HTML
 
 ```html
-<p class="exemple">La bordure est décalée<p>
+<p class="exemple">La bordure est décalée</p>
 ```
 
 ### Résultat

@@ -1,23 +1,17 @@
 ---
-title: Ваш второй WebExtension
+title: Ваше второе расширение
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-tags:
-  - Beginner
-  - Example
-  - Guide
-  - WebExtension
-translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 ---
 
 {{AddonSidebar}}
 
-Если вы уже прочитали статью [Ваш первый WebExtension](/ru/Add-ons/WebExtensions/Your_first_WebExtension), то уже представляете, как создавать WebExtension. В этой статье мы напишем более сложное дополнение, которое демонстрирует ещё несколько API.
+Если вы уже прочитали статью [Ваше первое расширение](/ru/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension), то уже представляете, как создавать расширения. В этой статье мы напишем более сложное дополнение, которое демонстрирует ещё несколько API.
 
 Дополнение добавляет новую кнопку на панель инструментов Firefox. Когда пользователь кликает по кнопке, мы показываем ему всплывающую панель с предложением выбрать животное. Когда животное выбрано, мы заменяем содержимое текущей страницы на изображение выбранного животного.
 
 Чтобы реализовать это, мы:
 
-- **определим [browser action](/ru/docs/Mozilla/Add-ons/WebExtensions/Browser_action) - кнопку, прикреплённую к панели инструментов Firefox.**
+- **определим [browser action](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) - кнопку, прикреплённую к панели инструментов Firefox.**
   Для кнопки мы предоставим:
 
   - иконку с именем "beasts-32.png"
@@ -31,9 +25,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 
 Вы можете представить общую структуру дополнения вот так:
 
-![](https://mdn.mozillademos.org/files/13671/Untitled-1.png)
+![](untitled-1.png)
 
-Это простое дополнение, но показывает множество основных концепций WebExtensions API:
+Это простое дополнение, но показывает множество основных концепций WebExtension API:
 
 - добавление кнопки на панель инструментов
 - определение всплывающей панели используя HTML, CSS, и JavaScript
@@ -45,7 +39,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 
 Чтобы написать это дополнение, вам нужен Firefox 45 или новее.
 
-## Написание WebExtension
+## Написание расширение
 
 Создайте новую директорию и перейдите в неё:
 
@@ -60,7 +54,6 @@ cd beastify
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Beastify",
   "version": "1.0",
@@ -71,9 +64,7 @@ cd beastify
     "48": "icons/beasts-48.png"
   },
 
-  "permissions": [
-    "activeTab"
-  ],
+  "permissions": ["activeTab"],
 
   "browser_action": {
     "default_icon": "icons/beasts-32.png",
@@ -86,14 +77,13 @@ cd beastify
     "beasts/turtle.jpg",
     "beasts/snake.jpg"
   ]
-
 }
 ```
 
 - Первые три ключа: [`manifest_version`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name), `и version`, являются обязательными и содержат основные мета-данные для дополнения.
 - [`description`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) `и homepage_url` необязательны, но рекомендуемы: они предоставляют полезную информацию о дополнении.
 - [`icons`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) необязательный, но рекомендуемый: позволяет вам определять иконку для дополнения, которая будет показана в Менеджере Дополнений.
-- [`permissions`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) перечисляет разрешения для нужд дополнения. Здесь мы просто спрашиваем разрешения для [`activeTab` permission](/ru/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
+- [`permissions`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) перечисляет разрешения для нужд дополнения. Здесь мы просто спрашиваем разрешения для [`activeTab` permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
 - [`browser_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) задаёт кнопку на панели инструментов. Здесь мы предоставляем три вида информации:
 
   - `default_icon` это обязательная иконка для кнопки
@@ -108,7 +98,7 @@ cd beastify
 
 Дополнение должно иметь иконку. Она будет показана рядом с дополнением в Менеджере Дополнений (Вы можете открыть менеджер перейдя по ссылке "about:addons"). Наш manifest.json обещает, что у нас будет иконка для панели инструментов по адресу "icons/beasts-48.png".
 
-Создайте папку "icons" и сохраните там иконку с именем "beasts-48.png". Вы можете использовать [иконку из нашего примера](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png), которая взята из [набора Aha-Soft’s Free Retina](https://www.iconfinder.com/iconsets/free-retina-icon-set) и используется на условиях этой [лицензии](http://www.aha-soft.com/free-icons/free-retina-icon-set/).
+Создайте папку "icons" и сохраните там иконку с именем "beasts-48.png". Вы можете использовать [иконку из нашего примера](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png), которая взята из [набора Aha-Soft's Free Retina](http://www.aha-soft.com/free-icons/free-retina-icon-set/) и используется на условиях этой своей лицензии.
 
 Если вы выберете свою иконку, она должна быть размером 48x48 пикселей. Вы также можете предоставить иконку размером 96x96 пикселей для дисплеев с высоким разрешением, определив свойство `"96"` объекта `icons` в файле manifest.json:
 
@@ -142,12 +132,12 @@ cd beastify
 HTML выглядит так:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="choose_beast.css"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="choose_beast.css" />
   </head>
 
   <body>
@@ -158,7 +148,6 @@ HTML выглядит так:
 
     <script src="choose_beast.js"></script>
   </body>
-
 </html>
 ```
 
@@ -169,7 +158,8 @@ HTML выглядит так:
 CSS фиксирует размер всплывающей панели, гарантирует что три варианта заполняют пространство и даёт им основной стиль:
 
 ```css
-html, body {
+html,
+body {
   width: 100px;
 }
 
@@ -182,19 +172,19 @@ html, body {
 }
 
 .beast:hover {
-  background-color: #CFF2F2;
+  background-color: #cff2f2;
 }
 
 .beast {
- background-color: #E5F2F2;
+  background-color: #e5f2f2;
 }
 
 .clear {
- background-color: #FBFBC9;
+  background-color: #fbfbc9;
 }
 
 .clear:hover {
- background-color: #EAEAC9;
+  background-color: #eaeac9;
 }
 ```
 
@@ -238,15 +228,17 @@ document.addEventListener("click", (e) => {
     var chosenBeastURL = beastNameToURL(chosenBeast);
 
     browser.tabs.executeScript(null, {
-      file: "/content_scripts/beastify.js"
+      file: "/content_scripts/beastify.js",
     });
 
-    var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
-    gettingActiveTab.then((tabs) => {
-      browser.tabs.sendMessage(tabs[0].id, {beastURL: chosenBeastURL});
+    var gettingActiveTab = browser.tabs.query({
+      active: true,
+      currentWindow: true,
     });
-  }
-  else if (e.target.classList.contains("clear")) {
+    gettingActiveTab.then((tabs) => {
+      browser.tabs.sendMessage(tabs[0].id, { beastURL: chosenBeastURL });
+    });
+  } else if (e.target.classList.contains("clear")) {
     browser.tabs.reload();
     window.close();
   }
@@ -315,7 +307,7 @@ Content script добавляет обработчик к сообщениям �
 
 Создайте новую папку с именем "beasts" и добавьте туда три изображения с соответствующими именами. Вы можете получить изображения из [GitHub репозитория](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts), или прямо здесь:
 
-![](https://mdn.mozillademos.org/files/11459/frog.jpg)![](https://mdn.mozillademos.org/files/11461/snake.jpg)![](https://mdn.mozillademos.org/files/11463/turtle.jpg)
+![](frog.jpg)![](snake.jpg)![](turtle.jpg)
 
 ## Тестирование
 
@@ -356,7 +348,7 @@ beastify/
 
 ## Разработка из командной строки
 
-Вы можете автоматизировать этап временной установки используя [web-ext](/ru/Add-ons/WebExtensions/Getting_started_with_web-ext). Попробуйте это:
+Вы можете автоматизировать этап временной установки используя [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/). Попробуйте это:
 
 ```bash
 cd beastify

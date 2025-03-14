@@ -90,7 +90,7 @@ align-items: unset;
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   align-items: center; /* Pode ser mudado na amostra ao vivo */
   background-color: #8c8c8c;
@@ -210,15 +210,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.alignItems = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```
@@ -229,12 +229,7 @@ display.addEventListener('change', function (evt) {
 
 ## Especificações
 
-| Especificação                                                                                    | Status                                   | Comentário                                      |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------- |
-| {{SpecName("CSS3 Box Alignment", "#propdef-align-items", "align-items")}} | {{Spec2("CSS3 Box Alignment")}} | Atualização para últimas definições de sintaxe. |
-| {{SpecName('CSS3 Flexbox', '#propdef-align-items', 'align-items')}}         | {{Spec2('CSS3 Flexbox')}}         | Definição inicial                               |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
@@ -244,9 +239,9 @@ display.addEventListener('change', function (evt) {
 
 ## Veja também
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/pt-BR/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS Box Alignment](/pt-BR/docs/Web/CSS/CSS_Box_Alignment)
 - The {{cssxref("align-self")}} property
 

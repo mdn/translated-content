@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
 
 静的な **`Reflect.getOwnPropertyDescriptor()`** メソッドは {{jsxref("Object.getOwnPropertyDescriptor()")}} と似ています。オブジェクトにプロパティが存在する場合は、指定されたプロパティのプロパティ記述子を返します。一方、プロパティが存在しない場合は {{jsxref("undefined")}} を返します。
 
-{{EmbedInteractiveExample("pages/js/reflect-getownpropertydescriptor.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.getOwnPropertyDescriptor()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+console.log(Reflect.getOwnPropertyDescriptor(object1, "property1").value);
+// Expected output: 42
+
+console.log(Reflect.getOwnPropertyDescriptor(object1, "property2"));
+// Expected output: undefined
+
+console.log(Reflect.getOwnPropertyDescriptor(object1, "property1").writable);
+// Expected output: true
+```
 
 ## 構文
 
@@ -39,13 +54,13 @@ Reflect.getOwnPropertyDescriptor(target, propertyKey)
 ### Reflect.getOwnPropertyDescriptor() の使用
 
 ```js
-Reflect.getOwnPropertyDescriptor({x: 'hello'}, 'x')
+Reflect.getOwnPropertyDescriptor({ x: "hello" }, "x");
 // {value: "hello", writable: true, enumerable: true, configurable: true}
 
-Reflect.getOwnPropertyDescriptor({x: 'hello'}, 'y')
+Reflect.getOwnPropertyDescriptor({ x: "hello" }, "y");
 // undefined
 
-Reflect.getOwnPropertyDescriptor([], 'length')
+Reflect.getOwnPropertyDescriptor([], "length");
 // {value: 0, writable: true, enumerable: false, configurable: false}
 ```
 
@@ -54,10 +69,10 @@ Reflect.getOwnPropertyDescriptor([], 'length')
 このメソッドへの最初の引数がオブジェクトではない (プリミティブであった) 場合、 {{jsxref("TypeError")}} が発生します。 {{jsxref("Object.getOwnPropertyDescriptor")}} だと、非オブジェクトである最初の引数は強制的にオブジェクトに変換されます。
 
 ```js
-Reflect.getOwnPropertyDescriptor('foo', 0)
+Reflect.getOwnPropertyDescriptor("foo", 0);
 // TypeError: "foo" is not non-null object
 
-Object.getOwnPropertyDescriptor('foo', 0)
+Object.getOwnPropertyDescriptor("foo", 0);
 // { value: "f", writable: false, enumerable: true, configurable: false }
 ```
 
@@ -67,7 +82,7 @@ Object.getOwnPropertyDescriptor('foo', 0)
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Reflect.getOwnPropertyDescriptor")}}
+{{Compat}}
 
 ## 関連情報
 

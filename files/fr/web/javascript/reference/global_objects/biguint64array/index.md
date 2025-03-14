@@ -1,15 +1,6 @@
 ---
 title: BigUint64Array
 slug: Web/JavaScript/Reference/Global_Objects/BigUint64Array
-tags:
-  - BigInt
-  - Constructeur
-  - JavaScript
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/BigUint64Array
-original_slug: Web/JavaScript/Reference/Objets_globaux/BigUint64Array
 ---
 
 {{JSRef}}
@@ -26,7 +17,7 @@ new BigUint64Array(objet);
 new BigUint64Array(tampon [, décalage [, longueur]]);
 ```
 
-Pour plus d'informations sur la syntaxe du constructeur et le rôle des différents paramètres, voir la page _[TypedArray](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Syntaxe)_.
+Pour plus d'informations sur la syntaxe du constructeur et le rôle des différents paramètres, voir la page _[TypedArray](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntaxe)_.
 
 ## Propriétés
 
@@ -131,7 +122,7 @@ console.log(bigInt64.length); // 2
 console.log(bigInt64.BYTES_PER_ELEMENT); // 8
 
 // Construction à partir d'un tableau
-var arr = new BigUint64Array([21n,31n]);
+var arr = new BigUint64Array([21n, 31n]);
 console.log(arr[1]); // 31n
 
 // Construction à partir d'un tableau typé
@@ -144,23 +135,23 @@ var buffer = new ArrayBuffer(32);
 var z = new BigUint64Array(buffer, 0, 4);
 
 // Construction à partir d'un itérable
-var iterable = function*(){ yield* [1n, 2n, 3n]; }();
+var iterable = (function* () {
+  yield* [1n, 2n, 3n];
+})();
 var BigInt64 = new BigUint64Array(iterable);
 // BigUint64Array[1n, 2n, 3n]
 ```
 
 ## Spécifications
 
-| Spécification                                                                                     | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `BigInt`](https://tc39.github.io/proposal-bigint/#sec-typedarrays-and-dataview) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.BigUint64Array")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("BigUint64Array")}}
 - {{jsxref("DataView")}}

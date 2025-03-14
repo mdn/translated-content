@@ -1,12 +1,6 @@
 ---
 title: La disposition en flux et le dépassement
-slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow
-tags:
-  - CSS
-  - Guide
-  - Intermédiaire
-translation_of: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow
-original_slug: Web/CSS/CSS_Flow_Layout/Disposition_flux_et_dépassement
+slug: Web/CSS/CSS_flow_layout/Flow_layout_and_overflow
 ---
 
 {{QuickLinksWithSubpages("/fr/docs/Web/CSS/CSS_Flow_Layout/")}}
@@ -37,15 +31,16 @@ Avec la valeur `auto`, le contenu sera affiché sans barre de défilement s'il t
 
 Comme nous l'avons vu plus tôt, toute valeur qui est différente de `visible` créera un nouveau contexte de formatage de bloc.
 
-> **Note :** Dans [le brouillon du module de spécification _Overflow_ de niveau 3](https://www.w3.org/TR/css-overflow-3/), une valeur est ajoutée : `overflow: clip`. Cette valeur agira comme `overflow: hidden` mais ne permettra de faire défiler le contenu à l'aide de code. La boîte ne pourra pas défiler. De plus, cette valeur ne crée pas de contexte de formatage de bloc.
+> [!NOTE]
+> Dans [le brouillon du module de spécification _Overflow_ de niveau 3](https://www.w3.org/TR/css-overflow-3/), une valeur est ajoutée : `overflow: clip`. Cette valeur agira comme `overflow: hidden` mais ne permettra de faire défiler le contenu à l'aide de code. La boîte ne pourra pas défiler. De plus, cette valeur ne crée pas de contexte de formatage de bloc.
 
-Pour être tout à fait précis, la propriété `overflow` est une [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) pour les propriétés [`overflow-x`](/fr/docs/Web/CSS/overflow-x) et [`overflow-y`](/fr/docs/Web/CSS/overflow-y). Si on fournit une valeur, celle-ci sera utilisée pour les deux axes. On peut aussi fournir deux valeurs, auquel cas la première sera utilisée pour `overflow-x` et la seconde pour `overflow-y`. Dans l'exemple qui suit, seule `overflow-y: scroll` est utilisée et la barre de défilement horizontale superflue n'est pas ajoutée.
+Pour être tout à fait précis, la propriété `overflow` est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) pour les propriétés [`overflow-x`](/fr/docs/Web/CSS/overflow-x) et [`overflow-y`](/fr/docs/Web/CSS/overflow-y). Si on fournit une valeur, celle-ci sera utilisée pour les deux axes. On peut aussi fournir deux valeurs, auquel cas la première sera utilisée pour `overflow-x` et la seconde pour `overflow-y`. Dans l'exemple qui suit, seule `overflow-y: scroll` est utilisée et la barre de défilement horizontale superflue n'est pas ajoutée.
 
 {{EmbedGHLiveSample("css-examples/flow/overflow/overflow-y.html", '100%', 700)}}
 
 ## Les propriétés relatives
 
-Dans le guide sur [les modes d'écriture et la disposition en flux](/fr/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes), nous avons étudié des propriétés plus récentes `block-size` et `inline-size` qui permettent de raisonner avec les modes d'écriture plutôt qu'avec les dimensions physiques de l'écran. La spécification de niveau 3 Overflow inclut également les propriétés correspondantes pour le dépassement : [`overflow-block`](/fr/docs/Web/CSS/@media/overflow-block) et [`overflow-inline`](/fr/docs/Web/CSS/@media/overflow-inline). Ces propriétés « logiques » correspondent aux propriétés « physiques » `overflow-x` et `overflow-y` où la correspondance varie en fonction du mode d'écriture du document.
+Dans le guide sur [les modes d'écriture et la disposition en flux](/fr/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes), nous avons étudié des propriétés plus récentes `block-size` et `inline-size` qui permettent de raisonner avec les modes d'écriture plutôt qu'avec les dimensions physiques de l'écran. La spécification de niveau 3 Overflow inclut également les propriétés correspondantes pour le dépassement : [`overflow-block`](/fr/docs/Web/CSS/@media/overflow-block) et [`overflow-inline`](/fr/docs/Web/CSS/@media/overflow-inline). Ces propriétés « logiques » correspondent aux propriétés « physiques » `overflow-x` et `overflow-y` où la correspondance varie en fonction du mode d'écriture du document.
 
 À l'heure où nous écrivons ces lignes, ces deux propriétés ne sont pas implémentées par les navigateurs et il faut donc s'en tenir aux propriétés physiques et ajuster selon le mode d'écriture.
 

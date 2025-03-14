@@ -31,14 +31,15 @@ Este exemplo demonstra o uso do firstChild e como os espaços em branco "whitesp
 </p>
 
 <script type="text/javascript">
-  var p01 = document.getElementById('para-01');
+  var p01 = document.getElementById("para-01");
   console.log(p01.firstChild.nodeName);
 </script>
 ```
 
 No exemplo acima, o console.log() deverá exibir '#text' porque o nó de texto inserido mantém espaços em branco 'whitespace' entre a tag \<p id="para-01"> e a tag \<span>. Qualquer espaço em branco poderá causar '#text'.
 
-> **Nota:** "Tabs" também podem causar esse comportamento.
+> [!NOTE]
+> "Tabs" também podem causar esse comportamento.
 
 Se os espaços em branco for removidos do código, o '#text' não será mais considerado e a tag \<span> se tornará o primeiro filho firstChild do parágrafo, conforme exemplo abaixo.
 
@@ -46,14 +47,17 @@ Se os espaços em branco for removidos do código, o '#text' não será mais con
 <p id="para-01"><span>First span</span></p>
 
 <script type="text/javascript">
-  var p01 = document.getElementById('para-01');
-  console.log(p01.firstChild.nodeName)
+  var p01 = document.getElementById("para-01");
+  console.log(p01.firstChild.nodeName);
 </script>
 ```
 
 Agora o console.log() irá exibir 'SPAN'.
 
-## Especificação
+## Especificações
 
-- [DOM nível 1 Core: firstChild](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-firstChild)
-- [DOM nível 2 Core: firstChild](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-169727388)
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

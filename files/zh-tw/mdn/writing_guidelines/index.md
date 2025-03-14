@@ -1,91 +1,100 @@
 ---
-title: 關於 MDN
+title: 撰寫指南
 slug: MDN/Writing_guidelines
-original_slug: MDN/About
+l10n:
+  sourceCommit: 07d0f18e4b2ad43185bcc98ce99b7080c6411b2a
 ---
 
-{{MDNSidebar}}
+MDN Web Docs 是一個開源專案。以下各章節說明了我們在 MDN Web Docs 上紀錄*什麼*以及*如何*紀錄的指南。若要了解*如何貢獻*，請參閱我們的[貢獻指南](/zh-TW/docs/MDN/Community)。
 
-MDN Web Docs 是個針對網路技術和基於網路的軟體，持續發展的學習平台。它包含了：
+- [我們撰寫的內容](/zh-TW/docs/MDN/Writing_guidelines/What_we_write)
 
-- 諸如 [CSS](/zh-TW/docs/CSS)、[HTML](/zh-TW/docs/HTML)、[JavaScript](/zh-TW/docs/JavaScript) 的網路標準
-- [Open Web app 開發](/zh-TW/docs/Apps)
-- [Firefox 附加元件開發](/zh-TW/docs/Add-ons)
+  - : 本章節涵蓋我們在 MDN Web Docs 上包含哪些內容、不包含哪些內容，以及其他多項政策，例如何時撰寫新技術、內容建議流程，以及我們是否接受外部連結。如果你正在考慮為我們撰寫或更新內容，這是一個很好的起點。本章節還包括：
 
-## 我們的使命
+    - [納入標準](/zh-TW/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)
 
-MDN 的使命非常簡單：提供開發者在[開放網站](/zh-TW/docs/Web)上輕鬆地建立各種專案所需的資訊。只要有一個網路上開放的技術，我們就希望把它寫成文件。
+      - : 詳細說明了 MDN Web Docs 中納入內容的標準、新文件加入申請流程，以及申請方的期望和指南。
 
-除此之外，我們提供有關 [Mozilla 產品](/zh-TW/docs/Mozilla)和如何[建置與貢獻 Mozilla 專案](/zh-TW/docs/Mozilla)的方法。另外也涵蓋了 [B2G OS](/zh-TW/docs/Mozilla/B2G_OS)（以前叫做 Firefox OS）的文件。
+- [我們的寫作風格指南](/zh-TW/docs/MDN/Writing_guidelines/Writing_style_guide)
 
-如果你不知道一個特定的主題適不適合出現在 MDN 上，請參閱：[Does this belong on MDN?](/zh-TW/docs/Project:MDN/Contributing/Does_this_belong)。
+  - : 寫作風格指南涵蓋了我們在 MDN Web Docs 上使用的語言和風格，還包括如何[格式化程式碼範例](/zh-TW/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)。
 
-## 如何幫忙
+- [學習 Web 開發章節的撰寫指南](/zh-TW/docs/MDN/Writing_guidelines/Learning_content)
 
-想要幫忙 MDN 更加完善，你不需要寫得一手很好的程式碼！你可以透過很多種方式幫忙我們，從檢查文件是否合理、到隨手增添一些文字或是範例程式碼都行。根據你的興趣和時間，你可以到[開始入門 MDN](/zh-TW/docs/MDN/Getting_started) 頁面看看有幾種方法可以幫忙我們。
+  - : MDN 的[學習 Web 開發](/zh-TW/docs/Learn_web_development)章節專門針對學習 Web 開發基本原理的人，因此需要採用與 MDN 其他內容不同的方法。本文提供了撰寫學習內容的指南。
 
-你也可以在你自己的部落格或網站上[推廣 MDN](/zh-TW/docs/MDN/About/Promote)。
+- [如何為 MDN Web Docs 撰寫內容](/zh-TW/docs/MDN/Writing_guidelines/Howto)
 
-## MDN 社群
+  - : 本章節涵蓋了建立和編輯頁面的所有資訊，包括我們遵循的特定流程和技術。本章節提供了入門資訊、頁面結構的概覽，以及特定任務的操作指南。本章節包括以下主題：
 
-我們的社群是個地球村！我們傑出的貢獻者遍布全世界、涵蓋各種語言。如果你想更認識我們、或是需要任何幫忙，隨時歡迎你到我們的[討論區](https://discourse.mozilla-community.org/c/mdn)或 [IRC 頻道](irc://irc.mozilla.org#mdn)！你也可以追蹤我們的 Twitter 帳號「[@MozDevNet](http://twitter.com/MozDevNet)」獲得最新消息。如果你發現任何錯誤、或是你有任何話想跟我們說，都歡迎你發送推文給我們的作者和貢獻者！
+    - [如何研究一項技術](/zh-TW/docs/MDN/Writing_guidelines/Howto/Research_technology)
 
-## 使用 MDN 的內容
+      - : 本章節提供了一些有用的提示，幫助你研究所要紀錄的技術。
 
-### 著作權授權
+    - [如何建立、移動和刪除頁面](/zh-TW/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)
 
-**MDN wiki 文件** 是許多 Mozilla 基金會內外作者的心血結晶。除另有註明，所有內容皆採用[創用 CC 姓名標示-相同方式分享](http://creativecommons.org/licenses/by-sa/2.5/)授權條款（CC BY-SA）的第 2.5 版或任何更新的版本釋出。在引用內容時請務必標示作者為「Mozilla Contributors」、並附上該篇 wiki 的超連結或印出網址。你可以標示如下：
+      - : 本章節說明了我們如何在 MDN Web Docs 上建立、移動或刪除頁面，並解釋了在移動或刪除頁面時如何進行重定向。
 
-> [關於 MDN](/zh-TW/docs/MDN/About) 由 [Mozilla Contributors](/zh-TW/docs/MDN/About$history) 製作，以 [CC-BY-SA 2.5](http://creativecommons.org/licenses/by-sa/2.5/) 釋出。
+    - [如何使用 Markdown](/zh-TW/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN)
 
-請注意在以上範例中，「Mozilla Contributors」連結到該頁面的編輯歷史。參閱 [Best practices for attribution](http://wiki.creativecommons.org/Marking/Users) 獲得更多資訊。
+      - : 我們使用的 Markdown 格式源自 [GitHub Flavored Markdown（GFM）](https://github.github.com/gfm/)。本章節是 MDN Web Docs 上 Markdown 使用指南，包括頁面內特定元件（例如備註和定義清單）的格式。
 
-> **備註：** 參閱 [MDN content on WebPlatform.org](/zh-TW/docs/MDN_content_on_WebPlatform.org) 了解更多有關如何在網站上使用和標註 MDN 內容的資訊。
+    - [添加圖片與多媒體](/zh-TW/docs/MDN/Writing_guidelines/Howto/Images_media)
 
-在 2010 年 8 月 20 日以前新增到這個 wiki 的範例程式碼，是採用 [MIT 授權條款](http://www.opensource.org/licenses/mit-license.php)釋出。你應該在 MIT 模板中增加這些作者資訊：「© <最新的 wiki 更新日期> <寫下這段程式碼的人>」
+      - : 本章節說明在頁面中包含多媒體（如圖片）的要求。
 
-在 2010 年 8 月 20 日（含）以後新增到這個 wiki 的範例程式碼，是採用 [公有領域](http://creativecommons.org/publicdomain/zero/1.0/)授權。你不需要註明任何授權文字。不過你要的話，可以註明：「Any copyright is dedicated to the Public Domain. <http://creativecommons.org/publicdomain/zero/1.0/>」
+    - [如何紀錄 CSS 屬性](/zh-TW/docs/MDN/Writing_guidelines/Howto/Document_a_CSS_property)
 
-如果你希望貢獻到這個 wiki，你必須讓你的文件採用姓名標示-相同方式分享（或是你正在編輯的頁面上已經指定好的其他替代授權），同時你的程式碼必須採用[Creative Commons CC-0](http://creativecommons.org/publicdomain/zero/1.0/)（公有領域）授權。在你編輯這個 wiki 的同時即表示你同意採用這些授權。
+      - : 本文說明如何撰寫 CSS 屬性頁面，包括版面配置和內容。
 
-有些比較舊的內容可能會採用和上述不同的授權條款。這些授權條款都會在每個頁面最下方透過 [Alternate License Block](/Archive/Meta_docs/Examples/Alternate_License_Block) 列明。
+    - [如何紀錄 API 參考](/zh-TW/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference)
 
-> **警告：** 新建立的頁面不得使用替代的授權條款。
+      - : 本章節說明如何紀錄 Web API。
 
-除非作者另有聲明，否則所有貢獻素材的版權皆歸屬其作者所有。
+    - [如何紀錄 HTTP 標頭](/zh-TW/docs/MDN/Writing_guidelines/Howto/Document_an_HTTP_header)
 
-如果你對這裡提到的內容有任何問題或疑慮，請聯絡 [Eric Shepherd](mailto:eshepherd@mozilla.com)。
+      - : 本文說明如何為 HTTP 標頭建立新的參考頁面。
 
-Mozilla 基金會的商標、Logo、服務標誌，以及這個網站的風格外觀，皆不屬於創用 CC 授權的範圍。它們是其原作者的作品（例如 Logo 和圖形設計），不包含在上述的授權條款中。如果你使用文件中的文字、並同時希望使用以上任一權利，或者你對於遵守我們的授權條款有任何的問題，你應該聯絡 Moziila 基金會：<licensing@mozilla.org>。
+    - [如何新增詞彙表條目](/zh-TW/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary)
 
-### 下載內容
+      - : 本文說明如何在 MDN Web Docs 詞彙表中新增條目並建立連結，還提供有關詞彙表條目版面配置和內容的指南。
 
-你可以下載 [MDN 的完整鏡像檔案](/media/developer.mozilla.org.tar.gz)（2016-11-30 時約為 2.5GB）。
+- [MDN Web Docs 上的頁面類型](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Page_types)
 
-#### 單一頁面
+  - : MDN Web Docs 上的每個頁面都有特定的頁面類型，無論是 CSS 參考頁面還是 JavaScript 指南頁面。本章節列出了不同的頁面類型，並提供了每種類型的範本。瀏覽這些範本有助於你瞭解應如何撰寫特定類型的頁面。
 
-你可以透過在網址增加[文件參數](/zh-TW/docs/MDN/Kuma/API#Document_parameters)指定想要的格式，取得單一頁面的內容。
+- [MDN Web Docs 上的頁面結構](/zh-TW/docs/MDN/Writing_guidelines/Page_structures)
 
-#### 第三方工具
+  - : 本章節涵蓋我們用來在 MDN Web Docs 上提供一致資訊呈現的各種頁面結構，內容包括：
 
-你可以透過第三方工具來閱覽 MDN，例如 [Dash](http://kapeli.com/dash)（Mac OS 用）和 [Zeal](http://zealdocs.org/)（Linux 和 Windows 用）。
+    - [語法章節](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections)
 
-[Kapeli](https://kapeli.com/) 也發布了[離線 MDN docs](https://kapeli.com/mdn_offline) 涵蓋 HTML、CSS、JavaScript、SVG 和 XSLT。
+      - : MDN Web Docs 上參考頁面的語法章節包含定義某個功能的確切語法的語法框。本文說明如何為參考文章撰寫語法框。
 
-### 連結到 MDN
+    - [程式碼範例](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Code_examples)
 
-請參閱 [linking to MDN](/zh-TW/docs/MDN/About/Linking_to_MDN) 文內的指導，了解連結文件的最佳做法。
+      - : 頁面上包含程式碼範例有許多不同方式。本章節列出了這些方式，並為不同的程式語言提供了語法指南。
 
-## 向 MDN 報告問題
+    - [橫幅與通知](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices)
 
-請參閱 [How to report a problem on MDN](/zh-TW/docs/MDN/Contribute/Howto/Report_a_problem)。
+      - : 有時候文章需要添加特別通知，例如頁面涵蓋已棄用的技術或不應在生產環境中使用的材料。本文涵蓋最常見的情況及其處理方式。
 
-## MDN 網頁文檔歷史
+    - [規範表格](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Specification_tables)
 
-MDN Web Docs（前身為*Mozilla Developer Network (MDN)*，更前身為 Mozilla Developer Center (MDC) 或 _Devmo_）專案始於 2005 年初，[Mozilla 基金會](http://www.mozillafoundation.org)從 AOL 得到了原始的 Netscape [DevEdge](https://web.archive.org/web/*/devedge.netscape.com) 授權。DevEdge 內容仍被視為可用，之後由志願者合併到今天的這個 wiki 以便日後的更新與維護。
+      - : MDN Web Docs 上的每個參考頁面都應提供定義該 API 或技術的規範資訊。本文展示了這些表格的外觀，並說明如何添加它們。
 
-你可以從我們的[十週年慶祝](/zh-TW/docs/MDN_at_ten)頁面看到更多 MDN 的歷史，包含一些參與者的口述歷史。
+    - [相容性表格](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)
 
-## 關於 Mozilla
+      - : MDN Web Docs 對開放網路文件的相容性表格有標準格式。本文說明如何添加和維護生成相容性表格的資料庫，以及如何將表格整合到文章中。
 
-無論你是想更認識我們、了解如何成為 _Mozilla_ 的一份子，又或是單純想找我們聊天，那你都來對地方了。想知道是什麼驅使我們、讓我們更加與眾不同，請造訪我們的[使命](http://www.mozilla.org/zh-TW/mission/)一頁。
+    - [巨集](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Macros)
+
+      - : 巨集是用於生成頁面內容的捷徑，例如側邊欄。本章節列出了我們使用的巨集及其功能。
+
+- [署名與著作權許可資訊](/zh-TW/docs/MDN/Writing_guidelines/Attrib_copyright_license)
+
+  - : 說明如何在其他網站上使用 MDN Web Docs 內容、如何獲得重新發布 MDN 內容的許可，以及連結到 MDN 內容的提示。
+
+- [如何標記技術](/zh-TW/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)
+
+  - : 本章節說明過時、棄用和實驗性術語的定義，並提供標記技術的指南，以及何時從 MDN Web Docs 中移除內容。

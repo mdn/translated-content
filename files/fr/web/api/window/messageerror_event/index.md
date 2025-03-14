@@ -1,13 +1,6 @@
 ---
-title: 'Window: messageerror event'
+title: "Window: messageerror event"
 slug: Web/API/Window/messageerror_event
-tags:
-  - API
-  - Evènement
-  - Message d'événement
-  - Reference
-  - Window
-translation_of: Web/API/Window/messageerror_event
 ---
 
 {{APIRef}}
@@ -42,8 +35,8 @@ L'événement `messageerror` est déclenché sur un objet {{domxref('Window')}} 
 Écoutez `messageerror` en utilisant {{domxref("EventTarget/addEventListener", "addEventListener()")}} :
 
 ```js
-window.addEventListener('messageerror', (event) => {
-    console.error(event);
+window.addEventListener("messageerror", (event) => {
+  console.error(event);
 });
 ```
 
@@ -51,7 +44,7 @@ Idem, mais en utilisant la propriété de gestionnaire d'événements {{domxref(
 
 ```js
 window.onmessageerror = (event) => {
-    console.error(event);
+  console.error(event);
 };
 ```
 

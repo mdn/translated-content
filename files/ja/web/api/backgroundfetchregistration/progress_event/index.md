@@ -1,5 +1,5 @@
 ---
-title: "BackgroundFetchRegistration: progress event"
+title: "BackgroundFetchRegistration: progress イベント"
 slug: Web/API/BackgroundFetchRegistration/progress_event
 l10n:
   sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
@@ -37,7 +37,7 @@ onprogress = (event) => { }
 bgFetch.addEventListener("progress", () => {
   if (!bgFetch.downloadTotal) return;
   const percent = Math.round(
-    (bgFetch.downloaded / bgFetch.downloadTotal) * 100
+    (bgFetch.downloaded / bgFetch.downloadTotal) * 100,
   );
   console.log(`ダウンロードの進捗： ${percent}%`);
 });

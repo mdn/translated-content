@@ -1,18 +1,17 @@
 ---
 title: flex
 slug: Web/CSS/flex
-translation_of: Web/CSS/flex
 ---
 
 {{CSSRef}}
 
 ## Описание
 
-Свойство [CSS](/ru/docs/CSS) **`flex`** - это [сокращённое свойство](/ru/docs/Web/CSS/Shorthand_properties), определяющее способность гибкого элемента растягиваться или сжиматься для заполнения собой доступного свободного пространства. Это свойство устанавливает [flex-grow](/ru/docs/Web/CSS/flex-grow), [flex-shrink](/ru/docs/Web/CSS/flex-shrink) и [flex-basis](/ru/docs/Web/CSS/flex-basis).
+Свойство [CSS](/ru/docs/Web/CSS) **`flex`** - это [сокращённое свойство](/ru/docs/Web/CSS/Shorthand_properties), определяющее способность гибкого элемента растягиваться или сжиматься для заполнения собой доступного свободного пространства. Это свойство устанавливает [flex-grow](/ru/docs/Web/CSS/flex-grow), [flex-shrink](/ru/docs/Web/CSS/flex-shrink) и [flex-basis](/ru/docs/Web/CSS/flex-basis).
 
 {{cssinfo}}
 
-Для более полной информации читайте [Использование flex-контейнеров CSS](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes).
+Для более полной информации читайте [Использование flex-контейнеров CSS](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
 
 ## Синтаксис
 
@@ -80,15 +79,15 @@ flex: unset;
 
 ```html
 <div id="flex-container">
-    <div class="flex-item" id="flex">Flex box (click to toggle raw box)</div>
-    <div class="raw-item" id="raw">Raw box</div>
+  <div class="flex-item" id="flex">Flex box (click to toggle raw box)</div>
+  <div class="raw-item" id="raw">Raw box</div>
 </div>
 ```
 
 ```js hidden
 var flex = document.getElementById("flex");
 var raw = document.getElementById("raw");
-flex.addEventListener("click", function() {
+flex.addEventListener("click", function () {
   raw.style.display = raw.style.display == "none" ? "block" : "none";
 });
 ```
@@ -117,10 +116,10 @@ flex.addEventListener("click", function() {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Using CSS flexible boxes](/ru/docs/Web/Guide/CSS/Flexible_boxes)
+- [Using CSS flexible boxes](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)

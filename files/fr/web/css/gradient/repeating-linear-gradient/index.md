@@ -1,8 +1,8 @@
 ---
 title: repeating-linear-gradient()
 slug: Web/CSS/gradient/repeating-linear-gradient
-translation_of: Web/CSS/gradient/repeating-linear-gradient
-browser-compat: css.types.image.gradient.repeating-linear-gradient
+l10n:
+  sourceCommit: 581b0f5068b7417e525abfe5c230e35cceca04df
 ---
 
 {{CSSRef}}
@@ -15,7 +15,7 @@ La longueur du dégradé répété est la distance entre le premier et le dernie
 
 Comme les autres dégradés, un dégradé linéaire répété [n'a pas de dimensions intrinsèques](/fr/docs/Web/CSS/image#description), c'est-à-dire qu'il n'a pas de taille ou de proportions préférées. Sa taille réelle correspondra à la taille de l'élément auquel il est appliqué.
 
-Comme pour les autres dégradés, un dégradé linéaire répété n'est pas une couleur (type [`<color>`](/fr/docs/Web/CSS/color_value)) CSS mais un type particulier d'image (type [`<image>`](/fr/docs/Web/CSS/image). À ce titre, `repeating-linear-gradient()` ne fonctionnera pas pour [`background-color`](/fr/docs/Web/CSS/background-color) et les autres propriétés qui utilisent le type de données [`<color>`](/fr/docs/Web/CSS/color_value).
+Comme pour les autres dégradés, un dégradé linéaire répété n'est pas une couleur (type [`<color>`](/fr/docs/Web/CSS/color_value)) CSS mais un type particulier d'image (type [`<image>`](/fr/docs/Web/CSS/image)). À ce titre, `repeating-linear-gradient()` ne fonctionnera pas pour [`background-color`](/fr/docs/Web/CSS/background-color) et les autres propriétés qui utilisent le type de données [`<color>`](/fr/docs/Web/CSS/color_value).
 
 ## Syntaxe
 
@@ -30,7 +30,9 @@ repeating-linear-gradient(45deg, blue, red 33.3%);
 repeating-linear-gradient(to left top, blue, red 20px);
 
 /* Un dégradé répétitif allant du bas vers le haut,
-   débutant bleu, étant vert après 40% et finissant rouge */
+   débutant bleu, étant vert après 40% et finissant rouge.
+   Ce dégradé ne se répète pas car le dernier arrêt de couleur
+   est par défaut à 100%. */
 repeating-linear-gradient(0deg, blue, green 40%, red);
 
 /* Un dégradé répété cinq fois, progressant de gauche à
@@ -52,9 +54,10 @@ repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
 - `<linear-color-stop>`
   - : Un arrêt de couleur décrit par une valeur [`<color>`](/fr/docs/Web/CSS/color_value), suivie d'une ou deux positions optionnelles (une position étant donnée par un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) ou une longueur (type [`<length>`](/fr/docs/Web/CSS/length)) le long de l'axe du dégradé). Un pourcentage à `0%`, ou une longueur à `0` représente le début du dégradé. La valeur `100%` correspond à 100% de la taille de l'image, indiquant que le dégradé ne se répètera pas.
 - `<color-hint>`
-  - : L'indication de couleur est une indication pour l'interpolation des couleurs le long du dégradé et entre deux points d'arrêt de couleur. La longueur définit l'emplacement où la transition entre les deux couleurs est appliquée à moitié. Si cette valeur est absente, le niveau intermédiaire de la transition se situera à équidistance des deux points d'arrêt de couleur.
+  - : L'indication de couleur est une indication pour l'interpolation des couleurs le long du dégradé et entre deux points d'arrêt de couleur. La longueur définit à quel point, entre deux arrêts de couleur, la couleur du dégradé doit atteindre le point médian de la transition de couleur. Si cette valeur est absente, le niveau intermédiaire de la transition se situera à équidistance des deux points d'arrêt de couleur.
 
-> **Note :** Le rendu des arrêts de couleurs des dégradés CSS suit les mêmes règles que les [arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorial/Gradients).
+> [!NOTE]
+> Le rendu des arrêts de couleurs des dégradés CSS suit les mêmes règles que [les arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorial/Gradients).
 
 ### Syntaxe formelle
 
@@ -73,15 +76,19 @@ body {
 
 ```css
 body {
-  background-image: repeating-linear-gradient(-45deg,
-      transparent,
-      transparent 20px,
-      black 20px,
-      black 40px);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 20px,
+    black 20px,
+    black 40px
+  );
   /* avec plusieurs arrêts de couleur */
-  background-image: repeating-linear-gradient(-45deg,
-      transparent 0 20px,
-      black 20px 40px);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 0 20px,
+    black 20px 40px
+  );
 }
 ```
 
@@ -98,10 +105,12 @@ body {
 
 ```css
 body {
-  background-image: repeating-linear-gradient(to bottom,
-      rgb(26,198,204),
-      rgb(26,198,204) 7%,
-      rgb(100,100,100) 10%);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgb(26, 198, 204),
+    rgb(26, 198, 204) 7%,
+    rgb(100, 100, 100) 10%
+  );
 }
 ```
 
@@ -109,7 +118,8 @@ body {
 
 Le dernier arrêt de couleur étant situé à 10% et le dégradé étant vertical, chaque dégradé unitaire occupe 10% de la hauteur totale, ce qui permet d'avoir 10 barres horizontales.
 
-> **Note :** Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients) pour plus d'exemples.
+> [!NOTE]
+> Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) pour plus d'exemples.
 
 ## Spécifications
 
@@ -121,7 +131,7 @@ Le dernier arrêt de couleur étant situé à 10% et le dégradé étant vertica
 
 ## Voir aussi
 
-- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Les autres fonctions de dégradés&nbsp;:
   - [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient)
   - [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient)

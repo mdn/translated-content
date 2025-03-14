@@ -1,8 +1,9 @@
 ---
 title: Doctype
 slug: Glossary/Doctype
-translation_of: Glossary/Doctype
 ---
+
+{{GlossarySidebar}}
 
 `<!DOCTYPE>` informa al {{Glossary("navegador")}} qué versión de {{Glossary("HTML")}} (o {{glossary("XML")}}) se usó para escribir el documento. Doctype es una declaración no una {{Glossary("etiqueta")}}. Además, podemos referirnos a ella como "document type declaration" o por las siglas "DTD".
 
@@ -11,7 +12,7 @@ translation_of: Glossary/Doctype
 ### Conocimiento general
 
 - [Declaración de tipo de documento](https://es.wikipedia.org/wiki/Declaraci%C3%B3n_de_tipo_de_documento) en Wikipedia
-- [Modo Quirk y modo estándar](/es/docs/Quirks_Mode_and_Standards_Mode)
+- [Modo Quirk y modo estándar](/es/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
 
 ### Referencia técnica
 

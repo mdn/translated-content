@@ -1,15 +1,11 @@
 ---
 title: Primitivo
 slug: Glossary/Primitive
-tags:
-  - CodingScripting
-  - Glosario
-  - JavaScript
-translation_of: Glossary/Primitive
-original_slug: Glossary/Primitivo
 ---
 
-En {{Glossary("JavaScript")}}, un **primitive** (valor primitivo, tipo de dato primitivo) son datos que no son un {{Glossary("object", "objeto")}} y no tienen {{Glossary("method", "métodos")}}. Hay 6 tipos de datos primitivos: {{Glossary("string")}}, {{Glossary("number")}}, {{Glossary("bigint")}}, {{Glossary("boolean")}}, {{Glossary("undefined")}} y {{Glossary("symbol")}}. También hay {{Glossary("null")}}, que aparentemente es primitivo, pero de hecho es un caso especial para cada {{JSxRef("Object")}}: y cualquier tipo estructurado se deriva de `null` por la [Cadena de prototipos](/es/docs/Learn/JavaScript/Objects/Inheritance).
+{{GlossarySidebar}}
+
+En {{Glossary("JavaScript")}}, un **primitive** (valor primitivo, tipo de dato primitivo) son datos que no son un {{Glossary("object", "objeto")}} y no tienen {{Glossary("method", "métodos")}}. Hay 6 tipos de datos primitivos: {{Glossary("string")}}, {{Glossary("number")}}, {{Glossary("bigint")}}, {{Glossary("boolean")}}, {{Glossary("undefined")}} y {{Glossary("symbol")}}. También hay {{Glossary("null")}}, que aparentemente es primitivo, pero de hecho es un caso especial para cada {{JSxRef("Object")}}: y cualquier tipo estructurado se deriva de `null` por la [Cadena de prototipos](/es/docs/Learn/JavaScript/Objects/Classes_in_JavaScript).
 
 La mayoría de las veces, un valor primitivo se representa directamente en el nivel más bajo de la implementación del lenguaje.
 
@@ -95,27 +91,16 @@ A excepción de `null` y `undefined`, todos los valores primitivos tienen objeto
 
 El método {{JSxRef("Objetos_globales/Object/valueOf"," valueOf()")}} del contenedor devuelve el valor primitivo.
 
-## Aprende más
+## Véase también
 
-### Conocimientos generales
-
-- {{JSxRef("Data_structures", "Introducción a los tipos de datos de JavaScript")}}
+- [Tipos de datos JavaScript](/es/docs/Web/JavaScript/Data_structures)
 - [Tipo de dato primitivo](https://es.wikipedia.org/wiki/Tipo_de_dato_primitivo) en Wikipedia
-
-<section id="Quick_links">
- <ol>
-  <li><a href="/es/docs/Glossary">Glosario</a>
-   <ol>
-    <li>{{Glossary("JavaScript")}}</li>
-    <li>{{Glossary("string")}}</li>
-    <li>{{Glossary("number")}}</li>
-    <li>{{Glossary("bigint")}}</li>
-    <li>{{Glossary("boolean")}}</li>
-    <li>{{Glossary("null")}}</li>
-    <li>{{Glossary("undefined")}}</li>
-    <li>{{Glossary("symbol")}}</li>
-   </ol>
-  </li>
-  <li>{{JSxRef("Data_structures", "Tipos de datos JavaScript")}}</li>
- </ol>
-</section>
+- [Glosario de MDN Web Docs](/es/docs/Glossary)
+  - {{Glossary("JavaScript")}}
+  - {{Glossary("string")}}
+  - {{Glossary("number")}}
+  - {{Glossary("bigint")}}
+  - {{Glossary("boolean")}}
+  - {{Glossary("null")}}
+  - {{Glossary("undefined")}}
+  - {{Glossary("symbol")}}

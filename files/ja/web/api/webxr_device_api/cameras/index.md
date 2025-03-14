@@ -1,5 +1,5 @@
 ---
-title: '視点とビューアー: WebXR でのカメラのシミュレーション'
+title: "視点とビューアー: WebXR でのカメラのシミュレーション"
 slug: Web/API/WebXR_Device_API/Cameras
 ---
 
@@ -13,7 +13,7 @@ WebGL と WebXR の背後にある基本的な数学、幾何学、およびそ�
 
 - [基本の 3D 理論の説明](/ja/docs/Games/Techniques/3D_on_the_web/Basic_theory)
 - [ウェブの行列計算](/ja/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
-- [WebGL モデル ビュー 射影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)
+- [WebGL のモデル、ビュー、投影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)
 - [WebXR の幾何学と参照空間](/ja/docs/Web/API/WebXR_Device_API/Geometry)
 
 _編注: この記事で使用されているほとんどの図は、標準的な動作を実行しながらカメラがどのように動くかを示すために、[FilmmakerIQ ウェブサイトの記事](https://filmmakeriq.com/2016/09/the-importance-and-not-so-importance-of-film-terminology/)から取られました。 つまり、ウェブ全体で見られる[この画像](https://filmmakeriq.com/wp-content/uploads/2016/09/Pan-Tilt.png)からです。 それらは頻繁に再利用されるため、許可されたライセンスの下で利用できると想定しているため、所有権は不明です。 私たちはそれが自由に使えることを望みます。 そうでない場合で、あなたが所有者である場合はお知らせください。 新しい図を検索または作成します。 または、画像の使用を継続してよろしければ、適切にクレジットできるようにお知らせください。_
@@ -38,7 +38,7 @@ WebGL（そして、拡張によって、WebXR）では、移動および回転�
 
 一般に、仮想カメラはシーン内の物理オブジェクトに組み込まれる場合と組み込まれない場合があります。 実際、3D ゲームの範囲外では、カメラがシーンに表示されるオブジェクトとまったく対応しない可能性がはるかに高くなります。 次が 3D カメラの使用例です。
 
-- アニメーションをレンダリングするとき — 映画制作のために、またはプレゼンテーションやゲームのコンテキスト内で使用するために — 仮想カメラは、実世界のフィルムカメラのように使用されます。 視聴者（ビューアー）はおそらくそれらの手法を使用して映画を鑑賞して成長しており、映画やアニメーションがそれらの方法に従うという潜在意識の期待があるため、可能な限り、[標準の映画撮影手法](/ja/docs/Web/API/WebXR_Device_API/Cameras#Simulating_classic_cinematography)が使用されます。 それらから逸脱すると、視聴者をその瞬間から引き離すことができます。
+- アニメーションをレンダリングするとき — 映画制作のために、またはプレゼンテーションやゲームのコンテキスト内で使用するために — 仮想カメラは、実世界のフィルムカメラのように使用されます。 視聴者（ビューアー）はおそらくそれらの手法を使用して映画を鑑賞して成長しており、映画やアニメーションがそれらの方法に従うという潜在意識の期待があるため、可能な限り、[標準の映画撮影手法](#Simulating_classic_cinematography)が使用されます。 それらから逸脱すると、視聴者をその瞬間から引き離すことができます。
 - ビジネスアプリケーションでは、3D カメラを使用して、グラフやチャートなどをレンダリングするときに、見かけの大きさとパースペクティブを簡単に設定できます。
 - 地図アプリケーションでは、カメラをシーンの真上に配置するか、さまざまな角度を使用してパースペクティブを表現できます。 3D GPS ソリューションの場合、カメラはユーザーの周囲の領域を表示するように配置され、ディスプレイの大部分はユーザーの移動経路の前方の領域を示します。
 - WebGL を使用して 2D グラフィックス描画を高速化する場合、通常、カメラはシーンの中心の真上に配置され、距離と視野はシーン全体を表示できるように設定されます。
@@ -60,7 +60,7 @@ WebGL（そして、拡張によって、WebXR）では、移動および回転�
 
 WebGL または WebXR には標準のカメラオブジェクトがないため、カメラを自分でシミュレートする必要があります。 そうする前に、そしてカメラの動きをシミュレートする前に、実際に仮想カメラとその動きを最も基本的なレベルで見てみましょう。 すべてのものと同様に、空間内のオブジェクトの**位置**（position）は、たとえ仮想空間であっても、原点を基準にした位置を示す 3 つの数値を使用して表すことができ、原点の位置は (0, 0, 0) と定義されています。
 
-オブジェクトと空間の原点との空間関係には、考慮する必要のある別の側面があります。 それは**パースペクティブ**（perspective）です。 パースペクティブは、シーン内のオブジェクトに適切に適用されると、通常の 2D 画面と同じくらい平面に見えるシーンを取り、まるで 3D であるかのように飛び出させることができます。 パースペクティブにはいくつかの種類があります。 それらは定義されており、それらの数学は [WebGL モデル ビュー 射影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)の記事で説明されています。 重要なのは、ベクトルに対するパースペクティブの効果は、ベクトルに `w` と呼ばれる 4 番目のパースペクティブ成分を追加することによって表すことができるということです。
+オブジェクトと空間の原点との空間関係には、考慮する必要のある別の側面があります。 それは**パースペクティブ**（perspective）です。 パースペクティブは、シーン内のオブジェクトに適切に適用されると、通常の 2D 画面と同じくらい平面に見えるシーンを取り、まるで 3D であるかのように飛び出させることができます。 パースペクティブにはいくつかの種類があります。 それらは定義されており、それらの数学は [WebGL のモデル、ビュー、投影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)の記事で説明されています。 重要なのは、ベクトルに対するパースペクティブの効果は、ベクトルに `w` と呼ばれる 4 番目のパースペクティブ成分を追加することによって表すことができるということです。
 
 `w` の値は、他の 3 つの成分のそれぞれをそれで除算することによって適用され、最終的な位置またはベクトルを取得します。 つまり、(`x`, `y`, `z`, `w`) として与えられた座標の場合、3D 空間の点は実際には (`x`/`w`, `y`/`w`, `z`/`w`, 1) または単に (`x`/`w`, `y`/`w`, `z`/`w`) です。 パースペクティブを使用していない場合、`w` は常に 1 です。 その場合、(1, 0, 3) にあるオブジェクトの完全な座標は (1, 0, 3, 1) になります。
 
@@ -92,7 +92,7 @@ let viewMatrix = view.transform.inverse.matrix;
 
 ### 複数の変換の合成
 
-カメラが同時にズームやパンなどの複数の変換を実行する必要がある場合は、変換行列を乗算して、両方の変更を一度に適用する単一の行列に合成できます。 これを実行する明確で読みやすい関数については、[ウェブの行列計算](/ja/docs/Web/API/WebGL_API/Matrix_math_for_the_web)の記事の[2 つの行列の乗算](/ja/docs/Web/API/WebGL_API/Matrix_math_for_the_web#Multiplying_two_matrices)を参照してください。 あるいは、[glMatrix](http://glmatrix.net/) などのお好みの行列計算ライブラリを使用して処理してください。
+カメラが同時にズームやパンなどの複数の変換を実行する必要がある場合は、変換行列を乗算して、両方の変更を一度に適用する単一の行列に合成できます。 これを実行する明確で読みやすい関数については、[ウェブの行列計算](/ja/docs/Web/API/WebGL_API/Matrix_math_for_the_web)の記事の[2 つの行列の乗算](/ja/docs/Web/API/WebGL_API/Matrix_math_for_the_web#multiplying_two_matrices)を参照してください。 あるいは、[glMatrix](https://glmatrix.net/) などのお好みの行列計算ライブラリを使用して処理してください。
 
 乗算が可換である（つまり、左から右に乗算しても右から左に乗算しても同じ答えが得られる）典型的な算術とは異なり、行列の乗算は*可換ではない*ことに注意してください！ これは、各変換がオブジェクトの位置と、場合によっては座標系自体に影響を与え、実行される次の操作の結果を劇的に変える可能性があるためです。 そのため、複合変換を作成するとき（または変換を順番に直接適用するとき）は、変換を適用する順序に注意する必要があります。
 
@@ -100,7 +100,7 @@ let viewMatrix = view.transform.inverse.matrix;
 
 変換を適用するには、点またはベクトルに変換または変換の合成を掛けます。
 
-これは、物理的な場所、方向または向き、およびパースペクティブの観点から見た位置の概念の概要です。 このテーマの詳細については、[幾何学と参照空間](/ja/docs/Web/API/WebXR_Device_API/Geometry)、[WebGL モデル ビュー 射影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)、および[ウェブの行列計算](/ja/docs/Web/API/WebGL_API/Matrix_math_for_the_web)の記事を参照してください。
+これは、物理的な場所、方向または向き、およびパースペクティブの観点から見た位置の概念の概要です。 このテーマの詳細については、[幾何学と参照空間](/ja/docs/Web/API/WebXR_Device_API/Geometry)、[WebGL のモデル、ビュー、投影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)、および[ウェブの行列計算](/ja/docs/Web/API/WebGL_API/Matrix_math_for_the_web)の記事を参照してください。
 
 ## 古典的な映画撮影のシミュレーション
 
@@ -117,21 +117,38 @@ let viewMatrix = view.transform.inverse.matrix;
 これは、次のように配列形式で表されます。
 
 ```js
-let matrixArray = [a1, a2, a3, a4, a5, a6, a7, a8,
-                   a9, a10, a11, a12, a13, a14, a15, a16];
+let matrixArray = [
+  a1,
+  a2,
+  a3,
+  a4,
+  a5,
+  a6,
+  a7,
+  a8,
+  a9,
+  a10,
+  a11,
+  a12,
+  a13,
+  a14,
+  a15,
+  a16,
+];
 ```
 
 この配列では、左端の列にエントリ a1、a2、a3、a4 が含まれています。 一番上の行には、エントリ a1、a5、a9、a13 が含まれています。
 
 ほとんどの WebGL および WebXR のプログラミングは、サードパーティライブラリを使用して行われることを覚えておいてください。 サードパーティライブラリは、コアとなる行列やその他の操作だけでなく、多くの場合、これらの標準的な映画撮影手法のシミュレーションをより簡単にするルーチンを追加することにより、WebGL の基本機能を拡張します。 WebGL を直接使用するのではなく、その 1 つを使用することを強くお勧めします。 このガイドでは WebGL を直接使用しています。 これは、その裏で何が行われているのかをある程度理解し、ライブラリの開発を支援したり、コードを最適化するのに役立つためです。
 
-> **メモ:** 「カメラを動かす」などのフレーズを使用していますが、実際に行っているのは、カメラの周りの世界全体を動かすことです。 これは、特定の値が機能する方法に影響を与えます。 これらの値については、後で説明します。
+> [!NOTE]
+> 「カメラを動かす」などのフレーズを使用していますが、実際に行っているのは、カメラの周りの世界全体を動かすことです。 これは、特定の値が機能する方法に影響を与えます。 これらの値については、後で説明します。
 
 ### ズーム
 
 最もよく知られているカメラ効果には、ズーム（zoom）があります。 ズームは、レンズの焦点距離を変更することにより、物理的なカメラで実行されます。 これは、レンズ自体の中心とカメラの光センサーの間の距離です。 したがって、ズームは実際にはカメラを動かすことをまったく含みません。 代わりに、ズームショットは、時間の経過とともにカメラの倍率を変化させて、実際にカメラを物理的に動かさなくても、焦点領域がビューアーに近づいたり遠ざかったりするように見せます。 ゆっくりとした動きはシーンに動き、気軽さ、または集中の感覚をもたらすことができ、急速なズームは不安、驚き、または緊張の感覚を生み出すことができます。
 
-ズームはカメラの位置を動かさないので、結果として生じる効果は不自然です。 人間の目にはズームレンズがありません。 物を遠ざけたり、近づけたりして、物を小さくしたり大きくしたりします。 映画撮影では、それは[ドリーショット](#Dolly)と呼ばれます。
+ズームはカメラの位置を動かさないので、結果として生じる効果は不自然です。 人間の目にはズームレンズがありません。 物を遠ざけたり、近づけたりして、物を小さくしたり大きくしたりします。 映画撮影では、それは[ドリーショット](#dolly)と呼ばれます。
 
 3D グラフィックスにも 2 つの手法があり、同一ではありませんが類似した結果を作成でき、その方法はさまざまな状況でより簡単に適用できます。
 
@@ -151,13 +168,12 @@ function createPerspectiveMatrix(viewport, fovDegrees, nearClip, farClip) {
   const aspectRatio = viewport.width / viewport.height;
 
   const transform = mat4.create();
-  mat4.perspective(transform, fovRadians, aspectRatio,
-                   nearClip, farClip);
+  mat4.perspective(transform, fovRadians, aspectRatio, nearClip, farClip);
   return transform;
 }
 ```
 
-FOV 角度 `fovDegrees` を度数からラジアンに変換し、`viewport` パラメーターで指定された {{domxref("XRViewport")}} のアスペクト比を計算した後、この関数は [glMatrix](http://glmatrix.net/) ライブラリーの [`mat4.perspective()`](http://glmatrix.net/docs/module-mat4.html#.perspective) 関数を使用して、透視行列を計算します。
+FOV 角度 `fovDegrees` を度数からラジアンに変換し、`viewport` パラメーターで指定された {{domxref("XRViewport")}} のアスペクト比を計算した後、この関数は [glMatrix](https://glmatrix.net/) ライブラリーの [`mat4.perspective()`](https://glmatrix.net/docs/module-mat4.html#.perspective) 関数を使用して、透視行列を計算します。
 
 透視行列は、視野（厳密に言えば、これは*垂直方向*の視野です）、アスペクト比、およびニアクリッピングプレーンおよびファークリッピングプレーンを 4x4 行列の `transform` でカプセル化し、呼び出し元に返します。
 
@@ -169,11 +185,15 @@ FOV 角度 `fovDegrees` を度数からラジアンに変換し、`viewport` パ
 
 ```js
 const transform = createPerspectiveMatrix(viewport, 130, 1, 100);
-const translateVec = vec3.fromValues(-trackDistance, -craneDistance, pushDistance);
+const translateVec = vec3.fromValues(
+  -trackDistance,
+  -craneDistance,
+  pushDistance,
+);
 mat4.translate(transform, transform, translateVec);
 ```
 
-これは、130° の垂直視野を表す透視行列から始まり、次に、[トラック](/ja/docs/Web/API/WebXR_Device_API/Cameras#Trucking_Moving_left_or_right)、[クレーン](/ja/docs/Web/API/WebXR_Device_API/Cameras#Pedestaling_Moving_up_or_down)、および[プッシュ](/ja/docs/Web/API/WebXR_Device_API/Cameras#Dollying_Moving_in_or_out)の動きを含むやり方でカメラを動かす平行移動を適用します。
+これは、130° の垂直視野を表す透視行列から始まり、次に、[トラック](#Trucking_Moving_left_or_right)、[クレーン](#Pedestaling_Moving_up_or_down)、および[プッシュ](#Dollying_Moving_in_or_out)の動きを含むやり方でカメラを動かす平行移動を適用します。
 
 #### 拡大縮小変換
 
@@ -182,12 +202,7 @@ mat4.translate(transform, transform, translateVec);
 2 倍に拡大する場合は、各成分に 2.0 を掛ける必要があります。 同じ量だけ縮小するには、-2.0 を掛けます。 行列の用語では、これは次のように拡大縮小係数された変換行列を使用して実行されます。
 
 ```js
-let scaleTransform = [
-  Sx,  0,  0,  0,
-   0, Sy,  0,  0,
-   0,  0, Sz,  0,
-   0,  0,  0,  1
-];
+let scaleTransform = [Sx, 0, 0, 0, 0, Sy, 0, 0, 0, 0, Sz, 0, 0, 0, 0, 1];
 ```
 
 この行列は、`(Sx, Sy, Sz)` で示される係数で拡大または縮小する変換を表します。 `Sx` は X 軸に沿った拡大縮小係数、`Sy` は Y 軸に沿った拡大縮小係数、`Sz` は Z 軸の係数です。 これらの値のいずれかが他の値と異なる場合、結果は一部の次元で他と比較して異なる伸縮になります。
@@ -196,12 +211,7 @@ let scaleTransform = [
 
 ```js
 function createScalingMatrix(f) {
-  return [
-    f, 0, 0, 0,
-    0, f, 0, 0,
-    0, 0, f, 0,
-    0, 0, 0, 1
-  ];
+  return [f, 0, 0, 0, 0, f, 0, 0, 0, 0, f, 0, 0, 0, 0, 1];
 }
 ```
 
@@ -209,12 +219,7 @@ function createScalingMatrix(f) {
 
 ```js
 let myVector = [2, 1, -3];
-let scaleTransform = [
-  2, 0, 0, 0,
-  0, 2, 0, 0,
-  0, 0, 2, 0,
-  0, 0, 0, 1
-];
+let scaleTransform = [2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1];
 vec4.transformMat4(myVector, myVector, scaleTransform);
 ```
 
@@ -231,7 +236,7 @@ vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));
 
 ![左右にパンするカメラを示す図](camera-pan.png)
 
-これを行うには、Y 軸を中心に回転して、カメラの左右の回転をシミュレートする必要があります。 これまでに使用した [glMatrix](http://glmatrix.net/) ライブラリーを使用すると、これは、標準の 4x4 行列を表す `mat4` クラスの `rotateY()` メソッドを使用して実行できます。 行列 `viewMatrix` で定義された視点 を `panAngle` ラジアンで回転するには、次のようにします。
+これを行うには、Y 軸を中心に回転して、カメラの左右の回転をシミュレートする必要があります。 これまでに使用した [glMatrix](https://glmatrix.net/) ライブラリーを使用すると、これは、標準の 4x4 行列を表す `mat4` クラスの `rotateY()` メソッドを使用して実行できます。 行列 `viewMatrix` で定義された視点 を `panAngle` ラジアンで回転するには、次のようにします。
 
 ```js
 mat4.rotateY(viewMatrix, viewMatrix, panAngle);
@@ -328,8 +333,11 @@ mat4.translate(viewMatrix, viewMatrix, [0, 0, dollyDistance]);
 ここでの解決策は明白です。 平行移動は、各軸に沿って移動する距離を提供するベクトルとして表現されるため、次のようにそれらを組み合わせることができます。
 
 ```js
-mat4.translate(viewMatrix, viewMatrix,
-     [-truckDistance, -pedestalDistance, dollyDistance]);
+mat4.translate(viewMatrix, viewMatrix, [
+  -truckDistance,
+  -pedestalDistance,
+  dollyDistance,
+]);
 ```
 
 これにより、行列 `viewMatrix` の原点が各軸に沿って指定された量だけシフトします。
@@ -387,7 +395,9 @@ function myAnimationFrameCallback(time, frame) {
   let adjustedRefSpace = applyPositionOffsets(xrReferenceSpace);
   let pose = frame.getViewerPose(adjustedRefSpace);
 
-  animationFrameRequestID = frame.session.requestAnimationFrame(myAnimationFrameCallback);
+  animationFrameRequestID = frame.session.requestAnimationFrame(
+    myAnimationFrameCallback,
+  );
 
   if (pose) {
     let glLayer = frame.session.renderState.baseLayer;
@@ -432,6 +442,6 @@ function myAnimationFrameCallback(time, frame) {
 ## 関連情報
 
 - [幾何学と参照空間](/ja/docs/Web/API/WebXR_Device_API/Geometry)
-- [WebGL モデル ビュー 射影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)
+- [WebGL のモデル、ビュー、投影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)
 - [ウェブの行列計算](/ja/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
 - [移動、向き、モーション: WebXR の例](/ja/docs/Web/API/WebXR_Device_API/Movement_and_motion)

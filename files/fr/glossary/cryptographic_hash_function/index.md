@@ -1,13 +1,9 @@
 ---
 title: Fonction de hachage cryptographique
 slug: Glossary/Cryptographic_hash_function
-tags:
-  - Cryptographie
-  - Glossaire
-  - Sécurité
-translation_of: Glossary/Cryptographic_hash_function
-original_slug: Glossaire/Fonction_de_hachage_cryptographique
 ---
+
+{{GlossarySidebar}}
 
 Une fonction de hachage cryptographique est une primitive {{glossary("cryptographie", "cryptographique")}} qui transforme un message de taille arbitraire en un message de taille fixe, appelé un {{glossary("digest","condensé")}}. Les fonctions de hachage cryptographiques sont employées pour l'authentification, les {{Glossary("Digital signature", "signatures numériques")}} et les {{Glossary("HMAC", "codes d'authentification de messages")}}.
 

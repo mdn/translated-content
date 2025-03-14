@@ -1,8 +1,6 @@
 ---
 title: Window.scrollTo()
 slug: Web/API/Window/scrollTo
-translation_of: Web/API/Window/scrollTo
-browser-compat: api.Window.scrollTo
 ---
 
 {{APIRef}}
@@ -12,15 +10,15 @@ La méthode **`Window.scrollTo()`** permet de faire défiler la fenêtre pour at
 ## Syntaxe
 
 ```js
-scrollTo(x-coord, y-coord)
-scrollTo(options)
+scrollTo(x_coord, y_coord);
+scrollTo(options);
 ```
 
 ### Paramètres
 
-- `x-coord`
+- `x_coord`
   - : Le pixel sur l'axe horizontal du document dont on veut qu'il soit affiché dans le coin supérieur gauche.
-- `y-coord`
+- `y_coord`
   - : Le pixel sur l'axe vertical du document dont on veut qu'il soit affiché dans le coin supérieur gauche.
 
 ou
@@ -32,7 +30,10 @@ ou
     - `left`
       - : Indique le nombre de pixels le long desquels faire défiler la fenêtre ou l'élément sur l'axe horizontal.
     - `behavior`
-      - : Indique si le défilement devrait être doux (valeur `smooth`), ou s'il devrait avoir lieu instantanément, en une seule fois (valeur `auto`, qui est la valeur par défaut).
+      - : Indique si le défilement devrait être instantané ou doux. Cette option est une chaine de caractères qui doit être l'une de ces valeurs&nbsp;:
+        - `smooth`&nbsp;: le défilement doit s'animer en douceur
+        - `instant`&nbsp;: le défilement devrait se produire instantanément, en un seul saut
+        - `auto`&nbsp;: le comportement de défilement est déterminé par la valeur calculée de ([scroll-behavior](/fr/docs/Web/CSS/scroll-behavior))
 
 ### Valeur de retour
 
@@ -52,7 +53,7 @@ window.scrollTo(0, 1000);
 window.scrollTo({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 

@@ -13,11 +13,13 @@ O método **`HTMLInputElement.select()`** seleciona todo o texto em um elemento 
 element.select()
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                            | Estado                           | Comentário |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'forms.html#dom-textarea/input-select', 'select')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
 
 ## Notas
 

@@ -30,7 +30,7 @@ range.setStart(startNode, startOffset);
 var range = document.createRange();
 var startNode = document.getElementsByTagName("p").item(2);
 var startOffset = 0;
-range.setStart(startNode,startOffset);
+range.setStart(startNode, startOffset);
 ```
 
 ## 规范
@@ -43,4 +43,4 @@ range.setStart(startNode,startOffset);
 
 ## 参见
 
-- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference)
+- [The DOM interfaces index](/zh-CN/docs/Web/API/Document_Object_Model)

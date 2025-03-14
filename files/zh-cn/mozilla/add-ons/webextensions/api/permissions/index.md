@@ -1,59 +1,66 @@
 ---
 title: permissions
 slug: Mozilla/Add-ons/WebExtensions/API/permissions
+l10n:
+  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}Enables extensions to request extra permissions at runtime, after they have been installed.
+{{AddonSidebar}}
 
-Extensions need permissions to access more powerful WebExtension APIs. They can ask for permissions at install time, by including the permissions they need in the [`permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) manifest.json key. The main advantages of asking for permissions at install time are:
+允许扩展在安装之后，在运行时请求额外的权限。
 
-- The user is only asked once, so it's less disruptive for them, and a simpler decision.
-- The extension can rely on the access to the APIs it needs, because if already running, the permissions have been granted.
+扩展需要权限来访问更强大的 WebExtension API。它们可以在安装时请求权限，方法是在 [`permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) manifest.json 键中包含它们需要的权限。在安装时请求权限的主要优点包括：
 
-There is not yet a simple GUI, for users to view permissions of their installed WebExtension Add-ons. Users must use about:debugging, go to the Add-ons section, then use the "Manifest Url" link for this Add-on. This shows raw json, which includes a "permissions" block, showing the permissions used by this addon.
+- 只会询问用户一次（是否授予权限），因此相对而言更少地对用户产生打扰，决定起来也更为简单。
+- 扩展可以依赖于它所需的 API 访问权限，因为如果扩展已经在运行中，说明权限已经被用户授予了。
 
-With the permissions API, an extension can ask for additional permissions at runtime. These permissions need to be listed in the [`optional_permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest.json key. Note that some permissions are not allowed in `optional_permissions`. The main advantages of this are:
+在大多数主流浏览器中，用户可以通过浏览器的扩展管理器查看他们安装的扩展是否请求了高级权限。
 
-- The extension can run with a smaller set of permissions, except when it actually needs them.
-- The extension can handle permission denial in a graceful manner, instead of presenting the user with a global "all or nothing" choice at install time. You can still get a lot out of that map extension, without giving it access to your location, for example.
-- The extension may need [host permissions](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions), but not know at install time which host permissions it needs. For example, the list of hosts may be a user setting. In this scenario, asking for a more specific range of hosts at runtime, can be an alternative to asking for "\<all_urls>" at install time.
+使用权限 API，扩展可以在运行时请求额外的权限。这些权限需要在 [`optional_permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest.json 键中列出。请注意，某些权限不允许在 `optional_permissions` 中使用。这样做的主要优势包括：
 
-To use the permissions API, decide which permissions your extension can request at runtime, and list them in [`optional_permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions). After this, you can request any permissions that were included in `optional_permissions`. Requests may only be made in the handler for a user action (for example, a click handler).For advice on designing your request for runtime permissions, to maximize the likelihood that users grant them, see [Request permissions at runtime](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions#Request_permissions_at_runtime).
+- 扩展仅需更少的权限即可运行，直到它真的需要其他权限。
+- 扩展可以以一种优雅的方式处理权限拒绝，而不是在安装时向用户提供一个全局的“全有或全无”选择。例如，即使不授予扩展访问位置的权限，你仍然可以从地图扩展中获得很多信息。
+- 扩展可能需要[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)，但在安装时不知道需要哪些主机权限。例如，主机列表可能是由用户设置的。在这种情况下，在运行时请求更具体范围的主机的权限，可以取代在安装时请求“<all_urls>”的权限的做法。
 
-## Types
+要使用权限 API，请决定扩展在运行时可以请求哪些权限，并将它们列在 [`optional_permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) 中。之后，你可以请求任何包含在 `optional_permissions` 中的权限。请求只能在用户操作的处理器中进行（例如，点击处理器）。
+
+从 Firefox 84 开始，用户将能够在附加组件管理器中管理已安装扩展的可选权限。使用可选权限的扩展应监听 [browser.permissions.onAdded](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onAdded) 和 [browser.permissions.onRemoved](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved) API 事件，以了解用户何时授予或撤销这些权限。
+
+有关设计运行时权限请求的建议，以最大程度地提高用户授予权限的可能性，请参阅[在运行时请求权限](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/#request_permissions_at_runtime)。
+
+## 类型
 
 - {{WebExtAPIRef("permissions.Permissions")}}
-  - : Represents a set of permissions.
+  - : 表示一系列的权限。
 
-## Methods
+## 方法
 
 - {{WebExtAPIRef("permissions.contains()")}}
-  - : Discover an extension's given set of permissions.
+  - : 发现扩展被授予的权限。
 - {{WebExtAPIRef("permissions.getAll()")}}
-  - : Get all the permissions this extension currently has.
+  - : 获取扩展当前被授予的所有权限。
 - {{WebExtAPIRef("permissions.remove()")}}
-  - : Give up a set of permissions.
+  - : 放弃一系列的权限。
 - {{WebExtAPIRef("permissions.request()")}}
-  - : Ask for a set of permissions.
+  - : 请求授予一系列的权限。
 
-## Event handlers
+## 事件处理器
 
 - {{WebExtAPIRef("permissions.onAdded")}}
-  - : Fired when a new permission is granted.
+  - : 当一个新权限被授予时触发。
 - {{WebExtAPIRef("permissions.onRemoved")}}
-  - : Fired when a permission is removed.
+  - : 当一个权限被移除时触发。
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- `manifest.json` [`permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) property
-- `manifest.json` [`optional_permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) property
+- `manifest.json` [`permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 属性
+- `manifest.json` [`optional_permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) 属性
 
 {{WebExtExamples("h2")}}
 
-> **备注：** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/extensions/permissions) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> 该 API 基于 Chromium 的 [`chrome.permissions`](https://developer.chrome.google.cn/docs/extensions/reference/api/permissions) API。

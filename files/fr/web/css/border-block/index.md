@@ -1,18 +1,11 @@
 ---
 title: border-block
 slug: Web/CSS/border-block
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/border-block
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La propriété **`border-block`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet de paramétrer les différentes propriétés logiques relatives à la bordure sur l'axe en bloc.
+La propriété **`border-block`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de paramétrer les différentes propriétés logiques relatives à la bordure sur l'axe en bloc.
 
 ```css
 border-block: 1px;

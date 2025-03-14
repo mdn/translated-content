@@ -1,106 +1,186 @@
 ---
 title: bottom
 slug: Web/CSS/bottom
+l10n:
+  sourceCommit: e9a39cf29e4d40513b19c79abfe10b6338dde8dd
 ---
 
-<< [Volver](/es/Gu%c3%ada_de_referencia_de_CSS)
+{{CSSRef}}
 
-### Resumen
+La propiedad **`bottom`** de [CSS](/es/docs/Web/CSS) establece la posición vertical de un [elemento posicionado](/es/docs/Web/CSS/position). No tiene efecto en elementos no posicionados.
 
-La propiedad `bottom` especifica parte de la posición de un elemento (posicionado - es decir, con una posición determinada por código).
+{{InteractiveExample("CSS Demo: bottom")}}
 
-Para los elementos con una posición absoluta (aquellos que tienen la propiedad `position: absolute` o `position: fixed`), la propiedad bottom determina la distancia entre el borde inferior del elemento y el borde inferior de su bloque contenedor.
-
-Para los elementos con una posición relativa (los que tienen la propiedad `position: relative`), la propiedad bottom determina la distancia que el elemento se mueve hacia arriba desde su posición normal. Sin embargo, la propiedad {{ Cssxref("top") }} se antepone a la propiedad bottom, por lo que si `top` no es `auto`, el valor computado de `bottom` es el valor negativo del valor computado de `top`.
-
-- {{ Cssxref("initial", "Valor inicial") }}: {{ Cssxref("auto", "automático") }}
-- Se aplica a: {{ Cssxref("position", "la posición de los elementos") }}
-- {{ Cssxref("inheritance", "Heredado") }}: no
-- Porcentajes: se refieren a la altura del bloque contenedor.
-- Medio: {{ Cssxref("Media:Visual", "visual") }}
-- {{ Cssxref("computed value", "Valor calculada") }}: valor absoluto, porcentaje o auto.
-
-### Sintaxis
-
+```css interactive-example-choice
+bottom: 0;
 ```
-   bottom: <length> | <percentage> | auto | inherit
+
+```css interactive-example-choice
+bottom: 4em;
+```
+
+```css interactive-example-choice
+bottom: 10%;
+```
+
+```css interactive-example-choice
+bottom: 20px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <div id="example-element">I am absolutely positioned.</div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 0.75em solid;
+  padding: 0.75em;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+#example-element {
+  background-color: #264653;
+  border: 4px solid #ffb500;
+  color: white;
+  position: absolute;
+  width: 140px;
+  height: 60px;
+}
+```
+
+El efecto de la propiedad `bottom` depende de cómo esté posicionado el elemento (es decir, del valor de la propiedad {{cssxref("position")}}):
+
+- Cuando `position` se establece como `absolute` o `fixed`, la propiedad `bottom` especifica la distancia entre el borde exterior del [margen inferior](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) del elemento y el borde exterior del relleno inferior del bloque contenedor.
+
+- Cuando `position` se establece en `relative`, la propiedad `bottom` especifica la distancia a la que se mueve el borde inferior del elemento con respecto a su posición normal.
+
+- Cuando `position` se establece como `sticky`, la propiedad `bottom` se utiliza para calcular el modelo de restricción pegajosa.
+
+- Cuando `position` se establece como `static`, la propiedad `bottom` no tiene _efecto_.
+
+Cuando se especifican tanto {{cssxref("top")}} como `bottom`, `position` se establece como `absolute` o `fixed`, _y_ la {{cssxref("height", "altura")}} no está especificada (ya sea como `auto` o `100%`), se respetan tanto las distancias de `top` como de `bottom`. En todas las demás situaciones, si la {{cssxref("height", "altura")}} está restringida de alguna manera o `position` se establece como `relative`, la propiedad `top` tiene prioridad y la propiedad `bottom` se ignora.
+
+## Sintaxis
+
+```css
+/* <longitud> valores */
+bottom: 3px;
+bottom: 2.4em;
+
+/* <porcentaje>s de la altura del bloque contenedor */
+bottom: 10%;
+
+/* valor de palabra clave */
+bottom: auto;
+
+/* Valores globales */
+bottom: inherit;
+bottom: initial;
+bottom: revert;
+bottom: revert-layer;
+bottom: unset;
 ```
 
 ### Valores
 
-- \<length>
-  - : Una longitud, usada como se describe en el [resumen](#Resumen). Puede ser un valor negativo, cero o un valor positivo.
-- \<percentage>
-  - : Un porcentaje de la altura del bloque contenedor, usado como se describe en el [resumen](#Resumen).
+- {{cssxref("&lt;length&gt;")}}
+
+  - : Una {{cssxref("&lt;length&gt;", "longitud")}} negativa, nula o positiva que representa:
+
+    - para _elementos posicionados absolutamente_, la distancia hasta el borde inferior del bloque contenedor..
+    - para _elementos posicionados relativamente_, la distancia que el elemento se mueve por encima de su posición normal..
+
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Un {{cssxref("&lt;percentage&gt;", "porcentaje")}} de la altura del bloque contenedor.
 - `auto`
-  - : Para los elementos con posición absoluta, el elemento se posiciona en base a la propiedad {{ Cssxref("top") }} y por tanto se trata `height: auto` como una altura basada en el contenido del elemento. Para los elementos posicionados como relativos, especifica un desplazamiento desde su posición normal basada en la propiedad {{ Cssxref("top") }} o si, `top` es también `auto`, no se produce desplazamiento alguno.
+
+  - : Especifica que:
+
+    - para _elementos posicionados absolutamente_, la posición del elemento esta basado en la propiedad {{Cssxref("top")}}, mientras que `height: auto` se trata como una altura según el contenido; o si `top` es también `auto`, el elemento se coloca donde debería ubicarse verticalmente si fuera un elemento estático.
+    - para _elementos posicionados relativamente_, la distancia del elemento de su posición normal se basa en la propiedad {{Cssxref("top")}}; o si `top` tambièn es `auto`, el elemento no se mueve verticalmente.
+
 - `inherit`
-  - : Recoge el valor que tenga el elemento padre (que puede no ser el bloque contenedor). Este valor calculado es tratado como si fuera un valor \<length>, \<percentage> o `auto`.
+  - : Especifica que el valor es el mismo que el valor calculado de su elemento padre (que podría no ser su bloque contenedor). Este valor calculado se maneja entonces como si fuera un {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, o `auto`.
 
-### Ejemplos
+## Definición formal
 
+{{cssinfo}}
+
+## Sintaxis formal
+
+{{csssyntax}}
+
+## Ejemplos
+
+### Posicionamiento absoluto y fijo
+
+Este ejemplo demuestra la diferencia en el comportamiento de la propiedad `bottom`, cuando la {{cssxref("position")}} es `absolute` versus `fixed`.
+
+#### HTML
+
+```html
+<p>
+  This<br />is<br />some<br />tall,<br />tall,<br />tall,<br />tall,<br />tall<br />content.
+</p>
+<div class="fixed"><p>Fixed</p></div>
+<div class="absolute"><p>Absolute</p></div>
 ```
-element {
-    position: absolute;
-    bottom: 20px;
-    height: 200px;
-    border: 1px solid #000;
+
+#### CSS
+
+```css
+p {
+  font-size: 30px;
+  line-height: 2em;
+}
+
+div {
+  width: 48%;
+  text-align: center;
+  background: rgba(55, 55, 55, 0.2);
+  border: 1px solid blue;
+}
+
+.absolute {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
 ```
 
-El siguiente ejemplo permite contrastar entre `position:absolute` y `position:fixed`. Cuando el texto ocupa un espacio más alto que la porción visible de la página (la porción visible en la ventana del navegador) los bloques posicionados con `position:absolute` se desplazarán junto con la página, mientras que los bloques posicionados con `position:fixed`, no lo harán.
+#### Resultado
 
-- **Atención**: IE6 **no** soporta el código `position:fixed`.
+{{EmbedLiveSample('Absolute_and_fixed_positioning','500','250')}}
 
-```
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-<title>Position at bottom, absolute or fixed</title>
-<style type="text/css">
-p {font-size:30px; line-height:3em;}
-div.pos {width:49%; text-align:center; border:2px solid #00f;}
-div#abs {position:absolute; bottom:0; left:0;}
-div#fix {position:fixed; bottom:0; right:0;}
-</style>
-</head>
-<body>
-  <p>Esto<br>es<br>un texto<br>alto,<br>alto,
-    <br>alto,<br>alto,<br>alto<br>de prueba.</p>
-  <div id="fix" class="pos"><p>Fixed</p></div>
-  <div id="abs" class="pos"><p>Absolute</p></div>
-</body>
-</html>
-```
+## Especificaciones
 
-### Notas
+{{Specifications}}
 
-Para los elementos posicionados de forma absoluta cuyo bloque contenedor sea un elemento de tipo bloque, esta propiedad es un desplazamiento a partir del borde de relleno (padding) de dicho elemento.
+## Compatibilidad con navegadores
 
-Para los elementos posicionados de forma absoluta, la propiedad `bottom` no tiene efectos visibles cuando los valores {{ Cssxref("top") }}, {{ Cssxref("height") }}, y {{ Cssxref("margin-top") }} _no_ son `auto` (que es el valor por defecto para `top` y `height`).
+{{Compat}}
 
-### Especificaciones
+## Véase también
 
-- [CSS 2.1 (en)](http://www.w3.org/TR/CSS21/visuren.html#propdef-bottom)
-- [CSS 3 (en)](http://www.w3.org/Style/CSS/current-work#positioning)
-
-### Compatibilidad entre navegadores
-
-This is as far back as the documentaion goes.
-
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 5              |
-| Firefox           | 1              |
-| Netscape          | 6              |
-| Opera             | 6              |
-
-### Ver también
-
-{{ Cssxref("position") }}, {{ Cssxref("top") }}, {{ Cssxref("right") }}, {{ Cssxref("left") }}
-
-Categorías
-
-Interwiki Languages
+- {{cssxref("inset")}}, abreviatura de todas las propiedades relacionadas: {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, y {{cssxref("right")}}
+- Las propiedades lógicas: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, e {{cssxref("inset-inline-end")}} y las abreviaturas {{cssxref("inset-block")}} e {{cssxref("inset-inline")}}
+- {{cssxref("position")}}

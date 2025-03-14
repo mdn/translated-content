@@ -31,11 +31,11 @@ var RAM = navigator.deviceMemory;
 
 ### JavaScript インターフェイス
 
-{{Compat("api.Navigator.deviceMemory")}}
+{{Compat}}
 
 ### クライアントヒント拡張機能
 
-{{Compat("http.headers.Device-Memory")}}
+{{Compat}}
 
 ## 関連情報
 

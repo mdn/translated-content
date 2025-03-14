@@ -10,33 +10,43 @@ slug: Web/SVG/Element/path
 
 path 元素是用来定义形状的通用元素。所有的基本形状都可以用 path 元素来创建。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
 ## 示例
 
-```plain
-<svg width="100%" height="100%" viewBox="0 0 400 400"
-     xmlns="http://www.w3.org/2000/svg">
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
 
-  <path d="M 100 100 L 300 100 L 200 300 z"
-        fill="orange" stroke="black" stroke-width="3" />
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M 10,30
+           A 20,20 0,0,1 50,30
+           A 20,20 0,0,1 90,30
+           Q 90,60 50,90
+           Q 10,60 10,30 z" />
 </svg>
 ```
 
 输出结果：
 
-{{EmbedLiveSample("Example",200,215)}}
+{{EmbedLiveSample("示例",200,215)}}
 
 ## 属性
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/zh-CN/docs/Web/SVG/Attribute#Core) »
-- [图形事件属性](/zh-CN/docs/Web/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/zh-CN/docs/Web/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/Web/SVG/Attribute#graphicalevent) »
+- [外观属性](/zh-CN/docs/Web/SVG/Attribute#presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}
@@ -49,7 +59,7 @@ path 元素是用来定义形状的通用元素。所有的基本形状都可以
 
 ## DOM 接口
 
-该元素实现了[`SVGPathElement`](/zh-CN/docs/DOM/SVGPathElement)接口。
+该元素实现了 [`SVGPathElement`](/zh-CN/docs/Web/API/SVGPathElement) 接口。
 
 ## 浏览器兼容性
 

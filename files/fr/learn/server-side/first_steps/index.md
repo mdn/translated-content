@@ -1,14 +1,6 @@
 ---
 title: Premiers pas dans la programmation d'un site côté serveur
 slug: Learn/Server-side/First_steps
-tags:
-  - Débutant
-  - Encodage
-  - Guide
-  - Intro
-  - Programmation côté serveur
-translation_of: Learn/Server-side/First_steps
-original_slug: Learn/Server-side/Premiers_pas
 ---
 
 {{LearnSidebar}}
@@ -21,19 +13,19 @@ Pour suivre ce module, aucune connaissance en programmation web côté serveur o
 
 Vous aurez besoin de comprendre "comment fonctionne le web". Nous vous recommandons de lire d'abord les sujets suivants :
 
-- [Qu'est-ce qu'un serveur web](/fr/Apprendre/Qu_est-ce_qu_un_serveur_web)
-- [De quel logiciel ai-je besoin pour créer un site web ?](/fr/Apprendre/Quels_logiciels_sont_n%C3%A9cessaires_pour_construire_un_site_web)
-- [Comment transférer des fichiers sur un serveur web ?](/fr/Apprendre/Transf%C3%A9rer_des_fichiers_vers_un_serveur_web)
+- [Qu'est-ce qu'un serveur web](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [De quel logiciel ai-je besoin pour créer un site web ?](/fr/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
+- [Comment transférer des fichiers sur un serveur web ?](/fr/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
 
 Avec cette compréhension de base, vous serez prêts à parcourir les modules de cette section.
 
 ## Guides
 
-- [Introduction au côté serveur](/fr/docs/Learn/Server-side/Premiers_pas/Introduction)
+- [Introduction au côté serveur](/fr/docs/Learn/Server-side/First_steps/Introduction)
   - : Bienvenue au cours de programmation débutant de MDN ! Dans ce premier article, nous examinerons la programmation côté serveur, répondant à des questions comme «En quoi consiste-t-elle ?», «En quoi diffère-t-elle de la programmation côté client ?» et «Pourquoi est-ce si utile ?». Après avoir lu cet article, vous comprendrez comment la programmation côté serveur donne aux sites web toute leur puissance.
-- [Présentation client-serveur](/fr/docs/Learn/Server-side/Premiers_pas/Client-Serveur)
+- [Présentation client-serveur](/fr/docs/Learn/Server-side/First_steps/Client-Server_overview)
   - : Maintenant que vous connaissez le but et les avantages potentiels de la programmation côté serveur, nous allons examiner en détail ce qui se passe lorsqu'un serveur reçoit une "requête dynamique" d'un navigateur. Comme la plupart des codes côté serveur traitent les demandes et les réponses de la même manière, cela vous aidera à comprendre ce que vous devez faire lorsque vous écrivez votre propre code.
-- [Frameworks web côté serveur](/fr/docs/Learn/Server-side/Premiers_pas/Web_frameworks)
+- [Frameworks web côté serveur](/fr/docs/Learn/Server-side/First_steps/Web_frameworks)
   - : Le dernier article vous a montré ce qu'une application web côté serveur doit faire pour répondre aux demandes d'un navigateur web. Nous allons maintenant vous montrer comment les frameworks web peuvent simplifier ces tâches ; nous vous aiderons à choisir le bon framework pour coder votre première application web côté serveur.
 - [Sécurité de votre site web](/fr/docs/Learn/Server-side/First_steps/Website_security)
   - : La sécurité de votre site web requiert une vigilance dans tous les aspects de sa conception et de son utilisation. Cet article d'introduction ne fera pas de vous un gourou de la sécurité des sites web, mais il vous aidera à comprendre les premières mesures importantes à prendre pour mettre votre application web à l'abri des menaces les plus courantes.

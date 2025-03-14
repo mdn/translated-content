@@ -35,7 +35,7 @@ O `<display-inside>` O valor é definido usando uma palavra-chave da lista abaix
 - `ruby` {{Experimental_Inline}}
   - : O elemento se comporta como um elemento embutido e apresenta seu conteúdo de acordo com o modelo de formatação ruby. Ele se comporta como o HTML correspondente{{HTMLElement("ruby")}} elementos.
 
-> **Note:** **Nota: Navegadores que suportam a sintaxe de dois valores, encontrando apenas o valor interno, como quando**`display: flex` or `display: grid` especificado, definirá seu valor externo como `block`. Isso resultará no comportamento esperado; por exemplo, se você especificar um elemento a ser `display: grid`, você esperaria que a caixa criada no contêiner da grade fosse uma caixa no nível do bloco.
+> **Nota:**: Navegadores que suportam a sintaxe de dois valores, encontrando apenas o valor interno, como quando `display: flex` or `display: grid` especificado, definirá seu valor externo como `block`. Isso resultará no comportamento esperado; por exemplo, se você especificar um elemento a ser `display: grid`, você esperaria que a caixa criada no contêiner da grade fosse uma caixa no nível do bloco.
 
 ### Sintaxe formal
 
@@ -58,18 +58,18 @@ Neste exemplo, a caixa pai foi fornecida `display: flow-root` e assim estabelece
 
 ```css
 .box {
-    background-color: rgb(224, 206, 247);
-    border: 5px solid rebeccapurple;
-    display: flow-root;
+  background-color: rgb(224, 206, 247);
+  border: 5px solid rebeccapurple;
+  display: flow-root;
 }
 
 .float {
-    float: left;
-    width: 200px;
-    height: 150px;
-    background-color: white;
-    border:1px solid black;
-    padding: 10px;
+  float: left;
+  width: 200px;
+  height: 150px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
 }
 ```
 
@@ -81,27 +81,27 @@ Neste exemplo, a caixa pai foi fornecida `display: flow-root` e assim estabelece
 
 ### Suporte a vários valores de palavras-chave
 
-{{Compat("css.properties.display.multi-keyword_values", 10)}}
+{{Compat}}
 
 ### Suporte de fluxo-raiz
 
-{{Compat("css.properties.display.flow-root", 10)}}
+{{Compat}}
 
 ### Suporte de tabela
 
-{{Compat("css.properties.display.table_values", 10)}}
+{{Compat}}
 
 ### Suporte de grade
 
-{{Compat("css.properties.display.grid", 10)}}
+{{Compat}}
 
 ### Suporte de flex
 
-{{Compat("css.properties.display.flex", 10)}}
+{{Compat}}
 
 ### Suporte de ruby
 
-{{Compat("css.properties.display.ruby_values", 10)}}
+{{Compat}}
 
 ## Veja também
 
@@ -113,5 +113,5 @@ Neste exemplo, a caixa pai foi fornecida `display: flow-root` e assim estabelece
   - {{CSSxRef("&lt;display-box&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [Conceitos básicos do Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
-- [Conceitos básicos de layout de grade](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [Conceitos básicos do Flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Conceitos básicos de layout de grade](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)

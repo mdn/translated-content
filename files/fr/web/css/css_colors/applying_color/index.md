@@ -1,19 +1,6 @@
 ---
 title: Appliquer des couleurs sur des éléments HTML grâce à CSS
-slug: Web/CSS/CSS_Colors/Applying_color
-tags:
-  - Beginner
-  - CSS
-  - CSS Colors
-  - Débutant
-  - Guide
-  - HTML
-  - HTML Colors
-  - HTML Styles
-  - Styling HTML
-  - color
-translation_of: Web/HTML/Applying_color
-original_slug: Web/HTML/Applying_color
+slug: Web/CSS/CSS_colors/Applying_color
 ---
 
 {{HTMLSidebar}}
@@ -47,7 +34,7 @@ Lorsqu'un élément est affiché à l'écran, les propriétés suivantes déterm
 - [`text-emphasis-color`](/fr/docs/Web/CSS/text-emphasis-color)
   - : Cette propriété correspondra à la couleur utilisée pour dessiner les symboles d'emphase utilisés à côté des caractères du texte. Ces symboles sont principalement utilisés dans des textes écrits dans des langues d'Asie orientale.
 - [`caret-color`](/fr/docs/Web/CSS/caret-color)
-  - : Cette propriété correspondra à la couleur utilisée pour dessiner le curseur de saisie de texte dans l'élément. Cette propriété est uniquement pertinente pour les éléments qui sont éditables (par exemple [`<input>`](/fr/docs/Web/HTML/Element/Input) et [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea) ou les éléments dont l'attribut [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#attr-contenteditable) est activé).
+  - : Cette propriété correspondra à la couleur utilisée pour dessiner le curseur de saisie de texte dans l'élément. Cette propriété est uniquement pertinente pour les éléments qui sont éditables (par exemple [`<input>`](/fr/docs/Web/HTML/Element/input) et [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) ou les éléments dont l'attribut [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#attr-contenteditable) est activé).
 
 ### Boîtes
 
@@ -84,7 +71,7 @@ CSS n'est pas la seule technologie web qui gère des couleurs. Voici les autres 
 - [L'API Canvas](/fr/docs/Web/API/Canvas_API)
   - : Cette API permet de dessiner des graphiques matriciels en deux dimensions à l'intérieur d'un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas). Vous pouvez lire [le tutoriel sur l'API Canvas](/fr/docs/Web/API/Canvas_API/Tutorial) pour en savoir plus.
 - [SVG](/fr/docs/Web/SVG) (_Scalable Vector Graphics_)
-  - : Ce format permet de dessiner des images en indiquant des commandes pour dessiner des formes, des motifs et des lignes afin de composer une image. Les commandes SVG sont construites dans un fichier XML et peuvent être embarquées dans une page web grâce à un élément [`<img>`](/fr/docs/Web/HTML/Element/Img).
+  - : Ce format permet de dessiner des images en indiquant des commandes pour dessiner des formes, des motifs et des lignes afin de composer une image. Les commandes SVG sont construites dans un fichier XML et peuvent être embarquées dans une page web grâce à un élément [`<img>`](/fr/docs/Web/HTML/Element/img).
 - [WebGL](/fr/docs/Web/API/WebGL_API)
   - : L'API Web Graphics Library est une API basée sur OpenGL ES qui permet de dessiner en deux ou trois dimensions sur le Web. Voir [le tutoriel WebGL](/fr/docs/Web/API/WebGL_API/Tutorial) afin d'en savoir plus.
 
@@ -136,9 +123,9 @@ Par exemple, on pourra représenter un rouge pur à moitié opaque grâce à `rg
 
 ### La notation fonctionnelle HSL
 
-D'autres personnes préfèrent manipuler [la notation HSL ou aussi appelée « Teinte saturation luminosité »](https://fr.wikipedia.org/wiki/Teinte_saturation_luminosit%C3%A9) (NDT : HSL signifie _Hue Saturation Lightness_ en anglais). Sur le Web, les couleurs HSL sont représentées grâce à la notation fonctionnelle `hsl()` (qui fonctionne de façon analogue à la fonction `rgb()`).
+D'autres personnes préfèrent manipuler [la notation HSL ou aussi appelée « Teinte saturation luminosité »](https://fr.wikipedia.org/wiki/Teinte_saturation_luminosité) (NDT : HSL signifie _Hue Saturation Lightness_ en anglais). Sur le Web, les couleurs HSL sont représentées grâce à la notation fonctionnelle `hsl()` (qui fonctionne de façon analogue à la fonction `rgb()`).
 
-Le diagramme qui suit illustre un cylindre de couleur pour le modèle HSL : _Hue_ (la teinte) définit la couleur sur un axe radial qui parcourt les couleurs du spectre visible. La saturation est un pourcentage de la teinte entre un gris total et la couleur de la teinte vive. Enfin, la luminosité permet d'avoir des couleurs plus sombres (noir pour une luminosité nulle ou blanc pour une luminosité maximale). Cette image a été créée par [SharkD](http://commons.wikimedia.org/wiki/User:SharkD) sur [Wikipédia](https://www.wikipedia.org/) et est distribuée avec la licence [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0).
+Le diagramme qui suit illustre un cylindre de couleur pour le modèle HSL : _Hue_ (la teinte) définit la couleur sur un axe radial qui parcourt les couleurs du spectre visible. La saturation est un pourcentage de la teinte entre un gris total et la couleur de la teinte vive. Enfin, la luminosité permet d'avoir des couleurs plus sombres (noir pour une luminosité nulle ou blanc pour une luminosité maximale). Cette image a été créée par [SharkD](http://commons.wikimedia.org/wiki/User:SharkD) sur [Wikipédia](https://www.wikipedia.org/) et est distribuée avec la licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0).
 
 ![Cylindre de couleur HSL](640px-hsl_color_solid_cylinder.png)
 
@@ -161,14 +148,19 @@ Voici quelques exemples utilisant la notation HSL :
 ```css hidden
 table {
   border: 1px solid black;
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border-spacing: 0;
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
-  padding:4px 6px;
+  padding: 4px 6px;
   text-align: left;
 }
 
@@ -216,7 +208,8 @@ th {
 
 {{EmbedLiveSample("Exemples_avec_HSL", 300, 260)}}
 
-> **Note :** Il est possible d'omettre l'unité pour la valeur de la teinte (_hue_), l'unité par défaut utilisée sera alors les degrés (`deg`).
+> [!NOTE]
+> Il est possible d'omettre l'unité pour la valeur de la teinte (_hue_), l'unité par défaut utilisée sera alors les degrés (`deg`).
 
 ## Utiliser les couleurs
 
@@ -237,14 +230,10 @@ Voici le fragment de code HTML utilisé pour cet exemple :
 ```html
 <div class="conteneur">
   <div class="boite boiteGauche">
-    <p>
-      Voici la première boîte.
-    </p>
+    <p>Voici la première boîte.</p>
   </div>
   <div class="boite boiteDroite">
-    <p>
-      Voici la seconde boîte.
-    </p>
+    <p>Voici la seconde boîte.</p>
   </div>
 </div>
 ```
@@ -279,14 +268,17 @@ Les deux boîtes colorées possèdent un certain nombre de propriétés communes
   height: 100px;
   margin: 0;
   padding: 4px 6px;
-  font: 28px "Marker Felt", "Zapfino", cursive;
+  font:
+    28px "Marker Felt",
+    "Zapfino",
+    cursive;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 ```
 
-Pour résumer, les styles ciblés par `.boite` indiquent la taille de la boîte, la configuration de la police de caractères utilisée, centrent le contenu des boîtes grâce [aux boîtes flexibles CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout). Pour cela, on utilise le mode d'affichage `flex` avec [`display: flex`](/fr/docs/Web/CSS/display) et on paramètre les propriétés [`justify-content`](/fr/docs/Web/CSS/justify-content) et [`align-items`](/fr/docs/Web/CSS/align-items) avec la valeur `center`. Ensuite, on crée une classe pour chacune des deux boîtes dont chacune définit les propriétés qui diffèrent entre ces éléments.
+Pour résumer, les styles ciblés par `.boite` indiquent la taille de la boîte, la configuration de la police de caractères utilisée, centrent le contenu des boîtes grâce [aux boîtes flexibles CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout). Pour cela, on utilise le mode d'affichage `flex` avec [`display: flex`](/fr/docs/Web/CSS/display) et on paramètre les propriétés [`justify-content`](/fr/docs/Web/CSS/justify-content) et [`align-items`](/fr/docs/Web/CSS/align-items) avec la valeur `center`. Ensuite, on crée une classe pour chacune des deux boîtes dont chacune définit les propriétés qui diffèrent entre ces éléments.
 
 ```css
 .boiteGauche {
@@ -323,7 +315,7 @@ Enfin, la classe `.boiteDroite` décrit les propriétés de la boîte dessinée 
 
 ## Permettre à l'utilisateur de choisir une couleur
 
-Il existe différentes situations où l'on peut/doit permettre à l'utilisateur de sélectionner une couleur. Il peut s'agir d'une interface personnalisable, d'une application de dessin, d'une application d'édition où on peut choisir la couleur du texte, etc. Bien que, par le passé, il fût nécessaire d'implémenter son propre sélecteur de couleur, HTML fournit désormais aux navigateurs une façon homogène de le faire avec un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type) vaut `"color"`.
+Il existe différentes situations où l'on peut/doit permettre à l'utilisateur de sélectionner une couleur. Il peut s'agir d'une interface personnalisable, d'une application de dessin, d'une application d'édition où on peut choisir la couleur du texte, etc. Bien que, par le passé, il fût nécessaire d'implémenter son propre sélecteur de couleur, HTML fournit désormais aux navigateurs une façon homogène de le faire avec un élément [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type) vaut `"color"`.
 
 Lorsqu'on choisit une couleur via un élément `<input>`, la valeur stockée dans le document et envoyée via le formulaire est représentée avec une chaîne de caractères hexadécimale.
 
@@ -333,16 +325,17 @@ Prenons un exemple simple où l'utilisateur choisit une couleur qui est immédia
 
 {{EmbedLiveSample("Exemple_sélectionner_une_couleur", 525, 275)}}
 
-> **Note :** Sur macOS, pour indiquer qu'on a fini de choisir la couleur, il faut fermer la fenêtre du sélecteur de couleur.
+> [!NOTE]
+> Sur macOS, pour indiquer qu'on a fini de choisir la couleur, il faut fermer la fenêtre du sélecteur de couleur.
 
 #### HTML
 
-Voici le fragment HTML qui permet de créer une boîte qui contient un sélecteur de couleur avec un libellé associé (l'élément [`<label>`](/fr/docs/Web/HTML/Element/Label)) ainsi qu'un paragraphe ([`<p>`](/fr/docs/Web/HTML/Element/p)) vide dans lequel nous placerons plus tard du texte avec JavaScript.
+Voici le fragment HTML qui permet de créer une boîte qui contient un sélecteur de couleur avec un libellé associé (l'élément [`<label>`](/fr/docs/Web/HTML/Element/label)) ainsi qu'un paragraphe ([`<p>`](/fr/docs/Web/HTML/Element/p)) vide dans lequel nous placerons plus tard du texte avec JavaScript.
 
 ```html
 <div id="box">
   <label for="colorPicker">Couleur de la bordure :</label>
-  <input type="color" value="#8888ff" id="colorPicker">
+  <input type="color" value="#8888ff" id="colorPicker" />
   <p id="output"></p>
 </div>
 ```
@@ -357,13 +350,17 @@ La feuille CSS détermine la taille de la boîte et une mise en forme simple. La
   height: 200px;
   border: 2px solid rgb(245, 220, 225);
   padding: 4px 6px;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", "sans-serif"
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    "sans-serif";
 }
 ```
 
 #### JavaScript
 
-Le script est utilisé pour mettre à jour la couleur de la bordure afin que celle-ci corresponde à la valeur courante du sélecteur. On ajoute ensuite deux gestionnaires d'évènements pour « écouter » ce qui se passe avec l'élément [`<input type="color">`](/fr/docs/Web/HTML/Element/Input/color).
+Le script est utilisé pour mettre à jour la couleur de la bordure afin que celle-ci corresponde à la valeur courante du sélecteur. On ajoute ensuite deux gestionnaires d'évènements pour « écouter » ce qui se passe avec l'élément [`<input type="color">`](/fr/docs/Web/HTML/Element/input/color).
 
 ```js
 let colorPicker = document.getElementById("colorPicker");
@@ -372,16 +369,24 @@ let output = document.getElementById("output");
 
 box.style.borderColor = colorPicker.value;
 
-colorPicker.addEventListener("input", function(event) {
-  box.style.borderColor = event.target.value;
-}, false);
+colorPicker.addEventListener(
+  "input",
+  function (event) {
+    box.style.borderColor = event.target.value;
+  },
+  false,
+);
 
-colorPicker.addEventListener("change", function(event) {
-  output.innerText = "Couleur choisie : " + colorPicker.value;
-}, false);
+colorPicker.addEventListener(
+  "change",
+  function (event) {
+    output.innerText = "Couleur choisie : " + colorPicker.value;
+  },
+  false,
+);
 ```
 
-L'évènement [`input`](/fr/docs/Web/API/HTMLElement/input_event) est envoyé chaque fois que la valeur de l'élément change, c'est-à-dire chaque fois que l'utilisateur ajuste la couleur via le sélecteur. Pour chacun de ces évènements, on modifie la couleur de la bordure afin qu'elle corresponde à celle du sélecteur.
+L'évènement [`input`](/fr/docs/Web/API/Element/input_event) est envoyé chaque fois que la valeur de l'élément change, c'est-à-dire chaque fois que l'utilisateur ajuste la couleur via le sélecteur. Pour chacun de ces évènements, on modifie la couleur de la bordure afin qu'elle corresponde à celle du sélecteur.
 
 L'évènement [`change`](/fr/docs/Web/API/HTMLElement/change_event) est reçu lors de la finalisation du choix de la couleur via le sélecteur. Lorsque cet évènement suvient, on modifie le contenu de l'élément `<p>` (le paragraphe) qui possède l'identifiant `"output"` en y ajoutant une chaîne de caractères qui décrit la couleur choisie.
 
@@ -400,9 +405,10 @@ La première étape consiste à choisir la couleur de base. C'est la couleur pri
 - Une couleur naturellement associée au contenu : la couleur d'un produit ou une couleur rattachée à un concept ou une émotion dont il serait question sur le site.
 - Naviguer parmi les sites existants et les bibliothèques d'image pour puiser de l'inspiration parmi les couleurs.
 
-Une fois la couleur de base sélectionnée, vous pouvez utiliser certaines extensions de navigateur pour « prélever » des couleurs existantes sur le web. Le site web [ColorZilla](http://www.colorzilla.com/), par exemple, propose une extension ([Chrome](http://www.colorzilla.com/chrome) / [Firefox](http://www.colorzilla.com/firefox)) qui permet d'utiliser une pipette pour identifier les couleurs utilisées à un endroit d'une page web. Cette extension permet également de mesurer la couleur moyenne des pixels d'une zone donnée.
+Une fois la couleur de base sélectionnée, vous pouvez utiliser certaines extensions de navigateur pour « prélever » des couleurs existantes sur le web. Le site web [ColorZilla](https://www.colorzilla.com/), par exemple, propose une extension ([Chrome](https://www.colorzilla.com/chrome) / [Firefox](https://www.colorzilla.com/firefox)) qui permet d'utiliser une pipette pour identifier les couleurs utilisées à un endroit d'une page web. Cette extension permet également de mesurer la couleur moyenne des pixels d'une zone donnée.
 
-> **Note :** On peut s'apercevoir qu'un site contient plusieurs couleurs très proches les unes des autres, utiliser une « moyenne » permet alors de récupérer le ton principal sous la forme d'une seule couleur.
+> [!NOTE]
+> On peut s'apercevoir qu'un site contient plusieurs couleurs très proches les unes des autres, utiliser une « moyenne » permet alors de récupérer le ton principal sous la forme d'une seule couleur.
 
 #### Agrémenter la palette
 
@@ -416,7 +422,8 @@ Voici quelques exemples (libres d'accès et gratuits au moment où nous écrivon
 
 Lorsque vous concevez votre palette de couleurs, gardez à l'esprit qu'en plus des couleurs générées par ces outils, il faudra vraisemblablement prévoir des couleurs neutres (telles que le blanc ou un ton de blanc, du noir ou un ton de noir et certaines nuances de gris).
 
-> **Note :** On utilise généralement le moins de couleurs possibles afin de garder une cohérence. En utilisant des couleurs afin d'accentuer certains éléments plutôt que d'en utiliser pour tous les éléments de la page, on rend le contenu plus facile à lire et à parcourir. De plus, les couleurs ont ainsi plus d'impact
+> [!NOTE]
+> On utilise généralement le moins de couleurs possibles afin de garder une cohérence. En utilisant des couleurs afin d'accentuer certains éléments plutôt que d'en utiliser pour tous les éléments de la page, on rend le contenu plus facile à lire et à parcourir. De plus, les couleurs ont ainsi plus d'impact
 
 ### Quelques ressources sur la théorie des couleurs
 
@@ -433,7 +440,8 @@ Une couleur peut poser différents problèmes d'accessibilité. Une couleur mal 
 
 Pour commencer, n'hésitez pas à vous renseigner sur le daltonisme et les différents types de daltonisme : confusion rouge/vert, confusion sur l'ensemble des couleurs.
 
-> **Note :** Une règle d'or consiste à ne jamais utiliser une couleur comme seule façon d'indiquer une information. Si, par exemple, vous souhaitez indiquer une réussite ou un échec en changeant uniquement la couleur d'un symbole (un drapeau par exemple), les utilisateurs souffrant de daltonismes et avec une confusion rouge/vert ne pourront pas lire cette information. Il est sans doute préférable d'utiliser du texte et de la couleur afin que tout le monde puisse être en mesure de comprendre ce qui a changé.
+> [!NOTE]
+> Une règle d'or consiste à ne jamais utiliser une couleur comme seule façon d'indiquer une information. Si, par exemple, vous souhaitez indiquer une réussite ou un échec en changeant uniquement la couleur d'un symbole (un drapeau par exemple), les utilisateurs souffrant de daltonismes et avec une confusion rouge/vert ne pourront pas lire cette information. Il est sans doute préférable d'utiliser du texte et de la couleur afin que tout le monde puisse être en mesure de comprendre ce qui a changé.
 
 Pour plus d'informations sur le daltonisme, vous pouvez consulter les articles suivants (en anglais, n'hésitez pas à éditer la page pour ajouter des ressources francophones) :
 
@@ -475,16 +483,17 @@ Avec ces couleurs, il faudra probablement sélectionner quelques couleurs neutre
 
 Le rendu d'un document peut être différent selon que ce dernier est affiché sur un écran ou sur du papier. De plus, sur papier, on peut chercher à économiser l'encre superflu. Lorsqu'un utilisateur imprime une page, il n'est par exemple peut-être pas nécessaire d'imprimer les arrière-plans. Par défaut, la plupart des navigateurs retirent les images d'arrière-plan à l'impression.
 
-Si les couleurs d'arrière-plan ou les images sont importantes pour l'ensemble du document, on peut utiliser la propriété [`color-adjust`](/fr/docs/Web/CSS/color-adjust) afin d'indiquer au navigateur qu'il ne faut pas modifier l'apparence du contenu.
+Si les couleurs d'arrière-plan ou les images sont importantes pour l'ensemble du document, on peut utiliser la propriété [`color-adjust`](/fr/docs/Web/CSS/print-color-adjust) afin d'indiquer au navigateur qu'il ne faut pas modifier l'apparence du contenu.
 
 Par défaut, la propriété `color-adjust` vaut `economy` et indique au navigateur qu'il peut modifier l'apparence afin d'optimiser la lisibilité du contenu et d'économiser de l'encre selon le support d'imprimerie.
 
 `color-adjust` peut être paramétré avec la valeur `exact` afin d'indiquer au navigateur qu'un ou plusieurs éléments doivent être conservés tels quels afin que l'ensemble du document ne soit pas détérioré.
 
-> **Note :** Il n'est pas garanti que le navigateur respecte exactement la feuille de style utilisée avec `color-adjust: exact`. En effet, si le navigateur fournit une option à l'utilisateur pour ne pas imprimer les arrière-plans, ce réglage prendra le pas sur la feuille de style.
+> [!NOTE]
+> Il n'est pas garanti que le navigateur respecte exactement la feuille de style utilisée avec `color-adjust: exact`. En effet, si le navigateur fournit une option à l'utilisateur pour ne pas imprimer les arrière-plans, ce réglage prendra le pas sur la feuille de style.
 
 ## Voir aussi
 
 - [Dessiner des graphiques](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Le graphisme sur le Web](/fr/docs/Web/Guide/Graphics)
+- [Le graphisme sur le Web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 - [Un outil de sélection de couleur sur MDN](/fr/docs/Web/CSS/CSS_Colors/Color_picker_tool)

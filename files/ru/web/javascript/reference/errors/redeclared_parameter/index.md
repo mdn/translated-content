@@ -1,11 +1,6 @@
 ---
 title: 'SyntaxError: redeclaration of formal parameter "x"'
 slug: Web/JavaScript/Reference/Errors/Redeclared_parameter
-tags:
-  - JavaScript
-  - SyntaxError
-  - Ошибки
-translation_of: Web/JavaScript/Reference/Errors/Redeclared_parameter
 ---
 
 {{jsSidebar("Errors")}}
@@ -31,7 +26,7 @@ SyntaxError: Identifier "x" has already been declared (Chrome)
 
 ```js example-bad
 function f(arg) {
-  let arg = 'foo';
+  let arg = "foo";
 }
 
 // SyntaxError: redeclaration of formal parameter "arg"
@@ -41,21 +36,21 @@ function f(arg) {
 
 ```js example-good
 function f(arg) {
-  arg = 'foo';
+  arg = "foo";
 }
 
 function f(arg) {
-  let bar = 'foo';
+  let bar = "foo";
 }
 ```
 
 ## Примечания о совместимости
 
-- В версиях Firefox до Firefox 49 {{geckoRelease(49)}}, у данной ошибки был тип {{jsxref("TypeError")}} ({{bug(1275240)}}).
+- В версиях Firefox до Firefox 49, у данной ошибки был тип {{jsxref("TypeError")}} ([Firefox bug 1275240](https://bugzil.la/1275240)).
 
 ## Смотрите также
 
 - [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let)
 - [`const`](/ru/docs/Web/JavaScript/Reference/Statements/const)
 - [`var`](/ru/docs/Web/JavaScript/Reference/Statements/var)
-- [Объявления переменных](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#Объявления) в [Руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide)
+- [Объявления переменных](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#объявления) в [Руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide)

@@ -9,7 +9,20 @@ l10n:
 
 **`Intl.Segmenter`** オブジェクトは、ロケールに応じたテキストのセグメンテーションを可能にし、文字列から意味のある項目（書記素、単語、文）を取得することができます。
 
-{{EmbedInteractiveExample("pages/js/intl-segmenter.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Segmenter")}}
+
+```js interactive-example
+const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
+const string1 = "Que ma joie demeure";
+
+const iterator1 = segmenterFr.segment(string1)[Symbol.iterator]();
+
+console.log(iterator1.next().value.segment);
+// Expected output: 'Que'
+
+console.log(iterator1.next().value.segment);
+// Expected output: ' '
+```
 
 ## コンストラクター
 
@@ -26,7 +39,7 @@ l10n:
 - [`Intl.Segmenter.prototype.resolvedOptions()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions)
   - : この `Intl.Segmenter` オブジェクトの初期化時に計算されたロケールおよび粒度のオプションを反映したプロパティを持つ新しいオブジェクトを返します。
 - [`Intl.Segmenter.prototype.segment()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment)
-  - : この `Intl.Segmenter` のインスタンスのロケールおよび粒度に従って文字列のセグメントを表す、新しい反復可能な [`Segments`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) のインスタンスを返します。
+  - : この `Intl.Segmenter` のインスタンスのロケールおよび粒度に従って文字列のセグメントを表す、新しい反復可能な [`Segments`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) のインスタンスを返します。
 
 ## 例
 
@@ -38,12 +51,12 @@ l10n:
 const str = "吾輩は猫である。名前はたぬき。";
 console.table(str.split(" "));
 // ['吾輩は猫である。名前はたぬき。']
-// The two sentences are not correctly segmented.
+// この 2 文をきちんと分割できていません。
 ```
 
 ```js example-good
 const str = "吾輩は猫である。名前はたぬき。";
-const segmenterJa = new Intl.Segmenter('ja-JP', { granularity: 'word' });
+const segmenterJa = new Intl.Segmenter("ja-JP", { granularity: "word" });
 
 const segments = segmenterJa.segment(str);
 console.table(Array.from(segments));

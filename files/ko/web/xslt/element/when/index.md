@@ -1,12 +1,9 @@
 ---
 title: when
 slug: Web/XSLT/Element/when
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/when
-original_slug: Web/XSLT/when
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:when>` 요소는 항상 case 문처럼 동작하는 `<xsl:choose>` 요소 안에 나타납니다.
 
@@ -33,7 +30,7 @@ original_slug: Web/XSLT/when
 
 ### 정의
 
-[XSLT section 9.2, Conditional Processing with xsl:choose](http://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:choose)
+[XSLT section 9.2, Conditional Processing with xsl:choose](https://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:choose)
 
 ### Gecko 지원
 

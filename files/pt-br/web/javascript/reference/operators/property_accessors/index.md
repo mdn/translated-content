@@ -1,13 +1,30 @@
 ---
 title: Assessores de propriedade
-slug: Web/JavaScript/Reference/Operators/Property_Accessors
+slug: Web/JavaScript/Reference/Operators/Property_accessors
 ---
 
 {{jsSidebar("Operators")}}
 
 Os assessores de propriedade fornecem acesso as propriedades de um objeto usando a notação de ponto ou a notação de colchetes.
 
-{{EmbedInteractiveExample("pages/js/expressions-propertyaccessors.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Property accessors")}}
+
+```js interactive-example
+const person1 = {};
+person1["firstname"] = "Mario";
+person1["lastname"] = "Rossi";
+
+console.log(person1.firstname);
+// Expected output: "Mario"
+
+const person2 = {
+  firstname: "John",
+  lastname: "Doe",
+};
+
+console.log(person2["lastname"]);
+// Expected output: "Doe"
+```
 
 ## Sintaxe
 
@@ -32,7 +49,7 @@ object.property = set;
 Neste código, a propriedade deve ser um identificador válido, i.e. uma sequência de carácteres alfanuméricos, incluíndo também o underline ("`_`") e o cifrão ("`$`"), não pode começar com um número. Por exemplo, `object.$1` é valido, enquanto `object.1` não é.
 
 ```js
-document.createElement('pre');
+document.createElement("pre");
 ```
 
 Aqui, o método chamado "createElement" é recuperado do documento e é chamado.
@@ -40,16 +57,15 @@ Aqui, o método chamado "createElement" é recuperado do documento e é chamado.
 Se você usar um método para um literal numérico e o literal numérico não tem expoente e nenhum ponto decimal, deixar de espaço em branco antes do ponto que precede a chamada de método para evitar que o ponto seja interpretado como um ponto decimal.
 
 ```js
-77 .toExponential();
-// ou
-77
-.toExponential();
+(77).toExponential();
 // ou
 (77).toExponential();
 // ou
-77..toExponential();
+(77).toExponential();
 // ou
-77.0.toExponential();
+(77).toExponential();
+// ou
+(77.0).toExponential();
 // porque 77. === 77.0, sem ambiguidade :p
 ```
 
@@ -63,7 +79,7 @@ object[property_name] = set;
 `property_name` é uma string. A string não precisa ser um identificador válido; pode ser qualquer valor, e.g. "1foo", "!bar!", ou até " " (um espaço).
 
 ```js
-document['createElement']('pre');
+document["createElement"]("pre");
 ```
 
 Isto faz exatamente a mesma coisa que o exemplo anterior.
@@ -71,7 +87,7 @@ Isto faz exatamente a mesma coisa que o exemplo anterior.
 Um espaço antes da notação de colchete é permitido.
 
 ```js
-document ['createElement']('pre');
+document["createElement"]("pre");
 ```
 
 ### Nomes de propriedades
@@ -80,15 +96,17 @@ Nomes de propriedades devem ser strings. Isto significa que objetos não-string 
 
 ```js
 var object = {};
-object['1'] = 'value';
+object["1"] = "value";
 console.log(object[1]);
 ```
 
 A saída é "value", desde 1 é estereotipado como '1'.
 
 ```js
-var foo = {unique_prop: 1}, bar = {unique_prop: 2}, object = {};
-object[foo] = 'value';
+var foo = { unique_prop: 1 },
+  bar = { unique_prop: 2 },
+  object = {};
+object[foo] = "value";
 console.log(object[bar]);
 ```
 
@@ -96,14 +114,14 @@ A saída também é "value", já que ambos foo e bar são convertidos para a mes
 
 ### Ligação de método
 
-Um método não é limitado ao objeto de quem é metodo. Especificamente, `this` não é fixo em um método, i.e., `this` não se referece necessariamente ao objeto contendo o método. Ao invés disso, `this` é "passado" pela função call. Veja [method binding](/pt-BR/docs/Web/JavaScript/Reference/Operators/this#Method_binding).
+Um método não é limitado ao objeto de quem é metodo. Especificamente, `this` não é fixo em um método, i.e., `this` não se referece necessariamente ao objeto contendo o método. Ao invés disso, `this` é "passado" pela função call. Veja [method binding](/pt-BR/docs/Web/JavaScript/Reference/Operators/this#method_binding).
 
 ### Nota sobre `eval`
 
 Novatos em JavaScript comentem muitas vezes o erro de usar [eval](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/eval) onde a notação de colchete pode ser usada no lugar. Por exemplo, a sintaxe a seguir é muitas vezes vista em muitos scripts.
 
 ```js
-x = eval('document.forms.form_name.elements.' + strFormControl + '.value');
+x = eval("document.forms.form_name.elements." + strFormControl + ".value");
 ```
 
 `eval` é lento e deve ser evitado sempre que possível. Também, `strFormControl` would have to hold an identifier, which is not required for names and IDs of form controls. It is better to use bracket notation instead:
@@ -114,16 +132,11 @@ x = document.forms["form_name"].elements[strFormControl].value;
 
 ## Especificações
 
-| Specification                                                                                    | Status                       | Comment                                            |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-property-accessors', 'Property Accessors')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-property-accessors', 'Property Accessors')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ES5.1', '#sec-11.2.1', 'Property Accessors')}}                     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES1', '#sec-11.2.1', 'Property Accessors')}}                     | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.property_accessors")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,11 +1,6 @@
 ---
 title: contenteditable
 slug: Web/HTML/Global_attributes/contenteditable
-tags:
-  - HTML
-  - Глобальные атрибуты
-  - Определение
-translation_of: Web/HTML/Global_attributes/contenteditable
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -27,12 +22,12 @@ translation_of: Web/HTML/Global_attributes/contenteditable
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Создание контента для редактирования](/ru/docs/Web/Guide/HTML/Editable_content)
-- Все [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты)
+- [Создание контента для редактирования](/ru/docs/Web/HTML/Global_attributes/contenteditable)
+- Все [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes)
 - {{domxref("HTMLElement.contentEditable")}} и {{domxref("HTMLElement.isContentEditable")}}

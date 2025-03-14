@@ -18,7 +18,7 @@ TypeError: Cannot redefine property: "x" (Chrome)
 
 ## 何がうまくいかなかったのか？
 
-プロパティを再定義しようとしましたが、そのプロパティは[設定不可](/ja/docs/Web/JavaScript/Data_structures#Properties)です。`configurable` 属性は、プロパティをオブジェクトから削除できるかどうか、および (`writable` 以外で) 変更できるかどうかを制御します。通常、[オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)で生成されたオブジェクトのプロパティは、変更可能です。しかし、{{jsxref("Object.defineProperty()")}} を使用した場合などは、既定でプロパティを修正できません。
+プロパティを再定義しようとしましたが、そのプロパティは[設定不可](/ja/docs/Web/JavaScript/Data_structures#プロパティ)です。`configurable` 属性は、プロパティをオブジェクトから削除できるかどうか、および (`writable` 以外で) 変更できるかどうかを制御します。通常、[オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)で生成されたオブジェクトのプロパティは、変更可能です。しかし、{{jsxref("Object.defineProperty()")}} を使用した場合などは、既定でプロパティを修正できません。
 
 ## 例
 
@@ -28,9 +28,9 @@ TypeError: Cannot redefine property: "x" (Chrome)
 
 ```js example-bad
 var obj = Object.create({});
-Object.defineProperty(obj, "foo", {value: "bar"});
+Object.defineProperty(obj, "foo", { value: "bar" });
 
-Object.defineProperty(obj, "foo", {value: "baz"});
+Object.defineProperty(obj, "foo", { value: "baz" });
 // TypeError: can't redefine non-configurable property "foo"
 ```
 
@@ -38,11 +38,11 @@ Object.defineProperty(obj, "foo", {value: "baz"});
 
 ```js example-good
 var obj = Object.create({});
-Object.defineProperty(obj, "foo", {value: "bar", configurable: true});
-Object.defineProperty(obj, "foo", {value: "baz", configurable: true});
+Object.defineProperty(obj, "foo", { value: "bar", configurable: true });
+Object.defineProperty(obj, "foo", { value: "baz", configurable: true });
 ```
 
 ## 関連項目
 
-- [\[\[Configurable\]\]](/ja/docs/Web/JavaScript/Data_structures#Properties)
+- [\[\[Configurable\]\]](/ja/docs/Web/JavaScript/Data_structures#プロパティ)
 - {{jsxref("Object.defineProperty()")}}

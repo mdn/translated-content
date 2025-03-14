@@ -1,16 +1,6 @@
 ---
 title: Microdonnées
 slug: Web/HTML/Microdata
-tags:
-  - Composing
-  - Example
-  - HTML
-  - Microdata
-  - Reference
-  - SEO
-  - Search
-translation_of: Web/HTML/Microdata
-original_slug: Web/HTML/Microdonnées
 ---
 
 Les microdonnées (_microdata_) sont une partie de la spécification HTML du [WHATWG](/fr/docs/Glossary/WHATWG) qui est utilisée afin de fournir des métadonnées sur le contenu des pages web. Les moteurs de recherche, les robots (_crawlers_) d'analyse peuvent traiter les microdonnées d'une page web pour améliorer l'expérience de navigation. Les moteurs de recherches peuvent tirer parti des informations pour obtenir une meilleure pertinence. Les microdonnées sont structurées grâce à un vocabulaire permettant de décrire des objets qui sont des groupes de paires de noms/valeurs. Le but des microdonnées est de faciliter l'annotation des éléments HTML et d'être plus simple à utiliser que RDFa ou les microformats.
@@ -24,26 +14,27 @@ Les microdonnées sont des groupes de paires nom-valeur. Ces groupes sont appel�
 
 Google et les autres moteurs de recherches participent au vocabulaire défini par [schema.org](https://schema.org/) pour structurer les données. Ce vocabulaire définit un ensemble standard de types et de noms de propriétés. Par exemple [`MusicEvent`](https://schema.org/MusicEvent) indique un événement musical dont les propriétés [`startDate`](https://schema.org/startDate) et [`location`](https://schema.org/location) utilisées pour définir les détails du concert. Dans ce cas, l'URL [`https://schema.org/MusicEvent`](https://schema.org/MusicEvent) sera l'URL utilisée pour l'attribut `itemtype` et les propriétés `startDate` et `location` seront les propriétés utilisées, définies par [`https://schema.org/MusicEvent`](https://schema.org/MusicEvent).
 
-> **Note :** Pour en savoir plus sur les attributs `itemtype`, consultez le site <http://schema.org/Thing>.
+> [!NOTE]
+> Pour en savoir plus sur les attributs `itemtype`, consultez le site <http://schema.org/Thing>.
 
-Les vocabulaires de microdonnées fournissent la sémantique ou la signification d'un élément. Les développeurs Web peuvent concevoir un vocabulaire personnalisé ou utiliser des vocabulaires disponibles sur le Web, tels que le vocabulaire largement utilisé [schema.org](http://schema.org). Une collection de vocabulaires de balisage couramment utilisés est fournie par Schema.org.
+Les vocabulaires de microdonnées fournissent la sémantique ou la signification d'un élément. Les développeurs Web peuvent concevoir un vocabulaire personnalisé ou utiliser des vocabulaires disponibles sur le Web, tels que le vocabulaire largement utilisé [schema.org](https://schema.org). Une collection de vocabulaires de balisage couramment utilisés est fournie par Schema.org.
 
 Vocabulaires couramment utilisés :
 
-- Œuvres créatives : [CreativeWork](http://schema.org/CreativeWork), [Book](http://schema.org/Book), [Movie](http://schema.org/Movie), [MusicRecording](http://schema.org/MusicRecording), [Recipe](http://schema.org/Recipe), [TVSeries](http://schema.org/TVSeries)
-- Objets non textuels incorporés : [AudioObject](http://schema.org/AudioObject), [ImageObject](http://schema.org/ImageObject), [VideoObject](http://schema.org/VideoObject)
-- [Event](http://schema.org/Event)
-- [Health and medical types](http://schema.org/docs/meddocs.html) : Notes sur les types de santé et médicaux sous [MedicalEntity](http://schema.org/MedicalEntity)
-- [Organization](http://schema.org/Organization)
-- [Person](http://schema.org/Person)
-- [Place](http://schema.org/Place), [LocalBusiness](http://schema.org/LocalBusiness), [Restaurant](http://schema.org/Restaurant)
-- [Product](http://schema.org/Product), [Offer](http://schema.org/Offer), [AggregateOffer](http://schema.org/AggregateOffer)
-- [Review](http://schema.org/Review), [AggregateRating](http://schema.org/AggregateRating)
-- [Action](http://schema.org/Action)
-- [Thing](http://schema.org/Thing)
-- [Intangible](http://schema.org/Intangible)
+- Œuvres créatives : [CreativeWork](https://schema.org/CreativeWork), [Book](https://schema.org/Book), [Movie](https://schema.org/Movie), [MusicRecording](https://schema.org/MusicRecording), [Recipe](https://schema.org/Recipe), [TVSeries](https://schema.org/TVSeries)
+- Objets non textuels incorporés : [AudioObject](https://schema.org/AudioObject), [ImageObject](https://schema.org/ImageObject), [VideoObject](https://schema.org/VideoObject)
+- [Event](https://schema.org/Event)
+- [Health and medical types](https://schema.org/docs/meddocs.html) : Notes sur les types de santé et médicaux sous [MedicalEntity](https://schema.org/MedicalEntity)
+- [Organization](https://schema.org/Organization)
+- [Person](https://schema.org/Person)
+- [Place](https://schema.org/Place), [LocalBusiness](https://schema.org/LocalBusiness), [Restaurant](https://schema.org/Restaurant)
+- [Product](https://schema.org/Product), [Offer](https://schema.org/Offer), [AggregateOffer](https://schema.org/AggregateOffer)
+- [Review](https://schema.org/Review), [AggregateRating](https://schema.org/AggregateRating)
+- [Action](https://schema.org/Action)
+- [Thing](https://schema.org/Thing)
+- [Intangible](https://schema.org/Intangible)
 
-Les principaux opérateurs de moteurs de recherche comme Google, Microsoft et Yahoo ! s'appuient sur le vocabulaire [schema.org](http://schema.org/) pour améliorer les résultats de recherche. Pour certains usages, un vocabulaire ad-hoc est adéquat. Pour d'autres, un vocabulaire devra être conçu. Dans la mesure du possible, les auteurs sont encouragés à réutiliser les vocabulaires existants, car cela facilite la réutilisation du contenu.
+Les principaux opérateurs de moteurs de recherche comme Google, Microsoft et Yahoo ! s'appuient sur le vocabulaire [schema.org](https://schema.org/) pour améliorer les résultats de recherche. Pour certains usages, un vocabulaire ad-hoc est adéquat. Pour d'autres, un vocabulaire devra être conçu. Dans la mesure du possible, les auteurs sont encouragés à réutiliser les vocabulaires existants, car cela facilite la réutilisation du contenu.
 
 ## Localisation
 
@@ -68,13 +59,17 @@ Dans certains cas, les moteurs de recherche couvrent un public régional. Certai
 
 ```html
 <div itemscope itemtype="https://schema.org/SoftwareApplication">
-  <span itemprop="name">Angry Birds</span> -
+  <span itemprop="name">Angry Birds</span> - NÉCESSITE
+  <span itemprop="operatingSystem">ANDROID</span><br />
+  <link
+    itemprop="applicationCategory"
+    href="https://schema.org/GameApplication" />
 
-  NÉCESSITE <span itemprop="operatingSystem">ANDROID</span><br>
-  <link itemprop="applicationCategory" href="https://schema.org/GameApplication"/>
-
-  <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-  ÉVALUATION :
+  <div
+    itemprop="aggregateRating"
+    itemscope
+    itemtype="https://schema.org/AggregateRating">
+    ÉVALUATION :
     <span itemprop="ratingValue">4.6</span> (
     <span itemprop="ratingCount">8864</span> notes )
   </div>
@@ -149,7 +144,8 @@ Dans certains cas, les moteurs de recherche couvrent un public régional. Certai
 
 {{EmbedLiveSample("HTML", "", "100")}}
 
-> **Note :** Un outil pratique pour extraire les structures de microdonnées du HTML est l'[outil de test des données structurées](https://developers.google.com/search/docs/guides/intro-structured-data) de Google. Essayez-le sur le HTML présenté ci-dessus.
+> [!NOTE]
+> Un outil pratique pour extraire les structures de microdonnées du HTML est l'[outil de test des données structurées](https://developers.google.com/search/docs/guides/intro-structured-data) de Google. Essayez-le sur le HTML présenté ci-dessus.
 
 ## Compatibilité des navigateurs
 
@@ -159,4 +155,4 @@ Fonctionnalité ajoutée dans Firefox 16 et retirée dans Firefox 49.
 
 - [Les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/HTML")}}
+{{QuickLinksWithSubpages("/fr/docs/Web/HTML")}}

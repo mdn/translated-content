@@ -1,6 +1,8 @@
 ---
-title: Attr.prefix
+title: "Attr: prefix プロパティ"
 slug: Web/API/Attr/prefix
+l10n:
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
 {{APIRef("DOM")}}
@@ -9,7 +11,8 @@ slug: Web/API/Attr/prefix
 
 接頭辞は、属性が作成されたときの大文字小文字に関わらず、常に小文字になります。
 
-> **メモ:** XML だけが名前空間に対応しています。 HTML は対応していません。つまり、 HTML 要素の属性の接頭辞は常に `null` になります。
+> [!NOTE]
+> XML だけが名前空間に対応しています。 HTML は対応していません。つまり、 HTML 要素の属性の接頭辞は常に `null` になります。
 
 また、`xml` （`xml:lang` 属性）、`xlink` （`xlink:href`, `xlink:show`, `xlink:target`, `xlink:title` 属性）、 `xpath` 名前空間だけに、 SVG と MathML 要素でのみ対応しています。
 
@@ -25,29 +28,31 @@ slug: Web/API/Attr/prefix
 <svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
 <label xml:lang="en-US" class="struct"></label>
 
-<button>Click me for &lt;svg&gt;…</button>
-<button>Click me for &lt;label&gt;…</button>
-<br><br>
-Prefix of the attribute <code>xml:lang</code>: <output id="result"><i>None.</i></output>
+<p>
+  <button>Show value for &lt;svg&gt;</button>
+  <button>Show value for &lt;label&gt;</button>
+</p>
+
+<p>
+  Prefix of the attribute <code>xml:lang</code>:
+  <output id="result">None.</output>
+</p>
 ```
 
 ### JavaScript コンテンツ
 
 ```js
-const elements = document.getElementsByClassName("struct");
-const buttons = document.getElementsByTagName("button");
-const result  = document.querySelector("#result");
+const elements = document.querySelectorAll(".struct");
+const buttons = document.querySelectorAll("button");
+const outputEl = document.querySelector("#result");
 
-function handleEvent(element) {
-  return function(e) {
-    attribute = element.attributes[0];
-    result.value = attribute.prefix;
-  }
-}
-
-let i=0;
-for (let button of buttons) {
-  button.addEventListener('click', handleEvent(elements[i]));
+let i = 0;
+for (const button of buttons) {
+  const element = elements[i];
+  button.addEventListener("click", () => {
+    const attribute = element.attributes[0];
+    outputEl.value = attribute.prefix;
+  });
   i++;
 }
 ```

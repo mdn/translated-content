@@ -1,80 +1,102 @@
 ---
-title: element.setCapture
+title: Element：setCapture() 方法
 slug: Web/API/Element/setCapture
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ ApiRef() }}
+{{Deprecated_Header}}{{non-standard_header}}{{ APIRef("DOM") }}
 
-### 概要
+在处理 mousedown 事件的期间调用此方法以将所有的鼠标事件的目标都设置为该元素，直到释放鼠标按钮或者调用 {{domxref("document.releaseCapture()")}}。
 
-在处理一个 mousedown 事件过程中调用这个方法来把全部的鼠标事件重新定向到这个元素，直到鼠标按钮被释放或者 {{ domxref("document.releaseCapture()") }} 被调用。
+> [!WARNING]
+> 这个接口从未得到过很好的跨浏览器支持，你也许应使用 {{domxref("element.setPointerCapture")}}（来自指针事件 API）代替。
 
-### 语法
+## 语法
 
-```plain
-element.setCapture(retargetToElement);
+```js-nolint
+setCapture(retargetToElement)
 ```
 
+### 参数
+
 - `retargetToElement`
-  - : 如果被设置为 `true`, 所有事件被直接定向到这个元素; 如果是 `false`, 事件也可以在这个元素的子元素上触发。
+  - : 如果为 `true`，所有事件的目标都会被设置为这个元素；如果为 `false`，则事件也可以在这个元素的子元素上触发。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ### 示例
 
-在这个例子中，当你在一个元素中点击并且按住鼠标，然后再使用鼠标拖动的时候，当前鼠标位置的坐标就会被绘制出来。
+在此示例中，当你在点中一个元素并且按住鼠标，然后再移动鼠标的时候，会显示鼠标的当前位置。
 
 ```html
-<html>
-<head>
-  <title>鼠标捕捉示例</title>
-  <style type="text/css">
-    #myButton {
-      border: solid black 1px;
-      color: black;
-      padding: 2px;
-      -moz-box-shadow:black 2px 2px;
-    }
-  </style>
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>鼠标捕获示例</title>
+    <style>
+      #myButton {
+        border: solid black 1px;
+        color: black;
+        padding: 2px;
+        box-shadow: black 2px 2px;
+      }
+    </style>
 
-  <script type="text/javascript">
-    function init() {
-      var btn = document.getElementById("myButton");
-      btn.addEventListener("mousedown", mouseDown, false);
-      btn.addEventListener("mouseup", mouseUp, false);
-    }
+    <script>
+      function init() {
+        const btn = document.getElementById("myButton");
+        if (btn.setCapture) {
+          btn.addEventListener("mousedown", mouseDown, false);
+          btn.addEventListener("mouseup", mouseUp, false);
+        } else {
+          document.getElementById("output").textContent =
+            "抱歉，当前浏览器似乎不支持 setCapture";
+        }
+      }
 
-    function mouseDown(e) {
-      e.target.setCapture();
-      e.target.addEventListener("mousemove", mouseMoved, false);
-    }
+      function mouseDown(e) {
+        e.target.setCapture();
+        e.target.addEventListener("mousemove", mouseMoved, false);
+      }
 
-    function mouseUp(e) {
-      e.target.removeEventListener("mousemove", mouseMoved, false);
-    }
+      function mouseUp(e) {
+        e.target.removeEventListener("mousemove", mouseMoved, false);
+      }
 
-    function mouseMoved(e) {
-      var output = document.getElementById("output");
-      output.innerHTML = "鼠标的当前位置：" + e.clientX + ", " + e.clientY;
-    }
-  </script>
-</head>
-<body onload="init()">
-  <p>这是一个关于如何在 Gecko 2.0 中针对元素使用鼠标捕捉的示例。</p>
-  <p><a id="myButton" href="javascript:buttonClicked()">点我并且按住鼠标滑动</a></p>
-  <div id="output">还没有任何事件哦！</div>
-</body>
+      function mouseMoved(e) {
+        const output = document.getElementById("output");
+        output.textContent = `位置：${e.clientX}, ${e.clientY}`;
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <p>这是一个关于如何在 Gecko 2.0 中针对元素使用鼠标捕捉的示例。</p>
+    <p><a id="myButton" href="#">在这里测试</a></p>
+    <div id="output">还没有任何事件</div>
+  </body>
 </html>
 ```
 
-[查看在线演示](/samples/domref/mousecapture.html)
+[查看在线演示](https://mdn.dev/archives/media/samples/domref/mousecapture.html)
 
-### 注意
+## 备注
 
-这个元素可能不会完全被滚动到顶部或者底部，这取决于其他元素的布局。
+这个元素可能无法被完全滚动到顶部或底部，这取决于其他元素的布局。
 
-### 规范
+## 规范
 
-无
+不属于任何规范。
+
+## 浏览器兼容性
+
+{{Compat}}
 
 ## 参见
 
-- {{ domxref("document.releaseCapture()") }}
+- {{domxref("document.releaseCapture()")}}
+- {{domxref("element.setPointerCapture")}}

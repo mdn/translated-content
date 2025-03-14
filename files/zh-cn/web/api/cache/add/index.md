@@ -10,22 +10,23 @@ slug: Web/API/Cache/add
 ```js
 fetch(url).then(function (response) {
   if (!response.ok) {
-    throw new TypeError('bad response status');
+    throw new TypeError("bad response status");
   }
   return cache.put(url, response);
-})
+});
 ```
 
-对于更复杂的操作，您可以直接使用{{domxref("Cache.put","Cache.put()")}}这个 API。
+对于更复杂的操作，你可以直接使用{{domxref("Cache.put","Cache.put()")}}这个 API。
 
 > **备注：** `add()` 将会覆盖之前存储在 cache 中与 request 匹配的任何 key/value 对。
 
-> **备注：** 之前的 Cache (Blink 和 Gecko 内核版本) 在实现{{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, 和 {{domxref("Cache.put")}} 的策略是在 response 结果完全写入缓存后才会 resolve 当前的 promise。更新后的规范版本中一旦条目被记录到数据库就会 resolve 当前的 promise，即使当前 response 结果还在传输中。
+> [!NOTE]
+> 之前的 Cache (Blink 和 Gecko 内核版本) 在实现{{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, 和 {{domxref("Cache.put")}} 的策略是在 response 结果完全写入缓存后才会 resolve 当前的 promise。更新后的规范版本中一旦条目被记录到数据库就会 resolve 当前的 promise，即使当前 response 结果还在传输中。
 
 ## 语法
 
 ```js
-cache.add(request).then(function() {
+cache.add(request).then(function () {
   //request has been added to the cache
 });
 ```
@@ -50,11 +51,11 @@ void 返回值的 {{jsxref("Promise")}}
 下面的代码块等待 {{domxref("InstallEvent")}} 事件触发，然后运行 {{domxref("ExtendableEvent.waitUntil","waitUntil")}} 来处理该应用程序的安装过程。包括调用 {{domxref("CacheStorage.open")}} 来创建一个新的缓存，然后使用 {{domxref("Cache.add")}} 来添加一个请求资源到该缓存。
 
 ```js
-this.addEventListener('install', function(event) {
+this.addEventListener("install", function (event) {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
-      return cache.add('/sw-test/index.html');
-    })
+    caches.open("v1").then(function (cache) {
+      return cache.add("/sw-test/index.html");
+    }),
   );
 });
 ```
@@ -69,6 +70,6 @@ this.addEventListener('install', function(event) {
 
 ## 参见
 
-- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("WorkerGlobalScope.caches")}}
+- {{domxref("Window.caches")}} 和 {{domxref("WorkerGlobalScope.caches")}}

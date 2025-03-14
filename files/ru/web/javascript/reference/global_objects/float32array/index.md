@@ -1,12 +1,11 @@
 ---
 title: Float32Array
 slug: Web/JavaScript/Reference/Global_Objects/Float32Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Float32Array
 ---
 
 {{JSRef}}
 
-Объект **`Float32Array`** представляет типизированный массив 32-битных чисел с плавающей запятой (соответствует типу float в языке C) с платформо-зависимым порядком байт. Если необходим контроль за порядком байт, то вместо этого объекта используйте [`DataView`]](/ru/docs/Web/JavaScript/Reference/DataView) Содержимое инициализируется значением `0`. Создав экземпляр **`Float32Array`**, можно получить доступ к элементам массива, используя методы объекта или стандартный синтаксис доступа к элементу массива по его индексу (с помощью скобочной нотации - квадратные скобки).
+Объект **`Float32Array`** представляет типизированный массив 32-битных чисел с плавающей запятой (соответствует типу float в языке C) с платформо-зависимым порядком байт. Если необходим контроль за порядком байт, то вместо этого объекта используйте [`DataView`]](/ru/docs/Web/JavaScript/Reference/Global_Objects/DataView) Содержимое инициализируется значением `0`. Создав экземпляр **`Float32Array`**, можно получить доступ к элементам массива, используя методы объекта или стандартный синтаксис доступа к элементу массива по его индексу (с помощью скобочной нотации - квадратные скобки).
 
 ## Синтаксис
 
@@ -18,7 +17,7 @@ new Float32Array(object);
 new Float32Array(buffer [, byteOffset [, length]]);
 ```
 
-Для более подробной информации о синтаксисе конструктора и его параметрах смотрите _[TypedArray](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+Для более подробной информации о синтаксисе конструктора и его параметрах смотрите _[TypedArray](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntax)_.
 
 ## Свойства
 
@@ -85,8 +84,6 @@ new Float32Array(buffer [, byteOffset [, length]]);
   - : Возвращает последний найденный индекс соответствующий искомому значению, в противном случае возвращает - 1. Смотрите также {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Float32Array.prototype.map()")}}
   - : Возвращает новый массив с результатом применения функции к каждому элементу в этом массиве. Смотрите также {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Float32Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
-  - : Нестандартизированная версия {{jsxref("TypedArray.copyWithin", "Float32Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.reduce", "Float32Array.prototype.reduce()")}}
   - : Применяет функцию к каждому элементу в массиве (слева-направо) и накапливает результат в переменной. Смотрите также {{jsxref("Array.prototype.reduce()")}}.
 - {{jsxref("TypedArray.reduceRight", "Float32Array.prototype.reduceRight()")}}
@@ -125,7 +122,7 @@ console.log(float32.length); // 2
 console.log(float32.BYTES_PER_ELEMENT); // 4
 
 // Из массива
-var arr = new Float32Array([21,31]);
+var arr = new Float32Array([21, 31]);
 console.log(arr[1]); // 31
 
 // Из другого TypedArray
@@ -138,16 +135,18 @@ var buffer = new ArrayBuffer(16);
 var z = new Float32Array(buffer, 0, 4);
 
 // Из итератора
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var float32 = new Float32Array(iterable);
 // Float32Array[1, 2, 3]
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -167,6 +166,6 @@ var dv = new Float32Array([1, 2, 3]);
 
 ## Смотрите также
 
-- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

@@ -1,26 +1,32 @@
 ---
 title: Object.getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertySymbols
 ---
 
 {{JSRef}}
 
 La méthode **`Object.getOwnPropertySymbols()`** renvoie un tableau contenant tous les symboles des propriétés trouvées directement sur un objet donné.
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertysymbols.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getOwnPropertySymbols()")}}
+
+```js interactive-example
+const object1 = {};
+const a = Symbol("a");
+const b = Symbol.for("b");
+
+object1[a] = "localSymbol";
+object1[b] = "globalSymbol";
+
+const objectSymbols = Object.getOwnPropertySymbols(object1);
+
+console.log(objectSymbols.length);
+// Expected output: 2
+```
 
 ## Syntaxe
 
 ```js
-Object.getOwnPropertySymbols(obj)
+Object.getOwnPropertySymbols(obj);
 ```
 
 ### Paramètres
@@ -51,8 +57,8 @@ obj[b] = "symboleGlobal";
 var objectSymboles = Object.getOwnPropertySymbols(obj);
 
 console.log(objectSymboles.length); // 2
-console.log(objectSymboles)         // [Symbol(a), Symbol(b)]
-console.log(objectSymboles[0])      // Symbol(a)
+console.log(objectSymboles); // [Symbol(a), Symbol(b)]
+console.log(objectSymboles[0]); // Symbol(a)
 ```
 
 ## Spécifications

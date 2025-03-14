@@ -1,22 +1,28 @@
 ---
 title: Array.prototype.reduceRight()
-slug: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/reduceRight
+slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 ---
 
 {{JSRef}}
 
 La méthode **`reduceRight()`** applique une fonction sur un accumulateur et chaque valeur d'un tableau (de la droite vers la gauche) de sorte à réduire le tableau en une seule valeur.
 
-{{EmbedInteractiveExample("pages/js/array-reduce-right.html")}}
+{{InteractiveExample("JavaScript Demo: Array.reduceRight()")}}
+
+```js interactive-example
+const array1 = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+];
+
+const result = array1.reduceRight((accumulator, currentValue) =>
+  accumulator.concat(currentValue),
+);
+
+console.log(result);
+// Expected output: Array [4, 5, 2, 3, 0, 1]
+```
 
 Voir également {{jsxref("Array.prototype.reduce()")}} pour une méthode qui réduit de gauche à droite.
 
@@ -55,8 +61,8 @@ La valeur obtenue grâce à la fonction de réduction.
 L'usage de `reduceRight` avec définition d'un `callback` devrait ressembler à ceci :
 
 ```js
-array.reduceRight(function(accumulator, valeurCourante, index, array) {
-    // ...
+array.reduceRight(function (accumulator, valeurCourante, index, array) {
+  // ...
 });
 ```
 
@@ -65,9 +71,11 @@ La première fois que la fonction de callback est appelée, `accumulator` et `va
 Si on utilise la méthode `reduceRight` de la façon suivante :
 
 ```js
-[0, 1, 2, 3, 4].reduceRight(function(accumulator, valeurCourante, index, array) {
+[0, 1, 2, 3, 4].reduceRight(
+  function (accumulator, valeurCourante, index, array) {
     return accumulator + valeurCourante;
-});
+  },
+);
 ```
 
 La fonction `callback` sera appelée quatre fois, avec les arguments et les valeurs de retour de chaque appel suivant :
@@ -124,8 +132,13 @@ La valeur retournée par `reduceRight` sera alors celle du dernier appel de la f
 Si vous fournissez une valeur initiale comme second argument à l'appel de `reduceRight`, le résultat sera alors le suivant :
 
 ```js
-[0, 1, 2, 3, 4].reduceRight(function(accumulator, valeurCourante, index, array) {
-    return accumulator + valeurCourante;
+[0, 1, 2, 3, 4].reduceRight(function (
+  accumulator,
+  valeurCourante,
+  index,
+  array,
+) {
+  return accumulator + valeurCourante;
 }, 10);
 ```
 
@@ -191,8 +204,8 @@ La valeur renvoyée par `reduceRight` sera ici `20`.
 ### Additionner toutes les valeurs d'une liste
 
 ```js
-var total = [0, 1, 2, 3].reduceRight(function(a, b) {
-    return a + b;
+var total = [0, 1, 2, 3].reduceRight(function (a, b) {
+  return a + b;
 });
 // total == 6
 ```
@@ -200,8 +213,12 @@ var total = [0, 1, 2, 3].reduceRight(function(a, b) {
 ### Aplatir une liste de listes
 
 ```js
-var aplati = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
-    return a.concat(b);
+var aplati = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+].reduceRight(function (a, b) {
+  return a.concat(b);
 }, []);
 // aplati [4, 5, 2, 3, 0, 1]
 ```
@@ -209,12 +226,12 @@ var aplati = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
 ### Différence entre `reduce` et `reduceRight`
 
 ```js
-var a = ['1', '2', '3', '4','5']
-var gauche = a.reduce(function(prev, cur) {
+var a = ["1", "2", "3", "4", "5"];
+var gauche = a.reduce(function (prev, cur) {
   return prev + cur;
 });
 
-var droite = a.reduceRight(function(prev, cur) {
+var droite = a.reduceRight(function (prev, cur) {
   return prev + cur;
 });
 
@@ -234,19 +251,22 @@ La composition de fonctions consiste en l'enchaînement de n fonctions l'une apr
  * https://fr.wikipedia.org/wiki/Composition_de_fonctions
  */
 
-const compose = (...args) => (value) => args.reduceRight((acc, fn) => fn(acc), value)
+const compose =
+  (...args) =>
+  (value) =>
+    args.reduceRight((acc, fn) => fn(acc), value);
 
 // On incrémente un nombre passé en argument
-const inc = (n) => n + 1
+const inc = (n) => n + 1;
 
 // On double la valeur passée en argument
-const double = (n) => n * 2
+const double = (n) => n * 2;
 
 // On compose double(inc(x))
-compose(double, inc)(2) // 6
+compose(double, inc)(2); // 6
 
 // On compose inc(double(x))
-compose(inc, double)(2) // 5
+compose(inc, double)(2); // 5
 ```
 
 ## Spécifications

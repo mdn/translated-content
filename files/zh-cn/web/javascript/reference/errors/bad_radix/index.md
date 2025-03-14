@@ -1,56 +1,61 @@
 ---
-title: 'RangeError: radix must be an integer'
+title: "RangeError: radix must be an integer"
 slug: Web/JavaScript/Reference/Errors/Bad_radix
+l10n:
+  sourceCommit: 6d606174faaedaa5dee7b7ebd87602cd51e5dd7e
 ---
 
 {{jsSidebar("Errors")}}
 
+JavaScript 异常“radix must be an integer at least 2 and no greater than 36”会在 {{jsxref("Number.prototype.toString()")}} 或 {{jsxref("BigInt.prototype.toString()")}} 方法的可选 `radix` 参数被指定，但其值不在 2 到 36 之间时触发。
+
 ## 消息
 
 ```plain
-RangeError: radix must be an integer at least 2 and no greater than 36 (Firefox)
-RangeError: toString() radix argument must be between 2 and 36 (Chrome)
+RangeError: toString() radix argument must be between 2 and 36（基于 V8 & Safari）
+RangeError: radix must be an integer at least 2 and no greater than 36（Firefox）
 ```
 
 ## 错误类型
 
 {{jsxref("RangeError")}}
 
-## 发生了什么错误？
+## 什么地方出错了？
 
-在使用{{jsxref("Number.prototype.toString()")}}方法时使用了可选的基数参数，参数应该为一个 2 到 36 之间的整型 (数字)，返回对应数字的转换为字符串时表示的该进制对应的数字量。
+{{jsxref("Number.prototype.toString()")}} 或 {{jsxref("BigInt.prototype.toString()")}} 方法的可选 `radix` 参数已被指定。它的值必须是一个介于 2 到 36 之间的整数，用于指定表示数值时所使用的进制。例如，十进制（基数 10）数字 169 在十六进制（基数 16）中表示为 A9。
 
-为什么小于 36 呢？因为一个大于 (包含等于)10 的基数在使用时需要用一个字母表字符来代替。不能超过 36 是因为拉丁字母表中只有 26 个字符。
+为什么该参数的值仅限于 36？大于 10 的基数使用字母字符作为数字；因此，基数不能大于 36，因为拉丁字母表（英语和许多其他语言使用的字母表）只有 26 个字符。
 
-你可能会用到以下的常见基数：
+最常见的基数：
 
-- 2 for [二进制](https://en.wikipedia.org/wiki/Binary_number),
-- 8 for [八进制](https://en.wikipedia.org/wiki/Octal),
-- 10 for [十进制](https://en.wikipedia.org/wiki/Decimal),
-- 16 for [十六进制](https://en.wikipedia.org/wiki/Hexadecimal).
+- 2 表示[二进制数](https://zh.wikipedia.org/zh-cn/二进制)、
+- 8 表示[八进制数](https://zh.wikipedia.org/zh-cn/八进制)、
+- 10 表示[十进制数](https://zh.wikipedia.org/zh-cn/十进制)、
+- 16 表示[十六进制数](https://zh.wikipedia.org/zh-cn/十六进制)。
 
 ## 示例
 
-### 错误示例
+### 无效示例
 
 ```js example-bad
 (42).toString(0);
 (42).toString(1);
 (42).toString(37);
 (42).toString(150);
-// You cannot use a string like this for formatting:
+// 不能使用这样的字符串进行格式化：
 (12071989).toString("MM-dd-yyyy");
 ```
 
-### 正确示例
+### 有效示例
 
 ```js example-good
-(42).toString(2);     // "101010" (binary)
-(13).toString(8);     // "15"     (octal)
-(0x42).toString(10);  // "66"     (decimal)
-(100000).toString(16) // "186a0"  (hexadecimal)
+(42).toString(2); // “101010”（二进制）
+(13).toString(8); // “15”（八进制）
+(0x42).toString(10); // “66”（十进制）
+(100000).toString(16); // “186a0”（十六进制）
 ```
 
-## 参考
+## 参见
 
 - {{jsxref("Number.prototype.toString()")}}
+- {{jsxref("BigInt.prototype.toString()")}}

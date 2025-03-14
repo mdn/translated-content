@@ -13,8 +13,11 @@ slug: Web/API/IDBDatabase/versionchange_event
 
 ## 语法
 
-```
-IDBDatabase.onversionchange = function(event) { ... }
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+
+```js
+addEventListener("versionchange", (event) => {});
+onversionchange = (event) => {};
 ```
 
 ## 举例
@@ -69,5 +72,5 @@ request.onupgradeneeded = function(event) {
 - 设置键值范围：{{domxref("IDBKeyRange")}}
 - 检索与修改数据：{{domxref("IDBObjectStore")}}
 - 使用游标：{{domxref("IDBCursor")}}
-- 参考用例：[To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- 参考用例：[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
 - [`versionchange`](/zh-CN/docs/Web/API/IDBDatabase/versionchange_event) 事件

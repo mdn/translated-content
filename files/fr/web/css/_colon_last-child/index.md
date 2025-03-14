@@ -1,11 +1,6 @@
 ---
-title: ':last-child'
+title: :last-child
 slug: Web/CSS/:last-child
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:last-child
 ---
 
 {{CSSRef}}
@@ -21,7 +16,8 @@ li:last-child {
 }
 ```
 
-> **Note :** En CSS3, l'élément ciblé devait avoir un élément parent, cette restriction a été levée en CSS4.
+> [!NOTE]
+> En CSS3, l'élément ciblé devait avoir un élément parent, cette restriction a été levée en CSS4.
 
 ## Syntaxe
 
@@ -41,8 +37,8 @@ li:last-child {
 
 ```html
 <ul>
-   <li>Cet élément n'est pas vert !</li>
-   <li>Celui-ci est vert.</li>
+  <li>Cet élément n'est pas vert !</li>
+  <li>Celui-ci est vert.</li>
 </ul>
 ```
 

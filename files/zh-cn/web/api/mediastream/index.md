@@ -10,6 +10,7 @@ slug: Web/API/MediaStream
 - {{domxref("MediaStream.active")}} {{readonlyinline}}
   - : 布尔型。如果这个流处于活动状态值为 true，反之为 false
 - {{domxref("MediaStream.ended")}} {{readonlyInline}}{{Deprecated_Inline}}
+
   - : 布尔型。如果 `ended` 事件在这个对象上触发了，也就是说这个流已经被完全读取，值为 true。如果还没有到达这个流的尾部，值为 false。
 
 - {{domxref("MediaStream.id")}} {{readonlyInline}}
@@ -27,22 +28,28 @@ slug: Web/API/MediaStream
 ## 方法
 
 - {{domxref("MediaStream.addTrack()")}}
+
   - : 存储传入参数 {{domxref("MediaStreamTrack")}} 的一个副本。如果这个轨道已经被添加到了这个媒体流，什么也不会发生; 如果目标轨道为“完成”状态（也就是已经到尾部了），一个 INVALID_STATE_RAISE 异常会产生。
 
 - {{domxref("MediaStream.clone()")}}
+
   - 返回这个 `MediaStream 对象的克隆版本。返回的版本会有一个新的 ID`。
   - 返回给定 ID 的轨道。如果没有参数或者没有指定 ID 的轨道，将返回 null。如果有几个轨道有同一个 ID，将返回第一个。
 
 - {{domxref("MediaStream.getTracks()")}}
+
   - : 返回流中所有的{{domxref("MediaStreamTrack")}}列表。
 
 - {{domxref("MediaStream.getAudioTracks()")}}
+
   - : 返回流中 kind 属性为"audio"的{{domxref("MediaStreamTrack")}}列表。顺序是不确定的，不同浏览器间会有不同，每次调用也有可能不同。
 
 - {{domxref("MediaStream.getTrackById()")}}
+
   - : 返回给定 ID 的轨道。如果没有参数或者没有指定 ID 的轨道，将返回 null。如果有几个轨道有同一个 ID，将返回第一个。
 
 - {{domxref("MediaStream.getVideoTracks()")}}
+
   - : 返回流中 kind 属性为"video"的{{domxref("MediaStreamTrack")}}列表。顺序是不确定的，不同浏览器间会有不同，每次调用也有可能不同。
 
 - {{domxref("MediaStream.removeTrack()")}}

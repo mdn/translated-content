@@ -1,15 +1,6 @@
 ---
 title: WebSocket.onerror
 slug: Web/API/WebSocket/error_event
-tags:
-  - API
-  - Error
-  - Propiedad
-  - Referencia
-  - Web API
-  - WebSocket
-translation_of: Web/API/WebSocket/onerror
-original_slug: Web/API/WebSocket/onerror
 ---
 
 {{APIRef("Web Sockets API")}}

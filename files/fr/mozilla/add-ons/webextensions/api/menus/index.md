@@ -1,24 +1,13 @@
 ---
 title: menus
 slug: Mozilla/Add-ons/WebExtensions/API/menus
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - contextMenus
-  - menus
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus
 ---
 
 {{AddonSidebar}}
 
 Ajoutez des éléments au système de menus du navigateur.
 
-Cette API est modélisée dans l'API ["contextMenus"](https://developer.chrome.com/extensions/contextMenus) de Chrome, qui permet aux extensions Chrome d'ajouter des éléments au menu contextuel du navigateur. L'API `browser.menus` ajoute quelques fonctionnalités à l'API de Chrome.
+Cette API est modélisée dans l'API ["contextMenus"](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) de Chrome, qui permet aux extensions Chrome d'ajouter des éléments au menu contextuel du navigateur. L'API `browser.menus` ajoute quelques fonctionnalités à l'API de Chrome.
 
 Avant Firefox 55, cette API s'appelait à l'origine `contextMenus`, et ce nom a été retenu comme alias. Vous pouvez donc utiliser `contextMenus` pour écrire du code qui fonctionne dans Firefox et dans d'autres navigateurs.
 
@@ -45,7 +34,7 @@ Si vous avez créé plus d'un élément de menu contextuel ou plus d'un élémen
 
 ## Icônes
 
-Si vous avez spécifié des icônes pour votre extension à l'aide de la [clé de manifest "icons"](/fr/Add-ons/WebExtensions/manifest.json/icons), votre élément de menu affichera l'icône spécifiée à côté de son libellé. Le navigateur va essayer de choisir une icône de 16x16 pixels pour un affichage normal ou une icône de 32x32 pixels pour un affichage haute définition :
+Si vous avez spécifié des icônes pour votre extension à l'aide de la [clé de manifest "icons"](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons), votre élément de menu affichera l'icône spécifiée à côté de son libellé. Le navigateur va essayer de choisir une icône de 16x16 pixels pour un affichage normal ou une icône de 32x32 pixels pour un affichage haute définition :
 
 ![](menus-2.png)
 
@@ -60,57 +49,75 @@ Voici un menu contextuel contenant 4 éléments: un élément normal, deux élé
 ![](menus-4.png)Vous pouvez créer un sous-menu comme celui-ci en utilisant du code comme :
 
 ```js
-browser.menus.create({
-  id: "remove-me",
-  title: browser.i18n.getMessage("menuItemRemoveMe"),
-  contexts: ["all"]
-}, onCreated);
+browser.menus.create(
+  {
+    id: "remove-me",
+    title: browser.i18n.getMessage("menuItemRemoveMe"),
+    contexts: ["all"],
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "separator-1",
-  type: "separator",
-  contexts: ["all"]
-}, onCreated);
+browser.menus.create(
+  {
+    id: "separator-1",
+    type: "separator",
+    contexts: ["all"],
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "greenify",
-  type: "radio",
-  title: browser.i18n.getMessage("menuItemGreenify"),
-  contexts: ["all"],
-  checked: true,
-  icons: {
-    "16": "icons/paint-green-16.png",
-    "32": "icons/paint-green-32.png"
-  }
-}, onCreated);
+browser.menus.create(
+  {
+    id: "greenify",
+    type: "radio",
+    title: browser.i18n.getMessage("menuItemGreenify"),
+    contexts: ["all"],
+    checked: true,
+    icons: {
+      16: "icons/paint-green-16.png",
+      32: "icons/paint-green-32.png",
+    },
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "bluify",
-  type: "radio",
-  title: browser.i18n.getMessage("menuItemBluify"),
-  contexts: ["all"],
-  checked: false,
-  icons: {
-    "16": "icons/paint-blue-16.png",
-    "32": "icons/paint-blue-32.png"
-  }
-}, onCreated);
+browser.menus.create(
+  {
+    id: "bluify",
+    type: "radio",
+    title: browser.i18n.getMessage("menuItemBluify"),
+    contexts: ["all"],
+    checked: false,
+    icons: {
+      16: "icons/paint-blue-16.png",
+      32: "icons/paint-blue-32.png",
+    },
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "separator-2",
-  type: "separator",
-  contexts: ["all"]
-}, onCreated);
+browser.menus.create(
+  {
+    id: "separator-2",
+    type: "separator",
+    contexts: ["all"],
+  },
+  onCreated,
+);
 
 var checkedState = true;
 
-browser.menus.create({
-  id: "check-uncheck",
-  type: "checkbox",
-  title: browser.i18n.getMessage("menuItemUncheckMe"),
-  contexts: ["all"],
-  checked: checkedState
-}, onCreated);
+browser.menus.create(
+  {
+    id: "check-uncheck",
+    type: "checkbox",
+    title: browser.i18n.getMessage("menuItemUncheckMe"),
+    contexts: ["all"],
+    checked: checkedState,
+  },
+  onCreated,
+);
 ```
 
 ## Types
@@ -153,15 +160,15 @@ browser.menus.create({
 - {{WebExtAPIRef("menus.onShown")}}
   - : Lancé lorsque le navigateur affiche un menu.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{ Compat("webextensions.api.menus", 1, "true") }}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
+> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

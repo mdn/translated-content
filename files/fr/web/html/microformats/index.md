@@ -1,17 +1,9 @@
 ---
 title: Microformats
 slug: Web/HTML/microformats
-tags:
-  - Composing
-  - HTML
-  - Microformats
-  - NeedsContent
-  - NeedsMarkupWork
-  - Reference
-  - SEO
-  - Search
-translation_of: Web/HTML/microformats
 ---
+
+{{HTMLSidebar}}
 
 Les [_microformats_](https://microformats.org/) (parfois abrégés **μF**) sont des normes utilisées pour intégrer la sémantique et les données structurées dans le HTML, et fournir une API à utiliser par les moteurs de recherche, les agrégateurs et autres outils. Ces modèles minimaux de HTML sont utilisés pour marquer des entités allant d'informations fondamentales à des informations spécifiques à un domaine, telles que des personnes, des organisations, des événements et des lieux. Les microformats utilisent des vocabulaires de soutien pour décrire les objets et des paires nom-valeur pour attribuer des valeurs à leurs propriétés. Les propriétés sont transportées dans des attributs de classe qui peuvent être ajoutés à tout élément HTML, tandis que les valeurs des données réutilisent le contenu des éléments HTML et les attributs sémantiques. Microformats2 est une mise à jour de microformats qui offre un moyen plus simple d'annoter la syntaxe structurée et les vocabulaires HTML que les approches précédentes utilisant RDFa et microdata qui nécessitent l'apprentissage de nouveaux attributs.
 
@@ -51,11 +43,11 @@ Tous les noms de classe des microformats utilisent des préfixes. La syntaxe des
 
 - **"p-\*" pour les propriétés textuelles** (ex. "p-name", "p-summary")
 
-  - Un contenu texte. Pour certains éléments HTML, certains attributs spécifiques seront utilisés (ex. [`alt`](/fr/docs/Web/HTML/Element/Img#attr-alt) pour [`<img>`](/fr/docs/Web/HTML/Element/Img), [`title`](/fr/docs/Web/HTML/Element/abbr#attr-title) pour [`<abbr>`](/fr/docs/Web/HTML/Element/abbr)).
+  - Un contenu texte. Pour certains éléments HTML, certains attributs spécifiques seront utilisés (ex. [`alt`](/fr/docs/Web/HTML/Element/img#attr-alt) pour [`<img>`](/fr/docs/Web/HTML/Element/img), [`title`](/fr/docs/Web/HTML/Element/abbr#attr-title) pour [`<abbr>`](/fr/docs/Web/HTML/Element/abbr)).
 
 - **"u-\*" pour les propriétés qui sont des URL** (ex. "u-url", "u-photo", "u-logo")
 
-  - Analyse spéciale : attributs d'éléments [`<a>`](/fr/docs/Web/HTML/Element/a)/[`href`](/fr/docs/Web/HTML/Element/a#attr-href), [`<img>`](/fr/docs/Web/HTML/Element/Img)/[`src`](/fr/docs/Web/HTML/Element/Img#attr-src), [`<object>`](/fr/docs/Web/HTML/Element/object)/[`data`](/fr/docs/Web/HTML/Element/object#attr-data) etc. attributs sur le contenu des éléments.
+  - Analyse spéciale : attributs d'éléments [`<a>`](/fr/docs/Web/HTML/Element/a)/[`href`](/fr/docs/Web/HTML/Element/a#attr-href), [`<img>`](/fr/docs/Web/HTML/Element/img)/[`src`](/fr/docs/Web/HTML/Element/img#attr-src), [`<object>`](/fr/docs/Web/HTML/Element/object)/[`data`](/fr/docs/Web/HTML/Element/object#attr-data) etc. attributs sur le contenu des éléments.
 
 - **"dt-\*" pour les propriétés temporelles (date/heure)** (ex. "dt-start", "dt-end", "dt-bday")
 
@@ -77,7 +69,9 @@ La valeur de chaque propriété est définie en HTML via l'attribut `class`.
 <p class="h-card">
   <img class="u-photo" src="http://example.org/photo.png" alt="" />
   <a class="p-name u-url" href="http://example.org">Joe Bloggs</a>
-  <a class="u-email" href="mailto:joebloggs@example.com">joebloggs@example.com</a>,
+  <a class="u-email" href="mailto:joebloggs@example.com"
+    >joebloggs@example.com</a
+  >,
   <span class="p-street-address">17 Austerstræti</span>
   <span class="p-locality">Reykjavík</span>
   <span class="p-country-name">Iceland</span>
@@ -99,12 +93,10 @@ La valeur de chaque propriété est définie en HTML via l'attribut `class`.
 
 ```html
 <div class="h-card">
-  <a class="p-name u-url"
-   href="http://blog.lizardwrangler.com/"
-  >Mitchell Baker</a>
-  (<a class="p-org h-card"
-    href="http://mozilla.org/"
-   >Mozilla Foundation</a>)
+  <a class="p-name u-url" href="http://blog.lizardwrangler.com/"
+    >Mitchell Baker</a
+  >
+  (<a class="p-org h-card" href="http://mozilla.org/">Mozilla Foundation</a>)
 </div>
 ```
 
@@ -112,25 +104,30 @@ Cela fournira le JSON suivant :
 
 ```json
 {
-  "items": [{
-  "type": ["h-card"],
-  "properties": {
-    "name": ["Mitchell Baker"],
-    "url": ["http://blog.lizardwrangler.com/"],
-    "org": [{
-    "value": "Mozilla Foundation",
-    "type": ["h-card"],
-    "properties": {
-      "name": ["Mozilla Foundation"],
-      "url": ["http://mozilla.org/"]
+  "items": [
+    {
+      "type": ["h-card"],
+      "properties": {
+        "name": ["Mitchell Baker"],
+        "url": ["http://blog.lizardwrangler.com/"],
+        "org": [
+          {
+            "value": "Mozilla Foundation",
+            "type": ["h-card"],
+            "properties": {
+              "name": ["Mozilla Foundation"],
+              "url": ["http://mozilla.org/"]
+            }
+          }
+        ]
+      }
     }
-    }]
-  }
-  }]
+  ]
 }
 ```
 
-> **Note :** Le h-card imbriqué récupère des valeurs implicites pour `name` et `url`.
+> [!NOTE]
+> Le h-card imbriqué récupère des valeurs implicites pour `name` et `url`.
 
 ### h-entry
 
@@ -139,13 +136,18 @@ Le microformat [h-entry](http://microformats.org/wiki/h-entry) représente un co
 ```html
 <article class="h-entry">
   <h1 class="p-name">Microformats are amazing</h1>
-  <p>Published by <a class="p-author h-card" href="http://example.com">W. Developer</a>
-   on <time class="dt-published" datetime="2013-06-13 12:00:00">13<sup>th</sup> June 2013</time></p>
+  <p>
+    Published by
+    <a class="p-author h-card" href="http://example.com">W. Developer</a> on
+    <time class="dt-published" datetime="2013-06-13 12:00:00"
+      >13<sup>th</sup> June 2013</time
+    >
+  </p>
 
   <p class="p-summary">In which I extoll the virtues of using microformats.</p>
 
   <div class="e-content">
-  <p>Blah blah blah</p>
+    <p>Blah blah blah</p>
   </div>
 </article>
 ```
@@ -164,16 +166,42 @@ Le microformat [h-entry](http://microformats.org/wiki/h-entry) représente un co
 
 ```html
 <div class="h-entry">
-  <p><span class="p-author h-card">
-    <a href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106" ><img class="u-photo" src="https://quickthoughts.jgregorymcverry.com/file/2d6c9cfed7ac8e849f492b5bc7e6a630/thumb.jpg"/></a>
-    <a class="p-name u-url" href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106">Greg McVerry</a></span>
-     Replied to <a class="u-in-reply-to" href="https://developer.mozilla.org/en-US/docs/Web/HTML/microformats">a post on
-   <strong>developer.mozilla.org</strong> </a>:
+  <p>
+    <span class="p-author h-card">
+      <a href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106"
+        ><img
+          class="u-photo"
+          src="https://quickthoughts.jgregorymcverry.com/file/2d6c9cfed7ac8e849f492b5bc7e6a630/thumb.jpg"
+      /></a>
+      <a
+        class="p-name u-url"
+        href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106"
+        >Greg McVerry</a
+      ></span
+    >
+    Replied to
+    <a
+      class="u-in-reply-to"
+      href="https://developer.mozilla.org/fr/docs/Web/HTML/microformats"
+      >a post on <strong>developer.mozilla.org</strong> </a
+    >:
   </p>
-   <p class="p-name e-content">Hey thanks for making this microformats resource</p>
-   <p> <a href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106">Greg McVerry</a>
-  published this <a class="u-url url" href="https://quickthoughts.jgregorymcverry.com/2019/05/31/hey-thanks-for-making-this-microformats-resource"><time class="dt-published"
-   datetime="2019-05-31T14:19:09+0000">31 May 2019</time></a></p>
+  <p class="p-name e-content">
+    Hey thanks for making this microformats resource
+  </p>
+  <p>
+    <a href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106"
+      >Greg McVerry</a
+    >
+    published this
+    <a
+      class="u-url url"
+      href="https://quickthoughts.jgregorymcverry.com/2019/05/31/hey-thanks-for-making-this-microformats-resource"
+      ><time class="dt-published" datetime="2019-05-31T14:19:09+0000"
+        >31 May 2019</time
+      ></a
+    >
+  </p>
 </div>
 ```
 
@@ -181,12 +209,16 @@ Le microformat [h-entry](http://microformats.org/wiki/h-entry) représente un co
 {
   "items": [
     {
-      "type": [ "h-entry" ],
+      "type": ["h-entry"],
       "properties": {
-        "in-reply-to": [ "https://developer.mozilla.org/en-US/docs/Web/HTML/microformats" ],
-        "name": [ "Hey thanks for making this microformats resource" ],
-        "url": [ "https://quickthoughts.jgregorymcverry.com/2019/05/31/hey-thanks-for-making-this-microformats-resource" ],
-        "published": [ "2019-05-31T14:19:09+0000" ],
+        "in-reply-to": [
+          "https://developer.mozilla.org/fr/docs/Web/HTML/microformats"
+        ],
+        "name": ["Hey thanks for making this microformats resource"],
+        "url": [
+          "https://quickthoughts.jgregorymcverry.com/2019/05/31/hey-thanks-for-making-this-microformats-resource"
+        ],
+        "published": ["2019-05-31T14:19:09+0000"],
         "content": [
           {
             "html": "Hey thanks for making this microformats resource",
@@ -196,11 +228,15 @@ Le microformat [h-entry](http://microformats.org/wiki/h-entry) représente un co
         ],
         "author": [
           {
-            "type": [ "h-card" ],
+            "type": ["h-card"],
             "properties": {
-              "name": [ "Greg McVerry" ],
-              "photo": [ "https://quickthoughts.jgregorymcverry.com/file/2d6c9cfed7ac8e849f492b5bc7e6a630/thumb.jpg" ],
-              "url": [ "https://quickthoughts.jgregorymcverry.com/profile/jgmac1106" ]
+              "name": ["Greg McVerry"],
+              "photo": [
+                "https://quickthoughts.jgregorymcverry.com/file/2d6c9cfed7ac8e849f492b5bc7e6a630/thumb.jpg"
+              ],
+              "url": [
+                "https://quickthoughts.jgregorymcverry.com/profile/jgmac1106"
+              ]
             },
             "lang": "en",
             "value": "Greg McVerry"
@@ -223,12 +259,18 @@ Le microformat [h-feed](http://microformats.org/wiki/h-feed) est un flux de bill
 <div class="h-feed">
   <h1 class="p-name">Microformats Blogs</h1>
   <article class="h-entry">
-  <h2 class="p-name">Microformats are amazing</h2>
-  <p>Published by <a class="p-author h-card" href="http://example.com">W. Developer</a>
-     on <time class="dt-published" datetime="2013-06-13 12:00:00">13<sup>th</sup> June 2013</time>
-  </p>
-  <p class="p-summary">In which I extoll the virtues of using microformats.</p>
-  <div class="e-content"> <p>Blah blah blah</p> </div>
+    <h2 class="p-name">Microformats are amazing</h2>
+    <p>
+      Published by
+      <a class="p-author h-card" href="http://example.com">W. Developer</a> on
+      <time class="dt-published" datetime="2013-06-13 12:00:00"
+        >13<sup>th</sup> June 2013</time
+      >
+    </p>
+    <p class="p-summary">
+      In which I extoll the virtues of using microformats.
+    </p>
+    <div class="e-content"><p>Blah blah blah</p></div>
   </article>
 </div>
 ```
@@ -260,11 +302,17 @@ Le microformat `h-event` permet de représenter des évènements.
 ```html
 <div class="h-event">
   <h1 class="p-name">Microformats Meetup</h1>
-  <p>From
-  <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
-  to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
-  at <span class="p-location">Some bar in SF</span></p>
-  <p class="p-summary">Get together and discuss all things microformats-related.</p>
+  <p>
+    From
+    <time class="dt-start" datetime="2013-06-30 12:00"
+      >30<sup>th</sup> June 2013, 12:00</time
+    >
+    to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time> at
+    <span class="p-location">Some bar in SF</span>
+  </p>
+  <p class="p-summary">
+    Get together and discuss all things microformats-related.
+  </p>
 </div>
 ```
 
@@ -283,25 +331,38 @@ Le microformat `h-event` permet de représenter des évènements.
 ```html
 <div class="h-event">
   <h2 class="p-name">IndieWeb Summit</h2>
-  <time class="dt-start" datetime="2019-06-29T09:00:00-07:00">June 29, 2019 at 9:00am  (-0700)</time><br>through <time class="dt-end" datetime="2019-06-30T18:00:00-07:00">June 30, 2019 at 6:00pm (-0700)</time><br>
+  <time class="dt-start" datetime="2019-06-29T09:00:00-07:00"
+    >June 29, 2019 at 9:00am (-0700)</time
+  ><br />through
+  <time class="dt-end" datetime="2019-06-30T18:00:00-07:00"
+    >June 30, 2019 at 6:00pm (-0700)</time
+  ><br />
   <div class="p-location h-card">
     <div>
-    <span class="p-name">Mozilla</span>
-     </div>
-     <div>
+      <span class="p-name">Mozilla</span>
+    </div>
+    <div>
       <span class="p-street-address">1120 NW Couch St</span>,
       <span class="p-locality">Portland</span>,
       <span class="p-region">Oregon</span>,
       <span class="p-country">US</span>
-     </div>
-       <data class="p-latitude" value="45.52345"></data>
-      <data class="p-longitude" value="-122.682677"></data>
-  </div>
-    <div class="e-content">Come join us
-     </div>
-    <div>
-     <span class="p-author h-card"><a class="u-url p-name" href="https://aaronparecki.com">Aaron Parecki</a></span> Published this <a href="https://aaronparecki.com/2019/06/29/1/" class="u-url">event </a>on <time class="dt published" datetime="2019-05-25T18:00:00-07:00">May 5th, 2019</time>
     </div>
+    <data class="p-latitude" value="45.52345"></data>
+    <data class="p-longitude" value="-122.682677"></data>
+  </div>
+  <div class="e-content">Come join us</div>
+  <div>
+    <span class="p-author h-card"
+      ><a class="u-url p-name" href="https://aaronparecki.com"
+        >Aaron Parecki</a
+      ></span
+    >
+    Published this
+    <a href="https://aaronparecki.com/2019/06/29/1/" class="u-url">event </a>on
+    <time class="dt published" datetime="2019-05-25T18:00:00-07:00"
+      >May 5th, 2019</time
+    >
+  </div>
 </div>
 ```
 

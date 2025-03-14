@@ -1,14 +1,8 @@
 ---
 title: Object.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
-tags:
-  - ECMAScript5
-  - JavaScript
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
-browser-compat: javascript.builtins.Object.getPrototypeOf
 ---
+
 {{JSRef}}
 
 **`Object.getPrototypeOf()`** 메서드는 지정된 객체의 프로토타입(가령 내부 `[[Prototype]]` 속성값)을 반환합니다.
@@ -16,7 +10,7 @@ browser-compat: javascript.builtins.Object.getPrototypeOf
 ## 구문
 
 ```js
-Object.getPrototypeOf(obj)
+Object.getPrototypeOf(obj);
 ```
 
 ### 매개변수
@@ -53,12 +47,12 @@ Object.getPrototypeOf("foo");
 
 ## Opera 전용 주의사항
 
-이전 Opera 버전이 `Object.getPrototypeOf()`를 아직 지원하지 않지만, Opera는 Opera 10.50 이후로 비표준 {{jsxref("Object.proto", "__proto__")}} 속성을 지원합니다.
+이전 Opera 버전이 `Object.getPrototypeOf()`를 아직 지원하지 않지만, Opera는 Opera 10.50 이후로 비표준 [`Object.prototype.__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 속성을 지원합니다.
 
 ## 참조
 
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - John Resig의 [getPrototypeOf](http://ejohn.org/blog/objectgetprototypeof/) 포스트
 - {{jsxref("Reflect.getPrototypeOf()")}}

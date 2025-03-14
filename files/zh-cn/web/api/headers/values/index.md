@@ -7,7 +7,8 @@ slug: Web/API/Headers/values
 
 **`Headers.values()`** 方法返回一个可迭代数值，通过这个数值可以遍历 **`Headers`** 中键值对的 **`value`** 值。返回的 **`value`** 都是 **`ByteString`** 对象。
 
-> **备注：** 这个方法可以在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)中使用。
+> [!NOTE]
+> 这个方法可以在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)中使用。
 
 ## 语法
 
@@ -24,18 +25,18 @@ headers.values();
 ```js
 // Create a test Headers object
 var myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.append('Vary', 'Accept-Language');
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.append("Vary", "Accept-Language");
 
 // Display the values
 for (var value of myHeaders.values()) {
-   console.log(value);
+  console.log(value);
 }
 ```
 
 返回值为：
 
-```
+```plain
 text/xml
 Accept-Language
 ```
@@ -46,6 +47,6 @@ Accept-Language
 
 ## See also
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

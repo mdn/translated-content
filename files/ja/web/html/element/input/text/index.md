@@ -2,66 +2,45 @@
 title: <input type="text">
 slug: Web/HTML/Element/input/text
 l10n:
-  sourceCommit: b56483692fd247dd7c5f11af4233ad40bf19ac31
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`text`** 型は、基本的な単一行のテキスト入力欄を生成します。
 
-{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#値">値</a></strong></td>
-      <td>
-        テキスト入力欄に含まれるテキストを表す文字列。
-      </td>
-    </tr>
-    <tr>
-      <td><strong>イベント</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>対応している共通属性</strong></td>
-      <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("maxlength", "input")}},
-        {{htmlattrxref("minlength", "input")}},
-        {{htmlattrxref("pattern", "input")}},
-        {{htmlattrxref("placeholder", "input")}},
-        {{htmlattrxref("readonly", "input")}},
-        {{htmlattrxref("required", "input")}},
-        {{htmlattrxref("size", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL 属性</strong></td>
-      <td>{{htmlattrxref("list", "input")}}, <code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM インターフェイス</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+```html interactive-example
+<label for="name">Name (4 to 8 characters):</label>
+
+<input
+  type="text"
+  id="name"
+  name="name"
+  required
+  minlength="4"
+  maxlength="8"
+  size="10" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## 値
 
- {{htmlattrxref("value", "input")}} 属性は、テキスト入力欄に入力された現在のテキストの値が入っている文字列です。 JavaScript では {{domxref("HTMLInputElement")}} の `value` プロパティを使ってこれを受け取ることができます。
+[`value`](/ja/docs/Web/HTML/Element/input#value) 属性は、テキスト入力欄に入力された現在のテキストの値が入っている文字列です。 JavaScript では {{domxref("HTMLInputElement")}} の `value` プロパティを使ってこれを受け取ることができます。
 
 ```js
 let theText = myTextInput.value;
@@ -71,31 +50,31 @@ let theText = myTextInput.value;
 
 ## 追加の属性
 
-型に関係なくすべての {{HTMLElement("input")}} 要素を操作する属性に加え、 `text` 型の入力欄は次の属性にも対応しています。
+[グローバル属性](/ja/docs/Web/HTML/Global_attributes)および、型に関係なくすべての {{HTMLElement("input")}} 要素を操作する属性に加え、 `text` 型の入力欄は次の属性にも対応しています。
 
 ### `list`
 
-list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち {{htmlattrxref("type", "input")}} と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
+list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち [`type`](/ja/docs/Web/HTML/Element/input#type) と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
 
 ### `maxlength`
 
-ユーザーが `text` 入力欄に入力することができる (UTF-16 コード単位での) 最大文字数です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、 `text` 入力欄には最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
+ユーザーが `text` 入力欄に入力することができる (UTF-16 コード単位での) 最大文字列長です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、 `text` 入力欄には最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
 
-フィールドのテキスト値の長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
+フィールドのテキスト値の長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
 
 ### `minlength`
 
-ユーザーが `text` 入力欄に入力することができる (UTF-16 コード単位での) 最小文字数です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、 `text` 入力欄には最小文字数が設定されません。
+ユーザーが `text` 入力欄に入力することができる (UTF-16 コード単位での) 最小文字列長です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、 `text` 入力欄には最小文字数が設定されません。
 
-入力欄のテキスト値の長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その入力欄は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
+入力欄のテキスト値の長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
 
 ### `pattern`
 
-`pattern` 属性は、指定する場合は正規表現であり、入力欄の {{htmlattrxref("value")}} が[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
+`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは {{Glossary("ASCII")}} ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
 
 指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
-> **メモ:** {{htmlattrxref("title", "input")}} 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
+> **メモ:** [`title`](/ja/docs/Web/HTML/Element/input#title) 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
 
 詳細や例については[パターンの指定](#パターンの指定)を参照してください。
 
@@ -105,13 +84,15 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 コントロールの内容がある書字方向 ({{Glossary("LTR")}} または {{Glossary("RTL")}}) であるものの、プレイスホルダーを逆の方向に表示する必要がある場合、 Unicode 双方向アルゴリズム書式文字を使用してプレイスホルダーの中で書字方向を上書きすることができます。詳しくは、[双方向テキストでの Unicode コードの使い方（英語）](https://www.w3.org/International/questions/qa-bidi-unicode-controls)を参照してください。
 
-> **メモ:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[\<input>: 入力欄 (フォーム入力) 要素](/ja/docs/Web/HTML/Element/input)の[プレイスホルダーはアクセシブルではない](/ja/docs/Web/HTML/Element/input#プレイスホルダーはアクセシブルではない)を参照してください。
+> [!NOTE]
+> 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のアクセシビリティの考慮](/ja/docs/Web/HTML/Element/input#アクセシビリティ)を参照してください。
 
 ### `readonly`
 
 論理属性で、存在すれば、ユーザーが編集することができないことを表します。しかし、 `value` は、 JavaScript コードから直接 {{domxref("HTMLInputElement")}} の `value` プロパティを設定することで変更することができます。
 
-> **メモ:** 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
+> [!NOTE]
+> 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
 
 ### `size`
 
@@ -121,7 +102,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### `spellcheck`
 
-`spellcheck` はグローバル属性で、要素でスペルチェックを有効にするかどうかを示します。内容が編集可能なものすべてに使用することができますが、ここでは `spellcheck` 属性の {{HTMLElement("input")}} 要素の使用に関して特に考えます。 `spellcheck` で利用できる値は次の通りです。
+[`spellcheck`](/ja/docs/Web/HTML/Global_attributes/spellcheck) はグローバル属性で、要素でスペルチェックを有効にするかどうかを示します。内容が編集可能なものすべてに使用することができますが、ここでは `spellcheck` 属性の {{HTMLElement("input")}} 要素の使用に関して特に考えます。 `spellcheck` で利用できる値は次の通りです。
 
 - `false`
   - : この要素でスペルチェックを無効にします。
@@ -130,28 +111,9 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 - `""` (空文字列) または値なし
   - : スペルチェックについて、要素の既定の動作に従います。これは親の `spellcheck` 設定や、その他の要因に基づくことがあります。
 
-入力欄では、 [readonly](#readonly) 属性が設定されておらず、かつ無効になっていない場合にスペルチェックを有効にすることができます。
+入力欄でスペルチェックが有効にできるのは、 [readonly](#readonly) 属性が設定されておらず、かつ無効になっていない場合です。
 
-`spellcheck` を読み取ることで返される値は、{{Glossary("user agent", "ユーザーエージェント")}}の設定によって上書きされる場合、コントロール内のスペルチェックの実際の状態を反映しない可能性があります。
-
-## 標準外の属性
-
-ブラウザーによっては、以下の標準外の属性が利用できます。一般的な規則として、できれば使用することを避けてください。
-
-### `autocorrect`
-
-Safari 拡張である `autocorrect` 属性は文字列で、ユーザーがこの欄を編集している間に自動修正を有効にするかどうかを示します。次の値が許されています。
-
-- `on`
-  - : 構成されていれば、打ち間違いの自動修正や、テキストの置き換え処理を有効にします。
-- `off`
-  - : 自動修正やテキストの置き換えを無効にします。
-
-### `mozactionhint`
-
-Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押した場合に行われるアクションの種類のヒントを提供します。
-
-この属性は非推奨です。変わらいにグローバル属性 {{htmlattrxref("enterkeyhint")}} を使用してください。
+`spellcheck` を読み取ることで返される値は、{{Glossary("User agent", "ユーザーエージェント")}}の設定によって上書きされる場合、コントロール内のスペルチェックの実際の状態を反映しない可能性があります。
 
 ## テキスト入力欄の使用
 
@@ -175,13 +137,13 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 
 {{EmbedLiveSample("Basic_example", 600, 80)}}
 
-送信されると、サーバーに送信される名前と値の組のデータは `name=Chris` になります（送信前に入力値として "Chris" が入力された場合）。 {{htmlattrxref("name", "input")}} 属性を {{HTMLElement("input")}} 要素に付け忘れてはいけません。さもないと、テキスト入力欄の値が送信されるデータに含まれなくなります。
+送信されると、サーバーに送信される名前と値の組のデータは `name=Chris` になります（送信前に入力値として "Chris" が入力された場合）。 [`name`](/ja/docs/Web/HTML/Element/input#name) 属性を {{HTMLElement("input")}} 要素に付け忘れてはいけません。さもないと、テキスト入力欄の値が送信されるデータに含まれなくなります。
 
 ### プレイスホルダーの設定
 
-{{htmlattrxref("placeholder","input")}} 属性を使用して、テキスト入力欄の内部に有用なプレイスホルダーを提供することで、何を入力すればよいかのヒントを提供することができます。次の例を見てください。
+[`placeholder`](/ja/docs/Web/HTML/Element/input#placeholder) 属性を使用して、テキスト入力欄の内部に有用なプレイスホルダーを提供することで、何を入力すればよいかのヒントを提供することができます。次の例を見てください。
 
-```html
+```html-nolint
 <form>
   <div>
     <label for="uname">ユーザー名を選んでください: </label>
@@ -205,7 +167,7 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 
 ### 物理的な入力要素の寸法
 
-入力ボックスの物理的な寸法は、 {{htmlattrxref("size", "input")}} 属性を使って制御することができます。これによって、テキスト入力欄が一度に表示できる文字数を指定することができます。これは要素の幅に影響し、幅をピクセル数ではなく文字数で指定することができます。例えば、この例の中では、入力欄は30文字の幅です。
+入力ボックスの物理的な寸法は、 [`size`](/ja/docs/Web/HTML/Element/input#size) 属性を使って制御することができます。これによって、テキスト入力欄が一度に表示できる文字数を指定することができます。これは要素の幅に影響し、幅をピクセル数ではなく文字数で指定することができます。例えば、この例の中では、入力欄は30文字の幅です。
 
 ```html
 <form>
@@ -230,7 +192,8 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 
 `text` 型の `<input>` 要素には、適用される自動的な検証はありませんが（基本的なテキスト入力欄は、自由な文字列を受け付けることが求められるからです）、以下に解説するように、クライアント側の検証のオプションがいくつか利用できます。
 
-> **メモ:** HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するサーバースクリプトの代用には*なりません*。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ（または大きすぎるデータ、間違った種類のデータなど）がデータベースに入力された場合に災害が発生するおそれがあります。
+> [!NOTE]
+> HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するサーバースクリプトの代用には*なりません*。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ（または大きすぎるデータ、間違った種類のデータなど）がデータベースに入力された場合に災害が発生するおそれがあります。
 
 ### スタイル付けのメモ
 
@@ -263,7 +226,7 @@ input:valid + span::after {
 
 ### 入力を必須にする
 
-入力を行わないとフォームの送信が許可されないようにするための簡単な方法として、 {{htmlattrxref("required","input")}} 属性を使うことができます。
+入力を行わないとフォームの送信が許可されないようにするための簡単な方法として、 [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を使うことができます。
 
 ```html
 <form>
@@ -306,7 +269,7 @@ input:valid + span::after {
 
 ### 入力値の長さ
 
- {{htmlattrxref("minlength", "input")}} 属性を使用して入力された値の最小の長さ (文字数) を指定することができます。同様に、 {{htmlattrxref("maxlength", "input")}} を使用して入力された値の最大長を文字数で設定します。
+[`minlength`](/ja/docs/Web/HTML/Element/input#minlength) 属性を使用して入力された値の最小の長さ (文字数) を指定することができます。同様に、 [`maxlength`](/ja/docs/Web/HTML/Element/input#maxlength) を使用して入力された値の最大長を文字数で設定します。
 
 以下の例では、入力値が4～8文字の長さであることが求められます。
 
@@ -361,7 +324,7 @@ input:valid + span::after {
 
 ### パターンの指定
 
- {{htmlattrxref("pattern","input")}} 属性を使用して、入力値が妥当と判断されるために一致しなければならない正規表現を指定することができます（入力値を検証するために正規表現を使うための短期コースは[正規表現による検証](/ja/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression)をご覧ください）。
+[`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を使用して、入力値が妥当と判断されるために一致しなければならない正規表現を指定することができます（入力値を検証するために正規表現を使うための短期コースは[正規表現による検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation#正規表現での検証)をご覧ください）。
 
 以下の例では、 4～8 文字の値で、英小文字のみが含まれているという要件の制約を与えます。
 
@@ -419,7 +382,63 @@ input:valid + span::after {
 
 ## 例
 
- [最初の HTML フォーム](/ja/docs/Learn/Forms/Your_first_form)および [HTML フォームの構成方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)の記事の文脈で、良いテキスト入力欄の例を見ることができます。
+[最初の HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms/Your_first_form)および [HTML フォームの構成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)の記事の文脈で、良いテキスト入力欄の例を見ることができます。
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#値">値</a></strong></td>
+      <td>
+        テキスト入力欄に含まれるテキストを表す文字列。
+      </td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} および
+        {{domxref("Element/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>対応している共通属性</strong></td>
+      <td>
+        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#required"><code>required</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#size"><code>size</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td><a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>, <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
+        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>暗黙の ARIA ロール</strong></td>
+      <td><code>list</code> 属性がない場合:
+                <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></td>
+      <td><code>list</code> 属性がある場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code></td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 
@@ -431,8 +450,7 @@ input:valid + span::after {
 
 ## 関連情報
 
-- [HTML フォーム](/ja/docs/Learn/Forms)
+- [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} およびそれに基づく {{domxref("HTMLInputElement")}} インターフェイス
 - [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search)
 - {{HTMLElement("textarea")}}: 複数行のテキスト入力欄
-- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

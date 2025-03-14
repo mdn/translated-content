@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint8
 
 **`setUint8()`** 从 [`DataView`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView) 起始位置以 byte 为计数的指定偏移量 (byteOffset) 处储存一个 8-bit 数 (无符号字节)。
 
-{{EmbedInteractiveExample("pages/js/dataview-setuint8.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.setUint8()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setUint8(1, 255); // Max unsigned 8-bit integer
+
+console.log(view.getUint8(1));
+// Expected output: 255
+```
 
 ## 语法
 
@@ -31,7 +42,7 @@ dataview.setUint8(byteOffset, value)
 - {{jsxref("RangeError")}}
   - : 如果 byteOffset 超出了视图能储存的值，就会抛出错误。
 
-## 例子
+## 示例
 
 ```js
 var buffer = new ArrayBuffer(8);

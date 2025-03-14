@@ -1,5 +1,5 @@
 ---
-title: 'Window: unhandledrejection イベント'
+title: "Window: unhandledrejection イベント"
 slug: Web/API/Window/unhandledrejection_event
 ---
 
@@ -48,7 +48,7 @@ slug: Web/API/Window/unhandledrejection_event
 この例では、処理されなかった Promise の拒否についての情報を単純にコンソールにログ出力します。
 
 ```js
-window.addEventListener("unhandledrejection", event => {
+window.addEventListener("unhandledrejection", (event) => {
   console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
 });
 ```
@@ -56,7 +56,7 @@ window.addEventListener("unhandledrejection", event => {
 イベントハンドラープロパティを使用して、イベントリスナーを設定することもできます。
 
 ```js
-window.onunhandledrejection = event => {
+window.onunhandledrejection = (event) => {
   console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
 };
 ```
@@ -66,7 +66,7 @@ window.onunhandledrejection = event => {
 ({{Glossary("Node.js")}} など) 多くの環境では、既定では処理されなかった Promise の拒否はコンソールに報告されます。 `unhandledrejection` イベントのハンドラー — と、さらに実行したいその他のタスク — を追加して、 {{domxref("Event.preventDefault()", "preventDefault()")}} を呼び出すことでイベントをキャンセルし、実行時のログ出力コードが扱われるまでバブリングすることを防ぐことができます。 これは `unhandledrejection` がキャンセル可能であるためです。
 
 ```js
-window.addEventListener('unhandledrejection', function (event) {
+window.addEventListener("unhandledrejection", function (event) {
   // ...your code here to handle the unhandled rejection...
 
   // Prevent the default handling (such as outputting the
@@ -78,17 +78,15 @@ window.addEventListener('unhandledrejection', function (event) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                           | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#unhandled-promise-rejections', 'unhandledrejection')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.unhandledrejection_event")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{SectionOnPage("/ja/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}
+- [プロミスの拒否イベント](/ja/docs/Web/JavaScript/Guide/Using_promises#%E3%83%97%E3%83%AD%E3%83%9F%E3%82%B9%E3%81%AE%E6%8B%92%E5%90%A6%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88)
 - {{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}} イベントハンドラープロパティ[1](#seealso-footnote-1)
 - {{domxref("Window/rejectionhandled_event", "rejectionhandled")}} イベント
 - {{jsxref("Promise")}}

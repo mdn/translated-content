@@ -1,6 +1,8 @@
 ---
-title: Node.lookupNamespaceURI()
+title: "Node: lookupNamespaceURI() メソッド"
 slug: Web/API/Node/lookupNamespaceURI
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
@@ -9,15 +11,16 @@ slug: Web/API/Node/lookupNamespaceURI
 
 ## 構文
 
-```js
-lookupNamespaceURI(prefix);
+```js-nolint
+lookupNamespaceURI(prefix)
 ```
 
 ### 引数
 
 - `prefix`
   - : 検索する接頭辞です。
-    > **メモ:** この引数は省略可能ではありませんが、 `null` に設定することはできます。
+    > [!NOTE]
+    > この引数は省略可能ではありませんが、 `null` に設定することはできます。
 
 ### 返値
 
@@ -28,24 +31,31 @@ lookupNamespaceURI(prefix);
 ## 例
 
 ```html
-Namespace URL for <code>xlink</code> on &lt;output&gt;: <output>未検査</output>.<br/>
-Namespace URL for <code>xml</code> on &lt;output&gt;: <output>未検査</output>.<br/>
-Namespace URL for <code>html</code> on &lt;output&gt;: <output>未検査</output>.<br/>
-Namespace URL for <code>``</code> on &lt;output&gt;: <output>未検査</output>.<br/>
-Namespace URL for <code>svg</code> on &lt;svg&gt;: <output>未検査</output>.<br/>
-Namespace URL for <code>xlink</code> on &lt;svg&gt;: <output>未検査</output>.<br/>
-Namespace URL for <code>xml</code> on &lt;svg&gt;: <output>未検査</output>.<br/>
+Namespace URL for <code>xlink</code> on &lt;output&gt;:
+<output>未検査</output>.<br />
+Namespace URL for <code>xml</code> on &lt;output&gt;:
+<output>未検査</output>.<br />
+Namespace URL for <code>html</code> on &lt;output&gt;:
+<output>未検査</output>.<br />
+Namespace URL for <code>``</code> on &lt;output&gt;:
+<output>未検査</output>.<br />
+Namespace URL for <code>svg</code> on &lt;svg&gt;:
+<output>未検査</output>.<br />
+Namespace URL for <code>xlink</code> on &lt;svg&gt;:
+<output>未検査</output>.<br />
+Namespace URL for <code>xml</code> on &lt;svg&gt;:
+<output>未検査</output>.<br />
 <svg xmlns:svg="http://www.w3.org/2000/svg" height="1"></svg>
 <button>ここをクリックして結果を確認</button>
 ```
 
 ```js
-const button = document.getElementsByTagName('button')[0];
-button.addEventListener("click", function () {
-  const aHtmlElt = document.getElementsByTagName('output')[0];
-  const aSvgElt = document.getElementsByTagName('svg')[0];
+const button = document.querySelector("button");
+button.addEventListener("click", () => {
+  const aHtmlElt = document.querySelector("output");
+  const aSvgElt = document.querySelector("svg");
 
-  const result = document.getElementsByTagName('output');
+  const result = document.getElementsByTagName("output");
   result[0].value = aHtmlElt.lookupNamespaceURI("xlink");
   result[1].value = aHtmlElt.lookupNamespaceURI("xml");
   result[2].value = aHtmlElt.lookupNamespaceURI("html");

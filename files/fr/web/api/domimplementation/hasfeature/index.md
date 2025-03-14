@@ -1,11 +1,6 @@
 ---
 title: DOMImplementation.hasFeature()
 slug: Web/API/DOMImplementation/hasFeature
-tags:
-  - API
-  - DOM
-  - Méthodes
-translation_of: Web/API/DOMImplementation/hasFeature
 ---
 
 {{ApiRef("DOM")}}

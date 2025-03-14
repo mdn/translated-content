@@ -1,76 +1,83 @@
 ---
 title: <script>
 slug: Web/SVG/Element/script
+l10n:
+  sourceCommit: 2e5fc06de139c56873a20ec4bc3bf5600ea3cbef
 ---
 
-SVG `script` 要素は、HTML の [`script`](/ja/HTML/Element/Script) 要素と同じく、 スクリプト（例えば ECMAScript）を設置するための場所です。
+{{SVGRef}}
 
-すべての `script` 要素内で定義されたすべての関数は、現在のドキュメント全体でグローバルスコープを持っています。
+SVG の `script` 要素により、スクリプトを SVG 文書に追加することができます。
 
-## 利用可能な場所
-
-{{svginfo}}
+> [!NOTE]
+> SVG の `script` 要素は HTML の {{HTMLElement('script')}} 要素と同等ですが、[`src`](/ja/docs/Web/HTML/Element/script#src) の代わりに {{SVGAttr('href')}} 属性を使用したり、ECMAScript モジュールには今のところ対応していないなど、いくつかの相違点があります（詳細は下記のブラウザーの互換性を参照してください）。
 
 ## 例
 
-次のコードスニペットは、SVG の `script` タグの使用方法を示します。このコードでは、SVG {{SVGElement("circle")}} 要素の半径を変更するために JavaScript を使用します。
-
 ```html
-<svg width="100%" height="100%" viewBox="0 0 100 100"
-     xmlns="http://www.w3.org/2000/svg">
-  <script type="text/javascript">
+円をクリックすると色が変わります。
+<svg
+  viewBox="0 0 10 10"
+  height="120px"
+  width="120px"
+  xmlns="http://www.w3.org/2000/svg">
+  <circle cx="5" cy="5" r="4" />
+
+  <script>
     // <![CDATA[
-    function change(evt) {
-      var target = evt.target;
-      var radius = target.getAttribute("r");
+    function getColor() {
+      const R = Math.round(Math.random() * 255)
+        .toString(16)
+        .padStart(2, "0");
 
-      if (radius == 15) {
-        radius = 45;
-      } else {
-        radius = 15;
-      }
+      const G = Math.round(Math.random() * 255)
+        .toString(16)
+        .padStart(2, "0");
 
-      target.setAttribute("r",radius);
-   }
-   // ]]>
+      const B = Math.round(Math.random() * 255)
+        .toString(16)
+        .padStart(2, "0");
+
+      return `#${R}${G}${B}`;
+    }
+
+    document.querySelector("circle").addEventListener("click", (e) => {
+      e.target.style.fill = getColor();
+    });
+    // ]]>
   </script>
-
-  <circle cx="50" cy="50" r="45" fill="green"
-          onclick="change(evt)" />
 </svg>
 ```
 
-結果:
-
-{{EmbedLiveSample("Example",150,165)}}
+{{EmbedLiveSample('Example', 150, '100%')}}
 
 ## 属性
 
-### グローバル属性
-
-- [コア属性](/ja/SVG/Attribute#Core) »
-- [Xlink 属性](/ja/SVG/Attribute#XLink) »
-- {{SVGAttr("externalResourcesRequired")}}
-
-### 専用属性
-
+- [`crossorigin`](/ja/docs/Web/HTML/Element/script#crossorigin)
+  - : この属性は、[CORS 設定](/ja/docs/Web/HTML/Attributes/crossorigin) を HTML の {{HTMLElement('script')}} 要素のように定義します。
+    _値の型_: [**\<string>**](/ja/docs/Web/CSS/string); _既定値_: `?`; _アニメーション_: **可**
+- {{SVGAttr("href")}}
+  - : 読み込むスクリプトの {{Glossary("URL")}} です。
+    _値の型_: **[\<URL>](/ja/docs/Web/SVG/Content_type#url)** ; _既定値_: _none_; _アニメーション_: **不可**
 - {{SVGAttr("type")}}
-- {{SVGAttr("xlink:href")}}
+  - : この属性は使用するスクリプト言語の型を定義します。
+    _値の型_: [**\<string>**](/ja/docs/Web/CSS/string); _既定値_: `application/ecmascript`; _アニメーション_: **不可**
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
+  - : 読み込むスクリプトの {{Glossary("URL")}} です。
+    _値の型_: **[\<URL>](/ja/docs/Web/SVG/Content_type#url)** ; _既定値_: _none_; _アニメーション_: **不可**
 
-## DOM インターフェイス
+## 使用可能な場所
 
-この要素は [`SVGScriptElement`](/ja/DOM/SVGScriptElement) インターフェイスを実装します。
+{{svginfo}}
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー互換性
+## ブラウザーの互換性
 
-{{Compat("svg.elements.script")}}
+{{Compat}}
 
 ## 関連情報
 
-- HTML の [`script` 要素](/ja/HTML/Element/Script)
-
-{{SVGRef}}
+- [HTML の `script` 要素](/ja/docs/Web/HTML/Element/script)

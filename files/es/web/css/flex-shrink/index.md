@@ -5,7 +5,7 @@ slug: Web/CSS/flex-shrink
 
 {{CSSRef}}
 
-La propiedad [CSS](/es/docs/CSS) **`flex-shrink`** especifica el factor de contracción de un flex item. Los flex items se encogerán para llenar el contenedor de acuerdo a su número `flex-shrink` , cuando el tamaño por defecto de los flex items sea mayor al de su contenedor flex container.
+La propiedad [CSS](/es/docs/Web/CSS) **`flex-shrink`** especifica el factor de contracción de un flex item. Los flex items se encogerán para llenar el contenedor de acuerdo a su número `flex-shrink` , cuando el tamaño por defecto de los flex items sea mayor al de su contenedor flex container.
 
 #### Ejemplo
 
@@ -22,11 +22,36 @@ flex-shrink: unset;
 ```html hidden
 <div class="grid">
   <div class="row">
-    <div class="cell">flex-shrink:
+    <div class="cell">
+      flex-shrink:
       <div class="container">
-        <div class="item small"><strong>0.5</strong> <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at purus vitae ipsum hendrerit vulputate quis vitae risus.</small></p></div>
-        <div class="item mid"><strong>1</strong> <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at purus vitae ipsum hendrerit vulputate quis vitae risus.</small></p></div>
-        <div class="item large"><strong>3</strong> <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at purus vitae ipsum hendrerit vulputate quis vitae risus.</small></p></div>
+        <div class="item small">
+          <strong>0.5</strong>
+          <p>
+            <small
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
+              purus vitae ipsum hendrerit vulputate quis vitae risus.</small
+            >
+          </p>
+        </div>
+        <div class="item mid">
+          <strong>1</strong>
+          <p>
+            <small
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
+              purus vitae ipsum hendrerit vulputate quis vitae risus.</small
+            >
+          </p>
+        </div>
+        <div class="item large">
+          <strong>3</strong>
+          <p>
+            <small
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
+              purus vitae ipsum hendrerit vulputate quis vitae risus.</small
+            >
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -34,10 +59,11 @@ flex-shrink: unset;
 ```
 
 ```css hidden
-html,body {
+html,
+body {
   height: 100%;
   box-sizing: border-box;
-  background: #EEE;
+  background: #eee;
 }
 
 .grid {
@@ -55,9 +81,9 @@ html,body {
 }
 
 .cell {
-  margin: .5em;
-  padding: .5em;
-  background-color: #FFF;
+  margin: 0.5em;
+  padding: 0.5em;
+  background-color: #fff;
   overflow: hidden;
   text-align: left;
   flex: 1;
@@ -66,16 +92,16 @@ html,body {
 .note {
   background: #fff3d4;
   padding: 1em;
-  margin: .5em;
-  font: .8em sans-serif;
+  margin: 0.5em;
+  font: 0.8em sans-serif;
   text-align: left;
   flex: 1;
   white-space: nowrap;
 }
 
 .container {
-  background: #E4F0F5;
-  margin-top: .5em;
+  background: #e4f0f5;
+  margin-top: 0.5em;
 
   display: flex;
 }
@@ -85,9 +111,15 @@ html,body {
   padding: 1em;
 }
 
-.small { flex-shrink: 0.5; }
-.mid   { flex-shrink: 1; }
-.large { flex-shrink: 3; }
+.small {
+  flex-shrink: 0.5;
+}
+.mid {
+  flex-shrink: 1;
+}
+.large {
+  flex-shrink: 3;
+}
 ```
 
 {{EmbedLiveSample("", "100%", 280, "", "", "")}}
@@ -112,7 +144,9 @@ La propiedad `flex-shrink` se especifica como un único [`<número>`](#number).
 ### HTML
 
 ```html
-<p>El ancho del contenido es de 500px; el flex-basis de los flex items es 120px.</p>
+<p>
+  El ancho del contenido es de 500px; el flex-basis de los flex items es 120px.
+</p>
 <p>A, B, C tiene flex-shrink:1. D y E tienen flex-shrink:2</p>
 <p>El ancho de D y E es menor al de los otros.</p>
 <div id="content">
@@ -134,7 +168,7 @@ La propiedad `flex-shrink` se especifica como un único [`<número>`](#number).
 
 #content div {
   flex-basis: 120px;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .box {
@@ -156,9 +190,9 @@ La propiedad `flex-shrink` se especifica como un único [`<número>`](#number).
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.flex-shrink")}}
+{{Compat}}
 
 ## Vea también
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/es/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_

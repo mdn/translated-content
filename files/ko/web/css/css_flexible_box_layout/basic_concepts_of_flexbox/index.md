@@ -1,15 +1,13 @@
 ---
 title: flexbox의 기본 개념
-slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
-original_slug: Web/CSS/CSS_Flexible_Box_Layout/Flexbox의_기본_개념
+slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 ---
 
 {{CSSRef}}
 
 일명 flexbox라 불리는 Flexible Box module은 flexbox 인터페이스 내의 아이템 간 공간 배분과 강력한 정렬 기능을 제공하기 위한 1차원 레이아웃 모델 로 설계되었습니다. 이 글에서는 flexbox의 주요 기능에 대한 개요를 다룹니다. 더 자세한 내용은 가이드의 다른 글에서 탐구하게 될 것입니다.
 
-flexbox를 1차원이라 칭하는 것은, 레이아웃을 다룰 때 한 번에 하나의 차원(행이나 열)만을 다룬다는 뜻입니다. 이는 행과 열을 함께 조절하는 [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout)의 2차원 모델과는 대조됩니다.
+flexbox를 1차원이라 칭하는 것은, 레이아웃을 다룰 때 한 번에 하나의 차원(행이나 열)만을 다룬다는 뜻입니다. 이는 행과 열을 함께 조절하는 [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout)의 2차원 모델과는 대조됩니다.
 
 ## flexbox의 두 개의 축
 
@@ -26,21 +24,21 @@ flexbox를 다루려면 주축과 교차축이라는 두 개의 축에 대한 �
 
 `row` 혹은 `row-reverse`를 선택하면 주축은 **인라인 방향**으로 행을 따릅니다.
 
-![If flex-direction is set to row the main axis runs along the row in the inline direction.](https://mdn.mozillademos.org/files/15614/Basics1.png)
+![If flex-direction is set to row the main axis runs along the row in the inline direction.](basics1.svg)
 
 `column` 혹은 `column-reverse` 을 선택하면 주축은 페이지 상단에서 하단으로 **블록 방향**을 따릅니다.
 
-![If flex-direction is set to column the main axis runs in the block direction.](https://mdn.mozillademos.org/files/15615/Basics2.png)
+![If flex-direction is set to column the main axis runs in the block direction.](basics2.svg)
 
 ### 교차축
 
 교차축은 주축에 수직하므로, 만약 `flex-direction`(주축)이 `row` 나 `row-reverse` 라면 교차축은 열 방향을 따릅니다.
 
-![If flex-direction is set to row then the cross axis runs in the block direction.](https://mdn.mozillademos.org/files/15616/Basics3.png)
+![If flex-direction is set to row then the cross axis runs in the block direction.](basics3.svg)
 
 주축이 `column` 혹은 `column-reverse` 라면 교차축은 행 방향을 따릅니다.
 
-![If flex-direction is set to column then the cross axis runs in the inline direction.](https://mdn.mozillademos.org/files/15617/Basics4.png)
+![If flex-direction is set to column then the cross axis runs in the inline direction.](basics4.svg)
 
 flex 요소를 정렬하고 끝을 맞추(justify)려면 어느 축이 어느 방향인지 이해하는 것이 중요합니다; flexbox는 주축, 교차축을 따라 항목을 정렬하고 끝을 맞추는 각종 속성들을 적용하는 방식으로 동작합니다.
 
@@ -52,11 +50,11 @@ flexbox가 쓰기 방법(writing mode)을 가정하지 않는다는 것은 상�
 
 `flex-direction`이 `row`고 영어 문장을 문서에 쓰고 있다면, 주축의 시작선은 왼쪽 끝, 끝선은 오른쪽 끝이 될 것입니다.
 
-![Working in English the start edge is on the left.](https://mdn.mozillademos.org/files/15618/Basics5.png)
+![Working in English the start edge is on the left.](basics5.svg)
 
 아랍어 문장을 쓰고 있다면, 주축의 시작선은 오른쪽 끝, 끝 선은 왼쪽 끝이 될 것입니다.
 
-![The start edge in a RTL language is on the right.](https://mdn.mozillademos.org/files/15619/Basics6.png)
+![The start edge in a RTL language is on the right.](basics6.svg)
 
 영어와 아랍어는 모두 가로 쓰기를 채택하고 있으므로 두 예시에서 교차축의 시작선은 **flex 컨테이너**의 위 끝이며 끝선은 아래 끝입니다.
 
@@ -115,11 +113,11 @@ flexbox는 1차원 모델이지만 **flex 항목**이 여러 행에 나열되도
 - {{cssxref("flex-shrink")}}
 - {{cssxref("flex-basis")}}
 
-이 글에서는 위의 속성들에 대해 간략하게 살펴보겠습니다. 자세한 내용은 [Controlling Ratios of Flex Items on the Main Axis](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)에서 다룹니다.
+이 글에서는 위의 속성들에 대해 간략하게 살펴보겠습니다. 자세한 내용은 [Controlling Ratios of Flex Items on the Main Axis](/ko/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)에서 다룹니다.
 
 500 픽셀의 크기를 갖는 **flex 컨테이너** 내에 100 픽셀 크기의 자식 세 개가 존재할 때, **사용가능한 공간** 200 픽셀이 남게 됩니다. 기본적으로 flexbox는 이 공간을 마지막 자식 요소 다음에 빈공간으로 남겨둡니다.
 
-![This flex container has available space after laying out the items.](https://mdn.mozillademos.org/files/15620/Basics7.png)
+![This flex container has available space after laying out the items.](basics7.svg)
 
 위의 세 가지 속성을 변경한다는 것은 **flex 항목**에게 **사용가능한 공간**을 분배하는 방식을 변경하는 것입니다. **사용가능한 공간** 개념은 **flex 항목**을 정렬할 때 특히 중요합니다.
 
@@ -139,7 +137,7 @@ flexbox는 1차원 모델이지만 **flex 항목**이 여러 행에 나열되도
 
 `flex-grow` 속성이 주축에서 남는 공간을 항목들에게 분배하는 방법을 결정한다면 `flex-shrink` 속성은 주축의 공간이 부족할때 각 항목의 사이즈를 줄이는 방법을 정의합니다. 만약 **flex 컨테이너**가 **flex 항목**을 모두 포함할 만큼 넉넉한 공간을 갖고 있지 않고 `flex-shrink` 값이 양수이면 **flex 항목**은 flex-basis에 지정된 크기보다 작아집니다. 또한, `flex-grow` 속성과 마찬가지로 더 큰 `flex-shrink` 값을 갖는 항목의 사이즈가 더 빨리 줄어듭니다.
 
-항목의 최소 크기는 실제 축소량을 계산할 때 고려되기 때문에 flex-shrink 속성이 flex-grow 속성에 비해 덜 일관된 모습을 보여줄지도 모릅니다. `flex-shrink` 속성이 항목의 사이즈를 결정하는 알고리즘에 관해서는 [Controlling Ratios of Flex Items on the Main Axis](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)에서 자세히 살펴히보겠습니다.
+항목의 최소 크기는 실제 축소량을 계산할 때 고려되기 때문에 flex-shrink 속성이 flex-grow 속성에 비해 덜 일관된 모습을 보여줄지도 모릅니다. `flex-shrink` 속성이 항목의 사이즈를 결정하는 알고리즘에 관해서는 [Controlling Ratios of Flex Items on the Main Axis](/ko/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)에서 자세히 살펴히보겠습니다.
 
 > **참고:** `flex-grow` 와 `flex-shrink`의 값이 비율임을 유의하세요. **flex 항목**의 flex 속성을 모두 `1 1 200px` 로 지정하고 한 항목만 크기가 늘어나는 비율을 타 항목의 두배로 하고 싶으면 해당 **flex 항목**의 flex 속성을 `2 1 200px`로 지정하면 되지만, flex 속성 값을 모두 `10 1 200px`로 지정하고 늘어나는 비율을 두 배로 하고 싶은 항목의 flex 속성 값만 `20 1 200px`로 지정해도 동일하게 동작합니다.
 

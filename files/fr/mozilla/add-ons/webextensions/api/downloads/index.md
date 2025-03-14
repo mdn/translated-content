@@ -1,23 +1,13 @@
 ---
 title: downloads
 slug: Mozilla/Add-ons/WebExtensions/API/downloads
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads
 ---
 
 {{AddonSidebar}}
 
 Permet aux extensions d'interagir avec le gestionnaire de téléchargement du navigateur. Vous pouvez utiliser ce module API pour télécharger des fichiers, annuler, suspendre, reprendre des téléchargements et afficher les fichiers téléchargés dans le gestionnaire de fichiers.
 
-Pour utiliser cette API, vous devez disposer de l' [API permission](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "downloads" spécifiée dans votre fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json).
+Pour utiliser cette API, vous devez disposer de l' [API permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "downloads" spécifiée dans votre fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
 ## Types
 
@@ -82,15 +72,15 @@ Pour utiliser cette API, vous devez disposer de l' [API permission](/fr/Add-ons/
 - {{WebExtAPIRef("downloads.onChanged")}}
   - : Lorsque l'une des propriétés de {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} sauf les changements `bytesReceived`, cet événement se déclenche avec le `downloadId` et un objet contenant les propriétés qui ont changé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

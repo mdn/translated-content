@@ -1,8 +1,9 @@
 ---
 title: Updating extensions for Firefox 3.1
 slug: Mozilla/Firefox/Releases/3.5/Updating_extensions
-original_slug: Updating_extensions_for_Firefox_3.1
 ---
+
+{{FirefoxSidebar}}
 
 この記事は、自分の拡張機能を Firefox 3.1 で正しく動作するよう更新しようとしている拡張機能開発者のために役立つ情報を提供します。
 
@@ -14,7 +15,7 @@ original_slug: Updating_extensions_for_Firefox_3.1
 
 まずはじめに、拡張機能の `install.rdf` ファイルを編集して、(Firefox 3.1 beta 2 でテストを行っている場合は) `maxVersion` を 3.1b2 に更新し、それに合わせて `version` を上げましょう。
 
-Firefox のプロファイルを新規作成し、テストが常用のプロファイルに影響しないようにします。 Firefox が含まれるディレクトリに移動して、以下のコマンドを実行します。
+Firefox のプロファイルを新規作成し、テストが常用のプロファイルに影響しないようにします。 Firefox が含まれるディレクトリーに移動して、以下のコマンドを実行します。
 
 ```
 firefox -createProfile testBeta2
@@ -55,12 +56,13 @@ firefox -P testBeta2
 Firefox 3.1 以前は、[Storage API](/ja/Storage) を使って Places データベースへ直接アクセスする場合、以下のように少々工夫が必要でした。
 
 ```js
-var places = Components.classes["@mozilla.org/file/directory_service;1"].
-                        getService(Components.interfaces.nsIProperties).
-                        get("ProfD", Components.interfaces.nsIFile);
+var places = Components.classes["@mozilla.org/file/directory_service;1"]
+  .getService(Components.interfaces.nsIProperties)
+  .get("ProfD", Components.interfaces.nsIFile);
 places.append("places.sqlite");
-var db = Components.classes["@mozilla.org/storage/service;1"].
-                    getService(Components.interfaces.mozIStorageService).openDatabase(places);
+var db = Components.classes["@mozilla.org/storage/service;1"]
+  .getService(Components.interfaces.mozIStorageService)
+  .openDatabase(places);
 ```
 
 これは `places.sqlite` データベースファイルへのパスを自力で作成し、Storage アクセスのためのファイルを開くものでした。
@@ -68,8 +70,9 @@ var db = Components.classes["@mozilla.org/storage/service;1"].
 Firefox 3.1 には、Places データベースへアクセスするための便利な方法を提供する、専用のサービスが追加されており、上記の方法は Firefox 3.1 以降では機能しません。
 
 ```js
-var db = Components.classes["@mozilla.org/browser/nav-history-service;1"].
-                    getService(Components.interfaces.nsPIPlacesDatabase).DBConnection;
+var db = Components.classes[
+  "@mozilla.org/browser/nav-history-service;1"
+].getService(Components.interfaces.nsPIPlacesDatabase).DBConnection;
 ```
 
 ## テキストボックスの検索
@@ -95,7 +98,7 @@ JSON.jsm JavaScript モジュールは Firefox 3.1 では削除され、ネイ�
 Firefox 3 と Firefox 3.1 の両方について互換性を確保するには、以下のように記述します。
 
 ```js
-if (typeof(JSON) == "undefined") {
+if (typeof JSON == "undefined") {
   Components.utils.import("resource://gre/modules/JSON.jsm");
   JSON.parse = JSON.fromString;
   JSON.stringify = JSON.toString;
@@ -104,17 +107,17 @@ if (typeof(JSON) == "undefined") {
 
 JSON がネイティブサポートされていない場合は JSON.jsm JavaScript モジュールをインポートして、そのモジュールによって提供されているメソッドをネイティブ JSON で使われているものにマッピングします。これによって、同じ呼び出しが可能になります。
 
-また、`nsIJSON` インタフェースを直接利用することでも、この問題を回避できます。
+また、`nsIJSON` インターフェイスを直接利用することでも、この問題を回避できます。
 
 ## クローム登録に関する変更
 
-Firefox 3.1 では、リモートのクロームを利用可能にするセキュリティホールが修正されています。 これは、`chrome.manifest` ファイルに Web サイトを参照するリソースが含まれているすべてのアドオンに影響します。
+Firefox 3.1 では、リモートのクロームを利用可能にするセキュリティホールが修正されています。 これは、`chrome.manifest` ファイルにウェブサイトを参照するリソースが含まれているすべてのアドオンに影響します。
 
-この問題は {{ Bug(466582) }} で詳しく説明されています。`nsIProtocolHandler` インタフェースに追加された新しいフラグ `URI_IS_LOCAL_RESOURCE` によって、そのプロトコルがクロームとして登録しても安全であることを示すことができます。 独自のプロトコルハンドラを作成し、それを `chrome.manifest` 内で登録しようとするアドオンは、正しく動作するようにこのフラグを追加する必要があります。
+この問題は [Firefox バグ 466582](https://bugzil.la/466582) で詳しく説明されています。`nsIProtocolHandler` インターフェイスに追加された新しいフラグ `URI_IS_LOCAL_RESOURCE` によって、そのプロトコルがクロームとして登録しても安全であることを示すことができます。 独自のプロトコルハンドラーを作成し、それを `chrome.manifest` 内で登録しようとするアドオンは、正しく動作するようにこのフラグを追加する必要があります。
 
 ## カスタマイズ可能なツールバー
 
-Firefox 3.1 では、カスタマイズ可能なツールバーの挙動が次のように変更されました。\<xul:toolbar/> バインディングは、関連付けられた \<xul:toolbarpalette/> からツールバー削除、もしくはツールバーへ追加するようになりました。これまでは、項目を複製してツールバーへコピーしていました。 つまり、パレットには、ツールバー上に存在しないアイテムしか含めることができません。これまでの挙動では、ツールバー上に表示されているかどうかに関わらず、カスタマイズ可能なすべての要素が含まれていました。 これは、\<xul:toolbarpalette/> からカスタマイズ可能なすべてのツールバー項目を取得できることに依存した処理を行っていたり、ツールバーのカスタマイズ中に動的にパレットへ項目を挿入し、それらを利用可能にしようとしているアドオンで問題となる可能性があります。 詳しくは、{{ Bug(407725) }} と {{ Bug(467045) }} をご覧ください。
+Firefox 3.1 では、カスタマイズ可能なツールバーの挙動が次のように変更されました。\<xul:toolbar/> バインディングは、関連付けられた \<xul:toolbarpalette/> からツールバー削除、もしくはツールバーへ追加するようになりました。これまでは、項目を複製してツールバーへコピーしていました。 つまり、パレットには、ツールバー上に存在しないアイテムしか含めることができません。これまでの挙動では、ツールバー上に表示されているかどうかに関わらず、カスタマイズ可能なすべての要素が含まれていました。 これは、\<xul:toolbarpalette/> からカスタマイズ可能なすべてのツールバー項目を取得できることに依存した処理を行っていたり、ツールバーのカスタマイズ中に動的にパレットへ項目を挿入し、それらを利用可能にしようとしているアドオンで問題となる可能性があります。 詳しくは、[Firefox バグ 407725](https://bugzil.la/407725) と [Firefox バグ 467045](https://bugzil.la/467045) をご覧ください。
 
 ## 興味深い新機能
 

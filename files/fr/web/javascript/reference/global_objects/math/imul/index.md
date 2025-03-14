@@ -1,26 +1,32 @@
 ---
 title: Math.imul()
 slug: Web/JavaScript/Reference/Global_Objects/Math/imul
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/imul
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/imul
 ---
 
 {{JSRef}}
 
 La fonction **`Math.imul()`** renvoie le résultat de la multiplication de deux nombres, calculée avec la représentation sur 32 bits de ces nombres, à la façon du langage C.
 
-{{EmbedInteractiveExample("pages/js/math-imul.html")}}
+{{InteractiveExample("JavaScript Demo: Math.imul()")}}
+
+```js interactive-example
+console.log(Math.imul(3, 4));
+// Expected output: 12
+
+console.log(Math.imul(-5, 12));
+// Expected output: -60
+
+console.log(Math.imul(0xffffffff, 5));
+// Expected output: -5
+
+console.log(Math.imul(0xfffffffe, 5));
+// Expected output: -10
+```
 
 ## Syntaxe
 
 ```js
-Math.imul(a, b)
+Math.imul(a, b);
 ```
 
 ### Paramètres
@@ -43,9 +49,9 @@ Le résultat de la multiplication sur 32 bits des valeurs passées en argument (
 ### Utiliser `Math.imul()`
 
 ```js
-Math.imul(2, 4);          // 8
-Math.imul(-1, 8);         //-8
-Math.imul(-2, -2);        // 4
+Math.imul(2, 4); // 8
+Math.imul(-1, 8); //-8
+Math.imul(-2, -2); // 4
 Math.imul(0xffffffff, 5); //-5
 Math.imul(0xfffffffe, 5); //-10
 ```
@@ -55,15 +61,17 @@ Math.imul(0xfffffffe, 5); //-10
 Si elle n'est pas disponible, cette fonction peut être émulée de la façon suivante :
 
 ```js
-Math.imul = Math.imul || function(a, b) {
-  var ah  = (a >>> 16) & 0xffff;
-  var al = a & 0xffff;
-  var bh  = (b >>> 16) & 0xffff;
-  var bl = b & 0xffff;
-  // Le décalage par 0 rétablit le signe de la partie haute
-  // le |0 final convertit la valeur non-signée en une valeur signée
-  return ((al * bl) + (((ah * bl + al * bh) << 16) >>> 0)|0);
-};
+Math.imul =
+  Math.imul ||
+  function (a, b) {
+    var ah = (a >>> 16) & 0xffff;
+    var al = a & 0xffff;
+    var bh = (b >>> 16) & 0xffff;
+    var bl = b & 0xffff;
+    // Le décalage par 0 rétablit le signe de la partie haute
+    // le |0 final convertit la valeur non-signée en une valeur signée
+    return (al * bl + (((ah * bl + al * bh) << 16) >>> 0)) | 0;
+  };
 ```
 
 ## Spécifications

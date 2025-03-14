@@ -1,26 +1,44 @@
 ---
-title: '<dd> : l''élément de détail d''une description'
+title: "<dd> : l'élément de détail d'une description"
 slug: Web/HTML/Element/dd
-tags:
-  - Definition
-  - Description Details
-  - Description list
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-  - Web
-  - dd
-  - details
-translation_of: Web/HTML/Element/dd
-browser-compat: html.elements.dd
 ---
 
 {{HTMLSidebar}}
 
 L'élément HTML **`<dd>`** fournit la description, la définition ou la valeur du terme précédent ([`<dt>`](/fr/docs/Web/HTML/Element/dt)) dans une liste de description ([`<dl>`](/fr/docs/Web/HTML/Element/dl)).
 
-{{EmbedInteractiveExample("pages/tabbed/dd.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;dd&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Cryptids of Cornwall:</p>
+
+<dl>
+  <dt>Beast of Bodmin</dt>
+  <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+  <dt>Morgawr</dt>
+  <dd>A sea serpent.</dd>
+
+  <dt>Owlman</dt>
+  <dd>A giant owl-like creature.</dd>
+</dl>
+```
+
+```css interactive-example
+p,
+dt {
+  font-weight: bold;
+}
+
+dl,
+dd {
+  font-size: 0.9rem;
+}
+
+dd {
+  margin-bottom: 1em;
+}
+```
 
 <table class="properties">
   <tbody>

@@ -1,18 +1,11 @@
 ---
 title: HTMLCanvasElement.toDataURL()
 slug: Web/API/HTMLCanvasElement/toDataURL
-tags:
-  - API
-  - Canvas
-  - HTMLCanvasElement
-  - Method
-  - Reference
-translation_of: Web/API/HTMLCanvasElement/toDataURL
 ---
 
 {{APIRef("Canvas API")}}
 
-**`HTMLCanvasElement.toDataURL()`** — метод, который возвращает [data URI](/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) изображения в
+**`HTMLCanvasElement.toDataURL()`** — метод, который возвращает [data URI](/ru/docs/Web/URI/Schemes/data) изображения в
 формате, заданном параметром `type` (по умолчанию [PNG](https://ru.wikipedia.org/wiki/PNG)). Возвращаемое изображение имеет
 разрешение 96 dpi.
 
@@ -38,7 +31,7 @@ canvas.toDataURL(type, encoderOptions);
 
 ### Возвращаемое значение
 
-Строка ({{domxref("DOMString")}}), содержащая запрошенный [data URI](/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
+Строка ({{domxref("DOMString")}}), содержащая запрошенный [data URI](/ru/docs/Web/URI/Schemes/data).
 
 ### Исключения
 
@@ -57,7 +50,7 @@ canvas.toDataURL(type, encoderOptions);
 Вы можете получить его data-URL следующим образом:
 
 ```js
-var canvas = document.getElementById('canvas');
+var canvas = document.getElementById("canvas");
 var dataURL = canvas.toDataURL();
 console.log(dataURL);
 // "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNby
@@ -67,10 +60,10 @@ console.log(dataURL);
 ### Настройка качества изображения с помощью jpegs
 
 ```js
-var fullQuality = canvas.toDataURL('image/jpeg', 1.0);
+var fullQuality = canvas.toDataURL("image/jpeg", 1.0);
 // data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ...9oADAMBAAIRAxEAPwD/AD/6AP/Z"
-var mediumQuality = canvas.toDataURL('image/jpeg', 0.5);
-var lowQuality = canvas.toDataURL('image/jpeg', 0.1);
+var mediumQuality = canvas.toDataURL("image/jpeg", 0.5);
+var lowQuality = canvas.toDataURL("image/jpeg", 0.1);
 ```
 
 ### Пример: Динамическое изменение изображений
@@ -86,24 +79,28 @@ var lowQuality = canvas.toDataURL('image/jpeg', 0.1);
 #### JavaScript
 
 ```js
-window.addEventListener('load', removeColors);
+window.addEventListener("load", removeColors);
 
 function showColorImg() {
-  this.style.display = 'none';
-  this.nextSibling.style.display = 'inline';
+  this.style.display = "none";
+  this.nextSibling.style.display = "inline";
 }
 
 function showGrayImg() {
-  this.previousSibling.style.display = 'inline';
-  this.style.display = 'none';
+  this.previousSibling.style.display = "inline";
+  this.style.display = "none";
 }
 
 function removeColors() {
-  var aImages = document.getElementsByClassName('grayscale'),
-      nImgsLen = aImages.length,
-      oCanvas = document.createElement('canvas'),
-      oCtx = oCanvas.getContext('2d');
-  for (var nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0; nImgId < nImgsLen; nImgId++) {
+  var aImages = document.getElementsByClassName("grayscale"),
+    nImgsLen = aImages.length,
+    oCanvas = document.createElement("canvas"),
+    oCtx = oCanvas.getContext("2d");
+  for (
+    var nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0;
+    nImgId < nImgsLen;
+    nImgId++
+  ) {
     oColorImg = aImages[nImgId];
     nWidth = oColorImg.offsetWidth;
     nHeight = oColorImg.offsetHeight;
@@ -114,7 +111,10 @@ function removeColors() {
     aPix = oImgData.data;
     nPixLen = aPix.length;
     for (nPixel = 0; nPixel < nPixLen; nPixel += 4) {
-      aPix[nPixel + 2] = aPix[nPixel + 1] = aPix[nPixel] = (aPix[nPixel] + aPix[nPixel + 1] + aPix[nPixel + 2]) / 3;
+      aPix[nPixel + 2] =
+        aPix[nPixel + 1] =
+        aPix[nPixel] =
+          (aPix[nPixel] + aPix[nPixel + 1] + aPix[nPixel + 2]) / 3;
     }
     oCtx.putImageData(oImgData, 0, 0);
     oGrayImg = new Image();
@@ -132,11 +132,11 @@ function removeColors() {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - Интерфейс {{domxref("HTMLCanvasElement")}}.
-- Статья о [Data URIs](/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) в разделе [HTTP](/ru/docs/Web/HTTP).
+- [Data URLs](/ru/docs/Web/URI/Schemes/data).

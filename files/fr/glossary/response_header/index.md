@@ -1,14 +1,9 @@
 ---
 title: En-tête de réponse
 slug: Glossary/Response_header
-tags:
-  - En-têtes
-  - Glossaire
-  - HTTP
-  - Mécanismes web
-translation_of: Glossary/Response_header
-original_slug: Glossaire/En-têtes_de_réponse
 ---
+
+{{GlossarySidebar}}
 
 Un **en-tête de réponse** est un {{glossary("header","en-tête HTTP")}} qui peut être utilisé dans une réponse HTTP et qui ne concerne pas le contenu du message. Les en-têtes de réponse comme {{HTTPHeader("Age")}}, {{HTTPHeader("Location")}} ou {{HTTPHeader("Server")}} sont utilisés pour donner un contexte plus détaillé de la réponse.
 
@@ -40,4 +35,4 @@ x-frame-options: DENY
 
 ### Savoir technique
 
-- [Liste de tous les en-têtes HTTP](/fr/docs/HTTP/Headers)
+- [Liste de tous les en-têtes HTTP](/fr/docs/Web/HTTP/Headers)

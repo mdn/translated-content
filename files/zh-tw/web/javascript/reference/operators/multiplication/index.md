@@ -1,17 +1,31 @@
 ---
-title: 相乘運算子 (*)
+title: 相乘運算子（*）
 slug: Web/JavaScript/Reference/Operators/Multiplication
 ---
 
 {{jsSidebar("Operators")}}
 
-相乘運算子 (`*`) 是用來取得兩個運算元的乘積。
+相乘運算子（`*`）是用來取得兩個運算元的乘積。
 
-{{EmbedInteractiveExample("pages/js/expressions-multiplication.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Multiplication operator")}}
+
+```js interactive-example
+console.log(3 * 4);
+// Expected output: 12
+
+console.log(-3 * 4);
+// Expected output: -12
+
+console.log("3" * 2);
+// Expected output: 6
+
+console.log("foo" * 2);
+// Expected output: NaN
+```
 
 ## 語法
 
-```js
+```js-nolint
 x * y
 ```
 
@@ -20,21 +34,21 @@ x * y
 ### 乘以數字
 
 ```js
- 2 * 2      // 4
--2 * 2     // -4
+2 * 2; // 4
+-2 * 2; // -4
 ```
 
 ### 乘以無限（Infinity）
 
 ```js
-Infinity * 0         // NaN
-Infinity * Infinity  // Infinity
+Infinity * 0; // NaN
+Infinity * Infinity; // Infinity
 ```
 
 ### 乘以非數字
 
 ```js
-'foo' * 2 // NaN
+"foo" * 2; // NaN
 ```
 
 ## 規範

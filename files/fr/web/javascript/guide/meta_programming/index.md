@@ -1,13 +1,6 @@
 ---
 title: Métaprogrammation
 slug: Web/JavaScript/Guide/Meta_programming
-tags:
-  - Guide
-  - JavaScript
-  - Proxy
-  - Reflect
-translation_of: Web/JavaScript/Guide/Meta_programming
-original_slug: Web/JavaScript/Guide/Métaprogrammation
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/iterateurs_et_generateurs","Web/JavaScript/Guide/Modules")}}
@@ -20,9 +13,10 @@ Introduits avec ECMAScript 2015, les objets {{jsxref("Proxy")}} permettent d'int
 
 ```js
 var handler = {
-  get: function(cible, nom){
+  get: function (cible, nom) {
     return nom in cible ? cible[nom] : 42;
-}};
+  },
+};
 var p = new Proxy({}, handler);
 p.a = 1;
 console.log(p.a, p.b); // 1, 42
@@ -30,13 +24,14 @@ console.log(p.a, p.b); // 1, 42
 
 Ici, l'objet `Proxy` définit une `cible` (ici c'est un objet vide) et un gestionnaire (`handler`) qui implémente une _trappe_ pour l'opération _get_. Ainsi, l'objet qui est « proxyfié » ne renverra pas `undefined` lorsqu'on tentera d'accéder à une propriété qui n'est pas définie, à la place le nombre 42 sera renvoyé.
 
-> **Note :** D'autres exemples sont disponibles sur la page de l'objet {{jsxref("Proxy")}}.
+> [!NOTE]
+> D'autres exemples sont disponibles sur la page de l'objet {{jsxref("Proxy")}}.
 
 ### Terminologie
 
 Lorsqu'on utilise les proxies et leurs fonctionnalités, on utilisera les termes suivants :
 
-- {{jsxref("Objets_globaux/Proxy/handler","gestionnaire (handler)","","true")}}
+- {{jsxref("Objets_globaux/Proxy/handler","gestionnaire (handler)","",1)}}
   - : L'objet qui contient les trappes.
 - trappes
   - : Les méthodes qui fournissent l'accès aux propriétés. Ce concept est analogue aux trappes utilisées dans les systèmes d'exploitations.
@@ -47,7 +42,7 @@ Lorsqu'on utilise les proxies et leurs fonctionnalités, on utilisera les termes
 
 ## Les gestionnaires et les trappes
 
-Le tableau suivant résume les différentes trappes disponibles pour les objets `Proxy`. Pour plus d'explications et de détails, voir les différents [pages de la référence](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Proxy/handler) sur chacun de ces concepts.
+Le tableau suivant résume les différentes trappes disponibles pour les objets `Proxy`. Pour plus d'explications et de détails, voir les différents [pages de la référence](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy) sur chacun de ces concepts.
 
 <table class="standard-table">
   <thead>
@@ -364,29 +359,32 @@ Le tableau suivant résume les différentes trappes disponibles pour les objets 
 La méthode {{jsxref("Proxy.revocable()")}} est utilisée pour créer un objet `Proxy` qui puisse être révoqué. Cela signifie que que le proxy pourra être révoqué avec la fonction `revoke` et arrêtera le proxy. Après cet arrêt, toute opération sur le proxy entraînera une exception {{jsxref("TypeError")}}.
 
 ```js
-var revocable = Proxy.revocable({}, {
-  get: function(cible, nom) {
-    return "[[" + nom + "]]";
-  }
-});
+var revocable = Proxy.revocable(
+  {},
+  {
+    get: function (cible, nom) {
+      return "[[" + nom + "]]";
+    },
+  },
+);
 var proxy = revocable.proxy;
 console.log(proxy.toto); // "[[toto]]"
 
 revocable.revoke();
 
 console.log(proxy.toto); // déclenche une TypeError
-proxy.toto = 1;          // une TypeError encore
-delete proxy.toto;       // toujours une TypeError
-typeof proxy             // "object", typeof ne déclenche aucune trappe
+proxy.toto = 1; // une TypeError encore
+delete proxy.toto; // toujours une TypeError
+typeof proxy; // "object", typeof ne déclenche aucune trappe
 ```
 
 ## Réflexion
 
-{{jsxref("Reflect")}} est un objet natif qui fournit des méthodes pour les opérations JavaScript qui peuvent être interceptées. Ces méthodes sont les mêmes que celles gérées par les {{jsxref("Objets_globaux/Proxy/handler","gestionnaires de proxy","","true")}}. `Reflect` n'est pas un constructeur et ne peut pas être utilisé comme une fonction !
+{{jsxref("Reflect")}} est un objet natif qui fournit des méthodes pour les opérations JavaScript qui peuvent être interceptées. Ces méthodes sont les mêmes que celles gérées par les {{jsxref("Objets_globaux/Proxy/handler","gestionnaires de proxy","",1)}}. `Reflect` n'est pas un constructeur et ne peut pas être utilisé comme une fonction !
 
 `Reflect` aide à transférer les opérations par défaut depuis le gestionnaire vers la cible.
 
-Par exemple, avec {{jsxref("Reflect.has()")}}, on obtient le comportement de l'opérateur [`in`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_in) sous forme d'une fonction :
+Par exemple, avec {{jsxref("Reflect.has()")}}, on obtient le comportement de l'opérateur [`in`](/fr/docs/Web/JavaScript/Reference/Operators/in) sous forme d'une fonction :
 
 ```js
 Reflect.has(Object, "assign"); // true

@@ -1,11 +1,6 @@
 ---
 title: import
 slug: Web/JavaScript/Reference/Statements/import
-tags:
-  - ECMAScript6
-  - Modules
-  - import
-translation_of: Web/JavaScript/Reference/Statements/import
 ---
 
 {{jsSidebar("Statements")}}
@@ -60,25 +55,28 @@ import * as myModule from "my-module.js";
 모듈에서 하나의 멤버만 가져옵니다. 현재 범위 내에 `myMember` 이 들어갑니다.
 
 ```js
-import {myMember} from "my-module.js";
+import { myMember } from "my-module.js";
 ```
 
 모듈에서 여러 멤버들을 가져옵니다. 현재 범위 내에 `foo` 와 `bar` 이 들어갑니다.
 
 ```js
-import {foo, bar} from "my-module.js";
+import { foo, bar } from "my-module.js";
 ```
 
 멤버를 가져올 때 좀 더 편리한 별명을 지정해줍니다. 현재 범위 내에 `shortName` 이 들어갑니다.
 
 ```js
-import {reallyReallyLongModuleMemberName as shortName} from "my-module.js";
+import { reallyReallyLongModuleMemberName as shortName } from "my-module.js";
 ```
 
 모듈에서 여러 멤버들을 편리한 별명을 지정하며 가져옵니다.
 
 ```js
-    import {reallyReallyLongModuleMemberName as shortName, anotherLongModuleName as short} from "my-module.js";
+import {
+  reallyReallyLongModuleMemberName as shortName,
+  anotherLongModuleName as short,
+} from "my-module.js";
 ```
 
 어떠한 바인딩 없이 모듈 전체의 사이드 이펙트만 가져옵니다.
@@ -107,7 +105,7 @@ import myDefault, * as myModule from "my-module.js";
 또는
 
 ```js
-import myDefault, {foo, bar} from "my-module.js";
+import myDefault, { foo, bar } from "my-module.js";
 // specific, named imports
 ```
 
@@ -120,19 +118,19 @@ AJAX JSON 리퀘스트 처리를 돕는 보조 파일을 가져옵니다.
 function getJSON(url, callback) {
   let xhr = new XMLHttpRequest();
   xhr.onload = function () {
-    callback(this.responseText)
+    callback(this.responseText);
   };
   xhr.open("GET", url, true);
   xhr.send();
 }
 
 export function getUsefulContents(url, callback) {
-  getJSON(url, data => callback(JSON.parse(data)));
+  getJSON(url, (data) => callback(JSON.parse(data)));
 }
 
 // --main.js--
 import { getUsefulContents } from "file.js";
-getUsefulContents("http://www.example.com", data => {
+getUsefulContents("http://www.example.com", (data) => {
   doSomethingUseful(data);
 });
 ```
@@ -150,4 +148,4 @@ getUsefulContents("http://www.example.com", data => {
 - {{jsxref("Statements/export", "export")}}
 - [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- [Axel Rauschmayer's book: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+- [Axel Rauschmayer's book: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)

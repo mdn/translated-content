@@ -20,7 +20,7 @@ slug: Web/API/XMLHttpRequest/response
 返回的内容会被作为原始文本数据处理（因为这里没有覆盖 {{domxref("XMLHttpRequest.responseType", "responseType")}} 的默认值）。
 
 ```js
-const url = 'somePage.html'; // 一个本地页面
+const url = "somePage.html"; // 一个本地页面
 
 function load(url, callback) {
   const xhr = new XMLHttpRequest();
@@ -29,10 +29,10 @@ function load(url, callback) {
     if (xhr.readyState === 4) {
       callback(xhr.response);
     }
-  }
+  };
 
-  xhr.open('GET', url, true);
-  xhr.send('');
+  xhr.open("GET", url, true);
+  xhr.send("");
 }
 ```
 
@@ -46,5 +46,5 @@ function load(url, callback) {
 
 ## 参见
 
-- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - 获取文本和 HTML/XML 数据：{{domxref("XMLHttpRequest.responseText")}} 和 {{domxref("XMLHttpRequest.responseXML")}}

@@ -1,19 +1,28 @@
 ---
-title: 'SyntaxError: Unexpected token'
+title: "SyntaxError: Unexpected token"
 slug: Web/JavaScript/Reference/Errors/Unexpected_token
 ---
 
 {{jsSidebar("Errors")}}
 
+JavaScript 异常“unexpected token”会在解析器在给定位置没有识别到它可以理解的标记（而无法理解程序的结构）时发生。这可能只是一个简单的拼写错误。
+
 ## 信息
 
 ```plain
-SyntaxError: expected expression, got "x"
-SyntaxError: expected property name, got "x"
-SyntaxError: expected target, got "x"
-SyntaxError: expected rest argument name, got "x"
-SyntaxError: expected closing parenthesis, got "x"
-SyntaxError: expected '=>' after argument list, got "x"
+SyntaxError: Unexpected token ';' (V8-based)
+SyntaxError: Unexpected identifier 'x' (V8-based)
+SyntaxError: Unexpected number (V8-based)
+SyntaxError: Unexpected string (V8-based)
+SyntaxError: Unexpected regular expression (V8-based)
+SyntaxError: Unexpected template string (V8-based)
+SyntaxError: unexpected token: identifier (Firefox)
+SyntaxError: expected expression, got "x" (Firefox)
+SyntaxError: expected property name, got "x" (Firefox)
+SyntaxError: expected target, got "x" (Firefox)
+SyntaxError: expected meta, got "x" (Firefox)
+SyntaxError: expected rest argument name, got "x" (Firefox)
+SyntaxError: expected closing parenthesis, got "x" (Firefox)
 ```
 
 ## 错误类型
@@ -30,7 +39,7 @@ SyntaxError: expected '=>' after argument list, got "x"
 
 例如，在调用函数时，不允许使用尾随逗号。有尾逗号的时候，JavaScript 会期望有另一个参数，可以是任何表达式。
 
-```js example-bad
+```js-nolint example-bad
 Math.max(2, 42,);
 // SyntaxError: expected expression, got ')'
 ```
@@ -39,9 +48,9 @@ Math.max(2, 42,);
 
 ```js example-good
 Math.max(2, 42);
-Math.max(2, 42, 13+37);
+Math.max(2, 42, 13 + 37);
 ```
 
-## 相关
+## 参见
 
-- {{jsxref("Math.max()")}}
+- {{jsxref("SyntaxError")}}

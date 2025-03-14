@@ -1,14 +1,24 @@
 ---
 title: Definições de Método
 slug: Web/JavaScript/Reference/Functions/Method_definitions
-original_slug: Web/JavaScript/Reference/Functions/Definicoes_metodos
 ---
 
 {{JsSidebar("Functions")}}
 
 No ECMAScript 2015 foi introduzida uma sintaxe reduzida para definição de métodos em inicializadores de objetos. É uma abreviação para uma função atribuída ao nome do método.
 
-{{EmbedInteractiveExample("pages/js/functions-definitions.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Definitions")}}
+
+```js interactive-example
+const obj = {
+  foo() {
+    return "bar";
+  },
+};
+
+console.log(obj.foo());
+// Expected output: "bar"
+```
 
 ## Sintaxe
 
@@ -33,8 +43,8 @@ Dado o seguinte código:
 
 ```js
 var obj = {
-  foo: function() {},
-  bar: function() {}
+  foo: function () {},
+  bar: function () {},
 };
 ```
 
@@ -43,7 +53,7 @@ Agora você pode reduzi-lo para isto:
 ```js
 var obj = {
   foo() {},
-  bar() {}
+  bar() {},
 };
 ```
 
@@ -57,20 +67,18 @@ Os [generator methods](/pt-BR/docs/Web/JavaScript/Reference/Statements/function*
 ```js
 // Utilizando a propriedade com nome (pre-ES6)
 var obj2 = {
-  g: function*() {
+  g: function* () {
     var indice = 0;
-    while(true)
-      yield indice++;
-  }
+    while (true) yield indice++;
+  },
 };
 
 // O mesmo objeto utilizando a sintaxe reduzida
 var obj2 = {
-  * g() {
+  *g() {
     var indice = 0;
-    while(true)
-      yield indice++;
-  }
+    while (true) yield indice++;
+  },
 };
 
 var coisa = obj2.g();
@@ -87,14 +95,14 @@ console.log(coisa.next().value); // 1
 var obj3 = {
   f: async function () {
     await alguma_promise;
-  }
+  },
 };
 
 // O mesmo objeto com a sintaxe reduzida
 var obj3 = {
   async f() {
     await alguma_promise;
-  }
+  },
 };
 ```
 
@@ -108,16 +116,16 @@ var obj4 = {
     yield 1;
     yield 2;
     yield 3;
-  }
+  },
 };
 
 // O mesmo objeto com a sintaxe reduzida
 var obj4 = {
-  async* f() {
-   yield 1;
-   yield 2;
-   yield 3;
-  }
+  async *f() {
+    yield 1;
+    yield 2;
+    yield 3;
+  },
 };
 ```
 
@@ -129,12 +137,12 @@ Métodos assim definidos não são construtores e lançarão um {{jsxref("TypeEr
 var obj = {
   metodo() {},
 };
-new obj.metodo; // TypeError: obj.method is not a constructor
+new obj.metodo(); // TypeError: obj.method is not a constructor
 
 var obj = {
-  * g() {}
+  *g() {},
 };
-new obj.g; // TypeError: obj.g is not a constructor (modificado no ES2016)
+new obj.g(); // TypeError: obj.g is not a constructor (modificado no ES2016)
 ```
 
 ## Exemplos
@@ -143,8 +151,10 @@ new obj.g; // TypeError: obj.g is not a constructor (modificado no ES2016)
 
 ```js
 var obj = {
-  a : "foo",
-  b(){ return this.a; }
+  a: "foo",
+  b() {
+    return this.a;
+  },
 };
 console.log(obj.b()); // "foo"
 ```
@@ -155,9 +165,15 @@ A sintaxe reduzida também suporta nome de propriedades computados.
 
 ```js
 var bar = {
-  foo0 : function (){return 0;},
-  foo1(){return 1;},
-  ["foo" + 2](){return 2;},
+  foo0: function () {
+    return 0;
+  },
+  foo1() {
+    return 1;
+  },
+  ["foo" + 2]() {
+    return 2;
+  },
 };
 
 console.log(bar.foo0()); // 0
@@ -167,14 +183,11 @@ console.log(bar.foo2()); // 2
 
 ## Especificações
 
-| Especificações                                                                                   | Estado                       | Comentário          |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-method-definitions', 'Method definitions')}}     | {{Spec2('ES6')}}         | Initial definition. |
-| {{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.functions.method_definitions")}}
+{{Compat}}
 
 ## Veja também
 

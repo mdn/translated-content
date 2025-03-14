@@ -9,7 +9,8 @@ A palavra-chave CSS **`initial`** CSS se aplica ao [valor inicial (ou padrão)](
 
 Isto inclui também o atalho CSS {{cssxref("all")}}, no qual o `initial` pode ser utilizado para restaurar todas as propriedades CSS para o seu estado inicial.
 
-> **Note:** **Nota:** Em [propriedades herdadas](/pt-BR/docs/Web/CSS/inheritance#propriedades_herdadas), O valor inicial pode ser inesperado. Neste caso, considere o uso dos termos {cssxref("inherit")}}, {{cssxref("unset")}}, ou {{cssxref("revert")}}.
+> [!NOTE]
+> Em [propriedades herdadas](/pt-BR/docs/Web/CSS/Inheritance#propriedades_herdadas), O valor inicial pode ser inesperado. Neste caso, considere o uso dos termos {cssxref("inherit")}}, {{cssxref("unset")}}, ou {{cssxref("revert")}}.
 
 ## Exemplo
 
@@ -39,14 +40,11 @@ em {
 
 ## Especificações
 
-| Specification                                                            | Status                           | Comment                  |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------------ |
-| {{ SpecName('CSS4 Cascade', '#initial', 'initial') }} | {{Spec2('CSS4 Cascade')}} | No changes from Level 3. |
-| {{ SpecName('CSS3 Cascade', '#initial', 'initial') }} | {{Spec2('CSS3 Cascade')}} | Initial definition.      |
+{{Specifications}}
 
 ## Compatibilidade de navegadores
 
-{{Compat("css.types.global_keywords.initial")}}
+{{Compat}}
 
 ## Veja também
 

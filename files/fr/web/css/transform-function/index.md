@@ -1,11 +1,6 @@
 ---
 title: transform-function
 slug: Web/CSS/transform-function
-tags:
-  - CSS
-  - Reference
-  - Type de donnée
-translation_of: Web/CSS/transform-function
 ---
 
 {{CSSRef}}
@@ -14,13 +9,13 @@ Le type de donnée **`<transform-function>`** représente une fonction qui, lors
 
 ## Coordonnées en deux dimensions
 
-Il existe plusieurs modèles de repères géométriques permettant de décrire des transformations. Le repère utilisé le plus communément est [le système cartésien](https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_cart%C3%A9siennes).
+Il existe plusieurs modèles de repères géométriques permettant de décrire des transformations. Le repère utilisé le plus communément est [le système cartésien](https://fr.wikipedia.org/wiki/Coordonnées_cartésiennes).
 
 ### Le système de coordonnées cartésiennes
 
 ![](coord_in_r2.png)
 
-Pour [le système cartésien](https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_cart%C3%A9siennes), chaque point de l'espace est décrit avec deux valeurs, l'abscisse et l'ordonnée. L'origine du repère `(0, 0)` correspond au coin supérieur gauche de l'élément. À la différence des conventions usuelles, l'axe vertical (_y_) se dirige vers le bas. Chaque point est décrit avec la notation `(x,y)`.
+Pour [le système cartésien](https://fr.wikipedia.org/wiki/Coordonnées_cartésiennes), chaque point de l'espace est décrit avec deux valeurs, l'abscisse et l'ordonnée. L'origine du repère `(0, 0)` correspond au coin supérieur gauche de l'élément. À la différence des conventions usuelles, l'axe vertical (_y_) se dirige vers le bas. Chaque point est décrit avec la notation `(x,y)`.
 
 Chaque fonction linéaire est décrite avec une matrice 2 x 2 :
 
@@ -36,7 +31,7 @@ On peut appliquer plusieurs transformations les unes à la suite des autres :
 
 En utilisant cette notation, on peut décrire et enchaîner (ou composer) la plupart des transformations : des rotations, des homothéties et des distorsions. Les transformations qui sont composées entre elles sont appliquées dans l'ordre, de droite à gauche. Une transformation qui n'est pas linéaire ne pourra pas être représentée par cet outil. Ainsi, l'opération de translation ne pourra pas être représentée par une matrice et devra être gérée à part.
 
-[Les coordonnées homogènes de Möbius](https://fr.wikipedia.org/wiki/August_Ferdinand_M%C3%B6bius) utilisées en [géométrie projective](https://fr.wikipedia.org/wiki/G%C3%A9om%C3%A9trie_projective) permettent d'obtenir des matrices de transformations 3x3. Bien que plus complexe et moins usitées, celles-ci permettent de représenter les translations car ces dernières correspondent à des fonctions linéaires pour cette algèbre.
+[Les coordonnées homogènes de Möbius](https://fr.wikipedia.org/wiki/August_Ferdinand_Möbius) utilisées en [géométrie projective](https://fr.wikipedia.org/wiki/Géométrie_projective) permettent d'obtenir des matrices de transformations 3x3. Bien que plus complexe et moins usitées, celles-ci permettent de représenter les translations car ces dernières correspondent à des fonctions linéaires pour cette algèbre.
 
 ## Syntaxe
 
@@ -95,7 +90,7 @@ Plusieurs fonctions sont disponibles en CSS pour décrire des transformations. C
   - : La fonction `translate()` permet de déplacer un élément sur le plan formé par le document. Cette transformation est caractérisée par un vecteur contenant deux coordonnées dont chacune définit la quantité de déplacement horizontale et verticale.
 - [`translate3d()`](</fr/docs/Web/CSS/transform-function/translate3d()>)
   - : La fonction `translate3d()` permet de déplacer un élément dans l'espace en 3D. Cette transformation est caractérisée par un vecteur en 3 dimensions dont les coordonnées définissent les quantités de déplacement respectives aux trois axes.
-- [`translateX()`](/fr/docs/orphaned/Web/CSS/transform-function/translateX)
+- [`translateX()`](/fr/docs/Web/CSS/transform-function/translateX)
   - : La fonction `translateX()` permet de déplacer un élément horizontalement dans le plan. Cette transformation est caractérisée par une valeur de type {{cssxref("&lt;length&gt;")}} qui définit la quantité de déplacement horizontal. `translateX(tx)` est une notation raccourcie pour `translate(tx, 0)`.
 - [`translateY()`](</fr/docs/Web/CSS/transform-function/translateY()>)
   - : La fonction `translateY()` permet de déplacer un élément verticalement dans le plan. Cette transformation est caractérisée par une valeur de type {{cssxref("&lt;length&gt;")}} qui définit la quantité de déplacement vertical. `translateY(ty)` est une notation raccourcie pour `translate(0, ty)`.

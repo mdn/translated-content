@@ -1,12 +1,13 @@
 ---
 title: 异步函数（async function）表达式
 slug: Web/JavaScript/Reference/Operators/async_function
-original_slug: Web/JavaScript/Reference/Operators/async
 ---
 
 {{jsSidebar("Operators")}}
 
-**`async function`** 关键字用来在表达式中定义异步函数。当然，你也可以用[异步函数语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)来定义。
+**`async function`** 关键字可用于定义表达式中的异步函数。
+
+你还可以使用[异步函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)。
 
 ## 语法
 
@@ -37,19 +38,19 @@ async function name(param0, param1, /* … ,*/ paramN) {
 ### 参数
 
 - `name` {{optional_inline}}
-  - : 此异步函数的名称，可省略。如果省略则这个函数将成为*匿名*函数。该名称仅可在本函数中使用。
+  - : 函数名称，可省略。如果省略则这个函数将成为*匿名*函数。该名称仅可在本函数中使用。
 - `paramN` {{optional_inline}}
   - : 传入函数的形参名称。
 - `statements` {{optional_inline}}
-  - : 组成函数体的语句。
+  - : 构成函数主体的语句。
 
 ## 描述
 
-异步函数表达式与{{jsxref('Statements/async_function', '异步函数语句')}}非常相似，语法也基本相同。它们之间的主要区别在于异步函数表达式可以省略函数名称来创建一个*匿名*函数。另外，异步函数表达式还可以用在 [IIFE](/zh-CN/docs/Glossary/IIFE)（立即执行函数表达式，Immediately Invoked Function Expression）中，可以在定义后尽快执行，更多信息详见[函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)。
+`async function` 表达式与{{jsxref("Statements/async_function", "异步函数语句", "", 1)}}非常相似，语法也基本相同。异步 `function` 表达式和异步 `function` 语句之间的主要区别在于*函数名称*，它可以在 `async function` 表达式中省略，从而创建一个*匿名*函数。`async function` 表达式可以用作 [IIFE](/zh-CN/docs/Glossary/IIFE)（立即执行函数表达式，Immediately Invoked Function Expression），它在定义后立即运行。参见[函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)章节以获取更多信息。
 
 ## 示例
 
-### 一个简单例子
+### 简单示例
 
 ```js
 function resolveAfter2Seconds(x) {
@@ -58,24 +59,26 @@ function resolveAfter2Seconds(x) {
       resolve(x);
     }, 2000);
   });
-};
+}
 
-const add = async function (x) { // 赋值给变量的异步函数表达式
+// 赋值给变量的异步函数表达式
+const add = async function (x) {
   const a = await resolveAfter2Seconds(20);
   const b = await resolveAfter2Seconds(30);
   return x + a + b;
 };
 
 add(10).then((v) => {
-  console.log(v);  // 4 秒后打印 60
+  console.log(v); // 4 秒后打印 60
 });
 
-(async function (x) { // 用作 IIFE 的异步函数表达式
+// 用作 IIFE 的异步函数表达式
+(async function (x) {
   const p1 = resolveAfter2Seconds(20);
   const p2 = resolveAfter2Seconds(30);
-  return x + await p1 + await p2;
+  return x + (await p1) + (await p2);
 })(10).then((v) => {
-  console.log(v);  // 2 秒后打印 60
+  console.log(v); // 2 秒后打印 60
 });
 ```
 
@@ -87,8 +90,8 @@ add(10).then((v) => {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Statements/async_function", "异步函数语句")}}
+- {{jsxref("Statements/async_function", "异步函数", "", 1)}}
 - {{jsxref("AsyncFunction")}} 对象
-- {{jsxref("Operators/await", "await 操作符")}}
+- {{jsxref("Operators/await", "await")}}

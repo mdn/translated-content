@@ -1,26 +1,32 @@
 ---
 title: WeakMap.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakMap
-browser-compat: javascript.builtins.WeakMap.has
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 ---
 
 {{JSRef}}
 
 **`has()`** 메서드는 지정된 키를 가진 요소가 `WeakMap` 객체에 존재하는지를 나타내는 불리언 값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: WeakMap.prototype.has()")}}
+
+```js interactive-example
+const weakmap1 = new WeakMap();
+const object1 = {};
+const object2 = {};
+
+weakmap1.set(object1, "foo");
+
+console.log(weakmap1.has(object1));
+// Expected output: true
+
+console.log(weakmap1.has(object2));
+// Expected output: false
+```
 
 ## 구문
 
 ```js
-has(key)
+has(key);
 ```
 
 ### 매개변수
@@ -39,10 +45,10 @@ has(key)
 
 ```js
 const wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.has(window); // true 반환
-wm.has('baz');  // false 반환
+wm.has("baz"); // false 반환
 ```
 
 ## 명세서

@@ -1,21 +1,23 @@
 ---
-title: CanvasRenderingContext2D.strokeRect()
+title: CanvasRenderingContext2D：strokeRect() 方法
 slug: Web/API/CanvasRenderingContext2D/strokeRect
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.strokeRect()`** 是 Canvas 2D API 在 canvas 中，使用当前的绘画样式，描绘一个起点在 _(x, y)_、宽度为 _w_、高度为 _h_ 的矩形的方法。
+Canvas 2D API 的 **`CanvasRenderingContext2D.strokeRect()`** 方法根据当前的 {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} 和其它设置描绘一个矩形的描边（轮廓）。
 
-此方法直接绘制到画布而不修改当前路径，因此任何后续{{domxref("CanvasRenderingContext2D.fill()", "fill()")}} 或{{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}调用对它没有影响。
+此方法直接绘制到画布而不修改当前路径，因此任何后续 {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} 或 {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} 调用对它没有影响。
 
 ## 语法
 
-```plain
-void ctx.strokeRect(x, y, width, height);
+```js-nolint
+strokeRect(x, y, width, height)
 ```
 
-`strokeRect()`方法绘制一个描边矩形，其起点为`(x, y)` ，其大小由宽度和高度指定。
+`strokeRect()` 方法绘制一个描边矩形，其起点为 `(x, y)`，其大小由 `width` 和 `height` 指定。
 
 ### 参数
 
@@ -28,11 +30,15 @@ void ctx.strokeRect(x, y, width, height);
 - `height`
   - : 矩形的高度。正值在下，负值在上。
 
+### 返回值
+
+无（{{jsxref("undefined")}}）。
+
 ## 示例
 
-### 一个简单的填充矩形
+### 简单的描边矩形
 
-这是一段使用 `strokeRect` 方法的简单的代码片段。
+此示例使用 `strokeRect()` 方法绘制了一个带有绿色轮廓的矩形。
 
 #### HTML
 
@@ -45,9 +51,9 @@ void ctx.strokeRect(x, y, width, height);
 矩形的左上角是（20,10）。它的宽度为 160，高度为 100。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-ctx.strokeStyle = 'green';
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+ctx.strokeStyle = "green";
 ctx.strokeRect(20, 10, 160, 100);
 ```
 
@@ -68,13 +74,13 @@ ctx.strokeRect(20, 10, 160, 100);
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-ctx.shadowColor = '#d53';
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+ctx.shadowColor = "#d53";
 ctx.shadowBlur = 20;
-ctx.lineJoin = 'bevel';
+ctx.lineJoin = "bevel";
 ctx.lineWidth = 15;
-ctx.strokeStyle = '#38f';
+ctx.strokeStyle = "#38f";
 ctx.strokeRect(30, 30, 160, 90);
 ```
 
@@ -92,7 +98,7 @@ ctx.strokeRect(30, 30, 160, 90);
 
 ## 参见
 
-- 接口定义，{{domxref("CanvasRenderingContext2D")}}
+- 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.strokeStyle")}}
 - {{domxref("CanvasRenderingContext2D.clearRect()")}}
 - {{domxref("CanvasRenderingContext2D.fillRect()")}}

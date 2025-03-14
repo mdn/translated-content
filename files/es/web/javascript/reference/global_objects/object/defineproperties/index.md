@@ -1,17 +1,9 @@
 ---
 title: Object.defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
-tags:
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Método(2)
-  - Objeto
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/defineProperties
 ---
 
-{{JSRef("Objetos_globales", "Object")}}
+{{JSRef}}
 
 ## Sumario
 
@@ -20,7 +12,7 @@ El metodo **`Object.defineProperties()`** define nuevas o modifica propiedades e
 ## Sintáxis
 
 ```js
-Object.defineProperties(obj, propiedades)
+Object.defineProperties(obj, propiedades);
 ```
 
 ### Parámetros
@@ -38,14 +30,14 @@ Object.defineProperties(obj, propiedades)
 
 ```js
 Object.defineProperties(obj, {
-  "property1": {
+  property1: {
     value: true,
-    writable: true
+    writable: true,
   },
-  "property2": {
+  property2: {
     value: "Hello",
-    writable: false
-  }
+    writable: false,
+  },
   // etc. etc.
 });
 ```
@@ -121,14 +113,12 @@ function defineProperties(obj, properties) {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-Basado en [Kangax's compat tables](http://kangax.github.com/es5-compat-table/).
-
-{{Compat("javascript.builtins.Object.defineProperties")}}
+{{Compat}}
 
 ## Ver también
 
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.keys()")}}
-- [Enumerability and ownership of properties](/es/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)

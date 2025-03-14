@@ -39,14 +39,14 @@ Existem várias funções internas que precisam de uma função (callback). Voc�
 Nesse caso, que ocorre com bastante frequência, existe um erro de digitação no nome do método:
 
 ```js example-bad
-var x = document.getElementByID('foo');
+var x = document.getElementByID("foo");
 // TypeError: document.getElementByID is not a function
 ```
 
 O nome correto da função é `getElementById`:
 
 ```js example-good
-var x = document.getElementById('foo');
+var x = document.getElementById("foo");
 ```
 
 ### Função chamada no objeto errado
@@ -54,9 +54,9 @@ var x = document.getElementById('foo');
 Para alguns métodos, é necessário fornecer a função (callback) que irá funcionar apenas em objetos específicos. Nesse exemplo, é utilizado {{jsxref("Array.prototype.map()")}} que irá funcionar apenas em objetos {{jsxref("Array")}}.
 
 ```js example-bad
-var obj = {a: 13, b: 37, c: 42};
+var obj = { a: 13, b: 37, c: 42 };
 
-obj.map(function(num) {
+obj.map(function (num) {
   return num * 2;
 });
 
@@ -68,7 +68,7 @@ Ao invés disso, use uma array:
 ```js example-good
 var numbers = [1, 4, 9];
 
-numbers.map(function(num) {
+numbers.map(function (num) {
   return num * 2;
 });
 
@@ -81,17 +81,16 @@ Algumas vezes, ao criar uma classe, pode haver uma propriedade e função com os
 
 ```js example-bad
 var Dog = function () {
- this.age = 11;
- this.color = "black";
- this.name = "Ralph";
- return this;
-}
+  this.age = 11;
+  this.color = "black";
+  this.name = "Ralph";
+  return this;
+};
 
-Dog.prototype.name = function(name) {
- this.name = name;
- return this;
-}
-
+Dog.prototype.name = function (name) {
+  this.name = name;
+  return this;
+};
 
 var myNewDog = new Dog();
 myNewDog.name("Cassidy"); //Uncaught TypeError: myNewDog.name is not a function
@@ -101,17 +100,16 @@ Então, use um nome diferente para a propriedade
 
 ```js example-good
 var Dog = function () {
- this.age = 11;
- this.color = "black";
- this.dogName = "Ralph"; //Using this.dogName instead of .name
- return this;
-}
+  this.age = 11;
+  this.color = "black";
+  this.dogName = "Ralph"; //Using this.dogName instead of .name
+  return this;
+};
 
-Dog.prototype.name = function(name) {
- this.dogName = name;
- return this;
-}
-
+Dog.prototype.name = function (name) {
+  this.dogName = name;
+  return this;
+};
 
 var myNewDog = new Dog();
 myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }

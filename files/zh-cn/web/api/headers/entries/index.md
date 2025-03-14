@@ -3,49 +3,54 @@ title: Headers.entries()
 slug: Web/API/Headers/entries
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
-**`Headers.entries()`** 以 {{jsxref("Iteration_protocols","迭代器")}} 的形式返回 Headers 对象中所有的键值对。
+**`Headers.entries()`** 以{{jsxref("Iteration_protocols","迭代器")}}的形式返回 Headers 对象中所有的键值对。每一对中的键和值都是 {{jsxref("String")}} 对象。
 
-> **备注：** 这个方法在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)中是可用的。
+> [!NOTE]
+> 这个方法在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中是可用的。
 
-## Syntax
+## 语法
 
-```js
-headers.entries();
+```js-nolint
+entries()
 ```
 
-### Return value
+### 参数
 
-返回一个 {{jsxref("Iteration_protocols","迭代器")}}.
+无。
 
-## Example
+### 返回值
+
+返回一个{{jsxref("Iteration_protocols","迭代器", "", 1)}}。
+
+## 示例
 
 ```js
-// Create a test Headers object
-var myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.append('Vary', 'Accept-Language');
+// 创建一个测试 Headers 对象
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.append("Vary", "Accept-Language");
 
-// Display the key/value pairs
-for (var pair of myHeaders.entries()) {
-   console.log(pair[0]+ ': '+ pair[1]);
+// 显示键/值对
+for (const pair of myHeaders.entries()) {
+  console.log(`${pair[0]}: ${pair[1]}`);
 }
 ```
 
-返回结果：
+运行结果为：
 
-```
+```plain
 content-type: text/xml
 vary: Accept-Language
 ```
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

@@ -1,19 +1,16 @@
 ---
 title: Function.prototype.call()
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
-tags:
-  - Function
-  - JavaScript
-  - Method
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 ---
-{{JSRef("Global_Objects", "Function")}}
+
+{{JSRef}}
 
 ## Сводка
 
 Метод **`call()`** вызывает функцию с указанным значением `this` и индивидуально предоставленными аргументами.
 
-> **Примечание:** хотя синтаксис этой функции практически полностью идентичен функции {{jsxref("Function.prototype.apply", "apply()")}}, фундаментальное различие между ними заключается в том, что функция `call()` принимает **список аргументов**, в то время, как функция `apply()` **- одиночный массив аргументов**.
+> [!NOTE]
+> Хотя синтаксис этой функции практически полностью идентичен функции {{jsxref("Function.prototype.apply", "apply()")}}, фундаментальное различие между ними заключается в том, что функция `call()` принимает **список аргументов**, в то время, как функция `apply()` **- одиночный массив аргументов**.
 
 ## Синтаксис
 
@@ -44,27 +41,28 @@ function Product(name, price) {
   this.price = price;
 
   if (price < 0) {
-    throw RangeError('Нельзя создать продукт ' +
-                      this.name + ' с отрицательной ценой');
+    throw RangeError(
+      "Нельзя создать продукт " + this.name + " с отрицательной ценой",
+    );
   }
 }
 
 function Food(name, price) {
   Product.call(this, name, price);
-  this.category = 'еда';
+  this.category = "еда";
 }
 
 Food.prototype = Object.create(Product.prototype);
 
 function Toy(name, price) {
   Product.call(this, name, price);
-  this.category = 'игрушка';
+  this.category = "игрушка";
 }
 
 Toy.prototype = Object.create(Product.prototype);
 
-var cheese = new Food('фета', 5);
-var fun = new Toy('робот', 40);
+var cheese = new Food("фета", 5);
+var fun = new Toy("робот", 40);
 ```
 
 ### Пример: использование `call` для вызова анонимной функции
@@ -73,16 +71,15 @@ var fun = new Toy('робот', 40);
 
 ```js
 var animals = [
-  { species: 'Лев', name: 'Король' },
-  { species: 'Кит', name: 'Фэйл' }
+  { species: "Лев", name: "Король" },
+  { species: "Кит", name: "Фэйл" },
 ];
 
 for (var i = 0; i < animals.length; i++) {
-  (function(i) {
-    this.print = function() {
-      console.log('#' + i + ' ' + this.species
-                  + ': ' + this.name);
-    }
+  (function (i) {
+    this.print = function () {
+      console.log("#" + i + " " + this.species + ": " + this.name);
+    };
     this.print();
   }).call(animals[i], i);
 }

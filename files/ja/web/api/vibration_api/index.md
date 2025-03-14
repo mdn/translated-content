@@ -1,7 +1,6 @@
 ---
 title: Vibration API
 slug: Web/API/Vibration_API
-original_slug: Web/Guide/API/Vibration
 ---
 
 {{DefaultAPISidebar("Vibration API")}}
@@ -48,22 +47,22 @@ var vibrateInterval;
 
 // 渡されたレベルでバイブレーションを開始
 function startVibrate(duration) {
-    navigator.vibrate(duration);
+  navigator.vibrate(duration);
 }
 
 // バイブレーションを停止
 function stopVibrate() {
-    // インターバルをクリアして継続的なバイブレーションを停止
-    if(vibrateInterval) clearInterval(vibrateInterval);
-    navigator.vibrate(0);
+  // インターバルをクリアして継続的なバイブレーションを停止
+  if (vibrateInterval) clearInterval(vibrateInterval);
+  navigator.vibrate(0);
 }
 
 // 与えられた時間とインターバルによる継続的なバイブレーションを開始
 // 数値が与えられるものとする
 function startPersistentVibrate(duration, interval) {
-    vibrateInterval = setInterval(function() {
-        startVibrate(duration);
-    }, interval);
+  vibrateInterval = setInterval(function () {
+    startVibrate(duration);
+  }, interval);
 }
 ```
 
@@ -71,13 +70,11 @@ function startPersistentVibrate(duration, interval) {
 
 ## 仕様書
 
-| 仕様書                                   | 状態                                 | 備考                                                        |
-| ---------------------------------------- | ------------------------------------ | ----------------------------------------------------------- |
-| {{SpecName("Vibration API")}} | {{Spec2("Vibration API")}} | リンク先は最新の編集者草稿です。 W3C 版は勧告になりました。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Navigator.vibrate")}}
+{{Compat}}
 
 ## 関連情報
 

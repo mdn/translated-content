@@ -1,10 +1,6 @@
 ---
 title: <filter>
 slug: Web/SVG/Element/filter
-tags:
-  - Element
-  - SVG
-translation_of: Web/SVG/Element/filter
 ---
 
 {{SVGRef}}
@@ -19,9 +15,9 @@ L'élément [SVG](/fr/docs/Web/SVG) **`<filter>`** sert de conteneur pour défin
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation)
-- [Attributs XLink](/fr/docs/Web/SVG/Attribute#Attributs_XLink)
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
+- [Attributs XLink](/fr/docs/Web/SVG/Attribute#attributs_xlink)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}
@@ -46,18 +42,18 @@ Cet élément implémente l'interface {{domxref("SVGFilterElement")}}.
 #### SVG
 
 ```html
-<svg width="230" height="120"
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="230"
+  height="120"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <filter id="blurMe">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+  </filter>
 
- <filter id="blurMe">
-  <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
- </filter>
+  <circle cx="60" cy="60" r="50" fill="green" />
 
- <circle cx="60"  cy="60" r="50" fill="green" />
-
- <circle cx="170" cy="60" r="50" fill="green"
-          filter="url(#blurMe)" />
+  <circle cx="170" cy="60" r="50" fill="green" filter="url(#blurMe)" />
 </svg>
 ```
 
@@ -92,4 +88,4 @@ Cet élément implémente l'interface {{domxref("SVGFilterElement")}}.
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres)
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)

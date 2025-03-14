@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing } after function body'
+title: "SyntaxError: missing } after function body"
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
 ---
 
@@ -37,7 +37,7 @@ var charge = function() {
 正确的应该是这样的：
 
 ```js example-good
-var charge = function() {
+var charge = function () {
   if (sunny) {
     useSolarCells();
   } else {
@@ -46,7 +46,7 @@ var charge = function() {
 };
 ```
 
-当使用立即调用函数表达式（{{Glossary("IIFE")}}）、[闭包](/zh-CN/docs/Web/JavaScript/Closures)或者其他使用了大量的花括号以及括号的结构体的时候，问题会更加隐蔽。
+当使用立即调用函数表达式（{{Glossary("IIFE")}}）、[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures)或者其他使用了大量的花括号以及括号的结构体的时候，问题会更加隐蔽。
 
 ```js example-bad
 (function() { if (true) { return false; } );
@@ -55,7 +55,7 @@ var charge = function() {
 通常将代码语句按照层级缩进以及对缩进进行复核会有助于错误的发现。
 
 ```js example-good
-(function() {
+(function () {
   if (true) {
     return false;
   }

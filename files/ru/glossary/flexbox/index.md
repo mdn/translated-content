@@ -1,19 +1,21 @@
 ---
 title: Flexbox
 slug: Glossary/Flexbox
-translation_of: Glossary/Flexbox
-original_slug: Глоссарий/Flexbox
+l10n:
+  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
-Flexbox это общепринятый термин для [CSS Flexible Box Layout Module](https://www.w3.org/TR/css-flexbox-1/), модели разметки для отображения элементов в одном измерении - в виде строки или столбца.
+{{GlossarySidebar}}
 
-В данной спецификации, flexbox описывается как модель разметки для проектирования пользовательского интерфейса. Ключевая особенность flexbox заключается в том, что элементы во flex-разметке могут увеличиваться и уменьшаться. Пространство может использоваться самими элементами, или распределяться между или вокруг элементов.
+Флексбокс (от англ. _flexbox_) — общепринятый термин спецификации [CSS Flexible Box Layout Module](https://www.w3.org/TR/css-flexbox-1/), которая описывает модель отображения элементов в одном измерении — в виде строки или столбца.
 
-Flexbox также позволяет выравнивать элементы по главной или поперечной оси, таким образом предоставляя высокоуровневый контроль над размером и выравниванием группы элементов.
+В спецификации флексбокс описывается как модель разметки для проектирования пользовательского интерфейса. Ключевая особенность флексбокса заключается в том, что элементы во флекс-разметке могут растягиваться и сжиматься. Пространство может использоваться самими элементами или распределяться между или вокруг элементов.
+
+Флексбокс также позволяет выравнивать элементы по главной или поперечной осям, предоставляя широкие возможности управления размерами и выравниванием группы элементов.
 
 ## Смотрите также
 
-### Связанные свойства
+### Описание свойств
 
 - {{cssxref("align-content")}}
 - {{cssxref("align-items")}}
@@ -31,10 +33,11 @@ Flexbox также позволяет выравнивать элементы п
 ### Дальнейшее чтение
 
 - _[CSS Flexible Box Layout Module Level 1 Specification](https://www.w3.org/TR/css-flexbox-1/)_
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Relationship of flexbox to other layout methods](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS Flexbox Guide: _[Ordering flex items](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
-- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
-- CSS Flexbox Guide: _[Mastering wrapping of flex items](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
-- CSS Flexbox Guide: _[Typical use cases of flexbox](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)_
+- Руководство по CSS Flexbox:
+  - [Основные понятия о флексбоксе](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+  - [Relationship of flexbox to other layout methods](/ru/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
+  - [Выравнивание элементов во флекс-контейнере](/ru/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+  - [Ordering flex items](/ru/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
+  - [Controlling Ratios of flex items along the main axis](/ru/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
+  - [Разбираемся с обёртыванием флекс-элементов](/ru/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+  - [Typical use cases of flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)

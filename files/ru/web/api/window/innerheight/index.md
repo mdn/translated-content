@@ -1,13 +1,10 @@
 ---
 title: Window.innerHeight
 slug: Web/API/Window/innerHeight
-tags:
-  - API
-  - NeedsMarkupWork
-  - Property
-  - Reference
-translation_of: Web/API/Window/innerHeight
 ---
+
+{{APIRef}}
+
 Высота (в пикселях) области просмотра окна браузера, включая, если отображается, горизонтальную полосу прокрутки.
 
 ## Синтаксис
@@ -45,7 +42,7 @@ var intOuterFramesetHeight = top.innerHeight;
 // will return the height of the viewport of the outermost frameset
 ```
 
-{{todo("link to an interactive demo here")}}
+<!-- TODO: add content -->
 
 To change the size of a window, see {{domxref("window.resizeBy()")}} and {{domxref("window.resizeTo()")}}.
 
@@ -55,7 +52,7 @@ To get the outer height of a window, i.e. the height of the whole browser window
 
 На следующем рисунке показана разница между externalHeight и innerHeight.
 
-![innerHeight vs outerHeight illustration](/@api/deki/files/213/=FirefoxInnerVsOuterHeight2.png)
+![Иллюстрация работы innerHeight и outerHeight](firefoxinnervsouterheight2.png)
 
 ## Спецификации
 

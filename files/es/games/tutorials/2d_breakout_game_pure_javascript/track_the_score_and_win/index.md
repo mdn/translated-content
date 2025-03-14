@@ -1,15 +1,13 @@
 ---
 title: Poner un contador y terminar ganando
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
-original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win
 ---
 
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Deteccion_colisiones", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Controles_raton")}}
 
-Este es el **octavo** capítulo de 10, del [Gamedev Canvas tutorial](/es/docs/Games/Workflows/Breakout_game_from_scratch). Puedes encontrar el código fuente como debería quedar tras este capítulo en [Gamedev-Canvas-workshop/lesson8.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html).
+Este es el **octavo** capítulo de 10, del [Gamedev Canvas tutorial](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente como debería quedar tras este capítulo en [Gamedev-Canvas-workshop/lesson8.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html).
 
 Destruir los ladrillos mola, pero para que el juego sea aún mejor, podría dar puntos cada vez que el jugador rompe un ladrillo, y mostrar un contador.
 
@@ -25,9 +23,9 @@ También necesitas una función `drawScore()` para enseñar el contador por pant
 
 ```js
 function drawScore() {
-    ctx.font = "16px Arial";
-    ctx.fillStyle = "#0095DD";
-    ctx.fillText("Score: "+score, 8, 20);
+  ctx.font = "16px Arial";
+  ctx.fillStyle = "#0095DD";
+  ctx.fillText("Score: " + score, 8, 20);
 }
 ```
 
@@ -37,18 +35,23 @@ Para sumar un punto cada vez que se rompe un ladrillo, añade la línea que est�
 
 ```js
 function collisionDetection() {
-    for(c=0; c<brickColumnCount; c++) {
-        for(r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
-            if(b.status == 1) {
-                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
-                    dy = -dy;
-                    b.status = 0;
-                    score++;
-                }
-            }
+  for (c = 0; c < brickColumnCount; c++) {
+    for (r = 0; r < brickRowCount; r++) {
+      var b = bricks[c][r];
+      if (b.status == 1) {
+        if (
+          x > b.x &&
+          x < b.x + brickWidth &&
+          y > b.y &&
+          y < b.y + brickHeight
+        ) {
+          dy = -dy;
+          b.status = 0;
+          score++;
         }
+      }
     }
+  }
 }
 ```
 
@@ -64,22 +67,27 @@ Lo de sumar puntos funciona, pero tiene un final. ¿Qué ocurrirá cuando no que
 
 ```js
 function collisionDetection() {
-    for(c=0; c<brickColumnCount; c++) {
-        for(r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
-            if(b.status == 1) {
-                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
-                    dy = -dy;
-                    b.status = 0;
-                    score++;
-                    if(score == brickRowCount*brickColumnCount) {
-                        alert("YOU WIN, CONGRATULATIONS!");
-                        document.location.reload();
-                    }
-                }
-            }
+  for (c = 0; c < brickColumnCount; c++) {
+    for (r = 0; r < brickRowCount; r++) {
+      var b = bricks[c][r];
+      if (b.status == 1) {
+        if (
+          x > b.x &&
+          x < b.x + brickWidth &&
+          y > b.y &&
+          y < b.y + brickHeight
+        ) {
+          dy = -dy;
+          b.status = 0;
+          score++;
+          if (score == brickRowCount * brickColumnCount) {
+            alert("YOU WIN, CONGRATULATIONS!");
+            document.location.reload();
+          }
         }
+      }
     }
+  }
 }
 ```
 
@@ -91,10 +99,11 @@ Puedes comparar tu código con este:
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/mvfkcydz/","","320")}}
 
-> **Nota:** añade más puntos por ladrillo y muestra el contador cuando salga el alert() del final del juego con victoria.
+> [!NOTE]
+> Añade más puntos por ladrillo y muestra el contador cuando salga el alert() del final del juego con victoria.
 
 ## Pasos siguientes
 
-El juego, ahora mismo, ya tiene buena pinta. En la siguiente lección conseguirás que sea más atractivo porque añadirás el [Control del ratón](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Controles_raton).
+El juego, ahora mismo, ya tiene buena pinta. En la siguiente lección conseguirás que sea más atractivo porque añadirás el [Control del ratón](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls).
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Deteccion_colisiones", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Controles_raton")}}

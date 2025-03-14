@@ -1,20 +1,35 @@
 ---
 title: title
 slug: Web/HTML/Global_attributes/title
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/title
-original_slug: Web/HTML/Attributs_universels/title
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`title`** contient un texte d'information relatif à l'élément auquel il est rattaché.
+L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`title`** contient un texte d'information relatif à l'élément auquel il est rattaché.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-title.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: title", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  Use the <code>title</code> attribute on an <code>iframe</code> to clearly
+  identify the content of the <code>iframe</code> to screen readers.
+</p>
+
+<iframe
+  title="Wikipedia page for the HTML language"
+  src="https://en.m.wikipedia.org/wiki/HTML"></iframe>
+<iframe
+  title="Wikipedia page for the CSS language"
+  src="https://en.m.wikipedia.org/wiki/CSS"></iframe>
+```
+
+```css interactive-example
+iframe {
+  height: 200px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+```
 
 On le trouve généralement utilisé pour :
 
@@ -35,8 +50,11 @@ Un attribut `title` peut contenir plusieurs lignes. Chaque caractère `U+000A LI
 ```html
 <p>
   Les sauts de ligne au sein d'un attribut title doivent être pris en compte :
-  <abbr title="Ceci est un
-  titre sur plusieurs lignes">Exemple</abbr>.
+  <abbr
+    title="Ceci est un
+  titre sur plusieurs lignes"
+    >Exemple</abbr
+  >.
 </p>
 ```
 
@@ -54,7 +72,10 @@ Si cet attribut est défini avec la chaîne vide, cela signifie que le titre pro
 
 ```html
 <div title="Une bubulle">
-  <p>Si vous survolez cet élément, il y aura une bulle d'information "Une bubulle".</p>
+  <p>
+    Si vous survolez cet élément, il y aura une bulle d'information "Une
+    bubulle".
+  </p>
   <p title="">Et au-dessus de celui-ci, aucune info.</p>
 </div>
 ```
@@ -88,5 +109,5 @@ Cela est dû à une prise en charge hétérogène de la part des navigateurs. Si
 
 ## Voir aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Attributs_universels)
+- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
 - {{domxref("HTMLElement.title")}} that reflects this attribute.

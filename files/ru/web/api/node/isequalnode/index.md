@@ -1,8 +1,8 @@
 ---
 title: Node.isEqualNode()
 slug: Web/API/Node/isEqualNode
-translation_of: Web/API/Node/isEqualNode
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.isEqualNode()`** проверяет, равны ли два узла. Два узла равны, когда они имеют один и тот же тип, определяющий характеристики (для элементов это будет их идентификатор, количество потомков и т. д.), Его атрибуты совпадают и т. д. Конкретный набор точек данных, которые должны совпадать, зависит от типов узлов.
@@ -44,11 +44,14 @@ var isEqualNode = node.isEqualNode(otherNode);
 
 ```js
 let output = document.getElementById("output");
-let divList  = document.getElementsByTagName("div");
+let divList = document.getElementsByTagName("div");
 
-output.innerHTML += "div 0 equals div 0: " + divList[0].isEqualNode(divList[0]) + "<br/>";
-output.innerHTML += "div 0 equals div 1: " + divList[0].isEqualNode(divList[1]) + "<br/>";
-output.innerHTML += "div 0 equals div 2: " + divList[0].isEqualNode(divList[2]) + "<br/>";
+output.innerHTML +=
+  "div 0 equals div 0: " + divList[0].isEqualNode(divList[0]) + "<br/>";
+output.innerHTML +=
+  "div 0 equals div 1: " + divList[0].isEqualNode(divList[1]) + "<br/>";
+output.innerHTML +=
+  "div 0 equals div 2: " + divList[0].isEqualNode(divList[2]) + "<br/>";
 ```
 
 ### Results
@@ -57,5 +60,8 @@ output.innerHTML += "div 0 equals div 2: " + divList[0].isEqualNode(divList[2]) 
 
 ## Спецификации
 
-- {{spec("https://dom.spec.whatwg.org/#dom-node-isequalnode","DOM Standard","LS")}}
-- {{spec("http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-isEqualNode","DOM Level 3 Core: isEqualNode","REC")}}
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}

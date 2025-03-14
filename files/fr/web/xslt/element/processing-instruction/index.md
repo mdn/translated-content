@@ -1,13 +1,9 @@
 ---
 title: processing-instruction
 slug: Web/XSLT/Element/processing-instruction
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/processing-instruction
-original_slug: Web/XSLT/processing-instruction
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:processing-instruction>` écrit une instruction de traitement dans le document de sortie.
 
@@ -34,7 +30,7 @@ Instruction, apparaît dans un modèle.
 
 ### Définition
 
-[XSLT 1.0, section 7.3](http://www.w3.org/TR/xslt#section-Creating-Processing-Instructions).
+[XSLT 1.0, section 7.3](https://www.w3.org/TR/xslt#section-Creating-Processing-Instructions).
 
 ### Support Gecko
 

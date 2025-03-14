@@ -1,12 +1,6 @@
 ---
 title: 'SyntaxError: redeclaration of formal parameter "x"'
 slug: Web/JavaScript/Reference/Errors/Redeclared_parameter
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Redeclared_parameter
-original_slug: Web/JavaScript/Reference/Erreurs/Redeclared_parameter
 ---
 
 {{jsSidebar("Errors")}}
@@ -25,7 +19,7 @@ SyntaxError: Identifier "x" has already been declared (Chrome)
 
 ## Quel est le problème ?
 
-Le même nom de variable est présent comme paramètre de la fonction et dans une affectation [`let`](/fr/docs/Web/JavaScript/Reference/Instructions/let) au sein du corps de cette fonction et il n'est pas possible de redéclarer la même variable dans la même fonction ou dans le même bloc avec `let`.
+Le même nom de variable est présent comme paramètre de la fonction et dans une affectation [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) au sein du corps de cette fonction et il n'est pas possible de redéclarer la même variable dans la même fonction ou dans le même bloc avec `let`.
 
 ## Exemples
 
@@ -53,11 +47,11 @@ function f(arg) {
 
 ## Notes de compatibilité
 
-- Avant Firefox 49, cela provoquait une exception {{jsxref("TypeError")}} ({{bug(1275240)}}).
+- Avant Firefox 49, cela provoquait une exception {{jsxref("TypeError")}} ([bug Firefox 1275240](https://bugzil.la/1275240)).
 
 ## Voir aussi
 
-- [`let`](/fr/docs/Web/JavaScript/Reference/Instructions/let)
-- [`const`](/fr/docs/Web/JavaScript/Reference/Instructions/const)
-- [`var`](/fr/docs/Web/JavaScript/Reference/Instructions/var)
-- [Déclarer des variables](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Déclarations) dans le [guide JavaScript](/fr/docs/Web/JavaScript/Guide)
+- [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let)
+- [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const)
+- [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var)
+- [Déclarer des variables](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#déclarations) dans le [guide JavaScript](/fr/docs/Web/JavaScript/Guide)

@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
 
 **`Intl.Segmenter()`** 构造函数会创建一个 [`Intl.Segmenter`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) 对象，该对象支持语言敏感的文本分割。
 
-{{EmbedInteractiveExample("pages/js/intl-segmenter.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Segmenter")}}
+
+```js interactive-example
+const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
+const string1 = "Que ma joie demeure";
+
+const iterator1 = segmenterFr.segment(string1)[Symbol.iterator]();
+
+console.log(iterator1.next().value.segment);
+// Expected output: 'Que'
+
+console.log(iterator1.next().value.segment);
+// Expected output: ' '
+```
 
 ## 语法
 
@@ -52,8 +65,11 @@ new Intl.Segmenter(locales, options)
 
 ```js
 const text = "吾輩は猫である。名前はたぬき。";
-const japaneseSegmenter = new Intl.Segmenter("ja-JP", {granularity: "word"});
-console.log([...japaneseSegmenter.segment(text)].filter((segment) => segment.isWordLike).length);
+const japaneseSegmenter = new Intl.Segmenter("ja-JP", { granularity: "word" });
+console.log(
+  [...japaneseSegmenter.segment(text)].filter((segment) => segment.isWordLike)
+    .length,
+);
 // 8，文本将会分割为 '吾輩'|'は'|'猫'|'で'|'ある'|'。'|'名前'|'は'|'たぬき'|'。'
 ```
 

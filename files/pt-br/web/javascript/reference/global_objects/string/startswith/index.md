@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
 
 O método **`startsWith()`** determina se uma string começa com os caracteres especificados, retornando `true` ou `false`.
 
-{{EmbedInteractiveExample("pages/js/string-startswith.html")}}
+{{InteractiveExample("JavaScript Demo: String.startsWith()")}}
+
+```js interactive-example
+const str1 = "Saturday night plans";
+
+console.log(str1.startsWith("Sat"));
+// Expected output: true
+
+console.log(str1.startsWith("Sat", 3));
+// Expected output: false
+```
 
 ## Sintaxe
 
@@ -36,11 +46,11 @@ Esse método permite determinar se uma string começa ou não com outra string. 
 
 ```js
 //startswith
-let str = 'Ser ou não ser, eis a questão.';
+let str = "Ser ou não ser, eis a questão.";
 
-console.log(str.startsWith('Ser'))          // true
-console.log(str.startsWith('não ser'))      // false
-console.log(str.startsWith('não ser', 7))  // true
+console.log(str.startsWith("Ser")); // true
+console.log(str.startsWith("não ser")); // false
+console.log(str.startsWith("não ser", 7)); // true
 ```
 
 ## Polyfill
@@ -62,13 +72,11 @@ Um polyfill mais robusto (totalmente conforme com a especificação ES2015), mas
 
 ## Especificações
 
-| Especificação                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.startswith', 'String.prototype.startsWith')}} |
+{{Specifications}}
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.startsWith")}}
+{{Compat}}
 
 ## Veja também
 

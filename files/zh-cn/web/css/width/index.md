@@ -5,9 +5,44 @@ slug: Web/CSS/width
 
 {{CSSRef}}
 
-**`width`** 属性用于设置元素的宽度。`width` 默认设置[内容区域](/zh-CN/docs/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area)的宽度，但如果 {{cssxref("box-sizing")}} 属性被设置为 `border-box`，就转而设置[边框区域](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border-area)的宽度。
+**`width`** 属性用于设置元素的宽度。`width` 默认设置[内容区域](/zh-CN/docs/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area)的宽度，但如果 {{cssxref("box-sizing")}} 属性被设置为 `border-box`，就转而设置[边框区域](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border-area)的宽度。
 
-{{EmbedInteractiveExample("pages/css/width.html")}}
+{{InteractiveExample("CSS Demo: width")}}
+
+```css interactive-example-choice
+width: 150px;
+```
+
+```css interactive-example-choice
+width: 20em;
+```
+
+```css interactive-example-choice
+width: 75%;
+```
+
+```css interactive-example-choice
+width: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the width.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 {{ cssxref("min-width") }} 和 {{ cssxref("max-width") }} 属性的优先级高于 {{ cssxref("width") }}。
 
@@ -35,7 +70,7 @@ width: unset;
 
 `width` 属性也指定为：
 
-- 下面关键字值之一：[`min-content`](/zh-CN/docs/Web/CSS/width#min-content)，[`max-content`](/zh-CN/docs/Web/CSS/width#max-content)，[`fit-content`](/zh-CN/docs/Web/CSS/width#fit-content)，[`auto`](/zh-CN/docs/Web/CSS/width#auto)。
+- 下面关键字值之一：[`min-content`](#min-content)，[`max-content`](#max-content)，[`fit-content`](#fit-content)，[`auto`](#auto)。
 - 一个长度值 [`<length>`](/zh-CN/docs/Web/CSS/width#%3Clength%3E) 或者百分比值 [`<percentage>`](/zh-CN/docs/Web/CSS/width#%3Cpercentage%3E)。
 
 ### 值
@@ -59,7 +94,7 @@ width: unset;
 
     可表示为：`min(max-content, max(min-content, <length-percentage>))`
 
-### 形式化语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -77,7 +112,7 @@ p.goldie {
 <p class="goldie">The Mozilla community produces a lot of great software.</p>
 ```
 
-{{EmbedLiveSample('Default_width', '500px', '64px')}}
+{{EmbedLiveSample('默认宽度', '500px', '64px')}}
 
 ### 像素 px 和字高 em
 
@@ -102,7 +137,7 @@ p.goldie {
 <div class="em_length">以 em 度量的宽度</div>
 ```
 
-{{EmbedLiveSample('Pixels_and_ems', '500px', '64px')}}
+{{EmbedLiveSample('像素 px 和字高 em', '500px', '64px')}}
 
 ### 百分比
 
@@ -125,8 +160,8 @@ p.goldie {
 ```css
 p.maxgreen {
   background: lightgreen;
-  width: intrinsic;           /* Safari/WebKit 使用了非标准的名称 */
-  width: -moz-max-content;    /* Firefox/Gecko */
+  width: intrinsic; /* Safari/WebKit 使用了非标准的名称 */
+  width: -moz-max-content; /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
 }
 ```
@@ -142,7 +177,7 @@ p.maxgreen {
 ```css
 p.minblue {
   background: lightblue;
-  width: -moz-min-content;    /* Firefox */
+  width: -moz-min-content; /* Firefox */
   width: -webkit-min-content; /* Chrome */
 }
 ```
@@ -157,7 +192,7 @@ p.minblue {
 
 当页面放大以增加文本大小时，请确保 `width` 设置的元素不会被截断并且不会遮挡其他内容。
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.4 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## 规范
@@ -172,7 +207,7 @@ p.minblue {
 
 ## 参见
 
-- [框盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [框盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - {{cssxref("height")}}
 - {{cssxref("box-sizing")}}
 - {{cssxref("min-width")}}

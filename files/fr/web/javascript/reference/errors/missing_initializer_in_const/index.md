@@ -1,12 +1,6 @@
 ---
-title: 'SyntaxError: missing = in const declaration'
+title: "SyntaxError: missing = in const declaration"
 slug: Web/JavaScript/Reference/Errors/Missing_initializer_in_const
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_initializer_in_const
-original_slug: Web/JavaScript/Reference/Erreurs/Missing_initializer_in_const
 ---
 
 {{jsSidebar("Errors")}}
@@ -25,7 +19,7 @@ SyntaxError: Missing initializer in const declaration (Chrome)
 
 ## Quel est le problème ?
 
-Une constante est une valeur qui ne peut pas être modifiée par le programme pendant l'exécution. Elle ne peut pas être changée avec une réaffectation ou une redéclaration. En JavaScript, les constantes sont déclarées grâce au mot-clé [`const`](/fr/docs/Web/JavaScript/Reference/Instructions/const). Il est également nécessaire de fournir une valeur d'initialisation dans l'instruction où on déclare la constante (ce qui est logique vu qu'on ne peut pas la modifier ensuite).
+Une constante est une valeur qui ne peut pas être modifiée par le programme pendant l'exécution. Elle ne peut pas être changée avec une réaffectation ou une redéclaration. En JavaScript, les constantes sont déclarées grâce au mot-clé [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const). Il est également nécessaire de fournir une valeur d'initialisation dans l'instruction où on déclare la constante (ce qui est logique vu qu'on ne peut pas la modifier ensuite).
 
 ## Exemples
 
@@ -52,7 +46,7 @@ const COLONNES = 80;
 
 #### `const`, `let` ou `var` ?
 
-`const` ne doit pas être utilisé si on ne souhaite pas déclarer de constante. Peut-être qu'on souhaite simplement déclarer une variable avec une portée de bloc grâce à [`let`](/fr/docs/Web/JavaScript/Reference/Instructions/let) ou une variable globale avec [`var`](/fr/docs/Web/JavaScript/Reference/Instructions/var). Ces deux instructions ne nécessitent pas de valeur initiale.
+`const` ne doit pas être utilisé si on ne souhaite pas déclarer de constante. Peut-être qu'on souhaite simplement déclarer une variable avec une portée de bloc grâce à [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) ou une variable globale avec [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var). Ces deux instructions ne nécessitent pas de valeur initiale.
 
 ```js example-good
 let colonnes;
@@ -60,6 +54,6 @@ let colonnes;
 
 ## Voir aussi
 
-- [`const`](/fr/docs/Web/JavaScript/Reference/Instructions/const)
-- [`let`](/fr/docs/Web/JavaScript/Reference/Instructions/let)
-- [`var`](/fr/docs/Web/JavaScript/Reference/Instructions/var)
+- [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const)
+- [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let)
+- [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var)

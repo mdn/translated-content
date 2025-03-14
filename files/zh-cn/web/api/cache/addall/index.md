@@ -11,7 +11,8 @@ slug: Web/API/Cache/addAll
 
 > **备注：** `addAll()` will overwrite any key/value pairs previously stored in the cache that match the request, but will fail if a resulting `put()` operation would overwrite a previous cache entry created by the same `addAll()` method.
 
-> **备注：** Initial Cache implementations (in both Blink and Gecko) resolve {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, and {{domxref("Cache.put")}} promises when the response body is fully written to storage. More recent spec versions have newer language stating that the browser can resolve the promise as soon as the entry is recorded in the database even if the response body is still streaming in.
+> [!NOTE]
+> Initial Cache implementations (in both Blink and Gecko) resolve {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, and {{domxref("Cache.put")}} promises when the response body is fully written to storage. More recent spec versions have newer language stating that the browser can resolve the promise as soon as the entry is recorded in the database even if the response body is still streaming in.
 
 ## 语法
 
@@ -41,22 +42,22 @@ A {{jsxref("Promise")}} that resolves with void.
 此代码块等待一个 {{domxref("InstallEvent")}} 事件触发，然后运行 {{domxref("ExtendableEvent.waitUntil","waitUntil")}} 来处理该应用程序的安装进程。包括调用 {{domxref("CacheStorage.open")}} 创建一个新的 cache，然后使用 `addAll()` 添加一系列资源。
 
 ```js
-this.addEventListener('install', function(event) {
+this.addEventListener("install", function (event) {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
+    caches.open("v1").then(function (cache) {
       return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
+        "/sw-test/",
+        "/sw-test/index.html",
+        "/sw-test/style.css",
+        "/sw-test/app.js",
+        "/sw-test/image-list.js",
+        "/sw-test/star-wars-logo.jpg",
+        "/sw-test/gallery/",
+        "/sw-test/gallery/bountyHunters.jpg",
+        "/sw-test/gallery/myLittleVader.jpg",
+        "/sw-test/gallery/snowTroopers.jpg",
       ]);
-    })
+    }),
   );
 });
 ```
@@ -71,6 +72,6 @@ this.addEventListener('install', function(event) {
 
 ## 参见
 
-- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("WorkerGlobalScope.caches")}}
+- {{domxref("Window.caches")}} 和 {{domxref("WorkerGlobalScope.caches")}}

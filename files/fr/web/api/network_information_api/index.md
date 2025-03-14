@@ -1,13 +1,9 @@
 ---
 title: Network Information API
 slug: Web/API/Network_Information_API
-tags:
-  - WebAPI
-translation_of: Web/API/Network_Information_API
-original_slug: WebAPI/Network_Information
 ---
 
-{{ SeeCompatTable() }}
+{{DefaultAPISidebar("Network Information API")}}{{ SeeCompatTable() }}
 
 L'API Network Information (Informations réseau) fournit des informations sur la connexion de l'appareil : la bande-passante, si la connexion est mesurée ou non. Elle peut être utilisée pour choisir entre du contenu en haute définition ou en basse définition selon la connexion de l'utilisateur. L'API ne représente qu'un seul objet, ajouté au DOM : [`Navigator.connection`](/fr/docs/Web/API/Navigator/connection).
 
@@ -18,7 +14,8 @@ L'API Network Information (Informations réseau) fournit des informations sur la
 Cet exemple permet de connaître les changements liés à la connexion d'un utilisateur. Cela ressemble notamment à la façon dont une application saura si l'utilisateur passe d'une connexion coûteuse à une autre connexion moins chère et pourra réduire la demande de bande passante afin de réduire les coûts pour l'utilisateur.
 
 ```js
-var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+var connection =
+  navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 
 function updateConnectionStatus() {
   alert("Bande passante de la connexion : " + connection.bandwidth + " MB/s");
@@ -37,9 +34,10 @@ L'objet connexion est pratique pour décider de précharger des ressources néce
 
 ```js
 let preloadVideo = true;
-var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+var connection =
+  navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 if (connection) {
-  if (connection.effectiveType === 'cellular') {
+  if (connection.effectiveType === "cellular") {
     preloadVideo = false;
   }
 }
@@ -56,15 +54,9 @@ if (connection) {
 
 ## Compatibilité des navigateurs
 
-### `NetworkInformation`
-
-{{Compat("api.NetworkInformation")}}
-
-### `Navigator.connection`
-
-{{Compat("api.Navigator.connection")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Les évènement online et offline](/fr/docs/Online_and_offline_events)
+- [Les évènement online et offline](/fr/docs/Web/API/Navigator/onLine)
 - [`Navigator.connection`](/fr/docs/Web/API/Navigator/connection)

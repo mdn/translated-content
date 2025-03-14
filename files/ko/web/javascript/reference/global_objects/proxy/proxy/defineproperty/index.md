@@ -1,27 +1,40 @@
 ---
 title: handler.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-browser-compat: javascript.builtins.Proxy.handler.defineProperty
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
 ---
 
 {{JSRef}}
 
 **`handler.defineProperty()`** 메서드는 {{jsxref("Object.defineProperty()")}}에 대한 트랩입니다.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-defineproperty.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.defineProperty()", "taller")}}
+
+```js interactive-example
+const handler1 = {
+  defineProperty(target, key, descriptor) {
+    invariant(key, "define");
+    return true;
+  },
+};
+
+function invariant(key, action) {
+  if (key[0] === "_") {
+    throw new Error(`Invalid attempt to ${action} private "${key}" property`);
+  }
+}
+
+const monster1 = {};
+const proxy1 = new Proxy(monster1, handler1);
+
+console.log((proxy1._secret = "easily scared"));
+// Expected output: Error: Invalid attempt to define private "_secret" property
+```
 
 ## 구문
 
 ```js
 new Proxy(target, {
-  defineProperty(target, property, descriptor) {
-  }
+  defineProperty(target, property, descriptor) {},
 });
 ```
 
@@ -70,15 +83,18 @@ new Proxy(target, {
 다음 코드는 {{jsxref("Object.defineProperty()")}}를 트랩합니다.
 
 ```js
-const p = new Proxy({}, {
-  defineProperty(target, prop, descriptor) {
-    console.log(`called: ${prop}`);
-    return true;
-  }
-});
+const p = new Proxy(
+  {},
+  {
+    defineProperty(target, prop, descriptor) {
+      console.log(`called: ${prop}`);
+      return true;
+    },
+  },
+);
 
 const desc = { configurable: true, enumerable: true, value: 10 };
-Object.defineProperty(p, 'a', desc); // "호출: a"
+Object.defineProperty(p, "a", desc); // "호출: a"
 ```
 
 {{jsxref("Object.defineProperty()")}} 또는 {{jsxref("Reflect.defineProperty()")}}를 호출할 때 `defineProperty()` 트랩에 전달된 `descriptor`에는 한 가지 제한 사항이 있어 다음 속성만 사용할 수 있습니다.(비표준 속성은 무시됨)
@@ -91,17 +107,20 @@ Object.defineProperty(p, 'a', desc); // "호출: a"
 - `set`
 
 ```js
-const p = new Proxy({}, {
-  defineProperty(target, prop, descriptor) {
-    console.log(descriptor);
-    return Reflect.defineProperty(target, prop, descriptor);
-  }
-});
+const p = new Proxy(
+  {},
+  {
+    defineProperty(target, prop, descriptor) {
+      console.log(descriptor);
+      return Reflect.defineProperty(target, prop, descriptor);
+    },
+  },
+);
 
-Object.defineProperty(p, 'name', {
-  value: 'proxy',
-  type: 'custom'
-});  // { value: 'proxy' }
+Object.defineProperty(p, "name", {
+  value: "proxy",
+  type: "custom",
+}); // { value: 'proxy' }
 ```
 
 ## 명세서

@@ -9,9 +9,12 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 
 ## 语法
 
-```plain
-typedarray.set(array[, offset])
-typedarray.set(typedarray[, offset])
+```js-nolint
+set(array)
+set(array, targetOffset)
+
+set(typedarray)
+set(typedarray, targetOffset)
 ```
 
 ### 参数
@@ -36,7 +39,7 @@ typedarray.set(typedarray[, offset])
 var buffer = new ArrayBuffer(8);
 var uint8 = new Uint8Array(buffer);
 
-uint8.set([1,2,3], 3);
+uint8.set([1, 2, 3], 3);
 
 console.log(uint8); // Uint8Array [ 0, 0, 0, 1, 2, 3, 0, 0 ]
 ```
@@ -49,8 +52,8 @@ console.log(uint8); // Uint8Array [ 0, 0, 0, 1, 2, 3, 0, 0 ]
 
 {{Compat}}
 
-## 另见
+## 参见
 
-- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}

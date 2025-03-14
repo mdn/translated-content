@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
 
 `此 setUTCSeconds()` 方法为一个依据国际通用时间的特定日期设置秒数。
 
-{{EmbedInteractiveExample("pages/js/date-setutcseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCSeconds()")}}
+
+```js interactive-example
+const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+
+console.log(date1.getUTCSeconds());
+// Expected output: 30
+
+date1.setUTCSeconds(39);
+
+console.log(date1.getUTCSeconds());
+// Expected output: 39
+```
 
 ## 语法
 
@@ -49,7 +61,7 @@ theBigDay.setUTCSeconds(20);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("Date.prototype.getUTCSeconds()")}}
 - {{jsxref("Date.prototype.setSeconds()")}}

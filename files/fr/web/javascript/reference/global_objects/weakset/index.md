@@ -1,9 +1,6 @@
 ---
 title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
-original_slug: Web/JavaScript/Reference/Objets_globaux/WeakSet
-browser-compat: javascript.builtins.WeakSet
 ---
 
 {{JSRef}}
@@ -19,7 +16,8 @@ Les principales différences avec l'objet [`Set`](/fr/docs/Web/JavaScript/Refere
 - Contrairement aux `Sets`, les `WeakSets` sont des **ensembles uniquement constitués d'objets** et ne peuvent pas contenir des valeurs de n'importe quel type.
 - L'objet `WeakSet` est _faible_&nbsp;: les références vers les objets de l'ensemble sont des références faibles. Si aucune autre référence vers l'objet n'est présente en dehors du `WeakSet`, l'objet pourra alors être nettoyé par le ramasse-miette.
 
-  > **Note :** Cela signifie également qu'on ne peut pas lister les objets contenus à un instant donné dans l'ensemble. Les objets `WeakSets` ne sont pas énumérables.
+  > [!NOTE]
+  > Cela signifie également qu'on ne peut pas lister les objets contenus à un instant donné dans l'ensemble. Les objets `WeakSets` ne sont pas énumérables.
 
 ### Cas d'usage&nbsp;: détecter les références circulaires
 
@@ -27,31 +25,28 @@ Les fonctions récursives doivent faire attention aux structures de données cir
 
 ```js
 // Appeler un callback sur ce qui est stocké dans un objet
-function execRecursively(fn, subject, _refs = null){
-  if(!_refs)
-    _refs = new WeakSet();
+function execRecursively(fn, subject, _refs = null) {
+  if (!_refs) _refs = new WeakSet();
 
   // On évite une récursion infinie
-  if(_refs.has(subject))
-    return;
+  if (_refs.has(subject)) return;
 
   fn(subject);
-  if("object" === typeof subject){
+  if ("object" === typeof subject) {
     _refs.add(subject);
-    for(let key in subject)
-      execRecursively(fn, subject[key], _refs);
+    for (let key in subject) execRecursively(fn, subject[key], _refs);
   }
 }
 
 const toto = {
   toto: "Toto",
   truc: {
-    truc: "Truc"
-  }
+    truc: "Truc",
+  },
 };
 
 toto.truc.machin = toto; // Référence circulaire !
-execRecursively(obj => console.log(obj), toto);
+execRecursively((obj) => console.log(obj), toto);
 ```
 
 Ici, on a un objet `WeakSet` qui est créé lors de la première exécution et qui est passé ensuite à chaque appel qui suit (via l'argument interne `_refs`).
@@ -84,12 +79,12 @@ const truc = {};
 ws.add(toto);
 ws.add(truc);
 
-ws.has(toto);  // true
-ws.has(truc);  // true
+ws.has(toto); // true
+ws.has(truc); // true
 
 ws.delete(toto); // retire toto de l'ensemble
-ws.has(toto);    // false, toto a été enlevé
-ws.has(truc);    // toujours true
+ws.has(toto); // false, toto a été enlevé
+ws.has(truc); // toujours true
 ```
 
 On notera que `toto !== truc`. Bien que ce soient des objets similaires, ce ne sont pas _**les mêmes objets**_. Aussi, les deux sont ajoutés à l'ensemble.

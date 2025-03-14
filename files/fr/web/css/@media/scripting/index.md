@@ -1,11 +1,6 @@
 ---
 title: scripting
 slug: Web/CSS/@media/scripting
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
-translation_of: Web/CSS/@media/scripting
 ---
 
 {{CSSRef}}
@@ -29,7 +24,9 @@ La caractéristique `scripting` est définie avec un mot-clé parmi les suivants
 
 ```html
 <p class="script-none">Les outils de script ne sont pas disponibles. :-(</p>
-<p class="script-initial-only">Les outils de script sont uniquement disponibles au chargement initial.</p>
+<p class="script-initial-only">
+  Les outils de script sont uniquement disponibles au chargement initial.
+</p>
 <p class="script-enabled">Les outils de script sont activés ! :-)</p>
 ```
 
@@ -42,7 +39,7 @@ p {
 
 @media (scripting: none) {
   .script-none {
-     color: red;
+    color: red;
   }
 }
 

@@ -1,22 +1,26 @@
 ---
 title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Objeto
-  - Referencia
-  - metodo
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/assign
 ---
 
 {{JSRef}}
 
 El método **`Object.assign()`** copia todas las propiedades enumerables de uno o más objetos fuente a un objeto destino. Devuelve el objeto destino.
 
-{{EmbedInteractiveExample("pages/js/object-assign.html")}}
+{{InteractiveExample("JavaScript Demo: Object.assign()")}}
+
+```js interactive-example
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+
+const returnedTarget = Object.assign(target, source);
+
+console.log(target);
+// Expected output: Object { a: 1, b: 4, c: 5 }
+
+console.log(returnedTarget === target);
+// Expected output: true
+```
 
 ## Sintaxis
 
@@ -63,9 +67,9 @@ Para un clonado profundo, necesitamos usar otra alternativa ya que `Object.assig
 
 ```js
 function test() {
-  'use strict';
+  "use strict";
 
-  let obj1 = { a: 0 , b: { c: 0}};
+  let obj1 = { a: 0, b: { c: 0 } };
   let obj2 = Object.assign({}, obj1);
   console.log(JSON.stringify(obj2)); // { a: 0, b: { c: 0}}
 
@@ -82,7 +86,7 @@ function test() {
   console.log(JSON.stringify(obj2)); // { a: 2, b: { c: 3}}
 
   // Deep Clone
-  obj1 = { a: 0 , b: { c: 0}};
+  obj1 = { a: 0, b: { c: 0 } };
   let obj3 = JSON.parse(JSON.stringify(obj1));
   obj1.a = 4;
   obj1.b.c = 4;
@@ -101,7 +105,7 @@ var o3 = { c: 3 };
 
 var obj = Object.assign(o1, o2, o3);
 console.log(obj); // { a: 1, b: 2, c: 3 }
-console.log(o1);  // { a: 1, b: 2, c: 3 }, target object itself is changed.
+console.log(o1); // { a: 1, b: 2, c: 3 }, target object itself is changed.
 ```
 
 ### Fusionando objetos con las mismas propiedades
@@ -121,7 +125,7 @@ Las propiedades también son sobreescritas por otros objetos que aparecen poster
 
 ```js
 var o1 = { a: 1 };
-var o2 = { [Symbol('foo')]: 2 };
+var o2 = { [Symbol("foo")]: 2 };
 
 var obj = Object.assign({}, o1, o2);
 console.log(obj); // { a : 1, [Symbol("foo")]: 2 } (cf. bug 1207182 on Firefox)
@@ -131,15 +135,19 @@ Object.getOwnPropertySymbols(obj); // [Symbol(foo)]
 ### Las propiedades heredadas y las no enumerables no pueden ser copiadas
 
 ```js
-var obj = Object.create({ foo: 1 }, { // foo es una propiedad heredada.
-  bar: {
-    value: 2  // bar es una propiedad no enumerable.
+var obj = Object.create(
+  { foo: 1 },
+  {
+    // foo es una propiedad heredada.
+    bar: {
+      value: 2, // bar es una propiedad no enumerable.
+    },
+    baz: {
+      value: 3,
+      enumerable: true, // baz es una propiedad propia enumerable.
+    },
   },
-  baz: {
-    value: 3,
-    enumerable: true  // baz es una propiedad propia enumerable.
-  }
-});
+);
 
 var copy = Object.assign({}, obj);
 console.log(copy); // { baz: 3 }
@@ -148,10 +156,10 @@ console.log(copy); // { baz: 3 }
 ### Los tipos primitivos serán encapsulados en objetos
 
 ```js
-var v1 = 'abc';
+var v1 = "abc";
 var v2 = true;
 var v3 = 10;
-var v4 = Symbol('foo')
+var v4 = Symbol("foo");
 
 var obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
 // Los tipos primitivos son encapsulados en objetos y se ignoran las propiedades con valor null o undefined.
@@ -162,20 +170,20 @@ console.log(obj); // { "0": "a", "1": "b", "2": "c" }
 ### Las excepciones interrumpen la tarea de copiado
 
 ```js
-var target = Object.defineProperty({}, 'foo', {
+var target = Object.defineProperty({}, "foo", {
   value: 1,
-  writeable: false
+  writeable: false,
 }); // target.foo es una propiedad de sólo lectura
 
 Object.assign(target, { bar: 2 }, { foo2: 3, foo: 3, foo3: 3 }, { baz: 4 });
 // TypeError: "foo" es de sólo lectura
 // La excepción se lanza cuando se intenta asignar un valor a target.foo
 
-console.log(target.bar);  // 2, la primera fuente fue copiada.
+console.log(target.bar); // 2, la primera fuente fue copiada.
 console.log(target.foo2); // 3, la primera propiedad del segundo objeto fuente se copió correctamente.
-console.log(target.foo);  // 1, se lanza la excepción.
+console.log(target.foo); // 1, se lanza la excepción.
 console.log(target.foo3); // undefined, el método assign ha finalizado, no se copiará foo3.
-console.log(target.baz);  // undefined, tampoco se copiará el tercer objecto fuente.
+console.log(target.baz); // undefined, tampoco se copiará el tercer objecto fuente.
 ```
 
 ### Copiando métodos de acceso
@@ -185,7 +193,7 @@ var obj = {
   foo: 1,
   get bar() {
     return 2;
-  }
+  },
 };
 
 var copy = Object.assign({}, obj);
@@ -194,13 +202,13 @@ console.log(copy);
 
 // This is an assign function that copies full descriptors
 function completeAssign(target, ...sources) {
-  sources.forEach(source => {
+  sources.forEach((source) => {
     let descriptors = Object.keys(source).reduce((descriptors, key) => {
       descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
       return descriptors;
     }, {});
     // by default, Object.assign copies enumerable Symbols too
-    Object.getOwnPropertySymbols(source).forEach(sym => {
+    Object.getOwnPropertySymbols(source).forEach((sym) => {
       let descriptor = Object.getOwnPropertyDescriptor(source, sym);
       if (descriptor.enumerable) {
         descriptors[sym] = descriptor;
@@ -221,13 +229,15 @@ console.log(copy);
 Este {{Glossary("Polyfill","polyfill")}} no soporta propiedades símbolo, ya que ES5 no tiene símbolos.
 
 ```js
-if (typeof Object.assign != 'function') {
+if (typeof Object.assign != "function") {
   // Must be writable: true, enumerable: false, configurable: true
   Object.defineProperty(Object, "assign", {
-    value: function assign(target, varArgs) { // .length of function is 2
-      'use strict';
-      if (target == null) { // TypeError if undefined or null
-        throw new TypeError('Cannot convert undefined or null to object');
+    value: function assign(target, varArgs) {
+      // .length of function is 2
+      "use strict";
+      if (target == null) {
+        // TypeError if undefined or null
+        throw new TypeError("Cannot convert undefined or null to object");
       }
 
       var to = Object(target);
@@ -235,7 +245,8 @@ if (typeof Object.assign != 'function') {
       for (var index = 1; index < arguments.length; index++) {
         var nextSource = arguments[index];
 
-        if (nextSource != null) { // Skip over if undefined or null
+        if (nextSource != null) {
+          // Skip over if undefined or null
           for (var nextKey in nextSource) {
             // Avoid bugs when hasOwnProperty is shadowed
             if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
@@ -247,7 +258,7 @@ if (typeof Object.assign != 'function') {
       return to;
     },
     writable: true,
-    configurable: true
+    configurable: true,
   });
 }
 ```
@@ -258,10 +269,10 @@ if (typeof Object.assign != 'function') {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.assign")}}
+{{Compat}}
 
 ## Ver también
 
 - {{jsxref("Object.defineProperties()")}}
-- [Enumeración y propietarios de propiedades](/es/docs/Web/JavaScript/enumeracion_y_propietario_de_propiedades)
-- [Spread en literales tipo Objeto](/es/docs/Web/JavaScript/Referencia/Operadores/Sintaxis_Spread#Spread_en_literales_tipo_Objeto)
+- [Enumeración y propietarios de propiedades](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Spread en literales tipo Objeto](/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_en_literales_tipo_objeto)

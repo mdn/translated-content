@@ -1,21 +1,14 @@
 ---
 title: export
 slug: Web/JavaScript/Reference/Statements/export
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Statement
-  - export
-  - Инструкция
-  - Модули
-translation_of: Web/JavaScript/Reference/Statements/export
 ---
 
 {{jsSidebar("Statements")}}
 
 Инструкция **export** используется для экспорта функций, объектов или примитивов из файла (или модуля).
 
-> **Примечание:** Эта функциональность не реализована в браузерах на данный момент, но она реализована во многих транспайлерах, таких как [Traceur Compiler](https://github.com/google/traceur-compiler), [Babel](http://babeljs.io/) or [Rollup](https://github.com/rollup/rollup).
+> [!NOTE]
+> Эта функциональность не реализована в браузерах на данный момент, но она реализована во многих транспайлерах, таких как [Traceur Compiler](https://github.com/google/traceur-compiler), [Babel](https://babeljs.io/) or [Rollup](https://github.com/rollup/rollup).
 
 ## Синтаксис
 
@@ -52,7 +45,7 @@ export { import1 as name1, import2 as name2, …, nameN } from …;
 - Дефолтный экспорт (экспорт по умолчанию) (один на скрипт):
 
   ```js
-  export default function() {} // или 'export default class {}'
+  export default function () {} // или 'export default class {}'
   // тут не ставится точка с запятой
   ```
 
@@ -75,12 +68,12 @@ const foo = Math.PI + Math.SQRT2;
 export { cube, foo };
 ```
 
-Таким образом в другом скрипте при помощи импорта (см. [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import)) мы могли бы получить следующее:
+Таким образом в другом скрипте при помощи импорта (см. [`import`](/ru/docs/Web/JavaScript/Reference/Statements/import)) мы могли бы получить следующее:
 
 ```js
-import { cube, foo } from 'my-module';
+import { cube, foo } from "my-module";
 console.log(cube(3)); // 27
-console.log(foo);    // 4.555806215962888
+console.log(foo); // 4.555806215962888
 ```
 
 ### Использование export default
@@ -97,7 +90,7 @@ export default function cube(x) {
 Затем, в другом скрипте можно импортировать это значение по умолчанию таким образом:
 
 ```js
-import cube from 'my-module';
+import cube from "my-module";
 console.log(cube(3)); // 27
 ```
 
@@ -113,4 +106,4 @@ console.log(cube(3)); // 27
 
 - {{jsxref("Statements/import", "import")}}
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- [Axel Rauschmayer's book: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+- [Axel Rauschmayer's book: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)

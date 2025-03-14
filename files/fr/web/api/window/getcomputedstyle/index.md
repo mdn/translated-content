@@ -1,7 +1,6 @@
 ---
 title: window.getComputedStyle
 slug: Web/API/Window/getComputedStyle
-translation_of: Web/API/Window/getComputedStyle
 ---
 
 {{ ApiRef() }}
@@ -17,11 +16,12 @@ var style = window.getComputedStyle(element[, pseudoElt]);
 ```
 
 - element
-  - : L’{{ domxref("Element") }} pour lequel vous voulez obtenir une valeur calculée.
+  - : L'{{ domxref("Element") }} pour lequel vous voulez obtenir une valeur calculée.
 - pseudoElt {{ optional_inline() }}
   - : Chaîne de caractère spécifiant le pseudo-élément à cibler. Doit être `null` (ou non spécifiée) pour les éléments communs.
 
-> **Note :** Avant Gecko 2.0, le paramètre `pseudoElt` était obligatoire. Aucun autre navigateur majeur ne requiert que ce paramètre soit renseigné si il est null. Gecko a été modifié pour se comporter comme les autres navigateurs.
+> [!NOTE]
+> Avant Gecko 2.0, le paramètre `pseudoElt` était obligatoire. Aucun autre navigateur majeur ne requiert que ce paramètre soit renseigné si il est null. Gecko a été modifié pour se comporter comme les autres navigateurs.
 
 La valeur de retour `style` est un objet [`CSSStyleDeclaration`](/fr/docs/Web/API/CSSStyleDeclaration).
 
@@ -37,42 +37,41 @@ var style = window.getComputedStyle(elem1, null);
 
 ```html
 <style>
- #elem-container{
-   position: absolute;
-   left:     100px;
-   top:      200px;
-   height:   100px;
- }
+  #elem-container {
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    height: 100px;
+  }
 </style>
 
 <div id="elem-container">dummy</div>
 <div id="output"></div>
 
 <script>
-  function getTheStyle(){
+  function getTheStyle() {
     var elem = document.getElementById("elem-container");
-    var theCSSprop = window.getComputedStyle(elem,null).getPropertyValue("height");
+    var theCSSprop = window
+      .getComputedStyle(elem, null)
+      .getPropertyValue("height");
     document.getElementById("output").innerHTML = theCSSprop;
-   }
+  }
   getTheStyle();
 </script>
 ```
 
 ```js
-function dumpComputedStyles(elem,prop) {
-
-  var cs = window.getComputedStyle(elem,null);
+function dumpComputedStyles(elem, prop) {
+  var cs = window.getComputedStyle(elem, null);
   if (prop) {
-    console.log(prop+" : "+cs.getPropertyValue(prop));
+    console.log(prop + " : " + cs.getPropertyValue(prop));
     return;
   }
   var len = cs.length;
-  for (var i=0;i<len;i++) {
-
+  for (var i = 0; i < len; i++) {
     var style = cs[i];
-    console.log(style+" : "+cs.getPropertyValue(style));
+    console.log(style + " : " + cs.getPropertyValue(style));
   }
-
 }
 ```
 

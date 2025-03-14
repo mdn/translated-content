@@ -7,11 +7,49 @@ slug: Web/CSS/flex-grow
 
 CSS 属性 **`flex-grow`** [CSS](/zh-CN/docs/Web/CSS) 设置 flex 项 [主尺寸](https://www.w3.org/TR/css-flexbox/#main-size) 的 flex 增长系数。
 
-{{EmbedInteractiveExample("pages/css/flex-grow.html")}}
+{{InteractiveExample("CSS Demo: flex-grow")}}
+
+```css interactive-example-choice
+flex-grow: 1;
+```
+
+```css interactive-example-choice
+flex-grow: 2;
+```
+
+```css interactive-example-choice
+flex-grow: 3;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">I grow</div>
+  <div>Item Two</div>
+  <div>Item Three</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  border: 1px solid #c5c5c5;
+  width: auto;
+  max-height: 300px;
+  display: flex;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+```
 
 ## 语法
 
-满足[CSS 属性值定义语法](/zh-CN/docs/CSS/Value_definition_syntax) {{csssyntax("flex-grow")}}。
+满足 [CSS 属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax) {{csssyntax("flex-grow")}}。
 
 ```css
 /* <number> 值 */
@@ -39,7 +77,7 @@ flex-grow: unset;
 
 剩余空间是 flex 容器的大小减去所有 flex 项的大小加起来的大小。如果所有的兄弟项目都有相同的 flex-grow 系数，那么所有的项目将剩余空间按相同比例分配，否则将根据不同的 flex-grow 定义的比例进行分配。
 
- `flex-grow` 与其他的 flex 属性{{cssxref("flex-shrink")}}和{{cssxref("flex-basis")}}一起使用，通常使用{{cssxref("flex")}} 速记来定义，以确保所有的值都被设置。</p>
+`flex-grow` 与其他的 flex 属性 {{cssxref("flex-shrink")}} 和 {{cssxref("flex-basis")}} 一起使用，通常使用 {{cssxref("flex")}} 简写来定义，以确保所有的值都被设置。
 
 ## 正式定义
 
@@ -81,12 +119,12 @@ flex-grow: unset;
 
 .box {
   flex-grow: 1;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .box1 {
   flex-grow: 2;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 ```
 
@@ -104,7 +142,7 @@ flex-grow: unset;
 
 ## 参见
 
-- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
-- CSS Flexbox 指南：[弹性盒子的基本概念](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
-- CSS Flexbox 指南：[控制 Flex 子元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)
+- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- CSS Flexbox 指南：[弹性盒子的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- CSS Flexbox 指南：[控制 Flex 子元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
 - [`flex-grow` is weird. Or is it?](https://css-tricks.com/flex-grow-is-weird/) Manuel Matuzovic 在 CSS-Tricks 上的文章，说明了 flex-grow 的工作原理

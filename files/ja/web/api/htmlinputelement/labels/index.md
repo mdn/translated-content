@@ -1,19 +1,16 @@
 ---
-title: HTMLInputElement.labels
+title: "HTMLInputElement: labels プロパティ"
+short-title: labels
 slug: Web/API/HTMLInputElement/labels
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("DOM")}}
 
-**`HTMLInputElement.labels`** は読み取り専用プロパティで、 `hidden` 以外の {{HTMLElement("input")}} 要素に関連付けられた {{HTMLElement("label")}} 要素の {{domxref("NodeList")}} を返します。この要素が `hidden` 型であった場合は、このプロパティは `null` を返します。
+**`HTMLInputElement.labels`** は読み取り専用プロパティで、{{HTMLElement("input")}} 要素に関連付けられた {{HTMLElement("label")}} 要素を {{domxref("NodeList")}} で返します。この要素が `hidden` 型であった場合は、このプロパティは `null` を返します。
 
-## 構文
-
-```js
-var labelElements = input.labels;
-```
-
-### 返値
+## 値
 
 {{domxref("NodeList")}} で、その `<input>` 要素に関連付けられた `<label>` 要素が入ります。
 
@@ -22,23 +19,25 @@ var labelElements = input.labels;
 ### HTML
 
 ```html
-<label id="label1" for="test">Label 1</label>
-<input id="test"/>
-<label id="label2" for="test">Label 2</label>
+<label id="label1" for="test">ラベル 1</label>
+<input id="test" />
+<label id="label2" for="test">ラベル 2</label>
 ```
 
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("test");
-  for(var i = 0; i < input.labels.length; i++) {
-    console.log(input.labels[i].textContent); // "Label 1" and "Label 2"
+  for (const label of input.labels) {
+    console.log(label.textContent); // "ラベル 1" および "ラベル 2"
   }
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+### 結果
+
+{{EmbedLiveSample("Examples", "100%", 30)}}
 
 ## 仕様書
 

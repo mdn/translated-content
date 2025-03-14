@@ -3,7 +3,9 @@ title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
 ---
 
-[CSS](/zh-CN/docs/CSS) [媒体查询特性](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) **`prefers-reduced-motion`** 用于检测用户的系统是否被开启了动画减弱功能。
+{{CSSRef}}
+
+[CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/@media#媒体特性) **`prefers-reduced-motion`** 用于检测用户的系统是否被开启了动画减弱功能。
 
 ## 语法
 
@@ -21,12 +23,12 @@ slug: Web/CSS/@media/prefers-reduced-motion
   - 可以在 [GTK 3 的配置文件](https://wiki.archlinux.org/index.php/GTK#Configuration)中的 `[Settings]` 模块下设置 `gtk-enable-animations = false`。
 
 - 在 Windows 10 中：设置 > 轻松获取 > 显示 > 在 Windows 中显示动画。
-- 在 Windows 7 中：控制面板 > 轻松获取 > ?是计算机更易于查看 > 关闭不必要动画。
+- 在 Windows 11 中：设置 > 辅助功能 > 视觉效果 > 动画效果。
 - 在 MacOS 中：系统偏好 > 辅助使用 > 显示 > 减少运动。
 - 在 iOS 上：设置 > 通用 > 辅助性 > 减少运动。
 - 在 Android 9+ 上：设置 > 辅助性 > 移除动画。
 
-## 例子
+## 示例
 
 下面的例子将会展示一组令人心烦的动画，不过当你开启了系统的“减少运动”后就能看到动画减弱的效果了。
 
@@ -54,7 +56,10 @@ slug: Web/CSS/@media/prefers-reduced-motion
 .animation {
   background-color: rebeccapurple;
   color: #fff;
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
   width: 200px;
   padding: 1em;
   border-radius: 1em;
@@ -74,22 +79,22 @@ slug: Web/CSS/@media/prefers-reduced-motion
 
 @keyframes vibrate {
   0% {
-            transform: translate(0);
+    transform: translate(0);
   }
   20% {
-            transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
   }
   40% {
-            transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
   }
   60% {
-            transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
   }
   80% {
-            transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
   }
   100% {
-            transform: translate(0);
+    transform: translate(0);
   }
 }
 ```
@@ -110,4 +115,4 @@ slug: Web/CSS/@media/prefers-reduced-motion
 
 - [An introduction to the reduced motion media query](https://css-tricks.com/introduction-reduced-motion-media-query/)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/CSS/@media/")}}

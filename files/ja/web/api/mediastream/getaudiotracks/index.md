@@ -1,6 +1,9 @@
 ---
-title: MediaStream.getAudioTracks()
+title: "MediaStream: getAudioTracks() メソッド"
+short-title: getAudioTracks()
 slug: Web/API/MediaStream/getAudioTracks
+l10n:
+  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -9,8 +12,8 @@ slug: Web/API/MediaStream/getAudioTracks
 
 ## 構文
 
-```js
-var mediaStreamTracks = mediaStream.getAudioTracks()
+```js-nolint
+getAudioTracks()
 ```
 
 ### 引数
@@ -21,7 +24,8 @@ var mediaStreamTracks = mediaStream.getAudioTracks()
 
 ストリームに含まれる音声トラックである {{domxref("MediaStreamTrack")}} オブジェクトの配列です。音声トラックとは {{domxref("MediaStreamTrack.kind", "kind")}} プロパティが `audio` のトラックです。ストリーム内に音声トラックがない場合は、この配列は空になります。
 
-> **メモ:** 返されるトラックの順序は仕様書では定義されておらず、実際、 `getAudioTracks()` を呼び出すごとに変わる可能性があります。
+> [!NOTE]
+> 返されるトラックの順序は仕様書では定義されておらず、実際、 `getAudioTracks()` を呼び出すごとに変わる可能性があります。
 
 この API の初期の版では、特別な `AudioStreamTrack` インターフェイスがあり、音声ストリームのリストに含まれる各項目の型として使用されていましたが、これはその後でメインの {{domxref("MediaStreamTrack")}} インターフェイスに統合されました。
 
@@ -30,15 +34,16 @@ var mediaStreamTracks = mediaStream.getAudioTracks()
 この例では、ウェブカメラの音声と動画を {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} を使ってストリームとして取得し、そのストリームを {{HTMLElement("video")}} 要素に設定します。その後、終了時にストリーム内の最初の音声トラックを停止するタイマーを設定します。
 
 ```js
-navigator.mediaDevices.getUserMedia({audio: true, video: true})
-.then(mediaStream => {
-  document.querySelector('video').srcObject = mediaStream;
-  // Stop the audio stream after 5 seconds
-  setTimeout(() => {
-    const tracks = mediaStream.getAudioTracks()
-    tracks[0].stop()
-  }, 5000)
-})
+navigator.mediaDevices
+  .getUserMedia({ audio: true, video: true })
+  .then((mediaStream) => {
+    document.querySelector("video").srcObject = mediaStream;
+    // Stop the audio stream after 5 seconds
+    setTimeout(() => {
+      const tracks = mediaStream.getAudioTracks();
+      tracks[0].stop();
+    }, 5000);
+  });
 ```
 
 ## 仕様書

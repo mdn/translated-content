@@ -1,12 +1,6 @@
 ---
 title: perspective-origin
 slug: Web/CSS/perspective-origin
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - Transformations CSS
-translation_of: Web/CSS/perspective-origin
 ---
 
 {{CSSRef}}
@@ -342,7 +336,7 @@ perspective-origin: unset;
 
 /* On améliore la disposition */
 section {
-  background-color: #EEE;
+  background-color: #eee;
   padding: 10px;
   font-family: sans-serif;
   text-align: left;
@@ -365,7 +359,7 @@ section {
 
 ## Voir aussi
 
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Utilisation_des_transformations_CSS)
+- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - {{cssxref('transform-style')}}
 - {{cssxref('transform-function')}}
 - {{cssxref('perspective')}}

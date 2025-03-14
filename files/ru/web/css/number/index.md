@@ -1,8 +1,8 @@
 ---
 title: <number>
 slug: Web/CSS/number
-translation_of: Web/CSS/number
 ---
+
 {{CSSRef}}
 
 **`<number>`** - [тип хранения данных](/ru/docs/Web/CSS/CSS_Types) в [CSS](/ru/docs/Web/CSS) представляющий собой число: либо целое, либо с дробной частью.
@@ -13,7 +13,7 @@ translation_of: Web/CSS/number
 
 ## Интерполяция
 
-Во время анимации, значения типа данных CSS `<number>` являются интерполированными как числа вещественные или с плавающей точкой. Скорость интерполяции определена [timing function](/ru/docs/Web/CSS/single-transition-timing-function), связанной с анимацией.
+Во время анимации, значения типа данных CSS `<number>` являются интерполированными как числа вещественные или с плавающей точкой. Скорость интерполяции определена [timing function](/ru/docs/Web/CSS/easing-function), связанной с анимацией.
 
 ## Примеры
 

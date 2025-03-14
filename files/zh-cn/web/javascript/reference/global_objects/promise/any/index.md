@@ -5,52 +5,54 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/any
 
 {{JSRef}}
 
-`Promise.any()` 接收一个由 {{JSxRef("Promise")}} 所组成的可迭代对象，该方法会返回一个新的 `promise`，一旦可迭代对象内的任意一个 `promise` 变成了兑现状态，那么由该方法所返回的 `promise` 就会变成兑现状态，并且它的兑现值就是可迭代对象内的首先兑现的 `promise` 的兑现值。如果可迭代对象内的 `promise` 最终都没有兑现（即所有 `promise` 都被拒绝了），那么该方法所返回的 `promise` 就会变成拒绝状态，并且它的拒因会是一个 {{JSxRef("Global_Objects/AggregateError", "AggregateError")}} 实例，这是 {{JSxRef("Error")}} 的子类，用于把单一的错误集合在一起。
+**`Promise.any()`** 静态方法将一个 Promise 可迭代对象作为输入，并返回一个 {{jsxref("Promise")}}。当输入的任何一个 Promise 兑现时，这个返回的 Promise 将会兑现，并返回第一个兑现的值。当所有输入 Promise 都被拒绝（包括传递了空的可迭代对象）时，它会以一个包含拒绝原因数组的 {{jsxref("AggregateError")}} 拒绝。
 
-> **警告：** `Promise.any()` 方法依然是实验性的，尚未被所有的浏览器完全支持。它当前处于 [TC39 第四阶段草案（Stage 4）](https://github.com/tc39/proposal-promise-any)
+{{InteractiveExample("JavaScript Demo: Promise.any()")}}
+
+```js interactive-example
+const promise1 = Promise.reject(0);
+const promise2 = new Promise((resolve) => setTimeout(resolve, 100, "quick"));
+const promise3 = new Promise((resolve) => setTimeout(resolve, 500, "slow"));
+
+const promises = [promise1, promise2, promise3];
+
+Promise.any(promises).then((value) => console.log(value));
+
+// Expected output: "quick"
+```
 
 ## 语法
 
-```plain
-Promise.any(iterable);
+```js-nolint
+Promise.any(iterable)
 ```
 
 ### 参数
 
 - `iterable`
-  - : 一个[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol)的对象，例如 [Array](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)。
+  - : 一个 promise 的[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)（例如一个{{jsxref("Array", "数组", "", 1)}}）。
 
 ### 返回值
 
-- 如果传入了一个空的可迭代对象，那么就会返回一个已经被拒的 `promise`
-- 如果传入了一个不含有 `promise` 的可迭代对象，那么就会返回一个异步兑现的 `promise`
-- 其余情况下都会返回一个处于等待状态的 `promise`。如果可迭代对象中的任意一个 `promise` 兑现了，那么这个处于等待状态的 `promise` 就会异步地（调用栈为空时）切换至兑现状态。如果可迭代对象中的所有 `promise` 都被拒绝了，那么这个处于等待状态的 `promise` 就会异步地切换至被拒状态。
+一个 {{jsxref("Promise")}}，其状态为：
 
-## 说明
+- **已拒绝（already rejected）**，如果传入的 `iterable` 为空的话。
+- **异步兑现（asynchronously fulfilled）**，当给定的 `iterable` 中的任何一个 Promise 被兑现时，返回的 Promise 就会被兑现。其兑现值是第一个兑现的 Promise 的兑现值。
+- **异步拒绝（asynchronously rejected）**，当给定的 `iterable` 中的所有 Promise 都被拒绝时。拒绝原因是一个 {{jsxref("AggregateError")}}，其 `errors` 属性包含一个拒绝原因数组。无论完成顺序如何，这些错误都是按照传入的 Promise 的顺序排序。如果传递的 `iterable` 是非空的，但不包含待定的 Promise，则返回的 Promise 仍然是异步拒绝的（而不是同步拒绝的）。
 
-该方法用于获取首个兑现的 `promise` 的值。只要有一个 `promise` 兑现了，那么此方法就会提前结束，而不会继续等待其他的 `promise` 全部敲定。
+## 描述
 
-不像 {{JSxRef("Promise.all()")}} 会返回一组兑现值那样，我们只能得到一个兑现值（假设至少有一个 `promise` 兑现）。当我们只需要一个 `promise` 兑现，而不关心是哪一个兑现时此方法很有用的。
+`Promise.any()` 方法是 [Promise 并发](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_并发)方法之一。该方法对于返回第一个兑现的 Promise 非常有用。一旦有一个 Promise 兑现，它就会立即返回，因此不会等待其他 Promise 完成。
 
-同时，也不像 {{JSxRef("Promise.race()")}} 总是返回第一个敲定值（兑现或拒绝）那样，这个方法返回的是第一个*兑现的*值。这个方法将会忽略掉所有的被拒绝的 `promise`，直到第一个 `promise` 兑现。
+与 {{JSxRef("Promise.all()")}} 返回一个兑现值*数组*不同的是，我们只会得到一个兑现值（假设至少有一个 Promise 被兑现）。此方法对于那些如果我们只需要一个 Promise 被兑现，但不在意哪一个被兑现的情况更有益。请注意另一个区别：该方法在接收到*空的可迭代对象*时会拒绝，因为实际上，该可迭代对象不包含任何兑现的项。你可以将 `Promise.any()` 和 `Promise.all()` 与 {{jsxref("Array.prototype.some()")}} 和 {{jsxref("Array.prototype.every()")}} 进行比较。
 
-### 兑现（Fulfillment）
-
-该方法所返回的 `promise` 会以可迭代对象内首个兑现的 `promise` 的兑现值来作为它自己的兑现值，或者会以可迭代对象内首个非 `promise` 值来作为它自己的兑现值，该方法不会关心其他的 `promise` 是兑现了还是被拒了。
-
-- 如果传入的可迭代对象是非空的，那么当可迭代对象内的任意一个 `promise` 兑现后，或者当可迭代对象内存在非 `promise` 值时，该方法所返回的 `promise` 都会异步的变成兑现状态。
-
-### 拒绝（Rejection）
-
-如果可迭代对象内所有的 `promises` 都被拒绝了，那么该方法所返回的 `promise` 就会异步的切换至被拒状态，并用一个 {{JSxRef("AggregateError")}}（继承自 {{JSxRef("Error")}}）实例来作为它的拒因。它包含一个 `errors` 属性，该属性是一个用于存储拒因的数组。
-
-- 如果传入了一个空的可迭代数组，那么该方法就会返回一个已经被拒 `promise`，其拒因是一个 `AggregateError` 实例，该实例的 `errors` 属性会是一个空数组。
+同时，与 {{JSxRef("Promise.race()")}} 返回第一个*敲定*（无论是兑现还是拒绝）的值不同的是，该方法返回第一个*兑现*的值。该方法忽略所有被拒绝的 Promise，直到第一个被兑现的 Promise。
 
 ## 示例
 
-### First to fulfil
+### 使用 Promise.any()
 
-如果可迭代数组内的任意一个 `promise` 兑现了，那么该方法所返回的 `promise` 也会切换至兑现状态，哪怕首个敲定的 `promise` 是被拒的。不同的是，{{jsxref("Promise.race()")}} 所返回的 `promise` 的状态会跟随首个敲定的 `promise` 的状态。
+`Promise.any()` 会以第一个兑现的 Promise 来兑现，即使有 Promise 先被拒绝。这与 {{jsxref("Promise.race()")}} 不同，后者会使用第一个敲定的 Promise 来兑现或拒绝。
 
 ```js
 const pErr = new Promise((resolve, reject) => {
@@ -67,53 +69,55 @@ const pFast = new Promise((resolve, reject) => {
 
 Promise.any([pErr, pSlow, pFast]).then((value) => {
   console.log(value);
-  // pFast fulfils first
-})
-// 期望输出："很快完成"
+  // pFast 第一个兑现
+});
+// 打印：
+// 很快完成
 ```
 
-### Rejections with AggregateError
+### 拒绝并返回 AggregateError
 
-如果没有 `promise` 被兑现，那么 `Promise.any()` 所返回的 `promise` 就会切换至被拒状态，并以 {{jsxref("AggregateError")}} 实例来作为拒因。
+如果没有 Promise 被兑现，`Promise.any()` 将使用 {{jsxref("AggregateError")}} 进行拒绝。
 
 ```js
-const pErr = new Promise((resolve, reject) => {
-  reject('总是失败');
+const failure = new Promise((resolve, reject) => {
+  reject("总是失败");
 });
 
-Promise.any([pErr]).catch((err) => {
+Promise.any([failure]).catch((err) => {
   console.log(err);
-})
-// 期望输出："AggregateError: No Promise in Promise.any was resolved"
+});
+// AggregateError: No Promise in Promise.any was resolved
 ```
 
 ### 显示第一张已加载的图片
 
-在这个例子，我们有一个获取图片并返回 blob 的函数，我们使用 `Promise.any()` 来获取一些图片并显示第一张有效的图片（即最先 resolved 的那个 promise）。
+在这个例子，我们有一个获取图片并返回 blob 的函数，我们使用 `Promise.any()` 来获取一些图片并显示第一张可用的图片（即最先解决的那个 promise）。
 
 ```js
-function fetchAndDecode(url) {
-  return fetch(url).then(response => {
-    if(!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    } else {
-      return response.blob();
-    }
-  })
+async function fetchAndDecode(url, description) {
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error(`HTTP 错误！状态码：${res.status}`);
+  }
+  const data = await res.blob();
+  return [data, description];
 }
 
-let coffee = fetchAndDecode('coffee.jpg');
-let tea = fetchAndDecode('tea.jpg');
+const coffee = fetchAndDecode("coffee.jpg", "Coffee");
+const tea = fetchAndDecode("tea.jpg", "Tea");
 
-Promise.any([coffee, tea]).then(value => {
-  let objectURL = URL.createObjectURL(value);
-  let image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
-})
-.catch(e => {
-  console.log(e.message);
-});
+Promise.any([coffee, tea])
+  .then(([blob, description]) => {
+    const objectURL = URL.createObjectURL(blob);
+    const image = document.createElement("img");
+    image.src = objectURL;
+    image.alt = description;
+    document.body.appendChild(image);
+  })
+  .catch((e) => {
+    console.error(e);
+  });
 ```
 
 ## 规范
@@ -126,6 +130,8 @@ Promise.any([coffee, tea]).then(value => {
 
 ## 参见
 
+- [`core-js` 中 `Promise.any` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-promise)
 - {{JSxRef("Promise")}}
 - {{JSxRef("Promise.all()")}}
+- {{JSxRef("Promise.allSettled()")}}
 - {{JSxRef("Promise.race()")}}

@@ -1,7 +1,6 @@
 ---
 title: transform-origin
 slug: Web/CSS/transform-origin
-translation_of: Web/CSS/transform-origin
 ---
 
 {{ CSSRef("CSS Transforms") }} {{ SeeCompatTable() }}
@@ -64,9 +63,9 @@ Las palabras clave son abreviaciones por convención que coinciden con los sigui
 
 ## Ejemplos
 
-Ver [Uso de CSS transforms](/En/CSS/Using_CSS_transforms) para más ejemplos.
+Ver [Uso de CSS transforms](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) para más ejemplos.
 
-### Ejemplos en vivo:
+### Ejemplos en vivo
 
 | `transform: none;`                                         |     |
 | ---------------------------------------------------------- | --- |
@@ -86,8 +85,8 @@ Ver [Uso de CSS transforms](/En/CSS/Using_CSS_transforms) para más ejemplos.
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.transform-origin")}}
+{{Compat}}
 
 ## Ver también
 
-- [Uso de CSS transform](/es/docs/CSS/Using_CSS_transforms)
+- [Uso de CSS transform](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

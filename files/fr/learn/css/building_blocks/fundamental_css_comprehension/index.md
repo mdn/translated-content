@@ -1,19 +1,6 @@
 ---
 title: Compréhension des fondements des CSS
 slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
-tags:
-  - CSS
-  - Codage
-  - Commentaires
-  - Débutant
-  - Evaluation
-  - Règles
-  - Style
-  - Syntaxe
-  - Sélecteurs
-  - modèle de boîte
-translation_of: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
-original_slug: Apprendre/CSS/Introduction_à_CSS/Fundamental_CSS_comprehension
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Apprendre/CSS/Introduction_à_CSS")}}
@@ -46,7 +33,8 @@ Pour demarrer cet exercice, vous devez :
 - Récupérer et enregistrer le [fichier HTML de l'exercice](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/index.html) ainsi que le [fichier image associé](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/chris.jpg) dans un nouveau répertoire local sur votre ordinateur. Si vous voulez utiliser un fichier image de votre cru et mettre votre nom, vous êtes libre — assurez vous simplement que l'image soit de forme carrée.
 - Enregistrez le [fichier texte des ressources de la CSS](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/style-resources.txt) — il contient un jeu de sélecteurs et de règles bruts que vous devrez étudier et combiner pour répondre à certaines parties de cet exercice.
 
-> **Note :** À défaut, vous pouvez utiliser un site comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) pour faire votre exercice. Collez le HTML et complétez la CSS dans un de ces éditeurs en ligne. Utilisez cet [URL](http://mdn.github.io/learning-area/css/introduction-to-css/fundamental-css-comprehension/chris.jpg) pour faire pointer l'élément `<img>` sur le fichier correspondant. Si l'éditeur en ligne que vous utilisez ne comporte pas de panneau séparé pour la CSS, mettez‑le dans un élément `<style>` dans l'élément `head` du document.
+> [!NOTE]
+> À défaut, vous pouvez utiliser un site comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour faire votre exercice. Collez le HTML et complétez la CSS dans un de ces éditeurs en ligne. Utilisez cet [URL](https://mdn.github.io/learning-area/css/introduction-to-css/fundamental-css-comprehension/chris.jpg) pour faire pointer l'élément `<img>` sur le fichier correspondant. Si l'éditeur en ligne que vous utilisez ne comporte pas de panneau séparé pour la CSS, mettez‑le dans un élément `<style>` dans l'élément `head` du document.
 
 ## Énoncé du projet
 
@@ -80,7 +68,8 @@ Nouveaux jeux de règles à écrire :
 - Écrivez un jeu de règles qui donne à `<p>` dans le pied de page une taille de police effective de 15px (mais exprimée en `em`) et une hauteur de ligne appropriée pour la placer au centre de la boîte de contenu du pied de page. Rappelez-vous que la hauteur de la boîte de contenu doit être de 30px — vous avez là toutes les données dont vous avez besoin pour calculer la hauteur de ligne.
 - Comme dernière petite touche, donnez au paragraphe à l'intérieur de `<article>` une valeur de remplissage appropriée pour que son bord gauche soit aligné avec le paragraphe `<h2>` et le paragraphe de pied de page ; réglez sa couleur pour qu'elle soit assez claire afin d'être facile à lire.
 
-> **Note :** Gardez présent à l'esprit que le 2e jeu de règles définit `font-size: 10px;` pour l'élément `<html>` — cela signifie que pour tous les enfants de `<html>`, un `em` vaudra 10px et non 16px comme c'est le cas par défaut (ceci bien sûr, à condition que les enfants en question n'aient pas de parents ayant un `font-size` différent placés entre eux et `<html>` dans la hiérarchie. Les valeurs dont vous avez besoin pourraient en être affectées, bien que dans cet exemple simple, ce ne soit pas un problème).
+> [!NOTE]
+> Gardez présent à l'esprit que le 2e jeu de règles définit `font-size: 10px;` pour l'élément `<html>` — cela signifie que pour tous les enfants de `<html>`, un `em` vaudra 10px et non 16px comme c'est le cas par défaut (ceci bien sûr, à condition que les enfants en question n'aient pas de parents ayant un `font-size` différent placés entre eux et `<html>` dans la hiérarchie. Les valeurs dont vous avez besoin pourraient en être affectées, bien que dans cet exemple simple, ce ne soit pas un problème).
 
 Autres choses à prendre en considération :
 
@@ -103,18 +92,3 @@ La capture d'écran suivante montre un exemple de ce à quoi devrait ressembler 
 Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur [le fil de discussion à propos de cet exercise](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abors, il n'y rien à gagner en trichant !
 
 {{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Apprendre/CSS/Introduction_à_CSS")}}
-
-## Dans ce module
-
-- [Comment fonctionnent les CSS](/fr/Apprendre/CSS/Introduction_à_CSS/Le_fonctionnement_de_CSS)
-- [Syntaxe CSS](/fr/Apprendre/CSS/Introduction_à_CSS/La_syntaxe)
-- [Sélecteurs](/fr/Apprendre/CSS/Introduction_à_CSS/Les_sélecteurs)
-- [Sélecteurs simples](/fr/docs/Learn/CSS/Introduction_to_CSS/Selectors/Simple_selectors)
-- [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Introduction_to_CSS/Selectors/Attribute_selectors)
-- [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Introduction_to_CSS/Selectors/Pseudo-classes_and_pseudo-elements)
-- [Combinaisons et sélecteurs multiples](/fr/docs/Learn/CSS/Introduction_to_CSS/Selectors/Combinators_and_multiple_selectors)
-- [Unités et valeurs pour les CSS](/fr/Apprendre/CSS/Introduction_à_CSS/Values_and_units)
-- [Cascade et héritage](/fr/Apprendre/CSS/Introduction_à_CSS/La_cascade_et_l_héritage)
-- [Le modèle de boîte](/fr/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte)
-- [Débogage des CSS](/fr/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)
-- [Compréhension des fondements des CSS](/fr/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension)

@@ -2,7 +2,7 @@
 title: ストリーム API
 slug: Web/API/Streams_API
 l10n:
-  sourceCommit: d8a2942c4ea49cd3e4b5870fa39dca33f22257e4
+  sourceCommit: 2be3cb7ebebc76afa53a5604dc8be000d5ccd1c6
 ---
 
 {{DefaultAPISidebar("Streams")}}
@@ -13,23 +13,24 @@ l10n:
 
 ## 概念と使用方法
 
-ストリーミングでは、ネットワーク経由で受信するリソースを小さなチャンク（塊）に分割し、少しずつ処理します。これは、ウェブページに表示する資産を受け取るときに、ブラウザーがいずれにせよ行うことです。動画がバッファリングされて徐々に再生可能になり、画像が読み込まれるにつれて徐々に表示されることもあります。
+ストリーミングでは、ネットワーク経由で受信するリソースを小さなチャンク（塊）に分割し、少しずつ処理します。ブラウザーはメディア資産を受信する際にすでにこのような動作を行っています。動画はコンテンツのダウンロードが進むにつれてバッファーされ再生されますし、画像も読み込みが進むにつれて徐々に表示されることがあります。
 
-しかし、これは以前は JavaScript で実現できませんでした。以前は、何らかの種類のリソース（動画、テキストファイルなど）を処理したい場合は、ファイル全体をダウンロードし、適切な形式にデシリアライズされるのを待ってから、完全に受信した後に全部まとめて処理する必要がありました。
+しかし、この機能はこれまで JavaScript では利用できませんでした。以前は、ある種のリソース（動画やテキストファイルなど）を処理したい場合、ファイル全体をダウンロードして、適切な形式にデシリアライズされるのを待ち、それからすべてのデータを処理しなければなりませんでした。
 
-ストリームが JavaScript で利用できるようになったことで、これがすべて変わりました。クライアント側で利用可能になると、バッファー、文字列、 blob などを生成せずに、JavaScript で少しずつ生データの処理を開始することができます。
+ストリーム API を使えば、バッファーや文字列、blob などを生成する必要なく、利用できるようになったらすぐに、JavaScript で生のデータを少しずつ処理し始めることができます。
 
 ![ストリーム API の基本概念は、ネットワークからデータをいくつかのデータパケットに分割して取得することです。データは処理され、データパケットのストリームとしてブラウザーに送信されます。](concept.png)
 
 さらに利点もあります。 ストリームの開始または終了の検出、ストリームの連鎖、エラー処理と必要に応じたストリームのキャンセル、ストリームの読み取り速度への対応が可能です。
 
-ストリームの基本的な使用法は、応答をストリームとして利用可能にすることにかかっています。 例えば、成功した[フェッチリクエスト](/ja/docs/Web/API/fetch)によって返されたレスポンスの本体は、{{domxref("ReadableStream")}} として取り出すことができます。その後、{{domxref("ReadableStream.getReader()")}} で作成したリーダーを使用して読み取ったり、{{domxref("ReadableStream.cancel()")}} でキャンセルしたりすることができます。
+ストリームの使い方は、レスポンスをストリームとして利用できるかどうかにかかっています。例えば、[読み取りリクエスト](/ja/docs/Web/API/Window/fetch)が成功すると返されるレスポンス本体は {{domxref("ReadableStream")}} となり、{{domxref("ReadableStream.getReader()")}} で作成したリーダーで読み取ることができます。
 
 より複雑な用途では、例えば[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)内でデータを処理するために、 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} コンストラクターを使用して独自のストリームを作成することができます。
 
 {{domxref("WritableStream")}} を使用してストリームにデータを書き込むこともできます。
 
-> **メモ:** ストリームの理論と実践の詳細については、[ストリーム API の概念](/ja/docs/Web/API/Streams_API/Concepts)、[読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)、[書き込み可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_writable_streams)の記事をご覧ください。
+> [!NOTE]
+> ストリームの理論と実践の詳細については、[ストリーム API の概念](/ja/docs/Web/API/Streams_API/Concepts)、[読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)、[読み取り可能なバイトストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams)、[書き込み可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_writable_streams)の記事をご覧ください。
 
 ## ストリームのインターフェイス
 
@@ -54,7 +55,7 @@ l10n:
 ### 変換ストリーム
 
 - {{domxref("TransformStream")}}
-  - : 一連の変換可能なデータを表します。
+  - : ストリームオブジェクトの[パイプチェーン](/ja/docs/Web/API/Streams_API/Concepts#pipe_chains)を通して渡されるデータを変換するストリームオブジェクトの抽象化したものを表します。
 - {{domxref("TransformStreamDefaultController")}}
   - : 変換ストリームに関連付けられた {{domxref("ReadableStream")}} と {{domxref("WritableStream")}} を操作するためのメソッドを提供します。
 
@@ -68,9 +69,9 @@ l10n:
 ### 他の API の拡張
 
 - {{domxref("Request")}}
-  - : 新しい `Request` オブジェクトが構築されると、その `RequestInit` 辞書の `body` プロパティで {{domxref("ReadableStream")}} を渡すことができます。 次に、この `Request` を {{domxref("fetch()")}} に渡して、ストリームのフェッチを開始することができます。
+  - : 新しい `Request` オブジェクトが構築されると、その `RequestInit` 辞書の `body` プロパティで {{domxref("ReadableStream")}} を渡すことができます。 次に、この `Request` を {{domxref("Window/fetch", "fetch()")}} に渡して、ストリームのフェッチを開始することができます。
 - {{domxref("Response.body")}}
-  - : 成功した[フェッチリクエスト](/ja/docs/Web/API/fetch)によって返されたレスポンスの本体で、既定で {{domxref("ReadableStream")}} として取り出すことができ、リーダーを装着することができます。
+  - : 成功した[フェッチリクエスト](/ja/docs/Web/API/Window/fetch)によって返されたレスポンスの本体で、既定で {{domxref("ReadableStream")}} として取り出すことができ、リーダーを装着することができます。
 
 ### ByteStream 関連のインターフェイス
 
@@ -90,7 +91,7 @@ l10n:
 - [Simple random stream](https://mdn.github.io/dom-examples/streams/simple-random-stream/)（単純なランダムストリーム）: この例は、カスタムストリームを使用してランダムな文字列を生成し、それらをチャンクとしてキューに入れてから、再度読み取る方法を示しています。
 - [Simple tee example](https://mdn.github.io/dom-examples/streams/simple-tee-example/)（単純な tee の例）: この例は、単純なランダムストリームの例を拡張したもので、ストリームを tee 化して、両方の結果のストリームの独立して読み取る方法を示しています。
 - [Simple writer](https://mdn.github.io/dom-examples/streams/simple-writer/)（単純なライター）: この例では、書き込み可能なストリームに書き込み、ストリームをデコードして、コンテンツを UI に書き込む方法を示します。
-- [Unpack chunks of a PNG](https://mdn.github.io/dom-examples/streams/png-transform-stream/)（PNG のチャンクをアンパックする）: この例は、PNG ファイルのデータを PNG のチャンクのストリームに変換することにより、 [`pipeThrough()`](/ja/docs/Web/API/ReadableStream/pipeThrough) を使用して  ReadableStream を他のデータ型のストリームに変換する方法を示します。
+- [Unpack chunks of a PNG](https://mdn.github.io/dom-examples/streams/png-transform-stream/)（PNG のチャンクをアンパックする）: この例は、PNG ファイルのデータを PNG のチャンクのストリームに変換することにより、 [`pipeThrough()`](/ja/docs/Web/API/ReadableStream/pipeThrough) を使用して ReadableStream を他のデータ型のストリームに変換する方法を示します。
 
 他の開発者による例
 
@@ -108,5 +109,5 @@ l10n:
 
 - [ストリーム API の概念](/ja/docs/Web/API/Streams_API/Concepts)
 - [読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)
-- [読み取り可能な倍とストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams)
+- [読み取り可能なバイトストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams)
 - [書き込み可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_writable_streams)

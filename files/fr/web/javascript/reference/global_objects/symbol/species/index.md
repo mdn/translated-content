@@ -1,21 +1,30 @@
 ---
 title: Symbol.species
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/species
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/species
 ---
 
 {{JSRef}}
 
 Le symbole **`Symbol.species`** correspond à une fonction utilisée comme constructeur pour créer des objets dérivés.
 
-{{EmbedInteractiveExample("pages/js/symbol-species.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.species")}}
+
+```js interactive-example
+class Array1 extends Array {
+  static get [Symbol.species]() {
+    return Array;
+  }
+}
+
+const a = new Array1(1, 2, 3);
+const mapped = a.map((x) => x * x);
+
+console.log(mapped instanceof Array1);
+// Expected output: false
+
+console.log(mapped instanceof Array);
+// Expected output: true
+```
 
 ## Description
 
@@ -30,13 +39,15 @@ Dans certains cas, vous pouvez avoir besoin de renvoyer {{jsxref("Array")}} pour
 ```js
 class MonArray extends Array {
   // On surcharge species avec le constructeur parent Array
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
-var a = new MonArray(1,2,3);
-var mapped = a.map(x => x * x);
+var a = new MonArray(1, 2, 3);
+var mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MonArray); // false
-console.log(mapped instanceof Array);    // true
+console.log(mapped instanceof Array); // true
 ```
 
 ## Spécifications

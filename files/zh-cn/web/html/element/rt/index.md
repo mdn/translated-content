@@ -36,15 +36,12 @@ slug: Web/HTML/Element/rt
 
 ## 属性
 
-该元素仅仅包含 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
+该元素仅仅包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 ## 示例
 
 ```html
-<ruby>
-  汉 <rt>Hàn</rt>
-  字 <rt>Zì</rt>
-</ruby>
+<ruby> 汉 <rt>Hàn</rt> 字 <rt>Zì</rt> </ruby>
 ```
 
 ## 规范
@@ -55,7 +52,7 @@ slug: Web/HTML/Element/rt
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{HTMLElement("ruby")}}
 - {{HTMLElement("rp")}}

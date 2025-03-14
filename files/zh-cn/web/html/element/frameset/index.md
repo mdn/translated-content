@@ -9,15 +9,16 @@ slug: Web/HTML/Element/frameset
 
 `<frameset>` 是一个用于包含 {{HTMLElement("frame")}} 的 HTML 元素。
 
-> **备注：** 现在不鼓励使用 frame，而是用{{HTMLElement("iframe")}}。现今的网站一般都不使用 frame。
+> [!NOTE]
+> 现在不鼓励使用 frame，而是用{{HTMLElement("iframe")}}。现今的网站一般都不使用 frame。
 
 ## 属性
 
-像所有其他的 HTML 元素一样，这个元素支持[全局属性](/zh-CN/HTML/Global_attributes)。
+像所有其他的 HTML 元素一样，这个元素支持[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("cols")}}
+- `cols`
   - : 这个属性指定一个框架集中列的数目和尺寸。
-- {{htmlattrdef("rows")}}
+- `rows`
   - : 这个属性指定一个框架集中行的数目和尺寸。
 
 ## 例子

@@ -1,23 +1,25 @@
 ---
 title: Array.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/copyWithin
 ---
 
 {{JSRef}}
 
 El método **`copyWithin()`** transfiere una copia plana de una sección a otra dentro del mismo array ( o contexto similar ), sin modificar su propiedad length y lo devuelve.
 
-{{EmbedInteractiveExample("pages/js/array-copywithin.html")}}
+{{InteractiveExample("JavaScript Demo: Array.copyWithin()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c", "d", "e"];
+
+// Copy to index 0 the element at index 3
+console.log(array1.copyWithin(0, 3, 4));
+// Expected output: Array ["d", "b", "c", "d", "e"]
+
+// Copy to index 1 all elements from index 3 to the end
+console.log(array1.copyWithin(1, 3));
+// Expected output: Array ["d", "d", "e", "d", "e"]
+```
 
 ## Sintaxis
 
@@ -88,7 +90,7 @@ A continuación se aplica en el contexto de un objeto **array-like**:
 - observa que **no** se modifica la propiedad length, a pesar de que se ha introducido una nueva propiedad con clave 0. A esto ser refiere cuando se dice que `copyWithin` es un método **mutador**. ¿Por qué se creó esta nueva propiedad? porque mediante el argumento target se especificó que la copia debía comenzar a partir de un índice que ¡¡no existía!!
 
 ```js
-[].copyWithin.call({length: 5, 3: 1}, 0, 3);
+[].copyWithin.call({ length: 5, 3: 1 }, 0, 3);
 // {0: 1, 3: 1, length: 5}
 ```
 
@@ -111,33 +113,38 @@ i32a.copyWithin(0, 2);
 ```js
 if (!Array.prototype.copyWithin) {
   Array.prototype.copyWithin =
-  // Array: Number[, Number[, Number]]
-  function copyWithin(target, start, stop) {
-    var positiveT = target >= 0,
+    // Array: Number[, Number[, Number]]
+    function copyWithin(target, start, stop) {
+      var positiveT = target >= 0,
         positiveS = (start = start | 0) >= 0,
-        length    = this.length,
-        zero      = 0,
-        r         = function() {return ((+new Date) * Math.random()).toString(36)},
+        length = this.length,
+        zero = 0,
+        r = function () {
+          return (+new Date() * Math.random()).toString(36);
+        },
         delimiter = "\b" + r() + "-" + r() + "-" + r() + "\b",
         hold;
 
-    stop = stop || this.length;
-    hold = this.slice.apply(this,
-      positiveT?
-        [start, stop]:
-      positiveS?
-        [start, -target]:
-      [start])
-    .join(delimiter);
+      stop = stop || this.length;
+      hold = this.slice
+        .apply(
+          this,
+          positiveT ? [start, stop] : positiveS ? [start, -target] : [start],
+        )
+        .join(delimiter);
 
-    return this.splice.apply(this,
-      positiveT?
-        [target, stop - start, hold]:
-      positiveS?
-        [target, stop, hold]:
-      [target, start, hold]),
-            this.join(delimiter).split(delimiter).slice(zero, length);
-  }
+      return (
+        this.splice.apply(
+          this,
+          positiveT
+            ? [target, stop - start, hold]
+            : positiveS
+              ? [target, stop, hold]
+              : [target, start, hold],
+        ),
+        this.join(delimiter).split(delimiter).slice(zero, length)
+      );
+    };
 }
 ```
 
@@ -147,7 +154,7 @@ if (!Array.prototype.copyWithin) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.copyWithin")}}
+{{Compat}}
 
 ## Ver también
 

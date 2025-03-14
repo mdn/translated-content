@@ -1,17 +1,24 @@
 ---
 title: Сложение с присваиванием (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
-tags:
-  - JavaScript
-  - Оператор
-translation_of: Web/JavaScript/Reference/Operators/Addition_assignment
 ---
 
 {{jsSidebar("Operators")}}
 
 Оператор сложения с присваиванием (`+=`) добавляет значение правого операнда к переменной и присваивает переменной результат. Типы двух операндов определяют поведение оператора сложения с присваиванием. Добавление или конкатенация возможны.
 
-{{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Addition assignment operator")}}
+
+```js interactive-example
+let a = 2;
+let b = "hello";
+
+console.log((a += 3)); // Addition
+// Expected output: 5
+
+console.log((b += " world")); // Concatenation
+// Expected output: "hello world"
+```
 
 ## Синтаксис
 
@@ -31,22 +38,22 @@ translation_of: Web/JavaScript/Reference/Operators/Addition_assignment
 //  baz = true
 
 // Number + Number -> addition
-bar += 2 // 7
+bar += 2; // 7
 
 // Boolean + Number -> addition
-baz += 1 // 2
+baz += 1; // 2
 
 // Boolean + Boolean -> addition
-baz += false // 1
+baz += false; // 1
 
 // Number + String -> concatenation
-bar += 'foo' // "5foo"
+bar += "foo"; // "5foo"
 
 // String + Boolean -> concatenation
-foo += false // "foofalse"
+foo += false; // "foofalse"
 
 // String + String -> concatenation
-foo += 'bar' // "foobar"
+foo += "bar"; // "foobar"
 ```
 
 ## Спецификации
@@ -59,5 +66,5 @@ foo += 'bar' // "foobar"
 
 ## Смотрите также
 
-- [Assignment operators in the JS guide](/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Assignment operators in the JS guide](/ru/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment)
 - [Оператор сложения](/ru/docs/Web/JavaScript/Reference/Operators/Addition)

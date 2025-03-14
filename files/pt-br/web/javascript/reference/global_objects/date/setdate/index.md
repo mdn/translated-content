@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setDate
 
 O método **`setDate()`** configura o dia do objeto {{jsxref("Date")}} relativamente ao início do mês configurado previamente.
 
-{{EmbedInteractiveExample("pages/js/date-setdate.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setDate()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+event.setDate(24);
+
+console.log(event.getDate());
+// Expected output: 24
+
+event.setDate(32);
+// Only 31 days in August!
+
+console.log(event.getDate());
+// Expected output: 1
+```
 
 ## Sintaxe
 
@@ -38,23 +53,21 @@ Se um número negativo for fornecido para `dayValue`, a data será configurada c
 
 ```js
 var theBigDay = new Date(1962, 6, 7); // 1962-07-07 (7th of July 1962)
-theBigDay.setDate(24);  // 1962-07-24 (24th of July 1962)
-theBigDay.setDate(32);  // 1962-08-01 (1st of August 1962)
-theBigDay.setDate(22);  // 1962-08-22 (22th of August 1962)
-theBigDay.setDate(0);   // 1962-07-31 (31th of July 1962)
-theBigDay.setDate(98);  // 1962-10-06 (6th of October 1962)
+theBigDay.setDate(24); // 1962-07-24 (24th of July 1962)
+theBigDay.setDate(32); // 1962-08-01 (1st of August 1962)
+theBigDay.setDate(22); // 1962-08-22 (22th of August 1962)
+theBigDay.setDate(0); // 1962-07-31 (31th of July 1962)
+theBigDay.setDate(98); // 1962-10-06 (6th of October 1962)
 theBigDay.setDate(-50); // 1962-08-11 (11th of August 1962)
 ```
 
 ## Especificações
 
-| Especificação                                                                                                |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.setdate', 'Date.prototype.setDate')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.setDate")}}
+{{Compat}}
 
 ## Veja também
 

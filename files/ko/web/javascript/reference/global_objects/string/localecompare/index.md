@@ -1,21 +1,23 @@
 ---
 title: String.prototype.localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
-tags:
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-browser-compat: javascript.builtins.String.localeCompare
-translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 ---
+
 {{JSRef}}
 
 **`localeCompare()`** 메서드는 참조 문자열이 정렬 순으로 지정된 문자열 앞 혹은 뒤에 오는지 또는 동일한 문자열인지 나타내는 수치를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/string-localecompare.html")}}
+{{InteractiveExample("JavaScript Demo: String.localeCompare()")}}
+
+```js interactive-example
+const a = "réservé"; // With accents, lowercase
+const b = "RESERVE"; // No accents, uppercase
+
+console.log(a.localeCompare(b));
+// Expected output: 1
+console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
+// Expected output: 0
+```
 
 새로운 `locales` 인수와 `options` 인수를 사용하면 정렬에 사용될 언어를 지정하고 함수의 동작을 사용자 정의할 수 있습니다.
 `locales`와 `options`의 인수를 무시하는 오래된 구현에서는 사용되는 locale과 정렬 순서는 완전히 구현에 의존합니다.
@@ -23,9 +25,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 ## 구문
 
 ```js
-localeCompare(compareString)
-localeCompare(compareString, locales)
-localeCompare(compareString, locales, options)
+localeCompare(compareString);
+localeCompare(compareString, locales);
+localeCompare(compareString, locales, options);
 ```
 
 ### 매개변수
@@ -39,7 +41,7 @@ localeCompare(compareString, locales, options)
     완전히 구현에 의존합니다.
 
     매개변수의 상세 및 사용 방법은 [`Intl.Collator()`
-    constructor](/ko/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator)를 참조하세요.
+    constructor](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator)를 참조하세요.
 
 ### 반환 값
 
@@ -69,13 +71,13 @@ localeCompare(compareString, locales, options)
 
 ```js
 // "a"는 "c" 전에 위치하므로 음수 값을 반환
-'a'.localeCompare('c'); // -2 혹은 -1 (또는 다른 음수 값)
+"a".localeCompare("c"); // -2 혹은 -1 (또는 다른 음수 값)
 
 // 알파벳 순으로 단어 "check"는 "against"보다 뒤에 위치하므로 양수 값을 반환
-'check'.localeCompare('against'); // 2 혹은 1 (또는 다른 양수 값)
+"check".localeCompare("against"); // 2 혹은 1 (또는 다른 양수 값)
 
 // "a"와 "a"는 서로 동등하므로 중립 값 0을 반환
-'a'.localeCompare('a'); // 0
+"a".localeCompare("a"); // 0
 ```
 
 ### 배열 정렬
@@ -83,8 +85,8 @@ localeCompare(compareString, locales, options)
 `localeCompare()`을 사용해 대소문자를 구분하지 않는 배열 정렬을 할 수 있습니다.
 
 ```js
-let items = ['réservé', 'Premier', 'Cliché', 'communiqué', 'café', 'Adieu'];
-items.sort( (a, b) => a.localeCompare(b, 'fr', {ignorePunctuation: true}));
+let items = ["réservé", "Premier", "Cliché", "communiqué", "café", "Adieu"];
+items.sort((a, b) => a.localeCompare(b, "fr", { ignorePunctuation: true }));
 // ['Adieu', 'café', 'Cliché', 'communiqué', 'Premier', 'réservé']
 ```
 
@@ -97,9 +99,9 @@ items.sort( (a, b) => a.localeCompare(b, 'fr', {ignorePunctuation: true}));
 ```js
 function localeCompareSupportsLocales() {
   try {
-    'foo'.localeCompare('bar', 'i');
+    "foo".localeCompare("bar", "i");
   } catch (e) {
-    return e.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
@@ -111,8 +113,8 @@ function localeCompareSupportsLocales() {
 응용 프로그램의 사용자 인터페이스에서 사용되는 언어의 정렬 순서를 얻으려면 반드시 `locales` 인자를 사용하여 해당 언어(및 폴백 언어의 일부)를 지정하세요.
 
 ```js
-console.log('ä'.localeCompare('z', 'de')); // 음수: 독일어는 ä가 z 전에 위치
-console.log('ä'.localeCompare('z', 'sv')); // 양수: 스웨덴어는 ä가 z 뒤에 위치
+console.log("ä".localeCompare("z", "de")); // 음수: 독일어는 ä가 z 전에 위치
+console.log("ä".localeCompare("z", "sv")); // 양수: 스웨덴어는 ä가 z 뒤에 위치
 ```
 
 ### `options` 사용
@@ -121,10 +123,10 @@ console.log('ä'.localeCompare('z', 'sv')); // 양수: 스웨덴어는 ä가 z �
 
 ```js
 // 독일어에선 ä는 a를 기본 문자(base letter)로 가집니다.
-console.log('ä'.localeCompare('a', 'de', { sensitivity: 'base' })); // 0
+console.log("ä".localeCompare("a", "de", { sensitivity: "base" })); // 0
 
 // 스웨덴어에선 ä와 a는 별도의 기본 문자입니다.
-console.log('ä'.localeCompare('a', 'sv', { sensitivity: 'base' })); // 양수
+console.log("ä".localeCompare("a", "sv", { sensitivity: "base" })); // 양수
 ```
 
 ### 숫자 정렬
@@ -134,7 +136,7 @@ console.log('ä'.localeCompare('a', 'sv', { sensitivity: 'base' })); // 양수
 console.log("2".localeCompare("10")); // 1
 
 // numeric 옵션 사용
-console.log("2".localeCompare("10", undefined, {numeric: true})); // -1
+console.log("2".localeCompare("10", undefined, { numeric: true })); // -1
 
 // locales tag 사용
 console.log("2".localeCompare("10", "en-u-kn-true")); // -1

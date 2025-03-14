@@ -11,7 +11,7 @@ HTTP nos brinda un marco general para el control de acceso y de autenticación. 
 
 {{RFC("7235")}} define el marco de autenticación HTTP que puede ser usado por un servidor para revisar la solicitud de un cliente y por un cliente para proveer información de autenticación. El flujo de la revisión y la respuesta funciona de la siguiente manera: El servidor responde al cliente con un estado de respuesta {{HTTPStatus("401")}} (Unauthorized) y devuelve al cliente información sobre cómo autorizarse con un encabezado de respuesta {{HTTPHeader("WWW-Authenticate")}} que contiene al menos una revisión. Un cliente que quiera autenticarse con un servidor puede hacerlo incluyendo un encabezado de solicitud {{HTTPHeader("Authorization")}} con sus credenciales. Normalmente un cliente hará una solicitud de contraseña al usuario y luego enviará la solicitud incluyendo el encabezado `Authorization` correcto al servidor.
 
-![](https://mdn.mozillademos.org/files/14689/HTTPAuth.png)
+![](http-auth-sequence-diagram.png)
 
 En el caso de una autenticación "Basic" como la mostrada en la figura, el intercambio se **debe** realizar sobre una conexión HTTPS (TLS) para que sea seguro.
 
@@ -32,7 +32,7 @@ WWW-Authenticate: <type> realm=<realm>
 Proxy-Authenticate: <type> realm=<realm>
 ```
 
-En el ejemplo, `<type>` es el esquema de autenticación ("Basic" es el esquema de autenticación mas usado e introducido en [esta página mas abajo](/es/docs/Web/HTTP/Authentication#Basic_authentication_scheme)). La palabra _realm_ es usada para describir el área que protegida o para indicar el alance de la protección. Puede ser un mensaje como "Access to the staging site" o algo similar, pero que sea explicativo para que el usuario sepa que espacio intenta acceder.
+En el ejemplo, `<type>` es el esquema de autenticación ("Basic" es el esquema de autenticación mas usado e introducido en [esta página mas abajo](#basic_authentication_scheme)). La palabra _realm_ es usada para describir el área que protegida o para indicar el alance de la protección. Puede ser un mensaje como "Access to the staging site" o algo similar, pero que sea explicativo para que el usuario sepa que espacio intenta acceder.
 
 ### `Cabeceras Authorization` y `Proxy-Authorization`
 
@@ -47,14 +47,14 @@ Proxy-Authorization: <type> <credentials>
 
 El marco general de autenticación HTTP es usado por varios esquemas de autenticación. Los esquemas pueden diferenciarse por la dureza en la seguridad y en su disponibilidad en software de clientes o servidores.
 
-El esquema de autenticaón mas común es "Basic", que es introducido con mas detalle abajo. IANA mantiene una [lista de esquemas de autenticación](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), pero existen otros esquemas ofrecidos por proveedores de servicios, como Amazon AWS. Los esquemas de autenticación incluídas:
+El esquema de autenticaón mas común es "Basic", que es introducido con mas detalle abajo. IANA mantiene una [lista de esquemas de autenticación](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), pero existen otros esquemas ofrecidos por proveedores de servicios, como Amazon AWS. Los esquemas de autenticación incluídas:
 
 - **Basic** (ver {{rfc(7617)}}, credenciales codificadas en base64 . Ver mas abajo para mas información.),
 - **Bearer** (ver {{rfc(6750)}}, bearer tokens de acceso en recursos protegidos mediante OAuth 2.0),
-- **Digest** (ver {{rfc(7616)}}, has MD5 solo soportado en Firefox, ver {{bug(472823)}} para encriptado SHA),
+- **Digest** (ver {{rfc(7616)}}, has MD5 solo soportado en Firefox, ver [Error 472823 en Firefox](https://bugzil.la/472823) para encriptado SHA),
 - **HOBA** (ver {{rfc(7486)}} (borrador), **H**TTP **O**rigin-**B**ound **A**uthentication, basado en firma digital),
 - **Mutual** (ver [draft-ietf-httpauth-mutual](https://tools.ietf.org/html/draft-ietf-httpauth-mutual-11)),
-- **AWS4-HMAC-SHA256** (ver [AWS docs](http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)).
+- **AWS4-HMAC-SHA256** (ver [AWS docs](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)).
 
 ## Esquema de autenticación Basic
 

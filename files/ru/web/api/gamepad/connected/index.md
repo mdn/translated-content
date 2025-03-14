@@ -1,8 +1,8 @@
 ---
 title: Gamepad.connected
 slug: Web/API/Gamepad/connected
-translation_of: Web/API/Gamepad/connected
 ---
+
 {{APIRef("Gamepad API")}}
 
 Свойство **`Gamepad.connected`** интерфейса {{domxref("Gamepad") }} возвращает логическое значение того, подключён ли всё ещё геймпад к системе.
@@ -36,4 +36,4 @@ console.log(gp.connected);
 
 ## Смотрите также
 
-[Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)
+[Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

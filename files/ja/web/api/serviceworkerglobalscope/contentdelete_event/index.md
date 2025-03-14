@@ -1,11 +1,12 @@
 ---
-title: 'ServiceWorkerGlobalScope: contentdelete イベント'
+title: "ServiceWorkerGlobalScope: contentdelete イベント"
+short-title: contentdelete
 slug: Web/API/ServiceWorkerGlobalScope/contentdelete_event
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: 6c3bed9bcd275fd4ad714c4df0ed874e9bf87681
 ---
 
-{{APIRef("Content Index API")}}{{SeeCompatTable}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
 **`contentdelete`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスのイベントで、ユーザーエージェントを通じて索引付けされたコンテンツから項目が削除されたときに発行されます。
 
@@ -16,9 +17,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('contentdelete', (event) => { });
+addEventListener("contentdelete", (event) => {});
 
-oncontentdelete = (event) => { };
+oncontentdelete = (event) => {};
 ```
 
 ## イベント型
@@ -39,12 +40,15 @@ _以下に挙げたプロパティに加えて、このインターフェイス�
 以下の例では、`contentdelete` イベントハンドラーを使用して、削除されたインデックス項目に関連するキャッシュされたコンテンツを削除しています。
 
 ```js
-self.addEventListener('contentdelete', (event) => {
-  const deletion = caches.open('cache-name')
-    .then((cache) => Promise.all([
-      cache.delete(`/icon/${event.id}`),
-      cache.delete(`/content/${event.id}`),
-    ]));
+self.addEventListener("contentdelete", (event) => {
+  const deletion = caches
+    .open("cache-name")
+    .then((cache) =>
+      Promise.all([
+        cache.delete(`/icon/${event.id}`),
+        cache.delete(`/content/${event.id}`),
+      ]),
+    );
   event.waitUntil(deletion);
 });
 ```
@@ -68,5 +72,4 @@ self.oncontentdelete = (event) => {
 ## 関連情報
 
 - [コンテンツ索引 API](/ja/docs/Web/API/Content_Index_API)
-- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
-- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
+- [An introductory article on the Content Index API](https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api)

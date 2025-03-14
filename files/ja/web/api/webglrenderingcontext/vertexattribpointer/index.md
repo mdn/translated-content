@@ -119,7 +119,7 @@ void gl.vertexAttribPointer(index, size, type, normalized, stride, offset);
 
 ```js
 //ジオメトリーを fetch() と Response.json() で読み込む
-const response = await fetch('assets/geometry.json');
+const response = await fetch("assets/geometry.json");
 const vertices = await response.json();
 
 //配列バッファーを作成
@@ -130,19 +130,19 @@ for (let i = 0; i < vertices.length; i++) {
   dv.setFloat32(20 * i, vertices[i].position[0], true);
   dv.setFloat32(20 * i + 4, vertices[i].position[1], true);
   dv.setFloat32(20 * i + 8, vertices[i].position[2], true);
-  dv.setInt8(20 * i + 12, vertices[i].normal[0] * 0x7F);
-  dv.setInt8(20 * i + 13, vertices[i].normal[1] * 0x7F);
-  dv.setInt8(20 * i + 14, vertices[i].normal[2] * 0x7F);
+  dv.setInt8(20 * i + 12, vertices[i].normal[0] * 0x7f);
+  dv.setInt8(20 * i + 13, vertices[i].normal[1] * 0x7f);
+  dv.setInt8(20 * i + 14, vertices[i].normal[2] * 0x7f);
   dv.setInt8(20 * i + 15, 0);
-  dv.setUint16(20 * i + 16, vertices[i].texCoord[0] * 0xFFFF, true);
-  dv.setUint16(20 * i + 18, vertices[i].texCoord[1] * 0xFFFF, true);
+  dv.setUint16(20 * i + 16, vertices[i].texCoord[0] * 0xffff, true);
+  dv.setUint16(20 * i + 18, vertices[i].texCoord[1] * 0xffff, true);
 }
 ```
 
 より高いパフォーマンスのために、サーバー側で事前に JSON から ArrayBuffer への変換を行うこともできます。以下のように、Node.js でそれらからバイナリファイルをロードし、それを配列バッファーとして解釈することができます。
 
 ```js
-const response = await fetch('assets/geometry.bin');
+const response = await fetch("assets/geometry.bin");
 const buffer = await response.arrayBuffer();
 ```
 
@@ -172,9 +172,9 @@ gl.vertexAttribPointer(2, 2, gl.UNSIGNED_SHORT, true, 20, 16);
 gl.enableVertexAttribArray(2);
 
 //頂点シェーダー内の属性を同じインデックスに設定します
-gl.bindAttribLocation(shaderProgram, 0, 'position');
-gl.bindAttribLocation(shaderProgram, 1, 'normal');
-gl.bindAttribLocation(shaderProgram, 2, 'texUV');
+gl.bindAttribLocation(shaderProgram, 0, "position");
+gl.bindAttribLocation(shaderProgram, 1, "normal");
+gl.bindAttribLocation(shaderProgram, 2, "texUV");
 //属性のインデックスが変更された場合、シェーダーを再リンクする必要があります
 //これにより、以前に設定されたすべてのユニフォームがリセットされることに注意してください。
 gl.linkProgram(shaderProgram);
@@ -183,29 +183,26 @@ gl.linkProgram(shaderProgram);
 あるいは、インデックスを自分で設定する代わりに、グラフィックスカードによって提供されたインデックスを使用することもできます。これはシェーダープログラムの再リンクを避けます。
 
 ```js
-const locPosition = gl.getAttribLocation(shaderProgram, 'position');
+const locPosition = gl.getAttribLocation(shaderProgram, "position");
 gl.vertexAttribPointer(locPosition, 3, gl.FLOAT, false, 20, 0);
 gl.enableVertexAttribArray(locPosition);
 
-const locNormal = gl.getAttribLocation(shaderProgram, 'normal');
+const locNormal = gl.getAttribLocation(shaderProgram, "normal");
 gl.vertexAttribPointer(locNormal, 4, gl.BYTE, true, 20, 12);
 gl.enableVertexAttribArray(locNormal);
 
-const locTexUV = gl.getAttribLocation(shaderProgram, 'texUV');
+const locTexUV = gl.getAttribLocation(shaderProgram, "texUV");
 gl.vertexAttribPointer(locTexUV, 2, gl.UNSIGNED_SHORT, true, 20, 16);
 gl.enableVertexAttribArray(locTexUV);
 ```
 
 ## 仕様書
 
-| 仕様                                                                                                             | 策定状況                             | コメント                        |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------- |
-| {{SpecName('WebGL', "#5.14.10", "vertexAttribPointer")}}                                     | {{Spec2('WebGL')}}             | 初回定義。                      |
-| {{SpecName('OpenGL ES 2.0', "glVertexAttribPointer.xml", "glVertexAttribPointer")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API のマニュアルページ。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.WebGLRenderingContext.vertexAttribPointer")}}
+{{Compat}}
 
 ## 関連項目
 

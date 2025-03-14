@@ -1,31 +1,22 @@
 ---
 title: management.getPermissionWarningsByManifest()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsByManifest
-tags:
-  - API
-  - Add-ons
-  - Méthode
-  - Reference
-  - WebExtensions
-  - getPermissionWarningsByManifest
-  - management
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsByManifest
 ---
 
-{{AddonSidebar()}}Lorsque l'utilisateur installe ou met à jour une extension, la navigateur peut avertir l'utilisateur des [permissions](/fr/Add-ons/WebExtensions/manifest.json/permissions) obligatoires. Toutes les permissions ne donnent pas lieu à des avertissements, et cela n'est pas normalisé dans les navigateurs.
+{{AddonSidebar}}Lorsque l'utilisateur installe ou met à jour une extension, la navigateur peut avertir l'utilisateur des [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) obligatoires. Toutes les permissions ne donnent pas lieu à des avertissements, et cela n'est pas normalisé dans les navigateurs.
 
-Compte tenu du texte du fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json), cette fonction retourne les avertisseurs de permissions qui seraient donnés pour l'extension comme un ensemble de chaines.
+Compte tenu du texte du fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), cette fonction retourne les avertisseurs de permissions qui seraient donnés pour l'extension comme un ensemble de chaines.
 
-Cette API _ne requière pas_ l'[API de permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management".
+Cette API _ne requière pas_ l'[API de permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management".
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var gettingWarnings = browser.management.getPermissionWarningsByManifest(
-  manifestString      // string
-)
+  manifestString, // string
+);
 ```
 
 ### Paramètres
@@ -35,11 +26,11 @@ var gettingWarnings = browser.management.getPermissionWarningsByManifest(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera rempli avec un ensemble de chaînes, chacune contenant le texte un avertisseur de permission.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera rempli avec un ensemble de chaînes, chacune contenant le texte un avertisseur de permission.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.getPermissionWarningsByManifest")}}
+{{Compat}}
 
 ## Exemples
 
@@ -47,11 +38,11 @@ Enregistrez les avertissements de permissions dans le fichier manifest donné :
 
 ```js
 var manifest = {
-  "manifest_version": 2,
-  "name": "test",
-  "version": "1.0",
-  "permissions": ["management", "<all_urls>"]
-}
+  manifest_version: 2,
+  name: "test",
+  version: "1.0",
+  permissions: ["management", "<all_urls>"],
+};
 
 var manifestString = JSON.stringify(manifest);
 
@@ -63,15 +54,16 @@ function gotError(error) {
   console.log(`Error: ${error}`);
 }
 
-var gettingWarnings = browser.management.getPermissionWarningsByManifest(manifestString);
+var gettingWarnings =
+  browser.management.getPermissionWarningsByManifest(manifestString);
 gettingWarnings.then(gotWarnings, gotError);
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/extensions/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

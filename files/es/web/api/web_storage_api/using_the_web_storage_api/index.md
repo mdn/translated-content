@@ -1,14 +1,6 @@
 ---
 title: Usando la API de almacenamiento web
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
-tags:
-  - API
-  - API de almacenamiento web
-  - Guía
-  - localStorage
-  - sessionStorage
-translation_of: Web/API/Web_Storage_API/Using_the_Web_Storage_API
-original_slug: Web/API/API_de_almacenamiento_web/Usando_la_API_de_almacenamiento_web
 ---
 
 {{DefaultAPISidebar("Web Storage API")}}
@@ -22,12 +14,13 @@ Este artículo proporciona una guía general de cómo usar esta tecnología.
 Los objetos de almacenamiento son simples almacenes de clave/valor, similares a objetos, pero que permanecen intactos cuando la página se recarga. Las claves y los valores siempre son cadenas de texto (fíjate que las claves con enteros se convierten automáticamente a cadenas, tal y como lo hacen los objetos). Puedes acceder a estos valores como un objeto, o con los métodos {{domxref("Storage.getItem()")}} y {{domxref("Storage.setItem()")}}. Estas tres líneas modifican el valor de colorSetting de la misma manera:
 
 ```js
-localStorage.colorSetting = '#a4509b';
-localStorage['colorSetting'] = '#a4509b';
-localStorage.setItem('colorSetting', '#a4509b');
+localStorage.colorSetting = "#a4509b";
+localStorage["colorSetting"] = "#a4509b";
+localStorage.setItem("colorSetting", "#a4509b");
 ```
 
-> **Nota:** Se recomiendo usar la API de almacenamiento web (`setItem`, `getItem`, `removeItem`, `key`, `length`) para prevenir las dificultades asociadas al uso de simples objetos como almacenes de valores llave/valor.
+> [!NOTE]
+> Se recomiendo usar la API de almacenamiento web (`setItem`, `getItem`, `removeItem`, `key`, `length`) para prevenir las dificultades asociadas al uso de simples objetos como almacenes de valores llave/valor.
 
 Los dos mecanismos en el almacenamiento web son los siguientes:
 
@@ -44,7 +37,8 @@ Para poder usar localStorage, debemos de verificar que tiene soporte y que está
 
 ### Probar la disponibilidad
 
-> **Nota:** Nota: esta API está disponible en las versiones actuales de todos los navegadores principales. La prueba de disponibilidad es necesaria sólo si debes soportar navegadores muy antiguos, como Internet Explorer 6 o 7, o en las circunstancias limitadas descritas más abajo.
+> [!NOTE]
+> Esta API está disponible en las versiones actuales de todos los navegadores principales. La prueba de disponibilidad es necesaria sólo si debes soportar navegadores muy antiguos, como Internet Explorer 6 o 7, o en las circunstancias limitadas descritas más abajo.
 
 Los buscadores que soportan localStorage tienen una propiedad en el objeto window que se llama localStorage. Sin embargo, por varias razones, el sólo asegurarse de que la propiedad existe puede arrojar excepciones. El que localStorage exista no es garantía suficiente de que en verdad esté disponible, puesto que varios buscadores ofrecen configuraciones que lo inhabilitan. Así que un buscador puede _soportar_ localStorage, pero puede no hacerlo _disponible_ para los scripts en la página. Un ejemplo de esto es Safari, que en el modo de búsqueda privada ofrece un objeto localStorage vacío con un cupo de 0, por lo que es inutilizable. Sin embargo, es posible que aún así obtengamos un QuotaExceededError legítimo, lo que significa que ya usamos todo el espacio de almacenamiento disponible, aunque el almacenamiento esté, de hecho, _disponible_. Nuestra detección de la característica debe de tomar en cuenta estos escenarios.
 
@@ -52,37 +46,37 @@ Esta función detecta si localStorage tiene soporte y está disponible:
 
 ```js
 function storageAvailable(type) {
-    try {
-        var storage = window[type],
-            x = '__storage_test__';
-        storage.setItem(x, x);
-        storage.removeItem(x);
-        return true;
-    }
-    catch(e) {
-        return e instanceof DOMException && (
-            // everything except Firefox
-            e.code === 22 ||
-            // Firefox
-            e.code === 1014 ||
-            // test name field too, because code might not be present
-            // everything except Firefox
-            e.name === 'QuotaExceededError' ||
-            // Firefox
-            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-            // acknowledge QuotaExceededError only if there's something already stored
-            storage.length !== 0;
-    }
+  try {
+    var storage = window[type],
+      x = "__storage_test__";
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (e) {
+    return (
+      e instanceof DOMException &&
+      // everything except Firefox
+      (e.code === 22 ||
+        // Firefox
+        e.code === 1014 ||
+        // test name field too, because code might not be present
+        // everything except Firefox
+        e.name === "QuotaExceededError" ||
+        // Firefox
+        e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+      // acknowledge QuotaExceededError only if there's something already stored
+      storage.length !== 0
+    );
+  }
 }
 ```
 
 Y aquí se muestra cómo usarla:
 
 ```js
-if (storageAvailable('localStorage')) {
+if (storageAvailable("localStorage")) {
   // Yippee! We can use localStorage awesomeness
-}
-else {
+} else {
   // Too bad, no localStorage for us
 }
 ```
@@ -95,20 +89,21 @@ Aquí puedes ver una [breve historia de la detección de la característica loca
 
 Para ilustrar un uso típico de almacenamiento web, creamos un ejemplo simple que llamamos **Demo de almacenamiento web**. La [página de inicio](https://mdn.github.io/dom-examples/web-storage/) proporciona unos controles que se pueden usar para personalizar el color, la tipografía y la imagen decorativa:
 
-![](https://mdn.mozillademos.org/files/9685/landing.png)Cuando seleccionas una opción diferente, la página se actualiza instantáneamente; además, tus opciones se almacenan en `localStorage`, de forma que si abandonas la página y la vuelves a cargar, tus opciones son recordadas.
+![](landing.png)Cuando seleccionas una opción diferente, la página se actualiza instantáneamente; además, tus opciones se almacenan en `localStorage`, de forma que si abandonas la página y la vuelves a cargar, tus opciones son recordadas.
 
 También creamos una [página de salida del evento](https://mdn.github.io/dom-examples/web-storage/event.html) — si cargas esta página en otra pestaña y luego haces cambios a tus opciones en la página de inicio, verás que se muestra la información almacenada actualizada puesto que se dispara un {{domxref("StorageEvent")}}.
 
-![](https://mdn.mozillademos.org/files/9687/event-output.png)
+![](event-output.png)
 
-> **Nota:** Puedes ver las páginas de ejemplo usando los links de arriba y también puedes [ver el código fuente.](https://github.com/mdn/dom-examples/tree/master/web-storage)
+> [!NOTE]
+> Puedes ver las páginas de ejemplo usando los links de arriba y también puedes [ver el código fuente.](https://github.com/mdn/dom-examples/tree/master/web-storage)
 
 ### Probar si la memoria tiene valores
 
 En el inicio de [main.js](https://github.com/mdn/dom-examples/blob/master/web-storage/main.js), probamos si el objeto ya tiene valores (es decir, si la página ya fue visitada):
 
 ```js
-if(!localStorage.getItem('bgcolor')) {
+if (!localStorage.getItem("bgcolor")) {
   populateStorage();
 } else {
   setStyles();
@@ -125,17 +120,17 @@ Como dijimos arriba, los valores se pueden recuperar de la memoria usando {{domx
 
 ```js
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  var currentColor = localStorage.getItem("bgcolor");
+  var currentFont = localStorage.getItem("font");
+  var currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = "#" + currentColor;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 
@@ -147,9 +142,9 @@ Aquí, en las primeras tres líneas tomamos los valores del almacenamiento local
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
-  localStorage.setItem('font', document.getElementById('font').value);
-  localStorage.setItem('image', document.getElementById('image').value);
+  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
+  localStorage.setItem("font", document.getElementById("font").value);
+  localStorage.setItem("image", document.getElementById("image").value);
 
   setStyles();
 }
@@ -172,12 +167,14 @@ El evento {{domxref("StorageEvent")}} se dispara siempre que se hace un cambio a
 En la página de eventos (ver [events.js](https://github.com/mdn/dom-examples/blob/master/web-storage/event.js)) el único JavaScript es el siguiente:
 
 ```js
-window.addEventListener('storage', function(e) {
-  document.querySelector('.my-key').textContent = e.key;
-  document.querySelector('.my-old').textContent = e.oldValue;
-  document.querySelector('.my-new').textContent = e.newValue;
-  document.querySelector('.my-url').textContent = e.url;
-  document.querySelector('.my-storage').textContent = JSON.stringify(e.storageArea);
+window.addEventListener("storage", function (e) {
+  document.querySelector(".my-key").textContent = e.key;
+  document.querySelector(".my-old").textContent = e.oldValue;
+  document.querySelector(".my-new").textContent = e.newValue;
+  document.querySelector(".my-url").textContent = e.url;
+  document.querySelector(".my-storage").textContent = JSON.stringify(
+    e.storageArea,
+  );
 });
 ```
 
@@ -194,19 +191,9 @@ El almacenamiento web también provee un par de métodos simples para remover da
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-### `Window.localStorage`
-
-{{Compat("api.Window.localStorage")}}
-
-### `Window.sessionStorage`
-
-{{Compat("api.Window.sessionStorage")}}
-
-Todos los navegadores tienen distintos niveles de capacidad tanto para localStorage como para sessionStorage. Aquí está una [análisis detallado de todas las capacidades de almacenamiento de diferentes navegadores](http://dev-test.nemikor.com/web-storage/support-test/).
-
-> **Nota:** Desde iOS 5.1, Safari Mobile almacena los datos de localStorage en la carpeta de caché, la cual está sujeta a limpiezas ocasionales, a petición del sistema operativo, típicamente cuando el espacio es reducido.
+{{Compat}}
 
 ## Ver también
 

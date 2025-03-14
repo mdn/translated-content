@@ -11,7 +11,8 @@ A propriedade [CSS](/pt-BR/docs/Web/CSS) **`background-origin`** define _a área
 
 Note que `background-origin` é ignorado quando {{cssxref("background-attachment")}} é `fixed`.
 
-> **Note:** **Nota:** A taquigrafia {{cssxref("background")}} redefine o valor desta propriedade para seu valor inicial se esta não foi específicada.
+> [!NOTE]
+> A taquigrafia {{cssxref("background")}} redefine o valor desta propriedade para seu valor inicial se esta não foi específicada.
 
 ## Sintaxe
 
@@ -48,7 +49,7 @@ A propriedade `background-origin` é especificada por uma chave de valores lista
 .exemplo {
   border: 10px double;
   padding: 10px;
-  background: url('image.jpg');
+  background: url("image.jpg");
   background-position: center left;
   background-origin: content-box;
 }
@@ -58,7 +59,7 @@ A propriedade `background-origin` é especificada por uma chave de valores lista
 #exemplo2 {
   border: 4px solid black;
   padding: 10px;
-  background: url('image.gif');
+  background: url("image.gif");
   background-repeat: no-repeat;
   background-origin: border-box;
 }
@@ -66,23 +67,22 @@ A propriedade `background-origin` é especificada por uma chave de valores lista
 
 ```css
 div {
-  background-image: url('logo.jpg'), url('mainback.png'); /* Applies two images to the background */
-  background-position: top right, 0px 0px;
+  background-image:
+    url("logo.jpg"), url("mainback.png"); /* Applies two images to the background */
+  background-position:
+    top right,
+    0px 0px;
   background-origin: content-box, padding-box;
 }
 ```
 
 ## Especificações
 
-| Especificação                                                                                            | Status                                   | Comentário          |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-background-origin', 'background-origin')}} | {{Spec2('CSS3 Backgrounds')}} | Initial definition. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.background-origin")}}
+{{Compat}}
 
 ## Veja também
 

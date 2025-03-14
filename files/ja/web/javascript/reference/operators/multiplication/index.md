@@ -7,12 +7,26 @@ slug: Web/JavaScript/Reference/Operators/Multiplication
 
 乗算演算子 (`*`) はオペランドの積を生成します。
 
-{{EmbedInteractiveExample("pages/js/expressions-multiplication.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Multiplication operator")}}
+
+```js interactive-example
+console.log(3 * 4);
+// Expected output: 12
+
+console.log(-3 * 4);
+// Expected output: -12
+
+console.log("3" * 2);
+// Expected output: 6
+
+console.log("foo" * 2);
+// Expected output: NaN
+```
 
 ## 構文
 
 ```js
-x * y
+x * y;
 ```
 
 ## 例
@@ -20,21 +34,21 @@ x * y
 ### 数値を用いた乗算
 
 ```js
- 2 * 2      // 4
--2 * 2     // -4
+2 * 2; // 4
+-2 * 2; // -4
 ```
 
 ### 無限大との乗算
 
 ```js
-Infinity * 0         // NaN
-Infinity * Infinity  // Infinity
+Infinity * 0; // NaN
+Infinity * Infinity; // Infinity
 ```
 
 ### 非数との乗算
 
 ```js
-'foo' * 2 // NaN
+"foo" * 2; // NaN
 ```
 
 ## 仕様書

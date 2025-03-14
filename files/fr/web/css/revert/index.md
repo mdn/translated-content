@@ -1,12 +1,6 @@
 ---
 title: revert
 slug: Web/CSS/revert
-tags:
-  - CSS
-  - Cascade
-  - Mot-clé
-  - Reference
-translation_of: Web/CSS/revert
 ---
 
 {{CSSRef}}
@@ -25,9 +19,10 @@ Le mot-clé `revert` fonctionne comme `unset` pour de nombreux cas. Les seules d
 
 `revert` n'aura pas d'effet sur les éléments fils de l'élément ciblé (mais supprimera l'effet d'une règle du parent qui s'appliquerait indirectement aux enfants).
 
-> **Note :** `revert` est une simple valeur, il est toujours possible de la surcharger par une autre avec une règle d'une [spécificité](/fr/docs/Apprendre/CSS/Introduction_à_CSS/La_cascade_et_l_héritage#Spécificité) supérieure.
+> **Note :** `revert` est une simple valeur, il est toujours possible de la surcharger par une autre avec une règle d'une [spécificité](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#spécificité) supérieure.
 
-> **Note :** Le mot-clé `revert` est différent de {{cssxref("initial")}} et ne doit pas être confondu avec ce dernier. {{cssxref("initial")}} utilise [la valeur initiale](/fr/docs/Web/CSS/Valeur_initiale), définie pour chaque propriété par les spécifications CSS. En revanche, les feuilles de style des agents utilisateurs définissent des valeurs par défaut selon les sélecteurs CSS. Par exemple, [la valeur initiale](/fr/docs/Web/CSS/Valeur_initiale) de {{cssxref("display")}} est `inline` mais un agent utilisateur pourra définir les valeurs par défaut suivante dans sa feuille de style : `block` pour {{HTMLElement("div")}}, `table` pour {{HTMLElement("table")}} etc.
+> [!NOTE]
+> Le mot-clé `revert` est différent de {{cssxref("initial")}} et ne doit pas être confondu avec ce dernier. {{cssxref("initial")}} utilise [la valeur initiale](/fr/docs/Web/CSS/initial_value), définie pour chaque propriété par les spécifications CSS. En revanche, les feuilles de style des agents utilisateurs définissent des valeurs par défaut selon les sélecteurs CSS. Par exemple, [la valeur initiale](/fr/docs/Web/CSS/initial_value) de {{cssxref("display")}} est `inline` mais un agent utilisateur pourra définir les valeurs par défaut suivante dans sa feuille de style : `block` pour {{HTMLElement("div")}}, `table` pour {{HTMLElement("table")}} etc.
 
 ## Exemples
 
@@ -84,16 +79,11 @@ h3 {
 <h3 style="font-weight: unset; color: unset;">
   Ceci aura toujours font-weight: normal mais color: black
 </h3>
-<p>
-  Juste un peu de texte
-</p>
+<p>Juste un peu de texte</p>
 <h3 style="font-weight: revert; color: revert;">
-  Ceci devrait avoir font-weight: bold (la valeur originale)
-  et color: black
+  Ceci devrait avoir font-weight: bold (la valeur originale) et color: black
 </h3>
-<p>
- Juste un peu de texte
-</p>
+<p>Juste un peu de texte</p>
 ```
 
 #### Résultat
@@ -117,18 +107,12 @@ h3 {
 #### HTML
 
 ```html
-<h3>
-  Un style spécifique
-</h3>
-<p>
-  Juste un peu de texte
-</p>
+<h3>Un style spécifique</h3>
+<p>Juste un peu de texte</p>
 <h3 style="all: revert">
   Retour aux réglages par défaut pour toutes les propriétés
 </h3>
-<p>
-  Juste un peu de texte
-</p>
+<p>Juste un peu de texte</p>
 ```
 
 #### Résultat

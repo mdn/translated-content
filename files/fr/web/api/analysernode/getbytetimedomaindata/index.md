@@ -1,7 +1,6 @@
 ---
 title: AnalyserNode.getByteTimeDomainData()
 slug: Web/API/AnalyserNode/getByteTimeDomainData
-translation_of: Web/API/AnalyserNode/getByteTimeDomainData
 ---
 
 {{ APIRef("Mountain View APIRef Project") }}
@@ -91,4 +90,4 @@ draw();
 
 ## Voir aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

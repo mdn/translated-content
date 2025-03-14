@@ -1,6 +1,8 @@
 ---
-title: CharacterData.length
+title: "CharacterData: length プロパティ"
 slug: Web/API/CharacterData/length
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef("DOM")}}
@@ -14,15 +16,17 @@ slug: Web/API/CharacterData/length
 ## 例
 
 > **メモ:** {{domxref("CharacterData")}} は抽象インターフェイスです。
-> The examples below use {{domxref("Text")}}, a concrete interface implementing it.
+> 以下の例ではそれを実装した具象インターフェイスの一つである {{domxref("Text")}} を使用しています。
 
 ```html
-Length of the string in the `Text` node: <output></output>
+<code>Text</code> ノード内の文字列の長さ: <output></output>
 ```
 
 ```js
-let output = document.getElementsByTagName("output")[0];
-let textnode = new Text("This text has been set using textnode.data.");
+const output = document.querySelector("output");
+const textnode = new Text(
+  "このテキストは 'textnode.data' を使用して設定されました。",
+);
 
 output.value = textnode.length;
 ```

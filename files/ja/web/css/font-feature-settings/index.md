@@ -1,13 +1,76 @@
 ---
 title: font-feature-settings
 slug: Web/CSS/font-feature-settings
+l10n:
+  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
 {{CSSRef}}
 
-**`font-feature-settings`** は CSS のプロパティで、 OpenType フォントの拡張書体の特性を制御します。
+**`font-feature-settings`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 OpenType フォントの拡張書体の特性を制御します。
 
-{{EmbedInteractiveExample("pages/css/font-feature-settings.html")}}
+{{InteractiveExample("CSS Demo: font-feature-settings")}}
+
+```css interactive-example-choice
+font-feature-settings: normal;
+```
+
+```css interactive-example-choice
+font-feature-settings: "liga" 0;
+```
+
+```css interactive-example-choice
+font-feature-settings: "tnum";
+```
+
+```css interactive-example-choice
+font-feature-settings: "smcp", "zero";
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>Difficult waffles</p>
+    <table>
+      <tr>
+        <td><span class="tabular">0O</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">3.14</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">2.71</span></td>
+      </tr>
+    </table>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+section {
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+#example-element table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabular {
+  border: 1px solid;
+}
+```
 
 ## 構文
 
@@ -19,12 +82,15 @@ font-feature-settings: normal;
 font-feature-settings: "smcp";
 font-feature-settings: "smcp" on;
 font-feature-settings: "swsh" 2;
-font-feature-settings: "smcp", "swsh" 2;
+font-feature-settings:
+  "smcp",
+  "swsh" 2;
 
 /* グローバル値 */
 font-feature-settings: inherit;
 font-feature-settings: initial;
 font-feature-settings: revert;
+font-feature-settings: revert-layer;
 font-feature-settings: unset;
 ```
 
@@ -34,11 +100,17 @@ font-feature-settings: unset;
 
 ### 値
 
+このプロパティは、キーワード `normal` または `<feature-tag-value>` 値のカンマ区切りリストとして指定します。テキストを描画するとき、 OpenType の `<feature-tag-value>` 値のリストがテキストレイアウトエンジンに渡され、フォント特性を有効または無効にします。
+
 - `normal`
-  - : テキストは既定の設定で配置されます。
+  - : テキストを既定のフォント設定でレイアウトすることを示します。これが既定値です。
 - `<feature-tag-value>`
-  - : テキストの描画時、 OpenType の特性タグ値のリストがテキストレイアウトエンジンに渡され、フォントの機能を有効化または無効化します。タグは常に 4 文字の ASCII 文字の {{cssxref("&lt;string&gt;")}} です。文字数がこれより少ないか多い場合、もしくはコードポイント U+20 - U+7E の範囲外の文字を含む場合、プロパティ全体が無効になります。<br>
- 値は正の整数です。キーワード `on` と `off` はそれぞれ `1` と `0` の別名です。値が設定されていなければ、既定値は `1` です。 論理値ではない OpenType 特性 (例: [stylistic alternates](https://www.microsoft.com/typography/otspec/features_pt.htm#salt)) では、この値は選ばれる特定の字形を意味します。論理値の特性はオンとオフを切り替えます。
+
+  - : タグ名とオプション値からなる、空白区切りのデータ列を表します。
+
+    タグ名は {{cssxref("&lt;string&gt;")}} で、常に 4 つの {{Glossary("ASCII")}} 文字からなります。タグ名の文字数が多かったり少なかったり、 `U+20` – `U+7E` コードポイント範囲外の文字を格納している場合、記述子は無効になります。
+
+    オプション値は正の整数か、キーワード `on` または `off` にすることができます。キーワード `on` および `off` は、それぞれ値 `1` および `0` と同義語です。値が設定されていない場合は、既定で `1` になります。論理値でない OpenType 特性 （[stylistic alternates](https://learn.microsoft.com/en-ca/typography/opentype/spec/features_pt#tag-salt) など）では、この値は選択する具体的な字体を意味し、論理値の特性の場合は、その特性のオンとオフを意味します。
 
 ## 公式定義
 
@@ -54,33 +126,48 @@ font-feature-settings: unset;
 
 ```css
 /* スモールキャップ代替字形 */
-.smallcaps { font-feature-settings: "smcp" on; }
+.small-caps {
+  font-feature-settings: "smcp" on;
+}
 
 /* 大文字と小文字の両方をスモールキャップに変換 (記号も) */
-.allsmallcaps { font-feature-settings: "c2sc", "smcp"; }
+.all-small-caps {
+  font-feature-settings: "c2sc", "smcp";
+}
 
 /* スラッシュのついたゼロを使用して "O" と区別する */
-
-.nicezero { font-feature-settings: "zero"; }
+.nice-zero {
+  font-feature-settings: "zero";
+}
 
 /* 歴史的な書体を有効に */
-.hist { font-feature-settings: "hist"; }
+.historical {
+  font-feature-settings: "hist";
+}
 
 /* よくある合字を無効にする (既定ではオン) */
-.noligs { font-feature-settings: "liga" 0; }
+.no-ligatures {
+  font-feature-settings: "liga" 0;
+}
 
 /* 表内の数字を有効にする (等幅) */
-td.tabular { font-feature-settings: "tnum"; }
+td.tabular {
+  font-feature-settings: "tnum";
+}
 
 /* 自動的に分数化する */
-.fractions { font-feature-settings: "frac"; }
+.fractions {
+  font-feature-settings: "frac";
+}
 
 /* 利用可能な2番目のスウォッシュ文字を使用 */
-.swash { font-feature-settings: "swsh" 2; }
+.swash {
+  font-feature-settings: "swsh" 2;
+}
 
 /* スタイリッシュセット 7 を有効にする */
-.fancystyle {
-  font-family: Gabriola; /* available on Windows 7, and on Mac OS */
+.fancy-style {
+  font-family: Gabriola;
   font-feature-settings: "ss07";
 }
 ```
@@ -100,8 +187,8 @@ td.tabular { font-feature-settings: "tnum"; }
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
 - {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/src", "src")}}
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}
-- [OpenType 特性タグ](https://docs.microsoft.com/typography/opentype/spec/featurelist)のリスト
+- [OpenType 特性タグ](https://learn.microsoft.com/en-us/typography/opentype/spec/featurelist)のリスト
+- [CSS における OpenType 機能](https://sparanoid.com/lab/opentype-features/)

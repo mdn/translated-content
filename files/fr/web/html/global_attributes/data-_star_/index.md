@@ -1,20 +1,61 @@
 ---
 title: data-*
 slug: Web/HTML/Global_attributes/data-*
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/data-*
-original_slug: Web/HTML/Attributs_universels/data-*
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
-Les [attributs universels](/fr/docs/Web/HTML/Attributs_universels) **`data-*`** forment une classe d'attributs, appelés attributs de données (_data attributes_). Ils permettent d'échanger des données propriétaire entre le [HTML](/fr/docs/Web/HTML) et la représentation du [DOM](/fr/docs/Web/API/Référence_du_DOM_Gecko), qu'on peut manipuler avec des scripts.
+Les [attributs universels](/fr/docs/Web/HTML/Global_attributes) **`data-*`** forment une classe d'attributs, appelés attributs de données (_data attributes_). Ils permettent d'échanger des données propriétaire entre le [HTML](/fr/docs/Web/HTML) et la représentation du [DOM](/fr/docs/Web/API/Document_Object_Model), qu'on peut manipuler avec des scripts.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-data.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: data-*", "tabbed-standard")}}
+
+```html interactive-example
+<h1>Secret agents</h1>
+
+<ul>
+  <li data-id="10784">Jason Walters, 003: Found dead in "A View to a Kill".</li>
+  <li data-id="97865">
+    Alex Trevelyan, 006: Agent turned terrorist leader; James' nemesis in
+    "Goldeneye".
+  </li>
+  <li data-id="45732">
+    James Bond, 007: The main man; shaken but not stirred.
+  </li>
+</ul>
+```
+
+```css interactive-example
+h1 {
+  margin: 0;
+}
+
+ul {
+  margin: 10px 0 0;
+}
+
+li {
+  position: relative;
+  width: 200px;
+  padding-bottom: 10px;
+}
+
+li:after {
+  content: "Data ID: " attr(data-id);
+  position: absolute;
+  top: -22px;
+  left: 10px;
+  background: black;
+  color: white;
+  padding: 2px;
+  border: 1px solid #eee;
+  opacity: 0;
+  transition: 0.5s opacity;
+}
+
+li:hover:after {
+  opacity: 1;
+}
+```
 
 De tels attributs sont disponibles via l'interface {{domxref("HTMLElement")}} de l'élément pour lequel l'attribut est utilisé. La propriété {{domxref("HTMLElement.dataset")}} permet d'accéder à l'attribut.
 Ici, l'astérisque (`*`) peut être remplacée par n'importe quel nom valide selon [les règles appliquées aux noms XML](https://www.w3.org/TR/REC-xml/#NT-Name) et en respectant les contraintes suivantes :
@@ -37,7 +78,7 @@ Lorsqu'on ajoute des attributs de données `data-*`, on peut utiliser les élém
 </img>
 ```
 
-Pour un tutoriel plus avancé à propos des attributs de données HTML, lire l'article [Manipuler les attributs de données](/fr/Apprendre/HTML/Comment/Utiliser_attributs_donnes).
+Pour un tutoriel plus avancé à propos des attributs de données HTML, lire l'article [Manipuler les attributs de données](/fr/docs/Learn/HTML/Howto/Use_data_attributes).
 
 ## Spécifications
 
@@ -49,5 +90,5 @@ Pour un tutoriel plus avancé à propos des attributs de données HTML, lire l'a
 
 ## Voir aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Attributs_universels)
+- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
 - La propriété {{domxref("HTMLElement.dataset")}} qui permet d'accéder à ces valeurs et de les modifier.

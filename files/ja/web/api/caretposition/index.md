@@ -1,34 +1,39 @@
 ---
 title: CaretPosition
 slug: Web/API/CaretPosition
+l10n:
+  sourceCommit: ae524b0c327f8aaea51cc6a5c59e0301bde646c0
 ---
 
-{{SeeCompatTable}} {{ APIRef("CSSOM") }}
+{{ APIRef("CSSOM") }}
 
-`CaretPosition` インターフェイスは、テキスト挿入ポイントのインジケーターであるキャレット位置を表します。 {{domxref("document.caretPositionFromPoint")}} メソッドを使用して `CaretPosition` を取得できます。
+`CaretPosition` インターフェイスは、テキスト挿入ポイントのインジケーターであるキャレット位置を表します。
+`CaretPosition` は {{domxref("Document.caretPositionFromPoint()")}} メソッドを使用して取得できます。
 
-## プロパティ
+## インスタンスプロパティ
 
-_このインターフェイスはプロパティを継承しません。_
+_このインターフェイスはプロパティを継承していません。_
 
-- {{domxref("CaretPosition.offsetNode")}} {{readonlyInline}}
+- {{domxref("CaretPosition.offsetNode")}} {{ReadOnlyInline}}
   - : キャレットの位置で見つかったノードを含む {{domxref("Node")}} を返します。
-- {{domxref("CaretPosition.offset")}} {{readonlyInline}}
-  - : キャレット位置ノードの文字オフセットを表す `long` を返します。
+- {{domxref("CaretPosition.offset")}} {{ReadOnlyInline}}
+  - : キャレット位置ノード内の選択位置のオフセットを表す `long` を返します。
+    これは、テキストノードでは文字のオフセット、要素ノードでは選択された子ノードのインデックスになります。
 
-## メソッド
+## インスタンスメソッド
 
-{{domxref("CaretPosition.getClientRect")}}
+- {{domxref("CaretPosition.getClientRect")}}
+  - : キャレット範囲のクライアント長方形を返します。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("api.CaretPosition")}}
+{{Compat}}
 
-## 関連項目
+## 関連情報
 
 - {{domxref("Document.caretPositionFromPoint()")}}
 - {{domxref("Range")}}

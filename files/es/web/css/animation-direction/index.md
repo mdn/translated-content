@@ -41,17 +41,17 @@ animation-direction: alternate, reverse, normal
 
 ## Ejemplos
 
-Visitar [animaciones CSS](/es/CSS/Usando_animaciones_CSS) para ver algunos ejemplos.
+Visitar [animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations) para ver algunos ejemplos.
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.animation-direction")}}
+{{Compat}}
 
 ## Consulte también
 
-- [Usando animaciones CSS](/es/docs/CSS/Using_CSS_animations)
+- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

@@ -1,8 +1,6 @@
 ---
 title: image-set()
 slug: Web/CSS/image/image-set
-translation_of: Web/CSS/image/image-set
-browser-compat: css.types.image.image-set
 ---
 
 {{CSSRef}}
@@ -40,7 +38,8 @@ Dans cet exemple, on montre comment utiliser `image-set()` afin de fournir deux 
 
 {{EmbedGHLiveSample("css-examples/images/image-set.html", '100%', 600)}}
 
-> **Note :** Dans cet exemple, la version préfixée avec `-webkit` est également utilisée pour prendre en charge Chrome et Safari. Dans Firefox 90, l'implémentation permet d'avoir `-webkit-image-set()` comme alias pour `image-set()` (afin de fournir une compatibilité si la propriété standard n'avait pas été ajoutée à la feuille de style).
+> [!NOTE]
+> Dans cet exemple, la version préfixée avec `-webkit` est également utilisée pour prendre en charge Chrome et Safari. Dans Firefox 90, l'implémentation permet d'avoir `-webkit-image-set()` comme alias pour `image-set()` (afin de fournir une compatibilité si la propriété standard n'avait pas été ajoutée à la feuille de style).
 
 ### Utiliser `image-set()` pour fournir des formats d'image alternatifs
 
@@ -57,7 +56,8 @@ Il n'y a pas de méthode de recours native en l'absence de prise en charge de `i
   background-image: url("large-balloons.jpg");
   background-image: image-set(
     "large-balloons.avif" type("image/avif"),
-    "large-balloons.jpg" type("image/jpeg"));
+    "large-balloons.jpg" type("image/jpeg")
+  );
 }
 ```
 
@@ -65,7 +65,7 @@ Il n'y a pas de méthode de recours native en l'absence de prise en charge de `i
 
 Les navigateurs ne fournissent pas d'informations particulières aux outils d'assistance quant aux outils d'assistance. Ainsi, les lecteurs d'écran ne pourront pas annoncer d'informations utiles si l'image contient des informations essentielles à la compréhension de la page. Il faudra inclure une description sémantique sur l'image pour que tous puissent en bénéficier.
 
-- [Explications MDN pour le WCAG et la règle 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
+- [Explications MDN pour le WCAG et la règle 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Comprendre les critères de réussite 1.1.1 - Guide de compréhension WCAG 2.0 du W3C (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Spécifications
@@ -81,6 +81,6 @@ Les navigateurs ne fournissent pas d'informations particulières aux outils d'as
 - [`<image>`](/fr/docs/Web/CSS/image)
 - [`image()`](/fr/docs/Web/CSS/image/image)
 - [`element()`](/fr/docs/Web/CSS/element)
-- [`url()`](/fr/docs/Web/CSS/url)
+- [`url()`](/fr/docs/Web/CSS/url_value)
 - [`<gradient>`](/fr/docs/Web/CSS/gradient)
 - [`cross-fade()`](/fr/docs/Web/CSS/cross-fade)

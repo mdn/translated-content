@@ -1,7 +1,6 @@
 ---
 title: マウス操作
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 ---
 
 {{GamesSidebar}}
@@ -28,12 +27,12 @@ document.addEventListener("mousemove", mouseMoveHandler, false);
 function mouseMoveHandler(e) {
   const relativeX = e.clientX - canvas.offsetLeft;
   if (relativeX > 0 && relativeX < canvas.width) {
-    paddleX = relativeX - paddleWidth/2;
+    paddleX = relativeX - paddleWidth / 2;
   }
 }
 ```
 
-この値は、ビューポート内のマウスの水平位置 (`e.clientX`) からキャンバスの左端とビューポートの左端間の距離 (`canvas.offsetLeft`) を引いたもので、実質的にこれはキャンバス左端からマウスポインターまでの距離と等しくなっています。ポインタの相対 X 位置が 0 より大きく、キャンバスの幅よりも小さい場合、ポインタはキャンバスの境界内にあり、`paddleX` 位置（パドルの左端に固定）は `relativeX` 値からパドルの幅の半分を引いた値に設定され、実際の移動はパドルの中央に対して相対的に行われることになります。
+この値は、ビューポート内のマウスの水平位置 (`e.clientX`) からキャンバスの左端とビューポートの左端間の距離 (`canvas.offsetLeft`) を引いたもので、実質的にこれはキャンバス左端からマウスポインターまでの距離と等しくなっています。ポインターの相対 X 位置が 0 より大きく、キャンバスの幅よりも小さい場合、ポインターはキャンバスの境界内にあり、`paddleX` 位置（パドルの左端に固定）は `relativeX` 値からパドルの幅の半分を引いた値に設定され、実際の移動はパドルの中央に対して相対的に行われることになります。
 
 パドルはマウスカーソルの位置を追うようになりますが、動きをキャンバスの大きさに制限しているため、両端で消え失せてしまうようなことはありません。
 
@@ -43,7 +42,8 @@ function mouseMoveHandler(e) {
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/vt7y5hcp/","","395")}}
 
-> **メモ:** パドル動作の境界を調節して、Canvasの両端でもパドルの半分ではなく全体が見えるようにしてください。
+> [!NOTE]
+> パドル動作の境界を調節して、Canvasの両端でもパドルの半分ではなく全体が見えるようにしてください。
 
 ## 次のステップ
 

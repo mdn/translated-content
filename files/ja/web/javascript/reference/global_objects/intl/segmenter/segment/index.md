@@ -9,12 +9,25 @@ l10n:
 
 **`Intl.Segmenter.prototype.segment()`** メソッドは、この [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトのロケールおよび粒度に従って文字列を分割します。
 
-{{EmbedInteractiveExample("pages/js/intl-segmenter-prototype-segment.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Segmenter.prototype.segment")}}
+
+```js interactive-example
+const string1 = "Que ma joie demeure";
+
+const segmenterFrGrapheme = new Intl.Segmenter("fr", {
+  granularity: "grapheme",
+});
+const graphemeSegments = segmenterFrGrapheme.segment(string1);
+
+console.log(Array.from(graphemeSegments)[0]);
+// Expected output:
+// Object {segment: 'Q', index: 0, input: 'Que ma joie demeure'}
+```
 
 ## 構文
 
 ```js
-segment(input)
+segment(input);
 ```
 
 ### 引数
@@ -24,24 +37,26 @@ segment(input)
 
 ### 返値
 
-入力文字列のセグメントを含む、反復可能な新しい [`Segments`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) オブジェクトです。
+入力文字列のセグメントを含む、反復可能な新しい [`Segments`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) オブジェクトです。
 
 ## 例
 
 ```js
-// Create a locale-specific word segmenter
-const segmenter = new Intl.Segmenter("fr", {granularity: "word"});
+// ロケール固有の単語分割器を生成する
+const segmenter = new Intl.Segmenter("fr", { granularity: "word" });
 
-// Use it to get an iterator over the segments of a string
+// それを用い、文字列のセグメントを走査するイテレーターを取得する
 const input = "Moi ? N'est-ce pas ?";
 const segments = segmenter.segment(input);
 
-// Use that for segmentation
-for (const {segment, index, isWordLike} of segments) {
-  console.log("segment at code units [%d, %d]: «%s»%s",
-    index, index + segment.length,
+// それを用い、分割を行う
+for (const { segment, index, isWordLike } of segments) {
+  console.log(
+    "segment at code units [%d, %d]: «%s»%s",
+    index,
+    index + segment.length,
     segment,
-    isWordLike ? " (word-like)" : ""
+    isWordLike ? " (word-like)" : "",
   );
 }
 // logs

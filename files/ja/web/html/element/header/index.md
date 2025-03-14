@@ -1,19 +1,121 @@
 ---
 title: <header>
 slug: Web/HTML/Element/header
+l10n:
+  sourceCommit: ca65963b93e69591b9362bb2bfde56f93128e2cb
 ---
 
 {{HTMLSidebar}}
 
-**HTML の `<header>` 要素**は、導入的なコンテンツ、ふつうは導入部やナビゲーション等のグループを表します。見出し要素だけでなく、ロゴ、検索フォーム、作者名、その他の要素を含むこともできます。
+**`<header>`** は [HTML](/ja/docs/Web/HTML) の要素で、導入的なコンテンツ、ふつうは導入部やナビゲーション補助のグループを表します。見出し要素だけでなく、ロゴ、検索フォーム、著者名、その他の要素を含むこともできます。
 
-{{EmbedInteractiveExample("pages/tabbed/header.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;header&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<header>
+  <a class="logo" href="#">Cute Puppies Express!</a>
+</header>
+
+<article>
+  <header>
+    <h1>Beagles</h1>
+    <time>08.12.2014</time>
+  </header>
+  <p>
+    I love beagles <em>so</em> much! Like, really, a lot. They’re adorable and
+    their ears are so, so snugly soft!
+  </p>
+</article>
+```
+
+```css interactive-example
+.logo {
+  background: left / cover
+    url("/shared-assets/images/examples/puppy-header.jpg");
+  display: flex;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  font:
+    bold calc(1em + 2 * (100vw - 120px) / 100) "Dancing Script",
+    fantasy;
+  color: #ff0083;
+  text-shadow: #000 2px 2px 0.2rem;
+}
+
+header > h1 {
+  margin-bottom: 0;
+}
+
+header > time {
+  font: italic 0.7rem sans-serif;
+}
+```
+
+## 使用上の注意
+
+`<header>` 要素は、区分コンテンツの中に含まれていない限り、ウェブサイト全体の [`banner`](/ja/docs/Web/Accessibility/ARIA/Roles/banner_role) ランドマークロールと同じ意味を持ちます。区分コンテンツの中に含まれている場合、`<header>` 要素はランドマークではありません。
+
+`<header>` 要素はグローバルなサイトヘッダーを定義することができ、アクセシビリティツリーでは `banner` として記述されます。通常、ロゴ、会社名、検索機能、そして場合によってはグローバルナビゲーションやスローガンを含みます。一般的にはページの上部に配置されます。
+
+それ以外の場合は、アクセシビリティツリーの `section` となり、通常は周囲のセクションの見出し（`h1` - `h6` 要素）とオプションで小見出しを格納しますが、これは必須では**ありません**。
+
+### 歴史的な使用法
+
+`<header>` 要素は、もともと HTML の初期に見出しのために存在していました。これは [the very first website](http://info.cern.ch/) に見られます。ある時点で見出しは [`<h1>` ～ `<h6>`](/ja/docs/Web/HTML/Element/Heading_Elements) となり、`<header>` が自由に別なロールを担うことができるようになりました。
+
+## 属性
+
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+
+## 例
+
+### ページのヘッダー
+
+```html
+<header>
+  <h1>Main Page Title</h1>
+  <img src="mdn-logo-sm.png" alt="MDN logo" />
+</header>
+```
+
+#### 結果
+
+{{EmbedLiveSample('Page Header')}}
+
+### 記事のヘッダー
+
+```html
+<article>
+  <header>
+    <h2>The Planet Earth</h2>
+    <p>
+      Posted on Wednesday, <time datetime="2017-10-04">4 October 2017</time> by
+      Jane Smith
+    </p>
+  </header>
+  <p>
+    We live on a planet that's blue and green, with so many things still unseen.
+  </p>
+  <p><a href="https://example.com/the-planet-earth/">Continue reading…</a></p>
+</article>
+```
+
+#### 結果
+
+{{EmbedLiveSample('Article Header')}}
+
+## アクセシビリティ
+
+`<header>` 要素が [`banner`](/ja/docs/Web/Accessibility/ARIA/Roles/banner_role) ランドマークを定義するのは、そのコンテキストが {{HTMLElement('body')}} 要素のときです。HTML の header 要素は、{{HTMLElement('article')}}、{{HTMLElement('aside')}}、{{HTMLElement('nav')}}、{{HTMLElement('section')}} 要素の子孫である場合は banner ランドマークとみなされません。
+
+## 技術的概要
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
@@ -35,7 +137,7 @@ slug: Web/HTML/Element/header
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
@@ -44,7 +146,7 @@ slug: Web/HTML/Element/header
           >フローコンテンツ</a
         >を受け入れるすべての要素。ただし、{{HTMLElement("address")}}、{{HTMLElement("footer")}}、他の
         {{HTMLElement("header")}}
-        要素の子孫要素として配置してはなりません。
+        要素の子孫になることはできません。
       </td>
     </tr>
     <tr>
@@ -93,8 +195,8 @@ slug: Web/HTML/Element/header
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("presentation")}},
-        {{ARIARole("none")}}
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
       </td>
     </tr>
     <tr>
@@ -104,51 +206,14 @@ slug: Web/HTML/Element/header
   </tbody>
 </table>
 
-## 使用上の注意
-
-`<header>` 要素は区分コンテンツではありません。つまり、この要素が新たな[アウトライン](/ja/docs/Sections_and_Outlines_of_an_HTML5_document)を生成することはありません。すなわち `header` 要素は通常、自身を囲む `section` の見出し (`h1`–`h6` 要素) を含むことを意図していますが、**必須ではありません**。
-
-### 歴史的な使用法
-
-`<header>` 要素は {{glossary("HTML5")}} まで仕様書には現れていませんでしたが、実は HTML の最初期に存在していました。 [the very first website](http://info.cern.ch/) に見られるように、元は `<head>` 要素として使用されていました。ある時点で、別な名前を使用することが決定されました。これによって `<header>` が自由になり、のちに別な役割を担うことができるようになりました。
-
-## 属性
-
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
-
-## 例
-
-### ページのヘッダー
-
-```html
-<header>
-  <h1>Main Page Title</h1>
-  <img src="mdn-logo-sm.png" alt="MDN logo">
-</header>
-```
-
-### 記事のヘッダー
-
-```html
-<article>
-  <header>
-    <h2>The Planet Earth</h2>
-    <p>Posted on Wednesday, <time datetime="2017-10-04">4 October 2017</time> by Jane Smith</p>
-  </header>
-  <p>We live on a planet that's blue and green, with so many things still unseen.</p>
-  <p><a href="https://janesmith.com/the-planet-earth/">Continue reading....</a></p>
-</article>
-```
-
 ## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.header")}}
+{{Compat}}
 
 ## 関連情報
 
-- 他の区分化関連要素: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}}
-- [HTML のセクションとアウトラインの使用](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)
+- 他の区分化関連要素: {{HTMLElement("body")}}、{{HTMLElement("nav")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("footer")}}、{{HTMLElement("section")}}、{{HTMLElement("address")}}

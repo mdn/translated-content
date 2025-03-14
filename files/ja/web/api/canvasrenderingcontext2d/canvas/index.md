@@ -24,9 +24,9 @@ ctx.canvas;
 `CanvasRenderingContext2D` の中にある canvas 要素への参照は、 `canvas` プロパティから取得することができます。
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-ctx.canvas // HTMLCanvasElement
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+ctx.canvas; // HTMLCanvasElement
 ```
 
 ## 仕様書

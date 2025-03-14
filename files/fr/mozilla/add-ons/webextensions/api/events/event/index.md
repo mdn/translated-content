@@ -1,20 +1,9 @@
 ---
 title: events.Event
 slug: Mozilla/Add-ons/WebExtensions/API/events/Event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - events
-translation_of: Mozilla/Add-ons/WebExtensions/API/events/Event
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet qui permet l'ajout et la suppression d'écouteurs pour un événement de navigateur.
 
@@ -39,15 +28,15 @@ Les valeurs de ce type sont des objets.
 - {{WebExtAPIRef("events.Event.removeRules()")}}
   - : Annule l'inscription des règles actuellement enregistrées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.events.Event")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.events`](https://developer.chrome.com/extensions/events). Cette documentation est dérivée de [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/api/events). Cette documentation est dérivée de [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

@@ -1,30 +1,24 @@
 ---
 title: NodeList
 slug: Web/API/NodeList
-tags:
-  - API
-  - DOM
-  - Interface
-  - Liste
-  - Noeuds
-translation_of: Web/API/NodeList
 ---
 
 {{APIRef("DOM")}}
 
 Les objets **`NodeList`** sont des collections de nœuds comme celles retournées par {{domxref("Node.childNodes")}} et la méthode {{domxref("document.querySelectorAll()")}}.
 
-> **Note :** Bien que `NodeList` ne soit pas un tableau (`Array`), il est possible d'itérer dessus en utilisant `forEach()`. Il peut également être converti en tableau (`Array`) en utilisant {{jsxref("Array.from()")}}.
+> [!NOTE]
+> Bien que `NodeList` ne soit pas un tableau (`Array`), il est possible d'itérer dessus en utilisant `forEach()`. Il peut également être converti en tableau (`Array`) en utilisant {{jsxref("Array.from()")}}.
 >
 > Néanmoins certains vieux navigateurs n'ont pas encore implémenté `NodeList.forEach()` ni `Array.from()`. Mais ces limitations peuvent être contournées en utilisant {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} (plus dans ce document).
 
 Dans certains cas, la `NodeList` est une collection en direct, ce qui signifie que les changements dans le DOM sont reflétés dans la collection. Par exemple, {{domxref("Node.childNodes")}} est en direct :
 
 ```js
-var parent = document.getElementById('parent');
+var parent = document.getElementById("parent");
 var child_nodes = parent.childNodes;
 console.log(child_nodes.length); // supposons "2"
-parent.appendChild(document.createElement('div'));
+parent.appendChild(document.createElement("div"));
 console.log(child_nodes.length); // devrait afficher "3"
 ```
 
@@ -56,16 +50,16 @@ Il est possible de boucler sur les éléments d'une `NodeList` en utilisant&nbsp
 
 ```js
 for (var i = 0; i < myNodeList.length; ++i) {
-  var item = myNodeList[i];  // L'appel de myNodeList.item(i) n'est pas nécessaire en JavaScript
+  var item = myNodeList[i]; // L'appel de myNodeList.item(i) n'est pas nécessaire en JavaScript
 }
 ```
 
-Ne soyez pas tenté d'utiliser [`for… in`](/fr/docs/JavaScript/Reference/Instructions/for...in) ou [`for each… in`](/fr/docs/JavaScript/Reference/Instructions/for_each…in) pour énumérer les éléments de la liste, car cela énumère également la taille (`length`) et les propriétés du `NodeList` et cause des erreurs si votre script ne gère que les objets de type {{domxref("element")}}. De plus, `for… in` ne garantit pas de visiter les propriétés dans un ordre particulier.
+Ne soyez pas tenté d'utiliser [`for… in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) ou [`for each… in`](/fr/docs/JavaScript/Reference/Instructions/for_each…in) pour énumérer les éléments de la liste, car cela énumère également la taille (`length`) et les propriétés du `NodeList` et cause des erreurs si votre script ne gère que les objets de type {{domxref("element")}}. De plus, `for… in` ne garantit pas de visiter les propriétés dans un ordre particulier.
 
-Les boucles [`for… of`](/fr/docs/JavaScript/Référence_JavaScript/Instructions/for...of) boucleront correctement sur les objets `NodeList` :
+Les boucles [`for… of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) boucleront correctement sur les objets `NodeList` :
 
 ```js
-var list = document.querySelectorAll( 'input[type=checkbox]' );
+var list = document.querySelectorAll("input[type=checkbox]");
 for (var item of list) {
   item.checked = true;
 }
@@ -76,7 +70,7 @@ Les navigateurs récents prennent également en charge les méthodes d'itérateu
 Il y a aussi dans Internet Explorer une façon compatible d'utiliser {{jsxref("Array.forEach()", "Array.prototype.forEach")}} pour l'itération.
 
 ```js
-var list = document.querySelectorAll( 'input[type=checkbox]' );
+var list = document.querySelectorAll("input[type=checkbox]");
 Array.prototype.forEach.call(list, function (item) {
   item.checked = true;
 });

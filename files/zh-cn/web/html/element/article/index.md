@@ -5,52 +5,66 @@ slug: Web/HTML/Element/article
 
 {{HTMLSidebar}}
 
-**HTML `<article>`** 元素表示文档、页面、应用或网站中的独立结构，其意在成为可独立分配的或可复用的结构，如在发布中，它可能是论坛帖子、杂志或新闻文章、博客、用户提交的评论、交互式组件，或者其他独立的内容项目。​​
+**HTML `<article>`** 元素表示文档、页面、应用或网站中的独立结构，其意在成为可独立分配的或可复用的结构，如在发布中，它可能是论坛帖子、杂志或新闻文章、博客、用户提交的评论、交互式组件，或者其他独立的内容项目。
 
-{{EmbedInteractiveExample("pages/tabbed/article.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;article&gt;", "tabbed-standard")}}
 
-给定文档中可以包含多篇文章;例如，阅读器在博客上滚动时一个接一个地显示每篇文章的文本，每个帖子将包含在`<article>`元素中，可能包含一个或多个`<section>`。
+```html interactive-example
+<article class="forecast">
+  <h1>Weather forecast for Seattle</h1>
+  <article class="day-forecast">
+    <h2>03 March 2018</h2>
+    <p>Rain.</p>
+  </article>
+  <article class="day-forecast">
+    <h2>04 March 2018</h2>
+    <p>Periods of rain.</p>
+  </article>
+  <article class="day-forecast">
+    <h2>05 March 2018</h2>
+    <p>Heavy rain.</p>
+  </article>
+</article>
+```
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><dfn><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></dfn></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, sectioning content, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的内容</th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row"><dfn>标记省略</dfn></th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的父元素</th>
-   <td>所有接受 <a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>的元素。注意<code>&lt;article&gt;</code>元素不能成为{{HTMLElement("address")}}元素的子元素。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的 ARIA roles</th>
-   <td>{{ARIARole("application")}}, {{ARIARole("document")}}, {{ARIARole("feed")}}, {{ARIARole("main")}}, {{ARIARole("presentation")}}, {{ARIARole("region")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 实例</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
-</table>
+```css interactive-example
+.forecast {
+  margin: 0;
+  padding: 0.3rem;
+  background-color: #eee;
+}
+
+.forecast > h1,
+.day-forecast {
+  margin: 0.5rem;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.day-forecast {
+  background: right/contain content-box border-box no-repeat
+    url("/shared-assets/images/examples/rain.svg") white;
+}
+
+.day-forecast > h2,
+.day-forecast > p {
+  margin: 0.2rem;
+  font-size: 1rem;
+}
+```
+
+给定文档中可以包含多篇文章；例如，阅读器在博客上滚动时一个接一个地显示每篇文章的文本，每个帖子将包含在 `<article>` 元素中，可能包含一个或多个 `<section>`。
 
 ## 属性
 
-此元素只具有[全局属性](/zh-CN/docs/HTML/Global_attributes)。
+此元素只具有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 ## 使用说明
 
-- 每个`<article>`，通常包括标题（\<h1> - \<h6>元素）作为`<article>`元素的子元素。
-- 当`<article>`元素嵌套使用时，则该元素代表与外层元素有关的文章。例如，代表博客评论的`<article>`元素可嵌套在代表博客文章的`<article>`元素中。
-- `<article>`元素的作者信息可通过{{HTMLElement("address")}}元素提供，但是不适用于嵌套的`<article>`元素。
-- `<article>`元素的发布日期和时间可通过{{HTMLElement("time")}}元素的{{htmlattrxref("pubdate", "time")}}属性表示。
-- 可以使用{{HTMLElement("time")}} 元素的{{htmlattrxref("datetime", "time")}}属性来描述`<article>`元素的发布日期和时间。请注意{{HTMLElement("time")}}的*{{htmlattrxref("pubdate", "time")}}* 属性不再是*{{glossary("W3C")}}* *{{glossary("HTML5")}}*标准。
+- 每个 `<article>`，通常包括标题（[`<h1>`—`<h6>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 元素）作为 `<article>` 元素的子元素。
+- 当 `<article>` 元素嵌套使用时，则该元素代表与外层元素有关的文章。例如，代表博客评论的 `<article>` 元素可嵌套在代表博客文章的 `<article>` 元素中。
+- `<article>` 元素的作者信息可通过 {{HTMLElement("address")}} 元素提供，但是不适用于嵌套的 `<article>` 元素。
+- 可以使用 {{HTMLElement("time")}} 元素的 [`datetime`](/zh-CN/docs/Web/HTML/Element/time#datetime) 属性来描述 `<article>` 元素的发布日期和时间。
 
 ## 示例
 
@@ -94,15 +108,93 @@ slug: Web/HTML/Element/article
 </article>
 ```
 
+## 技术概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+          >内容分类</a
+        >
+      </th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >、<a
+          href="/zh-CN/docs/Web/HTML/Content_categories#分段内容"
+          >分段内容</a
+        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>
+        所有接受<a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >的元素。注意<code>&lt;article&gt;</code>元素不能成为 {{HTMLElement("address")}} 元素的子元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隐含的 ARIA 角色</th>
+      <td>
+        <code
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/article_role"
+            >article</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"
+          ><code>application</code></a
+        >、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"
+          ><code>document</code></a
+        >、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role"
+          ><code>feed</code></a
+        >、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/main_role"
+          ><code>main</code></a
+        >、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"
+          ><code>none</code></a
+        >、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"
+          ><code>presentation</code></a
+        >、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/region_role"
+          ><code>region</code></a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
+
 ## 规范
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 
-## 相关文章
+## 参见
 
-- Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
-- [Sections and outlines of an HTML5 document](/zh-CN/docs/Sections_and_Outlines_of_an_HTML5_document).
+- 其他分段相关元素：{{HTMLElement("body")}}、{{HTMLElement("nav")}}、{{HTMLElement("section")}}、{{HTMLElement("aside")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("hgroup")}}、{{HTMLElement("header")}}、{{HTMLElement("footer")}}、{{HTMLElement("address")}}
+- [使用 HTML 分段和大纲](/zh-CN/docs/Web/HTML/Element/Heading_Elements)

@@ -11,7 +11,7 @@ Firefox 2 有許多新的特色及功能，本文提供各項新特色的相關�
 
 ### 給網頁設計師及開發者
 
-- [即時摘要](http://wiki.mozilla.org/Microsummaries)
+- [即時摘要](https://wiki.mozilla.org/Microsummaries)
   - : 即時摘要能定期顯示網頁中的關鍵訊息。網站或其他第三方開發者都能提供即時摘要來源，而後使用者能選擇在書籤上顯示即時摘要或網頁標題。
 - [製作即時摘要](zh_tw/%e8%a3%bd%e4%bd%9c%e5%8d%b3%e6%99%82%e6%91%98%e8%a6%81)
   - : 即時摘要來源的製作教學。
@@ -25,7 +25,7 @@ Firefox 2 有許多新的特色及功能，本文提供各項新特色的相關�
   - : 讓你的 MozSearch 模組支援搜尋建議功能，此功能將於搜尋欄中以下拉選單顯示建議關鍵字。
 - [JavaScript 1.7 新功能](zh_tw/JavaScript_1.7_%e6%96%b0%e5%8a%9f%e8%83%bd)
   - : Firefox 2 支援 JavaScript 1.7，包含新的 `let` 表達式、跨結構指定(destructuring assignment)、產生器 (generators)、迴圈器 (iterators) 和陣列簡約式 (array comprehensions)。
-- [WHATWG 於用戶端儲存工作階段資料](http://www.whatwg.org/specs/web-apps/current-work/#scs-client-side)
+- [WHATWG 於用戶端儲存工作階段資料](https://www.whatwg.org/specs/web-apps/current-work/#scs-client-side)
   - : 於用戶端儲存工作階段資料技術可讓網路應用程式於用戶端儲存結構化資料。
 - [Firefox 中的 SVG](zh_tw/Firefox_%e4%b8%ad%e7%9a%84_SVG)
   - : Firefox 2 提升支援 Scalable Vector Graphics (SVG) 的程度，實作了 `<textPath>` 元素、也開始支援某些從前無法妥善處理的屬性。
@@ -59,7 +59,7 @@ Firefox 2 有許多新的特色及功能，本文提供各項新特色的相關�
 
 ## 給廣大使用者的新功能
 
-Firefox 2 提供比上個版本更簡潔的操作介面，強化的安全隱私保護，讓您上網更安全方便。
+Firefox 2 提供比上個版本更簡潔的操作介面，強化的安全隱私保護，讓你上網更安全方便。
 
 ### 使用操作體驗
 

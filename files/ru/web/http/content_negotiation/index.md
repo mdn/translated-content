@@ -1,9 +1,6 @@
 ---
 title: Согласование контента
 slug: Web/HTTP/Content_negotiation
-tags:
-  - Согласование контента
-translation_of: Web/HTTP/Content_negotiation
 ---
 
 {{HTTPSidebar}}
@@ -14,7 +11,7 @@ translation_of: Web/HTTP/Content_negotiation
 
 Конкретный документ называется _ресурсом_. Когда клиент хочет его получить, он запрашивает его используя его URL. Сервер использует этот URL, чтобы выбрать один из возможных вариантов - каждый вариант, называется _представлением_, – и возвращает этот вариант клиенту. Ресурс в общем, а также каждое из представлений, имеют определённый URL. Выбор конкретного представления при вызове ресурса определяется механизмом _согласования контента_ и существует несколько способов согласования между клиентом и сервером.
 
-![](https://mdn.mozillademos.org/files/16156/HTTPNego_ru.png)
+![](httpnego_ru.png)
 
 Определение наиболее подходящего представления производится с помощью одного из двух механизмов:
 
@@ -25,11 +22,11 @@ translation_of: Web/HTTP/Content_negotiation
 
 ## Согласование на основе сервера
 
-В _согласовании на стороне сервера_ или _упреждающем согласовании_, браузер (или любое другое клиентское приложение) посылает несколько заголовков HTTP наряду с URL. Эти заголовки описывают предпочтения пользователя. Сервер использует их в качестве подсказок для внутреннего алгоритма, который выбирает наиболее подходящее представление ресурса, чтобы предоставить его клиенту. Реализация алгоритма в стандарт не входит и полностью зависит от сервера. Для примера, смотрите [алгоритм согласования Apache 2.2](http://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm).
+В _согласовании на стороне сервера_ или _упреждающем согласовании_, браузер (или любое другое клиентское приложение) посылает несколько заголовков HTTP наряду с URL. Эти заголовки описывают предпочтения пользователя. Сервер использует их в качестве подсказок для внутреннего алгоритма, который выбирает наиболее подходящее представление ресурса, чтобы предоставить его клиенту. Реализация алгоритма в стандарт не входит и полностью зависит от сервера. Для примера, смотрите [алгоритм согласования Apache 2.2](https://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm).
 
-![](https://mdn.mozillademos.org/files/13791/HTTPNegoServer.png)
+![](httpnegoserver.png)
 
-Стандарт HTTP/1.1 определяет список стандартных заголовков которые используются в этом механизме согласования – ({{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}). Хотя, строго говоря, {{HTTPHeader("User-Agent")}} не находится в этом списке, в некоторых случаях он используется, чтобы послать определённое представление запрошенного ресурса, несмотря на то, что это и не является хорошей практикой. Сервер использует заголовок {{HTTPHeader("Vary")}} чтобы обозначить, какие заголовки он использовал для согласования (точнее, ассоциированные с ними заголовки ответа), чтобы [кеширование](/ru/docs/Web/HTTP/Caching) работало оптимально.
+Стандарт HTTP/1.1 определяет список стандартных заголовков которые используются в этом механизме согласования – ({{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}). Хотя, строго говоря, {{HTTPHeader("User-Agent")}} не находится в этом списке, в некоторых случаях он используется, чтобы послать определённое представление запрошенного ресурса, несмотря на то, что это и не является хорошей практикой. Сервер использует заголовок {{HTTPHeader("Vary")}} чтобы обозначить, какие заголовки он использовал для согласования (точнее, ассоциированные с ними заголовки ответа), чтобы [кеширование](/ru/docs/Web/HTTP/Caching) работало оптимально.
 
 В дополнение к этим, есть предложение добавить больше заголовков в список доступным, так называемые Подсказки Клиента (Client Hints). Они будут предоставлять информацию о типе устройства на котором они используются (например, будет это настольный компьютер или мобильное устройство).
 
@@ -47,7 +44,8 @@ translation_of: Web/HTTP/Content_negotiation
 
 ### Заголовок `Accept-CH` {{experimental_inline}}
 
-> **Примечание:** Перед вами **экспериментальная** технология под названием _Client Hints (Подсказки Клиента)_, реализуемая на данный момент только в Chrome 46 и более поздних версиях
+> [!NOTE]
+> Это **экспериментальная** технология под названием _Подсказки Клиента_ (_Client Hints_),, которую поддерживает только Chrome 46 и более поздние версии.
 
 Экспериментальный заголовок {{HTTPHeader("Accept-CH")}} перечисляет конфигурацию клиента, которая может быть использована сервером для выбора подходящего ответа. Определённые значения:
 
@@ -56,12 +54,6 @@ translation_of: Web/HTTP/Content_negotiation
 | `DPR`            | Указывает соотношение логических пикселей к физическим на устройстве.                            |
 | `Viewport-Width` | Указывает ширину окна отображения.                                                               |
 | `Width`          | Указывает ширину ресурса в физических пикселях (другими словами собственный размер изображения). |
-
-### Заголовок `Accept-Charset`
-
-Заголовок {{HTTPHeader("Accept-Charset")}} указывает серверу какие кодировки текста поддерживает клиент. По традиции он имеет своё значение для каждой локали браузера, например, `ISO-8859-1,utf-8;q=0.7,*;q=0.7` установлен для западноевропейской локали.
-
-В настоящее время, UTF-8 имеет серьёзную поддержку, является предпочтительным способом кодировки текста и гарантирует лучшую конфиденциальность за счёт уменьшения разнообразия конфигураций, поэтому большая часть браузеров пропускает заголовок `Accept-Charset`: Internet Explorer 8, Safari 5, Opera 11 и Firefox 10 отказались от этого заголовка в запросах.
 
 ### Заголовок `Accept-Encoding`
 
@@ -80,7 +72,8 @@ Due to the [configuration-based entropy](https://www.eff.org/deeplinks/2010/01/p
 
 ### Заголовок `User-Agent`
 
-> **Примечание:** Though there are legitimate uses of this header for selecting content, [it is considered bad practice](/ru/docs/Web/HTTP/Browser_detection_using_the_user_agent) to rely on it to define what features are supported by the user agent.
+> [!NOTE]
+> Though there are legitimate uses of this header for selecting content, [it is considered bad practice](/ru/docs/Web/HTTP/Browser_detection_using_the_user_agent) to rely on it to define what features are supported by the user agent.
 
 The {{HTTPHeader("User-Agent")}} header identifies the browser sending the request. This string may contain a space-separated list of _product tokens_ and _comments_.
 
@@ -100,6 +93,6 @@ Server-driven negotiation suffers from a few downsides: it doesn't scale well. T
 
 From the beginnings of HTTP, the protocol allowed another negotiation type: _agent-driven negotiation_ or _reactive negotiation_. In this negotiation, when facing an ambiguous request, the server sends back a page containing links to the available alternative resources. The user is presented the resources and choose the one to use.
 
-![](https://mdn.mozillademos.org/files/13795/HTTPNego3.png)
+![](httpnego3.png)
 
 Unfortunately, the HTTP standard does not specify the format of the page allowing to choose between the available resource, which prevents to easily automatize the process. Besides falling back to the _server-driven negotiation_, this method is almost always used in conjunction with scripting, especially with JavaScript redirection: after having checked for the negotiation criteria, the script performs the redirection. A second problem is that one more request is needed in order to fetch the real resource, slowing the availability of the resource to the user.

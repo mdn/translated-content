@@ -1,54 +1,99 @@
 ---
-title: <legend>
+title: <legend>：字段集标题元素
 slug: Web/HTML/Element/legend
+l10n:
+  sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
 {{HTMLSidebar}}
 
-**HTML \<legend>** 元素用于表示其父元素 {{HTMLElement("fieldset")}} 的内容标题。
+**`<legend>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示其父元素 {{HTMLElement("fieldset")}} 内容的标题。
 
-{{EmbedInteractiveExample("pages/tabbed/legend.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;legend&gt;", "tabbed-standard")}}
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
-   <td>无。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的内容</th>
-   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">语句内容（Phrasing content</a>）。</td>
-  </tr>
-  <tr>
-   <th scope="row">标签忽略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的父元素</th>
-   <td>{{HTMLElement("fieldset")}} ，并且<code>&lt;legend&gt;</code>作为第一个子元素</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>No <code>role</code> permitted</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLLegendElement")}}</td>
-  </tr>
- </tbody>
-</table>
+```html interactive-example
+<fieldset>
+  <legend>Choose your favorite monster</legend>
+
+  <input type="radio" id="kraken" name="monster" value="K" />
+  <label for="kraken">Kraken</label><br />
+
+  <input type="radio" id="sasquatch" name="monster" value="S" />
+  <label for="sasquatch">Sasquatch</label><br />
+
+  <input type="radio" id="mothman" name="monster" value="M" />
+  <label for="mothman">Mothman</label>
+</fieldset>
+```
+
+```css interactive-example
+legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 ## 属性
 
-这个元素只有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 ## 示例
 
-在 {{HTMLElement("form")}} 中查看关于 `<legend>` 元素的示例。
+有关 `<legend>` 的示例，请参阅 {{HTMLElement("form")}}。
+
+## 技术概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+          >内容分类</a
+        >
+      </th>
+      <td>无。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >和<a href="/zh-CN/docs/Web/HTML/Element/Heading_Elements">标题</a>（h1–h6 元素）。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>
+        一个 {{HTMLElement("fieldset")}}，其第一个子元素是此 <code>&#x3C;legend></code> 元素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隐含的 ARIA 角色</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >没有对应的角色</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>没有允许的 <code>role</code>。</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLLegendElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 规范
 
@@ -58,7 +103,6 @@ slug: Web/HTML/Element/legend
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
-- 其他与表单相关的元素：{{HTMLElement("form")}}, {{HTMLElement("option")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}。
-- [ARIA: Form role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Form_Role)
+- [ARIA：Form 角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/form_role)

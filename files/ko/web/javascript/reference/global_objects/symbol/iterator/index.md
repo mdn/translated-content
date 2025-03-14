@@ -1,14 +1,28 @@
 ---
 title: Symbol.iterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 ---
 
 {{JSRef}}
 
 잘 알려진 **`Symbol.iterator`** 심볼은 객체에 대응하는 기본 이터레이터를 지정합니다. [`for...of`](/ko/docs/docs/Web/JavaScript/Reference/Statements/for...of)와 같이 사용됩니다.
 
-{{EmbedInteractiveExample("pages/js/symbol-iterator.html")}}{{js_property_attributes(0,0,0)}}
+{{InteractiveExample("JavaScript Demo: Symbol.iterator")}}
+
+```js interactive-example
+const iterable1 = {};
+
+iterable1[Symbol.iterator] = function* () {
+  yield 1;
+  yield 2;
+  yield 3;
+};
+
+console.log([...iterable1]);
+// Expected output: Array [1, 2, 3]
+```
+
+{{js_property_attributes(0,0,0)}}
 
 ## 설명
 
@@ -31,13 +45,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 앞에서 기술한 바와 같이 독자적으로 이터레이터를 만드는 것이 가능합니다.
 
 ```js
-var myIterable = {}
+var myIterable = {};
 myIterable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 };
-[...myIterable] // [1, 2, 3]
+[...myIterable]; // [1, 2, 3]
 ```
 
 ### 비정형 이터레이터
@@ -54,7 +68,7 @@ nonWellFormedIterable[Symbol.iterator] = () => 1
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

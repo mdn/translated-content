@@ -7,7 +7,72 @@ slug: Web/HTML/Element/tbody
 
 **`<tbody>`** [HTML](/zh-CN/docs/Web/HTML) 元素封装了一系列表格的行（{{HTMLElement("tr")}} 元素），代表了它们是表格（{{HTMLElement("table")}}）主要内容的组成部分。
 
-{{EmbedInteractiveExample("pages/tabbed/tbody.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;tbody&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Council budget (in £) 2018
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Items</th>
+      <th scope="col">Expenditure</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Donuts</th>
+      <td>3,000</td>
+    </tr>
+    <tr>
+      <th scope="row">Stationery</th>
+      <td>18,000</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row">Totals</th>
+      <td>21,000</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+```css interactive-example
+thead,
+tfoot {
+  background-color: #2c5e77;
+  color: #fff;
+}
+
+tbody {
+  background-color: #e4f0f5;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td {
+  text-align: center;
+}
+```
 
 `<tbody>` 元素和它的兄弟节点 {{HTMLElement("thead")}} 和 {{HTMLElement("tfoot")}} 为出于无障碍访问需求的屏幕或打印机上的表格渲染提供了有用的语义信息。
 
@@ -64,7 +129,7 @@ slug: Web/HTML/Element/tbody
 
 ### 废弃的属性
 
-- {{ htmlattrdef("align") }} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : 该[枚举](/zh-CN/docs/Glossary/Enumerated)属性指定了每个单元格的水平对齐方式。可能的值如下：
 
@@ -72,7 +137,7 @@ slug: Web/HTML/Element/tbody
     - `center`，表格内容居中对齐
     - `right`，表格内容右对齐
     - `justify`，在文本内容中插入空格，使内容在单元格中对齐。
-    - `char`，将文本内容对准一个特殊的字符，其最小偏移量由 {{ htmlattrxref("char", "tbody") }} 和 {{ htmlattrxref("charoff", "tbody") }} 属性定义。
+    - `char`，将文本内容对准一个特殊的字符，其最小偏移量由 [`char`](#char) 和 [`charoff`](#charoff) 属性定义。
 
     如果没有设定该属性，则假定使用 `left` 值。
 
@@ -80,17 +145,17 @@ slug: Web/HTML/Element/tbody
 
     > **备注：** `text-align` 属性的 `align="char"` 取值尚未在任何浏览器中实现。请参阅 [`text-align` 的浏览器兼容性小节](/zh-CN/docs/Web/CSS/text-align#浏览器兼容性)以获取 `<string>` 的可能取值。
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+- `bgcolor` {{Deprecated_inline}}
 
   - : 表格的背景颜色。它是一个以 '`#`' 开头的 [6 位数十六进制 RGB 代码](/zh-CN/docs/Web/CSS/color_value#rgb_颜色)。也可以使用任意一个预定义的[颜色关键字](/zh-CN/docs/Web/CSS/color_value#颜色关键字)。
 
     由于该属性已经废弃，请使用 CSS {{cssxref("background-color")}} 属性作为替代。
 
-- {{ htmlattrdef("char") }} {{deprecated_inline}}
-  - : 该属性用于设置列中单元格的对齐字符。当试图对齐数字或货币价值时，其典型值包括一个句号（`.`）。如果 {{htmlattrxref("align", "tbody")}} 没有设置为 `char`，这个属性就会被忽略。
-- {{ htmlattrdef("charoff") }} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
+  - : 该属性用于设置列中单元格的对齐字符。当试图对齐数字或货币价值时，其典型值包括一个句号（`.`）。如果 [`align`](#align) 没有设置为 `char`，这个属性就会被忽略。
+- `charoff` {{deprecated_inline}}
   - : 这个属性用来表示从 `char` 属性指定的对齐字符中偏移列数据的字符数。
-- {{ htmlattrdef("valign") }} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
 
   - : 该属性指定了每个单元格的垂直对齐方式。可能的值如下：
 
@@ -101,7 +166,7 @@ slug: Web/HTML/Element/tbody
 
     由于该属性已经废弃，请使用 CSS {{cssxref("vertical-align")}} 属性作为替代。
 
-## 使用注意事项
+## 使用说明
 
 - 如果表格包含 {{HTMLElement("thead")}} 块（语义上标识表头行），那么 `<tbody>` 块*必须*紧随它。
 - 如果你使用 `<tbody>`，你就不能同时拥有表格行（{{HTMLElement("tr")}} 元素），它们是 {{HTMLElement("table")}} 的直接子元素，但不包括在 `<tbody>` 内。如果使用了 `<tbody>`，所有非标题和非页脚的行都必须在其内。
@@ -158,7 +223,11 @@ slug: Web/HTML/Element/tbody
 table {
   border: 2px solid #555;
   border-collapse: collapse;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    sans-serif;
 }
 ```
 
@@ -193,7 +262,7 @@ thead > tr > th {
 
 ### 多个表格主体
 
-你可以使用多个 `<tbody>` 元素来在一个表格中建立多个部分。每个部分可能包含它自己的表头或一些行；然而，*每个表格里只能有一个 {{HTMLElement("thead")}} 元素！* 由于刚才所述的原因，你需要用 {{HTMLElement("tr")}} 填充 {{HTMLElement("th")}} 元素，在每个 `<tbody>` 内创建标题。让我们来看看这是怎么做到的。
+你可以使用多个 `<tbody>` 元素来在一个表格中建立多个部分。每个部分可能包含它自己的表头或一些行；然而，_每个表格里只能有一个 {{HTMLElement("thead")}} 元素！_ 由于刚才所述的原因，你需要用 {{HTMLElement("tr")}} 填充 {{HTMLElement("th")}} 元素，在每个 `<tbody>` 内创建标题。让我们来看看这是怎么做到的。
 
 让我们以前面的例子为例，在列表中增加一些学生，并更新表格，使其不再在每一行列出每个学生的专业，而是按专业分组，每个专业都有标题行。
 
@@ -257,7 +326,7 @@ thead > tr > th {
 </table>
 ```
 
-注意，每个专业都放在了分开的 `<tbody>` 块之下，其中的第一列包含了一个带有 {{htmlattrxref("colspan", "th")}} 属性的 {{HTMLElement("th")}} 元素，横跨了整个表格的宽度。该标题列出了包含在 `<tbody>` 中的专业名称。
+注意，每个专业都放在了分开的 `<tbody>` 块之下，其中的第一列包含了一个带有 [`colspan`](/zh-CN/docs/Web/HTML/Element/th#colspan) 属性的 {{HTMLElement("th")}} 元素，横跨了整个表格的宽度。该标题列出了包含在 `<tbody>` 中的专业名称。
 
 在每个专业的 `<tbody>` 下的剩余行包含两个单元格：第一个是学生的 ID，第二个是它们的名字。
 
@@ -267,7 +336,11 @@ thead > tr > th {
 table {
   border: 2px solid #555;
   border-collapse: collapse;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    sans-serif;
 }
 
 th,

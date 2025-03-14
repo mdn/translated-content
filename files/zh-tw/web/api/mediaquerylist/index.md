@@ -5,7 +5,7 @@ slug: Web/API/MediaQueryList
 
 {{APIRef("CSSOM View")}}{{SeeCompatTable}}
 
-`MediaQueryList` 物件維護一組針對 {{ domxref("document") }} 的 [media querie](/zh-TW/docs/CSS/Media_queries) , 並且當 media querie 相對應的文件狀態改變時，觸發註冊的事件處理器通知之。
+`MediaQueryList` 物件維護一組針對 {{ domxref("document") }} 的 [media querie](/zh-TW/docs/Web/CSS/CSS_media_queries/Using_media_queries) , 並且當 media querie 相對應的文件狀態改變時，觸發註冊的事件處理器通知之。
 
 MediaQueryList 物件讓我們不用一直定期去偵測，而是直接去觀察文件的狀態變化。
 
@@ -17,10 +17,10 @@ MediaQueryList 物件讓我們不用一直定期去偵測，而是直接去觀�
 
 ## Properties
 
-| Property  | Type        | Description                                                                                                    |
-| --------- | ----------- | -------------------------------------------------------------------------------------------------------------- |
+| Property  | Type        | Description                                                                                             |
+| --------- | ----------- | ------------------------------------------------------------------------------------------------------- |
 | `matches` | `boolean`   | `true` 當 {{ domxref("document") }} 目前狀態符合 media query list 所維護的條件; 否則 false。 唯獨**。** |
-| `media`   | `DOMString` | 序列化 (serialized) 的 media query list.                                                                       |
+| `media`   | `DOMString` | 序列化 (serialized) 的 media query list.                                                                |
 
 ## Methods
 
@@ -54,17 +54,17 @@ void removeListener(
 - `listener`
   - : 欲移除的事件處理函數 ({{ domxref("MediaQueryListListener") }})。
 
+## 規範
+
+{{Specifications}}
+
 ## 瀏覽器相容性
 
 {{Compat}}
 
-## 規範標準
+## 參見
 
-- [The CSSOM View Module: The MediaQueryList Interface](http://dev.w3.org/csswg/cssom-view/#the-mediaquerylist-interface)
-
-## 延伸閱讀
-
-- [Media queries](/zh-TW/docs/CSS/Media_queries)
-- [Using media queries from code](/zh-TW/docs/CSS/Using_media_queries_from_code)
+- [Media queries](/zh-TW/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using media queries from code](/zh-TW/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{ domxref("window.matchMedia()") }}
 - {{ domxref("MediaQueryListListener") }}

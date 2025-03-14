@@ -1,17 +1,13 @@
 ---
 title: padding-right
 slug: Web/CSS/padding-right
-tags:
-  - CSS
-  - CSS-свойство
-translation_of: Web/CSS/padding-right
 ---
 
 {{CSSRef}}
 
 ## Summary
 
-[CSS](/en/CSS) свойство **`padding-right`** элемента устанавливает значение поля от правого края элемента. Поля элемента ([padding area](/en/CSS/box_model#padding)) это область, расположенная между контентом и границей элемента. Отрицательное значение не валидно.
+[CSS](/en-US/CSS) свойство **`padding-right`** элемента устанавливает значение поля от правого края элемента. Поля элемента ([padding area](/en-US/CSS/box_model#padding)) это область, расположенная между контентом и границей элемента. Отрицательное значение не валидно.
 
 {{cssinfo}}
 
@@ -46,19 +42,18 @@ padding-right: unset;
 ## Examples
 
 ```css
-.content { padding-right: 5%; }
-.sidebox { padding-right: 10px; }
+.content {
+  padding-right: 5%;
+}
+.sidebox {
+  padding-right: 10px;
+}
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                    | Status                                   | Comment                                               |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------------- |
-| {{ SpecName('CSS3 Box', '#the-padding', 'padding-right') }}                 | {{ Spec2('CSS3 Box') }}         | Без изменений.                                        |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'padding-right') }}     | {{ Spec2('CSS3 Transitions') }} | Определяет `padding-right`, как анимируемое свойство. |
-| {{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-right') }} | {{ Spec2('CSS2.1') }}             | Без изменений.                                        |
-| {{ Specname('CSS1', '#padding-right', 'padding-right') }}                     | {{ Spec2('CSS1') }}                 | Исходное определение.                                 |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

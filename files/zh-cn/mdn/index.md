@@ -1,16 +1,19 @@
 ---
-title: MDN 项目
+title: MDN Web 文档项目
 slug: MDN
+l10n:
+  sourceCommit: cdf5bebefe9bb292b3aa6c9e733ba06a8466016e
 ---
 
-{{MDNSidebar}}
+**MDN Web 文档**是免费使用的，且允许我们记录开放 Web 技术的资源。我们的使命是为*开发者*提供*信息*，帮助他们*轻松地*在 *Web 平台*上构建项目。以下资源描述了网站的运作方式、我们如何编写文档、我们遵循的准则和惯例以及你如何参与。
 
-**MDN Web 文档** 是免费使用我们编辑的开放 web 平台文档的网站。我们的使命是为*开发者*提供*信息*，帮助他们轻松地在 *web 平台*上构建项目。
-
-这是 MDN 项目的着陆页。在这里，您可以找到有关网站如何工作、如何编写文档、遵循哪些准则和惯例以及您如何提供帮助的指南。
-
-同时，我们邀请任何人来帮忙！如果您有兴趣改进这个重要的 web 开发者资源，欢迎您添加和编辑内容。您不需要是一个程序员或了解很多技术，因为这里有许多不同的从简单的（校对和更正打字错误）到复杂的（编写 API 文档）任务需要执行。
-
-如果要了解如何提供帮助，请访问我们的[为 MDN 做贡献](/zh-CN/docs/MDN/Contribute)页面。如果您想与我们交谈并提出问题，请加入[Matrix](https://wiki.mozilla.org/Matrix)上[MDN Web Docs 聊天室](https://chat.mozilla.org/#/room/#mdn:mozilla.org)进行讨论。
-
-{{LandingPageListSubPages()}}
+- [Web 开发教程](/zh-CN/docs/MDN/Tutorials)
+  - : MDN Web 文档上的精选教程列表和针对初学者、中级或专家级 Web 开发人员的学习材料。探索 CSS、JavaScript、HTML 等 Web 技术。
+- [开发者指南](/zh-CN/docs/MDN/Guides)
+  - : 一系列有针对性、以目标为导向的指南，通过实际示例教你如何使用特性或 API。这些指南提供实践解释，帮助你理解和应用新概念。
+- [MDN Web 文档社区](/zh-CN/docs/MDN/Community)
+  - : 这里的指南可以帮助你开始为 MDN Web 文档作贡献。你可以了解在哪里寻找答案、如何处理 GitHub 议题、开始一个讨论或建议内容。如果你需要帮助或联系我们，你也可以在此处找到相关信息。
+- [撰写指南](/zh-CN/docs/MDN/Writing_guidelines)
+  - : 这里的指南提供了有关如何撰写 MDN Web 文档的信息。它们包含编辑政策，定义了我们撰写的内容类型和我们不撰写的内容类型。你将找到我们的写作风格指南、特定任务的操作指南以及有关不同类型页面结构的信息。
+- [关于 MDN Web 文档](/zh-CN/about)
+  - : MDN Web 文档每月为数百万读者提供服务，并为开发者提供所需的工具和信息，帮助他们在开放 Web 上轻松构建项目。了解 MDN 的历史、开发 MDN Web 文档的团队、我们的价值观以及我们的合作伙伴。

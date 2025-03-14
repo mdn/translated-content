@@ -1,19 +1,11 @@
 ---
 title: MouseEvent
 slug: Web/API/MouseEvent
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Interface
-  - NeedsTranslation
-  - Reference
-translation_of: Web/API/MouseEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
-Интерфейс **`MouseEvent`** представляет собой событие, которое происходит в результате взаимодействия пользователя с манипулятором ( например, мышью). Наиболее частые из таких событий: {{event("click")}}, {{event("dblclick")}}, {{event("mouseup")}}, {{event("mousedown")}}.
+Интерфейс **`MouseEvent`** представляет собой событие, которое происходит в результате взаимодействия пользователя с манипулятором ( например, мышью). Наиболее частые из таких событий: [`click`](/ru/docs/Web/API/Element/click_event), [`dblclick`](/ru/docs/Web/API/Element/dblclick_event), [`mouseup`](/ru/docs/Web/API/Element/mouseup_event), [`mousedown`](/ru/docs/Web/API/Element/mousedown_event).
 
 `MouseEvent` выводится из метода {{domxref("UIEvent")}}, который в свою очередь происходит из метода {{domxref("Event")}}. Метод {{domxref("MouseEvent.initMouseEvent()")}} допустимо использовать для лучшей совместимости с предыдущими версиями, однако, для создания `MouseEvent` рекомендуется использовать конструктор метода {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}.
 
@@ -38,7 +30,7 @@ _Данный интерфейс наследует свойства от род
 
 - {{domxref("MouseEvent.button")}} {{readonlyinline}}
   - : Представляет код клавиши, нажатой в то время, когда произошло событие мыши.
-- {{domxref("MouseEvent.buttons")}} {{readonlyinline}} {{gecko_minversion_inline("15.0")}}
+- {{domxref("MouseEvent.buttons")}} {{readonlyinline}}
   - : Отображает, какие клавиши были нажаты во время движения мыши.
 - {{domxref("MouseEvent.clientX")}} {{readonlyinline}}
   - : Отображение X координат курсора мыши в локальной системе координат (DOM контент).
@@ -61,9 +53,9 @@ _Данный интерфейс наследует свойства от род
     &#x20;была нажата во время движения мыши.
 
 - {{domxref("MouseEvent.movementX")}} {{readonlyinline}}
-  - : Отображает X координат указателя мыши относительно позиции последнего {{event("mousemove")}} события.
+  - : Отображает X координат указателя мыши относительно позиции последнего [`mousemove`](/ru/docs/Web/API/Element/mousemove_event) события.
 - {{domxref("MouseEvent.movementY")}} {{readonlyinline}}
-  - : Отображает Y координат указателя мыши относительно позиции последнего {{event("mousemove")}} события.
+  - : Отображает Y координат указателя мыши относительно позиции последнего [`mousemove`](/ru/docs/Web/API/Element/mousemove_event) события.
 - {{domxref("MouseEvent.offsetX")}} {{readonlyinline}}{{experimental_inline}}
   - : Отображает X координат указателя мыши относительно позиции границы отступа целевого узла.
 - {{domxref("MouseEvent.offsetY")}} {{readonlyinline}}{{experimental_inline}}
@@ -126,11 +118,11 @@ function simulateClick() {
   var evt = new MouseEvent("click", {
     bubbles: true,
     cancelable: true,
-    view: window
+    view: window,
   });
   var cb = document.getElementById("checkbox"); //element to click on
   var canceled = !cb.dispatchEvent(evt);
-  if(canceled) {
+  if (canceled) {
     // A handler called preventDefault
     alert("canceled");
   } else {
@@ -138,12 +130,14 @@ function simulateClick() {
     alert("not canceled");
   }
 }
-document.getElementById("button").addEventListener('click', simulateClick);
+document.getElementById("button").addEventListener("click", simulateClick);
 ```
 
 ```html
-<p><label><input type="checkbox" id="checkbox"> Checked</label>
-<p><button id="button">Click me</button>
+<p>
+  <label><input type="checkbox" id="checkbox" /> Checked</label>
+</p>
+<p><button id="button">Click me</button></p>
 ```
 
 Нажмите на кнопку, чтобы посмотреть, как работает пример.

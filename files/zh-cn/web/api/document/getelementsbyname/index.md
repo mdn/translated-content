@@ -1,51 +1,54 @@
 ---
-title: Document.getElementsByName()
+title: Document：getElementsByName() 方法
 slug: Web/API/Document/getElementsByName
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("DOM")}}
 
-根据给定的{{domxref("element.name","name")}} 返回一个在 (X)HTML document 的节点列表集合。
+{{domxref("Document")}} 对象的 **`getElementsByName()`** 方法返回文档中具有给定 `name` 属性的所有元素的 {{domxref("NodeList")}} 集合。
 
 ## 语法
 
-```
-elements = document.getElementsByName(name)
+```js-nolint
+getElementsByName(name)
 ```
 
-- `elements` 是一个实时更新的 {{domxref("NodeList")}} 集合。当文档中有同一个 name 属性的元素被添加或移除时，这个集合会自动更新。
-- `name` 是元素的 `name` 属性的值。
+### 参数
 
-## 例子
+- `name`
+  - : 我们要查找元素的 `name` 属性的值。
+
+### 返回值
+
+一个实时的 {{domxref("NodeList")}} 集合，这意味着当带有相同 `name` 的新元素被添加到文档中，或从文档中移除时，该集合会自动更新。
+
+## 示例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
- ...
-</head>
-
-<body>
-<form name="up"><input type="text"></form>
-<div name="down"><input type="text"></div>
-
-<script>
-var up_forms = document.getElementsByName("up");
-console.log(up_forms[0].tagName); // returns "FORM"
-</script>
-</body>
+  <head>
+    <title>示例：使用 document.getElementsByName</title>
+  </head>
+  <body>
+    <input type="hidden" name="up" />
+    <input type="hidden" name="down" />
+  </body>
 </html>
 ```
 
-## 注释
+```js
+const up_names = document.getElementsByName("up");
+console.log(up_names[0].tagName); // 显示“INPUT”
+```
 
-{{domxref("element.name","name")}} 属性只有在 (X)HTML 文档中可用。
+## 备注
 
-该方法返回一个 live 的 {{domxref("NodeList")}} 集合，这个集合包含 {{domxref("element.name","name")}} 属性为指定值的所有元素，例如{{htmlelement("meta")}} 、{{htmlelement("object")}}，甚至那些不支持 {{domxref("element.name","name")}} 属性但是添加了 {{domxref("element.name","name")}} 自定义属性的元素也包含其中。
+`name` 属性只在（X）HTML 文档中可用。
 
-> **警告：** getElementsByName 在不同的浏览器其中工作方式不同。在 IE 和 Opera 中，getElementsByName() 方法还会返回那些 {{domxref("element.id","id")}} 为指定值的元素。所以你要小心使用该方法，最好不要为元素的 {{domxref("element.name","name")}} 和 {{domxref("element.id","id")}} 赋予相同的值。
-
-> **警告：** IE 和 Edge 都返回一个 {{domxref("HTMLCollection")}}, 而不是{{domxref("NodeList")}} 。
+返回的 {{domxref("NodeList")}} 集合包含了*所有*具有给定 `name` 的元素，例如 {{htmlelement("meta")}}、{{htmlelement("object")}} 甚至包括根本不支持 `name` 属性的元素。
 
 ## 规范
 
@@ -55,7 +58,8 @@ console.log(up_forms[0].tagName); // returns "FORM"
 
 {{Compat}}
 
-## 参阅
+## 参见
 
-- {{domxref("document.getElementById()")}} 通过 `id` 返回对元素的引用
-- {{domxref("document.querySelector()")}} 通过 CSS 选择器返回对元素的引用，例如 `'div.myclass'`
+- {{domxref("document.getElementById()")}} 根据唯一 `id` 返回对元素的引用。
+- {{domxref("document.getElementsByTagName()")}} 返回对具有相同[标签名](/zh-CN/docs/Web/API/Element/tagName)的元素的引用
+- {{domxref("document.querySelector()")}} 通过 CSS 选择器（例如 `'div.myclass'`）返回对元素的引用。

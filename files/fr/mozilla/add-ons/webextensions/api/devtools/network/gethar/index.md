@@ -1,26 +1,18 @@
 ---
 title: devtools.network.getHAR()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-  - devtools.network
-  - getHAR
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.network/getHAR
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.network/getHAR
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtenez un [journal HAR](http://www.softwareishard.com/blog/har-12-spec/#log) pour la page chargée dans l'onglet en cours.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
-var getting = browser.devtools.network.getHAR()
+var getting = browser.devtools.network.getHAR();
 ```
 
 ### Paramètres
@@ -29,11 +21,11 @@ None.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet contenant le journal HAR pour l'onglet en cours. Pour plus de détails sur ce que contient l'objet journal, reportez-vous à la [spécification HAR](http://www.softwareishard.com/blog/har-12-spec/#log).
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet contenant le journal HAR pour l'onglet en cours. Pour plus de détails sur ce que contient l'objet journal, reportez-vous à la [spécification HAR](http://www.softwareishard.com/blog/har-12-spec/#log).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.network.getHAR")}}
+{{Compat}}
 
 ## Exemples
 
@@ -53,7 +45,7 @@ logRequestsButton.addEventListener("click", logRequests);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools.network`](https://developer.chrome.com/extensions/devtools_network).
 

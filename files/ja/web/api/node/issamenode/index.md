@@ -1,6 +1,8 @@
 ---
-title: Node.isSameNode()
+title: "Node: isSameNode() メソッド"
 slug: Web/API/Node/isSameNode
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
@@ -12,15 +14,16 @@ slug: Web/API/Node/isSameNode
 
 ## 構文
 
-```js
-isSameNode(otherNode);
+```js-nolint
+isSameNode(otherNode)
 ```
 
 ### 引数
 
 - `otherNode`
   - : 検査対象となる {{domxref("Node")}} です。
-    > **メモ:** この引数は省略可能ではありませんが、 `null` に設定することはできます。
+    > [!NOTE]
+    > この引数は省略可能ではありませんが、 `null` に設定することはできます。
 
 ### 返値
 
@@ -55,11 +58,17 @@ isSameNode(otherNode);
 
 ```js
 let output = document.getElementById("output");
-let divList  = document.getElementsByTagName("div");
+let divList = document.getElementsByTagName("div");
 
-output.innerHTML += "div 0 と div 0 は同じか: " + divList[0].isSameNode(divList[0]) + "<br/>";
-output.innerHTML += "div 0 と div 1 は同じか: " + divList[0].isSameNode(divList[1]) + "<br/>";
-output.innerHTML += "div 0 と div 2 は同じか: " + divList[0].isSameNode(divList[2]) + "<br/>";
+output.innerHTML += `div 0 と div 0 は同じか: ${divList[0].isSameNode(
+  divList[0],
+)}<br/>`;
+output.innerHTML += `div 0 と div 1 は同じか: ${divList[0].isSameNode(
+  divList[1],
+)}<br/>`;
+output.innerHTML += `div 0 と div 2 は同じか: ${divList[0].isSameNode(
+  divList[2],
+)}<br/>`;
 ```
 
 ### 結果

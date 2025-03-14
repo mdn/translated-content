@@ -5,9 +5,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
 
 {{JSRef}}
 
-静的な **`Reflect.preventExtensions()`** メソッドは、すでにプロパティが追加されたオブジェクトに、新しいプロパティを抑制します (つまり、オブジェクトのさらなる拡張を抑制します)。 {{jsxref("Object.preventExtensions()")}} に似ていますが、[違いがあります](#Difference_from_Object.preventExtensions)。
+静的な **`Reflect.preventExtensions()`** メソッドは、すでにプロパティが追加されたオブジェクトに、新しいプロパティを抑制します (つまり、オブジェクトのさらなる拡張を抑制します)。 {{jsxref("Object.preventExtensions()")}} に似ていますが、[違いがあります](#difference_from_object.preventextensions)。
 
-{{EmbedInteractiveExample("pages/js/reflect-preventextensions.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.preventExtensions()")}}
+
+```js interactive-example
+const object1 = {};
+
+console.log(Reflect.isExtensible(object1));
+// Expected output: true
+
+Reflect.preventExtensions(object1);
+
+console.log(Reflect.isExtensible(object1));
+// Expected output: false
+```
 
 ## 構文
 
@@ -40,12 +52,12 @@ Reflect.preventExtensions(target)
 
 ```js
 // オブジェクトは既定で拡張可能。
-let empty = {}
-Reflect.isExtensible(empty)  // === true
+let empty = {};
+Reflect.isExtensible(empty); // === true
 
 // ...しかし、変更できる。
-Reflect.preventExtensions(empty)
-Reflect.isExtensible(empty)  // === false
+Reflect.preventExtensions(empty);
+Reflect.isExtensible(empty); // === false
 ```
 
 ### Object.preventExtensions() との違い
@@ -53,10 +65,10 @@ Reflect.isExtensible(empty)  // === false
 このメソッドへの最初の引数がオブジェクトではない (プリミティブである) 場合、 {{jsxref("TypeError")}} が発生します。 {{jsxref("Object.preventExtensions()")}} では、 `target` がオブジェクトではない場合はオブジェクトに強制的に変換されます。
 
 ```js
-Reflect.preventExtensions(1)
+Reflect.preventExtensions(1);
 // TypeError: 1 is not an object
 
-Object.preventExtensions(1)
+Object.preventExtensions(1);
 // 1
 ```
 
@@ -66,7 +78,7 @@ Object.preventExtensions(1)
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Reflect.preventExtensions")}}
+{{Compat}}
 
 ## 関連情報
 

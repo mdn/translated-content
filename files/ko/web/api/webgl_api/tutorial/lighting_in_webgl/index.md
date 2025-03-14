@@ -1,18 +1,9 @@
 ---
 title: WebGL에서 조명 효과 적용하기
 slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
-tags:
-  - WebGL
-  - 방향광
-  - 빛
-  - 웹지엘
-  - 점광
-  - 조명
-  - 주변광
-translation_of: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
 
 WebGL은 OpenGL 표준과는 다르게 자체적인 조명 효과를 제공하지 않습니다. 따라서 WebGL에서의 조명 효과는 개발자 스스로 만들어야 합니다. 다행스럽게도 조명 효과를 만드는 것이 아주 어려운 일은 아니며, 이 글을 통해 몇 가지 기초적인 부분을 이해할 수 있을 것입니다.
 
@@ -22,15 +13,15 @@ WebGL은 OpenGL 표준과는 다르게 자체적인 조명 효과를 제공하�
 
 조명에는 세 가지 기본 타입이 있습니다:
 
-**주변광(Ambient light)**은 장면(scene) 전반에 걸쳐 스며드는 빛으로, 방향성이 없으며 장면 내에 있는 모든 표면을 그 표면의 방향과 관계없이 동일한 밝기로 비춰줍니다.
+**주변광**(**Ambient light**)은 장면(scene) 전반에 걸쳐 스며드는 빛으로, 방향성이 없으며 장면 내에 있는 모든 표면을 그 표면의 방향과 관계없이 동일한 밝기로 비춰줍니다.
 
-**방향광(Directional light)**은 특정한 방향으로만 비춰지는 빛입니다. 방향광은 아주 먼 곳에서 비춰지기 때문에 모든 빛 입자(photon, 광자)가 서로 평행한 방향으로 움직입니다. 방향광의 대표적인 예는 바로 태양광입니다.
+**방향광**(**Directional light**)은 특정한 방향으로만 비춰지는 빛입니다. 방향광은 아주 먼 곳에서 비춰지기 때문에 모든 빛 입자(photon, 광자)가 서로 평행한 방향으로 움직입니다. 방향광의 대표적인 예는 바로 태양광입니다.
 
-**점광(Point light)**은 한 지점에서 모든 방향으로 퍼지면서 발산하는 빛입니다. 실생활에서 접할 수 있는 대부분의 빛이 이 점광에 해당합니다. 전구에서 나오는 빛이 점광의 대표적인 예라고 할 수 있겠습니다.
+**점광**(**Point light**)은 한 지점에서 모든 방향으로 퍼지면서 발산하는 빛입니다. 실생활에서 접할 수 있는 대부분의 빛이 이 점광에 해당합니다. 전구에서 나오는 빛이 점광의 대표적인 예라고 할 수 있겠습니다.
 
-이 글에서는 [반사광 하이라이트(specular highlight)](http://en.wikipedia.org/wiki/Specular_highlight)나 점광원에 대해서는 다루지 않고, 단순한 방향광 조명과 주변광 조명만 알아 보겠습니다. 주변광에 방향광원(directional light source)을 더한 조명 효과를 [앞 단원의 예제](/en/WebGL/Using_textures_in_WebGL)에 있던 회전하는 정육면체에 적용해보겠습니다.
+이 글에서는 [반사광 하이라이트(specular highlight)](http://en.wikipedia.org/wiki/Specular_highlight)나 점광원에 대해서는 다루지 않고, 단순한 방향광 조명과 주변광 조명만 알아 보겠습니다. 주변광에 방향광원(directional light source)을 더한 조명 효과를 [앞 단원의 예제](/en-US/WebGL/Using_textures_in_WebGL)에 있던 회전하는 정육면체에 적용해보겠습니다.
 
-점광원이나 반사광을 고려하지 않는다면, 방향광 조명을 구현하기 위한 정보는 크게 두 가지가 있습니다:​
+점광원이나 반사광을 고려하지 않는다면, 방향광 조명을 구현하기 위한 정보는 크게 두 가지가 있습니다:
 
 1. 각 정점의 표면에 수직인 벡터를 의미하는 **표면 법선 벡터(surface normal vector)**.
 2. 빛이 쪼여지는 방향을 나타내는 **방향 벡터**.
@@ -47,43 +38,29 @@ gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesNormalBuffer);
 
 var vertexNormals = [
   // 앞
-   0.0,  0.0,  1.0,
-   0.0,  0.0,  1.0,
-   0.0,  0.0,  1.0,
-   0.0,  0.0,  1.0,
+  0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0,
 
   // 뒤
-   0.0,  0.0, -1.0,
-   0.0,  0.0, -1.0,
-   0.0,  0.0, -1.0,
-   0.0,  0.0, -1.0,
+  0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0,
 
   // 위
-   0.0,  1.0,  0.0,
-   0.0,  1.0,  0.0,
-   0.0,  1.0,  0.0,
-   0.0,  1.0,  0.0,
+  0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0,
 
   // 아래
-   0.0, -1.0,  0.0,
-   0.0, -1.0,  0.0,
-   0.0, -1.0,  0.0,
-   0.0, -1.0,  0.0,
+  0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0,
 
   // 오른쪽
-   1.0,  0.0,  0.0,
-   1.0,  0.0,  0.0,
-   1.0,  0.0,  0.0,
-   1.0,  0.0,  0.0,
+  1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0,
 
   // 왼쪽
-  -1.0,  0.0,  0.0,
-  -1.0,  0.0,  0.0,
-  -1.0,  0.0,  0.0,
-  -1.0,  0.0,  0.0
+  -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0,
 ];
 
-gl.bufferData(gl.ARRAY_BUFFER, new WebGLFloatArray(vertexNormals), gl.STATIC_DRAW);
+gl.bufferData(
+  gl.ARRAY_BUFFER,
+  new WebGLFloatArray(vertexNormals),
+  gl.STATIC_DRAW,
+);
 ```
 
 이런 배열의 처리는 앞 단원에서 여러 번 다뤄왔으므로 이젠 꽤 친숙해 보일 것입니다. 새로운 버퍼를 생성하고, 버퍼와 법선 배열을 바인딩하고, `bufferData()`를 호출해서 법선 배열을 버퍼에 전달합니다.
@@ -101,7 +78,11 @@ gl.vertexAttribPointer(vertexNormalAttribute, 3, gl.FLOAT, false, 0, 0);
 var normalMatrix = mvMatrix.inverse();
 normalMatrix = normalMatrix.transpose();
 var nUniform = gl.getUniformLocation(shaderProgram, "uNormalMatrix");
-gl.uniformMatrix4fv(nUniform, false, new WebGLFloatArray(normalMatrix.flatten()));
+gl.uniformMatrix4fv(
+  nUniform,
+  false,
+  new WebGLFloatArray(normalMatrix.flatten()),
+);
 ```
 
 ## 셰이더 수정
@@ -170,7 +151,7 @@ gl.uniformMatrix4fv(nUniform, false, new WebGLFloatArray(normalMatrix.flatten())
 
 앞 단원의 예제에서 했던 것처럼 텍셀의 색상값을 계산합니다. 하지만 이번에는 텍셀의 색상값을 바로 프래그먼트의 색상값으로 설정하지 않고, 조명 효과를 표현할 수 있도록 텍셀의 색상값에 빛의 양을 곱한 값을 프래그먼트의 색상값으로 설정합니다.
 
-자 이제 다 완성했습니다! WebGL을 지원하는 브라우저라면 [여기](/samples/webgl/sample7/index.html)에서 실제 동작하는 예제를 확인할 수 있습니다.
+자 이제 다 완성했습니다! WebGL을 지원하는 브라우저라면 [여기](http://mdn.github.io/webgl-examples/tutorial/sample7/index.html)에서 실제 동작하는 예제를 확인할 수 있습니다.
 
 ## 연습해보기
 

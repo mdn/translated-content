@@ -7,11 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 
 **`toLowerCase()`** 函式会回传将字符串转换为英文小写字母后的结果。
 
-{{EmbedInteractiveExample("pages/js/string-tolowercase.html")}}
+{{InteractiveExample("JavaScript Demo: String.toLowerCase()")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+console.log(sentence.toLowerCase());
+// Expected output: "the quick brown fox jumps over the lazy dog."
+```
 
 ## 语法
 
-```plain
+```js-nolint
 str.toLowerCase()
 ```
 
@@ -25,10 +32,10 @@ The `toLowerCase()` 函式会回传一组将原字符串英文内容转换成英
 
 ## 范例
 
-### 使用`toLowerCase()`
+### 使用 `toLowerCase()`
 
 ```js
-console.log('ALPHABET'.toLowerCase()); // 'alphabet'
+console.log("ALPHABET".toLowerCase()); // 'alphabet'
 ```
 
 ## 规范
@@ -39,7 +46,7 @@ console.log('ALPHABET'.toLowerCase()); // 'alphabet'
 
 {{Compat}}
 
-## 参考
+## 參見
 
 - {{jsxref("String.prototype.toLocaleLowerCase()")}}
 - {{jsxref("String.prototype.toLocaleUpperCase()")}}

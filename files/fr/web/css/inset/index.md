@@ -1,13 +1,6 @@
 ---
 title: inset
 slug: Web/CSS/inset
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/inset
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

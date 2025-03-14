@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/for-await...of
 
 {{jsSidebar("Statements")}}
 
-A **declaração** **`for await...of` **cria um loop que itera sobre objetos iteráveis ​​assíncronos, bem como sobre iteráveis ​​síncronos, incluindo: {{jsxref("String")}}, {{jsxref("Array")}}, `Array`-como objetos (e.g., {{jsxref("Functions/arguments", "arguments")}} or {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, e iteráveis async/sync. Invoca um hook de iteração personalizado com instruções a serem executadas para o valor de cada propriedade do objeto.
+A **declaração `for await...of`** cria um loop que itera sobre objetos iteráveis assíncronos, bem como sobre iteráveis síncronos, incluindo: {{jsxref("String")}}, {{jsxref("Array")}}, `Array`-como objetos (e.g., {{jsxref("Functions/arguments", "arguments")}} or {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, e iteráveis async/sync. Invoca um hook de iteração personalizado com instruções a serem executadas para o valor de cada propriedade do objeto.
 
 ## Sintaxe
 
@@ -35,15 +35,15 @@ var asyncIterable = {
         }
 
         return Promise.resolve({ done: true });
-      }
+      },
     };
-  }
+  },
 };
 
-(async function() {
-   for await (let num of asyncIterable) {
-     console.log(num);
-   }
+(async function () {
+  for await (let num of asyncIterable) {
+    console.log(num);
+  }
 })();
 
 // 0
@@ -63,7 +63,7 @@ async function* asyncGenerator() {
   }
 }
 
-(async function() {
+(async function () {
   for await (let num of asyncGenerator()) {
     console.log(num);
   }
@@ -105,18 +105,16 @@ async function getResponseSize(url) {
   // output esperado:"Response Size: 1071472"
   return responseSize;
 }
-getResponseSize('https://jsonplaceholder.typicode.com/photos');
+getResponseSize("https://jsonplaceholder.typicode.com/photos");
 ```
 
 ## Especificações
 
-| Specification                                                                                                                                                                    | Status                       | Comment |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------- |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'ECMAScript Language: The for-in, for-of, and for-await-of Statements')}} | {{Spec2('ESDraft')}} |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.for_await_of")}}
+{{Compat}}
 
 ## Veja também
 

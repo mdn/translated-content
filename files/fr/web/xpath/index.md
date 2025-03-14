@@ -1,27 +1,18 @@
 ---
 title: XPath
 slug: Web/XPath
-tags:
-  - CSS Selectors
-  - DOM
-  - JXON
-  - Landing
-  - Path
-  - XML
-  - XPath
-  - XSLT
-translation_of: Web/XPath
 ---
 
 {{XSLTRef}}
 
 XPath est une abréviation pour _XML Path Language_ (qu'on pourrait traduire en français par « langage de chemin XML »). Ce langage utilise une syntaxe non-XML pour cibler différentes parties d'un document [XML](/fr/docs/Web/XML/XML_introduction). Il peut aussi être utilisé pour tester certains nœuds d'un document afin de déterminer s'ils suivent un motif particulier.
 
-XPath est principalement utilisé avec [XSLT](/fr/docs/Web/XSLT), mais on peut tout aussi bien l'utiliser afin de naviguer dans le [DOM](/fr/docs/Web/API/Document_Object_Model) de tout document structuré avec un langage semblable à XML ([HTML](/fr/docs/Web/HTML) ou [SVG](/fr/docs/Web/SVG) par exemple) grâce à l'interface [`XPathExpression`](/fr/docs/Web/API/XPathExpression). Cela permet d'éviter les méthodes [`Document.getElementById()`](/fr/docs/Web/API/Document/getElementById) ou [`ParentNode.querySelectorAll()`](/fr/docs/Web/API/ParentNode/querySelectorAll) ou encore les propriétés [`Node.childNodes`](/fr/docs/Web/API/Node/childNodes).
+XPath est principalement utilisé avec [XSLT](/fr/docs/Web/XSLT), mais on peut tout aussi bien l'utiliser afin de naviguer dans le [DOM](/fr/docs/Web/API/Document_Object_Model) de tout document structuré avec un langage semblable à XML ([HTML](/fr/docs/Web/HTML) ou [SVG](/fr/docs/Web/SVG) par exemple) grâce à l'interface [`XPathExpression`](/fr/docs/Web/API/XPathExpression). Cela permet d'éviter les méthodes [`Document.getElementById()`](/fr/docs/Web/API/Document/getElementById) ou [`ParentNode.querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll) ou encore les propriétés [`Node.childNodes`](/fr/docs/Web/API/Node/childNodes).
 
 XPath utilise une notation en chemin (à l'instar des URL) pour naviguer dans la structure hiérarchique d'un document XML. Sa syntaxe est qualifiée de « non-XML » car un chemin XPath peut être utilisé au sein d'URI ou de valeurs d'attribut XML.
 
-> **Note :** La prise en charge de XPath est hétérogène. Si l'implémentation de Firefox est relativement correcte (malgré l'absence de volonté de l'améliorer encore), d'autres navigateurs implémentent une surface moindre de ces fonctionnalités (voire aucune). Si vous avez besoin d'une prothèse (_polyfill_), vous pouvez vous tourner vers [js-xpath](http://nchc.dl.sourceforge.net/project/js-xpath/js-xpath/1.0.0/xpath.js) ou [wicked-good-xpath](https://github.com/google/wicked-good-xpath).
+> [!NOTE]
+> La prise en charge de XPath est hétérogène. Si l'implémentation de Firefox est relativement correcte (malgré l'absence de volonté de l'améliorer encore), d'autres navigateurs implémentent une surface moindre de ces fonctionnalités (voire aucune). Si vous avez besoin d'une prothèse (_polyfill_), vous pouvez vous tourner vers [js-xpath](https://nchc.dl.sourceforge.net/project/js-xpath/js-xpath/1.0.0/xpath.js) ou [wicked-good-xpath](https://github.com/google/wicked-good-xpath).
 
 ## Documentation
 

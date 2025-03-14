@@ -1,12 +1,15 @@
 ---
-title: BaseAudioContext.sampleRate
+title: "BaseAudioContext: sampleRate プロパティ"
+short-title: sampleRate
 slug: Web/API/BaseAudioContext/sampleRate
-original_slug: Web/API/AudioContext/sampleRate
+l10n:
+  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
 {{ APIRef("Web Audio API") }}
 
-`sampleRate` は {{domxref("BaseAudioContext") }} インターフェイスのプロパティで、この音声コンテキスト内のすべてのノードが使用するサンプリングレートを、1 秒あたりのサンプル数で表した浮動小数点数を返すものです。この制限は、サンプリングレートコンバーターに対応していないことを意味します。
+`sampleRate` は {{domxref("BaseAudioContext")}} インターフェイスのプロパティで、この音声コンテキスト内のすべてのノードが使用するサンプリングレートを、1 秒あたりのサンプル数で表した浮動小数点数を返すものです。
+この制限は、サンプリングレートコンバーターに対応していないことを意味します。
 
 ## 値
 
@@ -14,14 +17,15 @@ original_slug: Web/API/AudioContext/sampleRate
 
 ## 例
 
-> **メモ:** 完全なウェブオーディオの実装の例は、 [MDN GitHub リポジトリー](https://github.com/mdn/)のウェブオーディオデモの [panner-node](https://github.com/mdn/panner-node) などを参照してください。ブラウザーのコンソールで `audioCtx.sampleRate` と入力してみてください。
+> [!NOTE]
+> 完全なウェブオーディオの実装の例は、[GitHub の MDN リポジトリー](https://github.com/mdn/webaudio-examples) にあるいずれかのウェブオーディオのデモを参照してください。
+> ブラウザーのコンソールで `audioCtx.sampleRate` と入力してみてください。
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+const audioCtx = new AudioContext();
 // 古い webkit/blink のブラウザーでは接頭辞が必要です
 
-...
+// …
 
 console.log(audioCtx.sampleRate);
 ```

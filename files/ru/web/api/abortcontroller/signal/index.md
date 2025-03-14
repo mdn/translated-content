@@ -1,8 +1,8 @@
 ---
 title: AbortController.signal
 slug: Web/API/AbortController/signal
-translation_of: Web/API/AbortController/signal
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 > **Примечание:**Это свойство только для чтения.
@@ -25,7 +25,7 @@ var signal = abortController.signal;
 
 Сначала мы создаём контроллер с помощью конструктора {{domxref("AbortController.AbortController","AbortController()")}}, а затем получаем ссылку на связанный объект {{domxref("AbortSignal")}} используя свойство {{domxref("AbortController.signal")}}.
 
-Когда [fetch запрос](/ru/docs/Web/API/WindowOrWorkerGlobalScope/fetch) инициируется, мы передаём `AbortSignal` в качестве опции внутрь объекта параметров запроса (см. `{signal}` ниже). Это связывает сигнал и контроллер с fetch запросом и позволяет нам прервать его, вызвав {{domxref("AbortController.abort()")}}, как показано ниже во втором обработчике событий.
+Когда [fetch запрос](/ru/docs/Web/API/Window/fetch) инициируется, мы передаём `AbortSignal` в качестве опции внутрь объекта параметров запроса (см. `{signal}` ниже). Это связывает сигнал и контроллер с fetch запросом и позволяет нам прервать его, вызвав {{domxref("AbortController.abort()")}}, как показано ниже во втором обработчике событий.
 
 ```js
 var controller = new AbortController();
@@ -51,7 +51,8 @@ function fetchVideo() {
 }
 ```
 
-> **Примечание:** Когда `abort()` вызывается, промис `fetch()` отклоняется с `AbortError`.
+> [!NOTE]
+> Когда `abort()` вызывается, промис `fetch()` отклоняется с `AbortError`.
 
 Вы можете найти полный рабочий пример на GitHub — см. [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) ([см. как он работает в живую](https://mdn.github.io/dom-examples/abort-api/)).
 

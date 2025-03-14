@@ -3,11 +3,24 @@ title: Date.prototype.getUTCDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`getUTCDay()`** 方法以世界时为标准，返回一个指定的日期对象为一星期中的第几天，其中 0 代表星期天。
 
-{{EmbedInteractiveExample("pages/js/date-getutcday.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getUTCDay()")}}
+
+```js interactive-example
+const date1 = new Date("August 19, 1975 23:15:30 GMT+11:00");
+const date2 = new Date("August 19, 1975 23:15:30 GMT-11:00");
+
+// Tuesday
+console.log(date1.getUTCDay());
+// Expected output: 2
+
+// Wednesday
+console.log(date2.getUTCDay());
+// Expected output: 3
+```
 
 ## 语法
 
@@ -23,9 +36,9 @@ dateObj.getUTCDay()
 
 `getUTCDay()` 方法返回一个对应一星期中第几天的整数：0 代表星期天，1 代表星期一，2 代表星期二，依次类推。
 
-## 例子
+## 示例
 
-### 例子：使用 `getUTCDay()` 方法
+### 示例：使用 `getUTCDay()` 方法
 
 下面的例子是把当前日期的星期部分赋值给变量 `weekday`。
 
@@ -42,7 +55,7 @@ var weekday = today.getUTCDay();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCDate()")}}
 - {{jsxref("Date.prototype.getDay()")}}

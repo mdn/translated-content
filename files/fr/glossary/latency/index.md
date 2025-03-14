@@ -1,17 +1,9 @@
 ---
 title: Latence
 slug: Glossary/Latency
-tags:
-  - Audio
-  - Glossaire
-  - Media
-  - Performance Web
-  - Reference
-  - Réseau
-  - Video
-translation_of: Glossary/Latency
-original_slug: Glossaire/Latence
 ---
+
+{{GlossarySidebar}}
 
 **La latence** est le temps réseau nécessaire pour qu'une ressource demandée atteigne sa destination. Une latence faible est bonne, ce qui signifie qu'il y a peu ou pas de délai. Une latence forte est mauvaise, ce qui signifie que la ressource demandée prend beaucoup de temps à atteindre sa destination.
 
@@ -19,4 +11,4 @@ La latence peut être un facteur dans tout type de flux de données, mais le ter
 
 ## Voir aussi
 
-- [Understanding Latency](/fr/docs/Learn/Performance/Understanding_latency)
+- [Understanding Latency](/fr/docs/Web/Performance/Understanding_latency)

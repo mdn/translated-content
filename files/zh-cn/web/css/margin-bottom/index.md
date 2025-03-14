@@ -7,7 +7,7 @@ slug: Web/CSS/margin-bottom
 
 ## Summary
 
-![The effect of the CSS margin-bottom property on the element box](https://mdn.mozillademos.org/files/12980/margin-bottom%20explained.svg)
+![The effect of the CSS margin-bottom property on the element box](margin-bottom_explained.svg)
 
 CSS 的 `margin-bottom` 属性用于设置元素的底部外边距，允许设置负数值。一个正数值将让它相对于正常流与邻近块更远，而负数值将使得更近。
 
@@ -19,9 +19,9 @@ CSS 的 `margin-bottom` 属性用于设置元素的底部外边距，允许设�
 
 ```css
 /* <length> values */
-margin-bottom: 10px;        /* 一个绝对的长度值 */
-margin-bottom: 1em;         /* A length relative to the text size */
-margin-bottom: 5%;          /* A margin relative to the nearest block container's width */
+margin-bottom: 10px; /* 一个绝对的长度值 */
+margin-bottom: 1em; /* A length relative to the text size */
+margin-bottom: 5%; /* A margin relative to the nearest block container's width */
 
 /* Keyword values */
 margin-bottom: auto;
@@ -41,19 +41,19 @@ margin-bottom: unset;
 - `auto`
   - : 由浏览器自己选择一个合适的值。参见 {{cssxref("margin")}}。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
-## 样例
+## 示例
 
 ### HTML
 
 ```html
 <div class="container">
-<div class="box0">Box 0</div>
-<div class="box1">Box 1</div>
-<div class="box2">Box one's negative margin pulls me up</div>
+  <div class="box0">Box 0</div>
+  <div class="box1">Box 1</div>
+  <div class="box2">Box one's negative margin pulls me up</div>
 </div>
 ```
 
@@ -63,35 +63,35 @@ margin-bottom: unset;
 
 ```css
 .box0 {
-    margin-bottom:1em;
-    height:3em;
+  margin-bottom: 1em;
+  height: 3em;
 }
 .box1 {
-    margin-bottom:-1.5em;
-    height:4em;
+  margin-bottom: -1.5em;
+  height: 4em;
 }
 .box2 {
-    border:1px dashed black;
-    border-width:1px 0;
-    margin-bottom:2em;
+  border: 1px dashed black;
+  border-width: 1px 0;
+  margin-bottom: 2em;
 }
 ```
 
-为了使` margin `产生的影响更明显，添加了一些` container `和` div `的样式定义
+为了使 `margin` 产生的影响更明显，添加了一些 `container` 和 `div` 的样式定义
 
 ```css
 .container {
-    background-color:orange;
-    width:320px;
-    border:1px solid black;
+  background-color: orange;
+  width: 320px;
+  border: 1px solid black;
 }
 div {
-    width:320px;
-    background-color:gold;
+  width: 320px;
+  background-color: gold;
 }
 ```
 
-{{ EmbedLiveSample('Example',350,200) }}
+{{ EmbedLiveSample('示例',350,200) }}
 
 ## 规范
 

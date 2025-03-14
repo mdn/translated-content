@@ -1,10 +1,6 @@
 ---
 title: Guías de contenido y estilo de MDN
 slug: conflicting/MDN/Writing_guidelines
-tags:
-  - Estilo
-  - Guías
-translation_of: MDN/Guidelines
 original_slug: MDN/Guidelines
 ---
 

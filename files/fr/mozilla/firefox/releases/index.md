@@ -1,11 +1,6 @@
 ---
 title: Notes de version Firefox pour développeurs
 slug: Mozilla/Firefox/Releases
-tags:
-  - Firefox
-  - TopicStub
-translation_of: Mozilla/Firefox/Releases
-original_slug: Mozilla/Firefox/Versions
 ---
 
 {{FirefoxSidebar}}

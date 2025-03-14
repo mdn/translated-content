@@ -1,14 +1,13 @@
 ---
 title: scaleX()
 slug: Web/CSS/transform-function/scaleX
-translation_of: Web/CSS/transform-function/scaleX()
-original_slug: Web/CSS/transform-function/scaleX()
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) 함수인 **`scaleX()`** x 축을 따라 (수평방향)으로 요소의 크기를 조절하는 변형을 정의합니다. 결과는 {{cssxref("&lt;transform-function&gt;")}} 데이터 타입 입니다.
 
-![](https://mdn.mozillademos.org/files/12117/scaleX.png)
+![](scalex.png)
 
 스케일 팩터가 1 인 경우를 제외하고 상수 요소로 각 엘리먼트 위치의 가로 좌표를 수정합니다, 이 경우 함수는 항등 변환입니다.스케일링은 등방성이 아니며, 엘리먼트의 각도는 보존되지 않습니다.`scaleX(-1)` 은 원점을 지나는 수직축이 있는 [대칭축](http://en.wikipedia.org/wiki/Axial_symmetry)을 의미합니다 ( {{cssxref("transform-origin")}} 속성의해 지정되어집니다).
 
@@ -117,7 +116,7 @@ div {
 
 {{EmbedLiveSample("Examples","200","200")}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

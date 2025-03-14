@@ -1,13 +1,9 @@
 ---
 title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
-tags:
-  - JavaScript
-  - Math
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math
 ---
-{{JSRef("Global_Objects", "Math")}}
+
+{{JSRef}}
 
 Объект **`Math`** является встроенным объектом, хранящим в своих свойствах и методах различные математические константы и функции. Объект `Math` не является функциональным объектом.
 
@@ -38,9 +34,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math
 
 ## Методы
 
-> **Примечание:** Обратите внимание, что тригонометрические функции (`sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()` и `atan2()`) принимают в параметрах или возвращают углы в радианах. Для преобразования радианов в градусы, поделите их на величину `(Math.PI / 180)`; для преобразования в обратном направлении, умножьте градусы на эту же величину.
+> [!NOTE]
+> Обратите внимание, что тригонометрические функции (`sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()` и `atan2()`) принимают в параметрах или возвращают углы в радианах. Для преобразования радианов в градусы, поделите их на величину `(Math.PI / 180)`; для преобразования в обратном направлении, умножьте градусы на эту же величину.
 
-> **Примечание:** Обратите внимание, что точность большинства математических функций зависит от реализации. Это означает, что различные браузеры могут дать разные результаты, более того, даже один и тот же движок JavaScript на различных операционных системах или архитектурах может выдать разные результаты.
+> [!NOTE]
+> Обратите внимание, что точность большинства математических функций зависит от реализации. Это означает, что различные браузеры могут дать разные результаты, более того, даже один и тот же движок JavaScript на различных операционных системах или архитектурах может выдать разные результаты.
 
 - {{jsxref("Global_Objects/Math/abs", "Math.abs(x)")}}
   - : Возвращает абсолютное значение числа.
@@ -92,8 +90,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math
   - : Возвращает наибольшее число из своих аргументов.
 - {{jsxref("Global_Objects/Math/min", "Math.min([x[, y[, …]]])")}}
   - : Возвращает наименьшее число из своих аргументов.
-- {{jsxref("Global_Objects/Math/pow", "Math.pow(x, y)")}}
-  - : Возвращает основание в степени экспоненты, то есть, значение выражения `основаниеэкспонента`.
+- {{jsxref("Global_Objects/Math/pow", "Math.pow(a, n)")}}
+  - : Возвращает `a` в `n`-й степени, то есть _a_<sup><i>n</i></sup>.
 - {{jsxref("Global_Objects/Math/random", "Math.random()")}}
   - : Возвращает псевдослучайное число в диапазоне от 0 до 1.
 - {{jsxref("Global_Objects/Math/round", "Math.round(x)")}}
@@ -119,33 +117,31 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math
 
 Как и большинство встроенных объектов в Javascript, объект `Math` может быть расширен пользовательскими способами и методами. Чтобы расширить объект `Math`, не используют `prototype`. Вместо этого, расширяют `Math` напрямую:
 
-```
+```js
 Math.propName = propValue;
 Math.methodName = methodRef;
 ```
 
 Например, следующий код добавляет метод к объекту Math для вычисления наибольшего общего делителя списка аргументов.
 
-```
+```js
 /* Вариативная функция -- Возвращает наибольший общий делитель списка аргументов */
-Math.gcd = function() {
-    if (arguments.length == 2) {
-        if (arguments[1] == 0)
-            return arguments[0];
-        else
-            return Math.gcd(arguments[1], arguments[0] % arguments[1]);
-    } else if (arguments.length > 2) {
-        var result = Math.gcd(arguments[0], arguments[1]);
-        for (var i = 2; i < arguments.length; i++)
-            result = Math.gcd(result, arguments[i]);
-        return result;
-    }
+Math.gcd = function () {
+  if (arguments.length == 2) {
+    if (arguments[1] == 0) return arguments[0];
+    else return Math.gcd(arguments[1], arguments[0] % arguments[1]);
+  } else if (arguments.length > 2) {
+    var result = Math.gcd(arguments[0], arguments[1]);
+    for (var i = 2; i < arguments.length; i++)
+      result = Math.gcd(result, arguments[i]);
+    return result;
+  }
 };
 ```
 
 Попробуйте:
 
-```
+```js
 console.log(Math.gcd(20, 30, 15, 70, 40)); // `5`
 ```
 

@@ -1,41 +1,75 @@
 ---
 title: Number.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
-tags:
-  - Internationalization
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
+l10n:
+  sourceCommit: b675e86af71a5250b8d65d9b3a86ca9319332af1
 ---
-{{JSRef("Global_Objects", "Number")}}
 
-## Сводка
+{{JSRef}}
 
-Метод **`toLocaleString()`** возвращает строку с языкозависимым представлением числа.
+Метод **`toLocaleString()`** значений {{jsxref("Number")}} возвращает строку с языкозависимым представлением этого числа. В реализациях с поддержкой [`Intl.NumberFormat` API](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) этот метод просто вызывает `Intl.NumberFormat`.
 
-Новые аргументы `locales` и `options` позволяют приложениям определять язык, чьё поведение и соглашения по форматированию которого оно хочет использовать. В старых реализациях, игнорирующих аргументы `locales` и `options`, используемая локаль и форма возвращённой строки целиком зависит от реализации.
+При каждом вызове `toLocaleString` происходит поиск по большой базе локализованных строк, что может быть неэффективным. Когда метод вызывается много раз с одинаковыми параметрами, лучше создать объект {{jsxref("Intl.NumberFormat")}} и использовать его метод {{jsxref("Intl/NumberFormat/format", "format()")}}, потому что объект `NumberFormat` запоминает переданные ему параметры и может кешировать данные, чтобы последующие вызовы `format` могли выполнять поиск с более определённым контекстом.
+
+{{InteractiveExample("JavaScript Demo: Number.toLocaleString()")}}
+
+```js interactive-example
+function eArabic(x) {
+  return x.toLocaleString("ar-EG");
+}
+
+console.log(eArabic(123456.789));
+// Expected output: "١٢٣٬٤٥٦٫٧٨٩"
+
+console.log(eArabic("123456.789"));
+// Expected output: "123456.789"
+
+console.log(eArabic(NaN));
+// Expected output: "ليس رقم"
+```
 
 ## Синтаксис
 
-```
-numObj.toLocaleString([locales[, options]])
+```js-nolint
+toLocaleString()
+toLocaleString(locales)
+toLocaleString(locales, options)
 ```
 
 ### Параметры
 
-Проверьте раздел [Совместимость с браузерами](#Browser_compatibility), чтобы увидеть, какие браузеры поддерживают аргументы `locales` и `options`, и [Пример: проверка поддержки аргументов `locales` и `options`](#Example:_Checking_for_support_for_locales_and_options_arguments) для определения этой возможности.
+Параметры `locales` и `options` изменяют поведение функции и позволяют приложениям определять язык, правила форматирования которого, следует использовать.
 
-> **Примечание:** **Обратите внимание:** API интернационализации ECMAScript, реализованное в Firefox 29, добавляет аргумент `locales` к методу `Number.toLocaleString()`. Если этот аргумент равен {{jsxref("Global_Objects/undefined", "undefined")}}, этот метод возвращает локализованные цифры на языке, определяемом ОС, в то время, как предыдущие версии Firefox возвращали цифры на английском языке. Это изменение было помечено, как регрессия, затрагивающая обратную совместимость, которая скоро может быть исправлена. ({{bug(999003)}})
+В реализациях, поддерживающих [`Intl.NumberFormat` API](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat), эти параметры соответствуют параметрам конструктора [`Intl.NumberFormat()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat). Реализации без поддержки `Intl.NumberFormat` должны игнорировать оба параметра, используя локаль и формат возвращаемой строки определяемые самой реализацией.
 
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat', 'Parameters')}}
+- `locales` {{optional_inline}}
+
+  - : Строка с языковым тегом BCP 47 или массив таких строк. Соответствует параметру [`locales`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#locales) конструктора `Intl.NumberFormat().
+
+    В реализациях без поддержки `Intl.NumberFormat` этот параметр игнорируется и обычно используется локаль устройства.
+
+- `options` {{optional_inline}}
+
+  - : Объект определяющий выходной формат. Соответствует параметру [`options`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) конструктора `Intl.NumberFormat()`.
+
+    В реализациях без поддержки `Intl.NumberFormat` этот параметр игнорируется.
+
+Смотрите описание [конструктора `Intl.NumberFormat()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) для подробностей использования этих параметров.
+
+### Возвращаемое значение
+
+Строка, представляющая указанное число в соответствии с языковыми требованиями.
+
+В реализациях с поддержкой `Intl.NumberFormat` результат будет эквивалентным `new Intl.NumberFormat(locales, options).format(number)`.
+
+> [!NOTE]
+> В большинстве случаев форматирование, возвращаемое `toLocaleString()`, единообразно. Однако результат может быть разным в зависимости от времени, языка и реализации — это допускается спецификацией. Не следует сравнивать результат `toLocaleString()` со статическими значениями.
 
 ## Примеры
 
-### Пример: использование `toLocaleString`
+### Использование `toLocaleString()`
 
-При базовом использовании без указания локали возвращается строка, отформатированная в соответствии с локалью и опциями по умолчанию.
+При использовании без указания локали возвращается строка, отформатированная в соответствии с локалью и настройками по умолчанию.
 
 ```js
 var number = 3500;
@@ -43,81 +77,93 @@ var number = 3500;
 console.log(number.toLocaleString()); // Отобразит '3,500' в локали U.S. English
 ```
 
-### Пример: проверка поддержки аргументов `locales` и `options`
+### Проверка поддержки параметров `locales` и `options`
 
-Аргументы `locales` и `options` поддерживаются ещё не всеми браузерами. Для проверки того, поддерживает ли их уже реализация, можно затребовать несуществующую метку языка и проверить, будет ли выброшено исключение {{jsxref("Global_Objects/RangeError", "RangeError")}}:
+Параметры `locales` и `options` могут поддерживаться не во всех реализациях. В реализациях без поддержки интернационализации `toLocaleString()` всегда использует системную локаль, что может оказаться не тем, что вам нужно. Поскольку любая реализация, поддерживающая параметры `locales` и `options`, должна поддерживать {{jsxref("Intl")}} API, проверить наличие последней можно таким способом:
 
 ```js
 function toLocaleStringSupportsLocales() {
-  var number = 0;
-  try {
-    number.toLocaleString('i');
-  } catch (e) {
-    return e​.name === 'RangeError';
-  }
-  return false;
+  return (
+    typeof Intl === "object" &&
+    !!Intl &&
+    typeof Intl.DateTimeFormat === "function"
+  );
 }
 ```
 
-### Пример: использование аргумента `locales`
+### Использование параметра `locales`
 
-Этот пример показывает некоторые локализованные числовые форматы. Для получения формата языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) через аргумент `locales`:
+Этот пример показывает некоторые локализованные форматы чисел. Для получения формата языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) используя параметр `locales`:
 
 ```js
 var number = 123456.789;
 
-// В Германии в качестве разделителя целой и дробной части используется запятая, а в качестве разделителя разрядов - точка
-console.log(number.toLocaleString('de-DE'));
-// → 123.456,789
+// В Германии в качестве разделителя целой и дробной части используется запятая, а в качестве разделителя разрядов точка
+console.log(number.toLocaleString("de-DE"));
+// 123.456,789
 
-// В России в качестве разделителя целой и дробной части используется запятая, а в качестве разделителя разрядов - пробел
-console.log(number.toLocaleString('ru-RU'));
-// → 123 456,789
+// В России в качестве разделителя целой и дробной части используется запятая, а в качестве разделителя разрядов пробел
+console.log(number.toLocaleString("ru-RU"));
+// 123 456,789
 
-// В большинстве арабоговорящих стран используют настоящие арабские цифры
-console.log(number.toLocaleString('ar-EG'));
-// → ١٢٣٤٥٦٫٧٨٩
+// В большинстве арабоязычных стран используют настоящие арабские цифры
+console.log(number.toLocaleString("ar-EG"));
+// ١٢٣٤٥٦٫٧٨٩
 
 // В Индии используют разделители для тысяч/лакх/крор
-console.log(number.toLocaleString('en-IN'));
-// → 1,23,456.789
+console.log(number.toLocaleString("en-IN"));
+// 1,23,456.789
 
 // Ключ расширения nu запрашивает систему нумерации, например, китайскую десятичную
-console.log(number.toLocaleString('zh-Hans-CN-u-nu-hanidec'));
-// → 一二三,四五六.七八九
+console.log(number.toLocaleString("zh-Hans-CN-u-nu-hanidec"));
+// 一二三,四五六.七八九
 
 // Если запрашиваемый язык может не поддерживаться, например
 // балийский, откатываемся на запасной язык, в данном случае индонезийский
-console.log(number.toLocaleString(['ban', 'id']));
-// → 123.456,789
+console.log(number.toLocaleString(["ban", "id"]));
+// 123.456,789
 ```
 
-### Пример: использование аргумента `options`
+### Использование параметра `options`
 
-Результат, предоставляемый методом `toLocaleString()`, может быть настроен с помощью аргумента `options`:
+Результат, предоставляемый методом `toLocaleString()`, может быть настроен с помощью параметра `options`:
 
 ```js
 var number = 123456.789;
 
 // Запрашиваем формат валюты
-console.log(number.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
-// → 123.456,79 €
+console.log(
+  number.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+);
+// 123.456,79 €
 
-console.log(number.toLocaleString('ru-RU', { style: 'currency', currency: 'RUB' }));
-// → 123 456,79 ₽
+console.log(
+  number.toLocaleString("ru-RU", { style: "currency", currency: "RUB" }),
+);
+// 123 456,79 ₽
 
 // Японская йена не использует младшие единицы
-console.log(number.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))
-// → ￥123,457
+console.log(
+  number.toLocaleString("ja-JP", { style: "currency", currency: "JPY" }),
+);
+// ￥123,457
 
 // Ограничиваем до трёх значащих цифр
-console.log(number.toLocaleString('en-IN', { maximumSignificantDigits: 3 }));
-// → 1,23,000
+console.log(number.toLocaleString("en-IN", { maximumSignificantDigits: 3 }));
+// 1,23,000
+
+// Используем язык системы по умолчанию дял форматирования чисел
+const num = 30000.65;
+console.log(
+  num.toLocaleString(undefined, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }),
+);
+// "30,000.65" если язык по умолчанию английский или
+// "30.000,65" если язык по умолчанию немецкий или
+// "30 000,65" если язык по умолчанию французский
 ```
-
-## Производительность
-
-При форматировании большого количества чисел лучшим вариантом будет создание объекта {{jsxref("Global_Objects/NumberFormat", "NumberFormat")}} и использование функции, предоставляемой его свойством {{jsxref("NumberFormat.format")}}.
 
 ## Спецификации
 
@@ -129,4 +175,5 @@ console.log(number.toLocaleString('en-IN', { maximumSignificantDigits: 3 }));
 
 ## Смотрите также
 
+- {{jsxref("Intl.NumberFormat")}}
 - {{jsxref("Number.prototype.toString()")}}

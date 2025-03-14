@@ -1,19 +1,11 @@
 ---
-title: '<canvas>: 그래픽 캔버스 요소'
+title: "<canvas>: 그래픽 캔버스 요소"
 slug: Web/HTML/Element/canvas
-tags:
-  - Canvas
-  - Element
-  - HTML
-  - HTML scripting
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/canvas
 ---
 
 {{HTMLSidebar}}
 
-**HTML `<canvas>` 요소**는 [캔버스 스크립팅 API](/ko/docs/Web/HTML/Canvas) 또는 [WebGL API](/ko/docs/Web/API/WebGL_API)와 함께 사용해 그래픽과 애니메이션을 그릴 수 있습니다.
+**HTML `<canvas>` 요소**는 [캔버스 스크립팅 API](/ko/docs/Web/API/Canvas_API) 또는 [WebGL API](/ko/docs/Web/API/WebGL_API)와 함께 사용해 그래픽과 애니메이션을 그릴 수 있습니다.
 
 <table class="properties">
   <tbody>
@@ -44,14 +36,14 @@ translation_of: Web/HTML/Element/canvas
         >가 아닌 요소. 단, {{HTMLElement("a")}},
         {{HTMLElement("button")}}, 그리고
         {{HTMLElement("input")}} 중
-        {{htmlattrxref("type", "input")}} 특성이
+        <a href="/ko/docs/Web/HTML/Element/input#type"><code>type</code></a> 특성이
         <code>checkbox</code>, <code>radio</code>, <code>button</code>인 요소는
         가능
       </td>
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -76,11 +68,11 @@ translation_of: Web/HTML/Element/canvas
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("height")}}
+- `height`
   - : 좌표 공간의 높이입니다. CSS 픽셀 단위로, 기본값은 150입니다.
-- {{htmlattrdef("moz-opaque")}} {{non-standard_inline}} {{deprecated_inline}}
+- `moz-opaque` {{non-standard_inline}} {{deprecated_inline}}
   - : 투명도가 중요한 요소인지를 캔버스에 알려줍니다. 투명도가 없음을 알게되면 페인팅 성능이 최적화됩니다. Mozilla 기반 브라우저에서만 지원하므로, 표준 {{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} 를 대신 사용하세요.
-- {{htmlattrdef("width")}}
+- `width`
   - : 좌표 공간의 너비입니다. CSS 픽셀 단위로, 기본값은 300입니다.
 
 ## 사용 일람
@@ -110,7 +102,8 @@ translation_of: Web/HTML/Element/canvas
 | Safari   | 32,767 픽셀 | 32,767 픽셀 | 268,435,456 픽셀 (i.e., 16,384 x 16,384) |
 | IE       | 8,192 픽셀  | 8,192 픽셀  | ?                                        |
 
-> **참고:** 최대 면적 또는 영역을 초과하면 그리기 명령이 동작하지 않으므로, 캔버스를 사용할 수 없습니다.
+> [!NOTE]
+> 최대 면적 또는 영역을 초과하면 그리기 명령이 동작하지 않으므로, 캔버스를 사용할 수 없습니다.
 
 ## 예제
 
@@ -129,9 +122,9 @@ translation_of: Web/HTML/Element/canvas
 그 다음, JavaScript 코드 내에서 {{domxref("HTMLCanvasElement.getContext()")}}를 호출해 그리기 맥락을 얻어서 캔버스 위에 그립니다.
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 ```
 
@@ -157,11 +150,11 @@ ctx.fillRect(10, 10, 100, 100);
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.canvas")}}
+{{Compat}}
 
 ## 같이 보기
 
-- [Canvas API](/ko/docs/Web/HTML/Canvas)
-- [캔버스 자습서](/ko/docs/Web/HTML/Canvas/Tutorial)
+- [Canvas API](/ko/docs/Web/API/Canvas_API)
+- [캔버스 자습서](/ko/docs/Web/API/Canvas_API/Tutorial)
 - [캔버스 치트 시트](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
 - [캔버스 관련 데모](/ko/docs/Web/Demos_of_open_web_technologies)

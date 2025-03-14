@@ -5,6 +5,8 @@ l10n:
   sourceCommit: fead53324d271aa05e93b369966a773bb328c64b
 ---
 
+{{GlossarySidebar}}
+
 あるプログラミング言語が**第一級関数 (First-class functions)** を持つと言われる場合、その言語の関数がその他の変数と同様に扱われることを表します。例えば、こうした言語では、関数を他の関数への引数として渡したり、他の関数から返却したり、変数の値として代入したりすることができます。
 
 ## 例
@@ -14,7 +16,7 @@ l10n:
 ```js
 const foo = () => {
   console.log("foobar");
-}
+};
 foo(); // 変数を使用して呼び出し
 // foobar
 ```
@@ -39,7 +41,8 @@ greeting(sayHello, "JavaScript!");
 
 ここでは `sayHello()` 関数を `greeting()` 関数の引数として渡しており、関数を**変数**として扱っていることを示しています。
 
-> **メモ:** 他の関数へ引数として渡される関数は、**{{glossary("Callback function", "コールバック関数")}}** と呼ばれます。 _`sayHello` はコールバック関数です。_
+> [!NOTE]
+> 他の関数へ引数として渡される関数は、**{{glossary("Callback function", "コールバック関数")}}** と呼ばれます。 _`sayHello` はコールバック関数です。_
 
 ### 関数を返す
 
@@ -47,18 +50,19 @@ greeting(sayHello, "JavaScript!");
 function sayHello() {
   return () => {
     console.log("Hello!");
-  }
+  };
 }
 ```
 
 この例では、関数を他の関数から返す必要があります。 - _関数を返すことができるのは、 JavaScript では関数を値として扱っているからです。_
 
-> **メモ:** 関数を返す関数は**高階関数**と呼ばれます。
+> [!NOTE]
+> 関数を返す関数は**高階関数**と呼ばれます。
 
 ## 関連情報
 
 - ウィキペディアの[第一級関数](https://ja.wikipedia.org/wiki/第一級関数)
-- [MDN Web Docs 用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{glossary("Callback function", "コールバック関数")}}
   - {{glossary("Function", "関数")}}

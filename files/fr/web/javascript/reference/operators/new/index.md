@@ -1,12 +1,6 @@
 ---
 title: L'opérateur new
 slug: Web/JavaScript/Reference/Operators/new
-tags:
-  - JavaScript
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/new
-original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_new
 ---
 
 {{jsSidebar("Operators")}}
@@ -20,12 +14,25 @@ Le mot-clé `new`, utilisé avec une fonction, applique les 4 étapes suivantes 
 3. Le nouvel objet, créé à l'étape 1, est passé comme valeur `this` à la fonction
 4. Si la fonction ne renvoie pas d'objet, c'est la valeur `this` qui est renvoyée.
 
-{{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - new operator")}}
+
+```js interactive-example
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+const car1 = new Car("Eagle", "Talon TSi", 1993);
+
+console.log(car1.make);
+// Expected output: "Eagle"
+```
 
 ## Syntaxe
 
-```js
-new constructeur[([arguments])]
+```js-nolint
+new constructeur[([arguments])];
 ```
 
 ### Paramètres
@@ -52,28 +59,29 @@ Lorsque le code `new Toto(...)` est exécuté, voici ce qui se passe :
 
 Il est toujours possible d'ajouter une propriété à un objet défini précédemment. Par exemple, l'instruction `voiture1.couleur = "noir"` ajoute une propriété couleur à `voiture1`, et lui assigne une valeur : "`noir`". Cependant, ceci n'affecte aucunement les autres objets. Pour ajouter une nouvelle propriété à tous les objets du même type, cette propriété doit être ajoutée à la définition du type d'objet `Voiture`.
 
-Il est possible d'ajouter une propriété partagée par tous les objets d'un type déjà défini auparavant en utilisant sa propriété [`Function.prototype`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/prototype). Ceci permet de définir une propriété partagée par tous les objets créés avec cette fonction, plutôt que simplement par une seule instance de ce type d'objet. Le code qui suit ajoute une propriété couleur avec la valeur `"couleur standard"` à tous les objets de type `Voiture`, et redéfinit ensuite cette valeur avec la chaîne "`noir`" uniquement pour l'instance d'objet `voiture1`. Pour plus d'informations, voir la page sur [prototype](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
+Il est possible d'ajouter une propriété partagée par tous les objets d'un type déjà défini auparavant en utilisant sa propriété [`Function.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function). Ceci permet de définir une propriété partagée par tous les objets créés avec cette fonction, plutôt que simplement par une seule instance de ce type d'objet. Le code qui suit ajoute une propriété couleur avec la valeur `"couleur standard"` à tous les objets de type `Voiture`, et redéfinit ensuite cette valeur avec la chaîne "`noir`" uniquement pour l'instance d'objet `voiture1`. Pour plus d'informations, voir la page sur [prototype](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 ```js
 function Voiture() {}
 voiture1 = new Voiture();
 voiture2 = new Voiture();
 
-console.log(voiture1.couleur);            // undefined
+console.log(voiture1.couleur); // undefined
 
 Voiture.prototype.couleur = "couleur standard";
-console.log(voiture1.couleur);            // couleur standard
+console.log(voiture1.couleur); // couleur standard
 
 voiture1.couleur = "noir";
-console.log(voiture1.couleur);            // noir
+console.log(voiture1.couleur); // noir
 
-console.log(voiture1.__proto__.couleur);  // couleur standard
-console.log(voiture2.__proto__.couleur);  // couleur standard
-console.log(voiture1.couleur);            // noir
-console.log(voiture2.couleur);            // couleur standard
+console.log(voiture1.__proto__.couleur); // couleur standard
+console.log(voiture2.__proto__.couleur); // couleur standard
+console.log(voiture1.couleur); // noir
+console.log(voiture2.couleur); // couleur standard
 ```
 
-> **Note :** Si on n'écrit pas l'appel du constructeur avec l'opérateur `new`, le constructeur est appelé comme une fonction normale et ne crée pas d'objet. Dans ce cas, la valeur de `this` sera différente.
+> [!NOTE]
+> Si on n'écrit pas l'appel du constructeur avec l'opérateur `new`, le constructeur est appelé comme une fonction normale et ne crée pas d'objet. Dans ce cas, la valeur de `this` sera différente.
 
 ## Exemples
 
@@ -83,9 +91,9 @@ Supposons que vous vouliez créer un type d'objet pour les voitures. Vous voulez
 
 ```js
 function Voiture(marque, modèle, année) {
-   this.marque = marque;
-   this.modèle = modèle;
-   this.année = année;
+  this.marque = marque;
+  this.modèle = modèle;
+  this.année = année;
 }
 ```
 
@@ -109,9 +117,9 @@ Supposons que vous ayez défini un objet appelé `Personne` de la manière suiva
 
 ```js
 function Personne(nom, age, surnom) {
-   this.nom = nom;
-   this.age = age;
-   this.surnom = surnom;
+  this.nom = nom;
+  this.age = age;
+  this.surnom = surnom;
 }
 ```
 
@@ -126,10 +134,10 @@ Vous pouvez alors réécrire la définition de `Voiture` pour contenir une propr
 
 ```js
 function Voiture(marque, modèle, année, propriétaire) {
-   this.marque = marque;
-   this.modèle = modèle;
-   this.année = année;
-   this.propriétaire = propriétaire;
+  this.marque = marque;
+  this.modèle = modèle;
+  this.année = année;
+  this.propriétaire = propriétaire;
 }
 ```
 
@@ -143,7 +151,7 @@ voiture2 = new Voiture("Nissan", "300ZX", 1992, ken);
 Plutôt que de passer une chaîne littérale ou une valeur entière lors de la création des nouveaux objets, les instructions ci-dessus utilisent les objets `rand` et `ken` comme paramètres pour les propriétaires. Pour connaître le nom du propriétaire de `voiture2`, on peut alors accéder à la propriété suivante&nbsp;:
 
 ```js
-voiture2.propriétaire.nom
+voiture2.propriétaire.nom;
 ```
 
 ## Spécifications

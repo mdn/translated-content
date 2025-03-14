@@ -1,20 +1,21 @@
 ---
 title: Cache.keys()
 slug: Web/API/Cache/keys
-translation_of: Web/API/Cache/keys
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 Метод **`keys()`** интерфейса {{domxref("Cache")}} возвращает {{jsxref("Promise")}}, который разрешается в массив ключей {{domxref("Cache")}}.
 
 Запросы возвращаются в том же порядке, в котором были добавлены.
 
-> **Примечание:** **Замечание**: Запросы с дублирующимися URL, но с разными заголовками, могут быть возвращены, если в ответах на них установлен заголовок `VARY`.
+> [!NOTE]
+> Запросы с дублирующимися URL, но с разными заголовками, могут быть возвращены, если в ответах на них установлен заголовок `VARY`.
 
 ## Синтаксис
 
 ```js
-cache.keys(request,{options}).then(function(keys) {
+cache.keys(request, { options }).then(function (keys) {
   // сделать что-нибудь с вашим массивом запросов
 });
 ```
@@ -39,13 +40,13 @@ cache.keys(request,{options}).then(function(keys) {
 ## Примеры
 
 ```js
-caches.open('v1').then(function(cache) {
-  cache.keys().then(function(keys) {
-    keys.forEach(function(request, index, array) {
+caches.open("v1").then(function (cache) {
+  cache.keys().then(function (keys) {
+    keys.forEach(function (request, index, array) {
       cache.delete(request);
     });
   });
-})
+});
 ```
 
 ## Спецификации
@@ -58,6 +59,6 @@ caches.open('v1').then(function(cache) {
 
 ## Смотрите также
 
-- [Использование сервис воркеров](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Использование сервис воркеров](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("WorkerGlobalScope.caches")}}

@@ -5,42 +5,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/call
 
 {{JSRef}}
 
-**`call()`** 方法使用一个指定的 `this` 值和单独给出的一个或多个参数来调用一个函数。
+{{jsxref("Function")}} 实例的 **`call()`** 方法会以给定的 `this` 值和逐个提供的参数调用该函数。
 
-> **备注：** 该方法的语法和作用与 {{jsxref("Function.apply", "apply()")}} 方法类似，只有一个区别，就是 `call()` 方法接受的是**一个参数列表**，而 `apply()` 方法接受的是**一个包含多个参数的数组**。
+{{InteractiveExample("JavaScript Demo: Function.call()")}}
 
-{{EmbedInteractiveExample("pages/js/function-call.html")}}
-
-## 语法
-
-```plain
-function.call(thisArg, arg1, arg2, ...)
-```
-
-### 参数
-
-- `thisArg`
-  - : 可选的。在 _`function`_ 函数运行时使用的 `this` 值。请注意，`this`可能不是该方法看到的实际值：如果这个函数处于[非严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下，则指定为 `null` 或 `undefined` 时会自动替换为指向全局对象，原始值会被包装。
-- `arg1, arg2, ...`
-  - : 指定的参数列表。
-
-## 返回值
-
-使用调用者提供的 `this` 值和参数调用该函数的返回值。若该方法没有返回值，则返回 `undefined`。
-
-## 描述
-
-`call()` 允许为不同的对象分配和调用属于一个对象的函数/方法。
-
-`call()` 提供新的 **this** 值给当前调用的函数/方法。你可以使用 `call` 来实现继承：写一个方法，然后让另外一个新的对象来继承它（而不是在新对象中再写一次这个方法）。
-
-## 示例
-
-### 使用 `call` 方法调用父构造函数
-
-在一个子构造函数中，你可以通过调用父构造函数的 `call` 方法来实现继承，类似于 `Java` 中的写法。下例中，使用 `Food` 和 `Toy` 构造函数创建的对象实例都会拥有在 `Product` 构造函数中添加的 `name` 属性和 `price` 属性，但 `category` 属性是在各自的构造函数中定义的。
-
-```js
+```js interactive-example
 function Product(name, price) {
   this.name = name;
   this.price = price;
@@ -48,82 +17,114 @@ function Product(name, price) {
 
 function Food(name, price) {
   Product.call(this, name, price);
-  this.category = 'food';
+  this.category = "food";
 }
 
-function Toy(name, price) {
-  Product.call(this, name, price);
-  this.category = 'toy';
-}
-
-var cheese = new Food('feta', 5);
-var fun = new Toy('robot', 40);
+console.log(new Food("cheese", 5).name);
+// Expected output: "cheese"
 ```
 
-### 使用 `call` 方法调用匿名函数
+## 语法
 
-在下例中的 `for` 循环体内，我们创建了一个匿名函数，然后通过调用该函数的 `call` 方法，将每个数组元素作为指定的 `this` 值执行了那个匿名函数。这个匿名函数的主要目的是给每个数组元素对象添加一个 `print` 方法，这个 `print` 方法可以打印出各元素在数组中的正确索引号。当然，这里不是必须得让数组元素作为 `this` 值传入那个匿名函数（普通参数就可以），目的是为了演示 `call` 的用法。
-
-```js
-var animals = [
-  { species: 'Lion', name: 'King' },
-  { species: 'Whale', name: 'Fail' }
-];
-
-for (var i = 0; i < animals.length; i++) {
-  (function(i) {
-    this.print = function() {
-      console.log('#' + i + ' ' + this.species
-                  + ': ' + this.name);
-    }
-    this.print();
-  }).call(animals[i], i);
-}
+```js-nolint
+call(thisArg)
+call(thisArg, arg1)
+call(thisArg, arg1, arg2)
+call(thisArg, arg1, arg2, /* …, */ argN)
 ```
 
-### 使用 `call` 方法调用函数并且指定上下文的 '`this`'
+### 参数
 
-在下面的例子中，当调用 `greet` 方法的时候，该方法的`this`值会绑定到 `obj` 对象。
+- `thisArg`
+  - : 在调用 `func` 时要使用的 `this` 值。如果函数不在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下，[`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 和 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 将被替换为全局对象，并且原始值将被转换为对象。
+- `arg1, …, argN` {{optional_inline}}
+  - : 函数的参数。
+
+## 返回值
+
+使用指定的 `this` 值和参数调用函数后的结果。
+
+## 描述
+
+> [!NOTE]
+> 这个函数几乎与 {{jsxref("Function/apply", "apply()")}} 相同，只是函数的参数以列表的形式逐个传递给 `call()`，而在 `apply()` 中它们被组合在一个对象中，通常是一个数组——例如，`func.call(this, "eat", "bananas")` 与 `func.apply(this, ["eat", "bananas"])`。
+
+通常，在调用函数时，函数内部的 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 值是访问该函数的对象。使用 `call()`，你可以在调用现有函数时将任意值分配给 `this`，而无需首先将函数附加到对象上作为属性。这样可以将一个对象的方法用作通用的实用函数。
+
+> [!WARNING]
+> 不要使用 `call()` 来链式调用构造函数（例如，实现继承）。这会将构造函数作为普通函数调用，这意味着 [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target) 的值为 `undefined`，而类会抛出错误，因为它们不能在没有 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 的情况下被调用。请改用 {{jsxref("Reflect.construct()")}} 或 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends)。
+
+## 示例
+
+### 使用 call() 调用函数并指定 this 值
+
+在下面的示例中，当我们调用 `greet` 时，`this` 的值将绑定到对象 `obj`，即使 `greet` 不是 `obj` 的方法。
 
 ```js
 function greet() {
-  var reply = [this.animal, 'typically sleep between', this.sleepDuration].join(' ');
-  console.log(reply);
+  console.log(this.animal, "的睡眠时间一般在", this.sleepDuration, "之间");
 }
 
-var obj = {
-  animal: 'cats', sleepDuration: '12 and 16 hours'
+const obj = {
+  animal: "猫",
+  sleepDuration: "12 到 16 小时",
 };
 
-greet.call(obj);  // cats typically sleep between 12 and 16 hours
+greet.call(obj); // 猫 的睡眠时间一般在 12 到 16 小时 之间
 ```
 
-### 使用 **`call`** 方法调用函数并且不指定第一个参数（`argument`）
+### 使用 call() 在不指定第一个参数的情况下调用函数
 
-在下面的例子中，我们调用了 `display` 方法，但并没有传递它的第一个参数。如果没有传递第一个参数，`this` 的值将会被绑定为全局对象。
+如果省略第一个 `thisArg` 参数，则默认为 `undefined`。在非严格模式下，`this` 值将被替换为 {{jsxref("globalThis")}}（类似于全局对象）。
 
 ```js
-var sData = 'Wisen';
+globalThis.globProp = "Wisen";
 
 function display() {
-  console.log('sData value is %s ', this.sData);
+  console.log(`globProp 的值是 ${this.globProp}`);
 }
 
-display.call();  // sData value is Wisen
+display.call(); // 输出“globProp 的值是 Wisen”
 ```
 
-> **备注：** 在严格模式下，`this` 的值将会是 `undefined`。见下文。
+在严格模式下，`this` 的值不会被替换，因此它保持为 `undefined`。
 
 ```js
-'use strict';
+"use strict";
 
-var sData = 'Wisen';
+globalThis.globProp = "Wisen";
 
 function display() {
-  console.log('sData value is %s ', this.sData);
+  console.log(`globProp 的值时 ${this.globProp}`);
 }
 
-display.call(); // Cannot read the property of 'sData' of undefined
+display.call(); // 抛出 TypeError: Cannot read the property of 'globProp' of undefined
+```
+
+### 将方法转换为实用函数
+
+`call()` 几乎等同于普通函数调用，只是将 `this` 作为普通参数传入，而不是作为函数所在的对象值。这类似于通用的实用函数的工作方式：你可以使用 `map(array, callback)` 来代替 `array.map(callback)`，这样可以避免对 `Array.prototype` 进行修改，还可以将 `map` 用于不是数组的类数组对象（例如 [`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)）。
+
+以 {{jsxref("Array.prototype.slice()")}} 为例，你想要将类数组对象转换为真正的数组。你可以创建一个类似这样的快捷方式：
+
+```js
+const slice = Array.prototype.slice;
+
+// ...
+
+slice.call(arguments);
+```
+
+请注意，你不能将 `slice.call` 保存并将其作为普通函数调用，因为 `call()` 方法也会读取它的 `this` 值，而这个值应该是它要调用的函数。在这种情况下，你可以使用 {{jsxref("Function/bind", "bind()")}} 来绑定 `call()` 的 `this` 值。在下面的代码片段中，`slice()` 是一个绑定了 `this` 值为 {{jsxref("Array.prototype.slice()")}} 的 {{jsxref("Function.prototype.call()")}} 的版本。这意味着额外的 `call()` 调用可以被省略：
+
+```js
+// 与前面示例中的“slice”相同
+const unboundSlice = Array.prototype.slice;
+const slice = Function.prototype.call.bind(unboundSlice);
+
+// ...
+
+slice(arguments);
 ```
 
 ## 规范
@@ -134,8 +135,10 @@ display.call(); // Cannot read the property of 'sData' of undefined
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.apply()")}}
-- [JavaScript 面向对象入门](/zh-CN/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
+- {{jsxref("Reflect.apply()")}}
+- [展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- [JavaScript 对象入门](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)

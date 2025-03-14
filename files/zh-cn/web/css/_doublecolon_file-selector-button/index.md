@@ -1,5 +1,5 @@
 ---
-title: '::file-selector-button'
+title: ::file-selector-button
 slug: Web/CSS/::file-selector-button
 ---
 
@@ -7,7 +7,27 @@ slug: Web/CSS/::file-selector-button
 
 **`::file-selector-button`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)代表 [`type="file"`](/zh-CN/docs/Web/HTML/Element/input/file) 的 {{HTMLElement("input") }} 的按钮。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-file-selector-button.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::file-selector-button", "tabbed-shorter")}}
+
+```css interactive-example
+input {
+  margin-top: 1rem;
+}
+
+input::file-selector-button {
+  font-weight: bold;
+  color: dodgerblue;
+  padding: 0.5em;
+  border: thin solid grey;
+  border-radius: 3px;
+}
+```
+
+```html interactive-example
+<label for="avatar">Choose a profile picture:</label><br />
+
+<input id="avatar" type="file" name="avatar" accept="image/png, image/jpeg" />
+```
 
 ## 语法
 
@@ -55,7 +75,7 @@ input[type="file"]::file-selector-button:hover {
 
 #### 结果
 
-{{EmbedLiveSample("基础示例", "100%", 150)}}
+{{EmbedLiveSample("基本示例", "100%", 150)}}
 
 请注意 `::file-selector-button` 是一个完整元素，因此与 UA 样式表中的规则相匹配。特别是，字体和颜色不一定会从 `input` 元素继承。
 
@@ -120,7 +140,5 @@ input[type="file"]::file-selector-button:hover {
 ## 参见
 
 - [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)
-- [Microsoft CSS 扩展](/zh-CN/docs/Web/CSS/Microsoft_Extensions)
 - [文件与目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
-- [Firefox 对文件与目录条目 API 的支持](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)
 - [`<input type="file">`](/zh-CN/docs/Web/HTML/Element/input/file)

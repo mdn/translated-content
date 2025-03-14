@@ -1,19 +1,14 @@
 ---
-title: '::-webkit-progress-bar'
+title: ::-webkit-progress-bar
 slug: Web/CSS/::-webkit-progress-bar
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::-webkit-progress-bar
 ---
 
 {{CSSRef}}{{Non-standard_header}}
 
 Le pseudo-élément **`::-webkit-progress-bar`** représente l'ensemble de la barre d'un élément {{HTMLElement("progress")}}. Normalement, celui-ci n'est visible que pour la partie de la barre qui n'est pas remplie car, par défaut, il est affiché sous le pseudo-élément {{cssxref("::-webkit-progress-value")}}. C'est un pseudo-élément fils du pseudo-élément {{cssxref("::-webkit-progress-inner-element")}} et c'est le pseudo-élément parent du pseudo-élément {{cssxref("::-webkit-progress-value")}}.
 
-> **Note :** Afin que `::-webkit-progress-value` ait un effet, il faut que {{cssxref("appearance")}} vaille `none` sur l'élément `<progress>`.
+> [!NOTE]
+> Afin que `::-webkit-progress-value` ait un effet, il faut que {{cssxref("appearance")}} vaille `none` sur l'élément `<progress>`.
 
 ## Exemples
 
@@ -25,14 +20,14 @@ progress {
 }
 
 ::-webkit-progress-bar {
-   background-color: orange;
+  background-color: orange;
 }
 ```
 
 ### HTML
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 ### Résultat
@@ -49,7 +44,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-webkit-progress-bar")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,7 +1,6 @@
 ---
 title: アイコンの中身が外側にはみ出すなどして形が壊れている
 slug: orphaned/Web/Compatibility_FAQ/Misaligned_Text_Inside_Icon.html
-original_slug: Web/Compatibility_FAQ/Misaligned_Text_Inside_Icon.html
 ---
 
 ## 概要
@@ -10,7 +9,7 @@ original_slug: Web/Compatibility_FAQ/Misaligned_Text_Inside_Icon.html
 
 表示画面
 
-![](https://mdn.mozillademos.org/files/9979/0103.jpg)
+![](0103.jpg)
 
 ## 要因
 
@@ -30,7 +29,7 @@ original_slug: Web/Compatibility_FAQ/Misaligned_Text_Inside_Icon.html
     ```
 
 2. **ベンダープレフィックス**
-    他のブラウザで正しく表示出来ているが、Firefox で表示が崩れている場合は、ベンダープレフィックスの指定が入っていることが考えられます。
+    他のブラウザーで正しく表示出来ているが、Firefox で表示が崩れている場合は、ベンダープレフィックスの指定が入っていることが考えられます。
     \-webkit-background-size プロパティ等の指定で表示領域を設定していると、Firefox では認識できず、指定されていない状態になっています。
 
     ```css
@@ -61,7 +60,7 @@ original_slug: Web/Compatibility_FAQ/Misaligned_Text_Inside_Icon.html
     ```
 
 2. **ベンダープレフィックス**
-    webkit 指定が入っている場合は、他ブラウザ互換用に別途指定を行う必要があります。
+    webkit 指定が入っている場合は、他ブラウザー互換用に別途指定を行う必要があります。
     \-webkit-background-size プロパティの場合は、[background-size](/ja/docs/Web/CSS/background-size)プロパティを追記することで Firefox でも指定を行うことができます。
     引数は同様のものが使用可能です。
 
@@ -80,6 +79,6 @@ original_slug: Web/Compatibility_FAQ/Misaligned_Text_Inside_Icon.html
 ## メリット
 
 - 画面サイズの可変に対応可能となります。
-  - 他のブラウザでも互換性を維持することができます。
+  - 他のブラウザーでも互換性を維持することができます。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

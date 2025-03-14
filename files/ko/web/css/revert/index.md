@@ -1,17 +1,6 @@
 ---
 title: revert
 slug: Web/CSS/revert
-tags:
-  - CSS
-  - CSS 속성
-  - Cascade
-  - Style
-  - all:revert
-  - revert
-  - revert style 속성
-  - revert 속성
-  - 스타일
-translation_of: Web/CSS/revert
 ---
 
 {{CSSRef}}
@@ -22,11 +11,12 @@ translation_of: Web/CSS/revert
 - 만약 사용자의 커스텀 스타일을 사용하거나 사용자에 의해서 스타일이 적용되어 있다면, `revert` 는 user agent의 default 스타일로 되돌립니다.
 - 만약 user agent default 스타일만 지정되어있다면, {{cssxref("unset")}}과 마찬가지의 의미입니다.
 
-`revert` 키워드는 많은 경우에서 [`unset`](/en-US/docs/Web/CSS/unset) 과 같은 성질을 가집니다. 한가지 차이점은 user agent에 의한 스타일이냐 유저가 지정한 스타일이냐의 차이입니다.
+`revert` 키워드는 많은 경우에서 [`unset`](/ko/docs/Web/CSS/unset) 과 같은 성질을 가집니다. 한가지 차이점은 user agent에 의한 스타일이냐 유저가 지정한 스타일이냐의 차이입니다.
 
 Revert 는 자식 요소까지 변경하지는 않습니다. (하지만 자식 요소에 특별히 rule이 지정되어 있지 않다면 적용됩니다.). 그래서 만약에 모든 섹션에 `color: green` 속성을 지정하고 `all: revert` 를 사용하면 모든 섹션의 컬러값은 black으로 돌아갈 것입니다. 하지만 만약, 당신이 section 내의 모든 p에 red를 지정했다면 그것들은 red로 유지될 것입니다.
 
-> **참고:** Revert는 단순히 값입니다. 그러므로 `revert` 또한 다른 [specificity](/ko/docs/Web/CSS/Specificity)값으로 덮어 쓸 수 있습니다.
+> [!NOTE]
+> Revert는 단순히 값입니다. 그러므로 `revert` 또한 다른 [specificity](/ko/docs/Web/CSS/Specificity)값으로 덮어 쓸 수 있습니다.
 
 > **참고:** `revert` 는 {{cssxref("initial")}} 키워드와는 다른데, [initial value](/ko/docs/Web/CSS/initial_value) 는 프로퍼티 단위의 css 특성화입니다. user-agent의 스타일 시트도 default value로 되돌립니다..
 >
@@ -48,9 +38,13 @@ h3 {
 ```
 
 ```html
-<h3 style="font-weight: unset; color: unset;">This will still have font-weight: normal, but color: black</h3>
+<h3 style="font-weight: unset; color: unset;">
+  This will still have font-weight: normal, but color: black
+</h3>
 <p>Just some text</p>
-<h3 style="font-weight: revert; color: revert;">This should have its original font-weight (bold) and color: black</h3>
+<h3 style="font-weight: revert; color: revert;">
+  This should have its original font-weight (bold) and color: black
+</h3>
 <p>Just some text</p>
 ```
 
@@ -82,9 +76,15 @@ h3 {
 효율적으로 revert 하는 것은 당신이 선택한 속성에 대해서만 해당 속성을 제거하는 것입니다. 우리는 paragraph에 한해서는 red 속성을 지정하고 section에는 darkgreen 을 따로 각각 지정할 수 있습니다.
 
 ```css
-section { color: darkgreen }
-p { color: red }
-section.with-revert { color: revert }
+section {
+  color: darkgreen;
+}
+p {
+  color: red;
+}
+section.with-revert {
+  color: revert;
+}
 ```
 
 ```html
@@ -104,11 +104,9 @@ section 요소가 돌아갔음에도 paragraph는 여전히 빨강인 것에 주
 
 {{EmbedLiveSample('Revert_on_a_parent')}}
 
-## 특성
+## 명세서
 
-| 특성                                                                 | 상태                             | 비고                |
-| -------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('CSS4 Cascade', '#default', 'revert')}} | {{Spec2('CSS4 Cascade')}} | Initial definition. |
+{{Specifications}}
 
 ## 브라우저 호환성
 

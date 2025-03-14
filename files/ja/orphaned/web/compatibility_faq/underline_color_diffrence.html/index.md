@@ -1,21 +1,20 @@
 ---
 title: 下線の色が相違している
 slug: orphaned/Web/Compatibility_FAQ/Underline_Color_Diffrence.html
-original_slug: Web/Compatibility_FAQ/Underline_Color_Diffrence.html
 ---
 
 ## 概要
 
-mobile 版 Firefox と他ブラウザで、文字列の下に引かれる下線の色が相違します。
+mobile 版 Firefox と他ブラウザーで、文字列の下に引かれる下線の色が相違します。
 
-![](https://mdn.mozillademos.org/files/10005/0203.jpg)
+![](0203.jpg)
 
 ## 要因
 
 以下のような要因が考えられます。
 
-1. **mobile 版 Firefox で適用されるプロパティが他ブラウザで反映されない場合**
-    [text-decoration-color](/ja/docs/Web/CSS/text-decoration-color), [text-decoration-line](/ja/docs/Web/CSS/text-decoration-line), [text-decoration-style](/ja/docs/Web/CSS/text-decoration-style)に相当するプロパティが他ブラウザには存在しないため、表示の差異が発生します。
+1. **mobile 版 Firefox で適用されるプロパティが他ブラウザーで反映されない場合**
+    [text-decoration-color](/ja/docs/Web/CSS/text-decoration-color), [text-decoration-line](/ja/docs/Web/CSS/text-decoration-line), [text-decoration-style](/ja/docs/Web/CSS/text-decoration-style)に相当するプロパティが他ブラウザーには存在しないため、表示の差異が発生します。
 
     ```css
     インライン {
@@ -38,10 +37,10 @@ mobile 版 Firefox と他ブラウザで、文字列の下に引かれる下線�
 
 各要因の解決策の代表例として以下があります。
 
-1. **mobile 版 Firefox で適用されるプロパティが他ブラウザで反映されない場合**
+1. **mobile 版 Firefox で適用されるプロパティが他ブラウザーで反映されない場合**
 
     例えば、Chrome では下線色は文字色と等しくなり、個別設定ができません。
-    そのため、コンテンツタグの記述は Firefox と他ブラウザとの見た目の統一が図れるよう、どのブラウザでもサポートしている装飾のみを用いる等の対処が必要です。
+    そのため、コンテンツタグの記述は Firefox と他ブラウザーとの見た目の統一が図れるよう、どのブラウザーでもサポートしている装飾のみを用いる等の対処が必要です。
 
     ```
     インライン {
@@ -67,6 +66,6 @@ mobile 版 Firefox と他ブラウザで、文字列の下に引かれる下線�
 
 ## メリット
 
-- 他のブラウザでも互換性を維持することができます。
+- 他のブラウザーでも互換性を維持することができます。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

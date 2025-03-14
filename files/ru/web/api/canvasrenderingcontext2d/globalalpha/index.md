@@ -1,21 +1,14 @@
 ---
 title: CanvasRenderingContext2D.globalAlpha
 slug: Web/API/CanvasRenderingContext2D/globalAlpha
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
-  - Свойства
-  - Ссылки
-translation_of: Web/API/CanvasRenderingContext2D/globalAlpha
 ---
+
 {{APIRef}}
 
 Свойство **`CanvasRenderingContext2D.globalAlpha`** Canvas 2D API определяет альфа-(прозрачность) значение, которое будет применено к фигурам и картинкам до того как они будут отрисованы на холсте.
 
-> **Примечание:** Смотрите также [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) в [Canvas Tutorial](/ru/docs/Web/API/Canvas_API/Tutorial).
+> [!NOTE]
+> Смотрите также [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) в [Canvas Tutorial](/ru/docs/Web/API/Canvas_API/Tutorial).
 
 ## Синтаксис
 
@@ -43,15 +36,15 @@ ctx.globalAlpha = value;
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.globalAlpha = 0.5;
 
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(10, 10, 100, 100);
 
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 ctx.fillRect(50, 50, 100, 100);
 ```
 
@@ -70,19 +63,19 @@ ctx.fillRect(50, 50, 100, 100);
 ```
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Рисуем фон
-ctx.fillStyle = '#FD0';
+ctx.fillStyle = "#FD0";
 ctx.fillRect(0, 0, 75, 75);
-ctx.fillStyle = '#6C0';
+ctx.fillStyle = "#6C0";
 ctx.fillRect(75, 0, 75, 75);
-ctx.fillStyle = '#09F';
+ctx.fillStyle = "#09F";
 ctx.fillRect(0, 75, 75, 75);
-ctx.fillStyle = '#F30';
+ctx.fillStyle = "#F30";
 ctx.fillRect(75, 75, 75, 75);
-ctx.fillStyle = '#FFF';
+ctx.fillStyle = "#FFF";
 
 // Устанавливаем уровень прозрачности
 ctx.globalAlpha = 0.2;
@@ -95,27 +88,17 @@ for (let i = 0; i < 7; i++) {
 }
 ```
 
-{{EmbedLiveSample("Наложение_прозрачных_фигур", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}
+{{EmbedLiveSample("Наложение_прозрачных_фигур", "180", "180", "canvas_globalalpha.png")}}
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                                                        | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-globalalpha", "CanvasRenderingContext2D.globalAlpha")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-### Gecko-specific notes
-
-- Starting with Gecko 5.0, specifying invalid values for `globalAlpha` no longer throws a `SYNTAX_ERR` exception; these are now correctly silently ignored.
-
-### WebKit/Blink-specific notes
-
-- In WebKit- and Blink-based browsers, a non-standard and deprecated method `ctx.setAlpha()` is implemented in addition to this property.
-
-## Читайте также
+## Смотрите также
 
 - The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}}

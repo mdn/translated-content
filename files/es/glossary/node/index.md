@@ -1,11 +1,9 @@
 ---
 title: Node
 slug: Glossary/Node
-tags:
-  - Desambiguación
-  - Glosario
-translation_of: Glossary/Node
 ---
+
+{{GlossarySidebar}}
 
 El término **nodo** puede tener varios significados según el contexto. Puede referirse a:
 

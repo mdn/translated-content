@@ -1,20 +1,9 @@
 ---
 title: menus.create()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/create
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - contextMenus
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Crée un nouvel élément de menu, avec un objet d'options définissant les propriétés de l'élément.
 
@@ -57,7 +46,7 @@ browser.menus.create(
         - sinon, l'élément reçoit un tableau de contexte de \["page"].
 
     - `documentUrlPatterns` {{optional_inline}}
-      - : `array` de `string`. Vous permet de restreindre l'élément à appliquer uniquement aux documents dont l'URL correspond à l'un des [motifs](/fr/Add-ons/WebExtensions/Match_patterns) données. Cela s'applique également aux cadres.
+      - : `array` de `string`. Vous permet de restreindre l'élément à appliquer uniquement aux documents dont l'URL correspond à l'un des [motifs](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) données. Cela s'applique également aux cadres.
     - `enabled` {{optional_inline}}
       - : `boolean`. Si cet élément de menu est activé ou désactivé. Par défaut à `true`.
     - `icons` {{optional_inline}}
@@ -79,7 +68,8 @@ browser.menus.create(
             }
         ```
 
-        > **Note :** L'élément de menu de niveau supérieur utilise les [icônes](/fr/Add-ons/WebExtensions/manifest.json/icons) spécifiées dans le manifest plutôt que ce qui est spécifié avec cette touche.
+        > [!NOTE]
+        > L'élément de menu de niveau supérieur utilise les [icônes](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) spécifiées dans le manifest plutôt que ce qui est spécifié avec cette touche.
 
     - `id` {{optional_inline}}
       - : `string`. Identifiant unique à attribuer à cet élément Obligatoire pour les pages d'événement. Ne peut pas être identique à un autre ID pour cette extension.
@@ -125,17 +115,17 @@ Cet exemple crée un élément de menu contextuel qui s'affiche lorsque l'utilis
 browser.menus.create({
   id: "log-selection",
   title: "Log '%s' to the console",
-  contexts: ["selection"]
+  contexts: ["selection"],
 });
 
-browser.menus.onClicked.addListener(function(info, tab) {
+browser.menus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "log-selection") {
     console.log(info.selectionText);
   }
 });
 ```
 
-Cet exemple ajoute deux éléments radio, que vous pouvez utiliser pour choisir d'appliquer une bordure verte ou bleue à la page. Notez que cet exemple nécessitera la [permission activeTab](/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
+Cet exemple ajoute deux éléments radio, que vous pouvez utiliser pour choisir d'appliquer une bordure verte ou bleue à la page. Notez que cet exemple nécessitera la [permission activeTab](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
 
 ```js
 function onCreated() {
@@ -146,33 +136,39 @@ function onCreated() {
   }
 }
 
-browser.menus.create({
-  id: "radio-green",
-  type: "radio",
-  title: "Make it green",
-  contexts: ["all"],
-  checked: false
-}, onCreated);
+browser.menus.create(
+  {
+    id: "radio-green",
+    type: "radio",
+    title: "Make it green",
+    contexts: ["all"],
+    checked: false,
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "radio-blue",
-  type: "radio",
-  title: "Make it blue",
-  contexts: ["all"],
-  checked: false
-}, onCreated);
+browser.menus.create(
+  {
+    id: "radio-blue",
+    type: "radio",
+    title: "Make it blue",
+    contexts: ["all"],
+    checked: false,
+  },
+  onCreated,
+);
 
 var makeItBlue = 'document.body.style.border = "5px solid blue"';
 var makeItGreen = 'document.body.style.border = "5px solid green"';
 
-browser.menus.onClicked.addListener(function(info, tab) {
+browser.menus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "radio-blue") {
     browser.tabs.executeScript(tab.id, {
-      code: makeItBlue
+      code: makeItBlue,
     });
   } else if (info.menuItemId == "radio-green") {
     browser.tabs.executeScript(tab.id, {
-      code: makeItGreen
+      code: makeItGreen,
     });
   }
 });
@@ -180,13 +176,13 @@ browser.menus.onClicked.addListener(function(info, tab) {
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.create", 10)}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
+> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

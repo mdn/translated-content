@@ -3,7 +3,7 @@ title: Símbolo
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
 ---
 
-{{JSRef("Global_Objects", "Symbol")}}
+{{JSRef}}
 
 ## Sumário
 
@@ -52,9 +52,9 @@ Se você realmente quiser criar um objeto empacotador de `Symbol`, você pode us
 
 ```js
 var sym = Symbol("foo");
-typeof sym;     // "symbol"
+typeof sym; // "symbol"
 var symObj = Object(sym);
-typeof symObj;  // "object"
+typeof symObj; // "object"
 ```
 
 ### Símbolos compartilhados no registro global de símbolo
@@ -104,11 +104,11 @@ Todos os símbolos herdados de {{jsxref("Symbol.prototype")}}.
 
 ### Propriedades
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/Symbol/prototype','Properties')}}
+<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/Symbol/prototype','Properties') -->
 
 ### Métodos
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/Symbol/prototype','Methods')}}
+<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/Symbol/prototype','Methods') -->
 
 ## Exemplos
 
@@ -117,9 +117,9 @@ Todos os símbolos herdados de {{jsxref("Symbol.prototype")}}.
 O operador {{jsxref("Operators/typeof", "typeof")}} pode ajudar a identificar os símbolos.
 
 ```js
-typeof Symbol() === 'symbol'
-typeof Symbol('foo') === 'symbol'
-typeof Symbol.iterator === 'symbol'
+typeof Symbol() === "symbol";
+typeof Symbol("foo") === "symbol";
+typeof Symbol.iterator === "symbol";
 ```
 
 ### Conversões de tipos de símbolos
@@ -130,7 +130,7 @@ Algumas anotações quando trabalhando com conversão de tipo de símbolos.
   (e.g. `+sym` or `sym | 0`).
 - Quando usando operador de igualdade, `Object(sym) == sym` retorna `true`.
 - `Symbol("foo") + "bar"` lança um {{jsxref("TypeError")}} (não pode converter um símbolo para string). Isso previne você de silenciosamente criar um novo nome de propriedade string a partir de um símbolo, por exemplo.
-- A ["safer" `String(sym)` conversion](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#String_conversion) funciona como uma chamada para {{jsxref("Symbol.prototype.toString()")}} com símbolos, mas note que uma `new String(sym)` será lançada.
+- A ["safer" `String(sym)` conversion](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#string_conversion) funciona como uma chamada para {{jsxref("Symbol.prototype.toString()")}} com símbolos, mas note que uma `new String(sym)` será lançada.
 
 ### Símbolos e `for...in` iteração
 
@@ -145,7 +145,7 @@ obj["c"] = "c";
 obj.d = "d";
 
 for (var i in obj) {
-   console.log(i); // logs "c" and "d"
+  console.log(i); // logs "c" and "d"
 }
 ```
 
@@ -154,7 +154,7 @@ for (var i in obj) {
 Propriedade com chave de símbolo vão ser completamente ignoradas quando usando `JSON.stringify()`:
 
 ```js
-JSON.stringify({[Symbol("foo")]: "foo"});
+JSON.stringify({ [Symbol("foo")]: "foo" });
 // '{}'
 ```
 
@@ -166,23 +166,21 @@ Quando um objeto wrapper de um símbolo é usado como uma chave de propriedade, 
 
 ```js
 var sym = Symbol("foo");
-var obj = {[sym]: 1};
-obj[sym];            // 1
-obj[Object(sym)];    // still 1
+var obj = { [sym]: 1 };
+obj[sym]; // 1
+obj[Object(sym)]; // still 1
 ```
 
 ## Especificações
 
-| Specification                                                            | Status                   | Comment            |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('ES2015', '#sec-symbol-objects', 'Symbol')}} | {{Spec2('ES2015')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol")}}
+{{Compat}}
 
 ## Veja também
 
-- [Glossary: Symbol data type](/pt-BR/docs/Glossary/Symbol)
+- [Glossary: Symbol data type](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol)
 - {{jsxref("Operators/typeof", "typeof")}}
 - [Data types and data structures](/pt-BR/docs/Web/JavaScript/Data_structures)

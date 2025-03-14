@@ -32,12 +32,12 @@ Um valor inteiro `long`, a id da requisição, que identifica unicamente a entra
 ```js
 var start = null;
 var element = document.getElementById("ElementoQueVcQuerAnimar");
-element.style.position = 'absolute';
+element.style.position = "absolute";
 
 function step(timestamp) {
   if (!start) start = timestamp;
   var progress = timestamp - start;
-  element.style.left = Math.min(progress/10, 200) + "px";
+  element.style.left = Math.min(progress / 10, 200) + "px";
   if (progress < 2000) {
     window.requestAnimationFrame(step);
   }
@@ -46,33 +46,17 @@ function step(timestamp) {
 window.requestAnimationFrame(step);
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                                                                            | Status                                       | Comentário                         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------- |
-| {{SpecName('HTML WHATWG', '#animation-frames', 'requestAnimationFrame')}}                                                         | {{Spec2('HTML WHATWG')}}             | Sem mudanças, substitui a anterior |
-| {{SpecName('RequestAnimationFrame', '#dom-windowanimationtiming-requestanimationframe', 'requestAnimationFrame')}} | {{Spec2('RequestAnimationFrame')}} | Definição inicial                  |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Window.requestAnimationFrame")}}
-
-\[1] Anteriro ao Gecko 11.0 {{geckoRelease("11.0")}}, mozRequestAnimationFrame() podia ser chamado sem parâmetros de entrada. Isso não é mais suportado, como provavelmente não será parte do padrão
-
-\[2] O parâmetro do callback é {{domxref("DOMTimeStamp")}} ao invés de {{domxref("DOMHighResTimeStamp")}} se a versão prefixada do método foi utilizada `DOMTimeStamp` possui apenas precisão de milisegundo, mas `DOMHighResTimeStamp` possui precisão mínima de microsegundos. Portanto, o tempo zero é diferente: `DOMHighResTimeStamp` possui o mesmo tempo zero que `performance.now()`, mas DOMTimeStamp possui o mesmo tempo zero que `Date.now().`
-
-\[3] A chamada correta no Chrome para cancelar a requisição é currently `window.cancelAnimationFrame()`. Versões anteriores, `window.webkitCancelAnimationFrame()` e `window.webkitCancelRequestAnimationFrame()`, foram descontinuados mas possuem suporte por enquanto.
-
-\[4] Suporte para a versão prefixada foi removida no Firefox 42.
+{{Compat}}
 
 ## Veja também
 
-- {{domxref("Window.mozAnimationStartTime")}}
 - {{domxref("Window.cancelAnimationFrame()")}}
-- [mozRequestAnimationFrame](http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html) - Post do blog
-- [requestAnimationFrame for smart animating](http://paulirish.com/2011/requestanimationframe-for-smart-animating/) - Post do blog
-- [Animating with javascript: from setInterval to requestAnimationFrame](http://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Post do blog
-- [Using PC Hardware more efficiently in HTML5: New Web Performance APIs, Part 1](http://blogs.msdn.com/b/ie/archive/2011/07/05/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-1.aspx) - Post do blog
-- [TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations](http://www.testufo.com/#test=animation-time-graph)
-- Paul Irish: [requestAnimationFrame for Smart Animating](http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/)
-- Paul Irish: [requestAnimationFrame API: now with sub-millisecond precision](http://updates.html5rocks.com/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision)
+- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
+- [Animating with JavaScript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Post do blog
+- [TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)

@@ -1,12 +1,9 @@
 ---
 title: Textes
 slug: Web/SVG/Tutorial/Texts
-tags:
-  - SVG
-  - SVG:Tutoriel
-translation_of: Web/SVG/Tutorial/Texts
-original_slug: Web/SVG/Tutoriel/Texts
 ---
+
+{{SVGRef}}
 
 {{PreviousNext("Web/SVG/Tutoriel/Motifs", "Web/SVG/Tutoriel/Transformations_de_base")}}
 
@@ -14,7 +11,7 @@ Lorsqu'on parle de texte en SVG, on doit différencier deux choses pratiquement 
 
 ## Les bases
 
-Nous avons vu dans l'[exemple de l'introduction](/fr/docs/Web/SVG/Tutoriel/Premiers_pas) que l'élément `text` peut être utilisé pour mettre du texte dans des documents SVG:
+Nous avons vu dans l'[exemple de l'introduction](/fr/docs/Web/SVG/Tutorial/Getting_Started) que l'élément `text` peut être utilisé pour mettre du texte dans des documents SVG:
 
 ```xml
 <text x="10" y="10">Hello World!</text>
@@ -44,16 +41,19 @@ Cet élément est utilisé pour baliser des sous-parties d'un texte. Il doit s'a
 
 ```html hidden
 <svg width="350" height="60" xmlns="http://www.w3.org/2000/svg">
-<text>
-  This is <tspan font-weight="bold" fill="red">bold and red</tspan>
-</text>
+  <text>
+    This is
+    <tspan font-weight="bold" fill="red">bold and red</tspan>
+  </text>
 
-<style><![CDATA[
-  text{
-    dominant-baseline: hanging;
-    font: 28px Verdana, Helvetica, Arial, sans-serif;
-  }
-]]></style>
+  <style>
+    <![CDATA[
+      text{
+        dominant-baseline: hanging;
+        font: 28px Verdana, Helvetica, Arial, sans-serif;
+      }
+    ]]>
+  </style>
 </svg>
 ```
 
@@ -104,19 +104,21 @@ Cet élément récupère via son attribut `xlink:href` un chemin arbitraire et a
 
 ```html hidden
 <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
-<path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="transparent" />
-<text>
-  <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path">
-    A curve.
-  </textPath>
-</text>
+  <path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="transparent" />
+  <text>
+    <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path">
+      A curve.
+    </textPath>
+  </text>
 
-<style><![CDATA[
-  text{
-    dominant-baseline: hanging;
-    font: 28px Verdana, Helvetica, Arial, sans-serif;
-  }
-]]></style>
+  <style>
+    <![CDATA[
+      text{
+        dominant-baseline: hanging;
+        font: 28px Verdana, Helvetica, Arial, sans-serif;
+      }
+    ]]>
+  </style>
 </svg>
 ```
 

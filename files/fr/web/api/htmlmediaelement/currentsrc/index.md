@@ -1,8 +1,6 @@
 ---
 title: HTMLMediaElement.currentSrc
 slug: Web/API/HTMLMediaElement/currentSrc
-browser-compat: api.HTMLMediaElement.currentSrc
-translation_of: Web/API/HTMLMediaElement/currentSrc
 ---
 
 {{APIRef("HTML DOM")}}
@@ -11,7 +9,7 @@ La propriété **`HTMLMediaElement.currentSrc`** contient l'URL absolue de la re
 
 ## Valeur
 
-Un objet [`DOMString`](/fr/docs/Web/API/DOMString) contenant l'URL absolue de la source multimédia choisie, ce peut être&nbsp;:
+Un objet [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) contenant l'URL absolue de la source multimédia choisie, ce peut être&nbsp;:
 
 - Une chaîne vide si `networkState` est `EMPTY`&nbsp;;
 - Ou une des ressources répertoriées par l'objet [`HTMLSourceElement`](/fr/docs/Web/API/HTMLSourceElement) contenu dans l'élément média&nbsp;;
@@ -20,7 +18,7 @@ Un objet [`DOMString`](/fr/docs/Web/API/DOMString) contenant l'URL absolue de la
 ## Exemples
 
 ```js
-let obj = document.createElement('video');
+let obj = document.createElement("video");
 console.log(obj.currentSrc); // ""
 ```
 

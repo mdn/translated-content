@@ -19,9 +19,11 @@ l10n:
 - このレスポンス
 - 要求を検証するためのクライアントの拡張機能 （{{domxref("PublicKeyCredential.getClientExtensionResults()")}} で指定されたもの）
 
-> **メモ:** 既存の資格情報の取得を検証する場合、 `PublicKeyCredential` オブジェクト全体とクライアント拡張機能が依存している側のサーバーに必要です。
+> [!NOTE]
+> 既存の資格情報の取得を検証する場合、 `PublicKeyCredential` オブジェクト全体とクライアント拡張機能が依存している側のサーバーに必要です。
 
-> **メモ:** このプロパティは最上位のコンテキストでのみ使用することができます。例えば {{HTMLElement("iframe")}} では使用することができません。
+> [!NOTE]
+> このプロパティは最上位のコンテキストでのみ使用することができます。例えば {{HTMLElement("iframe")}} では使用することができません。
 
 ## 値
 
@@ -34,7 +36,7 @@ const options = {
   challenge: new Uint8Array(16) /* from the server */,
   rp: {
     name: "Example CORP",
-    id  : "login.example.com"
+    id: "login.example.com",
   },
   user: {
     id: new Uint8Array(16) /* from the server */,
@@ -44,21 +46,22 @@ const options = {
   pubKeyCredParams: [
     {
       type: "public-key",
-      alg: -7
-    }
-  ]
+      alg: -7,
+    },
+  ],
 };
 
-navigator.credentials.create({  publicKey: options })
+navigator.credentials
+  .create({ publicKey: options })
   .then((pubKeyCredential) => {
     const response = pubKeyCredential.response;
     const clientExtResults = pubKeyCredential.getClientExtensionResults();
     // Send response and client extensions to the server so that it can validate
     // and create credentials
-
-}).catch((err) => {
-  // Deal with any error
-});
+  })
+  .catch((err) => {
+    // Deal with any error
+  });
 ```
 
 ## 仕様書

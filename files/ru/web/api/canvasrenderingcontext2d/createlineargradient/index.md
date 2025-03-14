@@ -1,23 +1,18 @@
 ---
 title: CanvasRenderingContext2D.createLinearGradient()
 slug: Web/API/CanvasRenderingContext2D/createLinearGradient
-tags:
-  - API
-  - Градиент
-  - Холст
-  - метод
-translation_of: Web/API/CanvasRenderingContext2D/createLinearGradient
 ---
 
 {{APIRef}}
 
 Метод **`CanvasRenderingContext2D.createLinearGradient()`**, предоставляемый Canvas 2D API, создаёт градиент вдоль линии, соединённой двумя точками с заданными координатами.
 
-![](https://mdn.mozillademos.org/files/14681/mdn-canvas-linearGradient.png)
+![](mdn-canvas-lineargradient.png)
 
 Этот метод возвращает линейный {{domxref("CanvasGradient")}}. Для того, чтобы быть добавленным к фигуре, градиент должен быть задан свойством {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} или {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}.
 
-> **Примечание:** Координаты градиента глобальны, т.е. относятся к текущему пространству координат. При добавлении градиента, его координаты определяются НЕ относительно координат фигур.
+> [!NOTE]
+> Координаты градиента глобальны, т.е. относятся к текущему пространству координат. При добавлении градиента, его координаты определяются НЕ относительно координат фигур.
 
 ## Синтаксис
 
@@ -58,18 +53,18 @@ CanvasGradient ctx.createLinearGradient(x0, y0, x1, y1);
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 // Создание линейного градиента
 // Точка начала линии градиента: x=20, y=0
 // Точка конца линии градиента: x=220, y=0
-var gradient = ctx.createLinearGradient(20,0, 220,0);
+var gradient = ctx.createLinearGradient(20, 0, 220, 0);
 
 // Добавление трёх контрольных точек
-gradient.addColorStop(0, 'green');
-gradient.addColorStop(.5, 'cyan');
-gradient.addColorStop(1, 'green');
+gradient.addColorStop(0, "green");
+gradient.addColorStop(0.5, "cyan");
+gradient.addColorStop(1, "green");
 
 // Установка стиля заливки и отрисовка прямоугольника градиента
 ctx.fillStyle = gradient;
@@ -87,10 +82,6 @@ ctx.fillRect(20, 20, 200, 100);
 ## Совместимость с браузерами
 
 {{Compat}}
-
-### Специфично для Gecko
-
-- Начиная с Gecko 2.0 {{geckoRelease("2.0")}}, указание не конечных значений выбрасывает `NOT_SUPPORTED_ERR` вместо `SYNTAX_ERR`.
 
 ## Смотрите также
 

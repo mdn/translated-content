@@ -1,6 +1,8 @@
 ---
-title: CharacterData.substringData()
+title: "CharacterData: substringData() メソッド"
 slug: Web/API/CharacterData/substringData
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef("DOM")}}
@@ -9,7 +11,7 @@ slug: Web/API/CharacterData/substringData
 
 ## 構文
 
-```js
+```js-nolint
   domString = characterData.substringData(offset, count)
 ```
 

@@ -1,12 +1,6 @@
 ---
 title: Objets globaux
 slug: Web/JavaScript/Reference/Global_Objects
-tags:
-  - Aperçu
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects
-original_slug: Web/JavaScript/Reference/Objets_globaux
 ---
 
 {{jsSidebar("Objects")}}
@@ -15,9 +9,10 @@ Cette partie référence tous les objets natifs standards JavaScript, avec leurs
 
 Le terme «&nbsp;objets globaux&nbsp;» (ou objets natifs standards) ne doit pas ici être confondu avec l*'objet global*. Ici, «&nbsp;objets globaux&nbsp;» se réfère aux _objets de portée globale_. L'objet global lui-même peut être accédé en utilisant {{jsxref("Opérateurs/L_opérateur_this", "this")}} dans la portée globale (uniquement lorsque [le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) n'est pas utilisé, sinon, il renvoie {{jsxref("undefined")}}). En réalité, la portée globale _consiste des_ propriétés de l'objet global (avec ses propriétés héritées, s'il en a).
 
-> **Note :** En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), la portée globale représentée par `this` sera {{jsxref("undefined")}}.
+> [!NOTE]
+> En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), la portée globale représentée par `this` sera {{jsxref("undefined")}}.
 
-Les autres objets de la portée globale sont [créés par les scripts utilisateurs](/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#Cr.C3.A9er_de_nouveaux_objets) ou fournis par l'application hôte dans laquelle s'exécute JavaScript. Les objets mis à disposition par les navigateurs web sont documentés dans la [référence API](/fr/docs/Web/API). Pour plus d'informations sur la distinction entre le [DOM](/fr/docs/Web/API/R%C3%A9f%C3%A9rence_du_DOM_Gecko) et JavaScript, voir [l'aperçu des technologies JavaScript](/fr/docs/Web/JavaScript/JavaScript_technologies_overview).
+Les autres objets de la portée globale sont [créés par les scripts utilisateurs](/fr/docs/Web/JavaScript/Guide/Working_with_objects#cr.c3.a9er_de_nouveaux_objets) ou fournis par l'application hôte dans laquelle s'exécute JavaScript. Les objets mis à disposition par les navigateurs web sont documentés dans la [référence API](/fr/docs/Web/API). Pour plus d'informations sur la distinction entre le [DOM](/fr/docs/Web/API/Document_Object_Model) et JavaScript, voir [l'aperçu des technologies JavaScript](/fr/docs/Web/JavaScript/JavaScript_technologies_overview).
 
 ## Objets globaux standards (par catégorie)
 

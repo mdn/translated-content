@@ -1,5 +1,5 @@
 ---
-title: ':-moz-loading'
+title: :-moz-loading
 slug: Web/CSS/:-moz-loading
 ---
 
@@ -7,12 +7,13 @@ slug: Web/CSS/:-moz-loading
 
 **`:-moz-loading`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、読み込みが開始されていないために表示できない要素、例えばまだ到着が開始されていない画像などに一致します。なお、読み込み*中*の画像は、この擬似クラスには一致*しません*。
 
-> **メモ:** このセレクターは主にテーマ開発者が使用するためのものです。
+> [!NOTE]
+> このセレクターは主にテーマ開発者が使用するためのものです。
 
 ## 構文
 
-```css
-:-moz-loading
+```css-nolint
+:-moz-loading {}
 ```
 
 ## 例

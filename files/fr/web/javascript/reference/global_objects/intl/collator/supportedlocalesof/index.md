@@ -1,23 +1,22 @@
 ---
 title: Intl.Collator.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
-tags:
-  - Collator
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - Reference
-  - i18n
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Collator/supportedLocalesOf
 ---
 
 {{JSRef}}
 
 La méthode **`Intl.Collator.supportedLocalesOf()`** renvoie, parmi les locales fournies, un tableau contenant les locales supportées et qui ne nécessitent pas d'utiliser la locale par défaut de l'environnement.
 
-{{EmbedInteractiveExample("pages/js/intl-collator-prototype-supportedlocalesof.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Collator.supportedLocalesOf")}}
+
+```js interactive-example
+const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
+const options1 = { localeMatcher: "lookup" };
+
+console.log(Intl.Collator.supportedLocalesOf(locales1, options1));
+// Expected output: Array ["id-u-co-pinyin", "de-ID"]
+// (Note: the exact output may be browser-dependent)
+```
 
 ## Syntaxe
 
@@ -50,7 +49,7 @@ Si on dispose d'un environnement (un navigateur par exemple) qui supporte la com
 
 ```js
 var locales = ["ban", "id-u-co-pinyin", "de-ID"];
-var options = {localeMatcher: "lookup"};
+var options = { localeMatcher: "lookup" };
 console.log(Intl.Collator.supportedLocalesOf(locales, options).join(", "));
 // → "id-u-co-pinyin, de-ID"
 ```

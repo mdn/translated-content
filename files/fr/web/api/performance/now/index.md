@@ -1,14 +1,6 @@
 ---
 title: performance.now()
 slug: Web/API/Performance/now
-tags:
-  - API
-  - API Performance Web
-  - Method
-  - Méthode
-  - Performance
-  - Reference
-translation_of: Web/API/Performance/now
 ---
 
 {{APIRef("High Resolution Timing")}}
@@ -31,16 +23,18 @@ La précision de la valeur retournée est susceptible de changer si/quand les pr
 ## Syntaxe
 
 ```js
-  t = performance.now();
+t = performance.now();
 ```
 
 ## Exemple
 
 ```js
-  var t0 = performance.now();
-  doSomething();
-  var t1 = performance.now();
-  console.log("L'appel de doSomething a demandé " + (t1 - t0) + " millisecondes.")
+var t0 = performance.now();
+doSomething();
+var t1 = performance.now();
+console.log(
+  "L'appel de doSomething a demandé " + (t1 - t0) + " millisecondes.",
+);
 ```
 
 Contrairement aux autres données de temps disponibles en JavaScript (par exemple [`Date.now`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/now)), les horodatages retournés par `Performance.now()` ne sont pas limités à une précision d'une milliseconde. Au contraire, ils représentent les temps comme des nombres flottants avec une précision pouvant aller jusqu'à une microseconde.

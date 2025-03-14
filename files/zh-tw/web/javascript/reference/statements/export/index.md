@@ -49,7 +49,7 @@ export { import1 as name1, import2 as name2, …, nameN } from …;
 - 預設 export （一個 js 檔案只能有一個）:
 
   ```js
-  export default function() {}
+  export default function () {}
   // 或是 'export default class {}'
   // 結尾不用分號
   ```
@@ -92,14 +92,14 @@ function cube(x) {
 }
 const foo = Math.PI + Math.SQRT2;
 var graph = {
-    options:{
-        color:'white',
-        thickness:'2px'
-    },
-    draw: function(){
-        console.log('From graph draw function');
-    }
-}
+  options: {
+    color: "white",
+    thickness: "2px",
+  },
+  draw: function () {
+    console.log("From graph draw function");
+  },
+};
 export { cube, foo, graph };
 ```
 
@@ -111,14 +111,14 @@ export { cube, foo, graph };
 //open the page in a httpserver,otherwise there will be a CORS policy error.
 //script demo.js
 
-import { cube, foo, graph } from 'my-module';
+import { cube, foo, graph } from "my-module";
 graph.options = {
-    color:'blue',
-    thickness:'3px'
+  color: "blue",
+  thickness: "3px",
 };
 graph.draw();
 console.log(cube(3)); // 27
-console.log(foo);    // 4.555806215962888
+console.log(foo); // 4.555806215962888
 ```
 
 ### 使用預設輸出
@@ -135,7 +135,7 @@ export default function cube(x) {
 外部檔案的 import 用法：
 
 ```js
-import cube from 'my-module';
+import cube from "my-module";
 console.log(cube(3)); // 27
 ```
 
@@ -153,4 +153,4 @@ Note 注意預設輸出不能使用 var, let , const。
 
 - {{jsxref("Statements/import", "import")}}
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- [Axel Rauschmayer's book: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+- [Axel Rauschmayer's book: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)

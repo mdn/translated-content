@@ -1,13 +1,9 @@
 ---
 title: button
 slug: Web/HTML/Element/button
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/button
-original_slug: Web/HTML/Elemento/button
 ---
+
+{{HTMLSidebar}}
 
 ## Definición
 
@@ -16,8 +12,9 @@ original_slug: Web/HTML/Elemento/button
 Es el elemento crea botones marcadores.
 
 - La etiqueta de **HTML `<button>`** representa un elemento cliqueable de tipo botón que puede ser utilizado en formularios o en cualquier parte de la página que necesite un botón estándar y simple de aplicar. De forma predeterminada, los botones HTML se presentan con un estilo similar en todas las plataformas, estos estilos se pueden cambiar utilizando [CSS](/es/docs/Web/CSS).
+
   - : **Sus etiquetas son**: \<button> y \</button> (ambas obligatorias).
-  
+
     **Crea una caja**: en linea.
 
     **Está definido como**: [Elemento de control para formulario](/es/docs/HTML/Elemento/Tipos_de_elementos#de_frase).
@@ -363,16 +360,21 @@ Más información (en inglés):
 
 - [Hand tremors and the giant-button-problem - Axess Lab](https://axesslab.com/hand-tremors/)
 
-## Soporte
+## Especificaciones
 
-{{Compat("html.elements.button")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Referencia
 
-- El elemento [button](/es/docs/HTML/Elemento/button) en el estándar [HTML 4.01](http://html.conclase.net/w3c/html401-es/interact/forms.html#h-17.5)
+- El elemento [button](/es/docs/Web/HTML/Element/button) en el estándar [HTML 4.01](http://html.conclase.net/w3c/html401-es/interact/forms.html#h-17.5)
 
 ---
 
-> **Nota:** Estamos ampliando este documento, posiblemente contenga carencias y defectos. ¡Estamos en obras!... disculpen las molestias.
+> [!NOTE]
+> Estamos ampliando este documento, posiblemente contenga carencias y defectos. ¡Estamos en obras!... disculpen las molestias.
 >
 > ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta [MDC:Como ayudar](/es/docs/Project:Como_ayudar).

@@ -1,11 +1,6 @@
 ---
 title: Le projet MDN
 slug: MDN
-tags:
-  - Accueil
-  - MDN
-  - MDN Meta
-translation_of: MDN
 ---
 
 {{MDNSidebar}}
@@ -16,13 +11,13 @@ Le but du projet MDN est de documenter le Web ouvert, les technologies Mozilla e
 
 Nous avons besoin de votre aide ! C'est facile. Ne vous souciez pas de demander permission ou d'avoir peur de faire des erreurs. D'autre part, n'hésitez pas à connaître la [communauté MDN](/fr/docs/MDN/Rejoindre_la_communauté), nous sommes là pour aider ! La documentation ci-dessous vous aidera à débuter.
 
-- [Pour commencer](/fr/docs/MDN/Débuter_sur_MDN)
+- [Pour commencer](/fr/docs/MDN/Community/Contributing/Getting_started)
 
   Vous êtes nouveau sur MDN et voulez apprendre comment le rendre meilleur ? Commencez par là !
 
-- [Je suis un utilisateur avancé](/fr/docs/MDN/Contribute)
+- [Je suis un utilisateur avancé](/fr/docs/MDN/Community/Contributing)
 
-  Accédez à notre guide complet pour les contributeurs de MDN afin d’en apprendre plus une fois que vous êtes à l’aise.
+  Accédez à notre guide complet pour les contributeurs de MDN afin d'en apprendre plus une fois que vous êtes à l'aise.
 
 - [Faites passer le mot](/fr/docs/MDN/Promotion_de_MDN)
 

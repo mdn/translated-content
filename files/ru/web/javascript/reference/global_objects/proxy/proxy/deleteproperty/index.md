@@ -1,25 +1,44 @@
 ---
 title: handler.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
-tags:
-  - Прокси
-  - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/deleteProperty
 ---
 
 {{JSRef}}
 
 Метод **`handler.deleteProperty()`** является "ловушкой" (функция-перехватчик) для оператора {{jsxref("Operators/delete", "delete")}}.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-deleteproperty.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.deleteProperty()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  texture: "scaly",
+};
+
+const handler1 = {
+  deleteProperty(target, prop) {
+    if (prop in target) {
+      delete target[prop];
+      console.log(`property removed: ${prop}`);
+      // Expected output: "property removed: texture"
+    }
+  },
+};
+
+console.log(monster1.texture);
+// Expected output: "scaly"
+
+const proxy1 = new Proxy(monster1, handler1);
+delete proxy1.texture;
+
+console.log(monster1.texture);
+// Expected output: undefined
+```
 
 ## Синтаксис
 
 ```js
 var p = new Proxy(target, {
-  deleteProperty: function(target, property) {
-  }
+  deleteProperty: function (target, property) {},
 });
 ```
 
@@ -60,31 +79,33 @@ var p = new Proxy(target, {
 Следующий код перехватывает действие оператора {{jsxref("Operators/delete", "delete")}}.
 
 ```js
-var p = new Proxy({}, {
-  deleteProperty: function(target, prop) {
-    if (prop in target){
-      delete target[prop]
-      console.log('property removed: ' + prop)
-      return true
-    }
-    else {
-      console.log('property not found: ' + prop)
-      return false
-    }
-  }
-})
+var p = new Proxy(
+  {},
+  {
+    deleteProperty: function (target, prop) {
+      if (prop in target) {
+        delete target[prop];
+        console.log("property removed: " + prop);
+        return true;
+      } else {
+        console.log("property not found: " + prop);
+        return false;
+      }
+    },
+  },
+);
 
-var result
+var result;
 
-p.a = 10
-console.log('a' in p)  // true
+p.a = 10;
+console.log("a" in p); // true
 
-result = delete p.a    // "property removed: a"
-console.log(result)    // true
-console.log('a' in p)  // false
+result = delete p.a; // "property removed: a"
+console.log(result); // true
+console.log("a" in p); // false
 
-result = delete p.a    // "property not found: a"
-console.log(result)    // false
+result = delete p.a; // "property not found: a"
+console.log(result); // false
 ```
 
 ## Спецификации
@@ -93,7 +114,7 @@ console.log(result)    // false
 
 ## Совместимость с браузерами
 
-{{Compat("javascript.builtins.Proxy.handler.deleteProperty")}}
+{{Compat}}
 
 ## Смотрите также
 

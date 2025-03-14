@@ -1,13 +1,15 @@
 ---
 title: font-style
 slug: Web/CSS/@font-face/font-style
+l10n:
+  sourceCommit: 418b3ebf6464716649125199385c39d86c944973
 ---
 
 {{CSSRef}}
 
-**`font-style`** は CSS の記述子で、 {{cssxref("@font-face")}} ルールの中で指定されたフォントのフォントスタイルを指定することができます。
+**`font-style`** は CSS の記述子で、 {{cssxref("@font-face")}} アットルールの中で指定されたフォントのフォントスタイルを指定することができます。
 
-特定のフォントファミリーについて、同じフォントファミリーの異なるスタイルに対応する様々なフォントフェイスをダウンロードできるようにすることができ、 `font-style` 記述子を使用してフォントフェイスのスタイルを正確に指定することができます。 CSS 記述子の値は対応する font プロパティと同じです。
+特定のフォントファミリーについて、同じフォントファミリーの異なるスタイルに対応する様々なフォントフェイスをダウンロードできるようにすることができ、 `font-style` 記述子を使用してフォントフェイスのスタイルを正確に指定することができます。この CSS 記述子の値は対応する {{cssxref("font-style")}} プロパティと同じです。
 
 ## 構文
 
@@ -49,7 +51,7 @@ font-style: oblique 30deg 50deg;
 ```css
 @font-face {
   font-family: garamond;
-  src: url('garamond.ttf');
+  src: url("garamond.ttf");
 }
 ```
 
@@ -64,7 +66,7 @@ font-style: oblique 30deg 50deg;
 ```css
 @font-face {
   font-family: garamond;
-  src: url('garamond-italic.ttf');
+  src: url("garamond-italic.ttf");
   font-style: italic;
 }
 ```
@@ -85,7 +87,6 @@ font-style: oblique 30deg 50deg;
 - {{cssxref("@font-face/font-family", "font-family")}}
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
 - {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/src", "src")}}

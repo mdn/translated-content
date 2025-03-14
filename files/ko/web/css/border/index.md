@@ -1,21 +1,51 @@
 ---
 title: border
 slug: Web/CSS/border
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Layout
-  - Reference
-  - recipe:css-shorthand-property
-translation_of: Web/CSS/border
 ---
 
-{{CSSRef("CSS Borders")}}
+{{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`border`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소의 테두리를 설정합니다. {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}의 값을 설정합니다.
 
-{{EmbedInteractiveExample("pages/css/border.html")}}
+{{InteractiveExample("CSS Demo: border")}}
+
+```css interactive-example-choice
+border: solid;
+```
+
+```css interactive-example-choice
+border: dashed red;
+```
+
+```css interactive-example-choice
+border: 1rem solid;
+```
+
+```css interactive-example-choice
+border: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border: 4mm ridge rgba(211, 220, 50, 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 구성 속성
 
@@ -48,7 +78,8 @@ border: unset;
 
 `border` 속성은 다음의 값 중 한 개에서 세 개를 선택해서 지정할 수 있습니다. 순서는 영향을 주지 않습니다.
 
-> **참고:** 스타일을 지정하지 않으면 기본값인 `none`이 사용돼 테두리가 보이지 않습니다.
+> [!NOTE]
+> 스타일을 지정하지 않으면 기본값인 `none`이 사용돼 테두리가 보이지 않습니다.
 
 ### 값
 
@@ -122,5 +153,5 @@ div {
 - {{Cssxref("border-width")}}
 - {{Cssxref("border-style")}}
 - {{Cssxref("border-color")}}
-- [배경 및 테두리](/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [배경 및 테두리](/ko/docs/Web/CSS/CSS_backgrounds_and_borders)
 - [CSS 배우기: 배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

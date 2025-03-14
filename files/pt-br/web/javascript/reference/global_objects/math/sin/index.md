@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/sin
 
 A função **`Math.sin()`** retorna o seno de um número.
 
-{{EmbedInteractiveExample("pages/js/math-sin.html")}}
+{{InteractiveExample("JavaScript Demo: Math.sin()")}}
+
+```js interactive-example
+function getCircleY(radians, radius) {
+  return Math.sin(radians) * radius;
+}
+
+console.log(getCircleY(1, 10));
+// Expected output: 8.414709848078965
+
+console.log(getCircleY(2, 10));
+// Expected output: 9.092974268256818
+
+console.log(getCircleY(Math.PI, 10));
+// Expected output: 1.2246467991473533e-15
+```
 
 ## Sintaxe
 
@@ -35,24 +50,19 @@ Como `sin()` é um método estático de `Math`, você sempre o usa como `Math.si
 ### Usando `Math.sin()`
 
 ```js
-Math.sin(0);           // 0
-Math.sin(1);           // 0.8414709848078965
+Math.sin(0); // 0
+Math.sin(1); // 0.8414709848078965
 
 Math.sin(Math.PI / 2); // 1
 ```
 
 ## Especificações
 
-| Specification                                                        | Status                       | Comment                                            |
-| -------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.16', 'Math.sin')}} | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-math.sin', 'Math.sin')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-math.sin', 'Math.sin')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.sin")}}
+{{Compat}}
 
 ## Veja também
 

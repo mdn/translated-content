@@ -1,15 +1,9 @@
 ---
 title: Function.prototype.call()
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
-tags:
-  - Function
-  - JavaScript
-  - Method
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/call
 ---
 
-{{JSRef("Objetos_globales", "Function")}}
+{{JSRef}}
 
 ## Resumen
 
@@ -27,7 +21,8 @@ function.call(thisArg[, arg1[, arg2[, ...]]])
 
   - : El valor a usar como `this` cuando se llama a _`function`_.
 
-    > **Nota:** **Advertencia:** En ciertos casos, `thisArg` puede no ser el valor actual visto por el método.
+    > [!WARNING]
+    > En ciertos casos, `thisArg` puede no ser el valor actual visto por el método.
     >
     > Si el método es una función en {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Global_Objects/null", "null")}} y {{jsxref("Global_Objects/undefined", "undefined")}} serán reemplazados con el objeto global, y valores primitivos serán convertidos a objetos.
 
@@ -42,9 +37,10 @@ El resultado de llamar a la función con el `this` especificado y los argumentos
 
 `call()` permite que una función/método que pertenece a un objeto, ser asignada y llamada para un objeto diferente.
 
-`call()` provee un nuevo valor de `this` a la función/método. Con `call()`, puedes escribir un método ona vez y heredarlo a otro objeto, sin tener que reescribir el método en el nuevo objeto.
+`call()` provee un nuevo valor de `this` a la función/método. Con `call()`, puedes escribir un método una vez y heredarlo a otro objeto, sin tener que reescribir el método en el nuevo objeto.
 
-> **Nota:** Mientras la sintaxis de esta función es casi identica a la función {{jsxref("Function.apply", "apply()")}}, la diferencia fundamental es que `call()` acepta una **lista de argumentos**, mientras `apply()` accepta un **arreglo sencillo de argumentos**.
+> [!NOTE]
+> Mientras la sintaxis de esta función es casi identica a la función {{jsxref("Function.apply", "apply()")}}, la diferencia fundamental es que `call()` acepta una **lista de argumentos**, mientras `apply()` accepta un **arreglo sencillo de argumentos**.
 
 ## Ejemplos
 
@@ -62,24 +58,26 @@ function Producto(nombre, precio) {
   this.precio = precio;
 
   if (precio < 0)
-    throw RangeError('No se puede crear el producto "' + nombre + '" con un precio negativo');
+    throw RangeError(
+      'No se puede crear el producto "' + nombre + '" con un precio negativo',
+    );
   return this;
 }
 
 function Comida(nombre, precio) {
   Producto.call(this, nombre, precio);
-  this.categoria = 'comida';
+  this.categoria = "comida";
 }
 Comida.prototype = new Producto();
 
 function Juguete(nombre, precio) {
   Producto.call(this, nombre, precio);
-  this.categoria = 'juguete';
+  this.categoria = "juguete";
 }
 Juguete.prototype = new Producto();
 
-var queso = new Comida('feta', 5);
-var diversion = new Juguete('robot', 40);
+var queso = new Comida("feta", 5);
+var diversion = new Juguete("robot", 40);
 ```
 
 ### Usando `call` para invocar una función anónima
@@ -88,25 +86,26 @@ En este ejemplo, creamos una función anónima y usamos `call` para invocarla en
 
 El propósito principal de la función anónima aquí es agregar una función `print` a cada objeto, el cual puede imprimir el índice correcto en el arreglo.
 
-> **Nota:** Pasar el objeto como valor `this` no es estrictamente necesario, pero se hace con propósito explicativo.
+> [!NOTE]
+> Pasar el objeto como valor `this` no es estrictamente necesario, pero se hace con propósito explicativo.
 
 ```js
 var animales = [
-  {especie: 'Leon', nombre: 'Rey'},
-  {especie: 'Whale', nombre: 'Fail'}
+  { especie: "Leon", nombre: "Rey" },
+  { especie: "Whale", nombre: "Fail" },
 ];
 
 for (var i = 0; i < animales.length; i++) {
   (function (i) {
     this.imprimir = function () {
-      console.log('#' + i  + ' ' + this.especie + ': ' + this.nombre);
-    }
+      console.log("#" + i + " " + this.especie + ": " + this.nombre);
+    };
     this.imprimir();
   }).call(animales[i], i);
 }
 ```
 
-## See also
+## Ver también
 
 - {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.apply()")}}

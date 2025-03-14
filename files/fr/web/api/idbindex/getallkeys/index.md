@@ -1,13 +1,6 @@
 ---
 title: IDBIndex.getAllKeys()
 slug: Web/API/IDBIndex/getAllKeys
-tags:
-  - API
-  - IDBIndex
-  - IndexedDB
-  - Méthode
-  - Reference
-translation_of: Web/API/IDBIndex/getAllKeys
 ---
 
 {{APIRef("IndexedDB")}}
@@ -37,20 +30,20 @@ Un objet {{domxref("IDBRequest")}} sur lequel seront reçus les différents év�
 
 Cette méthode peut déclencher une des exceptions suivantes :
 
-| Exception                        | Description                                                                  |
-| -------------------------------- | ---------------------------------------------------------------------------- |
-| `TransactionInactiveError`       | La transaction pour cet index {{domxref("IDBIndex")}} est inactive. |
-| `InvalidStateError`              | L'index {{domxref("IDBIndex")}} a été supprimé ou déplacé.          |
-| {{jsxref("TypeError")}} | Le paramètre `quantite` n'est pas compris entre `0` et `2^32-1`              |
+| Exception                  | Description                                                         |
+| -------------------------- | ------------------------------------------------------------------- |
+| `TransactionInactiveError` | La transaction pour cet index {{domxref("IDBIndex")}} est inactive. |
+| `InvalidStateError`        | L'index {{domxref("IDBIndex")}} a été supprimé ou déplacé.          |
+| {{jsxref("TypeError")}}    | Le paramètre `quantite` n'est pas compris entre `0` et `2^32-1`     |
 
 ## Exemples
 
 ```js
-var myIndex = objectStore.index('index');
+var myIndex = objectStore.index("index");
 var getAllKeyRequest = myIndex.getAllKeys();
-getAllKeysRequest.onsuccess = function() {
+getAllKeysRequest.onsuccess = function () {
   console.log(getAllKeysRequest.result);
-}
+};
 ```
 
 ## Spécifications
@@ -63,10 +56,10 @@ getAllKeysRequest.onsuccess = function() {
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Initier une connexion : {{domxref("IDBDatabase")}}
 - Utiliser les transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

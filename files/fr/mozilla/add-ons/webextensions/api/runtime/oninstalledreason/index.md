@@ -1,20 +1,9 @@
 ---
 title: runtime.OnInstalledReason
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/OnInstalledReason
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - OnInstalledReason
-  - Reference
-  - Type
-  - WebExtensions
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/OnInstalledReason
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Les valeurs pour laquelle l'événement {{WebExtAPIRef("runtime.onInstalled")}} est en cours d'envoi.
 
@@ -31,15 +20,15 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - `"shared_module_update"`
   - : Une autre extension, qui contient un module utilisé par cette extension, a été mise à jour.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.OnInstalledReason")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

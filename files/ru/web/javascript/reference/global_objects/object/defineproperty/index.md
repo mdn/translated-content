@@ -1,26 +1,34 @@
 ---
 title: Object.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
-tags:
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 ## Сводка
 
-Метод **`Object.defineProperty()`** определяет новое или изменяет существующее свойство непосредственно на объекте, возвращая этот объект.
+Статический метод **`Object.defineProperty()`** определяет новое или изменяет существующее свойство объекта и возвращает этот объект.
+
+{{InteractiveExample("JavaScript Demo: Object.defineProperty()")}}
+
+```js interactive-example
+const object1 = {};
+
+Object.defineProperty(object1, "property1", {
+  value: 42,
+  writable: false,
+});
+
+object1.property1 = 77;
+// Throws an error in strict mode
+
+console.log(object1.property1);
+// Expected output: 42
+```
 
 ## Синтаксис
 
-```
+```js-nolint
 Object.defineProperty(obj, prop, descriptor)
 ```
 
@@ -29,7 +37,7 @@ Object.defineProperty(obj, prop, descriptor)
 - `obj`
   - : Объект, на котором определяется свойство.
 - `prop`
-  - : Имя определяемого или изменяемого свойства.
+  - : Строка или {{jsxref("Symbol")}} с ключом определяемого или изменяемого свойства.
 - `descriptor`
   - : Дескриптор определяемого или изменяемого свойства.
 
@@ -66,41 +74,41 @@ Object.defineProperty(obj, prop, descriptor)
   - : Функция, используемая как сеттер свойства, либо {{jsxref("Global_Objects/undefined", "undefined")}}, если свойство не имеет сеттера. Функция принимает единственным аргументом новое значение, присваиваемое свойству.
     **Значение по умолчанию установлено в {{jsxref("Global_Objects/undefined", "undefined")}}.**
 
-Имейте в виду, что эти ключи не обязательно должны принадлежать самому дескриптору свойства, если они унаследованы, они так же будут приниматься во внимание. Для сохранения этих ключей по умолчанию неизменными, вы можете заранее заморозить {{jsxref("Object.prototype")}}, явно определив все ключи, либо установить свойство {{jsxref("Object.prototype.__proto__", "__proto__")}} в {{jsxref("Global_Objects/null", "null")}}.
+Имейте в виду, что эти ключи не обязательно должны принадлежать самому дескриптору свойства, если они унаследованы, они так же будут приниматься во внимание. Для сохранения этих ключей по умолчанию неизменными, вы можете заранее заморозить {{jsxref("Object.prototype")}}, явно определив все ключи, либо установить свойство [`Object.prototype.__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) в {{jsxref("Operators/null", "null")}}.
 
 ```js
 // Использование __proto__
-Object.defineProperty(obj, 'key', {
+Object.defineProperty(obj, "key", {
   __proto__: null, // нет унаследованных свойств
-  value: 'static'  // по умолчанию
-                   // не перечисляется,
-                   // не настраивается и
-                   // не перезаписывается
+  value: "static", // по умолчанию
+  // не перечисляется,
+  // не настраивается и
+  // не перезаписывается
 });
 
 // Явное определение свойства
-Object.defineProperty(obj, 'key', {
+Object.defineProperty(obj, "key", {
   enumerable: false,
   configurable: false,
   writable: false,
-  value: 'static'
+  value: "static",
 });
 
 // Переиспользование одного и того же объекта
 function withValue(value) {
-  var d = withValue.d || (
-    withValue.d = {
+  var d =
+    withValue.d ||
+    (withValue.d = {
       enumerable: false,
       writable: false,
       configurable: false,
-      value: null
-    }
-  );
+      value: null,
+    });
   d.value = value;
   return d;
 }
 // ... и ...
-Object.defineProperty(obj, 'key', withValue('static'));
+Object.defineProperty(obj, "key", withValue("static"));
 
 // Если доступен метод freeze, предотвращаем добавление свойств
 // value, get, set, enumerable, writable и configurable
@@ -109,8 +117,6 @@ Object.defineProperty(obj, 'key', withValue('static'));
 ```
 
 ## Примеры
-
-Если вы хотите посмотреть, как использовать метод `Object.defineProperty()` с синтаксисом _похожим-на-бинарные-флаги_, смотрите [дополнительные примеры](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples).
 
 ### Пример: создание свойства
 
@@ -121,22 +127,26 @@ var o = {}; // Создаём новый объект
 
 // Пример добавления свойства к объекту через defineProperty()
 // с дескриптором данных
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 37,
   writable: true,
   enumerable: true,
-  configurable: true
+  configurable: true,
 });
 // Свойство 'a' существует в объекте o и имеет значение, равное 37
 
 // Пример добавления свойства к объекту через defineProperty()
 // с дескриптором доступа
 var bValue = 38;
-Object.defineProperty(o, 'b', {
-  get: function() { return bValue; },
-  set: function(newValue) { bValue = newValue; },
+Object.defineProperty(o, "b", {
+  get: function () {
+    return bValue;
+  },
+  set: function (newValue) {
+    bValue = newValue;
+  },
   enumerable: true,
-  configurable: true
+  configurable: true,
 });
 o.b; // 38
 // Свойство 'b' существует в объекте o и имеет значение, равное 38
@@ -144,9 +154,11 @@ o.b; // 38
 // пока свойство o.b не будет переопределено
 
 // Вы не можете смешать два этих подхода:
-Object.defineProperty(o, 'conflict', {
+Object.defineProperty(o, "conflict", {
   value: 0x9f91102,
-  get: function() { return 0xdeadbeef; }
+  get: function () {
+    return 0xdeadbeef;
+  },
 });
 // Выкинет исключение TypeError: свойство value применимо только в
 // дескрипторах данных, свойство get применимо только в дескрипторах
@@ -155,11 +167,11 @@ Object.defineProperty(o, 'conflict', {
 
 ### Пример: изменение свойства
 
-Если свойство уже существует, метод `Object.defineProperty()` попытается изменить свойство в соответствии со значениями в дескрипторе и текущим состоянием объекта. Если у старого дескриптора атрибут `configurable` был установлен в `false` (говорит, что свойство является «ненастраиваемым»), то никакие атрибуты, кроме атрибута `writable`, не смогут быть изменены. В этом случае так же невозможно переключаться между типами дескрипторов.
+Если свойство уже существует, метод `Object.defineProperty()` попытается изменить свойство в соответствии со значениями в дескрипторе и текущим состоянием объекта.
 
-Если свойство является ненастраиваемым, его атрибут `writable` может быть изменён только на значение `false`.
+Если у старого дескриптора атрибут `configurable` был установлен в `false`, то свойство является _ненастраиваемым_. Нельзя изменять атрибуты ненастраиваемых свойств, а также нельзя изменять тип дескриптора. Для свойств данных с `writable: true` можно изменять значение и изменять атрибут `writable` с `true` на `false`. При попытке изменить ненастраиваемые атрибуты свойств возникает ошибка {{jsxref("TypeError")}}. Исключения составляют атрибуты `value` и `writable` (если это разрешено) и если новое значение совпадает с исходным значением свойства данных.
 
-При попытке изменить ненастраиваемые атрибуты свойства будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}} (кроме случая изменения атрибута `writable`), даже в том случае, если текущее и новое значения идентичны.
+Если свойство является настраиваемым, то установка атрибуту значения `undefined` равно его удалению. Например, если `o.k` это свойство доступа, то вызов `Object.defineProperty(o, "k", { set: undefined })` удалит сеттер, оставив у `k` только геттер, то есть сделает его доступным только для чтения. Если атрибут отсутствует в новом дескрипторе, то берётся значение атрибута из старого дескриптора (то есть не происходит неявного переопределения на `undefined`). Можно переключаться между разными типами дескрипторов (свойства данных или доступа). Например, если новый дескриптор — это дескриптор данных (с `value` или `writable`), то атрибуты `get` и `set` оригинального дескриптора будут удалены.
 
 #### Атрибут `writable`
 
@@ -168,14 +180,14 @@ Object.defineProperty(o, 'conflict', {
 ```js
 var o = {}; // Создаём новый объект
 
-Object.defineProperty(o, 'a', {
-  value : 37,
-  writable : false
+Object.defineProperty(o, "a", {
+  value: 37,
+  writable: false,
 });
 
 console.log(o.a); // Выведет 37
 o.a = 25; // Исключение не будет выброшено (будет выброшено только в
-          // строгом режиме, даже если значение будет тем же самым)
+// строгом режиме, даже если значение будет тем же самым)
 console.log(o.a); // Выведет 37. Присваивание не сработало.
 ```
 
@@ -187,13 +199,13 @@ console.log(o.a); // Выведет 37. Присваивание не срабо
 
 ```js
 var o = {};
-Object.defineProperty(o, 'a', { value: 1, enumerable: true });
-Object.defineProperty(o, 'b', { value: 2, enumerable: false });
+Object.defineProperty(o, "a", { value: 1, enumerable: true });
+Object.defineProperty(o, "b", { value: 2, enumerable: false });
 // Атрибут enumerable по умолчанию установлен в false
-Object.defineProperty(o, 'c', { value: 3 });
+Object.defineProperty(o, "c", { value: 3 });
 
 o.d = 4; // При создании свойства путём присваивания, атрибут enumerable
-         // по умолчанию устанавливается в true
+// по умолчанию устанавливается в true
 
 for (var i in o) {
   console.log(i);
@@ -202,9 +214,9 @@ for (var i in o) {
 
 Object.keys(o); // ['a', 'd']
 
-o.propertyIsEnumerable('a'); // true
-o.propertyIsEnumerable('b'); // false
-o.propertyIsEnumerable('c'); // false
+o.propertyIsEnumerable("a"); // true
+o.propertyIsEnumerable("b"); // false
+o.propertyIsEnumerable("c"); // false
 ```
 
 #### Атрибут `configurable`
@@ -213,16 +225,22 @@ o.propertyIsEnumerable('c'); // false
 
 ```js
 var o = {};
-Object.defineProperty(o, 'a', {
-  get: function() { return 1; },
-  configurable: false
+Object.defineProperty(o, "a", {
+  get: function () {
+    return 1;
+  },
+  configurable: false,
 });
 
-Object.defineProperty(o, 'a', { configurable: true }); // Выкинет TypeError
-Object.defineProperty(o, 'a', { enumerable: true }); // Выкинет TypeError
-Object.defineProperty(o, 'a', { set: function() {} }); // Выкинет TypeError (ранее свойство set дескриптора не было определено)
-Object.defineProperty(o, 'a', { get: function() { return 1; } }); // Выкинет TypeError (даже несмотря на то, что get делает то же, что и раньше)
-Object.defineProperty(o, 'a', { value: 12 }); // Выкинет TypeError
+Object.defineProperty(o, "a", { configurable: true }); // Выкинет TypeError
+Object.defineProperty(o, "a", { enumerable: true }); // Выкинет TypeError
+Object.defineProperty(o, "a", { set: function () {} }); // Выкинет TypeError (ранее свойство set дескриптора не было определено)
+Object.defineProperty(o, "a", {
+  get: function () {
+    return 1;
+  },
+}); // Выкинет TypeError (даже несмотря на то, что get делает то же, что и раньше)
+Object.defineProperty(o, "a", { value: 12 }); // Выкинет TypeError
 
 console.log(o.a); // Выведет 1
 delete o.a; // Ничего не произойдёт
@@ -240,22 +258,21 @@ var o = {};
 
 o.a = 1;
 // Эквивалентно записи:
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 1,
   writable: true,
   configurable: true,
-  enumerable: true
+  enumerable: true,
 });
 
-
 // С другой стороны,
-Object.defineProperty(o, 'a', { value: 1 });
+Object.defineProperty(o, "a", { value: 1 });
 // эквивалентно записи:
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 1,
   writable: false,
   configurable: false,
-  enumerable: false
+  enumerable: false,
 });
 ```
 
@@ -268,18 +285,20 @@ function Archiver() {
   var temperature = null;
   var archive = [];
 
-  Object.defineProperty(this, 'temperature', {
-    get: function() {
-      console.log('get!');
+  Object.defineProperty(this, "temperature", {
+    get: function () {
+      console.log("get!");
       return temperature;
     },
-    set: function(value) {
+    set: function (value) {
       temperature = value;
       archive.push({ val: temperature });
-    }
+    },
   });
 
-  this.getArchive = function() { return archive; };
+  this.getArchive = function () {
+    return archive;
+  };
 }
 
 var arc = new Archiver();
@@ -297,43 +316,13 @@ arc.getArchive(); // [{ val: 11 }, { val: 13 }]
 
 {{Compat}}
 
-На основе [таблицы совместимости Kangax](http://kangax.github.com/es5-compat-table/).
-
-### Переопределение свойства `length` на объекте `Array`
-
-На массивах возможно переопределить свойство {{jsxref("Array.length", "length")}}, при условии соблюдения обычных ограничений на переопределение. (Изначально свойство {{jsxref("Array.length", "length")}} является ненастраиваемым, неперечисляемым и записываемым. Таким образом, на неизмененном массиве возможно изменить значение свойства {{jsxref("Array.length", "length")}} либо сделать его незаписываемым. Его перечисляемость или настраиваемость изменить нельзя, так же как и его записываемость, если оно сделано не записываемым.) Однако не все браузеры поддерживают такое переопределение.
-
-Firefox с версии 4 по версию 22 бросает исключение {{jsxref("Global_Objects/TypeError", "TypeError")}} на любую попытку (вне зависимости от того, разрешена ли она или нет) переопределить свойство {{jsxref("Array.length", "length")}} массива.
-
-Версии Chrome, реализующие метод `Object.defineProperty()`, в некоторых случаях игнорируют значение `length` отличное от текущего значения свойства {{jsxref("Array.length", "length")}} массива. В некоторых случаях изменение записываемости свойства просто не работает без каких-либо сообщений об ошибках (и выбрасываемых исключений). Также, в связи с вышесказанным, некоторые методы изменения массива, вроде метода {{jsxref("Array.prototype.push")}}, не обращают внимания на незаписываемое свойство {{jsxref("Array.length", "length")}}.
-
-Версии Safari, реализующие метод `Object.defineProperty()`, игнорируют значение `length`, отличное от текущего значения свойства {{jsxref("Array.length", "length")}} массива, и попытка изменить записываемость свойства выполнится без ошибок, но на самом деле записываемость свойства не изменится.
-
-Только Internet Explorer 9 и выше, а так же Firefox 23 и выше, по-видимому, полностью и правильно реализуют переопределение свойства {{jsxref("Array.length", "length")}} массивов. В настоящее время не стоит полагаться на работу переопределения свойства {{jsxref("Array.length", "length")}} массива, или что оно работает определённым образом. И даже если вы _можете_ положиться на это, [есть действительно веская причина не делать этого](http://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/).
-
-### Примечания по Internet Explorer 8
-
-Реализация метода `Object.defineProperty()` в Internet Explorer 8 предусматривает, что он может быть [использован только для объектов DOM](http://msdn.microsoft.com/en-us/library/dd229916%28VS.85%29.aspx). Нужно также отметить несколько моментов:
-
-- Попытка использовать `Object.defineProperty()` на родных объектах приведёт к ошибке.
-- Атрибуты свойств должны быть равны определённым значениям. Атрибуты `configurable`, `enumerable` и `writable` дескриптора данных должны содержать значения `true`, `true` и `true`, а атрибуты `configurable` и `enumerable` дескриптора доступа должны содержать значения `true` и `false` соответственно.(?) Любая попытка присвоить атрибутам другие значения приведёт к ошибке.
-- Для того, чтобы изменить конфигурацию свойства, сначала его нужно удалить. Если свойство не будет удалено, оно останется в том же виде, что и до попытки изменения его конфигурации.
-
-### Chrome 37 (and below) specific notes
-
-Chrome 37 (and below) has a [bug](https://bugs.chromium.org/p/v8/issues/detail?id=3448) where an
-attempt to define a "prototype" property, on a function, with
-`writable: false` doesn't work as expected.
-
 ## Смотрите также
 
-- [Перечисляемость и собственность свойств](/ru/docs/Enumerability_and_ownership_of_properties)
+- [Перечисляемость и собственность свойств](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
-- {{jsxref("Object.propertyIsEnumerable()")}}
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
-- {{jsxref("Object.prototype.watch()")}}
-- {{jsxref("Object.prototype.unwatch()")}}
-- {{jsxref("Operators/get", "get")}}
-- {{jsxref("Operators/set", "set")}}
+- {{jsxref("Functions/get", "get")}}
+- {{jsxref("Functions/set", "set")}}
 - {{jsxref("Object.create()")}}
-- [Дополнительные примеры по `Object.defineProperty()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples)
+- {{jsxref("Reflect.defineProperty()")}}

@@ -1,24 +1,21 @@
 ---
 title: strike
 slug: Web/HTML/Element/strike
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/strike
-original_slug: Web/HTML/Elemento/strike
 ---
+
+{{HTMLSidebar}}
 
 ### Definición
 
 - Muestra el texto tachado con una linea horizontal.
+
   - : **Sus etiquetas son**: \<strike> y \</strike> (Ambas obligatorias)
-  
-    **Crea una caja**:[en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
-    **Está definido como**:[Elemento de estilo de fuente](/es/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente).
+    **Crea una caja**:[en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea).
 
-    **Puede contener**: cero o más elementos [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **Está definido como**:[Elemento de estilo de fuente](/es/docs/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente).
+
+    **Puede contener**: cero o más elementos [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 ##### Atributos Genéricos
 
@@ -45,6 +42,7 @@ original_slug: Web/HTML/Elemento/strike
 
 ### Comentarios
 
-> **Advertencia:** DESAPROBADO
+> [!WARNING]
+> DESAPROBADO
 
 de momento no funciona

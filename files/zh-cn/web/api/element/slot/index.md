@@ -7,18 +7,11 @@ slug: Web/API/Element/slot
 
 {{domxref("Element")}}接口的 **`slot`** 属性会返回已插入元素所在的 Shadow DOM slot 的名称。
 
-Slot 是存在于[web component](/zh-CN/docs/Web/Web_Components)内部的占位符，用户可以通过 slot 属性在 web component 的内部插入自定义的标记文本。（详见[Using templates and slots](/zh-CN/docs/Web/Web_Components/Using_templates_and_slots)）
+Slot 是存在于[web component](/zh-CN/docs/Web/API/Web_components)内部的占位符，用户可以通过 slot 属性在 web component 的内部插入自定义的标记文本。（详见 [Using template and slot](/zh-CN/docs/Web/API/Web_components/Using_templates_and_slots)）
 
-## 语法
+## 值
 
-```
-var aString = element.slot
-element.slot = aString
-```
-
-### 值
-
-{{domxref("DOMString")}}.
+一个字符串。
 
 ## 示例
 
@@ -35,7 +28,7 @@ element.slot = aString
 在 Javascript 代码中我们获取到上面代码中的 span 的引用，然后将对应的 `<slot>` 元素的引用的名称打印在控制台中。
 
 ```js
-let slottedSpan = document.querySelector('my-paragraph span')
+let slottedSpan = document.querySelector("my-paragraph span");
 console.log(slottedSpan.slot); // logs 'my-text'
 ```
 

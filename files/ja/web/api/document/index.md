@@ -2,12 +2,12 @@
 title: Document
 slug: Web/API/Document
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: 4558d208395a5b1df4db44b0c8ef4e9a0f8adbbf
 ---
 
 {{APIRef("DOM")}}
 
-**`Document`** インターフェイスはブラウザーに読み込まれたウェブページを表し、 [DOM ツリー](/ja/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core)であるウェブページのコンテンツへの入口としての役割を果たします。
+**`Document`** インターフェイスはブラウザーに読み込まれたウェブページを表し、 [DOM ツリー](/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model#dom_%e3%83%84%e3%83%aa%e3%83%bc%e3%81%a8%e3%81%af%ef%bc%9f)であるウェブページのコンテンツへの入口としての役割を果たします。
 
 DOM ツリーには {{HTMLElement("body")}} や {{HTMLElement("table")}} など、[多数の要素](/ja/docs/Web/HTML/Element)があります。これはページの URL を取得したり文書で新たな要素を作成するなど、文書全体に関わる機能を提供します。
 
@@ -20,7 +20,7 @@ DOM ツリーには {{HTMLElement("body")}} や {{HTMLElement("table")}} など�
 - {{DOMxRef("Document.Document", "Document()")}}
   - : 新しい `Document` オブジェクトを作成します。
 
-## プロパティ
+## インスタンスプロパティ
 
 _このインターフェイスは、 {{DOMxRef("Node")}} インターフェイスおよび {{DOMxRef("EventTarget")}} インターフェイスのプロパティも継承しています。_
 
@@ -51,12 +51,16 @@ _このインターフェイスは、 {{DOMxRef("Node")}} インターフェイ�
   - : 文書の場所を文字列で返します。
 - {{DOMxRef("Document.embeds")}} {{ReadOnlyInline}}
   - : {{DOMxRef("HTMLCollection")}} で、現在の文書に含まれる埋め込まれた {{HTMLElement('embed')}} 要素のリストを返します。
+- {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : 文書に適用されている機能ポリシーを {{DOMxRef("FeaturePolicy")}} インターフェイスで返します。
 - {{domxref("Document.firstElementChild")}} {{ReadOnlyInline}}
   - : 現在の文書における最初の子要素を返します。
 - {{DOMxRef("Document.fonts")}}
   - : 現在の文書の {{DOMxRef("FontFaceSet")}} インターフェイスを返します。
 - {{DOMxRef("Document.forms")}} {{ReadOnlyInline}}
   - : {{DOMxRef("HTMLCollection")}} で現在の文書の {{HTMLElement("form")}} 要素を返します。
+- {{DOMxRef("Document.fragmentDirective")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : 現在の文書の {{domxref("FragmentDirective")}} を返します。
 - {{DOMxRef("Document.fullscreenElement")}} {{ReadOnlyInline}}
   - : この文書で現在全画面モードになっている要素です。
 - {{DOMxRef("Document.head")}} {{ReadOnlyInline}}
@@ -71,8 +75,6 @@ _このインターフェイスは、 {{DOMxRef("Node")}} インターフェイ�
   - : 現在の文書における最後の子要素を返します。
 - {{DOMxRef("Document.links")}} {{ReadOnlyInline}}
   - : {{DOMxRef("HTMLCollection")}} で、文書内のすべてのハイパーリンクのリストを返します。
-- {{DOMxRef("Document.mozSyntheticDocument")}} {{Non-standard_Inline}}
-  - : 単独の画像、動画、音声ファイルなど、文書が合成されたものである限り `true` を返します。
 - {{DOMxRef("Document.pictureInPictureElement")}} {{ReadOnlyInline}}
   - : この文書で現在、ピクチャインピクチャモードで表示されている要素 ({{DOMxRef('Element')}}) を返します。
 - {{DOMxRef("Document.pictureInPictureEnabled")}} {{ReadOnlyInline}}
@@ -80,9 +82,9 @@ _このインターフェイスは、 {{DOMxRef("Node")}} インターフェイ�
 - {{DOMxRef("Document.plugins")}} {{ReadOnlyInline}}
   - : {{DOMxRef("HTMLCollection")}} で、利用可能なプラグインのリストを返します。
 - {{DOMxRef("Document.pointerLockElement")}} {{ReadOnlyInline}}
-  - : ポインターがロックされている場合、マウスイベントのターゲットとして設定された要素を返します。ロック町の場合、ポインターがロックされていない場合、ターゲットが他の文書にある場合は `null` を返します。
-- {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : 特定の文書に適用される機能ポリシーを簡単に導入するための API を提供する {{DOMxRef("FeaturePolicy")}} インターフェイスを返します。
+  - : ポインターがロックされている場合、マウスイベントのターゲットとして設定された要素を返します。ロック待ちの場合、ポインターがロックされていない場合、ターゲットが他の文書にある場合は `null` を返します。
+- {{DOMxRef("Document.prerendering")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : 論理値で、文書が現在、[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) によって開始されたような、事前レンダリング中であるかどうかを示します。
 - {{DOMxRef("Document.scripts")}} {{ReadOnlyInline}}
   - : {{DOMxRef("HTMLCollection")}} で、文書内のすべての {{HTMLElement("script")}} 要素を返します。
 - {{DOMxRef("Document.scrollingElement")}} {{ReadOnlyInline}}
@@ -106,8 +108,6 @@ _HTML 文書用の `Document` インターフェイスは {{DOMxRef("HTMLDocumen
   - : 文書全体を編集可能かを取得/設定します。
 - {{DOMxRef("Document.dir")}}
   - : 文書の書字方向 (rtl/ltr) を取得/設定します。
-- {{DOMxRef("Document.domain")}} {{Deprecated_Inline}}
-  - : 現在の文書のドメインを取得/設定します。
 - {{DOMxRef("Document.fullscreenEnabled")}} {{ReadOnlyInline}}
   - : 全画面モードが利用できるかどうかを示します。
 - {{DOMxRef("Document.lastModified")}} {{ReadOnlyInline}}
@@ -132,25 +132,25 @@ _HTML 文書用の `Document` インターフェイスは {{DOMxRef("HTMLDocumen
 - {{DOMxRef("Document.anchors")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : 文書内のすべてのアンカーのリストを返します。
 - {{DOMxRef("Document.applets")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : 文書内にあるアプレットのリスト (出現順) を返します。
+  - : 空の {{domxref("HTMLCollection")}} を返します。文書内にあるアプレットのリストを返すために使われた古いプロパティです。
 - {{DOMxRef("Document.bgColor")}} {{Deprecated_Inline}}
   - : 現在の文書の背景色を取得または設定します。
 - {{DOMxRef("Document.characterSet","Document.charset")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : {{DOMxRef("Document.characterSet")}} の別名です。代わりに {{DOMxRef("Document.characterSet")}} を使用してください。
+  - : {{DOMxRef("Document.characterSet")}} の別名です。代わりにこのプロパティを使用してください。
+- {{DOMxRef("Document.domain")}} {{Deprecated_Inline}}
+  - : 現在の文書のドメインを取得/設定します。
 - {{DOMxRef("Document.fgColor")}} {{Deprecated_Inline}}
   - : 現在の文書の前景色または文字色を取得/設定します。
 - {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
-  - : 文書が[全画面モード](/ja/docs/Web/API/Fullscreen_API)にあるときに `true` になります。
-- {{DOMxRef("Document.height")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : 現在の文書の高さを取得/設定します。
+  - : 文書が[全画面モード](/ja/docs/Web/API/Fullscreen_API)にあるときに `true` を返します。
 - {{DOMxRef("Document.characterSet", "Document.inputEncoding")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : {{DOMxRef("Document.characterSet")}} の別名です。代わりにそちらを使用してください。
 - {{DOMxRef("Document.lastStyleSheetSet")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : 直前に有効であったスタイルシートセットの名称を返します。 {{DOMxRef("Document.selectedStyleSheetSet","selectedStyleSheetSet")}} に値を設定してスタイルシートを変更するまで、この値は `null` になります。
 - {{DOMxRef("Document.linkColor")}} {{Deprecated_Inline}}
-  - : document 内のハイパーリンクの色を取得/設定します。
+  - : 文書内のハイパーリンクの色を取得/設定します。
 - {{DOMxRef("Document.preferredStyleSheetSet")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : ページの作者によって設定された、優先的なスタイルシートを返します。
+  - : ページの作者によって設定された、推奨されるスタイルシートを返します。
 - {{DOMxRef("Document.rootElement")}} {{Deprecated_Inline}}
   - : {{DOMxRef("Document.documentElement")}} と同様ですが、 {{SVGElement("svg")}} ルート要素専用です。こちらのプロパティを代わりに使用してください。
 - {{DOMxRef("Document.selectedStyleSheetSet")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
@@ -159,16 +159,14 @@ _HTML 文書用の `Document` インターフェイスは {{DOMxRef("HTMLDocumen
   - : 文書で使用できるスタイルシートセットのリストを返します。
 - {{DOMxRef("Document.vlinkColor")}} {{Deprecated_Inline}}
   - : 訪問済みのハイパーリンクの色を取得/設定します。
-- {{DOMxRef("Document.width")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : 現在の文書の幅を返します。
 - {{DOMxRef("Document.xmlEncoding")}} {{Deprecated_Inline}}
   - : XML 宣言によって決められたエンコーディングを返します。
 - {{DOMxRef("Document.xmlStandalone")}} {{Deprecated_Inline}}
-  - : XML 宣言で文書がスタンドアロンである (_例_: DTD の外部パートが文書のコンテンツに影響する) 場合に `true` を、そうでない場合に `false` を返します。
+  - : XML 宣言で文書がスタンドアロンである（_例_: DTD の外部パートが文書のコンテンツに影響する）場合に `true` を、そうでない場合に `false` を返します。
 - {{DOMxRef("Document.xmlVersion")}} {{Deprecated_Inline}}
   - : XML 宣言で指定されたバージョン番号、または宣言が省略されている場合に `"1.0"` を返します。
 
-## メソッド
+## インスタンスメソッド
 
 _このインターフェイスは、{{DOMxRef("Node")}} インターフェイスおよび {{DOMxRef("EventTarget")}} インターフェイスのメソッドを継承します。_
 
@@ -176,6 +174,8 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
   - : 外部文書からノードを取り込みます。
 - {{DOMxRef("Document.append()")}}
   - : 文書の最後の子の後に {{domxref("Node")}} オブジェクトまたは文字列の集合を挿入します。
+- {{DOMxRef("Document.browsingTopics()")}} {{Experimental_Inline}} {{non-standard_inline}}
+  - : 過去 3 つのエポックのそれぞれから 1 つずつ、ユーザーのトップトピックを表すオブジェクトの配列で履行されるプロミスを返します。既定では、このメソッドは、呼び出し側が監視している現在のページの訪問をブラウザーに記録させるので、後でページのホスト名をトピックの計算に使用することができます。詳細は[トピック API](/ja/docs/Web/API/Topics_API) を参照してください。
 - {{DOMxRef("Document.captureEvents()")}} {{Deprecated_Inline}}
   - : {{DOMxRef("Window.captureEvents")}} をご覧ください。
 - {{DOMxRef("Document.caretPositionFromPoint()")}}
@@ -196,8 +196,6 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
   - : 指定したタグ名で新しい要素を生成します。
 - {{DOMxRef("Document.createElementNS()")}}
   - : 指定したタグ名およびネームスペース URI で、新しい要素を生成します。
-- {{DOMxRef("Document.createEntityReference()")}} {{Deprecated_Inline}}
-  - : 新しい実体参照オブジェクトを生成して、返します。
 - {{DOMxRef("Document.createEvent()")}}
   - : イベントオブジェクトを生成します。
 - {{DOMxRef("Document.createNodeIterator()")}}
@@ -241,11 +239,13 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
 - {{DOMxRef("Document.getSelection()")}}
   - : ユーザーが現在選択しているテキスト範囲、または現在のキャレットの位置を表す {{DOMxRef('Selection')}} オブジェクトを返します。
 - {{DOMxRef("Document.hasStorageAccess()")}}
-  - : 文書が自分自身 (first-party) のストレージにアクセスしたかどうかを示す論理値で解決する {{jsxref("Promise")}} を返します。
+  - : 文書に分離されていないクッキーへのアクセスがあるかどうかを示す論理値で解決する {{jsxref("Promise")}} を返します。
+- {{DOMxRef("Document.hasUnpartitionedCookieAccess()")}}
+  - : {{DOMxRef("Document.hasStorageAccess()")}} の新しい名前です。
 - {{DOMxRef("Document.importNode()")}}
   - : 外部文書のノードの複製を返します。
-- {{DOMxRef("Document.normalizeDocument()")}} {{Deprecated_Inline}}
-  - : エンティティの置換や、テキストノードの正規化などを行います。
+- {{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}
+  - : 指定した要素 ID の背景画像として使用している要素を変更することができます。
 - {{DOMxRef("Document.prepend()")}}
   - : 文書の最初の子の前に、 {{domxref("Node")}} オブジェクトまたは文字列の集合を挿入します。
 - {{DOMxRef("Document.querySelector()")}}
@@ -259,9 +259,11 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
 - {{DOMxRef("Document.replaceChildren()")}}
   - : 文書の既存の子を、指定された新しい子の集合で置き換えます。
 - {{DOMxRef("Document.requestStorageAccess()")}}
-  - : 自分自身 (first-party) のストレージへのアクセスが許可された場合は解決し、拒否された場合は拒否されるプロミス ({{jsxref("Promise")}}) を返します。
-- {{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}
-  - : 指定した ID を持つ要素の背景画像として使用する要素を変更できます。
+  - : サードパーティのコンテキスト（すなわち、 {{htmlelement("iframe")}} に埋め込まれたもの）に読み込まれた文書が、分離されていないクッキーへのアクセスを要求できるようにします。これはユーザーエージェントが既定で、プライバシーを改善するためにサードパーティコンテキストで読み込まれたサイトによる分離されていないクッキーへのアクセスをブロックしている場合に使用します。
+- {{DOMxRef("Document.requestStorageAccessFor()")}} {{experimental_inline}}
+  - : 最上位のサイトが、同じ[関連ウェブサイト設定](/ja/docs/Web/API/Storage_Access_API/Related_website_sets)内の別のウェブサイトから発信された埋め込みコンテンツの代わりに、サードパーティクッキーへのアクセスをリクエストできるようにします。
+- {{domxref("Document.startViewTransition()")}}
+  - : 新しい{{domxref("View Transitions API", "ビュー遷移", "", "nocode")}}を開始し、それを表すための {{domxref("ViewTransition")}} オブジェクトを返します。
 
 `Document` インターフェイスは、{{DOMxRef("XPathEvaluator")}} インターフェイスによって拡張されています。
 
@@ -277,7 +279,7 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
 HTML 文書用の `Document` インターフェイスは {{DOMxRef("HTMLDocument")}} インターフェイスから継承または拡張されています。
 
 - {{DOMxRef("Document.clear()")}} {{Deprecated_Inline}}
-  - : 最近の Firefox や Internet Explorer を含む大部分の現行ブラウザーは、何も行いません。
+  - : このメソッドは何もしません。
 - {{DOMxRef("Document.close()")}}
   - : 書き込み用の文書ストリームを閉じます。
 - {{DOMxRef("Document.execCommand()")}} {{Deprecated_Inline}}
@@ -303,33 +305,28 @@ HTML 文書用の `Document` インターフェイスは {{DOMxRef("HTMLDocument
 - {{DOMxRef("Document.writeln()")}}
   - : 文書にテキスト行を書き込みます。
 
+## 静的メソッド
+
+_このインターフェイスには {{DOMxRef("Node")}} および {{DOMxRef("EventTarget")}} インターフェイスから継承したメソッドもあります。_
+
+- {{domxref("Document/parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
+  - : サニタイズ処理を行わずに、HTML の文字列から新しい `Document` オブジェクトを作成します。
+    文字列には宣言敵にシャドウルートを含むことができます。
+
 ## イベント
 
-これらのイベントを待ち受けするには、 `addEventListener()` を使用するか、本インターフェイスの `onイベント名` プロパティへイベントリスナーを代入するかしてください。
+これらのイベントを待ち受けするには、 `addEventListener()` を使用するか、本インターフェイスの `onイベント名` プロパティへイベントリスナーを代入するかしてください。下記の一覧に掲載されているイベントの他に、文書ツリー内の{{domxref("Node", "ノード", "", "nocode")}}から多くのイベントがバブリングする可能性があります。
 
 - {{DOMxRef("Document.afterscriptexecute_event", "afterscriptexecute")}} {{Non-standard_Inline}}
   - : 静的な {{HTMLElement("script")}} 要素でスクリプトの実行が完了した時に発生します。
 - {{DOMxRef("Document.beforescriptexecute_event", "beforescriptexecute")}} {{Non-standard_Inline}}
   - : 静的な {{HTMLElement("script")}} で実行を開始しようとしている時に発生します。
+- {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} {{experimental_inline}}
+  - : 事前レンダリングされた文書がアクティブになった（ユーザーがページを表示した）ときに発行されます。
 - {{DOMxRef("Document.securitypolicyviolation_event", "securitypolicyviolation")}}
   - : コンテンツセキュリティポリシーに違反した場合に発行されます。
-- {{DOMxRef("Document/scroll_event", "scroll")}}
-  - : 文書のビューまたは要素がスクロールしたときに発行されます。
 - {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}}
   - : タブの内容の表示・非表示の状態が切り替わった時に発行されます。
-- {{DOMxRef("Document/wheel_event","wheel")}}
-  - : ユーザーがポインティングデバイス (通常はマウス) のホイールボタンを回転した時に発行されます。
-
-### アニメーションイベント
-
-- {{DOMxRef("Document/animationcancel_event", "animationcancel")}}
-  - : アニメーションが予期せず中断された時に発行されます。
-- {{DOMxRef("Document/animationend_event", "animationend")}}
-  - : アニメーションが正常に完了したときに発行されます。
-- {{DOMxRef("Document/animationiteration_event", "animationiteration")}}
-  - : アニメーションの1周期が完了したときに発行されます。
-- {{DOMxRef("Document/animationstart_event", "animationstart")}}
-  - : アニメーションが始まった時に発行されます。
 
 ### クリップボードイベント
 
@@ -340,38 +337,12 @@ HTML 文書用の `Document` インターフェイスは {{DOMxRef("HTMLDocument
 - {{DOMxRef("Document/paste_event", "paste")}}
   - : ユーザーがブラウザーのユーザーインターフェイスから貼り付け操作を開始したときに発行されます。
 
-### ドラッグ＆ドロップイベント
-
-- {{DOMxRef("Document/drag_event", "drag")}}
-  - : 要素またはテキストの選択範囲をユーザーがドラッグしている間、数百ミリ秒ごとに発行されます。
-- {{DOMxRef("Document/dragend_event", "dragend")}}
-  - : ドラッグ操作が終了したとき (マウスボタンを離したときやエスケープキーを押したとき) に発行されます。
-- {{DOMxRef("Document/dragenter_event", "dragenter")}}
-  - : ドラッグ中の要素またはテキストの選択範囲が妥当なドロップ対象に入ったときに発行されます。
-- {{DOMxRef("Document/dragleave_event", "dragleave")}}
-  - : ドラッグ中の要素またはテキストの選択範囲が妥当なドロップ対象から外れたときに発行されます。
-- {{DOMxRef("Document/dragover_event", "dragover")}}
-  - : 要素またはテキストの選択範囲が妥当なドロップ対象の上をドラッグされているときに (数ミリ秒ごとに) 発行されます。
-- {{DOMxRef("Document/dragstart_event", "dragstart")}}
-  - : ユーザーが要素またはテキストの選択範囲のドラッグを開始したときに発行されます。
-- {{DOMxRef("Document/drop_event", "drop")}}
-  - : 要素またはテキストの選択範囲が妥当なドロップ対象にドロップされたときに発行されます。
-
 ### 全画面イベント
 
 - {{DOMxRef("Document/fullscreenchange_event", "fullscreenchange")}}
   - : `Document` が[全画面](/ja/docs/Web/API/Fullscreen_API/Guide)モードへ移行したとき、または解除されたときに発行されます。
 - {{DOMxRef("Document/fullscreenerror_event", "fullscreenerror")}}
   - : [全画面](/ja/docs/Web/API/Fullscreen_API/Guide)モードへ切り替えようとしたとき、または解除しようとしたときにエラーが発生した場合に発行されます。
-
-### キーボードイベント
-
-- {{DOMxRef("Document/keydown_event", "keydown")}}
-  - : キーが押されたときに発行されます。
-- {{DOMxRef("Document/keypress_event", "keypress")}} {{Deprecated_Inline}}
-  - : 文字値を生成するキーが押下されたときに発行されます。
-- {{DOMxRef("Document/keyup_event", "keyup")}}
-  - : キーを離したときに発行されます。
 
 ### ロード＆アンロードイベント
 
@@ -380,59 +351,24 @@ HTML 文書用の `Document` インターフェイスは {{DOMxRef("HTMLDocument
 - {{DOMxRef("Document/readystatechange_event", "readystatechange")}}
   - : 文書の {{DOMxRef("Document/readyState", "readyState")}} 属性が変更されたときに発行されます。
 
-### ポインターイベント
+### ポインターロックイベント
 
-- {{DOMxRef("Document/gotpointercapture_event", "gotpointercapture")}}
-  - : [`setPointerCapture()`](/ja/docs/Web/API/Element/setPointerCapture) を使用して要素がポインターをキャプチャしたときに発行されます。
-- {{DOMxRef("Document/lostpointercapture_event", "lostpointercapture")}}
-  - : [キャプチャされたポインター](/ja/docs/Web/API/Pointer_events#pointer_capture)が解放されたときに発行されます。
-- {{DOMxRef("Document/pointercancel_event", "pointercancel")}}
-  - : ポインターイベントがキャンセルされたときに発行されます。
-- {{DOMxRef("Document/pointerdown_event", "pointerdown")}}
-  - : ポインターがアクティブになったときに発行されます。
-- {{DOMxRef("Document/pointerenter_event", "pointerenter")}}
-  - : ポインターが要素やその子孫のヒットテスト境界の中へ移動したときに発行されます。
-- {{DOMxRef("Document/pointerleave_event", "pointerleave")}}
-  - : ポインターが要素のヒットテスト境界の外へ移動したときに発行されます。
 - {{DOMxRef("Document/pointerlockchange_event", "pointerlockchange")}}
   - : ポインターがロックまたはアンロックされたときに発行されます。
 - {{DOMxRef("Document/pointerlockerror_event", "pointerlockerror")}}
   - : ポインターをロックしようとして失敗したときに発行されます。
-- {{DOMxRef("Document/pointermove_event", "pointermove")}}
-  - : ポインターの座標が変化したときに発行されます。
-- {{DOMxRef("Document/pointerout_event", "pointerout")}}
-  - : ポインターが (訳あって) 要素の _ヒットテスト_ 境界の外へ移動したときに発行されます。
-- {{DOMxRef("Document/pointerover_event", "pointerover")}}
-  - : ポインターが要素のヒットテスト境界の中へ移動したときに発行されます。
-- {{DOMxRef("Document/pointerup_event", "pointerup")}}
-  - : ポインターがアクティブではなくなったときに発行されます。
+
+### スクロールイベント
+
+- {{DOMxRef("Document/scroll_event", "scroll")}}
+  - : 文書のビューまたは要素がスクロールされたときに発行されます。
+- {{DOMxRef("Document/scrollend_event", "scrollend")}}
+  - : 文書のビューまたは要素のスクロールが完全に終了したときに発行されます。
 
 ### 選択イベント
 
 - {{DOMxRef("Document/selectionchange_event", "selectionchange")}}
   - : 文書でのテキスト選択範囲が変化したときに発行されます。
-
-### タッチイベント
-
-- {{DOMxRef("Document/touchcancel_event", "touchcancel")}}
-  - : 1 つ以上のタッチ点が実装固有の方法で中断された場合に発行されます (例えば、作成されたタッチ点が多すぎた場合など)。
-- {{DOMxRef("Document/touchend_event", "touchend")}}
-  - : 1 つ以上のタッチ点がタッチ面から取り除かれたときに発行されます。
-- {{DOMxRef("Document/touchmove_event", "touchmove")}}
-  - : 1 つ以上のタッチ点がタッチ面に沿って移動したときに発行されます。
-- {{DOMxRef("Document/touchstart_event", "touchstart")}}
-  - : 1 つ以上のタッチ点がタッチ面に配置されたときに発行されます。
-
-### トランジションイベント
-
-- {{DOMxRef("Document/transitioncancel_event", "transitioncancel")}}
-  - : [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)がキャンセルされたときに発行されます。
-- {{DOMxRef("Document/transitionend_event", "transitionend")}}
-  - : [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)が完了したときに発行されます。
-- {{DOMxRef("Document/transitionrun_event", "transitionrun")}}
-  - : [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)が初めて作成されたときに発行されます。
-- {{DOMxRef("Document/transitionstart_event", "transitionstart")}}
-  - : [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)が実際に開始されたときに発行されます。
 
 ## 仕様書
 

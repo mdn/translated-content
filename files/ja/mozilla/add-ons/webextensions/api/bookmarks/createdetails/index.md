@@ -3,34 +3,37 @@ title: bookmarks.CreateDetails
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-`CreateDetails` 型は、新しいブックマークやフォルダのプロパティを表すためのオブジェクト型です。{{WebExtAPIRef("bookmarks.create()")}} メソッドの呼び出し時に渡します。
+`CreateDetails` 型は、新しいブックマークやフォルダーのプロパティを表すためのオブジェクト型です。{{WebExtAPIRef("bookmarks.create()")}} メソッドの呼び出し時に渡します。
 
-> **メモ:** 現在、ブックマークリストのセパレータをこのオブジェクト型で表すことはできません。
+> [!NOTE]
+> 現在、ブックマークリストのセパレータをこのオブジェクト型で表すことはできません。
 
 ## 値の型
 
 以下のプロパティを含む {{jsxref("object")}} です。
 
 - `parentId`{{optional_inline}}
-  - : 新しいブックマーク / フォルダの親フォルダを指定する {{jsxref("string")}} です。デフォルト値はブラウザによって異なり、Chrome の場合は「その他のブックマーク」、Firefox の場合は「未分類のブックマーク」です。
+  - : 新しいブックマーク / フォルダーの親フォルダーを指定する {{jsxref("string")}} です。デフォルト値はブラウザーによって異なり、Chrome の場合は「その他のブックマーク」、Firefox の場合は「未分類のブックマーク」です。
 - `index`{{optional_inline}}
-  - : 親要素の配下における、新しいブックマーク / フォルダの位置を指定する {{jsxref("number")}} です。値が 0 の場合、リストの先頭に置かれます。
+  - : 親要素の配下における、新しいブックマーク / フォルダーの位置を指定する {{jsxref("number")}} です。値が 0 の場合、リストの先頭に置かれます。
 - `title`{{optional_inline}}
-  - : `作成する`ブックマークのタイトルやフォルダの名前を指定する {{jsxref("string")}} です。値を省略した場合、タイトルは `""` になります。
+  - : `作成する`ブックマークのタイトルやフォルダーの名前を指定する {{jsxref("string")}} です。値を省略した場合、タイトルは `""` になります。
 - `url`{{optional_inline}}
-  - : ブックマークの URL を指定する {{jsxref("string")}} です。値を省略するか `null` を指定した場合、ブックマークではなくフォルダが作成されます。
+  - : ブックマークの URL を指定する {{jsxref("string")}} です。値を省略するか `null` を指定した場合、ブックマークではなくフォルダーが作成されます。
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.CreateDetails", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> [!NOTE]
+> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -57,4 +60,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

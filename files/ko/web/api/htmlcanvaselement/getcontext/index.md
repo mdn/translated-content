@@ -1,14 +1,8 @@
 ---
 title: HTMLCanvasElement.getContext()
 slug: Web/API/HTMLCanvasElement/getContext
-tags:
-  - API
-  - Canvas
-  - HTMLCanvasElement
-  - 레퍼런스
-  - 메소드
-translation_of: Web/API/HTMLCanvasElement/getContext
 ---
+
 {{APIRef("Canvas API")}}
 
 **`HTMLCanvasElement.getContext()`** 메소드는 캔버스의 드로잉 컨텍스트를 반환합니다. 컨텍스트 식별자가 지원되지 않을 경우 {{jsxref("null")}}을 반환합니다.
@@ -25,10 +19,14 @@ var ctx = canvas.getContext(contextType, contextAttributes);
 ### 파라미터
 
 - `contextType`
+
   - : 캔버스에 연관된 드로잉 컨텍스트를 정의하는 컨텍스트 식별자를 갖는 {{domxref("DOMString")}}입니다. 가능한 값은 다음과 같습니다.\* `"2d"`, 2차원 렌더링 컨텍스트를 나타내는 {{domxref("CanvasRenderingContext2D")}} 객체를 생성하게 합니다.
-    - `"webgl"` (또는 `"experimental-webgl"`), 3차원 렌더링 컨텍스트를 나타내는 {{domxref("WebGLRenderingContext")}} 객체를 생성합니다. 이 컨텍스트는 [WebGL](/ko/docs/Web/WebGL) 버전 1 (OpenGL ES 2.0)을 구현하는 브라우저에서만 사용가능합니다.
-    - `"webgl2"`, 3차원 렌더링 컨텍스트를 나타내는 {{domxref("WebGL2RenderingContext")}} 객체를 생성합니다. 이 컨텍스트는 [WebGL](/ko/docs/Web/WebGL) 버전 2 (OpenGL ES 3.0)를 구현하는 브라우저에서만 사용가능합니다. {{experimental_inline}}
-    - `"bitmaprenderer"`, 캔버스의 컨텐츠를 주어진 {{domxref("ImageBitmap")}}으로 대체하기위한 기능만을 제공하는 {{domxref("ImageBitmapRenderingContext")}}를 생성합니다.> **참고:** **노트**: 식별자 `"experimental-webgl"`은 WebGL의 새로운 구현에서 사용됩니다. 이러한 구현은 테스트 스위트 적합성을 아직 만족하지 못하며, 플랫폼 상의 그래픽 드라이버도 아직 불안정합니다. [Khronos Group](https://www.khronos.org/)은 특정 [적합성 규칙](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt)에 따라 WebGL 구현을 인증합니다.
+    - `"webgl"` (또는 `"experimental-webgl"`), 3차원 렌더링 컨텍스트를 나타내는 {{domxref("WebGLRenderingContext")}} 객체를 생성합니다. 이 컨텍스트는 [WebGL](/ko/docs/Web/API/WebGL_API) 버전 1 (OpenGL ES 2.0)을 구현하는 브라우저에서만 사용가능합니다.
+    - `"webgl2"`, 3차원 렌더링 컨텍스트를 나타내는 {{domxref("WebGL2RenderingContext")}} 객체를 생성합니다. 이 컨텍스트는 [WebGL](/ko/docs/Web/API/WebGL_API) 버전 2 (OpenGL ES 3.0)를 구현하는 브라우저에서만 사용가능합니다. {{experimental_inline}}
+    - `"bitmaprenderer"`, 캔버스의 컨텐츠를 주어진 {{domxref("ImageBitmap")}}으로 대체하기위한 기능만을 제공하는 {{domxref("ImageBitmapRenderingContext")}}를 생성합니다.
+      > [!NOTE]
+      > 식별자 `"experimental-webgl"`은 WebGL의 새로운 구현에서 사용됩니다. 이러한 구현은 테스트 스위트 적합성을 아직 만족하지 못하며, 플랫폼 상의 그래픽 드라이버도 아직 불안정합니다. [Khronos Group](https://www.khronos.org/)은 특정 [적합성 규칙](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt)에 따라 WebGL 구현을 인증합니다.
+
 - `contextAttributes`
 
   - : 렌더링 컨텍스트를 생성할 때 몇 가지 컨텍스트 속성을 사용할 수 있습니다. 예를 들면:`js const gl = canvas.getContext('webgl', { antialias: false, depth: false });` 2d 컨텍스트 속성:
@@ -72,8 +70,8 @@ var ctx = canvas.getContext(contextType, contextAttributes);
 다음 코드를 사용해 캔버스의 `2d` 컨텍스트를 얻을 수 있습니다.
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 console.log(ctx); // CanvasRenderingContext2D { ... }
 ```
 

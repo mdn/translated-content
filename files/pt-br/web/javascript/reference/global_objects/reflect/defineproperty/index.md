@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 
 O método estático **`Reflect.defineProperty()`** é como o {{jsxref("Object.defineProperty()")}}, mas retorna um {{jsxref("Boolean")}}.
 
-{{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.defineProperty()")}}
+
+```js interactive-example
+const object1 = {};
+
+if (Reflect.defineProperty(object1, "property1", { value: 42 })) {
+  console.log("property1 created!");
+  // Expected output: "property1 created!"
+} else {
+  console.log("problem creating property1");
+}
+
+console.log(object1.property1);
+// Expected output: 42
+```
 
 ## Sintaxe
 
@@ -43,9 +57,9 @@ O método `Reflect.defineProperty` permite a adição precisa ou a modificação
 ### Usando `Reflect.defineProperty()`
 
 ```js
-let obj = {}
-Reflect.defineProperty(obj, 'x', {value: 7})  // true
-obj.x                                         // 7
+let obj = {};
+Reflect.defineProperty(obj, "x", { value: 7 }); // true
+obj.x; // 7
 ```
 
 ### Verificando se a definição da propriedade foi bem-sucedida
@@ -64,13 +78,11 @@ if (Reflect.defineProperty(target, property, attributes)) {
 
 ## Especificações
 
-| Especificação                                                                                                |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-reflect.defineproperty', 'Reflect.defineProperty')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Reflect.defineProperty")}}
+{{Compat}}
 
 ## Veja também
 

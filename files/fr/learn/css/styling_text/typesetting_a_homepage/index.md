@@ -1,17 +1,6 @@
 ---
 title: Composition de la page d'accueil d'une école de communauté
 slug: Learn/CSS/Styling_text/Typesetting_a_homepage
-tags:
-  - CSS
-  - Codage
-  - Composer du texte
-  - Débutant
-  - Evaluation
-  - Fontes
-  - Fontes web
-  - Liens
-  - Listes
-translation_of: Learn/CSS/Styling_text/Typesetting_a_homepage
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
@@ -44,7 +33,7 @@ Pour débuter cette évaluation, vous devez&nbsp;:
 - récupérer les fichiers [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/index.html) et [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/style.css) de l'exercice ainsi que [le lien externe sur l'icône](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/external-link-52.png).
 - en faire une copie sur votre ordinateur.
 
-> **Note :** Autrement, il reste possible d'utiliser un site comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) pour faire votre évaluation. Collez le HTML et remplissez la CSS dans l'un de ces éditeurs en ligne ; utilisez [cet URL](http://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png) pour pointer sur l'image de fond. Si l'éditeur en ligne que vous utilisez n'a pas de panneau CSS séparé, vous pouvez l'intégrer dans un élément `<style>` de l'élément `head` du document.
+Autrement, il reste possible d'utiliser un site comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour faire votre évaluation. Collez le HTML et remplissez la CSS dans l'un de ces éditeurs en ligne ; utilisez [cet URL](https://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png) pour pointer sur l'image de fond. Si l'éditeur en ligne que vous utilisez n'a pas de panneau CSS séparé, vous pouvez l'intégrer dans un élément `<style>` de l'élément `head` du document.
 
 ## Énoncé de l'exercice
 
@@ -102,8 +91,8 @@ Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvo
 
 ## Dans ce module
 
-- [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte)
+- [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/Fundamentals)
 - [Style de listes](/fr/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Mise en forme des liens](/fr/docs/Learn/CSS/Styling_text/Mise_en_forme_des_liens)
+- [Mise en forme des liens](/fr/docs/Learn/CSS/Styling_text/Styling_links)
 - [Polices de caractères web](/fr/docs/Learn/CSS/Styling_text/Web_fonts)
 - Composition d'une page d'accueil d'une école de communauté

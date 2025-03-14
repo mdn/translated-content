@@ -1,9 +1,6 @@
 ---
 title: overscroll-behavior
 slug: Web/CSS/overscroll-behavior
-tags:
-  - CSS
-translation_of: Web/CSS/overscroll-behavior
 ---
 
 {{CSSRef}}
@@ -11,7 +8,7 @@ translation_of: Web/CSS/overscroll-behavior
 CSS-свойство **`overscroll-behavior`** — это сокращение для свойств {{cssxref("overscroll-behavior-x")}} и {{cssxref("overscroll-behavior-y")}}, которые позволяют управлять поведением прокрутки при достижении границы области прокрутки.
 
 ```css
-/* Значения-ключевые слова */
+/* Ключевые слова */
 overscroll-behavior: auto; /* по умолчанию */
 overscroll-behavior: contain;
 overscroll-behavior: none;
@@ -54,7 +51,7 @@ overflow: unset;
 
 В нашем примере [overscroll-поведения](https://mdn.github.io/css-examples/overscroll-behavior/) (см. также код по ссылке [](https://github.com/mdn/css-examples/tree/master/overscroll-behavior)) представлен полностраничный список поддельных контактов и диалоговое окно с чатом.
 
-![](https://mdn.mozillademos.org/files/15778/example.png)
+![](example.png)
 
 Обе эти области прокручиваются; обычно, если вы прокручиваете окно чата до тех пор, пока не достигнете границы прокрутки, нижележащее окно контактов тоже начнёт прокручиваться, что нежелательно. Предотвратить такое поведение можно, используя `overscroll-behavior-y` (`overscroll-behavior` также подойдет) для окна чата, как показано ниже:
 
@@ -77,13 +74,9 @@ body {
 
 ## Спецификации
 
-Пока CSSWG не опубликует свой собственный вариант, спецификация может быть найдена только[на Github в репозитории WICG](https://wicg.github.io/overscroll-behavior/).
+{{Specifications}}
 
-| Specification                                                                                                            | Status                                       | Comment |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------- |
-| {{SpecName('Overscroll Behavior', '#propdef-overscroll-behavior', 'overscroll-behavior')}} | {{Spec2('Overscroll Behavior')}} |         |
-
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

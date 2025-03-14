@@ -1,12 +1,9 @@
 ---
 title: Number (Числовой тип данных)
 slug: Glossary/Number
-tags:
-  - JavaScript
-  - Типы данных
-translation_of: Glossary/Number
-original_slug: Глоссарий/Number
 ---
+
+{{GlossarySidebar}}
 
 В {{Glossary("JavaScript")}}, **Number** - числовой тип данных в формате 64-битного числа двойной точности с плавающей запятой. В других языках программирования может существовать несколько числовых типов данных, например: Integer, Float, Double или Bignum.
 
@@ -19,5 +16,5 @@ original_slug: Глоссарий/Number
 
 ### Техническая справка
 
-- Числовой тип данных JavaScript: [Number](/ru/docs/Web/JavaScript/Data_structures#.D0.A7.D0.B8.D1.81.D0.BB.D0.B0)
+- Числовой тип данных JavaScript: [Number](/ru/docs/Web/JavaScript/Data_structures#.d0.a7.d0.b8.d1.81.d0.bb.d0.b0)
 - Глобальный объект JavaScript: {{jsxref("Number")}}

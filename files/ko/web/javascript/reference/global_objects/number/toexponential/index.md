@@ -1,24 +1,33 @@
 ---
 title: Number.prototype.toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 ---
 
 {{JSRef}}
 
 **`toExponential()`** 메서드는 숫자를 지수 표기법으로 표기해 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/number-toexponential.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toExponential()")}}
+
+```js interactive-example
+function expo(x, f) {
+  return Number.parseFloat(x).toExponential(f);
+}
+
+console.log(expo(123456, 2));
+// Expected output: "1.23e+5"
+
+console.log(expo("123456"));
+// Expected output: "1.23456e+5"
+
+console.log(expo("oink"));
+// Expected output: "NaN"
+```
 
 ## 구문
 
 ```js
-    numObj.toExponential([fractionDigits])
+numObj.toExponential([fractionDigits]);
 ```
 
 ### 매개변수
@@ -52,11 +61,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 ```js
 var numObj = 77.1234;
 
-console.log(numObj.toExponential());  // logs 7.71234e+1
+console.log(numObj.toExponential()); // logs 7.71234e+1
 console.log(numObj.toExponential(4)); // logs 7.7123e+1
 console.log(numObj.toExponential(2)); // logs 7.71e+1
-console.log(77.1234.toExponential()); // logs 7.71234e+1
-console.log(77 .toExponential());     // logs 7.7e+1
+console.log((77.1234).toExponential()); // logs 7.71234e+1
+console.log((77).toExponential()); // logs 7.7e+1
 ```
 
 ## 명세

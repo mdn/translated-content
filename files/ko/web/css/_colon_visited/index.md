@@ -1,14 +1,8 @@
 ---
-title: ':visited'
+title: :visited
 slug: Web/CSS/:visited
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Web
-translation_of: Web/CSS/:visited
 ---
+
 {{ CSSRef }}
 
 **`:visited`** [CSS](/ko/docs/Web/CSS) [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 사용자가 방문한 적이 있는 링크를 나타냅니다. `:visited`가 바꿀 수 있는 스타일은 개인정보 보호를 위해 매우 제한적입니다.
@@ -31,7 +25,8 @@ a:visited {
 - 허용 가능한 속성의 알파 채널 값은 무시하고, 대신 `:visited`가 아닐 때의 알파 채널을 사용합니다. 단, 그 값이 0일 땐 `:visited`의 스타일을 모두 무시합니다.
 - 사용자 입장에서는 방문한 링크의 색이 바뀐 것처럼 보일 때도, {{domxref("window.getComputedStyle()")}} 메서드는 거짓으로라도 항상 `:visited`가 아닐 때의 스타일을 반환합니다.
 
-> **참고:** 스타일 제한에 관한 더 많은 정보와 이유에 대해서는 [개인정보와 :visited 선택자](/ko/docs/Web/CSS/Privacy_and_the_:visited_selector) 문서를 참고하세요.
+> [!NOTE]
+> 스타일 제한에 관한 더 많은 정보와 이유에 대해서는 [개인정보와 :visited 선택자](/ko/docs/Web/CSS/Privacy_and_the_:visited_selector) 문서를 참고하세요.
 
 ## 구문
 
@@ -44,7 +39,7 @@ a:visited {
 ### HTML
 
 ```html
-<a href="#test-visited-link">링크를 아직 방문하지 않으셨나요?</a><br>
+<a href="#test-visited-link">링크를 아직 방문하지 않으셨나요?</a><br />
 <a href="">이미 방문했습니다.</a>
 ```
 

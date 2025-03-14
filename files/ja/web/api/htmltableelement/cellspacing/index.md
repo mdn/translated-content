@@ -1,36 +1,33 @@
 ---
-title: HTMLTableElement.cellSpacing
+title: "HTMLTableElement: cellSpacing プロパティ"
+short-title: cellSpacing
 slug: Web/API/HTMLTableElement/cellSpacing
+l10n:
+  sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-代わりに CSS の {{cssxref("border-spacing")}} プロパティを使うべきですが、旧式の {{domxref("HTMLTableElement")}} インターフェースの **`cellSpacing`** プロパティは、表のセルを表す個々の {{HTMLElement("th")}} および {{HTMLElement("td")}} 要素の周りの間隔を表わします。任意の 2 つのセルは、それぞれの `cellSpacing` の合計値で区切られます。
+代わりに CSS の {{cssxref("border-spacing")}} プロパティを使うべきですが、旧式の {{domxref("HTMLTableElement")}} インターフェイスの **`cellSpacing`** プロパティは、表のセルを表す個々の {{HTMLElement("th")}} および {{HTMLElement("td")}} 要素の周りの間隔を表わします。任意の 2 つのセルは、それぞれの `cellSpacing` の合計値で区切られます。
 
-## 構文
+## 値
 
-```js
-HTMLTableElement.cellSpacing = spacing;
-var spacing = HTMLTableElement.cellSpacing;
-```
+文字列で、ピクセル数（例えば `"10"`）またはパーセント値（`"10%"` など）です。
 
-### 値
-
-{{domxref("DOMString")}} で、ピクセル数 (例えば `"10"`) またはパーセント値 (`"10%"` など) です。
+`null` 値に設定すると、`null` 値は空文字列 (`""`) に変換されるので、`elt.cellSpacing = null` は `elt.cellSpacing = ""` と等価です。
 
 ## 例
 
-This example sets cell spacing for a given table to 10 pixels.
+この例では、指定された表のセル間を 10 ピクセルに設定します。
 
 ```js
-var t = document.getElementById('TableA');
+const t = document.getElementById("TableA");
 t.cellSpacing = "10";
 ```
 
 ## 仕様書
 
-- W3C DOM 2 HTML Specification [_HTMLTableElement_
-  .cellSpacing](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-68907883).
+{{Specifications}}
 
 ## ブラウザーの互換性
 

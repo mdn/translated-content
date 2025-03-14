@@ -1,62 +1,62 @@
 name: "[via des pages MDN uniquement // fr]"
-description: Issue filed via le lien "Report a problem with this content on GitHub" sur des pages MDN.
+description: Tickets rapportés via le lien "Report a problem with this content on GitHub" sur des pages MDN.
 labels: ["l10n-fr", "needs triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        ### Before you start
+        ### Avant toute chose
 
-        **Want to change this page yourself?** This content is open source!
-        ↩ Go back and use the _Edit on GitHub_ link on the page.
+        **Vous souhaitez éditer cette page vous-même ?** Le contenu est open source !
+        ↩ Revenez sur la page et cliquez sur le lien _Edit on GitHub_ en bas de la page.
 
-        **Is your issue about the browser compatibility table?**
-        ↩ Go back and use the _Report problems with this compatibility data on GitHub_ link on the page.
+        **Est-ce que le problème porte sur le tableau de compatibilité des navigateurs ?**
+        ↩ Revenez sur la page et cliquez sur le lien _Report problems with this compatibility data on GitHub_ en bas de la page.
 
-        **Need help with a browser?**
-        🙋 To get help with [Firefox](https://support.mozilla.org/en-US/kb/file-bug-report-or-feature-request-mozilla), [Chrome](https://support.google.com/chrome/answer/95315?hl=en-GB&ref_topic=7439544), [Safari](https://www.apple.com/feedback/safari.html), or another browser, check the browser's support site.
+        **Vous avez besoin d'aide avec votre navigateur ?**
+        Consultez le site d'aide du navigateur (https://support.mozilla.org/fr/products/firefox pour Firefox, https://support.apple.com/fr-fr/safari pour Safari, https://support.google.com/chrome/?hl=fr#topic=7439538 pour Chrome, https://support.microsoft.com/fr-fr/microsoft-edge pour Edge).
 
         ---
   - type: input
     id: mdn-url
     attributes:
-      label: MDN URL
-      description: Set automatically. Do not modify.
+      label: URL MDN
+      description: Cette information est ajoutée automatiquement. Veuillez ne pas la modifier.
     validations:
       required: true
   - type: input
     id: section
     attributes:
-      label: What specific section or headline is this issue about?
+      label: Sur quelle section/titre porte ce problème ?
   - type: textarea
     id: problem
     attributes:
-      label: What information was incorrect, unhelpful, or incomplete?
+      label: Quelle information était incorrecte, inutile ou incomplète ?
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: What did you expect to see?
+      label: Que vous attendiez-vous à voir ?
     validations:
       required: true
   - type: textarea
     id: references
     attributes:
-      label: Do you have any supporting links, references, or citations?
-      description: Link to information that helps us confirm your issue.
+      label: Avez-vous des liens, références ou citations sur ce sujet ?
+      description: Des liens vers des informations qui pourront nous aider à confirmer le problème.
   - type: textarea
     id: more-info
     attributes:
-      label: Do you have anything more you want to share?
-      description: For example, steps to reproduce a bug, screenshots, screen recordings, or sample code
+      label: Souhaitez-vous ajouter autre chose ?
+      description: Cela peut être des étapes de reproduction du bogue, des captures ou enregistrements d'écran, un fragment de code.
   - type: markdown
     attributes:
       value: |
         ---
-        You're finished! The following fields are prefilled. Please click **Submit new issue**.
+        Et voilà, c'est terminé ! Les champs suivants sont remplis automatiquement. Vous pouvez cliquer sur **Submit new issue**.
   - type: textarea
     id: metadata
     attributes:
-      label: MDN metadata
-      description: Set automatically. Do not modify.
+      label: Métadonnées MDN
+      description: Remplies automatiquement. Ne pas modifier.

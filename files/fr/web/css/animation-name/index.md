@@ -1,11 +1,6 @@
 ---
 title: animation-name
 slug: Web/CSS/animation-name
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/animation-name
 ---
 
 {{CSSRef}}
@@ -41,7 +36,8 @@ animation-name: unset
 - {{cssxref("custom-ident","&lt;custom-ident&gt;")}}
   - : Une chaîne de caractères qui identifie l'animation. Un identifiant est une séquence, insensible à la casse, de lettres entre `a` et `z`, de nombres entre `0` et `9`, de tirets bas (`_`) et/ou de tirets (`-`). Le première caractère qui n'est pas un tiret doit être une lettre. Il est également interdit d'utiliser deux tirets en début d'identifiant. Enfin, la chaîne de l'identifiant ne peut pas être `unset`, `initial`, `inherit` ou une combinaison analogue avec une casse différente.
 
-> **Note :** Lorsqu'on utiliser plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/Animations_CSS/Utiliser_les_animations_CSS).
+> [!NOTE]
+> Lorsqu'on utiliser plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations).
 
 ## Définition formelle
 
@@ -78,9 +74,9 @@ p {
 
 ```html
 <p>
-  La Chenille et Alice se considérèrent un instant en silence.
-  Enfin la Chenille sortit le houka de sa bouche, et lui adressa
-  la parole d’une voix endormie et traînante.
+  La Chenille et Alice se considérèrent un instant en silence. Enfin la Chenille
+  sortit le houka de sa bouche, et lui adressa la parole d’une voix endormie et
+  traînante.
 </p>
 ```
 
@@ -98,5 +94,5 @@ p {
 
 ## Voir aussi
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Utiliser_les_animations_CSS)
+- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

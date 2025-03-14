@@ -1,66 +1,65 @@
 ---
-title: URLSearchParams.forEach()
+title: URLSearchParams：forEach() 方法
 slug: Web/API/URLSearchParams/forEach
+l10n:
+  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{APIRef("URL API")}}
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
-URLSearchParams 的实例对象上的方法 forEach 允许通过回调函数来遍历 URLSearchParams 实例对象上的键值对
-
-{{availableinworkers}}
+{{domxref("URLSearchParams")}} 接口的 **`forEach()`** 方法允许通过回调函数来遍历实例对象上的键值对。
 
 ## 语法
 
-```plain
-searchParams.forEach(callback(value,key,searchParams));
+```js-nolint
+forEach(callback)
+forEach(callback, thisArg)
 ```
 
 ### 参数
 
-- 回调函数
-  - : 该回调函数可以接收到 3 个参数 value,key,searchParams，我们可以在回调函数中对接收到的参数进行处理。而三个参数的含义如下：
-- `value`
-  - : 当前遍历到的键值
-- `key`
-  - : 当前遍历到的键名
-- `searchParams`
-  - : 当前调用 forEach 方法的实例对象
+- `callback`
+  - : 在每个元素上执行的函数，会传入以下参数：
+    - `value`
+      - : `URLSearchParams` 对象中正在处理的条目的值。
+    - `key`
+      - : `URLSearchParams` 对象中正在处理的条目的键。
+    - `searchParams`
+      - : 当前调用 `forEach()` 方法的 `URLSearchParams` 对象。
+- `thisArg` {{optional_inline}}
+  - : 执行 `callback` 时 `this` 的值。
 
 ### 返回值
 
-空
+无（{{jsxref("undefined")}}）。
 
-## 例子
+## 示例
 
 ```js
-// 创建 URLSearchParams 对象的实例对象，用于测试
-var searchParams = new URLSearchParams("key1=value1&key2=value2");
+// 创建用于测试的 URLSearchParams 对象
+const searchParams = new URLSearchParams("key1=value1&key2=value2");
 
-let returnValue = searchParams.forEach(function(value, key,searchParams) {
-     // 打印值
-     console.log(value, key,searchParams);
+// 输出值
+searchParams.forEach((value, key) => {
+  console.log(value, key);
 });
-
-// 输出返回值
-console.log(returnValue)
 ```
 
 结果是：
 
 ```plain
-value1 key1 当前调用 forEach 方法的实例对象 (也就是 searchParams)
-value2 key2 当前调用 forEach 方法的实例对象 (也就是 searchParams)
-undefined  // 即没有返回值
+value1 key1
+value2 key2
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- The {{domxref("URL")}} interface.
+- {{domxref("URL")}} 接口。

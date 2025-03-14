@@ -1,7 +1,8 @@
 ---
 title: element()
 slug: Web/CSS/element
-original_slug: Web/CSS/element()
+l10n:
+  sourceCommit: 66944f622b6b51bc9c24bebbbea242138d910600
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -25,42 +26,61 @@ element(id)
 
 ## 例
 
-この例を[ライブで見る](https://media.prod.mdn.mozit.cloud/samples/cssref/moz-element.html)には、`-moz-element()` に対応している Firefox が必要です。
+以下の例は、 `-moz-element()` に対応している Firefox のビルドが必要です。
 
-<h3 id="A_somewhat_realistic_example">いくらか現実的な例</h3>
+### いくらか現実的な例
 
 この例では hidden 状態の {{HTMLElement("div")}} を背景に使います。背景要素はグラデーションを使うだけでなく、背景の一部として描画されるテキストも含んでいます。
 
-```html
-<div style="width:400px; height:400px; background:-moz-element(#myBackground1) no-repeat;">
+```html live-sample___a_somewhat_realistic_example
+<div
+  style="width:400px; height:400px; background:-moz-element(#myBackground1) no-repeat;">
   <p>This box uses the element with the #myBackground1 ID as its background!</p>
 </div>
 
 <div style="overflow:hidden; height:0;">
-  <div id="myBackground1" style="width:1024px; height:1024px; background-image: linear-gradient(to right, red, orange, yellow, white);">
-  <p style="transform-origin:0 0; transform: rotate(45deg); color:white;">This text is part of the background. Cool, huh?</p>
+  <div
+    id="myBackground1"
+    style="width:1024px; height:1024px; background-image: linear-gradient(to right, red, orange, yellow, white);">
+    <p style="transform-origin:0 0; rotate: 45deg; color:white;">
+      This text is part of the background. Cool, huh?
+    </p>
   </div>
 </div>
 ```
 
+{{EmbedLiveSample("A_somewhat_realistic_example")}}
+
 "myBackground1" という ID を持つ {{HTMLElement("div")}} 要素が、"This box uses the element with the #myBackground1 ID as its background!" という段落を含むコンテンツの背景に使われています。
 
-![](example1.png)
+### ページプレビュー
 
-<h3 id="A_somewhat_more_bizarre_example">いくらか突飛な例</h3>
+この [Vincent De Oliveira の例に基づいた例](https://iamvdo.me/en/blog/css-element-function)は、 `<div id="css-source">` のプレビューを `<div id="css-result">` の中に生成します。
 
-この例は hidden 状態の {{HTMLElement("button")}} 要素を、背景の繰り返しパターンとして使います。これは、好きな要素を背景として使うことができるという例ですが、すぐれたデザインとはいえないかもしれません。
+#### HTML
 
-```html
-<div style="width:400px; height:100px; background:-moz-element(#myBackground2);">
+```html live-sample___page_preview
+<div id="css-source">
+  <h1>Page Preview</h1>
 </div>
-
-<div style="overflow:hidden; height:0;">
-  <button id="myBackground2" type="button">Evil button!</button>
-</div>
+<div id="css-result"></div>
 ```
 
-![](example2.png)
+#### CSS
+
+```css live-sample___page_preview
+#css-result {
+  background: -moz-element(#css-source) no-repeat;
+  width: 256px;
+  height: 32px;
+  background-size: 80%;
+  border: dashed;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample("Page_Preview")}}
 
 ## 仕様書
 
@@ -72,10 +92,9 @@ element(id)
 
 ## 関連情報
 
-- {{cssxref("image/image()", "image()")}}
-- {{cssxref("image/image-set()", "image-set()")}}
+- {{cssxref("image/image", "image()")}}
+- {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("element()")}}
-- {{cssxref("cross-fade()")}}
+- {{cssxref("cross-fade", "cross-fade()")}}
 - {{domxref("document.mozSetImageElement()")}}

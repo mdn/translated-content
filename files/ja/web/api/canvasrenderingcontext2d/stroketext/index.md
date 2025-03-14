@@ -1,6 +1,8 @@
 ---
-title: CanvasRenderingContext2D.strokeText()
+title: "CanvasRenderingContext2D: strokeText() メソッド"
 slug: Web/API/CanvasRenderingContext2D/strokeText
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}
@@ -9,18 +11,20 @@ slug: Web/API/CanvasRenderingContext2D/strokeText
 
 このメソッドは現在のパスを変更することなく、直接キャンバスに描画を行います。その後の {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} や {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} には影響を与えません。
 
-> **メモ:** 輪郭線のみを描くのではなく、テキスト文字を塗りつぶすのであれば {{domxref('CanvasRenderingContext2D.fillText()', 'fillText()')}} メソッドを使用してください。
+> [!NOTE]
+> 輪郭線のみを描くのではなく、テキスト文字を塗りつぶすのであれば {{domxref('CanvasRenderingContext2D.fillText()', 'fillText()')}} メソッドを使用してください。
 
 ## 構文
 
-```js
-CanvasRenderingContext2D.strokeText(text, x, y [, maxWidth]);
+```js-nolint
+strokeText(text, x, y)
+strokeText(text, x, y, maxWidth)
 ```
 
 ### 引数
 
 - `text`
-  - : {{domxref("DOMString")}} で、このコンテキストに描画するテキスト文字列を指定します。
+  - : 文字列で、このコンテキストに描画するテキスト文字列を指定します。
     テキストは {{domxref("CanvasRenderingContext2D.font","font")}}, {{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction","direction")}} で指定された設定を使用して描画されます。
 - `x`
   - : テキストを描き始める位置の X 座標です。
@@ -31,7 +35,7 @@ CanvasRenderingContext2D.strokeText(text, x, y [, maxWidth]);
 
 ### 返値
 
-{{jsxref("undefined")}} です。
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -52,16 +56,16 @@ CanvasRenderingContext2D.strokeText(text, x, y [, maxWidth]);
 この例の JavaScript コードは次の通りです。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.font = '50px serif';
-ctx.strokeText('Hello world', 50, 90);
+ctx.font = "50px serif";
+ctx.strokeText("Hello world", 50, 90);
 ```
 
 このコードは {{HTMLElement("canvas")}} への参照を受け取り、そこから二次元グラフィックコンテキストへの参照を取得します。
 
-そこで、 {{domxref("CanvasRenderingContext2D.font", "font")}} に 50 ピクセル高の "serif" （ユーザーの既定の[セリフ付き](https://ja.wikipedia.org/wiki/セリフ_(文字))フォント）を設定し、`strokeText()` を呼呼び出して座標 (50, 90) からテキスト "Hello world" を描画します。
+そこで、 {{domxref("CanvasRenderingContext2D.font", "font")}} に 50 ピクセル高の "serif" （ユーザーの既定の[セリフ付き](<https://ja.wikipedia.org/wiki/セリフ_(文字)>)フォント）を設定し、`strokeText()` を呼び出して座標 (50, 90) からテキスト "Hello world" を描画します。
 
 #### 結果
 
@@ -80,11 +84,11 @@ ctx.strokeText('Hello world', 50, 90);
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.font = '50px serif';
-ctx.strokeText('Hello world', 50, 90, 140);
+ctx.font = "50px serif";
+ctx.strokeText("Hello world", 50, 90, 140);
 ```
 
 #### 結果

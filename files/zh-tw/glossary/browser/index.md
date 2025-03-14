@@ -3,6 +3,8 @@ title: 瀏覽器
 slug: Glossary/Browser
 ---
 
+{{GlossarySidebar}}
+
 *網頁瀏覽器*是種從 {{Glossary("World Wide Web","Web")}} 擷取並顯示頁面的程式，且讓用戶透過 {{Glossary("hyperlink","hyperlinks")}} 來進入其他頁面。
 
 ## 更進一步了解

@@ -1,29 +1,20 @@
 ---
 title: management.onDisabled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onDisabled
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Reference
-  - WebExtensions
-  - management
-  - onDisabled
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/onDisabled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Action quand l'extension est désactivée.
 
-L'API requière l'[API de permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management".
+L'API requière l'[API de permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management".
 
 ## Syntaxe
 
 ```js
-browser.management.onDisabled.addListener(listener)
-browser.management.onDisabled.removeListener(listener)
-browser.management.onDisabled.hasListener(listener)
+browser.management.onDisabled.addListener(listener);
+browser.management.onDisabled.removeListener(listener);
+browser.management.onDisabled.hasListener(listener);
 ```
 
 Les événement ont trois fonctions :
@@ -46,9 +37,9 @@ Les événement ont trois fonctions :
     - `info`
       - : [`ExtensionInfo`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo): informations de l'extension qui a été désactivé
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.onDisabled")}}
+{{Compat}}
 
 ## Exemples
 
@@ -62,9 +53,9 @@ browser.management.onDisabled.addListener((info) => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/extensions/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

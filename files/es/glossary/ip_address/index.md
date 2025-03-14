@@ -1,8 +1,9 @@
 ---
 title: Dirección IP
 slug: Glossary/IP_Address
-translation_of: Glossary/IP_Address
 ---
+
+{{GlossarySidebar}}
 
 Una dirección IP es un número asignado a cada dispositivo conectado a una red que utiliza el protocolo de Internet.
 

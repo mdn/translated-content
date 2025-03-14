@@ -14,8 +14,11 @@ El elemento `style` permite agregar directamente hojas de estilo en el contenido
 ## Ejemplo
 
 ```html
-<svg width="100%" height="100%" viewBox="0 0 100 100"
-     xmlns="http://www.w3.org/2000/svg">
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg">
   <style type="text/css">
     /* <![CDATA[ */
     circle {
@@ -38,7 +41,7 @@ Live result:
 
 ### Atributos globales
 
-- [Core attributes](/en/SVG/Attribute#Core) »
+- [Core attributes](/es/docs/Web/SVG/Attribute#core) »
 
 ### Atributos específicos
 
@@ -48,12 +51,16 @@ Live result:
 
 ## DOM Interface
 
-Este elemento implementa la interfaz [`SVGStyleElement`](/en/DOM/SVGStyleElement).
+Este elemento implementa la interfaz [`SVGStyleElement`](/es/docs/Web/API/SVGStyleElement).
 
-## Browser compatibility
+## Especificaciones
 
-{{Compat("svg.elements.style")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## See also
 
-- [\<style> element in HTML](/en/HTML/Element/style)
+- [\<style> element in HTML](/es/docs/Web/HTML/Element/style)

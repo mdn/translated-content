@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: loadeddata event'
+title: "HTMLMediaElement: loadeddata event"
 slug: Web/API/HTMLMediaElement/loadeddata_event
 ---
 
@@ -46,7 +46,8 @@ El evento **`loadeddata`** se arroja cuando el cuadro en la posición de reprodu
   </tbody>
 </table>
 
-> **Nota:** Tenga en cuenta que este evento no se activará en dispositivos móviles / tablet, si el protector de datos está activado en configuración del navegador.
+> [!NOTE]
+> Tenga en cuenta que este evento no se activará en dispositivos móviles / tablet, si el protector de datos está activado en configuración del navegador.
 
 ## Ejemplos
 
@@ -55,22 +56,26 @@ Estos ejemplos agregan un escucha de eventos para el evento de `loadeddata` del 
 Utilizando `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('loadeddata', (event) => {
-  console.log('Hurra! El readyState solo aumentó a ' +
-      'HAVE_CURRENT_DATA or mayor por primera vez.');
+video.addEventListener("loadeddata", (event) => {
+  console.log(
+    "Hurra! El readyState solo aumentó a " +
+      "HAVE_CURRENT_DATA or mayor por primera vez.",
+  );
 });
 ```
 
 Utilizando el `onloadeddata` propiedad del controlador de eventos:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onloadeddata = (event) => {
-  console.log('Hurra! El readyState solo aumentó a ' +
-      'HAVE_CURRENT_DATA or mayor por primera vez.');
+  console.log(
+    "Hurra! El readyState solo aumentó a " +
+      "HAVE_CURRENT_DATA or mayor por primera vez.",
+  );
 };
 ```
 
@@ -78,9 +83,9 @@ video.onloadeddata = (event) => {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLMediaElement.loadeddata_event")}}
+{{Compat}}
 
 ## Eventos Relacionados
 

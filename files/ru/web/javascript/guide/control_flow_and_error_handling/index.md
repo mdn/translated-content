@@ -1,10 +1,6 @@
 ---
 title: Порядок выполнения и обработка ошибок
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-tags:
-  - Guide
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
@@ -13,7 +9,7 @@ JavaScript поддерживает компактный набор инстру
 
 Более подробная информация об инструкциях, рассмотренных в данной главе, содержится в [справочнике по JavaScript](/ru/docs/Web/JavaScript/Reference/Statements). Точка с запятой (`;`) используется для разделения инструкций в коде.
 
-Любое выражение (expression) в JavaScript является также инструкцией (statement). Чтобы получить более подробную информацию о выражениях, прочитайте [Выражения и операторы](/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators).
+Любое выражение (expression) в JavaScript является также инструкцией (statement). Чтобы получить более подробную информацию о выражениях, прочитайте [Выражения и операторы](/ru/docs/Web/JavaScript/Guide/Expressions_and_operators).
 
 ## Инструкция block
 
@@ -26,7 +22,9 @@ JavaScript поддерживает компактный набор инстру
 Блок обычно используется с управляющими инструкциями (например, `if`, `for`, `while`).
 
 ```js
-while (x < 10) { x++; }
+while (x < 10) {
+  x++;
+}
 ```
 
 В вышеприведённом примере `{ x++; }` является блоком.
@@ -55,13 +53,13 @@ console.log(x); // выведет 2
 
 ```js
 if (condition) {
-    statement_1;
+  statement_1;
 } else {
-    statement_2;
+  statement_2;
 }
 ```
 
-Здесь `condition` может быть любым выражением, вычисляемым как истинное (true) или ложное (false). Чтобы получить более подробную информацию о значениях `true` и `false`, прочитайте [Boolean](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean#Description). Если условие оценивается как `true`, то выполняется `statement_1`, в противном случае - `statement_2`. Блоки `statement_1` и `statement_2` могут быть любыми блоками, включая также вложенные инструкции `if`.
+Здесь `condition` может быть любым выражением, вычисляемым как истинное (true) или ложное (false). Чтобы получить более подробную информацию о значениях `true` и `false`, прочитайте [Boolean](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean#description). Если условие оценивается как `true`, то выполняется `statement_1`, в противном случае - `statement_2`. Блоки `statement_1` и `statement_2` могут быть любыми блоками, включая также вложенные инструкции `if`.
 
 Также вы можете объединить несколько инструкций, пользуясь `else if` для получения последовательности проверок условий:
 
@@ -83,14 +81,18 @@ if (condition) {
 
 Нежелательно использовать простые присваивания в условном выражении, т.к. присваивание может быть спутано с равенством при быстром просмотре кода. Например, не используйте следующий код:
 
-```js
-if (x = y) { /* ... */ }
+```js-nolint example-bad
+if (x = y) {
+  /* ... */
+}
 ```
 
 Если вам нужно использовать присваивание в условном выражении, то распространённой практикой является заключение операции присваивания в дополнительные скобки. Например:
 
-```js
-if ( (x = y) ) { /* ... */ }
+```js example-good
+if ((x = y)) {
+  /* ... */
+}
 ```
 
 #### Ложные значения
@@ -121,8 +123,11 @@ function checkData() {
   if (document.form1.threeChar.value.length == 3) {
     return true;
   } else {
-    alert("Enter exactly three characters. " +
-    document.form1.threeChar.value + " is not valid.");
+    alert(
+      "Enter exactly three characters. " +
+        document.form1.threeChar.value +
+        " is not valid.",
+    );
     return false;
   }
 }
@@ -174,7 +179,7 @@ switch (fruittype) {
     console.log("Mangoes and papayas are $2.79 a pound.");
     break;
   default:
-   console.log("Sorry, we are out of " + fruittype + ".");
+    console.log("Sorry, we are out of " + fruittype + ".");
 }
 console.log("Is there anything else you'd like?");
 ```
@@ -187,7 +192,7 @@ console.log("Is there anything else you'd like?");
 
 Практически любой объект может быть выброшен как исключение. Тем не менее, не все выброшенные объекты создаются равными. Обычно числа или строки выбрасываются как исключения, но часто более эффективным является использование одного из типов исключений, специально созданных для этой цели:
 
-- [Исключения ECMAScript](/ru/docs/Web/JavaScript/Reference/Global_Objects/Error#Error_types)
+- [Исключения ECMAScript](/ru/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types)
 - {{domxref("DOMException")}} и {{domxref("DOMError")}}
 
 ### Инструкция throw
@@ -201,25 +206,31 @@ throw expression;
 Вы можете выбросить любое выражение, а не только выражения определённого типа. В следующем примере выбрасываются исключения различных типов:
 
 ```js
-throw "Error2";                                              // string
-throw 42;                                                    // number
-throw true;                                                  // boolean
-throw { toString: function() { return "I'm an object!"; } }; // object
+throw "Error2"; // string
+throw 42; // number
+throw true; // boolean
+throw {
+  toString: function () {
+    return "I'm an object!";
+  },
+}; // object
 ```
 
-> **Примечание:** Вы можете выбросить объект как исключение. Вы можете обращаться к свойствам данного объекта в блоке `catch`.
+> [!NOTE]
+> Вы можете выбросить объект как исключение. Вы можете обращаться к свойствам данного объекта в блоке `catch`.
 
-> **Примечание:** В следующем примере объект `UserException` выбрасывается как исключение:
+> [!NOTE]
+> В следующем примере объект `UserException` выбрасывается как исключение:
 
 ```js
-function UserException (message) {
+function UserException(message) {
   this.message = message;
   this.name = "UserException";
 }
 
 UserException.prototype.toString = function () {
   return this.name + ': "' + this.message + '"';
-}
+};
 
 throw new UserException("Value too high");
 ```
@@ -233,8 +244,20 @@ throw new UserException("Value too high");
 ```js
 function getMonthName(mo) {
   mo = mo - 1; // Adjust month number for array index (1 = Jan, 12 = Dec)
-  var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul",
-                "Aug","Sep","Oct","Nov","Dec"];
+  var months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
   if (months[mo]) {
     return months[mo];
   } else {
@@ -242,10 +265,10 @@ function getMonthName(mo) {
   }
 }
 
-try { // statements to try
+try {
+  // statements to try
   monthName = getMonthName(myMonth); // function could throw exception
-}
-catch (e) {
+} catch (e) {
   monthName = "unknown";
   logMyErrors(e); // pass exception object to error handler -> your own
 }
@@ -265,7 +288,7 @@ JavaScript создаёт идентификатор `catchID`, которому
 
 ```js
 try {
-  throw "myException"
+  throw "myException";
 } catch (e) {
   console.error(e);
 }
@@ -281,7 +304,7 @@ try {
 openMyFile();
 try {
   writeMyFile(theData);
-} catch(e) {
+} catch (e) {
   handleError(e);
 } finally {
   closeMyFile();
@@ -295,19 +318,19 @@ function f() {
   try {
     console.log(0);
     throw "bogus";
-  } catch(e) {
+  } catch (e) {
     console.log(1);
-    return true;    // приостанавливается до завершения блока `finally`
+    return true; // приостанавливается до завершения блока `finally`
     console.log(2); // не выполняется
   } finally {
     console.log(3);
-    return false;   // заменяет предыдущий `return`
+    return false; // заменяет предыдущий `return`
     console.log(4); // не выполняется
   }
   // `return false` выполняется сейчас
-  console.log(5);  // не выполняется
+  console.log(5); // не выполняется
 }
-f();               // отображает 0, 1, 3 и возвращает `false`
+f(); // отображает 0, 1, 3 и возвращает `false`
 ```
 
 Замена возвращаемых значений блоком `finally` распространяется в том числе и на исключения, которые выбрасываются или перевыбрасываются в блоке `catch`:
@@ -316,9 +339,9 @@ f();               // отображает 0, 1, 3 и возвращает `fals
 function f() {
   try {
     throw "bogus";
-  } catch(e) {
+  } catch (e) {
     console.log('caught inner "bogus"');
-    throw e;      // приостанавливается до завершения блока `finally`
+    throw e; // приостанавливается до завершения блока `finally`
   } finally {
     return false; // заменяет предыдущий `throw`
   }
@@ -327,7 +350,7 @@ function f() {
 
 try {
   f();
-} catch(e) {
+} catch (e) {
   // Не выполняется, т.к. `throw` в `catch `заменяется на `return` в `finally`
   console.log('caught outer "bogus"');
 }
@@ -338,7 +361,7 @@ try {
 
 #### Вложенные инструкции `try...catch`
 
-Вы можете вкладывать инструкции `try...catch` друг в друга. Если внутренняя инструкция `try...catch` не имеет блока `catch`, то она должна иметь блок finally, кроме того исключение будет перехвачено во внешнем блоке `catch`. Для получения большей информации ознакомьтесь с вложенными [try-блоками](/ru/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks).
+Вы можете вкладывать инструкции `try...catch` друг в друга. Если внутренняя инструкция `try...catch` не имеет блока `catch`, то она должна иметь блок finally, кроме того исключение будет перехвачено во внешнем блоке `catch`. Для получения большей информации ознакомьтесь с вложенными [try-блоками](/ru/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try-blocks).
 
 ### Использование объекта Error
 
@@ -347,9 +370,9 @@ try {
 Если вы выбрасываете собственные исключения, то чтобы получить преимущество, которое предоставляют эти свойства (например, если ваш блок `catch` не делает различий между вашими исключениями и системными), используйте конструктор `Error`. Например:
 
 ```js
-function doSomethingErrorProne () {
-  if ( ourCodeMakesAMistake() ) {
-    throw ( new Error('The message') );
+function doSomethingErrorProne() {
+  if (ourCodeMakesAMistake()) {
+    throw new Error("The message");
   } else {
     doSomethingToGetAJavascriptError();
   }
@@ -358,7 +381,7 @@ function doSomethingErrorProne () {
 try {
   doSomethingErrorProne();
 } catch (e) {
-  console.log(e.name);    // 'Error'
+  console.log(e.name); // 'Error'
   console.log(e.message); // 'The message' или JavaScript error message
 }
 ```
@@ -374,28 +397,31 @@ try {
 - _отклонено (rejected)_: операция завершена с ошибкой.
 - _заданный (settled)_: промис выполнен или отклонен, но не находится в состоянии ожидания.
 
-![](https://mdn.mozillademos.org/files/8633/promises.png)
+![](promises.png)
 
 ### Загрузка изображения при помощи XHR
 
-Простой пример использования объектов `Promise` и [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) для загрузки изображения доступен в репозитории MDN [promise-test](https://github.com/mdn/js-examples/tree/master/promises-test) на GitHub. Вы также можете [посмотреть его в действии](https://mdn.github.io/js-examples/promises-test/). Каждый шаг прокомментирован, что позволяет вам разобраться в архитектуре `Promise` и XHR. Здесь приводится версия без комментариев:
+Простой пример использования объектов `Promise` и [`XMLHttpRequest`](/ru/docs/Web/API/XMLHttpRequest) для загрузки изображения доступен в репозитории MDN [promise-test](https://github.com/mdn/js-examples/tree/master/promises-test) на GitHub. Вы также можете [посмотреть его в действии](https://mdn.github.io/js-examples/promises-test/). Каждый шаг прокомментирован, что позволяет вам разобраться в архитектуре `Promise` и XHR. Здесь приводится версия без комментариев:
 
 ```js
 function imgLoad(url) {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
     var request = new XMLHttpRequest();
-    request.open('GET', url);
-    request.responseType = 'blob';
-    request.onload = function() {
+    request.open("GET", url);
+    request.responseType = "blob";
+    request.onload = function () {
       if (request.status === 200) {
         resolve(request.response);
       } else {
-        reject(Error('Image didn\'t load successfully; error code:'
-                     + request.statusText));
+        reject(
+          Error(
+            "Image didn't load successfully; error code:" + request.statusText,
+          ),
+        );
       }
     };
-    request.onerror = function() {
-      reject(Error('There was a network error.'));
+    request.onerror = function () {
+      reject(Error("There was a network error."));
     };
     request.send();
   });

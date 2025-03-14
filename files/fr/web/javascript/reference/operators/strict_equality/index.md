@@ -1,24 +1,32 @@
 ---
 title: Égalité stricte (===)
 slug: Web/JavaScript/Reference/Operators/Strict_equality
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.strict_equality
 ---
 
 {{jsSidebar("Operators")}}
 
 L'opérateur d'égalité stricte (`===`) vérifie si ses deux opérandes sont égaux et renvoie un booléen correspondant au résultat. À la différence de [l'opérateur d'égalité](/fr/docs/Web/JavaScript/Reference/Operators/Equality), l'opérateur d'égalité stricte considère toujours des opérandes de types différents comme étant différents.
 
-{{EmbedInteractiveExample("pages/js/expressions-strict-equality.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Strict equality operator")}}
+
+```js interactive-example
+console.log(1 === 1);
+// Expected output: true
+
+console.log("hello" === "hello");
+// Expected output: true
+
+console.log("1" === 1);
+// Expected output: false
+
+console.log(0 === false);
+// Expected output: false
+```
 
 ## Syntaxe
 
 ```js
-x === y
+x === y;
 ```
 
 ## Description
@@ -42,41 +50,41 @@ La différence fondamentale avec [l'opérateur d'égalité](/fr/docs/Web/JavaScr
 ### Comparaison d'opérandes de même type
 
 ```js
-console.log("hello" === "hello");   // true
-console.log("hello" === "hola");    // false
+console.log("hello" === "hello"); // true
+console.log("hello" === "hola"); // false
 
-console.log(3 === 3);               // true
-console.log(3 === 4);               // false
+console.log(3 === 3); // true
+console.log(3 === 4); // false
 
-console.log(true === true);         // true
-console.log(true === false);        // false
+console.log(true === true); // true
+console.log(true === false); // false
 
-console.log(null === null);         // true
+console.log(null === null); // true
 ```
 
 ### Comparaison d'opérandes de types différents
 
 ```js
-console.log("3" === 3);           // false
+console.log("3" === 3); // false
 
-console.log(true === 1);          // false
+console.log(true === 1); // false
 
-console.log(null === undefined);  // false
+console.log(null === undefined); // false
 ```
 
 ### Comparaison d'objets
 
 ```js
 const objet1 = {
-  name: "coucou"
-}
+  name: "coucou",
+};
 
 const objet2 = {
-  name: "coucou"
-}
+  name: "coucou",
+};
 
-console.log(objet1 === objet2);  // false
-console.log(objet1 === objet1);  // true
+console.log(objet1 === objet2); // false
+console.log(objet1 === objet1); // true
 ```
 
 ## Spécifications

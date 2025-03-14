@@ -1,57 +1,73 @@
 ---
 title: stroke-miterlimit
 slug: Web/SVG/Attribute/stroke-miterlimit
-tags:
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/stroke-miterlimit
 ---
 
 {{SVGRef}}
 
 L'attribut **`stroke-miterlimit`** définit la limite du rapport entre la longueur du coin et la valeur de {{ SVGAttr("stroke-width") }} utilisée pour dessiner la [liaison entre deux segments de ligne](/fr/docs/Web/SVG/Attribute/stroke-linejoin). Quand la limite est dépassée, la liaison passe du type _miter_ (pointu) au type _bevel_ (biseauté).
 
-> **Note :** L'attribut `stroke-miterlimit` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> [!NOTE]
+> L'attribut `stroke-miterlimit` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
 
 Cet attribut peut être appliqué à n'importe quel élément, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
 
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 38 30" xmlns="http://www.w3.org/2000/svg">
   <!-- Impact du miterlimit par défaut -->
-  <path stroke="black" fill="none" stroke-linejoin="miter" id="p1"
-        d="M1,9 l7   ,-3 l7   ,3
+  <path
+    stroke="black"
+    fill="none"
+    stroke-linejoin="miter"
+    id="p1"
+    d="M1,9 l7   ,-3 l7   ,3
            m2,0 l3.5 ,-3 l3.5 ,3
            m2,0 l2   ,-3 l2   ,3
            m2,0 l0.75,-3 l0.75,3
            m2,0 l0.5 ,-3 l0.5 ,3" />
 
   <!-- Impact du miterlimit le plus petit (1) -->
-  <path stroke="black" fill="none" stroke-linejoin="miter"
-        stroke-miterlimit="1" id="p2"
-        d="M1,19 l7   ,-3 l7   ,3
+  <path
+    stroke="black"
+    fill="none"
+    stroke-linejoin="miter"
+    stroke-miterlimit="1"
+    id="p2"
+    d="M1,19 l7   ,-3 l7   ,3
            m2, 0 l3.5 ,-3 l3.5 ,3
            m2, 0 l2   ,-3 l2   ,3
            m2, 0 l0.75,-3 l0.75,3
            m2, 0 l0.5 ,-3 l0.5 ,3" />
 
   <!-- Impact d'un large miterlimit (8) -->
-  <path stroke="black" fill="none" stroke-linejoin="miter"
-        stroke-miterlimit="8" id="p3"
-        d="M1,29 l7   ,-3 l7   ,3
+  <path
+    stroke="black"
+    fill="none"
+    stroke-linejoin="miter"
+    stroke-miterlimit="8"
+    id="p3"
+    d="M1,29 l7   ,-3 l7   ,3
            m2, 0 l3.5 ,-3 l3.5 ,3
            m2, 0 l2   ,-3 l2   ,3
            m2, 0 l0.75,-3 l0.75,3
            m2, 0 l0.5 ,-3 l0.5 ,3" />
 
   <!-- Les lignes roses suivantes indiquent la position du chemin pour chaque trait -->
-  <path stroke="pink" fill="none" stroke-width="0.05"
-        d="M1, 9 l7,-3 l7,3 m2,0 l3.5,-3 l3.5,3 m2,0 l2,-3 l2,3 m2,0 l0.75,-3 l0.75,3 m2,0 l0.5,-3 l0.5,3
+  <path
+    stroke="pink"
+    fill="none"
+    stroke-width="0.05"
+    d="M1, 9 l7,-3 l7,3 m2,0 l3.5,-3 l3.5,3 m2,0 l2,-3 l2,3 m2,0 l0.75,-3 l0.75,3 m2,0 l0.5,-3 l0.5,3
            M1,19 l7,-3 l7,3 m2,0 l3.5,-3 l3.5,3 m2,0 l2,-3 l2,3 m2,0 l0.75,-3 l0.75,3 m2,0 l0.5,-3 l0.5,3
            M1,29 l7,-3 l7,3 m2,0 l3.5,-3 l3.5,3 m2,0 l2,-3 l2,3 m2,0 l0.75,-3 l0.75,3 m2,0 l0.5,-3 l0.5,3" />
 </svg>

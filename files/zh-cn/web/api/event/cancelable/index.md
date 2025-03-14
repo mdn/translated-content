@@ -23,12 +23,11 @@ slug: Web/API/Event/cancelable
 
 ## 示例
 
-例如，浏览器厂商提议 {{domxref("Document/wheel_event",
-  "wheel")}} 事件只能在[事件监听回调第一次执行](https://github.com/WICG/interventions/issues/33)时被取消，接下来的 `wheel` 事件都不能被取消。
+例如，浏览器厂商提议 {{domxref("Document/wheel_event", "wheel")}} 事件只能在[事件监听回调第一次执行](https://github.com/WICG/interventions/issues/33)时被取消，接下来的 `wheel` 事件都不能被取消。
 
 ```js
 function preventScrollWheel(event) {
-  if (typeof event.cancelable !== 'boolean' || event.cancelable) {
+  if (typeof event.cancelable !== "boolean" || event.cancelable) {
     // The event can be canceled, so we do so.
     event.preventDefault();
   } else {
@@ -39,7 +38,7 @@ function preventScrollWheel(event) {
   }
 }
 
-document.addEventListener('wheel', preventScrollWheel);
+document.addEventListener("wheel", preventScrollWheel);
 ```
 
 ## 规范

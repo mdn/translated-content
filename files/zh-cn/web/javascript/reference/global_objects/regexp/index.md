@@ -1,5 +1,5 @@
 ---
-title: RegExp(正则表达式)
+title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
 
@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp
 
 **`RegExp`** 对象用于将文本与一个模式匹配。
 
-有关正则表达式的介绍，请阅读 [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide/)中的[正则表达式章节](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。
+有关正则表达式的介绍，请阅读 [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式章节](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。
 
 ## 描述
 
@@ -24,8 +24,8 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp
 
 ```js
 /ab+c/i; //字面量形式
-new RegExp('ab+c', 'i'); // 首个参数为字符串模式的构造函数
-new RegExp(/ab+c/, 'i'); // 首个参数为常规字面量的构造函数
+new RegExp("ab+c", "i"); // 首个参数为字符串模式的构造函数
+new RegExp(/ab+c/, "i"); // 首个参数为常规字面量的构造函数
 ```
 
 当表达式被赋值时，字面量形式提供正则表达式的编译（compilation）状态，当正则表达式保持为常量时使用字面量。例如当你在循环中使用字面量构造一个正则表达式时，正则表达式不会在每一次迭代中都被重新编译（recompiled）。
@@ -47,7 +47,7 @@ var re = /\w+/;
 
 ### Perl-like RegExp 属性
 
-请注意，{{jsxref("RegExp")}}属性有长名称和短名称（类似 Perl）。两个名称总是引用同一个值。（Perl 是 JavaScript 为其正则表达式建模的编程语言）。另请参见[不推荐使用的 RegExp 属性。](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#RegExp_Properties)
+请注意，{{jsxref("RegExp")}}属性有长名称和短名称（类似 Perl）。两个名称总是引用同一个值。（Perl 是 JavaScript 为其正则表达式建模的编程语言）。另请参见[不推荐使用的 RegExp 属性。](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp_properties)
 
 ## 构造函数
 
@@ -56,7 +56,7 @@ var re = /\w+/;
 
 ## 静态属性
 
-- {{jsxref("RegExp.@@species", "get RegExp[@@species]")}}
+- [`RegExp[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species)
   - : 该构造函数用于创建派生对象。
 - {{jsxref("RegExp.lastIndex")}}
   - : 该索引表示从哪里开始下一个匹配
@@ -88,15 +88,15 @@ var re = /\w+/;
   - : 在该字符串中执行匹配项的搜索。
 - {{JSxRef("RegExp.prototype.test()")}}
   - : 该正则在字符串里是否有匹配。
-- {{JSxRef("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
+- [`RegExp.prototype[Symbol.match]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)
   - : 对给定字符串执行匹配并返回匹配结果。
-- {{JSxRef("RegExp.prototype.@@matchAll()", "RegExp.prototype[@@matchAll]()")}}
+- [`RegExp.prototype[Symbol.matchAll]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)
   - : 对给定字符串执行匹配，返回所有匹配结果。
-- {{JSxRef("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
+- [`RegExp.prototype[Symbol.replace]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)
   - : 给定新的子串，替换所有匹配结果。
-- {{JSxRef("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
+- [`RegExp.prototype[Symbol.search]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)
   - : 在给定字符串中搜索匹配项，并返回在字符串中找到字符索引。
-- {{JSxRef("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+- [`RegExp.prototype[Symbol.split]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split)
   - : 通过将给定字符串拆分为子字符串，并返回字符串形成的数组。
 - {{JSxRef("RegExp.prototype.toString()")}}
   - : 返回表示指定对象的字符串。重写{{jsxref("Object.prototype.toString()")}}方法。
@@ -147,14 +147,14 @@ s.match(/yes[^]*day/);
 带有{{JSxRef("Global_Objects/RegExp/sticky", "sticky")}}标志的正则表达式将会从源字符串的{{jsxref("RegExp.prototype.lastIndex")}}位置开始匹配，也就是进行“粘性匹配”。
 
 ```js
-let str = '#foo#'
-let regex = /foo/y
+let str = "#foo#";
+let regex = /foo/y;
 
-regex.lastIndex = 1
-regex.test(str)      // true
-regex.lastIndex = 5
-regex.test(str)      // false (lastIndex is taken into account with sticky flag)
-regex.lastIndex      // 0 (reset after match failure)
+regex.lastIndex = 1;
+regex.test(str); // true
+regex.lastIndex = 5;
+regex.test(str); // false (lastIndex is taken into account with sticky flag)
+regex.lastIndex; // 0 (reset after match failure)
 ```
 
 ### sticky 标志和 global 标志的不同点
@@ -163,7 +163,8 @@ regex.lastIndex      // 0 (reset after match failure)
 
 ```js
 re = /\d/y;
-while (r = re.exec("123 456")) console.log(r, "AND re.lastIndex", re.lastIndex);
+while ((r = re.exec("123 456")))
+  console.log(r, "AND re.lastIndex", re.lastIndex);
 
 // [ '1', index: 0, input: '123 456', groups: undefined ] AND re.lastIndex 1
 // [ '2', index: 1, input: '123 456', groups: undefined ] AND re.lastIndex 2
@@ -186,17 +187,17 @@ let text = "Образец text на русском языке";
 let regex = /[\u0400-\u04FF]+/g;
 
 let match = regex.exec(text);
-console.log(match[0]);  // prints "Образец"
-console.log(regex.lastIndex);  // prints "7"
+console.log(match[0]); // prints "Образец"
+console.log(regex.lastIndex); // prints "7"
 
 let match2 = regex.exec(text);
-console.log(match2[0]);  // prints "на" [did not print "text"]
-console.log(regex.lastIndex);  // prints "15"
+console.log(match2[0]); // prints "на" [did not print "text"]
+console.log(regex.lastIndex); // prints "15"
 
 // and so on
 ```
 
-[Unicode 属性转义特性](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)引入了一种解决方案，它允许使用像\p{scx=Cyrl}这样简单的语句。这里有一个外部资源，用来获取 Unicode 中的不同区块范围：[Regexp-unicode-block](http://kourge.net/projects/regexp-unicode-block)
+[Unicode 属性转义特性](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)引入了一种解决方案，它允许使用像\p{scx=Cyrl}这样简单的语句。这里有一个外部资源，用来获取 Unicode 中的不同区块范围：[Regexp-unicode-block](http://kourge.net/projects/regexp-unicode-block)
 
 ### 从 URL 中提取子域名
 
@@ -205,7 +206,8 @@ var url = "http://xxx.domain.com";
 console.log(/[^.]+/.exec(url)[0].substr(7)); // logs "xxx"
 ```
 
-> **备注：** 使用浏览器内建的[URL API](/zh-CN/docs/Web/API/URL_API)而非正则表达式来解析 URL 是更好的做法
+> [!NOTE]
+> 使用浏览器内建的[URL API](/zh-CN/docs/Web/API/URL_API)而非正则表达式来解析 URL 是更好的做法
 
 ## 规范
 
@@ -215,8 +217,11 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // logs "xxx"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)一节
-- [String.prototype.match()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match)
-- [String.prototype.replace()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
+- [`core-js` 中很多现代 `RegExp` 特性（`dotAll`、`sticky` 标志、具名捕获组等）的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)指南
+- [正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions)参考
+- {{jsxref("String.prototype.match()")}}
+- {{jsxref("String.prototype.replace()")}}
+- {{jsxref("String.prototype.split()")}}

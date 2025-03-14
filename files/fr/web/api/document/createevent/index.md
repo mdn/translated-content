@@ -1,19 +1,14 @@
 ---
 title: Document.createEvent()
 slug: Web/API/Document/createEvent
-tags:
-  - API
-  - DOM
-  - Méthode
-  - Reference
-translation_of: Web/API/Document/createEvent
 ---
 
-> **Attention :** De nombreuses méthodes utilisées avec `createEvent`, tels que `initCustomEvent`, sont obsolètes. Utilisez le [constructeur d'évènement](/fr/docs/Web/API/CustomEvent) à la place.
+> [!WARNING]
+> De nombreuses méthodes utilisées avec `createEvent`, tels que `initCustomEvent`, sont obsolètes. Utilisez le [constructeur d'évènement](/fr/docs/Web/API/CustomEvent) à la place.
 
 {{ ApiRef("DOM") }}
 
-Crée un [event](/fr/docs/DOM/event) du type spécifié. L'objet retourné doit être intialisé et peut être passé ensuite à [element.dispatchEvent](/fr/docs/DOM/element.dispatchEvent).
+Crée un [event](/fr/docs/Web/API/Event) du type spécifié. L'objet retourné doit être intialisé et peut être passé ensuite à [element.dispatchEvent](/fr/docs/Web/API/EventTarget/dispatchEvent).
 
 ## Syntaxe
 
@@ -21,22 +16,26 @@ Crée un [event](/fr/docs/DOM/event) du type spécifié. L'objet retourné doit 
 var event = document.createEvent(type);
 ```
 
-- `event` est l'objet [Event](/fr/docs/DOM/event) créé.
+- `event` est l'objet [Event](/fr/docs/Web/API/Event) créé.
 - `type` est une chaîne de caractères qui représente le type d'événement à créer. Les types possibles d'événement incluent `"UIEvents"`, `"MouseEvents"`, `"MutationEvents"` et `"HTMLEvents"`. Voir la section [Notes](#notes) pour plus de détails.
 
 ## Exemple
 
 ```js
 // Crée l'événement.
-var event = document.createEvent('Event');
+var event = document.createEvent("Event");
 
 // Nomme l'événement 'build'.
-event.initEvent('build', true, true);
+event.initEvent("build", true, true);
 
 //  Écoute l'événement.
-elem.addEventListener('build', function (e) {
-  // e.target correspond à elem
-}, false);
+elem.addEventListener(
+  "build",
+  function (e) {
+    // e.target correspond à elem
+  },
+  false,
+);
 
 // target peut être tout Element ou autre EventTarget.
 elem.dispatchEvent(event);
@@ -75,9 +74,9 @@ Gecko prend en charge certains alias d'objet événement non standard, répertor
 
 ## Spécification
 
-- [DOM Level 2 Events: createEvent](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-DocumentEvent-createEvent)
-- [DOM Level 3 Events: createEvent](http://www.w3.org/TR/DOM-Level-3-Events/#events-Events-DocumentEvent-createEvent)
+- [DOM Level 2 Events: createEvent](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-DocumentEvent-createEvent)
+- [DOM Level 3 Events: createEvent](https://www.w3.org/TR/DOM-Level-3-Events/#events-Events-DocumentEvent-createEvent)
 
 ## Voir aussi
 
-- [Création et déclenchement d'événements](/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events)
+- [Création et déclenchement d'événements](/fr/docs/Web/Events/Creating_and_triggering_events)

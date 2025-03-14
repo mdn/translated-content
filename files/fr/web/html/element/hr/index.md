@@ -1,37 +1,58 @@
 ---
-title: '<hr> : l''élément de rupture thématique (règle horizontale)'
+title: "<hr> : l'élément de rupture thématique (règle horizontale)"
 slug: Web/HTML/Element/hr
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/hr
 ---
 
 {{HTMLSidebar}}
 
 L'élément HTML **`<hr>`** représente un changement thématique entre des éléments de paragraphe (par exemple, un changement de décor dans un récit, un changement de sujet au sein d'une section).
 
-{{EmbedInteractiveExample("pages/tabbed/hr.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;hr&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>§1: The first rule of Fight Club is: You do not talk about Fight Club.</p>
+
+<hr />
+
+<p>§2: The second rule of Fight Club is: Always bring cupcakes.</p>
+```
+
+```css interactive-example
+hr {
+  border: none;
+  border-top: 3px double #333;
+  color: #333;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+
+hr::after {
+  background: #fff;
+  content: "§";
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
+}
+```
 
 Dans les versions précédentes d'HTML, il représente une ligne horizontale. Bien qu'il puisse toujours être représenté ainsi par les navigateurs graphiques, il possède désormais une signification sémantique et ne représente plus un élément de mise en forme.
 
 ## Attributs
 
-Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ### Attributs dépréciés, obsolètes ou non-standard
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
   - : Définit l'alignement de la ligne horizontale sur la page. Si aucune valeur n'est renseignée, la valeur prise par défaut est `left`.
-- {{htmlattrdef("color")}} {{Non-standard_inline}}
+- `color` {{Non-standard_inline}}
   - : Définit la couleur à utiliser pour la ligne horizontale, grâce à un nom de couleur SVG ou à un code hexadécimal (précédé d'un #).
-- {{htmlattrdef("noshade")}} {{deprecated_inline}}
+- `noshade` {{deprecated_inline}}
   - : Avec cet attribut, la ligne horizontale n'aura pas d'ombre.
-- {{htmlattrdef("size")}} {{deprecated_inline}}
+- `size` {{deprecated_inline}}
   - : Définit la hauteur de la ligne, exprimée en pixels.
-- {{htmlattrdef("width")}} {{deprecated_inline}}
+- `width` {{deprecated_inline}}
   - : Définit la longueur de la ligne, exprimée par une valeur en pixels ou en pourcents.
 
 ## Exemples
@@ -40,17 +61,15 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Attri
 
 ```html
 <p>
-  Ceci est le premier paragraphe du texte.
-  Les pandas roux sont géniaux.
-  C'est mignon et c'est tout doux.
+  Ceci est le premier paragraphe du texte. Les pandas roux sont géniaux. C'est
+  mignon et c'est tout doux.
 </p>
 
-<hr>
+<hr />
 
 <p>
-  Ceci est le deuxième paragraphe du texte.
-  Les poneys ne sont pas pareils.
-  Ils sont plus grands et moins exotiques.
+  Ceci est le deuxième paragraphe du texte. Les poneys ne sont pas pareils. Ils
+  sont plus grands et moins exotiques.
 </p>
 ```
 
@@ -102,7 +121,7 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Attri
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>{{ARIARole("presentation")}}</td>
+      <td><code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code></td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>

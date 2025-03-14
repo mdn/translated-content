@@ -1,11 +1,6 @@
 ---
 title: Document.createNodeIterator()
 slug: Web/API/Document/createNodeIterator
-tags:
-  - API
-  - DOM
-  - Méthodes
-translation_of: Web/API/Document/createNodeIterator
 ---
 
 {{APIRef("DOM")}}
@@ -24,7 +19,7 @@ var nodeIterator = document.createNodeIterator(root, whatToShow, filter);
   - : Le noeud racine à partir duquel commencer la traversée de {{domxref("NodeIterator")}}.
 - `whatToShow` {{ optional_inline() }}
 
-  - : Est un `unsigned long` (_long non signé_) facultatif représentant un masque de bits créé par la combinaison des constantes de la propriété [`NodeFilter`](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter). C'est un moyen pratique de filtrage pour certains types de noeuds. Il est par défaut `0xFFFFFFFF` représentant la constante `SHOW_ALL`.
+  - : Est un `unsigned long` (_long non signé_) facultatif représentant un masque de bits créé par la combinaison des constantes de la propriété [`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter). C'est un moyen pratique de filtrage pour certains types de noeuds. Il est par défaut `0xFFFFFFFF` représentant la constante `SHOW_ALL`.
 
     <table class="standard-table">
       <tbody>
@@ -142,22 +137,25 @@ var nodeIterator = document.createNodeIterator(root, whatToShow, filter);
 - `filter` {{ optional_inline() }}
   - : Un objet implémentant l'interface {{ domxref("NodeFilter") }} ; sa méthode `acceptNode()` sera appelée pour chaque nœud du sous-arbre basé à la racine qui est accepté comme inclus par l'indicateur whatToShow pour déterminer s'il faut ou non l'inclure dans la liste des nœuds iterables (une simple fonction de rappel peut également être utilisée à la place). La méthode devrait retourner l'un des `NodeFilter.FILTER_ACCEPT`, `NodeFilter.FILTER_REJECT` ou `NodeFilter.FILTER_SKIP`. Voir l'[exemple](#exemple).
 
-> **Note :** Avant Gecko 12.0, cette méthode acceptait un quatrième paramètre facultatif (`entityReferenceExpansion`). Cela ne faisait pas partie de la spécification DOM4 et a donc été supprimé. Ce paramètre indiquait si les enfants des nœuds de référence d'entité étaient visibles ou non par l'itérateur. Puisque de tels noeuds n'ont jamais été créés dans les navigateurs, ce paramètre n'a eu aucun effet.
+> [!NOTE]
+> Avant Gecko 12.0, cette méthode acceptait un quatrième paramètre facultatif (`entityReferenceExpansion`). Cela ne faisait pas partie de la spécification DOM4 et a donc été supprimé. Ce paramètre indiquait si les enfants des nœuds de référence d'entité étaient visibles ou non par l'itérateur. Puisque de tels noeuds n'ont jamais été créés dans les navigateurs, ce paramètre n'a eu aucun effet.
 
 ## Exemple
 
 ```js
 var nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    function(node) {
-        return node.nodeName.toLowerCase() === 'p' ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
-    }
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  function (node) {
+    return node.nodeName.toLowerCase() === "p"
+      ? NodeFilter.FILTER_ACCEPT
+      : NodeFilter.FILTER_REJECT;
+  },
 );
 var pars = [];
 var currentNode;
 
-while (currentNode = nodeIterator.nextNode()) {
+while ((currentNode = nodeIterator.nextNode())) {
   pars.push(currentNode);
 }
 ```
@@ -172,4 +170,4 @@ Pris en charge dans FF 3.5+, Chrome 1+, Opera 9+, Safari 3+, IE9+, Edge
 
 ## Spécifications
 
-[DOM Level 2 Traversal : NodeIterator](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeIterator)
+[DOM Level 2 Traversal : NodeIterator](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeIterator)

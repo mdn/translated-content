@@ -1,22 +1,26 @@
 ---
 title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
-original_slug: Web/JavaScript/Reference/Objets_globaux/Set/has
 ---
 
 {{JSRef}}
 
 La méthode **`has()`** renvoie un booléen qui indique s'il existe un élément de l'ensemble `Set` avec une certaine valeur.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.has()")}}
+
+```js interactive-example
+const set1 = new Set([1, 2, 3, 4, 5]);
+
+console.log(set1.has(1));
+// Expected output: true
+
+console.log(set1.has(5));
+// Expected output: true
+
+console.log(set1.has(6));
+// Expected output: false
+```
 
 ## Syntaxe
 
@@ -33,7 +37,8 @@ monSet.has(valeur);
 
 Un booléen : `true` s'il existe un élément avec la valeur donnée au sein du `Set`, `false` sinon.
 
-> **Note :** L'existence d'un élément avec la valeur testée est vérifiée avec [l'algorithme d'égalité des valeurs nulles (`sameValueZero`)](/fr/docs/Web/JavaScript/Les_différents_tests_d_égalité#Égalité_de_valeurs_nulles).
+> [!NOTE]
+> L'existence d'un élément avec la valeur testée est vérifiée avec [l'algorithme d'égalité des valeurs nulles (`sameValueZero`)](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness#égalité_de_valeurs_nulles).
 
 ## Exemples
 
@@ -41,16 +46,16 @@ Un booléen : `true` s'il existe un élément avec la valeur donnée au sein du 
 var monSet = new Set();
 monSet.add("toto");
 
-monSet.has("toto");  // renvoie true
-monSet.has("truc");  // renvoie false
+monSet.has("toto"); // renvoie true
+monSet.has("truc"); // renvoie false
 
 var set1 = new Set();
-var obj1 = {'cle1': 1};
+var obj1 = { cle1: 1 };
 set1.add(obj1);
 
-set1.has(obj1);        // renvoie true
-set1.has({'cle1': 1}); // renvoie false car ce sont deux objets distincts
-set1.add({'cle1': 1}); // set1 contient désormais 2 éléments
+set1.has(obj1); // renvoie true
+set1.has({ cle1: 1 }); // renvoie false car ce sont deux objets distincts
+set1.add({ cle1: 1 }); // set1 contient désormais 2 éléments
 ```
 
 ## Spécifications

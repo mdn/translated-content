@@ -1,18 +1,28 @@
 ---
 title: TypedArray.from()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/from
+l10n:
+  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
 {{JSRef}}
 
-**`TypedArray.from()`** メソッドは、配列風オブジェクトや反復可能オブジェクトから新しい[型付き配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)を生成します。このメソッドは {{jsxref("Array.from()")}} とほぼ同じです。
+**`TypedArray.from()`** メソッドは、配列風オブジェクトや反復可能オブジェクトから新しい[型付き配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_オブジェクト)を生成します。このメソッドは {{jsxref("Array.from()")}} とほぼ同じです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-from.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.from()", "shorter")}}
+
+```js interactive-example
+const uint16 = Int16Array.from("12345");
+
+console.log(uint16);
+// Expected output: Int16Array [1, 2, 3, 4, 5]
+```
 
 ## 構文
 
-```
-TypedArray.from(source[, mapFn[, thisArg]])
+```js-nolint
+TypedArray.from(arrayLike, mapFn)
+TypedArray.from(arrayLike, mapFn, thisArg)
 ```
 
 ここで `TypedArray` は次のいずれかです。
@@ -31,38 +41,31 @@ TypedArray.from(source[, mapFn[, thisArg]])
 
 ### 引数
 
-- `source`
-  - : 型付き配列に変換する配列風オブジェクトか反復可能オブジェクト
+- `arrayLike`
+  - : 型付き配列に変換する反復可能または配列風オブジェクトです。
 - `mapFn` {{optional_inline}}
-  - : 型付き配列のすべての要素に適用される map 関数。
+  - : 型付き配列の各要素に対して呼び出す関数です。指定された場合、配列に追加するすべての値は最初にこの関数に渡され、代わりに `mapFn` の返値が型付き配列に追加されます。この関数は以下の引数で呼び出されます。
+    - `element`
+      - : 現在処理されている型付き配列の要素です。
+    - `index`
+      - : 現在処理されている型付き配列の要素のインデックスです。
 - `thisArg` {{optional_inline}}
-  - : `mapFn` を実行するときに `this` として使う値。
+  - : `mapFn` を実行するときに `this` として使う値です。
 
 ### 返値
 
-新しい {{jsxref("TypedArray")}} インスタンス。
+新しい {{jsxref("TypedArray")}} インスタンスです。
 
 ## 解説
 
-`TypedArray.from()` によって下記から型付き配列を生成できます:
+詳しくは {{jsxref("Array.from()")}} をご覧ください。
 
-- 配列風オブジェクト (`length` プロパティと、番号の振られた要素をもつオブジェクト)
-- [反復可能オブジェクト](/ja/docs/Web/JavaScript/Guide/iterable) ({{jsxref("Map")}} や {{jsxref("Set")}} のように要素が取得できるオブジェクト)
+{{jsxref("Array.from()")}} と `TypedArray.from()` の間には微妙な違いがあります（メモ: 下記で言及する `this` 値は `TypedArray.from()` が呼び出された `this` 値であり、 `mapFn` を呼び出すために用いた `thisArg` 引数ではありません）。
 
-`TypedArray.from()` は省略可能な引数 `mapFn` を持ち、これは生成中の型付き配列 (またはサブクラスのオブジェクト) のそれぞれの要素に対して {{jsxref("Array.prototype.map", "map()")}} 関数を実行することができます。すなわち、以下のものと同等です。
-
-- `TypedArray.from(obj, mapFn, thisArg)`
-- `TypedArray.from(Array.prototype.map.call(obj, mapFn, thisArg))`.
-
-`from()` メソッドの `length` プロパティは `1` です。
-
-### Array.from() との違い
-
-{{jsxref("Array.from()")}} と `TypedArray.from()` の間には、いくつかの微妙な違いがあります。
-
-- `TypedArray.from()` に渡された `thisArg` の値がコンストラクターではなかった場合、 `TypedArray.from()` で {{jsxref("TypeError")}} が発生します。これは `Array.from()` が既定で新しい {{jsxref("Array")}} を生成するためです。
-- `TypedArray.from()` は `[[Put]]` を使用します。 `Array.from()` は `[[DefineProperty]]` を使用します。 従って {{jsxref("Proxy")}} オブジェクトを使っている場合は、新しい要素を追加するときに {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty")}} ではなく {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} が呼び出されます。
-- `source` 引数がイテレーターであった場合、 `TypedArray.from()` は最初にイテレーターからすべての値を集め、その数の大きさを持つ `thisArg` のインスタンスを生成し、そのインスタンスに値を設定します。 `Array.from()` はイテレーターから取得して各値を設定し、最後に `length` を設定します。
+- `TypedArray.from()` に渡された `this` の値がコンストラクターではなかった場合、 `TypedArray.from()` で {{jsxref("TypeError")}} が発生します。それに対して `Array.from()` が既定で新しい {{jsxref("Array")}} を生成します。
+- `this` で構築されるオブジェクトは `TypedArray` インスタンスでなければなりませんが、 `Array.from()` は `this` の値を任意のオブジェクトに構築することができます。
+- 引数 `source` がイテレーターの場合、 `TypedArray.from()` は最初にイテレーターからすべての値を収集し、次にそのカウントを使用して `this` のインスタンスを作成し、最後にそのインスタンスに値を設定します。 `Array.from()` はイテレーターから値を受け取るとそれぞれの値を設定し、最後に `length` を設定します。
+- `TypedArray.from()` は `[[Set]]` を使用します。 `Array.from()` は `[[DefineOwnProperty]]` を使用します。 従って {{jsxref("Proxy")}} オブジェクトを使っている場合は、新しい要素を追加するときに [`handler.set()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set) が [`handler.defineProperty()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) の代わりに呼び出されます。
 - `Array.from()` がイテレーターではない配列風オブジェクトを受け取ったときは、穴をそのまま残します。 `TypedArray.from()` は必ず密配列 (dense array) を生成します。
 
 ## 例
@@ -77,8 +80,8 @@ Uint8Array.from(s);
 
 ### 文字列から
 
-```
-Int16Array.from('123');
+```js
+Int16Array.from("123");
 // Int16Array [ 1, 2, 3 ]
 ```
 
@@ -86,62 +89,41 @@ Int16Array.from('123');
 
 アロー関数をマップ関数として使用して要素を操作します。
 
-```
-Float32Array.from([1, 2, 3], x => x + x);
+```js
+Float32Array.from([1, 2, 3], (x) => x + x);
 // Float32Array [ 2, 4, 6 ]
 ```
 
 ### 数列を生成する
 
-```
-Uint8Array.from({length: 5}, (v, k) => k);
+```js
+Uint8Array.from({ length: 5 }, (v, k) => k);
 // Uint8Array [ 0, 1, 2, 3, 4 ]
 ```
 
-## ポリフィル
+### TypedArray 以外のコンストラクターに対する from() の呼び出し
 
-JavaScript エンジンの実装がこのメソッドにネイティブに対応していない場合、回避策として、以下のコードをスクリプトの先頭に挿入することで、 `from()` の機能の大部分が使えるようになります。
+`from()` の `this` 値は `TypedArray` インスタンスを返すコンストラクターでなければなりません。
 
 ```js
-if (!Int8Array.__proto__.from) {
-    (function () {
-        Int8Array.__proto__.from = function (obj, func, thisObj) {
-
-            var typedArrayClass = Int8Array.__proto__;
-            if(typeof this !== 'function') {
-                throw new TypeError('# is not a constructor');
-            }
-            if (this.__proto__ !== typedArrayClass) {
-                throw new TypeError('this is not a typed array.');
-            }
-
-            func = func || function (elem) {
-                    return elem;
-                };
-
-            if (typeof func !== 'function') {
-                throw new TypeError('specified argument is not a function');
-            }
-
-            obj = Object(obj);
-            if (!obj['length']) {
-                return new this(0);
-            }
-            var copy_data = [];
-            for(var i = 0; i < obj.length; i++) {
-                copy_data.push(obj[i]);
-            }
-
-            copy_data = copy_data.map(func, thisObj);
-
-            var typed_array = new this(copy_data.length);
-            for(var i = 0; i < typed_array.length; i++) {
-                typed_array[i] = copy_data[i];
-            }
-            return typed_array;
-        }
-    })();
+function NotArray(len) {
+  console.log("NotArray called with length", len);
 }
+
+Int8Array.from.call({}, []); // TypeError: #<Object> is not a constructor
+Int8Array.from.call(NotArray, []);
+// NotArray called with length 0
+// TypeError: Method %TypedArray%.from called on incompatible receiver #<NotArray>
+```
+
+```js
+function NotArray2(len) {
+  console.log("NotArray2 called with length", len);
+  return new Uint8Array(len);
+}
+console.log(Int8Array.from.call(NotArray2, [1, 2, 3]));
+// NotArray2 called with length 3
+// Uint8Array(3) [ 1, 2, 3 ]
 ```
 
 ## 仕様書
@@ -150,10 +132,13 @@ if (!Int8Array.__proto__.from) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.TypedArray.from")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`TypedArray.from` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
+- {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.of()")}}
+- {{jsxref("TypedArray.prototype.map()")}}
 - {{jsxref("Array.from()")}}
-- {{jsxref("Array.prototype.map()")}}

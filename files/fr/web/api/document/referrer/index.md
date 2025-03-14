@@ -1,19 +1,13 @@
 ---
 title: Document.referrer
 slug: Web/API/Document/referrer
-tags:
-  - API
-  - HTML DOM
-  - Propriété
-  - Reference
-translation_of: Web/API/Document/referrer
 ---
 
 {{APIRef}}
 
 ## Résumé
 
-Renvoie l'[URI](http://www.w3.org/Addressing/#background) de la page de provenance.
+Renvoie l'[URI](https://www.w3.org/Addressing/#background) de la page de provenance.
 
 ## Syntaxe
 
@@ -27,4 +21,4 @@ La valeur est une chaîne de caractères vide si l'utilisateur est arrivé direc
 
 ## Spécification
 
-- [DOM Level 2: referrer](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95229140)
+- [DOM Level 2: referrer](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95229140)

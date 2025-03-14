@@ -1,15 +1,17 @@
 ---
 title: CSS ボックスモデル
-slug: Web/CSS/CSS_Box_Model
+slug: Web/CSS/CSS_box_model
+l10n:
+  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
 {{CSSRef}}
 
-**CSS ボックスモデル**は CSS のモジュールの一つで、要素に対して作成され、パディングやマージンを含む長方形のボックス定義します。[視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)によって配置されます。
+**CSS ボックスモデル**は、要素に対して作成され、パディングやマージンを含む長方形のボックスを定義します。これは[視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)によってレイアウトされます。
 
-## ボックスモデル
+## ボックスモデルの概要
 
-CSS のボックスは、テキスト、画像、その他の HTML 要素が表示されるコンテンツ領域で構成されています。この領域は、パディング、境界、マージンによって、1 つ以上の辺で囲まれることがあります。ボックスモデルは、これらの要素がどのように連携して CSS で表示されるボックスを作成するかを説明します。詳しくは、[CSS ボックスモデル入門](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)をご覧ください。
+CSS のボックスは、テキスト、画像、その他の HTML 要素が表示されるコンテンツ領域で構成されています。この領域は、パディング、境界、マージンによって、1 つ以上の辺で囲まれることがあります。ボックスモデルは、これらの要素がどのように連携して CSS で表示されるボックスを作成するかを説明します。詳しくは、[CSS ボックスモデル入門](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)をご覧ください。
 
 ### ボックスの辺のキーワード
 
@@ -30,9 +32,8 @@ CSS のボックスは、テキスト、画像、その他の HTML 要素が表�
 
 ## リファレンス
 
-### プロパティ
-
-> **メモ:** 本仕様では、物理的なパディングとマージンのプロパティを定義しています。テキストの方向に関係するフローに関連したプロパティは、[論理的プロパティと値](/ja/docs/Web/CSS/CSS_Logical_Properties)で定義されています。
+> [!NOTE]
+> 本仕様では、物理的なパディングとマージンのプロパティを定義しています。テキストの書字方向に関係するフローに関連したプロパティは、[論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)で定義されています。
 
 #### ボックスのマージンを制御するプロパティ
 
@@ -59,16 +60,16 @@ CSS のボックスは、テキスト、画像、その他の HTML 要素が表�
 
 ボックスモデルに関連するプロパティは他にもあり、それらは別の場所で定義されています。
 
-- [境界](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
   - : 境界のプロパティは、境界の太さ、描画スタイル、色を指定します。
 - [オーバーフロー](/ja/docs/Web/CSS/overflow)
   - : 内容物が多すぎてボックスに入りきらない場合に起こることを制御します。
 
 ## ガイド
 
-- [CSS ボックスモデルの紹介](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [CSS ボックスモデルの紹介](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - : CSS の基礎的概念の 1 つである、ボックスモデルを解説します。このモデルは CSS が要素とそのコンテンツ領域、パディング領域、境界領域、マージン領域をどのように配置するかを定義しています。
-- [マージンの相殺の理解](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [マージンの相殺の理解](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - : 2 つの隣接するマージンが 1 つに相殺されることがあります。この記事ではいつなぜそれが発生し、どのように制御するかを説明します。
 - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
   - : 視覚整形モデルを説明します。
@@ -76,4 +77,3 @@ CSS のボックスは、テキスト、画像、その他の HTML 要素が表�
 ## 仕様書
 
 {{Specifications}}
-

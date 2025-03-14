@@ -1,28 +1,44 @@
 ---
 title: handler.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Proxy
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/deleteProperty
 ---
 
 {{JSRef}}
 
 La méthode **`handler.deleteProperty()`** est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-deleteproperty.html","taller")}}
+{{InteractiveExample("JavaScript Demo: handler.deleteProperty()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  texture: "scaly",
+};
+
+const handler1 = {
+  deleteProperty(target, prop) {
+    if (prop in target) {
+      delete target[prop];
+      console.log(`property removed: ${prop}`);
+      // Expected output: "property removed: texture"
+    }
+  },
+};
+
+console.log(monster1.texture);
+// Expected output: "scaly"
+
+const proxy1 = new Proxy(monster1, handler1);
+delete proxy1.texture;
+
+console.log(monster1.texture);
+// Expected output: undefined
+```
 
 ## Syntaxe
 
 ```js
 var p = new Proxy(cible, {
-  deleteProperty: function(cible, propriété) {
-  }
+  deleteProperty: function (cible, propriété) {},
 });
 ```
 
@@ -61,12 +77,15 @@ Si les invarians suivants ne sont pas respectés, le proxy renverra une exceptio
 Dans l'exemple qui suit, on intercepte les opérations de {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}.
 
 ```js
-var p = new Proxy({}, {
-  deleteProperty: function(cible, prop) {
-    console.log("appelée sur : " + prop);
-    return true;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    deleteProperty: function (cible, prop) {
+      console.log("appelée sur : " + prop);
+      return true;
+    },
+  },
+);
 
 delete p.a; // "appelée sur : a"
 ```

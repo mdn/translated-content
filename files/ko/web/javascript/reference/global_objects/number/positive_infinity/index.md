@@ -1,19 +1,30 @@
 ---
 title: Number.POSITIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
-tags:
-  - JavaScript
-  - Number
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 ---
 
 {{JSRef}}
 
 **`Number.POSITIVE_INFINITY`** 속성은 양의 무한대를 나타냅니다.
 
-{{EmbedInteractiveExample("pages/js/number-positive-infinity.html")}}{{js_property_attributes(0, 0, 0)}}
+{{InteractiveExample("JavaScript Demo: Number.POSITIVE_INFINITY")}}
+
+```js interactive-example
+function checkNumber(bigNumber) {
+  if (bigNumber === Number.POSITIVE_INFINITY) {
+    return "Process number as Infinity";
+  }
+  return bigNumber;
+}
+
+console.log(checkNumber(Number.MAX_VALUE));
+// Expected output: 1.7976931348623157e+308
+
+console.log(checkNumber(Number.MAX_VALUE * 2));
+// Expected output: "Process number as Infinity"
+```
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## 설명
 
@@ -42,7 +53,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 다음 코드에서 `bigNumber`는 JavaScript의 최댓값보다 큰 값을 할당받습니다. {{jsxref("Statements/if...else", "if")}} 문이 실행되면, `bigNumber`의 값이 `Infinity`이므로 `bigNumber`는 계산에 좀 더 적합한 유한값을 다시 할당합니다.
 
 ```js
-var bigNumber = (Number.MAX_VALUE) * 2;
+var bigNumber = Number.MAX_VALUE * 2;
 
 if (bigNumber === Number.POSITIVE_INFINITY) {
   bigNumber = returnFinite();

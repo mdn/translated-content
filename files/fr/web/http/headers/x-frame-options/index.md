@@ -1,8 +1,6 @@
 ---
 title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
-translation_of: Web/HTTP/Headers/X-Frame-Options
-browser-compat: http.headers.X-Frame-Options
 ---
 
 {{HTTPSidebar}}
@@ -11,7 +9,8 @@ L'en-tête de réponse [HTTP](/fr/docs/Web/HTTP) **`X-Frame-Options`** peut êtr
 
 Ce complément de sécurité est uniquement valable lorsque l'utilisateur final visite le document avec un navigateur prenant en charge `X-Frame-Options`.
 
-> **Note :** L'en-tête [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) possède une directive [`frame-ancestors`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) qui [supplante](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options) cet en-tête pour les navigateurs compatibles.
+> [!NOTE]
+> L'en-tête [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) possède une directive [`frame-ancestors`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) qui [supplante](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options) cet en-tête pour les navigateurs compatibles.
 
 <table class="properties">
   <tbody>
@@ -52,7 +51,8 @@ Si on utilise `DENY`, le chargement de la page dans une _frame_ échouera sur un
 
 ## Exemples
 
-> **Note :** La balise `<meta>` est inutile ici&nbsp;! `<meta http-equiv="X-Frame-Options" content="deny">` n'aura aucun effet et mieux vaut donc ne pas l'utiliser. L'en-tête `X-FRAME-OPTIONS` ne fonctionne que si vous l'utilisez dans la configuration HTTP comme dans les exemples ci-dessous.
+> [!NOTE]
+> La balise `<meta>` est inutile ici&nbsp;! `<meta http-equiv="X-Frame-Options" content="deny">` n'aura aucun effet et mieux vaut donc ne pas l'utiliser. L'en-tête `X-FRAME-OPTIONS` ne fonctionne que si vous l'utilisez dans la configuration HTTP comme dans les exemples ci-dessous.
 
 ### Configurer Apache
 
@@ -115,7 +115,7 @@ http-response set-header X-Frame-Options SAMEORIGIN
 Si on utilise Express, on pourra utiliser le module [helmet](https://helmetjs.github.io/) qui tire parti de [frameguard](https://helmetjs.github.io/docs/frameguard/) afin de régler l'en-tête `X-Frame-Options`. Ajoutez ceci à la configuration serveur&nbsp;:
 
 ```js
-const helmet = require('helmet');
+const helmet = require("helmet");
 const app = express();
 app.use(helmet.frameguard({ action: "SAMEORIGIN" }));
 ```
@@ -123,8 +123,8 @@ app.use(helmet.frameguard({ action: "SAMEORIGIN" }));
 On pourra également utiliser [frameguard](https://helmetjs.github.io/docs/frameguard/) directement&nbsp;:
 
 ```js
-const frameguard = require('frameguard')
-app.use(frameguard({ action: 'SAMEORIGIN' }))
+const frameguard = require("frameguard");
+app.use(frameguard({ action: "SAMEORIGIN" }));
 ```
 
 ## Spécifications

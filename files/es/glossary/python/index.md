@@ -1,15 +1,9 @@
 ---
 title: Python
 slug: Glossary/Python
-tags:
-  - Glosario
-  - Lenguaje
-  - Principiante
-  - Python
-  - introducción
-  - programacion
-translation_of: Glossary/Python
 ---
+
+{{GlossarySidebar}}
 
 **Python** es un leguaje de programación de alto nivel y de propósito general. Utiliza un enfoque multiparadigma, lo que significa que soporta programación orientada a objetos, procedural y en menor medida, programación funcional.
 

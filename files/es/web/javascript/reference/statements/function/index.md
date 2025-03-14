@@ -1,11 +1,6 @@
 ---
 title: function
 slug: Web/JavaScript/Reference/Statements/function
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/function
-original_slug: Web/JavaScript/Referencia/Sentencias/function
 ---
 
 {{jsSidebar("Statements")}}
@@ -23,9 +18,11 @@ function nombre([parametro1] [,parametro2] [..., parametroN]) {sentencias}
 ```
 
 - `nombre`
+
   - : El nombre de la función.
 
 - `parametroN`
+
   - : El nombre de un argumento que se pasa a la función. Una función puede tener hasta 255 argumentos.
 
 - `sentencias`
@@ -49,12 +46,12 @@ El siguiente código declara una función que devuelve la cantidad total de vent
 
 ```js
 function calcular_ventas(unidades_a, unidades_b, unidades_c) {
-   return unidades_a*79 + unidades_b * 129 + unidades_c * 699;
+  return unidades_a * 79 + unidades_b * 129 + unidades_c * 699;
 }
 ```
 
 ## Vea También
 
-- [Funciones](/es/docs/Web/JavaScript/Referencia/Funciones)
+- [Funciones](/es/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Function")}}
 - Operadores{{jsxref("Operadores/function", "function")}}

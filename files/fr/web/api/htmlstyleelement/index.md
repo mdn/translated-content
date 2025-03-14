@@ -1,9 +1,6 @@
 ---
 title: style
 slug: Web/API/HTMLStyleElement
-tags:
-  - Référence_du_DOM_Gecko
-translation_of: Web/API/HTMLStyleElement
 ---
 
 {{ ApiRef() }}
@@ -12,10 +9,10 @@ translation_of: Web/API/HTMLStyleElement
 
 Consultez les pages suivantes pour plus d'informations sur certains des objets utilisés pour manipuler les propriétés CSS depuis le DOM&nbsp;:
 
-- [L'objet DOM element.style](/fr/DOM/element.style)
-- [L'objet DOM stylesheet](/fr/DOM/stylesheet)
-- [L'objet DOM cssRule](/fr/DOM/cssRule)
-- [La liste des propriétés DOM CSS](/fr/DOM/CSS)
+- [L'objet DOM element.style](/fr/docs/Web/API/HTMLElement/style)
+- [L'objet DOM stylesheet](/fr/docs/DOM/stylesheet)
+- [L'objet DOM cssRule](/fr/docs/DOM/cssRule)
+- [La liste des propriétés DOM CSS](/fr/docs/DOM/CSS)
 
 ### Informations à déplacer vers d'autres pages
 
@@ -27,12 +24,12 @@ Pour obtenir les objets `style` depuis un objet `document`, il est possible d'ut
 
 ```js
 var ss = document.styleSheets[1];
-ss.cssRules[0].style.backgroundColor="blue";
+ss.cssRules[0].style.backgroundColor = "blue";
 ```
 
-La liste des propriétés disponibles dans le DOM pour la propriété de style est donnée dans la [liste des propriétés DOM CSS](/fr/DOM/CSS).
+La liste des propriétés disponibles dans le DOM pour la propriété de style est donnée dans la [liste des propriétés DOM CSS](/fr/docs/DOM/CSS).
 
-La propriété [style](/fr/DOM/style) de l'élément peut également être utilisée pour obtenir et définir les styles d'un élément. Cependant, cette propriété renvoie uniquement les attributs de style qui ont été définis
+La propriété [style](/fr/docs/Web/API/HTMLStyleElement) de l'élément peut également être utilisée pour obtenir et définir les styles d'un élément. Cependant, cette propriété renvoie uniquement les attributs de style qui ont été définis
 _in-line_
 ou directement sur cet élément à l'aide de `element.style.propertyName` (par exemple `<td style="background-color: lightblue">` renvoie la chaîne "background-color:lightblue", même si d'autres styles peuvent s'appliquer à l'élément depuis une feuille de style).
 
@@ -42,74 +39,72 @@ Pour changer le style d'un élément particulier, l'exemple suivant peut être a
 
 ```html
 <html>
-<head>
-<title>exemple de style simple</title>
+  <head>
+    <title>exemple de style simple</title>
 
-<script type="text/javascript">
+    <script type="text/javascript">
+      function alterStyle(elem) {
+        elem.style.background = "green";
+      }
 
-function alterStyle(elem) {
-  elem.style.background = 'green';
-}
+      function resetStyle(elemId) {
+        elem = document.getElementById(elemId);
+        elem.style.background = "white";
+      }
+    </script>
 
-function resetStyle(elemId) {
-  elem = document.getElementById(elemId);
-  elem.style.background = 'white';
-}
-</script>
+    <style type="text/css">
+      #p1 {
+        border: solid blue 2px;
+      }
+    </style>
+  </head>
 
-<style type="text/css">
-#p1 {
- border: solid blue 2px;
-}
-</style>
-</head>
+  <body>
+    <!-- passe une référence à l'objet de l'élément comme paramètre 'this'. -->
+    <p id="p1" onclick="alterStyle(this)" ;>
+      Cliquez ici pour changer la couleur de fond.
+    </p>
 
-<body>
-
-<!-- passe une référence à l'objet de l'élément comme paramètre 'this'. -->
-<p id="p1" onclick="alterStyle(this)";>
- Cliquez ici pour changer la couleur de fond. </p>
-
-<!-- passe l'id 'p1' d'un autre style de l'élément à modifier. -->
-<button onclick="resetStyle('p1');">Réinitialiser la couleur de fond</button>
-
-</body>
+    <!-- passe l'id 'p1' d'un autre style de l'élément à modifier. -->
+    <button onclick="resetStyle('p1');">
+      Réinitialiser la couleur de fond
+    </button>
+  </body>
 </html>
 ```
 
-La méthode `getComputedStyle()` de l'objet `document.defaultView` renvoie tous les styles qui ont finalement été calculés pour un élément. Consultez l'[exemple 6 : getComputedStyle](/fr/R%c3%a9f%c3%a9rence_du_DOM_Gecko/Exemples#Exemple_6_:_getComputedStyle) dans le chapitre des exemples pour plus d'informations sur l'utilisation de cette méthode.
+La méthode `getComputedStyle()` de l'objet `document.defaultView` renvoie tous les styles qui ont finalement été calculés pour un élément. Consultez l'[exemple 6 : getComputedStyle](/fr/Référence_du_DOM_Gecko/Exemples#Exemple_6_:_getComputedStyle) dans le chapitre des exemples pour plus d'informations sur l'utilisation de cette méthode.
 
 ### L'objet DOM style
 
-L'objet `style` représente une règle de style individuelle. Contrairement aux règles individuelles disponibles depuis la collection [`document.styleSheets`](/fr/DOM/document.styleSheets), on accède à l'objet depuis l'objet `document` ou depuis les éléments auxquels ce style est appliqué. Il représente les styles
+L'objet `style` représente une règle de style individuelle. Contrairement aux règles individuelles disponibles depuis la collection [`document.styleSheets`](/fr/docs/DOM/document.styleSheets), on accède à l'objet depuis l'objet `document` ou depuis les éléments auxquels ce style est appliqué. Il représente les styles
 _in-line_
 d'un élément particulier.
 
 Mais il y a plus important que les deux propriétés exposées ici, c'est l'utilisation de l'objet `style` pour définir des propriétés de style individuelles sur un élément&nbsp;:
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-  "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
-  <title>style Property Example</title>
-  <link rel="StyleSheet" href="example.css" type="text/css">
-  <script type="text/javascript">
-    function stilo()
-    {
-      document.getElementById("d").style.color = "orange";
-    }
-  </script>
+    <title>style Property Example</title>
+    <link rel="StyleSheet" href="example.css" type="text/css" />
+    <script type="text/javascript">
+      function stilo() {
+        document.getElementById("d").style.color = "orange";
+      }
+    </script>
   </head>
 
   <body>
-  <div id="d" class="thunder">Thunder</div>
-  <button onclick="stilo()">ss</button>
+    <div id="d" class="thunder">Thunder</div>
+    <button onclick="stilo()">ss</button>
   </body>
 </html>
 ```
 
-Les attributs **media** et **type** du style peuvent être donnés ou non. Notez qu'il est également possible de changer les styles d'un élément en obtenant une référence vers cet élément et en utilisant ensuite sa méthode DOM [setAttribute()](/fr/DOM/element.setAttribute) pour spécifier à la fois la propriété CSS et sa valeur.
+Les attributs **media** et **type** du style peuvent être donnés ou non. Notez qu'il est également possible de changer les styles d'un élément en obtenant une référence vers cet élément et en utilisant ensuite sa méthode DOM [setAttribute()](/fr/docs/Web/API/Element/setAttribute) pour spécifier à la fois la propriété CSS et sa valeur.
 
 ```js
 var el = document.getElementById("un-element");
@@ -120,7 +115,7 @@ Soyez cependant conscient que `setAttribute` écrasera toute propriété de styl
 
 ##### Propriétés
 
-- [style.media](/fr/DOM/style.media)
+- [style.media](/fr/docs/DOM/style.media)
   - : spécifie le média de destination pour lequel l'information de style est prévue.
-- [style.type](/fr/DOM/style.type)
+- [style.type](/fr/docs/DOM/style.type)
   - : renvoie le type de style appliqué par cette règle.

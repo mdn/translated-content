@@ -17,16 +17,14 @@ name = AnimationEvent.pseudoElement
 
 ## Especificações
 
-| Especificação                                                                                                                        | Estado                                   | Comentário          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Animations', '#AnimationEvent-pseudoElement', 'AnimationEvent.pseudoElement') }} | {{ Spec2('CSS3 Animations')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.AnimationEvent.pseudoElement")}}
+{{Compat}}
 
 ## See also
 
-- [Using CSS animations](/pt-BR/docs/CSS/Using_CSS_animations)
+- [Using CSS animations](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.
 - The {{domxref("AnimationEvent")}} interface it belongs to.

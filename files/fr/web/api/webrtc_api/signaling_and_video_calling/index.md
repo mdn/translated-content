@@ -1,14 +1,11 @@
 ---
 title: L’essentiel du WebRTC
 slug: Web/API/WebRTC_API/Signaling_and_video_calling
-tags:
-  - WebRTC
-translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
-translation_of_original: Web/API/WebRTC_API/WebRTC_basics
-original_slug: Web/Guide/API/WebRTC/WebRTC_basics
 ---
 
-Maintenant que vous comprenez l'[architecture WebRTC](/fr/docs/Web/Guide/API/WebRTC/WebRTC_architecture), vous pouvez passer à cet article, qui vous emmène à travers la création d'une application RTC multi-navigateurs.A la fin de cet article vous devriez pouvoir créer un canal de données et de médias pair à pair qui fonctionne
+{{DefaultAPISidebar("WebRTC")}}
+
+Maintenant que vous comprenez l'[architecture WebRTC](/fr/docs/Web/API/WebRTC_API/Connectivity), vous pouvez passer à cet article, qui vous emmène à travers la création d'une application RTC multi-navigateurs.A la fin de cet article vous devriez pouvoir créer un canal de données et de médias pair à pair qui fonctionne
 
 ## Contenu semi-ancien, à partir de RTCPeerConnection
 
@@ -22,11 +19,11 @@ Les deux parties (l'appelant et l'appelé) doivent mettre en place leurs propres
 
 ```js
 var pc = new RTCPeerConnection();
-pc.onaddstream = function(obj) {
+pc.onaddstream = function (obj) {
   var vid = document.createElement("video");
   document.appendChild(vid);
   vid.srcObject = obj.stream;
-}
+};
 
 // Helper functions
 function endCall() {
@@ -43,28 +40,32 @@ function error(err) {
 }
 ```
 
-**Initialiser un appel**
+### Initialiser un appel
 
 l'appelant doit utiliser {{domxref("navigator.getUserMedia()")}} pour obtenir un flux vidéo, puis ajouter ce flux à l'instance de RTCPeerConnection. Une fois que cela a été fait, il doit appeler {{domxref("RTCPeerConnection.createOffer()")}} pour créer une offre,puis la configurer et l'envoyer a un serveur faisant office d'intermediaire.
 
 ```js
 // recuperer la liste des "amis" a partir du serveur
 // l'utilisateur selectionne un amis avec qui lancer la connection
-navigator.getUserMedia({video: true}, function(stream) {
+navigator.getUserMedia({ video: true }, function (stream) {
   // l'ajout d'un stream locale ne declanche pas onaddstream,
   // donc il faut l'appeler manuellement.
-  pc.onaddstream = e => video.src = URL.createObjectURL(e.stream);
+  pc.onaddstream = (e) => (video.src = URL.createObjectURL(e.stream));
   pc.addStream(stream);
 
-  pc.createOffer(function(offer) {
-    pc.setLocalDescription(offer, function() {
-      // envoi de l'offre au serveur qui se charge de la transmettre a "l'ami" choisit precedemment.
-    }, error);
+  pc.createOffer(function (offer) {
+    pc.setLocalDescription(
+      offer,
+      function () {
+        // envoi de l'offre au serveur qui se charge de la transmettre a "l'ami" choisit precedemment.
+      },
+      error,
+    );
   }, error);
 });
 ```
 
-**Répondre à un appel**
+### Répondre à un appel
 
 sur l'autre machine, l'ami recevra l'offre à partir du serveur en utilisant le protocole approprié (définit par le serveur). Une fois que l'offre arrive,{{domxref("navigator.getUserMedia()")}} est une fois de plus appelée pour créer le second flux, qui est ajouté à la RTCPeerConnection. Un objet {{domxref("RTCSessionDescription")}} est créé, et mis en place comme la description du distant en appelant {{domxref("RTCPeerConnection.setRemoteDescription()")}}.
 
@@ -72,35 +73,48 @@ Ensuite, une réponse est créée en utilisant {{domxref("RTCPeerConnection.crea
 
 ```js
 var offer = getOfferFromFriend();
-navigator.getUserMedia({video: true}, function(stream) {
-  pc.onaddstream = e => video.src = URL.createObjectURL(e.stream);
+navigator.getUserMedia({ video: true }, function (stream) {
+  pc.onaddstream = (e) => (video.src = URL.createObjectURL(e.stream));
   pc.addStream(stream);
 
-  pc.setRemoteDescription(new RTCSessionDescription(offer), function() {
-    pc.createAnswer(function(answer) {
-      pc.setLocalDescription(answer, function() {
-        // envoi de la réponse au serveur qui la transmettra a l'appelant
+  pc.setRemoteDescription(
+    new RTCSessionDescription(offer),
+    function () {
+      pc.createAnswer(function (answer) {
+        pc.setLocalDescription(
+          answer,
+          function () {
+            // envoi de la réponse au serveur qui la transmettra a l'appelant
+          },
+          error,
+        );
       }, error);
-    }, error);
-  }, error);
+    },
+    error,
+  );
 });
 ```
 
-**Gestion de la réponse**
+### Gestion de la réponse
 
 retour a la première machine, qui recois la reponse. une fois cette dernière arrivée,l'appelant utilise {{domxref("RTCPeerConnection.setRemoteDescription()")}} pour définir la réponse comme la description de l'autre l'extrémité de la connexion.
 
 ```js
 // pc a été déclaré précédemment, lors de l'envoi de l'offre.
 var offer = getResponseFromFriend();
-pc.setRemoteDescription(new RTCSessionDescription(offer), function() { }, error);
+pc.setRemoteDescription(
+  new RTCSessionDescription(offer),
+  function () {},
+  error,
+);
 ```
 
 ## Ancien contenu en approche!
 
 Tout ce qui est en dessous de ce point est potentiellement obsolète. Il est toujours là en attente d'examen et d'intégration possible dans d'autres parties de la documentation où il serait encore valides.
 
-> **Note :** Ne pas utiliser les examples de cette page. Voir l'article [signalisation et appel vidéo](/fr/docs/Web/API/WebRTC_API/Signaling_and_video_calling) ,pour des example mis a jour sur l'utilisation des medias WebRTC.
+> [!NOTE]
+> Ne pas utiliser les examples de cette page. Voir l'article [signalisation et appel vidéo](/fr/docs/Web/API/WebRTC_API/Signaling_and_video_calling) ,pour des example mis a jour sur l'utilisation des medias WebRTC.
 
 ## Note
 
@@ -108,15 +122,20 @@ Cette page contient des informations périmées selon <http://stackoverflow.com/
 
 > Peu importe ce que la page de MDN indique, RTPDataChannels est très désuet (faites connaître l'URL). Firefox et Chrome supportent les spec DataChannels maintenant. Idem pour DTLSSRTPKeyAgreement je pense.
 
-## Shims (Bibliothèque d’interception d’API)
+## Shims (Bibliothèque d'interception d'API)
 
 Comme vous pouvez l'imaginer, avec une API aussi jeune, vous devez utiliser les préfixes de navigateur et les positionner dans des variables communes.
 
 ```js
-var PeerConnection = window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
+var PeerConnection =
+  window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
 var IceCandidate = window.mozRTCIceCandidate || window.RTCIceCandidate;
-var SessionDescription = window.mozRTCSessionDescription || window.RTCSessionDescription;
-navigator.getUserMedia = navigator.getUserMedia || navigator.mozGetUserMedia || navigator.webkitGetUserMedia;
+var SessionDescription =
+  window.mozRTCSessionDescription || window.RTCSessionDescription;
+navigator.getUserMedia =
+  navigator.getUserMedia ||
+  navigator.mozGetUserMedia ||
+  navigator.webkitGetUserMedia;
 ```
 
 ## PeerConnection
@@ -129,16 +148,20 @@ var pc = new PeerConnection(configuration, options);
 
 ### RTCConfiguration
 
-L'objet {{domxref("RTCConfiguration")}} contient l’information sur les serveurs TURN et/ou STUN à utiliser pour ICE. Ceci est requis pour s'assurer que la plupart des utilisateurs peuvent en fait créer une connexion en évitant les restrictions du NAT et du pare-feu.
+L'objet {{domxref("RTCConfiguration")}} contient l'information sur les serveurs TURN et/ou STUN à utiliser pour ICE. Ceci est requis pour s'assurer que la plupart des utilisateurs peuvent en fait créer une connexion en évitant les restrictions du NAT et du pare-feu.
 
 ```js
 var configuration = {
-    iceServers: [
-        {url: "stun:23.21.150.121"},
-        {url: "stun:stun.l.google.com:19302"},
-        {url: "turn:numb.viagenie.ca", credential: "webrtcdemo", username: "louis%40mozilla.com"}
-    ]
-}
+  iceServers: [
+    { url: "stun:23.21.150.121" },
+    { url: "stun:stun.l.google.com:19302" },
+    {
+      url: "turn:numb.viagenie.ca",
+      credential: "webrtcdemo",
+      username: "louis%40mozilla.com",
+    },
+  ],
+};
 ```
 
 Google met à disposition un [serveur STUN public](https://code.google.com/p/natvpn/source/browse/trunk/stun_server_list) que nous pouvons utiliser. J'ai également créé un compte chez <http://numb.viagenie.ca/> pour un accès gratuit à un serveur TURN. Vous pouvez faire la même chose et les remplacer par vos propres informations d'identification.
@@ -149,11 +172,8 @@ Selon le type de connexion, vous devez passer des options.
 
 ```js
 var options = {
-    optional: [
-        {DtlsSrtpKeyAgreement: true},
-        {RtpDataChannels: true}
-    ]
-}
+  optional: [{ DtlsSrtpKeyAgreement: true }, { RtpDataChannels: true }],
+};
 ```
 
 `DtlsSrtpKeyAgreement` est exigé pour Chrome et Firefox pour interagir.
@@ -166,20 +186,22 @@ Après avoir créé la connexion et en passant par les serveurs STUN et TURN dis
 
 ```js
 pc.onicecandidate = function (e) {
-    // candidate exists in e.candidate
-    if (e.candidate == null) { return }
-    send("icecandidate", JSON.stringify(e.candidate));
-    pc.onicecandidate = null;
+  // candidate exists in e.candidate
+  if (e.candidate == null) {
+    return;
+  }
+  send("icecandidate", JSON.stringify(e.candidate));
+  pc.onicecandidate = null;
 };
 ```
 
-Lorsque le rappel est exécuté, nous devons utiliser le canal de signal pour envoyer le Candidat au pair. Sur Chrome, on trouve habituellement plusieurs candidats ICE, nous n’en avons besoin que d'un seul donc j'en envoie généralement une puis supprimer le descripteur. Firefox inclut le Candidat dans l'Offre SDP.
+Lorsque le rappel est exécuté, nous devons utiliser le canal de signal pour envoyer le Candidat au pair. Sur Chrome, on trouve habituellement plusieurs candidats ICE, nous n'en avons besoin que d'un seul donc j'en envoie généralement une puis supprimer le descripteur. Firefox inclut le Candidat dans l'Offre SDP.
 
 ## Canal de Signal
 
-Maintenant que nous avons un candidat ICE, nous devons l’envoyer à nos pairs afin qu'ils sachent comment se connecter avec nous. Toutefois, cela nous laisse face à une problématique de l’œuf et de la poule; Nous voulons que PeerConnection envoie des données à un pair, mais avant cela, nous devons lui envoyer des métadonnées…
+Maintenant que nous avons un candidat ICE, nous devons l'envoyer à nos pairs afin qu'ils sachent comment se connecter avec nous. Toutefois, cela nous laisse face à une problématique de l'œuf et de la poule; Nous voulons que PeerConnection envoie des données à un pair, mais avant cela, nous devons lui envoyer des métadonnées…
 
-C'est là qu'intervient le canal de signal. C'est n'importe quel mode de transport de données qui permet aux deux pairs d’échanger des informations. Dans cet article, nous allons utiliser [FireBase](http://firebase.com) parce que c'est incroyablement facile à installer et ne nécessite aucun hébergement ou code serveur.
+C'est là qu'intervient le canal de signal. C'est n'importe quel mode de transport de données qui permet aux deux pairs d'échanger des informations. Dans cet article, nous allons utiliser [FireBase](http://firebase.com) parce que c'est incroyablement facile à installer et ne nécessite aucun hébergement ou code serveur.
 
 Pour l'instant imaginez seulement que deux méthodes existent: `send()` va prendre une clé et lui affecter des données et `recv()` appelle un descripteur lorsqu'une clé a une valeur.
 
@@ -204,20 +226,24 @@ Une offre SDP (Session Description Protocol) et le méta données qui décrit au
 Un échange nécessite une offre d'un pair, alors l'autre pair doit recevoir l'offre et offrir en retour une réponse.
 
 ```js
-pc.createOffer(function (offer) {
+pc.createOffer(
+  function (offer) {
     pc.setLocalDescription(offer);
 
     send("offer", JSON.stringify(offer));
-}, errorHandler, constraints);
+  },
+  errorHandler,
+  constraints,
+);
 ```
 
 ### errorHandler
 
-S'il y avait un problème lors de la génération d’une offre, cette méthode sera exécutée avec les détails de l'erreur comme premier argument.
+S'il y avait un problème lors de la génération d'une offre, cette méthode sera exécutée avec les détails de l'erreur comme premier argument.
 
 ```js
 var errorHandler = function (err) {
-    console.error(err);
+  console.error(err);
 };
 ```
 
@@ -227,31 +253,35 @@ Options pour l'offre SDP.
 
 ```js
 var constraints = {
-    mandatory: {
-        OfferToReceiveAudio: true,
-        OfferToReceiveVideo: true
-    }
+  mandatory: {
+    OfferToReceiveAudio: true,
+    OfferToReceiveVideo: true,
+  },
 };
 ```
 
 `OfferToReceiveAudio/Video` Dit aux autres pair que vous désirez recevoir de la vidéo ou de l'audio de leur part. Ce n'est pas nécessaire pour DataChannels.
 
-Une fois que l'offre a été générée nous devons définir le SDP local à la nouvelle offre et l’envoyer par le canal de signal aux autres pairs et attendre leur réponse SDP.
+Une fois que l'offre a été générée nous devons définir le SDP local à la nouvelle offre et l'envoyer par le canal de signal aux autres pairs et attendre leur réponse SDP.
 
 ## Réponse
 
-Une réponse SDP est comme une offre, mais est une réponse ; un peu comme répondre au téléphone. Nous pouvons seulement émettre une réponse qu’après avoir reçu une offre.
+Une réponse SDP est comme une offre, mais est une réponse ; un peu comme répondre au téléphone. Nous pouvons seulement émettre une réponse qu'après avoir reçu une offre.
 
 ```js
 recv("offer", function (offer) {
-    offer = new SessionDescription(JSON.parse(offer))
-    pc.setRemoteDescription(offer);
+  offer = new SessionDescription(JSON.parse(offer));
+  pc.setRemoteDescription(offer);
 
-    pc.createAnswer(function (answer) {
-        pc.setLocalDescription(answer);
+  pc.createAnswer(
+    function (answer) {
+      pc.setLocalDescription(answer);
 
-        send("answer", JSON.stringify(answer));
-    }, errorHandler, constraints);
+      send("answer", JSON.stringify(answer));
+    },
+    errorHandler,
+    constraints,
+  );
 });
 ```
 
@@ -259,7 +289,7 @@ recv("offer", function (offer) {
 
 J'expliquerai d'abord comment utiliser PeerConnection pour l'API DataChannels et le transfert de données arbitraires entre des pairs.
 
-_Note: Au moment de l’écriture de cet article, l'interopérabilité entre Chrome et Firefox n'est pas possible avec DataChannels. Chrome prend en charge un protocole similaire mais privé et soutiendra le protocole standard bientôt._
+_Note: Au moment de l'écriture de cet article, l'interopérabilité entre Chrome et Firefox n'est pas possible avec DataChannels. Chrome prend en charge un protocole similaire mais privé et soutiendra le protocole standard bientôt._
 
 ```js
 var channel = pc.createDataChannel(channelName, channelOptions);
@@ -277,7 +307,7 @@ Il s'agit d'une chaîne qui agit comme une étiquette pour le nom de votre canal
 var channelOptions = {};
 ```
 
-Ces options ne sont pas bien supportées sur Chrome donc vous pouvez laisser ça vide pour l'instant. Vérifiez le [RFC](http://dev.w3.org/2011/webrtc/editor/webrtc.html#attributes-7) pour plus d'informations sur les options.
+Ces options ne sont pas bien supportées sur Chrome donc vous pouvez laisser ça vide pour l'instant. Vérifiez le [RFC](https://dev.w3.org/2011/webrtc/editor/webrtc.html#attributes-7) pour plus d'informations sur les options.
 
 ### Méthodes et événements de canal
 
@@ -291,7 +321,7 @@ Exécuté s'il y a une erreur de création de la connexion. Le premier argument 
 
 ```js
 channel.onerror = function (err) {
-    console.error("Channel Error:", err);
+  console.error("Channel Error:", err);
 };
 ```
 
@@ -299,11 +329,11 @@ channel.onerror = function (err) {
 
 ```js
 channel.onmessage = function (e) {
-    console.log("Got message:", e.data);
-}
+  console.log("Got message:", e.data);
+};
 ```
 
-Le cœur de la connexion. Lorsque vous recevez un message, cette méthode s’exécute. Le premier argument est un objet d'événement qui contient les données, heure de réception et autres informations.
+Le cœur de la connexion. Lorsque vous recevez un message, cette méthode s'exécute. Le premier argument est un objet d'événement qui contient les données, heure de réception et autres informations.
 
 #### onclose
 
@@ -319,7 +349,7 @@ pc.ondatachannel = function (e) {
 };
 ```
 
-Le canal est disponible dans l’objet événement passé dans le descripteur en tant que `e.channel`.
+Le canal est disponible dans l'objet événement passé dans le descripteur en tant que `e.channel`.
 
 #### send()
 
@@ -331,7 +361,7 @@ Cette méthode vous permet d'envoyer des données directement au pair! Incroyabl
 
 #### close()
 
-Ferme le canal une fois que la connexion doit se terminer. Il est recommandé de le faire sur l’ unload de la page.
+Ferme le canal une fois que la connexion doit se terminer. Il est recommandé de le faire sur l' unload de la page.
 
 ## Media
 
@@ -340,12 +370,16 @@ Maintenant nous allons couvrir la transmission de médias tels que l'audio ou la
 ### Obtenir les médias de l'utilisateur
 
 ```js
-<video id="preview" autoplay></video>
+<video id="preview" autoplay></video>;
 
 var video = document.getElementById("preview");
-navigator.getUserMedia(mediaOptions, function (stream) {
+navigator.getUserMedia(
+  mediaOptions,
+  function (stream) {
     video.src = URL.createObjectURL(stream);
-}, errorHandler);
+  },
+  errorHandler,
+);
 ```
 
 **`mediaOptions`**
@@ -354,8 +388,8 @@ Les contraintes sur les types de médias que vous souhaitez renvoyer de l'utilis
 
 ```js
 var mediaOptions = {
-    video: true,
-    audio: true
+  video: true,
+  audio: true,
 };
 ```
 
@@ -378,11 +412,11 @@ pc.addStream(stream);
 #### onaddstream
 
 ```js
-<video id="otherPeer" autoplay></video>
+<video id="otherPeer" autoplay></video>;
 
 var otherPeer = document.getElementById("otherPeer");
 pc.onaddstream = function (e) {
-    otherPeer.src = URL.createObjectURL(e.stream);
+  otherPeer.src = URL.createObjectURL(e.stream);
 };
 ```
 

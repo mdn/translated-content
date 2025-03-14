@@ -1,19 +1,18 @@
 ---
 title: DataTransfer.clearData()
 slug: Web/API/DataTransfer/clearData
-translation_of: Web/API/DataTransfer/clearData
-browser-compat: api.DataTransfer.clearData
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
 
 La méthode **`DataTransfer.clearData()`** retire les données du type indiqué de l'opération de glisser-déposer. S'il n'existe pas de données pour le type indiqué, cette méthode n'a aucun effet.
 
-Si cette méthode est appelée sans argument ou que le format est une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) vide, la suppression des données concernera tous les types.
+Si cette méthode est appelée sans argument ou que le format est une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) vide, la suppression des données concernera tous les types.
 
 Cette méthode _ne retire pas_ les fichiers de l'opération de glisser-déposer et il est donc possible d'avoir un élément restant avec le type `Files` dans la liste [`DataTransfer.types`](/fr/docs/Web/API/DataTransfer/types) si des fichiers font partie du glisser-déposer.
 
-> **Note :** Cette méthode peut uniquement être utilisée dans le gestionnaire d'évènement pour [`dragstart`](/fr/docs/Web/API/Document/dragstart_event), car c'est le seul moment où le magasin de données pour l'opération de glisser-déposer est accessible en écriture.
+> [!NOTE]
+> Cette méthode peut uniquement être utilisée dans le gestionnaire d'évènement pour [`dragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event), car c'est le seul moment où le magasin de données pour l'opération de glisser-déposer est accessible en écriture.
 
 ## Syntaxe
 
@@ -24,7 +23,7 @@ DataTransfer.clearData([format]);
 ### Paramètres
 
 - `format` {{optional_inline}}
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) qui indique le type de données à retirer. Si ce paramètre est une chaîne vide ou qu'il n'est pas fourni, les données pour l'ensemble des types seront retirées.
+  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui indique le type de données à retirer. Si ce paramètre est une chaîne vide ou qu'il n'est pas fourni, les données pour l'ensemble des types seront retirées.
 
 ## Exemple
 
@@ -36,7 +35,8 @@ Cet exemple illustre l'utilisation des méthodes
 
 ```html
 <span class="tweaked" id="source" draggable="true">
-  Sélectionnez cet élément, glissez-le dans la zone de dépôt puis relâcher la sélection pour déplacer l'élément.
+  Sélectionnez cet élément, glissez-le dans la zone de dépôt puis relâcher la
+  sélection pour déplacer l'élément.
 </span>
 <span class="tweaked" id="target">Zone de dépôt</span>
 <div>État : <span id="status">Glisser pour démarrer</span></div>
@@ -65,27 +65,27 @@ span.tweaked {
 ### JavaScript
 
 ```js
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener("DOMContentLoaded", function () {
   // On sélectionne les éléments HTML
-  let draggable = document.getElementById('source');
-  let droppable = document.getElementById('target');
-  let status = document.getElementById('status');
-  let data = document.getElementById('data');
+  let draggable = document.getElementById("source");
+  let droppable = document.getElementById("target");
+  let status = document.getElementById("status");
+  let data = document.getElementById("data");
   let dropped = false;
 
   // On enregistre les gestionnaires d'évènements
-  draggable.addEventListener('dragstart', dragStartHandler);
-  draggable.addEventListener('dragend', dragEndHandler);
-  droppable.addEventListener('dragover', dragOverHandler);
-  droppable.addEventListener('dragleave', dragLeaveHandler);
-  droppable.addEventListener('drop', dropHandler);
+  draggable.addEventListener("dragstart", dragStartHandler);
+  draggable.addEventListener("dragend", dragEndHandler);
+  droppable.addEventListener("dragover", dragOverHandler);
+  droppable.addEventListener("dragleave", dragLeaveHandler);
+  droppable.addEventListener("drop", dropHandler);
 
-  function dragStartHandler (event) {
-    status.textContent = 'Glisser-déposer en cours';
+  function dragStartHandler(event) {
+    status.textContent = "Glisser-déposer en cours";
 
     // On change la bordure de l'élément cible pour
     // indiquer que le glisser-déposer a démarré
-    event.currentTarget.style.border = '1px dashed blue';
+    event.currentTarget.style.border = "1px dashed blue";
 
     // On commence par nettoyer les presse-papiers
     // existants. Cela porte sur tous les types vu qu'on
@@ -96,54 +96,54 @@ window.addEventListener('DOMContentLoaded', function () {
     // On définit le format et les données pour l'opération
     // on utilise l'identifiant de la cible d'évènement comme
     // donnée
-    event.dataTransfer.setData('text/plain', event.target.id);
+    event.dataTransfer.setData("text/plain", event.target.id);
 
-    data.textContent = event.dataTransfer.getData('text/plain');
+    data.textContent = event.dataTransfer.getData("text/plain");
   }
 
-  function dragEndHandler (event) {
+  function dragEndHandler(event) {
     if (!dropped) {
-      status.textContent = 'Glisser-déposer annulé';
+      status.textContent = "Glisser-déposer annulé";
     }
 
-    data.textContent = event.dataTransfer.getData('text/plain') || 'vide';
+    data.textContent = event.dataTransfer.getData("text/plain") || "vide";
 
     // On change la bordure afin d'indiquer que le glisser-
     // déposer n'est plus en cours
-    event.currentTarget.style.border = '1px solid black';
+    event.currentTarget.style.border = "1px solid black";
 
     if (dropped) {
       // On retire les gestionnaires d'évènements
-      draggable.removeEventListener('dragstart', dragStartHandler);
-      draggable.removeEventListener('dragend', dragEndHandler);
-      droppable.removeEventListener('dragover', dragOverHandler);
-      droppable.removeEventListener('dragleave', dragLeaveHandler);
-      droppable.removeEventListener('drop', dropHandler);
+      draggable.removeEventListener("dragstart", dragStartHandler);
+      draggable.removeEventListener("dragend", dragEndHandler);
+      droppable.removeEventListener("dragover", dragOverHandler);
+      droppable.removeEventListener("dragleave", dragLeaveHandler);
+      droppable.removeEventListener("drop", dropHandler);
     }
   }
 
-  function dragOverHandler (event) {
-    status.textContent = 'Dépôt disponible';
+  function dragOverHandler(event) {
+    status.textContent = "Dépôt disponible";
 
     event.preventDefault();
   }
 
-  function dragLeaveHandler (event) {
-    status.textContent = 'Glisser-déposer en cours (le dépôt était disponible)';
+  function dragLeaveHandler(event) {
+    status.textContent = "Glisser-déposer en cours (le dépôt était disponible)";
 
     event.preventDefault();
   }
 
-  function dropHandler (event) {
+  function dropHandler(event) {
     dropped = true;
 
-    status.textContent = 'Dépôt effectué';
+    status.textContent = "Dépôt effectué";
 
     event.preventDefault();
 
     // On récupère les données liées à l'évènement
     // et qui sont au format « text »
-    let _data = event.dataTransfer.getData('text/plain');
+    let _data = event.dataTransfer.getData("text/plain");
     let element = document.getElementById(_data);
 
     // On ajoute l'élément source glissé à l'élément qui
@@ -151,10 +151,11 @@ window.addEventListener('DOMContentLoaded', function () {
     event.target.appendChild(element);
 
     // On modifie les styles CSS et le texte affiché
-    element.style.cssText = 'border: 1px solid black;display: block; color: red';
-    element.textContent = 'Je suis dans la zone de dépôt !';
+    element.style.cssText =
+      "border: 1px solid black;display: block; color: red";
+    element.textContent = "Je suis dans la zone de dépôt !";
   }
-})
+});
 ```
 
 ### Résultat

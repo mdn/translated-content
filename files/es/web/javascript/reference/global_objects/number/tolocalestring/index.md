@@ -1,19 +1,28 @@
 ---
 title: Number.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
-tags:
-  - Internacionalizacion
-  - JavaScript
-  - Número
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/toLocaleString
 ---
 
 {{JSRef}}
 
 El método **`toLocaleString()`** retorna una representacion localizada del número en forma de texto
 
-{{EmbedInteractiveExample("pages/js/number-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toLocaleString()")}}
+
+```js interactive-example
+function eArabic(x) {
+  return x.toLocaleString("ar-EG");
+}
+
+console.log(eArabic(123456.789));
+// Expected output: "١٢٣٬٤٥٦٫٧٨٩"
+
+console.log(eArabic("123456.789"));
+// Expected output: "123456.789"
+
+console.log(eArabic(NaN));
+// Expected output: "ليس رقم"
+```
 
 ## Sintaxis
 
@@ -55,9 +64,9 @@ Los parámetros `locales` y `options` no son soportados aún por todos los naveg
 function toLocaleStringSupportsLocales() {
   var number = 0;
   try {
-    number.toLocaleString('i');
+    number.toLocaleString("i");
   } catch (e) {
-    return e.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
@@ -69,7 +78,11 @@ Para verificar que funciona todos los navegadores, incluyendo aquellos que sopor
 
 ```js
 function toLocaleStringSupportsOptions() {
-  return !!(typeof Intl == 'object' && Intl && typeof Intl.NumberFormat == 'function');
+  return !!(
+    typeof Intl == "object" &&
+    Intl &&
+    typeof Intl.NumberFormat == "function"
+  );
 }
 ```
 
@@ -83,24 +96,24 @@ Este ejemplo muestra alguna de las variaciones en los formatos de números local
 var number = 123456.789;
 
 // Aleman utiliza comas como separador decimal y puntos miles
-console.log(number.toLocaleString('de-DE'));
+console.log(number.toLocaleString("de-DE"));
 // → 123.456,789
 
 // Arabe en la mayoría de países de habla Arabe utilizan numerales Eastern Arabic
-console.log(number.toLocaleString('ar-EG'));
+console.log(number.toLocaleString("ar-EG"));
 // → ١٢٣٤٥٦٫٧٨٩
 
 // India utiliza separadores de miles/lakh/crore
-console.log(number.toLocaleString('en-IN'));
+console.log(number.toLocaleString("en-IN"));
 // → 1,23,456.789
 
 // la extensión nu requiere un sistema numerico, e.g. Decimales Chino
-console.log(number.toLocaleString('zh-Hans-CN-u-nu-hanidec'));
+console.log(number.toLocaleString("zh-Hans-CN-u-nu-hanidec"));
 // → 一二三,四五六.七八九
 
 // cuando solicitas un lenguage que podria no ser soportado, como
 // Balinese, incluye un lenguaje de respaldo, en este caso Indonesio
-console.log(number.toLocaleString(['ban', 'id']));
+console.log(number.toLocaleString(["ban", "id"]));
 // → 123.456,789
 ```
 
@@ -112,20 +125,29 @@ El resultado proveido por `toLocaleString` puede ser personalizado utilizando el
 var number = 123456.789;
 
 // solicitar un formato de moneda
-console.log(number.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
+console.log(
+  number.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+);
 // → 123.456,79 €
 
 // en Japones yen no utiliza una moneda menor
-console.log(number.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))
+console.log(
+  number.toLocaleString("ja-JP", { style: "currency", currency: "JPY" }),
+);
 // → ￥123,457
 
 // limitar a tres digitos el significante
-console.log(number.toLocaleString('en-IN', { maximumSignificantDigits: 3 }));
+console.log(number.toLocaleString("en-IN", { maximumSignificantDigits: 3 }));
 // → 1,23,000
 
 // Utilizar el lenguaje por defecto del host con opciones para el formato del número
 var num = 30000.65;
-console.log(num.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+console.log(
+  num.toLocaleString(undefined, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }),
+);
 // → "30,000.65" donde English es el lenguaje por defecto, o
 // → "30.000,65" donde Aleman es el lenguaje por defecto, o
 // → "30 000,65" donde French es el lenguaje por defecto
@@ -133,14 +155,11 @@ console.log(num.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFrac
 
 ## Especificaciones
 
-| Specification                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}     |
-| {{SpecName('ES Int Draft', '#sup-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}} |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.toLocaleString")}}
+{{Compat}}
 
 ## Ver también
 

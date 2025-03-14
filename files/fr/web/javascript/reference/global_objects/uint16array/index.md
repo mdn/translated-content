@@ -1,15 +1,6 @@
 ---
 title: Uint16Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint16Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - Uint16Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint16Array
-original_slug: Web/JavaScript/Reference/Objets_globaux/Uint16Array
 ---
 
 {{JSRef}}
@@ -26,7 +17,7 @@ new Uint16Array(objet);
 new Uint16Array(tampon [, décalage [, longueur]]);
 ```
 
-Pour plus d'informations sur la syntaxe du constructeur et le rôle des différents paramètres, voir la page _[TypedArray](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Syntaxe)_.
+Pour plus d'informations sur la syntaxe du constructeur et le rôle des différents paramètres, voir la page _[TypedArray](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntaxe)_.
 
 ## Propriétés
 
@@ -93,7 +84,7 @@ Tous les objets `Uint16Array` héritent de {{jsxref("TypedArray.prototype", "%Ty
   - : Renvoie le dernier indice (le plus élevé) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Uint16Array.prototype.map()")}}
   - : Crée un nouveau tableau dont les éléments sont les images des éléments du tableau courant par une fonction donnée. Voir également {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Uint16Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
+- {{jsxref("TypedArray.move", "Uint16Array.prototype.move()")}} {{non-standard_inline}}
   - : Ancienne version, non-standard, de {{jsxref("TypedArray.copyWithin", "Uint16Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.reduce", "Uint16Array.prototype.reduce()")}}
   - : Applique une fonction sur un accumulateur et chaque élément du tableau (de gauche à droite) afin de réduire le tableau en une seule valeur. Voir également {{jsxref("Array.prototype.reduce()")}}.
@@ -133,7 +124,7 @@ console.log(uint16.length); // 2
 console.log(uint16.BYTES_PER_ELEMENT); // 2
 
 // Construction à partir d'un tableau
-var arr = new Uint16Array([21,31]);
+var arr = new Uint16Array([21, 31]);
 console.log(arr[1]); // 31
 
 // Construction à partir d'un tableau typé
@@ -146,7 +137,9 @@ var buffer = new ArrayBuffer(8);
 var z = new Uint16Array(buffer, 0, 4);
 
 // Construction à partir d'un itérable
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var uint16 = new Uint16Array(iterable);
 // Uint16Array[1, 2, 3]
 ```
@@ -161,6 +154,6 @@ var uint16 = new Uint16Array(iterable);
 
 ## Voir aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

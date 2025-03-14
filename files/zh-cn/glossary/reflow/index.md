@@ -1,10 +1,16 @@
 ---
-title: 回流
+title: 重排
 slug: Glossary/Reflow
+l10n:
+  sourceCommit: 245307fe1bbb5a62c7e895fae62e0152f200b37b
 ---
 
-当浏览器必须重新处理和绘制部分或全部页面时，回流就会发生，例如当一个交互式站点更新后。
+{{GlossarySidebar}}
 
-## 更多
+**重排**（reflow）发生在{{glossary("browser", "浏览器")}}重新计算网页的某些部分的位置和几何形状时（例如在交互式站点更新后）。这通常会紧接着重绘（repaint），即浏览器重新绘制网页以显示更新后的视觉效果。
 
-- [Google 关于“最小化浏览器回流”的文章](https://developers.google.com/speed/articles/reflow)
+## 参见
+
+- [重绘](/zh-CN/docs/Glossary/Repaint)
+- [尽可能减少浏览器重排](https://developer.google.cn/speed/docs/insights/browser-reflow)（developer.google.cn）
+- [了解浏览器中的重排和重绘](https://dev.to/gopal1996/understanding-reflow-and-repaint-in-the-browser-1jbg)（dev.to，2020）

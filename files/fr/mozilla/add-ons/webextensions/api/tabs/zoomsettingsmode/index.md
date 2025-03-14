@@ -1,20 +1,9 @@
 ---
 title: tabs.ZoomSettingsMode
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettingsMode
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - ZoomSettingsMode
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettingsMode
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Définit comment les modifications de zoom sont gérées. Les extensions peuvent transférer cette valeur dans {{WebExtAPIRef("tabs.setZoomSettings()")}} pour contrôler la façon dont le navigateur gère les tentatives de modification des paramètres de zoom pour un onglet. Par défaut à "automatique".
 
@@ -29,15 +18,15 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - "manual"
   - : L'extension gère elle-même les changements de zoom, en écoutant l'événement {{WebExtAPIRef("tabs.onZoomChange")}} et en redimensionnant la page en conséquence. Ce mode ne prend pas en charge le zoom `per-origin` : il ignore la `portée` {{WebExtAPIRef("tabs.zoomSettings", "zoom setting")}} et utilise toujours la fonction `per-tab`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.ZoomSettingsMode")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

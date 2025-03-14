@@ -1,25 +1,30 @@
 ---
 title: Décalage binaire à droite (>>)
 slug: Web/JavaScript/Reference/Operators/Right_shift
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.right_shift
 ---
 
 {{jsSidebar("Operators")}}
 
 L'opérateur de **décalage binaire à droite (`>>`)** décale la séquence de bits représentée par le premier opérande d'autant de bits vers la droite que le nombre indiqué par le second opérande. Les bits en excès à droite sont écartés. Pour le remplissage des bits par la gauche, c'est le bit le plus à gauche initialement qui est recopié autant de fois que nécessaire. Aussi, le bit le plus à gauche dans le résultat sera le même que le bit le plus à gauche de l'opérande et les deux valeurs auront donc le même signe.
 
-{{EmbedInteractiveExample("pages/js/expressions-right-shift.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Right shift operator")}}
+
+```js interactive-example
+const a = 5; //  00000000000000000000000000000101
+const b = 2; //  00000000000000000000000000000010
+const c = -5; //  11111111111111111111111111111011
+
+console.log(a >> b); //  00000000000000000000000000000001
+// Expected output: 1
+
+console.log(c >> b); //  11111111111111111111111111111110
+// Expected output: -2
+```
 
 ## Syntaxe
 
 ```js
-a >> b
+a >> b;
 ```
 
 ## Description
@@ -47,7 +52,7 @@ De même, `-9 >> 2` donnera `-3`, car le signe est préservé :
 ### Utiliser le décalage à droite
 
 ```js
- 9 >> 2; //  2
+9 >> 2; //  2
 -9 >> 2; // -3
 ```
 
@@ -61,5 +66,5 @@ De même, `-9 >> 2` donnera `-3`, car le signe est préservé :
 
 ## Voir aussi
 
-- [Les opérateurs binaires dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise)
+- [Les opérateurs binaires dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise)
 - [L'opérateur de décalage binaire à droite et d'affectation](/fr/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)

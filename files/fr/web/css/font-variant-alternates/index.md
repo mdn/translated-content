@@ -1,8 +1,6 @@
 ---
 title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
-translation_of: Web/CSS/font-variant-alternates
-browser-compat: css.properties.font-variant-alternates
 ---
 
 {{CSSRef}}
@@ -55,9 +53,11 @@ Cette propriété peut être définie selon deux formes&nbsp;:
 - `swash()`
   - : Cette fonction active l'affichage des glyphes [pour les lettres ornées](https://fr.wikipedia.org/wiki/Lettre_ornée). Le paramètre passé à la fonction est un nom lié à la fonte auquel est associé un nombre. Elle correspond aux valeurs OpenType `swsh` et `cswh` (par exemple `swsh 2` ou `cswh 2`).
 - `ornaments()`
-  - : Cette fonction active l'affichage des ornements tels que les [fleurons](https://fr.wikipedia.org/wiki/Fleuron_(typographie)) et autres casseaux. Le paramètre passé à la fonction est un nom lié à la fonte auquel est associé un nombre. Cette valeur correspond à la valeur OpenType `ornm` (par exemple `ornm 2`).
 
-    > **Note :** Afin de préserver la sémantique de la fonte, les fondeurs sont invités à ne pas créer de casseaux qui correspondent aux caractères Unicode déjà définis comme variantes d'ornement pour la puce (`U+2022`). De nombreuses fontes passent outre cette règle et perdent ainsi en qualité.
+  - : Cette fonction active l'affichage des ornements tels que les [fleurons](<https://fr.wikipedia.org/wiki/Fleuron_(typographie)>) et autres casseaux. Le paramètre passé à la fonction est un nom lié à la fonte auquel est associé un nombre. Cette valeur correspond à la valeur OpenType `ornm` (par exemple `ornm 2`).
+
+    > [!NOTE]
+    > Afin de préserver la sémantique de la fonte, les fondeurs sont invités à ne pas créer de casseaux qui correspondent aux caractères Unicode déjà définis comme variantes d'ornement pour la puce (`U+2022`). De nombreuses fontes passent outre cette règle et perdent ainsi en qualité.
 
 - `annotation()`
   - : Cette fonction active l'affichage des annotations (telles que les chiffres entourés ou les caractères inversés). Le paramètre est un nom lié à la fonte auquel est associé un nombre. Cette valeur correspond à la valeur OpenType `nalt` (par exemple `nalt 2`).
@@ -85,7 +85,9 @@ Cette propriété peut être définie selon deux formes&nbsp;:
 
 ```css
 @font-feature-values "Leitura Display Swashes" {
-  @swash { fancy: 1 }
+  @swash {
+    fancy: 1;
+  }
 }
 
 p {
@@ -100,7 +102,8 @@ p {
 
 #### Résultat
 
-> **Note :** Pour que cet exemple fonctionne, il faut avoir installé la fonte Open Type Leitura Display Swashes. Une version de test est disponible sur [fontsgeek.com](https://fontsgeek.com).
+> [!NOTE]
+> Pour que cet exemple fonctionne, il faut avoir installé la fonte Open Type Leitura Display Swashes. Une version de test est disponible sur [fontsgeek.com](https://fontsgeek.com).
 
 {{EmbedLiveSample('')}}
 

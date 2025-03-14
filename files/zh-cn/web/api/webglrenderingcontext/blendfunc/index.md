@@ -9,8 +9,8 @@ slug: Web/API/WebGLRenderingContext/blendFunc
 
 ## 语法
 
-```
-void gl.blendFunc(sfactor, dfactor);
+```js-nolint
+blendFunc(sfactor, dfactor)
 ```
 
 ### 参数
@@ -55,7 +55,7 @@ None.
 
 ## 示例
 
-使用混合函数，您首先必须使用参数 `gl.BLEND`来激活{{domxref("WebGLRenderingContext.enable()")}} 的混合。
+使用混合函数，你首先必须使用参数 `gl.BLEND`来激活{{domxref("WebGLRenderingContext.enable()")}} 的混合。
 
 ```js
 gl.enable(gl.BLEND);
@@ -79,7 +79,7 @@ gl.getParameter(gl.BLEND_SRC_RGB) == gl.SRC_COLOR;
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.blendColor()")}}
 - {{domxref("WebGLRenderingContext.blendEquation()")}}

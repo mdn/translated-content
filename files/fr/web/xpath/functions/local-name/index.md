@@ -1,13 +1,9 @@
 ---
 title: local-name
 slug: Web/XPath/Functions/local-name
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/local-name
-original_slug: Web/XPath/Fonctions/local-name
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `local-name` retourne une chaîne représentant le nom local du premier nœud d'un ensemble de nœuds donné.
 
@@ -28,11 +24,11 @@ Une chaîne.
 
 ### Notes
 
-- Le nom local est la partie locale d'un [nom étendu](http://www.w3.org/TR/xpath#dt-expanded-name).
+- Le nom local est la partie locale d'un [nom étendu](https://www.w3.org/TR/xpath#dt-expanded-name).
 
 ### Définition
 
-[XPath 1.0, section 4.1](http://www.w3.org/TR/xpath#function-local-name).
+[XPath 1.0, section 4.1](https://www.w3.org/TR/xpath#function-local-name).
 
 ### Support Gecko
 

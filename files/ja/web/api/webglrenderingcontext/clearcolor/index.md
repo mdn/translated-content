@@ -45,14 +45,11 @@ gl.getParameter(gl.COLOR_CLEAR_VALUE);
 
 ## 仕様策定状況
 
-| 仕様                                                                                     | 策定状況                             | コメント                        |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------- |
-| {{SpecName('WebGL', "#5.14.3", "clearColor")}}                             | {{Spec2('WebGL')}}             | 初回定義。                      |
-| {{SpecName('OpenGL ES 2.0', "glClearColor.xml", "glClearColor")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API のマニュアルページ。 |
+{{Specifications}}
 
 ## ブラウザーの対応
 
-{{Compat("api.WebGLRenderingContext.clearColor")}}
+{{Compat}}
 
 ## 関連項目
 

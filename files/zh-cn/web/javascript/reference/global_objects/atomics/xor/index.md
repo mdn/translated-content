@@ -1,40 +1,59 @@
 ---
 title: Atomics.xor()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
+l10n:
+  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
 ---
 
 {{JSRef}}
 
-**`Atomics.xor()`** 静态方法会在数组中给定位置进行一次按位异或操作，并返回该位置的旧值。这个原子操作保证在修改后的值被写回之前不会发生其他写操作。{{EmbedInteractiveExample("pages/js/atomics-xor.html")}}
+**`Atomics.xor()`** 静态方法会将给定的值与数组指定位置上的值进行按位异或运算，并返回该位置的旧值。此原子操作保证在修改后的值写回之前不会发生其他写操作。
+
+{{InteractiveExample("JavaScript Demo: Atomics.xor()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 7;
+
+// 7 (0111) XOR 2 (0010) = 5 (0101)
+console.log(Atomics.xor(uint8, 0, 2));
+// Expected output: 7
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 5
+```
 
 ## 语法
 
-```plain
+```js-nolint
 Atomics.xor(typedArray, index, value)
 ```
 
 ### 参数
 
 - `typedArray`
-  - : 一个共享的整型 typed array。例如 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, 或者 {{jsxref("Uint32Array")}}.
+  - : 一个整数类型数组。{{jsxref("Int8Array")}}、{{jsxref("Uint8Array")}}、{{jsxref("Int16Array")}}、{{jsxref("Uint16Array")}}、{{jsxref("Int32Array")}}、{{jsxref("Uint32Array")}}、{{jsxref("BigInt64Array")}} 或 {{jsxref("BigUint64Array")}} 之一。
 - `index`
-  - : `typedArray` 中需要进行按位异或的索引位置。
+  - : `typedArray` 中要进行按位异或运算的位置。
 - `value`
-  - : 要进行按位异或的数字。
+  - : 要进行按位异或运算的值。
 
 ### 返回值
 
-给定位置的旧值 (`typedArray[index]`)。
+给定位置的旧值（`typedArray[index]`）。
 
 ### 异常
 
-- 假如 `typedArray` 不是允许的整型之一，则抛出 {{jsxref("TypeError")}}。
-- 假如 `typedArray` 不是一个共享的整型 typed array，则抛出 {{jsxref("TypeError")}}。
-- 如果 `index` 超出了 `typedArray` 的边界，则抛出 {{jsxref("RangeError")}}。
+- {{jsxref("TypeError")}}
+  - : 如果 `typedArray` 不是允许的整数类型数组之一，则抛出该异常。
+- {{jsxref("RangeError")}}
+  - : 如果 `index` 超出 `typedArray` 的范围，则抛出该异常。
 
 ## 描述
 
-如果 a 和 b 不同，则按位异或操作产生 1。异或操作的真值表如下：
+当 `a` 和 `b` 不同时，按位异或运算结果为 1。异或运算的真值表如下：
 
 | `a` | `b` | `a ^ b` |
 | --- | --- | ------- |
@@ -43,7 +62,7 @@ Atomics.xor(typedArray, index, value)
 | 1   | 0   | 1       |
 | 1   | 1   | 0       |
 
-例如，按位异或 `5 & 1` 将返回 `0100`，而 `0100` 是十进制为 `4` 。
+例如，`5 ^ 1` 按位异或运算的结果是 `0100`，也就是十进制的 4。
 
 ```plain
 5  0101
@@ -53,15 +72,15 @@ Atomics.xor(typedArray, index, value)
 4  0100
 ```
 
-## 例子
+### 使用 xor()
 
 ```js
 const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 ta[0] = 5;
 
-Atomics.xor(ta, 0, 1); // returns 5, the old value
-Atomics.load(ta, 0);  // 4
+Atomics.xor(ta, 0, 1); // 返回 5，即旧的值
+Atomics.load(ta, 0); // 4
 ```
 
 ## 规范
@@ -72,7 +91,7 @@ Atomics.load(ta, 0);  // 4
 
 {{Compat}}
 
-## 相关
+## 参见
 
 - {{jsxref("Atomics")}}
 - {{jsxref("Atomics.and()")}}

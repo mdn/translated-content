@@ -1,20 +1,50 @@
 ---
 title: contenteditable
 slug: Web/HTML/Global_attributes/contenteditable
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/contenteditable
-original_slug: Web/HTML/Attributs_universels/contenteditable
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`contenteditable`** est un attribut à valeur contrainte qui indique si l'élément courant doit pouvoir être édité par l'utilisateur ou non. Lorsque c'est le cas, des éléments de l'interface du navigateur (ou de l'agent utilisateur) sont modifiés afin de permettre l'édition.
+L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`contenteditable`** est un attribut à valeur contrainte qui indique si l'élément courant doit pouvoir être édité par l'utilisateur ou non. Lorsque c'est le cas, des éléments de l'interface du navigateur (ou de l'agent utilisateur) sont modifiés afin de permettre l'édition.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-contenteditable.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: contenteditable", "tabbed-shorter")}}
+
+```html interactive-example
+<blockquote contenteditable="true">
+  <p>Edit this content to add your own quote</p>
+</blockquote>
+
+<cite contenteditable="true">-- Write your own name here</cite>
+```
+
+```css interactive-example
+blockquote {
+  background: #eee;
+  border-radius: 5px;
+  margin: 16px 0;
+}
+
+blockquote p {
+  padding: 15px;
+}
+
+cite {
+  margin: 16px 32px;
+  font-weight: bold;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+
+[contenteditable="true"] {
+  caret-color: red;
+}
+```
 
 Les valeurs autorisées pour cet attribut sont :
 
@@ -37,8 +67,8 @@ Il est possible de modifier la couleur du symbole d'insertion grâce à la propr
 
 ## Voir aussi
 
-- [Rendre le contenu éditable](/fr/docs/Web/HTML/Contenu_editable)
-- [Tous les attributs universels](/fr/docs/Web/HTML/Attributs_universels)
+- [Rendre le contenu éditable](/fr/docs/Web/HTML/Global_attributes/contenteditable)
+- [Tous les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 - {{domxref("HTMLElement.contentEditable")}} et {{domxref("HTMLElement.isContentEditable")}}
 - {{cssxref("caret-color")}}
-- [L'évènement `input` pour l'objet DOM `HTMLElement`](/fr/docs/Web/API/HTMLElement/input_event)
+- [L'évènement `input` pour l'objet DOM `HTMLElement`](/fr/docs/Web/API/Element/input_event)

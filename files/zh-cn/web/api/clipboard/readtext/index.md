@@ -21,15 +21,16 @@ None.
 
 A {{jsxref("Promise")}} that resolves with a {{domxref("DOMString")}} containing the textual contents of the clipboard. Returns an empty string if the clipboard is empty, does not contain text, or does not include a textual representation among the {{domxref("DataTransfer")}} objects representing the clipboard's contents.
 
-要从剪贴板中读取非文本内容，请改用{{domxref("Clipboard.read", "read()")}}方法。您可以使用 {{domxref("Clipboard.writeText", "writeText()")}}将文本写入剪贴板
+要从剪贴板中读取非文本内容，请改用{{domxref("Clipboard.read", "read()")}}方法。你可以使用 {{domxref("Clipboard.writeText", "writeText()")}}将文本写入剪贴板
 
 ## 例子
 
 此示例检索剪贴板的文本内容，并将返回的文本插入元素的内容中。
 
 ```js
-navigator.clipboard.readText().then(
-  clipText => document.getElementById("outbox").innerText = clipText);
+navigator.clipboard
+  .readText()
+  .then((clipText) => (document.getElementById("outbox").innerText = clipText));
 ```
 
 ## 规范

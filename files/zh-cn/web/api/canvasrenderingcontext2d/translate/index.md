@@ -1,34 +1,40 @@
 ---
-title: CanvasRenderingContext2D.translate()
+title: CanvasRenderingContext2D：translate() 方法
 slug: Web/API/CanvasRenderingContext2D/translate
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.translate()`** 方法对当前网格添加平移变换的方法。
+Canvas 2D API 的 **`CanvasRenderingContext2D.translate()`** 方法用于对当前网格添加平移变换。
 
 ## 语法
 
-```
-void ctx.translate(x, y);
+```js-nolint
+translate(x, y)
 ```
 
-`translate()` 方法，将 canvas 按原始 x 点的水平方向、原始的 y 点垂直方向进行**平移变换**
+`translate()` 方法通过在网格上将画布和原点水平移动 `x` 单位和垂直移动 `y` 单位，向当前矩阵添加一个平移变换。
 
-![](canvas_grid_translate.png)
+![基于 translate 方法的值将画布的原点在 x 和 y 轴上移动。](canvas_grid_translate.png)
 
 ### 参数
 
 - `x`
-  - : 水平方向的移动距离。
-- y
-  - : 垂直方向的移动距离。
+  - : 在水平方向上移动的距离。正值向右移动，负值向左移动。
+- `y`
+  - : 在垂直方向上移动的距离。正值向下移动，负值向上移动。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
-### 使用 `translate` 方法
+### 移动形状
 
-这是一段使用 `translate` 方法的简单的代码片段。
+这个例子使用 `translate()` 方法将一个正方形从其默认位置移动。然后绘制了一个大小相同但未移动的正方形以进行比较。
 
 #### HTML
 
@@ -38,60 +44,32 @@ void ctx.translate(x, y);
 
 #### JavaScript
 
+`translate()` 方法将上下文在水平方向上移动 110 个单位，在垂直方向上移动 30 个单位。第一个正方形根据这些量从其默认位置移动。
+
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.translate(50, 50);
-ctx.fillRect(0,0,100,100);
+// 移动的正方形
+ctx.translate(110, 30);
+ctx.fillStyle = "red";
+ctx.fillRect(0, 0, 80, 80);
 
-// reset current transformation matrix to the identity matrix
+// 重置当前的变换矩阵为单位矩阵
 ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+// 未移动的正方形
+ctx.fillStyle = "gray";
+ctx.fillRect(0, 0, 80, 80);
 ```
 
-修改下面的代码并在线查看 canvas 的变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.translate(50, 50);
-ctx.fillRect(0,0,100,100);
-ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea>
-```
+移动后的正方形为红色，未移动的正方形为灰色。
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+{{ EmbedLiveSample('移动形状', 700, 180) }}
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 
@@ -101,4 +79,4 @@ window.addEventListener("load", drawCanvas);
 
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}
+- 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}

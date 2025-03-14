@@ -1,38 +1,39 @@
 ---
-title: 'HTMLElement: dragend イベント'
+title: "HTMLElement: dragend イベント"
+short-title: dragend
 slug: Web/API/HTMLElement/dragend_event
+l10n:
+  sourceCommit: ea4425b74ae0dc1ec17737b4e28d8df2b73f1eae
 ---
 
 {{APIRef}}
 
 `dragend` イベントは、ドラッグ操作が終わろうとしているとき（マウスボタンを離したり、エスケープキーを押したりしたとき）に発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">既定のアクション</th>
-      <td>様々</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("DragEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("GlobalEventHandlers/ondragend", "ondragend")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル可能で、{{domxref("Document")}} オブジェクトと {{domxref("Window")}} オブジェクトまでバブルアップする可能性があります。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
+
+```js
+addEventListener("dragend", (event) => {});
+
+ondragend = (event) => {};
+```
+
+## イベント型
+
+{{domxref("DragEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("DragEvent")}}
+
+## イベントプロパティ
+
+_以下に挙げたプロパティに加えて、親である {{domxref("Event")}} から継承したプロパティもあります。_
+
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+  - : ドラッグ＆ドロップ操作の間に転送されるデータです。
 
 ## 例
 
@@ -48,9 +49,7 @@ slug: Web/API/HTMLElement/dragend_event
 
 ```html
 <div id="container">
-  <div id="draggable" draggable="true">
-    この div はドラッグ可
-  </div>
+  <div id="draggable" draggable="true">この div はドラッグ可</div>
 </div>
 <div class="dropzone"></div>
 ```
@@ -76,7 +75,7 @@ body {
 }
 
 .dragging {
-  opacity: .5;
+  opacity: 0.5;
 }
 ```
 
@@ -84,12 +83,12 @@ body {
 
 ```js
 const source = document.getElementById("draggable");
-source.addEventListener("dragstart", event => {
+source.addEventListener("dragstart", (event) => {
   // 半透明にする
   event.target.classList.add("dragging");
 });
 
-source.addEventListener("dragend", event => {
+source.addEventListener("dragend", (event) => {
   // 透明度を解除
   event.target.classList.remove("dragging");
 });
@@ -117,9 +116,3 @@ source.addEventListener("dragend", event => {
   - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
   - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
   - {{domxref("HTMLElement/drop_event", "drop")}}
-
-- 他を対象としたこのイベント
-
-  - {{domxref("Window")}}: {{domxref("Window/dragend_event", "dragend")}} イベント
-  - {{domxref("Document")}}: {{domxref("Document/dragend_event", "dragend")}} イベント
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragend_event", "dragend")}} イベント

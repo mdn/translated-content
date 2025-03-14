@@ -1,18 +1,16 @@
 ---
 title: grid
 slug: Web/CSS/grid
-tags:
-  - CSS
-  - CSS-свойства
-  - CSS сетка
-  - Ссылки
-translation_of: Web/CSS/grid
 ---
+
+{{CSSRef}}
+
 ## Общие сведения
 
 Свойство CSS **`grid`** является сокращённой формой записи, которая устанавливает значения для всех явных свойств сетки (grid) ({{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, и {{cssxref("grid-template-areas")}}), всех неявных свойств сетки (grid) ({{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, и {{cssxref("grid-auto-flow")}}), и свойств для промежутков между рядами и столбцами сетки ({{cssxref("grid-column-gap")}} и {{cssxref("grid-row-gap")}}) в одной строчке.
 
-> **Примечание:** В одной строке grid могут быть описаны свойства только одного вида: явные или неявные. Подсвойства, которые не были описаны, принимают, как и в других сокращённых формах записи свойств, значения по умолчанию. Кроме того, при помощи сокращённой формы записи значения свойств для промежутков между рядами и столбцами сетки по умолчанию сбрасываются, несмотря на то, что они не могут быть установлены в сокращённой форме записи.
+> [!NOTE]
+> В одной строке grid могут быть описаны свойства только одного вида: явные или неявные. Подсвойства, которые не были описаны, принимают, как и в других сокращённых формах записи свойств, значения по умолчанию. Кроме того, при помощи сокращённой формы записи значения свойств для промежутков между рядами и столбцами сетки по умолчанию сбрасываются, несмотря на то, что они не могут быть установлены в сокращённой форме записи.
 
 {{cssinfo}}
 
@@ -97,7 +95,7 @@ grid: unset;
 
 {{EmbedLiveSample("Example", "100%", 150)}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
@@ -108,5 +106,5 @@ grid: unset;
 ## Смотрите также
 
 - Связанные свойства CSS: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}
-- Руководство по разметке сетки: _[Line-based placement with CSS Grid](/ru/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
-- Руководство по разметке сетки: _[Grid template areas - Grid definition shorthands](/ru/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#Grid_definition_shorthands)_
+- Руководство по разметке сетки: _[Line-based placement with CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
+- Руководство по разметке сетки: _[Grid template areas - Grid definition shorthands](/ru/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#grid_definition_shorthands)_

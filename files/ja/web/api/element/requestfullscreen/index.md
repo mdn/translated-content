@@ -1,8 +1,9 @@
 ---
-title: Element.requestFullscreen()
+title: "Element: requestFullscreen() メソッド"
+short-title: requestFullscreen()
 slug: Web/API/Element/requestFullscreen
 l10n:
-  sourceCommit: a243190b798aa57b6cc08b9ef3216aed8ab9c895
+  sourceCommit: bafc473d01411340a547b9fae11702ead2b28016
 ---
 
 {{APIRef("Fullscreen API")}}
@@ -27,12 +28,14 @@ requestFullscreen(options)
       - : 要素が全画面モードのときにナビゲーション UI を表示するかどうかを制御します。
         既定値では `"auto"` であり、これはブラウザーが何をすべきかを決定することを示す。
         - `"hide"`
-          - : このとき、ブラウザーのナビゲーションインターフェースは非表示になり、画面全体が要素の表示に割り当てられます。
+          - : このとき、ブラウザーのナビゲーションインターフェイスは非表示になり、画面全体が要素の表示に割り当てられます。
         - `"show"`
           - : ブラウザーは、ページナビゲーションコントロールや、場合によっては他のユーザーインターフェイスを表示します。要素の寸法（および画面の知覚サイズ）は、このユーザーインターフェイスのためのスペースを残すために締め付けられます。
         - `"auto"`
           - : 上記の設定のうち、どれを適用するかはブラウザーが選択します。
             これが既定値です。
+    - `screen` {{optional_inline}} {{experimental_inline}}
+      - : 要素を全画面モードで表示したい画面を指定します。これは {{domxref("ScreenDetailed")}} オブジェクトを値として取り、選択された画面を表します。
 
 ### 返値
 
@@ -48,12 +51,13 @@ _`requestFullscreen()` プロシージャは、従来の例外を発生させる
 
     - その要素を含む文書が完全にアクティブでない、つまり、現在のアクティブ文書でない。
     - その要素が文書内に含まれていない。
-    - この要素は、機能ポリシーの設定または他のアクセス制御機能により、 `"fullscreen"` 機能を使用することが許可されていない。
+    - この要素は、[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)の設定または他のアクセス制御機能により、 `fullscreen` 機能を使用することが許可されていない。
     - 要素とその文書が同じノードである。
+    - この要素が[ポップオーバー](/ja/docs/Web/API/Popover_API)であり、既に {{domxref("HTMLElement.showPopover()")}} で表示されている。
 
 ## セキュリティ
 
-[単発のユーザーによる活性化](/ja/docs/Web/Security/User_activation)が必要です。この機能が動作するためには、ユーザーがページまたは UI 要素と対話する必要があります。
+[ユーザーによる一時的な有効化](/ja/docs/Web/Security/User_activation)が必要です。この機能が動作するためには、ユーザーがページまたは UI 要素と対話する必要があります。
 
 ## 使用上のメモ
 
@@ -63,9 +67,9 @@ _`requestFullscreen()` プロシージャは、従来の例外を発生させる
 
 - 標準の HTML 要素または {{SVGElement("svg")}} または {{MathMLElement("math")}} のいずれかであること。
 - {{HTMLElement("dialog")}} 要素ではないこと。
-- 最上位の文書内か、 {{htmlattrxref("allowfullscreen","iframe")}} 属性を適用した {{HTMLElement("iframe")}} 内に位置していなければなりません。
+- 最上位の文書内か、 [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen) 属性を適用した {{HTMLElement("iframe")}} 内に位置していなければなりません。
 
-さらに、もちろん、機能ポリシー `"fullscreen"` の権限も付与されていなければなりません。
+さらに、設定された権限ポリシーがこの機能の使用を許可している必要があります。
 
 ### 全画面起動の検出
 
@@ -86,7 +90,9 @@ function toggleFullscreen() {
 
   if (!document.fullscreenElement) {
     elem.requestFullscreen().catch((err) => {
-      alert(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
+      alert(
+        `Error attempting to enable fullscreen mode: ${err.message} (${err.name})`,
+      );
     });
   } else {
     document.exitFullscreen();
@@ -108,12 +114,34 @@ function toggleFullscreen() {
 ```js
 let elem = document.documentElement;
 
-elem.requestFullscreen({ navigationUI: "show" }).then(() => {}).catch((err) => {
-  alert(`An error occurred while trying to switch into fullscreen mode: ${err.message} (${err.name})`);
-});
+elem
+  .requestFullscreen({ navigationUI: "show" })
+  .then(() => {})
+  .catch((err) => {
+    alert(
+      `An error occurred while trying to switch into fullscreen mode: ${err.message} (${err.name})`,
+    );
+  });
 ```
 
 プロミスの解決ハンドラーは何もしませんが、プロミスが拒否された場合は {{DOMxRef("Window.alert", "alert()")}} を呼び出すことでエラーメッセージが表示します。
+
+### screen オプションの使用
+
+要素を OS の第 1 画面で全画面にしたい場合は、以下のようなコードを使用することで実現できます。
+
+```js
+try {
+  const primaryScreen = (await getScreenDetails()).screens.find(
+    (screen) => screen.isPrimary,
+  );
+  await document.body.requestFullscreen({ screen: primaryScreen });
+} catch (err) {
+  console.error(err.name, err.message);
+}
+```
+
+{{domxref("Window.getScreenDetails()")}} メソッドを使用して、現在の端末の {{domxref("ScreenDetails")}} オブジェクトを取得します。これには、利用できるさまざまな画面を表す {{domxref("ScreenDetailed")}} オブジェクトが格納されています。
 
 ## 仕様書
 
@@ -130,4 +158,4 @@ elem.requestFullscreen({ navigationUI: "show" }).then(() => {}).catch((err) => {
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}
-- {{HTMLAttrxRef("allowfullscreen", "iframe")}}
+- [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen)

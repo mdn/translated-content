@@ -1,7 +1,6 @@
 ---
 title: Usando animaciones CSS
-slug: Web/CSS/CSS_Animations/Using_CSS_animations
-original_slug: Web/CSS/CSS_Animations/Usando_animaciones_CSS
+slug: Web/CSS/CSS_animations/Using_CSS_animations
 ---
 
 {{SeeCompatTable}}{{CSSRef}}
@@ -47,7 +46,8 @@ Además puedes, opcionalmente, incluir fotogramas que describan pasos intermedio
 
 ## Ejemplos
 
-> **Nota:** Los siguientes ejemplos no usan ningún prefijo en las propiedades CSS de animación. Los navegadores antiguos pueden necesitarlos. Al hacer click en "Ver el ejemplo vivo" se incluye el prefijo `-webkit`.
+> [!NOTE]
+> Los siguientes ejemplos no usan ningún prefijo en las propiedades CSS de animación. Los navegadores antiguos pueden necesitarlos. Al hacer click en "Ver el ejemplo vivo" se incluye el prefijo `-webkit`.
 
 ### Haciendo que un texto se delice por la ventana del navegador
 
@@ -64,7 +64,7 @@ p {
 @keyframes slidein {
   from {
     margin-left: 100%;
-    width: 300%
+    width: 300%;
   }
 
   to {
@@ -83,9 +83,11 @@ Los fotogramas se definen usando la regla {{ cssxref("@keyframes") }}. En nuestr
 El segundo (y último) fotograma sucede en el 100% (hemos usado su alias `to`). Hemos puesto el margen derecho al 0% y el ancho del elemento al 100%. Esto produce que el encabezado, al finalizar la animación, esté en el borde derecho del área de contenido.
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 (Recarga la página para ver la animación, o haz click en el botón CodePen para ver la animación en CodePen)
@@ -124,9 +126,11 @@ p {
 ```
 
 ```html hidden
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 Esto le dice al navegador que en el 75% de la secuencia de la animación, el encabezado tiene un margen izquierdo del 25%, un tamaño de letra del 200% y un ancho del 150%.
@@ -162,9 +166,11 @@ p {
 ```
 
 ```html hidden
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("Haciendo_que_se_repita","100%","250")}}
@@ -197,9 +203,11 @@ p {
 ```
 
 ```html hidden
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("Moviendolo_hacia_adelante_y_hacia_atrás","100%","250")}}
@@ -225,7 +233,8 @@ p {
 }
 ```
 
-> **Nota:** Puedes encontrar más detalles en la página de referencia {{cssxref("animation")}}
+> [!NOTE]
+> Puedes encontrar más detalles en la página de referencia {{cssxref("animation")}}
 
 ### Estableciendo multiples valores de propiedades animation
 
@@ -275,14 +284,14 @@ Empezamos creando el CSS para la animación. Esta animación durará 3 segundos,
 
 @keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-   margin-left:0%;
-   width:100%;
- }
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 ```
 
@@ -310,7 +319,7 @@ Los eventos, al irse disparando, llamarán a la función `listener()`.
 ```js
 function listener(e) {
   var l = document.createElement("li");
-  switch(e.type) {
+  switch (e.type) {
     case "animationstart":
       l.innerHTML = "Iniciado: tiempo transcurrido " + e.elapsedTime;
       break;
@@ -343,14 +352,14 @@ Solo nos falta mostrar el código HTML necesario para mostrar el ejemplo en la p
 ```html
 <h1 id="watchme">Watch me move</h1>
 <p>
-  This example shows how to use CSS animations to make <code>H1</code>
-  elements move across the page.</p>
-<p>
-  In addition, we output some text each time an animation event fires,
-  so you can see them in action.
+  This example shows how to use CSS animations to make <code>H1</code> elements
+  move across the page.
 </p>
-<ul id="output">
-</ul>
+<p>
+  In addition, we output some text each time an animation event fires, so you
+  can see them in action.
+</p>
+<ul id="output"></ul>
 ```
 
 {{EmbedLiveSample('Usando_eventos_de_animación', '600', '300')}}
@@ -359,4 +368,4 @@ Solo nos falta mostrar el código HTML necesario para mostrar el ejemplo en la p
 
 - {{ domxref("AnimationEvent", "AnimationEvent") }}
 - [Detecting CSS animation support](/es/docs/CSS/CSS_animations/Detecting_CSS_animation_support)
-- [Using CSS transitions](/es/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS transitions](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)

@@ -1,8 +1,6 @@
 ---
 title: Conceitos gerais da programação assíncrona
 slug: conflicting/Learn/JavaScript/Asynchronous/Introducing
-translation_of: Learn/JavaScript/Asynchronous/Concepts
-original_slug: Learn/JavaScript/Asynchronous/Concepts
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous")}}
@@ -34,7 +32,7 @@ Normalmente, o código de um programa é executado de forma direta, com uma cois
 
 Usuários do Mac, por exemplo, conseguem ver isso como o cursor giratório em arco-íris (ou "beachball", como normalmente é chamado). Este cursor é o jeito do sistema operacional dizer: "o programa atual que você está usando teve que parar e esperar algo terminar de ser executado, e estava demorando tanto que fiquei preocupado se você estava pensando no que aconteceu."
 
-![Multi-colored macOS beachball busy spinner](https://mdn.mozillademos.org/files/16577/beachball.jpg)
+![Multi-colored macOS beachball busy spinner](beachball.jpg)
 
 Essa é uma situação frustrante, e não faz bom uso do poder de processamento do computador — especialmente em uma era em que computadores tem múltiplos núcleos de processamento disponíveis. Não há sentido em ficar esperando por algo quando você pode deixar outra tarefa ser executada em um núcleo de processador diferente e deixar que ele te avise quando terminar. Isso te permite fazer mais coisas por enquanto, o que é a base da **programação assincrona**. Depende do ambiente de programação que você está usando (navegadores da Web, no caso de desenvolvimento da Web) para fornecer APIs que permitem executar essas tarefas de forma assíncrona.
 
@@ -65,7 +63,8 @@ btn.addEventListener('click', () => {
 
 Quando o exemplo for executado, abra seu console JavaScript e depois clique no botão — você verá qua o parágrafo não aparece até que o programa termine de calcular as datas e imprimir a última no console. O código é executado na ordem em que ele aparece na fonte, e a operação seguinte só é executada depois que a primeira for terminada.
 
-> **Nota:** O exemplo anterior não é muito realistico. Você nunca calcularia 10 milhões de datas em um aplicativo real! Mas isso serve par te dar um apoio sobre o assunto.
+> [!NOTE]
+> O exemplo anterior não é muito realistico. Você nunca calcularia 10 milhões de datas em um aplicativo real! Mas isso serve par te dar um apoio sobre o assunto.
 
 No nosso segundo exemplo [simple-sync-ui-blocking.html](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-ui-blocking.html) ([veja aqui](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-ui-blocking.html)), nós simulamos algo mais realistico que você pode encontrar em uma página real. Nós bloqueamos a interatividade do usuário na renderização da UI. Neste exemplo, nós temos dois botões:
 
@@ -91,7 +90,8 @@ alertBtn.addEventListener('click', () =>
 
 Se você clicar no primeiro botão e imediatamente no segundo, você verá que a mensagem de alerta não aparece até que os círculos sejam totalmente renderizados. A primeira operação bloqueia a segunda até a sua finalização.
 
-> **Nota:** OK, no nosso caso, isso é ruim e estamos bloqueando o código de propósito, mas isso é um problema comum que desenvolvedores de aplicativos reais sempre tentam resolver.
+> [!NOTE]
+> OK, no nosso caso, isso é ruim e estamos bloqueando o código de propósito, mas isso é um problema comum que desenvolvedores de aplicativos reais sempre tentam resolver.
 
 E por quê isso acontece? A resposta é que o JavaScript é **single threaded**. E é neste ponto que precisamos introduzir a você o conceito de **threads**.
 
@@ -165,9 +165,9 @@ O design moderno de software gira em torno do uso de programação assíncrona, 
 
 ## Nesse módulo
 
-- [Conceitos gerais da programação assíncrona](/pt-BR/docs/Learn/JavaScript/Asynchronous/Concepts)
+- [Conceitos gerais da programação assíncrona](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing)
 - [Introduzindo o JavaScript assíncrono](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [Timeouts e intervalos](/pt-BR/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
+- [Timeouts e intervalos](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df)
 - [Código elegante usando as Promises](/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Facilitando a programação async com async e await](/pt-BR/docs/Learn/JavaScript/Asynchronous/Async_await)
-- [Escolhendo a abordagem certa](/pt-BR/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)
+- [Facilitando a programação async com async e await](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Promises)
+- [Escolhendo a abordagem certa](/pt-BR/docs/Learn/JavaScript/Asynchronous)

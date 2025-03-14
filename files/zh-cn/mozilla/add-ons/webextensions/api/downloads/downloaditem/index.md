@@ -3,7 +3,7 @@ title: downloads.DownloadItem
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 {{WebExtAPIRef("downloads")}} API 的 `DownloadItem` 类代表了一个被下载的文件。
 
@@ -58,7 +58,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#type-DownloadItem) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.google.cn/docs/extensions/reference/api/downloads#type-DownloadItem) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

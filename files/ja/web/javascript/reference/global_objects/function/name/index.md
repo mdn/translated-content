@@ -7,9 +7,26 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/name
 
 {{jsxref("Function")}} オブジェクトの **`name`** プロパティは読み取り専用で、作成時に付けられた関数の名前、もしくは無名関数の場合は `anonymous` または `''` (空文字列) を返します。
 
-{{EmbedInteractiveExample("pages/js/function-name.html")}}{{js_property_attributes(0,0,1)}}
+{{InteractiveExample("JavaScript Demo: Function.name")}}
 
-> **メモ:** 標準外であった ES2015 以前の実装では、`configurable` 属性も `false` であることに注意してください。
+```js interactive-example
+const func1 = function () {};
+
+const object = {
+  func2: function () {},
+};
+
+console.log(func1.name);
+// Expected output: "func1"
+
+console.log(object.func2.name);
+// Expected output: "func2"
+```
+
+{{js_property_attributes(0,0,1)}}
+
+> [!NOTE]
+> 標準外であった ES2015 以前の実装では、`configurable` 属性も `false` であることに注意してください。
 
 ## JavaScript の圧縮とミニファイ
 
@@ -18,25 +35,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/name
 次のようなソースコードは、
 
 ```js
-function Foo() {};
+function Foo() {}
 let foo = new Foo();
 
-if (foo.constructor.name === 'Foo') {
+if (foo.constructor.name === "Foo") {
   console.log("'foo' は 'Foo' のインスタンスである");
 } else {
-  console.log('おおっと！');
+  console.log("おおっと！");
 }
 ```
 
 このように圧縮されるかもしれません。
 
 ```js
-function a() {};
+function a() {}
 let b = new a();
-if (b.constructor.name === 'Foo') {
+if (b.constructor.name === "Foo") {
   console.log("'foo' は 'Foo' のインスタンスである");
 } else {
-  console.log('おおっと！');
+  console.log("おおっと！");
 }
 ```
 
@@ -58,7 +75,7 @@ doSomething.name; // "doSomething"
 構文 `new Function(...)` または単に `Function(...)` で関数を作成すると、 {{jsxref("Function")}} オブジェクトが作成され、その名前は "anonymous" になります。
 
 ```js
-(new Function).name; // "anonymous"
+new Function().name; // "anonymous"
 ```
 
 ### 無名関数式
@@ -66,7 +83,7 @@ doSomething.name; // "doSomething"
 `function` キーワードを使用して生成された関数式またはアロー関数は、名前が `""` (空文字列) になっています。
 
 ```js
-(function() {}).name; // ""
+(function () {}).name; // ""
 (() => {}).name; // ""
 ```
 
@@ -75,9 +92,9 @@ doSomething.name; // "doSomething"
 変数とメソッドは、構文上の位置から無名関数の名前を推論できます (ECMAScript 2015 から)。
 
 ```js
-let f = function() {};
+let f = function () {};
 let object = {
-  someMethod: function() {}
+  someMethod: function () {},
 };
 
 console.log(f.name); // "f"
@@ -88,23 +105,27 @@ console.log(object.someMethod.name); // "someMethod"
 
 ```js
 let object = {
-  someMethod: function object_someMethod() {}
+  someMethod: function object_someMethod() {},
 };
 console.log(object.someMethod.name); // "object_someMethod" と表示
 
-try { object_someMethod } catch(e) { console.log(e); }
+try {
+  object_someMethod;
+} catch (e) {
+  console.log(e);
+}
 // ReferenceError: object_someMethod is not defined
 ```
 
 name プロパティは読み取り専用であり、代入演算子で変更することはできません。
 
 ```js
- let object = {
+let object = {
   // anonymous
-  someMethod: function() {}
+  someMethod: function () {},
 };
 
-object.someMethod.name = 'otherMethod';
+object.someMethod.name = "otherMethod";
 console.log(object.someMethod.name); // someMethod
 ```
 
@@ -114,7 +135,7 @@ console.log(object.someMethod.name); // someMethod
 
 ```js
 var o = {
-  foo(){}
+  foo() {},
 };
 o.foo.name; // "foo";
 ```
@@ -124,18 +145,18 @@ o.foo.name; // "foo";
 {{jsxref("Function.bind()")}} が関数を作成する時、その名前は "bound " とその関数名を合わせたものとなります。
 
 ```js
-function foo() {};
+function foo() {}
 foo.bind({}).name; // "bound foo"
 ```
 
 ### ゲッターとセッターの関数名
 
-[`get`](/ja/docs/Web/JavaScript/Reference/Operators/get) と [`set`](/ja/docs/JavaScript/Reference/Operators/set) を使う時は、 "get" や "set" が関数名に含まれます。
+[`get`](/ja/docs/Web/JavaScript/Reference/Functions/get) と [`set`](/ja/docs/Web/JavaScript/Reference/Functions/set) を使う時は、 "get" や "set" が関数名に含まれます。
 
 ```js
 let o = {
-  get foo(){},
-  set foo(x){}
+  get foo() {},
+  set foo(x) {},
 };
 
 var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
@@ -148,13 +169,14 @@ descriptor.set.name; // "set foo";
 `obj.constructor.name` でオブジェクトの「クラス」を知ることができます (ただし、下記の警告を確認してください)。
 
 ```js
-function Foo() {}  // ES2015 構文の場合: class Foo {}
+function Foo() {} // ES2015 構文の場合: class Foo {}
 
 var fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // "Foo" と表示
 ```
 
-> **警告:** スクリプトインタープリターは、関数が自身の _name_ プロパティを持っていない場合に限り、組み込みの `Function.name` プロパティを設定します ([9.11.2. of the ECMAScript2015 Language Specification](http://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname) セクションをご覧ください)。しかし ES2015 では、_static_ キーワードを指定すると、その静的メソッドはクラスのコンストラクタ関数の OwnProperty として設定されます (ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation))。
+> [!WARNING]
+> スクリプトインタープリターは、関数が自身の _name_ プロパティを持っていない場合に限り、組み込みの `Function.name` プロパティを設定します ([9.11.2. of the ECMAScript2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname) セクションをご覧ください)。しかし ES2015 では、_static_ キーワードを指定すると、その静的メソッドはクラスのコンストラクタ関数の OwnProperty として設定されます (ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation))。
 
 従って、`name()` という静的メソッドを持つクラスでは、事実上そのクラス名を取得することはできません:
 
@@ -169,8 +191,8 @@ class Foo {
 
 ```js
 function Foo() {}
-Object.defineProperty(Foo, 'name', { writable: true });
-Foo.name = function() {};
+Object.defineProperty(Foo, "name", { writable: true });
+Foo.name = function () {};
 ```
 
 `fooInstance.constructor.name` で `fooInstance` のクラスを取得しようとしても、得られるのはクラス名ではなく静的メソッドへの参照です。例えば:
@@ -183,7 +205,7 @@ console.log(fooInstance.constructor.name); // 関数 name() を表示
 先ほどの ES5 の構文の例では、Chrome や Firefox での `Foo.name` の静的な定義の際に _writable_ を指定しています。このような独自の手法を用いなければ、デフォルトでは _read-only_ となります:
 
 ```js
-Foo.name = 'Hello';
+Foo.name = "Hello";
 console.log(Foo.name); // Foo が static name() を持つ場合は "Hello"、そうでなければ "Foo" と表示する。
 ```
 
@@ -197,8 +219,8 @@ console.log(Foo.name); // Foo が static name() を持つ場合は "Hello"、そ
 let sym1 = Symbol("foo");
 let sym2 = Symbol();
 let o = {
-  [sym1]: function(){},
-  [sym2]: function(){}
+  [sym1]: function () {},
+  [sym2]: function () {},
 };
 
 o[sym1].name; // "[foo]"
@@ -211,7 +233,7 @@ o[sym2].name; // ""
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Function.name")}}
+{{Compat}}
 
 ## 関連情報
 

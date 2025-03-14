@@ -47,22 +47,24 @@ var myRequest = new Request(input[, init]);
 
 ## Exemplo
 
-Em nosso [exemplo Fetch Request](https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init)(veja [Fetch Request live](http://mdn.github.io/fetch-examples/fetch-request/)) nós criamos um novo objeto `Request` usando o construtor, em seguida, busque-o usando uma chamada {{domxref("GlobalFetch.fetch")}}. Como estamos buscando uma imagem, executamos o {{domxref("Body.blob")}} na resposta para fornecer o tipo MIME adequado para que ela seja manipulada corretamente. Em seguida, criamos uma URL do objeto e a exibimos em um Elemento {{htmlelement("img")}}.
+Em nosso [exemplo Fetch Request](https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init)(veja [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) nós criamos um novo objeto `Request` usando o construtor, em seguida, busque-o usando uma chamada {{domxref("GlobalFetch.fetch")}}. Como estamos buscando uma imagem, executamos o {{domxref("Body.blob")}} na resposta para fornecer o tipo MIME adequado para que ela seja manipulada corretamente. Em seguida, criamos uma URL do objeto e a exibimos em um Elemento {{htmlelement("img")}}.
 
 ```js
-var myImage = document.querySelector('img');
+var myImage = document.querySelector("img");
 
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 
-fetch(myRequest).then(function(response) {
-  return response.blob();
-}).then(function(response) {
-  var objectURL = URL.createObjectURL(response);
-  myImage.src = objectURL;
-});
+fetch(myRequest)
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (response) {
+    var objectURL = URL.createObjectURL(response);
+    myImage.src = objectURL;
+  });
 ```
 
-Em nosso [Fetch Request with init example](https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init) (veja [Fetch Request init live](http://mdn.github.io/fetch-examples/fetch-request-with-init/)) nós fazemos a mesma coisa, exceto que passamos em um objeto init quando invocamos `fetch()`:
+Em nosso [Fetch Request with init example](https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init) (veja [Fetch Request init live](https://mdn.github.io/fetch-examples/fetch-request-with-init/)) nós fazemos a mesma coisa, exceto que passamos em um objeto init quando invocamos `fetch()`:
 
 ```js
 var myImage = document.querySelector('img');
@@ -93,14 +95,16 @@ fetch(myRequest,myInit).then(function(response) {
 Você também pode usar um literal de objeto como `headers` em `init`.
 
 ```js
-var myInit = { method: 'GET',
-               headers: {
-                   'Content-Type': 'image/jpeg'
-               },
-               mode: 'cors',
-               cache: 'default' };
+var myInit = {
+  method: "GET",
+  headers: {
+    "Content-Type": "image/jpeg",
+  },
+  mode: "cors",
+  cache: "default",
+};
 
-var myRequest = new Request('flowers.jpg', myInit);
+var myRequest = new Request("flowers.jpg", myInit);
 ```
 
 Você também pode passar um objeto {{domxref ("Request")}} para o construtor `Request()` para criar uma cópia do Request (isso é semelhante a chamar o método {{domxref("Request.clone", "clone()")}} .)
@@ -109,20 +113,19 @@ Você também pode passar um objeto {{domxref ("Request")}} para o construtor `R
 var copy = new Request(myRequest);
 ```
 
-> **Nota:** Este último uso é provavelmente útil apenas em [ServiceWorkers](/pt-BR/docs/Web/API/ServiceWorker_API).
+> [!NOTE]
+> Este último uso é provavelmente útil apenas em [ServiceWorkers](/pt-BR/docs/Web/API/Service_Worker_API).
 
 ## Especificações
 
-| Especificação                                                    | Status                   | Comentário |
-| ---------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('Fetch','#dom-request','Request()')}} | {{Spec2('Fetch')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Request.Request")}}
+{{Compat}}
 
 ## Veja também
 
-- [ServiceWorker API](/pt-BR/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/pt-BR/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/CORS)
 - [HTTP](/pt-BR/docs/Web/HTTP)

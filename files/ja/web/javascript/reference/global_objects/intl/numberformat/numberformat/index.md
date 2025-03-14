@@ -7,7 +7,34 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
 
 **`Intl.NumberFormat()`** コンストラクターは、言語に依存した数値の整形ができる {{jsxref("NumberFormat", "Intl.NumberFormat")}} オブジェクトを生成します。
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat")}}
+
+```js interactive-example
+const number = 123456.789;
+
+console.log(
+  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
+    number,
+  ),
+);
+// Expected output: "123.456,79 €"
+
+// The Japanese yen doesn't use a minor unit
+console.log(
+  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
+    number,
+  ),
+);
+// Expected output: "￥123,457"
+
+// Limit to three significant digits
+console.log(
+  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
+    number,
+  ),
+);
+// Expected output: "1,23,000"
+```
 
 <!-- このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 https://github.com/mdn/interactive-examples をクローンしてプルリクエストを送信してください。 -->
 
@@ -21,8 +48,7 @@ new Intl.NumberFormat([locales[, options]])
 
 - `locales` {{optional_inline}}
 
-  - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列。 `locales` 引数の一般的な形式と解釈については、 {{jsxref("Global_Objects/Intl", "Intl",
-    "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。次の Unicode 拡張キーが許可されています。
+  - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列。 `locales` 引数の一般的な形式と解釈については、 {{jsxref("Global_Objects/Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。次の Unicode 拡張キーが許可されています。
 
     - `nu`
       - : 使用される数値システムです。指定可能な値には "`adlm`", "`ahom`", "`arab`", "`arabext`", "`bali`", "`beng`", "`bhks`", "`brah`", "`cakm`", "`cham`", "`deva`", "`diak`", "`fullwide`", "`gong`", "`gonm`", "`gujr`", "`guru`", "`hanidec`", "`hmng`", "`hmnp`", "`java`", "`kali`", "`khmr`", "`knda`", "`lana`", "`lanatham`", "`laoo`", "`latn`", "`lepc`", "`limb`", "`mathbold`", "`mathdbl`", "`mathmono`", "`mathsanb`", "`mathsans`", "`mlym`", "`modi`", "`mong`", "`mroo`", "`mtei`", "`mymr`", "`mymrshan`", "`mymrtlng`", "`newa`", "`nkoo`", "`olck`", "`orya`", "`osma`", "`rohg`", "`saur`", "`segment`", "`shrd`", "`sind`", "`sinh`", "`sora`", "`sund`", "`takr`", "`talu`", "`tamldec`", "`telu`", "`thai`", "`tibt`", "`tirh`", "`vaii`", "`wara`", "`wcho`" があります。 [標準 Unicode 命数法一覧](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem) を参照してください。
@@ -34,7 +60,7 @@ new Intl.NumberFormat([locales[, options]])
     - `compactDisplay`
       - : `notation` が "`compact`" の場合のみ使用されます。 "`short`" (既定値) または "`long`" のどちらかを取ります。
     - `currency`
-      - : 通貨の書式で使用するための通貨です。使用可能な値は ISO 4217 通貨コードであり、例えば米ドルは "`USD`"、ユーロは "`EUR`"、日本円には "`JPY`" です。 — [Current currency & funds code list](http://www.currency-iso.org/en/home/tables/table-a1.html) を参照してください。既定値はありません。 `style` が "`currency`" である場合、 `currency` プロパティを提供する必要があります。
+      - : 通貨の書式で使用するための通貨です。使用可能な値は ISO 4217 通貨コードであり、例えば米ドルは "`USD`"、ユーロは "`EUR`"、日本円には "`JPY`" です。 — [Current currency & funds code list](https://www.currency-iso.org/en/home/tables/table-a1.html) を参照してください。既定値はありません。 `style` が "`currency`" である場合、 `currency` プロパティを提供する必要があります。
     - `currencyDisplay`
 
       - : 通貨の書式で通貨を表示する方法です。使用可能な値は次の通りです。
@@ -78,7 +104,7 @@ new Intl.NumberFormat([locales[, options]])
         - "`unit`" は単位の整形に使用します。
 
     - `unit`
-      - : `unit` の整形で使用する単位で、使用可能な値は [UTS #35, Part 2, Section 6](http://unicode.org/reports/tr35/tr35-general.html#Unit_Elements) で定義されているコア単位識別子です。 [全体リスト](https://github.com/unicode-org/cldr/blob/master/common/validity/unit.xml)から単位の[サブセット](https://tc39.es/proposal-unified-intl-numberformat/section6/locales-currencies-tz_proposed_out.html#sec-issanctionedsimpleunitidentifier)が ECMAScript で使用するために選択されました。一組の単純な単位を "`-per-`" で結合し、複合単位を創ることができます。既定値はありません。 `style` が "`unit`" である場合、 `unit` プロパティを指定する必要があります。
+      - : `unit` の整形で使用する単位で、使用可能な値は [UTS #35, Part 2, Section 6](https://unicode.org/reports/tr35/tr35-general.html#Unit_Elements) で定義されているコア単位識別子です。 [全体リスト](https://github.com/unicode-org/cldr/blob/master/common/validity/unit.xml)から単位の[サブセット](https://tc39.es/proposal-unified-intl-numberformat/section6/locales-currencies-tz_proposed_out.html#sec-issanctionedsimpleunitidentifier)が ECMAScript で使用するために選択されました。一組の単純な単位を "`-per-`" で結合し、複合単位を創ることができます。既定値はありません。 `style` が "`unit`" である場合、 `unit` プロパティを指定する必要があります。
     - `unitDisplay`
 
       - : `unit` の整形で使用する単位の整形スタイルで、既定値は "`short`" です。
@@ -95,9 +121,9 @@ new Intl.NumberFormat([locales[, options]])
     - `minimumIntegerDigits`
       - : 整数部に使用する最小桁数です。使用可能な値は 1 から 21 までです。既定値は 1 です。
     - `minimumFractionDigits`
-      - : 小数部に使用する最小桁数です。使用可能な値は 0 から 20 までです。既定値は、通常の数値とパーセント形式では 0 です。通貨形式では [ISO 4217 通貨コードリスト](http://www.currency-iso.org/en/home/tables/table-a1.html)で提供されている副単位の桁数です (このリストで情報が提供されていない場合は 2 です)。
+      - : 小数部に使用する最小桁数です。使用可能な値は 0 から 20 までです。既定値は、通常の数値とパーセント形式では 0 です。通貨形式では [ISO 4217 通貨コードリスト](https://www.currency-iso.org/en/home/tables/table-a1.html)で提供されている副単位の桁数です (このリストで情報が提供されていない場合は 2 です)。
     - `maximumFractionDigits`
-      - : 小数部に使用する最大桁数です。使用可能な値は 0 から 20 までです。既定値は、通常の数値では `minimumFractionDigits` と 3 の大きい方、通貨形式では `minimumFractionDigits` と [ISO 4217 通貨コードリスト](http://www.currency-iso.org/en/home/tables/table-a1.html)で提供されている副単位の桁数です (このリストで情報が提供されていない場合は 2)、パーセント形式の場合は `minimumFractionDigits` と 0 の大きい方です。
+      - : 小数部に使用する最大桁数です。使用可能な値は 0 から 20 までです。既定値は、通常の数値では `minimumFractionDigits` と 3 の大きい方、通貨形式では `minimumFractionDigits` と [ISO 4217 通貨コードリスト](https://www.currency-iso.org/en/home/tables/table-a1.html)で提供されている副単位の桁数です (このリストで情報が提供されていない場合は 2)、パーセント形式の場合は `minimumFractionDigits` と 0 の大きい方です。
     - `minimumSignificantDigits`
       - : 使用する最小有効桁数です。使用可能な値は 1 から 21 までです。既定値は 1 です。
     - `maximumSignificantDigits`
@@ -121,9 +147,9 @@ console.log(new Intl.NumberFormat().format(amount));
 ```js
 let amount = 3500;
 
-new Intl.NumberFormat('en-US', {style: 'decimal'}).format(amount);
+new Intl.NumberFormat("en-US", { style: "decimal" }).format(amount);
 // → '3,500'
-new Intl.NumberFormat('en-US', {style: 'percent'}).format(amount);
+new Intl.NumberFormat("en-US", { style: "percent" }).format(amount);
 // → '350,000%'
 ```
 
@@ -134,10 +160,14 @@ new Intl.NumberFormat('en-US', {style: 'percent'}).format(amount);
 ```js
 let amount = 3500;
 
-new Intl.NumberFormat('en-US', {style: 'unit', unit: 'liter'}).format(amount);
+new Intl.NumberFormat("en-US", { style: "unit", unit: "liter" }).format(amount);
 // → '3,500 L'
 
-new Intl.NumberFormat('en-US', {style: 'unit', unit: 'liter', unitDisplay: 'long'}).format(amount);
+new Intl.NumberFormat("en-US", {
+  style: "unit",
+  unit: "liter",
+  unitDisplay: "long",
+}).format(amount);
 // → '3,500 liters'
 ```
 
@@ -147,20 +177,22 @@ new Intl.NumberFormat('en-US', {style: 'unit', unit: 'liter', unitDisplay: 'long
 
 ```js
 let amount = -3500;
-new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(amount);
+new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(
+  amount,
+);
 // → '-$3,500.00'
 
-new Intl.NumberFormat('bn', {
-  style: 'currency',
-  currency: 'USD',
-  currencyDisplay: 'name'
+new Intl.NumberFormat("bn", {
+  style: "currency",
+  currency: "USD",
+  currencyDisplay: "name",
 }).format(amount);
 // →  '-3,500.00 US dollars'
 
-new Intl.NumberFormat('bn', {
-  style: 'currency',
-  currency: 'USD',
-  currencySign: 'accounting'
+new Intl.NumberFormat("bn", {
+  style: "currency",
+  currency: "USD",
+  currencySign: "accounting",
 }).format(amount);
 // →  '($3,500.00)'
 ```
@@ -170,30 +202,30 @@ new Intl.NumberFormat('bn', {
 科学の短縮表記は `notation` オプションで表すことができ、以下のようになります。
 
 ```js
-new Intl.NumberFormat('en-US', { notation: "scientific" }).format(987654321);
+new Intl.NumberFormat("en-US", { notation: "scientific" }).format(987654321);
 // → 9.877E8
 
-new Intl.NumberFormat('pt-PT', { notation: "scientific" }).format(987654321);
+new Intl.NumberFormat("pt-PT", { notation: "scientific" }).format(987654321);
 // → 9,877E8
 
-new Intl.NumberFormat('en-GB', { notation: "engineering" }).format(987654321);
+new Intl.NumberFormat("en-GB", { notation: "engineering" }).format(987654321);
 // → 987.654E6
 
-new Intl.NumberFormat('de', { notation: "engineering" }).format(987654321);
+new Intl.NumberFormat("de", { notation: "engineering" }).format(987654321);
 // → 987,654E6
 
-new Intl.NumberFormat('zh-CN', { notation: "compact" }).format(987654321);
+new Intl.NumberFormat("zh-CN", { notation: "compact" }).format(987654321);
 // → 9.9亿
 
-new Intl.NumberFormat('fr', {
+new Intl.NumberFormat("fr", {
   notation: "compact",
-  compactDisplay: "long"
+  compactDisplay: "long",
 }).format(987654321);
 // → 988 millions
 
-new Intl.NumberFormat('en-GB', {
+new Intl.NumberFormat("en-GB", {
   notation: "compact",
-  compactDisplay: "short"
+  compactDisplay: "short",
 }).format(987654321);
 // → 988M
 ```
@@ -204,8 +236,8 @@ new Intl.NumberFormat('en-GB', {
 
 ```js
 new Intl.NumberFormat("en-US", {
-    style: "percent",
-    signDisplay: "exceptZero"
+  style: "percent",
+  signDisplay: "exceptZero",
 }).format(0.55);
 // → '+55%'
 ```
@@ -213,11 +245,11 @@ new Intl.NumberFormat("en-US", {
 なお、通貨の符号が "accounting" である場合、負号の代わりに括弧が使用されることがあります。
 
 ```js
-new Intl.NumberFormat('bn', {
-  style: 'currency',
-  currency: 'USD',
-  currencySign: 'accounting',
-  signDisplay: 'always'
+new Intl.NumberFormat("bn", {
+  style: "currency",
+  currency: "USD",
+  currencySign: "accounting",
+  signDisplay: "always",
 }).format(-3500);
 
 // → '($3,500.00)'
@@ -229,7 +261,7 @@ new Intl.NumberFormat('bn', {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Intl.NumberFormat.NumberFormat")}}
+{{Compat}}
 
 ## 関連情報
 

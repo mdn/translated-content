@@ -1,13 +1,15 @@
 ---
 title: グリッドレイアウトでのボックス配置
-slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
+slug: Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout
+l10n:
+  sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
 ---
 
 {{CSSRef}}
 
-[ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)の仕様書では、さまざまなレイアウト方式で配置がどのように働くかを詳述しています。このページでは、 [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)においてボックス配置がどのように働くかを探ります。
+[ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)の仕様書では、さまざまなレイアウト方式で配置がどのように働くかを詳述しています。このページでは、 [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)においてボックス配置がどのように働くかを探ります。
 
-このページの目的は、CSS グリッドレイアウトとボックス配置として定められた事柄を詳述するためのものですので、ボックス配置の様々なレイアウト方式の間で共通の機能について詳述した、主となる[ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)ページを合わせてお読みください。
+このページの目的は、CSS グリッドレイアウトとボックス配置として定められた事柄を詳述するためのものですので、ボックス配置の様々なレイアウト方式の間で共通の機能について詳述した、主となる[ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)ページを合わせてお読みください。
 
 ## 基本的な例
 
@@ -21,7 +23,7 @@ slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
 
 インライン軸は、使用されている書字方向において、文中の単語が走る方向に対応する軸です。したがって、英語やアラビア語のような横書きの言語では、インラインの方向は水平方向になります。縦書きの場合は、インライン軸は縦方向になります。
 
-![](inline_axis.png)
+![インライン軸は水平です。](inline_axis.png)
 
 インライン軸上に配置するには `justify-` で始まるプロパティ、{{cssxref("justify-content")}}、{{cssxref("justify-items")}}、{{cssxref("justify-self")}} を使用します。
 
@@ -29,7 +31,7 @@ slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
 
 ブロック軸上でものを揃えるには、`align-` で始まるプロパティ、{{cssxref("align-content")}}、{{cssxref("align-items")}}、{{cssxref("align-self")}} を使用します。
 
-![](block_axis.png)
+![ブロック軸は垂直です。](block_axis.png)
 
 ## 自己配置
 
@@ -42,7 +44,7 @@ slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
 
 これらのプロパティは、アイテムが配置されたグリッド領域内に整列させるためのものです。`align-items` および `justify-items` プロパティはグリッドコンテナーに適用され、グループとして `align-self` および `justify-self` プロパティを設定します。つまり、すべてのグリッドアイテムの配置を一度に設定し、異なる配置が必要なアイテムは、個々のグリッドアイテムのルールに `align-self` または `justify-self` プロパティを適用してオーバーライドすることができるのです。
 
-`align-self` および `justify-self` の初期値は `stretch` で、アイテムはグリッド領域全体に伸縮します。この規則の例外は、アイテムが固有のアスペクト比を持っている場合、例えば画像などです。この場合、画像が歪まないように、アイテムは両方の次元で `start` に揃えられます。
+`align-self` および `justify-self` の初期値は `stretch` で、アイテムはグリッド領域全体に伸縮します。この規則の例外は、アイテムが固有の{{glossary("aspect ratio","アスペクト比")}}を持っている場合、例えば画像などです。この場合、画像が歪まないように、アイテムは両方の次元で `start` に揃えられます。
 
 ## 内容物の配置
 
@@ -86,10 +88,4 @@ slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
 
 ## ガイド
 
-- [グリッドレイアウトでの配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-
-## 外部リソース
-
-- [Box alignment cheatsheet](https://rachelandrew.co.uk/css/cheatsheets/box-alignment)
-- [CSS Grid, Flexbox and Box Alignment](https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/)
-- [Thoughts on partial implementations of Box Alignment](https://blogs.igalia.com/jfernandez/2017/05/03/can-i-use-css-box-alignment/)
+- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)

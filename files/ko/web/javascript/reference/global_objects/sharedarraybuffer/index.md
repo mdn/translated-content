@@ -1,13 +1,6 @@
 ---
 title: SharedArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
-tags:
-  - Constructor
-  - JavaScript
-  - Shared Memory
-  - SharedArrayBuffer
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 ---
 
 {{JSRef}}
@@ -16,12 +9,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 
 > **참고:** [Spectre](https://meltdownattack.com/) 에대한 응답으로 2018년 1월 5일에 `SharedArrayBuffer` 는 모든 주요 브라우저에서 기본적으로 비활성화되어있음을 참고하세요. Chrome 은 사이트 격리 기능을 사용하여 Spectre 스타일 취약점으로부터 보호될 수 있는 플랫폼상의 [v67 에서 이를 다시 활성화](https://bugs.chromium.org/p/chromium/issues/detail?id=821270)하였습니다.
 
-{{EmbedInteractiveExample("pages/js/sharedarraybuffer-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: SharedArrayBuffer Constructor")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(8);
+
+console.log(buffer.byteLength);
+// Expected output: 8
+```
 
 ## 구문
 
 ```js
-new SharedArrayBuffer(length)
+new SharedArrayBuffer(length);
 ```
 
 ### 파라미터
@@ -103,8 +104,8 @@ var sab = new SharedArrayBuffer(1024);
 
 - {{jsxref("Atomics")}}
 - {{jsxref("ArrayBuffer")}}
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
 - [Web Workers](/ko/docs/Web/API/Web_Workers_API)
 - [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – 동기화 및 작업 분리 추상화를 제공하는 간단한 라이브러리.
 - [Shared Memory – 간단한 튜토리얼](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
-- [A Taste of JavaScript’s New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)
+- [A Taste of JavaScript's New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)

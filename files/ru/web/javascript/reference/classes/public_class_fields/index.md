@@ -1,16 +1,12 @@
 ---
 title: Публичные поля классов
 slug: Web/JavaScript/Reference/Classes/Public_class_fields
-tags:
-  - Классы
-  - JavaScript
-  - Возможности языка
-translation_of: Web/JavaScript/Reference/Classes/Public_class_fields
-original_slug: Web/JavaScript/Reference/Classes/Class_fields
 ---
+
 {{JsSidebar("Classes")}}
 
-> **Примечание:** Эта страница описывает экспериментальные возможности.
+> [!NOTE]
+> Эта страница описывает экспериментальные возможности.
 >
 > Публичные и приватные поля — это [экспериментальная функция (stage
 > 3\)](https://github.com/tc39/proposal-class-fields), предложенная комитетом по стандарту JavaScript [TC39](https://tc39.es/).
@@ -23,16 +19,16 @@ original_slug: Web/JavaScript/Reference/Classes/Class_fields
 
 ```js
 class ClassWithInstanceField {
-  instanceField = 'instance field'
+  instanceField = "instance field";
 }
 
 class ClassWithStaticField {
-  static staticField = 'static field'
+  static staticField = "static field";
 }
 
 class ClassWithPublicInstanceMethod {
   publicMethod() {
-    return 'hello world'
+    return "hello world";
   }
 }
 ```
@@ -47,7 +43,7 @@ class ClassWithPublicInstanceMethod {
 
 ```js
 class ClassWithStaticField {
-  static staticField = 'static field';
+  static staticField = "static field";
 }
 
 console.log(ClassWithStaticField.staticField);
@@ -61,7 +57,7 @@ class ClassWithStaticField {
   static staticField;
 }
 
-console.assert(ClassWithStaticField.hasOwnProperty('staticField'));
+console.assert(ClassWithStaticField.hasOwnProperty("staticField"));
 console.log(ClassWithStaticField.staticField);
 // Ожидаемый вывод: "undefined"
 ```
@@ -70,11 +66,11 @@ console.log(ClassWithStaticField.staticField);
 
 ```js
 class ClassWithStaticField {
-  static baseStaticField = 'base field';
+  static baseStaticField = "base field";
 }
 
 class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = 'sub class field';
+  static subStaticField = "sub class field";
 }
 
 console.log(SubClassWithStaticField.subStaticField);
@@ -88,10 +84,12 @@ console.log(SubClassWithStaticField.baseStaticField);
 
 ```js
 class ClassWithStaticField {
-  static baseStaticField = 'base static field';
+  static baseStaticField = "base static field";
   static anotherBaseStaticField = this.baseStaticField;
 
-  static baseStaticMethod() { return 'base static method output'; }
+  static baseStaticMethod() {
+    return "base static method output";
+  }
 }
 
 class SubClassWithStaticField extends ClassWithStaticField {
@@ -109,12 +107,11 @@ console.log(SubClassWithStaticField.subStaticField);
 
 Такие публичные поля имеются у каждого экземпляра данного класса. Объявляя публичные поля, мы можем гарантировать, что поле всегда присутствует, а объявление класса является более самодокументированным.
 
-Публичные поля экземпляра добавляются через {{jsxref("Global_Objects/Object/defineProperty",
-  "Object.defineProperty()")}} либо перед тем, как будет исполнено тело конструктора в базовом классе, либо после того, как завершится `super()` в классе наследнике.
+Публичные поля экземпляра добавляются через {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} либо перед тем, как будет исполнено тело конструктора в базовом классе, либо после того, как завершится `super()` в классе наследнике.
 
 ```js
 class ClassWithInstanceField {
-  instanceField = 'instance field';
+  instanceField = "instance field";
 }
 
 const instance = new ClassWithInstanceField();
@@ -130,7 +127,7 @@ class ClassWithInstanceField {
 }
 
 const instance = new ClassWithInstanceField();
-console.assert(instance.hasOwnProperty('instanceField'));
+console.assert(instance.hasOwnProperty("instanceField"));
 console.log(instance.instanceField);
 // Ожидаемый вывод: "undefined"
 ```
@@ -138,10 +135,10 @@ console.log(instance.instanceField);
 Как и свойства, названия полей могут вычисляться.
 
 ```js
-const PREFIX = 'prefix';
+const PREFIX = "prefix";
 
 class ClassWithComputedFieldName {
-    [`${PREFIX}Field`] = 'prefixed field';
+  [`${PREFIX}Field`] = "prefixed field";
 }
 
 const instance = new ClassWithComputedFieldName();
@@ -153,9 +150,11 @@ console.log(instance.prefixField);
 
 ```js
 class ClassWithInstanceField {
-  baseInstanceField = 'base field';
+  baseInstanceField = "base field";
   anotherBaseInstanceField = this.baseInstanceField;
-  baseInstanceMethod() { return 'base method output'; }
+  baseInstanceMethod() {
+    return "base method output";
+  }
 }
 
 class SubClassWithInstanceField extends ClassWithInstanceField {
@@ -181,7 +180,7 @@ console.log(sub.subInstanceField);
 ```js
 class ClassWithStaticMethod {
   static staticMethod() {
-    return 'static method has been called.';
+    return "static method has been called.";
   }
 }
 
@@ -198,13 +197,13 @@ console.log(ClassWithStaticMethod.staticMethod());
 ```js
 class ClassWithPublicInstanceMethod {
   publicMethod() {
-    return 'hello world';
+    return "hello world";
   }
 }
 
 const instance = new ClassWithPublicInstanceMethod();
 console.log(instance.publicMethod());
-// Ожидаемый вывод: "hello worl​d"
+// Ожидаемый вывод: "hello world"
 ```
 
 Публичные методы добавляются в прототип класса во время его создания с помощью {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. Они изменяемы, неперечисляемы и настраиваемы.
@@ -213,9 +212,9 @@ console.log(instance.publicMethod());
 
 ```js
 class ClassWithFancyMethods {
-  *generatorMethod() { }
-  async asyncMethod() { }
-  async *asyncGeneratorMethod() { }
+  *generatorMethod() {}
+  async asyncMethod() {}
+  async *asyncGeneratorMethod() {}
 }
 ```
 
@@ -224,7 +223,7 @@ class ClassWithFancyMethods {
 
 ```js
 class BaseClass {
-  msg = 'hello world';
+  msg = "hello world";
   basePublicMethod() {
     return this.msg;
   }
@@ -238,14 +237,14 @@ class SubClass extends BaseClass {
 
 const instance = new SubClass();
 console.log(instance.subPublicMethod());
-// Ожидаемый вывод: "hello worl​d"
+// Ожидаемый вывод: "hello world"
 ```
 
 Геттеры и сеттеры это специальные методы, которые привязаны к свойствам класса и которые вызываются, когда к свойству обращаются или записывают. Используйте [get](/ru/docs/Web/JavaScript/Reference/Functions/get) и [set](/ru/docs/Web/JavaScript/Reference/Functions/set) для объявления публичных геттеров и сеттеров экземпляра.
 
 ```js
 class ClassWithGetSet {
-  #msg = 'hello world';
+  #msg = "hello world";
   get msg() {
     return this.#msg;
   }
@@ -256,9 +255,9 @@ class ClassWithGetSet {
 
 const instance = new ClassWithGetSet();
 console.log(instance.msg);
-// Ожидаемый вывод: "hello worl​d"
+// Ожидаемый вывод: "hello world"
 
-instance.msg = 'cake';
+instance.msg = "cake";
 console.log(instance.msg);
 // Ожидаемый вывод: "hello cake"
 ```
@@ -267,7 +266,7 @@ console.log(instance.msg);
 
 {{Specifications("javascript.classes")}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

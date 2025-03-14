@@ -1,7 +1,6 @@
 ---
 title: Range.collapsed
 slug: Web/API/Range/collapsed
-translation_of: Web/API/Range/collapsed
 ---
 
 {{ APIRef("DOM") }}
@@ -21,22 +20,19 @@ isCollapsed = range.collapsed;
 ```js
 var range = document.createRange();
 
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
 isCollapsed = range.collapsed;
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                                        | Status                                       | Comment                |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ---------------------- |
-| {{SpecName('DOM WHATWG', '#dom-range-collapsed', 'Range.collapsed')}}                                         | {{Spec2('DOM WHATWG')}}             | No change.             |
-| {{SpecName('DOM2 Traversal_Range', 'ranges.html#Level-2-Range-attr-collapsed', 'Range.collapsed')}} | {{Spec2('DOM2 Traversal_Range')}} | Initial specification. |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [The DOM interfaces index](/ru/docs/DOM/DOM_Reference)
+- [The DOM interfaces index](/ru/docs/Web/API/Document_Object_Model)

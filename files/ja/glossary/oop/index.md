@@ -1,15 +1,18 @@
 ---
 title: OOP (オブジェクト指向プログラミング)
 slug: Glossary/OOP
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
+
+{{GlossarySidebar}}
 
 **OOP** (Object-Oriented Programming、オブジェクト指向プログラミングの略) はデータを **{{glossary("object","オブジェクト")}}** 内にカプセル化して、その構成部品ではなくてオブジェクト自体が操作される、プログラミングアプローチです。
 
-{{glossary("JavaScript")}} はとてもオブジェクト指向です。これは **プロトタイプ**ベースのモデル ([クラスベースの反対](/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Class-based_vs._prototype-based_languages)) に従っています。
+{{glossary("JavaScript")}} は重度にオブジェクト指向です。これは [**プロトタイプ**ベースのモデル](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)に従っていますが、典型的な OOP のパラダイムが利用できるように[クラス構文](/ja/docs/Web/JavaScript/Guide/Using_classes)も提供しています。
 
-## 詳細情報
+## 関連情報
 
-### 一般知識
-
-- Wikipedia の [オブジェクト指向プログラミング](https://ja.wikipedia.org/wiki/オブジェクト指向プログラミング)
-- [JavaScript によるオブジェクト指向入門](/ja/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
+- [オブジェクト指向プログラミング](https://ja.wikipedia.org/wiki/オブジェクト指向プログラミング)（ウィキペディア）
+- [オブジェクト指向 JavaScript 入門](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
+- [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

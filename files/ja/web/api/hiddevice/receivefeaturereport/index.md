@@ -20,7 +20,7 @@ receiveFeatureReport(reportId)
 ### 引数
 
 - `reportId`
-  - :8 ビットのレポート ID です。HID デバイスがレポート ID を使わない場合、`0` を送信します。
+  - : 8 ビットのレポート ID です。HID デバイスがレポート ID を使わない場合、`0` を送信します。
 
 ### 返値
 

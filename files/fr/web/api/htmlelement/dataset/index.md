@@ -1,15 +1,14 @@
 ---
 title: HTMLElement.dataset
 slug: Web/API/HTMLElement/dataset
-translation_of: Web/API/HTMLElement/dataset
-browser-compat: api.HTMLElement.dataset
 ---
 
 {{APIRef("HTML DOM")}}
 
 La propriété en lecture seule **`dataset`**, rattachée à l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement), fournit un accès en lecture/écriture aux [attributs de données (`data-*`)](/fr/docs/Web/HTML/Global_attributes/data-*) de l'élément. Elle expose un objet [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap) avec un élément pour chaque attribut `data-*`.
 
-> **Note :** La propriété `dataset` elle-même peut être lue mais pas modifiée directement.
+> [!NOTE]
+> La propriété `dataset` elle-même peut être lue mais pas modifiée directement.
 > Pour appliquer des modifications, il faudra les appliquer sur chaque propriété contenue dans `dataset`, qui représente chacune un attribut de données.
 
 Un attribut HTML `data-*` et la propriété du DOM
@@ -67,11 +66,13 @@ Un objet [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap).
 ## Exemples
 
 ```html
-<div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth>John Doe</div>
+<div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth>
+  John Doe
+</div>
 ```
 
 ```js
-const el = document.querySelector('#user');
+const el = document.querySelector("#user");
 
 // el.id === 'user'
 // el.dataset.id === '1234567890'
@@ -79,7 +80,7 @@ const el = document.querySelector('#user');
 // el.dataset.dateOfBirth === ''
 
 // on définit un attribut de données
-el.dataset.dateOfBirth = '1960-10-03';
+el.dataset.dateOfBirth = "1960-10-03";
 // Résultat en JavaScript : el.dataset.dateOfBirth === '1960-10-03'
 // Résultat en HTML : <div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth="1960-10-03">John Doe</div>
 
@@ -87,8 +88,8 @@ delete el.dataset.dateOfBirth;
 // Résultat en JavaScript : el.dataset.dateOfBirth === undefined
 // Résultat en HTML : <div id="user" data-id="1234567890" data-user="johndoe">John Doe</div>
 
-if ('unAttrDonnee' in el.dataset === false) {
-  el.dataset.unAttrDonnee = 'mesdonnees';
+if ("unAttrDonnee" in el.dataset === false) {
+  el.dataset.unAttrDonnee = "mesdonnees";
   // Résultat en JS : 'unAttrDonnee' in el.dataset === true
   // Résultat en HTML : <div id="user" data-id="1234567890" data-user="johndoe" data-un-attr-donnee = "mesdonnees">John Doe</div>
 }

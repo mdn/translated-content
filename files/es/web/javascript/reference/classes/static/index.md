@@ -1,8 +1,6 @@
 ---
 title: static
 slug: Web/JavaScript/Reference/Classes/static
-translation_of: Web/JavaScript/Reference/Classes/static
-original_slug: Web/JavaScript/Referencia/Classes/static
 ---
 
 {{jsSidebar("Classes")}}
@@ -48,9 +46,9 @@ console.log(tp.tripple()); //Logs 'tp.tripple is not a function'.
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.classes.static")}}
+{{Compat}}
 
 ## Véase también
 

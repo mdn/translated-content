@@ -1,8 +1,8 @@
 ---
 title: Access-Control-Allow-Origin
 slug: Web/HTTP/Headers/Access-Control-Allow-Origin
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Origin
 ---
+
 **`Access-Control-Allow-Origin`** 응답 헤더는 이 응답이 주어진 {{glossary("origin")}}으로부터의 요청 코드와 공유될 수 있는지를 나타냅니다.
 
 <table class="properties">
@@ -110,13 +110,13 @@ public void destroy() {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ## 참고
 

@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Addition
 
 O operador de adição (`+`) produz a soma de operandos numéricos ou concatenação de strings.
 
-{{EmbedInteractiveExample("pages/js/expressions-addition.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Addition operator")}}
+
+```js interactive-example
+console.log(2 + 2);
+// Expected output: 4
+
+console.log(2 + true);
+// Expected output: 3
+
+console.log("hello " + "everyone");
+// Expected output: "hello everyone"
+
+console.log(2001 + ": A Space Odyssey");
+// Expected output: "2001: A Space Odyssey"
+```
 
 ## Sintaxe
 
@@ -40,22 +54,22 @@ Você é aconselhado a não usar "" + x para executar a [coerção de string](/p
 
 ```js
 // Number + Number -> adição
-1 + 2 // 3
+1 + 2; // 3
 // Boolean + Number -> adição
-true + 1 // 2
+true + 1; // 2
 // Boolean + Boolean -> adição
-false + false // 0
+false + false; // 0
 ```
 
 ### Concatenação de String
 
 ```js
 // String + String -> concatenação
-'foo' + 'bar' // "foobar"
+"foo" + "bar"; // "foobar"
 // Number + String -> concatenação
-5 + 'foo' // "5foo"
+5 + "foo"; // "5foo"
 // String + Boolean -> concatenação
-'foo' + false // "foofalse"
+"foo" + false; // "foofalse"
 ```
 
 ## Especificações

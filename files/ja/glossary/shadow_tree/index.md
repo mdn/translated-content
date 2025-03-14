@@ -1,20 +1,25 @@
 ---
-title: Shadow tree
+title: Shadow tree (シャドウツリー)
 slug: Glossary/Shadow_tree
+l10n:
+  sourceCommit: cebbd9095ac12557c55157355181672027fffc14
 ---
 
-**Shadow ツリー** は DOM {{Glossary("node", "nodes")}} のツリーで、最上位のノードは **Shadow ルート** ( **Shadow DOM** 内にある最上位のノード) です。Shadow ツリーは標準的な DOM から隠されたツリーで、標準的な DOM ノードがホストになります。 隠されたノードは通常の DOM の機能では直接確認できませんが、特殊な [Shadow DOM API](/ja/docs/Web/Web_Components/Using_shadow_DOM) を使うとアクセスすることができます。
+{{GlossarySidebar}}
 
-Shadow ツリー内のノードは Shadow ツリーの外部の影響を一切受けません。逆に Shadow ツリーの外部は Shadow ツリー内の影響を一切受けません。これにより細かい実装をカプセル化することができ、特に [custom elements](/ja/docs/User:Andreas_Wuest/Custom_Elements) や他の先進的なデザインパラダイムの実装に便利です。
+**シャドウツリー** は非表示の {{Glossary("DOM")}} ノードの集合で、最上位の[ノード](/ja/docs/Glossary/Node/DOM)は**シャドウルート**です。シャドウルートは**シャドウ DOM** 内にある最上位のノードであり、通常の DOM 文書ツリーの一部ではありません。
 
-## 関連項目
+シャドウルートは、**ホスト**と呼ばれる特定の DOM ノードを通して、別のノードツリーに接続されます。このホストは、別のシャドウツリーの一部である場合もあれば、通常の DOM ツリーの一部である場合もあります。シャドウルートのホストのノードツリーは**ライトツリー**と呼ばれることがあります。
 
-### 一般知識
+シャドウツリーの非表示の DOM ノードは通常、シャドウツリーの外側に適用された何ものからも影響を受けませんし、その逆も同様です。シャドウ DOM が終わり、通常の DOM が始まる**シャドウ境界**を通過することはできますが、それはとても意図的なものです。
 
-- [Using shadow DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM)
+- スクリプトで外部からシャドウツリーノードを操作するには、特別な[シャドウ DOM API](/ja/docs/Web/API/Web_components/Using_shadow_DOM) を使用してアクセスすることが要求されます。
+- 外部からシャドウツリーをスタイル設定するには、 [CSS スコープ](/ja/docs/Web/CSS/CSS_scoping)および [CSS シャドウパーツ](/ja/docs/Web/CSS/CSS_shadow_parts)で実現できます。
 
-### 技術情報
+## 関連情報
 
+- [シャドウ DOM の使用](/ja/docs/Web/API/Web_components/Using_shadow_DOM)
 - {{domxref("Element.shadowRoot")}} と {{domxref("Element.attachShadow()")}}
 - {{domxref("ShadowRoot")}}
 - {{HTMLElement("slot")}}
+- {{Glossary("accessibility_tree", "アクセシビリティツリー")}}

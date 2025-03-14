@@ -1,9 +1,6 @@
 ---
 title: Crypto.getRandomValues()
 slug: Web/API/Crypto/getRandomValues
-translation_of: Web/API/Crypto/getRandomValues
-original_slug: Web/API/RandomSource/getRandomValues
-browser-compat: api.Crypto.getRandomValues
 ---
 
 {{APIRef("Web Crypto API")}}
@@ -17,7 +14,7 @@ Pour garantir des performances suffisantes, les implémentations n'utilisent pas
 ## Syntaxe
 
 ```js
-getRandomValues(typedArray)
+getRandomValues(typedArray);
 ```
 
 ### Paramètres
@@ -51,7 +48,7 @@ Il n'y a pas de seuil minimal d'entropie imposé par la spécification pour la c
 let array = new Uint32Array(10);
 self.crypto.getRandomValues(array);
 
-console.log('Votre tirage du jour :');
+console.log("Votre tirage du jour :");
 for (let i = 0; i < array.length; i++) {
   console.log(array[i]);
 }
@@ -68,5 +65,5 @@ for (let i = 0; i < array.length; i++) {
 ## Voir aussi
 
 - [L'API Web Crypto](/fr/docs/Web/API/Web_Crypto_API)
-- [`crypto`](/fr/docs/Web/API/crypto_property) qui permet d'obtenir un objet [`Crypto`](/fr/docs/Web/API/Crypto)
+- [`crypto`](/fr/docs/Web/API/Window/crypto) qui permet d'obtenir un objet [`Crypto`](/fr/docs/Web/API/Crypto)
 - [`Math.random()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/random), une fonction qui permet de générer des nombres aléatoires à des fins non-cryptographiques.

@@ -1,27 +1,21 @@
 ---
-title: '-webkit-transition'
+title: -webkit-transition
 slug: Web/CSS/@media/-webkit-transition
-tags:
-  - CSS
-  - Caractéristique média
-  - Non-standard
-  - Obsolete
-  - Reference
-translation_of: Web/CSS/@media/-webkit-transition
 ---
 
 {{CSSRef}}{{Non-standard_header}}{{deprecated_header}}
 
-**`-webkit-transition`** est une [caractéristique média](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries#Cibler_des_caractéristiques_média) booléenne non-standard qui permet d'indiquer si les transitions CSS ({{cssxref("transition")}}) sont prises en charge dans leurs versions préfixées.
+**`-webkit-transition`** est une [caractéristique média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#cibler_des_caractéristiques_média) booléenne non-standard qui permet d'indiquer si les transitions CSS ({{cssxref("transition")}}) sont prises en charge dans leurs versions préfixées.
 
-> **Note :** Cette caractéristique est uniquement prise en charge par les navigateurs basés sur WebKit. L'alternative standard correspondante consiste à utiliser {{cssxref("@supports")}}.
+> [!NOTE]
+> Cette caractéristique est uniquement prise en charge par les navigateurs basés sur WebKit. L'alternative standard correspondante consiste à utiliser {{cssxref("@supports")}}.
 
 ## Privilégier `@supports`
 
 S'il vous faut déterminer si les transitions CSS sont prises en charges, évitez d'utiliser `-webkit-transition`. En lieu et place, on utilisera la règle @ {{cssxref("@supports")}} :
 
 ```css
-@supports(transition: initial) {
+@supports (transition: initial) {
   /* Les règles CSS à utiliser si   */
   /* les transitions sont prises en */
   /* charge. */
@@ -34,15 +28,15 @@ Cette caractéristique média est une caractéristique média propriétaire lié
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.-webkit-transition")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Utiliser les media queries](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries)
-- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS)
+- [Utiliser les media queries](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{cssxref("@supports")}}
 - {{cssxref("transition")}}
 - {{cssxref("-webkit-transform-3d")}}
 - {{cssxref("-webkit-transform-2d")}}
 - {{cssxref("-webkit-animation")}}
-- [Page de test sur quirksmode.org](http://www.quirksmode.org/css/tests/mediaqueries/animation.html)
+- [Page de test sur quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)

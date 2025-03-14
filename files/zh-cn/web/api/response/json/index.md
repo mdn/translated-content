@@ -8,7 +8,7 @@ slug: Web/API/Response/json
 ## 语法
 
 ```js
-response.json().then(data => {
+response.json().then((data) => {
   // do something with your data
 });
 ```
@@ -23,28 +23,22 @@ response.json().then(data => {
 
 ## 示例
 
-在我们的 [fetch json 示例](https://github.com/mdn/fetch-examples/tree/master/fetch-json) 中 (运行 [fetch json live](http://mdn.github.io/fetch-examples/fetch-json/)), 我们使用 {{domxref("Request.Request")}} 构造函数创建一个新的请求，然后使用它来获取一个 `.json` 文件。当获取成功时，我们使用 `json()` 读取并解析数据，然后像预期的那样从结果对象中读取值，并将其插入到列表项中以显示我们的产品数据。
+在我们的 [fetch json 示例](https://github.com/mdn/fetch-examples/tree/master/fetch-json) 中 (运行 [fetch json live](https://mdn.github.io/fetch-examples/fetch-json/)), 我们使用 {{domxref("Request.Request")}} 构造函数创建一个新的请求，然后使用它来获取一个 `.json` 文件。当获取成功时，我们使用 `json()` 读取并解析数据，然后像预期的那样从结果对象中读取值，并将其插入到列表项中以显示我们的产品数据。
 
 ```js
-const myList = document.querySelector('ul');
-const myRequest = new Request('products.json');
+const myList = document.querySelector("ul");
+const myRequest = new Request("products.json");
 
 fetch(myRequest)
-  .then(response => response.json())
-  .then(data => {
+  .then((response) => response.json())
+  .then((data) => {
     for (const product of data.products) {
-      let listItem = document.createElement('li');
-      listItem.appendChild(
-        document.createElement('strong')
-      ).textContent = product.Name;
-      listItem.append(
-        ` can be found in ${
-          product.Location
-        }. Cost: `
-      );
-      listItem.appendChild(
-        document.createElement('strong')
-      ).textContent = `£${product.Price}`;
+      let listItem = document.createElement("li");
+      listItem.appendChild(document.createElement("strong")).textContent =
+        product.Name;
+      listItem.append(` can be found in ${product.Location}. Cost: `);
+      listItem.appendChild(document.createElement("strong")).textContent =
+        `£${product.Price}`;
       myList.appendChild(listItem);
     }
   });
@@ -58,8 +52,8 @@ fetch(myRequest)
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

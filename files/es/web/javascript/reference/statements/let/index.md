@@ -1,24 +1,14 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
-tags:
-  - Característica del lenguaje
-  - Declaración de variable
-  - ECMAScript 2015
-  - JavaScript
-  - Variables
-  - let
-  - sentencias
-translation_of: Web/JavaScript/Reference/Statements/let
-original_slug: Web/JavaScript/Referencia/Sentencias/let
-browser-compat: javascript.statements.let
 ---
 
 {{jsSidebar("Statements")}}
 
-La instrucción **`let`** declara una variable de alcance local con ámbito de bloque([block](/es/docs/Web/JavaScript/Referencia/Sentencias/block)scope), la cual, opcionalmente, puede ser inicializada con algún valor.
+La instrucción **`let`** declara una variable de alcance local con ámbito de bloque([block](/es/docs/Web/JavaScript/Reference/Statements/block)scope), la cual, opcionalmente, puede ser inicializada con algún valor.
 
-> **Advertencia:** La palabra reservada **`let`** en Mozilla Firefox 44 y anteriores, está solo disponible para bloques de código en HTML que esten envueltos en una etiqueta `<script type="application/javascript;version=1.7">` (o de una version mayor). Las etiquetas [XUL](/es/docs/XUL) tienen acceso a esas características sin necesidad de dicho bloque. Es necesario tomar en cuenta que esta es una característica ~~no estándar~~ **que ya se ha hecho actualmente estándar**, ~~esto~~ **pero** puede crear conflictos con otros navegadores, **ya que fue una característica no estándar.**
+> [!WARNING]
+> La palabra reservada **`let`** en Mozilla Firefox 44 y anteriores, está solo disponible para bloques de código en HTML que esten envueltos en una etiqueta `<script type="application/javascript;version=1.7">` (o de una version mayor). Las etiquetas [XUL](/es/docs/XUL) tienen acceso a esas características sin necesidad de dicho bloque. Es necesario tomar en cuenta que esta es una característica ~~no estándar~~ **que ya se ha hecho actualmente estándar**, ~~esto~~ **pero** puede crear conflictos con otros navegadores, **ya que fue una característica no estándar.**
 
 ## Sintaxis
 
@@ -53,7 +43,8 @@ if (x > y) {
 Es posible usar definiciones `let` para asociar código en extensiones con un pseudo-espacio-de-nombre (pseudo-namespace). (Ver [Mejores prácticas de seguridad en extensiones](/es/docs/Security_best_practices_in_extensions).)
 
 ```js
-let Cc = Components.classes, Ci = Components.interfaces;
+let Cc = Components.classes,
+  Ci = Components.interfaces;
 ```
 
 `let` puede ser útil para escribir código más limpio cuando usamos funciones internas.
@@ -83,19 +74,19 @@ Variables declaradas por `let` tienen por alcance el bloque en el que se han def
 function varTest() {
   var x = 31;
   if (true) {
-    var x = 71;  // ¡misma variable!
-    console.log(x);  // 71
+    var x = 71; // ¡misma variable!
+    console.log(x); // 71
   }
-  console.log(x);  // 71
+  console.log(x); // 71
 }
 
 function letTest() {
   let x = 31;
   if (true) {
-    let x = 71;  // variable diferente
-    console.log(x);  // 71
+    let x = 71; // variable diferente
+    console.log(x); // 71
   }
-  console.log(x);  // 31
+  console.log(x); // 31
 }
 // llamamos a las funciones
 varTest();
@@ -105,8 +96,8 @@ letTest();
 En el nivel superior de un programa y funciones, `let` , a diferencia de `var`, **no crea** una propiedad en el objeto global, por ejemplo:
 
 ```js
-var x = 'global';
-let y = 'global';
+var x = "global";
+let y = "global";
 console.log(this.x); // "global"
 console.log(this.y); // undefined
 ```
@@ -115,7 +106,7 @@ La salida de este código desplegaría "global" una vez.
 
 ### Zona muerta temporal y errores con `let`
 
-La **redeclaración** de la misma variable bajo un mismo [ámbito léxico](https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments) terminaría en un error de tipo [`SyntaxError`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/SyntaxError). Esto también es **extensible** si usamos `var` dentro del ámbito léxico. Esto nos salvaguarda de redeclarar una variable accidentalmente y que no era posible solo con `var.`
+La **redeclaración** de la misma variable bajo un mismo [ámbito léxico](https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments) terminaría en un error de tipo [`SyntaxError`](/es/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError). Esto también es **extensible** si usamos `var` dentro del ámbito léxico. Esto nos salvaguarda de redeclarar una variable accidentalmente y que no era posible solo con `var.`
 
 ```js
 if (x) {
@@ -128,7 +119,7 @@ if (x) {
 }
 ```
 
-En ECMAScript 2015, `let` [no eleva](/es/docs/Web/JavaScript/Referencia/Sentencias/var#Description) la variable a la parte superior del bloque. Si se hace una referencia a la variable declarada con `let` (`let foo`) antes de su declaración, terminaríamos con un error de tipo `ReferenceError` (al contrario de la variable declarada con `var`, que tendrá el valor `undefined`), esto porque la variables vive en una "zona muerta temporal" desde el inicio del bloque hasta que la declaración ha sido procesada.
+En ECMAScript 2015, `let` [no eleva](/es/docs/Web/JavaScript/Reference/Statements/var#description) la variable a la parte superior del bloque. Si se hace una referencia a la variable declarada con `let` (`let foo`) antes de su declaración, terminaríamos con un error de tipo `ReferenceError` (al contrario de la variable declarada con `var`, que tendrá el valor `undefined`), esto porque la variables vive en una "zona muerta temporal" desde el inicio del bloque hasta que la declaración ha sido procesada.
 
 ```
 function do_something() {
@@ -139,7 +130,7 @@ function do_something() {
 }
 ```
 
-Es posible encontrar errores en bloques de control [`switch`](/es/docs/JavaScript/Reference/Statements/switch) debido a que solamente existe un block subyacente.
+Es posible encontrar errores en bloques de control [`switch`](/es/docs/Web/JavaScript/Reference/Statements/switch) debido a que solamente existe un block subyacente.
 
 ```js
 switch (x) {
@@ -149,7 +140,7 @@ switch (x) {
 
   case 1:
     let foo; // Terminamos con un error de tipo SyntaxError.
-             // esto debido a la redeclaracion
+    // esto debido a la redeclaracion
     break;
 }
 ```
@@ -161,11 +152,11 @@ Debido al [ámbito léxico](https://www.ecma-international.org/ecma-262/6.0/#sec
 En esa misma línea, el `num` del bloque `if` ya se ha creado en el ámbito léxico, pero aún no ha alcanzado (y **terminado**) su inicialización (que es parte de la propia declaración): todavía está en la zona muerta temporal.
 
 ```js
-function prueba(){
-   var num = 33;
-   if (true) {
-      let num = (num + 55);//ReferenceError: no se puede acceder a la declaración léxica `num'antes de la inicialización
-   }
+function prueba() {
+  var num = 33;
+  if (true) {
+    let num = num + 55; //ReferenceError: no se puede acceder a la declaración léxica `num'antes de la inicialización
+  }
 }
 prueba();
 ```
@@ -184,8 +175,8 @@ if (a === 5) {
   let a = 4; // El alcance es dentro del bloque if
   var b = 1; // El alcance es global
 
-  console.log(a);  // 4
-  console.log(b);  // 1
+  console.log(a); // 4
+  console.log(b); // 1
 }
 
 console.log(a); // 5
@@ -197,7 +188,7 @@ console.log(b); // 1
 Es posible usar la palabra reservada `let` para enlazar variables con alcance local dentro del alcance de un bucle en lugar de usar una variable global (definida usando `var`) para dicho propósito.
 
 ```js
-for (let i = 0; i<10; i++) {
+for (let i = 0; i < 10; i++) {
   console.log(i); // 0, 1, 2, 3, 4 ... 9
 }
 
@@ -208,7 +199,8 @@ console.log(i); // ReferenceError: i is not defined
 
 ### Bloques `let`
 
-> **Advertencia:** La **sintaxis del bloque y expresion** `let` es no-estandar y sera deshechado en un futuro. ¡No deben ser usados! ver [error 1023609](https://bugzilla.mozilla.org/show_bug.cgi?id=1023609) y [error 1167029](https://bugzilla.mozilla.org/show_bug.cgi?id=1167029) para mas detalles.
+> [!WARNING]
+> La **sintaxis del bloque y expresion** `let` es no-estandar y sera deshechado en un futuro. ¡No deben ser usados! ver [error 1023609](https://bugzilla.mozilla.org/show_bug.cgi?id=1023609) y [error 1167029](https://bugzilla.mozilla.org/show_bug.cgi?id=1167029) para mas detalles.
 
 Un **bloque `let`** provee una manera de asociar valores con variables dentro del alcance de un bloque sin afectar el valor de variables con nombre similar fuera del bloque.
 
@@ -243,7 +235,7 @@ El alcance de las variables definidas usando `let` es el mismo bloque `let`, as�
 
 ### expresiones `let`
 
-> **Advertencia:** `Soporte de expresiones let` ha sido removido en Gecko 41 ({{bug(1023609)}}).
+> **Advertencia:** `Soporte de expresiones let` ha sido removido en Gecko 41 ([Error 1023609 en Firefox](https://bugzil.la/1023609)).
 
 Una **expresion `let`** permite establecer variables con alcance dentro de una expresión.
 

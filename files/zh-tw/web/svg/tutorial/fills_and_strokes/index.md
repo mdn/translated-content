@@ -3,6 +3,8 @@ title: 填充与边框
 slug: Web/SVG/Tutorial/Fills_and_Strokes
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("SVG/Tutorial/Paths", "SVG/Tutorial/Gradients") }}
 
 现在你掌握的知识已经可以绘制任何图形，下一个目标是给它们上色。在 SVG 绘图中，可以使用若干方法上色，比如给图形对象增加指定的属性，使用行间 CSS，使用 CSS 嵌入段落，或者使用外部引用的 CSS 文件。你会发现大部分 web 上的 SVG 使用的是行间 CSS，但每种方法都有自身的优点和缺点，在不同情况下，应该酌情选择合适的方法。
@@ -19,15 +21,16 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
        fill-opacity="0.5" stroke-opacity="0.8"/>
 ```
 
-此外，在 SVG 中你可以分别定义填充色和边框色的透明度，它们分别由` fill-opacity `和` stroke-opacity `两个属性控制。
+此外，在 SVG 中你可以分别定义填充色和边框色的透明度，它们分别由 `fill-opacity` 和 `stroke-opacity` 两个属性控制。
 
-> **備註：** FireFox 3+支持 rgba 值，并且能够提供同样的效果，但是为了在其他浏览器中保持兼容，最好将它和边框/填充的透明度分开使用。如果同时定义了 rgba 值和透明度，它们将被一起调用。
+> [!NOTE]
+> FireFox 3+支持 rgba 值，并且能够提供同样的效果，但是为了在其他浏览器中保持兼容，最好将它和边框/填充的透明度分开使用。如果同时定义了 rgba 值和透明度，它们将被一起调用。
 
 ### 边框
 
 除了颜色属性，还有其他一些属性用来控制绘制边框的方式。
 
-![](/@api/deki/files/355/=SVG_Stroke_Linecap_Example.png)
+![](svg_stroke_linecap_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -49,7 +52,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 还有一个`stroke-linejoin`属性，用来控制两条边框线段之间，用什么方式连接。
 
-![](/@api/deki/files/356/=SVG_Stroke_Linejoin_Example.png)
+![](svg_stroke_linejoin_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -79,7 +82,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 最后，你可以使用`stroke-dasharray`属性，将边框定义成虚线。
 
-![](/@api/deki/files/354/=SVG_Stroke_Dasharray_Example.png)
+![](svg_stroke_dasharray_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -105,7 +108,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 除了定义对象的属性外，你也可以通过 CSS 来定义`fill`和`stroke`。语法和在 html 里使用 CSS 一样，只不过你要把`background-color`、`border`改成`fill`和`stroke`。注意，不是所有的属性都能用 CSS 来设置。上色和填充的部分一般是可以用 CSS 来设置的，比如`fill`，`stroke`，`stroke-dasharray`等，但是不包括下面会提到的渐变和模式等功能。另外，宽、高，以及路径的 d 命令，都不能用 css 设置。判断它们能不能用 CSS 设置还是比较容易的。
 
-> **備註：** [SVG 规范](http://www.w3.org/TR/SVG/propidx.html)将属性区分成*properties*和*其他 attributes*，前者是可以用 CSS 设置的，后者不能。
+> **備註：** [SVG 规范](https://www.w3.org/TR/SVG/propidx.html)将属性区分成*properties*和*其他 attributes*，前者是可以用 CSS 设置的，后者不能。
 
 CSS 可以通过 style 属性插入到元素的行间:
 
@@ -113,7 +116,7 @@ CSS 可以通过 style 属性插入到元素的行间:
  <rect x="10" height="180" y="10" width="180" style="stroke: black; fill: red;"/>
 ```
 
-或者通过\<style>设置一段样式段落。在 html 里这样的段落一般放在里，在 svg 则放在 [`<defs>`](/zh-TW/SVG/Element/defs) 标签里。`<defs>` 表示定义，这里可以定义一些不会在 SVG 图形中出现的元素，但是它们可以被其他元素使用。
+或者通过\<style>设置一段样式段落。在 html 里这样的段落一般放在里，在 svg 则放在 [`<defs>`](/zh-TW/docs/Web/SVG/Element/defs) 标签里。`<defs>` 表示定义，这里可以定义一些不会在 SVG 图形中出现的元素，但是它们可以被其他元素使用。
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -141,7 +144,7 @@ CSS 可以通过 style 属性插入到元素的行间:
 
 你最好读一下 CSS 教程以便掌握它，一些可以在 html 里使用的 css，在 svg 里可能无法正常工作，比如 `before` 和 `after` 伪类。所以这里需要一点经验。
 
-你也可以定义一个外部的样式表，但是要符合 [normal XML-stylesheet syntax](http://www.w3.org/TR/xml-stylesheet/) 的 CSS 规则:
+你也可以定义一个外部的样式表，但是要符合 [normal XML-stylesheet syntax](https://www.w3.org/TR/xml-stylesheet/) 的 CSS 规则:
 
 ```xml
 <?xml version="1.0" standalone="no"?>

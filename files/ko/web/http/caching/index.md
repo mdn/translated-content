@@ -1,12 +1,8 @@
 ---
-title: HTTP caching
+title: HTTP 캐싱
 slug: Web/HTTP/Caching
-tags:
-  - HTTP
-  - 가이드
-  - 캐싱
-translation_of: Web/HTTP/Caching
 ---
+
 {{HTTPSidebar}}
 
 웹 사이트와 애플리케이션의 성능은 이전에 가져온 리소스들을 재사용함으로써 현저하게 향상될 수 있습니다. 웹 캐시는 레이턴시와 네트워크 트래픽을 줄여줌으로써 리소스를 보여주는 데에 필요한 시간을 줄여줍니다. HTTP 캐싱을 활용하면 웹 사이트가 좀 더 빠르게 반응하도록 만들 수 있습니다.
@@ -17,7 +13,7 @@ translation_of: Web/HTTP/Caching
 
 캐시에는 몇 가지 종류가 있습니다: 크게 사설(private) 혹은 공유(shared) 캐시 두 가지 부류로 분류될 수 있습니다. *공유 캐시*는 한 명 이상의 사용자가 재사용할 수 있도록 응답을 저장하는 캐시를 말합니다. *사설 캐시*는 한 명의 사용자만 사용하는 캐시를 말합니다. 이 페이지에서는 거의 대부분 브라우저와 프록시 캐시에 대해서만 다룰 것이나, 그 외에도 더 나은 신뢰도, 성능 그리고 웹 사이트와 웹 애플리케이션의 확장(scaling)을 위해 웹 서버 위에 배포되는 게이트웨이 캐시, CDN, 리버스 프록시 캐시 그리고 로드 밸랜서 등이 있습니다.
 
-![What a cache provide, advantages/disadvantages of shared/private caches.](/en-US/docs/Web/HTTP/Caching/http_cache_type.png)
+![What a cache provide, advantages/disadvantages of shared/private caches.](/ko/docs/Web/HTTP/Caching/http_cache_type.png)
 
 ### 사설 브라우저 캐시
 
@@ -37,7 +33,7 @@ HTTP 캐싱은 선택적(optional)이지만 캐시된 리소스를 재사용하�
 - 완전하지 않은 결과: {{HTTPStatus(206)}} (Partial Content) 응답.
 - 캐시 키로 사용하기에 적절한 무언가가 정의된 경우의 {{HTTPMethod("GET")}} 이외의 응답.
 
-캐시 엔트리는 요청이 컨텐츠 협상의 대상인 경우, 두번째 키에 의해 구별되는 여러 개의 저장된 응답들로 구성될 수도 있습니다. 좀 더 자세한 내용을 참고하시려면 [아래에서](#Varying_responses) {{HTTPHeader("Vary")}} 헤더에 대해서 읽어보시기 바랍니다.
+캐시 엔트리는 요청이 컨텐츠 협상의 대상인 경우, 두번째 키에 의해 구별되는 여러 개의 저장된 응답들로 구성될 수도 있습니다. 좀 더 자세한 내용을 참고하시려면 [아래에서](#varying_responses) {{HTTPHeader("Vary")}} 헤더에 대해서 읽어보시기 바랍니다.
 
 ## 캐싱 제어
 
@@ -74,9 +70,9 @@ Cache-Control: public
 
 #### 만료
 
-여기서 가장 중요한 디렉티브는 "`max-age=<seconds>`"로 리소스가 유효하다고 판단되는 최대 시간을 말합니다. 이 디렉티브는 요청 시간에 상대적이며, {{HTTPHeader("Expires")}}가 설정되어 있어도 그보다 우선합니다. 변경되지 않을 파일에 대해, 공격적으로 (긴 시간으로) 캐싱할 수 있습니다. 예를 들어 이미지, CSS 파일 그리고 자바스크립트 파일과 같은 정적 파일들입니다.
+여기서 가장 중요한 디렉티브는 "`max-age=<seconds>`"로 리소스가 유효하다고 판단되는 최대 시간을 말합니다. 이 디렉티브는 요청 시간에 상대적이며, {{HTTPHeader("Expires")}}가 설정되어 있어도 그보다 우선합니다. 변경되지 않을 파일에 대해, 공격적으로 (긴 시간으로) 캐싱할 수 있습니다. 예를 들어 이미지, CSS 파일 그리고 JavaScript 파일과 같은 정적 파일들입니다.
 
-좀 더 자세한 내용을 위해, 아래에서 [유효성](#유효성Freshness) 섹션을 참고하시기 바랍니다.
+좀 더 자세한 내용을 위해, 아래에서 [유효성](#유효성freshness) 섹션을 참고하시기 바랍니다.
 
 ```
 Cache-Control: max-age=31536000
@@ -102,7 +98,7 @@ Cache-Control: must-revalidate
 
 다음은 이런 과정에 대한 공유 캐시 프록시를 이용한 예제입니다:
 
-![Show how a proxy cache acts when a doc is not cache, in the cache and fresh, in the cache and stale.](https://mdn.mozillademos.org/files/13771/HTTPStaleness.png)
+![Show how a proxy cache acts when a doc is not cache, in the cache and fresh, in the cache and stale.](httpstaleness.png)
 
 유효 수명은 몇가지 헤더에 근거해 계산됩니다. "`Cache-control: max-age=N`" 헤더가 설정된 경우, 유효 수명은 N과 동일합니다. 만약 이 헤더가 없다면, 이런 경우가 매우 많습니다만, {{HTTPHeader("Expires")}} 헤더가 있는지 없는지를 검사합니다. `Expires` 헤더가 존재한다면, 그것의 값에서 {{HTTPHeader("Date")}} 헤더의 값을 뺀 결과가 유효 수명이 됩니다.
 
@@ -121,13 +117,13 @@ expirationTime = responseTime + freshnessLifetime - currentAge
 
 ### 리비전된(Revved) 리소스
 
-우리가 캐시된 리소스들을 많이 사용할수록, 웹 사이트의 응답성과 성능은 점점 더 좋아질 것입니다. 이것을 최적화하기 위한 좋은 방법은 만료 시간을 가능한 더 먼 미래로 설정하는 것입니다. 이것은 정기적으로나 자주 업데이트되는 리소스에 대해서는 가능하지만, 드물게 업데이트되는 리소스의 경우에는 문제가 됩니다. 이런 리소스들을 캐시하면 이득이 크지만, 업데이트하기가 매우 어렵기 때문입니다. 캐시한 리소스로부터 최대한 활용되는 리소스들로, 앞서 얘기한 방법 덕분에 이러한 리소스들을 갱신하기 더 어렵게 됩니다. 대표적으로 각 웹 페이지에 포함되고 링크된 기술적인 리소스들이 그렇습니다: 자바스크립트와 CSS 파일들의 변경은 드물지만, 그것들이 변경되었을 때에는 빠르게 갱신되기를 원할 겁니다.
+우리가 캐시된 리소스들을 많이 사용할수록, 웹 사이트의 응답성과 성능은 점점 더 좋아질 것입니다. 이것을 최적화하기 위한 좋은 방법은 만료 시간을 가능한 더 먼 미래로 설정하는 것입니다. 이것은 정기적으로나 자주 업데이트되는 리소스에 대해서는 가능하지만, 드물게 업데이트되는 리소스의 경우에는 문제가 됩니다. 이런 리소스들을 캐시하면 이득이 크지만, 업데이트하기가 매우 어렵기 때문입니다. 캐시한 리소스로부터 최대한 활용되는 리소스들로, 앞서 얘기한 방법 덕분에 이러한 리소스들을 갱신하기 더 어렵게 됩니다. 대표적으로 각 웹 페이지에 포함되고 링크된 기술적인 리소스들이 그렇습니다: JavaScript와 CSS 파일들의 변경은 드물지만, 그것들이 변경되었을 때에는 빠르게 갱신되기를 원할 겁니다.
 
 웹 개발자들은 Steve Sounders가 _revving_[\[1\]](https://www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/)이라고 불렀던 기술을 발명했습니다. 드물게 업데이트되는 파일들은 특정한 방법으로 이름붙여집니다: 파일들의 URL내에, 보통 파일명에, 수정(혹은 버전) 번호가 추가됩니다. 그렇게 해서 해당 리소스의 각각의 새로운 수정본 자체는 결코 변경되지 않으며, 보통 1년 혹은 그 이상의 아주 먼 미래로 만료 시간이 설정될 수 있습니다. 새로운 버전을 가지기 위해, 해당 리소스와의 모든 연결(link)들은 전부 변경되어야 하며, 그것이 이 방법의 단점입니다: 이 추가적인 복잡함은 보통 웹 개발자들이 사용하는 툴체인에 의해 다루어집니다. 드물게 변경되는 리소스들이 변경되는 경우 자주 변경되는 리소스에 추가적인 변경을 합니다. 이런 리소스들이 읽혀지는 경우, 다른 리소스들의 새로운 버전들도 읽혀지게 됩니다.
 
-이 기술은 추가적인 이점도 가지고 있습니다: 캐시된 두 개의 리소스를 동시에 갱신해도 한 리소스의 오래된 버전이 다른 리소스의 새로운 버전과 함께 혼합되어 사용되는 경우를 초래하지 않을 것입니다. 이것은 웹 사이트가 상호 간의 의존성을 가지고 있는 CSS 스타일시트와 자바스크립트를 가지고 있는 경우 (같은 HTML 요소를 참조하기에 서로 의존하게 됩니다) 매우 중요합니다.
+이 기술은 추가적인 이점도 가지고 있습니다: 캐시된 두 개의 리소스를 동시에 갱신해도 한 리소스의 오래된 버전이 다른 리소스의 새로운 버전과 함께 혼합되어 사용되는 경우를 초래하지 않을 것입니다. 이것은 웹 사이트가 상호 간의 의존성을 가지고 있는 CSS 스타일시트와 JavaScript를 가지고 있는 경우 (같은 HTML 요소를 참조하기에 서로 의존하게 됩니다) 매우 중요합니다.
 
-![](https://mdn.mozillademos.org/files/13779/HTTPRevved.png)
+![](httprevved.png)
 
 리소스에 추가되는 수정 버전은 1.1.3과 같은 전통적인 버전 번호 형식이 아니어도 되고, 단조 증가하는 숫자들이 아니어도 됩니다. 그것은 해시 혹은 날짜와 같이 충돌만 되지 않는다면 무엇이든지 될 수 있습니다.
 
@@ -153,7 +149,7 @@ expirationTime = responseTime + freshnessLifetime - currentAge
 
 캐시가 `Vary` 헤더 필드를 지닌 요청을 수신한 경우, `Vary` 헤더에 의해 지정된 모든 헤더 필드들이 원래의 (캐시된) 요청과 새로운 요청 사이에서 일치하지 않는다면 그 캐시된 응답을 사용해서는 안 됩니다.
 
-![The Vary header leads cache to use more HTTP headers as key for the cache.](https://mdn.mozillademos.org/files/13769/HTTPVary.png)
+![The Vary header leads cache to use more HTTP headers as key for the cache.](httpvary.png)
 
 이 기능은 컨텐츠를 비압축 또는 (여러 가지) 압축 포맷으로 캐시될 수 있도록 하고, 유저 에이전트가 지원하는 포맷에 따라 제공하도록 할 때 흔히 사용됩니다. 예를 들어 서버는 `Vary: Accept-Encoding`을 설정하여 특정한 집합의 인코딩을 지원하는 (예를 들어 `Accept-Encoding: gzip,deflate,sdch`) 모든 요청들에 대해 각각 다른 버전의 리소스를 캐시하도록 할 수 있습니다.
 

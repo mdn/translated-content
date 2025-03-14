@@ -7,7 +7,7 @@ slug: Web/API/Node/textContent
 
 A propriedade **`textContent`** da interface {{domxref("Node")}} representa o conteúdo de texto de um nó e dos seus descendentes.
 
-> **Nota:** `textContent` e {{domxref("HTMLElement.innerText")}} são facilmente confundidos, mas [os dois possuem importantes diferenças entre sí.](#Differences_from_innerText)
+> **Nota:** `textContent` e {{domxref("HTMLElement.innerText")}} são facilmente confundidos, mas [os dois possuem importantes diferenças entre sí.](#differences_from_innertext)
 
 ## Sintaxe
 
@@ -24,7 +24,7 @@ Uma `String` ou `null`
 
 Ao obter valores desta propriedade:
 
-- Se o nó for um [document](/pt-BR/docs/DOM/document), um [DOCTYPE](/pt-BR/docs/Glossary/Doctype), ou uma [notation](/pt-BR/docs/Web/API/Notation), o `textContent` retornará `null`. (Para se obter todo o texto e os [dados CDATA](/pt-BR/docs/Web/API/CDATASection) do documento inteiro, você poderá usar `document.documentElement.textContent`.)
+- Se o nó for um [document](/pt-BR/docs/Web/API/Document), um [DOCTYPE](/pt-BR/docs/Glossary/Doctype), ou uma [notation](/pt-BR/docs/Web/API/Notation), o `textContent` retornará `null`. (Para se obter todo o texto e os [dados CDATA](/pt-BR/docs/Web/API/CDATASection) do documento inteiro, você poderá usar `document.documentElement.textContent`.)
 - Se o nó for uma [seção CDATA](/pt-BR/docs/Web/API/CDATASection), comentário, [instrução de processamento](/pt-BR/docs/Web/API/ProcessingInstruction), ou um [text node](/pt-BR/docs/Web/API/Document/createTextNode), o `textContent` retornará o texto dentro do nó, i.e., o {{domxref("Node.nodeValue")}}.
 - Para outros tipos de nó, o `textContent` retornará a concatenação `textContent` de cada nó filho, exceto comentários e instruções de processamento. Essa é uma string vazia se o nó não tiver filhos.
 
@@ -53,55 +53,25 @@ Dado o seguinte fragmento HTML:
 ... Você pode usar `textContent` para obter o conteúdo de texto do elemento:
 
 ```js
-let text = document.getElementById('divA').textContent;
+let text = document.getElementById("divA").textContent;
 // Agora a variável de texto é: 'Isto é algum texto!'
 ```
 
 ... Ou definir o conteúdo de texto do elemento:
 
 ```js
-document.getElementById('divA').textContent = 'Este texto é diferente!';
+document.getElementById("divA").textContent = "Este texto é diferente!";
 // O HTML de divA agora é:
 // <div id="divA">Este texto é diferente!</div>
 ```
 
-## Polyfill para o IE8
+## Especificações
 
-```js
-// Fonte: Eli Grey @ https://eligrey.com/blog/post/textcontent-in-ie8
-if (Object.defineProperty
-  && Object.getOwnPropertyDescriptor
-  && Object.getOwnPropertyDescriptor(Element.prototype, "textContent")
-  && !Object.getOwnPropertyDescriptor(Element.prototype, "textContent").get) {
-  (function() {
-    var innerText = Object.getOwnPropertyDescriptor(Element.prototype, "innerText");
-    Object.defineProperty(Element.prototype, "textContent",
-     // Passando innerText ou innerText.get diretamente não funciona,
-     // Função wrapper(que envolve) é necessária.
-     {
-       get: function() {
-         return innerText.get.call(this);
-       },
-       set: function(s) {
-         return innerText.set.call(this, s);
-       }
-     }
-   );
-  })();
-}
-```
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Node.textContent")}}
-
-## Especificações
-
-| Specification                                                                                        | Status                           | Comment                 |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
-| {{SpecName('DOM WHATWG','#dom-node-textcontent','Node.textContent')}}         | {{Spec2('DOM WHATWG')}} | Sem alterações vs. DOM4 |
-| {{SpecName('DOM4','#dom-node-textcontent','Node.textContent')}}                 | {{Spec2('DOM4')}}         |                         |
-| {{SpecName('DOM3 Core','core.html#Node3-textContent','Node.textContent')}} | {{Spec2('DOM3 Core')}}     | Introduzida             |
+{{Compat}}
 
 ## Veja também
 

@@ -1,5 +1,5 @@
 ---
-title: 'RangeError: invalid date'
+title: "RangeError: invalid date"
 slug: Web/JavaScript/Reference/Errors/Invalid_date
 ---
 
@@ -31,15 +31,15 @@ RangeError: Provided date is not in valid range (Chrome)
 認識できない文字列や、 ISO フォーマットの文字列に不正な要素の値を含む日付の場合は、通常 {{jsxref("NaN")}} を返します。しかし実装によっては、 Firefox における次のケースのように、不適合な ISO フォーマットの文字列で `RangeError: invalid date` が発生することもあります。
 
 ```js example-bad
-new Date('foo-bar 2014');
-new Date('2014-25-23').toISOString();
-new Date('foo-bar 2014').toString();
+new Date("foo-bar 2014");
+new Date("2014-25-23").toISOString();
+new Date("foo-bar 2014").toString();
 ```
 
 一方、これは Firefox で {{jsxref("NaN")}} を返します。
 
 ```js example-bad
-Date.parse('foo-bar 2014'); // NaN
+Date.parse("foo-bar 2014"); // NaN
 ```
 
 詳細は {{jsxref("Date.parse()")}} のドキュメントをご覧ください。
@@ -47,7 +47,7 @@ Date.parse('foo-bar 2014'); // NaN
 ### 有効な場合
 
 ```js example-good
-new Date('05 October 2011 14:48 UTC');
+new Date("05 October 2011 14:48 UTC");
 new Date(1317826080); // Unix Time Stamp for 05 October 2011 14:48:00 UTC
 ```
 

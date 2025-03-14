@@ -24,14 +24,12 @@ element.contentEditable = 'true'
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLElement.contentEditable")}}
-
-In Internet Explorer, `contenteditable` cannot be applied to the {{htmlelement("table")}}, {{htmlelement("col")}}, {{htmlelement("colgroup")}}, {{htmlelement("tbody")}}, {{htmlelement("td")}}, {{htmlelement("tfoot")}}, {{htmlelement("th")}}, {{htmlelement("thead")}}, and {{htmlelement("tr")}} elements directly. A content editable {{htmlelement("span")}} or {{htmlelement("div")}} element can be placed inside the individual table cells.
+{{Compat}}
 
 ## See also
 
-- [Making content editable](/es/docs/Web/Guide/HTML/Editable_content)
+- [Making content editable](/es/docs/conflicting/Web/HTML/Global_attributes/contenteditable)
 - {{domxref("HTMLElement.isContentEditable")}}
-- The {{htmlattrxref("contenteditable")}} global attribute.
+- The [`contenteditable`](/es/docs/Web/HTML/Global_attributes#contenteditable) global attribute.

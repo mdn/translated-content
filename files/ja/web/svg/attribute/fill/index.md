@@ -1,18 +1,37 @@
 ---
 title: fill
 slug: Web/SVG/Attribute/fill
+l10n:
+  sourceCommit: 5f7c22deaa74973658257aeaa012ac2ec0be87ae
 ---
 
 {{SVGRef}}
 
-**`fill`** 属性には使われ方により 2 つの意味があります. 1 つは図形やテキストに使われた場合で，その要素を塗りつぶす色を意味します．もう 1 つはアニメーションに使われた場合で，そのアニメーションの最終状態を定義します．
+**`fill`** 属性には使われ方により 2 つの意味があります. 1 つは図形やテキストに使われた場合で，その要素を塗りつぶす色 (_またはグラデーションやパターンなどの SVG ペイント サーバー_) を意味します．もう 1 つはアニメーションに使われた場合で，そのアニメーションの最終状態を定義します．
 
-呈示属性(presentation attribute)として全ての要素に適用可能ですが，実際に影響があるのは次の 11 の要素です: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}.
+この属性は次の SVG 要素で使用できます。
 
-アニメーションとしては次の 5 つの要素で使われています: {{SVGElement('animate')}}, {{SVGElement('animateColor')}}, {{SVGElement('animateMotion')}}, {{SVGElement('animateTransform')}}, and {{SVGElement('set')}}.
+- {{SVGElement('circle')}}
+- {{SVGElement('ellipse')}}
+- {{SVGElement('path')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
+
+アニメーションとしては次の要素で使われています: {{SVGElement('animate')}}, {{SVGElement('animateMotion')}}, {{SVGElement('animateTransform')}}, {{SVGElement('set')}}.
+
+## 例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -20,211 +39,425 @@ html,body,svg { height:100% }
   <!-- Simple color fill -->
   <circle cx="50" cy="50" r="40" fill="pink" />
 
-
   <!-- Fill circle with a gradient -->
   <defs>
     <radialGradient id="myGradient">
-      <stop offset="0%"   stop-color="pink" />
+      <stop offset="0%" stop-color="pink" />
       <stop offset="100%" stop-color="black" />
     </radialGradient>
   </defs>
 
   <circle cx="150" cy="50" r="40" fill="url(#myGradient)" />
 
-
   <!--
   Keeping the final state of an animated circle
   which is a circle with a radius of 40.
   -->
   <circle cx="250" cy="50" r="20">
-    <animate attributeType="XML"
-             attributeName="r"
-             from="0" to="40" dur="5s"
-             fill="freeze" />
+    <animate
+      attributeType="XML"
+      attributeName="r"
+      from="0"
+      to="40"
+      dur="5s"
+      fill="freeze" />
   </circle>
 </svg>
 ```
 
-{{EmbedLiveSample('topExample', '100%', 200)}}
-
-## altGlyph
-
-> **警告:** As of SVG2 {{SVGElement('altGlyph')}} is deprecated and shouldn't be used.
-
-For {{SVGElement('altGlyph')}}, `fill` is a presentation attribute that defines the color of the glyph.
-
-| Value         | **[\<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | --------------------------------------------------- |
-| Default value | `black`                                             |
-| Animatable    | Yes                                                 |
-
-> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
+{{EmbedLiveSample("Example", '100%', 200)}}
 
 ## animate
 
-For {{SVGElement('animate')}}, `fill` defines the final state of the animation.
+{{SVGElement('animate')}} は、`fill` はアニメーションの最終状態を定義します。
 
-| Value         | `freeze` (_Keep the state of the last animation frame_) \| `remove` (_Keep the state of the first animation frame_) |
-| ------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Default value | `remove`                                                                                                            |
-| Animatable    | No                                                                                                                  |
-
-## animateColor
-
-> **警告:** As of SVG Animation 2 {{SVGElement('animateColor')}} is deprecated and shouldn't be used. Use {{SVGElement('animate')}} instead.
-
-For {{SVGElement('animateColor')}}, `fill` defines the final state of the animation.
-
-| Value         | `freeze` (_Keep the state of the last animation frame_) \| `remove` (_Keep the state of the first animation frame_) |
-| ------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Default value | `remove`                                                                                                            |
-| Animatable    | No                                                                                                                  |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <code>freeze</code> (<em>Keep the state of the last animation frame</em
+        >) | <code>remove</code> (<em
+          >Keep the state of the first animation frame</em
+        >)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><code>remove</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
 
 ## animateMotion
 
-For {{SVGElement('animateMotion')}}, `fill` defines the final state of the animation.
+{{SVGElement('animateMotion')}} は、`fill` はアニメーションの最終状態を定義します。
 
-| Value         | `freeze` (_Keep the state of the last animation frame_) \| `remove` (_Keep the state of the first animation frame_) |
-| ------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Default value | `remove`                                                                                                            |
-| Animatable    | No                                                                                                                  |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <code>freeze</code> (<em>Keep the state of the last animation frame</em
+        >) | <code>remove</code> (<em
+          >Keep the state of the first animation frame</em
+        >)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><code>remove</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
 
 ## animateTransform
 
-For {{SVGElement('animateTransform')}}, `fill` defines the final state of the animation.
+{{SVGElement('animateTransform')}} は、`fill` はアニメーションの最終状態を定義します。
 
-| Value         | `freeze` (_Keep the state of the last animation frame_) \| `remove` (_Keep the state of the first animation frame_) |
-| ------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Default value | `remove`                                                                                                            |
-| Animatable    | No                                                                                                                  |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <code>freeze</code> (<em>Keep the state of the last animation frame</em
+        >) | <code>remove</code> (<em
+          >Keep the state of the first animation frame</em
+        >)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><code>remove</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
 
 ## circle
 
-For {{SVGElement('circle')}}, `fill` is a presentation attribute that defines the color of the circle.
+{{SVGElement('circle')}} は、`fill` は円の色を定義するプレゼンテーション属性です。
 
-| Value         | **[\<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | --------------------------------------------------- |
-| Default value | `black`                                             |
-| Animatable    | Yes                                                 |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
+> [!NOTE]
+> プレゼンテーション属性として `fill` を CSS プロパティとして使用できます。
 
 ## ellipse
 
-For {{SVGElement('ellipse')}}, `fill` is a presentation attribute that defines the color of the ellipse.
+{{SVGElement('ellipse')}} は、`fill` は楕円の色を定義するプレゼンテーション属性です。
 
-| Value         | **[\<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | --------------------------------------------------- |
-| Default value | `black`                                             |
-| Animatable    | Yes                                                 |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
+> [!NOTE]
+> プレゼンテーション属性として `fill` を CSS プロパティとして使用できます。
 
 ## path
 
-For {{SVGElement('path')}}, `fill` is a presentation attribute that defines the color of the interior of the shape. (_Interior is define by the {{SVGAttr('fill-rule')}} attribute_)
+{{SVGElement('path')}} は、`fill` は図形の内部の色を定義するプレゼンテーション属性です。 (_内部は {{SVGAttr('fill-rule')}} 属性によって定義されます_)
 
-| Value         | **[\<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | --------------------------------------------------- |
-| Default value | `black`                                             |
-| Animatable    | Yes                                                 |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
+> [!NOTE]
+> プレゼンテーション属性として `fill` を CSS プロパティとして使用できます。
 
 ## polygon
 
-For {{SVGElement('polygon')}}, `fill` is a presentation attribute that defines the color of the interior of the shape. (_Interior is define by the {{SVGAttr('fill-rule')}} attribute_)
+{{SVGElement('polygon')}} は、`fill` は図形の内部の色を定義するプレゼンテーション属性です。 (_内部は {{SVGAttr('fill-rule')}} 属性によって定義されます_)
 
-| Value         | **[\<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | --------------------------------------------------- |
-| Default value | `black`                                             |
-| Animatable    | Yes                                                 |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
+> [!NOTE]
+> プレゼンテーション属性として `fill` を CSS プロパティとして使用できます。
 
 ## polyline
 
-For {{SVGElement('polyline')}}, `fill` is a presentation attribute that defines tthe color of the interior of the shape. (_Interior is define by the {{SVGAttr('fill-rule')}} attribute_)
+{{SVGElement('polyline')}} は、`fill` は図形の内部の色を定義するプレゼンテーション属性です。 (_内部は {{SVGAttr('fill-rule')}} 属性によって定義されます_)
 
-| Value         | **[\<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | --------------------------------------------------- |
-| Default value | `black`                                             |
-| Animatable    | Yes                                                 |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
+> [!NOTE]
+> プレゼンテーション属性として `fill` を CSS プロパティとして使用できます。
 
 ## rect
 
-For {{SVGElement('rect')}}, `fill` is a presentation attribute that defines the color of the rectangle.
+{{SVGElement('rect')}} は、`fill` は四角形の色を定義するプレゼンテーション属性です。
 
-| Value         | **[\<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | --------------------------------------------------- |
-| Default value | `black`                                             |
-| Animatable    | Yes                                                 |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
+> [!NOTE]
+> プレゼンテーション属性として `fill` を CSS プロパティとして使用できます。
 
 ## set
 
-For {{SVGElement('set')}}, `fill` defines the final state of the animation.
+{{SVGElement('set')}} は、`fill` はアニメーションの最終状態を定義します。
 
-| Value         | `freeze` (_Keep the state of the last animation frame_) \| `remove` (_Keep the state of the first animation frame_) |
-| ------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Default value | `remove`                                                                                                            |
-| Animatable    | No                                                                                                                  |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <code>freeze</code> (<em>Keep the state of the last animation frame</em
+        >) | <code>remove</code> (<em
+          >Keep the state of the first animation frame</em
+        >)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><code>remove</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
 
 ## text
 
-For {{SVGElement('text')}}, `fill` is a presentation attribute that defines what the color of the text.
+{{SVGElement('text')}} は、`fill` はテキストの色を定義するプレゼンテーション属性です。
 
-| Value         | **[\<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | --------------------------------------------------- |
-| Default value | `black`                                             |
-| Animatable    | Yes                                                 |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
+> [!NOTE]
+> プレゼンテーション属性として `fill` を CSS プロパティとして使用できます。
 
 ## textPath
 
-For {{SVGElement('textPath')}}, `fill` is a presentation attribute that defines the color of the text.
+{{SVGElement('textPath')}} は、`fill` はテキストの色を定義するプレゼンテーション属性です。
 
-| Value         | **[\<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | --------------------------------------------------- |
-| Default value | `black`                                             |
-| Animatable    | Yes                                                 |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
+> [!NOTE]
+> プレゼンテーション属性として `fill` を CSS プロパティとして使用できます。
 
 ## tref
 
-> **警告:** As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
+> [!WARNING]
+> As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
 
-For {{SVGElement('tref')}}, `fill` is a presentation attribute that defines the color of the text.
+{{SVGElement('tref')}} は、`fill` はテキストの色を定義するプレゼンテーション属性です。
 
-| Value         | **[\<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | --------------------------------------------------- |
-| Default value | `black`                                             |
-| Animatable    | Yes                                                 |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
+> [!NOTE]
+> プレゼンテーション属性として `fill` を CSS プロパティとして使用できます。
 
 ## tspan
 
-For {{SVGElement('tspan')}}, `fill` is a presentation attribute that defines the color of the text.
+{{SVGElement('tspan')}} は、`fill` はテキストの色を定義するプレゼンテーション属性です。
 
-| Value         | **[\<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | --------------------------------------------------- |
-| Default value | `black`                                             |
-| Animatable    | Yes                                                 |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
+> [!NOTE]
+> プレゼンテーション属性として `fill` を CSS プロパティとして使用できます。
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
-{{Compat("svg.attributes.presentation.fill")}}
-
-> **メモ:** For information on using the `context-fill` (and `context-stroke`) values from HTML documents, see the documentation for the non-standard {{cssxref("-moz-context-properties")}} property.
+{{Compat}}

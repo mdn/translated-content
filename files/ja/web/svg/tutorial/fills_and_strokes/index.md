@@ -1,7 +1,11 @@
 ---
 title: 塗りつぶしとストローク
 slug: Web/SVG/Tutorial/Fills_and_Strokes
+l10n:
+  sourceCommit: 4c45276e195ba339f038ffbfdb3de7ab65424ed5
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
 
@@ -11,7 +15,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 ### 塗りつぶし
 
-基本的な色付けは、ノードに `fill` と `stroke` という 2 つの属性を設定することで行うことができます。 `fill` を使用するとオブジェクトの内部の色を設定し、 `stroke` はオブジェクトを囲む線の色を設定します。色名 (例えば `red`)、RGB 値 (例えば `rgb(255,0,0)`)、16 進数値、RGBA 値など、HTML で用いる CSS の色名と同じ仕組みを用いることができます。
+基本的な色付けは、ノードに `fill` と `stroke` という 2 つの属性を設定することで行うことができます。 `fill` を使用するとオブジェクトの内部の色を設定し、 `stroke` はオブジェクトを囲む線の色を設定します。色名 (例えば `red`)、RGB 値 (例えば `rgb(255 0 0)`)、16 進数値、RGBA 値など、HTML で用いる CSS の色名と同じ仕組みを用いることができます。
 
 ```xml
  <rect x="10" y="10" width="100" height="100" stroke="blue" fill="purple"
@@ -20,13 +24,14 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 さらに、 SVG では `fill` と `stroke` の透明度を別々に指定することができます。これらは `fill-opacity` 属性と `stroke-opacity` 属性で制御されます。
 
-> **メモ:** Firefox 3+ 以降では、 `rgba` の値も許可されており、同じ効果が得られます。しかし、他のビューアーとの互換性を考慮すると、 `fill`/`stroke` の透明度を個別に指定したほうがよい場合があります。 `rgba` 値と `fill`/`stroke` opacity 値の両方を指定した場合、両方が適用されます。
+> [!NOTE]
+> Firefox 3+ 以降では、 `rgba` の値も許可されており、同じ効果が得られます。しかし、他のビューアーとの互換性を考慮すると、 `fill`/`stroke` の透明度を個別に指定したほうがよい場合があります。 `rgba` 値と `fill`/`stroke` opacity 値の両方を指定した場合、両方が適用されます。
 
 ### ストローク
 
 この色のプロパティに加えて、線上にストロークを描画する方法を操作するための属性がいくつかあります。
 
-![](svg_stroke_linecap_example.png)
+![stroke-linecap 属性は、これらのストロークの終わりの見てくれを変えます。 square は四角いキャップを追加し、 round は指定された丸いキャップを提供し、 butt はキャップを除去します。](svg_stroke_linecap_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -49,7 +54,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 また `stroke-linejoin` プロパティは、 2 本の線分の接続部をどのように描画するかを制御します。
 
-![](svg_stroke_linejoin_example.png)
+![stroke-linejoin 属性は、 2 つの行が結合する点の見てくれを変更します。 miter は角度のある結合を作成し、 round は角を丸め、 bevel は面取りされたエッジを作成し、角を平らにします。](svg_stroke_linejoin_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -70,7 +75,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 あと、 `stroke-dasharray` 属性を指定することで波線状のストロークを描画することもできます。
 
-![](svg_stroke_dasharray_example.png)
+![2 種類のカスタム破線、 1 つは等間隔ダッシュ、他にも stroke-dasharray 属性値を使用して長短ダッシュを使用しています。](svg_stroke_dasharray_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -83,8 +88,6 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 ```
 
 `stroke-dasharray` 属性は引数として、連続したカンマ区切りの数値をとります。
-
-> **メモ:** {{SVGElement("path")}} とは異なり、これらの数値はカンマ区切りでなければ**_なりません_** (ホワイトスペースは無視されます)。
 
 最初の数字は塗りつぶされた部分の長さを、 2 番目の数字は塗りつぶされていない部分の長さを指定します。上の例では、 2 番目のパスで 5 ピクセル単位を埋め、 5 単位の次のダッシュまで 5 単位の空白を作ります。もっと複雑なダッシュパターンにしたい場合は、より多くの数字を指定することができます。最初の例では 3 つの数字を指定していますが、この場合、レンダラーは数字を 2 回ループさせて偶数のパターンを作ります。つまり、最初のパスでは、 5 個の塗りつぶし、 10 個の空、 5 個の塗りつぶしがレンダリングされ、さらにループして、 5 個の空、 10 個の塗りつぶし、 5 個の空が作成されます。このパターンが繰り返されます。
 
@@ -110,7 +113,7 @@ CSS は要素に `style` 属性を用いることで、インラインで挿入�
 <?xml version="1.0" standalone="no"?>
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1">
   <defs>
-    <style type="text/css"><![CDATA[
+    <style><![CDATA[
        #MyRect {
          stroke: black;
          fill: red;
@@ -124,13 +127,13 @@ CSS は要素に `style` 属性を用いることで、インラインで挿入�
 スタイルをこのような領域に移すと、大きな要素グループでのプロパティの調整が容易になります。ロールオーバー効果を作るための **`:hover` 擬似クラス** などを用いることもできます。
 
 ```css
- #MyRect:hover {
-   stroke: black;
-   fill: blue;
- }
+#MyRect:hover {
+  stroke: black;
+  fill: blue;
+}
 ```
 
-CSS 規則を外部スタイルシートで指定するのに、[ふつうの XML スタイルシート構文](https://www.w3.org/TR/xml-stylesheet/)を使用することもできます。
+CSS ルールを外部スタイルシートで指定するのに、[ふつうの XML スタイルシート構文](https://www.w3.org/TR/xml-stylesheet/)を使用することもできます。
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -141,7 +144,7 @@ CSS 規則を外部スタイルシートで指定するのに、[ふつうの XM
 </svg>
 ```
 
-style.css は以下のようにします。
+`style.css` は以下のようにします。
 
 ```css
 #MyRect {

@@ -22,10 +22,10 @@ slug: Web/API/CSSStyleDeclaration
 - {{domxref("CSSStyleDeclaration.parentRule")}}
   - : 包含当前声明块的 {{domxref("CssRule")}}。
 
-## 方法
+## 实例方法
 
 - {{domxref("CSSStyleDeclaration.getPropertyPriority()")}}
-  - : 返回可选的优先级，"important"。
+  - : 返回可选的优先级，“important”。
 - {{domxref("CSSStyleDeclaration.getPropertyValue()")}}
   - : 返回给定属性的值。
 - {{domxref("CSSStyleDeclaration.item()")}}
@@ -36,16 +36,16 @@ slug: Web/API/CSSStyleDeclaration
 - {{domxref("CSSStyleDeclaration.setProperty()")}}
   - : 在 CSS 声明块中修改现有属性或设置新属性。
 - {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} {{Deprecated_Inline}}
-  - : **仅在火狐浏览器中支持 getComputedStyle.** 返回 {{ domxref("CSSPrimitiveValue") }} or `null` for [shorthand properties](/zh-CN/docs/Web/CSS/Shorthand_properties).
+  - : **仅通过 Firefox 中的 getComputedStyle 得到支持**。返回以 {{ domxref("CSSPrimitiveValue") }} 表示的属性值或 `null`（对于[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)）。
 
-## 范例
+## 示例
 
 ```js
-var styleObj = document.styleSheets[0].cssRules[0].style;
+const styleObj = document.styleSheets[0].cssRules[0].style;
 console.log(styleObj.cssText);
 
-for (var i = styleObj.length; i--;) {
-  var nameString = styleObj[i];
+for (let i = styleObj.length; i--; ) {
+  const nameString = styleObj[i];
   styleObj.removeProperty(nameString);
 }
 
@@ -59,7 +59,3 @@ console.log(styleObj.cssText);
 ## 浏览器兼容性
 
 {{Compat}}
-
-## 参见
-
-- [DOM CSS Properties](/zh-CN/docs/Web/CSS/CSS_Properties_Reference)

@@ -1,26 +1,30 @@
 ---
 title: Array.prototype.shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/shift
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/shift
 ---
 
 {{JSRef}}
 
 La méthode **`shift()`** permet de retirer le **premier** élément d'un tableau et de renvoyer cet élément. Cette méthode modifie la longueur du tableau.
 
-{{EmbedInteractiveExample("pages/js/array-shift.html")}}
+{{InteractiveExample("JavaScript Demo: Array.shift()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+const firstElement = array1.shift();
+
+console.log(array1);
+// Expected output: Array [2, 3]
+
+console.log(firstElement);
+// Expected output: 1
+```
 
 ## Syntaxe
 
 ```js
-arr.shift()
+arr.shift();
 ```
 
 ### Valeur de retour
@@ -35,7 +39,8 @@ Cette méthode est générique et peut être {{jsxref("Function.call", "appelée
 
 Cette méthode n'est pas exploitable pour les objets dont la propriété `length` ne reflète pas la taille du contenu, ou pour lesquels la propriété `length` n'est pas définie.
 
-> **Note :** La méthode {{jsxref("Array.prototype.pop()")}} possède un comportement similaire mais retire le dernier élément du tableau (et non le premier).
+> [!NOTE]
+> La méthode {{jsxref("Array.prototype.pop()")}} possède un comportement similaire mais retire le dernier élément du tableau (et non le premier).
 
 ## Exemples
 
@@ -60,11 +65,11 @@ console.log("Cet élément a été enlevé :", premierÉlément);
 
 ### Utiliser `shift()` dans une boucle `while`
 
-La méthode `shift()` peut être utilisée dans une boucle [`while`](/fr/docs/Web/JavaScript/Reference/Instructions/while). Dans l'exemple suivant, chaque itération de la boucle retire un élément du tableau et l'affiche dans la console, jusqu'à ce que ce dernier soit vide.
+La méthode `shift()` peut être utilisée dans une boucle [`while`](/fr/docs/Web/JavaScript/Reference/Statements/while). Dans l'exemple suivant, chaque itération de la boucle retire un élément du tableau et l'affiche dans la console, jusqu'à ce que ce dernier soit vide.
 
 ```js
 var noms = ["André", "Édouard", "Paul", "Christophe", "Jean"];
-while ( (i = noms.shift()) !== undefined ) {
+while ((i = noms.shift()) !== undefined) {
   console.log(i);
 }
 // André, Édouard, Paul, Christophe, Jean

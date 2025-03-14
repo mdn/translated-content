@@ -1,33 +1,46 @@
 ---
 title: Origin (オリジン)
 slug: Glossary/Origin
+l10n:
+  sourceCommit: cd76750e9e68ebdf8bf1ddc0630406d95eddc502
 ---
 
-ウェブコンテンツの**オリジン** (Origin) は、ウェブコンテンツにアクセスするために使われる {{Glossary("URL")}} の*スキーム* (プロトコル)、 _ホスト_ (ドメイン)、 _ポート_ によって定義されます。スキーム、ホスト、ポートがすべて一致した場合のみ、二つのオブジェクトは同じオリジンであると言えます。
+{{GlossarySidebar}}
+
+ウェブコンテンツの**オリジン** (Origin) は、ウェブコンテンツにアクセスするために使われる {{Glossary("URL")}} の _スキーム_ （プロトコル）、 _ホスト_ （ドメイン）、 _ポート番号_ によって定義されます。スキーム、ホスト、ポート番号がすべて一致した場合のみ、 2 つのオブジェクトは同じオリジンであると言えます。
 
 操作によっては同じオリジンのコンテンツに限定されており、この制約は {{Glossary("CORS")}} を使用して緩和することができます。
 
-## 同一オリジンの例
+## 例
 
-| `http://example.com/app1/index.html` `http://example.com/app2/index.html` | スキーム (`http`) およびホスト (`example.com`) が同じなので同一オリジン    |
-| ------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `http://Example.com:80` `http://example.com`                              | サーバーは既定で 80 番ポートで HTTP コンテンツを配信するため、同一オリジン |
+これらはスキーム (`http`) とホスト名 (`example.com`) が同じなので同一オリジンであり、ファイルパスが異なるのは関係がありません。
 
-## 異なるオリジンの例
+- `http://example.com/app1/index.html`
+- `http://example.com/app2/index.html`
 
-| `http://example.com/app1` `https://example.com/app2`                     | スキームが異なる |
-| ------------------------------------------------------------------------ | ---------------- |
-| `http://example.com` `http://www.example.com` `http://myapp.example.com` | ホストが異なる   |
-| `http://example.com` `http://example.com:8080`                           | ポートが異なる   |
+サーバーは HTTP コンテンツを配信するのに既定で 80 番ポートを使うため、これらは同一オリジンです。
 
-## 仕様書
+- `http://example.com:80`
+- `http://example.com`
 
-| 仕様書                                                           | 状態                             | 備考 |
-| ---------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', '#origin', 'origin')}} | {{Spec2('HTML WHATWG')}} |      |
+これらは、異なるスキームを使用しているため、同じオリジンではありません。
 
-## 理解を深める
+- `http://example.com/app1`
+- `https://example.com/app2`
 
-詳しくは[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)をご覧ください。
+これらは、異なるホスト名を使用しているため、同一オリジンではありません。
 
-{{QuickLinksWithSubpages("/ja/docs/Glossary")}}
+- `http://example.com`
+- `http://www.example.com`
+- `http://myapp.example.com`
+
+これらは異なるポートを使用するため、同一オリジンではありません。
+
+- `http://example.com`
+- `http://example.com:8080`
+
+## 関連情報
+
+- [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)
+- {{Glossary("Site")}}
+- [HTML 仕様書: origin](https://html.spec.whatwg.org/multipage/origin.html#origin)（英語）

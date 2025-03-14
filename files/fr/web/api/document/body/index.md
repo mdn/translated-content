@@ -1,10 +1,6 @@
 ---
 title: document.body
 slug: Web/API/Document/body
-tags:
-  - DOM
-  - Référence_du_DOM_Gecko
-translation_of: Web/API/Document/body
 ---
 
 {{ApiRef}}
@@ -26,8 +22,8 @@ alert(document.body.id); // "ancienElementBody"
 
 var unNouvelElementBody = document.createElement("body");
 
-unNouvelElementBody .id = "nouvelElementBody";
-document.body = unNouvelElementBody ;
+unNouvelElementBody.id = "nouvelElementBody";
+document.body = unNouvelElementBody;
 alert(document.body.id); // "nouvelElementBody"
 ```
 
@@ -39,4 +35,4 @@ Même si body est modifiable, lui affecter une nouvelle valeur retire tous les �
 
 ## Spécification
 
-- [DOM Level 2 HTML: HTMLDocument.body](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-56360201)
+- [DOM Level 2 HTML: HTMLDocument.body](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-56360201)

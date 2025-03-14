@@ -1,26 +1,25 @@
 ---
-title: location.hostname
+title: "location: hostname プロパティ"
 slug: Web/API/Location/hostname
+l10n:
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{ApiRef("URL API")}}
 
-**`hostname`** は {{domxref("Location")}} インターフェイスのプロパティで、 {{domxref("USVString")}} で URL のドメインを保持します。
+**`hostname`** は {{domxref("Location")}} インターフェイスのプロパティで、URL のドメインが入った文字列です。
 
-## 構文
+## 値
 
-```js
-string = object.hostname;
-object.hostname = string;
-```
+文字列です。
 
 ## 例
 
 ```js
-var anchor = document.createElement("a");
+const anchor = document.createElement("a");
 anchor.href = "https://developer.mozilla.org:4097/ja/docs/Location.hostname";
 
-console.log(anchor.hostname);  // developer.mozilla.org
+console.log(anchor.hostname); // developer.mozilla.org
 ```
 
 ## 仕様書

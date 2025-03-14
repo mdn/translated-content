@@ -1,28 +1,34 @@
 ---
 title: Symbol.prototype.description
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
-tags:
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/description
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/description
 ---
 
 {{JSRef}}
 
 La propriété en lecture seule **`description`** est une chaîne de caractères qui renvoie la description optionnelle de l'objet {{jsxref("Symbol")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-prototype-description.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.prototype.description")}}
+
+```js interactive-example
+console.log(Symbol("desc").description);
+// Expected output: "desc"
+
+console.log(Symbol.iterator.description);
+// Expected output: "Symbol.iterator"
+
+console.log(Symbol.for("foo").description);
+// Expected output: "foo"
+
+console.log(`${Symbol("foo").description}bar`);
+// Expected output: "foobar"
+```
 
 ## Syntaxe
 
 ```js
-Symbol('maDescription').description;
+Symbol("maDescription").description;
 Symbol.iterator.description;
-Symbol.for('toto').description;
+Symbol.for("toto").description;
 ```
 
 ## Description
@@ -32,29 +38,27 @@ Les objets {{jsxref("Symbol")}} peuvent être créés avec une description facul
 ## Exemples
 
 ```js
-Symbol('desc').toString();   // "Symbol(desc)"
-Symbol('desc').description;  // "desc"
-Symbol('').description;      // ""
-Symbol().description;        // undefined
+Symbol("desc").toString(); // "Symbol(desc)"
+Symbol("desc").description; // "desc"
+Symbol("").description; // ""
+Symbol().description; // undefined
 
 // symboles connus
-Symbol.iterator.toString();  // "Symbol(Symbol.iterator)"
+Symbol.iterator.toString(); // "Symbol(Symbol.iterator)"
 Symbol.iterator.description; // "Symbol.iterator"
 
 // symboles globaux
-Symbol.for('toto').toString();  // "Symbol(toto)"
-Symbol.for('toto').description; // "toto"
+Symbol.for("toto").toString(); // "Symbol(toto)"
+Symbol.for("toto").description; // "toto"
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                           | État                    |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
-| [Proposition pour `Symbol.prototype.description`](https://tc39.github.io/proposal-Symbol-description/#sec-symbol.prototype.description) | Proposition de niveau 4 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.description")}}
+{{Compat}}
 
 ## Voir aussi
 

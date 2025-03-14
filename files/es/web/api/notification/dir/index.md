@@ -1,6 +1,6 @@
 ---
 title: Notification.dir
-slug: Web/API/notification/dir
+slug: Web/API/Notification/dir
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -21,7 +21,8 @@ Un {{domxref("DOMString")}} especifica la dirección del texto, los posibles val
 - `ltr`: El texto es desplegado de izquierda a derecha.
 - `rtl`: El texto es desplegado de derecha a izquierda.
 
-> **Nota:** La mayoría de los navegadores parecen ignorar las intrucciones explicitas `ltr` y `rtl`, y solo van a las proveídas por el navegador.
+> [!NOTE]
+> La mayoría de los navegadores parecen ignorar las intrucciones explicitas `ltr` y `rtl`, y solo van a las proveídas por el navegador.
 
 ## Ejemplos
 
@@ -29,11 +30,11 @@ El siguiente código ejecuta una notificación; se crea un simple objeto `option
 
 ```js
 var options = {
-  body: 'Do you like my body?',
-  dir: 'rtl'
-}
+  body: "Do you like my body?",
+  dir: "rtl",
+};
 
-var n = new Notification('Notificación de prueba', options);
+var n = new Notification("Notificación de prueba", options);
 
 console.log(n.dir); // Deberia retornar 'rtl'
 ```

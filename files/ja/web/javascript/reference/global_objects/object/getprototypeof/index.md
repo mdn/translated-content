@@ -1,17 +1,27 @@
 ---
 title: Object.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
+l10n:
+  sourceCommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
 ---
 
 {{JSRef}}
 
 **`Object.getPrototypeOf()`** メソッドは、指定されたオブジェクトのプロトタイプ (つまり、内部プロパティ `[[Prototype]]` の値) を返します。
 
-{{EmbedInteractiveExample("pages/js/object-getprototypeof.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getPrototypeOf()", "shorter")}}
+
+```js interactive-example
+const prototype1 = {};
+const object1 = Object.create(prototype1);
+
+console.log(Object.getPrototypeOf(object1) === prototype1);
+// Expected output: true
+```
 
 ## 構文
 
-```
+```js-nolint
 Object.getPrototypeOf(obj)
 ```
 
@@ -22,15 +32,15 @@ Object.getPrototypeOf(obj)
 
 ### 返値
 
-指定されたオブジェクトのプロトタイプです。何も継承していないオブジェクトの場合は {{jsxref("null")}} です。
+指定されたオブジェクトのプロトタイプです。何も継承していないオブジェクトの場合は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) です。
 
 ## 例
 
 ### getPrototypeOf の使用
 
 ```js
-var proto = {};
-var obj = Object.create(proto);
+const proto = {};
+const obj = Object.create(proto);
 Object.getPrototypeOf(obj) === proto; // true
 ```
 
@@ -39,9 +49,9 @@ Object.getPrototypeOf(obj) === proto; // true
 ES5 では引数 _obj_ がオブジェクトではない場合 {{jsxref("TypeError")}} が発生します。しかし ES2015 では対応する {{jsxref("Object")}} に変換されてから処理されます。
 
 ```js
-Object.getPrototypeOf('foo');
+Object.getPrototypeOf("foo");
 // TypeError: "foo" is not an object (ES5 code)
-Object.getPrototypeOf('foo');
+Object.getPrototypeOf("foo");
 // String.prototype                  (ES2015 code)
 ```
 
@@ -51,16 +61,13 @@ Object.getPrototypeOf('foo');
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.getPrototypeOf")}}
-
-### Opera 固有のメモ
-
-古いバージョンの Opera は `Object.getPrototypeOf()` に対応していませんが、 Opera 10.50 以降で標準外の {{jsxref("Object.proto", "__proto__")}} に対応しています。
+{{Compat}}
 
 ## 関連情報
 
+- [`Object.getPrototypeOf` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Object.prototype.__proto__")}}
-- John Resig 氏の記事 : [getPrototypeOf](http://ejohn.org/blog/objectgetprototypeof/)
+- [`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - {{jsxref("Reflect.getPrototypeOf()")}}
+- [Object.getPrototypeOf](https://johnresig.com/blog/objectgetprototypeof/) (John Resig, 2008)

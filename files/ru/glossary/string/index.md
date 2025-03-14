@@ -1,12 +1,9 @@
 ---
 title: Строка
 slug: Glossary/String
-tags:
-  - Начальный
-  - Строка
-translation_of: Glossary/String
-original_slug: Глоссарий/Строка
 ---
+
+{{GlossarySidebar}}
 
 В любом языке программирования компьютера, строка представляет собой последовательность {{Glossary("character","символов")}}, используемых для представления текста.
 
@@ -16,5 +13,4 @@ original_slug: Глоссарий/Строка
 
 ### Общие сведения
 
-- {{Interwiki("wikipedia", "String (computer science)")}} на Wikipedia
-- [JavaScript data types and data structures](/ru/docs/Web/JavaScript/Data_structures#String_type)
+- [JavaScript data types and data structures](/ru/docs/Web/JavaScript/Data_structures#string_type)

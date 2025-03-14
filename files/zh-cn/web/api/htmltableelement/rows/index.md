@@ -20,10 +20,10 @@ HTMLCollectionObject = table.rows
 ```js
 myrows = mytable.rows;
 firstRow = mytable.rows[0];
-lastRow = mytable.rows[mytable.rows.length-1];
+lastRow = mytable.rows[mytable.rows.length - 1];
 ```
 
 ## Specification
 
-- [rows](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-6156016)
-- [HTMLcollection](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75708506)
+- [rows](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-6156016)
+- [HTMLcollection](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75708506)

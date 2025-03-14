@@ -1,13 +1,6 @@
 ---
-title: 'TypeError: Reduce of empty array with no initial value'
+title: "TypeError: Reduce of empty array with no initial value"
 slug: Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value
-tags:
-  - Error
-  - JavaScript
-  - Reference
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value
-original_slug: Web/JavaScript/Reference/Erreurs/Reduce_of_empty_array_with_no_initial_value
 ---
 
 {{jsSidebar("Errors")}}
@@ -39,15 +32,19 @@ Ce problème se produit lorsqu'on combine une méthode de filtrage ({{jsxref("Ar
 
 ```js example-bad
 var ints = [0, -1, -2, -3, -4, -5];
-ints.filter(x => x > 0)         // cet appel retire tous les éléments
-    .reduce((x, y) => x + y)    // aucun ne peut alors être utilisé comme valeur initiale
+ints
+  .filter((x) => x > 0) // cet appel retire tous les éléments
+  .reduce((x, y) => x + y); // aucun ne peut alors être utilisé comme valeur initiale
 ```
 
 Cela peut également se produire si on utilise un sélecteur avec une coquille ou que la liste contient un nombre d'élément inattendu:
 
 ```js example-bad
 var names = document.getElementsByClassName("names");
-var name_list = Array.prototype.reduce.call(names, (acc, name) => acc + ", " + name);
+var name_list = Array.prototype.reduce.call(
+  names,
+  (acc, name) => acc + ", " + name,
+);
 ```
 
 ### Exemples valides
@@ -58,8 +55,9 @@ On peut fournir une valeur initiale qui soit l'élément neutre de la réduction
 
 ```js example-good
 var ints = [0, -1, -2, -3, -4, -5];
-ints.filter(x => x > 0)         // removes all elements
-    .reduce((x, y) => x + y, 0) // the initial value is the neutral element of the addition
+ints
+  .filter((x) => x > 0) // removes all elements
+  .reduce((x, y) => x + y, 0); // the initial value is the neutral element of the addition
 ```
 
 On peut également gérer le cas où le tableau est vide, avant d'appeler `reduce` ou dans le _callback_ après avoir ajouté une valeur initiale.
@@ -69,14 +67,22 @@ var names = document.getElementsByClassName("names");
 
 var nameList1 = "";
 if (names1.length >= 1)
-  nameList1 = Array.prototype.reduce.call(names, (acc, name) => acc + ", " + name);
+  nameList1 = Array.prototype.reduce.call(
+    names,
+    (acc, name) => acc + ", " + name,
+  );
 // nameList1 == "" lorsque names est vide
 
-var nameList2 = Array.prototype.reduce.call(names, (acc, name) => {
-  if (acc == "") // la valeur initiale
-    return name;
-  return acc + ", " + name;
-}, "");
+var nameList2 = Array.prototype.reduce.call(
+  names,
+  (acc, name) => {
+    if (acc == "")
+      // la valeur initiale
+      return name;
+    return acc + ", " + name;
+  },
+  "",
+);
 // nameList2 == "" lorsque names est vide
 ```
 

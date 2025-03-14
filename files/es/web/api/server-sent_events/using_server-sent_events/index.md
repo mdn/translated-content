@@ -1,35 +1,36 @@
 ---
 title: Utilizando eventos enviados por el servidor (server-sent event)
 slug: Web/API/Server-sent_events/Using_server-sent_events
-translation_of: Web/API/Server-sent_events/Using_server-sent_events
-original_slug: Server-sent_events/utilizando_server_sent_events_sse
 ---
+
+{{DefaultAPISidebar("Server Sent Events")}}
 
 Desarrollar una aplicación web que utilice server-sent events es muy fácil. Solo necesitas un pequeño código del lado del servidor para transmitir los eventos a la aplicación web, pero del lado de la aplicacion web se trabaja prácticamente igual que con cualquier otro tipo de eventos.
 
-Puedes ver un ejemplo [aqui](/samples/sse/) (actualmente no funciona).
+Puedes ver un ejemplo [aqui](https://mdn.dev/archives/media/samples/sse/) (actualmente no funciona).
 
 [ejemplo2](http://www.w3schools.com/html/tryit.asp?filename=tryhtml5_sse)
 
 ## Recibiendo eventos desde el servidor
 
-El server-sent event API está contenido en la interfaz [`EventSource`](/en/Server-sent_events/EventSource); para abrir una conexión al servidor para recibir eventos de él. Se crea un nuevo objeto new [EventSource](/en/Server-sent_events/EventSource), especificando el URI de un script que genera los eventos, Por ejemplo:
+El server-sent event API está contenido en la interfaz [`EventSource`](/en-US/Server-sent_events/EventSource); para abrir una conexión al servidor para recibir eventos de él. Se crea un nuevo objeto new [EventSource](/en-US/Server-sent_events/EventSource), especificando el URI de un script que genera los eventos, Por ejemplo:
 
 ```js
 var evtSource = new EventSource("ssedemo.php");
 ```
 
-> **Nota:** Aunque todavía no es parte de la norma, EventSource es soportado por Firefox 11 y posteriores. Se espera que pronto forme parte del estándar.
+> [!NOTE]
+> Aunque todavía no es parte de la norma, EventSource es soportado por Firefox 11 y posteriores. Se espera que pronto forme parte del estándar.
 
 Una vez que ha instanciado el origen del evento, puede comenzar a escuchar los mensajes:
 
 ```js
-evtSource.onmessage = function(e) {
+evtSource.onmessage = function (e) {
   var newElement = document.createElement("li");
 
   newElement.innerHTML = "message: " + e.data;
   eventList.appendChild(newElement);
-}
+};
 ```
 
 Este codigo escucha todos los mensajes entrantes (Es decir, todos los avisos del servidor, que no tienen un campo de eventos en ellos) y anexa texto del mensaje a la lista en el documento HTML.
@@ -37,13 +38,17 @@ Este codigo escucha todos los mensajes entrantes (Es decir, todos los avisos del
 También puedes escuchar eventos, usando `addEventListener()`:
 
 ```js
-evtSource.addEventListener("ping", function(e) {
-  var newElement = document.createElement("li");
+evtSource.addEventListener(
+  "ping",
+  function (e) {
+    var newElement = document.createElement("li");
 
-  var obj = JSON.parse(e.data);
-  newElement.innerHTML = "ping at " + obj.time;
-  eventList.appendChild(newElement);
-}, false);
+    var obj = JSON.parse(e.data);
+    newElement.innerHTML = "ping at " + obj.time;
+    eventList.appendChild(newElement);
+  },
+  false,
+);
 ```
 
 Este código es similar, excepto que este se activa cada vez que el servidor envia un mensaje con el campo de evento "ping"; entonces se analiza el JSON en el campo de datos y retorna esa informacion.
@@ -89,7 +94,7 @@ Se genera un evento cada segundo, con el evento "ping". Los datos de cada evento
 Cuando se producen problemas (como un tiempo de espera o problemas relacionados con el control de acceso), se genera un evento de error. Puedes tomar acción sobre esto al implementar una devolución de llamada al objeto EventSource:
 
 ```js
-evtSource.onerror = function(e) {
+evtSource.onerror = function (e) {
   alert("EventSource failed.");
 };
 ```
@@ -108,7 +113,8 @@ evtSource.close();
 
 El flujo de eventos es una corriente sencilla de datos de texto, que deben ser codificados usando UTF-8. Los mensajes en el flujo de eventos están separados por un par de caracteres de salto de línea. Si hay un símbolo de dos puntos como primer caracter de una línea, se entiende que es un comentario y es ignorado.
 
-> **Nota:** La línea de comentario se puede usar para prevenir que la conexión se agote por tiempo (timeout); un sevidor puede enviar periódicamente un comentario para mantener viva la conexión.
+> [!NOTE]
+> La línea de comentario se puede usar para prevenir que la conexión se agote por tiempo (timeout); un sevidor puede enviar periódicamente un comentario para mantener viva la conexión.
 
 Cada mensaje consiste en una o más líneas de texto que enumeran los campos para ese mensaje. Cada campo está representado por el nombre del campo, seguido por los datos de texto para el valor de ese campo.
 
@@ -134,7 +140,8 @@ Los siguientes nombres de campo son definidos por la especificación:
 
 Se omiten todos los demas nombres de campo.
 
-> **Nota:** Si una línea no contiene dos puntos, la línea entera se tratara como un nombre de campo, con una cadena de valor vacio.
+> [!NOTE]
+> Si una línea no contiene dos puntos, la línea entera se tratara como un nombre de campo, con una cadena de valor vacio.
 
 ### Ejemplos
 
@@ -190,4 +197,4 @@ data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.EventSource")}}
+{{Compat}}

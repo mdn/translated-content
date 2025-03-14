@@ -1,6 +1,9 @@
 ---
-title: HTMLImageElement.name
+title: "HTMLImageElement: name プロパティ"
+short-title: name
 slug: Web/API/HTMLImageElement/name
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
@@ -11,7 +14,8 @@ slug: Web/API/HTMLImageElement/name
 
 画像を参照するための名前を指定する文字列。
 
-> **警告:** このプロパティは非推奨であり、後方互換性のために仕様に残っているだけです。このプロパティは {{htmlattrxref("id")}} と同じように機能するため、代わりにこれを使用することができますし、また使用すべきです。
+> [!WARNING]
+> このプロパティは非推奨であり、後方互換性のために仕様に残っているだけです。このプロパティは [`id`](/ja/docs/Web/HTML/Global_attributes#id) と同じように機能するため、代わりにこれを使用することができますし、また使用すべきです。
 
 ## 仕様書
 

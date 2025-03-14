@@ -23,7 +23,7 @@ O `<display-outside>` O valor é definido usando uma palavra-chave da lista abai
 
     Os elementos de entrada funcionam como linhas ou blocos, dependendo dos elementos circundantes. Ou seja: Se a caixa de introdução contém uma caixa de bloco, o mesmo que bloco. Se uma caixa de bloco segue a caixa de introdução, a caixa de introdução torna-se a primeira caixa embutida da caixa de bloco. Se uma caixa embutida se seguir, a caixa de introdução se tornará uma caixa de bloco.
 
-> **Note:** **Nota: Navegadores que suportam a sintaxe de dois valores, encontrando apenas o valor externo, como quando**`display: block` ou `display: inline` especificado, definirá o valor interno como`flow`. Isso resultará no comportamento esperado; por exemplo, se você especificar um elemento a ser bloco, seria de esperar que os filhos desse elemento participassem do layout de fluxo normal em bloco e em linha.
+> **Nota:**: Navegadores que suportam a sintaxe de dois valores, encontrando apenas o valor externo, como quando `display: block` ou `display: inline` especificado, definirá o valor interno como`flow`. Isso resultará no comportamento esperado; por exemplo, se você especificar um elemento a ser bloco, seria de esperar que os filhos desse elemento participassem do layout de fluxo normal em bloco e em linha.
 
 ### Sintaxe formal
 
@@ -36,16 +36,15 @@ No exemplo a seguir, os elementos de extensão (normalmente exibidos como elemen
 ### HTML
 
 ```html
-<span>span 1</span>
-<span>span 2</span>
+<span>span 1</span> <span>span 2</span>
 ```
 
 ### CSS
 
 ```css
 span {
-    display: block;
-    border: 1px solid rebeccapurple;
+  display: block;
+  border: 1px solid rebeccapurple;
 }
 ```
 
@@ -55,7 +54,7 @@ span {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.display.display-outside", 10)}}
+{{Compat}}
 
 ## Veja também
 
@@ -68,4 +67,4 @@ span {
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
 - [Layout de bloco e embutido no fluxo normal](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [Contextos de formatação explicados](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained)
+- [Contextos de formatação explicados](/pt-BR/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)

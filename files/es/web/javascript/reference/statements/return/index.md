@@ -1,11 +1,6 @@
 ---
 title: return
 slug: Web/JavaScript/Reference/Statements/return
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/return
-original_slug: Web/JavaScript/Referencia/Sentencias/return
 ---
 
 {{jsSidebar("Statements")}}
@@ -40,20 +35,20 @@ return x + y / 3;
 La instrucción de retorno se ve afectada por la inserción automática de punto y coma (ASI). No se permite el terminador de línea entre la palabra clave de retorno y la expresión.
 
 ```js
-return
+return;
 a + b;
 ```
 
 se transforma por ASI en:
 
 ```html
-return;
-a + b;
+return; a + b;
 ```
 
 La consola le advertirá "código inalcanzable después de la declaración de retorno".
 
-> **Nota:** A partir de Gecko 40 (Firefox 40 / Thunderbird 40 / SeaMonkey 2.37), una advertencia es mostrada en la consola si se encuentra código inalcanzable despues de una instrucción return.
+> [!NOTE]
+> A partir de Gecko 40 (Firefox 40 / Thunderbird 40 / SeaMonkey 2.37), una advertencia es mostrada en la consola si se encuentra código inalcanzable despues de una instrucción return.
 
 ## Ejemplos
 
@@ -63,10 +58,10 @@ La siguiente función devuelve el cuadrado de su argumento, `x`, donde `x` es un
 
 ```js
 function cuadrado(x) {
-   return x * x;
+  return x * x;
 }
 ```
 
 ## Vea También
 
-- [Funciones](/es/docs/Web/JavaScript/Referencia/Funciones)
+- [Funciones](/es/docs/Web/JavaScript/Reference/Functions)

@@ -1,11 +1,11 @@
 ---
 title: Gamepad.id
 slug: Web/API/Gamepad/id
-translation_of: Web/API/Gamepad/id
 ---
+
 {{APIRef("Gamepad API")}}
 
-Свойство** `Gamepad.id`** интерфейса {{domxref("Gamepad") }} возвращает строку, содержащую некоторую информацию о контроллере.
+Свойство **`Gamepad.id`** интерфейса {{domxref("Gamepad") }} возвращает строку, содержащую некоторую информацию о контроллере.
 
 Существующий синтаксис не стандартизирован, но в Firefox эта строка представляет собой три значения, разделённые тире (`-`):
 
@@ -25,9 +25,10 @@ readonly    attribute DOMString           id;
 ## Пример
 
 ```js
-window.addEventListener("gamepadconnected", function() {
+window.addEventListener("gamepadconnected", function () {
   var gp = navigator.getGamepads()[0];
-  gamepadInfo.innerHTML = "Gamepad connected at index " + gp.index + ": " + gp.id + ".";
+  gamepadInfo.innerHTML =
+    "Gamepad connected at index " + gp.index + ": " + gp.id + ".";
 });
 ```
 
@@ -45,4 +46,4 @@ window.addEventListener("gamepadconnected", function() {
 
 ## Смотрите также
 
-[Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)
+[Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

@@ -1,7 +1,6 @@
 ---
 title: WebIDL ファイルに含まれる情報
-slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
-original_slug: MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
+slug: MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file
 ---
 
 {{MDNSidebar}}
@@ -20,17 +19,18 @@ WebIDL は複数の場所で見つけることができます。
 
   - Gecko では、すべての WebIDL ファイルは 1 つのディレクトリー <https://dxr.mozilla.org/mozilla-central/source/dom/webidl/> にまとめられています。拡張子は `.webidl` です。Gecko のソースツリーには他にも `*.idl` ファイルがありますが、それらは WebIDL ではないので無視してかまいません。古いバージョンの Gecko には WebIDL が散在しており、 WebIDL の代わりに Mozilla の IDL を使ってウェブインターフェイスを記述しているものもありますが、最近の Gecko のコードでは問題ありません。
   - Chromium では、ソースコードの [`renderer/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/) ディレクトリーのサブツリーである [`core/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/core/) と [`modules/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/) の 2 ヶ所に配置されます。 Chromium のソースコードには、他の場所にも IDL ファイルがありますが、これらはテストシステムの一部であり、API の実装には関係ありません。
-  - WebCore の場合は、ソースコードのあちこちに散らばっているので、もう少し掘り下げる必要があります。例：<https://github.com/WebKit/webkit/blob/master/Source/WebCore/html/DOMTokenList.idl>
+  - WebCore の場合は、ソースコードのあちこちに散らばっているので、もう少し掘り下げる必要があります。例：<https://github.com/WebKit/webkit/blob/main/Source/WebCore/html/DOMTokenList.idl>
 
 ## WebIDL のさまざまな方言
 
-WebIDL は[その仕様書](https://heycam.github.io/webidl/)で定義されています。しかし、より多くの情報を伝えるために拡張できるように設計されており、 ブラウザーのベンダーはそれを行っています。
+WebIDL は[その仕様書](https://webidl.spec.whatwg.org/)で定義されています。しかし、より多くの情報を伝えるために拡張できるように設計されており、 ブラウザーのベンダーはそれを行っています。
 
 - Gecko については、 Mozilla がその方言である WebIDL の[ドキュメント](https://firefox-source-docs.mozilla.org/dom/webIdlBindings/index.html) を作成しました。
 - Chromium については、 Google もその拡張機能を説明する[ドキュメント](https://www.chromium.org/blink/webidl/)を作成しました。
 - WebCore については、Apple もその方言に関する[ページ](https://trac.webkit.org/wiki/WebKitIDL)を公開しています。
 
-> **メモ:** ここでは、記事を書くときに最も役に立つ WebIDL のサブセットのみを説明します。実装者にとって便利なアノテーションは他にもたくさんあります。完全な概要を知るには、上記のリンク先の 4 つの記事を参照してください。
+> [!NOTE]
+> ここでは、記事を書くときに最も役に立つ WebIDL のサブセットのみを説明します。実装者にとって便利なアノテーションは他にもたくさんあります。完全な概要を知るには、上記のリンク先の 4 つの記事を参照してください。
 
 ## インターフェイス
 
@@ -40,7 +40,7 @@ WebIDL は[その仕様書](https://heycam.github.io/webidl/)で定義されて�
 
 インターフェイス名は、キーワード `interface` の後、次の開き括弧 (`'{'`) またはコロン (`':'`) の前に表示される文字列です。
 
-```js
+```webidl
 interface URL {};
 ```
 
@@ -50,7 +50,7 @@ WebIDL インターフェイスは、真のインターフェイスであれ、�
 
 あるインターフェイスの親がある場合は、インターフェイス名の後にコロン (`':'`) をつけて定義します。 1 つのインターフェイスにつき、親は 1 つだけ存在することができます。
 
-```js
+```webidl
 interface HTMLMediaElement : HTMLElement {…}
 ```
 
@@ -62,7 +62,7 @@ interface HTMLMediaElement : HTMLElement {…}
 
 2019 年 9 月に、ミックスインの構文が更新されています。新しい構文では、 `interface mixin` を使用して、ミックスインのインターフェイスを以下のように定義します。
 
-```js
+```webidl
 interface MyInterface {};
 
 interface mixin MyMixin {
@@ -72,13 +72,13 @@ interface mixin MyMixin {
 
 そして、 `includes` キーワードを使用して、ミックスインの内部で定義されたプロパティがインターフェイス上で利用可能であることを表明します。
 
-```js
+```webidl
 MyInterface includes MyMixin;
 ```
 
 ミックスインは継承をせず、他のミックスインを取り込むことはできません。しかし、パーシャルをサポートしているので、次のようにすることができます。
 
-```js
+```webidl
 interface MyInterface {};
 interface mixin MyMixin {};
 
@@ -92,8 +92,7 @@ MyInterface includes MyMixin;
 MDN では、ドキュメント作成にあたって、ミックスインを非表示にしています。これらは抽象的で仕様のみの構成要素です。
 ブラウザーのコンソールで見ることはできませんし、メソッドやプロパティが実際のどのインターフェイスで実装されているかを知る方がより有用です。
 
-IDL で [HTMLHyperlinkElementUtils](https://html.spec.whatwg.org/multipage/links.html#htmlhyperlinkelementutils) のようなミックスインに遭遇した場合。
-そのミックスインを実装しているインターフェイスを探してください。
+IDL で [HTMLHyperlinkElementUtils](https://html.spec.whatwg.org/multipage/links.html#htmlhyperlinkelementutils) のようなミックスインに遭遇した場合、そのミックスインを実装しているインターフェイスを探してください。
 [HTMLAnchorElement](https://html.spec.whatwg.org/multipage/text-level-semantics.html#htmlanchorelement) のように、ミックスインを実装するインターフェイスを探し、それらのインターフェイス上で直接ミックスインのメンバーを文書化します。
 
 実際には、 `HTMLHyperlinkElementUtils` を文書化するのではなく、 [`HTMLAnchorElement`](/ja/docs/Web/API/HTMLAnchorElement) や [`HTMLAreaElement`](/ja/docs/Web/API/HTMLAreaElement) のような具体的なインターフェイスにドキュメントが追加されます。
@@ -103,20 +102,20 @@ IDL で [HTMLHyperlinkElementUtils](https://html.spec.whatwg.org/multipage/links
 - [`HTMLAnchorElement.hash`](/ja/docs/Web/API/HTMLAnchorElement/hash)
 - [`HTMLAreaElement.hash`](/ja/docs/Web/API/HTMLAreaElement/hash)
 
-互換性データについては、 [BCD におけるミックスインのデータガイドライン](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines.md)を参照してください。
+互換性データについては、 [BCD におけるミックスインのデータガイドライン](https://github.com/mdn/browser-compat-data/blob/main/docs/index.md)を参照してください。
 
 ### 古いミックスインの構文
 
 古いスタイルの WebIDL ミックスインの構文では、まだいくつかの場所で見かけるかもしれませんが、ミックスインは `[NoInterfaceObject]` という注釈で接頭辞を付けます。
 
-```js
+```webidl
 [NoInterfaceObject]
    interface MyMixin {…}
 ```
 
 旧来の構文では、インターフェイスに実装されたミックスインは `implements` キーワードで定義します。
 
-```js
+```webidl
 MyInterface implements MyMixin;
 ```
 
@@ -124,7 +123,7 @@ MyInterface implements MyMixin;
 
 ウェブワーカー（任意の型）および Window スコープでの可用性は、注釈 `[Exposed=(Window,Worker)]` を使用して定義します。この注釈は一緒に掲載されている部分インターフェイスに適用されます。
 
-```js
+```webidl
 [Exposed=(Window,Worker)]
 interface Performance {
    [DependsOn=DeviceState, Affects=Nothing]
@@ -157,11 +156,11 @@ partial interface Performance {
 - `ServiceWorker`
   - : この部分インターフェイスは {{domxref('ServiceWorkerGlobalScope')}} のみで利用可能です。
 
-`System` のような別の値も可能ですが、これには[特別な意味](/ja/docs/Mozilla/WebIDL_bindings#exposed)があり、文書化する必要はありません。
+`System` のような別の値も可能ですが、これには[特別な意味](https://firefox-source-docs.mozilla.org/dom/webIdlBindings/index.html#custom-extended-attributes)があり、文書化する必要はありません。
 
 これらの可能な値は、それ自体が WebIDL ファイルで定義されていることに注意してください。インターフェイスは `[Global=xyz]` という注釈を持つことができます。これは、このタイプのオブジェクトがグローバルスコープとして使用される場合、 `[Exposed]` の値が `xyz` である インターフェイス、プロパティ、メソッドがすべて利用可能になることを意味します。
 
-```js
+```webidl
 [Global=(Worker,DedicatedWorker), Exposed=DedicatedWorker]
 interface DedicatedWorkerGlobalScope : WorkerGlobalScope {…}
 ```
@@ -170,11 +169,12 @@ interface DedicatedWorkerGlobalScope : WorkerGlobalScope {…}
 
 ### 設定
 
-> **メモ:** この情報は Gecko 固有のものであり、ブラウザー互換性 の節でのみ使用されるべきものです。
+> [!NOTE]
+> この情報は Gecko 固有のものであり、ブラウザー互換性 の節でのみ使用されるべきものです。
 
 Gecko では、コンストラクター、プロパティ、メソッドを含む部分インターフェイスの可用性は、プリファレンス（通常 "pref" と呼ばれます）によって制御されることがあります。これは WebIDL でもマークされています。
 
-```js
+```webidl
 [Pref="media.webspeech.synth.enabled"]
 interface SpeechSynthesis {
    readonly attribute boolean pending;
@@ -191,7 +191,7 @@ interface SpeechSynthesis {
 
 インターフェイスによっては、ブラウザー内部システムコード、またはクロームコードでのみ利用可能な機能がある場合があります。これを示すために、 Gecko では \[ChromeOnly] を使用します。例えば、次の例の propName プロパティは、クロームコード経由でのみ呼び出せます。
 
-```js
+```webidl
 interface MyInterface {
   [ChromeOnly]
   readonly attribute PropValue propName;
@@ -204,7 +204,7 @@ interface MyInterface {
 
 ### プロパティの名前
 
-```js
+```webidl
 readonly attribute MediaError? error;
 ```
 
@@ -212,7 +212,7 @@ readonly attribute MediaError? error;
 
 ### プロパティの型
 
-```js
+```webidl
 readonly attribute MediaError? error;
 ```
 
@@ -220,7 +220,7 @@ readonly attribute MediaError? error;
 
 ### プロパティへの書き込み権限
 
-```js
+```webidl
 readonly attribute MediaError? error;
 ```
 
@@ -228,25 +228,25 @@ readonly attribute MediaError? error;
 
 - インターフェイスでは、その定義用語の横に \{{ReadOnlyInline}} マクロを追加してください。
 - そのページの最初の文章で、説明を次のように始めてください。 _**HTMLMediaElement.error`** プロパティは読み取り専用で..._。
-- 自身のページに `Read-only` タグを追加してください。
 - インターフェイスページの説明を _...を返します_ で始めてください。
 
-> **メモ:** 値を「返す」と表現できるのは、読み取り専用のプロパティのみです。読み取り専用でないプロパティは、値を設定するために使用することもできます。
+> [!NOTE]
+> 値を「返す」と表現できるのは、読み取り専用のプロパティのみです。読み取り専用でないプロパティは、値を設定するために使用することもできます。
 
 ### 例外の発生
 
-```js
+```webidl
 [SetterThrows]
             attribute DOMString src;
 ```
 
 ある値が不正である場合など、新しい値を設定すると例外が発生することがあります。これは `[SetterThrows]` の注釈でマークします。このような場合、プロパティページの構文の節に、例外の項がなければなりません。例外のリストとそれが発生する条件は、その API の仕様にテキスト情報として記載されています。
 
-例外の中には、明示的にマークされていないものの、JavaScript のバインディングによって定義されているものがあることに注意してください。（JavaScript の文字列にマッピングされている）[不正な列挙値を設定しようとした場合](https://heycam.github.io/webidl/#es-enumeration)は {{jsxref('TypeError')}} 例外が発生します。これは文書化しなければなりませんが、WebIDL 文書では暗黙のうちにマークされているだけです。
+例外の中には、明示的にマークされていないものの、JavaScript のバインディングによって定義されているものがあることに注意してください。（JavaScript の文字列にマッピングされている）[不正な列挙値を設定しようとした場合](https://webidl.spec.whatwg.org/#es-enumeration)は {{jsxref('TypeError')}} 例外が発生します。これは文書化しなければなりませんが、WebIDL 文書では暗黙のうちにマークされているだけです。
 
 ゲッターが例外を発生させるのは珍しいことですが、発生する場合がいくつかあります。この場合、 `[GetterThrows]` 注釈が使用されます。ここでも、プロパティページの構文の節に、例外の項がなければなりません。
 
-```js
+```webidl
 partial interface Blob {
   [GetterThrows]
   readonly attribute unsigned long long size;
@@ -259,7 +259,7 @@ Webidl の意味論に従わない場合、`[SetterThrows]` や `[GetterThrows]`
 
 大抵は互換性のためですが、この動作は時に煩わしいものです。これを防ぐために、無操作なセッターを作る（つまり、プロパティを新しい値に設定しようとする試みを黙って無視する）ために、 `[LenientSetter]` 注釈を使用することができます。
 
-```js
+```webidl
 partial interface Document {
   [LenientSetter]
   readonly attribute boolean fullscreen;
@@ -280,11 +280,12 @@ _このプロパティは読み取り専用ですが、変更されても（厳�
 
 インターフェイスオブジェクトの場合、既定では、内部オブジェクトへの参照を返すことになっています。このことは、インターフェイスページの短い説明と、特定のサブページの説明の両方で言及しなければなりません。
 
-> **メモ:** オブジェクトを返すプロパティで使われるキーワード `readonly` は、参照に適用されるものです（内部のオブジェクトは変更できません）。返されたオブジェクトのプロパティは、関連するインターフェイスで読み取り専用とされていても、変更することができます。
+> [!NOTE]
+> オブジェクトを返すプロパティで使われるキーワード `readonly` は、参照に適用されるものです（内部のオブジェクトは変更できません）。返されたオブジェクトのプロパティは、関連するインターフェイスで読み取り専用とされていても、変更することができます。
 
 API は時として、*新しい*オブジェクト、あるいは内部のオブジェクトの*コピー*を返さなければなりません。このような場合、 WebIDL では `[NewObject]` 注釈を使用します。
 
-```js
+```webidl
 [NewObject]
    readonly attribute TimeRanges buffered;
 ```
@@ -295,14 +296,14 @@ _**`HTMLMediaElement.buffered`** プロパティは読み取り専用で、新�
 
 および
 
-- _\\{{domxref("HTMLMediaElement.buffered")}}\\{{readonlyinline}}_
+- _\\{{domxref("HTMLMediaElement.buffered")}}\\{{ReadOnlyInline}}_
   - : _新しい \\{{domxref("TimeRanges")}} オブジェクトを返します …_
 
 コレクションオブジェクトへの参照（`HTMLCollection`, `HTMLFormElementsCollection`, `HTMLOptionsCollection` など、常に `[NewObject]` を含まない）の場合、そのオブジェクトへの変更が、返された参照を通して利用できることを明確にします。このことを示すために、インターフェイスの説明とサブページの両方で、コレクションを**生きた** `HTMLCollection` （または `HTMLFormElementsCollections` や `HTMLOptionsCollection`）として修飾しています。
 
 例えば、
 
-- \\{{domxref("HTMLFormElement.elements")}}\\{{readonlyinline}}
+- \\{{domxref("HTMLFormElement.elements")}}\\{{ReadOnlyInline}}
   - : 生きた \\{{domxref("HTMLFormControlsCollection")}} を返します…
 
 ### ワーカーでの使用可否
@@ -313,18 +314,20 @@ _**`HTMLMediaElement.buffered`** プロパティは読み取り専用で、新�
 
 ### 環境設定
 
-> **メモ:** この情報は Gecko 固有のものであり、ブラウザー互換性の節でのみ使用すべきものです。
+> [!NOTE]
+> この情報は Gecko 固有のものであり、ブラウザー互換性の節でのみ使用すべきものです。
 
 Gecko では、いくつかのプロパティの使用可否は、環境設定によって制御されている場合があります。これは WebIDL でもマークされています。
 
-```js
+```webidl
 [Pref="media.webvtt.enabled"]
     readonly attribute TextTrackList? textTracks;
 ```
 
 ここで `media.webvtt.enabled` は `textTracks` プロパティを制御します。
 
-> **メモ:** 環境設定の既定値は、 WebIDL では直接利用できません（Gecko を使用する製品ごとに異なる場合があります）。
+> [!NOTE]
+> 環境設定の既定値は、 WebIDL では直接利用できません（Gecko を使用する製品ごとに異なる場合があります）。
 
 ## メソッド
 
@@ -332,7 +335,7 @@ Gecko では、いくつかのプロパティの使用可否は、環境設定�
 
 ### メソッド名
 
-```js
+```webidl
 DOMString canPlayType(DOMString type);
 ```
 
@@ -346,28 +349,28 @@ TextTrack addTextTrack(TextTrackKind kind,
                        optional DOMString language = "");
 ```
 
-メソッドの引数は、メソッドサブページの構文の節に記載されています。 WebIDL では、括弧の間にカンマで区切られたリストとして順番に記載されています。それぞれの引数には名前（上記参照）と型（例：`'？'`は `null`値が有効であることを意味します）があります。マークされている場合、引数をメソッド呼び出しに含めることは任意であり、構文の節に記載する際に  \\{{OptionalInline}} フラグを指定する必要があります。引数の既定値は、等号 (`'='`) の後に表示されます。
+メソッドの引数は、メソッドサブページの構文の節に記載されています。 WebIDL では、括弧の間にカンマで区切られたリストとして順番に記載されています。それぞれの引数には名前（上記参照）と型（例：`'？'`は `null`値が有効であることを意味します）があります。マークされている場合、引数をメソッド呼び出しに含めることは任意であり、構文の節に記載する際に \\{{OptionalInline}} フラグを指定する必要があります。引数の既定値は、等号 (`'='`) の後に表示されます。
 
 ### 返値の型
 
-```js
+```webidl
 DOMString canPlayType(DOMString type);
 ```
 
-返値の型は括弧の中で最初に示します。上記の場合、値は `DOMString` 型のオブジェクトです。疑問符 (`'?'`) が続く場合、 `null` という値も返すことができ、ドキュメントではこれがどのような場合に起こり得るかを説明しなければなりません。このように疑問符がない場合、その返値は `null` になることはありません。
+返値の型はメソッド名の前に示します。上記の場合、値は `DOMString` 型のオブジェクトです。返値に疑問符 (`'?'`) が続いた場合、 `null` という値も返すことができ、ドキュメントではこれがどのような場合に起こり得るかを説明しなければなりません。このように疑問符がない場合、その返値は `null` になることはありません。
 
-キーワード `void` は、返値が存在しないことを意味します。これは返値の型ではありません。WebIDL のエントリが `void` と書かれている場合、ドキュメントの返値の節にはシンプルに「なし」だけが書かれているはずです。
+返値がキーワード `void` の場合は、返値が存在しないことを意味します。これは返値の型ではありません。WebIDL のエントリーが `void` と書かれている場合、ドキュメントの返値の節にはシンプルに「なし (\{{jsxref("undefined")}})。」と示されているはずです。
 
 ### 例外の発生
 
-```js
+```webidl
 [Throws]
    void fastSeek(double time);
 ```
 
 いくつかのメソッドは例外を投げることができます。これは `[Throws]` という注釈でマークされます。このような場合、メソッドページの構文の節に例外の項がなければなりません。例外のリストと例外を発生させる条件は、その API の仕様にテキスト情報として記載されています。
 
-例外の中には、明示的にマークされていないものの、 JavaScript のバインディングによって定義されているものもあることに注意してください。[不正な列挙値を設定しようとした場合](https://heycam.github.io/webidl/#es-enumeration) (JavaScript の文字列にマッピングされます）は文書化する必要がありますが、WebIDL 文書では暗黙のうちにマークされているだけです。
+例外の中には、明示的にマークされていないものの、 JavaScript のバインディングによって定義されているものもあることに注意してください。[不正な列挙値を設定しようとした場合](https://webidl.spec.whatwg.org/#es-enumeration) （JavaScript の文字列にマッピングされます）は文書化する必要がありますが、WebIDL 文書では暗黙のうちにマークされているだけです。
 
 これらの[例外の節](/ja/docs/Web/API/SubtleCrypto/importKey#例外)のいずれかを見てみてください。
 
@@ -379,11 +382,12 @@ DOMString canPlayType(DOMString type);
 
 ### 環境設定
 
-> **メモ:** この情報は Gecko 固有のものであり、ブラウザーの互換性の節でのみ使用するようにしてください。
+> [!NOTE]
+> この情報は Gecko 固有のものであり、ブラウザーの互換性の節でのみ使用するようにしてください。
 
-Gecko では、いくつかのプロパティの利用可否は環境設定によって制御される場合があります。これは WebIDL でもマークされています。
+Gecko では、いくつかのメソッドの利用可否は環境設定によって制御される場合があります。これは WebIDL でもマークされています。
 
-```js
+```webidl
 [Pref="media.webvtt.enabled"]
    TextTrack addTextTrack(TextTrackKind kind,
                           optional DOMString label = "",
@@ -392,7 +396,8 @@ Gecko では、いくつかのプロパティの利用可否は環境設定に�
 
 ここでは `media.webvtt.enabled` が `addTextTrack()` メソッドを制御しています。
 
-> **メモ:** 環境設定の既定値は、WebIDL では直接利用できません（Gecko を使用する製品ごとに異なる場合があります）。
+> [!NOTE]
+> 環境設定の既定値は、WebIDL では直接利用できません（Gecko を使用する製品ごとに異なる場合があります）。
 
 ## 特殊なメソッド
 
@@ -402,7 +407,7 @@ Gecko では、いくつかのプロパティの利用可否は環境設定に�
 
 文字列化子とは、あるインターフェイスに基づくオブジェクトが、文字列を期待するコンテキストでどのように解決されるかを指定するものです。（[文字列化子](#文字列化子)の節を参照してください。）さらに、このキーワードは `toString()` に対応付けられ、次のように定義されます。
 
-```js
+```webidl
 stringifier;
 ```
 
@@ -410,74 +415,75 @@ stringifier;
 
 JSON 化子は `toJSON()` に対応付けられ、次のように定義されます。
 
-```js
+```webidl
 jsonifier; // Gecko 版
 serializer; // 標準版
 ```
 
 `toJSON()` メソッドは他のインターフェイスのメソッドと同様に掲載され、独自のサブページがあります（例: {{domxref("Performance.toJSON()") }}）。
 
-> **メモ:** WebIDL 仕様では、`jsonifier` の代わりに `serializer` を使用しています。これは Gecko では使われていません。非標準的な、おそらく初期の提案である `jsonifier` だけが mozilla-central で見つかりました。
+> [!NOTE]
+> WebIDL 仕様では、`jsonifier` の代わりに `serializer` を使用しています。これは Gecko では使われていません。非標準的な、おそらく初期の提案である `jsonifier` だけが mozilla-central で見つかりました。
 
-### 反復子風のメソッド
+### イテレーター風のメソッド
 
 インターフェイスは _iterable_ として定義することができます。これは、 `entries()`, `keys()`, `values()`, `forEach()` といったメソッドを持つことを意味します。また、このインターフェイスを実装したオブジェクトに対して {{jsxref("Statements/for...of", "for...of")}} を使用することに対応しています。
 
-反復処理には、*値反復子*と*組反復子*の 2 種類があります。
+反復処理には、*値イテレーター*と*組イテレーター*の 2 種類があります。
 
-#### 値反復子
+#### 値イテレーター
 
-```js
+```webidl
 iterable<valueType>
 ```
 
-この反復子は _valueType_ 型の値に対して反復処理を行います。生成されるメソッドは次のようになります。
+このイテレーターは _valueType_ 型の値に対して反復処理を行います。生成されるメソッドは次のようになります。
 
-- `entries()` は添字（すなわち `unsigned long`）の[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。
-- `values()` は値の[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。
-- `keys()` はキー、すなわち添字（`unsigned long`）の[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。値反復子の場合、 `keys()` と `entries()` は等価です。
-- `forEach()` はキーで、リストの各項目に対応するコールバック関数を呼び出す[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。
+- `entries()` は添字（すなわち `unsigned long`）の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。
+- `values()` は値の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。
+- `keys()` はキー、すなわち添字（`unsigned long`）の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。値イテレーターの場合、 `keys()` と `entries()` は等価です。
+- `forEach()` は、リストの各項目に対応するコールバック関数を実行します。
 
-このような反復子は，`for (var p in object)` という構文を `for (var p in object.entries())` の省略形として使うことを可能にします。インターフェイスの説明の中に、このことに関する文を追加しています。
+このようなイテレーターは，`for (const p in object)` という構文を `for (const p in object.entries())` の省略形として使うことを可能にします。インターフェイスの説明の中に、このことに関する文を追加しています。
 
-> **メモ:** 以下の場合、反復処理する値の組は 2 つの異なる方法で定義することができます。
->
-> 1. webidl ファイルの外側で、それに付随する散文で。このような散文は仕様書にあり、通常、次のように始まります。_"[反復処理する値](https://heycam.github.io/webidl/#dfn-values-to-iterate-over)..."_.
-> 2. webidl ファイルでは、インターフェイスがインデックス付きプロパティに対応している場合、つまり、インターフェイスが `unsigned long` 型の引数を持つ `getter` メソッドを持つ場合、暗黙のうちに、インデックス付きプロパティに対応するようにします。
+- WebIDL ファイルでは、`iterable<valueType>` 表記を用います。例えば {{domxref('DOMTokenList')}} を参照してください。
+- インターフェイスがインデックス付きプロパティに対応している場合、 WebIDL ファイルに暗黙的に記述されます。これはインターフェイスが `unsigned long` 型の引数を持つ `getter` メソッドを持つことが示されます。
+- WebIDL ファイルの外側、付随する散文。このような散文は通常仕様の中に得られ、通常は「[反復処理する値](https://webidl.spec.whatwg.org/#dfn-value-iterator)は…」で始まります。
 
-#### 組反復子
+#### 組イテレーター
 
-```js
+```webidl
 iterable<keyType, valueType>
 ```
 
-この反復子は、_valueType_ 型の値と _keyType_ 型のキーを反復処理します。生成されるメソッドは次のようになります。
+このイテレーターは、_valueType_ 型の値と _keyType_ 型のキー、すなわち値の組を反復処理します。生成されるメソッドは次のようになります。
 
-- `entries()` は（_keyType_ 型の）索引の[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: E{{domxref('FormData.entries()')}}
-- `values()` は値の[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('FormData.values()')}}
-- `keys()` はキーの[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('FormData.keys()')}}
-- Once {{bug(1216751)}} lands, `forEach()`.
+- `entries()` は値の組の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('FormData.entries()')}}
+- `values()` は値の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('FormData.values()')}}
+- `keys()` はキーの[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('FormData.keys()')}}
+- `forEach()` は、指定されたコールバック関数をリストの各項目に対して一度だけ実行します。例えば {{domxref('Headers.forEach()')}} を参照してください。
 
-このようなイテレータを使うと，`for (var p in object)` という構文を， `for (var p in object.entries())` の省略形として使うことができます．インターフェイスの説明の中に、それに関する文を追加します。例: {{domxref('FormData')}}.
+このようなイテレーターを使うと，`for (const p in object)` という構文を， `for (const p in object.entries())` の省略形として使うことができます．インターフェイスの説明の中に、それに関する文を追加します。例: {{domxref('FormData')}}.
 
-> **メモ:** 繰り返す値の組は、 webidl ファイルではなく、それに付随する散文で定義されます。そのような散文は仕様書にあり、通常、次のように始まります。_"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over)..."_ で始まります。
->
-> 例えば、{{domxref('FormData')}}の場合、仕様書の中に次のように書かれています。_"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over) are the [entries](https://xhr.spec.whatwg.org/#concept-formdata-entry) with the key is the [name](https://xhr.spec.whatwg.org/#concept-formdata-entry-name) and the value the [value](https://xhr.spec.whatwg.org/#concept-formdata-entry-value). "_
+反復処理する値のペアは、以下のいずれかの方法で定義します。
+
+- WebIDL ファイルで、`iterable<keyType, valueType>` 表記を使用します。例えば {{domxref('FormData')}} を参照してください。
+- WebIDL ファイルの外側、付随する散文。このような散文は通常仕様の中に得られ、通常は「[反復処理する値の組](https://webidl.spec.whatwg.org/#dfn-value-pairs-to-iterate-over)は…」で始まります。
 
 ### 集合風メソッド
 
 このインターフェイスは _set-like_ として定義することができます。つまり、順序付きの値の集合を表すもので、 `entries()`, `keys()`, `values()`, `forEach(),` と `has()` (`size` 属性も持ちます) のメソッドを持っています。また、このインターフェイスを実装したオブジェクトに対して {{jsxref("Statements/for...of", "for...of")}} を使用することもサポートしています。 set-like には、接頭辞として `readonly` を付けることも、付けないこともできます。read-only でない場合は、セットを変更するためのメソッド `add()`, `clear()`, `delete()` も実装されています。
 
-```js
+```webidl
 setlike<valueType>
 ```
 
 生成されるプロパティは以下の通りです。
 
-- `entries()` はインデックスの[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('NodeList.entries()')}}
-- `values()` は値の[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('NodeList.values()')}}
-- `keys()` はキーの[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('NodeList.keys()')}}
-- `forEach()`
+- `entries()` はインデックスの[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('NodeList.entries()')}}
+- `values()` は値の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('NodeList.values()')}}
+- `keys()` はキーの[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('NodeList.keys()')}}
+- forEach()`は、指定されたコールバック関数をリストの各項目に対して一度だけ実行します。例えば {{domxref('NodeList.forEach()')}} を参照してください。
 
 set-like 宣言の前に read-only が付かない場合、以下のメソッドも生成されます。
 
@@ -485,7 +491,7 @@ set-like 宣言の前に read-only が付かない場合、以下のメソッド
 - `clear()` は集合風構造を空にします。例: {{domxref('FontFaceSet')}} の `.clear()` メソッド
 - `delete()` は項目を取り除きます。例: {{domxref('FontFaceSet')}} の `.delete()` メソッド
 
-このような集合インターフェイスでは、`for (var p in object)` という構文を `for (var p in object.entries())` の省略形として使うこともできます。
+このような集合インターフェイスでは、`for (const p in object)` という構文を `for (const p in object.entries())` の省略形として使うこともできます。
 
 ## 特殊な動作
 
@@ -497,7 +503,7 @@ IDLのメンバーには、適切なページで注意すべき特別な動作�
 
 `stringifier` キーワードが属性名に付随している場合、オブジェクト名を参照することは属性名を参照することと同じ結果になります。次のような IDL を考えてみましょう。
 
-```js
+```webidl
 interface InterfaceIdentifier {
   stringifier attribute DOMString DOMString name;
 };
@@ -512,7 +518,7 @@ console.log(interfaceIdentifier.name);
 
 `stringifier` キーワードを単独で使用した場合、上記のようにインターフェイスのオブジェクトを使用することができますが、その動作はソースコードで定義されています。
 
-```js
+```webidl
 interface InterfaceIdentifier {
   stringifier;
 };
@@ -528,7 +534,7 @@ interface InterfaceIdentifier {
 
 これは、コンストラクターの最も一般的なケースです。与えられたインターフェイス A のコンストラクターは、 `a = new A(parameters);` のように使うことができます。
 
-```js
+```webidl
 [Constructor, Func="MessageChannel::Enabled",
   Exposed=(Window,Worker)]
     interface MessageChannel {…};
@@ -538,7 +544,7 @@ interface InterfaceIdentifier {
 
 無名コンストラクターのもうひとつの例、引数付きのものです。
 
-```js
+```webidl
 [Constructor(DOMString type, optional MessageEventInit eventInitDict),
  Exposed=(Window,Worker,System)]
    interface MessageEvent : Event {…};
@@ -546,7 +552,7 @@ interface InterfaceIdentifier {
 
 また、引数のリストが異なる無名のコンストラクターが複数存在することもあります。すべての構文は、ひとつのサブページで説明されています。
 
-```js
+```webidl
 [Constructor(DOMString url, URL base),
  Constructor(DOMString url, optional DOMString base),
  Exposed=(Window,Worker)]
@@ -555,7 +561,7 @@ interface InterfaceIdentifier {
 
 ### 名前付きコンストラクター
 
-```js
+```webidl
 [NamedConstructor=Image(optional unsigned long width, optional unsigned long height)]
     interface HTMLImageElement : HTMLElement {…
 ```
@@ -571,13 +577,13 @@ interface InterfaceIdentifier {
 ```webidl
 [Constructor(DOMString str)]
     interface MyInterface {
-     // …
+      ...
 };
 ```
 
 新しい仕様では、代わりに `constructor` という名前のメソッドに似た構文を使用し、返値の型を明示的に定義しない、次のような書き方をします。
 
-```js
+```webidl
 interface MyInterface {
   constructor(DOMString str);
 };
@@ -585,7 +591,7 @@ interface MyInterface {
 
 つまり、コンストラクターに拡張属性を指定できるようになり、すべてのコンストラクターが例外を発生することを前提にしなくなりました。コンストラクターが例外を発生する場合は、 `[Throws]` がそのことを示すのに使われます。
 
-```js
+```webidl
 interface MyInterface {
   [Throws] constructor();
 };

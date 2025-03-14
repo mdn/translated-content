@@ -1,7 +1,6 @@
 ---
 title: class
 slug: Web/JavaScript/Reference/Statements/class
-translation_of: Web/JavaScript/Reference/Statements/class
 ---
 
 {{jsSidebar("Statements")}}
@@ -33,7 +32,7 @@ Class declaration не {{Glossary("Hoisting", "поднимается")}} (в о
 ```js
 class Polygon {
   constructor(height, width) {
-    this.name = 'Polygon';
+    this.name = "Polygon";
     this.height = height;
     this.width = width;
   }
@@ -42,29 +41,24 @@ class Polygon {
 class Square extends Polygon {
   constructor(length) {
     super(length, length);
-    this.name = 'Square';
+    this.name = "Square";
   }
 }
 ```
 
-> **Предупреждение:** ### Попытка объявить класс дваждыПереопределение класса с помощью class declaration вызовет ошибку типа. `js class Foo {}; class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared` Та же ошибка будет вызвана, если класс был определён перед использованием class declaration.
+> [!WARNING]
+> Попытка объявить класс дваждыПереопределение класса с помощью class declaration вызовет ошибку типа. `js class Foo {}; class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared` Та же ошибка будет вызвана, если класс был определён перед использованием class declaration.
 >
 > ```js
 > var Foo = class {};
-> class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared
->
-> ```
->
+> class Foo {} // Uncaught TypeError: Identifier 'Foo' has already been declared
 > ```
 
 ## Спецификации
 
-| Спецификация                                                                                 | Статус                       | Комментарий         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}}     | {{Spec2('ES6')}}         | Initial definition. |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -1,11 +1,9 @@
 ---
 title: Propriété (JavaScript)
-slug: Glossary/property/JavaScript
-tags:
-  - Encodage
-  - Glossaire
-translation_of: Glossary/property/JavaScript
+slug: Glossary/Property/JavaScript
 ---
+
+{{GlossarySidebar}}
 
 Une propriété est une caractéristique d'un objet qui décrit souvent des attributs associés à une structure de données. Il existe deux sortes de propriétés : les _Propriétés d'Instance_ qui contiennent des données spécifiques à une instance d'objet donnée, et les _Propriétés Statiques_ qui contiennent les données partagées par toutes les instances d'objet.
 
@@ -15,5 +13,5 @@ Une propriété possède un nom ({{glossary("String", "une chaîne de caractère
 
 ### Culture générale
 
-- [Propriété](https://fr.wikipedia.org/wiki/Propri%C3%A9t%C3%A9_(informatique)) sur Wikipédia
-- [Introduction à JavaScript orienté objet](/fr/docs/Web/JavaScript/Introduction_à_JavaScript_orienté_objet)
+- [Propriété](<https://fr.wikipedia.org/wiki/Propriété_(informatique)>) sur Wikipédia
+- [Introduction à JavaScript orienté objet](/fr/docs/Learn/JavaScript/Objects)

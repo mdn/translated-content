@@ -1,7 +1,6 @@
 ---
 title: clamp()
 slug: Web/CSS/clamp
-original_slug: Web/CSS/clamp()
 ---
 
 {{CSSRef}}
@@ -10,7 +9,28 @@ original_slug: Web/CSS/clamp()
 
 `clamp(MIN, VAL, MAX)` は `{{CSSxRef("max()")}}(MIN, {{CSSxRef("min()")}}(VAL, MAX))` と同等です。
 
-{{EmbedInteractiveExample("pages/css/function-clamp.html")}}
+{{InteractiveExample("CSS Demo: clamp()")}}
+
+```css interactive-example-choice
+font-size: clamp(1rem, 2.5vw, 2rem);
+```
+
+```css interactive-example-choice
+font-size: clamp(1.5rem, 2.5vw, 4rem);
+```
+
+```css interactive-example-choice
+font-size: clamp(1rem, 10vw, 2rem);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    The font-size of this text varies depending on the base font of the page,
+    and the size of the viewport.
+  </div>
+</section>
+```
 
 これらの例のように、フォントの大きさに `clamp()` を使用すると、ビューポートの大きさに合わせてフォントの大きさを設定することができますが、最小フォントサイズを下回ったり、最大フォントサイズを上回ったりすることはありません。これは [Fluid Typography](https://css-tricks.com/snippets/css/fluid-typography/) のコードと同じ効果がありますが、1 行で済み、メディアクエリーも使用しません。
 
@@ -57,9 +77,28 @@ original_slug: Web/CSS/clamp()
 
 ```html
 <h1>Simple responsive test</h1>
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In orci orci, eleifend id risus nec, mattis rutrum velit. Suspendisse fringilla egestas erat eu convallis. Phasellus eu velit ut magna dapibus elementum cursus at ligula. Ut tempus varius nibh, nec auctor sapien iaculis sit amet. Fusce iaculis, libero quis elementum viverra, nulla ante accumsan lectus, sit amet convallis lacus ipsum vel est. Curabitur et urna non est consectetur pulvinar vel id risus. Ut vestibulum, sem in semper aliquet, felis arcu euismod sapien, ac imperdiet massa nisl quis sem. Vestibulum ac elementum felis, in tempor velit. Pellentesque purus ex, mattis at ornare quis, porta condimentum mi. Donec vestibulum ligula vel nulla blandit, quis euismod nulla vestibulum. Suspendisse potenti. Nunc neque mauris, tempor sed facilisis at, ultrices eget nulla. Pellentesque convallis ante nec augue porttitor, id tempus ante luctus.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In orci orci,
+  eleifend id risus nec, mattis rutrum velit. Suspendisse fringilla egestas erat
+  eu convallis. Phasellus eu velit ut magna dapibus elementum cursus at ligula.
+  Ut tempus varius nibh, nec auctor sapien iaculis sit amet. Fusce iaculis,
+  libero quis elementum viverra, nulla ante accumsan lectus, sit amet convallis
+  lacus ipsum vel est. Curabitur et urna non est consectetur pulvinar vel id
+  risus. Ut vestibulum, sem in semper aliquet, felis arcu euismod sapien, ac
+  imperdiet massa nisl quis sem. Vestibulum ac elementum felis, in tempor velit.
+  Pellentesque purus ex, mattis at ornare quis, porta condimentum mi. Donec
+  vestibulum ligula vel nulla blandit, quis euismod nulla vestibulum.
+  Suspendisse potenti. Nunc neque mauris, tempor sed facilisis at, ultrices eget
+  nulla. Pellentesque convallis ante nec augue porttitor, id tempus ante luctus.
+</p>
 
-<p>Integer rutrum sollicitudin tellus, quis cursus nulla scelerisque nec. Nunc eu facilisis lorem. Maecenas faucibus sapien eleifend, semper tellus at, pharetra quam. Cras feugiat vulputate tortor at rhoncus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam non felis quis sem lobortis sodales vel id libero. Phasellus sit amet placerat lorem. </p>
+<p>
+  Integer rutrum sollicitudin tellus, quis cursus nulla scelerisque nec. Nunc eu
+  facilisis lorem. Maecenas faucibus sapien eleifend, semper tellus at, pharetra
+  quam. Cras feugiat vulputate tortor at rhoncus. Class aptent taciti sociosqu
+  ad litora torquent per conubia nostra, per inceptos himenaeos. Nam non felis
+  quis sem lobortis sodales vel id libero. Phasellus sit amet placerat lorem.
+</p>
 ```
 
 #### CSS

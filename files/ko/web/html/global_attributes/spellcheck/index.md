@@ -1,19 +1,23 @@
 ---
 title: spellcheck
 slug: Web/HTML/Global_attributes/spellcheck
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/spellcheck
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`spellcheck`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 요소의 맞춤법 검사 여부를 지정하는 열거형 특성입니다.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-spellcheck.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: spellcheck", "tabbed-shorter")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</div>
+```html interactive-example
+<textarea spellcheck="true">
+This exampull will be checkd fur spellung when you try to edit it.</textarea
+>
+
+<textarea spellcheck="false">
+This exampull will nut be checkd fur spellung when you try to edit it.</textarea
+>
+```
 
 가능한 값은 다음과 같습니다.
 
@@ -32,7 +36,7 @@ translation_of: Web/HTML/Global_attributes/spellcheck
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.spellcheck")}}
+{{Compat}}
 
 ## 같이 보기
 

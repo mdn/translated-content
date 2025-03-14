@@ -1,20 +1,46 @@
 ---
 title: <figcaption>
 slug: Web/HTML/Element/figcaption
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-translation_of: Web/HTML/Element/figcaption
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<figcaption>` 요소는** 부모 {{HTMLElement("figure")}} 요소가 포함하는 다른 콘텐츠에 대한 설명 혹은 범례를 나타냅니다.
 
-{{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;figcaption&gt;", "tabbed-shorter")}}
 
-The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples) and send us a pull request.
+```html interactive-example
+<figure>
+  <img
+    src="/shared-assets/images/examples/elephant.jpg"
+    alt="Elephant at sunset" />
+  <figcaption>An elephant at sunset</figcaption>
+</figure>
+```
+
+```css interactive-example
+figure {
+  border: thin #c0c0c0 solid;
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  max-width: 220px;
+  margin: auto;
+}
+
+img {
+  max-width: 220px;
+  max-height: 150px;
+}
+
+figcaption {
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -38,7 +64,7 @@ The source for this interactive example is stored in a GitHub repository. If you
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -47,7 +73,7 @@ The source for this interactive example is stored in a GitHub repository. If you
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ariarole("group")}}, {{ariarole("presentation")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -71,7 +97,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.figcaption")}}
+{{Compat}}
 
 ## 같이 보기
 

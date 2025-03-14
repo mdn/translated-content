@@ -22,13 +22,19 @@ var orientation = window.screen.orientation;
 ## 示例
 
 ```js
-var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
+var orientation =
+  (screen.orientation || {}).type ||
+  screen.mozOrientation ||
+  screen.msOrientation;
 
 if (orientation === "landscape-primary") {
   console.log("That looks good.");
 } else if (orientation === "landscape-secondary") {
   console.log("Mmmh... the screen is upside down!");
-} else if (orientation === "portrait-secondary" || orientation === "portrait-primary") {
+} else if (
+  orientation === "portrait-secondary" ||
+  orientation === "portrait-primary"
+) {
   console.log("Mmmh... you should rotate your device to landscape");
 } else if (orientation === undefined) {
   console.log("The orientation API isn't supported in this browser :(");
@@ -47,4 +53,4 @@ if (orientation === "landscape-primary") {
 
 - {{DOMxRef("ScreenOrientation")}}
 - {{DOMxRef("Screen.onorientationchange")}}
-- [Managing screen orientation](/zh-CN/docs/Managing_screen_orientation)
+- [Managing screen orientation](/zh-CN/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

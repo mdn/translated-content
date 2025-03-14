@@ -1,13 +1,8 @@
 ---
 title: overflow-wrap
 slug: Web/CSS/overflow-wrap
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-translation_of: Web/CSS/overflow-wrap
 ---
+
 {{CSSRef}}
 
 **`overflow-wrap`** CSS 요소는 어떤 문자가 내용 칸 밖으로 넘치지 않게 브라우저가 단어 마디 안에 줄을 바꿔야 할 것인지 아닌지를 정할 때 사용됩니다.
@@ -49,18 +44,26 @@ overflow-wrap: unset;
 ### HTML
 
 ```html
-<p class="normal">They say the fishing is excellent at
-  Lake Chargoggagoggmanchauggagoggchaubunagungamaugg,
-  though I've never been there myself. (normal)</p>
-<p class="overflow-wrap">They say the fishing is excellent at
-  Lake Chargoggagoggmanchauggagoggchaubunagungamaugg,
-  though I've never been there myself. (overflow-wrap)</p>
-<p class="word-break">They say the fishing is excellent at
-  Lake Chargoggagoggmanchauggagoggchaubunagungamaugg,
-  though I've never been there myself. (word-break)</p>
-<p class="hyphens">They say the fishing is excellent at
-  Lake Chargoggagoggmanchauggagoggchaubunagungamaugg,
-  though I've never been there myself. (hyphens)</p>
+<p class="normal">
+  They say the fishing is excellent at Lake
+  Chargoggagoggmanchauggagoggchaubunagungamaugg, though I've never been there
+  myself. (normal)
+</p>
+<p class="overflow-wrap">
+  They say the fishing is excellent at Lake
+  Chargoggagoggmanchauggagoggchaubunagungamaugg, though I've never been there
+  myself. (overflow-wrap)
+</p>
+<p class="word-break">
+  They say the fishing is excellent at Lake
+  Chargoggagoggmanchauggagoggchaubunagungamaugg, though I've never been there
+  myself. (word-break)
+</p>
+<p class="hyphens">
+  They say the fishing is excellent at Lake
+  Chargoggagoggmanchauggagoggchaubunagungamaugg, though I've never been there
+  myself. (hyphens)
+</p>
 ```
 
 ### CSS
@@ -88,11 +91,9 @@ p {
 
 {{ EmbedLiveSample('Example', '100%', 260) }}
 
-## 사양
+## 명세서
 
-| Specification                                                                                | Status                           | Comment            |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{ SpecName('CSS3 Text', '#propdef-overflow-wrap', 'overflow-wrap') }} | {{ Spec2('CSS3 Text') }} | Initial definition |
+{{Specifications}}
 
 ## 브라우저 호환성
 

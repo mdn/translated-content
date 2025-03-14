@@ -3,7 +3,7 @@ title: find.find()
 slug: Mozilla/Add-ons/WebExtensions/API/find/find
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 テキストによるタブ内の検索をします。
 
@@ -29,12 +29,12 @@ slug: Mozilla/Add-ons/WebExtensions/API/find/find
 
 ```js
 browser.find.find(
-  queryphrase,       // string
-  options            // optional object
-)
+  queryphrase, // string
+  options, // optional object
+);
 ```
 
-### Parameters
+### 引数
 
 - `queryphrase`
   - : `string`. 検索語。
@@ -53,7 +53,7 @@ browser.find.find(
     - `includeRectData`
       - : `boolean`. Include rectangle data in the response, which describes where in the rendered page the match was found. Defaults to `false`.
 
-### Return value
+### 返値
 
 A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an object containing up to three properties:
 
@@ -63,7 +63,7 @@ A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
 
   - : `array`. If `includeRangeData` was given in the `options` parameter, then this property will be included. It is provided as an array of `RangeData` objects, one for each match. `それぞれのRangeData` は DOM ツリー構造をしています。検索語の周りを表示することなどにも使えます。
 
-    次の `rectData`, も同様に配列で `rangeData[i]` と `rectData[i]`は 1 対 1 で対応します。.
+    次の `rectData`, も同様に配列で `rangeData[i]` と `rectData[i]`は 1 対 1 で対応します。
 
     Each `RangeData` contains the following properties:
 
@@ -80,7 +80,7 @@ A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
 
 - `rectData`{{optional_inline}}
 
-  - : `array`. 呼び出し時に`optionsで` `includeRectData` 引数を与えると結果を返します。 `RectData` objects の配列です。それらはマッチしたワードを含む、client rectangles を返します。拡張機能でハイライトなどに使えるでしょう。.
+  - : `array`. 呼び出し時に`optionsで` `includeRectData` 引数を与えると結果を返します。 `RectData` objects の配列です。それらはマッチしたワードを含む、client rectangles を返します。拡張機能でハイライトなどに使えるでしょう。
 
     Each `RectData` object はそれぞれ 1 つのマッチに対して 2 つのプロパティを持ちます。
 
@@ -91,7 +91,7 @@ A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
         - `rectList`: ４つの integer をもつ配列: `top`, `left`, `bottom`, `right`. その位置情報は viewport における左上からの位置です。
         - `textList`: 上記`rectList[i]`に含まれた `textList[i]` (string)を持つ配列です。
 
-        例えば Web ページ上で:
+        例えばウェブページ上で:
 
         ![](rects-1.png) "You may"を探すと 2 つの矩形エリアで表現されます。:
 
@@ -103,11 +103,11 @@ A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
     - `text`
       - : マッチしたテキスト全体、上の例では"You may"が丸ごと入ります。
 
-## Browser compatibility
+## ブラウザーの互換性
 
-{{Compat("webextensions.api.find.find", 10)}}
+{{Compat}}
 
-## Examples
+## 例
 
 ### Basic examples
 
@@ -124,13 +124,13 @@ function found(results) {
 browser.find.find("banana").then(found);
 ```
 
-Search for "banana" across all tabs (note that this requires the "tabs" [permission](/ja/Add-ons/WebExtensions/manifest.json/permissions), because it accesses `tab.url`):
+Search for "banana" across all tabs (note that this requires the "tabs" [permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions), because it accesses `tab.url`):
 
 ```js
 async function findInAllTabs(allTabs) {
   for (let tab of allTabs) {
-    let results = await browser.find.find("banana", {tabId: tab.id});
-    console.log(`In page "${tab.url}": ${results.count} matches.`)
+    let results = await browser.find.find("banana", { tabId: tab.id });
+    console.log(`In page "${tab.url}": ${results.count} matches.`);
   }
 }
 
@@ -149,27 +149,26 @@ The background script:
 // background.js
 
 async function getContexts(matches) {
-
   // get the active tab ID
   let activeTabArray = await browser.tabs.query({
-    active: true, currentWindow: true
+    active: true,
+    currentWindow: true,
   });
   let tabId = activeTabArray[0].id;
 
   // execute the content script in the active tab
-  await browser.tabs.executeScript(tabId, {file: "get-context.js"});
+  await browser.tabs.executeScript(tabId, { file: "get-context.js" });
   // ask the content script to get the contexts for us
   let contexts = await browser.tabs.sendMessage(tabId, {
-    ranges: matches.rangeData
+    ranges: matches.rangeData,
   });
   for (let context of contexts) {
     console.log(context);
   }
-
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  browser.find.find("example", {includeRangeData: true}).then(getContexts);
+  browser.find.find("example", { includeRangeData: true }).then(getContexts);
 });
 ```
 
@@ -180,9 +179,14 @@ The content script:
  * Get all the text nodes into a single array
  */
 function getNodes() {
-  let walker = document.createTreeWalker(document, window.NodeFilter.SHOW_TEXT, null, false);
+  let walker = document.createTreeWalker(
+    document,
+    window.NodeFilter.SHOW_TEXT,
+    null,
+    false,
+  );
   let nodes = [];
-  while(node = walker.nextNode()) {
+  while ((node = walker.nextNode())) {
     nodes.push(node);
   }
 
@@ -196,7 +200,6 @@ function getNodes() {
  * of each node.
  */
 function getContexts(ranges) {
-
   let contexts = [];
   let nodes = getNodes();
 
@@ -229,21 +232,21 @@ The background script:
 // background.js
 
 async function redact(matches) {
-
   // get the active tab ID
   let activeTabArray = await browser.tabs.query({
-    active: true, currentWindow: true
+    active: true,
+    currentWindow: true,
   });
   let tabId = activeTabArray[0].id;
 
   // execute the content script in the active tab
-  await browser.tabs.executeScript(tabId, {file: "redact.js"});
+  await browser.tabs.executeScript(tabId, { file: "redact.js" });
   // ask the content script to redact matches for us
-  await browser.tabs.sendMessage(tabId, {rects: matches.rectData});
+  await browser.tabs.sendMessage(tabId, { rects: matches.rectData });
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  browser.find.find("banana", {includeRectData: true}).then(redact);
+  browser.find.find("banana", { includeRectData: true }).then(redact);
 });
 ```
 
@@ -261,8 +264,8 @@ function redactRect(rect) {
   redaction.style.position = "absolute";
   redaction.style.top = `${rect.top}px`;
   redaction.style.left = `${rect.left}px`;
-  redaction.style.width = `${rect.right-rect.left}px`;
-  redaction.style.height = `${rect.bottom-rect.top}px`;
+  redaction.style.width = `${rect.right - rect.left}px`;
+  redaction.style.height = `${rect.bottom - rect.top}px`;
   document.body.appendChild(redaction);
 }
 

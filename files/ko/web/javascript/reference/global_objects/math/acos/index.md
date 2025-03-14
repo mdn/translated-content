@@ -1,12 +1,6 @@
 ---
 title: Math.acos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acos
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/acos
 ---
 
 {{JSRef}}
@@ -51,12 +45,25 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/acos
 [{-1};1],\;\mathtt{\operatorname{Math.acos}(x)} = \arccos(x) = \text{ the unique }
 \; y \in [0; \pi] \, \text{such that} \; \cos(y) = x</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-acos.html")}}
+{{InteractiveExample("JavaScript Demo: Math.acos()")}}
+
+```js interactive-example
+// Calculates angle of a right-angle triangle in radians
+function calcAngle(adjacent, hypotenuse) {
+  return Math.acos(adjacent / hypotenuse);
+}
+
+console.log(calcAngle(8, 10));
+// Expected output: 0.6435011087932843
+
+console.log(calcAngle(5, 3));
+// Expected output: NaN
+```
 
 ## 구문
 
 ```js
-    Math.acos(x)
+Math.acos(x);
 ```
 
 ### 매개변수
@@ -79,12 +86,12 @@ Because `acos()` is a static method of `Math`, you always use it as `Math.acos()
 ### Using `Math.acos()`
 
 ```js
-Math.acos(-2);  // NaN
-Math.acos(-1);  // 3.141592653589793
-Math.acos(0);   // 1.5707963267948966
+Math.acos(-2); // NaN
+Math.acos(-1); // 3.141592653589793
+Math.acos(0); // 1.5707963267948966
 Math.acos(0.5); // 1.0471975511965979
-Math.acos(1);   // 0
-Math.acos(2);   // NaN
+Math.acos(1); // 0
+Math.acos(2); // NaN
 ```
 
 For values less than -1 or greater than 1, `Math.acos()` returns {{jsxref("NaN")}}.

@@ -1,8 +1,6 @@
 ---
 title: mask-composite
 slug: Web/CSS/mask-composite
-translation_of: Web/CSS/mask-composite
-browser-compat: css.properties.mask-composite
 ---
 
 {{CSSRef}}
@@ -46,7 +44,7 @@ La couche du masque de l'élément est appelée _source_ et les couches inférie
 
 ## Syntaxe formelle
 
-{{csssyntax}}}
+{{csssyntax}}
 
 ## Exemples
 

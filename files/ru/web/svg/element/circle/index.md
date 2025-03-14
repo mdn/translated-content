@@ -1,11 +1,6 @@
 ---
 title: <circle>
 slug: Web/SVG/Element/circle
-tags:
-  - NeedsUpdate
-  - SVG
-translation_of: Web/SVG/Element/circle
-original_slug: Web/SVG/Элемент/circle
 ---
 
 {{SVGRef}}
@@ -26,16 +21,16 @@ original_slug: Web/SVG/Элемент/circle
 </svg>
 ```
 
-» [circle.svg](https://mdn.mozillademos.org/files/7707/circle2.svg)
+» [circle.svg](circle2.svg)
 
 ## Атрибуты
 
 ### Унаследованные
 
-- [Условные атрибуты](/en-US/SVG/Attribute#Conditional_processing_attributes) »
-- [Ключевые атрибуты](/en-US/SVG/Attribute#Core_attributes) »
-- [Атрибуты графических событий](/en-US/SVG/Attribute#Graphical_event_attributes) »
-- [Атрибуты представления](/en-US/SVG/Attribute#Presentation_attributes) »
+- [Условные атрибуты](/ru/docs/Web/SVG/Attribute#conditional_processing_attributes) »
+- [Ключевые атрибуты](/ru/docs/Web/SVG/Attribute#core_attributes) »
+- [Атрибуты графических событий](/ru/docs/Web/SVG/Attribute#graphical_event_attributes) »
+- [Атрибуты представления](/ru/docs/Web/SVG/Attribute#presentation_attributes) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -63,7 +58,7 @@ original_slug: Web/SVG/Элемент/circle
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

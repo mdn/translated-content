@@ -1,13 +1,9 @@
 ---
 title: Piste de grille
 slug: Glossary/Grid_Tracks
-tags:
-  - CSS
-  - Glossaire
-  - Grilles
-translation_of: Glossary/Grid_Tracks
-original_slug: Glossaire/Pistes_de_grille
 ---
+
+{{GlossarySidebar}}
 
 Une **piste de grille** est l'espace entre deux {{glossary("grid lines","lignes de grille (lines)")}}. Elle est définie dans la _grille explicite_ avec les propriétés {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-rows")}} ou les propriétés raccourcies {{cssxref("grid")}} ou {{cssxref("grid-template")}}. Les pistes sont aussi créées dans une _grille implicite_ en positionnant un élément de grille en dehors des pistes créées dans la grille explicite.
 
@@ -22,20 +18,22 @@ Lors de la définition de pistes de grille avec {{cssxref("grid-template-columns
 ## Exemple
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -48,11 +46,11 @@ Lors de la définition de pistes de grille avec {{cssxref("grid-template-columns
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 
@@ -73,5 +71,5 @@ Les pistes créées dans la grille implicite ont une taille définie automatique
 
 ### En lire plus
 
-- Guide des grilles CSS : [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)
+- Guide des grilles CSS : [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - [Définition des pistes de grille dans la spécification CSS Grid Layout](https://drafts.csswg.org/css-grid/#grid-track-concept)

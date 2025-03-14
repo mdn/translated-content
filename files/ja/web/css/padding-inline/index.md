@@ -1,11 +1,55 @@
 ---
 title: padding-inline
 slug: Web/CSS/padding-inline
+l10n:
+  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
 {{CSSRef}}
 
 **`padding-inline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、論理的なインライン方向の先頭と末尾のパディングを設定します。これは要素の書字方向やテキストの向きに応じて物理的なパディングに変換されます。
+
+{{InteractiveExample("CSS Demo: padding-inline")}}
+
+```css interactive-example-choice
+padding-inline: 5% 10%;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+padding-inline: 15px 40px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+padding-inline: 5% 20%;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## 構成要素のプロパティ
 
@@ -18,8 +62,8 @@ slug: Web/CSS/padding-inline
 
 ```css
 /* <length> 値 */
-padding-inline: 10px 20px;  /* 絶対的な長さ */
-padding-inline: 1em 2em;   /* テキストの大きさに対する相対値 */
+padding-inline: 10px 20px; /* 絶対的な長さ */
+padding-inline: 1em 2em; /* テキストの大きさに対する相対値 */
 padding-inline: 10px; /* 先頭と末尾の両方を設定 */
 
 /* <percentage> 値 */
@@ -29,6 +73,7 @@ padding-inline: 5% 2%; /* 直近のブロックコンテナーの幅に対する
 padding-inline: inherit;
 padding-inline: initial;
 padding-inline: revert;
+padding-inline: revert-layer;
 padding-inline: unset;
 ```
 
@@ -39,7 +84,7 @@ padding-inline: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : パディングの寸法を固定値で指定します。負の値は指定できません。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : パディングの寸法をパーセント値で表したもので、含まれるブロックの _inline-size_ に対する相対値です。負の値は指定できません。
+  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
 
 ## 解説
 
@@ -55,19 +100,19 @@ padding-inline: unset;
 
 ## 例
 
-<h3 id="Setting_inline_padding_for_vertical_text">縦書きテキストにおけるインライン方向のパディングの設定</h3>
+### 縦書きテキストにおけるインライン方向のパディングの設定
 
 #### HTML
 
-```html
+```html live-sample___setting_inline_padding_for_vertical_text
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___setting_inline_padding_for_vertical_text
 div {
   background-color: yellow;
   width: 120px;
@@ -95,5 +140,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - 対応する物理的プロパティ: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

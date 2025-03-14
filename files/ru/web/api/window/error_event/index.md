@@ -1,15 +1,9 @@
 ---
 title: GlobalEventHandlers.onerror
 slug: Web/API/Window/error_event
-tags:
-  - API
-  - HTML DOM
-  - Свойство
-  - Ссылка
-translation_of: Web/API/GlobalEventHandlers/onerror
-original_slug: Web/API/GlobalEventHandlers/onerror
 ---
-{{ ApiRef("HTML DOM") }}
+
+{{APIRef}}
 
 Обработчик события для ошибок среды Javascript.
 
@@ -28,8 +22,8 @@ window.onerror = funcRef;
   - Сообщение ошибки (string)
   - Url, где произошла ошибка (string)
   - Номер строки, где произошла ошибка (number)
-  - Номер столбца для строки, в которой произошла ошибка (number) {{gecko_minversion_inline("31.0")}}
-  - [Error Object](/ru/docs/Web/JavaScript/Reference/Global_Objects/Error) (object) {{gecko_minversion_inline("31.0")}}
+  - Номер столбца для строки, в которой произошла ошибка (number)
+  - [Error Object](/ru/docs/Web/JavaScript/Reference/Global_Objects/Error) (object)
 
 ## Примеры
 
@@ -52,17 +46,9 @@ window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
 
   // Просто запустить обработчик события по умолчанию.
   return false;
-}
+};
 ```
-
-## Примечания
-
-Событие возникает, когда происходит ошибка в скрипте.
-
-При использовании строчной HTML-разметки (\<body onerror="alert('an error occurred')>...), аргументы не именуются. Они могут быть доступны через arguments от `{{ mediawiki.external(0) }}` до `{{ mediawiki.external(2) }}`.
-
-Здесь недоступен `Components.stack.caller для использования`. (Смотрите [**bug 355430**](https://bugzilla.mozilla.org/show_bug.cgi?id=355430).)
 
 ## Спецификации
 
-[JavaScript 1.1](http://devedge-temp.mozilla.org/library/manuals/2000/javascript/1.3/reference/handlers.html#1120097)
+{{Specifications}}

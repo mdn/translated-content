@@ -1,6 +1,8 @@
 ---
-title: 'HTML 属性: size'
+title: "HTML 属性: size"
 slug: Web/HTML/Attributes/size
+l10n:
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar}}
@@ -9,13 +11,39 @@ slug: Web/HTML/Attributes/size
 
 `size` 属性は制約検証には影響しません。
 
+{{InteractiveExample("HTML Demo: size", "tabbed-standard")}}
+
+```html interactive-example
+<label for="firstName">First Name:</label>
+<input id="firstName" name="firstName" type="text" size="10" />
+
+<label for="lastName">Last Name:</label>
+<input id="lastName" name="lastName" type="text" size="20" />
+
+<label for="fruit">Favourite fruit:</label>
+<select id="fruit" name="fruit" size="2">
+  <option>Orange</option>
+  <option>Banana</option>
+  <option>Apple</option>
+</select>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1rem;
+}
+```
+
 ## 例
 
 一部の入力型で `size` を指定すると、入力欄の幅を制御することができます。 select に size を追加すると、閉じた状態のときにいくつの選択肢が見えるかを定義します。
 
 ```html
-<label for="fruit">Enter a fruit</label> <input type="text" size="15" id="fruit">
-<label for="vegetable">Enter a vegetable</label> <input type="text" id="vegetable">
+<label for="fruit">Enter a fruit</label>
+<input type="text" size="15" id="fruit" />
+<label for="vegetable">Enter a vegetable</label>
+<input type="text" id="vegetable" />
 
 <select name="fruits" size="5">
   <option>banana</option>
@@ -26,11 +54,11 @@ slug: Web/HTML/Attributes/size
 </select>
 
 <select name="vegetables" size="5">
-<option>carrot</option>
-<option>cucumber</option>
-<option>cauliflower</option>
-<option>celery</option>
-<option>collard greens</option>
+  <option>carrot</option>
+  <option>cucumber</option>
+  <option>cauliflower</option>
+  <option>celery</option>
+  <option>collard greens</option>
 </select>
 ```
 

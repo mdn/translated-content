@@ -1,14 +1,8 @@
 ---
 title: URIError
 slug: Web/JavaScript/Reference/Global_Objects/URIError
-tags:
-  - Class
-  - JavaScript
-  - Object
-  - Reference
-  - URIError
-browser-compat: javascript.builtins.URIError
 ---
+
 {{JSRef}}
 
 **`URIError`** 객체는 전역 URI 핸들링 함수가 잘못된 방식으로 사용되었을 때의 오류를 표현합니다.
@@ -40,15 +34,15 @@ browser-compat: javascript.builtins.URIError
 
 ```js
 try {
-  decodeURIComponent('%')
+  decodeURIComponent("%");
 } catch (e) {
-  console.log(e instanceof URIError)  // true
-  console.log(e.message)              // "malformed URI sequence"
-  console.log(e.name)                 // "URIError"
-  console.log(e.fileName)             // "Scratchpad/1"
-  console.log(e.lineNumber)           // 2
-  console.log(e.columnNumber)         // 2
-  console.log(e.stack)                // "@Scratchpad/2:2:3\n"
+  console.log(e instanceof URIError); // true
+  console.log(e.message); // "malformed URI sequence"
+  console.log(e.name); // "URIError"
+  console.log(e.fileName); // "Scratchpad/1"
+  console.log(e.lineNumber); // 2
+  console.log(e.columnNumber); // 2
+  console.log(e.stack); // "@Scratchpad/2:2:3\n"
 }
 ```
 
@@ -56,15 +50,15 @@ try {
 
 ```js
 try {
-  throw new URIError('Hello', 'someFile.js', 10)
+  throw new URIError("Hello", "someFile.js", 10);
 } catch (e) {
-  console.log(e instanceof URIError)  // true
-  console.log(e.message)              // "Hello"
-  console.log(e.name)                 // "URIError"
-  console.log(e.fileName)             // "someFile.js"
-  console.log(e.lineNumber)           // 10
-  console.log(e.columnNumber)         // 0
-  console.log(e.stack)                // "@Scratchpad/2:2:9\n"
+  console.log(e instanceof URIError); // true
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "URIError"
+  console.log(e.fileName); // "someFile.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 

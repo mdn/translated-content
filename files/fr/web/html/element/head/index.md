@@ -1,25 +1,20 @@
 ---
-title: '<head> : l''élément de métadonnées (en-tête) du document'
+title: "<head> : l'élément de métadonnées (en-tête) du document"
 slug: Web/HTML/Element/head
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/head
 ---
 
 {{HTMLSidebar}}
 
 L'élément HTML **\<head>** fournit des informations générales (métadonnées) sur le document, incluant son titre et des liens ou des définitions vers des scripts et feuilles de style.
 
-> **Note :** L'élément `<head>` contient principalement des données destinées au traitement automatisé et pas nécessairement lisibles par des humains. Pour afficher des informations lisibles pour les utilisateurs dans des en-têtes ou titre, voir l'élément {{HTMLElement("header")}}.
+> [!NOTE]
+> L'élément `<head>` contient principalement des données destinées au traitement automatisé et pas nécessairement lisibles par des humains. Pour afficher des informations lisibles pour les utilisateurs dans des en-têtes ou titre, voir l'élément {{HTMLElement("header")}}.
 
 ## Attributs
 
-Comme tous les éléments HTML, cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Comme tous les éléments HTML, cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("profile")}}{{deprecated_inline}}
+- `profile`{{deprecated_inline}}
   - : L'URI d'un ou plusieurs profils de métadonnées, séparés par un espace.
 
 ## Exemples
@@ -54,7 +49,7 @@ La plupart des navigateurs conformes à HTML5 construisent automatiquement l'él
       <th scope="row">Contenu autorisé</th>
       <td>
         Si le document est un document source
-        ({{htmlattrxref("srcdoc", "iframe")}}) d'une
+        (<a href="/fr/docs/Web/HTML/Element/iframe#srcdoc"><code>srcdoc</code></a>) d'une
         {{HTMLElement("iframe")}} ou si l'information pour le titre est
         disponible via un protocole de plus haut niveau zéro ou plusieurs
         éléments de méta-données.<br />Sinon un ou plusieurs éléments de

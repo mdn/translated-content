@@ -1,58 +1,54 @@
 ---
-title: User interface
+title: 사용자 인터페이스
 slug: Mozilla/Add-ons/WebExtensions/user_interface
+l10n:
+  sourceCommit: 668b38a4f6cd96609b9a969fe4653b46aec4e712
 ---
 
 {{AddonSidebar}}
 
-Extensions that use WebExtension APIs are provided with several user interface options so that their functionality can be made available to the user. A summary of those options is provided below, with a more detailed introduction to each user interface option in this section.
+WebExtension API를 사용하는 확장 프로그램은 사용자에게 기능을 제공할 수 있도록 몇몇 사용자 인터페이스 옵션을 제공합니다. 이러한 옵션들의 요약은 아래에 제공되며, 각 사용자 인터페이스 옵션에 대한 자세한 소개는 이 섹션에서 다룹니다.
 
-> **Note:** For advice on using these UI components to create a great user experience in your extension, please see the [User experience best practices](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/) article.
+> [!NOTE]
+> 확장 프로그램에서 UI 컴포넌트를 사용해 훌륭한 사용자 경험을 만들기 위한 조언을 얻고 싶다면 [User experience best practices](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/)를 참고하세요.
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">UI option</th>
-      <th scope="col">Description</th>
-      <th scope="col">Example</th>
+      <th scope="col">UI 옵션</th>
+      <th scope="col">내용</th>
+      <th scope="col">예시</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action"
-          >Toolbar button</a
+          href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button"
+          >툴바 버튼</a
         >
-        (browser action)
+        (브라우저 동작)
       </td>
       <td>
-        A button on the browser toolbar that dispatches an event to the
-        extension when clicked. By default, the button is visible in all tabs.
+        클릭했을 때 확장 프로그램에 이벤트를 전달하는 브라우저 툴바의 버튼입니다. 이 버튼은 기본적으로 모든 탭에서 보입니다.
       </td>
       <td>
         <img
-          alt="Example showing a toolbar button (browser action)."
+          alt="툴바(브라우저 동작) 버튼을 보여주는 예시"
           src="browser-action.png"
         />
       </td>
     </tr>
     <tr>
       <td>
-        Toolbar button with a
-        <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
-          >popup</a
-        >
+        <a href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">팝업</a>이 있는 툴바 버튼
       </td>
       <td>
-        A popup on a button in the browser toolbar that opens when the button is
-        clicked. The popup is defined in an HTML document that handles the user
-        interaction.
+       브라우저 툴바의 버튼을 클릭하면 열리는 팝업입니다. 팝업은 HTML 문서에 정의되어 사용자 상호작용을 처리합니다.
       </td>
       <td>
         <img
-          alt="Example of the pop-up on a toolbar button"
+          alt="툴바 버튼의 팝업 예시"
           src="popup-shadow.png"
         />
       </td>
@@ -60,38 +56,31 @@ Extensions that use WebExtension APIs are provided with several user interface o
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions"
-          >Address bar button</a
+          href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions"
+          >주소 바 버튼</a
         >
-        (page action)
+        (페이지 동작)
       </td>
       <td>
-        A button on the browser address bar that dispatches an event to the
-        extension when clicked. By default, the button is hidden in all tabs.
+        클랙했을 때 확장 프로그램에 이벤트를 전달하는 브라우저 주소 바의 버튼입니다. 이 버튼은 기본적으로 모든 탭에서 보이지 않습니다.
       </td>
       <td>
         <img
-          alt="Example showing an address bar button (page action) "
+          alt="주소 바 버튼(페이지 액션)을 보여주는 예시"
           src="address_bar_button.png"
         />
       </td>
     </tr>
     <tr>
       <td>
-        Address bar button with a
-        <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
-          >popup</a
-        >
+        <a href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">팝업</a>이 있는 주소 바 버튼
       </td>
       <td>
-        A popup on a button in the browser address bar that opens when the
-        button is clicked. The popup is defined in an HTML document that handles
-        the user interaction.
+        주소 바의 버튼을 클릭하면 열리는 팝업입니다. 팝업은 HTML 문서에 정의되어 사용자 상호작용을 처리합니다.
       </td>
       <td>
         <img
-          alt="Example of a popup on the address bar button"
+          alt="주소 바 버튼의 팝업 예시"
           src="page_action_popup.png"
         />
       </td>
@@ -99,19 +88,16 @@ Extensions that use WebExtension APIs are provided with several user interface o
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items"
-          >Context menu item</a
+          href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items"
+          >맥락 메뉴 항목</a
         >
       </td>
       <td>
-        Menu items, checkboxes, and radio buttons on one or more of the
-        browser's context menus. Also, menus can be structured by adding
-        separators. When menu items are clicked, an event is dispatched to the
-        extension.
+        하나 이상의 브라우저 맥락 메뉴의 메뉴 항목, 체크박스, 라디오 버튼입니다. 또한, 구분선을 추가하여 메뉴를 구조화할 수도 있습니다. 메뉴 항목들이 클릭되면 이벤트가 확장 프로그램에 전달됩니다.
       </td>
       <td>
-        <img
-          alt="Example of content menu items added by a WebExtension, from the context-menu-demo example"
+         <img
+          alt="context-menu-demo 예제에서 WebExtension이 추가한 컨텍스트 메뉴 항목의 예시"
           src="context_menu_example.png"
         />
       </td>
@@ -119,35 +105,31 @@ Extensions that use WebExtension APIs are provided with several user interface o
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars"
-          >Sidebar</a
+          href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars"
+          >사이드바</a
         >
       </td>
       <td>
-        <p>
-          An HTML document displayed next to a web page, with the option for
-          unique content per page. The sidebar is opened when the extension is
-          installed, then obeys the user's sidebar visibility selection. User
-          interaction within the sidebar is handled by its HTML document.
+         <p>
+          웹 페이지 옆에 표시되는 HTML 문서로 페이지마다 고유한 콘텐츠를 표시할 수 있습니다. 사이드바는 확장 프로그램이 설치될 때 열리며, 이후 사용자의 사이드바 가시성 선택을 따릅니다. 사이드바 내의 사용자 상호작용은 해당 HTML 문서에서 처리됩니다.
         </p>
       </td>
-      <td><img alt="Example of a sidebar" src="bookmarks-sidebar.png" /></td>
+      <td><img alt="사이드바의 예시" src="bookmarks-sidebar.png" /></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages"
-          >Options page</a
+          href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages"
+          >옵션 페이지</a
         >
       </td>
-      <td>
-        A page that enables you to define preferences for your extension that
-        your users can change. The user can access this page from the browser's
-        add-ons manager.
+       <td>
+        확장 프로그램의 설정을 정의할 수 있는 페이지로 사용자가 이 설정을 변경할 수 있습니다.
+        사용자는 브라우저의 애드온 관리자에서 이 페이지에 접근할 수 있습니다.
       </td>
       <td>
         <img
-          alt="Example showing the options page content added in the favorite colors example."
+          alt="즐겨찾는 색상 예시에서 옵션 페이지에 추가된 내용을 보여주는 예시."
           src="options_page.png"
         />
       </td>
@@ -155,17 +137,16 @@ Extensions that use WebExtension APIs are provided with several user interface o
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages"
-          >Extension page</a
+          href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages"
+          >확장 프로그램 페이지</a
         >
       </td>
-      <td>
-        Use web pages included in your extension to provide forms, help, or any
-        other content required, within windows or tabs.
+       <td>
+       확장 프로그램에 포함된 웹 페이지를 사용하여 창이나 탭 내에서 양식, 도움말 또는 필요한 기타 콘텐츠를 제공할 수 있습니다.
       </td>
       <td>
         <img
-          alt="Example of a simple bundled page displayed as a detached panel."
+          alt="분리된 패널로 표시되는 간단한 번들 페이지의 예시"
           src="bundled_page_as_panel_small.png"
         />
       </td>
@@ -173,19 +154,16 @@ Extensions that use WebExtension APIs are provided with several user interface o
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications"
-          >Notification</a
+          href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications"
+          >알림</a
         >
       </td>
       <td>
-        Transient notifications displayed to the user through the underlying
-        operating system's notifications mechanism. Dispatches an event to the
-        extension when the user clicks a notification, or when a notification
-        closes (either automatically or at the user's request).
+        운영체제의 알림 메커니즘을 통해 사용자에게 표시되는 일시적인 알림입니다. 사용자가 알림을 클릭하거나 알림이 자동으로 또는 사용자의 요청으로 닫힐 때, 확장 프로그램으로 이벤트가 전달됩니다.
       </td>
       <td>
         <img
-          alt="Example of an extension triggered system notification"
+          alt="확장 프로그램에 의해 트리거된 시스템 알림의 예시"
           src="notify-shadowed.png"
         />
       </td>
@@ -193,16 +171,16 @@ Extensions that use WebExtension APIs are provided with several user interface o
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox"
-          >Address bar suggestion</a
+          href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox"
+          >주소 바 제안</a
         >
       </td>
       <td>
-        Offer custom address bar suggestions when the user enters a keyword.
+        사용자가 키워드를 입력할 때 맞춤 주소 표시줄 제안을 제공합니다.
       </td>
       <td>
         <img
-          alt="Example showing the result of the firefox_code_search WebExtension&#x27;s customization of the address bar suggestions."
+          alt="firefox_code_search 확장 프로그램이 주소 표시줄 제안을 커스터마이즈한 결과를 보여주는 예시."
           src="omnibox_example_small.png"
         />
       </td>
@@ -210,13 +188,12 @@ Extensions that use WebExtension APIs are provided with several user interface o
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels"
-          >Developer tools panel</a
+          href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels"
+          >개발자 도구 패널</a
         >
       </td>
       <td>
-        A tab with an associated HTML document that displays in the browser's
-        developer tools.
+        브라우저의 개발자 도구에 표시되는 HTML 문서가 연결된 탭.
       </td>
       <td>
         <img
@@ -225,13 +202,14 @@ Extensions that use WebExtension APIs are provided with several user interface o
         />
       </td>
     </tr>
+
   </tbody>
 </table>
 
-The following how-to guides provide step-by-step guidance to creating some of these user interface options:
+다음의 사용 방법 가이드에서는 이러한 사용자 인터페이스 옵션 중 일부를 만드는 방법을 단계별로 안내합니다.
 
-- [Accessibility guidelines](https://extensionworkshop.com/documentation/develop/build-an-accessible-extension/)
-- [Add a button to the toolbar](/en-US/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
-- [Browser styles](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)
-- [Extending the developer tools](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
-- [Implement a settings page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
+- [접근성 가이드라인](https://extensionworkshop.com/documentation/develop/build-an-accessible-extension/)
+- [툴바에 버튼 추가하기](/ko/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
+- [브라우저 스타일](/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)
+- [개발자 도구 확장하기](/ko/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
+- [설정 페이지 구현하기](/ko/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)

@@ -1,12 +1,6 @@
 ---
 title: CSS Shapes
-slug: Web/CSS/CSS_Shapes
-tags:
-  - Aperçu
-  - CSS
-  - CSS Shapes
-  - Reference
-translation_of: Web/CSS/CSS_Shapes
+slug: Web/CSS/CSS_shapes
 ---
 
 {{CSSRef}}
@@ -33,11 +27,11 @@ Dans l'exemple qui suit, on a une image qui flotte à gauche et la propriété `
 
 ## Guides
 
-- [Un aperçu des formes CSS (_CSS Shapes_)](/fr/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
-- [Les formes appliquées aux différentes boîtes](/fr/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values)
-- [Des formes simples](/fr/docs/Web/CSS/CSS_Shapes/Basic_Shapes)
-- [Des formes à partir d'images](/fr/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
-- [Éditer les contours d'une forme en CSS dans Firefox](/fr/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes)
+- [Un aperçu des formes CSS (_CSS Shapes_)](/fr/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [Les formes appliquées aux différentes boîtes](/fr/docs/Web/CSS/CSS_shapes/From_box_values)
+- [Des formes simples](/fr/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [Des formes à partir d'images](/fr/docs/Web/CSS/CSS_shapes/Shapes_from_images)
+- [Éditer les contours d'une forme en CSS dans Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)
 
 ## Ressources externes
 

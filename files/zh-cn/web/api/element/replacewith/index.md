@@ -3,81 +3,53 @@ title: Element.replaceWith()
 slug: Web/API/Element/replaceWith
 ---
 
-{{APIRef("DOM")}} {{SeeCompatTable}}
+{{APIRef("DOM")}}
 
-**`ChildNode.replaceWith()`** 的方法用一套 {{domxref("Node")}} 对象或者 {{domxref("DOMString")}} 对象，替换了该节点父节点下的子节点。{{domxref("DOMString")}} 对象被当做等效的{{domxref("Text")}} 节点插入。
+**`ChildNode.replaceWith()`** 的方法用一套 {{domxref("Node")}} 对象或者字符串对象，替换了该节点父节点下的子节点。字符串对象被当做等效的 {{domxref("Text")}} 节点插入。
 
 ## 语法
 
-```plain
-[Throws, Unscopable]
-void ChildNode.replaceWith((Node or DOMString)... nodes);
+```js-nolint
+replaceWith(param1)
+replaceWith(param1, param2)
+replaceWith(param1, param2, /* …, */ paramN)
 ```
 
 ### 参数
 
-- `节点`
-  - : 一系列用来替换的{{domxref("Node")}} 对象或者 {{domxref("DOMString")}} 对象。
+- `param1`、…、`paramN`
+  - : 一系列用来替换的 {{domxref("Node")}} 对象或者字符串对象。
 
-### 例外
+### 异常
 
-- {{domxref("HierarchyRequestError")}}: 无法在层次结构中的指定点插入节点。
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+  - : 无法在层次结构中的指定节点处插入节点时抛出。
 
-## 案例
+## 示例
 
-### Using `replaceWith()`
+### 使用 `replaceWith()`
 
 ```js
-var parent = document.createElement("div");
-var child = document.createElement("p");
-parent.appendChild(child);
-var span = document.createElement("span");
+const div = document.createElement("div");
+const p = document.createElement("p");
+div.appendChild(p);
+const span = document.createElement("span");
 
-child.replaceWith(span);
+p.replaceWith(span);
 
-console.log(parent.outerHTML);
+console.log(div.outerHTML);
 // "<div><span></span></div>"
 ```
 
-### `ChildNode.replaceWith()` is unscopable
+### `replaceWith()` 是不可绑定作用域方法
 
-`replaceWith()`的方法并没有作用于 with 语句。参考 {{jsxref("Symbol.unscopables")}} 获取更多信息。
+`replaceWith()` 方法不能作用于 with 语句。参考 {{jsxref("Symbol.unscopables")}} 获取更多信息。
 
 ```js
-with(node) {
+with (node) {
   replaceWith("foo");
 }
 // ReferenceError: replaceWith is not defined
-```
-
-## Polyfill
-
-你可以在 IE9 及更高级的浏览器中使用下面的代码向上兼容`replaceWith()`的方法：
-
-```js
-(function (arr) {
-  arr.forEach(function (item) {
-    if (item.hasOwnProperty('replaceWith')) {
-      return;
-    }
-    Object.defineProperty(item, 'replaceWith', {
-      configurable: true,
-      enumerable: true,
-      writable: true,
-      value: function replaceWith() {
-        var argArr = Array.prototype.slice.call(arguments),
-          docFrag = document.createDocumentFragment();
-
-        argArr.forEach(function (argItem) {
-          var isNode = argItem instanceof Node;
-          docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
-        });
-
-        this.parentNode.replaceChild(docFrag, this);
-      }
-    });
-  });
-})([Element.prototype, CharacterData.prototype, DocumentType.prototype]);
 ```
 
 ## 规范
@@ -88,8 +60,7 @@ with(node) {
 
 {{Compat}}
 
-## 参阅
+## 参见
 
-- {{domxref("ChildNode")}} 和 {{domxref("ParentNode")}}
 - {{domxref("Node.replaceChild()")}}
 - {{domxref("NodeList")}}

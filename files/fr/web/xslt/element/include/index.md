@@ -1,13 +1,9 @@
 ---
 title: include
 slug: Web/XSLT/Element/include
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/include
-original_slug: Web/XSLT/include
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:include>` fusionne les contenus de deux feuilles de styles. Contrairement à l'élément [\<xsl:import>](/fr/XSLT/import), les contenus des deux feuilles de styles fusionnées ont la même priorité.
 
@@ -32,7 +28,7 @@ Haut niveau, peut apparaître dans n'importe quel ordre comme enfant de `<xsl:st
 
 ### Définition
 
-[XSLT 1.0, section 2.6.1](http://www.w3.org/TR/xslt#include).
+[XSLT 1.0, section 2.6.1](https://www.w3.org/TR/xslt#include).
 
 ### Support Gecko
 

@@ -1,11 +1,70 @@
 ---
 title: inset-block-start
 slug: Web/CSS/inset-block-start
+l10n:
+  sourceCommit: 13ec4828f8e5cc3daaca5b210025ad3d9d67ed5e
 ---
 
 {{CSSRef}}
 
 **`inset-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素における先頭からの論理的なオフセットを定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+
+{{InteractiveExample("CSS Demo: inset-block-start")}}
+
+```css interactive-example-choice
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container" id="example-element">
+    <div id="abspos">
+      I am absolutely positioned with inset-block-start: 50px
+    </div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 0.75em solid;
+  padding: 0.75em;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  unicode-bidi: bidi-override;
+}
+
+#abspos {
+  background-color: yellow;
+  color: black;
+  border: 3px solid red;
+  position: absolute;
+  inset-block-start: 50px;
+  inline-size: 140px;
+}
+```
+
+## 構文
 
 ```css
 /* <length> 値 */
@@ -22,10 +81,9 @@ inset-block-start: auto;
 inset-block-start: inherit;
 inset-block-start: initial;
 inset-block-start: revert;
+inset-block-start: revert-layer;
 inset-block-start: unset;
 ```
-
-## 構文
 
 ### 値
 
@@ -41,7 +99,7 @@ inset-block-start: unset;
 
 ## 例
 
-<h3 id="Setting_block_start_offset">ブロック方向の先頭のオフセットの設定</h3>
+### ブロック方向の先頭のオフセットの設定
 
 #### HTML
 
@@ -68,7 +126,9 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Setting_block_start_offset", 140, 140)}}
+#### 結果
+
+{{EmbedLiveSample("ブロック方向の先頭のオフセットの設定", 140, 140)}}
 
 ## 仕様書
 

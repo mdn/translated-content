@@ -1,10 +1,9 @@
 ---
 title: Contenu mixte
 slug: Web/Security/Mixed_content
-translation_of: Web/Security/Mixed_content
 ---
 
-Lorsqu'une personne visite une page servie en [HTTPS](/fr/docs/Glossary/https), la connexion entre le navigateur et le serveur web est chiffrée avec [`TLS`](/fr/docs/Glossary/TLS) et est donc protégée des risques d'interception des données et d'attaques de l'homme du milieu. Une page HTTPS qui inclut du contenu récupéré en clair avec HTTP est appelée une page **de contenu mixte** (<i lang="en">mixed content</i> en anglais). De telles pages ne sont que partiellement chiffrées et le contenu non-chiffré reste alors sujet aux risques d'interception. Ces pages ne sont pas complètement sécurisées.
+Lorsqu'une personne visite une page servie en [HTTPS](/fr/docs/Glossary/HTTPS), la connexion entre le navigateur et le serveur web est chiffrée avec [`TLS`](/fr/docs/Glossary/TLS) et est donc protégée des risques d'interception des données et d'attaques de l'homme du milieu. Une page HTTPS qui inclut du contenu récupéré en clair avec HTTP est appelée une page **de contenu mixte** (<i lang="en">mixed content</i> en anglais). De telles pages ne sont que partiellement chiffrées et le contenu non-chiffré reste alors sujet aux risques d'interception. Ces pages ne sont pas complètement sécurisées.
 
 ## Types de contenu mixte
 
@@ -18,7 +17,7 @@ Le contenu mixte passif est du contenu servi avec HTTP et inclus dans une page w
 
 Voici les éléments qui sont considérées comme du contenu passif lorsqu'ils sont servis par des requêtes HTTP&nbsp;:
 
-- [`<img>`](/fr/docs/Web/HTML/Element/Img) (l'attribut `src`)
+- [`<img>`](/fr/docs/Web/HTML/Element/img) (l'attribut `src`)
 - [`<audio>`](/fr/docs/Web/HTML/Element/audio) (l'attribut `src`)
 - [`<video>`](/fr/docs/Web/HTML/Element/video) (l'attribut `src`)
 - Les sous-ressources d'un élément [`<object>`](/fr/docs/Web/HTML/Element/object) (lorsqu'un tel élément effectue des requêtes HTTP)
@@ -39,8 +38,8 @@ Cette section liste certains des objets ou méthodes qui sont considérés comme
 - [`<link>`](/fr/docs/Web/HTML/Element/link) (l'attribut `href`) (cela inclut les feuilles de style CSS)
 - [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) (l'attribut `src`)
 - Les requêtes [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)
-- Les requêtes [`fetch()`](/fr/docs/Web/API/fetch)
-- En CSS, les endroits où une valeur [`url()`](/fr/docs/Web/CSS/url) peut être utilisée ([`@font-face`](/fr/docs/Web/CSS/@font-face), [`cursor`](/fr/docs/Web/CSS/cursor), [`background-image`](/fr/docs/Web/CSS/background-image), etc.).
+- Les requêtes [`fetch()`](/fr/docs/Web/API/Window/fetch)
+- En CSS, les endroits où une valeur [`url()`](/fr/docs/Web/CSS/url_value) peut être utilisée ([`@font-face`](/fr/docs/Web/CSS/@font-face), [`cursor`](/fr/docs/Web/CSS/cursor), [`background-image`](/fr/docs/Web/CSS/background-image), etc.).
 - [`<object>`](/fr/docs/Web/HTML/Element/object) (l'attribut `data`)
 - [`Navigator.sendBeacon`](/fr/docs/Web/API/Navigator/sendBeacon) (l'attribut `url`)
 
@@ -48,7 +47,7 @@ D'autres types de ressources comme les polices de caractères ou les <i lang="en
 
 ## Chargement des ressources avec du contenu mixte
 
-La plupart des navigateurs empêchent le chargement *du contenu mixte actif*. D'autres bloquent également le chargement *du contenu mixte passif*.
+La plupart des navigateurs empêchent le chargement _du contenu mixte actif_. D'autres bloquent également le chargement _du contenu mixte passif_.
 
 ### Charger des ressources mixtes locales
 
@@ -83,11 +82,12 @@ En complément de ces alertes dans la console web, vous pouvez également utilis
 
 Pour corriger ce type d'erreur, toutes les requêtes HTTP devraient être remplacées par des requêtes HTTPS. La plupart du temps, les problèmes de contenu mixte portent sur les fichiers JavaScript, les feuilles de styles, les images, les vidéos ou d'autres médias.
 
-> **Note :** La console affichera un message si [la mise à niveau du contenu mixte passif](#mise_à_niveau_des_ressources_mixtes_passives) a réussi (plutôt qu'un avertissement de «&nbsp;Chargement du contenu mixte d'affichage (non sécurisé)&nbsp;»).
+> [!NOTE]
+> La console affichera un message si [la mise à niveau du contenu mixte passif](#mise_à_niveau_des_ressources_mixtes_passives) a réussi (plutôt qu'un avertissement de «&nbsp;Chargement du contenu mixte d'affichage (non sécurisé)&nbsp;»).
 
 ## Voir aussi
 
 - [La spécification du W3C sur le contenu mixte (en anglais)](https://w3c.github.io/webappsec/specs/mixedcontent/)
-- [Comment corriger un site avec du contenu mixte bloqué](/fr/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
+- [Comment corriger un site avec du contenu mixte bloqué](/fr/docs/conflicting/Web/Security/Mixed_content)
 
 {{QuickLinksWithSubpages("/fr/docs/Web/Security")}}

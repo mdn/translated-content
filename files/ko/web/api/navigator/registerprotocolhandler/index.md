@@ -1,13 +1,6 @@
 ---
 title: Navigator.registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
-tags:
-  - API
-  - DOM
-  - Method
-  - Navigator
-  - Reference
-translation_of: Web/API/Navigator/registerProtocolHandler
 ---
 
 {{APIRef("HTML DOM")}}{{securecontext_header}}
@@ -25,7 +18,11 @@ navigator.registerProtocolHandler(protocol, url, title);
 - `protocol`
   - : 웹 사이트가 처리하고자 하는 프로토콜 문자열. 예컨대 SMS 문자 메시지를 처리하고자 한다면 `"sms"`를 전달하세요.
 - `url`
-  - : 처리기의 URL. **플레이스홀더로 사용할 `%s`를 반드시 포함**해야 합니다. 실제 사용 시, `%s`에는 처리 대상 URL을 [이스케이프 처리](/ko/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)해 대입합니다.> **참고:** 처리기의 URL은 반드시 `http` 또는 `https` 스킴을 필요로 합니다. 일부 브라우저는 보안상 `https`를 요구하므로 `https`를 사용하는 편이 좋습니다.
+
+  - : 처리기의 URL. **플레이스홀더로 사용할 `%s`를 반드시 포함**해야 합니다. 실제 사용 시, `%s`에는 처리 대상 URL을 [이스케이프 처리](/ko/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)해 대입합니다.
+    > [!NOTE]
+    > 처리기의 URL은 반드시 `http` 또는 `https` 스킴을 필요로 합니다. 일부 브라우저는 보안상 `https`를 요구하므로 `https`를 사용하는 편이 좋습니다.
+
 - `title`
   - : 사람이 읽을 수 있는 형태의 처리기 이름. 브라우저 설정 등 처리기 목록에서 **사용자에게 보이는 이름**입니다.
 
@@ -79,9 +76,11 @@ navigator.registerProtocolHandler(protocol, url, title);
 사이트 주소가 `burgers.example.com`인 경우, 아래 코드로 `web+burger:` 스킴에 대한 처리기를 등록할 수 있습니다.
 
 ```js
-navigator.registerProtocolHandler("web+burger",
-                                  "https://burgers.example.com/?burger=%s",
-                                  "Burger handler");
+navigator.registerProtocolHandler(
+  "web+burger",
+  "https://burgers.example.com/?burger=%s",
+  "Burger handler",
+);
 ```
 
 이제, `web+burger:` 링크는 사용자를 `burgers.example.com`로 보내고, 자신의 URL을 `%s` 위치에 삽입합니다.

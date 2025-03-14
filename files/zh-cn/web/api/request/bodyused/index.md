@@ -14,14 +14,14 @@ slug: Web/API/Request/bodyUsed
 ## 示例
 
 ```js
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: 'Hello world'
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: "Hello world",
 });
 
 request.bodyUsed; // false
 
-request.text().then(function(bodyAsText) {
+request.text().then(function (bodyAsText) {
   console.log(request.bodyUsed); // true
 });
 ```

@@ -1,5 +1,5 @@
 ---
-title: ':disabled'
+title: :disabled
 slug: Web/CSS/:disabled
 ---
 
@@ -12,6 +12,40 @@ slug: Web/CSS/:disabled
 input:disabled {
   background: #ccc;
 }
+```
+
+{{InteractiveExample("CSS Demo: :disabled", "tabbed-standard")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+*:disabled {
+  background-color: dimgrey;
+  color: linen;
+  opacity: 1;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="name">Name:</label>
+  <input id="name" name="name" type="text" />
+
+  <label for="emp">Employed:</label>
+  <select id="emp" name="emp" disabled>
+    <option>No</option>
+    <option>Yes</option>
+  </select>
+
+  <label for="empDate">Employment Date:</label>
+  <input id="empDate" name="empDate" type="date" disabled />
+
+  <label for="resume">Resume:</label>
+  <input id="resume" name="resume" type="file" />
+</form>
 ```
 
 ## 構文
@@ -30,19 +64,19 @@ input:disabled {
 <form action="#">
   <fieldset id="shipping">
     <legend>送り先</legend>
-    <input type="text" placeholder="名前">
-    <input type="text" placeholder="住所">
-    <input type="text" placeholder="郵便番号">
+    <input type="text" placeholder="名前" />
+    <input type="text" placeholder="住所" />
+    <input type="text" placeholder="郵便番号" />
   </fieldset>
-  <br>
+  <br />
   <fieldset id="billing">
     <legend>請求先</legend>
     <label for="billing_is_shipping">送り先と同じ:</label>
-    <input type="checkbox" id="billing-checkbox" checked>
-    <br>
-    <input type="text" placeholder="名前" disabled>
-    <input type="text" placeholder="住所" disabled>
-    <input type="text" placeholder="郵便番号" disabled>
+    <input type="checkbox" id="billing-checkbox" checked />
+    <br />
+    <input type="text" placeholder="名前" disabled />
+    <input type="text" placeholder="住所" disabled />
+    <input type="text" placeholder="郵便番号" disabled />
   </fieldset>
 </form>
 ```
@@ -59,10 +93,14 @@ input[type="text"]:disabled {
 
 ```js
 // ページの読み込みの終了を待つ
-document.addEventListener('DOMContentLoaded', function () {
-  // チェックボックスに 'change' イベントリスナーを追加
-  document.getElementById('billing-checkbox').onchange = toggleBilling;
-}, false);
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+    // チェックボックスに 'change' イベントリスナーを追加
+    document.getElementById("billing-checkbox").onchange = toggleBilling;
+  },
+  false,
+);
 
 function toggleBilling() {
   // 請求先のテキストフィールドを選択

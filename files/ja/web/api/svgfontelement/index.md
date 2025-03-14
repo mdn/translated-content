@@ -19,13 +19,13 @@ SVG の DOM 経由での {{SVGElement("font")}} 要素の属性へのオブジ�
 
 `SVGFontElement` インタフェースは固有のメソッドを持ちませんが親である {{domxref("SVGElement")}} のメソッドを継承し、また{{domxref("SVGExternalResourcesRequired")}} と {{domxref("SVGStylable")}} からメソッドを実装しています。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザ実装状況
 
-{{Compat("api.SVGFontElement")}}
+{{Compat}}
 
 ## 関連情報
 

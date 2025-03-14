@@ -1,7 +1,6 @@
 ---
 title: 511 Network Authentication Required
 slug: Web/HTTP/Status/511
-translation_of: Web/HTTP/Status/511
 ---
 
 {{HTTPSidebar}}
@@ -20,9 +19,11 @@ Les responsables des réseaux demandent parfois de s'authentifier, d'accepter de
 
 ## Spécifications
 
-| Spécification                                                                    | Titre                        |
-| -------------------------------------------------------------------------------- | ---------------------------- |
-| [RFC 6585, section 6: 511 Network Authentication Required](https://datatracker.ietf.org/doc/html/rfc6585#section-6) | Additional HTTP Status Codes |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

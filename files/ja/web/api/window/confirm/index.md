@@ -1,48 +1,57 @@
 ---
 title: window.confirm
 slug: Web/API/Window/confirm
+l10n:
+  sourceCommit: c575deb5f1775b532360c612a85b35a5ff9525d9
 ---
 
 {{ApiRef("Window")}}
 
-**`Window.confirm()`** メソッドは、メッセージと、OK, キャンセルの 2 つのボタンを持つモーダルダイアログを表示します。
+**`Window.confirm()`** はブラウザーへ任意のメッセージ付きのダイアログを表示し、ユーザーがダイアログを承認またはキャンセルするまで待機します。
+
+ある条件下、例えばユーザーがタブを切り替えているときなどでは、ブラウザーがダイアログを実際に表示しないことや、ダイアログの承認やキャンセルを待機しないことがあります。
 
 ## 構文
 
-```
-result = window.confirm(message);
+```js-nolint
+confirm(message)
 ```
 
-- `message` は、ダイアログ内に表示される文字列です。
-- `result` は、OK (`true`) とキャンセル (`false`) のどちらが選択されたかを示す真偽値です。ブラウザがページ内ダイアログを拒否している場合、 `result` は常に `false` です。
+### 引数
+
+- `message`
+  - : 確認ダイアログ内に表示したい文字列。
+
+### 返値
+
+論理型で、OK (`true`) とキャンセル (`false`) のどちらが選択されたかを示します。ブラウザーがページ内ダイアログを拒否している場合、常に `false` を返します。
 
 ## 例
 
-```
+```js
 if (window.confirm("Do you really want to leave?")) {
   window.open("exit.html", "Thanks for Visiting!");
 }
 ```
 
-結果
+は以下のようになります。
 
-![firefox confirm](https://mdn.mozillademos.org/files/7163/firefoxcomfirmdialog_zpsf00ec381.png)
+![Firefox の confirm](firefox_confirm_dialog.png)
 
 ## 注記
 
-The following text is shared between this article, DOM:window\.prompt and DOM:window\.alert ダイアログボックスはモーダルウィンドウです。つまり閲覧者は、これを閉じないとプログラムの他のインタフェース部分にアクセスする事ができません。したがって、ダイアログボックス（もしくは、モーダルウィンドウ）を生成する関数を乱用するべきではありません。何にせよ、[確認を目的としたダイアログボックスの使用を避けるべき](http://alistapart.com/article/neveruseawarning)それ相応の理由があります。
+ダイアログボックスはモーダルウィンドウです。つまり閲覧者は、これを閉じないと他のプログラムのインターフェイスにアクセスできません。したがって、ダイアログボックス（もしくは、モーダルウィンドウ）を生成する関数を乱用するべきではありません。何にせよ、それ相応の [確認を目的としたダイアログボックスの使用を避けるべき](https://alistapart.com/article/neveruseawarning) 理由があります。
 
-## 仕様
+## 仕様書
 
-| Specification                                                                                                    | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#dom-confirm', 'confirm()')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
-{{Compat("api.Window.confirm")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{domxref("window.alert","alert")}}
-- {{domxref("window.prompt","prompt")}}
+- {{HTMLElement("dialog")}} 要素
+- {{domxref("window.alert()")}}
+- {{domxref("window.prompt()")}}

@@ -1,11 +1,6 @@
 ---
 title: text-decoration-color
 slug: Web/CSS/text-decoration-color
-tags:
-  - Propiedad CSS
-  - Referencia
-  - Texto CSS
-translation_of: Web/CSS/text-decoration-color
 ---
 
 {{ CSSRef }}
@@ -47,34 +42,36 @@ text-decoration-color: unset;
 
 ```css
 .example {
-    text-decoration: underline;
-    text-decoration-color: red;
+  text-decoration: underline;
+  text-decoration-color: red;
 }
 ```
 
 El ejemplo anterior tiene el mismo efecto que el código siguiente, que además añade un estilo para cuando el elemento tiene el puntero del mouse encima.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<style>
-.example {
-  font-size: 24px;
-  text-decoration: underline;
-  color: red;
-}
-.example:hover {
-  color: blue;
-  text-decoration: line-through;
-}
-</style>
-</head>
-<body>
-<span class="example">
-  <span style="color:black;">texto negro con subrayado rojo, y azul con el cursor encima</span>
-</span>
-</body>
+  <head>
+    <style>
+      .example {
+        font-size: 24px;
+        text-decoration: underline;
+        color: red;
+      }
+      .example:hover {
+        color: blue;
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="example">
+      <span style="color:black;"
+        >texto negro con subrayado rojo, y azul con el cursor encima</span
+      >
+    </span>
+  </body>
 </html>
 ```
 
@@ -82,6 +79,6 @@ El ejemplo anterior tiene el mismo efecto que el código siguiente, que además 
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-decoration-color")}}
+{{Compat}}

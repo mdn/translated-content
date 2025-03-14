@@ -1,12 +1,6 @@
 ---
 title: NaN
 slug: Web/JavaScript/Reference/Global_Objects/NaN
-tags:
-  - JavaScript
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/NaN
-original_slug: Web/JavaScript/Reference/Objets_globaux/NaN
 ---
 
 {{jsSidebar("Objects")}}
@@ -15,12 +9,27 @@ La propriété globale **`NaN`** est une valeur utilisée pour représenter une 
 
 {{js_property_attributes(0,0,0)}}
 
-{{EmbedInteractiveExample("pages/js/globalprops-nan.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - NaN")}}
+
+```js interactive-example
+function sanitize(x) {
+  if (isNaN(x)) {
+    return NaN;
+  }
+  return x;
+}
+
+console.log(sanitize("1"));
+// Expected output: "1"
+
+console.log(sanitize("NotANumber"));
+// Expected output: NaN
+```
 
 ## Syntaxe
 
 ```js
-NaN
+NaN;
 ```
 
 ## Description
@@ -33,20 +42,20 @@ Il est rare d'utiliser expressément `NaN` dans un programme. On récupère gén
 
 ### Tester `NaN`
 
-Les [opérateurs d'égalité](/fr/docs/Web/JavaScript/Les_diff%C3%A9rents_tests_d_%C3%A9galit%C3%A9_comment_les_utiliser) (`==` et `===`) ne peuvent pas être utilisé pour tester une valeur par rapport à `NaN`. Il faut utiliser {{jsxref("Number.isNaN()")}} ou {{jsxref("isNaN", "isNaN()")}} à la place.
+Les [opérateurs d'égalité](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness) (`==` et `===`) ne peuvent pas être utilisé pour tester une valeur par rapport à `NaN`. Il faut utiliser {{jsxref("Number.isNaN()")}} ou {{jsxref("isNaN", "isNaN()")}} à la place.
 
 ```js
-NaN === NaN;        // false
+NaN === NaN; // false
 Number.NaN === NaN; // false
-isNaN(NaN);         // true
-isNaN(Number.NaN);  // true
+isNaN(NaN); // true
+isNaN(Number.NaN); // true
 ```
 
 La différence entre `isNaN()` et `Number.isNaN()` est la façon dont les valeurs sont, ou non, converties en nombre avant de vérifier si la valeur est `NaN` : `isNaN()` convertira l'argument en nombre avant de vérifier alors que `Number.isNaN()` ne renverra `true` que si l'opérande vaut `NaN`.
 
 ```js
-isNaN('coucou monde');        // renvoie true
-Number.isNaN('coucou monde'); // renvoie false
+isNaN("coucou monde"); // renvoie true
+Number.isNaN("coucou monde"); // renvoie false
 ```
 
 ## Spécifications
@@ -62,4 +71,4 @@ Number.isNaN('coucou monde'); // renvoie false
 - {{jsxref("Number.NaN")}}
 - {{jsxref("Number.isNaN()")}}
 - {{jsxref("isNaN", "isNaN()")}}
-- [L'égalité en JavaScript](/fr/docs/Web/JavaScript/Guide/%C3%89galit%C3%A9_en_JavaScript)
+- [L'égalité en JavaScript](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness)

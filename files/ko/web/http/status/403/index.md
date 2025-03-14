@@ -11,13 +11,13 @@ HTTP **`403 Forbidden`** 클라이언트 오류 상태 응답 코드는 서버�
 
 ## 상태
 
-```
+```http
 403 Forbidden
 ```
 
 ## 응답 예시
 
-```
+```http
 HTTP/1.1 403 Forbidden
 Date: Wed, 21 Oct 2015 07:28:00 GMT
 ```

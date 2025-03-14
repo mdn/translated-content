@@ -15,17 +15,17 @@ HTML 拖放介面能讓網頁應用程式於 Firefox 及其他瀏覽器中使用
 
 HTML 拖放操作基於 {{domxref("Event","DOM 事件模型")}}並且使用繼承自{{domxref("MouseEvent","滑鼠事件")}}的*{{domxref("DragEvent","拖曳事件")}}*介面。一個典型的拖曳操作開始於使用者利用滑鼠選取了一個*可拖曳（draggable）*元素、移動滑鼠至一個*可放置（droppable）*元素並放開滑鼠按鍵。在操作的過程中，會觸發多種類型的事件，且一些事件類型可能會被觸發多次（如 [`drag`](/zh-TW/docs/Web/API/HTMLElement/drag_event) 及 [`dragover`](/zh-TW/docs/Web/API/HTMLElement/dragover_event) 事件類型）。
 
-所有的[拖曳事件類型](/zh-TW/docs/Web/API/DragEvent#Event_types)都有相關的[通用事件處理器](/zh-TW/docs/Web/API/DragEvent#GlobalEventHandlers)（global event handler）。每一種拖曳事件類型及拖曳通用事件處理器屬性都有說明此事件的參考文件。以下的表格提供了每一種事件的簡要說明，以及參考文件的連結。
+所有的[拖曳事件類型](/zh-TW/docs/Web/API/DragEvent#event_types)都有相關的[通用事件處理器](/zh-TW/docs/Web/API/DragEvent#globaleventhandlers)（global event handler）。每一種拖曳事件類型及拖曳通用事件處理器屬性都有說明此事件的參考文件。以下的表格提供了每一種事件的簡要說明，以及參考文件的連結。
 
-| 事件                         | 事件處理器屬性                                                                   | 說明                                                                                                                                         |
-| ---------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`drag`](/zh-TW/docs/Web/API/HTMLElement/drag_event)     | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}             | 於一個元素或文字選取區塊被拖曳時觸發。                                                                                                       |
-| [`dragend`](/zh-TW/docs/Web/API/HTMLElement/dragend_event) | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | 於拖曳操作結束時觸發（如放開滑鼠按鍵或按下鍵盤的 escape 鍵）。（請參考[結束拖曳](/zh-TW/docs/DragDrop/Drag_Operations#dragend)。）           |
-| [`dragenter`](/zh-TW/docs/Web/API/HTMLElement/dragenter_event) | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | 於一個元素或文字選取區塊被拖曳移動進入一個有效的放置目標時觸發。（請參考[指定拖曳目標](/zh-TW/docs/DragDrop/Drag_Operations#droptargets)。） |
-| [`dragleave`](/zh-TW/docs/Web/API/HTMLElement/dragleave_event) | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | 於一個元素或文字選取區塊被拖曳移動離開一個有效的放置目標時觸發。                                                                             |
-| [`dragover`](/zh-TW/docs/Web/API/HTMLElement/dragover_event) | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}     | 於一個元素或文字選取區塊被拖曳移動經過一個有效的放置目標時觸發（每幾百毫秒觸發一次）。                                                       |
-| [`dragstart`](/zh-TW/docs/Web/API/HTMLElement/dragstart_event) | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | 於使用者開始拖曳一個元素或文字選取區塊時觸發。（請參考[開始拖曳](/zh-TW/docs/DragDrop/Drag_Operations#dragstart)。）                         |
-| [`drop`](/zh-TW/docs/Web/API/HTMLElement/drop_event)     | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}             | 於一個元素或文字選取區塊被放置至一個有效的放置目標時觸發。（請參考[執行放置](/zh-TW/docs/DragDrop/Drag_Operations#drop)。）                  |
+| 事件                                                           | 事件處理器屬性                                               | 說明                                                                                                                                                               |
+| -------------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [`drag`](/zh-TW/docs/Web/API/HTMLElement/drag_event)           | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}           | 於一個元素或文字選取區塊被拖曳時觸發。                                                                                                                             |
+| [`dragend`](/zh-TW/docs/Web/API/HTMLElement/dragend_event)     | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | 於拖曳操作結束時觸發（如放開滑鼠按鍵或按下鍵盤的 escape 鍵）。（請參考[結束拖曳](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend)。）           |
+| [`dragenter`](/zh-TW/docs/Web/API/HTMLElement/dragenter_event) | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | 於一個元素或文字選取區塊被拖曳移動進入一個有效的放置目標時觸發。（請參考[指定拖曳目標](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets)。） |
+| [`dragleave`](/zh-TW/docs/Web/API/HTMLElement/dragleave_event) | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | 於一個元素或文字選取區塊被拖曳移動離開一個有效的放置目標時觸發。                                                                                                   |
+| [`dragover`](/zh-TW/docs/Web/API/HTMLElement/dragover_event)   | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}   | 於一個元素或文字選取區塊被拖曳移動經過一個有效的放置目標時觸發（每幾百毫秒觸發一次）。                                                                             |
+| [`dragstart`](/zh-TW/docs/Web/API/HTMLElement/dragstart_event) | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | 於使用者開始拖曳一個元素或文字選取區塊時觸發。（請參考[開始拖曳](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragstart)。）                         |
+| [`drop`](/zh-TW/docs/Web/API/HTMLElement/drop_event)           | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}           | 於一個元素或文字選取區塊被放置至一個有效的放置目標時觸發。（請參考[執行放置](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop)。）                  |
 
 注意：`dragstart` 與 `dragend` 事件，在把檔案從作業系統拖放到瀏覽器時，並不會觸發。
 
@@ -53,21 +53,23 @@ This section provides a summary of the basic steps to add drag and drop function
 
 ### Identify what is _draggable_
 
-To make an element _draggable_ requires adding the {{htmlattrxref("draggable")}} attribute plus the {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} global event handler, as shown in the following code sample
+To make an element _draggable_ requires adding the [`draggable`](/zh-TW/docs/Web/HTML/Global_attributes#draggable) attribute plus the {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} global event handler, as shown in the following code sample
 
 ```js
 function dragstart_handler(ev) {
- console.log("dragStart");
- // Add the target element's id to the data transfer object
- ev.dataTransfer.setData("text/plain", ev.target.id);
+  console.log("dragStart");
+  // Add the target element's id to the data transfer object
+  ev.dataTransfer.setData("text/plain", ev.target.id);
 }
 
 <body>
- <p id="p1" draggable="true" ondragstart="dragstart_handler(event);">This element is draggable.</p>
-</body>
+  <p id="p1" draggable="true" ondragstart="dragstart_handler(event);">
+    This element is draggable.
+  </p>
+</body>;
 ```
 
-See the [draggable attribute reference](/zh-TW/docs/Web/HTML/Global_attributes/draggable) and the [Drag operations guide](/zh-TW/docs/Web/Guide/HTML/Drag_operations#draggableattribute) for more information.
+See the [draggable attribute reference](/zh-TW/docs/Web/HTML/Global_attributes/draggable) and the [Drag operations guide](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute) for more information.
 
 ### Define the drag's data
 
@@ -84,7 +86,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-For a list of common data types used for drag and drop (such as text, HTML, links, and files), see [Recommended Drag Types](/zh-TW/docs/DragDrop/Recommended_Drag_Types) and for more information about drag data, see [Drag Data](/zh-TW/docs/Web/Guide/HTML/Drag_operations#dragdata).
+For a list of common data types used for drag and drop (such as text, HTML, links, and files), see [Recommended Drag Types](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types) and for more information about drag data, see [Drag Data](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragdata).
 
 ### Define the drag image
 
@@ -96,12 +98,12 @@ function dragstart_handler(ev) {
   // NOTE: change "example.gif" to an existing image or the image
   // will not be created and the default drag image will be used.
   var img = new Image();
-  img.src = 'example.gif';
+  img.src = "example.gif";
   ev.dataTransfer.setDragImage(img, 10, 10);
 }
 ```
 
-To learn more about drag feedback images, see [Setting the Drag Feedback Image](/zh-TW/docs/DragDrop/Drag_Operations#dragfeedback).
+To learn more about drag feedback images, see [Setting the Drag Feedback Image](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragfeedback).
 
 ### Define the drag _effect_
 
@@ -126,7 +128,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-See [Drag Effects](/zh-TW/docs/Web/Guide/HTML/Drag_operations#drageffects) for more details.
+See [Drag Effects](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drageffects) for more details.
 
 ### Define a _drop zone_
 
@@ -134,24 +136,29 @@ By default, the browser prevents anything from happening when dropping something
 
 ```js
 function dragover_handler(ev) {
- ev.preventDefault();
- // Set the dropEffect to move
- ev.dataTransfer.dropEffect = "move"
+  ev.preventDefault();
+  // Set the dropEffect to move
+  ev.dataTransfer.dropEffect = "move";
 }
 function drop_handler(ev) {
- ev.preventDefault();
- // Get the id of the target and add the moved element to the target's DOM
- var data = ev.dataTransfer.getData("text");
- ev.target.appendChild(document.getElementById(data));
+  ev.preventDefault();
+  // Get the id of the target and add the moved element to the target's DOM
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
 }
 <body>
- <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
-</body>
+  <div
+    id="target"
+    ondrop="drop_handler(event);"
+    ondragover="dragover_handler(event);">
+    Drop Zone
+  </div>
+</body>;
 ```
 
 Note each handler calls {{domxref("Event.preventDefault","preventDefault()")}} to prevent additional event processing for this prevent (such as touch events or pointer events).
 
-For more information, see [Specifying Drop Targets](/zh-TW/docs/Web/Guide/HTML/Drag_operations#droptargets).
+For more information, see [Specifying Drop Targets](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets).
 
 ### Handle the drop _effect_
 
@@ -161,34 +168,41 @@ The following example shows a drop handler getting the source element's id from 
 
 ```js
 function dragstart_handler(ev) {
- // Add the target element's id to the data transfer object
- ev.dataTransfer.setData("text/plain", ev.target.id);
- ev.dropEffect = "move";
+  // Add the target element's id to the data transfer object
+  ev.dataTransfer.setData("text/plain", ev.target.id);
+  ev.dropEffect = "move";
 }
 function dragover_handler(ev) {
- ev.preventDefault();
- // Set the dropEffect to move
- ev.dataTransfer.dropEffect = "move"
+  ev.preventDefault();
+  // Set the dropEffect to move
+  ev.dataTransfer.dropEffect = "move";
 }
 function drop_handler(ev) {
- ev.preventDefault();
- // Get the id of the target and add the moved element to the target's DOM
- var data = ev.dataTransfer.getData("text");
- ev.target.appendChild(document.getElementById(data));
+  ev.preventDefault();
+  // Get the id of the target and add the moved element to the target's DOM
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
 }
 <body>
- <p id="p1" draggable="true" ondragstart="dragstart_handler(event);">This element is draggable.</p>
- <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
-</body>
+  <p id="p1" draggable="true" ondragstart="dragstart_handler(event);">
+    This element is draggable.
+  </p>
+  <div
+    id="target"
+    ondrop="drop_handler(event);"
+    ondragover="dragover_handler(event);">
+    Drop Zone
+  </div>
+</body>;
 ```
 
-For more information, see [Performing a Drop](/zh-TW/docs/Web/Guide/HTML/Drag_operations#drop).
+For more information, see [Performing a Drop](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop).
 
 ### Drag end
 
 At the end of a drag operation, the [`dragend`](/zh-TW/docs/Web/API/HTMLElement/dragend_event) event fires at the _source_ element - the element that was the target of the drag start. This event fires whether the drag completed or was canceled. The [`dragend`](/zh-TW/docs/Web/API/HTMLElement/dragend_event) event handler can check the value of the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine if the drag operation succeeded or not.
 
-For more information about handling the end of a drag operation, see [Finishing a Drag](/zh-TW/docs/DragDrop/Drag_Operations#dragend).
+For more information about handling the end of a drag operation, see [Finishing a Drag](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend).
 
 ## Interoperability
 
@@ -197,8 +211,8 @@ As can be seen in the [DataTransferItem interface's Browser Compatibility table]
 ## Examples and demos
 
 - [Copying and moving elements with the `DataTransfer` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html)
-- [Copying and moving elements with the `DataTransferListItem` interface](http://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
-- Dragging and dropping files; Firefox only: <http://jsfiddle.net/9C2EF/>
+- [Copying and moving elements with the `DataTransferListItem` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
+- Dragging and dropping files; Firefox only: <https://jsfiddle.net/9C2EF/>
 - Dragging and dropping files; All browsers: [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
 - A parking project using the Drag and Drop API: <https://park.glitch.me/> (You can edit [here](https://glitch.com/edit/#!/park))
 
@@ -212,4 +226,4 @@ As can be seen in the [DataTransferItem interface's Browser Compatibility table]
 - [Dragging and Dropping Multiple Items](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [Recommended Drag Types](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
-- [Drag and Drop interoperability data from CanIUse](http://caniuse.com/#search=draganddrop)
+- [Drag and Drop interoperability data from CanIUse](https://caniuse.com/#search=draganddrop)

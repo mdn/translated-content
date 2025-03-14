@@ -1,7 +1,6 @@
 ---
 title: IndexedDB 사용하기
 slug: Web/API/IndexedDB_API/Using_IndexedDB
-translation_of: Web/API/IndexedDB_API/Using_IndexedDB
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}
@@ -10,9 +9,9 @@ IndexedDB는 사용자의 브라우저에 데이터를 영구적으로 저장할
 
 ## 이 문서에 대하여
 
-여러분은 이 튜토리얼에서 IndexedDB의 비동기 방식(asynchronous) API에 대해 훑어볼 수 있습니다. 만약 IndexedDB가 생소하다면, [IndexedDB key characteristics and basic terminology](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology) 를 먼저 읽어보는 것이 좋습니다.
+여러분은 이 튜토리얼에서 IndexedDB의 비동기 방식(asynchronous) API에 대해 훑어볼 수 있습니다. 만약 IndexedDB가 생소하다면, [IndexedDB key characteristics and basic terminology](/ko/docs/Web/API/IndexedDB_API/Basic_Terminology) 를 먼저 읽어보는 것이 좋습니다.
 
-IndexedDB API에 대한 참조(reference) 문서를 원한다면, [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) 항목과 하위 페이지를 보십시오. 이 문서에서는 IndexedDB에서 사용되는 객체의 종류와, 동기식(synchrounous), 비동기식(asynchronous) API에 대해서 기술하고 있습니다.
+IndexedDB API에 대한 참조(reference) 문서를 원한다면, [IndexedDB API](/ko/docs/Web/API/IndexedDB_API) 항목과 하위 페이지를 보십시오. 이 문서에서는 IndexedDB에서 사용되는 객체의 종류와, 동기식(synchrounous), 비동기식(asynchronous) API에 대해서 기술하고 있습니다.
 
 ## 기본 패턴
 
@@ -34,11 +33,19 @@ IndexedDB가 권장하는 기본 패턴은 다음과 같습니다:
 
 ```js
 // In the following line, you should include the prefixes of implementations you want to test.
-window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+window.indexedDB =
+  window.indexedDB ||
+  window.mozIndexedDB ||
+  window.webkitIndexedDB ||
+  window.msIndexedDB;
 // DON'T use "var indexedDB = ..." if you're not in a function.
 // Moreover, you may need references to some window.IDB* objects:
-window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
-window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange
+window.IDBTransaction =
+  window.IDBTransaction ||
+  window.webkitIDBTransaction ||
+  window.msIDBTransaction;
+window.IDBKeyRange =
+  window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
 // (Mozilla has never prefixed these objects, so we don't need window.mozIDB*)
 ```
 
@@ -46,7 +53,9 @@ window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.ms
 
 ```js
 if (!window.indexedDB) {
-    window.alert("Your browser doesn't support a stable version of IndexedDB. Such and such feature will not be available.")
+  window.alert(
+    "Your browser doesn't support a stable version of IndexedDB. Such and such feature will not be available.",
+  );
 }
 ```
 
@@ -61,7 +70,7 @@ var request = window.indexedDB.open("MyTestDatabase");
 
 보셨나요? 데이터베이스 접속은 다른 operation 들과 비슷합니다 — 당신은 "요청(request)" 하면 됩니다.
 
-open 요청은 데이터베이스를 즉시 열거나 즉시 트랜잭션을 시작하지 않습니다. `open()` 함수를 호출하면 이벤트로 처리한 결과(성공 상태)나 오류 값이 있는 [`IDBOpenDBRequest`](/ko/docs/IndexedDB/IDBOpenDBRequest) 객체를 반환합니다. IndexedDB의 다른 비동기 함수 대부분은 결과 또는 오류가 있는 [`IDBRequest`](/ko/docs/IndexedDB/IDBRequest) 객체를 반환합니다. `open()` 함수의 결과는 [`IDBDatabase`](/en-US/docs/IndexedDB/IDBDatabase) 의 인스턴스입니다.
+open 요청은 데이터베이스를 즉시 열거나 즉시 트랜잭션을 시작하지 않습니다. `open()` 함수를 호출하면 이벤트로 처리한 결과(성공 상태)나 오류 값이 있는 [`IDBOpenDBRequest`](/ko/docs/Web/API/IDBOpenDBRequest) 객체를 반환합니다. IndexedDB의 다른 비동기 함수 대부분은 결과 또는 오류가 있는 [`IDBRequest`](/ko/docs/Web/API/IDBRequest) 객체를 반환합니다. `open()` 함수의 결과는 [`IDBDatabase`](/ko/docs/Web/API/IDBDatabase) 의 인스턴스입니다.
 
 open 메소드의 두번째 매개 변수는 데이터베이스의 버전입니다. 데이터베이스의 버전은 데이터베이스 스키마를 결정합니다. 데이터베이스 스키마는 데이터베이스 안의 객체 저장소와 그것들의 구조를 결정합니다. 데이터베이스가 아직 존재하지 않으면, open operation에 의해 생성되고, 그 다음 `onupgradeneeded` 이벤트가 트리거되고 이 이벤트 안에서 데이터베이스 스키마를 작성합니다. 데이터베이스가 존재하지만 업그레이드 된 버전 번호를 지정하는 경우 `onupgradeneeded` 이벤트가 트리거되고 해당 핸들러에 업데이트된 스키마를 제공할 수 있습니다. 자세한 내용은 나중에 아래의 [데이터베이스의 버전 업데이트](#데이터베이스의_버전_생성_또는_업데이트)와 {{ domxref("IDBFactory.open") }} 페이지를 참조하십시오.
 
@@ -73,29 +82,29 @@ open 메소드의 두번째 매개 변수는 데이터베이스의 버전입니�
 첫번째로 당신이 하려는 모든 요청에 대해 성공했을 때 그리고 에러가 발생했을 때 제어를 할 객체를 요청해야 됩니다:
 
 ```js
-request.onerror = function(event) {
+request.onerror = function (event) {
   // request.errorCode 에 대해 무언가를 한다!
 };
-request.onsuccess = function(event) {
+request.onsuccess = function (event) {
   // request.result 에 대해 무언가를 한다!
 };
 ```
 
 `onsuccess()` 또는 `onerror()` 두 함수 중 어떤 함수가 호출될까요? 모든 것이 성공하면, success 이벤트 (즉, `type` 속성이`"success"` 로 설정된 DOM 이벤트)가 `request`를 `target`으로 발생합니다. 일단 실행되면, `request` 의 `onsuccess()` 함수는 success 이벤트를 인수로 트리거됩니다. 반면, 문제가 있는 경우, 오류 이벤트 (즉 `type` 속성이`"error"` 로 설정된 DOM 이벤트)는 `request`에서 발생합니다. 이 오류 이벤트를 인수로 `onerror()` 함수가 트리거됩니다.
 
-The IndexedDB API는 오류 처리의 필요성을 최소화하도록 설계되었기 때문에 많은 오류 이벤트를 볼 수는 없을 것입니다. (적어도 API에 익숙하지 않은 경우). 그러나 데이터베이스를 여는 경우 오류 이벤트를 발생하는 몇 가지 일반적인 조건이 있습니다. 가장 많은 문제는 사용자가 웹 응용 프로그램에 데이터베이스를 만들 수 있는 권한을 주지 않기로 결정한 것입니다. IndexedDB의 주요 설계 목표 중 하나는 많은 양의 데이터를 오프라인에서 사용할 수 있도록 하는 것입니다. (각 브라우저에서 저장할 수 있는 저장 용량에 대한 자세한 내용은 [Storage limits](/ko/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Storage_limits) 를 참조하십시오.)
+The IndexedDB API는 오류 처리의 필요성을 최소화하도록 설계되었기 때문에 많은 오류 이벤트를 볼 수는 없을 것입니다. (적어도 API에 익숙하지 않은 경우). 그러나 데이터베이스를 여는 경우 오류 이벤트를 발생하는 몇 가지 일반적인 조건이 있습니다. 가장 많은 문제는 사용자가 웹 응용 프로그램에 데이터베이스를 만들 수 있는 권한을 주지 않기로 결정한 것입니다. IndexedDB의 주요 설계 목표 중 하나는 많은 양의 데이터를 오프라인에서 사용할 수 있도록 하는 것입니다. (각 브라우저에서 저장할 수 있는 저장 용량에 대한 자세한 내용은 [Storage limits](/ko/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#storage_limits) 를 참조하십시오.)
 
-일부 광고 네트워크나 악의적인 웹 사이트가 컴퓨터를 오염시키는 것을 브라우저는 원하지 않기 때문에 브라우저는 특정 웹 응용 프로그램이 처음으로 저장용 IndexedDB를 열려고 할 때 사용자에게 메시지를 보냅니다. 사용자가 액세스를 허용하거나 거부할 수 있습니다. 또한, 개인정보 보호 모드의 브라우저에서 IndexedDB 공간은 시크릿 세션이 닫힐 때까지 메모리 내에서만 지속됩니다. (Firefox의 개인정보 보호 브라우징 모드와 Chrome 의 시크릿 모드가 있지만, Firefox 의 경우 2015년 11월 현재 아직 미구현({{Bug("781982")}} 참조)이므로, 개인정보 보호 브라우징 모드의 Firefox에서는 IndexedDB를 사용할 수 없습니다).
+일부 광고 네트워크나 악의적인 웹 사이트가 컴퓨터를 오염시키는 것을 브라우저는 원하지 않기 때문에 브라우저는 특정 웹 응용 프로그램이 처음으로 저장용 IndexedDB를 열려고 할 때 사용자에게 메시지를 보냅니다. 사용자가 액세스를 허용하거나 거부할 수 있습니다. 또한, 개인정보 보호 모드의 브라우저에서 IndexedDB 공간은 시크릿 세션이 닫힐 때까지 메모리 내에서만 지속됩니다. (Firefox의 개인정보 보호 브라우징 모드와 Chrome 의 시크릿 모드가 있지만, Firefox 의 경우 2015년 11월 현재 아직 미구현([Firefox bug 781982](https://bugzil.la/781982) 참조)이므로, 개인정보 보호 브라우징 모드의 Firefox에서는 IndexedDB를 사용할 수 없습니다).
 
 이제, 사용자가 데이터베이스 생성 요청을 허용하여 success 콜백을 트리거하는 success 이벤트를 받았다고 가정합니다; 그 다음은 무엇을 해야할까요? 이 요청은 `indexedDB.open()`을 호출하여 생성되었고, `request.result` 는 `IDBDatabase` 의 인스턴스이므로, 이후에 이것을 사용하기 위해 저장하기 원할 것은 확실합니다. 코드는 다음과 같이 할 수 있습니다:
 
 ```js
 var db;
 var request = indexedDB.open("MyTestDatabase");
-request.onerror = function(event) {
+request.onerror = function (event) {
   alert("Why didn't you allow my web app to use IndexedDB?!");
 };
-request.onsuccess = function(event) {
+request.onsuccess = function (event) {
   db = request.result;
 };
 ```
@@ -105,7 +114,7 @@ request.onsuccess = function(event) {
 위에서 언급한 바와 같이, 오류 이벤트는 버블링됩니다. 오류 이벤트는 오류를 생성한 request를 대상으로하며, 이벤트는 트랜잭션으로 버블링되고, 마지막으로 데이터베이스 객체로 버블링됩니다. 모든 요청에 에러 처리를 피하고 싶은 경우, 아래와 같이 하나의 오류 핸들러를 데이터베이스 객체에 추가하여 대신할 수 있습니다:
 
 ```js
-db.onerror = function(event) {
+db.onerror = function (event) {
   // Generic error handler for all errors targeted at this database's
   // requests!
   alert("Database error: " + event.target.errorCode);
@@ -120,7 +129,7 @@ db.onerror = function(event) {
 
 ```js
 // This event is only implemented in recent browsers
-request.onupgradeneeded = function(event) {
+request.onupgradeneeded = function (event) {
   // Save the IDBDatabase interface
   var db = event.target.result;
 
@@ -137,7 +146,7 @@ request.onupgradeneeded = function(event) {
 
 ### 데이터베이스 구성
 
-이제 데이터베이스를 구축합니다. IndexedDB는 테이블이 아닌 객체 저장소를 사용하며 하나의 데이터베이스는 여러 개의 객체 저장소를 포함할 수 있습니다. 값을 객체 저장소에 저장할 때마다 값은 키와 연관됩니다. 객체 저장소가 [키 경로](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) 또는 [키 생성기](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator) 옵션의 사용 여부에 따라 키를 제공할 수 있는 여러 가지 방법이 있습니다.
+이제 데이터베이스를 구축합니다. IndexedDB는 테이블이 아닌 객체 저장소를 사용하며 하나의 데이터베이스는 여러 개의 객체 저장소를 포함할 수 있습니다. 값을 객체 저장소에 저장할 때마다 값은 키와 연관됩니다. 객체 저장소가 [키 경로](/ko/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) 또는 [키 생성기](/ko/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator) 옵션의 사용 여부에 따라 키를 제공할 수 있는 여러 가지 방법이 있습니다.
 
 다음 표는 키가 제공되는 다양한 방법을 보여줍니다:
 
@@ -158,7 +167,7 @@ request.onupgradeneeded = function(event) {
 // This is what our customer data looks like.
 const customerData = [
   { ssn: "444-44-4444", name: "Bill", age: 35, email: "bill@company.com" },
-  { ssn: "555-55-5555", name: "Donna", age: 32, email: "donna@home.org" }
+  { ssn: "555-55-5555", name: "Donna", age: 32, email: "donna@home.org" },
 ];
 ```
 
@@ -171,10 +180,10 @@ const dbName = "the_name";
 
 var request = indexedDB.open(dbName, 2);
 
-request.onerror = function(event) {
+request.onerror = function (event) {
   // Handle errors.
 };
-request.onupgradeneeded = function(event) {
+request.onupgradeneeded = function (event) {
   var db = event.target.result;
 
   // Create an objectStore to hold information about our customers. We're
@@ -192,10 +201,12 @@ request.onupgradeneeded = function(event) {
 
   // Use transaction oncomplete to make sure the objectStore creation is
   // finished before adding data into it.
-  objectStore.transaction.oncomplete = function(event) {
+  objectStore.transaction.oncomplete = function (event) {
     // Store values in the newly created objectStore.
-    var customerObjectStore = db.transaction("customers", "readwrite").objectStore("customers");
-    customerData.forEach(function(customer) {
+    var customerObjectStore = db
+      .transaction("customers", "readwrite")
+      .objectStore("customers");
+    customerData.forEach(function (customer) {
       customerObjectStore.add(customer);
     });
   };
@@ -208,7 +219,7 @@ request.onupgradeneeded = function(event) {
 우리는 또한 저장된 객체의 `name` 프로퍼티를 찾기 위한 인덱스 "name"을 요청합니다.
 또한 `createObjectStore()`, `createIndex()` 도 생성하려는 인덱스의 종류를 결정하는 선택적인 객체인 `options` 을 인자로 받습니다. `name` 프로퍼티가 없는 객체를 추가할 수는 있지만, 이 경우 그 객체는 "name" 인덱스에 나타나지 않습니다.
 
-이제 우리는 저장된 customer 객체를 가져오기 위해 `ssn` 을 이용하여 객체 저장소로부터 바로 가져오거나, 인덱스에서 그들의 이름을 이용해 가져올 수 있습니다. 이 과정이 어떻게 이루어지는지 배우기 위해, [using an index](/en/IndexedDB/Using_IndexedDB#Using_an_index) 섹션을 확인할 수 있습니다.
+이제 우리는 저장된 customer 객체를 가져오기 위해 `ssn` 을 이용하여 객체 저장소로부터 바로 가져오거나, 인덱스에서 그들의 이름을 이용해 가져올 수 있습니다. 이 과정이 어떻게 이루어지는지 배우기 위해, [using an index](/en-US/IndexedDB/Using_IndexedDB#using_an_index) 섹션을 확인할 수 있습니다.
 
 ### 키 생성기 사용하기
 
@@ -223,23 +234,22 @@ request.onupgradeneeded = function(event) {
 var request = indexedDB.open(dbName, 3);
 
 request.onupgradeneeded = function (event) {
+  var db = event.target.result;
 
-    var db = event.target.result;
+  // Create another object store called "names" with the autoIncrement flag set as true.
+  var objStore = db.createObjectStore("names", { autoIncrement: true });
 
-    // Create another object store called "names" with the autoIncrement flag set as true.
-    var objStore = db.createObjectStore("names", { autoIncrement : true });
-
-    // Because the "names" object store has the key generator, the key for the name value is generated automatically.
-    // The added records would be like:
-    // key : 1 => value : "Bill"
-    // key : 2 => value : "Donna"
-    customerData.forEach(function(customer) {
-        objStore.add(customer.name);
-    });
+  // Because the "names" object store has the key generator, the key for the name value is generated automatically.
+  // The added records would be like:
+  // key : 1 => value : "Bill"
+  // key : 2 => value : "Donna"
+  customerData.forEach(function (customer) {
+    objStore.add(customer.name);
+  });
 };
 ```
 
-키 생성기와 관련된 보다 많은 정보는 ["W3C Key Generators"](http://www.w3.org/TR/IndexedDB/#key-generator-concept) 를 참고해 주십시오.
+키 생성기와 관련된 보다 많은 정보는 ["W3C Key Generators"](https://www.w3.org/TR/IndexedDB/#key-generator-concept) 를 참고해 주십시오.
 
 ## 데이터 추가, 검색 및 제거
 
@@ -249,12 +259,13 @@ request.onupgradeneeded = function (event) {
 
 이미 존재하는 객체 저장소의 레코드를 읽기 위해서 트랜잭션은 `readonly` 혹은 `readwrite` 모드이면 됩니다. 이미 존재하는 객체 저장소에 변경점을 기록하기 위해서는 트랜잭션이 반드시 `readwrite` 모드여야합니다. 특정 트랜잭션은 {{domxref("IDBDatabase.transaction")}} 으로 열 수 있습니다. 이 메소드는 접근하고 싶은 객체 저장소들의 배열로 정의된 범위인 `storeNames`와 트랜잭션의 모드`mode` (`readonly` 혹은 `readwrite`), 2개의 인자를 받습니다. 이 메소드는 객체 저장소에 접근할 수 있는 {{domxref("IDBIndex.objectStore")}} 메소드를 포함한 트랜잭션 객체를 반환합니다. 모드가 지정되지 않는다면 기본적으로 트랜잭션은 `readonly` 모드로 열립니다.
 
-> **참고:** As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see {{Bug("1112702")}}.) Previously in a `readwrite` transaction {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete`event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further. If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.
+> [!NOTE]
+> As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see [Firefox bug 1112702](https://bugzil.la/1112702).) Previously in a `readwrite` transaction {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete`event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further. If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.
 
 트랜잭션에서 적합한 범위와 모드를 사용함으로써 자료 접근을 빠르게 할 수 있습니다. 여기 두개의 팁이 있습니다:
 
 - 범위를 지정할 때, 필요한 객체 저장소만 정하십시오. 이 방식은 겹치지 않는 범위의 트랜잭션들을 동시에 처리할 수 있게 해줍니다.
-- `readwrite` 모드는 필요할때만 사용하십시오. 겹친 범위에 대해 `readonly` 트랜잭션은 동시에 실행될 수 있지만, `readwrite` 트랜잭션은 객체 저장소에 오직 한개만 작동할 수 있습니다. 더 자세한 내용은 [Basic Concepts](/ko/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB) 글에 있는 _[transactions](/ko/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#Database)_ 정의를 참고하십시오.
+- `readwrite` 모드는 필요할때만 사용하십시오. 겹친 범위에 대해 `readonly` 트랜잭션은 동시에 실행될 수 있지만, `readwrite` 트랜잭션은 객체 저장소에 오직 한개만 작동할 수 있습니다. 더 자세한 내용은 [Basic Concepts](/ko/docs/Web/API/IndexedDB_API/Basic_Terminology) 글에 있는 _[transactions](/ko/docs/Web/API/IndexedDB_API/Basic_Terminology#database)_ 정의를 참고하십시오.
 
 ### 데이터베이스에 데이터 추가
 
@@ -277,18 +288,18 @@ var transaction = db.transaction(["customers"], "readwrite");
 
 ```js
 // Do something when all the data is added to the database.
-transaction.oncomplete = function(event) {
+transaction.oncomplete = function (event) {
   alert("All done!");
 };
 
-transaction.onerror = function(event) {
+transaction.onerror = function (event) {
   // Don't forget to handle errors!
 };
 
 var objectStore = transaction.objectStore("customers");
 for (var i in customerData) {
   var request = objectStore.add(customerData[i]);
-  request.onsuccess = function(event) {
+  request.onsuccess = function (event) {
     // event.target.result == customerData[i].ssn
   };
 }
@@ -301,10 +312,11 @@ for (var i in customerData) {
 데이터 삭제는 아주 익숙한 그 방식대로 하시면 됩니다:
 
 ```js
-var request = db.transaction(["customers"], "readwrite")
-                .objectStore("customers")
-                .delete("444-44-4444");
-request.onsuccess = function(event) {
+var request = db
+  .transaction(["customers"], "readwrite")
+  .objectStore("customers")
+  .delete("444-44-4444");
+request.onsuccess = function (event) {
   // It's gone!
 };
 ```
@@ -317,10 +329,10 @@ request.onsuccess = function(event) {
 var transaction = db.transaction(["customers"]);
 var objectStore = transaction.objectStore("customers");
 var request = objectStore.get("444-44-4444");
-request.onerror = function(event) {
+request.onerror = function (event) {
   // Handle errors!
 };
-request.onsuccess = function(event) {
+request.onsuccess = function (event) {
   // Do something with the request.result!
   alert("Name for SSN 444-44-4444 is " + request.result.name);
 };
@@ -329,7 +341,10 @@ request.onsuccess = function(event) {
 "단순히" 가져오는 것 치고는 코드가 좀 많군요. 당신이 데이터베이스 수준에서 에러를 제어하고 있다면, 아래와 같이 간략화할 수도 있습니다:
 
 ```js
-db.transaction("customers").objectStore("customers").get("444-44-4444").onsuccess = function(event) {
+db
+  .transaction("customers")
+  .objectStore("customers")
+  .get("444-44-4444").onsuccess = function (event) {
   alert("Name for SSN 444-44-4444 is " + event.target.result.name);
 };
 ```
@@ -339,19 +354,21 @@ db.transaction("customers").objectStore("customers").get("444-44-4444").onsucces
 범위 제한과 모드 설정에 따라 데이터 접근 속도를 빠르게 할 수 있다는 점을 주목하십시오. 여기 몇개의 팁이 있습니다:
 
 - 범위([scope](#scope))를 정의할 때, 당신이 필요로 하는 오브젝트 스토어만 지정하십시오. 이렇게 하면, 범위가 중복되지 않는 한 여러 개의 트랜잭션을 동시에 실행할 수 있습니다.
-- `readwrite` 모드는 반드시 필요할 때만 사용하십시오. `readonly` 모드는 범위가 중복되더라도 동시에 실행 가능하지만, `readwrite` 모드는 한 오브젝트 스토어에 대해 동시에 하나밖에 실행할 수 없습니다. 더욱 자세한 정보는, 기본 개념서의 트랜잭션의 정의 항목([transactions in the Basic Concepts article](/ko/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction))을 참조하십시오.
+- `readwrite` 모드는 반드시 필요할 때만 사용하십시오. `readonly` 모드는 범위가 중복되더라도 동시에 실행 가능하지만, `readwrite` 모드는 한 오브젝트 스토어에 대해 동시에 하나밖에 실행할 수 없습니다. 더욱 자세한 정보는, 기본 개념서의 트랜잭션의 정의 항목([transactions in the Basic Concepts article](/ko/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_transaction))을 참조하십시오.
 
 ### 데이터베이스의 내용을 업데이트하기
 
 이제 우리는 몇 개의 데이터를 꺼냈습니다. 이 데이터를 업데이트하고 다시 IndexedDB에 집어넣는 것은 매우 간단합니다. 이전 예제를 약간 업데이트해 봅시다:
 
 ```js
-var objectStore = db.transaction(["customers"], "readwrite").objectStore("customers");
+var objectStore = db
+  .transaction(["customers"], "readwrite")
+  .objectStore("customers");
 var request = objectStore.get("444-44-4444");
-request.onerror = function(event) {
+request.onerror = function (event) {
   // Handle errors!
 };
-request.onsuccess = function(event) {
+request.onsuccess = function (event) {
   // Get the old value that we want to update
   var data = event.target.result;
 
@@ -360,127 +377,133 @@ request.onsuccess = function(event) {
 
   // Put this updated object back into the database.
   var requestUpdate = objectStore.put(data);
-   requestUpdate.onerror = function(event) {
-     // Do something with the error
-   };
-   requestUpdate.onsuccess = function(event) {
-     // Success - the data is updated!
-   };
+  requestUpdate.onerror = function (event) {
+    // Do something with the error
+  };
+  requestUpdate.onsuccess = function (event) {
+    // Success - the data is updated!
+  };
 };
 ```
 
 이제 우리는 `objectStore`를 만들고 사회보장번호(SSN)가 (`444-44-4444`)인 고객 레코드를 요청했습니다. 그리고 우리는 그 결과를 변수(`data`)에 넣고, 이 객체의 `age` 속성을 업데이트하여, 두 번째 요청(`requestUpdate`)을 만들어 고객 레코드를 다시 `objectStore`에 집어넣어 이전 값을 덮어썼습니다.
 
-> **참고:** 이 때 우리는 `readwrite` 모드를 사용해야 합니다. 우리가 지금 한 것은 단순히 데이터를 읽어오는 게 아니라, 다시 쓰는 것이기 때문입니다.
+> [!NOTE]
+> 이 때 우리는 `readwrite` 모드를 사용해야 합니다. 우리가 지금 한 것은 단순히 데이터를 읽어오는 게 아니라, 다시 쓰는 것이기 때문입니다.
 
-### Using a cursor
+### 커서 사용하기
 
-Using `get()` requires that you know which key you want to retrieve. If you want to step through all the values in your object store, then you can use a cursor. Here's what it looks like:
+`get()`을 사용하려면 검색하려는 키를 알고 있어야 합니다. 객체 저장소(object store)의 모든 값을 탐색하려면 커서를 사용할 수 있습니다. 아래는 커서를 사용하는 방법입니다:
 
 ```js
 var objectStore = db.transaction("customers").objectStore("customers");
 
-objectStore.openCursor().onsuccess = function(event) {
+objectStore.openCursor().onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     alert("Name for SSN " + cursor.key + " is " + cursor.value.name);
     cursor.continue();
-  }
-  else {
+  } else {
     alert("No more entries!");
   }
 };
 ```
 
-The `openCursor()` function takes several arguments. First, you can limit the range of items that are retrieved by using a key range object that we'll get to in a minute. Second, you can specify the direction that you want to iterate. In the above example, we're iterating over all objects in ascending order. The success callback for cursors is a little special. The cursor object itself is the `result` of the request (above we're using the shorthand, so it's `event.target.result`). Then the actual key and value can be found on the `key` and `value` properties of the cursor object. If you want to keep going, then you have to call `continue()` on the cursor. When you've reached the end of the data (or if there were no entries that matched your `openCursor()` request) you still get a success callback, but the `result` property is `undefined`.
+`openCursor()` 함수는 몇 가지 인자를 받습니다. 첫 번째로, 아래에서 곧 다룰 키 범위 객체(key range object)를 사용하여 검색할 항목의 범위를 제한할 수 있습니다. 두 번째로, 반복할 방향을 지정할 수 있습니다. 위 예제에서는 오름차순으로 모든 객체를 반복합니다. 커서들에 대한 성공 콜백함수는 약간 특이합니다. 커서 자체가 이벤트의 `결과` 입니다 (위 예에서는 축약 표현을 사용하므로 `event.target.result`입니다). 그런 다음 실제 키와 값을 커서 객체의 `key`와 `value` 속성에서 찾을 수 있습니다. 계속 진행하려면 커서에서 continue()를 호출해야 합니다. 데이터의 끝에 도달했거나 `openCursor()` 요청과 일치하는 항목이 없는 경우에도 여전히 성공 콜백이 호출되지만 `result` 속성은 `undefined`입니다.
 
-One common pattern with cursors is to retrieve all objects in an object store and add them to an array, like this:
+커서를 사용하는 일반적인 패턴 중 하나는 객체 저장소의 모든 객체를 검색하여 array에 추가하는 것입니다. 다음과 같이 작성할 수 있습니다:
 
 ```js
 var customers = [];
 
-objectStore.openCursor().onsuccess = function(event) {
+objectStore.openCursor().onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     customers.push(cursor.value);
     cursor.continue();
-  }
-  else {
+  } else {
     alert("Got all customers: " + customers);
   }
 };
 ```
 
-> **참고:** **Note**: Mozilla has also implemented `getAll()` to handle this case (and `getAllKeys()`, which is currently hidden behind the `dom.indexedDB.experimental` preference in about:config). These aren't part of the IndexedDB standard, so they may disappear in the future. We've included them because we think they're useful. The following code does precisely the same thing as above:`js objectStore.getAll().onsuccess = function(event) { alert("Got all customers: " + event.target.result); };` There is a performance cost associated with looking at the `value` property of a cursor, because the object is created lazily. When you use `getAll()` for example, Gecko must create all the objects at once. If you're just interested in looking at each of the keys, for instance, it is much more efficient to use a cursor than to use `getAll()`. If you're trying to get an array of all the objects in an object store, though, use `getAll()`.
+> **참고:** **Note**: Mozilla는 이런 경우를 처리하기 위해 getAll()을 구현했습니다(그리고 함께 구현한 `getAllKeys()`는 현재 about:config의 `dom.indexedDB.experimental` 설정 뒤에 숨겨져 있습니다.). 이들은 IndexedDB 표준은 아니기 때문에 추후 사라질 수 있습니다. 하지만 우리는 이것들이 유용하다고 생각하기 때문에 포함시켰습니다. 다음 코드는 위 코드와 정확히 같이 동작합니다.:`js objectStore.getAll().onsuccess = function(event) { alert("Got all customers: " + event.target.result); };` 커서의 `value` 속성을 살펴보는 것은 성능상의 비용이 발생합니다. 왜냐하면 해당 객체는 지연 생성되기 때문입니다. 예를 들어 `getAll()` 을 사용할 때, Gecko는 모든 객체를 한 번에 생성합니다. 만약 키 각각을 보는 것에만 관심이 있다면, 커서를 사용하는 것이 `getAll()`을 사용하는 것 보다 훨씬 효율적입니다. 반면에 객체 저장소의 모든 객체 배열을 가져오려는 경우에는 `getAll()`을 사용하세요.
 
-### Using an index
+### index 사용하기
 
-Storing customer data using the SSN as a key is logical since the SSN uniquely identifies an individual. (Whether this is a good idea for privacy is a different question, outside the scope of this article.) If you need to look up a customer by name, however, you'll need to iterate over every SSN in the database until you find the right one. Searching in this fashion would be very slow, so instead you can use an index.
+고객 데이터를 저장할 때 사회보장번호(SSN)를 키로 사용하는 것은 논리적입니다. 왜냐하면 SSN은 각 개인을 고유 식별하기 때문입니다. (이것이 사생활 보호에 좋은 생각인지는 이 아티클의 범위를 벗어난 다른 문제입니다.) 그러나 이름으로 고객을 찾아야 하는 경우 데이터베이스의 모든 SSN을 반복하여 올바른 SSN을 찾아야 합니다. 이러한 방식으로 검색하면 매우 느리기 때문에 인덱스를 대신 사용할 수 있습니다.
 
 ```js
-// First, make sure you created index in request.onupgradeneeded:
+// 먼저, request.onupgradeneeeded로 index를 생성해주세요:
 // objectStore.createIndex("name", "name");
-// Otherwize you will get DOMException.
+// 그렇지 않을 경우 DOMException이 발생합니다.
 
 var index = objectStore.index("name");
 
-index.get("Donna").onsuccess = function(event) {
+index.get("Donna").onsuccess = function (event) {
   alert("Donna's SSN is " + event.target.result.ssn);
 };
 ```
 
-The "name" cursor isn't unique, so there could be more than one entry with the `name` set to `"Donna"`. In that case you always get the one with the lowest key value.
+"name"은 고유하지 않기 때문에 `name`값이 `"Donna"`로 설정된 항목이 하나 이상 있을 수 있습니다. 이 경우 항상 가장 낮은 키 값인 결과 하나만 얻게 됩니다.
 
-If you need to access all the entries with a given `name` you can use a cursor. You can open two different types of cursors on indexes. A normal cursor maps the index property to the object in the object store. A key cursor maps the index property to the key used to store the object in the object store. The differences are illustrated here:
+특정 `name`값을 가진 모든 항목에 액세스해야 하는 경우 cursor를 사용할 수 있습니다. 인덱스들 마다 두 가지 다른 종류의 cursor를 열 수 있습니다. 일반적인 커서는 인덱스 속성을 객체 저장소의 객체에 매핑합니다. 그리고 키 커서는 객체를 객체 저장소에 저장하기 위해 사용된 키에 인덱스를 매핑합니다. 이러한 차이점은 다음과 같습니다.:
 
 ```js
-// Using a normal cursor to grab whole customer record objects
-index.openCursor().onsuccess = function(event) {
+// 일반적인 커서를 사용해서 고객 레코드 전체를 가져오기
+index.openCursor().onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
-    // cursor.key is a name, like "Bill", and cursor.value is the whole object.
-    alert("Name: " + cursor.key + ", SSN: " + cursor.value.ssn + ", email: " + cursor.value.email);
+    // cursor.key는 "Bill"과 같은 이름이며, cursor.value는 객체 전체를 의미합니다.
+    alert(
+      "Name: " +
+        cursor.key +
+        ", SSN: " +
+        cursor.value.ssn +
+        ", email: " +
+        cursor.value.email,
+    );
     cursor.continue();
   }
 };
 
-// Using a key cursor to grab customer record object keys
-index.openKeyCursor().onsuccess = function(event) {
+// 키 커서를 사용해서 고객 레코드 객체 키를 가져오기
+index.openKeyCursor().onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
-    // cursor.key is a name, like "Bill", and cursor.value is the SSN.
-    // No way to directly get the rest of the stored object.
+    // cursor.key는 "Bill"과 같은 이름이며, cursor.value는 사회보장번호(SSN)입니다.
+    // 저장된 객체의 나머지 부분을 직접적으로 가져올 방법은 없습니다.
     alert("Name: " + cursor.key + ", SSN: " + cursor.primaryKey);
     cursor.continue();
   }
 };
 ```
 
-### Specifying the range and direction of cursors
+### 커서들의 범위와 방향을 특정하기
 
-If you would like to limit the range of values you see in a cursor, you can use a key range object and pass it as the first argument to `openCursor()` or `openKeyCursor()`. You can make a key range that only allows a single key, or one the has a lower or upper bound, or one that has both a lower and upper bound. The bound may be "closed" (i.e., the key range includes the given value) or "open" (i.e., the key range does not include the given value). Here's how it works:
+`openCursor()` 또는 `openKeyCursor()`의 첫 번째 인자로 사용할 수 있는 키 범위 객체(key range object)를 사용하여 커서에서 볼 값의 범위를 제한할 수 있습니다. 단일 키만 허용하도록 하는 key range를 만들거나 하한 또는 상한값이 있는 key range를 만들 수 있습니다. 또는 하한 및 상한 값이 모두있는 key range를 만들 수 있습니다. 범위는 "closed"(즉, key range가 주어진 값까지 포함)거나 "open"(즉, key range가 주어진 값은 포함하지 않음)일 수 있습니다. 다음은 key range가 작동하는 방식입니다:
 
 ```js
-// Only match "Donna"
+// "Donna"만을 조회
 var singleKeyRange = IDBKeyRange.only("Donna");
 
-// Match anything past "Bill", including "Bill"
+// "Bill"을 포함한, "Bill" 이후 모든 값을 조회
 var lowerBoundKeyRange = IDBKeyRange.lowerBound("Bill");
 
-// Match anything past "Bill", but don't include "Bill"
+// "Bill"을 제외한, "Bill" 다음 모든 값을 조회
 var lowerBoundOpenKeyRange = IDBKeyRange.lowerBound("Bill", true);
 
-// Match anything up to, but not including, "Donna"
+// "Donna"를 제외한, 이전 모든 값을 조회
 var upperBoundOpenKeyRange = IDBKeyRange.upperBound("Donna", true);
 
-// Match anything between "Bill" and "Donna", but not including "Donna"
+// "Donna"를 제외한, "Bill"과 "Donna" 사이 모든 값을 조회
 var boundKeyRange = IDBKeyRange.bound("Bill", "Donna", false, true);
 
-// To use one of the key ranges, pass it in as the first argument of openCursor()/openKeyCursor()
-index.openCursor(boundKeyRange).onsuccess = function(event) {
+// 위 키 범위 중 하나를 사용하려면, openCursor()/openKeyCursor()에 첫 번째 인자로 넘겨주세요.
+index.openCursor(boundKeyRange).onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
-    // Do something with the matches.
+    // 조회된 값으로 무언가 수행한다.
     cursor.continue();
   }
 };
@@ -489,7 +512,7 @@ index.openCursor(boundKeyRange).onsuccess = function(event) {
 Sometimes you may want to iterate in descending order rather than in ascending order (the default direction for all cursors). Switching direction is accomplished by passing `prev` to the `openCursor()` function:
 
 ```js
-objectStore.openCursor(boundKeyRange, "prev").onsuccess = function(event) {
+objectStore.openCursor(boundKeyRange, "prev").onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     // Do something with the entries.
@@ -501,7 +524,7 @@ objectStore.openCursor(boundKeyRange, "prev").onsuccess = function(event) {
 If you just want to specify a change of direction but not constrain the results shown, you can just pass in null as the first argument:
 
 ```js
-objectStore.openCursor(null, "prev").onsuccess = function(event) {
+objectStore.openCursor(null, "prev").onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     // Do something with the entries.
@@ -513,7 +536,7 @@ objectStore.openCursor(null, "prev").onsuccess = function(event) {
 Since the "name" index isn't unique, there might be multiple entries where `name` is the same. Note that such a situation cannot occur with object stores since the key must always be unique. If you wish to filter out duplicates during cursor iteration over indexes, you can pass `nextunique` (or `prevunique` if you're going backwards) as the direction parameter. When `nextunique` or `prevunique` is used, the entry with the lowest key is always the one returned.
 
 ```js
-index.openKeyCursor(null, "nextunique").onsuccess = function(event) {
+index.openKeyCursor(null, "nextunique").onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     // Do something with the entries.
@@ -531,29 +554,29 @@ When your web app changes in such a way that a version change is required for yo
 ```js
 var openReq = mozIndexedDB.open("MyTestDatabase", 2);
 
-openReq.onblocked = function(event) {
+openReq.onblocked = function (event) {
   // If some other tab is loaded with the database, then it needs to be closed
   // before we can proceed.
   alert("Please close all other tabs with this site open!");
 };
 
-openReq.onupgradeneeded = function(event) {
+openReq.onupgradeneeded = function (event) {
   // All other databases have been closed. Set everything up.
   db.createObjectStore(/* ... */);
   useDatabase(db);
-}
+};
 
-openReq.onsuccess = function(event) {
+openReq.onsuccess = function (event) {
   var db = event.target.result;
   useDatabase(db);
   return;
-}
+};
 
 function useDatabase(db) {
   // Make sure to add a handler to be notified if another page requests a version
   // change. We must close the database. This allows the other page to upgrade the database.
   // If you don't do this then the upgrade won't happen until the user close the tab.
-  db.onversionchange = function(event) {
+  db.onversionchange = function (event) {
     db.close();
     alert("A new version of this page is ready. Please reload!");
   };
@@ -568,7 +591,7 @@ You should also listen for `VersionError` errors to handle the situation where a
 
 IndexedDB uses the same-origin principle, which means that it ties the store to the origin of the site that creates it (typically, this is the site domain or subdomain), so it cannot be accessed by any other origin.
 
-Third party window content (e.g. {{htmlelement("iframe")}} content) can access the IndexedDB store for the origin it is embedded into, unless the browser is set to [never accept third party cookies](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (see {{bug("1147821")}}.)
+Third party window content (e.g. {{htmlelement("iframe")}} content) can access the IndexedDB store for the origin it is embedded into, unless the browser is set to [never accept third party cookies](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (see [Firefox bug 1147821](https://bugzil.la/1147821).)
 
 ## Warning about browser shutdown
 
@@ -576,11 +599,11 @@ When the browser shuts down (because the user chose the Quit or Exit option), th
 
 1. Each transaction on every affected database (or all open databases, in the case of browser shutdown) is aborted with an `AbortError`. The effect is the same as if {{domxref("IDBTransaction.abort()")}} is called on each transaction.
 2. Once all of the transactions have completed, the database connection is closed.
-3. Finally, the {{domxref("IDBDatabase")}} object representing the database connection receives a {{event("close")}} event. You can use the {{domxref("IDBDatabase.onclose")}} event handler to listen for these events, so that you know when a database is unexpectedly closed.
+3. Finally, the {{domxref("IDBDatabase")}} object representing the database connection receives a {{domxref("IDBDatabase/close_event", "close")}} event. You can use the {{domxref("IDBDatabase.onclose")}} event handler to listen for these events, so that you know when a database is unexpectedly closed.
 
 The behavior described above is new, and is only available as of the following browser releases: Firefox 50, Google Chrome 31 (approximately).
 
-Prior to these browser versions, the transactions are aborted silently, and no {{event("close")}} event is fired, so there is no way to detect an unexpected database closure.
+Prior to these browser versions, the transactions are aborted silently, and no {{domxref("IDBDatabase/close_event", "close")}} event is fired, so there is no way to detect an unexpected database closure.
 
 Since the user can exit the browser at any time, this means that you cannot rely upon any particular transaction to complete, and on older browsers, you don't even get told when they don't complete. There are several implications of this behavior.
 
@@ -588,13 +611,13 @@ First, you should take care to always leave your database in a consistent state 
 
 Second, you should never tie database transactions to unload events. If the unload event is triggered by the browser closing, any transactions created in the unload event handler will never complete. An intuitive approach to maintaining some information across browser sessions is to read it from the database when the browser (or a particular page) is opened, update it as the user interacts with the browser, and then save it to the database when the browser (or page) closes. However, this will not work. The database transactions will be created in the unload event handler, but because they are asynchronous they will be aborted before they can execute.
 
-In fact, there is no way to guarantee that IndexedDB transactions will complete, even with normal browser shutdown. See {{ bug(870645) }}. As a workaround for this normal shutdown notification, you might track your transactions and add a `beforeunload` event to warn the user if any transactions have not yet completed at the time of unloading.
+In fact, there is no way to guarantee that IndexedDB transactions will complete, even with normal browser shutdown. See [Firefox bug 870645](https://bugzil.la/870645). As a workaround for this normal shutdown notification, you might track your transactions and add a `beforeunload` event to warn the user if any transactions have not yet completed at the time of unloading.
 
 At least with the addition of the abort notifications and {{domxref("IDBDatabase.onclose")}}, you can know when this has happened.
 
 ## Locale-aware sorting
 
-Mozilla has implemented the ability to perform locale-aware sorting of IndexedDB data in Firefox 43+. By default, IndexedDB didn’t handle internationalization of sorting strings at all, and everything was sorted as if it were English text. For example, b, á, z, a would be sorted as:
+Mozilla has implemented the ability to perform locale-aware sorting of IndexedDB data in Firefox 43+. By default, IndexedDB didn't handle internationalization of sorting strings at all, and everything was sorted as if it were English text. For example, b, á, z, a would be sorted as:
 
 - a
 - b
@@ -607,144 +630,140 @@ This new functionality enables developers to specify a locale when creating an i
 
 {{domxref("IDBIndex")}} has also had new properties added to it to specify if it has a locale specified, and what it is: `locale` (returns the locale if any, or null if none is specified) and `isAutoLocale` (returns `true` if the index was created with an auto locale, meaning that the platform's default locale is used, `false` otherwise.)
 
-> **참고:** This feature is currently hidden behind a flag — to enable it and experiment, go to <a>about:config</a> and enable `dom.indexedDB.experimental`.
+> [!NOTE]
+> This feature is currently hidden behind a flag — to enable it and experiment, go to <a>about:config</a> and enable `dom.indexedDB.experimental`.
 
 ## Full IndexedDB example
 
 ### HTML Content
 
 ```html
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script
+  type="text/javascript"
+  src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
-    <h1>IndexedDB Demo: storing blobs, e-publication example</h1>
-    <div class="note">
-      <p>
-        Works and tested with:
-      </p>
-      <div id="compat">
-      </div>
-    </div>
+<h1>IndexedDB Demo: storing blobs, e-publication example</h1>
+<div class="note">
+  <p>Works and tested with:</p>
+  <div id="compat"></div>
+</div>
 
-    <div id="msg">
-    </div>
+<div id="msg"></div>
 
-    <form id="register-form">
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <label for="pub-title" class="required">
-                Title:
-              </label>
-            </td>
-            <td>
-              <input type="text" id="pub-title" name="pub-title" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="pub-biblioid" class="required">
-                Bibliographic ID:<br/>
-                <span class="note">(ISBN, ISSN, etc.)</span>
-              </label>
-            </td>
-            <td>
-              <input type="text" id="pub-biblioid" name="pub-biblioid"/>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="pub-year">
-                Year:
-              </label>
-            </td>
-            <td>
-              <input type="number" id="pub-year" name="pub-year" />
-            </td>
-          </tr>
-        </tbody>
-        <tbody>
-          <tr>
-            <td>
-              <label for="pub-file">
-                File image:
-              </label>
-            </td>
-            <td>
-              <input type="file" id="pub-file"/>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="pub-file-url">
-                Online-file image URL:<br/>
-                <span class="note">(same origin URL)</span>
-              </label>
-            </td>
-            <td>
-              <input type="text" id="pub-file-url" name="pub-file-url"/>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+<form id="register-form">
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <label for="pub-title" class="required"> Title: </label>
+        </td>
+        <td>
+          <input type="text" id="pub-title" name="pub-title" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="pub-biblioid" class="required">
+            Bibliographic ID:<br />
+            <span class="note">(ISBN, ISSN, etc.)</span>
+          </label>
+        </td>
+        <td>
+          <input type="text" id="pub-biblioid" name="pub-biblioid" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="pub-year"> Year: </label>
+        </td>
+        <td>
+          <input type="number" id="pub-year" name="pub-year" />
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>
+          <label for="pub-file"> File image: </label>
+        </td>
+        <td>
+          <input type="file" id="pub-file" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="pub-file-url">
+            Online-file image URL:<br />
+            <span class="note">(same origin URL)</span>
+          </label>
+        </td>
+        <td>
+          <input type="text" id="pub-file-url" name="pub-file-url" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-      <div class="button-pane">
-        <input type="button" id="add-button" value="Add Publication" />
-        <input type="reset" id="register-form-reset"/>
-      </div>
-    </form>
+  <div class="button-pane">
+    <input type="button" id="add-button" value="Add Publication" />
+    <input type="reset" id="register-form-reset" />
+  </div>
+</form>
 
-    <form id="delete-form">
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <label for="pub-biblioid-to-delete">
-                Bibliographic ID:<br/>
-                <span class="note">(ISBN, ISSN, etc.)</span>
-              </label>
-            </td>
-            <td>
-              <input type="text" id="pub-biblioid-to-delete"
-                     name="pub-biblioid-to-delete" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="key-to-delete">
-                Key:<br/>
-                <span class="note">(for example 1, 2, 3, etc.)</span>
-              </label>
-            </td>
-            <td>
-              <input type="text" id="key-to-delete"
-                     name="key-to-delete" />
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="button-pane">
-        <input type="button" id="delete-button" value="Delete Publication" />
-        <input type="button" id="clear-store-button"
-               value="Clear the whole store" class="destructive" />
-      </div>
-    </form>
+<form id="delete-form">
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <label for="pub-biblioid-to-delete">
+            Bibliographic ID:<br />
+            <span class="note">(ISBN, ISSN, etc.)</span>
+          </label>
+        </td>
+        <td>
+          <input
+            type="text"
+            id="pub-biblioid-to-delete"
+            name="pub-biblioid-to-delete" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="key-to-delete">
+            Key:<br />
+            <span class="note">(for example 1, 2, 3, etc.)</span>
+          </label>
+        </td>
+        <td>
+          <input type="text" id="key-to-delete" name="key-to-delete" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="button-pane">
+    <input type="button" id="delete-button" value="Delete Publication" />
+    <input
+      type="button"
+      id="clear-store-button"
+      value="Clear the whole store"
+      class="destructive" />
+  </div>
+</form>
 
-    <form id="search-form">
-      <div class="button-pane">
-        <input type="button" id="search-list-button"
-               value="List database content" />
-      </div>
-    </form>
+<form id="search-form">
+  <div class="button-pane">
+    <input
+      type="button"
+      id="search-list-button"
+      value="List database content" />
+  </div>
+</form>
 
-    <div>
-      <div id="pub-msg">
-      </div>
-      <div id="pub-viewer">
-      </div>
-      <ul id="pub-list">
-      </ul>
-    </div>
+<div>
+  <div id="pub-msg"></div>
+  <div id="pub-viewer"></div>
+  <ul id="pub-list"></ul>
+</div>
 ```
 
 ### CSS Content
@@ -842,20 +861,22 @@ input {
 ```js
 (function () {
   var COMPAT_ENVS = [
-    ['Firefox', ">= 16.0"],
-    ['Google Chrome',
-     ">= 24.0 (you may need to get Google Chrome Canary), NO Blob storage support"]
+    ["Firefox", ">= 16.0"],
+    [
+      "Google Chrome",
+      ">= 24.0 (you may need to get Google Chrome Canary), NO Blob storage support",
+    ],
   ];
-  var compat = $('#compat');
+  var compat = $("#compat");
   compat.empty();
   compat.append('<ul id="compat-list"></ul>');
-  COMPAT_ENVS.forEach(function(val, idx, array) {
-    $('#compat-list').append('<li>' + val[0] + ': ' + val[1] + '</li>');
+  COMPAT_ENVS.forEach(function (val, idx, array) {
+    $("#compat-list").append("<li>" + val[0] + ": " + val[1] + "</li>");
   });
 
-  const DB_NAME = 'mdn-demo-indexeddb-epublications';
+  const DB_NAME = "mdn-demo-indexeddb-epublications";
   const DB_VERSION = 1; // Use a long long for this value (don't use a float)
-  const DB_STORE_NAME = 'publications';
+  const DB_STORE_NAME = "publications";
 
   var db;
 
@@ -878,12 +899,14 @@ input {
 
     req.onupgradeneeded = function (evt) {
       console.log("openDb.onupgradeneeded");
-      var store = evt.currentTarget.result.createObjectStore(
-        DB_STORE_NAME, { keyPath: 'id', autoIncrement: true });
+      var store = evt.currentTarget.result.createObjectStore(DB_STORE_NAME, {
+        keyPath: "id",
+        autoIncrement: true,
+      });
 
-      store.createIndex('biblioid', 'biblioid', { unique: true });
-      store.createIndex('title', 'title', { unique: false });
-      store.createIndex('year', 'year', { unique: false });
+      store.createIndex("biblioid", "biblioid", { unique: true });
+      store.createIndex("title", "title", { unique: false });
+      store.createIndex("year", "year", { unique: false });
     };
   }
 
@@ -897,9 +920,9 @@ input {
   }
 
   function clearObjectStore(store_name) {
-    var store = getObjectStore(DB_STORE_NAME, 'readwrite');
+    var store = getObjectStore(DB_STORE_NAME, "readwrite");
     var req = store.clear();
-    req.onsuccess = function(evt) {
+    req.onsuccess = function (evt) {
       displayActionSuccess("Store cleared");
       displayPubList(store);
     };
@@ -911,10 +934,9 @@ input {
 
   function getBlob(key, store, success_callback) {
     var req = store.get(key);
-    req.onsuccess = function(evt) {
+    req.onsuccess = function (evt) {
       var value = evt.target.result;
-      if (value)
-        success_callback(value.blob);
+      if (value) success_callback(value.blob);
     };
   }
 
@@ -924,12 +946,12 @@ input {
   function displayPubList(store) {
     console.log("displayPubList");
 
-    if (typeof store == 'undefined')
-      store = getObjectStore(DB_STORE_NAME, 'readonly');
+    if (typeof store == "undefined")
+      store = getObjectStore(DB_STORE_NAME, "readonly");
 
-    var pub_msg = $('#pub-msg');
+    var pub_msg = $("#pub-msg");
     pub_msg.empty();
-    var pub_list = $('#pub-list');
+    var pub_list = $("#pub-list");
     pub_list.empty();
     // Resetting the iframe so that it doesn't display previous content
     newViewerFrame();
@@ -940,18 +962,21 @@ input {
     // transaction, and their results are returned in the same order.
     // Thus the count text below will be displayed before the actual pub list
     // (not that it is algorithmically important in this case).
-    req.onsuccess = function(evt) {
-      pub_msg.append('<p>There are <strong>' + evt.target.result +
-                     '</strong> record(s) in the object store.</p>');
+    req.onsuccess = function (evt) {
+      pub_msg.append(
+        "<p>There are <strong>" +
+          evt.target.result +
+          "</strong> record(s) in the object store.</p>",
+      );
     };
-    req.onerror = function(evt) {
+    req.onerror = function (evt) {
       console.error("add error", this.error);
       displayActionFailure(this.error);
     };
 
     var i = 0;
     req = store.openCursor();
-    req.onsuccess = function(evt) {
+    req.onsuccess = function (evt) {
       var cursor = evt.target.result;
 
       // If the cursor is pointing at something, ask for the data
@@ -960,21 +985,31 @@ input {
         req = store.get(cursor.key);
         req.onsuccess = function (evt) {
           var value = evt.target.result;
-          var list_item = $('<li>' +
-                            '[' + cursor.key + '] ' +
-                            '(biblioid: ' + value.biblioid + ') ' +
-                            value.title +
-                            '</li>');
-          if (value.year != null)
-            list_item.append(' - ' + value.year);
+          var list_item = $(
+            "<li>" +
+              "[" +
+              cursor.key +
+              "] " +
+              "(biblioid: " +
+              value.biblioid +
+              ") " +
+              value.title +
+              "</li>",
+          );
+          if (value.year != null) list_item.append(" - " + value.year);
 
-          if (value.hasOwnProperty('blob') &&
-              typeof value.blob != 'undefined') {
+          if (
+            value.hasOwnProperty("blob") &&
+            typeof value.blob != "undefined"
+          ) {
             var link = $('<a href="' + cursor.key + '">File</a>');
-            link.on('click', function() { return false; });
-            link.on('mouseenter', function(evt) {
-                      setInViewer(evt.target.getAttribute('href')); });
-            list_item.append(' / ');
+            link.on("click", function () {
+              return false;
+            });
+            link.on("mouseenter", function (evt) {
+              setInViewer(evt.target.getAttribute("href"));
+            });
+            list_item.append(" / ");
             list_item.append(link);
           } else {
             list_item.append(" / No attached file");
@@ -994,9 +1029,9 @@ input {
   }
 
   function newViewerFrame() {
-    var viewer = $('#pub-viewer');
+    var viewer = $("#pub-viewer");
     viewer.empty();
-    var iframe = $('<iframe />');
+    var iframe = $("<iframe />");
     viewer.append(iframe);
     return iframe;
   }
@@ -1004,50 +1039,51 @@ input {
   function setInViewer(key) {
     console.log("setInViewer:", arguments);
     key = Number(key);
-    if (key == current_view_pub_key)
-      return;
+    if (key == current_view_pub_key) return;
 
     current_view_pub_key = key;
 
-    var store = getObjectStore(DB_STORE_NAME, 'readonly');
-    getBlob(key, store, function(blob) {
+    var store = getObjectStore(DB_STORE_NAME, "readonly");
+    getBlob(key, store, function (blob) {
       console.log("setInViewer blob:", blob);
       var iframe = newViewerFrame();
 
       // It is not possible to set a direct link to the
       // blob to provide a mean to directly download it.
-      if (blob.type == 'text/html') {
+      if (blob.type == "text/html") {
         var reader = new FileReader();
-        reader.onload = (function(evt) {
+        reader.onload = function (evt) {
           var html = evt.target.result;
-          iframe.load(function() {
-            $(this).contents().find('html').html(html);
+          iframe.load(function () {
+            $(this).contents().find("html").html(html);
           });
-        });
+        };
         reader.readAsText(blob);
-      } else if (blob.type.indexOf('image/') == 0) {
-        iframe.load(function() {
-          var img_id = 'image-' + key;
+      } else if (blob.type.indexOf("image/") == 0) {
+        iframe.load(function () {
+          var img_id = "image-" + key;
           var img = $('<img id="' + img_id + '"/>');
-          $(this).contents().find('body').html(img);
+          $(this).contents().find("body").html(img);
           var obj_url = window.URL.createObjectURL(blob);
-          $(this).contents().find('#' + img_id).attr('src', obj_url);
+          $(this)
+            .contents()
+            .find("#" + img_id)
+            .attr("src", obj_url);
           window.URL.revokeObjectURL(obj_url);
         });
-      } else if (blob.type == 'application/pdf') {
-        $('*').css('cursor', 'wait');
+      } else if (blob.type == "application/pdf") {
+        $("*").css("cursor", "wait");
         var obj_url = window.URL.createObjectURL(blob);
-        iframe.load(function() {
-          $('*').css('cursor', 'auto');
+        iframe.load(function () {
+          $("*").css("cursor", "auto");
         });
-        iframe.attr('src', obj_url);
+        iframe.attr("src", obj_url);
         window.URL.revokeObjectURL(obj_url);
       } else {
-        iframe.load(function() {
-          $(this).contents().find('body').html("No view available");
+        iframe.load(function () {
+          $(this).contents().find("body").html("No view available");
         });
       }
-
     });
   }
 
@@ -1064,10 +1100,10 @@ input {
     console.log("addPublicationFromUrl:", arguments);
 
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
+    xhr.open("GET", url, true);
     // Setting the wanted responseType to "blob"
     // http://www.w3.org/TR/XMLHttpRequest2/#the-response-attribute
-    xhr.responseType = 'blob';
+    xhr.responseType = "blob";
     xhr.onload = function (evt) {
       if (xhr.status == 200) {
         console.log("Blob retrieved");
@@ -1075,8 +1111,11 @@ input {
         console.log("Blob:", blob);
         addPublication(biblioid, title, year, blob);
       } else {
-        console.error("addPublicationFromUrl error:",
-        xhr.responseText, xhr.status);
+        console.error(
+          "addPublicationFromUrl error:",
+          xhr.responseText,
+          xhr.status,
+        );
       }
     };
     xhr.send();
@@ -1110,17 +1149,17 @@ input {
   function addPublication(biblioid, title, year, blob) {
     console.log("addPublication arguments:", arguments);
     var obj = { biblioid: biblioid, title: title, year: year };
-    if (typeof blob != 'undefined')
-      obj.blob = blob;
+    if (typeof blob != "undefined") obj.blob = blob;
 
-    var store = getObjectStore(DB_STORE_NAME, 'readwrite');
+    var store = getObjectStore(DB_STORE_NAME, "readwrite");
     var req;
     try {
       req = store.add(obj);
     } catch (e) {
-      if (e.name == 'DataCloneError')
-        displayActionFailure("This engine doesn't know how to clone a Blob, " +
-                             "use Firefox");
+      if (e.name == "DataCloneError")
+        displayActionFailure(
+          "This engine doesn't know how to clone a Blob, " + "use Firefox",
+        );
       throw e;
     }
     req.onsuccess = function (evt) {
@@ -1128,7 +1167,7 @@ input {
       displayActionSuccess();
       displayPubList(store);
     };
-    req.onerror = function() {
+    req.onerror = function () {
       console.error("addPublication error", this.error);
       displayActionFailure(this.error);
     };
@@ -1139,10 +1178,10 @@ input {
    */
   function deletePublicationFromBib(biblioid) {
     console.log("deletePublication:", arguments);
-    var store = getObjectStore(DB_STORE_NAME, 'readwrite');
-    var req = store.index('biblioid');
-    req.get(biblioid).onsuccess = function(evt) {
-      if (typeof evt.target.result == 'undefined') {
+    var store = getObjectStore(DB_STORE_NAME, "readwrite");
+    var req = store.index("biblioid");
+    req.get(biblioid).onsuccess = function (evt) {
+      if (typeof evt.target.result == "undefined") {
         displayActionFailure("No matching record found");
         return;
       }
@@ -1160,18 +1199,18 @@ input {
   function deletePublication(key, store) {
     console.log("deletePublication:", arguments);
 
-    if (typeof store == 'undefined')
-      store = getObjectStore(DB_STORE_NAME, 'readwrite');
+    if (typeof store == "undefined")
+      store = getObjectStore(DB_STORE_NAME, "readwrite");
 
     // As per spec http://www.w3.org/TR/IndexedDB/#object-store-deletion-operation
     // the result of the Object Store Deletion Operation algorithm is
     // undefined, so it's not possible to know if some records were actually
     // deleted by looking at the request result.
     var req = store.get(key);
-    req.onsuccess = function(evt) {
+    req.onsuccess = function (evt) {
       var record = evt.target.result;
       console.log("record:", record);
-      if (typeof record == 'undefined') {
+      if (typeof record == "undefined") {
         displayActionFailure("No matching record found");
         return;
       }
@@ -1179,7 +1218,7 @@ input {
       // the deletion. If the key was a Number for creation, then it needs to
       // be a Number for deletion.
       req = store.delete(key);
-      req.onsuccess = function(evt) {
+      req.onsuccess = function (evt) {
         console.log("evt:", evt);
         console.log("evt.target:", evt.target);
         console.log("evt.target.result:", evt.target.result);
@@ -1197,38 +1236,38 @@ input {
   }
 
   function displayActionSuccess(msg) {
-    msg = typeof msg != 'undefined' ? "Success: " + msg : "Success";
-    $('#msg').html('<span class="action-success">' + msg + '</span>');
+    msg = typeof msg != "undefined" ? "Success: " + msg : "Success";
+    $("#msg").html('<span class="action-success">' + msg + "</span>");
   }
   function displayActionFailure(msg) {
-    msg = typeof msg != 'undefined' ? "Failure: " + msg : "Failure";
-    $('#msg').html('<span class="action-failure">' + msg + '</span>');
+    msg = typeof msg != "undefined" ? "Failure: " + msg : "Failure";
+    $("#msg").html('<span class="action-failure">' + msg + "</span>");
   }
   function resetActionStatus() {
     console.log("resetActionStatus ...");
-    $('#msg').empty();
+    $("#msg").empty();
     console.log("resetActionStatus DONE");
   }
 
   function addEventListeners() {
     console.log("addEventListeners");
 
-    $('#register-form-reset').click(function(evt) {
+    $("#register-form-reset").click(function (evt) {
       resetActionStatus();
     });
 
-    $('#add-button').click(function(evt) {
+    $("#add-button").click(function (evt) {
       console.log("add ...");
-      var title = $('#pub-title').val();
-      var biblioid = $('#pub-biblioid').val();
+      var title = $("#pub-title").val();
+      var biblioid = $("#pub-biblioid").val();
       if (!title || !biblioid) {
         displayActionFailure("Required field(s) missing");
         return;
       }
-      var year = $('#pub-year').val();
-      if (year != '') {
+      var year = $("#pub-year").val();
+      if (year != "") {
         // Better use Number.isInteger if the engine has EcmaScript 6
-        if (isNaN(year))  {
+        if (isNaN(year)) {
           displayActionFailure("Invalid year");
           return;
         }
@@ -1237,14 +1276,14 @@ input {
         year = null;
       }
 
-      var file_input = $('#pub-file');
+      var file_input = $("#pub-file");
       var selected_file = file_input.get(0).files[0];
       console.log("selected_file:", selected_file);
       // Keeping a reference on how to reset the file input in the UI once we
       // have its value, but instead of doing that we rather use a "reset" type
       // input in the HTML form.
       //file_input.val(null);
-      var file_url = $('#pub-file-url').val();
+      var file_url = $("#pub-file-url").val();
       if (selected_file) {
         addPublication(biblioid, title, year, selected_file);
       } else if (file_url) {
@@ -1252,19 +1291,18 @@ input {
       } else {
         addPublication(biblioid, title, year);
       }
-
     });
 
-    $('#delete-button').click(function(evt) {
+    $("#delete-button").click(function (evt) {
       console.log("delete ...");
-      var biblioid = $('#pub-biblioid-to-delete').val();
-      var key = $('#key-to-delete').val();
+      var biblioid = $("#pub-biblioid-to-delete").val();
+      var key = $("#key-to-delete").val();
 
-      if (biblioid != '') {
+      if (biblioid != "") {
         deletePublicationFromBib(biblioid);
-      } else if (key != '') {
+      } else if (key != "") {
         // Better use Number.isInteger if the engine has EcmaScript 6
-        if (key == '' || isNaN(key))  {
+        if (key == "" || isNaN(key)) {
           displayActionFailure("Invalid key");
           return;
         }
@@ -1273,20 +1311,18 @@ input {
       }
     });
 
-    $('#clear-store-button').click(function(evt) {
+    $("#clear-store-button").click(function (evt) {
       clearObjectStore();
     });
 
-    var search_button = $('#search-list-button');
-    search_button.click(function(evt) {
+    var search_button = $("#search-list-button");
+    search_button.click(function (evt) {
       displayPubList();
     });
-
   }
 
   openDb();
   addEventListeners();
-
 })(); // Immediately-Invoked Function Expression (IIFE)
 ```
 
@@ -1298,18 +1334,18 @@ Further reading for you to find out more information if desired.
 
 ### Reference
 
-- [IndexedDB API Reference](/en/IndexedDB)
-- [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
-- IndexedDB [interface files](https://mxr.mozilla.org/mozilla-central/find?text=&string=dom%2FindexedDB%2F.*%5C.idl&regexp=1) in the Firefox source code
+- [IndexedDB API Reference](/en-US/IndexedDB)
+- [Indexed Database API Specification](https://www.w3.org/TR/IndexedDB/)
+- IndexedDB [interface files](https://searchfox.org/mozilla-central/search?q=dom%2FindexedDB%2F.*%5C.idl&path=&case=false&regexp=true) in the Firefox source code
 
 ### Tutorials and guides
 
-- [Databinding UI Elements with IndexedDB](http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
+- [Databinding UI Elements with IndexedDB](https://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
 - [IndexedDB — The Store in Your Browser](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)
 
 ### Libraries
 
 - [localForage](https://localforage.github.io/localForage/): A Polyfill providing a simple name:value syntax for client-side data storage, which uses IndexedDB in the background, but falls back to WebSQL and then localStorage in browsers that don't support IndexedDB.
-- [dexie.js](http://www.dexie.org/): A wrapper for IndexedDB that allows much faster code development via nice, simple syntax.
+- [dexie.js](https://www.dexie.org/): A wrapper for IndexedDB that allows much faster code development via nice, simple syntax.
 - [ZangoDB](https://github.com/erikolson186/zangodb): A MongoDB-like interface for IndexedDB that supports most of the familiar filtering, projection, sorting, updating and aggregation features of MongoDB.
-- [JsStore](http://jsstore.net/): A simple and advanced IndexedDB wrapper having SQL like syntax.
+- [JsStore](https://jsstore.net/): A simple and advanced IndexedDB wrapper having SQL like syntax.

@@ -1,11 +1,9 @@
 ---
 title: 패턴
 slug: Web/SVG/Tutorial/Patterns
-tags:
-  - 패턴
-translation_of: Web/SVG/Tutorial/Patterns
 ---
-{{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}
+
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}
 
 ## 패턴
 
@@ -15,22 +13,27 @@ translation_of: Web/SVG/Tutorial/Patterns
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="Gradient1">
-      <stop offset="5%" stop-color="white"/>
-      <stop offset="95%" stop-color="blue"/>
+      <stop offset="5%" stop-color="white" />
+      <stop offset="95%" stop-color="blue" />
     </linearGradient>
     <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="5%" stop-color="red"/>
-      <stop offset="95%" stop-color="orange"/>
+      <stop offset="5%" stop-color="red" />
+      <stop offset="95%" stop-color="orange" />
     </linearGradient>
 
     <pattern id="Pattern" x="0" y="0" width=".25" height=".25">
-      <rect x="0" y="0" width="50" height="50" fill="skyblue"/>
-      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/>
-      <circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5"/>
+      <rect x="0" y="0" width="50" height="50" fill="skyblue" />
+      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)" />
+      <circle
+        cx="25"
+        cy="25"
+        r="20"
+        fill="url(#Gradient1)"
+        fill-opacity="0.5" />
     </pattern>
   </defs>
 
-  <rect fill="url(#Pattern)" stroke="black" width="200" height="200"/>
+  <rect fill="url(#Pattern)" stroke="black" width="200" height="200" />
 </svg>
 ```
 
@@ -71,6 +74,6 @@ Gecko에서 반지름이 0.075보다 작은 동그라미를 그리는 데 어려
 
 물론 나중에 개체 크기를 변경해도 패턴의 크기는 조정되지 않는다. 위의 세 가지 예는 아래 높이를 300px로 약간 늘린 직사각형에 보이고 있지만 이게 완벽한 그림이 아니고, 시스템에 따라 가능한 다른 요인이 있음을 밝혀 둔다.
 
-![Image:SVG_Pattern_Comparison_of_Units.png](/@api/deki/files/349/=SVG_Pattern_Comparison_of_Units.png)
+![](svg_pattern_comparison_of_units.png)
 
 {{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}

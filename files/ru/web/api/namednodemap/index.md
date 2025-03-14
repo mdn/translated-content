@@ -1,7 +1,6 @@
 ---
 title: NamedNodeMap
 slug: Web/API/NamedNodeMap
-translation_of: Web/API/NamedNodeMap
 ---
 
 {{APIRef("DOM")}}
@@ -10,7 +9,8 @@ translation_of: Web/API/NamedNodeMap
 
 Объект NamedNodeMap является "живым" и, таким образом, будет автоматически обновляться, если изменения будут внесены в его содержимое внутри или в другом месте.
 
-> **Примечание:** Хотя данный интерфейс и называется `NamedNodeMap` , он не имеет ничего общего с объектом {{domxref("Node")}}, но до сих пор связан с объектом {{domxref(" Attr ")}}, который изначально был специализированным классом {{domxref("Node")}}.
+> [!NOTE]
+> Хотя данный интерфейс и называется `NamedNodeMap` , он не имеет ничего общего с объектом {{domxref("Node")}}, но до сих пор связан с объектом {{domxref(" Attr ")}}, который изначально был специализированным классом {{domxref("Node")}}.
 
 ## Свойства
 
@@ -38,19 +38,14 @@ translation_of: Web/API/NamedNodeMap
 - {{domxref("NamedNodeMap.removeNamedItemNS()")}}
   - : Удаляет {{domxref ("Attr")}}, идентифицированный данным пространством имён и связанным локальным именем.
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                | Status                           | Comment                                                                |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#interface-namednodemap', 'NamedNodeMap')}} | {{Spec2('DOM WHATWG')}} | Имеет дело с {{domxref("Attr")}} вместо {{domxref("Node")}}  |
-| {{SpecName('DOM3 Core', 'core.html#ID-1780488922', 'NamedNodeMap')}} | {{Spec2('DOM3 Core')}}     | No change from {{SpecName('DOM2 Core')}}                        |
-| {{SpecName('DOM2 Core', 'core.html#ID-1780488922', 'NamedNodeMap')}} | {{Spec2('DOM2 Core')}}     | Added `getNamedItemNS()`, `setNamedItemNS()` and `removeNamedItemNS()` |
-| {{SpecName('DOM1', 'core.html#ID-1780488922', 'NamedNodeMap')}}         | {{Spec2('DOM1')}}         | Initial definition                                                     |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("Element.attributes")}}

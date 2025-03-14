@@ -1,20 +1,52 @@
 ---
 title: border-left-width
 slug: Web/CSS/border-left-width
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/border-left-width
 ---
 
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`border-left-width`** 속성은 요소의 왼쪽 테두리 너비를 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/border-left-width.html")}}
+{{InteractiveExample("CSS Demo: border-left-width")}}
+
+```css interactive-example-choice
+border-left-width: thick;
+```
+
+```css interactive-example-choice
+border-left-width: 2em;
+```
+
+```css interactive-example-choice
+border-left-width: 4px;
+```
+
+```css interactive-example-choice
+border-left-width: 2ex;
+```
+
+```css interactive-example-choice
+border-left-width: 0;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 구문
 
@@ -46,7 +78,8 @@ border-left-width: unset;
     | `medium` |     | 중간 테두리 |
     | `thick`  |     | 굵은 테두리 |
 
-    > **참고:** 각 키워드의 굵기를 정의한 명세는 없기 때문에 결과는 구현별로 상이할 수 있습니다. 다만 굵기는 언제나 `thin ≤ medium ≤ thick`이고, 하나의 문서 내에서 동일합니다.
+    > [!NOTE]
+    > 각 키워드의 굵기를 정의한 명세는 없기 때문에 결과는 구현별로 상이할 수 있습니다. 다만 굵기는 언제나 `thin ≤ medium ≤ thick`이고, 하나의 문서 내에서 동일합니다.
 
 ## 형식 정의
 

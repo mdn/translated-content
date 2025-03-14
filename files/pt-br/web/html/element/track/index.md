@@ -5,9 +5,33 @@ slug: Web/HTML/Element/track
 
 {{HTMLSidebar}}
 
-O **elemento HTML `<track>` **é usado como filho dos elementos de mídia{{HTMLElement("audio")}} e {{HTMLElement("video")}}. Ele permite que você especifique faixas de texto temporizadas (ou dados baseados em tempo), por exemplo, para lidar automaticamente com legendas. As faixas são formatadas em [WebVTT format](/pt-BR/docs/Web/API/Web_Video_Text_Tracks_Format) (arquivos `.vtt`) — Web Video Text Tracks or [Timed Text Markup Language (TTML).](https://w3c.github.io/ttml2/index.html)
+O **elemento HTML `<track>` **é usado como filho dos elementos de mídia{{HTMLElement("audio")}} e {{HTMLElement("video")}}. Ele permite que você especifique faixas de texto temporizadas (ou dados baseados em tempo), por exemplo, para lidar automaticamente com legendas. As faixas são formatadas em [WebVTT format](/pt-BR/docs/Web/API/WebVTT_API) (arquivos `.vtt`) — Web Video Text Tracks or [Timed Text Markup Language (TTML).](https://w3c.github.io/ttml2/index.html)
 
-{{EmbedInteractiveExample("pages/tabbed/track.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;track&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video controls src="/shared-assets/videos/friday.mp4">
+  <track
+    default
+    kind="captions"
+    srclang="en"
+    src="/shared-assets/misc/friday.vtt" />
+  Download the
+  <a href="/shared-assets/videos/friday.mp4">MP4</a>
+  video, and
+  <a href="/shared-assets/misc/friday.vtt">subtitles</a>.
+</video>
+```
+
+```css interactive-example
+video {
+  width: 250px;
+}
+
+video::cue {
+  font-size: 1rem;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -48,11 +72,11 @@ O **elemento HTML `<track>` **é usado como filho dos elementos de mídia{{HTMLE
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("default")}}
+- `default`
   - : This attribute indicates that the track should be enabled unless the user's preferences indicate that another track is more appropriate. This may only be used on one `track` element per media element.
-- {{htmlattrdef("kind")}}
+- `kind`
 
   - : How the text track is meant to be used. If omitted the default kind is `subtitles`. If the attribute is not present, it will use the `subtitles`. If the attribute contains an invalid value, it will use `metadata`. (Versions of Chrome earlier than 52 treated an invalid value as `subtitles`.) The following keywords are allowed:
 
@@ -80,11 +104,11 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
       - Tracks used by scripts. Not visible to the user.
 
-- {{htmlattrdef("label")}}
+- `label`
   - : A user-readable title of the text track which is used by the browser when listing available text tracks.
-- {{htmlattrdef("src")}}
-  - : Address of the track (`.vtt` file). Must be a valid URL. This attribute must be specified and its URL value must have the same origin as the document — unless the {{HTMLElement("audio")}} or {{HTMLElement("video")}} parent element of the `track` element has a [`crossorigin`](/pt-BR/docs/Web/HTML/CORS_settings_attributes) attribute.
-- {{htmlattrdef("srclang")}}
+- `src`
+  - : Address of the track (`.vtt` file). Must be a valid URL. This attribute must be specified and its URL value must have the same origin as the document — unless the {{HTMLElement("audio")}} or {{HTMLElement("video")}} parent element of the `track` element has a [`crossorigin`](/pt-BR/docs/Web/HTML/Attributes/crossorigin) attribute.
+- `srclang`
   - : Language of the track text data. It must be a valid [BCP 47](https://r12a.github.io/app-subtags/) language tag. If the `kind` attribute is set to `subtitles`, then `srclang` must be defined.
 
 ## Usage notes
@@ -97,38 +121,31 @@ A `media` element cannot have more than one `track` with the same `kind`, `srcla
 
 ```html
 <video controls poster="/images/sample.gif">
-   <source src="sample.mp4" type="video/mp4">
-   <source src="sample.ogv" type="video/ogv">
-   <track kind="captions" src="sampleCaptions.vtt" srclang="en">
-   <track kind="descriptions"
-     src="sampleDescriptions.vtt" srclang="en">
-   <track kind="chapters" src="sampleChapters.vtt" srclang="en">
-   <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de">
-   <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en">
-   <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja">
-   <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz">
-   <track kind="metadata" src="keyStage1.vtt" srclang="en"
-     label="Key Stage 1">
-   <track kind="metadata" src="keyStage2.vtt" srclang="en"
-     label="Key Stage 2">
-   <track kind="metadata" src="keyStage3.vtt" srclang="en"
-     label="Key Stage 3">
-   <!-- Fallback -->
-   ...
+  <source src="sample.mp4" type="video/mp4" />
+  <source src="sample.ogv" type="video/ogv" />
+  <track kind="captions" src="sampleCaptions.vtt" srclang="en" />
+  <track kind="descriptions" src="sampleDescriptions.vtt" srclang="en" />
+  <track kind="chapters" src="sampleChapters.vtt" srclang="en" />
+  <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de" />
+  <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en" />
+  <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja" />
+  <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz" />
+  <track kind="metadata" src="keyStage1.vtt" srclang="en" label="Key Stage 1" />
+  <track kind="metadata" src="keyStage2.vtt" srclang="en" label="Key Stage 2" />
+  <track kind="metadata" src="keyStage3.vtt" srclang="en" label="Key Stage 3" />
+  <!-- Fallback -->
+  ...
 </video>
 ```
 
-## Specifications
+## Especificações
 
-| Specification                                                                                                        | Status                           | Comment            |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG','embedded-content.html#the-track-element','track element')}}     | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName("HTML5 W3C", "embedded-content-0.html#the-track-element", "track element")}} | {{Spec2("HTML5 W3C")}}     | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.track")}}
+{{Compat}}
 
 ## See also
 
-- [WebVTT text track format](/pt-BR/docs/HTML/WebVTT)
+- [WebVTT text track format](/pt-BR/docs/Web/API/WebVTT_API)

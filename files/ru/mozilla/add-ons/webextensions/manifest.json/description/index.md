@@ -1,12 +1,8 @@
 ---
 title: description
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/description
-tags:
-  - Reference
-  - WebExtensions
-  - description
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/description
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -32,7 +28,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/description
 
 Краткое описание дополнения, предназначенное для показа в интерфейсе браузера.
 
-Это [локализуемое свойство](/ru/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
+Это [локализуемое свойство](/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
 ## Пример
 

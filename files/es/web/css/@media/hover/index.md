@@ -5,7 +5,7 @@ slug: Web/CSS/@media/hover
 
 {{cssref}}
 
-La [característica de medios CSS](/es/docs/CSS) **`hover`**, puede se utilizada para probar si el mecanismo de entrada primario de un usuario puede flotar sobre los elementos.
+La [característica de medios CSS](/es/docs/Web/CSS) **`hover`**, puede se utilizada para probar si el mecanismo de entrada primario de un usuario puede flotar sobre los elementos.
 
 ## Sintaxis
 
@@ -42,6 +42,6 @@ La característica hover es especificada como un valor de palabra clave elegida 
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.media.hover")}}
+{{Compat}}

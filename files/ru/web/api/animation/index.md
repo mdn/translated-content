@@ -1,7 +1,6 @@
 ---
 title: Animation
 slug: Web/API/Animation
-translation_of: Web/API/Animation
 ---
 
 {{ APIRef("Web Animations") }}{{SeeCompatTable}}
@@ -16,25 +15,31 @@ translation_of: Web/API/Animation
 ## Свойства
 
 - {{domxref("Animation.currentTime")}}
+
   - : Текущее значение времени анимации в миллисекундах, независимо от того работает анимация или приостановлена. Если анимация не имеет {{domxref("AnimationTimeline", "timeline")}}, неактивна или ещё не воспроизведена, то это значение равно нулю.
 
 - {{domxref("Animation.effect")}}
   - : Возвращает и задаёт {{domxref ("AnimationEffectReadOnly")}} связанный с этой анимацией. Обычно это объект {{domxref ("KeyframeEffect")}}.
 - {{domxref("Animation.finished")}} {{readOnlyInline}}
+
   - : Возвращает промис, сигнализирующий о завершении анимации.
 
 - {{domxref("Animation.id")}}
   - : Возвращает и задаёт String(строку), используемую для идентификации анимации.
 - {{domxref("Animation.playState")}} {{readOnlyInline}}
+
   - : Возвращает перечисляемое значение, описывающее состояние воспроизведения анимации.
 
 - {{domxref("Animation.playbackRate")}}
+
   - : Возвращает или задаёт скорость воспроизведения анимации.
 
 - {{domxref("Animation.ready")}} {{readOnlyInline}}
+
   - : Возвращает промис, сигнализирующий о начале проигрывания анимации.
 
 - {{domxref("Animation.startTime")}}
+
   - : Возвращает или задаёт начало выполнения анимации.
 
 - {{domxref("Animation.timeline")}}
@@ -52,17 +57,21 @@ translation_of: Web/API/Animation
 - {{domxref("Animation.cancel()")}}
   - : Очищает все {{domxref("KeyframeEffect", "keyframeEffects")}} вызванные этой анимацией и прекращает его выполнение.
 - {{domxref("animation.commitStyles()")}}
+
   - : Фиксирует конечное состояние стиля анимации к анимируемому элементу, даже после того, как эта анимация была удалена. Это приведёт к тому, что конечное состояние стиля будет записано в анимируемый элемент в виде свойств внутри атрибута стиля.
 
 - {{domxref("Animation.finish()")}}
+
   - : Ищет конец анимации, в зависимости от того, играет ли анимация или инвертирует.
 
 - {{domxref("Animation.pause()")}}
   - : Приостанавливает запущенную анимацию.
 - {{domxref("animation.persist()")}}
+
   - : Анимация сохраняется в явном виде, когда в противном случае она была бы удалена из-за поведения браузера, которое предполагает автоматическое удаление анимаций заполнения.
 
 - {{domxref("Animation.play()")}}
+
   - : Запускает или продолжает выполнение анимации или начинает анимацию снова, если она ранее завершилась.
 
 - {{domxref("Animation.reverse()")}}

@@ -1,8 +1,9 @@
 ---
-title: HTMLFormElement.reset()
+title: "HTMLFormElement: reset() メソッド"
+short-title: reset()
 slug: Web/API/HTMLFormElement/reset
 l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
@@ -30,7 +31,7 @@ reset()
 ## 例
 
 ```js
-document.getElementById('myform').reset();
+document.getElementById("myform").reset();
 ```
 
 ## 仕様書

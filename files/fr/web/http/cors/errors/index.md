@@ -1,18 +1,6 @@
 ---
 title: CORS errors
 slug: Web/HTTP/CORS/Errors
-tags:
-  - CORS
-  - Errors
-  - HTTP
-  - HTTPS
-  - Messages
-  - Same-origin
-  - Security
-  - TopicStub
-  - console
-  - troubleshooting
-translation_of: Web/HTTP/CORS/Errors
 ---
 
 {{HTTPSidebar}}
@@ -27,8 +15,8 @@ Si la configuration CORS n'est pas correctement effectuée, la console du naviga
 
 Pour saisir la cause de l'erreur, il faut préalablement découvrir la requête fautive, ainsi que la configuration erronée. Ces étapes peuvent être utiles au processus:
 
-1. Rendez-vous sur le site défaillant et ouvrez les [Developer Tools](/fr/docs/Tools).
-2. Essayez de reproduir la requête qui échoue et vérifiez la [console](/fr/docs/Tools/Web_Console) pour trouver les messages de violation CORS, ce qui tournerait autours de:
+1. Rendez-vous sur le site défaillant et ouvrez les [Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html).
+2. Essayez de reproduir la requête qui échoue et vérifiez la [console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) pour trouver les messages de violation CORS, ce qui tournerait autours de:
 
 ![Firefox console showing CORS error](cors-error2.png)
 
@@ -40,7 +28,8 @@ reading the remote resource at https://some-url-here. (Reason:
 additional information here).
 ```
 
-> **Note :** Pour des raisons de sécurité, il _est impossible_ d'analyser les causes de l'erreur CORS via JavaScript. Seule une indication de l'échec de la requête sera fournie. Il faut donc absolument regarder manuellement les messages d'erreur de la console pour débugger.
+> [!NOTE]
+> Pour des raisons de sécurité, il _est impossible_ d'analyser les causes de l'erreur CORS via JavaScript. Seule une indication de l'échec de la requête sera fournie. Il faut donc absolument regarder manuellement les messages d'erreur de la console pour débugger.
 
 ## Messages d'erreur CORS
 
@@ -48,25 +37,25 @@ Firefox affiche les erreurs dans la console lors d'échec de requête CORS. Ce m
 
 - [Raison: CORS désactivé](/fr/docs/Web/HTTP/CORS/Errors/CORSDisabled)
 - [Raison: la requête CORS a échoué](/fr/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed)
-- [Raison: l'en-tête CORS ‘Origin’ ne peut pas être ajouté](/fr/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded)
+- [Raison: l'en-tête CORS 'Origin' ne peut pas être ajouté](/fr/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded)
 - [Raison: Requête CORS redirection externe non autorisée](/fr/docs/Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed)
 - [Raison: Requête CORS non http](/fr/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp)
-- [Raison: En-tête CORS ‘Access-Control-Allow-Origin’ manquant](/fr/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin)
-- [Raison: l'en-tête CORS ‘Access-Control-Allow-Origin’ ne correspond pas à ‘xyz’](/fr/docs/Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin)
-- [Raison: les informations d'identification ne sont pas prises en charge si l'en-tête CORS ‘Access-Control-Allow-Origin’ est ‘\*’](/fr/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials)
-- [Raison: Méthode introuvable dans l'en-tête CORS 'Access-Control-Allow-Methods’](/fr/docs/Web/HTTP/CORS/Errors/CORSMethodNotFound)
-- [Raison: ‘true’ attendu dans l'en-tête CORS ‘Access-Control-Allow-Credentials’](/fr/docs/Web/HTTP/CORS/Errors/CORSMissingAllowCredentials)
+- [Raison: En-tête CORS 'Access-Control-Allow-Origin' manquant](/fr/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin)
+- [Raison: l'en-tête CORS 'Access-Control-Allow-Origin' ne correspond pas à 'xyz'](/fr/docs/Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin)
+- [Raison: les informations d'identification ne sont pas prises en charge si l'en-tête CORS 'Access-Control-Allow-Origin' est '\*'](/fr/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials)
+- [Raison: Méthode introuvable dans l'en-tête CORS 'Access-Control-Allow-Methods'](/fr/docs/Web/HTTP/CORS/Errors/CORSMethodNotFound)
+- [Raison: 'true' attendu dans l'en-tête CORS 'Access-Control-Allow-Credentials'](/fr/docs/Web/HTTP/CORS/Errors/CORSMissingAllowCredentials)
 - [Raison: Échec du canal de contrôle en amont CORS](/fr/docs/Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed)
-- [Raison: jeton ‘xyz’ non valide dans l'en-tête CORS ‘Access-Control-Allow-Methods’](/fr/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod)
-- [Raison: jeton ‘xyz’ non valide dans l'en-tête CORS ‘Access-Control-Allow-Headers’](/fr/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowHeader)
-- [Raison: jeton ‘xyz’ manquant dans l'en-tête CORS ‘Access-Control-Allow-Headers’ du canal de contrôle en amont CORS](/fr/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight)
-- [Raison: plusieurs en-têtes CORS ‘Access-Control-Allow-Origin’ ne sont pas autorisés](/fr/docs/Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed)
+- [Raison: jeton 'xyz' non valide dans l'en-tête CORS 'Access-Control-Allow-Methods'](/fr/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod)
+- [Raison: jeton 'xyz' non valide dans l'en-tête CORS 'Access-Control-Allow-Headers'](/fr/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowHeader)
+- [Raison: jeton 'xyz' manquant dans l'en-tête CORS 'Access-Control-Allow-Headers' du canal de contrôle en amont CORS](/fr/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight)
+- [Raison: plusieurs en-têtes CORS 'Access-Control-Allow-Origin' ne sont pas autorisés](/fr/docs/Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed)
 
 ## Voir aussi
 
 - Glossaire: {{Glossary("CORS")}}
 - [CORS introduction](/fr/docs/Web/HTTP/CORS)
-- [Paramètres CORS côté serveur](/fr/docs/Web/HTTP/Server-Side_Access_Control)
+- [Paramètres CORS côté serveur](/fr/docs/Web/HTTP/CORS)
 - [Image compatible CORS](/fr/docs/Web/HTML/CORS_enabled_image)
-- [Attributs des paramètres CORS](/fr/docs/Web/HTML/CORS_settings_attributes)
+- [Attributs des paramètres CORS](/fr/docs/Web/HTML/Attributes/crossorigin)
 - <https://www.test-cors.org> – une page pour tester les requêtes CORS

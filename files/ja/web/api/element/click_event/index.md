@@ -1,95 +1,96 @@
 ---
-title: 'Element: click イベント'
+title: "Element: click イベント"
+short-title: click
 slug: Web/API/Element/click_event
+l10n:
+  sourceCommit: ab65140829d7c4df540fd859c0a97a78b3b1fd33
 ---
 
 {{APIRef}}
 
-**`click`** イベントは、ポインターが要素の中にある状態で、ポインティングデバイスのボタン (マウスの第一ボタンなど) が押されて離されたときに要素に送られます。
+要素は以下のような場面で **`click`** イベントを受け取ります。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>バブリング</th>
-      <td>あり</td>
-    </tr>
-    <tr>
-      <th>キャンセル</th>
-      <td>可</td>
-    </tr>
-    <tr>
-      <th>インターフェイス</th>
-      <td>{{domxref("MouseEvent")}}</td>
-    </tr>
-    <tr>
-      <th>イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onclick", "onclick")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+- ポインターが要素内に位置している間、ポインティングデバイスのボタン（マウスの第一ボタンなど）が押され、離されたとき。
+- 要素上でタッチジェスチャーが実行されたとき。
+- クリックと同等のユーザー操作が行われたとき。例えば要素にフォーカスがあるときに <kbd>Space</kbd> キーや <kbd>Enter</kbd> キーが押されたとき。 なお、これは既定でキーイベントハンドラーを持つ要素のみに適用されるため、[`tabindex`](/ja/docs/Web/HTML/Global_attributes/tabindex) 属性を指定してフォーカス可能にした他の要素は対象外となります。
 
-ある要素でボタンが押され、ボタンが離される前にポインタが要素の外に移動した場合、イベントは両方の要素を含む最も具体的な祖先の要素で発生します。
+ある要素上でボタンが押され、ボタンが離される前にポインターが要素の外に移動された場合、両方の要素を含む最も詳細な祖先要素上でイベントが発生します。
 
 `click` は {{domxref("Element/mousedown_event", "mousedown")}} および {{domxref("Element/mouseup_event", "mouseup")}} イベントの後、順番通りに発生します。
 
+このイベントは機器に依存しないイベントです。つまり、タッチ、キーボード、マウス、支援技術などで指定された方法でも起動できるということです。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("click", (event) => {});
+
+onclick = (event) => {};
+```
+
+## イベント型
+
+{{domxref("PointerEvent")}} です。 {{domxref("MouseEvent")}} を継承しています。
+
+{{InheritanceDiagram("PointerEvent")}}
+
+> [!NOTE]
+> この仕様書の以前のバージョンでは、このイベントのイベント型は {{domxref("MouseEvent")}} でした。 Firefox と Safari では今でもこの型で渡されます。
+
+## イベントプロパティ
+
+_このインターフェイスは、{{domxref("MouseEvent")}} および {{domxref("Event")}} からプロパティを継承しています。_
+
+- {{domxref('PointerEvent.altitudeAngle')}} {{ReadOnlyInline}}
+  - : トランスデューサー（ポインターまたはスタイラス）の軸と機器の画面の X-Y 平面のなす角度を表します。
+- {{domxref('PointerEvent.azimuthAngle')}} {{ReadOnlyInline}}
+  - : Y-Z 平面と、トランスデューサー（ポインターまたはスタイラス）の軸と Y 軸の両方を格納する平面との間の角度を表します。
+- {{domxref('PointerEvent.persistentDeviceId')}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : `PointerEvent` を生成するポインティングデバイス用の固有の識別子。
+- {{domxref('PointerEvent.pointerId')}} {{ReadOnlyInline}}
+  - : イベントの原因となっているポインターの一意の識別子。
+- {{domxref('PointerEvent.width')}} {{ReadOnlyInline}}
+  - : ポインターの接触形状の幅（X 軸上の大きさ、CSS ピクセル単位）。
+- {{domxref('PointerEvent.height')}} {{ReadOnlyInline}}
+  - : ポインターの接触形状の高さ（Y 軸上の大きさ、CSS ピクセル単位）。
+- {{domxref('PointerEvent.pressure')}} {{ReadOnlyInline}}
+  - : 0 から 1 の範囲のポインター入力の正規化された圧力。 ここで、0 と 1 は、それぞれハードウェアが検出できる最小圧力と最大圧力を表します。
+- {{domxref('PointerEvent.tangentialPressure')}} {{ReadOnlyInline}}
+  - : ポインター入力の正規化された接線圧力（バレル圧力またはシリンダー応力（[cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)）とも呼ばれます）は `-1` から `1` の範囲で、 `0` はコントロールの中立位置です。
+- {{domxref('PointerEvent.tiltX')}} {{ReadOnlyInline}}
+  - : Y-Z 平面と、ポインター（ペン/スタイラスなど）軸と Y 軸の両方を含む平面との間の平面角度（度単位、`-90` から `90` の範囲）。
+- {{domxref('PointerEvent.tiltY')}} {{ReadOnlyInline}}
+  - : X-Z 平面と、ポインター（ペン/スタイラスなど）軸と X 軸の両方を含む平面との間の平面角度（度単位、`-90` から `90` の範囲）。
+- {{domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
+  - : ポインター（ペン/スタイラスなど）の長軸を中心とした時計回りの回転の度数（`0` から `359` の範囲の値）。
+- {{domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
+  - : イベントの原因となった機器の種類（マウス、ペン、タッチなど）を示します。
+- {{domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
+  - : ポインターがこのポインターの種類の主ポインターを表しているかどうかを示します。
+
 ## 使用上の注意
 
-`click` のイベントハンドラーに渡される {{domxref("MouseEvent")}} オブジェクトの {{domxref("UIEvent/detail", "detail")}} プロパティには、 {{domxref("Event.target", "target")}} がクリックされた回数が設定されています。言い換えれば、ダブルクリックの場合は `detail` が 2 になり、トリプルクリックの場合は 3 になります。このカウンターは、クリックが発生しない短い間隔の後にリセットされます。この間隔の長さの詳細は、ブラウザーやプラットフォームによって異なります。この間隔は、ユーザーの設定によっても影響を受ける可能性があります。例えば、アクセシビリティのオプションは、適応性のあるインターフェイスで複数回のクリックを簡単に実行できるように、この間隔を延長することができます。
+`click` のイベントハンドラーに渡される {{domxref("PointerEvent")}} オブジェクトの {{domxref("UIEvent/detail", "detail")}} プロパティには、 {{domxref("Event.target", "target")}} がクリックされた回数が設定されています。言い換えれば、ダブルクリックの場合は `detail` が 2 になり、トリプルクリックの場合は 3 になります。このカウンターは、クリックが発生しない短い間隔の後にリセットされます。この間隔の長さの詳細は、ブラウザーやプラットフォームによって異なります。この間隔は、ユーザーの設定によっても影響を受ける可能性があります。例えば、アクセシビリティのオプションは、適応性のあるインターフェイスで複数回のクリックを簡単に実行できるように、この間隔を延長することができます。
 
-### Internet Explorer
-
-Internet Explorer 8 と 9 は、 {{cssxref("background-color")}} の計算値が [`transparent`](/ja/docs/Web/CSS/color_value#transparent_keyword) である要素が他の要素の上に重なった時、 `click` イベントを受け取らないというバグに悩まされていました。すべての `click` イベントはその下にある要素で発生していました。[このライブサンプル](http://jsfiddle.net/YUKma/show/)を参照してください。
-
-このバグの知られている回避方法は以下の通りです。
-
-- IE9 のみの場合:
-
-  - {{cssxref("background-color")}}`: rgba(0,0,0,0)` に設定する
-  - {{cssxref("opacity")}}`: 0` に設定し、{{cssxref("background-color")}} を明示的に [`transparent`](/ja/docs/Web/CSS/color_value#transparent_keyword) 以外に設定する
-
-- IE8 および IE9 の場合: `filter: alpha(opacity=0);` に設定し、 {{cssxref("background-color")}} を明示的に [`transparent`](/ja/docs/Web/CSS/color_value#transparent_keyword) 以外に設定する
-
-## Safari Mobile
-
-Safari Mobile 7.0 以降では (おそらくそれ以前のバージョンも) [悩ましいバグ](https://bugs.webkit.org/show_bug.cgi?id=153887)があり、通常は対話型ではない要素 ({{HTMLElement("div")}} など) で、イベントリスナーが要素自身に直接設定されていない場合 (つまり、 [イベントの委譲](https://davidwalsh.name/event-delegate)が使用されている場合) は `click` イベントが発生しません。デモは[このライブ例](https://jsfiddle.net/cvrhulu/k9t0sdnf/show/)を参照してください。 [Safari's docs on making elements clickable](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW6) および [definition of "clickable element"](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW7) も参照してください。
-
-このバグの知られている回避策は以下のとおりです。
-
-- その要素およびそのすべての祖先に {{cssxref("cursor")}}`: pointer;` を設定する。
-- ダミーの `onclick="void(0)"` 属性を、その要素または {{HTMLElement("body")}} 以外の祖先のいずれかに設定する。
-- 通常は対話型になる要素 (例えば {{HTMLElement("a")}}) を、通常は対話型でない要素 (例えば {{HTMLElement("div")}}) の代わりに使用する。
-- `click` [イベントの委譲](https://davidwalsh.name/event-delegate)の使用をやめる。
-
-Safari Mobile は以下の要素を通常対話型であるとみなします (したがって、このバグの影響を受けません)。
-
-- {{HTMLElement("a")}} (ただし `href` があるものに限る)
-- {{HTMLElement("area")}} (ただし `href` があるものに限る)
-- {{HTMLElement("button")}}
-- {{HTMLElement("img")}}
-- {{HTMLElement("input")}}
-- {{HTMLElement("label")}} (ただしフォームコントロールに関連付けられているものに限る)
-- {{HTMLElement("textarea")}}
-- _このリストは不完全です。試験や調査を行って展開することで MDN にご協力ください。_
-
-<h2 id="Examples">例</h2>
+## 例
 
 この例は {{HtmlElement("button")}} を連続してクリックした数を表示します。
 
 ### HTML
 
 ```html
-<button>Click</button>
+<button>クリック</button>
 ```
 
 ### JavaScript
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', event => {
-  button.textContent = `Click count: ${event.detail}`;
+button.addEventListener("click", (event) => {
+  button.textContent = `クリック回数: ${event.detail}`;
 });
 ```
 
@@ -109,7 +110,7 @@ button.addEventListener('click', event => {
 
 ## 関連情報
 
-- [イベントの紹介](/ja/docs/Learn/JavaScript/Building_blocks/Events)
+- [学習: イベント入門](/ja/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/auxclick_event", "auxclick")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
 - {{domxref("Element/dblclick_event", "dblclick")}}

@@ -1,8 +1,9 @@
 ---
 title: WebVTT
 slug: Web/API/WebVTT_API
-original_slug: Web/API/Web_Video_Text_Tracks_Format
 ---
+
+{{DefaultAPISidebar("WebVTT")}}
 
 WebVTT 是一種 UTF-8 編碼的文字檔案格式，可藉由 {{ HTMLElement("track") }} 元素顯示加註時間資訊之文字軌，其主要設計目的是為 {{ HTMLElement("video") }} 顯示字幕。
 
@@ -165,7 +166,7 @@ Third
 
 時間資訊標注了此段節點的出現時機，其中包括開始時間與結束時間。結束時間必須比開始時間晚，而開始時間必須比先前所有的開始時間晚，或至少是同一時間。
 
-不同時間節點可以設定為同時顯示，但若 WebVTT 檔案是用在 chapters（{{ HTMLElement("track") }} 的 {{ htmlattrxref("kind") }} 設定為 `chapters`），則不允許兩段節點同時出現。
+不同時間節點可以設定為同時顯示，但若 WebVTT 檔案是用在 chapters（{{ HTMLElement("track") }} 的 [`kind`](/zh-TW/docs/Web/HTML/Global_attributes#kind) 設定為 `chapters`），則不允許兩段節點同時出現。
 
 每項時間資訊都由五個部分組成：
 
@@ -432,7 +433,7 @@ The first line demonstrates no settings. The second line might be used to overla
 
 The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.
 
-文字內容中不能包含「`-->」字串、「`&」符號或「<」符號。如欲使用後兩者，可採跳脫字串「\&amp;」或「\&lt;」。此外雖規格上允許使用「>」字元，仍然建議跳脫為「\&gt;」以避免混淆。若您使用 WebVTT 檔作為後設資料，則可不管這些限制。
+文字內容中不能包含「`-->」字串、「`&」符號或「<」符號。如欲使用後兩者，可採跳脫字串「\&amp;」或「\&lt;」。此外雖規格上允許使用「>」字元，仍然建議跳脫為「\&gt;」以避免混淆。若你使用 WebVTT 檔作為後設資料，則可不管這些限制。
 
 除了上述的三個跳脫字串外，還有其他四種跳脫字串，分列如下
 
@@ -483,7 +484,7 @@ The payload is where the main information or content is located. In normal usage
 
 ### 文字內容中的標籤
 
-有很多標籤（例如 `<bold>`）可以用在文字內容中，但若 {{ HTMLElement("track") }} 的 {{ htmlattrxref("kind") }} 設定為 `chapters` 時，其中所用的 WebVTT 檔案裡就不能使用標籤。
+有很多標籤（例如 `<bold>`）可以用在文字內容中，但若 {{ HTMLElement("track") }} 的 [`kind`](/zh-TW/docs/Web/HTML/Global_attributes#kind) 設定為 `chapters` 時，其中所用的 WebVTT 檔案裡就不能使用標籤。
 
 - **時間標籤**
   - : 時間標籤中的時間，必須比該節點的開始時間晚、比同節點先前之其他時間標籤晚，並且早於該節點的結束時間。_當前文字（active text）_ 代表此時間標籤到下個時間標籤（或文字內容的結尾）之間的文字，其他同節點中，比*當前文字* 早的文字都稱為*先前文字（previous text）* ，而晚於*當前文字* 的便稱為*未來文字（future text）* 。如此便可做出卡拉 OK 字幕效果
@@ -543,7 +544,7 @@ That's <00:00:21.000>amore
 ```
 
 - **Ruby tag** (`<ruby></ruby>`)
-  - : Used with ruby text tags to display [ruby characters](http://en.wikipedia.org/wiki/Ruby_character) (i.e. small annotative characters above other characters).
+  - : Used with ruby text tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e. small annotative characters above other characters).
 
 ##### Example 18 - Ruby tag
 
@@ -552,7 +553,7 @@ That's <00:00:21.000>amore
 ```
 
 - **Ruby text tag** (`<rt></rt>`)
-  - : Used with ruby tags to display [ruby characters](http://en.wikipedia.org/wiki/Ruby_character) (i.e. small annotative characters above other characters).
+  - : Used with ruby tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e. small annotative characters above other characters).
 
 ##### Example 19 - Ruby text tag
 

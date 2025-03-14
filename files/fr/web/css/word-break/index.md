@@ -1,8 +1,6 @@
 ---
 title: word-break
 slug: Web/CSS/word-break
-translation_of: Web/CSS/word-break
-browser-compat: css.properties.word-break
 ---
 
 {{CSSRef}}
@@ -39,7 +37,8 @@ La propriété `word-break` est définie avec un mot-clé parmi ceux décrits ci
 - `break-word`{{deprecated_inline}}
   - : Aura le même effet que `word-break: normal` et que `overflow-wrap: anywhere` quelle que soit la valeur de la propriété [`overflow-wrap`](/fr/docs/Web/CSS/overflow-wrap).
 
-> **Note :** Contrairement à `word-break: break-word` et à `overflow-wrap: break-word` (cf. [`overflow-wrap`](/fr/docs/Web/CSS/overflow-wrap)), `word-break: break-all` créera une césure à l'endroit exact où le mot aurait dépassé du conteneur (même si placer le mot entier sur sa propre ligne aurait pu éviter la césure).
+> [!NOTE]
+> Contrairement à `word-break: break-word` et à `overflow-wrap: break-word` (cf. [`overflow-wrap`](/fr/docs/Web/CSS/overflow-wrap)), `word-break: break-all` créera une césure à l'endroit exact où le mot aurait dépassé du conteneur (même si placer le mot entier sur sa propre ligne aurait pu éviter la césure).
 
 ## Définition formelle
 
@@ -55,24 +54,32 @@ La propriété `word-break` est définie avec un mot-clé parmi ceux décrits ci
 
 ```html
 <p>1. <code>word-break: normal</code></p>
-<p class="normal étroit">This is a long and
- Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
+<p class="normal étroit">
+  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+  グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
+</p>
 
 <p>2. <code>word-break: break-all</code></p>
-<p class="breakAll étroit">This is a long and
- Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
+<p class="breakAll étroit">
+  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+  グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
+</p>
 
 <p>3. <code>word-break: keep-all</code></p>
-<p class="keepAll étroit">This is a long and
- Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
+<p class="keepAll étroit">
+  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+  グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
+</p>
 
 <p>4. <code>word-break: break-word</code></p>
-<p class="breakWord étroit">This is a long and
-  Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
+<p class="breakWord étroit">
+  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+  グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
+</p>
 ```
 
 ### CSS
@@ -121,4 +128,4 @@ La propriété `word-break` est définie avec un mot-clé parmi ceux décrits ci
 
 - [`overflow-wrap`](/fr/docs/Web/CSS/overflow-wrap)
 - [`hyphens`](/fr/docs/Web/CSS/hyphens)
-- [Guide sur le retour à la ligne et la césure dans le texte](/fr/docs/Web/CSS/CSS_Text/Wrapping_text)
+- [Guide sur le retour à la ligne et la césure dans le texte](/fr/docs/Web/CSS/CSS_text/Wrapping_breaking_text)

@@ -1,13 +1,19 @@
 ---
 title: 基本的な 2D WebGL アニメーションの例
 slug: Web/API/WebGL_API/Basic_2D_animation_example
+l10n:
+  sourceCommit: e826ecdcc6ff759c8441f62ef17f54bf666a4c1c
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 この WebGL の例では、キャンバスを作成し、その中に WebGL を使用して回転する四角形をレンダリングします。シーンを表すために使用する座標系は、キャンバスの座標系と同じです。つまり、(0, 0) は左上隅にあり、右下隅は (600, 460) となります。
 
-## 頂点シェーダー
+## 回転する正方形の例
+
+様々な手順で、回転する正方形を取得してみましょう。
+
+### 頂点シェーダー
 
 まず頂点シェーダーを見てみましょう。いつものように、シーンに使用している座標をクリップスペース座標に変換することです (つまり (0, 0) がコンテキストの中心にあり、コンテキストの実際のサイズに関係なく各軸が -1.0 から 1.0 に伸びるシステムです)
 
@@ -39,9 +45,9 @@ slug: Web/API/WebGL_API/Basic_2D_animation_example
 
 次に、標準 WebGL グローバル変数の `gl_Position` へ変換および回転された頂点の位置を設定します。
 
-## フラグメントシェーダー
+### フラグメントシェーダー
 
-次はフラグメントシェーダーです。その役割はレンダリングされる形状の各ピクセルの色を返すことです。ライティングが適用されていない、テクスチャのないソリッドオブジェクトを描画しているため、これは非常に簡単です:
+次はフラグメントシェーダーです。その役割はレンダリングされる形状の各ピクセルの色を返すことです。ライティングが適用されていない、テクスチャのないソリッドオブジェクトを描画しているため、これはとても簡単です。
 
 ```html
 <script id="fragment-shader" type="x-shader/x-fragment">
@@ -57,9 +63,9 @@ slug: Web/API/WebGL_API/Basic_2D_animation_example
 </script>
 ```
 
-これは必要に応じて `float` 型の精度を指定することから始まります次に uniform 修飾子付きの `uGlobalColor` の値をグローバル変数 `gl_FragColor` へ設定します。これは、JavaScript コードにより正方形の描画に使用される色に設定されます。
+これは必要に応じて `float` 型の精度を指定することから始まります。次に、グローバル変数 `gl_FragColor` へ uniform 修飾子付きの `uGlobalColor` の値を設定します。これは、JavaScript コードにより正方形の描画に使用される色に設定されます。
 
-## HTML
+### HTML
 
 HTML は、WebGL コンテキストを取得する {{HTMLElement("canvas")}} のみで構成されています。
 
@@ -68,8 +74,6 @@ HTML は、WebGL コンテキストを取得する {{HTMLElement("canvas")}} の
   Oh no! Your browser doesn't support canvas!
 </canvas>
 ```
-
-## JavaScript
 
 ### グローバル変数と初期化
 
@@ -107,7 +111,7 @@ let previousTime = 0.0;
 let degreesPerSecond = 90.0;
 ```
 
-プログラムの初期化は `startup()` と呼ばれる {{event("load")}} イベントハンドラーによって処理します:
+プログラムの初期化は `startup()` と呼ばれる {{domxref("Window/load_event", "load")}} イベントハンドラーによって処理します。
 
 ```js
 window.addEventListener("load", startup, false);
@@ -119,23 +123,22 @@ function startup() {
   const shaderSet = [
     {
       type: gl.VERTEX_SHADER,
-      id: "vertex-shader"
+      id: "vertex-shader",
     },
     {
       type: gl.FRAGMENT_SHADER,
-      id: "fragment-shader"
-    }
+      id: "fragment-shader",
+    },
   ];
 
   shaderProgram = buildShaderProgram(shaderSet);
 
-  aspectRatio = glCanvas.width/glCanvas.height;
+  aspectRatio = glCanvas.width / glCanvas.height;
   currentRotation = [0, 1];
   currentScale = [1.0, aspectRatio];
 
   vertexArray = new Float32Array([
-      -0.5, 0.5, 0.5, 0.5, 0.5, -0.5,
-      -0.5, 0.5, 0.5, -0.5, -0.5, -0.5
+    -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5,
   ]);
 
   vertexBuffer = gl.createBuffer();
@@ -143,16 +146,15 @@ function startup() {
   gl.bufferData(gl.ARRAY_BUFFER, vertexArray, gl.STATIC_DRAW);
 
   vertexNumComponents = 2;
-  vertexCount = vertexArray.length/vertexNumComponents;
+  vertexCount = vertexArray.length / vertexNumComponents;
 
   currentAngle = 0.0;
-  rotationRate = 6;
 
   animateScene();
 }
 ```
 
-WebGL コンテキスト `gl` を取得し、シェーダープログラムを構築することから始める必要があります。ここでは、プログラムに複数のシェーダーを非常に簡単に追加できるように設計されたコードを使用しています。配列 `shaderSet` にはオブジェクトのリストが含まれ、各オブジェクトはプログラムにコンパイルされる 1 つのシェーダー関数を記述しています。各関数には、タイプ (`gl.VERTEX_SHADER` または `gl.FRAGMENT_SHADER` のいずれか) と ID (シェーダーのコードを含む {{HTMLElement("script")}} 要素の ID)。
+WebGL コンテキスト `gl` を取得し、シェーダープログラムを構築することから始める必要があります。ここでは、プログラムに複数のシェーダーをとても簡単に追加できるように設計されたコードを使用しています。配列 `shaderSet` にはオブジェクトのリストが含まれ、各オブジェクトはプログラムにコンパイルされる 1 つのシェーダー関数を記述しています。各関数には、タイプ (`gl.VERTEX_SHADER` または `gl.FRAGMENT_SHADER` のいずれか) と ID (シェーダーのコードを含む {{HTMLElement("script")}} 要素の ID) の両方があります。
 
 シェーダーセットは `buildShaderProgram()` 関数に渡され、コンパイルされリンクされたシェーダープログラムを返します。次にこれがどのように機能するかを見ていきます。
 
@@ -172,23 +174,21 @@ WebGL に提供される頂点データを使用して、`vertexNumComponents` �
 
 ### シェーダープログラムのコンパイルとリンク
 
-#### プログラムの構築とリンク
-
 `buildShaderProgram()` 関数は、シェーダープログラムにコンパイルおよびリンクされるシェーダー関数のセットを記述するオブジェクトの配列を入力として受け取り、ビルドおよびリンク後にシェーダープログラムを返します。
 
 ```js
 function buildShaderProgram(shaderInfo) {
-  let program = gl.createProgram();
+  const program = gl.createProgram();
 
-  shaderInfo.forEach(function(desc) {
-    let shader = compileShader(desc.id, desc.type);
+  shaderInfo.forEach((desc) => {
+    const shader = compileShader(desc.id, desc.type);
 
     if (shader) {
       gl.attachShader(program, shader);
     }
   });
 
-  gl.linkProgram(program)
+  gl.linkProgram(program);
 
   if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
     console.log("Error linking shader program:");
@@ -203,7 +203,8 @@ function buildShaderProgram(shaderInfo) {
 
 次に、指定されたシェーダーのリスト内の各シェーダーに対して、`compileShader()` 関数を呼び出してコンパイルし、ビルドするシェーダー関数の ID とタイプを渡します。前述のように、これらの各オブジェクトには、シェーダーコードが存在する `<script>` 要素の ID とシェーダーのタイプが含まれます。コンパイルされたシェーダーは、{{domxref("WebGLRenderingContext.attachShader", "gl.attachShader()")}} へ渡すことでシェーダープログラムにアタッチされます。
 
-> **メモ:** 実際には、ここよりさらに一歩進んで、`<script>` 要素の `type` 属性の値を見て、シェーダーのタイプを判断できます。
+> [!NOTE]
+> 実際には、ここよりさらに一歩進んで、`<script>` 要素の `type` 属性の値を見て、シェーダーのタイプを判断できます。
 
 すべてのシェーダーがコンパイルされると、{{domxref("WebGLRenderingContext.linkProgram", "gl.linkProgram()")}} を使用してプログラムがリンクされます。
 
@@ -211,20 +212,24 @@ function buildShaderProgram(shaderInfo) {
 
 最後に、コンパイルされたプログラムが呼び出し元に返されます。
 
-#### 個々のシェーダーをコンパイルする
+### 個々のシェーダーをコンパイルする
 
 以下の `compileShader()` 関数は、単一のシェーダーをコンパイルするために `buildShaderProgram()` によって呼び出されます。
 
 ```js
 function compileShader(id, type) {
-  let code = document.getElementById(id).firstChild.nodeValue;
-  let shader = gl.createShader(type);
+  const code = document.getElementById(id).firstChild.nodeValue;
+  const shader = gl.createShader(type);
 
   gl.shaderSource(shader, code);
   gl.compileShader(shader);
 
   if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-    console.log(`Error compiling ${type === gl.VERTEX_SHADER ? "vertex" : "fragment"} shader:`);
+    console.log(
+      `Error compiling ${
+        type === gl.VERTEX_SHADER ? "vertex" : "fragment"
+      } shader:`,
+    );
     console.log(gl.getShaderInfoLog(shader));
   }
   return shader;
@@ -249,18 +254,15 @@ function animateScene() {
   gl.clearColor(0.8, 0.9, 1.0, 1.0);
   gl.clear(gl.COLOR_BUFFER_BIT);
 
-  let radians = currentAngle * Math.PI / 180.0;
+  const radians = (currentAngle * Math.PI) / 180.0;
   currentRotation[0] = Math.sin(radians);
   currentRotation[1] = Math.cos(radians);
 
   gl.useProgram(shaderProgram);
 
-  uScalingFactor =
-      gl.getUniformLocation(shaderProgram, "uScalingFactor");
-  uGlobalColor =
-      gl.getUniformLocation(shaderProgram, "uGlobalColor");
-  uRotationVector =
-      gl.getUniformLocation(shaderProgram, "uRotationVector");
+  uScalingFactor = gl.getUniformLocation(shaderProgram, "uScalingFactor");
+  uGlobalColor = gl.getUniformLocation(shaderProgram, "uGlobalColor");
+  uRotationVector = gl.getUniformLocation(shaderProgram, "uRotationVector");
 
   gl.uniform2fv(uScalingFactor, currentScale);
   gl.uniform2fv(uRotationVector, currentRotation);
@@ -268,18 +270,23 @@ function animateScene() {
 
   gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
 
-  aVertexPosition =
-      gl.getAttribLocation(shaderProgram, "aVertexPosition");
+  aVertexPosition = gl.getAttribLocation(shaderProgram, "aVertexPosition");
 
   gl.enableVertexAttribArray(aVertexPosition);
-  gl.vertexAttribPointer(aVertexPosition, vertexNumComponents,
-        gl.FLOAT, false, 0, 0);
+  gl.vertexAttribPointer(
+    aVertexPosition,
+    vertexNumComponents,
+    gl.FLOAT,
+    false,
+    0,
+    0,
+  );
 
   gl.drawArrays(gl.TRIANGLES, 0, vertexCount);
 
-  window.requestAnimationFrame(function(currentTime) {
-    let deltaAngle = ((currentTime - previousTime) / 1000.0)
-          * degreesPerSecond;
+  requestAnimationFrame((currentTime) => {
+    const deltaAngle =
+      ((currentTime - previousTime) / 1000.0) * degreesPerSecond;
 
     currentAngle = (currentAngle + deltaAngle) % 360;
 
@@ -291,7 +298,7 @@ function animateScene() {
 
 アニメーションのフレームを描画するために最初に行う必要があるのは、背景を目的の色にクリアすることです。この場合、{{HTMLElement("canvas")}} のサイズに基づいてビューポートを設定し、{{domxref("WebGLRenderingContext.clearColor", "clearColor()")}} を呼び出して使用する色を設定します。コンテンツをクリアするとき、{{domxref("WebGLRenderingContext.clear", "clear()")}} でバッファーをクリアします。
 
-次に、現在の回転ベクトルは、現在の回転角度 (`currentAngle`) を [ラジアン](https://ja.wikipedia.org/wiki/ラジアン) に変換し、回転ベクトルの最初のコンポーネントを [sin](https://ja.wikipedia.org/wiki/三角関数) に設定し、2 番目のコンポーネントを [cos](https://ja.wikipedia.org/wiki/三角関数) へ設定します。`currentRotation` ベクトルは、現在の角度 `currentAngle` にある [単位円](https://ja.wikipedia.org/wiki/単位円) 上のポイントの位置です。
+次に、現在の回転ベクトルは、現在の回転角度 (`currentAngle`) を[ラジアン](https://ja.wikipedia.org/wiki/ラジアン)に変換し、回転ベクトルの最初のコンポーネントを [sin](https://ja.wikipedia.org/wiki/三角関数) へ設定し、2 番目のコンポーネントを [cos](https://ja.wikipedia.org/wiki/三角関数) へ設定します。`currentRotation` ベクトルは、現在の角度 `currentAngle` にある[単位円](https://ja.wikipedia.org/wiki/単位円)上の点の位置です。
 
 {{domxref("WebGLRenderingContext.useProgram", "useProgram()")}} は、以前に確立した GLSL シェーディングプログラムをアクティブにするために呼び出されます。次に、JavaScript コードとシェーダー間 ({{domxref("WebGLRenderingContext.getUniformLocation", "getUniformLocation()")}} を使用) で情報を共有するために使用される各 uniform の位置を取得します。
 
@@ -299,7 +306,7 @@ function animateScene() {
 
 `uRotationVector` は、同じく `uniform2fv()` を使用して、現在の回転ベクトル (`currentRotation`) に設定されます。
 
-`uGlobalColor` は {{domxref("WebGLRenderingContext.uniform4fv", "uniform4fv()")}} を使用して、正方形を描画するときに使用する色に設定されます。これは 4 コンポーネントの浮動小数点ベクトルです (赤、緑、青、およびアルファごとに 1 つのコンポーネント)。
+`uGlobalColor` は {{domxref("WebGLRenderingContext/uniform", "uniform4fv()")}} を使用して、正方形を描画するときに使用する色に設定されます。これは 4 コンポーネントの浮動小数点ベクトルです (赤、緑、青、およびアルファごとに 1 つのコンポーネント)。
 
 これですべてが終ったので、頂点バッファーを設定して形状を描画できます。まず、{{domxref("WebGLRenderingContext.bindBuffer", "bindBuffer()")}} を呼び出すことにより、形状の三角形の描画に使用される頂点のバッファーを設定します。次に、{{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}} を呼び出して、シェーダープログラムから頂点位置属性のインデックスを取得します。
 
@@ -313,13 +320,13 @@ function animateScene() {
 
 `requestAnimationFrame()` コールバックは、フレーム描画が開始された時間を指定する単一のパラメーター `currentTime` を入力として受け取ります。それと、最後のフレームが描画された保存時間、`previousTime`、および正方形が回転する 1 秒あたりの度数 (`degreesPerSecond`) を使用して、`currentAngle` の新しい値を計算します。次に、`previousTime` の値が更新され、`animateScene()` を呼び出して次のフレームを描画します (そして、次のフレームが描画されるように無限にスケジュールします )。
 
-## 結果
+### 結果
 
-これは 1 つの単純なオブジェクトを描画しているだけの非常に単純な例ですが、ここで使用されている概念ははるかに複雑なアニメーションに拡張されます。
+これは 1 つの単純なオブジェクトを描画しているだけのとても単純な例ですが、ここで使用されている概念ははるかに複雑なアニメーションに拡張されます。
 
-{{EmbedLiveSample("live-sample", 660, 500)}}
+{{EmbedLiveSample("A_rotating_square_example", 660, 500)}}
 
-## 参照
+## 関連情報
 
 - [WebGL API](/ja/docs/Web/API/WebGL_API)
 - [WebGL チュートリアル](/ja/docs/Web/API/WebGL_API/Tutorial)

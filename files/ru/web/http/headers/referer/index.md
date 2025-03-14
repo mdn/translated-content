@@ -1,21 +1,16 @@
 ---
 title: Referer
 slug: Web/HTTP/Headers/Referer
-tags:
-  - HTTP
-  - referer
-  - Заголовок
-translation_of: Web/HTTP/Headers/Referer
-original_slug: Web/HTTP/Заголовки/Referer
 ---
 
 {{HTTPSidebar}}
 
 Заголовок запроса **`Referer`** содержит URL исходной страницы, с которой был осуществлён переход на текущую страницу. Заголовок `Referer` позволяет серверу узнать откуда был осуществлён переход на запрашиваемую страницу. Сервер может анализировать эти данные, записывать их в логи или оптимизировать процесс кеширования.
 
-Обратите внимание, что слово «Referer» на самом деле является неправильным написанием слова «Referrer». См. {{interwiki("wikipedia", "HTTP_referer", "HTTP referer на Wikipedia")}} .
+Обратите внимание, что слово «Referer» на самом деле является неправильным написанием слова «Referrer». См. [HTTP referer](https://ru.wikipedia.org/wiki/HTTP_referer).
 
-> **Предупреждение:** Заголовок `Referer` может раскрыть информацию пользователя об истории посещённых страниц, что может привести к нарушению приватности.
+> [!WARNING]
+> Заголовок `Referer` может раскрыть информацию пользователя об истории посещённых страниц, что может привести к нарушению приватности.
 >
 > Поэтому, никогда не ссылайтесь и не включайте на страницу контент без предварительной проверки конфиденциальности, безопасности и сопряжённых с этим рисков, в том числе на страницах, которые не содержат информации о риске, но связаны с ним.
 >
@@ -29,7 +24,7 @@ original_slug: Web/HTTP/Заголовки/Referer
 
 Браузер не отправляет заголовок `Referer`, если:
 
-- исходный ресурс -- локальный "файл" или "data" URI,
+- исходный ресурс — локальный "файл" или "data" URI,
 - используется незащищённый HTTP-запрос, а исходная страница была получена с защищённым протоколом (HTTPS).
 
 <table class="properties">
@@ -59,10 +54,10 @@ Referer: <url>
 ## Пример
 
 ```
-Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+Referer: https://developer.mozilla.org/ru/docs/Web/JavaScript
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
@@ -72,5 +67,4 @@ Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 ## Смотрите также
 
-- {{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}
 - {{HTTPHeader("Referrer-Policy")}}

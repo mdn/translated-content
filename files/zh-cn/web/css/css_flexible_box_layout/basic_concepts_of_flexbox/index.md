@@ -1,13 +1,13 @@
 ---
 title: flex 布局的基本概念
-slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 ---
 
 {{CSSRef}}
 
 Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型。它给 flexbox 的子元素之间提供了强大的空间分布和对齐能力。本文给出了 flexbox 的主要特性，更多的细节将在别的文档中探索。
 
-我们说 flexbox 是一种一维的布局，是因为一个 flexbox 一次只能处理一个维度上的元素布局，一行或者一列。作为对比的是另外一个二维布局 [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)，可以同时处理行和列上的布局。
+我们说 flexbox 是一种一维的布局，是因为一个 flexbox 一次只能处理一个维度上的元素布局，一行或者一列。作为对比的是另外一个二维布局 [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout)，可以同时处理行和列上的布局。
 
 ## flexbox 的两根轴线
 
@@ -22,23 +22,23 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 - `column`
 - `column-reverse`
 
-如果你选择了 `row` 或者 `row-reverse`，你的主轴将沿着 **inline** 方向延伸。
+如果你选择了 `row` 或者 `row-reverse`，你的主轴将沿着**行向**延伸。
 
-![If flex-direction is set to row the main axis runs along the row in the inline direction.](basics1.png)
+![当主轴方向设置为 row 时，主轴沿着行向延伸](basics1.svg)
 
-选择 `column` 或者 `column-reverse` 时，你的主轴会沿着上下方向延伸 — 也就是 **block 排列的方向。**
+选择 `column` 或者 `column-reverse` 时，你的主轴会沿着页面的上下方向延伸——也就是**块向**。
 
-![If flex-direction is set to column the main axis runs in the block direction.](basics2.png)
+![当主轴方向设置为 column 时，主轴沿着块向延伸](basics2.svg)
 
 ### 交叉轴
 
-交叉轴垂直于主轴，所以如果你的`flex-direction` (主轴) 设成了 `row` 或者 `row-reverse` 的话，交叉轴的方向就是沿着列向下的。
+交叉轴垂直于主轴，所以如果你的`flex-direction`（主轴）设成了 `row` 或者 `row-reverse` 的话，交叉轴的方向就是沿着上下方向延伸的。
 
-![If flex-direction is set to row then the cross axis runs in the block direction.](basics3.png)
+![当主轴方向设置为 row 时，交叉轴的方向沿着块向延伸](basics3.svg)
 
 如果主轴方向设成了 `column` 或者 `column-reverse`，交叉轴就是水平方向。
 
-![If flex-direction is set to column then the cross axis runs in the inline direction.](basics4.png)
+![当主轴方向设置为 column 时，交叉轴的方向沿着行向延伸](basics4.svg)
 
 理解主轴和交叉轴的概念对于对齐 flexbox 里面的元素是很重要的；flexbox 的特性是沿着主轴或者交叉轴对齐之中的元素。
 
@@ -48,13 +48,13 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 
 你可以在接下来的文章中学到更多 flexbox 和书写模式关系的详细说明。下面的描述是来帮助我们理解为什么不用上下左右来描述 flexbox 元素的方向。
 
-如果 `flex-direction` 是 `row` ，并且我是在书写英文，那么主轴的起始线是左边，终止线是右边。
+如果 `flex-direction` 是 `row`，并且我是在书写英文，那么主轴的起始线是左边，终止线是右边。
 
-![Working in English the start edge is on the left.](basics5.png)
+![书写英文时，主轴的起始线是左边](basics5.svg)
 
 如果我在书写阿拉伯文，那么主轴的起始线是右边，终止线是左边。
 
-![The start edge in a RTL language is on the right.](basics6.png)
+![书写阿拉伯文时，主轴的起始线是右边](basics6.svg)
 
 在这两种情况下，交叉轴的起始线是 flex 容器的顶部，终止线是底部，因为两种语言都是水平书写模式。
 
@@ -62,9 +62,9 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 
 ## Flex 容器
 
-文档中采用了 flexbox 的区域就叫做 flex 容器。为了创建 flex 容器，我们把一个容器的 {{cssxref("display")}} 属性值改为 `flex` 或者 `inline-flex`。完成这一步之后，容器中的直系子元素就会变为 **flex 元素**。所有 CSS 属性都会有一个初始值，所以 flex 容器中的所有 flex 元素都会有下列行为：
+文档中采用了 flexbox 的区域就叫做 flex 容器。为了创建 flex 容器，我们把一个容器的 {{cssxref("display")}} 属性值改为 `flex` 或者 `inline-flex`。完成这一步之后，容器中的直系子元素就会变为 **flex 元素**。由于所有 CSS 属性都会有一个初始值，所以 flex 容器中的所有 flex 元素都会有下列行为：
 
-- 元素排列为一行 (`flex-direction` 属性的初始值是 `row`)。
+- 元素排列为一行（`flex-direction` 属性的初始值是 `row`）。
 - 元素从主轴的起始线开始。
 - 元素不会在主维度方向拉伸，但是可以缩小。
 - 元素被拉伸来填充交叉轴大小。
@@ -79,7 +79,7 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 
 在 flex 容器中添加 {{cssxref("flex-direction")}} 属性可以让我们更改 flex 元素的排列方向。设置 `flex-direction: row-reverse` 可以让元素沿着行的方向显示，但是起始线和终止线位置会交换。
 
-把 flex 容器的属性 `flex-direction` 改为 `column` ，主轴和交叉轴交换，元素沿着列的方向排列显示。改为 `column-reverse` ，起始线和终止线交换。
+把 flex 容器的属性 `flex-direction` 改为 `column`，主轴和交叉轴交换，元素沿着列的方向排列显示。改为 `column-reverse`，起始线和终止线交换。
 
 下面的例子中，`flex-direction` 值为 `row-reverse`。尝试使用其他的值 `row` ，`column`，`column-reverse`，看看内容会发生什么改变。
 
@@ -87,13 +87,13 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 
 ## 用 flex-wrap 实现多行 Flex 容器
 
-虽然`flexbox`是一维模型，但可以使我们的`flex`项目应用到多行中。在这样做的时候，您应该把每一行看作一个新的`flex`容器。任何空间分布都将在该行上发生，而不影响该空间分布的其他行。
+虽然`flexbox`是一维模型，但可以使我们的`flex`项目应用到多行中。在这样做的时候，你应该把每一行看作一个新的`flex`容器。任何空间分布都将在该行上发生，而不影响该空间分布的其他行。
 
-为了实现多行效果，请为属性{{cssxref("flex-wrap")}}添加一个属性值`wrap`。现在，如果您的项目太大而无法全部显示在一行中，则会换行显示。下面的实时例子包含已给出宽度的项目，对于`flex`容器，项目的子元素总宽度大于容器最大宽度。由于`flex-wrap`的值设置为`wrap`，所以项目的子元素换行显示。若将其设置为`nowrap`，这也是初始值，它们将会缩小以适应容器，因为它们使用的是允许缩小的初始`Flexbox`值。如果项目的子元素无法缩小，使用`nowrap`会导致溢出，或者缩小程度还不够小。
+为了实现多行效果，请为属性{{cssxref("flex-wrap")}}添加一个属性值`wrap`。现在，如果你的项目太大而无法全部显示在一行中，则会换行显示。下面的实时例子包含已给出宽度的项目，对于`flex`容器，项目的子元素总宽度大于容器最大宽度。由于`flex-wrap`的值设置为`wrap`，所以项目的子元素换行显示。若将其设置为`nowrap`，这也是初始值，它们将会缩小以适应容器，因为它们使用的是允许缩小的初始`Flexbox`值。如果项目的子元素无法缩小，使用`nowrap`会导致溢出，或者缩小程度还不够小。
 
 {{EmbedGHLiveSample("css-examples/flexbox/basics/flex-wrap.html", '100%', 400)}}
 
-在指南中您可以了解更多关于 `flex-wrap`的信息 [Mastering Wrapping of Flex Items](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items).
+参见[掌握弹性物件的包装](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)指南，以了解更多有关弹性物件包装的信息。
 
 ## 简写属性 flex-flow
 
@@ -111,21 +111,21 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 - {{cssxref("flex-shrink")}}
 - {{cssxref("flex-basis")}}
 
-在这里，我们只会大概介绍一下它们的用法，更详细的细节请参阅其它的文章。
+在这里，我们只会大概介绍一下它们的用法，更详细的细节请参阅其他的文章。
 
-在考虑这几个属性的作用之前，需要先了解一下 **可用空间** available space 这个概念。这几个 flex 属性的作用其实就是改变了 flex 容器中的可用空间的行为。同时，可用空间对于 flex 元素的对齐行为也是很重要的。
+在考虑这几个属性的作用之前，需要先了解一下**可用空间**（available space）这个概念。这几个 flex 属性的作用其实就是改变了 flex 容器中的可用空间的行为。同时，可用空间对于 flex 元素的对齐行为也是很重要的。
 
 假设在 1 个 500px 的容器中，我们有 3 个 100px 宽的元素，那么这 3 个元素需要占 300px 的宽，剩下 200px 的可用空间。在默认情况下，flexbox 的行为会把这 200px 的空间留在最后一个元素的后面。
 
-![This flex container has available space after laying out the items.](basics7.png)
+![这个 Flex 容器在布置元素后还有可用空间](basics7.svg)
 
 如果期望这些元素能自动地扩展去填充满剩下的空间，那么我们需要去控制可用空间在这几个元素间如何分配，这就是元素上的那些 `flex` 属性要做的事。
 
 ### Flex 元素属性：`flex-basis`
 
-`flex-basis` 定义了该元素的**空间大小**（**the size of that item in terms of the space**），flex 容器里除了元素所占的空间以外的富余空间就是**可用空间** available space。该属性的默认值是 `auto` 。此时，浏览器会检测这个元素是否具有确定的尺寸。在上面的例子中，所有元素都设定了宽度（width）为 100px，所以 `flex-basis` 的值为 100px。
+`flex-basis` 定义了该元素的**空间大小**，flex 容器里除了元素所占的空间以外的富余空间就是**可用空间**。该属性的默认值是 `auto`。此时，浏览器会检测这个元素是否具有确定的尺寸。在上面的例子中，所有元素都设定了宽度（width）为 100px，所以 `flex-basis` 的值为 100px。
 
-如果没有给元素设定尺寸，`flex-basis` 的值采用元素内容的尺寸。这就解释了：我们给只要给 Flex 元素的父元素声明 `display: flex` ，所有子元素就会排成一行，且自动分配小大以充分展示元素的内容。
+如果没有给元素设定尺寸，`flex-basis` 的值采用元素内容的尺寸。这就解释了：我们给只要给 Flex 元素的父元素声明 `display: flex`，所有子元素就会排成一行，且自动分配大小以充分展示元素的内容。
 
 ### Flex 元素属性：`flex-grow`
 
@@ -135,13 +135,14 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 
 flex-grow 属性可以按比例分配空间。如果第一个元素 `flex-grow` 值为 2，其他元素值为 1，则第一个元素将占有 2/4（上例中，即为 200px 中的 100px）, 另外两个元素各占有 1/4（各 50px）。
 
-### Flex 元素属性： `flex-shrink`
+### Flex 元素属性：`flex-shrink`
 
-`flex-grow`属性是处理 flex 元素在主轴上增加空间的问题，相反`flex-shrink`属性是处理 flex 元素收缩的问题。如果我们的容器中没有足够排列 flex 元素的空间，那么可以把 flex 元素`flex-shrink`属性设置为正整数来缩小它所占空间到`flex-basis`以下。与`flex-grow`属性一样，可以赋予不同的值来控制 flex 元素收缩的程度 —— 给`flex-shrink`属性赋予更大的数值可以比赋予小数值的同级元素收缩程度更大。
+`flex-grow`属性是处理 flex 元素在主轴上增加空间的问题，相反`flex-shrink`属性是处理 flex 元素收缩的问题。如果我们的容器中没有足够排列 flex 元素的空间，那么可以把 flex 元素`flex-shrink`属性设置为正整数来缩小它所占空间到`flex-basis`以下。与`flex-grow`属性一样，可以赋予不同的值来控制 flex 元素收缩的程度——给`flex-shrink`属性赋予更大的数值可以比赋予小数值的同级元素收缩程度更大。
 
-在计算 flex 元素收缩的大小时，它的最小尺寸也会被考虑进去，就是说实际上 flex-shrink 属性可能会和 flex-grow 属性表现的不一致。因此，我们可以在文章《[控制 Flex 子元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)》中更详细地看一下这个算法的原理。
+在计算 flex 元素收缩的大小时，它的最小尺寸也会被考虑进去，就是说实际上 flex-shrink 属性可能会和 flex-grow 属性表现的不一致。因此，我们可以在文章《[控制 Flex 子元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)》中更详细地看一下这个算法的原理。
 
-> **备注：** 在给 `flex-grow` 和 `flex-shrink` 赋值时要注意比例。如果我们给所有 flex 元素的 flex 属性赋值为 `1 1 200px` ，并且希望其中一个元素可以增加到 2 倍，我们可以给该元素的 flex 属性赋值为`2 1 200px`。当然，你也可以选择赋值为 flex: `10 1 200px` 和 flex: `20 1 200px` 。
+> [!NOTE]
+> 在给 `flex-grow` 和 `flex-shrink` 赋值时要注意比例。如果我们给所有 flex 元素的 flex 属性赋值为 `1 1 200px` ，并且希望其中一个元素可以增加到 2 倍，我们可以给该元素的 flex 属性赋值为`2 1 200px`。当然，你也可以选择赋值为 flex: `10 1 200px` 和 flex: `20 1 200px` 。
 
 ### Flex 属性的简写
 
@@ -178,7 +179,7 @@ Flexbox 的一个关键特性是能够设置 flex 元素沿主轴方向和交叉
 
 {{cssxref("align-items")}} 属性可以使元素在交叉轴方向对齐。
 
-这个属性的初始值为`stretch`，这就是为什么 flex 元素会默认被拉伸到最高元素的高度。实际上，它们被拉伸来填满 flex 容器 —— 最高的元素定义了容器的高度。
+这个属性的初始值为`stretch`，这就是为什么 flex 元素会默认被拉伸到最高元素的高度。实际上，它们被拉伸来填满 flex 容器——最高的元素定义了容器的高度。
 
 你也可以设置`align-items`的值为`flex-start`，使 flex 元素按 flex 容器的顶部对齐，`flex-end` 使它们按 flex 容器的下部对齐，或者`center`使它们居中对齐。在实例中尝试——我给出了 flex 容器的高度，以便你可以看到元素在容器中移动。看看如果更改 align-items 的值为下列值会发生什么：
 
@@ -210,4 +211,4 @@ Flexbox 的一个关键特性是能够设置 flex 元素沿主轴方向和交叉
 
 ## 下一步
 
-在读完这篇文章之后，你应该掌握了 flexbox 的基本特性。在下一篇文章中，我们将会学习如何[与其他 CSS 一起使用](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)。
+在读完这篇文章之后，你应该掌握了 flexbox 的基本特性。在下一篇文章中，我们将会学习如何[与其他 CSS 一起使用](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)。

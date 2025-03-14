@@ -7,7 +7,8 @@ slug: Web/API/Element/localName
 
 La propiedad únicamente de lectura `Element.localName` devuelve la parte local del nombre calificado de un objeto.
 
-> **Nota:** Antes de DOM4 esta API fué definida dentro de la interfaz{{domxref("Node")}}.
+> [!NOTE]
+> Antes de DOM4 esta API fué definida dentro de la interfaz{{domxref("Node")}}.
 
 ## Sintasix
 
@@ -62,7 +63,8 @@ El nombre local de un nodo es la parte del nombre completo del nodo que va situa
 6  </ecomm:business>
 ```
 
-> **Nota:** En {{Gecko("1.9.2")}} y anteriores,devuelve la versión en mayúsculas del nombre local para elementos HTML en HTML DOMs (en contraposición a elementos XHTML en XML DOMs). En versiones posteriores, en concordancia con HTML5,la propiedad devuelve en el caso de almacenamiento interno DOM , minúscula para ambos elementos HTML en HTML DOM y elementos XHTML en DOM XML. La propiedad {{domxref("element.tagName","tagName")}} continua devolviéndolo en mayúsculas para elementos HTML en HTML DOMs.
+> [!NOTE]
+> En Gecko 1.9.2 y anteriores,devuelve la versión en mayúsculas del nombre local para elementos HTML en HTML DOMs (en contraposición a elementos XHTML en XML DOMs). En versiones posteriores, en concordancia con HTML5,la propiedad devuelve en el caso de almacenamiento interno DOM , minúscula para ambos elementos HTML en HTML DOM y elementos XHTML en DOM XML. La propiedad {{domxref("element.tagName","tagName")}} continua devolviéndolo en mayúsculas para elementos HTML en HTML DOMs.
 
 ## Especificaciones
 

@@ -1,10 +1,6 @@
 ---
 title: Uso de URL como valor de la propiedad cursor
 slug: conflicting/Web/CSS/cursor
-tags:
-  - CSS
-  - Todas_las_Categorías
-translation_of: Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 original_slug: Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 ---
 
@@ -28,7 +24,7 @@ cursor: url(foo.cur), url(http://developer.mozilla.org/wiki-images/es/e/ed/firef
 
 Primero se intentará cargar _foo.cur_. Si este archivo no existe o no es válido por alguna otra razón, se probará con _firefox.jpg_, y si este tampoco puede ser cargado, se usará _help_.
 
-El soporte a la [sintaxis de CSS3](http://www.w3.org/TR/css3-ui/#cursor) para los valores de cursor fue añadido en Gecko 1.8beta3; por lo tanto en Firefox 1.5 funciona. Esto permite especificar las coordenadas del punto en el que la imagen del cursor es fijada al área activa. Si no se especifican, las coordenadas del punto de contacto son tomadas del propio archivo (para archivos CUR y XBM) o se fijan en la esquina superior izquierda de la imagen.
+El soporte a la [sintaxis de CSS3](https://www.w3.org/TR/css3-ui/#cursor) para los valores de cursor fue añadido en Gecko 1.8beta3; por lo tanto en Firefox 1.5 funciona. Esto permite especificar las coordenadas del punto en el que la imagen del cursor es fijada al área activa. Si no se especifican, las coordenadas del punto de contacto son tomadas del propio archivo (para archivos CUR y XBM) o se fijan en la esquina superior izquierda de la imagen.
 
 Un ejemplo de la sintaxis CSS3:
 
@@ -48,7 +44,7 @@ Gecko no limita el tamaño de los cursores. Sin embargo, quien busque la máxima
 
 Los cursores translúcidos no estan soportados en las versiones de Windows anteriores a XP. Esto es una limitación del sistema operativo. La transparencia funciona en todas las plataformas.
 
-Solo las versiones de Mozilla para Windows, OS/2 y GNU/Linux (usando GTK+ 2.4 o superior) soportan valores URL para los cursores. El soporte en otras plataformas podría ser añadido en futuras versiones: (Mac OS: {{ Bug(286304) }}, QNX Neutrino: {{ Bug(286307) }}, XLib: {{ Bug(286309) }}, Qt: {{ Bug(286310) }}, BeOS: {{ Bug(298184) }}, GTK 2.0/2.2: {{ Bug(308536) }})
+Solo las versiones de Mozilla para Windows, OS/2 y GNU/Linux (usando GTK+ 2.4 o superior) soportan valores URL para los cursores. El soporte en otras plataformas podría ser añadido en futuras versiones: (Mac OS: [Error 286304 en Firefox](https://bugzil.la/286304), QNX Neutrino: [Error 286307 en Firefox](https://bugzil.la/286307), XLib: [Error 286309 en Firefox](https://bugzil.la/286309), Qt: [Error 286310 en Firefox](https://bugzil.la/286310), BeOS: [Error 298184 en Firefox](https://bugzil.la/298184), GTK 2.0/2.2: [Error 308536 en Firefox](https://bugzil.la/308536))
 
 ### Compatibilidad con otros navegadores
 

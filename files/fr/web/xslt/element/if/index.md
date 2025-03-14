@@ -1,13 +1,9 @@
 ---
 title: if
 slug: Web/XSLT/Element/if
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/if
-original_slug: Web/XSLT/if
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:if>` regroupe un attribut test et un modèle. Si le test renvoie `true`, le modèle est appliqué. En cela, il est très semblable à l'instruction `if` d'autres langages. Cependant, pour simuler un `if-then-else`, vous devrez utilisez l'élément `<xsl:choose>` avec un descendant `<xsl:when>` et un `<xsl:otherwise>`.
 
@@ -34,7 +30,7 @@ Instruction, apparaît dans un modèle.
 
 ### Définition
 
-[XSLT 1.0 section 9.1](http://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:if).
+[XSLT 1.0 section 9.1](https://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:if).
 
 ### Support Gecko
 

@@ -1,14 +1,8 @@
 ---
 title: paint-order
 slug: Web/CSS/paint-order
-tags:
-  - CSS
-  - Reference
-  - SVG
-  - Web
-  - recipe:css-property
-translation_of: Web/CSS/paint-order
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`paint-order`** 속성은 텍스트 및 모양의 채움 색과 테두리(마커 포함)를 그리는 순서를 지정합니다.
@@ -32,7 +26,8 @@ paint-order: markers stroke fill; /* draw markers, then stroke, then fill */
 
 하나의 값만 지정하면 그 값을 제일 먼저 그린 후, 기본값의 순서에 따라 나머지를 그립니다. 두 개를 지정하면 나머지 하나를 맨 나중에 그립니다.
 
-> **참고:** 마커의 경우 `marker-*` 속성([`marker-start`](/ko/docs/Web/SVG/Attribute/marker-start) 등)과 [`<marker>`](/ko/docs/Web/SVG/Element/marker) 요소를 사용하는 SVG 모양의 경우에만 올바릅니다. HTML 텍스트는 이에 해당하지 않으므로 `stroke`와 `fill`의 순서만 정할 수 있습니다.
+> [!NOTE]
+> 마커의 경우 `marker-*` 속성([`marker-start`](/ko/docs/Web/SVG/Attribute/marker-start) 등)과 [`<marker>`](/ko/docs/Web/SVG/Element/marker) 요소를 사용하는 SVG 모양의 경우에만 올바릅니다. HTML 텍스트는 이에 해당하지 않으므로 `stroke`와 `fill`의 순서만 정할 수 있습니다.
 
 ### 값
 

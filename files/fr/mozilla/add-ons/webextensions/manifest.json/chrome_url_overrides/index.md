@@ -1,11 +1,6 @@
 ---
 title: chrome_url_overrides
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides
 ---
 
 {{AddonSidebar}}
@@ -109,7 +104,7 @@ La clé `chrome_url_overrides` est un objet qui peut avoir les propriétés suiv
   </tbody>
 </table>
 
-Toutes les propriétés sont [localisables](/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
+Toutes les propriétés sont [localisables](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
 ## Exemple
 
@@ -119,6 +114,6 @@ Toutes les propriétés sont [localisables](/fr/Add-ons/WebExtensions/Internatio
 }
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.chrome_url_overrides")}}
+{{Compat}}

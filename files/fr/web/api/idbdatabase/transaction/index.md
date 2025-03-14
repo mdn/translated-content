@@ -1,7 +1,6 @@
 ---
 title: IDBDatabase.transaction()
 slug: Web/API/IDBDatabase/transaction
-translation_of: Web/API/IDBDatabase/transaction
 ---
 
 {{ APIRef("IndexedDB") }}
@@ -20,11 +19,11 @@ var transaction = db.transaction(storeNames, mode);
 
 - storeNames
 
-  - : un tableau de noms de magasins d'objets entrant dans le cadre de cette transaction. Indique seulement les magasins d'objets dont on a besoin. Si l’on n’a besoin que d’un seul magasin d'objet, on peut simplement passer son nom. Les lignes suivantes sont équivalentes :
+  - : un tableau de noms de magasins d'objets entrant dans le cadre de cette transaction. Indique seulement les magasins d'objets dont on a besoin. Si l'on n'a besoin que d'un seul magasin d'objet, on peut simplement passer son nom. Les lignes suivantes sont équivalentes :
 
     ```js
-    var transaction = db.transaction(['my-store-name']);
-    var transaction = db.transaction('my-store-name');
+    var transaction = db.transaction(["my-store-name"]);
+    var transaction = db.transaction("my-store-name");
     ```
 
     Pour utiliser tous les magasins d'objets de la base de donnée, on peut appeler la methode {{domxref("IDBDatabase.objectStoreNames")}}:
@@ -37,7 +36,7 @@ var transaction = db.transaction(storeNames, mode);
 
 - mode {{optional_inline}}
 
-  - : Le {{domxref("IDBTransactionMode","mode")}} d’{{domxref("IDBObjectStore","accès aux magasins d'objets")}} à la base de données (par default `readonly`):
+  - : Le {{domxref("IDBTransactionMode","mode")}} d'{{domxref("IDBObjectStore","accès aux magasins d'objets")}} à la base de données (par default `readonly`):
 
     <table class="standard-table">
       <thead>
@@ -57,7 +56,7 @@ var transaction = db.transaction(storeNames, mode);
         <tr>
           <td><code>readwrite</code></td>
           <td>
-            Permet en plus de que l'on peut faire en readonly, d’ajouter et mettre à
+            Permet en plus de que l'on peut faire en readonly, d'ajouter et mettre à
             jour des objets dans les magasins d'objets.
           </td>
         </tr>
@@ -80,7 +79,7 @@ var transaction = db.transaction(storeNames, mode);
               Si vous devez vous assurer de l'efficacité d'une transaction pour une
               raison quelconque (par exemple, vous stockez des données critiques qui
               ne peuvent être recalculées plus tard), vous pouvez forcer
-              l’enregistrement complet sur disque avant de déclencher l’événement
+              l'enregistrement complet sur disque avant de déclencher l'événement
               <code>complete</code> en utilisant le mode
               <code>readwriteflush</code> (non standard) expérimental ( voir
               {{domxref("IDBDatabase.transaction")}} ). C'est
@@ -92,7 +91,7 @@ var transaction = db.transaction(storeNames, mode);
               <p>
                 <strong>Note :</strong> Depuis Firefox 40, les transactions
                 IndexedDB diminuent en efficacité pour gagner en efficience (voir
-                {{Bug ( "1112702")}}.) Auparavant, dans une transaction en
+                le [bug Firefox 1112702](https://bugzil.la/1112702).) Auparavant, dans une transaction en
                 <code><a href="#const_read_write">readwrite</a></code> l'événement
                 complete était déclanché seulement lorsque toutes les données
                 étaient écrites sur le disque. Maintenant l'événement
@@ -112,10 +111,10 @@ var transaction = db.transaction(storeNames, mode);
       </tbody>
     </table>
 
-    Pour éviter des pertes de performance, n’utilisez le mode `readwrite` que si vous avez effectivement besoin d’écrire ou de mettre à jour des données sur la base.")}} Si on a besoin d’accéder à un magasin d'objets pour écrire ou mettre à jour des enregistrement, on utilise la sytaxe:
+    Pour éviter des pertes de performance, n'utilisez le mode `readwrite` que si vous avez effectivement besoin d'écrire ou de mettre à jour des données sur la base.")}} Si on a besoin d'accéder à un magasin d'objets pour écrire ou mettre à jour des enregistrement, on utilise la sytaxe:
 
     ```js
-    var transaction = db.transaction('monMagasin','readwrite');
+    var transaction = db.transaction("monMagasin", "readwrite");
     ```
 
 ## Renvoie
@@ -171,7 +170,8 @@ var objectStore = transaction.objectStore("toDoList");
 // etc.
 ```
 
-> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
+> [!NOTE]
+> Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 
@@ -189,4 +189,4 @@ var objectStore = transaction.objectStore("toDoList");
 - {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
 - {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
 - {{domxref("IDBCursor","Utiliser les curseur")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

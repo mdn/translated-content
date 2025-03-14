@@ -1,8 +1,8 @@
 ---
 title: Web Audio API
 slug: Web/API/Web_Audio_API
-translation_of: Web/API/Web_Audio_API
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 Web Audio API는 웹에서 오디오를 제어하기 위한 강력하고 다양한 기능을 제공합니다. Web Audio API를 이용하면 오디오 소스를 선택할 수 있도록 하거나, 오디오에 이펙트를 추가하거나, 오디오를 시각화하거나, 패닝과 같은 공간 이펙트를 적용시키는 등의 작업이 가능합니다.
@@ -47,7 +47,7 @@ Web Audio API는 [futurelibrary.no](https://www.futurelibrary.no/)에서와 같�
 
 만약에 프로그래밍보다는 음악이 친숙하고, 음악 이론에 익숙하며, 악기를 만들고 싶으시다면 바로 상급자용 튜토리얼부터 시작하여 여러가지를 만들기 시작하시면 됩니다. 위의 튜토리얼은 음표를 배치하는 법, 저주파 발진기 등 맞춤형 Oscillator(발진기)와 Envelope를 설계하는 법 등을 설명하고 있으니, 이를 읽으며 사이드바의 자료를 참고하시면 될 것입니다.
 
-프로그래밍에 전혀 익숙하지 않으시다면 자바스크립트 기초 튜토리얼을 먼저 읽고 이 문서를 다시 읽으시는 게 나을 수도 있습니다. 모질라의 [자바스크립트 기초](/ko/docs/Learn/JavaScript)만큼 좋은 자료도 몇 없죠.
+프로그래밍에 전혀 익숙하지 않으시다면 JavaScript 기초 튜토리얼을 먼저 읽고 이 문서를 다시 읽으시는 게 나을 수도 있습니다. Mozilla의 [JavaScript 기초](/ko/docs/Learn/JavaScript)만큼 좋은 자료도 몇 없죠.
 
 ## Web Audio API 인터페이스
 
@@ -67,7 +67,7 @@ Web Audio API 사용범위 내에서 오디오 그래프를 형성하는 일반�
   - : {{domxref("AudioParam")}} 인터페이스 그룹에 maplike 인터페이스를 제공하는데, 이는 `forEach()`, `get()`, `has()`, `keys()`, `values()` 메서드와 `size` 속성이 제공된다는 것을 의미합니다.
 - {{domxref("BaseAudioContext")}}
   - : **`BaseAudioContext`** 인터페이스는 온라인과 오프라인 오디오 프로세싱 그래프에 대한 기본 정의로서 동작하는데, 이는 각각 {{domxref("AudioContext")}} 와 {{domxref("OfflineAudioContext")}}로 대표됩니다. `BaseAudioContext`는 직접 쓰여질 수 없습니다 — 이 두 가지 상속되는 인터페이스 중 하나를 통해 이것의 기능을 사용할 수 있습니다.
-- The {{event("ended")}} event
+- The {{domxref("AudioScheduledSourceNode/ended_event", "ended")}} event
   - : **`ended`** 이벤트는 미디어의 끝에 도달하여 재생이 정지되면 호출됩니다.
 
 ### 오디오 소스 정의하기
@@ -75,7 +75,7 @@ Web Audio API 사용범위 내에서 오디오 그래프를 형성하는 일반�
 Web Audio API에서 사용하기 위한 오디오 소스를 정의하는 인터페이스입니다.
 
 - {{domxref("AudioScheduledSourceNode")}}
-  - : **`AudioScheduledSourceNode`**는 오디오 소스 노드 인터페이스의 몇 가지 유형에 대한 부모 인터페이스입니다. 이것은 {{domxref("AudioNode")}}입니다.
+  - : **`AudioScheduledSourceNode`** 는 오디오 소스 노드 인터페이스의 몇 가지 유형에 대한 부모 인터페이스입니다. 이것은 {{domxref("AudioNode")}}입니다.
 - {{domxref("OscillatorNode")}}
   - : **`OscillatorNode`** 인터페이스는 삼각파 또는 사인파와 같은 주기적 파형을 나타냅니다. 이것은 주어진 주파수의 파동을 생성하는 {{domxref("AudioNode")}} 오디오 프로세싱 모듈입니다.
 - {{domxref("AudioBuffer")}}
@@ -164,8 +164,8 @@ Web Audio API에서 사용하기 위한 오디오 소스를 정의하는 인터�
 오디오 worklet이 정의되기 전에, Web Audio API는 JavaScript 기반의 오디오 프로세싱을 위해 `ScriptProcessorNode`를 사용했습니다. 코드가 메인 스레드에서 실행되기 때문에, 나쁜 성능을 가지고 있었습니다. `ScriptProcessorNode`는 역사적인 이유로 보존되나 deprecated되었습니다.
 
 - {{domxref("ScriptProcessorNode")}} {{deprecated_inline}}
-  - : **`ScriptProcessorNode`** 인터페이스는 자바스크립트를 이용한 오디오 생성, 처리, 분석 기능을 제공합니다. 이것은 현재 입력 버퍼와 출력 버퍼, 총 두 개의 버퍼에 연결되는 {{domxref("AudioNode")}} 오디오 프로세싱 모듈입니다. {{domxref("AudioProcessingEvent")}} 인터페이스를 구현하는 이벤트는 입력 버퍼에 새로운 데이터가 들어올 때마다 객체로 전달되고, 출력 버퍼가 데이터로 채워지면 이벤트 핸들러가 종료됩니다.
-- {{event("audioprocess")}} (event) {{deprecated_inline}}
+  - : **`ScriptProcessorNode`** 인터페이스는 JavaScript를 이용한 오디오 생성, 처리, 분석 기능을 제공합니다. 이것은 현재 입력 버퍼와 출력 버퍼, 총 두 개의 버퍼에 연결되는 {{domxref("AudioNode")}} 오디오 프로세싱 모듈입니다. {{domxref("AudioProcessingEvent")}} 인터페이스를 구현하는 이벤트는 입력 버퍼에 새로운 데이터가 들어올 때마다 객체로 전달되고, 출력 버퍼가 데이터로 채워지면 이벤트 핸들러가 종료됩니다.
+- {{domxref("ScriptProcessorNode.audioprocess_event", "audioprocess")}} (event) {{deprecated_inline}}
   - : `audioprocess` 이벤트는 Web Audio API {{domxref("ScriptProcessorNode")}}의 입력 버퍼가 처리될 준비가 되었을 때 발생합니다.
 - {{domxref("AudioProcessingEvent")}} {{deprecated_inline}}
   - : [Web Audio API](/ko/docs/Web/API/Web_Audio_API) `AudioProcessingEvent`는 {{domxref("ScriptProcessorNode")}} 입력 버퍼가 처리될 준비가 되었을 때 발생하는 이벤트를 나타냅니다.
@@ -176,10 +176,10 @@ Web Audio API에서 사용하기 위한 오디오 소스를 정의하는 인터�
 
 - {{domxref("OfflineAudioContext")}}
   - : **`OfflineAudioContext`** 인터페이스는 {{domxref("AudioNode")}}로 연결되어 구성된 오디오 프로세싱 그래프를 나타내는 {{domxref("AudioContext")}} 인터페이스입니다. 표준 **`AudioContext`** 와 대조적으로, **`OfflineAudioContext`** 는 실제로 오디오를 렌더링하지 않고 가능한 빨리 버퍼 내에서 생성합니다.
-- {{event("complete")}} (event)
+- {{domxref("OfflineAudioContext/complete_event", "complete")}} (event)
   - : **`complete`** 이벤트는 {{domxref("OfflineAudioContext")}}의 렌더링이 종료될때 발생합니다.
 - {{domxref("OfflineAudioCompletionEvent")}}
-  - : **`OfflineAudioCompletionEvent`** 이벤트는 {{domxref("OfflineAudioContext")}} 의 처리가 종료될 때 발생하는 이벤트를 나타냅니다. {{event("complete")}} 이벤트는 이 이벤트를 구현합니다.
+  - : **`OfflineAudioCompletionEvent`** 이벤트는 {{domxref("OfflineAudioContext")}} 의 처리가 종료될 때 발생하는 이벤트를 나타냅니다. {{domxref("OfflineAudioContext/complete_event", "complete")}} 이벤트는 이 이벤트를 구현합니다.
 
 ## 가이드와 자습서
 
@@ -195,9 +195,7 @@ Web Audio API에서 사용하기 위한 오디오 소스를 정의하는 인터�
 
 ## 브라우저 호환성
 
-### AudioContext
-
-{{Compat("api.AudioContext", 0)}}
+{{Compat}}
 
 ## 같이 보기
 
@@ -213,7 +211,7 @@ Web Audio API에서 사용하기 위한 오디오 소스를 정의하는 인터�
 - [ConstantSourceNode로 다수의 매개변수 제어하기](/ko/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [positional audio와 WebGL 같이 사용하기](https://www.html5rocks.com/tutorials/webaudio/positional_audio/)
 - [Web Audio API로 게임 오디오 개발하기](https://www.html5rocks.com/tutorials/webaudio/games/)
-- [webkitAudioContext 코드를 AudioContext 기반 표준에 포팅하기](/ko/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext)
+- [webkitAudioContext 코드를 AudioContext 기반 표준에 포팅하기](/ko/docs/conflicting/Web/API/Web_Audio_API)
 
 ### 라이브러리
 

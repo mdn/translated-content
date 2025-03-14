@@ -1,37 +1,86 @@
 ---
 title: 402 Payment Required
 slug: Web/HTTP/Status/402
+l10n:
+  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{HTTPSidebar}}
 
-HTTP の **`402 Payment Required`** は、将来使用するために予約されている標準外のクライアントエラーステータスレスポンスコードです。
+HTTP の **`402 Payment Required`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)ステータスコードで、将来使用するために予約されている**標準外**のレスポンスコードです。
 
-このコードは、クライアントが支払いをするまでリクエストを処理できないことを示している場合があります。もともとは電子マネーまたは (マイクロ) ペイメントシステムを有効にするために作成されたもので、リクエストされたコンテンツがクライアントが支払いをするまで利用できないことを示していました。しかしながら、標準的な慣例は存在せず、様々なエンティティが様々な場面で使用しています。
+このステータスコードは、デジタルキャッシュや（マイクロ）決済システムを可能にするために作成されたもので、クライアントが決済を行うまでリクエストされたコンテンツが利用できないことを示します。
+標準的な使用法の規約は存在せず、様々なシステムが様々なコンテキストで使用しています。
 
 ## ステータス
 
-```
+```http
 402 Payment Required
 ```
 
-## レスポンスの例
+## 例
 
-```bash
+### 決済 API の失敗
+
+一部の決済 API では、 402 レスポンスを、決済リクエストの失敗に対する一般的な「すべて受け入れる」エラーとして使用しています。
+次の例では、トランザクションを開始するために POST リクエストを使用して決済 API を呼び出そうとしています。
+
+```http
+POST /merchant/transfers/payment HTTP/1.1
+Host: payments.example.com
+Content-Type: application/json
+Content-Length: 402
+
+{
+  "payment_transfer": {
+    "reference": "PAYMENT123456",
+    "amount": "1337",
+    "currency": "EUR",
+    "sender_account_uri": "pan:5299920000000149;exp=2020-08;cvc=123",
+    "sender": {
+      "first_name": "Brian",
+      "middle_name": "Smith",
+      "email": "test123@sender.example.com"
+    },
+    "recipient": {
+      "first_name": "John",
+      "middle_name": "Tyler",
+      "email": "test123@example.com",
+      "merchant_id": "123"
+    },
+    "authentication_value": "ucaf:jJJLtQa+Iws8AREAEbjsA1MAAAA",
+  }
+}
+```
+
+サーバーは、取引に問題が起きた場合、リクエストに対して 402 を返します。この場合は、カードが期限切れです。
+
+```http
 HTTP/1.1 402 Payment Required
-Date: Wed, 21 Oct 2015 07:28:00 GMT
+Date: Tue, 02 Jul 2024 12:56:49 GMT
+Content-Type: application/json
+Content-Length: 175
+
+{
+  "error": {
+    "code": "expired_card",
+    "doc_url": "https://example.com/error-codes#expired-card",
+    "message": "The card has expired. Verify expiration or use a different card.",
+  }
+}
 ```
 
 ## 仕様書
 
-| 仕様書                                                           | 題名                            |
-| ---------------------------------------------------------------- | ------------------------------- |
-| {{RFC("7231", "402 Payment Required" , "6.5.2")}} | HTTP/1.1: Semantics and Content |
+{{Specifications}}
 
-## ブラウザーの互換性
+## 互換性のメモ
 
-{{Compat("http.status.402")}}
+このステータスコードは予約されているものであり、定義されているわけではありません。
+実際の実装では、レスポンスの形式やコンテンツはさまざまです。
+402 に対応しているブラウザーはなく、エラーは一般的な `4xx` ステータスコードとして表示されます。
 
 ## 関連情報
 
-- [HTTP authentication](/ja/docs/Web/HTTP/Authentication)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP 認証](/ja/docs/Web/HTTP/Authentication)

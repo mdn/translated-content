@@ -37,6 +37,79 @@ break-after: revert;
 break-after: unset;
 ```
 
+{{InteractiveExample("CSS Demo: break-after")}}
+
+```css interactive-example-choice
+break-after: auto;
+```
+
+```css interactive-example-choice
+break-after: page;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div>
+    <p>
+      The effect of this property can be noticed when the document is being
+      printed or a preview of a print is displayed.
+    </p>
+    <button id="print-btn">Show Print Preview</button>
+    <div class="box-container">
+      <div class="box">Content before the property</div>
+      <div class="box" id="example-element">Content with 'break-after'</div>
+      <div class="box">Content after the property</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.box {
+  border: solid #5b6dcd 5px;
+  background-color: #5b6dcd;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+#example-element {
+  border: solid 5px #ffc129;
+  background-color: #ffc129;
+  color: black;
+}
+
+.hide-element {
+  display: none;
+}
+```
+
+```js interactive-example
+const btn = document.getElementById("print-btn");
+const editorContainer = document.getElementsByClassName(
+  "css-editor-container",
+)[0];
+const exampleHTMLElement = document.getElementById("default-example");
+
+const printableSection = document.createElement("div");
+printableSection.setAttribute("id", "printable-section");
+printableSection.classList.add("hide-element");
+document.body.appendChild(printableSection);
+
+btn.addEventListener("click", () => {
+  const exampleContent = exampleHTMLElement.innerHTML;
+
+  editorContainer.classList.add("hide-element");
+  printableSection.innerHTML = exampleContent;
+  printableSection.classList.remove("hide-element");
+
+  window.print();
+
+  printableSection.classList.add("hide-element");
+  printableSection.innerHTML = "";
+  editorContainer.classList.remove("hide-element");
+});
+```
+
 区切り位置になる可能性のある場所 (言い換えれば、要素の境界) は、3 つのプロパティに影響されます。前の要素の `break-after` の値、次の要素の {{cssxref("break-before")}} の値、包含要素の {{cssxref("break-inside")}} の値です。
 
 分割が行われるかどうかを判断するためには、以下の規則が適用されます。
@@ -104,7 +177,8 @@ break-after: unset;
 | `avoid`          | `avoid`     |
 | `always`         | `page`      |
 
-> **メモ:** ブラウザーにおいては `always` の値は `page-break-*` において、段区切りではなくページ区切りとして実装されています。したがって、 Level 4 の仕様書では `always` の値ではなく `page` の別名となっています。
+> [!NOTE]
+> ブラウザーにおいては `always` の値は `page-break-*` において、段区切りではなくページ区切りとして実装されています。したがって、 Level 4 の仕様書では `always` の値ではなく `page` の別名となっています。
 
 ## 公式定義
 
@@ -130,19 +204,40 @@ break-after: unset;
 
   <h2>小見出し</h2>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae fringilla mauris. Quisque commodo eget nisi sed pretium. Mauris luctus nec lacus in ultricies. Mauris vitae hendrerit arcu, ac scelerisque lacus. Aliquam lobortis in lacus sit amet posuere. Fusce iaculis urna id neque dapibus, eu lacinia lectus dictum.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae
+    fringilla mauris. Quisque commodo eget nisi sed pretium. Mauris luctus nec
+    lacus in ultricies. Mauris vitae hendrerit arcu, ac scelerisque lacus.
+    Aliquam lobortis in lacus sit amet posuere. Fusce iaculis urna id neque
+    dapibus, eu lacinia lectus dictum.
+  </p>
 
   <h2>小見出し</h2>
 
-  <p>Praesent condimentum dui dui, sit amet rutrum diam tincidunt eu. Cras suscipit porta leo sit amet rutrum. Sed vehicula ornare tincidunt. Curabitur a ipsum ac diam mattis volutpat ac ut elit. Nullam luctus justo non vestibulum gravida. Morbi metus libero, pharetra non porttitor a, molestie nec nisi.</p>
+  <p>
+    Praesent condimentum dui dui, sit amet rutrum diam tincidunt eu. Cras
+    suscipit porta leo sit amet rutrum. Sed vehicula ornare tincidunt. Curabitur
+    a ipsum ac diam mattis volutpat ac ut elit. Nullam luctus justo non
+    vestibulum gravida. Morbi metus libero, pharetra non porttitor a, molestie
+    nec nisi.
+  </p>
 
   <h2>小見出し</h2>
 
-  <p>Vivamus eleifend metus vitae neque placerat, eget interdum elit mattis. Donec eu vulputate nibh. Ut turpis leo, malesuada quis nisl nec, volutpat egestas tellus.
+  <p>
+    Vivamus eleifend metus vitae neque placerat, eget interdum elit mattis.
+    Donec eu vulputate nibh. Ut turpis leo, malesuada quis nisl nec, volutpat
+    egestas tellus.
+  </p>
 
   <h2>小見出し</h2>
 
-  <p>In finibus viverra enim vel suscipit. Quisque consequat velit eu orci malesuada, ut interdum tortor molestie. Proin sed pellentesque augue. Nam risus justo, faucibus non porta a, congue vel massa. Cras luctus lacus nisl, sed tincidunt velit pharetra ac. Duis suscipit faucibus dui sed ultricies.</p>
+  <p>
+    In finibus viverra enim vel suscipit. Quisque consequat velit eu orci
+    malesuada, ut interdum tortor molestie. Proin sed pellentesque augue. Nam
+    risus justo, faucibus non porta a, congue vel massa. Cras luctus lacus nisl,
+    sed tincidunt velit pharetra ac. Duis suscipit faucibus dui sed ultricies.
+  </p>
 </article>
 ```
 

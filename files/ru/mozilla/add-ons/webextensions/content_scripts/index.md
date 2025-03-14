@@ -1,44 +1,37 @@
 ---
 title: Встраиваемый скрипт
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
-tags:
-  - Web-расширение
-  - Расширение
-translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
+
 {{AddonSidebar}}
 
 Встраиваемый скрипт - это часть расширения, которая выполняется в контексте отдельной веб-страницы (в отличии от фоновых скриптов, выполняющихся в контексте целого браузера).
 
-[Фоновые скрипты](/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#%D0%A4%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5_%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D1%8B) имеют доступ ко всем методам [WebExtension JavaScript APIs](/ru/docs/Mozilla/Add-ons/WebExtensions/API), но они не имеют доступа к контенту отдельных веб-страниц. Так что если вашему расширению необходимо взаимодействие с контентом веб-страницы, вам нужен встраиваемый скрипт.
+[Фоновые скрипты](/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#%D0%A4%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5_%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D1%8B) имеют доступ ко всем методам [WebExtension API](/ru/docs/Mozilla/Add-ons/WebExtensions/API), но они не имеют доступа к контенту отдельных веб-страниц. Так что если вашему расширению необходимо взаимодействие с контентом веб-страницы, вам нужен встраиваемый скрипт.
 
 Точно так же, как скрипты загружаемые веб-страницами, встраиваемый скрипт может читать и изменять контент веб-страницы, используя DOM API.
 
 Встраиваемые скрипты имеют доступ только к [небольшому подмножеству методов WebExtension API](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#%D0%92%D0%B7%D0%B0%D0%B8%D0%BC%D0%BE%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D0%B5_%D1%81_%D1%84%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%BC%D0%B8_%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%B0%D0%BC%D0%B8), но они могут [взаимодействовать с фоновыми скриптами](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#%D0%92%D0%B7%D0%B0%D0%B8%D0%BC%D0%BE%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D0%B5_%D1%81_%D1%84%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%BC%D0%B8_%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%B0%D0%BC%D0%B8), используя систему передачи сообщений, таким образом опосредовано имея доступ ко всему WebExtension API.
 
-> **Примечание:** Обратите внимание, что встраивание скриптов блокируется на следующих доменах:
->
-> - accounts-static.cdn.mozilla.net
-> - accounts.firefox.com
-> - addons.cdn.mozilla.net
-> - addons.mozilla.org
-> - api.accounts.firefox.com
-> - content.cdn.mozilla.net
-> - content.cdn.mozilla.net
-> - discovery.addons.mozilla.org
-> - input.mozilla.org
-> - install.mozilla.org
-> - oauth.accounts.firefox.com
-> - profile.accounts.firefox.com
-> - support.mozilla.org
-> - sync.services.mozilla.com
-> - testpilot.firefox.com
->
-> Если вы попытаетесь встроить скрипт на страницы, находящиеся на вышеперечисленных доменах, у вас ничего не выйдет, и веб-страница сделает запись о [CSP](/ru/docs/Web/HTTP/CSP) ошибке.
->
-> По причине того, что список запрещённых доменов включает в себя addons.mozilla.org, пользователи, которые попытаются испытать ваше расширение прямо на странице загрузки, могут посчитать, что расширение не работает! В связи с этим вы могли бы предоставить им соответствующее предупреждение или [onboarding page](/ru/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices) чтобы немедленно переадресовать их с addons.mozilla.org.
+Обратите внимание, что встраивание скриптов блокируется на следующих доменах:
 
-> **Примечание:** Значения, определённые в глобальной области видимости встраиваемого скрипта с помощью `var foo` или `window.foo = "bar"` могут исчезать по причине бага [1408996](https://bugzilla.mozilla.org/show_bug.cgi?id=1408996).
+- accounts-static.cdn.mozilla.net
+- accounts.firefox.com
+- addons.cdn.mozilla.net
+- addons.mozilla.org
+- api.accounts.firefox.com
+- content.cdn.mozilla.net
+- discovery.addons.mozilla.org
+- install.mozilla.org
+- oauth.accounts.firefox.com
+- profile.accounts.firefox.com
+- support.mozilla.org
+- sync.services.mozilla.com
+
+Если вы попытаетесь встроить скрипт на страницы, находящиеся на вышеперечисленных доменах, у вас ничего не выйдет, и веб-страница сделает запись о [CSP](/ru/docs/Web/HTTP/CSP) ошибке.
+
+> [!NOTE]
+> По причине того, что список запрещённых доменов включает в себя addons.mozilla.org, пользователи, которые попытаются испытать ваше расширение прямо на странице загрузки, могут посчитать, что расширение не работает! В связи с этим вы могли бы предоставить им соответствующее предупреждение или [onboarding page](https://extensionworkshop.com/documentation/develop/onboard-upboard-offboard-users/) чтобы немедленно переадресовать их с `addons.mozilla.org`.
 
 ## Загрузка встраиваемого скрипта
 
@@ -46,7 +39,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 
 1. **Автоматическая загрузка скрипта на страницах с определёнными URL, объявленными при установке:** используя [`content_scripts`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) ключ в manifest.json, вы можете запросить браузер загружать встраиваемый скрипт каждый раз, когда браузер загружает веб-страницу, чей URL [совпадает с объявленными шаблонами](/ru/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
 2. **Автоматическая загрузка скрипта на страницах с определёнными URL, объявленными в момент работы расширения:** используя {{WebExtAPIRef("contentScripts")}} API, вы можете запросить браузер загружать встраиваемый скрипт каждый раз, когда браузер загружает веб-страницу, чей URL [совпадает с объявленными шаблонами](/ru/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). Это очень похоже на первый метод, но позволяет добавлять и удалять правила динамически во время работы расширения.
-3. **Загрузка скрипта расширением в конкретную вкладку:** используя [`tabs.executeScript()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/executeScript) API, вы можете загружать встраиваемые скрипты в определённые вкладки когда захотите: например, в ответ на нажатие пользователя на [browser action](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action).
+3. **Загрузка скрипта расширением в конкретную вкладку:** используя [`tabs.executeScript()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/executeScript) API, вы можете загружать встраиваемые скрипты в определённые вкладки когда захотите: например, в ответ на нажатие пользователя на [browser action](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button).
 
 Существует только одна глобальная область видимости _для одного фрейма, для одного расширения_. Это означает, что значения из одного встраиваемого скрипта могут быть доступны для другого встраиваемого скрипта, не зависимо от того, как встраиваемый скрипт был загружен на страницу.
 
@@ -65,12 +58,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 - Встраиваемые скрипты не могут видеть JavaScript переменных, определённых страничными скриптами.
 - Если страничный скрипт переназначит встроенное свойство DOM, встраиваемый скрипт всё равно будет видеть его изначальное значение, а не переназначенное.
 
-В Firefox это поведение называется [Xray vision](/ru/docs/Mozilla/Tech/Xray_vision).
+В Firefox это поведение называется [Xray vision](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html).
 
 Например, рассмотрите эту веб-страницу:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -97,9 +90,9 @@ document.body.appendChild(p);
 window.foo = "Эта глобальная переменная была добавлена страничным скриптом";
 
 // переопределяет встроенную window.confirm() функцию
-window.confirm = function() {
+window.confirm = function () {
   alert("Страничный скрипт так же переопределил 'confirm'");
-}
+};
 ```
 
 Теперь расширение загружает встраиваемый скрипт на страницу:
@@ -112,7 +105,7 @@ var pageScriptPara = document.getElementById("page-script-para");
 pageScriptPara.style.backgroundColor = "blue";
 
 // не может видеть свойств определённых страничным скриптом
-console.log(window.foo);  // undefined
+console.log(window.foo); // undefined
 
 // видит изначальное значение свойства, переопределённого страничным скриптом
 window.confirm("Вы уверены?"); // вызывает оригинальный window.confirm()
@@ -135,26 +128,27 @@ window.confirm("Вы уверены?"); // вызывает оригинальн
 ]
 ```
 
-> **Примечание:** Firefox предоставляет некоторое API, позволяющее встраиваемому скрипту иметь доступ к JavaScript объектам, созданным страничным скриптом, и предоставлять свои собственные JavaScript объекты страничному скрипту.
+> [!NOTE]
+> Firefox предоставляет некоторые API, позволяющие встраиваемому скрипту иметь доступ к JavaScript-объектам, созданным страничным скриптом, и предоставлять свои собственные JavaScript-объекты страничному скрипту.
 >
 > Смотрите [совместное использование объектов со страничным скриптом](/ru/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts) для получения дополнительной информации.
 
 ### Доступные WebExtension API
 
-В дополнение стандартному DOM API, встраиваемый скрипт может использовать следующие методы WebExtension APIs:
+В дополнение стандартному DOM API, встраиваемый скрипт может использовать следующие методы WebExtension API:
 
-Из [`extension`](/ru/Add-ons/WebExtensions/API/extension):
+Из [`extension`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/extension):
 
 - [`getURL()`](</ru/Add-ons/WebExtensions/API/extension#getURL()>)
-- [`inIncognitoContext`](/ru/Add-ons/WebExtensions/API/extension#inIncognitoContext)
+- [`inIncognitoContext`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/extension#inincognitocontext)
 
-Из [`runtime`](/ru/Add-ons/WebExtensions/API/runtime):
+Из [`runtime`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime):
 
 - [`connect()`](</ru/Add-ons/WebExtensions/API/runtime#connect()>)
 - [`getManifest()`](</ru/Add-ons/WebExtensions/API/runtime#getManifest()>)
 - [`getURL()`](</ru/Add-ons/WebExtensions/API/runtime#getURL()>)
-- [`onConnect`](/ru/Add-ons/WebExtensions/API/runtime#onConnect)
-- [`onMessage`](/ru/Add-ons/WebExtensions/API/runtime#onMessage)
+- [`onConnect`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onconnect)
+- [`onMessage`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onmessage)
 - [`sendMessage()`](</ru/Add-ons/WebExtensions/API/runtime#sendMessage()>)
 
 Из [`i18n`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/i18n):
@@ -174,15 +168,16 @@ window.confirm("Вы уверены?"); // вызывает оригинальн
 
 Встраиваемые скрипты могут делать запросы используя [`window.XMLHttpRequest`](/ru/docs/Web/API/XMLHttpRequest) и [`window.fetch()`](/ru/docs/Web/API/Fetch_API) API.
 
-> **Примечание:** В Firefox, запросы, совершаемые из встраиваемого скрипта (например, используя [fetch()](/ru/docs/Web/API/Fetch_API/Using_Fetch)) происходят в контексте расширения, так что вам необходимо предоставлять полный URL для доступа к контенту страниц. В Chrome, эти запросы совершаются в контексте страницы, так что URL может быть относительным, например `/api` будет трансформирован в `https://[current page URL]/api`.
+> [!NOTE]
+> В Firefox, запросы, совершаемые из встраиваемого скрипта (например, используя [fetch()](/ru/docs/Web/API/Fetch_API/Using_Fetch)) происходят в контексте расширения, так что вам необходимо предоставлять полный URL для доступа к контенту страниц. В Chrome, эти запросы совершаются в контексте страницы, так что URL может быть относительным, например `/api` будет трансформирован в `https://[current page URL]/api`.
 
-Встраиваемый скрипт имеет точно такие же кросс-доменные привилегии, как и всё остальное расширение: так что если расширение запросило кросс-доменный доступ на какой-либо домен используя [`permissions`](/ru/Add-ons/WebExtensions/manifest.json/permissions) ключ в manifest.json, тогда его встраиваемый скрипт тоже будет иметь доступ к этому домену.
+Встраиваемый скрипт имеет точно такие же кросс-доменные привилегии, как и всё остальное расширение: так что если расширение запросило кросс-доменный доступ на какой-либо домен используя [`permissions`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) ключ в manifest.json, тогда его встраиваемый скрипт тоже будет иметь доступ к этому домену.
 
 Это достигается, предоставляя встраиваемому скрипту более привилегированные XHR and fetch объекты. Что имеет побочный эффект, связанный с отсутствием [`Origin`](/ru/docs/Web/HTTP/Headers/Origin) и [`Referer`](/ru/docs/Web/HTTP/Headers/Referer) заголовков, которые имел бы запрос, выполняемый из страничного скрипта. Зачастую это предпочитаемо, для того чтобы предотвратить раскрытие кросс-доменной натуры запроса. Начиная с версии 58 и дальше, расширения, которым необходимо выполнять запросы, которые должны выглядеть будто они отправлены встраиваемым скриптом, могут использовать `content.XMLHttpRequest` и `content.fetch()`. Кросс-браузерные расширения должны проверять присутствие этих методов.
 
 ## Взаимодействие с фоновыми скриптами
 
-Хотя встраиваемые скрипты не могут напрямую использовать большинство методов из WebExtension APIs, они могут взаимодействовать с фоновыми скриптами расширения, используя систему сообщений, и таким образом могут опосредованно иметь доступ к тем же самым API, что и фоновые скрипты.
+Хотя встраиваемые скрипты не могут напрямую использовать большинство методов из WebExtension API, они могут взаимодействовать с фоновыми скриптами расширения, используя систему сообщений, и таким образом могут опосредованно иметь доступ к тем же самым API, что и фоновые скрипты.
 
 Существует два способа общения между фоновым и встраиваемым скриптами: вы можете посылать одиночные сообщения, ожидая необязательного ответа, или вы можете установить долгосрочное соединение на двух сторонах и использовать это соединение для обмена сообщениями.
 
@@ -208,7 +203,7 @@ function notifyExtension(e) {
   if (e.target.tagName != "A") {
     return;
   }
-  browser.runtime.sendMessage({"url": e.target.href});
+  browser.runtime.sendMessage({ url: e.target.href });
 }
 ```
 
@@ -221,10 +216,10 @@ browser.runtime.onMessage.addListener(notify);
 
 function notify(message) {
   browser.notifications.create({
-    "type": "basic",
-    "iconUrl": browser.extension.getURL("link.png"),
-    "title": "Вы нажали на ссылку!",
-    "message": message.url
+    type: "basic",
+    iconUrl: browser.extension.getURL("link.png"),
+    title: "Вы нажали на ссылку!",
+    message: message.url,
   });
 }
 ```
@@ -247,7 +242,7 @@ function notify(message) {
 
 Результатом вызова этих методов будет возвращение [`runtime.Port`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) объекта.
 
-- [`runtime.onConnect`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect) методу передаётся аргумент, являющийся собственным портом этого скрипта, [`runtime.Port`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) объект.
+- [`runtime.onConnect`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect) методу передаётся аргумент, являющийся собственным портом этого скрипта, [`runtime.Port`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) объект.
 
 Как только обе стороны имеют порт, они могут:
 
@@ -264,16 +259,18 @@ function notify(message) {
 ```js
 // content-script.js
 
-var myPort = browser.runtime.connect({name:"port-from-cs"});
-myPort.postMessage({greeting: "Привет из встраиваемого скрипта"});
+var myPort = browser.runtime.connect({ name: "port-from-cs" });
+myPort.postMessage({ greeting: "Привет из встраиваемого скрипта" });
 
-myPort.onMessage.addListener(function(m) {
-  console.log("Во встраиваемом скрипте, получено сообщение из фонового скрипта: ");
+myPort.onMessage.addListener(function (m) {
+  console.log(
+    "Во встраиваемом скрипте, получено сообщение из фонового скрипта: ",
+  );
   console.log(m.greeting);
 });
 
-document.body.addEventListener("click", function() {
-  myPort.postMessage({greeting: "Они кликнули по странице!"});
+document.body.addEventListener("click", function () {
+  myPort.postMessage({ greeting: "Они кликнули по странице!" });
 });
 ```
 
@@ -295,17 +292,19 @@ var portFromCS;
 
 function connected(p) {
   portFromCS = p;
-  portFromCS.postMessage({greeting: "Привет, встраиваемый скрипт!"});
-  portFromCS.onMessage.addListener(function(m) {
-    console.log("В фоновом скрипте, получено сообщение от встраиваемого скрипта");
+  portFromCS.postMessage({ greeting: "Привет, встраиваемый скрипт!" });
+  portFromCS.onMessage.addListener(function (m) {
+    console.log(
+      "В фоновом скрипте, получено сообщение от встраиваемого скрипта",
+    );
     console.log(m.greeting);
   });
 }
 
 browser.runtime.onConnect.addListener(connected);
 
-browser.browserAction.onClicked.addListener(function() {
-  portFromCS.postMessage({greeting: "Они нажали кнопку!"});
+browser.browserAction.onClicked.addListener(function () {
+  portFromCS.postMessage({ greeting: "Они нажали кнопку!" });
 });
 ```
 
@@ -316,19 +315,19 @@ browser.browserAction.onClicked.addListener(function() {
 ```js
 // background-script.js
 
-var ports = []
+var ports = [];
 
 function connected(p) {
-  ports[p.sender.tab.id]    = p
+  ports[p.sender.tab.id] = p;
   //...
 }
 
-browser.runtime.onConnect.addListener(connected)
+browser.runtime.onConnect.addListener(connected);
 
-browser.browserAction.onClicked.addListener(function() {
-  ports.forEach(p => {
-        p.postMessage({greeting: "Они нажали на кнопку!"})
-    })
+browser.browserAction.onClicked.addListener(function () {
+  ports.forEach((p) => {
+    p.postMessage({ greeting: "Они нажали на кнопку!" });
+  });
 });
 ```
 
@@ -355,28 +354,35 @@ function messageContentScript() {
 ```js
 // content-script.js
 
-window.addEventListener("message", function(event) {
-  if (event.source == window &&
-      event.data &&
-      event.data.direction == "from-page-script") {
-    alert("Встраиваемый скрипт получил сообщение: \"" + event.data.message + "\"");
+window.addEventListener("message", function (event) {
+  if (
+    event.source == window &&
+    event.data &&
+    event.data.direction == "from-page-script"
+  ) {
+    alert(
+      'Встраиваемый скрипт получил сообщение: "' + event.data.message + '"',
+    );
   }
 });
 ```
 
 Для просмотра законченного и полностью рабочего примера, [посетите эту страницу на GitHub](https://mdn.github.io/webextensions-examples/content-script-page-script-messaging.html) и следуйте инструкциям.
 
-> **Предупреждение:** Заметьте, при взаимодействии с непроверенными страницами этим способом, вам нужно быть очень осторожными . Расширения имеют возможность запускать привилегированный код, который может обладать серьёзными возможностями, и вредоносные веб-страницы легко могут обмануть ваше расширение, ради доступа к этим возможностям.
+> [!WARNING]
+> Заметьте, при взаимодействии с непроверенными страницами этим способом, вам нужно быть очень осторожными . Расширения имеют возможность запускать привилегированный код, который может обладать серьёзными возможностями, и вредоносные веб-страницы легко могут обмануть ваше расширение, ради доступа к этим возможностям.
 >
 > Как простейший пример, представим встраиваемый скрипт, который получает сообщение от веб-страницы и делает что-то вроде этого:
 >
 > ```js
 > // content-script.js
 >
-> window.addEventListener("message", function(event) {
->   if (event.source == window &&
->       event.data.direction &&
->       event.data.direction == "from-page-script") {
+> window.addEventListener("message", function (event) {
+>   if (
+>     event.source == window &&
+>     event.data.direction &&
+>     event.data.direction == "from-page-script"
+>   ) {
 >     eval(event.data.message);
 >   }
 > });
@@ -398,15 +404,18 @@ window.addEventListener("message", function(event) {
 ```js
 // content-script.js
 
-window.eval('window.x = 1;');
-eval('window.y = 2');
+window.eval("window.x = 1;");
+eval("window.y = 2");
 
 console.log(`Во встраиваемом скрипте, window.x: ${window.x}`);
 console.log(`Во встраиваемом скрипте, window.y: ${window.y}`);
 
-window.postMessage({
-  message: "check"
-}, "*");
+window.postMessage(
+  {
+    message: "check",
+  },
+  "*",
+);
 ```
 
 Этот код создаёт переменные `x` and `y`, используя `window.eval()` и `eval()`, затем записывает их значения, и отправляет сообщение на веб-страницу.
@@ -414,7 +423,7 @@ window.postMessage({
 Получая сообщение, страничный скрипт записывает те же самые переменные:
 
 ```js
-window.addEventListener("message", function(event) {
+window.addEventListener("message", function (event) {
   if (event.source === window && event.data && event.data.message === "check") {
     console.log(`In page script, window.x: ${window.x}`);
     console.log(`In page script, window.y: ${window.y}`);
@@ -440,22 +449,23 @@ In page script, window.x: 1
 In page script, window.y: undefined
 ```
 
-Те же правила применимы к [`setTimeout()`](/ru/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), [`setInterval()`](/ru/docs/Web/API/WindowOrWorkerGlobalScope/setInterval), и [`Function()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function).
+Те же правила применимы к [`setTimeout()`](/ru/docs/Web/API/Window/setTimeout), [`setInterval()`](/ru/docs/Web/API/Window/setInterval), и [`Function()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function).
 
-> **Предупреждение:** Будьте очень осторожны, запуская код в контексте страничного скрипта. Окружение страничного скрипта может контролироваться потенциально зловредным веб-страницей, которая может переопределить объекты, с которыми вы взаимодействуете, так что их поведение станет совершенно непредсказуемым:
+> [!WARNING]
+> Будьте очень осторожны, запуская код в контексте страничного скрипта. Окружение страничного скрипта может контролироваться потенциально зловредным веб-страницей, которая может переопределить объекты, с которыми вы взаимодействуете, так что их поведение станет совершенно непредсказуемым:
 >
 > ```js
 > // page.js переопределяет console.log
 >
 > var original = console.log;
 >
-> console.log = function() {
+> console.log = function () {
 >   original(true);
-> }
+> };
 > ```
 >
 > ```js
 > // content-script.js вызывает переопределённую версию
 >
-> window.eval('console.log(false)');
+> window.eval("console.log(false)");
 > ```

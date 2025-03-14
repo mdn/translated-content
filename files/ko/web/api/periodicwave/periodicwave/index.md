@@ -1,14 +1,6 @@
 ---
 title: PeriodicWave()
 slug: Web/API/PeriodicWave/PeriodicWave
-tags:
-  - API
-  - Audio
-  - Constructor
-  - PeriodicWave
-  - Reference
-  - Web Audio API
-browser-compat: api.PeriodicWave.PeriodicWave
 ---
 
 {{APIRef("Web Audio API")}}
@@ -49,10 +41,10 @@ real[1] = 1;
 imag[1] = 0;
 
 var options = {
-  real : real,
-  imag : imag,
-  disableNormalization : false
-}
+  real: real,
+  imag: imag,
+  disableNormalization: false,
+};
 
 var wave = new PeriodicWave(ac, options);
 ```

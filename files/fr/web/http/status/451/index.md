@@ -1,8 +1,6 @@
 ---
 title: 451 Unavailable For Legal Reasons
 slug: Web/HTTP/Status/451
-translation_of: Web/HTTP/Status/451
-browser-compat: http.status.451
 ---
 
 {{HTTPSidebar}}
@@ -19,7 +17,8 @@ Le code de réponse d'erreur HTTP **`451 Unavailable For Legal Reasons`** indiqu
 
 Cet exemple de réponse est tiré de la RFC IETF (cf. ci-après), et contient une référence à [Monty Python&nbsp;: La Vie de Brian](https://fr.wikipedia.org/wiki/Monty_Python_:_La_Vie_de_Brian).
 
-> **Note :** L'en-tête [`Link`](/fr/docs/Web/HTTP/Headers/Link) peut aussi contenir une relation `rel="blocked-by"` identifiant l'entité ayant mis en place le blocage de la ressource et pas nécessairement l'entité ayant demandé le blocage.
+> [!NOTE]
+> L'en-tête [`Link`](/fr/docs/Web/HTTP/Headers/Link) peut aussi contenir une relation `rel="blocked-by"` identifiant l'entité ayant mis en place le blocage de la ressource et pas nécessairement l'entité ayant demandé le blocage.
 
 C'est le corps de la réponse (et non `rel="blocked-by"`) qui pourra renseigner sur l'entité responsable en premier lieu du blocage de la ressource. Le corps peut ainsi contenir le nom de la personne ou de l'organisation qui a réalisé la demande à l'origine du retrait du contenu.
 
@@ -31,13 +30,16 @@ Content-Type: text/html
 
 ```html
 <html>
-  <head><title>Unavailable For Legal Reasons</title></head>
+  <head>
+    <title>Unavailable For Legal Reasons</title>
+  </head>
   <body>
     <h1>Unavailable For Legal Reasons</h1>
-    <p>This request may not be serviced in the Roman Province
-    of Judea due to the Lex Julia Majestatis, which disallows
-    access to resources hosted on servers deemed to be
-    operated by the People's Front of Judea.</p>
+    <p>
+      This request may not be serviced in the Roman Province of Judea due to the
+      Lex Julia Majestatis, which disallows access to resources hosted on
+      servers deemed to be operated by the People's Front of Judea.
+    </p>
   </body>
 </html>
 ```

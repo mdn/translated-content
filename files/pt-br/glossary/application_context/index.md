@@ -1,7 +1,9 @@
 ---
 title: Application Context
-slug: Glossary/application_context
+slug: Glossary/Application_context
 ---
+
+{{GlossarySidebar}}
 
 Um **application context** de nível superior é um [contexto de navegação](/pt-BR/docs/Glossary/Browsing_context) que tem um [manifest](/pt-BR/docs/Web/Manifest)
 

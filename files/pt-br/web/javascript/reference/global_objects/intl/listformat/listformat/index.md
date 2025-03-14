@@ -8,7 +8,29 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
 O construtor **`Intl.ListFormat()`** cria objetos
 {{jsxref("Intl/ListFormat", "Intl.ListFormat")}} que habilitam a formatação de lista de acordo com o idioma.
 
-{{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.ListFormat", "taller")}}
+
+```js interactive-example
+const vehicles = ["Motorcycle", "Bus", "Car"];
+
+const formatter = new Intl.ListFormat("en", {
+  style: "long",
+  type: "conjunction",
+});
+console.log(formatter.format(vehicles));
+// Expected output: "Motorcycle, Bus, and Car"
+
+const formatter2 = new Intl.ListFormat("de", {
+  style: "short",
+  type: "disjunction",
+});
+console.log(formatter2.format(vehicles));
+// Expected output: "Motorcycle, Bus oder Car"
+
+const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
+console.log(formatter3.format(vehicles));
+// Expected output: "Motorcycle Bus Car"
+```
 
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
@@ -24,16 +46,14 @@ new Intl.ListFormat(locales, options);
 
 - `locales` {{optional_inline}}
   - : Uma string com a tag de idioma BCP 47, ou um array de tais string. Veja de forma geral a interpretação do argumento `locales`, na página
-    {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation",
-      1)}}.
+    {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}}.
 - `options` {{optional_inline}}
 
   - : Um objeto com algumas ou todas as seguintes propriedades:
 
     - `localeMatcher`
       - : O algoritmo de correspondência de localidade para ser utilizado. Os possíveis valores são "`lookup`"
-        e "`best fit`"; o valor padrão é "`best fit`". Para mais informações sobre esta opção, veja a página {{jsxref("Global_Objects/Intl", "Intl",
-        "#Locale_negotiation", 1)}}.
+        e "`best fit`"; o valor padrão é "`best fit`". Para mais informações sobre esta opção, veja a página {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}}.
     - `type`
       - : O formato de saída da mensagem. Os possíveis valores são "`conjunction`"
         que representa listas com "e" (padrão, e.g., "`A, B, e C`"), ou
@@ -57,20 +77,20 @@ const list = ["Moto", "Ônibus", "Carro"];
 
 console.log(
   new Intl.ListFormat("pt-BR", { style: "long", type: "conjunction" }).format(
-    list
-  )
+    list,
+  ),
 );
 // > Moto, Ônibus e Carro
 
 console.log(
   new Intl.ListFormat("pt-BR", { style: "short", type: "disjunction" }).format(
-    list
-  )
+    list,
+  ),
 );
 // > Moto, Ônibus ou Carro
 
 console.log(
-  new Intl.ListFormat("pt-BR", { style: "narrow", type: "unit" }).format(list)
+  new Intl.ListFormat("pt-BR", { style: "narrow", type: "unit" }).format(list),
 );
 // > Moto Ônibus Carro
 ```

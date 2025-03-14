@@ -1,8 +1,9 @@
 ---
-title: AudioBufferSourceNode.playbackRate
+title: "AudioBufferSourceNode: playbackRate プロパティ"
+short-title: playbackRate
 slug: Web/API/AudioBufferSourceNode/playbackRate
 l10n:
-  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
+  sourceCommit: 46a493c75ca423fb4a97613963d51eac3f38980d
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -25,68 +26,64 @@ l10n:
 
 ## 例
 
-この例では、 {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} 関数を使用して音声トラックをデコードし、 {{domxref("AudioBufferSourceNode")}} に入れています。音声の再生と停止にはボタンが指定され、`playbackRate`、`loopStart`、`loopEnd` のプロパティをその場で変更するためにスライダーコントロールが使用されます。
+### `playbackRate` の設定
 
-> **メモ:** 動作する完全な例は、[このコードをライブで実行](https://mdn.github.io/webaudio-examples/decode-audio-data/)するか、[ソースを表示](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data)することができます。.
+この例では、ユーザーが "Play" を押すと、音声トラックを読み込んでデコードし、{{domxref("AudioBufferSourceNode")}} に入れます。
 
-```html
-<input
-  class="playback-rate-control"
-  type="range"
-  min="0.25"
-  max="3"
-  step="0.05"
-  value="1" />
-<span class="playback-rate-value">1.0</span>
-```
+例えば、この例では `loop` プロパティを `true` に設定し、トラックがループして再生されるようにしています。
+
+ユーザーは、`playbackRate` プロパティを[範囲コントロール](/ja/docs/Web/HTML/Element/input/range)を使用して設定することができます。
+
+> **メモ:** [実際に動作する例を見る](https://mdn.github.io/webaudio-examples/audio-buffer-source-node/playbackrate/) ([または、ソースコードを見る](https://github.com/mdn/webaudio-examples/tree/main/audio-buffer-source-node/playbackrate))ことができます。
 
 ```js
-function getData() {
-  source = audioCtx.createBufferSource();
-  request = new XMLHttpRequest();
+let audioCtx;
+let buffer;
+let source;
 
-  request.open("GET", "viper.ogg", true);
+const play = document.getElementById("play");
+const stop = document.getElementById("stop");
 
-  request.responseType = "arraybuffer";
+const playbackControl = document.getElementById("playback-rate-control");
+const playbackValue = document.getElementById("playback-rate-value");
 
-  request.onload = () => {
-    const audioData = request.response;
-
-    audioCtx.decodeAudioData(
-      audioData,
-      (buffer) => {
-        myBuffer = buffer;
-        source.buffer = myBuffer;
-        source.playbackRate.value = playbackControl.value;
-        source.connect(audioCtx.destination);
-        source.loop = true;
-      },
-
-      (e) => console.error(`Error with decoding audio data: ${e.err}`)
-    );
-  };
-
-  request.send();
+async function loadAudio() {
+  try {
+    // Load an audio file
+    const response = await fetch("rnb-lofi-melody-loop.wav");
+    // Decode it
+    buffer = await audioCtx.decodeAudioData(await response.arrayBuffer());
+  } catch (err) {
+    console.error(`Unable to fetch the audio file. Error: ${err.message}`);
+  }
 }
 
-// wire up buttons to stop and play audio, and range slider control
+play.addEventListener("click", async () => {
+  if (!audioCtx) {
+    audioCtx = new AudioContext();
+    await loadAudio();
+  }
+  source = audioCtx.createBufferSource();
+  source.buffer = buffer;
+  source.connect(audioCtx.destination);
+  source.loop = true;
+  source.playbackRate.value = playbackControl.value;
+  source.start();
+  play.disabled = true;
+  stop.disabled = false;
+  playbackControl.disabled = false;
+});
 
-play.onclick = () => {
-  getData();
-  source.start(0);
-  play.setAttribute("disabled", "disabled");
-  playbackControl.removeAttribute("disabled");
-};
-
-stop.onclick = () => {
-  source.stop(0);
-  play.removeAttribute("disabled");
-  playbackControl.setAttribute("disabled", "disabled");
-};
+stop.addEventListener("click", () => {
+  source.stop();
+  play.disabled = false;
+  stop.disabled = true;
+  playbackControl.disabled = true;
+});
 
 playbackControl.oninput = () => {
   source.playbackRate.value = playbackControl.value;
-  playbackValue.innerHTML = playbackControl.value;
+  playbackValue.textContent = playbackControl.value;
 };
 ```
 

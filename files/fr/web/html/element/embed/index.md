@@ -1,28 +1,24 @@
 ---
-title: '<embed> : l''élément de contenu externe embarqué'
+title: "<embed> : l'élément de contenu externe embarqué"
 slug: Web/HTML/Element/embed
-tags:
-  - Element
-  - Embedding Content
-  - External content
-  - HTML
-  - HTML embedded content
-  - HTML5
-  - Plugins
-  - Reference
-  - Web
-  - embed
-translation_of: Web/HTML/Element/embed
-browser-compat: html.elements.embed
 ---
 
 {{HTMLSidebar}}
 
 L'élément HTML **`<embed>`** permet d'intégrer du contenu externe à cet endroit dans le document. Le contenu peut être fourni par une application externe ou une autre source telle qu'un _plugin_ du navigateur.
 
-{{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;embed&gt;", "tabbed-standard")}}
 
-> **Note :** Cet article ne traite que de l'élément faisant partie du HTML5. Il ne concerne pas la version précédente et non normalisée de cet élément.
+```html interactive-example
+<embed
+  type="video/mp4"
+  src="/shared-assets/videos/flower.mp4"
+  width="250"
+  height="200" />
+```
+
+> [!NOTE]
+> Cet article ne traite que de l'élément faisant partie du HTML5. Il ne concerne pas la version précédente et non normalisée de cet élément.
 
 Il faut garder à l'esprit que la plupart des navigateurs ont déprécié voire retiré la prise en charge des plugins. Aussi, mieux vaut ne pas utiliser sur `<embed>` si on souhaite qu'un site ou une application soit fonctionnelle sur un navigateur moyen.
 
@@ -121,10 +117,15 @@ Cet élément possède [les attributs universels](/fr/docs/Web/HTML/Global_attri
 
 Il est possible d'utiliser la propriété CSS [`object-position`](/fr/docs/Web/CSS/object-position) afin d'ajuster la position de l'objet embarqué au sein de la _frame_ et la propriété CSS [`object-fit`](/fr/docs/Web/CSS/object-fit) afin de contrôler la façon dont la taille de l'objet est ajustée par rapport à celle de la _frame_.
 
-## Exemple
+## Exemples
 
 ```html
-<embed type="video/quicktime" src="film.mov" width="640" height="480" title="Titre de ma vidéo">
+<embed
+  type="video/quicktime"
+  src="film.mov"
+  width="640"
+  height="480"
+  title="Titre de ma vidéo" />
 ```
 
 ## Accessibilité
@@ -141,5 +142,5 @@ Utilisez l'attribut [`title`](/fr/docs/Web/HTML/Global_attributes/title) sur un 
 
 ## Voir aussi
 
-- D'autres éléments sont utilisés pour intégrer du contenu de différents types, notamment [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<canvas>`](/fr/docs/Web/HTML/Element/canvas), [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), [`<img>`](/fr/docs/Web/HTML/Element/Img), [`<math>`](/fr/docs/Web/MathML/Element/math), [`<object>`](/fr/docs/Web/HTML/Element/object), [`<svg>`](/fr/docs/Web/SVG/Element/svg), and [`<video>`](/fr/docs/Web/HTML/Element/video).
+- D'autres éléments sont utilisés pour intégrer du contenu de différents types, notamment [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<canvas>`](/fr/docs/Web/HTML/Element/canvas), [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), [`<img>`](/fr/docs/Web/HTML/Element/img), [`<math>`](/fr/docs/Web/MathML/Element/math), [`<object>`](/fr/docs/Web/HTML/Element/object), [`<svg>`](/fr/docs/Web/SVG/Element/svg), and [`<video>`](/fr/docs/Web/HTML/Element/video).
 - Positionnement et dimensionnement du contenu intégré dans son cadre : [`object-position`](/fr/docs/Web/CSS/object-position) and [`object-fit`](/fr/docs/Web/CSS/object-fit)

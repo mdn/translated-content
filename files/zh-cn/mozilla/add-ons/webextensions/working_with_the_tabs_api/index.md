@@ -1,32 +1,35 @@
 ---
-title: Working with the Tabs API
+title: 使用 Tabs API
 slug: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
+l10n:
+  sourceCommit: 1079b152415f26432481498d2d2b4e8b2f81e3e0
 ---
 
 {{AddonSidebar}}
 
-选项卡允许用户在其浏览器窗口中打开多个网页，然后在这些网页之间切换。使用 Tabs API，您可以使用和操作这些选项卡来创建实用程序，为用户提供使用选项卡或提供扩展功能的新方法。
+标签页（tab）允许用户在其浏览器窗口中打开多个网页，然后在这些网页之间切换。通过使用 Tabs API，你可以使用和操作这些标签页来创建实用程序，为用户提供使用标签页或提供扩展功能的新方法。
 
-在这篇 how-to 文章中我们将看到：
+在这篇教程文章中，我们将了解如下内容：
 
 - 使用 Tabs API 所需的权限。
-- 使用{{WebExtAPIRef("tabs.query")}}发现有关标签及其属性的更多信息。
-- 创建、复制、移动、更新、重新加载和删除选项卡。
+- 使用 {{WebExtAPIRef("tabs.query")}} 发现有关标签及其属性的更多信息。
+- 创建、复制、移动、更新、重新加载和删除标签页。
 - 操纵标签的缩放大小。
-- 操纵选项卡的 CSS。
+- 操纵标签页的 CSS 样式。
 
-最后，我们通过查看 API 提供的其他一些其他功能。
+最后，我们来看看应用程序接口提供的一些其他杂项功能。
 
-> **备注：** 其他地方有一些 Tab API 功能。这些是可用于使用脚本操作选项卡内容的方法{{WebExtAPIRef("tabs.connect")}}，{{WebExtAPIRef("tabs.sendMessage")}}和{{WebExtAPIRef("tabs.executeScript")}}。如果您需要有关这些方法的更多信息，请参阅概念文章[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)和操作指南[修改网页](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page)。
+> [!NOTE]
+> 其他地方也介绍了一些 Tabs API 特性。这些方法可用于使用脚本操作标签页的内容（{{WebExtAPIRef("tabs.connect")}}、{{WebExtAPIRef("tabs.sendMessage")}} 和 {{WebExtAPIRef("tabs.executeScript")}}）。如需了解有关这些方法的更多信息，请参阅概念文章[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)和操作指南[修改网页](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page)。
 
-## 权限和选项卡 API
+## 权限和 Tabs API
 
-对于大多数 Tabs API 函数，您不需要任何权限; 但是，有一些例外：
+对于大多数 Tabs API 函数，你不需要任何权限; 但是，有一些例外：
 
-- 需要`"tabs"`权限才能访问 Tab 对象的`Tab.url`，`Tab.title`和`Tab.favIconUrl`属性。在 Firefox 中，您还需要`"tabs"`来按 URL 执行[查询](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)。
-- {{WebExtAPIRef("tabs.executeScript")}}或{{WebExtAPIRef("tabs.insertCSS")}}需要[主机权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)。
+- 需要 `"tabs"` 权限才能访问 Tab 对象的 `Tab.url`、`Tab.title` 和 `Tab.favIconUrl` 属性。在 Firefox 中，你还需要 `"tabs"` 来按 URL 执行[查询](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)。
+- {{WebExtAPIRef("tabs.executeScript()")}} 或 {{WebExtAPIRef("tabs.insertCSS()")}} 需要[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
 
-以下是您可以在扩展程序的 manifest.json 文件中请求`"tabs"`权限的方法：
+以下是你可以在扩展程序的 manifest.json 文件中请求 `"tabs"` 权限的方法：
 
 ```json
 "permissions": [
@@ -35,176 +38,157 @@ slug: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 ],
 ```
 
-此请求允许您在用户访问的所有网站上使用所有标签 API 功能。还有一种替代方法可以请求权限使用{{WebExtAPIRef("tabs.executeScript")}}或{{WebExtAPIRef("tabs.insertCSS")}}，其中您不需要主机权限，形式为[`"activeTab"`](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)。此权限与`<all_urls>`提供与`"tabs"`相同的权限，但有两个限制：
+此请求允许你在用户访问的所有网站上使用所有 Tabs API 特性。在不需要主机权限的情况下，这里还有一种请求使用 {{WebExtAPIRef("tabs.executeScript()")}} 或 {{WebExtAPIRef("tabs.insertCSS()")}} 的权限的替代方法，即 [`"activeTab"`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#活动标签权限) 形式。该权限提供的权限与带有 `<all_urls>` 的 `"tabs"` 相同，但有两个限制：
 
-- 用户必须通过其浏览器或页面操作，上下文菜单或快捷键与扩展进行交互。
-- 它仅在活动选项卡中授予权限。
+- 用户必须通过浏览器或页面操作、上下文菜单或快捷键与扩展进行交互。
+- 它只授予活动标签页内的权限。
 
-这种方法的好处是用户不会收到权限警告，也就是说您的扩展程序可以“访问所有网站的数据”。这是因为`<all_urls>`权限使扩展能够在任何选项卡中随时执行脚本，而[`"activeTab"`](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)仅限于允许扩展在当前选项卡中执行用户请求的操作。
+这种方法的好处是，用户不会收到诸如“你的扩展可以访问所有网站的数据”的权限警告。这是因为 `<all_urls>` 权限赋予了扩展在任何时间、任何标签页中执行脚本的能力，而 [`"activeTab"`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#活动标签权限) 则仅限于允许扩展在当前标签页中执行用户请求的操作。
 
-## Discovering more about tabs and their properties
+## 进一步了解标签及其属性
 
-There will be occasions when you want to get a list of all the tabs in all the browser windows. Other times you might want to find a subset of tabs that match some specific criteria, such as those opened from a specific tab or displaying pages from a particular domain. And once you have your list of tabs, you'll probably want to know more about their properties.
+有时你会想获得所有浏览器窗口中所有标签页的列表。还有的时候，你可能想找到符合某些特定条件的标签页子集，比如从特定标签页打开的标签页或显示特定域的页面的标签页。一旦有了标签页列表，你可能还想了解它们的更多属性。
 
-This is where {{WebExtAPIRef("tabs.query")}} comes in. Used alone to get all tabs or taking the `queryInfo` object—to specify query criteria such as whether the tab is active, in the current window, or one or more of 17 criteria—{{WebExtAPIRef("tabs.query")}} returns an array of {{WebExtAPIRef("tabs.Tab")}} objects containing information about the tabs.
+这就是 {{WebExtAPIRef("tabs.query()")}} 的作用所在。单独使用 {{WebExtAPIRef("tabs.query()")}} 可获取所有标签页，或使用 `queryInfo` 对象指定查询条件，如标签页是否处于活动状态、是否在当前窗口中，或是否符合 17 项条件中的一项或多项。
 
-Where you want information about the current tab only, you can get a {{WebExtAPIRef("tabs.Tab")}} object for that tab using {{WebExtAPIRef("tabs.getCurrent")}}. If you have a tab’s ID, you can get its {{WebExtAPIRef("tabs.Tab")}} object using {{WebExtAPIRef("tabs.get")}}.
+如果只需要当前标签页的信息，可以使用 {{WebExtAPIRef("tabs.getCurrent()")}} 获取该标签页的 {{WebExtAPIRef("tabs.Tab")}} 对象。如果有标签页的 ID，则可以使用 {{WebExtAPIRef("tabs.get()")}} 获取其 {{WebExtAPIRef("tabs.Tab")}} 对象。
 
-> **备注：**
->
-> - **In Chrome,** the user can select multiple tabs in a window, and the Tabs API sees these as highlighted tabs.
-> - **In Firefox,** the user can't select multiple tabs, so "highlighted" and "active" are synonymous.
+### 示例
 
-### How to example
+为了了解 {{WebExtAPIRef("tabs.query()")}} 和 {{WebExtAPIRef("tabs.Tab")}} 是如何使用的，让我们来看看 [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/main/tabs-tabs-tabs) 示例是如何在工具栏弹出按钮中添加“switch to tabs”列表的。
 
-To see how {{WebExtAPIRef("tabs.query")}} and {{WebExtAPIRef("tabs.Tab")}} are used, let’s walk through how the [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) example adds the list of "switch to tabs" to its toolbar button popup.
+![标签页工具栏菜单显示“switch to tap area”](switch_to_tab.png)
 
-![The tabs tabs tabs toolbar menu showing the switch to tap area](switch_to_tab.png)
+- manifest.json
 
-### manifest.json
+  - : 这里是 [manifest.json](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/manifest.json) 文件：
 
-Here is the [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json):
+    ```json
+    {
+      "browser_action": {
+        "default_title": "Tabs, tabs, tabs",
+        "default_popup": "tabs.html"
+      },
+      "description": "A list of methods you can perform on a tab.",
+      "homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/tabs-tabs-tabs",
+      "manifest_version": 2,
+      "name": "Tabs, tabs, tabs",
+      "permissions": ["tabs"],
+      "version": "1.0"
+    }
+    ```
 
-```json
-{
-  "browser_action": {
-    "browser_style": true,
-    "default_title": "Tabs, tabs, tabs",
-    "default_popup": "tabs.html"
-  },
-  "description": "A list of methods you can perform on a tab.",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs",
-  "manifest_version": 2,
-  "name": "Tabs, tabs, tabs",
-  "permissions": [
-    "tabs"
-  ],
-  "version": "1.0"
-}
-```
+    > [!NOTE]
+    >
+    > - **`tabs.html` 在 `browser_action` 中被定义为 `default_popup`**。每当用户点击扩展工具栏图标时，它就会显示出来。
+    > - **tabs 包含在权限中**。这是支持标签页列表功能所必需的，因为扩展会读取标签页的标题，以便在弹出窗口中显示。
 
-> **备注：** Note the following:
->
-> - **tabs.html is defined as the `default_popup` in `browser_action`.** It is displayed whenever the user clicks the extension's toolbar icon.
-> - **Permissions includes tabs.** This is needed to support the tab list feature, as the extension reads the title of the tabs for display in the popup.
+- tabs.html
 
-### tabs.html
+  - : `tabs.html` 定义了该扩展弹出的内容：
 
-tabs.html defines the content of the extension's popup:
+    ```html
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="tabs.css" />
+      </head>
 
-```html
-<!DOCTYPE html>
+      <body>
+        <div class="panel">
+          <div class="panel-section panel-section-header">
+            <div class="text-section-header">Tabs-tabs-tabs</div>
+          </div>
 
-<html>
+          <a href="#" id="tabs-move-beginning">
+            Move active tab to the beginning of the window
+          </a>
+          <br />
 
- <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="tabs.css"/>
- </head>
+          <!-- Define the other menu items -->
 
-<body>
+          <div class="switch-tabs">
+            <p>Switch to tab</p>
+            <div id="tabs-list"></div>
+          </div>
+        </div>
 
- <div class="panel">
-    <div class="panel-section panel-section-header">
-     <div class="text-section-header">Tabs-tabs-tabs</div>
-    </div>
+        <script src="tabs.js"></script>
+      </body>
+    </html>
+    ```
 
-    <a href="#" id="tabs-move-beginning">Move active tab to the beginning of the window</a><br>
+    它做了这些事情：
 
+    1. 声明菜单项。
+    2. 声明一个 ID 为 `tabs-list` 的空 `div` 以包含标签页列表。
+    3. 调用 `tabs.js`。
 
-…
+- tabs.js
+  - : 在 [`tabs.js`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.js) 文件中，我们将看到标签列表是如何创建并添加到弹出窗口的。
 
-Define the other menu items
-…
+#### 创建弹出内容
 
-    <div class="switch-tabs">
-
-     <p>Switch to tab</p>
-
-     <div id="tabs-list"></div>
-
-    </div>
- </div>
-
- <script src="tabs.js"></script>
-
-</body>
-
-</html>
-```
-
-Here is a summary of the above does:
-
-1. The menu items are declared.
-2. An empty `div` with the ID `tabs-list` is declared to contain the list of tabs.
-3. tabs.js is called.
-
-### tabs.js
-
-In [tabs.js](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js), we’ll see how the list of tabs is built and added to the popup.
-
-#### Creating the popup
-
-First, an event handler is added to execute `listTabs()` when tabs.html is loaded:
+首先，添加一个事件处理器，以便在加载 `tabs.html` 时执行 `listTabs()`：
 
 ```js
 document.addEventListener("DOMContentLoaded", listTabs);
 ```
 
-The first thing that `listTabs()` does is to call `getCurrentWindowTabs()`. This is where {{WebExtAPIRef("tabs.query")}} is used to get a {{WebExtAPIRef("tabs.Tab")}} object for the tabs in the current window:
+`listTabs()` 首先会调用 `getCurrentWindowTabs()`。在这里，{{WebExtAPIRef("tabs.query()")}} 被用来获取当前窗口中标签页的 {{WebExtAPIRef("tabs.Tab")}} 对象：
 
 ```js
 function getCurrentWindowTabs() {
-  return browser.tabs.query({currentWindow: true});
+  return browser.tabs.query({ currentWindow: true });
 }
 ```
 
-Now, `listTabs()` is ready to create the content for the popup.
+现在，`listTabs()` 已准备好为弹出窗口创建内容。
 
-To start with:
+首先：
 
-1. Grab the `tabs-list` `div`.
-2. Create a document fragment (into which the list will be built).
-3. Set counters.
-4. Clear the content of the `tabs-list` `div`.
+1. 抓取 `<div id="tabs-list">` 元素。
+2. 创建一个文档片段（将在其中创建列表）。
+3. 设置计数器。
+4. 清除 `<div id="tabs-list">` 元素的内容。
 
 ```js
 function listTabs() {
  getCurrentWindowTabs().then((tabs) => {
-    let tabsList = document.getElementById('tabs-list');
-    let currentTabs = document.createDocumentFragment();
-    let limit = 5;
+    const tabsList = document.getElementById('tabs-list');
+    const currentTabs = document.createDocumentFragment();
+    const limit = 5;
     let counter = 0;
 
     tabsList.textContent = '';
 ```
 
-Next, we'll create the links for each tab:
+接下来，我们将为每个标签页创建链接：
 
-1. Loops through the first 5 items from the {{WebExtAPIRef("tabs.Tab")}} object.
-2. For each item, add a hyperlink to the document fragment.
+1. 循环遍历 {{WebExtAPIRef("tabs.Tab")}} 对象的前 5 个项目。
+2. 为每个项目在文档片段中添加一个超链接。
 
-    - The link’s label—that is, its text—is set using the tab’s title (or the ID, if it has no title).
-    - The link’s address is set using the tab’s ID.
+   - 链接的标签（即文本）使用标签页的 `title`（如果没有 `title`，则使用 `id`）设置。
+   - 链接的地址使用标签页的 `id` 设置。
 
-    ```js
-    for (let tab of tabs) {
-     if (!tab.active && counter <= limit) {
-        let tabLink = document.createElement('a');
+```js
+for (const tab of tabs) {
+  if (!tab.active && counter <= limit) {
+    const tabLink = document.createElement("a");
 
-        tabLink.textContent = tab.title || tab.id;
+    tabLink.textContent = tab.title || tab.id;
 
-       tabLink.setAttribute('href', tab.id);
-        tabLink.classList.add('switch-tabs');
-        currentTabs.appendChild(tabLink);
-     }
+    tabLink.setAttribute("href", tab.id);
+    tabLink.classList.add("switch-tabs");
+    currentTabs.appendChild(tabLink);
+  }
 
-     counter += 1;
+  counter += 1;
+}
+```
 
-    }
-    ```
-
-Finally, the document fragment is written to the `tabs-list` div:
+最后，文档片段被写入 `<div id="tabs-list">` 元素：
 
 ```js
     tabsList.appendChild(currentTabs);
@@ -212,395 +196,375 @@ Finally, the document fragment is written to the `tabs-list` div:
 }
 ```
 
-#### Working with the active tab
+#### 使用活动标签页
 
-Another related example feature is the "Alert active tab" info option that dumps all the {{WebExtAPIRef("tabs.Tab")}} object properties for the active tab into an alert:
-
-```js
- else if (e.target.id === "tabs-alertinfo") {
-   callOnActiveTab((tab) => {
-     let props = "";
-     for (let item in tab) {
-       props += `${ item } = ${ tab[item] } \n`;
-     }
-     alert(props);
-   });
- }
-```
-
-Where `callOnActiveTab()` finds the active tab object by looping through the {{WebExtAPIRef("tabs.Tab")}} objects looking for the item with active set:
+另一个相关的示例功能是“警报活动标签页”信息选项，它可将活动标签页的所有 {{WebExtAPIRef("tabs.Tab")}} 对象属性输出到警报中：
 
 ```js
-document.addEventListener("click", function(e) {
- function callOnActiveTab(callback) {
-   getCurrentWindowTabs().then((tabs) => {
-     for (var tab of tabs) {
-       if (tab.active) {
-         callback(tab, tabs);
-       }
-     }
-   });
- }
+else if (e.target.id === "tabs-alertinfo") {
+  callOnActiveTab((tab) => {
+    let props = "";
+    for (const item in tab) {
+      props += `${ item } = ${ tab[item] } \n`;
+    }
+    alert(props);
+  });
 }
 ```
 
-## Creating, duplicating, moving, updating, reloading, and removing tabs
+其中，`callOnActiveTab()` 通过在 {{WebExtAPIRef("tabs.Tab")}} 对象中循环查找已设置为活动的项目，从而找到活动的标签页对象：
 
-Having gathered information about the tabs you'll most likely want to do something with them—either to offer users features for manipulating and managing tabs or to implement functionality in your extension.
+```js
+document.addEventListener("click", (e) => {
+  function callOnActiveTab(callback) {
+    getCurrentWindowTabs().then((tabs) => {
+      for (const tab of tabs) {
+        if (tab.active) {
+          callback(tab, tabs);
+        }
+      }
+    });
+  }
+}
+```
 
-The following functions are available:
+## 创建、复制、移动、更新、重新加载、删除标签页
 
-- create a new tab ({{WebExtAPIRef("tabs.create")}}).
-- duplicate a tab ({{WebExtAPIRef("tabs.duplicate")}}).
-- remove a tab ({{WebExtAPIRef("tabs.remove")}}).
-- move a tab ({{WebExtAPIRef("tabs.move")}}).
-- update the tab's URL—effectively browse to a new page—({{WebExtAPIRef("tabs.update")}}).
-- reload the tab's page ({{WebExtAPIRef("tabs.reload")}}).
+收集了标签页的信息后，你很可能想对它们做些什么——要么为用户提供操作和管理标签页的功能，要么在扩展中实现功能。
 
-> **备注：** These functions all require the ID (or IDs) of the tab they are manipulating:
+以下是可用的功能：
+
+- 创建新标签页（{{WebExtAPIRef("tabs.create()")}}）。
+- 复制标签页（{{WebExtAPIRef("tabs.duplicate()")}}）。
+- 删除标签页（{{WebExtAPIRef("tabs.remove()")}}）。
+- 移动标签页（{{WebExtAPIRef("tabs.move()")}}）。
+- 更新标签页的 URL（有效地浏览到新页面）（{{WebExtAPIRef("tabs.update()")}}）。
+- 重新加载标签页（{{WebExtAPIRef("tabs.reload()")}}）。
+
+> [!NOTE]
+> 这些函数都需要它们要操作的标签页的 ID（一个或多个 ID）：
 >
 > - {{WebExtAPIRef("tabs.duplicate")}}
 > - {{WebExtAPIRef("tabs.remove")}}
 > - {{WebExtAPIRef("tabs.move")}}
 >
-> Whereas the following functions will act on the active tab (if no tab ID is provided):
+> 而以下函数将作用于活动标签页（如果没有提供标签页 `id`）：
 >
 > - {{WebExtAPIRef("tabs.update")}}
 > - {{WebExtAPIRef("tabs.reload")}}
 
-### How to example
+### 教程示例
 
-The [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) example exercises all of these features except for updating a tab's URL The way in which these APIs are used is similar, so we'll look at one of the more involved implementations, that of the "Move active tab to the beginning of the window list" option.
+除了更新标签页的 URL 之外，[tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/main/tabs-tabs-tabs) 示例使用了所有这些功能。这些 API 的使用方式类似，因此我们将查看其中一个更复杂的实现，即“将活动标签页移至窗口列表开头”选项。
 
-But first, here is a demonstration of the feature in action:
+首先，这里演示了该功能的实际操作：
 
 {{EmbedYouTube("-lJRzTIvhxo")}}
 
-#### [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json)
+- manifest.json
+  - : 没有一个功能需要权限才能运行，因此 [manifest.json](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/manifest.json) 文件中没有需要突出显示的功能。
+- tabs.html
 
-None of the functions require a permission to operate, so there are no features in the manifest.json file that need to be highlighted.
+  - : [`tabs.html`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.html) 定义了弹出窗口中显示的“菜单”，其中包括“将活动标签页移至窗口列表开头”选项，以及一系列由可视分隔符分组的 `<a>` 标记。每个菜单项都有一个 `id` ，`tabs.js` 使用该 `id` 来确定请求的是哪个菜单项。
 
-#### [tabs.html](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.html)
-
-tabs.html defines the "menu" displayed in the popup, which includes the "Move active tab to the beginning of the window list" option, with a series of `<a>` tags grouped by a visual separator. Each menu item is given an ID, which is used in tabs.js to determine which menu item is being requested.
-
-```html
-    <a href="#" id="tabs-move-beginning">Move active tab to the beginning of the window</a><br>
-    <a href="#" id="tabs-move-end">Move active tab to the end of the window</a><br>
+    ```html
+    <a href="#" id="tabs-move-beginning">
+      Move active tab to the beginning of the window
+    </a>
+    <br />
+    <a href="#" id="tabs-move-end">Move active tab to the end of the window</a>
+    <br />
 
     <div class="panel-section-separator"></div>
 
+    <a href="#" id="tabs-duplicate">Duplicate active tab</a><br />
+    <a href="#" id="tabs-reload">Reload active tab</a><br />
+    <a href="#" id="tabs-alertinfo">Alert active tab info</a><br />
+    ```
 
-    <a href="#" id="tabs-duplicate">Duplicate active tab</a><br>
+- tabs.js
 
-    <a href="#" id="tabs-reload">Reload active tab</a><br>
-    <a href="#" id="tabs-alertinfo">Alert active tab info</a><br>
-```
+  - : 为了实现在 `tabs.html` 中定义的“菜单”，[`tabs.js`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.js) 在 `tabs.html` 中包含了一个点击监听器：
 
-#### [tabs.js](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js)
+    ```js
+    document.addEventListener("click", (e) => {
+      function callOnActiveTab(callback) {
+        getCurrentWindowTabs().then((tabs) => {
+          for (const tab of tabs) {
+            if (tab.active) {
+              callback(tab, tabs);
+            }
+          }
+        });
+      }
+    });
+    ```
 
-To implement the "menu" defined in tabs.html, tabs.js includes a listener for clicks in tabs.html:
+    然后，一系列 `if` 语句会查找与点击项目的 `id` 匹配的内容。
 
-```js
-document.addEventListener("click", function(e) {
- function callOnActiveTab(callback) {
+    此代码片段用于“将活动标签页移至窗口列表开头”选项：
 
-   getCurrentWindowTabs().then((tabs) => {
-     for (var tab of tabs) {
-       if (tab.active) {
-         callback(tab, tabs);
-       }
-     }
-   });
-}
-}
-```
+    ```js
+    if (e.target.id === "tabs-move-beginning") {
+      callOnActiveTab((tab, tabs) => {
+        let index = 0;
+        if (!tab.pinned) {
+          index = firstUnpinnedTab(tabs);
+        }
+        console.log(`moving ${tab.id} to ${index}`);
+        browser.tabs.move([tab.id], { index });
+      });
+    }
+    ```
 
-A series of `if` statements then look to match the ID of the item clicked.
+    值得注意的是 `console.log()` 的使用。这样就能向[调试器](https://extensionworkshop.com/documentation/develop/debugging/)控制台输出信息，在解决开发过程中发现的问题时非常有用。
 
-This code snippet is for the "Move active tab to the beginning of the window list" option:
+    ![调试控制台中移动标签页功能的控制台日志输出示例](console.png)
 
-```js
- if (e.target.id === "tabs-move-beginning") {
-   callOnActiveTab((tab, tabs) => {
-     var index = 0;
-     if (!tab.pinned) {
-       index = firstUnpinnedTab(tabs);
-     }
-     console.log(`moving ${tab.id} to ${index}`)
-     browser.tabs.move([tab.id], {index});
-   });
- }
-```
+    移动代码首先调用 `callOnActiveTab()`，然后再调用 `getCurrentWindowTabs()`，以获取包含活动窗口标签页的 {{WebExtAPIRef("tabs.Tab")}} 对象。然后在该对象中循环查找并返回活动标签页对象：
 
-It's worth noting the use of `console.log()`. This enables you to output information to the [debugger](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Debugging) console, which can be useful when resolving issues found during development.
+    ```js
+    function callOnActiveTab(callback) {
+      getCurrentWindowTabs().then((tabs) => {
+        for (const tab of tabs) {
+          if (tab.active) {
+            callback(tab, tabs);
+          }
+        }
+      });
+    }
+    ```
 
-![Example of the console.log output, from the move tabs feature, in the debugging console](console.png)
+#### 固定标签页
 
-The move code first calls `callOnActiveTab()` which in turn calls `getCurrentWindowTabs()` to get a {{WebExtAPIRef("tabs.Tab")}} object containing the active window’s tabs. It then loops through the object to find and return the active tab object:
-
-```js
- function callOnActiveTab(callback) {
-   getCurrentWindowTabs().then((tabs) => {
-     for (var tab of tabs) {
-       if (tab.active) {
-         callback(tab, tabs);
-       }
-     }
-   });
- }
-```
-
-##### Pinned tabs
-
-A feature of tabs is that the user can _pin_ tabs in a window. Pinned tabs are placed at the start of the tab list and cannot be moved. This means that the earliest position a tab can move to is the first position after any pinned tabs. So, `firstUnpinnedTab()` is called to find the position of the first unpinned tab by looping through the `tabs` object:
+标签页的一个特点是用户可以在窗口中*固定*标签页。被固定的标签页会放在标签页列表的起始位置，并且不能移动。这意味着标签页可以移动的最早位置是任何已固定标签页之后的第一个位置。因此，`firstUnpinnedTab()` 将被调用，通过循环查看 `tabs` 对象来查找第一个未固定标签页的位置：
 
 ```js
 function firstUnpinnedTab(tabs) {
- for (var tab of tabs) {
-   if (!tab.pinned) {
-     return tab.index;
-   }
- }
+  for (var tab of tabs) {
+    if (!tab.pinned) {
+      return tab.index;
+    }
+  }
 }
 ```
 
-We now have everything needed to move the tab: the active tab object from which we can get the tab ID and the position the tab is to be moved to. So, we can implement the move:
+现在我们拥有了移动标签页所需的一切：活动标签页对象，从中我们可以获得标签页的 `id` 和标签页要移动到的位置。因此，我们可以这样实现移动：
 
 ```js
-     browser.tabs.move([tab.id], {index});
+browser.tabs.move([tab.id], { index });
 ```
 
-The remaining functions to duplicate, reload, create, and remove tabs are implemented similarly.
+其余功能：复制、重新加载、创建和删除标签页，实现类似。
 
-## Manipulating a tab's zoom level
+## 改变标签页的缩放级别
 
-The next set of functions enable you to get ({{WebExtAPIRef("tabs.getZoom")}}) and set ({{WebExtAPIRef("tabs.setZoom")}}) the zoom level within a tab. You can also retrieve the zoom settings ({{WebExtAPIRef("tabs.getZoomSettings")}}) but, at the time of writing, the ability to set the settings ({{WebExtAPIRef("tabs.setZoomSettings")}}) wasn’t available in Firefox.
+下一组功能可用于获取（{{WebExtAPIRef("tabs.getZoom")}}）和设置（{{WebExtAPIRef("tabs.setZoom")}}）标签页内的缩放级别。你还可以检索缩放设置（{{WebExtAPIRef("tabs.getZoomSettings")}}），但在撰写本文档时，Firefox 还不提供设置功能（{{WebExtAPIRef("tabs.setZoomSettings")}}）。
 
-The level of zoom can be between 30% and 300% (represented as decimals `0.3` to `3`).
+缩放级别可在 30% 到 500% 之间（以小数 `0.3` 到 `5` 表示）。
 
-In Firefox the default zoom settings are:
+在 Firefox 中，默认缩放设置为
 
-- **default zoom level:** 100%.
-- **zoom mode:** automatic (so the browser manages how zoom levels are set).
-- **scope of zoom changes:** `"per-origin"`, meaning that when you visit a site again, it takes the zoom level set in your last visit.
+- **默认缩放级别**：100%。
+- **缩放模式**：自动（因此浏览器会管理缩放级别的设置）。
+- **缩放更改的范围**：`"per-origin"`，这意味着当你再次访问网站时，网站会采用上次访问时设置的缩放级别。
 
-### How to example
+### 教程示例
 
-The [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) example includes three demonstrations of the zoom feature: zoom in, zoom out, and reset zoom. Here is the feature in action:
+[tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/main/tabs-tabs-tabs) 示例包括三个缩放功能演示：放大、缩小和重置缩放。下面是该功能的实际操作：
 
 {{EmbedYouTube("RFr3oYBCg28")}}
 
-Let's take a look at how the zoom in is implemented.
+让我们看看缩放功能是如何实现的。
 
-#### [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json)
+- manifest.json
+  - : 缩放功能都不需要权限，因此 [manifest.json](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/manifest.json) 文件中没有需要突出显示的功能。
+- tabs.html
+  - : 我们已经讨论过 [`tabs.html`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.html) 是如何定义该扩展的选项的，在提供缩放选项方面没有做任何新的或独特的工作。
+- tabs.js
 
-None of the zoom functions require permissions, so there are no features in the manifest.json file that need to be highlighted.
+  - : [`tabs.js`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.js) 首先定义了缩放代码中使用的几个常量：
 
-#### [tabs.html](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.html)
+    ```js
+    const ZOOM_INCREMENT = 0.2；
+    const MAX_ZOOM = 5；
+    const MIN_ZOOM = 0.3；
+    const DEFAULT_ZOOM = 1；
+    ```
 
-We have already discussed how the tabs.html defines the options for this extension, nothing new or unique is done to provide the zoom options.
+    然后，它会使用我们之前讨论过的监听器，以便对 `tabs.html` 中的点击采取行动。
 
-#### [tabs.js](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js)
+    对于放大功能，将执行以下操作：
 
-tabs.js starts by defining several constants used in the zoom code:
+    ```js
+      else if (e.target.id === "tabs-add-zoom") {
+        callOnActiveTab((tab) => {
+          browser.tabs.getZoom(tab.id).then((zoomFactor) => {
+            // 最大 zoomFactor 为 5，不能再高了
+            if (zoomFactor >= MAX_ZOOM) {
+              alert("Tab zoom factor is already at max!")；
+            } else {
+              let newZoomFactor = zoomFactor + ZOOM_INCREMENT；
+              //如果 newZoomFactor 被设置为高于最大值，则该值不会改变。
+              //它将不会改变，也不会提示已达到最大值
+              newZoomFactor = newZoomFactor > MAX_ZOOM ? MAX_ZOOM : newZoomFactor；
+              browser.tabs.setZoom(tab.id, newZoomFactor)；
+            }
+          });
+        });
+      }
+    ```
 
-```js
-const ZOOM_INCREMENT = 0.2;
-const MAX_ZOOM = 3;
-const MIN_ZOOM = 0.3;
-const DEFAULT_ZOOM = 1;
-```
+    这段代码使用 `callOnActiveTab()` 获取活动标签页的详细信息，然后 {{WebExtAPIRef("tabs.getZoom")}} 获取标签页的当前缩放系数。当前缩放与定义的最大值（`MAX_ZOOM`）进行比较，如果标签页已达到最大缩放，就会发出警报。否则，缩放级别会递增，但仅限于最大缩放，然后使用 {{WebExtAPIRef("tabs.getZoom")}} 设置缩放。
 
-It then uses the same listener we discussed earlier so it can act on clicks in tabs.html.
+## 改变标签页的 CSS 样式
 
-For the zoom in feature, this runs:
+标签 API 提供的另一项重要功能是操作标签内的 CSS 样式：为标签添加新 CSS 样式（{{WebExtAPIRef("tabs.insertCSS()")}}）或从标签移除 CSS 样式（{{WebExtAPIRef("tabs.removeCSS()")}}）。
 
-```js
- else if (e.target.id === "tabs-add-zoom") {
-   callOnActiveTab((tab) => {
-     var gettingZoom = browser.tabs.getZoom(tab.id);
-     gettingZoom.then((zoomFactor) => {
-       //the maximum zoomFactor is 3, it can't go higher
-       if (zoomFactor >= MAX_ZOOM) {
-         alert("Tab zoom factor is already at max!");
-       } else {
-         var newZoomFactor = zoomFactor + ZOOM_INCREMENT;
-         //if the newZoomFactor is set to higher than the max accepted
-         //it won't change, and will never alert that it's at maximum
-         newZoomFactor = newZoomFactor > MAX_ZOOM ? MAX_ZOOM : newZoomFactor;
-         browser.tabs.setZoom(tab.id, newZoomFactor);
-       }
-     });
-   });
- }
-```
+例如，如果你想突出显示某些页面元素或更改页面的默认布局，这将非常有用。
 
-This code uses `callOnActiveTab()` to get the details of the active tab, then {{WebExtAPIRef("tabs.getZoom")}} gets the tab’s current zoom factor. The current zoom is compared to the defined maximum (`MAX_ZOOM`) and an alert issued if the tab is already at the maximum zoom. Otherwise, the zoom level is incremented but limited to the maximum zoom, then the zoom is set with {{WebExtAPIRef("tabs.getZoom")}}.
+### 教程示例
 
-## Manipulating a tab's CSS
-
-Another significant capability offered by the Tabs API is the ability to manipulate the CSS within a tab—add new CSS to a tab ({{WebExtAPIRef("tabs.insertCSS")}}) or remove CSS from a tab ({{WebExtAPIRef("tabs.removeCSS")}}).
-
-This can be useful, for example, if you want to highlight certain page elements or change the default layout of the page.
-
-### How to example
-
-The [apply-css](https://github.com/mdn/webextensions-examples/tree/master/apply-css) example uses these features to add a red border to the web page in the active tab. Here is the feature in action:
+[apply-css](https://github.com/mdn/webextensions-examples/tree/main/apply-css) 示例使用这些功能为活动标签页中的网页添加红色边框。下面是该功能的实际效果：
 
 {{EmbedYouTube("bcK-GT2Dyhs")}}
 
-Let's walk through how it's set up.
+让我们来看看它是如何实现的。
 
-#### [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/apply-css/manifest.json)
+- manifest.json
 
-To use the CSS features you need either:
+  - : [`manifest.json`](https://github.com/mdn/webextensions-examples/blob/main/apply-css/manifest.json) 请求使用 CSS 功能所需的权限。你需要
 
-- `"tabs"` permission and [host permission](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) or
-- `"activeTab"` permission.
+    - `"tabs"` 权限和[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)；或者
+    - `"activeTab"` 权限。
 
-The latter is the most useful, as it allows an extension to use {{WebExtAPIRef("tabs.insertCSS")}} and {{WebExtAPIRef("tabs.removeCSS")}} in the active tab when run from the extension’s browser or page action, context menu, or a shortcut.
+    后者最有用，因为它允许扩展在通过扩展的浏览器或页面操作、上下文菜单或快捷方式运行时，在活动标签页中使用 {{WebExtAPIRef("tabs.insertCSS()")}} 和 {{WebExtAPIRef("tabs.removeCSS()")}} 。
 
-```json
-{
-  "description": "Adds a page action to toggle applying CSS to pages.",
+    ```json
+    {
+      "description": "Adds a page action to toggle applying CSS to pages.",
 
- "manifest_version": 2,
- "name": "apply-css",
- "version": "1.0",
- "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/apply-css",
+      "manifest_version": 2,
+      "name": "apply-css",
+      "version": "1.0",
+      "homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/apply-css",
 
- "background": {
+      "background": {
+        "scripts": ["background.js"]
+      },
 
-    "scripts": ["background.js"]
- },
+      "page_action": {
+        "default_icon": "icons/off.svg"
+      },
 
- "page_action": {
-
-    "default_icon": "icons/off.svg",
-    "browser_style": true
- },
-
- "permissions": [
-    "activeTab",
-    "tabs"
- ]
-
-}
-```
-
-You will note that `"tabs"` permission is requested in addition to `"activeTab"`. This additional permission is needed to enable the extension’s script to access the tab’s URL, the importance of which we’ll see in a moment.
-
-The other main features in the manifest.json file are the definition of:
-
-- **a background script**, which starts running as soon as the extension is loaded.
-- **a "page action"**, which defines an icon to be added to the browser’s address bar.
-
-#### [background.js](https://github.com/mdn/webextensions-examples/blob/master/apply-css/background.js)
-
-On startup, background.js sets some constants to define the CSS to be applied, titles for the "page action", and a list of protocols the extension will work in:
-
-```js
-const CSS = "body { border: 20px solid red; }";
-const TITLE_APPLY = "Apply CSS";
-const TITLE_REMOVE = "Remove CSS";
-const APPLICABLE_PROTOCOLS = ["http:", "https:"];
-```
-
-When first loaded, the extension uses {{WebExtAPIRef("tabs.query")}} to get a list of all the tabs in the current browser window. It then loops through the tabs calling `initializePageAction()`.
-
-```js
-var gettingAllTabs = browser.tabs.query({});
-
-gettingAllTabs.then((tabs) => {
- for (let tab of tabs) {
-   initializePageAction(tab);
- }
-});
-```
-
-`initializePageAction` uses `protocolIsApplicable()` to determine whether the active tab's URL is one the CSS can be applied to:
-
-```js
-function protocolIsApplicable(url) {
- var anchor =  document.createElement('a');
- anchor.href = url;
- return APPLICABLE_PROTOCOLS.includes(anchor.protocol);
-}
-```
-
-Then, if the example can act on the tab, `initializePageAction()` sets the tab's `pageAction` (navigation bar) icon and title to use the “off” versions before making the `pageAction` visible:
-
-```js
-function initializePageAction(tab) {
-
- if (protocolIsApplicable(tab.url)) {
-   browser.pageAction.setIcon({tabId: tab.id, path: "icons/off.svg"});
-   browser.pageAction.setTitle({tabId: tab.id, title: TITLE_APPLY});
-   browser.pageAction.show(tab.id);
- }
-}
-```
-
-Next, a listener on `pageAction.onClicked` waits for the `pageAction` icon to be clicked, and calls `toggleCSS` when it is.
-
-```js
-browser.pageAction.onClicked.addListener(toggleCSS);
-```
-
-`toggleCSS()` gets the title of the `pageAction` and then takes the action described:
-
-- **For "Apply CSS":**
-
-  - toggles the `pageAction` icon and title to the "remove" versions.
-  - applies the CSS using {{WebExtAPIRef("tabs.insertCSS")}}.
-
-- **For "Remove CSS":**
-
-  - toggles the `pageAction` icon and title to the "apply" versions.
-  - removes the CSS using {{WebExtAPIRef("tabs.removeCSS")}}.
-
-```js
-function toggleCSS(tab) {
-
-
- function gotTitle(title) {
-
-    if (title === TITLE_APPLY) {
-     browser.pageAction.setIcon({tabId: tab.id, path: "icons/on.svg"});
-     browser.pageAction.setTitle({tabId: tab.id, title: TITLE_REMOVE});
-     browser.tabs.insertCSS({code: CSS});
-    } else {
-     browser.pageAction.setIcon({tabId: tab.id, path: "icons/off.svg"});
-     browser.pageAction.setTitle({tabId: tab.id, title: TITLE_APPLY});
-     browser.tabs.removeCSS({code: CSS});
+      "permissions": ["activeTab", "tabs"]
     }
- }
+    ```
 
- var gettingTitle = browser.pageAction.getTitle({tabId: tab.id});
+    你会注意到，除了 `"activeTab"`，还请求了 `"tabs"` 权限。扩展脚本需要这个额外权限才能访问标签页的 URL，我们稍后会看到它的重要性。
 
- gettingTitle.then(gotTitle);
-}
-```
+    manifest.json 文件中的其他主要功能包括以下定义：
 
-Finally, to ensure that the `pageAction` is valid after each update to the tab, a listener on {{WebExtAPIRef("tabs.onUpdated")}} calls `initializePageAction()` each time the tab is updated to check that the tab is still using a protocol to which the CSS can be applied.
+    - **后台脚本**，加载扩展后立即开始运行。
+    - **一个“页面动作”**，它定义了一个要添加到浏览器地址栏的图标。
 
-```js
-browser.tabs.onUpdated.addListener((id, changeInfo, tab) => {
- initializePageAction(tab);
-});
-```
+- background.js
 
-## Some other interesting abilities
+  - : 启动时，[`background.js`](https://github.com/mdn/webextensions-examples/blob/main/apply-css/background.js) 会设置一些常量，以定义要应用的 CSS、“页面操作”的标题以及扩展将在其中运行的协议列表：
 
-There are a couple of other Tabs API features that don't fit into one of the earlier sections:
+    ```js
+    const CSS = "body { border: 20px solid red; }";
+    const TITLE_APPLY = "Apply CSS";
+    const TITLE_REMOVE = "Remove CSS";
+    const APPLICABLE_PROTOCOLS = ["http:", "https:"];
+    ```
 
-- Capture the visible tab content with {{WebExtAPIRef("tabs.captureVisibleTab")}}.
-- Detect the primary language of the content in a tab using {{WebExtAPIRef("tabs.detectLanguage")}}. This could be used, for example, to match the language in your extension’s UI with that of the page it’s running in.
+    首次加载时，扩展会使用 {{WebExtAPIRef("tabs.query()")}} 获取当前浏览器窗口中所有标签页的列表。然后，它会调用 `initializePageAction()` 对标签页进行循环。
 
-## Learn more
+    ```js
+    browser.tabs.query({}).then((tabs) => {
+      for (const tab of tabs) {
+        initializePageAction(tab);
+      }
+    });
+    ```
 
-If you want to learn more about the Tabs API, check out:
+    `initializePageAction` 使用 `protocolIsApplicable()` 来确定活动标签页的 URL 是否可以应用 CSS：
 
-- [Tabs API reference](/zh-CN/Add-ons/WebExtensions/API/tabs)
-- [Example extensions](/zh-CN/Add-ons/WebExtensions/Examples) (many of which use the Tabs API)
+    ```js
+    function protocolIsApplicable(url) {
+      const anchor = document.createElement("a");
+      anchor.href = url;
+      return APPLICABLE_PROTOCOLS.includes(anchor.protocol);
+    }
+    ```
+
+    如果示例可以在标签页上执行操作，`initializePageAction()` 会在使 `pageAction` 可见之前将标签页的 `pageAction`（导航栏）图标和标题设置为使用“关闭”版本：
+
+    ```js
+    function initializePageAction(tab) {
+      if (protocolIsApplicable(tab.url)) {
+        browser.pageAction.setIcon({ tabId: tab.id, path: "icons/off.svg" });
+        browser.pageAction.setTitle({ tabId: tab.id, title: TITLE_APPLY });
+        browser.pageAction.show(tab.id);
+      }
+    }
+    ```
+
+    接下来，`pageAction.onClicked` 的监听器会等待 `pageAction` 图标被点击，并在点击时调用 `toggleCSS`。
+
+    ```js
+    browser.pageAction.onClicked.addListener(toggleCSS);
+    ```
+
+    `toggleCSS()` 获取 `pageAction` 的标题，然后执行所述操作：
+
+    - **对于“应用 CSS”**：
+
+      - 将 `pageAction` 图标和标题切换为“移除”。
+      - 使用 {{WebExtAPIRef("tabs.insertCSS()")}} 应用 CSS。
+
+    - **对于“移除 CSS”**：
+
+      - 将 `pageAction` 图标和标题切换为“应用”。
+      - 使用 {{WebExtAPIRef("tabs.removeCSS()")}} 删除 CSS。
+
+    ```js
+    function toggleCSS(tab) {
+      function gotTitle(title) {
+        if (title === TITLE_APPLY) {
+          browser.pageAction.setIcon({ tabId: tab.id, path: "icons/on.svg" });
+          browser.pageAction.setTitle({ tabId: tab.id, title: TITLE_REMOVE });
+          browser.tabs.insertCSS({ code: CSS });
+        } else {
+          browser.pageAction.setIcon({ tabId: tab.id, path: "icons/off.svg" });
+          browser.pageAction.setTitle({ tabId: tab.id, title: TITLE_APPLY });
+          browser.tabs.removeCSS({ code: CSS });
+        }
+      }
+
+      browser.pageAction.getTitle({ tabId: tab.id }).then(gotTitle);
+    }
+    ```
+
+    最后，为确保 `pageAction` 在每次更新标签页后都有效，{{WebExtAPIRef("tabs.onUpdated")}} 上的监听器会在每次更新标签页时调用 `initializePageAction()`，以检查标签页是否仍在使用可应用 CSS 的协议。
+
+    ```js
+    browser.tabs.onUpdated.addListener((id, changeInfo, tab) => {
+      initializePageAction(tab);
+    });
+    ```
+
+## 一些其他有趣的特性
+
+还有一些其他 Tabs API 特性，前面的章节还没有介绍过：
+
+- 使用 {{WebExtAPIRef("tabs.captureVisibleTab")}} 捕捉可见标签内容。
+- 使用 {{WebExtAPIRef("tabs.detectLanguage")}} 检测标签页内容的主要语言。例如，这可用于将扩展用户界面的语言与运行页面的语言相匹配。
+
+## 进一步学习
+
+如果你想了解有关 Tabs API 的更多信息，请查阅
+
+- [Tabs API 参考](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
+- [扩展示例](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Examples)（很多示例使用了 Tabs API）

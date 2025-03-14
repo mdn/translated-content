@@ -1,22 +1,63 @@
 ---
 title: font-variant-east-asian
 slug: Web/CSS/font-variant-east-asian
+l10n:
+  sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
 ---
 
 {{CSSRef}}
 
-CSS の **`font-variant-numeric`** プロパティは、日本語と中国語のような東アジアの字形の違いを制御するために使用します。
+**`font-variant-east-asian`** は [CSS](/ja/docs/Web/CSS) のプロパティで、日本語と中国語のような東アジアの字形の違いを制御するために使用します。
+
+{{InteractiveExample("CSS Demo: font-variant-east-asian")}}
+
+```css interactive-example-choice
+font-variant-east-asian: normal;
+```
+
+```css interactive-example-choice
+font-variant-east-asian: ruby;
+```
+
+```css interactive-example-choice
+font-variant-east-asian: jis78;
+```
+
+```css interactive-example-choice
+font-variant-east-asian: proportional-width;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>
+      JIS78とJIS83以降では、檜と桧、籠と篭など、一部の文字の入れ替えが行われている。また、「唖然」や「躯体」などの書体が変更されている。
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  font-family:
+    "YuGothic Medium", YuGothic, "Yu Gothic Medium", "Yu Gothic", sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+```
+
+## 構文
 
 ```css
 font-variant-east-asian: normal;
 font-variant-east-asian: ruby;
-font-variant-east-asian: jis78;              /* <east-asian-variant-values> */
-font-variant-east-asian: jis83;              /* <east-asian-variant-values> */
-font-variant-east-asian: jis90;              /* <east-asian-variant-values> */
-font-variant-east-asian: jis04;              /* <east-asian-variant-values> */
-font-variant-east-asian: simplified;         /* <east-asian-variant-values> */
-font-variant-east-asian: traditional;        /* <east-asian-variant-values> */
-font-variant-east-asian: full-width;         /* <east-asian-width-values> */
+font-variant-east-asian: jis78; /* <east-asian-variant-values> */
+font-variant-east-asian: jis83; /* <east-asian-variant-values> */
+font-variant-east-asian: jis90; /* <east-asian-variant-values> */
+font-variant-east-asian: jis04; /* <east-asian-variant-values> */
+font-variant-east-asian: simplified; /* <east-asian-variant-values> */
+font-variant-east-asian: traditional; /* <east-asian-variant-values> */
+font-variant-east-asian: full-width; /* <east-asian-width-values> */
 font-variant-east-asian: proportional-width; /* <east-asian-width-values> */
 font-variant-east-asian: ruby full-width jis83;
 
@@ -24,10 +65,9 @@ font-variant-east-asian: ruby full-width jis83;
 font-variant-east-asian: inherit;
 font-variant-east-asian: initial;
 font-variant-east-asian: revert;
+font-variant-east-asian: revert-layer;
 font-variant-east-asian: unset;
 ```
-
-## 構文
 
 ### 値
 
@@ -39,14 +79,14 @@ font-variant-east-asian: unset;
 
   - : これらの値は、表示に使用される字形の違いのセットを指定します。利用可能な値は以下の通りです。
 
-    | キーワード    | 標準による形状の定義                                                | OpenType の対応 |
-    | ------------- | --------------------------------------------------------------------------- | ------------------- |
-    | `jis78`       | [JIS X 0208:1978](http://ja.wikipedia.org/wiki/JIS_X_0208#第1次規格)  | `jp78`              |
-    | `jis83`       | [JIS X 0208:1983](http://ja.wikipedia.org/wiki/JIS_X_0208#第2次規格) | `jp83`              |
-    | `jis90`       | [JIS X 0208:1990](http://ja.wikipedia.org/wiki/JIS_X_0208#第3次規格)  | `jp90`              |
-    | `jis04`       | [JIS X 0213:2004](http://ja.wikipedia.org/wiki/JIS_X_0213)                 | `jp04`              |
-    | `simplified`  | なし。簡体字中国語の字形を使用                                     | `smpl`              |
-    | `traditional` | なし。繁体字中国語の字形を使用                                    | `trad`              |
+    | キーワード    | 標準による形状の定義                                                 | OpenType の対応 |
+    | ------------- | -------------------------------------------------------------------- | --------------- |
+    | `jis78`       | [JIS X 0208:1978](http://ja.wikipedia.org/wiki/JIS_X_0208#第1次規格) | `jp78`          |
+    | `jis83`       | [JIS X 0208:1983](http://ja.wikipedia.org/wiki/JIS_X_0208#第2次規格) | `jp83`          |
+    | `jis90`       | [JIS X 0208:1990](http://ja.wikipedia.org/wiki/JIS_X_0208#第3次規格) | `jp90`          |
+    | `jis04`       | [JIS X 0213:2004](http://ja.wikipedia.org/wiki/JIS_X_0213)           | `jp04`          |
+    | `simplified`  | なし。簡体字中国語の字形を使用                                       | `smpl`          |
+    | `traditional` | なし。繁体字中国語の字形を使用                                       | `trad`          |
 
 - `<east-asian-width-values>`
 
@@ -65,7 +105,7 @@ font-variant-east-asian: unset;
 
 ## 例
 
-<h3 id="Setting_East_Asian_glyph_variants">東アジアの字形の変化形を設定</h3>
+### 東アジアの字形の変化形を設定
 
 この例は OS に「游ゴシック」フォントがインストールされていることが必要です。ほかのフォントでは OpenType 機能に対応していない可能性があります。
 
@@ -73,37 +113,37 @@ font-variant-east-asian: unset;
 
 ```html
 <table>
-<thead></thead>
-<tbody style="border:0;">
-  <tr>
-    <th>normal/jis78:</th>
-    <td>麹町</td>
-    <td class="jis78">麹町</td>
-  </tr>
-  <tr>
-    <th>normal/ruby:</th>
-    <td>しんかんせん</td>
-    <td class="ruby">しんかんせん</td>
-  </tr>
-  <tr>
-    <th>normal/traditional:</th>
-    <td>大学</td>
-    <td class="traditional">大学</td>
-  </tr>
-</tbody>
+  <thead></thead>
+  <tbody style="border:0;">
+    <tr>
+      <th>normal/jis78:</th>
+      <td>麹町</td>
+      <td class="jis78">麹町</td>
+    </tr>
+    <tr>
+      <th>normal/ruby:</th>
+      <td>しんかんせん</td>
+      <td class="ruby">しんかんせん</td>
+    </tr>
+    <tr>
+      <th>normal/traditional:</th>
+      <td>大学</td>
+      <td class="traditional">大学</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
 #### CSS
 
 ```css
-td{
-  font-family:"Yu Gothic";
-  font-size:20px;
+td {
+  font-family: "Yu Gothic";
+  font-size: 20px;
 }
-th{
-  color:grey;
-  padding-right:10px;
+th {
+  color: grey;
+  padding-right: 10px;
 }
 
 .ruby {
@@ -114,7 +154,7 @@ th{
   font-variant-east-asian: jis78;
 }
 
-.traditional{
+.traditional {
   font-variant-east-asian: traditional;
 }
 ```
@@ -133,8 +173,10 @@ th{
 
 ## 関連情報
 
-- {{cssxref("font-variant-alternates")}}
-- {{cssxref("font-variant-caps")}}
-- {{cssxref("font-variant")}}
-- {{cssxref("font-variant-ligatures")}}
-- {{cssxref("font-variant-numeric")}}
+- [`font-variant`](/ja/docs/Web/CSS/font-variant)
+- [`font-variant-alternates`](/ja/docs/Web/CSS/font-variant-alternates)
+- [`font-variant-caps`](/ja/docs/Web/CSS/font-variant-caps)
+- [`font-variant-emoji`](/ja/docs/Web/CSS/font-variant-emoji)
+- [`font-variant-ligatures`](/ja/docs/Web/CSS/font-variant-ligatures)
+- [`font-variant-numeric`](/ja/docs/Web/CSS/font-variant-numeric)
+- [`font-variant-position`](/ja/docs/Web/CSS/font-variant-position)

@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Popups
 
 {{AddonSidebar}}
 
-ポップアップは[ツールバーボタン](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action)や[アドレスバーボタン](/ja/Add-ons/WebExtensions/user_interface/Page_actions)に関連したダイアログです。このページでは、ポップアップの一般的な説明、指定方法、デバッグ、サイズ変更、デザインについて、使用例も含めて解説しています。
+ポップアップは[ツールバーボタン](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)や[アドレスバーボタン](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)に関連したダイアログです。このページでは、ポップアップの一般的な説明、指定方法、デバッグ、サイズ変更、デザインについて、使用例も含めて解説しています。
 
 ![](page_action_popup.png)
 
@@ -15,7 +15,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Popups
 
 ## ポップアップの設定
 
-通常のウェブページと同じく、ポップアップは HTML ファイルで定義され、 CSS や JavaScript も含めることが可能です。ただし、通常のページとは異なり、 JavaScript は [WebExtension API](/ja/Add-ons/WebExtensions/API) のうち、この拡張機能が[権限](/ja/Add-ons/WebExtensions/manifest.json/permissions)を持っているものすべてを使用することができます。
+通常のウェブページと同じく、ポップアップは HTML ファイルで定義され、 CSS や JavaScript も含めることが可能です。ただし、通常のページとは異なり、 JavaScript は [WebExtension API](/ja/docs/Mozilla/Add-ons/WebExtensions/API) のうち、この拡張機能が[権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)を持っているものすべてを使用することができます。
 
 ポップアップの文書はポップアップが表示されるたびに読み込まれて、ポップアップが閉じるたびに解放されます。
 
@@ -35,7 +35,7 @@ HTML ファイルを拡張機能に入れるには、 [`browser_action`](/ja/doc
 
 ## ポップアップのデバッグ
 
-ポップアップのマークアップと JavaScript は、アドオンデバッガーを使ってデバッグできます。しかしポップアップの自動非表示を不可として、ポップアップの外をクリックした時に隠れてしまうのを防ぐ必要があります。[ポップアップのデバッグを読んでください](/ja/Add-ons/WebExtensions/Debugging#debugging_popups)。
+ポップアップのマークアップと JavaScript は、アドオンデバッガーを使ってデバッグできます。しかしポップアップの自動非表示を不可として、ポップアップの外をクリックした時に隠れてしまうのを防ぐ必要があります。[ポップアップのデバッグを読んでください](/ja/docs/Mozilla/Add-ons/WebExtensions/Debugging#debugging_popups)。
 
 ## ポップアップのリサイズ
 

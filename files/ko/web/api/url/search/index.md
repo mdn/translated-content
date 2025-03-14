@@ -1,13 +1,6 @@
 ---
 title: URL.search
 slug: Web/API/URL/search
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/search
 ---
 
 {{ApiRef("URL API")}}
@@ -21,8 +14,8 @@ translation_of: Web/API/URL/search
 ## 구문
 
 ```js
-const searchParams = object.search
-url.search = newSearchParams
+const searchParams = object.search;
+url.search = newSearchParams;
 ```
 
 ### 값
@@ -32,15 +25,17 @@ url.search = newSearchParams
 ## Examples
 
 ```js
-const url = new URL('https://developer.mozilla.org/ko/docs/Web/API/URL/search?q=123');
+const url = new URL(
+  "https://developer.mozilla.org/ko/docs/Web/API/URL/search?q=123",
+);
 console.log(url.search); // Logs "?q=123"
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

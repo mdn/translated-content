@@ -36,18 +36,16 @@ Essa extensão expõe três novos métodos.
 Habilitando a extenção:
 
 ```js
-var ext = gl.getExtension('ANGLE_instanced_arrays');
+var ext = gl.getExtension("ANGLE_instanced_arrays");
 ```
 
 ## Especificações
 
-| Especificação                                                                                | Status                                           | Comentário         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------ |
-| {{SpecName('ANGLE_instanced_arrays', '', 'ANGLE_instanced_arrays')}} | {{Spec2('ANGLE_instanced_arrays')}} | definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.ANGLE_instanced_arrays")}}
+{{Compat}}
 
 ## Ver também
 

@@ -1,15 +1,25 @@
 ---
 title: RegExp.prototype.hasIndices
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
-browser-compat: javascript.builtins.RegExp.hasIndices
 ---
 
 {{JSRef}}
 
 La propriété **`hasIndices`** indique si le marqueur "`d`" a été utilisé ou non avec l'expression rationnelle. `hasIndices` est une propriété en lecture seule, rattachée à une instance d'expression rationnelle.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-hasindices.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.hasIndices")}}
+
+```js interactive-example
+const regex1 = new RegExp("foo", "d");
+
+console.log(regex1.hasIndices);
+// Expected output: true
+
+const regex2 = new RegExp("bar");
+
+console.log(regex2.hasIndices);
+// Expected output: false
+```
 
 {{JS_Property_Attributes(0, 0, 1)}}
 
@@ -24,18 +34,18 @@ Cette propriété ne peut être modifiée directement.
 ### Utiliser `hasIndices`
 
 ```js
-const str1 = 'toto truc toto';
+const str1 = "toto truc toto";
 
-const regex1 = new RegExp('toto', 'gd');
+const regex1 = new RegExp("toto", "gd");
 
 console.log(regex1.hasIndices); // Affiche : true
 
 console.log(regex1.exec(str1).indices[0]); // Affiche : Array [0, 3]
 console.log(regex1.exec(str1).indices[0]); // Affiche : Array [8, 11]
 
-const str2 = 'toto truc toto';
+const str2 = "toto truc toto";
 
-const regex2 = new RegExp('toto');
+const regex2 = new RegExp("toto");
 
 console.log(regex2.hasIndices); // Affiche : false
 

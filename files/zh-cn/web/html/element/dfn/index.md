@@ -12,7 +12,7 @@ _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
 > - 被定义术语的值由下列规则确定：
 >
 >   1. 如果 `<dfn>` 元素有一个 **`title`** 属性，那么该术语的值就是该属性的值。
->   2. 否则，如果它仅包含一个 {{HTMLElement("abbr")}} 元素，该元素拥有 {{htmlattrxref("title", "abbr")}} 属性，那么该术语的值就是该属性的值。
+>   2. 否则，如果它仅包含一个 {{HTMLElement("abbr")}} 元素，该元素拥有 [`title`](/zh-CN/docs/Web/HTML/Element/abbr#title) 属性，那么该术语的值就是该属性的值。
 >   3. 否则，`<dfn>` 元素的文本内容就是该术语的值。
 
 <table class="properties">
@@ -27,7 +27,7 @@ _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
   </tr>
   <tr>
    <th scope="row">标签省略</th>
-   <td>{{no_tag_omission}}</td>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
@@ -42,7 +42,7 @@ _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
 
 ## 属性
 
-该元素包括 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
+该元素包括 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 在 HTML5 中，**`title`** 属性拥有特殊含义，见上文。
 
@@ -52,7 +52,11 @@ _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
 
 ```html
 <!-- Define "The Internet" -->
-<p><dfn id="def-internet">The Internet</dfn> is a global system of interconnected networks that use the Internet Protocol Suite (TCP/IP) to serve billions of users worldwide.</p>
+<p>
+  <dfn id="def-internet">The Internet</dfn> is a global system of interconnected
+  networks that use the Internet Protocol Suite (TCP/IP) to serve billions of
+  users worldwide.
+</p>
 ```
 
 在同一文档的后面：
@@ -65,7 +69,10 @@ _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
       <abbr title="World-Wide Web">WWW</abbr>
     </dfn>
   </dt>
-  <dd>The World-Wide Web (WWW) is a system of interlinked hypertext documents accessed on <a href="#def-internet">the Internet</a>.</dd>
+  <dd>
+    The World-Wide Web (WWW) is a system of interlinked hypertext documents
+    accessed on <a href="#def-internet">the Internet</a>.
+  </dd>
 </dl>
 ```
 

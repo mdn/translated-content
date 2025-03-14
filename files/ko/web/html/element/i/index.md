@@ -1,19 +1,33 @@
 ---
 title: <i>
 slug: Web/HTML/Element/i
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/i
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<i>` 요소**는 텍스트에서 어떤 이유로 주위와 구분해야 하는 부분을 나타냅니다. 기술 용어, 외국어 구절, 등장인물의 생각 등을 예시로 들 수 있습니다. 보통 기울임꼴로 표시합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/i.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;i&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>I looked at it and thought <i>This can't be real!</i></p>
+
+<p>
+  <i>Musa</i> is one of two or three genera in the family <i>Musaceae</i>; it
+  includes bananas and plantains.
+</p>
+
+<p>
+  The term <i>bandwidth</i> describes the measure of how much information can
+  pass through a data connection in a given amount of time.
+</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+i {
+}
+```
 
 <table class="properties">
   <tbody>
@@ -40,7 +54,7 @@ translation_of: Web/HTML/Element/i
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -83,7 +97,9 @@ translation_of: Web/HTML/Element/i
 다음 예제는 외국어를 강조하기 위해 `<i>` 요소를 사용합니다.
 
 ```html
-<p>라틴어 문구 <i>Veni, vidi, vici</i>는 음악과 예술, 문학에 자주 등장합니다.</p>
+<p>
+  라틴어 문구 <i>Veni, vidi, vici</i>는 음악과 예술, 문학에 자주 등장합니다.
+</p>
 ```
 
 ### 결과
@@ -96,7 +112,7 @@ translation_of: Web/HTML/Element/i
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.i")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -1,12 +1,8 @@
 ---
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
-tags:
-  - JavaScript
-  - Выражение
-  - Цикл
-translation_of: Web/JavaScript/Reference/Statements/for...in
 ---
+
 {{jsSidebar("Statements")}}
 
 **`Цикл for...in`** проходит через перечисляемые свойства объекта. Он пройдёт по каждому отдельному элементу.
@@ -33,13 +29,13 @@ for (variable in object) {...
 
 ### `Проход по массиву и for...in`
 
-> **Примечание:** **Замечание:** `for...in` не следует использовать для {{jsxref("Array")}}, где важен порядок индексов.
+> **Примечание:** `for...in` не следует использовать для {{jsxref("Array")}}, где важен порядок индексов.
 
 Индексы массива - это перечисляемые свойства с целочисленными именами, в остальном они аналогичны свойствам объектов. Нет гарантии, что `for...in` будет возвращать индексы в конкретном порядке. Цикл `for...in` возвращает все перечисляемые свойства, включая имеющие нецелочислиненные имена и наследуемые.
 
 Так как порядок прохода зависит от реализации, проход по массиву может не произойти в правильном порядке. Следовательно лучше с числовыми индексами использовать циклы {{jsxref("Statements/for", "for")}}, {{jsxref("Array.prototype.forEach()")}} или {{jsxref("Statements/for...of", "for...of")}}, когда проходим по массивам, где важен порядок доступа к свойствам.
 
-### Проход только через собственные свойства.
+### Проход только через собственные свойства
 
 Если вы хотите рассматривать только свойства самого объекта, а не его прототипов, используйте {{jsxref("Object.getOwnPropertyNames", "getOwnPropertyNames()")}}, {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} или {{jsxref("Object.prototype.propertyIsEnumerable", "propertyIsEnumerable")}}. Кроме того, если вы знаете, что не будет вмешательства в код извне, вы можете расширить встроенные прототипы методом проверки.
 
@@ -48,7 +44,7 @@ for (variable in object) {...
 Следующее выражение берёт аргументом объект. Затем проходит по всем перечислимым свойствам объекта и возвращает строку содержащую имена свойств и их значения.
 
 ```js
-var obj = {a:1, b:2, c:3};
+var obj = { a: 1, b: 2, c: 3 };
 
 for (var prop in obj) {
   console.log("obj." + prop + " = " + obj[prop]);
@@ -63,7 +59,7 @@ for (var prop in obj) {
 Следующая функция иллюстрирует использование {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}}: наследуемые свойства не отображаются
 
 ```js
-var triangle = {a:1, b:2, c:3};
+var triangle = { a: 1, b: 2, c: 3 };
 
 function ColoredTriangle() {
   this.color = "red";
@@ -74,7 +70,7 @@ ColoredTriangle.prototype = triangle;
 var obj = new ColoredTriangle();
 
 for (var prop in obj) {
-  if( obj.hasOwnProperty( prop ) ) {
+  if (obj.hasOwnProperty(prop)) {
     console.log("obj." + prop + " = " + obj[prop]);
   }
 }
@@ -85,24 +81,19 @@ for (var prop in obj) {
 
 ## Спецификации
 
-| Спецификация                                                                                             | Статус                   | Комментарий             |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------- |
-| {{SpecName('ES6', '#sec-for-in-and-for-of-statements', 'for...in statement')}} | {{Spec2('ES6')}}     |                         |
-| {{SpecName('ES5.1', '#sec-12.6.4', 'for...in statement')}}                             | {{Spec2('ES5.1')}} |                         |
-| {{SpecName('ES3', '#sec-12.6.4', 'for...in statement')}}                             | {{Spec2('ES3')}}     |                         |
-| {{SpecName('ES1', '#sec-12.6.3', 'for...in statement')}}                             | {{Spec2('ES1')}}     | Изначальное определение |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Поддержка: инициализатор переменных
 
-До SpiderMonkey 40 {{geckoRelease(40)}}, можно было инициализировать переменные (`i=0`) в цикле `for...in`:
+До SpiderMonkey 40, можно было инициализировать переменные (`i = 0`) в цикле `for...in`:
 
-```js example-bad
-var obj = {a:1, b:2, c:3};
-for(var i=0 in obj) {
+```js-nolint example-bad
+var obj = { a: 1, b: 2, c: 3 };
+for (var i = 0 in obj) {
   console.log(obj[i]);
 }
 // 1
@@ -110,7 +101,7 @@ for(var i=0 in obj) {
 // 3
 ```
 
-Это нестандартное поведение игнорируется в версии 40 и более поздних, оно бросит предупреждение {{jsxref("SyntaxError")}} ("for-in loop head declarations may not have initializers") в консоль ({{bug(748550)}} и {{bug(1164741)}}).
+Это нестандартное поведение игнорируется в версии 40 и более поздних, оно бросит предупреждение {{jsxref("SyntaxError")}} ("for-in loop head declarations may not have initializers") в консоль ([Firefox bug 748550](https://bugzil.la/748550) и [Firefox bug 1164741](https://bugzil.la/1164741)).
 
 Другие движки, такие как v8 (Chrome), Chakra (IE/Edge) и JSC (WebKit/Safari) также собираются удалить это нестандартное поведение.
 
@@ -119,7 +110,7 @@ for(var i=0 in obj) {
 - {{jsxref("Statements/for...of", "for...of")}} - похожий цикл, проходящий по значениям свойств
 - {{jsxref("Statements/for_each...in", "for each in")}} - похожее выражение, но перебирает значения свойств, а не их имена (устарело)
 - {{jsxref("Statements/for", "for")}}
-- [Генераторы](/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators) (использующие синтаксис `for...in`)
+- [Генераторы](/ru/docs/Web/JavaScript/Guide/Iterators_and_generators) (использующие синтаксис `for...in`)
 - [Перечислимость и владение свойствами](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Object.prototype.hasOwnProperty()")}}

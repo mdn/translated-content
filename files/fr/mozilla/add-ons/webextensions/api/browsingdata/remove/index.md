@@ -1,20 +1,9 @@
 ---
 title: browsingData.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - remove
-  - supprimer
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Supprime les données de navigation spécifiées.
 
@@ -22,15 +11,15 @@ Les données de navigation à supprimer sont spécifiées dans l'option `dataTyp
 
 Vous pouvez utiliser l'option `removalOptions`, qui est un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}, pour contrôler à quelle distance remonter dans le temps pour supprimer des données et supprimer les données uniquement à partir de pages Web normales ou pour supprimer des données hébergées d'applications et extensions aussi.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var removing = browser.browsingData.remove(
-  removalOptions,            // RemovalOptions object
-  dataTypes                  // DataTypeSet object
-)
+  removalOptions, // RemovalOptions object
+  dataTypes, // DataTypeSet object
+);
 ```
 
 ### Paramètres
@@ -42,11 +31,11 @@ var removing = browser.browsingData.remove(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans argument lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData.remove")}}
+{{Compat}}
 
 ## Exemples
 
@@ -65,12 +54,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+var oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.remove(
-  {since: oneWeekAgo},
-  {downloads: true, history: true}).
-then(onRemoved, onError);
+browser.browsingData
+  .remove({ since: oneWeekAgo }, { downloads: true, history: true })
+  .then(onRemoved, onError);
 ```
 
 Supprimer tout l'historique de téléchargement et de navigation :
@@ -84,16 +72,16 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.remove({},
-  {downloads: true, history: true}).
-then(onRemoved, onError);
+browser.browsingData
+  .remove({}, { downloads: true, history: true })
+  .then(onRemoved, onError);
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

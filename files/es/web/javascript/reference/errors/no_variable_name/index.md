@@ -1,11 +1,6 @@
 ---
-title: 'SyntaxError: missing variable name'
+title: "SyntaxError: missing variable name"
 slug: Web/JavaScript/Reference/Errors/No_variable_name
-tags:
-  - Error
-  - Error de sintaxis
-  - errores
-translation_of: Web/JavaScript/Reference/Errors/No_variable_name
 ---
 
 {{jsSidebar("Errors")}}
@@ -65,11 +60,12 @@ var second = document.getElementById('two'),
 La versión arreglada:
 
 ```js example-good
-var x, y = "foo";
+var x,
+  y = "foo";
 var x = "foo";
 
-var first = document.getElementById('one');
-var second = document.getElementById('two');
+var first = document.getElementById("one");
+var second = document.getElementById("two");
 ```
 
 ### Arrays
@@ -77,18 +73,18 @@ var second = document.getElementById('two');
 {{jsxref("Array")}} literales en JavaScript necesitan corchetes alrededor de los valores. Esto no funciona:
 
 ```js example-bad
-var arr = 1,2,3,4,5;
+var arr = 1, 2, 3, 4, 5;
 // SyntaxError: missing variable name
 ```
 
 Esto es correcto:
 
 ```js example-good
-var arr = [1,2,3,4,5];
+var arr = [1, 2, 3, 4, 5];
 ```
 
 ## Ver también
 
-- [Good variable names](http://wiki.c2.com/?GoodVariableNames)
+- [Good variable names](https://wiki.c2.com/?GoodVariableNames)
 - [`var`](/es/docs/Web/JavaScript/Reference/Statements/var)
-- [Variable declarations in the JavaScript Guide](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations)
+- [Variable declarations in the JavaScript Guide](/es/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)

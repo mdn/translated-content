@@ -3,19 +3,19 @@ title: edgeMode
 slug: Web/SVG/Attribute/edgeMode
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-`edgeMode`属性确定了当核心位于输入图像的边缘或贴近输入图像的边缘时，如何取用颜色值用于扩展输入图像，从而可以应用矩阵操作。
+`edgeMode` 属性确定了当核心位于输入图像的边缘或贴近输入图像的边缘时，如何取用颜色值用于扩展输入图像，从而可以应用矩阵操作。
 
-如果没有指定`edgeMode`属性，等效于值被指定为`duplicate`。
+如果没有指定 `edgeMode` 属性，等效于值被指定为 `duplicate`。
 
-## 用法
+## 使用说明
 
-| 类别     | 无                                                                                                        |
-| -------- | --------------------------------------------------------------------------------------------------------- |
-| 值       | **duplicate** \| wrap \| none                                                                             |
-| 可变性   | Yes                                                                                                       |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementEdgeModeAttribute) |
+| 类别     | 无                                                                                                         |
+| -------- | ---------------------------------------------------------------------------------------------------------- |
+| 值       | **duplicate** \| wrap \| none                                                                              |
+| 可变性   | Yes                                                                                                        |
+| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementEdgeModeAttribute) |
 
 - duplicate
   - : 它指示输入图像沿着每条边扩展，复制输入图像的给定边缘上的颜色值。

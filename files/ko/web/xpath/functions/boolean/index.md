@@ -1,12 +1,9 @@
 ---
 title: boolean
 slug: Web/XPath/Functions/boolean
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/boolean
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `boolean` 함수는 식을 평가하고 참이나 거짓을 반환합니다.
 
@@ -34,7 +31,7 @@ boolean(expression )
 
 ### 정의
 
-[XPath 1.0 4.3](http://www.w3.org/TR/xpath#function-boolean)
+[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-boolean)
 
 ### Gecko 지원
 

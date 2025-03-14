@@ -1,7 +1,6 @@
 ---
 title: WebSocket.binaryType
 slug: Web/API/WebSocket/binaryType
-browser-compat: api.WebSocket.binaryType
 ---
 
 {{APIRef("Web Sockets API")}}
@@ -16,7 +15,7 @@ var binaryType = aWebSocket.binaryType;
 
 ## Valeur
 
-Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) ayant l'une de ces deux valeurs&nbsp;:
+Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) ayant l'une de ces deux valeurs&nbsp;:
 
 - `"blob"`
   - : Utilise des objets [`Blob`](/fr/docs/Web/API/Blob) pour les données binaires. Il s'agit de la valeur par défaut.
@@ -33,7 +32,7 @@ socket.binaryType = "arraybuffer";
 
 // On écoute les différents messages
 socket.addEventListener("message", function (event) {
-  if(event.data instanceof ArrayBuffer) {
+  if (event.data instanceof ArrayBuffer) {
     // Frame de données binaires
     const view = new DataView(event.data);
     console.log(view.getInt32(0));

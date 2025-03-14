@@ -1,12 +1,11 @@
 ---
 title: Les types de champs de formulaire HTML5
 slug: Learn/Forms/HTML5_input_types
-translation_of: Learn/Forms/HTML5_input_types
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
 
-Dans [l'article précédent](/fr/docs/Learn/Forms/Basic_native_form_controls), nous avons vu l'élément [`<input>`](/fr/docs/Web/HTML/Element/Input) et les types qu'il pouvait avoir depuis les origines de HTML. Voyons ici, en détails, les fonctionnalités offertes par les contrôles de formulaire plus récents, dont certains ont été ajoutés en HTML5 et qui permettent de récupérer des données d'un certain type.
+Dans [l'article précédent](/fr/docs/Learn/Forms/Basic_native_form_controls), nous avons vu l'élément [`<input>`](/fr/docs/Web/HTML/Element/input) et les types qu'il pouvait avoir depuis les origines de HTML. Voyons ici, en détails, les fonctionnalités offertes par les contrôles de formulaire plus récents, dont certains ont été ajoutés en HTML5 et qui permettent de récupérer des données d'un certain type.
 
 <table>
   <tbody>
@@ -25,16 +24,17 @@ Dans [l'article précédent](/fr/docs/Learn/Forms/Basic_native_form_controls), n
   </tbody>
 </table>
 
-> **Note :** La plupart des fonctionnalités évoquées dans cet article sont largement prises en charge parmi les différents navigateurs. Les exceptions à ceci seront notées dans l'article. Si vous souhaitez plus de détails sur la comptabilité des navigateurs, n'hésitez pas à consulter [la référence HTML sur les éléments de formulaire](/fr/docs/Web/HTML/Element#formulaires), et notamment la référence exhaustive sur [les types d'éléments `<input>`](/fr/docs/Web/HTML/Element/Input).
+> [!NOTE]
+> La plupart des fonctionnalités évoquées dans cet article sont largement prises en charge parmi les différents navigateurs. Les exceptions à ceci seront notées dans l'article. Si vous souhaitez plus de détails sur la comptabilité des navigateurs, n'hésitez pas à consulter [la référence HTML sur les éléments de formulaire](/fr/docs/Web/HTML/Element#formulaires), et notamment la référence exhaustive sur [les types d'éléments `<input>`](/fr/docs/Web/HTML/Element/input).
 
 L'apparence native des contrôles de formulaire HTML peut être différente de celle voulue pour un design donné. Il arrive donc que les développeuses et développeurs construisent leurs propres contrôles de formulaire sur mesure. Nous aborderons ce sujet dans un tutoriel avancé&nbsp;: [Comment construire des contrôles de formulaire sur mesure](/fr/docs/Learn/Forms/How_to_build_custom_form_controls).
 
 ## Champ pour une adresse électronique
 
-Pour ce type de champ, on utilisera la valeur `email` pour l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type)&nbsp;:
+Pour ce type de champ, on utilisera la valeur `email` pour l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type)&nbsp;:
 
 ```html
-<input type="email" id="email" name="email">
+<input type="email" id="email" name="email" />
 ```
 
 Lorsque ce type est utilisé, la personne doit saisir une adresse mail avec un format valide dans le champ. Tout autre contenu entraînera l'affichage d'une erreur à l'envoi du formulaire. Voici une capture d'écran qui illustre une telle erreur.
@@ -44,14 +44,15 @@ Lorsque ce type est utilisé, la personne doit saisir une adresse mail avec un f
 Il est aussi possible d'utiliser l'attribut [`multiple`](/fr/docs/Web/HTML/Attributes/multiple) pour le type `email` afin de permettre la saisie de plusieurs adresses (séparées par des virgules)&nbsp;:
 
 ```html
-<input type="email" id="email" name="email" multiple>
+<input type="email" id="email" name="email" multiple />
 ```
 
 Sur certains appareils, notamment les appareils tactiles avec les claviers logiciels qu'on peut trouver sur les smartphones, un clavier adapté pourra être affiché pour une saisie plus adaptée à la saisie d'adresses électroniques, par exemple en incluant la touche `@`. Voici par exemple une capture d'écran du clavier qu'on peut observer sur Firefox pour Android&nbsp;:
 
 ![Clavier de Firefox pour Android pour les champs de type email avec une arobase affichée par défaut.](fx-android-email-type-keyboard.jpg)
 
-> **Note :** Vous pouvez trouver différents exemples de champs de formulaire textuels [sur cette page d'exemple](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) ([le code source correspondant est aussi disponible](https://github.com/mdn/learning-area/blob/main/html/forms/basic-input-examples/index.html)).
+> [!NOTE]
+> Vous pouvez trouver différents exemples de champs de formulaire textuels [sur cette page d'exemple](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) ([le code source correspondant est aussi disponible](https://github.com/mdn/learning-area/blob/main/html/forms/basic-input-examples/index.html)).
 
 Voici une autre bonne raison de privilégier ces types de champ plus récents qui permettent une meilleure ergonomie sur les différents appareils.
 
@@ -63,14 +64,15 @@ En revanche, un tel mécanisme _ne devrait pas être considéré_ comme une mesu
 
 On notera aussi que `a@b` est une adresse électronique valide pour les contraintes fournies par défaut. En effet, par défaut, un champ `email` permet de saisir des adresses intranet. Pour implémenter un comportement de validation différent, on pourra utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Attributes/pattern) et personnaliser les messages d'erreur affichés. Nous verrons ces fonctionnalités dans l'article [Validation d'un formulaire côté client](/fr/docs/Learn/Forms/Form_validation).
 
-> **Note :** Si la valeur saisie n'est pas une adresse électronique, la pseudo-classe [`:invalid`](/fr/docs/Web/CSS/:invalid) s'appliquera, et la propriété du DOM [`validityState.typeMismatch`](/fr/docs/Web/API/validityState/typeMismatch) renverra `true`.
+> [!NOTE]
+> Si la valeur saisie n'est pas une adresse électronique, la pseudo-classe [`:invalid`](/fr/docs/Web/CSS/:invalid) s'appliquera, et la propriété du DOM [`validityState.typeMismatch`](/fr/docs/Web/API/validityState/typeMismatch) renverra `true`.
 
 ## Champ de recherche
 
-Les champs de recherche permettent de créer des boîtes de recherches pour les sites et applications web. Pour créer un tel champ, on utilisera la valeur `search` pour l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type)&nbsp;:
+Les champs de recherche permettent de créer des boîtes de recherches pour les sites et applications web. Pour créer un tel champ, on utilisera la valeur `search` pour l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type)&nbsp;:
 
 ```html
-<input type="search" id="search" name="search">
+<input type="search" id="search" name="search" />
 ```
 
 La différence principale entre un champ `text` et un champ `search` porte notamment sur la mise en forme appliquée par le navigateur. Souvent, les champs de recherche sont affichés avec des coins arrondis et ils contiennent parfois une icône «&nbsp;Ⓧ&nbsp;» qui permet de réinitialiser la valeur saisie lorsqu'on clique dessus. De plus, pour les appareils avec des claviers logiciels, la touche Entrée pourra avoir un libellé adapté comme «&nbsp;**rechercher**&nbsp;», ou afficher une icône en forme de loupe.
@@ -83,10 +85,10 @@ On notera aussi une fonctionnalité intéressante pour les champs `search`&nbsp;
 
 ## Champ pour un numéro de téléphone
 
-Pour créer un champ permettant spécifiquement de saisir un numéro de téléphone, on pourra utiliser la valeur `tel` pour l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type)&nbsp;:
+Pour créer un champ permettant spécifiquement de saisir un numéro de téléphone, on pourra utiliser la valeur `tel` pour l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type)&nbsp;:
 
 ```html
-<input type="tel" id="tel" name="tel">
+<input type="tel" id="tel" name="tel" />
 ```
 
 Lorsqu'on utilise un tel champ avec un clavier logiciel, la plupart des appareils fourniront un clavier numérique. Aussi, bien que cela dégrade la sémantique, on pourra se servir de cet aspect pour saisir une valeur numérique quelconque (voir après pour les champs de type `numeric` qui ont certaines particularités).
@@ -101,10 +103,10 @@ Comme mentionné précédemment, l'attribut [`pattern`](/fr/docs/Web/HTML/Attrib
 
 ## Champ pour une URL
 
-Pour créer un champ qui permette spécifiquement de saisir des URL, on utilisera la valeur `url` pour l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type)&nbsp;:
+Pour créer un champ qui permette spécifiquement de saisir des URL, on utilisera la valeur `url` pour l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type)&nbsp;:
 
 ```html
-<input type="url" id="url" name="url">
+<input type="url" id="url" name="url" />
 ```
 
 Ce type de champ ajoute certaines contraintes de validation. Le navigateur affichera une erreur si aucun protocole (par exemple `https:`) n'est saisi ou si l'URL est mal formée. Pour les appareils avec un clavier logiciel, le clavier affiché par défaut contiendra des touches pour les deux-points, le point, et la barre oblique.
@@ -113,30 +115,31 @@ Voici un exemple (tiré de Firefox pour Android)&nbsp;:
 
 ![Le clavier de saisie d'une URL pour Firefox pour Android, avec une touche pour la barre oblique.](fx-android-url-type-keyboard.jpg)
 
-> **Note :** Une URL bien formée ne veut pas nécessairement dire que l'emplacement indiqué par cette adresse existe&nbsp;!
+> [!NOTE]
+> Une URL bien formée ne veut pas nécessairement dire que l'emplacement indiqué par cette adresse existe&nbsp;!
 
 ## Champ numérique
 
-Pour créer un contrôle permettant de saisir des nombres, on utilisera un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type) vaut `number`. Ce contrôle ressemble à un champ textuel mais permet uniquement de saisir des nombres (y compris des nombres décimaux). Généralement, un tel contrôle fournit des boutons d'incrément ou de décrément pour augmenter ou réduire la valeur. Pour les appareils avec un clavier logiciel, c'est généralement un clavier numérique qui est affiché pour saisir dans un tel champ.
+Pour créer un contrôle permettant de saisir des nombres, on utilisera un élément [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type) vaut `number`. Ce contrôle ressemble à un champ textuel mais permet uniquement de saisir des nombres (y compris des nombres décimaux). Généralement, un tel contrôle fournit des boutons d'incrément ou de décrément pour augmenter ou réduire la valeur. Pour les appareils avec un clavier logiciel, c'est généralement un clavier numérique qui est affiché pour saisir dans un tel champ.
 
 La capture d'écran qui suit (tirée de Firefox pour Android) illustre ce cas&nbsp;:
 
 ![Clavier de Firefox pour Android avec, par défaut, des chiffres, virgule et point.](fx-android-number-type-keyboard.jpg)
 
-Pour les champs de type `number`, on peut contraindre les valeurs minimales et maximales acceptées avec les attributs respectifs [`min`](/fr/docs/Web/HTML/Element/Input#attr-min) et [`max`](/fr/docs/Web/HTML/Element/Input#attr-max).
+Pour les champs de type `number`, on peut contraindre les valeurs minimales et maximales acceptées avec les attributs respectifs [`min`](/fr/docs/Web/HTML/Element/input#attr-min) et [`max`](/fr/docs/Web/HTML/Element/input#attr-max).
 
 On peut aussi utiliser l'attribut `step` qui permet de définir le pas (pour l'incrément et le décrément) utilisé avec les boutons pour augmenter/réduire la valeur. Par défaut, un champ numérique ne sera valide qu'avec un nombre entier. Pour permettre la saisie de valeurs décimales, on indiquera [`step="any"`](/fr/docs/Web/HTML/Attributes/step). Si cet attribut est absent, `step` aura `1` comme valeur par défaut, ce qui signifie que seuls les nombres entiers seront considérés comme valides.
 
 Prenons quelques exemples. Dans le premier, on crée un contrôle numérique où la valeur est restreinte entre `1` et `10`, et où les boutons d'incrément/décrément utilisent un pas de `2`.
 
 ```html
-<input type="number" name="age" id="age" min="1" max="10" step="2">
+<input type="number" name="age" id="age" min="1" max="10" step="2" />
 ```
 
 Dans ce deuxième exemple, on crée un contrôle numérique où la valeur doit être comprise entre `0` et `1` (inclus), et où les boutons d'incrément/décrément utilisent un pas de `0.01`.
 
 ```html
-<input type="number" name="change" id="centimes" min="0" max="1" step="0.01">
+<input type="number" name="change" id="centimes" min="0" max="1" step="0.01" />
 ```
 
 Un champ de type `number` sera pertinent lorsque l'intervalle des valeurs valides est limité (par exemple pour l'âge ou la taille d'une personne). Si l'intervalle est trop grand pour qu'une augmentation incrémentale soit pertinente (par exemple pour un code postal), un champ `tel` pourra être une option plus adaptée, car le contrôle ne présente pas les boutons d'incrément/décrément mais affiche un clavier numérique (pour l'aspect relatif au clavier présenté, on pourra aussi exploiter l'attribut [`inputmode`](/fr/docs/Web/HTML/Global_attributes/inputmode)).
@@ -149,7 +152,7 @@ Une autre méthode permettant de sélectionner un nombre consiste à utiliser un
 
 En termes d'utilisation, les curseurs sont moins précis que les champs dans lesquels on saisit une valeur. Aussi, on les utilise lorsque la valeur _précise_ n'est pas particulièrement importante.
 
-Pour créer un curseur, on utilisera un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type) vaut `range`. Le curseur peut alors être déplacé le long de la piste avec une souris, au doigt pour les interfaces tactiles, ou avec les flèches du clavier.
+Pour créer un curseur, on utilisera un élément [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type) vaut `range`. Le curseur peut alors être déplacé le long de la piste avec une souris, au doigt pour les interfaces tactiles, ou avec les flèches du clavier.
 
 Il est important de configurer correctement le curseur en utilisant les attributs [`min`](/fr/docs/Web/HTML/Attributes/min), [`max`](/fr/docs/Web/HTML/Attributes/max), et [`step`](/fr/docs/Web/HTML/Attributes/step) qui paramètrent respectivement le minimum, le maximum et le pas d'incrément.
 
@@ -157,7 +160,14 @@ Voyons le code utilisé pour notre exemple ci-avant. Pour commencer, le fragment
 
 ```html
 <label for="price">Sélectionnez un prix maximal : </label>
-<input type="range" name="price" id="price" min="50000" max="500000" step="100" value="250000">
+<input
+  type="range"
+  name="price"
+  id="price"
+  min="50000"
+  max="500000"
+  step="100"
+  value="250000" />
 <output class="price-output" for="price"></output>
 ```
 
@@ -168,19 +178,20 @@ Un des inconvénients des curseurs est l'absence de retour visuel pour indiquer 
 Pour effectivement afficher la valeur courante et la mettre à jour lorsqu'elle est modifiée par l'utilisatrice ou l'utilisateur, on doit utiliser JavaScript et ces quelques lignes&nbsp;:
 
 ```js
-const price = document.querySelector('#price');
-const output = document.querySelector('.price-output');
+const price = document.querySelector("#price");
+const output = document.querySelector(".price-output");
 
 output.textContent = price.value;
 
-price.addEventListener('input', function() {
+price.addEventListener("input", function () {
   output.textContent = price.value;
 });
 ```
 
 Ici, on a deux variables qui référencent le contrôle `range` et l'élément `output`. On remplit immédiatement le contenu ([`textContent`](/fr/docs/Web/API/Node/textContent)) de l'élément `<output>` avec la valeur courante (`value`) du contrôle. Enfin, on ajoute un gestionnaire d'évènement qui permet de gérer les mises à jour lorsque le curseur est déplacé&nbsp;: dans ce cas, on met à jour la valeur de `textContent` de l'élément `<output>` avec la nouvelle valeur.
 
-> **Note :** Un tutoriel couvrant ce sujet est disponible (en anglais) sur CSS Tricks&nbsp;: [L'élément `<output>`](https://css-tricks.com/the-output-element/).
+> [!NOTE]
+> Un tutoriel couvrant ce sujet est disponible (en anglais) sur CSS Tricks&nbsp;: [L'élément `<output>`](https://css-tricks.com/the-output-element/).
 
 ## Sélecteurs de date et d'heure
 
@@ -188,7 +199,7 @@ La récupération de valeurs temporelles a longtemps été un cauchemar de déve
 
 Les contrôles de date HTML permettent de gérer ce type de données en fournissant des interfaces graphiques adaptées et en utilisant un format de données normalisé.
 
-Pour créer un contrôle permettant de saisir une date et/ou une heure, on utilisera un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) avec une valeur appropriée pour l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type), qui dépendra selon qu'on veuille saisir une date, une heure ou les deux. Voici un exemple qui utilise des éléments [`<select>`](/fr/docs/Web/HTML/Element/select) en cas de recours pour les navigateurs qui ne prendraient pas en charge ces types de champ&nbsp;:
+Pour créer un contrôle permettant de saisir une date et/ou une heure, on utilisera un élément [`<input>`](/fr/docs/Web/HTML/Element/input) avec une valeur appropriée pour l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type), qui dépendra selon qu'on veuille saisir une date, une heure ou les deux. Voici un exemple qui utilise des éléments [`<select>`](/fr/docs/Web/HTML/Element/select) en cas de recours pour les navigateurs qui ne prendraient pas en charge ces types de champ&nbsp;:
 
 {{EmbedGHLiveSample("learning-area/html/forms/datetime-local-picker-fallback/index.html", '100%', 200)}}
 
@@ -199,7 +210,7 @@ Voyons rapidement les différents types disponibles. On notera que l'utilisation
 [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/input/datetime-local) crée un contrôle permettant d'afficher et de sélectionner une date avec une heure sans information sur le fuseau horaire.
 
 ```html
-<input type="datetime-local" name="datetime" id="datetime">
+<input type="datetime-local" name="datetime" id="datetime" />
 ```
 
 ### `month`
@@ -207,7 +218,7 @@ Voyons rapidement les différents types disponibles. On notera que l'utilisation
 [`<input type="month">`](/fr/docs/Web/HTML/Element/input/month) crée un contrôle permettant d'afficher et de sélectionner un mois d'une année.
 
 ```html
-<input type="month" name="month" id="month">
+<input type="month" name="month" id="month" />
 ```
 
 ### `time`
@@ -215,7 +226,7 @@ Voyons rapidement les différents types disponibles. On notera que l'utilisation
 [`<input type="time">`](/fr/docs/Web/HTML/Element/input/time) crée un contrôle permettant d'afficher et de sélectionner une heure (avec des minutes). Bien que la valeur puisse être _affichée_ au format sur 12 heures, la _valeur sous-jacente_ est représentée dans un format sur 24 heures.
 
 ```html
-<input type="time" name="time" id="time">
+<input type="time" name="time" id="time" />
 ```
 
 ### `week`
@@ -225,7 +236,7 @@ Voyons rapidement les différents types disponibles. On notera que l'utilisation
 Les semaines commencent le lundi et vont jusqu'au dimanche. De plus, la première semaine de chaque année contient le premier jeudi de cette année (la première semaine peut donc ne pas inclure le premier jour de l'année ou inclure les derniers jours de l'année précédente).
 
 ```html
-<input type="week" name="week" id="week">
+<input type="week" name="week" id="week" />
 ```
 
 ### Restreindre les valeurs de date/heure
@@ -234,17 +245,23 @@ Tous les contrôles de date et d'heure peuvent être restreints avec les attribu
 
 ```html
 <label for="monDate">Quand êtes-vous disponible cet été&nbsp;?</label>
-<input type="date" name="monDate" min="2013-06-01" max="2013-08-31" step="7" id="monDate">
+<input
+  type="date"
+  name="monDate"
+  min="2013-06-01"
+  max="2013-08-31"
+  step="7"
+  id="monDate" />
 ```
 
 ## Contrôle de sélection de couleur
 
 Les couleurs sont toujours difficiles à gérer en raison des différents formats qui existent pour les représenter&nbsp;: RGB en décimal ou en hexadécimal, HSL, les mots-clés, etc.
 
-Un contrôle de sélection de couleur peut être créé avec l'élément [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type) vaut `color`&nbsp;:
+Un contrôle de sélection de couleur peut être créé avec l'élément [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type) vaut `color`&nbsp;:
 
 ```html
-<input type="color" name="color" id="color">
+<input type="color" name="color" id="color" />
 ```
 
 Lorsqu'un tel contrôle est pris en charge, cliquer sur le contrôle permettra d'afficher le sélecteur de couleur par défaut du système d'exploitation. La capture d'écran qui suit montre le résultat obtenu avec Firefox pour macOS&nbsp;:
@@ -266,22 +283,3 @@ Vous avez atteint la fin de cet article, mais avez-vous retenu les informations 
 Cela marque la fin de notre tour des types de champs de formulaire HTML5. Il existe certains types de contrôle qui sont difficilement utilisables en combinaison en raison de leur comportement très spécifique, mais que vous devriez connaître — nous les détaillerons dans l'article suivant.
 
 {{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
-
-## Dans ce module
-
-- [Votre premier formulaire](/fr/docs/Learn/Forms/Your_first_form)
-- [Comment structurer un formulaire web](/fr/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Les contrôles de formulaire natifs de base](/fr/docs/Learn/Forms/Basic_native_form_controls)
-- **Les types de champs de formulaire HTML5**
-- [Les autres contrôles de formulaire](/fr/docs/Learn/Forms/Other_form_controls)
-- [Mettre en forme les formulaires web](/fr/docs/Learn/Forms/Styling_web_forms)
-- [Mise en forme avancée des formulaires](/fr/docs/Learn/Forms/Advanced_form_styling)
-- [Pseudo-classes CSS liées à l'interface utilisateur](/fr/docs/Learn/Forms/UI_pseudo-classes)
-- [Validation du formulaire côté client](/fr/docs/Learn/Forms/Form_validation)
-- [Envoyer des données de formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
-### Sujets avancés
-
-- [Comment construire des contrôles de formulaire sur mesure](/fr/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [Envoyer des formulaires avec JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Tableau de compatibilité des contrôles de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

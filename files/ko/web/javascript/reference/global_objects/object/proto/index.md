@@ -1,15 +1,6 @@
 ---
 title: Object.prototype.__proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
-tags:
-  - Deprecated
-  - ECMAScript 2015
-  - JavaScript
-  - Object
-  - Property
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 ---
 
 {{JSRef}}{{Deprecated_header}}
@@ -30,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 
 `__proto__` setter를 사용하면 객체의 `[[Prototype]]`이 변경될 수 있습니다. 객체는 {{JSxRef("Object.isExtensible()")}}에 따라 확장 가능해야 합니다. 그렇지 않으면 {{JSxRef("Global_Objects/TypeError", "TypeError")}}가 발생합니다. 제공된 값은 객체 또는 {{JSxRef("Global_Objects/null", "null")}}여야 합니다. 다른 값을 제공하면 아무 효과가 없습니다.
 
-프로토타입이 상속에 사용되는 방식을 이해하려면 가이드 문서 [상속과 프로토타입 체인](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)를 참조하세요.
+프로토타입이 상속에 사용되는 방식을 이해하려면 가이드 문서 [상속과 프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)를 참조하세요.
 
 `__proto__` 속성은 getter 및 setter 함수로 구성된 {{JSxRef("Object.prototype")}}의 간단한 접근자 속성입니다. {{JSxRef("Object.prototype")}}를 참조하는 경우 `__proto__`에 접근하면 {{JSxRef("Object.prototype")}}를 찾지만, {{JSxRef("Object.prototype")}}를 참조하지 않는 경우에는 찾을 수 없습니다. {{JSxRef("Object.prototype")}}보다 먼저 다른 `__proto__` 속성이 발견되는 경우 이 속성에 의해 {{JSxRef("Object.prototype")}}는 숨겨집니다.
 
@@ -40,62 +31,62 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 
 ```js
 function Circle() {}
-const shape = {}
-const circle = new Circle()
+const shape = {};
+const circle = new Circle();
 
 // Set the object prototype
 // DEPRECATED. 예시용일 뿐입니다. 실제 코드에서는 이렇게 하지 마세요.
-shape.__proto__ = circle
+shape.__proto__ = circle;
 
 // Get the object prototype
-console.log(shape.__proto__ === Circle) // false
+console.log(shape.__proto__ === Circle); // false
 
-const ShapeA = function () {}
+const ShapeA = function () {};
 const ShapeB = {
   a() {
-    console.log('aaa')
+    console.log("aaa");
   },
-}
-console.log((ShapeA.prototype.__proto__ = ShapeB))
+};
+console.log((ShapeA.prototype.__proto__ = ShapeB));
 
-const shapea = new ShapeA()
-shapea.a() // aaa
-console.log(ShapeA.prototype === shapea.__proto__) // true
+const shapea = new ShapeA();
+shapea.a(); // aaa
+console.log(ShapeA.prototype === shapea.__proto__); // true
 
 // 또는
-const ShapeC = function () {}
+const ShapeC = function () {};
 const ShapeD = {
   a() {
-    console.log('a')
+    console.log("a");
   },
-}
+};
 
-const shapeC = new ShapeC()
-shapeC.__proto__ = ShapeD
-shapeC.a() // a
-console.log(ShapeC.prototype === shapeC.__proto__) // false
+const shapeC = new ShapeC();
+shapeC.__proto__ = ShapeD;
+shapeC.a(); // a
+console.log(ShapeC.prototype === shapeC.__proto__); // false
 
 // 또는
 function Test() {}
 Test.prototype.myname = function () {
-  console.log('myname')
-}
+  console.log("myname");
+};
 
-const a = new Test()
-console.log(a.__proto__ === Test.prototype) // true
-a.myname() // myname
+const a = new Test();
+console.log(a.__proto__ === Test.prototype); // true
+a.myname(); // myname
 
 // 또는
-const fn = function () {}
+const fn = function () {};
 fn.prototype.myname = function () {
-  console.log('myname')
-}
+  console.log("myname");
+};
 
 var obj = {
   __proto__: fn.prototype,
-}
+};
 
-obj.myname() // myname
+obj.myname(); // myname
 ```
 
 ## 명세

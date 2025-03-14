@@ -9,9 +9,9 @@ La cabezera de la respuesta HTTP **`WWW-Authenticate`** define el método de aut
 
 La cabezera `WWW-Authenticate` es enviada junto al estado {{HTTPStatus("401")}} `Unauthorized` en la respuesta.
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## Syntax
 
@@ -22,7 +22,7 @@ WWW-Authenticate: <type> realm=<realm>
 ## Directives
 
 - \<type>
-  - : [Tipo de autentificación](/es/docs/Web/HTTP/Authentication#Authentication_schemes). Un tipo común es ["Basic"](/es/docs/Web/HTTP/Authentication#Basic_authentication_scheme). IANA mantiene una [lista de los esquemas de autentificación](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
+  - : [Tipo de autentificación](/es/docs/Web/HTTP/Authentication#authentication_schemes). Un tipo común es ["Basic"](/es/docs/Web/HTTP/Authentication#basic_authentication_scheme). IANA mantiene una [lista de los esquemas de autentificación](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
 - realm=\<realm>
   - : Una descripción del recurso protegido. Si el realm no es especificado, los clientes a menudo muestran el hostname.
 - charset=\<charset>
@@ -40,16 +40,13 @@ WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
 
 Vea también [HTTP authentication](/es/docs/Web/HTTP/Authentication) por ejemplos sobre como configurar un servidor Apache o nginx para proteger con contraseña tu sitio con autenticación básica HTTP.
 
-## Specifications
+## Especificaciones
 
-| Espeficicación                                           | Título                                 |
-| -------------------------------------------------------- | -------------------------------------- |
-| {{RFC("7235", "WWW-Authenticate", "4.1")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                                     | The 'Basic' HTTP Authentication Scheme |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("http.headers.WWW-Authenticate")}}
+{{Compat}}
 
 ## Véase también
 

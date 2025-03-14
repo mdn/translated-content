@@ -7,9 +7,26 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/name
 
 A propriedade somente-leitura **`name`** de um objeto {{jsxref("Function")}} indica o nome da função como especificado quando esta foi criada, ou `"anonymous"` para funções criadas anonimamente.
 
-{{EmbedInteractiveExample("pages/js/function-name.html")}}{{js_property_attributes(0,0,1)}}
+{{InteractiveExample("JavaScript Demo: Function.name")}}
 
-> **Nota:** Note que em implementações não-standard anteriores à ES2015 o atributo `configurable` tinha também o valor `false`.
+```js interactive-example
+const func1 = function () {};
+
+const object = {
+  func2: function () {},
+};
+
+console.log(func1.name);
+// Expected output: "func1"
+
+console.log(object.func2.name);
+// Expected output: "func2"
+```
+
+{{js_property_attributes(0,0,1)}}
+
+> [!NOTE]
+> Note que em implementações não-standard anteriores à ES2015 o atributo `configurable` tinha também o valor `false`.
 
 ## Exemplos
 
@@ -35,9 +52,9 @@ Funções criadas com a sintaxe `new Function(...)` ou somente `Function(...)` c
 Variáveis e métodos podem inferir o nome de uma função anônima a partir de sua posição sintática (novo na ECMAScript 2015).
 
 ```js
-var f = function() {};
+var f = function () {};
 var object = {
-  someMethod: function() {}
+  someMethod: function () {},
 };
 
 console.log(f.name); // "f"
@@ -48,11 +65,15 @@ Você pode definir uma função com um nome numa {{jsxref("Operators/Function", 
 
 ```js
 var object = {
-  someMethod: function object_someMethod() {}
+  someMethod: function object_someMethod() {},
 };
 console.log(object.someMethod.name); // grava o log "object_someMethod"
 
-try { object_someMethod } catch(e) { console.log(e); }
+try {
+  object_someMethod;
+} catch (e) {
+  console.log(e);
+}
 // ReferenceError: object_someMethod is not defined
 ```
 
@@ -61,10 +82,10 @@ Você não pode mudar o nome de uma função, pois a propriedade é somente-leit
 ```js
 var object = {
   // anonymous
-  someMethod: function() {}
+  someMethod: function () {},
 };
 
-object.someMethod.name = 'otherMethod';
+object.someMethod.name = "otherMethod";
 console.log(object.someMethod.name); // someMethod
 ```
 
@@ -74,7 +95,7 @@ Para mudá-lo, você poderia no entanto usar {{jsxref("Object.defineProperty()")
 
 ```js
 var o = {
-  foo(){}
+  foo() {},
 };
 o.foo.name; // "foo";
 ```
@@ -84,7 +105,7 @@ o.foo.name; // "foo";
 {{jsxref("Function.bind()")}} produz uma função cujo nome é "bound " seguido do nome da função.
 
 ```js
-function foo() {};
+function foo() {}
 foo.bind({}).name; // "bound foo"
 ```
 
@@ -94,8 +115,8 @@ Ao usar propriedades acessórias [`get`](/pt-BR/docs/Web/JavaScript/Reference/Fu
 
 ```js
 var o = {
-  get foo(){},
-  set foo(x){}
+  get foo() {},
+  set foo(x) {},
 };
 
 var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
@@ -108,13 +129,14 @@ descriptor.set.name; // "set foo";
 Você pode usar `obj.constructor.name` para checar a "classe" de um objeto (porém leia com atenção os avisos abaixo):
 
 ```js
-function Foo() {}  // Sintaxe ES2015: class Foo {}
+function Foo() {} // Sintaxe ES2015: class Foo {}
 
 var fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // grava o log "Foo"
 ```
 
-> **Aviso:** O interpretador vai definir a propriedade interna `Function.name` somente se uma função não tiver uma propriedade já com o nome _name_ (veja a seção [9.2.11 da ECMAScript2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname)). Porém, a ES2015 especifica que a palavra-chave _static_ de maneira que métodos estáticos serão definidos como OwnProperty da função construtora de classe (ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation)).
+> [!WARNING]
+> O interpretador vai definir a propriedade interna `Function.name` somente se uma função não tiver uma propriedade já com o nome _name_ (veja a seção [9.2.11 da ECMAScript2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname)). Porém, a ES2015 especifica que a palavra-chave _static_ de maneira que métodos estáticos serão definidos como OwnProperty da função construtora de classe (ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation)).
 
 Portanto não podemos obter o nome de virtualmente qualquer classe com um método estático `name()`:
 
@@ -129,8 +151,8 @@ Com um método `static name()`, `Foo.name` não guarda mais o nome verdadeiro da
 
 ```js
 function Foo() {}
-Object.defineProperty(Foo, 'name', { writable: true });
-Foo.name = function() {};
+Object.defineProperty(Foo, "name", { writable: true });
+Foo.name = function () {};
 ```
 
 Tentar obter a classe de `fooInstance` via `fooInstance.constructor.name` não nos dará de maneira alguma o nome da classe, mas sim uma referência ao método estático da classe. Exemplo:
@@ -143,7 +165,7 @@ console.log(fooInstance.constructor.name); // grava o name() da função no log
 Você pode ver também, a partir do exemplo de sintaxe ES5, que, no Chrome ou no Firefox, a nossa definição estática de `Foo.name` se torna _writable_. A predefinição interna na ausência de uma definição estática customizada é somente-leitura:
 
 ```js
-Foo.name = 'Hello';
+Foo.name = "Hello";
 console.log(Foo.name); // logs "Hello" if class Foo has a static name() property but "Foo" if not.
 ```
 
@@ -167,30 +189,31 @@ o[sym2].name; // ""
 
 ## Compressores e minificadores JavaScript
 
-> **Aviso:** Tenha cuidado ao usar `Function.name` e transformações de código-fonte, como aquelas executadas por compressores (minificadores) ou obfuscadores de JavaScript. Estas ferramentas são comumente usadas como parte de processos de _build_ de JavaScript para reduzir os tamanhos de programas antes da implementação em produção. Tais transformações frequentemente mudam nomes de função durante o _build_.
+> [!WARNING]
+> Tenha cuidado ao usar `Function.name` e transformações de código-fonte, como aquelas executadas por compressores (minificadores) ou obfuscadores de JavaScript. Estas ferramentas são comumente usadas como parte de processos de _build_ de JavaScript para reduzir os tamanhos de programas antes da implementação em produção. Tais transformações frequentemente mudam nomes de função durante o _build_.
 
 Código fonte do tipo:
 
 ```js
-function Foo() {};
+function Foo() {}
 var foo = new Foo();
 
-if (foo.constructor.name === 'Foo') {
+if (foo.constructor.name === "Foo") {
   console.log("'foo' is an instance of 'Foo'");
 } else {
-  console.log('Oops!');
+  console.log("Oops!");
 }
 ```
 
 pode ser comprimido e se tornar:
 
 ```js
-function a() {};
+function a() {}
 var b = new a();
-if (b.constructor.name === 'Foo') {
+if (b.constructor.name === "Foo") {
   console.log("'foo' is an instance of 'Foo'");
 } else {
-  console.log('Oops!');
+  console.log("Oops!");
 }
 ```
 
@@ -198,11 +221,8 @@ Na versão descomprimida, o programa cai no bloco-verdade e grava o log _'foo' i
 
 ## Especificações
 
-| Specification                                                                        | Status                       | Comment            |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-name', 'name')}}                             | {{Spec2('ES2015')}}     | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-function-instances-name', 'name')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Function.name")}}
+{{Compat}}

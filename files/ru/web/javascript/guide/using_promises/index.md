@@ -1,13 +1,6 @@
 ---
 title: Использование промисов
 slug: Web/JavaScript/Guide/Using_promises
-tags:
-  - JavaScript
-  - Асинхронность
-  - Гайд
-  - промис
-translation_of: Web/JavaScript/Guide/Using_promises
-original_slug: Web/JavaScript/Guide/Ispolzovanie_promisov
 ---
 
 {{jsSidebar("Руководство по JavaScript")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
@@ -22,10 +15,10 @@ original_slug: Web/JavaScript/Guide/Ispolzovanie_promisov
 function doSomethingOldStyle(successCallback, failureCallback) {
   console.log("Готово.");
   // Успех в половине случаев.
-  if (Math.random() > .5) {
-    successCallback("Успех")
+  if (Math.random() > 0.5) {
+    successCallback("Успех");
   } else {
-    failureCallback("Ошибка")
+    failureCallback("Ошибка");
   }
 }
 
@@ -47,12 +40,12 @@ function doSomething() {
   return new Promise((resolve, reject) => {
     console.log("Готово.");
     // Успех в половине случаев.
-    if (Math.random() > .5) {
-      resolve("Успех")
+    if (Math.random() > 0.5) {
+      resolve("Успех");
     } else {
-      reject("Ошибка")
+      reject("Ошибка");
     }
-  })
+  });
 }
 
 const promise = doSomething();
@@ -71,7 +64,7 @@ doSomething().then(successCallback, failureCallback);
 
 В отличие от старомодных переданных колбэков промис даёт некоторые гарантии:
 
-- Колбэки никогда не будут вызваны до [завершения обработки текущего события](/ru/docs/Web/JavaScript/EventLoop#Никогда_не_блокируется) в событийном цикле JavaScript.
+- Колбэки никогда не будут вызваны до [завершения обработки текущего события](/ru/docs/Web/JavaScript/Event_loop#никогда_не_блокируется) в событийном цикле JavaScript.
 - Колбэки, добавленные через .then даже _после_ успешного или неудачного завершения асинхронной операции, будут также вызваны.
 - Несколько колбэков может быть добавлено вызовом .then нужное количество раз, и они будут выполняться независимо в порядке добавления.
 
@@ -101,40 +94,49 @@ let promise2 = doSomething().then(successCallback, failureCallback);
 Раньше выполнение нескольких асинхронных операций друг за другом приводило к классической "Вавилонской башне" колбэков:
 
 ```js
-doSomething(function(result) {
-  doSomethingElse(result, function(newResult) {
-    doThirdThing(newResult, function(finalResult) {
-      console.log('Итоговый результат: ' + finalResult);
-    }, failureCallback);
-  }, failureCallback);
+doSomething(function (result) {
+  doSomethingElse(
+    result,
+    function (newResult) {
+      doThirdThing(
+        newResult,
+        function (finalResult) {
+          console.log("Итоговый результат: " + finalResult);
+        },
+        failureCallback,
+      );
+    },
+    failureCallback,
+  );
 }, failureCallback);
 ```
 
 В современных функциях мы записываем колбэки в возвращаемые промисы - формируем цепочку промисов:
 
 ```js
-doSomething().then(function(result) {
-  return doSomethingElse(result);
-})
-.then(function(newResult) {
-  return doThirdThing(newResult);
-})
-.then(function(finalResult) {
-  console.log('Итоговый результат: ' + finalResult);
-})
-.catch(failureCallback);
+doSomething()
+  .then(function (result) {
+    return doSomethingElse(result);
+  })
+  .then(function (newResult) {
+    return doThirdThing(newResult);
+  })
+  .then(function (finalResult) {
+    console.log("Итоговый результат: " + finalResult);
+  })
+  .catch(failureCallback);
 ```
 
 Аргументы `then` необязательны, а `catch(failureCallback)` - это сокращение для `then(null, failureCallback)`. Вот как это выражено с помощью [стрелочных функций](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions):
 
 ```js
 doSomething()
-.then(result => doSomethingElse(result))
-.then(newResult => doThirdThing(newResult))
-.then(finalResult => {
-  console.log(`Итоговый результат: ${finalResult}`);
-})
-.catch(failureCallback);
+  .then((result) => doSomethingElse(result))
+  .then((newResult) => doThirdThing(newResult))
+  .then((finalResult) => {
+    console.log(`Итоговый результат: ${finalResult}`);
+  })
+  .catch(failureCallback);
 ```
 
 **Важно:** Всегда возвращайте промисы в return, иначе колбэки не будут сцеплены и ошибки могут быть не пойманы (стрелочные функции неявно возвращают результат, если скобки {} вокруг тела функции опущены).
@@ -295,7 +297,7 @@ console.log(1); // 1, 2, 3, 4
 
 ## Вложенность
 
-Простые цепочки promise лучше оставлять без вложений, так как вложенность может быть результатом небрежной структуры. Смотрите [распространённые ошибки](#Common_mistakes).
+Простые цепочки promise лучше оставлять без вложений, так как вложенность может быть результатом небрежной структуры. Смотрите [распространённые ошибки](#common_mistakes).
 
 Вложенность - это управляющая структура, ограничивающая область действия операторов catch. В частности, вложенный catch только перехватывает сбои в своей области и ниже, а не ошибки выше в цепочке за пределами вложенной области. При правильном использовании это даёт большую точность в извлечение ошибок:
 
@@ -353,5 +355,5 @@ doSomething()
 ## Смотрите также
 
 - {{jsxref("Promise.then()")}}
-- [Спецификация Promises/A+ (EN)](http://promisesaplus.com/)
-- [Нолан Лоусон (Nolan Lawson): У нас проблемы с промисами - распространённые ошибки (EN)](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
+- [Спецификация Promises/A+ (EN)](https://promisesaplus.com/)
+- [Нолан Лоусон (Nolan Lawson): У нас проблемы с промисами - распространённые ошибки (EN)](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)

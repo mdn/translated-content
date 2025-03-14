@@ -7,11 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 
 **`exec()`** 方法在一个指定字符串中执行一个搜索匹配。返回一个结果数组或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-exec.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.exec()")}}
+
+```js interactive-example
+const regex1 = RegExp("foo*", "g");
+const str1 = "table football, foosball";
+let array1;
+
+while ((array1 = regex1.exec(str1)) !== null) {
+  console.log(`Found ${array1[0]}. Next starts at ${regex1.lastIndex}.`);
+  // Expected output: "Found foo. Next starts at 9."
+  // Expected output: "Found foo. Next starts at 19."
+}
+```
 
 ## 语法
 
-```js
+```js-nolint
 exec(str)
 ```
 
@@ -31,7 +43,7 @@ exec(str)
 - `input`
   - : 匹配的原始字符串。
 - `groups`
-  - : 一个命名捕获组对象，其键是名称，值是捕获组。若没有定义命名捕获组，则 `groups` 的值为 {{jsxref("undefined")}}。参阅[捕获组](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)以了解更多信息。
+  - : 一个命名捕获组对象，其键是名称，值是捕获组。若没有定义命名捕获组，则 `groups` 的值为 {{jsxref("undefined")}}。参阅[捕获组](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)以了解更多信息。
 - `indices` {{optional_inline}}
   - : 此属性仅在设置了 [`d`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices) 标志位时存在。它是一个数组，其中每一个元素表示一个子字符串的边界。每个子字符串匹配本身就是一个数组，其中第一个元素表示起始索引，第二个元素表示结束索引。
 
@@ -41,7 +53,7 @@ exec(str)
 
 在使用 `exec()` 时，`global` 标志位不会在 `sticky` 标志位被设置时生效，而 `match()` 始终会设置 `sticky` 标志位。
 
-`exec()` 是正则表达式的原始方法。许多其它的正则表达式方法会在内部调用 `exec()`——包括一些字符串方法也会调用 `exec()`，如 [`@@replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)。虽然 `exec()` 本身非常强大而又有效，但它通常不能最清楚地表示调用的目的。
+`exec()` 是正则表达式的原始方法。许多其他的正则表达式方法会在内部调用 `exec()`——包括一些字符串方法也会调用 `exec()`，如 [`[Symbol.replace]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)。虽然 `exec()` 本身非常强大而又有效，但它通常不能最清楚地表示调用的目的。
 
 - 如果你只是为了判断是否匹配，请使用 {{jsxref("RegExp.prototype.test()")}} 方法代替。
 - 如果你只是为了找出所有匹配正则表达式的字符串而又不关心捕获组，请使用 {{jsxref("String.prototype.match()")}} 方法代替。此外，{{jsxref("String.prototype.matchAll()")}} 允许你对匹配项进行迭代，这有助于简化匹配字符串的多个部分（带有匹配组）。
@@ -57,33 +69,33 @@ exec(str)
 // Match "quick brown" followed by "jumps", ignoring characters in between
 // Remember "brown" and "jumps"
 // Ignore case
-const re = /quick\s(?<color>brown).+?(jumps)/igd;
-const result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
+const re = /quick\s(?<color>brown).+?(jumps)/dgi;
+const result = re.exec("The Quick Brown Fox Jumps Over The Lazy Dog");
 ```
 
 下表列出这个脚本的返回值（`result`）：
 
-| 属性  | 值                                                              |
-|-----------|--------------------------------------------------------------------|
+| 属性      | 值                                                                 |
+| --------- | ------------------------------------------------------------------ |
 | `[0]`     | `"Quick Brown Fox Jumps"`                                          |
 | `[1]`     | `"Brown"`                                                          |
 | `[2]`     | `"Jumps"`                                                          |
 | `index`   | `4`                                                                |
 | `indices` | `[[4, 25], [10, 15], [20, 25]]`<br />`groups: { color: [10, 15 ]}` |
-| `input`   | `4`                                                                |
+| `input`   | `"The Quick Brown Fox Jumps Over The Lazy Dog"`                    |
 | `groups`  | `{ color: "brown" }`                                               |
 
 另外，由于正则表达式是全局的（`global`），`re.lastIndex` 会被设置为 `25`。
 
 ### 查找所有匹配
 
-当正则表达式设置 [`g`](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#通过标志进行高级搜索) 标志位时，可以多次执行 `exec` 方法来查找同一个字符串中的成功匹配。当你这样做时，查找将从正则表达式的 {{jsxref("RegExp.lastIndex", "lastIndex")}} 属性指定的位置开始。（{{jsxref("RegExp.test", "test()")}} 也会更新 `lastIndex` 属性）。注意，即使再次查找的字符串不是原查找字符串时，{{jsxref("RegExp.lastIndex", "lastIndex")}} 也不会被重置，它依旧会从记录的 {{jsxref("RegExp.lastIndex", "lastIndex")}} 开始。
+当正则表达式设置 [`g`](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions#通过标志进行高级搜索) 标志位时，可以多次执行 `exec` 方法来查找同一个字符串中的成功匹配。当你这样做时，查找将从正则表达式的 {{jsxref("RegExp.lastIndex", "lastIndex")}} 属性指定的位置开始。（{{jsxref("RegExp.test", "test()")}} 也会更新 `lastIndex` 属性）。注意，即使再次查找的字符串不是原查找字符串时，{{jsxref("RegExp.lastIndex", "lastIndex")}} 也不会被重置，它依旧会从记录的 {{jsxref("RegExp.lastIndex", "lastIndex")}} 开始。
 
 例如，你使用下面的脚本：
 
 ```js
 const myRe = /ab*/g;
-const str = 'abbcdefabh';
+const str = "abbcdefabh";
 let myArray;
 while ((myArray = myRe.exec(str)) !== null) {
   let msg = `Found ${myArray[0]}. `;
@@ -94,15 +106,16 @@ while ((myArray = myRe.exec(str)) !== null) {
 
 脚本运行结果如下：
 
-```
+```plain
 Found abb. Next match starts at 3
 Found ab. Next match starts at 9
 ```
 
-> **警告：** 以下情况会导致匹配变成一个无限循环！
+> [!WARNING]
+> 以下情况会导致匹配变成一个无限循环！
 >
 > - 不要把正则表达式字面量（或者 {{jsxref("RegExp")}} 构造函数）放在 `while` 条件表达式里。由于每次迭代时 {{jsxref("RegExp.lastIndex", "lastIndex")}} 的属性都被重置。
-> - 请确保设置了[全局（`g`）标志位](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags)，否则 `lastIndex` 不会被更新。
+> - 请确保设置了[全局（`g`）标志位](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions#通过标志进行高级搜索)，否则 `lastIndex` 不会被更新。
 > - 如果正则表达式可以匹配长度为零的字符（例如：`/^/gm`），请手动递增 {{jsxref("RegExp.lastIndex", "lastIndex")}}，以避免其始终卡在相同的位置。
 
 你也可以将这类的代码替换为 {{jsxref("String.prototype.matchAll()")}} 以降低出错的可能性。
@@ -112,7 +125,7 @@ Found ab. Next match starts at 9
 你也可以直接使用 `exec()` 而不是创建一个 {{jsxref("RegExp")}} 对象：
 
 ```js
-const matches = /(hello \S+)/.exec('This is a hello world!');
+const matches = /(hello \S+)/.exec("This is a hello world!");
 console.log(matches[1]);
 ```
 
@@ -128,5 +141,5 @@ console.log(matches[1]);
 
 ## 参见
 
-- [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)章节
+- [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)章节
 - {{jsxref("RegExp")}}

@@ -1,8 +1,9 @@
 ---
 title: Web Audio API
 slug: Web/API/Web_Audio_API
-translation_of: Web/API/Web_Audio_API
 ---
+
+{{DefaultAPISidebar("Web Audio API")}}
 
 La Web Audio API propose un système puissant et flexible pour contrôler les données audio sur internet. Elle permet notamment de sélectionner des sources audio (microphone, flux media), d'y ajouter des effets, de créer des visualisations, d'appliquer des effets de spatialisation (comme la balance), etc.
 
@@ -28,7 +29,8 @@ Le timing est contrôlé avec une grande précision et une latence faible, ce qu
 
 La Web Audio API permet également de contrôler la _spatialisation_ du son. En utilisant un système basé sur le modèle _émetteur - récepteur,_ elle permet le contrôle de la balance ainsi que la gestion de l'atténuation du son en fonction de la distance, ou effet doppler, induite par un déplacement de la source sonore (ou de l'auditeur).
 
-> **Note :** Vous pouvez lire davantage de détails sur l'API <i lang="en">Web Audio</i> en vous rendant sur notre article [Les concepts de base de l'API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API).
+> [!NOTE]
+> Vous pouvez lire davantage de détails sur l'API <i lang="en">Web Audio</i> en vous rendant sur notre article [Les concepts de base de l'API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API).
 
 ## Interface de la Web Audio API
 
@@ -41,7 +43,7 @@ Conteneurs et définitions qui donnent sa forme au graphe audio
 - {{domxref("AudioContext")}}
   - : Un objet **`AudioContext`** désigne un graphe de traitement audio construit à partir de modules reliés entre eux, chacun représenté par un noeud audio ({{domxref("AudioNode")}}). Le contexte audio contrôle la création des noeuds qu'il contient, ainsi que l'exécution du traitement audio, et du décodage. Il est nécessaire de créer un `AudioContext` avant de faire quoi que ce soit d'autre, puisque tout se passe dans un contexte.
 - {{domxref("AudioNode")}}
-  - : Un objet **`AudioNode`** est un module de traitement audio, tel qu'une *source audio* (c'est-à-dire un élément HTML {{HTMLElement("audio")}} ou {{HTMLElement("video")}}), une *destination audio*, un module de traitement intermédiaire (par exemple un filtre {{domxref("BiquadFilterNode")}}), ou un contrôle du volume {{domxref("GainNode")}}).
+  - : Un objet **`AudioNode`** est un module de traitement audio, tel qu'une _source audio_ (c'est-à-dire un élément HTML {{HTMLElement("audio")}} ou {{HTMLElement("video")}}), une _destination audio_, un module de traitement intermédiaire (par exemple un filtre {{domxref("BiquadFilterNode")}}), ou un contrôle du volume {{domxref("GainNode")}}).
 - {{domxref("AudioParam")}}
   - : Un objet **`AudioParam`** est un paramètre audio, qui est lié à un {{domxref("AudioNode")}}. On peut lui assigner une valeur ou un changement de valeur, que l'on peut programmer à un moment spécifique et/ou selon un motif particulier.
 - [`ended`](/fr/docs/Web/API/AudioScheduledSourceNode/ended_event) (event)
@@ -58,7 +60,7 @@ Conteneurs et définitions qui donnent sa forme au graphe audio
 - {{domxref("MediaElementAudioSourceNode")}}
   - : Un objet **`MediaElementAudio.SourceNode`** est une source audio composée d'un élément HTML5 {{ htmlelement("audio") }} ou {{ htmlelement("video") }}. C'est un {{domxref("AudioNode")}} qui se comporte comme une source audio.
 - {{domxref("MediaStreamAudioSourceNode")}}
-  - : Un objet **`MediaStreamAudio.SourceNode`** est une source audio composée d'un [WebRTC](/fr/docs/WebRTC) {{domxref("MediaStream")}} (tel qu'une webcam ou un microphone). C'est un {{domxref("AudioNode")}} qui se comporte comme une source audio.
+  - : Un objet **`MediaStreamAudio.SourceNode`** est une source audio composée d'un [WebRTC](/fr/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} (tel qu'une webcam ou un microphone). C'est un {{domxref("AudioNode")}} qui se comporte comme une source audio.
 
 ### Définition des filtres d'effets audio
 
@@ -71,7 +73,7 @@ Conteneurs et définitions qui donnent sa forme au graphe audio
 - {{domxref("DynamicsCompressorNode")}}
   - : Un objet **`DynamicsCompressorNode`** permet un effet de compression, qui réduit le volume des parties les plus fortes du signal de façon à éviter les effets de clipping et la distortion qui peuvent se produire lorsque des sons multiples sont diffusés simultanément.
 - {{domxref("GainNode")}}
-  - : Un objet **`GainNode`** représente une modification du volume sonore. C'est un module de traitement audio qui provoque l'application d'un *gain* aux données récupérées en entrée avant leur propagation vers la sortie.
+  - : Un objet **`GainNode`** représente une modification du volume sonore. C'est un module de traitement audio qui provoque l'application d'un _gain_ aux données récupérées en entrée avant leur propagation vers la sortie.
 - {{domxref("WaveShaperNode")}}
   - : Un objet **`WaveShaperNode`** représente une distortion non linéaire. C'est un {{domxref("AudioNode")}} qui utilise une courbe pour appliquer au signal une distortion de mise en forme des ondes. En dehors de l'effet de distortion évident, il est souvent utilisé pour donner un caractère plus chaleureux au son.
 - {{domxref("PeriodicWave")}}
@@ -84,7 +86,7 @@ Une fois que le signal audio a été traité, ces interfaces définissent sa des
 - {{domxref("AudioDestinationNode")}}
   - : Un noeud **`AudioDestinationNode`** représente la destination finale d'une source audio source dans un contexte donné — en général les enceintes du matériel.
 - {{domxref("MediaStreamAudioDestinationNode")}}
-  - : Un noeud **`MediaStreamAudio.DestinationNode`** représente une destination audio constituée d'un {{domxref("MediaStream")}} [WebRTC](/fr/docs/WebRTC) à une seule piste `AudioMediaStreamTrack`; il peut être utilisé de façon similaire à un {{domxref("MediaStream")}} obtenu avec {{ domxref("Navigator.getUserMedia") }}. C'est un {{domxref("AudioNode")}} qui se comporte comme une destination audio.
+  - : Un noeud **`MediaStreamAudio.DestinationNode`** représente une destination audio constituée d'un {{domxref("MediaStream")}} [WebRTC](/fr/docs/Web/API/WebRTC_API) à une seule piste `AudioMediaStreamTrack`; il peut être utilisé de façon similaire à un {{domxref("MediaStream")}} obtenu avec {{ domxref("Navigator.getUserMedia") }}. C'est un {{domxref("AudioNode")}} qui se comporte comme une destination audio.
 
 ### Analyse des données et visualisation
 
@@ -94,7 +96,7 @@ Une fois que le signal audio a été traité, ces interfaces définissent sa des
 ### Division et fusion des pistes audio
 
 - {{domxref("ChannelSplitterNode")}}
-  - : Un noeud **`ChannelSplitterNode`** prend en entrée une source audio et sépare ses différentes pistes en une série de sorties *mono*.
+  - : Un noeud **`ChannelSplitterNode`** prend en entrée une source audio et sépare ses différentes pistes en une série de sorties _mono_.
 - {{domxref("ChannelMergerNode")}}
   - : Un noeud **`ChannelMergerNode`** réunit différentes entrées mono en une seule sortie. Chaque entrée devient une des pistes de la sortie unique.
 
@@ -107,7 +109,8 @@ Une fois que le signal audio a été traité, ces interfaces définissent sa des
 
 ### Traitement audio avec JavaScript
 
-> **Note :** Au jour de la publication de la spécification Web Audio API le 29 août 2014, ces fonctionnalités sont dépréciées, et seront bientôt remplacées par [Audio_Workers](#audio_workers).
+> [!NOTE]
+> Au jour de la publication de la spécification Web Audio API le 29 août 2014, ces fonctionnalités sont dépréciées, et seront bientôt remplacées par [Audio_Workers](#audio_workers).
 
 - {{domxref("ScriptProcessorNode")}}
   - : Un noeud **`ScriptProcessorNode`** permet de générer, traiter ou analyser du son avec JavaScript. C'est un module de traitement audio qui est lié à deux buffers, l'un en entrée, et l'autre en sortie. Un évènement implémentant {{domxref("AudioProcessingEvent")}} est envoyé à l'objet à chaque fois que le buffer d'entrée reçoit de nouvelles données, et le gestionnaire d'évènement prend fin lorsque les nouvelles données ont été communiquées au buffer de sortie.
@@ -121,7 +124,7 @@ Une fois que le signal audio a été traité, ces interfaces définissent sa des
 Il est possible de traiter et exporter un graphe audio très rapidement en tâche de fond — en l'exportant dans un {{domxref("AudioBuffer")}} plutôt que sur les enceintes du matériel — grâce aux objets suivants.
 
 - {{domxref("OfflineAudioContext")}}
-  - : Un objet **`OfflineAudioContext`** est une interface [`AudioContext`](/fr/docs/Web/API/AudioContext) qui représente un graphe de traitement audio construit à partir de nœuds audio. À la différence d'une interface `AudioContext` standard, une interface `OfflineAudioContext` n'exporte pas vraiment le son, mais le génère *aussi vite que possible* dans un buffer.
+  - : Un objet **`OfflineAudioContext`** est une interface [`AudioContext`](/fr/docs/Web/API/AudioContext) qui représente un graphe de traitement audio construit à partir de nœuds audio. À la différence d'une interface `AudioContext` standard, une interface `OfflineAudioContext` n'exporte pas vraiment le son, mais le génère _aussi vite que possible_ dans un buffer.
 - [`complete`](/fr/docs/Web/API/OfflineAudioContext/complete_event) (event)
   - : Un évènement `complete` est émis lorsque le rendu d'un {{domxref("OfflineAudioContext")}} est terminé.
 - {{domxref("OfflineAudioCompletionEvent")}}
@@ -129,7 +132,7 @@ Il est possible de traiter et exporter un graphe audio très rapidement en tâch
 
 ### Audio Workers
 
-Les Audio workers offrent la possibilité de traiter le son directement dans le contexte d'un [web worker](/fr/docs/Web/Guide/Performance/Using_web_workers). En date du 29 August 2014, ils ne sont encore implémentés par aucun navigateur. Lorsqu'ils seront implémentés, ils remplaceront {{domxref("ScriptProcessorNode")}}, et les autres fonctionnalités mentionnées dans la section [Traitement audio avec JavaScript](#Audio_processing_via_JavaScript) ci-avant.
+Les Audio workers offrent la possibilité de traiter le son directement dans le contexte d'un [web worker](/fr/docs/Web/API/Web_Workers_API/Using_web_workers). En date du 29 August 2014, ils ne sont encore implémentés par aucun navigateur. Lorsqu'ils seront implémentés, ils remplaceront {{domxref("ScriptProcessorNode")}}, et les autres fonctionnalités mentionnées dans la section [Traitement audio avec JavaScript](#audio_processing_via_javascript) ci-avant.
 
 - {{domxref("AudioWorkerNode")}}
   - : Un objet AudioWorkerNode représente un {{domxref("AudioNode")}} qui interagit avec le thread d'un worker pour générer, traiter, ou analyse le son directement.
@@ -163,14 +166,14 @@ Vous pouvez trouver différents exemples dans [le dépôt webaudio-example](http
 
 - [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Visualizations with Web Audio API](/fr/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-- [Voice-change-O-matic example](http://mdn.github.io/voice-change-o-matic/)
-- [Violent Theremin example](http://mdn.github.io/violent-theremin/)
-- [Web audio spatialisation basics](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)
-- [Mixing Positional Audio and WebGL](http://www.html5rocks.com/tutorials/webaudio/positional_audio/)
-- [Developing Game Audio with the Web Audio API](http://www.html5rocks.com/tutorials/webaudio/games/)
-- [Porting webkitAudioContext code to standards based AudioContext](/fr/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext)
+- [Voice-change-O-matic example](https://mdn.github.io/voice-change-o-matic/)
+- [Violent Theremin example](https://mdn.github.io/violent-theremin/)
+- [Web audio spatialisation basics](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Mixing Positional Audio and WebGL](https://www.html5rocks.com/tutorials/webaudio/positional_audio/)
+- [Developing Game Audio with the Web Audio API](https://www.html5rocks.com/tutorials/webaudio/games/)
+- [Porting webkitAudioContext code to standards based AudioContext](/fr/docs/Web/API/Web_Audio_API)
 - [Tones](https://github.com/bit101/tones): a simple library for playing specific tones/notes using the Web Audio API.
-- [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html) and falls back to [HTML5 Audio](http://www.whatwg.org/specs/web-apps/current-work/#the-audio-element), as well as providing other useful features.
+- [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html) and falls back to [HTML5 Audio](https://www.whatwg.org/specs/web-apps/current-work/#the-audio-element), as well as providing other useful features.
 - [Mooog](https://github.com/mattlima/mooog): jQuery-style chaining of AudioNodes, mixer-style sends/returns, and more.
 
 ### Guides
@@ -178,13 +181,13 @@ Vous pouvez trouver différents exemples dans [le dépôt webaudio-example](http
 - [Les concepts de base de la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
 - [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Visualizations with Web Audio API](/fr/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-- [Web audio spatialisation basics](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)
-- [Porting webkitAudioContext code to standards based AudioContext](/fr/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext)
+- [Web audio spatialisation basics](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Porting webkitAudioContext code to standards based AudioContext](/fr/docs/Web/API/Web_Audio_API)
 
 ### Démos
 
-- [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)
-- [Violent Theremin](http://mdn.github.io/violent-theremin/)
+- [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/)
+- [Violent Theremin](https://mdn.github.io/violent-theremin/)
 
 ### API
 

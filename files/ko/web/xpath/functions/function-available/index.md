@@ -1,12 +1,9 @@
 ---
 title: function-available
 slug: Web/XPath/Functions/function-available
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/function-available
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `function-available` 함수는 인수로 준 함수가 이용 가능한 지를 결정하고 boolean true나 false를 반환합니다.
 
@@ -27,7 +24,7 @@ Boolean `true`나 `false`.
 
 ### 정의
 
-[XPath 1.0 15](http://www.w3.org/TR/xslt#function-function-available)
+[XPath 1.0 15](https://www.w3.org/TR/xslt#function-function-available)
 
 ### Gecko 지원
 

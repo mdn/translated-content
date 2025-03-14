@@ -7,7 +7,8 @@ slug: Web/API/CanvasRenderingContext2D/lineCap
 
 La propiedad **`CanvasRenderingContext2D.lineCap`** del API Canvas 2D determina la forma usada para dibujar los puntos finales de las líneas.
 
-> **Nota:** La líneas se puede dibujar con los métodos {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}, y {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}}.
+> [!NOTE]
+> La líneas se puede dibujar con los métodos {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}, y {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}}.
 
 ## Sintaxis
 
@@ -39,13 +40,13 @@ En este ejemplo se redondean los puntos finales de una línea recta.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.moveTo(20, 20);
 ctx.lineWidth = 15;
-ctx.lineCap = 'round';
+ctx.lineCap = "round";
 ctx.lineTo(100, 100);
 ctx.stroke();
 ```
@@ -65,12 +66,12 @@ La línea de la izquiera usa la opción por defecto `"butt"`. Esta es dibujada c
 ```
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const lineCap = ['butt', 'round', 'square'];
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const lineCap = ["butt", "round", "square"];
 
 // Draw guides
-ctx.strokeStyle = '#09f';
+ctx.strokeStyle = "#09f";
 ctx.beginPath();
 ctx.moveTo(10, 10);
 ctx.lineTo(140, 10);
@@ -79,7 +80,7 @@ ctx.lineTo(140, 140);
 ctx.stroke();
 
 // Draw lines
-ctx.strokeStyle = 'black';
+ctx.strokeStyle = "black";
 for (let i = 0; i < lineCap.length; i++) {
   ctx.lineWidth = 15;
   ctx.lineCap = lineCap[i];
@@ -90,19 +91,15 @@ for (let i = 0; i < lineCap.length; i++) {
 }
 ```
 
-{{EmbedLiveSample("Comparison_of_line_caps", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}
+{{EmbedLiveSample("Comparison_of_line_caps", "180", "180", "canvas_linecap.png")}}
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad de navegador.
+## Compatibilidad con navegadores
 
-{{Compat("api.CanvasRenderingContext2D.lineCap")}}
-
-### WebKit/Blink-specific notes
-
-- En WebKit- y navegadores basados en Blink, el método no estandard y obsoleto `ctx.setLineCap()` es implementado ademas de esta propiedad.
+{{Compat}}
 
 ## Ver también
 

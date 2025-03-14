@@ -40,7 +40,12 @@ slug: Web/API/DataTransfer/dropEffect
     この要素を選択し、ドロップゾーンにドラッグして放すと、要素が移動します。
   </p>
 </div>
-<div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">ドロップゾーン</div>
+<div
+  id="target"
+  ondrop="drop_handler(event);"
+  ondragover="dragover_handler(event);">
+  ドロップゾーン
+</div>
 ```
 
 ### CSS
@@ -65,7 +70,12 @@ div {
 
 ```js
 function dragstart_handler(ev) {
-  console.log("dragStart: dropEffect = " + ev.dataTransfer.dropEffect + " ; effectAllowed = " + ev.dataTransfer.effectAllowed);
+  console.log(
+    "dragStart: dropEffect = " +
+      ev.dataTransfer.dropEffect +
+      " ; effectAllowed = " +
+      ev.dataTransfer.effectAllowed,
+  );
 
   // この要素の id をドラッグ ペイロードに追加し、ドロップ ハンドラーが
   // どの要素をツリーに追加するかを知ることができるようにします。
@@ -74,7 +84,12 @@ function dragstart_handler(ev) {
 }
 
 function drop_handler(ev) {
-  console.log("drop: dropEffect = " + ev.dataTransfer.dropEffect + " ; effectAllowed = " + ev.dataTransfer.effectAllowed);
+  console.log(
+    "drop: dropEffect = " +
+      ev.dataTransfer.dropEffect +
+      " ; effectAllowed = " +
+      ev.dataTransfer.effectAllowed,
+  );
   ev.preventDefault();
 
   // ターゲットの ID を取得し、移動した要素をターゲットの DOM に追加します。
@@ -83,10 +98,15 @@ function drop_handler(ev) {
 }
 
 function dragover_handler(ev) {
-  console.log("dragOver: dropEffect = " + ev.dataTransfer.dropEffect + " ; effectAllowed = " + ev.dataTransfer.effectAllowed);
+  console.log(
+    "dragOver: dropEffect = " +
+      ev.dataTransfer.dropEffect +
+      " ; effectAllowed = " +
+      ev.dataTransfer.effectAllowed,
+  );
   ev.preventDefault();
   // dropEffect を移動するように設定します。
-  ev.dataTransfer.dropEffect = "move"
+  ev.dataTransfer.dropEffect = "move";
 }
 ```
 
@@ -107,5 +127,5 @@ function dragover_handler(ev) {
 - [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [複数の項目のドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [複数の項目のドラッグ＆ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

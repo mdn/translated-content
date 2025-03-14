@@ -1,21 +1,28 @@
 ---
 title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
-tags:
-  - Array
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/pop
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/pop
 ---
 
 {{JSRef}}
 
 El método **`pop()`** elimina el **último** elemento de un array y lo devuelve. Este método cambia la longitud del array.
 
-{{EmbedInteractiveExample("pages/js/array-pop.html")}}
+{{InteractiveExample("JavaScript Demo: Array.pop()")}}
+
+```js interactive-example
+const plants = ["broccoli", "cauliflower", "cabbage", "kale", "tomato"];
+
+console.log(plants.pop());
+// Expected output: "tomato"
+
+console.log(plants);
+// Expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+
+plants.pop();
+
+console.log(plants);
+// Expected output: Array ["broccoli", "cauliflower", "cabbage"]
+```
 
 ## Sintaxis
 
@@ -42,7 +49,7 @@ Si se llama a `pop()` en un array vacío, devuelve {{jsxref("undefined")}}.
 El siguiente código crea el array `myFish`, que contiene cuatro elementos, a continuación, elimina su último elemento.
 
 ```js
-var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+var myFish = ["angel", "clown", "mandarin", "sturgeon"];
 
 var popped = myFish.pop();
 
@@ -57,7 +64,7 @@ console.log(popped); // 'sturgeon'
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.pop")}}
+{{Compat}}
 
 ## Vea también
 

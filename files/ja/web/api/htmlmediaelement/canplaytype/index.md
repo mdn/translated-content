@@ -1,17 +1,18 @@
 ---
-title: HTMLMediaElement.canPlayType()
+title: "HTMLMediaElement: canPlayType() メソッド"
+short-title: canPlayType()
 slug: Web/API/HTMLMediaElement/canPlayType
+l10n:
+  sourceCommit: 2b554506d84d016d3ddf612c593bd8315833c64d
 ---
 
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLMediaElement")}} の **`canPlayType()`** メソッドは、現在のブラウザーが指定された MIME タイプのメディアを再生できるかどうかを報告します。
 
-> **メモ:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)では利用できません。</div>
-
 ## 構文
 
-```js
+```js-nolint
 canPlayType(type)
 ```
 
@@ -35,8 +36,8 @@ canPlayType(type)
 ## 例
 
 ```js
-let obj = document.createElement('video');
-console.log(obj.canPlayType('video/mp4')); // "maybe"
+let obj = document.createElement("video");
+console.log(obj.canPlayType("video/mp4")); // "maybe"
 ```
 
 ## 仕様書
@@ -49,8 +50,8 @@ console.log(obj.canPlayType('video/mp4')); // "maybe"
 
 ## 関連情報
 
-- 定義している {{domxref("HTMLMediaElement")}} インターフェイス
-- {{domxref("MediaCapabilities")}} （メディア能力 API）
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.canPlayType()` メソッドを定義しているインターフェイス
+- {{domxref("MediaCapabilities")}}
 - [ウェブコンテンツのメディア対応に関する問題への対応](/ja/docs/Web/Media/Formats/Support_issues)
-- [ウェブ上のメディア種別と形式のガイド](/ja/docs/Web/Media/Formats)
-- [`codecs` 引数](/ja/docs/Web/Media/Formats/codecs_parameter)
+- [メディア種別と形式のガイド](/ja/docs/Web/Media/Formats)
+- [よくあるメディア種別のコーデック](/ja/docs/Web/Media/Formats/codecs_parameter)

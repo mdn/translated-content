@@ -1,11 +1,9 @@
 ---
 title: attributeType
 slug: Web/SVG/Attribute/attributeType
-tags:
-  - SVG
-  - SVG атрибуты
-translation_of: Web/SVG/Attribute/attributeType
 ---
+
+{{SVGRef}}
 
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
@@ -13,11 +11,11 @@ translation_of: Web/SVG/Attribute/attributeType
 
 ## Контекст использования
 
-| Категория            | Целевые атрибуты анимации                                                             |
-| -------------------- | ------------------------------------------------------------------------------------- |
-| Значение             | CSS \| XML \| **auto**                                                                |
-| Анимируемый          | Нет                                                                                   |
-| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#AttributeTypeAttribute) |
+| Категория            | Целевые атрибуты анимации                                                              |
+| -------------------- | -------------------------------------------------------------------------------------- |
+| Значение             | CSS \| XML \| **auto**                                                                 |
+| Анимируемый          | Нет                                                                                    |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#AttributeTypeAttribute) |
 
 Этот атрибут может принимать одно из следующих значений:
 

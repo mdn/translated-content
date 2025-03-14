@@ -1,23 +1,39 @@
 ---
-title: '<del> : l''élément de texte supprimé'
+title: "<del> : l'élément de texte supprimé"
 slug: Web/HTML/Element/del
-tags:
-  - Deleted Text
-  - Element
-  - HTML
-  - HTML edits
-  - Reference
-  - Web
-  - del
-translation_of: Web/HTML/Element/del
-browser-compat: html.elements.del
 ---
 
 {{HTMLSidebar}}
 
 L'élément HTML **`<del>`** représente une portion de texte ayant été supprimée d'un document. Cet élément est souvent (mais pas nécessairement) affiché rayé. L'élément [`<ins>`](/fr/docs/Web/HTML/Element/ins) est quant à lui utilisé pour représenter des portions de texte ajoutées.
 
-{{EmbedInteractiveExample("pages/tabbed/del.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;del&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<blockquote>
+  There is <del>nothing</del> <ins>no code</ins> either good or bad, but
+  <del>thinking</del> <ins>running it</ins> makes it so.
+</blockquote>
+```
+
+```css interactive-example
+del {
+  text-decoration: line-through;
+  background-color: #fbb;
+  color: #555;
+}
+
+ins {
+  text-decoration: none;
+  background-color: #d4fcbc;
+}
+
+blockquote {
+  padding-left: 15px;
+  border-left: 3px solid #d7d7db;
+  font-size: 1rem;
+}
+```
 
 Cet élément est souvent (mais pas nécessairement) rendu en appliquant un style barré au texte.
 

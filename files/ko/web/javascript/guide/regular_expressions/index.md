@@ -1,15 +1,6 @@
 ---
 title: 정규 표현식
-slug: Web/JavaScript/Guide/Regular_Expressions
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-  - Reference
-  - RegExp
-  - Regular Expressions
-  - 정규식
-translation_of: Web/JavaScript/Guide/Regular_Expressions
+slug: Web/JavaScript/Guide/Regular_expressions
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
@@ -23,7 +14,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 - 정규 표현식 리터럴. 다음과 같이 슬래시로 패턴을 감싸서 작성합니다.
 
   ```js
-  const re = /ab+c/
+  const re = /ab+c/;
   ```
 
   정규 표현식 리터럴은 스크립트를 불러올 때 컴파일되므로, 바뀔 일이 없는 패턴의 경우 리터럴을 사용하면 성능이 향상될 수 있습니다.
@@ -31,14 +22,14 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 - {{jsxref("RegExp")}} 객체의 생성자 호출.
 
   ```js
-  const re = new RegExp('ab+c')
+  const re = new RegExp("ab+c");
   ```
 
   생성자 함수를 사용하면 정규 표현식이 런타임에 컴파일됩니다. 바뀔 수 있는 패턴이나, 사용자 입력 등 외부 출처에서 가져오는 패턴의 경우 이렇게 사용하세요.
 
 ## 정규 표현식 패턴 작성하기
 
-정규 표현식 패턴은 `/abc/`처럼 단순한 문자로 구성하거나, `/ab+c/`와 `/Chapter (\d+)\.\d*/`처럼 단순한 문자와 특수 문자의 조합으로 구성할 수도 있습니다. 특히 `(\d+)`에 나타난 괄호는 정규 표현식에서 기억 장치처럼 쓰여서, 괄호의 안쪽 패턴과 일치한 부분을 나중에 사용할 수 있도록 기억합니다. [그룹 사용하기](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges#using_groups)에서 더 알아보세요.
+정규 표현식 패턴은 `/abc/`처럼 단순한 문자로 구성하거나, `/ab+c/`와 `/Chapter (\d+)\.\d*/`처럼 단순한 문자와 특수 문자의 조합으로 구성할 수도 있습니다. 특히 `(\d+)`에 나타난 괄호는 정규 표현식에서 기억 장치처럼 쓰여서, 괄호의 안쪽 패턴과 일치한 부분을 나중에 사용할 수 있도록 기억합니다. [그룹 사용하기](/ko/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#using_groups)에서 더 알아보세요.
 
 ### 단순 패턴 사용하기
 
@@ -54,11 +45,11 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
   - : 어서션에는 줄이나 단어의 시작과 끝을 나타내는 경계와, 일치가 가능한 방법을 나타내는 패턴(전방탐색, 후방탐색, 조건 표현식 등)이 포함됩니다.
 - [문자 클래스](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
   - : 글자와 숫자처럼 다른 유형의 문자를 구분합니다.
-- [그룹과 범위](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
+- [그룹과 범위](/ko/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
   - : 표현 문자의 그룹과 범위를 나타냅니다.
 - [수량자](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
   - : 일치할 문자나 표현이 반복되어야 할 횟수를 나타냅니다.
-- [유니코드 속성 이스케이프](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
+- [유니코드 속성 이스케이프](/ko/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
   - : 대/소문자, 수학 기호, 문장 부호처럼, 유니코드 문자 속성에 따라 문자를 구분합니다.
 
 아래 표는 정규 표현식에서 사용하는 모든 특수문자의 목록입니다.
@@ -151,7 +142,8 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
   </tbody>
 </table>
 
-> **참고:** 위 문서의 일부만 발췌해 정리해놓은, [더 큰 치트 시트도 있습니다](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet).
+> [!NOTE]
+> 위 문서의 일부만 발췌해 정리해놓은, [더 큰 치트 시트도 있습니다](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet).
 
 ### 이스케이핑
 
@@ -167,7 +159,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
 ```js
 function escapeRegExp(string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') // $&은 일치한 문자열 전체를 의미
+  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $&은 일치한 문자열 전체를 의미
 }
 ```
 
@@ -177,7 +169,7 @@ function escapeRegExp(string) {
 
 ### 괄호 사용하기
 
-정규 표현식의 아무 부분이나 괄호로 감싸게 되면, 그 부분과 일치하는 부분 문자열을 기억하게 됩니다. 기억한 부분 문자열은 불러와서 다시 사용할 수 있습니다. [그룹과 범위](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges#그룹_사용하기) 문서에서 자세히 알아보세요.
+정규 표현식의 아무 부분이나 괄호로 감싸게 되면, 그 부분과 일치하는 부분 문자열을 기억하게 됩니다. 기억한 부분 문자열은 불러와서 다시 사용할 수 있습니다. [그룹과 범위](/ko/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#%ea%b7%b8%eb%a3%b9_%ec%82%ac%ec%9a%a9%ed%95%98%ea%b8%b0) 문서에서 자세히 알아보세요.
 
 ## JavaScript에서 정규 표현식 사용하기
 
@@ -200,13 +192,13 @@ function escapeRegExp(string) {
 
 ```js
 const myRe = /d(b+)d/g;
-const myArray = myRe.exec('cdbbdbsbz');
+const myArray = myRe.exec("cdbbdbsbz");
 ```
 
 만약 정규 표현식 객체의 속성에 접근할 필요가 없으면 아래와 같이 짧게 쓸 수도 있습니다.
 
 ```js
-const myArray = /d(b+)d/g.exec('cdbbdbsbz');
+const myArray = /d(b+)d/g.exec("cdbbdbsbz");
 // 'cdbbdbsbz'.match(/d(b+)d/g); 와 비슷하지만,
 // 'cdbbdbsbz'.match(/d(b+)d/g)의 반환 값은 [ 'dbbd' ]인 반면
 // /d(b+)d/g.exec('cdbbdbsbz')의 반환 값은 [ 'dbbd', 'bb', index: 1, input: 'cdbbdbsbz' ]
@@ -217,8 +209,8 @@ const myArray = /d(b+)d/g.exec('cdbbdbsbz');
 정규 표현식을 문자열에서 만들고 싶으면 아래처럼 사용할 수도 있습니다.
 
 ```js
-const myRe = new RegExp('d(b+)d', 'g');
-const myArray = myRe.exec('cdbbdbsbz');
+const myRe = new RegExp("d(b+)d", "g");
+const myArray = myRe.exec("cdbbdbsbz");
 ```
 
 아래의 표는 위 스크립트에서 일치를 성공한 후, 반환하는 배열과 업데이트되는 정규 표현식 객체의 속성입니다.
@@ -280,7 +272,7 @@ const myArray = myRe.exec('cdbbdbsbz');
 
 ```js
 const myRe = /d(b+)d/g;
-const myArray = myRe.exec('cdbbdbsbz');
+const myArray = myRe.exec("cdbbdbsbz");
 console.log(`lastIndex의 값은 ${myRe.lastIndex}`);
 
 // "lastIndex의 값은 5"
@@ -289,7 +281,7 @@ console.log(`lastIndex의 값은 ${myRe.lastIndex}`);
 그러나 위의 코드 대신 아래 코드를 사용하게 되면...
 
 ```js
-const myArray = /d(b+)d/g.exec('cdbbdbsbz');
+const myArray = /d(b+)d/g.exec("cdbbdbsbz");
 console.log(`lastIndex의 값은 ${/d(b+)d/g.lastIndex}`);
 
 // "lastIndex의 값은 0"
@@ -320,7 +312,7 @@ const re = /pattern/flags;
 생성자를 사용할 경우 이렇게 지정합니다.
 
 ```js
-const re = new RegExp('pattern', 'flags');
+const re = new RegExp("pattern", "flags");
 ```
 
 플래그는 정규식과 완전히 합쳐지므로 나중에 추가하거나 제거할 수 없습니다.
@@ -329,7 +321,7 @@ const re = new RegExp('pattern', 'flags');
 
 ```js
 const re = /\w+\s/g;
-const str = 'fee fi fo fum';
+const str = "fee fi fo fum";
 const myArray = str.match(re);
 console.log(myArray);
 
@@ -345,7 +337,7 @@ const re = /\w+\s/g;
 이렇게 생성자를 사용하도록 바꿀 수도 있습니다.
 
 ```js
-const re = new RegExp('\\w+\\s', 'g');
+const re = new RegExp("\\w+\\s", "g");
 ```
 
 두 구문 모두 동일한 결과를 낳습니다.
@@ -357,27 +349,28 @@ const re = new RegExp('\\w+\\s', 'g');
 {{jsxref("RegExp.prototype.exec()")}} 메서드와 `g` 플래그를 사용하면, 일치한 부분 문자열들과 각각의 인덱스를 하나씩 순차적으로 반환합니다.
 
 ```js
-const str = 'fee fi fo fum'
-const re = /\w+\s/g
+const str = "fee fi fo fum";
+const re = /\w+\s/g;
 
-console.log(re.exec(str)) // ["fee ", index: 0, input: "fee fi fo fum"]
-console.log(re.exec(str)) // ["fi ", index: 4, input: "fee fi fo fum"]
-console.log(re.exec(str)) // ["fo ", index: 7, input: "fee fi fo fum"]
-console.log(re.exec(str)) // null
+console.log(re.exec(str)); // ["fee ", index: 0, input: "fee fi fo fum"]
+console.log(re.exec(str)); // ["fi ", index: 4, input: "fee fi fo fum"]
+console.log(re.exec(str)); // ["fo ", index: 7, input: "fee fi fo fum"]
+console.log(re.exec(str)); // null
 ```
 
 반면, {{jsxref("String.prototype.match()")}} 메서드는 모든 일치를 한 번에 반환하지만, 각각의 인덱스는 포함하지 않습니다.
 
 ```js
-console.log(str.match(re)) // ["fee ", "fi ", "fo "]
+console.log(str.match(re)); // ["fee ", "fi ", "fo "]
 ```
 
 ## 예제
 
-> **참고:** 다음 문서에서도 정규 표현식의 사용 예제를 볼 수 있습니다.
+> [!NOTE]
+> 다음 문서에서도 정규 표현식의 사용 예제를 볼 수 있습니다.
 >
 > - {{jsxref("RegExp.exec", "exec()")}}, {{jsxref("RegExp.test", "test()")}}, {{jsxref("String.match", "match()")}}, {{jsxref("String.matchAll", "matchAll()")}}, {{jsxref("String.search", "search()")}}, {{jsxref("String.replace", "replace()")}}, {{jsxref("String.split", "split()")}} 메서드 참조
-> - 이 안내서의 하위 문서: [문자 클래스](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [어서션](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions), [그룹과 범위](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges), [수량자](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers), [유니코드 속성 이스케이프](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
+> - 이 안내서의 하위 문서: [문자 클래스](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [어서션](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions), [그룹과 범위](/ko/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences), [수량자](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers), [유니코드 속성 이스케이프](/ko/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
 
 ### 정규 표현식 특수 문자를 사용한 입력 값 검증
 
@@ -411,26 +404,26 @@ console.log(str.match(re)) // ["fee ", "fi ", "fo "]
 #### JavaScript
 
 ```js
-const form = document.querySelector('#form')
-const input = document.querySelector('#phone')
-const output = document.querySelector('#output')
+const form = document.querySelector("#form");
+const input = document.querySelector("#phone");
+const output = document.querySelector("#output");
 
-const re = /^(?:\d{3}|\(\d{3}\))([-\/\.])\d{4}\1\d{4}$/
+const re = /^(?:\d{3}|\(\d{3}\))([-\/\.])\d{4}\1\d{4}$/;
 
 function testInfo(phoneInput) {
-  const ok = re.exec(phoneInput.value)
+  const ok = re.exec(phoneInput.value);
 
   if (!ok) {
-    output.textContent = `형식에 맞지 않는 전화번호입니다. (${phoneInput.value})`
+    output.textContent = `형식에 맞지 않는 전화번호입니다. (${phoneInput.value})`;
   } else {
-    output.textContent = `감사합니다. 전화번호는 ${ok[0]} 입니다.`
+    output.textContent = `감사합니다. 전화번호는 ${ok[0]} 입니다.`;
   }
 }
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault()
-  testInfo(input)
-})
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  testInfo(input);
+});
 ```
 
 #### 결과

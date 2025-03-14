@@ -1,18 +1,16 @@
 ---
 title: SVGGraphicsElement
 slug: Web/API/SVGGraphicsElement
-tags:
-  - API
-  - SVG
-translation_of: Web/API/SVGGraphicsElement
 ---
+
 {{APIRef("SVG")}}
 
 Интерфейс **`SVGGraphicsElement`** представляет элементы SVG, основной целью которых является прямое отображение графики в группу.
 
 {{InheritanceDiagram(600, 120)}}
 
-> **Примечание:** Этот интерфейс был введён в SVG 2 и заменяет интерфейсы {{domxref("SVGLocatable")}} и {{domxref("SVGTransformable")}} из SVG 1.1.
+> [!NOTE]
+> Этот интерфейс был введён в SVG 2 и заменяет интерфейсы {{domxref("SVGLocatable")}} и {{domxref("SVGTransformable")}} из SVG 1.1.
 
 ## Свойства
 
@@ -36,6 +34,6 @@ _Этот элемент наследует методы своего родит
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

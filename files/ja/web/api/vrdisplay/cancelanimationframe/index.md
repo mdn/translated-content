@@ -1,19 +1,19 @@
 ---
 title: VRDisplay.cancelAnimationFrame()
 slug: Web/API/VRDisplay/cancelAnimationFrame
-original_slug: Web/API/VRDevice/cancelAnimationFrame
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`cancelAnimationFrame()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、 {{domxref("Window.cancelAnimationFrame")}} の特別な実装であり、 {{domxref("VRDisplay.requestAnimationFrame()")}} で登録したコールバックを登録解除します．
 
-> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!NOTE]
+> このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ## 構文
 
 ```js
-cancelAnimationFrame(handle)
+cancelAnimationFrame(handle);
 ```
 
 ### 引数
@@ -86,7 +86,8 @@ function drawVRScene() {
 }
 ```
 
-> **メモ:** 完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で見ることができます。
+> [!NOTE]
+> 完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で見ることができます。
 
 ## 仕様書
 
@@ -100,5 +101,4 @@ function drawVRScene() {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

@@ -1,33 +1,62 @@
 ---
 title: 504 Gateway Timeout
 slug: Web/HTTP/Status/504
+l10n:
+  sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
 ---
 
 {{HTTPSidebar}}
 
-HyperText Transfer Protocol (HTTP) **`504 Gateway Timeout`** サーバーエラーレスポンスコードは、サーバーがゲートウェイまたはプロキシとして機能しているときに、リクエストを完了するために必要な上流のサーバーからのレスポンスが時間内に得られなかったことを示します。
+HTTP の **`504 Gateway Timeout`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Status#サーバーエラーレスポンス)ステータスコードで、 コードは、サーバーがゲートウェイまたは{{Glossary("Proxy_server", "プロキシー")}}として動作している際に、リクエストを完了するために上流のサーバーからタイムリーにレスポンスを受け取れなかったことを示します。
+これは {{HTTPStatus("502", "502 Bad Gateway")}} と似ていますが、`504` ステータスの場合、プロキシーまたはゲートウェイが一定時間内に元のサーバーから HTTP レスポンスを受け取れなかったという点が異なります。
 
-> **メモ:** [ゲートウェイ](https://ja.wikipedia.org/wiki/ゲートウェイ)はネットワーク内の様々なものを指す可能性があり、 504 エラーはふつう、自分で修正できるものではありませんが、アクセスしようとしているウェブサーバーやプロキシで修正する必要があります。
+504 エラーの原因は数多くあり、このような問題を修正するには、サーバー管理者の調査と修正が要求される可能性が高いです。または、サイトが後日再び機能するようになるかもしれません。
+例外は、クライアントのネットワークエラーです。特に、サービスが他の来訪者に対してはうまく動作しており、クライアントが VPN やその他の独自のネットワーク設定を使用している場合です。
+このような場合、クライアントはネットワーク設定、ファイアウォール設定、プロキシー設定、DNS 構成などを確認する必要があります。
 
 ## ステータス
 
-```
+```http
 504 Gateway Timeout
+```
+
+## 例
+
+### 504 ゲートウェイタイムアウトレスポンス
+
+以下のリクエストはウェブページを取得しようとしますが、`504` レスポンスが返されます。
+レスポンス本体には、サーバーの状態が記述されたページと来訪者向けのサポートページへのリンクが含まれています。
+
+```http
+GET /highlights HTTP/1.1
+Host: example.com
+User-Agent: curl/8.6.0
+Accept: */*
+```
+
+```http
+HTTP/1.1 504 Gateway Timeout
+Content-Type: text/html;
+Content-Length: 123
+
+<!doctype html>
+<html lang="en">
+<head>
+  <title>504 Gateway Timeout</title>
+</head>
+<body>
+  <h1>Gateway timeout</h1>
+  <p>The server did not respond in time. Please try again later.</p>
+  <p>If this problem persists, please <a href="https://example.com/support">contact support</a>.</p>
+</body>
+</html>
 ```
 
 ## 仕様書
 
-| 仕様書                                                           | 題名                                                          |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "504 Gateway Timeout" , "6.6.5")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
-
-## ブラウザーの互換性
-
-以下に示す情報は、 MDN の GitHub から取得したものです。 (<https://github.com/mdn/browser-compat-data>).
-
-{{Compat("http.status.504")}}
+{{Specifications}}
 
 ## 関連情報
 
-- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
-- {{HTTPStatus(502)}}
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- {{HTTPStatus("502", "502 Bad Gateway")}}

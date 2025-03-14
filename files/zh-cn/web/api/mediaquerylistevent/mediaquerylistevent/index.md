@@ -9,7 +9,7 @@ slug: Web/API/MediaQueryListEvent/MediaQueryListEvent
 
 ## 语法
 
-```js
+```js-nolint
 new MediaQueryListEvent(type)
 new MediaQueryListEvent(type, options)
 ```
@@ -32,10 +32,13 @@ new MediaQueryListEvent(type, options)
 ## 示例
 
 ```js
-var media = '(max-width: 600px)';
+var media = "(max-width: 600px)";
 var matches = true;
 
-var myMediaQueryListEvent = new MediaQueryListEvent("change", {media, matches});
+var myMediaQueryListEvent = new MediaQueryListEvent("change", {
+  media,
+  matches,
+});
 ```
 
 ## 规范
@@ -48,8 +51,8 @@ var myMediaQueryListEvent = new MediaQueryListEvent("change", {media, matches});
 
 ## 参见
 
-- [媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [在代码中使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [在代码中使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

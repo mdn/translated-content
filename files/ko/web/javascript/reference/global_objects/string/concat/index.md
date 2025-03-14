@@ -1,21 +1,24 @@
 ---
 title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/concat
-browser-compat: javascript.builtins.String.concat
 ---
 
 {{JSRef}}
 
 **`concat()`** 메서드는 매개변수로 전달된 모든 문자열을 호출 문자열에 붙인 새로운 문자열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/string-concat.html")}}
+{{InteractiveExample("JavaScript Demo: String.concat()")}}
+
+```js interactive-example
+const str1 = "Hello";
+const str2 = "World";
+
+console.log(str1.concat(" ", str2));
+// Expected output: "Hello World"
+
+console.log(str2.concat(", ", str1));
+// Expected output: "World, Hello"
+```
 
 ## 구문
 
@@ -43,11 +46,11 @@ str.concat(string2, string3[, ..., stringN])
 아래 예제에서는 문자열을 결합하여 새로운 문자열을 만듭니다.
 
 ```js
-var hello = 'Hello, ';
-console.log(hello.concat('Kevin', '. Have a nice day.'));
+var hello = "Hello, ";
+console.log(hello.concat("Kevin", ". Have a nice day."));
 /* Hello, Kevin. Have a nice day. */
 
-var greetList = ['Hello', ' ', 'Venkat', '!'];
+var greetList = ["Hello", " ", "Venkat", "!"];
 "".concat(...greetList); // "Hello Venkat!"
 
 "".concat({}); // [object Object]

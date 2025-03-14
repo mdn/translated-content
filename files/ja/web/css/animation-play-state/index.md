@@ -1,13 +1,63 @@
 ---
 title: animation-play-state
 slug: Web/CSS/animation-play-state
+l10n:
+  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
 {{CSSRef}}
 
 **`animation-play-state`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションが実行中か停止中かを設定します。
 
-{{EmbedInteractiveExample("pages/css/animation-play-state.html")}}
+{{InteractiveExample("CSS Demo: animation-play-state")}}
+
+```css interactive-example-choice
+animation-play-state: paused;
+```
+
+```css interactive-example-choice
+animation-play-state: running;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div class="animating" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #1766aa;
+  color: white;
+  margin: auto;
+  margin-left: 0;
+  border: 5px solid #333;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.animating {
+  animation-name: slide;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes slide {
+  from {
+    background-color: orange;
+    color: black;
+    margin-left: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-left: 80%;
+  }
+}
+```
 
 停止したアニメーションを再開すると、アニメーションの流れの最初からではなく、停止した位置からアニメーションが始まります。
 
@@ -25,6 +75,7 @@ animation-play-state: paused, running, running;
 animation-play-state: inherit;
 animation-play-state: initial;
 animation-play-state: revert;
+animation-play-state: revert-layer;
 animation-play-state: unset;
 ```
 
@@ -35,7 +86,7 @@ animation-play-state: unset;
 - `paused`
   - : **アニメーション**が現在**停止中**です。
 
-> **メモ:** `animation-*` プロパティにコンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} プロパティで指定したアニメーションに割り当てられますが、いくつあるかによって異なる方法で割り当てられます。詳しくは、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values) を参照してください。
+> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
 
 ## 公式定義
 
@@ -47,7 +98,9 @@ animation-play-state: unset;
 
 ## 例
 
-### 停止中のアニメーション
+### アニメーションの停止
+
+このアニメーションは停止していますが、ポインターを当てると実行されます。
 
 #### HTML
 
@@ -65,7 +118,12 @@ animation-play-state: unset;
   height: 100px;
   animation-name: rotate;
   animation-duration: 0.7s;
+  animation-iteration-count: infinite;
   animation-play-state: paused;
+}
+
+.box:hover {
+  animation-play-state: running;
 }
 
 @keyframes rotate {
@@ -80,9 +138,11 @@ animation-play-state: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Examples","100%","250")}}
+矩形にポインターを当てるとアニメーションが始まります。
 
-例は [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)を参照してください。
+{{EmbedLiveSample("Pausing an animation","100%","250")}}
+
+例については [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
 
 ## 仕様書
 
@@ -94,5 +154,6 @@ animation-play-state: unset;
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
-- JavaScript の {{domxref("AnimationEvent")}} API
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- JavaScript {{domxref("AnimationEvent")}} API
+- その他のアニメーション関連プロパティ: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}

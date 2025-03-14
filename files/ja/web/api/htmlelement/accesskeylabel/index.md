@@ -1,6 +1,9 @@
 ---
-title: HTMLElement.accessKeyLabel
+title: "HTMLElement: accessKeyLabel プロパティ"
+short-title: accessKeyLabel
 slug: Web/API/HTMLElement/accessKeyLabel
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -9,7 +12,7 @@ slug: Web/API/HTMLElement/accessKeyLabel
 
 ## 構文
 
-```js
+```js-nolint
 label = element.accessKeyLabel
 ```
 
@@ -18,21 +21,23 @@ label = element.accessKeyLabel
 ### JavaScript
 
 ```js
-var btn = document.getElementById('btn1');
-var shortcutLabel = btn.accessKeyLabel || btn.accessKey;
-btn.title += ' [' + shortcutLabel.toUpperCase() + ']';
+const btn = document.getElementById("btn1");
+const shortcutLabel = btn.accessKeyLabel || btn.accessKey;
+btn.title += ` [${shortcutLabel.toUpperCase()}]`;
 
-btn.onclick = function () {
-  var feedback = document.createElement('output');
-  feedback.textContent = '押されました';
-  btn.insertAdjacentElement('afterend', feedback);
+btn.onclick = () => {
+  const feedback = document.createElement("output");
+  feedback.textContent = "Pressed!";
+  btn.insertAdjacentElement("afterend", feedback);
 };
 ```
 
 ### HTML
 
 ```html
-<button accesskey="h" title="キャプション" id="btn1">マウスを当ててください</button>
+<button accesskey="h" title="キャプション" id="btn1">
+  マウスを当ててください
+</button>
 ```
 
 ### 結果

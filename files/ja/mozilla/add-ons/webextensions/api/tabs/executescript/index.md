@@ -3,18 +3,18 @@ title: tabs.executeScript()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 JavaScript のコードをページに挿入します。
 
-コードを挿入できるページの URL は、[マッチパターン](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) により指定できます。 つまり、URL の scheme 部は、"http", "https", "file", "ftp" のいずれかでなければなりません。そして、その URL に対する明示的な [host パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)、または [activeTab パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)が必要です。
+コードを挿入できるページの URL は、[マッチパターン](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) により指定できます。 つまり、URL の scheme 部は、"http", "https", "file", "ftp" のいずれかでなければなりません。そして、その URL に対する明示的な [host パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)、または [activeTab パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission)が必要です。
 
 また、自らの拡張機能パッケージに含まれるページに対してであれば、次の方法でコードを挿入することも可能です。
 
 ```js
-browser.tabs.create({url: "/my-page.html"}).then(() => {
+browser.tabs.create({ url: "/my-page.html" }).then(() => {
   browser.tabs.executeScript({
-    code: `console.log('location:', window.location.href);`
+    code: `console.log('location:', window.location.href);`,
   });
 });
 ```
@@ -31,9 +31,9 @@ browser.tabs.create({url: "/my-page.html"}).then(() => {
 
 ```js
 var executing = browser.tabs.executeScript(
-  tabId,                 // optional integer
-  details                // object
-)
+  tabId, // optional integer
+  details, // object
+);
 ```
 
 ### 引数
@@ -61,13 +61,14 @@ var executing = browser.tabs.executeScript(
 
 オブジェクト配列を使って fulfilled 状態にされる [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) です。それぞれのオブジェクトは、フレームに挿入されたスクリプトの結果を表します。
 
-スクリプトの結果とは最後に評価された文のことです。これは、[Web コンソール](/ja/docs/Tools/Web_Console)で実行されたスクリプトの出力 (結果であって、`console.log()` の出力のことではありません) に似ています。例えば、次のようなスクリプトを挿入したとします。
+スクリプトの結果とは最後に評価された文のことです。これは、[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)で実行されたスクリプトの出力 (結果であって、`console.log()` の出力のことではありません) に似ています。例えば、次のようなスクリプトを挿入したとします。
 
 ```js
-var foo='my result';foo;
+var foo = "my result";
+foo;
 ```
 
-この場合、結果配列には、文字列 "`my result`" が含まれます。結果は、[structured clone](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) が可能でなければなりません。最後の文を [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) にすることもできますが、[webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript) ライブラリではサポートされていません。
+この場合、結果配列には、文字列 "`my result`" が含まれます。結果は、[構造化複製](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)が可能でなければなりません。最後の文を [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) にすることもできますが、[webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript) ライブラリーではサポートされていません。
 
 エラーが発生した場合、Promise はエラーメッセージを使って rejected 状態にされます。
 
@@ -87,7 +88,7 @@ function onError(error) {
 var makeItGreen = 'document.body.style.border = "5px solid green"';
 
 var executing = browser.tabs.executeScript({
-  code: makeItGreen
+  code: makeItGreen,
 });
 executing.then(onExecuted, onError);
 ```
@@ -105,7 +106,7 @@ function onError(error) {
 
 var executing = browser.tabs.executeScript({
   file: "/content-script.js",
-  allFrames: true
+  allFrames: true,
 });
 executing.then(onExecuted, onError);
 ```
@@ -121,9 +122,8 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var executing = browser.tabs.executeScript(
-  2, {
-    file: "/content-script.js"
+var executing = browser.tabs.executeScript(2, {
+  file: "/content-script.js",
 });
 executing.then(onExecuted, onError);
 ```
@@ -132,11 +132,13 @@ executing.then(onExecuted, onError);
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.tabs.executeScript")}}
+{{Compat}}
 
-> **メモ:** この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) API に基づいています。このドキュメントは [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) における Chromium のコードに基づいています。
+> [!NOTE]
+> この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) API に基づいています。このドキュメントは [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) における Chromium のコードに基づいています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -163,4 +165,4 @@ executing.then(onExecuted, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

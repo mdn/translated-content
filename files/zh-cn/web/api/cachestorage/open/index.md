@@ -3,50 +3,53 @@ title: CacheStorage.open()
 slug: Web/API/CacheStorage/open
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-{{domxref("CacheStorage")}} 接口的 **`open()`** 方法返回一个 resolve 为匹配 `cacheName` 的 {{domxref("Cache")}} 对象的 {{jsxref("Promise")}} .
+{{domxref("CacheStorage")}} 接口的 **`open()`** 方法返回一个兑现为匹配 `cacheName` 的 {{domxref("Cache")}} 对象的 {{jsxref("Promise")}}。
 
-> **备注：** 如果指定的 {{domxref("Cache")}} 不存在，则使用该 `cacheName` 创建一个新的 cache，并返回一个 resolve 为该新 {{domxref("Cache")}} 对象的{{jsxref("Promise")}}.
+你可以通过窗口的 {{domxref("Window.caches")}} 属性或 worker 的 {{domxref("WorkerGlobalScope.caches")}} 属性访问 `CacheStorage`。
+
+> [!NOTE]
+> 如果指定的 {{domxref("Cache")}} 不存在，则使用该 `cacheName` 创建一个新的缓存，并返回一个兑现为这个新的 {{domxref("Cache")}} 对象的 {{jsxref("Promise")}}。
 
 ## 语法
 
-```js
-// "caches" is a global read-only variable, which is an instance of CacheStorage,
-// For more info, refer to: https://developer.mozilla.org/en-US/docs/Web/API/caches
-
-caches.open(cacheName).then(function(cache) {
-  // Do something with your cache
-});
+```js-nolint
+open(cacheName)
 ```
 
 ### 参数
 
 - cacheName
-  - : 要打开的 cache 对象 name.
+  - : 要打开的缓存对象的名称。
 
 ### 返回值
 
-一个 resolve 为请求的 {{domxref("Cache")}} 对象的 {{jsxref("Promise")}} .
+一个会兑现为请求的 {{domxref("Cache")}} 对象的 {{jsxref("Promise")}}。
 
 ## 示例
 
-此示例来自于 MDN [sw-test example](https://github.com/mdn/sw-test/) （请参阅 [sw-test running live](https://mdn.github.io/sw-test/)）。这里，等待 {{domxref("FetchEvent")}} 事件触发。我们构建自定义响应，像这样：
-
-1. 使用 {{domxref("CacheStorage.match","CacheStorage.match()")}} 检查 {{domxref("CacheStorage")}} 中是否存在匹配请求，如果存在，则使用它。
-2. 如果没有，使用 {{domxref("CacheStorage.open","CacheStorage.open()")}} 打开 `v1` cache，使用 {{domxref("Cache.put","Cache.put()")}} 将默认网络请求放入 cache 中，并使用 `return response.clone()` 返回默认网络请求的克隆副本。最后一个是必须的，因为 `put()` 使用响应主体。
-3. 如果此操作失败（例如，因为网络已关闭），则返回备用响应。
+此示例来自于 MDN [service worker 简单示例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)（请参阅[在线的 service worker 简单示例](https://bncb2v.csb.app/)）。这里，等待 {{domxref("FetchEvent")}} 事件触发，然后运行 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} 来处理应用的安装。这包括调用 `CacheStorage.open()` 来创新新的缓存，然后使用 {{domxref("Cache.addAll()")}} 向其中添加一系列资源。
 
 ```js
-var cachedResponse = caches.match(event.request).catch(function() {
-  return fetch(event.request);
-}).then(function(response) {
-  caches.open('v1').then(function(cache) {
-    cache.put(event.request, response);
-  });
-  return response.clone();
-}).catch(function() {
-  return caches.match('/sw-test/gallery/myLittleVader.jpg');
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    caches
+      .open("v1")
+      .then((cache) =>
+        cache.addAll([
+          "/",
+          "/index.html",
+          "/style.css",
+          "/app.js",
+          "/image-list.js",
+          "/star-wars-logo.jpg",
+          "/gallery/bountyHunters.jpg",
+          "/gallery/myLittleVader.jpg",
+          "/gallery/snowTroopers.jpg",
+        ]),
+      ),
+  );
 });
 ```
 
@@ -58,8 +61,8 @@ var cachedResponse = caches.match(event.request).catch(function() {
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("WorkerGlobalScope.caches")}}
+- {{domxref("Window.caches")}} 和 {{domxref("WorkerGlobalScope.caches")}}

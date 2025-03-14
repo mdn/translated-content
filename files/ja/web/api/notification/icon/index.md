@@ -1,6 +1,8 @@
 ---
 title: Notification.icon
 slug: Web/API/Notification/icon
+l10n:
+  sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -13,12 +15,12 @@ slug: Web/API/Notification/icon
 
 ## 例
 
-[To-do リストアプリ](https://github.com/mdn/to-do-notifications/tree/gh-pages)（[ライブ実行のアプリを表示](https://mdn.github.io/to-do-notifications/)）では、 {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用して通知を発行し、希望する本文、アイコン、タイトルを指定するために引数を渡します。
+[To-do リストアプリ](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)（[ライブ実行のアプリを表示](https://mdn.github.io/dom-examples/to-do-notifications/)）では、 {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用して通知を発行し、希望する本文、アイコン、タイトルを指定するために引数を渡します。
 
 ```js
-const notification = new Notification('To do list', {
+const notification = new Notification("To do list", {
   body: text,
-  icon: img
+  icon: img,
 });
 ```
 

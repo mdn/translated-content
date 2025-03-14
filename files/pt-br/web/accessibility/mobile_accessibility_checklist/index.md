@@ -1,7 +1,6 @@
 ---
 title: Acessibilidade para plataforma móvel
 slug: Web/Accessibility/Mobile_accessibility_checklist
-original_slug: Web/Acessibilidade/Accessibilidade_para_plataforma_movel
 ---
 
 Este documento contém uma lista concisa de requisitos para desenvolvedores de aplicativos móveis. Tem como intenção evoluir continuamente conforme forem aparecendo outros padrões.
@@ -15,7 +14,8 @@ Este documento contém uma lista concisa de requisitos para desenvolvedores de a
 
 - A informação transportada via cor **DEVE** ser também possível através de outros meios (textos sublinhados para links, etc.)
 
-> **Nota:** Jon Snook escreveu um útil [Colour Contrast Checker](http://snook.ca/technical/colour_contrast/colour.html) que é usado para checar o contraste de cores entre o _background_ e o _foreground_. De maneira alternativa o [Tanaguru Contrast-Finder](http://contrast-finder.tanaguru.com/) faz um trabalho similar, mas também sugeste melhores contrastes de cores considerando as usadas.
+> [!NOTE]
+> Jon Snook escreveu um útil [Colour Contrast Checker](http://snook.ca/technical/colour_contrast/colour.html) que é usado para checar o contraste de cores entre o _background_ e o _foreground_. De maneira alternativa o [Tanaguru Contrast-Finder](http://contrast-finder.tanaguru.com/) faz um trabalho similar, mas também sugeste melhores contrastes de cores considerando as usadas.
 
 ## Visibilidade
 
@@ -55,14 +55,14 @@ Este documento contém uma lista concisa de requisitos para desenvolvedores de a
 
   ```html
   <h1>Heading primeiro nível</h1>
-    <h2>Heading segundo nível</h2>
-    <h2>Outro Heading segundo nível</h2>
-      <h3>Heading terceiro nível</h3>
+  <h2>Heading segundo nível</h2>
+  <h2>Outro Heading segundo nível</h2>
+  <h3>Heading terceiro nível</h3>
   ```
 
 - [ARIA Landmark Roles](https://www.w3.org/TR/wai-aria/roles#landmark_roles_header) **DEVE** ser usado para descrever o aplicativo ou a estrutura do documento, como: `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.
 - Eventos de toque só **DEVEM** ser ativados no evento `touchend`.
-- Alvos tocáveis **DEVEM** ser largos o suficiente para o usuário interagir (veja o [BBC Mobile Accessibility Guidelines](http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size) para ver as _guidelines_ sobre tamanhos de alvos tocáveis .)
+- Alvos tocáveis **DEVEM** ser largos o suficiente para o usuário interagir (veja o [BBC Mobile Accessibility Guidelines](https://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size) para ver as _guidelines_ sobre tamanhos de alvos tocáveis .)
 
 > **Nota:** [Tanaguru's automated accessibility testing service](http://www.tanaguru.com/) fornece uma maneira útil para descobrir alguns erros de acessibilidade que ocorrem em páginas web, ou instalando aplicativos web (ex: Firefox OS.) Você pode encontrar mais sobre a técnica de implementação do Tanaguru, como também contribuir para o projeto [tanaguru.org](http://tanaguru.org/).
 

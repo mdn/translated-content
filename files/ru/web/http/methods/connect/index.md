@@ -1,14 +1,13 @@
 ---
 title: CONNECT
 slug: Web/HTTP/Methods/CONNECT
-translation_of: Web/HTTP/Methods/CONNECT
 ---
 
 {{HTTPSidebar}}
 
 **HTTP `CONNECT` method** запускает двустороннюю связь с запрошенным ресурсом. Метод можно использовать для открытия туннеля.
 
-К примеру, метод CONNECT может использоваться для доступа к сайту, который использует {{Glossary("SSL")}} ({{Glossary("HTTPS")}}). Клиент запрашивает HTTP-прокси-сервер для туннелирования TCP-соединения с желаемым назначением. За тем сервер переходит к подключению от имени клиента. После того, как соединение установлено сервером, прокси-сервер продолжает проксировать поток TCP к клиенту и от него.
+К примеру, метод CONNECT может использоваться для доступа к сайту, который использует {{Glossary("SSL")}} ({{Glossary("HTTPS")}}). Клиент запрашивает HTTP-прокси-сервер для туннелирования TCP-соединения с желаемым назначением. Затем сервер переходит к подключению от имени клиента. После того, как соединение установлено сервером, прокси-сервер продолжает проксировать поток TCP к клиенту и от него.
 
 `CONNECT` is a hop-by-hop method.
 
@@ -38,7 +37,7 @@ translation_of: Web/HTTP/Methods/CONNECT
     </tr>
     <tr>
       <th scope="row">
-        Допускается в <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML формах</a>
+        Допускается в <a href="/ru/docs/Web/Guide/HTML/Forms">HTML формах</a>
       </th>
       <td>Нет</td>
     </tr>
@@ -55,17 +54,17 @@ CONNECT www.example.com:443 HTTP/1.1
 
 Некоторые прокси сервера могут запросить авторизацию для создания туннеля. Смотрите также {{HTTPHeader("Proxy-Authorization")}}.
 
-```html
+```http
 CONNECT server.example.com:80 HTTP/1.1
 Host: server.example.com:80
 Proxy-Authorization: basic aGVsbG86d29ybGQ=
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

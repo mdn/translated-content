@@ -1,14 +1,9 @@
 ---
 title: 전체 선택자
 slug: Web/CSS/Universal_selectors
-tags:
-  - CSS
-  - Reference
-  - Selectors
-translation_of: Web/CSS/Universal_selectors
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **전체 선택자**(`*`)는 모든 형태의 모든 요소를 선택합니다.
 
@@ -38,7 +33,7 @@ CSS 3부터는 별표를 {{cssxref("CSS_Namespaces", "네임스페이스")}}와 
 ### CSS
 
 ```css
-* [lang^=en] {
+* [lang^="en"] {
   color: green;
 }
 
@@ -51,7 +46,7 @@ CSS 3부터는 별표를 {{cssxref("CSS_Namespaces", "네임스페이스")}}와 
 }
 
 .floating {
-  float: left
+  float: left;
 }
 
 /* automatically clear the next sibling after a floating element */

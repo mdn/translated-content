@@ -42,12 +42,12 @@ order: unset;
 Aquí tiene un trozo de HTML básico:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <header>...</header>
-<div id='main'>
-   <article>Article</article>
-   <nav>Nav</nav>
-   <aside>Aside</aside>
+<div id="main">
+  <article>Article</article>
+  <nav>Nav</nav>
+  <aside>Aside</aside>
 </div>
 <footer>...</footer>
 ```
@@ -55,10 +55,22 @@ Aquí tiene un trozo de HTML básico:
 El siguiente código CSS debería crear un diseño clásico de dos barra laterales que rodea a un bloque de contenido. EL Módulo de Diseño de Caja Flexible crea automáticamente bloques de tamaño vertical igual y utiliza todo el espacio horizontal disponible.
 
 ```css
-#main { display: flex; text-align:center; }
-#main > article { flex:1;        order: 2; }
-#main > nav     { width: 200px;  order: 1; }
-#main > aside   { width: 200px;  order: 3; }
+#main {
+  display: flex;
+  text-align: center;
+}
+#main > article {
+  flex: 1;
+  order: 2;
+}
+#main > nav {
+  width: 200px;
+  order: 1;
+}
+#main > aside {
+  width: 200px;
+  order: 3;
+}
 ```
 
 ### Resultado
@@ -72,7 +84,7 @@ Utilizar la propiedad `order` rompe la conexión entre la presentación visual y
 Para más información por favor, referirse a estos artículos:
 
 - [Flexbox & the keyboard navigation disconnect — Tink](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
-- [Source Order Matters | Adrian Roselli](http://adrianroselli.com/2015/09/source-order-matters.html)
+- [Source Order Matters | Adrian Roselli](https://adrianroselli.com/2015/09/source-order-matters.html)
 - [MDN Understanding WCAG, Guideline 1.3 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
 - [Understanding Success Criterion 1.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
 
@@ -80,9 +92,9 @@ Para más información por favor, referirse a estos artículos:
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.order")}}
+{{Compat}}
 
 ## Ver también
 

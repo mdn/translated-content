@@ -1,14 +1,9 @@
 ---
 title: 자식 결합자
 slug: Web/CSS/Child_combinator
-tags:
-  - CSS
-  - Reference
-  - Selectors
-translation_of: Web/CSS/Child_combinator
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 **자식 결합자**(`>`)는 두 개의 CSS 선택자 사이에 위치하여 뒤쪽 선택자의 요소가 앞쪽 선택자 요소의 바로 밑에 위치할 경우에만 선택합니다.
 
@@ -45,7 +40,8 @@ div > span {
 
 ```html
 <div>
-  <span>Span #1, in the div.
+  <span
+    >Span #1, in the div.
     <span>Span #2, in the span that's in the div.</span>
   </span>
 </div>

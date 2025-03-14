@@ -31,7 +31,7 @@ Proxy-Authenticate: <type> realm=<realm>
 ## Diretivas
 
 - \<type>
-  - : [Tipo de autenticação](/pt-BR/docs/Web/HTTP/Authentication#Authentication_schemes). Um tipo comum é ["Basic"](/pt-BR/docs/Web/HTTP/Authentication#Basic_authentication_scheme). A IANA mantém uma [lista de esquemas de autenticação](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
+  - : [Tipo de autenticação](/pt-BR/docs/Web/HTTP/Authentication#authentication_schemes). Um tipo comum é ["Basic"](/pt-BR/docs/Web/HTTP/Authentication#basic_authentication_scheme). A IANA mantém uma [lista de esquemas de autenticação](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
 - realm=\<realm>
   - : A descrição da área protegida, o reino. Se um reino não foi especificado, clientes geralmente mostram um nome de _host_ formatado.
 
@@ -45,14 +45,14 @@ Proxy-Authenticate: Basic realm="Access to the internal site"
 
 ## Especificações
 
-| Especificação                                                | Título                                 |
-| ------------------------------------------------------------ | -------------------------------------- |
+| Especificação                                | Título                                 |
+| -------------------------------------------- | -------------------------------------- |
 | {{RFC("7235", "Proxy-Authenticate", "4.3")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                                         | The 'Basic' HTTP Authentication Scheme |
+| {{RFC("7617")}}                              | The 'Basic' HTTP Authentication Scheme |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Proxy-Authenticate")}}
+{{Compat}}
 
 ## Veja também
 

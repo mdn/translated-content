@@ -1,12 +1,11 @@
 ---
 title: ローカライゼーションと文字エンコーディング
 slug: orphaned/Web/Guide/Localizations_and_character_encodings
-original_slug: Web/Guide/Localizations_and_character_encodings
 ---
 
-ブラウザは内部的にテキストを Unicode として処理します。ただし、ネットワークを介してブラウザにテキストを転送するには、文字をバイトで表現する方法 (文字エンコーディング) が使用されます。[HTML 仕様](http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#charset)では、UTF-8 エンコーディング (これはすべての Unicode を表すことができます) の使用を推奨しています。使用されるエンコーディングにかかわらず、Web コンテンツがどのエンコーディングを使用するかを宣言する必要があります。
+ブラウザーは内部的にテキストを Unicode として処理します。ただし、ネットワークを介してブラウザーにテキストを転送するには、文字をバイトで表現する方法 (文字エンコーディング) が使用されます。[HTML 仕様](https://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#charset)では、UTF-8 エンコーディング (これはすべての Unicode を表すことができます) の使用を推奨しています。使用されるエンコーディングにかかわらず、ウェブコンテンツがどのエンコーディングを使用するかを宣言する必要があります。
 
-ページの文字エンコーディングを指定するためには、{{HTMLElement("meta")}} 要素の {{htmlattrxref("charset", "meta")}} 属性を使用します。これは {{HTMLElement("head")}} ブロックの中で使用する**必要があります**。
+ページの文字エンコーディングを指定するためには、{{HTMLElement("meta")}} 要素の [`charset`](/ja/docs/Web/HTML/Element/meta#charset) 属性を使用します。これは {{HTMLElement("head")}} ブロックの中で使用する**必要があります**。
 
 例えばページが (推奨されている通りに) UTF-8 文字エンコーディングを使用していることを指定するには、{{HTMLElement("head")}} ブロックの中に次の行を記述します:
 
@@ -14,15 +13,15 @@ original_slug: Web/Guide/Localizations_and_character_encodings
 <meta charset="utf-8">
 ```
 
-## 詳細とブラウザの内部
+## 詳細とブラウザーの内部
 
-HTML 仕様が要求するように Web コンテンツでエンコーディングが宣言されている場合、Firefox はそのエンコーディングを用いてバイトを内部表現に変換します。残念ながら、UTF-8 を使うことや、UTF-8 の使用を宣言することは、Web コンテンツを提供する上で必ずしも一般的な方法ではありませんでした。1990 年代には、エンコーディングを宣言せずに、すべての Unicode を表現できない地域固有のエンコーディングを使うことが広まっていました。
+HTML 仕様が要求するようにウェブコンテンツでエンコーディングが宣言されている場合、Firefox はそのエンコーディングを用いてバイトを内部表現に変換します。残念ながら、UTF-8 を使うことや、UTF-8 の使用を宣言することは、ウェブコンテンツを提供する上で必ずしも一般的な方法ではありませんでした。1990 年代には、エンコーディングを宣言せずに、すべての Unicode を表現できない地域固有のエンコーディングを使うことが広まっていました。
 
 Firefox は、エンコーディングを宣言していないレガシーなコンテンツに対して使用するフォールバックエンコーディングを必要とします。ほとんどのロケールでは、フォールバックエンコーディングは (しばしば ISO-8859-1 と呼ばれる) windows-1252 となります。これは 1990 年代にほとんどの Windows アプリケーションで使用されていたエンコーディングであり、またほとんどの Unix アプリケーションで使用されていたエンコーディングのスーパーセットでもあり、アメリカや西ヨーロッパで展開されていました。しかし、1990 年代にはすでに Web パブリッシングが一般的になっていたものの、windows-1252 エンコーディングがその地域の言語に適していなかったようなロケールがあります。これらのロケールにおいて、エンコーディングを宣言していないレガシーなコンテンツは、windows-1252 以外のレガシーなエンコーディングを通常使用しています。レガシーなコンテンツに対応するために、Firefox の一部のローカライゼーションにおいては、windows-1252 ではないフォールバックエンコーディングが必要となります。
 
 残念ながらこのことは、Web と接する際の Firefox の機能がロケールごとに異なること、そして、フォールバックエンコーディングが異なるロケールをまたいでレガシーなコンテンツを読むのは困難であることを意味します。UTF-8 の採用後に Web パブリッシングが盛んになったロケールでこの問題が発生しないように、1990 年代の慣習から windows-1252 以外のレガシーなエンコーディングをもたないロケールは、フォールバックエンコーディングを windows-1252 とし、フォールバックエンコーディングが windows-1252 である古いロケールをまたぐコンテンツの読解に支障をきたさないようにする必要があります。新しく作成されたロケールネイティブな UTF-8 コンテンツはエンコーディングを宣言することが期待されますが、その場合フォールバックエンコーディングがコンテンツの処理に関与することはありません。
 
-さらに、1990 年代に地域固有のエンコーディングが一つに定まっておらず、複数のレガシーなエンコーディングをヒューリスティックに検出する機能が Web ブラウザに導入されたロケールが少数存在します。その後 Web 製作者がヒューリスティック検出機能の存在を前提とするようになったことから、Firefox は現在もこれらのロケールにおいてヒューリスティック検出機能を備えています。
+さらに、1990 年代に地域固有のエンコーディングが一つに定まっておらず、複数のレガシーなエンコーディングをヒューリスティックに検出する機能がウェブブラウザーに導入されたロケールが少数存在します。その後 Web 製作者がヒューリスティック検出機能の存在を前提とするようになったことから、Firefox は現在もこれらのロケールにおいてヒューリスティック検出機能を備えています。
 
 ## Finding canonical encoding names
 
@@ -38,9 +37,9 @@ The fallback encoding should be left to windows-1252 for Western European locale
 
 In order to avoid the problem of Web authors creating new UTF-8 content without declaring that the content uses UTF-8 and in order to maximize the ability of users to read content cross-locale, _do not_ set the fallback encoding to UTF-8 for any newly-introduced localization. Note that Firefox no longer sends the `Accept-Charset` HTTP header, so there is no need to consider what gets advertised in `Accept-Charset` when setting the fallback encoding.
 
-For locales where the fallback encoding is currently ISO-8859-1, it should be changed to windows-1252. ISO-8859-1 is decoded in the exact same way as windows-1252, but Firefox is moving to treating windows-1252 as the preferred label for this encoding in accordance with the [Encoding Standard](http://encoding.spec.whatwg.org/).
+For locales where the fallback encoding is currently ISO-8859-1, it should be changed to windows-1252. ISO-8859-1 is decoded in the exact same way as windows-1252, but Firefox is moving to treating windows-1252 as the preferred label for this encoding in accordance with the [Encoding Standard](https://encoding.spec.whatwg.org/).
 
-For locales where Internet Explorer has more market share than Firefox, the fallback encoding should typically be set to the same value as in Internet Explorer. You can see the fallback encoding a particular browser has by loading a [test page](http://hsivonen.iki.fi/test/moz/check-charset.htm). (Be sure to use a browser installation that has its settings left to the defaults when investigating!)
+For locales where Internet Explorer has more market share than Firefox, the fallback encoding should typically be set to the same value as in Internet Explorer. You can see the fallback encoding a particular browser has by loading a [test page](https://hsivonen.iki.fi/test/moz/check-charset.htm). (Be sure to use a browser installation that has its settings left to the defaults when investigating!)
 
 For locales where Firefox has more market share than Internet Explorer, it's probably best not to change the fallback encoding even if it doesn't follow the guidance given above. (For example, the fallback encoding for the Polish, Hungarian and Czech locales should probably continue to be ISO-8859-2 even though IE has a different fallback encoding.)
 

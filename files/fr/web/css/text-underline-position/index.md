@@ -1,11 +1,6 @@
 ---
 title: text-underline-position
 slug: Web/CSS/text-underline-position
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-underline-position
 ---
 
 {{CSSRef}}
@@ -71,9 +66,7 @@ Cette propriété est héritée sur les différents éléments et n'est pas réi
 ### HTML
 
 ```html
-<p class="chimique">
-  C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>
-</p>
+<p class="chimique">C<sub>6</sub>H<sub>12</sub>O<sub>6</sub></p>
 <p class="defaut">
   Et là avec des <sub>indices</sub>
   et du jambage

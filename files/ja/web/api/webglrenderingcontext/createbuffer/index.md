@@ -1,23 +1,26 @@
 ---
-title: WebGLRenderingContext.createBuffer()
+title: "WebGLRenderingContext: createBuffer() メソッド"
+short-title: createBuffer()
 slug: Web/API/WebGLRenderingContext/createBuffer
+l10n:
+  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
 {{APIRef("WebGL")}}
 
-[WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.createBuffer()`** メソッドは、頂点や色といったデータを格納する {{domxref("WebGLBuffer")}} を作成、初期化します。
+**`WebGLRenderingContext.createBuffer()`** は [WebGL API](/ja/docs/Web/API/WebGL_API) のメソッド　で、頂点や色といったデータを格納する {{domxref("WebGLBuffer")}} を作成、初期化します。
 
 ## 構文
 
-```
-WebGLBuffer gl.createBuffer();
+```js-nolint
+createBuffer()
 ```
 
 ### 引数
 
-ありません。
+なし。
 
-### 返り値
+### 返値
 
 頂点や色といったデータを格納する {{domxref("WebGLBuffer")}} です。
 
@@ -26,23 +29,20 @@ WebGLBuffer gl.createBuffer();
 ### バッファーの作成
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var buffer = gl.createBuffer();
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
+const buffer = gl.createBuffer();
 ```
 
-## 仕様策定状況
+## 仕様書
 
-| 仕様                                                                                     | 策定状況                             | コメント                               |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------- |
-| {{SpecName('WebGL', "#5.14.5", "createBuffer")}}                         | {{Spec2('WebGL')}}             | 初回定義。                             |
-| {{SpecName('OpenGL ES 2.0', "glGenBuffers.xml", "glGenBuffers")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API (と同様な) マニュアルページ |
+{{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
-{{Compat("api.WebGLRenderingContext.createBuffer")}}
+{{Compat}}
 
-## 関連項目
+## 関連情報
 
 - {{domxref("WebGLRenderingContext.bindBuffer()")}}
 - {{domxref("WebGLRenderingContext.deleteBuffer()")}}

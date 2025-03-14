@@ -1,13 +1,75 @@
 ---
 title: scroll-snap-type
 slug: Web/CSS/scroll-snap-type
-translation_of: Web/CSS/scroll-snap-type
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`scroll-snap-type`** определяет как строго прокрутка контейнера привязывается к точкам привязки.
 
-{{EmbedInteractiveExample("pages/css/scroll-snap-type.html")}}
+{{InteractiveExample("CSS Demo: scroll-snap-type")}}
+
+```css interactive-example-choice
+scroll-snap-type: none;
+```
+
+```css interactive-example-choice
+scroll-snap-type: x mandatory;
+```
+
+```css interactive-example-choice
+scroll-snap-type: x proximity;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <div class="info">Scroll »</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  flex-wrap: wrap;
+}
+
+.default-example .info {
+  width: 100%;
+  padding: 0.5em 0;
+  font-size: 90%;
+}
+
+#example-element {
+  text-align: left;
+  width: 250px;
+  height: 250px;
+  overflow-x: scroll;
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+#example-element > div {
+  flex: 0 0 250px;
+  width: 250px;
+  background-color: rebeccapurple;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+#example-element > div:nth-child(even) {
+  background-color: #fff;
+  color: rebeccapurple;
+}
+```
 
 Это свойство не уточняет какие именно анимации используются для привязки прокрутки, это остаётся за агентом пользователя.
 
@@ -66,69 +128,69 @@ scroll-snap-type: unset;
 
 ```html
 <div class="holster">
-<div class="container x mandatory-scroll-snapping" dir="ltr">
-  <div>X Mand. LTR</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container x mandatory-scroll-snapping" dir="ltr">
+    <div>X Mand. LTR</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 
-<div class="container x proximity-scroll-snapping" dir="ltr">
-  <div>X Prox. LTR</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container x proximity-scroll-snapping" dir="ltr">
+    <div>X Prox. LTR</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 
-<div class="container y mandatory-scroll-snapping" dir="ltr">
-  <div>Y Mand. LTR</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container y mandatory-scroll-snapping" dir="ltr">
+    <div>Y Mand. LTR</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 
-<div class="container y proximity-scroll-snapping" dir="ltr">
-  <div>Y Prox. LTR</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container y proximity-scroll-snapping" dir="ltr">
+    <div>Y Prox. LTR</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 
-<div class="container x mandatory-scroll-snapping" dir="rtl">
-  <div>X Mand. RTL</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container x mandatory-scroll-snapping" dir="rtl">
+    <div>X Mand. RTL</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 
-<div class="container x proximity-scroll-snapping" dir="rtl">
-  <div>X Prox. RTL</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container x proximity-scroll-snapping" dir="rtl">
+    <div>X Prox. RTL</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 
-<div class="container y mandatory-scroll-snapping" dir="rtl">
-  <div>Y Mand. RTL</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container y mandatory-scroll-snapping" dir="rtl">
+    <div>Y Mand. RTL</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 
-<div class="container y proximity-scroll-snapping" dir="rtl">
-  <div>Y Prox. RTL</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container y proximity-scroll-snapping" dir="rtl">
+    <div>Y Prox. RTL</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 </div>
 ```
 
@@ -136,7 +198,9 @@ scroll-snap-type: unset;
 
 ```css
 /* setup */
-html, body, .holster {
+html,
+body,
+.holster {
   height: 100%;
 }
 .holster {
@@ -208,11 +272,11 @@ html, body, .holster {
 }
 /* coloration */
 .container > div:nth-child(even) {
-  background-color: #87EA87;
+  background-color: #87ea87;
 }
 
 .container > div:nth-child(odd) {
-  background-color: #87CCEA;
+  background-color: #87ccea;
 }
 ```
 
@@ -220,7 +284,7 @@ html, body, .holster {
 
 {{EmbedLiveSample("Example", "100%", "1630")}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

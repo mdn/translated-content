@@ -7,7 +7,42 @@ slug: Web/CSS/background-size
 
 `background-size` 设置背景图片大小。图片可以保有其原有的尺寸，或者拉伸到新的尺寸，或者在保持其原有比例的同时缩放到元素的可用空间的尺寸。
 
-{{EmbedInteractiveExample("pages/css/background-size.html")}}
+{{InteractiveExample("CSS Demo: background-size")}}
+
+```css interactive-example-choice
+background-size: contain;
+```
+
+```css interactive-example-choice
+background-size: contain;
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-size: cover;
+```
+
+```css interactive-example-choice
+background-size: 30%;
+```
+
+```css interactive-example-choice
+background-size: 200px 100px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-image: url("/shared-assets/images/examples/hand.jpg");
+  min-width: 100%;
+  min-height: 100%;
+}
+```
 
 ```css
 /* 关键字 */
@@ -38,70 +73,48 @@ background-size: initial;
 background-size: unset;
 ```
 
-```html hidden
-<div id="container">
-
-  <div class="subcontainer contain">contain</div>
-  <div class="subcontainer cover">cover</div>
-  <div class="subcontainer width">120px</div>
-  <div class="subcontainer width-height">120px 200px</div>
-
-
-
-</div>
-```
-
-```css hidden
-#container {
-   width: 100%;
-   display:flex;
-   justify-content: space-around;
-   height: 300px;
-   overflow: scroll;
-   background-color: #EEEEEE;
-}
-
-.subcontainer {
-  width: 100%;
-  max-width: 200px;
-  margin: 8px;
-  padding: 5px;
-  background-color: white;
-  background-image: url("https://mdn.mozillademos.org/files/15195/eagle.jpg");
-  background-repeat: no-repeat;
-  color: white;
-  font-family: monospace;
-}
-
-.contain {
-  background-size: contain;
-}
-
-.cover {
-  background-size: cover;
-}
-
-.width {
-  background-size: 120px;
-}
-
-.width-height {
-  background-size: 120px 200px;
-}
-```
-
-{{EmbedLiveSample("background-size", 1200, 300, "", "", "example-outcome-frame")}}
-
 注意：没有被背景图片覆盖的背景区域仍然会显示用{{cssxref("background-color")}}属性设置的背景颜色。此外，如果背景图片设置了透明或者半透明属性，衬在背景图片后面的背景色也会显示出来。
 
 {{cssinfo}}
 
 ## 语法
 
+```css
+/* Keyword values */
+background-size: cover;
+background-size: contain;
+
+/* One-value syntax */
+/* the width of the image (height becomes 'auto') */
+background-size: 50%;
+background-size: 3.2em;
+background-size: 12px;
+background-size: auto;
+
+/* Two-value syntax */
+/* first value: width of the image, second value: height */
+background-size: 50% auto;
+background-size: 3em 25%;
+background-size: auto 6px;
+background-size: auto auto;
+
+/* Multiple backgrounds */
+background-size: auto, auto; /* Not to be confused with `auto auto` */
+background-size: 50%, 25%, 25%;
+background-size: 6px, auto, contain;
+
+/* Global values */
+background-size: inherit;
+background-size: initial;
+background-size: revert;
+background-size: revert-layer;
+background-size: unset;
+```
+
 单张图片的背景大小可以使用以下三种方法中的一种来规定：
 
-- 使用关键词 [`contain`](/zh-CN/docs/Web/CSS/background-size#contain)
-- 使用关键词 [`cover`](/zh-CN/docs/Web/CSS/background-size#cover)
+- 使用关键词 [`contain`](#contain)
+- 使用关键词 [`cover`](#cover)
 - 设定宽度和高度值
 
 当通过宽度和高度值来设定尺寸时，你可以提供一或者两个数值：
@@ -109,25 +122,7 @@ background-size: unset;
 - 如果仅有一个数值被给定，这个数值将作为宽度值大小，高度值将被设定为 `auto`。
 - 如果有两个数值被给定，第一个将作为宽度值大小，第二个作为高度值大小。
 
-`每个值可以是<length>`, 是 [`<percentage>`](/zh-CN/docs/Web/CSS/background-size#percentage), 或者 [`auto`](/zh-CN/docs/Web/CSS/background-size#auto).
-
-示例：
-
-```
-background-size: contain;
-
-background-size: 50%;
-background-size: 3em;
-
-background-size: auto 1em;
-background-size: 50% 25%;
-```
-
-为了设定超过一张以上的图片尺寸时，需要提供多项数值，它们通过逗号分隔。
-
-```
-background-size: 50% 25%, contain, 3em;
-```
+`每个值可以是<length>`, 是 [`<percentage>`](#percentage), 或者 [`auto`](#auto).
 
 ### 属性值
 
@@ -144,11 +139,13 @@ background-size: 50% 25%, contain, 3em;
 
 位图一定有固有尺寸与固有比例，矢量图可能两者都有，也可能只有一个。渐变视为只有固有尺寸或者只有固有比例的图片。
 
-> **备注：** This behavior changed in Gecko 8.0. Before this, gradients were treated as images with no intrinsic dimensions, with an intrinsic proportion identical to that of the background positioning area.
+> [!NOTE]
+> This behavior changed in Gecko 8.0. Before this, gradients were treated as images with no intrinsic dimensions, with an intrinsic proportion identical to that of the background positioning area.
 
 由 {{cssxref("-moz-element")}} 生成的背景图片，(which actually match an element) are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion.
 
-> **备注：** This is not the currently-specified behavior, which is that the intrinsic dimensions and proportion should be those of the element in all cases.
+> [!NOTE]
+> This is not the currently-specified behavior, which is that the intrinsic dimensions and proportion should be those of the element in all cases.
 
 背景图片大小计算：
 
@@ -163,38 +160,42 @@ background-size: 50% 25%, contain, 3em;
 
 注意，对于没有固有尺寸或固有比例的矢量图不是所有的浏览器都支持。特别注意测试 Firefox 7- 与 Firefox 8+，以确定不同之处能否接受。
 
-### Formal syntax
+## 形式定义
 
-[如何阅读 CSS 语法。](/docs/Web/CSS/Value_definition_syntax)
+{{cssinfo}}
+
+## 形式语法
 
 {{csssyntax}}
 
-## 案例
+## 示例
 
-[`background-size: cover 演示`](http://whereswalden.com/files/mozilla/background-size/page-cover.html) 与 [`background-size: contain 演示`](http://whereswalden.com/files/mozilla/background-size/page-contain.html) 在新窗口打开，这样你可以看到当背景区大小变化时 `contain` 与 `cover` 是怎样的。 [系列演示：`background-size` 及其与`background-*属性`的关联](http://whereswalden.com/files/mozilla/background-size/more-examples.html) 很好的说明了单独使用 `background-size` 及与其它属性共同使用。
+### 大图像平铺
 
-## 备注
+让我们考虑一张大图像——2982x2808 Firefox 的 logo 图像。我们想将此图像的四个副本平铺到一个 300x300 像素的元素中。为实现这一点，我们可以将 `background-size` 的值固定为 150 像素。
 
-如果用渐变作为背景并且对它使用了`background-size` ，最好不要只用一个 auto，或者只指定一个宽度值 (例如 `background-size: 50%`)。对这两种情况 Firefox 8 有所改变，并且目前各浏览器表现不一致，不是全部浏览器都完全支持 [CSS3 `background-size` 规范](http://www.w3.org/TR/css3-background/#the-background-size) 与 [CSS3 Image Values gradient 规范](http://dev.w3.org/csswg/css3-images/#gradients) 。
+#### HTML
+
+```html
+<div class="tiledBackground"></div>
+```
+
+#### CSS
 
 ```css
-.bar {
-       width: 50px; height: 100px;
-       background-image: gradient(...);
-
-       /* 不推荐 */
-       background-size: 25px;
-       background-size: 50%;
-       background-size: auto 50px;
-       background-size: auto 50%;
-
-       /* 可行 */
-       background-size: 25px 50px;
-       background-size: 50% 50%;
+.tiledBackground {
+  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
+  background-size: 150px;
+  width: 300px;
+  height: 300px;
+  border: 2px solid;
+  color: pink;
 }
 ```
 
-特别不推荐对渐变 px 与`auto`一起用，因为 Firefox 8 之前不能重复渲染，并且对于没有实现 Firefox 8 渲染特性的浏览器，不知道指定了背景的元素的确切大小。
+#### 结果
+
+{{EmbedLiveSample("大图像平铺", 340, 340)}}
 
 ## 规范
 
@@ -204,37 +205,8 @@ background-size: 50% 25%, contain, 3em;
 
 {{Compat}}
 
-## Polyfills and Workarounds
+## 参见
 
-### For Internet Explorer prior IE8
-
-Though Internet Explorer 8 doesn't support the `background-size` property, it is possible to emulate some of its functionality using the non-standard `-ms-filter` property:
-
-```css
--ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='path_relative_to_the_HTML_file', sizingMethod='scale')";
-```
-
-This simulates the value `cover`.
-
-### In Firefox 3.5
-
-While this property was added in Firefox 3.6, it is possible to stretch a image fully over the background in Firefox 3.5 by using {{cssxref("-moz-border-image")}}.
-
-```css
-.foo {
-  background-image: url(bg-image.png);
-
-  -webkit-background-size: 100% 100%;           /* Safari 3.0 */
-     -moz-background-size: 100% 100%;           /* Gecko 1.9.2 (Firefox 3.6) */
-       -o-background-size: 100% 100%;           /* Opera 9.5 */
-          background-size: 100% 100%;           /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */
-
-  -moz-border-image: url(bg-image.png) 0;    /* Gecko 1.9.1 (Firefox 3.5) */
-}
-```
-
-## 相关链接
-
-- [CSS Reference](/zh-CN/docs/CSS/CSS_Reference)
-- [Multiple backgrounds](/zh-CN/docs/CSS/Multiple_backgrounds)
-- [Scaling background images](/zh-CN/docs/CSS/Scaling_background_images)
+- [调整背景图片的大小](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
+- [SVG 背景缩放](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
+- {{cssxref("object-fit")}}

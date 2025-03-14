@@ -1,21 +1,15 @@
 ---
 title: WebAssembly.Global
 slug: WebAssembly/JavaScript_interface/Global
-tags:
-  - Class
-  - JavaScript
-  - Reference
-  - WebAssembly
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
-browser-compat: javascript.builtins.WebAssembly.Global
 ---
 
-{{JSRef}} **`WebAssembly.Global`** 객체는 전역 변수 인스턴스를 나타내며 JavaScript 및 하나 이상의 {{jsxref("WebAssembly.Module")}} 인스턴스에서 가져오거나 내보낼 수 있습니다. 이렇게 하면 여러 모듈을 동적으로 연결할 수 있습니다.
+{{WebAssemblySidebar}}
+
+**`WebAssembly.Global`** 객체는 전역 변수 인스턴스를 나타내며 JavaScript 및 하나 이상의 {{jsxref("WebAssembly.Module")}} 인스턴스에서 가져오거나 내보낼 수 있습니다. 이렇게 하면 여러 모듈을 동적으로 연결할 수 있습니다.
 
 ## 생성자
 
-- [`WebAssembly.Global()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global)
+- [`WebAssembly.Global()`](/ko/docs/WebAssembly/JavaScript_interface/Global/Global)
   - : 새로운 `Global` 객체를 생성합니다.
 
 ## 전역 인스턴스
@@ -43,37 +37,45 @@ browser-compat: javascript.builtins.WebAssembly.Global
 먼저 `Global.value` 속성을 사용하여 '42'로 전역 값이 변경되고, `global.wasm` 모듈에서 내보낸 `incGlobal()` 함수를 사용하여 43으로 변경됩니다. (이 함수는 주어진 값에 1을 더한 다음 새 값을 반환합니다).
 
 ```js
-const output = document.getElementById('output');
+const output = document.getElementById("output");
 
 function assertEq(msg, got, expected) {
-    output.innerHTML += `Testing ${msg}: `;
-    if (got !== expected)
-        output.innerHTML += `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
-    else
-        output.innerHTML += `SUCCESS! Got: ${got}<br>`;
+  output.innerHTML += `Testing ${msg}: `;
+  if (got !== expected)
+    output.innerHTML += `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
+  else output.innerHTML += `SUCCESS! Got: ${got}<br>`;
 }
 
 assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");
 
-const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);
+const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 
-WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
-.then(({instance}) => {
-    assertEq("getting initial value from wasm", instance.exports.getGlobal(), 0);
+WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
+  ({ instance }) => {
+    assertEq(
+      "getting initial value from wasm",
+      instance.exports.getGlobal(),
+      0,
+    );
     global.value = 42;
-    assertEq("getting JS-updated value from wasm", instance.exports.getGlobal(), 42);
+    assertEq(
+      "getting JS-updated value from wasm",
+      instance.exports.getGlobal(),
+      42,
+    );
     instance.exports.incGlobal();
     assertEq("getting wasm-updated value from JS", global.value, 43);
-});
+  },
+);
 ```
 
 <div class="note"><p><strong>Note</strong>: GitHub에서 실행 중인 예제(<a href="https://mdn.github.io/webassembly-examples/js-api-examples/global.html">running live on GitHub</a>)를 볼 수 있습니다. <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html">source code</a>도 참조하십시오.</p></div>
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

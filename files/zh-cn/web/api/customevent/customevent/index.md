@@ -1,85 +1,70 @@
 ---
-title: CustomEvent()
+title: CustomEvent：CustomEvent() 构造函数
 slug: Web/API/CustomEvent/CustomEvent
+l10n:
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
 {{APIRef("DOM")}}
 
-The **`CustomEvent()`** constructor creates a new {{domxref("CustomEvent")}}.
+**`CustomerEvent()`** 构造函数创建一个新的 {{domxref("CustomEvent")}} 对象。
 
-构造方法 CustomerEvent() 创建一个新的 {{domxref("CustomEvent")}} 对象。
+## 语法
 
-## Syntax 语法
-
+```js-nolint
+new CustomEvent(type)
+new CustomEvent(type, options)
 ```
- event = new CustomEvent(typeArg, customEventInit);
-```
 
-### Values 参数
+### 参数
 
-- _typeArg_
-  - : 一个表示 event 名字的字符串
-- _customEventInit_
+- `type`
+  - : 提供事件名称的字符串。事件名称区分大小写。
+- `options` {{optional_inline}}
+  - : 一个对象，_除 {{domxref("Event/Event", "Event()")}} 中定义的属性外_，该对象还可以具有以下属性：
+    - `detail` {{optional_inline}}
+      - : 与事件相关联的事件相关值。处理器可使用 {{domxref("CustomEvent.detail")}} 属性获取该值。默认为 `null`。
 
-  - : Is a `CustomEventInit` dictionary, having the following fields: 一个字典类型参数，有如下字段
+### 返回值
 
-    - `"detail"`, optional and defaulting to `null`, of type any, that is a event-dependant value associated with the event. 可选的默认值是 null 的任意类型数据，是一个与 event 相关的值
-    - bubbles 一个布尔值，表示该事件能否冒泡。来自 {{domxref("Event.Event", "EventInit")}}。注意：测试 chrome 默认为不冒泡。
-    - cancelable 一个布尔值，表示该事件是否可以取消。来自 {{domxref("Event.Event", "EventInit")}}
+一个新的 {{domxref("CustomEvent")}} 对象。
 
-    <div class="note"><p><em>The <code>CustomEventInit</code></em><em> dictionary also accepts fields from the {{domxref("Event.Event", "EventInit")}} dictionary.</em></p><p>CustomerEventInit 字典参数同样接受来自于 Event 类构造函数的 eventInit 字典参数，如下</p><p>bubbles 一个布尔值，表示该事件能否冒泡</p><p>cancelable 一个布尔值，表示该事件是否可以取消</p></div>
-
-## Example
+## 示例
 
 ```js
-// add an appropriate event listener
-obj.addEventListener("cat", function(e) { process(e.detail) });
-
-// create and dispatch the event
-var event = new CustomEvent("cat", {
+// 创建自定义事件
+const catFound = new CustomEvent("animalfound", {
   detail: {
-    hazcheeseburger: true
-  }
+    name: "猫",
+  },
 });
-obj.dispatchEvent(event);
+const dogFound = new CustomEvent("animalfound", {
+  detail: {
+    name: "狗",
+  },
+});
+
+// 添加合适的事件监听器
+obj.addEventListener("animalfound", (e) => console.log(e.detail.name));
+
+// 触发事件
+obj.dispatchEvent(catFound);
+obj.dispatchEvent(dogFound);
+
+// 控制台中输出“猫”和“狗”
 ```
 
-## Specifications
+额外的示例可以在[创建和触发事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events)中找到。
+
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## Polyfill
-
-You can polyfill the `CustomEvent()` constructor functionality in Internet Explorer 9 and higher with the following code:
-
-```js
-(function(){
-    try{
-        // a : While a window.CustomEvent object exists, it cannot be called as a constructor.
-        // b : There is no window.CustomEvent object
-        new window.CustomEvent('T');
-    }catch(e){
-        var CustomEvent = function(event, params){
-            params = params || { bubbles: false, cancelable: false, detail: undefined };
-
-            var evt = document.createEvent('CustomEvent');
-
-            evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
-
-            return evt;
-        };
-
-        CustomEvent.prototype = window.Event.prototype;
-
-        window.CustomEvent = CustomEvent;
-    }
-})();
-```
-
-## See also
+## 参见
 
 - {{domxref("CustomEvent")}}
+- [创建和触发事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events)

@@ -1,13 +1,6 @@
 ---
 title: TreeWalker.nextSibling()
 slug: Web/API/TreeWalker/nextSibling
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Méthodes
-  - Noeuds
-translation_of: Web/API/TreeWalker/nextSibling
 ---
 
 {{ APIRef("DOM") }}
@@ -24,10 +17,14 @@ node = treeWalker.nextSibling();
 
 ```js
 var treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode: function (node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 treeWalker.firstChild();
 var node = treeWalker.nextSibling(); // renvoie null si le premier enfant de l'élément racine n'a pas de frère

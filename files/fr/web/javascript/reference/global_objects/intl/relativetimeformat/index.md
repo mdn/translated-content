@@ -1,16 +1,28 @@
 ---
 title: Intl.RelativeTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/RelativeTimeFormat
-browser-compat: javascript.builtins.Intl.RelativeTimeFormat
 ---
 
 {{JSRef}}
 
 L'objet **`Intl.RelativeTimeFormat`** permet de mettre en forme des données temporelles relatives en respectant le format des locales.
 
-{{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat")}}
+
+```js interactive-example
+const rtf1 = new Intl.RelativeTimeFormat("en", { style: "short" });
+
+console.log(rtf1.format(3, "quarter"));
+// Expected output: "in 3 qtrs."
+
+console.log(rtf1.format(-1, "day"));
+// Expected output: "1 day ago"
+
+const rtf2 = new Intl.RelativeTimeFormat("es", { numeric: "auto" });
+
+console.log(rtf2.format(2, "day"));
+// Expected output: "pasado mañana"
+```
 
 ## Constructeur
 
@@ -41,9 +53,9 @@ L'exemple suivant illustre comment créer un formateur de temps relatif en angla
 // On crée un formateur en anglais en utilisant explicitement
 // les valeurs par défaut.
 const rtf = new Intl.RelativeTimeFormat("en", {
-    localeMatcher: "best fit", // autre valeur possible : "lookup"
-    numeric: "always", // autre valeur possible : "auto"
-    style: "long", // autre valeur possible : "short" ou "narrow"
+  localeMatcher: "best fit", // autre valeur possible : "lookup"
+  numeric: "always", // autre valeur possible : "auto"
+  style: "long", // autre valeur possible : "short" ou "narrow"
 });
 
 // On formate un temps relatif avec une valeur négative (-1).

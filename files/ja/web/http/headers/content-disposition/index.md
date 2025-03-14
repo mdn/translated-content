@@ -55,7 +55,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 ### ディレクティブ
 
 - `name`
-  - : このサブパートの内容が参照するフォームの HTML フィールドの名前を含む文字列が続きます。同じフィールド内の複数のファイルを扱う場合 (例えば、 `{{HTMLElement("input","&lt;input type=\"file\"&gt;")}}` 要素の {{htmlattrxref("multiple", "input")}} 属性)、同じ名前を持つ複数のサブパートが存在することがあります。
+  - : このサブパートの内容が参照するフォームの HTML フィールドの名前を含む文字列が続きます。同じフィールド内の複数のファイルを扱う場合 (例えば、 `{{HTMLElement("input","&lt;input type=\"file\"&gt;")}}` 要素の [`multiple`](/ja/docs/Web/HTML/Element/input#multiple) 属性)、同じ名前を持つ複数のサブパートが存在することがあります。
     `name` の値が `'_charset_'` という値である場合は、その部分が HTML フィールドではなく、明示的な文字セット情報のない部分に使用される既定の文字セットであることを示します。
 - `filename`
   - : 送信された元のファイル名を含む文字列を指定します。このファイル名は常に任意であり、アプリケーションで使用する際は注意が必要です。例えばパス情報を取り除いたり、サーバーのファイルシステムに合わせてファイル名の変換を行ったりすべきです。この引数は、ほとんどの情報を提供します。 `Content-Disposition: attachment` と組み合わせて使用すると、ユーザーに表示される「名前を付けて保存」ダイアログの既定のファイル名として使用されます。
@@ -97,22 +97,22 @@ value2
 
 ## 仕様書
 
-| 仕様書               | 題名                                                                                              |
-| -------------------- | ------------------------------------------------------------------------------------------------- |
+| 仕様書          | 題名                                                                                              |
+| --------------- | ------------------------------------------------------------------------------------------------- |
 | {{RFC("7578")}} | Returning Values from Forms: multipart/form-data                                                  |
 | {{RFC("6266")}} | Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP)             |
 | {{RFC("2183")}} | Communicating Presentation Information in Internet Messages: The Content-Disposition Header Field |
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Content-Disposition")}}
+{{Compat}}
 
 ## 互換性の注意
 
-- Firefox 5 は、 `Content-Disposition` レスポンスヘッダーで `filename` と `filename*` の両引数が提供されている場合、より効果的に処理します。 `filename` 引数が先にあった場合でも、提供されたすべての名前を調べ、利用可能な場合は `filename*` 引数を使用します。以前は、先に一致した引数がより適切な名前が使われていませんでした。 {{bug(588781)}} を参照してください。
+- Firefox 5 は、 `Content-Disposition` レスポンスヘッダーで `filename` と `filename*` の両引数が提供されている場合、より効果的に処理します。 `filename` 引数が先にあった場合でも、提供されたすべての名前を調べ、利用可能な場合は `filename*` 引数を使用します。以前は、先に一致した引数がより適切な名前が使われていませんでした。 [Firefox バグ 588781](https://bugzil.la/588781) を参照してください。
 
 ## 関連情報
 
-- [HTML Forms](/ja/docs/Web/Guide/HTML/Forms)
+- [HTML Forms](/ja/docs/Learn/Forms)
 - {{HTTPHeader("Content-Type")}}: マルチパート本文の境界を定義
 - {{domxref("FormData")}} インターフェイス: {{domxref("XMLHttpRequest")}} API でフォームデータを操作するために使用

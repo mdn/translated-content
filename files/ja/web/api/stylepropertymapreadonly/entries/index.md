@@ -10,7 +10,7 @@ slug: Web/API/StylePropertyMapReadOnly/entries
 ## 構文
 
 ```js
-StylePropertyMapReadOnly.entries()
+StylePropertyMapReadOnly.entries();
 ```
 
 ### 引数
@@ -27,7 +27,7 @@ StylePropertyMapReadOnly.entries()
 
 ```js
 // DOM 要素を取得
-const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector("button");
 
 // `computedStyleMap` ですべての計算済みスタイルが取得できます
 const allComputedStyles = buttonEl.computedStyleMap();

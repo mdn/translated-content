@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 
 我們會在這篇文章詳細講解 Firefox 的 WebExtension 的製作。這支附加元件會在 "mozilla.org" 網域底下的所有網頁，增加紅色外框。
 
-範例的原始碼也放在 GitHub 喔：<https://github.com/mdn/webextensions-examples/tree/master/borderify>。
+範例的原始碼也放在 GitHub 喔：<https://github.com/mdn/webextensions-examples/tree/main/borderify>。
 
 首先勒，你需要 Firefox 45.0 或以上的版本。
 
@@ -26,7 +26,6 @@ cd borderify
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Borderify",
   "version": "1.0",
@@ -43,20 +42,19 @@ cd borderify
       "js": ["borderify.js"]
     }
   ]
-
 }
 ```
 
-- 最前面的三個 key：[`manifest_version`](/zh-TW/Add-ons/WebExtensions/manifest.json/manifest_version)、[`name`](/zh-TW/Add-ons/WebExtensions/manifest.json/name)、[`version`](/zh-TW/Add-ons/WebExtensions/manifest.json/version) 必須寫進去，它包含了附加元件的基本詮釋資料（metadata）。
-- [`description`](/zh-TW/Add-ons/WebExtensions/manifest.json/description) 是可選、但最好要有：它會在附加元件管理員內標示。
-- [`icons`](/zh-TW/Add-ons/WebExtensions/manifest.json/icons) 也是可選、但最好要有：它允許附加元件指定圖示、也會在附加元件的管理員顯示。
+- 最前面的三個 key：[`manifest_version`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)、[`name`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)、[`version`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) 必須寫進去，它包含了附加元件的基本詮釋資料（metadata）。
+- [`description`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) 是可選、但最好要有：它會在附加元件管理員內標示。
+- [`icons`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) 也是可選、但最好要有：它允許附加元件指定圖示、也會在附加元件的管理員顯示。
 
-這裡最有趣的 key 是 [`content_scripts`](/zh-TW/Add-ons/WebExtensions/manifest.json/content_scripts)：它告訴 Firefox 說：符合特定型態的 URL 會載入網頁的腳本。在此我們告訴 Firefox 說：所有由 "mozilla.org" 或其子域名服務的 HTTP 或 HTTPS 頁面，都要載入 "borderify.js"。
+這裡最有趣的 key 是 [`content_scripts`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts)：它告訴 Firefox 說：符合特定型態的 URL 會載入網頁的腳本。在此我們告訴 Firefox 說：所有由 "mozilla.org" 或其子域名服務的 HTTP 或 HTTPS 頁面，都要載入 "borderify.js"。
 
-- [深入理解 content script](/zh-TW/Add-ons/WebExtensions/Content_scripts)
-- [深入理解 about match pattern](/zh-TW/Add-ons/WebExtensions/Match_patterns)
+- [深入理解 content script](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
+- [深入理解 about match pattern](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
 
-> **警告：** [某些情況下，你需要給附加元件指定 ID](/zh-TW/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID)。如果需要指定附加元件 ID，請在 `manifest.json` 引入 [`applications`](/zh-TW/Add-ons/WebExtensions/manifest.json/applications) key，並設定 `gecko.id` 屬性：
+> **警告：** [某些情況下，你需要給附加元件指定 ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when_do_you_need_an_add-on_id)。如果需要指定附加元件 ID，請在 `manifest.json` 引入 [`applications`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key，並設定 `gecko.id` 屬性：
 >
 > ```json
 > "applications": {
@@ -83,7 +81,7 @@ cd borderify
 
 要不然，你也能提供 SVG 檔，它就會等比縮放。
 
-- [深入理解指定圖標。](/zh-TW/Add-ons/WebExtensions/manifest.json/icons)
+- [深入理解指定圖標。](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)
 
 ### borderify.js
 
@@ -95,13 +93,13 @@ document.body.style.border = "5px solid red";
 
 一旦網址符合 manifest.json 中 content_scripts 所設定的模式，這段 script 就會載入，並且就像該頁自己讀入的程式碼一樣、能夠直接存取該頁上的東西。
 
-- [深入了解 content scripts.](/zh-TW/Add-ons/WebExtensions/Content_scripts)
+- [深入了解 content scripts.](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
 
 ## 測試看看
 
 首先，仔細檢查這些檔案是否在正確的位置：
 
-```
+```plain
 borderify/
     icons/
         border-48.png
@@ -115,7 +113,7 @@ borderify/
 
 現在這個附加元件就要安裝起來，但它要在你重新啟動 Firefox 後才開始。
 
-又或者，你可以從命令列利用 [web-ext](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext) 工具執行 WebExtension。
+又或者，你可以從命令列利用 [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) 工具執行 WebExtension。
 
 ### 測試
 
@@ -123,20 +121,21 @@ borderify/
 
 ![Border displayed on mozilla.org](border_on_mozilla_org.png)
 
-> **備註：** 不過，別把這招用在 addons.mozilla.org 上，該網域目前會阻擋 content scripts。
+> [!NOTE]
+> 不過，別把這招用在 addons.mozilla.org 上，該網域目前會阻擋 content scripts。
 
 再做點小實驗吧。改一下腳本讓外框顏色改變，或是做其他更動。接著存檔，並按下 about:debugging 的 Reload 鍵重啟附加元件。現在你能看到更動了：
 
-- [多了解一點附加元件的載入](/zh-TW/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
+- [多了解一點附加元件的載入](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
 
 ## 打包並發送
 
-想讓別人用你的附加元件，就要把元件遞交給 Mozilla 簽署之。想獲得更多資訊，請參見 [發布你的 WebExtension](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension)。
+想讓別人用你的附加元件，就要把元件遞交給 Mozilla 簽署之。想獲得更多資訊，請參見 [發布你的 WebExtension](https://extensionworkshop.com/documentation/publish/package-your-extension/)。
 
 ## 接下來咧？
 
 現在你針對 Firefox 的 WebExtension 開發有點子的話，來看看：
 
-- [reading more about the anatomy of WebExtensions](/zh-TW/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
-- [再寫個更進階的 WebExtension](/zh-TW/Add-ons/WebExtensions/Your_second_WebExtension)
-- [了解 WebExtensions 所提供的 JavaScript API](/zh-TW/Add-ons/WebExtensions/API)
+- [reading more about the anatomy of WebExtensions](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
+- [再寫個更進階的 WebExtension](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension)
+- [了解 WebExtensions 所提供的 JavaScript API](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API)

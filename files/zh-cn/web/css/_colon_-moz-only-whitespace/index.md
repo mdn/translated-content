@@ -1,5 +1,5 @@
 ---
-title: ':blank'
+title: :blank
 slug: Web/CSS/:-moz-only-whitespace
 ---
 
@@ -13,16 +13,16 @@ slug: Web/CSS/:-moz-only-whitespace
 
 3. 仅有空白符的文本节点。
 
-## 语法
+## 形式语法
 
 {{CSSSyntax}}
 
-## 样例
+## 示例
 
 ### HTML
 
 ```html
-<div> </div>
+<div></div>
 ```
 
 ### CSS
@@ -59,7 +59,7 @@ div {
 
 ### 结果
 
-{{EmbedLiveSample("Example", "100%", "50")}}
+{{EmbedLiveSample("示例", "100%", "50")}}
 
 ## 规范
 
@@ -69,6 +69,6 @@ div {
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - {{CSSxRef(":empty")}}

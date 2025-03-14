@@ -1,45 +1,80 @@
 ---
-title: '::after (:after)'
+title: ::after
 slug: Web/CSS/::after
+l10n:
+  sourceCommit: bf02c31b6f160b0df7bef4045929033dfad1961c
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
-CSS[伪元素](/zh-CN/CSS/Pseudo-elements)`::after`用来创建一个伪元素，作为已选中元素的最后一个子元素。通常会配合{{ cssxref("content") }}属性来为该元素添加装饰内容。这个虚拟元素默认是行内元素。
+在 CSS 中，**`::after`** 会创建一个[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)，作为所选元素的最后一个子元素。它通常用于为具有 {{CSSxRef("content")}} 属性的元素添加修饰内容。默认情况下，它是行向布局的。
 
-```
-/* Add an arrow after links */
+{{InteractiveExample("CSS Demo: ::after", "tabbed-standard")}}
+
+```css interactive-example
 a::after {
-  content: "→";
+  content: " (" attr(href) ")";
+}
+
+.dead-link {
+  text-decoration: line-through;
+}
+
+.dead-link::after {
+  content: url("/shared-assets/images/examples/warning.svg");
+  display: inline-block;
+  width: 12px;
+  height: 12px;
 }
 ```
 
-{{ fx_minversion_note("3.5", "Firefox 3.5 之前版本仅实现了 CSS 2.0 版本的语法<code> :after</code>. 且不允许在<code> position, float, list-style-* </code>等属性中使用。Firefox 3.5 开始没有了这项限制。") }}
+```html interactive-example
+<p>
+  The sailfish is named for its sail-like dorsal fin and is widely considered
+  the fastest fish in the ocean.
+  <a href="https://en.wikipedia.org/wiki/Sailfish"
+    >You can read more about it here</a
+  >.
+</p>
+
+<p>
+  The red lionfish is a predatory scorpionfish that lives on coral reefs of the
+  Indo-Pacific Ocean and more recently in the western Atlantic.
+  <a href="" class="dead-link">You can read more about it here</a>.
+</p>
+```
+
+> **备注：** `::before` 和 `::after` 生成的伪元素是行级盒子，就好像它们是应用它们的元素或“源元素”的直接子元素，因此不能应用于[_替换元素_](/zh-CN/docs/Web/CSS/Replaced_element)（如 {{htmlelement("img")}}），它们的内容在不受当前文档样式的影响的情况下被替换。
 
 ## 语法
 
+```css-nolint
+::after {
+  content: /* 值 */;
+  /* 其他属性 */
+}
 ```
-element:after  { style properties }  /* CSS2 语法 */
 
-element::after { style properties }  /* CSS3 语法 */
-```
+如果未指定 [`content`](/zh-CN/docs/Web/CSS/content) 属性、属性值无效或属性值为 `normal` 或 `none`，则不会渲染 `::after` 伪元素。其行为与设置了 `display: none` 相同。
 
-`::after` 表示法是在`CSS 3 中引入的，`::` 符号是用来区分[伪类](/zh-CN/CSS/Pseudo-classes)和伪元素的。支持 CSS3 的浏览器同时也都支持 CSS2 中引入的表示法 `:after`。
-
-> **备注：** IE8 仅支持`:after`。
+> [!NOTE]
+> CSS 引入 `::after` 表示法（两个冒号）是用来区分[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)和[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)的。同时为了向后兼容，浏览器也支持较早引入的 `:after`。
 
 ## 示例
 
 ### 简单用法
 
-让我们创建两个类：一个无趣的和一个有趣的。我们可以在每个段尾添加伪元素来标记他们。
+让我们创建两个类：一个用于枯燥的段落，一个用于精彩的段落。我们可以使用这些类在段落末尾添加伪元素。
+
+#### HTML
 
 ```html
 <p class="boring-text">这是些无聊的文字</p>
 <p>这是不无聊也不有趣的文字</p>
-<p class="exciting-text">在 MDN 上做贡献简单又轻松。
-按右上角的编辑按钮添加新示例或改进旧示例！</p>
+<p class="exciting-text">在 MDN 上做贡献简单又轻松！</p>
 ```
+
+#### CSS
 
 ```css
 .exciting-text::after {
@@ -53,74 +88,89 @@ element::after { style properties }  /* CSS3 语法 */
 }
 ```
 
-#### 输出
+#### 结果
 
-{{ EmbedLiveSample('Simple_usage', 500, 170) }}
+{{ EmbedLiveSample('简单用法', 500, 170) }}
 
-### 装饰用法
+### 装饰性用法
 
 我们几乎可以用想要的任何方法给 {{ cssxref("content") }} 属性里的文字和图片的加上样式。
 
+#### HTML
+
 ```html
-<span class="ribbon">Notice where the orange box is.</span>
+<span class="ribbon">看看这段文字后的橙色盒子。</span>
 ```
+
+#### CSS
 
 ```css
 .ribbon {
- background-color: #5BC8F7;
+  background-color: #5bc8f7;
 }
 
 .ribbon::after {
- content: "Look at this orange box.";
- background-color: #FFBA10;
- border-color: black;
- border-style: dotted;
+  content: "这是一个漂亮的橙色盒子。";
+  background-color: #ffba10;
+  border-color: black;
+  border-style: dotted;
 }
 ```
 
-#### 输出
+#### 结果
 
-{{ EmbedLiveSample('Decorative_example', 450, 20) }}
+{{ EmbedLiveSample('装饰性用法', 450, 20) }}
 
-### 提示用法
+### 工具提示
 
-接下来的示例展示了用`::after`[伪元素](/zh-CN/CSS/Pseudo-elements)，[`attr()`](/zh-CN/docs/CSS/attr)CSS 表达式和一个[自定义数据属性](/zh-CN/HTML/Global_attributes#attr-data-*) `data-descr` 创建一个纯 CSS，词汇表提示工具。在[单独页面](/files/4591/css-only_tooltips.html)看这个例子。
+本例使用 `::after`，结合 [`attr()`](/zh-CN/docs/Web/CSS/attr) CSS 表达式和 `data-descr` [自定义数据属性](/zh-CN/docs/Web/HTML/Global_attributes/data-*)，创建工具提示。无需 JavaScript！
+
+我们还可以使用此技术为键盘用户提供支持，方法是添加一个值为 `0` 的 `tabindex` 使每个 `span` 都可通过键盘操作聚焦，并使用 CSS `:focus` 选择器。这说明了 `::before` 和 `::after` 可以多么灵活，不过要获得最方便的体验，以其他方式创建的语义披露部件（如使用 [detail 和 summary](/zh-CN/docs/Web/HTML/Element/details) 元素）可能更合适。
+
+#### HTML
 
 ```html
-<p>这是上面代码的实现<br />
-  我们有一些 <span data-descr="collection of words and punctuation">文字</span> 有一些
-  <span data-descr="small popups which also hide again">提示</span>。<br />
-  把鼠标放上去<span data-descr="not to be taken literally">看看</span>。
+<p>
+  这里我们有包含了一些<span tabindex="0" data-descr="鼠标悬停时出现的小弹出窗口"
+    >工具提示</span
+  >的<span tabindex="0" data-descr="文字和标点符号的集合">文字</span>。
 </p>
 ```
 
+#### CSS
+
 ```css
 span[data-descr] {
- position: relative;
- text-decoration: underline;
- color: #00F;
- cursor: help;
+  position: relative;
+  text-decoration: underline;
+  color: #00f;
+  cursor: help;
 }
 
-span[data-descr]:hover::after {
- content: attr(data-descr);
- position: absolute;
- left: 0;
- top: 24px;
- min-width: 200px;
- border: 1px #aaaaaa solid;
- border-radius: 10px;
- background-color: #ffffcc;
- padding: 12px;
- color: #000000;
- font-size: 14px;
- z-index: 1;
+span[data-descr]:hover::after,
+span[data-descr]:focus::after {
+  content: attr(data-descr);
+  position: absolute;
+  left: 0;
+  top: 24px;
+  min-width: 200px;
+  border: 1px #aaaaaa solid;
+  border-radius: 10px;
+  background-color: #ffffcc;
+  padding: 12px;
+  color: #000000;
+  font-size: 14px;
+  z-index: 1;
 }
 ```
 
-#### 输出
+#### 结果
 
-{{ EmbedLiveSample('Tooltips', 450, 160) }}
+{{ EmbedLiveSample('提示用法', 450, 160) }}
+
+## 无障碍考虑
+
+不鼓励使用 `::after` 伪元素来添加内容，因为屏幕阅读器无法可靠地访问它。
 
 ## 规范
 
@@ -130,14 +180,7 @@ span[data-descr]:hover::after {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-{{ Cssxref("::before") }}, {{ cssxref("content") }}
-
-### 高级用法
-
-[getComputedStyle](/zh-CN/docs/Web/API/Window/getComputedStyle)
-
-[getPropertyValue](/zh-CN/docs/Web/API/CSSStyleDeclaration/getPropertyValue)
-
-[setProperty](/zh-CN/docs/Web/API/CSSStyleDeclaration/setProperty)
+- {{CSSxRef("::before")}}
+- {{CSSxRef("content")}}

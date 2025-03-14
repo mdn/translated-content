@@ -1,292 +1,507 @@
 ---
-title: Utiliser Fetch
+title: Utiliser l'API Fetch
 slug: Web/API/Fetch_API/Using_Fetch
-tags:
-  - API
-  - BODY
-  - Expérimental(2)
-  - Fetch
-  - Guide
-  - Promesse
-  - Promise
-  - Response
-  - request
-translation_of: Web/API/Fetch_API/Using_Fetch
+l10n:
+  sourceCommit: 251eb2f8a9132e73e647b9b7ae987ea6e2b45edc
 ---
 
 {{DefaultAPISidebar("Fetch API")}}
 
-L'[API Fetch](/fr/docs/Web/API/Fetch_API) fournit une interface JavaScript pour l'accès et la manipulation des parties de la pipeline HTTP, comme les requêtes et les réponses. Cela fournit aussi une méthode globale {{domxref("GlobalFetch.fetch","fetch()")}} qui procure un moyen facile et logique de récupérer des ressources à travers le réseau de manière asynchrone.
+[L'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) (en anglais, le verbe <i lang="en">fetch</i> signifie récupérer) fournit une interface JavaScript pour accéder et manipuler certaines parties du [protocole](/fr/docs/Glossary/Protocol), comme les requêtes et les réponses. Elle fournit également une méthode globale [`fetch()`](/fr/docs/Web/API/Window/fetch) qui permet un accès pratique aux ressources récupérées de façon asynchrone sur le réseau.
 
-Ce genre de fonctionnalité était auparavant réalisé avec {{domxref("XMLHttpRequest")}}. Fetch fournit une meilleure alternative qui peut être utilisée facilement par d’autres technologies comme {{domxref("ServiceWorker_API", "Service Workers")}}. Fetch fournit aussi un endroit unique et logique pour la définition d'autres concepts liés à HTTP comme CORS et les extensions d'HTTP.
+À la différence de [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) qui fonctionne à l'aide de fonctions de rappel (<i lang="en">callbacks</i>), l'API <i lang="en">Fetch</i> utilise les promesses et fournit une meilleure alternative, qui peut être utilisée dans [les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API). L'API <i lang="en">Fetch</i> intègre également des concepts HTTP avancés tels que [le CORS](/fr/docs/Web/HTTP/CORS) et d'autres extensions de HTTP.
 
-## Détection de la fonctionnalité
-
-Le support de l'API Fetch peut être détecté en vérifiant l'existence de {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} ou {{domxref("GlobalFetch.fetch","fetch()")}} sur la portée de {{domxref("Window")}} ou de {{domxref("Worker")}}. Par exemple, vous pouvez faire cela dans votre script :
+Une requête de récupération ressemblera à ceci&nbsp;:
 
 ```js
-if (window.fetch) {
-    // exécuter ma requête fetch ici
-} else {
-    // Faire quelque chose avec XMLHttpRequest?
+async function afficherFilms() {
+  const reponse = await fetch("http://example.com/films.json");
+  const films = await reponse.json();
+  console.log(films);
 }
 ```
 
-## Créer une requête fetch
+Dans cet exemple, nous récupérons un fichier JSON sur le Web, puis on analyse son contenu afin de pouvoir afficher les données dans la console. Dans sa forme la plus simple, `fetch()` utilise un argument qui correspond au chemin de la ressource à récupérer. Cet appel ne renvoie pas directement une réponse avec un corps en JSON, mais une promesse qui est résolue en un objet [`Response`](/fr/docs/Web/API/Response).
 
-Une requête fetch basique est vraiment simple à initier. Jetez un coup d'œil au code suivant :
+L'objet [`Response`](/fr/docs/Web/API/Response) ne contient pas directement le corps de la réponse en JSON mais fournit une représentation de l'ensemble de la réponse HTTP. Aussi, pour extraire le corps en JSON de l'objet [`Response`](/fr/docs/Web/API/Response), on utilise la méthode [`json()`](/fr/docs/Web/API/Response/json), qui renvoie une deuxième promesse dont la résolution fournit le résultat de l'analyse du corps de la réponse au format JSON.
 
-```js
-const myImage = document.querySelector('img');
+> [!NOTE]
+> Voir la section [corps](#corps) pour d'autres méthodes permettant d'extraire d'autres types de contenu du corps de la réponse.
 
-fetch('flowers.jpg')
-.then(function(response) {
-  return response.blob();
-})
-.then(function(myBlob) {
-  const objectURL = URL.createObjectURL(myBlob);
-  myImage.src = objectURL;
-});
-```
+Les requêtes de récupération sont contrôlées par la directive `connect-src` de [la politique de sécurité du contenu (<i lang="en">Content Security Policy</i> ou CSP)](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) plutôt que par la directive de la ressource qu'elles récupèrent.
 
-Ici nous récupérons une image à travers le réseau et l'insérons dans un élément {{htmlelement("img")}}. L'utilisation la plus simple de `fetch()` prend un argument — le chemin de la ressource que nous souhaitons récupérer — et retourne une promesse (promise) contenant, en réponse, un objet (de type {{domxref("Response")}}).
+## Fournir des options à la requête
 
-Bien sûr, il s'agit seulement d'une réponse HTTP, pas exactement de l'image. Pour extraire le contenu de l'image de la réponse, nous utilisons la méthode {{domxref("Body.blob","blob()")}} (définie sur le mixin {{domxref("Body")}}, qui est implémenté autant par les objets {{domxref("Request")}} que par les objets {{domxref("Response")}}).
+La méthode `fetch()` permet l'utilisation optionnelle d'un deuxième paramètre, un objet `init` pour contrôler différents paramètres.
 
-> **Note :** Le mixin Body a aussi des méthodes similaires pour extraire d'autres types contenu ; pour plus d'informations regardez la section [Corps](#corps).
-
-Un objet `objectURL` est ensuite créé à partir du {{domxref("Blob")}} extrait, puis est inseré dans {{domxref("img")}}.
-
-Les requêtes Fetch sont controllées par la directive `connect-src` du [Content Security Policy](/fr/docs/Security/CSP/CSP_policy_directives) plutôt que par la directive de la ressource dont il s’agit de la récupération.
-
-### Fournir des options à la requête
-
-La méthode `fetch()` accepte un second paramètre, optionnel ; un objet `init` qui vous permet de contrôler un certain nombre de réglages :
+Voir [la page sur la méthode `fetch()`](/fr/docs/Web/API/Window/fetch) pour plus de détails et l'exhaustivité des options disponibles.
 
 ```js
-var myHeaders = new Headers();
-
-var myInit = { method: 'GET',
-               headers: myHeaders,
-               mode: 'cors',
-               cache: 'default' };
-
-fetch('flowers.jpg',myInit)
-.then(function(response) {
-  return response.blob();
-})
-.then(function(myBlob) {
-  var objectURL = URL.createObjectURL(myBlob);
-  myImage.src = objectURL;
-});
-```
-
-Reportez-vous à {{domxref("GlobalFetch.fetch","fetch()")}} pour la liste complète des options disponibles, et plus de détails.
-
-### Vérifier que la récupération a réussi
-
-Une promesse {{domxref("GlobalFetch.fetch","fetch()")}} va retourner une {{jsxref("TypeError")}} quand un problème réseau s'est produit. Cependant, il peut aussi s'agir d'un problème de permission ou quelque chose de similaire — un code HTTP 404 ne constitue pas une erreur réseau, par exemple. Un bon test de la réussite de `fetch()` devrait inclure la vérification que la promesse soit résolue, puis vérifier que la propriété {{domxref("Response.ok")}} ait la valeur _true_. Le code devrait ressembler à ce qui suit:
-
-```js
-fetch('flowers.jpg').then(function(response) {
-  if(response.ok) {
-    response.blob().then(function(myBlob) {
-      var objectURL = URL.createObjectURL(myBlob);
-      myImage.src = objectURL;
-    });
-  } else {
-    console.log('Mauvaise réponse du réseau');
-  }
-})
-.catch(function(error) {
-  console.log('Il y a eu un problème avec l\'opération fetch: ' + error.message);
-});
-```
-
-### Fournir votre propre objet requête
-
-Plutôt que de transmettre le chemin de la ressource que vous souhaitez récupérer avec l'appel `fetch()`, vous pouvez créer un objet de requête en utilisant le constructeur {{domxref("Request.Request","Request()")}}, et le transmettre à la méthode `fetch()` en tant qu’argument:
-
-```js
-var myHeaders = new Headers();
-
-var myInit = { method: 'GET',
-               headers: myHeaders,
-               mode: 'cors',
-               cache: 'default' };
-
-var myRequest = new Request('flowers.jpg',myInit);
-
-fetch(myRequest,myInit)
-.then(function(response) {
-  return response.blob();
-})
-.then(function(myBlob) {
-  var objectURL = URL.createObjectURL(myBlob);
-  myImage.src = objectURL;
-});
-```
-
-`Request()` accepte exactement les mêmes paramètres que la méthode `fetch()`. Vous pouvez même lui transmettre un objet Request existant pour en créer une copie :
-
-```js
-var anotherRequest = new Request(myRequest,myInit);
-```
-
-C'est très pratique, si le corps de la requête et de la réponse ne sont utilisés qu'une fois seulement. Cette manière de faire une copie permet de ré-utiliser la requête/réponse, en changeant juste les options du `init` si nécessaire.
-
-> **Note :** Il y a aussi une méthode {{domxref("Request.clone","clone()")}} qui créer une copie. Cela a une sémantique légèrement différente à l'autre méthode de copie— La première va échouer si l'ancien corps de la requête a déjà été lu (même pour copier une réponse), alors qu'avec `clone()` non.
-
-## En-têtes (Headers)
-
-L'interface {{domxref("Headers")}} vous permet de créer vos propres objets d'en-têtes via le constructeur {{domxref("Headers.Headers","Headers()")}}. Un objet en-tête est un simple ensemble de plusieurs clé-valeurs:
-
-```js
-var content = "Hello World";
-var myHeaders = new Headers();
-myHeaders.append("Content-Type", "text/plain");
-myHeaders.append("Content-Length", content.length.toString());
-myHeaders.append("X-Custom-Header", "ProcessThisImmediately");
-```
-
-On peut atteindre le même résultat en transmettant un tableau de tableaux ou un objet littéral au constructeur:
-
-```js
-myHeaders = new Headers({
-  "Content-Type": "text/plain",
-  "Content-Length": content.length.toString(),
-  "X-Custom-Header": "ProcessThisImmediately",
-});
-```
-
-Le contenu peut être interrogé et récupéré:
-
-```js
-console.log(myHeaders.has("Content-Type")); // true
-console.log(myHeaders.has("Set-Cookie")); // false
-myHeaders.set("Content-Type", "text/html");
-myHeaders.append("X-Custom-Header", "AnotherValue");
-
-console.log(myHeaders.get("Content-Length")); // 11
-console.log(myHeaders.getAll("X-Custom-Header")); // ["ProcessThisImmediately", "AnotherValue"]
-
-myHeaders.delete("X-Custom-Header");
-console.log(myHeaders.getAll("X-Custom-Header")); // [ ]
-```
-
-Certaines de ces opérations sont seulement utiles dans {{domxref("ServiceWorker_API","ServiceWorkers")}}, mais elles fournissent une bien meilleur API pour la manipulation des en-têtes.
-
-Toutes les méthodes d'en-tête provoquent une erreur TypeError si un nom d’en-tête utilisé n'est pas un nom d’en-tête HTTP valide. Les opérations de mutation vont provoquer une erreur TypeError si il y a une protection immutable (voir ci-dessous). Sinon elles vont échouer en silence. Par exemple :
-
-```js
-var myResponse = Response.error();
-try {
-  myResponse.headers.set("Origin", "http://mybank.com");
-} catch(e) {
-  console.log("Ne peut pas prétendre être une banque!");
-}
-```
-
-Un bon cas d'utilisation des en-têtes est de vérifier que le type de contenu récupéré est correct avant de poursuivre le traitement. Par exemple:
-
-```js
-fetch(myRequest).then(function(response) {
-  var contentType = response.headers.get("content-type");
-  if(contentType && contentType.indexOf("application/json") !== -1) {
-    return response.json().then(function(json) {
-      // traitement du JSON
-    });
-  } else {
-    console.log("Oops, nous n'avons pas du JSON!");
-  }
-});
-```
-
-### Protection (Guard)
-
-Puisque les en-têtes peuvent être envoyés dans les requêtes et reçus dans les réponses, et ont diverses limitations sur quelles informations peuvent et doivent être mutables, les objets en-tête ont une propriété _guard_. Ce n'est pas exposé au Web, mais cela définit quelle opération de mutation est autorisée sur l'objet en-tête.
-
-Les valeurs possibles de la propriété _guard_ sont:
-
-- `none`: défaut.
-- `request`: guard pour l’en-tête obtenu d'une requête ({{domxref("Request.headers")}}).
-- `request-no-cors`: guard pour l'en-tête obtenu d'une requête créé avec {{domxref("Request.mode")}} `no-cors`.
-- `response`: guard pour l'en-tête obtenu d'une réponse ({{domxref("Response.headers")}}).
-- `immutable`: majoritairement utilisé pour les ServiceWorkers; retourne un objet en-tête en lecture seule.
-
-> **Note :** Vous ne pouvez pas ajouter ou définir sur une requête protegée une en-tête `Content-Length`. De manière similaire, ajouter `Set-Cookie` dans l'en-tête de réponse n'est pas autorisé: les ServiceWorkers ne sont pas autorisés à gérer des cookies via des réponses synthétisées.
-
-## Réponses
-
-Comme vous l'avez vu ci-dessus, des instances de {{domxref("Response")}} sont retournées quand la promesse de `fetch()` est résolue.
-
-Elles peuvent aussi être programmées dans le code via JavaScript, mais c'est seulement utile concernant les {{domxref("ServiceWorker_API", "ServiceWorkers")}}, quand vous retournez, pour une requête reçue, une réponse personnalisée en utilisant la méthode {{domxref("FetchEvent.respondWith","respondWith()")}}:
-
-```js
-var myBody = new Blob();
-
-addEventListener('fetch', function(event) {
-  event.respondWith(new Response(myBody, {
-    headers: { "Content-Type" : "text/plain" }
+// Exemple d'implémentation pour une requête POST
+async function postData(url = "", donnees = {}) {
+  // Les options par défaut sont indiquées par *
+  const response = await fetch(url, {
+    method: "POST", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors", // no-cors, *cors, same-origin
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "same-origin", // include, *same-origin, omit
+    headers: {
+      "Content-Type": "application/json",
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    redirect: "follow", // manual, *follow, error
+    referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: JSON.stringify(donnees), // le type utilisé pour le corps doit correspondre à l'en-tête "Content-Type"
   });
-)});
+  return response.json(); // transforme la réponse JSON reçue en objet JavaScript natif
+}
+
+postData("https://example.com/solution", { solution: 42 }).then((donnees) => {
+  console.log(donnees); // Les données JSON analysées par l'appel `donnees.json()`
+});
 ```
 
-Le constructeur {{domxref("Response.Response","Response()")}} prend deux arguments optionnels —le corps de la réponse, et un objet d'options (similaire à l'objet que {{domxref("Request.Request","Request()")}} accepte).
+On notera que `mode: "no-cors"` ne permet qu'un ensemble limité d'en-têtes dans la requête&nbsp;:
 
-Les propriétés de réponse les plus communes que vous allez utiliser sont:
+- `Accept`
+- `Accept-Language`
+- `Content-Language`
+- `Content-Type` avec une valeur `application/x-www-form-urlencoded`, `multipart/form-data`, ou `text/plain`
 
-- {{domxref("Response.status")}} —Un entier (valeur par défaut 200) contenant le code de statut de la réponse.
-- {{domxref("Response.statusText")}} — Une chaine de caractères (valeur par défaut "OK"), qui correspond au message du statut HTTP.
-- {{domxref("Response.ok")}} —vu précedemment, c'est un raccourci pour vérifier que le code de statut et bien compris entre 200 et 299 inclus. Retourne un {{domxref("Boolean")}}.
+## Interrompre une requête
 
-> **Note :** La méthode statique {{domxref("Response.error","error()")}} retourne simplement une réponse d'erreur. De manière similaire, {{domxref("Response.redirect","redirect()")}} retourne une réponse de redirection vers une URL spécifique. Elles sont aussi pertinentes pour les Service Workers.
+Pour interrompre une opération `fetch()` en cours, on pourra utiliser les interfaces [`AbortController`](/fr/docs/Web/API/AbortController) et [`AbortSignal`](/fr/docs/Web/API/AbortSignal).
+
+```js
+const controleur = new AbortController();
+const signal = controleur.signal;
+const url = "video.mp4";
+
+const btnTelechargement = document.querySelector("#telechargement");
+const btnInterruption = document.querySelector("#interrompre");
+
+btnTelechargement.addEventListener("click", async () => {
+  try {
+    const reponse = await fetch(url, { signal });
+    console.log("Téléchargement terminé", reponse);
+  } catch (error) {
+    console.error(`Erreur lors du téléchargement : ${error.message}`);
+  }
+});
+
+btnInterruption.addEventListener("click", () => {
+  controleur.abort();
+  console.log("Téléchargement interrompu");
+});
+```
+
+## Envoyer une requête contenant les informations d'authentification
+
+Pour que les navigateurs envoient une requête avec les informations d'authentification, tant pour les requêtes sur la même origine qu'entre origines différentes, on ajoutera `credentials: 'include'` à l'objet `init` passé à la méthode `fetch()`.
+
+```js
+fetch("https://example.com", {
+  credentials: "include",
+});
+```
+
+> [!NOTE]
+> On ne pourra pas utiliser `Access-Control-Allow-Origin: *` pour les requêtes avec `credentials: 'include'`. Pour ces cas-là, il faut fournir l'origine exacte. Même si une extension de débridage du CORS est utilisée, la requête échouera.
+
+> [!NOTE]
+> Les navigateurs ne devraient pas envoyer d'informations d'authentification dans les _requêtes préparatoires_ (<i lang="en">preflight requests</i>), quelle que soit la valeur de cette option. Pour plus d'informations, voir [la section de la page CORS sur les requêtes avec informations d'authentification](/fr/docs/Web/HTTP/CORS#requêtes_avec_informations_dauthentification).
+
+Si on souhaite uniquement envoyer les informations d'authentification lorsque l'URL de la requête se situe sur la même origine que le script appelant, on utilisera `credentials: 'same-origin'`.
+
+```js
+// Le script qui appelle se situe sur l'origine 'https://example.com'
+
+fetch("https://example.com", {
+  credentials: "same-origin",
+});
+```
+
+Pour s'assurer que les navigateurs n'envoient aucune information d'authentification dans la requête, on utilisera `credentials: 'omit'`.
+
+```js
+fetch("https://example.com", {
+  credentials: "omit",
+});
+```
+
+## Téléverser des données JSON
+
+On peut utiliser [`fetch()`](/fr/docs/Web/API/Window/fetch) pour envoyer des données au format JSON à un serveur avec une requête POST.
+
+```js
+async function postJSON(donnees) {
+  try {
+    const reponse = await fetch("https://example.com/profile", {
+      method: "POST", // ou 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(donnees),
+    });
+
+    const resultat = await reponse.json();
+    console.log("Réussite :", resultat);
+  } catch (erreur) {
+    console.error("Erreur :", erreur);
+  }
+}
+
+const donnees = { login: "Jean Biche" };
+postJSON(donnees);
+```
+
+## Téléverser un fichier
+
+Les fichiers peuvent être envoyés à l'aide d'un élément HTML [`<input type="file" />`](/fr/docs/Web/HTML/Element/input/file), de [`FormData`](/fr/docs/Web/API/FormData/FormData), et de [`fetch()`](/fr/docs/Web/API/Window/fetch).
+
+```js
+async function upload(donneesFormulaires) {
+  try {
+    const reponse = await fetch("https://example.com/profile/avatar", {
+      method: "PUT",
+      body: donneesFormulaires,
+    });
+    const resultat = await reponse.json();
+    console.log("Réussite :", resultat);
+  } catch (erreur) {
+    console.error("Erreur :", erreur);
+  }
+}
+
+const donneesFormulaires = new FormData();
+const champFichier = document.querySelector('input[type="file"]');
+
+donneesFormulaires.append("username", "abc123");
+donneesFormulaires.append("avatar", champFichier.files[0]);
+
+upload(donneesFormulaires);
+```
+
+## Téléverser plusieurs fichiers
+
+On peut envoyer plusieurs fichiers en utilisant un élément HTML [`<input type="file" multiple />`](/fr/docs/Web/HTML/Element/input/file), [`FormData`](/fr/docs/Web/API/FormData/FormData), et [`fetch()`](/fr/docs/Web/API/Window/fetch).
+
+```js
+async function uploadMultiple(donneesFormulaires) {
+  try {
+    const reponse = await fetch("https://example.com/posts", {
+      method: "POST",
+      body: donneesFormulaires,
+    });
+    const resultat = await reponse.json();
+    console.log("Réussite :", resultat);
+  } catch (erreur) {
+    console.error("Erreur :", erreur);
+  }
+}
+
+const photos = document.querySelector('input[type="file"][multiple]');
+const donneesFormulaires = new FormData();
+
+donneesFormulaires.append("title", "Mes vacances");
+
+for (const [i, photo] of Array.from(photos.files).entries()) {
+  donneesFormulaires.append(`photos_${i}`, photo);
+}
+
+uploadMultiple(donneesFormulaires);
+```
+
+## Traiter un fichier texte ligne à ligne
+
+Les fragments reçus dans une réponse ne sont pas segmentés proprement à chaque fin de ligne. Il s'agit d'objets binaires [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array), pas de chaînes de caractères. Si on récupère un fichier texte et qu'on souhaite le traiter ligne à ligne, il faut gérer cette représentation. Dans l'exemple qui suit, on illustre une façon de procéder en créant un itérateur sur les lignes (pour garder l'exemple simple, on considère que le texte est encodé en UTF-8 et on ne gère pas les erreurs de récupération).
+
+```js
+async function* makeTextFileLineIterator(fileURL) {
+  const utf8Decoder = new TextDecoder("utf-8");
+  const response = await fetch(fileURL);
+  const reader = response.body.getReader();
+  let { value: chunk, done: readerDone } = await reader.read();
+  chunk = chunk ? utf8Decoder.decode(chunk) : "";
+
+  const newline = /\r?\n/gm;
+  let startIndex = 0;
+  let result;
+
+  while (true) {
+    const result = newline.exec(chunk);
+    if (!result) {
+      if (readerDone) break;
+      const remainder = chunk.substr(startIndex);
+      ({ value: chunk, done: readerDone } = await reader.read());
+      chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : "");
+      startIndex = newline.lastIndex = 0;
+      continue;
+    }
+    yield chunk.substring(startIndex, result.index);
+    startIndex = newline.lastIndex;
+  }
+
+  if (startIndex < chunk.length) {
+    // Last line didn't end in a newline char
+    yield chunk.substr(startIndex);
+  }
+}
+
+async function run() {
+  for await (const line of makeTextFileLineIterator(urlOfFile)) {
+    processLine(line);
+  }
+}
+
+run();
+```
+
+## Vérifier la réussite de l'opération
+
+Une promesse [`fetch()`](/fr/docs/Web/API/Window/fetch) échouera avec une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) s'il y a une erreur réseau ou que la politique CORS est incorrectement configurée côté serveur. En revanche, une réponse 404 qui indiquerait un problème de permission ou autre ne déclencherait pas une telle erreur. Aussi, pour bien vérifier que l'opération `fetch()` est réussie, il faudra vérifier que la promesse est tenue, mais aussi vérifier que la propriété [`Response.ok`](/fr/docs/Web/API/Response/ok) vaut `true`. Le code correspondant ressemblerait à&nbsp;:
+
+```js
+async function fetchImage() {
+  try {
+    const response = await fetch("flowers.jpg");
+    if (!response.ok) {
+      throw new Error("La réponse n'est pas OK");
+    }
+    const myBlob = await response.blob();
+    monImage.src = URL.createObjectURL(myBlob);
+  } catch (error) {
+    console.error("Un problème est survenu lors de la récupération :", error);
+  }
+}
+```
+
+## Fournir un objet `Request` sur mesure
+
+Plutôt que de passer le chemin de la ressource à l'appel `fetch()`, on peut créer un objet représentant une requête à l'aide du constructeur [`Request()`](/fr/docs/Web/API/Request/Request) et passer cet objet comme argument à la méthode `fetch()`&nbsp;:
+
+```js
+async function fetchImage(request) {
+  try {
+    const response = await fetch(request);
+    if (!response.ok) {
+      throw new Error("La réponse n'est pas OK");
+    }
+    const monBlob = await response.blob();
+    monImage.src = URL.createObjectURL(monBlob);
+  } catch (error) {
+    console.error("Erreur :", error);
+  }
+}
+
+const mesEntetes = new Headers();
+
+const maRequete = new Request("flowers.jpg", {
+  method: "GET",
+  headers: mesEntetes,
+  mode: "cors",
+  cache: "default",
+});
+
+fetchImage(maRequete);
+```
+
+`Request()` accepte les mêmes paramètres que la méthode `fetch()`. On peut même lui passer un objet représentant une requête existante pour en créer une copie&nbsp;:
+
+```js
+const uneAutreRequete = new Request(maRequete, monInit);
+```
+
+Ce mécanisme de duplication est plutôt utile, car les corps des requêtes et des réponses ne peuvent être utilisés qu'une seule fois. En construisant une telle copie, on peut à nouveau utiliser la requête ou la réponse tout en adaptant les options `init` si besoin. Attention, la copie doit être effectuée avant que le corps ait été lu.
+
+> [!NOTE]
+> Il existe également la méthode [`clone()`](/fr/docs/Web/API/Request/clone) pour créer une copie. Ces deux méthodes de copie échoueront si le corps de la requête ou de la réponse originale a déjà été lu. En revanche, lire le corps d'une réponse ou d'une requête clonée ne modifiera pas l'état de lecture de l'original.
+
+## En-têtes
+
+L'interface [`Headers`](/fr/docs/Web/API/Headers) permet de créer ses propres objets représentant des en-têtes HTTP à l'aide du constructeur [`Headers()`](/fr/docs/Web/API/Headers/Headers). Un objet d'en-têtes est un tableau de correspondance entre des noms et des valeurs&nbsp;:
+
+```js
+const contenu = "Coucou le monde";
+const mesEntetes = new Headers();
+mesEntetes.append("Content-Type", "text/plain");
+mesEntetes.append("Content-Length", contenu.length.toString());
+mesEntetes.append("X-Custom-Header", "ATraiterImmediatement");
+```
+
+On pourra obtenir le même résultat en passant un tableau de tableaux ou un littéral objet au constructeur&nbsp;:
+
+```js
+const mesEntetes = new Headers({
+  "Content-Type": "text/plain",
+  "Content-Length": contenu.length.toString(),
+  "X-Custom-Header": "ATraiterImmediatement",
+});
+```
+
+Le contenu de ces en-têtes peut être consulté et modifié&nbsp;:
+
+```js
+console.log(mesEntetes.has("Content-Type")); // true
+console.log(mesEntetes.has("Set-Cookie")); // false
+mesEntetes.set("Content-Type", "text/html");
+mesEntetes.append("X-Custom-Header", "UneAutreValeur");
+
+console.log(mesEntetes.get("Content-Length")); // 11
+console.log(mesEntetes.get("X-Custom-Header")); // ['ATraiterImmediatement', 'UneAutreValeur']
+
+mesEntetes.delete("X-Custom-Header");
+console.log(mesEntetes.get("X-Custom-Header")); // null
+```
+
+Certaines de ces opérations ne sont utiles qu'avec les [<i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API), néanmoins, elles fournissent une API plus pratique pour manipuler les en-têtes.
+
+Toutes les méthodes de `Headers` lèvent une exception `TypeError` si le nom d'en-tête utilisé n'est pas valide en HTTP. Les opérations de modification déclencheront une exception `TypeError` s'il y a une garde d'immuabilité ([voir ci-après](#garde)). Sinon, elles échouent de façon silencieuse&nbsp;:
+
+```js
+const maReponse = Response.error();
+try {
+  maReponse.headers.set("Origin", "http://mabanque.com");
+} catch (e) {
+  console.log("On ne se fait pas passer pour une banque !");
+}
+```
+
+Un bon usage des en-têtes consiste à vérifier si le type de contenu est correct avant d'aller plus loin dans le traitement. Par exemple&nbsp;:
+
+```js
+async function fetchJSON(requete) {
+  try {
+    const reponse = await fetch(requete);
+    const typeContenu = reponse.headers.get("content-type");
+    if (!typeContenu || !typeContenu.includes("application/json")) {
+      throw new TypeError("Ah, nous n'avons pas eu de JSON !");
+    }
+    const donneesJSON = await reponse.json();
+    // on continue le traitement des données
+  } catch (erreur) {
+    console.error("Erreur :", erreur);
+  }
+}
+```
+
+### Garde
+
+Les en-têtes sont envoyés avec les requêtes et reçus avec les réponses. Plusieurs règles indiquent les informations qui peuvent ou non être modifiées et pour traduire cela, les objets des en-têtes ont une propriété interne `guard`. Cette dernière n'est pas exposée sur le Web, mais a un impact sur les opérations de modification qui sont permises.
+
+Les valeurs pour `guard` sont&nbsp;:
+
+- `none`
+  - : La valeur par défaut.
+- `request`
+  - : Une garde pour l'objet d'en-têtes obtenus avec une requête ([`Request.headers`](/fr/docs/Web/API/Request/headers)).
+- `request-no-cors`
+  - : Une garde pour l'objet d'en-têtes obtenus avec une requête créée avec [`Request.mode`](/fr/docs/Web/API/Request/mode) `no-cors`.
+- `response`
+  - : Une garde pour l'objet d'en-têtes obtenus avec une réponse ([`Response.headers`](/fr/docs/Web/API/Response/headers)).
+- `immutable`
+  - : Une garde qui indique que l'objet d'en-têtes est en lecture seule. Elle est principalement utilisée pour les <i lang="en">service workers</i>.
+
+> [!NOTE]
+> Il n'est pas possible d'ajouter ou de modifier l'en-tête `Content-Length` d'un objet d'en-têtes de réponse avec une garde. De même, on ne pourra pas insérer d'en-tête `Set-Cookie` pour une réponse&nbsp;: les <i lang="en">service workers</i> ne sont pas autorisés à écrire des cookies dans des réponses de synthèse.
+
+## Objets `Response`
+
+Nous l'avons vu ci-avant, ce sont des instances de [`Response`](/fr/docs/Web/API/Response) qui sont renvoyées lors de la résolution des promesses fournies par `fetch()`.
+
+Les propriétés les plus fréquemment utilisées pour ces objets `Response` sont&nbsp;:
+
+- [`Response.status`](/fr/docs/Web/API/Response/status)
+  - : Un entier contenant le code de statut HTTP de la réponse (la valeur par défaut est 200).
+- [`Response.statusText`](/fr/docs/Web/API/Response/statusText)
+  - : Une chaîne de caractères qui contient le message du code de statut HTTP (la valeur par défaut est la chaîne vide `""`). On notera que HTTP/2 [ne prend pas en charge](https://fetch.spec.whatwg.org/#concept-response-status-message) les messages de statut.
+- [`Response.ok`](/fr/docs/Web/API/Response/ok)
+  - : Nous avons vu cette propriété plus tôt dans cet article&nbsp;: il s'agit d'un raccourci pour vérifier que le statut appartient à l'intervalle 200-299. Cette propriété est une valeur booléenne.
+
+On peut également créer des réponses artificiellement en JavaScript. Cela n'est généralement utile qu'au sein des [<i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API), lorsqu'on fournit une réponse sur mesure à une requête reçue en utilisant la méthode [`respondWith()`](/fr/docs/Web/API/FetchEvent/respondWith)&nbsp;:
+
+```js
+const monCorps = new Blob();
+
+addEventListener("fetch", (event) => {
+  // Un ServiceWorker qui intercepte une requête de récupération
+  event.respondWith(
+    new Response(monCorps, {
+      headers: { "Content-Type": "text/plain" },
+    }),
+  );
+});
+```
+
+Le constructeur [`Response()`](/fr/docs/Web/API/Response/Response) prend deux arguments optionnels&nbsp;:
+
+- Un corps pour la réponse
+- Un objet d'initialisation des paramètres, semblable à celui qu'on fournit au constructeur [`Request()`](/fr/docs/Web/API/Request/Request).
+
+> [!NOTE]
+> La méthode statique [`error()`](/fr/docs/Web/API/Response/error_static) renvoie une réponse d'erreur. De même, [`redirect()`](/fr/docs/Web/API/Response/redirect_static) renvoie une réponse résultant en une redirection vers l'URL indiquée. Ces méthodes sont uniquement pertinentes dans le cadre des <i lang="en">service workers</i>.
 
 ## Corps
 
-Autant une requête qu'une réponse peut contenir un corps avec des données. Un corps est une instance de n'importe lequel des types suivants:
+Les requêtes et les réponses peuvent avoir un corps, contenant des données. Un corps pourra être une instance d'un des types suivants&nbsp;:
 
-- {{domxref("ArrayBuffer")}}
-- {{domxref("ArrayBufferView")}} (Uint8Array et ses proches)
-- {{domxref("Blob")}}/Fichier
-- chaine de caractères
-- {{domxref("URLSearchParams")}}
-- {{domxref("FormData")}}
+- [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+- [`TypedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) (`Uint8Array`, etc.)
+- [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)
+- [`Blob`](/fr/docs/Web/API/Blob)
+- [`File`](/fr/docs/Web/API/File)
+- [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) ou une chaîne de caractères littérale
+- [`URLSearchParams`](/fr/docs/Web/API/URLSearchParams)
+- [`FormData`](/fr/docs/Web/API/FormData)
 
-Le mixin {{domxref("Body")}} définit les méthodes suivantes pour extraire le corps (implémenté autant par la {{domxref("Request")}} que par la {{domxref("Response")}}). Elles retournent toutes une promesse qui sera éventuellement résolue avec le contenu actuel.
+Les interfaces [`Request`](/fr/docs/Web/API/Request) et [`Response`](/fr/docs/Web/API/Response) partagent les méthodes suivantes pour extraire les données du corps. Toutes ces méthodes renvoient une promesse qui pourra être résolue avec le contenu effectif.
 
-- {{domxref("Body.arrayBuffer","arrayBuffer()")}}
-- {{domxref("Body.blob","blob()")}}
-- {{domxref("Body.json","json()")}}
-- {{domxref("Body.text","text()")}}
-- {{domxref("Body.formData","formData()")}}
+- [`Request.arrayBuffer()`](/fr/docs/Web/API/Request/arrayBuffer) / [`Response.arrayBuffer()`](/fr/docs/Web/API/Response/arrayBuffer)
+- [`Request.blob()`](/fr/docs/Web/API/Request/blob) / [`Response.blob()`](/fr/docs/Web/API/Response/blob)
+- [`Request.formData()`](/fr/docs/Web/API/Request/formData) / [`Response.formData()`](/fr/docs/Web/API/Response/formData)
+- [`Request.json()`](/fr/docs/Web/API/Request/json) / [`Response.json()`](/fr/docs/Web/API/Response/json)
+- [`Request.text()`](/fr/docs/Web/API/Request/text) / [`Response.text()`](/fr/docs/Web/API/Response/text)
 
-Ceci rend l'usage de données non textuelles plus facile qu’avec XHR.
+> [!NOTE]
+> Ces méthodes permettent de travailler plus facilement avec du contenu non-textuel (par rapport à ce que permettait `XMLHttpRequest`).
 
-Le corps des requêtes peut être défini en passant les paramètres du corps:
+On peut fournir des corps aux requêtes en utilisant le deuxième paramètre et sa propriété `form`&nbsp;:
 
 ```js
-var form = new FormData(document.getElementById('login-form'));
+const form = new FormData(document.getElementById("login-form"));
 fetch("/login", {
   method: "POST",
-  body: form
-})
+  body: form,
+});
 ```
 
-Les Requêtes et Réponses (et par extension la fonction `fetch()`), vont tenter de déterminer le type de contenu. Une requête va automatiquement définir un en-tête `Content-Type`  si rien n'est défini dans le dictionnaire \[NDLT: configuration d'initialisation].
+Tant la requête que la réponse, ou la fonction `fetch()` essaieront de déterminer intelligemment le type de contenu. Une requête définira automatiquement un en-tête `Content-Type` si aucun n'a été fourni avec le paramètre [`options`](/fr/docs/Web/API/Window/fetch#options).
 
-## Spécifications
+## Détection de la fonctionnalité
 
-{{Specifications}}
+La prise en charge de l'API <i lang="en">Fetch</i> peut être détectée en vérifiant la présence de [`Headers`](/fr/docs/Web/API/Headers), [`Request`](/fr/docs/Web/API/Request), [`Response`](/fr/docs/Web/API/Response) ou [`fetch()`](/fr/docs/Web/API/Window/fetch) au sein des portées [`Window`](/fr/docs/Web/API/Window) ou [`Worker`](/fr/docs/Web/API/Worker). Par exemple&nbsp;:
 
-## Compatibilité des navigateurs
+```js
+if (window.fetch) {
+  // On exécute la requête avec Fetch ici
+} else {
+  // On tente autre chose avec XMLHttpRequest ?
+}
+```
 
-{{Compat}}
+## Différences avec `jQuery.ajax()`
+
+La spécification de `fetch()` diffère de `jQuery.ajax()`&nbsp;:
+
+- La promesse renvoyée par `fetch()` ne lèvera pas d'exception en cas d'erreurs HTTP, même si le statut de la réponse HTTP est 404 ou 500. Dès que le serveur répond avec les en-têtes, la promesse sera bien résolue (la propriété [`Response.ok`](/fr/docs/Web/API/Response/ok) étant fixée à `false` si le statut de la réponse est en dehors de l'intervalle [200, 299]). La promesse sera uniquement rompue s'il y a une erreur réseau ou tout autre évènement qui a empêché sa complétion.
+- À moins que `fetch()` ne soit appelé avec l'option [`credentials`](/fr/docs/Web/API/Window/fetch#credentials) valant `include`, `fetch()`&nbsp;:
+  - N'enverra pas de cookies pour les requêtes vers d'autres origines
+  - N'écrira pas de cookies provenant de réponses d'autres origines
 
 ## Voir aussi
 
-- [API ServiceWorker](/fr/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/fr/docs/Web/HTTP/Access_control_CORS)
+- [L'API <i lang="en">Service Worker</i>](/fr/docs/Web/API/Service_Worker_API)
+- [La politique HTTP d'accès aux ressources entre origines (CORS)](/fr/docs/Web/HTTP/CORS)
 - [HTTP](/fr/docs/Web/HTTP)
-- [Polyfill pour Fetch](https://github.com/github/fetch)
-- [Exemples de Fetch sur Github](https://github.com/mdn/fetch-examples/)
+- [Une prothèse d'émulation (<i lang="en">polyfill</i>) pour `fetch()`](https://github.com/JakeChampion/fetch)
+- [D'autres exemples (en anglais) sur d'utilisation de <i lang="en">Fetch</i> sur GitHub](https://github.com/mdn/dom-examples/tree/main/fetch)

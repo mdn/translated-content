@@ -1,9 +1,6 @@
 ---
 title: Element.accessKey
 slug: Web/API/HTMLElement/accessKey
-translation_of: Web/API/HTMLElement/accessKey
-translation_of_original: Web/API/Element/accessKey
-original_slug: Web/API/Element/accessKey
 ---
 
 {{APIRef("DOM")}}
@@ -12,9 +9,11 @@ original_slug: Web/API/Element/accessKey
 
 Свойство **accessKey** позволяет перейти к элементу с помощью сочетания клавиш - заданной им и тех, что назначит браузер.
 
-> **Примечание:** По сути, **accessKey** задаёт значение для [одноимённого атрибута](/ru/docs/Web/HTML/Global_attributes/accesskey)...
+> [!NOTE]
+> По сути, **accessKey** задаёт значение для [одноимённого атрибута](/ru/docs/Web/HTML/Global_attributes/accesskey)...
 
-> **Предупреждение:** Данное свойство использовать не рекомендуется, поскольку в браузерах уже заданы подобные привязки и неосторожное обращение может привести к жестокому конфликту.
+> [!WARNING]
+> Данное свойство использовать не рекомендуется, поскольку в браузерах уже заданы подобные привязки и неосторожное обращение может привести к жестокому конфликту.
 
 ## Синтаксис
 

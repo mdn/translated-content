@@ -5,16 +5,31 @@ l10n:
   sourceCommit: a3dd560fabb1fe4051f6273f41b337a5b1245a6e
 ---
 
+{{JSRef}}
+
 **`Intl.Segmenter()`** コンストラクターは、ロケールに依存したテキスト分割を可能にする [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトを生成します。
 
-{{EmbedInteractiveExample("pages/js/intl-segmenter.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Segmenter")}}
+
+```js interactive-example
+const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
+const string1 = "Que ma joie demeure";
+
+const iterator1 = segmenterFr.segment(string1)[Symbol.iterator]();
+
+console.log(iterator1.next().value.segment);
+// Expected output: 'Que'
+
+console.log(iterator1.next().value.segment);
+// Expected output: ' '
+```
 
 ## 構文
 
 ```js
-new Intl.Segmenter()
-new Intl.Segmenter(locales)
-new Intl.Segmenter(locales, options)
+new Intl.Segmenter();
+new Intl.Segmenter(locales);
+new Intl.Segmenter(locales, options);
 ```
 
 > **メモ:** `Intl.Segmenter()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を使用してのみ構築可能です。`new` を使わずに呼び出そうとすると {{jsxref("TypeError")}} が発生します。
@@ -42,7 +57,7 @@ new Intl.Segmenter(locales, options)
 
 ### 返値
 
-新しい [`Intl.Segments`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) のインスタンスです。
+新しい [`Intl.Segments`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) のインスタンスです。
 
 ## 例
 
@@ -52,9 +67,12 @@ new Intl.Segmenter(locales, options)
 
 ```js
 const text = "吾輩は猫である。名前はたぬき。";
-const japaneseSegmenter = new Intl.Segmenter("ja-JP", {granularity: "word"});
-console.log([...japaneseSegmenter.segment(text)].filter((segment) => segment.isWordLike).length);
-// logs 8 as the text is segmented as '吾輩'|'は'|'猫'|'で'|'ある'|'。'|'名前'|'は'|'たぬき'|'。'
+const japaneseSegmenter = new Intl.Segmenter("ja-JP", { granularity: "word" });
+console.log(
+  [...japaneseSegmenter.segment(text)].filter((segment) => segment.isWordLike)
+    .length,
+);
+// text は '吾輩'|'は'|'猫'|'で'|'ある'|'。'|'名前'|'は'|'たぬき'|'。' と分割されるので、8 が記録されます。
 ```
 
 ## 仕様書

@@ -1,40 +1,39 @@
 ---
-title: 'HTMLElement: dragover イベント'
+title: "HTMLElement: dragover イベント"
+short-title: dragover
 slug: Web/API/HTMLElement/dragover_event
+l10n:
+  sourceCommit: ea4425b74ae0dc1ec17737b4e28d8df2b73f1eae
 ---
 
 {{APIRef}}
 
 `dragover` イベントは、要素または選択されたテキストが、妥当なドロップターゲットの上にあるときに（数百ミリ秒間隔で）発生します。
 
-このイベントはドロップターゲットで発生します。
+このイベントはキャンセル可能で、{{domxref("Document")}} オブジェクトと {{domxref("Window")}} オブジェクトまでバブルアップする可能性があります。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>可</td>
-    </tr>
-    <tr>
-      <th scope="row">既定のアクション</th>
-      <td>現在のドラッグ操作を「なし」にリセットする。</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("DragEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("GlobalEventHandlers/ondragover", "ondragover")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
+
+```js
+addEventListener("dragover", (event) => {});
+
+ondragover = (event) => {};
+```
+
+## イベント型
+
+{{domxref("DragEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("DragEvent")}}
+
+## イベントプロパティ
+
+_以下に挙げたプロパティに加えて、親である {{domxref("Event")}} から継承したプロパティもあります。_
+
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+  - : ドラッグ＆ドロップ操作の間に転送されるデータです。
 
 ## 例
 
@@ -54,9 +53,7 @@ slug: Web/API/HTMLElement/dragover_event
 
 ```html
 <div class="dropzone">
-  <div id="draggable" draggable="true">
-    この div はドラッグ可
-  </div>
+  <div id="draggable" draggable="true">この div はドラッグ可</div>
 </div>
 <div class="dropzone" id="droptarget"></div>
 ```
@@ -89,22 +86,22 @@ body {
 let dragged = null;
 
 const source = document.getElementById("draggable");
-source.addEventListener("dragstart", event => {
+source.addEventListener("dragstart", (event) => {
   // ドラッグ中の要素の参照を保存
   dragged = event.target;
 });
 
 const target = document.getElementById("droptarget");
-target.addEventListener("dragover", event => {
+target.addEventListener("dragover", (event) => {
   // ドロップできるように既定の動作を停止
   event.preventDefault();
 });
 
-target.addEventListener("drop", event => {
+target.addEventListener("drop", (event) => {
   // 既定の動作（一部の要素でリンクとして開く）を行わないようにする。
   event.preventDefault();
   // ドラッグした要素を選択されたドロップターゲットに移動する
-  if (event.target.className == "dropzone") {
+  if (event.target.className === "dropzone") {
     dragged.parentNode.removeChild(dragged);
     event.target.appendChild(dragged);
   }
@@ -133,9 +130,3 @@ target.addEventListener("drop", event => {
   - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
   - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
   - {{domxref("HTMLElement/drop_event", "drop")}}
-
-- 他を対象としたこのイベント
-
-  - {{domxref("Window")}}: {{domxref("Window/dragover_event", "dragover")}} イベント
-  - {{domxref("Document")}}: {{domxref("Document/dragover_event", "dragover")}} イベント
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragover_event", "dragover")}} イベント

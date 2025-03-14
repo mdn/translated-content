@@ -1,11 +1,6 @@
 ---
 title: border-top-left-radius
 slug: Web/CSS/border-top-left-radius
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-top-left-radius
 ---
 
 {{CSSRef}}
@@ -14,7 +9,8 @@ La propriété **`border-top-left-radius`** définit le rayon de courbure de la 
 
 {{EmbedInteractiveExample("pages/css/border-top-left-radius.html")}}
 
-> **Note :** Si la valeur de cette propriété n'est pas définie par la propriété raccourcie {{cssxref("border-radius")}} et que cette dernière est appliquée après `border-top-left-radius`, cela aura pour effet de réinitialiser la valeur avec la valeur initiale de [la propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties).
+> [!NOTE]
+> Si la valeur de cette propriété n'est pas définie par la propriété raccourcie {{cssxref("border-radius")}} et que cette dernière est appliquée après `border-top-left-radius`, cela aura pour effet de réinitialiser la valeur avec la valeur initiale de [la propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties).
 
 ## Syntaxe
 
@@ -88,10 +84,10 @@ div {
 ### HTML
 
 ```html
- <div class="arc_cercle"></div>
- <div class="arc_ellipse"></div>
- <div class="pourcentage"></div>
- <div class="rognage"></div>
+<div class="arc_cercle"></div>
+<div class="arc_ellipse"></div>
+<div class="pourcentage"></div>
+<div class="rognage"></div>
 ```
 
 ### Résultat

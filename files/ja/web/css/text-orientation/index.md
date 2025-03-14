@@ -7,7 +7,28 @@ slug: Web/CSS/text-orientation
 
 **`text-orientation`** は [CSS](/ja/docs/Web/CSS) のプロパティで、行内のテキストの向きを設定します。このプロパティは縦書きのテキスト ({{cssxref("writing-mode")}} が `horizontal-tb` 以外の場合) でのみ効果があります。これは縦書きを使用する言語の表示を制御したり、縦書きの表見出しを作成したりするのに有用です。
 
-{{EmbedInteractiveExample("pages/css/text-orientation.html")}}
+{{InteractiveExample("CSS Demo: text-orientation")}}
+
+```css interactive-example-choice
+writing-mode: vertical-rl;
+text-orientation: mixed;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-rl;
+text-orientation: upright;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <p>
+      In another moment down went Alice after it, never once considering how in
+      the world she was to get out again.
+    </p>
+  </div>
+</section>
+```
 
 ## 構文
 
@@ -81,6 +102,6 @@ p {
 ## 関連情報
 
 - 他の縦書きに関連する CSS プロパティ: {{cssxref("writing-mode")}}, {{cssxref("text-combine-upright")}}, {{cssxref("unicode-bidi")}}
-- [CSS 論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS 論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - [縦書きテキストのスタイル付け (中国語、日本語、韓国語、モンゴル語)](https://www.w3.org/International/articles/vertical-text/)
 - 広範なブラウザーの対応状況のテスト結果: <https://w3c.github.io/i18n-tests/results/horizontal-in-vertical.html#text_orientation>

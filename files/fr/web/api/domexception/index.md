@@ -1,12 +1,6 @@
 ---
 title: DOMException
 slug: Web/API/DOMException
-tags:
-  - API
-  - DOM
-  - Erreurs
-  - exceptions
-translation_of: Web/API/DOMException
 ---
 
 {{ APIRef("DOM") }}
@@ -25,15 +19,16 @@ Chaque exception a un **nom**, qui est une courte chaîne identifiant l'erreur o
 - {{domxref("DOMException.code")}} {{deprecated_inline}} {{readOnlyInline}}
   - : Renvoie un court message qui contient l'un des [constantes de code d'erreur](#noms_derreur) ou 0 si aucun ne correspond. Ce champ est utilisé pour des raisons historiques. Les nouvelles exceptions DOM ne l'utilisent plus : elles mettent cette information dans l'attribut {{domxref("DOMException.name")}}.
 - {{domxref("DOMException.message")}} {{readOnlyInline}}
-  - : Returne une {{domxref("DOMString")}} (_chaîne de caractères_) représentant un message ou une description associé avec le [nom d'erreur](/fr/docs/Web/API/DOMException#Error_names) donné.
+  - : Returne une {{domxref("DOMString")}} (_chaîne de caractères_) représentant un message ou une description associé avec le [nom d'erreur](#error_names) donné.
 - {{domxref("DOMException.name")}} {{readOnlyInline}}
-  - : Retourne une {{domxref("DOMString")}} (_chaîne de caractères_) qui contient l'une des chaînes associées à un [nom d'erreur](#Error_names).
+  - : Retourne une {{domxref("DOMString")}} (_chaîne de caractères_) qui contient l'une des chaînes associées à un [nom d'erreur](#error_names).
 
 ## Noms d'erreur
 
 Les noms d'erreurs courants sont répertoriés ici. Certaines API définissent leurs propres ensembles de noms, il ne s'agit donc pas ici nécessairement d'une liste complète.
 
-> **Note :** Parce qu'historiquement les erreurs ont été identifiées par une valeur numérique qui correspondait à une variable nommée définie pour avoir cette valeur, certaines des entrées ci-dessous indiquent la valeur de code héritée et le nom de constante qui ont été utilisés dans le passé.
+> [!NOTE]
+> Parce qu'historiquement les erreurs ont été identifiées par une valeur numérique qui correspondait à une variable nommée définie pour avoir cette valeur, certaines des entrées ci-dessous indiquent la valeur de code héritée et le nom de constante qui ont été utilisés dans le passé.
 
 - `IndexSizeError`
   - : L'index n'est pas dans la plage autorisée. Par exemple, cela peut être lancé par un objet {{ domxref("Range") }}. (Valeur de code héritée : `1` et nom de la constante héritée : `INDEX_SIZE_ERR`)

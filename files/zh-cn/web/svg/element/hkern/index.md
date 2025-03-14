@@ -1,39 +1,41 @@
 ---
-title: hkern
+title: <hkern>
 slug: Web/SVG/Element/hkern
+l10n:
+  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-{{SVGRef}}
+{{SVGRef}}{{deprecated_header}}
 
-在自上而下的字体中，`hkern`元素可以精细调整两个雕刻文字的水平距离。这个处理就是”[字距处理](http://en.wikipedia.org/wiki/Kerning)“
+**`<hkern>`** [SVG](/zh-CN/docs/Web/SVG) 元素允许微调两个字形之间的水平距离。这个过程称为[字距调整](https://en.wikipedia.org/wiki/Kerning)。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
-## 示例
-
 ## 属性
 
-### 全局属性
-
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-
-### 专有属性
-
-- {{ SVGAttr("u1") }}
-- {{ SVGAttr("g1") }}
-- {{ SVGAttr("u2") }}
-- {{ SVGAttr("g2") }}
-- {{ SVGAttr("k") }}
+- {{SVGAttr("u1")}} {{Deprecated_Inline}}
+- {{SVGAttr("g1")}} {{Deprecated_Inline}}
+- {{SVGAttr("u2")}} {{Deprecated_Inline}}
+- {{SVGAttr("g2")}} {{Deprecated_Inline}}
+- {{SVGAttr("k")}} {{Deprecated_Inline}}
 
 ## DOM 接口
 
-该元素实现了[`SVGHKernElement`](/zh-CN/DOM/SVGVKernElement)接口。
+该元素实现了 {{domxref("SVGHKernElement")}} 接口。
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
 
 ## 参见
 
-- {{ SVGElement("font") }}
-- {{ SVGElement("glyph") }}
-- {{ SVGElement("hkern") }}
-- [SVG 教程：SVG 字体](/zh-CN/SVG/Tutorial/SVG_fonts)
+- {{SVGElement("font")}}
+- {{SVGElement("glyph")}}
+- {{SVGElement("vkern")}}
+- [SVG 教程：SVG 字体](/zh-CN/docs/Web/SVG/Tutorial/SVG_fonts)

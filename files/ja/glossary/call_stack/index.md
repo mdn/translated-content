@@ -3,6 +3,8 @@ title: Call stack (コールスタック)
 slug: Glossary/Call_stack
 ---
 
+{{GlossarySidebar}}
+
 **コールスタック** (call stack) は、インタープリター (ウェブブラウザー内の JavaScript インタープリターなど) の仕組みの一つで、複数階層の{{glossary("function","関数")}}を呼び出したスクリプト内の位置を追跡し続けることです。 — どの関数が現在実行されているのか、その関数の中でどの関数が呼び出されたか、などです。
 
 - スクリプトが関数を呼び出すとき、インタープリターはそれをコールスタックに追加し、それから関数の実行を始めます。
@@ -14,12 +16,12 @@ slug: Glossary/Call_stack
 
 ```js
 function greeting() {
-   // [1] Some code here
-   sayHi();
-   // [2] Some code here
+  // [1] Some code here
+  sayHi();
+  // [2] Some code here
 }
 function sayHi() {
-   return "Hi!";
+  return "Hi!";
 }
 
 // Invoke the `greeting` function
@@ -33,28 +35,32 @@ greeting();
 1. `greeting()` 関数の呼び出しまで、すべての関数を無視する。
 2. `greeting()` 関数をコールスタックリストに追加する。
 
-    > **メモ:** コールスタックリスト:
-    > \- greeting
+   > [!NOTE]
+   > コールスタックリスト:
+   > \- greeting
 
 3. `greeting()` 関数の中にあるコードのすべての行を実行する。
 4. `sayHi()` 関数の呼び出しまで移動する。
 5. コールスタックリストに `sayHi()` 関数を追加する。
 
-    > **メモ:** コールスタックリスト:
-    > \- greeting
-    > \- sayHi
+   > [!NOTE]
+   > コールスタックリスト:
+   > \- greeting
+   > \- sayHi
 
 6. `sayHi()` 関数の中にあるコードのすべての行を、末尾に達するまで実行する。
 7. 実行を `sayHi()` を呼び出した行に戻し、 `greeting()` 関数の残りの実行を続ける。
 8. `sayHi()` 関数をコールスタックリストから削除する。
 
-    > **メモ:** コールスタックリスト:
-    > \- greeting
+   > [!NOTE]
+   > コールスタックリスト:
+   > \- greeting
 
 9. `greeting()` 関数の中のすべてを実行したら、これを呼び出した行に戻り、残りの JavaScript コードの実行を続ける。
 10. `greeting()` 関数をコールスタックリストから削除する。
 
-    > **メモ:** コールスタックリスト:
+    > [!NOTE]
+    > コールスタックリスト:
     > 空
 
 空のコールスタックで始め、関数を呼び出す度に、自動的にそれがコールスタックに追加され、コードをすべて実行した後、自動的にコールスタックから削除されます。最後に、またからのスタックで終了します。
@@ -67,7 +73,7 @@ greeting();
 
 <!---->
 
-- [MDN Web Docs 用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("Call stack", "コールスタック")}}
   - {{Glossary("Function", "関数")}}

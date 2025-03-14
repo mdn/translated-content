@@ -1,12 +1,9 @@
 ---
 title: preserve-space
 slug: Web/XSLT/Element/preserve-space
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/preserve-space
-original_slug: Web/XSLT/preserve-space
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:preserve-space>` 요소는 공백을 보존하면 좋을 소스 문서의 요소를 정의합니다. 하나 이상의 요소가 있으면, 공백 문자로 이름을 구분하세요. 공백 보존하기가 기본 설정이므로 이 요소는 오직 `<xsl:strip-space>` 요소와 거꾸로 동작하기 위해 쓸 필요가 있습니다.
 
@@ -31,7 +28,7 @@ original_slug: Web/XSLT/preserve-space
 
 ### 정의
 
-[XSLT section 3.4, Whitespace Stripping](http://www.w3.org/TR/xslt#strip)
+[XSLT section 3.4, Whitespace Stripping](https://www.w3.org/TR/xslt#strip)
 
 ### Gecko 지원
 

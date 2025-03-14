@@ -3,9 +3,9 @@ title: aspect-ratio
 slug: Web/CSS/@media/aspect-ratio
 ---
 
-{{cssref}}
+{{CSSRef}}
 
-**`aspect-ratio`** [CSS](/zh-CN/docs/CSS) [媒体属性](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) 可以用来测试 {{glossary("viewport")}} 的宽高比。
+**`aspect-ratio`** [CSS](/zh-CN/docs/Web/CSS) [媒体属性](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features) 可以用来测试 {{glossary("viewport")}} 的宽高比。
 
 ## 语法
 
@@ -18,7 +18,7 @@ slug: Web/CSS/@media/aspect-ratio
 ### HTML
 
 ```html
-<div id='inner'>
+<div id="inner">
   Watch this element as you resize your viewport's width and height.
 </div>
 ```
@@ -36,7 +36,7 @@ slug: Web/CSS/@media/aspect-ratio
 /* 最大宽高比 */
 @media (max-aspect-ratio: 3/2) {
   div {
-    background: #9ff;  /* cyan */
+    background: #9ff; /* cyan */
   }
 }
 

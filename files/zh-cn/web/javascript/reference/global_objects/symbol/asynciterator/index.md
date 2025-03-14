@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
 
 ## 描述
 
-`Symbol.asyncIterator` 是一个用于访问对象的`@@asyncIterator`方法的内建符号。一个异步可迭代对象必须要有`Symbol.asyncIterator`属性。
+`Symbol.asyncIterator` 是一个用于访问对象的 `[Symbol.asyncIterator]()` 方法的内建符号。一个异步可迭代对象必须要有 `Symbol.asyncIterator` 属性。
 
 {{js_property_attributes(0,0,0)}}
 
@@ -21,20 +21,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
 
 ```js
 const myAsyncIterable = new Object();
-myAsyncIterable[Symbol.asyncIterator] = async function*() {
-    yield "hello";
-    yield "async";
-    yield "iteration!";
+myAsyncIterable[Symbol.asyncIterator] = async function* () {
+  yield "hello";
+  yield "async";
+  yield "iteration!";
 };
 
 (async () => {
-    for await (const x of myAsyncIterable) {
-        console.log(x);
-        // expected output:
-        //    "hello"
-        //    "async"
-        //    "iteration!"
-    }
+  for await (const x of myAsyncIterable) {
+    console.log(x);
+    // expected output:
+    //    "hello"
+    //    "async"
+    //    "iteration!"
+  }
 })();
 ```
 

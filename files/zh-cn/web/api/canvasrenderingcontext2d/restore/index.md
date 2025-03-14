@@ -1,25 +1,35 @@
 ---
-title: CanvasRenderingContext2D.restore()
+title: CanvasRenderingContext2D：restore() 方法
 slug: Web/API/CanvasRenderingContext2D/restore
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.restore()`** 是 Canvas 2D API 通过在绘图状态栈中弹出顶端的状态，将 canvas 恢复到最近的保存状态的方法。如果没有保存状态，此方法不做任何改变。
+Canvas 2D API 的 **`CanvasRenderingContext2D.restore()`** 方法用于通过在绘制状态栈中弹出顶部的条目，将 canvas 恢复到最近的保存状态。如果没有保存状态，此方法不做任何改变。
+
+要了解有关[绘制状态](/zh-CN/docs/Web/API/CanvasRenderingContext2D/save#绘制状态)的更多信息，请参阅 {{domxref("CanvasRenderingContext2D.save()")}}。
 
 ## 语法
 
-```
-void ctx.restore();
+```js-nolint
+restore()
 ```
 
-更多关于 [drawing state](/zh-CN/docs/Web/API/CanvasRenderingContext2D.save#Drawing_state) 的信息，请看 {{domxref("CanvasRenderingContext2D.save()")}}。
+### 参数
+
+无。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
-### 使用 `restore` 方法
+### 恢复保存的状态
 
-这是一段简单的代码片段，使用 `save()` 方法保存默认的状态，使用 `restore()` 进行恢复。所以，稍后你可以使用默认的状态绘制一个矩形。
+此示例使用 `save()` 方法保存当前状态，并使用 `restore()` 进行恢复。所以，稍后你可以使用当前状态绘制一个矩形。
 
 #### HTML
 
@@ -30,63 +40,26 @@ void ctx.restore();
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.save(); // save the default state
-
-ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);
-
-ctx.restore(); // restore to the default state
-ctx.fillRect(150, 75, 100, 100);
-```
-
-修改下面的代码并在线查看 canvas 的变化：
-
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
+// 保存当前状态
 ctx.save();
+
 ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
+
+// 恢复到最近一次调用 save() 保存的状态
 ctx.restore();
-ctx.fillRect(150, 75, 100, 100);</textarea>
+
+ctx.fillRect(150, 40, 100, 100);
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+#### 结果
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
+{{ EmbedLiveSample('恢复保存的状态', 700, 180) }}
 
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 
@@ -96,5 +69,5 @@ window.addEventListener("load", drawCanvas);
 
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}.
+- 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.save()")}}

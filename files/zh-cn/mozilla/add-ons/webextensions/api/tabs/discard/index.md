@@ -1,57 +1,55 @@
 ---
 title: tabs.discard()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/discard
+l10n:
+  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 丢弃一个或多个标签页。
 
-一些浏览器会自动“丢弃”它们认为近期不再被用户所需要的标签页。这些标签页会在标签栏中保持可见，浏览器会记住它们的状态，所以，如果用户选中了被丢弃的标签页，它会立即还原到被丢弃之前的状态。
+某些浏览器会自动“丢弃”未使用的标签页以释放内存。被丢弃的标签页仍然在标签栏中可见。浏览器会记住标签页的状态，并在用户选择该标签页时恢复它。关于何时以及什么情况下标签页会被丢弃的细节因浏览器而异。
 
-对于不同的浏览器，被丢弃内容的详细内容是有所不同的，但是从大体上来说，丢弃一个标签页允许浏览器释放一些该标签页所占用的内存。
+你可以通过在 {{WebExtAPIRef("tabs.update")}} 中将标签页的 `autoDiscardable` 属性设置为 `false` 来控制浏览器或此 API 是否丢弃标签页。此设置可防止浏览器丢弃该标签页。然后只能通过此 API 丢弃该标签页。
 
-The {{WebExtAPIRef("tabs.discard()")}} API enables an extension to discard one or more tabs. It's not possible to discard the currently active tab, or a tab whose document contains a [`beforeunload`](/zh-CN/docs/Web/Events/beforeunload) listener that would display a prompt.
+无法丢弃活动标签页或其文档包含会显示提示的 [`beforeunload`](/zh-CN/docs/Web/API/Window/beforeunload_event) 监听器的标签页。
 
-This is an asynchronous function that returns a [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## 语法
 
-```js
-var discarding = browser.tabs.discard(
-  tabIds          // integer or integer array
+```js-nolint
+let discarding = browser.tabs.discard(
+  tabIds          // 整数或整数数组
 )
 ```
 
-### Parameters
+### 参数
 
 - `tabIds`
-  - : `integer` or `array` of `integer`. The IDs of the tab or tabs to discard.
+  - : `integer` 或 `integer` 数组。要丢弃的标签页的 ID 或 ID 数组。
 
-### Return value
+### 返回值
 
-A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the specified tabs have been discarded. If any error occurs (for example, invalid tab IDs), the promise will be rejected with an error message.
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在所有指定的标签页被丢弃后其会被兑现且不带参数。如果发生任何错误（例如，标签页 ID 无效），则该 promise 将被拒绝并带有错误消息。
 
-If the ID of the active tab is passed in, it will not be discarded, but the promise will be fulfilled and any other tabs passed in will be discarded.
-
-## 浏览器兼容性
-
-{{Compat}}
+如果传入的是活动标签页的 ID，它将不会被丢弃，但 promise 仍会被兑现，并且任何其他传入的标签页将被丢弃。
 
 ## 示例
 
-丢弃一个标签页：
+丢弃单个标签页：
 
 ```js
 function onDiscarded() {
-  console.log(`Discarded`);
+  console.log(`已被丢弃`);
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.log(`发送错误：${error}`);
 }
 
-var discarding = browser.tabs.discard(2);
+let discarding = browser.tabs.discard(2);
 discarding.then(onDiscarded, onError);
 ```
 
@@ -59,20 +57,25 @@ discarding.then(onDiscarded, onError);
 
 ```js
 function onDiscarded() {
-  console.log(`Discarded`);
+  console.log(`已被丢弃`);
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.log(`发生错误：${error}`);
 }
 
-var discarding = browser.tabs.discard([15, 14, 1]);
+let discarding = browser.tabs.discard([15, 14, 1]);
 discarding.then(onDiscarded, onError);
 ```
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-discard) API.
+## 浏览器兼容性
+
+{{Compat}}
+
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-discard) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

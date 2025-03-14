@@ -7,13 +7,30 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 
 **`Intl.Locale`** オブジェクトは、 Unicode ロケール識別子を表す Intl オブジェクトの標準組み込みプロパティです。
 
-{{EmbedInteractiveExample("pages/js/intl-locale.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Locale")}}
+
+```js interactive-example
+const korean = new Intl.Locale("ko", {
+  script: "Kore",
+  region: "KR",
+  hourCycle: "h23",
+  calendar: "gregory",
+});
+
+const japanese = new Intl.Locale("ja-Jpan-JP-u-ca-japanese-hc-h12");
+
+console.log(korean.baseName, japanese.baseName);
+// Expected output: "ko-Kore-KR" "ja-Jpan-JP"
+
+console.log(korean.hourCycle, japanese.hourCycle);
+// Expected output: "h23" "h12"
+```
 
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## 解説
 
-**`Intl.Locale`** オブジェクトは、 Unicode ロケールをより簡単に操作できるようにするために作成されました。 Unicode は、ロケールを*ロケール識別子*と呼ばれる文字列で表します。ロケール識別子は、*言語識別子*と*拡張タグ*から構成されます。言語識別子はロケールの中核となるもので、*言語*、*文字体系*、*地域サブタグ*から構成されます。ロケールに関する追加情報は、オプションの拡張タグに格納されます。*拡張タグ*には、暦の種類や時計の種類、数値表記法の種類などのロケールに関する情報が格納されています。
+**`Intl.Locale`** オブジェクトは、 Unicode ロケールをより簡単に操作できるようにするために作成されました。 Unicode は、ロケールを*ロケール識別子*と呼ばれる文字列で表します。ロケール識別子は、*言語識別子*と*拡張タグ*から構成されます。言語識別子はロケールの中核となるもので、_言語_、_文字体系_、*地域サブタグ*から構成されます。ロケールに関する追加情報は、オプションの拡張タグに格納されます。*拡張タグ*には、暦の種類や時計の種類、数値表記法の種類などのロケールに関する情報が格納されています。
 
 従来、 Intl API は Unicode と同様に文字列を使用してロケールを表していました。これはシンプルで軽量な解決策であり、うまく機能します。しかし、 Locale クラスを追加することで、言語、文字体系、地域、拡張タグの解析や操作が容易になります。
 
@@ -37,7 +54,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 - {{jsxref("Intl/Locale/hourCycle", "Intl.Locale.prototype.hourCycle")}}
   - : このロケールが使用している時刻保持書式の規則を返します。
 - {{jsxref("Intl/Locale/hourCycles", "Intl.Locale.prototype.hourCycles")}}
-  - :  {{jsxref("Array")}} で 12 時制 ("h11", "h12") または 24 時制 ("h23", "h24") を示す時周期識別子を返します。
+  - : {{jsxref("Array")}} で 12 時制 ("h11", "h12") または 24 時制 ("h23", "h24") を示す時周期識別子を返します。
 - {{jsxref("Intl/Locale/language", "Intl.Locale.prototype.language")}}
   - : このロケールに関連づけられた言語を返します。
 - {{jsxref("Intl/Locale/numberingSystem", "Intl.Locale.prototype.numberingSystem")}}
@@ -51,7 +68,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 - {{jsxref("Intl/Locale/script", "Intl.Locale.prototype.script")}}
   - : このロケールで使われている特定の言語を書く際に使用する文字体系を返します。
 - {{jsxref("Intl/Locale/textInfo", "Intl.Locale.prototype.textInfo")}}
-  - :  `ltr` （左書き）または `rtl` （右書き）で、文字の並び順を示す部分を返します。
+  - : `ltr` （左書き）または `rtl` （右書き）で、文字の並び順を示す部分を返します。
 - {{jsxref("Intl/Locale/timeZones", "Intl.Locale.prototype.timeZones")}}
   - : `Locale` に関連付けられたタイムゾーン識別子の {{jsxref("Array")}} を返します。
 - {{jsxref("Intl/Locale/weekInfo", "Intl.Locale.prototype.weekInfo")}}
@@ -73,7 +90,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} のコンストラクターは、もっとも簡単なものでは、ロケール識別子の文字列を引数に取ります。
 
 ```js
-let us = new Intl.Locale('en-US');
+let us = new Intl.Locale("en-US");
 ```
 
 ### Locale コンストラクターの options オブジェクト付きでの使用
@@ -81,7 +98,7 @@ let us = new Intl.Locale('en-US');
 このコンストラクターは、オプションで構成オブジェクトの引数を取ることができます。たとえば、構成オブジェクトの {{jsxref("Intl/Locale/hourCycle", "hourCycle")}} プロパティに任意の時間サイクル種別を設定し、それをコンストラクターに渡します。
 
 ```js
-let us12hour = new Intl.Locale("en-US", {hourCycle: "h12"});
+let us12hour = new Intl.Locale("en-US", { hourCycle: "h12" });
 console.log(us12hour.hourCycle); // Prints "h12"
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'Location: search'
+title: "Location: search"
 slug: Web/API/Location/search
 ---
 
@@ -7,7 +7,7 @@ slug: Web/API/Location/search
 
 A propriedade **`search`** da interface {{domxref("Location")}} é um texto de busca, também chamado de _query string_ ou _querystring_; isso é, uma {{domxref("USVString")}} contendo um `'?'` seguido pelos parâmetros da URL.
 
-Os navegadores modernos fornecem o [`URLSearchParams`](/pt-BR/docs/Web/API/URLSearchParams/get#Examples) e o [`URL.searchParams`](/pt-BR/docs/Web/API/URL/searchParams#Examples) para facilitar a análise dos parâmetros da querystring.
+Os navegadores modernos fornecem o [`URLSearchParams`](/pt-BR/docs/Web/API/URLSearchParams/get#examples) e o [`URL.searchParams`](/pt-BR/docs/Web/API/URL/searchParams#examples) para facilitar a análise dos parâmetros da querystring.
 
 ## Sintaxe
 
@@ -28,12 +28,10 @@ let params = new URLSearchParams(queryString);
 let q = parseInt(params.get("q")); // é o número 123
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                                    | Status                           | Comentário         |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', '#dom-location-search', 'search')}} | {{Spec2('HTML WHATWG')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Location.search")}}
+{{Compat}}

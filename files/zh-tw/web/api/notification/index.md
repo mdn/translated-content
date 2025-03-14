@@ -1,6 +1,6 @@
 ---
 title: Notification
-slug: Web/API/notification
+slug: Web/API/Notification
 ---
 
 {{APIRef("Web Notifications")}}
@@ -68,7 +68,7 @@ The following properties are listed in the most up-to-date spec, but are not sup
 - {{domxref("Notification.onclick")}}
   - : 一個 [`click`](/zh-TW/docs/Web/API/Element/click_event) 事件的 handler。每次使用者點擊 Notification 都會被觸發。
 - {{domxref("Notification.onerror")}}
-  - : 一個 [`error`](/zh-TW/docs/Web/API/Element/error_event) 事件的 handler. 每次 Notification 發生 Error 都會被觸發。
+  - : 一個 [`error`](/zh-TW/docs/Web/API/HTMLElement/error_event) 事件的 handler. 每次 Notification 發生 Error 都會被觸發。
 
 #### 停止支援的事件處理器
 
@@ -119,7 +119,7 @@ function notifyMe() {
   }
 
   // 否則，我們會需要詢問使用者是否開放權限
-  else if (Notification.permission !== 'denied') {
+  else if (Notification.permission !== "denied") {
     Notification.requestPermission(function (permission) {
       // 如果使用者同意了就來新增一個 Notification 打聲招呼吧
       if (permission === "granted") {
@@ -135,7 +135,7 @@ function notifyMe() {
 
 {{EmbedLiveSample('範例', '100%', 30)}}
 
-在很多時候，你應該不會想要這麼冗長的程式碼。 比如說，在我們的 [Emogotchi demo](http://mdn.github.io/emogotchi/) ([see source code](https://github.com/mdn/emogotchi)) 之中，我們只寫了 {{domxref("Notification.requestPermission")}} 而不用進一步檢查是否已經獲得了權限：
+在很多時候，你應該不會想要這麼冗長的程式碼。 比如說，在我們的 [Emogotchi demo](https://chrisdavidmills.github.io/emogotchi/) ([see source code](https://github.com/chrisdavidmills/emogotchi)) 之中，我們只寫了 {{domxref("Notification.requestPermission")}} 而不用進一步檢查是否已經獲得了權限：
 
 ```js
 Notification.requestPermission();
@@ -144,12 +144,12 @@ Notification.requestPermission();
 然後我們只需要在要新增 Notfication 時執行這個 `spawnNotification()` — 透過傳入指定的 body、icon、title，然後它就會產生我們所需的 options 參數並透過 {{domxref("Notification.Notification","Notification()")}} 建構子發送 Notification.
 
 ```js
-function spawnNotification(theBody,theIcon,theTitle) {
+function spawnNotification(theBody, theIcon, theTitle) {
   var options = {
-      body: theBody,
-      icon: theIcon
-  }
-  var n = new Notification(theTitle,options);
+    body: theBody,
+    icon: theIcon,
+  };
+  var n = new Notification(theTitle, options);
 }
 ```
 

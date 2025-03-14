@@ -8,13 +8,23 @@ slug: Web/SVG/Element/animate
 O elemento SVG **`<animate>`** fornece uma maneira de animar um atributo de um elemento ao longo do tempo.
 
 ```css hidden
-html,body,svg { height:100%; margin:0; padding:0; }
+html,
+body,
+svg {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 ```
 
 ```html
 <svg viewBox="0 0 10 10" xmlns="https://www.w3.org/2000/svg">
   <rect width="10" height="10">
-    <animate attributeName="rx" values="0;5;0" dur="10s" repeatCount="indefinite" />
+    <animate
+      attributeName="rx"
+      values="0;5;0"
+      dur="10s"
+      repeatCount="indefinite" />
   </rect>
 </svg>
 ```
@@ -25,11 +35,11 @@ html,body,svg { height:100%; margin:0; padding:0; }
 
 ### Animation Attributes
 
-- [Animation timing attributes](/docs/Web/SVG/Attribute#Animation_Timing_Attributes)
+- [Animation timing attributes](/pt-BR/docs/Web/SVG/Attribute#animation_timing_attributes)
   - : {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
-- [Animation value attributes](/docs/Web/SVG/Attribute#Animation_Value_Attributes)
+- [Animation value attributes](/pt-BR/docs/Web/SVG/Attribute#animation_value_attributes)
   - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}
-- [Other Animation attributes](/docs/Web/SVG/Attribute#Animation_Attributes)
+- [Other Animation attributes](/pt-BR/docs/Web/SVG/Attribute#animation_attributes)
   - : Most notably: {{SVGAttr("attributeName")}}, {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
 - [Animation event attributes](/docs/Web/SVG/Attribute/Events#Animation_Event_Attributes)
   - : Most notably: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}
@@ -59,13 +69,10 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 - [MDN Understanding WCAG, Guideline 2.2 explanations](/pt-BR/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_%E2%80%94_Enough_Time_Provide_users_enough_time_to_read_and_use_content)
 - [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
-## Specifications
+## Especificações
 
-| Specification                                                                                    | Status                                   | Comment            |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{SpecName("SVG Animations 2", "#AnimateElement", "&lt;animate&gt;")}}     | {{Spec2("SVG Animations 2")}} | No change          |
-| {{SpecName("SVG1.1", "animate.html#AnimateElement", "&lt;animate&gt;")}} | {{Spec2("SVG1.1")}}                 | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.animate")}}
+{{Compat}}

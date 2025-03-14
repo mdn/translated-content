@@ -15,7 +15,7 @@ Usar `classList` es una forma práctica de acceder a la lista de clases de un el
 var elementClasses = elementNodeReference.classList;
 ```
 
-_elementClasses_ es un [DOMTokenList](/es/docs/DOM/DOMTokenList) que representa el atributo clase de _elementNodeReference_. Si el atributo clase no está definido o está vacío, _elementClasses.length_ devuelve 0. `element.classList` por sí mismo es de sólo lectura, aunque puede ser modificado usando los métodos `add()` y `remove()`.
+_elementClasses_ es un [DOMTokenList](/es/docs/Web/API/DOMTokenList) que representa el atributo clase de _elementNodeReference_. Si el atributo clase no está definido o está vacío, _elementClasses.length_ devuelve 0. `element.classList` por sí mismo es de sólo lectura, aunque puede ser modificado usando los métodos `add()` y `remove()`.
 
 ## Métodos
 
@@ -45,7 +45,7 @@ div.classList.add("anotherclass");
 div.classList.toggle("visible");
 
 // añadir/eliminar visible, dependiendo de la condición, i menor que 10
-div.classList.toggle("visible", i < 10 );
+div.classList.toggle("visible", i < 10);
 
 alert(div.classList.contains("foo"));
 
@@ -57,7 +57,8 @@ div.classList.remove("foo", "bar");
 div.classList.replace("foo", "bar");
 ```
 
-> **Nota:** Las versiones de Firefox anteriores a la 26 no implementan el uso de múltiples argumentos en los métodos add/remove/toggle. Vea <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
+> [!NOTE]
+> Las versiones de Firefox anteriores a la 26 no implementan el uso de múltiples argumentos en los métodos add/remove/toggle. Vea <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
 
 ## Especificaciones
 

@@ -7,13 +7,14 @@ slug: Web/API/AudioNode
 
 A interface AudioNode é uma interface genérica para representar um módulo de processamento como uma fonte de áudio (ex. um elemento HTML {{HTMLElement("audio")}} ou {{HTMLElement("video")}} , um {{domxref("OscillatorNode")}}, etc.), um destino do áudio, um módulo intermediário de processamento (ex. um filtro como {{domxref("BiquadFilterNode")}} ou {{domxref("ConvolverNode")}}), ou um controle de volume (como o {{domxref("GainNode")}}).
 
-![AudioNodes participating in an AudioContext create a audio routing graph.](https://mdn.mozillademos.org/files/12535/WebAudioBasicspt-br.png)
+![AudioNodes participating in an AudioContext create a audio routing graph.](webaudiobasicspt-br.png)
 
 Um `AudioNode` tem entradas (inputs) e saídas (outputs), cada uma delas com uma determinada quantidade de canais. Um `AudioNode` sem nenhuma entrada e uma ou múltiplas saídas é chamado de _source node_. The exact processing done varies from one `AudioNode` to another but, in general, a node reads its inputs, does some audio-related processing, and generates new values for its outputs, or simply lets the audio pass through (for example in the {{domxref("AnalyserNode")}}, where the result of the processing is accessed separately).
 
 Different nodes can be linked together to build a _processing graph_. Such a graph is contained in an {{domxref("AudioContext")}}. Each `AudioNode` participates in exactly one such context. In general, processing nodes inherit the properties and methods of `AudioNode`, but also define their own functionality on top. See the individual node pages for more details, as listed on the [Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API) homepage.
 
-> **Nota:** An `AudioNode` can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.
+> [!NOTE]
+> An `AudioNode` can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.
 
 ## Properties
 
@@ -65,13 +66,11 @@ oscillator.channelCount;
 
 ## Specifications
 
-| Specification                                                                                | Status                               | Comment |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#the-audionode-interface', 'AudioNode')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.AudioNode")}}
+{{Compat}}
 
 ## See also
 

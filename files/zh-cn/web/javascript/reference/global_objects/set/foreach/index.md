@@ -5,48 +5,45 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
 
 {{JSRef}}
 
-**`forEach()`** 方法对 `Set` 对象中的每个值按插入顺序执行一次提供的函数。
+{{jsxref("Set")}} 实例的 **`forEach()`** 方法按插入顺序为该集合中的每个值执行一次提供的函数。
 
-{{EmbedInteractiveExample("pages/js/set-prototype-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.forEach()")}}
+
+```js interactive-example
+function logSetElements(value1, value2, set) {
+  console.log(`s[${value1}] = ${value2}`);
+}
+
+new Set(["foo", "bar", undefined]).forEach(logSetElements);
+
+// Expected output: "s[foo] = foo"
+// Expected output: "s[bar] = bar"
+// Expected output: "s[undefined] = undefined"
+```
 
 ## 语法
 
 ```js-nolint
-// 箭头函数
-forEach(() => { /* ... */ } )
-forEach((value) => { /* ... */ } )
-forEach((value, key) => { /* ... */ } )
-forEach((value, key, set) => { /* ... */ } )
-
-// 回调函数
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
-
-// 内联回调函数
-forEach(function() { /* ... */ })
-forEach(function(value) { /* ... */ })
-forEach(function(value, key) { /* ... */ })
-forEach(function(value, key, set) { /* ... */ })
-forEach(function(value, key, set) { /* ... */ }, thisArg)
 ```
 
 ### 参数
 
 - `callback`
-
-  - : 为集合中每个元素执行的回调函数，该函数接收三个参数：
-
-    - `value`、`key`
-      - : `Set` 中正在处理的当前元素。因为 `Set` 中没有键，所以 `value` 会被共同传递给这两个参数。
+  - : 为集合中每个元素执行的函数，使用以下参数调用该函数：
+    - `value`
+      - : 每次迭代的值。
+    - `key`
+      - : 每次迭代的键。始终与 `value` 相同。
     - `set`
-      - : 调用 `forEach()` 的 `Set` 对象。
-
-- `thisArg`
-  - : 值在执行 `callbackFn` 时作为 `this` 使用。
+      - : 正在迭代的集合。
+- `thisArg` {{optional_inline}}
+  - : 执行 `callbackFn` 时用作 `this` 的值。
 
 ### 返回值
 
-{{jsxref("undefined")}}。
+无（{{jsxref("undefined")}}）。
 
 ## 描述
 
@@ -58,7 +55,7 @@ forEach(function(value, key, set) { /* ... */ }, thisArg)
 - **元素的键**
 - **被遍历的 `Set`**
 
-但是由于 `Set` 对象中没有键（key），所以前两个参数都是 {{jsxref("Set")}} 中元素的值（**value**），之所以这样设计回调函数是为了和 {{jsxref("Map.foreach", "Map")}} 以及 {{jsxref("Array.forEach","Array")}} 的 `forEach()` 函数用法保持一致。
+`Set` 对象中没有键，所以前两个参数都是 {{jsxref("Set")}} 中包含的**值**。这是为了与 {{jsxref("Map/foreach", "Map")}} 和 {{jsxref("Array/forEach", "Array")}} 的 `forEach()` 方法保持一致。
 
 如果提供了一个 `thisArg` 参数给 `forEach` 函数，则参数将会作为回调函数中的 `this`值。否则 `this` 值为 `undefined`。回调函数中 `this` 的绑定是根据[函数被调用时通用的 `this` 绑定规则来决定的](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)。
 
@@ -77,7 +74,7 @@ function logSetElements(value1, value2, set) {
   console.log(`s[${value}] = ${value2}`);
 }
 
-new Set(['foo', 'bar', undefined]).forEach(logSetElements);
+new Set(["foo", "bar", undefined]).forEach(logSetElements);
 
 // logs:
 // "s[foo] = foo"

@@ -1,44 +1,39 @@
 ---
-title: 'Element: focusout イベント'
+title: "Element: focusout イベント"
+short-title: focusout
 slug: Web/API/Element/focusout_event
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef}}
 
-**`focusout`** イベントは、要素がフォーカスを失おうとしているときに発生します。このイベントと {{domxref("Element/blur_event", "blur")}} との主な違いは、 `focusout` が[バブリング](/ja/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture)するのに対し `blur` はしないことです。
+**`focusout`** イベントは、要素がフォーカスを失おうとしているときに発生します。このイベントと {{domxref("Element/blur_event", "blur")}} との主な違いは、 `focusout` がバブリングするのに対し `blur` はしないことです。
 
-`focusout` の反対は {{domxref("Element/focusin_event", "focusin")}} です。
+`focusout` の反対は {{domxref("Element/focusin_event", "focusin")}} であり、こちらは要素がフォーカスを受け取ったときに発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("FocusEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onfocusout", "onfocusout")}}
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">同期 / 非同期</th>
-      <td>同期</td>
-    </tr>
-    <tr>
-      <th scope="row">Composed</th>
-      <td>はい</td>
-    </tr>
-  </tbody>
-</table>
+`focusout` イベントはキャンセル不可です。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用してください。
+
+```js
+addEventListener("focusout", (event) => {});
+```
+
+## イベント型
+
+{{domxref("FocusEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("FocusEvent")}}
+
+## イベントプロパティ
+
+_親である {{domxref("UIEvent")}} および間接的に {{domxref("Event")}} から継承したプロパティもあります_。
+
+- {{domxref("FocusEvent.relatedTarget")}}
+  - : もしあれば、フォーカスを受け取った要素。
 
 ## 例
 
@@ -48,22 +43,28 @@ slug: Web/API/Element/focusout_event
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input">
-  <input type="password" placeholder="password">
+  <label>
+    テキストを入力:
+    <input type="text" placeholder="テキストを入力" />
+  </label>
+  <label>
+    パスワード:
+    <input type="password" placeholder="password" />
+  </label>
 </form>
 ```
 
 #### JavaScript
 
 ```js
-const form = document.getElementById('form');
+const form = document.getElementById("form");
 
-form.addEventListener('focusin', (event) => {
-  event.target.style.background = 'pink';
+form.addEventListener("focusin", (event) => {
+  event.target.style.background = "pink";
 });
 
-form.addEventListener('focusout', (event) => {
-  event.target.style.background = '';
+form.addEventListener("focusout", (event) => {
+  event.target.style.background = "";
 });
 ```
 
@@ -74,6 +75,8 @@ form.addEventListener('focusout', (event) => {
 ## 仕様書
 
 {{Specifications}}
+
+**メモ:** _UI Events_ 仕様書では[フォーカスイベントの順序](/ja/docs/Web/API/FocusEvent#order_of_events)を記述していますが、現在のブラウザーの実装とは異なります。
 
 ## ブラウザーの互換性
 

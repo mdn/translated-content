@@ -1,22 +1,74 @@
 ---
 title: bottom
 slug: Web/CSS/bottom
+l10n:
+  sourceCommit: e9a39cf29e4d40513b19c79abfe10b6338dde8dd
 ---
 
 {{CSSRef}}
 
 **`bottom`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/position)の垂直位置の設定に関与します。位置指定されていない要素には効果はありません。
 
-{{EmbedInteractiveExample("pages/css/bottom.html")}}
+{{InteractiveExample("CSS Demo: bottom")}}
 
-`bottom` の効果は、要素がどの様に配置されているか (つまり、 {{cssxref("position")}} プロパティの値) によって変わります。
+```css interactive-example-choice
+bottom: 0;
+```
 
-- `position` が `absolute` または `fixed` に設定されている場合、 `bottom` プロパティは要素の下辺と包含ブロックの下辺との間の距離を指定します。
+```css interactive-example-choice
+bottom: 4em;
+```
+
+```css interactive-example-choice
+bottom: 10%;
+```
+
+```css interactive-example-choice
+bottom: 20px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <div id="example-element">I am absolutely positioned.</div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 0.75em solid;
+  padding: 0.75em;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+#example-element {
+  background-color: #264653;
+  border: 4px solid #ffb500;
+  color: white;
+  position: absolute;
+  width: 140px;
+  height: 60px;
+}
+```
+
+`bottom` の効果は、要素がどの様に配置されているか（つまり、 {{cssxref("position")}} プロパティの値）によって変わります。
+
+- `position` が `absolute` または `fixed` に設定されている場合、 `bottom` プロパティは要素の[下マージン](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)の外側の辺と、包含ブロックの下パディングの外側の辺との間の距離を指定します。
 - `position` が `relative` に設定されている場合、 `bottom` プロパティは要素の下辺が通常位置から上方向へ移動する量を指定します。
 - `position` が `sticky` に設定されている場合、 `bottom` プロパティは sticky 制約の矩形を計算するために使用されます。
 - `position` が `static` に設定されている場合、 `bottom` プロパティは*効果がありません*。
 
-{{cssxref("top")}} と `bottom` の両方が指定されており、 `position` が `absolute` または `fixed` に設定されており、*かつ* {{cssxref("height")}} が未指定 (`auto` または `100%` のどちらか) の場合は、 `top` と `bottom` の距離が尊重されます。それ以外の場合、 {{cssxref("height")}} が何らかの形で制約されていた場合、または `position` が `relative` に設定されていた場合は、 `top` プロパティが優先されて `bottom` プロパティは無視されます。
+{{cssxref("top")}} と `bottom` の両方が指定されており、 `position` が `absolute` または `fixed` に設定されており、_かつ_ {{cssxref("height")}} が未指定 (`auto` または `100%` のどちらか) の場合は、 `top` と `bottom` の距離が尊重されます。それ以外の場合、 {{cssxref("height")}} が何らかの形で制約されていた場合、または `position` が `relative` に設定されていた場合は、 `top` プロパティが優先されて `bottom` プロパティは無視されます。
 
 ## 構文
 
@@ -35,6 +87,7 @@ bottom: auto;
 bottom: inherit;
 bottom: initial;
 bottom: revert;
+bottom: revert-layer;
 bottom: unset;
 ```
 
@@ -69,14 +122,16 @@ bottom: unset;
 
 ## 例
 
-<h3 id="Absolute_and_fixed_positioning">絶対位置指定と固定位置指定</h3>
+### 絶対位置指定と固定位置指定
 
 この例は、 {{cssxref("position")}} が `absolute` と `fixed` であった場合の `bottom` プロパティの動作の違いを示します。
 
 #### HTML
 
 ```html
-<p>This<br>is<br>some<br>tall,<br>tall,<br>tall,<br>tall,<br>tall<br>content.</p>
+<p>
+  This<br />is<br />some<br />tall,<br />tall,<br />tall,<br />tall,<br />tall<br />content.
+</p>
 <div class="fixed"><p>Fixed</p></div>
 <div class="absolute"><p>Absolute</p></div>
 ```
@@ -92,7 +147,7 @@ p {
 div {
   width: 48%;
   text-align: center;
-  background: rgba(55,55,55,.2);
+  background: rgba(55, 55, 55, 0.2);
   border: 1px solid blue;
 }
 

@@ -1,6 +1,8 @@
 ---
-title: CloseEvent.reason
+title: "CloseEvent: reason プロパティ"
 slug: Web/API/CloseEvent/reason
+l10n:
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
 {{APIRef("Websockets API")}}
@@ -9,14 +11,14 @@ slug: Web/API/CloseEvent/reason
 
 ## 値
 
-{{domxref("DOMString","文字列")}}です。
+文字列です。
 
 ## 例
 
 次の例では、 `reason` の値をコンソールに表示します。
 
 ```js
-WebSocket.onclose = function(event) {
+WebSocket.onclose = (event) => {
   console.log(event.reason);
 };
 ```

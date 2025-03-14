@@ -1,8 +1,6 @@
 ---
 title: Exemples pratiques de positionnement
 slug: Learn/CSS/CSS_layout/Practical_positioning_examples
-translation_of: Learn/CSS/CSS_layout/Practical_positioning_examples
-original_slug: Apprendre/CSS/CSS_layout/Exemples_pratiques_de_positionnement
 ---
 
 {{LearnSidebar}}
@@ -34,11 +32,13 @@ Le premier exemple que nous allons examiner est une boîte d'information à ongl
 
 ![](tabbed-info-box.png)
 
-> **Note :** Vous pouvez voir l'exemple fini en démonstration sur la page [info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)). N'hésitez pas à le consulter pour avoir une idée du résultat que vous allez construire.
+> [!NOTE]
+> Vous pouvez voir l'exemple fini en démonstration sur la page [info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)). N'hésitez pas à le consulter pour avoir une idée du résultat que vous allez construire.
 
 On pourrait se demander&nbsp;: «&nbsp;pourquoi ne pas créer des onglets séparés sous forme de pages web séparées, et faire en sorte que ces onglets permettent de cliquer sur les pages séparées pour créer cet effet&nbsp;?&nbsp;». Ce code serait en effet plus simple, mais dans ce cas, chaque «&nbsp;page&nbsp;» séparée serait en fait une nouvelle page web, ce qui rendrait plus difficile la sauvegarde des informations entre les vues, et intégrerait cette fonctionnalité dans un design d'interface plus large. De plus, les applications dites «&nbsp;à page unique&nbsp;» (<i lang="en">Single Page Apps</i>) deviennent très populaires, en particulier pour les interfaces web mobiles, parce que le fait que tout soit servi dans un seul fichier réduit le nombre de requêtes HTTP nécessaires pour voir tout le contenu, ce qui améliore les performances.
 
-> **Note :** Il arrive même que pour certains sites, ce soit une seule page qui soit chargée et que son contenu soit modifié dynamiquement grâce à des fonctionnalités JavaScript telles que [XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest). Pour le moment, nous garderons des choses simples. Il y aura un peu de JavaScript en fin d'article, mais la juste dose nécessaire pour faire fonctionner cet exemple.
+> [!NOTE]
+> Il arrive même que pour certains sites, ce soit une seule page qui soit chargée et que son contenu soit modifié dynamiquement grâce à des fonctionnalités JavaScript telles que [XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest). Pour le moment, nous garderons des choses simples. Il y aura un peu de JavaScript en fin d'article, mais la juste dose nécessaire pour faire fonctionner cet exemple.
 
 Pour commencer, effectuez une copie locale du fichier HTML de départ — [info-box-start.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box-start.html). Enregistrez ce fichier dans un endroit approprié sur votre ordinateur et ouvrez-le dans votre éditeur de texte. Examinons le HTML contenu dans le corps de cette page :
 
@@ -53,17 +53,32 @@ Pour commencer, effectuez une copie locale du fichier HTML de départ — [info-
     <article class="active-panel">
       <h2>Premier onglet</h2>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt metus. Donec ultrices, urna maximus consequat aliquet, dui neque eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor urna. Nulla facilisi.</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum
+        et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius
+        libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt
+        metus. Donec ultrices, urna maximus consequat aliquet, dui neque
+        eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor
+        urna. Nulla facilisi.
+      </p>
     </article>
     <article>
       <h2>Deuxième onglet</h2>
 
-      <p>Cet onglet ne contient pas de Lorem Ipsum, mais bon c'est aussi peu intéressant que les autres onglets.</p>
+      <p>
+        Cet onglet ne contient pas de Lorem Ipsum, mais bon c'est aussi peu
+        intéressant que les autres onglets.
+      </p>
     </article>
     <article>
       <h2>Troisième onglet</h2>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Et voici une liste ordonnée&nbsp;!</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Et voici une
+        liste ordonnée&nbsp;!
+      </p>
 
       <ol>
         <li>dui neque eleifend lorem, a auctor libero turpis at sem.</li>
@@ -122,7 +137,8 @@ On souhaite que nos onglets ressemblent à des onglets. Autrement dit, on veut a
 }
 ```
 
-> **Note :** On utilise ici un sélecteur de descendants avec `.info-box` au début du sélecteur et pour tout cet exemple afin qu'on puisse insérer cette fonctionnalité dans une page possédant déjà un autre contenu, sans risquer de causer des interférences avec le style déjà existant.
+> [!NOTE]
+> On utilise ici un sélecteur de descendants avec `.info-box` au début du sélecteur et pour tout cet exemple afin qu'on puisse insérer cette fonctionnalité dans une page possédant déjà un autre contenu, sans risquer de causer des interférences avec le style déjà existant.
 
 Ensuite, mettons en forme les onglets horizontaux. Les éléments de la liste ont un flottement à gauche afin qu'ils soient sur une même ligne. Leur propriété [`list-style-type`](/fr/docs/Web/CSS/list-style-type) est placée à `none` afin de ne plus avoir les puces et [`width`](/fr/docs/Web/CSS/width) vaut `150px` afin qu'il y ait suffisamment de place au sein de la boîte pour afficher ces éléments. Les éléments [`<a>`](/fr/docs/Web/HTML/Element/a) ont [`display`](/fr/docs/Web/CSS/display) avec la valeur `inline-block` afin qu'ils s'inscrivent dans une ligne mais qu'ils puissent tout de même être mis en forme pour des boutons d'onglet en utilisant d'autres propriétés.
 
@@ -149,7 +165,8 @@ Ajoutez le fragment de CSS qui suit&nbsp;:
 Pour finir avec cette section, mettons en forme les liens selon leur état. Toute d'abord, gérons les états `:focus` et `:hover` afin que les onglets aient un aspect différent lorsqu'ils ont le focus ou qu'on les survole afin que la personne qui utilise le site ait un retour visuel. Deuxièmement, ajoutons une règle qui applique la même mise en forme lorsqu'un attribut `class` avec la valeur `active` est présent dessus. Nous appliquerons cette valeur à l'aide de JavaScript lorsqu'un clic aura lieu sur l'onglet. Ajoutez le CSS qui suit après les autres règles déjà écrites&nbsp;:
 
 ```css
-.info-box li a:focus, .info-box li a:hover {
+.info-box li a:focus,
+.info-box li a:hover {
   background-color: #a60000;
   color: white;
 }
@@ -199,28 +216,28 @@ La deuxième règle ajoutée indique qu'un panneau avec une classe (`class`) val
 La dernière étape permettant d'avoir un résultat fonctionnel consiste à ajouter du JavaScript. Placez les lignes suivantes (sans modification) entre les balises ouvrantes et fermantes [`<script>`](/fr/docs/Web/HTML/Element/script) (elles se situent après le contenu HTML)&nbsp;:
 
 ```js
-let tabs = document.querySelectorAll('.info-box li a');
-let panels = document.querySelectorAll('.info-box article');
+let tabs = document.querySelectorAll(".info-box li a");
+let panels = document.querySelectorAll(".info-box article");
 
-for(let i = 0; i < tabs.length; i++) {
+for (let i = 0; i < tabs.length; i++) {
   let tab = tabs[i];
   setTabHandler(tab, i);
 }
 
 function setTabHandler(tab, tabPos) {
-  tab.onclick = function() {
-    for(let i = 0; i < tabs.length; i++) {
-      tabs[i].className = '';
+  tab.onclick = function () {
+    for (let i = 0; i < tabs.length; i++) {
+      tabs[i].className = "";
     }
 
-    tab.className = 'active';
+    tab.className = "active";
 
-    for(let i = 0; i < panels.length; i++) {
-      panels[i].className = '';
+    for (let i = 0; i < panels.length; i++) {
+      panels[i].className = "";
     }
 
-    panels[tabPos].className = 'active-panel';
-  }
+    panels[tabPos].className = "active-panel";
+  };
 }
 ```
 
@@ -243,7 +260,8 @@ Dans ce deuxième exemple, nous repartirons du premier exemple (notre boîte d'i
 
 ![](fixed-info-box.png)
 
-> **Note :** Vous pouvez voir l'exemple fini en démonstration sur la page [fixed-info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html) ([code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/fixed-info-box.html)). N'hésitez pas à le consulter pour avoir une idée du résultat que vous allez construire.
+> [!NOTE]
+> Vous pouvez voir l'exemple fini en démonstration sur la page [fixed-info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html) ([code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/fixed-info-box.html)). N'hésitez pas à le consulter pour avoir une idée du résultat que vous allez construire.
 
 Comme point de départ, vous pouvez utiliser l'exemple construit dans la première section de cet article ou enregistrer sur votre ordinateur le fichier [info-box.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html) depuis le dépôt GitHub.
 
@@ -254,18 +272,43 @@ Tout d'abord, il nous faut compléter le HTML afin de représenter le contenu pr
 ```html
 <section class="fake-content">
   <h1>Faux contenu</h1>
-  <p>Du contenu imaginaire. Le contenu principal de votre page web se situerait probablement ici.</p>
-  <p>Du contenu imaginaire. Le contenu principal de votre page web se situerait probablement ici.</p>
-  <p>Du contenu imaginaire. Le contenu principal de votre page web se situerait probablement ici.</p>
-  <p>Du contenu imaginaire. Le contenu principal de votre page web se situerait probablement ici.</p>
-  <p>Du contenu imaginaire. Le contenu principal de votre page web se situerait probablement ici.</p>
-  <p>Du contenu imaginaire. Le contenu principal de votre page web se situerait probablement ici.</p>
-  <p>Du contenu imaginaire. Le contenu principal de votre page web se situerait probablement ici.</p>
-  <p>Du contenu imaginaire. Le contenu principal de votre page web se situerait probablement ici.</p>
+  <p>
+    Du contenu imaginaire. Le contenu principal de votre page web se situerait
+    probablement ici.
+  </p>
+  <p>
+    Du contenu imaginaire. Le contenu principal de votre page web se situerait
+    probablement ici.
+  </p>
+  <p>
+    Du contenu imaginaire. Le contenu principal de votre page web se situerait
+    probablement ici.
+  </p>
+  <p>
+    Du contenu imaginaire. Le contenu principal de votre page web se situerait
+    probablement ici.
+  </p>
+  <p>
+    Du contenu imaginaire. Le contenu principal de votre page web se situerait
+    probablement ici.
+  </p>
+  <p>
+    Du contenu imaginaire. Le contenu principal de votre page web se situerait
+    probablement ici.
+  </p>
+  <p>
+    Du contenu imaginaire. Le contenu principal de votre page web se situerait
+    probablement ici.
+  </p>
+  <p>
+    Du contenu imaginaire. Le contenu principal de votre page web se situerait
+    probablement ici.
+  </p>
 </section>
 ```
 
-> **Note :** N'hésitez pas à changer ce contenu imaginaire par du contenu concret si vous le souhaitez.
+> [!NOTE]
+> N'hésitez pas à changer ce contenu imaginaire par du contenu concret si vous le souhaitez.
 
 ### Modifications au CSS existant
 
@@ -308,23 +351,21 @@ Voilà ce à quoi ressemblera notre exemple terminé&nbsp;:
 
 ![](hidden-sliding-panel.png)
 
-> **Note :** Vous pouvez voir l'exemple fini en démonstration sur la page [hidden-info-panel.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html) ([code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel.html)). N'hésitez pas à le consulter pour avoir une idée du résultat que vous allez construire.
+> [!NOTE]
+> Vous pouvez voir l'exemple fini en démonstration sur la page [hidden-info-panel.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html) ([code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel.html)). N'hésitez pas à le consulter pour avoir une idée du résultat que vous allez construire.
 
 Pour commencer, enregistrez le fichier [hidden-info-panel-start.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel-start.html) sur votre ordinateur. Celui-ci ne repart pas de l'exemple précédent et il faut donc utiliser un nouveau fichier. Voyons déjà ce que contient le code HTML de ce fichier&nbsp;:
 
 ```html
 <label for="toggle">❔</label>
-<input type="checkbox" id="toggle">
-<aside>
-
-  ...
-
-</aside>
+<input type="checkbox" id="toggle" />
+<aside>...</aside>
 ```
 
-Pour commencer, nous avons un élément [`<label>`](/fr/docs/Web/HTML/Element/Label) et un élément [`<input>`](/fr/docs/Web/HTML/Element/Input). Les éléments `<label>` sont généralement utilisés afin d'associer un libellé avec un élément de formulaire à des fins d'accessibilité (permettant par exemple à quelqu'un qui utilise un lecteur d'écran de connaître la description du contenu attendu dans ce champ de formulaire). Ici, ce libellé est associé avec la case à cocher `<input>` grâce aux attributs `for` et `id`.
+Pour commencer, nous avons un élément [`<label>`](/fr/docs/Web/HTML/Element/label) et un élément [`<input>`](/fr/docs/Web/HTML/Element/input). Les éléments `<label>` sont généralement utilisés afin d'associer un libellé avec un élément de formulaire à des fins d'accessibilité (permettant par exemple à quelqu'un qui utilise un lecteur d'écran de connaître la description du contenu attendu dans ce champ de formulaire). Ici, ce libellé est associé avec la case à cocher `<input>` grâce aux attributs `for` et `id`.
 
-> **Note :** Nous avons utilisé un point d'interrogation dans notre HTML afin que celui-ci serve d'icône pour accéder à l'information&nbsp;: il représente le bouton qu'on utilisera pour afficher/masquer le panneau.
+> [!NOTE]
+> Nous avons utilisé un point d'interrogation dans notre HTML afin que celui-ci serve d'icône pour accéder à l'information&nbsp;: il représente le bouton qu'on utilisera pour afficher/masquer le panneau.
 
 Ici, nous allons utiliser ces éléments pour un but légèrement différent. Un effet de bord sympathique des éléments `<label>` est que lorsqu'on clique sur eux, cela permet de cocher la case à cocher correspondante (comme si on avait cliqué sur la case en question). Cela a ainsi permis la fameuse [bidouille de la case à cocher](https://css-tricks.com/the-checkbox-hack/) qui permet, sans utiliser JavaScript, de contrôler un élément en activant un bouton. L'élément que nous contrôlerons ici est l'élément [`<aside>`](/fr/docs/Web/HTML/Element/aside) qui suit les deux autres (nous avons laissé son contenu de côté pour des raisons de concision).
 
@@ -393,7 +434,7 @@ Il y a plusieurs déclarations ici, voyons-les au fur et à mesure&nbsp;:
 Voici le dernier fragment de CSS à ajouter, là encore à la fin&nbsp;:
 
 ```css
-input[type=checkbox]:checked + aside {
+input[type="checkbox"]:checked + aside {
   right: 0px;
 }
 ```
@@ -405,28 +446,3 @@ Et voilà, une astuce sans JavaScript pour créer un interrupteur. Cela fonction
 ## Résumé
 
 Et voici pour notre étude sur le positionnement. Vous devriez désormais avoir une idée des mécanismes de base et une compréhension nécessaire pour appliquer ces notions afin de construire des interfaces utilisateurs. Pas d'inquiétude si vous n'avez pas tout compris immédiatement, le positionnement est un sujet plutôt avancé et il est toujours possible de revenir sur ces articles afin d'aider à la compréhension par la suite. Le prochain sujet que nous aborderons portera sur les boîtes flexibles, aussi appelées <i lang="en">flexbox</i>.
-
-## Dans ce module
-
-- [Introduction aux dispositions CSS](/fr/docs/Learn/CSS/CSS_layout/Introduction)
-- [Flux normal](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Boîtes flexibles (flexbox)](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grilles CSS](/fr/docs/Learn/CSS/CSS_layout/Grids)
-- [Flottements](/fr/docs/Learn/CSS/CSS_layout/Floats)
-- [Positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning)
-- [Disposition à plusieurs colonnes](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Conception adaptative (<i lang="en">responsive design</i>)](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design)
-
-  <i lang="en">responsive design</i>
-
-  [Conception adaptative (<i lang="en">responsive design</i>)](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design)
-
-- [Guide sur les requêtes de média (<i lang="en">media queries</i>)](/fr/docs/Learn/CSS/CSS_layout/Media_queries)
-
-  <i lang="en">media queries</i>
-
-  [Guide sur les requêtes de média (<i lang="en">media queries</i>)](/fr/docs/Learn/CSS/CSS_layout/Media_queries)
-
-- [Méthodes de disposition historiques](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Prendre en charge les anciens navigateurs](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Évaluation pour la compréhension des fondamentaux des dispositions CSS](/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

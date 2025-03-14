@@ -1,78 +1,99 @@
 ---
 title: Array.from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
+l10n:
+  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
+
 {{JSRef}}
 
-**`Array.from()`** 메서드는 유사 배열 객체(array-like object)나 반복 가능한 객체(iterable object)를 얕게 복사해 새로운`Array` 객체를 만듭니다.
+**`Array.from()`** 정적 메서드는 [순회 가능](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#순회_가능_프로토콜) 또는 [유사 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections##유사_배열_객체_다루기) 객체에서 얕게 복사된 새로운 `Array` 인스턴스를 생성합니다.
 
-{{EmbedInteractiveExample("pages/js/array-from.html")}}
+{{InteractiveExample("JavaScript Demo: Array.from()", "shorter")}}
+
+```js interactive-example
+console.log(Array.from("foo"));
+// Expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], (x) => x + x));
+// Expected output: Array [2, 4, 6]
+```
 
 ## 구문
 
-```js
-    Array.from(arrayLike[, mapFn[, thisArg]])
+```js-nolint
+Array.from(arrayLike)
+Array.from(arrayLike, mapFn)
+Array.from(arrayLike, mapFn, thisArg)
 ```
 
 ### 매개변수
 
 - `arrayLike`
-  - : 배열로 변환하고자 하는유사 배열 객체나 반복 가능한 객체.
-- `mapFn`{{Optional_inline}}
-  - : 배열의 모든 요소에 대해 호출할 맵핑 함수.
-- `thisArg`{{Optional_inline}}
-  - : `mapFn` 실행 시에 `this`로 사용할 값.
+  - : 배열로 변환할 순회 가능 또는 유사 배열 객체입니다.
+- `mapFn`{{optional_inline}}
+  - : 배열의 모든 요소에 대해 호출할 함수입니다. 이 함수를 제공하면 배열에 추가할 모든 값이 이 함수를 통해 먼저 전달되고, `mapFn`의 반환 값이 대신 배열에 추가됩니다. 이 함수는 다음 인수를 사용하여 호출됩니다.
+    - `element`
+      - : 배열에서 처리 중인 현재 요소.
+    - `index`
+      - : 배열에서 처리 중인 현재 요소의 인덱스.
+- `thisArg`{{optional_inline}}
+  - : `mapFn` 실행 시에 `this`로 사용할 값입니다.
 
 ### 반환 값
 
-새로운 {{jsxref("Array")}} 인스턴스.
+새로운 {{jsxref("Array")}} 인스턴스입니다.
 
 ## 설명
 
-다음과 같은 경우에 `Array.from()`으로새`Array`를 만들 수 있습니다.
+다음과 같은 경우에 `Array.from()`을 사용하면 `Array`를 만들 수 있습니다.
 
-- 유사 배열 객체 (`length` 속성과 인덱싱 된 요소를 가진 객체)
-- [순회 가능한 객체](/ko/docs/Web/JavaScript/Guide/iterable) ({{jsxref("Map")}}, {{jsxref("Set")}} 등객체의 요소를 얻을 수 있는 객체)
+- [순회 가능](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#순회_가능_프로토콜) 객체({{jsxref("Map")}}, {{jsxref("Set")}}과 같은 객체)인 경우. 또는 객체가 순회 가능이 아니라면,
+- 유사 배열 객체(`length` 속성과 인덱싱된 요소가 있는 객체).
 
-`Array.from()`은 선택 매개변수인 `mapFn`를 가지는데, 배열(혹은 배열 서브클래스)의 각 요소를{{jsxref("Array.prototype.map", "맵핑", "", 0)}}할 때 사용할 수 있습니다. 즉,`Array.from(obj, mapFn, thisArg)`는 중간에 다른 배열을 생성하지 않는다는 점을 제외하면`Array.from(obj).map(mapFn, thisArg)`와 같습니다. 이 특징은 [typed arrays](/ko/docs/Web/JavaScript/Typed_arrays)와 같은 특정 배열 서브클래스에서 중간 배열 값이 적절한 유형에 맞게 생략되기 때문에 특히 중요합니다.
+순회 가능이 아니거나 유사 배열이 아닌 일반 객체를 배열로 변환하려면(속성 키, 값 또는 둘을 모두 열거하여) {{jsxref("Object.keys()")}}, {{jsxref("Object.values()")}}, 또는 {{jsxref("Object.entries()")}}를 사용해야 합니다. [비동기 순회 가능](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#비동기_순회자와_비동기_순회_가능_프로토콜)을 배열로 변환하려면 {{jsxref("Array.fromAsync()")}}를 사용합니다.
 
-`from()` 메서드의 `length` 속성은 1입니다.
+`Array.from()`은 희소 배열을 생성하지 않습니다. `arrayLike` 객체에 일부 인덱스 속성이 누락된 경우, 새 배열에서 해당 속성은 `undefined`가 됩니다.
 
-ES2015 이후, 클래스 구문은 내장 및 새 클래스의 상속을 가능케 했습니다. 그 결과로 `Array.from`과 같은 정적 메서드는 `Array`의 서브클래스에 의해 상속되며, `Array` 대신 자신의 인스턴스를 만듭니다.
+`Array.from()`에는 생성되는 배열의 각 요소에 대해 함수를 실행할 수 있는 {{jsxref("Array/map", "map()")}}과 비슷한 선택적 매개변수 `mapFn`이 있습니다. 좀 더 명확하게 설명하자면, `Array.from(obj, mapFn, thisArg)`는 중간 배열을 생성하지 않는다는 점과 배열이 아직 생성 중이기 때문에 전체 배열 없이 두 개의 인수(`element`, `index`)만 받는다는 점을 제외하면 `Array.from(obj).map(mapFn, thisArg)`과 동일한 결과를 가져옵니다.
+
+> [!NOTE]
+> 이 동작은 [형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)에서 더 중요한데, 중간 배열에는 적절한 형식에 맞게 잘린 값이 있어야 하기 때문입니다. `Array.from()`은 {{jsxref("TypedArray.from()")}}과 동일한 동작을 하도록 구현되었습니다.
+
+`Array.from()` 메서드는 범용 팩토리 메서드입니다. 예를 들어, `Array`의 하위 클래스가 `from()` 메서드를 상속하는 경우, 상속된 `from()` 메서드는 `Array` 인스턴스 대신 하위 클래스의 새 인스턴스를 반환합니다. 실제로 `this` 값은 새 배열의 길이를 나타내는 단일 인수를 받는 모든 생성자 함수가 될 수 있습니다. 순회 가능이 `arrayLike`로 전달되면 인수 없이 생성자가 호출되고, 배열형 객체가 전달되면 배열형 객체의 [정규화된 length](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#length_속성_일반화)를 사용하여 생성자가 호출됩니다. 최종 `length`는 순회가 완료되면 다시 설정됩니다. `this` 값이 생성자 함수가 아닌 경우, 일반 `Array` 생성자가 대신 사용됩니다.
 
 ## 예제
 
-### `String`에서 배열 만들기
+### String으로 배열 만들기
 
 ```js
-Array.from('foo');
-// ["f", "o", "o"]
+Array.from("foo");
+// [ "f", "o", "o" ]
 ```
 
-### `Set`에서 배열 만들기
+### Set으로 배열 만들기
 
 ```js
-const s = new Set(['foo', window]);
-Array.from(s);
-// ["foo", window]
+const set = new Set(["foo", "bar", "baz", "foo"]);
+Array.from(set);
+// [ "foo", "bar", "baz" ]
 ```
 
-### `Map`에서 배열 만들기
+### Map으로 배열 만들기
 
 ```js
-const m = new Map([[1, 2], [2, 4], [4, 8]]);
-Array.from(m);
+const map = new Map([
+  [1, 2],
+  [2, 4],
+  [4, 8],
+]);
+Array.from(map);
 // [[1, 2], [2, 4], [4, 8]]
 
-const mapper = new Map([['1', 'a'], ['2', 'b']]);
+const mapper = new Map([
+  ["1", "a"],
+  ["2", "b"],
+]);
 Array.from(mapper.values());
 // ['a', 'b'];
 
@@ -80,7 +101,16 @@ Array.from(mapper.keys());
 // ['1', '2'];
 ```
 
-### 배열 형태를 가진 객체(`arguments`)에서 배열 만들기
+### NodeList로 배열 만들기
+
+```js
+// DOM 요소의 속성을 기반으로 배열 만들기
+const images = document.querySelectorAll("img");
+const sources = Array.from(images, (image) => image.src);
+const insecureSources = sources.filter((link) => link.startsWith("http://"));
+```
+
+### 유사 배열 객체로 배열 만들기 (arguments)
 
 ```js
 function f() {
@@ -89,129 +119,72 @@ function f() {
 
 f(1, 2, 3);
 
-// [1, 2, 3]
+// [ 1, 2, 3 ]
 ```
 
-### `Array.from`과 화살표 함수 사용하기
+### 화살표 함수와 Array.from() 사용하기
 
 ```js
-// Using an arrow function as the map function to
-// manipulate the elements
-Array.from([1, 2, 3], x => x + x);
+// 화살표 함수를 map 함수로 사용하여 요소 조작
+Array.from([1, 2, 3], (x) => x + x);
 // [2, 4, 6]
 
-// Generate a sequence of numbers
-// Since the array is initialized with `undefined` on each position,
-// the value of `v` below will be `undefined`
-Array.from({length: 5}, (v, i) => i);
+// 숫자 시퀀스 생성하기
+// 배열의 각 위치가 `undefined`로 초기화되므로
+// 아래 'v'의 값은 `undefined`가 됩니다.
+Array.from({ length: 5 }, (v, i) => i);
 // [0, 1, 2, 3, 4]
 ```
 
-### 시퀀스 생성기(range)
+### 시퀀스 생성기 (range)
 
 ```js
-// Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP etc)
-const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
+// 시퀀스 생성기 함수 (Clojure, PHP 등에선 "range"라고도 함)
+const range = (start, stop, step) =>
+  Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + i * step);
 
-// Generate numbers range 0..4
+// 0..4 범위의 숫자 생성하기
 range(0, 4, 1);
 // [0, 1, 2, 3, 4]
 
-// Generate numbers range 1..10 with step of 2
+// 두 단계씩 1...10 범위의 숫자 생성
 range(1, 10, 2);
 // [1, 3, 5, 7, 9]
 
-// Generate the alphabet using Array.from making use of it being ordered as a sequence
-range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x => String.fromCharCode(x));
+// 시퀀스로 정렬되는 것을 활용하여 `Array.from`으로 알파벳을 생성하기
+range("A".charCodeAt(0), "Z".charCodeAt(0), 1).map((x) =>
+  String.fromCharCode(x),
+);
 // ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 ```
 
-## 폴리필
+### 배열이 아닌 생성자에 from() 호출하기
 
-`Array.from`은 ECMA-262 표준 제6판에 추가됐습니다.따라서 어떤 표준 구현체에서는 사용할 수 없을 수도 있습니다. 다른 모든 코드 이전에 아래 코드를 포함하면 지원하지 않는 플랫폼에서도`Array.from`을 사용할 수 있습니다. 아래 알고리즘은[`Object`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object)와[`TypeError`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypeError)가 변형되지 않고,`callback.call`의 계산 값이 원래의[`Function.prototype.call()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call)과 같은 경우ECMA-262 제6판이 명시한 것과 동일합니다. 또한 반복가능자(iterable)는 완벽하게 폴리필 할 수 없기에 본 구현은 ECMA-262 제6판의 제네릭 반복가능자를 지원하지 않습니다.
+`from()` 메서드는 새 배열의 `length`를 나타내는 단일 인수를 받아들이는 모든 생성자 함수에서 호출할 수 있습니다.
 
 ```js
-// Production steps of ECMA-262, Edition 6, 22.1.2.1
-if (!Array.from) {
-  Array.from = (function () {
-    var toStr = Object.prototype.toString;
-    var isCallable = function (fn) {
-      return typeof fn === 'function' || toStr.call(fn) === '[object Function]';
-    };
-    var toInteger = function (value) {
-      var number = Number(value);
-      if (isNaN(number)) { return 0; }
-      if (number === 0 || !isFinite(number)) { return number; }
-      return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));
-    };
-    var maxSafeInteger = Math.pow(2, 53) - 1;
-    var toLength = function (value) {
-      var len = toInteger(value);
-      return Math.min(Math.max(len, 0), maxSafeInteger);
-    };
-
-    // The length property of the from method is 1.
-    return function from(arrayLike/*, mapFn, thisArg */) {
-      // 1. Let C be the this value.
-      var C = this;
-
-      // 2. Let items be ToObject(arrayLike).
-      var items = Object(arrayLike);
-
-      // 3. ReturnIfAbrupt(items).
-      if (arrayLike == null) {
-        throw new TypeError('Array.from requires an array-like object - not null or undefined');
-      }
-
-      // 4. If mapfn is undefined, then let mapping be false.
-      var mapFn = arguments.length > 1 ? arguments[1] : void undefined;
-      var T;
-      if (typeof mapFn !== 'undefined') {
-        // 5. else
-        // 5. a If IsCallable(mapfn) is false, throw a TypeError exception.
-        if (!isCallable(mapFn)) {
-          throw new TypeError('Array.from: when provided, the second argument must be a function');
-        }
-
-        // 5. b. If thisArg was supplied, let T be thisArg; else let T be undefined.
-        if (arguments.length > 2) {
-          T = arguments[2];
-        }
-      }
-
-      // 10. Let lenValue be Get(items, "length").
-      // 11. Let len be ToLength(lenValue).
-      var len = toLength(items.length);
-
-      // 13. If IsConstructor(C) is true, then
-      // 13. a. Let A be the result of calling the [[Construct]] internal method
-      // of C with an argument list containing the single item len.
-      // 14. a. Else, Let A be ArrayCreate(len).
-      var A = isCallable(C) ? Object(new C(len)) : new Array(len);
-
-      // 16. Let k be 0.
-      var k = 0;
-      // 17. Repeat, while k < len… (also steps a - h)
-      var kValue;
-      while (k < len) {
-        kValue = items[k];
-        if (mapFn) {
-          A[k] = typeof T === 'undefined' ? mapFn(kValue, k) : mapFn.call(T, kValue, k);
-        } else {
-          A[k] = kValue;
-        }
-        k += 1;
-      }
-      // 18. Let putStatus be Put(A, "length", len, true).
-      A.length = len;
-      // 20. Return A.
-      return A;
-    };
-  }());
+function NotArray(len) {
+  console.log("NotArray called with length", len);
 }
+
+// 순회 가능
+console.log(Array.from.call(NotArray, new Set(["foo", "bar", "baz"])));
+// NotArray는 length가 undefined인 상태로 호출됩니다.
+// NotArray { '0': 'foo', '1': 'bar', '2': 'baz', length: 3 }
+
+// 유사 배열
+console.log(Array.from.call(NotArray, { length: 1, 0: "foo" }));
+// NotArray는 length가 1인 상태로 호출됩니다.
+// NotArray { '0': 'foo', length: 1 }
 ```
 
-## 명세
+`this` 값이 생성자가 아닌 경우, 일반 `Array` 객체가 반환됩니다.
+
+```js
+console.log(Array.from.call({}, { length: 1, 0: "foo" })); // [ 'foo' ]
+```
+
+## 명세서
 
 {{Specifications}}
 
@@ -221,6 +194,11 @@ if (!Array.from) {
 
 ## 같이 보기
 
+- [`core-js`의 `Array.from` 폴리필](https://github.com/zloirock/core-js#ecmascript-array)
+- [인덱스 기반 컬렉션](/ko/docs/Web/JavaScript/Guide/Indexed_collections) 안내서
 - {{jsxref("Array")}}
+- {{jsxref("Array/Array", "Array()")}}
+- {{jsxref("Array.of()")}}
+- {{jsxref("Array.fromAsync()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("TypedArray.from()")}}

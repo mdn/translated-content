@@ -1,13 +1,48 @@
 ---
 title: background-position-x
 slug: Web/CSS/background-position-x
-translation_of: Web/CSS/background-position-x
 ---
+
 {{CSSRef}}
 
 Свойство **`background-position-x`** - это [CSS](/ru/docs/Web/CSS) - свойство, которое устанавливает начальную горизонтальную позицию для каждого фонового изображения. Эта позиция является относительной к позиции слоя, установленной с помощью свойства {{cssxref("background-origin")}}.
 
-{{EmbedInteractiveExample("pages/css/background-position-x.html")}}
+{{InteractiveExample("CSS Demo: background-position-x")}}
+
+```css interactive-example-choice
+background-position-x: left;
+```
+
+```css interactive-example-choice
+background-position-x: center;
+```
+
+```css interactive-example-choice
+background-position-x: 25%;
+```
+
+```css interactive-example-choice
+background-position-x: 2rem;
+```
+
+```css interactive-example-choice
+background-position-x: right 32px;
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: navajowhite;
+  background-image: url("/shared-assets/images/examples/star.png");
+  background-repeat: no-repeat;
+  height: 100%;
+}
+```
 
 Значение этого свойства отменяется любой декларацией {{cssxref("background")}} или коротким свойством {{cssxref("background-position")}} применёнными после его объявления.
 
@@ -75,4 +110,4 @@ background-position-x: unset;
 - {{cssxref("background-position-y")}}
 - {{cssxref("background-position-inline")}}
 - {{cssxref("background-position-block")}}
-- [Использование множественных фонов](/ru/docs/CSS/Multiple_backgrounds)
+- [Использование множественных фонов](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

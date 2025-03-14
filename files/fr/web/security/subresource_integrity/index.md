@@ -1,13 +1,11 @@
 ---
 title: Subresource Integrity
 slug: Web/Security/Subresource_Integrity
-tags:
-  - Intro
-  - Sécurité
-translation_of: Web/Security/Subresource_Integrity
 ---
 
-**_Subresource Integrity_** (SRI, ou « Intégrité des sous-ressources ») est une fonction de sécurité qui permet aux navigateurs de vérifier que les fichiers qu'ils vont chercher (par exemple, à partir d'un [CDN](/fr/docs/Glossaire/CDN)) sont livrés sans manipulation inattendue. Cela fonctionne en permettant de fournir un hachage cryptographique (« _hash_ ») auquel le fichier récupéré doit correspondre.
+{{QuickLinksWithSubpages("/fr/docs/Web/Security")}}
+
+**_Subresource Integrity_** (SRI, ou « Intégrité des sous-ressources ») est une fonction de sécurité qui permet aux navigateurs de vérifier que les fichiers qu'ils vont chercher (par exemple, à partir d'un [CDN](/fr/docs/Glossary/CDN)) sont livrés sans manipulation inattendue. Cela fonctionne en permettant de fournir un hachage cryptographique (« _hash_ ») auquel le fichier récupéré doit correspondre.
 
 ## Comment fonctionne le contrôle d'intégrité des sous-ressources ?
 
@@ -21,7 +19,8 @@ Le contrôle d'intégrité des sous-ressources s'active en spécifiant un hachag
 
 Une valeur de l'attribut **`integrity`** commence par au moins une chaîne, chaque chaîne comprenant un préfixe indiquant un algorithme particulier de hachage (actuellement les préfixes autorisés sont `sha256`, `sha384` et `sha512`), suivi d'un tiret, et se terminant par le hachage base64 proprement dit.
 
-> **Note :** Une valeur de l'attribut **`integrity`** peut contenir plusieurs hachages séparés par des espaces. Une ressource sera chargée si elle correspond à l'un de ces hachages.
+> [!NOTE]
+> Une valeur de l'attribut **`integrity`** peut contenir plusieurs hachages séparés par des espaces. Une ressource sera chargée si elle correspond à l'un de ces hachages.
 
 Voici un exemple de valeur pour l'attribut **`integrity`** avec un hash sha384 encodé en base64 :
 
@@ -29,7 +28,8 @@ Voici un exemple de valeur pour l'attribut **`integrity`** avec un hash sha384 e
 sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
 ```
 
-> **Note :** Le « _hash_ » est à proprement parler une **_fonction de hachage cryptographique_** formé en appliquant une fonction de hachage particulière à une certaine entrée (par exemple, un script ou un fichier de feuille de styles). Mais il est plus commun d'utiliser le mot **_hash_** pour indiquer _fonction de hachage cryptographique_, d'où son utilisation dans cet article.
+> [!NOTE]
+> Le « _hash_ » est à proprement parler une **_fonction de hachage cryptographique_** formé en appliquant une fonction de hachage particulière à une certaine entrée (par exemple, un script ou un fichier de feuille de styles). Mais il est plus commun d'utiliser le mot **_hash_** pour indiquer _fonction de hachage cryptographique_, d'où son utilisation dans cet article.
 
 ### Outil pour générer des hachages SRI
 
@@ -50,12 +50,14 @@ Dans les exemples suivants, supposons que `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9
 Vous pouvez utiliser l'élément {{HTMLElement("script")}} suivant pour dire au navigateur qu'il doit comparer le _hash_ fourni avec celui du fichier et que les deux correspondent avant d'exécuter le script hébergé à `https://example.com/exemple-framework.js`.
 
 ```html
-<script src="https://exemple.com/exemple-framework.js"
-        integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
-        crossorigin="anonymous"></script>
+<script
+  src="https://exemple.com/exemple-framework.js"
+  integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
+  crossorigin="anonymous"></script>
 ```
 
-> **Note :** Pour plus de détails sur l'objectif de l'attribut **`crossorigin`**, voir [les attributs CORS](/fr/docs/Web/HTML/Reglages_des_attributs_CORS).
+> [!NOTE]
+> Pour plus de détails sur l'objectif de l'attribut **`crossorigin`**, voir [les attributs CORS](/fr/docs/Web/HTML/Attributes/crossorigin).
 
 ## La gestion du SRI par les navigateurs
 

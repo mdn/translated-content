@@ -1,19 +1,16 @@
 ---
 title: readystatechange
 slug: Web/API/Document/readystatechange_event
-tags:
-  - события
-translation_of: Web/API/Document/readystatechange_event
-original_slug: Web/Events/readystatechange
 ---
-{{ApiRef}}
 
-Событие `readystatechange` срабатывает, когда изменяется атрибут документа [`readyState`](/ru/docs/DOM/document.readyState).
+{{APIRef}}
+
+Событие `readystatechange` срабатывает, когда изменяется атрибут документа [`readyState`](/ru/docs/Web/API/Document/readyState).
 
 ## Основная информация
 
 - Спецификация
-  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#current-document-readiness)
+  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#current-document-readiness)
 - Интерфейс
 
   - : Event
@@ -29,12 +26,12 @@ original_slug: Web/Events/readystatechange
 
 ## Свойства
 
-| Свойство                              | Тип                                  | Описание                                        |
-| ------------------------------------- | ------------------------------------ | ----------------------------------------------- |
+| Свойство                        | Тип                        | Описание                                        |
+| ------------------------------- | -------------------------- | ----------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | Цель события (Самая верхняя цель в дереве DOM). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | Тип события.                                    |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Всплывает ли событие.                           |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Возможно ли отменить событие.                   |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Тип события.                                    |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Всплывает ли событие.                           |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Возможно ли отменить событие.                   |
 
 ## Примеры
 
@@ -42,23 +39,22 @@ original_slug: Web/Events/readystatechange
 document.readyState === "complete";
 // true
 
-
 // Альтернатива DOMContentLoaded
 document.onreadystatechange = function () {
-    if (document.readyState === "interactive") {
-        initApplication();
-    }
-}
+  if (document.readyState === "interactive") {
+    initApplication();
+  }
+};
 ```
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
-Данное событие давно поддерживается Internet Explorer и может быть использовано в качестве альтернативы событию [`DOMContentLoaded`](/ru/docs/Web/Events/DOMContentLoaded) (см. примечание \[2] в разделе [Поддержка браузерами](/ru/docs/Web/Events/DOMContentLoaded#Поддержка_браузерами)).
+{{Compat}}
 
 ## Связанные события
 
-- {{event("DOMContentLoaded")}}
-- {{event("readystatechange")}}
-- {{event("load")}}
-- {{event("beforeunload")}}
-- {{event("unload")}}
+- [`DOMContentLoaded`](/ru/docs/Web/API/Document/DOMContentLoaded_event)
+- [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event)
+- [`load`](/ru/docs/Web/API/Window/load_event)
+- [`beforeunload`](/ru/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/ru/docs/Web/API/Window/unload_event)

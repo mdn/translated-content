@@ -1,15 +1,20 @@
 ---
-title: Node.lastChild
+title: "Node: lastChild プロパティ"
 slug: Web/API/Node/lastChild
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
 
-**`lastChild`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、このノードの最後の子ノードを返します。
-親ノードが要素であった場合、子ノードはふつう、要素ノード、テキストノード、コメントノードの何れかです。
-子要素がない場合は `null` を返します。
+**`lastChild`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、このノードの最後の子ノードを返します。子ノードがない場合は `null` を返します。
 
-## Value
+> [!NOTE]
+> このプロパティは、このノードの最後の子ノードである任意の種類のノードを返す。
+> {{domxref("Text")}} や {{domxref("Comment")}} ノードである可能性があります。
+> 他の要素の子である最後の {{domxref("Element")}} を取得したい場合は、{{domxref("Element.lastElementChild")}} の使用を検討してください。
+
+## 値
 
 このノードの最後の子である {{domxref("Node")}}、または子ノードがなければ `null` です。
 

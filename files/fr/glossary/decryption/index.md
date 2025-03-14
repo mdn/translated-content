@@ -1,14 +1,9 @@
 ---
 title: Déchiffrement
 slug: Glossary/Decryption
-tags:
-  - Confidentialité
-  - Cryptographie
-  - Glossaire
-  - Sécurité
-translation_of: Glossary/Decryption
-original_slug: Glossaire/Déchiffrement
 ---
+
+{{GlossarySidebar}}
 
 En {{glossary("Cryptography","cryptographie")}}, le **déchiffrement** est la conversion d'un {{glossary("ciphertext","cryptogramme")}} en {{glossary("cleartexte","texte brut")}}.
 

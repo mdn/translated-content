@@ -1,20 +1,28 @@
 ---
 title: TypedArray.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/some
 ---
+
 {{JSRef}}
 
-**`some()`** 메서드는 형식화 배열 내 일부 요소가 제공되는 함수에 의해 구현되는 테스트를 통과하는지 여부를 테스트합니다. 이 메서드는 {{jsxref("Array.prototype.some()")}}과 같은 알고리즘입니다. *TypedArray*는 여기 [TypedArray 객체 유형](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 중 하나입니다.
+**`some()`** 메서드는 형식화 배열 내 일부 요소가 제공되는 함수에 의해 구현되는 테스트를 통과하는지 여부를 테스트합니다. 이 메서드는 {{jsxref("Array.prototype.some()")}}과 같은 알고리즘입니다. *TypedArray*는 여기 [TypedArray 객체 유형](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) 중 하나입니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-some.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.some()")}}
+
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([-10, 20, -30, 40, -50]);
+const positives = new Int8Array([10, 20, 30, 40, 50]);
+
+console.log(int8.some(isNegative));
+// Expected output: true
+
+console.log(positives.some(isNegative));
+// Expected output: false
+```
 
 ## 구문
 
@@ -60,11 +68,11 @@ new Uint8Array([12, 5, 8, 1, 4]).some(isBiggerThan10); // true
 
 ### 화살표 함수를 사용하여 형식화 배열 요소 테스트
 
-[화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/애로우_펑션)는 같은 테스트에 대해 더 짧은 구문을 제공합니다.
+[화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)는 같은 테스트에 대해 더 짧은 구문을 제공합니다.
 
 ```js
-new Uint8Array([2, 5, 8, 1, 4]).some(elem => elem > 10); // false
-new Uint8Array([12, 5, 8, 1, 4]).some(elem => elem > 10); // true
+new Uint8Array([2, 5, 8, 1, 4]).some((elem) => elem > 10); // false
+new Uint8Array([12, 5, 8, 1, 4]).some((elem) => elem > 10); // true
 ```
 
 ## 명세

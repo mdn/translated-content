@@ -5,9 +5,23 @@ slug: Web/JavaScript/Reference/Operators/Division
 
 {{jsSidebar("Operators")}}
 
-除法运算符（`/`）计算了两个操作数的商，左边的数是被除数，右边的是除数。
+**除法**（**`/`**）运算符计算两个操作数的商，其中左操作数是被除数，右操作数是除数。
 
-{{EmbedInteractiveExample("pages/js/expressions-division.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Division operator")}}
+
+```js interactive-example
+console.log(12 / 2);
+// Expected output: 6
+
+console.log(3 / 2);
+// Expected output: 1.5
+
+console.log(6 / "3");
+// Expected output: 2
+
+console.log(2 / 0);
+// Expected output: Infinity
+```
 
 ## 语法
 
@@ -20,21 +34,21 @@ x / y
 ### 基本除法
 
 ```js
-1 / 2              // 0.5
+1 / 2; // 0.5
 
-Math.floor(3 / 2) // 1
+Math.floor(3 / 2); // 1
 
-1.0 / 2.0         // 0.5
+1.0 / 2.0; // 0.5
 ```
 
-### 除以 0
+### 除以零
 
 ```js
-2.0 / 0     // Infinity
+2.0 / 0; // Infinity
 
-2.0 / 0.0   // Infinity, because 0.0 === 0
+2.0 / 0.0; // Infinity, because 0.0 === 0
 
-2.0 / -0.0  // -Infinity
+2.0 / -0.0; // -Infinity
 ```
 
 ## 规范
@@ -54,5 +68,5 @@ Math.floor(3 / 2) // 1
 - [幂运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
 - [自增运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Increment)
 - [自减运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [一元减法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [一元加法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [一元减运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [一元加运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)

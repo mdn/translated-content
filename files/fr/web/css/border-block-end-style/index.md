@@ -1,12 +1,6 @@
 ---
 title: border-block-end-style
 slug: Web/CSS/border-block-end-style
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-block-end-style
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

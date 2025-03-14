@@ -1,9 +1,11 @@
 ---
 title: MediaTrackSupportedConstraints
 slug: Web/API/MediaTrackSupportedConstraints
+l10n:
+  sourceCommit: c9e9f9f4faf2e8a5985e5834d9424557341f33c9
 ---
 
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
 **`MediaTrackSupportedConstraints`** 辞書は{{Glossary("user agent", "ユーザーエージェント")}}またはブラウザーが {{domxref("MediaStreamTrack")}} オブジェクトの実装で認識する制約可能なプロパティのリストを確立するものです。 `MediaTrackSupportedConstraints` に適合するオブジェクトは {{domxref("MediaDevices.getSupportedConstraints()")}} によって返されます。
 
@@ -11,9 +13,9 @@ WebIDLのインターフェイス定義はこのように動作するため、�
 
 実際の制約セットは {{domxref("MediaTrackConstraints")}} 辞書をベースにしたオブジェクトで表現されます。
 
-制約がどのように動作するかについての詳細を知りたい場合は、[能力、制約、設定](/ja/docs/Web/API/Media_Streams_API/Constraints)を読んでください。
+制約がどのように動作するかについての詳細を知りたい場合は、[能力、制約、設定](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints)を読んでください。
 
-## プロパティ
+## インスタンスプロパティ
 
 オブジェクトは以下のプロパティの組み合わせであり、必ずしも全てのプロパティが含まれるわけではありません。
 
@@ -31,7 +33,8 @@ WebIDLのインターフェイス定義はこのように動作するため、�
   - : 論理値で、値が `true` ならば、現在の環境で [`facingMode`](/ja/docs/Web/API/MediaTrackConstraints#facingmode) 制約に対応しています。
 - {{domxref("MediaTrackSupportedConstraints.resizeMode", "resizeMode")}}
   - : 論理値で、値が `true` ならば、現在の環境で [`resizeMode`](/ja/docs/Web/API/MediaTrackConstraints#resizemode) 制約に対応しています。
-- {{domxref("MediaTrackSupportedConstraints.volume", "volume")}}
+- {{domxref("MediaTrackSupportedConstraints.volume", "volume")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+
   - : 論理値で、値が `true` ならば、現在の環境で [`volume`](/ja/docs/Web/API/MediaTrackConstraints#volume) 制約に対応しています。
 
 - {{domxref("MediaTrackSupportedConstraints.sampleRate", "sampleRate")}}
@@ -51,7 +54,7 @@ WebIDLのインターフェイス定義はこのように動作するため、�
 - {{domxref("MediaTrackSupportedConstraints.groupId", "groupId")}}
   - : 論理値で、値が `true` ならば、現在の環境で [`groupId`](/ja/docs/Web/API/MediaTrackConstraints#groupid) 制約に対応しています。
 
-### 画面共有トラックに固有のプロパティ
+### 画面共有トラックに固有のインスタンスプロパティ
 
 ユーザーの画面内コンテンツから映像ソースを含むトラックには、映像トラックで利用可能なプロパティに加え、以下のプロパティを入れることができます。
 
@@ -60,14 +63,10 @@ WebIDLのインターフェイス定義はこのように動作するため、�
 - {{domxref("MediaTrackSupportedConstraints.logicalSurface", "logicalSurface")}}
   - : 論理値で、値が `true` ならば、現在の環境で {{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}} 制約に対応しています。
 
-## ブラウザーの互換性
-
-{{Compat}}
-
 ## 関連情報
 
-- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Streams_API)
-- [能力、制約、設定](/ja/docs/Web/API/Media_Streams_API/Constraints)
+- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
+- [能力、制約、設定](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - [画面キャプチャ API](/ja/docs/Web/API/Screen_Capture_API)
 - [画面キャプチャ API の使用](/ja/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
 - {{domxref("MediaTrackConstraints")}}

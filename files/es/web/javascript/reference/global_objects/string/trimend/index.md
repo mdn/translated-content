@@ -1,23 +1,23 @@
 ---
 title: String.prototype.trimEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
-tags:
-  - Espacios en blanco
-  - JavaScript
-  - Métodos
-  - Prototype
-  - String
-  - Texto
-  - cadenas de texto
-translation_of: Web/JavaScript/Reference/Global_Objects/String/trimEnd
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/trimEnd
 ---
 
 {{JSRef}}
 
 El método **`trimEnd()`** elimina los espacios en blanco al final de una cadena de carácteres. `trimRight()` es el alias de este método.
 
-{{EmbedInteractiveExample("pages/js/string-trimend.html")}}
+{{InteractiveExample("JavaScript Demo: String.trimEnd()")}}
+
+```js interactive-example
+const greeting = "   Hello world!   ";
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trimEnd());
+// Expected output: "   Hello world!";
+```
 
 ## Sintaxis
 
@@ -49,24 +49,22 @@ String.prototype.trimRight.name === "trimEnd";
 El siguiente ejemplo muestra la cadena de texto en minusculas `' foo'`:
 
 ```js
-var str = '   foo  ';
+var str = "   foo  ";
 
 console.log(str.length); // 8
 
 str = str.trimEnd();
 console.log(str.length); // 6
-console.log(str);        // '   foo'
+console.log(str); // '   foo'
 ```
 
 ## Especificaciones
 
-| Especificación                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.trimend', 'String.prototype.trimEnd')}} |
+{{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.trimEnd")}}
+{{Compat}}
 
 ## Ver también
 

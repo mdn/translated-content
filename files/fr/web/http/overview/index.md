@@ -1,24 +1,19 @@
 ---
 title: Un aperçu de HTTP
 slug: Web/HTTP/Overview
-tags:
-  - Aperçu
-  - HTML
-  - HTTP
-  - WebMechanics
-translation_of: Web/HTTP/Overview
-original_slug: Web/HTTP/Aperçu
 ---
 
 {{HTTPSidebar}}
 
-**HTTP** est un {{glossary("protocole")}} qui permet de récupérer des ressources telles que des documents HTML. Il est à la base de tout échange de données sur le Web. C'est un protocole de type client-serveur, ce qui signifie que les requêtes sont initiées par le destinataire (qui est généralement un navigateur web). Un document complet est construit à partir de différents sous-documents qui sont récupérés, par exemple du texte, des descriptions de mise en page, des images, des vidéos, des scripts et bien plus.
+**HTTP** est un {{glossary("protocol", "protocole")}} qui permet de récupérer des ressources telles que des documents HTML. Il est à la base de tout échange de données sur le Web. C'est un protocole de type client-serveur, ce qui signifie que les requêtes sont initiées par le destinataire (qui est généralement un navigateur web). Un document complet est construit à partir de différents sous-documents qui sont récupérés, par exemple du texte, des descriptions de mise en page, des images, des vidéos, des scripts et bien plus.
 
-![Un document web se compose de différentes ressources](fetching_a_page.png)
+![Un document web se compose de différentes ressources](https://mdn.github.io/shared-assets/images/diagrams/http/overview/fetching-a-page.svg)
 
 Les clients et serveurs communiquent par l'échange de messages individuels (en opposition à un flux de données). Les messages envoyés par le client, généralement un navigateur web, sont appelés des _requêtes_ et les messages renvoyés par le serveur sont appelés _réponses_.
 
-![HTTP est un protocole de la couche d'application fonctionnant au-dessus de TCP (pour la couche de transport) et IP (pour la couche réseau). HTTP est en dessous de la couche de présentation.](http-layers.png) Conçu au début des années 1990, HTTP est un protocole extensible qui a évolué au cours du temps. C'est un protocole de [la couche application](https://fr.wikipedia.org/wiki/Couche_application) dont les données transitent via {{glossary("TCP")}} ou à travers une connexion TCP chiffrée avec {{glossary("TLS")}}. En théorie, tout protocole de transport fiable pourrait être utilisé. En raison de son extensibilité, il n'est pas seulement utilisé pour récupérer des documents, mais aussi pour des images, des vidéos ou bien pour renvoyer des contenus vers des serveurs, comme des résultats de formulaires HTML. HTTP peut aussi être utilisé pour récupérer des parties de documents pour mettre à jour à la demande des pages web.
+![HTTP est un protocole de la couche d'application fonctionnant au-dessus de TCP (pour la couche de transport) et IP (pour la couche réseau). HTTP est en dessous de la couche de présentation.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-layers.svg)
+
+Conçu au début des années 1990, HTTP est un protocole extensible qui a évolué au cours du temps. C'est un protocole de [la couche application](https://fr.wikipedia.org/wiki/Couche_application) dont les données transitent via {{glossary("TCP")}} ou à travers une connexion TCP chiffrée avec {{glossary("TLS")}}. En théorie, tout protocole de transport fiable pourrait être utilisé. En raison de son extensibilité, il n'est pas seulement utilisé pour récupérer des documents, mais aussi pour des images, des vidéos ou bien pour renvoyer des contenus vers des serveurs, comme des résultats de formulaires HTML. HTTP peut aussi être utilisé pour récupérer des parties de documents pour mettre à jour à la demande des pages web.
 
 ## Composants des systèmes basés sur HTTP
 
@@ -26,7 +21,7 @@ HTTP est un protocole client-serveur : les requêtes sont envoyées par une enti
 
 Chaque requête individuelle est envoyée au serveur, qui la traite et fournit une _réponse_. Entre cette requête et la réponse se trouve de nombreuses entités qu'on désignera de façon générique sous le terme {{glossary("Proxy", "proxies")}}. Celles-ci exécutent différentes opérations et agissent comme passerelles ou comme {{glossary("Cache", "caches")}} par exemple.
 
-![chaîne client serveur](client-server-chain.png)
+![chaîne client serveur](https://mdn.github.io/shared-assets/images/diagrams/http/overview/client-server-chain.svg)
 
 En réalité, il y a plus d'un ordinateur entre un navigateur et le serveur qui traite la requête : il y a les routeurs, les modems et bien plus. Grâce à la construction en couche du Web, ces intermédiaires sont cachés dans les couches réseau et transport. HTTP est bâti sur la couche applicative. Bien qu'elles puissent s'avérer importantes lorsqu'il s'agit de diagnostiquer des problèmes réseau, les couches inférieures ne sont pas pertinentes ici pour décrire HTTP.
 
@@ -64,7 +59,7 @@ Même s'il est devenu plus complexe avec l'arrivée d'HTTP/2 et l'encapsulation 
 
 ### HTTP est extensible
 
-À partir de HTTP/1.0, les [en-têtes HTTP](/fr/docs/HTTP/Headers) permettent d'étendre facilement le protocole et de mener des expérimentations avec celui-ci. De nouvelles fonctionnalités peuvent même être introduites par un simple accord entre le client et le serveur à propos de la sémantique des nouveaux en-têtes.
+À partir de HTTP/1.0, les [en-têtes HTTP](/fr/docs/Web/HTTP/Headers) permettent d'étendre facilement le protocole et de mener des expérimentations avec celui-ci. De nouvelles fonctionnalités peuvent même être introduites par un simple accord entre le client et le serveur à propos de la sémantique des nouveaux en-têtes.
 
 ### HTTP est sans état, mais pas sans session
 
@@ -89,7 +84,7 @@ Voici une liste de fonctionnalités courantes, qui peuvent être contrôlées gr
 - _[Cache](/fr/docs/Web/HTTP/Caching)_
   La façon dont les documents sont mis en cache peut être contrôlée par HTTP. Le serveur peut indiquer aux proxys et aux clients ce qu'ils doivent mettre en cache et pour combien de temps. Le client peut indiquer aux proxys de cache intermédiaires d'ignorer le document qui est stocké.
 - _Lever la contrainte d'origine unique_
-  Pour éviter l'espionnage et d'autres invasions dans la vie privée, les navigateurs web imposent une séparation stricte entre les sites web. Seules les pages de la **même {{Glossary("origine")}}** peuvent accéder à toutes les informations d'une page web. Bien que cette contrainte soit un fardeau pour le serveur, les en-têtes HTTP peuvent assouplir cette séparation stricte du côté serveur, en permettant à un document de devenir un patchwork d'informations en provenance de différents domaines (il existe même des raisons de sécurité de procéder ainsi).
+  Pour éviter l'espionnage et d'autres invasions dans la vie privée, les navigateurs web imposent une séparation stricte entre les sites web. Seules les pages de la **même [origine](/fr/docs/Glossary/Origin)** peuvent accéder à toutes les informations d'une page web. Bien que cette contrainte soit un fardeau pour le serveur, les en-têtes HTTP peuvent assouplir cette séparation stricte du côté serveur, en permettant à un document de devenir un patchwork d'informations en provenance de différents domaines (il existe même des raisons de sécurité de procéder ainsi).
 - _Authentification_
   Certaines pages peuvent être protégées de sorte que seuls certains utilisateurs puissent y accéder. Une authentification simple peut être fournie par HTTP, soit en utilisant l'en-tête {{HTTPHeader ("WWW-Authenticate")}} et des en-têtes similaires, soit en définissant une session spécifique grâce à des [cookies HTTP](/fr/docs/Web/HTTP/Cookies).
 - [Proxys et tunnels](/fr/docs/Web/HTTP/Proxy_servers_and_tunneling)
@@ -104,26 +99,26 @@ Lorsqu'un client veut communiquer avec un serveur, que ce soit avec un serveur f
 1. Il ouvre une connexion TCP : la connexion TCP va être utilisée pour envoyer une ou plusieurs requêtes et pour recevoir une réponse. Le client peut ouvrir une nouvelle connexion, réutiliser une connexion existante ou ouvrir plusieurs connexions TCP vers le serveur.
 2. Il envoie un message HTTP : les messages HTTP (avant HTTP/2) sont lisibles par les humains. Avec HTTP/2, ces simples messages sont en-capsulés dans des trames, rendant la lecture directe impossible, mais le principe reste le même.
 
-    ```
-    GET / HTTP/1.1
-    Host: developer.mozilla.org
-    Accept-Language: fr
-    ```
+   ```http
+   GET / HTTP/1.1
+   Host: developer.mozilla.org
+   Accept-Language: fr
+   ```
 
 3. Il lit la réponse envoyée par le serveur :
 
-    ```
-    HTTP/1.1 200 OK
-    Date: Sat, 09 Oct 2010 14:28:02 GMT
-    Server: Apache
-    Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
-    ETag: "51142bc1-7449-479b075b2891b"
-    Accept-Ranges: bytes
-    Content-Length: 29769
-    Content-Type: text/html
+   ```http
+   HTTP/1.1 200 OK
+   Date: Sat, 09 Oct 2010 14:28:02 GMT
+   Server: Apache
+   Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
+   ETag: "51142bc1-7449-479b075b2891b"
+   Accept-Ranges: bytes
+   Content-Length: 29769
+   Content-Type: text/html
 
-    <!DOCTYPE html... (suivi des 29769 octets de la page web demandée)
-    ```
+   <!DOCTYPE html... (suivi des 29769 octets de la page web demandée)
+   ```
 
 4. Il ferme ou réutilise la connexion pour les requêtes suivantes.
 
@@ -139,21 +134,21 @@ Il existe deux types de messages HTTP, les requêtes et les réponses, chacun ay
 
 Un exemple de requête HTTP :
 
-![Une requête HTTP basique](http_request.png)
+![Une requête HTTP GET et ses en-têtes](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-request.svg)
 
 Une requête comprend les éléments suivants :
 
-- Une [méthode](/fr/docs/Web/HTTP/Methods) HTTP : généralement un verbe tel que {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} ou un nom comme {{HTTPMethod("OPTIONS")}} ou {{HTTPMethod("HEAD")}} qui définit l'opération que le client souhaite effectuer. Par exemple, un client souhaite accéder à une ressource (en utilisant GET) ou téléverser le résultat d'un [formulaire HTML](/fr/docs/Web/Guide/HTML/Formulaires) (en utilisant `POST`), bien que d'autres opérations puissent être nécessaires dans d'autres cas.
+- Une [méthode](/fr/docs/Web/HTTP/Methods) HTTP : généralement un verbe tel que {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} ou un nom comme {{HTTPMethod("OPTIONS")}} ou {{HTTPMethod("HEAD")}} qui définit l'opération que le client souhaite effectuer. Par exemple, un client souhaite accéder à une ressource (en utilisant GET) ou téléverser le résultat d'un [formulaire HTML](/fr/docs/Learn/Forms) (en utilisant `POST`), bien que d'autres opérations puissent être nécessaires dans d'autres cas.
 - Le chemin de la ressource à extraire : l'URL de la ressource à laquelle on a retiré les éléments déductibles du contexte, par exemple le {{glossary ("protocole")}} (http\://), le {{glossary ("domaine")}} (ici .mozilla.org), ou le {{glossary ("port")}} TCP (ici 80).
 - La version du protocole HTTP.
-- Les [en-têtes](/fr/docs/HTTP/Headers) optionnels qui transmettent des informations supplémentaires pour les serveurs.
+- Les [en-têtes](/fr/docs/Web/HTTP/Headers) optionnels qui transmettent des informations supplémentaires pour les serveurs.
 - Ou un corps, pour certaines méthodes comme POST, semblable à ceux dans les réponses, qui contiennent la ressource envoyée.
 
 ### Réponses
 
 Un exemple de réponse :
 
-![une réponse HTTP](http_response.png)
+![Une réponse HTTP « 200 OK » à une requête GET et les en-têtes de réponse.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-response.svg)
 
 Une réponse comprend les éléments suivants:
 
@@ -173,4 +168,4 @@ Une autre API, [server-sent events](/fr/docs/Web/API/Server-sent_events), est un
 
 HTTP est un protocole extensible, facile d'utilisation. La structure client-serveur, combinée avec la possibilité d'ajouter simplement des en-têtes, permet à HTTP de progresser au fur et mesure de l'ajout de nouvelles fonctionnalités sur le Web.
 
-Bien que HTTP/2 ajoute de la complexité, en englobant les messages HTTP dans des trames pour améliorer les performances, la structure de base des messages est restée la même depuis HTTP/1.0. Le flux de session reste simple, ce qui lui permet d'être étudié et débogué avec un simple [moniteur de message HTTP](/fr/docs/Outils/Moniteur_réseau).
+Bien que HTTP/2 ajoute de la complexité, en englobant les messages HTTP dans des trames pour améliorer les performances, la structure de base des messages est restée la même depuis HTTP/1.0. Le flux de session reste simple, ce qui lui permet d'être étudié et débogué avec un simple [moniteur de message HTTP](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).

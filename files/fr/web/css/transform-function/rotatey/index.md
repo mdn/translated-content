@@ -1,9 +1,6 @@
 ---
 title: rotateY()
 slug: Web/CSS/transform-function/rotateY
-translation_of: Web/CSS/transform-function/rotateY()
-original_slug: Web/CSS/transform-function/rotateY()
-browser-compat: css.types.transform-function.rotateY
 ---
 
 {{CSSRef}}
@@ -16,7 +13,8 @@ L'axe de la rotation passe par l'origine du repère, définie par la propriété
 
 `rotateY(a)` est une notation raccourcie, équivalente à `rotate3D(0, 1, 0, a)`.
 
-> **Note :** Contrairement aux rotations appliquées dans le plan, la composition de rotations dans l'espace n'est pas commutative. Autrement dit, l'ordre dans lequel on applique les rotations est déterminant.
+> [!NOTE]
+> Contrairement aux rotations appliquées dans le plan, la composition de rotations dans l'espace n'est pas commutative. Autrement dit, l'ordre dans lequel on applique les rotations est déterminant.
 
 ## Syntaxe
 

@@ -1,54 +1,78 @@
 ---
-title: 向 MDN Web Docs 发送反馈
+title: 社区准则
 slug: MDN/Community
-original_slug: MDN/Contribute/Feedback
 ---
 
-{{MDNSidebar}}
+👋 欢迎来到 MDN Web 文档，这是一个记录了包括 [HTML](/zh-CN/docs/Web/HTML)、[CSS](/zh-CN/docs/Web/CSS)、[JavaScript](/zh-CN/docs/Web/JavaScript) 和 [Web API](/zh-CN/docs/Web/API) 等 web 平台技术的开源协作项目。我们还为初级开发者和学生提供了大量的[学习资源](/zh-CN/docs/Learn)。
 
-欢迎来到 MDN Web Docs！在使用过程中，如果遇到了问题或者对我们有些建议，那你就来对地方了。只要有兴趣反馈你的意见，Mozilla Community 永远欢迎你的加入。在此，向你提前表达我们的谢意！
+要参与并为我们的项目作出贡献、参与相关讨论，你需要阅读并遵守 [Mozilla 社区参与准则](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md)。
 
-这篇文章介绍了几种方式，帮助分享你的见解。
+## 参与贡献的方式
 
-## 更新文档
+- [修复已知的存在较大影响的问题](https://github.com/orgs/mdn/projects/25/views/1)
+- [审查拉取请求](/zh-CN/docs/MDN/Community/Pull_requests)
+- [帮助初学者在 MDN Web 文档上学习](/zh-CN/docs/MDN/Community/Learn_forum)
+- [为 MDN Web 文档的交互示例作出贡献](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md)
+- [帮助我们翻译 MDN Web 文档](/zh-CN/docs/MDN/Community/Contributing/Translated_content)
+- [帮助我们修复已知的平台问题](https://github.com/mdn/yari/issues)
+- [帮助我们更新浏览器兼容性数据。](https://github.com/mdn/browser-compat-data)
 
-在浏览 MDN 时，假如发现某篇文章有些问题，你完全可以试着自己动手去改正它。如果对此感兴趣，这里有一篇[参与指南](https://github.com/mdn/content/#making-contributions)供你参考。
+## 章节指南
 
-MDN 的文件内容现在都存放在 [GitHub 上的仓库](https://github.com/mdn/content/)中（翻译后的内容则存放在 [Translated Content](https://github.com/mdn/translated-content)中)，由一群志愿者和拿薪水的员工共同管理。所以请放心大胆地参与到编辑中，你不需要完美的语法，会有人及时审核这些内容并帮助你修改它。
+这是本章节的指南和页面列表。
 
-在 MDN 站内，有文章可以为你提供更多的帮助，比如：
+- [参与贡献](/zh-CN/docs/MDN/Community/Contributing)
 
-- 在「[初识 MDN](/zh-CN/docs/MDN/Contribute/Getting_started)」中，简要介绍了参与方法。
-- 在「[为 MDN 做贡献](/zh-CN/docs/MDN/Contribute)」中，列出了许多等待参与的任务。
+  - : 本节说明了你如何开始贡献，以及我们接受的贡献的类型。本节涵盖以下主题：
 
-## 参与讨论
+    - [入门](/zh-CN/docs/MDN/Community/Contributing/Getting_started)
+    - [我们的仓库](/zh-CN/docs/MDN/Community/Our_repositories)
+    - [翻译内容](/zh-CN/docs/MDN/Community/Contributing/Translated_content)
+    - [安全漏洞响应步骤](/zh-CN/docs/MDN/Community/Contributing/Security_vulnerability_response)
 
-欢迎和我们交流！下面列出了一些途径，方便你和 MDN 中其他的参与者们更好地交流。
+- [开源礼节](/zh-CN/docs/MDN/Community/Open_source_etiquette)
 
-### 在线实时聊天
+  - : 本文解释了在为我们的开源项目做贡献时应如何表现。
 
-我们使用 [Matrix](https://wiki.mozilla.org/Matrix) 来进行实时交流，主要是关于 MDN 以及其中的内容。我们随时都欢迎你的加入！
+- [讨论](/zh-CN/docs/MDN/Community/Discussions)
 
-[MDN Web Docs](https://chat.mozilla.org/#/room/#mdn:mozilla.org)
+  - : 在 MDN Web 文档中，我们鼓励我们的社区开始和参与围绕与整个项目相关的主题的讨论。讨论按不同的主题领域进行分类。本文解释了相关的细节。
 
-一些日常的讨论，像网站的使用问题、网站上的文字内容、参与网站志愿编辑工作等，都可以在这个聊天室进行。如果你对网站上的文章内容有疑问或建议，或者希望在网站上看到或亲手创作一篇某个主题的新文章，又或者，你只是想接触到网站的内容创作者们，都可以在里面交流。
+- [学习论坛](/zh-CN/docs/MDN/Community/Learn_forum)
 
-### 在线论坛
+  - : 我们的 [web 开发学习](/zh-CN/docs/Learn) 页面每个月的浏览量超过一百万，且拥有[活跃的论坛](https://discourse.mozilla.org/c/mdn/learn/250)，人们可以在那里寻求常规的帮助或要求对他们的测验进行打分。我们希望在回帖和发展我们的学习社区这两个方面得到一定的帮助。在本文中，你将了解我们需要哪些帮助以及提供这些帮助所需的技能。
 
-[MDN 的论坛](https://discourse.mozilla-community.org/c/mdn)上，大多是一些需要反复讨论的内容。如果你想发起这样的讨论，向我们的邮箱——[mdn@mozilla-community.org](mailto://mdn@mozilla-community.org)——发送邮件即可。在论坛注册帐号后，你还可以选择通过邮件来提醒你帖子下的新内容。
+- [议题](/zh-CN/docs/MDN/Community/Issues)
 
-## 问题反馈
+  - : 议题用于跟踪所有的错误（bug）和具有明确操作结果的工作。本文包含了有关创建和处理议题的指南。本文还涵盖了以下主题：
 
-### 文档问题
+    - [议题分类](/zh-CN/docs/MDN/Community/Issues)
+    - [内容和功能建议](/zh-CN/docs/MDN/Community/Issues/Content_suggestions_feature_proposals)
 
-任何情况下，如果你无法自己修改在文档中发现的问题，可以[向我们提交 issue](https://github.com/mdn/content/issues/new/choose)。你遇到的任何问题，都可以在这里反馈。如果是翻译上的问题，[向 Translated-content Repo 提交一个 issue](https://github.com/mdn/translated-content/issues/new/choose) 会更合适。下面是一些比较常见 issue 的主题：
+- [拉取请求](/zh-CN/docs/MDN/Community/Pull_requests)
 
-- 内容的简单修正
-- 请求修正某些错误的内容
-- 反馈文章中有不太合适的内容（比如垃圾信息或不合适的翻译）
+  - : 本节介绍了我们提交拉取请求的指南，以及你对审查过程应有的期望。
 
-如前文所说，我们邀请你亲手贡献对文章的更正，当然，这部分工作是个可选项。
+- [用户和团队](/zh-CN/docs/MDN/Community/Roles_teams)
 
-### 网站问题
+  - : 本节概述了作为 MDN Web 文档项目组成部分的用户和团队，并详细说明了成为团队成员的意义。
 
-假如发现了网站本身的问题，或者对网站的功能有任何的建议，你都可以[直接联系 MDN 的开发团队](https://github.com/mdn/yari/issues)。
+## 行为准则
+
+要参与并为我们的项目作出贡献、参与相关讨论，你需要阅读并遵守 [Mozilla 社区参与准则](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md)。
+
+## 联系我们
+
+你可以使用[联系渠道](/zh-CN/docs/MDN/Community/Communication_channels)与 MDN Web 文档团队和社区取得联系。
+
+> 如果你正在学习 web 开发并遇到了代码编写的问题，你可以在我们[活跃的论坛](/zh-CN/docs/MDN/Community/Communication_channels#论坛)中提问以寻求帮助。
+
+### 常规支持问题
+
+我们是一个在尝试努力跟上不断变化的 web 生态系统的文档需求的小团队。不幸的是，我们无法帮助你解决常规的支持问题。如需要学习编写代码的常规帮助，请访问以下资源：
+
+- [学习 web 开发](/zh-CN/docs/Learn)
+- [MDN Web 文档学习论坛](https://discourse.mozilla.org/c/mdn/learn/250)
+- [Stackoverflow](https://stackoverflow.com/questions/)
+
+在仓库中创建任何有关于请求支持的议题、讨论或拉取请求都将被引导至这里，并关闭和锁定相关内容。

@@ -1,9 +1,6 @@
 ---
 title: table.caption
 slug: Web/API/HTMLTableElement/caption
-tags:
-  - Référence_du_DOM_Gecko
-translation_of: Web/API/HTMLTableElement/caption
 ---
 
 {{ ApiRef() }}
@@ -15,7 +12,7 @@ translation_of: Web/API/HTMLTableElement/caption
 ### Syntaxe
 
 ```js
-string = table.caption
+string = table.caption;
 ```
 
 ### Exemple
@@ -32,5 +29,5 @@ Cette propriété ne renvoie rien s'il n'y a aucune légende pour le tableau.
 
 ### Spécification
 
-- [DOM Level 2 HTML&nbsp;: caption](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14594520) ([traduction](http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-14594520))
-- [Interface HTMLTableCaptionElement](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-12035137) ([traduction](http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-12035137))
+- [DOM Level 2 HTML&nbsp;: caption](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14594520) ([traduction](http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-14594520))
+- [Interface HTMLTableCaptionElement](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-12035137) ([traduction](http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-12035137))

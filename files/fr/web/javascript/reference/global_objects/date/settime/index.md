@@ -1,26 +1,34 @@
 ---
 title: Date.prototype.setTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setTime
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setTime
 ---
 
 {{JSRef}}
 
 La méthode **`setTime()`** met l'objet {{jsxref("Date")}} à jour par rapport au nombre de millisecondes depuis le 1 janvier 1970, 00:00:00 UTC.
 
-{{EmbedInteractiveExample("pages/js/date-settime.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setTime()")}}
+
+```js interactive-example
+const launchDate = new Date("July 1, 1999, 12:00:00");
+const futureDate = new Date();
+futureDate.setTime(launchDate.getTime());
+
+console.log(futureDate);
+// Expected output: "Thu Jul 01 1999 12:00:00 GMT+0200 (CEST)"
+
+const fiveMinutesInMillis = 5 * 60 * 1000;
+futureDate.setTime(futureDate.getTime() + fiveMinutesInMillis);
+
+console.log(futureDate);
+// Expected output: "Thu Jul 01 1999 12:05:00 GMT+0200 (CEST)"
+// Note: your timezone may vary
+```
 
 ## Syntaxe
 
 ```js
-dateObj.setTime(valeurTemps)
+dateObj.setTime(valeurTemps);
 ```
 
 ### Paramètres

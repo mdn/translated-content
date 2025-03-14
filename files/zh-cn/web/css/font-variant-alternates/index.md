@@ -54,7 +54,8 @@ font-variant-alternates: unset;
 
   - : 此函数可启用装饰物，例如 [fleurons](http://en.wikipedia.org/wiki/Fleuron_%28typography%29) 与其他 dingbat 字形。该参数是特定于字体映射到数字的名称。它对应于 OpenType 值 `ornm`，例如 `ornm 2`。
 
-    > **备注：** 为了保留文本语义，字体设计师应该包括与 Unicode dingbat 字符不匹配的装饰，作为项目符号字符（U + 2022）的装饰变体。请注意，某些现有字体不遵循此建议。
+    > [!NOTE]
+    > 为了保留文本语义，字体设计师应该包括与 Unicode dingbat 字符不匹配的装饰，作为项目符号字符（U + 2022）的装饰变体。请注意，某些现有字体不遵循此建议。
 
 - `annotation()`
   - : 此函数支持注释，如带圆圈的数字或倒置的字符。该参数是特定于字体映射到数字的名称。它对应于 OpenType 值`nalt`，例如 `nalt 2`。
@@ -80,7 +81,9 @@ font-variant-alternates: unset;
 
 ```css
 @font-feature-values "Leitura Display Swashes" {
-    @swash { fancy: 1 }
+  @swash {
+    fancy: 1;
+  }
 }
 
 p {
@@ -95,7 +98,8 @@ p {
 
 ### 结果
 
-> **备注：** 你需要安装 OpenType 字体 _Leitura Display Swashes_ 才能使这个例子正常运行。您可以找到一些免费版本进行测试，例如从 [fontsgeek.com](http://fontsgeek.com/fonts/Leitura-Display-Swashes).
+> [!NOTE]
+> 你需要安装 OpenType 字体 _Leitura Display Swashes_ 才能使这个例子正常运行。你可以找到一些免费版本进行测试，例如从 [fontsgeek.com](https://fontsgeek.com/fonts/Leitura-Display-Swashes).
 
 {{ EmbedLiveSample('示例') }}
 
@@ -103,6 +107,6 @@ p {
 
 不属于任何标准。
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}

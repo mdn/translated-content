@@ -22,19 +22,19 @@ proximoNo = no.nextSibling
 <div id="div-02">Aqui esta a div-02</div>
 
 <script type="text/javascript">
-var el = document.getElementById('div-01').nextSibling;
+  var el = document.getElementById("div-01").nextSibling;
 
-document.write('<p>Nós irmãos de div-01</p><ol>');
+  document.write("<p>Nós irmãos de div-01</p><ol>");
 
-while (el) {
-  document.write('<li>' + el.nodeName + '</li>');
-  el = el.nextSibling;
-}
+  while (el) {
+    document.write("<li>" + el.nodeName + "</li>");
+    el = el.nextSibling;
+  }
 
-document.write('</ol>');
+  document.write("</ol>");
 </script>
 
-/**************************************************
+<!--
      O seguinte texto será escrito na página quando ela carregar:
 
      Nós irmãos de div-01
@@ -45,18 +45,17 @@ document.write('</ol>');
       4. SCRIPT
       5. P
       6. OL
-**************************************************/
+-->
 ```
 
 No exemplo acima, pode ser visto que nós `#text` são inseridos no DOM onde espaços em branco aparecem na marcação entre as tags (ex.: após o fechamento da tag de um elemento e antes da abertura da próxima tag). Nenhum espaço em branco é criado entre elementos inseridos pelo comando `document.write`.
 
 A possível inclusão de nós de texto no DOM deve ser permitida quando navegar pelo mesmo usando `nextSibling`.
 
-## Especificação
+## Especificações
 
-- [DOM Level 1 Core: nextSibling](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling)
-- [DOM Level 2 Core: nextSibling](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6AC54C2F)
+{{Specifications}}
 
-## Veja também
+## Compatibilidade com navegadores
 
-- {{domxref("Element.nextElementSibling")}}
+{{Compat}}

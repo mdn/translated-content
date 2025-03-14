@@ -1,14 +1,51 @@
 ---
 title: border-bottom
 slug: Web/CSS/border-bottom
-translation_of: Web/CSS/border-bottom
 ---
 
 {{CSSRef}}
 
 [Сокращённое свойство](/ru/docs/Web/CSS/Shorthand_properties) [CSS](/ru/docs/Web/CSS) **`border-bottom`** описывает нижнюю границу элемента [border](/ru/docs/Web/CSS/border). Оно устанавливает значения {{cssxref("border-bottom-width")}}, {{cssxref("border-bottom-style")}} и {{cssxref("border-bottom-color")}}.
 
-{{EmbedInteractiveExample("pages/css/border-bottom.html")}}
+{{InteractiveExample("CSS Demo: border-bottom")}}
+
+```css interactive-example-choice
+border-bottom: solid;
+```
+
+```css interactive-example-choice
+border-bottom: dashed red;
+```
+
+```css interactive-example-choice
+border-bottom: 1rem solid;
+```
+
+```css interactive-example-choice
+border-bottom: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border-bottom: 4mm ridge rgba(211, 220, 50, 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 Как и все сокращённые свойства, `border-bottom` устанавливает значения всех свойств, которые он может установить, даже если они не указаны. Для тех свойств, которые не указаны оно устанавливает значения по умолчанию. Это означает, что ...
 
@@ -68,9 +105,7 @@ The three values of the shorthand property can be specified in any order, and on
 #### HTML
 
 ```html
-<div>
-  This box has a border on the bottom side.
-</div>
+<div>This box has a border on the bottom side.</div>
 ```
 
 #### CSS
@@ -90,20 +125,16 @@ div {
 
 {{EmbedLiveSample('Applying_a_bottom_border')}}
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                        | Status                                   | Comment                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#propdef-border-bottom', 'border-bottom')}} | {{Spec2('CSS3 Backgrounds')}} | No direct changes, though the modification of values for the {{cssxref("border-bottom-color")}} do apply to it. |
-| {{SpecName('CSS2.1', 'box.html#propdef-border-bottom', 'border-bottom')}}     | {{Spec2('CSS2.1')}}                 | No significant changes.                                                                                                   |
-| {{SpecName('CSS1', '#border-bottom', 'border-bottom')}}                             | {{Spec2('CSS1')}}                 | Initial definition                                                                                                        |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [`border`](/en-US/docs/Web/CSS/border)
-- [`border-block`](/en-US/docs/Web/CSS/border-block)
-- [`outline`](/en-US/docs/Web/CSS/outline)
+- [`border`](/ru/docs/Web/CSS/border)
+- [`border-block`](/ru/docs/Web/CSS/border-block)
+- [`outline`](/ru/docs/Web/CSS/outline)

@@ -1,52 +1,60 @@
 ---
 title: HTMLTableRowElement
 slug: Web/API/HTMLTableRowElement
+l10n:
+  sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLTableRowElement`** interface provides special properties and methods (beyond the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of rows in an HTML table.
+**`HTMLTableRowElement`** 接口提供用于操作 HTML 表格中行的布局和呈现的特定属性和方法（除了常规 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承来使用）。
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
-## Properties
+## 实例属性
 
-_Inherits properties from its parent, {{domxref("HTMLElement")}}._
+_从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
-- {{domxref("HTMLTableRowElement.align")}} {{Deprecated_Inline}}
-  - : Is a {{domxref("DOMString")}} containing an enumerated value reflecting the {{htmlattrxref("align", "tr")}} attribute. It indicates the alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, and `"center"`.
-- {{domxref("HTMLTableRowElement.bgColor")}} {{Deprecated_Inline}}
-  - : Is a {{domxref("DOMString")}} containing the background color of the cells. It reflects the obsolete {{htmlattrxref("bgColor", "tr")}} attribute.
-- {{domxref("HTMLTableRowElement.cells")}} {{readonlyInline}}
-  - : Returns a live {{domxref("HTMLCollection")}} containing the cells in the row. The `HTMLCollection` is live and is automatically updated when cells are added or removed.
-- {{domxref("HTMLTableRowElement.ch")}} {{Deprecated_Inline}}
-  - : Is a {{domxref("DOMString")}} containing one single character. This character is the one to align all the cell of a column on. It reflects the {{htmlattrxref("char", "tr")}} and default to the decimal points associated with the language, e.g. `'.'` for English, or `','` for French. This property was optional and was not very well supported.
-- {{domxref("HTMLTableRowElement.chOff")}} {{Deprecated_Inline}}
-  - : Is a {{domxref("DOMString")}} containing a integer indicating how many characters must be left at the right (for left-to-right scripts; or at the left for right-to-left scripts) of the character defined by `HTMLTableRowElement.ch`. This property was optional and was not very well supported.
-- {{domxref("HTMLTableRowElement.rowIndex")}} {{readonlyInline}}
-  - : Returns a `long` value which gives the logical position of the row within the entire table. If the row is not part of a table, returns `-1`.
-- {{domxref("HTMLTableRowElement.sectionRowIndex")}} {{readonlyInline}}
-  - : Returns a `long` value which gives the logical position of the row within the table section it belongs to. If the row is not part of a section, returns `-1`.
-- {{domxref("HTMLTableRowElement.vAlign")}} {{Deprecated_Inline}}
-  - : Is a {{domxref("DOMString")}} representing an enumerated value indicating how the content of the cell must be vertically aligned. It reflects the {{htmlattrxref("valign", "tr")}} attribute and can have one of the following values: `"top"`, `"middle"`, `"bottom"`, or `"baseline"`.
+- {{domxref("HTMLTableRowElement.cells")}} {{ReadOnlyInline}}
+  - : 返回一个行中包含单元格的动态 {{domxref("HTMLCollection")}}。`HTMLCollection` 是动态的，且当单元格添加或移除时可自动更新。
+- {{domxref("HTMLTableRowElement.rowIndex")}} {{ReadOnlyInline}}
+  - : 返回一个所在行相对于整个表格逻辑位置的数字。如果该行不属于表的一部分，则返回 `-1`。
+- {{domxref("HTMLTableRowElement.sectionRowIndex")}} {{ReadOnlyInline}}
+  - : 返回一个所在行相对其所属表片段中逻辑位置的数字。如果该行不是片段的部分，则返回 `-1`。
 
-## Methods
+## 实例方法
 
-_Inherits methods from its parent, {{domxref("HTMLElement")}}_.
+_从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 
 - {{domxref("HTMLTableRowElement.deleteCell()")}}
-  - : Removes the cell at the given position in the row. If the given position is greater (or equal as it starts at zero) than the amount of cells in the row, or is smaller than `0`, it raises a {{domxref("DOMException")}} with the `IndexSizeError` value.
+  - : 删除 `index` 对应的单元格。如果 `index` 值是 `-1`，则删除此行的最后一个单元格；如果索引小于 `-1` 或大于集合中单元格数量，引发值为 `IndexSizeError` 的 {{DOMxRef("DOMException")}}。
 - {{domxref("HTMLTableRowElement.insertCell()")}}
-  - : Inserts a new cell just before the given position in the row. If the given position is not given or is `-1`, it appends the cell to the row. If the given position is greater (or equal as it starts at zero) than the amount of cells in the row, or is smaller than `-1`, it raises a {{domxref("DOMException")}} with the `IndexSizeError` value. Returns a reference to a [HTMLTableCellElement \[en-US\]](/zh-CN/docs/Web/API/HTMLTableCellElement).
+  - : 返回一个表示此行新单元格的 {{domxref("HTMLTableCellElement")}}。它将插入到单元格集合中给定索引（`index`）位置的元素之前。如果 `index` 是 `-1`，则新单元格添加到集合末尾，如果 `index` 小于 `-1` 或大于集合的单元格数，则引发值为 `IndexSizeError` 的 {{DOMxRef("DOMException")}}。
 
-## Specifications
+## 已弃用的属性
+
+> [!WARNING]
+> 这些属性已被弃用，不应再使用。记录这些属性主要是为了帮助理解旧代码库。
+
+- {{domxref("HTMLTableRowElement.align")}} {{deprecated_inline}}
+  - : 一个反映 [`align`](/zh-CN/docs/Web/HTML/Element/tr#align) 属性的字符串枚举值。其指示元素内容相对于周围上下文的对齐方式，可能的值有：`"left"`、`"right"` 和 `"center"`。
+- {{domxref("HTMLTableRowElement.bgColor")}} {{deprecated_inline}}
+  - : 一个包含单元格背景色的字符串。它反映已弃用的 [`bgColor`](/zh-CN/docs/Web/HTML/Element/tr#bgcolor) 属性。
+- {{domxref("HTMLTableRowElement.ch")}} {{deprecated_inline}}
+  - : 一个包含单字符的字符串。这个字符是用来对齐某一列所有单元格内容的基准。它反映 [`char`](/zh-CN/docs/Web/HTML/Element/tr#char) 并默认为与语言相关的小数点，例如，英语的默认值为 `'.'`，法语的默认值为 `','`。此属性是可选的，而且没有得到很好的支持。
+- {{domxref("HTMLTableRowElement.chOff")}} {{deprecated_inline}}
+  - : 一个包含整数的字符串，表示由 `HTMLTableRowElement.ch` 定义的字符的右侧（对于从左到右的文本；或者对于从右到左的文本的左侧）必须保留多少个字符。此属性是可选的，并没有得到很好的支持。
+- {{domxref("HTMLTableRowElement.vAlign")}} {{deprecated_inline}}
+  - : 一个表示枚举值的字符串，指示单元格内容必须如何对齐。它反映 [`valign`](/zh-CN/docs/Web/HTML/Element/tr#valign) 属性，可以为以下值之一：`"top"`、`"middle"`、`"bottom"` 或 `"baseline"`。
+
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- The HTML element implementing this interface: {{HTMLElement("tr")}}.
+- 实现此接口的 HTML 元素：{{HTMLElement("tr")}}

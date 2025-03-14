@@ -1,33 +1,39 @@
 ---
 title: Object.seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Méthode
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/seal
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/seal
 ---
 
 {{JSRef}}
 
 La méthode **`Object.seal()`** scelle un objet afin d'empêcher l'ajout de nouvelles propriétés, en marquant les propriétés existantes comme non-configurables. Les valeurs des propriétés courantes peuvent toujours être modifiées si elles sont accessibles en écriture.
 
-{{EmbedInteractiveExample("pages/js/object-seal.html")}}
+{{InteractiveExample("JavaScript Demo: Object.seal()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+Object.seal(object1);
+object1.property1 = 33;
+console.log(object1.property1);
+// Expected output: 33
+
+delete object1.property1; // Cannot delete when sealed
+console.log(object1.property1);
+// Expected output: 33
+```
 
 ## Syntaxe
 
 ```js
-Object.seal(obj)
+Object.seal(obj);
 ```
 
 ### Paramètres
 
 - obj
-  - : L'objet à sceller. Ce peut être n'importe quelle valeur qui n'ait pas [un type primitif](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Types_de_données).
+  - : L'objet à sceller. Ce peut être n'importe quelle valeur qui n'ait pas [un type primitif](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#types_de_données).
 
 ### Valeur de retour
 
@@ -43,9 +49,9 @@ La chaîne de prototypes reste la même. Cependant, la propriété [`Object.prot
 
 ```js
 var obj = {
-    prop: function () {},
-    toto: "truc"
-  };
+  prop: function () {},
+  toto: "truc",
+};
 
 // On peut ajouter de nouvelles propriétés
 // Les propriétés existantes peuvent être
@@ -65,7 +71,11 @@ obj.toto = "moh";
 
 // Mais on ne peut pas convertir les données
 // en accesseurs (ou vice versa)
-Object.defineProperty(obj, "toto", { get: function() { return "g"; } });
+Object.defineProperty(obj, "toto", {
+  get: function () {
+    return "g";
+  },
+});
 // lancera une TypeError
 
 // Tout autre changement que celui d'une valeur

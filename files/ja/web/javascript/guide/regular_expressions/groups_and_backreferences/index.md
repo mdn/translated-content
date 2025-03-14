@@ -1,12 +1,30 @@
 ---
-title: グループと範囲
-slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
-original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
+title: グループと後方参照
+slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
+l10n:
+  sourceCommit: 2c762771070a207d410a963166adf32213bc3a45
 ---
 
 {{jsSidebar("JavaScript Guide")}}
 
-グループと範囲は、式にある文字のグループと範囲を示します。
+グループは複数のパターンを全体としてグループ化し、グループをキャプチャすることで、正規表現パターンを使用して文字列と一致する場合に、追加の副一致情報を提供します。後方参照は、同じ正規表現で以前に捕捉したグループを参照します。
+
+{{InteractiveExample("JavaScript Demo: RegExp Groups and backreferences")}}
+
+```js interactive-example
+// Groups
+const imageDescription = "This image has a resolution of 1440×900 pixels.";
+const regexpSize = /([0-9]+)×([0-9]+)/;
+const match = imageDescription.match(regexpSize);
+console.log(`Width: ${match[1]} / Height: ${match[2]}.`);
+// Expected output: "Width: 1440 / Height: 900."
+
+// Backreferences
+const findDuplicates = "foo foo bar";
+const regex = /\b(\w+)\s+\1\b/g;
+console.log(findDuplicates.match(regex));
+// Expected output: Array ["foo foo"]
+```
 
 ## 種類
 
@@ -19,86 +37,61 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
   </thead>
   <tbody>
     <tr>
-      <td>
-        <code><em>x</em>|<em>y</em></code>
-      </td>
-      <td>
-        <p>
-          "x" または "y" にマッチします。例えば <code>/green|red/</code> は
-          "green apple" の "green" や "red apple" の "red" にマッチします。
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>[xyz]<br />[a-c]</code>
-      </td>
-      <td>
-        <p>
-          文字集合です。角括弧で囲まれた文字のいずれか 1
-          個にマッチします。ハイフンを用いて文字の範囲を指定することも可能ですが、ハイフンが括弧に囲まれた最初または最後の文字に現れている場合、それはハイフンリテラルとみなされて、通常文字として文字集合に含まれます。文字集合には文字クラスを含めることができます。
-        </p>
-        <p>
-          例えば <code>[abcd]</code> は <code>[a-d]</code> と同じです。これは
-          "brisket" の "b" や "chop" の "c" にマッチします。
-        </p>
-        <p>
-          例えば、<code>[abcd-]</code> と <code>[-abcd]</code> は "brisket" の
-          "b" と "chop" の "c" と "non-profit" の "-"
-          （ハイフン）とマッチします。
-        </p>
-        <p>
-          例えば、<code>[\w-]</code> は
-          <code>[A-Za-z0-9_-]</code> と同じです。これは "brisket" の "b" や
-          "chop" の "c" 、"non-profit" の "n" にマッチします。
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>
-          <code>[^xyz]<br />[^a-c]</code>
-        </p>
-      </td>
-      <td>
-        <p>
-          文字集合の否定または補集合です。角括弧で囲まれた文字ではない文字にマッチします。ハイフンを用いて文字の範囲を指定することも可能ですが、ハイフンが括弧に囲まれた最初または最後の文字に現れている場合、それはハイフンリテラルとみなされて、通常文字として文字集合に含まれます。例えば
-          <code>[^abc]</code> は <code>[^a-c]</code> と同じです。これは "bacon"
-          の 'o' や "chop" の 'h' にマッチします。
-        </p>
-        <div class="blockIndicator note">
-          <p>
-            ^ 文字は<a
-              href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries"
-              >入力の先頭</a
-            >を示すこともできます。
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
       <td><code>(<em>x</em>)</code></td>
       <td>
         <p>
-          <strong>キャプチャグループ：</strong>
-          <code><em>x</em></code> にマッチし、マッチした内容を記憶します。例えば
-          <code>/(foo)/</code> は "foo bar" の "foo" にマッチし、記憶します。
+          <a href="/ja/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group"><strong>キャプチャグループ:</strong></a>
+          <code><em>x</em></code> に一致し、一致した内容を記憶します。例えば <code>/(foo)/</code> は "foo bar" の "foo" に一致し、記憶します。
         </p>
         <p>
-          正規表現は複数のキャプチャグループを持つことができます。結果、一般的にキャプチャグループ内の左括弧と同じ順にある、配列の要素のキャプチャグループに一致しています。たいていの場合、これはキャプチャグループ自身の順番です。これはキャプチャグループがネストしている場合に重要です。マッチは結果の要素のインデックス
-          (<code>[1], ..., [n]</code>) や、あらかじめ定義されている
-          <code>RegExp</code> オブジェクトのプロパティ (<code>$1, ..., $9</code
-          >) を使ってアクセスできます。
+          正規表現は複数のキャプチャグループを持つことができます。結果、一般的にキャプチャグループ内の左括弧と同じ順にある、配列の要素のキャプチャグループに一致しています。たいていの場合、これはキャプチャグループ自身の順番です。これはキャプチャグループがネストしている場合に重要です。一致は結果の要素の添字 (<code>[1], …, [n]</code>) や、あらかじめ定義されている <code>RegExp</code> オブジェクトのプロパティ (<code>$1, …, $9</code>) を使ってアクセスできます。
         </p>
         <p>
-          キャプチャグループはパフォーマンスペナルティがあります。マッチした部分文字列を使わない場合はキャプチャしない括弧（後述）を使ったほうがいいでしょう。
+          キャプチャグループはパフォーマンス上の損失があります。一致した部分文字列を使わない場合はキャプチャなし括弧（後述）を使ったほうがいいでしょう。
         </p>
         <p>
-          全体マッチ (<code>/.../g</code>)
-          がある場合、{{JSxRef("String.match()")}}
-          はグループを返せません。ですが、
-          {{JSxRef("String.matchAll()")}}
-          によってすべてのマッチを取得できます。
+          <code
+            ><a
+              href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String/match"
+              >String.prototype.match()</a
+            ></code
+          > は、<code>/.../g</code> フラグが設定されている場合、グループを返しません。しかし、
+          <code
+            ><a
+              href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll"
+              >String.prototype.matchAll()</a
+            ></code
+          > を使用して、すべての一致したものを取得することができます。
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>(?&#x3C;Name>x)</code></td>
+      <td>
+        <p>
+          <a href="/ja/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group"><strong>名前付きキャプチャグループ:</strong></a>
+          "x" に一致し、<code>&#x3C;Name></code> で指定された名前に従い、返される一致の <code>groups</code> プロパティに記憶されます。山括弧 ('<code>&#x3C;</code>' と '<code>></code>') にはグループ名が必須です。
+        </p>
+        <p>
+          例えば、電話番号からアメリカのエリアコードを取り出す際、 <code>/\((?&#x3C;area>\d\d\d)\)/</code> を使うことができます。 結果の番号は <code>matches.groups.area</code> に表示されます。
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>(?:<em>x</em>)</code></td>
+      <td>
+        <p>
+          <a href="/ja/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group"><strong>キャプチャなしグループ:</strong></a>
+          "x" に一致しますが、一致した内容は記憶しません。一致した部分文字列は、結果の配列の要素 (<code>[1], …, [n]</code>) や、あらかじめ定義されている <code>RegExp</code> オブジェクトのプロパティ (<code>$1, …, $9</code>) から呼び出すことはできません。
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>(?<em>flags</em>:<em>x</em>)</code>, <code>(?:<em>flags</em>-<em>flags</em>:<em>x</em>)</code></td>
+      <td>
+        <p>
+          <a href="/ja/docs/Web/JavaScript/Reference/Regular_expressions/Modifier"><strong>修飾子:</strong></a>
+          指定したフラグを、囲まれたパターンに対してのみ有効または無効にします。修飾子では、<code>i</code>、<code>m</code>、<code>s</code> フラグのみ使用できます。
         </p>
       </td>
     </tr>
@@ -108,44 +101,28 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
       </td>
       <td>
         <p>
-          <code><em>n</em></code> に正の整数が入ります。正規表現内において n
-          番目の括弧の部分にマッチした最新の部分文字列への後方参照となります（括弧の数は左からカウントします）。例えば
+          <a href="/ja/docs/Web/JavaScript/Reference/Regular_expressions/Backreference"><strong>後方参照:</strong></a>
+          "n" に正の整数が入ります。正規表現内において n 番目の括弧の部分に一致した最新の部分文字列への後方参照となります（括弧の数は左からカウントします）。例えば
           <code>/apple(,)\sorange\1/</code> は "apple, orange, cherry, peach" の
-          "apple, orange," にマッチします。A complete example follows this
-          table.
+          "apple, orange," に一致します。
         </p>
       </td>
     </tr>
     <tr>
-      <td><code>(?&#x3C;Name>x)</code></td>
+      <td><code>\k&#x3C;Name></code></td>
       <td>
         <p>
-          <strong>名前付きキャプチャグループ：</strong>
-          <code>x</code> にマッチし、<code>&#x3C;Name></code>
-          で指定された名前に従い、返されるマッチの
-          <code>groups</code> プロパティに記憶されます。三角括弧
-          ('<code>&#x3C;</code>' と '<code>></code>') にはグループ名が必須です。
+          <a href="/ja/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference"><strong>名前付き後方参照:</strong></a>
+          <code>&#x3C;Name></code> で指定された<strong>名前付きキャプチャグループ</strong>に一致する最後の部分文字列の後方参照です。
         </p>
         <p>
-          例えば、電話番号からアメリカのエリアコードを取り出す際、<code
-            >/\((?&#x3C;area>\d\d\d)\)/</code
-          >
-          を使うことができます。 結果の番号は
-          <code>matches.groups.area</code> に表示されます。
+          例えば、 <code>/(?&#x3C;title>\w+), yes \k&#x3C;title>/</code> は、 "Do you copy? Sir, yes Sir!" の中の "Sir, yes Sir" に一致します。
         </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>(?:<em>x</em>)</code></td>
-      <td>
-        <p>
-          <strong>非キャプチャグループ：</strong>
-          <em><code>x</code></em>
-          にマッチしますが、マッチした内容は記憶しません。マッチの部分文字列は、結果の配列の要素
-          (<code>[1], ..., [n]</code>) や、あらかじめ定義されている
-          <code>RegExp</code> オブジェクトのプロパティ (<code>$1, ..., $9</code
-          >) から呼び出すことはできません。.
-        </p>
+        <div class="notecard note">
+          <p>
+            <strong>メモ:</strong> <code>\k</code> は、ここでは、名前付きキャプチャグループの後方参照を開始することを示すために使用されています。
+          </p>
+        </div>
       </td>
     </tr>
   </tbody>
@@ -153,55 +130,88 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 
 ## 例
 
-### 母音を数える
+### グループの使用
+
+この例では、キャプチャグループを使用して記憶することにより、構造化された形式で 2 つの単語を照合します。 `w+`は 1 つ以上の単語文字と一致し、括弧 `()` はキャプチャグループを作成します。 `g` フラグはすべて一致させるために使用します。
 
 ```js
-var aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
-var regexpVowels = /[aeiouy]/g;
-
-console.log("母音の数:", aliceExcerpt.match(regexpVowels).length);
-// 母音の数: 25
-```
-
-### グループの使い方
-
-```js
-let personList = `First_Name: John, Last_Name: Doe
+const personList = `First_Name: John, Last_Name: Doe
 First_Name: Jane, Last_Name: Smith`;
 
-let regexpNames =  /First_Name: (\w+), Last_Name: (\w+)/mg;
-let match = regexpNames.exec(personList);
-do {
+const regexpNames = /First_Name: (\w+), Last_Name: (\w+)/g;
+for (const match of personList.matchAll(regexpNames)) {
   console.log(`Hello ${match[1]} ${match[2]}`);
-} while((match = regexpNames.exec(personList)) !== null);
+}
 ```
 
-### 名前付きグループの使い方
+それ以外の例は [キャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)リファレンスを参照してください。
+
+### 名前付きグループの使用
+
+この例も上と同じですが、代わりに名前付きキャプチャグループを使用して、一致した単語を記憶しています。この方法では、一致した単語をその意味によってアクセスすることができます。
 
 ```js
-let personList = `First_Name: John, Last_Name: Doe
+const personList = `First_Name: John, Last_Name: Doe
 First_Name: Jane, Last_Name: Smith`;
 
-let regexpNames =  /First_Name: (?<firstname>\w+), Last_Name: (?<lastname>\w+)/mg;
-let match = regexpNames.exec(personList);
-do {
-  console.log(`Hello ${match.groups.firstname} ${match.groups.lastname}`);
-} while((match = regexpNames.exec(personList)) !== null);
+const regexpNames =
+  /First_Name: (?<firstName>\w+), Last_Name: (?<lastName>\w+)/g;
+for (const match of personList.matchAll(regexpNames)) {
+  console.log(`Hello ${match.groups.firstName} ${match.groups.lastName}`);
+}
 ```
 
-> **メモ:** すべてのブラウザがこの機能をサポートしているわけではありません。以下の互換性の表を参照してください。
+それ以外の例は [名前付きキャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)リファレンスを参照してください。
 
-## 仕様
+### グループと後方参照の使用
 
-| 仕様                                                                             | 策定状況                     | コメント |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('ESDraft', '#sec-classranges', 'RegExp: Ranges')}} | {{Spec2('ESDraft')}} |          |
+この例では、最初に単一の引用符または二重引用符を `['"]` で照合し、それを記憶し、任意の数の文字を `.*?` (`*?` は[貪欲ではない数量子](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers))で任意の数の文字と照合し、˶1 で再び記憶された引用符文字と照合します。 `\1` は最初のキャプチャグループへの後方参照で、同じ型の引用符に照合します。したがって、結果は `"'"` と `'"'` の 2 つの文字列になります。
 
-## ブラウザサポート
+```js
+const quote = `単一引用符 "'" と二重引用符 '"'`;
+const regexpQuotes = /(['"]).*?\1/g;
+for (const match of quote.matchAll(regexpQuotes)) {
+  console.log(match[0]);
+}
+```
 
-{{Compat("javascript.builtins.RegExp.groups_ranges")}}
+それ以外の例は [後方参照](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)リファレンスを参照してください。
+
+### グループと一致結果の添字の使用
+
+`d` フラグが指定された場合、各キャプチャグループの添字を返します。これは、それぞれの一致したグループと元のテキストを関連付ける場合、例えば、コンパイラーの診断を提供する場合に特に有益です。
+
+```js
+const code = `function add(x, y) {
+  return x + y;
+}`;
+const functionRegexp =
+  /(function\s+)(?<name>[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*)/du;
+const match = functionRegexp.exec(code);
+const lines = code.split("\n");
+lines.splice(
+  1,
+  0,
+  " ".repeat(match.indices[1][1] - match.indices[1][0]) +
+    "^".repeat(match.indices.groups.name[1] - match.indices.groups.name[0]),
+);
+console.log(lines.join("\n"));
+// function add(x, y) {
+//          ^^^
+//   return x + y;
+// }
+```
 
 ## 関連情報
 
-- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)
-- [`RegExp()` コンストラクタ](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)ガイド
+- [文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)ガイド
+- [アサーション](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)ガイド
+- [数量子](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)ガイド
+- [`RegExp`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)リファレンス
+- [後方参照: `\1`, `\2`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)
+- [キャプチャグループ: `(...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
+- [名前付き後方参照: `\k<name>`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)
+- [名前付きキャプチャグループ: `(?<name>...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)
+- [キャプチャなしグループ: `(?:...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)

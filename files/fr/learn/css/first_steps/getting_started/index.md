@@ -1,15 +1,6 @@
 ---
 title: Démarrer avec CSS
 slug: Learn/CSS/First_steps/Getting_started
-tags:
-  - CSS
-  - Classes
-  - Débutant
-  - Element
-  - Etat
-  - Syntaxe
-  - Sélecteurs
-translation_of: Learn/CSS/First_steps/Getting_started
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
@@ -50,32 +41,36 @@ Notre point de départ est un document HTML. Pour suivre la leçon en travaillan
 ```html
 <!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Démarrer avec CSS</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1>Je suis un titre de niveau un</h1>
 
-    <p>Ceci est un paragraphe. Dans ce texte il y a un <span>élément span</span>
- et aussi un <a href="http://example.com">lien</a>.</p>
+    <p>
+      Ceci est un paragraphe. Dans ce texte il y a un
+      <span>élément span</span> et aussi un
+      <a href="http://example.com">lien</a>.
+    </p>
 
-    <p>Ceci est un second paragraphe. On y trouve un élément <em>mis en valeur</em>.</p>
+    <p>
+      Ceci est un second paragraphe. On y trouve un élément
+      <em>mis en valeur</em>.
+    </p>
 
     <ul>
-        <li>Item un</li>
-        <li>Item deux</li>
-        <li>Item <em>trois</em></li>
+      <li>Item un</li>
+      <li>Item deux</li>
+      <li>Item <em>trois</em></li>
     </ul>
-
-</body>
-
+  </body>
 </html>
 ```
 
-> **Note :** Si vous lisez cet article sur un appareil ou dans un environnement où il n'est pas aisé de créer des fichiers, pas de soucis — des éditeurs de code live sont proposés ci-dessous ; vous pourrez ainsi tester les exemples de code directement dans cette page.
+> [!NOTE]
+> Si vous lisez cet article sur un appareil ou dans un environnement où il n'est pas aisé de créer des fichiers, pas de soucis — des éditeurs de code live sont proposés ci-dessous ; vous pourrez ainsi tester les exemples de code directement dans cette page.
 
 ## Ajouter CSS à notre document
 
@@ -86,7 +81,7 @@ Avec votre éditeur de code, dans le dossier où se trouve le document HTML, cr�
 Pour lier `styles.css` à `index.html` ajoutez la ligne suivante dans la section {{htmlelement("head")}} du document HTML :
 
 ```html
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css" />
 ```
 
 Cet élément {{htmlelement("link")}} indique au navigateur la présence d'une feuille de style, grâce à l'attribut `rel` ; la valeur de l'attribut `href` donne la localisation du fichier CSS. Pour tester que le lien fonctionne, nous allons définir une règle dans `styles.css`. Grâce à votre éditeur de code, ajoutez les lignes suivantes à la feuille de style CSS :
@@ -116,8 +111,9 @@ p {
 On peut cibler plusieurs éléments d'un coup en les listant, séparés par une virgule. Si je veux que tous les paragraphes et tous les items de liste soient verts j'écrirai la règle suivante :
 
 ```css
-p, li {
-    color: green;
+p,
+li {
+  color: green;
 }
 ```
 
@@ -147,7 +143,7 @@ En parcourant la page de documentation, vous découvrirez qu'au lieu de supprime
 
 Jusqu'ici, nous avons mis en forme des éléments HTML repérés par leur nom de balise. Cela fonctionne tant que vous voulez appliquer le même style à tous les éléments de ce type dans le document. La plupart du temps ce n'est pas le comportement désiré ; il faut donc trouver une méthode pour sélectionner un sous-ensemble des éléments à mettre en forme sans changer l'apparence des autres éléments du même type. L'approche la plus commune pour obtenir ce comportement est d'ajouter une classe (pensez à une étiquette) aux éléments HTML à mettre en forme puis de sélectionner cette classe.
 
-Dans le document HTML, ajouter un [attribut class](/fr/docs/Web/HTML/Attributs_universels/class) au deuxième item de la liste :
+Dans le document HTML, ajouter un [attribut class](/fr/docs/Web/HTML/Global_attributes/class) au deuxième item de la liste :
 
 ```html
 <ul>
@@ -205,7 +201,7 @@ li em {
 
 Ce sélecteur cible tout élément `<em>` à l'intérieur (descendant) d'un `<li>`. Ainsi, dans notre exemple, le `<em>` dans le troisième item de la liste sera maintenant pourpre, alors que celui du paragraphe est inchangé.
 
-On pourrait maintenant essayer d'appliquer un style à un paragraphe quand il vient juste après un titre de niveau un dans le HTML. Pour obtenir cela, on place un `+`  (le **combinateur de frères et sœurs adjacents**) entre les sélecteurs.
+On pourrait maintenant essayer d'appliquer un style à un paragraphe quand il vient juste après un titre de niveau un dans le HTML. Pour obtenir cela, on place un `+` (le **combinateur de frères et sœurs adjacents**) entre les sélecteurs.
 
 Ajoutez cette règle à votre feuille de style :
 
@@ -219,7 +215,8 @@ L'exemple live ci-dessous inclut les deux règles précédentes. Essayez d'ajout
 
 {{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}
 
-> **Note :** A ce point, on a déjà découvert plusieurs méthodes CSS pour cibler les éléments et pourtant on vient à peine de commencer ! Nous passerons en revue plus systématiquement tous ces sélecteurs dans la leçon [CSS Selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors) du cours suivant.
+> [!NOTE]
+> A ce point, on a déjà découvert plusieurs méthodes CSS pour cibler les éléments et pourtant on vient à peine de commencer ! Nous passerons en revue plus systématiquement tous ces sélecteurs dans la leçon [CSS Selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors) du cours suivant.
 
 ## Mise en forme basée sur l'état
 
@@ -249,7 +246,8 @@ Dans l'exemple live ci-dessous, vous pouvez explorer les valeurs des différents
 
 Nous avons supprimé le soulignement quand le lien est survolé.Vous pourriez supprimer le soulignement quel que soit l'état du lien. Dans un vrai site, il est quand même important que le visiteur sache qu'un lien est un lien. Le soulignement donne un indice important aux visiteurs pour réaliser qu'un bout de texte dans un paragraphe est cliquable — c'est le comportement auquel ils sont habitués. Avec le contrôle que donne CSS, les changements de style peuvent parfois rendre le document moins accessible — à chaque fois que nécessaire nous nous efforcerons de signaler les pièges classiques dans cette direction.
 
-> **Note :** dans ce cours et à travers le site MDN, vous rencontrerez souvent la notion d'[accessibilité](/fr/docs/Apprendre/a11y)&nbsp;: les règles pour que nos pages soient compréhensibles et utilisables par tous.
+> [!NOTE]
+> Dans ce cours et à travers le site MDN, vous rencontrerez souvent la notion d'[accessibilité](/fr/docs/Learn/Accessibility)&nbsp;: les règles pour que nos pages soient compréhensibles et utilisables par tous.
 >
 > Vos visiteurs peuvent consulter votre page depuis un ordinateur équipé d'une souris ou d'un trackpad, ou depuis un téléphone avec un écran tactile. Ils peuvent aussi utiliser un lecteur d'écran qui parcourt le contenu du document. Ils pourraient avoir besoin d'un affichage en grands caractères, ou parcourir votre site en ne naviguant qu'avec le clavier.
 >
@@ -292,11 +290,3 @@ Vous en savez pourtant déjà assez pour : mettre en forme un texte ; utiliser d
 Dans la leçon suivante, nous étudirons comment CSS est structuré.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
-
-## Dans ce cours
-
-1. [Qu'est ce que CSS?](/fr/docs/Learn/CSS/First_steps/Qu_est_ce_que_CSS)
-2. [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
-3. [Comment CSS est structuré](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS comment ça marche ?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Utiliser vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

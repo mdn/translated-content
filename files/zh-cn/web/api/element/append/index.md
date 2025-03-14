@@ -1,117 +1,98 @@
 ---
-title: Element.append()
+title: Element：append() 方法
 slug: Web/API/Element/append
+l10n:
+  sourceCommit: 542ef6cfd82288925e0a9238b47933f03e2dddca
 ---
 
-{{APIRef("DOM")}}**`Element.append`** 方法在 `Element`的最后一个子节点之后插入一组 {{domxref("Node")}} 对象或 {{domxref("DOMString")}} 对象。被插入的 {{domxref("DOMString")}} 对象等价为 {{domxref("Text")}} 节点。与 {{domxref("Node.appendChild()")}} 的差异：
+{{APIRef("DOM")}}
 
-- `Element.append()`允许追加 {{domxref("DOMString")}} 对象，而 `Node.appendChild()` 只接受 {{domxref("Node")}} 对象。
-- `Element.append()` [没有返回值](https://repl.it/FgPh/1)，而 `Node.appendChild()` 返回追加的 {{domxref("Node")}} 对象。
-- `Element.append()` 可以追加多个节点和字符串，而 `Node.appendChild()` 只能追加一个节点。
+**`Element.append()`** 方法在当前 `Element` 的最后一个子节点之后插入一组 {{domxref("Node")}} 对象或字符串对象。被插入的字符串对象等价为 {{domxref("Text")}} 节点。
+
+其与 {{domxref("Node.appendChild()")}} 的差异：
+
+- `Element.append()` 允许附加字符串对象，而 `Node.appendChild()` 只接受 {{domxref("Node")}} 对象。
+- `Element.append()` 没有返回值，而 `Node.appendChild()` 返回附加的 {{domxref("Node")}} 对象。
+- `Element.append()` 可以附加多个节点和字符串，而 `Node.appendChild()` 只能附加一个节点。
 
 ## 语法
 
-```plain
-[Throws, Unscopable]
-void Element.append((Node or DOMString)... nodes);
+```js-nolint
+append(param1)
+append(param1, param2)
+append(param1, param2, /* …, */ paramN)
 ```
 
 ### 参数
 
-- `nodes`
-  - : 一组要插入的 {{domxref("Node")}} 或 {{domxref("DOMString")}} 对象。
+- `param1`、…、`paramN`
+  - : 一组要插入的 {{domxref("Node")}} 或字符串对象。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ### 异常
 
-- {{domxref("HierarchyRequestError")}}: 在层次结构中的指定点不能插入节点。
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+  - : 当层次结构中的指定位置不能插入节点时抛出该异常。
 
 ## 示例
 
-### 插入一个元素节点
+### 附加元素
 
 ```js
-var parent = document.createElement("div");
-var p = document.createElement("p");
-parent.append(p);
+let div = document.createElement("div");
+let p = document.createElement("p");
+div.append(p);
 
-console.log(parent.childNodes); // NodeList [ <p> ]
+console.log(div.childNodes); // NodeList [ <p> ]
 ```
 
-### 插入文本
+### 附加文本
 
 ```js
-var parent = document.createElement("div");
-parent.append("Some text");
+let div = document.createElement("div");
+div.append("一些文本");
 
-console.log(parent.textContent); // "Some text"
+console.log(div.textContent); // "一些文本"
 ```
 
-### 插入一个节点，同时插入一些文本
+### 附加元素和文本
 
 ```js
-var parent = document.createElement("div");
-var p = document.createElement("p");
-parent.append("Some text", p);
+let div = document.createElement("div");
+let p = document.createElement("p");
+div.append("一些文本", p);
 
-console.log(parent.childNodes); // NodeList [ #text "Some text", <p> ]
+console.log(div.childNodes); // NodeList [ #text "一些文本", <p> ]
 ```
 
-### `Element.append()` 方法在 with 语句中不生效
+### append 是不可绑定作用域方法
 
-为了保证向后兼容，append 方法在 with 语句中会被特殊处理，详情请看 {{jsxref("Symbol.unscopables")}}。
+`append()` 方法无法被绑定到 `with` 语句的作用域中。参见 {{jsxref("Symbol.unscopables")}} 以了解更多信息。
 
 ```js
-var parent = document.createElement("div");
+let div = document.createElement("div");
 
-with(parent) {
+with (div) {
   append("foo");
 }
 // ReferenceError: append is not defined
-```
-
-## Polyfill
-
-下面的 Polyfill 只支持到 IE 9 及以上：
-
-```js
-// Source: https://github.com/jserz/js_piece/blob/master/DOM/Element/append()/append().md
-(function (arr) {
-  arr.forEach(function (item) {
-    if (item.hasOwnProperty('append')) {
-      return;
-    }
-    Object.defineProperty(item, 'append', {
-      configurable: true,
-      enumerable: true,
-      writable: true,
-      value: function append() {
-        var argArr = Array.prototype.slice.call(arguments),
-          docFrag = document.createDocumentFragment();
-
-        argArr.forEach(function (argItem) {
-          var isNode = argItem instanceof Node;
-          docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
-        });
-
-        this.appendChild(docFrag);
-      }
-    });
-  });
-})([Element.prototype, Document.prototype, DocumentFragment.prototype]);
 ```
 
 ## 规范
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{domxref("Element")}} and {{domxref("ChildNode")}}
 - {{domxref("Element.prepend()")}}
 - {{domxref("Node.appendChild()")}}
-- {{domxref("ChildNode.after()")}}
+- {{domxref("Element.after()")}}
+- {{domxref("Element.insertAdjacentElement()")}}
 - {{domxref("NodeList")}}

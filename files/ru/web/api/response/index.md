@@ -1,21 +1,13 @@
 ---
 title: Response
 slug: Web/API/Response
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - Interface
-  - Reference
-  - Response
-translation_of: Web/API/Response
 ---
 
 {{APIRef("Fetch API")}}
 
 Интерфейс **`Response`** из [Fetch API](/ru/docs/Web/API/Fetch_API) представляет собой ответ на запрос.
 
-Вы можете создать новый экземпляр объекта `Response` используя конструктор {{domxref("Response.Response()")}}, но скорее всего вы столкнётесь с объектом `Response`, как результат какой-нибудь API операции — например, service worker {{domxref("Fetchevent.respondWith")}}, или {{domxref("WindowOrWorkerGlobalScope.fetch()")}}.
+Вы можете создать новый экземпляр объекта `Response` используя конструктор {{domxref("Response.Response()")}}, но скорее всего вы столкнётесь с объектом `Response`, как результат какой-нибудь API операции — например, service worker {{domxref("Fetchevent.respondWith")}}, или {{domxref("fetch()")}}.
 
 ## Конструктор
 
@@ -80,18 +72,20 @@ translation_of: Web/API/Response
 
 ### Fetching an image
 
-In our [basic fetch example](https://github.com/mdn/fetch-examples/tree/master/basic-fetch) ([run example live](http://mdn.github.io/fetch-examples/basic-fetch/)) we use a simple `fetch()` call to grab an image and display it in an {{htmlelement("img")}} element. The `fetch()` call returns a promise, which resolves to the `Response` object associated with the resource fetch operation.
+In our [basic fetch example](https://github.com/mdn/fetch-examples/tree/master/basic-fetch) ([run example live](https://mdn.github.io/fetch-examples/basic-fetch/)) we use a simple `fetch()` call to grab an image and display it in an {{htmlelement("img")}} element. The `fetch()` call returns a promise, which resolves to the `Response` object associated with the resource fetch operation.
 
 You'll notice that since we are requesting an image, we need to run {{domxref("Body.blob")}} ({{domxref("Response")}} implements Body) to give the response its correct MIME type.
 
 ```js
-const image = document.querySelector('.my-image');
-fetch('flowers.jpg').then(function(response) {
-  return response.blob();
-}).then(function(blob) {
-  const objectURL = URL.createObjectURL(blob);
-  image.src = objectURL;
-});
+const image = document.querySelector(".my-image");
+fetch("flowers.jpg")
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (blob) {
+    const objectURL = URL.createObjectURL(blob);
+    image.src = objectURL;
+  });
 ```
 
 You can also use the {{domxref("Response.Response()")}} constructor to create your own custom `Response` object:
@@ -121,18 +115,16 @@ const doAjax = async () => {
 doAjax().then(console.log).catch(console.log);
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                        | Status                   | Comment            |
-| -------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#response-class','Response')}} | {{Spec2('Fetch')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/ru/docs/Web/HTTP/CORS)
 - [HTTP](/ru/docs/Web/HTTP)

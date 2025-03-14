@@ -1,158 +1,126 @@
 ---
 title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
-tags:
-  - Arreglo
-  - ECMAScript 5
-  - JavaScript
-  - Prototipo
-  - metodo
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/every
+l10n:
+  sourceCommit: 57375b77984037c614982a9327bc96101824db89
 ---
 
 {{JSRef}}
 
-Determina si todos los elementos en el array satisfacen una condición.
+El método **`every()`** de las instancias de {{jsxref("Array")}} prueba si todos los elementos del arreglo pasan la prueba implementada por la función proporcionada. Devuelve un valor booleano.
 
-> **Nota:** **Precaución**: ¡Llamar este método en un array vacío devuelve `true` para cualquier condición!
+{{InteractiveExample("JavaScript Demo: Array.every()", "shorter")}}
 
-{{EmbedInteractiveExample("pages/js/array-every.html")}}
+```js interactive-example
+const isBelowThreshold = (currentValue) => currentValue < 40;
 
-La fuente de este ejemplo interactivo se encuentra en GitHub. Si desea contribuir con el proyecto de ejemplos interactivos, clone <https://github.com/mdn/interactive-examples> y envíenos un*pull* _request_.
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(isBelowThreshold));
+// Expected output: true
+```
 
 ## Sintaxis
 
-```
-arr.every(callback(element[, index[, array]])[, thisArg])
+```js-nolint
+every(callbackFn)
+every(callbackFn, thisArg)
 ```
 
 ### Parámetros
 
-- `callback`
-
-  - : Una función para probar cada elemento; recibe tres argumentos:
-
-    - `currentValue` (required)
-      - : El elemento actual del arreglo que está siendo procesado.
-    - `index` {{Optional_inline}}
-      - : El índice del elemento actual del arreglo que está siendo procesado.
-    - `array` {{Optional_inline}}
-      - : El arreglo sobre el cual fue llamado `every`.
-
-- `thisArg` {{Optional_inline}}
-  - : Valor por usar como `this` cuando se ejecute `callback`.
+- `callbackFn`
+  - : Una función que se ejecuta para cada elemento del arreglo. Debe devolver un valor [_truthy_](/es/docs/Glossary/Truthy) para indicar que el elemento pasa la prueba y un valor [_falsy_](/es/docs/Glossary/Falsy) en caso contrario. La función se llama con los siguientes argumentos:
+    - `element`
+      - : El elemento actual que se está procesando en el arreglo.
+    - `index`
+      - : El índice del elemento actual que se está procesando en el arreglo.
+    - `array`
+      - : El arreglo `every()` desde el que fue llamada.
+- `thisArg` {{optional_inline}}
+  - : Un valor para usar como `this` al ejecutar `callbackFn`. Ver [métodos iterativos](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Valor de retorno
 
-`true` si la función de devolución de llamada devuelve un valor de {{Glossary("truthy")}} para cada elemento de matriz; de lo contrario, `false`.
+`true` a menos que `callbackFn` devuelva un valor {{Glossary("falsy")}} para un elemento del arreglo, en cuyo caso se devuelve `false` inmediatamente.
 
 ## Descripción
 
-El método `every` ejecuta la función `callback` dada una vez por cada elemento presente en el arreglo hasta encontrar uno que haga retornar un valor falso a `callback` (un valor que resulte falso cuando se convierta a booleano). Si no se encuentra tal elemento, el método `every` de inmediato retorna `false`. O si `callback` retorna verdadero para todos los elementos, `every` retornará `true`. `callback` es llamada sólo para índices del arreglo que tengan valores asignados; no se llama para índices que hayan sido eliminados o a los que no se les haya asignado un valor.
+El método `every()` es un [método iterativo](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). Llama a una función `callbackFn` proporcionada una vez por cada elemento de un arreglo, hasta que `callbackFn` devuelva un valor [_falsy_](/es/docs/Glossary/Falsy). Si se encuentra dicho elemento, `every()` devuelve inmediatamente `false` y deja de iterar por el arreglo. De lo contrario, si `callbackFn` devuelve un valor [_truthy_](/es/docs/Glossary/Truthy) para todos los elementos, `every()` devuelve `true`. Lea la sección [métodos iterativos](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods) para obtener más información sobre cómo funcionan estos métodos en general.
 
-`callback` es llamada con tres argumetos: el valor del elemento, el índice del elemento y el objeto Array que está siendo recorrido.
+`every` actúa como el cuantificador "para todos" en matemáticas. En particular, para un arreglo vacío, devuelve `true`. (Es [vaciamente cierto](https://es.wikipedia.org/wiki/Verdad_vacua) que todos los elementos del [conjunto vacío](https://es.wikipedia.org/wiki/Conjunto_vac%C3%ADo#Propiedades) satisfacen cualquier condición dada).
 
-Si se proporciona un parámetro `thisArg` a `every`, será pasado a la función `callback` cuando sea llamada, usándolo como valor `this`. En otro caso, se pasará el valor `undefined` para que sea usado como valor `this`. El valor `this` observable por parte de `callback` se determina de acuerdo a [las normas usuales para determinar el `this` visto por una función](/es/docs/Web/JavaScript/Reference/Operators/this).
+`callbackFn` se invoca únicamente para índices de arreglos que tienen valores asignados. No se invoca para espacios vacíos en [arreglos dispersos](/es/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
-`every` no modifica el arreglo sobre el cual es llamado.
-
-El intervalo de elementos procesados por `every` se establece antes de la primera llamada a `callback`. Los elementos que se agreguen al arreglo después de que la función `every` comience no serán vistos por la función `callback`. Si se modifican elementos existentes en el arreglo, su valor cuando sea pasado a `callback` será el valor que tengan cuando sean visitados; los elementos que se eliminen no serán visitados.
-
-`every` opera como el cuantificador "para todo" en matemáticas. En particular con el arreglo vacío retorna true. (es una [verdad vacua](http://en.wikipedia.org/wiki/Vacuous_truth#Vacuous_truths_in_mathematics) que todos los elementos del [conjunto vacío](http://en.wikipedia.org/wiki/Empty_set#Common_problems) satisfacen una condición dada.)
+El método `every()` es [genérico](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). Solo espera que el valor `this` tenga una propiedad `length` y propiedades con claves enteras.
 
 ## Ejemplos
 
-### Probando el tamaño de todos los elementos de un arreglo
+### Probar el tamaño de todos los elementos del arreglo
 
-El siguiente ejemplo prueba si todos los elementos de un arreglo son mayores que 10.
+El siguiente ejemplo prueba si todos los elementos del arreglo son 10 o más.
 
 ```js
-function esSuficientementeGrande(elemento, indice, arrreglo) {
-  return elemento >= 10;
+function isBigEnough(element, index, array) {
+  return element >= 10;
 }
-[12, 5, 8, 130, 44].every(esSuficientementeGrande);   // false
-[12, 54, 18, 130, 44].every(esSuficientementeGrande); // true
+[12, 5, 8, 130, 44].every(isBigEnough); // false
+[12, 54, 18, 130, 44].every(isBigEnough); // true
 ```
 
-### Usar funciones flecha
+### Comprueba si un arreglo es un subconjunto de otro arreglo
 
-Las [funciones flecha](/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions) proveen una sintaxis más corta para la misma prueba.
+El siguiente ejemplo prueba si todos los elementos de un arreglo están presentes en otro arreglo.
 
 ```js
-[12, 5, 8, 130, 44].every(elem => elem >= 10); // false
-[12, 54, 18, 130, 44].every(elem => elem >= 10); // true
+const isSubset = (array1, array2) =>
+  array2.every((element) => array1.includes(element));
+
+console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 7, 6])); // true
+console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 8, 7])); // false
 ```
 
-## Polyfill
+### Usando el tercer argumento de callbackFn
 
-`every` fue añadida a la norma ECMA-262 en la 5ta edición; por lo que podría no estar presente en otras implementaciones de la norma. Puede sobrellevarlo insertando el siguiente código al comienzo de su programa, permitiendo el uso de `every` en implementación que no lo soporten de manera nativa. Este algoritmo es exactamente el especificado en ECMA-262, 5ta edición, suponiendo que `Object` y `TypeError` tienen sus valores originales y que `callbackfn.call` evalua al valor original de {{jsxref("Function.prototype.call")}}
+El argumento `array` es útil si desea acceder a otro elemento del arreglo. El siguiente ejemplo primero utiliza `filter()` para extraer los valores positivos y luego utiliza `every()` para verificar si el arreglo es estrictamente creciente.
 
 ```js
-if (!Array.prototype.every) {
-  Array.prototype.every = function(callbackfn, thisArg) {
-    'use strict';
-    var T, k;
+const numbers = [-2, 4, -8, 16, -32];
+const isIncreasing = numbers
+  .filter((num) => num > 0)
+  .every((num, idx, arr) => {
+    // Sin el argumento arr, no hay forma de acceder fácilmente al
+    // arreglo intermedio sin guardarla en una variable.
+    if (idx === 0) return true;
+    return num > arr[idx - 1];
+  });
+console.log(isIncreasing); // true
+```
 
-    if (this == null) {
-      throw new TypeError('this is null or not defined');
-    }
+### Uso de every() en arreglos dispersos
 
-    // 1. Let O be the result of calling ToObject passing the this
-    //    value as the argument.
-    var O = Object(this);
+`every()` no ejecutará su predicado en espacios vacíos.
 
-    // 2. Let lenValue be the result of calling the Get internal method
-    //    of O with the argument "length".
-    // 3. Let len be ToUint32(lenValue).
-    var len = O.length >>> 0;
+```js
+console.log([1, , 3].every((x) => x !== undefined)); // true
+console.log([2, , 2].every((x) => x === 2)); // true
+```
 
-    // 4. If IsCallable(callbackfn) is false, throw a TypeError exception.
-    if (typeof callbackfn !== 'function') {
-      throw new TypeError();
-    }
+### Llamar a every() en objetos que no son arreglos
 
-    // 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
-    if (arguments.length > 1) {
-      T = thisArg;
-    }
+El método `every()` lee la propiedad `length` de `this` y luego accede a cada propiedad con una clave entera no negativa menor que `length` hasta que se haya accedido a todas o `callbackFn` devuelva `false`.
 
-    // 6. Let k be 0.
-    k = 0;
-
-    // 7. Repeat, while k < len
-    while (k < len) {
-
-      var kValue;
-
-      // a. Let Pk be ToString(k).
-      //   This is implicit for LHS operands of the in operator
-      // b. Let kPresent be the result of calling the HasProperty internal
-      //    method of O with argument Pk.
-      //   This step can be combined with c
-      // c. If kPresent is true, then
-      if (k in O) {
-
-        // i. Let kValue be the result of calling the Get internal method
-        //    of O with argument Pk.
-        kValue = O[k];
-
-        // ii. Let testResult be the result of calling the Call internal method
-        //     of callbackfn with T as the this value and argument list
-        //     containing kValue, k, and O.
-        var testResult = callbackfn.call(T, kValue, k, O);
-
-        // iii. If ToBoolean(testResult) is false, return false.
-        if (!testResult) {
-          return false;
-        }
-      }
-      k++;
-    }
-    return true;
-  };
-}
+```js
+const arrayLike = {
+  length: 3,
+  0: "a",
+  1: "b",
+  2: "c",
+  3: 345, // ignorado por every() ya que la longitud es 3
+};
+console.log(
+  Array.prototype.every.call(arrayLike, (x) => typeof x === "string"),
+); // true
 ```
 
 ## Especificaciones
@@ -161,10 +129,14 @@ if (!Array.prototype.every) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.every")}}
+{{Compat}}
 
-## Ver también
+## Véase también
 
+- [Polyfill de `Array.prototype.every` en `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- Guia de [colecciones indexadas](/es/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.some()")}}
+- {{jsxref("Array.prototype.find()")}}
 - {{jsxref("TypedArray.prototype.every()")}}

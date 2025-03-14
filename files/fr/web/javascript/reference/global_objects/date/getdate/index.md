@@ -1,26 +1,26 @@
 ---
 title: Date.prototype.getDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDate
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getDate
 ---
 
 {{JSRef}}
 
 La méthode **`getDate()`** retourne le jour du mois pour la date spécifiée d'après l'heure locale.
 
-{{EmbedInteractiveExample("pages/js/date-getdate.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getDate()")}}
+
+```js interactive-example
+const birthday = new Date("August 19, 1975 23:15:30");
+const date1 = birthday.getDate();
+
+console.log(date1);
+// Expected output: 19
+```
 
 ## Syntaxe
 
 ```js
-dateObj.getDate()
+dateObj.getDate();
 ```
 
 ### Paramètres

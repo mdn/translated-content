@@ -7,7 +7,7 @@ slug: Web/API/IDBDatabase/deleteObjectStore
 
 **`deleteObjectStore()`** 方法从 {{domxref("IDBDatabase")}} 中销毁指定名称的对象存储，及这个对象存储所包含的任何索引。
 
-与 {{ domxref("IDBDatabase.createObjectStore") }} 一样，此方法*只能*在[`versionchange`](/zh-CN/docs/IndexedDB/IDBTransaction#VERSION_CHANGE)事务中调用。
+与 {{ domxref("IDBDatabase.createObjectStore") }} 一样，此方法*只能*在[`versionchange`](/zh-CN/docs/Web/API/IDBTransaction#version_change)事务中调用。
 
 {{AvailableInWorkers}}
 
@@ -26,11 +26,11 @@ dbInstance.deleteObjectStore(name);
 
 此方法可能会引发下列 {{domxref("DOMException")}} 异常：
 
-| Exception                  | Description                                                                                                                                                                                                                                                                      |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `InvalidStateError`        | Occurs if the method was not called from a `versionchange` transaction callback. For older WebKit browsers, you must call {{ APIRef("IDBVersionChangeRequest.setVersion")}} first.                                                                                |
-| `TransactionInactiveError` | Occurs if a request is made on a source database that doesn't exist (e.g. has been deleted or removed.) In Firefox previous to version 41, an `InvalidStateError` was raised in this case as well, which was misleading; this has now been fixed (see {{Bug("1176165")}}.) |
-| `NotFoundError`            | You are trying to delete an object store that does not exist. Names are case sensitive.                                                                                                                                                                                          |
+| Exception                  | Description                                                                                                                                                                                                                                                                                              |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `InvalidStateError`        | Occurs if the method was not called from a `versionchange` transaction callback. For older WebKit browsers, you must call {{ APIRef("IDBVersionChangeRequest.setVersion")}} first.                                                                                                                       |
+| `TransactionInactiveError` | Occurs if a request is made on a source database that doesn't exist (e.g. has been deleted or removed.) In Firefox previous to version 41, an `InvalidStateError` was raised in this case as well, which was misleading; this has now been fixed (see [Firefox bug 1176165](https://bugzil.la/1176165).) |
+| `NotFoundError`            | You are trying to delete an object store that does not exist. Names are case sensitive.                                                                                                                                                                                                                  |
 
 ## 示例
 
@@ -39,7 +39,7 @@ var dbName = "sampleDB";
 var dbVersion = 2;
 var request = indexedDB.open(dbName, dbVersion);
 
-request.onupgradeneeded = function(e) {
+request.onupgradeneeded = function (e) {
   var db = request.result;
   if (e.oldVersion < 1) {
     db.createObjectStore("store1");
@@ -70,4 +70,4 @@ request.onupgradeneeded = function(e) {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

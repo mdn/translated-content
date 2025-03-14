@@ -1,7 +1,8 @@
 ---
-title: 'Content Security Policy: The page’s settings blocked the loading of a resource:
-  xyz'
+title: "Content Security Policy: The page's settings blocked the loading of a resource: xyz"
 slug: Web/HTTP/CSP/Errors/CSPViolation
+l10n:
+  sourceCommit: c2274293475b0a5b4febf85a49c1f91bf43ebac7
 ---
 
 {{HTTPSidebar}}

@@ -1,13 +1,12 @@
 ---
 title: Window.showModalDialog()
 slug: Web/API/Window/showModalDialog
-translation_of: Web/API/Window/showModalDialog
-browser-compat: api.Window.showModalDialog
 ---
 
 {{deprecated_header}}{{APIRef}}
 
-> **Attention :** Cette fonctionnalité a été retirée. Veuillez corriger les sites ou applications web sous votre responsabilité qui l'utiliseraient encore.
+> [!WARNING]
+> Cette fonctionnalité a été retirée. Veuillez corriger les sites ou applications web sous votre responsabilité qui l'utiliseraient encore.
 >
 > Cette méthode a été retirée avec Chrome 43 et Firefox 56.
 
@@ -16,9 +15,9 @@ La méthode **`Window.showModalDialog()`** permettait de créer et d'afficher un
 ## Syntaxe
 
 ```js
-showModalDialog(uri)
-showModalDialog(uri, arguments)
-showModalDialog(uri, arguments, options)
+showModalDialog(uri);
+showModalDialog(uri, arguments);
+showModalDialog(uri, arguments, options);
 ```
 
 ### Paramètres
@@ -81,7 +80,8 @@ showModalDialog(uri, arguments, options)
   </tbody>
 </table>
 
-> **Note :** Firefox n'implémente pas les arguments `dialogHide`, `edge`, `status`, ou `unadorned`.
+> [!NOTE]
+> Firefox n'implémente pas les arguments `dialogHide`, `edge`, `status`, ou `unadorned`.
 
 ### Valeur de retour
 

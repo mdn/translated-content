@@ -1,11 +1,6 @@
 ---
 title: Introduction à Django
 slug: Learn/Server-side/Django/Introduction
-tags:
-  - Débutant
-  - Python
-  - django
-translation_of: Learn/Server-side/Django/Introduction
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
@@ -74,7 +69,8 @@ Django vous aide à écrire une application qui est:
 
 Django a continué à se développer et à s'améliorer, depuis sa première sortie (1.0) en Septembre 2008 jusqu'à la version 2.0 récemment sortie (2017). Chaque sortie a ajouté son lot de nouvelles fonctionnalités et de corrections de bugs, allant du support de nouveaux types de bases de données, de moteurs de templates et de cache, à l'addition de fonctions et de classes de vues 'génériques' (qui réduisent la quantité de code que doivent écrire les développeurs pour tout un tas de tâches de programmation).
 
-> **Note :** Consultez les [notes de publication](https://docs.djangoproject.com/en/1.10/releases/) sur le site web de Django pour voir les changements apportés dans les versions récentes, ainsi que tout le travail accompli pour améliorer Django.
+> [!NOTE]
+> Consultez les [notes de publication](https://docs.djangoproject.com/en/1.10/releases/) sur le site web de Django pour voir les changements apportés dans les versions récentes, ainsi que tout le travail accompli pour améliorer Django.
 
 Désormais, Django est un projet open-source collaboratif florissant, avec plusieurs milliers d'utilisateurs et de contributeurs. Bien que plusieurs fonctionnalités reflètent encore ses origines, Django a évolué en un framework versatile capable de développer n'importe quel type de site web.
 
@@ -105,17 +101,18 @@ Les applications web Django regroupent généralement le code qui gère chacune 
 ![](basic-django.png)
 
 - **URLs :** Bien qu'il soit possible de traiter les requêtes de chaque URL via une fonction unique, il est bien plus viable d'écrire une fonction de vue isolée qui gèrera chaque ressource. Un mapper URL est utilisé pour rediriger les requêtes HTTP à la vue appropriée d'après l'URL de requête. Le mapper URL peut aussi faire la correspondance entre des patterns de chaînes de caractères ou de nombres qui apparaissent dans une URL et passer ces derniers comme données dans une fonction de vue.
-- **Vues :** Une vue est une fonction de gestion des requêtes, qui reçoit des requêtes HTTP et renvoie des réponses HTTP. Les vues accèdent aux données requises pour satisfaire des requêtes via des _modèles_, et délèguent le formatage des réponses aux *templates*.
+- **Vues :** Une vue est une fonction de gestion des requêtes, qui reçoit des requêtes HTTP et renvoie des réponses HTTP. Les vues accèdent aux données requises pour satisfaire des requêtes via des _modèles_, et délèguent le formatage des réponses aux _templates_.
 - **Modèles :** Les modèles sont des objets Python, qui définissent la structure des données d'une application, et fournissent des mécanismes de gestion (ajout, modification, suppression) et requêtent les enregistrements d'une base de données.
-- **Templates:** Un template est un fichier texte qui définit la structure ou la mise en page d'un fichier (comme une page HTML), avec des balises utilisées pour représenter le contenu. Une *vue* peut créer une page HTML en dynamique en utilisant un template HTML, en la peuplant avec les données d'un *modèle*. Un template peut-être utilisé pour définir la structure de n'importe quel type de fichier; il n'est pas obligatoire que ce dernier soit un HTML !
+- **Templates:** Un template est un fichier texte qui définit la structure ou la mise en page d'un fichier (comme une page HTML), avec des balises utilisées pour représenter le contenu. Une _vue_ peut créer une page HTML en dynamique en utilisant un template HTML, en la peuplant avec les données d'un _modèle_. Un template peut-être utilisé pour définir la structure de n'importe quel type de fichier; il n'est pas obligatoire que ce dernier soit un HTML !
 
-> **Note :** Django mentionne cette organisation sous le nom d'architecture "Modèle Vue Template". Elle a plusieurs similarités avec l'architecture [Modèle Vue Contrôleur](/fr/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture).
+> [!NOTE]
+> Django mentionne cette organisation sous le nom d'architecture "Modèle Vue Template". Elle a plusieurs similarités avec l'architecture [Modèle Vue Contrôleur](/fr/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture).
 
 Les sections ci-dessous vous donneront une idée de ce à quoi ressemble ces différentes parties d'une application Django (nous verrons plus de détails plus tard dans le jeu, une fois que nous aurons configuré l'environnement de développement).
 
 ### Envoyer la requête à la bonne vue (urls.py)
 
-Le mapper URL est généralement stocké dans un fichier nommé **urls.py**. Dans l'exemple ci-dessous, le mapper (`urlpatterns`) définit une liste de mappings entre des *routes* (des *patterns* d'URL spécifiques*)* et leur fonction de vue correspondante. Si une requête HTTP est reçue dont l'URL correspond à un pattern spécifié, la fonction vue associée sera alors appelée et passée dans la requête.
+Le mapper URL est généralement stocké dans un fichier nommé **urls.py**. Dans l'exemple ci-dessous, le mapper (`urlpatterns`) définit une liste de mappings entre des _routes_ (des _patterns_ d'URL spécifiques*)* et leur fonction de vue correspondante. Si une requête HTTP est reçue dont l'URL correspond à un pattern spécifié, la fonction vue associée sera alors appelée et passée dans la requête.
 
 ```python
 urlpatterns = [
@@ -151,7 +148,8 @@ def index(request):
     return HttpResponse('Hello from Django!')
 ```
 
-> **Note :** Un peu de Python :
+> [!NOTE]
+> Un peu de Python :
 >
 > - Les [modules Python](https://docs.python.org/3/tutorial/modules.html) sont des librairies de fonctions, stockés dans des fichiers séparés que l'on peut vouloir utiliser dans notre code. Ici, nous importons l'objet `HttpResponse` du module `django.http` pour qu'on puisse l'utiliser dans notre vue : `from django.http import HttpResponse` . Il y a d'autres façons d'importer quelques objets (ou tous les objets) d'un module.
 > - Les fonctions sont déclarées en utilisant le mot-clé `def` comme indiqué ci-dessus, avec des paramètres nommés listés entre parenthèses après le nom de la fonction; la ligne se termine ensuite par deux points. Notez que les lignes suivantes sont **indentées**. L'indentation est importante, car elle spécifie que les lignes de code sont contenues dans un bloc particulier (l'indentation obligatoire est un élément clé de Python, et une des raisons pour lesquelles le code Python est si simple à lire).
@@ -160,7 +158,7 @@ Les vues sont généralement stockées dans un fichier nommé **views.py**.
 
 ### Définir les modèles de données (models.py)
 
-Les applications web Django gèrent et requêtent les données via des objets Python appelés modèles. Les modèles définissent la structure des données stockées, ce qui inclut le champ *types* ainsi qu'au besoin leur taille maximum, les valeurs par défaut, les options de listes pouvant être sélectionnées, le texte d'aide pour la documentation — vous pouvez choisir ce dont vous avez besoin par rapport aux spécifications de votre projet. Une fois que vous avez choisi la base de données que vous souhaitez utiliser, vous n'avez pas du tout besoin de communiquer avec elle directement — vous n'avez qu'à écrire la structure de votre modèle, Django s'occupe du sale boulot de la communication avec la base de données pour vous.
+Les applications web Django gèrent et requêtent les données via des objets Python appelés modèles. Les modèles définissent la structure des données stockées, ce qui inclut le champ _types_ ainsi qu'au besoin leur taille maximum, les valeurs par défaut, les options de listes pouvant être sélectionnées, le texte d'aide pour la documentation — vous pouvez choisir ce dont vous avez besoin par rapport aux spécifications de votre projet. Une fois que vous avez choisi la base de données que vous souhaitez utiliser, vous n'avez pas du tout besoin de communiquer avec elle directement — vous n'avez qu'à écrire la structure de votre modèle, Django s'occupe du sale boulot de la communication avec la base de données pour vous.
 
 L'extrait de code ci-dessous montre un modèle Django très simple pour un objet `Team`. La classe `Team` est dérivée de la classe Django `models.Model`. Elle définit le nom et le niveau de l'équipe comme des chaînes de caractères et elle spécifie le nombre maximum de caractères pouvant être stockés pour chaque enregistrement. Le champ `team_level` peut avoir plusieurs valeurs, donc nous le définissons comme une liste de choix, puis on fournit à la classe un mapping entre les choix qui seront affichés et les données stockées, avec une valeur par défaut.
 
@@ -181,9 +179,10 @@ class Team(models.Model):
     team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
 ```
 
-> **Note :** Un peu de Python :
+> [!NOTE]
+> Un peu de Python :
 >
-> - Python supporte la "programmation orientée-objet", un type de programmation où l'on organise notre code en objets, ce qui inclut les données et fonctions liées qui agiront sur les données. Les objets peuvent être hérités/étendus/dérivés d'autres objets, ce qui permet à ces objets de partager un comportement commun. En Python, on utilise le mot-clé `class` pour définir le "squelette" d'un objet. On peut créer plusieurs *instances* spécifiques de ce type d'objet d'après le modèle d'une classe.
+> - Python supporte la "programmation orientée-objet", un type de programmation où l'on organise notre code en objets, ce qui inclut les données et fonctions liées qui agiront sur les données. Les objets peuvent être hérités/étendus/dérivés d'autres objets, ce qui permet à ces objets de partager un comportement commun. En Python, on utilise le mot-clé `class` pour définir le "squelette" d'un objet. On peut créer plusieurs _instances_ spécifiques de ce type d'objet d'après le modèle d'une classe.
 >
 >   Ainsi par exemple, nous avons ici une classe `Team`, dérivée de la classe `Model`. Cela signifie que c'est un modèle, et qu'elle contiendra toutes les méthodes d'un modèle, mais qu'on peut aussi lui donner des caractéristiques spécifiques. Dans notre modèle, nous définissons les champs dont aura besoin notre base de données, en leur donnant des noms spécifiques. Django utilisera ces définitions, ce qui inclut aussi le nom des champs, pour créer la base de données sous-jacente.
 
@@ -251,21 +250,3 @@ Félicitations, vous avez atteint la première étape dans votre voyage avec Dja
 Vous avez déjà vu un peu de vrai code Django ci-dessus, mais à la différence du code côté client, vous aurez besoin de configurer un environnement de développement pour l'utiliser. C'est notre prochaine étape.
 
 {{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/fr/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/fr/docs/Learn/Server-side/Django/development_environment)
-- [Django Didactique: Site web "Bibliothèque locale"](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django didactique Section 2: Créer le squelette du site web](/fr/docs/Learn/Server-side/Django/skeleton_website)
-- [Django didactique Section 3: Utilisation des modèles de données](/fr/docs/Learn/Server-side/Django/Models)
-- [Django didactique Section 4 : Site d'administration de Django](/fr/docs/Learn/Server-side/Django/Admin_site)
-- [Django didactique Section 5: Créer la page d'accueil](/fr/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/fr/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/fr/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/fr/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/fr/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/fr/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/fr/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/fr/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/fr/docs/Learn/Server-side/Django/django_assessment_blog)

@@ -1,16 +1,54 @@
 ---
 title: flex-basis
 slug: Web/CSS/flex-basis
-translation_of: Web/CSS/flex-basis
 ---
 
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`flex-basis`** задаёт базовый размер флекс элемента по **основной оси**. Это свойство определяет размер контент-бокса, если не задано иначе через {{Cssxref("box-sizing")}}.
 
-{{EmbedInteractiveExample("pages/css/flex-basis.html")}}
+{{InteractiveExample("CSS Demo: flex-basis")}}
 
-> **Примечание:** **Внимание:** в случае, если для элемента одновременно заданы `flex-basis` (отличное от `auto`) и `width` ( или `height` в случае `flex-direction: column`), `flex-basis` имеет приоритет.
+```css interactive-example-choice
+flex-basis: auto;
+```
+
+```css interactive-example-choice
+flex-basis: 0;
+```
+
+```css interactive-example-choice
+flex-basis: 200px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Item One</div>
+  <div>Item Two</div>
+  <div>Item Three</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  border: 1px solid #c5c5c5;
+  width: auto;
+  max-height: 300px;
+  display: flex;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+```
+
+> [!NOTE]
+> В случае, если для элемента одновременно заданы `flex-basis` (отличное от `auto`) и `width` ( или `height` в случае `flex-direction: column`), `flex-basis` имеет приоритет.
 
 {{cssinfo}}
 
@@ -31,7 +69,7 @@ flex-basis: fit-content;
 /* Автоматически изменяет размер на основе содержимого элемента */
 flex-basis: content;
 
-/* Глобальное значения */
+/* Глобальные значения */
 flex-basis: inherit;
 flex-basis: initial;
 flex-basis: unset;
@@ -44,14 +82,17 @@ flex-basis: unset;
 - `<'ширина'>`
   - : An absolute {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}} родительского flex контейнера главное size свойство, или ключевое слово `auto`. Негативные значения не допустимы.
 - `content`
-  - : Автоматический задаёт размер на основе содержимого элемента flex.
-    > **Примечание:** Это значение отсутствовало в первоначальном релизе Flexible Box Layout, и, следовательно, некоторые предыдущие релизы не будут поддерживать его. Аналогичный эффект можно получить, используя `auto` вместе с основным размером ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) или [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) `auto`.
 
-    > **Примечание:** **История:**
+  - : Автоматический задаёт размер на основе содержимого элемента flex.
+
+    > [!NOTE]
+    > Это значение отсутствовало в первоначальном релизе Flexible Box Layout, и, следовательно, некоторые предыдущие релизы не будут поддерживать его. Аналогичный эффект можно получить, используя `auto` вместе с основным размером ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) или [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) `auto`.
+
+    > [!NOTE]
     >
     > - Первоначально, `flex-basis:auto` означает "смотреть на значения `width` или `height`".
     > - Затем `flex-basis:auto` был изменён на автоматический размер, а "main-size" было введено как ключевое слово, означающее "смотреть на значения `width` или `height`". Это было реализован в [баге 1032922](https://bugzilla.mozilla.org/show_bug.cgi?id=1032922).
-    > - Затем в [баге 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316) это было возвращено обратно, поэтому `auto` снова означает "смотреть на значения `width` или `height`"; а новое ключевое слово `content` было введено для автоматического размера. ({{bug("1105111")}} охватывает добавление этого ключевого слова).
+    > - Затем в [баге 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316) это было возвращено обратно, поэтому `auto` снова означает "смотреть на значения `width` или `height`"; а новое ключевое слово `content` было введено для автоматического размера. ([Firefox bug 1105111](https://bugzil.la/1105111) охватывает добавление этого ключевого слова).
 
 ### Formal syntax
 
@@ -88,10 +129,10 @@ flex-basis: unset;
 }
 
 .flex {
-  background: #6AB6D8;
+  background: #6ab6d8;
   padding: 10px;
   margin-bottom: 50px;
-  border: 3px solid #2E86BB;
+  border: 3px solid #2e86bb;
   color: white;
   font-size: 20px;
   text-align: center;
@@ -114,7 +155,7 @@ flex-basis: unset;
 }
 
 .flex1:after {
-  content: 'auto';
+  content: "auto";
 }
 
 .flex2 {
@@ -122,7 +163,7 @@ flex-basis: unset;
 }
 
 .flex2:after {
-  content: 'max-content';
+  content: "max-content";
 }
 
 .flex3 {
@@ -130,7 +171,7 @@ flex-basis: unset;
 }
 
 .flex3:after {
-  content: 'min-content';
+  content: "min-content";
 }
 
 .flex4 {
@@ -138,15 +179,15 @@ flex-basis: unset;
 }
 
 .flex4:after {
-  content: 'fit-content';
+  content: "fit-content";
 }
 
 .flex5 {
-   flex-basis: content;
+  flex-basis: content;
 }
 
 .flex5:after {
-  content: 'content';
+  content: "content";
 }
 
 .flex6 {
@@ -154,26 +195,24 @@ flex-basis: unset;
 }
 
 .flex6:after {
-  content: 'fill';
+  content: "fill";
 }
 ```
 
 ### Results
 
-{{EmbedLiveSample('Example', '860', '360', '', 'Web/CSS/flex-basis')}}
+{{ EmbedLiveSample('Example', '100%', '360') }}
 
-## Specifications
+## Спецификации
 
-| Specification                                                                            | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Flexbox', '#propdef-flex-basis', 'flex-basis')}} | {{Spec2('CSS3 Flexbox')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/ru/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
 - {{cssxref("width")}}

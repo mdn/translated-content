@@ -30,7 +30,7 @@ Esta página documenta o uso do objeto `Error` em si e seu uso como uma função
 
 ### Tipos de erro
 
-Além do construtor genérico de `Error`, existem outros seis construtores principais de erro no JavaScript. Para exceções em _client-side_, veja [Exceções na captura de Instruções](/pt-BR/docs/Web/JavaScript/Guide/Statements#Exception_Handling_Statements).
+Além do construtor genérico de `Error`, existem outros seis construtores principais de erro no JavaScript. Para exceções em _client-side_, veja [Exceções na captura de Instruções](/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements).
 
 - {{jsxref("EvalError")}}
   - : Cria uma instância representando um erro que ocorre na função global. {{jsxref("Global_Objects/eval", "eval()")}}.
@@ -58,15 +58,15 @@ O objeto `Error` global não contém métodos próprios, entretanto, ele herda a
 
 ## `Instâncias de Error`
 
-{{page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Description')}}
+<!-- TODO: page macro not supported: page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Description') -->
 
 ### Propriedades
 
-{{page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Properties')}}
+<!-- TODO: page macro not supported: page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Properties') -->
 
 ### Métodos
 
-{{page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Methods')}}
+<!-- TODO: page macro not supported: page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Methods') -->
 
 ## Exemplos
 
@@ -76,9 +76,9 @@ Geralmente você cria um objeto `Error` com a intenção de lançá-lo usando a 
 
 ```js
 try {
-  throw new Error('Oooops!');
+  throw new Error("Oooops!");
 } catch (e) {
-  alert(e.name + ': ' + e.message);
+  alert(e.name + ": " + e.message);
 }
 ```
 
@@ -91,9 +91,9 @@ try {
   Objeto.Metodo();
 } catch (e) {
   if (e instanceof EvalError) {
-    alert(e.name + ': ' + e.message);
+    alert(e.name + ": " + e.message);
   } else if (e instanceof RangeError) {
-    alert(e.name + ': ' + e.message);
+    alert(e.name + ": " + e.message);
   }
   // ... etc
 }
@@ -103,16 +103,17 @@ try {
 
 Você pode escolher definir seus próprios tipos de erro derivando de `Error` para conseguir usar `throw new MeuErro()` e usar `instanceof MeuErro` para checar o tipo de erro na captura da exceção. A forma comum para isso está demonstrada abaixo
 
-> **Aviso:** Note que as instâncias `MeuErro` lançadas vão reportar valores de `lineNumber` e `fileName` incorretos, ao menos no Firefox.
+> [!WARNING]
+> Note que as instâncias `MeuErro` lançadas vão reportar valores de `lineNumber` e `fileName` incorretos, ao menos no Firefox.
 
-Veja também ["esta discussão no Stackoverflow (em inglês): What's a good way to extend Error in JavaScript?"](http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript).
+Veja também ["esta discussão no Stackoverflow (em inglês): What's a good way to extend Error in JavaScript?"](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript).
 
 ```js
 // Cria um novo objeto que herda o construtor de Error através do prototype.
 function MeuErro(message) {
-  this.name = 'MeuErro';
-  this.message = message || 'Mensagem de erro padrão';
-  this.stack = (new Error()).stack;
+  this.name = "MeuErro";
+  this.message = message || "Mensagem de erro padrão";
+  this.stack = new Error().stack;
 }
 MeuErro.prototype = Object.create(MeuErro.prototype);
 MeuErro.prototype.constructor = MeuErro;
@@ -120,29 +121,25 @@ MeuErro.prototype.constructor = MeuErro;
 try {
   throw new MeuErro();
 } catch (e) {
-  console.log(e.name);     // 'MeuErro'
-  console.log(e.message);  // 'Mensagem de erro padrão'
+  console.log(e.name); // 'MeuErro'
+  console.log(e.message); // 'Mensagem de erro padrão'
 }
 
 try {
-  throw new MeuErro('Mensagem customizada');
+  throw new MeuErro("Mensagem customizada");
 } catch (e) {
-  console.log(e.name);     // 'MeuErro'
-  console.log(e.message);  // 'Mensagem customizada'
+  console.log(e.name); // 'MeuErro'
+  console.log(e.message); // 'Mensagem customizada'
 }
 ```
 
 ## Especificações
 
-| Especificação                                                        | Status                   | Comentário                                         |
-| -------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}     | Definição inicial. Implementada no JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.11', 'Error')}}         | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-error-objects', 'Error')}} | {{Spec2('ES6')}}     |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Error")}}
+{{Compat}}
 
 ## Veja também
 

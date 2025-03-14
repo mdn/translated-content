@@ -1,12 +1,9 @@
 ---
 title: attribute
 slug: Web/XSLT/Element/attribute
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/attribute
-original_slug: Web/XSLT/attribute
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:attribute>` 요소는 스타일시트에서 접근할 수 있는 어떤 값을 써서 출력 문서에 속성을 만듭니다. 요소는 속성값을 자리 잡게 하는 출력 문서 요소 안에 정의한 것 가운데 처음이어야 합니다.
 
@@ -34,7 +31,7 @@ original_slug: Web/XSLT/attribute
 
 ### 정의
 
-[XSLT section 7.1.3, Creating Attributes with xsl:attribute](http://www.w3.org/TR/xslt#creating-attributes)
+[XSLT section 7.1.3, Creating Attributes with xsl:attribute](https://www.w3.org/TR/xslt#creating-attributes)
 
 ### Gecko 지원
 

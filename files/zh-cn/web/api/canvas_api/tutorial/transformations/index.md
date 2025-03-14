@@ -3,11 +3,11 @@ title: 变形 Transformations
 slug: Web/API/Canvas_API/Tutorial/Transformations
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
 
 在本教程前面的部分中，我们已经了解了 Canvas 网格和坐标空间。到目前为止，我们只是根据我们的需要使用默认的网格，改变整个画布的大小。变形是一种更强大的方法，可以将原点移动到另一点、对网格进行旋转和缩放。
 
-## 状态的保存和恢复 Saving and restoring state
+## 状态的保存和恢复
 
 在了解变形之前，我先介绍两个在你开始绘制复杂图形时必不可少的方法。
 
@@ -20,13 +20,13 @@ Canvas 状态存储在栈中，每当`save()`方法被调用后，当前的状�
 
 - 当前应用的变形（即移动，旋转和缩放，见下）
 - 以及下面这些属性：{{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}, {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}, {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}, {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}, {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}, {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}, {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}, {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}, {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}, {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}, {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}}, {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}}, {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}
-- 当前的[裁切路径（clipping path）](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing#Clipping_paths)，会在下一节介绍
+- 当前的[裁切路径（clipping path）](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing#clipping_paths)，会在下一节介绍
 
 你可以调用任意多次 `save`方法。每一次调用 `restore` 方法，上一个保存的状态就从栈中弹出，所有设定都恢复。
 
-### `save` 和 `restore` 的应用例子
+### `save` 和 `restore` 的应用示例
 
-![](/@api/deki/files/104/=Canvas_savestate.png)我们尝试用这个连续矩形的例子来描述 canvas 的状态栈是如何工作的。
+我们尝试用这个连续矩形的例子来描述 canvas 的状态栈是如何工作的。
 
 第一步是用默认设置画一个大四方形，然后保存一下状态。改变填充颜色画第二个小一点的蓝色四方形，然后再保存一下状态。再次改变填充颜色绘制更小一点的半透明的白色四方形。
 
@@ -34,28 +34,28 @@ Canvas 状态存储在栈中，每当`save()`方法被调用后，当前的状�
 
 当第二次调用 `restore` 时，已经恢复到最初的状态，因此最后是再一次绘制出一个黑色的四方形。
 
-{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "https://mdn.mozillademos.org/files/249/Canvas_savestate.png")}}
+{{EmbedLiveSample("save 和 restore 的应用示例", "", "160")}}
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
-  ctx.fillRect(0,0,150,150);   // 使用默认设置绘制一个矩形
-  ctx.save();                  // 保存默认状态
+  ctx.fillRect(0, 0, 150, 150); // 使用默认设置绘制一个矩形
+  ctx.save(); // 保存默认状态
 
-  ctx.fillStyle = '#09F'       // 在原有配置基础上对颜色做改变
-  ctx.fillRect(15,15,120,120); // 使用新的设置绘制一个矩形
+  ctx.fillStyle = "#09F"; // 在原有配置基础上对颜色做改变
+  ctx.fillRect(15, 15, 120, 120); // 使用新的设置绘制一个矩形
 
-  ctx.save();                  // 保存当前状态
-  ctx.fillStyle = '#FFF'       // 再次改变颜色配置
+  ctx.save(); // 保存当前状态
+  ctx.fillStyle = "#FFF"; // 再次改变颜色配置
   ctx.globalAlpha = 0.5;
-  ctx.fillRect(30,30,90,90);   // 使用新的配置绘制一个矩形
+  ctx.fillRect(30, 30, 90, 90); // 使用新的配置绘制一个矩形
 
-  ctx.restore();               // 重新加载之前的颜色状态
-  ctx.fillRect(45,45,60,60);   // 使用上一次的配置绘制一个矩形
+  ctx.restore(); // 重新加载之前的颜色状态
+  ctx.fillRect(45, 45, 60, 60); // 使用上一次的配置绘制一个矩形
 
-  ctx.restore();               // 加载默认颜色配置
-  ctx.fillRect(60,60,30,30);   // 使用加载的配置绘制一个矩形
+  ctx.restore(); // 加载默认颜色配置
+  ctx.fillRect(60, 60, 30, 30); // 使用加载的配置绘制一个矩形
 }
 ```
 
@@ -67,30 +67,30 @@ function draw() {
 draw();
 ```
 
-## 移动 Translating
+## 移动
 
-![](/@api/deki/files/85/=Canvas_grid_translate.png)
-
-我们先介绍 `translate`方法，它用来移动 canvas 和它的原点到一个不同的位置。
+我们先介绍 `translate` 方法，它用来移动 canvas 和它的原点到一个不同的位置。
 
 - `translate(x, y)`
   - : `translate`方法接受两个参数。*x *是左右偏移量，_y_ 是上下偏移量，如右图所示。
 
+![画布从网格上的原点水平向下向右平移“x”单位，垂直移动“y”单位。](canvas_grid_translate.png)
+
 在做变形之前先保存状态是一个良好的习惯。大多数情况下，调用 restore 方法比手动恢复原先的状态要简单得多。又，如果你是在一个循环中做位移但没有保存和恢复 canvas 的状态，很可能到最后会发现怎么有些东西不见了，那是因为它很可能已经超出 canvas 范围以外了。
 
-### `translate` 的例子
+### `translate` 的示例
 
-这个例子显示了一些移动 canvas 原点的好处。如果不使用 `translate`方法，那么所有矩形都将被绘制在相同的位置（0,0）。`translate`方法同时让我们可以任意放置这些图案，而不需要在 `fillRect()` 方法中手工调整坐标值，既好理解也方便使用。
+这个例子显示了一些移动 canvas 原点的好处。如果不使用 `translate` 方法，那么所有矩形都将被绘制在相同的位置（0,0）。`translate` 方法同时让我们可以任意放置这些图案，而不需要在 `fillRect()` 方法中手工调整坐标值，既好理解也方便使用。
 
-我在 `draw`方法中调用 `fillRect()` 方法 9 次，用了 2 层循环。每一次循环，先移动 canvas，画螺旋图案，然后恢复到原始状态。
+我在 `draw` 方法中调用 `fillRect()` 方法 9 次，用了 2 层循环。每一次循环，先移动 canvas，画螺旋图案，然后恢复到原始状态。
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   for (var i = 0; i < 3; i++) {
     for (var j = 0; j < 3; j++) {
       ctx.save();
-      ctx.fillStyle = 'rgb(' + (51 * i) + ', ' + (255 - 51 * i) + ', 255)';
+      ctx.fillStyle = "rgb(" + 51 * i + ", " + (255 - 51 * i) + ", 255)";
       ctx.translate(10 + j * 50, 10 + i * 50);
       ctx.fillRect(0, 0, 25, 25);
       ctx.restore();
@@ -107,11 +107,11 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_translate_example", "160", "160", "https://mdn.mozillademos.org/files/9857/translate.png")}}
+{{EmbedLiveSample("translate 的示例", "", "160")}}
 
 ## 旋转 Rotating
 
-![](/@api/deki/files/84/=Canvas_grid_rotate.png)
+![](canvas_grid_rotate.png)
 
 第二个介绍 `rotate`方法，它用于以原点为中心旋转 canvas。
 
@@ -120,13 +120,43 @@ draw();
 
 旋转的中心点始终是 canvas 的原点，如果要改变它，我们需要用到 `translate`方法。
 
-### `rotate` 的例子
+### `rotate` 的示例
 
-![](/@api/deki/files/103/=Canvas_rotate.png)
-
-在这个例子里，见右图，我用 `rotate`方法来画圆并构成圆形图案。当然你也可以分别计算出 _x_ 和 _y_ 坐标（`x = r*Math.cos(a); y = r*Math.sin(a)`）。这里无论用什么方法都无所谓的，因为我们画的是圆。计算坐标的结果只是旋转圆心位置，而不是圆本身。即使用 `rotate`旋转两者，那些圆看上去还是一样的，不管它们绕中心旋转有多远。
+在这个例子里，我们将会使用 `rotate()` 方法来画圆并构成圆形图案。当然你也可以分别计算出 _x_ 和 _y_ 坐标（`x = r*Math.cos(a); y = r*Math.sin(a)`）。这里无论用什么方法都无所谓的，因为我们画的是圆。计算坐标的结果只是旋转圆心位置，而不是圆本身。即使用 `rotate`旋转两者，那些圆看上去还是一样的，不管它们绕中心旋转有多远。
 
 这里我们又用到了两层循环。第一层循环决定环的数量，第二层循环决定每环有多少个点。每环开始之前，我都保存一下 canvas 的状态，这样恢复起来方便。每次画圆点，我都以一定夹角来旋转 canvas，而这个夹角则是由环上的圆点数目的决定的。最里层的环有 6 个圆点，这样，每次旋转的夹角就是 360/6 = 60 度。往外每一环的圆点数目是里面一环的 2 倍，那么每次旋转的夹角随之减半。
+
+```js
+function draw() {
+  const ctx = document.getElementById("canvas").getContext("2d");
+
+  // left rectangles, rotate from canvas origin
+  ctx.save();
+  // blue rect
+  ctx.fillStyle = "#0095DD";
+  ctx.fillRect(30, 30, 100, 100);
+  ctx.rotate((Math.PI / 180) * 25);
+  // grey rect
+  ctx.fillStyle = "#4D4E53";
+  ctx.fillRect(30, 30, 100, 100);
+  ctx.restore();
+
+  // right rectangles, rotate from rectangle center
+  // draw blue rect
+  ctx.fillStyle = "#0095DD";
+  ctx.fillRect(150, 30, 100, 100);
+
+  ctx.translate(200, 80); // translate to rectangle center
+  // x = x + 0.5 * width
+  // y = y + 0.5 * height
+  ctx.rotate((Math.PI / 180) * 25); // rotate
+  ctx.translate(-200, -80); // translate back
+
+  // draw grey rect
+  ctx.fillStyle = "#4D4E53";
+  ctx.fillRect(150, 30, 100, 100);
+}
+```
 
 ```html hidden
 <canvas id="canvas" width="300" height="200"></canvas>
@@ -136,30 +166,9 @@ draw();
 draw();
 ```
 
-{{EmbedLiveSample("A_rotate_example", "310", "210", "https://mdn.mozillademos.org/files/9859/rotate.png")}}
+{{EmbedLiveSample("rotate 的示例", "", "220")}}
 
-```js
-function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.translate(75,75);
-
-  for (var i=1;i<6;i++){ // Loop through rings (from inside to out)
-    ctx.save();
-    ctx.fillStyle = 'rgb('+(51*i)+','+(255-51*i)+',255)';
-
-    for (var j=0;j<i*6;j++){ // draw individual dots
-      ctx.rotate(Math.PI*2/(i*6));
-      ctx.beginPath();
-      ctx.arc(0,i*12.5,5,0,Math.PI*2,true);
-      ctx.fill();
-    }
-
-    ctx.restore();
-  }
-}
-```
-
-## 缩放 Scaling
+## 缩放
 
 接着是缩放。我们用它来增减图形在 canvas 中的像素数目，对形状，位图进行缩小或者放大。
 
@@ -170,13 +179,13 @@ function draw() {
 
 默认情况下，canvas 的 1 个单位为 1 个像素。举例说，如果我们设置缩放因子是 0.5，1 个单位就变成对应 0.5 个像素，这样绘制出来的形状就会是原先的一半。同理，设置为 2.0 时，1 个单位就对应变成了 2 像素，绘制的结果就是图形放大了 2 倍。
 
-### `scale` 的例子
+### `scale` 的示例
 
 这最后的例子里，我们用不同的缩放方式来画两个图形。
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // draw a simple rectangle, but scale it.
   ctx.save();
@@ -186,8 +195,8 @@ function draw() {
 
   // mirror horizontally
   ctx.scale(-1, 1);
-  ctx.font = '48px serif';
-  ctx.fillText('MDN', -135, 120);
+  ctx.font = "48px serif";
+  ctx.fillText("MDN", -135, 120);
 }
 ```
 
@@ -199,9 +208,9 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_scale_example", "160", "160", "https://mdn.mozillademos.org/files/9861/scale.png")}}
+{{EmbedLiveSample("scale 的示例", "", "160")}}
 
-## 变形 Transforms
+## 变形
 
 最后一个方法允许对变形矩阵直接修改。
 
@@ -211,7 +220,7 @@ draw();
 
     <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
 
-    如果任意一个参数是[`Infinity`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Infinity)，变形矩阵也必须被标记为无限大，否则会抛出异常。
+    如果任意一个参数是 [`Infinity`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Infinity)，变形矩阵也必须被标记为无限大，否则会抛出异常。
 
     这个函数的参数各自代表如下：
 
@@ -233,18 +242,18 @@ draw();
 - {{domxref("CanvasRenderingContext2D.resetTransform", "resetTransform()")}}
   - : 重置当前变形为单位矩阵，它和调用以下语句是一样的：`ctx.setTransform(1, 0, 0, 1, 0, 0);`
 
-### `transform` / `setTransform` 的例子
+### `transform` 和 `setTransform` 的示例
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
-  var sin = Math.sin(Math.PI/6);
-  var cos = Math.cos(Math.PI/6);
+  var sin = Math.sin(Math.PI / 6);
+  var cos = Math.cos(Math.PI / 6);
   ctx.translate(100, 100);
   var c = 0;
-  for (var i=0; i <= 12; i++) {
-    c = Math.floor(255 / 12 * i);
+  for (var i = 0; i <= 12; i++) {
+    c = Math.floor((255 / 12) * i);
     ctx.fillStyle = "rgb(" + c + "," + c + "," + c + ")";
     ctx.fillRect(0, 0, 100, 10);
     ctx.transform(cos, sin, -sin, cos, 0, 0);
@@ -264,6 +273,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("transform_setTransform_的例子", "230", "280", "https://mdn.mozillademos.org/files/255/Canvas_transform.png")}}
+{{EmbedLiveSample("transform 和 setTransform 的示例", "", "260")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

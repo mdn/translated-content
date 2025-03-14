@@ -1,14 +1,6 @@
 ---
 title: AnalyserNode.frequencyBinCount
 slug: Web/API/AnalyserNode/frequencyBinCount
-tags:
-  - API
-  - AnalyserNode
-  - Property
-  - Reference
-  - Web Audio API
-  - frequencyBinCount
-browser-compat: api.AnalyserNode.frequencyBinCount
 ---
 
 {{APIRef("Web Audio API")}}

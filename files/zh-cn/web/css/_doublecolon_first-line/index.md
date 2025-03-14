@@ -1,11 +1,11 @@
 ---
-title: '::first-line (:first-line)'
+title: ::first-line (:first-line)
 slug: Web/CSS/::first-line
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
-**`::first-line`** [CSS](/zh-CN/docs/Web/CSS) [pseudo-element](/zh-CN/docs/Web/CSS/Pseudo-elements) （CSS 伪元素）在某 [block-level element](/zh-CN/docs/Web/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes) （块级元素）的第一行应用样式。第一行的长度取决于很多因素，包括元素宽度，文档宽度和文本的文字大小。
+**`::first-line`** [CSS](/zh-CN/docs/Web/CSS) [pseudo-element](/zh-CN/docs/Web/CSS/Pseudo-elements) （CSS 伪元素）在某 [block-level element](/zh-CN/docs/Web/CSS/Visual_formatting_model#block-level_elements_and_block_boxes) （块级元素）的第一行应用样式。第一行的长度取决于很多因素，包括元素宽度，文档宽度和文本的文字大小。
 
 和其他所有的 伪元素一样，::first-line 不能匹配任何真实存在的 html 元素。
 
@@ -23,7 +23,8 @@ slug: Web/CSS/::first-line
 
 这个列表将来可能会被扩展，但是推荐的是，你不要使用任何上述没有提到的属性。
 
-> **备注：** 在 CSS 2 中，伪元素是以 : 开头的。由于伪类也遵循同一规则，使得他们之间难以区分。为了解决这个问题，在 CSS 2.1 中，伪元素支持以 :: 开头。现在，使用伪元素时更推荐以 :: 开头，而使用伪类时使用 : 开头。
+> [!NOTE]
+> 在 CSS 2 中，伪元素是以 : 开头的。由于伪类也遵循同一规则，使得他们之间难以区分。为了解决这个问题，在 CSS 2.1 中，伪元素支持以 :: 开头。现在，使用伪元素时更推荐以 :: 开头，而使用伪类时使用 : 开头。
 >
 > 因为过去的浏览器都实现过 CSS 2 的规则，所以现在那些支持 :: 的浏览器通常同时也支持 : 的形式。
 >
@@ -42,14 +43,18 @@ slug: Web/CSS/::first-line
 #### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-sed do eiusmod tempor incididunt ut labore.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore.
+</p>
 ```
 
 #### CSS
 
 ```css
-p::first-line { text-transform: uppercase }
+p::first-line {
+  text-transform: uppercase;
+}
 ```
 
 #### 输出
@@ -63,14 +68,18 @@ p::first-line { text-transform: uppercase }
 #### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-sed do eiusmod tempor incididunt ut labore.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore.
+</p>
 ```
 
 #### CSS
 
 ```css
-p::first-line { margin-left: 20px }
+p::first-line {
+  margin-left: 20px;
+}
 ```
 
 #### 输出
@@ -84,14 +93,18 @@ p::first-line { margin-left: 20px }
 #### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-sed do eiusmod tempor incididunt ut labore.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore.
+</p>
 ```
 
 #### CSS
 
 ```css
-p::first-line { text-indent: 20px }
+p::first-line {
+  text-indent: 20px;
+}
 ```
 
 #### 输出

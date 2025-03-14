@@ -1,22 +1,66 @@
 ---
 title: filter
 slug: Web/CSS/filter
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - SVG
-  - SVG Filter
-  - recipe:css-property
-translation_of: Web/CSS/filter
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`filter`** 속성은 흐림 효과나 색상 변형 등 그래픽 효과를 요소에 적용합니다. 보통 필터는 이미지, 배경, 테두리 렌더링을 조정하는 데 쓰입니다.
 
 CSS 표준은 미리 정의된 효과를 내는 몇 가지 함수를 포함하고 있습니다. [SVG 필터 요소](/ko/docs/Web/SVG/Element/filter)를 가리키는 URL 참조를 사용하여 SVG 필터를 적용할 수도 있습니다.
 
-{{EmbedInteractiveExample("pages/css/filter.html")}}
+{{InteractiveExample("CSS Demo: filter")}}
+
+```css interactive-example-choice
+filter: url("/shared-assets/images/examples/shadow.svg#element-id");
+```
+
+```css interactive-example-choice
+filter: blur(5px);
+```
+
+```css interactive-example-choice
+filter: contrast(200%);
+```
+
+```css interactive-example-choice
+filter: grayscale(80%);
+```
+
+```css interactive-example-choice
+filter: hue-rotate(90deg);
+```
+
+```css interactive-example-choice
+filter: drop-shadow(16px 16px 20px red) invert(75%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <img
+      id="example-element"
+      src="/shared-assets/images/examples/firefox-logo.svg"
+      width="200" />
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-color: #fff;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#example-element {
+  flex: 1;
+  padding: 30px;
+}
+```
 
 ## 구문
 
@@ -75,7 +119,7 @@ filter: url(svg-url#element-id)
 [SVG 필터](/ko/docs/Web/SVG/Element/filter)를 가리키는 URI를 받습니다. 외부 XML 파일에 포함된 필터도 가능합니다.
 
 ```css
-filter: url(resources.svg#c1)
+filter: url(resources.svg#c1);
 ```
 
 ### 필터 함수
@@ -85,7 +129,7 @@ filter: url(resources.svg#c1)
 {{cssxref("filter-function/blur", "blur()")}} 함수는 주어진 이미지에 가우시안 블러를 적용합니다. `radius` 값은 정규 분포의 표준 편차, 즉 화면에서 혼합할 픽셀의 수를 지정하므로 값이 클수록 이미지가 흐려집니다. 보간 시 누락값은 `0`입니다. 매개변수는 CSS 길이로 명시되어 있지만 백분율 값은 받지 않습니다.
 
 ```css
-filter: blur(5px)
+filter: blur(5px);
 ```
 
 ```html hidden
@@ -116,22 +160,30 @@ filter: blur(5px)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:blur(5px);
-  -webkit-filter:blur(5px);
-  -o-filter:blur(5px);
-  -ms-filter:blur(5px);
-  filter:blur(5px); }
+  width: 100%;
+  height: auto;
+  -moz-filter: blur(5px);
+  -webkit-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -152,18 +204,20 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
 ```html
-<svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg">
+<svg
+  style="position: absolute; top: -99999px"
+  xmlns="http://www.w3.org/2000/svg">
   <filter id="svgBlur" x="-5%" y="-5%" width="110%" height="110%">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
+    <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
   </filter>
 </svg>
 ```
@@ -175,16 +229,18 @@ table.standard-table td {
 {{cssxref("filter-function/brightness", "brightness()")}} 함수는 주어진 이미지에 선형 배수를 적용하여 이미지를 밝거나 어둡게 표시합니다. `0%`일 경우 완전히 검은색 이미지가 되고, `100%`일 경우 이미지가 그대로 유지되며, 이외의 값은 효과의 선형 배수로 작용합니다. `100%`보다 큰 값도 허용되며, 이때는 더 밝은 이미지가 생성됩니다. 보간 시 누락값은 `1`입니다.
 
 ```css
-filter: brightness(0.5)
+filter: brightness(0.5);
 ```
 
 ```html
-<svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg">
+<svg
+  style="position: absolute; top: -99999px"
+  xmlns="http://www.w3.org/2000/svg">
   <filter id="brightness">
     <feComponentTransfer>
-      <feFuncR type="linear" slope="[amount]"/>
-      <feFuncG type="linear" slope="[amount]"/>
-      <feFuncB type="linear" slope="[amount]"/>
+      <feFuncR type="linear" slope="[amount]" />
+      <feFuncG type="linear" slope="[amount]" />
+      <feFuncB type="linear" slope="[amount]" />
     </feComponentTransfer>
   </filter>
 </svg>
@@ -222,28 +278,36 @@ filter: brightness(0.5)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:brightness(2);
-  -webkit-filter:brightness(2);
-  -o-filter:brightness(2);
-  -ms-filter:brightness(2);
-  filter:brightness(2); }
+  width: 100%;
+  height: auto;
+  -moz-filter: brightness(2);
+  -webkit-filter: brightness(2);
+  -o-filter: brightness(2);
+  -ms-filter: brightness(2);
+  filter: brightness(2);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
   border-spacing: 0px;
   margin: 0px 0px 1.286em;
-  height:100%;
+  height: 100%;
   width: 85%;
 }
 table.standard-table th {
@@ -258,11 +322,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -270,19 +334,30 @@ table.standard-table td {
 
 #### `contrast()`
 
-{{cssxref("filter-function/constrast", "constrast()")}} 함수는 주어진 이미지의 대비를 조정합니다. `0%`일 경우 완전히 회색 이미지가 되고, `100%`일 경우 이미지가 그대로 유지됩니다. `100%`보다 큰 값도 허용되며, 이때는 대비가 더 큰 이미지가 생성됩니다. 보간 시 누락값은 `1`입니다.
+{{cssxref("filter-function/contrast", "contrast()")}} 함수는 주어진 이미지의 대비를 조정합니다. `0%`일 경우 완전히 회색 이미지가 되고, `100%`일 경우 이미지가 그대로 유지됩니다. `100%`보다 큰 값도 허용되며, 이때는 대비가 더 큰 이미지가 생성됩니다. 보간 시 누락값은 `1`입니다.
 
 ```css
-filter: contrast(200%)
+filter: contrast(200%);
 ```
 
 ```html
-<svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg">
+<svg
+  style="position: absolute; top: -99999px"
+  xmlns="http://www.w3.org/2000/svg">
   <filter id="contrast">
     <feComponentTransfer>
-      <feFuncR type="linear" slope="[amount]" intercept="-(0.5 * [amount]) + 0.5"/>
-      <feFuncG type="linear" slope="[amount]" intercept="-(0.5 * [amount]) + 0.5"/>
-      <feFuncB type="linear" slope="[amount]" intercept="-(0.5 * [amount]) + 0.5"/>
+      <feFuncR
+        type="linear"
+        slope="[amount]"
+        intercept="-(0.5 * [amount]) + 0.5" />
+      <feFuncG
+        type="linear"
+        slope="[amount]"
+        intercept="-(0.5 * [amount]) + 0.5" />
+      <feFuncB
+        type="linear"
+        slope="[amount]"
+        intercept="-(0.5 * [amount]) + 0.5" />
     </feComponentTransfer>
   </filter>
 </svg>
@@ -320,22 +395,30 @@ filter: contrast(200%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:contrast(200%);
-  -webkit-filter:contrast(200%);
-  -o-filter:contrast(200%);
-  -ms-filter:contrast(200%);
-  filter:contrast(200%); }
+  width: 100%;
+  height: auto;
+  -moz-filter: contrast(200%);
+  -webkit-filter: contrast(200%);
+  -o-filter: contrast(200%);
+  -ms-filter: contrast(200%);
+  filter: contrast(200%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -356,11 +439,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -376,22 +459,24 @@ table.standard-table td {
 - `<blur-radius>` (선택)
   - : 세 번째 {{cssxref("&lt;length&gt;")}} 값입니다. 클수록 흐려지는 반경이 커지고 그림자가 옅어집니다. 음수 값은 사용할 수 없습니다. 값을 지정하지 않으면 `0`으로 취급하여 그림자 가장자리가 날카로워집니다.
 - `<color>` (선택)
-  - : 가능한 키워드 및 표기법은 {{cssxref("&lt;color&gt;")}}를 참조하세요. 값을 지정하지 않았을 때의 색상은 브라우저에 따라 다릅니다. 보통 {{cssxref("&lt;color&gt;")}} 속성의 값을 사용하지만, 현재 사파리는 투명한 그림자를 그리는 것을 주의하세요.
+  - : 가능한 키워드 및 표기법은 {{cssxref("&lt;color&gt;")}}를 참조하세요. 값을 지정하지 않았을 때의 색상은 브라우저에 따라 다릅니다. 보통 {{cssxref("&lt;color&gt;")}} 속성의 값을 사용하지만, 현재 Safari는 투명한 그림자를 그리는 것을 주의하세요.
 
 ```css
-filter: drop-shadow(16px 16px 10px black)
+filter: drop-shadow(16px 16px 10px black);
 ```
 
 ```html
-<svg style="position: absolute; top: -999999px" xmlns="http://www.w3.org/2000/svg">
- <filter id="drop-shadow">
-    <feGaussianBlur in="SourceAlpha" stdDeviation="[radius]"/>
-    <feOffset dx="[offset-x]" dy="[offset-y]" result="offsetblur"/>
-    <feFlood flood-color="[color]"/>
-    <feComposite in2="offsetblur" operator="in"/>
+<svg
+  style="position: absolute; top: -999999px"
+  xmlns="http://www.w3.org/2000/svg">
+  <filter id="drop-shadow">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="[radius]" />
+    <feOffset dx="[offset-x]" dy="[offset-y]" result="offsetblur" />
+    <feFlood flood-color="[color]" />
+    <feComposite in2="offsetblur" operator="in" />
     <feMerge>
-      <feMergeNode/>
-      <feMergeNode in="SourceGraphic"/>
+      <feMergeNode />
+      <feMergeNode in="SourceGraphic" />
     </feMerge>
   </filter>
 </svg>
@@ -450,17 +535,24 @@ filter: drop-shadow(16px 16px 10px black)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: drop-shadow(16px 16px 10px black);
   -webkit-filter: drop-shadow(16px 16px 10px black);
   -o-filter: drop-shadow(16px 16px 10px black);
@@ -468,13 +560,13 @@ body {
   filter: drop-shadow(16px 16px 10px black);
 }
 #img12 {
-  width:100%;
-  height:auto;
-  -moz-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  -webkit-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  -o-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  -ms-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
+  width: 100%;
+  height: auto;
+  -moz-filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
+  -webkit-filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
+  -o-filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
+  -ms-filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
+  filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
 }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -499,11 +591,12 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
-#img3, #img13 {
-  height:100%;
+#img3,
+#img13 {
+  height: 100%;
 }
 ```
 
@@ -514,7 +607,7 @@ table.standard-table td {
 {{cssxref("filter-function/grayscale", "grayscale()")}} 함수는 주어진 이미지를 흑백으로 변환합니다. `amount` 값은 흑백으로 전환하는 비율을 지정합니다. `100%`일 경우 완전히 흑백 이미지가 되고, `0%`일 경우 이미지가 그대로 유지되며, 그 사이의 값은 효과의 선형 배수로 작용합니다. 보간 시 누락 값은 `0`입니다.
 
 ```css
-filter: grayscale(100%)
+filter: grayscale(100%);
 ```
 
 ```html hidden
@@ -549,22 +642,30 @@ filter: grayscale(100%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:grayscale(100%);
-  -webkit-filter:grayscale(100%);
-  -o-filter:grayscale(100%);
-  -ms-filter:grayscale(100%);
-  filter:grayscale(100%); }
+  width: 100%;
+  height: auto;
+  -moz-filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -585,11 +686,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -600,7 +701,7 @@ table.standard-table td {
 {{cssxref("filter-function/hue-rotate", "hue-rotate()")}} 함수는 주어진 이미지에 색조 회전을 적용합니다. `angle` 값은 입력 샘플을 조절할 색상환 각도입니다. `0deg`일 경우 이미지가 그대로 유지됩니다. 보간 시 누락 값은 `0`입니다. 최댓값이 존재하지는 않지만, `360deg` 이상의 값은 `0deg`와 `360deg` 사이를 순환합니다.
 
 ```css
-filter: hue-rotate(90deg)
+filter: hue-rotate(90deg);
 ```
 
 ```html hidden
@@ -632,22 +733,30 @@ filter: hue-rotate(90deg)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:hue-rotate(90deg);
-  -webkit-filter:hue-rotate(90deg);
-  -o-filter:hue-rotate(90deg);
-  -ms-filter:hue-rotate(90deg);
-  filter:hue-rotate(90deg); }
+  width: 100%;
+  height: auto;
+  -moz-filter: hue-rotate(90deg);
+  -webkit-filter: hue-rotate(90deg);
+  -o-filter: hue-rotate(90deg);
+  -ms-filter: hue-rotate(90deg);
+  filter: hue-rotate(90deg);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -668,11 +777,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -691,7 +800,7 @@ table.standard-table td {
 {{cssxref("filter-function/invert", "invert()")}} 함수는 주어진 이미지의 색을 반전합니다. `amount` 값이 변형 정도를 지정합니다. `100%`일 경우 색을 정반대로 바꾸고, `0%`일 경우 이미지를 그대로 유지하며, 그 사이의 값은 효과의 선형 배수로 작용합니다. 보간 시 누락 값은 `0`입니다.
 
 ```css
-filter: invert(100%)
+filter: invert(100%);
 ```
 
 ```html hidden
@@ -726,22 +835,30 @@ filter: invert(100%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: invert(100%);
   -webkit-filter: invert(100%);
   -o-filter: invert(100%);
   -ms-filter: invert(100%);
-  filter: invert(100%); }
+  filter: invert(100%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -762,11 +879,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -777,7 +894,7 @@ table.standard-table td {
 {{cssxref("filter-function/opacity", "opacity()")}} 함수는 주어진 이미지의 불투명도를 설정합니다. `amount` 값이 변형 정도를 지정합니다. `0%`일 경우 완전히 투명해지고, `100%`일 경우 이미지를 그대로 유지하며, 그 사이의 값은 효과의 선형 배수로 작용합니다. 즉 주어진 이미지 샘플을 `amount`와 곱하는 것과 같습니다. 보간 시 누락 값은 `1`입니다. 이 함수는 보다 확립된 {{cssxref("opacity")}} 속성과 비슷하지만, 일부 브라우저에서는 필터를 사용했을 때 성능 향상을 위해 하드웨어 가속을 사용한다는 차이점이 있습니다.
 
 ```css
-filter: opacity(50%)
+filter: opacity(50%);
 ```
 
 ```html hidden
@@ -810,22 +927,30 @@ filter: opacity(50%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: opacity(50%);
   -webkit-filter: opacity(50%);
   -o-filter: opacity(50%);
   -ms-filter: opacity(50%);
-  filter: opacity(50%); }
+  filter: opacity(50%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -846,11 +971,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -861,7 +986,7 @@ table.standard-table td {
 {{cssxref("filter-function/saturate", "saturate()")}} 함수는 주어진 이미지의 채도를 변경합니다. `amount` 값이 변형 정도를 지정합니다. `0%`일 경우 완전히 무채색이 되고, `100%`일 경우 이미지를 그대로 유지하며, 그 사이의 값은 효과의 선형 배수로 작용합니다. `100%`보다 큰 값도 허용되며, 이때는 원본보다 채도가 큰 이미지를 생성합니다. 보간 시 누락 값은 `1`입니다.
 
 ```css
-filter: saturate(200%)
+filter: saturate(200%);
 ```
 
 ```html hidden
@@ -893,22 +1018,30 @@ filter: saturate(200%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: saturate(200%);
   -webkit-filter: saturate(200%);
   -o-filter: saturate(200%);
   -ms-filter: saturate(200%);
-  filter: saturate(200%); }
+  filter: saturate(200%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -929,11 +1062,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -944,7 +1077,7 @@ table.standard-table td {
 {{cssxref("filter-function/sepia", "sepia()")}} 함수는 주어진 이미지를 세피아로 변환합니다. `amount` 값이 변형 정도를 지정합니다. `100%`일 경우 완전히 세피아가 되고, `0%`에서는 이미지를 그대로 유지하며, 그 사이의 값은 효과의 선형 배수로 작용합니다. 보간 시 누락 값은 `0`입니다.
 
 ```css
-filter: sepia(100%)
+filter: sepia(100%);
 ```
 
 ```html hidden
@@ -979,22 +1112,30 @@ filter: sepia(100%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: sepia(100%);
   -webkit-filter: sepia(100%);
   -o-filter: sepia(100%);
   -ms-filter: sepia(100%);
-  filter: sepia(100%); }
+  filter: sepia(100%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -1015,11 +1156,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -1030,7 +1171,7 @@ table.standard-table td {
 원하는 만큼 함수를 조합해서 그려지는 모습을 바꿀 수 있습니다. 다음 에제는 이미지의 대비와 밝기를 동시에 높입니다.
 
 ```css
-filter: contrast(175%) brightness(103%)
+filter: contrast(175%) brightness(103%);
 ```
 
 ```html hidden
@@ -1044,9 +1185,30 @@ filter: contrast(175%) brightness(103%)
   </thead>
   <tbody>
     <tr>
-      <td><img alt="Test_Form_8.jpeg" id="img1" class="internal default" src="/files/3729/Test_Form_8.jpeg" style="width: 100%;" /></td>
-      <td><img alt="Test_Form_8.jpg" id="img2" class="internal default" src="/files/3729/Test_Form_8.jpeg" style="width: 100%;" /></td>
-      <td><img alt="Test_Form_8_s.jpg" id="img4" class="internal default" src="/files/3730/Test_Form_8_s.jpeg" style="width: 100%;" /></td>
+      <td>
+        <img
+          alt="Test_Form_8.jpeg"
+          id="img1"
+          class="internal default"
+          src="/files/3729/Test_Form_8.jpeg"
+          style="width: 100%;" />
+      </td>
+      <td>
+        <img
+          alt="Test_Form_8.jpg"
+          id="img2"
+          class="internal default"
+          src="/files/3729/Test_Form_8.jpeg"
+          style="width: 100%;" />
+      </td>
+      <td>
+        <img
+          alt="Test_Form_8_s.jpg"
+          id="img4"
+          class="internal default"
+          src="/files/3730/Test_Form_8_s.jpeg"
+          style="width: 100%;" />
+      </td>
     </tr>
   </tbody>
 </table>
@@ -1054,17 +1216,24 @@ filter: contrast(175%) brightness(103%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: contrast(175%) brightness(103%);
   -webkit-filter: contrast(175%) brightness(103%);
   -o-filter: contrast(175%) brightness(103%);
@@ -1091,11 +1260,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -1153,4 +1322,4 @@ URL 함수와 SVG 리소스를 사용하는 방법은 다음과 같습니다.
 - [HTML 콘텐츠에 SVG 효과 적용하기](/ko/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
 - {{cssxref("mask")}} 속성
 - [SVG](/ko/docs/Web/SVG)
-- [Understanding CSS filters](http://www.html5rocks.com/en/tutorials/filters/understanding-css/) (HTML5Rocks! 글)
+- [Understanding CSS filters](https://www.html5rocks.com/en/tutorials/filters/understanding-css/) (HTML5Rocks! 글)

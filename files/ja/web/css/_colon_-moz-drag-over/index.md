@@ -1,6 +1,8 @@
 ---
-title: ':-moz-drag-over'
+title: :-moz-drag-over
 slug: Web/CSS/:-moz-drag-over
+l10n:
+  sourceCommit: 469d7dd1064fb2911aca110e1d653e19f3438ca5
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -10,7 +12,9 @@ slug: Web/CSS/:-moz-drag-over
 ## 構文
 
 ```css
-:-moz-drag-over
+:-moz-drag-over {
+  /* ... */
+}
 ```
 
 ## 例
@@ -18,32 +22,72 @@ slug: Web/CSS/:-moz-drag-over
 ### HTML
 
 ```html
-<table border="1">
-  <tr>
-    <td width="100px" height="100px">Drag Over</td>
-  </tr>
-</table>
+<div id="drop-target">
+  <p>Drop target</p>
+</div>
+
+<div draggable="true">
+  <p>Draggable</p>
+</div>
+```
+
+### JavaScript
+
+ほとんどの要素はデータをドロップするのに妥当な場所ではないため、ドロップを許可するには、[`dragenter`](/ja/docs/Web/API/HTMLElement/dragenter_event) イベントまたは [`dragover`](/ja/docs/Web/API/HTMLElement/dragover_event) イベント (またはその両方) を取り消すことで既定の動作を防ぐ必要があります。
+この例では、`dragenter` イベントを取り消すだけです。これは、要素がドロップ対象になるかどうかをブラウザーが評価するときに最初に発生するイベントです。
+詳細情報については、ドラッグ処理を運営しています： ドロップ対象を指定します。
+詳しくは、[ドラッグ操作: ドロップ先の指定](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#ドロップ先の指定)を参照してください。
+
+```js
+const target = document.getElementById("drop-target");
+/* dragenter イベントはドロップ先に発生する */
+target.addEventListener(
+  "dragenter",
+  (event) => {
+    // ドロップを受け付けるために、既定の動作が出て来ないようにする
+    event.preventDefault();
+  },
+  false,
+);
 ```
 
 ### CSS
 
 ```css
-td:-moz-drag-over {
-  color: red;
+body {
+  font-family: arial;
+}
+div {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border: 2px dotted black;
+  background-color: aquamarine;
+  margin: 1rem;
+}
+p {
+  padding: 1rem;
+}
+```
+
+以下の CSS は、ドラッグ可能な要素がドロップ領域に重なったときに、ドロップ対象の色を赤に変更します。
+
+```css
+#drop-target {
+  background-color: cornflowerblue;
+}
+#drop-target:-moz-drag-over {
+  background-color: red;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("Examples", "100%", "200px")}}
 
 ## 仕様書
 
 いずれの標準にも含まれていません。
-
-## ブラウザーの互換性
-
-{{Compat}}
 
 ## 関連情報
 

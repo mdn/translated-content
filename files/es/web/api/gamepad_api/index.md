@@ -35,9 +35,9 @@ Ver también las [extensiones para la interfaz del navegador](/es/docs/Web/API/G
 #### Eventos del Window
 
 - {{domxref("Window.ongamepadconnected")}}
-  - : Representa un manejador de evento que se ejecutará cuando un gamepad es conectado (cuando se dispara el evento [`gamepadconnected`](/es/docs/Web/Reference/Events/gamepadconnected)).
+  - : Representa un manejador de evento que se ejecutará cuando un gamepad es conectado (cuando se dispara el evento [`gamepadconnected`](/es/docs/Web/API/Window/gamepadconnected_event)).
 - {{domxref("Window.ongamepaddisconnected")}}
-  - : Representa un manejador de evento que se ejecutará cuando un gamepad es desconectado (cuando se dispara el evento [`gamepaddisconnected`](/es/docs/Web/Reference/Events/gamepaddisconnected)).
+  - : Representa un manejador de evento que se ejecutará cuando un gamepad es desconectado (cuando se dispara el evento [`gamepaddisconnected`](/es/docs/Web/API/Window/gamepaddisconnected_event)).
 
 ## Guías y tutoriales
 
@@ -48,9 +48,9 @@ Ver también las [extensiones para la interfaz del navegador](/es/docs/Web/API/G
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Gamepad")}}
+{{Compat}}
 
 ## Ver también
 

@@ -3,11 +3,11 @@ title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 ---
 
-{{JSRef("Global_Objects", "String")}}
+{{JSRef}}
 
 ## Resumo
 
-O método `match()` retorna uma correspondência entre uma string com uma [expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions).
+O método `match()` retorna uma correspondência entre uma string com uma [expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions).
 
 ## Sintaxe
 
@@ -19,7 +19,7 @@ str.match(regexp);
 
 - `regexp`
 
-  - : Um objeto de [expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions). Se _`regexp`_ não for uma **`RegExp`**, o mesmo será convertido para uma nova RegExp usando `new RegExp(regexp)`.
+  - : Um objeto de [expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions). Se _`regexp`_ não for uma **`RegExp`**, o mesmo será convertido para uma nova RegExp usando `new RegExp(regexp)`.
 
     Se você não fornecer nenhum parâmetro ao usar o método `match()`, você obterá um {{jsxref ("Array")}} com uma string vazia: `[""]`.
 
@@ -38,7 +38,7 @@ str.match(regexp);
 Conforme explicado acima, alguns resultados contêm propriedades adicionais conforme descrito abaixo.
 
 - `groups`
-  - : Um objeto de grupos de captura nomeados cujas chaves são os nomes, e valores são os grupos de captura ou {{jsxref ("undefined")}} se nenhum grupo de captura nomeado foi definido. Consulte [Grupos e Intervalos](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) para obter mais informações.
+  - : Um objeto de grupos de captura nomeados cujas chaves são os nomes, e valores são os grupos de captura ou {{jsxref ("undefined")}} se nenhum grupo de captura nomeado foi definido. Consulte [Grupos e Intervalos](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) para obter mais informações.
 - `index`
   - : O índice da pesquisa em que o resultado foi encontrado.
 - `input`
@@ -93,14 +93,15 @@ console.log(matches_array);
 // ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
 ```
 
-> **Nota:** Veja também {{jsxref("String.prototype.matchAll()")}} e [Pesquisa avançada com sinalizadores](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions#Pesquisa_avan%C3%A7ada_com_Flags).
+> [!NOTE]
+> Veja também {{jsxref("String.prototype.matchAll()")}} e [Pesquisa avançada com sinalizadores](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions#Pesquisa_avan%C3%A7ada_com_Flags).
 
 ### Usando grupos de captura nomeados
 
 Em navegadores que suportam grupos de captura nomeados, o código a seguir captura "`fox`" ou "`cat`" em um grupo denominado "`animal`":
 
 ```js
-const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
+const paragraph = "The quick brown fox jumps over the lazy dog. It barked.";
 
 const capturingRegex = /(?<animal>fox|cat) jumps over/;
 const found = paragraph.match(capturingRegex);
@@ -112,7 +113,7 @@ console.log(found.groups); // {animal: "fox"}
 ```js
 const str = "nada se perde, tudo se transforma";
 
-str.match();  // retorna [""]
+str.match(); // retorna [""]
 ```
 
 ### Um objeto não-RegExp como parâmetro
@@ -122,30 +123,27 @@ Quando o parâmetro _`regexp`_ é uma string ou um número, ele é convertido im
 Se for um número positivo com um sinal positivo, `RegExp()` irá ignorar o sinal positivo.
 
 ```js
-const str1 = "NaN significa 'não é um número'. Infinity contem -Infinity e +Infinity em JavaScript.";
+const str1 =
+  "NaN significa 'não é um número'. Infinity contem -Infinity e +Infinity em JavaScript.";
 const str2 = "Meu avô tem 65 anos e minha avô tem 63.";
 const str3 = "O contrato foi declarado null (nulo) e void (sem efeito)";
-str1.match("número");   // "número" é um string. retorna ["número"]
-str1.match(NaN);        // o tipo de NaN é um número. retorna ["NaN"]
-str1.match(Infinity);   // o tipo de Infinity é um número. retorna ["Infinity"]
-str1.match(+Infinity);  // retorna ["Infinity"]
-str1.match(-Infinity);  // retorna ["-Infinity"]
-str2.match(65);         // retorna ["65"]
-str2.match(+65);        // Um número com sinal positivo. retorna ["65"]
-str3.match(null);       // retorna ["null"]
+str1.match("número"); // "número" é um string. retorna ["número"]
+str1.match(NaN); // o tipo de NaN é um número. retorna ["NaN"]
+str1.match(Infinity); // o tipo de Infinity é um número. retorna ["Infinity"]
+str1.match(+Infinity); // retorna ["Infinity"]
+str1.match(-Infinity); // retorna ["-Infinity"]
+str2.match(65); // retorna ["65"]
+str2.match(+65); // Um número com sinal positivo. retorna ["65"]
+str3.match(null); // retorna ["null"]
 ```
 
 ## Especificações
 
-| Especificações                                                                                       | Estado                   | Comentário                                        |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------- |
-| ECMAScript 3rd Edition.                                                                              | Standard                 | Definição inicial. Implementado no JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-15.5.4.10', 'String.prototype.match')}}             | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-string.prototype.match', 'String.prototype.match')}} | {{Spec2('ES6')}}     |                                                   |
+{{Specifications}}
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.match")}}
+{{Compat}}
 
 ## Veja também
 

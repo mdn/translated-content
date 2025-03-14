@@ -5,7 +5,8 @@ slug: Web/CSS/page-break-inside
 
 {{CSSRef}}
 
-> **警告:** このプロパティは {{cssxref("break-inside")}} プロパティによって置き換えられました。
+> [!WARNING]
+> このプロパティは {{cssxref("break-inside")}} プロパティによって置き換えられました。
 
 CSS の **`page-break-inside`** プロパティは、現在の要素の*内側の* 改ページを調整します。
 
@@ -19,6 +20,87 @@ page-break-inside: inherit;
 page-break-inside: initial;
 page-break-inside: revert;
 page-break-inside: unset;
+```
+
+{{InteractiveExample("CSS Demo: page-break-inside")}}
+
+```css interactive-example-choice
+page-break-inside: auto;
+```
+
+```css interactive-example-choice
+page-break-inside: avoid;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div>
+    <p>
+      The effect of this property can be noticed when the document is being
+      printed or a preview of a print is displayed.
+    </p>
+    <button id="print-btn">Show Print Preview</button>
+    <div class="box-container">
+      <div class="box">Content before the property</div>
+      <div class="box" id="example-element">
+        Content with 'page-break-inside'
+      </div>
+      <div class="box">Content after the property</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.box {
+  border: solid #5b6dcd 5px;
+  background-color: #5b6dcd;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+#example-element {
+  border: solid 5px #ffc129;
+  background-color: #ffc129;
+  color: black;
+}
+
+.hide-element {
+  display: none;
+}
+
+@media print {
+  #example-element {
+    height: 25cm;
+  }
+}
+```
+
+```js interactive-example
+const btn = document.getElementById("print-btn");
+const editorContainer = document.getElementsByClassName(
+  "css-editor-container",
+)[0];
+const exampleHTMLElement = document.getElementById("default-example");
+
+const printableSection = document.createElement("div");
+printableSection.setAttribute("id", "printable-section");
+printableSection.classList.add("hide-element");
+document.body.appendChild(printableSection);
+
+btn.addEventListener("click", () => {
+  const exampleContent = exampleHTMLElement.innerHTML;
+
+  editorContainer.classList.add("hide-element");
+  printableSection.innerHTML = exampleContent;
+  printableSection.classList.remove("hide-element");
+
+  window.print();
+
+  printableSection.classList.add("hide-element");
+  printableSection.innerHTML = "";
+  editorContainer.classList.remove("hide-element");
+});
 ```
 
 ## 構文
@@ -62,16 +144,18 @@ page-break-inside: unset;
     <span>リスト</span>
     <ol>
       <li>one</li>
-<!--       <li>two</li> -->
+      <!-- <li>two</li> -->
     </ol>
   </section>
   <ul>
     <li>one</li>
-<!--     <li>two</li> -->
+    <!-- <li>two</li> -->
   </ul>
   <p>Tこれは第二段落です。</p>
   <p>これは第三段落です。文章の量が多くなっています。</p>
-  <p>これは第四段落です。第三段落よりも、さらにもう少しだけ、文章の量が多くなっています。</p>
+  <p>
+    これは第四段落です。第三段落よりも、さらにもう少しだけ、文章の量が多くなっています。
+  </p>
 </div>
 ```
 
@@ -86,7 +170,10 @@ page-break-inside: unset;
   column-width: 100px;
 }
 
-.list, ol, ul, p {
+.list,
+ol,
+ul,
+p {
   break-inside: avoid;
 }
 
@@ -94,7 +181,9 @@ p {
   background-color: #8ca0ff;
 }
 
-ol, ul, .list {
+ol,
+ul,
+.list {
   margin: 0.5em 0;
   display: block;
   background-color: orange;

@@ -1,24 +1,32 @@
 ---
 title: Multiplication (*)
 slug: Web/JavaScript/Reference/Operators/Multiplication
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.multiplication
 ---
 
 {{jsSidebar("Operators")}}
 
 L'opérateur de multiplication (`*`) fournit le produit de la multiplication des deux opérandes.
 
-{{EmbedInteractiveExample("pages/js/expressions-multiplication.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Multiplication operator")}}
+
+```js interactive-example
+console.log(3 * 4);
+// Expected output: 12
+
+console.log(-3 * 4);
+// Expected output: -12
+
+console.log("3" * 2);
+// Expected output: 6
+
+console.log("foo" * 2);
+// Expected output: NaN
+```
 
 ## Syntaxe
 
 ```js
-Opérateur : x * y
+Opérateur: x * y;
 ```
 
 ## Exemples
@@ -26,21 +34,21 @@ Opérateur : x * y
 ### Avec des nombres
 
 ```js
- 2 * 2      // 4
--2 * 2     // -4
+2 * 2; // 4
+-2 * 2; // -4
 ```
 
 ### Avec l'infini
 
 ```js
-Infinity * 0         // NaN
-Infinity * Infinity  // Infinity
+Infinity * 0; // NaN
+Infinity * Infinity; // Infinity
 ```
 
 ### Avec des valeurs non-numériques
 
 ```js
-'foo' * 2 // NaN
+"foo" * 2; // NaN
 ```
 
 ## Spécifications

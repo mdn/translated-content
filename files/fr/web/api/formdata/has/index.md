@@ -1,22 +1,16 @@
 ---
 title: FormData.has()
 slug: Web/API/FormData/has
-tags:
-  - API
-  - FormData
-  - Méthode
-  - Reference
-  - XHR
-  - XMLHttpRequest
-  - has
-translation_of: Web/API/FormData/has
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 La méthode **`has()`** de l'interface {{domxref("FormData")}} renvoie un booléen indiquant si un objet `FormData` contient une certaine clé.
 
-> **Note :** Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 
 ## Syntaxe
 
@@ -44,9 +38,9 @@ var formData = new FormData();
 L'extrait suivant montre les résultats des tests effectués pour vérifier l'existence d'un `username` dans l'objet FormData, avant et après avoir ajouté une valeur `username` avec {{domxref("FormData.append")}} :
 
 ```js
-formData.has('username'); // Retourne false
-formData.append('username', 'Chris');
-formData.has('username'); // Retourne true
+formData.has("username"); // Retourne false
+formData.append("username", "Chris");
+formData.has("username"); // Retourne true
 ```
 
 ## Spécifications
@@ -60,6 +54,6 @@ formData.has('username'); // Retourne true
 ## Voir aussi
 
 - {{domxref("XMLHTTPRequest")}}
-- [Utilisation de XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest)
-- [Utilisation des objects FormData](/fr/docs/Web/API/FormData/Utilisation_objets_FormData)
+- [Utilisation de XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Utilisation des objects FormData](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

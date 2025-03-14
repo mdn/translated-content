@@ -1,23 +1,18 @@
 ---
 title: 명시도
 slug: Web/CSS/Specificity
-tags:
-  - CSS
-  - Example
-  - Guide
-  - Reference
-  - Web
-translation_of: Web/CSS/Specificity
 ---
+
 {{cssref}}
 
-**명시도**란 브라우저가 어느 요소와 가장 연관된 속성을 찾는 수단으로, 이렇게 찾은 속성이 해당 요소에 적용됩니다. 명시도는 여러 종류의 [CSS 선택자](/ko/docs/Web/CSS/CSS_Reference#Selectors)로 구성된 일치 규칙에 기반합니다.
+**명시도**란 브라우저가 어느 요소와 가장 연관된 속성을 찾는 수단으로, 이렇게 찾은 속성이 해당 요소에 적용됩니다. 명시도는 여러 종류의 [CSS 선택자](/ko/docs/Web/CSS/Reference#selectors)로 구성된 일치 규칙에 기반합니다.
 
 ## 어떻게 계산되는가?
 
 명시도는 주어진 CSS 선언에 적용되는 가중치(weight)로, 일치하는 선택자 내 각 [선택자 유형](#selector-type)의 수에 의해 결정됩니다. 여러 선언이 명시도가 같은 경우, CSS에서 맨 끝에 오는 선언이 요소에 적용됩니다. 명시도는 같은 요소가 여러 선언의 대상이 되는 경우에만 적용합니다. CSS 규칙에 따라 [직접 대상 요소](#directly-targeted-elements)는 요소가 부모로부터 상속받는 규칙보다 항상 우선합니다.
 
-> **참고:** **주의:** 문서 트리 내 [요소의 근접도(proximity, 가까움)](#tree-proximity-ignorance)는 명시도에 영향이 없습니다.
+> [!NOTE]
+> 문서 트리 내 [요소의 근접도(proximity, 가까움)](#tree-proximity-ignorance)는 명시도에 영향이 없습니다.
 
 ### 선택자 유형
 
@@ -49,26 +44,36 @@ translation_of: Web/CSS/Specificity
 1. CSS 종속cascading을 더 잘 활용하세요.
 2. 더 명시된(명확한) 규칙을 쓰세요. 선택 중인 요소 앞에 하나 이상의 요소를 나타냄으로써 규칙은 더 명확해지고 더 높은 우선 순위를 얻습니다:
 
-    ```html
-    <div id="test">
-      <span>Text</span>
-    </div>
-    ```
+   ```html
+   <div id="test">
+     <span>Text</span>
+   </div>
+   ```
 
-    ```css
-    div#test span { color: green; }
-    div span { color: blue; }
-    span { color: red; }
-    ```
+   ```css
+   div#test span {
+     color: green;
+   }
+   div span {
+     color: blue;
+   }
+   span {
+     color: red;
+   }
+   ```
 
-    순서와 무관하게 첫 번째 규칙이 가장 명확하므로 텍스트는 녹색이 됩니다. (또한, 역시 순서와 무관하게 파란색 규칙이 빨간색 규칙보다 우선합니다.)
+   순서와 무관하게 첫 번째 규칙이 가장 명확하므로 텍스트는 녹색이 됩니다. (또한, 역시 순서와 무관하게 파란색 규칙이 빨간색 규칙보다 우선합니다.)
 
 3. (2)의 말도 안 되는 특별한 경우로, 더 이상 명시할 요소가 없는 경우 간단한 선택자를 여러 번 써서 명시도를 높일 수 있습니다.
 
-    ```css
-    #myId#myId span { color: yellow; }
-    .myClass.myClass span { color: orange; }
-    ```
+   ```css
+   #myId#myId span {
+     color: yellow;
+   }
+   .myClass.myClass span {
+     color: orange;
+   }
+   ```
 
 #### `!important`를 사용하는 때
 
@@ -88,7 +93,7 @@ translation_of: Web/CSS/Specificity
 }
 ```
 
-여러 자바스크립트 프레임워크와 라이브러리에서 인라인 스타일을 추가합니다. 이런 인라인 스타일을 덮어쓸 때 매우 구체적인 선택자와 함께 `!important`를 사용할 수 있습니다.
+여러 JavaScript 프레임워크와 라이브러리에서 인라인 스타일을 추가합니다. 이런 인라인 스타일을 덮어쓸 때 매우 구체적인 선택자와 함께 `!important`를 사용할 수 있습니다.
 
 ##### B) 명시도가 높은 규칙을 재정의할 때
 
@@ -109,15 +114,23 @@ p.awesome {
 A) 태그, ID나 클래스를 추가함으로써 명시도가 더 높은 !important한 CSS 규칙을 만듭니다.
 
 ```css
-table td    { height: 50px !important; }
-.myTable td { height: 50px !important; }
-#myTable td { height: 50px !important; }
+table td {
+  height: 50px !important;
+}
+.myTable td {
+  height: 50px !important;
+}
+#myTable td {
+  height: 50px !important;
+}
 ```
 
 B) 혹은 기존의 선택자 아래에 똑같은 선택자를 하나 더 만듭니다(명시도가 같으면 나중에 정의된 규칙이 우선하므로).
 
 ```css
-td { height: 50px !important; }
+td {
+  height: 50px !important;
+}
 ```
 
 C) 아니면 기존 규칙을 수정해서 아예 `!important`를 사용하지 않게 만드는 것이 더 좋은 방법입니다.
@@ -134,7 +147,7 @@ p.awesome {
 
 ID를 ID 선택자 대신 속성 선택자로 선택하면 클래스 1개와 같은 명시도가 됩니다. 두 선택자의 명시도가 같아졌으므로 나중에 오는 규칙이 우선합니다.
 
-#### 아래에서 자세한 정보를 확인하세요:
+#### 아래에서 자세한 정보를 확인하세요
 
 - <https://stackoverflow.com/questions/3706819/what-are-the-implications-of-using-important-in-css>
 - <https://stackoverflow.com/questions/9245353/what-does-important-in-css-mean>
@@ -150,7 +163,7 @@ ID를 ID 선택자 대신 속성 선택자로 선택하면 클래스 1개와 같
 
 ```css
 div.outer p {
-  color:orange;
+  color: orange;
 }
 div:not(.outer) p {
   color: lime;
@@ -201,7 +214,13 @@ div p {
 
 ```html hidden
 <div id="no-where-support">
-⚠️ Your browser doesn't support the <code><a href="https://developer.mozilla.org/docs/Web/CSS/:where" target="_top">:where()</a></code> pseudo-class.
+  ⚠️ Your browser doesn't support the
+  <code
+    ><a href="https://developer.mozilla.org/docs/Web/CSS/:where" target="_top"
+      >:where()</a
+    ></code
+  >
+  pseudo-class.
 </div>
 ```
 
@@ -260,9 +279,9 @@ html h1 {
 
 ```html
 <html>
-<body>
-  <h1>Here is a title!</h1>
-</body>
+  <body>
+    <h1>Here is a title!</h1>
+  </body>
 </html>
 ```
 
@@ -289,9 +308,9 @@ h1 {
 
 ```html
 <html>
-<body id="parent">
-  <h1>Here is a title!</h1>
-</body>
+  <body id="parent">
+    <h1>Here is a title!</h1>
+  </body>
 </html>
 ```
 
@@ -315,11 +334,11 @@ h1 {
   - [@규칙](/ko/docs/Web/CSS/At-rule)
   - [주석](/ko/docs/Web/CSS/Comments)
   - [명시도](/ko/docs/Web/CSS/Specificity)
-  - [상속](/ko/docs/Web/CSS/inheritance)
-  - [박스 모델](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [상속](/ko/docs/Web/CSS/Inheritance)
+  - [박스 모델](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [레이아웃 모드](/ko/docs/Web/CSS/Layout_mode)
   - [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)
-  - [마진 중첩](/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [마진 중첩](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 값
 
     - [초깃값](/ko/docs/Web/CSS/initial_value)

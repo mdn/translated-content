@@ -9,7 +9,7 @@ SVG 绘图中的每个窗口元素或图形元素都可以提供一个`title`描
 
 通常`title`元素必须是它的父元素的第一个子元素。注意，只有当`title`是它的父元素的第一个子元素的时候，那些编译器才会把`title`显示为一个提示冒泡。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
@@ -31,17 +31,17 @@ SVG 绘图中的每个窗口元素或图形元素都可以提供一个`title`描
 
 ### 全局属性
 
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
 ### 专有属性
 
-_没有专有属性_
+_没有专有属性。_
 
 ## DOM 接口
 
-该元素实现了[`SVGTitleElement`](/zh-CN/DOM/SVGTitleElement)接口。
+该元素实现了 [`SVGTitleElement`](/zh-CN/docs/DOM/SVGTitleElement) 接口。
 
 ## 浏览器兼容性
 

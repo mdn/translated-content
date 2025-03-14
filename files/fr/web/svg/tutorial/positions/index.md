@@ -1,19 +1,15 @@
 ---
 title: Positionnement
 slug: Web/SVG/Tutorial/Positions
-tags:
-  - Débutant
-  - SVG
-  - SVG:Tutoriel
-translation_of: Web/SVG/Tutorial/Positions
-original_slug: Web/SVG/Tutoriel/Positionnement
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("SVG/Tutoriel/Premiers_pas", "SVG/Tutoriel/Formes_de_base") }}
 
 ### La grille
 
-Pour chaque élément, SVG utilise un ensemble de coordonnées aussi appelé grille assez similaire à ce qui est utilisé dans [canvas](/fr/HTML/Canvas) (et par tout un tas d'autres routines de dessin informatique). Dans le cas présent, le point en haut à gauche est considéré comme le point (0,0) ou point d'origine. Le positionnement est ensuite mesuré en pixel, depuis le coin supérieur gauche. Les valeurs positives de x vont vers la droite, les valeurs positives de y vont vers le bas. Notez que tout ceci est un peu contraire à la géométrie que l'on vous a enseignée. Ici, le positionnement fonctionne de la même manière que pour les éléments HTML.
+Pour chaque élément, SVG utilise un ensemble de coordonnées aussi appelé grille assez similaire à ce qui est utilisé dans [canvas](/fr/docs/Web/API/Canvas_API) (et par tout un tas d'autres routines de dessin informatique). Dans le cas présent, le point en haut à gauche est considéré comme le point (0,0) ou point d'origine. Le positionnement est ensuite mesuré en pixel, depuis le coin supérieur gauche. Les valeurs positives de x vont vers la droite, les valeurs positives de y vont vers le bas. Notez que tout ceci est un peu contraire à la géométrie que l'on vous a enseignée. Ici, le positionnement fonctionne de la même manière que pour les éléments HTML.
 
 ![](canvas_default_grid.png)
 
@@ -32,13 +28,13 @@ Dans le cas le plus basique, un pixel dans un document SVG correspond à un pixe
 Par défaut, l'unité utilisateur correspond à l'unité de l'écran. Pour modifier ce comportement de manière explicite, il existe plusieurs méthodes en SVG. Commençons par l'élément racine `svg` :
 
 ```html
-<svg width="100" height="100">
+<svg width="100" height="100"></svg>
 ```
 
 La déclaration suivante crée un élément SVG d'une taille de 100px par 100px. Ici, une unité utilisateur correspond à l'unité de l'écran.
 
 ```html
-<svg width="200" height="200" viewBox="0 0 100 100">
+<svg width="200" height="200" viewBox="0 0 100 100"></svg>
 ```
 
 L'image SVG suivante fait 200px par 200px. Toutefois, l'attribut `viewBox` définit que cet élément de 200 par 200 commence au point (0,0) et s'étend sur une grille de 100 unités sur 100 unités vers la droite et vers le bas de l'écran. 100 unités représentant 200 pixels, chaque unité vaut deux pixels : cela permet de doubler la taille de l'image.

@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
 
 O método `trimStart()` remove espaços do começo de uma _string_. `trimLeft()` é um apelido para este método.
 
-{{EmbedInteractiveExample("pages/js/string-trimstart.html")}}
+{{InteractiveExample("JavaScript Demo: String.trimStart()")}}
+
+```js interactive-example
+const greeting = "   Hello world!   ";
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trimStart());
+// Expected output: "Hello world!   ";
+```
 
 ## Sintaxe
 
@@ -37,20 +47,21 @@ String.prototype.trimLeft.name === "trimStart";
 ```js
 //https://github.com/FabioVergani/js-Polyfill_String-trimStart
 
-(function(w){
-    var String=w.String, Proto=String.prototype;
+(function (w) {
+  var String = w.String,
+    Proto = String.prototype;
 
-    (function(o,p){
-        if(p in o?o[p]?false:true:true){
-            var r=/^\s+/;
-            o[p]=o.trimLeft||function(){
-                return this.replace(r,'')
-            }
-        }
-    })(Proto,'trimStart');
-
+  (function (o, p) {
+    if (p in o ? (o[p] ? false : true) : true) {
+      var r = /^\s+/;
+      o[p] =
+        o.trimLeft ||
+        function () {
+          return this.replace(r, "");
+        };
+    }
+  })(Proto, "trimStart");
 })(window);
-
 
 /*
 ES6:
@@ -77,24 +88,22 @@ ES6:
 O seguinte exemplo mostra uma _string_ em caixa baixa `'foo '`:
 
 ```js
-var str = '   foo  ';
+var str = "   foo  ";
 
 console.log(str.length); // retorna 8
 
 str = str.trimStart();
 console.log(str.length); // retorna 5
-console.log(str);        // retorna 'foo  '
+console.log(str); // retorna 'foo  '
 ```
 
 ## Especificações
 
-| Especificação                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.trimstart', ' String.prototype.trimStart')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.trimStart")}}
+{{Compat}}
 
 ## Veja também
 

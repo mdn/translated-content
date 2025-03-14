@@ -1,160 +1,172 @@
 ---
 title: 使用 CSS 为 HTML 元素应用颜色
-slug: Web/CSS/CSS_Colors/Applying_color
-original_slug: Web/HTML/Applying_color
+slug: Web/CSS/CSS_colors/Applying_color
+l10n:
+  sourceCommit: 2b214f76937f16327c4338ae4a541f54bcf4bf63
 ---
 
-{{HTMLSidebar}}
+{{CSSRef}}
 
-色彩的运用是人类表达的一种基本形式。小孩子在学会绘画前就开始尝试色彩的运用。也许这就是为什么颜色是人们在学习开发网站时最想尝试的东西之一。借助 [CSS](/zh-CN/docs/Web/CSS)，有很多方法可以为 [HTML](/zh-CN/docs/Web/HTML) [元素](/zh-CN/docs/Web/HTML/Element) 添加颜色，以创建所需的外观。本文是一篇入门文章，介绍了 CSS 颜色在 HTML 中的各种使用方法。
+本文主要介绍 HTML 中使用 CSS 颜色的各种方法。
 
-幸运的是，在 HTML 中添加颜色非常容易，而且几乎可以加在任何地方。
+色彩的运用是人类表达的一种基本形式。小孩子在学会绘画前就开始尝试色彩的运用。也许这就是为什么颜色是人们在学习开发网站时最想尝试的东西之一。借助 [CSS](/zh-CN/docs/Web/CSS)，有很多方法可以为 [HTML](/zh-CN/docs/Web/HTML) [元素](/zh-CN/docs/Web/HTML/Element)添加颜色，以创建所需的外观。
 
-我们将会谈及添加颜色所需要的大部分内容，包括 [一系列可以着色的元素与相关的 CSS 属性](#可设置颜色的内容)，[如何描述颜色](#如何描述颜色)，以及[在样式表与脚本中使用颜色的方法](#使用颜色)。同时我们还会了解如何[让用户选择颜色](#让用户选择颜色)。
+我们将会谈及添加颜色所需要的大部分内容，包括[一系列可以着色的元素与相关的 CSS 属性](#可设置颜色的内容)，[如何描述颜色](#如何描述颜色)，以及[在样式表与脚本中使用颜色的方法](#使用颜色)。同时我们还会了解如何[让用户选择颜色](#让用户选择颜色)。
 
-然后我们会通过简短的讨论总结如何 [机智地运用颜色](#机智地运用颜色)：如何选择合适的颜色，同时考虑不同视力水平的人的需求。
+然后我们会通过简短的讨论总结如何[机智地运用颜色](#机智地运用颜色)：如何选择合适的颜色，同时考虑不同视力水平的人的需求。
 
 ## 可设置颜色的内容
 
-从 HTML 元素层面来看，所有的元素都可设置颜色。但除了元素本身之外，元素中所绘制的事物也可设置颜色，如文本，边框等等。我们将会看到一系列用于设置颜色的 CSS 属性。
+从 HTML 元素层面来看，所有的元素都可设置颜色。但除了元素本身之外，元素中所绘制的事物也可设置颜色，如文本、边框等等。我们将会看到一系列用于设置颜色的 CSS 属性。
 
-在这些设置颜色的 CSS 属性中，最基础的就是 {{cssxref("color")}} 属性和 {{cssxref("background-color")}} 属性了。分别用于设置 HTML 元素内容的前景色和背景色。这两个属性几乎可用用于所有的 HTML 元素。
+在这些设置颜色的 CSS 属性中，最基础的就是 {{cssxref("color")}} 属性和 {{cssxref("background-color")}} 属性了。分别用于设置 HTML 元素内容的前景色和背景色。这两个属性几乎可用于所有的 HTML 元素。
 
 ### 文本
 
-Whenever an element is rendered, these properties are used to determine the color of the text, its background, and any decorations on the text.
+无论何时渲染元素，这些属性都将用于确定文本的颜色、背景以及文本上的任何装饰。
 
 - {{cssxref("color")}}
-  - : The color to use when drawing the text and any [text decorations](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals#Font_style_font_weight_text_transform_and_text_decoration) (such as the addition of under- or overlines, strike-through lines, and so forth.
+  - : 绘制文本和任何[文本装饰](/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals#字体样式、字体粗细、文本转换和文本装饰)（如添加下划线或上划线、删除线等）时使用的颜色。
 - {{cssxref("background-color")}}
-  - : The text's background color.
+  - : 文本的背景色。
 - {{cssxref("text-shadow")}}
-  - : Configures a shadow effect to apply to text. Among the options for the shadow is the shadow's base color (which is then blurred and blended with the background based on the other parameters). See {{SectionOnPage("/en-US/docs/Learn/CSS/Styling_text/Fundamentals", "Text drop shadows")}} to learn more.
+  - : 配置应用于文字的阴影效果。阴影选项包括阴影的基色（然后根据其他参数将基色模糊并与背景混合）。请参阅[文字阴影](/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals#文字阴影)以了解更多信息。
 - {{cssxref("text-decoration-color")}}
-  - : By default, text decorations (such as underlines, strikethroughs, etc) use the `color` property as their colors. However, you can override that behavior and use a different color for them with the `text-decoration-color` property.
+  - : 默认情况下，文本装饰（如下划线、删除线等）使用 `color` 属性作为其颜色。不过，你可以使用 `text-decoration-color` 属性覆盖该行为，并为它们使用不同的颜色。
 - {{cssxref("text-emphasis-color")}}
-  - : The color to use when drawing emphasis symbols adjacent to each character in the text. This is used primarily when drawing text for East Asian languages.
+  - : 绘制文本中每个字符旁边的强调符号时使用的颜色。主要用于绘制东亚语言的文本。
 - {{cssxref("caret-color")}}
-  - : The color to use when drawing the {{Glossary("caret")}} (sometimes referred to as the text input cursor) within the element. This is only useful in elements that are editable, such as {{HTMLElement("input")}} and {{HTMLElement("textarea")}} or elements whose HTML {{htmlattrxref("contenteditable")}} attribute is set.
+  - : 在元素中绘制{{Glossary("caret", "光标")}}时使用的颜色（有时也称为文本输入光标）。这仅对可编辑的元素有用，如 {{HTMLElement("input")}} 和 {{HTMLElement("textarea")}} 或设置了 HTML [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes#contenteditable) 属性的元素。
 
 ### 盒
 
-Every element is a box with some sort of content, and has a background and a border in addition to whatever contents the box may have.
+每个元素都是一个包含某种内容的盒子，除了盒子中的内容外，还有背景和边框。
 
-- [Borders](#边框)
-  - : See the section [Borders](#边框) for a list of the CSS properties you can use to set the colors of a box's borders.
+- [边框](#边框_2)
+  - : 请参阅[边框](#边框)一节，了解可用于设置方框边框颜色的 CSS 属性列表。
 - {{cssxref("background-color")}}
-  - : The background color to use in areas of the element that have no foreground content.
+  - : 在元素中没有前景内容的区域使用的背景色。
 - {{cssxref("column-rule-color")}}
-  - : The color to use when drawing the line separating columns of text.
+  - : 绘制文本分隔线时使用的颜色。
 - {{cssxref("outline-color")}}
-  - : The color to use when drawing an outline around the outside of the element. This outline is different from the border in that it doesn't get space set aside for it in the document (so it may overlap other content). It's generally used as a focus indicator, to show which element will receive input events.
+  - : 在元素外部绘制轮廓时使用的颜色。该轮廓与边框不同，它不会在文档中预留空间（因此可能会与其他内容重叠）。它通常用作焦点指示器，显示哪个元素将接收输入事件。
 
 ### 边框
 
-Any element can have a [border](/zh-CN/docs/Learn/CSS/Styling_boxes/Borders) drawn around it. A basic element border is a line drawn around the edges of the element's content. See {{SectionOnPage("/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model", "Box properties")}} to learn about the relationship between elements and their borders, and the article [Styling borders using CSS](/zh-CN/docs/Learn/CSS/Styling_boxes/Borders) to learn more about applying styles to borders.
+任何元素都可以在其周围绘制[边框](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)。基本的元素边框是围绕元素内容边缘绘制的一条线。请参阅[盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)了解元素与其边框之间的关系，并参阅文章[使用 CSS 为边框添加样式](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)了解为边框应用样式的更多信息。
 
-You can use the {{cssxref("border")}} shorthand property, which lets you configure everything about the border in one shot (including non-color features of borders, such as its [width](/zh-CN/docs/Web/CSS/border-width), [style](/zh-CN/docs/Web/CSS/border-style) (solid, dashed, etc.), and so forth.
+你可以使用 {{cssxref("border")}} 简写属性，这样就可以一次性配置边框的所有内容（包括边框的非颜色特性，如[宽度](/zh-CN/docs/Web/CSS/border-width)、[样式](/zh-CN/docs/Web/CSS/border-style)（实线、虚线等）等等）。
 
 - {{cssxref("border-color")}}
-  - : Specifies a single color to use for every side of the element's border.
-- {{cssxref("border-left-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-top-color")}}, and {{cssxref("border-bottom-color")}}
-  - : Lets you set the color of the corresponding side of the element's border.
-- {{cssxref("border-block-start-color")}} and {{cssxref("border-block-end-color")}}
-  - : With these, you can set the color used to draw the borders which are closest to the start and end of the block the border surrounds. In a left-to-right writing mode (such as the way English is written), the block start border is the top edge and the block end is the bottom. This differs from the inline start and end, which are the left and right edges (corresponding to where each line of text in the box begins and ends).
-- {{cssxref("border-inline-start-color")}} and {{cssxref("border-inline-end-color")}}
-  - : These let you color the edges of the border closest to to the beginning and the end of the start of lines of text within the box. Which side this is will vary depending on the {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}} properties, which are typically (but not always) used to adjust text directionality based on the language being displayed. For example, if the box's text is being rendered right-to-left, then the `border-inline-start-color` is applied to the right side of the border.
+  - : 为元素边框的每一侧指定一种颜色。
+- {{cssxref("border-left-color")}}、{{cssxref("border-right-color")}}、{{cssxref("border-top-color")}} 和 {{cssxref("border-bottom-color")}}
+  - : 设置元素边框相应边的颜色。
+- {{cssxref("border-block-start-color")}} 和 {{cssxref("border-block-end-color")}}
+  - : 通过这些属性，你可以设置用于绘制边框的颜色，这些颜色最靠近边框所包围的区块的起始和结束位置。在从左到右的书写模式下（如英文的书写方式），块向的起始边框是上边缘，结束边框是下边缘。这与行向开始和结束不同，行向开始和结束是左右边缘（对应于方框中每行文本的开始和结束位置）。
+- {{cssxref("border-inline-start-color")}} 和 {{cssxref("border-inline-end-color")}}
+  - : 通过这些选项，你可以为最靠近方框内文本行开头和结尾的边框边缘着色。至于是哪一边，取决于 {{cssxref("writing-mode")}}、{{cssxref("direction")}} 和 {{cssxref("text-orientation")}} 属性，它们通常（但不总是）用于根据显示语言调整文本方向。例如，如果盒子的文本是从右到左显示的，那么 `border-inline-start-color` 就会应用到边框的右侧。
 
-### 其它方式
+### 其他使用颜色的方式
 
-CSS 并不是唯一支持颜色的 web 技术。同时还有其它支持颜色的图形技术。
+CSS 并不是唯一支持颜色的 web 技术。同时还有其他支持颜色的图形技术。
 
 - HTML [Canvas API](/zh-CN/docs/Web/API/Canvas_API)
-  - : Lets you draw 2D bitmapped graphics in a {{HTMLElement("canvas")}} element. See our [Canvas tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial) to learn more.
-- [SVG](/zh-CN/docs/Web/SVG) (可缩放矢量图形)
-  - : Lets you draw images using commands that draw specific shapes, patterns, and lines to produce an image. SVG commands are formatted as XML, and can be embedded directly into a web page or can be placed in he page using the {{HTMLElement("img")}} element, just like any other type of image.
+  - : 可让你在 {{HTMLElement("canvas")}} 元素中绘制二维位图图形。请参阅我们的 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)了解更多信息。
+- [SVG](/zh-CN/docs/Web/SVG)（可缩放矢量图形）
+  - : SVG 可让你使用绘制特定形状、图案和线条的命令来绘制图像。SVG 命令的格式为 XML，可以直接嵌入网页，也可以像其他类型的图像一样，使用 {{HTMLElement("img")}} 元素放置在网页中。
 - [WebGL](/zh-CN/docs/Web/API/WebGL_API)
-  - : The Web Graphics Library is an OpenGL ES-based API for drawing high-performance 2D and 3D graphics on the Web. See our [WebGL tutorial](/zh-CN/docs/Web/API/WebGL_API/Tutorial) to find out more.
+  - : 网络图形库是一种基于 OpenGL ES 的 API，用于在 Web 上绘制高性能的 2D 和 3D 图形。请参阅我们的 [WebGL 教程](/zh-CN/docs/Web/API/WebGL_API/Tutorial)了解更多信息。
 
 ## 如何描述颜色
 
-In order to represent a color in CSS, you have to find a way to translate the analog concept of "color" into a digital form that a computer can use. This is typically done by breaking down the color into components, such as how much of each of a set of primary colors to mix together, or how bright to make the color. As such, there are several ways you can describe color in CSS.
+要在 CSS 中表示一种颜色，就必须找到一种方法，将“颜色”这一模拟概念转化为计算机可以使用的数字形式。通常的做法是将颜色分解成不同的分量，例如混合一组三原色中每种颜色的多少，或者使颜色的亮度达到多少。因此，在 CSS 中可以有多种方法来描述颜色。
 
-For more detailed discussion of each of the color value types, see the reference for the CSS {{cssxref("&lt;color&gt;")}} unit.
+有关每种颜色值类型的详细讨论，请参阅 CSS {{cssxref("&lt;color&gt;")}} 一节的参考资料。
 
-### 颜色名称
+### 关键字
 
-A set of standard color names have been defined, letting you use these keywords instead of numeric representations of colors if you choose to do so and there's a keyword representing the exact color you want to use. Color keywords include the standard primary and secondary colors (such as `red`, `blue`, or `orange`), shades of gray (from `black` to `white`, including colors like `darkgray` and `lightgrey`), and a variety of other blended colors including `lightseagreen`, `cornflowerblue`, and `rebeccapurple`.
+我们定义了一套标准颜色名称，如果你选择这种方式来描述颜色，可以使用关键字来代替数字表示，但必须有一个关键字来代表你想使用的确切颜色。颜色关键字包括标准的主色和次色（如 `red`、`blue` 或 `orange`）、灰度（从 `black` 到 `white`，包括 `darkgray` 和 `lightgray`）以及各种其他混合色，包括 `lightseagreen`、`cornflowerblue` 和 `rebeccapurple`。
 
-See {{SectionOnPage("/en-US/docs/Web/CSS/color_value", "Color keywords", "code")}} for a list of all available color keywords.
+有关颜色关键字的更多信息，请参见[具名颜色](/zh-CN/docs/Web/CSS/named-color)一节。
 
 ### RGB 值
 
-There are three ways to represent an RGB color in CSS.
+CSS 中有三种表示 RGB 颜色的方式。
 
-#### 十六进制颜色码
+#### 十六进制字符串表示法
 
-Hexadecimal string notation represents a color using hexadecimal digits to represent each of the color components (red, green, and blue). It may also include a fourth component: the alpha channel (or opacity). Each color component can be represented as a number between 0 and 255 (0x00 and 0xFF) or, optionally, as a number between 0 and 15 (0x0 and 0xF). All components _must_ be specified using the same number of digits. If you use the single-digit notation, the final color is computed by using each component's digit twice; that is, `"#D"` becomes `"#DD"` when drawing.
+十六进制字符串表示法用十六进制数字来表示颜色的各个分量（红、绿、蓝）。它还可能包括第四个分量：alpha 通道（或不透明度）。每个颜色分量可以用 0 到 255（0x00 到 0xFF）之间的数字表示，也可以选择用 0 到 15（0x0 到 0xF）之间的数字表示。必须使用相同位数指定所有组件。如果使用个位数符号，最终颜色的计算将使用每个分量的个位数两次；也就是说，`"#D"` 在绘制时会变成 `"#DD"`。
 
-A color in hexadecimal string notation always begins with the character `"#"`. After that come the hexadecimal digits of the color code. The string is case-insensitive.
+十六进制字符串符号中的颜色总是以字符 `"#"` 开头。之后是颜色代码的十六进制数字。字符串不区分大小写。
 
 - `"#rrggbb"`
-  - : Specifies a fully-opaque color whose red component is the hexadecimal number `0xrr`, green component is `0xgg`, and blue component is `0xbb`.
+  - : 指定完全不透明的颜色，其红色分量为十六进制数 `0xrr`，绿色分量为 `0xgg`，蓝色分量为 `0xbb`。
 - `"#rrggbbaa"`
-  - : Specifies a color whose red component is the hexadecimal number `0xrr`, green component is `0xgg`, and blue component is `0xbb`. The alpha channel is specified by `0xaa`; the lower this value is, the more translucent the color becomes.
+  - : 指定一种颜色，其红色分量为十六进制数 `0xrr`，绿色分量为 `0xgg`，蓝色分量为 `0xbb`。Alpha 通道由 `0xaa` 指定；该值越小，颜色就越半透明。
 - `"#rgb"`
-  - : Specifies a color whose red component is the hexadecimal number `0xrr`, green component is `0xgg`, and blue component is `0xbb`.
+  - : 指定一种颜色，其红色分量为十六进制数 `0xrr`，绿色分量为 `0xgg`，蓝色分量为 `0xbb`。
 - `"#rgba"`
-  - : Specifies a color whose red component is the hexadecimal number `0xrr`, green component is `0xgg`, and blue component is `0xbb`. The alpha channel is specified by `0xaa`; the lower this value is, the more translucent the color becomes.
+  - : 指定一种颜色，其红色分量为十六进制数 `0xrr`，绿色分量为 `0xgg`，蓝色分量为 `0xbb`。Alpha 通道由 `0xaa` 指定；该值越小，颜色就越半透明。
 
-As an example, you can represent the opaque color bright blue as `"#0000ff"` or `"#00f"`. To make it 25% opaque, you can use `"#0000ff44"` or `"#00f4"`.
+例如，可以用 `"#0000ff"` 或 `"#00f"` 表示不透明的亮蓝色。要使不透明色达到 25%，可以使用 `"#0000ff44"` 或 `"#f00f4"`。
 
 #### RGB 函数表示法
 
-RGB (Red/Green/Blue) functional notation, like hexadecimal string notation, represents colors using their red, green, and blue components (as well as, optionally, an alpha channel component for opacity). However, instead of using a string, the color is defined using the CSS function {{cssxref("color_value", "rgb()", "#rgb()")}}. This function accepts as its input parameters the values of the red, green, and blue components and an optional fourth parameter, the value for the alpha channel.
+RGB（红/绿/蓝）函数表示法与十六进制字符串表示法一样，都是用红、绿、蓝三种分量（以及可选的表示不透明度的 alpha 通道分量）来表示颜色。不过，定义颜色时使用的不是字符串，而是 CSS 函数 {{cssxref("color_value", "rgb()", "#rgb()")}} 。该函数的输入参数包括红色、绿色和蓝色分量的值，以及可选的第四个参数，即 alpha 通道的值。
 
-Legal values for each of these parameters are:
+这些参数的合法值分别是：
 
-- `red`, `green`, and `blue`
-  - : Each must be an {{cssxref("&lt;integer&gt;")}} value between 0 and 255 (inclusive), or a {{cssxref("&lt;percentage&gt;")}} from 0% to 100%.
+- `red`、`green`、`blue`
+  - : 每个值都必须是 0 到 255（含）之间的 {{cssxref("&lt;integer&gt;")}} 值，或 0% 到 100% 之间的 {{cssxref("&lt;percentage&gt;")}} 值。
 - `alpha`
-  - : The alpha channel is a number between 0.0 (fully transparent) and 1.0 (fully opaque). You can also specify a percentage where 0% is the same as 0.0 and 100% is the same as 1.0.
+  - : alpha 通道是一个介于 0.0（完全透明）和 1.0（完全不透明）之间的数字。你也可以指定一个百分比，0% 等于 0.0，100% 等于 1.0。
 
-For example, a bright red that's 50% opaque can be represented as `rgb(255, 0, 0, 0.5)` or `rgb(100%, 0, 0, 50%)`.
+例如，50% 不透明的鲜红色可以用 `rgb(255, 0, 0, 0.5)` 或 `rgb(100%, 0, 0, 50%)` 表示。
 
-### HSL 函数表示法
+### 含有色相分量的颜色函数
 
-Designers and artists often prefer to work using the [HSL](https://zh.wikipedia.org/wiki/HSL_and_HSV) (Hue/Saturation/Luminosity) color method. On the web, HSL colors are represented using HSL functional notation. The `hsl()` CSS function is very similar to the `rgb()` function in usage otherwise.
+除了 `rgb()` 以外，你还可以使用 `hsl()` 和 `hwb()`，它们都需要包含 `<hue>` 分量。[`<hue>`](/zh-CN/docs/Web/CSS/hue) 是一种属性，可以让我们分辨出红、橙、黄、绿、蓝等颜色之间的差异或相似性。关键的是，可以在 [`<angle>`](/zh-CN/docs/Web/CSS/angle) 中指定色相，因为大多数颜色模型都是使用{{glossary("color wheel", "色轮")}}来描述色相的。有关这些函数分类的更多信息，请参阅[色彩空间和色彩模型](#色彩空间和色彩模型)部分。
 
-![HSL color cylinder](https://mdn.mozillademos.org/files/15445/1200px-HSL_color_solid_cylinder_alpha_lowgamma.png)
+#### HSL 函数表示法
 
-_**Figure 1. An HSL color cylinder.** Hue defines the actual color based on the position along a circular color wheel representing the colors of the visible spectrum. Saturation is a percentage of how much of the way between being a shade of gray and having the maximum possible amount of the given hue. As the value of luminance (or lightness) increases, the color transitions from the darkest possible to the brightest possible (from black to white). Image courtesy of user [SharkD](http://commons.wikimedia.org/wiki/User:SharkD) on [Wikipedia](https://www.wikipedia.org/), distributed under the [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0) license._
+设计师和艺术家通常喜欢使用 [HSL](https://zh.wikipedia.org/wiki/HSL和HSV色彩空间)（色相/饱和度/亮度）色彩方法。另外，CSS 的 `hsl()` 函数与 `rgb()` 函数的用法类似。
 
-The value of the hue (H) component of an HSL color is an angle from red around through yellow, green, cyan, blue, and magenta (ending up back at red again at 360°) that identifies what the base color is. The value can be specified in any {{cssxref("&lt;angle&gt;")}} unit supported by CSS, including degrees (`deg`), radians (`rad`), gradians (`grad`), or turns (`turn`). But this doesn't control how vivid or dull, or how bright or dark the color is.
+下图显示了一个 HSL 颜色柱。色相将颜色定义为圆形{{glossary("color wheel", "色轮")}}上的 [`<angle>`](/zh-CN/docs/Web/CSS/angle)。饱和度是一个百分比，表示在灰色阴影和给定色调的最大可能量之间的百分比。随着亮度（或明度）值的增加，颜色会从最暗过渡到最亮（从黑到白）。
 
-The saturation (S) component of the color specifies what percentage of the final color is comprised of the specified hue. The rest is defined by the grey level provided by the luminance (L) component.
+![HSL 颜色柱](640px-hsl_color_solid_cylinder.png)
 
-Think of it like creating the perfect paint color:
+图片由用户 [SharkD](https://commons.wikimedia.org/wiki/User:SharkD) 在 [Wikipedia](https://en.wikipedia.org/) 上提供，采用 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) 许可发布。
 
-1. You start with base paint that's the maximum intensity possible for a given color, such as the most intense blue that can be represented by the user's screen. This is the **hue** (H) component: a value representing the angle around the color wheel for the vivid hue we want to use as our base.
-2. Then select a greyscale paint that corresponds how bright you want the color to be; this is the luminance. Do you want it to be very bright and nearly white, or very dark and closer to black, or somewhere in between? This is specified using a percentage, where 0% is perfectly black and 100% is perfectly white. (regardless of the saturation or hue). In between values are a literal grey area.
-3. Now that you have a grey paint and a perfectly vivid color, you need to mix them together. The saturation (S) component of the color indicates what percentage of the final color should be comprised of that perfectly vivid color. The rest of the final color is made up of the grey paint that represents the saturation.
+HSL 颜色的色相（H）分量值是从红色开始，依次经过黄色、绿色、青色、蓝色和洋红色（360° 时又回到红色）的一个角度，用于确定基色。该值可以用 CSS 支持的任何 {{cssxref("&lt;angle&gt;")}} 单位指定，包括度（`deg`）、弧度（`rad`）、梯度（`grad`）或转数（`turn`）。但这并不能控制颜色的鲜艳或暗淡、明亮或昏暗程度。
 
-You can also optionally include an alpha channel, to make the color less than 100% opaque.
+颜色的饱和度（S）分量指定最终颜色中指定色相所占的百分比。其余部分则由亮度（L）分量提供的灰度来定义。
 
-Here are some sample colors in HSL notation:
+把它想象成创造完美的油漆颜色的过程：
+
+1. 首先，你要使用特定颜色的最大强度的基础颜料，例如用户屏幕所能显示的最强烈的蓝色。这就是**色相**（H）分量：该值代表了我们希望用作基色的鲜艳色相在{{glossary("color wheel","色轮")}}周围的角度。
+2. 然后选择与你想要的颜色亮度相对应的灰度颜料；这就是亮度。你希望它非常明亮接近白色，还是非常暗接近黑色，或者介于两者之间？这可以用百分比来表示，0% 表示完全黑，100% 表示完全白（无论饱和度或色调如何）。介于两者之间的数值就是灰色区域。
+3. 现在，你有了灰色颜料和鲜艳的颜色，需要将它们混合在一起。颜色的饱和度（S）表示最终颜色中鲜艳颜色所占的比例。最终颜色的其余部分由代表饱和度的灰色颜料组成。
+
+你还可以选择加入一个 alpha 通道，使颜色的不透明度低于 100%。
+
+下面是一些用 HSL 符号表示的颜色示例：
 
 ```css hidden
 table {
   border: 1px solid black;
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border-spacing: 0;
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
-  padding:4px 6px;
+  padding: 4px 6px;
   text-align: left;
 }
 
@@ -163,85 +175,246 @@ th {
 }
 ```
 
-```html hidden
+```html
 <table>
- <thead>
-  <tr>
-   <th scope="col">Color in HSL notation</th>
-   <th scope="col">Example</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>hsl(90deg, 100%, 50%)</code></td>
-   <td style="background-color: hsl(90deg, 100%, 50%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(90, 100%, 50%)</code></td>
-   <td style="background-color: hsl(90, 100%, 50%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(0.15turn, 50%, 75%)</code></td>
-   <td style="background-color: hsl(0.15turn, 50%, 75%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(0.15turn, 90%, 75%)</code></td>
-   <td style="background-color: hsl(0.15turn, 90%, 75%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(0.15turn, 90%, 50%)</code></td>
-   <td style="background-color: hsl(0.15turn, 90%, 50%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(270deg, 90%, 50%)</code></td>
-   <td style="background-color: hsl(270deg, 90%, 50%);">&nbsp;</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">HSL 表示法下的颜色</th>
+      <th scope="col">示例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>hsl(90deg, 100%, 50%)</code></td>
+      <td style="background-color: hsl(90deg, 100%, 50%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(90, 100%, 50%)</code></td>
+      <td style="background-color: hsl(90, 100%, 50%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(0.15turn, 50%, 75%)</code></td>
+      <td style="background-color: hsl(0.15turn, 50%, 75%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(0.15turn, 90%, 75%)</code></td>
+      <td style="background-color: hsl(0.15turn, 90%, 75%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(0.15turn, 90%, 50%)</code></td>
+      <td style="background-color: hsl(0.15turn, 90%, 50%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(270deg, 90%, 50%)</code></td>
+      <td style="background-color: hsl(270deg, 90%, 50%);">&nbsp;</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
-{{EmbedLiveSample("hsl-swatches", 300, 260)}}
+{{EmbedLiveSample("HSL 函数表示法", 300, 260)}}
 
-> **备注：** Note that when you omit the hue's unit, it's assumed to be in degrees (`deg`).
+> [!NOTE]
+> 如果省略了色相的单位，则假定其单位为度（`deg`）。
+
+#### HWB 函数表示法
+
+与上面的 HSL 函数表示法类似，[hwb()](/zh-CN/docs/Web/CSS/color_value/hwb) 函数使用相同的色相值。不过，指定的白度和黑度值不是亮度和饱和度，而是百分比。数值之间**不用**逗号分隔，还可以包含一个可选的 alpha 值（必须在前面加上斜线 `/`）。
+
+下面是一些用 HWB 符号表示的颜色示例：
+
+```css
+/* 这些示例都指定了深浅不一的青绿色。 */
+hwb(90 10% 10%)
+hwb(90 10% 10%)
+hwb(90 50% 10%)
+hwb(90deg 10% 10%)
+hwb(1.5708rad 60% 0%)
+hwb(.25turn 0% 40%)
+
+/* 同样的青绿色，这次包含了透明度值 */
+hwb(90 10% 10% / 0.5)
+hwb(90 10% 10% / 50%)
+```
+
+### 色彩空间和颜色模型
+
+十六进制、具名颜色和 `rgb()` 函数都使用 [RGB](/zh-CN/docs/Glossary/RGB) 模型，并与 sRGB（`srgb`）色彩空间相关联。你可能会看到“色彩模型”和“色彩空间”交替使用，但这两者之间还是有区别的，值得注意：
+
+- 色彩模型是用数值表示色彩的数学模型。色彩模型描述了如何在色彩空间内创建可用的色彩。
+- 色彩空间是对色彩进行分组的系统，因此对任何给定色彩的描述都是一致的。如果在不同的色彩空间之间转换一种颜色，它看起来会完全相同。
+
+我们上面使用的 `hsl()` 和 `hwb()` 函数使用的是 sRGB 色彩空间，并且都使用*柱形*模型；这就是为什么 `<hue>` 角度可以让你像在[色轮](/zh-CN/docs/Glossary/Color_wheel)上一样控制颜色的属性。让我们来看看其他可用的色彩空间以及使用它们的原因。
+
+#### CIELAB 和 Oklab 色彩空间
+
+CIELAB 和 Oklab 色彩空间基于人类视觉实验，代表了人类所能看到的全部色彩范围。这些模型的主要目的在于它们是统一的，因此色彩空间中任意两点之间的给定距离在观察者看来应该是同样不同的。
+
+对于 CIELAB 色彩空间，可以使用 `lab()` 和 `lch()` 函数。`lch()` 函数使用亮度（L）、色度（C）和色调（H），而 Lab 模型则沿色彩空间中的“a”轴和“b”轴（矩形坐标）使用亮度（L）、红/绿度和黄/蓝度。
+
+下面的示例显示了在 `lab()` 和 `lch()` 函数中更改分量值的效果，其中每一行都修改了一个分量。第一行显示的是对 `lch()` 亮度值的更改，第二行更改的是 `lch()` 色调分量。第三行更改了 `lab()` 的“b”轴，因此我们获得了与 `lch()` 不同的效果，因为我们是在逐渐增加颜色中的黄色，而不是在整个色轮中循环：
+
+```css hidden live-sample___lch-colors
+/* 不同深浅度的紫色 */
+.container {
+  display: grid;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: white;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+}
+
+.container div {
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+#lch-20 {
+  background-color: lch(20 40 0);
+}
+#lch-30 {
+  background-color: lch(30 40 0);
+}
+#lch-40 {
+  background-color: lch(40 40 0);
+}
+
+#lch-50 {
+  background-color: lch(50 40 0);
+}
+#lch-60 {
+  background-color: lch(60 40 0);
+}
+#lch-70 {
+  background-color: lch(70 40 0);
+}
+
+#lch-hue-10 {
+  background-color: lch(70 40 10);
+}
+#lch-hue-20 {
+  background-color: lch(70 40 20);
+}
+#lch-hue-30 {
+  background-color: lch(70 40 30);
+}
+#lch-hue-40 {
+  background-color: lch(70 40 40);
+}
+#lch-hue-50 {
+  background-color: lch(70 40 50);
+}
+#lch-hue-60 {
+  background-color: lch(70 40 60);
+}
+#lab-10 {
+  background-color: lab(70 40 10);
+}
+#lab-20 {
+  background-color: lab(70 40 20);
+}
+#lab-30 {
+  background-color: lab(70 40 30);
+}
+#lab-40 {
+  background-color: lab(70 40 40);
+}
+#lab-50 {
+  background-color: lab(70 40 50);
+}
+#lab-60 {
+  background-color: lab(70 40 60);
+}
+```
+
+```html hidden live-sample___lch-colors
+<div class="container">
+  <div id="lch-20">lch(20 40 0)</div>
+  <div id="lch-30">lch(30 40 0)</div>
+  <div id="lch-40">lch(40 40 0)</div>
+  <div id="lch-50">lch(50 40 0)</div>
+  <div id="lch-60">lch(60 40 0)</div>
+  <div id="lch-70">lch(70 40 0)</div>
+  <div id="lch-hue-10">lch(70 40 10)</div>
+  <div id="lch-hue-20">lch(70 40 20)</div>
+  <div id="lch-hue-30">lch(70 40 30)</div>
+  <div id="lch-hue-40">lch(70 40 40)</div>
+  <div id="lch-hue-50">lch(70 40 50)</div>
+  <div id="lch-hue-50">lch(70 40 60)</div>
+  <div id="lab-10">lab(70 40 10)</div>
+  <div id="lab-20">lab(70 40 20)</div>
+  <div id="lab-30">lab(70 40 30)</div>
+  <div id="lab-40">lab(70 40 40)</div>
+  <div id="lab-50">lab(70 40 50)</div>
+  <div id="lab-60">lab(70 40 60)</div>
+</div>
+```
+
+{{embedlivesample("lch-colors", '100', '150') }}
+
+Oklab 是一种色彩空间，它使用与 CIELAB 相同的模型类型，但在构建时使用了额外的数值优化步骤，因此其数值被认为比 CIELAB 更精确。由于进行了优化，色调在感知上更加统一，因此 Oklab 是渐变的绝佳选择。如果你已经了解 `lab()` 和 `lch()`，就可以以类似的方式使用这些函数：
+
+```css
+.oklch-red {
+  color: oklch(0.93 0.39 28);
+}
+.oklab-green {
+  color: oklab(0.87 -0.2 0.18);
+}
+```
+
+#### `color()` 函数
+
+如果想在定义颜色时明确控制色彩空间，可以使用 [`color()`](/zh-CN/docs/Web/CSS/color_value/color) 函数。这对使用更宽[色域](/zh-CN/docs/Glossary/Gamut)的高清设备描述颜色非常有用。例如，如果我们想显示超出 sRGB 色域的 `display-p3 0 0 1` 颜色，可以使用 [`@media`](/zh-CN/docs/Web/CSS/@media/color-gamut) at 规则来检测客户端硬件是否支持此范围内的颜色：
+
+```css
+.vibrant {
+  background-color: color(display-p3 0 0 1);
+  /* 等同于色域之外的 rgb(-27, 55, 153) */
+}
+
+@media (color-gamut: p3) {
+  .vibrant {
+    background-color: color(display-p3 0 0 1);
+  }
+}
+```
 
 ## 使用颜色
 
-Now that you know what CSS properties exist that let you apply color to elements and the formats you can use to describe colors, you can put this together to begin to make use of color. As you may have seen from the list under [Things that can have color](#可设置颜色的内容), there are plenty of things you can color with CSS. Let's look at this from two sides: using color within a {{Glossary("stylesheet")}}, and adding and changing color using {{Glossary("JavaScript")}} code to alter the styles of elements.
+现在，你已经知道有哪些 CSS 属性可以让你为元素着色，也知道了可以用来描述颜色的格式，你可以将它们组合在一起，开始使用颜色了。正如你在[可设置颜色的内容](#可设置颜色的内容)下的列表中所看到的，有很多事物都可以用 CSS 着色。让我们从两个方面来看看：在{{Glossary("stylesheet","样式表")}}中使用颜色，以及使用 {{Glossary("JavaScript")}} 代码添加和更改颜色，以改变元素的样式。
 
 ### 在样式表中指定颜色
 
-The easiest way to apply color to elements—and the way you'll usually do it—is to simply specify colors in the CSS that's used when rendering elements. While we won't use every single property mentioned previously, we'll look at a couple of examples. The concept is the same anywhere you use color.
+为元素应用颜色的最简单方法，也是你通常会采用的方法，就是在呈现元素时使用的 CSS 中指定颜色。虽然我们不会使用前面提到的每一个属性，但我们会看几个示例。这个概念在任何使用颜色的地方都是一样的。
 
-Let's take a look at an example, starting by looking at the results we're trying to achieve:
+让我们来看一个示例，首先看看我们要达到的效果：
 
-{{EmbedLiveSample("Specifying_colors_in_stylesheets", 650, 150)}}
+{{EmbedLiveSample("在样式表中指定颜色", 650, 150)}}
 
 #### HTML
 
-The HTML responsible for creating the above example is shown here:
+创建上述示例的 HTML 代码如下所示：
 
 ```html
 <div class="wrapper">
   <div class="box boxLeft">
-    <p>
-      This is the first box.
-    </p>
+    <p>这是第一个盒子。</p>
   </div>
   <div class="box boxRight">
-    <p>
-      This is the second box.
-    </p>
+    <p>这是第二个盒子。</p>
   </div>
 </div>
 ```
 
-This is pretty simple, using a {{HTMLElement("div")}} as a wrapper around the contents, which consists of two more `<div>`s, each styled differently with a single paragraph ({{HTMLElement("p")}}) in each box.
+这非常简单，只需使用一个 {{HTMLElement("div")}} 作为内容的包装，内容由另外两个 `<div>` 组成，每个框中都有一个段落（{{HTMLElement("p")}}），每个段落的样式各不相同。
 
-The magic happens, as usual, in the CSS, where we'll apply colors define the layout for the HTML above.
+像往常一样，神奇的事情发生在 CSS 中，我们将在 CSS 中应用颜色并定义上述 HTML 的布局。
 
 #### CSS
 
-We'll look at the CSS to create the above results a piece at a time, so we can review the interesting parts one by one.
+我们将逐一查看创建上述结果的 CSS，以便逐一回顾有趣的部分。
 
 ```css
 .wrapper {
@@ -253,11 +426,11 @@ We'll look at the CSS to create the above results a piece at a time, so we can r
 }
 ```
 
-The `.wrapper` class is used to assign styles to the {{HTMLElement("div")}} that encloses all of our other content. This establishes the size of the container using {{cssxref("width")}} and {{cssxref("height")}} as well as its {{cssxref("margin")}} and {{cssxref("padding")}}.
+`.wrapper` 类用于为 {{HTMLElement("div")}} 指定样式，而 {{HTMLElement("div")}} 则封装了我们所有的其他内容。将使用 {{cssxref("width")}} 和 {{cssxref("height")}} 来确定容器的大小，以及其 {{cssxref("margin")}} 和 {{cssxref("padding")}}。
 
-Of more interest to our discussion here is the use of the {{cssxref("border")}} property to establish a border around the outside edge of the element. This border is a solid line, 6 pixels wide, in the color `mediumturquoise`.
+在这里，我们更感兴趣的是使用 {{cssxref("border")}} 属性在元素外边缘建立一个边框。该边框是一条宽 6 像素的实线，颜色为 `mediumturquoise`。
 
-Our two colored boxes share a number of properties in common, so next we establish a class, `.box`, that defines those shared properties:
+我们的两个彩色盒子有许多共同属性，因此接下来我们要建立一个定义这些共同属性的类 `.box`：
 
 ```css
 .box {
@@ -265,14 +438,17 @@ Our two colored boxes share a number of properties in common, so next we establi
   height: 100px;
   margin: 0;
   padding: 4px 6px;
-  font: 28px "Marker Felt", "Zapfino", cursive;
+  font:
+    28px "Marker Felt",
+    "Zapfino",
+    cursive;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 ```
 
-In brief, `.box` establishes the size of each box, as well as the configuration of the font used within. We also take advantage of [CSS Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout) to easily center the contents of each box. We enable `flex` mode using {{cssxref("display", "display: flex")}}, and set both {{cssxref("justify-content")}} and {{cssxref("align-items")}} to `center`. Then we can create a class for each of the two boxes that defines the properties that differ between the two.
+简而言之，`.box` 确定了每个盒子的大小以及内部使用的字体配置。我们还利用 [CSS 弹性盒布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)，轻松将每个盒子的内容居中。我们使用 {{cssxref("display", "display: flex")}} 启用 `flex` 模式，并将 {{cssxref("justify-content")}} 和 {{cssxref("align-items")}} 都设置为 `center`。然后，我们就可以为两个盒子分别创建一个类，定义两者不同的属性。
 
 ```css
 .boxLeft {
@@ -282,11 +458,11 @@ In brief, `.box` establishes the size of each box, as well as the configuration 
 }
 ```
 
-The `.boxLeft` class—which, cleverly, is used to style the box on the left—floats the box to the left, then sets up the colors:
+`.boxLeft` 类巧妙地将方框浮动到左侧，然后设置颜色：
 
-- The box's background color is set by changing the value of the CSS {{cssxref("background-color")}} property to `rgb(245, 130, 130)`.
-- An outline is defined for the box. Unlike the more commonly used `border`, {{cssxref("outline")}} doesn't affect layout at all; it draws over the top of whatever may happen to be outside the element's box instead of making room as `border` does. This outline is a solid, dark red line that's two pixels thick. Note the use of the `darkred` keyword when specifying the color.
-- Notice that we're not explicitly setting the text color. That means the value of {{cssxref("color")}} will be inherited from the nearest containing element that defines it. By default, that's black.
+- 将 CSS {{cssxref("background-color")}} 属性的值改为 `rgb(245,130,130)`，即可设置方框的背景颜色。
+- 为方框定义轮廓。与更常用的 `border` 不同，{{cssxref("outline")}} 完全不影响布局；它画在元素框外的任何东西的顶部，而不是像 `border` 那样腾出空间。这个轮廓是一条两像素粗的暗红色实线。注意在指定颜色时使用了 `darkred` 关键字。
+- 请注意，我们没有明确设置文本颜色。这意味着，{{cssxref("color")}} 的值将从定义它的最近的包含元素继承。默认情况下，就是黑色。
 
 ```css
 .boxRight {
@@ -299,43 +475,47 @@ The `.boxLeft` class—which, cleverly, is used to style the box on the left—f
 }
 ```
 
-Finally, the `.boxRight` class describes the unique properties of the box that's drawn on the right. It's configured to float the box to the right so that it appears next to the previous box. Then the following colors are established:
+> [!NOTE]
+> 当尝试在 Safari 中显示它时，它将无法正常显示。因为 Safari 不支持 `text-decoration: underline wavy #88ff88`。
 
-- The `background-color` is set using the HSL value specified using `hsl(270deg, 50%, 75%)`. This is a medium purple color.
-- The box's `outline` is used to specify that the box should be enclosed in a four pixel thick dashed line whose color is a somewhat deeper purple (`rgb(110, 20, 120)`).
-- The foreground (text) color is specified by setting the {{cssxref("color")}} property to `hsl(0deg, 100%, 100%)`. This is one of many ways to specify the color white.
-- We add a green wavy line under the text with {{cssxref("text-decoration")}}.
-- Finally, a bit of a shadow is added to the text using {{cssxref("text-shadow")}}. Its `color` parameter is set to `black`.
+最后，`.boxRight` 类描述了绘制在右侧的方框的独特属性。它的配置是将方框浮动到右侧，使其出现在前一个方框的旁边。然后确定以下颜色：
+
+- `background-color` 是使用 `hsl(270deg, 50%, 75%)` 指定的 HSL 值设置的。这是一种中紫色。
+- 方框的 `outline` 用于指定将方框括在一条四像素粗的虚线中，该虚线的颜色是略深一些的紫色（`rgb(110, 20, 120)`）。
+- 前景（文本）颜色通过将 {{cssxref("color")}} 属性设置为 `hsl(0deg,100%,100%)` 来指定。这是指定白色的多种方法之一。
+- 我们使用 {{cssxref("text-decoration")}} 在文字下方添加一条绿色波浪线。
+- 最后，使用 {{cssxref("text-shadow")}} 为文字添加一点阴影。其 `color` 参数设置为 `black`。
 
 ## 让用户选择颜色
 
-There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own [color picker](https://zh.wikipedia.org/wiki/color_picker), HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its {{htmlattrxref("type", "input")}} attribute.
+在许多情况下，网站可能需要让用户选择一种颜色。也许你有一个可定制的用户界面，或者你正在实现一个绘图应用程序。也许你有可编辑的文本，需要让用户选择文本颜色。或者，你的应用程序可以让用户为文件夹或项目指定颜色。虽然从历史上看，有必要实现自己的[颜色选择器](https://en.wikipedia.org/wiki/Color_picker)，但 HTML 现在支持浏览器通过 {{HTMLElement("input")}} 元素，使用 `"color"` 作为其 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性的值，提供一个开箱即用的颜色选择器。
 
-The `<input>` element represents a color only in the [hexadecimal string notation](#十六进制颜色码) covered above.
+`<input>` 元素仅使用上述[十六进制字符串表示法](#十六进制字符串表示法)表示一种颜色。
 
 ### 示例：选择一个颜色
 
-Let's look at a simple example, in which the user can choose a color. As the user adjusts the color, the border around the example changes to reflect the new color. After finishing up and picking the final color, the color picker's value is displayed.
+我们来看一个简单的示例，用户可以选择一种颜色。当用户调整颜色时，示例周围的边框会发生变化，以反映新的颜色。完成并选择最终颜色后，颜色选择器的值就会显示出来。
 
-{{EmbedLiveSample("Example_Picking_a_color", 525, 275)}}
+{{EmbedLiveSample("示例：选择一个颜色", 525, 275)}}
 
-> **备注：** On macOS, you indicate that you've finalized selection of the color by closing the color picker window.
+> [!NOTE]
+> 在 macOS 上，关闭颜色选择器窗口即表示已完成颜色选择。
 
 #### HTML
 
-The HTML here creates a box that contains a color picker control (with a label created using the {{HTMLElement("label")}} element) and an empty paragraph element ({{HTMLElement("p")}}) into which we'll output some text from our JavaScript code.
+这里的 HTML 创建了一个包含颜色选择器控件（标签使用 {{HTMLElement("label")}} 元素创建）和一个空段落元素（{{HTMLElement("p")}}）的盒子，我们将在其中输出 JavaScript 代码中的一些文本。
 
 ```html
 <div id="box">
-  <label for="colorPicker">Border color:</label>
-  <input type="color" value="#8888ff" id="colorPicker">
+  <label for="colorPicker">边框颜色：</label>
+  <input type="color" value="#8888ff" id="colorPicker" />
   <p id="output"></p>
 </div>
 ```
 
 #### CSS
 
-The CSS simply establishes a size for the box and some basic styling for appearances. The border is also established with a 2-pixel width and a border color that won't last, courtesy of the JavaScript below\...
+CSS 为盒子设定了大小，并为外观设定了一些基本样式。此外，还为边框设定了 2 像素的宽度和边框颜色。
 
 ```css
 #box {
@@ -343,135 +523,151 @@ The CSS simply establishes a size for the box and some basic styling for appeara
   height: 200px;
   border: 2px solid rgb(245, 220, 225);
   padding: 4px 6px;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", "sans-serif"
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    "sans-serif";
 }
 ```
 
 #### JavaScript
 
-The script here handles the task of updating the starting color of the border to match the color picker's value. Then two event handlers are added to deal with input from the [`<input type="color">`](/zh-CN/docs/Web/HTML/Element/input/color) element.
+此处的脚本负责更新边框的起始颜色，使其与颜色选择器的值相匹配。然后添加两个事件处理程序，以处理来自 [`<input type="color">`](/zh-CN/docs/Web/HTML/Element/input/color) 元素的输入。
 
 ```js
-let colorPicker = document.getElementById("colorPicker");
-let box = document.getElementById("box");
-let output = document.getElementById("output");
+const colorPicker = document.getElementById("colorPicker");
+const box = document.getElementById("box");
+const output = document.getElementById("output");
 
 box.style.borderColor = colorPicker.value;
 
-colorPicker.addEventListener("input", function(event) {
-  box.style.borderColor = event.target.value;
-}, false);
+colorPicker.addEventListener(
+  "input",
+  (event) => {
+    box.style.borderColor = event.target.value;
+  },
+  false,
+);
 
-colorPicker.addEventListener("change", function(event) {
-  output.innerText = "Color set to " + colorPicker.value + ".";
-}, false);
+colorPicker.addEventListener(
+  "change",
+  (event) => {
+    output.innerText = `颜色已设置为 ${colorPicker.value}。`;
+  },
+  false,
+);
 ```
 
-The [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event) event is sent every time the value of the element changes; that is, every time the user adjusts the color in the color picker. Each time this event arrives, we set the box's border color to match the color picker's current value.
+每次元素的值发生变化，即每次用户调整颜色选择器中的颜色时，{{domxref("Element/input_event", "input")}} 事件就会被发送。每次该事件发生时，我们都会设置方框的边框颜色，使其与颜色选择器的当前值相匹配。
 
-The [`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) event is received when the color picker's value is finalized. We respond by setting the contents of the `<p>` element with the ID `"output"` to a string describing the finally selected color.
+当颜色选择器的值最终确定时，我们会收到 {{domxref("HTMLElement/change_event", "change")}} 事件。我们的回应是将 ID 为 `"output"` 的 `<p>` 元素的内容设置为描述最终选定颜色的字符串。
 
 ## 机智地运用颜色
 
-Making the right choices when selecting colors when designing a website can be a tricky process, especially if you aren't well-grounded in art, design, or at least basic color theory. The wrong color choice can render your site unattractive, or even worse, leave the content unreadable due to problems with contrast or conflicting colors. Worse still, if using the wrong colors can result in your content being outright unusable by people withcertain vision problems, particularly color blindness.
+在设计网站时，正确选择颜色是一个棘手的过程，尤其是如果你不具备美术、设计或至少是基本色彩理论的基础。错误的色彩选择可能会使你的网站失去吸引力，甚至更糟糕的是，由于对比度或色彩冲突问题而导致内容无法阅读。更糟糕的是，如果使用了错误的颜色，会导致有某些视力问题（尤其是色觉障碍）的人根本无法使用你的内容。
 
 ### 找到正确的颜色
 
-Coming up with just the right colors can be tricky, especially without training in art or design. Fortunately, there are tools available that can help you. While they can't replace having a good designer helping you make these decisions, they can definitely get you started.
+想出恰到好处的颜色可能很棘手，尤其是没有受过美术或设计训练的人。幸运的是，有一些工具可以帮助你。虽然这些工具无法取代优秀的设计师帮你做这些决定，但它们绝对可以帮你入门。
 
 #### 基本色
 
-The first step is to choose your **base color**. This is the color that in some way defines your website or the subject matter of the site. Just as we associate green with the beverage [Mountain Dew](https://zh.wikipedia.org/wiki/Mountain_Dew) and one might think of the color blue in relationship with the sky or the ocean, choosing an appropriate base color to represent your site is a good place to start. There are plenty of ways to select a base color; a few ideas include:
+第一步是选择**基础色**。这是以某种方式定义网站或网站主题的颜色。正如我们将绿色与饮料[激浪](https://zh.wikipedia.org/wiki/激浪)联系在一起，将蓝色与天空或海洋联系在一起一样，选择一种合适的基色来代表你的网站是一个很好的开始。选择基色的方法很多，其中包括以下几种：
 
-- A color that is naturally associated with the topic of your content, such as the existing color identified with a product or idea or a color representative of the emotion you wish to convey.
-- A color that comes from imagery associated with what your content is about. If you're creating a website about a given item or product, choose a color that's physically present on that item.
-- Browse websites that let you look at lots of existing color palettes and images to find inspiration.
+- 与内容主题自然相关的颜色，例如与产品或理念相关的现有颜色，或代表你希望传达的情感的颜色。
+- 来自与内容相关的图像的颜色。如果要创建一个关于特定物品或产品的网站，请选择该物品上实际存在的颜色。
+- 浏览网站，查看大量现有的调色板和图片，寻找灵感。
 
-When trying to decide upon a base color, you may find that browser extensions that let you select colors from web content can be particularly handy. Some of these are even specifically designed to help with this sort of work. For example, the website [ColorZilla](http://www.colorzilla.com/) offers an extension ([Chrome](http://www.colorzilla.com/chrome) / [Firefox](http://www.colorzilla.com/firefox)) that offers an eyedropper tool for picking colors from the web. It can also take averages of the colors of pixels in various sized areas or even a selected area of the page.
+在尝试确定基本颜色时，你可能会发现能让你从网页内容中选择颜色的浏览器扩展程序会特别方便。其中有些甚至是专门为帮助完成此类工作而设计的。例如，[ColorZilla](https://www.colorzilla.com/) 网站提供了一个扩展工具（[Chrome](https://www.colorzilla.com/chrome/) 和 [Firefox](https://www.colorzilla.com/firefox/)），提供了一个从网页中挑选颜色的滴管工具。它还可以取不同大小区域甚至页面选定区域内像素颜色的平均值。
 
-> **备注：** The advantage to averaging colors can be that often what looks like a solid color is actually a surprisingly varied number of related colors all used in concert, blending to create a desired effect. Picking just one of these pixels can result in getting a color that on its own looks very out of place.
+> [!NOTE]
+> 平均分配颜色的好处在于，通常看起来像纯色的颜色实际上是由多种相关颜色组成的，它们相互配合，创造出理想的效果。如果只选择其中的一个像素，那么得到的颜色本身看起来就很不协调。
 
-#### 填满调色板
+#### 丰富调色板
 
-Once you have decided on your base color, there are plenty of online tools that can help you build out a palette of appropriate colors to use along with your base color by applying color theory to your base color to determine appropriate added colors. Many of these tools also support viewing the colors filtered so you can see what they would look like to people with various forms of color blindness. See [Color and accessibility](#颜色与无障碍) for a brief explanation of why this matters.
+一旦确定了基色，有很多在线工具可以帮助你建立一个合适的颜色调色板，通过对基色应用色彩理论来确定合适的添加颜色，从而与基色一起使用。其中许多工具还支持查看过滤后的颜色，这样你就可以看到这些颜色在各种色盲症患者眼中的效果。请参阅[颜色与无障碍](#颜色与无障碍)，简要了解这一点的原因。
 
-A few examples (all free to use as of the time this list was last revised):
+几个示例（截至本列表最后一次修订时，所有示例均可免费使用）：
 
-- [MDN's color picker tool](/zh-CN/docs/Web/CSS/CSS_Colors/Color_picker_tool)
-- [Paletton](http://paletton.com)
-- [Adobe Color CC online color wheel](https://color.adobe.com/create/color-wheel)
+- [MDN 的取色工具](/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [Paletton](https://paletton.com/)
+- [Adobe Color CC 在线调色盘](https://color.adobe.com/create/color-wheel)
 
-When designing your palette, be sure to keep in mind that in addition to the colors these tools typically generate, you'll probably also need to add some core neutral colors such as white (or nearly white), black (or nearly black), and some number of shades of gray.
+在设计调色板时，请务必记住，除了这些工具通常生成的颜色外，可能还需要添加一些核心中性色，如白色（或近似白色）、黑色（或近似黑色）以及一定数量的灰色。
 
-> **备注：** Usually, you are far better off using the smallest number of colors possible. By using color to accentuate rather than adding color to everything on the page, you keep your content easy to read and the colors you do use have far more impact.
+> [!NOTE]
+> 通常情况下，使用尽可能少的颜色会好得多。通过使用色彩来突出重点，而不是为页面上的所有内容都添加色彩，这样就能使内容易于阅读，而且所使用的色彩也更有冲击力。
 
 ### 色彩理论的资源
 
-A full review of color theory is beyond the scope of this article, but there are plenty of articles about color theory available, as well as courses you can find at nearby schools and universities. A couple of useful resources about color theory:
+对色彩理论的全面回顾超出了本文的范围，但有很多关于色彩理论的文章，你也可以在附近的学校和大学找到相关课程。以下是一些关于色彩理论的有用资源：
 
-- [Color Science](https://www.khanacademy.org/partner-content/pixar/color) ([Khan Academy](https://www.khanacademy.org/) in association with [Pixar](https://www.pixar.com/))
-  - : An online course which introduces concepts such as what color is, how it's percieved, and how to use colors to express ideas. Presented by Pixar artists and designers.
-- [Color theory](https://zh.wikipedia.org/wiki/Color_theory) on Wikipedia
-  - : Wikipedia's entry on color theory, which has a lot of great information from a technical perspective. It's not really a resource for helping you with the color sleection process, but is still full of useful information.
+- [色彩科学](https://www.khanacademy.org/computing/pixar/color)（由[可汗学院](https://www.khanacademy.org/)与[皮克斯](https://www.pixar.com/)合作）
+  - : 在线课程：介绍色彩是什么、如何感知色彩以及如何使用色彩表达想法等概念。由皮克斯的艺术家和设计师主讲。
+- 维基百科上的[色彩理论](https://zh.wikipedia.org/wiki/颜色理论)
+  - : 维基百科上的色彩理论：维基百科上的色彩理论条目，从技术角度提供了大量精彩信息。它并不能真正帮助你进行色彩选择，但仍有很多有用的信息。
 
 ### 颜色与无障碍
 
-There are several ways color can be an {{Glossary("accessibility")}} problem. Improper or careless use of color can result in a website or app that a percentage of your target audience may not be able to use adequately, resulting in lost traffic, lost business, and possibly even a public relations problem. So it's important to consider your use of color carefully.
+有几种方法可以使颜色成为{{glossary("accessibility", "无障碍")}}问题。色彩使用不当或粗心大意可能导致一部分目标受众无法充分使用网站或应用程序，从而造成流量损失、业务损失，甚至可能引发公共关系问题。因此，慎重考虑色彩的使用非常重要。
 
-You should do at least basic research into [color blindness](https://zh.wikipedia.org/wiki/color_blindness). There are several kinds; the most common is red-green color blindness, which causes people to be unable to differentiate between the colors red and green. There are others, too, ranging from inabilities to tell the difference between certain colors to total inability to see color at all.
+你至少应该对[色盲](https://zh.wikipedia.org/wiki/色盲)进行基本研究。色盲有好几种，最常见的是红绿色盲，它会导致人们无法区分红色和绿色。还有其他一些色盲，从无法区分某些颜色到完全看不到颜色。
 
-> **备注：** The most important rule: never use color as the only way to know something. If, for example, you indicate success or failure of an operation by changing the color of a shape from white to green for success and red for failure, users with red-green color-blindness won't be able to use your site properly. Instead, perhaps use both text and color together, so that everyone can understand what's happening.
+> [!NOTE]
+> 最重要的一条规则是：永远不要把颜色作为了解事物的唯一途径。例如，如果你通过将形状的颜色从白色变为绿色（成功）和红色（失败）来表示操作的成功或失败，那么患有红绿色盲的用户将无法正常使用你的网站。相反，也许可以同时使用文字和颜色，这样每个人都能明白发生了什么。
 
-For more information about color blindness, see the following articles:
+有关色盲的更多信息，请参阅以下文章：
 
-- [Medline Plus: Color Blindness](https://medlineplus.gov/colorblindness.html) (United States National Institute of Health)
-- [American Academy of Ophthamology: What Is Color Blindness?](https://www.aao.org/eye-health/diseases/what-is-color-blindness)
-- [Color Blindness & Web Design](https://www.usability.gov/get-involved/blog/2010/02/color-blindness.html) (Usability.gov: United States Department of Health and Human Services)
+- [Medline Plus：色盲](https://medlineplus.gov/colorblindness.html) （载于美国国家卫生研究院）
+- [美国眼科学会：什么是色盲](https://www.aao.org/eye-health/diseases/what-is-color-blindness)
+- [色盲与网页设计](https://www.usability.gov/get-involved/blog/2010/02/color-blindness.html)（载于 Usability.gov：美国卫生与公众服务部）
 
 ### 调色板设计示例
 
-Let's consider a quick example of selecting an appropriate color palette for a site. Imagine that you're building a website for a new game that takes place on the planet Mars. So let's do a [Google search for photos of Mars](https://www.google.com/search?q=Mars&tbm=isch). Lots of good examples of Martian coloration there. We carefully avoid the mockups and the photos from movies. And we decide to use a photo taken by one of the Mars landers humanity has parked on the surface over the last few decades, since the game takes place on the planet's surface. We use a color picker tool to select a sample of the color we choose.
+让我们举一个简单的例子来说明如何为网站选择合适的色调。想象一下，你正在为一款发生在火星上的新游戏建立一个网站。那么，让我们在 [Google 搜索火星照片](https://www.google.com/search?q=Mars&tbm=isch)。那里有很多火星色彩的好例子。我们小心地避开了模拟图和电影中的照片。我们决定使用人类在过去几十年中停放在火星表面的火星登陆器拍摄的照片，因为游戏是在火星表面进行的。我们使用颜色拾取工具来选择颜色样本。
 
-Using an eyedropper tool, we identify a color we like and determine that the color in question is `#D79C7A`, which is an appropriate rusty orange-red color that's so stereotypical of the Martian surface.
+使用滴管工具，我们找到了自己喜欢的颜色，并确定该颜色为 `#D79C7A`，这是一种非常适合火星表面的锈橙红色。
 
-Having selected our base color, we need to build out our palette. We decide to use [Paletton](http://www.paletton.com/) to come up with the other colors we need. Upon opening Paletton, we see:
+选定基色后，我们需要构建调色板。我们决定使用 [Paletton](https://www.paletton.com/) 来调出我们需要的其他颜色。打开 Paletton 后，我们可以看到
 
-![Right after loading Paletton.](paletton1.png)
+![Paletton 加载完毕](paletton1.png)
 
-Next, we enter our color's hex code (`D79C7A`) into the "Base RGB" box at the bottom-left corner of the tool:
+接下来，我们在工具左下角的“Base RGB”框中输入颜色的十六进制代码（`D79C7A`）：
 
-![After entering base color](paletton2.png)
+![输入基本颜色后](paletton2.png)
 
-We now see a monochromatic palette based on the color we picked from the Mars photo. If you need a lot of related colors for some reason, those are likely to be good ones. But what we really want is an accent color. Something that will pop along side the base color. To find that, we click the "add complementary" toggle underneath the menu that lets you select the palette type (currently "Monochromatic"). Paletton computes an appropriate accent color; clicking on the accent color down in the bottom-right corner tells us that this color is `#508D7C`.
+现在我们看到的单色调色板是基于我们从火星照片中选取的颜色。如果你出于某种原因需要很多相关的颜色，那么这些颜色很可能是不错的选择。但我们真正需要的是一种强调色。一种能与基色相得益彰的颜色。要找到这种颜色，我们可以点击菜单下方的“add complementary”（添加补色）切换按钮，选择调色板类型（目前为“Monochromatic”）。Paletton 会计算出一个合适的强调色；点击右下角的强调色，就会告诉我们这个颜色是 `#508D7C`。
 
-![Now with complementary colors included.](paletton3.png)
+![现在包含了强调色](paletton3.png)
 
-If you're unhappy with the color that's proposed to you, you can change the color scheme, to see if you find something you like better. For example, if we don't like the proposed greenish-blue color, we can click the Triad color scheme icon, which presents us with the following:
+如果你对建议的颜色不满意，可以更改配色方案，看看是否能找到你更喜欢的颜色。例如，如果我们不喜欢建议的蓝绿色，我们可以点击“Triad”配色方案图标，就会出现下面的图标：
 
-![Triad color scheme selected](paletton4.png)
+![选择了 Triad 配色方案](paletton4.png)
 
-That greyish blue in the top-right looks pretty good. Clicking on it, we find that it's `#556E8D`. That would be used as the accent color, to be used sparingly to make things stand out, such as in headlines or in the highlighting of tabs or other indicators on the site:
+右上方的灰蓝色看起来不错。点击它，我们会发现它是 `#556E8D`。这将被用作强调色，在网站的标题、标签或其他指示器的高亮部分等处少量使用，以突出重点：
 
-![Triad color scheme selected](paletton-color-detail.png)
+![选择了 Traid 配色方案](paletton-color-detail.png)
 
-Now we have our base color and our accent. On top of that, we have a few complementary shades of each, just in case we need them for gradients and the like. The colors can then be exported in a number of formats so you can make use of them.
+现在，我们有了基础色和强调色。此外，我们还为每种颜色准备了一些互补色调，以备渐变等用途。这些颜色可以以多种格式导出，以便使用。
 
-Once you have these colors, you will probably still need to select appropriate neutral colors. Common design practice is to try to find the sweet spot where there's just enough contrast that the text is crisp and readable but not enough contrast to become harsh for the eyes. It's easy to go too far in one way or another so be sure to get feedback on your colors once you've selected them and have examples of them in use available. If the contrast is too low, your text will tend to be washed out by the background, leaving it unreadable, but if your contrast is too high, the user may find your site garish and unpleasant to look at.
+有了这些颜色之后，你可能还需要选择适当的中性色。通常的设计做法是尽量找到一个最佳点，既要有足够的对比度，使文字清晰可读，又要有足够的对比度，以免刺眼。在某种程度上很容易走得太远，因此在选定颜色并有使用实例后，一定要征求对颜色的反馈意见。如果对比度太低，文字会被背景冲淡，导致无法阅读；但如果对比度太高，用户可能会觉得网站花哨、不好看。
 
-### 颜色、背景、对比和印刷
+### 颜色、背景、对比度和印刷
 
-What looks good on screen may look very different on paper. In addition, ink can be expensive, and if a user is printing your page, they don't necessarily need all the backgrounds and such using up their precious ink when all that matters is the text itself. Most browsers, by default, remove background images when printing documents.
+在屏幕上看起来不错的内容，在纸上可能会大相径庭。此外，墨水可能很贵，如果用户要打印你的页面，他们不一定需要所有的背景之类的东西来耗费他们宝贵的墨水，因为最重要的是文本本身。大多数浏览器默认情况下都会在打印文档时移除背景图片。
 
-If your background colors and images have been selected carefully and/or are crucial to the usefulness of the content, you can use the CSS {{cssxref("color-adjust")}} property to tell the browser that it should not make adjustments to the appearance of content.
+如果你的背景颜色和图像是经过精心挑选的，并且/或者对内容的实用性至关重要，可以使用 CSS {{cssxref("print-color-adjust")}} 属性来告诉浏览器不要对内容的外观进行调整。
 
-The default value of `color-adjust`, `economy`, indicates that the browser is allowed to make appearance changes as it deems necessary in order to try to optimize the legibility and/or print economy of the content, given the type of output device the document is being drawn onto.
+`print-color-adjust` 的默认值为 `economy`，表示允许浏览器根据文档绘制到的输出设备类型，在其认为必要时更改外观，以尽量优化内容的可读性和/或打印经济性。
 
-You can set `color-adjust` to `exact` to tell the browser that the element or elements on which you use it have been designed specifically to best work with the colors and images left as they are. With this set, the browser won't tamper with the appearance of the element, and will draw it as indicated by your CSS.
+可以将 `print-color-adjust` 设置为 `exact`，以便告诉浏览器，你使用该功能的一个或多个元素是专门设计的，可以在颜色和图像保持原样的情况下达到最佳效果。有了这个设置，浏览器就不会篡改元素的外观，而是按照 CSS 的指示来绘制。
 
-> **备注：** There is no guarantee, though, that `color-adjust: exact` will result in your CSS being used exactly as given. If the browser provides user preferences to change the output (such as a "don't print backgrounds" checkbox in a print dialog box), that overrides the value of `color-adjust`.
+> [!NOTE]
+> 不过，并不能保证 `print-color-adjust: exact` 就能完全按照给定的方式使用 CSS。如果浏览器提供了更改输出的用户首选项（如打印对话框中的“不打印背景”复选框），则该首选项会覆盖 `print-color-adjust` 的值。
 
-## 相关链接
+## 参见
 
-- [Drawing graphics](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Graphics on the web](/zh-CN/docs/Web/Guide/Graphics)
-- [MDN's color picker tool](/zh-CN/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [绘制图形](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
+- [Web 上的图形](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images#web_上的其他图形)
+- [CSS 颜色模块](/zh-CN/docs/Web/CSS/CSS_colors)

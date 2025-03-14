@@ -1,23 +1,13 @@
 ---
 title: Отскок от стен
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
-tags:
-  - Анимация
-  - Графика
-  - Игры
-  - Начинающим
-  - Обучение
-  - Примеры
-  - столкновения
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Переместить_мяч", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
+{{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Переместить_мяч", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
 
-Это 3-й этап из 10 [Gamedev Canvas tutorial](/ru/docs/Games/Workflows/Breakout_game_from_scratch). Вы можете найти исходный код как он должен выглядеть после завершения этого урока в [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html).
+Это 3-й этап из 10 [Gamedev Canvas tutorial](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Вы можете найти исходный код как он должен выглядеть после завершения этого урока в [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html).
 
-Приятно наблюдать за нашим мяч, но он быстро исчезает с экрана, удовольствие длится недолго! Чтобы продлить, мы реализуем некоторое очень простое обнаружение столкновений (о которых будет рассказано [далее](/ru/docs/Games/Workflows/Breakout_game_from_scratch/Collision_detection) более подробно), чтобы сделать отскок мяча от четырёх краёв холста.
+Приятно наблюдать за нашим мяч, но он быстро исчезает с экрана, удовольствие длится недолго! Чтобы продлить, мы реализуем некоторое очень простое обнаружение столкновений (о которых будет рассказано [далее](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection) более подробно), чтобы сделать отскок мяча от четырёх краёв холста.
 
 ## Простое обнаружение столкновений
 
@@ -32,7 +22,7 @@ var ballRadius = 10;
 Теперь обновите строку, которая рисует шарик, внутри функции `drawBall()`:
 
 ```js
-ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
 ```
 
 ### Отскакивание от верхней и нижней стены
@@ -40,8 +30,8 @@ ctx.arc(x, y, ballRadius, 0, Math.PI*2);
 Есть четыре стены, от которых мяч будет отскакивать — давайте сначала сосредоточимся на верхней. При каждом кадре нужно проверять, коснулся ли мяч верхней границы — если да, то будет обратное движение мяча, поэтому он начнёт двигаться в противоположном направлении и остановится в пределах видимой границы. Вспомнив, что система координат начинается с левого верхнего угла, мы можем придумать что-то вроде этого:
 
 ```js
-if(y + dy < 0) {
-    dy = -dy;
+if (y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -50,8 +40,8 @@ if(y + dy < 0) {
 Приведённый выше код описывает отражение только от верхней границы, так что теперь давайте думать о нижнем крае:
 
 ```js
-if(y + dy > canvas.height) {
-    dy = -dy;
+if (y + dy > canvas.height) {
+  dy = -dy;
 }
 ```
 
@@ -60,8 +50,8 @@ if(y + dy > canvas.height) {
 Мы можем объединить эти две конструкции в одну, чтобы уменьшить код:
 
 ```js
-if(y + dy > canvas.height || y + dy < 0) {
-    dy = -dy;
+if (y + dy > canvas.height || y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -72,12 +62,12 @@ if(y + dy > canvas.height || y + dy < 0) {
 Мы сделали отражение от верхней и нижней границ, нельзя забывать и про боковины. Задача очень похожа на самом деле, все, что вам нужно сделать, это повторить конструкцию заменив Y на X:
 
 ```js
-if(x + dx > canvas.width || x + dx < 0) {
-    dx = -dx;
+if (x + dx > canvas.width || x + dx < 0) {
+  dx = -dx;
 }
 
-if(y + dy > canvas.height || y + dy < 0) {
-    dy = -dy;
+if (y + dy > canvas.height || y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -87,16 +77,16 @@ if(y + dy > canvas.height || y + dy < 0) {
 
 Проверьте сейчас свой код, и вы будете впечатлёны — теперь мяч, отскакивает от всех четырёх краёв нашего `<canvas>`! Однако есть некоторая проблема - когда мяч попадает в любую стену, он немного заходит за границы `<canvas>` перед отскоком:
 
-![](https://mdn.mozillademos.org/files/10432/ball-in-wall.png)
+![](ball-in-wall.png)
 
 Это происходит потому, что мы проверяем касание стены и центра мяча, а не его края. Мяч должен отскакивать сразу после касания, а не когда он уже на половину в стене, так что давайте корректировать наш код включив в него небольшое выражение. Обновите последний код добавив к нему:
 
 ```js
-if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
-    dx = -dx;
+if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+  dx = -dx;
 }
-if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
-    dy = -dy;
+if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+  dy = -dy;
 }
 ```
 
@@ -108,10 +98,11 @@ if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/redj37dc/","","370")}}
 
-> **Примечание:** попробуйте изменить цвет шарика на случайный цвет каждый раз, когда он попадает в стену.
+> [!NOTE]
+> Попробуйте изменить цвет шарика на случайный цвет каждый раз, когда он попадает в стену.
 
 ## Следующий шаг
 
-Теперь мы добрались до стадии, где наш мяч одновременно двигается и остаётся на игровом поле. В четвёртой главе мы рассмотрим реализацию управления — см. [Paddle and keyboard controls](/ru/docs/Games/Workflows/Breakout_game_from_scratch/Paddle_and_keyboard_controls).
+Теперь мы добрались до стадии, где наш мяч одновременно двигается и остаётся на игровом поле. В четвёртой главе мы рассмотрим реализацию управления — см. [Paddle and keyboard controls](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}

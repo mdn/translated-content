@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n
 
 {{AddonSidebar}}
 
-国际化扩展的函数。您可以使用这些 api 从与扩展打包在一起的本地化文件中获取本地化字符串，查找浏览器的当前语言，并查找其 [Accept-Language header](/zh-CN/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header)头的值。
+国际化扩展的函数。你可以使用这些 api 从与扩展打包在一起的本地化文件中获取本地化字符串，查找浏览器的当前语言，并查找其 [Accept-Language header](/zh-CN/docs/Web/HTTP/Guides/Content_negotiation#the_accept-language_header)头的值。
 
 有关对扩展使用 i18n 的详细信息，请参阅：
 
@@ -20,7 +20,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n
 ## 方法
 
 - {{WebExtAPIRef("i18n.getAcceptLanguages()")}}
-  - : 得到浏览器 [支持的语言](/zh-CN/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header) 。这与浏览器使用的区域设置不同。要获得区域设置，请使用{{WebExtAPIRef('i18n.getUILanguage')}}.
+  - : 得到浏览器 [支持的语言](/zh-CN/docs/Web/HTTP/Guides/Content_negotiation#the_accept-language_header) 。这与浏览器使用的区域设置不同。要获得区域设置，请使用{{WebExtAPIRef('i18n.getUILanguage')}}.
 - {{WebExtAPIRef("i18n.getMessage()")}}
   - : 获取指定消息的本地化字符串。
 - {{WebExtAPIRef("i18n.getUILanguage()")}}
@@ -34,9 +34,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n
 
 {{WebExtExamples("h2")}}
 
-> **备注：** 这个 API 是基于 Chromium 的 [`chrome.i18n`](https://developer.chrome.com/extensions/i18n) API，这个文档源自 Chromium 代码中的 [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) 。
->
-> 微软 Edge 的兼容性数据由微软公司提供，并在这里收录在《知识共享 3.0 美国许可证》中。
+> [!NOTE]
+> 这个 API 是基于 Chromium 的 [`chrome.i18n`](https://developer.chrome.google.cn/docs/extensions/reference/api/i18n) API，这个文档源自 Chromium 代码中的 [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) 。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

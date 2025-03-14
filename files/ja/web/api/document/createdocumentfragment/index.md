@@ -1,6 +1,9 @@
 ---
-title: Document.createDocumentFragment()
+title: "Document: createDocumentFragment() メソッド"
+short-title: createDocumentFragment()
 slug: Web/API/Document/createDocumentFragment
+l10n:
+  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
 {{APIRef("DOM WHATWG")}}
@@ -9,9 +12,13 @@ slug: Web/API/Document/createDocumentFragment
 
 ## 構文
 
+```js-nolint
+createDocumentFragment()
 ```
-var fragment = document.createDocumentFragment();
-```
+
+### 引数
+
+なし。
 
 ### 値
 
@@ -21,37 +28,35 @@ var fragment = document.createDocumentFragment();
 
 `DocumentFragment` は DOM の {{domxref("Node")}} オブジェクトですが、メインの DOM ツリーの一部にはなりません。通常の使い方は、文書フラグメントを生成し、その文書フラグメントに要素を追加して、その文書フラグメントを DOM ツリーへ追加することです。 DOM ツリー内では、文書フラグメントはすべての子要素によって置き換えられます。
 
-文書フラグメントは*メモリ内*にあり、メインの DOM ツリーの一部ではないため、文書フラグメントに子要素を追加してもページの[リフロー](https://developers.google.com/speed/articles/reflow?csw=1) (要素の位置と大きさを決定するための計算) が行われません。そのため文書フラグメントを利用することによって、[性能の改善](http://ejohn.org/blog/dom-documentfragments/)が見込まれます。
+文書フラグメントは*メモリー内*にあり、メインの DOM ツリーの一部ではないため、文書フラグメントを利用することによって、一部の古いエンジンでは[性能の改善](https://johnresig.com/blog/dom-documentfragments/)が見込まれます。
 
 `DocumentFragment` コンストラクターを使用して新しいフラグメントを生成することもできます。
 
 ```js
-let fragment = new DocumentFragment();
+const fragment = new DocumentFragment();
 ```
 
 ## 例
 
-この例では、主要なウェブブラウザのリストを `DocumentFragment` 内に作成し、表示するドキュメントに新しい DOM サブツリーを追加しています。
+この例では、主要なウェブブラウザーのリストを `DocumentFragment` 内に作成し、表示するドキュメントに新しい DOM サブツリーを追加しています。
 
 ### HTML
 
 ```html
-<ul id="ul">
-</ul>
+<ul id="ul"></ul>
 ```
 
 ### JavaScript
 
 ```js
-var element  = document.getElementById('ul'); // ul が存在することを仮定
-var fragment = document.createDocumentFragment();
-var browsers = ['Firefox', 'Chrome', 'Opera',
-    'Safari', 'Internet Explorer'];
+const element = document.getElementById("ul"); // ul が存在することを仮定
+const fragment = document.createDocumentFragment();
+const browsers = ["Firefox", "Chrome", "Opera", "Safari"];
 
-browsers.forEach(function(browser) {
-    var li = document.createElement('li');
-    li.textContent = browser;
-    fragment.appendChild(li);
+browsers.forEach((browser) => {
+  const li = document.createElement("li");
+  li.textContent = browser;
+  fragment.appendChild(li);
 });
 
 element.appendChild(fragment);
@@ -59,7 +64,7 @@ element.appendChild(fragment);
 
 ### 結果
 
-{{EmbedLiveSample("Example", 600, 140)}}
+{{EmbedLiveSample("Examples", 600, 140)}}
 
 ## 仕様書
 

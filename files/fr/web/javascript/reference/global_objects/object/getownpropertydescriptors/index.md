@@ -1,25 +1,32 @@
 ---
 title: Object.getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
-tags:
-  - JavaScript
-  - Méthode
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertyDescriptors
 ---
 
 {{JSRef}}
 
 La méthode **`Object.getOwnPropertyDescriptors()`** renvoie l'ensemble des descripteurs des propriétés propres d'un objet donné.
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptors.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyDescriptors()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+const descriptors1 = Object.getOwnPropertyDescriptors(object1);
+
+console.log(descriptors1.property1.writable);
+// Expected output: true
+
+console.log(descriptors1.property1.value);
+// Expected output: 42
+```
 
 ## Syntaxe
 
 ```js
-Object.getOwnPropertyDescriptors(obj)
+Object.getOwnPropertyDescriptors(obj);
 ```
 
 ### Paramètres
@@ -59,7 +66,7 @@ La méthode {{jsxref("Object.assign()")}} ne copiera que les propriétés propre
 ```js
 Object.create(
   Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(obj)
+  Object.getOwnPropertyDescriptors(obj),
 );
 ```
 
@@ -68,19 +75,20 @@ Object.create(
 Pour créer une sous-classe, généralement, on définit la sous-classe et on définit son prototype comme étant une instance de la classe parente. Enfin on définit les propriétés de cette nouvelle sous-classe.
 
 ```js
-function superclass() {};
+function superclass() {}
 superclass.prototype = {
   // on définit les méthodes et propriétés
   // de la classe parente
 };
 
-function subclass() {};
+function subclass() {}
 subclass.prototype = Object.create(
   superclass.prototype,
   Object.getOwnPropertyDescriptors({
-  // on définit les méthodes et propriétés
-  // de la sous-classe
-}));
+    // on définit les méthodes et propriétés
+    // de la sous-classe
+  }),
+);
 ```
 
 ## Spécifications

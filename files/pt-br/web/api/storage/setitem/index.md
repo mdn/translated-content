@@ -35,23 +35,22 @@ A função abaixo irá criar três dados dentro do local storage.
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'red');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'myCat.png');
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "myCat.png");
 }
 ```
 
-> **Nota:** Para ver ele sendo usado em um exemplo real, consulte nosso [Web Storage Demo](https://github.com/mdn/web-storage-demo).
+> [!NOTE]
+> Para ver ele sendo usado em um exemplo real, consulte nosso [Web Storage Demo](https://github.com/mdn/web-storage-demo).
 
 ## Especificações
 
-| Specification                                                                        | Status                           | Comment |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('Web Storage', '#dom-storage-setitem', 'setItem()')}} | {{Spec2('Web Storage')}} |         |
+{{Specifications}}
 
-## Navegadores compatíveis
+## Compatibilidade com navegadores
 
-{{Compat("api.Storage.setItem")}}
+{{Compat}}
 
 ## Veja também
 

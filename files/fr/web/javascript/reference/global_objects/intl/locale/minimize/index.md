@@ -1,27 +1,33 @@
 ---
 title: Intl.Locale.prototype.minimize()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Locale
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/minimize
 ---
 
 {{JSRef}}
 
 La méthode **`Intl.Locale.prototype.minimize()`** tente de retirer les informations qui auraient pu être ajoutée à une locale lors d'un appel à {{jsxref("Locale/maximize", "Locale.maximize()")}}.
 
-{{EmbedInteractiveExample("pages/js/intl-locale-prototype-minimize.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Locale.prototype.minimize()")}}
+
+```js interactive-example
+const english = new Intl.Locale("en-Latn-US");
+const korean = new Intl.Locale("ko-Kore-KR");
+const arabic = new Intl.Locale("ar-Arab-EG");
+
+console.log(english.minimize().baseName);
+// Expected output: "en"
+
+console.log(korean.minimize().baseName);
+// Expected output: "ko"
+
+console.log(arabic.minimize().baseName);
+// Expected output: "ar"
+```
 
 ## Syntaxe
 
 ```js
-locale.minimize()
+locale.minimize();
 ```
 
 ### Valeur de retour
@@ -37,7 +43,10 @@ Cette méthode effectue l'opération inverse de {{jsxref("Locale/maximize", "max
 ## Exemples
 
 ```js
-let maLocale = new Intl.Locale("fr-Latn-FR", {hourCycle: "h24", calendar: "gregory"});
+let maLocale = new Intl.Locale("fr-Latn-FR", {
+  hourCycle: "h24",
+  calendar: "gregory",
+});
 console.log(maLocale.baseName); // Affiche "fr-Latn-FR"
 console.log(maLocale.toString()); // Affiche "fr-Latn-FR-u-ca-gregory-hc-h24"
 let maLocMinimized = maLocale.minimize();
@@ -53,13 +62,11 @@ console.log(maLocMinimized.toString());
 
 ## Spécifications
 
-| Spécification                                                                                                                          | État | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------------------------- | ---- | ------------ |
-| [Proposition pour `Intl.Locale.prototype.minimize()`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.minimize) |      |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.minimize")}}
+{{Compat}}
 
 ## Voir aussi
 

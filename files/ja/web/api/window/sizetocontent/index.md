@@ -12,7 +12,7 @@ Firefox 20 以降では、ウィンドウの最小サイズを制限すること
 ## 構文
 
 ```js
-sizeToContent()
+sizeToContent();
 ```
 
 ### 引数

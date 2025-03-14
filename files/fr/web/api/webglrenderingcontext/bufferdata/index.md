@@ -1,18 +1,11 @@
 ---
 title: WebGLRenderingContext.bufferData()
 slug: Web/API/WebGLRenderingContext/bufferData
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/bufferData
 ---
 
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.bufferData()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) initialise et crée le magasin de données de l'objet tampon.
+La méthode **`WebGLRenderingContext.bufferData()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) initialise et crée le magasin de données de l'objet tampon.
 
 ## Syntaxe
 
@@ -83,8 +76,8 @@ Aucune.
 ### Utilisation de `bufferData`
 
 ```js
-var canevas = document.getElementById('canevas');
-var gl = canevas.getContext('webgl');
+var canevas = document.getElementById("canevas");
+var gl = canevas.getContext("webgl");
 var tampon = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, tampon);
 gl.bufferData(gl.ARRAY_BUFFER, 1024, gl.STATIC_DRAW);

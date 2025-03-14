@@ -1,26 +1,32 @@
 ---
 title: Atomics.xor()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/xor
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/xor
 ---
 
 {{JSRef}}
 
 La méthode statique **`Atomics.xor()`** calcule le résultat d'un OU exclusif (XOR) binaire entre une valeur donnée et une valeur du tableau partagé à un emplacement donné. Elle renvoie l'ancienne valeur qui était contenue à cette position. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
 
-{{EmbedInteractiveExample("pages/js/atomics-xor.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.xor()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 7;
+
+// 7 (0111) XOR 2 (0010) = 5 (0101)
+console.log(Atomics.xor(uint8, 0, 2));
+// Expected output: 7
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 5
+```
 
 ## Syntaxe
 
 ```js
-Atomics.xor(typedArray, index, valeur)
+Atomics.xor(typedArray, index, valeur);
 ```
 
 ### Paramètres
@@ -71,7 +77,7 @@ var ta = new Uint8Array(sab);
 ta[0] = 5;
 
 Atomics.xor(ta, 0, 1); // renvoie 5, l'ancienne valeur
-Atomics.load(ta, 0);   // 4
+Atomics.load(ta, 0); // 4
 ```
 
 ## Spécifications

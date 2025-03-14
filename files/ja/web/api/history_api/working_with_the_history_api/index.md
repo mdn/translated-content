@@ -1,34 +1,37 @@
 ---
 title: 履歴 API の操作
 slug: Web/API/History_API/Working_with_the_History_API
+l10n:
+  sourceCommit: 55de68017f98094f45addb3ebaa0f7f52024f60b
 ---
 
 {{DefaultAPISidebar("History API")}}
-HTML5 では、履歴項目を追加および変更するための {{DOMxRef("History.pushState", "pushState()")}} および {{DOMxRef("History.replaceState", "replaceState()")}} メソッドをそれぞれ導入しています。これらのメソッドは {{domxref("Window/popstate_event", "popstate")}} イベントと一緒に動作します。
+
+{{DOMxRef("History.pushState", "pushState()")}} および {{DOMxRef("History.replaceState", "replaceState()")}} メソッドは、それぞれ履歴項目を追加したり変更したりします。これらのメソッドは {{domxref("Window/popstate_event", "popstate")}} イベントと一緒に動作します。
 
 ## 履歴項目の追加と修正
 
-{{DOMxRef("History.pushState","pushState()")}} を使うことで、履歴の状態を変更した後に生成される {{domxref("XMLHttpRequest")}} オブジェクトの HTTP ヘッダー中のリファラも変更されます。リファラは {{domxref("XMLHttpRequest")}} オブジェクトが生成された時点での `this` となるウィンドウの持つドキュメントの URL となります。
+{{DOMxRef("History.pushState","pushState()")}} を使うことで、履歴の状態を変更した後に生成される {{domxref("XMLHttpRequest")}} オブジェクトの HTTP ヘッダー中のリファラも変更されます。リファラーは {{domxref("XMLHttpRequest")}} オブジェクトが生成された時点での `this` となるウィンドウの持つ文書の URL となります。
 
 ### pushState() の例
 
 以下の JavaScript が `https://mozilla.org/foo.html` で実行されると想定してください。
 
 ```js
-let stateObj = {
-    foo: "bar",
-}
+const stateObj = {
+  foo: "bar",
+};
 
-history.pushState(stateObj, "page 2", "bar.html")
+history.pushState(stateObj, "page 2", "bar.html");
 ```
 
-これにより URL バーには `https://mozilla.org/bar.html` と表示されますが、ブラウザーは `bar.html` を読み込むことはなくまたその存在をチェックすることはありません。
+これにより URL バーには `https://mozilla.org/bar.html` と表示されますが、ブラウザーは `bar.html` を読み込むことはなくまたその存在をチェックすることはありません。
 
-ユーザーが `https://google.com` へ移動し、それから**戻る**ボタンをクリックしたとします。このとき、 URL バーは `https://mozilla.org/bar.html` を表示し、`history.state` は `stateObj` になります。`popstate` イベントはページが再読み込みされたために発行されません。ページそれ自体は `bar.html` のように見えます。
+ユーザーが `https://google.com` へ移動し、それから**戻る**ボタンをクリックしたとします。このとき、 URL バーは `https://mozilla.org/bar.html` を表示し、`history.state` は `stateObj` になります。`popstate` イベントはページが再読み込みされたために発行されません。ページそれ自体は `bar.html` のように見えます。
 
-再び**戻る**ボタンをクリックすると、URL は `https://mozilla.org/foo.html` へ変化し、 `popstate` イベントが発行され、状態は null オブジェクトとなります。ここでもまた、`popstate` イベントを受け取って手動でコンテンツを変更することは可能ですが、戻るという操作によって戻る前のコンテンツが変更されるわけではありません。
+再び**戻る**ボタンをクリックすると、URL は `https://mozilla.org/foo.html` へ変化し、 `popstate` イベントが発行され、状態は null オブジェクトとなります。ここでもまた、`popstate` イベントを受け取って手動でコンテンツを変更することは可能ですが、戻るという操作によって戻る前のコンテンツが変更されるわけではありません。
 
-### pushState() メソッド
+### pushState() メソッド
 
 `pushState()` は、 **状態オブジェクト**、**title** （今は無視されます）、（任意で） **URL** の 3 つの引数を使用します。
 
@@ -41,8 +44,6 @@ history.pushState(stateObj, "page 2", "bar.html")
   - : [Safari 以外のすべてのブラウザーは、現在この引数を無視しています](https://github.com/whatwg/html/issues/2174)。ただし、将来的には使用する可能性があります。ここで空文字列を渡せば、将来このメソッドが変更されても安全です。あるいは、移動先の状態を表す短いタイトルを渡すこともできます。
 - **URL**
   - : 新しい履歴項目の URL はこの引数で与えられます。ブラウザーは `pushState()` の呼び出しの後にはこの URL を読み込もうとしませんが、例えばユーザーがブラウザーを再起動した後などには URL を読み込もうとする可能性があることに注意してください。新しい URL は絶対的である必要はありません。相対的である場合、現在の URL に対して相対的に解決されます。新しい URL は現在の URL と同じオリジンでなければなりません。そうでない場合、`pushState()` は例外を発生します。この引数はオプションです。指定しなかった場合、文書の現在の URL が設定されます。
-
-> **メモ:** Gecko 2.0 {{ geckoRelease("2.0") }} から Gecko 5.0 {{ geckoRelease("5.0") }} までの間では、渡されたオブジェクトは JSON を使用してシリアライズされます。 Gecko 6.0 {{ geckoRelease("6.0") }} より、オブジェクトは[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を使用してシリアライズされます。これにより多種多様なオブジェクトを安全に渡せるようになります。
 
 ある意味では、`pushState()` の呼び出しは `window.location = "#foo"` と設定するのと似ています。どちらも、現在の文書に関連する別の履歴項目の生成と有効化を行います。
 
@@ -57,34 +58,34 @@ history.pushState(stateObj, "page 2", "bar.html")
 
 他の文書では、 `null` の名前空間 URI を持つ要素を作成します。
 
-### replaceState() メソッド
+### replaceState() メソッド
 
 `history.replaceState()` はちょうど `history.pushState()` のように動作しますが、 `replaceState()` は新しく履歴項目を作成するのではなく、現在の履歴項目を修正します。ただし、グローバルなブラウザー履歴に新しい項目が作成されるのを防ぐものではありません。
 
 具体的には、何らかのユーザーのアクションを受け、現在の履歴項目の URL または 状態オブジェクトを更新したい場合に `replaceState()` が役立ちます。
-
-> **メモ:** Gecko 2.0 {{ geckoRelease("2.0") }} から Gecko 5.0 {{ geckoRelease("5.0") }} までの間では、渡されたオブジェクトは JSON を使用してシリアライズされます。 Gecko 6.0 {{ geckoRelease("6.0") }} より、オブジェクトは[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を使用してシリアライズされます。これにより多種多様なオブジェクトを安全に渡せるようになります。
 
 ### replaceState() の例
 
 `https://mozilla.org/foo.html` で次の JavaScript を実行したとします。
 
 ```js
-let stateObj = { foo: "bar" }
-history.pushState(stateObj, "page 2", "bar.html")
+const stateObj = {
+  foo: "bar",
+};
+history.pushState(stateObj, "page 2", "bar.html");
 ```
 
-上記2行の説明は、上記の *[pushState() メソッドの例](#pushstate_の例)* の部分で得ることができます。
+上記2行の説明は、上記の _[pushState() メソッドの例](#pushstate_の例)_ の部分で得ることができます。
 
 次に、`https://mozilla.org/bar.html` で次の JavaScript を実行したとします。
 
 ```js
-history.replaceState(stateObj, "page 3", "bar2.html")
+history.replaceState(stateObj, "page 3", "bar2.html");
 ```
 
-これによって URL バーには `https://mozilla.org/bar2.html` が表示されますが、ブラウザーは `bar2.html` の読み込みを行わず、 `bar2.html` が存在するかどうかもチェックしません。
+これによって URL バーには `https://mozilla.org/bar2.html` が表示されますが、ブラウザーは `bar2.html` の読み込みを行わず、`bar2.html` が存在するかどうかもチェックしません。
 
-仮に今、ユーザーが `https://www.microsoft.com` へ移動し、**戻る**ボタンを押したとします。この時点で URL バーには `https://mozilla.org/bar2.html` が表示されています。もしユーザーが再び**戻る**ボタンを押すと、 URL バーには `https://mozilla.org/foo.html` が表示され、`bar.html` を完全に回避します。
+仮に今、ユーザーが `https://www.microsoft.com` へ移動し、**戻る**ボタンを押したとします。この時点で URL バーには `https://mozilla.org/bar2.html` が表示されています。もしユーザーが再び**戻る**ボタンを押すと、 URL バーには `https://mozilla.org/foo.html` が表示され、`bar.html` を完全に回避します。
 
 ### popstate イベント
 
@@ -99,11 +100,11 @@ history.replaceState(stateObj, "page 3", "bar2.html")
 このように {{DOMxRef("History.state","history.state")}} プロパティを用いることで、 `popstate` イベントを待つことなく現在の履歴項目の状態を読み取ることができます。
 
 ```js
-let currentState = history.state
+const currentState = history.state;
 ```
 
 ## 関連情報
 
 - [履歴 API](/ja/docs/Web/API/History_API)
-- [Ajax ナビゲーションの例](/ja/docs/Web/API/History_API/Example)
-- {{ domxref("window.history") }}
+- [履歴ナビゲーションの例](/ja/docs/Web/API/History_API/Working_with_the_History_API)
+- {{domxref("window.history", "history")}} グローバルオブジェクト

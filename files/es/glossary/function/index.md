@@ -1,14 +1,9 @@
 ---
 title: Función
 slug: Glossary/Function
-tags:
-  - CodingScripting
-  - Glosario
-  - IIFE
-  - JavaScript
-translation_of: Glossary/Function
-original_slug: Glossary/Función
 ---
+
+{{GlossarySidebar}}
 
 Una **función** es un fragmento de código que puede ser llamado por otro código o por sí mismo, o por una {{Glossary("variable")}} que haga referencia a la función. Cuando se llama a una función, los {{Glossary("Argument", "argumentos")}} se pasan a la función como entrada, y la función puede devolver opcionalmente una salida. Una función en {{glossary("JavaScript")}} es también un {{glossary("object", "objeto")}}.
 
@@ -27,7 +22,7 @@ function () {};
 Una **función nombrada** es una función con nombre:
 
 ```js
-function foo() {};
+function foo() {}
 // o se puede usar la anotación con flecha ECMAScript 2015
 const foo = () => {};
 ```
@@ -35,16 +30,16 @@ const foo = () => {};
 Una **función interna** es una función que está dentro de otra función (`cuadrado` en este caso). Una **función externa** es una función que contiene a otra función (`sumarCuadrados` en este caso):
 
 ```js
-function sumarCuadradors(a,b) {
-   function cuadrado(x) {
-      return x * x;
-   }
-   return cuadrado(a) + cuadrado(b);
-};
+function sumarCuadradors(a, b) {
+  function cuadrado(x) {
+    return x * x;
+  }
+  return cuadrado(a) + cuadrado(b);
+}
 //Usando la anotación de flecha ECMAScript 2015
-const sumarCuadrados = (a,b) => {
-   const cuadrado = x => x*x;
-   return cuadrado(a) + cuadrado(b);
+const sumarCuadrados = (a, b) => {
+  const cuadrado = (x) => x * x;
+  return cuadrado(a) + cuadrado(b);
 };
 ```
 
@@ -52,15 +47,13 @@ Una **función recursiva** es una función que se llama a sí misma. Mira {{Glos
 
 ```js
 function bucle(x) {
-   if (x >= 10)
-      return;
-   bucle(x + 1);
-};
+  if (x >= 10) return;
+  bucle(x + 1);
+}
 //Usando la anotación de flecha ECMAScript 2015
-const bucle = x => {
-   if (x >= 10)
-      return;
-   bucle(x + 1);
+const bucle = (x) => {
+  if (x >= 10) return;
+  bucle(x + 1);
 };
 ```
 
@@ -69,17 +62,17 @@ Una **expresión de una función que se invoca inmediatamente** ({{glossary("IIF
 ```js
 // Error (https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
 /*
-​function foo() {
+function foo() {
     console.log('Hello Foo');
 }();
 */
 
 (function foo() {
-    console.log("Hello Foo");
-}());
+  console.log("Hello Foo");
+})();
 
 (function food() {
-    console.log("Hello Food");
+  console.log("Hello Food");
 })();
 ```
 

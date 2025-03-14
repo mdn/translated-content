@@ -1,26 +1,34 @@
 ---
 title: Set.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/add
+l10n:
+  sourceCommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
 ---
 
 {{JSRef}}
 
-**`add()`** 메서드는 `Set` 개체의 맨 뒤에 주어진 `value`의 새 요소를 추가합니다.
+{{jsxref("Set")}} 인스턴스의 **`add()`** 메서드는 같은 값인 요소가 이 Set에 없다면 지정된 값과 함께 새로운 요소를 이 Set에 삽입합니다.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.add()")}}
+
+```js interactive-example
+const set1 = new Set();
+
+set1.add(42);
+set1.add(42);
+set1.add(13);
+
+for (const item of set1) {
+  console.log(item);
+  // Expected output: 42
+  // Expected output: 13
+}
+```
 
 ## 구문
 
-```js
-mySet.add(value);
+```js-nolint
+add(value)
 ```
 
 ### 매개변수
@@ -30,23 +38,23 @@ mySet.add(value);
 
 ### 반환 값
 
-`Set` 객체.
+추가된 값이 포함된 `Set` 객체.
 
 ## 예제
 
 ### `add` 메서드 사용하기
 
 ```js
-var mySet = new Set();
+const mySet = new Set();
 
 mySet.add(1);
-mySet.add(5).add('어떤 문자열'); // 계속 붙일 수 있음
+mySet.add(5).add("some text"); // 계속 붙일 수 있음
 
 console.log(mySet);
-// Set [1, 5, "어떤 문자열"]
+// Set [1, 5, "some text"]
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

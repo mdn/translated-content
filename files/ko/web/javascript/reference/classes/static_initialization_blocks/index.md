@@ -1,17 +1,6 @@
 ---
 title: Class static initialization blocks
 slug: Web/JavaScript/Reference/Classes/Static_initialization_blocks
-tags:
-  - Classes
-  - ECMAScript 2022
-  - JavaScript
-  - Language feature
-  - Static
-  - Reference
-  - Initialization
-translation_of: Web/JavaScript/Reference/Classes/Class_static_initialization_blocks
-original_slug: Web/JavaScript/Reference/Classes/Class_static_initialization_blocks
-browser-compat: javascript.classes.static_initialization_blocks
 ---
 
 {{jsSidebar("Classes")}}
@@ -23,7 +12,22 @@ browser-compat: javascript.classes.static_initialization_blocks
 초기화는 현재 클래스의 선언 컨텍스트에서 프라이빗 상태에 대한 특별한 권한으로 수행됩니다.
 이는 정적 블록을 사용하여 인스턴스 프라이빗 필드가 있는 클래스와 같은 범위에서 선언된 다른 클래스 또는 함수 간에 정보를 공유할 수도 있음을 의미합니다. (C++의 "friend" 클래스와 유사)
 
-{{EmbedInteractiveExample("pages/js/classes-static-initialization.html")}}
+{{InteractiveExample("JavaScript Demo: Class Static Initialization Blocks")}}
+
+```js interactive-example
+class ClassWithStaticInitializationBlock {
+  static staticProperty1 = "Property 1";
+  static staticProperty2;
+  static {
+    this.staticProperty2 = "Property 2";
+  }
+}
+
+console.log(ClassWithStaticInitializationBlock.staticProperty1);
+// Expected output: "Property 1"
+console.log(ClassWithStaticInitializationBlock.staticProperty2);
+// Expected output: "Property 2"
+```
 
 ## 구문
 
@@ -41,10 +45,10 @@ super 클래스의 정적 초기화는 하위 클래스보다 먼저 수행됩�
 `static {}` 초기화 블록에서 선언된 `var`, `function`, `const` 또는 `let`은 해당 블록에 대해 로컬이므로 블록의 모든 `var` 선언은 호이스트 되지 않습니다.
 
 ```js
-var y = '외부 y';
+var y = "외부 y";
 
 class A {
-  static field = '내부 y';
+  static field = "내부 y";
   static {
     var y = this.field;
   }
@@ -72,13 +76,13 @@ console.log(y);
 
 ```js
 class MyClass {
-  static field1 = console.log('필드1 호출됨');
+  static field1 = console.log("필드1 호출됨");
   static {
-    console.log('1번 정적 클래스 블록 호출됨');
+    console.log("1번 정적 클래스 블록 호출됨");
   }
-  static field2 = console.log('필드2 호출됨');
+  static field2 = console.log("필드2 호출됨");
   static {
-    console.log('2번 정적 클래스 블록 호출됨');
+    console.log("2번 정적 클래스 블록 호출됨");
   }
 }
 
@@ -99,7 +103,7 @@ super 클래스의 정적 초기화는 하위 클래스보다 먼저 수행됩�
 
 ```js
 class A {
-  static field = '정적 필드';
+  static field = "정적 필드";
   static {
     console.log(this.field);
   }
@@ -111,7 +115,7 @@ class A {
 
 ```js
 class A {
-  static fieldA = 'A.fieldA';
+  static fieldA = "A.fieldA";
 }
 class B extends A {
   static {
@@ -138,7 +142,7 @@ class D {
   }
 }
 
-getDPrivateField(new D('private'));
+getDPrivateField(new D("private"));
 // > private
 ```
 

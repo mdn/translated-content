@@ -1,19 +1,9 @@
 ---
 title: browsingData.removePluginData()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removePluginData
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removePluginData
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removePluginData
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Efface les données stockées par les plugins du navigateur.
 
@@ -22,14 +12,14 @@ Vous pouvez utiliser le paramètre `removalOptions`, qui est un objet {{WebExtAP
 - effacer seulement les données du plugins stockées après un temps donné
 - controler si vous souhaitez effacer uniquement les données stockées par les plugins qui s'exécutent dans les pages Web normales ou effacer les données par les plugins qui s'exécutent dans les applications et les extensions hébergées.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var removing = browser.browsingData.removePluginData(
-  removalOptions            // RemovalOptions object
-)
+  removalOptions, // RemovalOptions object
+);
 ```
 
 ### Paramètres
@@ -39,11 +29,11 @@ var removing = browser.browsingData.removePluginData(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera rempli sans arguments lorsque la suppression est terminée. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera rempli sans arguments lorsque la suppression est terminée. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData.removePluginData")}}
+{{Compat}}
 
 ## Exemples
 
@@ -62,10 +52,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+var oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.removePluginData({since: oneWeekAgo}).
-then(onRemoved, onError);
+browser.browsingData
+  .removePluginData({ since: oneWeekAgo })
+  .then(onRemoved, onError);
 ```
 
 Supprimer toutes les données stockées par les plugins :
@@ -79,15 +70,14 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removePluginData({}).
-then(onRemoved, onError);
+browser.browsingData.removePluginData({}).then(onRemoved, onError);
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

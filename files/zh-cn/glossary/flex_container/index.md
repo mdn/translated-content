@@ -1,26 +1,31 @@
 ---
-title: 伸缩容器
+title: 弹性容器
 slug: Glossary/Flex_Container
+l10n:
+  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
-定义一个{{glossary("flexbox")}}（伸缩盒布局），需要在一个父级元素上使用`display`属性的值：`flex`或`inline-flex`。这个父级元素将成为**flex container**（伸缩容器），而它的所有子元素将变成{{glossary("flex item")}}（伸缩项）。
+{{GlossarySidebar}}
 
-使用`flex`值能将元素渲染成为一个块级容器，而使用`inline-flex`值则是渲染成一个行内伸缩容器。这些值会将元素格式化，产生**flex formatting context**（伸缩格式化上下文），这类似于块的格式化上下文，而浮动不会干扰容器，且容器的 margins（所有边距）不会随着这些项目被折叠。
+在父元素的 `display` 属性上使用 `flex` 或 `inline-flex` 值可定义{{glossary("flexbox", "弹性盒")}}布局。此元素由此变为**弹性容器**（flex container），其任意子元素变为{{glossary("flex item", "弹性项目")}}。
 
-## 了解更多
+`flex` 值会使元素变为块级弹性容器，而 `inline-flex` 值则会使元素变为行内级弹性容器。这些值为元素创建了一个**弹性格式化上下文**，类似于块格式化上下文，其中浮动元素不会侵入容器，容器的边距也不会与项目的边距重叠。
+
+## 参见
 
 ### 属性参考
 
-- {{cssxref("align-content")}} 行侧轴对齐方式
-- {{cssxref("align-items")}} 项目自身侧轴对齐方式
-- {{cssxref("flex")}} 伸缩性
-- {{cssxref("flex-direction")}} 伸缩流
-- {{cssxref("flex-flow")}} 伸缩流与换行
-- {{cssxref("flex-wrap")}} 伸缩 - 换行
-- {{cssxref("justify-content")}} 主轴对齐
+- {{cssxref("align-content")}}
+- {{cssxref("align-items")}}
+- {{cssxref("flex")}}
+- {{cssxref("flex-direction")}}
+- {{cssxref("flex-flow")}}
+- {{cssxref("flex-wrap")}}
+- {{cssxref("justify-content")}}
 
-### 延伸阅读
+### 拓展阅读
 
-- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)（伸缩盒子的基本概念）_
-- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)（伸缩容器里的项目对齐方式）_
-- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Mastering wrapping of flex items](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)（掌握伸缩项如何进行换行）_
+- CSS 弹性盒指南：_[flex 布局的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS 弹性盒指南：_[对齐弹性容器中的弹性项目](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS 弹性盒指南：_[掌握弹性项目的包装](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)_
+- Firefox 开发者工具 > 如何：_[CSS 弹性盒检查器：检查弹性盒布局](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html)_

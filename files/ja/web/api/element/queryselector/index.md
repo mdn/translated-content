@@ -1,6 +1,9 @@
 ---
-title: Element.querySelector()
+title: "Element: querySelector() メソッド"
+short-title: querySelector()
 slug: Web/API/Element/querySelector
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{APIRef("DOM")}}
@@ -9,14 +12,17 @@ slug: Web/API/Element/querySelector
 
 ## 構文
 
-```js
-element = baseElement.querySelector(selectors);
+```js-nolint
+querySelector(selectors)
 ```
 
 ### 引数
 
 - `selectors`
-  - : その要素 ({{domxref("Element")}}) の子孫要素と照合する[セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)群です。これは有効な CSS 構文でなければならず、そうでない場合は `SyntaxError` 例外が発生します。このセレクター群に一致する最初の要素が返されます。
+
+  - : 照合する 1 つ以上のセレクターの入った文字列です。この文字列は、有効な CSS セレクターの文字列でなければなりません。そうでない場合は `SyntaxError` 例外が発生します。
+
+    HTML 仕様では、属性値が有効な CSS 識別子であることを求めていないことに注意してください。 [`class`](/ja/docs/Web/HTML/Global_attributes/class) または [`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性の値が有効な CSS 識別子でない場合は、セレクターで使用する前に、値に対して {{domxref("CSS.escape_static", "CSS.escape()")}} で呼び出してエスケープするか、または「[文字エスケープ](/ja/docs/Web/CSS/ident#文字のエスケープ)」で記述されているテクニックのいずれかを使用してエスケープする必要があります。例えば、「[属性値のエスケープ](#属性値のエスケープ)」を参照してください。
 
 ### 返値
 
@@ -26,8 +32,8 @@ element = baseElement.querySelector(selectors);
 
 ### 例外
 
-- `SyntaxError`
-  - : 指定された `selectors` が無効であった場合。
+- `SyntaxError` {{domxref("DOMException")}}
+  - : 指定された `selectors` が無効であった場合に発生します。
 
 ## 例
 
@@ -38,7 +44,9 @@ element = baseElement.querySelector(selectors);
 この最初の例では、 HTML 文書の本文内で type 属性がないか、 type 属性が "text/css" である要素のうち最初のものを返します。
 
 ```js
-var el = document.body.querySelector("style[type='text/css'], style:not([type])");
+const el = document.body.querySelector(
+  "style[type='text/css'], style:not([type])",
+);
 ```
 
 ### :scope 擬似クラスを使用して直接の子を取得
@@ -65,22 +73,22 @@ var el = document.body.querySelector("style[type='text/css'], style:not([type])"
 #### CSS
 
 ```css
-  span {
-    display:block;
-    margin-bottom: 5px;
-  }
-  .red span {
-    background-color: red;
-    padding:5px;
-  }
+span {
+  display: block;
+  margin-bottom: 5px;
+}
+.red span {
+  background-color: red;
+  padding: 5px;
+}
 ```
 
 #### JavaScript
 
 ```js
-  const parentElement = document.querySelector('#parent');
-  let allChildren = parentElement.querySelectorAll(":scope > span");
-  allChildren.forEach(item => item.classList.add("red"));
+const parentElement = document.querySelector("#parent");
+let allChildren = parentElement.querySelectorAll(":scope > span");
+allChildren.forEach((item) => item.classList.add("red"));
 ```
 
 #### 結果
@@ -111,9 +119,9 @@ var el = document.body.querySelector("style[type='text/css'], style:not([type])"
 #### JavaScript
 
 ```js
-var baseElement = document.querySelector("p");
-document.getElementById("output").innerHTML =
-  (baseElement.querySelector("div span").innerHTML);
+const baseElement = document.querySelector("p");
+document.getElementById("output").textContent =
+  baseElement.querySelector("div span").textContent;
 ```
 
 #### 結果
@@ -123,6 +131,86 @@ document.getElementById("output").innerHTML =
 {{ EmbedLiveSample('The_entire_hierarchy_counts', 600, 160) }}
 
 `"div span"` セレクターは、 `baseElement` の子ノードが {{HTMLElement("div")}} 要素を含んでいなくても、 {{HTMLElement("span")}} 要素に一致することに注目してください（これはまだ指定したセレクターに含まれています）。
+
+### 属性値のエスケープ
+
+例えば、 HTML 文書の中の [`id`](/ja/docs/Web/HTML/Global_attributes/id) が有効な [CSS 識別子](/ja/docs/Web/CSS/ident)ではないものが含まれている場合、 `querySelector()` で使用する前に属性値をエスケープする必要があります。
+
+#### HTML
+
+以下のコードは、 {{htmlelement("div")}} 要素には `id` として `"this?element"` が設定されており、これは有効な CSS 識別子ではありません。 `"?"` 文字が CSS 識別子に許可されていないためです。
+
+ここには 3 つのボタンがあり、エラーを出力するために {{htmlelement("pre")}} 要素があります。
+
+```html
+<div id="container">
+  <div id="this?element"></div>
+</div>
+
+<button id="no-escape">エスケープなし</button>
+<button id="css-escape">CSS.escape()</button>
+<button id="manual-escape">手動エスケープ</button>
+
+<pre id="log"></pre>
+```
+
+#### CSS
+
+```css
+div {
+  background-color: blue;
+  margin: 1rem 0;
+  height: 100px;
+  width: 200px;
+}
+```
+
+#### JavaScript
+
+3 つのボタンはどれも、クリックすると、 `<div>` を選択して、その背景色をランダムな値に設定しようとします。
+
+- 最初のボタンは `"this?element"` の値を直接使用しています。
+- 2 つ目のボタンは {{domxref("CSS.escape_static", "CSS.escape()")}} で値をエスケープします。
+- 3 つ目のボタンはバックスラッシュを用いて、明示的に `"?"` 文字をエスケープしています。なお、もう一つのバックスラッシュを用いて、 `"\\?"` のようにバックスラッシュ自体をエスケープする必要があります。
+
+```js
+const container = document.querySelector("#container");
+const log = document.querySelector("#log");
+
+function random(number) {
+  return Math.floor(Math.random() * number);
+}
+
+function setBackgroundColor(id) {
+  log.textContent = "";
+
+  try {
+    const element = container.querySelector(`#${id}`);
+    const randomColor = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+    element.style.backgroundColor = randomColor;
+  } catch (e) {
+    log.textContent = e;
+  }
+}
+
+document.querySelector("#no-escape").addEventListener("click", () => {
+  setBackgroundColor("this?element");
+});
+
+document.querySelector("#css-escape").addEventListener("click", () => {
+  setBackgroundColor(CSS.escape("this?element"));
+});
+
+document.querySelector("#manual-escape").addEventListener("click", () => {
+  setBackgroundColor("this\\?element");
+});
+```
+
+#### 結果
+
+最初のボタンをクリックするとエラーが返されますが、 2 つ目と 3 つ目のボタンは正規に動作します。
+
+{{embedlivesample("escaping_attribute_values", "", 200)}}
 
 ### それ以外の例
 
@@ -138,13 +226,13 @@ document.getElementById("output").innerHTML =
 
 ## 関連情報
 
-- [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - CSS ガイドの[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)
-- MDN 学習領域の[属性セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+- MDN 学習領域の[属性セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
 - {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}} および
   {{domxref("Document.querySelectorAll()")}}
 - {{domxref("DocumentFragment.querySelector()")}} および
   {{domxref("DocumentFragment.querySelectorAll()")}}
-- セレクターを取る他のメソッドOther: {{domxref("element.closest()")}} および
+- セレクターを取る他のメソッド: {{domxref("element.closest()")}} および
   {{domxref("element.matches()")}}.

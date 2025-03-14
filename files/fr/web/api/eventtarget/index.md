@@ -1,25 +1,15 @@
 ---
 title: EventTarget
 slug: Web/API/EventTarget
-tags:
-  - API
-  - Cible de l'événement
-  - DOM
-  - DOM Events
-  - EventTarget
-  - Interface
-  - Événements DOM
-translation_of: Web/API/EventTarget
-browser-compat: api.EventTarget
 ---
 
-{{ApiRef("DOM Events")}}
+{{APIRef("DOM")}}
 
 `EventTarget` est une interface DOM implémentée par des objets qui peuvent recevoir des événements et peuvent avoir des écouteurs pour eux.
 
 {{domxref ("Element")}}, {{domxref ("Document")}} et {{domxref ("Window")}} sont les cibles d'événements les plus fréquentes, mais d'autres objets peuvent également être des cibles d'événements. Par exemple {{domxref ("XMLHttpRequest")}}, {{domxref ("AudioNode")}}, {{domxref ("AudioContext")}} et autres.
 
-De nombreuses cibles d'événements (y compris des éléments, des documents et des fenêtres) supporte également la définition de [gestionnaires d'événements](/fr/docs/Web/Guide/DOM/Events/Event_handlers) via les propriétés et attributs `onevent`.
+De nombreuses cibles d'événements (y compris des éléments, des documents et des fenêtres) supporte également la définition de [gestionnaires d'événements](/fr/docs/Web/Events/Event_handlers) via les propriétés et attributs `onevent`.
 
 {{InheritanceDiagram}}
 
@@ -52,41 +42,41 @@ Voir aussi [liaisons WebIDL](/fr/docs/Mozilla/WebIDL_bindings).
 
 ```js
 const EventTarget = function () {
-  this.listeners = {}
-}
+  this.listeners = {};
+};
 
-EventTarget.prototype.listeners = null
+EventTarget.prototype.listeners = null;
 EventTarget.prototype.addEventListener = function (type, callback) {
   if (!(type in this.listeners)) {
-    this.listeners[type] = []
+    this.listeners[type] = [];
   }
-  this.listeners[type].push(callback)
-}
+  this.listeners[type].push(callback);
+};
 
 EventTarget.prototype.removeEventListener = function (type, callback) {
   if (!(type in this.listeners)) {
-    return
+    return;
   }
-  const stack = this.listeners[type]
+  const stack = this.listeners[type];
   for (let i = 0, l = stack.length; i < l; i++) {
     if (stack[i] === callback) {
-      stack.splice(i, 1)
-      return
+      stack.splice(i, 1);
+      return;
     }
   }
-}
+};
 
 EventTarget.prototype.dispatchEvent = function (event) {
   if (!(event.type in this.listeners)) {
-    return true
+    return true;
   }
-  const stack = this.listeners[event.type].slice()
+  const stack = this.listeners[event.type].slice();
 
   for (let i = 0, l = stack.length; i < l; i++) {
-    stack[i].call(this, event)
+    stack[i].call(this, event);
   }
-  return !event.defaultPrevented
-}
+  return !event.defaultPrevented;
+};
 ```
 
 ## Spécifications
@@ -99,6 +89,6 @@ EventTarget.prototype.dispatchEvent = function (event) {
 
 ## Voir aussi
 
-- [Référence d'événement](/fr/docs/Web/Reference/Events) - les événements disponibles sur la plateforme.
-- [Guide du développeur d'événements](/fr/docs/Web/Guide/DOM/Events)
+- [Référence d'événement](/fr/docs/Web/Events) - les événements disponibles sur la plateforme.
+- [Guide du développeur d'événements](/fr/docs/Web/Events)
 - {{domxref("Event")}} interface

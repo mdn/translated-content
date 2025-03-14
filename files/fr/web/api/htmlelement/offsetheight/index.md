@@ -1,9 +1,6 @@
 ---
 title: element.offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
-tags:
-  - Référence_du_DOM_Gecko
-translation_of: Web/API/HTMLElement/offsetHeight
 ---
 
 {{ ApiRef() }}
@@ -47,6 +44,6 @@ L'exemple d'image ci-avant montre une barre de défilement et un décalage `offs
 
 ### Voir aussi
 
-- [`element.clientHeight`](/fr/DOM/element.clientHeight)
-- [`element.scrollHeight`](/fr/DOM/element.scrollHeight)
-- [`element.offsetWidth`](/fr/DOM/element.offsetWidth)
+- [`element.clientHeight`](/fr/docs/Web/API/Element/clientHeight)
+- [`element.scrollHeight`](/fr/docs/Web/API/Element/scrollHeight)
+- [`element.offsetWidth`](/fr/docs/Web/API/HTMLElement/offsetWidth)

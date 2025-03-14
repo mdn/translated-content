@@ -9,11 +9,11 @@ slug: Web/API/Performance/clearMeasures
 
 {{AvailableInWorkers}}
 
-## 用法
+## 语法
 
-```
-performance.clearMeasures();
-performance.clearMeasures(name);
+```js-nolint
+clearMeasures()
+clearMeasures(name)
 ```
 
 ### 参数
@@ -25,7 +25,7 @@ performance.clearMeasures(name);
 
 无
 
-## 例子
+## 示例
 
 下面的两个例子演示了 `clearMeasures()` 的用法。
 

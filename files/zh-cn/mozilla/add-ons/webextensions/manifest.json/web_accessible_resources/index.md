@@ -32,7 +32,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources
 
 你有时想将资源（如图片、HTML、CSS 或 JavaScript）与你的扩展应用合并打包，让网页能够访问它们。
 
-举个例子，[Beastify example extension](https://github.com/mdn/webextensions-examples/tree/master/beastify) 将用户选择的野兽图片来替换网页，这些图片与应用是经过合并打包的。该应用添加 [`<img>`](/zh-CN/docs/Web/HTML/Element/img)，其 `src` 指向图片，这样就使选中的图片可见了。网页要载入图片的话，这些图片就必须可经访问。
+举个例子，[Beastify example extension](https://github.com/mdn/webextensions-examples/tree/main/beastify) 将用户选择的野兽图片来替换网页，这些图片与应用是经过合并打包的。该应用添加 [`<img>`](/zh-CN/docs/Web/HTML/Element/img)，其 `src` 指向图片，这样就使选中的图片可见了。网页要载入图片的话，这些图片就必须可经访问。
 
 通过 `web_accessible_resources`，你列出资源，让它们可经网页访问。这些资源路径相对于 manifest.json 文件。
 
@@ -66,9 +66,10 @@ moz-extension://<extension-UUID>/images/my-image.png"
 
 `<extension-UUID>` 不是应用 ID，它随机生成，对应每个浏览器实例，以防网页查看浏览器安装的扩展应用来获取信息。
 
-> **备注：** Chrome 的 `<extension-UUID>` 是不变的。某资源如果由`web_accessible_resources` 写明，那么它可通过 `chrome-extension://<your-extension-id>/<path/to/resource>` 来访问。
+> [!NOTE]
+> Chrome 的 `<extension-UUID>` 是不变的。某资源如果由 `web_accessible_resources` 写明，那么它可通过 `chrome-extension://<your-extension-id>/<path/to/resource>` 来访问。
 
-要获得资源的 URL，推荐用 [`runtime.getURL`](/zh-CN/Add-ons/WebExtensions/API/runtime/getURL) 向参数传递 manifest.json 的相对路径，比如：
+要获得资源的 URL，推荐用 [`runtime.getURL`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL) 向参数传递 manifest.json 的相对路径，比如：
 
 ```js
 browser.runtime.getURL("images/my-image.png");

@@ -1,13 +1,6 @@
 ---
 title: scroll-margin-block
 slug: Web/CSS/scroll-margin-block
-tags:
-  - CSS
-  - Propriété
-  - Propriété logique
-  - Propriété raccourcie
-  - Reference
-translation_of: Web/CSS/scroll-margin-block
 ---
 
 {{CSSRef}}
@@ -24,7 +17,7 @@ Les valeurs des marges de défilement correspondent aux décalages entre la zone
 /* Valeurs de longueur */
 /* Type <length> */
 scroll-margin-block: 10px;
-scroll-margin-block: 1em .5em;
+scroll-margin-block: 1em 0.5em;
 
 /* Valeurs globales */
 scroll-margin-block: inherit;

@@ -1,7 +1,6 @@
 ---
 title: border-image-outset
 slug: Web/CSS/border-image-outset
-translation_of: Web/CSS/border-image-outset
 ---
 
 {{CSSRef}}
@@ -34,7 +33,8 @@ border-image-repeat: inherit;
 
 ### Значения
 
-> **Примечание:** When a value is specified as a unitless {{cssxref("&lt;number&gt;")}}, that value is multiplied by the corresponding computed {{cssxref("border-width")}} to determine the `border-image-outset`. Negative values are invalid.
+> [!NOTE]
+> When a value is specified as a unitless {{cssxref("&lt;number&gt;")}}, that value is multiplied by the corresponding computed {{cssxref("border-width")}} to determine the `border-image-outset`. Negative values are invalid.
 
 - _sides_
   - : Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;number&gt;")}} of the amount by which the border image area extends beyond the border box in all four directions.

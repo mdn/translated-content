@@ -1,17 +1,16 @@
 ---
 title: Глобальная переменная
 slug: Glossary/Global_variable
-tags:
-  - Глоссарий
-translation_of: Glossary/Global_variable
-original_slug: Глоссарий/global_variable
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
-Глобальная переменная это переменная, которая была объявлена в глобальной области видимости. Иначе говоря, переменная, доступ к которой, можно получить со всех других областей видимости.
 
-В JavaScript это свойство глобального объекта.
+{{GlossarySidebar}}
 
-## Материалы для обучения
+Глобальная переменная — это {{glossary("variable", "переменная")}}, которая была объявлена в {{glossary("global scope", "глобальной области видимости")}}, то есть, доступ к которой, есть из всех других областей видимости.
 
-### Общие
+В JavaScript это {{glossary("property", "свойство")}} {{glossary("global object", "глобального объекта")}}.
 
-- [Глобальная переменная](https://ru.wikipedia.org/wiki/%D0%93%D0%BB%D0%BE%D0%B1%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F) в Википедии
+## Смотрите также
+
+- [Глобальная переменная](https://ru.wikipedia.org/wiki/Глобальная_переменная) в Википедии

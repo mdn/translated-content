@@ -1,13 +1,54 @@
 ---
 title: border-top-width
 slug: Web/CSS/border-top-width
+l10n:
+  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
 {{CSSRef}}
 
 **`border-top-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界の幅を設定します。
 
-{{EmbedInteractiveExample("pages/css/border-top-width.html")}}
+{{InteractiveExample("CSS Demo: border-top-width")}}
+
+```css interactive-example-choice
+border-top-width: thick;
+```
+
+```css interactive-example-choice
+border-top-width: 2em;
+```
+
+```css interactive-example-choice
+border-top-width: 4px;
+```
+
+```css interactive-example-choice
+border-top-width: 2ex;
+```
+
+```css interactive-example-choice
+border-top-width: 0;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 構文
 
@@ -26,6 +67,7 @@ border-top-width: 6px;
 border-top-width: inherit;
 border-top-width: initial;
 border-top-width: revert;
+border-top-width: revert-layer;
 border-top-width: unset;
 ```
 
@@ -39,7 +81,8 @@ border-top-width: unset;
     - `medium`
     - `thick`
 
- > **メモ:** 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、何れかを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
+> [!NOTE]
+> 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、いずれかを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
 
 ## 公式定義
 
@@ -49,7 +92,7 @@ border-top-width: unset;
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 

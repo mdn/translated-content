@@ -1,11 +1,11 @@
 ---
-title: CSS values and units
+title: CSS 值和单位
 slug: Web/CSS/CSS_Values_and_Units
 ---
 
 {{CSSRef}}
 
-所有的 CSS 声明都包括一个 属性 / 值 对。由于属性不同，对应的值可能是一个单个整数或关键字，也可能是一串包含或不包含计数单位的数字和关键字的集合。CSS 中属性接受一个共同的数据类型（属性的值和对应的单位）。下面是大多数这些数据类型的概览。想要获知每一种数据类型的更详细信息，请分别查看它们的链接。
+所有的 CSS 声明都包括一个“属性/值”对。由于属性不同，对应的值可能是单个整数或关键字，也可能是一串包含或不包含单位的关键字和值的集合。CSS 属性接受一组共同的数据类型（属性的值和对应的单位）。下面是大多数这些数据类型的概览。想要获知每一种数据类型的更详细信息，请分别查看它们的链接。
 
 ## 文本数据类型
 
@@ -14,7 +14,7 @@ slug: Web/CSS/CSS_Values_and_Units
 - {{cssxref("&lt;string&gt;")}}
 - {{cssxref("&lt;url&gt;")}}
 
-文本数据类型要么是 `<string>`，要么是一系列字符的合集，或者是 `<ident>` —— 一个实质上是不带引号的字符串的"CSS 标识符"。一个 `<string>` 必须被单引号或者双引号所包围。CSS 标识符，在标准中所列出的 `<ident>` 或者 `<custom-ident>` 则必须不带引号。
+文本数据类型要么是 `<string>`，要么是一系列字符的合集，或者是 `<ident>`——一个实质上是不带引号的字符串的"CSS 标识符"。一个 `<string>` 必须被单引号或者双引号所包围。CSS 标识符，在标准中所列出的 `<ident>` 或者 `<custom-ident>` 则必须不带引号。
 
 在 CSS 标准中，属性的值可以由 Web 开发者指定，例如关键帧动画（keyframe animations），字体的名称（font-family names），或者是被列为 {{cssxref("&lt;custom-ident&gt;")}} 和 / 或 {{cssxref("&lt;string&gt;")}} 的栅格区域（grid-areas）。
 
@@ -41,7 +41,7 @@ slug: Web/CSS/CSS_Values_and_Units
 
 ```css
 .item::after {
-    content: "This is my content.";
+  content: "This is my content.";
 }
 ```
 
@@ -61,7 +61,7 @@ left | right | none | inline-start | inline-end
 
 ```css
 .box {
-    float: left;
+  float: left;
 }
 ```
 
@@ -100,7 +100,7 @@ left | right | none | inline-start | inline-end
 
 ### 整数
 
-一个整数包含 `0` 到 `9`的一个或多个十进制数字，例如 `1024` 或 `-55`。一个整数可能额外包含 `+` 或 `-` 前缀，在正负号和数值之间没有任何空格。
+一个整数包含 `0` 到 `9` 的一个或多个十进制数字，例如 `1024` 或 `-55`。一个整数可能额外包含 `+` 或 `-` 前缀，在正负号和数值之间没有任何空格。
 
 ### 数值
 
@@ -108,7 +108,7 @@ left | right | none | inline-start | inline-end
 
 ### 尺寸
 
-{{cssxref("&lt;dimension&gt;")}} 是一个包含单位的 `<number>`，例如 `45deg`，`100ms`，或者 `10px`。单位是大小写敏感的，且数值和单位之间不允许有任何的空格或其他字符。例如 `1 cm` 不是一个合法的值。
+{{cssxref("&lt;dimension&gt;")}} 是一个包含单位的 `<number>`，例如 `45deg`、`100ms` 或 `10px`。单位是大小写敏感的，且数值和单位之间不允许有任何的空格或其他字符。例如 `1 cm` 不是一个合法的值。
 
 CSS 使用尺寸来指定：
 
@@ -124,13 +124,13 @@ CSS 使用尺寸来指定：
 
 一个距离单位，或这也称为长度（length），允许作为属性的值。它被描述为 {{cssxref("&lt;length&gt;")}} 类型。CSS 中有两种长度：相对和绝对。
 
-相对长度单位基于其它元素的长度。例如 `em` 基于该元素的字号大小，`vh` 则与设备视口的高度有关。
+相对长度单位基于其他元素的长度。例如 `em` 基于该元素的字号大小，`vh` 则与设备视口的高度有关。
 
 | 单位   | 基于...                                                                                                                               |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
 | `em`   | 元素的字号                                                                                                                            |
 | `ex`   | 字体的 X 字高（x-height）                                                                                                             |
-| `cap`  | 字体中大写字母的标称高度                                                                                                              |
+| `cap`  | 字体中大写字母的大写字高                                                                                                              |
 | `ch`   | Average character advance of a narrow glyph in the element’s font, as represented by the “0” (ZERO, U+0030) glyph.                    |
 | `ic`   | Average character advance of a full width glyph in the element’s font, as represented by the“水” (CJK water ideograph, U+6C34) glyph. |
 | `rem`  | 根元素的字体大小。                                                                                                                    |
@@ -170,7 +170,7 @@ Angle values are represented by the type {{cssxref("&lt;angle&gt;")}} and accept
 
 #### Time units
 
-Time values are represented by the type {{cssxref("&lt;time&gt;")}}. When including a time value, the unit identifier -- the `s` or `ms` -- is required. It accepts the following values.
+Time values are represented by the type {{cssxref("&lt;time&gt;")}}. When including a time value, the unit identifier — the `s` or `ms` — is required. It accepts the following values.
 
 | Unit | Name         | Description                               |
 | ---- | ------------ | ----------------------------------------- |
@@ -240,9 +240,10 @@ The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object ins
 
 ### Functional notation
 
-- {{cssxref("calc()")}}
+- {{cssxref("calc", "calc()")}}
 - {{cssxref("min", "min()")}}
 - {{cssxref("max", "max()")}}
+- {{cssxref("minmax", "minmax()")}}
 - {{cssxref("clamp", "clamp()")}}
 - {{cssxref("toggle", "toggle()")}}
 - {{cssxref("attr", "attr()")}}
@@ -253,11 +254,11 @@ White space is allowed, but optional inside the parentheses. (But see notes rega
 
 Some legacy functional notations such as `rgba()` use commas, but generally commas are only used to separate items in a list. If a comma is used to separate arguments, white space is optional before and after the comma.
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## See also
+## 参见
 
-- [CSS Basic Data Types](/zh-CN/docs/Web/CSS/CSS_Types)
-- [Introduction to CSS: Values and Units](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [CSS 基本数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
+- [CSS 介绍：值和单位](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

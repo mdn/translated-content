@@ -1,22 +1,21 @@
 ---
 title: Array.from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Referencia
-  - Vector
-  - metodo
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/from
 ---
 
 {{JSRef}}
 
 El método **`Array.from()`** crea una nueva instancia de `Array` a partir de un objeto iterable.
 
-{{EmbedInteractiveExample("pages/js/array-from.html")}}
+{{InteractiveExample("JavaScript Demo: Array.from()")}}
+
+```js interactive-example
+console.log(Array.from("foo"));
+// Expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], (x) => x + x));
+// Expected output: Array [2, 4, 6]
+```
 
 ## Sintaxis
 
@@ -42,9 +41,9 @@ Una nueva instancia de {{jsxref("Array")}}.
 `Array.from()` permite crear `Arrays` de:
 
 - Objetos array-like (objetos con propiedad `length` o elementos indexados).
-- [Objetos iterables](/es/docs/Web/JavaScript/Referencia/Iteration_protocols) (objetos de los cuales se pueden obtener sus elementos como {{jsxref("Map")}} y {{jsxref("Set")}}).
+- [Objetos iterables](/es/docs/Web/JavaScript/Reference/Iteration_protocols) (objetos de los cuales se pueden obtener sus elementos como {{jsxref("Map")}} y {{jsxref("Set")}}).
 
-`Array.from()` tiene un parámetro opcional `mapFn`, que te permite ejecutar una función {{jsxref("Array.prototype.map", "map")}} a cada elemento del array (o a la subclase del objeto) que se ha creado. Para aclararlo, `Array.from(obj, mapFn, thisArg)` es igual que `Array.from(obj).map(mapFn, thisArg)`, excepto en que éste no crea un array intermedio. Esto es importante para ciertas subclases de array, [vectores tipados](/es/docs/Web/JavaScript/Vectores_tipados), ya que el vector intermedio necesitaría tener valores truncados para trabajar con el tipo adecuado.
+`Array.from()` tiene un parámetro opcional `mapFn`, que te permite ejecutar una función {{jsxref("Array.prototype.map", "map")}} a cada elemento del array (o a la subclase del objeto) que se ha creado. Para aclararlo, `Array.from(obj, mapFn, thisArg)` es igual que `Array.from(obj).map(mapFn, thisArg)`, excepto en que éste no crea un array intermedio. Esto es importante para ciertas subclases de array, [vectores tipados](/es/docs/Web/JavaScript/Guide/Typed_arrays), ya que el vector intermedio necesitaría tener valores truncados para trabajar con el tipo adecuado.
 
 La propiedad `length` del método `from()` es 1.
 
@@ -55,14 +54,14 @@ En ES2015, la sintaxis de clase permite la subclasificación de clases integrada
 ### Array desde un `String`
 
 ```js
-Array.from('foo');
+Array.from("foo");
 // [ "f", "o", "o" ]
 ```
 
 ### Array desde un `Set`
 
 ```js
-const set = new Set(['foo', 'bar', 'baz', 'foo']);
+const set = new Set(["foo", "bar", "baz", "foo"]);
 Array.from(set);
 // [ "foo", "bar", "baz" ]
 ```
@@ -70,11 +69,18 @@ Array.from(set);
 ### Array desde un `Map`
 
 ```js
-const map = new Map([[1, 2], [2, 4], [4, 8]]);
+const map = new Map([
+  [1, 2],
+  [2, 4],
+  [4, 8],
+]);
 Array.from(map);
 // [[1, 2], [2, 4], [4, 8]]
 
-const mapper = new Map([['1', 'a'], ['2', 'b']]);
+const mapper = new Map([
+  ["1", "a"],
+  ["2", "b"],
+]);
 Array.from(mapper.values());
 // ['a', 'b'];
 
@@ -99,14 +105,13 @@ f(1, 2, 3);
 ```js
 // Usando una función de flecha como función
 // para manipular los elementos
-Array.from([1, 2, 3], x => x + x);
+Array.from([1, 2, 3], (x) => x + x);
 // [2, 4, 6]
-
 
 // Generar secuencia de números
 // Puesto que el array se inicializa con `undefined` en cada posición,
 // el valor de `v` a continuación será `undefined`
-Array.from({length: 5}, (v, i) => i);
+Array.from({ length: 5 }, (v, i) => i);
 // [0, 1, 2, 3, 4]
 ```
 
@@ -114,7 +119,8 @@ Array.from({length: 5}, (v, i) => i);
 
 ```js
 // Función generadora de secuencia (comúnmente llamado "rango", ej. Clojure, PHP, etc.)
-const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
+const range = (start, stop, step) =>
+  Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + i * step);
 
 // Genera un rango de números entre 0..4
 range(0, 4, 1);
@@ -125,7 +131,9 @@ range(1, 10, 2);
 // [1, 3, 5, 7, 9]
 
 // Generar el abecedario utilizando Array.from haciendo uso de que se ordena como secuencia
-range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x => String.fromCharCode(x));
+range("A".charCodeAt(0), "Z".charCodeAt(0), 1).map((x) =>
+  String.fromCharCode(x),
+);
 // ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 ```
 
@@ -140,12 +148,16 @@ if (!Array.from) {
   Array.from = (function () {
     var toStr = Object.prototype.toString;
     var isCallable = function (fn) {
-      return typeof fn === 'function' || toStr.call(fn) === '[object Function]';
+      return typeof fn === "function" || toStr.call(fn) === "[object Function]";
     };
     var toInteger = function (value) {
       var number = Number(value);
-      if (isNaN(number)) { return 0; }
-      if (number === 0 || !isFinite(number)) { return number; }
+      if (isNaN(number)) {
+        return 0;
+      }
+      if (number === 0 || !isFinite(number)) {
+        return number;
+      }
       return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));
     };
     var maxSafeInteger = Math.pow(2, 53) - 1;
@@ -155,7 +167,7 @@ if (!Array.from) {
     };
 
     // La propiedad length del método from es 1.
-    return function from(arrayLike/*, mapFn, thisArg */) {
+    return function from(arrayLike /*, mapFn, thisArg */) {
       // 1. Deje a C ser el este valor.
       var C = this;
 
@@ -164,17 +176,21 @@ if (!Array.from) {
 
       // 3. Retornar IfAbrupt(items).
       if (arrayLike == null) {
-        throw new TypeError("Array.from requiere un objeto array-like - not null or undefined");
+        throw new TypeError(
+          "Array.from requiere un objeto array-like - not null or undefined",
+        );
       }
 
       // 4. Si mapfn no está definida, entonces deja que sea false.
       var mapFn = arguments.length > 1 ? arguments[1] : void undefined;
       var T;
-      if (typeof mapFn !== 'undefined') {
+      if (typeof mapFn !== "undefined") {
         // 5. si no
         // 5. a If IsCallable(mapfn) es false, lanza una excepción TypeError.
         if (!isCallable(mapFn)) {
-          throw new TypeError('Array.from: si hay mapFn, el segundo argumento debe ser una función');
+          throw new TypeError(
+            "Array.from: si hay mapFn, el segundo argumento debe ser una función",
+          );
         }
 
         // 5. b. Si thisArg se suministró, deje que T sea thisArg; si no, deje que T esté indefinido.
@@ -199,7 +215,10 @@ if (!Array.from) {
       while (k < len) {
         kValue = items[k];
         if (mapFn) {
-          A[k] = typeof T === 'undefined' ? mapFn(kValue, k) : mapFn.call(T, kValue, k);
+          A[k] =
+            typeof T === "undefined"
+              ? mapFn(kValue, k)
+              : mapFn.call(T, kValue, k);
         } else {
           A[k] = kValue;
         }
@@ -210,7 +229,7 @@ if (!Array.from) {
       // 20. Return A.
       return A;
     };
-  }());
+  })();
 }
 ```
 
@@ -220,7 +239,7 @@ if (!Array.from) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.from")}}
+{{Compat}}
 
 ## Ver también
 

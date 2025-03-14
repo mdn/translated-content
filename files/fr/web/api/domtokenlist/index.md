@@ -1,7 +1,6 @@
 ---
 title: DOMTokenList
 slug: Web/API/DOMTokenList
-translation_of: Web/API/DOMTokenList
 ---
 
 {{APIRef("DOM")}}

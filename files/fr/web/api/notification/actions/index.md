@@ -1,15 +1,6 @@
 ---
 title: Notification.actions
-slug: Web/API/notification/actions
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-  - actions
-translation_of: Web/API/Notification/actions
+slug: Web/API/Notification/actions
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -18,12 +9,13 @@ La propriété **`actions`** en lecture seule de l'interface {{domxref ("Notific
 
 Il s'agit d'une liste des actions définies par l'application que l'utilisateur peut choisir de prendre directement depuis le contexte d'une notification.
 
-> **Note :** Le périphérique et l'agent utilisateur peuvent ne pouvoir afficher qu'un nombre limité d'actions (en raison, par exemple, d'un espace d'écran limité). Cette limite peut être déduite de {{DOMxRef ("Notification.maxActions")}}.
+> [!NOTE]
+> Le périphérique et l'agent utilisateur peuvent ne pouvoir afficher qu'un nombre limité d'actions (en raison, par exemple, d'un espace d'écran limité). Cette limite peut être déduite de {{DOMxRef ("Notification.maxActions")}}.
 
 ## Syntaxe
 
 ```js
-Notification.actions
+Notification.actions;
 ```
 
 ### Valeur

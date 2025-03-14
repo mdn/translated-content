@@ -7,7 +7,7 @@ slug: Web/CSS/font-kerning
 
 A propriedade CSS **`font-kerning`** controla o o uso da informação de kerning, que é, o controle de como as letras serão espaçadas. A informação de kerning é armazenada na fonte, e se a fonte é _well-kerned_, essa caracteristica permite que o espaçamento entre caracteres seja muito parecido, independente dos caracteres.
 
-![Example of font-kerning](https://mdn.mozillademos.org/files/8455/font-kerning.png)
+![Example of font-kerning](font-kerning.png)
 
 ```css
 font-kerning: auto;
@@ -47,13 +47,11 @@ p {
 
 ## Specifications
 
-| Specification                                                                            | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Fonts', '#propdef-font-kerning', 'font-kerning')}} | {{Spec2('CSS3 Fonts')}} | Initial definition |
+{{Specifications}}
 
 ## Browser Compatibility
 
-{{Compat("css.properties.font-kerning")}}
+{{Compat}}
 
 ## Kerning Demo
 
@@ -68,7 +66,8 @@ p {
 ### CSS Content
 
 ```css
-#nokern, #kern {
+#nokern,
+#kern {
   font-size: 2rem;
   font-family: serif;
 }
@@ -83,10 +82,10 @@ p {
 ### JS Content
 
 ```js
-var input  = document.getElementById('input'),
-    kern   = document.getElementById('kern'),
-    nokern = document.getElementById('nokern');
-input.addEventListener('keyup', function() {
+var input = document.getElementById("input"),
+  kern = document.getElementById("kern"),
+  nokern = document.getElementById("nokern");
+input.addEventListener("keyup", function () {
   kern.textContent = input.value; /* Update content */
   nokern.textContent = input.value;
 });

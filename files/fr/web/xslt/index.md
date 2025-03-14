@@ -1,7 +1,6 @@
 ---
 title: XSLT
 slug: Web/XSLT
-translation_of: Web/XSLT
 ---
 
 {{XSLTRef}}
@@ -40,7 +39,7 @@ XSLT est le plus souvent utilisé pour convertir des données entre différents 
   - : La référence indiquant la documentation pour chaque élément XSLT.
 - [Transformer du XML avec XSLT](/fr/docs/Web/XSLT/Transforming_XML_with_XSLT)
   - : XSLT permet d'utiliser une feuille de style pour transformer un document XML initial de deux façons&nbsp;: manipuler et trier le contenu (y compris en réordonnant l'ensemble du document si besoin) d'une part et transformer le contenu dans un format différent d'autre part.
-- [Utiliser l'interface JavaScript Mozilla pour les transformations XSL](/fr/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations)
+- [Utiliser l'interface JavaScript Mozilla pour les transformations XSL](/fr/docs/Web/API/XSLTProcessor)
   - : Ce document décrit l'interface JavaScript pour le moteur de traitement XSLT dans Mozilla 1.2 et les versions ultérieures.
 - [Définir les paramètres utilisant des instructions de traitement](/fr/docs/Web/XSLT/PI_Parameters)
   - : Firefox permet d'indiquer des paramètres de feuille de styles en utilisant l'instruction de traitement `<?xml-stylesheet?>`. Cela se fait en avec l'instruction de traitement `<?xslt-param?>`, décrite dans cet article.

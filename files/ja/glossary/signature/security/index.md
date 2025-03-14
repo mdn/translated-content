@@ -3,6 +3,8 @@ title: Signature (署名 (セキュリティ) )
 slug: Glossary/Signature/Security
 ---
 
+{{GlossarySidebar}}
+
 **署名** もしくは*デジタル署名*とは、メッセージが正当であることを示す {{glossary("protocol", "プロトコル")}} です。
 
 **署名プロセス**では最初に、与えられたメッセージの{{glossary("hash", "ハッシュ")}}から、署名する主体にリンクされたデジタル署名を、主体の秘密{{glossary("key", "鍵")}}を用いて生成します。

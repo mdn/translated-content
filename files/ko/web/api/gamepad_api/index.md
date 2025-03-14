@@ -1,13 +1,6 @@
 ---
 title: Gamepad API
 slug: Web/API/Gamepad_API
-tags:
-  - API
-  - Experimental
-  - Gamepad API
-  - Games
-  - Overview
-translation_of: Web/API/Gamepad_API
 ---
 
 {{DefaultAPISidebar("Gamepad API")}}
@@ -42,21 +35,18 @@ translation_of: Web/API/Gamepad_API
 #### Window events
 
 - {{domxref("Window.ongamepadconnected")}}
-  - : Represents an event handler that will run when a gamepad is connected (when the {{event('gamepadconnected')}} event fires).
+  - : Represents an event handler that will run when a gamepad is connected (when the {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} event fires).
 - {{domxref("Window.ongamepaddisconnected")}}
-  - : Represents an event handler that will run when a gamepad is disconnected (when the {{event('gamepaddisconnected')}} event fires).
+  - : Represents an event handler that will run when a gamepad is disconnected (when the {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} event fires).
 
 ## 튜토리얼과 가이드
 
 - [Using the Gamepad API](/ko/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
 - [Implementing controls using the Gamepad API](/ko/docs/Games/Techniques/Controls_Gamepad_API)
 
-## 사양
+## 명세서
 
-| Specification                                                                    | Status                                   | Comment                                                                          |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName("GamepadExtensions")}}                                     | {{Spec2("GamepadExtensions")}} | Defines the [Experimental Gamepad extensions](#experimental_gamepad_extensions). |
-| {{SpecName("Gamepad", "", "The Gamepad API specification")}} | {{Spec2("Gamepad")}}             | Initial definition                                                               |
+{{Specifications}}
 
 ## 브라우저 호환성
 

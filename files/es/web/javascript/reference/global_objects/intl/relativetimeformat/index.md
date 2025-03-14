@@ -1,17 +1,28 @@
 ---
 title: Intl.RelativeTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
-tags:
-  - RelatimeTimeFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl/RelativeTimeFormat
 ---
 
 {{JSRef}}
 
 El objeto **`Intl.RelativeTimeFormat`** te proporciona una manera de formatear tiempos relativos con traducciones.
 
-{{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat")}}
+
+```js interactive-example
+const rtf1 = new Intl.RelativeTimeFormat("en", { style: "short" });
+
+console.log(rtf1.format(3, "quarter"));
+// Expected output: "in 3 qtrs."
+
+console.log(rtf1.format(-1, "day"));
+// Expected output: "1 day ago"
+
+const rtf2 = new Intl.RelativeTimeFormat("es", { numeric: "auto" });
+
+console.log(rtf2.format(2, "day"));
+// Expected output: "pasado mañana"
+```
 
 El código de este ejemplo interactivo está disponible en un repositorio GitHub. Si quieres contribuir a los ejemplos interactivos del proyecto, por favor, clona <https://github.com/mdn/interactive-examples> y manda una Pull Request.
 
@@ -28,7 +39,7 @@ El código de este ejemplo interactivo está disponible en un repositorio GitHub
 ## Métodos de instancia
 
 - {{jsxref("RelativeTimeFormat.format", "Intl.RelativeTimeFormat.prototype.format()")}}
-  - : Formatea `value` y `unit` conforme al idioma y las opciones de formateo al crear la instancia con [`Intl.RelativeTimeFormat`](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl.RelativeTimeFormat).
+  - : Formatea `value` y `unit` conforme al idioma y las opciones de formateo al crear la instancia con [`Intl.RelativeTimeFormat`](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat).
 - {{jsxref("RelativeTimeFormat.formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}
   - : Devuelve un {{jsxref("Array")}} de objetos representando el tiempo relativo en partes que pueden ser usadas en traducciones.
 - {{jsxref("RelativeTimeFormat.resolvedOptions", "Intl.RelativeTimeFormat.prototype.resolvedOptions()")}}
@@ -44,9 +55,9 @@ El siguiente ejemplo muestra cómo conseguir el tiempo relativo para el mejor id
 // Crea un formateador de tiempo relativo en tu lenguaje
 // con los valores por defectos pasados expresamente.
 const rtf = new Intl.RelativeTimeFormat("en", {
-    localeMatcher: "best fit", // otros valores: "lookup"
-    numeric: "always", // otros valores: "auto"
-    style: "long", // otros valores: "short" or "narrow"
+  localeMatcher: "best fit", // otros valores: "lookup"
+  numeric: "always", // otros valores: "auto"
+  style: "long", // otros valores: "short" or "narrow"
 });
 
 // Formatea el tiempo relativo con valores negativos (-1).
@@ -77,13 +88,11 @@ rtf.formatToParts(100, "day");
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado | Comentario |
-| ------------------------------------------------------------------------------------------------------------ | ------ | ---------- |
-| {{SpecName('ES Int Draft', '#relativetimeformat-objects', 'RelativeTimeFormat')}} |        |            |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Intl.RelativeTimeFormat")}}
+{{Compat}}
 
 ## Ver también
 

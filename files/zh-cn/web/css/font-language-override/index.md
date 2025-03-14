@@ -12,8 +12,8 @@ slug: Web/CSS/font-language-override
 font-language-override: normal;
 
 /* 字符串作为值 */
-font-language-override: "ENG";  /* Use English glyphs */
-font-language-override: "TRK";  /* Use Turkish glyphs */
+font-language-override: "ENG"; /* Use English glyphs */
+font-language-override: "TRK"; /* Use Turkish glyphs */
 
 /* 使用全局值 */
 font-language-override: initial;
@@ -36,7 +36,7 @@ font-language-override: unset;
 - `normal`
   - : 指示浏览器使用适合 `lang` 属性指定的语言的字体字形。这是默认值。
 - {{cssxref("string")}}
-  - : 指示浏览器使用适合该字符串指定的语言的字体字形。该字符串必须与 [OpenType 语言系统](http://www.microsoft.com/typography/otspec/languagetags.htm)中的语言标签相匹配。例如，"ENG "是英语，"KOR "是韩语。
+  - : 指示浏览器使用适合该字符串指定的语言的字体字形。该字符串必须与 [OpenType 语言系统](https://www.microsoft.com/typography/otspec/languagetags.htm)中的语言标签相匹配。例如，"ENG "是英语，"KOR "是韩语。
 
 ### 正式语法
 
@@ -50,7 +50,9 @@ font-language-override: unset;
 
 ```html
 <p class="para1">Default language setting.</p>
-<p class="para2">This is a string with the <code>font-language-override</code> set to Danish.</p>
+<p class="para2">
+  This is a string with the <code>font-language-override</code> set to Danish.
+</p>
 ```
 
 #### CSS
@@ -77,6 +79,6 @@ p.para2 {
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{cssxref("font-variant")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-kerning")}}.

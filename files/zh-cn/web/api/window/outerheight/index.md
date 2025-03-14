@@ -5,19 +5,7 @@ slug: Web/API/Window/outerHeight
 
 {{APIRef}}
 
-## 概述
-
-`Window.outerHeight` 获取整个浏览器窗口的高度（单位：像素），包括侧边栏（如果存在）、窗口镶边（window chrome）和窗口调正边框（window resizing borders/handles）。
-
-该属性为只读，没有默认值。
-
-## 语法
-
-```
-outWindowHeight = window.outerHeight;
-```
-
-`outWindowHeight` 为窗口的外层的高度。
+**`Window.outerHeight`** 只读属性返回整个浏览器窗口的高度（以像素为单位），包括侧边栏（如果存在）、窗口镶边（window chrome）和窗口调正边框（window resizing border/handle）。
 
 ## 备注
 
@@ -29,17 +17,17 @@ outWindowHeight = window.outerHeight;
 
 下面的示意图展示了 `outerHeight` 和 `innerHeight` 两者的不同。
 
-![innerHeight vs outerHeight illustration](/@api/deki/files/213/=FirefoxInnerVsOuterHeight2.png)
+![innerHeight 和 outerHeight](firefoxinnervsouterheight2.png)
+
+## 规范
+
+{{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 规范
-
-DOM Level 0。不属于任何 W3C 技术规范或推荐。
-
-## 相关链接
+## 参见
 
 - {{domxref("window.innerHeight")}}
 - {{domxref("window.innerWidth")}}

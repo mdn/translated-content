@@ -1,9 +1,11 @@
 ---
 title: FocusEvent.relatedTarget
 slug: Web/API/FocusEvent/relatedTarget
+l10n:
+  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
 
-{{ apiref("DOM Events") }}
+{{APIRef("UI Events")}}
 
 **`FocusEvent.relatedTarget`** は読み取り専用プロパティで、イベントの種類に応じた副ターゲットを表します。
 
@@ -17,39 +19,37 @@ slug: Web/API/FocusEvent/relatedTarget
   </thead>
   <tbody>
     <tr>
-      <td>{{Event("blur")}}</td>
+      <td>{{domxref("Element/blur_event", "blur")}}</td>
       <td>フォーカスを失う {{domxref("EventTarget")}}</td>
       <td>
         フォーカスを受け取る {{domxref("EventTarget")}} （存在する場合）
       </td>
     </tr>
     <tr>
-      <td>{{Event("focus")}}</td>
+      <td>{{domxref("Element/focus_event", "focus")}}</td>
       <td>フォーカスを受け取る {{domxref("EventTarget")}}</td>
       <td>フォーカスを失う {{domxref("EventTarget")}} （存在する場合）</td>
     </tr>
     <tr>
-      <td>{{Event("focusin")}}</td>
+      <td>{{domxref("Element/focusin_event", "focusin")}}</td>
       <td>フォーカスを受け取る {{domxref("EventTarget")}}</td>
       <td>フォーカスを失う {{domxref("EventTarget")}} （存在する場合）</td>
     </tr>
     <tr>
-      <td>{{Event("focusout")}}</td>
+      <td>{{domxref("Element/focusout_event", "focusout")}}</td>
       <td>フォーカスを失う {{domxref("EventTarget")}}</td>
       <td>フォーカスを受け取る {{domxref("EventTarget")}} （存在する場合）</td>
     </tr>
   </tbody>
 </table>
 
-なお、[多くの要素はフォーカスを受け取ることができない](https://stackoverflow.com/a/42764495/1026)ことが、 `relatedTarget` が `null` になる良くある理由です。 `relatedTarget` はタブ移動でページをでたり入ったりする場合など、セキュリティ上の理由で `null` になることもあります。
+なお、[多くの要素はフォーカスを受け取ることができない](https://stackoverflow.com/questions/42764494/blur-event-relatedtarget-returns-null/42764495)ことが、 `relatedTarget` が `null` になる良くある理由です。 `relatedTarget` はタブ移動でページをでたり入ったりする場合など、セキュリティ上の理由で `null` になることもあります。
 
 {{domxref("MouseEvent.relatedTarget")}} はマウスイベントにおける同様のプロパティです。
 
-## 構文
+## 値
 
-```js
-secondTarget = focusEvent.relatedTarget
-```
+{{domxref("EventTarget")}} のインスタンスです。
 
 ## 仕様書
 

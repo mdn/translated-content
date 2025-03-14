@@ -1,24 +1,32 @@
 ---
 title: Exponentiation (**)
 slug: Web/JavaScript/Reference/Operators/Exponentiation
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.exponentiation
 ---
 
 {{jsSidebar("Operators")}}
 
 L'opérateur d'exponentiation (`**`) fournit le résultat obtenu lorsqu'on élève le premier opérande à la puissance indiquée par le second. Il est équivalent `Math.pow` exception faite que cet opérateur permet également d'utiliser des valeurs BigInt comme opérandes.
 
-{{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation operator")}}
+
+```js interactive-example
+console.log(3 ** 4);
+// Expected output: 81
+
+console.log(10 ** -2);
+// Expected output: 0.01
+
+console.log(2 ** (3 ** 2));
+// Expected output: 512
+
+console.log((2 ** 3) ** 2);
+// Expected output: 64
+```
 
 ## Syntaxe
 
 ```js
-Opérateur : var1 ** var2
+Opérateur: var1 ** var2;
 ```
 
 ## Description
@@ -38,26 +46,26 @@ En JavaScript, il est impossible d'écrire une expression d'exponentiation ambig
 // -4 en JavaScript, les parenthèses évitent l'ambiguité.
 ```
 
-Attnetion, certains langages de programmation utilisent l'accent circonflexe <kbd>^</kbd> pour exprimer l'exponentiaion mais JavaScript utilise ce symbole pour [l'opérateur binaire OU exclusif (XOR)](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR).
+Attnetion, certains langages de programmation utilisent l'accent circonflexe <kbd>^</kbd> pour exprimer l'exponentiaion mais JavaScript utilise ce symbole pour [l'opérateur binaire OU exclusif (XOR)](/fr/docs/Web/JavaScript/Reference/Operators#bitwise_xor).
 
 ## Exemples
 
 ### Exponentiation simple
 
 ```js
-2 ** 3   // 8
-3 ** 2   // 9
-3 ** 2.5 // 15.588457268119896
-10 ** -1 // 0.1
-NaN ** 2 // NaN
+2 ** 3; // 8
+3 ** 2; // 9
+3 ** 2.5; // 15.588457268119896
+10 ** -1; // 0.1
+NaN ** 2; // NaN
 ```
 
 ### Associativité
 
-```js
-2 ** 3 ** 2   // 512
-2 ** (3 ** 2) // 512
-(2 ** 3) ** 2 // 64
+```js-nolint
+2 ** 3 ** 2; // 512
+2 ** (3 ** 2); // 512
+(2 ** 3) ** 2; // 64
 ```
 
 ### Avec les opérateurs unaires
@@ -65,13 +73,13 @@ NaN ** 2 // NaN
 Pour prendre l'opposé du résultat :
 
 ```js
--(2 ** 2) // -4
+-(2 ** 2); // -4
 ```
 
 Pour forcer le signe de la base en négatif :
 
 ```js
-(-2) ** 2 // 4
+(-2) ** 2; // 4
 ```
 
 ## Spécifications

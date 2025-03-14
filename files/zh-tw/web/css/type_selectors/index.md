@@ -39,7 +39,7 @@ span {
 
 ### Result
 
-{{EmbedLiveSample('Example', '100%', 150)}}
+{{EmbedLiveSample('範例', '100%', 150)}}
 
 ## 規範
 

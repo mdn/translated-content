@@ -1,11 +1,13 @@
 ---
 title: 視覚整形モデル
 slug: Web/CSS/Visual_formatting_model
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
 
-CSS の**視覚整形モデル** (Visual Formatting Model) は、ユーザーエージェントが文書ツリーをどのように受け取り、視覚メディア用に処理して表示するかを説明するものです。これには、コンピューター画面のような{{glossary("continuous media", "連続メディア")}}と、ブラウザーの印刷機能によって印刷された本や文書のような{{glossary("paged media", "ページ付きメディア")}}が含まれます。情報の大部分は、連続メディアとページ付きメディアに等しく適用されます。
+CSS の**視覚整形モデル** (visual formatting model) は、ユーザーエージェントが文書ツリーをどのように受け取り、視覚メディア用に処理して表示するかを説明するものです。これには、コンピューター画面のような{{glossary("continuous media", "連続メディア")}}と、ブラウザーの印刷機能によって印刷された本や文書のような[ページメディア](/ja/docs/Web/CSS/CSS_paged_media)が含まれます。情報の大部分は、連続メディアとページメディアに等しく適用されます。
 
 視覚整形モデルでは、文書ツリーの各要素は、モデルに応じてゼロ個以上のボックスを生成します。これらのボックスのレイアウトは、次のようにして制御されます。
 
@@ -14,9 +16,9 @@ CSS の**視覚整形モデル** (Visual Formatting Model) は、ユーザーエ
 - 文書ツリー内の他の要素
 - 外部情報 ({{glossary("viewport", "ビューポート")}}の寸法、画像の固有の寸法、など)
 
-視覚整形モデルに関する情報の多くは CSS2 で定義されていますが、様々なレベル 3 の仕様書ではこの情報が追加されています。仕様書を読む際には、 CSS2 で定義されているモデルが参照されていることが多いので、他のレイアウト仕様書を読む際には、 CSS2 で定義されているモデルとそれを説明するために使用されている用語を理解しておくことが重要です。
+視覚整形モデルに関する情報の多くは CSS2 で定義されていますが、様々な CSS レイアウトモジュールではこの情報が拡張されています。仕様書を読む際には、 CSS2 で定義されているモデルが参照されていることが多いので、他のレイアウト仕様書を読む際には、 CSS2 で定義されているモデルとそれを説明するために使用されている用語を理解しておくことが重要です。
 
-この文書では、モデルを定義して関連する用語や概念をいくつか紹介し、より詳細な情報を説明している MDN のより具体的なページへのリンクを紹介します。
+この文書では、モデルを定義して関連する用語や概念をいくつか紹介し、より詳細な情報を説明しているより具体的なページへのリンクを紹介します。
 
 ## ビューポートの役割
 
@@ -34,7 +36,8 @@ CSS はソース文書を読み取り、キャンバスにレンダリングし�
 
 それから、それぞれの要素について、 CSS はその要素の `display` プロパティの値に応じてゼロ個以上のボックスを生成します。
 
-> **メモ:** ボックスはよく display の種類によって参照されます。例えば、 `display: block` の要素によって生成されたボックスは「ブロックボックス」と呼ばれたり、単に「ブロック」と呼ばれたりします。ただし、ブロックボックス、ブロックレベルボックス、ボックスコンテナーはすべて微妙に異なることに注意してください。詳しくは下記の[ブロックボックス](#ブロックボックス)を参照してください。
+> [!NOTE]
+> ボックスはよく display の種類によって参照されます。例えば、 `display: block` の要素によって生成されたボックスは「ブロックボックス」と呼ばれたり、単に「ブロック」と呼ばれたりします。ただし、ブロックボックス、ブロックレベルボックス、ボックスコンテナーはすべて微妙に異なることに注意してください。詳しくは下記の[ブロックボックス](#ブロックボックス)を参照してください。
 
 ## 主ボックス
 
@@ -46,27 +49,97 @@ CSS はソース文書を読み取り、キャンバスにレンダリングし�
 
 **無名ボックス** (anonymous box) は、ボックスに使用する HTML 要素がない場合に作成されます。このような状況は、例えば、親要素で `display: flex` を宣言した場合に、その中に他の要素に含まれないテキストが直接存在する場合に発生します。ボックスツリーを修正するために、そのテキストの周りに無名ボックスが作成されます。これはフレックスアイテムとして動作しますが、対象となる要素がないため、通常のボックスのように対象を設定したり、スタイルを設定したりすることはできません。
 
-{{EmbedGHLiveSample("css-examples/visual-formatting/anonymous-flex.html", '100%', 720)}}
+```html live-sample___anonymous-flex
+<div class="flex">
+  これは無名ボックスに囲まれています。
+  <p>これは段落の中にあります。</p>
+  これは無名ボックスに囲まれています。
+</div>
+```
+
+```css live-sample___anonymous-flex
+body {
+  font: 1.2em sans-serif;
+  margin: 20px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex > * {
+  background-color: rebeccapurple;
+  color: white;
+}
+```
+
+{{EmbedLiveSample("anonymous-flex")}}
 
 同じことは、ブロック要素にテキストが混在している場合にも起こります。次の例では、 `<div>` の中に文字列があり、文字列の中央にはテキストの一部を含む `<p>` 要素があります。
 
-{{EmbedGHLiveSample("css-examples/visual-formatting/anonymous-block.html", '100%', 720)}}
+```html live-sample___anonymous-block
+<div class="example">
+  これは無名ボックスに囲まれています。
+  <p>これは段落の中にあります。</p>
+  これは無名ボックスに囲まれています。
+</div>
+```
 
-文字列はボックスツリーの中で3つのボックスに分割されます。段落要素の前の文字列の部分は無名ボックスに包まれ、次にボックスを生成する `<p>` があり、さらに別の無名ボックスがあります。
+```css live-sample___anonymous-block
+body {
+  font: 1.2em sans-serif;
+  margin: 20px;
+}
 
-これらの無名ボックスについて考慮すべきことは、直接の親からスタイルを継承するということですが、無名ボックスを対象にして、それらがどのように見えるかを変更することはできません。この例では、コンテナーの子を対象にするために直接子セレクターを使用しています。これは、無名ボックスは親ブロックの子ではないので、無名ボックスを変更するものではありません。
+.example > * {
+  background-color: rebeccapurple;
+  color: white;
+}
+```
+
+{{EmbedLiveSample("anonymous-block")}}
+
+文字列はボックスツリーの中で 3 つのボックスに分割されます。段落要素の前の文字列の部分は無名ボックスに包まれ、次にボックスを生成する `<p>` があり、さらに別の無名ボックスがあります。
+
+これらの無名ボックスについて考慮すべきことは、直接の親からスタイルを継承するということですが、無名ボックスを対象にして、それらがどのように見えるかを変更することはできません。この例では、コンテナーの子を対象にするために直接子セレクターを使用しています。これは、無名ボックスは「要素」ではないので、無名ボックスを変更するものではありません。
 
 **インライン無名ボックス**は、文字列がインライン要素によって分割されたとき、例えば文に `<em></em>` で囲まれた区間がある場合に作成されます。これにより、文が3つのインラインボックスに分割されます。強調された区間の前の無名インラインボックス、 `<em>` 要素で包まれた区間、そして最後の無名インラインボックスです。無名ブロックボックスと同様に、これらの無名インラインボックスは `<em>` の場合とは異なり、独立してスタイルを設定することはできず、コンテナーのスタイルを継承するだけです。
 
-他にも無名ボックスを生成する整形コンテキストがあります。[グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)は上記の[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)の例と同様に動作し、テキストの文字列を無名ボックス付きのグリッドアイテムに変換します。[段組み](/ja/docs/Web/CSS/CSS_Columns)レイアウトは段の周りに無名の段ボックスを生成します。これらもスタイル付けなどの対象にすることはできません。[表レイアウト](/ja/docs/Web/CSS/CSS_Table)は適切な表構造を生成するために無名ボックスを追加します。例えば、 `display: table-row` が付いたボックスがない場合、無名の表の行を追加するなどです。
+他にも無名ボックスを生成する整形コンテキストがあります。[グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)は上記の[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)の例と同様に動作し、テキストの文字列を無名ボックス付きのグリッドアイテムに変換します。[段組み](/ja/docs/Web/CSS/CSS_multicol_layout)レイアウトは段の周りに無名の段ボックスを生成します。これらもスタイル付けなどの対象にすることはできません。[表レイアウト](/ja/docs/Web/CSS/CSS_table)は適切な表構造を生成するために無名ボックスを追加します。例えば、 `display: table-row` が付いたボックスがない場合、無名の表の行を追加するなどです。
 
 ### 行ボックス
 
 **行ボックス**は、テキストの各行を包むボックスのことです。アイテムを浮動させた後に、背景色のあるブロックを続けると、行ボックスとそれを含むブロックの違いがわかります。
 
-次の例では、浮動している `<div>` の後に続く行ボックスは、浮動要素を回り込むように短くなっています。浮動したアイテムがフローから抜けるので、ボックスの背景は浮動要素の後ろを走っています。
+次の例では、浮動している `<div>` の後に続く行ボックスは、浮動ボックスを回り込むように短くなっています。浮動したアイテムがフローから抜けるので、ボックスの背景は浮動ボックスの後ろを走っています。
 
-{{EmbedGHLiveSample("css-examples/visual-formatting/line-boxes.html", '100%', 720)}}
+```html-nolint live-sample___line-boxes
+<div class="float"></div>
+<p class="following">
+  このテキストは浮動ボックスの後にあり、行ボックスは浮動ボックスのための空間を確保するために切り詰められますが、要素のボックスは通常のフローの位置を維持します。
+</p>
+```
+
+```css live-sample___line-boxes
+body {
+  font: 1.2em sans-serif;
+  margin: 20px;
+}
+
+.float {
+  float: left;
+  width: 150px;
+  height: 150px;
+  background-color: rebeccapurple;
+  margin: 20px;
+}
+
+.following {
+  background-color: #ccc;
+}
+```
+
+{{EmbedLiveSample("line-boxes", "", "250px")}}
 
 ## 配置の仕組みとフロー内・フロー外の要素
 
@@ -76,21 +149,21 @@ CSS では、ボックスをレイアウトするための配置の仕組みが 
 
 CSS において、**通常フロー** (normal flow) にはブロックボックスのブロックレベル整形、インラインボックスのインラインレベル整形、それにブロックレベルおよびインラインレベルボックスの相対位置指定と粘着位置指定があります。
 
-詳しくは [フローレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout)を参照してください。
+詳しくは [フローレイアウト](/ja/docs/Web/CSS/CSS_flow_layout)を参照してください。
 
-## 浮動要素
+## 浮動ボックス
 
 浮動モデルでは、ボックスは、まず通常の流れに従ってレイアウトされ、その後、流れから取り出され、ふつう左または右に配置されます。コンテンツは、フロートの側面に沿って折り返されます。
 
-詳しくは[浮動要素](/ja/docs/Learn/CSS/CSS_layout/Floats)を参照してください。
+詳しくは[浮動ボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Floats)を参照してください。
 
 ### 絶対位置指定
 
-絶対位置指定モデルでは (固定位置指定も含む)、ボックスは完全に通常フローから外され、包含ブロック (固定位置指定の場合はビューポート) を基準とした位置に配置されます。
+絶対位置指定モデルでは（固定位置指定も含む）、ボックスは完全に通常フローから外され、包含ブロック（固定位置指定の場合はビューポート）または [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)における 1 つ以上のアンカー要素を基準とした位置に配置されます。
 
-要素が浮動要素、絶対位置指定、ルート要素のいずれかであれば、**フロー外**と呼ばれます。フロー外ではない要素は**フロー内**と呼ばれます。
+要素が浮動ボックス、絶対位置指定、ルート要素のいずれかであれば、**フロー外**と呼ばれます。フロー外ではない要素は**フロー内**と呼ばれます。
 
-詳しくは[CSS 位置指定レイアウト](/ja/docs/Web/CSS/CSS_Positioning)を参照してください。
+詳しくは[CSS 位置指定レイアウト](/ja/docs/Web/CSS/CSS_positioned_layout)を参照してください。
 
 ## 整形コンテキストと display プロパティ
 
@@ -98,26 +171,65 @@ CSS において、**通常フロー** (normal flow) にはブロックボック
 
 ボックスには内部表示型もあり、これは子がどのように動作するかを示します。通常ブロックかつインラインレイアウト、または通常フローであれば、この表示型は `flow` です。これは、子要素が `block` または `inline` のどちらかであることを示します。
 
-しかし、内部表示型は `grid` や `flex` になる可能性もあり、この場合は直接の子がグリッドまたはフレックスアイテムとして表示されます。このような場合、要素はグリッドやフレックスの[整形コンテキスト](/ja/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)を生成しているといいます。多くの点でこれはブロックの整形コンテキストに似ていますが、子要素は通常のフローのアイテムではなく、フレックスやグリッドのアイテムとして動作します。
+しかし、内部表示型は `grid` や `flex` になる可能性もあり、この場合は直接の子がグリッドまたはフレックスアイテムとして表示されます。このような場合、要素はグリッドやフレックスの[整形コンテキスト](/ja/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)を生成しているといいます。多くの点でこれはブロックの整形コンテキストに似ていますが、子要素は通常のフローのアイテムではなく、フレックスやグリッドのアイテムとして動作します。
 
-ブロックレベルとインラインレベルの各ボックスの相互作用は、 {{cssxref("display")}} の MDN ドキュメントで説明しています。
+ブロックレベルとインラインレベルの各ボックスの相互作用は、 {{cssxref("display")}} のプロパティリファレンスで説明しています。
 
 また、 display の特定の値については、ボックスレイアウトの観点から、これらの整形コンテキストがどのように機能するかを以下のリファレンスで説明しています。
 
-- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)
-- [CSS 表レイアウト](/ja/docs/Web/CSS/CSS_Table)
-- [リスト](/ja/docs/Web/CSS/CSS_Lists_and_Counters)
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)モジュール
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
+- [CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)モジュール
+- [CSS 表](/ja/docs/Web/CSS/CSS_table)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
 
 ### 独立整形コンテキスト
 
 要素は、それを含むブロックの整形コンテキストに参加するか、独立整形コンテキストを確立するかのどちらかです。例えば、グリッドコンテナーは、その子に対して新しい**グリッド整形コンテキスト**を確立します。
 
-**独立整形コンテキスト**は浮動要素を含み、マージンは整形コンテキストの境界を越えて相殺されることはありません。そのため、新しいブロック整形コンテキストを作成することで、ボックス内に浮動要素が収まるようにすることができます。このためには、`display: flow-root` を新しい[ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)を生成したいボックスに追加してください。
+**独立整形コンテキスト**は浮動ボックスを含み、マージンは整形コンテキストの境界を越えて相殺されることはありません。そのため、新しいブロック整形コンテキストを作成することで、ボックス内に浮動ボックスが収まるようにすることができます。このためには、 `display: flow-root` を新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)を生成したいボックスに追加してください。
 
-次の例は、`display: flow-root` の効果を示しています。黒い背景のボックスが、浮動アイテムとテキストを包み込むように見えます。編集可能な CSS から `display: flow-root` を削除すると、浮動アイテムがボックスの底から突き出てしまい、アイテムが収まらなくなります。
+次の例は、 `display: flow-root` の効果を示しています。黒い背景のボックスが、浮動アイテムとテキストを包み込むように見えます。編集可能な CSS から `display: flow-root` を削除すると、浮動アイテムがボックスの底から突き出てしまい、アイテムが収まらなくなります。
 
-{{EmbedGHLiveSample("css-examples/display/two-value/block-flow-root.html", '100%', 720)}}
+```html live-sample___block-flow-root
+<div class="container">
+  <div class="item">浮動しています</div>
+  <p>浮動ボックスに沿ったテキストです。</p>
+</div>
+```
+
+```css hidden live-sample___block-flow-root
+body {
+  font: 1.2em sans-serif;
+  margin: 20px;
+}
+.container {
+  background-color: #333;
+  color: #fff;
+}
+
+.item {
+  background-color: #fff;
+  border: 1px solid #999;
+  color: #333;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+```
+
+```css live-sample___block-flow-root
+.container {
+  display: flow-root;
+}
+
+.item {
+  margin: 10px;
+  float: left;
+}
+```
+
+{{EmbedLiveSample("block-flow-root", "", "250px")}}
 
 ### ブロックボックス
 
@@ -125,7 +237,7 @@ CSS において、**通常フロー** (normal flow) にはブロックボック
 
 #### ブロックコンテナー
 
-**ブロックコンテナー**は、インライン整形コンテキストに参加するインラインレベルのボックスのみを含むか、ブロック整形コンテキストに参加するブロックレベルのボックスのみを含むかします。このため、上で説明した動作では、すべてのアイテムがブロックまたはインラインの書式設定コンテキストに参加できるように、無名ボックスが導入されています。要素は、ブロックレベルまたはインラインレベルのボックスを含む場合にのみ、ブロックコンテナーとなります。
+**ブロックコンテナー**は、インライン整形コンテキストに参加するインラインレベルのボックスのみを含むか、ブロック整形コンテキストに参加するブロックレベルのボックスのみを含むかします。このため、上で説明した動作では、すべてのアイテムがブロックまたはインラインの整形コンテキストに参加できるように、無名ボックスが導入されています。要素は、ブロックレベルまたはインラインレベルのボックスを含む場合にのみ、ブロックコンテナーとなります。
 
 #### インラインレベルボックスとブロックレベルボックス
 
@@ -137,10 +249,15 @@ CSS において、**通常フロー** (normal flow) にはブロックボック
 
 ## 関連情報
 
-- CSS の主要概念: [CSS の構文](/ja/docs/Web/CSS/Syntax), [アットルール](/ja/docs/Web/CSS/At-rule), [コメント](/ja/docs/Web/CSS/Comments),
-  [詳細度](/ja/docs/Web/CSS/Specificity), [継承](/ja/docs/Web/CSS/inheritance), [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model),
-  [レイアウトモード](/ja/docs/Web/CSS/Layout_mode), [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model),
-  [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing),
-  [初期値](/ja/docs/Web/CSS/initial_value), [計算値](/ja/docs/Web/CSS/computed_value), [解決値](/ja/docs/Web/CSS/resolved_value),
-  [指定値](/ja/docs/Web/CSS/specified_value), [使用値](/ja/docs/Web/CSS/used_value), [実効値](/ja/docs/Web/CSS/actual_value)。
-  [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax), [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties), [置換要素](/ja/docs/Web/CSS/Replaced_element)
+- [CSS の構文](/ja/docs/Web/CSS/Syntax)ガイド
+- [コメント](/ja/docs/Web/CSS/Comments)
+- [詳細度](/ja/docs/Web/CSS/Specificity)
+- [継承](/ja/docs/Web/CSS/Inheritance)
+- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+- [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
+- [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [置換要素](/ja/docs/Web/CSS/Replaced_element)
+- {{DOMxRef("VisualViewport")}} インターフェイス
+- {{glossary("Scroll container")}}

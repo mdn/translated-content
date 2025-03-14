@@ -17,10 +17,10 @@ slug: Web/SVG/Element/switch
 
 ### グローバル属性
 
-- [条件処理属性](/ja/docs/Web/SVG/Attribute#Conditional_processing_attributes)
-- [コア属性](/ja/docs/Web/SVG/Attribute#Core_attributes)
-- [グラフィックイベント属性](/ja/docs/Web/SVG/Attribute#Graphical_event_attributes)
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute#Presentation_attributes)
+- [条件処理属性](/ja/docs/Web/SVG/Attribute#conditional_processing_attributes)
+- [コア属性](/ja/docs/Web/SVG/Attribute#core_attributes)
+- [グラフィックイベント属性](/ja/docs/Web/SVG/Attribute#graphical_event_attributes)
+- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute#presentation_attributes)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}
@@ -38,19 +38,19 @@ slug: Web/SVG/Element/switch
 
 ```html
 <svg viewBox="0 -20 100 50">
-   <switch>
-      <text systemLanguage="ar">مرحبا</text>
-      <text systemLanguage="de,nl">Hallo!</text>
-      <text systemLanguage="en-us">Howdy!</text>
-      <text systemLanguage="en-gb">Wotcha!</text>
-      <text systemLanguage="en-au">G'day!</text>
-      <text systemLanguage="en">Hello!</text>
-      <text systemLanguage="es">Hola!</text>
-      <text systemLanguage="fr">Bonjour!</text>
-      <text systemLanguage="ja">こんにちは</text>
-      <text systemLanguage="ru">Привет!</text>
-      <text>☺</text>
-   </switch>
+  <switch>
+    <text systemLanguage="ar">مرحبا</text>
+    <text systemLanguage="de,nl">Hallo!</text>
+    <text systemLanguage="en-us">Howdy!</text>
+    <text systemLanguage="en-gb">Wotcha!</text>
+    <text systemLanguage="en-au">G'day!</text>
+    <text systemLanguage="en">Hello!</text>
+    <text systemLanguage="es">Hola!</text>
+    <text systemLanguage="fr">Bonjour!</text>
+    <text systemLanguage="ja">こんにちは</text>
+    <text systemLanguage="ru">Привет!</text>
+    <text>☺</text>
+  </switch>
 </svg>
 ```
 
@@ -64,4 +64,4 @@ slug: Web/SVG/Element/switch
 
 ## ブラウザーの互換性
 
-{{Compat("svg.elements.switch")}}
+{{Compat}}

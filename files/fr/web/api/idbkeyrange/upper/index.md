@@ -1,13 +1,6 @@
 ---
 title: IDBKeyRange.upper
 slug: Web/API/IDBKeyRange/upper
-tags:
-  - API
-  - IDBKeyRange
-  - IndexedDB
-  - Propriété
-  - Reference
-translation_of: Web/API/IDBKeyRange/upper
 ---
 
 {{APIRef("IndexedDB")}}
@@ -37,25 +30,27 @@ function displayData() {
   var keyRangeValue = IDBKeyRange.bound("F", "W", true, true);
   console.log(keyRangeValue.upper);
 
-  var transaction = db.transaction(['fThings'], 'readonly');
-  var objectStore = transaction.objectStore('fThings');
+  var transaction = db.transaction(["fThings"], "readonly");
+  var objectStore = transaction.objectStore("fThings");
 
-  objectStore.openCursor(keyRangeValue).onsuccess = function(event) {
+  objectStore.openCursor(keyRangeValue).onsuccess = function (event) {
     var cursor = event.target.result;
-      if(cursor) {
-        var listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
-        list.appendChild(listItem);
+    if (cursor) {
+      var listItem = document.createElement("li");
+      listItem.innerHTML =
+        "<strong>" + cursor.value.fThing + "</strong>, " + cursor.value.fRating;
+      list.appendChild(listItem);
 
-        cursor.continue();
-      } else {
-        console.log('Les éléments ont été affichés.');
-      }
-    };
+      cursor.continue();
+    } else {
+      console.log("Les éléments ont été affichés.");
+    }
   };
+}
 ```
 
-> **Note :** Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) ([ainsi que la démonstration associée](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/)).
+> [!NOTE]
+> Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) ([ainsi que la démonstration associée](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/)).
 
 ## Spécifications
 
@@ -67,10 +62,10 @@ function displayData() {
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Initier une connexion : {{domxref("IDBDatabase")}}
 - Utiliser les transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

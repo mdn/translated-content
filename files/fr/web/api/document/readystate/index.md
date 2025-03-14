@@ -1,12 +1,6 @@
 ---
 title: Document.readyState
 slug: Web/API/Document/readyState
-tags:
-  - API
-  - DOM
-  - HTML
-  - Référence(2)
-translation_of: Web/API/Document/readyState
 ---
 
 {{APIRef("DOM")}}
@@ -30,7 +24,7 @@ La variable `readyState` peut valoir&nbsp;:
 - **`interactive`**
   - : Le document a été chargé, mais les ressources (images, scripts, css..) sont encore en cours d'acquisition. En revanche la structure DOM est générée, et [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event) a été émis.
 - **`complete`**
-  - : Le document et toutes les sous-ressources ont été chargés, et [`load`](/fr//docs/Web/API/Window/load_event) a été émis.
+  - : Le document et toutes les sous-ressources ont été chargés, et [`load`](/fr_docs/Web/API/Window/load_event) a été émis.
 
 ## Exemples
 
@@ -49,7 +43,9 @@ switch (document.readyState) {
     break;
   case "complete":
     // La page est pleinement chargée.
-    console.log("The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText);
+    console.log(
+      "The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText,
+    );
     break;
 }
 ```
@@ -62,7 +58,7 @@ document.onreadystatechange = function () {
   if (document.readyState == "interactive") {
     initApplication();
   }
-}
+};
 ```
 
 ### readystatechange comme alternative à load
@@ -73,18 +69,21 @@ document.onreadystatechange = function () {
   if (document.readyState == "complete") {
     initApplication();
   }
-}
+};
 ```
 
 ### readystatechange comme event listener pour insérer ou modifier le DOM avant DOMContentLoaded
 
 ```js
 // Modification du document <body> dès que possible en utilisant un script externe
-var bootstrap = function(evt){
-  if (evt.target.readyState === "interactive") { initLoader(); }
-  else if (evt.target.readyState === "complete") { initApp(); }
-}
-document.addEventListener('readystatechange', bootstrap, false);
+var bootstrap = function (evt) {
+  if (evt.target.readyState === "interactive") {
+    initLoader();
+  } else if (evt.target.readyState === "complete") {
+    initApp();
+  }
+};
+document.addEventListener("readystatechange", bootstrap, false);
 ```
 
 ## Spécifications
@@ -99,4 +98,4 @@ document.addEventListener('readystatechange', bootstrap, false);
 
 - L'événement [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event)
 - L'événement [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event)
-- L'événement [`load`](/fr//docs/Web/API/Window/load_event)
+- L'événement [`load`](/fr_docs/Web/API/Window/load_event)

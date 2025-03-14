@@ -1,13 +1,60 @@
 ---
 title: grid-template-columns
 slug: Web/CSS/grid-template-columns
+l10n:
+  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
 {{CSSRef}}
 
-**`grid-template-columns`** は CSS のプロパティで、{{glossary("grid column", "グリッド列")}}の線名とトラックのサイズ変更機能を定義します。
+**`grid-template-columns`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{glossary("grid column", "グリッド列")}}の線名とトラックのサイズ変更機能を定義します。
 
-{{EmbedInteractiveExample("pages/css/grid-template-columns.html")}}
+{{InteractiveExample("CSS Demo: grid-template-columns")}}
+
+```css interactive-example-choice
+grid-template-columns: 60px 60px;
+```
+
+```css interactive-example-choice
+grid-template-columns: 1fr 60px;
+```
+
+```css interactive-example-choice
+grid-template-columns: 1fr 2fr;
+```
+
+```css interactive-example-choice
+grid-template-columns: 8ch auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  width: 200px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## 構文
 
@@ -17,8 +64,8 @@ grid-template-columns: none;
 
 /* <track-list> 値 */
 grid-template-columns: 100px 1fr;
-grid-template-columns: [linename] 100px;
-grid-template-columns: [linename1] 100px [linename2 linename3];
+grid-template-columns: [line-name] 100px;
+grid-template-columns: [line-name1] 100px [line-name2 line-name3];
 grid-template-columns: minmax(100px, 1fr);
 grid-template-columns: fit-content(40%);
 grid-template-columns: repeat(3, 200px);
@@ -27,18 +74,22 @@ grid-template-columns: masonry;
 
 /* <auto-track-list> 値 */
 grid-template-columns: 200px repeat(auto-fill, 100px) 300px;
-grid-template-columns: minmax(100px, max-content)
-                       repeat(auto-fill, 200px) 20%;
-grid-template-columns: [linename1] 100px [linename2]
-                       repeat(auto-fit, [linename3 linename4] 300px)
-                       100px;
-grid-template-columns: [linename1 linename2] 100px
-                       repeat(auto-fit, [linename1] 300px) [linename3];
+grid-template-columns:
+  minmax(100px, max-content)
+  repeat(auto-fill, 200px) 20%;
+grid-template-columns:
+  [line-name1] 100px [line-name2]
+  repeat(auto-fit, [line-name3 line-name4] 300px)
+  100px;
+grid-template-columns:
+  [line-name1 line-name2] 100px
+  repeat(auto-fit, [line-name1] 300px) [line-name3];
 
 /* グローバル値 */
 grid-template-columns: inherit;
 grid-template-columns: initial;
 grid-template-columns: revert;
+grid-template-columns: revert-layer;
 grid-template-columns: unset;
 ```
 
@@ -46,7 +97,7 @@ grid-template-columns: unset;
 
 - `none`
   - : 明示的なグリッドがないことを示します。どの列も暗黙的に生成され、それらのサイズは {{cssxref("grid-auto-columns")}} プロパティによって決定されます。
-- `[線名]`
+- `[line-name]`
   - : [`<custom-ident>`](/ja/docs/Web/CSS/custom-ident) で、その位置にある線の名称を指定します。識別子には、予約語の `span` と `auto` 以外の有効な文字列を指定してください。行は、`[line-name-a line-name-b]`のように、角括弧内のスペースで区切られた複数の名前を持つことができます。
 - {{cssxref("&lt;length&gt;")}}
   - : 負の値ではない長さです。
@@ -60,33 +111,30 @@ grid-template-columns: unset;
     `minmax()` 表記の外に現れた場合は、最小値が自動として扱われます (つまり `minmax(auto, <flex>)`)。
 
 - {{cssxref("max-content")}}
-  - : グリッドトラックを占有しているグリッドアイテムの中で、コンテンツ貢献度の最大値を表すキーワードです。
+  - : グリッドトラックを占有しているグリッドアイテムの中で、[最大コンテンツ貢献度](https://www.w3.org/TR/css-sizing-3/#max-content)を表すキーワードです。例えば、グリッドトラックの最初の要素が _"Repetitio est mater studiorum"_ という文を保持しており、 2 つ目の要素が _"Dum spiro, spero"_ という文を保持している場合、最大コンテンツ貢献度は、グリッド要素内のすべての文の中で最大の文 _"Repetitio est mater studiorum"_ のサイズによって定義されます。
 - {{cssxref("min-content")}}
-  - : グリッドトラックを占有しているグリッドアイテムの中で、コンテンツ貢献度の最小値を表すキーワードです。
-- {{cssxref("minmax()", "minmax(min, max)")}}
+  - : グリッドトラックを占有しているグリッドアイテムの中で、[最小コンテンツ貢献度](https://www.w3.org/TR/css-sizing-3/#min-content)を表すキーワードです。例えば、グリッドトラックの最初の要素が _"Repetitio est mater studiorum"_ という文を保持しており、 2 つ目の要素が _"Dum spiro, spero"_ という文を保持している場合、最小コンテンツ貢献度は、グリッド要素内のすべての文の中で最大の単語 _"studiorum"_ のサイズによって定義されます。
+- {{cssxref("minmax", "minmax(min, max)")}}
   - : _min_ 以上、 _max_ 以下の寸法の範囲を定義する関数表記法です。 _max_ が _min_ より小さい場合、 _max_ は無視され、関数は _min_ として扱われます。最大値として、 `<flex>` 値はトラックのフレックス係数を設定します。最小値としては無効です。
 - `auto`
 
   - : 最大値であれば max-content と同一のキーワードです。
 
-    最小値の場合は、グリッドトラックを占めるグリッドアイテムの最大の最小寸法 ({{cssxref("min-width")}}/{{cssxref("min-height")}} で指定されたもの) を表します。ふつうは {{cssxref("min-content")}} ですが、必ずそうとは限りません。
+    最小値の場合は、グリッドトラックを占めるグリッドアイテムの最大の最小寸法 ({{cssxref("min-width")}}/{{cssxref("min-height")}} で指定されたもの) を表します。ふつうは {{cssxref("min-content")}} ですが、必ずしもそうとは限りません。
 
-    {{cssxref("minmax()", "minmax()")}} 表記以外で使われた場合、 `auto` は上記の最小値と最大値の間の範囲を表します。これはほとんどの場合、`minmax(min-content,max-content)` と同じように動作します。
+    {{cssxref("minmax", "minmax()")}} 表記以外で使われた場合、 `auto` は上記の最小値と最大値の間の範囲を表します。これはほとんどの場合、 `minmax(min-content,max-content)` と同じように動作します。
 
-    > **メモ:** トラックの寸法が `auto` の場合 (そして `auto` の場合だけ)、 {{cssxref("align-content")}} および{{cssxref("justify-content")}} プロパティによって引き伸ばされることがあります。
+    > [!NOTE]
+    > トラックの寸法が `auto` の場合（そして `auto` だけの場合）、 {{cssxref("align-content")}} および {{cssxref("justify-content")}} プロパティによって引き伸ばされることがあります。既定では、 `auto` のサイズのトラックがグリッドコンテナーの残りの空間を占めます。
 
-- `{{cssxref("fit-content()", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}`
-  - : `min(max-content, max(auto, _argument_))` の式を表し、 `auto` と同様に (すなわち `minmax(auto, max-content)` と) 計算されますが、トラックの寸法が `auto` の最小値よりも大きい場合は _argument_ でクランプされるところが異なります。
-- {{cssxref("repeat()", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
+- `{{cssxref("fit-content_function", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}`
+  - : `max(minimum, min(limit, max-content))` という式を表し、ここで _minimum_ は `auto` の最小値 （常に {{cssxref("min-content")}} の最小値に等しいわけではありませんが、そうなることが多い） を表し、 _limit_ は fit-content() に引数として渡されるトラックの大きさを計算する関数です。これは基本的に `minmax(auto, max-content)` と `minmax(auto, limit)` の小さい方として計算されます。
+- {{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
   - : トラックリストの繰り返しフラグメントを表し、繰り返しパターンを示す多数の列をよりコンパクトな形式で記述できるようにします。
-- [`masonry`](/ja/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout){{Experimental_Inline}}
+- [`masonry`](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
   - : masonry の値は、この軸が組積アルゴリズムに従ってレイアウトされるべきであることを示します。
-- [subgrid](/ja/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- [`subgrid`](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)
   - : `subgrid` の値は、グリッドがその軸に親グリッドのスパン部分を採用することを示します。グリッドの行や列のサイズは、明示的に指定されるのではなく、親グリッドの定義から取得されます。
-
-> **警告:** `masonry`の値は、グリッド仕様のレベル 3 のもので、現在は Firefox のフラグに隠された実験的な実装があるだけです。
->
-> サブグリッドの値はグリッド仕様書のレベル 2 にあり、現在のところ Firefox 71 以降でのみ実装されています。
 
 ## 公式定義
 
@@ -102,7 +150,7 @@ grid-template-columns: unset;
 
 #### HTML
 
-```html
+```html live-sample___specifying_grid_column_sizes
 <div id="grid">
   <div id="areaA">A</div>
   <div id="areaB">B</div>
@@ -111,7 +159,7 @@ grid-template-columns: unset;
 
 #### CSS
 
-```css
+```css live-sample___specifying_grid_column_sizes
 #grid {
   display: grid;
   width: 100%;
@@ -141,7 +189,9 @@ grid-template-columns: unset;
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
-- [グリッドレイアウトガイド: グリッドレイアウトの基本概念 - グリッドトラック](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#グリッドトラック)
-- 動画チュートリアル: [Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)
-- [サブグリッド](/ja/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-template-areas")}}
+- {{cssxref("grid-template")}}
+- [グリッドレイアウトの基本概念: グリッドトラック](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#グリッドトラック)
+- 動画チュートリアル: _[Defining a grid](https://gridbyexample.com/video/series-define-a-grid/)_
+- [サブグリッド](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)

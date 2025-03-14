@@ -1,8 +1,6 @@
 ---
 title: Constructeur WeakMap()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
-browser-compat: javascript.builtins.WeakMap.WeakMap
 ---
 
 {{JSRef}}
@@ -12,14 +10,14 @@ Le **constructeur `WeakMap()`** permet de créer un nouvel objet [`WeakMap`](/fr
 ## Syntaxe
 
 ```js
-new WeakMap()
-new WeakMap(iterable)
+new WeakMap();
+new WeakMap(iterable);
 ```
 
 ### Paramètres
 
 - `iterable`
-  - : Un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) ou tout autre objet itérable qui implémente une méthode [`@@iterator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator) renvoyant un objet itérateur qui produit des objets semblables à des tableaux avec deux éléments, le premier qui sera utilisé comme clé de la `WeakMap` et le second comme valeur associée à cette clé. Chaque paire de clé/valeur sera ainsi ajoutée au nouveau `WeakMap`. `null` est traité comme `undefined`.
+  - : Un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) ou tout autre objet itérable qui implémente une méthode [`@@iterator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator) renvoyant un objet itérateur qui produit des objets semblables à des tableaux avec deux éléments, le premier qui sera utilisé comme clé de la `WeakMap` et le second comme valeur associée à cette clé. Chaque paire de clé/valeur sera ainsi ajoutée au nouveau `WeakMap`. `null` est traité comme `undefined`.
 
 ## Exemples
 
@@ -31,11 +29,11 @@ const wm2 = new WeakMap();
 const wm3 = new WeakMap();
 
 const o1 = {};
-const o2 = function() {};
+const o2 = function () {};
 const o3 = window;
 
 wm1.set(o1, 37);
-wm1.set(o2, 'azerty');
+wm1.set(o2, "azerty");
 wm2.set(o1, o2); // une valeur peut être de n'importe quel type (objet ou fonction)
 wm2.set(o3, undefined);
 wm2.set(wm1, wm2); // les clés et les valeurs peuvent être des objets, même des WeakMaps

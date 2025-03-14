@@ -1,15 +1,14 @@
 ---
-title: Headers.values()
+title: "Headers: values() メソッド"
+short-title: values()
 slug: Web/API/Headers/values
 l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{APIRef}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
-**`Headers.values()`** メソッドは、このオブジェクトに含まれるすべての値を読み取ることができる{{jsxref("Iteration_protocols", '反復子', '', 1)}}を返します。値は文字列です。
-
-> **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
+**`Headers.values()`** メソッドは、このオブジェクトに含まれるすべての値を読み取ることができる{{jsxref("Iteration_protocols", 'イテレーター', '', 1)}}を返します。値は文字列です。
 
 ## 構文
 
@@ -23,25 +22,25 @@ values()
 
 ### 返値
 
-{{jsxref("Iteration_protocols", '反復子', '', 1)}}を返します。
+{{jsxref("Iteration_protocols", 'イテレーター', '', 1)}}を返します。
 
 ## 例
 
 ```js
-// Create a test Headers object
+// テスト用の Headers オブジェクトを作成
 const myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.append('Vary', 'Accept-Language');
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.append("Vary", "Accept-Language");
 
-// Display the values
+// 値を表示
 for (const value of myHeaders.values()) {
-   console.log(value);
+  console.log(value);
 }
 ```
 
 結果は次の通りです。
 
-```
+```plain
 text/xml
 Accept-Language
 ```

@@ -1,32 +1,21 @@
 ---
 title: tabs.onHighlightChanged
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlightChanged
-tags:
-  - API
-  - Add-ons
-  - Deprecated
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onHighlightChanged
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlightChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-> **Attention :** Cet événement est obsolète. Utilisez {{WebExtAPIRef("tabs.onHighlighted")}} à la place.
+> [!WARNING]
+> Cet événement est obsolète. Utilisez {{WebExtAPIRef("tabs.onHighlighted")}} à la place.
 
 Lancé lorsque les onglets en surbrillance ou sélectionnés dans une fenêtre changent.
 
 ## Syntaxe
 
 ```js
-browser.tabs.onHighlightChanged.addListener(listener)
-browser.tabs.onHighlightChanged.removeListener(listener)
-browser.tabs.onHighlightChanged.hasListener(listener)
+browser.tabs.onHighlightChanged.addListener(listener);
+browser.tabs.onHighlightChanged.removeListener(listener);
+browser.tabs.onHighlightChanged.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -47,7 +36,7 @@ Les événements ont trois fonctions :
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
 
     - `selectInfo`
-      - : [`object`](#selectInfo).
+      - : [`object`](#selectinfo).
 
 ## Objets supplémentaires
 
@@ -58,13 +47,13 @@ Les événements ont trois fonctions :
 - `tabIds`
   - : `array` d'`integer`. Tous les onglets en surbrillance dans la fenêtre.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onHighlightChanged")}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

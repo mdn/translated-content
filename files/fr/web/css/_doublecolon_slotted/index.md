@@ -1,19 +1,13 @@
 ---
-title: '::slotted()'
+title: ::slotted()
 slug: Web/CSS/::slotted
-tags:
-  - CSS
-  - Pseudo-element
-  - Reference
-  - Web
-translation_of: Web/CSS/::slotted
 ---
 
 {{CSSRef}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-éléments) CSS **`::slotted()`** représente n'importe quel élément ayant été placé à l'intérieur d'un emplacement (_slot_) au sein d'un gabarit (_template_) HTML (cf. [Utiliser les gabarits et les emplacements](/fr/docs/Web/Web_Components/Using_templates_and_slots) pour plus d'informations).
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) CSS **`::slotted()`** représente n'importe quel élément ayant été placé à l'intérieur d'un emplacement (_slot_) au sein d'un gabarit (_template_) HTML (cf. [Utiliser les gabarits et les emplacements](/fr/docs/Web/API/Web_components/Using_templates_and_slots) pour plus d'informations).
 
-Cela ne fonctionne que pour du CSS placé à l'intérieur d'un élément {{htmlelement("template")}} et/ou dans le _[shadow DOM](/fr/docs/Web/Web_Components/Using_shadow_DOM)_. On notera également que ce sélecteur ne sélectionnera pas les noeuds texte placés dans les emplacements, il ne cible que les éléments.
+Cela ne fonctionne que pour du CSS placé à l'intérieur d'un élément {{htmlelement("template")}} et/ou dans le _[shadow DOM](/fr/docs/Web/API/Web_components/Using_shadow_DOM)_. On notera également que ce sélecteur ne sélectionnera pas les noeuds texte placés dans les emplacements, il ne cible que les éléments.
 
 ```css
 /* Cible n'importe quel élément placé dans un emplacement */
@@ -53,26 +47,29 @@ Dans cette démonstration, on utilise un gabarit avec trois emplacements :
 Un élément personnalisé — `<person-details>` — est défini de la façon suivante :
 
 ```js
-customElements.define('person-details',
+customElements.define(
+  "person-details",
   class extends HTMLElement {
     constructor() {
       super();
-      let template = document.getElementById('person-template');
+      let template = document.getElementById("person-template");
       let templateContent = template.content;
 
-      const shadowRoot = this.attachShadow({mode: 'open'});
+      const shadowRoot = this.attachShadow({ mode: "open" });
 
-      let style = document.createElement('style');
-      style.textContent = 'div { padding: 10px; border: 1px solid gray; width: 200px; margin: 10px; }' +
-                           'h2 { margin: 0 0 10px; }' +
-                           'ul { margin: 0; }' +
-                           'p { margin: 10px 0; }' +
-                           '::slotted(*) { color: gray; font-family: sans-serif; } ';
+      let style = document.createElement("style");
+      style.textContent =
+        "div { padding: 10px; border: 1px solid gray; width: 200px; margin: 10px; }" +
+        "h2 { margin: 0 0 10px; }" +
+        "ul { margin: 0; }" +
+        "p { margin: 10px 0; }" +
+        "::slotted(*) { color: gray; font-family: sans-serif; } ";
 
       shadowRoot.appendChild(style);
       shadowRoot.appendChild(templateContent.cloneNode(true));
-  }
-})
+    }
+  },
+);
 ```
 
 On voit ici que, lorsqu'on renseigne le `style` de l'élément, on sélectionne tous les éléments présents dans les emplacements (`::slotted(*)`) afin de leur fournir différentes polices et couleurs. Cela permet d'avoir une meilleur vision des emplacements qui ne sont pas encore occupés.
@@ -97,4 +94,4 @@ Voici ce à quoi ressemblera l'élément lorsqu'il sera inséré dans la page :
 
 ## Voir aussi
 
-- [Les composants web](/fr/docs/Web/Web_Components)
+- [Les composants web](/fr/docs/Web/API/Web_components)

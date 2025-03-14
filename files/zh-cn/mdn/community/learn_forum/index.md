@@ -3,8 +3,6 @@ title: 学习论坛
 slug: MDN/Community/Learn_forum
 ---
 
-{{MDNSidebar}}
-
 我们的[学习 web 开发](/zh-CN/docs/Learn)页面每个月可以获得上百万次的浏览量，且拥有[活跃的论坛](https://discourse.mozilla.org/c/mdn/learn/250)可供人们寻求普遍的帮助，或请求对他们的测验进行评估。我们乐于帮助人们回答帖子中的问题，以让这个学习社区更加壮大。
 
 ## 我们需要的帮助
@@ -58,7 +56,8 @@ slug: MDN/Community/Learn_forum
       4. 如果这个人没有真正接近一个可行的解决方案，要善意地鼓励他们，并尝试给他们一些线索，告诉他们应该往什么方向走。再给他们一次机会，让他们尝试做得更好。
       5. 如果你需要任何帮助，请在 [Matrix](https://wiki.mozilla.org/Matrix) 上的 [MDN Web 文档聊天室](https://chat.mozilla.org/#/room/#mdn:mozilla.org)寻求帮助。
 
-> **备注：** 最重要的是：要有耐心，要友好，要善良。记住，这些人中的大多数都是初学者。
+> [!NOTE]
+> 最重要的是：要有耐心，要友好，要善良。记住，这些人中的大多数都是初学者。
 
 ## MDN 学习区的结构
 
@@ -67,14 +66,14 @@ slug: MDN/Community/Learn_forum
 1. 大致通读一遍页面的结构。
 2. 特别是查看一下现有的评估类型：
 
-   - 众多“测试你的技能”文章中（如 [/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals#测试你的技能！](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals#测试你的技能！)）
-   - 在一些模块结束时更深入的评估部分（如 [/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery#评估或进一步帮助](/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery#评估或进一步帮助))
+   - 众多“技能测试”文章中（如 [/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals#技能测试！](/zh-CN/docs/Learn_web_development/Core/Scripting/Conditionals#技能测试！)）
+   - 在一些模块结束时更深入的评估部分（如 [/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery#评估或进一步帮助](/zh-CN/docs/Learn_web_development/Core/Scripting/Image_gallery#评估或进一步帮助))
 
-3. 看一眼与学习区相关的 GitHub 仓库（大部分文件都在 <https://github.com/mdn/learning-area/> 中，还有一些文件在 <https://github.com/mdn/css-examples/tree/master/learn> 中）。初学者需要帮助的大部分例子都包含在这里。
+3. 看一眼与学习区相关的 GitHub 仓库（大部分文件都在 <https://github.com/mdn/learning-area/> 中，还有一些文件在 <https://github.com/mdn/css-examples/tree/main/learn> 中）。初学者需要帮助的大部分例子都包含在这里。
 4. 每项评估或测试都有相关的打分指南或推荐解法，可以帮助你评估他们的工作。
 5. 存在更容易找到这些资源的模式，如：
 
-   - 上述“测试你的技能”打分指南和资源可以在 <https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/conditionals> 中找到。
-   - 上述评估打分指南和资源可以在 <https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/gallery> 中找到。
+   - 上述“技能测试”打分指南和资源可以在 <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/tasks/conditionals> 中找到。
+   - 上述评估打分指南和资源可以在 <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/gallery> 中找到。
 
 开始时，浏览这些东西似乎很麻烦，但随着你对练习题目的熟悉，你会发现这个过程越来越容易。

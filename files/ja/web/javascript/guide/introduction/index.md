@@ -2,7 +2,7 @@
 title: 入門編
 slug: Web/JavaScript/Guide/Introduction
 l10n:
-  sourceCommit: eada29e0774d505becb3a725001d372f0dbdc73d
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
@@ -15,17 +15,15 @@ l10n:
 
 - インターネットと World Wide Web ([WWW](/ja/docs/Glossary/World_Wide_Web)) についての一般的な理解。
 - HyperText Markup Language ([HTML](/ja/docs/Glossary/HTML)) についての実用的な知識。
-- プログラミングの経験。プログラミングが初めての方は、 [JavaScript](/ja/docs/Web/JavaScript) についてのメインページにあるチュートリアルをお試しください。
+- 多少のプログラミングの経験。プログラミングが初めての方は、 [JavaScript](/ja/docs/Web/JavaScript) についてのメインページにあるチュートリアルをお試しください。
 
 ## JavaScript の情報はどこにあるか
 
 MDN には以下の JavaScript 関連ドキュメントがあります。
 
-- [ウェブ開発を学ぶ](/ja/docs/Learn)では、初心者に向けた情報を提供し、プログラミングとインターネットの基本的なコンセプトを提供しています。
+- [JavaScript による動的スクリプト処理](/ja/docs/Learn_web_development/Core/Scripting)は、初心者向けの体系的な JavaScript ガイドを提供し、プログラミングとインターネットの基本概念を紹介しています。
 - [JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)（このガイド）では、JavaScript 言語とその対象に関する概要を提供しています。
 - [JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference)は、JavaScript の詳細なリファレンス素材を提供しています。
-
-JavaScript を初めて学ぶ方は、[学習領域](/ja/docs/Learn)、および [JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)の記事から始めてください。基礎をしっかり学んだら、[JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference)を利用して、個々のオブジェクトや文についての詳細を得てください。
 
 ## JavaScript とは何か
 
@@ -48,7 +46,7 @@ JavaScript は Java に比べてとても自由な形式を持つ言語です。
 
 Java は高速実行と型安全のために設計されたクラスベースのプログラミング言語です。型安全というのは、例えば、 Java の整数値をオブジェクトの参照に型変換したり、有害な Java のバイトコードがプライベートなメモリーにアクセスしたりすることができないということです。 Java のクラス継承と強い型付けは、一般的に密結合されたオブジェクト階層を必要とします。こうした前提条件によって Java のプログラミングは JavaScript のプログラミングに比べて複雑なものとなります。
 
-それに対して、 JavaScript は HyperTalk や dBASE といった一連の小規模で動的型付けを持つ言語の精神を受け継いでいます。これらのスクリプト言語は、より簡素な構文、専門化された組み込み関数、最小限の要件でオブジェクトを生成できることなどで、より多くの人々にプログラミングツールを提供しています。
+それに対して、 JavaScript は HyperTalk や dBase といった一連の小規模で動的型付けを持つ言語の精神を受け継いでいます。これらのスクリプト言語は、より簡素な構文、専門化された組み込み関数、最小限の要件でオブジェクトを生成できることなどで、より多くの人々にプログラミングツールを提供しています。
 
 | JavaScript                                                                                                                                                         | Java                                                                                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -58,9 +56,9 @@ Java は高速実行と型安全のために設計されたクラスベースの
 
 ## JavaScript と ECMAScript 仕様書
 
-JavaScript は、ヨーロッパの情報通信システム標準化団体である [Ecma International](https://www.ecma-international.org/) （ECMA は、以前は European Computer Manufacturers Association の頭字語）で標準化されており、 JavaScript をベースとした国際的なプログラミング言語の標準化を実現しています。この標準化された JavaScript は ECMAScript と呼ばれ、この規格に対応するすべてのアプリケーションで同じように動作します。企業は、このオープンスタンダードな言語を使って、 JavaScript の実装を開発することができます。 ECMAScript 標準は、 ECMA-262 仕様書に記載されています。
+JavaScript は、ヨーロッパの情報通信システム標準化団体である [Ecma International](https://ecma-international.org/) （ECMA は、以前は European Computer Manufacturers Association の頭字語）で標準化されており、 JavaScript をベースとした国際的なプログラミング言語の標準化を実現しています。この標準化された JavaScript は ECMAScript と呼ばれ、この規格に対応するすべてのアプリケーションで同じように動作します。企業は、このオープンスタンダードな言語を使って、 JavaScript の実装を開発することができます。 ECMAScript 標準は、 ECMA-262 仕様書に記載されています。
 
-ECMA-262 標準は、[ISO](https://www.iso.org/home.html)（International Organization for Standardization、国際標準化機構）により ISO-16262 としても承認されています。また仕様書は、[Ecma International のウェブサイト](https://www.ecma-international.org/publications/standards/ecma-262/)でも確認できます。ECMAScript 仕様書には、[World Wide Web Consortium (W3C)](https://www.w3.org/) によって標準化されているドキュメントオブジェクトモデル (DOM) は記載されていません。 DOM はスクリプトから利用できる HTML 文書のオブジェクトを定義しています。 JavaScript でプログラミングする際に使われる様々な技術のさらに詳しい情報は、[JavaScript 技術概説](/ja/docs/Web/JavaScript/JavaScript_technologies_overview)の記事を参考にしてください。
+ECMA-262 標準は、[ISO](https://www.iso.org/home.html)（International Organization for Standardization、国際標準化機構）により ISO-16262 としても承認されています。また仕様書は、[Ecma International のウェブサイト](https://ecma-international.org/publications/standards/ecma-262/)でも確認できます。ECMAScript 仕様書には、[World Wide Web Consortium (W3C)](https://www.w3.org/) によって標準化されているドキュメントオブジェクトモデル (DOM) は記載されていません。 DOM はスクリプトから利用できる HTML 文書のオブジェクトを定義しています。 JavaScript でプログラミングする際に使われる様々な技術のさらに詳しい情報は、[JavaScript 技術概説](/ja/docs/Web/JavaScript/JavaScript_technologies_overview)の記事を参考にしてください。
 
 ### JavaScript ドキュメント vs ECMAScript 仕様書
 
@@ -74,54 +72,64 @@ JavaScript のドキュメントは、JavaScript プログラマーに適した�
 
 ## JavaScript を始めよう
 
-JavaScript を始めるのは簡単です。必要なものは、最新のウェブブラウザーだけです。このガイドでは最新の Firefox でのみ利用できる JavaScript の機能をいくつか使用するので、最新の Firefox を使用することをお勧めします。
+JavaScript を始めるのに必要なものは、最新のウェブブラウザーだけです。 [Firefox](https://www.mozilla.org/ja/firefox/new/)、[Chrome](https://www.google.com/chrome/index.html)、[Microsoft Edge](https://www.microsoft.com/ja-jp/edge)、[Safari](https://www.apple.com/safari/) の最新バージョンは、このガイドで説明されているすべての機能に対応しています。
 
-Firefox に組み込まれている*ウェブコンソール*ツールは、JavaScript を試すのに役立ちます。シングルライン入力モードとマルチライン入力モードの 2 つのモードで使用できます。
+JavaScript を試すのに非常に便利なツールが JavaScript コンソール（ウェブコンソール、または単にコンソールと呼ばれることもあります）です。これは、JavaScript を入力すると、現在のページで実行できるツールです。
 
-### ウェブコンソールでの単一行入力
+ここに表示されているスクリーンショットは [Firefox のウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/)を示してはいますが、現代のブラウザーにはすべて、これと似た方法で動作するコンソールが搭載されています。
 
-[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)には、現在読み込まれているウェブページの情報が表示されるほか、現在のページで JavaScript 式を実行するために使用できる JavaScript インタープリターも含まれています。
+### ウェブコンソールを開く
 
-ウェブコンソールを開くには（Windows と Linux では <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>、Mac では <kbd>Cmd</kbd>-<kbd>Option</kbd>-<kbd>K</kbd>）、Firefox の**ツール**メニューを開き、**ウェブ開発 ▶ ウェブコンソール**を選択します。
+コンソールを開くための正確な手順は、ブラウザーによって異なります。
 
-ブラウザーウィンドウの下部にウェブコンソールが表示されます。コンソールの下部に沿って、 JavaScript を入力するための入力行があり、出力は上のパネルに表示されます。
+- [Firefox でコンソールを開く](https://firefox-source-docs.mozilla.org/devtools-user/web_console/#opening-the-web-console)
+- [Chrome でコンソールを開く](https://developer.chrome.com/docs/devtools/open)
+- [Microsoft Edge でコンソールを開く](https://learn.microsoft.com/ja-jp/microsoft-edge/devtools-guide-chromium/console/)
+
+### JavaScript を入力して実行
+
+コンソールはブラウザーウィンドウの下部に表示されます。コンソールの下部に沿って、 JavaScript を入力するための入力行があり、出力は上のパネルに表示されます。
 
 ![下部にウェブコンソールを開くためのブラウザーウインドウで、 2 行の入出力を含む。その下記にはテキストを入力することができます。](2019-04-04_00-15-29.png)
 
 コンソールは `eval` と全く同じように動作します。最後に入力された式が返されます。分かりやすくするために、コンソールに何か入力されるたびに、実際には `eval` の周りを `console.log` で囲むと想像してみると、このようになります。
 
 ```js
-console.log(eval('3 + 5'))
+console.log(eval("3 + 5"));
 ```
 
-### ウェブコンソールでの複数行入力
+### コンソールでの複数行入力
 
-ウェブコンソールの単一行入力モードは、JavaScript の式をすばやくテストするのには最適ですが、複数行を実行するには向いていません。より複雑な JavaScript の場合は、[複数行の入力モード](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#multi-line-mode)が使用できます。
+既定では、コード行を入力した後で <kbd>Enter</kbd> キー（または、キーボードによっては <kbd>Return</kbd> キー）を押すと、入力した文字列が実行されます。複数行の入力を行うには、次のようにします。
 
-### Hello world
+- 入力した文字列が不完全であった場合（例えば、`function foo() {` と入力した場合）、コンソールは <kbd>Enter</kbd> を改行と見なし、別の行を入力できるようになります。
+- <kbd>Shift</kbd> キーを押しながら <kbd>Enter</kbd> キーを押すと、コンソールはこれを改行として扱い、別の行を入力できるようになります。
+- Firefox だけですが、[複数行の入力モード](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#multi-line-mode)を有効にすると、ミニエディターに複数の行を入力し、準備ができたらすべてを実行することができます。
 
-JavaScript を書き始めるあたり、ウェブコンソールを複数行モードで開いて、初めての JavaScript コード "Hello world" を書いてみましょう。
+JavaScript を書き始めるには、コンソールを開き、次のコードをコピーしてプロンプトに貼り付けます。
 
 ```js
-(function(){
+(function () {
   "use strict";
   /* コードの開始 */
   function greetMe(yourName) {
     alert(`Hello ${yourName}`);
   }
 
-  greetMe('World');
+  greetMe("World");
   /* コードの終了 */
 })();
 ```
 
-<kbd>Cmd</kbd>+<kbd>Enter</kbd> または <kbd>Ctrl</kbd>+<kbd>Enter</kbd> を押して（または**実行ボタン**をクリック）、結果を見てみましょう。
+展開をブラウザーで見るには、 <kbd>Enter</kbd> キーを押してください。
+
+## 次に来るもの
 
 このガイドの以降のページでは、より複雑なアプリケーションを作成できるように、 JavaScript の構文と言語の特徴を紹介します。
 
 ですが、しばらくの間、常にあなたのコードの先頭に `(function(){"use strict";` を、コードの最後に `})();` を記述することを忘れないでください。[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)と [IIFE](/ja/docs/Glossary/IIFE) の記事でこれらが何であるかを説明していますが、今のところは次のように捉えておいてください。
 
-1. 初心者をつまずかせる、JavaScript のセマンティクスを避ける。
-2. コンソールで実行されたコードスニペットが相互に影響することを防止する（たとえば、あるコンソールの実行で作成されたものを別のコンソールの実行に使用するなど）。
+1. 初心者をつまずかせる、 JavaScript のセマンティクスを避ける。
+2. コンソールで実行されたコードスニペットが相互に影響することを防止する（たとえば、あるコンソールの実行で作成されたものが別のコンソールの実行に使用されるなど）。
 
 {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}

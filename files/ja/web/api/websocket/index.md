@@ -1,15 +1,17 @@
 ---
 title: WebSocket
 slug: Web/API/WebSocket
+l10n:
+  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
-{{APIRef("Web Sockets API")}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
 `WebSocket` オブジェクトは、サーバーへの [WebSocket](/ja/docs/Web/API/WebSockets_API) 接続の作成と管理、および接続上のデータの送受信に使用する API を提供します。
 
 `WebSocket` を構築するには、 [`WebSocket()`](/ja/docs/Web/API/WebSocket/WebSocket) コンストラクターを使用してください。
 
-{{AvailableInWorkers}}
+> **メモ:** `WebSocket` API には[背圧](/ja/docs/Web/API/Streams_API/Concepts#背圧)を適用する方法がないため、メッセージがアプリケーションの処理速度よりも速く到着すると、アプリケーションはメッセージをバッファリングすることで端末のメモリーを一杯にしたり、 CPU 使用率が 100% になって応答不能になったり、あるいはその両方になったりします。自動的に背圧を提供する代替案については、 {{domxref("WebSocketStream")}} を参照してください。
 
 {{InheritanceDiagram}}
 
@@ -18,22 +20,22 @@ slug: Web/API/WebSocket
 - {{domxref("WebSocket.WebSocket", "WebSocket()")}}
   - : 新しく作成された `WebSocket` オブジェクトを返します。
 
-## プロパティ
+## インスタンスプロパティ
 
 - {{domxref("WebSocket.binaryType")}}
   - : 接続で使用されるバイナリデータ型。
-- {{domxref("WebSocket.bufferedAmount")}} {{readonlyinline}}
+- {{domxref("WebSocket.bufferedAmount")}} {{ReadOnlyInline}}
   - : キューに入れられたデータのバイト数。
-- {{domxref("WebSocket.extensions")}} {{readonlyinline}}
+- {{domxref("WebSocket.extensions")}} {{ReadOnlyInline}}
   - : サーバーによって選択された拡張機能。
-- {{domxref("WebSocket.protocol")}} {{readonlyinline}}
+- {{domxref("WebSocket.protocol")}} {{ReadOnlyInline}}
   - : サーバーによって選択されたサブプロトコル。
-- {{domxref("WebSocket.readyState")}} {{readonlyinline}}
+- {{domxref("WebSocket.readyState")}} {{ReadOnlyInline}}
   - : 接続の現在の状態。
-- {{domxref("WebSocket.url")}} {{readonlyinline}}
+- {{domxref("WebSocket.url")}} {{ReadOnlyInline}}
   - : WebSocket の絶対 URL。
 
-## メソッド
+## インスタンスメソッド
 
 - {{domxref("WebSocket.close()")}}
   - : 接続を閉じます。
@@ -61,16 +63,16 @@ slug: Web/API/WebSocket
 
 ```js
 // WebSocket 接続を作成
-const socket = new WebSocket('ws://localhost:8080');
+const socket = new WebSocket("ws://localhost:8080");
 
 // 接続が開いたときのイベント
-socket.addEventListener('open', function (event) {
-    socket.send('Hello Server!');
+socket.addEventListener("open", (event) => {
+  socket.send("Hello Server!");
 });
 
 // メッセージの待ち受け
-socket.addEventListener('message', function (event) {
-    console.log('Message from server ', event.data);
+socket.addEventListener("message", (event) => {
+  console.log("Message from server ", event.data);
 });
 ```
 

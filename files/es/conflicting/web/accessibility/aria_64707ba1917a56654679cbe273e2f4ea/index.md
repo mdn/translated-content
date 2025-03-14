@@ -1,11 +1,6 @@
 ---
 title: Consejos básicos para formularios
 slug: conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
-tags:
-  - ARIA
-  - Accesibilidad
-  - formulários
-translation_of: Web/Accessibility/ARIA/forms/Basic_form_hints
 original_slug: Web/Accessibility/ARIA/forms/Basic_form_hints
 ---
 
@@ -38,7 +33,7 @@ El ejemplo siguiente muestra un formulario sencillo con etiquetas. Note que cada
 
 ## Etiquetando con ARIA
 
-El elemento HTML {{ HTMLElement("label") }} es apropiado para elementos relacionados a formularios, pero muchos controles de formulario son implementados como un widget dinámico de JavaScript, utilizando {{ HTMLElement("div") }}s o {{ HTMLElement("span") }}s. [WAI-ARIA](https://www.w3.org/WAI/standards-guidelines/aria/), la especificación **Accessible Rich Internet Applications** de W3C's [Web Accessibility Initiative](http://www.w3.org/WAI/), provee el atributo [`aria-labelledby`](http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby) para estos casos.
+El elemento HTML {{ HTMLElement("label") }} es apropiado para elementos relacionados a formularios, pero muchos controles de formulario son implementados como un widget dinámico de JavaScript, utilizando {{ HTMLElement("div") }}s o {{ HTMLElement("span") }}s. [WAI-ARIA](https://www.w3.org/WAI/standards-guidelines/aria/), la especificación **Accessible Rich Internet Applications** de W3C's [Web Accessibility Initiative](https://www.w3.org/WAI/), provee el atributo [`aria-labelledby`](https://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby) para estos casos.
 
 El siguiente ejemplo muestra un grupo de radio buttons implementado usando una lista no ordenada. Note que en la línea 3, el elemento {{ HTMLElement("ul") }} define el atributo `aria-labelledby` a `etiqueta_rg1`, el `id` de elemento {{ HTMLElement("h3") }} en la línea 1, que es la etiqueta para el grupo de controles radio.
 
@@ -60,7 +55,7 @@ El siguiente ejemplo muestra un grupo de radio buttons implementado usando una l
 
 ## Describiendo con ARIA
 
-Los controles de formulario en ocasiones tienen una descripción asociada con ellos, además de la descripción de la etiqueta. ARIA provee el atributo [`aria-describedby`](http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-describedby) para directamente asociar la descripción con el control.
+Los controles de formulario en ocasiones tienen una descripción asociada con ellos, además de la descripción de la etiqueta. ARIA provee el atributo [`aria-describedby`](https://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-describedby) para directamente asociar la descripción con el control.
 
 El ejemplo siguiente muestra un elemento {{ HTMLElement("button") }} que es descrito por una oración de un diferento elemento {{ HTMLElement("div") }}. El atributo `aria-describedby` en el {{ HTMLElement("button") }} referencia al `id` del {{ HTMLElement("div") }}.
 
@@ -69,16 +64,18 @@ El ejemplo siguiente muestra un elemento {{ HTMLElement("button") }} que es desc
 <div id="descriptionRevert">Revertir deshará cualquier cambio que se haya hecho desde la última que se guardo.</div>
 ```
 
-> **Nota:** El atributo `aria-describedby` es utilizado para otros própositos además de los controles de formularios.
+> [!NOTE]
+> El atributo `aria-describedby` es utilizado para otros própositos además de los controles de formularios.
 
 ## Campos requeridos e inválidos
 
-> **Nota:** Ahora que `required` esta disponible para más del 97% de usuarios globalmente, no se recomienda que se use al mismo tiempo `required` y `aria-required`.
+> [!NOTE]
+> Ahora que `required` esta disponible para más del 97% de usuarios globalmente, no se recomienda que se use al mismo tiempo `required` y `aria-required`.
 
 Los desarrolladores Web típicamente usan estrategias de presentación para inidicar campos requeridos o inválidos. Tecnologías asistivas (Assistive technologies - ATs) no necesariamente pueden inferir de la presentación. ARIA provee atributos para indicar que controles de formulario son requeridos o inválidos:
 
-- La propiedad [**aria-required**](http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-required) puede ser aplicada a un elemento de un formulario para indicar a a una AT que es requerida para completar el formulario.
-- El estado [**aria-invalid**](http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-invalid) puede ser aplicado programáticamente, para indicar al AT que campos de información tienen información incorrecta para que el usuario sepa que ingresaron información inválida.
+- La propiedad [**aria-required**](https://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-required) puede ser aplicada a un elemento de un formulario para indicar a a una AT que es requerida para completar el formulario.
+- El estado [**aria-invalid**](https://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-invalid) puede ser aplicado programáticamente, para indicar al AT que campos de información tienen información incorrecta para que el usuario sepa que ingresaron información inválida.
 
 El siguiente ejemplo muestra un formulario sencillo con tres campos. En las líneas 4 y 12, los atributos `aria-required` son establecidos a true (en adición a los asteriscos junto a las etiquetas), indicando que los campos de nombre y email son requeridos. La segunda parte del ejemplo, es un fragmento de código de JavaScript que valida el formato del email, y establece el atributo `aria-invalid` del campo email (línea 12 del HTML) de acuerdo al resultado (adicionalmente de cambiar la presentación del elemento).
 
@@ -113,6 +110,6 @@ var validar = function () {
 
 ## Ofreciendo Mensajes de Error Útiles
 
-Lea como usar [alertas ARIA para mejorar formularios](/es/docs/aria/forms/alerts).
+Lea como usar [alertas ARIA para mejorar formularios](/es/docs/Web/Accessibility/ARIA).
 
-Para mayor orientación en el uso de ARIA para la accesibilidad de los formularios, vea el documento [Prácticas de Autoria WAI-ARIA (WAI-ARIA Authoring Practices](http://www.w3.org/TR/wai-aria-practices/)).
+Para mayor orientación en el uso de ARIA para la accesibilidad de los formularios, vea el documento [Prácticas de Autoria WAI-ARIA (WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/)).

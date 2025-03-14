@@ -1,28 +1,31 @@
 ---
 title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/keys
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/keys
 ---
 
 {{JSRef}}
 
 La méthode **`keys()`** renvoie un nouvel objet **`Array Iterator`** qui contient les clefs pour chaque indice du tableau.
 
-{{EmbedInteractiveExample("pages/js/array-keys.html")}}
+{{InteractiveExample("JavaScript Demo: Array.keys()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const iterator = array1.keys();
+
+for (const key of iterator) {
+  console.log(key);
+}
+
+// Expected output: 0
+// Expected output: 1
+// Expected output: 2
+```
 
 ## Syntaxe
 
 ```js
-arr.keys()
+arr.keys();
 ```
 
 ### Valeur de retour
@@ -34,7 +37,7 @@ Un nouvel objet itérateur pour {{jsxref("Array")}}.
 ### Utilisation simple
 
 ```js
-var arr = ["a","b","c"];
+var arr = ["a", "b", "c"];
 var itérateur = arr.keys();
 
 console.log(itérateur.next()); // { value: 0, done: false }
@@ -50,7 +53,7 @@ var arr = ["a", , "c"];
 var clésCreuses = Object.keys(arr);
 var clésDenses = [...arr.keys()];
 console.log(clésCreuses); // ["0", "2"]
-console.log(clésDenses);  // [0, 1, 2]
+console.log(clésDenses); // [0, 1, 2]
 ```
 
 ## Spécifications
@@ -65,4 +68,4 @@ console.log(clésDenses);  // [0, 1, 2]
 
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.values()")}}
-- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration)
+- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)

@@ -1,13 +1,6 @@
 ---
 title: AudioBuffer
 slug: Web/API/AudioBuffer
-tags:
-  - API
-  - AudioBuffer
-  - Interface
-  - Reference
-  - Web Audio API
-browser-compat: api.AudioBuffer
 ---
 
 {{APIRef("Web Audio API")}}
@@ -49,7 +42,11 @@ browser-compat: api.AudioBuffer
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // AudioContext의 샘플 레이트를 가지는 빈 3초짜리 스테레오 버퍼를 생성합니다.
-var myArrayBuffer = audioCtx.createBuffer(2, audioCtx.sampleRate * 3, audioCtx.sampleRate);
+var myArrayBuffer = audioCtx.createBuffer(
+  2,
+  audioCtx.sampleRate * 3,
+  audioCtx.sampleRate,
+);
 
 // 버퍼를 백색소음으로 채웁니다
 // 단순히 -1.0과 1.0사이의 무작위 값

@@ -1,9 +1,11 @@
 ---
 title: Notification.silent
 slug: Web/API/Notification/silent
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 **`silent`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、通知が静かに行われるべきかどうか、すなわち、端末の設定に関わらず、音やバイブレーションを発生させないようにするかを指定します。これは {{domxref("Notification.Notification","Notification()")}} コンストラクターの `silent` オプションで指定されます。
 
@@ -17,13 +19,13 @@ slug: Web/API/Notification/silent
 
 ```js
 const options = {
-  body: 'Do you like my body?',
-  silent: true
-}
+  body: "Do you like my body?",
+  silent: true,
+};
 
-const n = new Notification('Test notification', options);
+const n = new Notification("Test notification", options);
 
-console.log(n.silent) // should log true
+console.log(n.silent); // should log true
 ```
 
 ## 仕様書

@@ -21,7 +21,7 @@ var pressState = navigator.getGamepads()[0].value;
 ```js
 var gp = navigator.getGamepads()[0];
 
-if(gp.buttons[0].value > 0) {
+if (gp.buttons[0].value > 0) {
   // 响应模拟按钮被按下
 }
 ```
@@ -38,6 +38,6 @@ if(gp.buttons[0].value > 0) {
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
-[使用 Gamepad API](/zh-CN/docs/Web/Guide/API/Gamepad)
+[使用 Gamepad API](/zh-CN/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

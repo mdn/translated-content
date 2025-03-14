@@ -1,21 +1,26 @@
 ---
 title: Symbol.iterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/iterator
 ---
 
 {{JSRef}}
 
-Le symbole **`Symbol.iterator`** définit l'itérateur par défaut d'un objet. C'est l'itérateur qui sera utilisé par [`for...of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of).
+Le symbole **`Symbol.iterator`** définit l'itérateur par défaut d'un objet. C'est l'itérateur qui sera utilisé par [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of).
 
-{{EmbedInteractiveExample("pages/js/symbol-iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.iterator")}}
+
+```js interactive-example
+const iterable1 = {};
+
+iterable1[Symbol.iterator] = function* () {
+  yield 1;
+  yield 2;
+  yield 3;
+};
+
+console.log([...iterable1]);
+// Expected output: Array [1, 2, 3]
+```
 
 ## Description
 
@@ -29,7 +34,7 @@ Certains types natifs possèdent un comportement par défaut pour l'itération, 
 - {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
 - {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
 
-Pour plus d'informations, voir aussi [la page sur les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration).
+Pour plus d'informations, voir aussi [la page sur les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 {{js_property_attributes(0,0,0)}}
 
@@ -40,13 +45,13 @@ Pour plus d'informations, voir aussi [la page sur les protocoles d'itération](/
 Il est possible de construire un itérable de la façon suivante :
 
 ```js
-var monItérable = {}
+var monItérable = {};
 monItérable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 };
-[...monItérable] // [1, 2, 3]
+[...monItérable]; // [1, 2, 3]
 ```
 
 On peut également définir ces itérables via des propriétés calculées dans des déclarations de classe ou dans des littéraux objets :
@@ -91,7 +96,7 @@ itérableMalFormé[Symbol.iterator] = () => 1
 
 ## Voir aussi
 
-- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration)
+- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
 - {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
 - {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}

@@ -1,13 +1,9 @@
 ---
 title: id
 slug: Web/XPath/Functions/id
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/id
-original_slug: Web/XPath/Fonctions/id
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `id` recherche les nœuds correspondant aux identifiants `id` donnés et retourne un ensemble de nœuds contenant les nœuds identifiés.
 
@@ -28,11 +24,11 @@ Un ensemble de nœuds contenant les nœuds identifiés par les `id` donnés.
 
 ### Notes
 
-- La DTD du document XML détermine quel attribut est un `id`. Voir [XPath 1.0, section 5.2.1](http://www.w3.org/TR/xpath#unique-id).
+- La DTD du document XML détermine quel attribut est un `id`. Voir [XPath 1.0, section 5.2.1](https://www.w3.org/TR/xpath#unique-id).
 
 ### Définition
 
-[XPath 1.0, section 4.1](http://www.w3.org/TR/xpath#function-id).
+[XPath 1.0, section 4.1](https://www.w3.org/TR/xpath#function-id).
 
 ### Support Gecko
 

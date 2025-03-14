@@ -1,18 +1,9 @@
 ---
 title: String.prototype.bold()
 slug: Web/JavaScript/Reference/Global_Objects/String/bold
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/bold
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/bold
 ---
 
-{{JSRef("Objetos_globales", "String")}}
+{{JSRef}}
 
 {{Deprecated_header}}
 
@@ -37,12 +28,12 @@ Usa el método `bold` para formatear y mostrar una cadena en un documento.
 El siguiente ejemplo usa métodos de `string` para cambiar el formateado de una cadena:
 
 ```js
-var cadenaMundo="¡Hola mundo!"
+var cadenaMundo = "¡Hola mundo!";
 
-console.log(cadenaMundo.blink())
-console.log(cadenaMundo.bold())
-console.log(cadenaMundo.italics())
-console.log(cadenaMundo.strike())
+console.log(cadenaMundo.blink());
+console.log(cadenaMundo.bold());
+console.log(cadenaMundo.italics());
+console.log(cadenaMundo.strike());
 ```
 
 Este ejemplo produce el mismo resultado que el siguiente código HTML:

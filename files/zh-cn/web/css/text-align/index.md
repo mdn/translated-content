@@ -1,216 +1,129 @@
 ---
 title: text-align
 slug: Web/CSS/text-align
+l10n:
+  sourceCommit: eeabc0774ceb0b7447febce6f9743b903815b95b
 ---
 
 {{CSSRef}}
 
-`text-align` CSS 属性定义行内内容（例如文字）如何相对它的块父元素对齐。`text-align` 并不控制块元素自己的对齐，只控制它的行内内容的对齐。
+`text-align` [CSS](/zh-CN/docs/Web/CSS) 属性设置块元素或者单元格框的行内内容的水平对齐。这意味着其效果和 {{cssxref("vertical-align")}} 类似，但是是水平方向的。
+
+{{InteractiveExample("CSS Demo: text-align")}}
+
+```css interactive-example-choice
+text-align: start;
+```
+
+```css interactive-example-choice
+text-align: end;
+```
+
+```css interactive-example-choice
+text-align: center;
+```
+
+```css interactive-example-choice
+text-align: justify;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  font-size: 1.5em;
+}
+
+#default-example > div {
+  width: 250px;
+}
+```
+
+## 语法
 
 ```css
-/* Keyword values */
+/* 关键字值 */
+text-align: start;
+text-align: end;
 text-align: left;
 text-align: right;
 text-align: center;
 text-align: justify;
 text-align: justify-all;
-text-align: start;
-text-align: end;
 text-align: match-parent;
 
-/* Block alignment values (Non-standard syntax) */
+/* 块对齐值（非标准语法） */
 text-align: -moz-center;
 text-align: -webkit-center;
 
-/* Global values */
+/* 全局值 */
 text-align: inherit;
 text-align: initial;
+text-align: revert;
+text-align: revert-layer;
 text-align: unset;
 ```
 
-```html hidden
-<div class="grid">
-  <div class="col">
-    <div class="row">
-      <div class="cell">
-        left
-        <p class="taLeft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.</p>
-      </div>
-      <div class="cell">
-        start (ltr)
-        <p class="taStart ltr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.</p>
-      </div>
-      <div class="cell">
-        start (rtl)
-        <p class="taStart rtl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="cell">
-        right
-        <p class="taRight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.</p>
-      </div>
-      <div class="cell">
-        end (ltr)
-        <p class="taEnd ltr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.</p>
-      </div>
-      <div class="cell">
-        end (rtl)
-        <p class="taEnd rtl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="cell">
-        center
-        <p class="taCenter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.</p>
-      </div>
-      <div class="cell">
-        justify
-        <p class="taJustify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.</p>
-      </div>
-      <div class="cell">
-        justify-all
-        <p class="taJustifyAll">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellen tesque vehicu la con vallis.</p>
-      </div>
-    </div>
-  </div>
-</div>
-```
+`text-align` 属性指定为下面列表中的单个关键字。
 
-```css hidden
-html,body {
-  height: 100%;
-  box-sizing: border-box;
-}
+### 值
 
-.grid {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  background: #EEE;
-  font: 1em monospace;
-}
-
-.row {
-  display: flex;
-  flex: 1 auto;
-  flex-direction: row;
-}
-
-.col {
-  display: flex;
-  flex: 1 auto;
-  flex-direction: column;
-}
-
-.cell {
-  width: calc(33.33% - 1em);
-  box-sizing: border-box;
-  margin: .5em;
-  padding: .5em;
-  background-color: #FFF;
-  overflow: hidden;
-}
-
-@media (max-width: 30em) {
-  .row {
-    flex-direction: column;
-  }
-}
-
-p {
-  font: .8em sans-serif;
-  max-width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
-  resize: horizontal;
-  background: #E4F0F5;
-  padding: .5em;
-  margin: .5em 0 0;
-}
-
-.taLeft       { text-align: left;        }
-.taRight      { text-align: right;       }
-.taCenter     { text-align: center;      }
-.taJustify    { text-align: justify;     }
-.taJustifyAll { text-align: justify-all; }
-.taStart      { text-align: start;       }
-.taEnd        { text-align: end;         }
-
-.rtl { direction: rtl; }
-.ltr { direction: ltr; }
-```
-
-{{EmbedLiveSample("text-align", "100%", 350)}}
-
-{{cssinfo}}
-
-## 语法
-
-text-align 属性指定为从以下值列表中选择的单个关键字。
-
-### Values
-
-- `start` {{experimental_inline}}
-  - : 如果内容方向是左至右，则等于`left`，反之则为`right`。
-- `end` {{experimental_inline}}
-  - : 如果内容方向是左至右，则等于`right`，反之则为`left`。
+- `start`
+  - : 如果内容方向是左至右，则等于 `left`，反之则为 `right`。
+- `end`
+  - : 如果内容方向是左至右，则等于 `right`，反之则为 `left`。
 - `left`
   - : 行内内容向左侧边对齐。
 - `right`
   - : 行内内容向右侧边对齐。
 - `center`
   - : 行内内容居中。
-- `<string>` {{experimental_inline}}
-  - : 第一个出现的该（单字符）字符串被用来对齐。跟随的关键字定义对齐的方向。例如，可用于让数字值根据小数点对齐。
 - `justify`
-  - : 文字向两侧对齐，对最后一行无效。
-- `justify-all` {{experimental_inline}}
-  - : 和 justify 一致，但是强制使最后一行两端对齐。
+  - : 文字向两侧对齐，将内容隔开，使其左右边缘与行框的左右边缘对齐，对最后一行无效。
+- `justify-all`
+  - : 和 `justify` 一致，但是强制使最后一行两端对齐。
 - `match-parent`
-  - : 和`inherit`类似，区别在于`start`和`end`的值根据父元素的{{cssxref("direction")}}确定，并被替换为恰当的`left`或`right`。
+  - : 和 `inherit` 类似，区别在于 `start` 和 `end` 的值根据父元素的 {{cssxref("direction")}} 确定，并被替换为恰当的 `left` 或 `right` 值。
 
-### 指示语法
+## 无障碍
 
-{{csssyntax("text-align")}}
+对于有阅读障碍等认知问题的人来说，对齐的文本产生的单词之间的间距不一致可能会出现问题。
 
-## 示例
+- [MDN 了解 WCAG，准则 1.4 解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [理解成功标准 1.4.8 | 了解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
-[查看在线演示](/samples/cssref/text-align.html)
+## 形式定义
 
-### Live Examples
+{{CSSInfo}}
 
-div { **text-align: center**; border:solid; }
+## 形式语法
 
-p { background:gold; width:22em; }
-
-some more inline content...div { **text-align: center**; border:solid; }
-
-p { background:gold; width:22em; **margin: 1em auto**; }
-
-some more inline content...div { **text-align:-moz-center**; text-align:-webkit-center; border:solid; }
-
-p { background:gold; width:22em; }
-
-some more inline content...
-
-### 备注
-
-居中一个块元素且不居中它的行内内容的标准兼容的方法是将它的左、右`margin 设为`auto，例如：
-
-`margin:auto;` 或`margin:0 auto;` 或`margin-left:auto; margin-right:auto;`
+{{csssyntax}}
 
 ## 示例
 
-### Left alignment
+### 开始处对齐
 
 #### HTML
 
 ```html
 <p class="example">
-  Integer elementum massa at nulla placerat varius.
-  Suspendisse in libero risus, in interdum massa.
-  Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
+  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
   Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
 </p>
 ```
@@ -219,24 +132,23 @@ some more inline content...
 
 ```css
 .example {
-  text-align: left;
+  text-align: start;
   border: solid;
 }
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample("Left_alignment","100%","100%")}}
+{{EmbedLiveSample("开始处对齐","100%","100%")}}
 
-### Centered text
+### 文本居中
 
 #### HTML
 
 ```html
 <p class="example">
-  Integer elementum massa at nulla placerat varius.
-  Suspendisse in libero risus, in interdum massa.
-  Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
+  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
   Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
 </p>
 ```
@@ -250,19 +162,18 @@ some more inline content...
 }
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample("Centered_text","100%","100%")}}
+{{EmbedLiveSample("文本居中","100%","100%")}}
 
-### Justify
+### 使用“justify”的示例
 
 #### HTML
 
 ```html
 <p class="example">
-  Integer elementum massa at nulla placerat varius.
-  Suspendisse in libero risus, in interdum massa.
-  Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
+  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
   Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
 </p>
 ```
@@ -276,32 +187,85 @@ some more inline content...
 }
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample("Justify","100%","100%")}}
+{{EmbedLiveSample('使用“justify”的示例',"100%","100%")}}
 
-### Notes
+### 表格对齐
 
-The standard-compatible way to center a block itself without centering its inline content is setting the left and right {{cssxref("margin")}} to `auto`, e.g.:
+此示例演示在 {{htmlelement("table")}} 元素上使用 `text-align`：
+
+- {{htmlelement("caption")}} 设置为右对齐。
+- 前两个 {{htmlelement("th")}} 元素继承 {{htmlelement("thead")}} 元素上设置的 `text-align: left` 左对齐，而第三个元素设置为右对齐。
+- 在 {{htmlelement("tbody")}} 元素内部，第一行设置为右对齐，第二行设置为居中对齐，第三行使用默认（左）对齐。
+- 在每一行中，一些单元格（c12、c31）设置为覆盖行的对齐。
+
+#### HTML
+
+```html
+<table>
+  <caption>
+    示例表格
+  </caption>
+  <thead>
+    <tr>
+      <th>列 1</th>
+      <th>列 2</th>
+      <th class="right">列 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="right">
+      <td>11</td>
+      <td class="center">12</td>
+      <td>13</td>
+    </tr>
+    <tr class="center">
+      <td>21</td>
+      <td>22</td>
+      <td>23</td>
+    </tr>
+    <tr id="r3">
+      <td class="right">31</td>
+      <td>32</td>
+      <td>33</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### CSS
 
 ```css
-.something {
-  margin: auto;
+table {
+  border-collapse: collapse;
+  border: solid black 1px;
+  width: 250px;
+  height: 150px;
+}
+
+thead {
+  text-align: left;
+}
+
+td,
+th {
+  border: solid 1px black;
+}
+
+.center {
+  text-align: center;
+}
+
+.right,
+caption {
+  text-align: right;
 }
 ```
 
-```css
-.something {
-  margin: 0 auto;
-}
-```
+#### 结果
 
-```css
-.something {
-  margin-left: auto;
-  margin-right: auto;
-}
-```
+{{EmbedLiveSample('表格对齐', "100%", "200")}}
 
 ## 规范
 
@@ -313,4 +277,4 @@ The standard-compatible way to center a block itself without centering its inlin
 
 ## 参见
 
-- {{Cssxref("margin","margin:auto")}}, {{Cssxref("margin-left","margin-left:auto")}}, {{Cssxref("vertical-align")}}
+- {{Cssxref("margin","margin:auto")}}、{{Cssxref("margin-left","margin-left:auto")}}、{{Cssxref("vertical-align")}}

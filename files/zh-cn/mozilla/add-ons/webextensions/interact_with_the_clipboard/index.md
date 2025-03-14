@@ -16,12 +16,13 @@ slug: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
 Clipboard API 提供了异步的连接来直接读写剪贴板内容。例，如此从剪贴板读取文本：
 
 ```js
-navigator.clipboard.readText().then(text => outputElem.innerText = text);
+navigator.clipboard.readText().then((text) => (outputElem.innerText = text));
 ```
 
 这将请求剪贴板内容，并且当接收到响应时存储剪贴板文本到一个元素的 {{domxref("Node.innerText", "innerText")}}.
 
-> **备注：** 异步的 Clipboard API 方法是一个近期新增的规范，并且这个规范可能不适用于所有浏览器。请在使用前测试了每一种方法的兼容性，以确保支持满足您的需求。
+> [!NOTE]
+> 异步的 Clipboard API 方法是一个近期新增的规范，并且这个规范可能不适用于所有浏览器。请在使用前测试了每一种方法的兼容性，以确保支持满足你的需求。
 
 ## 写入系统粘贴板
 
@@ -34,8 +35,7 @@ navigator.clipboard.readText().then(text => outputElem.innerText = text);
 例如，假设你有一个下面的弹出菜单页面：
 
 ```html
-<input id="input" type="text"/>
-<button id="copy">Copy</button>
+<input id="input" type="text" /> <button id="copy">Copy</button>
 ```
 
 使 "copy"按钮能复制 "input"中的文本，代码如下：
@@ -62,7 +62,7 @@ function copy() {
 }
 
 browser.alarms.create({
-  delayInMinutes: 0.1
+  delayInMinutes: 0.1,
 });
 
 browser.alarms.onAlarm.addListener(copy);
@@ -70,9 +70,7 @@ browser.alarms.onAlarm.addListener(copy);
 
 这种触发不一定成功，它取决于浏览器是否支持。Firefox 浏览器就不支持该功能，你会在浏览器控制台中看到以下信息：
 
-```
-"document.execCommand(‘cut’/‘copy’) was denied because it was not called from inside a short running user-generated event handler."
-```
+`document.execCommand('cut'/'copy') was denied because it was not called from inside a short running user-generated event handler.`
 
 为了能够在这种情形下使用，你需要拥有"clipboardWrite"的权限（ [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)）。因此，"clipboardWrite"权限能使你不通过临时事件处理程序就可以写入系统粘贴板中。
 
@@ -85,7 +83,7 @@ Clipboard API 更加灵活，因为你不仅可以将当前选择复制到剪贴
 对于页面脚本，需要权限 API 的 `clipboard-write` 权限。你可通过 {{domxref("Permissions.query", "navigator.permissions.query()")}} 来检查这个权限：
 
 ```js
-navigator.permissions.query({name: "clipboard-write"}).then(result => {
+navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
   if (result.state == "granted" || result.state == "prompt") {
     /* write to the clipboard now */
   }
@@ -96,11 +94,14 @@ navigator.permissions.query({name: "clipboard-write"}).then(result => {
 
 ```js
 function updateClipboard(newClip) {
-  navigator.clipboard.writeText(newClip).then(function() {
-    /* clipboard successfully set */
-  }, function() {
-    /* clipboard write failed */
-  });
+  navigator.clipboard.writeText(newClip).then(
+    function () {
+      /* clipboard successfully set */
+    },
+    function () {
+      /* clipboard write failed */
+    },
+  );
 }
 ```
 
@@ -132,8 +133,7 @@ function updateClipboard(newClip) {
 假设你的 HTML 页面内容如下：
 
 ```html
-<input id="output" type="text"/>
-<button id="paste">粘贴</button>
+<input id="output" type="text" /> <button id="paste">粘贴</button>
 ```
 
 要在用户单机 id 为 `"paste"` 的 {{HTMLElement("button")}} 时从剪贴板设置 id 为 `"output"` 的 {{HTMLElement("textarea")}} 的内容，可以使用这样的代码：
@@ -156,12 +156,13 @@ document.querySelector("#paste").addEventListener("click", paste);
 一旦你通过 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 获取了 `"clipboard-read"` 权限，你就可以轻松读取剪贴板：
 
 ```js
-navigator.clipboard.readText().then(clipText =>
-  document.getElementById("outbox").innerText = clipText);
+navigator.clipboard
+  .readText()
+  .then((clipText) => (document.getElementById("outbox").innerText = clipText));
 ```
 
 这个代码片段从剪贴板提取文本并且用该文本替换 ID 为 `"outbox"` 的元素的当前内容。
 
 ### 特定浏览器注意事项
 
-Firefox 在 54 版本提供了 `"clipboardRead"` [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) ，但是仅支持向处于 [内容可编辑模式](/zh-CN/docs/Web/Guide/HTML/Editable_content) 的元素粘贴，对于内容脚本，只能在 {{HTMLElement("textarea")}} 工作。对于后台脚本，任何元素都可被设置为内容可编辑模式。
+Firefox 在 54 版本提供了 `"clipboardRead"` [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) ，但是仅支持向处于 [内容可编辑模式](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable) 的元素粘贴，对于内容脚本，只能在 {{HTMLElement("textarea")}} 工作。对于后台脚本，任何元素都可被设置为内容可编辑模式。

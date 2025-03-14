@@ -1,13 +1,11 @@
 ---
 title: Flexbox
 slug: Learn/CSS/CSS_layout/Flexbox
-translation_of: Learn/CSS/CSS_layout/Flexbox
-original_slug: Apprendre/CSS/CSS_layout/Flexbox
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
-[Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout) est une méthode de mise en page selon un axe principal, permettant de disposer des éléments en ligne ou en colonne. Les éléments se dilatent ou se rétractent pour occuper l'espace disponible. Cet article en explique tous les fondamentaux.
+[Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) est une méthode de mise en page selon un axe principal, permettant de disposer des éléments en ligne ou en colonne. Les éléments se dilatent ou se rétractent pour occuper l'espace disponible. Cet article en explique tous les fondamentaux.
 
 <table class="standard-table">
   <tbody>
@@ -76,10 +74,10 @@ Lorsque les éléments sont disposés en boîtes flexibles, ils sont disposés l
 
 ![Terminologie pour les boîtes modulables](flex_terms.png)
 
-- L'**axe principal (*main axis*)** est l'axe de la direction dans laquelle sont disposés les éléments flex (par exemple, horizontalement sur la page, ou verticalement de haut en bas de la page). Le début et la fin de cet axe sont appelés l'**origine principale (*main start*)** et la **fin principale (*main end*)**.
-- L'**axe croisé (*cross axis*)** est l'axe perpendiculaire à l'axe principal, c'est-à-dire à la direction dans laquelle sont disposés les éléments flex. Le début et la fin de cet axe sont appelés le **début (*cross start*)** et la **fin (*cross end*)** de l'axe croisé.
-- L'élément parent dont la propriété est `display: flex` ([`<section>`](/fr/docs/Web/HTML/Element/section) dans notre exemple) est appelé le **conteneur flex (*flex container*)**.
-- Les éléments disposés en tant que boîtes flexibles à l'intérieur du conteneur flex sont appelés **éléments flex (*flex items*)** (les éléments [`<article>`](/fr/docs/Web/HTML/Element/article) dans notre exemple).
+- L'**axe principal (_main axis_)** est l'axe de la direction dans laquelle sont disposés les éléments flex (par exemple, horizontalement sur la page, ou verticalement de haut en bas de la page). Le début et la fin de cet axe sont appelés l'**origine principale (_main start_)** et la **fin principale (_main end_)**.
+- L'**axe croisé (_cross axis_)** est l'axe perpendiculaire à l'axe principal, c'est-à-dire à la direction dans laquelle sont disposés les éléments flex. Le début et la fin de cet axe sont appelés le **début (_cross start_)** et la **fin (_cross end_)** de l'axe croisé.
+- L'élément parent dont la propriété est `display: flex` ([`<section>`](/fr/docs/Web/HTML/Element/section) dans notre exemple) est appelé le **conteneur flex (_flex container_)**.
+- Les éléments disposés en tant que boîtes flexibles à l'intérieur du conteneur flex sont appelés **éléments flex (_flex items_)** (les éléments [`<article>`](/fr/docs/Web/HTML/Element/article) dans notre exemple).
 
 Gardez cette terminologie en tête en lisant les paragraphes suivants. Vous pouvez toujours vous y référer si vous avez un doute sur la signification des termes utilisés.
 
@@ -95,7 +93,8 @@ flex-direction: column;
 
 Cela dispose de nouveau les éléments en colonnes, comme c'était le cas avant l'ajout de la CSS. Avant de poursuivre, enlevez cette déclaration de l'exemple.
 
-> **Note :** Vous pouvez aussi disposer les éléments flex dans la direction inverse avec les valeurs `row-reverse` et `column-reverse`. Expérimentez ces valeurs aussi&nbsp;!
+> [!NOTE]
+> Vous pouvez aussi disposer les éléments flex dans la direction inverse avec les valeurs `row-reverse` et `column-reverse`. Expérimentez ces valeurs aussi&nbsp;!
 
 ## Enveloppement
 
@@ -271,7 +270,7 @@ Il est possible de créer des mises en page joliment complexes avec Flexbox. Il 
 
 ![Imbrications avec flexbox](flexbox-example7.png)
 
-Le HTML pour cela est vraiment simple. Voici un élément [`<section>`](/fr/docs/Web/HTML/Element/section) contenant trois éléments [`<article>`](/fr/docs/Web/HTML/Element/article). Le troisième élément [`<article>`](/fr/docs/Web/HTML/Element/article) contient trois éléments [`<div>`](/fr/docs/Web/HTML/Element/div), et le premier élément [`<div>`](/fr/docs/Web/HTML/Element/div) contient cinq éléments [`<button>`](/fr/docs/Web/HTML/Element/Button)&nbsp;:
+Le HTML pour cela est vraiment simple. Voici un élément [`<section>`](/fr/docs/Web/HTML/Element/section) contenant trois éléments [`<article>`](/fr/docs/Web/HTML/Element/article). Le troisième élément [`<article>`](/fr/docs/Web/HTML/Element/article) contient trois éléments [`<div>`](/fr/docs/Web/HTML/Element/div), et le premier élément [`<div>`](/fr/docs/Web/HTML/Element/div) contient cinq éléments [`<button>`](/fr/docs/Web/HTML/Element/button)&nbsp;:
 
 ```
 section - article
@@ -307,7 +306,7 @@ article:nth-of-type(3) {
 }
 ```
 
-Tertio, nous sélectionnons le premier élément [`<div>`](/fr/docs/Web/HTML/Element/div) et lui assignons la valeur `flex: 1 100px;` pour qu'il ait effectivement une hauteur minimale de 100px. Ensuite, nous indiquons que ses enfants (les éléments [`<button>`](/fr/docs/Web/HTML/Element/Button)) doivent être disposés en tant qu'éléments flex dans une ligne enveloppante, centrés dans l'espace disponible comme dans l'exemple des boutons vu plus haut.
+Tertio, nous sélectionnons le premier élément [`<div>`](/fr/docs/Web/HTML/Element/div) et lui assignons la valeur `flex: 1 100px;` pour qu'il ait effectivement une hauteur minimale de 100px. Ensuite, nous indiquons que ses enfants (les éléments [`<button>`](/fr/docs/Web/HTML/Element/button)) doivent être disposés en tant qu'éléments flex dans une ligne enveloppante, centrés dans l'espace disponible comme dans l'exemple des boutons vu plus haut.
 
 ```css
 article:nth-of-type(3) div:first-child {
@@ -349,16 +348,3 @@ Nous avons abordé de nombreux points dans cet article, mais pourriez-vous reten
 Notre visite guidée des bases de Flexbox est maintenant terminée. Espérons que vous en êtes satisfaits, et que vous saurez jouer avec ses fonctionnalités tout en progressant dans l'apprentissage. Nous allons examiner ensuite un autre aspect important de la mise en page avec les CSS — les grilles CSS.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
-
-## Dans ce module
-
-- [Introduction à la mise en page en CSS](/fr/docs/Learn/CSS/CSS_layout/Introduction)
-- [Cours normal](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grilles](/fr/docs/Learn/CSS/CSS_layout/Grids)
-- [Les boîtes flottantes](/fr/docs/Learn/CSS/CSS_layout/Floats)
-- [Le positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning)
-- [Disposition sur plusieurs colonnes](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Méthodes de mises en page traditionnelles](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Prise en charge des anciens navigateurs](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Compréhension fondamentale de la mise en page](/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

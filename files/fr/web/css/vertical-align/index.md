@@ -1,8 +1,6 @@
 ---
 title: vertical-align
 slug: Web/CSS/vertical-align
-translation_of: Web/CSS/vertical-align
-browser-compat: css.properties.vertical-align
 ---
 
 {{CSSRef}}
@@ -13,10 +11,10 @@ La propriété [CSS](/fr/docs/Web/CSS) **`vertical-align`** définit l'alignemen
 
 La propriété `vertical-align` peut être utilisée dans deux contextes&nbsp;:
 
-- Afin d'aligner verticalement la boîte d'un élément en ligne à l'intérieur de la boîte en ligne de son conteneur (par exemple pour aligner verticalement une image ([`<img>`](/fr/docs/Web/HTML/Element/Img) sur une ligne de texte)
+- Afin d'aligner verticalement la boîte d'un élément en ligne à l'intérieur de la boîte en ligne de son conteneur (par exemple pour aligner verticalement une image ([`<img>`](/fr/docs/Web/HTML/Element/img) sur une ligne de texte)
 - ou pour aligner verticalement le contenu d'une cellule dans un tableau
 
-`vertical-align` ne s'applique qu'aux cellules de tableaux, aux éléments en ligne (<i lang="en">inline</i>) ou en ligne / bloc (<i lang="en">inline-block</i>), elle ne peut pas être utilisée pour aligner verticalement [les éléments de bloc](/fr/docs/Web/HTML/Block-level_elements).
+`vertical-align` ne s'applique qu'aux cellules de tableaux, aux éléments en ligne (<i lang="en">inline</i>) ou en ligne / bloc (<i lang="en">inline-block</i>), elle ne peut pas être utilisée pour aligner verticalement [les éléments de bloc](/fr/docs/Glossary/Block-level_content).
 
 ## Syntaxe
 
@@ -56,7 +54,7 @@ La propriété `vertical-align` s'utilise avec une des valeurs suivantes.
 Ces valeurs alignent l'élément verticalement, relativement à son élément parent.
 
 - `baseline`
-  - : Aligne la ligne de base de l'élément avec celle de son parent. La ligne de base de certains [éléments remplacés](/fr/docs/Web/CSS/Replaced_element), comme [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea), n'est pas définie par la spécification HTML et le comportement de ce mot-clé peut donc changer d'un navigateur à un autre.
+  - : Aligne la ligne de base de l'élément avec celle de son parent. La ligne de base de certains [éléments remplacés](/fr/docs/Web/CSS/Replaced_element), comme [`<textarea>`](/fr/docs/Web/HTML/Element/textarea), n'est pas définie par la spécification HTML et le comportement de ce mot-clé peut donc changer d'un navigateur à un autre.
 - `sub`
   - : Aligne la ligne de base sur la ligne de base inférieure (celle utilisée pour les indices) de l'élément parent.
 - `super`
@@ -109,22 +107,39 @@ Pour les éléments qui n'ont pas de ligne de base définie, c'est le bord de la
 #### HTML
 
 ```html
-<div>Une <img src="frame_image.svg" alt="link" width="32" height="32"/> image avec
- un alignement par défaut.</div>
-<div>Une <img class="top" src="frame_image.svg" alt="link" width="32" height="32"/> image avec
- un alignement en haut du texte.</div>
-<div>Une <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32"/> image avec
- un alignement en bas du texte.</div>
-<div>Une <img class="middle" src="frame_image.svg" alt="link" width="32" height="32"/> image avec
- un alignement au milieu.</div>
+<div>
+  Une <img src="frame_image.svg" alt="link" width="32" height="32" /> image avec
+  un alignement par défaut.
+</div>
+<div>
+  Une
+  <img class="top" src="frame_image.svg" alt="link" width="32" height="32" />
+  image avec un alignement en haut du texte.
+</div>
+<div>
+  Une
+  <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" />
+  image avec un alignement en bas du texte.
+</div>
+<div>
+  Une
+  <img class="middle" src="frame_image.svg" alt="link" width="32" height="32" />
+  image avec un alignement au milieu.
+</div>
 ```
 
 #### CSS
 
 ```css
-img.top { vertical-align: text-top; }
-img.bottom { vertical-align: text-bottom; }
-img.middle { vertical-align: middle; }
+img.top {
+  vertical-align: text-top;
+}
+img.bottom {
+  vertical-align: text-bottom;
+}
+img.middle {
+  vertical-align: middle;
+}
 ```
 
 #### Résultat
@@ -137,20 +152,20 @@ img.middle { vertical-align: middle; }
 
 ```html
 <p>
-top:         <img style="vertical-align: top" src="star.png"/>
-middle:      <img style="vertical-align: middle" src="star.png"/>
-bottom:      <img style="vertical-align: bottom" src="star.png"/>
-super:       <img style="vertical-align: super" src="star.png"/>
-sub:         <img style="vertical-align: sub" src="star.png"/>
+  top: <img style="vertical-align: top" src="star.png" /> middle:
+  <img style="vertical-align: middle" src="star.png" /> bottom:
+  <img style="vertical-align: bottom" src="star.png" /> super:
+  <img style="vertical-align: super" src="star.png" /> sub:
+  <img style="vertical-align: sub" src="star.png" />
 </p>
 
 <p>
-text-top:    <img style="vertical-align: text-top" src="star.png"/>
-text-bottom: <img style="vertical-align: text-bottom" src="star.png"/>
-0.2em:       <img style="vertical-align: 0.2em" src="star.png"/>
--1em:        <img style="vertical-align: -1em" src="star.png"/>
-20%:         <img style="vertical-align: 20%" src="star.png"/>
--100%:       <img style="vertical-align: -100%" src="star.png"/>
+  text-top: <img style="vertical-align: text-top" src="star.png" /> text-bottom:
+  <img style="vertical-align: text-bottom" src="star.png" /> 0.2em:
+  <img style="vertical-align: 0.2em" src="star.png" /> -1em:
+  <img style="vertical-align: -1em" src="star.png" /> 20%:
+  <img style="vertical-align: 20%" src="star.png" /> -100%:
+  <img style="vertical-align: -100%" src="star.png" />
 </p>
 ```
 
@@ -165,7 +180,7 @@ img {
 
 p {
   height: 3em;
-  padding: 0 .5em;
+  padding: 0 0.5em;
   font-family: monospace;
   text-decoration: underline overline;
   margin-left: auto;
@@ -190,14 +205,17 @@ p {
     <td style="vertical-align: middle">middle</td>
     <td style="vertical-align: bottom">bottom</td>
     <td>
-      <p>Elle voulait savoir si elle grandissait ou rapetissait, et fut
-         tout étonnée de rester la même; franchement, c'est ce qui
-         arrive le plus souvent lorsqu'on mange du gâteau; mais Alice
-         avait tellement pris l'habitude de s'attendre à des choses
-         extraordinaires, que cela lui paraissait ennuyeux et stupide
-         de vivre comme tout le monde.</p>
-      <p>Aussi elle se remit à l'œuvre, et eut bien vite fait
-         disparaître le gâteau.</p>
+      <p>
+        Elle voulait savoir si elle grandissait ou rapetissait, et fut tout
+        étonnée de rester la même; franchement, c'est ce qui arrive le plus
+        souvent lorsqu'on mange du gâteau; mais Alice avait tellement pris
+        l'habitude de s'attendre à des choses extraordinaires, que cela lui
+        paraissait ennuyeux et stupide de vivre comme tout le monde.
+      </p>
+      <p>
+        Aussi elle se remit à l'œuvre, et eut bien vite fait disparaître le
+        gâteau.
+      </p>
     </td>
   </tr>
 </table>
@@ -212,7 +230,9 @@ table {
   width: 80%;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
 }
 
@@ -236,7 +256,7 @@ td {
 
 ## Voir aussi
 
-- [Centrer des éléments avec Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#centrer_des_éléments)
+- [Centrer des éléments avec Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox#centrer_des_%c3%a9l%c3%a9ments)
 - [`line-height`](/fr/docs/Web/CSS/line-height)
 - [`text-align`](/fr/docs/Web/CSS/text-align)
 - [`margin`](/fr/docs/Web/CSS/margin)

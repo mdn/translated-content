@@ -1,12 +1,9 @@
 ---
 title: Programación de computadoras
 slug: Glossary/Computer_Programming
-tags:
-  - Lenguaje de programación
-  - Scripting
-  - programacion
-translation_of: Glossary/Computer_Programming
 ---
+
+{{GlossarySidebar}}
 
 Programación de computadoras es un proceso de componer y organizar un conjunto de instrucciones. Éstas le indican a una computadora/software qué hacer en un lenguaje comprensible para la computadora. Estas instrucciones pueden presentarse en diferentes lenguajes, tales como C++, Java, JavaScript, HTML, Python, Ruby y Rust.
 

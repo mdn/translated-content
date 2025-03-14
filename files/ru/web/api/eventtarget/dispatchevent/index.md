@@ -1,10 +1,9 @@
 ---
 title: EventTarget.dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
-translation_of: Web/API/EventTarget/dispatchEvent
 ---
 
-{{ ApiRef("DOM Events") }}
+{{APIRef("DOM")}}
 
 Отправляет событие в общую систему событий. Это событие подчиняется тем же правилам поведения "Захвата" и "Всплывания" как и непосредственно инициированные события.
 
@@ -27,7 +26,7 @@ cancelled = !target.dispatchEvent(event)
 
 ## Примечания
 
-dispatchEvent является последним шагом для процесса создание => инициализация => диспетчер, который используется для контроля событий внутри модели выполнения событий.Событие может быть создано используя метод [document.createEvent](/ru/docs/DOM/document.createEvent) и инициализировано используя [initEvent](/ru/docs/DOM/event.initEvent) или другой, более конкретный, метод инициализации, такой как [initMouseEvent](/ru/docs/DOM/event.initMouseEvent) или [initUIEvent](/ru/docs/DOM/event.initUIEvent).
+dispatchEvent является последним шагом для процесса создание => инициализация => диспетчер, который используется для контроля событий внутри модели выполнения событий.Событие может быть создано используя метод [document.createEvent](/ru/docs/Web/API/Document/createEvent) и инициализировано используя [initEvent](/ru/docs/Web/API/Event/initEvent) или другой, более конкретный, метод инициализации, такой как [initMouseEvent](/ru/docs/Web/API/MouseEvent/initMouseEvent) или [initUIEvent](/ru/docs/Web/API/UIEvent/initUIEvent).
 
 Смотрите также [События](/ru/docs/Web/API/Event)
 
@@ -35,7 +34,7 @@ dispatchEvent является последним шагом для процес
 
 Для прочтения примера смотрите [Создание и инициирование собственных событий](/ru/docs/Web/Guide/Events/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B8_%D0%B2%D1%8B%D0%B7%D0%BE%D0%B2_%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B9) .
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
@@ -43,10 +42,10 @@ dispatchEvent является последним шагом для процес
 
 `dispatchEvent` представляет собой последний шаг в процессе create-init-dispatch, который служит для отправки событий.
 
-Событие может быть создано методом [document.createEvent](/en/DOM/document.createEvent) и инициализировано [initEvent](/en/DOM/event.initEvent) или, более конкретными инициализирующими методами, такими как [initMouseEvent](/en/DOM/event.initMouseEvent) или [initUIEvent](/en/DOM/event.initUIEvent).
+Событие может быть создано методом [document.createEvent](/en-US/DOM/document.createEvent) и инициализировано [initEvent](/en-US/DOM/event.initEvent) или, более конкретными инициализирующими методами, такими как [initMouseEvent](/en-US/DOM/event.initMouseEvent) или [initUIEvent](/en-US/DOM/event.initUIEvent).
 
-Смотрите также [справку по Event object](/en/DOM/event).
+Смотрите также [справку по Event object](/en-US/DOM/event).
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

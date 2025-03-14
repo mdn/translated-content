@@ -3,25 +3,25 @@ title: CacheStorage.keys()
 slug: Web/API/CacheStorage/keys
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-{{domxref("CacheStorage")}} 接口的 **`keys()`** 方法返回一个 {{jsxref("Promise")}}对象，它使用一个数组 resolve，该数组包含 {{domxref("CacheStorage")}} 对象按创建顺序跟踪的所有命名 {{domxref("Cache")}} 对象对应的字符串。使用此方法迭代所有 {{domxref("Cache")}} 对象。
+{{domxref("CacheStorage")}} 接口的 **`keys()`** 方法返回一个 {{jsxref("Promise")}}对象，它会兑现一个包含 {{domxref("CacheStorage")}} 对象按创建顺序跟踪的所有具名 {{domxref("Cache")}} 对象对应的字符串的数组。使用此方法会迭代所有 {{domxref("Cache")}} 对象。
+
+你可以通过窗口的 {{domxref("Window.caches")}} 属性或 worker 的 {{domxref("WorkerGlobalScope.caches")}} 属性访问 `CacheStorage`。
 
 ## 语法
 
-```plain
-caches.keys().then(function(keyList) {
-  //对 keyList 做操作
-});
+```js-nolint
+keys()
 ```
-
-### 返回
-
-一个使用 {{domxref("CacheStorage")}} 对象中 {{domxref("Cache")}} 名称数组 resolve 的 {{jsxref("Promise")}}
 
 ### 参数
 
 无。
+
+### 返回值
+
+一个会兑现为 {{domxref("CacheStorage")}} 对象中所有 {{domxref("Cache")}} 对象的名称的数组的 {{jsxref("Promise")}}。
 
 ## 示例
 
@@ -47,12 +47,12 @@ this.addEventListener('activate', function(event) {
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 
-## 亦可参考
+## 参见
 
-- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("WorkerGlobalScope.caches")}}
+- {{domxref("Window.caches")}} 和 {{domxref("WorkerGlobalScope.caches")}}

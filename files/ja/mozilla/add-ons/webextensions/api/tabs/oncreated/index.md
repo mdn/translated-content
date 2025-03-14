@@ -3,7 +3,7 @@ title: tabs.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 タブが生成されたときに発火します。
 
@@ -12,9 +12,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
 ## 書式
 
 ```js
-browser.tabs.onCreated.addListener(callback)
-browser.tabs.onCreated.removeListener(listener)
-browser.tabs.onCreated.hasListener(listener)
+browser.tabs.onCreated.addListener(callback);
+browser.tabs.onCreated.removeListener(listener);
+browser.tabs.onCreated.hasListener(listener);
 ```
 
 イベントは３つの関数を持ちます:
@@ -28,7 +28,7 @@ browser.tabs.onCreated.hasListener(listener)
 
 ## addListener の書式
 
-### パラメータ
+### パラメーター
 
 - `callback`
 
@@ -53,11 +53,13 @@ browser.tabs.onCreated.addListener(handleCreated);
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.tabs.onCreated")}}
+{{Compat}}
 
-> **メモ:** この API は Chromium の[`chrome.tabs`](https://developer.chrome.com/extensions/tabs#event-onCreated) API に基づいています。このドキュメンテーションは Chromium code の中の[`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)からの派生です。Microsoft Edge の互換性データは Microsoft Corporation から提供されており、ここに the Creative Commons Attribution 3.0 United States License のもとで含まれています。
+> [!NOTE]
+> この API は Chromium の[`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#event-onCreated) API に基づいています。このドキュメンテーションは Chromium code の中の[`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)からの派生です。Microsoft Edge の互換性データは Microsoft Corporation から提供されており、ここに the Creative Commons Attribution 3.0 United States License のもとで含まれています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -84,4 +86,4 @@ browser.tabs.onCreated.addListener(handleCreated);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

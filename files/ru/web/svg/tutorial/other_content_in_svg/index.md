@@ -1,12 +1,9 @@
 ---
 title: Другое содержание в SVG
 slug: Web/SVG/Tutorial/Other_content_in_SVG
-tags:
-  - SVG
-  - SVG:Руководство
-translation_of: Web/SVG/Tutorial/Other_content_in_SVG
 ---
-{{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}
+
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}
 
 Помимо графических примитивов, таких как прямоугольники и круги, SVG предлагает набор элементов для встраивания других типов контента в изображения.
 
@@ -17,11 +14,19 @@ translation_of: Web/SVG/Tutorial/Other_content_in_SVG
 Встроенное изображение становится обычным элементом SVG. Это означает, что вы можете использовать клипы, маски, фильтры, вращения и все другие инструменты SVG для контента:
 
 ```html
-<svg version="1.1"
-     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="200" height="200">
-  <image x="90" y="-65" width="128" height="146" transform="rotate(45)"
-     xlink:href="https://developer.mozilla.org/static/img/favicon144.png"/>
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="200"
+  height="200">
+  <image
+    x="90"
+    y="-65"
+    width="128"
+    height="146"
+    transform="rotate(45)"
+    xlink:href="https://developer.mozilla.org/static/img/favicon144.png" />
 </svg>
 ```
 
@@ -34,7 +39,8 @@ translation_of: Web/SVG/Tutorial/Other_content_in_SVG
 
 Элемент `foreignObject` - хороший способ вставки XHTML в SVG. Если у вас есть более длинные тексты, макет HTML более подходит и удобен, чем текстовый элемент SVG. Другим часто упоминаемым примером использования является вложение формул с MathML. Для научных приложений SVG это очень хороший способ вступить в оба мира.
 
-> **Примечание:** Имейте в виду, что контент в `foreignObject` должен поддерживаться обозревателем. Обычная программа для просмотра SVG вряд ли сможет отобразить HTML или MathML.
+> [!NOTE]
+> Имейте в виду, что контент в `foreignObject` должен поддерживаться обозревателем. Обычная программа для просмотра SVG вряд ли сможет отобразить HTML или MathML.
 
 Поскольку `foreignObject` является элементом SVG, вы можете, как и в случае с изображением, использовать с ним любую добросовестность SVG, которая затем будет применяться к его контенту.
 

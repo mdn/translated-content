@@ -1,25 +1,18 @@
 ---
 title: Hipervínculo
 slug: Glossary/Hyperlink
-tags:
-  - Glosario
-  - HTML
-  - Hipervínculo
-  - Navegador
-  - Web
-  - a
-  - enlace
-translation_of: Glossary/Hyperlink
 ---
+
+{{GlossarySidebar}}
 
 Los _Hipervínculos_ ó _enlaces_ permiten conectar entre sí datos ó páginas web. En [HTML](/es/docs/Glossary/HTML), los elementos {{HTMLElement("a")}} representan hipervínculos que tienen como origen un elemento de la página web (por ejemplo cadenas de texto o imágenes), y que pueden tener como destino un elemento de otro sitio web (incluso pueden enlazar a otro punto de la misma página).
 
-## Para saber más...
+## Para saber más
 
 ### Cultura General
 
 - [Hiperenlace](https://es.wikipedia.org/wiki/Hiperenlace) en Wikipedia
-- [Guía de Hipervínculos](/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks) en MDN
+- [Guía de Hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) en MDN
 
 ### Referencias técnicas
 
@@ -28,5 +21,5 @@ Los _Hipervínculos_ ó _enlaces_ permiten conectar entre sí datos ó páginas 
 
 ### Aprende sobre
 
-- [`<a>` en MDN](/es/docs/Web/HTML/Elemento/a)
-- [`<link>` en MDN](/es/docs/Web/HTML/Elemento/link)
+- [`<a>` en MDN](/es/docs/Web/HTML/Element/a)
+- [`<link>` en MDN](/es/docs/Web/HTML/Element/link)

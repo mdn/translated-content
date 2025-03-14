@@ -1,14 +1,6 @@
 ---
 title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
-tags:
-  - Espace de noms
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl
 ---
 
 {{JSRef}}
@@ -45,7 +37,7 @@ Les constructeurs d'internationalisation, ainsi que plusieurs autres méthodes s
 
 ### Argument `locales`
 
-L'argument `locales` peut être soit une chaîne de caractères comportant une [balise de langue BCP 47](http://tools.ietf.org/html/rfc5646), soit un tableau de telles balises. Si l'argument n'est pas fourni ou est indéfini, la locale par défaut de l'environnement d'exécution est utilisée.
+L'argument `locales` peut être soit une chaîne de caractères comportant une [balise de langue BCP 47](https://tools.ietf.org/html/rfc5646), soit un tableau de telles balises. Si l'argument n'est pas fourni ou est indéfini, la locale par défaut de l'environnement d'exécution est utilisée.
 
 Une balise de langue BCP 47 définit un langage et contient au minimum un code de langue principale. Dans sa forme la plus fréquente, elle peut contenir, dans l'ordre : un code de langue, un code de script et un code de pays ou de région, tous séparés par des tirets. Bien que la balise ne soit sensible à la casse, il est recommandé d'utiliser des initiales majuscules pour le code de script, des majuscules pour les codes de pays et de région, et des minuscules pour tout le reste.
 
@@ -55,7 +47,7 @@ Exemples :
 - `"de-AT"` : Allemand tel qu'utilisé en Autriche (langue principale avec un code pays).
 - `"zh-Hans-CN"` : Le chinois écrit en caractères simplifiés tel qu'utilisé en Chine (langue principale avec des codes de script et de pays).
 
-Les sous balises identifiant les langues, les scripts, les pays (régions) et les variantes (rarement utilisées) dans les balises de langue BCP 47 peuvent être trouvées dans le [registre IANA des Sous balises de Langues](http://www.iana.org/assignments/language-subtag-registry)
+Les sous balises identifiant les langues, les scripts, les pays (régions) et les variantes (rarement utilisées) dans les balises de langue BCP 47 peuvent être trouvées dans le [registre IANA des Sous balises de Langues](https://www.iana.org/assignments/language-subtag-registry)
 
 La BCP 47 permet également des extensions. Les fonctions d'internalisation de JavaScript utilisent l'extension "u" (Unicode), qui peut utilisée pour demander une personnalisation supplémentaire des objets {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, ou {{jsxref("DateTimeFormat")}}. Exemples :
 
@@ -66,7 +58,7 @@ La BCP 47 permet également des extensions. Les fonctions d'internalisation de J
 
 ### Négociation de la locale
 
-L'argument `locales`, après retrait de toutes les extensions Unicode, est interprété comme une requête classée par priorité émanant de l'application. L'environnement d'exécution le compare aux locales dont il dispose et choisit la meilleure disponible. Il existe deux algorithmes d'association : l'apparieur "lookup" suit l'algorithme Lookup spécifié dans [BCP 47](http://tools.ietf.org/html/rfc4647#section-3.4); l'apparieur "meilleure correspondance" laisse l'environnement d'exécution fournir une locale qui est au moins aussi, mais possiblement mieux, adaptée à la demande que le résultat de l'algorithme Lookup. Si l'application ne fournit pas d'argument `locales` ou que l'environnement d'exécution ne dispose pas d'une locale qui corresponde à la requête, alors la locale par défaut de l'environnement d'exécution est utilisée. L'apparieur peut être choisi en utilisant une propriété de l'argument `options` (voir ci-dessous).
+L'argument `locales`, après retrait de toutes les extensions Unicode, est interprété comme une requête classée par priorité émanant de l'application. L'environnement d'exécution le compare aux locales dont il dispose et choisit la meilleure disponible. Il existe deux algorithmes d'association : l'apparieur "lookup" suit l'algorithme Lookup spécifié dans [BCP 47](https://tools.ietf.org/html/rfc4647#section-3.4); l'apparieur "meilleure correspondance" laisse l'environnement d'exécution fournir une locale qui est au moins aussi, mais possiblement mieux, adaptée à la demande que le résultat de l'algorithme Lookup. Si l'application ne fournit pas d'argument `locales` ou que l'environnement d'exécution ne dispose pas d'une locale qui corresponde à la requête, alors la locale par défaut de l'environnement d'exécution est utilisée. L'apparieur peut être choisi en utilisant une propriété de l'argument `options` (voir ci-dessous).
 
 Si la balise de la langue choisie comporte une sous chaîne d'extension Unicode, cette extension est maintenant utilisée pour personnaliser l'objet construit ou le comportement de la fonction. Chaque constructeur ou fonction ne supporte qu'un sous-ensemble des clés définies pour le extension Unicode, et les valeurs supportées dépendent souvent de la balise de langue. Par exemple, la clé "co" (collation) n'est supportée que par le constructeur {{jsxref("Collator")}}, et sa valeur "phonebk" n'est supportée que pour l'allemand.
 
@@ -86,9 +78,11 @@ Vous pouvez utiliser Intl pour formater des dates et nombres dans un format qui 
 const compte = 26254.39;
 const date = new Date("2012-05-24");
 
-function afficher (langue) {
+function afficher(langue) {
   console.log(
-    `${new Intl.DateTimeFormat(langue).format(date)} ${new Intl.NumberFormat(langue).format(compte)}`
+    `${new Intl.DateTimeFormat(langue).format(date)} ${new Intl.NumberFormat(
+      langue,
+    ).format(compte)}`,
   );
 }
 

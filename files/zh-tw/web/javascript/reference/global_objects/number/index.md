@@ -5,12 +5,12 @@ slug: Web/JavaScript/Reference/Global_Objects/Number
 
 {{JSRef}}
 
-**`Number`** JavaScript 物件是允許你操作數值的包覆物件. `Number` 物件是以 `Number()` 建構子來建立的。
+**`Number`** JavaScript 物件是允許你操作數值的包覆物件。`Number` 物件是以 `Number()` 建構子來建立的。
 
 ## 語法
 
-```plain
-new Number(value);
+```js-nolint
+new Number(value)
 ```
 
 ### 參數
@@ -67,7 +67,18 @@ new Number(value);
 
 ### 方法
 
-{{page('/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype', '方法')}}
+- {{jsxref("Number.isNaN()")}}
+  - : 判斷傳入的值是不是 NaN.
+- {{jsxref("Number.isFinite()")}}
+  - : 判斷傳入的值是不是一個有限的數值。
+- {{jsxref("Number.isInteger()")}}
+  - : 判斷傳入的值是不是一個整數。
+- {{jsxref("Number.isSafeInteger()")}}
+  - : 判斷傳入的值是不是在 IEEE-754 雙精度範圍間 (即介於 `-(2^53 - 1)` 和 `2^53 - 1`之前)。
+- {{jsxref("Number.parseFloat()")}}
+  - : 這個方法和全域物件的 {{jsxref("parseFloat", "parseFloat()")}} 相同。
+- {{jsxref("Number.parseInt()")}}
+  - : 這個方法和全域物件的 {{jsxref("parseInt", "parseInt()")}} 相同。
 
 ## 範例
 
@@ -99,21 +110,21 @@ var smallestInt = -9007199254740992;
 下面的範例將 `Number` 視為函式，並且使用它將 {{jsxref("Date")}} 轉換成時間戳記：
 
 ```js
-var d = new Date('December 17, 1995 03:24:00');
+var d = new Date("December 17, 1995 03:24:00");
 console.log(Number(d)); // 819199440000
 ```
 
 ### 轉換數值字串成數值
 
 ```js
-Number("123")     // 123
-Number("12.3")    // 12.3
-Number("")        // 0
-Number("0x11")    // 17
-Number("0b11")    // 3
-Number("0o11")    // 9
-Number("foo")     // NaN
-Number("100a")    // NaN
+Number("123"); // 123
+Number("12.3"); // 12.3
+Number(""); // 0
+Number("0x11"); // 17
+Number("0b11"); // 3
+Number("0o11"); // 9
+Number("foo"); // NaN
+Number("100a"); // NaN
 ```
 
 ## 規範

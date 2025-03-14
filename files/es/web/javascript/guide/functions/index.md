@@ -1,15 +1,6 @@
 ---
 title: Funciones
 slug: Web/JavaScript/Guide/Functions
-tags:
-  - Funciones
-  - Guía
-  - JavaScript
-  - Novato
-  - Principiante
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Functions
-original_slug: Web/JavaScript/Guide/Funciones
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
@@ -153,7 +144,8 @@ function square(n) {
 
 El ámbito de una función es la función en la que se declara (o el programa completo, si se declara en el nivel superior).
 
-> **Nota:** Esto solo trabaja cuando se define la función usando la sintaxis anterior (es decir, `function funcName() {}`). El siguiente código no trabajará.Esto significa que la elevación de función solo trabaja con _declaraciones_ de función, no con _expresiones_ de función.
+> [!NOTE]
+> Esto solo trabaja cuando se define la función usando la sintaxis anterior (es decir, `function funcName() {}`). El siguiente código no trabajará.Esto significa que la elevación de función solo trabaja con _declaraciones_ de función, no con _expresiones_ de función.
 >
 > ```js example-bad
 > console.log(square) // square se eleva con un valor inicial undefined.
@@ -273,7 +265,7 @@ function loop(x) {
 loop(0);
 ```
 
-Sin embargo, algunos algoritmos no pueden ser simples bucles iterativos. Por ejemplo, obtener todos los nodos de una estructura de árbol (como [DOM](/es/docs/DOM)) es más fácil a través de la recursividad:
+Sin embargo, algunos algoritmos no pueden ser simples bucles iterativos. Por ejemplo, obtener todos los nodos de una estructura de árbol (como [DOM](/es/docs/Web/API/Document_Object_Model)) es más fácil a través de la recursividad:
 
 ```js
 function walkTree(node) {
@@ -492,7 +484,8 @@ var getCode = (function () {
 getCode(); // Devuelve el apiCode
 ```
 
-> **Nota:** **Precaución** ¡Hay una serie de trampas a tener en cuenta al usar cierres!
+> [!NOTE]
+> ¡Hay una serie de trampas a tener en cuenta al usar cierres!
 >
 > Si una función encerrada define una variable con el mismo nombre que una variable en el ámbito externo, entonces no hay forma de hacer referencia a la variable en el ámbito externo nuevamente. (La variable de ámbito interno "anula" la externa, hasta que el programa sale de el ámbito interno).
 >
@@ -547,7 +540,8 @@ myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 myConcat(". ", "salvia", "albahaca", "orégano", "pimienta", "perejil");
 ```
 
-> **Nota:** La variable `arguments` es "similar a un arreglo", pero no es un arreglo. Es similar a un arreglo en el sentido de que tiene un índice numerado y una propiedad `length`. Sin embargo, _no_ posee todos los métodos de manipulación de arreglos.
+> [!NOTE]
+> La variable `arguments` es "similar a un arreglo", pero no es un arreglo. Es similar a un arreglo en el sentido de que tiene un índice numerado y una propiedad `length`. Sin embargo, _no_ posee todos los métodos de manipulación de arreglos.
 
 Consulta el objeto {{JSxRef("Function")}} en la referencia de JavaScript para obtener más información.
 

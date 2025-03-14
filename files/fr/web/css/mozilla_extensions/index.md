@@ -1,13 +1,6 @@
 ---
 title: Extensions CSS de Mozilla
 slug: Web/CSS/Mozilla_Extensions
-tags:
-  - CSS
-  - Mozilla
-  - Non-standard
-  - Reference
-translation_of: Web/CSS/Mozilla_Extensions
-original_slug: Web/CSS/Extensions_Mozilla
 ---
 
 {{CSSRef}}
@@ -16,7 +9,8 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 
 ## Propriétés et pseudo-classes spécifiques à Mozilla (ne pas utiliser sur le Web)
 
-> **Note :** Ces propriétés et pseudo-classes ne fonctionneront que pour les applications Mozilla (Firefox par exemple) et ne sont pas en voie de standardisation. Certaines ne s'applique qu'aux éléments [XUL](/fr/docs/Mozilla/Tech/XUL).
+> [!NOTE]
+> Ces propriétés et pseudo-classes ne fonctionneront que pour les applications Mozilla (Firefox par exemple) et ne sont pas en voie de standardisation. Certaines ne s'applique qu'aux éléments [XUL](/fr/docs/Mozilla/Tech/XUL).
 
 ### B
 
@@ -72,7 +66,8 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 
 ## Anciennes propriétés spécifiques, désormais standardisées
 
-> **Note :** Afin d'obtenir la meilleure compatibilité possible, vous devriez utiliser les versions standards, non-préfixées, de ces propriétés plutôt que les versions spécifiques. Généralement, lorsqu'une propriété est standardisée et implémentée, la version préfixée est généralement abandonnée ensuite.
+> [!NOTE]
+> Afin d'obtenir la meilleure compatibilité possible, vous devriez utiliser les versions standards, non-préfixées, de ces propriétés plutôt que les versions spécifiques. Généralement, lorsqu'une propriété est standardisée et implémentée, la version préfixée est généralement abandonnée ensuite.
 
 ### A
 
@@ -273,7 +268,7 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 
 ### {{Cssxref("border-color")}}
 
-- `-moz-use-text-color` {{deprecated_inline}} retiré de Gecko (cf. {{bug(1306214)}}) ; [currentcolor](/fr/docs/Web/CSS/color_value#currentcolor_keyword) doit être utilisée à la place.
+- `-moz-use-text-color` {{deprecated_inline}} retiré de Gecko (cf. [bug Firefox 1306214](https://bugzil.la/1306214)) ; [currentcolor](/fr/docs/Web/CSS/color_value#currentcolor_keyword) doit être utilisée à la place.
 
 ### {{Cssxref("border-style")}} et {{Cssxref("outline-style")}}
 
@@ -474,7 +469,7 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 - {{CSSxRef("::-moz-pagebreak")}}
 - {{CSSxRef("::-moz-pagecontent")}}
 - {{CSSxRef(":placeholder-shown")}} {{deprecated_inline}}
-- {{CSSxRef("::placeholder")}}{{Deprecated_Inline("51")}}
+- {{CSSxRef("::placeholder")}}{{Deprecated_Inline}}
 - {{CSSxRef("::-moz-progress-bar")}}
 - {{CSSxRef("::-moz-range-progress")}}
 - {{CSSxRef("::-moz-range-thumb")}}
@@ -551,7 +546,7 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 
 ## Autres
 
-- {{Cssxref("-moz-alt-content")}} {{Bug("11011")}}
+- {{Cssxref("-moz-alt-content")}} [bug Firefox 11011](https://bugzil.la/11011)
 
 ## Voir aussi
 

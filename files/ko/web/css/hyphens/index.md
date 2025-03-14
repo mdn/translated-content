@@ -1,25 +1,45 @@
 ---
 title: hyphens
 slug: Web/CSS/hyphens
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/hyphens
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`hyphens`** 속성은 여러 줄에 걸치는 텍스트에서 단어에 붙임표를 추가하는 방식을 설정합니다. 붙임표를 아예 방지할 수도 있고, 수동으로 지정한 곳에서만 발생하도록 나타낼 수도 있으며, 브라우저가 자동으로 적절한 곳에 붙임표를 삽입하도록 허용할 수도 있습니다.
 
-{{EmbedInteractiveExample("pages/css/hyphens.html")}}
+{{InteractiveExample("CSS Demo: hyphens")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+```css interactive-example-choice
+hyphens: none;
+```
+
+```css interactive-example-choice
+hyphens: manual;
+```
+
+```css interactive-example-choice
+hyphens: auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">An extra­ordinarily long English word!</p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 2px dashed #999;
+  font-size: 1.5rem;
+  text-align: left;
+  width: 7rem;
+}
+```
 
 붙임표 규칙은 언어별로 다릅니다. HTML의 언어는 [`lang`](/ko/docs/Web/HTML/Global_attributes/lang) 특성으로 알아낼 수 있으며, 브라우저는 lang 특성과 해당 언어에 적합한 붙임표 규칙이 모두 사용 가능할 때에만 붙임표를 추가합니다. XML에서는 [`xml:lang`](/ko/docs/Web/SVG/Attribute/xml:lang) 특성을 사용해야 합니다.
 
-> **참고:** 명세는 붙임표 규칙을 명시하지 않고 있으므로 동작 방식이 브라우저마다 다를 수 있습니다.
+> [!NOTE]
+> 명세는 붙임표 규칙을 명시하지 않고 있으므로 동작 방식이 브라우저마다 다를 수 있습니다.
 
 ## 구문
 
@@ -46,7 +66,8 @@ hyphens: unset;
 - `auto`
   - : 브라우저가 단어 내의 적합한 붙임표 위치를 자유롭게 골라서 줄을 바꿀 수 있습니다. 단, 줄 바꿈 위치를 제안(아래의 [줄 바꿈 위치 제안](#줄_바꿈_위치_제안) 을 보세요)한 경우에는 해당 위치를 사용합니다.
 
-> **참고:** 적합한 붙임표 규칙을 선택할 수 있도록 언어를 제대로 명시해야 `auto` 값의 동작도 정확해집니다. HTML `lang` 특성을 사용해 해당 언어의 붙임표 규칙을 사용할 것을 확실하게 지정하세요.
+> [!NOTE]
+> 적합한 붙임표 규칙을 선택할 수 있도록 언어를 제대로 명시해야 `auto` 값의 동작도 정확해집니다. HTML `lang` 특성을 사용해 해당 언어의 붙임표 규칙을 사용할 것을 확실하게 지정하세요.
 
 ## 줄 바꿈 위치 제안
 
@@ -57,7 +78,8 @@ hyphens: unset;
 - U+00AD (SHY)
   - : 투명한 "소프트" 하이픈("**s**oft" **hy**phen)입니다. 눈에 보이지 않으며, 브라우저가 붙임표를 사용해 단어를 끊을 위치로 선택합니다. HTML에서는 `&shy;`를 사용해 입력하세요.
 
-> **참고:** HTML {{htmlelement("wbr")}} 요소로 인한 줄 바꿈으로는 붙임표가 추가되지 않습니다.
+> [!NOTE]
+> HTML {{htmlelement("wbr")}} 요소로 인한 줄 바꿈으로는 붙임표가 추가되지 않습니다.
 
 ## 형식 정의
 
@@ -79,7 +101,9 @@ hyphens: unset;
 <dl>
   <dt><code>none</code>: no hyphen; overflow if needed</dt>
   <dd lang="en" class="none">An extreme&shy;ly long English word</dd>
-  <dt><code>manual</code>: hyphen only at &amp;hyphen; or &amp;shy; (if needed)</dt>
+  <dt>
+    <code>manual</code>: hyphen only at &amp;hyphen; or &amp;shy; (if needed)
+  </dt>
   <dd lang="en" class="manual">An extreme&shy;ly long English word</dd>
   <dt><code>auto</code>: hyphens where the algorithm decides (if needed)</dt>
   <dd lang="en" class="auto">An extreme&shy;ly long English word</dd>
@@ -92,7 +116,7 @@ hyphens: unset;
 dd {
   width: 55px;
   border: 1px solid black;
- }
+}
 dd.none {
   -webkit-hyphens: none;
   -ms-hyphens: none;

@@ -12,7 +12,7 @@ No hace nada en versiones más recientes basado en Mozilla así como en Internet
 ## Síntaxis
 
 ```js
-document.clear()
+document.clear();
 ```
 
 ## Especificaciones

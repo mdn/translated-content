@@ -8,7 +8,8 @@ slug: Web/API/BatteryManager/dischargingTime
 Indíca la cantidad de tiempo, en segundos,
 que restan antes de que la batería se descargue completamente.
 
-> **Nota:** Incluso si el tiempo devuelto es exacto al segundo, los navegadores los redondean a un intervalo más alto (típicamente a los 15 minutos más cercanos) por razones de privacidad.
+> [!NOTE]
+> Incluso si el tiempo devuelto es exacto al segundo, los navegadores los redondean a un intervalo más alto (típicamente a los 15 minutos más cercanos) por razones de privacidad.
 
 ## Sintaxis
 
@@ -34,10 +35,11 @@ o si el sistema es incapaz de calcular el tiempo de descarga.
 ### Contenido JavaScript
 
 ```js
-navigator.getBattery().then(function(battery) {
+navigator.getBattery().then(function (battery) {
   var time = battery.dischargingTime;
 
-  document.querySelector("#dischargingTime").textContent = battery.dischargingTime;
+  document.querySelector("#dischargingTime").textContent =
+    battery.dischargingTime;
 });
 ```
 

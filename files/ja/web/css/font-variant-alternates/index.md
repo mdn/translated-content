@@ -1,11 +1,19 @@
 ---
 title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
+l10n:
+  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
 {{CSSRef}}
 
-**`font-variant-alternates`** は CSS のプロパティで、代替書体の使用を制御します。代替書体は {{cssxref("@font-feature-values")}} で定義された代替名で参照される可能性があります。
+**`font-variant-alternates`** は [CSS](/ja/docs/Web/CSS) のプロパティで、代替書体の使用を制御します。代替書体は {{cssxref("@font-feature-values")}} で定義された代替名で参照される可能性があります。
+
+{{cssxref("@font-feature-values")}} アットルールを使って、与えられたフォントフェイスに対して、人間が読める名前と、特定の OpenType フォント機能を制御する数値インデックスを関連付けることができます。代替字体を選択する関数（`stylistic`、`styleset`、`character-variant`、`swash`、`ornament`、`annotation`）の場合、 `font-variant-alternates` プロパティで人間が読める名前を参照することで、関連する関数を適用することができます。
+
+これにより、特定のフォントが字体を制御するために使っている特定のインデックス値を知らなくても、 CSS ルールで代替字体を有効にすることができます。
+
+## 構文
 
 ```css
 /* キーワード値 */
@@ -29,11 +37,7 @@ font-variant-alternates: revert-layer;
 font-variant-alternates: unset;
 ```
 
-{{cssxref("@font-feature-values")}} アット規則は、代替書体関数 (`stylistic`, `styleset`, `character-variant`, `swash`, `ornament`, `annotation`) の名前を定義し、その名前を OpenType の引数と関連付けることができます。このプロパティはスタイルシート内で ({{cssxref("@font-feature-values")}} で定義された) 人間が読める名前を利用できるようにします。
-
-## 構文
-
-このプロパティは二つの形式のうち一つを取ります。
+このプロパティは 2 つの形式のどちらかを取ります。
 
 - キーワード `normal`
 - または、その他の下記のキーワードおよび関数を空白区切り、順不同で 1 つ以上
@@ -56,7 +60,8 @@ font-variant-alternates: unset;
 
   - : この関数は、[フルーロン](https://ja.wikipedia.org/wiki/%E3%83%95%E3%83%AB%E3%83%BC%E3%83%AD%E3%83%B3)およびその他の飾り書体などの装飾を有効にします。 OpenType の `ornm` の値に相当します (例: `ornm 2`)。
 
-    > **メモ:** テキストの意味を保持するために、フォントデザイナーは、 Unicode のディングバット文字に一致しない装飾を、ビュレット文字 (U+2022) の装飾的な変種として含めるべきです。既存のフォントの中には、このアドバイスに従わないものもあるので注意が必要です。
+    > [!NOTE]
+    > テキストの意味を保持するために、フォントデザイナーは、 Unicode のディングバット文字に一致しない装飾を、ビュレット文字 (U+2022) の装飾的な変種として含めるべきです。既存のフォントの中には、このアドバイスに従わないものもあるので注意が必要です。
 
 - `annotation()`
   - : この関数は、丸数字や鏡文字などの注釈表記を有効にします。この函数は丸数字又は鏡文字などの表記を有効にします。この引数は、フォント固有の名前を数値に対応づけたものです。 OpenType の `nalt` の値に相当します (例: `nalt 2`)。
@@ -71,37 +76,47 @@ font-variant-alternates: unset;
 
 ## 例
 
-### 先端装飾書体を有効化
+### スワッシュ字体の有効化
+
+こ の例では、 `@font-feature-values` アットルールを用いて、 [MonteCarlo](https://github.com/googlefonts/monte-carlo) フォントの `swash` 機能の名前を定義しています。このルールは、名前 "fancy" をインデックス値 1 に対応付けます。
+
+そして、 `font-variant-alternates` の中でその名前を使えば、そのフォントのスワッシュをオンにすることができます。これは、 `font-feature-settings: "swsh" 1` のような行と等価です。ただし、この特性を適用する CSS は、この特定のフォントに必要なインデックス値を含む必要はありませんし、知る必要すらありません。
 
 #### HTML
 
 ```html
-<p>Firefox rocks!</p>
-<p class="variant">Firefox rocks!</p>
+<p>A Fancy Swash</p>
+<p class="variant">A Fancy Swash</p>
 ```
 
 #### CSS
 
 ```css
-@font-feature-values "Leitura Display Swashes" {
-    @swash { fancy: 1 }
+@font-face {
+  font-family: MonteCarlo;
+  src: url("montecarlo-regular.woff2");
+}
+
+@font-feature-values "MonteCarlo" {
+  @swash {
+    fancy: 1;
+  }
 }
 
 p {
-  font-size: 1.5rem;
+  font-family: "MonteCarlo";
+  font-size: 3rem;
+  margin: 0.7rem 3rem;
 }
 
 .variant {
-  font-family: Leitura Display Swashes;
   font-variant-alternates: swash(fancy);
 }
 ```
 
 ### 結果
 
-> **メモ:** この例を有効にするには、 OpenType フォントの _Leitura Display Swashes_ をインストールする必要があります。試験用途の無償版が、 [fontsgeek.com](https://fontsgeek.com/fonts/Leitura-Display-Swashes) などにあります。
-
-{{ EmbedLiveSample('Enabling swash glyphs') }}
+{{EmbedLiveSample("Enabling swash glyphs", 0, 230)}}
 
 ## 仕様書
 
@@ -113,9 +128,12 @@ p {
 
 ## 関連情報
 
-- {{cssxref("font-variant")}}
-- {{cssxref("font-variant-caps")}}
-- {{cssxref("font-variant-east-asian")}}
-- {{cssxref("font-variant-ligatures")}}
-- {{cssxref("font-variant-numeric")}}
-- {{cssxref("@font-feature-values")}}
+- [`font-variant`](/ja/docs/Web/CSS/font-variant)
+- [`font-variant-caps`](/ja/docs/Web/CSS/font-variant-caps)
+- [`font-variant-east-asian`](/ja/docs/Web/CSS/font-variant-east-asian)
+- [`font-variant-emoji`](/ja/docs/Web/CSS/font-variant-emoji)
+- [`font-variant-ligatures`](/ja/docs/Web/CSS/font-variant-ligatures)
+- [`font-variant-numeric`](/ja/docs/Web/CSS/font-variant-numeric)
+- [`font-variant-position`](/ja/docs/Web/CSS/font-variant-position)
+- [`@font-feature-values`](/ja/docs/Web/CSS/@font-feature-values)
+- [`font-feature-settings`](/ja/docs/Web/CSS/font-feature-settings)

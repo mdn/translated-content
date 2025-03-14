@@ -1,8 +1,6 @@
 ---
-title: '@layer'
+title: "@layer"
 slug: Web/CSS/@layer
-translation_of: Web/CSS/@layer
-browser-compat: css.at-rules.layer
 ---
 
 {{CSSRef}}
@@ -36,11 +34,11 @@ La première façon consiste à créer une couche de cascade nommée et qui cont
 ```css
 @layer utilities {
   .padding-sm {
-    padding: .5rem;
+    padding: 0.5rem;
   }
 
   .padding-lg {
-    padding: .8rem;
+    padding: 0.8rem;
   }
 }
 ```
@@ -61,7 +59,8 @@ Comme l'ordre initial dans lequel sont déclarés les couches indique la précé
 
 Une règle présente dans `utilities` s'appliquerait _même si sa spécificité est inférieure_ à celle de la règle dans `theme`. En effet, dès lors que l'ordre des couches a été établi, la spécificité et l'ordre d'apparence sont ignorés. Cela permet la création de sélecteurs CSS plus simples, car il n'est pas nécessaire de s'assurer qu'un sélecteur a une spécificité suffisamment élevée pour l'emporter sur les autres règles, il suffit de s'assurer qu'il apparaît dans une couche qui arrive après.
 
-> **Note :** Lorsque les noms des couches sont déclarées, leur ordre est défini. On peut ensuite ajouter des règles CSS aux couches en redéclarant leur nom. Les styles sont ainsi ajoutés à la couche et l'ordre des couches reste inchangé.
+> [!NOTE]
+> Lorsque les noms des couches sont déclarées, leur ordre est défini. On peut ensuite ajouter des règles CSS aux couches en redéclarant leur nom. Les styles sont ainsi ajoutés à la couche et l'ordre des couches reste inchangé.
 
 La troisième façon consiste à créer une couche de cascade sans nom, par exemple&nbsp;:
 
@@ -77,10 +76,11 @@ Cela crée une _couche de cascade anonyme_. Cette couche fonctionne de façon an
 
 Une autre façon pour créer une couche de cascade consiste à utiliser [`@import`](/fr/docs/Web/CSS/@import). Dans ce cas, les règles associées proviendraient de la feuille de style importée.
 
-> **Attention :** La règle @ `@import` doit précéder tous les autres types de règles, à l'exception des règles `@charset`.
+> [!WARNING]
+> La règle @ `@import` doit précéder tous les autres types de règles, à l'exception des règles `@charset`.
 
 ```css
-@import 'theme.css' layer(utilities);
+@import "theme.css" layer(utilities);
 ```
 
 ### Couches imbriquées
@@ -90,7 +90,6 @@ Les couches peuvent être imbriquées, on peut par exemple avoir&nbsp;:
 ```css
 @layer framework {
   @layer layout {
-
   }
 }
 ```
@@ -160,9 +159,10 @@ Dans l'exemple qui suit, on crée deux couches sans leur affecter de règle puis
 ```html
 <div class="item">
   Je m'affiche avec <code>color: rebeccapurple</code> car la couche
-  <code>special</code> arrive après <code>base</code> dans les déclarations.
-  Ma bordure verte, la taille du texte et le remplissage viennent de la
-  couche <code>base</code>.</div>
+  <code>special</code> arrive après <code>base</code> dans les déclarations. Ma
+  bordure verte, la taille du texte et le remplissage viennent de la couche
+  <code>base</code>.
+</div>
 ```
 
 #### CSS
@@ -181,7 +181,7 @@ Dans l'exemple qui suit, on crée deux couches sans leur affecter de règle puis
     color: green;
     border: 5px solid green;
     font-size: 1.3em;
-    padding: .5em;
+    padding: 0.5em;
   }
 }
 ```

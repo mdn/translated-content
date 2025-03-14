@@ -1,5 +1,5 @@
 ---
-title: '::-moz-range-thumb'
+title: ::-moz-range-thumb
 slug: Web/CSS/::-moz-range-thumb
 ---
 
@@ -9,7 +9,8 @@ slug: Web/CSS/::-moz-range-thumb
 
 El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) CSS **`::-moz-range-thumb`** representa el elemento que el usuario puede usar en el _"camino"_ marcado por un elemento {{HTMLElement("input")}} con `type="range"` para alterar su valor numérico.
 
-> **Nota:** Si se usa `::-moz-range-thumb` en cualquier elemento que no sea `<input type="range">` ni se seleccionará nada ni se conseguirá efecto alguno.
+> [!NOTE]
+> Si se usa `::-moz-range-thumb` en cualquier elemento que no sea `<input type="range">` ni se seleccionará nada ni se conseguirá efecto alguno.
 
 ## Syntax
 
@@ -20,7 +21,7 @@ El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) CSS **`::-moz-range-thumb
 ### Contenido CSS
 
 ```css
-input[type=range]::-moz-range-thumb {
+input[type="range"]::-moz-range-thumb {
   background-color: green;
 }
 ```
@@ -28,7 +29,7 @@ input[type=range]::-moz-range-thumb {
 ### Contenido HTML
 
 ```html
-<input type="range" min="0" max="100" step="5" value="50"/>
+<input type="range" min="0" max="100" step="5" value="50" />
 ```
 
 ### Salida
@@ -37,15 +38,15 @@ input[type=range]::-moz-range-thumb {
 
 Una barra de progreso que utilizara este estilo se visualizarías de la siguiente manera:
 
-![The thumb of the \<input type=right> styled in green](https://mdn.mozillademos.org/files/12027/Screen%20Shot%202015-12-04%20at%2013.30.08.png)
+![The thumb of the 'input' element with 'type=right', styled in green](screen_shot_2015-12-04_at_13.30.08.png)
 
 ## Especificaciones
 
 No es parte de ninguna especificación. El un pseudo-elemento propietario de Gecko.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.-moz-range-thumb")}}
+{{Compat}}
 
 ## Ver además
 
@@ -60,4 +61,4 @@ No es parte de ninguna especificación. El un pseudo-elemento propietario de Gec
   - {{cssxref("::-webkit-slider-thumb")}}, pseudo-elemento souportado por WebKit y Blink (Safari, Chrome and Opera).
 
 - [CSS-Tricks: Estilos con CSS para input con type="range" en los distintos navegadores.](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode: Dando estilos y haciendo script con elementos deslizadores.](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [QuirksMode: Dando estilos y haciendo script con elementos deslizadores.](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

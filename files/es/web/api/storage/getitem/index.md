@@ -1,15 +1,6 @@
 ---
 title: Storage.getItem()
 slug: Web/API/Storage/getItem
-tags:
-  - API
-  - Almacenamiento
-  - Almacenamiento web
-  - Referencia
-  - Storage
-  - Web Storage
-  - metodo
-translation_of: Web/API/Storage/getItem
 ---
 
 {{APIRef("Web Storage API")}}
@@ -37,21 +28,22 @@ La siguiente función toma 3 elementos del almacenamiento local (local storage) 
 
 ```js
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  var currentColor = localStorage.getItem("bgcolor");
+  var currentFont = localStorage.getItem("font");
+  var currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = "#" + currentColor;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 
-> **Nota:** Para ver esto utilizado en un ejemplo real, vea nuestra [Demo de Web Storage](https://github.com/mdn/web-storage-demo).
+> [!NOTE]
+> Para ver esto utilizado en un ejemplo real, vea nuestra [Demo de Web Storage](https://github.com/mdn/web-storage-demo).
 
 ## Especificaciones
 
@@ -59,7 +51,7 @@ function setStyles() {
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Storage.getItem")}}
+{{Compat}}
 
 ## Vea también
 

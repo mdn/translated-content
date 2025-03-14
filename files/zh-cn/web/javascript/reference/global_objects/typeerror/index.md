@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypeError
 - 尝试修改无法更改的值；或
 - 尝试以不适当的方法使用一个值。
 
-`TypeError` 是一个{{Glossary("serializable object", "可序列化对象")}}，所以可以使用 {{domxref("structuredClone()")}} 对它进行克隆，也可以使用 {{domxref("Worker/postMessage()", "postMessage()")}} 在 [Worker](/zh-CN/docs/Web/API/Worker) 之间拷贝它。
+`TypeError` 是一个{{Glossary("serializable object", "可序列化对象")}}，所以可以使用 {{DOMxRef("Window.structuredClone", "structuredClone()")}} 对它进行克隆，也可以使用 {{domxref("Worker/postMessage()", "postMessage()")}} 在 [Worker](/zh-CN/docs/Web/API/Worker) 之间拷贝它。
 
 ## 构造函数
 
@@ -43,15 +43,15 @@ slug: Web/JavaScript/Reference/Global_Objects/TypeError
 
 ```js
 try {
-  null.f()
+  null.f();
 } catch (e) {
-  console.log(e instanceof TypeError)  // true
-  console.log(e.message)               // "null has no properties"
-  console.log(e.name)                  // "TypeError"
-  console.log(e.fileName)              // "Scratchpad/1"
-  console.log(e.lineNumber)            // 2
-  console.log(e.columnNumber)          // 2
-  console.log(e.stack)                 // "@Scratchpad/2:2:3\n"
+  console.log(e instanceof TypeError); // true
+  console.log(e.message); // "null has no properties"
+  console.log(e.name); // "TypeError"
+  console.log(e.fileName); // "Scratchpad/1"
+  console.log(e.lineNumber); // 2
+  console.log(e.columnNumber); // 2
+  console.log(e.stack); // "@Scratchpad/2:2:3\n"
 }
 ```
 
@@ -59,15 +59,15 @@ try {
 
 ```js
 try {
-  throw new TypeError('Hello', "someFile.js", 10)
+  throw new TypeError("Hello", "someFile.js", 10);
 } catch (e) {
-  console.log(e instanceof TypeError)  // true
-  console.log(e.message)               // "Hello"
-  console.log(e.name)                  // "TypeError"
-  console.log(e.fileName)              // "someFile.js"
-  console.log(e.lineNumber)            // 10
-  console.log(e.columnNumber)          // 0
-  console.log(e.stack)                 // "@Scratchpad/2:2:9\n"
+  console.log(e instanceof TypeError); // true
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "TypeError"
+  console.log(e.fileName); // "someFile.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 

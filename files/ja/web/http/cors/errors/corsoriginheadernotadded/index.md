@@ -1,17 +1,19 @@
 ---
-title: 'Reason: CORS header ‘Origin’ cannot be added'
+title: "Reason: CORS header 'Origin' cannot be added"
 slug: Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
 ## 理由
 
-```
-Reason: CORS header ‘Origin’ cannot be added
+```plain
+Reason: CORS header 'Origin' cannot be added
 ```
 
-## 何が悪いのか
+## エラーの原因
 
 {{Glossary("user agent", "ユーザーエージェント")}}が必要な {{HTTPHeader("Origin")}} を {{Glossary("HTTP")}} リクエストに追加することができませんでした。すべての CORS リクエストは `Origin` ヘッダーを含んでいなければなりません。
 

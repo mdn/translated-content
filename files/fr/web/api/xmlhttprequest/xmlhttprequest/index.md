@@ -1,15 +1,13 @@
 ---
 title: XMLHttpRequest()
 slug: Web/API/XMLHttpRequest/XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest/XMLHttpRequest
-browser-compat: api.XMLHttpRequest.XMLHttpRequest
 ---
 
 {{APIRef('XMLHttpRequest')}}
 
 Le constructeur **`XMLHttpRequest()`** crée un nouvel objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest).
 
-Pour plus de détails sur l'utilisation de `XMLHttpRequest`, voir la page [Utiliser `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest).
+Pour plus de détails sur l'utilisation de `XMLHttpRequest`, voir la page [Utiliser `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).
 
 ## Syntaxe
 
@@ -52,5 +50,5 @@ const request = new XMLHttpRequest(paramsDictionary);
 
 ## Voir aussi
 
-- [Utiliser `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML dans `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [Utiliser `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [HTML dans `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)

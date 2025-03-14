@@ -1,18 +1,20 @@
 ---
-title: Type conversion（类型转换）
+title: 类型转换
 slug: Glossary/Type_Conversion
-original_slug: Glossary/类型转换
+l10n:
+  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
-类型转换（或类型变换；英文：Type conversion, typecasting）是指将数据由一种类型变换为另一种类型。在编译器自动赋值时，会发生*隐式转换*，但在代码中，也可以用一些写法强制要求进行*显式转换*。例如：在表达式 `5 + 2.0` 中，整数 `5` 被隐式转换为浮点数，但 `Number("0x11")` 和 "0x11" 则被显式转换为数字 17。
+{{GlossarySidebar}}
+
+类型转换（Type conversion 或 typecasting）是指将数据由一种类型变换为另一种类型。在编译器（对于编译语言）或运行时（像 {{glossary("JavaScript")}} 等脚本语言）自动转换数据类型时，会发生*隐式转换*。你也可以在源码中*显式*要求进行转换。
+
+例如，给定表达式 `"foo" + 1`，那么 {{glossary("Number")}} `1` 会被隐式转换成{{glossary("String", "字符串")}}并且表达式返回 `"foo1"`。给定指令 `Number("0x11")`，字符串 `"x11"` 显式转换为数字 `17`。
 
 ## 参见
 
-- [术语](/zh-CN/docs/Glossary)
+- 维基百科上的[类型转换](https://zh.wikipedia.org/wiki/类型转换)
+- 相关术语：
 
   - {{Glossary("Type", "类型")}}
-  - {{Glossary("Type coercion")}}
-
-- 维基百科相关内容
-
-  - [Type conversion](https://zh.wikipedia.org/wiki/Type_conversion)
+  - {{Glossary("Type coercion", "强制类型转换")}}

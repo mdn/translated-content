@@ -1,24 +1,14 @@
 ---
 title: browserSettings.proxyConfig
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/settings
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - proxyConfig
-translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/settings
-original_slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/proxyConfig
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour modifier les paramètres de proxy du navigateur.
 
-> **Note :** La possibilité de modifier les paramètres de proxy nécessite un accès à une fenêtre privée car les paramètres de proxy affectent à la fois les fenêtres privées et non privées. Par conséquent, si une extension n'a pas reçu l'autorisation de fenêtre privée, les appels à `proxy.settings.set()` lanceront une exception.
+> [!NOTE]
+> La possibilité de modifier les paramètres de proxy nécessite un accès à une fenêtre privée car les paramètres de proxy affectent à la fois les fenêtres privées et non privées. Par conséquent, si une extension n'a pas reçu l'autorisation de fenêtre privée, les appels à `proxy.settings.set()` lanceront une exception.
 
 La valeur sous-jacente est un objet avec les propriétés énumérées ci-dessous.
 
@@ -54,14 +44,14 @@ let proxySettings = {
   proxyType: "manual",
   http: "http://proxy.org:8080",
   socksVersion: 4,
-  passthrough: ".example.org"
+  passthrough: ".example.org",
 };
 
-browser.proxy.settings.set({value: proxySettings});
+browser.proxy.settings.set({ value: proxySettings });
 ```
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.proxy.settings", 10)}}
+{{Compat}}

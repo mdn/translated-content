@@ -1,16 +1,6 @@
 ---
 title: IDBIndex
 slug: Web/API/IDBIndex
-tags:
-  - API
-  - Database
-  - IDBIndex
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
-  - TopicStub
-translation_of: Web/API/IDBIndex
 ---
 
 {{APIRef("IndexedDB")}}
@@ -67,41 +57,59 @@ Finalement, On itère sur tous les enregistrements pour en insérer les données
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = '';
+  tableEntry.innerHTML = "";
 
   //ouvre un transaction
-  var transaction = db.transaction(['contactsList'], 'readonly');
+  var transaction = db.transaction(["contactsList"], "readonly");
   //accés au magasin d'objet
-  var objectStore = transaction.objectStore('contactsList');
+  var objectStore = transaction.objectStore("contactsList");
 
   //on récupère l'index
-  var myIndex = objectStore.index('lName');
+  var myIndex = objectStore.index("lName");
 
   //un curseur qui itère sur l'index
   var request = myIndex.openCursor();
-  request.onsuccess = function(event) {
+  request.onsuccess = function (event) {
     var cursor = request.result;
-    if(cursor) {
-      var tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
-                           + '<td>' + cursor.value.lName + '</td>'
-                           + '<td>' + cursor.value.fName + '</td>'
-                           + '<td>' + cursor.value.jTitle + '</td>'
-                           + '<td>' + cursor.value.company + '</td>'
-                           + '<td>' + cursor.value.eMail + '</td>'
-                           + '<td>' + cursor.value.phone + '</td>'
-                           + '<td>' + cursor.value.age + '</td>';
+    if (cursor) {
+      var tableRow = document.createElement("tr");
+      tableRow.innerHTML =
+        "<td>" +
+        cursor.value.id +
+        "</td>" +
+        "<td>" +
+        cursor.value.lName +
+        "</td>" +
+        "<td>" +
+        cursor.value.fName +
+        "</td>" +
+        "<td>" +
+        cursor.value.jTitle +
+        "</td>" +
+        "<td>" +
+        cursor.value.company +
+        "</td>" +
+        "<td>" +
+        cursor.value.eMail +
+        "</td>" +
+        "<td>" +
+        cursor.value.phone +
+        "</td>" +
+        "<td>" +
+        cursor.value.age +
+        "</td>";
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
     } else {
-      console.log('Tous les enregistrements ont été affichés.');
+      console.log("Tous les enregistrements ont été affichés.");
     }
   };
-};
+}
 ```
 
-> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
+> [!NOTE]
+> Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 
@@ -119,4 +127,4 @@ function displayDataByIndex() {
 - {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
 - {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
 - {{domxref("IDBCursor","Utiliser les curseur")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([voir l'exemple en direct](http://mdn.github.io/to-do-notifications/).)
+- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple en direct](https://mdn.github.io/dom-examples/to-do-notifications/).)

@@ -1,46 +1,42 @@
 ---
-title: feComponentTransfer
+title: <feComponentTransfer>
 slug: Web/SVG/Element/feComponentTransfer
+l10n:
+  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
 {{SVGRef}}
 
-**`<feComponentTransfer>`** [SVG](/zh-CN/docs/Web/SVG)滤镜基元对每个像素执行颜色分量的数据重映射。它允许进行像亮度调整，对比度调整，色彩平衡或阈值的操作。
+**`<feComponentTransfer>`** [SVG](/zh-CN/docs/Web/SVG) 滤镜原语对每个像素的数据进行颜色分量级别的重新映射。它允许执行亮度调整、对比度调整、颜色平衡或阈值处理等操作。
 
-计算是使用非预乘色值进行执行的.(译者：什么是非预乘数据：非预乘数据可以理解为例如 rgba(180,160,130,0.8)) 中的 180,160,130，它们没有被除以 255 以及乘以透明度 0.8 而转化为 0\~1 范围的值，当被除以 255 并且乘以 0.8 而转化为 0\~1 范围中的值的预处理被称为 premultiplied color value(预乘数据)).颜色值在每一个通道 (R,G,B,A) 中被分别修改然后输出，这些通道分别是 {{SVGElement("feFuncR")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, and {{SVGElement("feFuncA")}}.
+计算是在非预乘的颜色值上进行的。通过将每个通道（R、G、B 和 A）修改为子元素 {{SVGElement("feFuncR")}}、{{SVGElement("feFuncB")}}、{{SVGElement("feFuncG")}} 和 {{SVGElement("feFuncA")}} 的返回结果，来对颜色进行调整。如果提供了多个相同的元素，则使用最后指定的元素；如果没有提供用于修改某个通道的元素，则效果与对该通道应用恒等变换相同。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
-## 示例
-
 ## 属性
 
-### 全局属性
-
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
-- [滤镜属性](/zh-CN/SVG/Attribute#Filter) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-
-### 专有属性
-
-- {{ SVGAttr("in") }}
+- {{SVGAttr("in")}}
 
 ## DOM 接口
 
-该元素实现了[`SVGFEComponentTransferElement`](/zh-CN/DOM/SVGFEComponentTransferElement)接口。
+该元素实现了 {{domxref("SVGFEComponentTransferElement")}} 接口。
 
 ## 示例
 
 ### SVG
 
-```plain
+```html
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
   <defs>
-    <linearGradient id="rainbow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100%" y2="0">
+    <linearGradient
+      id="rainbow"
+      gradientUnits="userSpaceOnUse"
+      x1="0"
+      y1="0"
+      x2="100%"
+      y2="0">
       <stop offset="0" stop-color="#ff0000"></stop>
       <stop offset="0.2" stop-color="#ffff00"></stop>
       <stop offset="0.4" stop-color="#00ff00"></stop>
@@ -63,6 +59,13 @@ slug: Web/SVG/Element/feComponentTransfer
         <feFuncB type="table" tableValues="0 1 1 0"></feFuncB>
       </feComponentTransfer>
     </filter>
+    <filter id="discrete" x="0" y="0" width="100%" height="100%">
+      <feComponentTransfer>
+        <feFuncR type="discrete" tableValues="0 0 1 1"></feFuncR>
+        <feFuncG type="discrete" tableValues="1 1 0 0"></feFuncG>
+        <feFuncB type="discrete" tableValues="0 1 1 0"></feFuncB>
+      </feComponentTransfer>
+    </filter>
     <filter id="linear" x="0" y="0" width="100%" height="100%">
       <feComponentTransfer>
         <feFuncR type="linear" slope="0.5" intercept="0"></feFuncR>
@@ -78,54 +81,89 @@ slug: Web/SVG/Element/feComponentTransfer
       </feComponentTransfer>
     </filter>
   </defs>
-
   <g font-weight="bold">
-    <text x="0" y="5%">Default</text>
-    <rect x="0" y="8%" width="100%" height="20"></rect>
-    <text x="0" y="26%">Identity</text>
-    <rect x="0" y="29%" width="100%" height="20" style="filter:url(#identity)"></rect>
-    <text x="0" y="47%">Table lookup</text>
-    <rect x="0" y="50%" width="100%" height="20" style="filter:url(#table)"></rect>
-    <text x="0" y="68%">Linear function</text>
-    <rect x="0" y="71%" width="100%" height="20" style="filter:url(#linear)"></rect>
-    <text x="0" y="89%">Gamma function</text>
-    <rect x="0" y="92%" width="100%" height="20" style="filter:url(#gamma)"></rect>
+    <text x="0" y="20">默认</text>
+    <rect x="0" y="30" width="100%" height="20"></rect>
+    <text x="0" y="70">恒等</text>
+    <rect
+      x="0"
+      y="80"
+      width="100%"
+      height="20"
+      style="filter:url(#identity)"></rect>
+    <text x="0" y="120">表查找</text>
+    <rect
+      x="0"
+      y="130"
+      width="100%"
+      height="20"
+      style="filter:url(#table)"></rect>
+    <text x="0" y="170">离散表查找</text>
+    <rect
+      x="0"
+      y="180"
+      width="100%"
+      height="20"
+      style="filter:url(#discrete)"></rect>
+    <text x="0" y="220">线性函数</text>
+    <rect
+      x="0"
+      y="230"
+      width="100%"
+      height="20"
+      style="filter:url(#linear)"></rect>
+    <text x="0" y="270">伽马函数</text>
+    <rect
+      x="0"
+      y="280"
+      width="100%"
+      height="20"
+      style="filter:url(#gamma)"></rect>
   </g>
 </svg>
 ```
 
 ### CSS
 
-```plain
+```css
 rect {
   fill: url(#rainbow);
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Example", "100%", 340)}}
+{{EmbedLiveSample("示例", "100%", 340)}}
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
 
 ## 参见
 
-- {{ SVGElement("filter") }}
-- {{ SVGElement("feBlend") }}
-- {{ SVGElement("feColorMatrix") }}
-- {{ SVGElement("feComposite") }}
-- {{ SVGElement("feConvolveMatrix") }}
-- {{ SVGElement("feDiffuseLighting") }}
-- {{ SVGElement("feDisplacementMap") }}
-- {{ SVGElement("feFlood") }}
-- {{ SVGElement("feFuncA") }}
-- {{ SVGElement("feFuncB") }}
-- {{ SVGElement("feFuncG") }}
-- {{ SVGElement("feFuncR") }}
-- {{ SVGElement("feGaussianBlur") }}
-- {{ SVGElement("feImage") }}
-- {{ SVGElement("feMerge") }}
-- {{ SVGElement("feMorphology") }}
-- {{ SVGElement("feOffset") }}
-- {{ SVGElement("feSpecularLighting") }}
-- {{ SVGElement("feTile") }}
-- {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/zh-CN/SVG/Tutorial/Filter_effects)
+- [SVG 滤镜原语属性](/zh-CN/docs/Web/SVG/Attribute#滤镜原语属性)
+- {{SVGElement("filter")}}
+- {{SVGElement("feBlend")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feComposite")}}
+- {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feFlood")}}
+- {{SVGElement("feFuncA")}}
+- {{SVGElement("feFuncB")}}
+- {{SVGElement("feFuncG")}}
+- {{SVGElement("feFuncR")}}
+- {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("feMerge")}}
+- {{SVGElement("feMorphology")}}
+- {{SVGElement("feOffset")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feTile")}}
+- {{SVGElement("feTurbulence")}}
+- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorial/Filter_effects)

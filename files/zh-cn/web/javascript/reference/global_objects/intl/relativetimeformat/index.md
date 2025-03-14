@@ -5,132 +5,95 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 
 {{JSRef}}
 
-**`Intl.RelativeTimeFormat`**对象启用本地化的相对时间格式。
+**`Intl.RelativeTimeFormat`** 对象用于语言敏感的相对时间的格式化。
 
-{{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat")}}
 
-## 句法
+```js interactive-example
+const rtf1 = new Intl.RelativeTimeFormat("en", { style: "short" });
 
-```plain
-new Intl.RelativeTimeFormat([locales[, options]])
+console.log(rtf1.format(3, "quarter"));
+// Expected output: "in 3 qtrs."
+
+console.log(rtf1.format(-1, "day"));
+// Expected output: "1 day ago"
+
+const rtf2 = new Intl.RelativeTimeFormat("es", { numeric: "auto" });
+
+console.log(rtf2.format(2, "day"));
+// Expected output: "pasado mañana"
 ```
 
-### 参数
+## 构造函数
 
-- `locales`
-  - : 可选的。带有 BCP 47 语言标记的字符串，或此类字符串的数组。有关参数的一般形式和解释`locales`,请参阅{{jsxref("Global_Objects/Intl","Intl page","＃Locale_identification_and_negotiation",1)}}。
-- `options`
+- {{jsxref("Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}
+  - : 创建一个新的 `Intl.RelativeTimeFormat` 对象。
 
-  - : 可选的。具有以下部分或全部属性的对象：
+## 静态方法
 
-    - `localeMatcher`
-      要使用的区域设置匹配算法。可能的值是`"lookup"`和`"best fit"`; 默认是`"best fit"`。有关此选项的信息，请参阅[`Intl`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation)。
-    - `numeric`
-      输出消息的格式。可能的值是：
+- {{jsxref("Intl/RelativeTimeFormat/supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}
+  - : 返回一个数组，其中包含提供的区域（locale）中被运行时所支持的，而不必回退到运行时的默认区域。
 
-      - `"always"`(默认，例如，`1 day ago`),
-      - 或`"auto"`(例如`yesterday`)。该`"auto"`值允许不必总是在输出中使用数值。
+## 实例方法
 
-    - `style`
-      国际化信息的长度。可能的值是：
+- {{jsxref("Intl/RelativeTimeFormat/format", "Intl.RelativeTimeFormat.prototype.format()")}}
+  - : 根据给定的 `Intl.RelativeTimeFormat` 对象的区域和格式化选项来格式化值（`value`）和单位（`unit`）。
+- {{jsxref("Intl/RelativeTimeFormat/formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}
+  - : 返回一个对象{{jsxref("Array", "数组", "", 1)}}，其中的对象表示的是相对事件格式字符串中的各个部分，可用于自定义本地化格式。
+- {{jsxref("Intl/RelativeTimeFormat/resolvedOptions", "Intl.RelativeTimeFormat.prototype.resolvedOptions()")}}
+  - : 返回一个新的对象，其属性反映了在对象初始化期间计算所得的区域和一系列选项。
 
-      - `"long"`(默认，例如，`in 1 month`)
-      - `"short"`(例如`in 1 mo.`),
-      - 或`"narrow"`(例如`in 1 mo.`)。狭窄的风格可能类似于某些语言环境的短风格。
+## 示例
 
-## 描述
+### 基本 format 用法
 
-### 属性
-
-- {{jsxref("RelativeTimeFormat.prototype","Intl.RelativeTimeFormat.prototype")}}
-  - : 允许向所有对象添加属性。
-
-### 方法
-
-- {{jsxref("RelativeTimeFormat.supportedLocalesOf","Intl.RelativeTimeFormat.supportedLocalesOf()")}}
-  - : 返回一个数组，其中包含所支持的语言环境，而不必回退到运行时的默认语言环境。
-
-## `RelativeTimeFormat` 实例
-
-### 属性
-
-`RelativeTimeFormat` 实例从其原型继承以下属性：
-
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/prototype','Properties')}}
-
-### 方法
-
-`RelativeTimeFormat` 实例从其原型继承以下方法：
-
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/prototype','Methods')}}
-
-## 例子
-
-### 基本`format`用法
-
-以下示例显示如何使用英语创建相对时间格式化程序。
+以下示例显示如何为英语创建相对时间格式化程序。
 
 ```js
-//在语言环境中创建相对时间格式化程序
-//显式传入默认值。
-const rtf = new Intl.RelativeTimeFormat("en",{
-    localeMatcher: "bestfit",//其他值："lookup"
-    numeric: "always",//其他值："auto"
-    style: "long",//其他值："short"或"narrow"
+// 在你的区域下创建相对时间格式化程序
+// 显式传入默认值。
+const rtf = new Intl.RelativeTimeFormat("en", {
+  localeMatcher: "bestfit", // 其他值："lookup"
+  numeric: "always", // 其他值："auto"
+  style: "long", // 其他值："short"或"narrow"
 });
 
-//使用负值 (-1) 格式化相对时间。
-rtf.format(-1,"day");
-//>"1 day ago"
+// 使用负值（-1）格式化相对时间。
+rtf.format(-1, "day"); // "1 day ago"
 
-//使用正值 (1) 格式化相对时间。
-rtf.format(1,"day");
-//>"in 1 day"
+// 使用正值（1）格式化相对时间。
+rtf.format(1, "day"); // "in 1 day"
 ```
 
-### 使用`auto`选项
+### 使用 formatToParts
 
-如果`numeric:auto`选项被传递，它将生成字符串`yesterday`或`tomorrow`代替`1 day ago`或`in 1 day`。这允许不必总是在输出中使用数值。
+以下示例展示了如何创建一个用于返回格式化后的每一个部分的相对时间格式化程序。
 
 ```js
-//在语言环境中创建相对时间格式化程序
-//使用数字：传入"auto"选项值。
-const rtf = new Intl.RelativeTimeFormat("en",{numeric: "auto"});
+const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
-//使用负值 (-1) 格式化相对时间。
-rtf.format(-1,"day");
-//>"yesterday"
+// 使用日期单位格式化相对时间。
+rtf.formatToParts(-1, "day");
+// [{type: "literal", value: "yesterday"}]
 
-//使用正日单位 (1) 格式化相对时间。
-rtf.format(1,"day");
-//>"tomorrow"
+rtf.formatToParts(100, "day");
+// [
+//   { type: "literal", value: "in " },
+//   { type: "integer", value: "100", unit: "day" },
+//   { type: "literal", value: " days" }
+// ]
 ```
 
-### 运用 `formatToParts`
-
-以下示例显示如何创建返回格式化部件的相对时间格式器
-
-```js
-const rtf = new Intl.RelativeTimeFormat("en",{numeric: "auto"});
-
-//使用日期单位格式化相对时间。
-rtf.formatToParts(-1,"day");
-//> [{type: "literal",value: "yesterday"}]
-
-rtf.formatToParts(100,"day");
-//> [{type: "literal",value: "in"},
-//> {type: "integer",value: "100",unit: "day"},
-//> {type: "literal",value: "days"}]
-```
-
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [The Intl.RelativeTimeFormat API](https://developers.google.com/web/updates/2018/10/intl-relativetimeformat)
+- {{jsxref("Intl")}}
+- [Intl.RelativeTimeFormat API](https://v8.dev/features/intl-relativetimeformat)
+- [FormatJS 中 `Intl.RelativeTimeFormat` 的 polyfill](https://formatjs.io/docs/polyfills/intl-relativetimeformat/)

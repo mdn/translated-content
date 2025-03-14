@@ -1,24 +1,31 @@
 ---
-title: 'SyntaxError: Unexpected token'
+title: "SyntaxError: Unexpected token"
 slug: Web/JavaScript/Reference/Errors/Unexpected_token
-tags:
-  - JavaScript
-  - SyntaxError
-  - Ошибки
-translation_of: Web/JavaScript/Reference/Errors/Unexpected_token
+l10n:
+  sourceCommit: bd401d0045851cd5c7c145c3acdeabe5062059f5
 ---
 
 {{jsSidebar("Errors")}}
 
+Исключения JavaScript «неожиданный токен» возникают, когда синтаксический анализатор не видит в заданной позиции распознаваемый им токен, поэтому он не может понять структуру программы. Это может быть даже из-за опечатки.
+
 ## Сообщение
 
-```
-SyntaxError: expected expression, got "x"
-SyntaxError: expected property name, got "x"
-SyntaxError: expected target, got "x"
-SyntaxError: expected rest argument name, got "x"
-SyntaxError: expected closing parenthesis, got "x"
-SyntaxError: expected '=>' after argument list, got "x"
+```plain
+SyntaxError: Unexpected token ';' (V8)
+SyntaxError: Unexpected identifier 'x' (V8)
+SyntaxError: Unexpected number (V8)
+SyntaxError: Unexpected string (V8)
+SyntaxError: Unexpected regular expression (V8)
+SyntaxError: Unexpected template string (V8)
+
+SyntaxError: unexpected token: identifier (Firefox)
+SyntaxError: expected expression, got "x" (Firefox)
+SyntaxError: expected property name, got "x" (Firefox)
+SyntaxError: expected target, got "x" (Firefox)
+SyntaxError: expected meta, got "x" (Firefox)
+SyntaxError: expected rest argument name, got "x" (Firefox)
+SyntaxError: expected closing parenthesis, got "x" (Firefox)
 ```
 
 ## Тип ошибки
@@ -27,19 +34,19 @@ SyntaxError: expected '=>' after argument list, got "x"
 
 ## Что пошло не так?
 
-Вместо определённой конструкции языка было использовано что-то другое. Возможно, просто опечатка.
+Вместо определённой конструкции языка было использовано что-то другое. Возможно, это просто опечатка.
 
 ## Примеры
 
 ### Ожидаемое выражение
 
-Недопустимыми являются, к примеру, запятые после элементов цепочки выражений.
+Например, в цепочке выражений в конце не допускается использование запятых.
 
-```js example-bad
+```js-nolint example-bad
 for (let i = 0; i < 5,; ++i) {
   console.log(i);
 }
-// SyntaxError: expected expression, got ';'
+// Uncaught SyntaxError: expected expression, got ';'
 ```
 
 Правильным вариантом будет убрать запятую или добавить ещё одно выражение:
@@ -54,13 +61,13 @@ for (let i = 0; i < 5; ++i) {
 
 Иногда можно потерять скобки при использовании `if`:
 
-```js example-bad
-function round(n, upperBound, lowerBound){
-  if(n > upperBound) || (n < lowerBound){
-    throw 'Число ' + String(n) + ' больше, чем ' + String(upperBound) + ', или меньше, чем ' + String(lowerBound);
-  }else if(n < ((upperBound + lowerBound)/2)){
+```js-nolint example-bad
+function round(n, upperBound, lowerBound) {
+  if (n > upperBound) || (n < lowerBound) { // Здесь не хватает скобок!
+    throw new Error(`Число ${n} больше ${upperBound} или меньше ${lowerBound}`);
+  } else if (n < (upperBound + lowerBound) / 2) {
     return lowerBound;
-  }else{
+  } else {
     return upperBound;
   }
 } // SyntaxError: expected expression, got '||'
@@ -68,14 +75,20 @@ function round(n, upperBound, lowerBound){
 
 На первый взгляд кажется, что скобки расставлены правильно, но обратите внимание, что `||` находится не в скобках. Необходимо заключить `||` в скобки:
 
-```js example-good
-function round(n, upperBound, lowerBound){
-  if((n > upperBound) || (n < lowerBound)){
-    throw 'Число ' + String(n) + ' больше, чем ' + String(upperBound) + ', или меньше, чем ' + String(lowerBound);
-  }else if(n < ((upperBound + lowerBound)/2)){
+```js-nolint example-good
+function round(n, upperBound, lowerBound) {
+  if ((n > upperBound) || (n < lowerBound)) {
+    throw new Error(
+      `Число ${n} больше ${upperBound} или меньше ${lowerBound}`,
+    );
+  } else if (n < (upperBound + lowerBound) / 2) {
     return lowerBound;
-  }else{
+  } else {
     return upperBound;
   }
 }
 ```
+
+## Смотрите также
+
+- {{jsxref("SyntaxError")}}

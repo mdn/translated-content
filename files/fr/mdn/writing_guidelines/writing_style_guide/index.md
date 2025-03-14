@@ -1,25 +1,13 @@
 ---
 title: Guide stylistique
 slug: MDN/Writing_guidelines/Writing_style_guide
-tags:
-  - Documentation
-  - Guide
-  - Guidelines
-  - MDN
-  - MDN Meta
-  - MDN Web Docs
-  - MDN style guide
-  - Style guide
-  - Writing style guide
-translation_of: MDN/Guidelines/Writing_style_guide
-original_slug: MDN/Guidelines/Writing_style_guide
 ---
 
 {{MDNSidebar}}
 
 Afin de présenter la documentation de façon organisée, cohérente et facile à lire, le guide stylistique de MDN décrit la façon dont le texte doit être organisé, orthographié, mis en forme, etc. Il s'agit ici de règles générales plutôt que de consignes strictes. Le contenu importe plus que la forme et il n'y a pas d'obligation à apprendre ce guide avant de contribuer. Toutefois, ne soyez pas surpris⋅e si une contributrice ou un contributeur édite une de vos éditions pour respecter ce guide.
 
-La suite de ce guide vise avant tout la documentation francophone. Elle reprend des parties du [guide stylistique anglophone](/fr/docs/MDN/Guidelines/Writing_style_guide) lorsque c'est pertinent. Vous pouvez également consulter [le guide stylistique de la communauté francophone](https://github.com/mozfr/besogne/wiki/Guide-stylistique-pour-la-traduction). Si vous souhaitez contribuer au contenu en anglais, rapportez vous au [guide stylistique anglophone](/fr/docs/MDN/Guidelines/Writing_style_guide).
+La suite de ce guide vise avant tout la documentation francophone. Elle reprend des parties du [guide stylistique anglophone](/fr/docs/MDN/Writing_guidelines/Writing_style_guide) lorsque c'est pertinent. Vous pouvez également consulter [le guide stylistique de la communauté francophone](https://github.com/mozfr/besogne/wiki/Guide-stylistique-pour-la-traduction). Si vous souhaitez contribuer au contenu en anglais, rapportez vous au [guide stylistique anglophone](/fr/docs/MDN/Writing_guidelines/Writing_style_guide).
 
 ## Règles de base
 
@@ -66,7 +54,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 ### Abréviations
 
-> **Note :** les abréviations sont à utiliser à bon escient et il faudra bien connaître leur sens (notamment pour les abrévations latines) afin de les utiliser correctement. Il faut être conscient que leur usage peut être source de confusion pour les lectrices et lecteurs qui pourraient ne pas y être habitués.
+> [!NOTE]
+> Les abréviations sont à utiliser à bon escient et il faudra bien connaître leur sens (notamment pour les abrévations latines) afin de les utiliser correctement. Il faut être conscient que leur usage peut être source de confusion pour les lectrices et lecteurs qui pourraient ne pas y être habitués.
 
 #### Dans les notes et parenthèses
 

@@ -1,11 +1,14 @@
 ---
-title: ':empty'
+title: :empty
 slug: Web/CSS/:empty
 ---
 
-{{ CSSRef() }}La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:empty`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento que no tenga hijos. Los hijos pueden ser nodos de elemento o texto (incluido el espacio en blanco). Los comentarios o las instrucciones de procesamiento no afectan si un elemento se considera vacío.
+{{ CSSRef() }}
 
-> **Nota:** En {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} la pseudo-clase `:empty` fue modificada para actuar como {{CSSxRef(":-moz-only-whitespace")}}, pero ningún navegador actualmente suporta aún esto.
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:empty`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento que no tenga hijos. Los hijos pueden ser nodos de elemento o texto (incluido el espacio en blanco). Los comentarios o las instrucciones de procesamiento no afectan si un elemento se considera vacío.
+
+> [!NOTE]
+> En [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo) la pseudo-clase `:empty` fue modificada para actuar como {{CSSxRef(":-moz-only-whitespace")}}, pero ningún navegador actualmente suporta aún esto.
 
 ```css
 /* Selecciona cualquier <div> que no contenga contenido */
@@ -26,7 +29,7 @@ div:empty {
 <div class="box"><!-- Voy a ser de color lima. --></div>
 <div class="box">Voy a ser de color rosa.</div>
 <div class="box">
-    <!-- Seré de color rosa debido a los espacios en blanco alrededor de este comentario. -->
+  <!-- Seré de color rosa debido a los espacios en blanco alrededor de este comentario. -->
 </div>
 ```
 
@@ -57,7 +60,7 @@ body {
 
 ## Problemas de accesibilidad
 
-La tecnología de asistencia, como los lectores de pantalla, no puede analizar el contenido interactivo que está vacío. Todo el contenido interactivo debe tener un nombre accesible, que se crea proporcionando un valor de texto para el elemento principal del control interactivo ([anclajes](/es/docs/Web/HTML/Element/a), [botones](/es/docs/Web/HTML/Element/button), etc.). Los nombres accesibles exponen el control interactivo al [árbol de accesibilidad](/es/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs), una API que comunica información útil para las tecnologías de asistencia.
+La tecnología de asistencia, como los lectores de pantalla, no puede analizar el contenido interactivo que está vacío. Todo el contenido interactivo debe tener un nombre accesible, que se crea proporcionando un valor de texto para el elemento principal del control interactivo ([anclajes](/es/docs/Web/HTML/Element/a), [botones](/es/docs/Web/HTML/Element/button), etc.). Los nombres accesibles exponen el control interactivo al [árbol de accesibilidad](/es/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis), una API que comunica información útil para las tecnologías de asistencia.
 
 El texto que proporciona el nombre accesible del control interactivo se puede ocultar mediante una [combinación de propiedades](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) que lo eliminan visualmente de la pantalla, pero que la tecnología de asistencia lo puede analizar. Esto se usa comúnmente para botones que dependen solo de un ícono para transmitir el propósito.
 
@@ -72,4 +75,4 @@ El texto que proporciona el nombre accesible del control interactivo se puede oc
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.empty")}}
+{{Compat}}

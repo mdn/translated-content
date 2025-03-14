@@ -17,12 +17,12 @@ name = AnimationEvent.animationName
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.AnimationEvent.animationName")}}
+{{Compat}}
 
 ## Ver también
 
-- [Usando animaciones CSS](/es/docs/CSS/Using_CSS_animations)
+- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - Las propiedades CSS relacionadas con animacióny reglas: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.
 - La interface {{domxref("AnimationEvent")}} a la cual pertenece.

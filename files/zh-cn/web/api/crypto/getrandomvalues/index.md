@@ -18,7 +18,7 @@ cryptoObj.getRandomValues(typedArray);
 ### 参数
 
 - `typedArray`
-  - : 是一个基于整数的 {{jsxref("TypedArray")}}，它可以是 {{jsxref("Int8Array")}}、{{jsxref("Uint8Array")}}、{{jsxref("Int16Array")}}、 {{jsxref("Uint16Array")}}、 {{jsxref("Int32Array")}} 或者 {{jsxref("Uint32Array")}}。在数组中的所有的元素会被随机数重写。（注释：生成的随机数储存在 `typedArray` 数组上。）
+  - : 是一个基于整数的 {{jsxref("TypedArray")}}，它可以是 {{jsxref("Int8Array")}}、{{jsxref("Uint8Array")}}、{{jsxref("Int16Array")}}、 {{jsxref("Uint16Array")}}、 {{jsxref("Int32Array")}} 或者 {{jsxref("Uint32Array")}}（**不可**使用 `Float32Array` 或者 `Float64Array`）。在数组中的所有的元素会被随机数重写。（注释：生成的随机数储存在 `typedArray` 数组上。）
 
 ### 异常事件
 
@@ -35,7 +35,7 @@ window.crypto.getRandomValues(array);
 
 console.log("Your lucky numbers:");
 for (var i = 0; i < array.length; i++) {
-    console.log(array[i]);
+  console.log(array[i]);
 }
 ```
 

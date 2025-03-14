@@ -1,17 +1,6 @@
 ---
 title: Window.localStorage
 slug: Web/API/Window/localStorage
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Storage
-  - Web Storage
-  - Window
-  - WindowLocalStorage
-  - 로컬스토리지
-translation_of: Web/API/Window/localStorage
 ---
 
 {{APIRef("Web Storage API")}}
@@ -42,19 +31,19 @@ myStorage = window.localStorage;
 아래 코드는 현재 도메인의 로컬 {{domxref("Storage")}} 객체에 접근한 후, {{domxref("Storage.setItem()")}}을 사용해 항목 하나를 추가합니다.
 
 ```js
-localStorage.setItem('myCat', 'Tom');
+localStorage.setItem("myCat", "Tom");
 ```
 
 위에서 추가한 `localStorage` 항목을 읽는 법은 다음과 같습니다.
 
 ```js
-const cat = localStorage.getItem('myCat');
+const cat = localStorage.getItem("myCat");
 ```
 
 그리고 제거는 아래와 같습니다.
 
 ```js
-localStorage.removeItem('myCat');
+localStorage.removeItem("myCat");
 ```
 
 `localStorage` 항목의 전체 제거 구문입니다.
@@ -63,7 +52,8 @@ localStorage.removeItem('myCat');
 localStorage.clear();
 ```
 
-> **참고:** 참고: [Web Storage API 사용하기](/ko/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) 문서에서 전체 예제를 살펴보세요.
+> [!NOTE]
+> 참고: [Web Storage API 사용하기](/ko/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) 문서에서 전체 예제를 살펴보세요.
 
 ## 명세
 
@@ -76,5 +66,5 @@ localStorage.clear();
 ## 함께 보기
 
 - [Web Storage API 사용하기](/ko/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- [Local storage with Window.localStorage](/ko/docs/Web/API/Web_Storage_API/Local_storage)
+- [Local storage with Window.localStorage](/ko/docs/Web/API/Window/localStorage)
 - {{domxref("Window.sessionStorage")}}

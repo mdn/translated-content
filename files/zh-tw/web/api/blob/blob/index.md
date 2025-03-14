@@ -25,7 +25,7 @@ var aBlob = new Blob( array, options );
 
 ```js
 var aFileParts = ['<a id="a"><b id="b">hey!</b></a>']; // an array consisting of a single DOMString
-var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob
+var oMyBlob = new Blob(aFileParts, { type: "text/html" }); // the blob
 ```
 
 ## 規範

@@ -1,23 +1,73 @@
 ---
 title: margin-right
 slug: Web/CSS/margin-right
+l10n:
+  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
 {{CSSRef}}
 
-**`margin-right`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の[マージン領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
+**`margin-right`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の[マージン領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
 
-{{EmbedInteractiveExample("pages/css/margin-right.html")}}
+{{InteractiveExample("CSS Demo: margin-right")}}
 
-隣り合う二つのボックスの垂直マージンは融合することがあります。これは[_マージンの相殺_](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)と呼ばれています。
+```css interactive-example-choice
+margin-right: 1em;
+```
+
+```css interactive-example-choice
+margin-right: 10%;
+```
+
+```css interactive-example-choice
+margin-right: 10px;
+```
+
+```css interactive-example-choice
+margin-right: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="col"></div>
+    <div class="col transition-all" id="example-element"></div>
+    <div class="col"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
+.col {
+  width: 33.33%;
+  border: solid #5b6dcd 10px;
+  background-color: rgba(229, 232, 252, 0.6);
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffc129;
+  background-color: rgba(255, 244, 219, 0.6);
+}
+```
+
+隣り合う二つのボックスの垂直マージンは融合することがあります。これは[_マージンの相殺_](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)と呼ばれています。
 
 ## 構文
 
 ```css
 /* <length> 値 */
-margin-right: 20px;  /* 絶対的な寸法 */
-margin-right: 1em;   /* 文字の寸法からの相対 */
-margin-right: 5%;    /* 直近のブロックコンテナーの幅からの相対 */
+margin-right: 20px; /* 絶対的な寸法 */
+margin-right: 1em; /* 文字の寸法からの相対 */
+margin-right: 5%; /* 直近のブロックコンテナーの幅からの相対 */
 
 /* キーワード値 */
 margin-right: auto;
@@ -26,6 +76,7 @@ margin-right: auto;
 margin-right: inherit;
 margin-right: initial;
 margin-right: revert;
+margin-right: revert-layer;
 margin-right: unset;
 ```
 
@@ -36,7 +87,7 @@ margin-right: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : マージンの寸法を固定値で表したものです。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : マージンの寸法を包含ブロックの*幅*に対するパーセント値で表したものです。
+  - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
 - `auto`
 
   - : 右マージンは未使用の水平方向の余白を共有します。これは主に使用されているレイアウトモードによって決定されます。 `margin-left` と `margin-right` の両方が `auto` の場合は、両方に均等に割り当てられます。それ以外の場合は以下の表のとおりです。
@@ -137,9 +188,15 @@ margin-right: unset;
 ### ピクセル数とパーセント値を使用した右マージンの設定
 
 ```css
-.content { margin-right: 5%; }
-.sidebox { margin-right: 10px; }
-.logo    { margin-right: -5px; }
+.content {
+  margin-right: 5%;
+}
+.side-box {
+  margin-right: 10px;
+}
+.logo {
+  margin-right: -5px;
+}
 ```
 
 ## 仕様書
@@ -152,5 +209,8 @@ margin-right: unset;
 
 ## 関連情報
 
-- {{cssxref("margin-top")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}} と {{cssxref("margin")}} 一括指定
-- 対応付けられる論理的プロパティ: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}} および一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}
+- {{cssxref("margin-top")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}
+- 一括指定の {{cssxref("margin")}}
+- {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}
+- 一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}
+- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール

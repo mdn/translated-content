@@ -1,22 +1,11 @@
 ---
 title: ServiceWorkerContainer
 slug: Web/API/ServiceWorkerContainer
-tags:
-  - API
-  - Draft
-  - Interface
-  - NeedsTranslation
-  - Offline
-  - Reference
-  - Service Workers
-  - ServiceWorkerContainer
-  - TopicStub
-  - Workers
-translation_of: Web/API/ServiceWorkerContainer
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-[ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API) предоставляет интерфейс `ServiceWorkerContainer`, являющийся объектом (объект представляет собой сервис воркер, как единое целое в сетевой экосистеме) включающим следующие средства:
+[ServiceWorker API](/ru/docs/Web/API/Service_Worker_API) предоставляет интерфейс `ServiceWorkerContainer`, являющийся объектом (объект представляет собой сервис воркер, как единое целое в сетевой экосистеме) включающим следующие средства:
 Регистрация;
 Отмена регистрации;
 Обновление сервис воркеров;
@@ -38,11 +27,11 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "S
 ### Event handlers
 
 - {{domxref("ServiceWorkerContainer.oncontrollerchange")}}
-  - : An event handler fired whenever a {{Event("controllerchange")}} event occurs — when the document's associated {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.
+  - : An event handler fired whenever a [`controllerchange`](/ru/docs/Web/Events/controllerchange) event occurs — when the document's associated {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.
 - {{domxref("ServiceWorkerContainer.onerror")}}
-  - : An event handler fired whenever an {{Event("error")}} event occurs in the associated service workers.
+  - : An event handler fired whenever an [`error`](/ru/docs/Web/API/HTMLElement/error_event) event occurs in the associated service workers.
 - {{domxref("ServiceWorkerContainer.onmessage")}}
-  - : An event handler fired whenever a {{Event("message")}} event occurs — when incoming messages are received to the {{domxref("ServiceWorkerContainer")}} object (e.g. via a {{domxref("MessagePort.postMessage()")}} call.)
+  - : An event handler fired whenever a [`message`](/ru/docs/Web/API/BroadcastChannel/message_event) event occurs — when incoming messages are received to the {{domxref("ServiceWorkerContainer")}} object (e.g. via a {{domxref("MessagePort.postMessage()")}} call.)
 
 ## Methods
 
@@ -58,39 +47,43 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "S
 This code snippet is from the [service worker fallback-response sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/fallback-response/index.html#L126) (see [fallback-response live](http://googlechrome.github.io/samples/service-worker/fallback-response/)). The code checks to see if the browser supports service workers. Then the code registers the service worker and determines if the page is actively controlled by the service worker. If it isn't, it prompts the user to reload the page so the service worker can take control. The code also reports any registration failures.
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js', {scope: './'}).then(function() {
-    if (navigator.serviceWorker.controller) {
-      document.querySelector('#status').textContent = 'The service worker is currently handling network operations.';
-      showRequestButtons();
-    } else {
-      document.querySelector('#status').textContent = 'Please reload this page to allow the service worker to handle network operations.';
-    }
-  }).catch(function(error) {
-    document.querySelector('#status').textContent = error;
-  });
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("service-worker.js", { scope: "./" })
+    .then(function () {
+      if (navigator.serviceWorker.controller) {
+        document.querySelector("#status").textContent =
+          "The service worker is currently handling network operations.";
+        showRequestButtons();
+      } else {
+        document.querySelector("#status").textContent =
+          "Please reload this page to allow the service worker to handle network operations.";
+      }
+    })
+    .catch(function (error) {
+      document.querySelector("#status").textContent = error;
+    });
 } else {
-  var aElement = document.createElement('a');
-  aElement.href = 'http://www.chromium.org/blink/serviceworker/service-worker-faq';
-  aElement.textContent = 'unavailable';
-  document.querySelector('#status').appendChild(aElement);
+  var aElement = document.createElement("a");
+  aElement.href =
+    "http://www.chromium.org/blink/serviceworker/service-worker-faq";
+  aElement.textContent = "unavailable";
+  document.querySelector("#status").appendChild(aElement);
 }
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                        | Status                               | Comment             |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#service-worker-container', 'ServiceWorkerContainer')}} | {{Spec2('Service Workers')}} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [Using Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web workers](/ru/docs/Web/Guide/Performance/Using_web_workers)
+- [Using web workers](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)

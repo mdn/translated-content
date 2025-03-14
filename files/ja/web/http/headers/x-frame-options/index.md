@@ -1,15 +1,18 @@
 ---
 title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
+l10n:
+  sourceCommit: 2b44e3e665ceb5f4336089695aa5f617b1baf33c
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{deprecated_header}}
 
-**`X-Frame-Options`** は [HTTP](/ja/docs/Web/HTTP) のレスポンスヘッダーで、ブラウザーがページを {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}}、{{HTMLElement("object")}} の中に表示することを許可するかどうかを示すために使用します。サイトはコンテンツが他のサイトに埋め込まれないよう保証することで、[クリックジャッキング](https://ja.wikipedia.org/wiki/クリックジャッキング)攻撃を防ぐために使用することができます。
+> [!WARNING]
+> このヘッダーの代わりに、 {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} ディレクティブを {{HTTPHeader("Content-Security-Policy")}} ヘッダーで使用してください。
+
+**`X-Frame-Options`** は [HTTP](/ja/docs/Web/HTTP) のレスポンスヘッダーで、ブラウザーがページを {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}}、{{HTMLElement("object")}} の中に表示することを許可するかどうかを示すために使用します。サイトはコンテンツが他のサイトに埋め込まれないよう保証することで、[クリックジャッキング](/ja/docs/Web/Security/Types_of_attacks#クリックジャッキング)攻撃を防ぐために使用することができます。
 
 セキュリティが強化されるのは、ユーザーが `X-Frame-Options` に対応したブラウザーを使用して文書にアクセスした場合のみです。
-
-**メモ:** {{HTTPHeader("Content-Security-Policy")}} ヘッダーに {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} ディレクティブがあり、対応しているブラウザーにおいてこのヘッダーを<a href="https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options">置き換えて</a>います。
 
 <table class="properties">
   <tbody>
@@ -28,7 +31,7 @@ slug: Web/HTTP/Headers/X-Frame-Options
 
 `X-Frame-Options` には 2 つの有効なディレクティブがあります。
 
-```
+```http
 X-Frame-Options: DENY
 X-Frame-Options: SAMEORIGIN
 ```
@@ -39,86 +42,88 @@ X-Frame-Options: SAMEORIGIN
 
 - `DENY`
   - : ページをフレーム内に表示することは、それを試みているサイトが何であろうとできません。
-- `SAMEORIGIN`
-  - : ページは、ページ自体と同じオリジンのフレーム内でのみ表示されます。仕様書ではこのオプションを最上位、親、チェーン全体のどれに適用するかをブラウザーベンダーに任せていますが、すべての祖先が同じオリジンでない限り、利用価値がないと議論されています。 ({{bug(725490)}} を参照)。対応の詳細は[ブラウザーの互換性](#ブラウザーの互換性)もご覧ください。
-- `ALLOW-FROM uri` {{deprecated_inline}}
-  - : これは廃止されたディレクティブであり、最近のブラウザーでは動作しません。使用しないでください。対応している古いブラウザーでは、ページは指定されたオリジン _uri_ のフレーム内でのみ表示されます。なお、以前の Firefox では `SAMEORIGIN` と同じ問題がありました。 — フレームの祖先が同じオリジンであるかどうかをチェックしません。 {{HTTPHeader("Content-Security-Policy")}} ヘッダーには `frame-ancestors` ディレクティブがあり、代わりにこれを使用することができます。
+- `SAMEORIGIN` {{deprecated_inline}}
+  - : ページは、すべての祖先フレームがページ自体と同じオリジンである場合にのみ表示できます。
+- `ALLOW-FROM origin` {{deprecated_inline}}
+  - : これは古いディレクティブです。このディレクティブを持つレスポンスヘッダーに遭遇した現行のブラウザーは、そのヘッダーを完全に無視します。 HTTP の {{HTTPHeader("Content-Security-Policy")}} ヘッダーには {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} ディレクティブがありますので、そちらを使用してください。
 
 ## 例
 
-> **メモ:** X-Frame-Options を {{HTMLElement("meta")}} 要素に設定しても意味がありません。例えば、`<meta http-equiv="X-Frame-Options" content="deny">` は効果がありません。使用しないでください。以下の例にあるように、 `X-Frame-Options` は HTTP ヘッダーを通じて設定された場合のみ動作します。
+> [!NOTE]
+> X-Frame-Options を {{HTMLElement("meta")}} 要素に設定しても（例えば、`<meta http-equiv="X-Frame-Options" content="deny">`）効果はありません。 `X-Frame-Options` は HTTP ヘッダーを通じて設定された場合のみ動作します。
 
 ### Apache の設定
 
-Apache で X-Frame-Options ヘッダをすべてのページで送信するように設定するには、サイトの設定に以下の記述を追加してください。
+Apache で X-Frame-Options ヘッダーをすべてのページで送信するように設定するには、サイトの設定に以下の記述を追加してください。
 
-```
+```apacheconf
 Header always set X-Frame-Options "SAMEORIGIN"
 ```
 
 Apache で `X-Frame-Options` を DENY に設定するには、サイトの設定に以下の記述を追加してください
 
-```
+```apacheconf
 Header set X-Frame-Options "DENY"
 ```
 
 ### nginx の設定
 
-nginx で `X-Frame-Options` ヘッダーを送信するように設定するには、以下の記述を http、server、 location のいずれかの設定に追加してください。
+Nginx で `X-Frame-Options` ヘッダーを送信するように設定するには、以下の記述を http、server、 location のいずれかの設定に追加してください。
 
-```
+```nginx
 add_header X-Frame-Options SAMEORIGIN always;
+```
+
+`X-Frame-Options` ヘッダーで `DENY` を設定するには、次のようにします。
+
+```nginx
+add_header X-Frame-Options DENY always;
 ```
 
 ### IIS の設定
 
 IIS で `X-Frame-Options` ヘッダーを送信するように設定するには、サイトの `Web.config` ファイルに以下の設定を追加してください。
 
-```html
+```xml
 <system.webServer>
-  ...
-
+  …
   <httpProtocol>
     <customHeaders>
       <add name="X-Frame-Options" value="SAMEORIGIN" />
     </customHeaders>
   </httpProtocol>
-
-  ...
+  …
 </system.webServer>
 ```
 
-または、IIS マネージャーのユーザーインターフェイスを使用してこの構成を設定する方法については、[マイクロソフトのサポート記事](https://support.office.com/en-us/article/Mitigating-framesniffing-with-the-X-Frame-Options-header-1911411b-b51e-49fd-9441-e8301dcdcd79)を参照してください。
+詳しくは、[IIS マネージャーのユーザーインターフェイスを使用してこの構成を設定する方法についてのマイクロソフトのサポート記事](https://support.microsoft.com/en-US/office/mitigating-framesniffing-with-the-x-frame-options-header-1911411b-b51e-49fd-9441-e8301dcdcd79)を参照してください。
 
 ### HAProxy の設定
 
 HAProxy で `X-Frame-Options` ヘッダーを送信するように設定するには、以下の記述を front-end、listen、backend のいずれかの設定に追加してください。
 
-```
+```plain
 rspadd X-Frame-Options:\ SAMEORIGIN
 ```
 
 他にも、より新しいバージョンでは次のような設定ができます。
 
-```
+```plain
 http-response set-header X-Frame-Options SAMEORIGIN
 ```
 
-<h3 id="Configuring_Express" name="Configuring_Express">Express の設定</h3>
+### Express の設定
 
-Express で `X-Frame-Options` ヘッダーを送信するように設定するには、[helmet](https://helmetjs.github.io/) を使用して [frameguard](https://helmetjs.github.io/docs/frameguard/) でヘッダーを設定してください。以下の記述をサーバー設定に追加してください。
+`X-Frame-Options` ヘッダーを [helmet](https://helmetjs.github.io/) を使用して `SAMEORIGIN` に設定するには、サーバー設定に次のものを追加してください。
 
 ```js
-const helmet = require('helmet');
+const helmet = require("helmet");
 const app = express();
-app.use(helmet.frameguard({ action: 'SAMEORIGIN' }));
-```
-
-他にも、直接 frameguard を使用することもできます。
-
-```js
-const frameguard = require('frameguard')
-app.use(frameguard({ action: 'SAMEORIGIN' }))
+app.use(
+  helmet({
+    xFrameOptions: { action: "sameorigin" },
+  }),
+);
 ```
 
 ## 仕様書
@@ -132,6 +137,5 @@ app.use(frameguard({ action: 'SAMEORIGIN' }))
 ## 関連情報
 
 - {{HTTPHeader("Content-Security-Policy")}} の {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} ディレクティブ
-- [HTTP Header Field X-Frame-Options - RFC 7034](https://datatracker.ietf.org/doc/html/rfc7034)
-- [ClickJacking Defenses - IEBlog](https://docs.microsoft.com/en-us/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses)
-- [Combating ClickJacking with X-Frame-Options - IEInternals](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options)
+- [ClickJacking Defenses - IEBlog](https://learn.microsoft.com/en-us/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses)
+- [Combating ClickJacking with X-Frame-Options - IEInternals](https://learn.microsoft.com/en-us/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options)

@@ -1,15 +1,8 @@
 ---
-title: '<output>: 출력 요소'
+title: "<output>: 출력 요소"
 slug: Web/HTML/Element/output
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - HTML:Flow content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/output
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<output>` 요소**는 웹 사이트나 앱에서 계산이나 사용자 행동의 결과를 삽입할 수 있는 컨테이너 요소입니다.
@@ -42,7 +35,7 @@ translation_of: Web/HTML/Element/output
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -67,13 +60,15 @@ translation_of: Web/HTML/Element/output
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("for")}}
-  - : 스페이스로 구분한, 다른 여러 요소 {{htmlattrxref("id")}}의 목록. 목록에 포함된 요소가 출력 결과에 공헌했거나 영향을 주었음을 나타냅니다.
-- {{htmlattrdef("form")}}
-  - : `<output>`과 연결할 {{HTMLElement("form")}} 요소("양식 소유자"). 같은 문서에 존재하는 `<form>` 요소의 {{htmlattrxref("id")}} 특성 값을 사용해야 합니다. `form` 특성을 지정하지 않았으나 조상 중 `<form>` 요소가 존재하면 해당 `<form>`과 연결됩니다.
-  
+- `for`
+  - : 스페이스로 구분한, 다른 여러 요소 [`id`](/ko/docs/Web/HTML/Global_attributes#id)의 목록. 목록에 포함된 요소가 출력 결과에 공헌했거나 영향을 주었음을 나타냅니다.
+- `form`
+
+  - : `<output>`과 연결할 {{HTMLElement("form")}} 요소("양식 소유자"). 같은 문서에 존재하는 `<form>` 요소의 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성 값을 사용해야 합니다. `form` 특성을 지정하지 않았으나 조상 중 `<form>` 요소가 존재하면 해당 `<form>`과 연결됩니다.
+
   `form` 특성을 사용하면 `<output>`을 `<form>` 요소에 넣지 않고도 연결할 수 있고, 조상 중 `<form>`이 있더라도 소유자를 재정의할 수 있습니다.
-- {{htmlattrdef("name")}}
+
+- `name`
   - : 요소의 이름. {{domxref("HTMLFormElement.elements", "form.elements")}} API에서 사용합니다.
 
 `<output>`의 값, 이름, 콘텐츠는 양식 전송 시 제출되지 않습니다.
@@ -100,4 +95,4 @@ translation_of: Web/HTML/Element/output
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.output")}}
+{{Compat}}

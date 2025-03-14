@@ -1,27 +1,51 @@
 ---
 title: handler.has()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/has
 ---
 
 {{JSRef}}
 
 **`handler.has()`** 方法是针对 {{jsxref("Operators/in", "in")}} 操作符的代理方法。
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-has.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.has()", "taller")}}
+
+```js interactive-example
+const handler1 = {
+  has(target, key) {
+    if (key[0] === "_") {
+      return false;
+    }
+    return key in target;
+  },
+};
+
+const monster1 = {
+  _secret: "easily scared",
+  eyeCount: 4,
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+console.log("eyeCount" in proxy1);
+// Expected output: true
+
+console.log("_secret" in proxy1);
+// Expected output: false
+
+console.log("_secret" in monster1);
+// Expected output: true
+```
 
 ## 语法
 
 ```js
 var p = new Proxy(target, {
-  has: function(target, prop) {
-  }
+  has: function (target, prop) {},
 });
 ```
 
 ### 参数
 
-`下面是传递给 has` 方法的参数。`this` is bound to the handler.
+下面是传递给 `has()` 方法的参数。`this` 会被绑定至 handler 上。
 
 - `target`
   - : 目标对象。
@@ -57,15 +81,17 @@ var p = new Proxy(target, {
 下面的代码拦截了 {{jsxref("Operators/in", "in")}} 操作符。
 
 ```js
-var p = new Proxy({}, {
-  has: function(target, prop) {
-    console.log('called: ' + prop);
-    return true;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    has: function (target, prop) {
+      console.log("called: " + prop);
+      return true;
+    },
+  },
+);
 
-console.log('a' in p); // "called: a"
-                       // true
+console.log("a" in p); // "called: a"; outputs true
 ```
 
 下面的代码违反了约束。
@@ -74,12 +100,12 @@ console.log('a' in p); // "called: a"
 var obj = { a: 10 };
 Object.preventExtensions(obj);
 var p = new Proxy(obj, {
-  has: function(target, prop) {
+  has: function (target, prop) {
     return false;
-  }
+  },
 });
 
-'a' in p; // TypeError is thrown
+"a" in p; // TypeError is thrown
 ```
 
 ## 规范

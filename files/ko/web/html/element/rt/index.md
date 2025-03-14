@@ -1,20 +1,25 @@
 ---
-title: '<rt>: 루비 텍스트 요소'
+title: "<rt>: 루비 텍스트 요소"
 slug: Web/HTML/Element/rt
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Ruby
-  - Web
-translation_of: Web/HTML/Element/rt
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<rt>` 요소**는 동아시아 문자의 루비 주석에서 발음, 번역 등을 나타내는 텍스트 부분을 지정합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/rt.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;rt&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<ruby>
+  漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
+
+```css interactive-example
+ruby {
+  font-size: 2em;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -64,10 +69,7 @@ translation_of: Web/HTML/Element/rt
 다음 예제는 {{htmlelement("ruby")}} 요소를 사용해 한자의 발음을 표기합니다.
 
 ```html
-<ruby>
-  漢 <rt>한</rt>
-  字 <rt>자</rt>
-</ruby>
+<ruby> 漢 <rt>한</rt> 字 <rt>자</rt> </ruby>
 ```
 
 ```css hidden
@@ -100,7 +102,7 @@ body {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.rt")}}
+{{Compat}}
 
 ## 같이 보기
 

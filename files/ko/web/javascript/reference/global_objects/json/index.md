@@ -1,12 +1,6 @@
 ---
 title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
-tags:
-  - JSON
-  - JavaScript
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON
 ---
 
 {{JSRef}}
@@ -27,9 +21,9 @@ JSON은 객체, 배열, 숫자, 문자열, 불리언과 {{jsxref("null")}}을 �
 {{jsxref("JSON.parse()")}}로 JSON 문자열을 분석하고 {{jsxref("eval")}}이 JavaScript 문자열로 실행하는 다음 예시를 참고하세요.
 
 ```js
-const code = '"\u2028\u2029"'
-JSON.parse(code) // 모든 엔진에서 "\u2028\u2029"로 평가
-eval(code)       // 오래된 엔진에서 SyntaxError
+const code = '"\u2028\u2029"';
+JSON.parse(code); // 모든 엔진에서 "\u2028\u2029"로 평가
+eval(code); // 오래된 엔진에서 SyntaxError
 ```
 
 다른 차이점으로는 문자열의 작은따옴표 금지와, 주석 및 {{jsxref("undefined")}} 미지원이 있습니다. JSON에 기반한, 보다 사람 친화적인 설정 형식을 원하면 Babel 컴파일러가 사용하는 [JSON5](https://json5.org/)가 있고, 좀 더 많이 쓰이는 [YAML](https://ko.wikipedia.org/wiki/YAML)도 있습니다.
@@ -86,7 +80,7 @@ eval(code)       // 오래된 엔진에서 SyntaxError
                  or ArrayElements , JSON
 ```
 
-중요하지 않은 공백은 `JSONNumber`(숫자에는 공백이 없어야 함) 또는 `JSONString`(문자열에서 해당 문자로 해석되거나 오류를 일으킴) 내를 제외하고 어디에나 존재할 수 있습니다. 탭 문자([U+0009](http://unicode-table.com/en/0009/)), 캐리지 리턴([U+000D](http://unicode-table.com/en/000D/)), 라인 피드([U+000A](http://unicode-table.com/en/000A/)) 및 스페이스([U+0020](http://unicode-table.com/en/0020/)) 문자만이 유효한 공백 문자입니다.
+중요하지 않은 공백은 `JSONNumber`(숫자에는 공백이 없어야 함) 또는 `JSONString`(문자열에서 해당 문자로 해석되거나 오류를 일으킴) 내를 제외하고 어디에나 존재할 수 있습니다. 탭 문자([U+0009](https://symbl.cc/en/0009/)), 캐리지 리턴([U+000D](https://symbl.cc/en/000D/)), 라인 피드([U+000A](https://symbl.cc/en/000A/)) 및 스페이스([U+0020](https://symbl.cc/en/0020/)) 문자만이 유효한 공백 문자입니다.
 
 ## 메서드
 
@@ -95,7 +89,7 @@ eval(code)       // 오래된 엔진에서 SyntaxError
 - {{jsxref("JSON.stringify()")}}
   - : 주어진 값에 해당하는 JSON 문자열을 반환합니다. 선택 사항으로 특정 속성만 포함하거나 사용자 정의 방식으로 속성을 대체합니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

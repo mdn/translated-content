@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Statements/return
 
 **`return` 表達式**會終止函式執行，並指明函式呼叫器（function caller）要回傳的數值。
 
-{{EmbedInteractiveExample("pages/js/statement-return.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Return")}}
+
+```js interactive-example
+function getRectArea(width, height) {
+  if (width > 0 && height > 0) {
+    return width * height;
+  }
+  return 0;
+}
+
+console.log(getRectArea(3, 4));
+// Expected output: 12
+
+console.log(getRectArea(-3, 4));
+// Expected output: 0
+```
 
 ## 語法
 
@@ -24,7 +39,7 @@ return [[expression]];
 
 ```js
 function square(x) {
-   return x * x;
+  return x * x;
 }
 var demo = square(3);
 // demo will equal 9
@@ -44,10 +59,10 @@ return x + y / 3;
 
 ### 自動插入分號
 
-`return` 宣告會受[自動插入分號](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)（automatic semicolon insertion，ASI）影響。No line terminator is allowed between the `return` keyword and the expression.
+`return` 宣告會受[自動插入分號](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)（automatic semicolon insertion，ASI）影響。No line terminator is allowed between the `return` keyword and the expression.
 
 ```js
-return
+return;
 a + b;
 ```
 
@@ -60,14 +75,13 @@ a + b;
 
 主控台會警告「unreachable code after return statement」（在 return 宣告後面有無法抵達的程式碼）。
 
-> **備註：** 從 Gecko 40 開始，如果主控台發現在 return 宣告後面有無法抵達的程式碼，就會顯示警告。
+> [!NOTE]
+> 從 Gecko 40 開始，如果主控台發現在 return 宣告後面有無法抵達的程式碼，就會顯示警告。
 
 要避免 ASI 問題，可以添加括號：
 
 ```js
-return (
-  a + b
-);
+return a + b;
 ```
 
 ## 示例
@@ -78,14 +92,15 @@ return (
 
 ```js
 function counter() {
-  for (var count = 1; ; count++) {  // 無限迴圈
-    console.log(count + 'A'); // 直到 5
-      if (count === 5) {
-        return;
-      }
-      console.log(count + 'B');  // 直到 4
+  for (var count = 1; ; count++) {
+    // 無限迴圈
+    console.log(count + "A"); // 直到 5
+    if (count === 5) {
+      return;
     }
-  console.log(count + 'C');  // 永不顯示
+    console.log(count + "B"); // 直到 4
+  }
+  console.log(count + "C"); // 永不顯示
 }
 
 counter();
@@ -104,11 +119,13 @@ counter();
 
 ### 函式回傳
 
-請參見[閉包](/zh-TW/docs/Web/JavaScript/Closures)。
+請參見[閉包](/zh-TW/docs/Web/JavaScript/Guide/Closures)。
 
 ```js
 function magic(x) {
-  return function calc(x) { return x * 42; };
+  return function calc(x) {
+    return x * 42;
+  };
 }
 
 var answer = magic();
@@ -125,5 +142,5 @@ answer(1337); // 56154
 
 ## 參見
 
-- [函式](/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope)
-- [閉包](/zh-TW/docs/Web/JavaScript/Closures)
+- [函式](/zh-TW/docs/Web/JavaScript/Reference/Functions)
+- [閉包](/zh-TW/docs/Web/JavaScript/Guide/Closures)

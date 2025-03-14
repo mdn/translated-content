@@ -1,21 +1,48 @@
 ---
 title: background-clip
 slug: Web/CSS/background-clip
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/background-clip
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`background-clip`** 속성은 요소의 배경이 테두리, 안쪽 여백, 콘텐츠 상자 중 어디까지 차지할 지 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/background-clip.html")}}
+{{InteractiveExample("CSS Demo: background-clip")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+```css interactive-example-choice
+background-clip: border-box;
+```
+
+```css interactive-example-choice
+background-clip: padding-box;
+```
+
+```css interactive-example-choice
+background-clip: content-box;
+```
+
+```css interactive-example-choice
+background-clip: text;
+color: transparent;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is the content of the element.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-image: url("/shared-assets/images/examples/leopard.jpg");
+  color: #d73611;
+  text-shadow: 2px 2px black;
+  padding: 20px;
+  border: 10px dashed #333;
+  font-size: 2em;
+  font-weight: bold;
+}
+```
 
 요소가 {{cssxref("background-image")}} 또는 {{cssxref("background-color")}}를 가지지 않으면, `background-clip`은 ({{cssxref("border-style")}} 또는 {{cssxref("border-image")}} 등으로 인해) 테두리에 투명하거나 반투명한 부분이 존재하는 경우에만 시각적 차이가 발생합니다. 그렇지 않은 경우 테두리가 차이점을 가립니다.
 
@@ -59,8 +86,12 @@ background-clip: unset;
 
 ```html
 <p class="border-box">The background extends behind the border.</p>
-<p class="padding-box">The background extends to the inside edge of the border.</p>
-<p class="content-box">The background extends only to the edge of the content box.</p>
+<p class="padding-box">
+  The background extends to the inside edge of the border.
+</p>
+<p class="content-box">
+  The background extends only to the edge of the content box.
+</p>
 <p class="text">The background is clipped to the foreground text.</p>
 ```
 
@@ -68,7 +99,7 @@ background-clip: unset;
 
 ```css
 p {
-  border: .8em darkviolet;
+  border: 0.8em darkviolet;
   border-style: dotted double;
   margin: 1em 0;
   padding: 1.4em;
@@ -77,14 +108,20 @@ p {
   text-decoration: underline;
 }
 
-.border-box { background-clip: border-box; }
-.padding-box { background-clip: padding-box; }
-.content-box { background-clip: content-box; }
+.border-box {
+  background-clip: border-box;
+}
+.padding-box {
+  background-clip: padding-box;
+}
+.content-box {
+  background-clip: content-box;
+}
 
 .text {
   background-clip: text;
   -webkit-background-clip: text;
-  color: rgba(0,0,0,.2);
+  color: rgba(0, 0, 0, 0.2);
 }
 ```
 
@@ -104,4 +141,4 @@ p {
 
 - {{cssxref("clip-path")}} 속성은 배경 뿐 아니라 하나의 **요소 전체**에서 표시할 부분을 지정하는 클리핑 영역을 생성합니다.
 - 배경 속성: {{cssxref("background")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}
-- [CSS 기본 박스 모델 입문](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [CSS 기본 박스 모델 입문](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

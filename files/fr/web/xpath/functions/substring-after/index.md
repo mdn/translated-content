@@ -1,13 +1,9 @@
 ---
 title: substring-after
 slug: Web/XPath/Functions/substring-after
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/substring-after
-original_slug: Web/XPath/Fonctions/substring-after
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `substring-after()` retourne la partie d'une chaîne donnée suivant une sous-chaîne donnée.
 
@@ -43,7 +39,7 @@ Une chaîne.
 
 ### Définition
 
-[XPath 1.0, section 4.2](http://www.w3.org/TR/xpath#function-substring-after).
+[XPath 1.0, section 4.2](https://www.w3.org/TR/xpath#function-substring-after).
 
 ### Support Gecko
 

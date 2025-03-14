@@ -16,11 +16,12 @@ slug: Web/API/ResizeObserverEntry/devicePixelContentBoxSize
 - `inlineSize`
   - : 被监听的元素在内联方向上内容盒的设备像素长度。对于具有水平 {{cssxref("writing-mode")}} 的盒子，这是水平尺寸或者宽度；如果 writing-mode 是垂直的，这是垂直的尺寸或者高度。
 
-> **备注：** 更多关于书写模式和块以及内联尺寸的解释，请阅读[处理不同方向的文本](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)。
+> [!NOTE]
+> 更多关于书写模式和块以及内联尺寸的解释，请阅读[处理不同方向的文本](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)。
 
 ## 示例
 
-以下片段取自文章[使用 devicePixelContentBox 完美地渲染](https://web.dev/device-pixel-content-box/)。由于 {{domxref("ResizeObserver")}} 的回调函数在绘制前和布局后调用。这提供了一个精确记录物理像素大小的机会，以确保将画布像素与物理像素一对一映射。
+以下片段取自文章[使用 devicePixelContentBox 完美地渲染](https://web.developers.google.cn/articles/device-pixel-content-box)。由于 {{domxref("ResizeObserver")}} 的回调函数在绘制前和布局后调用。这提供了一个精确记录物理像素大小的机会，以确保将画布像素与物理像素一对一映射。
 
 ```js
 const observer = new ResizeObserver((entries) => {
@@ -30,7 +31,7 @@ const observer = new ResizeObserver((entries) => {
 
   /* … render to canvas … */
 });
-observer.observe(canvas, {box: 'device-pixel-content-box'});
+observer.observe(canvas, { box: "device-pixel-content-box" });
 ```
 
 ## 规范

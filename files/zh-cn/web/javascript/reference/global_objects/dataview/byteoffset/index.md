@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
 
 **`byteOffset`** 属性描述了从 {{jsxref("ArrayBuffer")}} 开始的字节偏移量。
 
-{{EmbedInteractiveExample("pages/js/dataview-byteoffset.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.byteOffset")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer, 12, 4); // From byte 12 for the next 4 bytes
+
+console.log(view.byteOffset);
+// Expected output: 12
+```
 
 ## 语法
 
@@ -40,7 +50,7 @@ dataview2.byteOffset; // 3 (在构造 DataView 时指定)
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}

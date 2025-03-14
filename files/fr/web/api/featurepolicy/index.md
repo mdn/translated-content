@@ -1,24 +1,11 @@
 ---
 title: FeaturePolicy
 slug: Web/API/FeaturePolicy
-tags:
-  - API
-  - Feature Policy
-  - Feature-Policy
-  - FeaturePolicy
-  - Interface
-  - Permissions
-  - Privileges
-  - Reference
-  - access
-  - accès
-  - delegation
-translation_of: Web/API/FeaturePolicy
 ---
 
 {{APIRef("Feature Policy")}}
 
-L'interface `FeaturePolicy` de l'[API Feature Policy](/fr/docs/Web/HTTP/Feature_Policy) représente l'ensemble des règles appliquées au contexte d'exécution courant.
+L'interface `FeaturePolicy` de l'[API Feature Policy](/fr/docs/Web/HTTP/Permissions_Policy) représente l'ensemble des règles appliquées au contexte d'exécution courant.
 
 ## Méthodes de FeaturePolicy
 

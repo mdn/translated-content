@@ -1,6 +1,8 @@
 ---
-title: Node.firstChild
+title: "Node: firstChild プロパティ"
 slug: Web/API/Node/firstChild
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
@@ -9,7 +11,8 @@ slug: Web/API/Node/firstChild
 
 このノードが {{domxref("Document")}} であった場合は、このプロパティは直接のこのリスト内で最初のノードを返します。
 
-> **メモ:** このプロパティはこのノードの最初の子であれば、あらゆる種類のノードを返します。
+> [!NOTE]
+> このプロパティはこのノードの最初の子であれば、あらゆる種類のノードを返します。
 > {{domxref("Text")}} または {{domxref("Comment")}} ノードになることがあります。
 > 他の要素の子である最初の {{domxref("Element")}} を取得したい場合は、 {{domxref("Element.firstElementChild")}} を使用することを検討してください。
 
@@ -27,7 +30,7 @@ slug: Web/API/Node/firstChild
 </p>
 
 <script>
-  const p01 = document.getElementById('para-01');
+  const p01 = document.getElementById("para-01");
   console.log(p01.firstChild.nodeName);
 </script>
 ```
@@ -42,7 +45,7 @@ slug: Web/API/Node/firstChild
 <p id="para-01"><span>最初の span</span></p>
 
 <script>
-  const p01 = document.getElementById('para-01');
+  const p01 = document.getElementById("para-01");
   console.log(p01.firstChild.nodeName);
 </script>
 ```

@@ -3,14 +3,16 @@ title: Hotlink (直リンク)
 slug: Glossary/Hotlink
 ---
 
+{{GlossarySidebar}}
+
 **直リンク** (**ホットリンク**、**インラインリンク**とも呼ばれる) は、別のサイトから直接リンクされたオブジェクト (通常は画像) です。たとえば、 site1.com でホストされている画像が site2.com に直接表示されるものです。
 
 この行為は、リンク先のオブジェクトをホストしているウェブサイトの帯域幅を勝手に利用することになるため、多くの場合はひんしゅくを買う行為であり、また著作権上の懸念 — 許可なく行われた場合は窃盗とみなされます — を引き起こす可能性もあるためです。
 
 1. 一般知識
 
-    1. Wikipedia 上の [直リンク](https://ja.wikipedia.org/wiki/直リンク)
+   1. Wikipedia 上の [直リンク](https://ja.wikipedia.org/wiki/直リンク)
 
-2. [MDN Web Docs 用語集](/ja/docs/Glossary)
+2. 関連用語:
 
-    1. {{glossary("Hyperlink")}}
+   1. {{glossary("Hyperlink")}}

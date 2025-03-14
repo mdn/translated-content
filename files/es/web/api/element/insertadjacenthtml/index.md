@@ -39,14 +39,15 @@ element.insertAdjacentHTML(posición, texto);
 <!-- afterend -->
 ```
 
-> **Nota:** Las posiciones `beforebegin` y `afterend` funcionan únicamente si el nodo se encuentra en el árbol DOM y tiene un elemento padre.
+> [!NOTE]
+> Las posiciones `beforebegin` y `afterend` funcionan únicamente si el nodo se encuentra en el árbol DOM y tiene un elemento padre.
 
 ## Ejemplo
 
 ```js
 // <div id="one">one</div>
-var d1 = document.getElementById('one');
-d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
+var d1 = document.getElementById("one");
+d1.insertAdjacentHTML("afterend", '<div id="two">two</div>');
 
 // En este punto, la nueva estructura es:
 // <div id="one">one</div><div id="two">two</div>

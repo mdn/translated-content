@@ -1,11 +1,6 @@
 ---
 title: <percentage>
 slug: Web/CSS/percentage
-tags:
-  - CSS
-  - Reference
-  - Type
-translation_of: Web/CSS/percentage
 ---
 
 {{CSSRef}}
@@ -14,7 +9,8 @@ Le type de données CSS **`<percentage>`** représente une valeur exprimée en p
 
 De nombreuses propriétés CSS utilisent des pourcentages : {{cssxref("width")}}, {{cssxref("margin")}}, {{cssxref("padding")}}, etc.. Les pourcentages peuvent aussi être vus avec {{cssxref("font-size")}}, où la taille du texte est directement en relation avec celle de son parent.
 
-> **Note :** Seules les valeurs calculées sont héritées. Ainsi, même si une valeur en pourcentage est utilisée sur la propriété parent, une valeur réelle, comme une largeur en pixel pour une valeur {{cssxref("&lt;length&gt;")}}, sera accessible sur la propriété héritée, pas la valeur en pourcentage.
+> [!NOTE]
+> Seules les valeurs calculées sont héritées. Ainsi, même si une valeur en pourcentage est utilisée sur la propriété parent, une valeur réelle, comme une largeur en pixel pour une valeur {{cssxref("&lt;length&gt;")}}, sera accessible sur la propriété héritée, pas la valeur en pourcentage.
 
 ## Syntaxe
 

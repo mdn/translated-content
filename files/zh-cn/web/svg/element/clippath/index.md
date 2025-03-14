@@ -12,7 +12,11 @@ slug: Web/SVG/Element/clipPath
 ## 示例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -25,7 +29,9 @@ html,body,svg { height:100% }
   </clipPath>
 
   <!-- 作为引用元素（英文原文：for reference）的黑色心形 -->
-  <path id="heart" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
+  <path
+    id="heart"
+    d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
 
   <!--
     和上述黑色心形形状相同的红色心形，剪切路径是上面定义的圆；
@@ -38,7 +44,14 @@ html,body,svg { height:100% }
 ```css
 /* 如果浏览器支持几何属性 r，可以加一点 css */
 
-@keyframes openYourHeart {from {r: 0} to {r: 60px}}
+@keyframes openYourHeart {
+  from {
+    r: 0;
+  }
+  to {
+    r: 60px;
+  }
+}
 
 #myClip circle {
   animation: openYourHeart 15s infinite;
@@ -57,18 +70,7 @@ html,body,svg { height:100% }
   - : 为 `<clipPath>` 元素的内容定义坐标系。
     _Value type_: `userSpaceOnUse`|`objectBoundingBox` ; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
 
-### 全局属性
-
-- [Core Attributes](/docs/Web/SVG/Attribute/Core)
-  - : Most notably: {{SVGAttr('id')}}
-- [Styling Attributes](/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Conditional Processing Attributes](/docs/Web/SVG/Attribute/Conditional_Processing)
-  - : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- [Presentation Attributes](/docs/Web/SVG/Attribute/Presentation)
-  - : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
-
-## 用法
+## 使用上下文
 
 {{svginfo}}
 

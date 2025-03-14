@@ -5,13 +5,13 @@ slug: Web/CSS/box-shadow
 
 {{CSSRef}}
 
-`box-shadow` 屬性為一個逗號分隔的列表描述一個或多個的陰影效果. 這使的你能夠從幾乎任何元素的框架放入陰影. 如果一個標記了 {{cssxref("border-radius")}} 的元素也標記了 box shadow, 這將使得他們有相同的圓邊. 多重 box shadows 的 z-index 排序跟多重 [text shadows](/zh-TW/CSS/text-shadow) 一樣(第一個備標記的陰影在最上面).
+`box-shadow` 屬性為一個逗號分隔的列表描述一個或多個的陰影效果. 這使的你能夠從幾乎任何元素的框架放入陰影. 如果一個標記了 {{cssxref("border-radius")}} 的元素也標記了 box shadow, 這將使得他們有相同的圓邊. 多重 box shadows 的 z-index 排序跟多重 [text shadows](/zh-TW/docs/Web/CSS/text-shadow) 一樣(第一個備標記的陰影在最上面).
 
 {{cssinfo}}
 
 ### Box-shadow 產生器
 
-[Interactive tool](/zh-TW/docs/Web/CSS/Tools/Box-shadow_generator) 可以產生 box-shadow.
+[Interactive tool](/zh-TW/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator) 可以產生 box-shadow.
 
 ## 表達式
 
@@ -29,7 +29,9 @@ box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 box-shadow: inset 5em 1em gold;
 
 /* Any number of shadows, separated by commas */
-box-shadow: 3px 3px red, -1em 0 0.4em olive;
+box-shadow:
+  3px 3px red,
+  -1em 0 0.4em olive;
 ```
 
 ### 參數
@@ -52,8 +54,8 @@ box-shadow: 3px 3px red, -1em 0 0.4em olive;
 ## 範例
 
 - [CSS box-shadow examples](https://techmoon.xyz/css-box-shadow-examples-by-css-scan/)
-- [box-shadow test](http://www.elektronotdienst-nuernberg.de/bugs/box-shadow_inset.html)
-- [box-shadow tutorial and examples](http://markusstange.wordpress.com/2009/02/15/fun-with-box-shadows/)
+- [box-shadow test](http://elektronotdienst-nuernberg.de/bugs/box-shadow_inset.html)
+- [box-shadow tutorial and examples](https://markusstange.wordpress.com/2009/02/15/fun-with-box-shadows/)
 
 ```plain
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

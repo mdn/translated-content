@@ -7,7 +7,67 @@ slug: Web/CSS/scroll-margin
 
 **`scroll-margin`** は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素のスクロールマージンを一度にすべて、ちょうど `margin` プロパティが個別指定の `margin-*` に値を割り当てるように、値を割り当てます。
 
-{{EmbedInteractiveExample("pages/css/scroll-margin.html")}}
+{{InteractiveExample("CSS Demo: scroll-margin")}}
+
+```css interactive-example-choice
+scroll-margin: 0;
+```
+
+```css interactive-example-choice
+scroll-margin: 20px;
+```
+
+```css interactive-example-choice
+scroll-margin: 2em;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="scroller">
+    <div>1</div>
+    <div id="example-element">2</div>
+    <div>3</div>
+  </div>
+  <div class="info">Scroll »</div>
+</section>
+```
+
+```css interactive-example
+.default-example .info {
+  inline-size: 100%;
+  padding: 0.5em 0;
+  font-size: 90%;
+  writing-mode: vertical-rl;
+}
+
+.scroller {
+  text-align: left;
+  height: 250px;
+  width: 270px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid black;
+  scroll-snap-type: y mandatory;
+}
+
+.scroller > div {
+  flex: 0 0 250px;
+  background-color: rebeccapurple;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.scroller > div:nth-child(even) {
+  background-color: #fff;
+  color: rebeccapurple;
+}
+```
 
 ## 構成要素のプロパティ
 
@@ -23,7 +83,7 @@ slug: Web/CSS/scroll-margin
 ```css
 /* <length> 値 */
 scroll-margin: 10px;
-scroll-margin: 1em .5em 1em 1em;
+scroll-margin: 1em 0.5em 1em 1em;
 
 /* グローバル値 */
 scroll-margin: inherit;
@@ -128,7 +188,8 @@ scroll-margin: unset;
 
 つまり、真ん中の子要素を過ぎてスクロールした場合、2 番目の `<div>` の左端から `1rem`、3 番目の `<div>` の左端から `2rem` のところでスナップすることになります。
 
-> **メモ:** ここでは `scroll-margin` をすべての辺に一度に設定していますが、実際に関係するのは先頭側だけです。例えば `scroll-margin-inline-start: 1rem` や `scroll-margin: 0 0 0 1rem` などのように、一辺のみにスクロールマージンを設定しても同様に機能します。
+> [!NOTE]
+> ここでは `scroll-margin` をすべての辺に一度に設定していますが、実際に関係するのは先頭側だけです。例えば `scroll-margin-inline-start: 1rem` や `scroll-margin: 0 0 0 1rem` などのように、一辺のみにスクロールマージンを設定しても同様に機能します。
 
 #### 結果
 
@@ -146,5 +207,5 @@ scroll-margin: unset;
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_Scroll_Snap)
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
 - [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)

@@ -1,72 +1,92 @@
 ---
 title: class
 slug: Web/JavaScript/Reference/Statements/class
+l10n:
+  sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
 {{jsSidebar("Statements")}}
 
-**class 声明**创建一个基于原型继承的具有给定名称的新类。
+**`class`** 声明创建一个{{Glossary("binding", "绑定")}}到给定名称的新[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)。
 
-{{EmbedInteractiveExample("pages/js/statement-class.html")}}
+你也可以使用 [`class` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)来定义类。
 
-你也可以使用{{jsxref("Operators/class", "类表达式", "", 1)}}定义类。但是不同于类表达式，类声明不允许再次声明已经存在的类，否则将会抛出一个类型错误。
+{{InteractiveExample("JavaScript Demo: Statement - Class")}}
+
+```js interactive-example
+class Polygon {
+  constructor(height, width) {
+    this.area = height * width;
+  }
+}
+
+console.log(new Polygon(4, 3).area);
+// Expected output: 12
+```
 
 ## 语法
 
-```js
-class name [extends] {
-  // class body
+```js-nolint
+class name {
+  // 类体
+}
+class name extends otherName {
+  // 类体
 }
 ```
 
 ## 描述
 
-和类表达式一样，类声明体在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下运行。构造函数是可选的。
+类声明的类体在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下执行。`class` 声明与 {{jsxref("Statements/let", "let")}} 非常相似：
 
-类声明不可以提升（这与[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)不同）。
+- `class` 声明的作用域既可以是块级作用域，也可以是函数作用域。
+- `class` 声明只能在其声明位置之后才能访问（参见[暂时性死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#暂时性死区)）。因此 `class` 声明通常被认为是不可[变量提升](/zh-CN/docs/Glossary/Hoisting)的（与[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)不同）。
+- `class` 声明在脚本顶层声明时不会在 {{jsxref("globalThis")}} 上创建属性（与[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)不同）。
+- 在同一作用域内，`class` 声明不能被任何其他声明[重复声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#重复声明)。
+
+在类体外部，`class` 声明可以像 `let` 一样被重新赋值，但你应该避免这样做。在类体内部，类的绑定是常量，就像 `const` 一样。
+
+```js
+class Foo {
+  static {
+    Foo = 1; // TypeError: Assignment to constant variable.
+  }
+}
+
+class Foo2 {
+  bar = (Foo2 = 1); // TypeError: Assignment to constant variable.
+}
+
+class Foo3 {}
+Foo3 = 1;
+console.log(Foo3); // 1
+```
 
 ## 示例
 
-### 声明一个类
+### 一个简单的类声明
 
-在下面的例子中，我们首先定义一个名为 Polygon 的类，然后继承它来创建一个名为 Square 的类。注意，构造函数中使用的 super() 只能在构造函数中使用，并且必须在使用 this 关键字前调用。
+在以下示例中，我们首先定义了一个名为 `Rectangle` 的类，然后扩展它来创建一个名为 `FilledRectangle` 的类。
+
+请注意，`super()` 只能在 `constructor` 中使用，并且*必须*在使用 `this` 关键字*之前*调用。
 
 ```js
-class Polygon {
+class Rectangle {
   constructor(height, width) {
-    this.name = 'Polygon';
+    this.name = "矩形";
     this.height = height;
     this.width = width;
   }
 }
 
-class Square extends Polygon {
-  constructor(length) {
-    super(length, length);
-    this.name = 'Square';
+class FilledRectangle extends Rectangle {
+  constructor(height, width, color) {
+    super(height, width);
+    this.name = "填充矩形";
+    this.color = color;
   }
 }
 ```
-
-> **警告：**
->
-> ### 重复定义类
->
-> 重复声明一个类会引起类型错误。
->
-> ```js
-> class Foo {};
-> class Foo {};
-> // Uncaught TypeError: Identifier 'Foo' has already been declared
-> ```
->
-> 若之前使用类表达式定义了一个类，则再次声明这个类同样会引起类型错误。
->
-> ```js
-> let Foo = class {};
-> class Foo {};
-> // Uncaught TypeError: Identifier 'Foo' has already been declared
-> ```
 
 ## 规范
 
@@ -76,8 +96,8 @@ class Square extends Polygon {
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [`function` declaration](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)
-- [`class` expression](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)
-- [Classes](/zh-CN/docs/Web/JavaScript/Reference/Classes)
+- [`function`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)
+- [`class` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)
+- [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)

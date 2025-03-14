@@ -1,17 +1,6 @@
 ---
 title: File and Directory Entries API
 slug: Web/API/File_and_Directory_Entries_API
-tags:
-  - API
-  - File System API
-  - File and Directory Entries API
-  - Files
-  - NeedsTranslation
-  - Non-standard
-  - Overview
-  - Reference
-  - TopicStub
-translation_of: Web/API/File_and_Directory_Entries_API
 ---
 
 {{DefaultAPISidebar("File System API")}}
@@ -20,17 +9,19 @@ translation_of: Web/API/File_and_Directory_Entries_API
 
 API доступа к файлам и директориям имитирует локальную файловую систему, в которой веб-приложения могут перемещаться и получать доступ к файлам. Вы можете разрабатывать приложения, которые читают, записывают и создают файлы и/или каталоги в виртуальной изолированной файловой системе.
 
-> **Примечание:** Поскольку это нестандартный API, спецификация которого в настоящее время не входит в стандарт, важно помнить, что не все браузеры реализуют его, а те, которые поддерживают, могут реализовывать только небольшие его части. Дополнительные сведения в разделе [Browser compatibility](#browser_compatibility)
+> [!NOTE]
+> Поскольку это нестандартный API, спецификация которого в настоящее время не входит в стандарт, важно помнить, что не все браузеры реализуют его, а те, которые поддерживают, могут реализовывать только небольшие его части. Дополнительные сведения в разделе [Browser compatibility](#browser_compatibility)
 
 Существуют два очень похожих API в зависимости от того, хотите ли вы асинхронного или синхронного поведения. Синхронный API предназначен для использования внутри {{domxref("Worker")}} и будет возвращать желаемые значения. Асинхронный API не будет блокировать выполнение кода, а API не будет возвращать значения; вместо этого вам нужно будет предоставить колбэк-функцию для обработки одного или нескольких ответов.
 
-> **Предупреждение:** Firefox реализация File System API очень ограничена: не поддерживается создание файлов. Доступ к файлам осуществляется только через {{HTMLElement("input")}} элемент (см. так же {{domxref("HTMLInputElement")}}) или путём перетаскивания файла/папки ([drag and drop](/ru/docs/Web/API/HTML_Drag_and_Drop_API)). Firefox также не реализует синхронный API. Внимательно проверьте совместимость браузера для любой части API, которую вы используете. ( см. [Поддержка File System API в Firefox](/ru/docs/Web/API/File_and_Directory_Entries_API/Firefox_support))
+> [!WARNING]
+> Firefox реализация File System API очень ограничена: не поддерживается создание файлов. Доступ к файлам осуществляется только через {{HTMLElement("input")}} элемент (см. так же {{domxref("HTMLInputElement")}}) или путём перетаскивания файла/папки ([drag and drop](/ru/docs/Web/API/HTML_Drag_and_Drop_API)). Firefox также не реализует синхронный API. Внимательно проверьте совместимость браузера для любой части API, которую вы используете. ( см. [Поддержка File System API в Firefox](/ru/docs/Web/API/File_and_Directory_Entries_API/Firefox_support))
 
 ## Получение доступа к файловой системе
 
 Есть два способа получить доступ к файловой системе, определённым в текущем проекте спецификации:
 
-- При обработке события {{event("drop")}} вы можете вызвать {{domxref("DataTransferItem.webkitGetAsEntry()")}} что бы получить {{domxref("FileSystemEntry")}} для "брошенного" элемента. Если результат не `null`, то это брошенный файл или каталог, и вы можете использовать вызовы файловой системы для работы с ним.
+- При обработке события [`drop`](/ru/docs/Web/API/HTMLElement/drop_event) вы можете вызвать {{domxref("DataTransferItem.webkitGetAsEntry()")}} что бы получить {{domxref("FileSystemEntry")}} для "брошенного" элемента. Если результат не `null`, то это брошенный файл или каталог, и вы можете использовать вызовы файловой системы для работы с ним.
 - Свойство {{domxref("HTMLInputElement.webkitEntries")}} позволяет получить объект {{domxref("FileSystemFileEntry")}} для выбранного файла, но только если они перетаскиваются в [средство выбора](https://bugzilla.mozilla.org/show_bug.cgi?id=1326031) файлов ( [баг 1326031](https://bugzilla.mozilla.org/show_bug.cgi?id=1326031) ). Если {{domxref("HTMLInputElement.webkitdirectory")}} является `true`, то {{HTMLElement("input")}} работает для выбора директорий, и вы можете получить объект {{domxref("FileSystemDirectoryEntry")}} для каждой выбранной директории.
 
 ## Асинхронный API
@@ -82,17 +73,11 @@ API доступа к файлам и директориям имитирует 
 
 ## Спецификации
 
-| Specification                            | Status                               | Comment               |
-| ---------------------------------------- | ------------------------------------ | --------------------- |
-| {{SpecName('File System API')}} | {{Spec2('File System API')}} | Draft of proposed API |
-
-Этот API не имеет официальной спецификации W3C или WHATWG.
+{{Specifications}}
 
 ## Совместимость с браузерами
 
 {{Compat}}
-
-{{Compat("api.FileSystemSync", 0)}}
 
 ## Смотрите также
 

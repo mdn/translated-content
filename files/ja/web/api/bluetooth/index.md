@@ -1,37 +1,33 @@
 ---
 title: Bluetooth
 slug: Web/API/Bluetooth
+l10n:
+  sourceCommit: 727b432491cb8fea8e3e7599cc41e0ae5b0120dd
 ---
 
-{{ apiref("W3C Bluetooth API") }} {{Non-standard_header()}}
+{{APIRef("Bluetooth API")}}{{securecontext_header}}{{SeeCompatTable}}
 
-[Web Bluetooth API](/ja/Web/API/Web_Bluetooth_API) の **`Bluetooth`** インターフェースは、オプション指定した {{domxref("BluetoothDevice")}} の {{jsxref("Promise")}} を返します。
+**`Bluetooth`** は [Web Bluetooth API](/ja/docs/Web/API/Web_Bluetooth_API) のインターフェイスで、指定のオプションに合致する {{domxref("BluetoothDevice")}} オブジェクトで解決する {{jsxref("Promise")}} を返します。
 
-## インターフェース
+{{InheritanceDiagram}}
 
-```
-interface Bluetooth {
-  Promise<BluetoothDevice> requestDevice(RequestDeviceOptions options);
-};
-Bluetooth implements EventTarget;
-Bluetooth implements BluetoothDeviceEventHandlers;
-Bluetooth implements CharacteristicEventHandlers;
-Bluetooth implements ServiceEventHandlers;
-```
+## インスタンスプロパティ
 
-## プロパティ
+_親の {{domxref("EventTarget")}} から継承したプロパティがあります。_
 
-なし
+## インスタンスメソッド
 
-## メソッド
+- {{domxref("Bluetooth.getAvailability","Bluetooth.getAvailability()")}} {{Experimental_Inline}}
+  - : ユーザーエージェントに Bluetooth を扱う機能があるかを表す論理値で解決する {{jsxref("Promise")}} を返します。これが何を返すかに影響するオプションをユーザーが設定できるユーザーエージェントもあります。このオプションが設定されている場合、このメソッドはその値を返します。
+- {{domxref("Bluetooth.getDevices","Bluetooth.getDevices()")}} {{Experimental_Inline}}
+  - : オリジンが既に使用する許可を得ている {{domxref("BluetoothDevice")}} の配列で解決する {{jsxref("Promise")}} を返します。許可は {{domxref("Bluetooth.requestDevice","Bluetooth.requestDevice()")}} を呼び出すことによって得ることができます。
+- {{domxref("Bluetooth.requestDevice","Bluetooth.requestDevice()")}} {{Experimental_Inline}}
+  - : 指定のオプションに合致する {{domxref("BluetoothDevice")}} オブジェクトで解決する {{jsxref("Promise")}} を返します。
 
-- {{domxref("Bluetooth.requestDevice()")}}
-  - : オプション指定した {{domxref("BluetoothDevice")}} の {{jsxref("Promise")}} を返す。
-
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("api.Bluetooth")}}
+{{Compat}}

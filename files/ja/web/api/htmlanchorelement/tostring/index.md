@@ -1,7 +1,8 @@
 ---
-title: HTMLAnchorElement.toString()
+title: "HTMLAnchorElement: toString() メソッド"
 slug: Web/API/HTMLAnchorElement/toString
-original_slug: Web/API/HTMLHyperlinkElementUtils/toString
+l10n:
+  sourceCommit: b829b2fae917b5b931011ddeb6a0d1b2d2b81c54
 ---
 
 {{ApiRef("URL API")}}
@@ -10,7 +11,7 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/toString
 
 ## 構文
 
-```js
+```js-nolint
 toString()
 ```
 
@@ -20,16 +21,16 @@ toString()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+この要素の完全な URL の入った文字列です。
 
 ## 例
 
 ### アンカー要素で toString を呼び出す
 
 ```js
-// <a id="myAnchor" href="/en-US/docs/HTMLAnchorElement"> 要素が文書にあったとします
+// <a id="myAnchor" href="/ja/docs/HTMLAnchorElement"> 要素が文書にあったとします
 const anchor = document.getElementById("myAnchor");
-anchor.toString(); // 'https://developer.mozilla.org/en-US/docs/HTMLAnchorElement' を返す
+anchor.toString(); // 'https://developer.mozilla.org/ja/docs/HTMLAnchorElement' を返す
 ```
 
 ## 仕様書

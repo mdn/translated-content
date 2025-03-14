@@ -1,21 +1,15 @@
 ---
 title: Itérateurs et générateurs
-slug: Web/JavaScript/Guide/Iterators_and_Generators
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Iterators_and_Generators
-original_slug: Web/JavaScript/Guide/iterateurs_et_generateurs
+slug: Web/JavaScript/Guide/Iterators_and_generators
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Utiliser_les_promesses", "Web/JavaScript/Guide/Métaprogrammation")}}
 
-Effectuer des traitements sur chacun des éléments d'une collection est une opération très fréquente. Il existe plusieurs outils natifs dans JavaScript pour parcourir une collection, les boucles [`for`](/fr/docs/Web/JavaScript/Reference/Instructions/for), [`map()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/map), [`filter()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/filter). Les itérateurs et les générateurs font de ce concept d'itération une fonctionnalité principale du langage et permettent d'adapter et de personnaliser le comportement des boucles [`for...of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of).
+Effectuer des traitements sur chacun des éléments d'une collection est une opération très fréquente. Il existe plusieurs outils natifs dans JavaScript pour parcourir une collection, les boucles [`for`](/fr/docs/Web/JavaScript/Reference/Statements/for), [`map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`filter()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter). Les itérateurs et les générateurs font de ce concept d'itération une fonctionnalité principale du langage et permettent d'adapter et de personnaliser le comportement des boucles [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of).
 
 Pour plus de détails sur les mécanismes d'itération, voir les pages suivantes :
 
-- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration)
+- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Instructions/for...of","for...of")}}
 - {{jsxref("Instructions/function*","function*")}} et {{jsxref("Generator")}}
 - {{jsxref("Opérateurs/yield","yield")}} et {{jsxref("Opérateurs/yield*","yield*")}}
@@ -26,7 +20,7 @@ Un itérateur est un objet sachant comment accéder aux éléments d'une collect
 
 Un itérateur est "terminé" lorsque l'appel à la méthode `next()` renvoie un objet dont la propriété `done` vaut `true`.
 
-Une fois créé, un itérateur peut être utilisé explicitement en appelant sa méthode `next()`, ou implicitement en utilisant la boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Instructions/for...in).
+Une fois créé, un itérateur peut être utilisé explicitement en appelant sa méthode `next()`, ou implicitement en utilisant la boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in).
 
 Voici un exemple d'une fonction créant un itérateur qui parcourt l'intervalle défini par ses arguments (depuis `debut` (inclus) jusqu'à `end` (exclus) et avec `pas` comme incrément. La valeur finale qui est renvoyée correspond à la taille de la séquence créée
 
@@ -36,7 +30,7 @@ function creerIterateurIntervalle(debut = 0, fin = Infinity, pas = 1) {
   let nbIterations = 0;
 
   const rangeIterator = {
-    next: function() {
+    next: function () {
       let resultat;
       if (prochainIndex < fin) {
         resultat = { value: prochainIndex, done: false };
@@ -44,8 +38,8 @@ function creerIterateurIntervalle(debut = 0, fin = Infinity, pas = 1) {
         nbIterations++;
         return resultat;
       }
-      return { value: nbIterations, done: true }
-    }
+      return { value: nbIterations, done: true };
+    },
   };
   return rangeIterator;
 }
@@ -58,8 +52,8 @@ let it = creerIterateurIntervalle(1, 10, 2);
 
 let resultat = it.next();
 while (!resultat.done) {
- console.log(resultat.value); // 1 3 5 7 9
- resultat = it.next();
+  console.log(resultat.value); // 1 3 5 7 9
+  resultat = it.next();
 }
 
 console.log("La séquence parcourue contenait ", result.value, " éléments.");
@@ -69,7 +63,7 @@ console.log("La séquence parcourue contenait ", result.value, " éléments.");
 
 Un objet est considéré comme **itérable** s'il définit le comportement qu'il aura lors de l'itération (par exemple les valeurs qui seront utilisées dans une boucle {{jsxref("Instructions/for...of", "for...of")}}). Certains types natifs, tels qu'{{jsxref("Array")}} ou {{jsxref("Map")}}, possède un comportement par défaut pour les itérations, cependant d'autres types comme les Objets, ne possèdent pas ce comportement.
 
-Pour qu'un objet soit **itérable**, un objet doit implémenter la méthode **@@iterator**, cela signifie que l'objet (ou un des objets de la [chaîne de prototypes](/fr/docs/Web/JavaScript/Héritage_et_chaîne_de_prototypes)) doit avoir une propriété avec la clé {{jsxref("Symbol.iterator")}}. Cette fonction doit également, même si ce n'est pas une obligation, renvoyer une nouvel opérateur à chaque appel.
+Pour qu'un objet soit **itérable**, un objet doit implémenter la méthode **@@iterator**, cela signifie que l'objet (ou un des objets de la [chaîne de prototypes](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)) doit avoir une propriété avec la clé {{jsxref("Symbol.iterator")}}. Cette fonction doit également, même si ce n'est pas une obligation, renvoyer une nouvel opérateur à chaque appel.
 
 ### Itérables personnalisés
 
@@ -78,11 +72,11 @@ Il est possible de définir ses propres itérables de cette façon :
 ```js
 var monItérable = {};
 monItérable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 };
-[...monItérable] // [1, 2, 3]
+[...monItérable]; // [1, 2, 3]
 ```
 
 ### Itérables natifs
@@ -94,23 +88,22 @@ monItérable[Symbol.iterator] = function* () {
 Certaines instructions ou expressions utilisent des itérables, par exemple les boucles {{jsxref("Instructions/for...of","for...of")}} et {{jsxref("Opérateurs/yield*","yield*")}}.
 
 ```js
-for(let value of ["a", "b", "c"]){
-    console.log(value)
+for (let value of ["a", "b", "c"]) {
+  console.log(value);
 }
 // "a"
 // "b"
 // "c"
 
-[..."abc"] // ["a", "b", "c"]
+[..."abc"]; // ["a", "b", "c"]
 
-function* gen(){
-  yield* ["a", "b", "c"]
+function* gen() {
+  yield* ["a", "b", "c"];
 }
 
-gen().next() // { value:"a", done:false }
-
-[a, b, c] = new Set(["a", "b", "c"])
-a // "a"
+gen().next()[(a, b, c)] = // { value:"a", done:false }
+  new Set(["a", "b", "c"]);
+a; // "a"
 ```
 
 ## Générateurs
@@ -120,10 +113,9 @@ Les itérateurs personnalisés sont un outil utile mais leur création peut s'av
 Un générateur est un type de fonction spécial qui fonctionne comme une fabrique (_factory_) d'itérateurs. Une fonction devient un générateur lorsqu'elle contient une ou plusieurs expressions `yield` et qu'elle utilise la syntaxe `function*`.
 
 ```js
-function* idMaker(){
+function* idMaker() {
   var index = 0;
-  while(true)
-    yield index++;
+  while (true) yield index++;
 }
 
 var gen = idMaker();
@@ -143,33 +135,33 @@ La méthode `next()` accepte également un argument qui pourra être utilisé po
 Par exemple, on peut avoir un générateur pour la suite de Fibonnaci et utiliser `next(x)` pour redémarrer la série :
 
 ```js
-function* fibonacci(){
+function* fibonacci() {
   var fn1 = 0;
   var fn2 = 1;
-  while (true){
+  while (true) {
     var current = fn1;
     fn1 = fn2;
     fn2 = fn1 + current;
     var reset = yield current;
-    if (reset){
-        fn1 = 0;
-        fn2 = 1;
+    if (reset) {
+      fn1 = 0;
+      fn2 = 1;
     }
   }
 }
 
 var sequence = fibonacci();
-console.log(sequence.next().value);     // 0
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 2
-console.log(sequence.next().value);     // 3
-console.log(sequence.next().value);     // 5
-console.log(sequence.next().value);     // 8
+console.log(sequence.next().value); // 0
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 2
+console.log(sequence.next().value); // 3
+console.log(sequence.next().value); // 5
+console.log(sequence.next().value); // 8
 console.log(sequence.next(true).value); // 0
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 2
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 2
 ```
 
 Il est possible de forcer un générateur à lever une exception en utilisant la méthode `throw()` en lui passant la valeur de l'exception en argument. Cette exception sera levée depuis l'état actuel du générateur, comme si le `yield` qui était en attente avait été une instruction `throw valeur`.

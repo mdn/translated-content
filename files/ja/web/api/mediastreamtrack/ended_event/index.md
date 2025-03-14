@@ -1,7 +1,6 @@
 ---
-title: 'MediaStreamTrack: ended イベント'
+title: "MediaStreamTrack: ended イベント"
 slug: Web/API/MediaStreamTrack/ended_event
-original_slug: Web/API/MediaStreamTrack/onended
 ---
 
 {{DefaultAPISidebar("Media Capture and Streams")}}
@@ -15,9 +14,9 @@ original_slug: Web/API/MediaStreamTrack/onended
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('ended', event => { });
+addEventListener("ended", (event) => {});
 
-onended = event => { };
+onended = (event) => {};
 ```
 
 ## イベント型
@@ -38,20 +37,20 @@ onended = event => { };
 この例では、 `ended` イベントのイベントハンドラーを設定しています。このイベントハンドラーでは、トラックがアクティブでない状態を示すために画面上のアイコンを変更します。
 
 ```js
-track.addEventListener('ended', () => {
+track.addEventListener("ended", () => {
   let statusElem = document.getElementById("status-icon");
   statusElem.src = "/images/stopped-icon.png";
-})
+});
 ```
 
 `onended` プロパティを使用してイベントハンドラーを設定することもできます。
 
 ```js
-track.onended = function() {
+track.onended = function () {
   let statusElem = document.getElementById("status-icon");
 
   statusElem.src = "/images/stopped-icon.png";
-}
+};
 ```
 
 ## 仕様書

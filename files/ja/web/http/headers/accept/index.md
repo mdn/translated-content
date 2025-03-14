@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/Accept
 
 {{HTTPSidebar}}
 
-HTTP の **`Accept`** リクエストヘッダーは、クライアントが理解できるコンテンツタイプを [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)で伝えます。 [コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)を使用して、サーバーは提案のうちの一つを選択し、それを使用してクライアントに {{HTTPHeader("Content-Type")}} レスポンスヘッダーで選択を伝えます。ブラウザーはリクエストを行う場面に応じて適切な値をこのヘッダーに設定します。 CSS スタイルシートを取得するときは、画像、動画、スクリプトを取得するときとは異なる値をリクエストで設定します。
+HTTP の **`Accept`** リクエストヘッダーは、クライアントが理解できるコンテンツタイプを [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)で伝えます。 [コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)を使用して、サーバーは提案のうちの一つを選択し、それを使用してクライアントに {{HTTPHeader("Content-Type")}} レスポンスヘッダーで選択を伝えます。ブラウザーはリクエストを行う場面に応じて適切な値をこのヘッダーに設定します。 CSS スタイルシートを取得するときは、画像、動画、スクリプトを取得するときとは異なる値をリクエストで設定します。
 
 <table class="properties">
   <tbody>
@@ -48,7 +48,7 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*
 ## ディレクティブ
 
 - `<MIME_type>/<MIME_subtype>`
-  - : 単一の詳細な [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)、例えば `text/html` です。
+  - : 単一の詳細な [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)、例えば `text/html` です。
 - `<MIME_type>/*`
   - : MIME タイプですが、サブタイプがありません。 `image/*` は `image/png`, `image/svg`, `image/gif` 及びその他の画像タイプに一致します。
 - `*/*`
@@ -72,13 +72,13 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 
 ## 仕様書
 
-| 仕様書                                       | 題名                                                          |
-| -------------------------------------------- | ------------------------------------------------------------- |
+| 仕様書                             | 題名                                                          |
+| ---------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Accept", "5.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context |
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Accept")}}
+{{Compat}}
 
 ## 関連情報
 

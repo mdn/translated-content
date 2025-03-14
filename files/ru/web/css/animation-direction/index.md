@@ -1,7 +1,6 @@
 ---
 title: animation-direction
 slug: Web/CSS/animation-direction
-translation_of: Web/CSS/animation-direction
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -50,7 +49,7 @@ animation-direction: unset;
 
 ## Примеры
 
-Смотрите примеры [CSS а](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations)нимаций.
+Смотрите примеры [CSS а](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)нимаций.
 
 ## Спецификации
 
@@ -62,5 +61,5 @@ animation-direction: unset;
 
 ## Смотрите также
 
-- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

@@ -1,17 +1,8 @@
 ---
 title: <time>
 slug: Web/HTML/Element/time
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/time
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<time>` 요소**는 시간의 특정 지점 또는 구간을 나타냅니다. `datetime` 특성의 값을 지정해 보다 적절한 검색 결과나, 알림 같은 특정 기능을 구현할 때 사용할 수 있습니다.
@@ -22,7 +13,25 @@ translation_of: Web/HTML/Element/time
 - 정확한 [그레고리력](https://ko.wikipedia.org/wiki/%EA%B7%B8%EB%A0%88%EA%B3%A0%EB%A6%AC%EB%A0%A5) 날짜. (시간대 정보 포함 가능)
 - [유효한 시간 범위](https://www.w3.org/TR/2014/REC-html5-20141028/infrastructure.html#valid-duration-string).
 
-{{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;time&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The Cure will be celebrating their 40th anniversary on
+  <time datetime="2018-07-07">July 7</time> in London's Hyde Park.
+</p>
+
+<p>
+  The concert starts at <time datetime="20:00">20:00</time> and you'll be able
+  to enjoy the band for at least <time datetime="PT2H30M">2h 30m</time>.
+</p>
+```
+
+```css interactive-example
+time {
+  font-weight: bold;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -49,7 +58,7 @@ translation_of: Web/HTML/Element/time
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -74,7 +83,7 @@ translation_of: Web/HTML/Element/time
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : 요소의 시간 또는 날짜 값. 아래에서 설명하는 형식 중 하나여야 합니다.
 
 ## 사용 일람
@@ -108,7 +117,9 @@ translation_of: Web/HTML/Element/time
 #### HTML
 
 ```html
-<p>The concert took place on <time datetime="2001-05-15 19:00">May 15</time>.</p>
+<p>
+  The concert took place on <time datetime="2001-05-15 19:00">May 15</time>.
+</p>
 ```
 
 #### 결과
@@ -121,7 +132,7 @@ translation_of: Web/HTML/Element/time
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.time")}}
+{{Compat}}
 
 ## 같이 보기
 

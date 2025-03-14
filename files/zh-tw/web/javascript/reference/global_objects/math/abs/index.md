@@ -1,19 +1,34 @@
 ---
 title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
+l10n:
+  sourceCommit: dc90e6a09235136e0e5113e1fab2c11053e467d7
 ---
 
 {{JSRef}}
 
-**`Math.abs()`** 函式會回傳一個數字的絕對值，即為：
+**`Math.abs()`** 靜態方法會回傳一個數字的絕對值。
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.abs</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left left"><mtr><mtd><mi>x</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>></mo><mn>0</mn></mtd></mtr><mtr><mtd><mi>0</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>=</mo><mn>0</mn></mtd></mtr><mtr><mtd><mo>-</mo><mi>x</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>&#x3C;</mo><mn>0</mn></mtd></mtr></mtable></mrow></mrow><annotation encoding="TeX">{\mathtt{\operatorname{Math.abs}(x)}} = {|x|} = \begin{cases} x &#x26; \text{if} \quad x \geq 0 \\ x &#x26; \text{if} \quad x &#x3C; 0 \end{cases}</annotation></semantics></math>
+{{InteractiveExample("JavaScript Demo: Math.abs()")}}
 
-{{EmbedInteractiveExample("pages/js/math-abs.html")}}
+```js interactive-example
+function difference(a, b) {
+  return Math.abs(a - b);
+}
+
+console.log(difference(3, 5));
+// Expected output: 2
+
+console.log(difference(5, 3));
+// Expected output: 2
+
+console.log(difference(1.23456, 7.89012));
+// Expected output: 6.6555599999999995
+```
 
 ## 語法
 
-```plain
+```js-nolint
 Math.abs(x)
 ```
 
@@ -24,29 +39,40 @@ Math.abs(x)
 
 ### 回傳值
 
-給定數字的絕對值。
+`x` 的絕對值。如果 `x` 是負數或 `-0`，則回傳它的相反數 `-x`（非負數）。否則，回傳 `x` 本身。因此，結果必定是正數或 `0`。
 
 ## 描述
 
-Because `abs()` is a static method of `Math`, you always use it as `Math.abs()`, rather than as a method of a `Math` object you created (`Math` is not a constructor).
+由於 `abs()` 是 `Math` 的靜態方法，你必須使用 `Math.abs()`，而不是在你所建立的 `Math` 物件上呼叫此方法（`Math` 並不是建構子）。
 
 ## 範例
 
-### `Math.abs()` 的行為
-
-Passing an empty object, an array with more than one member, a non-numeric string or {{jsxref("undefined")}}/empty variable returns {{jsxref("NaN")}}. Passing {{jsxref("null")}}, an empty string or an empty array returns 0.
+### 使用 Math.abs()
 
 ```js
-Math.abs('-1');     // 1
-Math.abs(-2);       // 2
-Math.abs(null);     // 0
-Math.abs('');       // 0
-Math.abs([]);       // 0
-Math.abs([2]);      // 2
-Math.abs([1,2]);    // NaN
-Math.abs({});       // NaN
-Math.abs('string'); // NaN
-Math.abs();         // NaN
+Math.abs(-Infinity); // Infinity
+Math.abs(-1); // 1
+Math.abs(-0); // 0
+Math.abs(0); // 0
+Math.abs(1); // 1
+Math.abs(Infinity); // Infinity
+```
+
+### 參數的強制轉型
+
+`Math.abs()` [會將參數強制轉型為數字](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)。無法轉型的值將變為 `NaN`，因此 `Math.abs()` 也會回傳 `NaN`。
+
+```js
+Math.abs("-1"); // 1
+Math.abs(-2); // 2
+Math.abs(null); // 0
+Math.abs(""); // 0
+Math.abs([]); // 0
+Math.abs([2]); // 2
+Math.abs([1, 2]); // NaN
+Math.abs({}); // NaN
+Math.abs("string"); // NaN
+Math.abs(); // NaN
 ```
 
 ## 規範

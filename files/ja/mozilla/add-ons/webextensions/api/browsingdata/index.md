@@ -3,7 +3,9 @@ title: browsingData
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData
 ---
 
-{{AddonSidebar}}拡張機能がユーザーの閲覧中に蓄積したデータをクリアできるようにします。
+{{AddonSidebar}}
+
+拡張機能がユーザーの閲覧中に蓄積したデータをクリアできるようにします。
 
 `browsingData` API では、閲覧データは下記の型に分けられます。
 
@@ -59,13 +61,15 @@ slug: Mozilla/Add-ons/WebExtensions/API/browsingData
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.browsingData", 2)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **メモ:** この API は Chromium の [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!NOTE]
+> この API は Chromium の [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -92,4 +96,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/browsingData
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

@@ -1,23 +1,34 @@
 ---
 title: Объект arguments
 slug: Web/JavaScript/Reference/Functions/arguments
-tags:
-  - Functions
-  - JavaScript
-  - Reference
-  - arguments
-translation_of: Web/JavaScript/Reference/Functions/arguments
 ---
 
 {{jsSidebar("Functions")}}
 
 Объект **`arguments`** — это подобный массиву объект, который содержит аргументы, переданные в функцию.
 
-> **Примечание:** Если вы пишете ES6-совместимый код, то лучше использовать [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters).
+> [!NOTE]
+> Если вы пишете ES6-совместимый код, то лучше использовать [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters).
 
-> **Примечание:** "Подобный массиву" означает, что `arguments` имеет свойство {{jsxref("Functions/arguments/length", "length")}}, а элементы индексируются начиная с нуля. Но при этом он не может обращаться к встроенным методам {{JSxRef("Array")}}, таким как {{jsxref("Array.forEach", "forEach()")}} или {{jsxref("Array.map", "map()")}}. Подробнее об этом в [§Описании](/ru/docs/Web/JavaScript/Reference/Functions/arguments#Описание).
+> [!NOTE]
+> "Подобный массиву" означает, что `arguments` имеет свойство {{jsxref("Functions/arguments/length", "length")}}, а элементы индексируются начиная с нуля. Но при этом он не может обращаться к встроенным методам {{JSxRef("Array")}}, таким как {{jsxref("Array.forEach", "forEach()")}} или {{jsxref("Array.map", "map()")}}. Подробнее об этом в [§Описании](#Описание).
 
-{{EmbedInteractiveExample("pages/js/functions-arguments.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Arguments")}}
+
+```js interactive-example
+function func1(a, b, c) {
+  console.log(arguments[0]);
+  // Expected output: 1
+
+  console.log(arguments[1]);
+  // Expected output: 2
+
+  console.log(arguments[2]);
+  // Expected output: 3
+}
+
+func1(1, 2, 3);
+```
 
 ## Синтаксис
 
@@ -27,18 +38,18 @@ arguments
 
 ## Описание
 
-Объект `arguments` - это локальная переменная, доступная внутри любой (нестрелочной) функции. Объект `arguments` позволяет ссылаться на аргументы функции внутри неё. Он состоит из переданных в функцию аргументов, индексация начинается с 0. Например, если в функцию было передано 3 аргумента, обратиться к ним можно следующим образом:
+Объект `arguments` - это локальная переменная, доступная внутри любой (нестрелочной) функции. Объект `arguments` позволяет ссылаться на аргументы функции внутри неё. Он состоит из переданных в функцию аргументов, индексация начинается с 0. Например, если в функцию было передано 3 аргумента, обратиться к ним можно следующим образом:
 
 ```js
-arguments[0]
-arguments[1]
-arguments[2]
+arguments[0];
+arguments[1];
+arguments[2];
 ```
 
 Аргументам может быть присвоено значение:
 
 ```js
-arguments[1] = 'new value';
+arguments[1] = "new value";
 ```
 
 Объект `arguments` не является {{jsxref("Array")}}. Он похож на массив, но не обладает ни одним из его свойств, кроме [`length`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/length). Например, у него нет метода [`pop`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/pop). Однако, он может быть преобразован в обычный массив:
@@ -52,10 +63,12 @@ const args = Array.from(arguments);
 const args = [...arguments];
 ```
 
-> **Предупреждение:** Использование `slice` на объекте `arguments` не позволяет сделать оптимизации в некоторых JavaScript движках (например, V8 — [подробнее](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments)). Если они важны, можно попробовать вместо этого создать новый массив с аналогичной длиной и заполнить его элементами объекта `arguments.` Альтернативный вариант — использовать конструктор `Array` как функцию:
+> [!WARNING]
+> Использование `slice` на объекте `arguments` не позволяет сделать оптимизации в некоторых JavaScript движках (например, V8 — [подробнее](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments)). Если они важны, можно попробовать вместо этого создать новый массив с аналогичной длиной и заполнить его элементами объекта `arguments.` Альтернативный вариант — использовать конструктор `Array` как функцию:
 >
 > ```js
-> var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
+> var args =
+>   arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments);
 > ```
 
 Объект `arguments` можно использовать при вызове функции с бо́льшим количеством аргументов, чем было предусмотрено в её объявлении. Такой способ удобен для функций, в которые допустимо передавать переменное количество аргументов. Можно воспользоваться [`arguments.length`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/length), чтобы определить количество переданных в функцию аргументов, а затем обработать каждый из них с помощью объекта `arguments`. Чтобы определить количество параметров функции, описанных в её [сигнатуре](/ru/docs/Glossary/Signature/Function), можно использовать свойство [`Function.length`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/length).
@@ -77,7 +90,7 @@ console.log(typeof arguments[0]);
 
 ### Использование оператора расширения для объекта `arguments`
 
-Как и с обычными массива-подобными объектами, для преобразования объекта `arguments` в обычный массив можно использовать метод {{jsxref("Array.from()")}} или [оператор расширения:](/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+Как и с обычными массива-подобными объектами, для преобразования объекта `arguments` в обычный массив можно использовать метод {{jsxref("Array.from()")}} или [оператор расширения:](/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
 ```js
 var args = Array.from(arguments);
@@ -88,11 +101,11 @@ var args = [...arguments];
 
 - [`arguments.callee`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/callee)
   - : Ссылка на функцию, которая выполняется в текущий момент.
-- [`arguments.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/caller) {{ Obsolete_inline() }}
+- [`arguments.caller`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/caller)
   - : Ссылка на функцию, которая вызвала функцию, выполняющуюся в текущий момент.
 - [`arguments.length`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/length)
   - : Количество переданных в функцию аргументов.
-- [`arguments[@@iterator]`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
+- [`arguments[@@iterator]`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
   - : Возвращает новый объект `Array Iterator`, содержащий значения для каждого индекса в массиве.
 
 ## Примеры
@@ -150,7 +163,7 @@ var listHTML = list("u", "One", "Two", "Three");
 
 ### Остаточные, деструктурированные и параметры по умолчанию
 
-Объект `arguments` может использоваться совместно с [остаточными параметрами](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters), [параметрами по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированными параметрами](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+Объект `arguments` может использоваться совместно с [остаточными параметрами](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters), [параметрами по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированными параметрами](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
 ```js
 function foo(...args) {
@@ -159,17 +172,17 @@ function foo(...args) {
 foo(1, 2, 3); // { "0": 1, "1": 2, "2": 3 }
 ```
 
-Тем не менее, в нестрогих функциях **соответствие между их аргументами и объектом `arguments`** существует только в том случае, если функция **не** содержит никаких [остаточных параметров](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters), [параметров по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированных параметров](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). Например, в функции, приведённой ниже, используется параметр по умолчанию, и в данном случае возвращаемый результат будет равен 10, а не 100:
+Тем не менее, в нестрогих функциях **соответствие между их аргументами и объектом `arguments`** существует только в том случае, если функция **не** содержит никаких [остаточных параметров](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters), [параметров по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированных параметров](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). Например, в функции, приведённой ниже, используется параметр по умолчанию, и в данном случае возвращаемый результат будет равен 10, а не 100:
 
 ```js
-function bar(a=1) {
+function bar(a = 1) {
   arguments[0] = 100;
   return a;
 }
 bar(10); // 10
 ```
 
-В следующем примере возвращается 100, поскольку здесь нет [остаточных параметров](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters), [параметров по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированных параметров](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+В следующем примере возвращается 100, поскольку здесь нет [остаточных параметров](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters), [параметров по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированных параметров](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
 
 ```js
 function zoo(a) {
@@ -179,13 +192,13 @@ function zoo(a) {
 zoo(10); // 100
 ```
 
-На самом деле, если [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters), [параметры по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированные параметры](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) не используются, формальные аргументы будут ссылаться на последние значения объекта **`arguments`**, при считывании значений формальных аргументов будут считаны последние данные из **`arguments`**, а при изменении значений формальных аргументов будет обновлён и объект **`arguments`**. Пример приведён в коде ниже:
+На самом деле, если [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters), [параметры по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированные параметры](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) не используются, формальные аргументы будут ссылаться на последние значения объекта **`arguments`**, при считывании значений формальных аргументов будут считаны последние данные из **`arguments`**, а при изменении значений формальных аргументов будет обновлён и объект **`arguments`**. Пример приведён в коде ниже:
 
 ```js
 function func(a, b) {
-    arguments[0] = 90;
-    arguments[1] = 99;
-    console.log(a + " " + b);
+  arguments[0] = 90;
+  arguments[1] = 99;
+  console.log(a + " " + b);
 }
 
 func(1, 2); //90, 99
@@ -195,21 +208,21 @@ func(1, 2); //90, 99
 
 ```js
 function func(a, b) {
-    a = 9;
-    b = 99;
-    console.log(arguments[0] + " " + arguments[1]);
+  a = 9;
+  b = 99;
+  console.log(arguments[0] + " " + arguments[1]);
 }
 
 func(3, 4); //9, 99
 ```
 
-Но в случае, когда применяются [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters), [параметры по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированные параметры](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), будет обработано нормальное поведение, как в случае [параметров по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters):
+Но в случае, когда применяются [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters), [параметры по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированные параметры](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), будет обработано нормальное поведение, как в случае [параметров по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters):
 
 ```js
-function func(a, b, c=9) {
-    arguments[0] = 99;
-    arguments[1] = 98;
-    console.log(a + " " + b);
+function func(a, b, c = 9) {
+  arguments[0] = 99;
+  arguments[1] = 98;
+  console.log(a + " " + b);
 }
 
 func(3, 4); //3, 4
@@ -219,7 +232,7 @@ func(3, 4); //3, 4
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

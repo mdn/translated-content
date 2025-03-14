@@ -1,11 +1,6 @@
 ---
 title: 'SyntaxError: "x" is a reserved identifier'
 slug: Web/JavaScript/Reference/Errors/Reserved_identifier
-tags:
-  - 구문 에러
-  - 예약어
-  - 자바스크립트
-translation_of: Web/JavaScript/Reference/Errors/Reserved_identifier
 ---
 
 {{jsSidebar("Errors")}}
@@ -24,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Errors/Reserved_identifier
 
 ## 무엇이 잘못되었을까?
 
-[예약어](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords)가 식별자로 쓰인 경우 발생하는 에러입니다. 이 키워드는 엄격(Strict) 모드와 느슨한(Sloppy) 모드에서 모두 예약어로 취급됩니다.
+[예약어](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords)가 식별자로 쓰인 경우 발생하는 에러입니다. 이 키워드는 엄격(Strict) 모드와 느슨한(Sloppy) 모드에서 모두 예약어로 취급됩니다.
 
 - `enum`
 
@@ -67,7 +62,7 @@ var list = ["potatoes", "rice", "fries"];
 
 ### 오래된 브라우저의 업데이트
 
-새로운 구문을 사용하기 위해서는 최근 버전의 브라우저로 업데이트 해야 합니다. 예를 들어, 오래된 브라우저를 사용하고 있다면 [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) 또는 [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class) 구현할 수 없습니다.
+새로운 구문을 사용하기 위해서는 최근 버전의 브라우저로 업데이트 해야 합니다. 예를 들어, 오래된 브라우저를 사용하고 있다면 [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let) 또는 [`class`](/ko/docs/Web/JavaScript/Reference/Statements/class) 구현할 수 없습니다.
 
 ```js
 "use strict";
@@ -79,4 +74,4 @@ class DocArchiver {}
 
 ## 같이 보기
 
-- [Good variable names](http://wiki.c2.com/?GoodVariableNames)
+- [Good variable names](https://wiki.c2.com/?GoodVariableNames)

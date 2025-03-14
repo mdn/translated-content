@@ -1,16 +1,15 @@
 ---
 title: PointerEvent
 slug: Web/API/PointerEvent
-translation_of: Web/API/PointerEvent
 ---
 
 {{ APIRef("Pointer Events") }}
 
 L'interface **`PointerEvent`** représente les données de l'état d'un évènement du DOM produit par un pointeur, tels que la géométrie du point de contact, le type d'appareil qui a généré l'évènement, l'intensité de pression qui a été appliquée au contact de la surface, etc.
 
-Un *pointeur* est une représentation agnostique de tout appareil de saisie (tels qu'une souris, un stylet, ou un point de contact sur une surface tactile). Le pointeur peut cibler des coordonnées spécifiques (ou une collection de coordonnées) sur la surface de contact telle qu'un écran.
+Un _pointeur_ est une représentation agnostique de tout appareil de saisie (tels qu'une souris, un stylet, ou un point de contact sur une surface tactile). Le pointeur peut cibler des coordonnées spécifiques (ou une collection de coordonnées) sur la surface de contact telle qu'un écran.
 
-Le *test de ciblage* d'un pointeur est le processus qu'un navigateur utilise pour déterminer l'élément pour un évènement de pointeur. Typiquement, cela est déterminé en considérant la position du pointeur ainsi que l'agencement visuel des éléments dans un document sur l'écran.
+Le _test de ciblage_ d'un pointeur est le processus qu'un navigateur utilise pour déterminer l'élément pour un évènement de pointeur. Typiquement, cela est déterminé en considérant la position du pointeur ainsi que l'agencement visuel des éléments dans un document sur l'écran.
 
 ## Constructeurs
 
@@ -51,7 +50,8 @@ _Cette interface hérite des proprétés de {{domxref("MouseEvent")}} et {{domxr
 
 L'interface `PointerEvent` a plusieurs types d'évènements. Pour déterminer quel évènement s'est produit, regardez la propriété {{ domxref("Event.type", "type") }} de l'évènement.
 
-> **Note :** Il est important de remarquer que dans beaucoup de cas, à la fois les évènements du pointeur et de la souris sont envoyés (afin de laisser la logique interagir avec l'utilisateur même lorsqu'elle n'est pas spécifique à un type de pointeur) . Si vous utilisez les évènements de pointeur, vous devez exécuter {{ domxref("event.preventDefault()") }} afin d'empêcher l'évènement de la souris d'être également envoyée.
+> [!NOTE]
+> Il est important de remarquer que dans beaucoup de cas, à la fois les évènements du pointeur et de la souris sont envoyés (afin de laisser la logique interagir avec l'utilisateur même lorsqu'elle n'est pas spécifique à un type de pointeur) . Si vous utilisez les évènements de pointeur, vous devez exécuter {{ domxref("event.preventDefault()") }} afin d'empêcher l'évènement de la souris d'être également envoyée.
 
 - [`pointerover`](/fr/docs/Web/API/Element/pointerover_event)
   - : Cet évènement est déclenché lorsqu'un appareil de pointage est déplacé vers la zone du test de ciblage d'un élément.

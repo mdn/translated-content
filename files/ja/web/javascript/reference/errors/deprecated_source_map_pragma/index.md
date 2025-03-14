@@ -1,6 +1,5 @@
 ---
-title: 'SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //#
-  instead'
+title: "SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead"
 slug: Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma
 ---
 
@@ -24,7 +23,7 @@ Warning: SyntaxError: Using //@ to indicate sourceMappingURL pragmas is deprecat
 
 JavaScript のソースに非推奨のソースマップ構文があることです。
 
-通常 JavaScript ソースは、サーバーからの提供を効率化するために、結合と最小化が行われます。[ソースマップ](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)があると、デバッガーが実行中のコードを元のソースファイルに対応付けすることができます。
+通常 JavaScript ソースは、サーバーからの提供を効率化するために、結合と最小化が行われます。[ソースマップ](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)があると、デバッガーが実行中のコードを元のソースファイルに対応付けすることができます。
 
 IE の JScript エンジンは、`//@cc_on` の後でページが見つかると、条件付きコンパイルの有効化とみなします。 この IE での競合のために、ソースマップの仕様の構文が変更されました。IE の [@cc_on 文](https://msdn.microsoft.com/ja/library/8ka90k2e%28v=vs.94%29.aspx) はあまり知られていない機能ですが、[jQuery](https://bugs.jquery.com/ticket/13274) やそのほかのライブラリのソースマップを破壊します。
 
@@ -54,6 +53,6 @@ SourceMap: /path/to/file.js.map
 
 ## 関連情報
 
-- [ソースマップの使用 – Firefox ツールドキュメント](/ja/docs/Tools/Debugger/How_to/Use_a_source_map)
-- [Introduction to source maps – HTML5 rocks](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)
+- [ソースマップの使用 – Firefox ツールドキュメント](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
+- [Introduction to source maps – HTML5 rocks](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)
 - {{HTTPHeader("SourceMap")}}

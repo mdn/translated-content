@@ -1,6 +1,8 @@
 ---
-title: 'CSP: base-uri'
+title: "CSP: base-uri"
 slug: Web/HTTP/Headers/Content-Security-Policy/base-uri
+l10n:
+  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
 {{HTTPSidebar}}
@@ -35,7 +37,7 @@ Content-Security-Policy: base-uri <source> <source>;
 
 ### ソース
 
-このディレクティブは、他の CSP ディレクティブと同じように、引数のソース値のほとんどを使用します。 [CSP のソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#ソース)。
+このディレクティブは、他の CSP ディレクティブと同じように、引数のソース値のほとんどを使用します。 [CSP のソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#ソース)。
 
 なお、 `base-uri` ではいくつかの値、たとえば `'unsafe-inline'` や `'strict-dynamic'` などのキーワードは意味がありません。
 
@@ -44,12 +46,12 @@ Content-Security-Policy: base-uri <source> <source>;
 ### Meta タグの設定
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'" />
 ```
 
 ### Apache の設定
 
-```html
+```
 <IfModule mod_headers.c>
 Header set Content-Security-Policy "base-uri 'self'";
 </IfModule>
@@ -66,12 +68,14 @@ add_header Content-Security-Policy "base-uri 'self';"
 ドメインが `example.com` ではないので、 {{HTMLElement("base")}} 要素の `href` を `https://example.com` に設定すると、 CSP 違反となります。
 
 ```html example-bad
-<meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
-<base href="https://example.com/">
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'" />
+<base href="https://example.com/" />
 
+<!--
 // Error: Refused to set the document's base URI to 'https://example.com/'
 // because it violates the following Content Security Policy
 // directive: "base-uri 'self'"
+-->
 ```
 
 ## 仕様書

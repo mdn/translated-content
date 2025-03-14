@@ -1,12 +1,6 @@
 ---
 title: user-modify
 slug: Web/CSS/user-modify
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/user-modify
 ---
 
 {{Non-standard_header}}{{CSSRef}}{{deprecated_header}}
@@ -25,9 +19,10 @@ user-modify: initial;
 user-modify: unset;
 ```
 
-> **Attention :** Cette propriété a été remplacée par l'attribut {{HTMLAttrxref("contenteditable")}}.
+> [!WARNING]
+> Cette propriété a été remplacée par l'attribut [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#contenteditable).
 
-Cette propriété est similaire à l'attribut HTML {{htmlattrxref("contenteditable")}}. Une propriété similaire : `user-focus` a été proposée [pour des brouillons de la spécification CSS3 pour les interfaces utilisateur](https://www.w3.org/TR/2000/WD-css3-userint-20000216) mais fut rejetée par le groupe de travail. **Elle a été désactivée de Firefox et n'a donc pas d'effet.**
+Cette propriété est similaire à l'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#contenteditable). Une propriété similaire : `user-focus` a été proposée [pour des brouillons de la spécification CSS3 pour les interfaces utilisateur](https://www.w3.org/TR/2000/WD-css3-userint-20000216) mais fut rejetée par le groupe de travail. **Elle a été désactivée de Firefox et n'a donc pas d'effet.**
 
 ## Syntaxe
 
@@ -77,7 +72,7 @@ La propriété `user-modify` est définie grâce à un mot-clé parmi ceux de la
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.user-modify")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,56 +1,37 @@
 ---
 title: ReferenceError
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
-tags:
-  - Error
-  - JavaScript
-  - Object
-  - Reference
-  - ReferenceError
-translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
+l10n:
+  sourceCommit: 6558de67a347fee30c303da8a0b262a9270a6885
 ---
 
 {{JSRef}}
 
-Объект **`ReferenceError`** представляет ошибку, возникающую при обращении к несуществующей переменной.
+Объект **`ReferenceError`** представляет ошибку, возникающую при обращении к переменной, которая не существует (или не была инициализирована) в текущей области видимости.
 
-## Синтаксис
+`ReferenceError` является {{Glossary("serializable object", "сериализуемым объектом")}}, поэтому он может быть клонирован с помощью {{domxref("structuredClone()")}} или передан между [воркерами](/ru/docs/Web/API/Worker) с использованием {{domxref("Worker/postMessage()", "postMessage()")}}.
 
-```
-new ReferenceError([message[, fileName[, lineNumber]]])
-```
+`RangeReferenceErrorError` является подклассом {{jsxref("Error")}}.
 
-### Параметры
+## Конструктор
 
-- `message`
-  - : Необязательный параметр. Человеко-читаемое описание ошибки
-- `fileName` {{non-standard_inline}}
-  - : Необязательный параметр. Имя файла, содержащего код, вызвавший исключение
-- `lineNumber` {{non-standard_inline}}
-  - : Необязательный параметр. Номер строки кода, вызвавшей исключение
+- {{jsxref("ReferenceError/ReferenceError", "ReferenceError()")}}
+  - : Создаёт новый объект `ReferenceError`.
 
-## Описание
+## Свойства экземпляра
 
-Исключение `ReferenceError` выбрасывается при попытке обратиться к переменной, которая не была объявлена.
+_Также наследует свойства экземпляра своего родителя {{jsxref("Error")}}_.
 
-## Свойства
+Эти свойства определены в `ReferenceError.prototype` и есть у всех экземпляров `ReferenceError`.
 
-- {{jsxref("ReferenceError.prototype")}}
-  - : Позволяет добавлять свойства в объект `ReferenceError`.
+- {{jsxref("Object/constructor", "ReferenceError.prototype.constructor")}}
+  - : Функция-конструктор, создающая экземпляр объекта. Для экземпляров `ReferenceError` начальным значением является конструктор {{jsxref("ReferenceError/ReferenceError", "ReferenceError")}}.
+- {{jsxref("Error/name", "ReferenceError.prototype.name")}}
+  - : Представляет название типа ошибки. Начальным значением `ReferenceError.prototype.name` является `"ReferenceError"`.
 
-## Методы
+## Методы экземпляра
 
-Глобальный объект `ReferenceError` не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.
-
-## Экземпляры объекта `ReferenceError`
-
-### Свойства
-
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Properties')}}
-
-### Методы
-
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Methods')}}
+_Наследует методы экземпляра своего родителя {{jsxref("Error")}}_.
 
 ## Примеры
 
@@ -58,31 +39,25 @@ new ReferenceError([message[, fileName[, lineNumber]]])
 
 ```js
 try {
-  var a = undefinedVariable;
+  let a = undefinedVariable;
 } catch (e) {
   console.log(e instanceof ReferenceError); // true
-  console.log(e.message);                   // "undefinedVariable is not defined"
-  console.log(e.name);                      // "ReferenceError"
-  console.log(e.fileName);                  // "Scratchpad/1"
-  console.log(e.lineNumber);                // 2
-  console.log(e.columnNumber);              // 6
-  console.log(e.stack);                     // "@Scratchpad/2:2:7\n"
+  console.log(e.message); // "undefinedVariable is not defined"
+  console.log(e.name); // "ReferenceError"
+  console.log(e.stack); // Стек ошибок
 }
 ```
 
-### Выбрасывание `ReferenceError`
+### Создание `ReferenceError`
 
 ```js
 try {
-  throw new ReferenceError('Привет', 'someFile.js', 10);
+  throw new ReferenceError("Привет");
 } catch (e) {
   console.log(e instanceof ReferenceError); // true
-  console.log(e.message);                   // "Привет"
-  console.log(e.name);                      // "ReferenceError"
-  console.log(e.fileName);                  // "someFile.js"
-  console.log(e.lineNumber);                // 10
-  console.log(e.columnNumber);              // 0
-  console.log(e.stack);                     // "@Scratchpad/2:2:9\n"
+  console.log(e.message); // "Привет"
+  console.log(e.name); // "ReferenceError"
+  console.log(e.stack); // Стек ошибок
 }
 ```
 
@@ -97,4 +72,3 @@ try {
 ## Смотрите также
 
 - {{jsxref("Error")}}
-- {{jsxref("ReferenceError.prototype")}}

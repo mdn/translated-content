@@ -15,7 +15,8 @@ La programmation orientée objet est un paradigme de programmation fondamental p
 
 Nous décrirons ces concepts sans référence particulière à JavaScript, les exemples seront écrits en [pseudo-code](/fr/docs/Glossary/Pseudocode).
 
-> **Note :** Pour être tout à fait précis, les fonctionnalités décrites ici appartiennent à un style particulier de programmation orienté objet basé sur les classes. La plupart du temps, quand on parle de programmation orientée objet, on parle de ce modèle utilisant des classes.
+> [!NOTE]
+> Pour être tout à fait précis, les fonctionnalités décrites ici appartiennent à un style particulier de programmation orienté objet basé sur les classes. La plupart du temps, quand on parle de programmation orientée objet, on parle de ce modèle utilisant des classes.
 
 Après ces descriptions, nous verrons en JavaScript comment les constructeurs et la chaîne de prototypes peuvent être rapprochés de ces concepts objets et leurs différences. Dans l'article suivant, nous verrons d'autres fonctionnalités de JavaScript qui simplifient l'implémentation de programmes orientés objet.
 
@@ -75,7 +76,7 @@ classe Enseignant
 
 Ce constructeur prend deux paramètres afin d'initialiser les propriétés `nom` et `matière` lorsqu'on crée un nouvel enseignant.
 
-Maintenant que nous disposons d'un constructeur, nous pouvons créer des enseignants. Les langages de programmation utilisent souvent le mot-clé  `new` afin d'indiquer qu'un constructeur est appelé.
+Maintenant que nous disposons d'un constructeur, nous pouvons créer des enseignants. Les langages de programmation utilisent souvent le mot-clé `new` afin d'indiquer qu'un constructeur est appelé.
 
 ```js
 guillaume = new Enseignant("Guillaume", "Psychologie");
@@ -237,13 +238,3 @@ Dans cet article, nous avons vu les fonctionnalités de base offertes par la pro
 Dans le prochain article, nous verrons les fonctionnalités de JavaScript qui permettent de réaliser une programmation orientée objet basée sur des classes.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
-
-## Dans ce module
-
-- [Notions de base sur les objets](/fr/docs/Learn/JavaScript/Objects/Basics)
-- [Prototypes d'objet](/fr/docs/Learn/JavaScript/Objects/Object_prototypes)
-- **Concepts sur la programmation orientée objet**
-- [Classes en JavaScript](/fr/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [Manipuler des données JSON](/fr/docs/Learn/JavaScript/Objects/JSON)
-- [Construire des objets en pratique](/fr/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Ajouter des fonctionnalités à notre démo de balles rebondissantes](/fr/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

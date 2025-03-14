@@ -1,21 +1,14 @@
 ---
 title: Window.screenX
 slug: Web/API/Window/screenX
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Window
-  - screenX
-translation_of: Web/API/Window/screenX
 ---
 
 {{APIRef}}
 
 Свойство **`Window.screenX`** только для чтения возвращает горизонтальное расстояние в пикселях CSS левой границы окна просмотра браузера пользователя до левой части экрана.
 
-> **Примечание:** Псевдоним `screenX` был реализован во всех современных браузерах - {{domxref ("Window.screenLeft")}}. Первоначально это поддерживалось только в IE, но было введено повсеместно из-за популярности.
+> [!NOTE]
+> Псевдоним `screenX` был реализован во всех современных браузерах - {{domxref ("Window.screenLeft")}}. Первоначально это поддерживалось только в IE, но было введено повсеместно из-за популярности.
 
 ## Синтаксис
 
@@ -42,14 +35,25 @@ function positionElem() {
   let leftUpdate = initialLeft - newLeft;
   let topUpdate = initialTop - newTop;
 
-  ctx.fillStyle = 'rgb(0, 0, 0)';
+  ctx.fillStyle = "rgb(0, 0, 0)";
   ctx.fillRect(0, 0, width, height);
-  ctx.fillStyle = 'rgb(0, 0, 255)';
+  ctx.fillStyle = "rgb(0, 0, 255)";
   ctx.beginPath();
-  ctx.arc(leftUpdate + (width/2), topUpdate + (height/2) + 35, 50, degToRad(0), degToRad(360), false);
+  ctx.arc(
+    leftUpdate + width / 2,
+    topUpdate + height / 2 + 35,
+    50,
+    degToRad(0),
+    degToRad(360),
+    false,
+  );
   ctx.fill();
 
-  pElem.textContent = 'Window.screenLeft: ' + window.screenLeft + ', Window.screenTop: ' + window.screenTop;
+  pElem.textContent =
+    "Window.screenLeft: " +
+    window.screenLeft +
+    ", Window.screenTop: " +
+    window.screenTop;
 
   window.requestAnimationFrame(positionElem);
 }
@@ -62,17 +66,17 @@ window.requestAnimationFrame(positionElem);
 Также в код мы включили фрагмент, который определяет, поддерживается ли `screenLeft`, и, если нет, заполняет поли в `screenLeft` / `screenTop`, используя `screenX` / `screenY`.
 
 ```js
-if(!window.screenLeft) {
+if (!window.screenLeft) {
   window.screenLeft = window.screenX;
   window.screenTop = window.screenY;
 }
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 

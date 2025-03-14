@@ -1,16 +1,25 @@
 ---
 title: getter
 slug: Web/JavaScript/Reference/Functions/get
-tags:
-  - геттер
-translation_of: Web/JavaScript/Reference/Functions/get
 ---
 
 {{jsSidebar("Functions")}}
 
 Синтаксис **`get`** связывает свойство объекта с функцией, которая будет вызываться при обращении к этому свойству.
 
-{{EmbedInteractiveExample("pages/js/functions-getter.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Getter")}}
+
+```js interactive-example
+const obj = {
+  log: ["a", "b", "c"],
+  get latest() {
+    return this.log[this.log.length - 1];
+  },
+};
+
+console.log(obj.latest);
+// Expected output: "c"
+```
 
 ## Синтаксис
 
@@ -35,10 +44,10 @@ translation_of: Web/JavaScript/Reference/Functions/get
 Учтите следующее при работе с синтаксисом `get`:
 
 - Он может иметь идентификатор, который является либо числом, либо строкой;
-- Он должен иметь ровно 0 параметров (смотрите [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) для доп. информации);
+- Он должен иметь ровно 0 параметров (смотрите [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) для доп. информации);
 - Он не должен появляться в объектном литерале вместе с другим get или через ввод данных для того же свойства (`{ get x() { }, get x() { } }` и `{ x: ..., get x() { } }` запрещены).
 
-Геттер можно удалить при помощи оператора [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete).
+Геттер можно удалить при помощи оператора [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete).
 
 ## Примеры
 
@@ -48,12 +57,12 @@ translation_of: Web/JavaScript/Reference/Functions/get
 
 ```js
 const obj = {
-  log: ['example','test'],
+  log: ["example", "test"],
   get latest() {
     if (this.log.length === 0) return undefined;
     return this.log[this.log.length - 1];
-  }
-}
+  },
+};
 console.log(obj.latest); // "test"
 ```
 
@@ -72,22 +81,29 @@ delete obj.latest;
 Для добавления геттера к существующему объекту в любое время используйте [Object.defineProperty()](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty).
 
 ```js
-const o = {a: 0};
+const o = { a: 0 };
 
-Object.defineProperty(o, 'b', { get: function() { return this.a + 1; } });
+Object.defineProperty(o, "b", {
+  get: function () {
+    return this.a + 1;
+  },
+});
 
-console.log(o.b) // Runs the getter, which yields a + 1 (which is 1)
+console.log(o.b); // Runs the getter, which yields a + 1 (which is 1)
 ```
 
 ### Использование вычисляемого именованного свойства
 
-> **Примечание:** Вычисляемые свойства являются экспериментальной технологией, частью предложений спецификации ECMAScript 6, и массовой поддержки браузерами пока нет. Код ниже вызовет синтаксическую ошибку в неподдерживаемых средах.
+> [!NOTE]
+> Вычисляемые свойства являются экспериментальной технологией, частью предложений спецификации ECMAScript 6, и массовой поддержки браузерами пока нет. Код ниже вызовет синтаксическую ошибку в неподдерживаемых средах.
 
 ```js
 var expr = "foo";
 
 var obj = {
-  get [expr]() { return "bar"; }
+  get [expr]() {
+    return "bar";
+  },
 };
 
 console.log(obj.foo); // "bar"
@@ -114,7 +130,7 @@ get notifier() {
 },
 ```
 
-Для Firefox смотрите также модуль XPCOMUtils.jsm , который определяет функцию [`defineLazyGetter()`](</en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()>).
+Для Firefox смотрите также модуль XPCOMUtils.jsm , который определяет функцию [`defineLazyGetter()`](</ru/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()>).
 
 ### `get` и `defineProperty`
 
@@ -125,16 +141,18 @@ get notifier() {
 ```js
 class Example {
   get hello() {
-    return 'world';
+    return "world";
   }
 }
 
 const obj = new Example();
 console.log(obj.hello);
 // "world"
-console.log(Object.getOwnPropertyDescriptor(obj, 'hello'));
+console.log(Object.getOwnPropertyDescriptor(obj, "hello"));
 // undefined
-console.log(Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), 'hello'));
+console.log(
+  Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), "hello"),
+);
 // { configurable: true, enumerable: false, get: function get hello() { return 'world'; }, set: undefined }
 ```
 
@@ -151,6 +169,6 @@ console.log(Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), 'hello')
 - [сеттер](/ru/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
-- [Defining Getters and Setters](/ru/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) in JavaScript Guide
+- [`Object.prototype.__defineGetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
+- [Defining Getters and Setters](/ru/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters) in JavaScript Guide

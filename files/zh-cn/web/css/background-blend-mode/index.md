@@ -3,7 +3,7 @@ title: background-blend-mode
 slug: Web/CSS/background-blend-mode
 ---
 
-{{CSSRef()}}
+{{CSSRef}}
 
 ## 概述
 
@@ -15,65 +15,76 @@ slug: Web/CSS/background-blend-mode
 
 ## 语法
 
-```
-Formal syntax:  {{csssyntax("background-blend-mode")}}
-```
-
-```
+```css
 /* 单值 */
 background-blend-mode: normal;
 
-/* 双值，每个背景一个值 */
+/* 双值，一个值对应一个背景 */
 background-blend-mode: darken, luminosity;
 
-background-blend-mode: initial;
+/* 全局值 */
 background-blend-mode: inherit;
+background-blend-mode: initial;
+background-blend-mode: revert;
+background-blend-mode: revert-layer;
 background-blend-mode: unset;
 ```
 
 ### 值
 
-- \<blend-mode>
-  - : 一个{{cssxref("&lt;blend-mode&gt;")}}定义混合的模式，可以有多个值，用逗号间隔。
+- {{cssxref("&lt;blend-mode&gt;")}}
+  - : 一个定义混合的模式，可以有多个值，用逗号间隔。
+
+## 形式定义
+
+{{cssinfo}}
+
+## 形式语法
+
+{{csssyntax}}
 
 ## 示例
 
-\<select id="select">
-\<option>normal\</option>
-\<option>multiply\</option>
-\<option selected>screen\</option>
-\<option>overlay\</option>
-\<option>darken\</option>
-\<option>lighten\</option>
-\<option>color-dodge\</option>
-\<option>color-burn\</option>
-\<option>hard-light\</option>
-\<option>soft-light\</option>
-\<option>difference\</option>
-\<option>exclusion\</option>
-\<option>hue\</option>
-\<option>saturation\</option>
-\<option>color\</option>
-\<option>luminosity\</option>
-\</select>
+```html hidden
+<div id="div"></div>
+<select id="select">
+  <option>normal</option>
+  <option>multiply</option>
+  <option selected>screen</option>
+  <option>overlay</option>
+  <option>darken</option>
+  <option>lighten</option>
+  <option>color-dodge</option>
+  <option>color-burn</option>
+  <option>hard-light</option>
+  <option>soft-light</option>
+  <option>difference</option>
+  <option>exclusion</option>
+  <option>hue</option>
+  <option>saturation</option>
+  <option>color</option>
+  <option>luminosity</option>
+</select>
+```
 
 ```css
 #div {
-    width: 300px;
-    height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),url('https://mdn.mozillademos.org/files/8545/tr.png');
-    background-blend-mode: screen;
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: screen;
 }
 ```
 
 ```js
-document.getElementById("select").onchange = function(event) {
-    document.getElementById("div").style.backgroundBlendMode = document.getElementById("select").selectedOptions[0].innerHTML;
-}
-console.log(document.getElementById('div'));
+document.getElementById("select").onchange = function (event) {
+  document.getElementById("div").style.backgroundBlendMode =
+    document.getElementById("select").selectedOptions[0].innerHTML;
+};
+console.log(document.getElementById("div"));
 ```
 
-{{ EmbedLiveSample('Examples', "330", "330") }}
+{{ EmbedLiveSample('示例', "330", "330") }}
 
 ## 规范
 

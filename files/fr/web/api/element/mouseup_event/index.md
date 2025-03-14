@@ -1,8 +1,6 @@
 ---
-title: 'Element : évènement mouseup'
+title: "Element : évènement mouseup"
 slug: Web/API/Element/mouseup_event
-translation_of: Web/API/Element/mouseup_event
-browser-compat: api.Element.mouseup_event
 ---
 
 {{APIRef}}

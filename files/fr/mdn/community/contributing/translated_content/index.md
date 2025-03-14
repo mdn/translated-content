@@ -1,11 +1,6 @@
 ---
 title: Localiser MDN
 slug: MDN/Community/Contributing/Translated_content
-tags:
-  - Localization
-  - MDN Meta
-  - l10n
-original_slug: MDN/Contribute/Localize
 ---
 
 {{MDNSidebar}}
@@ -18,12 +13,13 @@ L'objectif est de geler tout le contenu localisé (ce qui signifie que nous n'ac
 
 Nous avons actuellement dégelé les langues suivantes :
 
-> **Note :** Si vous voulez contribuer à l'une des langues actives existantes, ou si vous voulez discuter du dégel d'une langue actuellement gelée, contactez l'un des membres actifs listés ci-dessous, ou [contactez-nous pour obtenir de l'aide](/fr/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
+> [!NOTE]
+> Si vous voulez contribuer à l'une des langues actives existantes, ou si vous voulez discuter du dégel d'une langue actuellement gelée, contactez l'un des membres actifs listés ci-dessous, ou [contactez-nous pour obtenir de l'aide](/fr/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
 
 ### Chinois (zh-CN, zh-TW)
 
-- Discussions : [Telegram (MozTW L10n channel)](https://moztw.org/tg)
-- Contributeurs actuels : [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [dibery](https://github.com/dibery)
+- Discussions : [Discord (`#zh-cn`)](/discord), [Discord (`#zh-tw`)](/discord), [Telegram (`MozTW L10n`)](https://moztw.org/community/telegram/)
+- Contributeurs actuels : [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999), [jasonren0403](https://github.com/jasonren0403), [JasonLamv-t](https://github.com/JasonLamv-t)
 
 ### Français (fr)
 
@@ -37,13 +33,18 @@ Nous avons actuellement dégelé les langues suivantes :
 
 ### Coréen (ko)
 
-- Discussions : [Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)
-- Contributeurs actuels : [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [cos18](https://github.com/cos18), [GwangYeol-Im](https://github.com/GwangYeol-Im), [pje1740](https://github.com/pje1740), [nKiNk](https://github.com/nKiNk), [yujo11](https://github.com/yujo11)
+- Discussions : [Discord (`#korean`)](/discord), [Google Groups (`yari-content-ko`)](https://groups.google.com/g/yari-content-ko)
+- Contributeurs actuels : [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [wisedog](https://github.com/wisedog), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
 
 ### Russe (ru)
 
 - Discussions : [Matrix (#mdn-l10n-ru channel)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
-- Contributeurs actuels : [armanpwnz](https://github.com/armanpwnz), [captainspring](https://github.com/captainspring), [mpstv](https://github.com/mpstv), [myshov](https://github.com/myshov), [Saionaro](https://github.com/Saionaro), [sashasushko](https://github.com/sashasushko), [lex111](https://github.com/lex111)
+- Contributeurs actuels : [leon-win](https://github.com/leon-win), [sashasushko](https://github.com/sashasushko), [Saionaro](https://github.com/Saionaro), [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [lex111](https://github.com/lex111)
+
+### Espagnol (es)
+
+- Discussions : [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (`#spanish`)](/discord)
+- Contributeurs actuels : [Graywolf9](https://github.com/Graywolf9), [JuanVqz](https://github.com/JuanVqz)
 
 ## Autres sujets de localisation sur MDN
 

@@ -1,16 +1,6 @@
 ---
 title: TypedArray.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/findIndex
 ---
 
 {{JSRef}}
@@ -19,7 +9,18 @@ La méthode **`findIndex()`** renvoie un **indice** d'un élément d'un tableau 
 
 Voir aussi la méthode {{jsxref("TypedArray.find", "find()")}} qui renvoie la **valeur** de l'élément trouvé (au lieu de son indice).
 
-{{EmbedInteractiveExample("pages/js/typedarray-findindex.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.findIndex()")}}
+
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([10, -20, 30, -40, 50]);
+
+console.log(int8.findIndex(isNegative));
+// Expected output: 1
+```
 
 ## Syntaxe
 

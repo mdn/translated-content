@@ -1,9 +1,6 @@
 ---
 title: StorageManager.estimate()
 slug: Web/API/StorageManager/estimate
-page-type: web-api-instance-method
-translation_of: Web/API/StorageManager/estimate
-browser-compat: api.StorageManager.estimate
 ---
 
 {{securecontext_header}}{{APIRef("Storage")}}
@@ -15,7 +12,7 @@ Cette méthode est asynchrone est renvoie une [promesse](/fr/docs/Web/JavaScript
 ## Syntaxe
 
 ```js
-estimate()
+estimate();
 ```
 
 ### Paramètres
@@ -33,7 +30,8 @@ Une promesse (un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Obje
 - `usageDetails` {{Non-standard_Inline}}
   - : Un objet contenant une décomposition de `usage` par système de stockage. Toutes les propriétés incluses sur cet objet auront un `usage` supérieur à 0 et tout système de stockage avec `usage` à 0 ne sera pas fourni comme propriété de cet objet.
 
-> **Note :** Les valeurs renvoyées ne sont pas précisément exactes. Cela est lié à la compression, la déduplication de données et au masquage des informations pour des raisons de sécurité.
+> [!NOTE]
+> Les valeurs renvoyées ne sont pas précisément exactes. Cela est lié à la compression, la déduplication de données et au masquage des informations pour des raisons de sécurité.
 
 Vous pourrez observer que `quota` varie en fonction des origines. Cette variation est basée sur plusieurs facteurs dont&nbsp;:
 
@@ -49,17 +47,19 @@ Dans cet exemple, on récupère les estimations de l'espace utilisé et du quota
 
 ```html
 <label>
-  Vous utilisez actuellement <output id="percent">
-  </output>% du stockage disponible.
+  Vous utilisez actuellement <output id="percent"> </output>% du stockage
+  disponible.
 </label>
 ```
 
 ### JavaScript
 
 ```js
-navigator.storage.estimate().then(function(estimate) {
-  document.getElementById("percent").value =
-      (estimate.usage / estimate.quota * 100).toFixed(2);
+navigator.storage.estimate().then(function (estimate) {
+  document.getElementById("percent").value = (
+    (estimate.usage / estimate.quota) *
+    100
+  ).toFixed(2);
 });
 ```
 

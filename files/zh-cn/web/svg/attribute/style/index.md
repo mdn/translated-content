@@ -3,9 +3,9 @@ title: style
 slug: Web/SVG/Attribute/style
 ---
 
-« [SVG Attribute reference home](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-**`style`** 属性指定了指定其元素的样式信息。它的功能与 HTML 中的[style](/zh-CN/docs/Web/HTML/Global_attributes/style)属性相同。
+**`style`** 属性指定了指定其元素的样式信息。它的功能与 HTML 中的 [style](/zh-CN/docs/Web/HTML/Global_attributes/style) 属性相同。
 
 ## 使用环境
 
@@ -23,8 +23,12 @@ slug: Web/SVG/Attribute/style
 
 ```html
 <svg version="1.1" viewbox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
-  <rect height="300" width="600" x="200" y="100"
-     style="fill: red; stroke: blue; stroke-width: 3"/>
+  <rect
+    height="300"
+    width="600"
+    x="200"
+    y="100"
+    style="fill: red; stroke: blue; stroke-width: 3" />
 </svg>
 ```
 
@@ -32,12 +36,12 @@ slug: Web/SVG/Attribute/style
 
 以下元素可以使用 style 属性
 
-- [Container elements](/zh-CN/SVG/Element#Container) »
-- [Filter primitive elements](/zh-CN/SVG/Element#FilterPrimitive) »
-- [Gradient elements](/zh-CN/SVG/Element#Gradient) »
-- [Graphics elements](/zh-CN/SVG/Element#Graphics) »
-- [Structural elements](/zh-CN/SVG/Element#Structural) »
-- [Text content elements](/zh-CN/SVG/Element#TextContent) »
+- [Container elements](/zh-CN/docs/Web/SVG/Element#container) »
+- [Filter primitive elements](/zh-CN/docs/Web/SVG/Element#filterprimitive) »
+- [Gradient elements](/zh-CN/docs/Web/SVG/Element#gradient) »
+- [Graphics elements](/zh-CN/docs/Web/SVG/Element#graphics) »
+- [Structural elements](/zh-CN/docs/Web/SVG/Element#structural) »
+- [Text content elements](/zh-CN/docs/Web/SVG/Element#textcontent) »
 - {{ SVGElement("clipPath") }}
 - {{ SVGElement("filter") }}
 - {{ SVGElement("font") }}

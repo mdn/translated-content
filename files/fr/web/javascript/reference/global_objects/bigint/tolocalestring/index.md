@@ -1,23 +1,27 @@
 ---
 title: BigInt.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
-tags:
-  - BigInt
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
-original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt/toLocaleString
 ---
 
 {{JSRef}}
 
 La méthode **`toLocaleString()`** renvoie une chaîne de caractères représentant le grand entier pour la ou les locale(s) indiquée(s).
 
-{{EmbedInteractiveExample("pages/js/bigint-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: BigInt.toLocaleString()")}}
+
+```js interactive-example
+const bigint = 123456789123456789n;
+
+// German uses period for thousands
+console.log(bigint.toLocaleString("de-DE"));
+// Expected output: "123.456.789.123.456.789"
+
+// Request a currency format
+console.log(
+  bigint.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+);
+// Expected output: "123.456.789.123.456.789,00 €"
+```
 
 ## Syntaxe
 
@@ -58,28 +62,28 @@ var bigint = 123456789123456789n;
 
 // En allemand, on utilise les points pour séparer
 // les milliers
-console.log(bigint.toLocaleString('de-DE'));
+console.log(bigint.toLocaleString("de-DE"));
 // → 123.456.789.123.456.789
 
 // La plupart des pays arabes utilise
 // des chiffres hindoux-arabes
-console.log(bigint.toLocaleString('ar-EG'));
+console.log(bigint.toLocaleString("ar-EG"));
 // → ١٢٣٬٤٥٦٬٧٨٩٬١٢٣٬٤٥٦٬٧٨٩
 
 // India utilise des séparateurs pour
 // les milliers/lakh/crore
-console.log(bigint.toLocaleString('en-IN'));
+console.log(bigint.toLocaleString("en-IN"));
 // → 1,23,45,67,89,12,34,56,789
 
 // La clé d'extension requiert un système de numérotation
 // par exemple, le système décimal chinois
-console.log(bigint.toLocaleString('zh-Hans-CN-u-nu-hanidec'));
+console.log(bigint.toLocaleString("zh-Hans-CN-u-nu-hanidec"));
 // → 一二三,四五六,七八九,一二三,四五六,七八九
 
 // Lorsqu'on demande une langue qui peut ne pas être prise
 // en charge (ici le balinais), on peut ajouter une autre
 // locale qui sera utilisée en recours (ici l'indonésien)
-console.log(bigint.toLocaleString(['ban', 'id']));
+console.log(bigint.toLocaleString(["ban", "id"]));
 // → 123.456.789.123.456.789
 ```
 
@@ -91,15 +95,19 @@ Ici, on personnalise le résultat fourni par `toLocaleString()` grâce à l'argu
 var bigint = 123456789123456789n;
 
 // On utilise un format avec une devise
-console.log(bigint.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
+console.log(
+  bigint.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+);
 // → 123.456.789.123.456.789,00 €
 
 // Le yen japonais n'utilise pas de sous-unité
-console.log(bigint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))
+console.log(
+  bigint.toLocaleString("ja-JP", { style: "currency", currency: "JPY" }),
+);
 // → ￥123,456,789,123,456,789
 
 // On limite l'écriture aux trois premiers chiffres significatifs
-console.log(bigint.toLocaleString('en-IN', { maximumSignificantDigits: 3 }));
+console.log(bigint.toLocaleString("en-IN", { maximumSignificantDigits: 3 }));
 // → 1,23,00,00,00,00,00,00,000
 ```
 
@@ -109,13 +117,11 @@ Lorsqu'on souhaite mettre en forme une grande quantité de nombres, mieux vaudra
 
 ## Spécifications
 
-| Spécification                                                            | État                     |
-| ------------------------------------------------------------------------ | ------------------------ |
-| [`BigInt`](https://tc39.es/ecma402/#sup-bigint.prototype.tolocalestring) | Proposition de niveau 3. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.BigInt.toLocaleString")}}
+{{Compat}}
 
 ## Voir aussi
 

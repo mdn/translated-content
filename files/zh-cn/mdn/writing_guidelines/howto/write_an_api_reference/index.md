@@ -1,121 +1,160 @@
 ---
-title: How to write an API reference
+title: 如何撰写 API 参考文档
 slug: MDN/Writing_guidelines/Howto/Write_an_api_reference
-original_slug: MDN/Contribute/Howto/Write_an_API_reference
 ---
 
-{{MDNSidebar}}
+本篇指南将带你了解在 MDN 上编写 API 参考文档所需的所有知识。
 
-This guide takes you through all you need to know to write an API reference on MDN.
+## 做好准备
 
-## Getting prepared
+在实际撰写 API 参考文档前，应该提前准备和计划一些事情。
 
-Before starting to document an API, there are some things you should prepare and plan in advance of starting to actually write.
+### 必备知识
 
-### Prerequisite knowledge
+假定阅读这篇指南前你已经在如下方面拥有一些适当的知识：
 
-It is assumed that before reading this guide you have a reasonable knowledge of:
+- HTML、CSS 和 JavaScript 等 Web 技术。JavaScript 是最重要的。
+- 阅读 Web 技术标准。你需要在撰写 API 文档时，随时翻阅这些资料。
 
-- Web technologies like HTML, CSS and JavaScript. JavaScript is most important.
-- Reading Web technology specs. You'll be looking at these a lot as you document APIs.
+其他知识可以顺路学习到。
 
-Everything else can be learned along the way.
+### 必备资源
 
-### Prerequisite resources
+在开始撰写 API 参考文档前，你需要准备：
 
-Before starting to document an API, you should have available:
+1. 最新版的标准：无论是 W3C 建议还是早期的编辑草案，你都应该参考 API 规范的最新可用草案（或规范）。往往可以通过在网络上搜索到它们。最新版本通常会从所有版本的规范中链接出来，列在“latest draft”或类似的条目下。
+2. 最新版的现代 web 浏览器：这些应该是实验性/alpha 版本，例如 [Firefox Nightly](https://www.mozilla.org/zh-CN/firefox/channel/desktop/) 或 [Chrome Canary](https://www.google.cn/intl/zh-cn/chrome/canary/)，这些版本更有可能支持你所撰写文档的功能。如果你正在为一个新的/实验性的 API 撰写文档，这一点尤其相关。
+3. 演示页/博客文章/其他信息：尽可能找到充实的参考信息。
+4. 实用的工程人员联系方式：找到一个友好的工程联系人来询问有关规范的问题是非常有用的，这个人可能参与了 API 的标准化或在浏览器中的实现。找到他们的好地方是：
 
-1. The latest spec: Whether it is a W3C Recommendation or an early editor's draft, you should refer to the latest available draft of the spec that covers (or specs that cover) that API. To find it, you can usually do a Web search. The latest version will often be linked to from all versions of the spec, listed under "latest draft" or similar.
-2. The latest modern web browsers: These should be experimental/alpha builds such as [Firefox Nightly](https://nightly.mozilla.org/)/[Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html) that are more likely to support the features you are documenting. This is especially pertinent if you are documenting a nascent/experimental API.
-3. Demos/blog posts/other info: Find as much info as you can.
-4. Useful engineering contacts: It is really useful to find yourself a friendly engineering contact to ask questions about the spec, someone who is involved in the standardization of the API, or its implementation in a browser. Good places to find them are:
+   - 如果你在相关公司工作，可以在内部联系手册中找到。
+   - 参与该 API 讨论的公开邮件列表，如 Mozilla 的 [dev-platform](https://groups.google.com/a/mozilla.org/g/dev-platform/) 或 W3C 的 [public-webapps](https://lists.w3.org/Archives/Public/public-webapps/) 等列表。
+   - 规范本身。如 [Web Audio API 规范](https://webaudio.github.io/web-audio-api/)在最顶部列出了规范的作者和他们的联系方式。
 
-    - Your internal company address book, if you work for a relevant company.
-    - A public mailing list that is involved in the discussion of that API, such as Mozilla's [dev-platform](https://lists.mozilla.org/listinfo/dev-platform) or [dev-webapi](https://lists.mozilla.org/listinfo/dev-webapi) lists, or a W3C list like [public-webapps](https://lists.w3.org/Archives/Public/public-webapps/).
-    - The spec itself. For example, the [Web Audio API spec](https://webaudio.github.io/web-audio-api/) lists the authors and their contact details at the top.
+### 花点时间体验 API
 
-### Take some time to play with the API
+在编写 API 文档的过程中，你会多次返回到构建演示的过程，但在开始时花时间熟悉 API 的工作方式是很有用的——了解主要的接口、属性、方法是什么，主要的用例是什么，以及如何用它编写简单的功能。
 
-You will return to building demos many times through the course of documenting an API, but it is useful to start by spending time familiarizing yourself with how the API works — learn what the main interfaces/properties/methods are, what the primary use cases are, and how to write simple functionality with it.
+当一个 API 发生变化时，你需要注意你所参考或学习的现有演示是否已经过时。检查演示中使用的主要结构，看它们是否与最新的规范相一致。它们也可能无法在最新的浏览器中工作，但这并不是一个非常可靠的测试，因为通常情况下，为了向后兼容，旧的功能会继续得到支持。
 
-When an API has changed, you need to be careful that existing demos you refer to or learn from are not out of date. Check the main constructs that are used in the demo to see if they match up to the latest spec. They may also not work in up-to-date browsers, but this is not a very reliable test, as often the old features continue to be supported for backwards compatibility.
+> [!NOTE]
+> 如果规范最近被更新了，比如说，一个方法现在被定义得不一样了，但旧的方法在浏览器中仍然有效，那么你通常需要在同一个地方记录这两种方法，这样新旧两种方法都可以得到覆盖。如果你需要帮助，可以参考你找到的演示，或询问工程联系人。
 
-> **备注：** If the spec has been recently updated so that, say, a method is now defined differently, but the old method still works in browsers, you will often have to document both in the same place, so that the old and new methods are covered. If you need help, refer to demos you have found, or ask an engineering contact.
+### 建立你需要撰写或更新的页面列表
 
-### Create the list of documents you need to write or update
+API 参考一般会包含以下页面。你可以在我们的[页面类型](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Page_types)文章中找到更多关于每个页面包含的内容、示例和模板的细节。在你开始之前，你应该写下你应该创建的所有页面的清单。
 
-Reference documents for an API are quite numerous. There is an overview page for the API, a page for each interface, one for each method (including constructors) and property (including event handlers properties). There is also one page per event.
+1. 概述页
+2. 接口页
+3. 构造函数页
+4. 方法页
+5. 属性页
+6. 事件页
+7. 概念/使用指南页
+8. 示例
 
-#### Overview page
+> [!NOTE]
+> 在本文中，我们将使用 [Web 音频 API](/zh-CN/docs/Web/API/Web_Audio_API) 作为示例。
 
-The API overview page described the role of the API and the top-level interfaces. Its name is NAME OF API and its slug (that is the end part of the URL) must contains at least one space. It is placed at the top level of the API reference ([https://developer.mozilla.org/en-US/docs/Web/API](/zh-CN/docs/Web/API))
+#### 概述页
 
-- Title: _Web Audio API_
-- Slug: _Web/API/Web_Audio_API_
-- Tags: must include the 'Overview' and 'API' tags
+概述页是用来描述 API 的作用、它的顶级接口、其他接口中包含的相关功能以及其他高层次的细节的单个页面。它的名称和路径名需要以 API 的名称命名，后接“API”作为结尾。它位于 API 参考的顶层，是 [https://developer.mozilla.org/zh-CN/docs/Web/API](/zh-CN/docs/Web/API) 的直接子页面。
 
-Note that most API have a special sidebar with quicklinks. This sidebar lists all interfaces, and possibly tutorials and related API.
+示例：
 
-#### Interface pages
+- 标题：_Web Audio API_
+- 路径名：_Web_Audio_API_
+- URL：[https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API](/zh-CN/docs/Web/API/Web_Audio_API)
 
-Each interface will have its own page too. It will describe the purpose of the interface and lists all constructors, methods, and properties. The title of the page will be the name of the interface (always starting with an uppercase letter), its slug, the interface name, will be at the top level of the API reference ([https://developer.mozilla.org/en-US/docs/Web/API](/zh-CN/docs/Web/API))
+#### 接口页
 
-- Title: _AudioContext_
-- Slug: _Web/API/AudioContext_
-- Tags: must include the API name as a tag (here _Web Audio API_), as well as _Interface._
+每个接口也会有自己的页面，描述该接口的目的，列出任何成员（构造函数、方法、属性等），并显示它与哪些浏览器兼容。每个页面的名称和路径名应该是接口的名称，与规范中写的完全一样。每个页面都被放置在 API 参考的顶层，作为 [https://developer.mozilla.org/zh-CN/docs/Web/API](/zh-CN/docs/Web/API) 的一个子页面。
 
-- Title: _AudioNode_
-- Slug: _Web/API/AudioNode_
-- Tags: must include the API name as a tag (here _Web Audio API_), as well as _Interface_.
+示例：
 
-> **备注：** We document every property and interface appearing in the _prototype_ of an object implementing this interface. This has the following consequences:
->
-> - We do not document inherited properties and methods of the interface: they are listed on the respective parent interface. We do hint at their existence though.
-> - We do document properties and methods defined in mixins, though we use the mixin name as interface name. (This is not optimal as the mixin name will not appear in the console, but prevents the duplication of documentation. We may revisit this in the future.)
-> - There is one subpage per method, or constructor: if there are several variants, with different parameters, we still create one subpage and use its Syntax section to list all variants.
-> - Special methods like the stringfier (`toString()`) and the jsonizier (`toJSON()`) are also listed if they do exist.
-> - Named constructors (like `Image()` for {{domxref("HTMLImageElement")}} ) are also listed, if relevant.
+- 标题：_AudioContext_
+- 路径名：_AudioContext_
+- URL：[https://developer.mozilla.org/zh-CN/docs/Web/API/AudioContext](/zh-CN/docs/Web/API/AudioContext)
 
-#### Properties
+- 标题：_AudioNode_
+- 路径名：_AudioNode_
+- URL：[https://developer.mozilla.org/zh-CN/docs/Web/API/AudioNode](/zh-CN/docs/Web/API/AudioNode)
 
-The set of properties of a given interface can be found on its [WebIDL](/zh-CN/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#Properties). We document each one in a single page. It will describe the purpose of the property, its syntax, and provide examples of use, in isolation. Its slug is the property name, as a subpage of the interface:
+> [!NOTE]
+> 我们为接口中出现的每一个成员撰写文档。你应该牢记以下规则：
 
-- Title: _AudioContext.currentTime_
-- Slug: _Web/API/AudioContext/currentTime_
-- Tags: must contain the API name as a tag (here _Web Audio API_), the interface name (here _AudioContext_) as well as _Property_. If the property is read-only, like this example, _Read-only_ must be added too.
+- 我们要为定义在实现该接口的对象原型上的方法（实例方法），以及定义在实际类本身上的方法（静态方法）撰写文档。在极少数情况下，如果它们都存在于同一个接口上，你应该把它们列在页面上的不同部分（静态方法/实例方法）。通常只有实例方法存在，在这种情况下，你可以把这些方法放在“Methods”标题下。
+- 不必为接口的继承属性和方法撰写文档：它们被列在各自的父接口上。不过我们确实暗示了它们的存在。
+- 我们确实为定义在 mixin 中的属性和方法撰写文档。请参阅[混入的贡献指南](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#混入)了解更多细节。
+- 如果存在特殊方法，如字符串化方法（`toString()`）和 JSON 化方法（`toJSON()`），也会列出。
+- 如果存在具名的构造函数（如 {{domxref("HTMLImageElement")}} 的 `Image()`），也会列出。
 
-- Title: _AudioNode.numberOfInputs_
-- Slug: _Web/API/AudioNode/numberOfInputs_
-- Tags: must include the API name as a tag (here _Web Audio API_), as well as _Interface_.
+#### 构造函数页
 
-> **备注：** Event handlers properties (`onXYZ` properties) are also listed: they'll have their individual subpage, like any other property.
+每个接口都有 0 个或 1 个构造函数，记录在接口页面的子页面上。它描述了构造函数的目的，并显示了其语法的样子、使用示例、浏览器兼容性信息等。它的路径名是构造函数的名称，与接口名称完全相同，标题是接口名称、点、构造函数名称，然后是括号。
 
-#### Methods
+示例：
 
-Like for properties, methods are listed on the interface's [WebIDL](/zh-CN/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#Methods) and we document each method in a single page. It will describe the purpose of the method, its syntax, and provide examples of use, in isolation. Its slug, without the parenthesis, is the method name, as a subpage of the interface:
+- 标题：_AudioContext.AudioContext()_
+- 路径名：_AudioContext_
+- URL：[https://developer.mozilla.org/zh-CN/docs/Web/API/AudioContext/AudioContext](/zh-CN/docs/Web/API/AudioContext/AudioContext)
 
-- Title: _AudioContext.createBuffer()_ Note the parentheses, making it clear that it is a method.
-- Slug: _Web/API/AudioContext/createBuffer_ No parenthesis here.
-- Tags: must include the API name as a tag (here _Web Audio API_), the interface name (here _AudioContext_) as well as _Method_.
+#### 属性页
 
-#### Constructors
+每个接口都有零个或多个属性，记录在接口页面的子页面上。每个页面都描述了该属性的目的，并显示了其语法的样子、使用示例、浏览器兼容性信息等。它的路径名是属性的名称，标题是接口名称、点，然后是属性名称。
 
-Similar in structure to methods, they also have their own pages. Note that only one unnamed constructor may exist per interface. The title convention is slightly different than the one of methods: it isn't prefixed.
+示例：
 
-- Title: _Worker()_ Note the parenthesis and the absence of prefix
-- Slug: _Web/API/Worker/Worker_ No parenthesis here. Constructors are also subpages of the interface page.
-- Tags: must include the API name as a tag (here _Web Workers_), the interface name (here Worker) as well as _Constructor_.
+- 标题：_AudioContext.state_
+- 路径名：_state_
+- URL: [https://developer.mozilla.org/zh-CN/docs/Web/API/AudioContext/state](/zh-CN/docs/Web/API/BaseAudioContext/state)
 
-#### Events
+#### 方法页
 
-Events are the last type of objects needing documentation. Unless the previous documents, event subpages lies under the Web/Events hierarchy. Each event has its own subpage:
+每个接口都有零个或多个方法，记录在接口页面的子页面上。每个页面都描述了该方法的目的，并显示了其语法的样子、使用示例、浏览器兼容性信息等。它的路径名是方法的名称，标题是接口名称、点、方法名称，然后是括号。
 
-- Title: _start_
-- Slug: _Web/Events/start_
+示例：
 
-#### Listing them all
+- 标题：_AudioContext.close()_
+- 路径名：_close_
+- URL：[https://developer.mozilla.org/zh-CN/docs/Web/API/AudioContext/close](/zh-CN/docs/Web/API/AudioContext/close)
+- 标题：_AudioContext.createGain()_
+- 路径名：_createGain_
+- URL：[https://developer.mozilla.org/zh-CN/docs/Web/API/AudioContext/createGain](/zh-CN/docs/Web/API/BaseAudioContext/createGain)
 
-Creating a list of all these subpages is a good way to track them. For example:
+#### 事件页
+
+事件页往往作为其目标接口的子页面，并使用 _eventname_\_event 路径名，标题设置为 `Interface：eventName 事件`。
+
+不要为 `on` 事件处理程序属性创建页面。在 `eventName_event` 页面上提及访问事件的两种方式。
+
+示例：
+
+- 标题：XRSession：end 事件
+- 路径：end_event
+- URL：[https://developer.mozilla.org/zh-CN/docs/Web/API/XRSession/end_event](/zh-CN/docs/Web/API/XRSession/end_event)
+
+#### 概念/指南页
+
+大多数 API 参考资料至少有一个指南，有时还有一个概念页与之配套。至少，一个 API 参考资料应该包含一个名为“Using _name-of-api_”的指南，它将提供一个关于如何使用 API 的基本指南。更复杂的 API 可能需要多个使用指南来解释如何使用 API 的不同方面。
+
+如果需要，你也可以包括一篇名为“_name-of-api_ concepts”的概念文章，它将提供与 API 相关的任何概念背后的理论解释，开发人员应该理解这些概念以有效使用它。
+
+这些文章都应该作为 API 概述页面的子页面来创建。例如，Web 音频有四篇指南和一篇概念文章：
+
+- [https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API](/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
+- [https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics](/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext](/zh-CN/docs/Web/API/Web_Audio_API)
+- [https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
+
+#### 示例
+
+你应该创建一些例子，至少展示 API 的最常见的使用情况。你可以把这些放在适当的地方，推荐的地方是 [MDN GitHub 仓库](https://github.com/mdn/)。
+
+#### 把它们都列出来
+
+创建一个所有这些子页面的列表是跟踪它们的一个好方法。比如说：
 
 - Web_Audio_API
 - AudioContext
@@ -144,218 +183,154 @@ Creating a list of all these subpages is a good way to track them. For example:
   - end
   - …
 
-Each interface in the list has a separate page created for it as a subpage of `https://developer.mozilla.org/en-US/docs/Web/API`; for example, the document for {{domxref("AudioContext")}} would be located at `https://developer.mozilla.org/en-US/docs/Web/API/AudioContext`. Each [interface page](#interface_pages) explains what that interface does and provides a list of the methods and properties that comprise the interface. Then each method and property is documented on its own page, which is created as a subpage of the interface it's a member of. For instance, {{domxref("AudioContext.currentTime")}} is documented at `https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/currentTime`.
+列表中的每个接口都有一个单独的页面，作为 `https://developer.mozilla.org/zh-CN/docs/Web/API` 的子页面；例如，{{domxref("AudioContext")}}的文件将位于 `https://developer.mozilla.org/zh-CN/docs/Web/API/AudioContext`。每个[接口页](#接口页)解释该接口的作用，并提供构成该接口的方法和属性的列表。然后每个方法和属性都被记录在自己的页面上，该页面被创建为其所属接口的一个子页面。例如，{{domxref("BaseAudioContext/currentTime")}} 被记录在 `https://developer.mozilla.org/zh-CN/docs/Web/API/AudioContext/currentTime`。
 
-For example, given the list above, the {{domxref("AudioContext")}} interface is documented at `https://developer.mozilla.org/en-US/docs/Web/API/AudioContext`
+## 创建页面
 
-### Create the overview page
+现在，根据下面的结构创建你需要的页面。我们的 [MDN 内容 README](https://github.com/mdn/content#adding-a-new-document) 包含创建新文件的说明，我们的[页面类型](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Page_types)指南包含进一步的例子和可能有用的页面模板。
 
-Now create the overview (API landing) page:
+### 概述页的结构
 
-1. Go to [https://developer.mozilla.org/en-US/docs/Web/API](/zh-CN/docs/Web/API) and, making sure you are logged in, select the _Cog icon > New sub-page_. You should now be in an editor for a new page.
-2. Enter the title as the API name as defined by the spec, plus "API". So for example "Web Audio API", "IndexedDB API", or "MediaRecorder API".
-3. The Slug should be auto-filled, with underscores in the place of spaces. If it isn't, correct it.
-4. Enter some dummy content into the large content area, such as "TBD" or "Content", then click _Save Changes_. Or just soar right on into the section [Overview page](#overview_page) and start filling out the real content right away.
+API 着陆页的长度会有很大的不同，这取决于 API 有多大，但它们都有基本相同的功能。参见 [https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API](/zh-CN/docs/Web/API/Web_Audio_API)，了解大型着陆页的示例。
 
-Your landing page now exists! Now all you have to do is fill it in, which is discussed in the next section.
+着陆页的页面特征概述如下：
 
-## Structure of an overview page
+1. **描述**：着陆页的第一段应该对 API 的总体目的进行简短而准确的描述。
+2. **概念和使用方法部分**：下一节的标题应该是“\[API 名称]的概念和用法”，并概述该 API 提供的所有主要功能，它解决了什么问题，以及它是如何工作的。所有这些都是高层次的。这一节应该相当简短，不要涉及到代码或具体的实施细节。
+3. **接口列表**：这一部分的标题应该是“\[API 名称]接口”，并提供指向构成 API 的每个接口的参考页面的链接，以及每个接口的简短描述。关于创建新页面的更快方法，请参见“用 \\{{domxref}} 宏引用其他 API 功能”一节。
+4. **示例**：这一部分应该展示一两个简单的 API 使用案例。
+5. **标准表格**: 在这一点上，你需要包含一个规范表格——详见“创建一个规范参考表格”部分。
+6. **浏览器兼容性**：现在你需要包含一个浏览器兼容性表格。详见[兼容性表](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)指南。
+7. **参见**：“参见”部分可以包括在学习这项技术时可能有用的进一步链接，包括 MDN（和外部）的教程、例子、库等。
 
-> **警告：** This section is still a proposal, without consensus yet reached. Don't use it yet.
+### 接口页的结构
 
-API landing pages will differ greatly in length, depending on how big the API is, but they will all have basically the same features. See [https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API](/zh-CN/docs/Web/API/Web_Audio_API) for an example of a big landing page.
+现在你应该准备好开始撰写你的接口页了。每个接口参考页都应该遵守以下结构：
 
-The features of a landing page are outlined below:
+1. **\\{{APIRef}}**：在每个界面页面的第一行中包含 \\{{APIRef}} 宏，将 API 的名称作为参数，例如 \\{{APIRef("Web Audio API")}}。这个宏的作用是在界面页面的左侧构建一个参考菜单，包括属性和方法，以及 [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) 宏中定义的其他快速链接（请人将你的 API 添加到现有的 GroupData 条目中，或者，如果它还没有被列在那里。则创建一个新的）。该目录实际看起来像这张截图一样。
+   ![这个截图显示了由 APIRef 宏生成的 OscillatorNode 接口的垂直导航菜单，其中有方法和属性的多个子列表](apiref-links.png)
+2. **标准化状态**：接下来应该添加表示标准化状态的横幅宏（这些横幅宏可以与 \\{{APIRef}} 宏放在同一行）：
 
-1. **Description**: the first paragraph of the landing page should provide a short, concise description of the API's overarching purpose.
-2. **Concepts and usage section**: The next section should be titled "\[name of API] concepts and usage", and provide an overview of all the main functionality that the API provides, what problems it solves, and how it works — all at a high level. This section should be fairly short, and not go into code or specific implementation details.
-3. **List of interfaces**: This section should be titled "\[name of API] interfaces", and provide links to the reference page for each interface that makes up the API, along with a short description of what each one does. See the "Referencing other API features with the \\{{domxref}} macro" section for a quicker way to create new pages. Only current interfaces should be in this list; obsolete ones should be placed in (or moved into, if obsoleted after initially being documented) the following section.
-4. **Obsolete interfaces:** This section lists obsolete interfaces. _Ed. note: should this be a subsection of the main "Interfaces" section above?_
-5. **List of mixins**: If any mixins are defined on the API spec, list them under a separate section, as they aren't interfaces as such.
-6. **Example**: This section should show a simple use case for the API.
-7. **Specifications table**: At this point you need to include a specifications table — see the "Creating a spec reference table" section for more details.
-8. **Browser compatibility**: Now you need to include a browser compatibility table. See [Compatibility tables](/zh-CN/docs/MDN/Contribute/Structures/Compatibility_tables) for details.
-9. **See also**: The "See also" section is a good place to include further links that may be useful when learning about this technology, including MDN (and external) tutorials, examples, libraries, etc.
-10. **Tags**: There is a set of standard tags you should include for each reference page — see the "Tags" section for more.
+   - 对于实验性功能（也就是说，还没处于候选推荐〔CR〕级别），使用 \\{{SeeCompatTable}}
+   - \\{{Deprecated_header}}
+   - \\{{Non-standard_header}}
 
-## Structure of an interface page
+3. **描述**：接口页面的第一段应该对接口的总体目的进行简短的描述。如果需要额外的描述，你也可以多写几段。如果这个接口实际上是一个字典，你应该用这个术语而不是“接口”。
+4. **继承图**：使用 [`\{{InheritanceDiagram}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/InheritanceDiagram.ejs) 宏来嵌入接口的 SVG 继承图。
+5. **属性列表、方法列表**：这些部分的标题应该是“Properties”和“Methods”，并使用 \\{{domxref}} 宏提供到该接口的每个属性/方法的参考页的链接，以及每个属性/方法的描述。这些应该用[描述/定义列表](/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定义列表)来标注。每个描述都应该是短小精悍的，尽可能使用一句话进行概括。参见“用 \\{{domxref}} 宏引用其他 API 功能”一节，以了解创建其他页面链接的更快方法。
 
-Now you should be ready to start writing your interface pages. Each interface reference page should observe the following structure:
+   在这两部分的开头，在属性/方法列表的开始之前，用适当的斜体句子表示继承性：
 
-1. **\\{{APIRef}}**: Include the \\{{APIRef}} macro in the first line of each interface page, including the name of the API as an argument, so for example \\{{APIRef("Web Audio API")}}. This macro serves to construct a reference menu on the left hand side of the interface page, including properties and methods, and other quicklinks as defined in the [GroupData](https://github.com/mdn/kumascript/blob/master/macros/GroupData.json) macro (ask someone to add your API to an existing GroupData entry, or to create a new one, if it isn't already listed there). The menu will look something like the below screenshot.
-    ![This screenshot shows a vertical navigation menu for the OscillatorNode interface, with multiple sublists for methods and properties, as generated by the APIRef macro ](apiref-links.png)
-2. **Standardization status**: The banner indicating the standardization status should be added next (these can be placed on the same line as the \\{{APIRef}} macro.):
+   - _This interface doesn't implement any specific properties, but inherits properties from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._（_本接口不实现任何特定属性，但是从 \\{{domxref("XYZ")}} 和 \\{{domxref("XYZ2")}} 继承属性。_）
+   - _This interface also inherits properties from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._（_本接口也从 \\{{domxref("XYZ")}} 和 \\{{domxref("XYZ2")}} 继承属性。_）
+   - _This interface doesn't implement any specific methods, but inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._（_本接口不实现任何特定方法，但是从 \\{{domxref("XYZ")}} 和 \\{{domxref("XYZ2")}} 继承方法。_）
+   - _This interface also inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._（_本接口也从 \\{{domxref("XYZ")}} 和 \\{{domxref("XYZ2")}} 继承方法。_）
 
-    - \\{{SeeCompatTable}} for an experimental feature (i.e. the spec is not at the CR level.)
-    - \\{{Deprecated_header}}
-    - \\{{Non-standard_header}}
+   > [!NOTE]
+   > 只读属性应该使用 \\{{ReadOnlyInline}} 宏，它可以创建一个漂亮的“只读”徽章，与它们的 \\{{domxref}} 链接在同一行（如果需要使用 \\{{experimentalInline}}、\\{{non-standard_Inline}} 和 \\{{deprecatedInline}} 宏，则需要放置在它们之后）。
 
-3. **Description**: the first paragraph of the interface page should provide a short concise description of the interface's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. Note that if the interface defines a mixin, you shouldn't use the term "Interface" to describe it, but mixin instead — it isn't really a standalone interface as such, but a mixin that adds functionality to multiple other interfaces. Similarly, if the interface is actually a dictionary, you should use that term instead of "interface".
-4. **Inheritance diagram:** Use the [`InheritanceDiagram`](https://github.com/mdn/yari/blob/main/kumascript/macros/InheritanceDiagram.ejs) macro to embed an SVG inheritance diagram for the interface. For most interfaces, you won't need any parameters, but if the inheritance chain is long, you may need to use \\{{InheritanceDiagram(600, 120)}} to make room vertically for two rows of boxes.
-5. **List of properties, List of methods**: These sections should be titled "Properties" and "Methods", and provide links (using the \\{{domxref}} macro) to a reference page for each property/method of that interface, along with a description of what each one does. These should be marked up using description/definition lists, which can be created using the "Definition List", "Definition Term", and "Definition Description" buttons on the MDN editor toolbar. Each description should be short and concise — one sentence if possible. See the "Referencing other API features with the \\{{domxref}} macro" section for a quicker way to create links to other pages.
+6. **示例**：包括一个代码清单，以显示 API 的主要功能的典型用法。你不应该列出所有的代码，而应该列出其中一个有趣的子集。对于一个完整的代码清单，你可以参考包含完整示例的 [GitHub](https://github.com/) 仓库，你也可以链接到使用 [GitHub gh-pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) 功能创建的实时示例（当然，只要它只使用客户端代码）。如果该示例是可视化的，你也可以使用 MDN [实时示例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)功能，使其在页面上实时播放。
+7. **标准表格**：此时你需要包含一个标准表格——参见“创建规范参考表格”一节以获得更多信息。
+8. **浏览器兼容性**：现在你需要包含一个浏览器兼容性表格——参见[兼容性表格](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)以获得更多细节。
+9. **Polyfill**：如果合适的话，包括这一部分，提供一个 polyfill 的代码，使 API 即使在没有实现它的浏览器上也能使用。如果不存在或不需要 polyfill，则完全不需要这一部分。
+10. **参见**：“参见”部分是一个可以包含在学习这项技术时可能有用的进一步链接的好地方，包括 MDN（和外部）教程、示例、图书馆等。我们对链接到外部资源有一个宽松的政策，但要注意：
 
-    At the beginning of both sections, before the beginning of the list of properties/methods, indicate inheritance using the appropriate sentence, in italics:
-    _This interface doesn't implement any specific properties, but inherits properties from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
-    _This interface also inherits properties from_ *\\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}.
-    This interface doesn't implement any specific methods, *but inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}.
-    _This interface also inherits methods from_ \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}.
+    - 不要包括与 MDN 中另一个页面信息相同的页面，而是链接到该页面。
+    - 不要写作者的名字——我们是一个作者中立的文档网站。链接到那个文档，作者的名字将显示在那里。
+    - 要特别注意博客文章：它们往往会过时（旧的语法，错误的兼容信息）。只有当它们有明显的附加价值，而在维护的文件中又找不到时，才可以链接到它们。
+    - 不要使用“参见......了解更多信息”或“点击......”这样的行动动词，你不知道你的读者是否能够看到，或点击链接（如在纸质版文件上）。
 
-    > **备注：** If the interface features event handlers, put these inside the "Properties" section (they are a type of property) under a subheading of "Event handlers".
+#### 接口页示例
 
-    > **备注：** Properties that are read-only should have the \\{{readonlyInline}} macro, which creates a nifty little "Read only" badge, included on the same line as their \\{{domxref}} links (after the use of the \\{{experimentalInline}}, \\{{obsoleteInline}}, \\{{non-standard_Inline}} and \\{{deprecatedInline}} macros, if some of these are needed.
+以下是接口页的示例：
 
-6. **Example**: Include a code listing to show typical usage of a major feature of the API. Rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you could reference a [Github](https://github.com/) repo containing the full example, and you could also link to a live example created using the [Github gh-pages](https://help.github.com/articles/creating-project-pages-manually/) feature (so long as it uses only client-side code of course.) If the example is visual, you could also use the MDN [Live Sample](/zh-CN/docs/MDN/Contribute/Editor/Live_samples) feature to make it live and playable in the page.
+- [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 上的 {{domxref("Request")}}。
+- [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API) 上的 {{domxref("SpeechSynthesis")}}。
 
-    > **备注：** More details about writing code examples can be found in the "Examples" section.
+### 属性页的结构
 
-7. **Specifications table**: At this point you need to include a specifications table — see the "Creating a spec reference table" section for more details.
-8. **Browser compatibility**: Now you need to include a browser compatibility table. See [Compatibility tables](/zh-CN/docs/MDN/Contribute/Structures/Compatibility_tables) for details.
-9. **Polyfill**: If appropriate, include this section, providing code for a polyfill that enables the API to be used even on browsers that don't implement it. If no polyfill exists or is needed, leave this section out entirely.
-10. **See also**: The "See also" section is a good place to include further links that may be useful when learning about this technology, including MDN (and external) tutorials, examples, libraries, etc. We have a liberal policy for linking to external sources, but pay attention:
+将你的属性页创建为它们所实现的接口的子页。复制另一个属性页的结构，作为你新页面的基础。
 
-    - Do not include pages with the same information as another page in the MDN; link to that page instead.
-    - Do not put author names — we are a writer-neutral documentation site. Link to the document; the author name will be displayed there.
-    - Pay special attention to blog posts: they tend to become outdated (old syntax, wrong compat information). Link to them only if they have a clear added value that can't be found in a maintained document.
-    - Do not use action verb like "See … for more information" or "Click to…", you don't know if your reader is able to see, or to click on the link (like on a paper version of the document).
+编辑属性页名称，以遵循 `Interface.property_name` 惯例。
 
-11. **Tags**: There is a set of standard tags you should include for each reference page — see the "Tags" section for more.
+属性页必须具有如下部分：
 
-### Interface page examples
+1. **标题**：页面的标题必须为 **InterfaceName.propertyName**。接口名称必须以大写字母开头。尽管接口在 JavaScript 中是在对象的原型上实现的，但我们不会像在 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference)中那样，在标题中包括`.prototype.`。
+2. **\\{{APIRef}}**：在每个属性页的第一行中包含 \\{{APIRef}} 宏，将 API 的名称作为参数，例如 \{{APIRef("Web Audio API")}}。这个宏的作用是在界面页面的左侧构建一个参考菜单，包括属性和方法，以及 [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) 宏中定义的其他快速链接（请人将你的 API 添加到现有的 GroupData 条目中，或者，如果它还没有被列在那里。则创建一个新的）。该目录实际看起来像这张截图一样。
+   ![这个截图显示了由 APIRef 宏生成的 OscillatorNode 接口的垂直导航菜单，其中有方法和属性的多个子列表](apiref-links.png)
+3. **标准化状态**：接下来应该添加表示标准化状态的横幅宏（这些横幅宏可以与 \\{{APIRef}} 宏放在同一行）：
 
-The following are exemplary examples of Interface pages:
+   - 对于实验性功能（也就是说，还没处于候选推荐〔CR〕级别），使用 \\{{SeeCompatTable}}
+   - \\{{Deprecated_header}}
+   - \\{{Non-standard_header}}
 
-- {{domxref("Request")}} from the [Fetch API](/zh-CN/docs/Web/API/Fetch_API).
-- {{domxref("SpeechSynthesis")}} from the [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API).
+4. **描述**：属性页的第一段应该对属性的总体目的提供一个简短的、扼要的描述。如果需要任何额外的描述，你可能还想再包括几段。要包括的额外信息是它的默认/初始值，以及它是否是只读的。第一句话的结构必须是：
 
-## Structure of a property page
+   - 对于只读属性
+     - : The **`InterfaceName.property`** read-only property returns a \\{{domxref("type")}} that...
+   - 对于其他属性
+     - : The **`InterfaceName.property`** property is a \\{{domxref("type")}} that…
 
-You can now fill in your interface property pages. Since the structures of all of them are the same, it usually works best to open all the property pages for each interface in separate tabs. From here you can fill one in fully, then copy its contents to all the other property pages and just update the bits that need changing, rather than having to fill each one in from scratch.
+   > **备注：** `InterfaceName.property` 需要使用 `<code>` 包裹，并且应当在首次使用时加粗（`<strong>`）。
 
-Edit the property page name to follow the `Interface.property_name` convention.
+5. **值**：Value 部分将包含属性值的描述。这应该包含该属性的数据类型，以及它所代表的内容。关于其示例，详见 {{domxref("SpeechRecognition.grammars")}}。
 
-Property pages must have the following sections:
+6. **示例**: 包括一个代码清单，以显示有关属性的典型用法。你应该从一个简单的例子开始，说明如何创建该类型的对象以及如何访问该属性。更复杂的例子可以在这样一个例子之后添加。在这些额外的例子中，不要列出所有的代码，你应该列出其中有趣的子集。对于完整的代码列表，你可以参考包含完整例子的 [GitHub](https://github.com/) 仓库，你也可以链接到使用 [GitHub gh-pages 功能](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)创建的实时示例（只要它只使用客户端代码）。如果例子是可视化的，你也可以使用 MDN 的[运行实例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)功能来使它在页面上实时播放。
+7. **标准表格**：此时你需要包含一个标准表格——参见“创建规范参考表格”一节以获得更多信息。
+8. **浏览器兼容性**：现在你需要包含一个浏览器兼容性表格——参见[兼容性表格](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)以获得更多细节。
+9. **参见**：“参见”部分是一个可以包含在学习这项技术时可能有用的进一步链接的好地方：比如受此属性变化影响的方法和属性，或者与此相关的事件。在学习这项技术时，可以添加更多有用的链接，包括 MDN（和外部）的教程、示例、库......，尽管考虑将它们添加到接口参考页上可能是有用的。
 
-1. **Title**: the title of the page must be **InterfaceName.propertyName**. The interface name must start with a capital letter. Although an interface is implemented in JavaScript on the prototype of objects, we don't include `.prototype.` in the title, like we do in the [JavaScript reference](/zh-CN/docs/Web/JavaScript/Reference).
-2. **\\{{APIRef}}**: Include the \\{{APIRef}} macro in the first line of each property page, including the name of the API as an argument, so for example \\{{APIRef("Web Audio API")}}. This macro serves to construct a reference menu on the left hand side of the interface page, including properties and methods, and other quicklinks as defined in the [GroupData](https://github.com/mdn/kumascript/blob/master/macros/GroupData.json) macro (ask someone to add your API to an existing GroupData entry, or to create a new one, if it isn't already listed there). The menu will look something like the below screenshot.
-    ![This screenshot shows a vertical navigation menu for the OscillatorNode interface, with multiple sublists for methods and properties, as generated by the APIRef macro ](apiref-links.png)
-3. **Standardization status**: The banner indicating the standardization status should be added next to the interface name (these can be placed on the same line as the \\{{APIRef}} macro):
+#### 属性页示例
 
-    - \\{{SeeCompatTable}} for an experimental feature (i.e. the spec is not at the CR level.)
-    - \\{{Deprecated_header}}
-    - \\{{Non-standard_header}}
+以下是属性页的示例：
 
-4. **Description**: the first paragraph of the property page should provide a short, concise description of the property's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. Obvious extra information to include is its default/initial value, and whether it's read only or not. The structure of the first sentence must be:
+- [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 上的 {{domxref("Request.method")}}。
+- [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API) 上的 {{domxref("SpeechSynthesis.speaking")}}。
 
-    - For read-only properties
-      - : The **`InterfaceName.property`** read-only property returns a \\{{domxref("type")}} that...
-    - For other properties
-      - : The **`InterfaceName.property`** property is a \\{{domxref("type")}} that…
+## 方法页的结构
 
-    > **备注：** `InterfaceName.property` should be in `<code>`, and should additionally be in bold (`<strong>`) the first time it's used.
+将你的方法页创建为它们所实现的接口的子页。复制另一个方法页的结构，作为你新页面的基础。
 
-5. **Syntax**: The syntax section should show how to get the property, and how to set it, if it's not read only. Use the `syntaxbox` class for it and italics for part to be replaced by the actual variable name. For example:
+方法页需要包含以下部分：
 
-    ```js
-    var myType = oscillator.type;
-    oscillator.type = aType;
-    ```
+1. **标题**: 页面的标题必须为 **InterfaceName.method()**（含有一对英文括号），但页面路径名不能包含括号。另外，接口名称必须以大写字母开头。尽管接口在 JavaScript 中是在对象的原型上实现的，但我们不会像在 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference)中那样，在标题中包括 `.prototype.`。
+2. **\\{{APIRef}}**：在每个方法页的第一行中包含 \\{{APIRef}} 宏，将 API 的名称作为参数，例如 \\{{APIRef("Web Audio API")}}。这个宏的作用是在界面页面的左侧构建一个参考菜单，包括属性和方法，以及 [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) 宏中定义的其他快速链接（请人将你的 API 添加到现有的 GroupData 条目中，或者，如果它还没有被列在那里。则创建一个新的）。该目录实际看起来像这张截图一样。
+   ![这个截图显示了由 APIRef 宏生成的 OscillatorNode 接口的垂直导航菜单，其中有方法和属性的多个子列表](apiref-links.png)
+3. **标准化状态**：接下来应该添加表示标准化状态的横幅宏（这些横幅宏可以与 \\{{APIRef}} 宏放在同一行）：
 
-    The syntax section should also have a subsection — "Value", which will contain a description of the property's value. This should contain the data type of the property, and what it represents. For an example, see {{domxref("SpeechRecognition.grammars")}}
+   - 对于实验性功能（也就是说，还没处于候选推荐〔CR〕级别），使用 \\{{SeeCompatTable}}
+   - \\{{Deprecated_header}}
+   - \\{{Non-standard_header}}
 
-6. **Example**: Include a code listing to show typical usage of the property in question. You should start with a simple example that shows how an object of the type is created and how to access the property. More complex examples can be added after such an example. In these additional examples, rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you can reference a [Github](https://github.com/) repo containing the full example, and you could also link to a live example created using the [github gh-pages feature](https://help.github.com/articles/creating-project-pages-manually/) (so long as it uses only client-side code of course.) You can also make use of the [MDN Sample Server](/zh-CN/docs/MDN/Contribute/Tools/Sample_server), which is particularly helpful for more complex samples. If the example is visual, you could also use the MDN [Live Sample](/zh-CN/docs/MDN/Contribute/Editor/Live_samples) feature to make it live and playable in the page.
+4. **描述**：方法页的第一段应该对该方法的首要目的进行简短的描述。如果需要额外的描述，你可能还想多写几段。明显需要包括的额外信息是它的默认参数值，该方法所依赖的任何理论，以及参数值的作用。
 
-    > **备注：** If you make use of Github, the example must live under [github.com/mdn](https://github.com/mdn/). See the "Examples" section for more details.
+   - 第一句话的开头必须遵循这样的结构：
+     - : The **InterfaceName.method()** method interface ...
 
-7. **Specifications table**: At this point you need to include a specifications table — see the "Creating a spec reference table" section for more details.
-8. **Browser compatibility**: Now you need to include a browser compatibility table. See [Compatibility tables](/zh-CN/docs/MDN/Contribute/Structures/Compatibility_tables) for details.
-9. **See also**: The "See also" section is a good place to include further links that may be useful when using this technology: like methods and properties affected by a change of this property or events thrown in relation to it. More links useful when learning about this technology, including MDN (and external) tutorials, examples, libraries,… can be added, though it may be useful to consider adding them on the interface reference page instead.
-10. **Tags**: There is a set of standard tags you should include for each property page — see the "Tags" section for more.
+   > **备注：** `InterfaceName.method()` 需要使用 `<code>` 包裹，并且应当在首次使用时加粗（`<strong>`）。
 
-### Property page examples
+5. **语法**：语法部分应该包括一个 2-3 行的例子——通常只是构建接口，然后调用接口方法。
 
-The following are exemplary examples of property pages:
+   - 语法应该是类似于这样的结构：
+     - : method(param1, param2, …)
 
-- {{domxref("Request.method")}} from the [Fetch API](/zh-CN/docs/Web/API/Fetch_API).
-- {{domxref("SpeechSynthesis.speaking")}} from the [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API).
+   语法部分应包括三个小节（见 {{domxref("SubtleCrypto.sign()")}} 的例子）：
 
-## Structure of a method page
+   - “参数”：本部分内容应该包含一个定义列表（或无序列表），用来列出和描述该方法的不同参数。如果是可选参数，应该在参数名称旁边加入 \{{optional_inline}} 宏。如果没有参数，这部分应该省略。
+   - “返回值”：本部分内容应该说明该方法的返回值，是一个简单的值（如双精度浮点数或布尔值），还是一个更复杂的值（如另一个接口对象）。在这种情况下，你可以使用 \{{domxref}} 宏来链接到涵盖该接口的 MDN API 页面（如果存在的话）。一个方法可能什么都不返回，在这种情况下，返回值应该写成“\\{{jsxref('undefined')}}”，在实际渲染的页面中看起来会是这样：{{jsxref("undefined")}}。
+   - “异常”：本部分内容应该列出在调用该方法时可能引发的不同异常，以及导致这些异常的情况。如果没有异常，这一节应该被省略。
 
-You can now fill in your interface method pages. Since the structure of all of them are the same, one possible way of doing it is to open all the method pages for each interface in separate tabs. From here you can fill one in fully, then copy its contents to all the other method pages and just update the bits that need changing, rather than having to fill each one in from scratch.
+6. **示例**：包括一个代码清单，以显示有关方法的典型用法。不要列出所有的代码，你应该列出一个有趣的子集。对于完整的代码清单，你应该引用包含完整例子的 [GitHub](https://github.com/) 仓库，你也可以链接到使用 [GitHub gh-pages 功能](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)创建的实时示例（只要它只使用客户端代码）。如果例子是可视化的，你也可以使用 MDN 的[运行实例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples) 功能来使它在页面中实时播放。
+7. **标准表格**：此时你需要包含一个标准表格——参见“创建规范参考表格”一节以获得更多信息。
+8. **浏览器兼容性**：现在你需要包含一个浏览器兼容性表格——参见[兼容性表格](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)以获得更多细节。
 
-Method pages need the following sections:
+### 方法页示例
 
-1. **Title**: the title of the page must be **InterfaceName.method()** (with the two terminal parentheses), but the slug (the end of the page URL) must not include the brackets. Also the interface name must start with a capital. Although an interface is implemented in JavaScript on the prototype of objects, we don't put `.prototype.` in the title, like we do in the [JavaScript reference](/zh-CN/docs/Web/JavaScript/Reference).
-2. **\\{{APIRef}}**: Include the \\{{APIRef}} macro in the first line of each method page, including the name of the API as an argument, so for example \\{{APIRef("Web Audio API")}}. This macro serves to construct a reference menu on the left hand side of the interface page, including properties and methods, and other quicklinks as defined in the [GroupData](https://github.com/mdn/kumascript/blob/master/macros/GroupData.json) macro (ask someone to add your API to an existing GroupData entry, or to create a new one, if it isn't already listed there). The menu will look something like the below screenshot.
-    ![This screenshot shows a vertical navigation menu for the OscillatorNode interface, with multiple sublists for methods and properties, as generated by the APIRef macro ](apiref-links.png)
-3. **Standardization status**: Next, the banner indicating the standardization status should be added (these can be placed on the same line as the \\{{APIRef}} macro):
+以下是方法页的示例：
 
-    - \\{{SeeCompatTable}} for an experimental feature (i.e. the spec is not at the CR level.)
-    - \\{{Deprecated_header}}
-    - \\{{Non-standard_header}}
+- [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API) 上的 {{domxref("Document.getAnimations()")}} 方法。
+- [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 上的 {{domxref("GlobalFetch.fetch()")}} 方法。
 
-4. **Description**: The first paragraph of the method page should provide a short concise description of the method's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. Obvious extra information to include is its default parameter values, any theory that the method relies on, and what the parameter values do.
+## 侧边栏
 
-    - The beginning of the first sentence must follow the following structure:
-      - : The **InterfaceName.method()** method interface ...
-
-    > **备注：** `InterfaceName.method()` should be in `<code>`, and should also be in bold (`<strong>`) the first time it's used.
-
-5. **Syntax**: The syntax section should include a 2–3 line example — usually just construction of the interface, then calling of the interface method.
-
-    - The syntax should be of the form:
-      - : var \<em>returnValue\</em> = \<em>ifName\</em>.method(\<em>param1\</em>, \<em>param2\</em>, ...)
-    - If the method has no return value (`void` as return value in the webidl), use:
-      - : \<em>ifName\</em>.method(\<em>param1\</em>, \<em>param2\</em>, ...)
-
-    The syntax section should include three subsections (see {{domxref("SubtleCrypto.sign()")}} for an example):
-
-    - "Parameters": This should contain a definition list (or unordered list) that names and describes the different parameters the method takes. You should include the {{optional_inline}} macro next to the parameter name, in the case of optional parameters. If there are no parameters, this section should be omitted.
-    - "Return value": This should say what return value the method has, be it a simple value like a double or boolean, or a more complex value like another interface object, in which case you can use \\{{domxref}} macro to link to the MDN API page covering that interface (if it exists.) A method might return nothing, in which case the return value should be written as "\\{{jsxref('undefined')}}" (which will look like this in the rendered page: {{jsxref("undefined")}}).
-    - "Exceptions": This should list the different exceptions that can be raised when invoking the method, and what circumstances cause them. If there are no exceptions, this section should be omitted.
-
-6. **Example**: Include a code listing to show typical usage of the method in question. Rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you should reference a [Github](https://github.com/) repo containing the full example, and you could also link to a live example created using the [Github gh-pages feature](https://help.github.com/articles/creating-project-pages-manually/) (so long as it uses only client-side code of course.) You can also make use of the [MDN Sample Server](/zh-CN/docs/MDN/Contribute/Tools/Sample_server), which is particularly helpful for more complex samples. See the "Examples" section for more details. If the example is visual, you could also use the MDN [Live Sample](/zh-CN/docs/MDN/Contribute/Editor/Live_samples) feature to make it live and playable in the page.
-7. **Specifications table**: At this point you need to include a specifications table — see the "Creating a spec reference table" section for more details.
-8. **Browser compatibility**: Now you need to include a browser compatibility table. See [Compatibility tables](/zh-CN/docs/MDN/Contribute/Structures/Compatibility_tables) for details.
-9. **Polyfill**: If appropriate (especially if common browsers are still shipping without support for the method), you can include a section which includes the code for a polyfill to allow the API to be used in browsers that don't implement it.
-
-### Method page examples
-
-The following are exemplary examples of Interface pages:
-
-- {{domxref("Document.getAnimations()")}} from the [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API).
-- {{domxref("GlobalFetch.fetch()")}} from the [Fetch API](/zh-CN/docs/Web/API/Fetch_API).
-
-## Tagging
-
-For API reference pages, there are standard tags that all pages should have:
-
-- "API"
-- "Reference"
-- Name of API (e.g. "Web Audio API")
-- Any pertinent related keywords (e.g. "audio")
-
-For Interface pages, also add:
-
-- "Interface"
-- The name of the interface, e.g. "AudioContext"
-
-For method pages, also add:
-
-- "Method"
-- The name of the interface the method relates to, e.g. "AudioContext"
-- The name of the method, e.g. "createBuffer"
-
-For property pages, also add:
-
-- "Property"
-- The name of the interface the property relates to, e.g. "AudioContext"
-- The name of the property, e.g. "currentTime"
-
-In all cases, also add a keyword indicating the standardization status:
-
-- Experimental (if the spec is not a CR)
-- Deprecated
-- Obsolete
-- Non-standard
-
-These tags will be used to generate correct quicklinks, with nice icons. See [How to properly tag pages](/zh-CN/docs/MDN/Contribute/Howto/Tag) for additional information on tagging, as well as about other tags you may find useful.
+一旦你创建了你的 API 参考页面，你要在上面插入正确的侧边栏，把这些页面联系在一起。我们的 [API 参考侧边栏](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)指南解释了如何操作。

@@ -1,8 +1,6 @@
 ---
 title: Math.sqrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sqrt
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sqrt
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/sqrt
 ---
 
 {{JSRef}}
@@ -38,8 +36,8 @@ Debido a que `sqrt()` es un método estático de `Math`, siempre úsalo como `Ma
 Math.sqrt(9); // 3
 Math.sqrt(2); // 1.414213562373095
 
-Math.sqrt(1);  // 1
-Math.sqrt(0);  // 0
+Math.sqrt(1); // 1
+Math.sqrt(0); // 0
 Math.sqrt(-1); // NaN
 ```
 
@@ -47,9 +45,9 @@ Math.sqrt(-1); // NaN
 
 {{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.sqrt")}}
+{{Compat}}
 
 ## Ver también
 

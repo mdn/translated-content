@@ -3,11 +3,9 @@ title: FormData.delete()
 slug: Web/API/FormData/delete
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
 {{domxref("FormData")}} 接口的 **`delete()`** 方法会从 `FormData` 对象中删除指定键，即 key，和它对应的值，即 value。
-
-> **备注：** 此方法可用于 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)。
 
 ## 语法
 
@@ -35,7 +33,7 @@ var formData = new FormData(myForm);
 你可以通过 `delete()` 方法来删除键值对：
 
 ```js
-formData.delete('username');
+formData.delete("username");
 ```
 
 ## 规范
@@ -49,6 +47,6 @@ formData.delete('username');
 ## 参见
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [使用 XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [使用 FormData 对象](/zh-CN/docs/DOM/XMLHttpRequest/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

@@ -1,7 +1,6 @@
 ---
 title: Constructeur Intl.RelativeTimeFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat
-browser-compat: javascript.builtins.Intl.RelativeTimeFormat.RelativeTimeFormat
 ---
 
 {{JSRef}}
@@ -11,9 +10,9 @@ Le constructeur **`Intl.RelativeTimeFormat()`** permet de créer des objets [`In
 ## Syntaxe
 
 ```js
-new Intl.RelativeTimeFormat()
-new Intl.RelativeTimeFormat(locales)
-new Intl.RelativeTimeFormat(locales, options)
+new Intl.RelativeTimeFormat();
+new Intl.RelativeTimeFormat(locales);
+new Intl.RelativeTimeFormat(locales, options);
 ```
 
 ### Paramètres
@@ -51,9 +50,9 @@ Dans l'exemple suivant, on crée un formateur de temps relatif utilisant la loca
 // On crée un formateur de temps relatif dans la locale
 // avec les valeurs par défaut passées explicitement.
 const rtf = new Intl.RelativeTimeFormat("fr", {
-    localeMatcher: "best fit", // autres valeurs possibles : "lookup"
-    numeric: "always", // autres valeurs possibles : "auto"
-    style: "long", // autres valeurs possibles : "short" ou "narrow"
+  localeMatcher: "best fit", // autres valeurs possibles : "lookup"
+  numeric: "always", // autres valeurs possibles : "auto"
+  style: "long", // autres valeurs possibles : "short" ou "narrow"
 });
 
 // On formate un temps relatif un jour dans le passé.

@@ -1,13 +1,9 @@
 ---
 title: output
 slug: Web/XSLT/Element/output
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/output
-original_slug: Web/XSLT/output
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:output>` contrôle les caractéristiques du document de sortie. Pour fonctionner correctement dans Netscape, cet élément doit être utilisé, avec l'attribut `method`. À partir de Netscape 7.0, `method="text"` fonctionne comme prévu.
 
@@ -87,7 +83,7 @@ Haut niveau, doit être l'enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`.
 
 ### Définition
 
-[XSLT 1.0, section 16](http://www.w3.org/TR/xslt#output).
+[XSLT 1.0, section 16](https://www.w3.org/TR/xslt#output).
 
 ### Gecko support
 

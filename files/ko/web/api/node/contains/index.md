@@ -1,7 +1,6 @@
 ---
 title: Node.contains()
 slug: Web/API/Node/contains
-translation_of: Web/API/Node/contains
 ---
 
 {{APIRef("DOM")}}
@@ -11,7 +10,7 @@ translation_of: Web/API/Node/contains
 ## Syntax
 
 ```js
-node.contains( otherNode )
+node.contains(otherNode);
 ```
 
 ## Example
@@ -20,15 +19,15 @@ node.contains( otherNode )
 
 ```js
 function isInPage(node) {
-  return (node === document.body) ? false : document.body.contains(node);
+  return node === document.body ? false : document.body.contains(node);
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

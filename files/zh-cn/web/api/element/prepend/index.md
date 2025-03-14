@@ -1,114 +1,96 @@
 ---
-title: Element.prepend()
+title: Element：prepend() 方法
 slug: Web/API/Element/prepend
+l10n:
+  sourceCommit: bd15d43260b7e72b1066c04d9d9f3b79129c619c
 ---
 
 {{APIRef("DOM")}}
 
-**`Element.prepend`** 方法可以在父节点的第一个子节点之前插入一系列{{domxref("Node")}}对象或者{{domxref("DOMString")}}对象。{{domxref("DOMString")}}会被当作{{domxref("Text")}}节点对待（也就是说插入的不是 HTML 代码）。
+**`Element.prepend()`** 方法将在当前{{domxref("Element", "元素", "", 1)}}的第一个子节点之前插入一组 {{domxref("Node")}} 对象或字符串。字符串将以等效的 {{domxref("Text")}} 节点插入。
 
 ## 语法
 
-```plain
-Element.prepend((Node or DOMString)... nodes);
+```js-nolint
+prepend(param1)
+prepend(param1, param2)
+prepend(param1, param2, /* …, */ paramN)
 ```
 
 ### 参数
 
-- `nodes`
-  - : 要插入的一系列{{domxref("Node")}}或者{{domxref("DOMString")}}。
+- `param1`、……、`paramN`
+  - : 一组要插入的 {{domxref("Node")}} 对象或字符串。
 
 ### 返回值
 
-`undefined`.
+无（{{jsxref("undefined")}}）。
 
-### 错误
+### 异常
 
-- {{domxref("HierarchyRequestError")}}：节点不能插入当前层级内。
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+  - : 当节点无法插入到指定的层级位置时抛出。
 
-## 例子
+## 示例
 
-### Prepending an element
+### 在元素前插入
 
 ```js
-var parent = document.createElement("div");
-var p = document.createElement("p");
-var span = document.createElement("span");
-parent.append(p);
-parent.prepend(span);
+let div = document.createElement("div");
+let p = document.createElement("p");
+let span = document.createElement("span");
+div.append(p);
+div.prepend(span);
 
-console.log(parent.childNodes); // NodeList [ <span>, <p> ]
+console.log(div.childNodes); // NodeList [ <span>, <p> ]
 ```
 
-### Prepending text
+### 在文本前插入
 
 ```js
-var parent = document.createElement("div");
-parent.append("Some text");
-parent.prepend("Headline: ");
+let div = document.createElement("div");
+div.append("一些文本");
+div.prepend("标题：");
 
-console.log(parent.textContent); // "Headline: Some text"
+console.log(div.textContent); // “标题：一些文本”
 ```
 
-### Appending an element and text
+### 在元素前插入元素和文本
 
 ```js
-var parent = document.createElement("div");
-var p = document.createElement("p");
-parent.prepend("Some text", p);
+let div = document.createElement("div");
+let p = document.createElement("p");
+div.prepend("一些文本", p);
 
-console.log(parent.childNodes); // NodeList [ #text "Some text", <p> ]
+console.log(div.childNodes); // NodeList [ #text "一些文本", <p> ]
 ```
 
-### `Element.prepend()` is unscopable
+### prepend 方法是不可绑定作用域的
 
-`prepend() 不能在 with 语句内使用，详情参考`{{jsxref("Symbol.unscopables")}}。
+`prepend()` 方法无法绑定到 `with` 语句中的作用域。有关更多信息，请参阅 {{jsxref("Symbol.unscopables")}}。
 
 ```js
-var parent = document.createElement("div");
+let div = document.createElement("div");
 
-with(parent) {
+with (div) {
   prepend("foo");
 }
 // ReferenceError: prepend is not defined
 ```
 
-## Polyfill
-
-使用下面的代码在 IE9 或更高版本中模拟`prepend()`方法：
-
-```js
-// from: https://github.com/jserz/js_piece/blob/master/DOM/Element/prepend()/prepend().md
-(function (arr) {
-    arr.forEach(function (item) {
-        item.prepend = item.prepend || function () {
-            var argArr = Array.prototype.slice.call(arguments),
-                docFrag = document.createDocumentFragment();
-
-            argArr.forEach(function (argItem) {
-                var isNode = argItem instanceof Node;
-                docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
-            });
-
-            this.insertBefore(docFrag, this.firstChild);
-        };
-    });
-})([Element.prototype, Document.prototype, DocumentFragment.prototype]);
-```
-
-## 说明
+## 规范
 
 {{Specifications}}
 
-## 兼容性
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- {{domxref("Element")}} and {{domxref("ChildNode")}}
 - {{domxref("Element.append()")}}
 - {{domxref("Node.appendChild()")}}
 - {{domxref("Node.insertBefore()")}}
-- {{domxref("ChildNode.before()")}}
+- {{domxref("Element.before()")}}
+- {{domxref("Element.insertAdjacentElement()")}}
 - {{domxref("NodeList")}}

@@ -1,6 +1,9 @@
 ---
-title: HTMLMediaElement.volume
+title: "HTMLMediaElement: volume プロパティ"
+short-title: volume
 slug: Web/API/HTMLMediaElement/volume
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -14,7 +17,7 @@ slug: Web/API/HTMLMediaElement/volume
 ## 例
 
 ```js
-var obj = document.createElement('audio');
+const obj = document.createElement("audio");
 console.log(obj.volume); // 1
 obj.volume = 0.75;
 ```
@@ -29,5 +32,5 @@ obj.volume = 0.75;
 
 ## 関連情報
 
-- 定義している {{domxref("HTMLMediaElement")}} インターフェイス
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.volume` プロパティを定義しているインターフェイス
 - {{domxref("HTMLMediaElement.muted")}}

@@ -1,12 +1,9 @@
 ---
 title: Portée globale
 slug: Glossary/Global_scope
-tags:
-  - Encodage
-  - Glossaire
-translation_of: Glossary/Global_scope
-original_slug: Glossaire/Portée_globale
 ---
+
+{{GlossarySidebar}}
 
 Dans un environnement de programmation, la portée globale ( _global scope_ ) est la {{glossary("Scope","portée")}} qui est visible dans toutes les autres portées.
 
@@ -16,5 +13,5 @@ Dans le JavaScript côté client, la portée globale est généralement la page 
 
 ### Apprendre sur ce sujet
 
-- [Introduction à la portée des variables en JavaScript](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Les_portées_de_variables)
-- [Portée](https://fr.wikipedia.org/wiki/Port%C3%A9e_(informatique)) sur Wikipédia
+- [Introduction à la portée des variables en JavaScript](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#les_portées_de_variables)
+- [Portée](<https://fr.wikipedia.org/wiki/Portée_(informatique)>) sur Wikipédia

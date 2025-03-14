@@ -1,30 +1,31 @@
 ---
 title: PerformanceNavigation.redirectCount
 slug: Web/API/PerformanceNavigation/redirectCount
+l10n:
+  sourceCommit: 66c9543af6a0cf1baf89d5b0c972ee7dd08663b0
 ---
 
-{{APIRef("Navigation Timing")}}
+{{APIRef("Performance API")}}{{Deprecated_Header}}
 
-> **警告:** このインターフェイスは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
+古い **`PerformanceNavigation.redirectCount`** プロパティは読み取り専用で、ページに到達する前に行われたリダイレクトの数を表す `unsigned short` を返します。
 
-従来の **`PerformanceNavigation.redirectCount`** 読み取り専用プロパティは、ページに到達する前に行われた REDIRECT の数を表す `unsigned short` を返します。
+> [!WARNING]
+> このインターフェイスは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。
+> 代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
 
-## 構文
+## 値
 
-```
-amount = performanceNavigation.redirectCount;
-```
+`unsigned short` の値です。
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                       | ステータス                               | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName('Navigation Timing', '#dom-performancenavigation-redirectcount', 'PerformanceNavigation.redirectCount')}} | {{Spec2('Navigation Timing')}} | 初期定義 |
+この機能は標準化の予定がなくなりました。 [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)で非推奨になったためです。
+代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformanceNavigation.redirectCount")}}
+{{Compat}}
 
-## あわせて参照
+## 関連情報
 
 - 所属する {{domxref("PerformanceNavigation")}} インターフェイス

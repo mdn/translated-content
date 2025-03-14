@@ -1,11 +1,11 @@
 ---
-title: ':fullscreen'
+title: :fullscreen
 slug: Web/CSS/:fullscreen
 ---
 
 {{CSSRef}}
 
-**`:fullscreen`** は [CSS](/ja/docs/Web/CSS) の [擬似クラス](/ja/docs/CSS/Pseudo-classes)で、現在全画面モードにあるすべての要素に一致します。複数の要素が全画面モードにある場合は、それらすべてを選択します。
+**`:fullscreen`** は [CSS](/ja/docs/Web/CSS) の [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、現在全画面モードにあるすべての要素に一致します。複数の要素が全画面モードにある場合は、それらすべてを選択します。
 
 ## 構文
 
@@ -28,9 +28,11 @@ slug: Web/CSS/:fullscreen
 ```html
 <h1>MDN Web Docs Demo: :fullscreen pseudo-class</h1>
 
-<p>This demo uses the <code>:fullscreen</code> pseudo-class to automatically
+<p>
+  This demo uses the <code>:fullscreen</code> pseudo-class to automatically
   change the style of a button used to toggle full-screen mode on and off,
-  entirely using CSS.</p>
+  entirely using CSS.
+</p>
 
 <button id="fs-toggle">Toggle Fullscreen</button>
 ```
@@ -70,4 +72,4 @@ slug: Web/CSS/:fullscreen
 - {{cssxref(":not")}}
 - {{cssxref("::backdrop")}}
 - DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreenElement") }}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}} 属性
+- [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen) 属性

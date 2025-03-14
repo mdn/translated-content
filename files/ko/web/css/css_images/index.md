@@ -1,13 +1,6 @@
 ---
 title: CSS Images
-slug: Web/CSS/CSS_Images
-tags:
-  - CSS
-  - CSS Images
-  - Guide
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Images
+slug: Web/CSS/CSS_images
 ---
 
 {{CSSRef}}
@@ -44,9 +37,9 @@ translation_of: Web/CSS/CSS_Images
 
 ## 안내서
 
-- [CSS 그레이디언트 사용하기](/ko/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [CSS 그레이디언트 사용하기](/ko/docs/Web/CSS/CSS_images/Using_CSS_gradients)
   - : CSS 이미지의 특정 유형인 "그레이디언트"를 소개하고, 그 사용법을 보입니다.
-- [CSS에서 이미지 스프라이트 구현하기](/ko/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS)
+- [CSS에서 이미지 스프라이트 구현하기](/ko/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
   - : 다수의 이미지를 하나의 문서로 합쳐서 다운로드 요청을 절약하고 페이지 속도를 향상하는 방법을 소개합니다.
 
 ## 명세

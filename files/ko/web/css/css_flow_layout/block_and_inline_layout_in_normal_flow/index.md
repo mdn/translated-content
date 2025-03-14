@@ -1,16 +1,6 @@
 ---
 title: 일반 대열 속 블록 및 인라인 레이아웃
-slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
-tags:
-  - 대열
-  - CSS
-  - CSS 대열 레이아웃
-  - 안내서
-  - 여백
-  - 레이아웃
-  - 중급
-translation_of: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
-original_slug: Web/CSS/CSS_Flow_Layout/일반_흐름_속_블록_및_인라인_레이아웃
+slug: Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow
 ---
 
 {{CSSRef}}
@@ -34,11 +24,11 @@ CSS 2.1 규격은 문서를 가로쓰기와 세로 쓰기 모드로 기술하고
 
 영어와 같은 가로쓰기 모드에서 블록 요소는 수직으로 다른 대상 요소 바로 밑에 배치된다.
 
-![](https://mdn.mozillademos.org/files/16125/mdn-horizontal.png)
+![](mdn-horizontal.png)
 
 세로 쓰기 모드에서는 수평으로 배치된다.
 
-![](https://mdn.mozillademos.org/files/16126/mdn-vertical.png)
+![](mdn-vertical.png)
 
 이 안내서에서 우리는 영어로 작업할 것이기 때문에 가로쓰기 모드를 다룬다. 그러나 기술된 내용 전체는 세로 쓰기 모드에서도 당연히 동일한 방식으로 작동한다.
 
@@ -62,11 +52,12 @@ CSS 규격에 따라 블록 요소 사이의 여백이 *축소*된다. 즉, 하�
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow-collapsing.html", '100%', 500)}}
 
-여백 축소에 관해선 [여백 축소 정복](/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) 안내서에서 자세한 내용을 파악할 수 있다.
+여백 축소에 관해선 [여백 축소 정복](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) 안내서에서 자세한 내용을 파악할 수 있다.
 
-> **참고:** 참고: 여백의 축소 여부가 불확실할 경우 브라우저 개발툴에 나오는 상자 모델 값을 확인하십시오. 이렇게 하면 현재 일어나고 일을 파악하는 데 도움이 될 수 있는 실제 여백 크기를 알 수 있습니다.
+> [!NOTE]
+> 참고: 여백의 축소 여부가 불확실할 경우 브라우저 개발툴에 나오는 상자 모델 값을 확인하십시오. 이렇게 하면 현재 일어나고 일을 파악하는 데 도움이 될 수 있는 실제 여백 크기를 알 수 있습니다.
 >
-> ![](https://mdn.mozillademos.org/files/16124/box-model.png)
+> ![](box-model.png)
 
 ## 인라인 서식 상황에 참여하는 요소
 
@@ -82,7 +73,7 @@ CSS 규격에 따라 블록 요소 사이의 여백이 *축소*된다. 즉, 하�
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/line-box.html", '100%', 500)}}
 
-블락과 인라인 상자의 동작 방식에 대해 자세한 내용은 [시각적 서식 모델](/ko/docs/Web/Guide/CSS/Visual_formatting_model) 안내서를 찾아보십시요.
+블락과 인라인 상자의 동작 방식에 대해 자세한 내용은 [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model) 안내서를 찾아보십시요.
 
 ## `display`속성 및 대열 레이아웃
 
@@ -110,7 +101,7 @@ CSS 2.1에 존재하는 규칙 외에도 새로운 수준의 CSS는 블록 및 �
 
 ## 참조 항목
 
-- [CSS 기본 상자 모델](/ko/docs/Web/CSS/CSS_Box_Model)
-- _[일반 대열](/ko/docs/Learn/CSS/CSS_layout/일반_흐름)_ - 레이아웃 살펴보기
-- [인라인 요소](/ko/docs/Web/HTML/Inline_elements)
-- [블락 수준 요소](/ko/docs/Web/HTML/Block-level_elements)
+- [CSS 기본 상자 모델](/ko/docs/Web/CSS/CSS_box_model)
+- _[일반 대열](/ko/docs/Learn/CSS/CSS_layout/Normal_Flow)_ - 레이아웃 살펴보기
+- [인라인 요소](/ko/docs/Glossary/Inline-level_content)
+- [블락 수준 요소](/ko/docs/Glossary/Block-level_content)

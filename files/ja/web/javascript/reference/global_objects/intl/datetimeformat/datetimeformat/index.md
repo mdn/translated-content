@@ -8,19 +8,43 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
 **`Intl.DateTimeFormat()`** コンストラクターは、言語に応じた日付と時刻の書式化を可能にする
 {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} オブジェクトを生成します。
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat", "taller")}}
+
+```js interactive-example
+const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));
+// Results below assume UTC timezone - your results may vary
+
+// Specify default date formatting for language (locale)
+console.log(new Intl.DateTimeFormat("en-US").format(date));
+// Expected output: "12/20/2020"
+
+// Specify default date formatting for language with a fallback language (in this case Indonesian)
+console.log(new Intl.DateTimeFormat(["ban", "id"]).format(date));
+// Expected output: "20/12/2020"
+
+// Specify date and time format using "style" options (i.e. full, long, medium, short)
+console.log(
+  new Intl.DateTimeFormat("en-GB", {
+    dateStyle: "full",
+    timeStyle: "long",
+    timeZone: "Australia/Sydney",
+  }).format(date),
+);
+// Expected output: "Sunday, 20 December 2020 at 14:23:16 GMT+11"
+```
 
 ## 構文
 
 ```js
-new Intl.DateTimeFormat()
-new Intl.DateTimeFormat(locales)
-new Intl.DateTimeFormat(locales, options)
+new Intl.DateTimeFormat();
+new Intl.DateTimeFormat(locales);
+new Intl.DateTimeFormat(locales, options);
 ```
 
 ### 引数
 
 - `locales` {{optional_inline}}
+
   - : BCP 47 言語タグの文字列、または、そのような文字列の配列です。ブラウザーの既定のロケールを使用するには、空の配列を渡してください。 Unicode 拡張に対応しています (例えば "`en-US-u-ca-buddhist`" など)。 `locales` 引数の一般的な形式と解釈は、 {{jsxref("Global_Objects/Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページをご覧ください。次の Unicode 拡張キーが利用できます。
 
     - `nu`
@@ -37,6 +61,7 @@ new Intl.DateTimeFormat(locales, options)
     - `dateStyle`
 
       - : `format()` が呼び出された際に使用される日付の書式化スタイルです。利用可能な値は以下のとおりです。
+
         - "`full`"
         - "`long`"
         - "`medium`"
@@ -45,6 +70,7 @@ new Intl.DateTimeFormat(locales, options)
         > **メモ:** `dateStyle` は `timeStyle` と一緒に使用することができますが、他のオプション (`weekday`, `hour`, `month`, など) と一緒に使用することはできません。
 
     - `timeStyle`
+
       - : `format()` が呼び出された際に使用される時刻の書式化スタイルです。利用可能な値は以下のとおりです。
 
         - "`full`"
@@ -53,13 +79,14 @@ new Intl.DateTimeFormat(locales, options)
         - "`short`"
 
         > **メモ:** `timeStyle` は `dateStyle` と一緒に使用することができますが、他のオプション (`weekday`, `hour`, `month`, など) と一緒に使用することはできません。
+
     - `calendar`
       - : 暦です。有効な値は、 "`buddhist`", "`chinese`", " `coptic`", "`ethiopia`", "`ethiopic`", "`gregory`", " `hebrew`", "`indian`", "`islamic`", "`iso8601`", " `japanese`", "`persian`", "`roc`" です。
     - `dayPeriod`
 
       - : 日単位の期間の表現の仕方です。有効な値は、 "`narrow`", "`short`", " `long`" です。
 
-        > **メモ:**
+        > [!NOTE]
         >
         > - このオプションは12時間制を使用したときのみ効果があります。
         > - 多くのロケールでは幅の指定を無視して同じ文字列を使用します。
@@ -134,12 +161,13 @@ new Intl.DateTimeFormat(locales, options)
     - `second`
       - : 秒の表現です。利用可能な値は "`numeric`", "`2-digit`" です。
     - `fractionalSecondDigits`
+
       - : 秒の小数点以下を表すために使用される数字の桁数 (その先の桁は切り捨てられます)。利用可能な値は次の通りです。
 
         - `0` (小数点以下は切り捨て)
         - `1` (小数点以下は1桁で表される。例えば、 736 は `7` と書式化される。)
         - `2` (小数点以下は2桁で表される。例えば、 736 は `73` と書式化される。)
-        - `3` (小数点以下は2桁で表される。例えば、 736 は `736` と書式化される。)
+        - `3` (小数点以下は3桁で表される。例えば、 736 は `736` と書式化される。)
 
     - `timeZoneName`
 
@@ -152,7 +180,8 @@ new Intl.DateTimeFormat(locales, options)
         - "`shortGeneric`" 一般的な場所を指定しない短い形式 (例 `PT`, `Los Angeles Zeit`).
         - "`longGeneric`" 一般的な場所を指定しない長い形式 (例 `Pacific Time`, `Nordamerikanische Westküstenzeit`)
 
-        > **メモ:** タイムゾーンの表示は、必要な文字列が利用できない場合、別の形式にフォールバックすることがあります。例えば、場所を指定しない形式では、 "Pacific Time" のように特定の国や都市の場所を指定せずにタイムゾーンを表示する必要がありますが、 "Los Angeles Time" のようなタイムゾーンにフォールバックする場合があります。
+        > [!NOTE]
+        > タイムゾーンの表示は、必要な文字列が利用できない場合、別の形式にフォールバックすることがあります。例えば、場所を指定しない形式では、 "Pacific Time" のように特定の国や都市の場所を指定せずにタイムゾーンを表示する必要がありますが、 "Los Angeles Time" のようなタイムゾーンにフォールバックする場合があります。
 
     それぞれの日付や時刻の部分のプロパティの既定値は {{jsxref("undefined")}} ですが、すべての部分のプロパティが {{jsxref("undefined")}} であった場合、 `year`, `month`, `day` は "`numeric`" であると想定されます。
 
@@ -174,19 +203,19 @@ console.log(new Intl.DateTimeFormat().format(date));
 ### timeStyle と dateStyle の使用
 
 ```js
-let o = new Intl.DateTimeFormat("en" , {
-  timeStyle: "short"
+let o = new Intl.DateTimeFormat("en", {
+  timeStyle: "short",
 });
 console.log(o.format(Date.now())); // "13:31 AM"
 
-let o = new Intl.DateTimeFormat("en" , {
-  dateStyle: "short"
+let o = new Intl.DateTimeFormat("en", {
+  dateStyle: "short",
 });
 console.log(o.format(Date.now())); // "07/07/20"
 
-let o = new Intl.DateTimeFormat("en" , {
+let o = new Intl.DateTimeFormat("en", {
   timeStyle: "medium",
-  dateStyle: "short"
+  dateStyle: "short",
 });
 console.log(o.format(Date.now())); // "07/07/20, 13:31:55 AM"
 ```
@@ -198,16 +227,34 @@ console.log(o.format(Date.now())); // "07/07/20, 13:31:55 AM"
 ```js
 let date = Date.UTC(2012, 11, 17, 4, 0, 42);
 
-console.log(new Intl.DateTimeFormat('en-GB', { hour: 'numeric', hourCycle: 'h12', 
-dayPeriod: 'short', timeZone: 'UTC' }).format(date));
+console.log(
+  new Intl.DateTimeFormat("en-GB", {
+    hour: "numeric",
+    hourCycle: "h12",
+    dayPeriod: "short",
+    timeZone: "UTC",
+  }).format(date),
+);
 // > 4 at night"  (same formatting in en-GB for all dayPeriod values)
 
-console.log(new Intl.DateTimeFormat('fr', { hour: 'numeric', hourCycle: 'h12',
-    dayPeriod: 'narrow', timeZone: 'UTC' }).format(date));
+console.log(
+  new Intl.DateTimeFormat("fr", {
+    hour: "numeric",
+    hourCycle: "h12",
+    dayPeriod: "narrow",
+    timeZone: "UTC",
+  }).format(date),
+);
 // > "4 mat."  (same output in French for both narrow/short dayPeriod)
 
-console.log(new Intl.DateTimeFormat('fr', { hour: 'numeric', hourCycle: 'h12', 
-    dayPeriod: 'long', timeZone: 'UTC' }).format(date));
+console.log(
+  new Intl.DateTimeFormat("fr", {
+    hour: "numeric",
+    hourCycle: "h12",
+    dayPeriod: "long",
+    timeZone: "UTC",
+  }).format(date),
+);
 // > "4 du matin"
 ```
 
@@ -217,18 +264,25 @@ console.log(new Intl.DateTimeFormat('fr', { hour: 'numeric', hourCycle: 'h12',
 
 ```js
 var date = Date.UTC(2021, 11, 17, 3, 0, 42);
-const timezoneNames = ['short', 'long', 'shortOffset', 'longOffset', 'shortGeneric', 'longGeneric']
- 
+const timezoneNames = [
+  "short",
+  "long",
+  "shortOffset",
+  "longOffset",
+  "shortGeneric",
+  "longGeneric",
+];
+
 for (const zoneName of timezoneNames) {
   // Do something with currentValue
-  var formatter = new Intl.DateTimeFormat('en-US', {
-    timeZone: 'America/Los_Angeles',
+  var formatter = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Los_Angeles",
     timeZoneName: zoneName,
   });
-  console.log(zoneName + ": " + formatter.format(date) );
+  console.log(zoneName + ": " + formatter.format(date));
 }
- 
-// expected output: 
+
+// expected output:
 // > "short: 12/16/2021, PST"
 // > "long: 12/16/2021, Pacific Standard Time"
 // > "shortOffset: 12/16/2021, GMT-8"

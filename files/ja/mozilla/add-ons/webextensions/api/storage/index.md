@@ -20,7 +20,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage
 
 {{domxref("Window.localStorage")}}とこの API は似ていますが、拡張機能関連のデータを格納する際に拡張コード内で `Window.localStorage` を使わないことを推奨します。Firefox はプライバシー上の理由で、ブラウザー履歴やデータを消去などをする場合、localStorage API を利用して保存されたデータも消去します。しかし [`storage.local`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) API を利用して保存されたデータはこれらの場合でも保持されます。
 
-> **メモ:** ストレージ領域内は暗号化されていないため、ユーザーの機密情報を保存すべきではありません。
+> [!NOTE]
+> ストレージ領域内は暗号化されていないため、ユーザーの機密情報を保存すべきではありません。
 
 ## 型
 
@@ -47,13 +48,15 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.storage")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **メモ:** この API は Chromium の [`chrome.storage`](https://developer.chrome.com/extensions/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!NOTE]
+> この API は Chromium の [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -80,4 +83,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

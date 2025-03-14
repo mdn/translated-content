@@ -1,7 +1,6 @@
 ---
 title: Mesure des performances
 slug: Learn/Performance/Measuring_performance
-translation_of: Learn/Performance/Measuring_performance
 ---
 
 {{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
@@ -45,11 +44,11 @@ Cet article présente les indicateurs de performances web que vous pouvez utilis
 
 Si vous êtes en capacité d'écrire du code pour le web, sachez qu'il existe un grand nombre [d'API Web](/fr/docs/Web/API) destinées à créer vos propres outils de mesure de performances.
 
-Vous pouvez utiliser [l'API d'horodatage de navigation](/fr/docs/Web/API/Navigation_timing_API) pour mesurer les performances web côté client. Cela comprend le volume de temps nécessaire pour décharger la page précédente, le temps que prendra la résolution du nom de domaine, le total du temps passé à exécuter le chargement de la page, et bien plus encore. Vous pouvez utiliser les API pour créer des indicateurs de mesure de tous les évènements liés à la navigation affichés dans le diagramme présenté ci-dessous.
+Vous pouvez utiliser [l'API d'horodatage de navigation](/fr/docs/Web/API/Performance_API/Navigation_timing) pour mesurer les performances web côté client. Cela comprend le volume de temps nécessaire pour décharger la page précédente, le temps que prendra la résolution du nom de domaine, le total du temps passé à exécuter le chargement de la page, et bien plus encore. Vous pouvez utiliser les API pour créer des indicateurs de mesure de tous les évènements liés à la navigation affichés dans le diagramme présenté ci-dessous.
 
-![Voici les différents gestionnaires que l'API d'horodatage de la navigation peut prendre en charge, incluant les gestionnaires suivants (en anglais)&nbsp;: Prompt for unload&nbsp;; redirect&nbsp;; unload&nbsp;; App cache&nbsp;; DNS&nbsp;; TCP&nbsp;; Request&nbsp;; Response&nbsp;; Processing&nbsp;; onLoad&nbsp;; navigationStart&nbsp;; redirectStart&nbsp;; redirectEnd&nbsp;; fetchStart&nbsp;; domainLookupEnd&nbsp;; domainLookupStart&nbsp;; connectStart (secureConnectionStart)&nbsp;; connectEnd&nbsp;; requestStart&nbsp;; responseStart&nbsp;; responseEnd&nbsp;; unloadStart&nbsp;; unloadEnd&nbsp;; domLoading&nbsp;; domInteractive&nbsp;; domContentLoaded&nbsp;; domComplete&nbsp;; loadEventStart&nbsp;; loadEventEnd.](navigationtimingapi.jpg)
+![Voici les différents gestionnaires que l'API d'horodatage de la navigation peut prendre en charge, incluant les gestionnaires suivants (en anglais) : Prompt for unload ; redirect ; unload ; App cache ; DNS ; TCP ; Request ; Response ; Processing ; onLoad ; navigationStart ; redirectStart ; redirectEnd ; fetchStart ; domainLookupEnd ; domainLookupStart ; connectStart (secureConnectionStart) ; connectEnd ; requestStart ; responseStart ; responseEnd ; unloadStart ; unloadEnd ; domLoading ; domInteractive ; domContentLoaded ; domComplete ; loadEventStart ; loadEventEnd.](navigationtimingapi.jpg)
 
-[L'API de performances](/fr/docs/Web/API/Performance_API/Using_the_Performance_API) propose un accès aux informations liées aux performances, ce qui comprend [l'API de chronologie des performances](/fr/docs/Web/API/Performance_Timeline), [l'API d'horodatage de la navigation](/fr/docs/Web/API/Navigation_timing_API), [l'API d'horodatage du visiteur](/fr/docs/Web/API/User_Timing_API) ainsi que [l'API d'horodatage des ressources](/fr/docs/Web/API/Resource_Timing_API). Ces interfaces permettent de mesurer précisément le temps que prennent les tâches JavaScript pour se dérouler.
+[L'API de performances](/fr/docs/Web/API/Performance_API/Using_the_Performance_API) propose un accès aux informations liées aux performances, ce qui comprend [l'API de chronologie des performances](/fr/docs/Web/API/Performance_Timeline), [l'API d'horodatage de la navigation](/fr/docs/Web/API/Performance_API/Navigation_timing), [l'API d'horodatage du visiteur](/fr/docs/Web/API/Performance_API/User_timing) ainsi que [l'API d'horodatage des ressources](/fr/docs/Web/API/Performance_API/Resource_timing). Ces interfaces permettent de mesurer précisément le temps que prennent les tâches JavaScript pour se dérouler.
 
 L'objet [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) fait partie de la _chronologie des performances_. Une entrée _performance_ peut directement être créée en utilisant _{{domxref("PerformanceMark","PerformanceMark")}}_ ou une _{{domxref("PerformanceMeasure","PerformanceMeasure")}}_ (par exemple en appelant la méthode {{domxref("Performance.mark","mark()")}}) sur un point explicite de l'application. Les entrées de performances peuvent aussi être créées de façon indirecte, par exemple lors du chargement d'une ressource graphique.
 
@@ -61,7 +60,7 @@ Si cet article n'a pas pour but de proposer une documentation complète de ces A
 
 Il y a beaucoup d'outils disponibles pour vous aider à améliorer les performances de vos sites. Ils sont généralement classés dans deux catégories&nbsp;:
 
-- Les outils qui indiquent ou mesurent les performances, tels que [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) ou le [moniteur réseau](/fr/docs/Tools/Network_Monitor) et le [moniteur de performances](/fr/docs/Tools/Performance) de Firefox. Ces outils vous montrent la vitesse de chargement de votre site ou de votre application. Ils vous indiquent également les points sur lesquels votre application web peut être améliorée.
+- Les outils qui indiquent ou mesurent les performances, tels que [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) ou le [moniteur réseau](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) et le [moniteur de performances](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) de Firefox. Ces outils vous montrent la vitesse de chargement de votre site ou de votre application. Ils vous indiquent également les points sur lesquels votre application web peut être améliorée.
 - Les outils qui corrigent le code de votre application web ou de votre site afin d'améliorer ses performances. Par exemple, certains outils de construction empaquettent le code réparti sur plusieurs fichiers en un seul fichier unique afin de réduire le nombre de requêtes HTTP. Il existe aussi des minificateurs qui suppriment tous les espaces de votre code pour réduire la taille des fichiers.
 
 Sur cette page, ces deux catégories d'outils seront abordées. Par ailleurs, en parlant des mesures de performances, nous aborderons bien entendu les indicateurs que vous allez utiliser pour déterminer si les performances de votre site s'améliorent ou non.
@@ -82,11 +81,11 @@ Essayez vos sites favoris sur webpagetest.org et PageSpeed Insights, vous conna�
 
 ### Outils réseau
 
-La plupart des navigateurs ont des outils avec lesquels vous pouvez tester les pages web en cours de chargement pour déterminer leurs performances. Par exemple, le [moniteur réseau](/fr/docs/Tools/Network_Monitor) de Firefox retourne des informations détaillées sur toutes les ressources téléchargées sur le réseau ainsi qu'un graphique montrant la durée de téléchargement de chaque ressource.
+La plupart des navigateurs ont des outils avec lesquels vous pouvez tester les pages web en cours de chargement pour déterminer leurs performances. Par exemple, le [moniteur réseau](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) de Firefox retourne des informations détaillées sur toutes les ressources téléchargées sur le réseau ainsi qu'un graphique montrant la durée de téléchargement de chaque ressource.
 
 ![](network-monitor.png)
 
-Vous pouvez aussi utiliser le [moniteur de performances](/fr/docs/Tools/Performance) pour mesurer les performances de l'interface de votre application ou de votre site pendant que vous réalisez différentes actions. Cela permet d'identifier les fonctionnalités qui ralentissent le plus votre interface.
+Vous pouvez aussi utiliser le [moniteur de performances](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) pour mesurer les performances de l'interface de votre application ou de votre site pendant que vous réalisez différentes actions. Cela permet d'identifier les fonctionnalités qui ralentissent le plus votre interface.
 
 ![](perf-monitor.png)
 
@@ -95,18 +94,3 @@ Vous pouvez aussi utiliser le [moniteur de performances](/fr/docs/Tools/Performa
 Cet article était destiné à proposer une vue d'ensemble rapide des indicateurs de performance web que vous pouvez mesurer sur un site ou une application web. Dans le prochain article, nous verrons comment travailler sur la performance perçue et nous découvrirons des techniques permettant de rendre les éléments les plus longs à charger un peu moins lents pour le visiteur, voire pour les masquer complètement.
 
 {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
-
-## Dans ce module
-
-- [Le «&nbsp;pourquoi&nbsp;» des performances web](/fr/docs/Learn/Performance/why_web_performance)
-- [Qu'est-ce que sont les performances web&nbsp;?](/fr/docs/Learn/Performance/What_is_web_performance)
-- [Comment les visiteurs perçoivent-ils les performances&nbsp;?](/fr/docs/Learn/Performance/Perceived_performance)
-- [Mesurer les performances](/fr/docs/Learn/Performance/Measuring_performance)
-- [Multimédia&nbsp;: images](/fr/docs/Learn/Performance/Multimedia)
-- [Multimédia&nbsp;: vidéos](/fr/docs/Learn/Performance/video)
-- [Bonnes pratiques de performances pour JavaScript](/fr/docs/Learn/Performance/JavaScript)
-- [Fonctionnalités de HTML liées aux performances](/fr/docs/Learn/Performance/HTML)
-- [Fonctionnalités de CSS liées aux performances](/fr/docs/Learn/Performance/CSS)
-- [Performances et polices d'écriture](/fr/docs/Learn/Performance/Fonts)
-- [Performances sur mobile](/fr/docs/Learn/Performance/Mobile)
-- [Placer le focus sur les performances](/fr/docs/Learn/Performance/business_case_for_performance)

@@ -1,13 +1,26 @@
 ---
-title: Set() constructor
+title: Set() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
 ---
 
 {{JSRef}}
 
-**`Set` 构造函数**能让你创建 `Set` 对象，其可以存储任意类型的唯一值，无论是[基本类型](/zh-CN/docs/Glossary/Primitive)或者对象引用。
+**`Set()`** 构造函数创建 {{jsxref("Set")}} 对象。
 
-{{EmbedInteractiveExample("pages/js/set-prototype-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype Constructor")}}
+
+```js interactive-example
+const set1 = new Set([1, 2, 3, 4, 5]);
+
+console.log(set1.has(1));
+// Expected output: true
+
+console.log(set1.has(5));
+// Expected output: true
+
+console.log(set1.has(6));
+// Expected output: false
+```
 
 ## 语法
 
@@ -21,7 +34,7 @@ new Set(iterable)
 ### 参数
 
 - `iterable` {{optional_inline}}
-  - : 如果传递一个[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)，它的所有元素将不重复地被添加到新的 `Set` 中。如果不指定此参数或其值为 `null`，则新的 `Set` 为空。
+  - : 如果传入一个[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)，它的所有元素将不重复地被添加到新的 `Set` 中。如果不指定此参数或其值为 `null`，则新的 `Set` 为空。
 
 ### 返回值
 
@@ -37,7 +50,7 @@ const mySet = new Set();
 mySet.add(1); // Set [ 1 ]
 mySet.add(5); // Set [ 1, 5 ]
 mySet.add(5); // Set [ 1, 5 ]
-mySet.add('some text'); // Set [ 1, 5, 'some text' ]
+mySet.add("some text"); // Set [ 1, 5, 'some text' ]
 const o = { a: 1, b: 2 };
 mySet.add(o);
 ```
@@ -52,5 +65,5 @@ mySet.add(o);
 
 ## 参见
 
-- [Polyfill of `Set` in `core-js`](https://github.com/zloirock/core-js#set)
+- [`core-js` 中 `Set` 的 polyfill](https://github.com/zloirock/core-js#set)
 - {{jsxref("Set")}}

@@ -1,11 +1,6 @@
 ---
 title: background-clip
 slug: Web/CSS/background-clip
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/background-clip
 ---
 
 {{CSSRef}}
@@ -56,13 +51,13 @@ background-clip: unset;
 
 ```css
 p {
- border: 10px navy;
- border-style: dotted double;
- margin: 1em;
- padding: 2em;
- background: #F8D575;
- font: 900 1.2em sans-serif;
- text-decoration: underline;
+  border: 10px navy;
+  border-style: dotted double;
+  margin: 1em;
+  padding: 2em;
+  background: #f8d575;
+  font: 900 1.2em sans-serif;
+  text-decoration: underline;
 }
 
 .border-box {
@@ -79,28 +74,17 @@ p {
 
 .text {
   background-clip: text;
-  color: rgba(0,0,0,.2);
+  color: rgba(0, 0, 0, 0.2);
 }
 ```
 
 ### HTML
 
 ```html
-<p class="border-box">
-  L'arrière-plan s'étend sous la bordure.
-</p>
-<p class="padding-box">
-  L'arrière-plan s'étend jusqu'avant la
-  bordure.
-</p>
-<p class="content-box">
-  L'arrière-plan s'arrête à la boîte de
-  contenu.
-</p>
-<p class="text">
-  L'arrière-plan se limite au texte au
-  premier-plan.
-</p>
+<p class="border-box">L'arrière-plan s'étend sous la bordure.</p>
+<p class="padding-box">L'arrière-plan s'étend jusqu'avant la bordure.</p>
+<p class="content-box">L'arrière-plan s'arrête à la boîte de contenu.</p>
+<p class="text">L'arrière-plan se limite au texte au premier-plan.</p>
 ```
 
 ### Résultat
@@ -125,4 +109,4 @@ p {
   - {{cssxref("background-image")}}
   - {{cssxref("background-origin")}}
 
-- [Le modèle de boîtes CSS](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte)
+- [Le modèle de boîtes CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model)

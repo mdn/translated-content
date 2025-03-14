@@ -65,9 +65,8 @@ text-align: unset;
 
 ```html
 <p class="example">
-  Integer elementum massa at nulla placerat varius.
-  Suspendisse in libero risus, in interdum massa.
-  Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
+  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
   Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
 </p>
 ```
@@ -91,9 +90,8 @@ text-align: unset;
 
 ```html
 <p class="example">
-  Integer elementum massa at nulla placerat varius.
-  Suspendisse in libero risus, in interdum massa.
-  Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
+  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
   Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
 </p>
 ```
@@ -117,9 +115,8 @@ text-align: unset;
 
 ```html
 <p class="example">
-  Integer elementum massa at nulla placerat varius.
-  Suspendisse in libero risus, in interdum massa.
-  Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
+  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
   Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
 </p>
 ```
@@ -135,7 +132,7 @@ text-align: unset;
 
 #### Resultado
 
-{{EmbedLiveSample("Justify","100%","100%")}}
+{{EmbedLiveSample("Justificado","100%","100%")}}
 
 ### Notas
 
@@ -162,16 +159,11 @@ O modo compátivel-padrão de centralizar um bloco em si sem centralizar seu con
 
 ## Especificações
 
-| Especificação                                                                            | Status                                           | Comentário                                                                                                        |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS Logical Properties', '#text-align', 'text-align')}} | {{Spec2('CSS Logical Properties')}} | Sem mudanças                                                                                                      |
-| {{SpecName('CSS3 Text', '#text-align-property', 'text-align')}}     | {{Spec2('CSS3 Text')}}                     | Added the `start`, `end`, and `match-parent` values. Changed the unnamed initial value to `start` (which it was). |
-| {{SpecName('CSS2.1', 'text.html#alignment-prop', 'text-align')}}     | {{Spec2('CSS2.1')}}                         | Sem mudanças                                                                                                      |
-| {{SpecName('CSS1', '#text-align', 'text-align')}}                         | {{Spec2('CSS1')}}                         | Definição iniciaç                                                                                                 |
+{{Specifications}}
 
 ## Browser compatibilidade
 
-{{Compat("css.properties.text-align")}}
+{{Compat}}
 
 ## Veja também
 

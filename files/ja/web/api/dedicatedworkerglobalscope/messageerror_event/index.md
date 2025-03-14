@@ -1,5 +1,5 @@
 ---
-title: 'DedicatedWorkerGlobalScope: messageerror イベント'
+title: "DedicatedWorkerGlobalScope: messageerror イベント"
 slug: Web/API/DedicatedWorkerGlobalScope/messageerror_event
 l10n:
   sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('messageerror', (event) => { });
+addEventListener("messageerror", (event) => {});
 
-onmessageerror = (event) => { };
+onmessageerror = (event) => {};
 ```
 
 ## イベント型
@@ -49,9 +49,9 @@ _このインターフェイスには、親である {{domxref("Event")}} から
 ```js
 // worker.js
 
-self.addEventListener('messageerror', (event) => {
-    self.postMessage('Error receiving message');
-    console.error(event);
+self.addEventListener("messageerror", (event) => {
+  self.postMessage("Error receiving message");
+  console.error(event);
 });
 ```
 
@@ -61,8 +61,8 @@ self.addEventListener('messageerror', (event) => {
 // worker.js
 
 self.onmessageerror = (event) => {
-    self.postMessage('Error receiving message');
-    console.error(event);
+  self.postMessage("Error receiving message");
+  console.error(event);
 };
 ```
 

@@ -1,10 +1,9 @@
 ---
 title: Hipertexto
 slug: Glossary/Hypertext
-tags:
-  - Glosario
-translation_of: Glossary/Hypertext
 ---
+
+{{GlossarySidebar}}
 
 El hipertexto es texto que contiene enlaces a otros textos, y no un flujo único y lineal como el de una novela.
 

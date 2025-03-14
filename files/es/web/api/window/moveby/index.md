@@ -1,7 +1,6 @@
 ---
 title: Window.moveBy()
 slug: Web/API/Window/moveBy
-translation_of: Web/API/Window/moveBy
 ---
 
 {{APIRef}}
@@ -13,7 +12,7 @@ Mueve la actual ventana a consecuencia de una cantidad especificada.
 ## Sintaxis
 
 ```js
-window.moveBy(deltaX, deltaY)
+window.moveBy(deltaX, deltaY);
 ```
 
 ### Parametros
@@ -42,9 +41,9 @@ Desde Firefox 7, no es posible para un sitio web mover una ventana en el navegad
 
 {{Specifications}}
 
-## Compatilidad de Navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Window.moveBy")}}
+{{Compat}}
 
 ## Ver también
 

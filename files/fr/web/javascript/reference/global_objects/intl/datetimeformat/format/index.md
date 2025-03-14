@@ -1,28 +1,40 @@
 ---
 title: Intl.DateTimeFormat.prototype.format
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - i18n
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/DateTimeFormat/format
 ---
 
 {{JSRef}}
 
 La méthode **`Intl.DateTimeFormat.prototype.format()`** est un accesseur formate une date selon les options de locale et de format de l'objet {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}.
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-format.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.format")}}
+
+```js interactive-example
+const options1 = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+const date1 = new Date(2012, 5);
+
+const dateTimeFormat1 = new Intl.DateTimeFormat("sr-RS", options1);
+console.log(dateTimeFormat1.format(date1));
+// Expected output: "петак, 1. јун 2012."
+
+const dateTimeFormat2 = new Intl.DateTimeFormat("en-GB", options1);
+console.log(dateTimeFormat2.format(date1));
+// Expected output: "Friday, 1 June 2012"
+
+const dateTimeFormat3 = new Intl.DateTimeFormat("en-US", options1);
+console.log(dateTimeFormat3.format(date1));
+// Expected output: "Friday, June 1, 2012"
+```
 
 ## Syntaxe
 
 ```js
-dateTimeFormat.format(date)
+dateTimeFormat.format(date);
 ```
 
 ### Paramètres
@@ -41,7 +53,12 @@ L'accesseur `format` permet de formater une date en une chaîne de caractères e
 On peut utiliser la fonction renvoyée par l'accesseur `format` pour formater une date. Par exemple selon la locale serbe :
 
 ```js
-var options = {weekday: "long", year: "numeric", month: "long", day: "numeric"};
+var options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
 var dateTimeFormat = new Intl.DateTimeFormat("sr-RS", options);
 console.log(dateTimeFormat.format(new Date()));
 // → "недеља, 7. април 2013."
@@ -53,7 +70,7 @@ On peut également utiliser la fonction renvoyée par l'accesseur `format` pour 
 
 ```js
 var a = [new Date(2012, 08), new Date(2012, 11), new Date(2012, 03)];
-var options = {year: "numeric", month: "long"};
+var options = { year: "numeric", month: "long" };
 var dateTimeFormat = new Intl.DateTimeFormat("pt-BR", options);
 var formatted = a.map(dateTimeFormat.format);
 console.log(formatted.join("; "));
@@ -69,12 +86,12 @@ Aussi, mieux vaut ne pas comparer un résultat fourni par `format()` avec une va
 ```js example-bad
 let d = new Date("2019-01-01T00:00:00.000000Z");
 let formattedDate = Intl.DateTimeFormat(undefined, {
-  year: 'numeric',
-  month: 'numeric',
-  day: 'numeric',
-  hour: 'numeric',
-  minute: 'numeric',
-  second: 'numeric'
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
 }).format(d);
 
 "1.1.2019, 01:00:00" === formattedDate;
@@ -82,7 +99,8 @@ let formattedDate = Intl.DateTimeFormat(undefined, {
 // false pour IE et Edge
 ```
 
-> **Note :** Voir aussi ce fil [StackOverflow](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results) pour plus de détails et d'exemples.
+> [!NOTE]
+> Voir aussi ce fil [StackOverflow](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results) pour plus de détails et d'exemples.
 
 ## Spécifications
 

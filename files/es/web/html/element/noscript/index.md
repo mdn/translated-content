@@ -1,26 +1,23 @@
 ---
 title: noscript
 slug: Web/HTML/Element/noscript
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/noscript
-original_slug: Web/HTML/Elemento/noscript
 ---
+
+{{HTMLSidebar}}
 
 ### Definición
 
-- **noscript** de -_no script_ . Aporta contenidos alternativos al elemento [script](/es/HTML/Elemento/script). las aplicaciones de usuario que no soporten scripts deben mostrar en su lugar el contenido de este elemento.
+- **noscript** de -_no script_ . Aporta contenidos alternativos al elemento [script](/es/docs/HTML/Elemento/script). las aplicaciones de usuario que no soporten scripts deben mostrar en su lugar el contenido de este elemento.
+
   - : **Sus etiquetas son**: `<noscript>` y `</noscript>` (ambas obligatorias).
 
-    **Está definido como**: Elemento [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **Está definido como**: Elemento [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
     **Crea una caja**: en bloque.
 
-    - **Puede (y debe) contener**: Uno o más elementos [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    - **Puede (y debe) contener**: Uno o más elementos [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
-      - : Con un doctype transicional puede contener cero o más elementos [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+      - : Con un doctype transicional puede contener cero o más elementos [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
 #### Atributos
 
@@ -224,7 +221,8 @@ Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html
 
 ---
 
-> **Nota:** Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!NOTE]
+> Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
 >
 > ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.
 

@@ -1,11 +1,11 @@
 ---
-title: ':focus-within'
+title: :focus-within
 slug: Web/CSS/:focus-within
 ---
 
 {{CSSRef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) **`:focus-within`** representa un elemento que ha recibido el foco o que _contiene_ un elemento que ha recibido el foco. En otras palabras, representa un elemento que en sí coincide con la pseudoclase {{cssxref(":focus")}} o tiene descendientes que coincidan con `:focus`. (Esto incluye descendientes en [shadow DOM](/es/docs/Web/Web_Components/Shadow_DOM))
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) **`:focus-within`** representa un elemento que ha recibido el foco o que _contiene_ un elemento que ha recibido el foco. En otras palabras, representa un elemento que en sí coincide con la pseudoclase {{cssxref(":focus")}} o tiene descendientes que coincidan con `:focus`. (Esto incluye descendientes en [shadow DOM](/es/docs/Web/API/Web_components/Using_shadow_DOM))
 
 ```css
 /* Selecciona un <div> cuando uno de sus descendientes recibe el foco*/
@@ -31,10 +31,10 @@ En este ejemplo, el formulario recibirá estilos de color especiales cuando cual
 
 <form>
   <label for="given_name">Nombre:</label>
-  <input id="given_name" type="text">
-  <br>
+  <input id="given_name" type="text" />
+  <br />
   <label for="family_name">Apellido:</label>
-  <input id="family_name" type="text">
+  <input id="family_name" type="text" />
 </form>
 ```
 
@@ -67,7 +67,7 @@ input {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.focus-within")}}
+{{Compat}}
 
 ## Ver también
 

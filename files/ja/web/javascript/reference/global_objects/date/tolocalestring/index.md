@@ -9,7 +9,19 @@ l10n:
 
 **`toLocaleString()`** メソッドは、この日付の言語依存の表現による文字列を返します。[`Intl.DateTimeFormat` API](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) に対応している実装では、このメソッドは単に `Intl.DateTimeFormat` を呼び出すだけです。
 
-{{EmbedInteractiveExample("pages/js/date-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toLocaleString()")}}
+
+```js interactive-example
+const event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+
+// British English uses day-month-year order and 24-hour time without AM/PM
+console.log(event.toLocaleString("en-GB", { timeZone: "UTC" }));
+// Expected output: "20/12/2012, 03:00:00"
+
+// Korean uses year-month-day order and 12-hour time with AM/PM
+console.log(event.toLocaleString("ko-KR", { timeZone: "UTC" }));
+// Expected output: "2012. 12. 20. 오전 3:00:00"
+```
 
 ## 構文
 
@@ -67,9 +79,9 @@ console.log(date.toLocaleString());
 ```js
 function toLocaleStringSupportsLocales() {
   try {
-    new Date().toLocaleString('i');
+    new Date().toLocaleString("i");
   } catch (e) {
-    return e.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
@@ -86,29 +98,29 @@ const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // 米国のアメリカ大陸/ロサンゼルス
 
 // 米国英語は月-日-年の順で AM/PM 表記の 12 時間制
-console.log(date.toLocaleString('en-US'));
+console.log(date.toLocaleString("en-US"));
 // → "12/19/2012, 7:00:00 PM"
 
 // 英国英語は日-月-年の順で AM/PM 表記なしの 24 時間制
-console.log(date.toLocaleString('en-GB'));
+console.log(date.toLocaleString("en-GB"));
 // → "20/12/2012 03:00:00"
 
 // 韓国は年-月-日の順で AM/PM 表記の 12 時間制
-console.log(date.toLocaleString('ko-KR'));
+console.log(date.toLocaleString("ko-KR"));
 // → "2012. 12. 20. 오후 12:00:00"
 
 // 多くのアラビア語圏ではアラビア数字を使用
-console.log(date.toLocaleString('ar-EG'));
+console.log(date.toLocaleString("ar-EG"));
 // → "٢٠‏/١٢‏/٢٠١٢ ٥:٠٠:٠٠ ص"
 
 // 日本のアプリケーションでは元号を用いることがある
 // 2012 年は平成 24 年
-console.log(date.toLocaleString('ja-JP-u-ca-japanese'));
+console.log(date.toLocaleString("ja-JP-u-ca-japanese"));
 // → "24/12/20 12:00:00"
 
 // 対応していない可能性のある言語を要求した場合、たとえば
 // ここではバリ語とし、代替言語にインドネシア語
-console.log(date.toLocaleString(['ban', 'id']));
+console.log(date.toLocaleString(["ban", "id"]));
 // → "20/12/2012 11.00.00"
 ```
 
@@ -121,24 +133,24 @@ const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // 曜日を加えて月とともに長い書式で表す
 const options = {
-  weekday: 'long',
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
 };
 
-console.log(date.toLocaleString('de-DE', options));
+console.log(date.toLocaleString("de-DE", options));
 // → "Donnerstag, 20. Dezember 2012"
 
 // アプリケーションで UTC を用いてそれを示したい場合
-options.timeZone = 'UTC';
-options.timeZoneName = 'short';
+options.timeZone = "UTC";
+options.timeZoneName = "short";
 
-console.log(date.toLocaleString('en-US', options));
+console.log(date.toLocaleString("en-US", options));
 // → "Thursday, December 20, 2012, GMT"
 
 // 米国でも 24 時間制を使うことがある
-console.log(date.toLocaleString('en-US', { hour12: false }));
+console.log(date.toLocaleString("en-US", { hour12: false }));
 // → "12/19/2012, 19:00:00"
 ```
 
@@ -151,12 +163,14 @@ console.log(date.toLocaleString('en-US', { hour12: false }));
 このことから、 `toLocaleString()` を固定値と比較できると期待してはいけません。
 
 ```js example-bad
-"1/1/2019, 01:00:00" === new Date("2019-01-01T01:00:00Z").toLocaleString("en-US");
+"1/1/2019, 01:00:00" ===
+  new Date("2019-01-01T01:00:00Z").toLocaleString("en-US");
 // true in Firefox and others
 // false in IE and Edge
 ```
 
-> **メモ:** 詳細および例についてはこの [StackOverflow のスレッド](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)をご覧ください。
+> [!NOTE]
+> 詳細および例についてはこの [StackOverflow のスレッド](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)をご覧ください。
 
 ## 仕様書
 

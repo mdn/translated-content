@@ -22,7 +22,7 @@ var animation = new Animation(effect, timeline);
 
 ## 例子
 
-在[White Rabbit](http://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010)示例中，Animation 构造函数用于使用文档时间轴为兔子创建关键帧动画：
+在[White Rabbit](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010)示例中，Animation 构造函数用于使用文档时间轴为兔子创建关键帧动画：
 
 ```js
 var rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
@@ -32,11 +32,11 @@ var rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)
 - {{domxref("Animation")}}

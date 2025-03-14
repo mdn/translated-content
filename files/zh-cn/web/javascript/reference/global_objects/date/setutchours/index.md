@@ -1,47 +1,67 @@
 ---
 title: Date.prototype.setUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCHours
+l10n:
+  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
 {{JSRef}}
 
-The **`setUTCHours()`** method sets the hour for a specified date according to universal time, and returns the number of milliseconds since 1 January 1970 00:00:00 UTC until the time represented by the updated {{jsxref("Date")}} instance.
+{{jsxref("Date")}} 实例的 **`setUTCHours()`** 方法用于根据世界协调时更改日期对象的小时、分钟、秒或毫秒。
 
-{{EmbedInteractiveExample("pages/js/date-setutchours.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCHours()")}}
 
-## Syntax
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30 GMT-3:00");
 
-```plain
-dateObj.setUTCHours(hoursValue[, minutesValue[, secondsValue[, msValue]]])
+console.log(event.toUTCString());
+// Expected output: "Wed, 20 Aug 1975 02:15:30 GMT"
+
+console.log(event.getUTCHours());
+// Expected output: 2
+
+event.setUTCHours(23);
+
+console.log(event.toUTCString());
+// Expected output: "Wed, 20 Aug 1975 23:15:30 GMT"
+```
+
+## 语法
+
+```js-nolint
+setUTCHours(hoursValue)
+setUTCHours(hoursValue, minutesValue)
+setUTCHours(hoursValue, minutesValue, secondsValue)
+setUTCHours(hoursValue, minutesValue, secondsValue, msValue)
 ```
 
 ### 参数
 
 - `hoursValue`
-  - : 表示小时的整数，取值 0 到 23 之间。
-- `minutesValue`
-  - : 可选参数。表示分钟的整数，取值 0 到 59 之间。
-- `secondsValue`
-  - : 可选参数。表示秒数的整数，取值 0 到 59 之间。如果指定了该参数，就要同时指定 `minutesValue` 这个参数。
-- `msValue`
-  - : 可选参数。表示毫秒的整数，取值 0 到 999 之间。如果指定了该参数，就要指定 `minutesValue` 和 `secondsValue` 这两个参数。
+  - : 0 到 23 之间的整数，表示小时数。
+- `minutesValue` {{optional_inline}}
+  - : 0 到 59 之间的整数，表示分钟数。
+- `secondsValue` {{optional_inline}}
+  - : 0 到 59 之间的整数，代表秒数。如果指定了 `secondsValue`，则必须同时指定 `minutesValue`。
+- `msValue` {{optional_inline}}
+  - : 0 到 999 之间的整数，表示毫秒数。如果指定了 `msValue`，则必须同时指定 `minutesValue` 和 `secondsValue`。
 
 ### 返回值
 
-返回从 1970-01-01 00:00:00 UTC 到更新后的日期所表示时间的毫秒数。
+该方法会原地修改 {{jsxref("Date")}} 对象，并返回其新的[时间戳](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#纪元、时间戳和无效日期)。如果参数为 `NaN`（或其他会被[强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)为 `NaN` 的值，例如 `undefined`），则日期会被设置为[无效日期](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#纪元、时间戳和无效日期)，并返回 `NaN`。
 
 ## 描述
 
-If you do not specify the `minutesValue`, `secondsValue`, and `msValue` parameters, the values returned from the {{jsxref("Date.prototype.getUTCMinutes()", "getUTCMinutes()")}}, {{jsxref("Date.prototype.getUTCSeconds()", "getUTCSeconds()")}}, and {{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}} methods are used.
+如果你未指定 `minutesValue`、`secondsValue` 和 `msValue` 参数，那么将使用 {{jsxref("Date/getUTCMinutes", "getUTCMinutes()")}}、{{jsxref("Date/getUTCSeconds", "getUTCSeconds()")}} 和 {{jsxref("Date/getUTCMilliseconds", "getUTCMilliseconds()")}} 方法返回的值。
 
-If a parameter you specify is outside of the expected range, `setUTCHours()` attempts to update the date information in the {{jsxref("Date")}} object accordingly. For example, if you use 100 for `secondsValue`, the minutes will be incremented by 1 (`minutesValue + 1`), and 40 will be used for seconds.
+如果你指定的参数超出了预期范围，`setUTCHours()` 会尝试相应地更新 {{jsxref("Date")}} 对象中的日期信息。例如，如果你将 `secondsValue` 设置为 100，分钟数将增加 1（`minutesValue + 1`），而秒数将变为 40。
 
-## 例子
+## 示例
 
-### 使用 `setUTCHours()`
+### 使用 setUTCHours()
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setUTCHours(8);
 ```
 
@@ -53,7 +73,7 @@ theBigDay.setUTCHours(8);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCHours()")}}
 - {{jsxref("Date.prototype.setHours()")}}

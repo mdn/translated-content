@@ -1,20 +1,9 @@
 ---
 title: browserAction.disable()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/disable
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - disable
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/disable
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Désactive l'action du navigateur pour un onglet, ce qui signifie qu'il ne peut pas être cliqué lorsque cet onglet est actif.
 
@@ -22,8 +11,8 @@ Désactive l'action du navigateur pour un onglet, ce qui signifie qu'il ne peut 
 
 ```js
 browser.browserAction.disable(
-  tabId // optional integer
-)
+  tabId, // optional integer
+);
 ```
 
 ### Paramètres
@@ -31,9 +20,9 @@ browser.browserAction.disable(
 - `tabId`{{optional_inline}}
   - : `integer`. L'identifiant (ID) de l'onglet pour lequel vous souhaitez désactiver l'action du navigateur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserAction.disable")}}
+{{Compat}}
 
 ## Exemples
 
@@ -57,7 +46,7 @@ browser.browserAction.onClicked.addListener((tab) => {
 });
 ```
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
 >

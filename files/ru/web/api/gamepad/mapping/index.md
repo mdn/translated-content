@@ -1,7 +1,6 @@
 ---
 title: Gamepad.mapping
 slug: Web/API/Gamepad/mapping
-translation_of: Web/API/Gamepad/mapping
 ---
 
 {{APIRef("Gamepad API")}}
@@ -31,10 +30,10 @@ A {{domxref("string")}}.
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-[Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)
+[Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

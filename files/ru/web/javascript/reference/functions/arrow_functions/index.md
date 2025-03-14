@@ -1,11 +1,6 @@
 ---
 title: Стрелочные функции
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Функции
-translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 ---
 
 {{jsSidebar("Functions")}}
@@ -48,8 +43,6 @@ var f = ([a, b] = [1, 2], {x: c} = {x: a + b}) => a + b + c;
 f();  // 6
 ```
 
-Подробные примеры синтаксиса можно посмотреть [здесь](http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax).
-
 ## Описание
 
 Смотрите также ["ES6 In Depth: Arrow functions" on hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/).
@@ -61,14 +54,9 @@ f();  // 6
 В некоторых функциональных шаблонах приветствуются более короткие функции. Сравните:
 
 ```js
-var elements = [
-  'Hydrogen',
-  'Helium',
-  'Lithium',
-  'Beryllium'
-];
+var elements = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 
-elements.map(function(element) {
+elements.map(function (element) {
   return element.length;
 }); // Это выражение вернёт массив [8, 6, 7, 9]
 
@@ -80,12 +68,12 @@ elements.map((element) => {
 // Если единственным оператором в выражении стрелочной функции является return,
 // можно удалить return и окружающие фигурные скобки
 
-elements.map(element => element.length); // [8, 6, 7, 9]
+elements.map((element) => element.length); // [8, 6, 7, 9]
 
 // В данном случае, поскольку нам нужно только свойство length, мы можем использовать деструктуризированный параметр:
 // Обратите внимание, что строка `"length"` соответствует свойству, которое мы хотим получить,
 // в то время как `lengthFooBArX` это просто имя переменной, которую можно назвать как вы хотите
-elements.map(({ "length": lengthFooBArX }) => lengthFooBArX); // [8, 6, 7, 9]
+elements.map(({ length: lengthFooBArX }) => lengthFooBArX); // [8, 6, 7, 9]
 
 // Это задание деструктуризированного параметра может быть записано, как показано ниже. Тем не менее, обратите внимание,
 // что нет строки `"length"`, чтобы выбрать, какое свойство мы хотим получить. Вместо этого в качестве свойства,
@@ -133,7 +121,7 @@ function Person() {
 Стрелочные функции не содержат собственный контекст [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this), а используют значение [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this) окружающего контекста. Поэтому нижеприведённый код работает как предполагалось:
 
 ```js
-function Person(){
+function Person() {
   this.age = 0;
 
   setInterval(() => {
@@ -149,7 +137,10 @@ var p = new Person();
 Поскольку значение `this` определяется лексикой, правила строгого режима ([strict mode](/ru/docs/Web/JavaScript/Reference/Strict_mode)) относительно `this` игнорируются:
 
 ```js
-var f = () => { 'use strict'; return this; };
+var f = () => {
+  "use strict";
+  return this;
+};
 f() === window; // или глобальный объект
 ```
 
@@ -161,24 +152,24 @@ f() === window; // или глобальный объект
 
 ```js
 var adder = {
-  base : 1,
+  base: 1,
 
-  add : function(a) {
-    var f = v => v + this.base;
+  add: function (a) {
+    var f = (v) => v + this.base;
     return f(a);
   },
 
-  addThruCall: function(a) {
-    var f = v => v + this.base;
+  addThruCall: function (a) {
+    var f = (v) => v + this.base;
     var b = {
-      base : 2
+      base: 2,
     };
 
     return f.call(b, a);
-  }
+  },
 };
 
-console.log(adder.add(1));         // Выводит 2
+console.log(adder.add(1)); // Выводит 2
 console.log(adder.addThruCall(1)); // Всё равно выводит 2
 ```
 
@@ -194,8 +185,8 @@ arr(); // 42
 
 function foo() {
   var f = (i) => arguments[0] + i; // Неявное связывание ссылки arguments
-                                   // стрелочной функции f
-                                   // c объектом arguments функции foo
+  // стрелочной функции f
+  // c объектом arguments функции foo
   return f(2);
 }
 
@@ -218,14 +209,14 @@ foo(1); // 2
 Как показано ранее, стрелочные функции лучше всего подходят для функций без методов. Посмотрим, что будет, когда мы попробуем их использовать как методы:
 
 ```js
-'use strict';
+"use strict";
 var obj = {
   i: 10,
   b: () => console.log(this.i, this),
-  c: function() {
+  c: function () {
     console.log(this.i, this);
-  }
-}
+  },
+};
 obj.b(); // prints undefined, Window {...} (или глобальный объект)
 obj.c(); // prints 10, Object {...}
 ```
@@ -233,17 +224,17 @@ obj.c(); // prints 10, Object {...}
 Стрелочные функции не объявляют привязку ("bind") их контекста `this`. Другой пример включает {{jsxref("Object.defineProperty()")}}:
 
 ```js
-'use strict';
+"use strict";
 var obj = {
-  a: 10
+  a: 10,
 };
 
-Object.defineProperty(obj, 'b', {
+Object.defineProperty(obj, "b", {
   get: () => {
     console.log(this.a, typeof this.a, this);
     return this.a + 10;
     // представляет глобальный объект 'Window', но 'this.a' возвращает 'undefined'
-  }
+  },
 });
 ```
 
@@ -252,17 +243,17 @@ Object.defineProperty(obj, 'b', {
 Стрелочные функции не могут быть использованы как конструктор и вызовут ошибку при использовании с `new`:
 
 ```js
-var a = new (function() {})
+var a = new (function () {})();
 // переменной "a" будет присвоено значение экземпляра анонимной функции
 
-var b = new (() => {})
+var b = new (() => {})();
 // будет выброшено исключение
 // Uncaught TypeError: (intermediate value) is not a constructor
 ```
 
 ### Использование ключевого слова `yield`
 
-Ключевое слово [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) не может быть использовано в теле стрелочной функции (за исключением случаев, когда разрешается использовать в функциях, вложенных в тело стрелочной функции). Как следствие стрелочные функции не могут быть использованы как генераторы.
+Ключевое слово [`yield`](/ru/docs/Web/JavaScript/Reference/Operators/yield) не может быть использовано в теле стрелочной функции (за исключением случаев, когда разрешается использовать в функциях, вложенных в тело стрелочной функции). Как следствие стрелочные функции не могут быть использованы как генераторы.
 
 ## Тело функции
 
@@ -271,15 +262,17 @@ var b = new (() => {})
 Блочная форма не возвращает значение, необходимо явно вернуть значение.
 
 ```js
-var func = x => x * x;                  // краткий синтаксис,
-                                        // неявно возвращает результат
-var func = (x, y) => { return x + y; }; // блочный синтаксис,
-                                        // явно возвращает результат
+var func = (x) => x * x; // краткий синтаксис,
+// неявно возвращает результат
+var func = (x, y) => {
+  return x + y;
+}; // блочный синтаксис,
+// явно возвращает результат
 ```
 
 ## Возвращаемые объектные строки (литералы)
 
-Помните о том, что возвращаемые [объектные строки](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#Литерал_объекта/) используют сокращённый синтаксис: `params => {object:literal}` будет работать не так, как ожидается.
+Помните о том, что возвращаемые [объектные строки](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#литерал_объекта/) используют сокращённый синтаксис: `params => {object:literal}` будет работать не так, как ожидается.
 
 ```js
 var func = () => { foo: 1 };
@@ -309,7 +302,7 @@ var func = ()
 
 ## Разбор порядка следования
 
-Поскольку стрелка в стрелочной функции не является оператором, то стрелочные функции имеют специальные правила разбора (парсинга), которые взаимодействуют с [приоритетами операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence/) иначе, чем в обычных функциях.
+Поскольку стрелка в стрелочной функции не является оператором, то стрелочные функции имеют специальные правила разбора (парсинга), которые взаимодействуют с [приоритетами операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_precedence) иначе, чем в обычных функциях.
 
 ```js
 let callback;
@@ -328,16 +321,16 @@ callback = callback || (() => {});    // ok
 // Пустая стрелочная функция возвращает undefined
 let empty = () => {};
 
-(() => 'foobar')();
+(() => "foobar")();
 // Вернёт "foobar"
 // (Это Immediately Invoked Function Expression
 // смотри 'IIFE' в справочнике)
 
-var simple = a => a > 15 ? 15 : a;
+var simple = (a) => (a > 15 ? 15 : a);
 simple(16); // 15
 simple(10); // 10
 
-let max = (a, b) => a > b ? a : b;
+let max = (a, b) => (a > b ? a : b);
 
 // Удобные операции над массивами: filter, map, ...
 
@@ -346,25 +339,27 @@ var arr = [5, 6, 13, 0, 1, 18, 23];
 var sum = arr.reduce((a, b) => a + b);
 // 66
 
-var even = arr.filter(v => v % 2 == 0);
+var even = arr.filter((v) => v % 2 == 0);
 // [6, 0, 18]
 
-var double = arr.map(v => v * 2);
+var double = arr.map((v) => v * 2);
 // [10, 12, 26, 0, 2, 36, 46]
 
 // Более короткие цепочки promise-ов
-promise.then(a => {
-  // ...
-}).then(b => {
-   // ...
-});
+promise
+  .then((a) => {
+    // ...
+  })
+  .then((b) => {
+    // ...
+  });
 
 // Стрелочные функции без параметров, которые визуально легче разбирать
-setTimeout( () => {
-  console.log('Я буду раньше');
-  setTimeout( () => {
+setTimeout(() => {
+  console.log("Я буду раньше");
+  setTimeout(() => {
     // deeper code
-    console.log('Я буду позже');
+    console.log("Я буду позже");
   }, 1);
 }, 1);
 ```
@@ -380,9 +375,9 @@ setTimeout( () => {
 ### Замечания для Firefox
 
 - Первоначальная реализация стрелочных функций в Firefox автоматически переводила их в строгий режим. Это поведение было изменено в [Firefox 24](/ru/docs/Mozilla/Firefox/Releases/24). Использование `"use strict";` стало обязательным.
-- Стрелочные функции семантически отличаются от нестандартных [Expression Closures](/ru/docs/Web/JavaScript/Reference/Operators/Expression_closures), добавленных в [Firefox 3](/en-US/Firefox/Releases/3) (подробности в [Javascript 1.8](/ru/docs/Web/JavaScript/New_in_JavaScript/1.8)); в Expression Closures значение `this` не привязано лексически.
-- До [Firefox 39](/en-US/Firefox/Releases/39), перенос строки (`\n`) был ошибочно разрешён после аргументов стрелочной функции. Это было исправлено для соблюдения спецификации ES2015, и код вроде: `() \n => {}` теперь вызывает {{jsxref("SyntaxError")}} в этой и более поздних версиях.
+- Стрелочные функции семантически отличаются от нестандартных [Expression Closures](/ru/docs/Web/JavaScript/Reference/Operators/Expression_closures), добавленных в [Firefox 3](/ru/docs/Mozilla/Firefox/Releases/3) (подробности в [Javascript 1.8](/ru/docs/Web/JavaScript/New_in_JavaScript/1.8)); в Expression Closures значение `this` не привязано лексически.
+- До [Firefox 39](/ru/docs/Mozilla/Firefox/Releases/39), перенос строки (`\n`) был ошибочно разрешён после аргументов стрелочной функции. Это было исправлено для соблюдения спецификации ES2015, и код вроде: `() \n => {}` теперь вызывает {{jsxref("SyntaxError")}} в этой и более поздних версиях.
 
-## See also
+## Смотрите также
 
 - ["ES6 In Depth: Arrow functions" on hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)

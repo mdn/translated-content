@@ -1,14 +1,13 @@
 ---
 title: CanvasRenderingContext2D.restore()
 slug: Web/API/CanvasRenderingContext2D/restore
-translation_of: Web/API/CanvasRenderingContext2D/restore
 ---
 
 {{APIRef}}
 
 Метод **`CanvasRenderingContext2D.restore()`** восстанавливает предварительно сохранённое состояние канваса из стека. Если состояние ранее не сохранялось, то метод ничего не делает.
 
-Fore more information about the [drawing state](/ru/docs/Web/API/CanvasRenderingContext2D.save#Drawing_state), see {{domxref("CanvasRenderingContext2D.save()")}}.
+Fore more information about the [drawing state](/ru/docs/Web/API/CanvasRenderingContext2D/save#drawing_state), see {{domxref("CanvasRenderingContext2D.save()")}}.
 
 ## Синтаксис
 
@@ -31,13 +30,13 @@ This example uses the `save()` method to save the default state and `restore()` 
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Save the default state
 ctx.save();
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 
 // Restore the default state
@@ -54,7 +53,7 @@ ctx.fillRect(150, 40, 100, 100);
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

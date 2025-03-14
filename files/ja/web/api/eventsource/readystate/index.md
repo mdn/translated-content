@@ -20,11 +20,12 @@ l10n:
 ## 例
 
 ```js
-const evtSource = new EventSource('sse.php');
+const evtSource = new EventSource("sse.php");
 console.log(evtSource.readyState);
 ```
 
-> **メモ:** 完全な例は GitHub で見られます。 [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/main/server-sent-events) を参照してください。
+> [!NOTE]
+> 完全な例は GitHub で見られます。 [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/main/server-sent-events) を参照してください。
 
 ## 仕様書
 

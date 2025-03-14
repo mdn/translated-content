@@ -1,50 +1,49 @@
 ---
-title: 整型
+title: <integer>
 slug: Web/CSS/integer
+l10n:
+  sourceCommit: b4862a953a358b2f08a181e3a4051433cfa86ca0
 ---
 
 {{CSSRef}}
 
-The **`<integer>`** [CSS](/zh-CN/docs/Web/CSS) [data type](/zh-CN/docs/Web/CSS/CSS_Types) is a special type of {{cssxref("number")}} that represents a whole number, whether positive or negative. Integers can be used in numerous CSS properties, such as {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, and {{cssxref("z-index")}}.
-The **`<integer>`** css 数据类型是一种特殊的\<number>类型，它表示一个整数，无论是正数还是负数。整数可以用于许多 css 属性，例如{{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, and {{cssxref("z-index")}}.
+**`<integer>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)是一种特殊的 {{cssxref("number")}} 类型，它表示一个整数。整数可用于许多 CSS 属性和描述符，例如 {{cssxref("column-count")}}、{{cssxref("counter-increment")}}、{{cssxref("grid-column")}}、{{cssxref("grid-row")}}、{{cssxref("z-index")}} 属性和 {{cssxref("@counter-style/range", "range")}} 描述符。
 
 ## 语法
 
-The `<integer>` data type consists of one or several decimal digits, 0 through 9 inclusive, optionally preceded by a single `+` or `-` sign. There is no unit associated with integers.
-\<integer>数据类型由一个或多个十进制数字组成，包括 0 到 9，可以选择前面加一个 + 或 - 号。没有与整数关联的单位。
+`<integer>` 数据类型由一个或多个十进制数字（0 至 9 包括在内）组成，可选择在数字前添加一个 `+` 或 `-` 符号。整数没有相关联的单位。
 
-> **备注：** There is no official range of valid `<integer>` values. Opera 12.1 supports values up to 215-1, IE up to 220-1, and other browsers even higher. During the CSS3 Values cycle there was a lot of discussion about setting a minimum range to support: the latest decision, [in April 2012 during the LC phase](http://lists.w3.org/Archives/Public/www-style/2012Apr/0633.html), was \[-227-1; 227-1], but other values like 224-1 and 230-1 [were also proposed](http://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html). However, the latest spec doesn't specify a range anymore.
-> 注意：没有有效的\<integer>值的正式范围。Opera12.1 支持高达 215-1 的值，IE 高达 220-1 的值，其他浏览器支持更高的值。在 CSS3 值周期中，有很多关于设置最小支持范围的讨论：2012 年 4 月在 LC 阶段的最新决定是 \[-227-1; 227-1],，但也提出了 224-1 and 230 等其他值。但是，最新的规范不再指定范围。
+> [!NOTE]
+> 有效的 `<integer>` 值没有正式的范围，规范也没有指定范围。
 
-## Interpolation
+## 插值
 
-When animated, values of the `<integer>` data type are interpolated using discrete, whole steps. The calculation is done as if they were real, floating-point numbers; the discrete value is obtained using the [floor function](http://en.wikipedia.org/wiki/Floor_function). The speed of the interpolation is determined by the [timing function](/zh-CN/docs/Web/CSS/single-transition-timing-function) associated with the animation.
-设置动画时，\<integer>数据类型的值将使用离散的完整步骤进行插值。计算过程就像是实数，浮点数一样；离散值是使用 floor 函数得到的。插值的速度由与动画相关联的定时函数确定。
+当使用动画时，{{Glossary("interpolation", "插值法")}}会使用离散的整数步来计算 `<integer>` 数据类型的值。计算方法与实数、浮点数相同；离散值使用 [floor 函数](https://zh.wikipedia.org/wiki/取整函数)获取。插值的速度由与动画关联的[缓动函数](/zh-CN/docs/Web/CSS/easing-function)决定。
 
 ## 示例
 
-### 合法整型
+### 有效的 integer 值
 
-```
-12          Positive integer (without a leading + sign)
-+123        Positive integer (with a leading + sign)
--456        Negative integer
-0           Zero
-+0          Zero, with a leading +
--0          Zero, with a leading -
+```plain example-good
+12          正整数（没有前导 + 号）
++123        正整数（包含前导 + 号）
+-456        负整数
+0           零
++0          有前导 + 号的零
+-0          有前导 - 号的零
 ```
 
-### 非法整型
+### 无效的 integer 值
 
 ```plain example-bad
-12.0        This is a <number>, not an <integer>, though it represents an integer.
-12.         Decimal points are not allowed.
-+---12      Only one leading +/- is allowed.
-ten         Letters are not allowed.
-_5          Special characters are not allowed.
-\35         Escaped Unicode characters are not allowed, even if they are an integer (here: 5).
-\4E94       Non-arabic numerals are not allowed, even when escaped (here: the Japanese 5, 五).
-3e4         Scientific notation is not allowed.
+12.0        这是 <number> 值，而不是 <integer> 值，即使它代表了一个整数。
+12.         不允许使用小数点。
++---12      只允许一个前导 +/-。
+ten         不允许使用字母。
+_5          不允许使用特殊字符。
+\35         不允许使用转义 Unicode 字符，即使它们是整数（此处为 5）。
+\4E94       不允许使用非阿拉伯数字，即使已转义（此处为日语的 5，五）。
+3e4         不允许使用科学计数法。
 ```
 
 ## 规范
@@ -55,6 +54,6 @@ _5          Special characters are not allowed.
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - {{cssxref("&lt;number&gt;")}}

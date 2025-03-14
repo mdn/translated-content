@@ -1,13 +1,6 @@
 ---
 title: Math.sign()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sign
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sign
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/sign
 ---
 
 {{JSRef}}
@@ -25,7 +18,7 @@ Math.sign(x)
 - `x`
   - : Un número.
 
-### Valor de retorno.
+### Valor de retorno
 
 Un número representando el signo del argumento dado. Si el argumento es un número positivo, negativo, cero positivo, o cero negativo, la función retornará `1`, `-1`, `0` or `-0` respectivamente. De lo contrario, retorna {{jsxref("NaN")}}.
 
@@ -42,21 +35,21 @@ El argumento pasado a esta función será convertido a tipo `x` implicitamente.
 ### Usando `Math.sign()`
 
 ```js
-Math.sign(3);     //  1
-Math.sign(-3);    // -1
-Math.sign('-3');  // -1
-Math.sign(0);     //  0
-Math.sign(-0);    // -0
-Math.sign(NaN);   // NaN
-Math.sign('foo'); // NaN
-Math.sign();      // NaN
+Math.sign(3); //  1
+Math.sign(-3); // -1
+Math.sign("-3"); // -1
+Math.sign(0); //  0
+Math.sign(-0); // -0
+Math.sign(NaN); // NaN
+Math.sign("foo"); // NaN
+Math.sign(); // NaN
 ```
 
 ## Polyfill
 
 ```js
 if (!Math.sign) {
-  Math.sign = function(x) {
+  Math.sign = function (x) {
     // Si x es NaN, el resultado es NaN.
     // Si x es -0, el resultado es -0.
     // Si x es +0, el resultado es +0.
@@ -77,7 +70,7 @@ if (!Math.sign) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.sign")}}
+{{Compat}}
 
 ## Ver También
 

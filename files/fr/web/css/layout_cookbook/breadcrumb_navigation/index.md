@@ -1,11 +1,6 @@
 ---
 title: Fil d'Ariane (breadcrumb)
 slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
-tags:
-  - CSS
-  - Navigation
-translation_of: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
-original_slug: Web/CSS/Layout_cookbook/Navigation_Breadcrumb
 ---
 
 {{CSSRef}}
@@ -34,12 +29,10 @@ On utilise ici les attributs `aria-label` et `aria-current` afin d'aider les uti
 
 ## Compatibilité des navigateurs
 
-### Boîtes flexibles
-
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Les boîtes flexibles CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [Les boîtes flexibles CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout)
 - [Fournir un fil d'Ariane](https://www.w3.org/TR/WCAG20-TECHS/G65.html)
 - [Utiliser l'attribut `aria-current`](https://tink.uk/using-the-aria-current-attribute/)

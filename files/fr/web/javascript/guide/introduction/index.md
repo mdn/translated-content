@@ -1,7 +1,6 @@
 ---
 title: Introduction
 slug: Web/JavaScript/Guide/Introduction
-translation_of: Web/JavaScript/Guide/Introduction
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
@@ -52,7 +51,7 @@ Java est un langage de programmation utilisant les classes, conçus pour être e
 | Orienté objet. Aucune distinction entre les types et les objets. L'héritage est basé sur un mécanisme utilisant les prototypes et les propriétés et méthodes peuvent être ajoutées dynamiquement à n'importe quel objet. | Orienté objet, utilisant un modèle de classes. Les objets sont divisés entre les classes et les instances, l'héritage s'effectue via la hiérarchie des classes. Les classes et les instances ne peuvent pas recevoir de nouvelles propriétés ou méthodes dynamiquement. |
 | Le type de données des variables n'est pas déclaré (typage dynamique).                                                                                                                                                   | Le type de données des variables doit être déclaré (typage statique).                                                                                                                                                                                                   |
 
-Pour plus d'informations sur les différences entre JavaScript et Java, voir le chapitre sur [les détails du modèle objet JavaScript](/fr/docs/Web/JavaScript/Guide/Details_of_the_Object_Model).
+Pour plus d'informations sur les différences entre JavaScript et Java, voir le chapitre sur [les détails du modèle objet JavaScript](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 ## JavaScript et la spécification ECMAScript
 
@@ -78,7 +77,7 @@ L'outil Web Console intégré à Firefox est utile pour expérimenter avec JavaS
 
 ### La console web
 
-La [console web](/fr/docs/Tools/Web_Console) affiche des informations sur la page actuellement chargée, elle dispose également d'une [ligne de commande](/fr/docs/Tools/Web_Console) qui peut être utilisée pour exécuter des expressions JavaScript dans la page actuelle.
+La [console web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) affiche des informations sur la page actuellement chargée, elle dispose également d'une [ligne de commande](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) qui peut être utilisée pour exécuter des expressions JavaScript dans la page actuelle.
 
 Pour ouvrir la console, dans le menu, sélectionner « Développement » puis « Console web » (en passant par la barre d'outils, ce sera « Outils » puis « Développement web » puis « Console web »). Avec le clavier, on pourra utiliser la combinaison de touche <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd> sur Windows et Linux ou <kbd>Cmd</kbd>-<kbd>Option</kbd>-<kbd>K</kbd> sur Mac. Une fois lancée, la console apparaît en base de la fenêtre du navigateur. En bas de la zone occupée par la console, il y a une ligne de commande qui peut être utilisée pour saisir des instructions JavaScript, le résultat de ces instructions sera affiché dans le panneau au-dessus&nbsp;:
 
@@ -88,14 +87,14 @@ La console fonctionne exactement de la même manière que `eval`&nbsp;: la derni
 
 ```js
 function saluer(votreNom) {
-  alert("Hello " + votreNom)
+  alert("Hello " + votreNom);
 }
-console.log(eval('3 + 5'))
+console.log(eval("3 + 5"));
 ```
 
 ### Le mode éditeur multiligne
 
-La console est pratique quand il s'agit d'exécuter des instructions ligne par ligne. Cependant dès qu'on souhaite exécuter un script plus complexe de plusieurs lignes, la console devient vite limitée. Pour ça, on pourra utiliser [le mode éditeur multiligne](/fr/docs/Tools/Web_Console/The_command_line_interpreter#le_mode_%C3%A9diteur_multiligne).
+La console est pratique quand il s'agit d'exécuter des instructions ligne par ligne. Cependant dès qu'on souhaite exécuter un script plus complexe de plusieurs lignes, la console devient vite limitée. Pour ça, on pourra utiliser [le mode éditeur multiligne](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#le_mode_éditeur_multiligne).
 
 ### Coucou monde (_hello world_)
 

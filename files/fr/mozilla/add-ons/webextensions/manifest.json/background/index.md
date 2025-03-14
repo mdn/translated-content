@@ -1,12 +1,6 @@
 ---
 title: background
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
-original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/arriere-plan
 ---
 
 {{AddonSidebar}}
@@ -38,9 +32,9 @@ Utilisez la clé background pour inclure un ou plusieurs scripts d'arrière-plan
 
 Les scripts d'arrière-plan sont l'endroit pour placer le code qui doit maintenir l'état à long terme, ou effectuer des opérations à long terme, indépendamment de la durée de vie de toutes les pages Web ou les fenêtres du navigateur.
 
-Les scripts d'arrière-plan sont chargés dès que l'extension est chargée et restent chargés jusqu'à ce que l'extension soit désactivée ou désinstallée. Vous pouvez utiliser n'importe laquelle des WebExtension APIs dans le script, tant que vous avez demandé les [permissions](/fr/Add-ons/WebExtensions/manifest.json/permissions) nécessaires.
+Les scripts d'arrière-plan sont chargés dès que l'extension est chargée et restent chargés jusqu'à ce que l'extension soit désactivée ou désinstallée. Vous pouvez utiliser n'importe laquelle des WebExtension APIs dans le script, tant que vous avez demandé les [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) nécessaires.
 
-Voir la section "Pages arrière-plan" dans [l'anatomie d'une WebExtension](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_pages) pour plus de détails.
+Voir la section "Pages arrière-plan" dans [l'anatomie d'une WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_pages) pour plus de détails.
 
 La clé background est un objet qui peut avoir l'une des deux propriétés suivantes, toutes deux facultatives :
 
@@ -128,6 +122,6 @@ Chargez deux scripts de fond.
 
 Chargez une page d'arrière-plan personnalisée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.background", 10)}}
+{{Compat}}

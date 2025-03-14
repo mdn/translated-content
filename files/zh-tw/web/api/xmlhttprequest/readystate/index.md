@@ -26,23 +26,24 @@ slug: Web/API/XMLHttpRequest/readyState
 - DONE
   - : 請求操作已完成。這意味著資料傳輸可能已成功完成或是已失敗。
 
-> **備註：** 這些狀態名稱在 Internet Explorer 中略有不同。其中 `UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING` 和 `DONE` 變成了 `READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) 和`READYSTATE_COMPLETE` (4)。
+> [!NOTE]
+> 這些狀態名稱在 Internet Explorer 中略有不同。其中 `UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING` 和 `DONE` 變成了 `READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) 和`READYSTATE_COMPLETE` (4)。
 
 ## 範例
 
 ```js
 var xhr = new XMLHttpRequest();
-console.log('UNSENT', xhr.readyState); // readyState will be 0
+console.log("UNSENT", xhr.readyState); // readyState will be 0
 
-xhr.open('GET', '/api', true);
-console.log('OPENED', xhr.readyState); // readyState will be 1
+xhr.open("GET", "/api", true);
+console.log("OPENED", xhr.readyState); // readyState will be 1
 
 xhr.onprogress = function () {
-    console.log('LOADING', xhr.readyState); // readyState will be 3
+  console.log("LOADING", xhr.readyState); // readyState will be 3
 };
 
 xhr.onload = function () {
-    console.log('DONE', xhr.readyState); // readyState will be 4
+  console.log("DONE", xhr.readyState); // readyState will be 4
 };
 
 xhr.send(null);

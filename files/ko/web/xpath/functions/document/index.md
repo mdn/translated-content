@@ -1,11 +1,9 @@
 ---
 title: document
 slug: Web/XPath/Functions/document
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/document
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 `document` 함수는 하나 또는 여러 외부 문서에서 노드 집합을 찾고 결과 노드 집합을 반환합니다.
 
@@ -37,7 +35,7 @@ document(URI [,node-set] )
 
 ### 정의
 
-[XSLT 1.0 12.1](http://www.w3.org/TR/xslt#function-document)
+[XSLT 1.0 12.1](https://www.w3.org/TR/xslt#function-document)
 
 ### Gecko 지원
 

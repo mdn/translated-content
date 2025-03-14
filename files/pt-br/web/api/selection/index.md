@@ -1,7 +1,6 @@
 ---
 title: Seleção
 slug: Web/API/Selection
-original_slug: Web/API/Seleção
 ---
 
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
@@ -82,7 +81,7 @@ Normalmente é apenas um intervalo, acessado da seguinte forma:
 
 ```js
 var selObj = window.getSelection();
-var range  = selObj.getRangeAt(0);
+var range = selObj.getRangeAt(0);
 ```
 
 - `selObj` é um objeto selection
@@ -94,7 +93,7 @@ Como consta nas [Especificações da API de seleção](https://www.w3.org/TR/sel
 
 Seleção e foco de input (indicado por {{DOMxRef("Document.activeElement")}}) tem uma relação complexa, que depende do navegador. Para um código compatível com vários navegadores, o melhor é manter os códigos separados.
 
-O Safari e o Chrome (ao contrário do Firefox) historicamente foca no elemento contendo a seleção quando a seleção é modificada programaticamente, mas isto pode mudar no futuro (veja [W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) e {{WebKitBug("38696")}}).
+O Safari e o Chrome (ao contrário do Firefox) historicamente foca no elemento contendo a seleção quando a seleção é modificada programaticamente, mas isto pode mudar no futuro (veja [W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) e [WebKit bug 38696](https://webkit.org/b/38696)).
 
 ### Comportamento da API de Seleção em termos de edição e alterações de foco do host
 
@@ -102,7 +101,8 @@ A API de Seleção tem um comportamento comum (i.e. compartilhado entre navegado
 
 Os comportamentos são que um elemento editado recebe o foco se anteriormente a seleção estiver fora dele, então um método da API de seleção é executado e causa uma nova seleção que será feita em um único intervalo dentro do elemento sendo editado. O foco então é movido para o final do elemento.
 
-> **Nota:** Os métodos da API de seleção, move o foco apenas para o elemento sendo editado, não para outro elemento que pode receber o foco (e.g. {{HTMLElement("a")}}).
+> [!NOTE]
+> Os métodos da API de seleção, move o foco apenas para o elemento sendo editado, não para outro elemento que pode receber o foco (e.g. {{HTMLElement("a")}}).
 
 O comportamento acima é aplicado para as seleções feitas usando os seguintes métodos:
 
@@ -133,7 +133,7 @@ Outras palavras chaves usadas nesta seção.
 - anchor
   - : O anchor de uma seleção é o ponto inicial da seleção. Quando a seleção é feita com um mouse, é onde o botão do mouse é inicialmente pressionado. Quando o usuário altera a seleção usando o mouse ou teclado, o anchor não move.
 - Elemento editável
-  - : Um elemento editável — i.e. um elemento HTML com o atributo {{htmlattrxref("contenteditable")}} definido, ou o HTML filho de um documento estiver com o {{DOMxRef("Document.designMode", "designMode")}} habilitado.
+  - : Um elemento editável — i.e. um elemento HTML com o atributo [`contenteditable`](/pt-BR/docs/Web/HTML/Global_attributes#contenteditable) definido, ou o HTML filho de um documento estiver com o {{DOMxRef("Document.designMode", "designMode")}} habilitado.
 - foco de uma seleção
   - : O foco da seleção é o ponto final da seleção. Quando feita a seleção com um mouse, o focus é onde o botão do mouse foi solto. Quando o usuário muda a seleção usando o mouse ou teclado, o focus é o final da seleção que move. **Nota:** Não é o mesmo que o elemento selecionado do documento, como retornado em {{DOMxRef("document.activeElement")}}.
 - intervalo
@@ -141,24 +141,15 @@ Outras palavras chaves usadas nesta seção.
 
 ## Especificações
 
-| Specification                                                                            | Status                               | Comment                                                                                                                              |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName("Selection API", "#selection-interface", "Seleção")}} | {{Spec2("Selection API")}} | A especificação da API de Seleção é baseada na especificação da API de edição HTML e focada na funcionalidade relacionada à seleção. |
-| {{SpecName("HTML Editing", "#selection", "Seleção")}}                 | {{Spec2("HTML Editing")}}     | Definição incial (antiga).                                                                                                           |
+{{Specifications}}
 
-## Compatibilidade de navegadores
+## Compatibilidade com navegadores
 
-{{Compat("api.Selection")}}
+{{Compat}}
 
 ## Veja também
 
 - {{DOMxRef("Window.getSelection")}}, {{DOMxRef("Document.getSelection")}}, {{DOMxRef("Range")}}
-- Selection-related events: {{Event("selectionchange")}} and {{Event("selectstart")}}
+- Selection-related events: [`selectionchange`](/pt-BR/docs/Web/API/HTMLInputElement/selectionchange_event) and [`selectstart`](/pt-BR/docs/Web/API/Node/selectstart_event)
 - HTML inputs provide simpler helper APIs for working with selection (see {{DOMxRef("HTMLInputElement.setSelectionRange()")}})
 - {{DOMxRef("Document.activeElement")}}, {{DOMxRef("HTMLElement.focus()")}}, and {{DOMxRef("HTMLElement.blur()")}}
-
-## Notas da Gecko
-
-- Gecko/Firefox provide additional features, available to chrome (internal and add-on) code only. These are defined in `nsISelectionPrivate`.
-- Mozilla source code: [`Selection.webidl`](https://searchfox.org/mozilla-central/source/dom/webidl/Selection.webidl)
-- {{DOMxRef("Selection.selectionLanguageChange()")}}{{Obsolete_Inline("gecko29")}} used to be exposed to the web content until Firefox 29

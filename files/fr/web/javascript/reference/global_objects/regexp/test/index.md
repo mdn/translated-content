@@ -1,26 +1,40 @@
 ---
 title: RegExp.prototype.test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/test
 ---
 
 {{JSRef}}
 
 La méthode **`test()`** vérifie s'il y a une correspondance entre un texte et une expression rationnelle. Elle retourne `true` en cas de succès et `false` dans le cas contraire.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-test.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.test", "taller")}}
+
+```js interactive-example
+const str = "table football";
+
+const regex = new RegExp("foo*");
+const globalRegex = new RegExp("foo*", "g");
+
+console.log(regex.test(str));
+// Expected output: true
+
+console.log(globalRegex.lastIndex);
+// Expected output: 0
+
+console.log(globalRegex.test(str));
+// Expected output: true
+
+console.log(globalRegex.lastIndex);
+// Expected output: 9
+
+console.log(globalRegex.test(str));
+// Expected output: false
+```
 
 ## Syntaxe
 
 ```js
-regexObj.test(chaîne)
+regexObj.test(chaîne);
 ```
 
 ### Paramètres
@@ -51,18 +65,18 @@ console.log(resultat); // true
 L'exemple ci-dessous affiche un message qui dépend du succès du test :
 
 ```js
-function testinput(regex, chaine){
-    var midstring;
-    if (regex.test(chaine)) {
-        midstring = " contient ";
-    } else {
-        midstring = " ne contient pas ";
-    }
-    console.log(str + midstring + re.source);
+function testinput(regex, chaine) {
+  var midstring;
+  if (regex.test(chaine)) {
+    midstring = " contient ";
+  } else {
+    midstring = " ne contient pas ";
+  }
+  console.log(str + midstring + re.source);
 }
 
 testinput(/^coucou/, "coucou le monde"); // coucou le monde contient coucou
-testinput(/^coucou/, "salut le monde") // salut le monde ne contient pas coucou
+testinput(/^coucou/, "salut le monde"); // salut le monde ne contient pas coucou
 ```
 
 ### Utiliser `test()` avec le marqueur global (`/g`)
@@ -100,5 +114,5 @@ console.log(compterMots("Ah que coucou Bob")); // 4
 
 ## Voir aussi
 
-- Le chapitre sur [les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Expressions_régulières) du [guide JavaScript](/fr/docs/Web/JavaScript/Guide)
+- Le chapitre sur [les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) du [guide JavaScript](/fr/docs/Web/JavaScript/Guide)
 - {{jsxref("RegExp")}}

@@ -1,63 +1,53 @@
 ---
-title: RegExp.$1-$9
+title: RegExp.$1, …, RegExp.$9
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/n
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/n
+l10n:
+  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{JSRef}} {{Deprecated_Header}}
 
-비표준 **$1, $2, $3, $4, $5, $6, $7, $8, $9** 속성들은 정적이며, 괄호로 묶인 하위 문자열 match들을 포함하는 정규 표현식의 읽기 전용 속성들입니다.
+> [!NOTE]
+> 마지막 일치 상태를 전역적으로 노출하는 모든 `RegExp` 정적 속성은 더 이상 사용되지 않습니다. 자세한 내용은 [더 이상 사용되지 않는 RegExp 기능](/ko/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)을 참고하세요.
 
-## Syntax
+**`RegExp.$1, …, RegExp.$9`** 정적 접근자 속성은 괄호 안의 하위 문자열 일치 항목을 반환합니다.
 
-```js
-RegExp.$1
-RegExp.$2
-RegExp.$3
-RegExp.$4
-RegExp.$5
-RegExp.$6
-RegExp.$7
-RegExp.$8
-RegExp.$9
-```
+## 설명
 
-## Description
+`$1`–`$9`는 {{jsxref("RegExp")}}의 정적 속성이기 때문에, 생성한 `RegExp` 객체의 속성으로 사용하는 것보다는 항상`RegExp.$1`, `RegExp.$2` 등으로 사용해야 합니다.
 
-$1, ..., $9 properties are static, they are not a property of an individual regular expression object. Instead, you always use them as `RegExp.$1`, ..., `RegExp.$9`.
+`$1, …, $9`의 값은 `RegExp`(`RegExp` 하위 클래스 제외) 인스턴스가 일치에 성공할 때마다 갱신됩니다. 일치하는 항목이 없거나 마지막 일치가 대응되는 캡쳐 그룹이 없으면 각각의 속성은 빈 문자열입니다. 각각의 속성의 설정 접근자는 `undefined`이므로 이 속성을 직접 변경할 수 없습니다.
 
-The values of these properties are read-only and modified whenever successful matches are made.
+괄호로 묶을 수 있는 하위 문자열의 개수는 제한이 없지만 `RegExp` 객체는 처음 9개만 보유할 수 있습니다. 반환된 배열의 인덱스를 통해 괄호로 묶인 모든 하위 문자열에 접근할 수 있습니다.
 
-The number of possible parenthesized substrings is unlimited, but the `RegExp` object can only hold the first nine. You can access all parenthesized substrings through the returned array's indexes.
+`$1, …, $9`는 {{jsxref("String.prototype.replace()")}}의 대체 문자열에도 사용할 수 있지만, 이는 `RegExp.$n` 레거시 속성과는 관련이 없습니다.
 
-These properties can be used in the replacement text for the {{jsxref("String.replace")}} method. When used this way, do not prepend them with `RegExp`. The example below illustrates this. When parentheses are not included in the regular expression, the script interprets `$n`'s literally (where `n` is a positive integer).
+## 예제
 
-## Examples
+### RegExp.prototype.test()와 함께 $n 사용하기
 
-### Using `$n` with `String.replace`
-
-아래의 script는 first last 포맷의 이름과 매치하기 위해 {{jsxref("String")}} 인스턴스의 {{jsxref("String.prototype.replace()", "replace()")}} 메소드를 사용하고 그것을 last, first 포맷으로 출력한다. 대체 텍스트에서, 이 script는 정규 표현식 패턴에서 매칭되는 괄호들에 해당하는 결과들을 나타내는 `$1` 과 `$2` 를 사용한다.
+아래 스크립트는 일반적인 문자열 내에서 숫자를 잡아내기 위해 {{jsxref("RegExp.prototype.test()")}} 메서드를 사용합니다.
 
 ```js
-var re = /(\w+)\s(\w+)/;
-var str = 'John Smith';
-str.replace(re, '$2, $1'); // "Smith, John"
-RegExp.$1; // "John"
-RegExp.$2; // "Smith"
+const str = "Test 24";
+const number = /(\d+)/.test(str) ? RegExp.$1 : "0";
+number; // "24"
 ```
 
-## Specifications
+`re.test(str)` 호출과 `RegExp.$n` 속성 사이에 다른 정규식을 사용하는 작업은 부작용이 있을 수 있습니다. 이러한 특수 속성 접근은 즉시 수행해야 하며, 그렇지 않으면 예상치 못한 결과가 발생할 수 있다는 점을 주의하시기 바랍니다.
 
-Non-standard. Not part of any current specification.
+## 명세서
 
-## Browser compatibility
+{{Specifications}}
+
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
-- {{non-standard_inline}} {{jsxref("RegExp.input", "RegExp.input ($_)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
+- {{jsxref("RegExp/input", "RegExp.input ($_)")}}
+- {{jsxref("RegExp/lastMatch", "RegExp.lastMatch ($&amp;)")}}
+- {{jsxref("RegExp/lastParen", "RegExp.lastParen ($+)")}}
+- {{jsxref("RegExp/leftContext", "RegExp.leftContext ($`)")}}
+- {{jsxref("RegExp/rightContext", "RegExp.rightContext ($')")}}

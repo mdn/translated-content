@@ -1,20 +1,34 @@
 ---
 title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
-original_slug: Web/JavaScript/Reference/Global_Objects/Array/contains
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Sumário
 
 O método `includes()` determina se um array contém um determinado elemento, retornando `true` ou `false` apropriadamente.
 
-{{EmbedInteractiveExample("pages/js/array-includes.html")}}
+{{InteractiveExample("JavaScript Demo: Array.includes()")}}
 
-**Sintaxe**
+```js interactive-example
+const array1 = [1, 2, 3];
 
+console.log(array1.includes(2));
+// Expected output: true
+
+const pets = ["cat", "dog", "bat"];
+
+console.log(pets.includes("cat"));
+// Expected output: true
+
+console.log(pets.includes("at"));
+// Expected output: false
 ```
+
+## Sintaxe
+
+```js-nolint
 array.includes(searchElement[, fromIndex])
 ```
 
@@ -28,9 +42,9 @@ array.includes(searchElement[, fromIndex])
 ## Exemplos
 
 ```js
-[1, 2, 3].includes(2);     // true
-[1, 2, 3].includes(4);     // false
-[1, 2, 3].includes(3, 3);  // false
+[1, 2, 3].includes(2); // true
+[1, 2, 3].includes(4); // false
+[1, 2, 3].includes(3, 3); // false
 [1, 2, 3].includes(3, -1); // true
 [1, 2, NaN].includes(NaN); // true
 ```
@@ -40,9 +54,8 @@ array.includes(searchElement[, fromIndex])
 ```js
 // https://tc39.github.io/ecma262/#sec-array.prototype.includes
 if (!Array.prototype.includes) {
-  Object.defineProperty(Array.prototype, 'includes', {
-    value: function(searchElement, fromIndex) {
-
+  Object.defineProperty(Array.prototype, "includes", {
+    value: function (searchElement, fromIndex) {
       // 1. Let O be ? ToObject(this value).
       if (this == null) {
         throw new TypeError('"this" is null or not defined');
@@ -83,7 +96,7 @@ if (!Array.prototype.includes) {
 
       // 8. Return false
       return false;
-    }
+    },
   });
 }
 ```
@@ -94,7 +107,7 @@ Proposta ES7: <https://github.com/domenic/Array.prototype.contains/blob/master/s
 
 ## Compatibilidade
 
-{{Compat("javascript.builtins.Array.includes")}}
+{{Compat}}
 
 ## Veja Também
 

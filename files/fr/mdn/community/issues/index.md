@@ -1,7 +1,6 @@
 ---
 title: Bonnes pratiques GitHub pour MDN
 slug: MDN/Community/Issues
-original_slug: MDN/Contribute/GitHub_best_practices
 l10n:
   sourceCommit: ca4de15aa8391a1e3fed7c651d5ee941051cb3fe
 ---
@@ -10,7 +9,8 @@ l10n:
 
 [Les tickets GitHub (ou <i lang="en">issues</i> en anglais)](https://docs.github.com/en/github/managing-your-work-on-github/about-issues) sont utilisés afin de tracer l'ensemble des tâches à réaliser et qui ont un résultat attendu clair. Si vous avez trouvé un <i lang="en">bug</i> avec le contenu ou la plateforme, regardez si ce problème n'a pas déjà été remonté sur [le dépôt correspondant](/fr/docs/MDN/Community/Contributing/Our_repositories). Si ça n'est pas le cas, n'hésitez pas à rédiger un nouveau ticket en utilisant le modèle disponible sur le début.
 
-> **Note :** Si un ticket a l'étiquette `triage`, cela signifie qu'elle n'a pas encore été revue et qu'il n'est pas nécessaire de travailler dessus.
+> [!NOTE]
+> Si un ticket a l'étiquette `triage`, cela signifie qu'elle n'a pas encore été revue et qu'il n'est pas nécessaire de travailler dessus.
 
 Si le ticket que vous renseignez ne décrit pas un problème, assurez-vous qu'il contient une liste de tâches claires et réalisable ou un objectif concret. Par exemple&nbsp;:
 
@@ -23,7 +23,8 @@ We should no longer be using the `\{{ warning }}` macro in our documentation.
 
 We should therefore replace all instances of the `\{{ warning }}` macro with the following:
 
-> **Warning:** Main subject line
+> [!WARNING]
+> Main subject line
 >
 > Details of the warning.
 > It can have multiple paragraphs.

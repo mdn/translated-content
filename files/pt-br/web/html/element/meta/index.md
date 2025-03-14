@@ -16,7 +16,7 @@ O elemento **HTML `<meta>` **define qualquer informação de metadados que não 
       </th>
       <td>
         Conteúdo de metadado. Se o
-        {{htmlattrxref("itemprop", "meta")}} atributo estiver
+        <a href="/pt-BR/docs/Web/HTML/Element/meta#itemprop"><code>itemprop</code></a> atributo estiver
         presente:
         <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >flow content</a
@@ -42,7 +42,7 @@ O elemento **HTML `<meta>` **define qualquer informação de metadados que não 
       <td>
         <code>&#x3C;meta charset></code>, <code>&#x3C;meta http-equiv></code>:
         um elemento {{HTMLElement("head")}}. Se o
-        {{htmlattrxref("http-equiv", "meta")}} não for uma
+        <a href="/pt-BR/docs/Web/HTML/Element/meta#http-equiv"><code>http-equiv</code></a> não for uma
         declaração de codificação, ele pode estar dentro de um elemento
         {{HTMLElement("noscript")}}, dentro de um elemento
         {{HTMLElement("head")}}.
@@ -63,9 +63,10 @@ O elemento **HTML `<meta>` **define qualquer informação de metadados que não 
 
 Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-> **Note:** **Nota:** o atributo global {{htmlattrxref("name", "meta")}} tem um significado específico para o elemento {{HTMLElement("meta")}}, e o atributo {{htmlattrxref("itemprop", "meta")}} não deve ser definido no mesmo elemento`<meta>` que tem algum desses atributos existentes: {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} ou {{htmlattrxref("charset", "meta")}}.
+> [!NOTE]
+> o atributo global [`name`](#name) tem um significado específico para o elemento {{HTMLElement("meta")}}, e o atributo [`itemprop`](#itemprop) não deve ser definido no mesmo elemento`<meta>` que tem algum desses atributos existentes: [`name`](#name), [`http-equiv`](#http-equiv) ou [`charset`](#charset).
 
-- {{htmlattrdef("charset")}}
+- `charset`
 
   - : Este atributo define a codificação de caracteres usada na página. Pode ser substituído localmente usando o atributo _lang_ em qualquer elemento. Esse atributo é literalmente uma amarra e deve ser um dos _MIME names_ preferidos para uma codificação de caracteres como definido pela IANA ([defined by the IANA](https://www.iana.org/assignments/character-sets)). Embora o padrão não solicite uma codificação específica, ele dá algumas sugestões:
 
@@ -75,60 +76,71 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     - Autores não devem usar CESU-8, UTF-7, BOCU-1 e SCSU, also falling in that category and not intended to be used on the web. Cross-scripting attacks with some of these encodings have been documented.
     - Autores não devem usar UTF-32 pois nem todos algorítimos de codificação HTML5 conseguem distingui-lo do UTF-16.
 
-    > **Note:** **Notas:**- O conjunto de caracteres declarado deve corresponder ao da página. Não há motivo válido para declarar um conjunto de caracteres imprecisos.
+    > [!NOTE]
     >
+    > >
+    >
+    > - O conjunto de caracteres declarado deve corresponder ao da página. Não há motivo válido para declarar um conjunto de caracteres imprecisos.
     > - Esse elemento {{HTMLElement ("meta")}} deve estar dentro do elemento {{HTMLElement ("head")}} e dentro dos primeiros 1024 bytes da página, pois alguns navegadores só olham para esses primeiros bytes antes de escolher um caractere definido para a página.
     > - Esse elemento {{HTMLElement ("meta")}} é apenas uma parte do algoritmo para determinar o conjunto de caracteres de uma página que os navegadores aplicam. O cabeçalho HTTP Content-Type e quaisquer elementos da BOM têm precedência sobre esse elemento.
     > - É uma boa prática, e altamente recomendável, definir o conjunto de caracteres usando este atributo. Se nenhum conjunto de caracteres estiver definido para uma página, várias técnicas de scripts cruzados poderão prejudicar o usuário da página, como a técnica de cross-scripting de fallback UTF-7. Sempre definindo esta meta irá proteger contra esses riscos.
-    > - Esse elemento {{HTMLElement("meta")}} é um sinônimo para o pre-HTML5 `<meta http-equiv="Content-Type" content="text/html; charset=IANAcharset">` onde o atributo `IANAcharset` corresponde ao valor equivalente de {{htmlattrxref("charset", "meta")}}. Essa sintaxe ainda é permitida, embora obsoleta e não mais recomendada.
+    > - Esse elemento {{HTMLElement("meta")}} é um sinônimo para o pre-HTML5 `<meta http-equiv="Content-Type" content="text/html; charset=IANAcharset">` onde o atributo `IANAcharset` corresponde ao valor equivalente de [`charset`](#charset). Essa sintaxe ainda é permitida, embora obsoleta e não mais recomendada.
 
-- {{htmlattrdef("content")}}
-  - : Esse atributo fornece o valor associado ao atributo {{htmlattrxref("http-equiv", "meta")}} ou {{htmlattrxref("name", "meta")}}, dependendo do contexto.
-- {{htmlattrdef("http-equiv")}}
+- `content`
+  - : Esse atributo fornece o valor associado ao atributo [`http-equiv`](#http-equiv) ou [`name`](#name), dependendo do contexto.
+- `http-equiv`
 
-  - : Este enumerado atributo define a pragma isso pode alterar o comportamento de servers e user-agents. o valor do pragma é definido usando {{htmlattrxref("content", "meta")}} e pode ser um dos seguintes:
+  - : Este enumerado atributo define a pragma isso pode alterar o comportamento de servers e user-agents. o valor do pragma é definido usando [`content`](#content) e pode ser um dos seguintes:
 
-    - `"content-language"` {{obsolete_inline}}
+    - `"content-language"`
 
       - : este pragma define a linguagem default da página
 
-        > **Note:** não use este pragma, ele esta obsoleto. use o atributo global `lang` no {{HTMLElement("html")}} ao invés deste.
+        > [!NOTE]
+        > não use este pragma, ele esta obsoleto. use o atributo global `lang` no {{HTMLElement("html")}} ao invés deste.
 
     - `"Content-Security-Policy"`
-      - : Este valor permite os administradores do web site definam uma [política de conteúdo](/pt-BR/docs/Web/Security/CSP/CSP_policy_directives) para a página atual. Com algumas exceções, politicas de conteúdo envolvem especificar origens de servidores e endpoints de scripts permitidos, isso ajuda na defesa de cross-server scripting attacks.
-    - `"content-type"` {{obsolete_inline}}
+      - : Este valor permite os administradores do web site definam uma [política de conteúdo](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy) para a página atual. Com algumas exceções, politicas de conteúdo envolvem especificar origens de servidores e endpoints de scripts permitidos, isso ajuda na defesa de cross-server scripting attacks.
+    - `"content-type"`
 
       - : Esse atributo define o [MIME type](/pt-BR/docs/MIME) e o conjunto de caracteres do documento. Isso segue a mesma sintaxe como o HTTP `content-type` entity-header field, mas isto esta dentro de um elemento HTML, a maioria dos valores não é possível. Sendo assim a sintaxe válida para este conteúdo é a literal string '`text/html`' eventualmente seguido por estes caracteres com a seguinte sintaxe: '`; charset=`_`IANAcharset`_' onde `IANAcharset` é o _MIME preferido nome para um conjunto de caracteres como_ [definido pela IANA.](https://www.iana.org/assignments/character-sets)
 
-        > **Note:** **nota de uso:**- Nao use esta pragma ela esta obsoleta. use {{htmlattrxref("charset", "meta")}} atributo {{HTMLElement("meta")}} element instead.
+        > [!NOTE]
         >
+        > >
+        >
+        > - Nao use esta pragma ela esta obsoleta. use [`charset`](#charset) atributo {{HTMLElement("meta")}} element instead.
         > - como o {{HTMLElement("meta")}} pode nao ser usado para mudar o tipo de documento no XHTML, ou em um documento de HTML5 seguindo uma syntax de XHTML, nunca marque MIME type para um XHTML MIME type desta forma. isso sera incoerente.
-        > - somente um documento HTML pode usar o content-type, então a maioria disto é redundante: isso porque esta obsoleto e trocado pelo atributo {{htmlattrxref("charset", "meta")}}.
+        > - somente um documento HTML pode usar o content-type, então a maioria disto é redundante: isso porque esta obsoleto e trocado pelo atributo [`charset`](#charset).
 
     - `"default-style"`
-      - : Este pragma preferencia de stylesheet a ser usado na página. o atributo {{htmlattrxref("content", "meta")}} deve conter o **title** de um {{HTMLElement("link")}} elemento de quem {{htmlattrxref("href", "link")}} atributo link um CSS stylesheet, ou um **title** de um elemento {{HTMLElement("style")}} do qual contem um [CSS](/pt-BR/docs/Web/CSS) stylesheet.
+      - : Este pragma preferencia de stylesheet a ser usado na página. o atributo [`content`](#content) deve conter o **title** de um {{HTMLElement("link")}} elemento de quem [`href`](/pt-BR/docs/Web/HTML/Element/link#href) atributo link um CSS stylesheet, ou um **title** de um elemento {{HTMLElement("style")}} do qual contem um [CSS](/pt-BR/docs/Web/CSS) stylesheet.
     - `"refresh"`
 
       - : este pragma especifica:
 
-        - o numero de segundos até a página ser recarregada, se o atributo {{htmlattrxref("content", "meta")}} contém apenas um número inteiro não negativo;
-        - o número de segundos até a página ser redirecionada para outro lugar, se o atributo {{htmlattrxref("content", "meta")}} contém um inteiro não negativo seguido de uma string '`;url=`' e uma URL válida.
+        - o numero de segundos até a página ser recarregada, se o atributo [`content`](#content) contém apenas um número inteiro não negativo;
+        - o número de segundos até a página ser redirecionada para outro lugar, se o atributo [`content`](#content) contém um inteiro não negativo seguido de uma string '`;url=`' e uma URL válida.
 
-    - `"set-cookie"` {{obsolete_inline}}
+    - `"set-cookie"`
 
       - : este pragma define um [cookie](/pt-BR/docs/cookie) para a página. este conteúdo deve seguir a sintaxe definida em [IETF HTTP Cookie Specification](https://tools.ietf.org/html/draft-ietf-httpstate-cookie-14).
 
-        > **Note:** **Nota:** não use este pragma está obsoleto. Use HTTP header set-cookie instead.
+        > [!NOTE]
+        > não use este pragma está obsoleto. Use HTTP header set-cookie instead.
 
-- {{htmlattrdef("name")}}
+- `name`
 
-  - : Este atributo define o nome do document-level metadata. Isso não deve ser marcado se um dos atributos {{htmlattrxref("itemprop", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} ou {{htmlattrxref("charset", "meta")}} já estiver preparado.
-    este document-level metadata name é associado a um valor, contido pelo atributo {{htmlattrxref("content", "meta")}}. os possíveis valores para o elemento name são, com seu valor associado, guardado via {{htmlattrxref("content", "meta")}} attribute:
+  - : Este atributo define o nome do document-level metadata. Isso não deve ser marcado se um dos atributos [`itemprop`](#itemprop), [`http-equiv`](#http-equiv) ou [`charset`](#charset) já estiver preparado.
+    este document-level metadata name é associado a um valor, contido pelo atributo [`content`](#content). os possíveis valores para o elemento name são, com seu valor associado, guardado via [`content`](#content) attribute:
 
     - `application-name`, define o nome da aplicação que esta rodando na página;
 
-      > **Note:** **Nota:**- Browsers podem usar isso para identificar a aplicação. isso é diferente do elemento {{HTMLElement("title")}}, que geralmente constituí no nome da aplicação, mas também contém informações específicas como o nome do documento ou status;
+      > [!NOTE]
       >
+      > >
+      >
+      > - Browsers podem usar isso para identificar a aplicação. isso é diferente do elemento {{HTMLElement("title")}}, que geralmente constituí no nome da aplicação, mas também contém informações específicas como o nome do documento ou status;
       > - Webpages simples não deveriam definir application-name meta.
 
     - `author`, definindo, em formato livre, o nome do author do documento;
@@ -144,11 +156,13 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
       | `origin-when-crossorigin`    | Envia uma URL completa (sem parâmetros) ao executar uma solicitação de mesma origem, mas envie apenas a origem do documento para outros casos.                                                            |
       | `unsafe-URL`                 | Envia um URL completo (sem parâmetros) ao executar uma solicitação de mesma origem ou origem cruzada.                                                                                                     |
 
-      > **Note:** **Nota:** alguns browsers suportam keywords `always`, `default`, e `never` para referenciar. estes valores estão descontinuados.
+      > [!NOTE]
+      > alguns browsers suportam keywords `always`, `default`, e `never` para referenciar. estes valores estão descontinuados.
 
-      > **Note:** **Nota:** dinamicamente inseridos `<meta name="referrer">` (por document.write ou appendChild) cria um nao-determinismo quando isso vem para enviar referências ou não. Note também quando muitas politicas conflitantes são definidas, o No-referrer politia é aplicada.
+      > [!NOTE]
+      > dinamicamente inseridos `<meta name="referrer">` (por document.write ou appendChild) cria um nao-determinismo quando isso vem para enviar referências ou não. Note também quando muitas politicas conflitantes são definidas, o No-referrer politia é aplicada.
 
-    o atributo também pode ter um valor retirado de uma extensa lista definida em [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtensions). Embora nenhum tenha sido formalmente aceito ainda, alguns nomes comumente usados ​​estão entre as propostas:
+    o atributo também pode ter um valor retirado de uma extensa lista definida em [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtensions). Embora nenhum tenha sido formalmente aceito ainda, alguns nomes comumente usados estão entre as propostas:
 
     - `creator`, definindo, em um formato livre, o nome do criador do documento. Note que também pode ser o nome de uma instituição. se há mais de uma, vários elementos {{HTMLElement("meta")}} podem ser usados;
     - `googlebot`, é um sinônimo de `robots`, mas só é seguido por Googlebot, o indexador crawler do Google;
@@ -167,14 +181,14 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
       | `noimageindex` | previne esta página de aparecer como referencia de alguma imagem indexada                                                                              | [Google](https://www.google.com/support/webmasters/bin/answer.py?hl=en&answer=79812)                                                                                                                                                                                                                                                                         |
       | `nocache`      | sinônimo de `noarchive`                                                                                                                                | [Bing](https://www.bing.com/toolbox/blogs/webmaster/archive/2008/06/03/robots-exclusion-protocol-joining-together-to-provide-better-documentation.aspx)                                                                                                                                                                                                      |
 
-      > **Note:** **Notes:**- Somente robôs cooperativos seguirão as regras definidas pelo nome do robô. Não espere manter as colheitadeiras de e-mail à distância com isso.
+      > [!NOTE]
       >
+      > >
+      >
+      > - Somente robôs cooperativos seguirão as regras definidas pelo nome do robô. Não espere manter as colheitadeiras de e-mail à distância com isso.
       > - O robô ainda precisa acessar a página para ler o valor meta. Se você quiser mantê-los sob controle, por exemplo, para evitar o consumo de largura de banda, use um arquivo robots.txt (ou em complemento).
-      >
       > - Se você quiser remover a página de um índice, a alteração do meta para `noindex` funcionará, mas somente quando o robô visitar a página novamente. Verifique se o arquivo robots.txt não está impedindo essas visitas. Alguns mecanismos de busca possuem ferramentas para desenvolvedores, permitindo uma remoção rápida de algumas páginas.
-      >
       > - Alguns valores possíveis são mutuamente exclusivos, como usar `index` e `noindex`, ou `follow` e `nofollow`, ao mesmo tempo. Nestes casos, o comportamento do robô é indefinido e pode variar de um para o outro. Então evite esses casos.
-      >
       > - Alguns robôs rastreadores de mecanismos de pesquisa, como os do Google, Yahoo Search ou Bing, suportam os mesmos valores em uma diretiva `HTTP, X-Robot-Tags`: isso permite que eles usem esses pragma em documentos não HTML, como imagens
 
     - `slurp`, qual é um sinônimo de `robots`, mas somente seguido por Slurp, o indexador crawler para Yahoo Search;
@@ -192,56 +206,48 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
       | `minimum-scale` | um numero positivo entre `0.0` e `10.0`                 | define o valor mínimo do zoom; deve ser menor ou igual ao `maximum-scale` ou o comportamento sera indeterminado                                                           |
       | `user-scalable` | um valor booleano (`yes` ou `no`)                       | se setado `no`, o usuário não poderá usar zoom na página. o valor padrão é `yes`.                                                                                         |
 
-      | Specification                                                                                            | Status                           | Comment                                             |
-      | -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------- |
-      | {{SpecName('CSS3 Device', '#viewport-meta', '&lt;meta name="viewport"&gt;')}} | {{Spec2('CSS3 Device')}} | Non-normatively describes the Viewport META element |
-
-      See also: {{cssxref("@viewport")}}
-
-      > **Note:** **Notes:**- Embora não seja padronizado, esse atributo é usado por diferentes navegadores móveis, como o Safari Mobile, o Firefox para celular ou o Opera Mobile.
+      > [!NOTE]
       >
+      > >
+      >
+      > - Embora não seja padronizado, esse atributo é usado por diferentes navegadores móveis, como o Safari Mobile, o Firefox para celular ou o Opera Mobile.
       > - Os valores padrão podem mudar de um dispositivo e navegador para outro.
-      >
       > - Para aprender sobre esse pragma no Firefox para celular, veja [este artigo](/pt-BR/docs/Mobile/Viewport_meta_tag).
 
-- {{htmlattrdef("scheme")}} {{obsolete_inline}}
+- `scheme`
 
-  - : Este atributo define o esquema no qual os metadados são descritos. Um esquema é um contexto que leva às interpretações corretas dos {{htmlattrxref("content", "meta")}} valores, como um formato.
+  - : Este atributo define o esquema no qual os metadados são descritos. Um esquema é um contexto que leva às interpretações corretas dos [`content`](#content) valores, como um formato.
 
-    > **Note:** **Notes:** Não use este atributo pois esta obsoleto.Não há substituto para isso, pois não houve uso real para isso. Omitir completamente.
+    > [!NOTE]
+    > Não use este atributo pois esta obsoleto.Não há substituto para isso, pois não houve uso real para isso. Omitir completamente.
 
 ## Notes
 
 Dependendo do conjunto escolhido, o tipo de metadata pode ser uma das seguintes:
 
-- se {{htmlattrxref("name", "meta")}} é definido, isto é _document-level_ _metadata_, aplicando para a página inteira.
-- se {{htmlattrxref("http-equiv", "meta")}} é definido, isto é um _pragma diretiva_, i.e. normalmente informação dada pelo web server sobre como a página web deve ser entregue.
-- se {{htmlattrxref("charset", "meta")}} é definido, isto é uma declaração de _charset_, i.e. o charset usado para o formulário serializado da página da Web
+- se [`name`](#name) é definido, isto é _document-level_ _metadata_, aplicando para a página inteira.
+- se [`http-equiv`](#http-equiv) é definido, isto é um _pragma diretiva_, i.e. normalmente informação dada pelo web server sobre como a página web deve ser entregue.
+- se [`charset`](#charset) é definido, isto é uma declaração de _charset_, i.e. o charset usado para o formulário serializado da página da Web
 
-- se {{htmlattrxref("itemprop", "meta")}} é definido, isto é _user-defined metadata_, transparente para o user-agent, pois a semântica dos metadados é específica do usuário. {{experimental_inline}}
+- se [`itemprop`](#itemprop) é definido, isto é _user-defined metadata_, transparente para o user-agent, pois a semântica dos metadados é específica do usuário. {{experimental_inline}}
 
 ## Exemplos
 
 ```html
 <!-- In HTML5 -->
-<meta charset="utf-8">
+<meta charset="utf-8" />
 
 <!-- redireciona a página depois de 3 segundos -->
-<meta http-equiv="refresh" content="3;url=https://www.mozilla.org">
+<meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />
 ```
 
 ## Especificações
 
-| Specification                                                                                                                    | Status                               | Comment                                              |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------------- |
-| {{SpecName('Referrer Policy', '#referrer-policy-delivery-meta', '&lt;meta name="referrer"&gt;')}} | {{Spec2('Referrer Policy')}} | Define valores e semantica `<meta name="referrer">`. |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-meta-element', '&lt;meta&gt;')}}                         | {{Spec2('HTML WHATWG')}}     | Adiciona o atributo `itemprop`                       |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-meta-element', '&lt;meta&gt;')}}                 | {{Spec2('HTML5 W3C')}}         | Adiciona o atributo `charset`                        |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.4.4.2', '&lt;meta&gt;')}}                                 | {{Spec2('HTML4.01')}}         |                                                      |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.meta")}}
+{{Compat}}
 
 ## See also
 

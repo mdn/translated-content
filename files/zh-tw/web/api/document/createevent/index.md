@@ -1,7 +1,6 @@
 ---
 title: Event.createEvent()
 slug: Web/API/Document/createEvent
-original_slug: Web/API/Event/createEvent
 ---
 
 {{APIRef("DOM")}}
@@ -27,4 +26,4 @@ var newEvent = document.createEvent("UIEvents");
 
 ### 規格定義
 
-- [DOM Level 2 Events](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-document)
+- [DOM Level 2 Events](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-document)

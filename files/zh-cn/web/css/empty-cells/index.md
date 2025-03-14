@@ -52,7 +52,7 @@ empty-cells: unset;
     <td></td>
   </tr>
 </table>
-<br>
+<br />
 <table class="table_2">
   <tr>
     <td>Moe</td>
@@ -83,9 +83,9 @@ th {
 }
 ```
 
-### Result
+### 结果
 
-{{ EmbedLiveSample('Examples', '100%', '200') }}
+{{ EmbedLiveSample('示例', '100%', '200') }}
 
 ## 规范
 

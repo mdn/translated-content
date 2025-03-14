@@ -1,12 +1,6 @@
 ---
 title: Disposition de bloc et en ligne avec le flux normal
-slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
-tags:
-  - CSS
-  - Guide
-  - Intermédiaire
-translation_of: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
-original_slug: Web/CSS/CSS_Flow_Layout/Disposition_de_bloc_en_ligne_avec_flux_normal
+slug: Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow
 ---
 
 {{CSSRef}}
@@ -59,9 +53,10 @@ Dans l'exemple suivant, les paragraphes ont une marge en haut qui mesure 20 pixe
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow-collapsing.html", '100%', 500)}}
 
-Pour en savoir plus à propos de la fusion des marges, vous pouvez lire [l'article dédié à la fusion des marges](/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing).
+Pour en savoir plus à propos de la fusion des marges, vous pouvez lire [l'article dédié à la fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
 
-> **Note :** Si vous n'êtes pas certain⋅e que la fusion des marges a lieu, vous pouvez utiliser les outils de développement de votre navigateur afin de voir la valeur réellement utilisée pour les marges.
+> [!NOTE]
+> Si vous n'êtes pas certain⋅e que la fusion des marges a lieu, vous pouvez utiliser les outils de développement de votre navigateur afin de voir la valeur réellement utilisée pour les marges.
 >
 > ![](box-model.png)
 
@@ -114,7 +109,7 @@ Dans ce guide, nous avons vu comment les éléments étaient affichés dans le f
 
 ## Voir aussi
 
-- [Le module de spécification _CSS Basic Box Model_ qui définit les propriétés de base pour le modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model)
+- [Le module de spécification _CSS Basic Box Model_ qui définit les propriétés de base pour le modèle de boîte](/fr/docs/Web/CSS/CSS_box_model)
 - [Apprendre - le fonctionnement du flux normal](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Les éléments HTML en ligne](/fr/docs/Web/HTML/Inline_elements)
-- [Les éléments HTML de bloc](/fr/docs/Web/HTML/Block-level_elements)
+- [Les éléments HTML en ligne](/fr/docs/Glossary/Inline-level_content)
+- [Les éléments HTML de bloc](/fr/docs/Glossary/Block-level_content)

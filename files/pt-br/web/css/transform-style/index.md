@@ -37,18 +37,16 @@ transform-style: unset;
 
 ## Especificações
 
-| Specification                                                                                                | Status                                   | Comment             |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS Transforms 2', '#transform-style-property', 'transform-style')}} | {{Spec2('CSS Transforms 2')}} | Initial definition. |
+{{Specifications}}
 
 {{cssinfo}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.transform-style")}}
+{{Compat}}
 
 ## Veja também
 
-- [Using CSS transforms](/pt-BR/docs/CSS/Using_CSS_transforms)
+- [Using CSS transforms](/pt-BR/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 
 {{CSSRef}}

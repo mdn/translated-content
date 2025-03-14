@@ -1,12 +1,6 @@
 ---
 title: Document.writeln()
 slug: Web/API/Document/writeln
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-translation_of: Web/API/Document/writeln
 ---
 
 {{ ApiRef("DOM") }}

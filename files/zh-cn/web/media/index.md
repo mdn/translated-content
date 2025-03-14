@@ -1,10 +1,7 @@
 ---
 title: Web 媒体技术
 slug: Web/Media
-original_slug: Web/媒体
 ---
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
 逐年来，Web 呈现、创建并管理音频、视频和其他媒体的能力以不断增长的步伐发展。今日有着大量可用的 API、HTML 元素、DOM 界面和其他不仅仅限于完成这些任务，而是为了将媒体和其他技术联合使用以实现非凡事物的特性可供使用。这篇文章列出了可能对你掌握这些技术有帮助的多种 API 与其文档链接。
 
@@ -27,7 +24,7 @@ original_slug: Web/媒体
 
 - [媒体功能 API](/zh-CN/docs/Web/API/Media_Capabilities_API)
   - : 媒体功能 API 可以确定运行你的应用程序或网站的设备的编码和解码能力，让你实时决定使用的格式以及时机。
-- [媒体捕获和流媒体 API](/zh-CN/docs/Web/API/Media_Streams_API)
+- [媒体捕获和流媒体 API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)
   - : 使得串流、播放和控制本地和网络媒体成为可能的 API 参考文献。包括使用本地摄像头与麦克风来抓取视频、音频和静止图片。
 - [媒体会话 API](/zh-CN/docs/Web/API/Media_Session_API)
   - : 媒体会话 API 提供了一种定制媒体通知的方法。它通过提供元数据，让用户代理显示你的网络应用程序正在播放的媒体。它还提供了行动处理程序，浏览器可以用来访问平台媒体键，如键盘、耳机、遥控器上的硬件键，以及通知区和移动设备锁屏上的软件键。
@@ -40,15 +37,15 @@ original_slug: Web/媒体
 
 ## 指南
 
-- [在 HTML 中使用音频和视频资源](/zh-CN/docs/Web/Media/HTML_media)
+- [在 HTML 中使用音频和视频资源](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery)
   - : 这里是一篇使用 HTML `<audio>` 和 `<video>` 元素的指南。
-- [Web 设计中的媒体无障碍指南](/zh-CN/docs/Learn/Accessibility/Multimedia)
-  - : 在本指南中，我们将介绍 web 设计人员和开发人员创建的内容能让具有不同能力的人可以访问的方法。这个范围包括从 {{HTMLElement("img")}} 元素上简单地使用 {{htmlattrxref("alt", "img")}} 属性到为屏幕阅读者提供字幕标记的媒体。
-- [Web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)
+- [Web 设计中的媒体无障碍指南](/zh-CN/docs/Learn_web_development/Core/Accessibility/Multimedia)
+  - : 在本指南中，我们将介绍 web 设计人员和开发人员创建的内容能让具有不同能力的人可以访问的方法。这个范围包括从 {{HTMLElement("img")}} 元素上简单地使用 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 属性到为屏幕阅读者提供字幕标记的媒体。
+- [Web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats)
   - : 关于文件类型和编解码器对于 web 上的图像、音频和视频媒体有效的指南。这包括使用何种格式处理什么内容的建议、最佳实践，以及如何提供后备方案和如何对媒体类型进行优先排序，还包括针对每个媒体容器和编解码器的一般浏览器支持信息。
-- [音频和视频推流](/zh-CN/docs/Web/Media/Streaming)
+- [音频和视频推流](/zh-CN/docs/Web/Media/Guides/Streaming)
   - : 该指南涵盖了如何进行音频和视频流推送，以及你可以利用的技巧和技术，以确保你的流媒体的最佳质量和/或性能。
-- [媒体和 Web 音频 API 自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide)
+- [媒体和 Web 音频 API 自动播放指南](/zh-CN/docs/Web/Media/Guides/Autoplay)
   - : 出乎意料的自动播放媒体或音频对用户来说可能是一个不受欢迎的惊喜。虽然自动播放是有目的的，但应该谨慎使用。为了让用户控制这一点，许多浏览器现在都提供了自动播放阻塞的形式。本文是关于自动播放的指南，提供了一些技巧，告诉你何时以及如何使用它，以及如何使用浏览器优雅地处理自动播放阻塞。
 - [Web 音频空间化基础](/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
   - : 3D 环境既可以是渲染到屏幕上的 3D 场景，也可以是使用头盔体验的混合现实场景，重要的是音频的表现要让它听起来像来自其来源的方向。本指南涵盖了如何实现这一点。

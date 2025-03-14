@@ -1,16 +1,19 @@
 ---
-title: Element.computedStyleMap()
+title: "Element: computedStyleMap() メソッド"
+short-title: computedStyleMap()
 slug: Web/API/Element/computedStyleMap
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
-**`computedStyleMap()`** は {{domxref("Element")}} インターフェイスのメソッドであり、 {{domxref("StylePropertyMapReadOnly")}} インターフェイスで {{domxref("CSSStyleDeclaration")}} の代替となる CSS 宣言ブロックの読み取り専用の表現を提供します。
+**`computedStyleMap()`** は {{domxref("Element")}} インターフェイスのメソッドであり、{{domxref("StylePropertyMapReadOnly")}} インターフェイスで {{domxref("CSSStyleDeclaration")}} の代替となる CSS 宣言ブロックの読み取り専用の表現を提供します。
 
 ## 構文
 
-```js
-var stylePropertyMapReadOnly = element.computedStyleMap()
+```js-nolint
+computedStyleMap()
 ```
 
 ### 引数
@@ -27,7 +30,7 @@ var stylePropertyMapReadOnly = element.computedStyleMap()
 
 ```html
 <p>
-   <a href="https://example.com">Link</a>
+  <a href="https://example.com">Link</a>
 </p>
 <dl id="regurgitation"></dl>
 ```
@@ -45,10 +48,10 @@ JavaScript を追加してリンクを取得し、 `computedStyleMap()` を使�
 
 ```js
 // 要素を取得
-const myElement = document.querySelector('a');
+const myElement = document.querySelector("a");
 
 // 入力する <dl> を取得
-const stylesList = document.querySelector('#regurgitation');
+const stylesList = document.querySelector("#regurgitation");
 
 // すべての計算済みスタイルを computedStyleMap() で受け取る
 const allComputedStyles = myElement.computedStyleMap();
@@ -56,12 +59,12 @@ const allComputedStyles = myElement.computedStyleMap();
 // すべてのプロパティと値のマップを反復処理し、それぞれに <dt> と <dd> を追加します。
 for (const [prop, val] of allComputedStyles) {
   // プロパティ
-  const cssProperty = document.createElement('dt');
+  const cssProperty = document.createElement("dt");
   cssProperty.appendChild(document.createTextNode(prop));
   stylesList.appendChild(cssProperty);
 
   // 値
-  const cssValue = document.createElement('dd');
+  const cssValue = document.createElement("dd");
   cssValue.appendChild(document.createTextNode(val));
   stylesList.appendChild(cssValue);
 }

@@ -1,21 +1,86 @@
 ---
 title: backface-visibility
 slug: Web/CSS/backface-visibility
-translation_of: Web/CSS/backface-visibility
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
 Свойство **`backface-visibility`** определяет, видно ли заднюю грань элемента, когда он повёрнут к пользователю.
 
-{{EmbedInteractiveExample("pages/css/backface-visibility.html")}}
+{{InteractiveExample("CSS Demo: backface-visibility")}}
+
+```css interactive-example-choice
+backface-visibility: visible;
+```
+
+```css interactive-example-choice
+backface-visibility: hidden;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  perspective: 550px;
+  perspective-origin: 220% 220%;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgb(230, 0, 0);
+  color: white;
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgba(0, 0, 0, 0.6);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgba(0, 0, 0, 0.6);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+```
 
 Задняя поверхность элемента является зеркальным отражением его передней поверхности. Однако невидимая в 2D, задняя грань может быть видимой, когда преобразование вызывает вращение элемента в 3D пространстве. (Это свойство не влияет на 2D-преобразования, которые не имеют перспективы.)
 
 ## Синтаксис
 
 ```css
-/* Значения ключевых слов */
+/* Ключевые слова */
 backface-visibility: visible;
 backface-visibility: hidden;
 
@@ -63,9 +128,8 @@ backface-visibility: unset;
         </div>
       </div>
       <p>
-        Since all faces are partially transparent,
-        the back faces (2, 4, 5) are visible
-        through the front faces (1, 3, 6).
+        Since all faces are partially transparent, the back faces (2, 4, 5) are
+        visible through the front faces (1, 3, 6).
       </p>
     </td>
     <td>
@@ -79,10 +143,7 @@ backface-visibility: unset;
           <div class="face bottom">6</div>
         </div>
       </div>
-      <p>
-        The three back faces (2, 4, 5) are
-        hidden.
-      </p>
+      <p>The three back faces (2, 4, 5) are hidden.</p>
     </td>
   </tr>
 </table>
@@ -163,8 +224,10 @@ backface-visibility: unset;
 }
 
 /* Сделает стол немного лучше */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   margin: 0px;
   padding: 6px;
   font-family: sans-serif;
@@ -178,9 +241,7 @@ th, p, td {
 
 ## Спецификации
 
-| Спецификация                                                                                                         | Статус                                   | Комментарий                 |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------- |
-| {{SpecName('CSS Transforms 2', '#propdef-backface-visibility', 'backface-visibility')}} | {{Spec2('CSS Transforms 2')}} | Первоначальное определение. |
+{{Specifications}}
 
 {{cssinfo}}
 

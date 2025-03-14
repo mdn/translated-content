@@ -1,9 +1,6 @@
 ---
 title: Funciones asíncronas
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
-translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Funcionesasíncronas
-browser-compat: javascript.builtins.AsyncFunction
 ---
 
 {{JSRef}}
@@ -14,15 +11,15 @@ En JavaScript, cada función asíncrona es un objeto `AsyncFunction`.
 Nota: `AsyncFunction` _no_ es un objeto global. Este puede ser obtenido como resultado del siguiente código.
 
 ```js
-Object.getPrototypeOf(async function(){}).constructor
+Object.getPrototypeOf(async function () {}).constructor;
 ```
 
 ## Sintaxis
 
 ```js
-new AsyncFunction(arg0, functionBody)
-new AsyncFunction(arg0, arg1, functionBody)
-new AsyncFunction(arg0, arg1, ...argN, functionBody)
+new AsyncFunction(arg0, functionBody);
+new AsyncFunction(arg0, arg1, functionBody);
+new AsyncFunction(arg0, arg1, ...argN, functionBody);
 ```
 
 ### Parámetros
@@ -42,7 +39,8 @@ Los objetos {{jsxref("Statements/async_function", "async function")}} creados co
 
 Todos los argumentos que son pasados a la función son tratados por los nombres de los identificadores de los parámetros en la función creada, en el orden en que son pasados a la función.
 
-> **Nota:** Las {{jsxref("Statements/async_function", "async functions", "", 1)}} creadas con el constructor `AsyncFunction` no crean
+> [!NOTE]
+> Las {{jsxref("Statements/async_function", "async functions", "", 1)}} creadas con el constructor `AsyncFunction` no crean
 > [_closures_](/es/docs/Web/JavaScript/Closures) en sus contextos creados, siempre son creados en el contexto global.
 >
 > Cuando se ejecutan, solamente podran acceder a sus variables locales y globales, no a las variables de otros contextos en el cual
@@ -59,20 +57,22 @@ Invocar el constructor `AsyncFunction` coomo una función (sin usar el operador 
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
   });
 }
 
-let AsyncFunction = Object.getPrototypeOf(async function(){}).constructor
+let AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
 
-let a = new AsyncFunction('a',
-                          'b',
-                          'return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);');
+let a = new AsyncFunction(
+  "a",
+  "b",
+  "return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);",
+);
 
-a(10, 20).then(v => {
+a(10, 20).then((v) => {
   console.log(v); // imprime 30 después de 4 segundos
 });
 ```

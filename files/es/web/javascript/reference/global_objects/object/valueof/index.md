@@ -1,11 +1,9 @@
 ---
 title: Object.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/valueOf
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 El método **`valueOf()`** retorna el valor primitivo del objeto especificado.
 
@@ -19,7 +17,22 @@ object.valueOf()
 
 El valor primitivo del objeto especificado.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.valueOf()")}}
+
+```js interactive-example
+function MyNumberType(n) {
+  this.number = n;
+}
+
+MyNumberType.prototype.valueOf = function () {
+  return this.number;
+};
+
+const object1 = new MyNumberType(4);
+
+console.log(object1 + 3);
+// Expected output: 7
+```
 
 ## Descripción
 
@@ -36,7 +49,9 @@ Puede crear una función para ser invocada en lugar de utilizar el método `valu
 Suponga que tiene un objeto de tipo `myNumberType` y usted quiere crear un método `valueOf` para este. El código a continuación asigna una función personalizada al método `valueOf`:
 
 ```js
-myNumberType.prototype.valueOf = function() { return customPrimitiveValue; };
+myNumberType.prototype.valueOf = function () {
+  return customPrimitiveValue;
+};
 ```
 
 Al tener el código anterior funcionando, cada vez que un objeto de tipo `myNumberType` es utilizado en un contexto donde deba ser representado por un valor primitivo, JavaScript automáticamente invocará la función definida en el código anterior.
@@ -44,10 +59,11 @@ Al tener el código anterior funcionando, cada vez que un objeto de tipo `myNumb
 El método `valueOf` es invocado usualmente por JavaScript pero usted puede invocarlo directamente como sigue a continuación:
 
 ```js
-myNumber.valueOf()
+myNumber.valueOf();
 ```
 
-> **Nota:** Objetos en contextos de string realizan la conversión a string a través del método {{jsxref("Object.toString", "toString()")}} , el cual, es diferente de {{jsxref("String")}} para convertir objetos a primitivos string utilizando el método `valueOf`. Todos los objetos pueden ser convertidos a string, si solo "`[object _type_]`". Pero muchos objetos no se pueden convertir a number, boolean o function.
+> [!NOTE]
+> Objetos en contextos de string realizan la conversión a string a través del método {{jsxref("Object.toString", "toString()")}} , el cual, es diferente de {{jsxref("String")}} para convertir objetos a primitivos string utilizando el método `valueOf`. Todos los objetos pueden ser convertidos a string, si solo "`[object _type_]`". Pero muchos objetos no se pueden convertir a number, boolean o function.
 
 ## Ejemplos
 
@@ -55,11 +71,11 @@ myNumber.valueOf()
 
 ```js
 function myNumberType(n) {
-    this.number = n;
+  this.number = n;
 }
 
-myNumberType.prototype.valueOf = function() {
-    return this.number;
+myNumberType.prototype.valueOf = function () {
+  return this.number;
 };
 
 myObj = new myNumberType(4);
@@ -70,9 +86,9 @@ myObj + 3; // 7
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.valueOf")}}
+{{Compat}}
 
 ## Vea también
 

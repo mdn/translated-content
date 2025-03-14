@@ -1,8 +1,8 @@
 ---
 title: Explication des données d'orientation et de mouvement
 slug: Web/API/Device_orientation_events/Orientation_and_motion_data_explained
-translation_of: Web/Events/Orientation_and_motion_data_explained
-original_slug: Web/Events/Orientation_and_motion_data_explained
+l10n:
+  sourceCommit: c382856e4c804eafa789f8046b01b92fef5c0df2
 ---
 
 {{DefaultAPISidebar("Device Orientation Events")}}
@@ -25,13 +25,14 @@ Le système de coordonnées terrestre est un repère dont l'origine est fixée a
 
 Le système de coordonnées de l'appareil a son origine située au centre de l'appareil. On utilise les lettres minuscules («&nbsp;x&nbsp;», «&nbsp;y&nbsp;», et «&nbsp;z&nbsp;») pour décrire les axes de ce système.
 
-![](axes.png)
+![Un schéma représentant un appareil mobile et les trois axes du système de coordonnées de l'appareil.](axes.png)
 
 - L'axe **x** se situe sur le plan de l'écran et est positif vers la droite et négatif vers la gauche.
 - L'axe **y** se situe sur le plan de l'écran et est positif vers le haut et négatif vers le bas.
 - L'axe **z** est perpendiculaire à l'écran ou au clavier et va positivement lorsqu'on s'éloigne de l'écran.
 
-> **Note :** Sur un téléphone ou une tablette, l'orientation de l'appareil est toujours prise selon l'orientation standard de l'écran. Sur la plupart des appareils, il s'agit de l'orientation en portrait. Sur un ordinateur portable, l'orientation est relative au clavier. Si vous souhaitez détecter les changements d'orientation d'un appareil afin de les compenser, vous pouvez utiliser l'évènement `orientationchange`.
+> [!NOTE]
+> Sur un téléphone ou une tablette, l'orientation de l'appareil est toujours prise selon l'orientation standard de l'écran. Sur la plupart des appareils, il s'agit de l'orientation en portrait. Sur un ordinateur portable, l'orientation est relative au clavier. Si vous souhaitez détecter les changements d'orientation d'un appareil afin de les compenser, vous pouvez utiliser l'évènement [`change`](/fr/docs/Web/API/ScreenOrientation/change_event).
 
 ## À propos de la rotation
 
@@ -41,7 +42,7 @@ Une rotation se décrit en nombre de degrés pour chaque axe en évaluant la dif
 
 La rotation autour de l'axe z consiste à faire tourner l'appareil sur son plan. Cette rotation modifie l'angle **alpha**&nbsp;:
 
-![](alpha.png)
+![Un angle alpha positif fait tourner l'appareil dans le sens contraire des aiguilles d'une montre](alpha.png)
 
 L'angle alpha vaut 0° lorsque le haut de l'appareil est orienté vers le pôle Nord. Cet angle augmente lorsque l'appareil est tourné vers la gauche.
 
@@ -57,6 +58,6 @@ L'angle bêta vaut 0° lorsque le haut et le bas de l'appareil sont à la même 
 
 La rotation autour de l'axe y consiste à pencher l'appareil vers la gauche ou la droite. Cette rotation modifie l'angle **gamma**&nbsp;:
 
-![](gamma.png)
+![Un angle gamma positif correspond à une inclinaison de l'appareil vers la droite.](gamma.png)
 
 L'angle gamma vaut 0° lorsque les côtés gauche et droit de l'appareil sont à la même distance de la surface terrestre. Il augmente vers 90° lorsque l'appareil est penché vers la droite et vers -90° lorsqu'il est penché vers la gauche.

@@ -1,33 +1,37 @@
 ---
-title: Node.lastChild
+title: "Node: свойство lastChild"
 slug: Web/API/Node/lastChild
-translation_of: Web/API/Node/lastChild
+l10n:
+  sourceCommit: 7de82e7152a2891e9aee5b6f630f1f43849748df
 ---
 
-{{ ApiRef() }}
+{{APIRef("DOM")}}
 
-## Основная информация
+Доступное только для чтения свойство **`lastChild`** интерфейса {{domxref("Node")}} возвращает последнего потомка узла или `null` если потомков нет.
 
-**lastChild** возвращает последнего потомка в узле.
+> [!NOTE]
+> Это свойство может вернуть узел любого типа, который является потомком текущего. Это может быть {{domxref("Text")}} или {{domxref("Comment")}}. Если необходимо получить последний {{domxref("Element")}}, который является потомком другого элемента, то следует использовать {{domxref("Element.lastElementChild")}}.
 
-## Синтаксис
+## Значение
 
-```
-var last_child = element.lastChild
-```
-
-## Описание
-
-Возвращаемый элемент `last_child` является узлом. Если его родитель является элементом, то возвращаемый узел является узлом типа Элемент, Текст, или же узлом комментария. Если в опрашиваемом узле нет дочерних элементов, **lastChild** возвращает `null` .
+{{domxref("Node")}}, являющийся последним потомком узла или `null` если потомков нет.
 
 ## Пример
 
 ```js
-var tr = document.getElementById("row1");
-var corner_td = tr.lastChild;
+const tr = document.getElementById("row1");
+const corner_td = tr.lastChild;
 ```
 
-## Спецификация
+## Спецификации
 
-- {{Spec("http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-61AD09FB", "DOM Level 2: lastChild", "REC")}}
-- {{Spec("http://dom.spec.whatwg.org/#dom-node-lastchild", "DOM Standard: lastChild")}}
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{domxref("Node.firstChild")}}
+- {{domxref("Element.lastElementChild")}}

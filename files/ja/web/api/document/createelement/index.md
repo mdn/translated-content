@@ -1,6 +1,9 @@
 ---
-title: Document.createElement()
+title: "Document: createElement() メソッド"
+short-title: createElement()
 slug: Web/API/Document/createElement
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("DOM")}}
@@ -9,22 +12,27 @@ slug: Web/API/Document/createElement
 
 ## 構文
 
-```js
-let element = document.createElement(tagName[, options]);
+```js-nolint
+createElement(tagName)
+createElement(tagName, options)
 ```
 
 ### 引数
 
-- _tagName_
+- `tagName`
   - : 生成される要素の型を特定する文字列です。生成される要素の {{domxref("Node.nodeName", "nodeName")}} は _tagName_ の値で初期化されます。このメソッドで修飾名 ("html:a" など) を使用しないでください。 HTML 文書で呼び出すと、 `createElement()` は要素を生成する前に _tagName_ を小文字に変換します。 Firefox, Opera, Chrome では、 `createElement(null)` は `createElement("null")` のように動作します。
-- _options_{{optional_inline}}
-  - : 省略可能な `ElementCreationOptions` オブジェクトで、 `is` という名前のプロパティをひとつ持ち、その値は前に `customElements.define()` を使用して定義したカスタム要素の名前です。詳しくは[ウェブコンポーネントの例](#ウェブコンポーネントの例)を参照してください。
+- `options` {{optional_inline}}
+  - : 以下のプロパティを持つオブジェクトです。
+    - `is`
+      - : 事前に `customElements.define()` で定義したカスタム要素のタグ名です。
+        詳しくは[ウェブコンポーネントの例](#ウェブコンポーネントの例)を参照してください。
 
 ### 返値
 
 新しい {{domxref("Element")}} です。
 
-> **メモ:** 文書が {{domxref("HTMLDocument", "HTMLDocument", "", "1")}} である場合、新しい {{domxref("HTMLElement", "HTMLElement", "", "1")}} を返しますが、これが最も一般的です。それ以外の場合は新しい {{domxref("Element","Element","","1")}} を返します。
+> [!NOTE]
+> 文書が {{domxref("HTMLDocument", "HTMLDocument", "", "1")}} である場合、新しい {{domxref("HTMLElement", "HTMLElement", "", "1")}} を返しますが、これが最も一般的です。それ以外の場合は新しい {{domxref("Element","Element","","1")}} を返します。
 
 ## 例
 
@@ -35,14 +43,15 @@ let element = document.createElement(tagName[, options]);
 #### HTML
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>||Working with elements||</title>
-</head>
-<body>
-  <div id="div1">The text above has been created dynamically.</div>
-</body>
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>要素のの操作</title>
+  </head>
+  <body>
+    <div id="div1">上記のテキストは動的に生成されました。</div>
+  </body>
 </html>
 ```
 
@@ -51,12 +60,12 @@ let element = document.createElement(tagName[, options]);
 ```js
 document.body.onload = addElement;
 
-function addElement () {
+function addElement() {
   // 新しい div 要素を作成します
   const newDiv = document.createElement("div");
 
   // いくつかの内容を与えます
-  const newContent = document.createTextNode("Hi there and greetings!");
+  const newContent = document.createTextNode("みなさん、こんにちは！");
 
   // テキストノードを新規作成した div に追加します
   newDiv.appendChild(newContent);
@@ -74,7 +83,7 @@ function addElement () {
 ### ウェブコンポーネントの例
 
 以下の例の断片は [expanding-list-web-component](https://github.com/mdn/web-components-examples/tree/master/expanding-list-web-component)
- の例から取ったものです ([ライブでもご覧ください](https://mdn.github.io/web-components-examples/expanding-list-web-component/))。この場合、カスタム要素は {{domxref("HTMLUListElement")}} を拡張し、 {{htmlelement("ul")}} 要素を表します。
+の例から取ったものです（[ライブでもご覧ください](https://mdn.github.io/web-components-examples/expanding-list-web-component/)）。この場合、カスタム要素は {{domxref("HTMLUListElement")}} を拡張し、 {{htmlelement("ul")}} 要素を表します。
 
 ```js
 // 要素のためのクラスを作成
@@ -84,18 +93,18 @@ class ExpandingList extends HTMLUListElement {
     super();
 
     // コンストラクターの定義は簡略化のため省略します。
-    ...
+    // …
   }
 }
 
 // 新しい要素を定義
-customElements.define('expanding-list', ExpandingList, { extends: "ul" });
+customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 ```
 
 この要素のインスタンスをプログラムで生成したければ、次の行のような呼び出しを使用します。
 
 ```js
-let expandingList = document.createElement('ul', { is : 'expanding-list' })
+let expandingList = document.createElement("ul", { is: "expanding-list" });
 ```
 
 新しい要素には [`is`](/ja/docs/Web/HTML/Global_attributes/is) 属性が与えられ、その値はカスタム要素のタグ名になります。

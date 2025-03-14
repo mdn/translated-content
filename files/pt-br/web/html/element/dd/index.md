@@ -1,5 +1,5 @@
 ---
-title: '<dd>: elemento Detalhes da Descrição'
+title: "<dd>: elemento Detalhes da Descrição"
 slug: Web/HTML/Element/dd
 ---
 
@@ -66,24 +66,20 @@ O **elemento HTML \<dd>** fornece detalhes ou uma definição mais completa do t
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes) como seus.
 
-- {{htmlattrdef("nowrap")}} {{Non-standard_inline}}
+- `nowrap` {{Non-standard_inline}}
   - : Se o valor deste atributo for `yes`, o texto de definição não será envolvido. O valor padrão é `no`.
 
 ## Exemplo
 
-Para exemplos, veja [os exemplos de \<dl>](/pt-BR/docs/Web/HTML/Element/dl#Exemplos).
+Para exemplos, veja [os exemplos de \<dl>](/pt-BR/docs/Web/HTML/Element/dl#exemplos).
 
 ## Especificações
 
-| Especificação                                                                                            | Status                           | Comentário |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-dd-element', '&lt;dd&gt;')}}     | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-dd-element', '&lt;dd&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dd&gt;')}}                 | {{Spec2('HTML4.01')}}     |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.dd")}}
+{{Compat}}
 
 ## Veja também
 

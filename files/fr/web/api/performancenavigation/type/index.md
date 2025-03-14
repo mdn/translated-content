@@ -1,23 +1,12 @@
 ---
 title: PerformanceNavigation.type
 slug: Web/API/PerformanceNavigation/type
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Déprécié
-  - Navigation Timing
-  - PerformanceNavigation
-  - Property
-  - Propriété
-  - Read-only
-  - Héritage
-translation_of: Web/API/PerformanceNavigation/type
 ---
 
 {{APIRef("Navigation Timing")}}
 
-> **Attention :** Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser la propriété [`PerformanceNavigationTiming.type`](/fr/docs/Web/API/PerformanceNavigationTiming/type) de l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
+> [!WARNING]
+> Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser la propriété [`PerformanceNavigationTiming.type`](/fr/docs/Web/API/PerformanceNavigationTiming/type) de l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
 
 L'ancienne propriété **`PerformanceNavigation.type`** en lecture seule renvoie un `unsigned short` contenant une constante décrivant comment la navigation vers cette page a été effectuée. Les valeurs possibles sont :
 

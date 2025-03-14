@@ -10,7 +10,7 @@ slug: Web/API/Window/blur
 ## 構文
 
 ```js
-blur()
+blur();
 ```
 
 ### 引数

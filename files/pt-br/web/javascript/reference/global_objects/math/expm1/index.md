@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
 
 The **`Math.expm1()`** function returns `ex - 1`, where `x` is the argument, and {{jsxref("Math.E", "e", "", 1)}} the base of the natural logarithms.
 
-{{EmbedInteractiveExample("pages/js/math-expm1.html")}}
+{{InteractiveExample("JavaScript Demo: Math.expm1()")}}
+
+```js interactive-example
+console.log(Math.expm1(0));
+// Expected output: 0
+
+console.log(Math.expm1(1));
+// Expected output: 1.718281828459045
+
+console.log(Math.expm1(-1));
+// Expected output: -0.6321205588285577
+
+console.log(Math.expm1(2));
+// Expected output: 6.38905609893065
+```
 
 ## Syntax
 
@@ -33,9 +47,11 @@ Porque `expm1()` é um método estático de is `Math`, você sempre o usurá com
 This can be emulated with the help of the {{jsxref("Math.exp()")}} function:
 
 ```js
-Math.expm1 = Math.expm1 || function(x) {
-  return Math.exp(x) - 1;
-};
+Math.expm1 =
+  Math.expm1 ||
+  function (x) {
+    return Math.exp(x) - 1;
+  };
 ```
 
 ## Examples
@@ -44,19 +60,17 @@ Math.expm1 = Math.expm1 || function(x) {
 
 ```js
 Math.expm1(-1); // -0.6321205588285577
-Math.expm1(0);  // 0
-Math.expm1(1);  // 1.718281828459045
+Math.expm1(0); // 0
+Math.expm1(1); // 1.718281828459045
 ```
 
-## Specifications
+## Especificações
 
-| Specification                                                                |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.expm1', 'Math.expm1')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.expm1")}}
+{{Compat}}
 
 ## See also
 

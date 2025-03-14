@@ -1,20 +1,9 @@
 ---
 title: webRequest.onCompleted
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onCompleted
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onCompleted
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onCompleted
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Utilisé lorsqu'une demande est complétée.
 
@@ -24,12 +13,12 @@ Cet événement est à titre d'information seulement.
 
 ```js
 browser.webRequest.onCompleted.addListener(
-  listener,             // function
-  filter,               //  object
-  extraInfoSpec         //  optional array of strings
-)
-browser.webRequest.onCompleted.removeListener(listener)
-browser.webRequest.onCompleted.hasListener(listener)
+  listener, // function
+  filter, //  object
+  extraInfoSpec, //  optional array of strings
+);
+browser.webRequest.onCompleted.removeListener(listener);
+browser.webRequest.onCompleted.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -125,9 +114,9 @@ Les événements ont trois fonctions :
 - `url`
   - : `string`. Cible de la demande.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.onCompleted", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -149,17 +138,14 @@ function logResponse(responseDetails) {
   console.log(responseDetails.statusCode);
 }
 
-browser.webRequest.onCompleted.addListener(
-  logResponse,
-  {urls: [target]}
-);
+browser.webRequest.onCompleted.addListener(logResponse, { urls: [target] });
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

@@ -37,7 +37,7 @@ background-attachment: scroll | fixed | inherit
 
 ```css
 p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif");
+  background-image: url("star-solid.gif");
   background-attachment: fixed;
 }
 ```
@@ -46,16 +46,15 @@ p {
 
 ```html
 <p>
-  There were doors all round the hall, but they were all locked; and when
-  Alice had been all the way down one side and up the other, trying every
-  door, she walked sadly down the middle, wondering how she was ever to
-  get out again.
+  There were doors all round the hall, but they were all locked; and when Alice
+  had been all the way down one side and up the other, trying every door, she
+  walked sadly down the middle, wondering how she was ever to get out again.
 </p>
 ```
 
 #### Resultado
 
-{{EmbedLiveSample("Simple_example")}}
+{{EmbedLiveSample("Ejemplo_simple")}}
 
 ### Soporta múltiples imagenes de fondo
 
@@ -65,7 +64,7 @@ Esta propiedad soporta multiples imágenes de fondo. Puedes especificar un `<att
 
 ```css
 p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"), url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
+  background-image: url("star-solid.gif"), url("star-transparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }
@@ -75,19 +74,17 @@ p {
 
 ```html
 <p>
-  There were doors all round the hall, but they were all locked; and when
-  Alice had been all the way down one side and up the other, trying every
-  door, she walked sadly down the middle, wondering how she was ever to
-  get out again.
-
-  Suddenly she came upon a little three-legged table, all made of solid
-  glass; there was nothing on it except a tiny golden key, and Alice's
-  first thought was that it might belong to one of the doors of the hall;
-  but, alas! either the locks were too large, or the key was too small,
-  but at any rate it would not open any of them. However, on the second
-  time round, she came upon a low curtain she had not noticed before, and
-  behind it was a little door about fifteen inches high: she tried the
-  little golden key in the lock, and to her great delight it fitted!
+  There were doors all round the hall, but they were all locked; and when Alice
+  had been all the way down one side and up the other, trying every door, she
+  walked sadly down the middle, wondering how she was ever to get out again.
+  Suddenly she came upon a little three-legged table, all made of solid glass;
+  there was nothing on it except a tiny golden key, and Alice's first thought
+  was that it might belong to one of the doors of the hall; but, alas! either
+  the locks were too large, or the key was too small, but at any rate it would
+  not open any of them. However, on the second time round, she came upon a low
+  curtain she had not noticed before, and behind it was a little door about
+  fifteen inches high: she tried the little golden key in the lock, and to her
+  great delight it fitted!
 </p>
 ```
 
@@ -97,18 +94,11 @@ p {
 
 ### Especificaciones
 
-- [CSS 1](http://www.w3.org/TR/CSS1#background-attachment)
-- [CSS 2.1](http://www.w3.org/TR/CSS21/colors.html#propdef-background-attachment)
-- [CSS 3](http://www.w3.org/TR/2005/WD-css3-background-20050216/#background-attachment)
+{{Specifications}}
 
-### Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 4              |
-| Firefox           | 1              |
-| Netscape          | 6              |
-| Opera             | 3.5            |
+{{Compat}}
 
 ### Ver también
 

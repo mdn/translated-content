@@ -1,14 +1,13 @@
 ---
 title: API
 slug: Mozilla/Add-ons/WebExtensions/API
-tags:
-  - Extenciones Web
-translation_of: Mozilla/Add-ons/WebExtensions/API
 ---
 
-Las API de JavaScript para las Extensiones Web se pueden usar dentro de los [scripts en segundo plano](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) de la extensión y en cualquier otro documento contenido en la extensión, incluyendo las ventanas emergentes de [acción de página](/es/docs/Mozilla/Add-ons/WebExtensions/Page_actions) o [acción del navegador](/es/docs/Mozilla/Add-ons/WebExtensions/Browser_action), [barras laterales](/es/docs/Mozilla/Add-ons/WebExtensions/Sidebars), [páginas de opciones](/es/docs/Mozilla/Add-ons/WebExtensions/Options_pages) o [páginas de pestañas nuevas](/en-US/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). A algunas de estas API también se puede acceder mediante los [scripts de contenido](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts) de una extensión ( consulte la [lista en la guía de script de contenido](/en-US/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)).
+{{AddonSidebar}}
 
-Para usar API más poderosas debes [solicitar permiso](/en-US/Add-ons/WebExtensions/manifest.json/permissions) en manifest.json en tu extensión.
+Las API de JavaScript para las Extensiones Web se pueden usar dentro de los [scripts en segundo plano](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) de la extensión y en cualquier otro documento contenido en la extensión, incluyendo las ventanas emergentes de [acción de página](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) o [acción del navegador](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button), [barras laterales](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), [páginas de opciones](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) o [páginas de pestañas nuevas](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). A algunas de estas API también se puede acceder mediante los [scripts de contenido](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts) de una extensión ( consulte la [lista en la guía de script de contenido](/es/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis)).
+
+Para usar API más poderosas debes [solicitar permiso](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) en manifest.json en tu extensión.
 
 Puedes acceder a las API utilizando el namespace `browser`:
 
@@ -17,7 +16,7 @@ function logTabs(tabs) {
   console.log(tabs);
 }
 
-browser.tabs.query({currentWindow: true}, logTabs);
+browser.tabs.query({ currentWindow: true }, logTabs);
 ```
 
 Muchas de las APIs son asíncronas, devolviendo un `Promise`:
@@ -31,9 +30,7 @@ function logError(e) {
   console.error(e);
 }
 
-var setCookie = browser.cookies.set(
-  {url: "https://developer.mozilla.org/"}
-);
+var setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
 setCookie.then(logCookie, logError);
 ```
 

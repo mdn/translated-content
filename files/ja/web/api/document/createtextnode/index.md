@@ -1,6 +1,9 @@
 ---
-title: Document.createTextNode()
+title: "Document: createTextNode() メソッド"
+short-title: createTextNode()
 slug: Web/API/Document/createTextNode
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("DOM")}}
@@ -9,43 +12,49 @@ slug: Web/API/Document/createTextNode
 
 ## 構文
 
-```
-var text = document.createTextNode(data);
+```js-nolint
+createTextNode(data)
 ```
 
-- _text_: {{domxref("Text")}} ノード。
-- _data_: テキストノードの中に入れるデータが入った[文字列](/ja/docs/Web/JavaScript/Reference/Global_Objects/String)。
+### 引数
+
+- `data`
+  - : テキストノードの中に入れるデータが入った文字列です。
+
+### 返値
+
+{{domxref("Text")}} ノードです。
 
 ## 例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<title>createTextNode example</title>
-<script>
-function addTextNode(text) {
-  var newtext = document.createTextNode(text),
-      p1 = document.getElementById("p1");
+  <head>
+    <title>createTextNode example</title>
+    <script>
+      function addTextNode(text) {
+        const newtext = document.createTextNode(text);
+        const p1 = document.getElementById("p1");
 
-  p1.appendChild(newtext);
-}
-</script>
-</head>
+        p1.appendChild(newtext);
+      }
+    </script>
+  </head>
 
-<body>
-  <button onclick="addTextNode('YES! ');">YES!</button>
-  <button onclick="addTextNode('NO! ');">NO!</button>
-  <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
+  <body>
+    <button onclick="addTextNode('YES! ');">YES!</button>
+    <button onclick="addTextNode('NO! ');">NO!</button>
+    <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
 
-  <hr />
+    <hr />
 
-  <p id="p1">First line of paragraph.</p>
-</body>
+    <p id="p1">First line of paragraph.</p>
+  </body>
 </html>
 ```
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## 仕様書
 

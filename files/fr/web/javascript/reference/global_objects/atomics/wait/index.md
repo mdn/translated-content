@@ -1,21 +1,14 @@
 ---
 title: Atomics.wait()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/wait
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/wait
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/wait
 ---
 
 {{JSRef}}
 
 La méthode statique **`Atomics.wait()`** permet de vérifier qu'un emplacement d'un tableau {{jsxref("Int32Array")}} contient toujours une valeur donnée et, si c'est le cas, l'agent dort en attendant un réveil ou un délai d'expiration. La méthode renvoie une chaîne qui vaut `"ok"`, `"not-equal"` ou `"timed-out"`.
 
-> **Note :** Cette opération ne fonctionne qu'avec un tableau typé partagé {{jsxref("Int32Array")}} et peut ne pas être autorisée sur le _thread_ principal.
+> [!NOTE]
+> Cette opération ne fonctionne qu'avec un tableau typé partagé {{jsxref("Int32Array")}} et peut ne pas être autorisée sur le _thread_ principal.
 
 ## Syntaxe
 

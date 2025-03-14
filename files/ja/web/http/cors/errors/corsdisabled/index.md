@@ -1,17 +1,19 @@
 ---
-title: 'Reason: CORS disabled'
+title: "Reason: CORS disabled"
 slug: Web/HTTP/CORS/Errors/CORSDisabled
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
 ## 理由
 
-```
+```plain
 Reason: CORS disabled
 ```
 
-## 何に失敗したか
+## エラーの原因
 
 {{Glossary("CORS")}} を使う必要がある要求が行われましたが、ユーザーのブラウザーで CORS が無効になっています。これが発生した場合、ブラウザーの CORS を有効に戻す必要があります。
 

@@ -1,97 +1,97 @@
 ---
 title: BigInt.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toString
-tags:
-  - BigInt
-  - JavaScript
-  - Method
-  - Prototype
-  - toString()
-browser-compat: javascript.builtins.BigInt.toString
+l10n:
+  sourceCommit: 3cfd663738e9963157d90f359789d675a6662ec2
 ---
 
 {{JSRef}}
 
-The **`toString()`** method returns a string representing the
-specified {{jsxref("BigInt")}} object. The trailing "n" is not part of the string.
+{{jsxref("BigInt")}} 값의 **`toString()`** 메서드는 지정된 {{jsxref("BigInt")}} 값을 나타내는 문자열을 반환합니다. 뒤에 오는 "n"은 문자열의 일부가 아닙니다.
 
-{{EmbedInteractiveExample("pages/js/bigint-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: BigInt.toString()")}}
 
-## Syntax
+```js interactive-example
+console.log(1024n.toString());
+// Expected output: "1024"
 
-```js
+console.log(1024n.toString(2));
+// Expected output: "10000000000"
+
+console.log(1024n.toString(16));
+// Expected output: "400"
+```
+
+## 구문
+
+```js-nolint
 toString()
 toString(radix)
 ```
 
-### Parameters
+### 매개변수
 
-- `radix`{{optional_inline}}
-  - : Optional. An integer in the range 2 through 36 specifying the base to use for
-    representing numeric values.
+- `radix` {{optional_inline}}
+  - : BigInt 값을 표현하기 위해 사용할 기저를 지정하기 위해 사용하는 2부터 36까지의 정수. 기본 값은 10.
 
-### Return value
+### 반환 값
 
-A string representing the specified {{jsxref("BigInt")}} object.
+명시된 {{jsxref("BigInt")}} 값을 표현하는 문자열
 
-### Exceptions
+### 예외
 
 - {{jsxref("RangeError")}}
-  - : If `toString()` is given a radix less than 2 or greater than 36, a
-    {{jsxref("RangeError")}} is thrown.
+  - : `radix`가 2 미만이거나 36 초과라면 발생
 
-## Description
+## 설명
 
-The {{jsxref("BigInt")}} object overrides the `toString()` method of the
-{{jsxref("Object")}} object; it does not inherit
-{{jsxref("Object.prototype.toString()")}}. For {{jsxref( "BigInt")}} objects, the
-`toString()` method returns a string representation of the object in the
-specified radix.
+{{jsxref("BigInt")}} 객체는 {{jsxref("Object")}}의 `toString` 메서드를 재정의합니다. 즉 {{jsxref("Object.prototype.toString()")}}를 상속받지 않습니다.
+{{jsxref("BigInt")}} 값의 경우 `toString()` 메서드는 값을 명시된 기저에 따라 표현하는 문자열을 반환합니다.
 
-The `toString()` method parses its first argument, and attempts to return a
-string representation in the specified radix (base). For radixes above 10, the letters
-of the alphabet indicate numerals greater than 9. For example, for hexadecimal numbers
-(base 16) `a` through `f` are used.
+기저가 10을 초과할 경우 알파벳 문자는 9 이상의 숫자를 가리킵니다. 예를 들어 16진수에서는 `a`부터 `f`까지 사용됩니다.
 
-If the `radix` is not specified, the preferred radix is assumed to be 10.
+명시된 BigInt 값이 음수일 경우 부호는 보존됩니다. 기저가 2일 경우에도 마찬가지 입니다. 반환되는 문자열은 앞에 `-`부호가 붙은 양의 2진 표현이며, BigInt 값의 2의 보수가 **아닙니다**.
 
-If the `bigIntObj` is negative, the sign is preserved. This is the case even
-if the radix is 2; the string returned is the positive binary representation of the
-`bigIntObj` preceded by a `-` sign, **not** the two's
-complement of the `bigIntObj`.
+`toString()` 메서드는 `this` 값이 `BigInt` 원시 값 또는 래퍼 객체여야 합니다. 이 메서드는 다른 `this` 값을 강제로 BigInt 값으로 변환하려 하지 않고 {{jsxref("TypeError")}}를 발생시킵니다.
 
-## Examples
-
-### Using `toString`
+`BigInt`는 [`[@@toPrimitive]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 메서드를 가지고 있지 않기 때문에 [템플릿 리터럴](/ko/docs/Web/JavaScript/Reference/Template_literals)과 같이 `BigInt` 객체가 문자열이 기대되는 문맥에서 사용되었을 때 JavaScript는 `toString()`를 자동적으로 호출합니다. 그러나 BigInt 원시 값은 `toString()` 메서드를 참조하여 [문자열로 강제 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)하지 않고, 초기 `toString()` 구현과 동일한 알고리즘을 사용하여 직접 변환됩니다.
 
 ```js
-17n.toString();      // '17'
-66n.toString(2);     // '1000010'
-254n.toString(16);   // 'fe'
--10n.toString(2);    // -1010'
--0xffn.toString(2);  // '-11111111'
+BigInt.prototype.toString = () => "Overridden";
+console.log(`${1n}`); // "1"
+console.log(`${Object(1n)}`); // "Overridden"
 ```
 
-### Negative-zero `BigInt`
+## 예제
 
-There is no negative-zero `BigInt` as there are no negative zeros in
-integers. `-0.0` is an IEEE floating-point concept that only appears in the
-JavaScript {{jsxref("Number")}} type.
+### toString() 사용하기
 
 ```js
-(-0n).toString();      // '0'
-BigInt(-0).toString(); // '0'
+17n.toString(); // "17"
+66n.toString(2); // "1000010"
+254n.toString(16); // "fe"
+(-10n).toString(2); // "-1010"
+(-0xffn).toString(2); // "-11111111"
 ```
 
-## Specifications
+### 음수 0 BigInt
+
+정수에는 음수 0이 없으므로 음수 0의 `BigInt`는 없습니다. `0.0`은 JavaScript [`Number`](/ko/docs/Web/JavaScript/Data_structures#number_type) 유형에만 나타나는 IEEE 부동소수점 개념입니다.
+
+```js
+(-0n).toString(); // "0"
+BigInt(-0).toString(); // "0"
+```
+
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
 - {{jsxref("BigInt.prototype.toLocaleString()")}}
 - {{jsxref("BigInt.prototype.valueOf()")}}

@@ -24,12 +24,12 @@ _`RTCSessionDescription` 接口不继承任何属性_
 
 当前枚举值定义当前会话描述的状态，例如这个属性： {{domxref("RTCSessionDescription.type", "type")}} 。会话描述的值将使用如下值之一。
 
-| Value      | Description                                                                                                                              |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `answer`   | SDP 协议请求内容包含在属性{{domxref("RTCSessionDescription.sdp", "sdp")}}中。换言之，此会话描述描述了商定的配置，并将被发送以完成协商。. |
-| `offer`    | 该会话描述对象描述首次握手的请求/响应。会话过程从发送方到接收方。                                                                        |
-| `pranswer` | 会话描述对象描述一个临时响应；也就是说，它是对以前的提议或临时答案的响应。                                                               |
-| `rollback` | 具有空会话描述的这种特殊类型用于回滚到以前的稳定状态。                                                                                   |
+| Value      | Description                                                                                                                             |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `answer`   | SDP 协议请求内容包含在属性{{domxref("RTCSessionDescription.sdp", "sdp")}}中。换言之，此会话描述描述了商定的配置，并将被发送以完成协商。 |
+| `offer`    | 该会话描述对象描述首次握手的请求/响应。会话过程从发送方到接收方。                                                                       |
+| `pranswer` | 会话描述对象描述一个临时响应；也就是说，它是对以前的提议或临时答案的响应。                                                              |
+| `rollback` | 具有空会话描述的这种特殊类型用于回滚到以前的稳定状态。                                                                                  |
 
 ## 方法
 
@@ -40,35 +40,41 @@ _`RTCSessionDescription` 不继承任何方法。_
 - {{domxref("RTCSessionDescription.toJSON()")}}
   - : 返回一个{{Glossary("JSON")}} 描述对象。该对象包含两个值，{{domxref("RTCSessionDescription.type", "type")}} 和{{domxref("RTCSessionDescription.sdp", "sdp")}}。
 
-## Example
+## 示例
 
 ```js
 signalingChannel.onmessage = function (evt) {
-    if (!pc)
-        start(false);
+  if (!pc) start(false);
 
-    var message = JSON.parse(evt.data);
-    if (message.sdp)
-        pc.setRemoteDescription(new RTCSessionDescription(message), function () {
-            // if we received an offer, we need to answer
-            if (pc.remoteDescription.type == "offer")
-                pc.createAnswer(localDescCreated, logError);
-        }, logError);
-    else
-        pc.addIceCandidate(new RTCIceCandidate(message.candidate),
-            function () {}, logError);
+  var message = JSON.parse(evt.data);
+  if (message.sdp)
+    pc.setRemoteDescription(
+      new RTCSessionDescription(message),
+      function () {
+        // if we received an offer, we need to answer
+        if (pc.remoteDescription.type == "offer")
+          pc.createAnswer(localDescCreated, logError);
+      },
+      logError,
+    );
+  else
+    pc.addIceCandidate(
+      new RTCIceCandidate(message.candidate),
+      function () {},
+      logError,
+    );
 };
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)
-- {{domxref("RTCPeerConnection.setLocalDescription()")}} and {{domxref("RTCPeerConnection.setRemoteDescription()")}}
+- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)
+- {{domxref("RTCPeerConnection.setLocalDescription()")}} 和 {{domxref("RTCPeerConnection.setRemoteDescription()")}}

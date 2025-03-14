@@ -9,7 +9,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Infinity
 
 {{js_property_attributes(0,0,0)}}
 
-{{EmbedInteractiveExample("pages/js/globalprops-infinity.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - infinity")}}
+
+```js interactive-example
+const maxNumber = Math.pow(10, 1000); // Max positive number
+
+if (maxNumber === Infinity) {
+  console.log("Let's call it Infinity!");
+  // Expected output: "Let's call it Infinity!"
+}
+
+console.log(1 / maxNumber);
+// Expected output: 0
+```
 
 ## 解説
 
@@ -26,12 +38,12 @@ ECMAScript 5 の仕様では、`Infinity` は読み取り専用です (JavaScrip
 ### Infinity の使用
 
 ```js
-console.log(Infinity          ); /* Infinity */
-console.log(Infinity + 1      ); /* Infinity */
+console.log(Infinity); /* Infinity */
+console.log(Infinity + 1); /* Infinity */
 console.log(Math.pow(10, 1000)); /* Infinity */
-console.log(Math.log(0)       ); /* -Infinity */
-console.log(1 / Infinity      ); /* 0 */
-console.log(1 / 0             ); /* Infinity */
+console.log(Math.log(0)); /* -Infinity */
+console.log(1 / Infinity); /* 0 */
+console.log(1 / 0); /* Infinity */
 ```
 
 ## 仕様書

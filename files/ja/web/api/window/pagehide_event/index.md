@@ -1,5 +1,5 @@
 ---
-title: 'Window: pagehide イベント'
+title: "Window: pagehide イベント"
 slug: Web/API/Window/pagehide_event
 ---
 
@@ -33,33 +33,34 @@ slug: Web/API/Window/pagehide_event
 この例では、イベントハンドラーが `pagehide` イベントを監視するために確立され、ページが再利用できるように保存されようとするときに特殊な扱いを行います。
 
 ```js
-window.addEventListener("pagehide", event => {
-  if (event.persisted) {
-    /* このページは破棄されないので、後で再利用することができます */
-  }
-}, false);
+window.addEventListener(
+  "pagehide",
+  (event) => {
+    if (event.persisted) {
+      /* このページは破棄されないので、後で再利用することができます */
+    }
+  },
+  false,
+);
 ```
 
 これは {{domxref("Window.onpagehide", "onpagehide")}} イベントハンドラープロパティを {{domxref("Window")}} 上で利用することで書くこともできます。
 
 ```js
-window.onpagehide = event => {
+window.onpagehide = (event) => {
   if (event.persisted) {
     /* このページは破棄されないので、後で再利用することができます */
   }
-}
+};
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'browsing-the-web.html#event-pagehide', 'pagehide')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
-| {{SpecName('HTML5 W3C', 'browsers.html#event-pagehide', 'pagehide')}}             | {{Spec2('HTML5 W3C')}}     |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.pagehide_event")}}
+{{Compat}}
 
 ## 関連情報
 

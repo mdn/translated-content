@@ -3,15 +3,50 @@ title: Number.NaN
 slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
 ---
 
-{{JSRef("Global_Objects", "Number")}}
+{{JSRef}}
 
-## 概述
+**`Number.NaN`** 静态数据属性表示非数字值，等同于 {{jsxref("NaN")}}。有关 `NaN` 的行为的更多信息，请参阅[全局属性的描述](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN)。
 
-**`Number.NaN`** 表示“非数字”（Not-A-Number）。和 {{jsxref("Global_Objects/NaN", "NaN")}} 相同。
+{{InteractiveExample("JavaScript Demo: Number.NaN", "taller")}}
 
-不必创建一个 {{jsxref("Global_Objects/Number", "Number")}} 实例来访问该属性，使用 `Number.NaN` 来访问该静态属性。
+```js interactive-example
+function clean(x) {
+  // eslint-disable-next-line use-isnan
+  if (x === Number.NaN) {
+    // Can never be true
+    return null;
+  }
+  if (isNaN(x)) {
+    return 0;
+  }
+}
 
-{{js_property_attributes(0,0,0)}}
+console.log(clean(Number.NaN));
+// Expected output: 0
+```
+
+## 值
+
+数字值 {{jsxref("NaN")}}。
+
+{{js_property_attributes(0, 0, 0)}}
+
+## 描述
+
+由于 `NaN` 是 {{jsxref("Number")}} 的静态属性，你应该始终将其用作 `Number.NaN`，而不是作为一个数字值的属性。
+
+## 示例
+
+### 检查值是否为数字
+
+```js
+function sanitize(x) {
+  if (isNaN(x)) {
+    return Number.NaN;
+  }
+  return x;
+}
+```
 
 ## 规范
 
@@ -21,7 +56,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- 全局对象 {{jsxref("Global_Objects/NaN", "NaN")}}
-- {{jsxref("Global_Objects/Number", "Number")}}
+- {{jsxref("NaN")}}
+- {{jsxref("Number.isNaN()")}}

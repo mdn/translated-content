@@ -1,15 +1,14 @@
 ---
 title: その他のリソース
 slug: orphaned/Web/SVG/Other_Resources
-original_slug: Web/SVG/Other_Resources
 ---
 
 こちらは SVG の追加リソースの一覧です。
 
 - [Mozilla SVG Resources](http://www.croczilla.com/svg/)
-- [SVG.org](http://svg.org/)
+- [SVG.org](https://svg.org/)
 - [SVGBasics Tutorials](http://www.svgbasics.com/)
-- [W3C SVG Homepage](http://www.w3.org/Graphics/SVG/)
+- [W3C SVG Homepage](https://www.w3.org/Graphics/SVG/)
 - [SVG Wiki](http://svg-whiz.com/wiki/)
 - [http://wiki.svg.org/index.php?title=...\_Configuration](http://wiki.svg.org/index.php?title=Server_Configuration)
 

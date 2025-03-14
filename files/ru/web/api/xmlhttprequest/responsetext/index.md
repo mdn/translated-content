@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.responseText
 slug: Web/API/XMLHttpRequest/responseText
-translation_of: Web/API/XMLHttpRequest/responseText
 ---
 
 {{APIRef('XMLHttpRequest')}}
@@ -31,18 +30,18 @@ var resultText = XMLHttpRequest.responseText;
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 // responseType должно быть пустой строкой, либо "text"
-xhr.responseType = 'text';
+xhr.responseType = "text";
 
 xhr.onload = function () {
-    if (xhr.readyState === xhr.DONE) {
-        if (xhr.status === 200) {
-            console.log(xhr.response);
-            console.log(xhr.responseText);
-        }
+  if (xhr.readyState === xhr.DONE) {
+    if (xhr.status === 200) {
+      console.log(xhr.response);
+      console.log(xhr.responseText);
     }
+  }
 };
 
 xhr.send(null);
@@ -50,10 +49,8 @@ xhr.send(null);
 
 ## Спецификации
 
-| Спецификация                                                                     | Статус                               | Comment                |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-responsetext-attribute')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}

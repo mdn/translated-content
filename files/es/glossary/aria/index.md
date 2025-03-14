@@ -1,8 +1,9 @@
 ---
 title: ARIA
 slug: Glossary/ARIA
-translation_of: Glossary/ARIA
 ---
+
+{{GlossarySidebar}}
 
 **ARIA** (_Accessible Rich {{glossary("Internet")}} Applications_) es una especificación de la {{Glossary("W3C")}} para agregar semantica y otros metadatos a {{Glossary("HTML")}} para ayudar a los usuarios con tecnologia de apoyo.
 

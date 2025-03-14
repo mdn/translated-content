@@ -13,22 +13,35 @@
     "type": "git",
     "url": "git+https://github.com/mdn/translated-content.git"
   },
+  "type": "module",
   "scripts": {
-    "fix:json": "prettier -w \"**/*.json\"",
-    "fix:md": "markdownlint-cli2-fix \"**/*.md\"",
+    "fix:json": "prettier -w \"**/*.json(c)?\"",
+    "fix:md": "markdownlint-cli2 --fix \"**/*.md\" && node ./scripts/check-url-locale.js --fix files && yarn autocorrect --fix . && prettier -w \"**/*.md\"",
     "fix:yml": "prettier -w \"**/*.yml\"",
-    "lint:json": "prettier -c \"**/*.json\"",
-    "lint:md": "markdownlint-cli2 \"**/*.md\"",
+    "lint:json": "prettier -c \"**/*.json(c)?\"",
+    "lint:md": "markdownlint-cli2 \"**/*.md\" && node ./scripts/check-url-locale.js files && yarn autocorrect --lint . && prettier -c \"**/*.md\"",
     "lint:yml": "prettier -c \"**/*.yml\"",
-    "prepare": "husky install"
+    "prepare": "husky || true"
   },
   "engines": {
-    "node": "^16.0.0 || >=18.0.0"
+    "node": ">=20"
   },
   "dependencies": {
-    "husky": "8.0.1",
-    "lint-staged": "13.0.3",
-    "markdownlint-cli2": "0.5.1",
-    "prettier": "2.8.0"
-  }
+    "autocorrect-node": "2.13.0",
+    "fdir": "^6.4.3",
+    "franc-min": "^6.2.0",
+    "front-matter": "^4.0.2",
+    "html-to-text": "^9.0.5",
+    "husky": "9.1.7",
+    "lint-staged": "15.5.0",
+    "markdown-it": "^14.1.0",
+    "markdownlint-cli2": "0.17.2",
+    "markdownlint-rule-search-replace": "1.2.0",
+    "mdast-util-from-markdown": "^2.0.2",
+    "ora": "^8.2.0",
+    "prettier": "3.5.3",
+    "unist-util-visit": "^5.0.0",
+    "yargs": "^17.7.2"
+  },
+  "packageManager": "yarn@1.22.22"
 }

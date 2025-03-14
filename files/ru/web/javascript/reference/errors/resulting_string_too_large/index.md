@@ -1,7 +1,6 @@
 ---
-title: 'RangeError: repeat count must be less than infinity'
+title: "RangeError: repeat count must be less than infinity"
 slug: Web/JavaScript/Reference/Errors/Resulting_string_too_large
-translation_of: Web/JavaScript/Reference/Errors/Resulting_string_too_large
 ---
 
 {{jsSidebar("Errors")}}
@@ -29,17 +28,17 @@ RangeError: Invalid count value (Chrome)
 ### Неверно
 
 ```js example-bad
-'abc'.repeat(Infinity); // RangeError
-'a'.repeat(2**28);      // RangeError
+"abc".repeat(Infinity); // RangeError
+"a".repeat(2 ** 28); // RangeError
 ```
 
 ### Верно
 
 ```js example-good
-'abc'.repeat(0);    // ''
-'abc'.repeat(1);    // 'abc'
-'abc'.repeat(2);    // 'abcabc'
-'abc'.repeat(3.5);  // 'abcabcabc' (count will be converted to integer)
+"abc".repeat(0); // ''
+"abc".repeat(1); // 'abc'
+"abc".repeat(2); // 'abcabc'
+"abc".repeat(3.5); // 'abcabcabc' (count will be converted to integer)
 ```
 
 ## Смотрите также

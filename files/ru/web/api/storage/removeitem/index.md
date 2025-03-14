@@ -1,11 +1,6 @@
 ---
 title: Storage.removeItem()
 slug: Web/API/Storage/removeItem
-tags:
-  - API
-  - Storage
-  - Справка
-translation_of: Web/API/Storage/removeItem
 ---
 
 {{APIRef("Web Storage API")}}
@@ -33,21 +28,19 @@ _Метод не возвращает значений._
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'red');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'myCat.png');
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "myCat.png");
 
-  localStorage.removeItem('image');
+  localStorage.removeItem("image");
 }
 ```
 
 > **Примечание:**чтобы увидеть использование этой функции на реальном примере, загляните в [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
-## Стандарты
+## Спецификации
 
-| Стандарт                                                                                     | Статус                           | Комментарий |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('Web Storage', '#dom-storage-removeitem', 'removeItem()')}} | {{Spec2('Web Storage')}} |             |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

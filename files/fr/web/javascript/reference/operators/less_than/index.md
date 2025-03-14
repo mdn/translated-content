@@ -1,24 +1,33 @@
 ---
 title: Inférieur strict (<)
 slug: Web/JavaScript/Reference/Operators/Less_than
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.less_than
 ---
 
 {{jsSidebar("Operators")}}
 
 L'opérateur inférieur strict (`<`) renvoie `true` si son opérande gauche est strictement inférieur à son opérande droit et `false` sinon.
 
-{{EmbedInteractiveExample("pages/js/expressions-less-than.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Less than operator")}}
+
+```js interactive-example
+console.log(5 < 3);
+// Expected output: false
+
+console.log(3 < 3);
+// Expected output: false
+
+// Compare bigint to number
+console.log(3n < 5);
+// Expected output: true
+
+console.log("aa" < "ab");
+// Expected output: true
+```
 
 ## Syntaxe
 
 ```js
-x < y
+x < y;
 ```
 
 ## Description
@@ -42,57 +51,57 @@ Les opérandes sont comparés avec l'algorithme de [comparaison abstraite relati
 ### Comparaison numérique
 
 ```js
-console.log(5 < 3);            // false
-console.log(3 < 3);            // false
-console.log(3 < 5);            // true
+console.log(5 < 3); // false
+console.log(3 < 3); // false
+console.log(3 < 5); // true
 ```
 
 ### Comparaison entre un nombre et un BigInt
 
 ```js
-console.log(5n < 3);           // false
-console.log(3 < 5n);           // true
+console.log(5n < 3); // false
+console.log(3 < 5n); // true
 ```
 
 ### Comparaison entre chaînes de caractères
 
 ```js
-console.log("a" < "b");        // true
-console.log("a" < "a");        // false
-console.log("a" < "3");        // false
+console.log("a" < "b"); // true
+console.log("a" < "a"); // false
+console.log("a" < "3"); // false
 ```
 
 ### Comparaison entre nombres et chaînes de caractères
 
 ```js
-console.log("5" < 3);          // false
-console.log("3" < 3);          // false
-console.log("3" < 5);          // true
+console.log("5" < 3); // false
+console.log("3" < 3); // false
+console.log("3" < 5); // true
 
-console.log("coucou" < 5);      // false
-console.log(5 < "coucou");      // false
+console.log("coucou" < 5); // false
+console.log(5 < "coucou"); // false
 
-console.log("5" < 3n);         // false
-console.log("3" < 5n);         // true
+console.log("5" < 3n); // false
+console.log("3" < 5n); // true
 ```
 
 ### Comparaison avec des booléens, null, undefined, NaN
 
 ```js
-console.log(true < false);     // false
-console.log(false < true);     // true
+console.log(true < false); // false
+console.log(false < true); // true
 
-console.log(0 < true);         // true
-console.log(true < 1);         // false
+console.log(0 < true); // true
+console.log(true < 1); // false
 
-console.log(null < 0);         // false
-console.log(null < 1);         // true
+console.log(null < 0); // false
+console.log(null < 1); // true
 
-console.log(undefined < 3);    // false
-console.log(3 < undefined);    // false
+console.log(undefined < 3); // false
+console.log(3 < undefined); // false
 
-console.log(3 < NaN);          // false
-console.log(NaN < 3);          // false
+console.log(3 < NaN); // false
+console.log(NaN < 3); // false
 ```
 
 ## Spécifications

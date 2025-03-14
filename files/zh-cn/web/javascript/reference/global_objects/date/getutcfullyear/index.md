@@ -3,11 +3,22 @@ title: Date.prototype.getUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`getUTCFullYear()`** 以世界时为标准，返回一个指定的日期对象的年份。
 
-{{EmbedInteractiveExample("pages/js/date-getutcfullyear.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getUTCFullYear()")}}
+
+```js interactive-example
+const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+const date2 = new Date("December 31, 1975, 23:15:30 GMT-11:00");
+
+console.log(date1.getUTCFullYear());
+// Expected output: 1975
+
+console.log(date2.getUTCFullYear());
+// Expected output: 1976
+```
 
 ## 语法
 
@@ -23,9 +34,9 @@ dateObj.getUTCFullYear()
 
 `getUTCFullYear()` 返回一个绝对数值，符合 Year-2000 标准，例如 1995。
 
-## 例子
+## 示例
 
-### 例子：使用 `getUTCFullYear()` 方法
+### 示例：使用 `getUTCFullYear()` 方法
 
 下面的例子是把当前年份的四位数值复制给变量 `year`。
 
@@ -42,7 +53,7 @@ var year = today.getUTCFullYear();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getFullYear()")}}
 - {{jsxref("Date.prototype.setFullYear()")}}

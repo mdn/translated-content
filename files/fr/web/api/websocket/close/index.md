@@ -1,7 +1,6 @@
 ---
 title: WebSocket.close()
 slug: Web/API/WebSocket/close
-browser-compat: api.WebSocket.close
 ---
 
 {{APIRef("Web Sockets API")}}
@@ -45,7 +44,8 @@ WebSocket.close(code, reason);
 
     non appairés.
 
-> **Note :** Avant Gecko 8.0, cette méthode ne prenait en charge aucun paramètre.
+> [!NOTE]
+> Avant Gecko 8.0, cette méthode ne prenait en charge aucun paramètre.
 
 ## Spécifications
 

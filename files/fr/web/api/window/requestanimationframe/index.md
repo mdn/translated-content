@@ -1,29 +1,26 @@
 ---
 title: Window.requestAnimationFrame()
 slug: Web/API/Window/requestAnimationFrame
-page-type: web-api-instance-method
-translation_of: Web/API/window/requestAnimationFrame
-browser-compat: api.Window.requestAnimationFrame
-l10n:
-  sourceCommit: 2665f98fa021d22f9b0678f836fba25590bd6aa4
 ---
 
 {{APIRef}}
 
 La méthode **`window.requestAnimationFrame()`** indique au navigateur qu'on souhaite exécuter une animation et demande que celui-ci exécute une fonction spécifique de mise à jour de l'animation, avant le prochain rafraîchissement à l'écran du navigateur. Cette méthode prend comme argument une fonction de rappel qui sera appelée avant le rafraîchissement du navigateur.
 
-> **Note :** Si vous souhaitez animer une nouvelle <i lang="en">frame</i> durant le prochain affichage, la fonction de rappel doit de nouveau appeler la méthode `requestAnimationFrame()`. Autrement dit, `requestAnimationFrame()` ne fonctionne qu'une fois.
+> [!NOTE]
+> Si vous souhaitez animer une nouvelle <i lang="en">frame</i> durant le prochain affichage, la fonction de rappel doit de nouveau appeler la méthode `requestAnimationFrame()`. Autrement dit, `requestAnimationFrame()` ne fonctionne qu'une fois.
 
 Cette méthode doit être appelée dès que le code est prêt à rafraîchir l'animation. La fonction de rappel contenant l'animation sera ainsi appelée par le navigateur avant le prochain rafraîchissement. La fonction de rappel est généralement appelée 60 fois par seconde. En réalité, cette fréquence correspondra le plus souvent au taux de rafraîchissement de l'écran dans la plupart des navigateurs, d'après les recommandations du W3C. Les appels à `requestAnimationFrame()` sont mis en pause dans la plupart des navigateurs lors d'une exécution dans des onglets en arrière-plan ou dans des [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) masquées afin d'améliorer les performances et la durée de vie des batteries.
 
 La fonction de rappel reçoit un seul argument, une valeur [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp), qui indique le temps actuel (exprimé en nombre de millisecondes écoulées depuis [l'origine temporelle](/fr/docs/Web/API/DOMHighResTimeStamp#lorigine_temporelle)). Lorsque plusieurs fonctions de rappel sont mises en attente et que `requestAnimationFrame()` commence à se déclencher pour une image donnée, chaque fonction reçoit le même horodatage, même si du temps s'est écoulé pendant le calcul de la fonction de rappel précédente (dans l'exemple ci-après, on anime uniquement l'image lorsque l'horodatage change, c'est-à-dire à la première fonction de rappel). Cette valeur temporelle est un nombre décimal, exprimant une valeur en millisecondes, avec une précision minimale de 1ms (1000 µs).
 
-> **Attention :** Assurez-vous de toujours utiliser le premier argument (ou une autre méthode pour obtenir le temps courant) afin de calculer la progression nécessaire de l'animation pour une <i lang="en">frame</i>. Sinon, l'animation s'exécutera plus rapidement sur les écrans avec une fréquence de rafraîchissement plus élevée. Voyez l'exemple ci-après pour une technique permettant de faire ce calcul.
+> [!WARNING]
+> Assurez-vous de toujours utiliser le premier argument (ou une autre méthode pour obtenir le temps courant) afin de calculer la progression nécessaire de l'animation pour une <i lang="en">frame</i>. Sinon, l'animation s'exécutera plus rapidement sur les écrans avec une fréquence de rafraîchissement plus élevée. Voyez l'exemple ci-après pour une technique permettant de faire ce calcul.
 
 ## Syntaxe
 
 ```js
-requestAnimationFrame(callback)
+requestAnimationFrame(callback);
 ```
 
 ### Paramètres
@@ -40,14 +37,14 @@ Une valeur entière de type `long` qui est un identifiant unique pour la requêt
 Dans cet exemple, un élément est animé pour 2 secondes (2000 millisecondes). L'élément se déplace à une vitesse de 0.1px/ms vers la droite. Sa position relative (en pixels CSS) peut donc être calculée en fonction du temps écoulé entre le début de l'animation (en millisecondes) et `0.1 * ecoule`. La position finale de l'élément est située 200px (`0.1 * 2000`) à droite de sa position initiale.
 
 ```js
-const element = document.getElementById('un-élément-à-animer');
+const element = document.getElementById("un-élément-à-animer");
 let debut, tempsPrecedent;
 let fini = false;
 
 function iteration(chrono) {
   if (debut === undefined) {
     debut = chrono;
-    }
+  }
   const ecoule = chrono - debut;
 
   if (tempsPrecedent !== chrono) {

@@ -19,8 +19,8 @@ debugger;
 
 ```js
 function potentiallyBuggyCode() {
-    debugger;
-    // 執行並驗證一些潛在的問題、或是單步執行之類的。
+  debugger;
+  // 執行並驗證一些潛在的問題、或是單步執行之類的。
 }
 ```
 
@@ -39,4 +39,4 @@ function potentiallyBuggyCode() {
 ## 參見
 
 - [JavaScript 除錯](/zh-TW/docs/Debugging_JavaScript)
-- [Firefox 開發工具的的除錯器](/zh-TW/docs/Tools/Debugger)
+- [Firefox 開發工具的的除錯器](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)

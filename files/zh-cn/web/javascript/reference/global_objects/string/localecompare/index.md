@@ -5,123 +5,144 @@ slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 
 {{JSRef}}
 
-**`localeCompare()`** 方法返回一个数字来指示一个参考字符串是否在排序顺序前面或之后或与给定字符串相同。
+**`localeCompare()`** 方法返回一个数字，表示参考字符串在排序顺序中是在给定字符串之前、之后还是与之相同。在支持 [`Intl.Collator` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) 的实现中，该方法仅是调用了 `Intl.Collator` 方法。
 
-新的 `locales` 和 `options` 参数能让应用程序定制函数的行为，即指定用来排序的语言。`locales` 和 `options` 参数完全取决于实现，在旧的实现中忽略这两个参数。
+当比较大量字符串时，例如对大型数组进行排序，最好创建一个 {{jsxref("Intl.Collator")}} 对象，并使用其 {{jsxref("Intl/Collator/compare", "compare()")}} 方法提供的函数。
+
+{{InteractiveExample("JavaScript Demo: String.localeCompare()")}}
+
+```js interactive-example
+const a = "réservé"; // With accents, lowercase
+const b = "RESERVE"; // No accents, uppercase
+
+console.log(a.localeCompare(b));
+// Expected output: 1
+console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
+// Expected output: 0
+```
 
 ## 语法
 
-```plain
-referenceStr.localeCompare(compareString[, locales[, options]])
+```js-nolint
+localeCompare(compareString)
+localeCompare(compareString, locales)
+localeCompare(compareString, locales, options)
 ```
 
 ### 参数
 
-查阅[浏览器支持](#浏览器支持)部分来确定哪些浏览器支持 `locales` 参数和 `options` 参数，[在功能检测中检查对 `locales`、`options` 参数的支持](检查浏览器对扩展参数的支持)。
+`locales` 和 `options` 参数可以自定义函数的行为，并让应用程序指定应使用哪种语言的格式约定。
+
+在支持 [`Intl.Collator` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) 的实现中，这些参数与 [`Intl.Collator()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator) 构造函数的参数完全对应。而对于不支持 `Intl.Collator` 的实现，应忽略这两个参数，使得返回的比较结果完全依赖于实现——只要求其保持*一致*。
 
 - `compareString`
-  - : 用来比较的字符串
-- **`locales`**
-  - : 可选。用来表示一种或多种语言或区域的一个符合 [BCP 47](https://tools.ietf.org/html/rfc5646) 标准的字符串或一个字符串数组。`locales` 参数的一般形式与解释，详情请参考 [Intl page](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation)。下列的 Unicode 扩展关键词是允许的：**`co`**为了某些地域多样的排序规则。可能的值包括： `"big5han"`, `"dict"`, `"direct"`, `"ducet"`, `"gb2312"`, `"phonebk"`, `"phonetic"`, `"pinyin"`, `"reformed"`, `"searchjl"`, `"stroke"`, `"trad"`, `"unihan"`。 `"standard"` 和`"search"` 这两个值是被忽略的; 它们被 `options` 的属性 `usage` 代替 (往下看)。**`kn`**指定数值排序是否应该被使用，像是这样 "1" < "2" < "10"。可能的值是 `"true"` 和 `"false"`。这个选项能被通过`options` 属性设置或通过 Unicode 扩展。假如两个都被设置了，则 `options` 优先。（*"*language*-*region\*-u-kn-true|false"）**`kf`** 指定是否优先对大写字母或小写字母排序。可能的值有 `"upper"`, `"lower"`, 或 `"false"` (use the locale's default)。这个选项能被通过 `options` 属性设置或通过 Unicode 扩展。假如两个都被设置了，则 `options` 优先。*（"*language*-*region*-u-kf-upper|lower|false"）*
-- `options`
+  - 与 `referenceStr` 进行比较的字符串。所有值都会[被强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)，因此省略该参数或传入 `undefined` 会导致 `localeCompare()` 与字符串 `"undefined"` 进行比较，这通常不是你想要的。
+- `locales` {{optional_inline}}
 
-  - : 可选。支持下列的一些或全部属性的一个对象：
+  - : 表示缩写语言代码（BCP 47 language tag）的字符串，或由此类字符串组成的数组。对应于 `Intl.Collator()` 构造函数的 [`locales`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#locales) 参数。
 
-    - `localeMatcher`
-      - : 地域匹配算法的使用。可能的值是 `"lookup"` 和 `"best fit"`; 默认的值是 `"best fit"`。更多相关的资料，请参考 [Intl page](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation).
-    - `usage`
-      - : 指定比较的目标是排序或者是搜索。可能的值是 `"sort"` 和 `"search"`；默认是 `"sort"`.
-    - `sensitivity`
+    在不支持 `Intl.Collator` 的实现中，该参数会被忽略，并且通常会使用主机的区域设置。
 
-      - : 指定排序程序的敏感度（Which differences in the strings should lead to non-zero result values.）可能的有：
+- `options` {{optional_inline}}
 
-        - `"base"`: 只有不同的字母字符串比较是不相等的。举个例子：`a ≠ b`, `a = á`, `a = A`.
-        - `"accent"`: 只有不同的字母或读音比较是不相等的。举个例子：`a ≠ b`, `a ≠ á`, `a = A`.
-        - `"case"`: 只有不同的字母或大小写比较是不相等的。举个例子：`a ≠ b`, `a = á`, `a ≠ A`.
-        - `"variant"`: 不同的字母或读音及其它有区别的标志或大小写都是不相等的，还有其它的差异可能也会考虑到。举个例子：`a ≠ b`, `a ≠ á`, `a ≠ A`.
+  - : 一个调整输出格式的对象。对应于 `Intl.Collator()` 构造函数的 [`options`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#参数) 参数。
 
-        The default is `"variant"` for usage `"sort"`; it's locale dependent for usage `"search"`.
+    在不支持 `Intl.Collator` 的实现中，该参数会被忽略。
 
-    - `ignorePunctuation`
-      - : 指定是否忽略标点。可能的值是 `true` and `false`; 默认为 `false`.
-    - `numeric`
-      - : 是否指定使用数字排序，像这样 "1" < "2" < "10"。可能的值是 `true` 和 `false`；默认为 `false`。这个选项能被通过`options` 属性设置或通过 Unicode 扩展。假如两个都被设置了，则 `options` 优先。实现不用必须支持这个属性。
-    - `caseFirst`
-      - : 指定大小写有限排序。可能的值有 `"upper"`、`"lower"` 或 `"false"` (use the locale's default); 默认为 `"false"`. 这个选项能被通过 `options` 属性设置或通过 Unicode 扩展。假如两个都被设置了，则 `options` 优先。实现不用必须支持这个属性。
+参见 [`Intl.Collator()` 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator)以详细了解 `locales` 和 `options` 参数以及如何使用它们。
 
-### **返回值**
+### 返回值
 
-如果引用字符存在于比较字符之前则为**负数**; 如果引用字符存在于比较字符之后则为**正数**; 相等的时候返回 **0** .
+如果引用字符串（`referenceStr`）存在于比较字符串（`compareString`）之前则为**负数**；如果引用字符串存在于比较字符串之后则为**正数**；相等的时候返回 `0`。
 
-{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Collator', 'Parameters')}}
+在支持 `Intl.Collator` 的实现中，此方法等价于 `new Intl.Collator(locales, options).compare(referenceStr, compareString)`。
 
 ## 描述
 
-返回一个数字表示是否 **引用字符串** 在排序中位于 **比较字符串** 的前面，后面，或者二者相同。
+返回一个数字表示 `referenceStr` 在排序中是否位于 `compareString` 的前面、后面或二者相同。
 
-- 当 **引用字符串** 在 **比较字符串** 前面时返回 -1
-- 当 **引用字符串** 在 **比较字符串** 后面时返回 1
-- 相同位置时返回 0
+- 当 `referenceStr` 在 `compareString` 前面时返回负数
+- 当 `referenceStr` 在 `compareString` 后面时返回正数
+- 当两者相等时返回 `0`
 
-**切勿依赖于 -1 或 1 这样特定的返回值。**不同浏览器之间（以及不同浏览器版本之间）返回的正负数的值各有不同，因为 W3C 规范中只要求返回值是正值和负值，而没有规定具体的值。一些浏览器可能返回 -2 或 2 或其他一些负的、正的值。
+> [!WARNING]
+> 切勿依赖于 `-1` 或 `1` 这样特定的返回值。
+>
+> 不同浏览器之间（以及不同浏览器版本之间）返回的正负数的值各有不同，因为 W3C 规范中只要求返回值是正值和负值，而没有规定具体的值。一些浏览器可能返回 `-2` 或 `2` 或一些其他的负、正值。
 
 ## 示例
 
-### 使用 `localeCompare()`
+### 使用 localeCompare()
 
 ```js
-// The letter "a" is before "c" yielding a negative value
-'a'.localeCompare('c');
-// -2 or -1 (or some other negative value)
+// 字母 "a" 在 "c" 之前，产生负值
+"a".localeCompare("c"); // -2 or -1 (or some other negative value)
 
-// Alphabetically the word "check" comes after "against" yielding a positive value
-'check'.localeCompare('against');
-// 2 or 1 (or some other positive value)
+// 按字母顺序，"check" 一词出现在 "against" 之后，产生正值
+"check".localeCompare("against"); // 2 or 1 (or some other positive value)
 
-// "a" and "a" are equivalent yielding a neutral value of zero
-'a'.localeCompare('a');
-// 0
+// "a" 和 "a" 相等，产生中性值 0
+"a".localeCompare("a"); // 0
+```
+
+### 对数组进行排序
+
+`localeCompare()` 可以对数组进行大小写不敏感的排序。
+
+```js
+const items = ["réservé", "Premier", "Cliché", "communiqué", "café", "Adieu"];
+items.sort((a, b) => a.localeCompare(b, "fr", { ignorePunctuation: true }));
+// ['Adieu', 'café', 'Cliché', 'communiqué', 'Premier', 'réservé']
 ```
 
 ### 检查浏览器对扩展参数的支持
 
-`locales` 和 `options` 参数还没有被所有浏览器所支持。检查是否被支持，使用 "i" 参数 (a requirement that illegal language tags are rejected) 判断是否有异常 {{jsxref("RangeError")}} 抛出：
+`locales` 和 `options` 参数还没有被所有浏览器支持。检查是否被支持，可以使用 `"i"` 参数（使用错误的语言代码会抛出异常）判断是否抛出 {{jsxref("RangeError")}} 异常：
 
 ```js
 function localeCompareSupportsLocales() {
   try {
-    'foo'.localeCompare​('bar', 'i');
+    "foo".localeCompare("bar", "i");
   } catch (e) {
-    return e​.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
 ```
 
-### 使用 `locales` 参数
+### 使用 locales
 
-在不同的语言下 `localeCompare()` 所提供的结果是不一致的。为了能让用户得到正确的比较值，通过使用 `locales` 参数来提供要比较的语言 (and possibly some fallback languages) :
-
-```js
-console.log('ä'.localeCompare('z', 'de')); // a negative value: in German, ä sorts with a
-console.log('ä'.localeCompare('z', 'sv')); // a positive value: in Swedish, ä sorts after z
-```
-
-### 使用 `options` 参数
-
-`localeCompare()` 所提供的结果可以通过 `options` 参数来制定：
+在不同的语言下 `localeCompare()` 所提供的结果是不一致的。为了能让用户得到正确的比较值，通过使用 `locales` 参数来提供要比较的语言（可能还需要设置某些回退语言）：
 
 ```js
-// in German, ä has a as the base letter
-console.log('ä'.localeCompare('a', 'de', { sensitivity: 'base' })); // 0
-
-// in Swedish, ä and a are separate base letters
-console.log('ä'.localeCompare('a', 'sv', { sensitivity: 'base' })); // a positive value
+console.log("ä".localeCompare("z", "de")); // 负值：在德语中，ä 排在 z 之前
+console.log("ä".localeCompare("z", "sv")); // 正值：在瑞典语中，ä 排在 z 之后
 ```
 
-## 性能相关
+### 使用 options
 
-当比较大量字符串时，比如比较大量数组时，最好创建一个 {{jsxref("Global_Objects/Collator", "Intl.Collator")}} 对象并使用 {{jsxref("Collator.prototype.compare", "compare")}} 属性所提供的函数。
+`localeCompare()` 所提供的结果可以通过 `options` 参数自定义：
+
+```js
+// 在德语中，ä 以 a 为基础字母
+console.log("ä".localeCompare("a", "de", { sensitivity: "base" })); // 0
+
+// 在瑞典语中，ä 与 a 有着不同的基础字母
+console.log("ä".localeCompare("a", "sv", { sensitivity: "base" })); // a positive value
+```
+
+### 数字排序
+
+```js
+// 默认情况下，"2" > "10"
+console.log("2".localeCompare("10")); // 1
+
+// 使用 options：
+console.log("2".localeCompare("10", undefined, { numeric: true })); // -1
+
+// 使用区域代码：
+console.log("2".localeCompare("10", "en-u-kn-true")); // -1
+```
 
 ## 规范
 
@@ -131,6 +152,6 @@ console.log('ä'.localeCompare('a', 'sv', { sensitivity: 'base' })); // a positi
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
+- [`Intl.Collator`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)

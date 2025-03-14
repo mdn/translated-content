@@ -23,7 +23,6 @@ WebExtension API では、こうしたボタンの種類は "ブラウザーア�
 
 ```json
 {
-
   "description": "Demonstrating toolbar buttons",
   "manifest_version": 2,
   "name": "button-demo",
@@ -39,11 +38,10 @@ WebExtension API では、こうしたボタンの種類は "ブラウザーア�
       "32": "icons/page-32.png"
     }
   }
-
 }
 ```
 
-これは "background.js"という名前の[バックグラウンドスクリプト](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts)と、"icons"ディレクトリーにあるブラウザーアクション(ボタン)を指定します。
+これは "background.js"という名前の[バックグラウンドスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)と、"icons"ディレクトリーにあるブラウザーアクション(ボタン)を指定します。
 
 These icons are from the [bitsies!](https://www.iconfinder.com/iconsets/bitsies) iconset created by Recep Kütük.
 
@@ -59,7 +57,7 @@ These icons are from the [bitsies!](https://www.iconfinder.com/iconsets/bitsies)
 ```js
 function openPage() {
   browser.tabs.create({
-    url: "https://developer.mozilla.org"
+    url: "https://developer.mozilla.org",
   });
 }
 
@@ -70,7 +68,7 @@ browser.browserAction.onClicked.addListener(openPage);
 
 ここで完全な拡張機能は次のようです:
 
-```html
+```plain
 button/
     icons/
         page-16.png
@@ -79,7 +77,7 @@ button/
     manifest.json
 ```
 
-ここで[拡張機能をインストールして](/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)ボタンをクリックします:
+ここで[拡張機能をインストールして](/ja/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)ボタンをクリックします:
 
 {{EmbedYouTube("kwwTowgT-Ys")}}
 
@@ -89,7 +87,6 @@ button/
 
 ```json
 {
-
   "description": "Demonstrating toolbar buttons",
   "manifest_version": 2,
   "name": "button-demo",
@@ -103,7 +100,6 @@ button/
       "32": "icons/page-32.png"
     }
   }
-
 }
 ```
 
@@ -116,21 +112,20 @@ button/
 さてポップアップを作らねばなりません。"popup" というディレクトリーを作成してその中に "choose_page.html" というファイルを作ります。中身は次の通り:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="choose_page.css"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="choose_page.css" />
   </head>
 
-<body>
-  <div class="page-choice">developer.mozilla.org</div>
-  <div class="page-choice">support.mozilla.org</div>
-  <div class="page-choice">addons.mozilla.org</div>
-  <script src="choose_page.js"></script>
-</body>
-
+  <body>
+    <div class="page-choice">developer.mozilla.org</div>
+    <div class="page-choice">support.mozilla.org</div>
+    <div class="page-choice">addons.mozilla.org</div>
+    <script src="choose_page.js"></script>
+  </body>
 </html>
 ```
 
@@ -139,7 +134,8 @@ button/
 "popup" ディレクトリーに"choose_page.css" というファイルを作って、次の中身を入れます:
 
 ```css
-html, body {
+html,
+body {
   width: 300px;
 }
 
@@ -152,7 +148,7 @@ html, body {
 }
 
 .page-choice:hover {
-  background-color: #CFF2F2;
+  background-color: #cff2f2;
 }
 ```
 
@@ -161,16 +157,15 @@ html, body {
 次に、"popup" ディレクトリーに"choose_page.js" ファイルを作成し、次の中身を入れます:
 
 ```js
-document.addEventListener("click", function(e) {
+document.addEventListener("click", function (e) {
   if (!e.target.classList.contains("page-choice")) {
     return;
   }
 
   var chosenPage = "https://" + e.target.textContent;
   browser.tabs.create({
-    url: chosenPage
+    url: chosenPage,
   });
-
 });
 ```
 
@@ -196,7 +191,7 @@ button/
 
 ## ページアクション
 
-[ページアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/Page_actions) はブラウザーアクションと同様ですが、ブラウザー全体でなく特定ページだけに関連するアクションという点だけが異なります。
+[ページアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) はブラウザーアクションと同様ですが、ブラウザー全体でなく特定ページだけに関連するアクションという点だけが異なります。
 
 ブラウザーアクションはいつも見えていて、ページアクションは関連するタブだけに見えています。ページアクションボタンはブラウザーツールバーでなく、URL バーに表示されます。
 

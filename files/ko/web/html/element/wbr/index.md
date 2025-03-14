@@ -1,22 +1,31 @@
 ---
 title: <wbr>
 slug: Web/HTML/Element/wbr
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/wbr
 ---
 
 {{HTMLSidebar}}
 
 **HTML `<wbr>` 요소**는 현재 요소의 줄 바꿈 규칙을 무시하고 브라우저가 줄을 바꿀 수 있는 위치를 나타냅니다.
 
-{{EmbedInteractiveExample("pages/tabbed/wbr.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;wbr&gt;", "tabbed-shorter")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</div>
+```html interactive-example
+<div id="example-paragraphs">
+  <p>Fernstraßenbauprivatfinanzierungsgesetz</p>
+  <p>Fernstraßen<wbr />bau<wbr />privat<wbr />finanzierungs<wbr />gesetz</p>
+  <p>Fernstraßen&shy;bau&shy;privat&shy;finanzierungs&shy;gesetz</p>
+</div>
+```
+
+```css interactive-example
+#example-paragraphs {
+  background-color: white;
+  overflow: hidden;
+  resize: horizontal;
+  width: 9rem;
+  border: 2px dashed #999;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -87,7 +96,9 @@ UTF-8 인코딩을 사용한 페이지의 `<wbr>` 은 `U+200B ZERO-WIDTH SPACE` 
 URL의 줄을 바꿀 때, 문장 부호 다음에 잘린 경우 독자가 URL이 끝난 것으로 혼동할 수 있으므로, *[The Yahoo Style Guide](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/)*는 [URL의 줄바꿈을 문장 부호 이전에 하라](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses)고 추천합니다.
 
 ```html
-<p>http://this<wbr>.is<wbr>.a<wbr>.really<wbr>.long<wbr>.example<wbr>.com/With<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages</p>
+<p>
+  http://this<wbr />.is<wbr />.a<wbr />.really<wbr />.long<wbr />.example<wbr />.com/With<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages
+</p>
 ```
 
 {{EmbedLiveSample("예제")}}
@@ -98,7 +109,7 @@ URL의 줄을 바꿀 때, 문장 부호 다음에 잘린 경우 독자가 URL이
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.wbr")}}
+{{Compat}}
 
 ## 같이 보기
 

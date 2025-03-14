@@ -1,14 +1,14 @@
 ---
 title: aural
 slug: Web/CSS/@media/aural
-original_slug: Web/CSS/aural
 ---
 
 {{CSSRef}} {{deprecated_header}}
 
 `aural` は [CSS](/ja/docs/Web/CSS) の[メディア種別](/ja/docs/Web/CSS/@media#メディア種別)で、音声出力の能力を持った機器に使用されます。
 
-> **メモ:** このメディア種別は [`speech`](/ja/docs/Web/CSS/@media#speech) に置き換えられ、非推奨になりました。
+> [!NOTE]
+> このメディア種別は [`speech`](/ja/docs/Web/CSS/@media#speech) に置き換えられ、非推奨になりました。
 
 ## 構文
 
@@ -28,7 +28,9 @@ CSS の `aural` メディア種別は — [`speech`](/ja/docs/Web/CSS/@media#spe
 
 ```css
 @media aural {
-  body { voice-family: Paul }
+  body {
+    voice-family: Paul;
+  }
 }
 ```
 
@@ -38,7 +40,7 @@ CSS の `aural` メディア種別は — [`speech`](/ja/docs/Web/CSS/@media#spe
 
 ## 関連情報
 
-- [メディアクエリー](/ja/docs/Web/CSS/Media_Queries)
-- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [`@media`](/ja/docs/Web/CSS/@media)
 - [`speech`](/ja/docs/Web/CSS/@media#speech)

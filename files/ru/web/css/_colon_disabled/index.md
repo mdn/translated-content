@@ -1,16 +1,13 @@
 ---
-title: ':disabled'
+title: :disabled
 slug: Web/CSS/:disabled
-tags:
-  - Псевдо-класс
-translation_of: Web/CSS/:disabled
 ---
 
 {{CSSRef}}
 
 ## Описание
 
-CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:disabled` находит любой отключённый элемент. Элемент отключён, если не может быть активирован (например, его нельзя выбрать, нажать на него или ввести текст) или получить фокус. У элемента также есть включённое состояние, когда его можно активировать или сфокусировать.
+CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:disabled` находит любой отключённый элемент. Элемент отключён, если не может быть активирован (например, его нельзя выбрать, нажать на него или ввести текст) или получить фокус. У элемента также есть включённое состояние, когда его можно активировать или сфокусировать.
 
 ## Примеры
 
@@ -26,7 +23,9 @@ CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:disab
 Следующий CSS:
 
 ```css
-input[type="text"]:disabled { background: #ccc; }
+input[type="text"]:disabled {
+  background: #ccc;
+}
 ```
 
 Применим к этому HTML5 фрагменту:
@@ -35,18 +34,18 @@ input[type="text"]:disabled { background: #ccc; }
 <form action="#">
   <fieldset>
     <legend>Адрес доставки</legend>
-    <input type="text" placeholder="Имя">
-    <input type="text" placeholder="Адрес">
-    <input type="text" placeholder="Почтовый индекс">
+    <input type="text" placeholder="Имя" />
+    <input type="text" placeholder="Адрес" />
+    <input type="text" placeholder="Почтовый индекс" />
   </fieldset>
   <fieldset id="billing">
     <legend>Адрес оплаты</legend>
     <label for="billing_is_shipping">Такой же как адрес доставки:</label>
-    <input type="checkbox" onchange="javascript:toggleBilling()" checked>
+    <input type="checkbox" onchange="javascript:toggleBilling()" checked />
     <br />
-    <input type="text" placeholder="Имя" disabled>
-    <input type="text" placeholder="Адрес" disabled>
-    <input type="text" placeholder="Почтовый индекс" disabled>
+    <input type="text" placeholder="Имя" disabled />
+    <input type="text" placeholder="Адрес" disabled />
+    <input type="text" placeholder="Почтовый индекс" disabled />
   </fieldset>
 </form>
 ```
@@ -64,13 +63,13 @@ function toggleBilling() {
 
 Результатом будет отключение всех полей в группе адреса оплаты и окраска их в серый цвет.
 
-{{EmbedLiveSample('Пример_использования', '300px', '250px', '', 'Web/CSS/:disabled')}}
+{{EmbedLiveSample('Пример_использования', '300px', '250px')}}
 
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

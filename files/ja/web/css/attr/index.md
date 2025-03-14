@@ -1,7 +1,6 @@
 ---
 title: attr()
 slug: Web/CSS/attr
-original_slug: Web/CSS/attr()
 ---
 
 {{CSSRef}}
@@ -25,6 +24,30 @@ attr(data-count number, 0);
 attr(src url, "");
 attr(data-width px, inherit);
 attr(data-something, "default");
+```
+
+{{InteractiveExample("CSS Demo: attr()", "tabbed-shorter")}}
+
+```css interactive-example
+blockquote {
+  margin: 1em 0;
+}
+
+blockquote::after {
+  display: block;
+  content: " (source: " attr(cite) ") ";
+  color: hotpink;
+}
+```
+
+```html interactive-example
+<blockquote cite="https://mozilla.org/en-US/about/">
+  Mozilla makes browsers, apps, code and tools that put people before profit.
+</blockquote>
+
+<blockquote cite="https://web.dev/about/">
+  Google believes in an open, accessible, private, and secure web.
+</blockquote>
 ```
 
 ## 構文
@@ -145,7 +168,7 @@ attr(data-something, "default");
 
 ## 例
 
-<h3 id="content_property">content プロパティ</h3>
+### content プロパティ
 
 #### HTML
 
@@ -163,16 +186,19 @@ attr(data-something, "default");
 
 #### 結果
 
-{{EmbedLiveSample("content_property", "100%", 50)}}
+{{EmbedLiveSample("content プロパティ", "100%", 50)}}
 
-<h3 id="color_value">&lt;color&gt; 値</h3>
+### \<color> 値
 
 {{SeeCompatTable}}
 
 #### HTML
 
 ```html
-<div class="background" data-background="lime">background expected to be red if your browser does not support advanced usage of attr()</div>
+<div class="background" data-background="lime">
+  background expected to be red if your browser does not support advanced usage
+  of attr()
+</div>
 ```
 
 #### CSS
@@ -195,7 +221,7 @@ attr(data-something, "default");
 
 #### 結果
 
-{{EmbedLiveSample("color_value", "100%", 50)}}
+{{EmbedLiveSample("color 値", "100%", 50)}}
 
 ## 仕様書
 

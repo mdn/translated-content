@@ -41,8 +41,8 @@ None.
 ### 绑定帧缓冲区
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 var framebuffer = gl.createFramebuffer();
 
 gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
@@ -64,7 +64,7 @@ gl.getParameter(gl.FRAMEBUFFER_BINDING);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.createFramebuffer()")}}
 - {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}

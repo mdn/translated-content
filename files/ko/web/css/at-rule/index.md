@@ -1,20 +1,15 @@
 ---
-title: '@-규칙'
+title: "@-규칙"
 slug: Web/CSS/At-rule
-tags:
-  - At-rule
-  - CSS
-  - CSS Reference
-translation_of: Web/CSS/At-rule
 ---
 
 {{cssref}}
 
-**@-규칙**은 식별자(identifier)가 뒤따르는 at 기호('`@`' (`U+0040 COMMERCIAL AT`))로 시작하는 [CSS 문](/ko/docs/Web/CSS/Syntax#CSS_statements)이며 다음 세미콜론('`;`' (`U+003B SEMICOLON`)) 또는 다음 [CSS 블록](/ko/docs/Web/CSS/Syntax#CSS_declarations_blocks) 중 먼저 오는 쪽까지 모든 것을 포함합니다.
+**@-규칙**은 식별자(identifier)가 뒤따르는 at 기호('`@`' (`U+0040 COMMERCIAL AT`))로 시작하는 [CSS 문](/ko/docs/Web/CSS/Syntax#css_statements)이며 다음 세미콜론('`;`' (`U+003B SEMICOLON`)) 또는 다음 [CSS 블록](/ko/docs/Web/CSS/Syntax#css_declarations_blocks) 중 먼저 오는 쪽까지 모든 것을 포함합니다.
 
 ```css
 /* General structure */
-@IDENTIFIER (RULE);
+@identifier (RULE);
 
 /* Example: tells browser to use UTF-8 character set */
 @charset "utf-8";
@@ -33,7 +28,6 @@ translation_of: Web/CSS/At-rule
   - {{cssxref("@page")}} — 문서를 출력할 때 적용되는 레이아웃 변화의 양상(aspect)을 설명.
   - {{cssxref("@font-face")}} — 다운로드되는 외부 글꼴의 양상을 설명.
   - {{cssxref("@keyframes")}} — CSS 애니메이션 sequence 내 중간 단계의 양상을 설명.
-  - {{cssxref("@viewport")}} {{experimental_inline}} — 작은 화면 장치를 위한 viewport의 양상을 설명. _(현재 Working Draft 단계임)_
   - {{cssxref("@counter-style")}} — 미리 정의된 스타일 집합의 일부가 아닌 특정 카운터 스타일을 정의. _(Candidate Recommendation 단계이지만, 작성 중인 현재 Gecko에서만 구현됨)_
   - {{cssxref("@font-feature-values")}} (`@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` 및 `@character-variant`와 함께)
     — OpenType에서 다르게 활성화된 기능에 대해 {{cssxref("font-variant-alternates")}}에서 일반 이름을 정의. _(Candidate Recommendation 단계이지만, 작성 중인 현재 Gekko에서만 구현됨)_
@@ -42,7 +36,7 @@ translation_of: Web/CSS/At-rule
 
 속성값과 마찬가지로, 각각의 @-규칙은 다른 구문이 있습니다. 그럼에도 불구하고, 그 중 몇몇은 조건부 그룹 규칙(**conditional group rules**)으로 불리는 특별한 범주로 분류될 수 있습니다. 이들 문은 공통 구문을 공유하고 그 각각은 _중첩 문_(_규칙 집합(ruleset)_ 또는 _중첩 @-규칙_ 중 하나)을 포함할 수 있습니다. 게다가, 그들은 모두 일반 semantic 의미를 전달합니다. 그들은 모두 어떤 유형의 조건을 링크합니다, 언제라도 **참** 또는 **거짓** 중 하나로 평가하는. 조건을 **참**으로 평가하면, 그룹 내 모든 문이 적용됩니다.
 
-조건부 그룹 규칙은 [CSS 조건부 규칙 모듈 레벨 3](http://dev.w3.org/csswg/css3-conditional/)에서 정의되고 다음과 같습니다:
+조건부 그룹 규칙은 [CSS 조건부 규칙 모듈 레벨 3](https://dev.w3.org/csswg/css3-conditional/)에서 정의되고 다음과 같습니다:
 
 - {{cssxref("@media")}},
 - {{cssxref("@supports")}},

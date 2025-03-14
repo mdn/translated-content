@@ -1,6 +1,9 @@
 ---
-title: HTMLElement.title
+title: "HTMLElement: title プロパティ"
+short-title: title
 slug: Web/API/HTMLElement/title
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -14,10 +17,10 @@ slug: Web/API/HTMLElement/title
 ## 例
 
 ```js
-const link = document.createElement('a');
-link.innerText = 'ブドウ';
-link.href = 'https://ja.wikipedia.org/wiki/ブドウ';
-link.title = 'ブドウに関するウィキペディアのページ';
+const link = document.createElement("a");
+link.innerText = "ブドウ";
+link.href = "https://ja.wikipedia.org/wiki/ブドウ";
+link.title = "ブドウに関するウィキペディアのページ";
 ```
 
 ## 仕様書
@@ -30,4 +33,4 @@ link.title = 'ブドウに関するウィキペディアのページ';
 
 ## 関連情報
 
-- HTML の [**title**](/ja/docs/Web/HTML/Global_attributes/title)` グローバル属性
+- HTML の [**title**](/ja/docs/Web/HTML/Global_attributes/title) グローバル属性

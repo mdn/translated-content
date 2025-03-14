@@ -1,7 +1,6 @@
 ---
 title: Float64Array
 slug: Web/JavaScript/Reference/Global_Objects/Float64Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Float64Array
 ---
 
 {{JSRef}}
@@ -18,7 +17,7 @@ new Float64Array(object);
 new Float64Array(buffer [, byteOffset [, length]]);
 ```
 
-For more information about the constructor syntax and the parameters, see _[TypedArray](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+For more information about the constructor syntax and the parameters, see _[TypedArray](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntax)_.
 
 ## Properties
 
@@ -85,8 +84,6 @@ All `Float64Array` objects inherit from {{jsxref("TypedArray.prototype", "%Typed
   - : Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found. See also {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Float64Array.prototype.map()")}}
   - : Creates a new array with the results of calling a provided function on every element in this array. See also {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Float64Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
-  - : Former non-standard version of {{jsxref("TypedArray.copyWithin", "Float64Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.reduce", "Float64Array.prototype.reduce()")}}
   - : Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value. See also {{jsxref("Array.prototype.reduce()")}}.
 - {{jsxref("TypedArray.reduceRight", "Float64Array.prototype.reduceRight()")}}
@@ -125,7 +122,7 @@ console.log(float64.length); // 2
 console.log(float64.BYTES_PER_ELEMENT); // 8
 
 // From an array
-var arr = new Float64Array([21,31]);
+var arr = new Float64Array([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
@@ -138,20 +135,18 @@ var buffer = new ArrayBuffer(32);
 var z = new Float64Array(buffer, 0, 4);
 
 // From an iterable
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var float64 = new Float64Array(iterable);
 // Float64Array[1, 2, 3]
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                        | Status                           | Comment                                                                                                                          |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Superseded by ECMAScript 2015.                                                                                                   |
-| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}} | {{Spec2('ES2015')}}         | Initial definition in an ECMA standard. Specified that `new` is required.                                                        |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 changed the `Float64Array` constructor to use the `ToIndex` operation and allows constructors with no arguments. |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -169,8 +164,8 @@ var dv = Float64Array([1, 2, 3]);
 var dv = new Float64Array([1, 2, 3]);
 ```
 
-## See also
+## Смотрите также
 
-- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

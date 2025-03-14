@@ -1,7 +1,6 @@
 ---
 title: calc()
 slug: Web/CSS/calc
-original_slug: Web/CSS/calc()
 ---
 
 {{CSSRef}}
@@ -15,7 +14,7 @@ width: calc(100% - 80px);
 
 ## Syntax
 
-A função `calc()` recebe uma simples expressão como parâmetro e o resultado desta expressão é utilizado como valor. Pode ser uma simples expressão, combinando os seguintes operadores, utilizando padrão [operator precedence rules](/pt-BR/docs/Learn/JavaScript/First_steps/Math#Operator_precedence):
+A função `calc()` recebe uma simples expressão como parâmetro e o resultado desta expressão é utilizado como valor. Pode ser uma simples expressão, combinando os seguintes operadores, utilizando padrão [operator precedence rules](/pt-BR/docs/Learn/JavaScript/First_steps/Math#operator_precedence):
 
 - `+`
   - : Adição.
@@ -91,8 +90,8 @@ Aqui, o próprio formulário é estabelecido para utilizar 1/6 da largura da jan
 ```html
 <form>
   <div id="formbox">
-  <label>Type something:</label>
-  <input type="text">
+    <label>Type something:</label>
+    <input type="text" />
   </div>
 </form>
 ```
@@ -101,7 +100,7 @@ Aqui, o próprio formulário é estabelecido para utilizar 1/6 da largura da jan
 
 ### calc( ) inserido em variáveis de CSS
 
-Você também pode utilizar `calc()` com [variáveis de CSS](/pt-BR/docs/Web/CSS/CSS_Variables). Considere o seguinte código:
+Você também pode utilizar `calc()` com [variáveis de CSS](/pt-BR/docs/Web/CSS/CSS_cascading_variables). Considere o seguinte código:
 
 ```css
 .foo {
@@ -131,13 +130,11 @@ Isso garante que o tamanho do texto será redimensionado se a página for amplia
 
 ## Especificações
 
-| Especificação                                                            | Status                           | Comentário        |
-| ------------------------------------------------------------------------ | -------------------------------- | ----------------- |
-| {{SpecName('CSS3 Values', '#calc-notation', 'calc()')}} | {{Spec2('CSS3 Values')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.types.calc")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,13 +1,6 @@
 ---
 title: document.execCommand
 slug: Web/API/Document/execCommand
-tags:
-  - API
-  - DOM
-  - Method
-  - Méthodes
-  - Reference
-translation_of: Web/API/Document/execCommand
 ---
 
 {{ApiRef("DOM")}}{{deprecated_header}}
@@ -22,7 +15,7 @@ courant.
 ## Syntaxe
 
 ```js
-document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
+document.execCommand(aCommandName, aShowDefaultUI, aValueArgument);
 ```
 
 ### Valeur de retour
@@ -68,15 +61,15 @@ prise en charge ou si elle est désactivée.
 - `decreaseFontSize`
   - : Ajoute une balise {{HTMLElement("small")}} autour de la sélection ou au point d'insertion. (Non pris en charge par Internet Explorer.)
 - `defaultParagraphSeparator`
-  - : Modifie le séparateur de paragraphe utilisé lorsque de nouveaux paragraphes sont créés dans les zones de texte éditables. Voir [Différences dans la génération du balisage](/fr/docs/Web/Guide/HTML/Editable_content#differences_in_markup_generation) pour plus de détails.
+  - : Modifie le séparateur de paragraphe utilisé lorsque de nouveaux paragraphes sont créés dans les zones de texte éditables. Voir [Différences dans la génération du balisage](/fr/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation) pour plus de détails.
 - `delete`
   - : Supprimer la sélection courante.
 - `enableAbsolutePositionEditor`
-  - : Active ou désactive la poignée qui permet de déplacer les éléments positionnés de façon absolue. Celle-ci est désactivée par défaut depuis Firefox 64 ({{bug(1490641)}}).
+  - : Active ou désactive la poignée qui permet de déplacer les éléments positionnés de façon absolue. Celle-ci est désactivée par défaut depuis Firefox 64 ([bug Firefox 1490641](https://bugzil.la/1490641)).
 - `enableInlineTableEditing`
-  - : Active ou désactive les contrôles pour l'insertion ou la suppression des lignes ou colonnes de tableau. Les contrôles sont désactivés par défaut depuis Firefox 64 ({{bug(1490641)}}).
+  - : Active ou désactive les contrôles pour l'insertion ou la suppression des lignes ou colonnes de tableau. Les contrôles sont désactivés par défaut depuis Firefox 64 ([bug Firefox 1490641](https://bugzil.la/1490641)).
 - `enableObjectResizing`
-  - : Active ou désactive les contrôles permettant de redimensionner les images, tableaux ou les éléments positionnés de façon absolue. Les poignées sont désactivées par défaut depuis Firefox 64 ({{bug(1490641)}}).
+  - : Active ou désactive les contrôles permettant de redimensionner les images, tableaux ou les éléments positionnés de façon absolue. Les poignées sont désactivées par défaut depuis Firefox 64 ([bug Firefox 1490641](https://bugzil.la/1490641)).
 - `fontName`
   - : Modifie le nom de la police pour la sélection ou à partir du point d'insertion. La valeur fournie en argument doit être un nom de police (ex. `"Arial"`).
 - `fontSize`
@@ -155,13 +148,11 @@ Un exemple d'utilisation est disponible
 
 ## Spécifications
 
-| Spécification                                                  | État                   | Commentaires |
-| -------------------------------------------------------------- | ---------------------- | ------------ |
-| [execCommand](https://w3c.github.io/editing/docs/execCommand/) | Brouillon non officiel |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.execCommand")}}
+{{Compat}}
 
 ## Voir aussi
 

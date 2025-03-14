@@ -3,9 +3,11 @@ title: ロケール固有のメッセージ参照
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference
 ---
 
+{{AddonSidebar}}
+
 国際化対応 (i18n) した拡張機能は、ロケール固有のメッセージを提供する少なくとも 1 個の `messages.json` というファイルを持っています。このページでは、`messages.json` の書式を説明します。
 
-> **メモ:** **補足**: 拡張機能を国際化する方法についての情報は、[i18n](/ja/Add-ons/WebExtensions/WebExtension_i18n) ガイドを参照してください。
+> **メモ:** **補足**: 拡張機能を国際化する方法についての情報は、[i18n](/ja/docs/Mozilla/Add-ons/WebExtensions/WebExtension_i18n) ガイドを参照してください。
 
 ## messages.json example
 
@@ -32,9 +34,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference
     "message": "$URL$ をクリックしました。",
     "description": "Tells the user which link they clicked.",
     "placeholders": {
-      "url" : {
-        "content" : "$1",
-        "example" : "https://developer.mozilla.org"
+      "url": {
+        "content": "$1",
+        "example": "https://developer.mozilla.org"
       }
     }
   }
@@ -43,7 +45,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference
 
 ## ファイルの配置
 
-`messages.json` ファイルは、サポートされたロケール名 (`en`, `de`, `ja` など) のディレクトリー内に置く必要があります。さらにこれらは、拡張機能のルートディレクトリ内の `_locales` と呼ばれるディレクトリー内に置く必要があります。
+`messages.json` ファイルは、サポートされたロケール名 (`en`, `de`, `ja` など) のディレクトリー内に置く必要があります。さらにこれらは、拡張機能のルートディレクトリー内の `_locales` と呼ばれるディレクトリー内に置く必要があります。
 
 ## メンバーの詳細
 
@@ -61,7 +63,8 @@ name には、次の文字が使用できます:
 - \_ (アンダースコア)
 - @
 
-> **メモ:** @@ で始まる name を定義してはいけません。この名前は [事前定義されたメッセージ](/ja/Add-ons/WebExtensions/Internationalization#Predefined_messages) で予約されています。
+> [!NOTE]
+> @@ で始まる name を定義してはいけません。この名前は [事前定義されたメッセージ](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization#predefined_messages) で予約されています。
 
 ### message
 
@@ -77,7 +80,7 @@ name には、次の文字が使用できます:
 - ロケール文字列が使用される時に、`/\$\d+/` と一致するトークンは、{{WebExtAPIRef("i18n.getMessage()")}} に渡される replacement に置き換えられます。
 - `getMessage()` は、placeholder/substitution の呼び出しを 9 個までしか処理しません。
 
-### description
+### 解説
 
 {{optional_inline}}
 
@@ -104,7 +107,7 @@ name には、次の文字が使用できます:
 
 #### content
 
-"content" アイテムは、placeholder の内容を定義します。これは、"My placeholder" などハードコードされた文字列にすることができますが、{{WebExtAPIRef("i18n.getMessage()")}} 呼び出しから取得した値も含められます。詳しい情報は、[JavaScript からメッセージ文字列を取得する](/ja/Add-ons/WebExtensions/Internationalization#Retrieving_message_strings_from_JavaScript) を参照してください。
+"content" アイテムは、placeholder の内容を定義します。これは、"My placeholder" などハードコードされた文字列にすることができますが、{{WebExtAPIRef("i18n.getMessage()")}} 呼び出しから取得した値も含められます。詳しい情報は、[JavaScript からメッセージ文字列を取得する](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization#retrieving_message_strings_from_javascript) を参照してください。
 
 #### example
 

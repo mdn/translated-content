@@ -5,7 +5,7 @@ slug: Web/HTML/Global_attributes/data-*
 
 {{HTMLSidebar("Global_attributes")}}
 
-**data-\*** [全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)構成一組稱作**自訂 data 屬性**的屬性。它能令 [HTML](/zh-TW/docs/Web/HTML) 與其 [DOM](/zh-TW/docs/DOM) 擁有給腳本用的交換資訊。這種屬性設置的自訂資料，能透過元素的 {{domxref("HTMLElement")}} 介面而活用。{{domxref("HTMLElement.dataset")}} property 允許訪問它們。`*` 可以是任何遵循以下規則的 [xml 名稱](http://www.w3.org/TR/REC-xml/#NT-Name)：
+**data-\*** [全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)構成一組稱作**自訂 data 屬性**的屬性。它能令 [HTML](/zh-TW/docs/Web/HTML) 與其 [DOM](/zh-TW/docs/Web/API/Document_Object_Model) 擁有給腳本用的交換資訊。這種屬性設置的自訂資料，能透過元素的 {{domxref("HTMLElement")}} 介面而活用。{{domxref("HTMLElement.dataset")}} property 允許訪問它們。`*` 可以是任何遵循以下規則的 [xml 名稱](https://www.w3.org/TR/REC-xml/#NT-Name)：
 
 - 名字絕對不能以 `xml` 起頭，無論是否用於 xml、
 - 名字絕對不能包含分號（`U+003A`）、
@@ -24,7 +24,7 @@ slug: Web/HTML/Global_attributes/data-*
   onclick="spaceships[this.dataset.shipId].blasted()" />
 ```
 
-（參見*[這個網站](https://html.spec.whatwg.org/multipage/dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes)*）
+（參見[_這個網站_](https://html.spec.whatwg.org/multipage/dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes)）
 
 ## 規範
 

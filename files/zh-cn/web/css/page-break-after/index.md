@@ -25,7 +25,8 @@ page-break-after: initial;
 page-break-after: unset;
 ```
 
-> **备注：** 这个属性正在被更通用的 {{ cssxref("break-after")}} 取代。这个新的属性也处理列和区域中断，并在语法上兼容 `page-break-after`。
+> [!NOTE]
+> 这个属性正在被更通用的 {{ cssxref("break-after")}} 取代。这个新的属性也处理列和区域中断，并在语法上兼容 `page-break-after`。
 >
 > 在使用 `page-break-after` 之前，请检查是否可以使用 `break-after` 代替。在将来， `page-break-after` 将只是它的一些值的别名。
 
@@ -73,7 +74,7 @@ page-break-after: unset;
 ```css
 /* move to a new page after footnotes */
 div.footnotes {
-  page-break-after:always;
+  page-break-after: always;
 }
 ```
 
@@ -87,5 +88,5 @@ div.footnotes {
 
 ## See also
 
-- [`page-break-before`](/zh-CN/CSS/page-break-before), [`page-break-inside`](/zh-CN/CSS/page-break-inside)
-- [`orphans`](/zh-CN/CSS/orphans), [`widows`](/zh-CN/CSS/widows)
+- [`page-break-before`](/zh-CN/docs/CSS/page-break-before), [`page-break-inside`](/zh-CN/docs/CSS/page-break-inside)
+- [`orphans`](/zh-CN/docs/CSS/orphans), [`widows`](/zh-CN/docs/CSS/widows)

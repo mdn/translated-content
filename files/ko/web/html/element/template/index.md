@@ -1,19 +1,6 @@
 ---
-title: '<template>: 콘텐츠 템플릿 요소'
+title: "<template>: 콘텐츠 템플릿 요소"
 slug: Web/HTML/Element/template
-tags:
-  - Element
-  - HTML
-  - HTML Web Components
-  - HTML:Flow content
-  - HTML:Metadata content
-  - HTML:Phrasing content
-  - HTML:Script-supporting element
-  - Reference
-  - Web
-  - Web Components
-  - 웹 컴포넌트
-translation_of: Web/HTML/Element/template
 ---
 
 {{HTMLSidebar}}
@@ -49,13 +36,13 @@ translation_of: Web/HTML/Element/template
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
       <td>
         메타데이터 콘텐츠, 구문 콘텐츠, 또는 스크립트 지원 요소를 허용하는 모든
-        요소. 또한, {{htmlattrxref("span", "colgroup")}} 특성이 없는
+        요소. 또한, <a href="/ko/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> 특성이 없는
         {{htmlelement("colgroup")}} 요소도 가능.
       </td>
     </tr>
@@ -108,28 +95,26 @@ translation_of: Web/HTML/Element/template
 ```js
 // 템플릿 엘리먼트의 컨텐츠 존재 유무를 통해
 // 브라우저가 HTML 템플릿 엘리먼트를 지원하는지 확인합니다
-if ('content' in document.createElement('template')) {
+if ("content" in document.createElement("template")) {
+  // 기존 HTML tbody 와 템플릿 열로 테이블을 인스턴스화합니다
+  var t = document.querySelector("#productrow");
 
-    // 기존 HTML tbody 와 템플릿 열로 테이블을 인스턴스화합니다
-    var t = document.querySelector('#productrow');
+  // 새로운 열을 복제하고 테이블에 삽입합니다
+  var tb = document.querySelector("tbody");
+  var clone = document.importNode(t.content, true);
+  td = clone.querySelectorAll("td");
+  td[0].textContent = "1235646565";
+  td[1].textContent = "Stuff";
 
-    // 새로운 열을 복제하고 테이블에 삽입합니다
-    var tb = document.querySelector("tbody");
-    var clone = document.importNode(t.content, true);
-    td = clone.querySelectorAll("td");
-    td[0].textContent = "1235646565";
-    td[1].textContent = "Stuff";
+  tb.appendChild(clone);
 
-    tb.appendChild(clone);
+  // 새로운 열을 복제하고 테이블에 삽입합니다
+  var clone2 = document.importNode(t.content, true);
+  td = clone2.querySelectorAll("td");
+  td[0].textContent = "0384928528";
+  td[1].textContent = "Acme Kidney Beans 2";
 
-    // 새로운 열을 복제하고 테이블에 삽입합니다
-    var clone2 = document.importNode(t.content, true);
-    td = clone2.querySelectorAll("td");
-    td[0].textContent = "0384928528";
-    td[1].textContent = "Acme Kidney Beans 2";
-
-    tb.appendChild(clone2);
-
+  tb.appendChild(clone2);
 } else {
   // HTML 템플릿 엘리먼트를 지원하지 않으므로
   // 테이블에 열을 추가하는 다른 방법을 찾습니다.
@@ -155,8 +140,8 @@ table td {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.template")}}
+{{Compat}}
 
 ## 같이 보기
 
-- [템플릿과 슬롯 사용하기](/ko/docs/Web/Web_Components/Using_templates_and_slots)
+- [템플릿과 슬롯 사용하기](/ko/docs/Web/API/Web_components/Using_templates_and_slots)

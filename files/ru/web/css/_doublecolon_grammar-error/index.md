@@ -1,17 +1,11 @@
 ---
-title: '::grammar-error'
+title: ::grammar-error
 slug: Web/CSS/::grammar-error
-tags:
-  - CSS
-  - Псевдо-элемент
-  - Экспериментальные
-  - селектор
-translation_of: Web/CSS/::grammar-error
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-[CSS](/ru/docs/Web/CSS) [псевдо-элемент](/en/CSS/Pseudo-elements) **`::grammar-error`** представляет сегмент текста, который {{glossary("user agent")}} пометил как грамматически неверный.
+[CSS](/ru/docs/Web/CSS) [псевдо-элемент](/en-US/CSS/Pseudo-elements) **`::grammar-error`** представляет сегмент текста, который {{glossary("user agent")}} пометил как грамматически неверный.
 
 ## Доступные свойства
 
@@ -47,7 +41,7 @@ translation_of: Web/CSS/::grammar-error
 #### CSS
 
 ```css
-::grammar-error  {
+::grammar-error {
   text-decoration: underline red;
   color: red;
 }
@@ -61,7 +55,7 @@ translation_of: Web/CSS/::grammar-error
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

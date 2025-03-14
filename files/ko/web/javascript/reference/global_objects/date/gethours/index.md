@@ -1,25 +1,25 @@
 ---
 title: Date.prototype.getHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getHours
 ---
 
 {{JSRef}}
 
 **`getHours()`** 메서드는 주어진 날짜의 현지 시간 기준 시를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/date-gethours.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getHours()")}}
+
+```js interactive-example
+const birthday = new Date("March 13, 08 04:20");
+
+console.log(birthday.getHours());
+// Expected output: 4
+```
 
 ## 구문
 
 ```js
-    dateObj.getHours()
+dateObj.getHours();
 ```
 
 ### 반환 값
@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getHours
 아래의 두 번째 명령문은 {{jsxref("Date")}} 객체 `Xmas95` 날짜의 시를 `hours` 변수에 할당합니다.
 
 ```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
+var Xmas95 = new Date("December 25, 1995 23:15:30");
 var hours = Xmas95.getHours();
 
 console.log(hours); // 23

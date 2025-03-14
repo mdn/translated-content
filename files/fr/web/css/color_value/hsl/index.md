@@ -82,6 +82,6 @@ div {
 
 ## Voir aussi
 
-- La fonction [`hsla()`](/fr/docs/Web/CSS/color_value/hsla), un synonyme historique pour cette fonction.
+- La fonction [`hsla()`](/fr/docs/Web/CSS/color_value/hsl), un synonyme historique pour cette fonction.
 - Le type [`<color>`](/fr/docs/Web/CSS/color_value) qui permet de représenter n'importe quelle couleur en CSS.
 - [Un sélecteur de couleur HSL](https://hslpicker.com/)

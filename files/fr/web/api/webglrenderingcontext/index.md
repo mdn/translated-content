@@ -1,8 +1,6 @@
 ---
 title: WebGLRenderingContext
 slug: Web/API/WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext
-browser-compat: api.WebGLRenderingContext
 ---
 
 {{APIRef("WebGL")}}
@@ -12,8 +10,8 @@ L'interface **`WebGLRenderingContext`** fournit une interface pour le contexte d
 Pour obtenir un accès à un contexte WebGL pour le rendu graphique 2D et/ou 3D, on appellera [`getContext()`](/fr/docs/Web/API/HTMLCanvasElement/getContext) sur un élément `<canvas>` en fournissant la chaîne de caractères `webgl`&nbsp;:
 
 ```js
-let canvas = document.getElementById('myCanvas');
-let gl = canvas.getContext('webgl');
+let canvas = document.getElementById("myCanvas");
+let gl = canvas.getContext("webgl");
 ```
 
 Une fois le contexte de rendu WebGL obtenu pour le canevas, on peut l'utiliser pour le rendu graphique d'objets à l'intérieur de ce canevas. [Le tutoriel WebGL](/fr/docs/Web/API/WebGL_API/Tutorial) contient de plus amples informations, exemples et ressources pour débuter avec WebGL.
@@ -29,7 +27,7 @@ Voir la page sur [les constantes WebGL](/fr/docs/Web/API/WebGL_API/Constants).
 Les propriétés et méthodes suivantes fournissent des informations et fonctionnalités générales pour manipuler le contexte WebGL&nbsp;:
 
 - [`WebGLRenderingContext.canvas`](/fr/docs/Web/API/WebGLRenderingContext/canvas)
-  - : Une référence en lecture seule vers l'objet [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement) correspondant. Peut valoir [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null) si le contexte n'est pas associé à un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas).
+  - : Une référence en lecture seule vers l'objet [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement) correspondant. Peut valoir [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) si le contexte n'est pas associé à un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas).
 - [`WebGLRenderingContext.commit()`](/fr/docs/Web/API/WebGLRenderingContext/commit) {{experimental_inline}}
   - : Pousse les <i lang="en">frames</i> sur l'élément [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement), si le contexte n'est pas directement rattaché à un canevas donné.
 - [`WebGLRenderingContext.drawingBufferWidth`](/fr/docs/Web/API/WebGLRenderingContext/drawingBufferWidth)
@@ -37,7 +35,7 @@ Les propriétés et méthodes suivantes fournissent des informations et fonction
 - [`WebGLRenderingContext.drawingBufferHeight`](/fr/docs/Web/API/WebGLRenderingContext/drawingBufferHeight)
   - : La hauteur, en lecture seule, du tampon de dessin courant. Celle-ci devrait correspondre à la hauteur de l'élément canevas associé à ce contexte.
 - [`WebGLRenderingContext.getContextAttributes()`](/fr/docs/Web/API/WebGLRenderingContext/getContextAttributes)
-  - : Renvoie un objet `WebGLContextAttributes` qui contient les paramètres de contextes réels. Peut renvoyer [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null) si le contexte est perdu.
+  - : Renvoie un objet `WebGLContextAttributes` qui contient les paramètres de contextes réels. Peut renvoyer [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) si le contexte est perdu.
 - [`WebGLRenderingContext.isContextLost()`](/fr/docs/Web/API/WebGLRenderingContext/isContextLost)
   - : Renvoie `true` si le contexte est perdu et `false` sinon.
 - [`WebGLRenderingContext.makeXRCompatible()`](/fr/docs/Web/API/WebGLRenderingContext/makeXRCompatible)
@@ -291,7 +289,7 @@ Les propriétés et méthodes suivantes fournissent des informations et fonction
 Ces méthodes permettent de gérer les extensions WebGL&nbsp;:
 
 - [`WebGLRenderingContext.getSupportedExtensions()`](/fr/docs/Web/API/WebGLRenderingContext/getSupportedExtensions)
-  - : Renvoie un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) de chaînes de caractères ([`DOMString`](/fr/docs/Web/API/DOMString)). Les éléments sont les noms des extensions WebGL prises en charge.
+  - : Renvoie un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) de chaînes de caractères ([`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)). Les éléments sont les noms des extensions WebGL prises en charge.
 - [`WebGLRenderingContext.getExtension()`](/fr/docs/Web/API/WebGLRenderingContext/getExtension)
   - : Renvoie un objet d'extension.
 

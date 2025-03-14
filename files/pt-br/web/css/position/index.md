@@ -7,9 +7,9 @@ slug: Web/CSS/position
 
 ### Tipos de posicionamentos
 
-- Um **elemento posicionado** é um elemento cujo valor de sua posição pode ser [computado (calculado)](/pt-BR/docs/CSS/computed_value) como `relative`, `absolute`, `fixed`, or `sticky`. ( Em outras palavras, são todos esses, com exceção do `static`, sendo estático o valor como padrão do elemento.)
-- Um elemento denominado com **posicionamento relativo**, ou **relatively positioned element**, é um elemento cuja função é [calculada](/pt-BR/docs/CSS/computed_value) ao ser definida a `position` como valor `relative`. Com isso, a propriedade {{Cssxref("top")}} e {{Cssxref("bottom")}} determinam o deslocamento ou projeção vertical a posição padrão do elemento que estava definida por `static`; Não sendo outro, o {{Cssxref("left")}} e o {{Cssxref("right")}}, por sua vez, determinam o deslocamento horizontal.
-- Um elemento denominado com **posicionamento absoluto**, ou **absolutely positioned element**, é um elemento determinado e calculado ao atribuir ao `position` o valor `absolute` ou `fixed`. Com {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}} é possível especificar o deslocamento das laterais (bordas) dos blocos que contêm ([containing block](/pt-BR/docs/Web/CSS/Containing_Block)) os elementos. (O containing block, ou blocos que envolvem um elemento é definido como um antecessor relativo ao qual o elemento está posicionado, acomplado ou englobado. Se por ventura o elemento tiver definido margens (margin), ele são adicionados ao deslocamento (offset). O elemento estabelecerá um novo [contexto de formatação do bloco](/pt-BR/docs/Web/Guide/CSS/Block_formatting_context) (BFC) para seus conteúdos.
+- Um **elemento posicionado** é um elemento cujo valor de sua posição pode ser [computado (calculado)](/pt-BR/docs/Web/CSS/computed_value) como `relative`, `absolute`, `fixed`, or `sticky`. ( Em outras palavras, são todos esses, com exceção do `static`, sendo estático o valor como padrão do elemento.)
+- Um elemento denominado com **posicionamento relativo**, ou **relatively positioned element**, é um elemento cuja função é [calculada](/pt-BR/docs/Web/CSS/computed_value) ao ser definida a `position` como valor `relative`. Com isso, a propriedade {{Cssxref("top")}} e {{Cssxref("bottom")}} determinam o deslocamento ou projeção vertical a posição padrão do elemento que estava definida por `static`; Não sendo outro, o {{Cssxref("left")}} e o {{Cssxref("right")}}, por sua vez, determinam o deslocamento horizontal.
+- Um elemento denominado com **posicionamento absoluto**, ou **absolutely positioned element**, é um elemento determinado e calculado ao atribuir ao `position` o valor `absolute` ou `fixed`. Com {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}} é possível especificar o deslocamento das laterais (bordas) dos blocos que contêm ([containing block](/pt-BR/docs/Web/CSS/Containing_Block)) os elementos. (O containing block, ou blocos que envolvem um elemento é definido como um antecessor relativo ao qual o elemento está posicionado, acomplado ou englobado. Se por ventura o elemento tiver definido margens (margin), ele são adicionados ao deslocamento (offset). O elemento estabelecerá um novo [contexto de formatação do bloco](/pt-BR/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) para seus conteúdos.
 - Um elemento denominado com **posicionamento adesivo** ( ! ), ou **stickily positioned element**, é um elemento determinado e calculado ao atribuir ao `position` como valor `sticky`. Sendo tratado como um posicionamento relativo até que ultrapasse (atinja) os limites do [bloco no qual está contido](/pt-BR/docs/docs/Web/CSS/Containing_Block). (Se assemelha a configurar a propriedade {{Cssxref("top")}} com um valor diferente de automático (auto)) Dentro do seu fluxo principal (fluxo raiz, ou o contêiner no qual ele desloca-se), No momento que há o deslocamento da página o elemento é tratado como "preso" ou "stuck" até encontrar-se com as paredes opostas do [bloco no qual esteja contido](/pt-BR/docs/docs/Web/CSS/Containing_Block).
 
 Maior parte do tempo, um **elemento de posicionamento absoluto** que tem {{Cssxref("height")}} e {{Cssxref("width")}} configurados como `auto` são dimensionados de acordo com seu conteúdo interno. However, non-[replaced](/pt-BR/docs/Web/CSS/Replaced_element), absolutely positioned elements can be made to fill the available vertical space by specifying both {{Cssxref("top")}} and {{Cssxref("bottom")}} and leaving {{Cssxref("height")}} unspecified (that is, `auto`). They can likewise be made to fill the available horizontal space by specifying both {{Cssxref("left")}} and {{Cssxref("right")}} and leaving {{Cssxref("width")}} as `auto`.
@@ -31,25 +31,25 @@ A propriedade `position` é definida com apenas uma palavra-chave da lista abaix
 
   - : O elemento é posicionado de acordo com o fluxo normal do documento e, em seguida, deslocado _em relação a si mesmo_ com base nos valores de `top`, `right`, `bottom`, e `left`. O deslocamento não afeta a posição de nenhum outro elemento; assim, o espaço dado para o elemento no layout da página é o mesmo que se a posição fosse `static`.
 
-    Este valor cria um novo [stacking context (contexto de empilhamento)](/pt-BR/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) quando o valor de `z-index` não for `auto`. Seu efeito em `table-*-group`, `table-row`, `table-column`, `table-cell` e os elementos `table-caption` são indefinidos.
+    Este valor cria um novo [stacking context (contexto de empilhamento)](/pt-BR/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) quando o valor de `z-index` não for `auto`. Seu efeito em `table-*-group`, `table-row`, `table-column`, `table-cell` e os elementos `table-caption` são indefinidos.
 
 - `absolute`
 
   - : O elemento é removido do fluxo normal de documentos e nenhum espaço é criado para o elemento no layout da página. Ele é posicionado em relação ao seu ancestral posicionado mais próximo, se houver; caso contrário, ele é colocado em relação ao inicial [containing block](/pt-BR/docs/Web/CSS/Containing_Block). Sua posição final é determinada pelos valores de `top`, `right`, `bottom`, e `left`.
 
-    Este valor cria um novo [stacking context](/pt-BR/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) quando o valor de `z-index` não é `auto`. As margens das caixas posicionadas absolutamente não [collapse](/pt-BR/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) com outras margens.
+    Este valor cria um novo [stacking context](/pt-BR/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) quando o valor de `z-index` não é `auto`. As margens das caixas posicionadas absolutamente não [collapse](/pt-BR/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) com outras margens.
 
 - `fixed`
 
   - : O elemento é removido do fluxo normal de documentos e nenhum espaço é criado para o elemento no layout da página. Ele está posicionado em relação ao inicial [containing block](/pt-BR/docs/Web/CSS/Containing_Block) estabelecido pelo {{glossary("viewport")}}, exceto quando um de seus ancestrais tiver uma propriedade `transform`, `perspective` ou `filter` definida como algo diferente de `none` (see the [CSS Transforms Spec](https://www.w3.org/TR/css-transforms-1/#propdef-transform)), nesse caso, esse ancestral se comporta como o bloco que o contém. (Observe que há inconsistências no navegador com `perspective` e `filter` contribuindo para conter a formação do bloco.) Sua posição final é determinada pelos valores de `top`, `right`, `bottom` e `left`.
 
-    Este valor sempre cria um novo [stacking context](/pt-BR/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context). Em documentos impressos, o elemento é colocado na mesma posição em _todas as páginas_.
+    Este valor sempre cria um novo [stacking context](/pt-BR/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context). Em documentos impressos, o elemento é colocado na mesma posição em _todas as páginas_.
 
 - `sticky`
 
   - : O elemento é posicionado de acordo com o fluxo normal do documento e, em seguida, deslocado em relação ao _ancestral de rolagem mais próximo_ e [containing block](/pt-BR/docs/Web/CSS/Containing_Block) (ancestral de nível de bloco mais próximo), incluindo elementos relacionados à tabela, com base nos valores de `top`, `right`, `bottom` e `left`. O deslocamento não afeta a posição de nenhum outro elemento.
 
-    Este valor sempre cria um novo [stacking context](/pt-BR/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context). Observe que um elemento sticky "gruda" em seu ancestral mais próximo que possui um "mecanismo de rolagem" (criado quando `overflow` é `hidden`, `scroll`, `auto` ou `overlay`), mesmo que esse ancestral não seja o ancestral de rolagem mais próximo. Isso inibe efetivamente qualquer comportamento "pegajoso" (see the [Github issue on W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865)).
+    Este valor sempre cria um novo [stacking context](/pt-BR/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context). Observe que um elemento sticky "gruda" em seu ancestral mais próximo que possui um "mecanismo de rolagem" (criado quando `overflow` é `hidden`, `scroll`, `auto` ou `overlay`), mesmo que esse ancestral não seja o ancestral de rolagem mais próximo. Isso inibe efetivamente qualquer comportamento "pegajoso" (see the [Github issue on W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865)).
 
 ### Sintáxe formal
 
@@ -100,13 +100,30 @@ A simple example follows:
 ```html
 <h1>Absolute positioning</h1>
 
-<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+<p>
+  I am a basic block level element. My adjacent block level elements sit on new
+  lines below me.
+</p>
 
-<p class="positioned">By default we span 100% of the width of our parent element, and we are as tall as our child content. Our total width and height is our content + padding + border width/height.</p>
+<p class="positioned">
+  By default we span 100% of the width of our parent element, and we are as tall
+  as our child content. Our total width and height is our content + padding +
+  border width/height.
+</p>
 
-<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+<p>
+  We are separated by our margins. Because of margin collapsing, we are
+  separated by the width of one of our margins, not both.
+</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>
+  inline elements <span>like this one</span> and <span>this one</span> sit on
+  the same line as one another, and adjacent text nodes, if there is space on
+  the same line. Overflowing inline elements
+  <span>wrap onto a new line if possible — like this one containing text</span>,
+  or just go on to a new line if not, much like this image will do:
+  <img src="long.jpg" />
+</p>
 ```
 
 ```css
@@ -146,22 +163,30 @@ Fixed positioning is similar to absolute positioning, with the exception that th
 ```html
 <div class="outer">
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
-    Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet mi.
-    Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor tortor.
-    Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
-    Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor
+    eget pulvinar lobortis. Vestibulum ante ipsum primis in faucibus orci luctus
+    et ultrices posuere cubilia Curae; Nam ac dolor augue. Pellentesque mi mi,
+    laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
+    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut
+    arcu aliquam purus viverra dictum vel sit amet mi. Duis nisl mauris, aliquam
+    sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem
+    aliquam, congue porttitor tortor. Sed tempor nisl a lorem consequat, id
+    maximus erat aliquet. Sed sagittis porta libero sed condimentum. Aliquam
+    finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id
+    ultrices ultrices, tempor et tellus.
   </p>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
-    Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet mi.
-    Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor tortor.
-    Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
-    Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor
+    eget pulvinar lobortis. Vestibulum ante ipsum primis in faucibus orci luctus
+    et ultrices posuere cubilia Curae; Nam ac dolor augue. Pellentesque mi mi,
+    laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
+    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut
+    arcu aliquam purus viverra dictum vel sit amet mi. Duis nisl mauris, aliquam
+    sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem
+    aliquam, congue porttitor tortor. Sed tempor nisl a lorem consequat, id
+    maximus erat aliquet. Sed sagittis porta libero sed condimentum. Aliquam
+    finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id
+    ultrices ultrices, tempor et tellus.
   </p>
   <div class="box" id="one">One</div>
 </div>
@@ -199,7 +224,10 @@ Fixed positioning is similar to absolute positioning, with the exception that th
 Sticky positioning can be thought of as a hybrid of relative and fixed positioning. A stickily positioned element is treated as relatively positioned until it crosses a specified threshold, at which point it is treated as fixed until it reaches the boundary of its parent. For instance...
 
 ```css
-#one { position: sticky; top: 10px; }
+#one {
+  position: sticky;
+  top: 10px;
+}
 ```
 
 ...would position the element with id _one_ relatively until the viewport were scrolled such that the element would be less than 10 pixels from the top. Beyond that threshold, the element would be fixed to 10 pixels from the top.
@@ -251,16 +279,19 @@ You must specify a threshold with at least one of `top`, `right`, `bottom`, or `
 }
 
 dl > div {
-  background: #FFF;
+  background: #fff;
   padding: 24px 0 0 0;
 }
 
 dt {
-  background: #B8C1C8;
-  border-bottom: 1px solid #989EA4;
-  border-top: 1px solid #717D85;
-  color: #FFF;
-  font: bold 18px/21px Helvetica, Arial, sans-serif;
+  background: #b8c1c8;
+  border-bottom: 1px solid #989ea4;
+  border-top: 1px solid #717d85;
+  color: #fff;
+  font:
+    bold 18px/21px Helvetica,
+    Arial,
+    sans-serif;
   margin: 0;
   padding: 2px 0 0 12px;
   position: -webkit-sticky;
@@ -269,14 +300,17 @@ dt {
 }
 
 dd {
-  font: bold 20px/45px Helvetica, Arial, sans-serif;
+  font:
+    bold 20px/45px Helvetica,
+    Arial,
+    sans-serif;
   margin: 0;
   padding: 0 0 0 12px;
   white-space: nowrap;
 }
 
 dd + dd {
-  border-top: 1px solid #CCC;
+  border-top: 1px solid #ccc;
 }
 ```
 
@@ -295,13 +329,10 @@ Scrolling elements containing `fixed` or `sticky` content can cause performance 
 
 ## Especificações
 
-| Specification                                                                            | Status                                   | Comment                       |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------- |
-| {{SpecName('CSS2.1', 'visuren.html#propdef-position', 'position')}} | {{Spec2('CSS2.1')}}                 |                               |
-| {{SpecName('CSS3 Positioning','#position-property','position')}}     | {{Spec2('CSS3 Positioning')}} | Adds `sticky` property value. |
+{{Specifications}}
 
 {{cssinfo}}
 
 ## Compatibilidade do navegador
 
-{{Compat("css.properties.position")}}
+{{Compat}}

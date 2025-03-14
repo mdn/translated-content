@@ -1,13 +1,6 @@
 ---
 title: 'ReferenceError: "x" is not defined'
 slug: Web/JavaScript/Reference/Errors/Not_defined
-tags:
-  - Erreur
-  - JavaScript
-  - Reference
-  - ReferenceError
-translation_of: Web/JavaScript/Reference/Errors/Not_defined
-original_slug: Web/JavaScript/Reference/Erreurs/Not_defined
 ---
 
 {{jsSidebar("Errors")}}
@@ -26,7 +19,8 @@ ReferenceError: "x" is not defined
 
 Une variable qui n'existe pas est référencée quelque part. Cette variable doit être déclarée ou il faut vérifier qu'elle est disponible dans le script concerné ou dans la portée utilisée.
 
-> **Note :** Lors du chargement d'une bibliothèque comme jQuery, assurez-vous de bien charger la bibliothèque avant d'accéder aux variables comme `$`. La balise {{HTMLElement("script")}} utilisée pour charger la bibliothèque doit être présente avant le code qui l'utilise.
+> [!NOTE]
+> Lors du chargement d'une bibliothèque comme jQuery, assurez-vous de bien charger la bibliothèque avant d'accéder aux variables comme `$`. La balise {{HTMLElement("script")}} utilisée pour charger la bibliothèque doit être présente avant le code qui l'utilise.
 
 ## Exemples
 
@@ -48,9 +42,9 @@ toto.substring(1); // "ruc"
 Une variable doit être disponible dans le contexte d'exécution où elle est utilisée. Les variables définies au sein d'une fonction ne peuvent pas être utilisées en dehors de cette fonction car la variable appartient à la _portée_ de la fonction.
 
 ```js example-bad
-function numbers () {
+function numbers() {
   var num1 = 2,
-      num2 = 3;
+    num2 = 3;
   return num1 + num2;
 }
 
@@ -61,9 +55,9 @@ Toutefois, une fonction peut accéder aux variables et aux fonctions définies d
 
 ```js example-good
 var num1 = 2,
-    num2 = 3;
+  num2 = 3;
 
-function numbers () {
+function numbers() {
   return num1 + num2;
 }
 
@@ -72,5 +66,5 @@ console.log(num1); // 2
 
 ## Voir aussi
 
-- [La déclaration de variables dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Déclaration_de_variables)
-- [Les notions de portées dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Fonctions#Portée_d'une_fonction)
+- [La déclaration de variables dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#déclaration_de_variables)
+- [Les notions de portées dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Functions#portée_d'une_fonction)

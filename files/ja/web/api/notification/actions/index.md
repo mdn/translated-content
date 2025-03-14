@@ -1,6 +1,8 @@
 ---
 title: Notification.actions
 slug: Web/API/Notification/actions
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -9,7 +11,8 @@ slug: Web/API/Notification/actions
 
 アクションは、 [`showNotification()`](/ja/docs/Web/API/ServiceWorkerRegistration/showNotification) メソッドと [`Notification()`](/ja/docs/Web/API/Notification/Notification) コンストラクターの第 2 引数の `actions` オプションで設定します。
 
-> **メモ:** ブラウザーは通常、特定の通知のために表示されるアクションの最大数を制限します。静的な {{DOMxRef("Notification.maxActions")}} プロパティをチェックして、制限値を把握してください。
+> [!NOTE]
+> ブラウザーは通常、特定の通知のために表示されるアクションの最大数を制限します。静的な {{DOMxRef("Notification.maxActions")}} プロパティをチェックして、制限値を把握してください。
 
 ## 値
 

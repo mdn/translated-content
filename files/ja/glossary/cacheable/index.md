@@ -1,7 +1,9 @@
 ---
 title: Cacheable (キャッシュ可能)
-slug: Glossary/cacheable
+slug: Glossary/Cacheable
 ---
+
+{{GlossarySidebar}}
 
 **キャッシュ可能**なレスポンス (応答) とは、キャッシュすることが可能な HTTP レスポンスで、後で取り出して使用するために格納され、サーバーへの新しいリクエスト (要求) を節約します。 すべての HTTP レスポンスがキャッシュされるわけではなく、キャッシュされる HTTP レスポンスには次の制約があります。
 
@@ -44,9 +46,9 @@ Cache-Control: no-cache
 
 1. 一般知識
 
-    1. HTTP 仕様書の [cacheable](https://tools.ietf.org/html/rfc7231#section-4.2.3) の定義
+   1. HTTP 仕様書の [cacheable](https://tools.ietf.org/html/rfc7231#section-4.2.3) の定義
 
 2. 技術的な知識
 
-    1. 一般的なキャッシュ可能なメソッドの説明: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}
-    2. 一般的なキャッシュ不可能なメソッドの説明: {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, often {{HTTPMethod("POST")}}
+   1. 一般的なキャッシュ可能なメソッドの説明: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}
+   2. 一般的なキャッシュ不可能なメソッドの説明: {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, often {{HTTPMethod("POST")}}

@@ -1,7 +1,6 @@
 ---
 title: 202 Accepted
 slug: Web/HTTP/Status/202
-translation_of: Web/HTTP/Status/202
 ---
 
 {{HTTPSidebar}}
@@ -18,9 +17,11 @@ Cette réponse est sans suite (<i lang="en">non-committal</i>)&nbsp;: HTTP ne re
 
 ## Spécifications
 
-| Spécification                                            | Titre                                                         |
-| -------------------------------------------------------- | ------------------------------------------------------------- |
-| [RFC 7231, section 6.3.3: 202 Accepted](https://datatracker.ietf.org/doc/html/rfc7231#section-6.3.3) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

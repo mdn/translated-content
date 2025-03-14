@@ -1,9 +1,12 @@
 ---
-title: Event.preventDefault()
+title: "Event: preventDefault() メソッド"
+short-title: preventDefault()
 slug: Web/API/Event/preventDefault
+l10n:
+  sourceCommit: d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
 ---
 
-{{apiref("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 **`preventDefault()`** は {{domxref("Event")}} インターフェイスのメソッドで、{{Glossary("user agent", "ユーザーエージェント")}}に、このイベントが明示的に処理されない場合に、その既定のアクションを通常どおりに行うべきではないことを伝えます。
 
@@ -11,10 +14,12 @@ slug: Web/API/Event/preventDefault
 
 後述のように、 **`preventDefault()`** を {{domxref("EventTarget.dispatchEvent()")}} によってディスパッチされたイベントのようなキャンセルできないイベントに対して、 `cancelable: true` を指定せずに呼び出しても何も効果がありません。
 
+パッシブリスナーが `preventDefault()` を呼び出した場合、何も起こらず、コンソールに警告が表示される場合があります。
+
 ## 構文
 
-```js
-event.preventDefault();
+```js-nolint
+preventDefault()
 ```
 
 ## 例
@@ -26,10 +31,15 @@ event.preventDefault();
 #### JavaScript
 
 ```js
-document.querySelector("#id-checkbox").addEventListener("click", function(event) {
-         document.getElementById("output-box").innerHTML += "ごめん！ <code>preventDefault()</code> がチェックさせません！<br>";
-         event.preventDefault();
-}, false);
+const checkbox = document.querySelector("#id-checkbox");
+
+checkbox.addEventListener("click", checkboxClick, false);
+
+function checkboxClick(event) {
+  const warn = "preventDefault() がこのチェックを妨害しています。\n";
+  document.getElementById("output-box").innerText += warn;
+  event.preventDefault();
+}
 ```
 
 #### HTML
@@ -39,7 +49,7 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 
 <form>
   <label for="id-checkbox">チェックボックス:</label>
-  <input type="checkbox" id="id-checkbox"/>
+  <input type="checkbox" id="id-checkbox" />
 </form>
 
 <div id="output-box"></div>
@@ -51,25 +61,26 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 
 ### キーストロークが編集フィールドに到達するのを止める
 
-次の例は、無効なテキスト入力が入力フィールドに到達するのを `preventDefault()` で止める方法を示しています。今日では、[ネイティブの HTML フォーム検証](/ja/docs/Learn/Forms/Form_validation)を代わりに使用してください。
+次の例は、無効なテキスト入力が入力フィールドに到達するのを `preventDefault()` で止める方法を示しています。今日では、[ネイティブの HTML フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)を代わりに使用してください。
 
 #### HTML
 
-こちらがフォームです。
+下の HTML フォームはユーザーの入力をキャプチャします。
+キー入力にしか興味がないので、`autocomplete` を無効にして、ブラウザーがキャッシュした値で入力フィールドを埋めるのを防いでいます。
 
 ```html
 <div class="container">
   <p>名前を小文字のみで入力してください。</p>
 
   <form>
-    <input type="text" id="my-textbox">
+    <input type="text" id="my-textbox" autocomplete="off" />
   </form>
 </div>
 ```
 
 #### CSS
 
-ユーザが無効なキーを押したときに描画する警告ボックスには、CSS を少し使用します。
+ユーザーが無効なキーを押したときに描画する警告ボックスには、CSS を少し使用します。
 
 ```css
 .warning {
@@ -84,26 +95,22 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 
 #### JavaScript
 
-そして、こちらがその仕事を行う JavaScript コードです。まず、{{domxref("Element/keypress_event", "keypress")}} イベントを待ち受けします。
+そして、こちらがその仕事を行う JavaScript コードです。まず、{{domxref("Element/keydown_event", "keydown")}} イベントを待ち受けします。
 
 ```js
-var myTextbox = document.getElementById('my-textbox');
-myTextbox.addEventListener('keypress', checkName, false);
+const myTextbox = document.getElementById("my-textbox");
+myTextbox.addEventListener("keydown", checkName, false);
 ```
 
 `checkName()` 関数は押されたキーを調べ、それを許可するかどうかを決定します。
 
-```js
+```js-nolint
 function checkName(evt) {
-  var charCode = evt.charCode;
-  if (charCode != 0) {
-    if (charCode < 97 || charCode > 122) {
-      evt.preventDefault();
-      displayWarning(
-        "小文字のみを使用してください。"
-        + "\n" + "charCode: " + charCode + "\n"
-      );
-    }
+  const key = evt.key;
+  const lowerCaseAlphabet = "abcdefghijklmnopqrstuvwxyz";
+  if (!lowerCaseAlphabet.includes(key)) {
+    evt.preventDefault();
+    displayWarning(`小文字のみを使用してください。\n押されたキー: ${key}\n`);
   }
 }
 ```
@@ -111,24 +118,24 @@ function checkName(evt) {
 `displayWarning()` 関数は、問題発生の通知を表示します。これはエレガントな関数ではありませんが、この例の目的には十分です。
 
 ```js
-var warningTimeout;
-var warningBox = document.createElement("div");
+let warningTimeout;
+const warningBox = document.createElement("div");
 warningBox.className = "warning";
 
 function displayWarning(msg) {
-  warningBox.innerHTML = msg;
+  warningBox.innerText = msg;
 
   if (document.body.contains(warningBox)) {
-    window.clearTimeout(warningTimeout);
+    clearTimeout(warningTimeout);
   } else {
-    // insert warningBox after myTextbox
+    // warningBox を myTextbox の後に挿入
     myTextbox.parentNode.insertBefore(warningBox, myTextbox.nextSibling);
   }
 
-  warningTimeout = window.setTimeout(function() {
-      warningBox.parentNode.removeChild(warningBox);
-      warningTimeout = -1;
-    }, 2000);
+  warningTimeout = setTimeout(() => {
+    warningBox.parentNode.removeChild(warningBox);
+    warningTimeout = -1;
+  }, 2000);
 }
 ```
 

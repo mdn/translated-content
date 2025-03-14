@@ -1,54 +1,182 @@
 ---
 title: stroke-linecap
 slug: Web/SVG/Attribute/stroke-linecap
+l10n:
+  sourceCommit: a7615ee2f9e22946edff7633962bc1d9eee9e0ad
 ---
 
-« [SVG 属性リファレンスホーム](/ja/docs/Web/SVG/Attribute)
+{{SVGRef}}
 
-`stroke-linecap` 要素は線を引いた時の開いている部分パスの終端の形状を指定します。
+**`stroke-linecap`** 属性は、開いたサブパスのストローク（線）が描画されるときに、その末端に使用する形状を定義するプレゼンテーション属性です。
 
-プレゼンテーション属性であるため、直接 CSS スタイルシートの中で定義したプロパティとして使うこともできます。
+> [!NOTE]
+> プレゼンテーション属性であるため、`stroke-linecap` は CSS プロパティとして使用できます。
 
-## 使用可能な場所
+この属性は次の SVG 要素で使用できます。
 
-| カテゴリ       | プレゼンテーション属性                                                                |
-| -------------- | ------------------------------------------------------------------------------------- |
-| 値             | butt \| round \| square \| inherit                                                    |
-| アニメーション | Yes                                                                                   |
-| 標準文書       | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#StrokeLinecapProperty) |
+- {{SVGElement('path')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('line')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
 
 ## 例
 
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
 ```html
-<?xml version="1.0"?>
-<svg width="120" height="120"
-     viewBox="0 0 120 120" version="1.1"
-     xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <!-- （規定値である） "butt" の値の効果 -->
+  <line x1="1" y1="1" x2="5" y2="1" stroke="black" stroke-linecap="butt" />
 
-    <line stroke-linecap="butt"
-          x1="30" y1="30" x2="30" y2="90"
-          stroke="black" stroke-width="20"/>
+  <!-- Effect of the "round" value -->
+  <line x1="1" y1="3" x2="5" y2="3" stroke="black" stroke-linecap="round" />
 
-    <line stroke-linecap="round"
-          x1="60" y1="30" x2="60" y2="90"
-          stroke="black" stroke-width="20"/>
+  <!-- Effect of the "square" value -->
+  <line x1="1" y1="5" x2="5" y2="5" stroke="black" stroke-linecap="square" />
 
-    <line stroke-linecap="square"
-          x1="90" y1="30" x2="90" y2="90"
-          stroke="black" stroke-width="20"/>
-
-    <path d="M30,30 L30,90 M60,30 L60,90 M90,30 L90,90"
-          stroke="white" />
+  <!--
+  次のピンクの線は、各ストロークのパスの位置を強調しています。
+  -->
+  <path d="M1,1 h4 M1,3 h4 M1,5 h4" stroke="pink" stroke-width="0.025" />
 </svg>
 ```
 
-**Live sample**
+{{EmbedLiveSample("Example", '100%', 200)}}
 
-{{ EmbedLiveSample('Example','120','120') }}
+## 使用方法のメモ
 
-## 要素
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td><code>butt</code> | <code>round</code> | <code>square</code></td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><code>butt</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>離散的</td>
+    </tr>
+  </tbody>
+</table>
 
-以下の要素で `stroke-linecap` を使うことができます
+### butt
 
-- [Shape 要素](/ja/docs/Web/SVG/Element#Shape) »
-- [Text content 要素](/ja/docs/Web/SVG/Element#TextContent) »
+`butt` 値は、各サブパスのストロークがその 2 つの端点を超えないことを示します。長さが 0 のサブパスでは、パスはまったく描画されません。
+
+#### 例
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
+  <!-- Effect of the "butt" value -->
+  <path d="M1,1 h4" stroke="black" stroke-linecap="butt" />
+
+  <!-- Effect of the "butt" value on a zero length path -->
+  <path d="M3,3 h0" stroke="black" stroke-linecap="butt" />
+
+  <!--
+  次のピンクの線は、各ストロークのパスの位置を強調しています。
+  -->
+  <path d="M1,1 h4" stroke="pink" stroke-width="0.025" />
+  <circle cx="1" cy="1" r="0.05" fill="pink" />
+  <circle cx="5" cy="1" r="0.05" fill="pink" />
+  <circle cx="3" cy="3" r="0.05" fill="pink" />
+</svg>
+```
+
+{{EmbedLiveSample('butt', '100%', 200)}}
+
+### round
+
+`round` 値は、各サブパスの終端で、ストローク幅に等しい直径の半円を描くことを示します。長さが 0 のサブパスでは、ストロークはサブパスのこの点を中心とした完全な円となります。
+
+#### 例
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
+  <!-- Effect of the "round" value -->
+  <path d="M1,1 h4" stroke="black" stroke-linecap="round" />
+
+  <!-- Effect of the "round" value on a zero length path -->
+  <path d="M3,3 h0" stroke="black" stroke-linecap="round" />
+
+  <!--
+  次のピンクの線は、各ストロークのパスの位置を強調しています。
+  -->
+  <path d="M1,1 h4" stroke="pink" stroke-width="0.025" />
+  <circle cx="1" cy="1" r="0.05" fill="pink" />
+  <circle cx="5" cy="1" r="0.05" fill="pink" />
+  <circle cx="3" cy="3" r="0.05" fill="pink" />
+</svg>
+```
+
+{{EmbedLiveSample('round', '100%', 200)}}
+
+### square
+
+`square` 値は、各サブパスの端において、幅がストロークの幅の半分に等しく、高さがストロークの幅に等しい長方形によってストロークが拡張されることを示します。長さがゼロのサブパスでは、ストロークは、サブパスのこの点を中心として、幅がストロークの幅に等しい正方形となります。
+
+#### 例
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
+  <!-- Effect of the "square" value -->
+  <path d="M1,1 h4" stroke="black" stroke-linecap="square" />
+
+  <!-- Effect of the "square" value on a zero length path -->
+  <path d="M3,3 h0" stroke="black" stroke-linecap="square" />
+
+  <!--
+  次のピンクの線は、各ストロークのパスの位置を強調しています。
+  -->
+  <path d="M1,1 h4" stroke="pink" stroke-width="0.025" />
+  <circle cx="1" cy="1" r="0.05" fill="pink" />
+  <circle cx="5" cy="1" r="0.05" fill="pink" />
+  <circle cx="3" cy="3" r="0.05" fill="pink" />
+</svg>
+```
+
+{{EmbedLiveSample('square', '100%', 200)}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

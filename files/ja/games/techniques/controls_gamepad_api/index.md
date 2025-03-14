@@ -1,6 +1,8 @@
 ---
 title: ゲームパッド API を使用したコントロールの実装
 slug: Games/Techniques/Controls_Gamepad_API
+l10n:
+  sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
 {{GamesSidebar}}
@@ -9,11 +11,11 @@ slug: Games/Techniques/Controls_Gamepad_API
 
 ## ウェブゲームのコントロール
 
-歴史的には、テレビに接続されたゲーム機でゲームをすることと、 PC 上でのゲームとはまったく異なる体験でした。最終的にはドライバーとプラグインにより、ゲーム機のゲームパッドをデスクトップゲーム――ネイティブかブラウザーで実行されるゲーム――で使用できるようになりました。 HTML5 の時代になり、[ゲームパッド API](/ja/docs/Web/API/Gamepad_API) が完成し、プラグインなしでゲームパッドコントローラを使用してブラウザーベースのゲームをプレイできるようになりました。ゲームパッド API は、入力を処理するために JavaScript コード内で使用できるボタンの押下と軸の変更を公開するインターフェイスを提供することで、これを実現します。 これらは、ブラウザーゲームにとって良いことです。
+歴史的には、テレビに接続されたゲーム機でゲームをすることと、 PC 上でのゲームとはまったく異なる体験でした。最終的にはドライバーとプラグインにより、ゲーム機のゲームパッドをデスクトップゲーム――ネイティブかブラウザーで実行されるゲーム――で使用できるようになりました。[ゲームパッド API](/ja/docs/Web/API/Gamepad_API) が登場し、プラグインなしでゲームパッドコントローラを使用してブラウザーベースのゲームをプレイできるようになりました。ゲームパッド API は、入力を処理するために JavaScript コード内で使用できるボタンの押下と軸の変更を公開するインターフェイスを提供することで、これを実現します。 これらは、ブラウザーゲームにとって良いことです。
 
 ## API ステータスとブラウザーサポート
 
-[ゲームパッド API](http://www.w3.org/TR/gamepad/) は W3C のプロセスではまだ草案の状態であり、まだ実装が変わることがありますが、[ブラウザーの対応](http://caniuse.com/gamepad)はかなり良い状態です。 Firefox 29 以降はそのまま使用できます。 Opera はバージョン 22 以降で API に対応しています（Chrome の Blink エンジンを使用していることを考えると驚くことではありません）。 Microsoft は Edge にて API をサポートしており、ゲームパッド API は 4 つの主要なブラウザーが現在対応しています。
+[ゲームパッド API](https://www.w3.org/TR/gamepad/) は W3C のプロセスではまだ草案の状態であり、まだ実装が変わることがありますが、[ブラウザーの対応](http://caniuse.com/gamepad)はかなり良い状態です。 Firefox 29 以降はそのまま使用できます。 Opera はバージョン 22 以降で API に対応しています（Chrome の Blink エンジンを使用していることを考えると驚くことではありません）。 Microsoft は Edge にて API をサポートしており、ゲームパッド API は 4 つの主要なブラウザーが現在対応しています。
 
 ## どのゲームパッドが良いか？
 
@@ -35,11 +37,12 @@ Hungry Fridge ゲームのフルバージョンが最初に構築され、次に
 
 以下に説明するコードは、Hungry Fridge ゲームのフルバージョンからのものですが、デモのものとほぼ同じです。唯一の違いは、フルバージョンでは、スーパーターボモードを使用してゲームを起動するかどうかを決定する`ターボ`変数。 これは独立して機能するので、ゲームパッドが接続されていなくてもオンにすることができます。
 
-> **メモ:** イースターエッグの時間: ゲームパッドを接続せずにデスクトップで Super Turbo Hungry Fridge を起動する隠しオプションがあります。スクリーンの右上にあるゲームパッドアイコンをクリックします。 それはスーパーターボモードでゲームを起動し、あなたはキーボードで冷蔵庫を制御することができます。タレットを左右に回すたには A と D、撃つためには W、移動の多面実は矢印キーを使います。
+> [!NOTE]
+> イースターエッグの時間: ゲームパッドを接続せずにデスクトップで Super Turbo Hungry Fridge を起動する隠しオプションがあります。スクリーンの右上にあるゲームパッドアイコンをクリックします。 それはスーパーターボモードでゲームを起動し、あなたはキーボードで冷蔵庫を制御することができます。タレットを左右に回すたには A と D、撃つためには W、移動の多面実は矢印キーを使います。
 
 ## 実装
 
-ゲームパッド API で使用する重要なイベントは、`gamepadconnected` と `gamepaddisconnected` の2つです。最初のイベントは、ブラウザが新しいゲームパッドの接続を検出したときに発行され、 2 つ目はゲームパッドが切断されたときに発行されます（ユーザーによる物理的な切断、または操作不能による切断）。このデモでは、`gamepadAPI` オブジェクトを使用して API に関するすべての情報を格納しています。
+ゲームパッド API で使用する重要なイベントは、`gamepadconnected` と `gamepaddisconnected` の2つです。最初のイベントは、ブラウザーが新しいゲームパッドの接続を検出したときに発行され、 2 つ目はゲームパッドが切断されたときに発行されます（ユーザーによる物理的な切断、または操作不能による切断）。このデモでは、`gamepadAPI` オブジェクトを使用して API に関するすべての情報を格納しています。
 
 ```js
 const gamepadAPI = {
@@ -52,7 +55,7 @@ const gamepadAPI = {
   buttons: [],
   buttonsCache: [],
   buttonsStatus: [],
-  axesStatus: []
+  axesStatus: [],
 };
 ```
 
@@ -118,15 +121,15 @@ disconnect(evt) {
 update() {
   // Clear the buttons cache
   gamepadAPI.buttonsCache = [];
-  
+
   // Move the buttons status from the previous frame to the cache
   for (let k = 0; k < gamepadAPI.buttonsStatus.length; k++) {
     gamepadAPI.buttonsCache[k] = gamepadAPI.buttonsStatus[k];
   }
-  
+
   // Clear the buttons status
   gamepadAPI.buttonsStatus = [];
-  
+
   // Get the gamepad object
   const c = gamepadAPI.controller || {};
 
@@ -139,7 +142,7 @@ update() {
       }
     }
   }
-  
+
   // Loop through axes and push their values to the array
   const axes = [];
   if (c.axes) {
@@ -147,11 +150,11 @@ update() {
       axes.push(c.axes[a].toFixed(2));
     }
   }
-  
+
   // Assign received values
   gamepadAPI.axesStatus = axes;
   gamepadAPI.buttonsStatus = pressed;
-  
+
   // Return buttons for debugging purposes
   return pressed;
 },
@@ -161,19 +164,19 @@ update() {
 
 ### ボタンプレスの検出
 
-`buttonPressed()`  メソッドはメインのゲームループに配置され、ボタンの押下を待機します。 2 つの引数、つまり待ち受けするボタンと、ボタンを押したままにすることをゲームに伝える（オプション）方法があります。 それがなければ、ボタンを放してもう一度押して、希望する効果を持たなければなりません。
+`buttonPressed()` メソッドはメインのゲームループに配置され、ボタンの押下を待機します。 2 つの引数、つまり待ち受けするボタンと、ボタンを押したままにすることをゲームに伝える（オプション）方法があります。 それがなければ、ボタンを放してもう一度押して、希望する効果を持たなければなりません。
 
 ```js
 buttonPressed(button, hold) {
   let newPress = false;
-  
+
   // Loop through pressed buttons
   for (let i = 0; i < gamepadAPI.buttonsStatus.length; i++) {
     // If we found the button we're looking for
     if (gamepadAPI.buttonsStatus[i] === button) {
       // Set the boolean variable to true
       newPress = true;
-      
+
       // If we want to check the single press
       if (!hold) {
         // Loop through the cached states from the previous frame
@@ -192,10 +195,10 @@ buttonPressed(button, hold) {
 
 ```js
 if (gamepadAPI.turbo) {
-  if (gamepadAPI.buttonPressed('A', 'hold')) {
+  if (gamepadAPI.buttonPressed("A", "hold")) {
     this.turbo_fire();
   }
-  if (gamepadAPI.buttonPressed('B')) {
+  if (gamepadAPI.buttonPressed("B")) {
     this.managePause();
   }
 }
@@ -205,9 +208,9 @@ if (gamepadAPI.turbo) {
 
 ### 軸のしきい値
 
-ボタンには `0` または `1` の二つの状態しかありませんが、アナログスティックは `X` 軸と `Y` 軸の両方に沿って `-1` と `1` の間の浮動小数点範囲を持っています。
+ボタンには `0` または `1` の 2 つの状態しかありませんが、アナログスティックは `X` 軸と `Y` 軸の両方に沿って `-1` と `1` の間の浮動小数点範囲を持っています。
 
-ゲームパッドは使用しないまま放置しておくと、ホコリで汚れてしまうことがあり、-1や1の値を正確にチェックすることが難しくなります。このため、軸の値が有効になるための閾値を設定するとよいでしょう。例えば、 Fridge のタンクは、 `X` の値が `0.5` より大きいときだけ右に曲がります。
+ゲームパッドは使用しないまま放置しておくと、ホコリで汚れてしまうことがあり、-1 や 1 の値を正確にチェックすることが難しくなります。このため、軸の値が有効になるための閾値を設定するとよいでしょう。例えば、Fridge のタンクは、 `X` の値が `0.5` より大きいときだけ右に曲がります。
 
 ```js
 if (gamepadAPI.axesStatus[0].x > 0.5) {
@@ -230,11 +233,11 @@ if (gamepadAPI.axesStatus[0].x > 0.5) {
 
 マッピング型は、文字列ではなく列挙型のオブジェクトになりました。
 
-```js
+```ts
 enum GamepadMappingType {
-    "",
-    "standard"
-};
+  "",
+  "standard",
+}
 ```
 
 この列挙型は、ゲームパッドの既知のマッピングのセットを定義します。 今のところ `standard` のレイアウトしかありませんが、将来は新しいレイアウトが登場する可能性があります。 レイアウトが不明な場合は、空の文字列に設定されます。
@@ -245,4 +248,4 @@ enum GamepadMappingType {
 
 ## 概要
 
-ゲームパッド API は、とても簡単に開発することができます。プラグインを一切使わずに、ゲーム機のような体験をブラウザで実現することが、これまで以上に簡単にできるようになりました。ブラウザーで直接、 [Hungry Fridge](https://enclavegames.com/games/hungry-fridge/) のフルバージョンをプレイすることができます。 [Gamepad API Content Kit](https://end3r.github.io/Gamepad-API-Content-Kit/) の他のリソースもチェックしてみてください。
+ゲームパッド API は、とても簡単に開発することができます。プラグインを一切使わずに、ゲーム機のような体験をブラウザーで実現することが、これまで以上に簡単にできるようになりました。ブラウザーで直接、 [Hungry Fridge](https://enclavegames.com/games/hungry-fridge/) のフルバージョンをプレイすることができます。 [Gamepad API Content Kit](https://end3r.github.io/Gamepad-API-Content-Kit/) の他のリソースもチェックしてみてください。

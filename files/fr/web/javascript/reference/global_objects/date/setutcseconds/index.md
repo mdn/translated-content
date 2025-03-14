@@ -1,21 +1,25 @@
 ---
 title: Date.prototype.setUTCSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setUTCSeconds
 ---
 
 {{JSRef}}
 
 La méthode **`setUTCSeconds()`** définit les secondes pour la date, selon UTC.
 
-{{EmbedInteractiveExample("pages/js/date-setutcseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCSeconds()")}}
+
+```js interactive-example
+const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+
+console.log(date1.getUTCSeconds());
+// Expected output: 30
+
+date1.setUTCSeconds(39);
+
+console.log(date1.getUTCSeconds());
+// Expected output: 39
+```
 
 ## Syntaxe
 

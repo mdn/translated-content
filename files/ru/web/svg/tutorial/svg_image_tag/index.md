@@ -1,9 +1,9 @@
 ---
 title: SVG image element
 slug: Web/SVG/Tutorial/SVG_Image_Tag
-translation_of: Web/SVG/Tutorial/SVG_Image_Tag
 ---
-{{ PreviousNext("Web/SVG/Tutorial/SVG_Fonts", "Web/SVG/Tutorial/Tools_for_SVG") }}
+
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/SVG_Fonts", "Web/SVG/Tutorial/Tools_for_SVG") }}
 
 SVG тег {{ SVGElement("image") }} позволяет выводить растровые изображения внутри SVG-объектов.
 
@@ -19,7 +19,8 @@ SVG тег {{ SVGElement("image") }} позволяет выводить рас�
 </svg>
 ```
 
-> **Предупреждение:** Важные замечания (подробнее [W3 specs](http://www.w3.org/TR/SVG/struct.html#ImageElement)):
+> [!WARNING]
+> Важные замечания (подробнее [W3 specs](https://www.w3.org/TR/SVG/struct.html#ImageElement)):
 
 - Если параметры **x** или **y** не заданы, то им будут присвоены значения равные **0**.
 - Если параметры **height** или **width** не заданы, то им будут присвоены значения равные **0**.

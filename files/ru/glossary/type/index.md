@@ -1,15 +1,9 @@
 ---
 title: Type (тип)
 slug: Glossary/Type
-tags:
-  - Data Type
-  - Glossary
-  - JavaScript
-  - Type
-  - тип данных
-translation_of: Glossary/Type
-original_slug: Глоссарий/Type
 ---
+
+{{GlossarySidebar}}
 
 **Тип** является характеристикой {{glossary('value', 'значения')}}, влияющей на то, какой вид данных или структур оно может хранить — например, в JavaScript {{domxref("Boolean")}} содержит только значения `true`/`false`, тогда как {{domxref("String")}} содержит текстовые строки, а {{domxref("Number")}} содержит числа любого типа и т.д. При этом для [Структурных](/ru/docs/Web/JavaScript/Data_structures) типов мы в целом можем опираться на то, какой конструктор был использован для создания данной структуры.
 
@@ -19,5 +13,4 @@ original_slug: Глоссарий/Type
 
 ### Общие сведения
 
-- {{Interwiki("wikipedia", "Data type")}} на Википедии
 - [Типы данных в JavaScript](/ru/docs/Web/JavaScript/Data_structures)

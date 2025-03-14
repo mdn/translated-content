@@ -5,77 +5,63 @@ slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
 
 {{JSRef}}
 
-**`SyntaxError`** 对象代表尝试解析语法上不合法的代码的错误。
+**`SyntaxError`**（语法错误）对象代表尝试解析不符合语法的代码的错误。当 Javascript 引擎解析代码时，遇到了不符合语法规范的标记（token）或标记顺序，则会抛出 `SyntaxError`。
 
-## 描述
+`SyntaxError` 是一个{{Glossary("serializable object", "可序列化对象")}}，所以可以使用 {{DOMxRef("Window.structuredClone", "structuredClone()")}} 对它进行克隆，也可以使用 {{domxref("Worker/postMessage()", "postMessage()")}} 在 [Worker](/zh-CN/docs/Web/API/Worker) 之间拷贝它。
 
-当 Javascript 语言解析代码时，JavaScript 引擎发现了不符合语法规范的 tokens 或 token 顺序时抛出`SyntaxError`.
+## 构造函数
 
-## 语法
+- {{jsxref("Global_Objects/SyntaxError/SyntaxError", "SyntaxError()")}}
+  - : 创建一个新的 `SyntaxError` 对象。
 
-```plain
-new SyntaxError([message[, fileName[, lineNumber]]])
-```
+## 实例属性
 
-### 参数
-
-- `message`
-  - : 可选的。可阅读的错误描述信息
-- `fileName` {{non-standard_inline}}
-  - : 可选的。包含引发异常的代码的文件名
-- `lineNumber` {{non-standard_inline}}
-  - : 可选的。包含引发异常的代码的行号
-
-## 属性
-
-- {{jsxref("SyntaxError.prototype")}}
-  - : 允许 `SyntaxError`对象添加属性。
-
-## 方法
-
-全局 `SyntaxError` 自身不包含任何方法，但从原型链中继承了一些方法。
-
-## `SyntaxError` 实例
-
-### 属性
-
-{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/prototype', '属性')}}
-
-### 方法
-
-{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/prototype', '方法')}}
+- {{jsxref("Error.prototype.message")}}
+  - : 错误消息。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.name")}}
+  - : 错误名称。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.cause")}}
+  - : 表示导致当前错误被抛出的原因。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
+  - : 引发此错误的文件的路径。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
+  - : 引发此错误的代码所在的文件的行号。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
+  - : 引发此错误的代码在文件中所在行的列号。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
+  - : 堆栈跟踪。继承自 {{jsxref("Error")}}。
 
 ## 示例
 
-### 捕获 `SyntaxError`
+### 捕获 SyntaxError
 
 ```js
 try {
-  eval('hoo bar');
+  eval("hoo bar");
 } catch (e) {
-  console.log(e instanceof SyntaxError); // true
-  console.log(e.message);                // "missing ; before statement"
-  console.log(e.name);                   // "SyntaxError"
-  console.log(e.fileName);               // "Scratchpad/1"
-  console.log(e.lineNumber);             // 1
-  console.log(e.columnNumber);           // 4
-  console.log(e.stack);                  // "@Scratchpad/1:2:3\n"
+  console.error(e instanceof SyntaxError);
+  console.error(e.message);
+  console.error(e.name);
+  console.error(e.fileName);
+  console.error(e.lineNumber);
+  console.error(e.columnNumber);
+  console.error(e.stack);
 }
 ```
 
-### 创建 `SyntaxError`
+### 创建 SyntaxError
 
 ```js
 try {
-  throw new SyntaxError('Hello', 'someFile.js', 10);
+  throw new SyntaxError("Hello", "someFile.js", 10);
 } catch (e) {
-  console.log(e instanceof SyntaxError); // true
-  console.log(e.message);                // "Hello"
-  console.log(e.name);                   // "SyntaxError"
-  console.log(e.fileName);               // "someFile.js"
-  console.log(e.lineNumber);             // 10
-  console.log(e.columnNumber);           // 0
-  console.log(e.stack);                  // "@Scratchpad/2:11:9\n"
+  console.error(e instanceof SyntaxError); // true
+  console.error(e.message); // Hello
+  console.error(e.name); // SyntaxError
+  console.error(e.fileName); // someFile.js
+  console.error(e.lineNumber); // 10
+  console.error(e.columnNumber); // 0
+  console.error(e.stack); // @debugger eval code:3:9
 }
 ```
 
@@ -87,7 +73,6 @@ try {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Error")}}
-- {{jsxref("SyntaxError.prototype")}}

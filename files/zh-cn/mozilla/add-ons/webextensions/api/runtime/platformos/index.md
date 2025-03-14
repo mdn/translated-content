@@ -3,7 +3,7 @@ title: 获取当前操作系统 - runtime.PlatformOs
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 获取当前浏览器运行所在的操作系统。
 
@@ -18,7 +18,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
 - `"android"`
   - : 表示底层操作系统是 Android.
 - `"cros"`
-  - : 表示底层操作系统是 Chrome OS.
+  - : 表示底层操作系统是 ChromeOS.
 - `"linux"`
   - : 表示底层操作系统是 Linux.
 - `"openbsd"`
@@ -30,9 +30,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#type-PlatformOs) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.google.cn/docs/extensions/reference/api/runtime#type-PlatformOs) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

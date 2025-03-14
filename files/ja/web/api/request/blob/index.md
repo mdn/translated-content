@@ -1,13 +1,14 @@
 ---
-title: Request.blob()
+title: "Request: blob() メソッド"
+short-title: blob()
 slug: Web/API/Request/blob
 l10n:
-  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
+  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-**`arrayBuffer()`** は {{domxref("Request")}} インターフェイスのメソッドで、リクエスト本体を読み込み、それを {{domxref("Blob")}} で解決するプロミスとして返します。
+**`blob()`** は {{domxref("Request")}} インターフェイスのメソッドで、リクエスト本体を読み込み、それを {{domxref("Blob")}} で解決するプロミスとして返します。
 
 ## 構文
 
@@ -26,19 +27,18 @@ blob()
 ## 例
 
 ```js
-const obj = { hello: 'world' };
-const myBlob = new Blob(
-  [JSON.stringify(obj, null, 2)],
-  { type : 'application/json' },
-);
+const obj = { hello: "world" };
+const myBlob = new Blob([JSON.stringify(obj, null, 2)], {
+  type: "application/json",
+});
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
+const request = new Request("/myEndpoint", {
+  method: "POST",
   body: myBlob,
 });
 
 request.blob().then((myBlob) => {
-  // do something with the blob sent in the request
+  // リクエストで送信された blob を処理する
 });
 ```
 

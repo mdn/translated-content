@@ -1,22 +1,26 @@
 ---
 title: Array.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
-tags:
-  - Array
-  - JavaScript
-  - Matriz
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/join
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/join
 ---
 
 {{JSRef}}
 
-El método **`join()`** une todos los elementos de una matriz (o un [objeto similar a una matriz](/es/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)) en una cadena y devuelve esta cadena.
+El método **`join()`** une todos los elementos de una matriz (o un [objeto similar a una matriz](/es/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)) en una cadena y devuelve esta cadena.
 
-{{EmbedInteractiveExample("pages/js/array-join.html")}}
+{{InteractiveExample("JavaScript Demo: Array.join()")}}
+
+```js interactive-example
+const elements = ["Fire", "Air", "Water"];
+
+console.log(elements.join());
+// Expected output: "Fire,Air,Water"
+
+console.log(elements.join(""));
+// Expected output: "FireAirWater"
+
+console.log(elements.join("-"));
+// Expected output: "Fire-Air-Water"
+```
 
 ## Sintaxis
 
@@ -37,7 +41,8 @@ Una cadena con todos los elementos de la matriz unidos. Si `arr.length` es `0`, 
 
 Las conversiones de cadena de todos los elementos de la matriz se unen en una cadena.
 
-> **Advertencia:** Si un elemento `no está definido` o es `nulo`, se convierte en la cadena vacía.
+> [!WARNING]
+> Si un elemento `no está definido` o es `nulo`, se convierte en la cadena vacía.
 
 ## Ejemplos
 
@@ -46,11 +51,11 @@ Las conversiones de cadena de todos los elementos de la matriz se unen en una ca
 El siguiente ejemplo crea un arreglo `a` con tres elementos para luego unir el arreglo cuatro veces: usando el separador predeterminado, luego una coma y un espacio, luego un signo de suma, y finalmente una cadena vacío.
 
 ```js
-var a = ['Viento', 'Lluvia', 'Fuego'];
-var miVar1 = a.join();      // asigna 'Viento,Lluvia,Fuego' a miVar1
-var miVar2 = a.join(', ');  // asigna 'Viento, Lluvia, Fuego' a miVar2
-var miVar3 = a.join(' + '); // asigna 'Viento + Lluvia + Fuego' a miVar3
-var miVar4 = a.join('');    // asigna 'VientoLluviaFuego' a miVar4
+var a = ["Viento", "Lluvia", "Fuego"];
+var miVar1 = a.join(); // asigna 'Viento,Lluvia,Fuego' a miVar1
+var miVar2 = a.join(", "); // asigna 'Viento, Lluvia, Fuego' a miVar2
+var miVar3 = a.join(" + "); // asigna 'Viento + Lluvia + Fuego' a miVar3
+var miVar4 = a.join(""); // asigna 'VientoLluviaFuego' a miVar4
 ```
 
 ### Unirse a un objeto tipo matriz
@@ -62,7 +67,7 @@ function f(a, b, c) {
   var s = Array.prototype.join.call(arguments);
   console.log(s); // '1,a,true'
 }
-f(1, 'a', true);
+f(1, "a", true);
 //resultado esperado: "1,a,true"
 ```
 
@@ -72,7 +77,7 @@ f(1, 'a', true);
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.join")}}
+{{Compat}}
 
 ## Ver también
 

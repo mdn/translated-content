@@ -1,13 +1,6 @@
 ---
 title: Window.closed
 slug: Web/API/Window/closed
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/closed
 ---
 
 {{APIRef}}
@@ -33,11 +26,12 @@ const isClosed = windowRef.closed;
 ```js
 // Check that an opener exists and is not closed
 if (window.opener && !window.opener.closed) {
-  window.opener.location.href = 'http://www.mozilla.org';
+  window.opener.location.href = "https://www.mozilla.org";
 }
 ```
 
-> **참고:** 팝업은 자신을 띄운 창에만 접근할 수 있습니다.
+> [!NOTE]
+> 팝업은 자신을 띄운 창에만 접근할 수 있습니다.
 
 ### 이전에 열었던 팝업 새로고침
 
@@ -52,7 +46,7 @@ function refreshPopupWindow() {
     popupWindow.location.reload(true);
   } else {
     // Open a new popup window
-    popupWindow = window.open('popup.html', 'dataWindow');
+    popupWindow = window.open("popup.html", "dataWindow");
   }
 }
 ```

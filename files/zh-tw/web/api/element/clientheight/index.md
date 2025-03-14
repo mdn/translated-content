@@ -9,7 +9,8 @@ slug: Web/API/Element/clientHeight
 
 `clientHeight` 可以被計算成 CSS `height` + CSS `padding` - 水平滾動條的高度（如果有顯示）
 
-> **備註：** 這個屬性會以四捨五入進位取整數. 如果要使用非整數值, 使用 {{ domxref("element.getBoundingClientRect()") }}.
+> [!NOTE]
+> 這個屬性會以四捨五入進位取整數. 如果要使用非整數值, 使用 {{ domxref("element.getBoundingClientRect()") }}.
 
 ## 表達式
 
@@ -21,7 +22,7 @@ var h = element.clientHeight;
 
 ## 範例
 
-![Image:Dimensions-client.png](/@api/deki/files/185/=Dimensions-client.png)
+![Image:Dimensions-client.png](dimensions-client.png)
 
 ## 規範
 
@@ -35,5 +36,5 @@ var h = element.clientHeight;
 
 - {{domxref("HTMLElement.offsetHeight")}}
 - {{domxref("Element.scrollHeight")}}
-- [Determining the dimensions of elements](/zh-TW/docs/Determining_the_dimensions_of_elements)
-- [MSDN Measuring Element Dimension and Location](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
+- [Determining the dimensions of elements](/zh-TW/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- [MSDN Measuring Element Dimension and Location](<https://learn.microsoft.com/zh-tw/previous-versions/hh781509(v=vs.85)>)

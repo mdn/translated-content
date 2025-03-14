@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
 
 O método **`setFullYear()`** atribui o ano completo para a data especificada de acordo com o horário universal (UTC). Retorna uma nova data e hora.
 
-{{EmbedInteractiveExample("pages/js/date-setfullyear.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setFullYear()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+event.setFullYear(1969);
+
+console.log(event.getFullYear());
+// Expected output: 1969
+
+event.setFullYear(0);
+
+console.log(event.getFullYear());
+// Expected output: 0
+```
 
 ## Sintaxe
 
@@ -45,13 +59,11 @@ theBigDay.setFullYear(1997);
 
 ## Especificações
 
-| Especificação                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.setfullyear', 'Date.prototype.setFullYear')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.setFullYear")}}
+{{Compat}}
 
 ## Veja também
 

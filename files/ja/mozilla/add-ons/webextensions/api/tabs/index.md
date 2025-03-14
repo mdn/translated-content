@@ -12,9 +12,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs
 この API の大半の使用に特別なパーミッションは要りませんが:
 
 - `Tab.url` `Tab.title` `Tab.favIconUrl`, のアクセスには "tabs" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)が必要です。また Firefox では URL による{{WebExtAPIRef("tabs.query", "問い合わせ")}}をするのにも "tabs" が必要です。
-- {{WebExtAPIRef("tabs.executeScript()")}} や {{WebExtAPIRef("tabs.insertCSS()")}} を使うには、そのタブの [host パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)が必要です。
+- {{WebExtAPIRef("tabs.executeScript()")}} や {{WebExtAPIRef("tabs.insertCSS()")}} を使うには、そのタブの [host パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)が必要です。
 
-あるいは、これらのパーミッションを一時的に取得することもできますが、それは現在アクティブなタブで明示的なユーザーアクションへの応答する場合のみで、["activeTab" パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)を要求することで可能です。
+あるいは、これらのパーミッションを一時的に取得することもできますが、それは現在アクティブなタブで明示的なユーザーアクションへの応答する場合のみで、["activeTab" パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission)を要求することで可能です。
 
 タブ操作の多くはタブ ID を使います。タブ ID はブラウザーセッションの単一のタブごとにユニークである保証がされています。ブラウザーが再起動したら、タブ ID を再利用できて、実際そうします。ブラウザーの再起動をまたいでタブ情報を関連づけるには {{WebExtAPIRef("sessions.setTabValue()")}} を使います。
 
@@ -67,7 +67,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs
 - {{WebExtAPIRef("tabs.getAllInWindow()")}} {{deprecated_inline}}
   - : 特定のウィンドウ内のすべてのタブについての情報を取り出す。
 - {{WebExtAPIRef("tabs.getCurrent()")}}
-  - : スクリプトが実行されているタブについての情報を [`tabs.Tab`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab) オブジェクトとして取り出す。
+  - : スクリプトが実行されているタブについての情報を [`tabs.Tab`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) オブジェクトとして取り出す。
 - {{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}
   - : あるウィンドウにおいてタブが選択されているかを得る。
 - {{WebExtAPIRef("tabs.getZoom()")}}
@@ -148,13 +148,15 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.tabs")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **メモ:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -181,4 +183,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

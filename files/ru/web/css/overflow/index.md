@@ -1,7 +1,6 @@
 ---
 title: overflow
 slug: Web/CSS/overflow
-translation_of: Web/CSS/overflow
 ---
 
 {{ CSSRef() }}
@@ -10,13 +9,13 @@ translation_of: Web/CSS/overflow
 
 Свойство CSS `overflow` определяет, необходимо ли для переполненного блочного элемента содержимое обрезать, предоставить полосы прокрутки или просто отобразить.
 
-Использование свойства `overflow` со значениями, отличными от `visible`, (значение, принятое по умолчанию), создаёт новый [блочный контекст форматирования](/ru/docs/CSS/block_formatting_context). Это технически необходимо, поскольку если бы float пересекался с элементом прокрутки, это потребовало бы обеспечить обтекание содержимого прокручиваемого элемента вокруг вторгающихся float'ов. Обтекание при этом было бы необходимо производить после каждого шага прокрутки заново, что привело бы к заметному замедлению прокрутки. Обратите внимание, что при программной установке атрибута `scrollTop` для соответствующего HTML-элемента, даже если `overflow` имеет значение `hidden`, элемент, возможно, придётся прокрутить.
+Использование свойства `overflow` со значениями, отличными от `visible`, (значение, принятое по умолчанию), создаёт новый [блочный контекст форматирования](/ru/docs/Web/CSS/CSS_display/Block_formatting_context). Это технически необходимо, поскольку если бы float пересекался с элементом прокрутки, это потребовало бы обеспечить обтекание содержимого прокручиваемого элемента вокруг вторгающихся float'ов. Обтекание при этом было бы необходимо производить после каждого шага прокрутки заново, что привело бы к заметному замедлению прокрутки. Обратите внимание, что при программной установке атрибута `scrollTop` для соответствующего HTML-элемента, даже если `overflow` имеет значение `hidden`, элемент, возможно, придётся прокрутить.
 
 {{cssinfo}}
 
 ## Синтаксис
 
-[Формат синтаксиса](/ru/docs/CSS/Value_definition_syntax): {{csssyntax("overflow")}}
+[Формат синтаксиса](/ru/docs/Web/CSS/Value_definition_syntax): {{csssyntax("overflow")}}
 
 ```css
 overflow: visible
@@ -40,7 +39,7 @@ overflow: inherit
 
 #### Расширения Mozilla
 
-- `-moz-scrollbars-none` {{ obsolete_inline() }}
+- `-moz-scrollbars-none`
   - : Используйте `overflow:hidden`.
 - `-moz-scrollbars-horizontal` {{ Deprecated_inline() }}
   - : Использование {{ Cssxref("overflow-x") }} и {{ Cssxref("overflow-y") }} предпочтительнее.
@@ -53,10 +52,10 @@ overflow: inherit
 
 ```css
 p {
-     width: 12em;
-     height: 6em;
-     border: dotted;
-     overflow: visible; /* содержимое не обрезается */
+  width: 12em;
+  height: 6em;
+  border: dotted;
+  overflow: visible; /* содержимое не обрезается */
 }
 ```
 
@@ -64,21 +63,27 @@ p {
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
 ```css
-p { overflow: hidden; /* полосы прокрутки не предоставляются */ }
+p {
+  overflow: hidden; /* полосы прокрутки не предоставляются */
+}
 ```
 
 `overflow: hidden`
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
 ```css
-p { overflow: scroll; /* всегда показывать полосы прокрутки */ }
+p {
+  overflow: scroll; /* всегда показывать полосы прокрутки */
+}
 ```
 
 `overflow: scroll`
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
 ```css
-p { overflow: auto; /* добавить полосы прокрутки, если это необходимо */ }
+p {
+  overflow: auto; /* добавить полосы прокрутки, если это необходимо */
+}
 ```
 
 `overflow: auto`
@@ -86,13 +91,9 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 ## Спецификации
 
-| Спецификация                                                                         | Статус                               | Комментарий                                                     |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | --------------------------------------------------------------- |
-| {{SpecName('CSS3 Overflow', '#propdef-overflow', 'overflow')}} | {{Spec2('CSS3 Overflow')}} | Changed syntax to allow one or two keywords instead of only one |
-| {{SpecName('CSS3 Box', '#propdef-overflow', 'overflow')}}         | {{Spec2('CSS3 Box')}}         | Без изменений                                                   |
-| {{SpecName('CSS2.1', 'visufx.html#overflow', 'overflow')}}         | {{Spec2('CSS2.1')}}             | Initial definition.                                             |
+{{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 

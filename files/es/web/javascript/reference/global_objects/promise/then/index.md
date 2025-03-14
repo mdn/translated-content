@@ -1,19 +1,11 @@
 ---
 title: Promise.prototype.then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Promise
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/then
 ---
 
 {{JSRef}}
 
-El método **`then()`** retorna una {{domxref("Promesa")}}. Recibe dos argumentos: funciones callback para los casos de éxito y fallo de [`Promise`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise).
+El método **`then()`** retorna una {{domxref("Promesa")}}. Recibe dos argumentos: funciones callback para los casos de éxito y fallo de [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 Nota: Si ambos argumentos son omitidos, o se proveen métodos que no sean funciones, se creará una nueva `Promesa` sin handlers adicionales, que simplemente adoptan el estado final de la `Promesa` que entonces es llamado. Si el primer argumento es omitido o se provee una no-función, el nuevo `Promise` que es creado simplemente adopta el estado cumplido del `Promise` que entonces es llamado (si se convierte en fulfilled). Si el segundo argument es omitido o se provee una no-función, el nuevo `Promise` que es creado simplemente adopta el estado de rechazo del `Promesa` que entonces es llamado (si se convierte en rechazado).
 
@@ -33,19 +25,19 @@ p.then(function(value) {
 
 Retorna un `Promise` el cual es determinado por las funciones input:
 
-- Si `alCumplir` o `enRechazo` arroja un error, o retorna un [`Promise`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise) rechazado, `then` retorna un `Promise` rechazado.
+- Si `alCumplir` o `enRechazo` arroja un error, o retorna un [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise) rechazado, `then` retorna un `Promise` rechazado.
 - Si `alCumplir` o `enRechazo` retorna un `Promise` que resuelve, o retorna cualquier otro valor, `then` retorna un `Promise` resuelto.
 
 <!-- -->
 
 - `alCumplir` {{optional_inline}}
-  - : Una [Función](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Function) es llamada si la `Promesa` se cumple. Esta función tiene un argumento, el `valor de` cumplimiento. Si no es una función, se reemplaza internamente con una función de "Identidad" (devuelve el argumento recibido).
+  - : Una [Función](/es/docs/Web/JavaScript/Reference/Global_Objects/Function) es llamada si la `Promesa` se cumple. Esta función tiene un argumento, el `valor de` cumplimiento. Si no es una función, se reemplaza internamente con una función de "Identidad" (devuelve el argumento recibido).
 - `enRechazo` {{optional_inline}}
-  - : Una [Función](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Function) es llamada si la `Promesa` es rechazada. Esta función tiene un argumento, la `razón` de rechazo. Si no es una función, se reemplaza internamente con una función "Lanzador" (lanza un error que recibió como argumento).
+  - : Una [Función](/es/docs/Web/JavaScript/Reference/Global_Objects/Function) es llamada si la `Promesa` es rechazada. Esta función tiene un argumento, la `razón` de rechazo. Si no es una función, se reemplaza internamente con una función "Lanzador" (lanza un error que recibió como argumento).
 
 ### Valor de retorno
 
-Un [`Promise`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise) en estado **pendiente.** La función de control (`alCumplir o enRechazo)` es llamada de forma **asíncrona** (tan pronto como el stack se vacíe). Después de la invocación de la función de control pueden darse diferentes casos:
+Un [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise) en estado **pendiente.** La función de control (`alCumplir o enRechazo)` es llamada de forma **asíncrona** (tan pronto como el stack se vacíe). Después de la invocación de la función de control pueden darse diferentes casos:
 
 - Si se recibe un valor, la Promesa devuelta por el método `then` queda resuelta adoptando el valor de retorno.
 - Si se produce un error, la Promesa devuelta por el método `then` es rechazada, adoptando el error como su valor.
@@ -88,17 +80,20 @@ Ya que los métodos `then` y {{jsxref("Promise.prototype.catch()")}} devuelven p
 ### Usando el metodo `then`
 
 ```js
-var p1 = new Promise(function(resolve, reject) {
-  resolve('Success!');
+var p1 = new Promise(function (resolve, reject) {
+  resolve("Success!");
   // or
   // reject ("Error!");
 });
 
-p1.then(function(value) {
-  console.log(value); // Success!
-}, function(reason) {
-  console.log(reason); // Error!
-});
+p1.then(
+  function (value) {
+    console.log(value); // Success!
+  },
+  function (reason) {
+    console.log(reason); // Error!
+  },
+);
 ```
 
 ### Encadenamiento
@@ -165,38 +160,46 @@ Una llamada a `then` devolverá una promesa rechazada si la función lanza un er
 
 ```js
 Promise.resolve()
-  .then( () => {
+  .then(() => {
     // Hace que .then() devuelva una promera rechazada
-    throw new Error('Oh no!');
+    throw new Error("Oh no!");
   })
-  .then( () => {
-    console.log( 'No invocada.' );
-  }, error => {
-    console.error( 'Función de rechazo llamada: ', error );
-});
+  .then(
+    () => {
+      console.log("No invocada.");
+    },
+    (error) => {
+      console.error("Función de rechazo llamada: ", error);
+    },
+  );
 ```
 
 En cualquier otro caso, una Promise en resolución será devuelta. El el siguiente ejemplo, el primer `then()` devolverá un `42` dentro de una Promise en resolución, aunque la Promise de la cadena fue rechazada.
 
 ```js
 Promise.reject()
-  .then( () => 99, () => 42 ) // enRechazo devuelve 42, que está dentro de una Promise en resolución
-  .then( respuesta => console.log( 'Resuelta con ' + respuesta ) ); // Resuelta con 42
+  .then(
+    () => 99,
+    () => 42,
+  ) // enRechazo devuelve 42, que está dentro de una Promise en resolución
+  .then((respuesta) => console.log("Resuelta con " + respuesta)); // Resuelta con 42
 ```
 
 En la práctica, suele ser preferible capturar promesas rechazadas en lugar de utilizar la sintaxis de dos casos de `then`, como demostramos abajo.
 
 ```js
 Promise.resolve()
-  .then( () => {
+  .then(() => {
     // Hace que .then() devuelva una promesa rechazada
-    throw new Error('Oh no!');
+    throw new Error("Oh no!");
   })
-  .catch( error => {
-    console.error( 'función enRechazo invocada: ', error );
+  .catch((error) => {
+    console.error("función enRechazo invocada: ", error);
   })
-  .then( () => {
-    console.log( "Siempre soy invocada, incluso si la promesa del then previo es rechazada" );
+  .then(() => {
+    console.log(
+      "Siempre soy invocada, incluso si la promesa del then previo es rechazada",
+    );
   });
 ```
 
@@ -208,14 +211,14 @@ function traer_datos_actuales() {
   // expone una API similar, pero el valor de cumplimiento
   // de la Promesa de esta función tiene más tareas
   // implementadas sobre ella.
-  return fetch('datos_actuales.json').then((response) => {
-    if (response.headers.get('content-type') != 'application/json') {
+  return fetch("datos_actuales.json").then((response) => {
+    if (response.headers.get("content-type") != "application/json") {
       throw new TypeError();
     }
     var j = response.json();
     // podríamos hacer algo con j
     return j; // valor de cumplimiento asignado al usuario de
-              // fetch_datos_actuales().then()
+    // fetch_datos_actuales().then()
   });
 }
 ```
@@ -270,8 +273,8 @@ const nextTick = (() => {
   const rfab = Reflect.apply.bind; // (thisArg, fn, thisArg, [...args])
   const nextTick = (fn, ...args) => (
     fn !== undefined
-    ? Promise.resolve(args).then(rfab(null, fn, null))
-    : nextTickPromise(),
+      ? Promise.resolve(args).then(rfab(null, fn, null))
+      : nextTickPromise(),
     undefined
   );
   nextTick.ntp = nextTickPromise;
@@ -284,9 +287,9 @@ const nextTick = (() => {
 
 {{Specifications}}
 
-## Compatibilidad en navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript/promise","Promise.prototype.then")}}
+{{Compat}}
 
 ## Ver también
 

@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/globalThis
 
 全局属性 `globalThis` 包含全局的 `this` 值，类似于全局对象（global object）。
 
-{{EmbedInteractiveExample("pages/js/globalprops-globalthis.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - globalThis", "shorter")}}
+
+```js interactive-example
+function canMakeHTTPRequest() {
+  return typeof globalThis.XMLHttpRequest === "function";
+}
+
+console.log(canMakeHTTPRequest());
+// Expected output (in a browser): true
+```
 
 {{JS_Property_Attributes(1, 0, 1)}}
 
@@ -35,19 +44,25 @@ globalThis
 
 ## 示例
 
-在 `globalThis` 之前，获取某个全局对象的唯一方式就是 `Function('return this')()`，但是这在某些情况下会违反 [CSP](/zh-CN/docs/Web/HTTP/CSP) 规则，所以，[es6-shim](https://github.com/paulmillr/es6-shim) 使用了类似如下的方式：
+在 `globalThis` 之前，获取某个全局对象的唯一方式就是 `Function('return this')()`，但是这在某些情况下会违反 [CSP](/zh-CN/docs/Web/HTTP/Guides/CSP) 规则，所以，[es6-shim](https://github.com/paulmillr/es6-shim) 使用了类似如下的方式：
 
 ```js
 var getGlobal = function () {
-  if (typeof self !== 'undefined') { return self; }
-  if (typeof window !== 'undefined') { return window; }
-  if (typeof global !== 'undefined') { return global; }
-  throw new Error('unable to locate global object');
+  if (typeof self !== "undefined") {
+    return self;
+  }
+  if (typeof window !== "undefined") {
+    return window;
+  }
+  if (typeof global !== "undefined") {
+    return global;
+  }
+  throw new Error("unable to locate global object");
 };
 
 var globals = getGlobal();
 
-if (typeof globals.setTimeout !== 'function') {
+if (typeof globals.setTimeout !== "function") {
   // 此环境中没有 setTimeout 方法！
 }
 ```
@@ -55,7 +70,7 @@ if (typeof globals.setTimeout !== 'function') {
 但是有了 `globalThis` 之后，只需要：
 
 ```js
-if (typeof globalThis.setTimeout !== 'function') {
+if (typeof globalThis.setTimeout !== "function") {
   //  此环境中没有 setTimeout 方法！
 }
 ```

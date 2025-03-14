@@ -1,15 +1,6 @@
 ---
 title: Geolocation.clearWatch()
 slug: Web/API/Geolocation/clearWatch
-tags:
-  - API
-  - Geolocation API
-  - Method
-  - Reference
-  - Secure context
-  - 위치
-  - 위치정보
-translation_of: Web/API/Geolocation/clearWatch
 ---
 
 {{securecontext_header}}{{ APIref("Geolocation API") }}
@@ -36,24 +27,24 @@ function success(pos) {
   var crd = pos.coords;
 
   if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log('Congratulation, you reach the target');
+    console.log("Congratulation, you reach the target");
     navigator.geolocation.clearWatch(id);
   }
-};
+}
 
 function error(err) {
-  console.warn('ERROR(' + err.code + '): ' + err.message);
-};
+  console.warn("ERROR(" + err.code + "): " + err.message);
+}
 
 target = {
-  latitude : 0,
+  latitude: 0,
   longitude: 0,
-}
+};
 
 options = {
   enableHighAccuracy: false,
   timeout: 5000,
-  maximumAge: 0
+  maximumAge: 0,
 };
 
 id = navigator.geolocation.watchPosition(success, error, options);

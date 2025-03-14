@@ -1,19 +1,17 @@
 ---
-title: 'CSS : Feuilles de style en cascade'
+title: "CSS : Feuilles de style en cascade"
 slug: Web/CSS
-tags:
-  - CSS
-  - Design
-  - Landing
-  - Reference
-  - Structure
-  - Styles
-translation_of: Web/CSS
+l10n:
+  sourceCommit: 9b73bdea5458572f77a401596fef9a06ed8bba1b
 ---
 
 {{CSSRef}}
 
-CSS est l'un des langages principaux du **Web ouvert** et a été standardisé [par le W3C](https://w3.org/Style/CSS/#specs). Ce standard évolue sous forme de niveaux (_levels_), CSS1 est désormais considéré comme obsolète, CSS2.1 correspond à la recommandation et [CSS3](/fr/docs/Web/CSS/CSS3), qui est découpé en modules plus petits, est en voie de standardisation.
+**CSS** (pour <i lang="en">Cascading Style Sheets</i> en anglais), soit feuilles de style en cascade, est un langage de [feuille de style](/fr/docs/Web/API/StyleSheet) utilisé pour décrire la présentation d'un document écrit en [HTML](/fr/docs/Web/HTML) ou [XML](/fr/docs/Web/XML/XML_introduction) (y compris les dialects XML que sont [SVG](/fr/docs/Web/SVG), [MathML](/fr/docs/Web/MathML), ou [XHTML](/fr/docs/Glossary/XHTML)). CSS décrit la façon dont les éléments doivent être affichés à l'écran, sur papier, à l'oral ou sur d'autres médias.
+
+CSS est l'un des langages principaux du **Web ouvert** et a été standardisé [par le W3C](https://w3.org/Style/CSS/#specs). Auparavant, le développement des différentes parties de la spécification CSS était réalisé de façon synchrone, permettant d'avoir une version pour l'ensemble de la recommandation. Vous avez donc pu entendre parler de CSS1, CSS2.1, voire CSS3. Toutefois, il n'y aura pas de version CSS4 ou d'autres version globale numérotée de CSS.
+
+En effet, après CSS 2.1, la portée de la spécification a augmenté significativement et les avancées sur les différents modules CSS ont commencé à diverger, et il est alors devenu plus efficace de [développer et diffuser les recommandations par module](https://www.w3.org/Style/CSS/current-work). Plutôt que d'avoir une version globale de la spécification CSS, le W3C collecte désormais de façon périodique un instantané du [dernier état stable de la spécification CSS](https://www.w3.org/TR/css/) et de l'avancée de chaque module. Les modules de spécification CSS ont un numéro de version, appelé niveau, comme [le module de spécification CSS sur les couleurs de niveau 5](https://drafts.csswg.org/css-color-5/).
 
 ## Ressources principales
 
@@ -22,55 +20,59 @@ CSS est l'un des langages principaux du **Web ouvert** et a été standardisé [
 - Tutoriels CSS
   - : Notre section [Apprendre le Web - CSS](/fr/docs/Learn/CSS) contient de nombreux tutoriels pour vous guider d'un niveau débutant à intermédiaire en CSS. Elle couvre l'ensemble des concepts fondamentaux en CSS.
 - La référence CSS
-  - : [Une référence exhaustive](/fr/docs/Web/CSS/Reference) destinée aux développeurs web expérimenté et qui décrit chaque propriété et concept de CSS.
+  - : [Une référence exhaustive](/fr/docs/Web/CSS/Reference) destinée aux développeuses et développeurs web expérimentés et qui décrit chaque propriété et concept de CSS.
 
 ## Tutoriels
 
-La section [Apprendre le Web](/fr/docs/Learn/CSS) fournit différents modules qui permettent d'apprendre CSS sans connaissance particulière préalable.
+La section [CSS - Apprendre le Web](/fr/docs/Learn/CSS) fournit différents modules qui permettent d'apprendre CSS sans connaissance particulière préalable.
 
-- [Introduction à CSS](/fr/docs/Learn/Getting_started_with_the_web/CSS_basics)
-  - : Dans ce module, on commence avec les bases du fonctionnement de CSS : les sélecteurs, les propriétés, écrire des règles CSS, appliquer du CSS à un document HTML, utiliser des longueurs, des couleurs et d'autres unités. On voit également la cascade et l'héritage en CSS, les bases du modèle de boîtes et comment déboguer du code CSS.
+- [Premiers pas en CSS](/fr/docs/Learn/CSS/First_steps)
+  - : CSS est utilisé pour mettre en forme et organiser le contenu sur page web, par exemple en modifiant la police, la couleur, la taille, ou l'espacement du contenu. On peut ainsi l'organiser en plusieurs colonnes, ajouter des animations ou d'autres décorations. Ce module est une introduction en douceur à CSS, expliquant les fondamentaux de son fonctionnement, la syntaxe et comment commencer à l'utiliser pour mettre en forme un document HTML.
+- [Les blocs de construction de CSS](/fr/docs/Learn/CSS/Building_blocks)
+
+  - : Ce module explore la cascade et l'héritage, les différents types de sélecteurs disponibles, les unités, le dimensionnement, la mise en forme des arrière-plans et des bordures, le débogage et plus encore.
+
+    L'objectif est de fournir une boîte à outils pour écrire du CSS correct et vous permettre de comprendre les fondamentaux théoriques avant d'aller plus loin vers [la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text) et [les dispositions CSS](/fr/docs/Learn/CSS/CSS_layout).
+
 - [Mettre en forme le texte](/fr/docs/Learn/CSS/Styling_text)
-  - : Dans ce chapitre, on voit comment mettre en forme du texte : changer la police, mettre en gras, mettre en italique, gérer les espaces entre les lignes et les lettres, ajouter des ombres portées, etc. En fin de chapitre, on voit comment appliquer des polices personnalisées sur une page et comment mettre en forme les listes et les liens.
-- [Mettre en forme les boîtes](/fr/docs/Learn/CSS/Styling_boxes)
-  - : Ensuite, on voit comment mettre en forme les boîtes CSS qui sont un composant clé de la mise en page d'une page web. Dans ce module, on revoit le modèle de boîtes, comment régler les propriétés de remplissage, bordures et marges, comment définir des couleurs d'arrière-plan, des images et aussi comment appliquer des ombres et des filtres sur les boîtes.
+  - : Dans ce chapitre, on voit comment mettre en forme du texte&nbsp;: changer la police, mettre en gras, mettre en italique, gérer les espaces entre les lignes et les lettres, ajouter des ombres portées, etc. En fin de chapitre, on voit comment appliquer des polices personnalisées sur une page et comment mettre en forme les listes et les liens.
 - [La disposition en CSS](/fr/docs/Learn/CSS/CSS_layout)
-  - : Avant ce chapitre, on a vu les concepts fondamentaux en CSS, comment mettre en forme du texte, comment manipuler des boîtes correctement, etc. On voit ici comment correctement placer les boîtes dans la zone d'affichage (_viewport_). Grâce aux concepts précédents, on peut désormais étudier les différentes méthodes pour positionner les éléments sur une page : les boîtes flottantes, le positionnement fixe et les nouveaux outils comme les boîtes flexibles (_flexbox_).
+  - : On voit ici comment correctement placer les boîtes dans la zone d'affichage (<i lang="en">viewport</i>). Grâce aux concepts précédents, on peut désormais étudier les différentes méthodes pour positionner les éléments sur une page&nbsp;: les boîtes flexibles (<i lang="en">flexbox</i>), les grilles CSS et d'autres techniques historiques.
+- [Comment utiliser CSS afin de résoudre certains problèmes usuels](/fr/docs/Learn/CSS/Howto)
+  - : Ce module fournit des liens vers du contenu expliquant comment utiliser CSS afin de résoudre des problèmes fréquemment rencontrés lors de la création d'une page web.
 
 ## Références
 
 - [La référence CSS](/fr/docs/Web/CSS/Reference)
-  - : Une référence exhaustive, destinée aux développeurs web expérimentés. Elle décrit les différentes propriétés et concepts qui composent CSS.
+  - : Une référence exhaustive, destinée aux développeuses et développeurs web expérimentés. Elle décrit les différentes propriétés et concepts qui composent CSS.
 - Les concepts majeurs de CSS
 
-  - : Plusieurs articles de cette section présentent les aspects clés du langage. On y décrit notamment :
+  - : Plusieurs articles de cette section présentent les aspects clés du langage. On y décrit notamment&nbsp;:
 
-    - [la syntaxe et les formes du langage](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-    - [la spécificité](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) et [l'héritage](/fr/docs/Web/CSS/inheritance)
-    - [les unités et valeurs CSS](/fr/docs/Web/CSS/Valeurs_et_unit%C3%A9s_CSS)
-    - [le modèle de boîtes](/fr/docs/Learn/CSS/Building_blocks/The_box_model) et [la fusion des marges](/fr/docs/CSS/margin_collapsing)
-    - [le bloc conteneur](/fr/docs/Web/CSS/All_About_The_Containing_Block)
-    - [l'empilement](/fr/docs/Web/CSS/Comprendre_z-index/L'empilement_de_couches) et [le contexte de formatage de blocs](/fr/docs/Web/Guide/CSS/Block_formatting_context)
+    - [La syntaxe et les formes du langage](/fr/docs/Web/CSS/Syntax)
+    - [La spécificité](/fr/docs/Web/CSS/Specificity) et [l'héritage](/fr/docs/Web/CSS/Inheritance), et [la cascade](/fr/docs/Web/CSS/Cascade)
+    - [Les unités et valeurs CSS](/fr/docs/Web/CSS/CSS_Values_and_Units) et [les notations fonctionnelles](/fr/docs/Web/CSS/CSS_Functions)
+    - [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) et [la fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+    - [Le bloc englobant](/fr/docs/Web/CSS/Containing_block)
+    - [L'empilement](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) et [le contexte de formatage de blocs](/fr/docs/Web/CSS/CSS_display/Block_formatting_context)
     - les concepts de [valeur initiale](/fr/docs/Web/CSS/initial_value), [valeur calculée](/fr/docs/Web/CSS/computed_value), [valeur utilisée](/fr/docs/Web/CSS/used_value) et [valeur réelle](/fr/docs/Web/CSS/actual_value)
     - [Les propriétés raccourcies](/fr/docs/Web/CSS/Shorthand_properties)
-    - [Les boîtes flexibles CSS (_flexbox_)](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout)
-    - [La grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout)
-    - [Les _media queries_ (requêtes media)](/fr/docs/Web/CSS/Media_Queries)
+    - [Les boîtes flexibles CSS (<i lang="en">flexbox</i>)](/fr/docs/Web/CSS/CSS_flexible_box_layout)
+    - [Les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)
+    - [Les sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)
+    - [Les requêtes media (<i lang="en">media queries</i>)](/fr/docs/Web/CSS/CSS_media_queries)
     - [Les animations](/fr/docs/Web/CSS/animation)
 
 ## Livre de recettes
 
-[Le livre de recettes de disposition CSS](/fr/docs/Web/CSS/Layout_cookbook) contient différentes recettes pour mettre en place différentes dispositions courantes. En plus de fournir du code pouvant servir de point de départ, ces recettes illustrent les différentes façons dont les spécifications CSS liées à la disposition peuvent être utilisées ainsi que les choix à faire en tant que développeur.
+[Le livre de recettes de disposition CSS](/fr/docs/Web/CSS/Layout_cookbook) contient différentes recettes pour mettre en place différentes dispositions courantes. En plus de fournir du code pouvant servir de point de départ, ces recettes illustrent les différentes façons dont les spécifications CSS liées à la disposition peuvent être utilisées ainsi que les choix à faire lors du développement.
 
-## Outils de développement pour CSS
+## Outils de développement CSS
 
 - [Le service de validation CSS du W3C](https://jigsaw.w3.org/css-validator/) permet de vérifier si une feuille de style CSS est valide.
-- [Les outils de développement Firefox](/fr/docs/Tools) permettent de visualiser, d'éditer une feuille de style en direct grâce à [l'inspecteur](/fr/docs/Tools/Page_Inspector) et à [l'éditeur de styles](/fr/docs/Tools/Style_Editor).
-- [L'extension Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-developer/) permet d'éditer le code CSS des sites visités à la volée.
-- [D'autres outils](/fr/docs/Web/CSS), [guide pour les débutants](https://www.cssdebutant.com/).
+- [Les outils de développement de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html) permettent de visualiser, d'éditer une feuille de style en direct grâce à [l'inspecteur](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) et à [l'éditeur de styles](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html).
 
 ## Voir aussi
 
-- [La partie CSS de la section Apprendre le Web.](/fr/docs/Learn/CSS)
-- Les langages web sur lesquels CSS est souvent utilisé : [HTML](/fr/docs/Web/HTML), [SVG](/fr/docs/Web/SVG), {{Glossary("XHTML", "",1)}} et [XML](/fr/docs/Glossary/XML).
-- Des technologies Mozilla qui emploient CSS : [Firefox](/fr/docs/Mozilla/Firefox), [les thèmes](/fr/docs/Mozilla/Add-ons/Thèmes) et [extensions Thunderbird](/fr/docs/Mozilla/Thunderbird).
+- [Quelques démonstrations en CSS](/fr/docs/orphaned/Web/Demos#css)
+- Les langages du Web auxquels CSS s'applique&nbsp;: [HTML](/fr/docs/Web/HTML), [SVG](/fr/docs/Web/SVG), [MathML](/fr/docs/Web/MathML), [XHTML](/fr/docs/Glossary/XHTML), et [XML](/fr/docs/Web/XML/XML_introduction).

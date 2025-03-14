@@ -1,11 +1,9 @@
 ---
 title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sin
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/seno
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## Resumen
 
@@ -32,8 +30,8 @@ Debido a que `sin()` es un método estático de `Math`, siempre se usa como `Mat
 ### Ejemplo: Usando `Math.sin()`
 
 ```js
-Math.sin(0);           // 0
-Math.sin(1);           // 0.8414709848078965
+Math.sin(0); // 0
+Math.sin(1); // 0.8414709848078965
 
 Math.sin(Math.PI / 2); // 1
 ```
@@ -44,7 +42,7 @@ Math.sin(Math.PI / 2); // 1
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.sin")}}
+{{Compat}}
 
 ## Ver también
 

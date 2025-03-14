@@ -30,7 +30,7 @@ var propertyName = style[index];
 ## 范例
 
 ```js
-var style = document.getElementById('div1').style;
+var style = document.getElementById("div1").style;
 var propertyName = style.item(1); // or simply style[1] - returns the second style listed
 ```
 

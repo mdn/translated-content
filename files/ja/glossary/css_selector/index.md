@@ -1,9 +1,15 @@
 ---
-title: Selector (セレクター (CSS) )
+title: Selector (セレクター) (CSS)
 slug: Glossary/CSS_Selector
+l10n:
+  sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
 
-**CSS セレクター**は CSS の規則の一部で、文書中のどの要素がルールと一致するかを記述します。一致した要素には規則で指定されたスタイルが適用されます。
+{{GlossarySidebar}}
+
+**CSS セレクター**は CSS のルールの一部で、文書中のどの要素がルールと一致するかを記述します。一致した要素にはルールで指定されたスタイルが適用されます。
+
+## 例
 
 この CSS を見てください。
 
@@ -21,11 +27,15 @@ div.warning {
 }
 
 #customized {
-  font: 16px Lucida Grande, Arial, Helvetica, sans-serif;
+  font:
+    16px Lucida Grande,
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 ```
 
-ここでのセレクターは `"p"` （すべての {{HTMLElement("p")}} 要素内の文字列に緑色を適用）、 `"div.warning"` （{{Glossary("CSS class", "class")}} が `"warning"` であるすべての {{HTMLElement("div")}} 要素が警告ボックスのように見えるようにする）、 `"#customized"` （`"customized"` の ID を持つ要素の基本フォントを 16 ピクセルの高さの Lucida Grande またはいくつかのフォールバックフォントに設定）です。
+ここでのセレクターは `"p"` （すべての {{HTMLElement("p")}} 要素内の文字列に緑色を適用）、 `"div.warning"` （{{HTMLElement("div")}} 要素で[クラス](/ja/docs/Web/HTML/Global_attributes/class)が `"warning"` であるものがすべて警告ボックスのように見えるようにする）、 `"#customized"` （`"customized"` の ID を持つ要素の基本フォントを 16 ピクセルの高さの Lucida Grande またはいくつかの代替フォントに設定）です。
 
 この CSS を次のような HTML に適用します。
 
@@ -47,34 +57,32 @@ div.warning {
 
 結果的に、ページの内容は次のように整形されます。
 
-{{EmbedLiveSample("glossary-selector-details", 640, 210)}}
+{{EmbedLiveSample("Example", 640, 240)}}
 
-1. CSS 入門内の [CSS セレクターについての詳細](/ja/docs/Learn/CSS/Introduction_to_CSS/Selectors)
-2. 基本的なセレクター
+## 関連情報
 
-    1. [要素型セレクター](/ja/docs/Web/CSS/Type_selectors) `elementname`
-    2. [クラスセレクター](/ja/docs/Web/CSS/Class_selectors) `.classname`
-    3. [ID セレクター](/ja/docs/Web/CSS/ID_selectors) `#idname`
-    4. [全称セレクター](/ja/docs/Web/CSS/Universal_selectors) `* ns|* *|*`
-    5. [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors) `[attr=value]`
-    6. [状態セレクター](/ja/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
+- CSS 入門内の [CSS セレクターについての詳細](/ja/docs/Learn/CSS/Building_blocks/Selectors)
+- 基本的なセレクター
 
-3. グループ化セレクター
+  - [要素型セレクター](/ja/docs/Web/CSS/Type_selectors) `elementname`
+  - [クラスセレクター](/ja/docs/Web/CSS/Class_selectors) `.classname`
+  - [ID セレクター](/ja/docs/Web/CSS/ID_selectors) `#idname`
+  - [全称セレクター](/ja/docs/Web/CSS/Universal_selectors) `* ns|* *|*`
+  - [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors) `[attr=value]`
+  - [状態セレクター](/ja/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
 
-    1. [セレクターリスト](/ja/docs/Web/CSS/Selector_list) `A, B`
+- グループ化セレクター
 
-4. 結合子
+  - [セレクターリスト](/ja/docs/Web/CSS/Selector_list) `A, B`
 
-    1. [隣接兄弟セレクター](/ja/docs/Web/CSS/Adjacent_sibling_selectors) `A + B`
-    2. [一般兄弟セレクター](/ja/docs/Web/CSS/General_sibling_selectors) `A ~ B`
-    3. [子セレクター](/ja/docs/Web/CSS/Child_selectors) `A > B`
-    4. [子孫セレクター](/ja/docs/Web/CSS/Descendant_selectors) `A B`
+- 結合子
 
-5. 擬似クラス・要素
+  - [次兄弟結合子](/ja/docs/Web/CSS/Next-sibling_combinator) `A + B`
+  - [後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
+  - [子セレクター](/ja/docs/Web/CSS/Child_combinator) `A > B`
+  - [子孫セレクター](/ja/docs/Web/CSS/Descendant_combinator) `A B`
 
-    1. [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes) `:`
-    2. [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) `::`
+- 擬似クラス・要素
 
-6. 技術リファレンス
-
-    1. {{SpecName("CSS3 Selectors")}}
+  - [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes) `:`
+  - [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) `::`

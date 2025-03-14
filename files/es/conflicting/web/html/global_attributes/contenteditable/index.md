@@ -1,17 +1,6 @@
 ---
 title: Making content editable
 slug: conflicting/Web/HTML/Global_attributes/contenteditable
-tags:
-  - Avanzado
-  - Ejemplo
-  - Entrada de texto
-  - Guía
-  - HTML
-  - HTML5
-  - Texto
-  - Web
-  - contentediatable
-translation_of: Web/Guide/HTML/Editable_content
 original_slug: Web/Guide/HTML/Editable_content
 ---
 
@@ -19,7 +8,7 @@ En HTML, cualquier elemento puede ser editable. Con el uso de algunos manejadore
 
 ## ¿Cómo funciona?
 
-Todo lo que debes hacer es definir el atributo {{htmlattrxref("contenteditable")}} en cualquier elemento HTML que quieras hacer editable.
+Todo lo que debes hacer es definir el atributo [`contenteditable`](/es/docs/Web/HTML/Global_attributes#contenteditable) en cualquier elemento HTML que quieras hacer editable.
 
 Este es un ejemplo simple con el cual puedes crear elementos {{HTMLElement("div")}} cuyo contenido pueda ser editado por el usuario.
 
@@ -35,7 +24,7 @@ Aquí esta el HTML anterion en acción:
 
 ## Ejecutando Comandos
 
-Cuando un elemento HTML tiene el parametro `contenteditable` en `true`, se hace disponible el método {{ domxref("document.execCommand") }}. Esto te permite ejecutar [comandos](/es/docs/Web/API/document.execCommand#Commands) para manipular el contenido de una region editable. La mayoria de estos comandos afectan a la selección del documento (bold, italics, etc), mientras que otros insertan nuevos elementos (como añadiendo un link) o afectan a una linea entera (indenting). Cuando usas `contentEditable`, estás llamando a `execCommand` que afectará al elemento editable activo.
+Cuando un elemento HTML tiene el parametro `contenteditable` en `true`, se hace disponible el método {{ domxref("document.execCommand") }}. Esto te permite ejecutar [comandos](/es/docs/Web/API/Document/execCommand#commands) para manipular el contenido de una region editable. La mayoria de estos comandos afectan a la selección del documento (bold, italics, etc), mientras que otros insertan nuevos elementos (como añadiendo un link) o afectan a una linea entera (indenting). Cuando usas `contentEditable`, estás llamando a `execCommand` que afectará al elemento editable activo.
 
 ## Differences in markup generation
 
@@ -45,7 +34,8 @@ Afortunadamente, en los navegadores modernos las cosas son un poco más consiste
 
 Pruebalo en el ejemplo de abajo.
 
-> **Nota:** Internet Explorer ya no se está desarrollando y usa {{htmlelement("p")}}.
+> [!NOTE]
+> Internet Explorer ya no se está desarrollando y usa {{htmlelement("p")}}.
 
 Si quieres utilizar un separador de párrafo diferente, todos los navegadores arriba mencionados soportan {{domxref("document.execCommand")}}, el cual provee un DefaultParagraphSeparator comando que te premite cambiarlo. Por ejemplo, para usar {{htmlelement("p")}} elements:
 
@@ -219,11 +209,12 @@ img.intLink { border: 0; }
 </html>
 ```
 
-> **Nota:** si quieres ver cómo estandarizar la creación y la inserción de tu editor en tu página, puedes ver nuestro [más completo ejemplo de editor de texto enriquecido](/@api/deki/files/6243/=rich-text-editor.zip).
+> [!NOTE]
+> Si quieres ver cómo estandarizar la creación y la inserción de tu editor en tu página, puedes ver nuestro [más completo ejemplo de editor de texto enriquecido](rich-text-editor.zip).
 
 ## Véase también
 
 - {{domxref("HTMLElement.contentEditable")}}
-- El atributo global {{htmlattrxref("contenteditable")}}
+- El atributo global [`contenteditable`](/es/docs/Web/HTML/Global_attributes#contenteditable)
 - [Midas](/es/docs/Mozilla/Projects/Midas) (el componente de editor de texto programable)
 - Browser Support <http://caniuse.com/#feat=contenteditable>

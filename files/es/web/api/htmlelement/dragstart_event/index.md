@@ -1,8 +1,9 @@
 ---
-title: 'HTMLElement: dragstart event'
+title: "HTMLElement: dragstart event"
 slug: Web/API/HTMLElement/dragstart_event
-original_slug: Web/API/HTMLElement/dragstart_event
 ---
+
+{{APIRef}}
 
 El evento `dragstart` se dispara cuando el usuario arrastra un elemento o una selección de texto.
 
@@ -11,9 +12,9 @@ El evento `dragstart` se dispara cuando el usuario arrastra un elemento o una se
 Usar el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}} , o establecer una propiedad de controlador de eventos.
 
 ```js
-addEventListener('dragstart', (event) => {});
+addEventListener("dragstart", (event) => {});
 
-ondragstart = (event) => { };
+ondragstart = (event) => {};
 ```
 
 ## Tipo de Evento

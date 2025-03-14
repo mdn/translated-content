@@ -1,16 +1,16 @@
 ---
 title: GlobalEventHandlers.onscroll
 slug: Web/API/Element/scroll_event
-original_slug: Web/API/GlobalEventHandlers/onscroll
 ---
 
 {{ApiRef("HTML DOM")}}
 
-A propriedade **`onscroll`** do {{domxref("GlobalEventHandlers")}} é uma mistura de eventos {{event("Event_handlers", "event handler")}} que processam eventos `scroll`.
+A propriedade **`onscroll`** do {{domxref("GlobalEventHandlers")}} é uma mistura de eventos [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) que processam eventos `scroll`.
 
 O evento `scroll` é disparado quando uma visão do documento ou um elemento foi rolado, seja por um usuário, uma [API Web](/pt-BR/docs/Web/API), ou o {{glossary("user agent")}}.
 
-> **Nota:** Não confunda `onscroll` com {{domxref("GlobalEventHandlers.onwheel", "onwheel")}}: `onwheel` manipula a rotação da roda do mouse, enquanto `onscroll` manipula rolagem do conteúdo do objeto.
+> [!NOTE]
+> Não confunda `onscroll` com {{domxref("GlobalEventHandlers.onwheel", "onwheel")}}: `onwheel` manipula a rotação da roda do mouse, enquanto `onscroll` manipula rolagem do conteúdo do objeto.
 
 ## Sintaxe
 
@@ -22,7 +22,7 @@ target.onscroll = functionRef;
 
 `functionRef` é o nome de uma função ou uma [expressão de função](/pt-BR/docs/Web/JavaScript/Reference/Operators/function). A função recebe um {{domxref("UIEvent")}} objeto com um único argumento.
 
-Apenas um manipulador `onscroll` pode ser associado à um objeto por vez. Para uma maior flexibilidade, você pode passar um {{event("scroll")}} evento para o {{domxref("EventTarget.addEventListener()")}} metódo ao invés disso.
+Apenas um manipulador `onscroll` pode ser associado à um objeto por vez. Para uma maior flexibilidade, você pode passar um [`scroll`](/pt-BR/docs/Web/API/Document/scroll_event) evento para o {{domxref("EventTarget.addEventListener()")}} metódo ao invés disso.
 
 ## Exemplo
 
@@ -48,8 +48,8 @@ textarea {
 ### JavaScript
 
 ```js
-const textarea = document.querySelector('textarea');
-const log = document.getElementById('log');
+const textarea = document.querySelector("textarea");
+const log = document.getElementById("log");
 
 textarea.onscroll = logScroll;
 
@@ -64,10 +64,7 @@ function logScroll(e) {
 
 ## Especificações
 
-| Especificação                                                                    | Status                           | Comentário         |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG','#handler-onscroll','onscroll')}}     | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName("DOM3 Events", "#event-type-scroll", "onscroll")}} | {{Spec2("DOM3 Events")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

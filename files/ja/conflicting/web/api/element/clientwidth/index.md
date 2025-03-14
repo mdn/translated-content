@@ -6,7 +6,8 @@ original_slug: Web/API/Document/width
 
 {{APIRef("DOM")}} {{deprecated_header}}
 
-> **メモ:** {{Gecko("6.0")}} より `document.width` には対応しなくなりました。代わりに `document.body.clientWidth` を使用してください。 {{domxref("element.clientWidth")}} を参照してください。
+> [!NOTE]
+> Gecko 6.0 より `document.width` には対応しなくなりました。代わりに `document.body.clientWidth` を使用してください。 {{domxref("element.clientWidth")}} を参照してください。
 
 現在の文書の {{HTMLElement("body")}} 要素の現在の幅をピクセル値で返します。
 

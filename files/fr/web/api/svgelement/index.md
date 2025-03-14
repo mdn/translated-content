@@ -1,8 +1,6 @@
 ---
 title: SVGElement
 slug: Web/API/SVGElement
-translation_of: Web/API/SVGElement
-browser-compat: api.SVGElement
 ---
 
 {{APIRef("SVG")}}
@@ -41,15 +39,15 @@ _Cette interface n'a pas de méthode en propre, mais elle hérite de celles four
 On pourra intercepter les évènements suivants en utilisant [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) ou en affectant un gestionnaire d'évènements à la propriété `on…` correspondante de [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers).
 
 - [`abort`](/fr/docs/Web/API/SVGElement/abort_event)
-  - : Déclenché lorsque le chargement de la page est interrompu avant qu'un élément SVG ait pu être chargé complètement. Également disponible avec la propriété [`onabort`](/fr/docs/Web/API/GlobalEventHandlers/onabort).
+  - : Déclenché lorsque le chargement de la page est interrompu avant qu'un élément SVG ait pu être chargé complètement. Également disponible avec la propriété [`onabort`](/fr/docs/Web/API/HTMLMediaElement/abort_event).
 - [`error`](/fr/docs/Web/API/SVGElement/error_event)
-  - : Déclenché lorsqu'un élément SVG ne charge pas correctement ou lorsqu'une erreur se produit lors de l'exécution d'un script. Également disponible avec la propriété [`onerror`](/fr/docs/Web/API/GlobalEventHandlers/onerror).
+  - : Déclenché lorsqu'un élément SVG ne charge pas correctement ou lorsqu'une erreur se produit lors de l'exécution d'un script. Également disponible avec la propriété [`onerror`](/fr/docs/Web/API/Window/error_event).
 - [`load`](/fr/docs/Web/API/SVGElement/load_event)
-  - : Déclenché sur un objet `SVGElement` lorsqu'il est chargé dans le navigateur. Également disponible avec la propriété [`onload`](/fr/docs/Web/API/GlobalEventHandlers/onload).
+  - : Déclenché sur un objet `SVGElement` lorsqu'il est chargé dans le navigateur. Également disponible avec la propriété [`onload`](/fr/docs/Web/API/Window/load_event).
 - [`resize`](/fr/docs/Web/API/SVGElement/resize_event)
-  - : Déclenché lorsqu'un document SVG est redimensionné. Également disponible avec la propriété [`onresize`](/fr/docs/Web/API/GlobalEventHandlers/onresize).
+  - : Déclenché lorsqu'un document SVG est redimensionné. Également disponible avec la propriété [`onresize`](/fr/docs/Web/API/Window/resize_event).
 - [`scroll`](/fr/docs/Web/API/SVGElement/scroll_event)
-  - : Declenché lorsque la vue d'un document SVG est décalée le long de l'axe horizontal ou vertical. Également disponible avec la propriété [`onscroll`](/fr/docs/Web/API/GlobalEventHandlers/onscroll).
+  - : Declenché lorsque la vue d'un document SVG est décalée le long de l'axe horizontal ou vertical. Également disponible avec la propriété [`onscroll`](/fr/docs/Web/API/Element/scroll_event).
 - [`unload`](/fr/docs/Web/API/SVGElement/unload_event)
   - : Déclenché lorsque l'implémentation du DOM retire un document SVG de la fenêtre ou de la <i lang="en">frame</i>.
 

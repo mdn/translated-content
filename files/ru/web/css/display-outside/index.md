@@ -1,14 +1,6 @@
 ---
 title: <display-outside>
 slug: Web/CSS/display-outside
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Display
-  - Reference
-  - display-outside
-  - Справка
-translation_of: Web/CSS/display-outside
 ---
 
 {{CSSRef}}
@@ -31,43 +23,39 @@ translation_of: Web/CSS/display-outside
 
     Run-in элементы ведут себя как строковые (inlines) или блоковые, в зависимости от окружающих элементов. Если run-in бокс содержит блоковый бокс, тогда он сам считается блоковым. Если блоковый бокс следует за run-in боксом, тогда run-in бокс становится первым строковым (inline) боксом блокового бокса. Если за ним следует строковый (inline) бокс, тогда run-in бокс становится блоковым боксом.
 
-> **Примечание:** **Замечание**: Браузеры, поддерживающие двузначный синтаксис значений, при обнаружении только внешнего значения, например, при отображении `display: block` или `display: inline`, установят внутреннее значение как `flow`. Это приведёт к ожидаемому поведению; например, если вы укажете элемент, который будет блоком, вы ожидаете, что его дочерние элементы будут участвовать в блочной и строковой разметке нормального потока.
+> [!NOTE]
+> Браузеры, поддерживающие двузначный синтаксис значений, при обнаружении только внешнего значения, например, при отображении `display: block` или `display: inline`, установят внутреннее значение как `flow`. Это приведёт к ожидаемому поведению; например, если вы укажете элемент, который будет блоком, вы ожидаете, что его дочерние элементы будут участвовать в блочной и строковой разметке нормального потока.
 
 ## Пример
 
-В следующем примере элементы span (обычно отображаемые как строковые элементы) устанавливаются в `display: block и поэтому разбиваются на новые строки и расширяются, чтобы заполнить их контейнер в строковом измерении.`
+В следующем примере элементы span (обычно отображаемые как строковые элементы) устанавливаются в `display: block` и поэтому разбиваются на новые строки и расширяются, чтобы заполнить их контейнер в строковом измерении.
 
-### `HTML`
+### HTML
 
 ```html
-
-<span>span 1</span>
-<span>span 2</span>
+<span>span 1</span> <span>span 2</span>
 ```
 
-### `CSS`
+### CSS
 
 ```css
-
 span {
-    display: block;
-    border: 1px solid rebeccapurple;
+  display: block;
+  border: 1px solid rebeccapurple;
 }
 ```
 
-### `Result`
+### Result
 
-`{{EmbedLiveSample("Пример", 300, 60)}}`
+{{EmbedLiveSample("Пример", 300, 60)}}
 
 ## Совместимость с браузерами
 
-### `Support of run-in`
+{{Compat}}
 
-`{{Compat("css.properties.display.display-outside", 10)}}`
+## Смотрите также
 
-## `Смотрите также`
-
-- `{{CSSxRef("display")}}`
-- `{{CSSxRef("&lt;display-inside&gt;")}}`
-- [`Block and Inline layout in Normal Flow`](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [`Formatting Contexts explained`](/en-US/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained)
+- {{CSSxRef("display")}}
+- {{CSSxRef("&lt;display-inside&gt;")}}
+- [Block and Inline layout in Normal Flow](/ru/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
+- [Formatting Contexts explained](/ru/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)

@@ -1,8 +1,6 @@
 ---
 title: Date.prototype.getUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
-browser-compat: javascript.builtins.Date.getUTCHours
 ---
 
 {{JSRef}}
@@ -12,7 +10,7 @@ getUTCHours () 메서드는 표준시에 따라 지정된 날짜의 시간을 �
 ## Syntax
 
 ```js
-    dateObj.getUTCHours()
+dateObj.getUTCHours();
 ```
 
 ### Return value

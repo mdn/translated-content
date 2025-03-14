@@ -1,15 +1,28 @@
 ---
 title: Math.cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/cos
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/cos
 ---
 
 {{JSRef}}
 
 La función estática **`Math.cos()`** devuelve el [coseno](https://es.wikipedia.org/wiki/Coseno) del ángulo especificado, que debe ser especificado en [radianes](https://es.wikipedia.org/wiki/Radi%C3%A1n). Este valor es <math style="display: inline;"><mstyle displaystyle="true"><mfrac><msub><mrow><mtext>longitud</mtext> </mrow><mrow><mrow><mtext>adyacente</mtext> </mrow></mrow></msub><msub><mrow><mtext>longitud</mtext> </mrow><mrow><mrow><mtext>hipotenusa</mtext> </mrow></mrow></msub></mfrac></mstyle></math>.
 
-{{EmbedInteractiveExample("pages/js/math-cos.html")}}
+{{InteractiveExample("JavaScript Demo: Math.cos()")}}
+
+```js interactive-example
+function getCircleX(radians, radius) {
+  return Math.cos(radians) * radius;
+}
+
+console.log(getCircleX(1, 10));
+// Expected output: 5.403023058681398
+
+console.log(getCircleX(2, 10));
+// Expected output: -4.161468365471424
+
+console.log(getCircleX(Math.PI, 10));
+// Expected output: -10
+```
 
 El código fuente de este ejemplo interactivo está almacenado en un repositorio de GitHub. Si te gustaría contribuir con el proyecto de ejemplos interactivos, por favor clona <https://github.com/mdn/interactive-examples> y envíanos un pull request.
 
@@ -39,22 +52,20 @@ Debido a que `cos()` es un método estático de `Math`, siempre debes utilizarlo
 ### Usando `Math.cos()`
 
 ```js
-Math.cos(0);           // 1
-Math.cos(1);           // 0.5403023058681398
+Math.cos(0); // 1
+Math.cos(1); // 0.5403023058681398
 
-Math.cos(Math.PI);     // -1
+Math.cos(Math.PI); // -1
 Math.cos(2 * Math.PI); // 1
 ```
 
 ## Especificaciones
 
-| Especificación                                                       |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.cos', 'Math.cos')}} |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.cos")}}
+{{Compat}}
 
 ## Ver también
 

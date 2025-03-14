@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
 
 静的な **`Reflect.ownKeys()`** メソッドは、 `target` オブジェクトが持つプロパティキーの配列を返します。
 
-{{EmbedInteractiveExample("pages/js/reflect-ownkeys.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.ownKeys()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+  property2: 13,
+};
+
+const array1 = [];
+
+console.log(Reflect.ownKeys(object1));
+// Expected output: Array ["property1", "property2"]
+
+console.log(Reflect.ownKeys(array1));
+// Expected output: Array ["length"]
+```
 
 ## 構文
 
@@ -37,14 +52,22 @@ Reflect.ownKeys(target)
 ### Reflect.ownKeys() の使用
 
 ```js
-Reflect.ownKeys({z: 3, y: 2, x: 1})  // [ "z", "y", "x" ]
-Reflect.ownKeys([])                  // ["length"]
+Reflect.ownKeys({ z: 3, y: 2, x: 1 }); // [ "z", "y", "x" ]
+Reflect.ownKeys([]); // ["length"]
 
-let sym = Symbol.for('comet')
-let sym2 = Symbol.for('meteor')
-let obj = {[sym]: 0, 'str': 0, '773': 0, '0': 0,
-           [sym2]: 0, '-1': 0, '8': 0, 'second str': 0}
-Reflect.ownKeys(obj)
+let sym = Symbol.for("comet");
+let sym2 = Symbol.for("meteor");
+let obj = {
+  [sym]: 0,
+  str: 0,
+  773: 0,
+  0: 0,
+  [sym2]: 0,
+  "-1": 0,
+  8: 0,
+  "second str": 0,
+};
+Reflect.ownKeys(obj);
 // [ "0", "8", "773", "str", "-1", "second str", Symbol(comet), Symbol(meteor) ]
 // 数字順のインデックス、
 // 挿入順の文字列、
@@ -57,7 +80,7 @@ Reflect.ownKeys(obj)
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Reflect.ownKeys")}}
+{{Compat}}
 
 ## 関連情報
 

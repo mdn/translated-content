@@ -1,7 +1,6 @@
 ---
 title: translate3d()
 slug: Web/CSS/transform-function/translate3d
-original_slug: Web/CSS/transform-function/translate3d()
 ---
 
 {{CSSRef}}
@@ -10,7 +9,7 @@ original_slug: Web/CSS/transform-function/translate3d()
 
 ## 语法
 
-```
+```css
 translate3d(tx, ty, tz)
 ```
 
@@ -80,15 +79,15 @@ p {
 }
 
 .transformed {
-  transform: perspective(500px) translate3d(10px,0px,0px);
+  transform: perspective(500px) translate3d(10px, 0px, 0px);
   /* equivalent to perspective(500px) translateX(10px)*/
   background-color: blue;
 }
 ```
 
-### 结果
+#### 结果
 
-{{EmbedLiveSample("Using_a_single_axis_translation","100%","250")}}
+{{EmbedLiveSample("单轴变化示例","100%","250")}}
 
 ### z 轴与 x 轴变化
 
@@ -110,14 +109,14 @@ p {
 }
 
 .transformed {
-  transform: perspective(500px) translate3d(10px,0px,100px);
+  transform: perspective(500px) translate3d(10px, 0px, 100px);
   background-color: blue;
 }
 ```
 
-### 结果
+#### 结果
 
-{{EmbedLiveSample("Combining_z-axis_and_x-axis_translation","100%","250")}}
+{{EmbedLiveSample("z 轴与 x 轴变化","100%","250")}}
 
 ## 规范
 
@@ -127,7 +126,7 @@ p {
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}

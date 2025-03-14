@@ -1,58 +1,24 @@
 ---
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
-tags:
-  - Error
-  - JavaScript
-  - NeedsUpdate
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Error
 ---
 
 {{JSRef}}
 
-Конструктор **`Error`** создаёт объект ошибки. Экземпляры объекта `Error` выбрасываются при возникновении ошибок во время выполнения. Объект `Error` также может использоваться в качестве базового для пользовательских исключений. Смотрите ниже стандартные встроенные типы ошибок.
-
-## Синтаксис
-
-```
-new Error([message[, fileName[, lineNumber]]])
-```
-
-### Параметры
-
-- `message` {{optional_inline()}}
-  - : Человеко-читаемое описание ошибки.
-- `fileName` {{non-standard_inline}} `{{optional_inline()}}`
-  - : Значение свойства `fileName` созданного объекта `Error`. Значением по умолчанию является имя файла, содержащего код, вызвавший конструктор `Error()`.
-- `lineNumber` {{non-standard_inline}} `{{optional_inline()}}`
-  - : Значение свойства `lineNumber` созданного объекта `Error`. Значением по умолчанию является номер строки, содержащей вызов конструктора `Error()`.
+Экземпляры объекта `Error` выбрасываются при возникновении ошибок во время выполнения. Объект `Error` также может использоваться в качестве базового для пользовательских исключений. Смотрите ниже стандартные встроенные типы ошибок.
 
 ## Описание
 
 Во время выполнения кода ошибки приводят к созданию и выбрасыванию новых объектов `Error`.
 
-Данная страница документирует использование объекта `Error` как самого по себе, так и при использовании в качестве функции-конструктора. Список свойств и методов, унаследованных экземплярами объекта `Error`, смотрите в разделе {{jsxref("Error.prototype")}}.
-
-### Использование как функции
-
-Когда `Error` используется как функции-- без {{jsxref("Operators/new", "new")}}, она возвращает `Error` объект. Следовательно простой вызов `Error` произведёт тот же результат, что и конструктор `Error` объявленный через `new`.
-
-```
-// this:
-const x = Error('I was created using a function call!');
-​​​​// Такая же функциональность:
-const y = new Error('I was constructed via the "new" keyword!');
-```
+`Error` является {{Glossary("serializable object", "сериализуемым объектом")}}, поэтому он может быть клонирован с помощью {{domxref("structuredClone()")}} или передан между [воркерами](/ru/docs/Web/API/Worker) с использованием {{domxref("Worker/postMessage()", "postMessage()")}}.
 
 ### Типы ошибок
 
-Кроме общего конструктора `Error`, в JavaScript существует ещё семь других основных конструкторов ошибок. По обработке исключений смотрите раздел [Выражения обработки исключений](/ru/docs/Web/JavaScript/Guide/Statements#Exception_Handling_Statements).
+Кроме общего конструктора `Error`, в JavaScript существуют другие встроенные конструкторы ошибок, смотрите раздел [Выражения обработки исключений](/ru/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements).
 
 - {{jsxref("EvalError")}}
   - : Создаёт экземпляр, представляющий ошибку, возникающую в глобальной функции {{jsxref("Global_Objects/eval", "eval()")}}.
-- {{jsxref("InternalError")}} {{non-standard_inline}}
-  - : Создаёт экземпляр, представляющий ошибку, возникающую при выбрасывании внутренней ошибки в движке JavaScript. К примеру, ошибки «слишком глубокая рекурсия» («too much recursion»).
 - {{jsxref("RangeError")}}
   - : Создаёт экземпляр, представляющий ошибку, возникающую при выходе числовой переменной или параметра за пределы допустимого диапазона.
 - {{jsxref("ReferenceError")}}
@@ -63,89 +29,128 @@ const y = new Error('I was constructed via the "new" keyword!');
   - : Создаёт экземпляр, представляющий ошибку, возникающую при недопустимом типе для переменной или параметра.
 - {{jsxref("URIError")}}
   - : Создаёт экземпляр, представляющий ошибку, возникающую при передаче в функции {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} или {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} недопустимых параметров.
+- {{jsxref("AggregateError")}}
+  - : Создаёт экземпляр, представляющий несколько ошибок, обёрнутых в одну. Может быть полезно, например, при работе с {{jsxref("Promise.any()")}}.
+- {{jsxref("InternalError")}} {{non-standard_inline}}
+  - : Создаёт экземпляр, представляющий ошибку, возникающую при выбрасывании внутренней ошибки в движке JavaScript. К примеру, ошибки «слишком глубокая рекурсия» («too much recursion»).
 
-## Свойства
+## Конструктор
 
-- {{jsxref("Error.prototype")}}
-  - : Позволяет добавлять свойства в экземпляры объекта `Error`.
+- {{jsxref("Error/Error", "Error()")}}
+  - : Создаёт новый объект `Error`.
 
-## Методы
+## Статические методы
 
-Глобальный объект `Error` не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.
+- `Error.captureStackTrace()` {{non-standard_inline}}
+  - : Нестандартная функция V8, которая создаёт свойство {{jsxref("Error/stack", "stack")}} у экземпляра `Error`.
+- `Error.stackTraceLimit` {{non-standard_inline}}
+  - : Нестандартное числовое свойство V8, которое ограничивает количество уровней ошибок, включаемых в трассировку стека.
+- `Error.prepareStackTrace()` {{non-standard_inline}} {{optional_inline}}
+  - : Нестандартная функция V8, которая (если задана в пользовательском коде) вызывается JavaScript-движком V8 для выбрасывание исключений, позволяя определять нестандартное форматирование трассировки стека.
 
-## Экземпляры объекта `Error`
+## Свойства экземпляра
 
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Error/prototype', 'Description')}}
+Эти свойства определены в `Error.prototype` и есть у всех экземпляров `Error`.
 
-### Свойства
+- {{jsxref("Object/constructor", "Error.prototype.constructor")}}
+  - : Функция-конструктор, создающая экземпляр объекта. Для экземпляров `Error` начальным значением является конструктор {{jsxref("Error/Error", "Error")}}.
+- {{jsxref("Error.prototype.name")}}
+  - : Представляет название типа ошибки. Начальным значением `Error.prototype.name` является `"Error"`. Подклассы (например, {{jsxref("TypeError")}} и {{jsxref("SyntaxError")}}) имеют собственные значения свойства `name`.
+- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
+  - : Нестандартное свойство, содержащее трассировку стека.
 
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Error/prototype', 'Properties')}}
+Эти свойства являются собственными свойствами каждого экземпляра `Error`.
 
-### Методы
+- {{jsxref("Error/cause", "cause")}}
 
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Error/prototype', 'Methods')}}
+  - : Причина возникновения текущей ошибки — обычно это другая обнаруженная ошибка. Для созданных пользователем объектов `Error` это значение свойства `cause` второго аргумента конструктора.
+
+  - : Нестандартное свойство Mozilla, определяющее номер символа в строке, в которой возникла ошибка.
+
+- {{jsxref("Error/fileName", "fileName")}} {{non-standard_inline}}
+  - : Нестандартное свойство Mozilla, определяющее путь к файлу, в котором возникла ошибка.
+- {{jsxref("Error/lineNumber", "lineNumber")}} {{non-standard_inline}}
+  - : Нестандартное свойство Mozilla, определяющее номер строки в файле, где возникла ошибка.
+- {{jsxref("Error/message", "message")}}
+  - : Сообщение об ошибке. Для созданных пользователем объектов `Error` это строка, передаваемая в качестве первого аргумента конструктора.
+
+## Методы экземпляра
+
+- {{jsxref("Error.prototype.toString()")}}
+  - : Возвращает строку, представляющую указанный объект. Переопределяет метод {{jsxref("Object.prototype.toString()")}}.
 
 ## Примеры
 
-### Пример: выбрасывание обычной ошибки
+### Выбрасывание обычной ошибки
 
 Обычно, вы создаёте объект `Error` с намерением возбудить ошибку с помощью ключевого слова {{jsxref("Statements/throw", "throw")}}. Вы можете обработать ошибку с помощью конструкции {{jsxref("Statements/try...catch", "try...catch")}}:
 
 ```js
 try {
-  throw new Error('Уупс!');
+  throw new Error("Ой!");
 } catch (e) {
-  console.log(e.name + ': ' + e.message);
+  console.error(`${e.name}: ${e.message}`);
 }
 ```
 
-### Пример: обработка ошибки конкретного типа
+### Обработка ошибки конкретного типа
 
-Возможно, это следует удалить вы можете обрабатывать только какой-то определённый вид ошибок, проверяя тип ошибки в свойстве {{jsxref("Object.prototype.constructor", "constructor")}} или, если вы пишете для современных движков JavaScript, с помощью ключевого слова {{jsxref("Operators/instanceof", "instanceof")}}:
+Для обработки только определённых типов ошибок можно делать проверку типа с помощью ключевого слова {{jsxref("Operators/instanceof", "instanceof")}}:
 
 ```js
 try {
   foo.bar();
 } catch (e) {
   if (e instanceof EvalError) {
-    console.log(e.name + ': ' + e.message);
+    console.error(`${e.name}: ${e.message}`);
   } else if (e instanceof RangeError) {
-    console.log(e.name + ': ' + e.message);
+    console.error(`${e.name}: ${e.message}`);
   }
-  // ... и т.д.
+  // и так далее
+  else {
+    // Если ни один из типов не совпал, то оставляем ошибку необработанной
+    throw e;
+  }
 }
 ```
 
-### Пример: пользовательские типы ошибок
+### Пользовательские типы ошибок
 
-Вы можете захотеть определить свои собственные типы ошибок, унаследованные от `Error`, что бы иметь возможность писать `throw new MyError()` и использовать `instanceof MyError` для проверки вида ошибки в обработчике исключений. Ниже продемонстрирован общий подход к выполнению этой задачи.
+Вы можете захотеть определить свои собственные типы ошибок, унаследованные от `Error`, чтобы иметь возможность возбуждать их с помощью `throw new MyError()` и использовать `instanceof MyError` для проверки вида ошибки в обработчике исключений. Это помогает делать обработку ошибок более понятной.
 
-> **Предупреждение:** обратите внимание, что выбрасывание `MyError` будет сообщать неправильные номер строки `lineNumber` и имя файла `fileName` как минимум, в Firefox.
+Также смотрите обсуждение [«Какой способ расширения Error в JavaScript более предпочтителен?»](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) на StackOverflow.
 
-Также смотрите [обсуждение «Какой способ расширения Error в JavaScript более предпочтителен?» на Stackoverflow](http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript).
+> [!WARNING]
+> Встроенные подклассы не могут быть надёжно преобразованы в ES6 код, потому что нет возможности создать базовый класс со специфичным `new.target` без {{jsxref("Reflect.construct()")}}. Требуется [дополнительная конфигурация](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend) или ручной вызов {{jsxref("Object/setPrototypeOf", "Object.setPrototypeOf(this, CustomError.prototype)")}} в конце конструктора, иначе создаваемый экземпляр не будет экземпляром `CustomError`. Смотрите [TypeScript FAQ](https://github.com/microsoft/TypeScript/wiki/FAQ#why-doesnt-extending-built-ins-like-error-array-and-map-work) для получения дополнительной информации.
+
+> [!NOTE]
+> Некоторые браузеры включают конструктор `CustomError` в трассировку стека при использовании классов ES2015.
 
 ```js
-// Создаём новый объект, затем через прототип делаем его наследником конструктора Error.
-function MyError(message) {
-  this.name = 'MyError';
-  this.message = message || 'Сообщение по умолчанию';
-  this.stack = (new Error()).stack;
+class CustomError extends Error {
+  constructor(foo = "bar", ...params) {
+    // Передаём все аргументы (включая специфичные для производителя движка) родительскому конструктору
+    super(...params);
+
+    // Поддерживаем соответствующую трассировку стека с указанием места возникновения ошибки (доступно только в V8)
+    if (Error.captureStackTrace) {
+      Error.captureStackTrace(this, CustomError);
+    }
+
+    this.name = "CustomError";
+    // Дополнительная отладочная информация
+    this.foo = foo;
+    this.date = new Date();
+  }
 }
-MyError.prototype = Object.create(Error.prototype);
-MyError.prototype.constructor = MyError;
 
 try {
-  throw new MyError();
+  throw new CustomError("baz", "bazMessage");
 } catch (e) {
-  console.log(e.name);     // 'MyError'
-  console.log(e.message);  // 'Сообщение по умолчанию'
-}
-
-try {
-  throw new MyError('пользовательское сообщение');
-} catch (e) {
-  console.log(e.name);     // 'MyError'
-  console.log(e.message);  // 'пользовательское сообщение'
+  console.error(e.name); // CustomError
+  console.error(e.foo); // baz
+  console.error(e.message); // bazMessage
+  console.error(e.stack); // stacktrace
 }
 ```
 
@@ -159,6 +164,7 @@ try {
 
 ## Смотрите также
 
-- {{jsxref("Error.prototype")}}
+- [Полифил `Error` с поддержкой `cause` в `core-js`](https://github.com/zloirock/core-js#ecmascript-error)
 - {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/try...catch", "try...catch")}}
+- [Stack trace API](https://v8.dev/docs/stack-trace-api) в документации V8

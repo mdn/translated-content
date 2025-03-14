@@ -1,20 +1,8 @@
 ---
 title: WebRTC API
 slug: Web/API/WebRTC_API
-tags:
-  - API
-  - Audio
-  - Landing
-  - Media
-  - NeedsTranslation
-  - Networking
-  - TopicStub
-  - Video
-  - WebRTC
-  - WebRTC API
-  - streaming
-translation_of: Web/API/WebRTC_API
 ---
+
 {{APIRef("WebRTC")}}
 
 **WebRTC**(Web Real-Time Communication)은 웹 애플리케이션과 사이트가 중간자 없이 브라우저 간에 오디오나 영상 미디어를 포착하고 마음대로 스트림할 뿐 아니라, 임의의 데이터도 교환할 수 있도록 하는 기술입니다. WebRTC를 구성하는 일련의 표준들은 플러그인이나 제 3자 소프트웨어 설치 없이 종단 간 데이터 공유와 화상 회의를 가능하게 합니다.
@@ -27,7 +15,7 @@ WebRTC의 구현이 계속 진화하고 있으며 각 브라우저마다 다른 
 
 Adapter.js는 shim 및 polyfill을 사용하여 다양한 플랫폼에서 WebRTC 구현 간의 다양한 차이점을 없애줍니다. 또한 WebRTC 개발 프로세스를 전체적으로 쉽게 수행 할 수 있도록 접두사와 다른 이름 지정의 차이점을 처리하며보다 광범위하게 호환되는 결과를 제공합니다. 라이브러리는 [NPM 패키지](https://www.npmjs.com/package/webrtc-adapter)로도 제공됩니다.
 
-Adapter.js에 대한 자세한 내용은 [Improving compatibility using WebRTC adapter.js](/ko/docs/Web/API/WebRTC_API/adapter.js)를 참조하십시오.
+Adapter.js에 대한 자세한 내용은 [Improving compatibility using WebRTC adapter.js](/ko/docs/Web/API/WebRTC_API#상호_운용성)를 참조하십시오.
 
 ## WebRTC 개념 및 사용법
 
@@ -54,7 +42,7 @@ WebRTC는 다양한 작업을 수행하기 위해 함께 동작하는 인터페�
 - {{domxref("RTCDataChannel")}}
   - : 연결된 두 피어간의 양방향 데이터 채널을 나타낸다.
 - {{domxref("RTCDataChannelEvent")}}
-  - : {{domxref("RTCDataChannel")}}을 {{domxref("RTCPeerConnection")}}에 연결하는 동안 발생하는 이벤트를 나타낸다. 이 인터페이스와 함께 전송되는 유일한 이벤트는 {{event("datachannel")}}이다.
+  - : {{domxref("RTCDataChannel")}}을 {{domxref("RTCPeerConnection")}}에 연결하는 동안 발생하는 이벤트를 나타낸다. 이 인터페이스와 함께 전송되는 유일한 이벤트는 {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}}이다.
 - {{domxref("RTCSessionDescription")}}
   - : 세션의 매개 변수를 나타냅니다. 각 `RTCSessionDescription`는 세션의 {{Glossary("SDP")}} 기술자(descriptor)의 기술 제안 / 응답 협상 과정의 일부를 나타내는 설명 {{DOMxRef("RTCSessionDescription.type", "type")}}으로 구성되어 있습니다.
 - {{domxref("RTCStatsReport")}}
@@ -64,7 +52,7 @@ WebRTC는 다양한 작업을 수행하기 위해 함께 동작하는 인터페�
 - {{domxref("RTCIceTransport")}}
   - : 인터넷 연결 설정 (ICE) 전송에 대한 정보를 나타냅니다.
 - {{domxref("RTCPeerConnectionIceEvent")}}
-  - : 대상이있는 ICE 후보와 관련하여 발생하는 이벤트 (일반적으로 {{domxref("RTCPeerConnection")}})를 나타냅니다. {{event ( "icecandidate")}} 유형의 이벤트 만 있습니다.
+  - : 대상이있는 ICE 후보와 관련하여 발생하는 이벤트 (일반적으로 {{domxref("RTCPeerConnection")}})를 나타냅니다. {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 유형의 이벤트 만 있습니다.
 - {{domxref("RTCRtpSender")}}
   - : {{domxref ( "RTCPeerConnection")}}에서 {{domxref ( "MediaStreamTrack")}}의 데이터 인코딩 및 전송을 관리합니다.
 - {{domxref("RTCRtpReceiver")}}
@@ -72,7 +60,7 @@ WebRTC는 다양한 작업을 수행하기 위해 함께 동작하는 인터페�
 - {{domxref("RTCTrackEvent")}}
   - : 새롭게 수신된 {{domxref ( "MediaStreamTrack")}}이 생성되고 관련 {{domxref ( "RTCRtpReceiver")}} 개체가 {{domxref ( "RTCPeerConnection")}} 개체에 추가되었음을 나타냅니다.
 - {{DOMxRef("RTCSctpTransport")}}
-  - : 스트림 제어 전송 프로토콜(_Stream Control Transmission Protocol,_ **{{Glossary("SCTP")}}**) 전송을 설명하는 정보를 제공하고, 모든 [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection) 데이터 채널에 대한 SCTP 패킷이 송수신되는 기본 데이터그램 전송 보안 계층 프로토콜(Datagram Transport Layer Security, **{{Glossary("DTLS")}}**) 전송에 접근하기 위한 방법을 제공합니다.
+  - : 스트림 제어 전송 프로토콜(_Stream Control Transmission Protocol,_ **{{Glossary("SCTP")}}**) 전송을 설명하는 정보를 제공하고, 모든 [`RTCPeerConnection`](/ko/docs/Web/API/RTCPeerConnection) 데이터 채널에 대한 SCTP 패킷이 송수신되는 기본 데이터그램 전송 보안 계층 프로토콜(Datagram Transport Layer Security, **{{Glossary("DTLS")}}**) 전송에 접근하기 위한 방법을 제공합니다.
 
 #### Dictionaries
 
@@ -100,12 +88,8 @@ WebRTC API에는 보안 및 식별자를 관리하기위한 여러 인터페이�
   - : Represents the identity of the a remote peer of the current connection. If no peer has yet been set and verified this interface returns `null`. Once set it can't be changed.
 - {{domxref("RTCIdentityProviderRegistrar")}}
   - : 식별자 공급자(idP; identity provider)를 제공합니다.
-- {{domxref("RTCIdentityEvent")}}
-  - : Represents an identity assertion generated by an identity provider (idP). This is usually for an {{domxref("RTCPeerConnection")}}. The only event sent with this type is {{event("identityresult")}}.
-- {{domxref("RTCIdentityErrorEvent")}}
-  - : Represents an error associated with the identity provider (idP). This is usually for an {{domxref("RTCPeerConnection")}}. Two events are sent with this type: {{event("idpassertionerror")}} and {{event("idpvalidationerror")}}.
-- {{domxref("RTCCertificate")}}
-  - : Represents a certificate that an {{domxref("RTCPeerConnection")}} uses to authenticate.
+- {{DOMxRef("RTCCertificate")}}
+  - : Represents a certificate that an {{DOMxRef("RTCPeerConnection")}} uses to authenticate.
 
 ### Telephony
 
@@ -135,12 +119,12 @@ WebRTC API에는 보안 및 식별자를 관리하기위한 여러 인터페이�
 
 ## Tutorials
 
-- [Improving compatibility using WebRTC adapter.js](/ko/docs/Web/API/WebRTC_API/adapter.js)
+- [Improving compatibility using WebRTC adapter.js](/ko/docs/Web/API/WebRTC_API#상호_운용성)
   - : The WebRTC organization [provides on GitHub the WebRTC adapter](https://github.com/webrtc/adapter/) to work around compatibility issues in different browsers' WebRTC implementations. The adapter is a JavaScript shim which lets your code to be written to the specification so that it will "just work" in all browsers with WebRTC support.
-- [Taking still photos with WebRTC](/ko/docs/Web/API/WebRTC_API/Taking_still_photos)
+- [Taking still photos with WebRTC](/ko/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos)
   - : This article shows how to use WebRTC to access the camera on a computer or mobile phone with WebRTC support and take a photo with it.
 - [A simple RTCDataChannel sample](/ko/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
-  - : The {{domxref("RTCDataChannel")}} interface is a feature which lets you open a channel between two peers over which you may send and receive arbitrary data. The API is intentionally similar to the [WebSocket API](/ko/docs/Web/API/WebSocket_API), so that the same programming model can be used for each.
+  - : The {{domxref("RTCDataChannel")}} interface is a feature which lets you open a channel between two peers over which you may send and receive arbitrary data. The API is intentionally similar to the [WebSocket API](/ko/docs/Web/API/WebSockets_API), so that the same programming model can be used for each.
 
 ## Resources
 
@@ -148,13 +132,13 @@ WebRTC API에는 보안 및 식별자를 관리하기위한 여러 인터페이�
 
 #### WebRTC-proper protocols
 
-- [Application Layer Protocol Negotiation for Web Real-Time Communications](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-alpn/)
-- [WebRTC Audio Codec and Processing Requirements](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-audio/)
-- [RTCWeb Data Channels](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-channel/)
-- [RTCWeb Data Channel Protocol](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-protocol/)
-- [Web Real-Time Communication (WebRTC): Media Transport and Use of RTP](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-rtp-usage/)
-- [WebRTC Security Architecture](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-security-arch/)
-- [Transports for RTCWEB](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-transports/)
+- [Application Layer Protocol Negotiation for Web Real-Time Communications](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-alpn/)
+- [WebRTC Audio Codec and Processing Requirements](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-audio/)
+- [RTCWeb Data Channels](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-channel/)
+- [RTCWeb Data Channel Protocol](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-protocol/)
+- [Web Real-Time Communication (WebRTC): Media Transport and Use of RTP](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-rtp-usage/)
+- [WebRTC Security Architecture](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-security-arch/)
+- [Transports for RTCWEB](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-transports/)
 
 #### Related supporting protocols
 
@@ -165,11 +149,11 @@ WebRTC API에는 보안 및 식별자를 관리하기위한 여러 인터페이�
 - [An Offer/Answer Model with Session Description Protocol (SDP)](https://tools.ietf.org/html/rfc3264)
 - [Session Traversal Utilities for NAT (STUN) Extension for Third Party Authorization](https://datatracker.ietf.org/doc/draft-ietf-tram-turn-third-party-authz/)
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-In additions to these specifications defining the API needed to use WebRTC, there are several protocols, listed under [resources](#Protocols).
+In additions to these specifications defining the API needed to use WebRTC, there are several protocols, listed under [resources](#protocols).
 
 <h2 class="Related_Topics" id="See_also">See also</h2>
 

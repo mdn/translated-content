@@ -1,45 +1,46 @@
 ---
 title: TransitionEvent
 slug: Web/API/TransitionEvent
+l10n:
+  sourceCommit: 56c76424a5edb45f6716ac4ee48861dac8e7ae38
 ---
 
-{{APIRef("CSSOM")}} {{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
-**`TransitionEvent`** インターフェイスは、[トランジション](/ja/docs/Web/Guide/CSS/Using_CSS_transitions)に関する情報を提供するイベントを表します。
+**`TransitionEvent`** インターフェイスは、[トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)に関する情報を提供するイベントを表します。
+
+{{InheritanceDiagram}}
 
 ## コンストラクター
 
 - {{domxref("TransitionEvent.TransitionEvent", "TransitionEvent()")}}
   - : 指定された引数で `TransitionEvent` イベントを作成します。
 
-## プロパティ
+## インスタンスプロパティ
 
 _親である {{domxref("Event")}} から継承したプロパティもあります。_
 
-- {{domxref("TransitionEvent.propertyName")}} {{readonlyInline}}
-  - : {{domxref("DOMString")}} で、トランジションに関連付けられた CSS プロパティの名前が入ります。
-- {{domxref("TransitionEvent.elapsedTime")}} {{readonlyInline}}
+- {{domxref("TransitionEvent.propertyName")}} {{ReadOnlyInline}}
+  - : 文字列で、このトランジションに関連付けられた CSS プロパティの名前が入ります。
+- {{domxref("TransitionEvent.elapsedTime")}} {{ReadOnlyInline}}
   - : `float` で、このイベントが発生した時点でトランジションが実行している時間を秒単位で表します。この値は {{cssxref("transition-delay")}} プロパティの影響を受けません。
-- {{domxref("TransitionEvent.pseudoElement")}} {{readonlyInline}}
-  - : {{domxref("DOMString")}} で、 `::` で始まる、アニメーションが実行される[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の名前が入ります。トランジションが擬似要素上ではなく要素上で実行されている場合は、空文字列 `''` になります。
+- {{domxref("TransitionEvent.pseudoElement")}} {{ReadOnlyInline}}
+  - : 文字列で、 `::` で始まる、アニメーションが実行される[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の名前が入ります。トランジションが擬似要素上ではなく要素上で実行されている場合は、空文字列 `''` になります。
 
 ## `TransitionEvent` の種類
 
-- {{domxref("HTMLElement.transitioncancel_event", "transitioncancel")}}
-  - : {{domxref("Event")}} で、 [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions)が中断されたときに発生します。
-- {{domxref("HTMLElement.transitionend_event", "transitionend")}}
-  - : {{domxref("Event")}} で、 [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions)の実行が終了したときに発生します。
-- {{domxref("HTMLElement.transitionrun_event", "transitionrun")}}
-  - : {{domxref("Event")}} で、 [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions)が生成されたとき、実行中のトランジションに追加されたときに発生し、必ずしも開始時に発生するとは限りません。
-- {{domxref("HTMLElement.transitionstart_event", "transitionstart")}}
-  - : {{domxref("Event")}} で、 [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions)の推移が開始したときに発生します。
+- {{domxref("Element/transitioncancel_event", "transitioncancel")}}
+  - : {{domxref("Event")}} で、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)が中断されたときに発生します。
+- {{domxref("Element/transitionend_event", "transitionend")}}
+  - : {{domxref("Event")}} で、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)の実行が終了したときに発生します。
+- {{domxref("Element/transitionrun_event", "transitionrun")}}
+  - : {{domxref("Event")}} で、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)が生成されたとき、実行中のトランジションに追加されたときに発生し、必ずしも開始時に発生するとは限りません。
+- {{domxref("Element/transitionstart_event", "transitionstart")}}
+  - : {{domxref("Event")}} で、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)の推移が開始したときに発生します。
 
-## メソッド
+## インスタンスメソッド
 
 _親である {{domxref("Event")}} から継承したプロパティもあります。_
-
-- {{domxref("TransitionEvent.initTransitionEvent()")}} {{non-standard_inline}}{{deprecated_inline}}
-  - : 非推奨の {{domxref("Document.createEvent()", "Document.createEvent(\"TransitionEvent\")")}} メソッドを使用して生成された `TransitionEvent` を初期化します。
 
 ## 仕様書
 
@@ -47,9 +48,9 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 
 ## ブラウザーの互換性
 
-{{Compat("api.TransitionEvent")}}
+{{Compat}}
 
 ## 関連情報
 
-- [CSS トランジションの使用](/ja/docs/Web/Guide/CSS/Using_CSS_transitions)
-- CSS プロパティ: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}.
+- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- CSS プロパティ: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}

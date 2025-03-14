@@ -1,26 +1,32 @@
 ---
 title: Atomics.or()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/or
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/or
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/or
 ---
 
 {{JSRef}}
 
 La méthode statique **`Atomics.or()`** calcule le résultat d'un OU binaire entre une valeur donnée et une valeur du tableau typé et y place le résultat obtenu. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
 
-{{EmbedInteractiveExample("pages/js/atomics-or.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.or()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+// 5 (0101) OR 2 (0010) = 7 (0111)
+console.log(Atomics.or(uint8, 0, 2));
+// Expected output: 5
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 7
+```
 
 ## Syntaxe
 
 ```js
-Atomics.or(typedArray, index, value)
+Atomics.or(typedArray, index, value);
 ```
 
 ### Paramètres
@@ -71,7 +77,7 @@ var ta = new Uint8Array(sab);
 ta[0] = 2;
 
 Atomics.or(ta, 0, 1); // renvoie 2, l'ancienne valeur
-Atomics.load(ta, 0);  // 3
+Atomics.load(ta, 0); // 3
 ```
 
 ## Spécifications

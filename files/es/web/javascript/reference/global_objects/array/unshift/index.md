@@ -1,21 +1,23 @@
 ---
 title: Array.prototype.unshift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
-tags:
-  - Array
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/unshift
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/unshift
 ---
 
 {{JSRef}}
 
 El método **`unshift()`** agrega uno o más elementos al inicio del array, y devuelve la nueva longitud del array.
 
-{{EmbedInteractiveExample("pages/js/array-unshift.html")}}
+{{InteractiveExample("JavaScript Demo: Array.unshift()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.unshift(4, 5));
+// Expected output: 5
+
+console.log(array1);
+// Expected output: Array [4, 5, 1, 2, 3]
+```
 
 ## Sintaxis
 
@@ -57,9 +59,9 @@ arr.unshift([-3]);
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.unshift")}}
+{{Compat}}
 
 ## Ver también
 

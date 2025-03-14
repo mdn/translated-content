@@ -7,20 +7,21 @@ slug: Web/CSS/border-top
 
 ## Resumen
 
-La propiedad de [CSS](/es/docs/CSS) **`border-top`** es una abreviatura que establece los valores de {{Cssxref("border-top-color")}}, {{Cssxref("border-top-style")}}, y {{Cssxref("border-top-width")}}. Estas propiedades las características del borde superior de un elemento.
+La propiedad de [CSS](/es/docs/Web/CSS) **`border-top`** es una abreviatura que establece los valores de {{Cssxref("border-top-color")}}, {{Cssxref("border-top-style")}}, y {{Cssxref("border-top-width")}}. Estas propiedades las características del borde superior de un elemento.
 
-> **Nota:** Los tres valores de la abreviatura pueden ser especificados en cualquier orden, y uno o dos de ellos pueden ser omitidos.
+> [!NOTE]
+> Los tres valores de la abreviatura pueden ser especificados en cualquier orden, y uno o dos de ellos pueden ser omitidos.
 >
 > Como con todas las propiedades abreviadas, border-top siempre establece los valores de todas las propiedades que sean posibles, aun si no están especificadas. Establece aquellas que no son especificadas a sus valores por defecto. Esto significa que:
 >
 > ```css
->   border-top: none thick green;
+> border-top: none thick green;
 > ```
 >
 > es lo mismo que
 >
 > ```css
->   border-top: thick green;
+> border-top: thick green;
 > ```
 >
 > y el valor de {{Cssxref("border-top-style")}} establecido antes de `border-top` es ignorado.
@@ -30,8 +31,8 @@ La propiedad de [CSS](/es/docs/CSS) **`border-top`** es una abreviatura que esta
 > También hay que tomar en cuenta que en el siguiente bloque de código se ignorará la primer asignación de {{Cssxref("border-top-style")}} dado que al indicar `border-top` se establecerá implicitamente el valor de {{Cssxref("border-top-style")}} a `none`
 >
 > ```css
->   border-top-style: dotted;
->   border-top: thick green;
+> border-top-style: dotted;
+> border-top: thick green;
 > ```
 
 {{cssinfo}}
@@ -61,7 +62,7 @@ border-top: medium dashed green;
 
 ```css
 element {
-    border-top: 1px solid #000;
+  border-top: 1px solid #000;
 }
 ```
 
@@ -71,4 +72,4 @@ element {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-top")}}
+{{Compat}}

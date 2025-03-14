@@ -3,11 +3,14 @@ title: FormData.getAll()
 slug: Web/API/FormData/getAll
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 O metodo **`getAll()`** do {{domxref("FormData")}} retorna todos os valores associados com a chave dentro `de um objeto FormData`.
 
-> **Nota:** Este metodo esta disponivel no [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Este metodo esta disponivel no [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
 ## Syntax
 
@@ -32,32 +35,30 @@ A seguinte linha cria um objeto `FormData` vazio:
 var formData = new FormData();
 ```
 
-Se nos adicionarmos dois valores oara `username` {{domxref("FormData.append")}}:
+Se nós adicionarmos dois valores para `username` {{domxref("FormData.append")}}:
 
 ```js
-formData.append('username', 'Chris');
-formData.append('username', 'Bob');
+formData.append("username", "Chris");
+formData.append("username", "Bob");
 ```
 
-A seguinte função `getAll()` retornara um arrat com os valore dentro de `username`:
+A seguinte função `getAll()` retornara um array com os valores dentro de `username`:
 
 ```js
-formData.getAll('username'); // Returns ["Chris", "Bob"]
+formData.getAll("username"); // Returns ["Chris", "Bob"]
 ```
 
-## Especificação
+## Especificações
 
-| Specification                                                                        | Status                               | Comment |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata-getall','getAll()')}} | {{Spec2('XMLHttpRequest')}} |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.FormData.getAll")}}
+{{Compat}}
 
 ## Veja também
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Using XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Using FormData objects](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

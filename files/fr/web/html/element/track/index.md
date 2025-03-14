@@ -1,15 +1,37 @@
 ---
-title: '<track> : l''élément de piste texte embarquée'
+title: "<track> : l'élément de piste texte embarquée"
 slug: Web/HTML/Element/track
-translation_of: Web/HTML/Element/track
-browser-compat: html.elements.track
 ---
 
 {{HTMLSidebar}}
 
 L'élément HTML **`<track>`** est utilisé comme élément fils d'un élément [`<audio>`](/fr/docs/Web/HTML/Element/audio) ou [`<video>`](/fr/docs/Web/HTML/Element/video) et permet de fournir une piste texte pour le média (par exemple afin de gérer automatiquement les sous-titres). Les pistes texte utilisées avec cet élément sont formatées selon [le format WebVTT](/fr/docs/Web/API/WebVTT_API) (ce sont des fichiers `.vtt`) (WebVTT pour <i lang="en">Web Video Text Tracks</i>).
 
-{{EmbedInteractiveExample("pages/tabbed/track.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;track&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video controls src="/shared-assets/videos/friday.mp4">
+  <track
+    default
+    kind="captions"
+    srclang="en"
+    src="/shared-assets/misc/friday.vtt" />
+  Download the
+  <a href="/shared-assets/videos/friday.mp4">MP4</a>
+  video, and
+  <a href="/shared-assets/misc/friday.vtt">subtitles</a>.
+</video>
+```
+
+```css interactive-example
+video {
+  width: 250px;
+}
+
+video::cue {
+  font-size: 1rem;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -82,7 +104,7 @@ L'élément HTML **`<track>`** est utilisé comme élément fils d'un élément 
 - `label`
   - : Le titre associé à la piste et qui est affiché par le navigateur lorsque celui-ci liste les pistes disponibles.
 - `src`
-  - : L'adresse du fichier pour la piste (celle du fichier `.vtt`). Cet attribut doit être une URL valide et doit nécessairement être présent dans l'élément. L'URL indiquée doit avoir la même origine à moins que l'élément parent [`<audio>`](/fr/docs/Web/HTML/Element/audio) ou [`<video>`](/fr/docs/Web/HTML/Element/video) de l'élément `<track>` possède un attribut [crossorigin](/fr/docs/Web/HTML/Attributes/crossorigin).
+  - : L'adresse du fichier pour la piste (celle du fichier `.vtt`). Cet attribut doit être une URL valide et doit nécessairement être présent dans l'élément. L'URL indiquée doit avoir la même origine à moins que l'élément parent [`<audio>`](/fr/docs/Web/HTML/Element/audio) ou [`<video>`](/fr/docs/Web/HTML/Element/video) de l'élément `<track>` possède un attribut [`crossorigin`](/fr/docs/Web/HTML/Attributes/crossorigin).
 - `srclang`
   - : La langue dans laquelle est exprimée la piste textuelle. La valeur de cet attribut doit être une balise de langue [BCP 47](https://r12a.github.io/app-subtags/). Si l'attribut `kind` vaut `subtitles,` l'attribut `srclang` doit obligatoirement être défini.
 
@@ -100,22 +122,18 @@ Un élément média ([`<audio>`](/fr/docs/Web/HTML/Element/audio) ou [`<video>`]
 
 ```html
 <video controls poster="/images/sample.gif">
-  <source src="sample.mp4" type="video/mp4">
-  <source src="sample.ogv" type="video/ogv">
-  <track kind="captions" src="sampleCaptions.vtt" srclang="en">
-  <track kind="descriptions"
-    src="sampleDescriptions.vtt" srclang="en">
-  <track kind="chapters" src="chapitres.vtt" srclang="en">
-  <track kind="subtitles" src="soustitres_de.vtt" srclang="de">
-  <track kind="subtitles" src="soustitres_en.vtt" srclang="en">
-  <track kind="subtitles" src="soustitres_ja.vtt" srclang="ja">
-  <track kind="subtitles" src="soustitres_oz.vtt" srclang="oz">
-  <track kind="metadata" src="keyStage1.vtt" srclang="en"
-    label="Key Stage 1">
-  <track kind="metadata" src="keyStage2.vtt" srclang="en"
-    label="Key Stage 2">
-  <track kind="metadata" src="keyStage3.vtt" srclang="en"
-    label="Key Stage 3">
+  <source src="sample.mp4" type="video/mp4" />
+  <source src="sample.ogv" type="video/ogv" />
+  <track kind="captions" src="sampleCaptions.vtt" srclang="en" />
+  <track kind="descriptions" src="sampleDescriptions.vtt" srclang="en" />
+  <track kind="chapters" src="chapitres.vtt" srclang="en" />
+  <track kind="subtitles" src="soustitres_de.vtt" srclang="de" />
+  <track kind="subtitles" src="soustitres_en.vtt" srclang="en" />
+  <track kind="subtitles" src="soustitres_ja.vtt" srclang="ja" />
+  <track kind="subtitles" src="soustitres_oz.vtt" srclang="oz" />
+  <track kind="metadata" src="keyStage1.vtt" srclang="en" label="Key Stage 1" />
+  <track kind="metadata" src="keyStage2.vtt" srclang="en" label="Key Stage 2" />
+  <track kind="metadata" src="keyStage3.vtt" srclang="en" label="Key Stage 3" />
   <!-- Contenu alternatif pour les navigateurs qui
       ne prennent pas en charge <video> -->
   <!-- etc. -->

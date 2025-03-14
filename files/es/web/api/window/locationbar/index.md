@@ -1,7 +1,6 @@
 ---
 title: Window.locationbar
 slug: Web/API/Window/locationbar
-translation_of: Web/API/Window/locationbar
 ---
 
 {{APIRef}}
@@ -11,7 +10,7 @@ Devuelve el objeto `locationbar`, del cual se puede comprobar su visibilidad.
 ## Sintaxis
 
 ```js
-objRef = window.locationbar
+objRef = window.locationbar;
 ```
 
 ## Ejemplo
@@ -19,20 +18,19 @@ objRef = window.locationbar
 El siguiente ejemplo completo en HTML, muestra la forma en la que se utiliza la propiedad `visible` del objeto `locationbar.`
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>Various DOM Tests</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Various DOM Tests</title>
 
-<script>
-var visible = window.locationbar.visible;
-</script>
-
-</head>
-<body>
-  <p>Various DOM Tests</p>
-</body>
+    <script>
+      var visible = window.locationbar.visible;
+    </script>
+  </head>
+  <body>
+    <p>Various DOM Tests</p>
+  </body>
 </html>
 ```
 

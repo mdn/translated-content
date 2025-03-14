@@ -1,17 +1,11 @@
 ---
 title: zoom
 slug: Web/CSS/zoom
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/zoom
 ---
 
 {{CSSRef}}{{Non-standard_header}}
 
-La propriété non-standard **`zoom`** permet de manipuler l'effet d'agrandissement d'un élément. Plutôt que cette propriété non-standard, mieux vaudra utiliser [les transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms), si possible. Cependant, contrairement aux transformations CSS, `zoom` affecte la taille de l'élément.
+La propriété non-standard **`zoom`** permet de manipuler l'effet d'agrandissement d'un élément. Plutôt que cette propriété non-standard, mieux vaudra utiliser [les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms), si possible. Cependant, contrairement aux transformations CSS, `zoom` affecte la taille de l'élément.
 
 ## Syntaxe
 
@@ -111,10 +105,9 @@ Cette propriété n'est pas standard et est née avec Internet Explorer. Apple l
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.zoom")}}
+{{Compat}}
 
 ## Voir aussi
 
 - [L'article de CSS-Tricks sur `zoom`](https://css-tricks.com/almanac/properties/z/zoom/)
-- Le descripteur `zoom` pour la règle @ [`@viewport`](/fr/docs/Web/CSS/@viewport)
-- {{bug("390936")}} à propos de l'implémentation de la propriété dans Firefox
+- [bug Firefox 390936](https://bugzil.la/390936) à propos de l'implémentation de la propriété dans Firefox

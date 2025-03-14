@@ -1,6 +1,6 @@
 ---
 title: CSS アニメーションの使用
-slug: Web/CSS/CSS_Animations/Using_CSS_animations
+slug: Web/CSS/CSS_animations/Using_CSS_animations
 ---
 
 {{CSSRef}}
@@ -46,7 +46,8 @@ CSS スタイルでアニメーションのタイミングを定義するため�
 
 ## 例
 
-> **メモ:** (2017年以前の) 古いブラウザーでは、接頭辞が必要かもしれません。 クリックして参照できるライブサンプルには、`-webkit` 接頭辞を付加したプロパティも含まれています。
+> [!NOTE]
+> (2017年以前の) 古いブラウザーでは、接頭辞が必要かもしれません。 クリックして参照できるライブサンプルには、`-webkit` 接頭辞を付加したプロパティも含まれています。
 
 ### 文字列がブラウザーのウィンドウを横切る
 
@@ -82,12 +83,15 @@ p {
 2 番目 (かつ最後) のキーフレームは、100% (代替表記の `to` を使用しています) です。 要素の左マージンを 0% に、幅を 100% に設定しています。 これにより、見出しがコンテンツエリアの左端へすべり込むことでアニメーションが終わります。
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
-> **メモ:** アニメーションを見るにはページを再読み込みしてください。
+> [!NOTE]
+> アニメーションを見るにはページを再読み込みしてください。
 
 {{EmbedLiveSample("Making_text_slide_across_the_browser_window","100%","250")}}
 
@@ -131,14 +135,17 @@ p {
 ```
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 これはブラウザーに、アニメーションの流れの 75% 経過時点で見出しの左マージンを 25% に、また幅を 150% にするよう設定します。
 
-> **メモ:** アニメーションを見るにはページを再読み込みしてください。
+> [!NOTE]
+> アニメーションを見るにはページを再読み込みしてください。
 
 {{EmbedLiveSample("Adding_another_keyframe","100%","250")}}
 
@@ -171,9 +178,11 @@ p {
 ```
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("Making_it_repeat","100%","250")}}
@@ -208,9 +217,11 @@ p {
 ```
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("Making_it_move_back_and_forth","100%","250")}}
@@ -236,7 +247,8 @@ p {
 }
 ```
 
-> **メモ:** 詳しくは、 {{cssxref("animation")}} のリファレンスページをご覧ください。
+> [!NOTE]
+> 詳しくは、 {{cssxref("animation")}} のリファレンスページをご覧ください。
 
 ### 複数のアニメーションプロパティ値の設定
 
@@ -284,13 +296,13 @@ animation-iteration-count: 2, 1;
 
 @keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-    margin-left:0%;
-    width:100%;
+    margin-left: 0%;
+    width: 100%;
   }
 }
 ```
@@ -319,7 +331,7 @@ element.className = "slidein";
 ```js
 function listener(event) {
   var l = document.createElement("li");
-  switch(event.type) {
+  switch (event.type) {
     case "animationstart":
       l.textContent = `Started: elapsed time is ${event.elapsedTime}`;
       break;
@@ -356,23 +368,23 @@ function listener(event) {
   elements move across the page.
 </p>
 <p>
-  In addition, we output some text each time an animation event fires,
-  so you can see them in action.
+  In addition, we output some text each time an animation event fires, so you
+  can see them in action.
 </p>
-<ul id="output">
-</ul>
+<ul id="output"></ul>
 ```
 
 #### 結果
 
 そしてこちらはライブ出力です。
 
-> **メモ:** アニメーションを見るにはページを再読み込みしてください。
+> [!NOTE]
+> アニメーションを見るにはページを再読み込みしてください。
 
 {{EmbedLiveSample('Using_animation_events', '600', '300')}}
 
 ## 関連情報
 
 - {{domxref("AnimationEvent", "AnimationEvent")}}
-- [CSS アニメーションの対応の検出](/ja/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [CSS アニメーションの対応の検出](/ja/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
+- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)

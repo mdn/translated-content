@@ -1,18 +1,11 @@
 ---
 title: IDBTransaction
 slug: Web/API/IDBTransaction
-tags:
-  - API
-  - IDBTransaction
-  - IndexedDB
-  - Interface
-  - Reference
-translation_of: Web/API/IDBTransaction
 ---
 
 {{APIRef("IndexedDB")}}
 
-L'interface **`IDBTransaction`** de l'[API IndexedDB](/fr/docs/Web/API/API_IndexedDB) fournit une transaction statique asynchrone vers une base de données grâce à des attributs de gestion d'évènementns. Toutes les opérations de lecture et d'écriture de données sont effectuées au sein de transaction. Il est possible d'utiliser {{domxref("IDBDatabase")}} afin d'initier des transactions puis {{domxref("IDBTransaction")}} afin de paramétrer le mode de la transaction (c'est-à-dire s'il est en lecture seule ou en lecture/écriture) et d'accéder à un objet {{domxref("IDBObjectStore")}} pour réaliser une requête. On peut également utiliser `IDBTransaction` pour interrompre une requête.
+L'interface **`IDBTransaction`** de l'[API IndexedDB](/fr/docs/Web/API/IndexedDB_API) fournit une transaction statique asynchrone vers une base de données grâce à des attributs de gestion d'évènementns. Toutes les opérations de lecture et d'écriture de données sont effectuées au sein de transaction. Il est possible d'utiliser {{domxref("IDBDatabase")}} afin d'initier des transactions puis {{domxref("IDBTransaction")}} afin de paramétrer le mode de la transaction (c'est-à-dire s'il est en lecture seule ou en lecture/écriture) et d'accéder à un objet {{domxref("IDBObjectStore")}} pour réaliser une requête. On peut également utiliser `IDBTransaction` pour interrompre une requête.
 
 S'il vous garantir une certaine longévité (par exemple si on utilise des données critiques qui ne peuvent pas être recalculées par la suite), il est possible d'écrire le contenu de la transaction sur le disque avant la diffusion de l'évènement `complete` grâce au mode expérimental non-standard `readwriteflush` (cf. {{domxref("IDBDatabase.transaction")}}).
 
@@ -109,7 +102,7 @@ Une transaction peut s'effectuer dans l'un de ces modes :
 
 ## Exemples
 
-Dans l'exemple qui suit, on ouvre une transaction en lecture/écriture sur la base de données et on ajoute des données dans le magasin d'objet. On notera également l'utilisation des gestionnaires d'évènements attachés à la transaction qui permettent d'indiquer la réussite ou l'échec de l'ouverture de la transaction. Pour un exemple complet, voir [l'application de notifications To-do](https://github.com/mdn/to-do-notifications/) ([voir également la démonstration _live_](https://mdn.github.io/to-do-notifications/))
+Dans l'exemple qui suit, on ouvre une transaction en lecture/écriture sur la base de données et on ajoute des données dans le magasin d'objet. On notera également l'utilisation des gestionnaires d'évènements attachés à la transaction qui permettent d'indiquer la réussite ou l'échec de l'ouverture de la transaction. Pour un exemple complet, voir [l'application de notifications To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir également la démonstration _live_](https://mdn.github.io/dom-examples/to-do-notifications/))
 
 ```js
 // On commence par ouvrir la base de données
@@ -172,10 +165,10 @@ function addData() {
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Initier une connexion : {{domxref("IDBDatabase")}}
 - Utiliser les transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

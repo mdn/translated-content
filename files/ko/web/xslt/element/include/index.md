@@ -1,13 +1,9 @@
 ---
 title: include
 slug: Web/XSLT/Element/include
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/include
-original_slug: Web/XSLT/include
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:include>` 요소는 한 스타일시트의 컨텐트를 다른 스타일시트에 합칩니다. `<xsl:import>`와는 달리, 포함되는 스타일시트의 컨텐트는 포함하는 스타일시트의 컨텐트와 우선순위가 정확히 같습니다.
 
@@ -32,7 +28,7 @@ original_slug: Web/XSLT/include
 
 ### 정의
 
-[XSLT section 2.6.1, Stylesheet Inclusion](http://www.w3.org/TR/xslt#include)
+[XSLT section 2.6.1, Stylesheet Inclusion](https://www.w3.org/TR/xslt#include)
 
 ### Gecko 지원
 

@@ -1,17 +1,6 @@
 ---
 title: Principaux blocs en JS
 slug: Learn/JavaScript/Building_blocks
-tags:
-  - Auto-évaluation
-  - Boucles
-  - Débutant
-  - Fonctions
-  - Guide
-  - Modules
-  - conditions
-  - évènements
-translation_of: Learn/JavaScript/Building_blocks
-original_slug: Apprendre/JavaScript/Building_blocks
 ---
 
 {{JsSidebar}}{{PreviousNext("Learn/JavaScript/First_steps", "Learn/JavaScript/Objects")}}
@@ -20,19 +9,20 @@ Dans ce module nous allons continuer à voir l'ensemble des fonctionnalités cle
 
 ## Prérequis
 
-Avant de commencer ce module, vous devriez connaître les bases du [HTML](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML) et du [CSS](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS) et avoir suivi le module précédent, [JavaScript Premiers Pas.](/fr/docs/Learn/JavaScript/First_steps)
+Avant de commencer ce module, vous devriez connaître les bases du [HTML](/fr/docs/Learn/HTML/Introduction_to_HTML) et du [CSS](/fr/docs/Learn/CSS/First_steps) et avoir suivi le module précédent, [JavaScript Premiers Pas.](/fr/docs/Learn/JavaScript/First_steps)
 
-> **Note :** Si vous travaillez depuis un ordinateur, une tablette ou depuis un autre appareil sur lequel vous ne pouvez pas créer vos propres fichiers, ce n'est pas un problème, vous pourrez essayer la plupart des exemples en lignes grâce à des outils comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) .
+> [!NOTE]
+> Si vous travaillez depuis un ordinateur, une tablette ou depuis un autre appareil sur lequel vous ne pouvez pas créer vos propres fichiers, ce n'est pas un problème, vous pourrez essayer la plupart des exemples en lignes grâce à des outils comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guides
 
 - [Prendre des décisions dans votre code — les conditions](/fr/docs/Learn/JavaScript/Building_blocks/conditionals)
   - : Quelque soit le langage de programmation, notre programme doit prendre des décisions et effectuer des actions différentes selon les valeurs traitées. Dans un jeu par exemple, si le nombre de vies du joueur est égal à 0, le jeu s'achève. Sur le même principe, une application météo affiche un fond d'aube si elle est lancée le matin, des étoiles et la Lune si, au contraire, elle est lancée la nuit. Dans cet article, nous allons voir comment les structures conditionnelles fonctionnent en JavaScript.
-- [Les boucles](/fr/Apprendre/JavaScript/Building_blocks/Looping_code)
+- [Les boucles](/fr/docs/Learn/JavaScript/Building_blocks/Looping_code)
   - : Parfois une action doit être réalisée plusieurs fois d'affilée. Par exemple, parcourir une liste de noms. En programmation, les boucles effectuent ce genre de tâches à merveille. Ici, nous allons examiner les structures de boucles en JavaScript.
 - [Les fonctions — réutiliser des blocs de code](/fr/docs/Learn/JavaScript/Building_blocks/Functions)
   - : Un autre concept essentiel en programmation est celui de **fonctions.** Les **fonctions** permettent de définir un morceau de code réalisant une tâche particulière qui pourra être appelé ultérieurement dans le reste du programme par une simple ligne, ce qui évite d'écrire plusieurs fois le même code. Dans cet article, nous allons voir les concepts qui se cachent derrière les fonctions tels que la syntaxe de base, la définition et l'appel d'une fonction, sa portée et ses paramètres.
-- [Créez votre propre fonction](/fr/Apprendre/JavaScript/Building_blocks/Build_your_own_function)
+- [Créez votre propre fonction](/fr/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
   - : L'essentiel sur la théorie des fonctions a été traité dans le chapitre précédent, cet article va vous permettre de mettre en pratique vos connaissances avec un exercice. Nous allons construire notre propre fonction et nous en profiterons pour expliquer quelques notions plus avancées, utiles pour travailler avec les fonctions.
 - [Les valeurs de retour des fonctions](/fr/docs/Learn/JavaScript/Building_blocks/Return_values)
   - : Il reste un dernier point à vous présenter avant de terminer cette partie sur les fonctions, il s'agit des valeurs retournées. Une fois leur exécution finie, les fonctions renvoient des valeurs, pour certaines d'entre-elles ce retour nous est utile. Il est important de bien comprendre ce que sont ces valeurs, comment les utiliser dans notre programme et comment faire en sorte que nos fonctions renvoient des valeurs qui nous soient utiles.

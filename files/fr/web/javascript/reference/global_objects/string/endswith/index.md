@@ -1,22 +1,28 @@
 ---
 title: String.prototype.endsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/String/endsWith
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/endsWith
 ---
 
 {{JSRef}}
 
 La méthode **`endsWith()`** renvoie un booléen indiquant si la chaine de caractères se termine par la chaine de caractères fournie en argument.
 
-{{EmbedInteractiveExample("pages/js/string-endswith.html")}}
+{{InteractiveExample("JavaScript Demo: String.endsWith()")}}
+
+```js interactive-example
+const str1 = "Cats are the best!";
+
+console.log(str1.endsWith("best!"));
+// Expected output: true
+
+console.log(str1.endsWith("best", 17));
+// Expected output: true
+
+const str2 = "Is this a question?";
+
+console.log(str2.endsWith("question"));
+// Expected output: false
+```
 
 ## Syntaxe
 
@@ -44,9 +50,9 @@ Cette méthode permet de savoir si une chaine de caractères se termine avec une
 ```js
 var str = "Être, ou ne pas être : telle est la question.";
 
-console.log(str.endsWith("question."));     // true
-console.log(str.endsWith("pas être"));      // false
-console.log(str.endsWith("pas être", 20));  // true
+console.log(str.endsWith("question.")); // true
+console.log(str.endsWith("pas être")); // false
+console.log(str.endsWith("pas être", 20)); // true
 ```
 
 ## Prothèse d'émulation (_polyfill_)
@@ -55,9 +61,14 @@ Cette méthode a été ajoutée dans la spécification ECMAScript 6 et peut ne p
 
 ```js
 if (!String.prototype.endsWith) {
-  String.prototype.endsWith = function(searchString, position) {
+  String.prototype.endsWith = function (searchString, position) {
     var subjectString = this.toString();
-    if (typeof position !== 'number' || !isFinite(position) || Math.floor(position) !== position || position > subjectString.length) {
+    if (
+      typeof position !== "number" ||
+      !isFinite(position) ||
+      Math.floor(position) !== position ||
+      position > subjectString.length
+    ) {
       position = subjectString.length;
     }
     position -= searchString.length;

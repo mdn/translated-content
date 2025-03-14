@@ -1,72 +1,85 @@
 ---
 title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
-translation_of: Web/JavaScript/Reference/Global_Objects/String/search
+l10n:
+  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
 {{JSRef}}
 
-**`search()`** 메서드는 정규 표현식과 이 {{jsxref("String")}} 객체간에 같은 것을 찾기
-위한 검색을 실행한다.
+{{jsxref("String")}} 값의 **`search()`** 메서드는 정규식과 이 문자열 간에 일치하는 항목이 있는지 검색하여
+문자열에서 첫 번째로 일치하는 항목의 인덱스를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/string-search.html")}}
+{{InteractiveExample("JavaScript Demo: String.search()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+// Anything not a word character, whitespace or apostrophe
+const regex = /[^\w\s']/g;
+
+console.log(paragraph.search(regex));
+// Expected output: 41
+
+console.log(paragraph[paragraph.search(regex)]);
+// Expected output: "!"
+```
 
 ## 구문
 
-```js
-str.search(regexp)
+```js-nolint
+search(regexp)
 ```
 
 ### 매개변수
 
 - `regexp`
-  - : 정규 표현식 객체. non-RegExp 객체 `obj` 가 전달되면, 그것은 `new RegExp(obj)` 을 이용하여 {{jsxref("RegExp")}} 으로 암묵적으로 변환된다.
+
+  - : 정규식 객체 또는 [`Symbol.search`](/ko/docs/Web/JavaScript/Rference/Global_Objects/Symbol/search) 메서드가 있는 모든 객체입니다.
+
+    `regexp`가 `RegExp` 객체가 아니고 `Symbol.search` 메서드가 없는 경우, `new RegExp(regexp)`를 사용하여 암시적으로 {{jsxref("RegExp")}}로 변환됩니다.
 
 ### 반환 값
 
-정규표현식과 주어진 스트링간에 첫번째로 매치되는 것의 인덱스를 반환한다.
-찾지 못하면 **-1** 를 반환한다.
+정규 표현식과 주어진 문자열이 처음 일치하는 인덱스(일치하는 항목이 없는 경우 `-1`)입니다.
 
 ## 설명
 
-When you want to know whether a pattern is found and also its index in a string use `search()` (if you only want to know if it exists, use the similar {{jsxref("RegExp.prototype.test()", "test()")}} method on the RegExp prototype, which returns a boolean); for more information (but slower execution) use {{jsxref("String.prototype.match()", "match()")}} (similar to the regular expression {{jsxref("RegExp.prototype.exec()", "exec()")}} method).
+`String.prototype.search()`의 구현 자체는 매우 간단합니다. 그저 단순히 문자열을 첫 번째 매개변수로 하여 인수의 `Symbol.search` 메서드를 호출합니다. 실제 구현은 [`RegExp.prototype[@@search]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)에서 가져옵니다.
 
-## 예
+`regexp`의 `g` 플래그는 `search()` 결과에 아무런 영향을 미치지 않으며, 검색은 항상 정규식의 `lastIndex`가 0인 것처럼 수행됩니다. `search()`의 동작에 대한 자세한 내용은 [`RegExp.prototype[@@search]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)를 참조하세요.
 
-### `search()를 이용하기`
+패턴이 발견되었는지 여부와 문자열 내에서 해당 패턴의 인덱스를 알고 싶을 때는 `search()`를 사용합니다.
 
-The following example searches a string with 2 different regex objects to show a successful search (positive value) vs. an unsuccessful search (-1)
+- 패턴의 존재 여부만 알고 싶다면 부울을 반환하는 {{jsxref("RegExp.prototype.test()")}} 메서드를 사용하세요.
+- 일치하는 텍스트의 내용이 필요한 경우 {{jsxref("String.prototype.match()")}} 또는 {{jsxref("RegExp.prototype.exec()")}}를 사용합니다.
+
+## 예제
+
+### search() 사용하기
+
+다음 예제는 서로 다른 두 개의 정규식 객체가 있는 문자열을 검색하여 검색 성공(양수 값)과 검색 실패(`-1`)를 표시하는 예제입니다.
 
 ```js
-var str = "hey JudE";
-var re = /[A-Z]/g;
-var re2 = /[.]/g;
-console.log(str.search(re)); // returns 4, which is the index of the first capital letter "J"
-console.log(str.search(re2)); // returns -1 cannot find '.' dot punctuation
+const str = "hey JudE";
+const re = /[A-Z]/;
+const reDot = /[.]/;
+console.log(str.search(re)); // 첫 대문자 "J"의 인덱스인 4를 반환합니다.
+console.log(str.search(reDot)); // '.' 을 찾을 수 없어서 -1을 반환합니다.
 ```
 
-## 사양
+## 명세서
 
-| 사양                                                                                                         | 상태                         | 주석                                               |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Initial definition. Implemented in JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.12', 'String.prototype.search')}}                     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-string.prototype.search', 'String.prototype.search')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-string.prototype.search', 'String.prototype.search')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## 브라우저 호환성
 
 {{Compat}}
 
-## Gecko-specific notes
+## 같이 보기
 
-- `flags` was a non standard second argument only available in Gecko : _str_.search(_regexp, flags_)
-- Prior to {{Gecko("8.0")}}, `search()` was implemented incorrectly; when it was called with no parameters or with {{jsxref("undefined")}}, it would match against the string 'undefined', instead of matching against the empty string. This is fixed; now `'a'.search()` and `'a'.search(undefined)` correctly return 0.
-- Starting with Gecko 39 {{geckoRelease(39)}}, the non-standard `flags` argument is deprecated and throws a console warning ({{bug(1142351)}}).
-- Starting with Gecko 47 {{geckoRelease(47)}}, the non-standard `flags` argument is no longer supported in non-release builds and will soon be removed entirely ({{bug(1245801)}}).
-- Starting with Gecko 49 {{geckoRelease(49)}}, the non-standard `flags` argument is no longer supported ({{bug(1108382)}}).
-
-## See also
-
+- [Polyfill of `String.prototype.search` in `core-js` with fixes and implementation of modern behavior like `Symbol.search` support](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [정규 표현식](/ko/docs/Web/JavaScript/Guide/Regular_expressions) 가이드
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec()")}}
+- [`RegExp.prototype[@@search]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)

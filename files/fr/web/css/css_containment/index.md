@@ -1,11 +1,6 @@
 ---
 title: Compartimentation CSS (CSS Containment)
-slug: Web/CSS/CSS_Containment
-tags:
-  - CSS
-  - CSS Containment
-translation_of: Web/CSS/CSS_Containment
-original_slug: Web/CSS/Compartimentation_CSS
+slug: Web/CSS/CSS_containment
 ---
 
 {{CSSRef}}
@@ -96,11 +91,12 @@ article {
 }
 ```
 
-Malgré son nom, cette valeur ne fournit pas un style compartimenté comme on pourrait l'avoir avec un [_Shadow_ DOM](/fr/docs/Web/Web_Components/Using_shadow_DOM). Cette valeur sert principlament pour les [compteurs CSS](/fr/docs/Web/CSS/CSS_Lists/Compteurs_CSS) qui pourraient changer sur un élément et affecter le reste de l'arborescence.
+Malgré son nom, cette valeur ne fournit pas un style compartimenté comme on pourrait l'avoir avec un [_Shadow_ DOM](/fr/docs/Web/API/Web_components/Using_shadow_DOM). Cette valeur sert principlament pour les [compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) qui pourraient changer sur un élément et affecter le reste de l'arborescence.
 
 En utilisant `contain: style`, on s'assure que les propriétés {{cssxref("counter-increment")}} et {{cssxref("counter-set")}} créent de nouveaux compteurs limités à ce sous-arbre.
 
-> **Note :** La valeur `style` est considérée comme « à risque » dans la spécification actuelle et pourrait ne pas être prise en charge partout (elle n'est actuellement pas prise en charge dans Firefox - novembre 2019).
+> [!NOTE]
+> La valeur `style` est considérée comme « à risque » dans la spécification actuelle et pourrait ne pas être prise en charge partout (elle n'est actuellement pas prise en charge dans Firefox - novembre 2019).
 
 ### Valeurs spéciales
 

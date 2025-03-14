@@ -1,9 +1,6 @@
 ---
 title: rotateZ()
 slug: Web/CSS/transform-function/rotateZ
-translation_of: Web/CSS/transform-function/rotateZ()
-original_slug: Web/CSS/transform-function/rotateZ()
-browser-compat: css.types.transform-function.rotateZ
 ---
 
 {{CSSRef}}
@@ -16,7 +13,8 @@ L'axe de la rotation passe par l'origine du repère, définie par la propriété
 
 `rotateZ(a)` est une notation raccourcie équivalente à `rotate3D(0, 0, 1, a)`.
 
-> **Note :** Contrairement aux rotations appliquées dans le plan, la composition de rotations dans l'espace n'est pas commutative. Autrement dit, l'ordre dans lequel on applique les rotations est déterminant.
+> [!NOTE]
+> Contrairement aux rotations appliquées dans le plan, la composition de rotations dans l'espace n'est pas commutative. Autrement dit, l'ordre dans lequel on applique les rotations est déterminant.
 
 ## Syntaxe
 

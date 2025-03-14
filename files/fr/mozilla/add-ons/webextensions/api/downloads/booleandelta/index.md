@@ -1,20 +1,9 @@
 ---
 title: downloads.BooleanDelta
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/BooleanDelta
-tags:
-  - API
-  - Add-ons
-  - BooleanDelta
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/BooleanDelta
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type `BooleanDelta` de l'API {{WebExtAPIRef("downloads")}} représente la différence entre deux booléens.
 
@@ -27,15 +16,15 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `previous`{{optional_inline}}
   - : Un `boolean` représentant la valeur booléenne précédente.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.BooleanDelta")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

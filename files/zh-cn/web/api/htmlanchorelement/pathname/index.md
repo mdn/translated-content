@@ -1,35 +1,34 @@
 ---
-title: HTMLHyperlinkElementUtils.pathname
+title: HTMLAnchorElement：pathname 属性
 slug: Web/API/HTMLAnchorElement/pathname
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("HTML DOM")}}
 
-**`HTMLHyperlinkElementUtils.pathname`** 属性是一个 {{domxref("USVString")}} ，其中包含一个初始的'/'后跟 URL 的路径。
+**`HTMLAnchorElement.pathname`** 属性是一个字符串，包含一个初始的 `'/'`，后跟 URL 的路径，但不包括查询字符串或片段（如果没有路径，则为空字符串）。
 
-## Syntax
+## 值
 
-```plain
-string = object.pathname;
-object.pathname = string;
-```
+一个字符串。
 
-## Examples
+## 示例
 
 ```js
-// Let's an <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.pathname"> element be in the document
-var anchor = document.getElementById("myAnchor");
-var result = anchor.pathname; // Returns:'/en-US/docs/HTMLHyperlinkElementUtils.pathname'
+// 文档中有一个 <a id="myAnchor" href="/zh-CN/docs/HTMLAnchorElement"> 元素
+const anchor = document.getElementById("myAnchor");
+anchor.pathname; // 返回“/zh-CN/docs/HTMLAnchorElement”
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- The {{domxref("HTMLHyperlinkElementUtils")}} mixin it belongs to.
+- 所属接口 {{domxref("HTMLAnchorElement")}}。

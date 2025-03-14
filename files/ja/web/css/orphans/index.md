@@ -5,14 +5,14 @@ slug: Web/CSS/orphans
 
 {{CSSRef}}
 
-**`orphans`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[ページ](/ja/docs/Web/CSS/Paged_Media)、領域、[段](/ja/docs/Web/CSS/CSS_Columns)の*最下部*に表示されるブロックコンテナーの最小行数を設定します。
+**`orphans`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[ページ](/ja/docs/Web/CSS/CSS_paged_media)、領域、[段](/ja/docs/Web/CSS/CSS_multicol_layout)の*最下部*に表示されるブロックコンテナーの最小行数を設定します。
 
 ```css
 /* <integer> 値 */
 orphans: 2;
 orphans: 3;
 
-/* Global values */
+/* グローバル値 */
 orphans: inherit;
 orphans: initial;
 orphans: revert;
@@ -42,11 +42,15 @@ orphans: unset;
 
 #### HTML
 
-```html
+```html-nolint
 <div>
   <p>これは幾らかのテキストを含む最初の段落です。</p>
-  <p>これは最初の段落よりも多くのテキストを含む第二の段落です。これは orphans がどの様に動作するのかを示すために用います。</p>
-  <p>これは第三の段落です。これは最初の段落よりも少しだけ長いテキストを含んでいます。</p>
+  <p>
+    これは最初の段落よりも多くのテキストを含む第二の段落です。これは orphans がどの様に動作するのかを示すために用います。
+  </p>
+  <p>
+    これは第三の段落です。これは最初の段落よりも少しだけ長いテキストを含んでいます。
+  </p>
 </div>
 ```
 
@@ -84,4 +88,4 @@ p:first-child {
 ## 関連情報
 
 - {{cssxref("widows")}}
-- [ページ化メディア](/ja/docs/Web/CSS/Paged_Media)
+- [ページ化メディア](/ja/docs/Web/CSS/CSS_paged_media)

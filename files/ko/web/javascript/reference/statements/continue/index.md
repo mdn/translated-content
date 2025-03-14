@@ -1,14 +1,27 @@
 ---
 title: continue
 slug: Web/JavaScript/Reference/Statements/continue
-translation_of: Web/JavaScript/Reference/Statements/continue
 ---
 
 {{jsSidebar("Statements")}}
 
-**continue** 문은 현재 또는 레이블이 지정된 루프의 현재 반복에서 명령문의 실행을 종료하고 반복문의 처음으로 돌아가여 루프문의 다음 코드를 실행합니다.
+**`continue`** 문은 현재 또는 레이블이 지정된 루프의 현재 반복에서 명령문의 실행을 종료하고 반복문의 처음으로 돌아가여 루프문의 다음 코드를 실행합니다.
 
-{{EmbedInteractiveExample("pages/js/statement-continue.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Continue")}}
+
+```js interactive-example
+let text = "";
+
+for (let i = 0; i < 10; i++) {
+  if (i === 3) {
+    continue;
+  }
+  text = text + i;
+}
+
+console.log(text);
+// Expected output: "012456789"
+```
 
 ## 구문
 
@@ -62,19 +75,18 @@ var i = 0;
 var j = 8;
 
 checkiandj: while (i < 4) {
-  console.log('i: ' + i);
+  console.log("i: " + i);
   i += 1;
 
   checkj: while (j > 4) {
-    console.log('j: ' + j);
+    console.log("j: " + j);
     j -= 1;
 
-    if ((j % 2) == 0)
-      continue checkj;
-    console.log(j + ' is odd.');
+    if (j % 2 == 0) continue checkj;
+    console.log(j + " is odd.");
   }
-  console.log('i = ' + i);
-  console.log('j = ' + j);
+  console.log("i = " + i);
+  console.log("j = " + j);
 }
 ```
 

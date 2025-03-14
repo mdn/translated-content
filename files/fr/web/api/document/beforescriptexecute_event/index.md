@@ -1,13 +1,6 @@
 ---
 title: Document.onbeforescriptexecute
 slug: Web/API/Document/beforescriptexecute_event
-tags:
-  - API
-  - DOM
-  - Propriétés
-  - scripts
-translation_of: Web/API/Document/onbeforescriptexecute
-original_slug: Web/API/Document/onbeforescriptexecute
 ---
 
 {{ApiRef("DOM")}} {{non-standard_header }}
@@ -34,11 +27,11 @@ function starting(e) {
 document.addEventListener("beforescriptexecute", starting, true);
 ```
 
-[Voir l'exemple sur une page](/samples/html/currentScript.html)
+[Voir l'exemple sur une page](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
 ## Spécification
 
-- [HTML5](http://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
+- [HTML5](https://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
 
 ## Voir aussi
 

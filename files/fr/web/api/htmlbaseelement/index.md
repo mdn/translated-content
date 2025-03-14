@@ -1,7 +1,6 @@
 ---
 title: HTMLBaseElement
 slug: Web/API/HTMLBaseElement
-translation_of: Web/API/HTMLBaseElement
 ---
 
 {{APIRef("HTML DOM")}}L'interface **`HTMLBaseElement`** contient l'URI de base pour un document. Cet objet hérite de toutes les propriétés et des méthodes telles quelles sont décrites dans l'interface {{domxref("HTMLElement")}}.
@@ -11,9 +10,9 @@ translation_of: Web/API/HTMLBaseElement
 _Hérite des propriétés de son parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLBaseElement.href")}}
-  - : est un {{domxref("DOMString")}} qui reflète l'attribut HTML {{htmlattrxref("href", "base")}}, contenant l'URL de base pour les URLs relatives dans le document.
+  - : est un {{domxref("DOMString")}} qui reflète l'attribut HTML [`href`](/fr/docs/Web/HTML/Element/base#href), contenant l'URL de base pour les URLs relatives dans le document.
 - {{domxref("HTMLBaseElement.target")}}
-  - : est un {{domxref("DOMString")}} qui reflète l'attribut HTML {{htmlattrxref("target", "base")}}, contenant un contexte de navigation cible par défaut ou une frame pour les éléments qui n'ont pas de cibe spécifiée.
+  - : est un {{domxref("DOMString")}} qui reflète l'attribut HTML [`target`](/fr/docs/Web/HTML/Element/base#target), contenant un contexte de navigation cible par défaut ou une frame pour les éléments qui n'ont pas de cibe spécifiée.
 
 ## Methodes
 

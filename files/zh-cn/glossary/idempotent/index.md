@@ -1,47 +1,42 @@
 ---
 title: 幂等
 slug: Glossary/Idempotent
-original_slug: Glossary/幂等
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-一个 HTTP 方法是**幂等**的，指的是同样的请求被执行一次与连续执行多次的效果是一样的，服务器的状态也是一样的。换句话说就是，幂等方法不应该具有副作用（统计用途除外）。在正确实现的条件下， {{HTTPMethod("GET")}} ， {{HTTPMethod("HEAD")}} ， {{HTTPMethod("PUT")}} 和 {{HTTPMethod("DELETE")}} 等方法都是**幂等**的，而 {{HTTPMethod("POST")}} 方法不是。所有的 {{glossary("safe")}} 方法也都是幂等的。
+{{GlossarySidebar}}
 
-幂等性只与后端服务器的实际状态有关，而每一次请求接收到的状态码不一定相同。例如，第一次调用 {{HTTPMethod("DELETE")}} 方法有可能返回 {{HTTPStatus("200")}} ，但是后续的请求可能会返回 {{HTTPStatus("404")}} 。 {{HTTPMethod("DELETE")}} 的言外之意是，开发者不应该使用 `DELETE` 法实现具有删除最后条目功能的 RESTful API。
+如果同样的请求被执行一次与连续执行多次，对服务器的预期影响是相同的，那么称这个 HTTP 方法是**幂等的**。
 
-需要注意的是，服务器不一定会确保请求方法的幂等性，有些应用可能会错误地打破幂等性约束。
+这不意味着请求不会有*任何*副作用，比如，服务器可能会对所有请求做记录。幂等性只针对客户端所希望的效果而言：比如，一个 POST 请求期望将数据发给服务器，或一个 DELETE 请求期望在服务器上删除某个资源。
 
-`GET /pageX HTTP/1.1` 幂等的。连续调用多次，客户端接收到的结果都是一样的：
+所有的{{glossary("safe/http", "安全")}}方法也都是幂等的，包括 {{HTTPMethod("PUT")}} 和 {{HTTPMethod("DELETE")}}。而 {{HTTPMethod("POST")}} 方法不是幂等的。
 
-```
-GET /pageX HTTP/1.1
-GET /pageX HTTP/1.1
-GET /pageX HTTP/1.1
-GET /pageX HTTP/1.1
-```
+幂等性只考虑服务器的状态。每次请求返回的响应可能不同：例如，第一次调用 {{HTTPMethod("DELETE")}} 可能会返回 {{HTTPStatus("200")}}，而后续的调用可能会返回 {{HTTPStatus("404")}}。{{HTTPMethod("DELETE")}} 具有幂等性的另外一层含义是，开发者不应该使用 `DELETE` 方法实现 RESTful API 的*删除最后一个条目*功能。
+
+需要注意的是，方法的幂等性并不是由服务器保证的，有些应用程序可能会错误地破坏幂等性的约束。
+
+`GET /pageX HTTP/1.1` 是幂等的，因为它是一个安全（只读）方法。如果服务器上的数据在此期间被更新，连续调用可能会返回不同的数据给客户端：
 
 `POST /add_row HTTP/1.1` 不是幂等的。如果调用多次，就会增加多行记录：
 
-```
+```http
 POST /add_row HTTP/1.1
-POST /add_row HTTP/1.1   -> Adds a 2nd row
-POST /add_row HTTP/1.1   -> Adds a 3rd row
+POST /add_row HTTP/1.1   -> 新增第二行内容
+POST /add_row HTTP/1.1   -> 新增第三行内容
 ```
 
-`DELETE /idX/delete HTTP/1.1` 是幂等的，即便是不同请求之间接收到的状态码不一样：
+`DELETE /idX/delete HTTP/1.1` 是幂等的，即使返回的状态代码在不同请求之间可能会发生变化：
 
+```http
+DELETE /idX/delete HTTP/1.1   -> 返回 200，如果 idX 存在
+DELETE /idX/delete HTTP/1.1   -> 返回 404，因为已经被删掉了
+DELETE /idX/delete HTTP/1.1   -> 返回 404
 ```
-DELETE /idX/delete HTTP/1.1   -> Returns 200 if idX exists
-DELETE /idX/delete HTTP/1.1   -> Returns 404 as it just got deleted
-DELETE /idX/delete HTTP/1.1   -> Returns 404
-```
 
-## 了解更多
-
-### 基本知识
+## 参见
 
 - 在 HTTP 协议中[幂等](https://tools.ietf.org/html/rfc7231#section-4.2.2)的定义。
-
-### 技术知识
-
-- 常见的幂等方法： {{HTTPMethod("GET")}} ， {{HTTPMethod("HEAD")}} , {{HTTPMethod("PUT")}} ， {{HTTPMethod("DELETE")}} ， {{HTTPMethod("OPTIONS")}}
-- 常见的非幂等方法： {{HTTPMethod("POST")}}
+- 常见的幂等方法：{{HTTPMethod("GET")}}、{{HTTPMethod("HEAD")}}、{{HTTPMethod("PUT")}}、{{HTTPMethod("DELETE")}}、{{HTTPMethod("OPTIONS")}}、{{HTTPMethod("TRACE")}}
+- 常见的非幂等方法：{{HTTPMethod("POST")}}、{{HTTPMethod("PATCH")}}、{{HTTPMethod("CONNECT")}}

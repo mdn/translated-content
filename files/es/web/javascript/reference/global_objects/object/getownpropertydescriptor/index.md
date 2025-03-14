@@ -1,13 +1,6 @@
 ---
 title: Object.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
-tags:
-  - ECMAScript5
-  - JavaScript
-  - Método(2)
-  - Objeto
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/getOwnPropertyDescriptor
 ---
 
 {{JSRef}}
@@ -55,17 +48,25 @@ Una descripción de propiedad es un registro con alguno de los siguientes atribu
 ```js
 var o, d;
 
-o = { get foo() { return 17; } };
-d = Object.getOwnPropertyDescriptor(o, 'foo');
+o = {
+  get foo() {
+    return 17;
+  },
+};
+d = Object.getOwnPropertyDescriptor(o, "foo");
 // d is { configurable: true, enumerable: true, get: /* la función de acceso */, set: undefined }
 
 o = { bar: 42 };
-d = Object.getOwnPropertyDescriptor(o, 'bar');
+d = Object.getOwnPropertyDescriptor(o, "bar");
 // d is { configurable: true, enumerable: true, value: 42, writable: true }
 
 o = {};
-Object.defineProperty(o, 'baz', { value: 8675309, writable: false, enumerable: false });
-d = Object.getOwnPropertyDescriptor(o, 'baz');
+Object.defineProperty(o, "baz", {
+  value: 8675309,
+  writable: false,
+  enumerable: false,
+});
+d = Object.getOwnPropertyDescriptor(o, "baz");
 // d es { value: 8675309, writable: false, enumerable: false, configurable: false }
 ```
 
@@ -87,7 +88,7 @@ Object.getOwnPropertyDescriptor("foo", 0);
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.getOwnPropertyDescriptor")}}
+{{Compat}}
 
 ## Ver también
 

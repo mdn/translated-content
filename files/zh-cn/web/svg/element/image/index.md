@@ -1,62 +1,55 @@
 ---
-title: image
+title: <image>
 slug: Web/SVG/Element/image
+l10n:
+  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
 {{SVGRef}}
 
-SVG 文档中的 SVG 元素包含图像信息。它表现为图像文件或者其他 SVG 文件。
+**`<image>`** SVG 元素用于在 SVG 文档中包含图像。它可以显示{{glossary("raster image", "位图")}}或其他 SVG 文件。
 
-SVG 图像格式转换软件支持 JPEG、PNG 格式，是否支持动图 GIF 不明确。
+SVG 软件必须支持的图像格式只有 {{glossary("JPEG")}}、{{glossary("PNG")}} 和其他 SVG 文件。并未定义有关动画 {{glossary("GIF")}} 的行为。
 
-SVG 文件是这样的一种图像：不被当做外部资源加载，不可以用 [:visited](/zh-CN/docs/Web/CSS/:visited) 样式，不能有交互。使用动态 SVG 元素，可以用[\<use>](/zh-CN/docs/Web/SVG/Element/use)引入外部的 URL。使用 SVG 文件并添加 scripts 在里面，可以用[\<object>](/zh-CN/docs/Web/HTML/Element/object) 放在 [\<foreignObject>](/zh-CN/docs/Web/SVG/Element/foreignObject)中。
+使用 `<image>` 显示的 SVG 文件[被视为图像](/zh-CN/docs/Web/SVG/SVG_as_an_Image)：外部资源不会被加载、{{cssxref(":visited")}} 样式[不会被应用](/zh-CN/docs/Web/CSS/Privacy_and_the_:visited_selector)，且它们不能有交互。要包含动态 SVG 元素，可以尝试用 {{SVGElement("use")}} 引入外部 URL。要包含 SVG 文件并在其中运行脚本，请尝试在 {{SVGElement("foreignObject")}} 中嵌入 {{HTMLElement("object")}}。
 
-注意：HTML 规范中定义\<image>和\<img>在解析时是等效的。这种规范只适用于 SVG 文件或 SVG 区块内。
+> [!NOTE]
+> HTML 规范定义 `<image>` 和 {{HTMLElement("img")}} 在用作 HTML 解析时是等效的。这种特定元素及其行为仅适用于 SVG 文档或内联 SVG。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
 ## 属性
 
-### 全局属性
-
-- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [图形事件属性](/zh-CN/SVG/Attribute#GraphicalEvent) »
-- [Xlink 属性](/zh-CN/SVG/Attribute#XLink) »
-- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
-
-### 专有属性
-
-- {{ SVGAttr("x") }}：图像水平方向上到原点的距离
-- {{ SVGAttr("y") }}：图像竖直方向上到原点的距离
-- {{ SVGAttr("width") }}：图像宽度。和 HTML 的 \<img> 不同，该属性是必须的
-- {{ SVGAttr("height") }}：图像高度。和 HTML 的 \<img> 不同，该属性是必须的
-- {{ SVGAttr("href") }} 或 {{ SVGAttr("xlink:href") }}：图像的 URL 指向
-- {{ SVGAttr("preserveAspectRatio") }}：控制图像比例
+- {{SVGAttr("x")}}：图像水平方向上到原点的距离。
+- {{SVGAttr("y")}}：图像竖直方向上到原点的距离。
+- {{SVGAttr("width")}}：图像宽度。和 HTML `<img>` 不同，该属性是必需的。
+- {{SVGAttr("height")}}：图像高度。和 HTML `<img>` 不同，该属性是必需的。
+- {{SVGAttr("href")}} 和 {{SVGAttr("xlink:href")}}{{deprecated_inline}}：指向图像文件的 URL。
+- {{SVGAttr("preserveAspectRatio")}}：控制图像的缩放比例。
+- {{SVGAttr("crossorigin")}}：定义 CORS 请求的凭据标志。
+- {{SVGAttr("decoding")}}：向浏览器提供关于是否应该同步或异步执行图像解码的提示。
 
 ## DOM 接口
 
-该元素实现[`SVGImageElement`](/zh-CN/DOM/SVGImageElement) 接口。
+`<image>` 实现了 {{domxref("SVGImageElement")}} 接口。
 
 ## 示例
 
-在 SVG 对象中基本呈现 PNG 图像：
+SVG 中 PNG 图像的基本渲染：
+
+### SVG
 
 ```html
-<svg width="100%" height="100%" viewBox="0 0 100 100"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
-  <image xlink:href="/files/2917/fxlogo.png" x="0" y="0" height="100" width="100" />
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <image href="mdn_logo_only_color.png" height="200" width="200" />
 </svg>
 ```
 
-{{EmbedLiveSample("Example", 250, 260)}}
+### 结果
+
+{{EmbedLiveSample("示例", 250, 260)}}
 
 ## 规范
 

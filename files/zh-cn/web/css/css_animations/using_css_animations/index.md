@@ -1,9 +1,9 @@
 ---
 title: 使用 CSS 动画
-slug: Web/CSS/CSS_Animations/Using_CSS_animations
+slug: Web/CSS/CSS_animations/Using_CSS_animations
 ---
 
-{{SeeCompatTable}}{{CSSRef}}
+{{CSSRef}}
 
 **CSS animations** 使得可以将从一个 CSS 样式配置转换到另一个 CSS 样式配置。动画包括两个部分：描述动画的样式规则和用于指定动画开始、结束以及中间点样式的关键帧。
 
@@ -46,7 +46,8 @@ slug: Web/CSS/CSS_Animations/Using_CSS_animations
 
 ## 示例
 
-> **备注：** 这里的示例没有在 CSS 动画属性上使用任何前缀，Webkit 内核浏览器或者早期版本浏览器可能需要前缀，下面的实例包含了`-webkit-`前缀。
+> [!NOTE]
+> 这里的示例没有在 CSS 动画属性上使用任何前缀，Webkit 内核浏览器或者早期版本浏览器可能需要前缀，下面的实例包含了`-webkit-`前缀。
 
 ### 文本滑过浏览器窗口
 
@@ -80,9 +81,11 @@ p {
 第二帧出现在 100%（此例中使用了别名 `to`）。元素的左边距设为 0%，宽设为 100%，使得动画结束时元素与窗口左边界对齐。
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("文本滑过浏览器窗口","100%","250")}}
@@ -119,9 +122,11 @@ p {
 ```
 
 ```html hidden
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 在动画序列执行到 75% 的时候，标题元素的左边距为 25%，宽度为 150%。
@@ -155,9 +160,11 @@ p {
 ```
 
 ```html hidden
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("重复动画","100%","250")}}
@@ -190,9 +197,11 @@ p {
 ```
 
 ```html hidden
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("来回运动","100%","250")}}
@@ -219,38 +228,38 @@ her in a languid, sleepy voice.</p>
 
 @-moz-keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-    margin-left:0%;
-    width:100%;
+    margin-left: 0%;
+    width: 100%;
   }
 }
 
 @-webkit-keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-   margin-left:0%;
-   width:100%;
- }
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 @keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-   margin-left:0%;
-   width:100%;
- }
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 ```
 
@@ -267,7 +276,7 @@ e.addEventListener("animationiteration", listener, false);
 e.className = "slidein";
 ```
 
-以上是非常标准的代码写法，setup() 最后设置动画元素的 `class` 为 slidein，启动动画。为什么这样做？因为`animationstart`事件在动画一开始时就被触发，在我们的示例中，该事件在我们的代码执行前就被触发，所以我们自己通过设置元素的的`class`来启动动画。
+以上是非常标准的代码写法，setup() 最后设置动画元素的 `class` 为 slidein，启动动画。为什么这样做？因为 `animationstart` 事件在动画一开始时就被触发，在我们的示例中，该事件在我们的代码执行前就被触发，所以我们自己通过设置元素的 `class` 来启动动画。
 
 #### 接收事件
 
@@ -276,7 +285,7 @@ e.className = "slidein";
 ```js
 function listener(e) {
   var l = document.createElement("li");
-  switch(e.type) {
+  switch (e.type) {
     case "animationstart":
       l.innerHTML = "Started: elapsed time is " + e.elapsedTime;
       break;
@@ -309,18 +318,22 @@ function listener(e) {
 ```html
 <body>
   <h1 id="watchme">Watch me move</h1>
-  <p>This example shows how to use CSS animations to make <code>h1</code> elements
-  move across the page.</p>
-  <p>In addition, we output some text each time an animation event fires, so you can see them in action.</p>
-  <ul id="output">
-  </ul>
+  <p>
+    This example shows how to use CSS animations to make
+    <code>h1</code> elements move across the page.
+  </p>
+  <p>
+    In addition, we output some text each time an animation event fires, so you
+    can see them in action.
+  </p>
+  <ul id="output"></ul>
 </body>
 ```
 
 {{EmbedLiveSample('使用动画事件', '600', '300')}}
 
-## See also
+## 参见
 
-- {{ domxref("AnimationEvent", "AnimationEvent") }}
-- [Detecting CSS animation support](/zh-CN/docs/CSS/CSS_animations/Detecting_CSS_animation_support)
-- [Using CSS transitions](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions)
+- {{domxref("AnimationEvent", "AnimationEvent")}}
+- [CSS 动画的技巧](/zh-CN/docs/Web/API/Web_Animations_API/Tips)
+- [使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)

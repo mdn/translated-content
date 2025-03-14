@@ -1,7 +1,9 @@
 ---
-title: BaseAudioContext.listener
+title: "BaseAudioContext: listener プロパティ"
+short-title: listener
 slug: Web/API/BaseAudioContext/listener
-original_slug: Web/API/AudioContext/listener
+l10n:
+  sourceCommit: 10b342385644e822d123694ad3bc8c2ca9abb2dc
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -14,16 +16,16 @@ original_slug: Web/API/AudioContext/listener
 
 ## 例
 
-> **メモ:** 完全な三次元音声空間処理の例は、 [panner-node](https://github.com/mdn/panner-node) のデモを参照してください。
+> [!NOTE]
+> 完全な三次元音声空間処理の例は、 [panner-node](https://github.com/mdn/webaudio-examples/tree/main/panner-node) のデモを参照してください。
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+const audioCtx = new AudioContext();
 // 古い webkit/blink のブラウザーでは接頭辞が必要です
 
-...
+// …
 
-var myListener = audioCtx.listener;
+const myListener = audioCtx.listener;
 ```
 
 ## 仕様書

@@ -1,17 +1,18 @@
 ---
-title: Document.lastModified
+title: "Document: lastModified プロパティ"
+short-title: lastModified
 slug: Web/API/Document/lastModified
+l10n:
+  sourceCommit: 7e4769a3d501efb76e7cf92198b0589ab28f1864
 ---
 
 {{APIRef("DOM")}}
 
 **`lastModified`** は {{domxref("Document")}} インターフェイスのプロパティで、現在の文書が最後に更新された日付と時刻を含む文字列を返します。
 
-## 構文
+## 値
 
-```
-var string = document.lastModified;
-```
+文字列です。
 
 ## 例
 
@@ -26,7 +27,7 @@ alert(document.lastModified);
 
 ### lastModified を Date オブジェクトへ変換
 
-この例では、 `lastModified` を {{jsxref("Date")}} オブジェクトに変換します。object.
+この例では、 `lastModified` を {{jsxref("Date")}} オブジェクトに変換します。
 
 ```js
 let oLastModif = new Date(document.lastModified);
@@ -40,13 +41,22 @@ let oLastModif = new Date(document.lastModified);
 let nLastModif = Date.parse(document.lastModified);
 ```
 
-## 注
+## メモ
 
-`lastModified` は文字列なので、文書の更新日の比較には*簡単には*使用できないことに注意してください。こちらはいつページが変更されたかをアラートメッセージで表示する方法の例です ([JavaScript cookies API](/ja/docs/DOM/document.cookie) も参照)。
+`lastModified` は文字列なので、文書の更新日の比較には*簡単には*使用できないことに注意してください。こちらはいつページが変更されたかをアラートメッセージで表示する方法の例です（[JavaScript クッキー API](/ja/docs/Web/API/Document/cookie) も参照）。
 
 ```js
-if (Date.parse(document.lastModified) > parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0")) {
-  document.cookie = "last_modif=" + Date.now() + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=" + location.pathname;
+// 'timestamp' を 'last_modif=timestamp' で照合
+// e.g. '1687964614822' は 'last_modif=1687964614822'
+const pattern = /last_modif\s*=\s*([^;]*)/;
+
+if (
+  Date.parse(document.lastModified) >
+  (parseFloat(document.cookie.match(pattern)?.[1]) || 0)
+) {
+  document.cookie = `last_modif=${Date.now()}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=${
+    location.pathname
+  }`;
   alert("ページが変更されました。");
 }
 ```
@@ -54,22 +64,23 @@ if (Date.parse(document.lastModified) > parseFloat(document.cookie.replace(/(?:(
 …同じ例ですが、最初の訪問をスキップします。
 
 ```js
-var
-  nLastVisit = parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/, "$1")),
-  nLastModif = Date.parse(document.lastModified);
+const pattern = /last_modif\s*=\s*([^;]*)/;
 
-if (isNaN(nLastVisit) || nLastModif > nLastVisit) {
-  document.cookie = "last_modif=" + Date.now() + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=" + location.pathname;
+const lastVisit = parseFloat(document.cookie.replace(pattern, "$1"));
+const lastModif = Date.parse(document.lastModified);
 
-  if (isFinite(nLastVisit)) {
+if (Number.isNaN(lastVisit) || lastModif > lastVisit) {
+  document.cookie = `last_modif=${Date.now()}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=${
+    location.pathname
+  }`;
+
+  if (isFinite(lastVisit)) {
     alert("ページが変更されました。");
   }
 }
 ```
 
-> **メモ:** WebKit は時刻の文字列を UTC で返します。 Gecko と Internet Explorer はローカルタイムゾーンで時刻を返します。 (参照: [Bug 4363 – document.lastModified returns date in UTC time, but should return it in local time](https://bugs.webkit.org/show_bug.cgi?id=4363))
-
-もし***外部のページ*が変更されたかどうか**を知りたい場合は、 [`XMLHttpRequest()` API についてのこの段落](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Get_last_modified_date)をお読みください。
+外部ページが変更されたかどうかを知りたい場合、{{HTTPMethod("HEAD")}} リクエストを {{domxref("Window/fetch", "fetch()")}} API によって行い、{{HTTPHeader("Last-Modified")}} レスポンスヘッダーを調べます。
 
 ## 仕様書
 

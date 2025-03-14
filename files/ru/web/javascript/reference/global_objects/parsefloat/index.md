@@ -1,18 +1,28 @@
 ---
 title: parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/parseFloat
-tags:
-  - JavaScript
-  - Number
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 ---
 
 {{jsSidebar("Objects")}}
 
 Функция **`parseFloat()`** принимает строку в качестве аргумента и возвращает десятичное число (число с плавающей точкой)
 
-{{EmbedInteractiveExample("pages/js/globalprops-parsefloat.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseFloat()")}}
+
+```js interactive-example
+function circumference(r) {
+  return parseFloat(r) * 2.0 * Math.PI;
+}
+
+console.log(circumference(4.567));
+// Expected output: 28.695307297889173
+
+console.log(circumference("4.567abcdefgh"));
+// Expected output: 28.695307297889173
+
+console.log(circumference("abcdefgh"));
+// Expected output: NaN
+```
 
 ## Синтаксис
 
@@ -60,7 +70,7 @@ parseFloat(foo);
 
 var foo = Object.create(null);
 foo.valueOf = function () { return "3.14"; };
-parseFloat(foo);​​​​​
+parseFloat(foo);
 ```
 
 ### `parseFloat` возвращает NaN
@@ -75,7 +85,7 @@ parseFloat("FF2");
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

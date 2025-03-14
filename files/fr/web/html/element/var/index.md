@@ -1,23 +1,31 @@
 ---
-title: '<var> : l''élément de variable'
+title: "<var> : l'élément de variable"
 slug: Web/HTML/Element/var
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/var
 ---
 
 {{HTMLSidebar}}
 
 L'élément HTML **`<var>`** représente une variable dans une expression mathématique ou un texte lié à la programmation. Son contenu est généralement représenté avec une version italique de la police environnante utilisée, toutefois, ce comportement peut dépendre du navigateur utilisé.
 
-{{EmbedInteractiveExample("pages/tabbed/var.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;var&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The volume of a box is <var>l</var> × <var>w</var> × <var>h</var>, where
+  <var>l</var> represents the length, <var>w</var> the width and
+  <var>h</var> the height of the box.
+</p>
+```
+
+```css interactive-example
+var {
+  font-weight: bold;
+}
+```
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes d'utilisation
 
@@ -37,7 +45,10 @@ La plupart des navigateurs appliquent la propriété {{cssxref("font-style")}} a
 
 ```css
 var {
-  font: bold 15px "Courier", "Courier New", monospace;
+  font:
+    bold 15px "Courier",
+    "Courier New",
+    monospace;
 }
 ```
 
@@ -64,7 +75,10 @@ var {
 
 ```css
 var {
-  font: bold 15px "Courier", "Courier New", monospace;
+  font:
+    bold 15px "Courier",
+    "Courier New",
+    monospace;
 }
 ```
 
@@ -73,8 +87,8 @@ var {
 ```html
 <p>
   Les variables <var>minSpeed</var> et <var>maxSpeed</var> contrôlent les
-  vitesses minimale et maximale de l'appareil et sont exprimées en tours
-  par minute.
+  vitesses minimale et maximale de l'appareil et sont exprimées en tours par
+  minute.
 </p>
 ```
 
@@ -116,7 +130,7 @@ var {
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>

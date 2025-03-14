@@ -1,19 +1,63 @@
 ---
 title: bottom
 slug: Web/CSS/bottom
-tags:
-  - CSS
-  - CSS Позиционирование
-  - CSS-свойство
-  - Справка
-translation_of: Web/CSS/bottom
 ---
 
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`bottom`** частично определяет вертикальную позицию позиционируемого элемента. Оно не влияет на непозиционируемые элементы (т.е. **`bottom`** не применится, если задано `position: static`).
 
-{{EmbedInteractiveExample("pages/css/bottom.html")}}
+{{InteractiveExample("CSS Demo: bottom")}}
+
+```css interactive-example-choice
+bottom: 0;
+```
+
+```css interactive-example-choice
+bottom: 4em;
+```
+
+```css interactive-example-choice
+bottom: 10%;
+```
+
+```css interactive-example-choice
+bottom: 20px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <div id="example-element">I am absolutely positioned.</div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 0.75em solid;
+  padding: 0.75em;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+#example-element {
+  background-color: #264653;
+  border: 4px solid #ffb500;
+  color: white;
+  position: absolute;
+  width: 140px;
+  height: 60px;
+}
+```
 
 Эффект свойства `bottom` зависит от того, как позиционируется элемент (то есть от значения свойства {{cssxref("position")}}):
 
@@ -27,15 +71,15 @@ translation_of: Web/CSS/bottom
 ## Синтаксис
 
 ```css
+/* Ключевые слова */
+bottom: auto;
+
 /* Значения величин */
 bottom: 3px;
 bottom: 2.4em;
 
 /* Процентные значения от высоты родительского блока */
 bottom: 10%;
-
-/* Ключевое слово */
-bottom: auto;
 
 /* Глобальные значения */
 bottom: inherit;
@@ -70,7 +114,10 @@ bottom: unset;
 
 ```html
 <h2>Эксперимент</h2>
-<p>Здесь<br>мы<br>набираем<br>побольше<br>высоты<br>для<br>вящей<br>наглядности<br>нашего<br>скромного,<br>но<br>очень<br>убедительного<br>эксперимента.<br>- Вот.</p>
+<p>
+  Здесь<br />мы<br />набираем<br />побольше<br />высоты<br />для<br />вящей<br />наглядности<br />нашего<br />скромного,<br />но<br />очень<br />убедительного<br />эксперимента.<br />-
+  Вот.
+</p>
 <div class="fixed"><p>Я фиксирован</p></div>
 <div class="absolute"><p>Я абсолютен</p></div>
 ```
@@ -86,7 +133,7 @@ p {
 div {
   width: 48%;
   text-align: center;
-  background: rgba(55,55,55,.4);
+  background: rgba(55, 55, 55, 0.4);
   border: 1px solid blue;
 }
 
@@ -109,15 +156,9 @@ div {
 
 ## Характеристики
 
-| Спецификация                                                                         | Статус                                   | Коммент                                           |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'bottom')}}     | {{Spec2('CSS3 Transitions')}} | Определяет дно как анимацию.                      |
-| {{SpecName('CSS3 Positioning', '#propdef-bottom', 'bottom')}}     | {{Spec2('CSS3 Positioning')}} | Добавляет поведение для липкого позиционирования. |
-| {{SpecName('CSS2.1', 'visuren.html#choose-position', 'bottom')}} | {{Spec2('CSS2.1')}}                 | Исходное определение.                             |
+{{Specifications}}
 
-{{cssinfo}}
-
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -1,12 +1,11 @@
 ---
 title: 일반 미디어 타입에서 "codecs" 파라미터 사용하기
 slug: Web/Media/Formats/codecs_parameter
-translation_of: Web/Media/Formats/codecs_parameter
-original_slug: Web/Media/Formats/코덱파라미터
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
-기본적으로, `video/mp4`, `audio/mpeg` 처럼 {{Glossary("MIME")}} 타입을 통해 미디어 파일 포맷을 명시할 수 있습니다. 하지만 많은 미디어 타입들이-특히 비디오 트랙을 지원하는 경우-가지고 있는 데이터 포맷에 대해 더 상세하고 정확하게 명시할 수 있습니다. 예를들어 [MPEG-4](/ko/docs/Web/Media/Formats/Containers#MP4) 비디오라고 해서 MIME 타입을 `video/mp4`만 명시한다면 정확히 어떤 미디어를 가지고 있는 지 아무 정보도 알 수 없습니다.
+{{QuickLinksWithSubpages("/ko/docs/Web/Media")}}
+
+기본적으로, `video/mp4`, `audio/mpeg` 처럼 {{Glossary("MIME")}} 타입을 통해 미디어 파일 포맷을 명시할 수 있습니다. 하지만 많은 미디어 타입들이-특히 비디오 트랙을 지원하는 경우-가지고 있는 데이터 포맷에 대해 더 상세하고 정확하게 명시할 수 있습니다. 예를들어 [MPEG-4](/ko/docs/Web/Media/Formats/Containers#mp4) 비디오라고 해서 MIME 타입을 `video/mp4`만 명시한다면 정확히 어떤 미디어를 가지고 있는 지 아무 정보도 알 수 없습니다.
 
 때문에 MIME 타입에 추가로 미디어 콘텐츠를 기술하기 위해 `codecs` 파라미터가 추가되었습니다. 이를 통해 컨테이너 특화된 정보를 제공할 수 있게 되었습니다 이 정보에는 비디오 코덱의 프로파일, 오디오 트랙 타입 등을 추가할 수 있습니다.
 
@@ -17,24 +16,24 @@ original_slug: Web/Media/Formats/코덱파라미터
 기본적인 MIME 미디어 타입 표현은 미디어 타입(`audio`, `video`, 등)으로 시작하며, 슬래쉬 문자 (`/`) 후 미디어를 포함하고 있는 컨테이너 포맷이름으로 이어집니다:
 
 - `audio/mpeg`
-  - : MP3 같은 [MPEG](/ko/docs/Web/Media/Formats/Containers#MPEG) 파일 타입의 오디오 파일입니다.
+  - : MP3 같은 [MPEG](/ko/docs/Web/Media/Formats/Containers#mpeg) 파일 타입의 오디오 파일입니다.
 - `video/ogg`
-  - [: Ogg](/ko/docs/Web/Media/Formats/Containers#Ogg) 파일 타입의 비디오 파일입니다.
+  - [: Ogg](/ko/docs/Web/Media/Formats/Containers#ogg) 파일 타입의 비디오 파일입니다.
 - `video/mp4`
-  - [: MPEG-4](/ko/docs/Web/Media/Formats/Containers#MP4) 파일 타입을 사용하는 비디오입니다.
+  - [: MPEG-4](/ko/docs/Web/Media/Formats/Containers#mp4) 파일 타입을 사용하는 비디오입니다.
 - `video/quicktime`
-  - : 애플 [QuickTime](/ko/docs/Web/Media/Formats/Containers#QuickTime) 포맷을 사용하는 비디오입니다. 다른 곳에서 서술되어 있듯이, 한때는 웹에서 널리 쓰여지던 형식이었지만 현재는 플러그인이 필요하여 더 이상 사용하지 않는 타입입니다.
+  - : 애플 [QuickTime](/ko/docs/Web/Media/Formats/Containers#quicktime) 포맷을 사용하는 비디오입니다. 다른 곳에서 서술되어 있듯이, 한때는 웹에서 널리 쓰여지던 형식이었지만 현재는 플러그인이 필요하여 더 이상 사용하지 않는 타입입니다.
 
 위 MIME 타입은 아직 모호한 표현입니다. 각 파일 타입들은 많은 수의 코덱을 지원하며 코덱은 각기 프로파일, 레벨과 같은 설정 인자들을 가지고 있습니다. 그래서 `codecs` 파라미터를 추가하여 명시할 수 있습니다.
 
 세미콜론 (`;`)을 붙이고 `codecs=` 으로 시작하는 문자열을 덧붙여 콘텐츠의 포맷을 서술할 수 있습니다. 일부 미디어 타입은 사용하는 코덱 이름만 명시 가능할 수 있고 다른 미디어 타입은 코덱에 관한 다양한 인자를 기술할 수 있는 경우도 있습니다. 콤마로 구분하여 여러 코덱을 기술할 수도 있습니다.
 
 - `audio/ogg; codecs=vorbis`
-  - [: Vorbis](/ko/docs/Web/Media/Formats/Audio_codecs#Vorbis) 오디오 트랙을 포함하는 [Ogg](/ko/docs/Web/Media/Formats/Containers#Ogg) 컨테이너 파일입니다.
+  - [: Vorbis](/ko/docs/Web/Media/Formats/Audio_codecs#Vorbis) 오디오 트랙을 포함하는 [Ogg](/ko/docs/Web/Media/Formats/Containers#ogg) 컨테이너 파일입니다.
 - `video/webm; codecs="vp8, vorbis"`
-  - [: VP8](/ko/docs/Web/Media/Formats/Video_codecs#VP8) 비디오와 [Vorbis](/ko/docs/Web/Media/Formats/Audio_codecs#Vorbis) 오디오를 포함하는 [WebM](/ko/docs/Web/Media/Formats/Containers#WebM) 컨테이너 파일입니다.
+  - [: VP8](/ko/docs/Web/Media/Formats/Video_codecs#vp8) 비디오와 [Vorbis](/ko/docs/Web/Media/Formats/Audio_codecs#Vorbis) 오디오를 포함하는 [WebM](/ko/docs/Web/Media/Formats/Containers#webm) 컨테이너 파일입니다.
 - `video/mp4; codecs="avc1.4d002a"`
-  - [: AVC](</ko/docs/Web/Media/Formats/Video_codecs#AVC_(H.264)>) (H.264) 코덱에 Main Profile, Level 4.2을 가지는 [MPEG-4](/ko/docs/Web/Media/Formats/Containers#MP4) 컨테이너 파일입니다.
+  - [: AVC](</ko/docs/Web/Media/Formats/Video_codecs#AVC_(H.264)>) (H.264) 코덱에 Main Profile, Level 4.2을 가지는 [MPEG-4](/ko/docs/Web/Media/Formats/Containers#mp4) 컨테이너 파일입니다.
 
 코덱의 속성 중 하나라도 퍼센트-인코딩이 필요한 특수문자{{RFC(2231, "MIME Parameter Value and Encoded Word Extensions", 4)}}를 사용하는 경우 MIME 타입을 기술하는 문자열의 `codecs` 파라미터를 `codecs*` (애스터리크(`*`) 추가됨에 유의)로 변경해야 합니다. JavaScript {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} function으로 파라미터 목록을 인코딩할 수 있습니다; 반대로 {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}를 통해 기인코딩된 파라미터 리스트를 디코딩할 수 있습니다.
 
@@ -144,7 +143,7 @@ av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
         한자리 숫자 모노크롬 플래그; 0인 경우 비디오는 U, V, Y 성분을 모두
         가지고 있습니다. 아닌 경우 전체 비디오 데이터는 Y(휘도) 성분 뿐으로
         모노크롬 이미지를 가집니다. 자세한 내용은
-        {{SectionOnPage("/en-US/docs/Web/Media/Formats/Video_concepts", "YUV")}}를
+        [YUV](/ko/docs/Web/Media/Formats/Video_concepts#yuv)를
         참조하여 YUV 컬러 시스템이 어떻게 동작하는지 알아보세요. 기본 값은 0
         (모노크롬 아님)입니다.
       </td>
@@ -263,17 +262,17 @@ av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
 
 ### ISO Base Media File Format: MP4, QuickTime, and 3GP
 
-모든 미디어 타입은 [ISO Base Media File Format](https://en.wikipedia.org/wiki/ISO_base_media_file_format) (ISO BMFF)를 기반으로 하며 `codecs` 문법을 공유합니다. 이들 미디어 타입은 [MPEG-4](/ko/docs/Web/Media/Formats/Containers#MP4) (또 사실상 MPEG-4를 기반으로 하고 있으므로 [QuickTime](/ko/docs/Web/Media/Formats/Containers#QuickTime)도 포함)과 [3GP](/ko/docs/Web/Media/Formats/Containers#3GP)를 포함합니다. MIME 타입의 `codecs` 파라미터를 통해 아래와 같이 비디오/오디오 트랙 둘 다 기술할 수 있습니다.:
+모든 미디어 타입은 [ISO Base Media File Format](https://en.wikipedia.org/wiki/ISO_base_media_file_format) (ISO BMFF)를 기반으로 하며 `codecs` 문법을 공유합니다. 이들 미디어 타입은 [MPEG-4](/ko/docs/Web/Media/Formats/Containers#mp4) (또 사실상 MPEG-4를 기반으로 하고 있으므로 [QuickTime](/ko/docs/Web/Media/Formats/Containers#quicktime)도 포함)과 [3GP](/ko/docs/Web/Media/Formats/Containers#3gp)를 포함합니다. MIME 타입의 `codecs` 파라미터를 통해 아래와 같이 비디오/오디오 트랙 둘 다 기술할 수 있습니다.:
 
-| MIME 타입         | 설명                                                                                                                                                  |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| MIME 타입         | 설명                                                                                                                |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------- |
 | `audio/3gpp`      | 3GP 오디오 ({{RFC(3839, "MIME Type Registrations for 3rd generation Partnership Project (3GP) Multimedia files")}}) |
 | `video/3gpp`      | 3GP 비디오 ({{RFC(3839, "MIME Type Registrations for 3rd generation Partnership Project (3GP) Multimedia files")}}) |
-| `audio/3gp2`      | 3GP2 오디오 ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                                |
-| `video/3gp2`      | 3GP2 비디오 ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                                |
-| `audio/mp4`       | MP4 오디오 ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                                     |
-| `video/mp4`       | MP4 비디오 ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                                     |
-| `application/mp4` | 오디오/비디오가 아닌 MPEG-4 컨테이너 미디어                                                                                                           |
+| `audio/3gp2`      | 3GP2 오디오 ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                   |
+| `video/3gp2`      | 3GP2 비디오 ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                   |
+| `audio/mp4`       | MP4 오디오 ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                     |
+| `video/mp4`       | MP4 비디오 ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                     |
+| `application/mp4` | 오디오/비디오가 아닌 MPEG-4 컨테이너 미디어                                                                         |
 
 `codecs` 파라미티에는 간단하게 컨테이너 명(`3gp`, `mp4`, `quicktime`, etc.)만 기술할 수도 있으며 컨테이너 명에 코덱 이름 및 설정 값을 함께 기술할 수도 있습니다. 각 코덱 등은 온점(`.`)으로 구분된 요소를 다수 가질 수 있습니다.
 
@@ -284,10 +283,11 @@ av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
 - `cccc[.pp]*` (Generic ISO BMFF)
   - : `cccc` 는 4 글자 코덱 ID이며 `pp`는 0\~2자리 인코딩 된 문자입니다.
 - `mp4a.oo[.A]` (MPEG-4 audio)
-  - : `oo` 는 미디어 콘텐츠를 더 정확하게 기술하는 Object Type Indication 값이며 `A` 는 한자리 숫자*오디오* OTI입니다. OTI로 가능한 값은 MP4 Registration Authority 웹사이트의 [Object Types page](http://mp4ra.org/#/object_types) 페이지에서 확인할 수 있습니다. 예를들어 MP4 파일의 Opus 오디오는 `mp4a.ad`로 기술합니다. 자세한 내용은 [MPEG-4 audio](#mpeg-4_audio)를 참조하세요.
+  - : `oo` 는 미디어 콘텐츠를 더 정확하게 기술하는 Object Type Indication 값이며 `A` 는 한자리 숫자*오디오* OTI입니다. OTI로 가능한 값은 MP4 Registration Authority 웹사이트의 [Object Types page](https://mp4ra.org/#/object_types) 페이지에서 확인할 수 있습니다. 예를들어 MP4 파일의 Opus 오디오는 `mp4a.ad`로 기술합니다. 자세한 내용은 [MPEG-4 audio](#mpeg-4_audio)를 참조하세요.
 - `mp4v.oo[.V]` (MPEG-4 video)
   - : 마찬가지로 `oo` 는 미디어 콘텐츠를 명시하는 OTI 값이며, `V` 는 한자리 숫자 _비디오_ OTI 값입니다.
 - `avc1.oo[.PPCCLL]` (AVC video)
+
   - : `oo` 는 콘텐츠를 명시하는 OTI 값이며, while `PPCCLL` 는 6자리 16진수로써 프로파일 넘버 (`PP`), 제약 플래그 (`CC`), 레벨 (`LL`)을 의미합니다. `PP`로 가능한 값은 [AVC profiles](#avc_profiles)를 참조하세요.
 
     제약 플래그는 1 비트 불리언 값이며, MSB는 flag 0(또는 일부에선 `constraint_set0_flag`)로 취급합니다. 그리고 이어지는 비트는 하나씩 번호가 높게 매겨집니다. 현재로썬 0부터 2번째 비트까지만 사용하며;나머지 5개의 비트는 _반드시_ 0이어야합니다. 각 플래그의 의미는 사용하는 프로파일에 따라 달라집니다.
@@ -331,13 +331,14 @@ av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
 mp4a.oo[.A]
 ```
 
-`oo` 는 두자리 16진수 Object Type Indication으로 미디어에 사용된 코덱 클래스를 표시합니다. OTI 값은 [MP4 Registration Authority](http://mp4ra.org/)에서 규정하고 있으며 [list of the possible OTI values](http://mp4ra.org/#/object_types)에서 가용한 값을 확인할 수 있습니다. 특수한 값인 `40`; 이는 미디어가 MPEG-4 audio(ISO/IEC 14496 Part 3)임을 나타냅니다. 조금 더 자세히 말하자면, 세번째 컴포넌트—Audio Object Type—은 OTI `40` 을 MPEG-4의 특정 하위 타입으로 범위를 좁히기 위해 추가하였습니다.
+`oo` 는 두자리 16진수 Object Type Indication으로 미디어에 사용된 코덱 클래스를 표시합니다. OTI 값은 [MP4 Registration Authority](https://mp4ra.org/)에서 규정하고 있으며 [list of the possible OTI values](https://mp4ra.org/#/object_types)에서 가용한 값을 확인할 수 있습니다. 특수한 값인 `40`; 이는 미디어가 MPEG-4 audio(ISO/IEC 14496 Part 3)임을 나타냅니다. 조금 더 자세히 말하자면, 세번째 컴포넌트—Audio Object Type—은 OTI `40` 을 MPEG-4의 특정 하위 타입으로 범위를 좁히기 위해 추가하였습니다.
 
 Audio Object Type는 두자리 *10진수*로 이루어져 있습니다(`codecs` 파라미터의 다른 값은 대부분 16진수). 예를들어 MPEG-4 AAC-LC의 오디오 오브젝트 타입은 숫자 2이므로 AAC-LC의 전체 `codecs` 표현 값은 `mp4a.40.2` 입니다.
 
 그러므로 오디오 오브젝트 타입이 17인 ER AAC LC의 전체 `codecs` 값은 `mp4a.40.17` 입니다. 한자리 숫자는 한자리로 표현하거나(폭넓게 호환되므로 최선) 앞에 0을 붙여 두자리로 표현할 수 있습니다. `mp4a.40.02` 처럼요.
 
-> **참고:** 원래 Audio Object Type은 한자리 숫자로 규정되었었습니다. 시간이 지나면서 표준을 확장하였고 현재는 한자리 또는 두자리 숫자입니다. 10 미만의 값 앞에 `0` 을 붙이는건 필수가 아닙니다. 오래된 MPEG-4 코덱 구현체들은 두자리 숫자를 지원하지 못할 수도 있습니다. 따라서 호환성을 높이기 위해선 한자리로 표현해야 합니다.
+> [!NOTE]
+> 원래 Audio Object Type은 한자리 숫자로 규정되었었습니다. 시간이 지나면서 표준을 확장하였고 현재는 한자리 또는 두자리 숫자입니다. 10 미만의 값 앞에 `0` 을 붙이는건 필수가 아닙니다. 오래된 MPEG-4 코덱 구현체들은 두자리 숫자를 지원하지 못할 수도 있습니다. 따라서 호환성을 높이기 위해선 한자리로 표현해야 합니다.
 
 Audio Object Types는 ISO/IEC 14496-3 subpart 1, section 1.5.1에서 정의하고 있습니다. 아래 표는 Audio Object Type 기본 목록과 지원하는 프로필입니다. MPEG-4 audio type의 내부에 대해서 더 알고 싶다면 레퍼런스를 참조하세요.
 
@@ -408,7 +409,7 @@ WebM `codecs` 파라미터의 기본 형은 4개의 WebM 코덱 중 하나 이�
 
 #### ISO Base Media File Format 문법
 
-`codecs` 파라미터를 표준화하고 강력한 포맷으로 발전시키기 위해, WebM은 [ISO Base Media File Format](#ISO-BMFF) 에 정의된 문법에 따라 _비디오_ 콘텐츠를 기술하기 시작했습니다. 본 문법은 [VP Codec ISO Media File Format Binding](https://www.webmproject.org/vp9/mp4)의, [Codecs Parameter String](https://www.webmproject.org/vp9/mp4/#codecs-parameter-string) 섹션에 정의되어 있습니다. 오디오 코덱은 `vorbis` 또는 `opus`로 표시되어 있습니다.
+`codecs` 파라미터를 표준화하고 강력한 포맷으로 발전시키기 위해, WebM은 [ISO Base Media File Format](#iso-bmff) 에 정의된 문법에 따라 _비디오_ 콘텐츠를 기술하기 시작했습니다. 본 문법은 [VP Codec ISO Media File Format Binding](https://www.webmproject.org/vp9/mp4)의, [Codecs Parameter String](https://www.webmproject.org/vp9/mp4/#codecs-parameter-string) 섹션에 정의되어 있습니다. 오디오 코덱은 `vorbis` 또는 `opus`로 표시되어 있습니다.
 
 `codecs` 파리미터는 사용한 코덱을 나타내는 4자리 문자로 시작하고 온점(`.`)으로 구분된 2자리 숫자가 반복됩니다.
 
@@ -532,7 +533,7 @@ cccc.PP.LL.DD.CC[.cp[.tc[.mc[.FF]]]]
         <p>
           크로마 서브샘플링 포맷을 2자리 숫자로 표기합니다. 가능한 값은 아래
           표에 있습니다; 자세한 내용은
-          {{SectionOnPage("en-US/docs/Web/Media/Formats/Video_concepts", "Chroma subsampling")}}
+          [Chroma subsampling](/ko/docs/Web/Media/Formats/Video_concepts#chroma_subsampling)
           를 참조하세요.
         </p>
         <table class="standard-table">

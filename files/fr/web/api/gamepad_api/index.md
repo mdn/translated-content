@@ -1,12 +1,11 @@
 ---
 title: Gamepad API
 slug: Web/API/Gamepad_API
-translation_of: Web/API/Gamepad_API
 ---
 
 {{DefaultAPISidebar("Gamepad API")}}
 
-L'**API Gamepad** est un moyen pour les développeurs d'accéder aux signaux provenant des manettes des jeu et des autres unités de commande du jeu d'y répondre de manière simple et systématiq. Il contient trois interfaces, deux événements et une fonction spécialisée, pour répondre aux manettes connectées et déconnectées, et pour accéder à d'autres informations sur les manettes elles-mêmes, ainsi que sur les boutons et autres commandes sur lesquels vous appuyez actuellement.
+L'**API Gamepad** est un moyen pour les développeurs d'accéder aux signaux provenant des manettes des jeu et des autres unités de commande du jeu d'y répondre de manière simple et systématique. Il contient trois interfaces, deux événements et une fonction spécialisée, pour répondre aux manettes connectées et déconnectées, et pour accéder à d'autres informations sur les manettes elles-mêmes, ainsi que sur les boutons et autres commandes sur lesquels vous appuyez actuellement.
 
 ## Interfaces
 
@@ -24,7 +23,7 @@ L'**API Gamepad** est un moyen pour les développeurs d'accéder aux signaux pro
 - [`GamepadPose`](/fr/docs/Web/API/GamepadPose)
   - : Represents the pose of a controller (e.g. position and orientation in 3D space) in the case of a [WebVR](/fr/docs/Web/API/WebVR_API)controller.
 
-See also the [extensions to the Gamepad interface](/fr/docs/Web/API/Gamepad#Experimental_extensions_to_Gamepad), for features that allow you to access the above information.
+See also the [extensions to the Gamepad interface](/fr/docs/Web/API/Gamepad#experimental_extensions_to_gamepad), for features that allow you to access the above information.
 
 ### Extensions à d'autres interfaces
 

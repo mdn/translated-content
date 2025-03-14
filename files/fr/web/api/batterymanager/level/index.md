@@ -1,9 +1,6 @@
 ---
 title: BatteryManager.level
 slug: Web/API/BatteryManager/level
-page-type: web-api-instance-property
-translation_of: Web/API/BatteryManager/level
-browser-compat: api.BatteryManager.level
 ---
 
 {{APIRef("Battery API")}}
@@ -22,10 +19,10 @@ La propriété **`BatteryManager.level`** indique le niveau de charge de la batt
 ### JavaScript
 
 ```js
-const getLevel = document.querySelector('#get-level');
-const output = document.querySelector('#output');
+const getLevel = document.querySelector("#get-level");
+const output = document.querySelector("#output");
 
-getLevel.addEventListener('click', async () => {
+getLevel.addEventListener("click", async () => {
   if (!navigator.getBattery) {
     output.textContent = "Le gestionnaire de batterie n'est pas pris en charge";
   } else {

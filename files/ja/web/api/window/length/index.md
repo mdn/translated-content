@@ -25,9 +25,6 @@ if (window.length) {
 }
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                         | 状態                             | コメント |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG','browsers.html#dom-length','Window.length')}} | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-length', 'Window.length')}} | {{Spec2('HTML5 W3C')}}     |          |
+{{Specifications}}

@@ -26,7 +26,7 @@ slug: Web/JavaScript/Reference/Functions/get
 Note o seguinte quando for trabalhar com a sintaxe _get_:
 
 - Pode haver um identificador que seja um número ou uma string;
-- Deve haver exatamente zero parâmetros (veja [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) para mais informações)
+- Deve haver exatamente zero parâmetros (veja [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) para mais informações)
 - Não deve haver mais de um getter para a mesma propriedade nem uma propriedade comum como o mesmo nome do getter (`{ get x() { }, get x() { } }` and `{ x: ..., get x() { } }` são proibidos).
 
 Um getter pode ser removido usando o operador `delete.`
@@ -38,14 +38,14 @@ Um getter pode ser removido usando o operador `delete.`
 O exemplo abaixo irá criar a pseudo-propriedade `latest` para o objeto `obj`, que irá retornar o último item do array em `log`.
 
 ```js
-var log = ['test'];
+var log = ["test"];
 var obj = {
-  get latest () {
+  get latest() {
     if (log.length == 0) return undefined;
-    return log[log.length - 1]
-  }
-}
-console.log (obj.latest); // Retornará "test".
+    return log[log.length - 1];
+  },
+};
+console.log(obj.latest); // Retornará "test".
 ```
 
 Note que a tentativa de atribuir um valor a `latest não irá alterá-la.`
@@ -63,22 +63,29 @@ delete obj.latest;
 Para adicionar um getter a um objeto existente a qualquer momento, use {{jsxref("Object.defineProperty()")}}.
 
 ```js
-var o = { a:0 }
+var o = { a: 0 };
 
-Object.defineProperty(o, "b", { get: function () { return this.a + 1; } });
+Object.defineProperty(o, "b", {
+  get: function () {
+    return this.a + 1;
+  },
+});
 
-console.log(o.b) // Executa o getter, que retornará a + 1 (which is 1)
+console.log(o.b); // Executa o getter, que retornará a + 1 (que é 1)
 ```
 
 ### Usando uma propriedade com nome computado
 
-> **Nota:** Propriedades com nome computado são uma tecnologia experimenta, parte da proposta do ECMAScript 6 e não é amplamente suportada pelos navegadores ainda. O exemplo abaixo irá disparar um `SyntaxError em ambientes sem suporte.`
+> [!NOTE]
+> Propriedades com nome computado são uma tecnologia experimenta, parte da proposta do ECMAScript 6 e não é amplamente suportada pelos navegadores ainda. O exemplo abaixo irá disparar um `SyntaxError em ambientes sem suporte.`
 
 ```js
 var expr = "foo";
 
 var obj = {
-  get [expr]() { return "bar"; }
+  get [expr]() {
+    return "bar";
+  },
 };
 
 console.log(obj.foo); // "bar"
@@ -109,15 +116,11 @@ Para o Firefox, veja também o código do módulo XPCOMUtils.jsm, que define a f
 
 ## Especificações
 
-| Especificação                                                                                    | Status                       | Comentário                                   |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}                     | {{Spec2('ES5.1')}}     | Definição inicial.                           |
-| {{SpecName('ES6', '#sec-method-definitions', 'Method definitions')}}     | {{Spec2('ES6')}}         | Adicionado nomes de propriedades computadas. |
-| {{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ESDraft')}} |                                              |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.functions.get")}}
+{{Compat}}
 
 ## Veja também
 
@@ -126,4 +129,4 @@ Para o Firefox, veja também o código do módulo XPCOMUtils.jsm, que define a f
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Defining Getters and Setters](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) in JavaScript Guide
+- [Defining Getters and Setters](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters) in JavaScript Guide

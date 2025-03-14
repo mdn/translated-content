@@ -1,15 +1,6 @@
 ---
 title: ImageBitmap
 slug: Web/API/ImageBitmap
-tags:
-  - API
-  - Canvas
-  - ImageBitmap
-  - Interface
-  - Reference
-  - Интерфейс
-  - Ссылка
-translation_of: Web/API/ImageBitmap
 ---
 
 {{APIRef("Canvas API")}}
@@ -32,11 +23,11 @@ translation_of: Web/API/ImageBitmap
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
-## Полезные ссылки
+## Смотрите также
 
 - {{domxref("ImageBitmapFactories.createImageBitmap()")}}
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}

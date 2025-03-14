@@ -1,12 +1,9 @@
 ---
 title: Astuces de création de pages HTML à affichage rapide
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
-tags:
-  - HTML
-  - Performance
-translation_of: Learn/HTML/Howto/Author_fast-loading_HTML_pages
-original_slug: Web/Guide/HTML/Astuces_de_création_de_pages_HTML_à_affichage_rapide
 ---
+
+{{QuickLinksWithSubpages("/fr/docs/Learn/HTML/Howto")}}
 
 C'est connu, les internautes sont de grands impatients, ils veulent des résultats immédiats, avec des gros titres et des réponses courtes et efficaces.
 Une page web optimisé prévoit non seulement un site plus réactif, mais aussi de réduire la charge sur vos serveurs Web et votre connexion Internet. Cela peut être crucial pour les gros sites ou des sites qui ont un pic de trafic dans des circonstances exceptionnelles (telles que les Unes des journaux fracassantes). De plus, Google en tient compte pour son classement.
@@ -25,7 +22,7 @@ Téléchargez le html d'abords, puis le CSS et le JavaScript nécessaires à son
 
 Réduire le nombre de fichiers référencés dans une page web diminue le nombre de connexions [HTTP](/fr/docs/Web/HTTP) nécessaire pour télécharger une page.
 
-- Utilisez le moins d'images possible sur votre site (et de gif animés ofc). Preferez des [boutons graphiques en CSS](http://css-tricks.com/examples/ButtonMaker/).
+- Utilisez le moins d'images possible sur votre site (et de gif animés ofc). Preferez des [boutons graphiques en CSS](https://css-tricks.com/examples/ButtonMaker/).
 - Compressez vos images (éviter les .png). Vous pouvez pour cela utiliser [Gimp](http://www.gimp.org/) ou [Imagemagik](http://www.imagemagick.org/script/index.php).
 - Preferez le CSS ou le JavaScript au flash: il ralenti le navigateur.
 
@@ -44,8 +41,8 @@ En particulier pour les pages qui sont générées dynamiquement, une petite rec
 Plus d'informations:
 
 1. [HTTP Conditional Get for RSS Hackers](http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
-   2. [HTTP 304: Not Modified](http://annevankesteren.nl/archives/2005/05/http-304)
-   3. [On HTTP Last-Modified and ETag](http://www.cmlenz.net/blog/2005/05/on_http_lastmod.html)
+2. [HTTP 304: Not Modified](http://annevankesteren.nl/archives/2005/05/http-304)
+3. [On HTTP Last-Modified and ETag](http://www.cmlenz.net/blog/2005/05/on_http_lastmod.html)
 
 ### Réduire le nombre de scripts en ligne
 
@@ -62,13 +59,13 @@ En outre, la validité du balisage permet la libre utilisation d'autres outils q
 Remplacer la mise en page basé sur des \<table> par des blocs \<div>, plutôt que des \<table> très imbriquée comme dans l'exemple suivant:
 
 ```html
-<TABLE>
-  <TABLE>
-    <TABLE>
-          ...
-    </TABLE>
-  </TABLE>
-</TABLE>
+<table>
+  <table>
+    <table>
+      ...
+    </table>
+  </table>
+</table>
 ```
 
 Préferez des \<table> non-imbriquées ou \<div> comme dans l'exemple suivant:
@@ -104,7 +101,6 @@ Notez, cependant, que beaucoup de conseils énumérés dans cette page sont des 
 - [Livre&nbsp;: "Speed Up Your Site" par Andy King](http://www.websiteoptimization.com/)
 - [Site Optimization Tutorial (WebMonkey)](http://webmonkey.wired.com/webmonkey/design/site_building/tutorials/tutorial2.html) (en anglais)
 - [Best Practices for Speeding Up Your Web Site](https://developer.yahoo.com/performance/rules.html) (en anglais)
+- Document d'information d'origine:
 
-**Document d'information d'origine**
-
-- <https://developer.mozilla.org/en/Tips_for_Authoring_Fast-loading_HTML_Pages>
+  - [Astuces de création de pages HTML à affichage rapide](/fr/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)

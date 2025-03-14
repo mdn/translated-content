@@ -1,5 +1,5 @@
 ---
-title: 'Window: hashchange イベント'
+title: "Window: hashchange イベント"
 slug: Web/API/Window/hashchange_event
 ---
 
@@ -35,16 +35,20 @@ slug: Web/API/Window/hashchange_event
 `hashchange` イベントは {{domxref("EventTarget/addEventListener", "addEventListener")}} メソッドの中で使用することができます。
 
 ```js
-window.addEventListener('hashchange', function() {
-  console.log('The hash has changed!')
-}, false);
+window.addEventListener(
+  "hashchange",
+  function () {
+    console.log("The hash has changed!");
+  },
+  false,
+);
 ```
 
 または `onhashchange` イベントハンドラープロパティを使用して、
 
 ```js
 function locationHashChanged() {
-  if (location.hash === '#cool-feature') {
+  if (location.hash === "#cool-feature") {
     console.log("You're visiting a cool feature!");
   }
 }
@@ -54,13 +58,11 @@ window.onhashchange = locationHashChanged;
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                             | 備考               |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'indices.html#event-hashchange', 'hashchange')}} | {{Spec2('HTML WHATWG')}} | Initial definition |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.hashchange_event")}}
+{{Compat}}
 
 ## 関連情報
 

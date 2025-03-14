@@ -1,21 +1,12 @@
 ---
-title: 'Évaluation: dépannage d''accessibilité'
+title: "Évaluation: dépannage d'accessibilité"
 slug: Learn/Accessibility/Accessibility_troubleshooting
-tags:
-  - Accessibilité
-  - Apprendre
-  - CSS
-  - Débutant
-  - HTML
-  - JavaScript
-translation_of: Learn/Accessibility/Accessibility_troubleshooting
-original_slug: Apprendre/a11y/Accessibility_troubleshooting
 ---
 
 {{LearnSidebar}}
 {{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
-Dans l’évaluation de ce module, nous vous présentons un site simple, qui présente un certain nombre de problèmes d’accessibilité que vous devez diagnostiquer et résoudre.
+Dans l'évaluation de ce module, nous vous présentons un site simple, qui présente un certain nombre de problèmes d'accessibilité que vous devez diagnostiquer et résoudre.
 
 <table class="standard-table">
   <tbody>
@@ -63,7 +54,8 @@ Le texte est difficile à lire en raison du schéma de couleurs actuel. Pouvez-v
 2. Pouvez-vous mettre à jour le texte de l'article pour faciliter la navigation des utilisateurs de lecteurs d'écran?
 3. La partie du menu de navigation du site ( `<div class="nav"></div>`) pourrait être rendue plus accessible en la plaçant dans un élément sémantique HTML5 approprié. Lequel devrait-il être mis à jour? Faites la mise à jour.
 
-> **Note :** Vous devrez mettre à jour les sélecteurs de règles CSS qui attribuent aux balises le même style que les balises sémantiques. Une fois que vous avez ajouté des éléments de paragraphe, vous remarquerez que le style est meilleur.
+> [!NOTE]
+> Vous devrez mettre à jour les sélecteurs de règles CSS qui attribuent aux balises le même style que les balises sémantiques. Une fois que vous avez ajouté des éléments de paragraphe, vous remarquerez que le style est meilleur.
 
 ### Les images
 
@@ -76,12 +68,12 @@ Les images sont actuellement inaccessibles aux utilisateurs de lecteur d'écran.
 
 ### Les formulaires
 
-1. L'élément `<input>` dans le formulaire de recherche en haut pourrait être associé à une étiquette, mais nous ne souhaitons pas ajouter une étiquette de texte visible qui risquerait de gâcher la conception et qui n'est pas vraiment utile aux utilisateurs voyants. Comment ajouter une étiquette uniquement accessible aux lecteurs d’écran? ?
+1. L'élément `<input>` dans le formulaire de recherche en haut pourrait être associé à une étiquette, mais nous ne souhaitons pas ajouter une étiquette de texte visible qui risquerait de gâcher la conception et qui n'est pas vraiment utile aux utilisateurs voyants. Comment ajouter une étiquette uniquement accessible aux lecteurs d'écran? ?
 2. Les deux éléments `<input>` du formulaire de commentaire ont des étiquettes de texte visibles, mais ils ne sont pas associés sans ambiguïté à leurs étiquettes. Comment y parvenir? Notez que vous devrez également mettre à jour certaines règles CSS.
 
 ### Le contrôle afficher / masquer les commentaires
 
-Le bouton de commande afficher / masquer les commentaires n’est pas actuellement accessible au clavier. Pouvez-vous le rendre accessible au clavier, à la fois en termes de focalisation à l'aide de la touche de tabulation et d'activation à l'aide de la touche de retour?
+Le bouton de commande afficher / masquer les commentaires n'est pas actuellement accessible au clavier. Pouvez-vous le rendre accessible au clavier, à la fois en termes de focalisation à l'aide de la touche de tabulation et d'activation à l'aide de la touche de retour?
 
 ### La table
 
@@ -89,20 +81,10 @@ Le tableau de données (data table ) n'est pas très accessible actuellement. Il
 
 ### Autres considérations?
 
-Pouvez-vous énumérer deux autres idées d’amélioration qui rendraient le site Web plus accessible?
+Pouvez-vous énumérer deux autres idées d'amélioration qui rendraient le site Web plus accessible?
 
 ## Évaluation
 
 Si vous suivez cette évaluation dans le cadre d'un cours organisé, vous devriez pouvoir donner votre travail à votre enseignant / mentor pour qu'il la corrige. Si vous vous auto-apprenez, vous pouvez obtenir le guide de notation assez facilement en le demandant sur la [discussion thread for this exercise](https://discourse.mozilla.org/t/accessibility-troubleshooting-assessment/24691), ou sur le canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez d'abord l'exercice - il n'y a rien à gagner à tricher!
 
 {{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
-
-## Dans ce module
-
-- [What is accessibility?](/fr/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/fr/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/fr/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/fr/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/fr/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/fr/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/fr/docs/Learn/Accessibility/Accessibility_troubleshooting)

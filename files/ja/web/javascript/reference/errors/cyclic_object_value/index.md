@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: cyclic object value'
+title: "TypeError: cyclic object value"
 slug: Web/JavaScript/Reference/Errors/Cyclic_object_value
 ---
 
@@ -21,7 +21,7 @@ TypeError: Circular reference in value argument not supported (Edge)
 
 ## エラーの原因
 
-[JSON 形式](https://www.json.org/)はオブジェクト参照に対応していません ([IETF の草案はありますが](http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03))。したがって {{jsxref("JSON.stringify()")}} はこれを解決しようとせず、これによって失敗します。
+[JSON 形式](https://www.json.org/)はオブジェクト参照に対応していません ([IETF の草案はありますが](https://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03))。したがって {{jsxref("JSON.stringify()")}} はこれを解決しようとせず、これによって失敗します。
 
 ## 例
 
@@ -30,7 +30,7 @@ TypeError: Circular reference in value argument not supported (Edge)
 次のような循環構造体では、
 
 ```js
-var circularReference = {otherData: 123};
+var circularReference = { otherData: 123 };
 circularReference.myself = circularReference;
 ```
 

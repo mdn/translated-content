@@ -1,13 +1,6 @@
 ---
 title: 웹 개발자 안내서
 slug: Web/Guide
-tags:
-  - Guide
-  - Landing
-  - NeedsTranslation
-  - TopicStub
-  - Web
-translation_of: Web/Guide
 ---
 
 MDN 문서에는 많은 가이드가 있습니다. 이 문서는 추가 사용 예시를 추가하거나 API 또는 기능을 사용하는 방법을 가르치는 것을 목표로 합니다. 이 페이지는 가장 인기 있는 자료로 연결됩니다.
@@ -35,7 +28,7 @@ MDN 문서에는 많은 가이드가 있습니다. 이 문서는 추가 사용 �
   - : MDN 전반에 걸쳐 CSS Layout에 대한 많은 가이드가 있으며, 이 페이지는
     그것들을 모두 모았습니다.
 
-- [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 
   - : CSS 애니메이션은 사용하면 CSS 스타일 구성에서 다른 CSS 스타일 구성으로의
     전환을 애니메이션으로 만들 수 있습니다. 이 가이드는 애니메이션 속성을
@@ -43,11 +36,11 @@ MDN 문서에는 많은 가이드가 있습니다. 이 문서는 추가 사용 �
 
 ## JavaScript
 
-- [자바스크립트 학습영역](/ko/docs/Learn/JavaScript)
+- [JavaScript 학습영역](/ko/docs/Learn/JavaScript)
 
   - : 당신이 완전한 초보자이든 기술을 다시 배우고 싶든, 이 문서가 출발점이 될 수 있습니다.
 
-- [AJAX](/ko/docs/Web/Guide/AJAX)
+- [AJAX](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 
   - : AJAX는 웹 애플리케이션이 전체 브라우저 페이지를 다시 로드하지 않고도
     사용자 인터페이스에 빠르고 점진적으로 업데이트할 수 있도록 하는 기술
@@ -55,19 +48,19 @@ MDN 문서에는 많은 가이드가 있습니다. 이 문서는 추가 사용 �
 
 ## Media
 
-- [웹 상 그래픽](/ko/docs/Web/Guide/Graphics)
+- [웹 상 그래픽](/ko/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 
   - : 모던 웹사이트와 애플리케이션들은 종종 다양하고 정교한 그래픽을
     제공해야합니다.
 
-- [오디오 및 비디오 전달](/ko/docs/Web/Guide/Audio_and_video_delivery)
+- [오디오 및 비디오 전달](/ko/docs/Web/Media/Audio_and_video_delivery)
 
   - : 우리는 '정적' 미디어 파일에서 적응형 라이브 스트림에 이르기까지 다양한
     방법으로 웹에서 오디오와 비디오를 전달할 수 있습니다. 이 문서는 웹 기반
     미디어의 다양한 전달 메커니즘과 인기 있는 브라우저와의 호환성을 탐색하기
     위한 출발점으로 작성되었습니다.
 
-- [오디오 및 비디오 조작](/ko/docs/Web/Guide/Audio_and_video_manipulation)
+- [오디오 및 비디오 조작](/ko/docs/Web/Media/Audio_and_video_manipulation)
   - : 웹의 장점은 기술을 결합하여 새로운 형태를 만들 수 있다는 것입니다.
     브라우저에 기본 오디오 및 비디오가 있다는 것은 이러한 데이터 스트림을
     사용하여 {{htmlelement("canvas")}} 와,
@@ -80,7 +73,7 @@ MDN 문서에는 많은 가이드가 있습니다. 이 문서는 추가 사용 �
 
 ## APIs
 
-- [FormData 객체 사용](/ko/docs/Web/API/FormData/Using_FormData_Objects)
+- [FormData 객체 사용](/ko/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 
   - : 이 [`FormData`](/ko/docs/Web/API/FormData) 객체를 사용하면
     key/value 값을 컴파일하여 `XMLHttpRequest` 로 보낼 수 있습니다. 주로 양식
@@ -97,20 +90,20 @@ MDN 문서에는 많은 가이드가 있습니다. 이 문서는 추가 사용 �
     제공합니다. 이 문서에서는 이에 대해 여러분이 알아야 할 모든 것들에 대해
     알려드립니다.
 
-- [XML 파싱 및 직렬화](/ko/docs/Web/Guide/Parsing_and_serializing_XML)
+- [XML 파싱 및 직렬화](/ko/docs/Web/XML/Parsing_and_serializing_XML)
 
   - : 웹 플랫폼은 각각 장단점이 있는 다양한 XML 구문을 분석하고 직렬화하는
     방법을 제공합니다.
 
 ## Performance
 
-- [최적화 및 성능](/ko/docs/Web/Guide/Performance)
+- [최적화 및 성능](/ko/docs/Web/Performance)
 
   - : 최신 웹 앱과 사이트를 구축할 때, 콘텐츠를 빠르고 효율적으로 만드는 것이 중요합니다. 이를 통해 강력한 데스크탑 시스템과 약한 핸드헬드 장치 모두에서 효과적으로 수행할 수 있습니다.
 
 ## Mobile web development
 
-- [모바일 웹 개발](/ko/docs/Web/Guide/Mobile)
+- [모바일 웹 개발](/ko/docs/Learn/CSS/CSS_layout/Responsive_Design)
 
   - : 이 문서에서는 모바일 장치에서 잘 작동하는 웹 사이트를 디자인하는 데 필요한 몇 가지 주요 기술에 대한 개요를 제공합니다.
 
@@ -120,12 +113,12 @@ MDN 문서에는 많은 가이드가 있습니다. 이 문서는 추가 사용 �
 
   - : variable fonts를 설계 시 사용하는 방법을 알아보십시오.
 
-- [웹 오픈 글꼴 형식(WOFF)](/ko/docs/Web/Guide/WOFF)
+- [웹 오픈 글꼴 형식(WOFF)](/ko/docs/Web/CSS/CSS_fonts/WOFF)
 
   - : WOFF(Web Open Font Format)는 웹에서 누구나 무료로 사용할 수 있는 글꼴 파일 형식입니다.
 
 ## User interface development
 
-- [User input and controls](/ko/docs/Web/Guide/User_input_methods)
+- [User input and controls](/ko/docs/Learn/Forms/User_input_methods)
 
   - : 모던 웹에서 사용자 입력은 단순히 마우스와 키보드로만 이뤄지는 것이 아닙니다. 예를 들어 터치스크린을 생각해 보십시오. 이 문서에서는 기본 기술에 대한 자세한 정보가 필요한 사람을 위해 FAQ, 실제 사례 및 추가 정보 링크와 함께 개방형 웹 앱에서 사용자 입력을 관리하고 제어를 구현하기 위한 권장 사항을 제공합니다.

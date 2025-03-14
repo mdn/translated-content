@@ -1,11 +1,9 @@
 ---
 title: Utilisation d'images
 slug: Web/API/Canvas_API/Tutorial/Using_images
-translation_of: Web/API/Canvas_API/Tutorial/Using_images
-original_slug: Web/API/Canvas_API/Tutoriel_canvas/Utilisation_d'images
 ---
 
-{{CanvasSidebar}}{{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations")}}
+{{DefaultAPISidebar("Canvas API")}}{{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations")}}
 
 Jusqu'à présent, nous avons créé nos propres [formes](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) et [styles appliqués](/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors). L'une des fonctionnalités les plus intéressantes de [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) est la possibilité d'utiliser des images. Celles-ci peuvent être utilisées pour faire de la composition dynamique de photos ou comme décors de graphes, pour des _sprites_ dans des jeux, et ainsi de suite. Les images externes peuvent être utilisées dans n'importe quel format pris en charge par le navigateur, comme PNG, GIF ou JPEG. Vous pouvez même utiliser l'image produite par d'autres éléments du canevas sur la même page comme source !
 
@@ -21,7 +19,7 @@ Voyons comment faire.
 L'API Canvas peut utiliser l'un des types de données suivants comme source d'image :
 
 - [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement)
-  - : Il s'agit d'images créées à l'aide du constructeur `Image()`, ainsi que de tout élément HTML [`<img>`](/fr/docs/Web/HTML/Element/Img).
+  - : Il s'agit d'images créées à l'aide du constructeur `Image()`, ainsi que de tout élément HTML [`<img>`](/fr/docs/Web/HTML/Element/img).
 - [`SVGImageElement`](/fr/docs/Web/API/SVGImageElement)
   - : Ce sont des images incorporées en utilisant l'élément SVG [`<image>`](/fr/docs/Web/SVG/Element/image).
 - [`HTMLVideoElement`](/fr/docs/Web/API/HTMLVideoElement)
@@ -29,7 +27,7 @@ L'API Canvas peut utiliser l'un des types de données suivants comme source d'im
 - [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement)
   - : Vous pouvez utiliser un autre élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) comme source d'image.
 
-Ces sources sont collectivement référencées par le type [`CanvasImageSource`](/fr/docs/Web/API/CanvasImageSource).
+Ces sources sont collectivement référencées par le type [`CanvasImageSource`](/fr/docs/Web/API/CanvasRenderingContext2D).
 
 Il existe plusieurs façons d'obtenir des images pour une utilisation sur un canevas.
 
@@ -43,7 +41,7 @@ Nous pouvons obtenir une référence aux images sur la même page que le canevas
 
 ### Utilisation d'images d'un autre domaine
 
-En utilisant l'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/Img#attr-crossorigin) d'un élément [`<img>`](/fr/docs/Web/HTML/Element/Img) (reflété par la propriété [`HTMLImageElement.crossOrigin`](/fr/docs/Web/API/HTMLImageElement/crossOrigin)), vous pouvez demander la permission de charger une image d'un autre domaine pour l'utiliser dans votre appel à `drawImage()`. Si le domaine d'hébergement permet un accès interdomaine à l'image, l'image peut être utilisée dans votre canevas sans l'altérer; sinon utiliser l'image va [corrompre le canevas](/fr/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
+En utilisant l'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/img#attr-crossorigin) d'un élément [`<img>`](/fr/docs/Web/HTML/Element/img) (reflété par la propriété [`HTMLImageElement.crossOrigin`](/fr/docs/Web/API/HTMLImageElement/crossOrigin)), vous pouvez demander la permission de charger une image d'un autre domaine pour l'utiliser dans votre appel à `drawImage()`. Si le domaine d'hébergement permet un accès interdomaine à l'image, l'image peut être utilisée dans votre canevas sans l'altérer; sinon utiliser l'image va [corrompre le canevas](/fr/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
 
 ### Utilisation d'autres éléments canvas
 
@@ -56,8 +54,8 @@ Une des utilisations les plus pratiques de cette fonctionnalité serait d'utilis
 Une autre option est de créer de nouveaux objets [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) dans le script même. Pour ce faire, vous pouvez utiliser le constructeur `Image()`.
 
 ```js
-let img = new Image();   // Crée un nouvel élément Image
-img.src = 'myImage.png'; // Définit le chemin vers sa source
+let img = new Image(); // Crée un nouvel élément Image
+img.src = "myImage.png"; // Définit le chemin vers sa source
 ```
 
 Lorsque ce script est exécuté, l'image commence à être chargée.
@@ -65,22 +63,27 @@ Lorsque ce script est exécuté, l'image commence à être chargée.
 Si vous essayez d'appeler `drawImage()` avant le chargement de l'image, il ne fera rien (ou, dans les anciens navigateurs, cela pourra même déclencher une exception). Utilisez donc l'événement `load` pour ne pas dessiner avant que l'image ne soit chargée :
 
 ```js
-let img = new Image();   // Crée un nouvel élément img
-img.addEventListener('load', function() {
-  //  exécute les instructions drawImage ici
-}, false);
-img.src = 'myImage.png'; // définit le chemin de la source
+let img = new Image(); // Crée un nouvel élément img
+img.addEventListener(
+  "load",
+  function () {
+    //  exécute les instructions drawImage ici
+  },
+  false,
+);
+img.src = "myImage.png"; // définit le chemin de la source
 ```
 
 Si vous n'utilisez qu'une image externe, cela peut être une bonne approche, mais une fois que vous avez besoin de gérer plus d'une image, vous devrez recourir à quelque chose de plus astucieux. Nous ne verrons pas les stratégies de préchargement dans ce tutoriel, toutefois, gardez à l'esprit l'éventuelle nécessité de ces techniques.
 
 ### Intégration d'une image via une URL de données
 
-Un autre moyen possible d'inclure des images consiste à utiliser les [URL de données (`data: url`)](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs). Les URL de données vous permettent de définir complètement une image en tant que chaîne de caractères codée en Base64 directement dans votre code.
+Un autre moyen possible d'inclure des images consiste à utiliser les [URL de données (`data: url`)](/fr/docs/Web/URI/Schemes/data). Les URL de données vous permettent de définir complètement une image en tant que chaîne de caractères codée en Base64 directement dans votre code.
 
 ```js
-let img = new Image();   // Crée un nouvel élément img
-img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==';
+let img = new Image(); // Crée un nouvel élément img
+img.src =
+  "data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==";
 ```
 
 L'un des avantages des URL de données est que l'image résultante est disponible immédiatement, sans autre aller-retour au serveur. Cela permet également d'encapsuler dans un fichier tous vos [CSS](/fr/docs/Web/CSS), [JavaScript](/fr/docs/Web/JavaScript), [HTML](/fr/docs/Web/HTML) et images, ce qui les rend plus portables vers d'autres endroits.
@@ -93,11 +96,11 @@ Vous pouvez également utiliser les images d'une vidéo présentée par un élé
 
 ```js
 function getMyVideo() {
-  let canvas = document.getElementById('canvas');
+  let canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    let ctx = canvas.getContext('2d');
+    let ctx = canvas.getContext("2d");
 
-    return document.getElementById('myvideo');
+    return document.getElementById("myvideo");
   }
 }
 ```
@@ -111,7 +114,8 @@ Une fois la référence à l'objet image source obtenue, on peut utiliser la mé
 - [`drawImage(image, x, y)`](/fr/docs/Web/API/CanvasRenderingContext2D/drawImage)
   - : Dessine le `CanvasImageSource` spécifié par le paramètre `image` aux coordonnées (`x`, `y`).
 
-> **Note :** Les images SVG doivent spécifier une largeur et une hauteur dans l'élément racine `<svg>`.
+> [!NOTE]
+> Les images SVG doivent spécifier une largeur et une hauteur dans l'élément racine `<svg>`.
 
 ### Exemple : un graphique linéaire simple
 
@@ -128,9 +132,9 @@ Dans l'exemple suivant, nous utiliserons une image externe comme fond pour un pe
 ```js
 function draw() {
   console.log("tt");
-  let ctx = document.getElementById('canvas').getContext('2d');
+  let ctx = document.getElementById("canvas").getContext("2d");
   let img = new Image();
-  img.onload = function() {
+  img.onload = function () {
     ctx.drawImage(img, 0, 0);
     ctx.beginPath();
     ctx.moveTo(30, 96);
@@ -139,7 +143,7 @@ function draw() {
     ctx.lineTo(170, 15);
     ctx.stroke();
   };
-  img.src = 'backdrop.png';
+  img.src = "backdrop.png";
 }
 ```
 
@@ -158,28 +162,29 @@ La seconde variante de la méthode `drawImage()` ajoute deux paramètres supplé
 
 Dans cet exemple, nous utiliserons une image comme fond d'écran en la répétant plusieurs fois sur le canevas. Cette opération est réalisée simplement en faisant une boucle qui place l'image redimensionnée à différentes positions. Dans le code ci-dessous, la première boucle `for` s'occupe des lignes alors que la seconde gère les colonnes. L'image est redimensionnée à un tiers de sa taille originale, ce qui fait 50×38 pixels.
 
-> **Note :** Les images peuvent devenir floues lorsqu'elles sont agrandies ou granuleuses si elles sont réduites. Il vaut mieux ne pas redimensionner une image contenant du texte devant rester lisible.
+> [!NOTE]
+> Les images peuvent devenir floues lorsqu'elles sont agrandies ou granuleuses si elles sont réduites. Il vaut mieux ne pas redimensionner une image contenant du texte devant rester lisible.
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  let ctx = document.getElementById('canvas').getContext('2d');
+  let ctx = document.getElementById("canvas").getContext("2d");
   let img = new Image();
-  img.onload = function() {
+  img.onload = function () {
     for (let i = 0; i < 4; i++) {
       for (let j = 0; j < 3; j++) {
         ctx.drawImage(img, j * 50, i * 38, 50, 38);
       }
     }
   };
-  img.src = 'rhino.jpg';
+  img.src = "rhino.jpg";
 }
 ```
 
@@ -206,35 +211,44 @@ Dans cet exemple, nous utiliserons le même rhinocéros que plus haut, mais sa t
 
 ```html
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
-   <div style="display:none;">
-     <img id="source" src="rhino.jpg" width="300" height="227">
-     <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
-   </div>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+    <div style="display:none;">
+      <img id="source" src="rhino.jpg" width="300" height="227" />
+      <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
+    </div>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  let canvas = document.getElementById('canvas');
-  let ctx = canvas.getContext('2d');
+  let canvas = document.getElementById("canvas");
+  let ctx = canvas.getContext("2d");
 
   // On dessine la portion d'image
-  ctx.drawImage(document.getElementById('source'),
-                33, 71, 104, 124, 21, 20, 87, 104);
+  ctx.drawImage(
+    document.getElementById("source"),
+    33,
+    71,
+    104,
+    124,
+    21,
+    20,
+    87,
+    104,
+  );
 
   // On dessine le cadre
-  ctx.drawImage(document.getElementById('frame'), 0, 0);
+  ctx.drawImage(document.getElementById("frame"), 0, 0);
 }
 ```
 
-Nous avons pris une approche différente pour charger les images cette fois. Au lieu de les charger en créant de nouveaux objets [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement), nous les avons incluses comme balises [`<img>`](/fr/docs/Web/HTML/Element/Img) directement dans notre source HTML et avons récupéré les images depuis ceux-ci. Les images sont masquées via la propriété CSS [`display`](/fr/docs/Web/CSS/display) qui vaut `none`.
+Nous avons pris une approche différente pour charger les images cette fois. Au lieu de les charger en créant de nouveaux objets [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement), nous les avons incluses comme balises [`<img>`](/fr/docs/Web/HTML/Element/img) directement dans notre source HTML et avons récupéré les images depuis ceux-ci. Les images sont masquées via la propriété CSS [`display`](/fr/docs/Web/CSS/display) qui vaut `none`.
 
 {{EmbedLiveSample("Exemple_encadrer_une_image", 160, 160, "canvas_drawimage2.jpg")}}
 
-Chaque [`<img>`](/fr/docs/Web/HTML/Element/Img) se voit attribuer un attribut `id`, ce qui facilite leur sélection en utilisant [`document.getElementById()`](/fr/docs/Web/API/Document/getElementById). Nous utilisons `drawImage()` pour découper le rhinocéros de la première image et le mettre à l'échelle sur le canevas, puis dessiner le cadre par-dessus en utilisant un deuxième appel `drawImage()`.
+Chaque [`<img>`](/fr/docs/Web/HTML/Element/img) se voit attribuer un attribut `id`, ce qui facilite leur sélection en utilisant [`document.getElementById()`](/fr/docs/Web/API/Document/getElementById). Nous utilisons `drawImage()` pour découper le rhinocéros de la première image et le mettre à l'échelle sur le canevas, puis dessiner le cadre par-dessus en utilisant un deuxième appel `drawImage()`.
 
 ## Exemple d'une galerie d'art
 
@@ -248,20 +262,20 @@ Dans le code qui suit, nous parcourons le conteneur [`document.images`](/fr/docs
 <html>
   <body onload="draw();">
     <table>
-    <tr>
-      <td><img src="gallery_1.jpg"></td>
-      <td><img src="gallery_2.jpg"></td>
-      <td><img src="gallery_3.jpg"></td>
-      <td><img src="gallery_4.jpg"></td>
-    </tr>
-    <tr>
-      <td><img src="gallery_5.jpg"></td>
-      <td><img src="gallery_6.jpg"></td>
-      <td><img src="gallery_7.jpg"></td>
-      <td><img src="gallery_8.jpg"></td>
-    </tr>
+      <tr>
+        <td><img src="gallery_1.jpg" /></td>
+        <td><img src="gallery_2.jpg" /></td>
+        <td><img src="gallery_3.jpg" /></td>
+        <td><img src="gallery_4.jpg" /></td>
+      </tr>
+      <tr>
+        <td><img src="gallery_5.jpg" /></td>
+        <td><img src="gallery_6.jpg" /></td>
+        <td><img src="gallery_7.jpg" /></td>
+        <td><img src="gallery_8.jpg" /></td>
+      </tr>
     </table>
-    <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
+    <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
   </body>
 </html>
 ```
@@ -270,7 +284,7 @@ Voici la feuille de style CSS pour mettre en forme :
 
 ```css
 body {
-  background: 0 -100px repeat-x url(bg_gallery.png) #4F191A;
+  background: 0 -100px repeat-x url(bg_gallery.png) #4f191a;
   margin: 10px;
 }
 
@@ -291,28 +305,25 @@ Relions l'ensemble avec du JavaScript qui permettra de dessiner les images encad
 
 ```js
 function draw() {
-
   // Boucle à travers toutes les images
   for (let i = 0; i < document.images.length; i++) {
-
     // N'ajoute pas de canevas pour l'image du cadre
-    if (document.images[i].getAttribute('id') != 'frame') {
-
+    if (document.images[i].getAttribute("id") != "frame") {
       // Crée un élément canvas
-      canvas = document.createElement('canvas');
-      canvas.setAttribute('width', 132);
-      canvas.setAttribute('height', 150);
+      canvas = document.createElement("canvas");
+      canvas.setAttribute("width", 132);
+      canvas.setAttribute("height", 150);
 
       // Insère avant l'image
-      document.images[i].parentNode.insertBefore(canvas,document.images[i]);
+      document.images[i].parentNode.insertBefore(canvas, document.images[i]);
 
-      ctx = canvas.getContext('2d');
+      ctx = canvas.getContext("2d");
 
       // Dessine l'image sur le canevas
       ctx.drawImage(document.images[i], 15, 20);
 
       // Ajoute un cadre
-      ctx.drawImage(document.getElementById('frame'), 0, 0);
+      ctx.drawImage(document.getElementById("frame"), 0, 0);
     }
   }
 }

@@ -1,51 +1,56 @@
 ---
-title: 'Document: pointerlockchange イベント'
+title: "Document: pointerlockchange イベント"
+short-title: pointerlockchange
 slug: Web/API/Document/pointerlockchange_event
-original_slug: Web/API/Element/pointerlockchange_event
+l10n:
+  sourceCommit: c99ff93a1b71e7d664509fdd3e0c168920be967a
 ---
 
-{{APIRef}}
+{{APIRef("Pointer Lock API")}}
 
-`pointerlockchange` イベントは、ポインターがロックされたり解除されたりしたときに発行されます。
+**`pointerlockchange`** イベントは、ポインターがロックされたり解除されたりしたときに発行されます。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル可能</th>
-      <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("Document/onpointerlockchange", "onpointerlockchange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+イベントハンドラーは {{domxref("Document.pointerLockElement")}} を使用して、ポインターがロックされているかどうか、ロックされている場合はどの要素にロックされているかを判断することができます。
+
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラーのプロパティを設定するかしてください。
+
+```js
+addEventListener("pointerlockchange", (event) => {});
+
+onpointerlockchange = (event) => {};
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
 `addEventListener()` を使用した場合
 
 ```js
-document.addEventListener('pointerlockchange', (event) => {
-  console.log('Pointer lock changed');
+addEventListener("pointerlockchange", (event) => {
+  if (document.pointerLockElement)
+    console.log("The pointer is locked to: ", document.pointerLockElement);
+  else {
+    console.log("The pointer is not locked");
+  }
 });
 ```
 
-`onpointerlockerror` イベントハンドラープロパティを使用した場合
+`onpointerlockchange` イベントハンドラープロパティを使用した場合
 
 ```js
 document.onpointerlockchange = (event) => {
-  console.log('Pointer lock changed');
+  if (document.pointerLockElement)
+    console.log("The pointer is locked to: ", document.pointerLockElement);
+  else {
+    console.log("The pointer is not locked");
+  }
 };
 ```
 
@@ -59,4 +64,4 @@ document.onpointerlockchange = (event) => {
 
 ## 関連情報
 
-- [Pointer Lock API の使用](/ja/docs/API/Pointer_Lock_API)
+- [ポインターロック API の使用](/ja/docs/Web/API/Pointer_Lock_API)

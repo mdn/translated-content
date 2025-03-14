@@ -1,8 +1,6 @@
 ---
 title: conic-gradient()
 slug: Web/CSS/gradient/conic-gradient
-translation_of: Web/CSS/gradient/conic-gradient
-browser-compat: css.types.image.gradient.conic-gradient
 ---
 
 {{CSSRef}}
@@ -49,7 +47,8 @@ background: conic-gradient(
 - `<color-hint>`
   - : Une indication d'[interpolation](/fr/docs/Glossary/Interpolation) qui définit la façon dont le dégradé progresse entre deux arrêts de couleur adjacents. La longueur définit le point auquel la couleur du dégradé doit être la couleur intermédiaire entre les deux couleurs d'arrêt. Si cette valeur est absente, la valeur intermédiaire est située à mi-parcours entre les deux arrêts de couleur.
 
-> **Note :** Le rendu des arrêts de couleurs des dégradés CSS suit les mêmes règles que les [arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorial/Gradients).
+> [!NOTE]
+> Le rendu des arrêts de couleurs des dégradés CSS suit les mêmes règles que les [arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorial/Gradients).
 
 ## Description
 
@@ -59,7 +58,8 @@ Pour créer un dégradé conique qui se répète afin de couvrir 360° (un tour 
 
 Les dégradés (`<gradient>`) sont un type d'image (`<image>`) et ne peuvent être utilisés qu'aux endroits où les images peuvent être utilisées. Aussi, `conic-gradient()` ne fonctionnera pas pour la propriété [`background-color`](/fr/docs/Web/CSS/background-color) ou pour les autres propriétés qui utilisent les données de type [`<color>`](/fr/docs/Web/CSS/color_value).
 
-> **Note :** Un tel dégradé est appelé conique car, vu du dessus, la répartition des couleurs fait apparaître un cône.
+> [!NOTE]
+> Un tel dégradé est appelé conique car, vu du dessus, la répartition des couleurs fait apparaître un cône.
 
 ### Composition d'un dégradé conique
 
@@ -118,7 +118,7 @@ On voit avec l'exemple précédent qu'il est aussi possible de mélanger différ
 
 Les outils d'assistance ne peuvent pas analyser les images d'arrière-plan. Aussi, bien qu'il soit possible de créer des camemberts graphiques, des damiers ou d'autres effets grâce aux dégradés coniques, les images construites en CSS ne sont pas accessibles. Les images créées avec des dégradés coniques ne sont donc pas accessibles non plus. Si l'image contient des informations essentielles à la compréhension du document, mieux vaudra la décrire de façon sémantique dans le document afin que ce dernier soit correctement accessible.
 
-- [Explications MDN pour le WCAG et la règle 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
+- [Explications MDN pour le WCAG et la règle 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Comprendre les critères de réussite 1.1.1 - Guide de compréhension WCAG 2.0 du W3C (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Exemples
@@ -138,8 +138,7 @@ div {
 
 ```css
 div {
-  background-image:
-     conic-gradient(from 40deg, #fff, #000);
+  background-image: conic-gradient(from 40deg, #fff, #000);
 }
 ```
 
@@ -183,9 +182,8 @@ div {
 
 ```css
 div {
-  background: conic-gradient(
-     red 36deg, orange 36deg 170deg, yellow 170deg);
-  border-radius: 50%
+  background: conic-gradient(red 36deg, orange 36deg 170deg, yellow 170deg);
+  border-radius: 50%;
 }
 ```
 
@@ -206,9 +204,13 @@ div {
 
 ```css
 div {
-  background:
-     conic-gradient(#fff 0.25turn, #000 0.25turn 0.5turn, #fff 0.5turn 0.75turn, #000 0.75turn)
-     top left / 25% 25% repeat;
+  background: conic-gradient(
+      #fff 0.25turn,
+      #000 0.25turn 0.5turn,
+      #fff 0.5turn 0.75turn,
+      #000 0.75turn
+    )
+    top left / 25% 25% repeat;
   border: 1px solid;
 }
 ```
@@ -217,7 +219,7 @@ div {
 
 ### D'autres exemples d'utilisation de `conic-gradient()`
 
-Voir la page [Utiliser des dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients) pour plus d'exemples.
+Voir la page [Utiliser des dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) pour plus d'exemples.
 
 ## Spécifications
 
@@ -229,7 +231,7 @@ Voir la page [Utiliser des dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS
 
 ## Voir aussi
 
-- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Les autres fonctions de dégradés&nbsp;:
   - [`repeating-conic-gradient()`](/fr/docs/Web/CSS/gradient/repeating-conic-gradient)
   - [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient)

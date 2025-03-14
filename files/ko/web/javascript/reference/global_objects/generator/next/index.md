@@ -1,15 +1,6 @@
 ---
 title: Generator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/next
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Generator.next
 ---
 
 {{JSRef}}
@@ -57,10 +48,10 @@ function* gen() {
 }
 
 const g = gen(); // "Generator { }"
-g.next();      // "Object { value: 1, done: false }"
-g.next();      // "Object { value: 2, done: false }"
-g.next();      // "Object { value: 3, done: false }"
-g.next();      // "Object { value: undefined, done: true }"
+g.next(); // "Object { value: 1, done: false }"
+g.next(); // "Object { value: 2, done: false }"
+g.next(); // "Object { value: 3, done: false }"
+g.next(); // "Object { value: undefined, done: true }"
 ```
 
 ### 리스트와 함께 next() 사용하기
@@ -69,36 +60,37 @@ g.next();      // "Object { value: undefined, done: true }"
 
 ```js
 function* getPage(pageSize = 1, list) {
-    let output = [];
-    let index = 0;
+  let output = [];
+  let index = 0;
 
-    while (index < list.length) {
-        output = [];
-        for (let i = index; i < index + pageSize; i++) {
-            if (list[i]) {
-                output.push(list[i]);
-            }
-        }
-
-        yield output;
-        index += pageSize;
+  while (index < list.length) {
+    output = [];
+    for (let i = index; i < index + pageSize; i++) {
+      if (list[i]) {
+        output.push(list[i]);
+      }
     }
+
+    yield output;
+    index += pageSize;
+  }
 }
 
-list = [1, 2, 3, 4, 5, 6, 7, 8]
-let page = getPage(3, list);              // Generator { }
+list = [1, 2, 3, 4, 5, 6, 7, 8];
+let page = getPage(3, list); // Generator { }
 
-page.next();                              // Object {value: (3) [1, 2, 3], done: false}
-page.next();                              // Object {value: (3) [4, 5, 6], done: false}
-page.next();                              // Object {value: (2) [7, 8], done: false}
-page.next();                              // Object {value: undefined, done: true}
+page.next(); // Object {value: (3) [1, 2, 3], done: false}
+page.next(); // Object {value: (3) [4, 5, 6], done: false}
+page.next(); // Object {value: (2) [7, 8], done: false}
+page.next(); // Object {value: undefined, done: true}
 ```
 
 ### 제너레이터에 값 보내기
 
 이 예제에서는 값과 함께 `next`를 호출합니다.
 
-> **참고:** 제너레이터가 처음에는 아무것도 생성하지 않았기 때문에 첫 번째 호출에서 기록되는 것은 없습니다.
+> [!NOTE]
+> 제너레이터가 처음에는 아무것도 생성하지 않았기 때문에 첫 번째 호출에서 기록되는 것은 없습니다.
 
 ```js
 function* gen() {
@@ -127,4 +119,4 @@ g.next(2);
 ## 같이 보기
 
 - {{jsxref("Statements/function*", "function*")}}
-- [반복자와 제너레이터](/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [반복자와 제너레이터](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators)

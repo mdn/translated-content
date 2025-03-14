@@ -1,8 +1,8 @@
 ---
 title: Accept-Ranges
 slug: Web/HTTP/Headers/Accept-Ranges
-translation_of: Web/HTTP/Headers/Accept-Ranges
 ---
+
 {{HTTPSidebar}}
 
 **`Accept-Ranges`** 응답 HTTP 헤더는 부분 요청의 지원을 알리기 위해 서버에 의해 사용되는 표식입니다. 이 필드의 값은 범위를 정의하기 위해 사용될 수 있는 단위를 가리킵니다.

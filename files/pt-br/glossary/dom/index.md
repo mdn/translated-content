@@ -1,8 +1,9 @@
 ---
 title: DOM
 slug: Glossary/DOM
-original_slug: Glossario/DOM
 ---
+
+{{GlossarySidebar}}
 
 O Modelo de Objeto de Documentos (do inglês **Document Object Model, DOM**) é uma {{Glossary("API")}} definida pelo {{Glossary("W3C")}} para representar e interagir com qualquer documento {{Glossary("HTML")}} ou {{Glossary("XML")}}.
 
@@ -18,9 +19,9 @@ Hoje o W3C conduz a especificação do _DOM_; e o DOM Working Group está atualm
 
 ### Conhecimentos Gerais
 
-- {{interwiki("wikipedia", "Modelo de Objeto de Documentos", "DOM")}}
+- [DOM](https://pt.wikipedia.org/wiki/Modelo_de_Objeto_de_Documentos)
 
 ### Referência Técnica
 
-- [A Documentação DOM no MDN](/pt-BR/docs/DOM)
+- [A Documentação DOM no MDN](/pt-BR/docs/Web/API/Document_Object_Model)
 - [As várias especificações do DOM no W3C](https://www.w3.org/DOM/DOMTR)

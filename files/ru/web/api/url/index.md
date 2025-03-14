@@ -1,20 +1,9 @@
 ---
 title: URL
 slug: Web/API/URL
-tags:
-  - API
-  - URL API
-  - URL
-  - URI
-  - Address
-  - Hostname
-  - Domain
-  - Адрес
-  - Домен
-translation_of: Web/API/URL
 ---
 
-{{ApiRef("URL API")}}
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
 Интерфейс **`URL`** используется для разбора, создания, нормализации и кодирования {{glossary("URL", "URL-адресов")}}. Он предоставляет свойства, которые позволяют легко читать и изменять части URL-адреса.
 
@@ -75,7 +64,7 @@ translation_of: Web/API/URL
 Конструктор принимает один обязательный параметр — `url` и один необязательный параметр — `base`, который будет использован в качестве «основы», если параметр `url` это относительный URL-адрес:
 
 ```js
-const url = new URL('../cats', 'http://www.example.com/dogs');
+const url = new URL("../cats", "http://www.example.com/dogs");
 console.log(url.hostname); // "www.example.com"
 console.log(url.pathname); // "/cats"</pre>
 ```
@@ -83,14 +72,14 @@ console.log(url.pathname); // "/cats"</pre>
 Вы можете задавать значения свойствам объекта URL, чтобы изменять URL-адрес:
 
 ```js
-url.hash = 'tabby';
+url.hash = "tabby";
 console.log(url.href); // "http://www.example.com/cats#tabby"
 ```
 
 URL-адреса кодируются согласно стандарту {{RFC(3986)}}. Например:
 
 ```js
-url.pathname = 'démonstration.html';
+url.pathname = "démonstration.html";
 console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"
 ```
 
@@ -107,21 +96,23 @@ console.log(parsedUrl.searchParams.get("id")); // "123"
 Метод {{domxref("URL.toString", "toString()")}} лишь возвращает значение свойства {{domxref("URL.href", "href")}}. Благодаря этому, конструктор `URL` можно использовать для нормализации и кодирования URL-адреса.
 
 ```js
-const response = await fetch(new URL('http://www.example.com/démonstration.html'));
+const response = await fetch(
+  new URL("http://www.example.com/démonstration.html"),
+);
 ```
 
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - Полифил для `URL` доступен в [core-js](https://github.com/zloirock/core-js#url-and-urlsearchparams)
-- [URL API](/en-US/docs/Web/API/URL_API)
-- [Что такое URL-адрес?](/en-US/docs/Learn/Common_questions/What_is_a_URL)
+- [URL API](/ru/docs/Web/API/URL_API)
+- [Что такое URL-адрес?](/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 - Свойство для получения объекта `URL`: {{domxref("URL")}}.
 - {{domxref("URLSearchParams")}}.

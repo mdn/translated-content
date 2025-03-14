@@ -42,7 +42,7 @@ doSomething().then(successCallback, failureCallback);
 
 不如舊做法，一個 Promise 有這些保證：
 
-- Callback 不會在[當次的迴圈運行結束](/zh-TW/docs/Web/JavaScript/EventLoop#Run-to-completion)前呼叫。
+- Callback 不會在[當次的迴圈運行結束](/zh-TW/docs/Web/JavaScript/Reference/Execution_model#%e5%9f%b7%e8%a1%8c%e5%88%b0%e5%ae%8c%e6%88%90%ef%bc%88run-to-completion%ef%bc%89)前呼叫。
 - Callback 用 .then 添加，在非同步運算結束*後*呼叫，像前面那樣。
 - 複 Callback 可以透過重複呼叫 .then 達成。
 
@@ -71,46 +71,53 @@ let promise2 = doSomething().then(successCallback, failureCallback);
 
 在古時候，多個非同步函數會使用 Callback 方式，導致波動拳問題：
 
-_（原文 Pyramid of Doom 查無中文翻譯，以較常見之波動拳取代）_
-
 ```js
-doSomething(function(result) {
-  doSomethingElse(result, function(newResult) {
-    doThirdThing(newResult, function(finalResult) {
-      console.log('Got the final result: ' + finalResult);
-    }, failureCallback);
-  }, failureCallback);
+doSomething(function (result) {
+  doSomethingElse(
+    result,
+    function (newResult) {
+      doThirdThing(
+        newResult,
+        function (finalResult) {
+          console.log("Got the final result: " + finalResult);
+        },
+        failureCallback,
+      );
+    },
+    failureCallback,
+  );
 }, failureCallback);
 ```
 
 有了新方法，我們附加 Callback 到回傳的 Promise 上，來製造 _Promise 鏈_：
 
 ```js
-doSomething().then(function(result) {
-  return doSomethingElse(result);
-})
-.then(function(newResult) {
-  return doThirdThing(newResult);
-})
-.then(function(finalResult) {
-  console.log('Got the final result: ' + finalResult);
-})
-.catch(failureCallback);
+doSomething()
+  .then(function (result) {
+    return doSomethingElse(result);
+  })
+  .then(function (newResult) {
+    return doThirdThing(newResult);
+  })
+  .then(function (finalResult) {
+    console.log("Got the final result: " + finalResult);
+  })
+  .catch(failureCallback);
 ```
 
 `then` 的函數是選用的，以及 `catch(failureCallback)` 是 `then(null, failureCallback)` 的簡寫。你也許會想用[箭頭函數](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)取代：
 
 ```js
 doSomething()
-.then(result => doSomethingElse(result))
-.then(newResult => doThirdThing(newResult))
-.then(finalResult => {
-  console.log(`Got the final result: ${finalResult}`);
-})
-.catch(failureCallback);
+  .then((result) => doSomethingElse(result))
+  .then((newResult) => doThirdThing(newResult))
+  .then((finalResult) => {
+    console.log(`Got the final result: ${finalResult}`);
+  })
+  .catch(failureCallback);
 ```
 
-**注意：**永遠要回傳結果，否則 Callback 不會獲得前一個 Promise 的結果。
+**注意**：永遠要回傳結果，否則 Callback 不會獲得前一個 Promise 的結果。
 
 ### 獲錯後串接
 
@@ -118,21 +125,21 @@ doSomething()
 
 ```js
 new Promise((resolve, reject) => {
-    console.log('Initial');
+  console.log("Initial");
 
-    resolve();
+  resolve();
 })
-.then(() => {
-    throw new Error('Something failed');
+  .then(() => {
+    throw new Error("Something failed");
 
-    console.log('Do this');
-})
-.catch(() => {
-    console.log('Do that');
-})
-.then(() => {
-    console.log('Do this whatever happened before');
-});
+    console.log("Do this");
+  })
+  .catch(() => {
+    console.log("Do that");
+  })
+  .then(() => {
+    console.log("Do this whatever happened before");
+  });
 ```
 
 他會輸出：
@@ -151,10 +158,10 @@ Do this whatever happened before
 
 ```js
 doSomething()
-.then(result => doSomethingElse(result))
-.then(newResult => doThirdThing(newResult))
-.then(finalResult => console.log(`Got the final result: ${finalResult}`))
-.catch(failureCallback);
+  .then((result) => doSomethingElse(result))
+  .then((newResult) => doThirdThing(newResult))
+  .then((finalResult) => console.log(`Got the final result: ${finalResult}`))
+  .catch(failureCallback);
 ```
 
 基本上，一個 Promise 鏈遇到錯誤時會往下尋找 Catch 處理器。這是經過模組化的非同步程式：
@@ -165,7 +172,7 @@ try {
   let newResult = syncDoSomethingElse(result);
   let finalResult = syncDoThirdThing(newResult);
   console.log(`Got the final result: ${finalResult}`);
-} catch(error) {
+} catch (error) {
   failureCallback(error);
 }
 ```
@@ -179,13 +186,13 @@ async function foo() {
     let newResult = await doSomethingElse(result);
     let finalResult = await doThirdThing(newResult);
     console.log(`Got the final result: ${finalResult}`);
-  } catch(error) {
+  } catch (error) {
     failureCallback(error);
   }
 }
 ```
 
-這基於 Promise，例如 `doSomething()`和之前一樣。你可以閱讀在[這裡](https://developers.google.com/web/fundamentals/getting-started/primers/async-functions)閱讀更多。
+這基於 Promise，例如 `doSomething()` 和之前一樣。你可以閱讀在[這裡](/zh-TW/docs/Web/JavaScript/Reference/Statements/async_function)閱讀更多。
 
 Promise 藉由捕捉所有錯誤，包含例外和程式錯誤，解決了 Callback 地獄的缺點。這是非同步運算的基本特性。
 
@@ -204,9 +211,11 @@ setTimeout(() => saySomething("10 seconds passed"), 10000);
 幸運地，我們可以用 Promise 包裹他，最好盡可能的在最底層包裹，並永遠不要再直接呼叫他們：
 
 ```js
-const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-wait(10000).then(() => saySomething("10 seconds")).catch(failureCallback);
+wait(10000)
+  .then(() => saySomething("10 seconds"))
+  .catch(failureCallback);
 ```
 
 基本上，Promise 建構子需要一個運作函數來正規地處理或拒絕 Promise。但因為 `setTimeout` 不會失敗，所以我們捨棄 reject。
@@ -228,8 +237,11 @@ wait(10000).then(() => saySomething("10 seconds")).catch(failureCallback);
 這可以用可重用的構成函數完成，通常用函數式編程：
 
 ```js
-let applyAsync = (acc,val) => acc.then(val);
-let composeAsync = (...funcs) => x => funcs.reduce(applyAsync, Promise.resolve(x));
+let applyAsync = (acc, val) => acc.then(val);
+let composeAsync =
+  (...funcs) =>
+  (x) =>
+    funcs.reduce(applyAsync, Promise.resolve(x));
 ```
 
 `composeAsync` 接受任何數量的函數作為參數，並回傳一個接受一個初始值用來傳給組合的新函數。這個好處是無論其中函數是非同步或否，都會保證用正確的順序執行：
@@ -259,18 +271,20 @@ console.log(1); // 1, 2
 被傳入的函數會被放在子任務佇列而非立即執行，因此他會在當前的事件迴圈結束、佇列清空時執行，例如：
 
 ```js
-const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 wait().then(() => console.log(4));
-Promise.resolve().then(() => console.log(2)).then(() => console.log(3));
+Promise.resolve()
+  .then(() => console.log(2))
+  .then(() => console.log(3));
 console.log(1); // 1, 2, 3, 4
 ```
 
 ## 看更多
 
 - {{jsxref("Promise.then()")}}
-- [Promises/A+ 特色](http://promisesaplus.com/)
+- [Promises/A+ 特色](https://promisesaplus.com/)
 - [Venkatraman.R - JS Promise (Part 1, Basics)](https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53)
 - [Venkatraman.R - JS Promise (Part 2 - Using Q.js, When.js and RSVP.js)](https://medium.com/@ramsunvtech/js-promise-part-2-q-js-when-js-and-rsvp-js-af596232525c#.dzlqh6ski)
 - [Venkatraman.R - Tools for Promises Unit Testing](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction)
-- [Nolan Lawson: We have a problem with promises — Common mistakes with promises](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
+- [Nolan Lawson: We have a problem with promises — Common mistakes with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)

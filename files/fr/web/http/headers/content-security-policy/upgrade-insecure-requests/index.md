@@ -1,26 +1,14 @@
 ---
-title: 'CSP: upgrade-insecure-requests'
+title: "CSP: upgrade-insecure-requests"
 slug: Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - Sécurité
-  - Upgrade
-  - request
-  - requête
-  - upgrade-insecure-requests
-translation_of: Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
 ---
 
 {{HTTPSidebar}}
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`upgrade-insecure-requests`** informe l'agent utilisateur de traiter toutes les URL non sécurisées d'un site (servies avec HTTP) comme si elles avaient été remplacées par des URL sécurisées (servies avec HTTPS). Cette directive est prévue pour les sites web ayant un grand nombre d'URL non sécurisées héritées du passé et qui ont besoin d'être récrites.
 
-> **Note :** La directive `upgrade-insecure-requests` est évaluée avant la directive {{CSP("block-all-mixed-content")}} et si cette elle est définie, cette dernière est effectivement ignorée. Il est recommendé de ne définir que l'une des deux directives mais non les deux, à moins que vous souhaitiez forcer HTTPS sur les anciens navigateurs qui ne le font pas après une redirection vers HTTP.
+> [!NOTE]
+> La directive `upgrade-insecure-requests` est évaluée avant la directive {{CSP("block-all-mixed-content")}} et si cette elle est définie, cette dernière est effectivement ignorée. Il est recommendé de ne définir que l'une des deux directives mais non les deux, à moins que vous souhaitiez forcer HTTPS sur les anciens navigateurs qui ne le font pas après une redirection vers HTTP.
 
 The `upgrade-insecure-requests` directive will not ensure that users visiting your site via links on third-party sites will be upgraded to HTTPS for the top-level navigation and thus does not replace the {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}}) header, which should still be set with an appropriate `max-age` to ensure that users are not subject to SSL stripping attacks.
 
@@ -41,21 +29,23 @@ Content-Security-Policy: upgrade-insecure-requests;
 Et cette balise meta :
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<meta
+  http-equiv="Content-Security-Policy"
+  content="upgrade-insecure-requests" />
 ```
 
 Avec cet en-tête défini sur le domaine example.com voulant migrer d'HTTP à HTTPS, les requêtes pour des ressources non sécurisées et non navigationnelles sont automatiquement converties (qu'elles soient internes ou externes).
 
 ```html
-<img src="http://example.com/image.png">
-<img src="http://not-example.com/image.png">
+<img src="http://example.com/image.png" />
+<img src="http://not-example.com/image.png" />
 ```
 
 Ces URL seront récrites avant que la requête soit envoyée, signifiant qu'aucune requête non sécurisée ne sera envoyée. Notez que si la ressource demandée n'est pas actuellement disponible via HTTPS, la requête échouera sans se rabattre sur HTTP.
 
 ```html
-<img src="https://example.com/image.png">
-<img src="https://not-example.com/image.png">
+<img src="https://example.com/image.png" />
+<img src="https://not-example.com/image.png" />
 ```
 
 Les conversions navigationnelles vers des ressources externes amènent un risque significatif de dysfonctionnement étant donné que des requêtes peuvent n'être pas converties, par exemple celles-ci :

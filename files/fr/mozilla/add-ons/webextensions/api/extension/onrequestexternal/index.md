@@ -1,22 +1,12 @@
 ---
 title: extension.onRequestExternal
 slug: Mozilla/Add-ons/WebExtensions/API/extension/onRequestExternal
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extension
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onRequestExternal
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/onRequestExternal
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-> **Attention :** Ceci n'est pas implémenté dans Firefox car il est obsolète depuis Chrome 33. Veuillez utiliser [runtime.onMessageExternal](/fr/Add-ons/WebExtensions/API/runtime/onMessageExternal) à la place.
+> [!WARNING]
+> Ceci n'est pas implémenté dans Firefox car il est obsolète depuis Chrome 33. Veuillez utiliser [runtime.onMessageExternal](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal) à la place.
 
 Lancé lorsqu'une requête est envoyée depuis une autre extension.
 
@@ -62,15 +52,15 @@ Les événements ont trois fonctions :
     - `sendResponse`
       - : `function`. Fonction à appeler lorsque vous avez une réponse. L'argument doit être n'importe quel objet JSON-ifiable, ou undefined s'il n'y a pas de réponse.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.onRequestExternal")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/extensions/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

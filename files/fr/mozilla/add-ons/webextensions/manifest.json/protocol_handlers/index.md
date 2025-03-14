@@ -1,12 +1,6 @@
 ---
 title: protocol_handlers
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-  - manifest.json
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers
 ---
 
 {{AddonSidebar}}
@@ -56,7 +50,7 @@ Chaque gestionnaire de protocole possède trois propriétés, toutes obligatoire
 - `name`
   - : Une chaîne représentant le nom du gestionnaire de protocole. Il sera affiché à l'utilisateur lorsqu'il sera interrogé s'il souhaite que ce gestionnaire ouvre le lien.
 - `uriTemplate`
-  - : Une chaîne représentant l'URL du gestionnaire. Cette chaîne doit inclure "%s" comme espace réservé : il sera remplacé par l'URL échappée du document à traiter. Cette URL peut être une vraie URL, ou il peut s'agir d'un numéro de téléphone, d'une adresse de courrier électronique, etc. C'est une [propriété localisable](/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
+  - : Une chaîne représentant l'URL du gestionnaire. Cette chaîne doit inclure "%s" comme espace réservé : il sera remplacé par l'URL échappée du document à traiter. Cette URL peut être une vraie URL, ou il peut s'agir d'un numéro de téléphone, d'une adresse de courrier électronique, etc. C'est une [propriété localisable](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
 ## Exemple
 
@@ -70,7 +64,7 @@ Chaque gestionnaire de protocole possède trois propriétés, toutes obligatoire
 ]
 ```
 
-Les gestionnaires peuvent également être des [pages d'extension](/fr/Add-ons/WebExtensions/user_interface/Extension_pages).
+Les gestionnaires peuvent également être des [pages d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages).
 
 ```json
 "protocol_handlers": [
@@ -82,6 +76,6 @@ Les gestionnaires peuvent également être des [pages d'extension](/fr/Add-ons/W
 ]
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.protocol_handlers")}}
+{{Compat}}

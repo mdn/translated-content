@@ -1,12 +1,6 @@
 ---
 title: CSS Counter Styles
-slug: Web/CSS/CSS_Counter_Styles
-tags:
-  - Aperçu
-  - CSS
-  - CSS Counter Styles
-  - Reference
-translation_of: Web/CSS/CSS_Counter_Styles
+slug: Web/CSS/CSS_counter_styles
 ---
 
 {{cssref}}
@@ -36,7 +30,7 @@ translation_of: Web/CSS/CSS_Counter_Styles
 
 ## Guides
 
-- [Manipuler les compteurs CSS](/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+- [Manipuler les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
   - : Cet article décrit comment utiliser les compteurs CSS afin de numéroter des éléments HTML et de réaliser des comptages complexes.
 
 ## Spécifications

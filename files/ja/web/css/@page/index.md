@@ -1,5 +1,5 @@
 ---
-title: '@page'
+title: "@page"
 slug: Web/CSS/@page
 ---
 
@@ -30,7 +30,8 @@ slug: Web/CSS/@page
 
 `@page` アットルールには、 CSS オブジェクトモデルインターフェイスの {{domxref("CSSPageRule")}} からアクセスできます。
 
-> **メモ:** W3C は、ビューポートに関する {{cssxref("&lt;length&gt;")}} の単位、`vh`、`vw`、`vmin`、`vmax` の取り扱い方について議論中です。差し当たっては、これらを `@page` アットルールの中で使わないでください。
+> [!NOTE]
+> W3C は、ビューポートに関する {{cssxref("&lt;length&gt;")}} の単位、`vh`、`vw`、`vmin`、`vmax` の取り扱い方について議論中です。差し当たっては、これらを `@page` アットルールの中で使わないでください。
 
 ## 形式文法
 

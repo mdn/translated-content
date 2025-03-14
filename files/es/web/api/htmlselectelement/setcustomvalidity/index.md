@@ -21,10 +21,10 @@ selectElt.setCustomValidity(string);
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLSelectElement.setCustomValidity")}}
+{{Compat}}
 
 ## See also
 
-- [Form validation.](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Form validation.](/es/docs/Web/HTML/Constraint_validation)

@@ -9,11 +9,11 @@ slug: Web/API/Text/splitText
 
 如果指定的偏移量刚好等于原文本节点所包含字符串的长度，则返回一个内容为空的文本节点。
 
-分割后的文本节点还可以使用[`Node.normalize`](/zh-CN/docs/DOM/Node.normalize)方法来合并。
+分割后的文本节点还可以使用[`Node.normalize`](/zh-CN/docs/Web/API/Node/normalize)方法来合并。
 
 ## 语法
 
-```
+```js-nolint
 newNode = textNode.splitText(offset)
 ```
 
@@ -24,7 +24,7 @@ newNode = textNode.splitText(offset)
 
 ### 返回值
 
-返回一个新创建的 {{domxref("Text")}} 节点，该节点包含了 the text after the specified offset point.
+返回一个新创建的 {{domxref("Text")}} 节点，该节点包含了指定偏移量之后的文本。
 
 ### 异常
 
@@ -33,20 +33,20 @@ newNode = textNode.splitText(offset)
 - NO_MODIFICATION_ALLOWED_ERR
   - : 如果，原文本节点只读，则抛出这个异常。
 
-## 例子
+## 示例
 
 下面的例子中，一个 `<p>` 元素所包含的文本节点将会被分割成两个文本节点，然后在这两个节点中间插入一个 `<span>` 元素。
 
 ### HTML
 
 ```html
-  <p id="p">foobar</p>
+<p id="p">foobar</p>
 ```
 
 ### JavaScript
 
 ```js
-const  p = document.getElementById('p');
+const p = document.getElementById("p");
 
 // 将 <p> 的内容读取为一个文本节点
 const foobar = p.firstChild;
@@ -55,8 +55,8 @@ const foobar = p.firstChild;
 const bar = foobar.splitText(3);
 
 // 创建一个包含了内容为 ' new content ' 的文本节点的 <u> 元素
-const u = document.createElement('u');
-u.appendChild(document.createTextNode(' new content '));
+const u = document.createElement("u");
+u.appendChild(document.createTextNode(" new content "));
 
 // 将 <u> 元素插入到后一个文本节点 'bar' 的前面
 p.insertBefore(u, bar);
@@ -66,7 +66,7 @@ p.insertBefore(u, bar);
 
 ### 结果
 
-{{EmbedLiveSample("Example", 700, 70)}}
+{{EmbedLiveSample("示例", 700, 70)}}
 
 ## 规范
 
@@ -78,5 +78,5 @@ p.insertBefore(u, bar);
 
 ## 参见
 
-- The {{domxref("Text")}} interface it belongs to.
-- The opposite method: {{domxref("Node.normalize")}}.
+- 所属的接口：{{domxref("Text")}}。
+- 相反的方法：{{domxref("Node.normalize")}}。

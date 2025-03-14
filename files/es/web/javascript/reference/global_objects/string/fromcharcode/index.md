@@ -1,16 +1,9 @@
 ---
 title: String.fromCharCode()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
-tags:
-  - JavaScript
-  - Method
-  - String
-  - Unicode
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/fromCharCode
 ---
 
-{{JSRef("Objetos_globales", "String")}}
+{{JSRef}}
 
 ## Resumen
 
@@ -40,16 +33,16 @@ Debido a que `fromCharCode` es un método estático de `String`, usted siempre l
 El siguiene ejemplo devuelve la cadena "ABC".
 
 ```js
-String.fromCharCode(65,66,67)
+String.fromCharCode(65, 66, 67);
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.fromCharCode")}}
+{{Compat}}
 
 ## Vea También
 

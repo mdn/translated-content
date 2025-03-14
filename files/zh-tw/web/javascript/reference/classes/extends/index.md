@@ -7,7 +7,32 @@ slug: Web/JavaScript/Reference/Classes/extends
 
 **`extends`** 關鍵字被使用於[類別（class）宣告](/zh-TW/docs/Web/JavaScript/Reference/Statements/class)或[類別（class）表達式](/zh-TW/docs/Web/JavaScript/Reference/Operators/class)中來建立擴展的子類別 。
 
-{{EmbedInteractiveExample("pages/js/classes-extends.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Classes Extends", "taller")}}
+
+```js interactive-example
+class DateFormatter extends Date {
+  getFormattedDate() {
+    const months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    return `${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
+  }
+}
+
+console.log(new DateFormatter("August 19, 1975 23:15:30").getFormattedDate());
+// Expected output: "19-Aug-1975"
+```
 
 ## 語法
 
@@ -35,7 +60,7 @@ class Square extends Polygon {
     super(length, length);
     // Note: In derived classes, super() must be called before you
     // can use 'this'. Leaving this out will cause a reference error.
-    this.name = 'Square';
+    this.name = "Square";
   }
 
   get area() {
@@ -55,8 +80,23 @@ class myDate extends Date {
   }
 
   getFormattedDate() {
-    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    return this.getDate() + '-' + months[this.getMonth()] + '-' + this.getFullYear();
+    var months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    return (
+      this.getDate() + "-" + months[this.getMonth()] + "-" + this.getFullYear()
+    );
   }
 }
 ```
@@ -71,7 +111,7 @@ class nullExtends extends null {
 }
 
 Object.getPrototypeOf(nullExtends); // Function.prototype
-Object.getPrototypeOf(nullExtends.prototype) // null
+Object.getPrototypeOf(nullExtends.prototype); // null
 
 new nullExtends(); //ReferenceError: this is not defined
 ```

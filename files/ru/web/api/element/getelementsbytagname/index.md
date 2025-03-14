@@ -1,12 +1,11 @@
 ---
 title: Element.getElementsByTagName()
 slug: Web/API/Element/getElementsByTagName
-translation_of: Web/API/Element/getElementsByTagName
 ---
 
 {{ APIRef("DOM") }}
 
-**`Element.getElementsByTagName()`** метод возвращает живую коллекцию элементов {{domxref("HTMLCollection")}} , учитывая [имя тэга](/en/DOM/element.tagName). Поиск осуществляется в поддереве указанного элемента, в результат поиска не попадает сам элемент, в поддереве которого осуществлялся поиск. Возвращает живой список, который автоматически обновляется при изменении DOM. Поэтому не нужно вызывать метод `Element.getElementsByTagName()` несколько раз с одними и теми же аргументами, содержимое списка обновляется автоматически.
+**`Element.getElementsByTagName()`** метод возвращает живую коллекцию элементов {{domxref("HTMLCollection")}} , учитывая [имя тэга](/en-US/DOM/element.tagName). Поиск осуществляется в поддереве указанного элемента, в результат поиска не попадает сам элемент, в поддереве которого осуществлялся поиск. Возвращает живой список, который автоматически обновляется при изменении DOM. Поэтому не нужно вызывать метод `Element.getElementsByTagName()` несколько раз с одними и теми же аргументами, содержимое списка обновляется автоматически.
 
 При вызове на HTML-элементе в HTML-документе метод `getElementsByTagName` переводит аргумент по которому осуществляется поиск (имя тега) в нижний регистр до того как начать поиск. Это нежелательно, когда необходимо использовать метод для поиска SVG элементов, где в наименовании тега может использоваться верблюжья (camel-cased) нотация. В этом случае правильно использовать метод {{ domxref("Element.getElementsByTagNameNS()") }}.
 
@@ -29,10 +28,10 @@ elements = element.getElementsByTagName(tagName)
 var table = document.getElementById("forecast-table");
 var cells = table.getElementsByTagName("td");
 for (var i = 0; i < cells.length; i++) {
-    var status = cells[i].getAttribute("data-status");
-    if ( status == "open" ) {
-        // grab the data
-    }
+  var status = cells[i].getAttribute("data-status");
+  if (status == "open") {
+    // grab the data
+  }
 }
 ```
 
@@ -40,6 +39,6 @@ for (var i = 0; i < cells.length; i++) {
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}

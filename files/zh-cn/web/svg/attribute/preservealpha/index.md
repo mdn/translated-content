@@ -3,7 +3,7 @@ title: preserveAlpha
 slug: Web/SVG/Attribute/preserveAlpha
 ---
 
-« [SVG 属性参考](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
 `preserveAlpha` 属性表示{{ SVGElement("feConvolveMatrix") }} 元素怎样处透明度。
 
@@ -11,7 +11,7 @@ slug: Web/SVG/Attribute/preserveAlpha
 
 取值为 `true` 表示 feConvolveMatrix 仅应用在颜色通道。
 
-## 用法
+## 使用说明
 
 | 类别   | None              |
 | ------ | ----------------- |

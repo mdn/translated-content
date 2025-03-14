@@ -1,5 +1,5 @@
 ---
-title: ':fullscreen'
+title: :fullscreen
 slug: Web/CSS/:fullscreen
 ---
 
@@ -24,7 +24,8 @@ div:fullscreen {
 }
 ```
 
-> **Nota:** La especificación W3C usa la palabra única `:fullscreen`, sin guiones, pero las implementaciones experimentales de WebKit y Gecko usan una variante prefijada con dos palabras separadas por un guión: `:-webkit-full-screen` y `:-moz-full-screen`, respectivamente. Microsoft Edge e Internet Explorer utilizan la convención estándar: `:fullscreen` y `:-ms-fullscreen`, respectivamente.
+> [!NOTE]
+> La especificación W3C usa la palabra única `:fullscreen`, sin guiones, pero las implementaciones experimentales de WebKit y Gecko usan una variante prefijada con dos palabras separadas por un guión: `:-webkit-full-screen` y `:-moz-full-screen`, respectivamente. Microsoft Edge e Internet Explorer utilizan la convención estándar: `:fullscreen` y `:-ms-fullscreen`, respectivamente.
 
 ## Sintaxis
 
@@ -37,29 +38,34 @@ div:fullscreen {
 ```html
 <div id="fullscreen">
   <h1>Demostración :fullscreen</h1>
-  <p>Este texto se pondrá grande y rojo cuando el navegador esté en modo de pantalla completa.</p>
+  <p>
+    Este texto se pondrá grande y rojo cuando el navegador esté en modo de
+    pantalla completa.
+  </p>
   <button id="fullscreen-button">Entrar en pantalla completa</button>
 </div>
 ```
 
 ```js hidden
 var fullscreenButton = document.getElementById("fullscreen-button");
-var fullscreenDiv    = document.getElementById("fullscreen");
-var fullscreenFunc   = fullscreenDiv.requestFullscreen;
+var fullscreenDiv = document.getElementById("fullscreen");
+var fullscreenFunc = fullscreenDiv.requestFullscreen;
 
 if (!fullscreenFunc) {
-  ['mozRequestFullScreen',
-   'msRequestFullscreen',
-   'webkitRequestFullScreen'].forEach(function (req) {
-     fullscreenFunc = fullscreenFunc || fullscreenDiv[req];
-   });
+  [
+    "mozRequestFullScreen",
+    "msRequestFullscreen",
+    "webkitRequestFullScreen",
+  ].forEach(function (req) {
+    fullscreenFunc = fullscreenFunc || fullscreenDiv[req];
+  });
 }
 
 function enterFullscreen() {
   fullscreenFunc.call(fullscreenDiv);
 }
 
-fullscreenButton.addEventListener('click', enterFullscreen);
+fullscreenButton.addEventListener("click", enterFullscreen);
 ```
 
 ```css hidden
@@ -104,7 +110,7 @@ fullscreenButton.addEventListener('click', enterFullscreen);
 #fullscreen:fullscreen {
   padding: 42px;
   background-color: pink;
-  border:2px solid #f00;
+  border: 2px solid #f00;
   font-size: 200%;
 }
 
@@ -131,11 +137,11 @@ fullscreenButton.addEventListener('click', enterFullscreen);
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.fullscreen")}}
+{{Compat}}
 
 ## Ver también
 
 - [Usando el modo de pantalla completa](/es/docs/Web/API/Fullscreen_API)
 - {{cssxref("::backdrop")}}
 - DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreen") }}, {{ domxref("Document.fullscreenElement") }}
-- Atributo {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+- Atributo [`allowfullscreen`](/es/docs/Web/HTML/Element/iframe#allowfullscreen)

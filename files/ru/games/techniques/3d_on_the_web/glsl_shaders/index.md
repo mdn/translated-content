@@ -1,13 +1,6 @@
 ---
 title: GLSL Шейдеры
 slug: Games/Techniques/3D_on_the_web/GLSL_Shaders
-tags:
-  - GLSL
-  - OpenGL
-  - Shader
-  - three.js
-  - Шейдер
-translation_of: Games/Techniques/3D_on_the_web/GLSL_Shaders
 ---
 
 {{GamesSidebar}}
@@ -38,7 +31,8 @@ The calculations result in a variable containing the information about the RGBA 
 
 Let's build a simple demo to explain those shaders in action. Be sure to read [Three.js tutorial](/ru/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) first to grasp the concept of the scene, its objects, and materials.
 
-> **Примечание:** Remember that you don't have to use Three.js or any other library to write your shaders — pure [WebGL](/ru/docs/Web/API/WebGL_API) (Web Graphics Library) is more than enough. We've used Three.js here to make the background code a lot simpler and clearer to understand, so you can just focus on the shader code. Three.js and other 3D libraries abstract a lot of things for you — if you wanted to create such an example in raw WebGL, you'd have to write a lot of extra code to actually make it work.
+> [!NOTE]
+> Remember that you don't have to use Three.js or any other library to write your shaders — pure [WebGL](/ru/docs/Web/API/WebGL_API) (Web Graphics Library) is more than enough. We've used Three.js here to make the background code a lot simpler and clearer to understand, so you can just focus on the shader code. Three.js and other 3D libraries abstract a lot of things for you — if you wanted to create such an example in raw WebGL, you'd have to write a lot of extra code to actually make it work.
 
 ### Настройка окружения
 
@@ -53,28 +47,35 @@ Let's build a simple demo to explain those shaders in action. Be sure to read [T
 Мы будем использовать следующую структуру HTML кода.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>MDN Games: Shaders demo</title>
-  <style>
-    body { margin: 0; padding: 0; font-size: 0; }
-    canvas { width: 100%; height: 100%; }
-  </style>
-  <script src="three.min.js"></script>
-</head>
-<body>
-  <script id="vertexShader" type="x-shader/x-vertex">
-  // vertex shader's code goes here
-  </script>
-  <script id="fragmentShader" type="x-shader/x-fragment">
-  // fragment shader's code goes here
-  </script>
-  <script>
-  // scene setup goes here
-  </script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>MDN Games: Shaders demo</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+      }
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <script src="three.min.js"></script>
+  </head>
+  <body>
+    <script id="vertexShader" type="x-shader/x-vertex">
+      // vertex shader's code goes here
+    </script>
+    <script id="fragmentShader" type="x-shader/x-fragment">
+      // fragment shader's code goes here
+    </script>
+    <script>
+      // scene setup goes here
+    </script>
+  </body>
 </html>
 ```
 
@@ -104,7 +105,8 @@ void main() {
 
 The resulting `gl_Position` is calculated by multiplying the model-view and the projection matrices by each vector to get the final vertex position, in each case.
 
-> **Примечание:** You can learn more about _model_, _view_, and _projection transformations_ from the [vertex processing paragraph](/ru/docs/Games/Techniques/3D_on_the_web/Basic_theory#Vertex_processing), and you can also check out the links at the end of this article to learn more about it.
+> [!NOTE]
+> You can learn more about _model_, _view_, and _projection transformations_ from the [vertex processing paragraph](/ru/docs/Games/Techniques/3D_on_the_web/Basic_theory#Vertex_processing), and you can also check out the links at the end of this article to learn more about it.
 
 Both `projectionMatrix` and `modelViewMatrix` are provided by Three.js and the vector is passed with the new 3D position, which results in the original cube moving 10 units along the `x` axis and 5 units along the `z` axis, translated via a shader. We can ignore the fourth parameter and leave it with the default `1.0` value; this is used to manipulate the clipping of the vertex position in the 3D space, but we don't need in our case.
 
@@ -128,12 +130,12 @@ To actually apply the newly created shaders to the cube, comment out the `basicM
 // var basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
 ```
 
-Далее, создаём [`shaderMaterial`](http://threejs.org/docs/#Reference/Materials/ShaderMaterial):
+Далее, создаём [`shaderMaterial`](https://threejs.org/docs/#Reference/Materials/ShaderMaterial):
 
 ```js
-var shaderMaterial = new THREE.ShaderMaterial( {
-  vertexShader: document.getElementById( 'vertexShader' ).textContent,
-  fragmentShader: document.getElementById( 'fragmentShader' ).textContent
+var shaderMaterial = new THREE.ShaderMaterial({
+  vertexShader: document.getElementById("vertexShader").textContent,
+  fragmentShader: document.getElementById("fragmentShader").textContent,
 });
 ```
 
@@ -164,62 +166,69 @@ It looks exactly the same as the Three.js cube demo but the slightly different p
 ```html
 <script src="https://end3r.github.io/MDN-Games-3D/Shaders/js/three.min.js"></script>
 <script id="vertexShader" type="x-shader/x-vertex">
-    void main() {
-        gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x+10.0, position.y, position.z+5.0, 1.0);
-    }
+  void main() {
+      gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x+10.0, position.y, position.z+5.0, 1.0);
+  }
 </script>
 <script id="fragmentShader" type="x-shader/x-fragment">
-    void main() {
-        gl_FragColor = vec4(0.0, 0.58, 0.86, 1.0);
-    }
+  void main() {
+      gl_FragColor = vec4(0.0, 0.58, 0.86, 1.0);
+  }
 </script>
 ```
 
 ### JavaScript
 
 ```js
-    var WIDTH = window.innerWidth;
-    var HEIGHT = window.innerHeight;
+var WIDTH = window.innerWidth;
+var HEIGHT = window.innerHeight;
 
-    var renderer = new THREE.WebGLRenderer({antialias:true});
-    renderer.setSize(WIDTH, HEIGHT);
-    renderer.setClearColor(0xDDDDDD, 1);
-    document.body.appendChild(renderer.domElement);
+var renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(WIDTH, HEIGHT);
+renderer.setClearColor(0xdddddd, 1);
+document.body.appendChild(renderer.domElement);
 
-    var scene = new THREE.Scene();
+var scene = new THREE.Scene();
 
-    var camera = new THREE.PerspectiveCamera(70, WIDTH/HEIGHT);
-    camera.position.z = 50;
-    scene.add(camera);
+var camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT);
+camera.position.z = 50;
+scene.add(camera);
 
-    var boxGeometry = new THREE.BoxGeometry(10, 10, 10);
+var boxGeometry = new THREE.BoxGeometry(10, 10, 10);
 
-    var shaderMaterial = new THREE.ShaderMaterial( {
-        vertexShader: document.getElementById( 'vertexShader' ).textContent,
-        fragmentShader: document.getElementById( 'fragmentShader' ).textContent
-    });
+var shaderMaterial = new THREE.ShaderMaterial({
+  vertexShader: document.getElementById("vertexShader").textContent,
+  fragmentShader: document.getElementById("fragmentShader").textContent,
+});
 
-    var cube = new THREE.Mesh(boxGeometry, shaderMaterial);
-    scene.add(cube);
-    cube.rotation.set(0.4, 0.2, 0);
+var cube = new THREE.Mesh(boxGeometry, shaderMaterial);
+scene.add(cube);
+cube.rotation.set(0.4, 0.2, 0);
 
-    function render() {
-        requestAnimationFrame(render);
-        renderer.render(scene, camera);
-    }
-    render();
+function render() {
+  requestAnimationFrame(render);
+  renderer.render(scene, camera);
+}
+render();
 ```
 
 ### CSS
 
 ```css
-body { margin: 0; padding: 0; font-size: 0; }
-canvas { width: 100%; height: 100%; }
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+canvas {
+  width: 100%;
+  height: 100%;
+}
 ```
 
 ### Результат
 
-{{ EmbedLiveSample('Финальный_вариант', '100%', '400', '', 'Games/Techniques/3D_on_the_web/GLSL_Shaders') }}
+{{ EmbedLiveSample('Финальный_вариант') }}
 
 ## Заключение
 
@@ -228,4 +237,4 @@ This article has taught the very basics of shaders. Our example doesn't do much 
 ## Смотрите также
 
 - [Изучение WebGL](http://learningwebgl.com/blog/?page_id=1217) — for general WebGL knowledge
-- [WebGL шейдеры и GLSL основы](http://webglfundamentals.org/webgl/lessons/webgl-shaders-and-glsl.html) — for GLSL specific information
+- [WebGL шейдеры и GLSL основы](https://webglfundamentals.org/webgl/lessons/webgl-shaders-and-glsl.html) — for GLSL specific information

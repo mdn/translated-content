@@ -1,8 +1,6 @@
 ---
 title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
-translation_of: Web/API/RTCPeerConnection
-browser-compat: api.RTCPeerConnection
 ---
 
 {{APIRef('WebRTC')}}
@@ -18,7 +16,7 @@ L'interface **`RTCPeerConnection`** représente une connexion WebRTC entre un or
 
 ## Méthodes statiques
 
-- [`generateCertificate()`](/fr/docs/Web/API/RTCPeerConnection/generateCertificate)
+- [`generateCertificate()`](/fr/docs/Web/API/RTCPeerConnection/generateCertificate_static)
   - : Crée un certificat X.509 et la clé privée correspondante. Cette méthode renvoie une [promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) dont la valeur de résolution sera le nouvel objet [`RTCCertificate`](/fr/docs/Web/API/RTCCertificate) une fois généré.
 
 ## Propriétés
@@ -56,30 +54,30 @@ _Cette interface hérite également des propriétés de [`EventTarget`](/fr/docs
 
 _Cette interface hérite des gestionnaires d'évènements de [`EventTarget`](/fr/docs/Web/API/EventTarget)._
 
-- [`onconnectionstatechange`](/fr/docs/Web/API/RTCPeerConnection/onconnectionstatechange)
+- [`onconnectionstatechange`](/fr/docs/Web/API/RTCPeerConnection/connectionstatechange_event)
   - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) appelé pour gérer l'évènement {{DOMxRef("RTCPeerConnection/connectionstatechange_event", "connectionstatechange")}}. Cet évènement se produit lorsque l'état aggrégé de la connexion évolue. L'état aggrégé correspond à la combinaison des états de l'ensemble des transports de réseau individuel utilisés par la connexion
-- [`ondatachannel`](/fr/docs/Web/API/RTCPeerConnection/ondatachannel)
+- [`ondatachannel`](/fr/docs/Web/API/RTCPeerConnection/datachannel_event)
   - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement {{DOMxRef("RTCPeerConnection/datachannel_event", "datachannel")}}. Cet évènement de type [`RTCDataChannelEvent`](/fr/docs/Web/API/RTCDataChannelEvent) est envoyé lorsqu'un canal [`RTCDataChannel`](/fr/docs/Web/API/RTCDataChannel) est ajouté à la connexion par le pair distant qui a appelé [`createDataChannel()`](/fr/docs/Web/API/RTCPeerConnection/createDataChannel).
-- [`onicecandidate`](/fr/docs/Web/API/RTCPeerConnection/onicecandidate)
+- [`onicecandidate`](/fr/docs/Web/API/RTCPeerConnection/icecandidate_event)
   - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement {{DOMxRef("RTCPeerConnection/icecandidate_event", "icecandidate")}}. Cela se produit lorsque l'agent [ICE](/fr/docs/Glossary/ICE) local a besoin de délivrer un message à l'autre pair via le serveur de signal.
-- [`onicecandidateerror`](/fr/docs/Web/API/RTCPeerConnection/onicecandidateerror)
+- [`onicecandidateerror`](/fr/docs/Web/API/RTCPeerConnection/icecandidateerror_event)
   - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement {{DOMxRef("RTCPeerConnection/icecandidateerror_event", "icecandidateerror")}}. Cet évènement est déclenché lorsqu'une erreur se produit lors du processus de collecte des candidats [ICE](/fr/docs/Glossary/ICE).
-- [`oniceconnectionstatechange`](/fr/docs/Web/API/RTCPeerConnection/oniceconnectionstatechange)
+- [`oniceconnectionstatechange`](/fr/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event)
   - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement {{DOMxRef("RTCPeerConnection/iceconnectionstatechange_event", "iceconnectionstatechange")}}. Cela se produit lorsque l'agent [ICE](/fr/docs/Glossary/ICE) local a besoin de délivrer un message à l'autre pair via le serveur de signal.
-- [`onicegatheringstatechange`](/fr/docs/Web/API/RTCPeerConnection/onicegatheringstatechange)
+- [`onicegatheringstatechange`](/fr/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event)
   - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement {{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}}. Cela se produit lorsque l'état de collecte [ICE](/fr/docs/Glossary/ICE) évolue.
-- [`onnegotiationneeded`](/fr/docs/Web/API/RTCPeerConnection/onnegotiationneeded)
+- [`onnegotiationneeded`](/fr/docs/Web/API/RTCPeerConnection/negotiationneeded_event)
   - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}}. Cet évènement est déclenché lorsqu'un changement a eu lieu et qui nécessite une négociation de session. La négociation devrait être menée par le requêtant, car certaines modifications de sessions ne peuvent pas être négociés par le répondant.
-- [`onsignalingstatechange`](/fr/docs/Web/API/RTCPeerConnection/onsignalingstatechange)
+- [`onsignalingstatechange`](/fr/docs/Web/API/RTCPeerConnection/signalingstatechange_event)
   - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement {{DOMxRef("RTCPeerConnection/signalingstatechange_event", "signalingstatechange")}}. La fonction reçoit en entrée un évènement qui est celui envoyé lorsque l'état [`signalingState`](/fr/docs/Web/API/RTCPeerConnection/signalingState) du pair de la connexion change. Cela peut avoir lieu suite à un appel à [`setLocalDescription()`](/fr/docs/Web/API/RTCPeerConnection/setLocalDescription) ou à [`setRemoteDescription()`](/fr/docs/Web/API/RTCPeerConnection/setRemoteDescription).
-- [`ontrack`](/fr/docs/Web/API/RTCPeerConnection/ontrack)
+- [`ontrack`](/fr/docs/Web/API/RTCPeerConnection/track_event)
   - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement {{DOMxRef("RTCPeerConnection/track_event", "track")}}. L'évènement reçu en argument de la fonction est de type [`RTCTrackEvent`](/fr/docs/Web/API/RTCTrackEvent). Cet évènement est envoyé lorsqu'un nouvel objet entrant [`MediaStreamTrack`](/fr/docs/Web/API/MediaStreamTrack) a été créé et associé avec un objet [`RTCRtpReceiver`](/fr/docs/Web/API/RTCRtpReceiver) ajouté à l'ensemble des destinataires de la connexion.
 
 ### Propriétés obsolètes
 
-- [`onaddstream`](/fr/docs/Web/API/RTCPeerConnection/onaddstream) {{deprecated_inline}}
+- [`onaddstream`](/fr/docs/Web/API/RTCPeerConnection/addstream_event) {{deprecated_inline}}
   - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement obsolète {{DOMxRef("RTCPeerConnection/addstream_event", "addstream")}}.
-- [`onremovestream`](/fr/docs/Web/API/RTCPeerConnection/onremovestream) {{deprecated_inline}}
+- [`onremovestream`](/fr/docs/Web/API/RTCPeerConnection/removestream_event) {{deprecated_inline}}
   - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement obsolète {{DOMxRef("RTCPeerConnection/removestream_event", "removestream")}}.
 
 ## Méthodes
@@ -101,7 +99,7 @@ _Cette interface hérite également des méthodes de [`EventTarget`](/fr/docs/We
 - [`createOffer()`](/fr/docs/Web/API/RTCPeerConnection/createOffer)
   - : Initie la création d'une offre [SDP](/fr/docs/Glossary/SDP) afin de démarrer une nouvelle connexion WebRTC avec un pair distant. L'offre SDP inclut des informations à propos des éventuels objets [`MediaStreamTrack`](/fr/docs/Web/API/MediaStreamTrack) déjà attachés à la session WebRTC, des codecs, des options prises en charge par le navigateur ainsi que sur les éventuels candidats déjà collectés par l'agent [ICE](/fr/docs/Glossary/ICE) afin de pouvoir envoyer ces informations via le canal de signalement à un pair potentiel pour demander une connexion ou mettre à jour la configuration d'une connexion existante.
 - [`getConfiguration()`](/fr/docs/Web/API/RTCPeerConnection/getConfiguration)
-  - : Renvoie un objet [`RTCConfiguration`](/fr/docs/Web/API/RTCConfiguration) qui indique la configuration courante de la connexion.
+  - : Renvoie un objet [`RTCConfiguration`](/fr/docs/Web/API/RTCPeerConnection/RTCPeerConnection) qui indique la configuration courante de la connexion.
 - [`getIdentityAssertion()`](/fr/docs/Web/API/RTCPeerConnection/getIdentityAssertion)
   - : Initie la collecte d'une assertion d'identité et renvoie une [promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue en l'assertion d'identité encodée dans une chaîne de caractères. Cette méthode aura un effet uniquement si [`signalingState`](/fr/docs/Web/API/RTCPeerConnection/signalingState) ne vaut pas `closed`.
 - [`getReceivers()`](/fr/docs/Web/API/RTCPeerConnection/getReceivers)
@@ -117,7 +115,7 @@ _Cette interface hérite également des méthodes de [`EventTarget`](/fr/docs/We
 - [`restartIce()`](/fr/docs/Web/API/RTCPeerConnection/restartIce)
   - : Permet de demander facilement une nouvelle collecte de candidats ICE à chaque extrémité de la connexion. Cela simplifie le processus en permettant à l'appelant ou au recevant d'utiliser la même méthode pour déclencher un redémarrage [ICE](/fr/docs/Glossary/ICE).
 - [`setConfiguration()`](/fr/docs/Web/API/RTCPeerConnection/setConfiguration)
-  - : Définit la configuration courante de la connexion en fonction des valeurs incluses dans l'objet [`RTCConfiguration`](/fr/docs/Web/API/RTCConfiguration) passé en argument. Cela permet de modifier les serveurs [ICE](/fr/docs/Glossary/ICE) utilisés par la connexion ainsi que les règles de transport utilisées.
+  - : Définit la configuration courante de la connexion en fonction des valeurs incluses dans l'objet [`RTCConfiguration`](/fr/docs/Web/API/RTCPeerConnection/RTCPeerConnection) passé en argument. Cela permet de modifier les serveurs [ICE](/fr/docs/Glossary/ICE) utilisés par la connexion ainsi que les règles de transport utilisées.
 - [`setIdentityProvider()`](/fr/docs/Web/API/RTCPeerConnection/setIdentityProvider)
 
   - : Définit le fournisseur d'identité (
@@ -137,7 +135,7 @@ _Cette interface hérite également des méthodes de [`EventTarget`](/fr/docs/We
   - : Ajoute un objet [`MediaStream`](/fr/docs/Web/API/MediaStream) comme source audio ou vidéo locale. La méthode [`addTrack()`](/fr/docs/Web/API/RTCPeerConnection/addTrack) devrait être utilisée à la place pour chaque piste qu'on souhaite envoyer au pair distant.
 - [`createDTMFSender()`](/fr/docs/Web/API/RTCPeerConnection/createDTMFSender) {{deprecated_inline}}
   - : Crée un nouvel émetteur [`RTCDTMFSender`](/fr/docs/Web/API/RTCDTMFSender) associé à une piste [`MediaStreamTrack`](/fr/docs/Web/API/MediaStreamTrack) spécifique et qui est capable d'envoyer des signaux téléphoniques [DTMF](/fr/docs/Glossary/DTMF) via la connexion.
-- [`getStreamById()`](/fr/docs/Web/API/RTCPeerConnection/getStreamById) {{deprecated_inline}}
+- [`getStreamById()`](/fr/docs/Web/API/RTCPeerConnection) {{deprecated_inline}}
   - : Renvoie l'objet [`MediaStream`](/fr/docs/Web/API/MediaStream) ayant l'identifiant indiqué qui est associé à l'extrémité locale ou distante de la connexion. Cette propriété a été remplacée par les méthodes [`getSenders()`](/fr/docs/Web/API/RTCPeerConnection/getSenders) et [`getReceivers()`](/fr/docs/Web/API/RTCPeerConnection/getReceivers).
 - [`removeStream()`](/fr/docs/Web/API/RTCPeerConnection/removeStream) {{deprecated_inline}}
   - : Supprime un flux [`MediaStream`](/fr/docs/Web/API/MediaStream) qui est une source audio ou vidéo locale. Cette méthode est obsolète, on doit privilégier [`removeTrack()`](/fr/docs/Web/API/RTCPeerConnection/removeTrack) à la place.
@@ -147,30 +145,30 @@ _Cette interface hérite également des méthodes de [`EventTarget`](/fr/docs/We
 On pourra intercepter ces évènements grâce à [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) ou en affectant un gestionnaire d'évènement sur la propriété `onnomEvenement` de cette interface.
 
 - [`connectionstatechange`](/fr/docs/Web/API/RTCPeerConnection/connectionstatechange_event)
-  - : Envoyé lorsque l'état de connectivité global de la connexion `RTCPeerConnection` évolue. Également disponible via la propriété de gestion d'évènement [`onconnectionstatechange`](/fr/docs/Web/API/RTCPeerConnection/onconnectionstatechange).
+  - : Envoyé lorsque l'état de connectivité global de la connexion `RTCPeerConnection` évolue. Également disponible via la propriété de gestion d'évènement [`onconnectionstatechange`](/fr/docs/Web/API/RTCPeerConnection/connectionstatechange_event).
 - [`datachannel`](/fr/docs/Web/API/RTCPeerConnection/datachannel_event)
-  - : Envoyé lorsque le pair distant ajoute un canal [`RTCDataChannel`](/fr/docs/Web/API/RTCDataChannel) à la connexion. Également disponible via la propriété de gestion d'évènement [`ondatachannel`](/fr/docs/Web/API/RTCPeerConnection/ondatachannel).
+  - : Envoyé lorsque le pair distant ajoute un canal [`RTCDataChannel`](/fr/docs/Web/API/RTCDataChannel) à la connexion. Également disponible via la propriété de gestion d'évènement [`ondatachannel`](/fr/docs/Web/API/RTCPeerConnection/datachannel_event).
 - [`icecandidate`](/fr/docs/Web/API/RTCPeerConnection/icecandidate_event)
-  - : Envoyé afin de demander à ce que le candidat indiqué soit transmis au pair distant. Également disponible via la propriété de gestion d'évènement [`onicecandidate`](/fr/docs/Web/API/RTCPeerConnection/onicecandidate).
+  - : Envoyé afin de demander à ce que le candidat indiqué soit transmis au pair distant. Également disponible via la propriété de gestion d'évènement [`onicecandidate`](/fr/docs/Web/API/RTCPeerConnection/icecandidate_event).
 - [`icecandidateerror`](/fr/docs/Web/API/RTCPeerConnection/icecandidateerror_event)
-  - : Envoyé à la connexion si une erreur se produit lors de la collecte des candidats [ICE](/fr/docs/Glossary/ICE). L'évènement décrit l'erreur. Également disponible via la propriété de gestion d'évènement [`onicecandidateerror`](/fr/docs/Web/API/RTCPeerConnection/onicecandidateerror).
+  - : Envoyé à la connexion si une erreur se produit lors de la collecte des candidats [ICE](/fr/docs/Glossary/ICE). L'évènement décrit l'erreur. Également disponible via la propriété de gestion d'évènement [`onicecandidateerror`](/fr/docs/Web/API/RTCPeerConnection/icecandidateerror_event).
 - [`iceconnectionstatechange`](/fr/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event)
-  - : Envoyé lorsque l'état de la connexion [ICE](/fr/docs/Glossary/ICE) change (par exemple lorsqu'elle se déconnecte). Également disponible via la propriété de gestion d'évènement [`oniceconnectionstatechange`](/fr/docs/Web/API/RTCPeerConnection/oniceconnectionstatechange).
+  - : Envoyé lorsque l'état de la connexion [ICE](/fr/docs/Glossary/ICE) change (par exemple lorsqu'elle se déconnecte). Également disponible via la propriété de gestion d'évènement [`oniceconnectionstatechange`](/fr/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event).
 - [`icegatheringstatechange`](/fr/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event)
-  - : Envoyé lorsque l'état de collecte des couches [ICE](/fr/docs/Glossary/ICE), tel que reflété par [`iceGatheringState`](/fr/docs/Web/API/RTCPeerConnection/iceGatheringState), évolue. Cela indique si la négociation ICE n'a pas encore commencé (`new`), a commencé la collecte des candidats (`gathering`) ou si elle est terminée (`complete`). Également disponible via la propriété de gestion d'évènement [`onicegatheringstatechange`](/fr/docs/Web/API/RTCPeerConnection/onicegatheringstatechange).
+  - : Envoyé lorsque l'état de collecte des couches [ICE](/fr/docs/Glossary/ICE), tel que reflété par [`iceGatheringState`](/fr/docs/Web/API/RTCPeerConnection/iceGatheringState), évolue. Cela indique si la négociation ICE n'a pas encore commencé (`new`), a commencé la collecte des candidats (`gathering`) ou si elle est terminée (`complete`). Également disponible via la propriété de gestion d'évènement [`onicegatheringstatechange`](/fr/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event).
 - [`negotiationneeded`](/fr/docs/Web/API/RTCPeerConnection/negotiationneeded_event)
-  - : Envoyé lorsqu'une négociation ou de la renégociation de la connexion [ICE](/fr/docs/Glossary/ICE) doit être réalisée. Cela peut se produire à l'ouverture d'une connexion mais aussi lorsqu'il est nécessaire de s'adapter à des conditions réseau changeantes. Le récepteur devrait répondre en créant une offre et en l'envoyant à l'autre pair. Également disponible via la propriété de gestion d'évènement [`onnegotiationneeded`](/fr/docs/Web/API/RTCPeerConnection/onnegotiationneeded).
+  - : Envoyé lorsqu'une négociation ou de la renégociation de la connexion [ICE](/fr/docs/Glossary/ICE) doit être réalisée. Cela peut se produire à l'ouverture d'une connexion mais aussi lorsqu'il est nécessaire de s'adapter à des conditions réseau changeantes. Le récepteur devrait répondre en créant une offre et en l'envoyant à l'autre pair. Également disponible via la propriété de gestion d'évènement [`onnegotiationneeded`](/fr/docs/Web/API/RTCPeerConnection/negotiationneeded_event).
 - [`signalingstatechange`](/fr/docs/Web/API/RTCPeerConnection/signalingstatechange_event)
-  - : Envoyé lorsque l'état de signal [ICE](/fr/docs/Glossary/ICE) de la connexion change. Également disponible via la propriété de gestion d'évènement [`onsignalingstatechange`](/fr/docs/Web/API/RTCPeerConnection/onsignalingstatechange).
+  - : Envoyé lorsque l'état de signal [ICE](/fr/docs/Glossary/ICE) de la connexion change. Également disponible via la propriété de gestion d'évènement [`onsignalingstatechange`](/fr/docs/Web/API/RTCPeerConnection/signalingstatechange_event).
 - [`track`](/fr/docs/Web/API/RTCPeerConnection/track_event)
-  - : Envoyé après qu'une nouvelle piste ait été ajoutée à une des instances [`RTCRtpReceiver`](/fr/docs/Web/API/RTCRtpReceiver) faisant partie de la connexion. Également disponible via la propriété de gestion d'évènement [`ontrack`](/fr/docs/Web/API/RTCPeerConnection/ontrack).
+  - : Envoyé après qu'une nouvelle piste ait été ajoutée à une des instances [`RTCRtpReceiver`](/fr/docs/Web/API/RTCRtpReceiver) faisant partie de la connexion. Également disponible via la propriété de gestion d'évènement [`ontrack`](/fr/docs/Web/API/RTCPeerConnection/track_event).
 
 ### Évènements obsolètes
 
 - [`addstream`](/fr/docs/Web/API/RTCPeerConnection/addstream_event) {{deprecated_inline}}
-  - : Envoyé lorsqu'un nouveau flux [`MediaStream`](/fr/docs/Web/API/MediaStream) a été ajouté à la connexion. Plutôt que d'écouter cet évènement obsolète, on privilégiera les évènements [`track`](/fr/docs/Web/API/RTCPeerConnection/track_event). Un tel évènement est envoyé pour chaque piste [`MediaStreamTrack`](/fr/docs/Web/API/MediaStreamTrack) ajoutée à la connexion. Également disponible via la propriété [`onaddstream`](/fr/docs/Web/API/RTCPeerConnection/onaddstream).
+  - : Envoyé lorsqu'un nouveau flux [`MediaStream`](/fr/docs/Web/API/MediaStream) a été ajouté à la connexion. Plutôt que d'écouter cet évènement obsolète, on privilégiera les évènements [`track`](/fr/docs/Web/API/RTCPeerConnection/track_event). Un tel évènement est envoyé pour chaque piste [`MediaStreamTrack`](/fr/docs/Web/API/MediaStreamTrack) ajoutée à la connexion. Également disponible via la propriété [`onaddstream`](/fr/docs/Web/API/RTCPeerConnection/addstream_event).
 - [`removestream`](/fr/docs/Web/API/RTCPeerConnection/removestream_event) {{deprecated_inline}}
-  - : Envoyé lorsqu'un flux [`MediaStream`](/fr/docs/Web/API/MediaStream) est retiré de la connexion. Plutôt que d'écouter cet évènement obsolète, on privilégiera les évènements [`removetrack`](/fr/docs/Web/API/MediaStream/removetrack_event) pour chaque flux. Également disponible via la propriété [`onremovestream`](/fr/docs/Web/API/RTCPeerConnection/onremovestream).
+  - : Envoyé lorsqu'un flux [`MediaStream`](/fr/docs/Web/API/MediaStream) est retiré de la connexion. Plutôt que d'écouter cet évènement obsolète, on privilégiera les évènements [`removetrack`](/fr/docs/Web/API/MediaStream/removetrack_event) pour chaque flux. Également disponible via la propriété [`onremovestream`](/fr/docs/Web/API/RTCPeerConnection/removestream_event).
 
 ## Spécifications
 

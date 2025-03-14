@@ -21,7 +21,7 @@ Les types de sélecteurs de la liste suivante sont présentés dans l'ordre de s
 2. [Sélecteurs de classe](/fr/docs/Web/CSS/Class_selectors) (ex. `.exemple`), sélecteurs d'attributs (ex. `[type="radio"]`) et pseudo-classes (ex. `:hover`).
 3. [Sélecteurs d'identifiant](/fr/docs/Web/CSS/ID_selectors) (ex. `#exemple`).
 
-Sélecteur universel ({{CSSxRef("Universal_selectors", "*")}}), combinateurs ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/fr/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) et pseudo-classe de négation ({{CSSxRef(":not", ":not()")}}) n'ont aucun effet sur la spécificité (cependant, les sélecteurs déclarés _à l’intérieur de_ `:not()` ont un effet).
+Sélecteur universel ({{CSSxRef("Universal_selectors", "*")}}), combinateurs ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/fr/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) et pseudo-classe de négation ({{CSSxRef(":not", ":not()")}}) n'ont aucun effet sur la spécificité (cependant, les sélecteurs déclarés _à l'intérieur de_ `:not()` ont un effet).
 
 Pour davantage d'informations, veuillez visiter&nbsp;: ["Spécificité" dans "Cascade et héritage"](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#spécificité_2), vous pouvez également visiter&nbsp;: <https://specifishity.com>
 
@@ -43,26 +43,36 @@ Lorsqu'une règle `important` est utilisée dans une déclaration de style, cett
 1. Utiliser mieux la cascade CSS
 2. Utiliser davantage des règles spécifiques. En indiquant un ou plusieurs éléments avant l'élément sélectionné, la règle devient plus spécifique et sa priorité est accrue&nbsp;:
 
-    ```html
-    <div id="test">
-      <span>Texte</span>
-    </div>
-    ```
+   ```html
+   <div id="test">
+     <span>Texte</span>
+   </div>
+   ```
 
-    ```css
-    div#test span { color: green; }
-    div span { color: blue; }
-    span { color: red; }
-    ```
+   ```css
+   div#test span {
+     color: green;
+   }
+   div span {
+     color: blue;
+   }
+   span {
+     color: red;
+   }
+   ```
 
-    L'ordre n'a aucune importance, le texte sera en vert (_green_) car cette règle est plus spécifique. (Également, la règle pour bleu est prioritaire par rapport à celle pour rouge, là encore l'ordre n'a pas d'importance)
+   L'ordre n'a aucune importance, le texte sera en vert (_green_) car cette règle est plus spécifique. (Également, la règle pour bleu est prioritaire par rapport à celle pour rouge, là encore l'ordre n'a pas d'importance)
 
 3. En rapport avec le point 2, le fait de dupliquer des sélecteurs simples afin d''augmenter la spécificité lorsque vous n'avez aucun autre moyen de le faire, n'a aucun sens.
 
-    ```css
-    #monId#monId span { color: yellow; }
-    .maClasse.maClasse span { color: orange; }
-    ```
+   ```css
+   #monId#monId span {
+     color: yellow;
+   }
+   .maClasse.maClasse span {
+     color: orange;
+   }
+   ```
 
 #### Utilisation de !important
 
@@ -105,14 +115,23 @@ A) Ajouter une autre règle CSS avec `!important` et, soit donner au sélecteur 
 Quelques exemples avec une spécificité accrue&nbsp;:
 
 ```css
-table td    { height: 50px !important; }
-.monTableau td { height: 50px !important; }
-#monTableau td { height: 50px !important; }
+table td {
+  height: 50px !important;
+}
+.monTableau td {
+  height: 50px !important;
+}
+#monTableau td {
+  height: 50px !important;
+}
+```
 
 B) Ou ajouter le même sélecteur après le sélecteur existant&nbsp;:
 
 ```css
-td { height: 50px !important; }
+td {
+  height: 50px !important;
+}
 ```
 
 C) Ou, de préférence, réécrire la règle d'origine afin d'éviter totalement l'utilisation de `!important`.
@@ -125,10 +144,11 @@ C) Ou, de préférence, réécrire la règle d'origine afin d'éviter totalement
 p.genial {
   color: red;
 }
+```
 
 Inclure un identifiant comme un sélecteur d'attribut au lieu d'un sélecteur d'identifiant (`#someElement`) lui donne la même spécificité qu'une classe. Les deux sélecteurs ci-dessus ont à présent la même importance. Lors d'une égalité de spécificité, la dernière règle définie est prise en compte.
 
-#### Pour davantage d'informations, visiter&nbsp;:
+#### Pour davantage d'informations, visiter
 
 - <https://stackoverflow.com/questions/3706819/what-are-the-implications-of-using-important-in-css>
 - <https://stackoverflow.com/questions/9245353/what-does-important-in-css-mean>
@@ -198,7 +218,12 @@ div p {
 
 ```html hidden
 <div id="no-where-support">
-⚠️ Votre navigateur ne prend pas en charge la pseudo-classe <code><a href="https://developer.mozilla.org/docs/Web/CSS/:where" target="_top">:where()</a></code>.
+  ⚠️ Votre navigateur ne prend pas en charge la pseudo-classe
+  <code
+    ><a href="https://developer.mozilla.org/docs/Web/CSS/:where" target="_top"
+      >:where()</a
+    ></code
+  >.
 </div>
 ```
 
@@ -209,6 +234,7 @@ div p {
     <p>Ce texte est dans la div interne.</p>
   </div>
 </div>
+```
 
 &hellip;s'affiche sur l'écran ainsi&nbsp;:
 
@@ -240,7 +266,7 @@ Les styles CSS suivants&hellip;
 
 {{EmbedLiveSample("spécificité_liée_à_la_forme")}}
 
-Cela est dû au fait qu’il corresponde au même élément mais que le sélecteur d’identifiant a une spécificité plus haute.
+Cela est dû au fait qu'il corresponde au même élément mais que le sélecteur d'identifiant a une spécificité plus haute.
 
 ### Ignorance de la proximité dans l'arborescence
 
@@ -313,11 +339,11 @@ Ceci est dû au fait que le sélecteur `h1` cible l'élément spécifiquement, m
 - Concepts clés de CSS&nbsp;:
   - [Syntaxe CSS](/fr/docs/Web/CSS/Syntax)
   - [Spécificité](/fr/docs/Web/CSS/Specificity)
-  - [Héritage](/fr/docs/Web/CSS/inheritance)
+  - [Héritage](/fr/docs/Web/CSS/Inheritance)
   - [Modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
   - [Modes d'affichage](/fr/docs/Web/CSS/Layout_mode)
   - [Modèles de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
-  - [Fusion des marges](/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Valeurs
     - [Initiales](/fr/docs/Web/CSS/initial_value)
     - [Calculées](/fr/docs/Web/CSS/computed_value)

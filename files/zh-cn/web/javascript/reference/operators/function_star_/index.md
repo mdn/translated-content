@@ -5,9 +5,25 @@ slug: Web/JavaScript/Reference/Operators/function*
 
 {{jsSidebar("Operators")}}
 
-**`function*`**关键字可以在表达式内部定义一个生成器函数。
+**`function*`** 关键字可以在表达式内部定义一个生成器函数。
 
-{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - function* expression")}}
+
+```js interactive-example
+const foo = function* () {
+  yield "a";
+  yield "b";
+  yield "c";
+};
+
+let str = "";
+for (const val of foo()) {
+  str = str + val;
+}
+
+console.log(str);
+// Expected output: "abc"
+```
 
 ## 语法
 
@@ -35,8 +51,8 @@ function* [name]([param1[, param2[, ..., paramN]]]) {
 下面的示例定义了一个未命名的生成器函数并把它赋值给`x`。函数产出它的传入参数的平方：
 
 ```js
-var x = function*(y) {
-   yield y * y;
+var x = function* (y) {
+  yield y * y;
 };
 ```
 
@@ -48,14 +64,10 @@ var x = function*(y) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Statements/function*", "function* statement")}}
-- {{jsxref("GeneratorFunction")}} 对象
-- [The Iterator protocol](/zh-CN/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("GeneratorFunction")}}
+- [迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
-- {{jsxref("Function")}} 对象
-- {{jsxref("Statements/function", "function statement")}}
-- {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}

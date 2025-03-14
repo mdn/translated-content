@@ -1,8 +1,8 @@
 ---
 title: setter
 slug: Web/JavaScript/Reference/Functions/set
-translation_of: Web/JavaScript/Reference/Functions/set
 ---
+
 {{jsSidebar("Functions")}}
 
 Оператор **`set`** связывает свойство объекта с функцией, которая будет вызвана при попытке установить это свойство.
@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Functions/set
 Обратите внимание на следующие моменты при работе с синтаксисом `set`:
 
 - Он может иметь идентификатор, который является либо числом, либо строкой;
-- Он должен иметь ровно один параметр (смотрите [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) для более подробной информации);
+- Он должен иметь ровно один параметр (смотрите [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) для более подробной информации);
 - Он не должен объявляться в литерале объекта, с другим набором или вводом данных для того же самого свойства.
   ( `{ set x(v) { }, set x(v) { } }` и `{ x: ..., set x(v) { } }` запрещены)
 
@@ -47,18 +47,18 @@ translation_of: Web/JavaScript/Reference/Functions/set
 
 ```js
 var o = {
-  set current (str) {
+  set current(str) {
     this.log[this.log.length] = str;
   },
-  log: []
-}
+  log: [],
+};
 ```
 
 `обратите внимание, что current` не определён и любые попытки доступа к нему вернут `undefined`.
 
 ### Удаление сеттера оператором `delete`
 
-Если вы хотите удалить сеттер, вы можете просто его [`удалить`](/en-US/docs/Web/JavaScript/Reference/Operators/delete):
+Если вы хотите удалить сеттер, вы можете просто его [`удалить`](/ru/docs/Web/JavaScript/Reference/Operators/delete):
 
 ```js
 delete o.current;
@@ -69,12 +69,16 @@ delete o.current;
 Чтобы добавить сеттер на существующий объект в любое время, используйте {{jsxref("Object.defineProperty()")}}.
 
 ```js
-var o = { a:0 };
+var o = { a: 0 };
 
-Object.defineProperty(o, "b", { set: function (x) { this.a = x / 2; } });
+Object.defineProperty(o, "b", {
+  set: function (x) {
+    this.a = x / 2;
+  },
+});
 
 o.b = 10; // Запускает сеттер, который присваивает 10 / 2 (5) свойству 'a'
-console.log(o.a) // 5
+console.log(o.a); // 5
 ```
 
 ### Использование вычисляемого имени свойства
@@ -84,11 +88,13 @@ var expr = "foo";
 
 var obj = {
   baz: "bar",
-  set [expr](v) { this.baz = v; }
+  set [expr](v) {
+    this.baz = v;
+  },
 };
 
 console.log(obj.baz); // "bar"
-obj.foo = "baz";      // запускает сеттер
+obj.foo = "baz"; // запускает сеттер
 console.log(obj.baz); // "baz"
 ```
 
@@ -96,7 +102,7 @@ console.log(obj.baz); // "baz"
 
 {{Specifications}}
 
-**Совместимость с браузерами**
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -105,6 +111,6 @@ console.log(obj.baz); // "baz"
 - [getter](/ru/docs/Web/JavaScript/Reference/Functions/get)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
-- [Defining Getters and Setters](/ru/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) в руководстве по JavaScript
+- [`Object.prototype.__defineGetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
+- [Defining Getters and Setters](/ru/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters) в руководстве по JavaScript

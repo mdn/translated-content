@@ -1,16 +1,11 @@
 ---
 title: Access-Control-Request-Headers
 slug: Web/HTTP/Headers/Access-Control-Request-Headers
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - header
-translation_of: Web/HTTP/Headers/Access-Control-Request-Headers
 ---
+
 {{HTTPSidebar}}
 
-요청 헤더 **`Access-Control-Request-Headers`**는 실제 요청이 만들어질 때 클라이언트가 보낼 수도 있는 [HTTP headers](/ko/docs/Web/HTTP/Headers)를 서버에게 알리기 위해 브라우저가 {{glossary("preflight request")}}를 발급(issue)할 때 사용됩니다.
+요청 헤더 **`Access-Control-Request-Headers`** 는 실제 요청이 만들어질 때 클라이언트가 보낼 수도 있는 [HTTP headers](/ko/docs/Web/HTTP/Headers)를 서버에게 알리기 위해 브라우저가 {{glossary("preflight request")}}를 발급(issue)할 때 사용됩니다.
 
 <table class="properties">
   <tbody>
@@ -48,7 +43,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Access-Control-Request-Headers")}}
+{{Compat}}
 
 ## 더보기
 

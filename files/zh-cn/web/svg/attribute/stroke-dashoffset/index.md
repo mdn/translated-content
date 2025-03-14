@@ -1,33 +1,123 @@
 ---
 title: stroke-dashoffset
 slug: Web/SVG/Attribute/stroke-dashoffset
+l10n:
+  sourceCommit: a7615ee2f9e22946edff7633962bc1d9eee9e0ad
 ---
 
-« [SVG](/zh-CN/SVG/Attribute)属性参考主页
+{{SVGRef}}
 
-`stroke-dashoffset` 属性指定了 dash 模式到路径开始的距离
+**`stroke-dashoffset`** 是一种表现属性，它定义了虚线与路径起点之间的偏移量。
 
-如果使用了一个 [<百分比>](/zh-CN/SVG/Content_type#Percentage) 值，那么这个值就代表了当前 viewport 的一个百分比。
+> [!NOTE]
+> 作为一个表现属性，`stroke-dashoffset` 可以用作 CSS 属性。
 
-值可以取为负值。
+你可以将此属性与以下 SVG 元素一起使用：
 
-## 使用环境
-
-| 类别   | 显示属性                                                                                              |
-| ------ | ----------------------------------------------------------------------------------------------------- |
-| 值     | [\<percentage>](/zh-CN/SVG/Content_type#Percentage) \| [\<length>](/zh-CN/SVG/Content_type#Length) \| inherit |
-| 初始值 | 1                                                                                                     |
-| 可动画 | Yes                                                                                                   |
+- {{SVGElement('circle')}}
+- {{SVGElement('ellipse')}}
+- {{SVGElement('path')}}
+- {{SVGElement('line')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
 
 ## 示例
 
-## 元素
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
 
-以下元素可使用 stroke-dashoffset 属性
+```html
+<svg viewBox="-3 0 33 10" xmlns="http://www.w3.org/2000/svg">
+  <!-- 没有设置为虚线 -->
+  <line x1="0" y1="1" x2="30" y2="1" stroke="black" />
 
-- [形状元素](/zh-CN/SVG/Element#Shape) »
-- [文本内容元素](/zh-CN/SVG/Element#TextContent) »
+  <!-- 没有设置偏移量 -->
+  <line x1="0" y1="3" x2="30" y2="3" stroke="black" stroke-dasharray="3 1" />
+
+  <!-- 虚线正向偏移了 3 个单位 -->
+  <line
+    x1="0"
+    y1="5"
+    x2="30"
+    y2="5"
+    stroke="black"
+    stroke-dasharray="3 1"
+    stroke-dashoffset="3" />
+
+  <!-- 虚线反向偏移了 3 个单位 -->
+  <line
+    x1="0"
+    y1="7"
+    x2="30"
+    y2="7"
+    stroke="black"
+    stroke-dasharray="3 1"
+    stroke-dashoffset="-3" />
+
+  <!-- 虚线正向偏移了 1 个单位，最终渲染结果和上一个例子相同 -->
+  <line
+    x1="0"
+    y1="9"
+    x2="30"
+    y2="9"
+    stroke="black"
+    stroke-dasharray="3 1"
+    stroke-dashoffset="1" />
+
+  <!-- 底下的红线突显了每行虚线的偏移量 -->
+  <path d="M0,5 h-3 M0,7 h3 M0,9 h-1" stroke="rgb(255 0 0 / 50%)" />
+</svg>
+```
+
+{{EmbedLiveSample("示例", '100%', 200)}}
+
+## 使用说明
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">值</th>
+      <td>
+        <strong
+          ><a href="/zh-CN/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/zh-CN/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">默认值</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">可动画化</th>
+      <td>是</td>
+    </tr>
+  </tbody>
+</table>
+
+偏移量的计算通常基于 {{SVGAttr('pathLength')}}，但如果使用 [\<percentage>](/zh-CN/docs/Web/SVG/Content_type#百分数) 值，那么将根据当前视口的百分比进行计算。
 
 ## 规范
 
 {{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}

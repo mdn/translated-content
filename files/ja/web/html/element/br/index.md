@@ -1,17 +1,41 @@
 ---
-title: '<br>: 改行要素'
+title: "<br>: 改行要素"
 slug: Web/HTML/Element/br
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
 
-**HTML の `<br>` 要素** は、文中に改行（キャリッジリターン）を生成します。詩や住所など、行の分割が重要な場合に有用です。
+**`<br>`** は [HTML](/ja/docs/Web/HTML) の要素で、文中に改行（キャリッジリターン）を生成します。詩や住所など、行の分割が重要な場合に有用です。
 
-{{EmbedInteractiveExample("pages/tabbed/br.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;br&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>
+  O’er all the hilltops<br />
+  Is quiet now,<br />
+  In all the treetops<br />
+  Hearest thou<br />
+  Hardly a breath;<br />
+  The birds are asleep in the trees:<br />
+  Wait, soon like these<br />
+  Thou too shalt rest.
+</p>
+```
+
+```css interactive-example
+p {
+  font-size: 1rem;
+  font-family: sans-serif;
+  margin: 20px;
+}
+```
 
 上記の例に見られるように、 `<br>` 要素はテキストを改行したい場所にそれぞれ含められます。 `<br>` の後のテキストは、テキストブロックの次の行の先頭から再開されます。
 
-> **メモ:** 段落の間を開けるために `<br>` を使わないでください。それぞれを {{htmlelement("p")}} 要素で囲み、 [CSS](/ja/docs/Web/CSS) の {{cssxref('margin')}} プロパティで間隔を制御してください。
+> [!NOTE]
+> 段落の間を開けるために `<br>` を使わないでください。それぞれを {{htmlelement("p")}} 要素で囲み、 [CSS](/ja/docs/Web/CSS) の {{cssxref('margin')}} プロパティで間隔を制御してください。
 
 ## 属性
 
@@ -19,7 +43,7 @@ slug: Web/HTML/Element/br
 
 ### 非推奨の属性
 
-- {{htmlattrdef("clear")}}
+- `clear`
   - : 改行後の次の行を開始する場所を示します。
 
 ## CSS でのスタイル付け
@@ -35,16 +59,16 @@ slug: Web/HTML/Element/br
 以下の例では `<br>` を使用して、住所のそれぞれの行の間に改行を生成しています。
 
 ```html
-Mozilla<br>
-331 E. Evelyn Avenue<br>
-Mountain View, CA<br>
-94041<br>
-USA<br>
+Mozilla<br />
+331 E. Evelyn Avenue<br />
+Mountain View, CA<br />
+94041<br />
+USA<br />
 ```
 
 以下のように出力されます。
 
-{{ EmbedLiveSample('Simple_br', '100%', '90') }}
+{{ EmbedLiveSample('Simple_br', 640, 120) }}
 
 ## アクセシビリティの考慮
 
@@ -58,7 +82,7 @@ USA<br>
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
@@ -70,9 +94,7 @@ USA<br>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
-      <td>
-        なし。これは{{Glossary("empty element", "空要素")}}です。
-      </td>
+      <td>なし。これは{{Glossary("void element", "空要素")}}です。</td>
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
@@ -84,9 +106,7 @@ USA<br>
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a
-          href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
-          title="HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
@@ -102,7 +122,7 @@ USA<br>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("none")}}, {{ARIARole("presentation")}}
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -118,7 +138,7 @@ USA<br>
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.br")}}
+{{Compat}}
 
 ## 関連情報
 

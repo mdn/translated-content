@@ -7,30 +7,38 @@ slug: Web/SVG/Element/line
 
 `line`元素是一个 SVG 基本形状，用来创建一条连接两个点的线。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
 ## 示例
 
-» [line.svg](/files/3254/line.svg)
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
 
-你可以应用变形以得到同样的结果。从一条常见的线开始：
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <line x1="0" y1="80" x2="100" y2="20" stroke="black" />
 
-» [line1.svg](/files/3345/line1.svg)
+  <!-- 如果不指定描边颜色，则无法看见线条 -->
+</svg>
+```
 
-添加变形选项以改变线的方向：
-
-» [line2.svg](/files/3346/line2.svg)
+{{EmbedLiveSample('示例', 100, 100)}}
 
 ## 属性
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/zh-CN/docs/Web/SVG/Attribute#Core) »
-- [图形事件属性](/zh-CN/docs/Web/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/zh-CN/docs/Web/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/Web/SVG/Attribute#graphicalevent) »
+- [外观属性](/zh-CN/docs/Web/SVG/Attribute#presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}
@@ -51,7 +59,7 @@ slug: Web/SVG/Element/line
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{SVGElement("polygon")}}
 - {{SVGElement("path")}}

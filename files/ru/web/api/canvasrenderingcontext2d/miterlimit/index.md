@@ -1,15 +1,16 @@
 ---
 title: CanvasRenderingContext2D.miterLimit
 slug: Web/API/CanvasRenderingContext2D/miterLimit
-translation_of: Web/API/CanvasRenderingContext2D/miterLimit
 ---
+
 {{APIRef}}
 
 Свойство **CanvasRenderingContext2D.miterLimit** устанавливает/возвращает максимальную длину среза.
 
 Длина среза это расстояние между внутренним и внешнем углом, образованным пересечением двух линий.
 
-> **Примечание:** For more info about miters, see [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas tutorial](/ru/docs/Web/API/Canvas_API/Tutorial).
+> [!NOTE]
+> For more info about miters, see [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas tutorial](/ru/docs/Web/API/Canvas_API/Tutorial).
 
 ## Синтаксис
 
@@ -26,7 +27,7 @@ ctx.miterLimit = число;
 
 ### Using the `miterLimit` property
 
-See the chapter [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#A_demo_of_the_miterLimit_property) in the [Canvas tutorial](/ru/docs/Web/API/Canvas_API/Tutorial) for more information.
+See the chapter [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#a_demo_of_the_miterlimit_property) in the [Canvas tutorial](/ru/docs/Web/API/Canvas_API/Tutorial) for more information.
 
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
@@ -39,7 +40,8 @@ ctx.beginPath();
 ctx.moveTo(0,0);
 ctx.lineWidth = 15;
 ctx.lineTo(100, 100);
-ctx.stroke();</textarea>
+ctx.stroke();</textarea
+>
 ```
 
 ```js hidden
@@ -55,38 +57,30 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{EmbedLiveSample("Демонстрация_свойства_miterLimit", "400", "180", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
+{{EmbedLiveSample("Using_the_miterLimit_property", "100%", "400", "canvas_miterlimit.png")}}
 
 ## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-### WebKit/Blink-specific notes
-
-- In WebKit- and Blink-based Browsers, a non-standard and deprecated method `ctx.setMiterLimit()` is implemented in addition to this property.
-
-### Gecko-specific notes
-
-- Starting Gecko 2.0 {{geckoRelease("2.0")}}, setting `miterLimit` to a negative value no longer throws an exception; instead, it properly ignores non-positive values.
-
-## See also
+## Смотрите также
 
 - Интерфейс, определяющий это свойство: {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.lineCap")}}

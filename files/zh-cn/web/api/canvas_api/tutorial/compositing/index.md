@@ -3,7 +3,7 @@ title: 组合 Compositing
 slug: Web/API/Canvas_API/Tutorial/Compositing
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
 在[之前的例子](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Transformations)里面，我们总是将一个图形画在另一个之上，对于其他更多的情况，仅仅这样是远远不够的。比如，对合成的图形来说，绘制顺序会有限制。不过，我们可以利用 `globalCompositeOperation` 属性来改变这种状况。此外，`clip`属性允许我们隐藏不想看到的部分图形。
 
@@ -13,10 +13,6 @@ slug: Web/API/Canvas_API/Tutorial/Compositing
 
 - {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}
   - : 这个属性设定了在画新图形时采用的遮盖策略，其值是一个标识 12 种遮盖方式的字符串。
-
-查看下面[Compositing 示例](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing/Example)的代码。
-
-{{EmbedLiveSample("合成示例", 750, 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
 
 ## 裁切路径
 
@@ -33,50 +29,51 @@ slug: Web/API/Canvas_API/Tutorial/Compositing
 
 默认情况下，canvas 有一个与它自身一样大的裁切路径（也就是没有裁切效果）。
 
-### `clip` 的例子
+### `clip` 的示例
 
 这个例子，我会用一个圆形的裁切路径来限制随机星星的绘制区域。
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.fillRect(0,0,150,150);
-  ctx.translate(75,75);
+  var ctx = document.getElementById("canvas").getContext("2d");
+  ctx.fillRect(0, 0, 150, 150);
+  ctx.translate(75, 75);
 
   // Create a circular clipping path
   ctx.beginPath();
-  ctx.arc(0,0,60,0,Math.PI*2,true);
+  ctx.arc(0, 0, 60, 0, Math.PI * 2, true);
   ctx.clip();
 
   // draw background
-  var lingrad = ctx.createLinearGradient(0,-75,0,75);
-  lingrad.addColorStop(0, '#232256');
-  lingrad.addColorStop(1, '#143778');
+  var lingrad = ctx.createLinearGradient(0, -75, 0, 75);
+  lingrad.addColorStop(0, "#232256");
+  lingrad.addColorStop(1, "#143778");
 
   ctx.fillStyle = lingrad;
-  ctx.fillRect(-75,-75,150,150);
+  ctx.fillRect(-75, -75, 150, 150);
 
   // draw stars
-  for (var j=1;j<50;j++){
+  for (var j = 1; j < 50; j++) {
     ctx.save();
-    ctx.fillStyle = '#fff';
-    ctx.translate(75-Math.floor(Math.random()*150),
-                  75-Math.floor(Math.random()*150));
-    drawStar(ctx,Math.floor(Math.random()*4)+2);
+    ctx.fillStyle = "#fff";
+    ctx.translate(
+      75 - Math.floor(Math.random() * 150),
+      75 - Math.floor(Math.random() * 150),
+    );
+    drawStar(ctx, Math.floor(Math.random() * 4) + 2);
     ctx.restore();
   }
-
 }
-function drawStar(ctx,r){
+function drawStar(ctx, r) {
   ctx.save();
-  ctx.beginPath()
-  ctx.moveTo(r,0);
-  for (var i=0;i<9;i++){
-    ctx.rotate(Math.PI/5);
-    if(i%2 == 0) {
-      ctx.lineTo((r/0.525731)*0.200811,0);
+  ctx.beginPath();
+  ctx.moveTo(r, 0);
+  for (var i = 0; i < 9; i++) {
+    ctx.rotate(Math.PI / 5);
+    if (i % 2 == 0) {
+      ctx.lineTo((r / 0.525731) * 0.200811, 0);
     } else {
-      ctx.lineTo(r,0);
+      ctx.lineTo(r, 0);
     }
   }
   ctx.closePath();
@@ -97,6 +94,6 @@ draw();
 
 裁切路径创建之后所有出现在它里面的东西才会画出来。在画线性渐变时我们就会注意到这点。然后会绘制出 50 颗随机位置分布（经过缩放）的星星，当然也只有在裁切路径里面的星星才会绘制出来。
 
-{{EmbedLiveSample("A_clip_example", "180", "180", "https://mdn.mozillademos.org/files/208/Canvas_clip.png")}}
+{{EmbedLiveSample("clip 的示例", "", "160")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

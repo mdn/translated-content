@@ -1,20 +1,21 @@
 ---
 title: AND 비트연산(&)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.bitwise_and
 ---
 
 {{jsSidebar("Operators")}}
 
 AND 비트 연산자(`&`)는 두 개의 피연산자의 각 자리마다 대응하는 비트가 모두 `1`일 경우 `1`을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-and.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise AND")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = 3; // 00000000000000000000000000000011
+
+console.log(a & b); // 00000000000000000000000000000001
+// Expected output: 1
+```
 
 ## 구문
 
@@ -73,5 +74,5 @@ AND 연산에 대한 진리표는 다음과 같습니다:
 
 ## 같이 보기
 
-- [JS의 비트 연산 가이드](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#비트_연산자)
+- [JS의 비트 연산 가이드](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#%eb%b9%84%ed%8a%b8_%ec%97%b0%ec%82%b0%ec%9e%90)
 - [비트 AND 할당연산자](/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)

@@ -1,20 +1,29 @@
 ---
-title: '<code>: 인라인 코드 요소'
+title: "<code>: 인라인 코드 요소"
 slug: Web/HTML/Element/code
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/code
 ---
 
 {{HTMLSidebar}}
 
 **HTML `<code>` 요소**는 짧은 코드 조각을 나타내는 스타일을 사용해 자신의 콘텐츠를 표시합니다. 기본 스타일은 {{glossary("user agent", "사용자 에이전트")}}의 고정폭 글씨체입니다.
 
-{{EmbedInteractiveExample("pages/tabbed/code.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;code&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The <code>push()</code> method adds one or more elements to the end of an
+  array and returns the new length of the array.
+</p>
+```
+
+```css interactive-example
+code {
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 3px;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -41,7 +50,7 @@ translation_of: Web/HTML/Element/code
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -69,8 +78,10 @@ translation_of: Web/HTML/Element/code
 ## 예제
 
 ```html
-<p>함수 <code>selectAll()</code>는 입력 필드의 모든 텍스트를 선택하므로,
-사용자가 복사 혹은 삭제를 손쉽게 할 수 있습니다.</p>
+<p>
+  함수 <code>selectAll()</code>는 입력 필드의 모든 텍스트를 선택하므로, 사용자가
+  복사 혹은 삭제를 손쉽게 할 수 있습니다.
+</p>
 ```
 
 {{EmbedLiveSample("예제", 640, 70)}}
@@ -87,7 +98,7 @@ CSS `code` 태그 선택자를 사용해 브라우저의 기본 글씨체를 바
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.code")}}
+{{Compat}}
 
 ## 같이 보기
 

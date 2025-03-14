@@ -1,15 +1,6 @@
 ---
 title: document.createElementNS
 slug: Web/API/Document/createElementNS
-tags:
-  - API
-  - Création
-  - DOM
-  - Document
-  - Elements
-  - Méthodes
-  - URI
-translation_of: Web/API/Document/createElementNS
 ---
 
 {{ApiRef("DOM")}}
@@ -27,7 +18,7 @@ var element = document.createElementNS(namespaceURI, qualifiedName[, options]);
 ### Paramètres
 
 - `namespaceURI`
-  - : est une chaîne de caractères qui spécifie [l'URI de l'espace de noms](http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) à associer à l'élément. La propriété [namespaceURI](/fr/docs/Web/API/Node/namespaceURI) de l'élément créé est initialisée avec la valeur de `namespaceURI`. voir [URI d'espaces de nom valides](#URI_d'espaces_de_nom_valides)
+  - : est une chaîne de caractères qui spécifie [l'URI de l'espace de noms](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) à associer à l'élément. La propriété [namespaceURI](/fr/docs/Web/API/Element/namespaceURI) de l'élément créé est initialisée avec la valeur de `namespaceURI`. voir [URI d'espaces de nom valides](#uri_d'espaces_de_nom_valides)
 - `qualifiedName`
   - : est une chaîne de caractères qui spécifie le type de l'élément à créer. La propriété [nodeName](/fr/docs/Web/API/Node/nodeName) de l'élément créé est initialisée avec la valeur de `qualifiedName`
 - `Options` {{Optional_Inline}}
@@ -46,7 +37,7 @@ Le nouvel [`element`](/fr/docs/Web/API/Element).
 
 ## Exemple
 
-Cet exemple crée un nouvel élément \<div> dans l'espace de noms [XHTML](/fr/docs/XHTML) et l'ajoute à l'élément vbox. Bien que ce ne soit pas un document [XUL](/fr/docs/Mozilla/Tech/XUL) très utile, cela montre l'utilisation d'éléments de deux espaces de noms différents au sein d'un même document :
+Cet exemple crée un nouvel élément \<div> dans l'espace de noms [XHTML](/fr/docs/Glossary/XHTML) et l'ajoute à l'élément vbox. Bien que ce ne soit pas un document [XUL](/fr/docs/Mozilla/Tech/XUL) très utile, cela montre l'utilisation d'éléments de deux espaces de noms différents au sein d'un même document :
 
 ```xml
 <?xml version="1.0"?>
@@ -79,7 +70,8 @@ Cet exemple crée un nouvel élément \<div> dans l'espace de noms [XHTML](/fr/d
 </page>
 ```
 
-> **Note :** Cet exemple utilise un script interne, ce qui n'est pas recommandé dans les documents XHTML. Cet exemple particulier est en fait un document XUL intégrant du XHTML. Cependant, la recommandation s'applique quand même.
+> [!NOTE]
+> Cet exemple utilise un script interne, ce qui n'est pas recommandé dans les documents XHTML. Cet exemple particulier est en fait un document XUL intégrant du XHTML. Cependant, la recommandation s'applique quand même.
 
 ## Spécifications
 
@@ -93,5 +85,5 @@ Cet exemple crée un nouvel élément \<div> dans l'espace de noms [XHTML](/fr/d
 
 - [document.createElement](document.createElement)
 - [document.createTextNode](document.createTextNode)
-- [Node.namespaceURI](/fr/docs/Web/API/Node/namespaceURI)
-- [Namespaces in XML](http://www.w3.org/TR/1999/REC-xml-names-19990114)
+- [Node.namespaceURI](/fr/docs/Web/API/Element/namespaceURI)
+- [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114)

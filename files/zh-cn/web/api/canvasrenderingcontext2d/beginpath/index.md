@@ -1,23 +1,36 @@
 ---
-title: CanvasRenderingContext2D.beginPath()
+title: CanvasRenderingContext2D：beginPath() 方法
 slug: Web/API/CanvasRenderingContext2D/beginPath
+l10n:
+  sourceCommit: c7edf2734fccb185c5e93ee114ea3d5edc0177b5
 ---
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.beginPath()`** 是 Canvas 2D API 通过清空子路径列表开始一个新路径的方法。当你想创建一个新的路径时，调用此方法。
+Canvas 2D API 的 **`CanvasRenderingContext2D.beginPath()`** 方法用于通过清空子路径列表开始一个新路径。当你想创建一个新的路径时，调用此方法。
+
+> [!NOTE]
+> 要创建一个新的子路径，即与当前画布状态匹配的路径，可以使用 {{domxref("CanvasRenderingContext2D.moveTo()")}}。
 
 ## 语法
 
+```js-nolint
+beginPath()
 ```
-void ctx.beginPath();
-```
+
+### 参数
+
+无。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
-### 使用 `beginPath` 方法
+### 创建不同的路径
 
-这是一段受用 `beginPath` 方法的简单的代码片段。
+此示例创建了两条都只包含一条线的路径。
 
 #### HTML
 
@@ -27,78 +40,32 @@ void ctx.beginPath();
 
 #### JavaScript
 
+`beginPath()` 方法在开始每条线之前调用，以便它们可以用不同的颜色绘制。
+
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-// First path
+// 第一条路径
 ctx.beginPath();
-ctx.strokeStyle = 'blue';
-ctx.moveTo(20,20);
-ctx.lineTo(200,20);
+ctx.strokeStyle = "blue";
+ctx.moveTo(20, 20);
+ctx.lineTo(200, 20);
 ctx.stroke();
 
-// Second path
+// 第二条路径
 ctx.beginPath();
-ctx.strokeStyle = 'green';
-ctx.moveTo(20,20);
-ctx.lineTo(120,120);
-ctx.stroke();
-```
-
-修改下面的代码并在线查看 canvas 的变化：
-
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code" style="height:200px">
-// First path
-ctx.beginPath();
-ctx.strokeStyle = 'blue';
-ctx.moveTo(20,20);
-ctx.lineTo(200,20);
-ctx.stroke();
-
-// Second path
-ctx.beginPath();
-ctx.strokeStyle = 'green';
-ctx.moveTo(20,20);
+ctx.strokeStyle = "green";
+ctx.moveTo(20, 20);
 ctx.lineTo(120, 120);
-ctx.stroke();</textarea>
+ctx.stroke();
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+#### 结果
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
+{{ EmbedLiveSample('创建不同的路径', 700, 180) }}
 
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 460) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 
@@ -108,5 +75,5 @@ window.addEventListener("load", drawCanvas);
 
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}
+- 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.closePath()")}}

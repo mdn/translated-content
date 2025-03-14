@@ -1,7 +1,6 @@
 ---
 title: Element.insertAdjacentText()
 slug: Web/API/Element/insertAdjacentText
-translation_of: Web/API/Element/insertAdjacentText
 ---
 
 {{APIRef("DOM")}}
@@ -50,17 +49,18 @@ foo
 <!-- afterend -->
 ```
 
-> **Примечание:** значения `beforebegin` и `afterend` работают только если targetElement находится в DOM-дереве и имеет родительский элемент.
+> [!NOTE]
+> Значения `beforebegin` и `afterend` работают только если targetElement находится в DOM-дереве и имеет родительский элемент.
 
 ## Пример
 
 ```js
-beforeBtn.addEventListener('click', function() {
-  para.insertAdjacentText('afterbegin',textInput.value);
+beforeBtn.addEventListener("click", function () {
+  para.insertAdjacentText("afterbegin", textInput.value);
 });
 
-afterBtn.addEventListener('click', function() {
-  para.insertAdjacentText('beforeend',textInput.value);
+afterBtn.addEventListener("click", function () {
+  para.insertAdjacentText("beforeend", textInput.value);
 });
 ```
 
@@ -72,21 +72,19 @@ afterBtn.addEventListener('click', function() {
 
 ```js
 if (!Element.prototype.insertAdjacentText)
-  Element.prototype.insertAdjacentText = function(type, txt){
+  Element.prototype.insertAdjacentText = function (type, txt) {
     this.insertAdjacentHTML(
       type,
-      (txt+'') // convert to string
-        .replace(/&/g, '&amp;') // embed ampersand symbols
-        .replace(/</g, '&lt;') // embed greater than symbols
-    )
-  }
+      (txt + "") // convert to string
+        .replace(/&/g, "&amp;") // embed ampersand symbols
+        .replace(/</g, "&lt;"), // embed greater than symbols
+    );
+  };
 ```
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                                     | Статус                           | Комментарий |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#dom-element-insertadjacenttext', 'insertAdjacentText()')}} | {{ Spec2('DOM WHATWG') }} |             |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

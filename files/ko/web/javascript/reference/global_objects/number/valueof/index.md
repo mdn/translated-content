@@ -1,24 +1,31 @@
 ---
 title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** 메서드는 {{jsxref("Number")}} 객체가 감싼(wrapped) {{Glossary("primitive", "원시")}} 값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/number-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Number.valueOf()")}}
+
+```js interactive-example
+const numObj = new Number(42);
+console.log(typeof numObj);
+// Expected output: "object"
+
+const num = numObj.valueOf();
+console.log(num);
+// Expected output: 42
+
+console.log(typeof num);
+// Expected output: "number"
+```
 
 ## 구문
 
 ```js
-    numObj.valueOf()
+numObj.valueOf();
 ```
 
 ### 반환 값
@@ -38,8 +45,8 @@ var numObj = new Number(10);
 console.log(typeof numObj); // object
 
 var num = numObj.valueOf();
-console.log(num);           // 10
-console.log(typeof num);    // number
+console.log(num); // 10
+console.log(typeof num); // number
 ```
 
 ## 명세

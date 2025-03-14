@@ -1,88 +1,101 @@
 ---
-title: HTMLFormElement.elements
+title: "HTMLFormElement: свойство elements"
 slug: Web/API/HTMLFormElement/elements
-translation_of: Web/API/HTMLFormElement/elements
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
 
-The {{domxref("HTMLFormElement")}} property **`elements`** returns an {{domxref("HTMLFormControlsCollection")}} listing all the form controls contained in the {{HTMLElement("form")}} element. Independently, you can obtain just the number of form controls using the {{domxref("HTMLFormElement.length", "length")}} property.
+Свойство **`elements`** интерфейса {{domxref("HTMLFormElement")}} возвращает список {{domxref("HTMLFormControlsCollection")}}, содержащий все элементы управления {{HTMLElement("form")}}.
 
-You can access a particular form control in the returned collection by using either an index or the element's {{domxref("Element.name", "name")}} or {{domxref("Element.id", "id")}}.
+Для получения только количества элементов управления формы можно использовать свойство {{domxref("HTMLFormElement.length")}}.
 
-Prior to HTML 5, the returned object was an {{domxref("HTMLCollection")}}, on which `HTMLFormControlsCollection` is based.
+Для получения доступа к определенному элементу управления в возвращаемой коллекции используйте индекс или атрибуты `name` и `id`.
 
-> **Примечание:** Similarly, you can get a list of all of the forms contained within a given document using the document's {{domxref("Document.forms", "forms")}} property.
+До HTML 5 возвращаемым объектом был {{domxref("HTMLCollection")}}, на котором основан `HTMLFormControlsCollection`.
 
-## Syntax
+> [!NOTE]
+> Аналогичным образом можно получить список всех форм, содержащихся в документе, используя свойство документа {{domxref("Document.forms", "forms")}}.
 
-```
-nodeList = HTMLFormElement.elements
-```
+## Значение
 
-### Value
+{{domxref("HTMLFormControlsCollection")}}, которое содержит все элементы управления, не являющиеся изображениями.
+Это «живой» список, если у формы добавляются или удаляются элементы, то список обновляется.
 
-An {{domxref("HTMLFormControlsCollection")}} containing all non-image controls in the form. This is a live collection; if form controls are added to or removed from the form, this collection will update to reflect the change.
+Элементы управления в возвращаемом списке расположены в порядке, в котором они появляются в форме, после предварительного порядка обхода дерева в глубину. Это называется **порядок дерева**.
 
-The form controls in the returned collection are in the same order in which they appear in the form by following a preorder, depth-first traversal of the tree. This is called **tree order**.
+Возвращаются только следующе элементы:
 
-{{page("/en-US/docs/Web/API/HTMLFormElement", "Elements that are considered form controls")}}
+- {{HTMLElement("button")}}
+- {{HTMLElement("fieldset")}}
+- {{HTMLElement("input")}} (за исключением элементов, у которых атрибут [`type`](/ru/docs/Web/HTML/Element/input#type) равен `"image"`, по историческим причинам)
+- {{HTMLElement("object")}}
+- {{HTMLElement("output")}}
+- {{HTMLElement("select")}}
+- {{HTMLElement("textarea")}}
 
-## Example
+## Примеры
 
-### Quick syntax example
+### Простой пример синтаксиса
 
-In this example, we see how to obtain the list of form controls as well as how to access its members by index and by name or ID.
+В этом примере мы получаем список элементов управления формы, а также доступ к его членам по индексу, имени или идентификатору.
 
 ```html
 <form id="my-form">
-  <input type="text" name="username">
-  <input type="text" name="full-name">
-  <input type="password" name="password">
+  <label>
+    Username:
+    <input type="text" name="username" />
+  </label>
+  <label>
+    Full name:
+    <input type="text" name="full-name" />
+  </label>
+  <label>
+    Password:
+    <input type="password" name="password" />
+  </label>
 </form>
 ```
 
 ```js
-var inputs = document.getElementById("my-form").elements;
-var inputByIndex = inputs[0];
-var inputByName = inputs["username"];
+const inputs = document.getElementById("my-form").elements;
+const inputByIndex = inputs[0];
+const inputByName = inputs["username"];
 ```
 
-### Accessing form controls
+### Доступ к элементам управления
 
-This example gets the form's element list, then iterates over the list, looking for {{HTMLElement("input")}} elements of type [`"text"`](/en-US/docs/Web/HTML/Element/input/text) so that some form of processing can be performed on them.
+В этом примере мы получаем список элементов формы, а затем выполняем поиск элементов {{HTMLElement("input")}} c типом {{HTMLElement("input/text")}}, чтобы обработать их.
 
 ```js
-var inputs = document.getElementById("my-form").elements;
+const inputs = document.getElementById("my-form").elements;
 
-// Iterate over the form controls
-for (i = 0; i < inputs.length; i++) {
+// Получаем элементы формы
+for (let i = 0; i < inputs.length; i++) {
   if (inputs[i].nodeName === "INPUT" && inputs[i].type === "text") {
-    // Update text input
+    // Изменяем значение
     inputs[i].value.toLocaleUpperCase();
   }
 }
 ```
 
-### Disabling form controls
+### Отключение элементов управления
 
 ```js
-var inputs = document.getElementById("my-form").elements;
+const inputs = document.getElementById("my-form").elements;
 
-// Iterate over the form controls
-for (i = 0; i < inputs.length; i++) {
-  // Disable all form controls
+// Получаем элементы формы
+for (let i = 0; i < inputs.length; i++) {
+  // Отключаем все элементы формы
   inputs[i].setAttribute("disabled", "");
 }
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                            | Status                               | Comment            |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('HTML WHATWG', '#dom-form-elements', 'HTMLFormElement.elements')}} | {{ Spec2('HTML WHATWG') }} |                    |
-| {{SpecName("DOM2 HTML", "html.html#ID-76728479", "HTMLFormElement.elements")}} | {{Spec2("DOM2 HTML")}}         | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

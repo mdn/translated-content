@@ -9,7 +9,27 @@ l10n:
 
 Une déclaration **`async function*`** définit _une fonction génératrice asynchrone_, qui renvoie un objet [`AsyncGenerator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator).
 
-{{EmbedInteractiveExample("pages/js/expressions-async-function-asterisk.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Async Function Asterisk", "taller")}}
+
+```js interactive-example
+async function* foo() {
+  yield await Promise.resolve("a");
+  yield await Promise.resolve("b");
+  yield await Promise.resolve("c");
+}
+
+let str = "";
+
+async function generate() {
+  for await (const val of foo()) {
+    str = str + val;
+  }
+  console.log(str);
+}
+
+generate();
+// Expected output: "abc"
+```
 
 Il est aussi possible de définir des fonctions génératrices asynchrones à l'aide du constructeur [`AsyncGeneratorFunction()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction) ou [d'une expression `async function*`](/fr/docs/Web/JavaScript/Reference/Operators/async_function*).
 
@@ -17,17 +37,18 @@ Il est aussi possible de définir des fonctions génératrices asynchrones à l'
 
 ```js
 async function* nom(param0) {
-  instructions
+  instructions;
 }
 async function* nom(param0, param1) {
-  instructions
+  instructions;
 }
 async function* nom(param0, param1, /* … ,*/ paramN) {
-  instructions
+  instructions;
 }
 ```
 
-> **Note :** Il n'existe pas de notation équivalente aux fonctions fléchées pour les fonctions génératrices asynchrones.
+> [!NOTE]
+> Il n'existe pas de notation équivalente aux fonctions fléchées pour les fonctions génératrices asynchrones.
 
 ### Paramètres
 
@@ -51,7 +72,9 @@ async function* toto() {
   yield Promise.reject(1);
 }
 
-toto().next().catch((e) => console.error(e));
+toto()
+  .next()
+  .catch((e) => console.error(e));
 ```
 
 Qui affichera `1` dans la console, car la promesse ainsi générée déclenche une erreur et le résultat dans l'itérateur déclenche une erreur également. La propriété `value` du résultat d'un générateur asynchrone résolu ne sera pas une autre promesse.
@@ -71,7 +94,8 @@ async function* monGenerateur(etape) {
 }
 
 const gen = monGenerateur(2);
-gen.next()
+gen
+  .next()
   .then((res) => {
     console.log(res); // { value: 0, done: false }
     return gen.next();
@@ -102,13 +126,13 @@ async function* readFiles(directory) {
     if (stats.isFile()) {
       yield {
         name: file,
-        content: await fs.readFile(file, 'utf8'),
+        content: await fs.readFile(file, "utf8"),
       };
     }
   }
 }
 
-const files = readFiles('.');
+const files = readFiles(".");
 console.log((await files.next()).value);
 // Exemple de sortie : { name: 'fichier1.txt', content: '...' }
 console.log((await files.next()).value);

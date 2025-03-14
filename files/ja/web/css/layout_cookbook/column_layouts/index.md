@@ -29,7 +29,7 @@ slug: Web/CSS/Layout_cookbook/Column_layouts
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-multicol.html", '100%', 720)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-multicol--download.html)
 
@@ -47,7 +47,7 @@ slug: Web/CSS/Layout_cookbook/Column_layouts
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox.html", '100%', 720)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-flexbox--download.html)
 
@@ -55,7 +55,7 @@ slug: Web/CSS/Layout_cookbook/Column_layouts
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox-wrapping.html", '100%', 720)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-flexbox-wrapping--download.html)
 
@@ -71,7 +71,7 @@ slug: Web/CSS/Layout_cookbook/Column_layouts
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-grid.html", '100%', 720)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-grid--download.html)
 
@@ -87,26 +87,26 @@ slug: Web/CSS/Layout_cookbook/Column_layouts
 
 #### column-width
 
-{{Compat("css.properties.column-width")}}
+{{Compat}}
 
 #### column-rule
 
-{{Compat("css.properties.column-rule")}}
+{{Compat}}
 
 #### flex
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 #### flex-wrap
 
-{{Compat("css.properties.flex-wrap")}}
+{{Compat}}
 
 #### grid-template-columns
 
-{{Compat("css.properties.grid-template-columns")}}
+{{Compat}}
 
 ## MDN の関連資料
 
-- [段組みレイアウトのガイド](/ja/docs/Web/CSS/CSS_Columns)
-- [フレックスボックスのガイド](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)
-- [CSS グリッドレイアウトのガイド](/ja/docs/Web/CSS/CSS_Grid_Layout)
+- [段組みレイアウトのガイド](/ja/docs/Web/CSS/CSS_multicol_layout)
+- [フレックスボックスのガイド](/ja/docs/Web/CSS/CSS_flexible_box_layout)
+- [CSS グリッドレイアウトのガイド](/ja/docs/Web/CSS/CSS_grid_layout)

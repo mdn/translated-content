@@ -1,9 +1,6 @@
 ---
 title: debugger
 slug: Web/JavaScript/Reference/Statements/debugger
-translation_of: Web/JavaScript/Reference/Statements/debugger
-original_slug: Web/JavaScript/Reference/Instructions/debugger
-browser-compat: javascript.statements.debugger
 ---
 
 {{jsSidebar("Statements")}}
@@ -22,9 +19,9 @@ Dans l'exemple qui suit, on utilise un code avec l'instruction `debugger` qui pe
 
 ```js
 function codeProbablementBogue() {
-    debugger;
-    // exécuter des instructions qu'on veut
-    // examiner, exécuter pas à pas etc.
+  debugger;
+  // exécuter des instructions qu'on veut
+  // examiner, exécuter pas à pas etc.
 }
 ```
 
@@ -42,4 +39,4 @@ Lorsque le débogueur est lancé, l'exécution est interrompue au niveau de l'in
 
 ## Voir aussi
 
-- [Le débogueur des outils de développement Firefox](/fr/docs/Tools/Debugger)
+- [Le débogueur des outils de développement Firefox](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)

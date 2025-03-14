@@ -7,7 +7,8 @@ slug: Web/API/Element/scrollHeight
 
 El elemento **Element.scrollHeight** atributo unicamente de lectura es una medida de la altura del contenido de un elemento, incluyendo el contenido que no es visible en la pantalla debido al desbordamiento. El valor `scrollHeight` es igual a la altura mínima (donde la altura incluye el relleno , pero no incluye bordes y márgenes) El elemento lo necesita con el fin de adaptarse a todos los contenidos en el punto de vista sin necesidad de utilizar una barra de desplazamiento vertical. Incluye el elemento relleno pero no su margen.
 
-> **Nota:** Esta propiedad redondea el valor a un número entero. Si se necesita un valor fraccionario, utilizar {{domxref("Element.getBoundingClientRect()")}}.
+> [!NOTE]
+> Esta propiedad redondea el valor a un número entero. Si se necesita un valor fraccionario, utilizar {{domxref("Element.getBoundingClientRect()")}}.
 
 ## Sintaxis
 
@@ -20,22 +21,54 @@ _intElemScrollHeight_ es una variable que almacena un número entero correspondi
 ## Ejemplo
 
 ```html hidden
-<div id="offsetContainer" style="margin: 40px 50px 50px; background-color: rgb(255, 255, 204); border: 4px dashed black; color: black; position: relative; display: inline-block;">
-<div id="idDiv" style="margin: 24px 29px; border: 24px black solid; padding: 0px 28px; width: 199px; height: 102px; overflow: auto; background-color: white; font-size: 13px!important; font-family: Arial, sans-serif;">
-<p id="PaddingTopLabel" style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">padding-top</p>
+<div
+  id="offsetContainer"
+  style="margin: 40px 50px 50px; background-color: rgb(255, 255, 204); border: 4px dashed black; color: black; position: relative; display: inline-block;">
+  <div
+    id="idDiv"
+    style="margin: 24px 29px; border: 24px black solid; padding: 0px 28px; width: 199px; height: 102px; overflow: auto; background-color: white; font-size: 13px!important; font-family: Arial, sans-serif;">
+    <p
+      id="PaddingTopLabel"
+      style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">
+      padding-top
+    </p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </p>
 
-<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
 
-<p id="PaddingBottomLabel" style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">padding-bottom</p>
+    <p
+      id="PaddingBottomLabel"
+      style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">
+      padding-bottom
+    </p>
+  </div>
+  <strong>Left</strong> <strong>Top</strong>
+  <strong
+    style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 370px; position: absolute; top: 85px;"
+    >Right</strong
+  >
+  <strong
+    style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 164px; position: absolute; top: 203px;"
+    >Bottom</strong
+  >
+  <em>margin-top</em> <em>margin-bottom</em> <em>border-top</em>
+  <em>border-bottom</em>
 </div>
-<strong>Left</strong> <strong>Top</strong> <strong style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 370px; position: absolute; top: 85px;">Right</strong> <strong style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 164px; position: absolute; top: 203px;">Bottom</strong> <em>margin-top</em> <em>margin-bottom</em> <em>border-top</em> <em>border-bottom</em></div>
 ```
 
 {{EmbedLiveSample("",400,350)}}
 
-![Image:scrollHeight.png](/@api/deki/files/840/=ScrollHeight.png)
+![Image:scrollHeight.png](scrollheight.png)
 
 ## Problemas y Soluciones
 
@@ -49,14 +82,15 @@ element.scrollHeight - element.scrollTop === element.clientHeight
 
 ## scrollHeight Demo
 
-Asociada al evento `onscroll` , esta equivalencia puede ser útil para determinar si un usuario ha leido un texto o no (ver también las propiedades de [`element.scrollTop`](/es/docs/DOM/element.scrollTop) y [`element.clientHeight`](/es/docs/DOM/element.clientHeight) ). Por ejemplo:
+Asociada al evento `onscroll` , esta equivalencia puede ser útil para determinar si un usuario ha leido un texto o no (ver también las propiedades de [`element.scrollTop`](/es/docs/Web/API/Element/scrollTop) y [`element.clientHeight`](/es/docs/Web/API/Element/clientHeight) ). Por ejemplo:
 
 ### HTML
 
 ```html
 <form name="registration">
   <p>
-    <textarea id="rules">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
+    <textarea id="rules">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
 Aliquam erat volutpat. Praesent molestie, dolor ut eleifend aliquam, mi ligula ultrices sapien, quis cursus
 neque dui nec risus. Duis tincidunt lobortis purus eu aliquet. Quisque in dignissim magna. Aenean ac lorem at
 velit ultrices consequat. Nulla luctus nisi ut libero cursus ultrices. Pellentesque nec dignissim enim. Phasellus
@@ -97,14 +131,14 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
   border-radius: 5px;
   width: 600px;
   padding: 5px;
-  border: 2px #7FDF55 solid;
+  border: 2px #7fdf55 solid;
 }
 
 #rules {
   width: 600px;
   height: 130px;
   padding: 5px;
-  border: #2A9F00 solid 2px;
+  border: #2a9f00 solid 2px;
   border-radius: 5px;
 }
 ```
@@ -112,13 +146,17 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
 ### JavaScript
 
 ```js
-function checkReading () {
+function checkReading() {
   if (checkReading.read) {
     return;
   }
   checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
-  document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
-  checkReading.noticeBox.innerHTML = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
+  document.registration.accept.disabled = document.getElementById(
+    "nextstep",
+  ).disabled = !checkReading.read;
+  checkReading.noticeBox.innerHTML = checkReading.read
+    ? "Thank you."
+    : "Please, scroll and read the following text.";
 }
 
 onload = function () {
@@ -130,7 +168,7 @@ onload = function () {
   oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
   oToBeRead.onscroll = checkReading;
   checkReading.call(oToBeRead);
-}
+};
 ```
 
 {{EmbedLiveSample('scrollHeight_Demo', '640', '400')}}
@@ -148,4 +186,4 @@ onload = function () {
 - [MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
 - {{domxref("Element.clientHeight")}}
 - {{domxref("HTMLElement.offsetHeight")}}
-- [Determinación de las dimensiones de los elementos](/es/docs/Determining_the_dimensions_of_elements)
+- [Determinación de las dimensiones de los elementos](/es/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

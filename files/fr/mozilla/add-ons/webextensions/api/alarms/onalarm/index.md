@@ -1,17 +1,6 @@
 ---
 title: alarms.onAlarm
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
-  - onAlarm
-translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm
 ---
 
 {{AddonSidebar}}
@@ -21,9 +10,9 @@ Cet évènement est déclenché lorsque l'alarme se déclenche.
 ## Syntaxe
 
 ```js
-browser.alarms.onAlarm.addListener(listener)
-browser.alarms.onAlarm.removeListener(listener)
-browser.alarms.onAlarm.hasListener(listener)
+browser.alarms.onAlarm.addListener(listener);
+browser.alarms.onAlarm.removeListener(listener);
+browser.alarms.onAlarm.hasListener(listener);
 ```
 
 Cet évènement possède trois méthodes :
@@ -62,10 +51,10 @@ browser.alarms.onAlarm.addListener(handleAlarm);
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.alarms.onAlarm")}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/extensions/alarms).
+> Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

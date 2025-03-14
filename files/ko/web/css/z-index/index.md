@@ -1,23 +1,128 @@
 ---
 title: z-index
 slug: Web/CSS/z-index
-tags:
-  - CSS
-  - CSS Positioning
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/z-index
 ---
 
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`z-index`** 속성은 [위치 지정 요소](/ko/docs/Web/CSS/position)와, 그 자손 또는 하위 플렉스 아이템의 Z축 순서를 지정합니다. 더 큰 `z-index` 값을 가진 요소가 작은 값의 요소 위를 덮습니다.
 
-{{EmbedInteractiveExample("pages/css/z-index.html")}}
+{{InteractiveExample("CSS Demo: z-index")}}
+
+```css interactive-example-choice
+z-index: auto;
+```
+
+```css interactive-example-choice
+z-index: 1;
+```
+
+```css interactive-example-choice
+z-index: 3;
+```
+
+```css interactive-example-choice
+z-index: 5;
+```
+
+```css interactive-example-choice
+z-index: 7;
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <div id="example-element">Change my z-index</div>
+  <div class="block blue position1">z-index: 6</div>
+  <div class="block blue position2">z-index: 4</div>
+  <div class="block blue position3">z-index: 2</div>
+  <div class="block red position4">z-index: auto</div>
+  <div class="block red position5">z-index: auto</div>
+  <div class="block red position6">z-index: auto</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  top: 15px;
+  left: 15px;
+  width: 180px;
+  height: 230px;
+  position: absolute;
+  /* center the text so it is visible even when z-index is set to auto */
+  line-height: 215px;
+  font-family: monospace;
+  background-color: #fcfbe5;
+  border: solid 5px #e3e0a1;
+  z-index: auto;
+  color: black;
+}
+
+.container {
+  display: inline-block;
+  width: 250px;
+  position: relative;
+}
+
+.block {
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  font-family: monospace;
+  color: black;
+}
+
+.blue {
+  background-color: #e5e8fc;
+  border: solid 5px #112382;
+  /* move text to the bottom of the box */
+  line-height: 55px;
+}
+
+.red {
+  background-color: #fce5e7;
+  border: solid 5px #e3a1a7;
+}
+
+.position1 {
+  top: 0;
+  left: 0;
+  z-index: 6;
+}
+
+.position2 {
+  top: 30px;
+  left: 30px;
+  z-index: 4;
+}
+
+.position3 {
+  top: 60px;
+  left: 60px;
+  z-index: 2;
+}
+
+.position4 {
+  top: 150px;
+  left: 0;
+  z-index: auto;
+}
+
+.position5 {
+  top: 180px;
+  left: 30px;
+  z-index: auto;
+}
+
+.position6 {
+  top: 210px;
+  left: 60px;
+  z-index: auto;
+}
+```
 
 위치 지정 요소(`position`이 `static` 외의 다른 값인 요소)의 박스에 대해, `z-index` 속성은 다음 항목을 지정합니다.
 
-1. 현재 [쌓임 맥락](/ko/docs/Web/CSS/Understanding_z-index/The_stacking_context)에서 자신의 위치.
+1. 현재 [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)에서 자신의 위치.
 2. 자신만의 쌓임 맥락 생성 여부.
 
 ## 구문
@@ -56,7 +161,8 @@ z-index 속성은 [`auto`](#auto) 키워드 또는 [`<integer>`](#integer) 값�
 ### HTML
 
 ```html
-<div class="dashed-box">Dashed box
+<div class="dashed-box">
+  Dashed box
   <span class="gold-box">Gold box</span>
   <span class="green-box">Green box</span>
 </div>
@@ -110,4 +216,4 @@ z-index 속성은 [`auto`](#auto) 키워드 또는 [`<integer>`](#integer) 값�
 ## 같이 보기
 
 - CSS {{ Cssxref("position") }} 속성
-- [CSS z-index 이해하기](/ko/docs/Web/CSS/Understanding_z-index)
+- [CSS z-index 이해하기](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)

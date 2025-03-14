@@ -13,7 +13,7 @@ slug: Games/Techniques/Controls_Gamepad_API
 
 ## API 状态与浏览器支持
 
-[Gamepad API](http://www.w3.org/TR/gamepad/) 在 W3C 的进程中仍然还是工作草案的状态，这意味着它的实现方法可能还会出现变动，但是就目前来说[浏览器的支持性](http://caniuse.com/gamepad)相当不错。Firefox 29+ 和 Chrome 35+ 对其支持得非常好。Opera 在版本 22+ 对 API 进行了支持 (一点也不奇怪，因为他们现在使用 Chrome 的引擎了。) 并且微软最近在 Edge 中对 API 实现了支持，也就是说四大主流浏览器现在都支持 Gamepad API。
+[Gamepad API](https://www.w3.org/TR/gamepad/) 在 W3C 的进程中仍然还是工作草案的状态，这意味着它的实现方法可能还会出现变动，但是就目前来说[浏览器的支持性](http://caniuse.com/gamepad)相当不错。Firefox 29+ 和 Chrome 35+ 对其支持得非常好。Opera 在版本 22+ 对 API 进行了支持 (一点也不奇怪，因为他们现在使用 Chrome 的引擎了。) 并且微软最近在 Edge 中对 API 实现了支持，也就是说四大主流浏览器现在都支持 Gamepad API。
 
 ## 哪种控制器最好？
 
@@ -27,7 +27,7 @@ slug: Games/Techniques/Controls_Gamepad_API
 
 第二个隐藏的“改变”的实现是可以从单纯静态的冰箱改变成涡轮驱动、射击和吞食的机器能力。当你连接控制器后，游戏会有很明显的改变 (饥饿冰箱会变成超级涡轮的饥饿冰箱) 并且你可以使用 Gamepad API 来控制装甲冰箱。你需要击落食物但是你仍然需要找到冰箱目前想吃的食物，否则你会失去能量。
 
-游戏封装了两种截然不同的“变化”(change) ——好食物对坏食物，与移动端对桌面端。
+游戏封装了两种截然不同的“变化”（change）——好食物对坏食物，与移动端对桌面端。
 
 ## 示例
 
@@ -35,7 +35,8 @@ Game API 的动作展示与 JavaScript 的源代码公布是在完整版的 Hung
 
 以下讨论的代码来自于完整的 Hungry Fridge 游戏中，除了原代码需要 `turbo` 变量来决定是否启动“超级涡轮模式”以外几乎一模一样。此代码可以独立运行，就算不连接控制器也可以。
 
-> **备注：** 一个彩蛋：点击界面右上角的控制器图标有个隐藏选项——不连接控制器也能启动“超级涡轮模式” 。你可以使用键盘上的 A 和 D 控制左右旋转，W 射击，方向键移动。
+> [!NOTE]
+> 一个彩蛋：点击界面右上角的控制器图标有个隐藏选项——不连接控制器也能启动“超级涡轮模式” 。你可以使用键盘上的 A 和 D 控制左右旋转，W 射击，方向键移动。
 
 ## 实现方法
 
@@ -45,14 +46,14 @@ Game API 的动作展示与 JavaScript 的源代码公布是在完整版的 Hung
 var gamepadAPI = {
   controller: {},
   turbo: false,
-  connect: function() {},
-  disconnect: function() {},
-  update: function() {},
-  buttonPressed: function() {},
+  connect: function () {},
+  disconnect: function () {},
+  update: function () {},
+  buttonPressed: function () {},
   buttons: [],
   buttonsCache: [],
   buttonsStatus: [],
-  axesStatus: []
+  axesStatus: [],
 };
 ```
 
@@ -185,11 +186,11 @@ buttonPressed: function(button, hold) {
 在一个按钮中有两种动作：单次按下和按住。变量 `newPress` 布尔变量将会指出这个是不是一个按钮新的按下操作。下次我们再轮询已按下按钮的数组——如果有按钮是我们正在找的，那么设 `newPress` 变量为 `true` 。通过检查本次按下是不是新按下的，就能得出玩家是不是按住按钮了。我们从游戏循环中的上一帧轮询按钮的缓存状态，如果我们找到了，就说明按钮被按住了，所以就不是新的按下。最后 `newPress` 变量被返回。函数 `buttonPressed` 通常这样来更新游戏循环：
 
 ```js
-if(gamepadAPI.turbo) {
-  if(gamepadAPI.buttonPressed('A','hold')) {
+if (gamepadAPI.turbo) {
+  if (gamepadAPI.buttonPressed("A", "hold")) {
     this.turbo_fire();
   }
-  if(gamepadAPI.buttonPressed('B')) {
+  if (gamepadAPI.buttonPressed("B")) {
     this.managePause();
   }
 }
@@ -204,7 +205,7 @@ if(gamepadAPI.turbo) {
 控制器放在一边不活动时轴值也可能有一定波动 (get dusty) ，这也就是说通过判断等于绝对的 -1 或 1 来可能是会有问题的。因此对此最好是给轴值设定一个阈值来触发生效。比如说，“冰箱坦克”仅会在 `X` 值大于 `0.5` 的时候向右转：
 
 ```js
-if(gamepadAPI.axesStatus[0].x > 0.5) {
+if (gamepadAPI.axesStatus[0].x > 0.5) {
   this.player.angle += 3;
   this.turret.angle += 3;
 }
@@ -214,28 +215,28 @@ if(gamepadAPI.axesStatus[0].x > 0.5) {
 
 ## 规范更新
 
-经过长达一年多的规范化，W3C Gamepaf API 于 2015 年 4 月更新了规范 ([查看最新信息](https://w3c.github.io/gamepad/))。更新的改动并不是很大，但是我们最好了解一下到底更新了些什么—— 以下为更新。
+经过长达一年多的规范化，W3C Gamepaf API 于 2015 年 4 月更新了规范 ([查看最新信息](https://w3c.github.io/gamepad/))。更新的改动并不是很大，但是我们最好了解一下到底更新了些什么——以下为更新。
 
 ### 获取控制器
 
-{{domxref("Naviagator.getGamepads()")}} 方法已用[更长的说明和示例代码](https://w3c.github.io/gamepad/#navigator-interface-extension)更新。现在控制器数组的长度必须为 `n+1` ( `n` 是已连接设备的数量) —— 当设备连接且其有索引 1，数组长度为 2，那么它将会是这样： `[null, [object Gamepad]]`。如果设备被断开或不可用的话，值将被设为 `null`。
+{{domxref("Naviagator.getGamepads()")}} 方法已用[更长的说明和示例代码](https://w3c.github.io/gamepad/#navigator-interface-extension)更新。现在控制器数组的长度必须为 `n+1`（`n` 是已连接设备的数量）——当设备连接且其有索引 1，数组长度为 2，那么它将会是这样：`[null, [object Gamepad]]`。如果设备被断开或不可用的话，值将被设为 `null`。
 
 ### 映射标准
 
 布局类型现在是一个可枚举的对象而不是字符串：
 
-```
+```ts
 enum GamepadMappingType {
-    "",
-    "standard"
-};
+  "",
+  "standard",
+}
 ```
 
 此枚举中定义了已知的控制器映射集。目前只有 `standard` 布局可用，但是未来可能会有新的布局。如果布局未知，那么将会是空字符串。
 
 ### 事件
 
-除了当前可用的 `gamepadconnected` 和 `gamepaddisconnected` 事件，其实还有其它事件也曾在规范中，但它们因为不是非常的有用所以被移出了规范。相关讨论仍在进行中，关于它们是否应该恢复规范，以及以什么形式恢复。
+除了当前可用的 `gamepadconnected` 和 `gamepaddisconnected` 事件，其实还有其他事件也曾在规范中，但它们因为不是非常的有用所以被移出了规范。相关讨论仍在进行中，关于它们是否应该恢复规范，以及以什么形式恢复。
 
 ## 总结
 

@@ -39,6 +39,6 @@ slug: Web/API/ErrorEvent
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [使用 web worker](/zh-CN/docs/Web/Guide/Performance/Using_web_workers), most likely objects to raise such an event
+- [使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)，最有可能引发此事件的对象

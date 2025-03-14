@@ -1,19 +1,60 @@
 ---
 title: flex
 slug: Web/CSS/flex
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/flex
 ---
 
 {{CSSRef}}
 
-**`flex`** [CSS](/ko/docs/CSS) 속성은 하나의 플렉스 아이템이 자신의 컨테이너가 차지하는 공간에 맞추기 위해 크기를 키우거나 줄이는 방법을 설정하는 속성입니다. `flex`는 {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}}, {{cssxref("flex-basis")}}의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다.
+**`flex`** [CSS](/ko/docs/Web/CSS) 속성은 하나의 플렉스 아이템이 자신의 컨테이너가 차지하는 공간에 맞추기 위해 크기를 키우거나 줄이는 방법을 설정하는 속성입니다. `flex`는 {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}}, {{cssxref("flex-basis")}}의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다.
 
-{{EmbedInteractiveExample("pages/css/flex.html")}}
+{{InteractiveExample("CSS Demo: flex")}}
+
+```css interactive-example-choice
+flex: 1;
+```
+
+```css interactive-example-choice
+flex: 2;
+```
+
+```css interactive-example-choice
+flex: 1 30px;
+```
+
+```css interactive-example-choice
+flex: 1 1 100px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Change me</div>
+  <div>flex: 1</div>
+  <div>flex: 1</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  border: 1px solid #c5c5c5;
+  width: auto;
+  max-height: 300px;
+  display: flex;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 대부분의 경우, `flex`의 값에는 `auto`, `initial`, `none`이나 단위 없는 양의 수를 사용해야 합니다. 각 값의 적용 효과를 보려면 아래 플렉스 컨테이너의 크기를 조절해보세요.
 
@@ -83,7 +124,8 @@ flex: unset;
 - `<'flex-basis'>`
   - : 플렉스 아이템의 {{cssxref("flex-basis")}}를 지정합니다. `0`을 지정하려면 `<flex-grow>` 또는 `<flex-shrink>`로 읽히지 않도록 단위를 붙여야 합니다. 생략 시 기본값은 `auto`입니다.
 
-> **참고:** 한 개 또는 두 개의 단위 없는 숫자 값을 사용할 때, `<flex-basis>`의 값은 `auto`가 아니라 `0`이 됩니다. 더 자세한 정보는 [플렉시블 박스 레이아웃 모듈](https://drafts.csswg.org/css-flexbox/#flex-common) 초안에서 확인할 수 있습니다.
+> [!NOTE]
+> 한 개 또는 두 개의 단위 없는 숫자 값을 사용할 때, `<flex-basis>`의 값은 `auto`가 아니라 `0`이 됩니다. 더 자세한 정보는 [플렉시블 박스 레이아웃 모듈](https://drafts.csswg.org/css-flexbox/#flex-common) 초안에서 확인할 수 있습니다.
 
 ### 형식 구문
 
@@ -116,7 +158,7 @@ flex: unset;
 ```js hidden
 var flex = document.getElementById("flex");
 var raw = document.getElementById("raw");
-flex.addEventListener("click", function() {
+flex.addEventListener("click", function () {
   raw.style.display = raw.style.display == "none" ? "block" : "none";
 });
 ```
@@ -153,5 +195,5 @@ flex.addEventListener("click", function() {
 
 ## 같이 보기
 
-- CSS 플렉스박스 안내서: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS 플렉스박스 안내서: _[Controlling Ratios of flex items along the main axis](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS 플렉스박스 안내서: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS 플렉스박스 안내서: _[Controlling Ratios of flex items along the main axis](/ko/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_

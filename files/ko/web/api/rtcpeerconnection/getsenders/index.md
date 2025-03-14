@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.getSenders()
 slug: Web/API/RTCPeerConnection/getSenders
-translation_of: Web/API/RTCPeerConnection/getSenders
 ---
 
 {{APIRef("WebRTC")}}

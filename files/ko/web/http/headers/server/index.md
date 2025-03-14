@@ -1,12 +1,8 @@
 ---
 title: Server
 slug: Web/HTTP/Headers/Server
-tags:
-  - HTTP
-  - 참고자료
-  - 헤더
-translation_of: Web/HTTP/Headers/Server
 ---
+
 {{HTTPSidebar}}
 
 **`Server`** 헤더는 요청을 처리하기 위한 원(origin, 原) 서버의 소프트웨어 정보를 포함하고 있습니다.
@@ -45,13 +41,13 @@ Server: Apache/2.4.1 (Unix)
 
 ## 기술 사양
 
-| 기술 사양                                    | 제목                                                          |
-| -------------------------------------------- | ------------------------------------------------------------- |
+| 기술 사양                          | 제목                                                          |
+| ---------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Server", "7.4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Server")}}
+{{Compat}}
 
 ## 함께 참고할 내용
 

@@ -1,8 +1,6 @@
 ---
 title: <input type="date">
 slug: Web/HTML/Element/input/date
-translation_of: Web/HTML/Element/input/date
-browser-compat: html.elements.input.input-date
 ---
 
 {{HTMLSidebar}}
@@ -11,7 +9,33 @@ Los elementos {{HTMLElement("input")}} de **`type="date"`** crean un campo de en
 
 El valor resultante incluye el año, el mes y el día, pero _no_ el tiempo. Las entradas de tipo {{HTMLElement("input/time", "time")}} y {{HTMLElement("input/datetime-local", "datetime-local")}} soportan el tiempo y la fecha + el tiempo, respectivamente.
 
-{{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;date&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="start">Start date:</label>
+
+<input
+  type="date"
+  id="start"
+  name="trip-start"
+  value="2018-07-22"
+  min="2018-01-01"
+  max="2018-12-31" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 La IU de la entrada generalmente varía entre navegadores; véase [Compatibiidad con navegadores](#compatibilidad_con_navegadores) para más detalles. En navegadores que no incluyen soporte, el control degrada hacía [`<input type="text">`](/es/docs/Web/HTML/Element/input/text).
 
@@ -34,10 +58,10 @@ La IU de la entrada generalmente varía entre navegadores; véase [Compatibiidad
     <tr>
       <td><strong>Atributos comunes soportados</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("readonly", "input")}} y
-        {{htmlattrxref("step", "input")}}
+        <a href="/es/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/es/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/es/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a> y
+        <a href="/es/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
@@ -60,9 +84,9 @@ La IU de la entrada generalmente varía entre navegadores; véase [Compatibiidad
 
 ## Valor
 
-Una {{domxref("DOMString")}} representando la fecha introducida en la entrada. La fecha es formateada siguiendo el ISO8601, descrito en {{SectionOnPage("/es/docs/Web/HTML/Date_and_time_formats", "Formato válido de una fecha en formato de texto")}}.
+Una {{domxref("DOMString")}} representando la fecha introducida en la entrada. La fecha es formateada siguiendo el ISO8601, descrito en [Formato válido de una fecha en formato de texto](/es/docs/Web/HTML/Date_and_time_formats#formato_válido_de_una_fecha_en_formato_de_texto).
 
-Puedes establecer un valor por defecto para la entrada introduciendo una fecha en el atributo {{htmlattrxref("value", "input")}} de la siguiente forma:
+Puedes establecer un valor por defecto para la entrada introduciendo una fecha en el atributo [`value`](/es/docs/Web/HTML/Element/input#value) de la siguiente forma:
 
 ```html
 <input type="date" value="2017-06-01" />
@@ -70,7 +94,8 @@ Puedes establecer un valor por defecto para la entrada introduciendo una fecha e
 
 {{EmbedLiveSample('Value', 600, 40)}}
 
-> **Nota:** El formato mostrado puede ser diferente del `value` real, ya que la fecha mostrada es formateada _según el idioma del navegador del usuario_, pero el valor analizado es siempre formateado a `aaaa-mm-dd`.
+> [!NOTE]
+> El formato mostrado puede ser diferente del `value` real, ya que la fecha mostrada es formateada _según el idioma del navegador del usuario_, pero el valor analizado es siempre formateado a `aaaa-mm-dd`.
 
 Tu puedes obtener y establecer el valor fecha en JavaScript con las propiedades `value` y `valueAsNumber` de {{domxref("HTMLInputElement")}}. Por ejemplo:
 
@@ -89,27 +114,29 @@ Junto con los atributos comunes a todos los elementos {{HTMLElement("input")}}, 
 
 ### max
 
-La última fecha a aceptar. Si el {{htmlattrxref("value", "input")}} introducido en el elemento es posterior, el elemento no pasa la [validación de restricción](/es/docs/Web/Guide/HTML/Constraint_validation). Si el valor del atributo `max` es un valor que no es una fecha posible en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor máximo.
+La última fecha a aceptar. Si el [`value`](/es/docs/Web/HTML/Element/input#value) introducido en el elemento es posterior, el elemento no pasa la [validación de restricción](/es/docs/Web/HTML/Constraint_validation). Si el valor del atributo `max` es un valor que no es una fecha posible en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor máximo.
 
 Si los atributos `max` y `min` son establecidos, este valor tiene que ser una fecha en formtato cadena de texto posterior o igual a la fecha establecida en el atributo `min`.
 
 ### min
 
-La fecha más temprana a aceptar. Si el {{htmlattrxref("value", "input")}} introducido en el elemento es anterior, el elemento no pasa la [validación de restricció](/es/docs/Web/Guide/HTML/Constraint_validation). Si el valor del atributo `max` es un valor que no es una fecha posible en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor mínimo.
+La fecha más temprana a aceptar. Si el [`value`](/es/docs/Web/HTML/Element/input#value) introducido en el elemento es anterior, el elemento no pasa la [validación de restricció](/es/docs/Web/HTML/Constraint_validation). Si el valor del atributo `max` es un valor que no es una fecha posible en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor mínimo.
 
 Si los atributos `max` y `min` son establecidos, este valor tiene que ser una fecha en formtato cadena de texto anterior o igual a la fecha establecida en el atributo `max`.
 
 ### step
 
-El atributo `step` es un número que especifica la granularidad que un valor debe seguir o el valor especial `any`, el cuál está descrito más abajo. Solo los valores que son iguales a la base para ir avanzando ([`min`](#min) si está especificado, sino {{htmlattrxref("value", "input")}}, o un valor por defecto apropiado si ninguno de estos dos es especificado) son válidos.
+El atributo `step` es un número que especifica la granularidad que un valor debe seguir o el valor especial `any`, el cuál está descrito más abajo. Solo los valores que son iguales a la base para ir avanzando ([`min`](#min) si está especificado, sino [`value`](/es/docs/Web/HTML/Element/input#value), o un valor por defecto apropiado si ninguno de estos dos es especificado) son válidos.
 
 Si le damos un valor de cadena de texto `any` significa que ningún salto está marcado y, por lo tanto, cualquier valor está permitido (expecto otras constricciones, como [`min`](#min) y [`max`](#max)).
 
-> **Nota:** Cuando los datos introducidos por el usuario no siguen la configuración de avance, puede que el {{Glossary("user agent")}} lo redondeé al valor válido más cercano, prefiriendo valores mayores cuando hay dos opciones iguales cercanas.
+> [!NOTE]
+> Cuando los datos introducidos por el usuario no siguen la configuración de avance, puede que el {{Glossary("user agent")}} lo redondeé al valor válido más cercano, prefiriendo valores mayores cuando hay dos opciones iguales cercanas.
 
 Para entradas de tipo `date`, el valor del `step` es dado en días; y es tratado como el número de milisegundo igual a 86.400.000 veces el valor del `step` (el valor numérico subyacente está definido en milisegundos). El valor por defecto del `step` es 1, indicando 1 día.
 
-> **Nota:** Especificar `any` como el valor para `step` tiene el mismo efecto que `1` para las entradas de tipo `date`.
+> [!NOTE]
+> Especificar `any` como el valor para `step` tiene el mismo efecto que `1` para las entradas de tipo `date`.
 
 ## Usando entradas de tipo fecha
 
@@ -140,7 +167,7 @@ Este HTML envía la fecha indicada bajo la palabra clave `bday` a `https://examp
 
 ### Estipulando valores de fecha máximos y mínimos
 
-Tu puedes usar los atributos {{htmlattrxref("min", "input")}} y {{htmlattrxref("max", "input")}} para restringir qué fechas puede introducir el usuario. En el siguiente ejemplo, establecemos la fecha mínima a `2017-04-01` y la fecha máxima a `2017-04-30`:
+Tu puedes usar los atributos [`min`](/es/docs/Web/HTML/Element/input#min) y [`max`](/es/docs/Web/HTML/Element/input#max) para restringir qué fechas puede introducir el usuario. En el siguiente ejemplo, establecemos la fecha mínima a `2017-04-01` y la fecha máxima a `2017-04-30`:
 
 ```html
 <form>
@@ -155,19 +182,20 @@ Tu puedes usar los atributos {{htmlattrxref("min", "input")}} y {{htmlattrxref("
 
 Como resultado, obtenemos que solo los días del mes de abril de 2017 pueden ser seleccionados (los meses y años que forman parte de la caja de texto no serán editables y las fechas fuera del mes de abril de 2017 no pueden ser selecionados en el menú de selección).
 
-> **Nota:** Tu _debes_ ser capaz de usar el atributo {{htmlattrxref("step", "input")}} para modificar el número de días que son saltados cada vez que la fecha es incrementada (por ejemplo, que solo los sábados sean seleccionables). Sin embargo, no parece estar en ninguna implementación en el momento de escribir este artículo.
+> [!NOTE]
+> Tu _debes_ ser capaz de usar el atributo [`step`](/es/docs/Web/HTML/Element/input#step) para modificar el número de días que son saltados cada vez que la fecha es incrementada (por ejemplo, que solo los sábados sean seleccionables). Sin embargo, no parece estar en ninguna implementación en el momento de escribir este artículo.
 
 ### Controlando el tamaño del input
 
-`<input type="date">` no soporta los atributos de tamaño como lo es {{htmlattrxref("size", "input")}}. Mejor usa [CSS](/es/docs/Web/CSS) para adaptar su tamaño.
+`<input type="date">` no soporta los atributos de tamaño como lo es [`size`](/es/docs/Web/HTML/Element/input#size). Mejor usa [CSS](/es/docs/Web/CSS) para adaptar su tamaño.
 
 ## Validación
 
 Por defecto, `<input type="date">` no valida su valor más allá de su formato. Generalmente, las interfaces no te dejan introducir nada que no sea una fecha (lo que es de ayuda), pero tu puedes dejar el campo vacío o entrar una fecha inválida (como 32 de abril) en los navegadores que no soportan el tipo `date`, cuando el tipo `date` regresa un tipo `text`.
 
-Si tu usas {{htmlattrxref("min", "input")}} y {{htmlattrxref("max", "input")}} para limitar la disponibilidad de las fechas (véase [Estipulando valores de fecha máximos y mínimos](#estipulando_valores_de_fecha_máximos_y_mínimos)), los navegadores que lo soporten mostrarán un error si tu tratas de enviar una fecha que está por fuera de los límietes. A pesar de esto, tú necesitarás comprobar de nuevo el resultado enviado para asegurarte que el valor está entre esas fechas, si el menú de selección de fechas no está completamente soportado en el dispositivo del usuario.
+Si tu usas [`min`](/es/docs/Web/HTML/Element/input#min) y [`max`](/es/docs/Web/HTML/Element/input#max) para limitar la disponibilidad de las fechas (véase [Estipulando valores de fecha máximos y mínimos](#estipulando_valores_de_fecha_máximos_y_mínimos)), los navegadores que lo soporten mostrarán un error si tu tratas de enviar una fecha que está por fuera de los límietes. A pesar de esto, tú necesitarás comprobar de nuevo el resultado enviado para asegurarte que el valor está entre esas fechas, si el menú de selección de fechas no está completamente soportado en el dispositivo del usuario.
 
-Tú también puedes usar el atributo {{htmlattrxref("required", "input")}} para que completar la fecha sea obligatorio (se mostrará un error si queremos mandar una fecha vacía). Esto debería funcionar en casi todos los navegadores, incluso si la entrada termina regresando un tipo `text`.
+Tú también puedes usar el atributo [`required`](/es/docs/Web/HTML/Element/input#required) para que completar la fecha sea obligatorio (se mostrará un error si queremos mandar una fecha vacía). Esto debería funcionar en casi todos los navegadores, incluso si la entrada termina regresando un tipo `text`.
 
 Veamos un ejemplo con fecha mínima y máxima y, también, estableciendo el campo como requerido.
 
@@ -180,8 +208,7 @@ Veamos un ejemplo con fecha mínima y máxima y, también, estableciendo el camp
       name="party"
       min="2017-04-01"
       max="2017-04-20"
-      required
-    />
+      required />
     <span class="validity"></span>
   </label>
 
@@ -216,7 +243,8 @@ input:valid + span::after {
 }
 ```
 
-> **Advertencia:** La validación en el lado del cliente _no es un sustituto_ de la validación en el servidor. Es fácil para alguien modificar el HTML o sobrepasar tu HTML completamente y mandar datos directamente a tu servidor. Si tu servidor no valida los datos recibidos, puede ocurrir un desastre: datos con un mal formato, demasiado grandes, del tipo equivocado, etc.
+> [!WARNING]
+> La validación en el lado del cliente _no es un sustituto_ de la validación en el servidor. Es fácil para alguien modificar el HTML o sobrepasar tu HTML completamente y mandar datos directamente a tu servidor. Si tu servidor no valida los datos recibidos, puede ocurrir un desastre: datos con un mal formato, demasiado grandes, del tipo equivocado, etc.
 
 ## Manejando el soporte de los navegadores
 
@@ -233,7 +261,7 @@ El segundo problema es uno más serio: con la entrada de tipo fecha, el valor es
 - `mm-dd-aaaa`
 - `Mes dd, aaaa`
 
-Una manera de darle solución a este problema es usar el atributo {{htmlattrxref("pattern", "input")}} en la entrada de tipo fecha. Aunque el menú de selección no lo use, si que lo hará la entrada de tipo texto. Por ejemplo, trata de ver el siguiente ejemplo en un navegador sin soporte:
+Una manera de darle solución a este problema es usar el atributo [`pattern`](/es/docs/Web/HTML/Element/input#pattern) en la entrada de tipo fecha. Aunque el menú de selección no lo use, si que lo hará la entrada de tipo texto. Por ejemplo, trata de ver el siguiente ejemplo en un navegador sin soporte:
 
 ```html
 <form>

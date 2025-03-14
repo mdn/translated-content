@@ -39,16 +39,18 @@ padding-bottom
 
 **Left** **Top** **Right** **Bottom** _margin-top_ _margin-bottom_ _border-top_ _border-bottom_
 
-![Image:scrollTop.png](/@api/deki/files/842/=ScrollTop.png)
+![Image:scrollTop.png](scrolltop.png)
 
 ## Especificações
 
-| Specification                                                                            | Status                           | Comment |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('CSSOM View', '#dom-element-scrolltop', 'scrollTop')}} | {{Spec2("CSSOM View")}} |         |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
 
 ## Referências
 
-- [W3C Draft CSSOM View Module](http://dev.w3.org/csswg/cssom-view/#dom-element-scrolltop)
+- [W3C Draft CSSOM View Module](https://dev.w3.org/csswg/cssom-view/#dom-element-scrolltop)
 - [MSDN's scrollTop definition](<http://msdn.microsoft.com/en-us/library/ms534618(VS.85).aspx>)
 - [MSDN's Measuring Element Dimension and Location](<http://msdn.microsoft.com/en-us/library/hh781509(v=vs.85).aspx>)

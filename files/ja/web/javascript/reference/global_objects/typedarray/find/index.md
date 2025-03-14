@@ -1,37 +1,46 @@
 ---
 title: TypedArray.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/find
+l10n:
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
 
-**`find()`** メソッドは、型付き配列のある要素の値が与えられたテスト関数を満たした場合、その値を返します。そうでなければ {{jsxref("undefined")}} を返します。ここで _TypedArray_ は[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの一つです。
+**`find()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列のある要素の値が与えられたテスト関数を満たした場合、その値を返します。そうでなければ {{jsxref("undefined")}} を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.find()")}} と同じです。
 
-{{jsxref("TypedArray.findIndex", "findIndex()")}} メソッドも参照してください。こちらはそのメソッドは値のかわりに型付き配列で見つかった要素の**添字**を返します。
+{{InteractiveExample("JavaScript Demo: TypedArray.find()")}}
 
-{{EmbedInteractiveExample("pages/js/typedarray-find.html")}}
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([10, 0, -10, 20, -30, 40, -50]);
+
+console.log(int8.find(isNegative));
+// Expected output: -10
+```
 
 ## 構文
 
-```
-typedarray.find(callback[, thisArg])
+```js-nolint
+find(callbackFn)
+find(callbackFn, thisArg)
 ```
 
 ### 引数
 
-- `callback`
-
-  - : 型付き配列の各要素で実行する関数。3 つの引数を取ります。
-
+- `callbackFn`
+  - : 配列のそれぞれの要素に対して実行する関数です。要素がテストに合格した場合は[真値](/ja/docs/Glossary/Truthy)を返し、そうでなければ[偽値](/ja/docs/Glossary/Falsy)を返す必要があります。この関数は以下の引数で呼び出されます。
     - `element`
-      - : 型付き配列内で現在処理されている要素。
+      - : 現在処理されている型付き配列の要素です。
     - `index`
-      - : 型付き配列内で現在処理されている要素の位置。
+      - : 現在処理されている型付き配列の要素のインデックスです。
     - `array`
-      - : `find()` が呼び出された配列。
-
+      - : `find()` が実行されている型付き配列です。
 - `thisArg` {{optional_inline}}
-  - : `callback` を実行するときに `this` として使用するオブジェクト。
+  - : `callbackFn` を実行する際に `this` として使用する値。[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)を参照してください。
 
 ### 返値
 
@@ -39,25 +48,17 @@ typedarray.find(callback[, thisArg])
 
 ## 解説
 
-`find()` メソッドは `callback` 関数が true 値を返す要素を見つけるまで、型付き配列内に存在している各要素に対して一度ずつ `callback` 関数を実行します。そのような要素が見つかったら、 `find()` はすぐに要素の値を返します。さもなければ、 `find()` は {{jsxref("undefined")}} を返します。 `callback` は型付き配列の値を割り当てた位置に対してのみ呼び出されます。つまり、削除されたり、値が割り当てられて位置に対しては呼び出されません。
-
-`callback` は、要素の値、要素の位置、走査中の型付き配列の 3 つの引数とともに呼び出されます。
-
-`thisArg` 引数が `find()` に与えられた場合、 `callback` の各呼び出しで `this` として使用されます。与えられなかった場合は、 {{jsxref("undefined")}}が使用されます。
-
-`find()` は呼び出されている型付き配列を変更しません。
-
-`find()` によって処理される要素の範囲は、最初に `callback` が呼び出される前に設定されます。 `find()` の呼び出しが始まったあとで型付き配列に追加された要素は、 `callback` メソッドによって処理されません。存在していて、処理されていない型付き配列の要素が `callback` によって変更された場合、処理している `callback` 関数に渡される値は、 `find()` が要素の位置を処理する直前の値です。削除された要素は処理されません。
+詳細については、 {{jsxref("Array.prototype.find()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
 
 ## 例
 
 ### 型付き配列内の素数を探す
 
-次の例では、型付き配列内で素数である要素を探します (または、素数がない場合は {{jsxref("undefined")}} を返します)。
+次の例では、型付き配列内で素数である要素を探します（または、素数がない場合は {{jsxref("undefined")}} を返します）。
 
 ```js
 function isPrime(element, index, array) {
-  var start = 2;
+  let start = 2;
   while (start <= Math.sqrt(element)) {
     if (element % start++ < 1) {
       return false;
@@ -66,7 +67,7 @@ function isPrime(element, index, array) {
   return element > 1;
 }
 
-var uint8 = new Uint8Array([4, 5, 8, 12]);
+const uint8 = new Uint8Array([4, 5, 8, 12]);
 console.log(uint8.find(isPrime)); // 5
 ```
 
@@ -76,9 +77,18 @@ console.log(uint8.find(isPrime)); // 5
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.TypedArray.find")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`TypedArray.prototype.find` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
+- {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.findIndex()")}}
+- {{jsxref("TypedArray.prototype.findLast()")}}
+- {{jsxref("TypedArray.prototype.findLastIndex()")}}
+- {{jsxref("TypedArray.prototype.includes()")}}
+- {{jsxref("TypedArray.prototype.filter()")}}
 - {{jsxref("TypedArray.prototype.every()")}}
+- {{jsxref("TypedArray.prototype.some()")}}
+- {{jsxref("Array.prototype.find()")}}

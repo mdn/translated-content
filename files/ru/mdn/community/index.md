@@ -1,14 +1,9 @@
 ---
 title: Отправить отзыв об MDN
 slug: MDN/Community
-tags:
-  - Руководство
-  - Сообщество
-  - Чат
-translation_of: MDN/Contribute/Feedback
-original_slug: MDN/Contribute/Feedback
 ---
-{{MDNSidebar}}{{IncludeSubnav("/ru/docs/MDN")}}
+
+{{MDNSidebar}}
 
 Добро пожаловать в MDN! Если у вас есть предложения или проблемы с использованием MDN, то это нужное вам место. Тот факт, что у вас есть предложения сделать MDN лучше, делает вас частью большого сообщества MDN и мы благодарим вас за ваш интерес.
 
@@ -20,10 +15,7 @@ original_slug: MDN/Contribute/Feedback
 
 В GitHub хранится [оригинальная документация](https://github.com/mdn/content/) и [переведённый контент](https://github.com/mdn/translated-content), в том числе [русскоязычный перевод](https://github.com/mdn/translated-content/tree/main/files/ru).
 
-Для получения дополнительной информации о вкладе в MDN, смотрите:
-
-- [Начало работы](/ru/docs/Project:Getting_started) для идей о вещах, которые вы можете сделать.
-- [Вклад в MDN](/ru/docs/MDN/Contribute)
+Для получения дополнительной информации о вкладе в MDN, смотрите [Начало работы](/ru/docs/MDN/Community/Getting_started).
 
 ## Присоединение к беседе
 

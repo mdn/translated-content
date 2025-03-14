@@ -1,20 +1,21 @@
 ---
 title: clipboard
 slug: Mozilla/Add-ons/WebExtensions/API/clipboard
-original_slug: Mozilla/Add-ons/WebExtensions/API/剪切板
+l10n:
+  sourceCommit: eec174a08a5003da32f53e694c45eda3377b4d18
 ---
 
 {{AddonSidebar}}
 
-WebExtention 的 `clipboard` API 增加了一个将图像复制到剪贴板的函数。目前，这个 API 仅支持复制图像，但我们期望它未来支持复制文本和 HTML（译者注：原文如此，可能是指被支持复制富内容之后的标准剪贴板 API 取代）。
+WebExtension 的 `clipboard` API（与[标准剪贴板 API](/zh-CN/docs/Web/API/Clipboard_API) 不同）使扩展能够将项目复制到系统剪贴板。目前，WebExtension `clipboard` API 仅支持复制图像，但计划在未来支持复制文本和 HTML。
 
-这个 WebExtension API 之所以存在，主要是因为标准的 Web 剪贴板 API [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API) 不支持将图像写入剪贴板。一旦标准剪贴板 API 对非文本剪贴板内容的支持进入通用状态，则此 API 可能会被弃用。
+WebExtension `clipboard` API 之所以存在，主要是因为标准剪贴板 API [不支持将图像写入剪贴板](https://w3c.github.io/clipboard-apis/#writing-to-clipboard)。一旦标准剪贴板 API 对非文本剪贴板内容的支持进入广泛使用，则 WebExtension `clipboard` API 可能会被弃用。
 
-Reading from the clipboard is not supported by this API, because the clipboard can already be read using the standard web platform APIs. See [Interacting with the clipboard](/zh-CN/Add-ons/WebExtensions/Interact_with_the_clipboard#Reading_from_the_clipboard).
+此 API 不支持从剪贴板读取，因为剪贴板已经可以使用标准的 web 平台 API 进行读取。请参阅[与剪贴板交互](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard#读取系统粘贴板)。
 
-This API is based on Chrome's [`clipboard`](https://developer.chrome.com/apps/clipboard) API, but that API is only available for Chrome apps, not extensions.
+此 API 基于 Chrome 的 [`clipboard`](https://developer.chrome.google.cn/docs/apps/reference/clipboard) API，但该 API 仅适用于 Chrome 应用，不适用于扩展。
 
-To use this API you need the `"clipboardWrite"` extension [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+要使用此 API，你需要有 `"clipboardWrite"` 扩展[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
 ## 函数
 
@@ -23,6 +24,9 @@ To use this API you need the `"clipboardWrite"` extension [permission](/zh-CN/do
 
 ## 浏览器兼容性
 
+{{WebExtExamples("h2")}}
+
 {{Compat}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API.
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.clipboard`](https://developer.chrome.google.cn/apps/clipboard) API。

@@ -1,19 +1,9 @@
 ---
 title: Node.textContent
 slug: Web/API/Node/textContent
-tags:
-  - API
-  - Command API
-  - DOM
-  - Node
-  - Property
-  - Reference
-translation_of: Web/API/Node/textContent
 ---
 
-{{ApiRef}}
-
-## Аннотация
+{{APIRef("DOM")}}
 
 Позволяет задавать или получать текстовое содержимое элемента и его потомков.
 
@@ -26,8 +16,8 @@ element.textContent = "Это просто текст";
 
 ## Описание
 
-- `textContent` возвращает `null,` _если узел является [документом](/ru/docs/DOM/document), типом документа, или его описанием_. Для получения _всего_ текста и CDATA-данных во всём документе можно использовать `document.documentElement.textContent`.
-- Если узел является CDATA, комментарием, инструкцией, или текстовым элементом, `textContent` возвращает текст внутри узла в виде строки (т.н. [nodeValue](/ru/docs/DOM/Node.nodeValue)).
+- `textContent` возвращает `null,` _если узел является [документом](/ru/docs/Web/API/Document), типом документа, или его описанием_. Для получения _всего_ текста и CDATA-данных во всём документе можно использовать `document.documentElement.textContent`.
+- Если узел является CDATA, комментарием, инструкцией, или текстовым элементом, `textContent` возвращает текст внутри узла в виде строки (т.н. [nodeValue](/ru/docs/Web/API/Node/nodeValue)).
 - Для узлов других типов `textContent` возвращает конкатенацию свойств `textContent` всех дочерних узлов, исключая комментарии и строки кода. Если узел не имеет дочерних узлов, будет возвращена пустая строка.
 - Установка данного значения удаляет все дочерние узлы и заменяет их единичным текстовым узлом с указанным значением.
 
@@ -59,13 +49,13 @@ document.getElementById("block").textContent = "Это — просто текс
 //   <div id="block">Это — просто текст</div>
 ```
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
-## Спецификация
+## Спецификации
 
-- [textContent](http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#Node3-textContent)
+- [textContent](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#Node3-textContent)
 
 ## Смотрите также
 

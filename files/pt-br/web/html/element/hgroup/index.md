@@ -28,7 +28,7 @@ O **elemento HTML `<hgroup>` **destina-se a agrupar cabeçalhos de diferentes n�
     </tr>
     <tr>
       <th scope="row">Omissão de tag</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row"><br />Elementos-pai permitidos</th>
@@ -49,12 +49,13 @@ O **elemento HTML `<hgroup>` **destina-se a agrupar cabeçalhos de diferentes n�
 
 ## atributos
 
-Esse elemento admite apenas os [global attributes](/pt-BR/docs/HTML/Global_attributes) (atributos globais)
+Esse elemento admite apenas os [global attributes](/pt-BR/docs/Web/HTML/Global_attributes) (atributos globais)
 
 ## Notas sobre o uso
 
-> **Note:** O elemento `<hgroup>` foi removido da especificação do W3C para a HTML5, mas ainda se encontra na especificação HTML do WHATWG. Foi parcialmente implementado na maioria dos navegadores, contudo é pouco provável que seja incluído na especificação.
-> Considerando que a finalidade do elemento `<hgroup>` é a de definir a maneira como os títulos serão mostrados pelo [outline algorithm definido na especificação da HTML](/pt-BR/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#The_HTML5_outline_algorithm) e considerando ainda que o **outline algorithm da HTML não está implementado em nenhum navegador**, conclui-se que, na prática, a semântica do elemento `<hgroup>` é meramente teórica.
+> [!NOTE]
+> O elemento `<hgroup>` foi removido da especificação do W3C para a HTML5, mas ainda se encontra na especificação HTML do WHATWG. Foi parcialmente implementado na maioria dos navegadores, contudo é pouco provável que seja incluído na especificação.
+> Considerando que a finalidade do elemento `<hgroup>` é a de definir a maneira como os títulos serão mostrados pelo [outline algorithm definido na especificação da HTML](/pt-BR/docs/Web/HTML/Element/Heading_Elements#the_html5_outline_algorithm) e considerando ainda que o **outline algorithm da HTML não está implementado em nenhum navegador**, conclui-se que, na prática, a semântica do elemento `<hgroup>` é meramente teórica.
 > A especificação do W3C para a HTML5 fornece algumas sugestões para a marcação de [Subheadings, subtitles, alternative titles and taglines](https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements) sem que se use o elemento `<hgroup>`.
 
 `O elemento <hgroup> permite que o cabeçalho principal de uma seção de documento seja agrupado com quaisquer cabeçalhos secundarios-como subtitulos ou titulos alternativos-para formatar um cabeçalho de varios niveis.`
@@ -71,7 +72,7 @@ Para produzir alguma (não-abstrato) visualização não renderizada como um esb
 Considere o documento HTML a seguir:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <title>HTML Standard</title>
 <body>
   <hgroup id="document-title">
@@ -80,7 +81,9 @@ Considere o documento HTML a seguir:
   </hgroup>
   <p>Some intro to the document.</p>
   <h2>Table of contents</h2>
-  <ol id=toc>...</ol>
+  <ol id="toc">
+    ...
+  </ol>
   <h2>First section</h2>
   <p>Some intro to the first section.</p>
 </body>
@@ -88,13 +91,13 @@ Considere o documento HTML a seguir:
 
 Um esboço renderizado para esse documento seria como:
 
-![](https://mdn.mozillademos.org/files/14599/outline-colon.png)
+![](outline-colon.png)
 
 Isso é, o esboço renderizado deve ser o título primário, HTML, seguido por dois pontos e espaço, seguido pelo título secundário, Living Standard - Last Update 12 August 2016.
 
 Ou, o esboço renderizado para aquele documento poderia ser como:
 
-![Rendered outline that includes an \<hgroup> element, with parens around the secondary heading](https://mdn.mozillademos.org/files/14601/outline-paren.png)
+![Rendered outline that includes an 'hgroup' element, with parens around the secondary heading](outline-paren.png)
 
 Isso é, o esboço renderizado deve mostrar o título primário, HTML, seguido pelo título secundário mostrado entre parênteses: (Living Standard - Last Updated 12 August 2016).
 
@@ -107,13 +110,13 @@ Isso é, o esboço renderizado deve mostrar o título primário, HTML, seguido p
 </hgroup>
 ```
 
-| Specification                                                                                                | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-hgroup-element', '&lt;hgroup&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
+## Especificações
+
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.hgroup")}}
+{{Compat}}
 
 ## See also
 

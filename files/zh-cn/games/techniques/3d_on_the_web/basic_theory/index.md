@@ -54,7 +54,7 @@ WebGL 使用右手坐标系统 — `x` 轴向右，`y` 轴向上 `z` 轴指向�
 
 ![Camera](mdn-games-3d-camera.png)
 
-**投射转换**(projection transformation), 也被称作透视转换 (perspective transformation), 这一步定义摄像机设置，在此过程会设置哪些在摄像机中可见，配置包含视野 (field of view), 宽高比例 (aspect ratio) 和可选的近裁剪和远裁剪参数。阅读 Three.js 文章[摄像机](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js#Camera)了解更多。
+**投射转换**(projection transformation), 也被称作透视转换 (perspective transformation), 这一步定义摄像机设置，在此过程会设置哪些在摄像机中可见，配置包含视野 (field of view), 宽高比例 (aspect ratio) 和可选的近裁剪和远裁剪参数。阅读 Three.js 文章[摄像机](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js#camera)了解更多。
 
 ![Camera settings](mdn-games-3d-camera-settings.png)
 
@@ -82,7 +82,7 @@ WebGL 使用右手坐标系统 — `x` 轴向右，`y` 轴向上 `z` 轴指向�
 
 ### 光照
 
-我们在屏幕上看到的颜色是光照和模型颜色，材质进行交互之后的最终结果。灯光会被吸收和反射，在 WebGL 中实现的标准**Phong 光照模型** 有一下四种光照参数：
+我们在屏幕上看到的颜色是光照和模型颜色，材质进行交互之后的最终结果。灯光会被吸收和反射，在 WebGL 中实现的标准**Phong 光照模型** 有以下四种光照参数：
 
 - **漫反射**: 遥远的直接光照，就像太阳。
 - **高光**: 点光源，就像房间的白炽灯或闪光灯。

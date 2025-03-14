@@ -1,15 +1,9 @@
 ---
 title: Variable
 slug: Glossary/Variable
-tags:
-  - Encodage
-  - Glossaire
-  - JavaScript
-  - Programmation
-  - Variables
-translation_of: Glossary/Variable
-original_slug: Glossaire/Variable
 ---
+
+{{GlossarySidebar}}
 
 Une variable est un emplacement nommé pour conserver une {{Glossary("Value", "valeur")}}. Ainsi, il est possible d'accéder à une valeur quelconque par l'intermédiaire d'un nom prédéterminé.
 
@@ -17,9 +11,9 @@ Une variable est un emplacement nommé pour conserver une {{Glossary("Value", "v
 
 ### Culture générale
 
-- [Variable](https://fr.wikipedia.org/wiki/Variable_(informatique)) sur Wikipédia
+- [Variable](<https://fr.wikipedia.org/wiki/Variable_(informatique)>) sur Wikipédia
 
 ### Référence technique
 
-- [Déclaration de variables en JavaScript](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Déclarations)
-- [`Instruction var` en JavaScript](/fr/docs/Web/JavaScript/Reference/Instructions/var)
+- [Déclaration de variables en JavaScript](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#déclarations)
+- [`Instruction var` en JavaScript](/fr/docs/Web/JavaScript/Reference/Statements/var)

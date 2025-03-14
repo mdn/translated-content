@@ -1,17 +1,21 @@
 ---
 title: ARIA
 slug: Glossary/ARIA
-tags:
-  - Accessibilité
-  - Glossaire
-translation_of: Glossary/ARIA
-original_slug: Glossaire/ARIA
+l10n:
+  sourceCommit: fbeabaac54b4e6640b0abc1d2ac6c44d1c3d09cd
 ---
 
-**ARIA** (_Accessible Rich {{glossary("Internet")}} Applications_) est une spécification technique du {{Glossary("W3C")}}. ARIA décrit comment ajouter de la sémantique et d'autres métadonnées à du contenu {{Glossary("HTML")}} dans le but de répondre aux besoins des technologies d'assistance.
+{{GlossarySidebar}}
 
-Par exemple, vous pouvez ajouter l'attribut `role="alert"` à un élément {{HTMLElement("p")}} pour notifier à un utilisateur malvoyant l'importance et l'urgence de l'information (pour un utilisateur sans problème de vue, cette information pourrait être mise en exergue par un texte coloré différemment).
+**ARIA**, l'acronyme pour <i lang="en">Accessible Rich Internet Applications</i> en anglais (qu'on peut traduire par applications internet riches et accessibles) est une spécification technique du [W3C](/fr/docs/Glossary/W3C). ARIA décrit comment ajouter de la sémantique et d'autres métadonnées à du contenu [HTML](/fr/docs/Glossary/HTML) dans le but de répondre aux besoins des technologies d'assistance.
+
+Par exemple, on peut ajouter l'attribut `role="alert"` à une [balise](/fr/docs/Glossary/Tag) [`<p>`](/fr/docs/Web/HTML/Element/p) pour notifier à une personne malvoyante l'importance et l'urgence de l'information (pour un personne sans problème de vue, cette information pourrait être mise en exergue par un texte coloré différemment).
 
 ## Voir aussi
 
-- [ARIA](/fr/docs/Accessibilit%C3%A9/ARIA) sur MDN
+- [Rôles ARIA](/fr/docs/Web/Accessibility/ARIA/Roles)
+- [États et propriétés ARIA&nbsp;: attributs `aria-*`](/fr/docs/Web/Accessibility/ARIA/Attributes)
+- [ARIA](/fr/docs/Web/Accessibility/ARIA)
+- [Guides ARIA](/fr/docs/Web/Accessibility/ARIA/ARIA_Guides)
+- [La spécification WAI-ARIA](https://w3c.github.io/aria/) (en anglais)
+- [Guides pratiques pour l'utilisation de WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) (en anglais)

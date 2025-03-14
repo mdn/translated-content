@@ -1,5 +1,5 @@
 ---
-title: ':last-child'
+title: :last-child
 slug: Web/CSS/:last-child
 ---
 
@@ -7,7 +7,7 @@ slug: Web/CSS/:last-child
 
 ## Resumo
 
-A CSS [pseudo-classe](/pt-BR/docs/CSS/Pseudo-classes) `:last-child` representa qualquer elemento que é o último filho de seu elemento pai.
+A CSS [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) `:last-child` representa qualquer elemento que é o último filho de seu elemento pai.
 
 ## Sintaxe
 
@@ -31,7 +31,7 @@ elemento:last-child { propriedades de estilo }
 
 ```css
 li:last-child {
-    background-color: lime;
+  background-color: lime;
 }
 ```
 
@@ -39,14 +39,11 @@ li:last-child {
 
 ## Especificações
 
-| Especificação                                                                        | Status                                   | Comentário         |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{ SpecName('CSS4 Selectors', '#last-child', ':last-child') }} | {{ Spec2('CSS4 Selectors') }} | Sem mudança.       |
-| {{ SpecName('CSS3 Selectors', '#last-child', ':last-child') }} | {{ Spec2('CSS3 Selectors') }} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade de navegadores
 
-{{Compat("css.selectors.last-child")}}
+{{Compat}}
 
 ## Veja também
 

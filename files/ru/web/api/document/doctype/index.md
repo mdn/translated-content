@@ -1,16 +1,9 @@
 ---
 title: Document.doctype
 slug: Web/API/Document/doctype
-tags:
-  - DOM
-  - Документ
-  - Отсылка
-  - Свойство
-  - Справка
-translation_of: Web/API/Document/doctype
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
 Возвращает Описание Типа Документа (Document Type Declaration, DTD) относительно текущего документа. Возвращаемый объект обеспечивает выполнение {{domxref("DocumentType")}} интерфейса. Используйте {{domxref("DOMImplementation.createDocumentType()")}} для создания `DocumentType`.
 
@@ -28,10 +21,17 @@ doctype = document.doctype;
 var doctypeObj = document.doctype;
 
 console.log(
-  "doctypeObj.name: "           + doctypeObj.name            + "\n" +
-  "doctypeObj.internalSubset: " + doctypeObj.internalSubset  + "\n" +
-  "doctypeObj.publicId: "       + doctypeObj.publicId        + "\n" +
-  "doctypeObj.systemId: "       + doctypeObj.systemId
+  "doctypeObj.name: " +
+    doctypeObj.name +
+    "\n" +
+    "doctypeObj.internalSubset: " +
+    doctypeObj.internalSubset +
+    "\n" +
+    "doctypeObj.publicId: " +
+    doctypeObj.publicId +
+    "\n" +
+    "doctypeObj.systemId: " +
+    doctypeObj.systemId,
 );
 ```
 

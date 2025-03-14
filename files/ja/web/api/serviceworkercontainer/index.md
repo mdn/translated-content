@@ -53,8 +53,8 @@ if ("serviceWorker" in navigator) {
     .then((registration) => {
       console.log("サービスワーカー登録成功:", registration);
 
-    // この時点で、オプションで registration に何かを行うことができます。
-    // https://developer.mozilla.org/ja/docs/Web/API/ServiceWorkerRegistration を参照してください
+      // この時点で、オプションで registration に何かを行うことができます。
+      // https://developer.mozilla.org/ja/docs/Web/API/ServiceWorkerRegistration を参照してください
     })
     .catch((error) => {
       console.error(`サービスワーカー登録失敗: ${error}`);
@@ -69,7 +69,7 @@ if ("serviceWorker" in navigator) {
   if (navigator.serviceWorker.controller) {
     console.log(
       "このページは現在サービスワーカーによって制御されています:",
-      navigator.serviceWorker.controller
+      navigator.serviceWorker.controller,
     );
   }
 
@@ -78,7 +78,7 @@ if ("serviceWorker" in navigator) {
   navigator.serviceWorker.oncontrollerchange = () => {
     console.log(
       "このページは次のものが制御しています。",
-      navigator.serviceWorker.controller
+      navigator.serviceWorker.controller,
     );
   };
 } else {

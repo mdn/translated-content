@@ -1,8 +1,6 @@
 ---
 title: column-rule-color
 slug: Web/CSS/column-rule-color
-translation_of: Web/CSS/column-rule-color
-browser-compat: css.properties.column-rule-color
 ---
 
 {{CSSRef}}
@@ -48,16 +46,14 @@ La propriété `column-rule-color` se définit grâce à une valeur de type `<co
 ### HTML
 
 ```html
-<p>« Mais alors, » pensa Alice, « ne serai-je donc
-   jamais plus vieille que je ne le suis maintenant ?
-   D'un côté cela aura ses avantages, ne jamais être
-   une vieille femme. Mais alors avoir toujours des
-   leçons à apprendre ! Oh, je n'aimerais pas cela du
-   tout. »
-   « Oh ! Alice, petite folle, » se répondit-elle.
-   « Comment pourriez-vous apprendre des leçons ici ?
-   Il y a à peine de la place pour vous, et il n'y en
-   a pas du tout pour vos livres de leçons. »</p>
+<p>
+  « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je ne
+  le suis maintenant ? D'un côté cela aura ses avantages, ne jamais être une
+  vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
+  n'aimerais pas cela du tout. » « Oh ! Alice, petite folle, » se répondit-elle.
+  « Comment pourriez-vous apprendre des leçons ici ? Il y a à peine de la place
+  pour vous, et il n'y en a pas du tout pour vos livres de leçons. »
+</p>
 ```
 
 ### CSS
@@ -86,4 +82,4 @@ p {
 
 - Le type de donnée [`<color>`](/fr/docs/Web/CSS/color_value)
 - Les autres propriétés relatives aux couleurs&nbsp;: [`color`](/fr/docs/Web/CSS/color), [`background-color`](/fr/docs/Web/CSS/background-color), [`border-color`](/fr/docs/Web/CSS/border-color), [`outline-color`](/fr/docs/Web/CSS/outline-color), [`text-decoration-color`](/fr/docs/Web/CSS/text-decoration-color), [`text-emphasis-color`](/fr/docs/Web/CSS/text-emphasis-color), [`text-shadow`](/fr/docs/Web/CSS/color) et [`caret-color`](/fr/docs/Web/CSS/caret-color)
-- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/HTML/Applying_color)
+- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)

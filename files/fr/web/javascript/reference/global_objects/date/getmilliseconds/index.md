@@ -1,26 +1,26 @@
 ---
 title: Date.prototype.getMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getMilliseconds
 ---
 
 {{JSRef}}
 
 La méthode **`getMilliseconds()`** renvoie les millièmes de secondes de la date renseignée d'après l'heure locale.
 
-{{EmbedInteractiveExample("pages/js/date-getmilliseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getMilliseconds()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+moonLanding.setMilliseconds(123);
+
+console.log(moonLanding.getMilliseconds());
+// Expected output: 123
+```
 
 ## Syntaxe
 
 ```js
-dateObj.getMilliseconds()
+dateObj.getMilliseconds();
 ```
 
 ### Valeur de retour

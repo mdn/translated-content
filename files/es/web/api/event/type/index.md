@@ -9,7 +9,7 @@ La propiedad de sólo-lectura **`Event.type`** devuelve una cadena de texto que 
 
 El argumento `event` de {{ domxref("EventTarget.addEventListener()") }} y {{ domxref("EventTarget.removeEventListener()") }} no es sensible a mayúsculas.
 
-Para una lista de tipos de evento displonibles, vea la [referencia de eventos](/es/docs/Web/Reference/Events)
+Para una lista de tipos de evento displonibles, vea la [referencia de eventos](/es/docs/Web/Events)
 
 ## Sintaxis
 
@@ -20,47 +20,44 @@ event.type
 ## Ejemplos
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
 
     <title>Event.type Example</title>
 
     <script>
-        var currEvent;
-        function getEvtType(evt) {
-            console.group();
+      var currEvent;
+      function getEvtType(evt) {
+        console.group();
 
-            currEvent = evt.type;
-            console.log(currEvent);
+        currEvent = evt.type;
+        console.log(currEvent);
 
-            document.getElementById("Etype").innerHTML = currEvent;
+        document.getElementById("Etype").innerHTML = currEvent;
 
-            console.groupEnd();
-        }
+        console.groupEnd();
+      }
 
-        // Eventos de teclado
-        document.addEventListener("keypress", getEvtType, false); //[second]
+      // Eventos de teclado
+      document.addEventListener("keypress", getEvtType, false); //[second]
 
-        document.addEventListener("keydown", getEvtType, false); //first
-        document.addEventListener("keyup", getEvtType, false); //third
+      document.addEventListener("keydown", getEvtType, false); //first
+      document.addEventListener("keyup", getEvtType, false); //third
 
-        // Eventos de ratón
-        document.addEventListener("click", getEvtType, false); // third
+      // Eventos de ratón
+      document.addEventListener("click", getEvtType, false); // third
 
-        document.addEventListener("mousedown", getEvtType, false); //first
-        document.addEventListener("mouseup", getEvtType, false); //second
-
+      document.addEventListener("mousedown", getEvtType, false); //first
+      document.addEventListener("mouseup", getEvtType, false); //second
     </script>
-</head>
+  </head>
 
-<body>
-
-<p>Press any key or click the mouse to get the event type.</p>
-<p>Event type: <span id="Etype" style="color:red">-</span></p>
-
-</body>
+  <body>
+    <p>Press any key or click the mouse to get the event type.</p>
+    <p>Event type: <span id="Etype" style="color:red">-</span></p>
+  </body>
 </html>
 ```
 
@@ -72,6 +69,6 @@ event.type
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Event.type")}}
+{{Compat}}

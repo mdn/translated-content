@@ -1,17 +1,9 @@
 ---
 title: Event.eventPhase
 slug: Web/API/Event/eventPhase
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-  - Property
-  - Reference
-translation_of: Web/API/Event/eventPhase
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}} {{AvailableInWorkers}}
 
 ### Общая информация
 
@@ -30,7 +22,7 @@ var phase = event.eventPhase;
 - `Event.AT_TARGET = 2`
 - `Event.BUBBLING_PHASE = 3`
 
-Смысл констант смотри в [section 3.1, Event dispatch and DOM event flow](http://www.w3.org/TR/DOM-Level-3-Events/#event-flow), спецификации DOM Level 3.
+Смысл констант смотри в [section 3.1, Event dispatch and DOM event flow](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow), спецификации DOM Level 3.
 
 ### Пример
 
@@ -141,4 +133,4 @@ var phase = event.eventPhase;
 
 ### Спецификация
 
-[DOM Level 2 Events: Event.eventPhase](http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-Event-eventPhase)
+[DOM Level 2 Events: Event.eventPhase](https://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-Event-eventPhase)

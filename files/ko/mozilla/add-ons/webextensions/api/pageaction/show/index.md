@@ -3,11 +3,11 @@ title: pageAction.show()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/show
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 지정한 탭의 페이지 액션을 보인다. 페이지 액션은 해당 탭이 활성일 때 표시된다.
 
-`show()`는 설정된 URL 패턴과 상관없이 동작한다. 따라서 [`show_matches`](/Add-ons/WebExtensions/manifest.json/page_action)와 일치하지 않아도 [`hide_matches`](/Add-ons/WebExtensions/manifest.json/page_action)여도 표시된다.
+`show()`는 설정된 URL 패턴과 상관없이 동작한다. 따라서 [`show_matches`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)와 일치하지 않아도 [`hide_matches`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)여도 표시된다.
 
 `show()`는 아무런 내용도 없는 탭에는 효과가 없다.
 
@@ -15,8 +15,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/pageAction/show
 
 ```js
 browser.pageAction.show(
-  tabId // integer
-)
+  tabId, // integer
+);
 ```
 
 ### 매개변수
@@ -30,7 +30,7 @@ browser.pageAction.show(
 
 ### 반환 값
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension's page action is being shown for the given tab, and `false` otherwise.
+A [`Promise`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension's page action is being shown for the given tab, and `false` otherwise.
 
 ## 브라우저 호환성
 
@@ -43,10 +43,10 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 ```js
 browser.contextMenus.create({
   id: "show",
-  title: "Show page action"
+  title: "Show page action",
 });
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "show") {
     browser.pageAction.show(tab.id);
   }

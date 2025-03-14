@@ -1,10 +1,6 @@
 ---
 title: Groupes et références arrière
-slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
-original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
-l10n:
-  sourceCommit: df24a4432fc479f58901c9a101330d1100f1172a
+slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -45,7 +41,7 @@ Les groupes permettent de regrouper différents motifs ensemble et les groupes d
       <td><code>(?&lt;Nom&gt;x)</code></td>
       <td>
         <p>
-          <strong>Groupe de capture nommé&nbsp;:</strong> correspond à <code>x</code> et enregistre cette correspondance dans la propriété <code>groups</code> des correspondances renvoyées aevc le nom fourni <code>&lt;Nom&gt;</code>. Les chevrons (<code>&lt;</code>
+          <strong>Groupe de capture nommé&nbsp;:</strong> correspond à <code>x</code> et enregistre cette correspondance dans la propriété <code>groups</code> des correspondances renvoyées avec le nom fourni <code>&lt;Nom&gt;</code>. Les chevrons (<code>&lt;</code>
           and <code>&gt;</code>) sont nécessaire pour indiquer le nom du groupe.
         </p>
         <p>
@@ -94,7 +90,7 @@ Les groupes permettent de regrouper différents motifs ensemble et les groupes d
 const listePersonnes = `Prénom : Jean, Nom_famille : Biche
 Prénom : Jeanne, Nom_famille : Ferrant`;
 
-const regexpNames =  /Prénom : (\w+), Nom_famille : (\w+)/mg;
+const regexpNames = /Prénom : (\w+), Nom_famille : (\w+)/gm;
 for (const correspondance of listePersonnes.matchAll(regexpNames)) {
   console.log(`Bonjour ${correspondance[1]} ${correspondance[2]}`);
 }
@@ -106,9 +102,11 @@ for (const correspondance of listePersonnes.matchAll(regexpNames)) {
 const listePersonnes = `Prénom : Jean, Nom_famille : Biche
 Prénom : Jeanne, Nom_famille : Ferrant`;
 
-const regexpNames =  /Prénom : (?<prenom>\w+), Nom_famille : (?<nom>\w+)/mg;
+const regexpNames = /Prénom : (?<prenom>\w+), Nom_famille : (?<nom>\w+)/gm;
 for (const correspondance of listePersonnes.matchAll(regexpNames)) {
-  console.log(`Bonjour ${correspondance.groups.prenom} ${correspondance.groups.nom}`);
+  console.log(
+    `Bonjour ${correspondance.groups.prenom} ${correspondance.groups.nom}`,
+  );
 }
 ```
 
@@ -138,7 +136,7 @@ lines.splice(
   1,
   0,
   " ".repeat(match.indices[1][1] - match.indices[1][0]) +
-    "^".repeat(match.indices.groups.name[1] - match.indices.groups.name[0])
+    "^".repeat(match.indices.groups.name[1] - match.indices.groups.name[0]),
 );
 console.log(lines.join("\n"));
 // function add(x, y) {
@@ -150,12 +148,12 @@ console.log(lines.join("\n"));
 ## Voir aussi
 
 - [Une prothèse d'émulation pour les groupes de capture nommés](https://github.com/zloirock/core-js#ecmascript-string-and-regexp), disponible avec la bibliothèque [`core-js`](https://github.com/zloirock/core-js)
-- [Guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)
 
-  - [Classes de caractères](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
-  - [Assertions](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
-  - [Quantificateurs](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
-  - [Séquences d'échappement pour les propriétés Unicode](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
+  - [Classes de caractères](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+  - [Assertions](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+  - [Quantificateurs](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+  - [Séquences d'échappement pour les propriétés Unicode](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
 
 - [Le constructeur `RegExp()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 - [`ClassRanges` dans la spécification ECMAScript](https://tc39.es/ecma262/multipage/text-processing.html#sec-classranges)

@@ -1,20 +1,9 @@
 ---
 title: runtime.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/reload
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - reload
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/reload
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Recharge une extension.
 
@@ -23,16 +12,16 @@ S'il y a des mises à jour en attente pour l'extension, qu'elles ont été diff�
 ## Syntaxe
 
 ```js
-browser.runtime.reload()
+browser.runtime.reload();
 ```
 
 ### Paramètres
 
 Aucun.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.reload")}}
+{{Compat}}
 
 ## Exemples
 
@@ -46,9 +35,9 @@ browser.browserAction.onClicked.addListener((tab) => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

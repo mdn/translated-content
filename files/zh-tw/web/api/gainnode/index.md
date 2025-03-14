@@ -54,7 +54,7 @@ _No specific method; inherits methods from its parent,_ _{{domxref("AudioNode")}
 
 ## Example
 
-{{page("/en-US/docs/Web/API/AudioContext.createGain","Example")}}
+See [`BaseAudioContext.createGain()`](/zh-TW/docs/Web/API/BaseAudioContext/createGain#example) for example code showing how to use an `AudioContext` to create a `GainNode`.
 
 ## Specifications
 
@@ -66,4 +66,4 @@ _No specific method; inherits methods from its parent,_ _{{domxref("AudioNode")}
 
 ## See also
 
-- [Using the Web Audio API](/zh-TW/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-TW/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

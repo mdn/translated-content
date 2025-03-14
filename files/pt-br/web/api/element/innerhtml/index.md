@@ -92,7 +92,9 @@ A propriedade `innerHTML` de vários tipos de elementos — incluindo {{HTMLElem
 
 ```js
 // Copie e cole este código, em uma única linha, na barra de endereços
-javascript:"<pre>"+document.documentElement.innerHTML.replace(/</g,"&lt;") + "</pre>";
+javascript: "<pre>" +
+  document.documentElement.innerHTML.replace(/</g, "&lt;") +
+  "</pre>";
 ```
 
 Essa propriedade foi implementada inicialmente pelos navegadores web, e então especificada pela WHATWG e W3C no HTML5. Implementações antigas talvez não tenham implementado-a exatamente da mesma forma. Por exemplo, quando um texto é inserido em uma caixa de texto, o Internet Explorer muda o valor do atributo innerHTML dessa entrada, mas os navegadores Gecko não.
@@ -113,7 +115,7 @@ name = "<script>alert('I am John in an annoying alert!')</script>";
 el.innerHTML = name; // inofensivo, nesse caso
 ```
 
-Embora isso talvez se pareça como um ataque {{interwiki("wikipedia", "cross-site scripting")}}, o resultado é inofensivo. O HTML5 especifica que uma tag {{HTMLElement("script")}}, inserida via `innerHTML`, [não deve ser executada](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
+Embora isso talvez se pareça como um ataque [cross-site scripting](https://pt.wikipedia.org/wiki/cross-site_scripting), o resultado é inofensivo. O HTML5 especifica que uma tag {{HTMLElement("script")}}, inserida via `innerHTML`, [não deve ser executada](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
 
 No entanto, há formas de se executar JavaScript sem usar elementos {{HTMLElement("script")}}, por isso ainda há um risco de segurança sempre que você usa `innerHTML` para definir uma string sobre a qual você não tem controle. Por exemplo:
 
@@ -124,15 +126,17 @@ el.innerHTML = name; // exibe uma caixa de alerta
 
 Por essa razão, recomenda-se que você não use o `innerHTML` quando estiver inserindo texto puro; como alternativa, utilize {{domxref("node.textContent")}}. Isso não interpreta o conteúdo passado como HTML, mas em vez disso, insere-o como texto puro.
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                        | Estado                               | Comentário        |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------- |
-| {{SpecName('DOM Parsing', '#widl-Element-innerHTML', 'Element.innerHTML')}} | {{ Spec2('DOM Parsing') }} | Definição inicial |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
 
 ## Veja também
 
 - [`innerDOM`](http://innerdom.sourceforge.net/) - Para aqueles que desejam aderir aos padrões, aqui oferece um conjunto de funções JavaScript para serializar ou analisar XML, de modo a configurar o conteúdo do elemento definido como uma string(s) através do DOM ou recuperando o conteúdo do elemento obtido a partir do DOM como uma string.
-- [insertAdjacentHTML](/pt-BR/docs/DOM/Element.insertAdjacentHTML) - Uma alternativa para o innerHTML, permitindo você anexar um novo HTML, ao invés de trocá-la.
-- [jssaxparser](http://code.google.com/p/jssaxparser/) - Uma solução mais robusta (embora mais pesada) do innerDOM (suporta análise com namespaces, atributos com aspas simples, seções CDATA, etc.), esse é o analisador SAX2 quando usado com seu manipulador de conteúdo DOM. (Oferece String para DOM; DOM para String é [significantemente mais fácil](http://code.assembla.com/brettz9/subversion/nodes/DOMToString))
-- Considerações de eficiência: Em [quirksmode](http://www.quirksmode.org/dom/innerhtml.html)
+- [insertAdjacentHTML](/pt-BR/docs/Web/API/Element/insertAdjacentHTML) - Uma alternativa para o innerHTML, permitindo você anexar um novo HTML, ao invés de trocá-la.
+- [jssaxparser](https://code.google.com/p/jssaxparser/) - Uma solução mais robusta (embora mais pesada) do innerDOM (suporta análise com namespaces, atributos com aspas simples, seções CDATA, etc.), esse é o analisador SAX2 quando usado com seu manipulador de conteúdo DOM. (Oferece String para DOM; DOM para String é [significantemente mais fácil](http://code.assembla.com/brettz9/subversion/nodes/DOMToString))
+- Considerações de eficiência: Em [quirksmode](https://www.quirksmode.org/dom/innerhtml.html)

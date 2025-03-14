@@ -1,9 +1,8 @@
 ---
 title: Number.isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isNaN
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/isNaN
 ---
+
 {{JSRef}}
 
 El método **`Number.isNaN()`** determina si el valor pasado es {{jsxref("NaN")}}. Versión más robusta de la función global {{jsxref("isNaN", "isNaN()")}}.
@@ -28,15 +27,15 @@ En comparación a la función global {{jsxref("isNaN", "isNaN()")}}, `Number.isN
 ## Examples
 
 ```js
-Number.isNaN(NaN);        // true
+Number.isNaN(NaN); // true
 Number.isNaN(Number.NaN); // true
-Number.isNaN(0 / 0)       // true
+Number.isNaN(0 / 0); // true
 
 // e.g. estos hubiesen sido true con la función global isNaN()
-Number.isNaN("NaN");      // false
-Number.isNaN(undefined);  // false
-Number.isNaN({});         // false
-Number.isNaN("blabla");   // false
+Number.isNaN("NaN"); // false
+Number.isNaN(undefined); // false
+Number.isNaN({}); // false
+Number.isNaN("blabla"); // false
 
 // Todos retornan false
 Number.isNaN(true);
@@ -51,23 +50,27 @@ Number.isNaN(" ");
 ## Polyfill
 
 ```js
-Number.isNaN = Number.isNaN || function(value) {
+Number.isNaN =
+  Number.isNaN ||
+  function (value) {
     return typeof value === "number" && isNaN(value);
-}
+  };
 
 // O
-Number.isNaN = Number.isNaN || function(value) {
+Number.isNaN =
+  Number.isNaN ||
+  function (value) {
     return value !== value;
-}
+  };
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.isNaN")}}
+{{Compat}}
 
 ## Ver también
 

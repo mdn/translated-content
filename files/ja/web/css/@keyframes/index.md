@@ -1,11 +1,11 @@
 ---
-title: '@keyframes'
+title: "@keyframes"
 slug: Web/CSS/@keyframes
 ---
 
 {{CSSRef}}
 
-**`@keyframes`** は CSS の[アットルール](/ja/docs/Web/CSS/At-rule)で、アニメーションの流れに沿ったキーフレーム（または中間地点）のスタイルを定義することによって、一連の CSS アニメーションの中間ステップを制御します。これにより、アニメーションの中間ステップを[トランジション](/ja/docs/Web/CSS/CSS_Transitions)よりも詳細に制御できます。
+**`@keyframes`** は CSS の[アットルール](/ja/docs/Web/CSS/At-rule)で、アニメーションの流れに沿ったキーフレーム（または中間地点）のスタイルを定義することによって、一連の CSS アニメーションの中間ステップを制御します。これにより、アニメーションの中間ステップを[トランジション](/ja/docs/Web/CSS/CSS_transitions)よりも詳細に制御できます。
 
 ## 構文
 
@@ -58,10 +58,21 @@ JavaScript は、 CSS オブジェクトモデルのインターフェイス {{d
 
 ```css
 @keyframes identifier {
-  0% { top: 0; left: 0; }
-  30% { top: 50px; }
-  68%, 72% { left: 50px; }
-  100% { top: 100px; left: 100%; }
+  0% {
+    top: 0;
+    left: 0;
+  }
+  30% {
+    top: 50px;
+  }
+  68%,
+  72% {
+    left: 50px;
+  }
+  100% {
+    top: 100px;
+    left: 100%;
+  }
 }
 ```
 
@@ -73,10 +84,19 @@ JavaScript は、 CSS オブジェクトモデルのインターフェイス {{d
 
 ```css
 @keyframes identifier {
-  0% { top: 0; }
-  50% { top: 30px; left: 20px; }
-  50% { top: 10px; }
-  100% { top: 0; }
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 30px;
+    left: 20px;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0;
+  }
 }
 ```
 
@@ -90,16 +110,26 @@ JavaScript は、 CSS オブジェクトモデルのインターフェイス {{d
 
 ```css
 @keyframes important1 {
-  from { margin-top: 50px; }
-  50%  { margin-top: 150px !important; } /* 無視される */
-  to   { margin-top: 100px; }
+  from {
+    margin-top: 50px;
+  }
+  50% {
+    margin-top: 150px !important;
+  } /* 無視される */
+  to {
+    margin-top: 100px;
+  }
 }
 
 @keyframes important2 {
-  from { margin-top: 50px;
-         margin-bottom: 100px; }
-  to   { margin-top: 150px !important; /* 無視される */
-         margin-bottom: 50px; }
+  from {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  to {
+    margin-top: 150px !important; /* 無視される */
+    margin-bottom: 50px;
+  }
 }
 ```
 
@@ -111,7 +141,7 @@ JavaScript は、 CSS オブジェクトモデルのインターフェイス {{d
 
 ### CSS アニメーションの例
 
-[CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)を参照してください。
+[CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
 
 ## 仕様書
 
@@ -123,5 +153,5 @@ JavaScript は、 CSS オブジェクトモデルのインターフェイス {{d
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent")}}

@@ -1,7 +1,6 @@
 ---
-title: 'SyntaxError: missing ) after argument list'
+title: "SyntaxError: missing ) after argument list"
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
-translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 ---
 
 {{jsSidebar("Errors")}}
@@ -32,10 +31,10 @@ console.log('PI: ' Math.PI);
 You can correct the `log` call by adding the "`+`" operator:
 
 ```js example-good
-console.log('PI: ' + Math.PI);
+console.log("PI: " + Math.PI);
 // "PI: 3.141592653589793"
 ```
 
 ## See also
 
-- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/ko/docs/Web/JavaScript/Guide/Functions)

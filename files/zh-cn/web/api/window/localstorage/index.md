@@ -24,26 +24,26 @@ myStorage = localStorage;
 ### 异常
 
 - `SecurityError`
-  - : 请求违反了一个策略声明，或者源（origin）不是 [一个有效的 scheme/host/port tuple](/zh-CN/docs/Web/Security/Same-origin_policy#Definition_of_an_origin) （例如如果 origin 使用 `file:` 或者 `data:` 形式将可能发生）。比如，用户可以有禁用允许对指定的 origin 存留数据的浏览器配置。
+  - : 请求违反了一个策略声明，或者源（origin）不是 [一个有效的 scheme/host/port tuple](/zh-CN/docs/Web/Security/Same-origin_policy#definition_of_an_origin) （例如如果 origin 使用 `file:` 或者 `data:` 形式将可能发生）。比如，用户可以有禁用允许对指定的 origin 存留数据的浏览器配置。
 
 ## 示例
 
 下面的代码片段访问了当前域名下的本地 {{domxref("Storage")}} 对象，并通过 {{domxref("Storage.setItem()")}} 增加了一个数据项目。
 
 ```js
-localStorage.setItem('myCat', 'Tom');
+localStorage.setItem("myCat", "Tom");
 ```
 
 该语法用于读取 `localStorage` 项，如下：
 
 ```js
-let cat = localStorage.getItem('myCat');
+let cat = localStorage.getItem("myCat");
 ```
 
 该语法用于移除 `localStorage` 项，如下：
 
 ```js
-localStorage.removeItem('myCat');
+localStorage.removeItem("myCat");
 ```
 
 该语法用于移除所有的 `localStorage` 项，如下：
@@ -53,7 +53,8 @@ localStorage.removeItem('myCat');
 localStorage.clear();
 ```
 
-> **备注：** 请参考 [Using the Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) 的完整示例文章。
+> [!NOTE]
+> 请参考 [Using the Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) 的完整示例文章。
 
 ## 规范
 
@@ -66,7 +67,7 @@ localStorage.clear();
 ## 参见
 
 - [使用 Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- [Local storage（Window.localStorage）](/zh-CN/docs/Web/API/Web_Storage_API/Local_storage)
+- [Local storage（Window.localStorage）](/zh-CN/docs/Web/API/Window/localStorage)
 - {{domxref("LocalStorage")}}
 - {{domxref("SessionStorage")}}
 - {{domxref("Window.sessionStorage")}}

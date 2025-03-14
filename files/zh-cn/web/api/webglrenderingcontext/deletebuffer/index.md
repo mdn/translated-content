@@ -27,8 +27,8 @@ None.
 ### 删除一个 buffer
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 var buffer = gl.createBuffer();
 
 // ...

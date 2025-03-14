@@ -1,14 +1,9 @@
 ---
 title: Axe principal
 slug: Glossary/Main_Axis
-tags:
-  - CSS
-  - Glossaire
-  - axes
-  - flexbox
-translation_of: Glossary/Main_Axis
-original_slug: Glossaire/Axe_principal
 ---
+
+{{GlossarySidebar}}
 
 L'axe principal d'une {{glossary("flexbox")}} est déterminé par la direction définie dans la propriété {{cssxref("flex-direction")}}. Il y a 4 valeurs possibles pour `flex-direction`. Ce sont :
 
@@ -40,6 +35,6 @@ Sur l'axe principal, vous pouvez contrôler le dimensionnement des éléments fl
 
 ### En lire plus
 
-- Guide Flexbox CSS : _[Les concepts de base pour flexbox](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox)_
-- Guide Flexbox CSS : _[Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_%C3%A9l%C3%A9ments_dans_un_conteneur_flexible)_
-- Guide Flexbox CSS : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Contr%C3%B4ler_les_proportions_des_bo%C3%AEtes_flexibles_le_long_de_l_axe_principal)_
+- Guide Flexbox CSS : _[Les concepts de base pour flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- Guide Flexbox CSS : _[Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- Guide Flexbox CSS : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_

@@ -28,7 +28,8 @@ Una forma fácil de construir un `Blob` es invocando el constructor {{domxref("B
 - {{domxref("Blob.slice()")}}
   - : `Regresa un nuevo objeto Blob` conteniendo los datos de un rango específico de bytes del origen del `Blob`.
 
-> **Nota:** Esté consciente que el método `slice()` posee prefijos propios del fabricante en algunos exploradores y versiones: `blob.mozSlice()` para Firefox 12 e inferior y `blob.webkitSlice()` en Safari. Una versión anterior del método `slice()`, sin prefijos del fabricante, tenía diferente semántica, y se encuentra obsoleto. El soporte para `blob.mozSlice()` ha sido eliminado a partir de Firefox 30.
+> [!NOTE]
+> Esté consciente que el método `slice()` posee prefijos propios del fabricante en algunos exploradores y versiones: `blob.mozSlice()` para Firefox 12 e inferior y `blob.webkitSlice()` en Safari. Una versión anterior del método `slice()`, sin prefijos del fabricante, tenía diferente semántica, y se encuentra obsoleto. El soporte para `blob.mozSlice()` ha sido eliminado a partir de Firefox 30.
 
 ## Ejemplos
 
@@ -38,7 +39,7 @@ El siguiente código:
 
 ```js
 var aFileParts = ['<a id="a"><b id="b">hey!</b></a>'];
-var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob
+var oMyBlob = new Blob(aFileParts, { type: "text/html" }); // the blob
 ```
 
 es equivalente a:
@@ -47,10 +48,11 @@ es equivalente a:
 var oBuilder = new BlobBuilder();
 var aFileParts = ['<a id="a"><b id="b">hey!</b></a>'];
 oBuilder.append(aFileParts[0]);
-var oMyBlob = oBuilder.getBlob('text/xml'); // the blob
+var oMyBlob = oBuilder.getBlob("text/xml"); // the blob
 ```
 
-> **Advertencia:** La interfaz {{ domxref("BlobBuilder") }} ofrece otra manera de crear `Blob`, pero se encuentra ahora obsoleta y no debería volverse a utilizar.
+> [!WARNING]
+> La interfaz {{ domxref("BlobBuilder") }} ofrece otra manera de crear `Blob`, pero se encuentra ahora obsoleta y no debería volverse a utilizar.
 
 ### Ejemplo para crear una URL en un arreglo tipado utilizando un blob
 
@@ -58,7 +60,7 @@ El siguiente código:
 
 ```js
 var typedArray = GetTheTypedArraySomehow();
-var blob = new Blob([typedArray], {type: 'application/octet-binary'}); // pass a useful mime type here
+var blob = new Blob([typedArray], { type: "application/octet-binary" }); // pass a useful mime type here
 var url = URL.createObjectURL(blob);
 // url will be something like: blob:d3958f5c-0777-0845-9dcf-2cb28783acaf
 // now you can use the url in any context that regular URLs can be used in, for example img.src, etc.
@@ -70,8 +72,8 @@ La única manera de leer contenido de un Blob es utilizando un {{domxref("FileRe
 
 ```js
 var reader = new FileReader();
-reader.addEventListener("loadend", function() {
-   // reader.result contains the contents of blob as a typed array
+reader.addEventListener("loadend", function () {
+  // reader.result contains the contents of blob as a typed array
 });
 reader.readAsArrayBuffer(blob);
 ```
@@ -82,19 +84,9 @@ Al utilizar otros métodos de {{domxref("FileReader")}}, es posible leer los con
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Blob")}}
-
-## Disponilidad del alcance del código en Chrome
-
-El alcance JSM del `Blob`se encuentra disponible sin la necesidad de hacer nada en especial.
-
-En el alcance de arranque, este debe importarse de igual modo:
-
-```js
-const {Blob, Services} = Cu.import('resource://gre/modules/Services.jsm', {});
-```
+{{Compat}}
 
 ## Ver también
 

@@ -1,28 +1,45 @@
 ---
 title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Proxy
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/set
 ---
 
 {{JSRef}}
 
 La méthode **`handler.set()`** est une trappe permettant d'intercepter les opérations visant à définir ou modifier la valeur d'une propriété.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-set.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.set()", "taller")}}
+
+```js interactive-example
+const monster1 = { eyeCount: 4 };
+
+const handler1 = {
+  set(obj, prop, value) {
+    if (prop === "eyeCount" && value % 2 !== 0) {
+      console.log("Monsters must have an even number of eyes");
+    } else {
+      return Reflect.set(...arguments);
+    }
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+proxy1.eyeCount = 1;
+// Expected output: "Monsters must have an even number of eyes"
+
+console.log(proxy1.eyeCount);
+// Expected output: 4
+
+proxy1.eyeCount = 2;
+console.log(proxy1.eyeCount);
+// Expected output: 2
+```
 
 ## Syntaxe
 
 ```js
 var p = new Proxy(cible, {
-  set: function(cible, propriété, valeur, récepteur) {
-  }
+  set: function (cible, propriété, valeur, récepteur) {},
 });
 ```
 
@@ -68,19 +85,22 @@ Si les invariants suivants ne sont pas respectés, le proxy renverra une excepti
 Dans l'exemple qui suit, on intercepte la définition d'une nouvelle propriété.
 
 ```js
-var p = new Proxy({}, {
-  set: function(target, prop, value, receiver) {
-    target[prop] = value;
-    console.log('property set: ' + prop + ' = ' + value);
-    return true;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    set: function (target, prop, value, receiver) {
+      target[prop] = value;
+      console.log("property set: " + prop + " = " + value);
+      return true;
+    },
+  },
+);
 
-console.log('a' in p);  // false
+console.log("a" in p); // false
 
-p.a = 10;               // "property set: a = 10"
-console.log('a' in p);  // true
-console.log(p.a);       // 10
+p.a = 10; // "property set: a = 10"
+console.log("a" in p); // true
+console.log(p.a); // 10
 ```
 
 ## Spécifications

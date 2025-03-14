@@ -1,41 +1,29 @@
 ---
 title: OffscreenCanvas.width
 slug: Web/API/OffscreenCanvas/width
-tags:
-  - API
-  - Canvas
-  - Experimental
-  - OffscreenCanvas
-  - Property
-  - Reference
-translation_of: Web/API/OffscreenCanvas/width
+l10n:
+  sourceCommit: f6ff6e14c5af7cb9ed701d7f4506f770014c704f
 ---
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-**`width`** 프로퍼티는 {{domxref("OffscreenCanvas")}} 객체에 할당된 너비를 반환합니다.
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
-## 구문
+**`width`** 속성은 {{domxref("OffscreenCanvas")}} 객체에 할당된 너비를 반환합니다.
 
-```js
-var pxl = offscreen.width;
-offscreen.width = pxl;
-```
+## 값
 
-## 예시
+## 예제
 
 새로운 offscreen 캔버스를 생성하고 높이를 설정하거나 반환합니다.
 
 ```js
-var offscreen = new OffscreenCanvas(256, 256);
+const offscreen = new OffscreenCanvas(256, 256);
 offscreen.width; // 256
 offscreen.width = 512;
 ```
 
-## 상세
+## 명세서
 
-| Specification                                                                                                | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "#dom-offscreencanvas-width", "OffscreenCanvas.width")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## 브라우저 호환성
 

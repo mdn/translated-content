@@ -1,19 +1,69 @@
 ---
 title: <ins>
 slug: Web/HTML/Element/ins
+l10n:
+  sourceCommit: 5555af07f3ffd3918667d6d614a0f12aaf664ce8
 ---
 
 {{HTMLSidebar}}
 
-**HTML の `<ins>` 要素**は、文書に追加されたテキストの範囲を表します。同様に、 {{HTMLElement("del")}} 要素を使用して文書から削除されたテキストの範囲を表すことができます。
+**`<ins>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書に追加されたテキストの範囲を表します。同様に、 {{HTMLElement("del")}} 要素を使用して文書から削除されたテキストの範囲を表すことができます。
 
-{{EmbedInteractiveExample("pages/tabbed/ins.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;ins&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>&ldquo;You're late!&rdquo;</p>
+<del>
+  <p>&ldquo;I apologize for the delay.&rdquo;</p>
+</del>
+<ins cite="../howtobeawizard.html" datetime="2018-05">
+  <p>&ldquo;A wizard is never late &hellip;&rdquo;</p>
+</ins>
+```
+
+```css interactive-example
+del,
+ins {
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+
+del {
+  background-color: #fbb;
+}
+
+ins {
+  background-color: #d4fcbc;
+}
+
+del::before,
+ins::before {
+  position: absolute;
+  left: 0.5rem;
+  font-family: monospace;
+}
+
+del::before {
+  content: "−";
+}
+
+ins::before {
+  content: "+";
+}
+
+p {
+  margin: 0 1.8rem 0;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+}
+```
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
@@ -35,7 +85,7 @@ slug: Web/HTML/Element/ins
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
@@ -66,12 +116,12 @@ slug: Web/HTML/Element/ins
 
 ## 属性
 
-他のすべての HTML 要素と同様に、この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持っています。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : 会議の議事録やトラブルシューティングシステムのチケットといった、追加についての説明を記したリソースへの URI を示します。
-- {{htmlattrdef("datetime")}}
-  - : この属性は変更が行われた日時を示し、有効な日付または日時の文字列でなければなりません。値が日付または日時の文字列として解釈できなかった場合は、要素にタイムスタンプが関連付けられなくなります。時刻がない日付の書式については、[妥当な日付文字列の書式](/ja/docs/Web/HTML/Date_and_time_formats#Date_strings)を参照してください。日付と時刻の両方を含む場合の文字列の書式については、[妥当な日時文字列の書式](/ja/docs/Web/HTML/Date_and_time_formats#Local_date_and_time_strings)を参照してください。
+- `datetime`
+  - : この属性は変更が行われた日時を示し、有効な日付または日時の文字列でなければなりません。値が日付または日時の文字列として解釈できなかった場合は、要素にタイムスタンプが関連付けられなくなります。時刻がない日付の書式については、[妥当な日付文字列の書式](/ja/docs/Web/HTML/Date_and_time_formats#date_strings)を参照してください。日付と時刻の両方を含む場合の文字列の書式については、[妥当な日時文字列の書式](/ja/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings)を参照してください。
 
 ## 例
 
@@ -108,10 +158,10 @@ ins::after {
 }
 ```
 
-読み上げソフトを使用する人によっては、特に冗長になるコンテンツのアナウンスを意図的に無効にしていることがあります。このため、この手法を悪用しないようにすることは重要であり、コンテンツが挿入されていることを知らないと理解に影響するような場面でのみ使用するようにしてください。
+スクリーンリーダーを使用する人によっては、特に冗長になるコンテンツのアナウンスを意図的に無効にしていることがあります。このため、この手法を悪用しないようにすることは重要であり、コンテンツが挿入されていることを知らないと理解に影響するような場面でのみ使用するようにしてください。
 
-- [Short note on making your mark (more accessible) | The Paciello Group](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
-- [Tweaking Text Level Styles | Adrian Roselli](http://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [Short note on making your mark (more accessible) | The Paciello Group](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
+- [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## 仕様書
 
@@ -119,7 +169,7 @@ ins::after {
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.ins")}}
+{{Compat}}
 
 ## 関連情報
 

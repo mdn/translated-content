@@ -1,36 +1,46 @@
 ---
-title: HTMLAnchorElement.referrer
+title: HTMLAnchorElement：referrerPolicy 属性
 slug: Web/API/HTMLAnchorElement/referrerPolicy
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
-**`HTMLAnchorElement.referrer`** 属性对应于 HTML 中 {{HTMLElement("a")}} 标签的 {{htmlattrxref("referrer","a")}} 属性，它可以控制用户在点击这个链接时所发出的 HTTP 请求的 Referer 请求头的值。
+**`HTMLAnchorElement.referrerPolicy`** 属性反映 {{HTMLElement("a")}} 元素的 HTML [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/a#referrerpolicy) 属性，该属性定义获取资源时发送哪个来源地址（referrer）。
 
-## 语法
+## 值
 
-```js
-refStr = anchorElt.referrer;
-anchorElt.referrer = refStr;
-```
+一个字符串；以下值之一：
 
-### 属性值
-
-- `"no-referrer"` 意味着不要发送 Referer 请求头。
-- `"origin"` 意味着所发送的 Referer 请求头的值为当前页面的源，即 `location.origin` 的值。
-- `"unsafe-url"` 意味着所发送的 Referrer 请求头的值为当前页面完整的 url（即 `location.href`）去掉尾部的哈希（即 `location.hash`）之后的值。正如该选项的名字所言（unsafe），此选项是不安全的，它可以将一个 HTTPS 页面的路径信息透露给第三方。
+- `no-referrer`
+  - : {{HTTPHeader("Referer")}} 标头将被完全省略。请求中不会发送任何来源地址。
+- `no-referrer-when-downgrade`
+  - : 当协议安全级别保持不变时（例如，HTTP → HTTP、HTTPS → HTTPS），该 URL 会作为来源地址发送，但不会发送到安全级别较低的目的地（例如，HTTPS → HTTP）。
+- `origin`
+  - : 在所有情况下，仅将文档的来源作为来源地址发送。`https://example.com/page.html` 文档将发送来源地址 `https://example.com/`。
+- `origin-when-cross-origin`
+  - : 在执行同源请求时发送完整的 URL，但在其他情况下仅发送文档的来源。
+- `same-origin`
+  - : 对于[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)，将会发送来源地址，但跨源请求将不包含任何来源地址信息。
+- `strict-origin`
+  - : 当协议安全级别保持不变（HTTPS → HTTPS）时仅发送文档的源作为来源地址，但不发送到安全性较低的目的地（HTTPS → HTTP）。
+- `strict-origin-when-cross-origin` (default)
+  - : 这是用户代理未指定策略时的默认行为。执行同源请求时发送完整的 URL，仅当协议安全级别保持不变（HTTPS → HTTPS）时发送源，并且不向安全性较低的目的地（HTTPS → HTTP）发送任何标头。
+- `unsafe-url`
+  - : 在执行同源或跨源请求时发送完整的 URL。此策略会将 TLS 保护的资源的来源和路径泄露给不安全的来源。请仔细考虑此设置的影响。
 
 ## 示例
 
 ```js
-var elt = document.createElement("a");
-var linkText = document.createTextNode("My link");
+const elt = document.createElement("a");
+const linkText = document.createTextNode("My link");
 elt.appendChild(linkText);
-elt.href = "https://developer.mozilla.org/en-US/";
-elt.referrer = "no-referrer";
+elt.href = "https://developer.mozilla.org/zh-CN/";
+elt.referrerPolicy = "no-referrer";
 
-var div = document.getElementById("divAround");
-div.appendChild(elt); // 点击该链接接时不会发送 Referer 请求头
+const div = document.getElementById("divAround");
+div.appendChild(elt); // 点击时，链接将不发送来源地址标头
 ```
 
 ## 规范
@@ -41,6 +51,6 @@ div.appendChild(elt); // 点击该链接接时不会发送 Referer 请求头
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{domxref("HTMLImageElement.referrer")}}、{{domxref("HTMLAreaElement.referrer")}}、{{domxref("HTMLIFrameElement.referrer")}}
+- {{domxref("HTMLImageElement.referrerPolicy")}}、{{domxref("HTMLAreaElement.referrerPolicy")}} 和 {{domxref("HTMLIFrameElement.referrerPolicy")}}。

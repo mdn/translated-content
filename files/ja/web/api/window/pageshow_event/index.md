@@ -1,5 +1,5 @@
 ---
-title: 'Window: pageshow イベント'
+title: "Window: pageshow イベント"
 slug: Web/API/Window/pageshow_event
 ---
 
@@ -12,7 +12,8 @@ slug: Web/API/Window/pageshow_event
 - モバイル OS で凍結されたページを復元したとき
 - ブラウザーの進む、戻るボタンを利用してこのページに戻ったとき
 
-> **メモ:** 最初にページを読み込んでいる間、 `pageshow` イベントは {{domxref("Window/load_event", "load")}} イベントの*後で*発生します。
+> [!NOTE]
+> 最初にページを読み込んでいる間、 `pageshow` イベントは {{domxref("Window/load_event", "load")}} イベントの*後で*発生します。
 
 <table class="properties">
   <tbody>
@@ -42,35 +43,32 @@ slug: Web/API/Window/pageshow_event
 ### JavaScript
 
 ```js
-const events = [
-  "pagehide", "pageshow",
-  "unload", "load"
-];
+const events = ["pagehide", "pageshow", "unload", "load"];
 
-const eventLogger = event => {
+const eventLogger = (event) => {
   switch (event.type) {
     case "pagehide":
     case "pageshow":
       let isPersisted = event.persisted ? "persisted" : "not persisted";
-      console.log('Event:', event.type, '-', isPersisted);
+      console.log("Event:", event.type, "-", isPersisted);
       break;
     default:
-      console.log('Event:', event.type);
+      console.log("Event:", event.type);
       break;
   }
 };
 
-events.forEach(eventName =>
-  window.addEventListener(eventName, eventLogger)
-);
+events.forEach((eventName) => window.addEventListener(eventName, eventLogger));
 ```
 
 ### HTML
 
 ```html
-<p>コンソールを開き、このページに出入りしたときの出力を見てください。
-このタブに新しいページを読み込んだり、履歴で前後に移動したりして、
-イベントのログへの出力を見てください。</p>
+<p>
+  コンソールを開き、このページに出入りしたときの出力を見てください。
+  このタブに新しいページを読み込んだり、履歴で前後に移動したりして、
+  イベントのログへの出力を見てください。
+</p>
 ```
 
 ### 結果
@@ -79,14 +77,11 @@ events.forEach(eventName =>
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'browsing-the-web.html#event-pageshow', 'pageshow')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
-| {{SpecName('HTML5 W3C', 'browsers.html#event-pageshow', 'pageshow')}}             | {{Spec2('HTML5 W3C')}}     |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.pageshow_event")}}
+{{Compat}}
 
 ## 関連情報
 

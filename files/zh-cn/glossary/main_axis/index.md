@@ -1,27 +1,30 @@
 ---
 title: 主轴
 slug: Glossary/Main_Axis
-original_slug: Glossary/主轴
+l10n:
+  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
-主轴是由弹性容器 {{glossary("flexbox")}} 中弹性方向 {{cssxref("flex-direction")}} 属性所定义的的。弹性方向 `flex-direction` 有 4 个可能的值，分别是：
+{{GlossarySidebar}}
+
+{{glossary("flexbox", "弹性盒子")}}的主轴（main axis）由 {{cssxref("flex-direction")}} 属性设置的方向所定义。`flex-direction` 有四个取值，分别是：
 
 - `row`
 - `row-reverse`
 - `column`
 - `column-reverse`
 
-选择行 `row` 或者 `row-reverse` 反向行，那么主轴方向就会沿着行的走向。
+假如选择 `row` 或者 `row-reverse`，那么主轴会沿行向延伸。
 
-![In this image the flex-direction is row which forms the main axis](basics1.png)
+![此图中 flex-direction 为 row，由此构成主轴](basics1.png)
 
-选择列 `column` 或者反向列 `column-reverse` ，那么主轴就会从上至下沿着块的走向。
+选择 `column` 或者 `column-reverse`，那么主轴会沿块向从页面上侧延伸到下侧。
 
-![](basics2.png)
+![三个弹性元素占据了容器的全部宽度，按代码顺序依次从上到下显示。flex-direction 设置为 column。主轴为纵向的，即从上到下。](basics2.png)
 
-在主轴上，你可以用 `flex` 属性来增加可用空间，从而控制弹性元素的尺寸，你还可以用 `justify-content` 属性来控制元素周围的空间、间距。
+元素的 `flex` 属性可将主轴上的任何可用空间加入元素自身，由此可在主轴上控制弹性元素的尺寸。或者你可以用 `justify-content` 属性控制元素之间和周围的空间。
 
-## 学习更多
+## 参见
 
 ### 属性参考
 
@@ -34,6 +37,7 @@ original_slug: Glossary/主轴
 
 ### 拓展阅读
 
-- CSS 弹性容器指南：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS 弹性容器指南：_[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS 弹性容器指南：_[Controlling Ratios of flex items along the main axis](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS 弹性盒指南
+  - [弹性盒的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+  - [在弹性容器中对齐元素](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+  - [控制弹性元素在主轴上的占比](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)

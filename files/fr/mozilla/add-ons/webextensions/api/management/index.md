@@ -1,14 +1,6 @@
 ---
 title: management
 slug: Mozilla/Add-ons/WebExtensions/API/management
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - management
-translation_of: Mozilla/Add-ons/WebExtensions/API/management
 ---
 
 {{AddonSidebar}}
@@ -23,7 +15,7 @@ Avec l'API de `gestion` vous pouvez :
 - Découvrez quels sont les alertes des permissions envoyés particulièrement par les modules complémentaires ou les manifest
 - Obtenir les notifications sur l'ajout des modules complémentaires, désinstallé, activé ou désactivé.
 
-La plupart de ces opérations requièrent les [permissions d'APIs](/fr/Add-ons/WebExtensions/manifest.json/permissions) de gestion. Les opérations qui ne fournissent pas d'accès à d'autres modules complémentaires ne nécessitent pas de permissions.
+La plupart de ces opérations requièrent les [permissions d'APIs](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) de gestion. Les opérations qui ne fournissent pas d'accès à d'autres modules complémentaires ne nécessitent pas de permissions.
 
 ## Types
 
@@ -62,15 +54,15 @@ La plupart de ces opérations requièrent les [permissions d'APIs](/fr/Add-ons/W
 - {{WebExtAPIRef("management.onDisabled")}}
   - : Action quand un module complémenaire est désactivé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/extensions/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

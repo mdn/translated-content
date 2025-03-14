@@ -1,7 +1,6 @@
 ---
 title: Gerenciamento de Conexão em HTTP/1.x
 slug: Web/HTTP/Connection_management_in_HTTP_1.x
-original_slug: Web/HTTP/Gerenciamento_de_Conexão_em_HTTP_1.x
 ---
 
 Gerenciamento de Conexão é um tema central em HTTP: abertura e manutenção de conexões e em grande parte tem impacto sobre o desempenho de Web sites e aplicações Web. Existem vários modelos, em HTTP/1.x: _ligações de curta duração, conexões persistentes, canalização e HTTP (HTTP pipelining)_.
@@ -15,9 +14,10 @@ Dois novos modelos foram criados no HTTP/1.1.
 1. **O modelo de conexão persistente**, mantém conexões abertas entre solicitações sucessivas, reduzindo o tempo necessário para abrir novas conexões.
 2. **O modelo de pipelining HTTP**, vai um passo além, enviando várias solicitações sucessivas sem nem esperar por uma resposta, reduzindo em grande parte a latência da rede.
 
-![Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining.](https://mdn.mozillademos.org/files/13727/HTTP1_x_Connections.png)
+![Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining.](http1_x_connections.png)
 
-> **Nota:** HTTP/2 Adiciona modelos adicionais para o gerenciamento de conexão.
+> [!NOTE]
+> HTTP/2 Adiciona modelos adicionais para o gerenciamento de conexão.
 
 Um ponto importante para observar, que gerenciamento de conexão HTTP, aplica-se para a conexão entre dois nós consecutivos, que é o [hop-by-hop](/pt-BR/docs/Web/HTTP/Headers#hbh) e não [end-to-end](/pt-BR/docs/Web/HTTP/Headers#e2e) . O modelo usado em conexões entre um cliente e seu primeiro proxy pode diferir do modelo entre um proxy e o servidor de destino (ou qualquer proxies intermédios). Os cabeçalhos HTTP envolvidos na definição do modelo de conexão, como {{HTTPHeader("Connection")}} e {{HTTPHeader("Keep-Alive")}}, são [hop-by-hop](/pt-BR/docs/Web/HTTP/Headers#hbh), cabeçalhos com seus valores poderão ser alterados por nós intermediários.
 
@@ -29,7 +29,8 @@ O handshake TCP em si é demorado, mas uma conexão TCP adapta-se a sua carga, t
 
 cabeçalhos com seus valores poderão ser alterados por nós intermediários. (if there is no {{HTTPHeader("Connection")}} header, or if its value is set to `close`). Em HTTP/1.1 este modelo é apenas usado quando o {{HTTPHeader("Connection")}}cabeçalho é enviado com um valor de fechamento.
 
-> **Nota:** A menos que lidemos com um sistema muito antigo, que não suporta uma conexão persistente, não há nenhuma razão convincente para usar este modelo.
+> [!NOTE]
+> A menos que lidemos com um sistema muito antigo, que não suporta uma conexão persistente, não há nenhuma razão convincente para usar este modelo.
 
 ## Conexões Persistentes
 
@@ -43,7 +44,8 @@ Em HTTP/1.1, persistencia é o padrão e o cabeçalho não é mais necessário (
 
 ## HTTP pipelining
 
-> **Nota:** HTTP o pipelining não é ativado por padrão em navegadores modernos:
+> [!NOTE]
+> HTTP o pipelining não é ativado por padrão em navegadores modernos:
 >
 > - Buggy [proxies](https://en.wikipedia.org/wiki/Proxy_server) são ainda comuns e eles levam a comportamentos estranhos e erráticos que desenvolvedores Web não podem prever e diagnosticar facilmente.
 > - Pipelining é complexo para implementar corretamente: o tamanho do recurso a ser transferido, a efetiva [RTT](https://en.wikipedia.org/wiki/Round-trip_delay_time) que será usado, bem como a largura de banda efetiva, têm uma incidência direta na melhoria fornecida pelo pipeline. Sem conhecer eles, mensagens importantes podem ser atrasadas por detrás aqueles sem importância. A noção de importante mesmo evolui durante o layout de página! Pipeline HTTP, portanto, traz uma melhoria marginal na maioria dos casos apenas.
@@ -61,13 +63,14 @@ Hoje, cada proxy HTTP/1.1-compatível e servidor devem apoiar o pipelining, embo
 
 ## Domain sharding
 
-> **Nota:** A menos que você tem uma necessidade muito específica e imediata, não use esta técnica depreciada; Mude para HTTP/2 ao invéz. Em HTTP/2, sharding domínio não é mais útil: a conexão HTTP/2 é capaz de manipular as solicitações sem prioridades paralelas muito bem. Sharding domínio é mesmo prejudicial ao desempenho. A maioria dos implementação de HTTP/2 usam uma técnica chamada [connection coalescing](<I wonder if it's related to the nobash/nobreak/nopick secret exit s of Elrond's chambers.>) para reverter o sharding de domínio eventual.
+> [!NOTE]
+> A menos que você tem uma necessidade muito específica e imediata, não use esta técnica depreciada; Mude para HTTP/2 ao invéz. Em HTTP/2, sharding domínio não é mais útil: a conexão HTTP/2 é capaz de manipular as solicitações sem prioridades paralelas muito bem. Sharding domínio é mesmo prejudicial ao desempenho. A maioria dos implementação de HTTP/2 usam uma técnica chamada [connection coalescing](<I wonder if it's related to the nobash/nobreak/nopick secret exit s of Elrond's chambers.>) para reverter o sharding de domínio eventual.
 
 Como uma conexão de HTTP/1.x está serializando solicitações, mesmo sem qualquer ordenação, não pode ser ideal sem largura de banda grande o suficiente disponível. Como uma solução, os navegadores abrir várias conexões para cada domínio, enviando solicitações paralelas. Era padrão conexões de 2 a 3, mas isto agora aumentou para um uso mais comum de 6 conexões paralelas. Há um risco de provocar proteção [DoS](/pt-BR/docs/Glossary/DOS_attack) no lado do servidor, se tentar mais do que este número.
 
 Se o servidor deseja um site de Web mais rápido ou resposta do aplicativo, é possível para o servidor forçar a abertura de mais conexões. Por exemplo, em vez de ter todos os recursos no mesmo domínio, diz www\.example.com, poderia dividir em vários domínios, www1.example.com, www2.example.com, www3.example.com. Cada um destes domínios resolver acessar o mesmo servidor e o navegador da Web abrirá 6 conexões para cada (no nosso exemplo, impulsionando as conexões para 18). Esta técnica é chamada sharding do domínio.
 
-![](https://mdn.mozillademos.org/files/13783/HTTPSharding.png)
+![](httpsharding.png)
 
 ## Conclusão
 

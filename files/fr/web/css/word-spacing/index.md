@@ -1,11 +1,6 @@
 ---
 title: word-spacing
 slug: Web/CSS/word-spacing
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/word-spacing
 ---
 
 {{CSSRef}}
@@ -58,8 +53,8 @@ word-spacing: unset;
 ### HTML
 
 ```html
-<p id="ligne1">Voici le texte de la ligne 1 </p>
-<p id="ligne2" >Et voilà celui de la ligne 2 </p>
+<p id="ligne1">Voici le texte de la ligne 1</p>
+<p id="ligne2">Et voilà celui de la ligne 2</p>
 ```
 
 ### CSS
@@ -84,7 +79,7 @@ Utiliser des valeurs trop importantes (positives ou négatives) pour `word-spaci
 
 La bonne valeur à utiliser pour `word-spacing` doit être déterminée au cas par cas, en fonction du type de police utilisé et de la largeur de celle-ci.
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.8 - W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## Spécifications

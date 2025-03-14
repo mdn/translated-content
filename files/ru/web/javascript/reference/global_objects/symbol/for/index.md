@@ -1,7 +1,6 @@
 ---
 title: Symbol.for()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/for
 ---
 
 {{JSRef}}
@@ -56,11 +55,9 @@ Symbol.for("mdn.bar");
 
 ## Спецификации
 
-| Спецификация                                                         | Статус               | Комментарий              |
-| -------------------------------------------------------------------- | -------------------- | ------------------------ |
-| {{SpecName('ES6', '#sec-symbol.for', 'Symbol.for')}} | {{Spec2('ES6')}} | Изначальное определение. |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

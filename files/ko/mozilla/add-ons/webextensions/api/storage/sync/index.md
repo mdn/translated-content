@@ -2,11 +2,12 @@
 title: storage.sync
 slug: Mozilla/Add-ons/WebExtensions/API/storage/sync
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 `sync` 저장 공간을 의미합니다. `sync` 저장 공간에 있는 데이터는 브라우저 사이에서 동기화되며 서로 다른 기기 간에 사용자가 브라우저에 로그인 한 경우 언제든지 접근 가능합니다.
 
-Firefox에서 `sync.storage` 는 고유한 부가기능 ID에 의존성을 갖고 동작합니다. `sync.storage`, 를 사용하신다면 [`어플리케이션`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) manifest.json 파일에 있는 키를 통해 여러분의 부가기능에 고유한 ID를 부여해야 합니다.
+Firefox에서 `sync.storage` 는 고유한 부가기능 ID에 의존성을 갖고 동작합니다. `sync.storage`, 를 사용하신다면 [`어플리케이션`](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest.json 파일에 있는 키를 통해 여러분의 부가기능에 고유한 ID를 부여해야 합니다.
 
 이 API는 주로 여러분의 부가기능에 사용자 설정 정보를 저장하고 서로 다른 프로필 간에 설정을 동기화 할 수 있도록 사용됩니다. 이 API는 100KB까지 저장할 수 있습니다. 이보다 더 큰 데이터를 저장하려고 하는 경우, API 요청은 특정한 에러 메시지를 반환할 것입니다. 이 API는 아쉽게도 현재까지 특정한 성능을 보장하진 않습니다.
 
@@ -27,13 +28,14 @@ Firefox에서 `sync.storage` 는 고유한 부가기능 ID에 의존성을 갖�
 
 ## Browser 호환성
 
-{{Compat("webextensions.api.storage.sync")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **참고:** **Acknowledgements**This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage#property-sync) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **참고:** **Acknowledgements**This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#property-sync) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -60,4 +62,4 @@ Firefox에서 `sync.storage` 는 고유한 부가기능 ID에 의존성을 갖�
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

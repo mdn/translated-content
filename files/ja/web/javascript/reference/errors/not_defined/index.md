@@ -21,7 +21,8 @@ ReferenceError: "x" is not defined
 
 どこかで存在しない変数を参照しています。この変数を宣言しておくか、現在のスクリプトまたは[スコープ](/ja/docs/Glossary/Scope)で利用可能であることを確認する必要があります。
 
-> **メモ:** ライブラリ (jQuery など) を読み込むとき、ライブラリの変数、例えば "$" にアクセスする前に読み込みが行われるかを確認してください。ライブラリを読み込む {{HTMLElement("script")}} 要素は、それを使用するコードよりも前に置いてください。
+> [!NOTE]
+> ライブラリ (jQuery など) を読み込むとき、ライブラリの変数、例えば "$" にアクセスする前に読み込みが行われるかを確認してください。ライブラリを読み込む {{HTMLElement("script")}} 要素は、それを使用するコードよりも前に置いてください。
 
 ## 例
 
@@ -34,7 +35,7 @@ foo.substring(1); // ReferenceError: foo is not defined
 "foo" と言う変数はどこにも宣言されていません。これは文字列である必要があり、それならば {{jsxref("String.prototype.substring()")}} メソッドが動作します。
 
 ```js example-good
-var foo = 'bar';
+var foo = "bar";
 foo.substring(1); // "ar"
 ```
 
@@ -45,7 +46,7 @@ foo.substring(1); // "ar"
 ```js example-bad
 function numbers() {
   var num1 = 2,
-      num2 = 3;
+    num2 = 3;
   return num1 + num2;
 }
 
@@ -56,7 +57,7 @@ console.log(num1); // ReferenceError num1 is not defined.
 
 ```js example-good
 var num1 = 2,
-    num2 = 3;
+  num2 = 3;
 
 function numbers() {
   return num1 + num2;
@@ -69,4 +70,4 @@ console.log(numbers()); // 5
 
 - [スコープ](/ja/docs/Glossary/Scope)
 - [変数の宣言 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#declaring_variables)
-- [関数のスコープ (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Functions#function_scope/en-us/docs/)
+- [関数のスコープ (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Functions#関数のスコープ)

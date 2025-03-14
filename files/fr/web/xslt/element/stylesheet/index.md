@@ -1,13 +1,9 @@
 ---
 title: stylesheet
 slug: Web/XSLT/Element/stylesheet
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/stylesheet
-original_slug: Web/XSLT/stylesheet
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:stylesheet>` (ou son équivalent `<xsl:transform>`) est l'élément le plus externe d'une feuille de style, celui qui contient tout les autres éléments.
 
@@ -54,7 +50,7 @@ Un pseudo-attribut est nécessaire pour identifier le document comme étant une 
 
 ### Définition
 
-[XSLT 1.0, section 2.2](http://www.w3.org/TR/xslt#stylesheet-element).
+[XSLT 1.0, section 2.2](https://www.w3.org/TR/xslt#stylesheet-element).
 
 ### Support Gecko
 

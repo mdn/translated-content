@@ -3,6 +3,8 @@ title: 瀏覽上下文
 slug: Glossary/Browsing_context
 ---
 
+{{GlossarySidebar}}
+
 **瀏覽上下文**是一個瀏覽器({{glossary("browser")}})展示文檔({{domxref("Document")}})的環境（正常來説是一個現在的標簽，但也有可能是一個窗體或是一個框架裏面的頁面）。
 
 每個瀏覽上下文都有一個特定的活動文檔來源{{glossary("origin")}}並按順序列出所有文檔的歷史記錄。

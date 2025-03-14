@@ -1,20 +1,9 @@
 ---
 title: downloads.getFileIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/getFileIcon
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - getFileIcon
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/getFileIcon
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`getFileIcon()`** de l'API {{WebExtAPIRef("downloads")}} récupère une icône pour le téléchargement spécifié.
 
@@ -22,15 +11,15 @@ Pour les nouveaux téléchargements, les icônes de fichiers sont disponibles ap
 
 La récupération d'icônes s'effectue en interrogeant la plateforme sous-jacente. L'icône renvoyée dépendra donc d'un certain nombre de facteurs, notamment l'état du téléchargement, la plate-forme, les types de fichiers enregistrés et le thème visuel.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var gettingIcon = browser.downloads.getFileIcon(
-  downloadId,           // integer
-  options               // optional object
-)
+  downloadId, // integer
+  options, // optional object
+);
 ```
 
 ### Paramètres
@@ -46,11 +35,11 @@ var gettingIcon = browser.downloads.getFileIcon(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si la requête réussit, la promesse sera remplie avec une chaîne représentant l'URL absolue de l'icône. Si la requête échoue, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si la requête réussit, la promesse sera remplie avec une chaîne représentant l'URL absolue de l'icône. Si la requête échoue, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.getFileIcon")}}
+{{Compat}}
 
 ## Exemples
 
@@ -66,16 +55,16 @@ function onError(error) {
 }
 
 function getIcon(downloadItems) {
-    if (downloadItems.length > 0) {
-      latestDownloadId = downloadItems[0].id;
-      var gettingIcon = browser.downloads.getFileIcon(latestDownloadId);
-      gettingIcon.then(gotIcon, onError);
-    }
+  if (downloadItems.length > 0) {
+    latestDownloadId = downloadItems[0].id;
+    var gettingIcon = browser.downloads.getFileIcon(latestDownloadId);
+    gettingIcon.then(gotIcon, onError);
   }
+}
 
 var searching = browser.downloads.search({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 
 searching.then(getIcon, onError);
@@ -83,9 +72,9 @@ searching.then(getIcon, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

@@ -1,19 +1,14 @@
 ---
 title: <percentage>
 slug: Web/CSS/percentage
-tags:
-  - CSS
-  - CSS Data Type
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/percentage
 ---
+
 {{CSSRef}}
 
 **`<percentage>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_Types)은 백분율 값을 나타냅니다. 보통 부모 객체와의 상대적 크기를 지정할 때 사용합니다. {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("font-size")}} 처럼 다양한 속성에서 백분율을 쓸 수 있습니다.
 
-> **참고:** 계산된 값만 상속받을 수 있습니다. 따라서 부모 속성이 백분율 값을 사용하더라도 전달되는 값은 실제값(예컨대 너비의 {{cssxref("&lt;length&gt;")}} 값은 픽셀)이며 백분율 값은 접근할 수 없습니다.
+> [!NOTE]
+> 계산된 값만 상속받을 수 있습니다. 따라서 부모 속성이 백분율 값을 사용하더라도 전달되는 값은 실제값(예컨대 너비의 {{cssxref("&lt;length&gt;")}} 값은 픽셀)이며 백분율 값은 접근할 수 없습니다.
 
 ## 구문
 
@@ -21,7 +16,7 @@ translation_of: Web/CSS/percentage
 
 ## 보간
 
-애니메이션에서 `<percentage>` 자료형의 값은 유동소수점 실수를 사용해 보간됩니다. 보간의 속도는 애니메이션과 연결된 [타이밍 함수](/ko/docs/Web/CSS/single-transition-timing-function)가 결정합니다.
+애니메이션에서 `<percentage>` 자료형의 값은 유동소수점 실수를 사용해 보간됩니다. 보간의 속도는 애니메이션과 연결된 [타이밍 함수](/ko/docs/Web/CSS/easing-function)가 결정합니다.
 
 ## 예제
 

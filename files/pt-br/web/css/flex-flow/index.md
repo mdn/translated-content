@@ -54,17 +54,15 @@ elemento {
 
 ## Especificações
 
-| Especificação                                                                        | Status                               | Comentário        |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------------- |
-| {{ SpecName('CSS3 Flexbox','#flex-flow-property','flex-flow') }} | {{ Spec2('CSS3 Flexbox') }} | Definição inicial |
+{{Specifications}}
 
 {{cssinfo}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.flex-flow")}}
+{{Compat}}
 
 ## Veja também
 
-- Guia de Flexbox CSS: _[Conceitos básicos de flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Conceitos_Basicos_do_Flexbox)_
+- Guia de Flexbox CSS: _[Conceitos básicos de flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
 - Guia de Flexbox CSS: _[Ordenando itens flex](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_

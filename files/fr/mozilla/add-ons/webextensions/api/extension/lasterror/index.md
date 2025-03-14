@@ -1,32 +1,21 @@
 ---
 title: extension.lastError
 slug: Mozilla/Add-ons/WebExtensions/API/extension/lastError
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - WebExtensions
-  - lastError
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/lastError
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un alias de {{WebExtAPIRef("runtime.lastError")}}.
 
-## Compatibilité du navoigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.lastError")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/extensions/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

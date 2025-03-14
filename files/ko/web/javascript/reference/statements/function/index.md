@@ -1,20 +1,24 @@
 ---
 title: 함수 선언
 slug: Web/JavaScript/Reference/Statements/function
-tags:
-  - Function
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/function
 ---
+
 {{jsSidebar("Statements")}}
 
-**함수 선언(function declaration)**은 지정된 매개변수(parameter)를 갖는 함수를 정의합니다.
+**함수 선언**(**function declaration**)은 지정된 매개변수(parameter)를 갖는 함수를 정의합니다.
 
 {{jsxref("Function")}} 생성자나 {{jsxref("Operators/function", "함수 표현식(function expression)")}}을 사용해서 정의할 수도 있습니다.
 
-{{EmbedInteractiveExample("pages/js/statement-function.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Function")}}
+
+```js interactive-example
+function calcRectArea(width, height) {
+  return width * height;
+}
+
+console.log(calcRectArea(5, 6));
+// Expected output: 30
+```
 
 ## 구문
 
@@ -43,9 +47,15 @@ translation_of: Web/JavaScript/Reference/Statements/function
 
 ```js
 var hoisted = "foo" in this;
-console.log(`'foo' name ${hoisted ? "is" : "is not"} hoisted. typeof foo is ${typeof foo}`);
+console.log(
+  `'foo' name ${
+    hoisted ? "is" : "is not"
+  } hoisted. typeof foo is ${typeof foo}`,
+);
 if (false) {
-  function foo(){ return 1; }
+  function foo() {
+    return 1;
+  }
 }
 
 // In Chrome:
@@ -65,9 +75,15 @@ if (false) {
 
 ```js
 var hoisted = "foo" in this;
-console.log(`'foo' name ${hoisted ? "is" : "is not"} hoisted. typeof foo is ${typeof foo}`);
+console.log(
+  `'foo' name ${
+    hoisted ? "is" : "is not"
+  } hoisted. typeof foo is ${typeof foo}`,
+);
 if (true) {
-  function foo(){ return 1; }
+  function foo() {
+    return 1;
+  }
 }
 
 // In Chrome:
@@ -85,7 +101,7 @@ if (true) {
 
 ### 함수 선언 끌어올리기
 
-자바스크립트에서 함수 선언은 그 선언을 둘러싼 함수의 최상부나 전역 범위(global scope)로 끌어올려집니다.
+JavaScript에서 함수 선언은 그 선언을 둘러싼 함수의 최상부나 전역 범위(global scope)로 끌어올려집니다.
 
 ```js
 hoisted(); // logs "foo"
@@ -100,8 +116,8 @@ function hoisted() {
 ```js
 notHoisted(); // TypeError: notHoisted is not a function
 
-var notHoisted = function() {
-   console.log("bar");
+var notHoisted = function () {
+  console.log("bar");
 };
 ```
 
@@ -113,7 +129,7 @@ var notHoisted = function() {
 
 ```js
 function calc_sales(units_a, units_b, units_c) {
-   return units_a*79 + units_b * 129 + units_c * 699;
+  return units_a * 79 + units_b * 129 + units_c * 699;
 }
 ```
 

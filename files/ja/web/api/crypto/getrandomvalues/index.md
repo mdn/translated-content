@@ -1,6 +1,9 @@
 ---
-title: Crypto.getRandomValues()
+title: "Crypto: getRandomValues() メソッド"
+short-title: getRandomValues()
 slug: Web/API/Crypto/getRandomValues
+l10n:
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
 {{APIRef("Web Crypto API")}}
@@ -11,11 +14,11 @@ slug: Web/API/Crypto/getRandomValues
 十分な性能を保証するために、実装は真に乱数発生器を使用しているのではないものの、十分なエントロピーを有する*シード値*を用いた擬似乱数発生器を使用しています。
 擬似乱数発生器アルゴリズム (PRNG) は、{{Glossary("user agent", "ユーザーエージェント")}}によって異なる可能性がありますが、暗号化の目的には適しています。
 
-`getRandomValues()` は `Crypto` インターフェイスで安全なコンテキスト外から使用することができる唯一のメンバーです。
+`getRandomValues()` は `Crypto` インターフェイスで保護されたコンテキスト外から使用することができる唯一のメンバーです。
 
 ## 構文
 
-```js
+```js-nolint
 getRandomValues(typedArray)
 ```
 
@@ -38,7 +41,7 @@ getRandomValues(typedArray)
 ## 使用上の注意
 
 `getRandomValues()` を暗号鍵を生成するために使用しないでください。代わりに {{domxref("SubtleCrypto.generateKey", "generateKey()")}} メソッドを使用してください。
-これにはいくつかの理由があります。例えば、 `getRandomValues()` が安全なコンテキストで動作することが保証されていないことなどです。
+これにはいくつかの理由があります。例えば、 `getRandomValues()` が保護されたコンテキストで動作することが保証されていないことなどです。
 
 ウェブ暗号仕様書では、エントロピーの最小値は規定されていません。
 その代わり、ユーザーエージェントは乱数を生成する際に、ユーザーエージェント自身に組み込まれた、よく定義された効率的な擬似乱数発生器を用いて、可能な限り最高のエントロピーを提供することが求められています。例えば、プラットフォーム固有の乱数関数、 Unix の `/dev/urandom` デバイス、または他のランダムまたは擬似乱数データのソースなど、外部の擬似乱数ソースから取得したシード値が用いられます。
@@ -65,6 +68,6 @@ for (const num of array) {
 
 ## 関連情報
 
-- [Web Crypto API](/ja/docs/Web/API/Web_Crypto_API)
-- {{domxref("Crypto")}} オブジェクトを取得する {{domxref("Window.crypto")}}。
+- [ウェブ暗号 API](/ja/docs/Web/API/Web_Crypto_API)
+- {{domxref("Crypto")}} オブジェクトを取得する {{domxref("crypto_property", "crypto")}}。
 - {{jsxref("Math.random")}} 暗号学的に安全ではない乱数値。

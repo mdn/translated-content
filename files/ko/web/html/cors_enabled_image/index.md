@@ -1,11 +1,15 @@
 ---
 title: 교차 출처 이미지와 캔버스 허용하기
 slug: Web/HTML/CORS_enabled_image
-translation_of: Web/HTML/CORS_enabled_image
+l10n:
+  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
-HTML은 이미지 처리를 위해 {{Glossary("CORS")}} header를 포함하고 있는 {{ htmlattrxref("crossorigin", "img") }} 속성을 제공합니다. 이는 {{ HTMLElement("img") }} 요소에서 정의된, 외부 origin으로 부터 가져오는 이미지가 {{HTMLElement("canvas")}}에서 사용할 수 있도록 해줍니다. 마치 현재 origin에서 가져온 것처럼 말입니다
 
-`crossorigin` 속성이 어떻게 사용되는지 자세히 알고 싶다면, [CORS settings attributes](/ko/docs/Web/HTML/CORS_settings_attributes) 를 참고하세요.
+{{HTMLSidebar}}
+
+HTML은 이미지 처리를 위해 {{Glossary("CORS")}} header를 포함하고 있는 [`crossorigin`](/ko/docs/Web/HTML/Element/img#crossorigin) 속성을 제공합니다. 이는 {{ HTMLElement("img") }} 요소에서 정의된, 외부 origin으로 부터 가져오는 이미지가 {{HTMLElement("canvas")}}에서 사용할 수 있도록 해줍니다. 마치 현재 origin에서 가져온 것처럼 말입니다
+
+`crossorigin` 속성이 어떻게 사용되는지 자세히 알고 싶다면, [CORS settings attributes](/ko/docs/Web/HTML/Attributes/crossorigin) 를 참고하세요.
 
 ## 보안과 오염된 canvas들
 
@@ -17,23 +21,22 @@ CORS를 통하지 않고, 다른 origin으로 부터 가져온 데이터들은 c
 
 만약 외부 출처 콘텐츠가 {{domxref("HTMLCanvasElement")}} 또는 {{domxref("ImageBitMap")}} 로부터 오는 이미지이고, 이미지의 source가 동일 출처 원칙과 맞지 않는다면 canvas의 콘텐츠를 읽으려는 시도는 막힙니다.
 
-Calling any of the following on a tainted canvas will result in an error:
+오염된 캔버스에서 다음 중 하나를 호출하면 오류가 발생합니다:
 
-- Calling {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} on the canvas's context
-- Calling {{domxref("HTMLCanvasElement.toBlob", "toBlob()")}} on the {{HTMLElement("canvas")}} element itself
-- Calling {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} on the canvas
+- 캔버스 컨텍스트에서 {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}를 호출
+- {{HTMLElement("canvas")}} 요소 자체에서 {{domxref("HTMLCanvasElement.toBlob", "toBlob()")}}, {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} 또는 {{domxref("HTMLCanvasElement.captureStream", "captureStream()")}}를 호출
 
-Attempting any of these when the canvas is tainted will cause a `SecurityError` to be thrown. This protects users from having private data exposed by using images to pull information from remote web sites without permission.
+canvas가 오염된 상태에서 이러한 작업을 시도해보면 `SecurityError`가 발생합니다. 이렇게 하면 사용자가 이미지를 사용하여 원격 웹 사이트에서 무단으로 정보를 가져와 개인 데이터가 노출되는 것을 방지할 수 있습니다.
 
-## Storing an image from a foreign origin
+## 외부 출처의 이미지 저장
 
-In this example, we wish to permit images from a foreign origin to be retrieved and saved to local storage. Implementing this requires configuring the server as well as writing code for the web site itself.
+이 예제는 외부 출처의 이미지를 검색하여 로컬 스토리지에 저장할 수 있도록 허용하고자 합니다. 이를 구현하려면 서버를 구성하고 웹사이트 자체에 대한 코드를 작성해야 합니다.
 
-### Web server configuration
+### 웹 서버 구성
 
-The first thing we need is a server that's configured to host images with the {{HTTPHeader("Access-Control-Allow-Origin")}} header configured to permit cross-origin access to image files.
+가장 먼저 필요한것은 교차 출처 접근을 허용하도록 {{HTTPHeader("Access-Control-Allow-Origin")}} 헤더가 있는 이미지 파일을 호스팅하도록 구성된 서버입니다.
 
-Let's assume we're serving our site using [Apache](https://httpd.apache.org/). Consider the HTML5 Boilerplate [Apache server configuration file for CORS images](https://github.com/h5bp/server-configs-apache/blob/master/src/cross-origin/images.conf), shown below:
+[Apache](https://httpd.apache.org/)를 사용하여 사이트를 서비스한다고 가정해보겠습니다. 아래와같이 HTML5 보일러플레이트 [CORS 이미지에 대한 Apache 서버 구성 파일](https://github.com/h5bp/server-configs-apache/blob/master/src/cross-origin/images.conf)을 살펴봅시다.
 
 ```xml
 <IfModule mod_setenvif.c>
@@ -46,36 +49,37 @@ Let's assume we're serving our site using [Apache](https://httpd.apache.org/). C
 </IfModule>
 ```
 
-In short, this configures the server to allow graphic files (those with the extensions ".bmp", ".cur", ".gif", ".ico", ".jpg", ".jpeg", ".png", ".svg", ".svgz", and ".webp") to be accessed cross-origin from anywhere on the internet.
+간단히 말해 이 설정은 인터넷 어디에서나 그래픽 파일(".bmp", ".cur", ".gif", ".ico", ".jpg", ".jpeg", ".png", ".svg", ".svgz" 및 ".webp" 확장자를 가진)의 교차 출처로 접근할 수 있도록 서버를 구성합니다.
 
-### Implementing the save feature
+### 저장 기능 구현하기
 
-Now that the server has been configured to allow retrieval of the images cross-origin, we can write the code that allows the user to save them to local [local storage](/ko/docs/Web/API/Web_Storage_API), just as if they were being served from the same domain the code is running on.
+이제 서버가 이미지 교차 출처 검색을 허용하도록 구성되었으므로 코드가 실행중인 동일한 도메인에서 이미지를 제공하는 것처럼 사용자가 이미지를 [로컬 스토리지](/ko/docs/Web/API/Web_Storage_API)에 저장할 수 있도록 하는 코드를 작성할 수 있습니다.
 
-The key is to use the {{htmlattrxref("crossorigin")}} attribute by setting {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} on the {{domxref("HTMLImageElement")}} into which the image will be loaded. This tells the browser to request cross-origin access when trying to download the image data.
+핵심은 로드될 {{domxref("HTMLImageElement")}}에 {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}}을 설정하여 [`crossorigin`](/ko/docs/Web/HTML/Global_attributes#crossorigin)속성을 사용하는 것입니다. 이렇게 하면 이미지 데이터를 다운로드 하려고 할때 브라우저가 교차 출처 접근을 요청하도록 지시합니다.
 
-#### Starting the download
+#### 다운로드 시작하기
 
-The code that starts the download (say, when the user clicks a "Download" button), looks like this:
+다운로드를 시작하는 코드 (예: 사용자가 "Download" 버튼을 클릭할 때 실행할 코드)는 다음과 같습니다.
 
 ```js
 function startDownload() {
-  let imageURL = "https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189";
+  let imageURL =
+    "https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189";
 
-  downloadedImg = new Image;
+  downloadedImg = new Image();
   downloadedImg.crossOrigin = "Anonymous";
   downloadedImg.addEventListener("load", imageReceived, false);
   downloadedImg.src = imageURL;
 }
 ```
 
-We're using a hard-coded URL here (`imageURL`), but that could easily come from anywhere. To begin downloading the image, we create a new {{domxref("HTMLImageElement")}} object by using the {{domxref("HTMLImageElement.Image", "Image()")}} constructor. The image is then configured to allow cross-origin downloading by setting its `crossOrigin` attribute to `"Anonymous"` (that is, allow non-authenticated downloading of the image cross-origin). An event listener is added for the {{event("load")}} event being fired on the image element, which means the image data has been received.
+여기서는 하드코딩된 URL(`imageURL`)을 사용하고 있지만 어디에서나 쉽게 찾을 수 있습니다. 다운로드를 시작하려면 {{domxref("HTMLImageElement.Image", "Image()")}} 생성자를 사용하여 새로운 {{domxref("HTMLImageElement")}} 객체를 생성합니다. 그런다음 `crossOrigin` 속성을 `"Anonymous"`으로 설정하여 교차 출처 다운로드를 허용하도록 이미지를 구성합니다. (이미지 교차 출처의 인증이 되지 않은 다운로드를 허용). 이미지 요소에서 발생하는 {{domxref("Window/load_event", "load")}} 이벤트에 대한 이벤트 수신기가 추가되며 이는 이미지 데이터가 수신되었음을 의미 합니다.
 
-Finally, the image's {{domxref("HTMLImageElement.src", "src")}} attribute is set to the URL of the image to download; this triggers the download to begin.
+마지막으로 이미지의 {{domxref("HTMLImageElement.src", "src")}} 속성을 다운로드할 이미지의 URL로 설정하면 다운로드가 시작됩니다.
 
-#### Receiving and saving the image
+#### 이미지 수신 및 저장하기
 
-The code that handles the newly-downloaded image is found in the `imageReceived()` method:
+새로 다운로드한 이미지를 처리하는 코드는 `imageReceived()` 메서드에서 찾을 수 있습니다.
 
 ```js
 function imageReceived() {
@@ -90,25 +94,20 @@ function imageReceived() {
 
   try {
     localStorage.setItem("saved-image-example", canvas.toDataURL("image/png"));
-  }
-  catch(err) {
+  } catch (err) {
     console.log("Error: " + err);
   }
 }
 ```
 
-`imageReceived()` is called to handle the `"load"` event on the `HTMLImageElement` that receives the downloaded image. This event is triggered once the downloaded data is all available. It begins by creating a new {{HTMLElement("canvas")}} element that we'll use to convert the image into a data URL, and by getting access to the canvas's 2D drawing context ({{domxref("CanvasRenderingContext2D")}}) in the variable `context`.
+`imageReceived()` 가 호출되어 다운로드한 이미지를 수신하는 `HTMLImageElement` 의 `"load"` 이벤트를 처리합니다. 이 이벤트는 다운로드한 데이터를 모두 사용할 수 있게 되면 트리거 됩니다. 이미지를 데이터 URL로 변환하는 데 사용할 새 {{HTMLElement("canvas")}} 요소를 생성하고 변수 `context` 에서 캔버스의 2D 드로잉 컨텍스트({{domxref("CanvasRenderingContext2D")}})에 접근하는 것으로 시작됩니다.
 
-The canvas's size is adjusted to match the received image, then the image is drawn into the canvas using {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}}. The canvas is then inserted into the document so the image is visible.
+캔버스 크기가 수신된 이다지와 일치하도록 조정된 다음 {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}}를 사용하여 이미지를 캔버스에 그립니다. 그런 다음 캔버스가 문서에 삽입되어 이미지가 표시됩니다.
 
-Now it's time to actually save the image locally. To do this, we use the Web Storage API's local storage mechanism, which is accessed through the {{domxref("Window.localStorage", "localStorage")}} global. The canvas method {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} is used to convert the image into a data:// URL representing a PNG image, which is then saved into local storage using {{domxref("Storage.setItem", "setItem()")}}.
-
-You can [try out](https://cors-image-example.glitch.me/) or [remix](https://glitch.com/edit/#!/remix/cors-image-example) this example on Glitch.
+이제 이미지를 실제로 로컬에 저장할 차례입니다. 이를 위해 {{domxref("Window.localStorage", "localStorage")}} 전역 객체을 통해 액세스되는 웹 스토리지 API의 로컬 스토리지 매커니즘을 사용합니다. 캔버스 메서드 {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}}을 사용하여 이미지를 PNG 이미지를 나타내는 data:// URL 로 변환한 다음 {{domxref("Storage.setItem", "setItem()")}}을 사용하여 로컬 스토리지에 저장합니다.
 
 ## See also
 
-- [Using Cross-domain images in WebGL and Chrome 13](http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
-- [HTML Specification - the `crossorigin` attribute](http://whatwg.org/html#attr-img-crossorigin)
+- [WebGL 과 Chrome 13에서 교차출처 이미지 사용하기](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
+- [HTML 명세 - `crossorigin` 속성](http://whatwg.org/html#attr-img-crossorigin)
 - [Web Storage API](/ko/docs/Web/API/Web_Storage_API)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}

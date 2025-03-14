@@ -1,7 +1,6 @@
 ---
 title: Pseudo-elementos
 slug: Web/CSS/Pseudo-elements
-original_slug: Web/CSS/Pseudo-elementos
 ---
 
 {{ CSSRef() }}Um **pseudo-elemento** CSS é uma palavra-chave adicionada a um seletor que permite que você estilize uma parte específica do elemento selecionado. Por exemplo, o pseudo-elemento {{CSSxRef("::first-line")}} aplica o estilo apenas na primeira linha de um parágrafo.
@@ -14,7 +13,8 @@ p::first-line {
 }
 ```
 
-> **Note:** **Observação:** Diferentemente dos pseudo-elementos, {{cssxref("pseudo-classes")}} podem ser utilizadas para estilizar um elemento baseado em seu _estado_.
+> [!NOTE]
+> Diferentemente dos pseudo-elementos, {{cssxref("pseudo-classes")}} podem ser utilizadas para estilizar um elemento baseado em seu _estado_.
 
 ## Sintaxe
 
@@ -26,7 +26,8 @@ seletor::pseudo-elemento {
 
 Você pode utilizar apenas um pseudo-elemento em um seletor. Ele deve aparecer depois da declaração de um elemento simples.
 
-> **Note:** **Observação:** Como regra, os dois pontos devem ser usados duas vezes (`::`) ao invés de uma única vez (`:`). Isso distingue pseudo-classes de pseudo-elementos. Apesar disso, devido a essa distinção não estar presente em versões mais antigas da especificação da W3C, a maioria dos navegadores suportam ambas as sintaxes para os pseudo-elementos originais.
+> [!NOTE]
+> Como regra, os dois pontos devem ser usados duas vezes (`::`) ao invés de uma única vez (`:`). Isso distingue pseudo-classes de pseudo-elementos. Apesar disso, devido a essa distinção não estar presente em versões mais antigas da especificação da W3C, a maioria dos navegadores suportam ambas as sintaxes para os pseudo-elementos originais.
 
 ## Índice de pseudo-elementos comuns
 

@@ -1,15 +1,25 @@
 ---
 title: Date.prototype.toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toJSON
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toJSON
 ---
 
 {{JSRef}}
 
 El metodo **`toJSON()`** retorna una representacion de cadena del objeto {{jsxref("Date")}}
 
-{{EmbedInteractiveExample("pages/js/date-tojson.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toJSON()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30 UTC");
+
+const jsonDate = event.toJSON();
+
+console.log(jsonDate);
+// Expected output: "1975-08-19T23:15:30.000Z"
+
+console.log(new Date(jsonDate).toUTCString());
+// Expected output: "Tue, 19 Aug 1975 23:15:30 GMT"
+```
 
 La tabla de compatibilidad de esta página se genera a partir de datos estructurados. Si desea contribuir con los datos, por favor clone <https://github.com/mdn/interactive-examples> y envienos un pull request.
 
@@ -32,7 +42,7 @@ Una representación de cadena de la fecha dada.
 ### Usando `toJSON()`
 
 ```js
-var jsonDate = (new Date()).toJSON();
+var jsonDate = new Date().toJSON();
 var backToDate = new Date(jsonDate);
 
 console.log(jsonDate); //2015-10-26T07:46:36.611Z
@@ -40,13 +50,11 @@ console.log(jsonDate); //2015-10-26T07:46:36.611Z
 
 ## Especificaciones
 
-| Especificación                                                                                           |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}} |
+{{Specifications}}
 
-## Compatibilidad en buscadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.toJSON")}}
+{{Compat}}
 
 ## Ver también
 

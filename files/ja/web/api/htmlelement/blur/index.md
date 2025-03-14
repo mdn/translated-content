@@ -1,6 +1,9 @@
 ---
-title: HTMLElement.blur()
+title: "HTMLElement: blur() メソッド"
+short-title: blur()
 slug: Web/API/HTMLElement/blur
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,9 +12,17 @@ slug: Web/API/HTMLElement/blur
 
 ## 構文
 
-```js
-element.blur();
+```js-nolint
+blur()
 ```
+
+### 引数
+
+なし。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -20,20 +31,24 @@ element.blur();
 #### HTML
 
 ```html
-<input type="text" id="myText" value="サンプルテキスト">
-<br><br>
-<button type="button" onclick="focusInput()">クリックするとフォーカスを得ます</button>
-<button type="button" onclick="blurInput()">クリックするとフォーカスを失います</button>
+<input type="text" id="sampleText" value="サンプルテキスト" /><br /><br />
+<button type="button" onclick="focusInput()">
+  クリックするとフォーカスを得ます
+</button>
 ```
 
 #### JavaScript
 
 ```js
 function focusInput() {
-  document.getElementById('myText').focus();
-}
-function blurInput() {
-  document.getElementById('myText').blur();
+  const textField = document.getElementById("sampleText");
+
+  textField.focus();
+
+  // 入力欄から 3 秒後にフォーカスが外れる
+  setTimeout(() => {
+    textField.blur();
+  }, 3000);
 }
 ```
 

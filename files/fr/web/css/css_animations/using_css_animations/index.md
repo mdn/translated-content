@@ -1,8 +1,6 @@
 ---
 title: Utiliser les animations CSS
-slug: Web/CSS/CSS_Animations/Using_CSS_animations
-translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
-original_slug: Web/CSS/Animations_CSS/Utiliser_les_animations_CSS
+slug: Web/CSS/CSS_animations/Using_CSS_animations
 ---
 
 {{CSSRef}}
@@ -48,7 +46,8 @@ Il est également possible d'ajouter des étapes intermédiaires, entre l'état 
 
 ## Exemples
 
-> **Note :** Les exemples ci-après n'utilisent pas la version préfixée des propriétés liées aux animations. Il est possible que d'anciens navigateurs (antérieurs à 2017) aient besoin de ces préfixes pour fonctionner auquel cas l'exemple « _live_ » ne fonctionnera pas.
+> [!NOTE]
+> Les exemples ci-après n'utilisent pas la version préfixée des propriétés liées aux animations. Il est possible que d'anciens navigateurs (antérieurs à 2017) aient besoin de ces préfixes pour fonctionner auquel cas l'exemple « _live_ » ne fonctionnera pas.
 
 ### Utiliser une animation pour que le texte traverse la fenêtre du navigateur
 
@@ -84,12 +83,15 @@ Les étapes (_keyframes_) de l'animation sont définies via la règle @ {{cssxre
 La seconde, et dernière, étape, se produit à 100% d'avancement (dans l'exemple, on utilise l'alias `to`). Pour cet état, la marge gauche vaut 0% et la largeur de l'élément vaut 100%. De cette façon le contenu finit sa course contre le borde gauche de la zone de contenu.
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
-> **Note :** Pour observer l'animation, il peut être nécessaire de rafraîchir la page ou d'utiliser la vue CodePen/JSFiddle.
+> [!NOTE]
+> Pour observer l'animation, il peut être nécessaire de rafraîchir la page ou d'utiliser la vue CodePen/JSFiddle.
 
 {{EmbedLiveSample("Utiliser_une_animation_pour_que_le_texte_traverse_la_fenêtre_du_navigateur","100%","250")}}
 
@@ -131,14 +133,17 @@ p {
 ```
 
 ```html hidden
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 Cette nouvelle étape indique au navigateur que, lorsqu'on atteint 75% d'avancement, il faut que la marge à gauche soit de 25% et que la largeur du paragraphe représente 150% de la largeur de l'élément englobant.
 
-> **Note :** Pour observer l'animation, il peut être nécessaire de rafraîchir la page ou d'utiliser la vue CodePen/JSFiddle.
+> [!NOTE]
+> Pour observer l'animation, il peut être nécessaire de rafraîchir la page ou d'utiliser la vue CodePen/JSFiddle.
 
 {{EmbedLiveSample("Ajouter_une_autre_étape","100%","250")}}
 
@@ -169,9 +174,11 @@ p {
 ```
 
 ```html hidden
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("Répéter_une_animation","100%","250")}}
@@ -204,9 +211,11 @@ p {
 ```
 
 ```html hidden
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("Obtenir_un_effet_aller-retour","100%","250")}}
@@ -232,7 +241,8 @@ p {
 }
 ```
 
-> **Note :** Pour plus de détails, vous pouvez consulter la page de référence sur la propriété {{cssxref("animation")}}.
+> [!NOTE]
+> Pour plus de détails, vous pouvez consulter la page de référence sur la propriété {{cssxref("animation")}}.
 
 ### Utiliser plusieurs valeurs pour différentes animations
 
@@ -282,13 +292,13 @@ On commence par rédiger le CSS pour l'animation. Ici, l'animation durera 3 seco
 
 @keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-    margin-left:0%;
-    width:100%;
+    margin-left: 0%;
+    width: 100%;
   }
 }
 ```
@@ -317,7 +327,7 @@ Les événements sont transmis à la fonction `listener()` décrite ici :
 ```js
 function listener(event) {
   var l = document.createElement("li");
-  switch(event.type) {
+  switch (event.type) {
     case "animationstart":
       l.innerHTML = "Début : durée écoulée : " + event.elapsedTime;
       break;
@@ -367,5 +377,5 @@ Afin d'être tout à fait complet, voici le code HTML qui peut être utilisé et
 
 - {{domxref("AnimationEvent")}}
 - [Détecter la prise en charge des animations CSS](/fr/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
-- [Manipuler les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Manipuler les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - [CSS](https://www.cssdebutant.com)

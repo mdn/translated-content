@@ -1,6 +1,9 @@
 ---
-title: HTMLMediaElement.defaultPlaybackRate
+title: "HTMLMediaElement: defaultPlaybackRate プロパティ"
+short-title: defaultPlaybackRate
 slug: Web/API/HTMLMediaElement/defaultPlaybackRate
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,7 +12,7 @@ slug: Web/API/HTMLMediaElement/defaultPlaybackRate
 
 ## 値
 
-`double` 型です。 `1.0` が「標準速度」で、 `1.0` より小さい値はメディアの再生速度が標準より遅くなり、値を大きくすると再生速度が速くなります。
+double 型です。 `1.0` が「標準速度」で、 `1.0` より小さい値はメディアの再生速度が標準より遅くなり、値を大きくすると再生速度が速くなります。
 
 ### 例外
 
@@ -19,7 +22,7 @@ slug: Web/API/HTMLMediaElement/defaultPlaybackRate
 ## 例
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.defaultPlaybackRate); // 1
 ```
 
@@ -33,4 +36,4 @@ console.log(obj.defaultPlaybackRate); // 1
 
 ## 関連情報
 
-- 定義している {{domxref("HTMLMediaElement")}} インターフェイス
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.defaultPlaybackRate` プロパティを定義しているインターフェイス

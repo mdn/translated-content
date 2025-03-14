@@ -1,37 +1,86 @@
 ---
 title: float
 slug: Web/CSS/float
-original_slug: CSS/float
 ---
 
 {{CSSRef}}
 
-`float` CSS 属性指定一个元素应沿其容器的左侧或右侧放置，允许文本和内联元素环绕它。该元素从网页的正常流动（文档流）中移除，尽管仍然保持部分的流动性（与[绝对定位](/zh-CN/docs/Web/CSS/position#absolute_positioning)相反）。
+`float` CSS 属性指定一个元素应沿其容器的左侧或右侧放置，允许文本和内联元素环绕它。该元素从网页的正常流动（文档流）中移除，但是仍然保持部分的流动性（与[绝对定位](/zh-CN/docs/Web/CSS/position#absolute_positioning)相反）。
 
-{{EmbedInteractiveExample("pages/css/float.html")}}
+{{InteractiveExample("CSS Demo: float")}}
+
+```css interactive-example-choice
+float: none;
+```
+
+```css interactive-example-choice
+float: left;
+```
+
+```css interactive-example-choice
+float: right;
+```
+
+```css interactive-example-choice
+float: inline-start;
+```
+
+```css interactive-example-choice
+float: inline-end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">Float me</div>
+    As much mud in the streets as if the waters had but newly retired from the
+    face of the earth, and it would not be wonderful to meet a Megalosaurus,
+    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  padding: 0.75em;
+  text-align: left;
+  width: 80%;
+  line-height: normal;
+}
+
+#example-element {
+  border: solid 10px #efac09;
+  background-color: #040d46;
+  color: white;
+  padding: 1em;
+  width: 40%;
+}
+```
 
 **浮动元素**是 `float` 的计算值非 `none` 的元素。
 
 由于 `float` 意味着使用块布局，它在某些情况下会修改 {{cssxref("display")}} 值的计算值：
 
-| 指定值                | 计算值          |
-| -------------------- | -------------- |
-| `inline`             | `block`        |
-| `inline-block`       | `block`        |
-| `inline-table`       | `table`        |
-| `table-row`          | `block`        |
-| `table-row-group`    | `block`        |
-| `table-column`       | `block`        |
-| `table-column-group` | `block`        |
-| `table-cell`         | `block`        |
-| `table-caption`      | `block`        |
-| `table-header-group` | `block`        |
-| `table-footer-group` | `block`        |
-| `inline-flex`        | `flex`         |
-| `inline-grid`        | `grid`         |
-| _other_              | _unchanged_    |
+| 指定值               | 计算值      |
+| -------------------- | ----------- |
+| `inline`             | `block`     |
+| `inline-block`       | `block`     |
+| `inline-table`       | `table`     |
+| `table-row`          | `block`     |
+| `table-row-group`    | `block`     |
+| `table-column`       | `block`     |
+| `table-column-group` | `block`     |
+| `table-cell`         | `block`     |
+| `table-caption`      | `block`     |
+| `table-header-group` | `block`     |
+| `table-footer-group` | `block`     |
+| `inline-flex`        | `flex`      |
+| `inline-grid`        | `grid`      |
+| _other_              | _unchanged_ |
 
-> **备注：** 如果要在 JavaScript 中把 `float` 属性当作 {{domxref("HTMLElement.style")}} 对象的一个成员来操作，那么在旧版本的浏览器中，你必须拼写成 `cssFloat`。另外还要注意到在 Internet Explorer 8 和更老的 IE 当中，要使用 `styleFloat` 属性。这是 DOM 驼峰命名和 CSS 所用的连字符分隔命名法对应关系中的一个特例（这是因为在 JavaScript 中“float”是一个保留字，因为同样的原因，“class”被改成了“className” 、`<label>` 的“for”被改成了“htmlFor”）。
+> [!NOTE]
+> 如果要在 JavaScript 中把 `float` 属性当作 {{domxref("HTMLElement.style")}} 对象的一个成员来操作，那么在旧版本的浏览器中，你必须拼写成 `cssFloat`。另外还要注意到在 Internet Explorer 8 和更老的 IE 当中，要使用 `styleFloat` 属性。这是 DOM 驼峰命名和 CSS 所用的连字符分隔命名法对应关系中的一个特例（这是因为在 JavaScript 中“float”是一个保留字，因为同样的原因，“class”被改成了“className” 、`<label>` 的“for”被改成了“htmlFor”）。
 
 ## 语法
 
@@ -77,7 +126,7 @@ float: unset;
 
 ### 浮动元素是如何定位的
 
-正如我们前面提到的那样，当一个元素浮动之后，它会被移出正常的文档流，然后向左或者向右平移，一直平移直到碰到了所处的容器的边框，或者碰到**另外一个浮动的元素**。
+正如我们前面提到的那样，当一个元素浮动之后，它会被移出正常的文档流，然后向左或者向右平移，一直平移直到碰到了所处盒子的边界，或者碰到**另外一个浮动的元素**。
 
 在下面的图片中，有三个红色的正方形。其中有两个向左浮动，一个向右浮动。要注意到第二个向左浮动的正方形被放在第一个向左浮动的正方形的右边。如果还有更多的正方形这样浮动，它们会继续向右堆放，直到填满容器一整行，之后换行至下一行。
 
@@ -90,11 +139,13 @@ float: unset;
   <div class="left">1</div>
   <div class="left">2</div>
   <div class="right">3</div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-     Morbi tristique sapien ac erat tincidunt, sit amet dignissim
-     lectus vulputate. Donec id iaculis velit. Aliquam vel
-     malesuada erat. Praesent non magna ac massa aliquet tincidunt
-     vel in massa. Phasellus feugiat est vel leo finibus congue.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique
+    sapien ac erat tincidunt, sit amet dignissim lectus vulputate. Donec id
+    iaculis velit. Aliquam vel malesuada erat. Praesent non magna ac massa
+    aliquet tincidunt vel in massa. Phasellus feugiat est vel leo finibus
+    congue.
+  </p>
 </section>
 ```
 
@@ -143,5 +194,5 @@ div {
 
 ## 参见
 
-- [块级格式化上下文（Block formatting context）](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)
+- [区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
 - 使用 {{cssxref("clear")}} 强制元素移至浮动元素下方。

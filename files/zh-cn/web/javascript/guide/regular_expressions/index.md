@@ -1,9 +1,9 @@
 ---
 title: 正则表达式
-slug: Web/JavaScript/Guide/Regular_Expressions
+slug: Web/JavaScript/Guide/Regular_expressions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Representing_dates_times", "Web/JavaScript/Guide/Indexed_collections")}}
 
 正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript 中，正则表达式也是对象。这些模式被用于 {{jsxref("RegExp")}} 的 {{jsxref("RegExp.exec", "exec")}} 和 {{jsxref("RegExp.test", "test")}} 方法，以及 {{jsxref("String")}} 的 {{jsxref("String.match", "match")}}、{{jsxref("String.matchAll", "matchAll")}}、{{jsxref("String.replace", "replace")}}、{{jsxref("String.search", "search")}} 和 {{jsxref("String.split", "split")}} 方法。本章介绍 JavaScript 正则表达式。
 
@@ -19,7 +19,7 @@ var re = /ab+c/;
 
 脚本加载后，正则表达式字面量就会被编译。当正则表达式保持不变时，使用此方法可获得更好的性能。
 
-或者调用[`RegExp`](/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp)对象的构造函数，如下所示：
+或者调用[`RegExp`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)对象的构造函数，如下所示：
 
 ```js
 var re = new RegExp("ab+c");
@@ -41,16 +41,14 @@ var re = new RegExp("ab+c");
 
 下面的页面与表格列出了一个正则表达式中可以利用的特殊字符的完整列表和描述。
 
-- [断言（Assertions）](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
+- [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)指南
   - : 表示一个匹配在某些条件下发生。断言包含先行断言、后行断言和条件表达式。
-- [字符类（Character Classes）](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
+- [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)指南
   - : 区分不同类型的字符，例如区分字母和数字。
-- [组和范围（Groups and Ranges）](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
-  - : 表示表达式字符的分组和范围。
-- [量词（Quantifiers）](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
+- [组和反向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)指南
+  - : 当使用正则表达式模式与字符串匹配时，组会将多个模式组合成一个整体，捕获组会提供额外的子匹配信息。反向引用指的是同一正则表达式中以前捕获的组。
+- [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)指南
   - : 表示匹配的字符或表达式的数量。
-- [Unicode 属性转义（Unicode Property Escapes）](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
-  - : 基于 unicode 字符属性区分字符。例如大写和小写字母、数学符号和标点。
 
 <table class="standard-table">
   <caption>
@@ -215,7 +213,7 @@ var re = new RegExp("ab+c");
           <code>\1</code>、<code>\2</code>、...、<code>\n</code>
           是用在正则表达式的匹配环节，详情可以参阅后文的
           <a
-            href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#special-backreference"
+            href="#special-backreference"
             >\n</a
           >
           条目。而在正则表达式的替换环节，则要使用像
@@ -239,8 +237,8 @@ var re = new RegExp("ab+c");
           的最后一个字符 'o'。如果使用非捕获括号，则
           <code>{1,2}</code> 会应用于整个 'foo' 单词。更多信息，可以参阅下文的
           <a
-            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_parentheses"
-            >Using parentheses</a
+            href="#使用括号的子字符串匹配"
+            >使用括号的子字符串匹配</a
           >
           条目。
         </p>
@@ -480,12 +478,12 @@ var re = new RegExp("ab+c");
       </td>
       <td>
         <p>
-          匹配一个空白字符，包括空格、制表符、换页符和换行符。等价于 [
-          \f\n\r\t\v\u00a0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]。
+          匹配一个空白字符，包括空格、制表符、换页符和换行符。等价于
+          <code>[\f\n\r\t\v\u0020\u00a0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>。
         </p>
         <p>例如，<code>/\s\w*/</code> 匹配"foo bar."中的' bar'。</p>
         <p>
-          经测试，\s不匹配"<a href="https://unicode-table.com/cn/180E/"
+          经测试，\s不匹配"<a href="https://symbl.cc/cn/180E/"
             >\u180e</a
           >"，在当前版本 Chrome(v80.0.3987.122) 和 Firefox(76.0.1)
           控制台输入/\s/.test("\u180e") 均返回 false。
@@ -499,8 +497,7 @@ var re = new RegExp("ab+c");
       <td>
         <p>
           匹配一个非空白字符。等价于
-          <code>[^ </code
-          >\f\n\r\t\v\u00a0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff<code>]</code>。
+          <code>[^\f\n\r\t\v\u0020\u00a0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>。
         </p>
         <p>例如，<code>/\S\w*/</code> 匹配"foo bar."中的'foo'。</p>
       </td>
@@ -566,7 +563,7 @@ var re = new RegExp("ab+c");
         <a href="#special-null"><code>\0</code></a>
       </td>
       <td>
-        匹配 NULL（U+0000）字符，不要在这后面跟其它小数，因为
+        匹配 NULL（U+0000）字符，不要在这后面跟其他小数，因为
         <code>\0&#x3C;digits></code> 是一个八进制转义序列。
       </td>
     </tr>
@@ -599,11 +596,11 @@ var re = new RegExp("ab+c");
 
 如果你需要使用任何特殊字符的字面值（例如，搜索字符'\*'），你必须通过在它前面放一个反斜杠来转义它。例如，要搜索'a'后跟'\*'后跟'b'，你应该使用`/a\*b/`- 反斜杠“转义”字符'\*'，使其成为文字而非特殊符号。
 
-类似地，如果您正在编写正则表达式文字并且需要匹配斜杠（'/'），那么需要转义它（否则，斜杠是正则终止符）。例如，要搜索字符串“/ example /”后跟一个或多个字母字符，您需要使用`/\/example\/[a-z]+/i`——每个斜杠之前使用反斜杠使它们成为普通字符。
+类似地，如果你正在编写正则表达式文字并且需要匹配斜杠（'/'），那么需要转义它（否则，斜杠是正则终止符）。例如，要搜索字符串“/ example /”后跟一个或多个字母字符，你需要使用`/\/example\/[a-z]+/i`——每个斜杠之前使用反斜杠使它们成为普通字符。
 
-要匹配文本符号反斜杠，您需要转义反斜杠。例如，要匹配字符串“C:\”，其中“C”可以是任何字母，您将使用`/[A-Z]:\\/` —— 第一个反斜杠转义后面的那个反斜杠，因此表达式搜索单个普通字符反斜杠。
+要匹配文本符号反斜杠，你需要转义反斜杠。例如，要匹配字符串“C:\”，其中“C”可以是任何字母，你将使用`/[A-Z]:\\/`——第一个反斜杠转义后面的那个反斜杠，因此表达式搜索单个普通字符反斜杠。
 
-如果将 RegExp 构造函数与字符串文字一起使用，请记住反斜杠是字符串文字中的转义，因此要在正则表达式中使用它，您需要在字符串文字级别转义它。 `/a\*b/` 和`new RegExp("a\\*b")`创建的表达式是相同的，搜索“a”后跟文字“\*”后跟“b”。
+如果将 RegExp 构造函数与字符串文字一起使用，请记住反斜杠是字符串文字中的转义，因此要在正则表达式中使用它，你需要在字符串文字级别转义它。 `/a\*b/` 和`new RegExp("a\\*b")`创建的表达式是相同的，搜索“a”后跟文字“\*”后跟“b”。
 
 将用户输入转义为正则表达式中的一个字面字符串，可以通过简单的替换来实现：
 
@@ -614,13 +611,13 @@ function escapeRegExp(string) {
 }
 ```
 
-正则表达式后的"g"是一个表示全局搜索选项或标记，将在整个字符串查找并返回所有匹配结果。这将在下面的[通过标志进行高级搜索](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#%E9%80%9A%E8%BF%87%E6%A0%87%E5%BF%97%E8%BF%9B%E8%A1%8C%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2)详述。
+正则表达式后的"g"是一个表示全局搜索选项或标记，将在整个字符串查找并返回所有匹配结果。这将在下面的[通过标志进行高级搜索](#通过标志进行高级搜索)详述。
 
 为什么这个没有内建在 JavaScript 中？之前有计划在 RegExp 对象中添加一个 Function，但在[TC39](https://github.com/benjamingr/RegExp.escape/issues/37)中被否决了。
 
 ### 使用插入语
 
-任何正则表达式的插入语都会使这部分匹配的副字符串被记忆。一旦被记忆，这个副字符串就可以被调用于其它用途，如同 [使用括号的子字符串匹配](#使用括号的子字符串匹配)之中所述。
+任何正则表达式的插入语都会使这部分匹配的副字符串被记忆。一旦被记忆，这个副字符串就可以被调用于其他用途，如同 [使用括号的子字符串匹配](#使用括号的子字符串匹配)之中所述。
 
 比如， `/Chapter (\d+)\.\d*/` 解释了额外转义的和特殊的字符，并说明了这部分 pattern 应该被记忆。它精确地匹配后面跟着一个以上数字字符的字符 'Chapter ' (`\d` 意为任何数字字符，`+ 意为 1 次以上`)，跟着一个小数点（在这个字符中本身也是一个特殊字符；小数点前的 \ 意味着这个 pattern 必须寻找字面字符 '.')，跟着任何数字字符 0 次以上。 (`\d` 意为数字字符， `*` 意为 0 次以上)。另外，插入语也用来记忆第一个匹配的数字字符。
 
@@ -630,17 +627,17 @@ function escapeRegExp(string) {
 
 ## 使用正则表达式
 
-正则表达式可以被用于 [`RegExp`](/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp) 的 [`exec`](/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/exec) 和 [`test`](/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/test) 方法以及 [`String`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String) 的 [`match`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String/match)、[`replace`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String/replace)、[`search`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String/search) 和 [`split`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String/split) 方法。这些方法在 [JavaScript 手册](/zh-CN/docs/JavaScript/Reference)中有详细的解释。
+正则表达式可以被用于 [`RegExp`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp) 的 [`exec`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) 和 [`test`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test) 方法以及 [`String`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String) 的 [`match`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match)、[`replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace)、[`search`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/search) 和 [`split`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 方法。这些方法在 [JavaScript 手册](/zh-CN/docs/Web/JavaScript/Reference)中有详细的解释。
 
-| 方法                                                     | 描述                                                                                                   |
-| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| {{jsxref("RegExp.exec", "exec")}}             | 一个在字符串中执行查找匹配的 RegExp 方法，它返回一个数组（未匹配到则返回 null）。                      |
-| {{jsxref("RegExp.test", "test")}}             | 一个在字符串中测试是否匹配的 RegExp 方法，它返回 true 或 false。                                       |
-| {{jsxref("String.match", "match")}}         | 一个在字符串中执行查找匹配的 String 方法，它返回一个数组，在未匹配到时会返回 null。                    |
+| 方法                                      | 描述                                                                                                   |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| {{jsxref("RegExp.exec", "exec")}}         | 一个在字符串中执行查找匹配的 RegExp 方法，它返回一个数组（未匹配到则返回 null）。                      |
+| {{jsxref("RegExp.test", "test")}}         | 一个在字符串中测试是否匹配的 RegExp 方法，它返回 true 或 false。                                       |
+| {{jsxref("String.match", "match")}}       | 一个在字符串中执行查找匹配的 String 方法，它返回一个数组，在未匹配到时会返回 null。                    |
 | {{jsxref("String.matchAll", "matchAll")}} | 一个在字符串中执行查找所有匹配的 String 方法，它返回一个迭代器（iterator）。                           |
-| {{jsxref("String.search", "search")}}         | 一个在字符串中测试匹配的 String 方法，它返回匹配到的位置索引，或者在失败时返回 -1。                     |
-| {{jsxref("String.replace", "replace")}}     | 一个在字符串中执行查找匹配的 String 方法，并且使用替换字符串替换掉匹配到的子字符串。                   |
-| {{jsxref("String.split", "split")}}         | 一个使用正则表达式或者一个固定字符串分隔一个字符串，并将分隔后的子字符串存储到数组中的 `String` 方法。 |
+| {{jsxref("String.search", "search")}}     | 一个在字符串中测试匹配的 String 方法，它返回匹配到的位置索引，或者在失败时返回 -1。                    |
+| {{jsxref("String.replace", "replace")}}   | 一个在字符串中执行查找匹配的 String 方法，并且使用替换字符串替换掉匹配到的子字符串。                   |
+| {{jsxref("String.split", "split")}}       | 一个使用正则表达式或者一个固定字符串分隔一个字符串，并将分隔后的子字符串存储到数组中的 `String` 方法。 |
 
 当你想要知道在一个字符串中的一个匹配是否被找到，你可以使用 test 或 search 方法；想得到更多的信息（但是比较慢）则可以使用 exec 或 match 方法。如果你使用 exec 或 match 方法并且匹配成功了，那么这些方法将返回一个数组并且更新相关的正则表达式对象的属性和预定义的正则表达式对象（详见下）。如果匹配失败，那么 exec 方法返回 null（也就是 false）。
 
@@ -709,7 +706,7 @@ var myArray = myRe.exec("cdbbdbsbz");
       <td>
         开始下一个匹配的起始索引值。（这个属性只有在使用 g 参数时可用在
         <a
-          href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#.E9.80.9A.E8.BF.87.E5.8F.82.E6.95.B0.E8.BF.9B.E8.A1.8C.E9.AB.98.E7.BA.A7.E6.90.9C.E7.B4.A2"
+          href="#通过标志进行高级搜索"
           >通过参数进行高级搜索</a
         >
         一节有详细的描述.)
@@ -822,10 +819,11 @@ var re = new RegExp("\\w+\\s", "g");
 
 并且能获取到相同的结果。
 
-使用`.exec()`方法时，与'`g`'标志关联的行为是不同的。（“class”和“argument”的作用相反：在`.match()`的情况下，字符串类（或数据类型）拥有该方法，而正则表达式只是一个参数，而在`.exec()`的情况下，它是拥有该方法的正则表达式，其中字符串是参数。对比*`str.match(re)`*与*`re.exec(str)`* ), '`g`'标志与`.exec()`方法一起使用获得迭代进展。
+使用 `.exec()` 方法时，与 `g` 标志关联的行为是不同的。（“class”和“argument”的作用相反：在 `.match()` 的情况下，字符串类（或数据类型）拥有该方法，而正则表达式只是一个参数，而在 `.exec()` 的情况下，它是拥有该方法的正则表达式，其中字符串是参数。）对比 `str.match(re)` _与_ `re.exec(str)`，`g` 标志与 `.exec()` 方法一起使用获得迭代进展。
 
 ```js
-var xArray; while(xArray = re.exec(str)) console.log(xArray);
+var xArray;
+while ((xArray = re.exec(str))) console.log(xArray);
 // produces:
 // ["fee ", index: 0, input: "fee fi fo fum"]
 // ["fi ", index: 4, input: "fee fi fo fum"]
@@ -834,7 +832,7 @@ var xArray; while(xArray = re.exec(str)) console.log(xArray);
 
 m 标志用于指定多行输入字符串应该被视为多个行。如果使用 m 标志，^和$匹配的开始或结束输入字符串中的每一行，而不是整个字符串的开始或结束。
 
-## 例子
+## 示例
 
 以下例子说明了一些正则表达式的用途。
 
@@ -884,14 +882,14 @@ for (i = 0, len = nameList.length; i < len; i++) {
 
 // 输出新的数组
 output.push("---------- Names Reversed");
-for (i = 0, len = bySurnameList.length; i < len; i++){
+for (i = 0, len = bySurnameList.length; i < len; i++) {
   output.push(bySurnameList[i]);
 }
 
 // 根据姓来排序，然后输出排序后的数组。
 bySurnameList.sort();
 output.push("---------- Sorted");
-for (i = 0, len = bySurnameList.length; i < len; i++){
+for (i = 0, len = bySurnameList.length; i < len; i++) {
   output.push(bySurnameList[i]);
 }
 
@@ -902,37 +900,43 @@ console.log(output.join("\n"));
 
 ### 用特殊字符检验输入
 
-在以下例子中，我们期望用户输入一个电话号码。当用户点击“Check”按钮，我们的脚本开始检查这些数字是否合法。如果数字合法（匹配正则表达式所规定的字符序列），脚本显示一条感谢用户的信息并确认该数字。如果这串数字不合法，脚本提示用户电话号码不合法。.
+在以下例子中，我们期望用户输入一个电话号码。当用户点击“Check”按钮，我们的脚本开始检查这些数字是否合法。如果数字合法（匹配正则表达式所规定的字符序列），脚本显示一条感谢用户的信息并确认该数字。如果这串数字不合法，脚本提示用户电话号码不合法。
 
 包含非捕获括号 `(?:` 这个正则表达式寻找三个数字字符 `\d{3}` 或者 `|` 一个左半括号 `\(` 跟着三位数字 `\d{3}`, 跟着一个封闭括号 `\)`, (结束非捕获括号 `)`)，后跟着一个短破折号或正斜杠或小数点，随后跟随三个数字字符，当记忆字符 `([-\/\.])` 捕获并记住，后面跟着三位小数 `\d{3}`，再后面跟随记住的破折号、正斜杠或小数点 `\1`，最后跟着四位小数 `\d{4}`。
 
 当用户按下 Enter 设置 RegExp.input，这些变化也能被激活。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
     <script type="text/javascript">
       var re = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/;
       function testInfo(phoneInput) {
         var OK = re.exec(phoneInput.value);
         if (!OK)
-          window.alert(phoneInput.value + ' isn\'t a phone number with area code!');
-        else
-          window.alert('Thanks, your phone number is ' + OK[0]);
+          window.alert(
+            phoneInput.value + " isn't a phone number with area code!",
+          );
+        else window.alert("Thanks, your phone number is " + OK[0]);
       }
     </script>
   </head>
   <body>
-    <p>Enter your phone number (with area code) and then click "Check".
-        <br>The expected format is like ###-###-####.</p>
+    <p>
+      Enter your phone number (with area code) and then click "Check". <br />The
+      expected format is like ###-###-####.
+    </p>
     <form action="#">
-      <input id="phone"><button onclick="testInfo(document.getElementById('phone'));">Check</button>
+      <input id="phone" /><button
+        onclick="testInfo(document.getElementById('phone'));">
+        Check
+      </button>
     </form>
   </body>
 </html>
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Representing_dates_times", "Web/JavaScript/Guide/Indexed_collections")}}

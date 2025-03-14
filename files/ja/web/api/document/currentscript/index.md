@@ -1,8 +1,9 @@
 ---
-title: Document.currentScript
+title: "Document: currentScript プロパティ"
+short-title: currentScript
 slug: Web/API/Document/currentScript
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: e633202a8cda3c340a0510c27f3902f743275140
 ---
 
 {{APIRef("DOM")}}
@@ -27,7 +28,7 @@ if (document.currentScript.async) {
 }
 ```
 
-[実際の表示を確認](https://media.prod.mdn.mozit.cloud/samples/html/currentScript.html)
+[実際の表示を確認](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
 ## 仕様書
 

@@ -12,20 +12,22 @@ Le [type de données](/fr/docs/Web/CSS/CSS_Types) [CSS](/fr/docs/Web/CSS) **`<co
 Une valeur de type `<color>` peut être définie de l'une des façons suivantes&nbsp;:
 
 - En utilisant un mot-clé (comme `blue` ou `transparent`). Tous les mots-clés indiquent une couleur dans [l'espace de couleur sRGB](https://fr.wikipedia.org/wiki/SRGB).
-- En utilisant le système de coordonnées RGB cubiques avec une notation hexadécimale précédée d'un `#` ou avec les notations fonctionnelles [`rgb()`](/fr/docs/Web/CSS/color_value/rgb) et [`rgba()`](/fr/docs/Web/CSS/color_value/rgba). Les couleurs ainsi définies appartiennent toujours à [l'espace de couleur sRGB](https://fr.wikipedia.org/wiki/SRGB).
-- En utilisant [le système de coordonnées cylindriques HSL](https://fr.wikipedia.org/wiki/Teinte_saturation_luminosit%C3%A9#TSL) avec les notations fonctionnelles [`hsl()`](/fr/docs/Web/CSS/color_value/hsl) et [`hsla()`](/fr/docs/Web/CSS/color_value/hsla). Les couleurs ainsi définies appartiennent toujours à [l'espace de couleur sRGB](https://fr.wikipedia.org/wiki/SRGB).
+- En utilisant le système de coordonnées RGB cubiques avec une notation hexadécimale précédée d'un `#` ou avec les notations fonctionnelles [`rgb()`](/fr/docs/Web/CSS/color_value/rgb) et [`rgba()`](/fr/docs/Web/CSS/color_value/rgb). Les couleurs ainsi définies appartiennent toujours à [l'espace de couleur sRGB](https://fr.wikipedia.org/wiki/SRGB).
+- En utilisant [le système de coordonnées cylindriques HSL](https://fr.wikipedia.org/wiki/Teinte_saturation_luminosité#TSL) avec les notations fonctionnelles [`hsl()`](/fr/docs/Web/CSS/color_value/hsl) et [`hsla()`](/fr/docs/Web/CSS/color_value/hsl). Les couleurs ainsi définies appartiennent toujours à [l'espace de couleur sRGB](https://fr.wikipedia.org/wiki/SRGB).
 - En utilisant [le système de coordonnées cylindriques HWB](https://en.wikipedia.org/wiki/HWB_color_model) avec la notation fonctionnelle [`hwb()`](/fr/docs/Web/CSS/color_value/hwb). Les couleurs ainsi définies appartiennent toujours à [l'espace de couleur sRGB](https://fr.wikipedia.org/wiki/SRGB).
 - En utilisant [le système de coordonnées cylindriques LCH](https://en.wikipedia.org/wiki/CIELAB_color_space#Cylindrical_representation:_CIELCh_or_CIEHLC) avec la notation fonctionnelle [`lch()`](/fr/docs/Web/CSS/color_value/lch). Cela permet de représenter n'importe quelle couleur visible.
 - En utilisant [le système de coordonnées Lab](https://fr.wikipedia.org/wiki/L*a*b*_CIE_1976), avec la notation fonctionnelle [`lab()`](/fr/docs/Web/CSS/color_value/lab). Cela permet de représenter n'importe quelle couleur visible.
 - En utilisant la notation fonctionnelle [`color()`](/fr/docs/Web/CSS/color_value/color) pour indiquer une couleur dans un espace de couleur prédéfini ou personnalisé.
 
-> **Note :** Cet article décrit le type de données `<color>`. Si vous souhaitez en savoir plus sur l'utilisation des couleurs CSS avec HTML, voyez [Appliquer des couleurs aux éléments HTML avec CSS](/fr/docs/Web/CSS/CSS_Colors/Applying_color).
+> [!NOTE]
+> Cet article décrit le type de données `<color>`. Si vous souhaitez en savoir plus sur l'utilisation des couleurs CSS avec HTML, voyez [Appliquer des couleurs aux éléments HTML avec CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color).
 
 ## Syntaxe
 
 On peut fournir une valeur de type `<color>` en utilisant l'une des syntaxes décrites ci-après.
 
-> **Note :** Bien que les valeurs `<color>` soient précisément définies, l'apparence réelle peut varier (parfois significativement) d'un appareil à l'autre. Cela se produit pour la plupart des appareils qui ne sont pas calibrés ou lorsque les navigateurs ne prennent pas en charge [les profils de couleur](https://en.wikipedia.org/wiki/ICC_profile) de l'appareil de sortie.
+> [!NOTE]
+> Bien que les valeurs `<color>` soient précisément définies, l'apparence réelle peut varier (parfois significativement) d'un appareil à l'autre. Cela se produit pour la plupart des appareils qui ne sont pas calibrés ou lorsque les navigateurs ne prennent pas en charge [les profils de couleur](https://en.wikipedia.org/wiki/ICC_profile) de l'appareil de sortie.
 
 ### Couleurs nommées
 
@@ -53,22 +55,22 @@ Si `currentcolor` est utilisé comme valeur pour la propriété `color`, c'est l
 
 Le modèle de couleurs RGB définit des couleurs dans [l'espace de couleur sRGB](https://fr.wikipedia.org/wiki/SRGB) selon ses composantes rouge, vert (<i lang="en">green</i> en anglais), et bleu. Une composante alpha optionnelle décrit l'opacité de la couleur (et donc sa transparence).
 
-Les couleurs RGB peuvent être exprimées avec une notation hexadécimale (préfixée avec `#`) ou une notation fonctionnelle ([`rgb()`](/fr/docs/Web/CSS/color_value/rgb), [`rgba()`](/fr/docs/Web/CSS/color_value/rgba)).
+Les couleurs RGB peuvent être exprimées avec une notation hexadécimale (préfixée avec `#`) ou une notation fonctionnelle ([`rgb()`](/fr/docs/Web/CSS/color_value/rgb), [`rgba()`](/fr/docs/Web/CSS/color_value/rgb)).
 
 - [Notation hexadécimale](/fr/docs/Web/CSS/hex-color)&nbsp;: `#RGB[A]` ou `#RRGGBB[AA]`
   - : `R` (rouge), `G` (vert, <i lang="en">green</i> en anglais), `B` (bleu), et `A` (alpha) sont des caractères hexadécimaux (de 0 à 9 et de A à F). `A` est optionnel. Ainsi, `#ff0000` sera équivalent à `#ff0000ff`. La notation sur trois chiffres (`#RGB`) est une version plus courte de la notation sur six chiffres (`#RRGGBB`). On a par exemple `#f09` qui représente la même couleur que `#ff0099`. De la même façon, la notation RGB sur quatre chiffres (`#RGBA`) est une version plus courte de la notation sur huit chiffres (`#RRGGBBAA`), `#0f38` représente par exemple la même couleur que `#00ff3388`.
-- [`rgb()`](/fr/docs/Web/CSS/color_value/rgb) ou [`rgba()`](/fr/docs/Web/CSS/color_value/rgba)&nbsp;: `rgb[a](R, G, B[, A])` or `rgb[a](R G B[ / A])`
+- [`rgb()`](/fr/docs/Web/CSS/color_value/rgb) ou [`rgba()`](/fr/docs/Web/CSS/color_value/rgb)&nbsp;: `rgb[a](R, G, B[, A])` or `rgb[a](R G B[ / A])`
   - : `R` (rouge), `G` (vert, <i lang="en">green</i> en anglais), et `B` (bleu) peuvent être des nombres (type [`<number>`](/fr/docs/Web/CSS/number)) ou des pourcentages (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) où le nombre `255` correspond à `100%`. `A` (alpha) peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/number)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) où le nombre `1` correspond à `100%` (opacité complète).
 
 ### Modèle de couleurs HSL
 
 Le modèle de couleurs HSL définit des couleurs dans [l'espace de couleur sRGB](https://fr.wikipedia.org/wiki/SRGB) selon ses composantes de teinte (<i lang="en">hue</i> en anglais), de saturation, et de luminosité. Une composante alpha optionnelle décrit l'opacité de la couleur (et donc sa transparence).
 
-La plupart des conceptrices et concepteurs trouvent le modèle HSL plus intuitif que le modèle RGB, car il permet d'ajuster indépendamment la teinte, la saturation et la luminosité. HSL permet également de créer plus facilement une palette de nuances sur la même teinte. Toutefois, utiliser HSL afin de créer des variations de couleurs peut produire des résultats surprenants, car il n'est pas [uniforme pour la perception](https://fr.wikipedia.org/wiki/%C3%89cart_de_couleur). Ainsi, `hsl(240 100% 50%)` et `hsl(60 100% 50%)` ont la même composante de luminosité, mais la première est bien plus sombre que la seconde.
+La plupart des conceptrices et concepteurs trouvent le modèle HSL plus intuitif que le modèle RGB, car il permet d'ajuster indépendamment la teinte, la saturation et la luminosité. HSL permet également de créer plus facilement une palette de nuances sur la même teinte. Toutefois, utiliser HSL afin de créer des variations de couleurs peut produire des résultats surprenants, car il n'est pas [uniforme pour la perception](https://fr.wikipedia.org/wiki/Écart_de_couleur). Ainsi, `hsl(240 100% 50%)` et `hsl(60 100% 50%)` ont la même composante de luminosité, mais la première est bien plus sombre que la seconde.
 
 Les couleurs HSL sont exprimées à l'aide des notations fonctionnelles `hsl()` et `hsla()`.
 
-- [`hsl()`](/fr/docs/Web/CSS/color_value/hsl) ou [`hsla()`](/fr/docs/Web/CSS/color_value/hsla)&nbsp;: `hsl[a](H, S, L[, A])` ou `hsl[a](H S L[ / A])`
+- [`hsl()`](/fr/docs/Web/CSS/color_value/hsl) ou [`hsla()`](/fr/docs/Web/CSS/color_value/hsl)&nbsp;: `hsl[a](H, S, L[, A])` ou `hsl[a](H S L[ / A])`
 
   - : `H` (pour la teinte, <i lang="en">hue</i> en anglais) est un angle (type [`<angle>`](/fr/docs/Web/CSS/angle)) sur le cercle des couleurs. Lorsqu'il est écrit sans unité, il est interprété comme étant exprimé en degré. Par définition, on a `red=0deg=360deg`, et les autres couleurs distribuées sur le cercle avec `green=120deg`, `blue=240deg`, etc. Sa valeur étant un `<angle>`, elle boucle sur elle-même et on a donc `-120deg=240deg`, `480deg=120deg`, `-1turn=1turn`, etc.
 
@@ -82,11 +84,13 @@ Similaire au modèle de couleurs HSL, le modèle de couleurs HWB définit une co
 
 Comme avec le modèle HSL, il peut être plus intuitif de travailler avec le modèle HWB qu'avec le modèle RGB. La teinte est indiquée de la même façon, mais est ici suivie de la quantité de blancheur et de noirceur respectives, exprimées en pourcentages. Cette fonction permet également d'indiquer une valeur pour la composante alpha.
 
-> **Note :** Il **n'existe pas** de fonction séparée `hwba()` (à la différence donc de HSL avec `hsl()` et `hsla()`), la valeur alpha est un paramètre optionnel. Si elle n'est pas fournie, la composante alpha vaudra `1` (soit `100%`). Pour fournir cette valeur, on ajoutera une barre oblique (`/`) après la valeur de noirceur et avant la composante alpha.
+> [!NOTE]
+> Il **n'existe pas** de fonction séparée `hwba()` (à la différence donc de HSL avec `hsl()` et `hsla()`), la valeur alpha est un paramètre optionnel. Si elle n'est pas fournie, la composante alpha vaudra `1` (soit `100%`). Pour fournir cette valeur, on ajoutera une barre oblique (`/`) après la valeur de noirceur et avant la composante alpha.
 
 Les couleurs du modèle HWB sont exprimées à l'aide de la notation fonctionnelle `hwb()`.
 
-> **Note :** La fonction `hwb()` **ne permet pas** d'utiliser des virgules pour séparer les valeurs des arguments (contrairement aux autres fonctions de création de couleur qui l'ont précédée).
+> [!NOTE]
+> La fonction `hwb()` **ne permet pas** d'utiliser des virgules pour séparer les valeurs des arguments (contrairement aux autres fonctions de création de couleur qui l'ont précédée).
 
 - [`hwb()`](/fr/docs/Web/CSS/color_value/hwb): `hwb(H W B[ / A])`
 
@@ -102,7 +106,8 @@ En _mode de couleurs forcé_ (détectable avec la caractéristique média [`forc
 
 Les mots-clés de cette liste sont définis dans le module de spécification <i lang="en">CSS Color</i> de niveau 4&nbsp;: `ActiveText`, `ButtonBorder`, `ButtonFace`, `ButtonText`, `Canvas`, `CanvasText`, `Field`, `FieldText`, `GrayText`, `Highlight`, `HighlightText`, `LinkText`, `Mark`, `MarkText`, `VisitedText`.
 
-> **Note :** Ces mots-clés sont _insensibles à la casse_, mais sont écrits ici en <i lang="en">camel case</i> à des fins de lisibilité.
+> [!NOTE]
+> Ces mots-clés sont _insensibles à la casse_, mais sont écrits ici en <i lang="en">camel case</i> à des fins de lisibilité.
 
 ### Modèle de couleurs Lab
 
@@ -119,7 +124,8 @@ LCH est la forme polaire de Lab et est souvent plus pratique à utiliser, car le
 
 Aussi, LCH peut être utilisé afin de créer des palettes de couleurs différentes, avec des résultats prévisibles.
 
-> **Note :** La teinte LCH n'est pas la même que la teinte HSL et que la chroma LCH ne correspond pas à la saturation HSL, même si elles partagent certaines similarités conceptuelles.
+> [!NOTE]
+> La teinte LCH n'est pas la même que la teinte HSL et que la chroma LCH ne correspond pas à la saturation HSL, même si elles partagent certaines similarités conceptuelles.
 
 ### `color()`
 
@@ -127,7 +133,7 @@ Cette notation a été introduite par le module de spécification <i lang="en">C
 
 ## Interpolation
 
-Pour les animations et [les dégradés](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients), les valeurs `<color>` sont interpolées selon chacune de leurs composantes rouge, verte, bleu. Chaque composante est interpolée comme un nombre décimal. L'interpolation des couleurs s'effectue [dans l'espace de couleur sRGBA avec les alpha pré-multipliés](https://www.w3.org/TR/css-color-4/#interpolation-alpha) afin d'éviter l'apparition de couleurs grises. Pour les animations, la vitesse de l'interpolation est déterminée par [la fonction de transition](/fr/docs/Web/CSS/easing-function).
+Pour les animations et [les dégradés](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients), les valeurs `<color>` sont interpolées selon chacune de leurs composantes rouge, verte, bleu. Chaque composante est interpolée comme un nombre décimal. L'interpolation des couleurs s'effectue [dans l'espace de couleur sRGBA avec les alpha pré-multipliés](https://www.w3.org/TR/css-color-4/#interpolation-alpha) afin d'éviter l'apparition de couleurs grises. Pour les animations, la vitesse de l'interpolation est déterminée par [la fonction de transition](/fr/docs/Web/CSS/easing-function).
 
 ## Accessibilité
 
@@ -162,30 +168,38 @@ div {
 ```
 
 ```js hidden
-const inputElem = document.querySelector('input');
-const divElem = document.querySelector('div');
+const inputElem = document.querySelector("input");
+const divElem = document.querySelector("div");
 
 function validTextColor(stringToTest) {
-  if (stringToTest === "") { return false; }
-  if (stringToTest === "inherit") { return false; }
-  if (stringToTest === "transparent") { return false; }
+  if (stringToTest === "") {
+    return false;
+  }
+  if (stringToTest === "inherit") {
+    return false;
+  }
+  if (stringToTest === "transparent") {
+    return false;
+  }
 
   const image = document.createElement("img");
   image.style.color = "rgb(0, 0, 0)";
   image.style.color = stringToTest;
-  if (image.style.color !== "rgb(0, 0, 0)") { return true; }
+  if (image.style.color !== "rgb(0, 0, 0)") {
+    return true;
+  }
   image.style.color = "rgb(255, 255, 255)";
   image.style.color = stringToTest;
   return image.style.color !== "rgb(255, 255, 255)";
 }
 
-inputElem.addEventListener('change', () => {
+inputElem.addEventListener("change", () => {
   if (validTextColor(inputElem.value)) {
     divElem.style.backgroundColor = inputElem.value;
-    divElem.textContent = '';
+    divElem.textContent = "";
   } else {
-    divElem.style.backgroundColor = 'white';
-    divElem.textContent = 'Valeur de couleur invalide';
+    divElem.style.backgroundColor = "white";
+    divElem.textContent = "Valeur de couleur invalide";
   }
 });
 ```
@@ -495,4 +509,4 @@ hsla(240 100% 50% / 5%)       /* bleu opaque à 5% */
   - [`box-shadow`](/fr/docs/Web/CSS/box-shadow),
   - [`outline-color`](/fr/docs/Web/CSS/outline-color),
   - [`text-shadow`](/fr/docs/Web/CSS/text-shadow)
-- [Appliquer des couleurs aux éléments HTML en utilisant CSS](/fr/docs/Web/CSS/CSS_Colors/Applying_color)
+- [Appliquer des couleurs aux éléments HTML en utilisant CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)

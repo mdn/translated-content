@@ -1,57 +1,56 @@
 ---
 title: 遊戲開發
 slug: Games
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{GamesSidebar}}
 
-遊戲絕對是最受歡迎的電腦功能之一。而相關技術不斷推陳出新，讓玩家在任何相容標準的網路瀏覽器上，也能盡情享受畫質更優、效能更好的遊戲。
+遊戲是最受歡迎的電腦活動之一。隨著新技術的不斷出現，我們可以開發出更優秀且功能更強大的遊戲，並能在任何符合標準的 Web 瀏覽器上運行。
 
-{{EmbedGHLiveSample("web-tech-games/index.html", '100%', 820)}}
+## 開發 Web 遊戲
 
-## web 遊戲開發
+歡迎來到 MDN 遊戲開發中心！在本網站的這個區域，我們為想要開發遊戲的 Web 開發者提供了資源。在左側的主選單中，你會找到許多實用的教學和技術文章，請隨意探索。
 
-歡迎來到 MDN 遊戲開發中心！我們將給想要開發遊戲的 web 開發者，提供 web 遊戲開發相關的資源。你會找到很多有用的教學與技術文章，所以請盡情瀏覽。
+我們還包含了一個參考區域，讓你能輕鬆找到有關遊戲開發中常用 API 的資訊。
 
-我們也涵蓋了參考的章節，你可以從那裡找到遊戲開發最需要用到的一些 API。
+> [!NOTE]
+> 在 Web 上創建遊戲需要使用多種核心 Web 技術，例如 HTML、CSS 和 JavaScript。初學者可以先參考[學習 Web 開發](/zh-TW/docs/Learn_web_development)章節，了解基礎知識。
 
-> **備註：** 建立遊戲會需要用上一些 web 的核心技術，如 HTML、CSS、JavaScript。[學習專區](/zh-TW/docs/Learn)會是個很好的學習區域。
+## 將原生遊戲移植到 Web
 
-## 從原生到 Web
+如果你是一位原生遊戲開發者（例如使用 C++ 編寫遊戲），並且有興趣將你的遊戲移植到 Web 上，可以了解更多關於我們的 [Emscripten](https://emscripten.org/index.html) 工具。這是一個 LLVM 到 JavaScript 的編譯器，可以將 LLVM 位元碼（例如由 Clang 從 C／C++ 或其他語言生成）編譯為 [asm.js](/zh-TW/docs/Games/Tools/asm.js)，並在 Web 上運行。
 
-如果你是原生介面開發者（例如，你寫 C++ 的遊戲）、對於怎麼把遊戲移植到 Web 有興趣的話，請看看我們的工具 [Emscripten](http://kripken.github.io/emscripten-site/index.html)：這是個 LLVM 轉到 JavaScript 的編譯器，它使用了 LLVM 位元碼（例如，使用 Clang 從 C/C++ 產生。其他語言亦可）並編譯到能在 Web 運行的 [asm.js](/zh-TW/docs/Games/Tools/asm.js)。
+入門指南如下：
 
-要入門請參見：
+- [關於 Emscripten](https://emscripten.org/docs/introducing_emscripten/about_emscripten.html)：介紹及高階細節。
+- [下載與安裝](https://emscripten.org/docs/getting_started/downloads.html)：工具鏈安裝指南。
+- [Emscripten 教學](https://emscripten.org/docs/getting_started/Tutorial.html)：教學指南，幫助你快速入門。
 
-- [About Emscripten](http://kripken.github.io/emscripten-site/docs/introducing_emscripten/about_emscripten.html) for an introduction including high-level details.
-- [Download and Install](http://kripken.github.io/emscripten-site/docs/getting_started/downloads.html) for installing the toolchain.
-- 有關如何開始的教學：[Emscripten Tutorial](http://kripken.github.io/emscripten-site/docs/getting_started/Tutorial.html)
+## 範例
 
-## 示例
-
-需要 web 遊戲的示例，請參考我們的 [示例頁](/zh-TW/docs/Games/Examples)。也請參考下 [openwebgames.com](http://www.openwebgames.com/) 以獲取更多資源與示範！
+如需 Web 遊戲範例列表，請參考我們的[教學列表](/zh-TW/docs/Games/Tutorials)。
 
 ## 參見
 
 - [Build New Games](http://buildnewgames.com/)
-  - : A collaborative site featuring a large number of open web game development tutorials. Has not been very active recently, but still holds some nice resources.
+  - : 一個協作網站，包含大量開放 Web 遊戲開發的教學。最近不太活躍，但仍有一些不錯的資源。
 - [Creative JS](http://creativejs.com/)
-  - : A collection of impressive JavaScript techniques and experiments, not specific to games, but helpful nonetheless. Has not been very active recently, but still holds some nice resources.
-- [Game programming patterns](http://gameprogrammingpatterns.com/)
-  - : An online book, written by Bob Nystrom, which discusses programming patterns in the context of game development with the aim of helping game developers produce more effective and efficient code.
-- [Gamedev.js Weekly](http://gamedevjsweekly.com/)
-  - : Weekly newsletter about HTML5 game development, sent every Friday. Contains the latest articles, tutorials, tools and resources.
-- [HTML5 Game Devs Forum](http://www.html5gamedevs.com/)
-  - : Forums for developers, framework creators and publishers. Ask questions, get feedback and help others.
-- [HTML5 Game Engine](http://html5gameengine.com/)
-  - : List of the most popular HTML5 game frameworks along with their rating, features and samples.
-- [JSBreakouts](http://www.jsbreakouts.org/)
-  - : Compare JavaScript Breakout clones in different frameworks to help you choose the right one for you.
-- [Tuts+ Game Development](http://gamedevelopment.tutsplus.com/)
-  - : Tutorials and articles about game development in general.
-- [HTML5 Gamedev Starter](http://html5devstarter.enclavegames.com/)
-  - : Starter for the new game developers, a curated list of links to various, useful resources around the web.
-- [js13kGames](http://js13kgames.com/)
-  - : JavaScript coding competition for HTML5 game developers with the file size limit set to 13 kilobytes. All the submitted games are available in a readable form on GitHub.
-- [Mozilla Hacks blog](https://hacks.mozilla.org/category/games/)
-  - : Games category on the Mozilla Hacks blog containing interesting gamedev related articles.
+  - : 一些令人印象深刻的 JavaScript 技術和實驗的集合，雖然不是專門針對遊戲，但仍然非常有幫助。最近不太活躍，但仍有一些不錯的資源。
+- [Game Programming Patterns](https://gameprogrammingpatterns.com/)
+  - : 一本線上書籍，由 Bob Nystrom 編寫，討論遊戲開發中程式設計模式，旨在幫助開發者產生更有效率的程式碼。
+- [Gamedev.js Weekly](https://gamedevjsweekly.com/)
+  - : 每週五發送的 HTML 遊戲開發週報，包含最新的文章、教學、工具和資源。
+- [HTML5 Game Engine](https://html5gameengine.com/)
+  - : 最受歡迎的 HTML 遊戲框架列表，包含評分、功能及範例。
+- [Tuts+ Game Development](https://gamedevelopment.tutsplus.com/)
+  - : 一般遊戲開發的教學和文章。
+- [HTML5 Gamedev Starter](https://html5devstarter.enclavegames.com/)
+  - : 對新遊戲開發者的入門指南，收錄了網上各種實用資源的精選連結。
+- [js13kGames](https://js13kgames.com/)
+  - : 一個 JavaScript 程式競賽，針對 HTML 遊戲開發者，檔案大小限制為 13KB。所有提交的遊戲都可在 GitHub 上以可讀形式查看。
+- [Mozilla Hacks Blog](https://hacks.mozilla.org/category/games/)
+  - : Mozilla Hacks 部落格中的遊戲類別，包含有趣的遊戲開發相關文章。
+- [wiki.mozilla.org 的遊戲部分](https://wiki.mozilla.org/Platform/Games)
+  - : 一個包含 Mozilla 在平台遊戲中參與資訊的維基頁面。

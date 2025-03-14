@@ -5,12 +5,12 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toString
 
 {{JSRef}}
 
-**`toString()`** 方法返回一个表示指定数组及其元素的字符串。这个方法的算法和 {{jsxref("Array.prototype.toString()")}} 一样。_TypedArray_ 在这是[typed array types](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
+**`toString()`** 方法返回一个表示指定数组及其元素的字符串。这个方法的算法和 {{jsxref("Array.prototype.toString()")}} 一样。_TypedArray_ 在这是[typed array types](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) 之一。
 
 ## 语法
 
-```plain
-typedarray.toString()
+```js-nolint
+values()
 ```
 
 ### 返回值
@@ -22,7 +22,7 @@ typedarray.toString()
 {{jsxref("TypedArray")}} 对象重写了{{jsxref("Object")}}的 `toString`方法。对 TypedArray 对象来说，`toString` 方法联结了数组，并返回一个字符串，它包含由逗号分隔的数组元素。例如，下面的代码创建了一个类型数组，使用`toString` 将数组转化为字符串。
 
 ```js
-var numbers = new Uint8Array([2, 5, 8, 1, 4])
+var numbers = new Uint8Array([2, 5, 8, 1, 4]);
 numbers.toString(); // "2,5,8,1,4"
 ```
 
@@ -33,7 +33,7 @@ numbers.toString(); // "2,5,8,1,4"
 如果浏览器还不支持`TypedArray.prototype.toString()` 方法，JavaScript 将调用{{jsxref("Object")}}的 `toString` 方法：
 
 ```js
-var numbers = new Uint8Array([2, 5, 8, 1, 4])
+var numbers = new Uint8Array([2, 5, 8, 1, 4]);
 numbers.toString(); // "[object Uint8Array]"
 ```
 
@@ -45,6 +45,6 @@ numbers.toString(); // "[object Uint8Array]"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("TypedArray.prototype.join()")}}

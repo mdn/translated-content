@@ -1,12 +1,14 @@
 ---
-title: Instance
+title: 实例
 slug: Glossary/Instance
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-一个[对象](/zh-CN/docs/Glossary/Object)，由[构造函数](/zh-CN/docs/Glossary/Constructor)所创建的实例
+{{GlossarySidebar}}
 
-## 了解更多
+实例是由{{glossary("constructor", "构造函数")}}所创建的{{glossary("object", "对象")}}。
 
-### 知识
+## 参见
 
-- [实例](https://zh.wikipedia.org/wiki/Instance_(computer_science)) - 维基百科
+- 维基百科上的[实例](https://zh.wikipedia.org/wiki/實例)

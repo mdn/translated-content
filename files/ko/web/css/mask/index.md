@@ -1,14 +1,6 @@
 ---
 title: mask
 slug: Web/CSS/mask
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Reference
-  - SVG
-  - Web
-translation_of: Web/CSS/mask
 ---
 
 {{CSSRef}}
@@ -26,16 +18,16 @@ translation_of: Web/CSS/mask
 mask: none;
 
 /* 이미지 값 */
-mask: url(mask.png);                       /* 마스크로 사용되는 이미지 */
-mask: url(masks.svg#star);                 /* 마스크로 사용되는 SVG 그래픽 내 요소 */
+mask: url(mask.png); /* 마스크로 사용되는 이미지 */
+mask: url(masks.svg#star); /* 마스크로 사용되는 SVG 그래픽 내 요소 */
 
 /* 조합형 값 */
-mask: url(masks.svg#star) luminance;       /* 밝기 조절용 마스크로 사용되는 SVG 그래픽 내 요소 */
-mask: url(masks.svg#star) 40px 20px;       /* 위로부터 40px, 아래부터 20px에 위치하는 마스크로 사용되는 SVG 그래픽 내 요소 */
-mask: url(masks.svg#star) 0 0/50px 50px;   /* 가로, 세로 각각 50px 사이즈의 마스크로 사용되는 SVG 그래픽 내 요소 */
-mask: url(masks.svg#star) repeat-x;        /* 수평으로 반복되는 마스크로 사용되는 SVG 그래픽 내 요소 */
-mask: url(masks.svg#star) stroke-box;      /* Element within SVG graphic used as mask extending to the box enclosed by the stroke */
-mask: url(masks.svg#star) exclude;         /* Element within SVG graphic used as mask and combined with background using non-overlapping parts */
+mask: url(masks.svg#star) luminance; /* 밝기 조절용 마스크로 사용되는 SVG 그래픽 내 요소 */
+mask: url(masks.svg#star) 40px 20px; /* 위로부터 40px, 아래부터 20px에 위치하는 마스크로 사용되는 SVG 그래픽 내 요소 */
+mask: url(masks.svg#star) 0 0/50px 50px; /* 가로, 세로 각각 50px 사이즈의 마스크로 사용되는 SVG 그래픽 내 요소 */
+mask: url(masks.svg#star) repeat-x; /* 수평으로 반복되는 마스크로 사용되는 SVG 그래픽 내 요소 */
+mask: url(masks.svg#star) stroke-box; /* Element within SVG graphic used as mask extending to the box enclosed by the stroke */
+mask: url(masks.svg#star) exclude; /* Element within SVG graphic used as mask and combined with background using non-overlapping parts */
 
 /* 글로벌 값 */
 mask: inherit;
@@ -89,5 +81,5 @@ mask: unset;
 ## 같이 보기
 
 - {{Cssxref("clip-path")}}, {{Cssxref("filter")}}
-- [HTML에 SVG 효과 적용하기](/ko/docs/Applying_SVG_effects_to_HTML_content)
-- [SVG](/ko/docs/SVG)
+- [HTML에 SVG 효과 적용하기](/ko/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [SVG](/ko/docs/Web/SVG)

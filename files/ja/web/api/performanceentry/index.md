@@ -1,69 +1,78 @@
 ---
 title: PerformanceEntry
 slug: Web/API/PerformanceEntry
+l10n:
+  sourceCommit: 99a75e695dbb46731dca4757e9d4c42d80bb52fc
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}} {{AvailableInWorkers}}
 
-**`PerformanceEntry`** オブジェクトは、*パフォーマンスタイムライン*の一部である単一のパフォーマンスメトリックをカプセル化します。パフォーマンスエントリは、アプリケーション内の明示的な時点でパフォーマンス _{{domxref("PerformanceMark","mark")}}_ または _{{domxref("PerformanceMeasure","measure")}}_ を作成する (たとえば、{{domxref("Performance.mark","mark()")}} メソッドを呼び出すことによって) ことで直接作成できます。パフォーマンスエントリは、(イメージなどの) リソースのロードなどの間接的な方法でも作成されます。
+**`PerformanceEntry`** オブジェクトは、パフォーマンスタイムラインの一部である単一のパフォーマンス指標をカプセル化します。
 
-`PerformanceEntry` インスタンスは常に次のサブタイプのいずれかになります:
+パフォーマンス API は、 `PerformanceEntry` の特殊なサブクラスである組み込み指標を提供します。これには、リソース読み込み、イベント時刻、{{Glossary("first input delay", "最初の入力遅延")}} (FID) などの項目が含まれます。
 
+パフォーマンス項目は、アプリケーション内の明示的な時点で {{domxref("Performance.mark()")}} または {{domxref("Performance.measure()")}} メソッドを作成することでも作成できます。これによって、パフォーマンスタイムラインに自分の指標を追加することができます。
+
+`PerformanceEntry` インスタンスは常に次のサブクラスのいずれかになります。
+
+- {{domxref("LargestContentfulPaint")}}
+- {{domxref("LayoutShift")}}
+- {{domxref("PerformanceEventTiming")}}
+- {{domxref("PerformanceLongTaskTiming")}}
 - {{domxref("PerformanceMark")}}
 - {{domxref("PerformanceMeasure")}}
-- {{domxref("PerformanceFrameTiming")}}
 - {{domxref("PerformanceNavigationTiming")}}
-- {{domxref("PerformanceResourceTiming")}}
 - {{domxref("PerformancePaintTiming")}}
+- {{domxref("PerformanceResourceTiming")}}
+- {{domxref("PerformanceServerTiming")}}
+- {{domxref("TaskAttributionTiming")}}
+- {{domxref("VisibilityStateEntry")}}
 
-{{AvailableInWorkers}}
+## インスタンスプロパティ
 
-## プロパティ
+- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
+  - : パフォーマンス項目の名前を表す文字列です。この値はサブタイプによって異なります。
+- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
+  - : パフォーマンス指標の種類を表す文字列です。たとえば "`mark`" であれば {{domxref("PerformanceMark")}} が使用されています。
+- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
+  - : パフォーマンス指標の開始時刻を表す {{domxref("DOMHighResTimeStamp")}} です。
+- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
+  - : パフォーマンスイベントの期間を表す {{domxref("DOMHighResTimeStamp")}} です。
 
-- {{domxref("PerformanceEntry.name")}} {{readonlyInline}}
-  - : {{domxref("PerformanceEntry.entryType")}} プロパティによって返される値をさらに指定する値。両方の値はサブタイプによって異なります。有効な値についてはプロパティページを参照してください。
-- {{domxref("PerformanceEntry.entryType")}} {{readonlyInline}}
-  - : たとえば、"`mark`" などのパフォーマンスメトリックの種類を表す {{domxref("DOMString")}}。有効な値についてはプロパティページを参照してください。
-- {{domxref("PerformanceEntry.startTime")}} {{readonlyInline}}
-  - : パフォーマンスメトリックの開始時間を表す {{domxref("DOMHighResTimeStamp")}}。
-- {{domxref("PerformanceEntry.duration")}} {{readonlyInline}}
-  - : パフォーマンスイベントの期間の時間値を表す {{domxref("DOMHighResTimeStamp")}}。
-
-## メソッド
+## インスタンスメソッド
 
 - {{domxref("PerformanceEntry.toJSON","PerformanceEntry.toJSON()")}}
-  - : `PerformanceEntry` オブジェクトの JSON リプリゼンテーションを返します。
+  - : `PerformanceEntry` オブジェクトの JSON 表現を返します。
 
 ## 例
 
-次の例では、すべての `PerformanceEntry` プロパティを調べて、ブラウザーがそれらをサポートしているかどうかを確認し、サポートしている場合はそれらの値をコンソールに書き込みます。
+### パフォーマンス項目での作業
+
+次の例では、{{domxref("PerformanceMark")}} 型と {{domxref("PerformanceMeasure")}} 型の `PerformanceEntry` オブジェクトを作成します。
+`PerformanceMark` と `PerformanceMeasure` のサブクラスは `PerformanceEntry` から `duration`、`entryType`、`name`、`startTime` プロパティを継承し、適切な値に設定します。
 
 ```js
-function print_PerformanceEntries() {
-  // getEntries() を使用してすべてのパフォーマンスエントリのリストを取得します。
-  var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
-    console.log("PerformanceEntry[" + i + "]");
-    print_PerformanceEntry(p[i]);
-  }
-}
-function print_PerformanceEntry(perfEntry) {
-  var properties = ["name",
-                    "entryType",
-                    "startTime",
-                    "duration"];
+//コードの ログインを開始する場所に配置する
+performance.mark("login-started");
 
-  for (var i=0; i < properties.length; i++) {
-    // それぞれのプロパティをチェックします。
-    var supported = properties[i] in perfEntry;
-    if (supported) {
-      var value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
-    } else {
-      console.log("... " + properties[i] + " is NOT supported");
+// コードのログインが完了する場所に配置する
+performance.mark("login-finished");
+
+// ログイン期間を測定
+performance.measure("login-duration", "login-started", "login-finished");
+
+function perfObserver(list, observer) {
+  list.getEntries().forEach((entry) => {
+    if (entry.entryType === "mark") {
+      console.log(`${entry.name}'s startTime: ${entry.startTime}`);
     }
-  }
+    if (entry.entryType === "measure") {
+      console.log(`${entry.name}'s duration: ${entry.duration}`);
+    }
+  });
 }
+const observer = new PerformanceObserver(perfObserver);
+observer.observe({ entryTypes: ["measure", "mark"] });
 ```
 
 ## 仕様書
@@ -72,4 +81,4 @@ function print_PerformanceEntry(perfEntry) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformanceEntry")}}
+{{Compat}}

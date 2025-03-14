@@ -3,11 +3,10 @@ title: 代码示例
 slug: MDN/Writing_guidelines/Page_structures/Code_examples
 ---
 
-{{MDNSidebar}}
-
 在 MDN 上，你会看到整个页面中有许多代码示例插入，以展示 web 平台功能的使用。本文讨论了在页面中添加代码示例的不同机制，以及你应该使用哪些机制和何时使用。
 
-> **备注：** 如果你想了解 MDN 文章中出现的代码的风格和提示，而不是包含代码的不同方式，请参见我们的[代码风格指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)。
+> [!NOTE]
+> 如果你想了解 MDN 文章中出现的代码的风格和提示，而不是包含代码的不同方式，请参见我们的[代码风格指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)。
 
 ## 都有哪些类型的代码示例可用？
 
@@ -86,13 +85,13 @@ console.log(test);
 - CSS
 - JavaScript
 - 结果
-  
+
 在上面列出的各个小节中编写代码块。在**结果**小节中，添加对 [`EmbedLiveSample` 宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples#运行实例宏)的调用，最好在这个小节中再加入一些文字来描述结果。
 如果不使用某个特定的语言类型（例如，如果你不使用 JavaScript），或者隐藏了它，那么就应该省略相应的标题。
 
 例如：
 
-````
+````md
 ## 示例
 
 ### 为段落添加样式
@@ -130,7 +129,7 @@ p.fancy {
 
 在隐藏了 HTML 代码的情况下继续使用上面的例子，看起来是这样的：
 
-````
+````md
 ## 示例
 
 ### 为段落添加样式
@@ -184,5 +183,5 @@ p.fancy {
 
 ### GitHub 在线实例指引
 
-- 显然，你需要先把一个合适的代码示例放置到 [MDN GitHub 组织](https://github.com/mdn/)上，这需要使用 Git 来完成。如果你不熟悉 Git，请查看[如何使用 GitHub Pages？](/zh-CN/docs/Learn/Common_questions/Using_Github_pages)文章，以及[准备添加数据](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#为添加数据做好准备)以了解更进一步的用途。
+- 显然，你需要先把一个合适的代码示例放置到 [MDN GitHub 组织](https://github.com/mdn/)上，这需要使用 Git 来完成。如果你不熟悉 Git，请查看[如何使用 GitHub Pages？](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages)文章，以及[准备添加数据](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#为添加数据做好准备)以了解更进一步的用途。
 - 你的代码样本需要适合展示你所要展示的内容——它应该包含一个简单的例子，能很好地完成一件事，里面不应该有攻击性的内容，并且应该遵循 MDN [代码示例指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)。

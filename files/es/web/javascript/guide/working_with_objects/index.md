@@ -1,16 +1,6 @@
 ---
 title: Trabajando con objetos
-slug: Web/JavaScript/Guide/Working_with_Objects
-tags:
-  - Comparación de objetos
-  - Constructor
-  - Documento
-  - Guía
-  - JavaScript
-  - Objeto
-  - Principiante
-translation_of: Web/JavaScript/Guide/Working_with_Objects
-original_slug: Web/JavaScript/Guide/Trabajando_con_objectos
+slug: Web/JavaScript/Guide/Working_with_objects
 ---
 
 {{jsSidebar("Guía de JavaScript")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
@@ -28,40 +18,40 @@ En JavaScript, un objeto es un entidad independiente con propiedades y tipos. Co
 Un objeto de JavaScript tiene propiedades asociadas a él. Una propiedad de un objeto se puede explicar como una variable adjunta al objeto. Las propiedades de un objeto básicamente son lo mismo que las variables comunes de JavaScript, excepto por el nexo con el objeto. Las propiedades de un objeto definen las características del objeto. Accedes a las propiedades de un objeto con una simple notación de puntos:
 
 ```js
-objectName.propertyName
+objectName.propertyName;
 ```
 
 Como todas las `variables` de JavaScript, tanto el nombre del objeto (que puede ser una variable normal) como el nombre de la propiedad son sensibles a mayúsculas y minúsculas. Puedes definir propiedades asignándoles un valor. Por ejemplo, vamos a crear un objeto llamado `myCar` y le vamos a asignar propiedades denominadas `make`, `model`, y `year` de la siguiente manera:
 
 ```js
 var myCar = new Object();
-myCar.make = 'Ford';
-myCar.model = 'Mustang';
+myCar.make = "Ford";
+myCar.model = "Mustang";
 myCar.year = 1969;
 ```
 
-El ejemplo anterior también se podría escribir usando un **[iniciador de objeto](/es/docs/Web/JavaScript/Guide/Working_with_Objects#Object_initializers)**, que es una lista delimitada por comas de cero o más pares de nombres de propiedad y valores asociados de un objeto, encerrados entre llaves (`{}`):
+El ejemplo anterior también se podría escribir usando un **[iniciador de objeto](#object_initializers)**, que es una lista delimitada por comas de cero o más pares de nombres de propiedad y valores asociados de un objeto, encerrados entre llaves (`{}`):
 
 ```js
 var myCar = {
-    make: 'Ford',
-    model: 'Mustang',
-    year: 1969
+  make: "Ford",
+  model: "Mustang",
+  year: 1969,
 };
 ```
 
-Las propiedades no asignadas de un objeto son {{jsxref("undefined")}} (y​no {{jsxref("null")}}).
+Las propiedades no asignadas de un objeto son {{jsxref("undefined")}} (y no {{jsxref("null")}}).
 
 ```js
 myCar.color; // undefined
 ```
 
-También puedes acceder o establecer las propiedades de los objetos en JavaScript mediante la notación de corchetes ↑[]↓ (Para más detalle ve [Accesores de propiedades](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors)). Los objetos, a veces son llamados _arreglos asociativos_, debido a que cada propiedad está asociada con un valor de cadena que se puede utilizar para acceder a ella. Por lo tanto, por ejemplo, puedes acceder a las propiedades del objeto `myCar` de la siguiente manera:
+También puedes acceder o establecer las propiedades de los objetos en JavaScript mediante la notación de corchetes ↑[]↓ (Para más detalle ve [Accesores de propiedades](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors)). Los objetos, a veces son llamados _arreglos asociativos_, debido a que cada propiedad está asociada con un valor de cadena que se puede utilizar para acceder a ella. Por lo tanto, por ejemplo, puedes acceder a las propiedades del objeto `myCar` de la siguiente manera:
 
 ```js
-myCar['make']  = 'Ford';
-myCar['model'] = 'Mustang';
-myCar['year']  = 1969;
+myCar["make"] = "Ford";
+myCar["model"] = "Mustang";
+myCar["year"] = 1969;
 ```
 
 El nombre de la propiedad de un objeto puede ser cualquier cadena válida de JavaScript, o cualquier cosa que se pueda convertir en una cadena, incluyendo una cadena vacía. Sin embargo, cualquier nombre de propiedad que no sea un identificador válido de JavaScript (por ejemplo, el nombre de alguna propiedad que tenga un espacio o un guión, o comience con un número) solo se puede acceder utilizando la notación de corchetes. Esta notación es muy útil también cuando los nombres de propiedades son determinados dinámicamente (cuando el nombre de la propiedad no se determina hasta el tiempo de ejecución). Ejemplos de esto se muestran a continuación:
@@ -70,16 +60,16 @@ El nombre de la propiedad de un objeto puede ser cualquier cadena válida de Jav
 // Se crean y asignan cuatro variables de una sola vez,
 // separadas por comas
 var myObj = new Object(),
-    str = 'myString',
-    rand = Math.random(),
-    obj = new Object();
+  str = "myString",
+  rand = Math.random(),
+  obj = new Object();
 
-myObj.type                 = 'Sintaxis de puntos';
-myObj['fecha de creación'] = 'Cadena con espacios';
-myObj[str]                 = 'Valor de cadena';
-myObj[rand]                = 'Número aleatorio';
-myObj[obj]                 = 'Object';
-myObj['']                  = 'Incluso una cadena vacía';
+myObj.type = "Sintaxis de puntos";
+myObj["fecha de creación"] = "Cadena con espacios";
+myObj[str] = "Valor de cadena";
+myObj[rand] = "Número aleatorio";
+myObj[obj] = "Object";
+myObj[""] = "Incluso una cadena vacía";
 
 console.log(myObj);
 ```
@@ -89,11 +79,11 @@ Por favor, ten en cuenta que todas las claves con notación en corchetes se conv
 También puedes acceder a las propiedades mediante el uso de un valor de cadena que se almacena en una variable:
 
 ```js
-var propertyName = 'make';
-myCar[propertyName] = 'Ford';
+var propertyName = "make";
+myCar[propertyName] = "Ford";
 
-propertyName = 'model';
-myCar[propertyName] = 'Mustang';
+propertyName = "model";
+myCar[propertyName] = "Mustang";
 ```
 
 Puedes usar la notación de corchetes con [`for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in) para iterar sobre todas las propiedades enumerables de un objeto. Para ilustrar cómo funciona esto, la siguiente función muestra las propiedades del objeto cuando pasas el objeto y el nombre del objeto como argumentos a la función:
@@ -114,9 +104,9 @@ function showProps(obj, objName) {
 Por lo tanto, la llamada a la función `showProps(myCar, "myCar")` devolverá lo siguiente:
 
 ```js
-myCar.make = Ford
-myCar.model = Mustang
-myCar.year = 1969
+myCar.make = Ford;
+myCar.model = Mustang;
+myCar.year = 1969;
 ```
 
 ## Enumerar las propiedades de un objeto
@@ -134,17 +124,18 @@ Antes de ECMAScript 5, no existía una manera nativa para enumerar todas las pro
 
 ```js
 function listAllProperties(o) {
-       var objectToInspect;
-       var result = [];
+  var objectToInspect;
+  var result = [];
 
-       for(objectToInspect = o; objectToInspect !== null;
-           objectToInspect = Object.getPrototypeOf(objectToInspect)) {
-        result = result.concat(
-            Object.getOwnPropertyNames(objectToInspect)
-        );
-    }
+  for (
+    objectToInspect = o;
+    objectToInspect !== null;
+    objectToInspect = Object.getPrototypeOf(objectToInspect)
+  ) {
+    result = result.concat(Object.getOwnPropertyNames(objectToInspect));
+  }
 
-        return result;
+  return result;
 }
 ```
 
@@ -161,10 +152,12 @@ Además de la creación de objetos utilizando una función constructora, puedes 
 La sintaxis para un objeto usando un iniciador de objeto es:
 
 ```js
-var obj = { property_1:   value_1,   // property_# puede ser un identificador...
-            2:            value_2,   // o un número...
-            // ...,
-            'property n': value_n }; // o una cadena
+var obj = {
+  property_1: value_1, // property_# puede ser un identificador...
+  2: value_2, // o un número...
+  // ...,
+  "property n": value_n,
+}; // o una cadena
 ```
 
 donde `obj` es el nombre del nuevo objeto, cada `property_i` es un identificador (ya sea un nombre, un número o una cadena literal), y cada `value_i` es una expresión cuyo valor se asigna a la `property_i`. El `obj` y la asignación es opcional; si no necesitas hacer referencia a este objeto desde otro lugar, no necesitas asignarlo a una variable. (Ten en cuenta que tal vez necesites envolver el objeto literal entre paréntesis si el objeto aparece donde se espera una declaración, a fin de no confundir el literal con una declaración de bloque).
@@ -174,16 +167,16 @@ Los iniciadores de objetos son expresiones, y cada iniciador de objeto da como r
 La siguiente declaración crea un objeto y lo asigna a la variable `x` si y solo si la expresión `cond` es `true`.
 
 ```js
-if (cond) var x = {greeting: '¡Hola!'};
+if (cond) var x = { greeting: "¡Hola!" };
 ```
 
 El siguiente ejemplo crea `myHonda` con tres propiedades. Observa que la propiedad `engine` también es un objeto con sus propias propiedades.
 
 ```js
-var myHonda = {color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}};
+var myHonda = { color: "red", wheels: 4, engine: { cylinders: 4, size: 2.2 } };
 ```
 
-También puedes utilizar iniciadores de objetos para crear arreglos. Consulta [arreglos literales](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals).
+También puedes utilizar iniciadores de objetos para crear arreglos. Consulta [arreglos literales](/es/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals).
 
 ### Usar una función constructora
 
@@ -207,7 +200,7 @@ Observa el uso de `this` para asignar valores a las propiedades del objeto en fu
 Ahora puedes crear un objeto llamado `myCar` de la siguiente manera:
 
 ```js
-var mycar = new Car('Eagle', 'Talon TSi', 1993);
+var mycar = new Car("Eagle", "Talon TSi", 1993);
 ```
 
 Esta declaración crea `myCar` y le asigna los valores especificados a sus propiedades. Entonces el valor de `myCar.make` es la cadena "Eagle", para `myCar.year` es el número entero 1993, y así sucesivamente.
@@ -215,8 +208,8 @@ Esta declaración crea `myCar` y le asigna los valores especificados a sus propi
 Puedes crear cualquier número de objetos `Car` con las llamadas a `new`. Por ejemplo,
 
 ```js
-var kenscar = new Car('Nissan', '300ZX', 1992);
-var vpgscar = new Car('Mazda', 'Miata', 1990);
+var kenscar = new Car("Nissan", "300ZX", 1992);
+var vpgscar = new Car("Mazda", "Miata", 1990);
 ```
 
 \<s0>Un objeto puede tener una propiedad que en sí misma es otro objeto. Por ejemplo, supongamos que defines un objeto llamado `person` de la siguiente manera:
@@ -232,8 +225,8 @@ function Person(name, age, sex) {
 y luego instancias dos nuevos objetos `person` de la siguiente manera:
 
 ```js
-var rand = new Person('Rand McKinnon', 33, 'M');
-var ken = new Person('Ken Jones', 39, 'M');
+var rand = new Person("Rand McKinnon", 33, "M");
+var ken = new Person("Ken Jones", 39, "M");
 ```
 
 Entonces, puedes volver a escribir la definición de `Car` para incluir una propiedad `owner` que tomará el objeto `person`, de la siguiente manera:
@@ -250,20 +243,20 @@ function Car(make, model, year, owner) {
 Para crear instancias de los nuevos objetos, utiliza lo siguiente:
 
 ```js
-var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
-var car2 = new Car('Nissan', '300ZX', 1992, ken);
+var car1 = new Car("Eagle", "Talon TSi", 1993, rand);
+var car2 = new Car("Nissan", "300ZX", 1992, ken);
 ```
 
 Nota que en lugar de pasar un valor de cadena o entero cuando se crean los nuevos objetos, las declaraciones anteriores pasan al objetos `rand` y `ken` como argumentos para los `owner`s. Si luego quieres averigüar el nombre del propietario del `car2`, puedes acceder a la propiedad de la siguiente manera:
 
 ```js
-car2.owner.name
+car2.owner.name;
 ```
 
 Ten en cuenta que siempre se puede añadir una propiedad a un objeto previamente definido. Por ejemplo, la declaración
 
 ```js
-car1.color = 'black';
+car1.color = "black";
 ```
 
 agrega la propiedad `color` a `car1`, y le asigna el valor "`black`". Sin embargo, esto no afecta a ningún otro objeto. Para agregar la nueva propiedad a todos los objetos del mismo tipo, tienes que añadir la propiedad a la definición del tipo de objeto `Car`.
@@ -275,10 +268,11 @@ Los objetos también se pueden crear por medio del método {{jsxref("Object.crea
 ```js
 // Propiedades y método de encapsulación para Animal
 var Animal = {
-  type: 'Invertebrates', // Valor predeterminado de las propiedades
-  displayType: function() {  // Método que mostrará el tipo de Animal
+  type: "Invertebrates", // Valor predeterminado de las propiedades
+  displayType: function () {
+    // Método que mostrará el tipo de Animal
     console.log(this.type);
-  }
+  },
 };
 
 // Crea un nuevo tipo de animal llamado animal1
@@ -287,13 +281,13 @@ animal1.displayType(); // Muestra: Invertebrates
 
 // Crea un nuevo tipo de animal llamado Fishes
 var fish = Object.create(Animal);
-fish.type = 'Fishes';
-fish.displayType();    // Muestra: Fishes
+fish.type = "Fishes";
+fish.displayType(); // Muestra: Fishes
 ```
 
 ## Herencia
 
-Todos los objetos en JavaScript heredan de al menos otro objeto. El objeto del que se hereda se conoce como el prototipo, y las propiedades heredadas se pueden encontrar en el objeto `prototype` del constructor. Para más información consulta [Herencia y cadena prototipos](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
+Todos los objetos en JavaScript heredan de al menos otro objeto. El objeto del que se hereda se conoce como el prototipo, y las propiedades heredadas se pueden encontrar en el objeto `prototype` del constructor. Para más información consulta [Herencia y cadena prototipos](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 ## Propiedades del objeto indexado
 
@@ -309,7 +303,7 @@ Puedes agregar una propiedad a un tipo de objeto definido previamente mediante e
 
 ```js
 Car.prototype.color = null;
-car1.color = 'black';
+car1.color = "black";
 ```
 
 Para más información, consulta la [propiedad `prototype`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) del objeto `Function` en la [Referencia de JavaScript](/es/docs/Web/JavaScript/Reference).
@@ -386,35 +380,35 @@ JavaScript tiene una palabra clave especial, `this`, que puedes usar dentro de u
 const Manager = {
   name: "John",
   age: 27,
-  job: "Software Engineer"
-}
+  job: "Software Engineer",
+};
 
-const Intern= {
+const Intern = {
   name: "Ben",
   age: 21,
-  job: "Software Engineer Intern"
-}
+  job: "Software Engineer Intern",
+};
 
 function sayHi() {
-    console.log('Hola, mi nombre es ', this.name)
+  console.log("Hola, mi nombre es ", this.name);
 }
 
 // agrega la función sayHi a ambos objetos
 Manager.sayHi = sayHi;
 Intern.sayHi = sayHi;
 
-Manager.sayHi() // Hola, mi nombre es John'
-Intern.sayHi() // Hola, mi nombre es Ben'
+Manager.sayHi(); // Hola, mi nombre es John'
+Intern.sayHi(); // Hola, mi nombre es Ben'
 ```
 
 `this` se refiere al objeto en el que se encuentra. Puedes crear una nueva función llamada `howOldAmI()` que registra una oración que dice cuántos años tiene la persona.
 
 ```js
 function howOldAmI() {
-  console.log('Tengo ' + this.age + ' años.')
+  console.log("Tengo " + this.age + " años.");
 }
 Manager.howOldAmI = howOldAmI;
-Manager.howOldAmI() // Tengo 27 años.
+Manager.howOldAmI(); // Tengo 27 años.
 ```
 
 ## Definición de captadores (`getters`) y establecedores (`setters`)
@@ -423,10 +417,10 @@ Un captador ([getter](/es/docs/Web/JavaScript/Reference/Functions/get)) es un m�
 
 En principio, los captadores y establecedores pueden ser
 
-- definido usando [iniciadores de objeto](#Iniciadores_de_objeto), o
+- definido usando [iniciadores de objeto](#iniciadores_de_objeto), o
 - agregado posteriormente a cualquier objeto en cualquier momento usando un método de adición para el captador o el establecedor.
 
-Al definir captadores y establecedores usando [iniciadores de objeto](#Iniciadores_de_objeto), todo lo que necesitas hacer es prefijar un método captador con `get` y un método establecedor con `set`. Por supuesto, el método captador no debe esperar un parámetro, mientras que el método establecedor espera exactamente un parámetro (el nuevo valor a establecer). Por ejemplo:
+Al definir captadores y establecedores usando [iniciadores de objeto](#iniciadores_de_objeto), todo lo que necesitas hacer es prefijar un método captador con `get` y un método establecedor con `set`. Por supuesto, el método captador no debe esperar un parámetro, mientras que el método establecedor espera exactamente un parámetro (el nuevo valor a establecer). Por ejemplo:
 
 ```js
 var o = {
@@ -436,12 +430,12 @@ var o = {
   },
   set c(x) {
     this.a = x / 2;
-  }
+  },
 };
 
-console.log (o.a); // 7
-console.log (o.b); // 8 <-- En este punto se inicia el método get b().
-o.c = 50;         // <-- En este punto se inicia el método set c(x)
+console.log(o.a); // 7
+console.log(o.b); // 8 <-- En este punto se inicia el método get b().
+o.c = 50; // <-- En este punto se inicia el método set c(x)
 console.log(o.a); // 25
 ```
 
@@ -459,8 +453,16 @@ Los captadores y establecedores también se pueden agregar a un objeto en cualqu
 var o = { a: 0 };
 
 Object.defineProperties(o, {
-    'b': { get: function() { return this.a + 1; } },
-    'c': { set: function(x) { this.a = x / 2; } }
+  b: {
+    get: function () {
+      return this.a + 1;
+    },
+  },
+  c: {
+    set: function (x) {
+      this.a = x / 2;
+    },
+  },
 });
 
 o.c = 10; // Ejecuta el establecedor, que asigna 10/2 (5) a la propiedad 'a'
@@ -475,13 +477,13 @@ Puedes eliminar una propiedad no heredada mediante el operador `delete`. El sigu
 
 ```js
 //Crea un nuevo objeto, myobj, con dos propiedades, a y b.
-var myobj = new Object;
+var myobj = new Object();
 myobj.a = 5;
 myobj.b = 12;
 
 // Elimina la propiedad a, dejando a myobj solo con la propiedad b.
 delete myobj.a;
-console.log ('a' in myobj); // muestra: "false"
+console.log("a" in myobj); // muestra: "false"
 ```
 
 También puedes utilizar `delete` para eliminar una variable global siempre y cuando no se haya utilizado la palabra clave `var` para declarar la variable:
@@ -497,8 +499,8 @@ Como sabemos los objetos son de tipo referencia en JavaScript. Dos distintos obj
 
 ```js
 // Dos variables, dos distintos objetos con las mismas propiedades
-var fruit = { name: 'apple' };
-var fruitbear = { name: 'apple' };
+var fruit = { name: "apple" };
+var fruitbear = { name: "apple" };
 
 fruit == fruitbear; // devuelve false
 fruit === fruitbear; // devuelve false
@@ -506,22 +508,22 @@ fruit === fruitbear; // devuelve false
 
 ```js
 // Dos variables, un solo objeto
-var fruit = { name: 'apple' };
+var fruit = { name: "apple" };
 var fruitbear = fruit; // Asigna la referencia del objeto fruit a fruitbear
 
 // Aquí fruit y fruitbear apuntan al mismo objeto
 fruit == fruitbear; // devuelve true
 fruit === fruitbear; // devuelve true
 
-fruit.name = 'grape';
+fruit.name = "grape";
 console.log(fruitbear); // Produce: { name: "grape" }, en lugar de { name: "apple" }
 ```
 
-Para obtener más información sobre los operadores de comparación, consulta [Operadores de comparación](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators).
+Para obtener más información sobre los operadores de comparación, consulta [Operadores de comparación](/es/docs/Web/JavaScript/Reference/Operators).
 
 ## Ve también
 
-- Para profundizar más, lee sobre los [detalles del modelo de objetos de JavaScript](/es/docs/Web/JavaScript/Guide/Details_of_the_Object_Model).
+- Para profundizar más, lee sobre los [detalles del modelo de objetos de JavaScript](/es/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain).
 - Para obtener más información sobre las clases de ECMAScript 2015 (una forma alternativa de crear objetos), lee el capítulo [Clases de JavaScript](/es/docs/Web/JavaScript/Reference/Classes).
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}

@@ -1,12 +1,12 @@
 ---
 title: Votre première WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
-translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
 
 {{AddonSidebar}}
 
-> **Note :** Si vous connaissez déjà les concepts de base des extensions de navigateur, vous pouvez [passer directement à l'article suivant afin de voir comment les fichiers d'extension sont assemblés](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Ensuite, utilisez la [documentation de référence](/fr/docs/Mozilla/Add-ons/WebExtensions#référence) pour commencer la construction de votre extension. Consultez le site de [l'atelier sur les extensions de Firefox](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension) pour en savoir plus sur le processus de test et de publication des WebExtensions pour Firefox.
+> [!NOTE]
+> Si vous connaissez déjà les concepts de base des extensions de navigateur, vous pouvez [passer directement à l'article suivant afin de voir comment les fichiers d'extension sont assemblés](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Ensuite, utilisez la [documentation de référence](/fr/docs/Mozilla/Add-ons/WebExtensions#référence) pour commencer la construction de votre extension. Consultez le site de [l'atelier sur les extensions de Firefox](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension) pour en savoir plus sur le processus de test et de publication des WebExtensions pour Firefox.
 
 Cet article vous montre comment créer une extension Firefox, du début à la fin. L'extension ajoute une bordure rouge sur toutes les pages chargées depuis le site `mozilla.org` ou n'importe lequel de ses sous-domaines.
 
@@ -27,7 +27,6 @@ Créez un nouveau fichier nommé `manifest.json` directement dans le répertoire
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Borderify",
   "version": "1.0",
@@ -44,7 +43,6 @@ Créez un nouveau fichier nommé `manifest.json` directement dans le répertoire
       "js": ["borderify.js"]
     }
   ]
-
 }
 ```
 
@@ -91,7 +89,7 @@ Une alternative est de fournir un fichier SVG qui sera automatiquement mis à la
 Enfin, créez un fichier nommé `borderify.js` directement dans le répertoire `borderify` et insérez-y le code qui suit&nbsp;:
 
 ```js
-document.body.style.border = '5px solid red';
+document.body.style.border = "5px solid red";
 ```
 
 Ce script sera chargé dans chaque page où le domaine correspond au motif fourni par la clé `content_scripts` du manifeste (`manifest.json`). Ce script a un accès direct au document contrairement à des scripts chargés par la page elle-même.
@@ -120,13 +118,15 @@ Une autre alternative est d'exécuter l'extension depuis la ligne de commande à
 
 ### Tester l'extension
 
-> **Note :** Par défaut, [les extensions ne sont pas autorisées à fonctionner en navigation privée](https://support.mozilla.org/fr/kb/extensions-en-navigation-privee). Si vous souhaitez tester votre extension en mode de navigation privée, accédez à `about:addons`, cliquez sur l'extension, puis cliquez sur le bouton radio «&nbsp;Autoriser&nbsp;» pour l'option «&nbsp;Exécution dans les fenêtres privées&nbsp;».
+> [!NOTE]
+> Par défaut, [les extensions ne sont pas autorisées à fonctionner en navigation privée](https://support.mozilla.org/fr/kb/extensions-en-navigation-privee). Si vous souhaitez tester votre extension en mode de navigation privée, accédez à `about:addons`, cliquez sur l'extension, puis cliquez sur le bouton radio «&nbsp;Autoriser&nbsp;» pour l'option «&nbsp;Exécution dans les fenêtres privées&nbsp;».
 
 Rendez-vous sur une page web du domaine `mozilla.org`. Vous devriez y voir une bordure rouge qui entoure la page&nbsp;:
 
 ![Une bordure rouge entourant la page mozilla.org](border_on_mozilla_org.png)
 
-> **Note :** Toutefois, n'essayez pas ce module sur `addons.mozilla.org`&nbsp;! Les scripts de contenu sont bloqués sur ce domaine.
+> [!NOTE]
+> Toutefois, n'essayez pas ce module sur `addons.mozilla.org`&nbsp;! Les scripts de contenu sont bloqués sur ce domaine.
 
 Expérimentez un peu en modifiant le script de contenu, en changeant par exemple la couleur de la bordure ou en altérant le contenu de la page. Puis sauvegardez le script de contenu et rechargez les fichiers du module en cliquant sur le bouton «&nbsp;Recharger&nbsp;» dans `about:debugging`. Les changements sont immédiats.
 
@@ -143,5 +143,5 @@ Maintenant que vous avez eu une introduction au processus de développement d'un
 - [Rédiger une extension plus complexe](/fr/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension)
 - [En lire davantage sur l'anatomie d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [Explorer les exemples d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Examples)
-- [Découvrir ce dont vous avez besoin pour développer, tester et publier votre extension](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_)
-- [Poursuivre votre apprentissage](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_#continuez_votre_exp%c3%a9rience_d'apprentissage)
+- [Découvrir ce dont vous avez besoin pour développer, tester et publier votre extension](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next)
+- [Poursuivre votre apprentissage](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next#continuez_votre_expérience_d'apprentissage)

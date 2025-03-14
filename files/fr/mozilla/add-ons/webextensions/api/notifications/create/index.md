@@ -1,20 +1,9 @@
 ---
 title: notifications.create()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/create
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - Non-standard
-  - Notifications
-  - Reference
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Crée et affiche une notification.
 
@@ -22,17 +11,18 @@ Passez un {{WebExtAPIRef("notifications.NotificationOptions")}} pour définir le
 
 Vous pouvez éventuellement fournir un ID pour la notification. Si vous omettez l'ID, un ID sera généré. Vous pouvez utiliser l'ID pour {{WebExtAPIRef("notifications.update()", "update")}} ou {{WebExtAPIRef("notifications.clear()", "clear")}} la notification.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-> **Attention :** Si vous appelez `notifications.create()` plus d'une fois de suite, Firefox peut ne pas afficher de notification pour tout.
+> [!WARNING]
+> Si vous appelez `notifications.create()` plus d'une fois de suite, Firefox peut ne pas afficher de notification pour tout.
 
 ## Syntaxe
 
 ```js
 var creating = browser.notifications.create(
-  id,                   // optional string
-  options               // NotificationOptions
-)
+  id, // optional string
+  options, // NotificationOptions
+);
 ```
 
 ### Paramètres
@@ -44,20 +34,20 @@ var creating = browser.notifications.create(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie lorsque la notification est créée et que le processus d'affichage a été démarré, avant que la notification ne s'affiche réellement à l'utilisateur. Il est rempli avec une chaîne représentant l'identifiant de la notification.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie lorsque la notification est créée et que le processus d'affichage a été démarré, avant que la notification ne s'affiche réellement à l'utilisateur. Il est rempli avec une chaîne représentant l'identifiant de la notification.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.create")}}
+{{Compat}}
 
 ## Exemples
 
 Créez et affichez périodiquement une notification de base à l'aide d'un {{WebExtAPIRef("alarms", "alarm")}}. En cliquant sur l'action du navigateur, la notification est rejetée.
 
-Notez que vous aurez besoin de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "alarms" pour créer des alarmes (ainsi que de la permission "notifications" pour créer des notifications).
+Notez que vous aurez besoin de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "alarms" pour créer des alarmes (ainsi que de la permission "notifications" pour créer des notifications).
 
 ```js
-var cakeNotification = "cake-notification"
+var cakeNotification = "cake-notification";
 
 /*
 
@@ -70,18 +60,18 @@ than a minute.
 */
 var CAKE_INTERVAL = 0.1;
 
-browser.alarms.create("", {periodInMinutes: CAKE_INTERVAL});
+browser.alarms.create("", { periodInMinutes: CAKE_INTERVAL });
 
-browser.alarms.onAlarm.addListener(function(alarm) {
+browser.alarms.onAlarm.addListener(function (alarm) {
   browser.notifications.create(cakeNotification, {
-    "type": "basic",
-    "iconUrl": browser.extension.getURL("icons/cake-96.png"),
-    "title": "Time for cake!",
-    "message": "Something something cake"
+    type: "basic",
+    iconUrl: browser.extension.getURL("icons/cake-96.png"),
+    title: "Time for cake!",
+    message: "Something something cake",
   });
 });
 
-browser.browserAction.onClicked.addListener(()=> {
+browser.browserAction.onClicked.addListener(() => {
   var clearing = browser.notifications.clear(cakeNotification);
   clearing.then(() => {
     console.log("cleared");
@@ -92,7 +82,7 @@ browser.browserAction.onClicked.addListener(()=> {
 Affichez une notification similaire, mais ajoutez des boutons nommant des gâteaux et consignez le gâteau sélectionné lorsque vous cliquez sur un bouton :
 
 ```js
-var cakeNotification = "cake-notification"
+var cakeNotification = "cake-notification";
 
 /*
 
@@ -107,25 +97,26 @@ var CAKE_INTERVAL = 0.1;
 
 var buttons = [
   {
-    "title": "Chocolate"
-  }, {
-    "title": "Battenberg"
-  }
+    title: "Chocolate",
+  },
+  {
+    title: "Battenberg",
+  },
 ];
 
-browser.alarms.create("", {periodInMinutes: CAKE_INTERVAL});
+browser.alarms.create("", { periodInMinutes: CAKE_INTERVAL });
 
-browser.alarms.onAlarm.addListener(function(alarm) {
+browser.alarms.onAlarm.addListener(function (alarm) {
   browser.notifications.create(cakeNotification, {
-    "type": "basic",
-    "iconUrl": browser.extension.getURL("icons/cake-96.png"),
-    "title": "Time for cake!",
-    "message": "Something something cake",
-    "buttons": buttons
+    type: "basic",
+    iconUrl: browser.extension.getURL("icons/cake-96.png"),
+    title: "Time for cake!",
+    message: "Something something cake",
+    buttons: buttons,
   });
 });
 
-browser.browserAction.onClicked.addListener(()=> {
+browser.browserAction.onClicked.addListener(() => {
   var clearing = browser.notifications.clear(cakeNotification);
   clearing.then(() => {
     console.log("cleared");
@@ -140,8 +131,8 @@ browser.notifications.onButtonClicked.addListener((id, index) => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).
+> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

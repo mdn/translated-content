@@ -1,11 +1,8 @@
 ---
 title: Window.scrollTo()
 slug: Web/API/Window/scrollTo
-tags:
-  - Плавная прокрутка
-  - Плавный скролл
-translation_of: Web/API/Window/scrollTo
 ---
+
 {{ APIRef }}
 
 ## Описание
@@ -32,19 +29,19 @@ window.scrollTo(options)
 ## Пример
 
 ```js
-window.scrollTo( 0, 1000 );
+window.scrollTo(0, 1000);
 
 // этот код меняет поведение прокрутки на "smooth"
 window.scrollTo({
-    top: 1000,
-    behavior: "smooth"
+  top: 1000,
+  behavior: "smooth",
 });
 ```
 
 ## Примечания
 
-Эта функция выполняет то же, что и [window.scroll](/ru/docs/DOM/Window.scroll). Остальные функции, связанные с прокруткой [window.scrollBy](/ru/docs/DOM/Window.scrollBy), [window.scrollByLines](/ru/docs/DOM/Window.scrollByLines), и [window.scrollByPages](/ru/docs/DOM/Window.scrollByPages).
+Эта функция выполняет то же, что и [window.scroll](/ru/docs/Web/API/Window/scroll). Остальные функции, связанные с прокруткой [window.scrollBy](/ru/docs/Web/API/Window/scrollBy), [window.scrollByLines](/ru/docs/Web/API/Window/scrollByLines), и [window.scrollByPages](/ru/docs/Web/API/Window/scrollByPages).
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}

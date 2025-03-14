@@ -1,25 +1,30 @@
 ---
 title: Boolean.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
-tags:
-  - Boolean
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 ---
 
 {{JSRef}}
 
 **`toString()`** 메서드는 {{jsxref("Boolean")}} 객체를 나타내는 문자열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/boolean-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Boolean.toString()")}}
+
+```js interactive-example
+const flag1 = new Boolean(true);
+
+console.log(flag1.toString());
+// Expected output: "true"
+
+const flag2 = new Boolean(1);
+
+console.log(flag2.toString());
+// Expected output: "true"
+```
 
 ## 구문
 
 ```js
-    bool.toString()
+bool.toString();
 ```
 
 ### 반환 값

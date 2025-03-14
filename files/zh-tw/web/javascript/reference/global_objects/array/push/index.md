@@ -7,11 +7,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/push
 
 **`push()`** 方法會添加一個或多個元素至陣列的末端，並且回傳陣列的新長度。
 
-{{EmbedInteractiveExample("pages/js/array-push.html")}}
+{{InteractiveExample("JavaScript Demo: Array.push()")}}
+
+```js interactive-example
+const animals = ["pigs", "goats", "sheep"];
+
+const count = animals.push("cows");
+console.log(count);
+// Expected output: 4
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows"]
+
+animals.push("chickens", "cats", "dogs");
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+```
 
 ## 語法
 
-```plain
+```js-nolint
 arr.push(element1[, ...[, elementN]])
 ```
 
@@ -39,11 +53,11 @@ arr.push(element1[, ...[, elementN]])
 以下的程式碼會建立含有兩個元素的陣列 `sports`，接著再增加兩個元素至陣列中。新的長度以變數 `total` 表示。
 
 ```js
-var sports = ['soccer', 'baseball'];
-var total = sports.push('football', 'swimming');
+var sports = ["soccer", "baseball"];
+var total = sports.push("football", "swimming");
 
 console.log(sports); // ['soccer', 'baseball', 'football', 'swimming']
-console.log(total);  // 4
+console.log(total); // 4
 ```
 
 ### 合併兩個陣列
@@ -53,8 +67,8 @@ console.log(total);  // 4
 如果第二個陣列（範例中的 `moreVegs`）非常大，就不要使用這個方法。因為一個函式能取得的參數之最大數量是受到實作限制的。詳細請參閱 {{jsxref("Function.apply", "apply()")}}。
 
 ```js
-var vegetables = ['parsnip', 'potato'];
-var moreVegs = ['celery', 'beetroot'];
+var vegetables = ["parsnip", "potato"];
+var moreVegs = ["celery", "beetroot"];
 
 // Merge the second array into the first one
 // Equivalent to vegetables.push('celery', 'beetroot');
@@ -69,13 +83,13 @@ console.log(vegetables); // ['parsnip', 'potato', 'celery', 'beetroot']
 
 ```js
 var obj = {
-    length: 0,
+  length: 0,
 
-    addElem: function addElem(elem) {
-        // obj.length is automatically incremented
-        // every time an element is added.
-        [].push.call(this, elem);
-    }
+  addElem: function addElem(elem) {
+    // obj.length is automatically incremented
+    // every time an element is added.
+    [].push.call(this, elem);
+  },
 };
 
 // Let's add some empty objects just to illustrate.
@@ -91,7 +105,7 @@ console.log(obj.length);
 
 {{Specifications}}
 
-## 瀏覽器支援度
+## 瀏覽器相容性
 
 {{Compat}}
 

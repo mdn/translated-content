@@ -1,30 +1,24 @@
 ---
-title: 'ARIA : le rôle button'
+title: "ARIA : le rôle button"
 slug: Web/Accessibility/ARIA/Roles/button_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA button
-  - Accessibility
-  - Button Role
-  - Reference
-translation_of: Web/Accessibility/ARIA/Roles/button_role
-original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_button
 ---
 
 Le rôle **[button](https://www.w3.org/WAI/PF/aria/roles#button)** devrait être utilisé pour les éléments cliquables qui déclenchent une réponse lorsqu'activés par l'utilisateur. Ajouter `role="button"` permettra à un élément d'apparaître comme un bouton de contrôle pour un lecteur d'écran. Ce rôle peut être utilisé avec l'attribut `aria-pressed` afin de créer des boutons interrupteurs.
 
 ```html
-<div id="saveChanges" tabindex="0" role="button" aria-pressed="false">Enregistrer</div>
+<div id="saveChanges" tabindex="0" role="button" aria-pressed="false">
+  Enregistrer
+</div>
 ```
 
-L'exemple précédent crée un bouton simple qui sera le premier à obtenir le focus. Toutefois, on devrait plutôt utiliser les éléments [`<button>`](/fr/docs/Web/HTML/Element/Button) ou [`<input>`](/fr/docs/Web/HTML/Element/Input) avec `type="button"` pour représenter des boutons :
+L'exemple précédent crée un bouton simple qui sera le premier à obtenir le focus. Toutefois, on devrait plutôt utiliser les éléments [`<button>`](/fr/docs/Web/HTML/Element/button) ou [`<input>`](/fr/docs/Web/HTML/Element/input) avec `type="button"` pour représenter des boutons :
 
 ```html
 <button id="saveChanges">Enregistrer</button>
 ```
 
-> **Note :** Si on utilise `role="button"` plutôt que les éléments sémantiques `<button>` ou `<input type="button">`, il faudra : permettre à l'élément de recevoir le focus, définir des gestionnaires d'évènements pour [`click`](/fr/docs/Web/API/Element/click_event) et [`keydown`](/fr/docs/Web/API/Document/keydown_event), y compris la gestion des touches <kbd>Entrée</kbd> et <kbd>Espace</kbd>, afin de traiter la saisie de l'utilisateur. Voir [l'exemple de code officiel de WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html).
+> [!NOTE]
+> Si on utilise `role="button"` plutôt que les éléments sémantiques `<button>` ou `<input type="button">`, il faudra : permettre à l'élément de recevoir le focus, définir des gestionnaires d'évènements pour [`click`](/fr/docs/Web/API/Element/click_event) et [`keydown`](/fr/docs/Web/API/Element/keydown_event), y compris la gestion des touches <kbd>Entrée</kbd> et <kbd>Espace</kbd>, afin de traiter la saisie de l'utilisateur. Voir [l'exemple de code officiel de WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html).
 
 ## Description
 
@@ -83,7 +77,7 @@ Les boutons peuvent être manipulés avec une souris, le toucher et le clavier. 
 
     <kbd>Entrée</kbd>
 
-    du clavier (attention, il ne s'agit pas de l'évènement déprécié [`onKeyPress`](/fr/docs/Web/API/Document/keypress_event)).
+    du clavier (attention, il ne s'agit pas de l'évènement déprécié [`onKeyPress`](/fr/docs/Web/API/Element/keypress_event)).
 
 #### Modifier les valeurs des attributs
 
@@ -112,8 +106,14 @@ Vous pouvez essayer l'exemple en ajoutant un nom dans le champ texte. Le bouton 
 <h1>Exemple de bouton avec ARIA</h1>
 <ul id="nameList"></ul>
 <label for="newName">Saisissez votre nom :</label>
-<input type="text" id="newName">
-<span role="button" tabindex="0" onclick="handleCommand(event)" onKeyDown="handleCommand(event)">Ajouter le nom</span>
+<input type="text" id="newName" />
+<span
+  role="button"
+  tabindex="0"
+  onclick="handleCommand(event)"
+  onKeyDown="handleCommand(event)"
+  >Ajouter le nom</span
+>
 ```
 
 #### CSS
@@ -128,11 +128,11 @@ Vous pouvez essayer l'exemple en ajoutant un nom dans le champ texte. Le bouton 
 [role="button"]:hover,
 [role="button"]:focus,
 [role="button"]:active {
-   background-color: white;
-   color: navy;
+  background-color: white;
+  color: navy;
 }
 ul {
-    list-style: none;
+  list-style: none;
 }
 ```
 
@@ -145,25 +145,29 @@ function handleCommand(event) {
 
   // Les touches autres que Entrée et Espace ne devraient
   // déclencher de commande
-  if (event instanceof KeyboardEvent && event.key !== 'Enter' && event.key !== ' ') {
+  if (
+    event instanceof KeyboardEvent &&
+    event.key !== "Enter" &&
+    event.key !== " "
+  ) {
     return;
   }
 
   // On récupère la valeur du nouveau nom à partir
   // du champ en saisie
-  let newNameInput = document.getElementById('newName');
+  let newNameInput = document.getElementById("newName");
   let name = newNameInput.value;
-  newNameInput.value = ''; // On vide le champ texte
-  newNameInput.focus();  // On passe le focus au champ texte pour
-                         // permettre la saisie d'un autre nom
+  newNameInput.value = ""; // On vide le champ texte
+  newNameInput.focus(); // On passe le focus au champ texte pour
+  // permettre la saisie d'un autre nom
 
   // On évite d'ajouter des noms vides à la liste
-  if(name.length > 0) {
-    listItem = document.createElement('li');
+  if (name.length > 0) {
+    listItem = document.createElement("li");
     listItem.appendChild(document.createTextNode(name));
 
     // On ajoute le nouveau nom à la liste.
-    let list = document.getElementById('nameList');
+    let list = document.getElementById("nameList");
     list.appendChild(listItem);
   }
 }
@@ -182,13 +186,18 @@ Dans le fragment qui suit, on convertit un élément [`<span>`](/fr/docs/Web/HTM
   Couper le son
 </button>
 
-<span role="button" tabindex="0"
- aria-pressed="false" onclick="handleBtnClick(event)"
- onKeyDown="handleBtnKeyDown(event)">
+<span
+  role="button"
+  tabindex="0"
+  aria-pressed="false"
+  onclick="handleBtnClick(event)"
+  onKeyDown="handleBtnKeyDown(event)">
   Couper le son
 </span>
 
-<audio id="audio" src="https://soundbible.com/mp3/Tyrannosaurus%20Rex%20Roar-SoundBible.com-807702404.mp3">
+<audio
+  id="audio"
+  src="https://soundbible.com/mp3/Tyrannosaurus%20Rex%20Roar-SoundBible.com-807702404.mp3">
   Votre navigateur ne prend pas en charge l'élément <code>audio</code>.
 </audio>
 ```
@@ -198,14 +207,14 @@ Dans le fragment qui suit, on convertit un élément [`<span>`](/fr/docs/Web/HTM
 ```css
 button,
 [role="button"] {
-    padding: 3px;
-    border: 2px solid transparent;
+  padding: 3px;
+  border: 2px solid transparent;
 }
 
 button:active,
 button:focus,
 [role="button"][aria-pressed="true"] {
-    border: 2px solid #000;
+  border: 2px solid #000;
 }
 ```
 
@@ -218,7 +227,8 @@ function handleBtnClick(event) {
 
 function handleBtnKeyDown(event) {
   // On vérifie si les touches Entrée ou Espace sont pressées
-  if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") { // Prise en charge de "Spacebar" pour IE11
+  if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
+    // Prise en charge de "Spacebar" pour IE11
     // On empêche le défilement par défaut lorsque
     // la touche espace est utilisée
     event.preventDefault();
@@ -227,16 +237,16 @@ function handleBtnKeyDown(event) {
 }
 
 function toggleButton(element) {
-  var audio = document.getElementById('audio');
+  var audio = document.getElementById("audio");
   // On vérifie si le bouton est pressé
-  var pressed = (element.getAttribute("aria-pressed") === "true");
+  var pressed = element.getAttribute("aria-pressed") === "true";
   // On fait alterner aria-pressed vers l'état opposé
   element.setAttribute("aria-pressed", !pressed);
   // On modifie l'état de lecture du fichier audio
-  if(pressed) {
-     audio.pause();
+  if (pressed) {
+    audio.pause();
   } else {
-     audio.play();
+    audio.play();
   }
 }
 ```
@@ -249,7 +259,8 @@ function toggleButton(element) {
 
 Les boutons sont des contrôles interactifs et, à ce titre, peuvent recevoir le focus. Si le rôle `button` est ajouté à un élément qui ne peut recevoir le focus nativement (comme `<span>`, `<div>` ou `<p>`), l'attribut `tabindex` devra être utilisé afin de permettre le focus sur le bouton.
 
-> **Attention :** Lorsqu'on utilise des liens avec le rôle `button`, il faut rajouter un gestionnaire d'évènement pour la touche <kbd>Espace</kbd>. En effet, les boutons s'activent avec <kbd>Espace</kbd> ou <kbd>Entrée</kbd> tandis que, nativement, les liens ne se déclenchent qu'avec <kbd>Entrée</kbd>.
+> [!WARNING]
+> Lorsqu'on utilise des liens avec le rôle `button`, il faut rajouter un gestionnaire d'évènement pour la touche <kbd>Espace</kbd>. En effet, les boutons s'activent avec <kbd>Espace</kbd> ou <kbd>Entrée</kbd> tandis que, nativement, les liens ne se déclenchent qu'avec <kbd>Entrée</kbd>.
 
 Lorsqu'on utilise le rôle `button`, les lecteurs d'écran annonce l'élément comme un bouton, généralement en énonçant « clic » suivi du nom accessible du bouton. Le nom accessible correspond au contenu de l'élément ou à la valeur de `aria-label` ou à l'élément référencé avec l'attribut `aria-labelledby`, ou à une description si elle existe.
 
@@ -276,4 +287,4 @@ Si un lien effectue l'action d'un bouton, fournir `role="button"` à l'élément
 - [Notes sur l'utilisation d'ARIA en HTML](https://www.w3.org/TR/aria-in-html/)
 - [Exemple de code officiel WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)
 - [Rôle ARIA `menubutton`](/fr/docs/Web/Accessibility/ARIA/Roles/menubutton_role)
-- [**Rôles WAI-ARIA**](/fr/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+- [**Rôles WAI-ARIA**](/fr/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/fr/docs/Web/Accessibility/ARIA/Roles")}}

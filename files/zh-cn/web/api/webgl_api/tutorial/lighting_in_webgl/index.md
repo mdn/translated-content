@@ -3,7 +3,7 @@ title: Lighting in WebGL
 slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
 
 在使用灯光之前，首先我们需要了解，与定义更广泛的 OpenGL 不同，WebGL 并没有继承 OpenGL 中灯光的支持。所以你只能由自己完全得控制灯光。幸运得是，这也并不是很难，本文接下来就会介绍完成灯光的基础。
 
@@ -15,7 +15,7 @@ slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 
 **环境光** 是一种可以渗透到场景的每一个角落的光。它是非方向光并且会均匀地照射物体的每一个面，无论这个面是朝向哪个方向的。
 
-**方向光** 是一束从一个固定的方向照射过来的光。这种光的特点可以理解为好像是从一个很遥远的地方照射过来的，然后光线中的每一个光子与其它光子都是平行运动的。举个例子来说，阳光就可以认为是方向光。
+**方向光** 是一束从一个固定的方向照射过来的光。这种光的特点可以理解为好像是从一个很遥远的地方照射过来的，然后光线中的每一个光子与其他光子都是平行运动的。举个例子来说，阳光就可以认为是方向光。
 
 **点光源光** 是指光线是从一个点发射出来的，是向着四面八方发射的。这种光在我们的现实生活中是最常被用到的。举个例子来说，电灯泡就是向各个方向发射光线的。
 
@@ -38,43 +38,29 @@ gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesNormalBuffer);
 
 var vertexNormals = [
   // Front
-   0.0,  0.0,  1.0,
-   0.0,  0.0,  1.0,
-   0.0,  0.0,  1.0,
-   0.0,  0.0,  1.0,
+  0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0,
 
   // Back
-   0.0,  0.0, -1.0,
-   0.0,  0.0, -1.0,
-   0.0,  0.0, -1.0,
-   0.0,  0.0, -1.0,
+  0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0,
 
   // Top
-   0.0,  1.0,  0.0,
-   0.0,  1.0,  0.0,
-   0.0,  1.0,  0.0,
-   0.0,  1.0,  0.0,
+  0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0,
 
   // Bottom
-   0.0, -1.0,  0.0,
-   0.0, -1.0,  0.0,
-   0.0, -1.0,  0.0,
-   0.0, -1.0,  0.0,
+  0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0,
 
   // Right
-   1.0,  0.0,  0.0,
-   1.0,  0.0,  0.0,
-   1.0,  0.0,  0.0,
-   1.0,  0.0,  0.0,
+  1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0,
 
   // Left
-  -1.0,  0.0,  0.0,
-  -1.0,  0.0,  0.0,
-  -1.0,  0.0,  0.0,
-  -1.0,  0.0,  0.0
+  -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0,
 ];
 
-gl.bufferData(gl.ARRAY_BUFFER, new WebGLFloatArray(vertexNormals), gl.STATIC_DRAW);
+gl.bufferData(
+  gl.ARRAY_BUFFER,
+  new WebGLFloatArray(vertexNormals),
+  gl.STATIC_DRAW,
+);
 ```
 
 现在我们应该对此非常熟悉了；创建新的 buffer，将它和 gl.ARRAR_BUFFER 绑定在一起，然后通过调用 bufferData() 把我们的顶点法线数组一起传入。
@@ -94,7 +80,11 @@ gl.vertexAttribPointer(vertexNormalAttribute, 3, gl.FLOAT, false, 0, 0);
 var normalMatrix = mvMatrix.inverse();
 normalMatrix = normalMatrix.transpose();
 var nUniform = gl.getUniformLocation(shaderProgram, "uNormalMatrix");
-gl.uniformMatrix4fv(nUniform, false, new WebGLFloatArray(normalMatrix.flatten()));
+gl.uniformMatrix4fv(
+  nUniform,
+  false,
+  new WebGLFloatArray(normalMatrix.flatten()),
+);
 ```
 
 ## 更新着色器
@@ -165,9 +155,9 @@ gl.uniformMatrix4fv(nUniform, false, new WebGLFloatArray(normalMatrix.flatten())
 
 效果就是这样！
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample7/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample7/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample7) | [Open this demo on a new page](http://mdn.github.io/webgl-examples/tutorial/sample7/)
+[查看完整的源码](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample7) | [在新标签页中查看演示](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample7/)
 
 ## 读者练习
 

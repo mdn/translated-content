@@ -1,10 +1,9 @@
 ---
 title: Incompatibilidades con Chrome
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 ---
+
+{{AddonSidebar}}
 
 WebExtensions está diseñado para ser compatible con las extensiones de Chrome y Opera: en la medida de lo posible, las extensiones escritas para esos navegadores deberían ejecutarse en Firefox con cambios mínimos.
 
@@ -18,15 +17,15 @@ Es seguro asumir que las funciones y las API que no se enumeran aquí en absolut
 
 ### Claves completamente compatibles
 
-- [`applications`](/en-US/Add-ons/WebExtensions/manifest.json/applications)
-- [`browser_action`](/en-US/Add-ons/WebExtensions/manifest.json/browser_action)
-- [`page_action`](/en-US/Add-ons/WebExtensions/manifest.json/page_action)
-- [`default_locale`](/en-US/Add-ons/WebExtensions/manifest.json/default_locale)
-- [`description`](/en-US/Add-ons/WebExtensions/manifest.json/description)
-- [`manifest_version`](/en-US/Add-ons/WebExtensions/manifest.json/manifest_version)
-- [`name`](/en-US/Add-ons/WebExtensions/manifest.json/name)
-- [`version`](/en-US/Add-ons/WebExtensions/manifest.json/version)
-- [`web_accessible_resources`](/en-US/Add-ons/WebExtensions/manifest.json/web_accessible_resources)
+- [`applications`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)
+- [`browser_action`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)
+- [`page_action`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)
+- [`default_locale`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale)
+- [`description`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description)
+- [`manifest_version`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)
+- [`name`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)
+- [`version`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version)
+- [`web_accessible_resources`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)
 
 ### Claves parcialmente admitidas
 
@@ -54,14 +53,14 @@ Firefox aún no admite los siguientes permisos:
 - `nativeMessaging`
 - `unlimitedStorage`
 
-Obviamente, también no admite permisos para las [APIs que no son compatibles](/en-US/Add-ons/WebExtensions/API#Chrome_incompatibilities).
+Obviamente, también no admite permisos para las [APIs que no son compatibles](/es/docs/Mozilla/Add-ons/WebExtensions/API#chrome_incompatibilities).
 
 ## APIs JavaScript
 
 ### APIs completamente soportadas
 
 - [alarmas](/es/docs/Mozilla/Add-ons/WebExtensions/API/alarms)
-- [Menú contextual](/es/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus)
+- [Menú contextual](/es/docs/Mozilla/Add-ons/WebExtensions/API/menus)
 - [pageAction](/es/docs/Mozilla/Add-ons/WebExtensions/API/pageAction)
 
   - Las URL relativas pasadas a `setPopup()`se resuelven en relación con el documento de la persona que llama, en lugar de con la raíz de la extensión .
@@ -214,20 +213,20 @@ Firefox doesn't yet support the `callback` argument to `executeScript()`.
 
 We don't yet support the following APIs, but plan to, soon:
 
-- [commands](https://developer.chrome.com/extensions/commands)
+- [commands](https://developer.chrome.com/docs/extensions/reference/api/commands)
 - [Devtools (mostly panels)](https://developer.chrome.com/extensions/devtools)
-- [downloads](https://developer.chrome.com/extensions/downloads)
-- [history](https://developer.chrome.com/extensions/history)
-- [idle](https://developer.chrome.com/extensions/idle)
-- [omnibox](https://developer.chrome.com/extensions/omnibox)
-- [permissions](https://developer.chrome.com/extensions/permissions)
-- [Native messaging (runtime.connectNative)](https://developer.chrome.com/extensions/runtime#method-connectNative)
+- [downloads](https://developer.chrome.com/docs/extensions/reference/api/downloads)
+- [history](https://developer.chrome.com/docs/extensions/reference/api/history)
+- [idle](https://developer.chrome.com/docs/extensions/reference/api/idle)
+- [omnibox](https://developer.chrome.com/docs/extensions/reference/api/omnibox)
+- [permissions](https://developer.chrome.com/docs/extensions/reference/api/permissions)
+- [Native messaging (runtime.connectNative)](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-connectNative)
 
 ### CSS
 
 #### Localized String Interpolation
 
-We currently do not support interpolation of localized strings `__MSG_` tokens in extension CSS files: {{bug(1209184)}}.
+We currently do not support interpolation of localized strings `__MSG_` tokens in extension CSS files: [Error 1209184 en Firefox](https://bugzil.la/1209184).
 
 #### Relative URLs
 
@@ -236,4 +235,4 @@ We resolve URLs in injected CSS files relative to the CSS file itself, rather th
 ### Miscellaneous incompatibilities
 
 - Chrome allows any optional arguments to be omitted, even if followed by other arguments. Firefox currently supports this only under specific circumetances. We recommend only omitting optional arguments at the end of the arguments list, and using `null` for all other cases.
-- Firefox currently [does not allow](https://bugzil.la/932513) the `{{jsxref("Statements/let", "let")}}` or `{{jsxref("Statements/const", "const")}}` statement in ordinary web pages or Web Extensions. While it is possible to enable support for Firefox's variant of the statement using a special `<script>` tag, this is not recommended. Instead, if your extension code uses `let` or `const` statements, we recommend that you [transpile them using Babel](/en-US/Add-ons/WebExtensions/Tips#Using_advanced_JavaScript_features_from_ECMAScript_6_and_7) until support is turned on globally.
+- Firefox currently [does not allow](https://bugzil.la/932513) the `{{jsxref("Statements/let", "let")}}` or `{{jsxref("Statements/const", "const")}}` statement in ordinary web pages or Web Extensions. While it is possible to enable support for Firefox's variant of the statement using a special `<script>` tag, this is not recommended. Instead, if your extension code uses `let` or `const` statements, we recommend that you [transpile them using Babel](/es/docs/Mozilla/Add-ons/WebExtensions#using_advanced_javascript_features_from_ecmascript_6_and_7) until support is turned on globally.

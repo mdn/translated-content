@@ -1,11 +1,9 @@
 ---
 title: Canvas
 slug: Glossary/Canvas
-tags:
-  - Canvas
-  - HTML5
-translation_of: Glossary/Canvas
 ---
+
+{{GlossarySidebar}}
 
 El **elemento canvas** forma parte de [HTML5](https://es.wikipedia.org/wiki/HTML5) y habilita la [representación (rendering)](https://es.wikipedia.org/wiki/Renderizaci%C3%B3n) dinámica y en [scripts](https://es.wikipedia.org/wiki/Script) de figuras en 2D y 3D de imágenes de [mapas de Bits](https://es.wikipedia.org/wiki/Bitmap).
 
@@ -15,15 +13,15 @@ Es a un bajo nivel, un modelo procedimental que actualiza un [mapa de bits](http
 
 ### Conocimientos básicos
 
-- [Canvas en Wikipedia](https://es.wikipedia.org/wiki/Canvas_(HTML))
+- [Canvas en Wikipedia](<https://es.wikipedia.org/wiki/Canvas_(HTML)>)
 
 ### Inicio del temario
 
-- [Tutorial de Canvas en MDN](/es/docs/Web/Guide/HTML/Canvas_tutorial)
+- [Tutorial de Canvas en MDN](/es/docs/Web/API/Canvas_API/Tutorial)
 
 ### Información técnica
 
 - El elemento HTML {{HTMLElement("canvas")}} en MDN
-- [La documentación general de Canvas en MDN](/es/docs/HTML/Canvas)
+- [La documentación general de Canvas en MDN](/es/docs/Web/API/Canvas_API)
 - {{domxref("CanvasRenderingContext2D")}}: La API de dibujo de Canvas 2D
-- [Canvas 2D, especificaciones del API](http://www.w3.org/TR/2dcontext/)
+- [Canvas 2D, especificaciones del API](https://www.w3.org/TR/2dcontext/)

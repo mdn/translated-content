@@ -9,9 +9,10 @@ A interface **Worker** da [API do Web Worker](/pt-BR/docs/Web/API/Web_Workers_AP
 
 Um worker pode, por sua vez, gerar outros workers, contanto que estes estejam hospedados na mesma [origem](/pt-BR/docs/Web/Security/Same-origin_policy) da página principal (Nota: workers aninhados [não estão atualmente implementados no Blink](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU)). Além disso, workers podem utilizar [XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest) para E/S de rede, desde que seja estipulado que os atributos `responseXML` e `channel` em `XMLHttpRequest` retornem sempre `null`.
 
-[Não são todas as interfaces e funções que estão disponíveis](/En/DOM/Worker/Functions_available_to_workers) para o script associado a um `Worker`.
+[Não são todas as interfaces e funções que estão disponíveis](/en-US/DOM/Worker/Functions_available_to_workers) para o script associado a um `Worker`.
 
-> **Nota:** No Firefox, se você deseja utilizar workers em extensões e gostaria de ter acesso a [js-ctypes](/pt-BR/js-ctypes), você deveria utilizar o objeto {{ domxref("ChromeWorker") }} .
+> [!NOTE]
+> No Firefox, se você deseja utilizar workers em extensões e gostaria de ter acesso a [js-ctypes](/pt-BR/js-ctypes), você deveria utilizar o objeto {{ domxref("ChromeWorker") }} .
 
 ## Construtores
 
@@ -49,7 +50,7 @@ _Os métodos são herdados de seu pai. {{domxref("EventTarget")}}, e implementa 
 - [`rejectionhandled`](/pt-BR/docs/Web/API/Window/rejectionhandled_event)
   - : Dispara sempre que um {{jsxref("Promise")}} é rejeitado, indenpendentemente de haver ou não um manipulador para capturar sua rejeição.
     Também é disponibilizado via `onrejectionhandled.`
-- [`unhandledrejection`](pt-BR/docs/Web/API/Window/unhandledrejection_event)
+- [`unhandledrejection`](/pt-BR/docs/Web/API/Window/unhandledrejection_event)
   - : Dispara sempre que um {{jsxref ("Promise")}} rejeita, independentemente de haver ou não um manipulador para capturar a rejeição. Também disponível por meio da propriedade do manipulador de eventos `onunhandledrejection.`
 
 ## Exemplos
@@ -58,33 +59,28 @@ The following code snippet shows creation of a {{domxref("Worker")}} object usin
 
 ```js
 var myWorker = new Worker("worker.js");
-var first = document.querySelector('#number1');
-var second = document.querySelector('input#number2');
+var first = document.querySelector("#number1");
+var second = document.querySelector("input#number2");
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+first.onchange = function () {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 ```
 
-For a full example, see our[Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
+For a full example, see our[Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
 
-## Specifications
+## Especificações
 
-| Specification                                                    | Status                           | Comment                                              |
-| ---------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#worker", "Worker")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("Web Workers")}}. |
-| {{SpecName('Web Workers', "#worker", "Worker")}} | {{Spec2('Web Workers')}} | Initial definition.                                  |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-Support varies for different types of workers. See each worker type's page for specifics.
-
-{{Compat("api.Worker")}}
+{{Compat}}
 
 ## See also
 
-- [Using web workers](/En/Using_web_workers)
-- [Functions available to workers](/En/DOM/Worker/Functions_available_to_workers)
-- Other kind of workers: {{ domxref("SharedWorker") }} and [ServiceWorker](/pt-BR/docs/Web/API/ServiceWorker_API).
+- [Using web workers](/en-US/Using_web_workers)
+- [Functions available to workers](/en-US/DOM/Worker/Functions_available_to_workers)
+- Other kind of workers: {{ domxref("SharedWorker") }} and [ServiceWorker](/pt-BR/docs/Web/API/Service_Worker_API).
 - Non-standard, Gecko-specific workers: {{ domxref("ChromeWorker") }}, used by extensions.

@@ -1,25 +1,19 @@
 ---
 title: Element.prefix
 slug: Web/API/Element/prefix
-tags:
-  - API
-  - DOM
-  - Element
-  - Propriétés
-  - Préfixe
-translation_of: Web/API/Element/prefix
 ---
 
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Element.prefix`** renvoie le préfixe d'espace de noms de l'élément spécifié ou `null` si aucun préfixe n'est précisé.
 
-> **Note :** Avant DOM4 cet API était défini dans l'interface {{domxref("Node")}}.
+> [!NOTE]
+> Avant DOM4 cet API était défini dans l'interface {{domxref("Node")}}.
 
 ## Syntaxe
 
 ```js
-string = element.prefix
+string = element.prefix;
 ```
 
 ## Exemples

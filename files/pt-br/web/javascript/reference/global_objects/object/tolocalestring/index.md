@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 
 O método **`toLocaleString()`** retorna uma cadeia de caracteres (_string_) representando o objeto. Este método é feito para ser sobrescrito por objetos derivados para propósitos de localização específica.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.tolocalestring()")}}
+
+```js interactive-example
+const date1 = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+
+console.log(date1.toLocaleString("ar-EG"));
+// Expected output: "٢٠‏/١٢‏/٢٠١٢ ٤:٠٠:٠٠ ص"
+
+const number1 = 123456.789;
+
+console.log(number1.toLocaleString("de-DE"));
+// Expected output: "123.456,789"
+```
 
 ## Sintaxe
 
@@ -44,7 +56,10 @@ Por exemplo:
 ```js
 const testArray = [4, 7, 10];
 
-let euroPrices = testArray.toLocaleString('fr', { style: 'currency', currency: 'EUR'});
+let euroPrices = testArray.toLocaleString("fr", {
+  style: "currency",
+  currency: "EUR",
+});
 // "4,00 €,7,00 €,10,00 €"
 ```
 
@@ -58,10 +73,10 @@ Por exemplo:
 const testDate = new Date(Date.now());
 // "Date Fri May 29 2020 18:04:24 GMT+0100 (British Summer Time)"
 
-let deDate = testDate.toLocaleString('de');
+let deDate = testDate.toLocaleString("de");
 // "29.5.2020, 18:04:24"
 
-var frDate = testDate.toLocaleString('fr');
+var frDate = testDate.toLocaleString("fr");
 //"29/05/2020 à 18:04:24"
 ```
 
@@ -75,22 +90,20 @@ Por exemplo:
 const testNumber = 2901234564;
 // "2901234564"
 
-let deNumber = testNumber.toLocaleString('de');
+let deNumber = testNumber.toLocaleString("de");
 // "2.901.234.564"
 
-let frNumber = testNumber.toLocaleString('fr');
+let frNumber = testNumber.toLocaleString("fr");
 // "2 901 234 564"
 ```
 
 ## Especificações
 
-| Especificação                                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-object.prototype.tolocalestring', 'Object.prototype.toLocaleString')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.toLocaleString")}}
+{{Compat}}
 
 ## Veja também
 

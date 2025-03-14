@@ -1,24 +1,21 @@
 ---
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
-tags:
-  - Constructor
-  - JavaScript
-  - Object
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Object
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
-## Сводка
+Тип **`Object`** представляет один из [типов данных JavaScript](/ru/docs/Web/JavaScript/Data_structures). Он используется для хранения различных коллекций с ключами и более сложных сущностей. Объекты могут быть созданы с использованием конструктора {{jsxref("Object/Object", "Object()")}} или [синтаксиса инициализатора / литерала объекта](/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
-Конструктор **`Object`** создаёт объект-обёртку.
+## Описание
+
+Почти все [объекты](/ru/docs/Web/JavaScript/Data_structures#объекты) в JavaScript являются экземплярами `Object`; типичный объект наследует свойства (включая методы) от `Object.prototype`, хотя эти свойства могут быть затенены (т.е. переопределены). Единственные объекты, которые не наследуют от `Object.prototype`, - это те, у которых [прототип `null`](#null-prototype_objects), или которые происходят от других объектов с прототипом `null`.
+
+Изменения в объекте `Object.prototype` видны всем объектам с помощью цепочки прототипов, если свойства и методы, подверженные этим изменениям, не переопределены дальше по цепочке прототипов. Это предоставляет очень мощный, хотя и потенциально опасный механизм для переопределения или расширения поведения объектов. Для обеспечения большей безопасности, `Object.prototype` - единственный объект в основном языке JavaScript, у которого [неизменяемый прототип](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf#описание) - прототип `Object.prototype` всегда `null` и не может быть изменен.
 
 ## Синтаксис
 
-```
+```js
 // Инициализатор объекта или литерал
 { [ nameValuePair1[, nameValuePair2[, ...nameValuePairN] ] ] }
 
@@ -32,14 +29,6 @@ new Object([value])
   - : Пары из имён (строки) и значений (любые значения), где имя отделяется от значения двоеточием.
 - `value`
   - : Любое значение.
-
-## Описание
-
-Конструктор `Object` создаёт объект-обёртку для переданного значения. Если значением является {{jsxref("Global_Objects/null", "null")}} или {{jsxref("Global_Objects/undefined", "undefined")}}, создаёт и возвращает пустой объект, в противном случае возвращает объект такого типа, который соответствует переданному значению. Если значение уже является объектом, конструктор вернёт это значение.
-
-При вызове в не-конструктором контексте, `Object` ведёт себя идентично коду `new Object()`.
-
-Так же смотрите {{jsxref("Operators/Object_initializer", "синтаксис инициализатора объекта / литеральный синтаксис", "", 1)}}.
 
 ## Свойства конструктора `Object`
 
@@ -93,28 +82,46 @@ new Object([value])
 
 ### Свойства
 
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Properties')}}
+- {{jsxref("Object/Object", "Object()")}}
+  - : Превращает входные данные в объект.
+- {{jsxref("Object.prototype.constructor")}}
+  - : Указывает функцию, которая создает прототип объекта.
+- [`Object.prototype.__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{Deprecated_Inline}}
+  - : Указывает на объект, который использовался в качестве прототипа при создании экземпляра объекта.
 
 ### Методы
 
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Methods')}}
+- [`Object.prototype.__defineGetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+  - : Связывает функцию со свойством, которое при обращении к нему выполняет эту функцию и возвращает ее возвращаемое значение.
+- [`Object.prototype.__defineSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
+  - : Связывает функцию со свойством, которое при установке выполняет ту функцию, которая изменяет свойство.
+- [`Object.prototype.__lookupGetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
+  - : Возвращает функцию, привязанную в качестве средства получения к указанному свойству.
+- [`Object.prototype.__lookupSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
+  - : Возвращает функцию, привязанную в качестве установщика к указанному свойству.
+- {{jsxref("Object.prototype.hasOwnProperty()")}}
+  - : Возвращает логическое значение, указывающее, содержит ли объект указанное свойство как прямое свойство этого объекта, а не унаследованное через цепочку прототипов.
+- {{jsxref("Object.prototype.isPrototypeOf()")}}
+  - : Возвращает логическое значение, указывающее, входит ли объект, у которого вызван метод, в цепочку прототипов другого объекта.
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+  - : Возвращает логическое значение, указывающее, является ли указанное свойство свойством объекта [enumerable own](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties).
+- {{jsxref("Object.prototype.toLocaleString()")}}
+  - : Вызывает {{jsxref("Object/toString", "toString()")}}.
+- {{jsxref("Object.prototype.toString()")}}
+  - : Возвращает строковое представление объекта.
+- {{jsxref("Object.prototype.valueOf()")}}
+  - : Возвращает примитивное значение указанного объекта.
 
 ## Примеры
 
 ### Пример: использование `Object` с типами `undefined` и `null`
 
-Следующий пример сохраняет пустой объект `Object` в переменную `o`:
+Следующие примеры сохраняют пустой объект `Object` в переменную `o`:
 
 ```js
-var o = new Object();
-```
-
-```js
-var o = new Object(undefined);
-```
-
-```js
-var o = new Object(null);
+const o = new Object();
+const o = new Object(undefined);
+const o = new Object(null);
 ```
 
 ### Пример: использование `Object` для создания объектов `Boolean`
@@ -123,12 +130,12 @@ var o = new Object(null);
 
 ```js
 // эквивалентно o = new Boolean(true);
-var o = new Object(true);
+const o = new Object(true);
 ```
 
 ```js
 // эквивалентно o = new Boolean(false);
-var o = new Object(Boolean());
+const o = new Object(Boolean());
 ```
 
 ## Спецификации

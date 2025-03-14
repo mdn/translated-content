@@ -1,67 +1,57 @@
 ---
-title: 'Element: select イベント'
+title: "HTMLInputElement: select イベント"
+short-title: select
 slug: Web/API/HTMLInputElement/select_event
-original_slug: Web/API/Element/select_event
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef}}
 
 **`select`** イベントは、いくらかのテキストが選択されたときに発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>
-        ユーザーインターフェイスから作成された場合は
-        {{domxref("UIEvent")}}、それ以外ならば
-        {{domxref("Event")}}
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onselect", "onselect")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## 構文
 
-このイベントはすべての言語のすべての要素で利用できる訳ではありません。例えば、 HTML では、 `select` イベントはフォームの `{{HtmlElement('input/text', '&lt;input type="text"&gt;')}}` および {{HtmlElement("textarea")}} 要素からのみ発生します。
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("select", (event) => {});
+
+onselect = (event) => {};
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
 ### 選択範囲をログ出力
 
 ```html
-<input value="この要素のテキストの一部を選択してみてください。">
+<input value="この要素のテキストの一部を選択してみてください。" />
 <p id="log"></p>
 ```
 
 ```js
 function logSelection(event) {
-  const log = document.getElementById('log');
-  const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
+  const log = document.getElementById("log");
+  const selection = event.target.value.substring(
+    event.target.selectionStart,
+    event.target.selectionEnd,
+  );
   log.textContent = `You selected: ${selection}`;
 }
 
-const input = document.querySelector('input');
-input.addEventListener('select', logSelection);
+const input = document.querySelector("input");
+input.addEventListener("select", logSelection);
 ```
 
 {{EmbedLiveSample("Selection_logger")}}
 
 ### onselect による同等の処理
 
-イベントハンドラーを {{domxref("GlobalEventHandlers.onselect", "onselect")}} プロパティで設定することもできます。
+イベントハンドラーを `onselect` プロパティで設定することもできます。
 
 ```js
 input.onselect = logSelection;

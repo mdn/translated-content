@@ -1,7 +1,6 @@
 ---
 title: 实现一个设置页面
 slug: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
-original_slug: Mozilla/Add-ons/WebExtensions/实现一个设置页面
 ---
 
 {{AddonSidebar}}
@@ -14,7 +13,8 @@ original_slug: Mozilla/Add-ons/WebExtensions/实现一个设置页面
 - 写一个包含于该 HTML 文件的脚本，其可以使设置页面存储与存储设备中并在用户修改后更新他。
 - 在 manifest.json 文件 [`options_ui`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) 关键字中 设置 HTML 文件的路径。通过这种方式，该 HTML 将会被显示浏览器管理器里该插件名字和描述的旁边。
 
-> **备注：** 你也可以使用 [`runtime.openOptionsPage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) 打开该页面。
+> [!NOTE]
+> 你也可以使用 [`runtime.openOptionsPage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) 打开该页面。
 
 ## 简单的 WebExtension
 
@@ -24,7 +24,6 @@ original_slug: Mozilla/Add-ons/WebExtensions/实现一个设置页面
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Settings example",
   "version": "1.0",
@@ -35,7 +34,6 @@ original_slug: Mozilla/Add-ons/WebExtensions/实现一个设置页面
       "js": ["borderify.js"]
     }
   ]
-
 }
 ```
 
@@ -49,7 +47,7 @@ document.body.style.border = "10px solid blue";
 
 这只是向网页加入了一一个蓝色边框
 
-现在 [安装该扩展](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) 并测试它——打开任意一个网页：
+现在 [安装该扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) 并测试它——打开任意一个网页：
 
 {{EmbedYouTube("E-WUhihF8fw")}}
 
@@ -61,7 +59,6 @@ document.body.style.border = "10px solid blue";
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Settings example",
   "version": "1.0",
@@ -78,7 +75,6 @@ document.body.style.border = "10px solid blue";
   },
 
   "permissions": ["storage"]
-
 }
 ```
 
@@ -90,24 +86,21 @@ document.body.style.border = "10px solid blue";
 接下来，因为我们承诺提供"options.html"，让我们来创建他，在"setting"目录创建一个该文件并具有以下内容：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
   </head>
 
   <body>
-
     <form>
-        <label>Border color<input type="text" id="color" ></label>
-        <button type="submit">Save</button>
+      <label>Border color<input type="text" id="color" /></label>
+      <button type="submit">Save</button>
     </form>
 
     <script src="options.js"></script>
-
   </body>
-
 </html>
 ```
 
@@ -119,12 +112,11 @@ document.body.style.border = "10px solid blue";
 function saveOptions(e) {
   e.preventDefault();
   browser.storage.local.set({
-    color: document.querySelector("#color").value
+    color: document.querySelector("#color").value,
   });
 }
 
 function restoreOptions() {
-
   function setCurrentChoice(result) {
     document.querySelector("#color").value = result.color || "blue";
   }
@@ -148,10 +140,11 @@ document.querySelector("form").addEventListener("submit", saveOptions);
 
 最后，更新"borderify.js" 来读取边框颜色：
 
-> **警告：** 因为 [browser.storage.local.get()](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) 在火狐 52 版本之前的一个漏洞 ,以下代码没法起作用。为了使它生效，`onGot()` 中的 `item.color` 必须改为 `item[0].color`。
+> [!WARNING]
+> 因为 [browser.storage.local.get()](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) 在火狐 52 版本之前的一个漏洞，以下代码没法起作用。为了使它生效，`onGot()` 中的 `item.color` 必须改为 `item[0].color`。
 
 ```js
- function onError(error) {
+function onError(error) {
   console.log(`Error: ${error}`);
 }
 
@@ -169,7 +162,7 @@ getting.then(onGot, onError);
 
 最后，完整的扩展看起来是这样：
 
-```
+```plain
 settings/
     borderify.js
     manifest.json
@@ -179,7 +172,7 @@ settings/
 
 现在：
 
-- [重新载入扩展](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on)
+- [重新载入扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#reloading_a_temporary_add-on)
 - 加载一个网页
 - 打开设置页面并修改边框颜色
 - 重载网页查看变化。
@@ -195,4 +188,4 @@ settings/
 - 使用[`runtime.openOptionsPage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) 直接打开你的设置页面
 - 另一个设置页面例子：
 
-  - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
+  - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour)

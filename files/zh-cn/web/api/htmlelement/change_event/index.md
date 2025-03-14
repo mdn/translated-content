@@ -1,40 +1,34 @@
 ---
-title: change
+title: HTML 元素：change 事件
 slug: Web/API/HTMLElement/change_event
 ---
 
 {{APIRef}}
 
-当用户更改{{HTMLElement("input")}}、{{HTMLElement("select")}}和{{HTMLElement("textarea")}} 元素的值并提交这个更改时，`change` 事件在这些元素上触发。和 {{domxref("HTMLElement/input_event", "input")}} 事件不一样，`change` 事件并不是每次元素的 `value` 改变时都会触发。
+当用户更改 {{HTMLElement("input")}}、{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}} 元素的值时，`change` 事件在这些元素上触发。和 {{domxref("Element/input_event", "input")}} 事件不同的是，并不是每次元素的 `value` 改变时都会触发 `change` 事件。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">冒泡</th>
-      <td>是</td>
-    </tr>
-    <tr>
-      <th scope="row">可取消</th>
-      <td>否</td>
-    </tr>
-    <tr>
-      <th scope="row">接口</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">事件处理程序属性</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onchange", "onchange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+基于表单元素的类型和用户对元素的操作的不同，`change` 事件触发的时机也不同：
 
-基于表单元素的类型和用户对标签的操作的不同，`change` 事件触发的时机也不同：
+- 当 `{{HTMLElement('input/checkbox', '&lt;input type="checkbox"&gt;')}}` 元素被选中或取消选中时（通过点击或使用键盘）；
+- 当 `{{HTMLElement('input/radio', '&lt;input type="radio"&gt;')}}` 元素被选中时（但不是取消选中时）；
+- 当用户显式提交改变时（例如：通过鼠标点击了 {{HTMLElement("select")}} 中的一个下拉选项，通过 `{{HTMLElement('input/date', '&lt;input type="date"&gt;')}}` 元素选择了一个日期，通过 `{{HTMLElement('input/file', '&lt;input type="file"&gt;')}}` 元素上传了一个文件等）；
+- 当标签的值被修改并且失去焦点后，但未提交时（例如：对{{HTMLElement("textarea")}}、 `{{HTMLElement('input/text', 'text')}}`、`{{HTMLElement('input/search', 'search')}}`、`{{HTMLElement('input/url', 'url')}}`、`{{HTMLElement('input/tel', 'tel')}}`、`{{HTMLElement('input/email', 'email')}}` 或 `{{HTMLElement('input/password', 'password')}}` 类型的 {{HTMLElement('input')}} 元素进行编辑后）。
 
-- 当元素是 `:checked` 状态时（通过点击或者使用键盘），见于 `{{HTMLElement('input/radio', '&lt;input type="radio"&gt;')}}` 和 `{{HTMLElement('input/checkbox', '&lt;input type="checkbox"&gt;')}}`；
-- 当用户显式提交改变时（例如：点击了 {{HTMLElement("select")}}中的一个选项，从 `{{HTMLElement('input/date', '&lt;input type="date"&gt;')}}` 标签选择了一个日期，通过 `{{HTMLElement('input/file', '&lt;input type="file"&gt;')}}` 标签上传了一个文件等）；
-- 当标签的值被修改并且失去焦点后，但未提交时（例如：对{{HTMLElement("textarea")}} 或者 `{{HTMLElement('input/text', '&lt;input type="text"&gt;')}}`的值进行编辑后）。
+HTML 标准列出了[应该触发 `change` 事件的 `<input>` 类型](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply)。
+
+## 语法
+
+在方法（如 {{domxref("EventTarget.addEventListener", "addEventListener()")}}）中使用事件的名称，或设置事件处理器属性。
+
+```js
+addEventListener("change", (event) => {});
+
+onchange = (event) => {};
+```
+
+## 事件类型
+
+通用 {{domxref("Event")}}。
 
 ## 示例
 
@@ -42,20 +36,21 @@ slug: Web/API/HTMLElement/change_event
 
 #### HTML
 
-```
-<label>Choose an ice cream flavor:
+```html
+<label>
+  选择一种冰淇淋口味：
   <select class="ice-cream" name="ice-cream">
-    <option value="">Select One …</option>
-    <option value="chocolate">Chocolate</option>
-    <option value="sardine">Sardine</option>
-    <option value="vanilla">Vanilla</option>
+    <option value="">选择一个...</option>
+    <option value="chocolate">巧克力</option>
+    <option value="sardine">沙丁鱼</option>
+    <option value="vanilla">香草</option>
   </select>
 </label>
 
 <div class="result"></div>
 ```
 
-```
+```css hidden
 body {
   display: grid;
   grid-template-areas: "select result";
@@ -72,35 +67,37 @@ select {
 
 #### JavaScript
 
-```
-const selectElement = document.querySelector('.ice-cream');
+```js
+const selectElement = document.querySelector(".ice-cream");
 
-selectElement.addEventListener('change', (event) => {
-  const result = document.querySelector('.result');
-  result.textContent = `You like ${event.target.value}`;
+selectElement.addEventListener("change", (event) => {
+  const result = document.querySelector(".result");
+  result.textContent = `你喜欢 ${event.target.value}`;
 });
 ```
 
 #### 结果
 
+{{ EmbedLiveSample('select_元素', '100%', '75px') }}
+
 ### 文本输入元素
 
-对于一些元素，包括 `<input type="text">`，`change` 事件在控件失去焦点前都不会触发。试一下在下面的输入框输入一些文字，然后点击输入框外的地方来触发事件。
+对于像 `<input type="text">` 这样的元素，`change` 事件在控件失去焦点前都不会触发。试一下在下面的输入框输入一些文字，然后点击输入框外的地方来触发事件。
 
 #### HTML
 
-```
-<input placeholder="Enter some text" name="name"/>
+```html
+<input placeholder="输入一些文本" name="name" />
 <p id="log"></p>
 ```
 
 #### JavaScript
 
-```
-const input = document.querySelector('input');
-const log = document.getElementById('log');
+```js
+const input = document.querySelector("input");
+const log = document.getElementById("log");
 
-input.addEventListener('change', updateValue);
+input.addEventListener("change", updateValue);
 
 function updateValue(e) {
   log.textContent = e.target.value;
@@ -109,12 +106,14 @@ function updateValue(e) {
 
 #### 结果
 
+{{ EmbedLiveSample('文本输入元素', '100%', '90px') }}
+
+## 规范
+
+{{Specifications}}
+
 ## 浏览器兼容性
 
 {{Compat}}
 
-对于一些特定类型的交互是否要触发 `change` 事件，不同浏览器的意见并不总是一致的。例如在 {{HTMLElement("select")}} 元素中使用键盘导航在 Gecko 中不会触发 `change` 事件，直到用户按下 Enter 键或将焦点从 `<select>` 上移走（参见 {{bug("126379")}}）。但从 Firefox 63（Quantum）开始，这个行为在已经在主流浏览器中达成一致。
-
-## 参见
-
-{{domxref("NetworkInformation.connection")}} fires the `change` event when the connection information changes.
+对于一些特定类型的交互是否要触发 `change` 事件，不同浏览器的意见并不总是一致的。例如，在 Gecko 的 {{HTMLElement("select")}} 元素中使用键盘导航，除非用户按下 Enter 键或将焦点从 `<select>` 上移走（参见 [Firefox bug 126379](https://bugzil.la/126379)），否则不会触发 `change` 事件。但从 Firefox 63（Quantum）开始，这个行为在已经在主流浏览器中达成一致。

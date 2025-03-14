@@ -1,11 +1,13 @@
 ---
 title: font-display
 slug: Web/CSS/@font-face/font-display
+l10n:
+  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
 
 {{CSSRef}}
 
-**`font-display`** 記述子は、フォントがダウンロード済みで利用できるかに基づいて、どのようにフォントの種類を表示するかを定めます。
+**`font-display`** は [`@font-face`](/ja/docs/Web/CSS/@font-face) アットルールの記述子で、フォントがダウンロード済みで利用できるかに基づいて、どのようにフォントの種類を表示するかを定めます。
 
 ## 構文
 
@@ -31,26 +33,22 @@ font-display: optional;
 - `optional`
   - : フォントに対して非常に短いブロック時間の後、スワップ時間を置きません。
 
-> **メモ:** Firefox では、 `gfx.downloadable_fonts.fallback_delay` および `gfx.downloadable_fonts.fallback_delay_short` の設定項目で、それぞれ "short" および "extremely small" の時間が利用できます。
+> [!NOTE]
+> Firefox では、 `gfx.downloadable_fonts.fallback_delay` および `gfx.downloadable_fonts.fallback_delay_short` の設定項目で、それぞれ "short" および "extremely small" の時間が利用できます。
 
 ## 解説
 
-### フォント表示の過程
-
 フォント表示の過程は、ユーザーエージェントが指定されたダウンロードフォントを利用しようとした瞬間に始まります。過程はフォントを利用して任意の要素を表示する振る舞いを説明する、以下の 3 つの時間に分かれます。
 
-- フォントブロック時間
-  - : フォントが読み込まれていない場合、そのフォントを利用しようとしている要素は*不可視の*代替フォントで描画されます。この時間に読み込みに成功したフォントは、通常通りに利用できます。
-- フォントスワップ時間
-  - : フォントが読み込まれていない場合、そのフォントを利用しようとしている要素は代替フォントで描画されます。この時間に読み込みに成功したフォントは、通常通りに利用できます。
-- フォント失敗時間
-  - : フォントが読み込まれていなければ、ユーザーエージェントは読み込みに失敗したとして扱い、通常のフォントで代替を行います。
+- フォントブロック時間: フォントが読み込まれていない場合、そのフォントを利用しようとしている要素は*不可視の*代替フォントで描画されます。この時間に読み込みに成功したフォントは、通常通りに利用できます。
+- フォントスワップ時間: フォントが読み込まれていない場合、そのフォントを利用しようとしている要素は代替フォントで描画されます。この時間に読み込みに成功したフォントは、通常通りに利用できます。
+- フォント失敗時間: フォントが読み込まれていなければ、ユーザーエージェントは読み込みに失敗したとして扱い、通常のフォントで代替を行います。
 
 ## 公式定義
 
 {{cssinfo}}
 
-## 構文
+## 形式文法
 
 {{csssyntax}}
 
@@ -61,8 +59,9 @@ font-display: optional;
 ```css
 @font-face {
   font-family: ExampleFont;
-  src: url(/path/to/fonts/examplefont.woff) format('woff'),
-       url(/path/to/fonts/examplefont.eot) format('eot');
+  src:
+    url(/path/to/fonts/example-font.woff) format("woff"),
+    url(/path/to/fonts/example-font.eot) format("eot");
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
@@ -83,7 +82,6 @@ font-display: optional;
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
 - {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/src", "src")}}

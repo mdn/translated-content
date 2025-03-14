@@ -1,50 +1,53 @@
 ---
-title: CustomEvent.detail
+title: CustomEvent：detail 属性
 slug: Web/API/CustomEvent/detail
+l10n:
+  sourceCommit: 14aec55e57117d0dc4a916112e23d310908e9937
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-接口 {{domxref("CustomEvent")}} 的只读属性 **`detail`** （详情）返回在初始化事件对象时传递过来的任何类型数据。
+{{domxref("CustomEvent")}} 接口的 **`detail`** 只读属性返回初始化事件时传递的任何数据。
 
-{{AvailableInWorkers}}
+## 值
 
-## Syntax
+事件初始化时使用的数据。
 
-```plain
- let myDetail = customEventInstance.detail;
-```
-
-### Return value
-
-事件对象初始化时传递的任何类型数据。
-
-## Example
+## 示例
 
 ```js
-// add an appropriate event listener
-obj.addEventListener("cat", function(e) { process(e.detail) });
-
-// create and dispatch the event
-let event = new CustomEvent("cat", {
+// 创建自定义事件
+const catFound = new CustomEvent("animalfound", {
   detail: {
-    hazcheeseburger: true
-  }
+    name: "cat",
+  },
 });
-obj.dispatchEvent(event);
+const dogFound = new CustomEvent("animalfound", {
+  detail: {
+    name: "dog",
+  },
+});
 
-// Will return an object contaning the hazcheeseburger property
-let myDetail = event.detail;
+const element = document.createElement("div"); // 创建一个 <div> 元素
+
+// 添加适当的事件监听
+element.addEventListener("animalfound", (e) => console.log(e.detail.name));
+
+// 派发事件
+element.dispatchEvent(catFound);
+element.dispatchEvent(dogFound);
+
+// 在控制台中输出“cat”和“dog”
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{domxref("CustomEvent")}}

@@ -41,7 +41,7 @@ console.log(float64.length); // 2
 console.log(float64.BYTES_PER_ELEMENT); // 8
 
 // From an array
-var arr = new Float64Array([21,31]);
+var arr = new Float64Array([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
@@ -54,7 +54,9 @@ var buffer = new ArrayBuffer(32);
 var z = new Float64Array(buffer, 0, 4);
 
 // From an iterable
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var float64 = new Float64Array(iterable);
 // Float64Array[1, 2, 3]
 ```
@@ -65,7 +67,7 @@ var float64 = new Float64Array(iterable);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Float64Array.Float64Array")}}
+{{Compat}}
 
 ### 互換性ノート
 
@@ -83,6 +85,6 @@ var dv = new Float64Array([1, 2, 3]);
 
 ## 関連情報
 
-- [JavaScript typed arrays](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

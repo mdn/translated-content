@@ -1,5 +1,5 @@
 ---
-title: ':default'
+title: :default
 slug: Web/CSS/:default
 ---
 
@@ -16,7 +16,7 @@ input:default {
 }
 ```
 
-允许多个选择的分组元素也可以具有多个默认值，即，它们可以具有最初选择的多个项目。在这种情况下，所有默认值都使用 `:default` 伪类表示。例如，您可以在一组复选框之间设置默认复选框。
+允许多个选择的分组元素也可以具有多个默认值，即，它们可以具有最初选择的多个项目。在这种情况下，所有默认值都使用 `:default` 伪类表示。例如，你可以在一组复选框之间设置默认复选框。
 
 ## 语法
 
@@ -27,16 +27,16 @@ input:default {
 ### HTML
 
 ```html
-<input type="radio" name="season" id="spring">
+<input type="radio" name="season" id="spring" />
 <label for="spring">Spring</label>
 
-<input type="radio" name="season" id="summer" checked>
+<input type="radio" name="season" id="summer" checked />
 <label for="summer">Summer</label>
 
-<input type="radio" name="season" id="fall">
+<input type="radio" name="season" id="fall" />
 <label for="fall">Fall</label>
 
-<input type="radio" name="season" id="winter">
+<input type="radio" name="season" id="winter" />
 <label for="winter">Winter</label>
 ```
 

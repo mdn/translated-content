@@ -1,124 +1,135 @@
 ---
-title: AudioContext.createScriptProcessor()
+title: AudioContext.createScriptProcessor() 方法
 slug: Web/API/BaseAudioContext/createScriptProcessor
+l10n:
+  sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
 {{APIRef("Web Audio API")}}{{deprecated_header}}
 
-{{ domxref("AudioContext") }} 接口的`createScriptProcessor()` 方法创建一个{{domxref("ScriptProcessorNode")}} 用于通过 JavaScript 直接处理音频。
+{{domxref("AudioContext")}} 接口的 `createScriptProcessor()` 方法创建一个 {{domxref("ScriptProcessorNode")}}，用于直接使用 JavaScript 处理音频。
+
+> [!NOTE]
+> 此特性已被 [AudioWorklet](/zh-CN/docs/Web/API/AudioWorklet) 和 {{domxref("AudioWorkletNode")}} 接口替代。
 
 ## 语法
 
-```js
-var audioCtx = new AudioContext();
-myScriptProcessor = audioCtx.createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels);
+```js-nolint
+createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 ```
 
 ### 参数
 
 - `bufferSize`
-  - : 缓冲区大小，以样本帧为单位。具体来讲，缓冲区大小必须是下面这些值当中的某一个：256, 512, 1024, 2048, 4096, 8192, 16384. 如果不传，或者参数为 0，则取当前环境最合适的缓冲区大小，取值为 2 的幂次方的一个常数，在该 node 的整个生命周期中都不变。
-    该取值控制着 `audioprocess` 事件被分派的频率，以及每一次调用多少样本帧被处理。较低 bufferSzie 将导致一定的延迟。较高的 bufferSzie 就要注意避免音频的崩溃和故障。推荐作者不要给定具体的缓冲区大小，让系统自己选一个好的值来平衡延迟和音频质量。
+
+  - : 以采样帧为单位的缓冲区大小。具体来讲，缓冲区大小必须是下面这些值当中的某一个：256、512、1024、2048、4096、8192、16384。如果未提供参数，或者参数为 0，则取当前环境最合适的缓冲区大小，取值为 2 的幂次方的一个常数（其在该结点的整个生命周期中都不变）。
+
+    该取值控制着 `audioprocess` 事件被分派的频率，以及每一次调用多少采样帧被处理。更小的 `bufferSize` 意味着更低的延迟。而更大的值则可以避免音频的中断和故障。推荐不要给定具体的缓冲区大小，让系统自己选一个好的值来平衡延迟和音频质量。
+
 - `numberOfInputChannels`
-  - : 值为整数，用于指定输入 node 的声道的数量，默认值是 2，最高能取 32.
+  - : 整数，用于指定输入结点的声道的数量，默认值为 2 且最高可取 32。
 - `numberOfOutputChannels`
-  - : 值为整数，用于指定输出 node 的声道的数量，默认值是 2，最高能取 32.
+  - : 整数，用于指定输出结点的声道的数量，默认值为 2 且最高可取 32。
 
-> **警告：** Webkit (version 31) 要求调用这个方法的时候必须传入一个有效的 bufferSize .
+> [!WARNING]
+> Webkit（版本 31）要求调用这个方法的时候必须传入一个有效的 `bufferSize`。
 
-> **备注：** `numberOfInputChannels`和`numberOfOutputChannels`的值不能同时为 0，二者同时为 0 是无效的
+> [!NOTE]
+> 同时将 `numberOfInputChannels`、`numberOfOutputChannels` 设置为零是无效的。
 
-### 返回
+### 返回值
 
-A {{domxref("ScriptProcessorNode")}}.
+{{domxref("ScriptProcessorNode")}}。
 
 ## 示例
 
-下面的例子展示了一个 `ScriptProcessorNode` 的基本用法，数据源取自 {{ domxref("AudioContext.decodeAudioData") }}, 给每一个音频样本加一点白噪声，然后通过{{domxref("AudioDestinationNode")}}播放 (其实这个就是系统的扬声器)。对于每一个声道和样本帧，在把结果当成输出样本之前，`scriptNode.onaudioprocess` 方法关联 `audioProcessingEvent` ，并用它来遍历每输入流的每一个声道，和每一个声道中的每一个样本，并添加一点白噪声。
+### 使用脚本处理器添加白噪音
 
-> **备注：** 完整的示例参照 [script-processor-node](https://mdn.github.io/webaudio-examples/script-processor-node/) github (查看源码 [source code](https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html).)
+下面的示例展示了如何使用 `ScriptProcessorNode` 获取通过 {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} 加载的音轨并对其进行处理，为输入音轨的每个音频样本添加一点白噪声，然后通过 {{domxref("AudioDestinationNode")}} 进行播放。
+
+对于每个通道和每个采样帧，脚本节点的 {{domxref("ScriptProcessorNode.audioprocess_event", "audioprocess")}} 事件处理器都会使用相关的 `audioProcessingEvent` 来循环处理输入缓冲区的每个通道和每个通道中的每个样本，并添加少量白噪声，然后将结果设置为每种情况下的输出样本。
+
+> [!NOTE]
+> 你可以[在线运行完整的示例](https://mdn.github.io/webaudio-examples/script-processor-node/)，或查看[源代码](https://github.com/mdn/webaudio-examples/tree/main/script-processor-node)。
 
 ```js
-var myScript = document.querySelector('script');
-var myPre = document.querySelector('pre');
-var playButton = document.querySelector('button');
+const myScript = document.querySelector("script");
+const myPre = document.querySelector("pre");
+const playButton = document.querySelector("button");
 
-// Create AudioContext and buffer source
-var audioCtx = new AudioContext();
-source = audioCtx.createBufferSource();
+// 创建 AudioContext 与缓冲源
+let audioCtx;
 
-// Create a ScriptProcessorNode with a bufferSize of 4096 and a single input and output channel
-var scriptNode = audioCtx.createScriptProcessor(4096, 1, 1);
-console.log(scriptNode.bufferSize);
+async function init() {
+  audioCtx = new AudioContext();
+  const source = audioCtx.createBufferSource();
 
-// load in an audio track via XHR and decodeAudioData
+  // 创建一个缓冲区大小（bufferSize）为 4096、
+  // 单一输入和输出通道的 ScriptProcessorNode
+  const scriptNode = audioCtx.createScriptProcessor(4096, 1, 1);
 
-function getData() {
-  request = new XMLHttpRequest();
-  request.open('GET', 'viper.ogg', true);
-  request.responseType = 'arraybuffer';
-  request.onload = function() {
-    var audioData = request.response;
-
-    audioCtx.decodeAudioData(audioData, function(buffer) {
-    myBuffer = buffer;
-    source.buffer = myBuffer;
-  },
-    function(e){"Error with decoding audio data" + e.err});
+  // 使用 fetch() 和 decodeAudioData() 来加载音轨
+  try {
+    const response = await fetch("viper.ogg");
+    const arrayBuffer = await response.arrayBuffer();
+    source.buffer = await audioCtx.decodeAudioData(arrayBuffer);
+  } catch (err) {
+    console.error(
+      `Unable to fetch the audio file: ${name} Error: ${err.message}`,
+    );
   }
-  request.send();
-}
 
-// Give the node a function to process audio events
-scriptNode.onaudioprocess = function(audioProcessingEvent) {
-  // The input buffer is the song we loaded earlier
-  var inputBuffer = audioProcessingEvent.inputBuffer;
+  // 向结点添加一个用于处理音频事件的函数
+  scriptNode.addEventListener("audioprocess", (audioProcessingEvent) => {
+    // 这里的输入缓冲区即为我们前面所加载的歌曲
+    let inputBuffer = audioProcessingEvent.inputBuffer;
 
-  // The output buffer contains the samples that will be modified and played
-  var outputBuffer = audioProcessingEvent.outputBuffer;
+    // 输出缓冲区则会包含将要被修改、播放的采样
+    let outputBuffer = audioProcessingEvent.outputBuffer;
 
-  // Loop through the output channels (in this case there is only one)
-  for (var channel = 0; channel < outputBuffer.numberOfChannels; channel++) {
-    var inputData = inputBuffer.getChannelData(channel);
-    var outputData = outputBuffer.getChannelData(channel);
+    // 在输出通道间循环（在本例中，输出通道仅有一个）
+    for (let channel = 0; channel < outputBuffer.numberOfChannels; channel++) {
+      let inputData = inputBuffer.getChannelData(channel);
+      let outputData = outputBuffer.getChannelData(channel);
 
-    // Loop through the 4096 samples
-    for (var sample = 0; sample < inputBuffer.length; sample++) {
-      // make output equal to the same as the input
-      outputData[sample] = inputData[sample];
+      // 循环迭代 4096 组采样
+      for (let sample = 0; sample < inputBuffer.length; sample++) {
+        // 让输出等同于输入
+        outputData[sample] = inputData[sample];
 
-      // add noise to each output sample
-      outputData[sample] += ((Math.random() * 2) - 1) * 0.2;
+        // 再向其中加一些噪音
+        outputData[sample] += (Math.random() * 2 - 1) * 0.1;
+      }
     }
-  }
-}
+  });
 
-getData();
-
-// wire up play button
-playButton.onclick = function() {
   source.connect(scriptNode);
   scriptNode.connect(audioCtx.destination);
   source.start();
+
+  // 当缓冲源停止播放的时候，断开一切的连接
+  source.addEventListener("ended", () => {
+    source.disconnect(scriptNode);
+    scriptNode.disconnect(audioCtx.destination);
+  });
 }
 
-// When the buffer source stops playing, disconnect everything
-source.onended = function() {
-  source.disconnect(scriptNode);
-  scriptNode.disconnect(audioCtx.destination);
-}
+// 连接播放按钮
+playButton.addEventListener("click", () => {
+  if (!audioCtx) {
+    init();
+  }
+});
 ```
 
 ## 规范
 
-自 2014 年 8 月 29 日 [Web Audio API 规范](https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createscriptprocessor)发布以来，此特性已被弃用。它不再有望成为标准。
-
-它已被 [AudioWorklet](/zh-CN/docs/Web/API/AudioWorklet) 和 {{domxref("AudioWorkletNode")}} 接口所取代。
+{{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web 音频 API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

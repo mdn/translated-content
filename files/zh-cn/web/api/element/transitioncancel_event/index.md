@@ -5,7 +5,7 @@ slug: Web/API/Element/transitioncancel_event
 
 {{APIRef("CSS3 Transitions")}}
 
-**`transitioncancel`** 事件在 [CSS 转换](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)被取消时触发。
+**`transitioncancel`** 事件在 [CSS 转换](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)被取消时触发。
 
 当以下情况时，过渡被取消：
 
@@ -13,19 +13,15 @@ slug: Web/API/Element/transitioncancel_event
 - {{cssxref("display")}}属性被设置为"none"。
 - 转换在运行到完成之前就停止了，例如通过将鼠标移出悬浮过渡元素。
 
-## Syntax
+## 语法
 
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+
+```js
+addEventListener("transitioncancel", (event) => {});
+
+ontransitioncancel = (event) => {};
 ```
-var transitionCancelHandler = target.ontransitioncancel;
-
-target.ontransitioncancel = {{jsxref("Function")}}
-```
-
-### Value
-
-A {{jsxref("Function")}} to be called when a `transitioncancel` event occurs indicating that a CSS transition has been cancelled on the _`target`_, where the target object is an HTML element ({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as input a single parameter: a {{domxref("TransitionEvent")}} object describing the event which occurred; the event's {{domxref("TransitionEvent.elapsedTime")}} property's value should be the same as the value of {{cssxref("transition-duration")}}.
-
-> **备注：** elapsedTime 不包括过渡效果开始之前的时间;这意味着{{cssxref("transition-delay")}}的值不会影响 elapsedTime 的值，elapsedTime 在延迟周期结束和动画开始之前都是 0。
 
 ## 示例
 
@@ -54,16 +50,29 @@ A {{jsxref("Function")}} to be called when a `transitioncancel` event occurs ind
   display: block;
   width: 100px;
   height: 100px;
-  background-color: #0000FF;
-  color: #FFFFFF;
+  background-color: #0000ff;
+  color: #ffffff;
   padding: 20px;
-  font: bold 1.6em "Helvetica", "Arial", sans-serif;
-  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s, color 2s;
-  transition: width 2s, height 2s, background-color 2s, transform 2s, color 2s;
+  font:
+    bold 1.6em "Helvetica",
+    "Arial",
+    sans-serif;
+  -webkit-transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    -webkit-transform 2s,
+    color 2s;
+  transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    transform 2s,
+    color 2s;
 }
 
 .box:hover {
-  background-color: #FFCCCC;
+  background-color: #ffcccc;
   color: #000000;
   width: 200px;
   height: 200px;
@@ -78,25 +87,27 @@ A {{jsxref("Function")}} to be called when a `transitioncancel` event occurs ind
 
 ```js
 let box = document.querySelector(".box");
-box.ontransitionrun = function(event) {
+box.ontransitionrun = function (event) {
   box.innerHTML = "Zooming...";
-}
+};
 
-box.ontransitionend = function(event) {
+box.ontransitionend = function (event) {
   box.innerHTML = "Done!";
-}
+};
 
-box.onclick = function() {
-  box.style.display = 'none';
+box.onclick = function () {
+  box.style.display = "none";
   timeout = window.setTimeout(appear, 2000);
   function appear() {
-    box.style.display = 'block';
+    box.style.display = "block";
   }
-}
+};
 
-box.ontransitioncancel = function(event) {
-  console.log('transitioncancel fired after ' + event.elapsedTime + ' seconds.');
-}
+box.ontransitioncancel = function (event) {
+  console.log(
+    "transitioncancel fired after " + event.elapsedTime + " seconds.",
+  );
+};
 ```
 
 ### 结果

@@ -5,11 +5,11 @@ slug: Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
 
 {{FirefoxSidebar}}
 
-色補正のサポートは Firefox 3 で導入されましたが、デフォルトでは無効になっています。これを有効にするには、about:config ウィンドウを少し修正する必要があります。 Firefox 3.5 では、以前のバージョンではデフォルトで無効になっていた問題が解決されました。現在 [International Color Consortium](http://www.color.org/) (ICC) タグの画像は、デフォルトで色補正されています。
+色補正のサポートは Firefox 3 で導入されましたが、デフォルトでは無効になっています。これを有効にするには、about:config ウィンドウを少し修正する必要があります。 Firefox 3.5 では、以前のバージョンではデフォルトで無効になっていた問題が解決されました。現在 [International Color Consortium](https://www.color.org/) (ICC) タグの画像は、デフォルトで色補正されています。
 
 下の画像は 3 つのセクションに分割されています。 左上隅には、Firefox 2 でレンダリングされた画像が表示されます。右上隅には、Firefox 3 での画像のレンダリング方法が表示されます。下には、Photoshop でレンダリングされた画像が表示されます。
 
-![iccsample.jpg](/@api/deki/files/3218/=iccsample.jpg)
+![iccsample.jpg](iccsample.jpg)
 
 ご覧のように、Firefox 3 と Photoshop は埋め込まれた色補正プロファイルをサポートしているため、イメージを同じようにレンダリングします。 Firefox 2 はプロファイルを無視し、色が一致しません。
 
@@ -45,15 +45,16 @@ slug: Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
 | 2   | 飽和。 これは、色相の精度を保つことを犠牲にして、色の鮮やかさを維持する。 これは、チャートやダイアグラム、色調の正確な複製がそれほど重要ではないうちに、色が「ポップ」するその他のメディアに特に便利です。                                   |
 | 3   | ICC-絶対比色分析。 これは、スポットカラーや、色域内の色を変更しないので、あるメディアを別のものでシミュレートする場合に最も便利です。                                                                                                        |
 
-> **メモ:** Firefox 3.5 では、perceptual、media-relative、および saturation のインテントがすべて同じようにレンダリングされます。
+> [!NOTE]
+> Firefox 3.5 では、perceptual、media-relative、および saturation のインテントがすべて同じようにレンダリングされます。
 
 ### 警告
 
-Firefox 3.5 で導入された新しい QCMS カラーマネジメントシステムは、バージョン 4 ではなく、ICC カラープロファイルのバージョン 2 のみをサポートしています。画像が暗すぎることがあります。[bug 488800](https://bugzilla.mozilla.org/show_bug.cgi?id=488800) と[ICC version 4 profile test](http://www.color.org/version4html.xalter) を参照してください。
+Firefox 3.5 で導入された新しい QCMS カラーマネジメントシステムは、バージョン 4 ではなく、ICC カラープロファイルのバージョン 2 のみをサポートしています。画像が暗すぎることがあります。[bug 488800](https://bugzilla.mozilla.org/show_bug.cgi?id=488800) と[ICC version 4 profile test](https://www.color.org/version4html.xalter) を参照してください。
 
 ## 関連情報
 
 - [So Many Colors](http://bholley.wordpress.com/2008/09/12/so-many-colors/) (blog post)
 - [Firefox 3: Color profile support](http://www.dria.org/wordpress/archives/2008/04/29/633/) (blog post)
 - [Color Profiles in Firefox 3](http://ejohn.org/blog/color-profiles/) (blog post)
-- [International Color Consortium](http://www.color.org/)
+- [International Color Consortium](https://www.color.org/)

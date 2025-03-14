@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Extra_lives", "Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}
 
-这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 14 步**。您可以在[Gamedev-Phaser-Content-Kit / demos / lesson14.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson14.html)完成本课程后找到源代码。
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 的**第 14 步**。你可以在[Gamedev-Phaser-Content-Kit / demos / lesson14.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson14.html)完成本课程后找到源代码。
 
 为了使游戏看起来更加多汁和活泼，我们可以使用动画和补间。这将导致更好，更有趣的体验。让我们来探讨如何在游戏中实现 Phaser 动画和补间。
 
@@ -15,12 +15,12 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens
 
 在 Phaser，动画中，涉及从外部来源获取 spritesheet 并依次显示 sprites。作为一个例子，当碰到一些东西时，我们会让球摇摆。
 
-首先，[从 Github 抓取 spritesheet](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/wobble.png)并将其保存在您的`/img`目录中。
+首先，[从 Github 抓取 spritesheet](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/wobble.png)并将其保存在你的`/img`目录中。
 
 接下来，我们将加载 spritesheet - 将以下行放在`preload()`函数的底部：
 
 ```js
-game.load.spritesheet('ball', 'img/wobble.png', 20, 20);
+game.load.spritesheet("ball", "img/wobble.png", 20, 20);
 ```
 
 而不是加载单个图像的球，我们可以加载整个 spritesheet - 不同图像的集合。我们将按顺序显示精灵，创造动画的幻觉。该`spritesheet()`方法的两个额外的表格确定给定 spritesheet 文件中每个单个框架的宽度和高度，指示程序如何切割以获取单个框架。
@@ -30,14 +30,14 @@ game.load.spritesheet('ball', 'img/wobble.png', 20, 20);
 接下来，进入你的 create() 函数，找到加载球精灵的行，下面的调用`animations.add()`如下所示：
 
 ```js
-ball = game.add.sprite(50, 250, 'ball');
-ball.animations.add('wobble', [0,1,0,2,0,1,0,2,0], 24);
+ball = game.add.sprite(50, 250, "ball");
+ball.animations.add("wobble", [0, 1, 0, 2, 0, 1, 0, 2, 0], 24);
 ```
 
 要向对象添加动画，我们使用该`animations.add()`方法，其中包含以下参数
 
 - 我们为动画选择的名称
-- 一个数组，定义在动画过程中显示帧的顺序。如果您再次查看`wobble.png`图像，您会看到有三个框架。Phaser 提取它们并将它们存储在数组中 - 位置 0，1 和 2.上面的数组表示我们显示帧 0，然后是 1，然后是 0 等。
+- 一个数组，定义在动画过程中显示帧的顺序。如果你再次查看`wobble.png`图像，你会看到有三个框架。Phaser 提取它们并将它们存储在数组中 - 位置 0，1 和 2.上面的数组表示我们显示帧 0，然后是 1，然后是 0 等。
 - 帧速率，以 fps 为单位。由于我们以 24fps 运行动画，有 9 帧，动画每秒将显示三次以下。
 
 ## 当球击中桨时应用动画
@@ -46,9 +46,9 @@ ball.animations.add('wobble', [0,1,0,2,0,1,0,2,0], 24);
 
 ```js
 function update() {
-    game.physics.arcade.collide(ball, paddle, ballHitPaddle);
-    game.physics.arcade.collide(ball, bricks, ballHitBrick);
-    paddle.x = game.input.x || game.world.width*0.5;
+  game.physics.arcade.collide(ball, paddle, ballHitPaddle);
+  game.physics.arcade.collide(ball, bricks, ballHitBrick);
+  paddle.x = game.input.x || game.world.width * 0.5;
 }
 ```
 
@@ -56,7 +56,7 @@ function update() {
 
 ```js
 function ballHitPaddle(ball, paddle) {
-    ball.animations.play('wobble');
+  ball.animations.play("wobble");
 }
 ```
 
@@ -66,13 +66,13 @@ function ballHitPaddle(ball, paddle) {
 
 而动画依次播放外部精灵，补间游戏中物体的属性平滑，如宽度或不透明度。
 
-让我们在游戏中增加一个补间，使砖块在被球击中时顺利消失。转到您的`ballhitBrick()`功能，找到您的`brick.kill();`行，并将其替换为以下内容：
+让我们在游戏中增加一个补间，使砖块在被球击中时顺利消失。转到你的`ballhitBrick()`功能，找到你的`brick.kill();`行，并将其替换为以下内容：
 
 ```js
 var killTween = game.add.tween(brick.scale);
-killTween.to({x:0,y:0}, 200, Phaser.Easing.Linear.None);
-killTween.onComplete.addOnce(function(){
-    brick.kill();
+killTween.to({ x: 0, y: 0 }, 200, Phaser.Easing.Linear.None);
+killTween.onComplete.addOnce(function () {
+  brick.kill();
 }, this);
 killTween.start();
 ```
@@ -87,19 +87,21 @@ killTween.start();
 这是补间定义的扩展版本，但是我们也可以使用速记语法：
 
 ```js
-game.add.tween(brick.scale).to({x:2,y:2}, 500, Phaser.Easing.Elastic.Out, true, 100);
+game.add
+  .tween(brick.scale)
+  .to({ x: 2, y: 2 }, 500, Phaser.Easing.Elastic.Out, true, 100);
 ```
 
 这个补间将使用弹性宽松在半秒内将砖的比例翻倍，将自动启动，延迟 100 毫秒。
 
 ## 比较你的代码
 
-您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
+你可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/9o4pakrb/","","400")}}
 
 ## 下一步
 
-动画和 tweens 看起来很不错，但我们可以添加更多的我们的游戏 - 在下一节我们将看看处理[按钮](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Buttons)输入。
+动画和 tweens 看起来很不错，但我们可以添加更多的我们的游戏 - 在下一节我们将看看处理[按钮](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons)输入。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Extra_lives", "Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}

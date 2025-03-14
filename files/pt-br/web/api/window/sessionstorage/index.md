@@ -5,16 +5,16 @@ slug: Web/API/Window/sessionStorage
 
 {{APIRef()}}
 
-A propriedade `sessionStorage` permite acessar um objeto tipo session {{domxref("Storage")}}. A sessionStorage é similar ao [`localStorage`](/pt-BR/docs/Web/API/Window.localStorage), a única diferença é que enquanto os dados armazenados no `localStorage` não expiram, os dados no sessionstorage tem os seus dados limpos ao expirar a sessão da página. A sessão da página dura enquanto o browser está aberto e se mantém no recarregamento da página. **Abrir a página em uma nova aba ou nova janela irá gerar uma nova sessão,** o que diferencia de como os cookies trabalham**.**
+A propriedade `sessionStorage` permite acessar um objeto tipo session {{domxref("Storage")}}. A sessionStorage é similar ao [`localStorage`](/pt-BR/docs/Web/API/Window/localStorage), a única diferença é que enquanto os dados armazenados no `localStorage` não expiram, os dados no sessionstorage tem os seus dados limpos ao expirar a sessão da página. A sessão da página dura enquanto o browser está aberto e se mantém no recarregamento da página. **Abrir a página em uma nova aba ou nova janela irá gerar uma nova sessão,** o que diferencia de como os cookies trabalham**.**
 
 ## Sintaxe
 
 ```js
 // Salva os dados na sessionStorage
-sessionStorage.setItem('chave', 'valor');
+sessionStorage.setItem("chave", "valor");
 
 // Obtém os dados da sessionStorage
-var data = sessionStorage.getItem('chave');
+var data = sessionStorage.getItem("chave");
 ```
 
 ### Valor
@@ -26,7 +26,7 @@ Objeto {{domxref("Storage")}}.
 O seguinte trecho acessa o objeto da sessão do domínio atual {{domxref("Storage")}} e adiciona um item usando o {{domxref("Storage.setItem()")}}.
 
 ```js
-sessionStorage.setItem('myCat', 'Tom');
+sessionStorage.setItem("myCat", "Tom");
 ```
 
 O exemplo a seguir salva automaticamente o conteúdo da caixa de texto, e caso o browser seja acidentalmente recarregado, o conteúdo da caixa de texto é restaurado.
@@ -43,25 +43,24 @@ if (sessionStorage.getItem("autosave")) {
 }
 
 // Verifica as mudanças que ocorrem na caixa de texto
-field.addEventListener("change", function() {
+field.addEventListener("change", function () {
   // E salva o resultado dentro de um objeto session storage
   sessionStorage.setItem("autosave", field.value);
 });
 ```
 
-> **Nota:** Por favor use o artigo [Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) para um exemplo completo.
+> [!NOTE]
+> Por favor use o artigo [Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) para um exemplo completo.
 
 ## Especificações
 
-| Especificações                                                                                           | Status                           | Comentários |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('Web Storage', '#the-sessionstorage-attribute', 'sessionStorage')}} | {{Spec2('Web Storage')}} |             |
+{{Specifications}}
 
-## Browser compatíveis
+## Compatibilidade com navegadores
 
-{{Compat("api.Window.sessionStorage")}}
+{{Compat}}
 
 ## Veja também
 
 - [Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- [Window.localStorage](/pt-BR/docs/Web/API/Window.localStorage)
+- [Window.localStorage](/pt-BR/docs/Web/API/Window/localStorage)

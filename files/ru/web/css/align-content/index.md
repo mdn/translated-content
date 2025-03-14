@@ -1,7 +1,6 @@
 ---
 title: align-content
 slug: Web/CSS/align-content
-translation_of: Web/CSS/align-content
 ---
 
 {{CSSRef}}
@@ -10,7 +9,51 @@ translation_of: Web/CSS/align-content
 
 The interactive example below use Grid Layout to demonstrate some of the values of this property.
 
-{{EmbedInteractiveExample("pages/css/align-content.html")}}
+{{InteractiveExample("CSS Demo: align-content")}}
+
+```css interactive-example-choice
+align-content: start;
+```
+
+```css interactive-example-choice
+align-content: center;
+```
+
+```css interactive-example-choice
+align-content: space-between;
+```
+
+```css interactive-example-choice
+align-content: space-around;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 60px 60px;
+  grid-auto-rows: 40px;
+  column-gap: 10px;
+  height: 180px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 Это свойство не влияет на однострочные flex-контейнеры (т.е. с `flex-wrap: nowrap`)
 
@@ -19,11 +62,11 @@ The interactive example below use Grid Layout to demonstrate some of the values 
 ```css
 /* Основное позиционное выравнивание */
 /* align-content не принимает значения left и right */
-align-content: center;     /* Расположить элементы вокруг центра */
-align-content: start;      /* Расположить элементы в начале */
-align-content: end;        /* Расположить элементы в конце */
+align-content: center; /* Расположить элементы вокруг центра */
+align-content: start; /* Расположить элементы в начале */
+align-content: end; /* Расположить элементы в конце */
 align-content: flex-start; /* Расположить элементы flex в начале */
-align-content: flex-end;   /* Расположить элементы flex в конце */
+align-content: flex-end; /* Расположить элементы flex в конце */
 
 /* Нормальное выравнивание */
 align-content: normal;
@@ -37,12 +80,12 @@ align-content: last baseline;
 align-content: space-between; /* Распределить элементы равномерно
                                  Первый элемент находится на одном уровне с началом,
                                  последней - совпадает с концом */
-align-content: space-around;  /* Распределить элементы равномерно
+align-content: space-around; /* Распределить элементы равномерно
                                  Элементы имеют половинное пространство
                                  на каждом конце */
-align-content: space-evenly;  /* Распределить элементы равномерно
+align-content: space-evenly; /* Распределить элементы равномерно
                                  Элементы имеют одинаковое пространство вокруг них */
-align-content: stretch;       /* Распределить элементы равномерно
+align-content: stretch; /* Распределить элементы равномерно
                                  Растянуть 'auto'-размерные элементы, чтобы заполнить
                                  контейнер */
 
@@ -99,7 +142,7 @@ align-content: unset;
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   align-content: center; /* Can be changed in the live sample */
   background-color: #8c8c8c;
@@ -218,15 +261,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.alignContent = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```
@@ -242,14 +285,8 @@ display.addEventListener('change', function (evt) {
 
 ## Совместимость с браузерами
 
-### Support in Flex layout
-
-{{Compat}}
-
-### Support in Grid layout
-
 {{Compat}}
 
 ## Смотрите также
 
-- [Использование гибких блоков CSS](../../CSS/Using_CSS_flexible_boxes)
+- [Использование гибких блоков CSS](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)

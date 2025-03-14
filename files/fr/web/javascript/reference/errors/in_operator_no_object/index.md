@@ -1,12 +1,6 @@
 ---
 title: 'TypeError: invalid ''in'' operand "x"'
 slug: Web/JavaScript/Reference/Errors/in_operator_no_object
-tags:
-  - Erreurs
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/in_operator_no_object
-original_slug: Web/JavaScript/Reference/Erreurs/in_operator_no_object
 ---
 
 {{jsSidebar("Errors")}}
@@ -25,13 +19,13 @@ TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
 
 ## Quel est le problème ?
 
-L'[opérateur `in`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_in) peut uniquement être utilisé pour vérifier qu'une propriété appartient à un objet. Il ne peut pas être utilisé pour rechercher des caractères dans des chaînes de caractères, des nombres ou dans d'autres types de données en dehors des objets.
+L'[opérateur `in`](/fr/docs/Web/JavaScript/Reference/Operators/in) peut uniquement être utilisé pour vérifier qu'une propriété appartient à un objet. Il ne peut pas être utilisé pour rechercher des caractères dans des chaînes de caractères, des nombres ou dans d'autres types de données en dehors des objets.
 
 ## Exemples
 
 ### Rechercher un texte dans une chaîne de caractères
 
-À la différence de certains langages de programmation (Python par exemple), JavaScript ne permet pas de chercher des textes dans une chaîne de caractères grâce à l'opérateur [`in`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_in).
+À la différence de certains langages de programmation (Python par exemple), JavaScript ne permet pas de chercher des textes dans une chaîne de caractères grâce à l'opérateur [`in`](/fr/docs/Web/JavaScript/Reference/Operators/in).
 
 ```js example-bad
 "Coucou" in "Coucou monde";
@@ -71,11 +65,11 @@ var toto = { machin: "bidule" };
 Attention lorsqu'on utilise l'opérateur `in` quand on recherche une valeur dans un objet {{jsxref("Array")}}. L'opérateur `in` vérifie la présence de l'index mais pas la valeur présente à cet index.
 
 ```js
-var arbres = ['cèdre', 'bouleau', 'pin', 'sapin', 'érable'];
+var arbres = ["cèdre", "bouleau", "pin", "sapin", "érable"];
 3 in arbres; // true
 "pin" in arbres; // false
 ```
 
 ## Voir aussi
 
-- [L'opérateur `in`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_in)
+- [L'opérateur `in`](/fr/docs/Web/JavaScript/Reference/Operators/in)

@@ -1,11 +1,6 @@
 ---
 title: border-bottom-left-radius
 slug: Web/CSS/border-bottom-left-radius
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-bottom-left-radius
 ---
 
 {{CSSRef}}
@@ -16,7 +11,8 @@ La propriété **`border-bottom-left-radius`** définit le rayon de courbure de 
 
 L'arrondi peut être un fragment de cercle ou d'ellipse. Si une des valeurs vaut 0, aucun arrondi n'a lieu et le coin est un angle droit.Un arrière-plan (que ce soit une couleur ou une image) sera rogné selon la bordure même si celle-ci est arrondie. L'endroit du rognage est défini selon la valeur de {{cssxref("background-clip")}}.
 
-> **Note :** Si la valeur de cette propriété n'est pas définie par la propriété raccourcie {{cssxref("border-radius")}} et que cette dernière est appliquée après `border-bottom-left-radius`, cela aura pour effet de réinitialiser la valeur avec la valeur initiale de [la propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties).
+> [!NOTE]
+> Si la valeur de cette propriété n'est pas définie par la propriété raccourcie {{cssxref("border-radius")}} et que cette dernière est appliquée après `border-bottom-left-radius`, cela aura pour effet de réinitialiser la valeur avec la valeur initiale de [la propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties).
 
 ## Syntaxe
 
@@ -93,10 +89,10 @@ div {
 ### HTML
 
 ```html
- <div class="arc_cercle"></div>
- <div class="arc_ellipse"></div>
- <div class="pourcentage"></div>
- <div class="rognage"></div>
+<div class="arc_cercle"></div>
+<div class="arc_ellipse"></div>
+<div class="pourcentage"></div>
+<div class="rognage"></div>
 ```
 
 ### Résultat

@@ -1,16 +1,12 @@
 ---
 title: page-break-after
 slug: Web/CSS/page-break-after
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/page-break-after
 ---
 
 {{CSSRef}}
 
-> **Attention :** Cette propriété a été remplacée par la propriété {{cssxref("break-after")}}.
+> [!WARNING]
+> Cette propriété a été remplacée par la propriété {{cssxref("break-after")}}.
 
 La propriété CSS **`page-break-after`** permet d'ajuster les sauts de page placés _après_ l'élément courant.
 

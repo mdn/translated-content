@@ -1,15 +1,9 @@
 ---
 title: 텍스트 그리기
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
-tags:
-  - HTML
-  - HTML:Canvas
-  - NeedsContent
-translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
-original_slug: Drawing_text_using_a_canvas
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
 이전 챕터에서 [스타일과 컬러를 적용하는 방법](/ko/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)에 대해서 보았고 이번에는 캔버스에 텍스트를 그리는 방법에 대해서 볼 예정입니다.
 
@@ -28,9 +22,9 @@ original_slug: Drawing_text_using_a_canvas
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.font = '48px serif';
-  ctx.fillText('Hello world', 10, 50);
+  var ctx = document.getElementById("canvas").getContext("2d");
+  ctx.font = "48px serif";
+  ctx.fillText("Hello world", 10, 50);
 }
 ```
 
@@ -50,9 +44,9 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.font = '48px serif';
-  ctx.strokeText('Hello world', 10, 50);
+  var ctx = document.getElementById("canvas").getContext("2d");
+  ctx.font = "48px serif";
+  ctx.strokeText("Hello world", 10, 50);
 }
 ```
 
@@ -81,7 +75,7 @@ draw();
 
 만약 CSS를 다뤄보신적이 있다면 이러한 프로퍼티들은 익숙하실겁니다.
 
-다음에 나오는 [WHATWG](http://www.whatwg.org/) 예제 다이어그램은 `textBaseline`를 이용하여 다양한 베이스라인 설정을 보여줍니다.![The top of the em square is
+다음에 나오는 [WHATWG](https://www.whatwg.org/) 예제 다이어그램은 `textBaseline`를 이용하여 다양한 베이스라인 설정을 보여줍니다.![The top of the em square is
 roughly at the top of the glyphs in a font, the hanging baseline is
 where some glyphs like आ are anchored, the middle is half-way
 between the top of the em square and the bottom of the em square,
@@ -97,9 +91,9 @@ baselines, due to glyphs extending far outside the em square.](http://www.whatwg
 아래의 코드를 수정하여 캔버스에서 어떻게 바뀌는지 실시간으로 확인해 보세요.
 
 ```js
-ctx.font = '48px serif';
-ctx.textBaseline = 'hanging';
-ctx.strokeText('Hello world', 0, 100);
+ctx.font = "48px serif";
+ctx.textBaseline = "hanging";
+ctx.strokeText("Hello world", 0, 100);
 ```
 
 ```html hidden
@@ -111,15 +105,16 @@ ctx.strokeText('Hello world', 0, 100);
 <textarea id="code" class="playable-code">
 ctx.font = "48px serif";
 ctx.textBaseline = "hanging";
-ctx.strokeText("Hello world", 0, 100);</textarea>
+ctx.strokeText("Hello world", 0, 100);</textarea
+>
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
 var code = textarea.value;
 
 function drawCanvas() {
@@ -127,17 +122,17 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', drawCanvas);
-window.addEventListener('load', drawCanvas);
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);
 ```
 
 {{ EmbedLiveSample('Playable_code', 700, 360) }}
@@ -153,8 +148,8 @@ window.addEventListener('load', drawCanvas);
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var text = ctx.measureText('foo'); // TextMetrics object
+  var ctx = document.getElementById("canvas").getContext("2d");
+  var text = ctx.measureText("foo"); // TextMetrics object
   text.width; // 16;
 }
 ```

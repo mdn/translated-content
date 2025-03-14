@@ -1,7 +1,8 @@
 ---
-title: 'Notification: click イベント'
+title: "Notification: click イベント"
 slug: Web/API/Notification/click_event
-original_slug: Web/API/Notification/onclick
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -15,9 +16,9 @@ original_slug: Web/API/Notification/onclick
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使うか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('click', event => { });
+addEventListener("click", (event) => {});
 
-onclick = event => { };
+onclick = (event) => {};
 ```
 
 ## イベント型
@@ -29,10 +30,10 @@ onclick = event => { };
 以下の例では、 onclick ハンドラーを使用して、通知がクリックされたときにウェブページを新しいタブで開くようにしています（`'_blank'` 引数を含めることで指定）。
 
 ```js
-notification.onclick = function(event) {
+notification.onclick = (event) => {
   event.preventDefault(); // prevent the browser from focusing the Notification's tab
-  window.open('http://www.mozilla.org', '_blank');
-}
+  window.open("https://www.mozilla.org", "_blank");
+};
 ```
 
 ## 仕様書

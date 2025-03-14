@@ -1,20 +1,9 @@
 ---
 title: extensionTypes.ImageDetails
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - ImageDetails
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - extensionType
-translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Details sur le format et la qualité de l'image.
 
@@ -27,15 +16,15 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `quality`{{optional_inline}}
   - : `integer`. Quand le format est `"jpeg"`, cela controle la qualité du résultat de l'image. C'est un nombre compris entre 0 et 100, qui est converti en une valeur entre 0 et 1 puis utilisé comme argument `encoderOptions` sur [`HTMLCanvasElement.toDataURL()`](/fr/docs/Web/API/HTMLCanvasElement/toDataURL). Si c'est choisi, 92 est utilisé. A mesure que la qualité baisse, le résultat de l'image aura plus d'artefacts visuel, et le nombre d'octets nécessaires pour le stocker diminuera. Cette valeur est ignorée pour les images PNG.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extensionTypes.ImageDetails")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basé sur l'API Chromium [`chrome.extensionTypes`](https://developer.chrome.com/extensions/extensionTypes) . Cette documentation provient de [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) dans le code de Chromium.
+> Cette API est basé sur l'API Chromium [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/api/extensionTypes) . Cette documentation provient de [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) dans le code de Chromium.
 >
 > Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 

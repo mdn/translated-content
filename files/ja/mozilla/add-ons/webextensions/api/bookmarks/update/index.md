@@ -3,9 +3,9 @@ title: bookmarks.update()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-**`bookmarks.update()`** は、ブックマークの URL やタイトル、またはフォルダの名前を更新するメソッドです。
+**`bookmarks.update()`** は、ブックマークの URL やタイトル、またはフォルダーの名前を更新するメソッドです。
 
 ブックマーク要素が見つからなかった場合には {{WebExtAPIRef("runtime.lastError")}} がセットされるので、エラーの有無をコールバックで確認できます。
 
@@ -13,22 +13,22 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
 
 ```js
 browser.bookmarks.update(
-  id,      // 文字列
+  id, // 文字列
   changes, // オブジェクト
-  callback // 関数（省略可）
-)
+  callback, // 関数（省略可）
+);
 ```
 
 ### 引数
 
 - `id`
-  - : 更新したいブックマーク / フォルダの ID を表す {{jsxref("string")}} です。
+  - : 更新したいブックマーク / フォルダーの ID を表す {{jsxref("string")}} です。
 - `changes`
 
-  - : 適用したい変更内容を表す {{jsxref("object")}} であり、以下のプロパティから構成されます。指定しなかったプロパティについて、ブックマークやフォルダが変更されることはありません。
+  - : 適用したい変更内容を表す {{jsxref("object")}} であり、以下のプロパティから構成されます。指定しなかったプロパティについて、ブックマークやフォルダーが変更されることはありません。
 
     - `title`{{optional_inline}}
-      - : `id` がフォルダを表す場合、ブックマークの新しいタイトル / フォルダの新しい名前を指定する {{jsxref("string")}} です。
+      - : `id` がフォルダーを表す場合、ブックマークの新しいタイトル / フォルダーの新しい名前を指定する {{jsxref("string")}} です。
     - `url`{{optional_inline}}
       - : ブックマークの新しい URL を指定する {{jsxref("string")}} です。
 
@@ -41,13 +41,13 @@ browser.bookmarks.update(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.update")}}
+{{Compat}}
 
 ## 使用例
 
-### フォルダのリネーム
+### フォルダーのリネーム
 
-以下の例は、"MDN" という名前のフォルダすべてを "MDN" to "Mozilla Developer Network (MDN)" にリネームするものです。
+以下の例は、"MDN" という名前のフォルダーすべてを "MDN" to "Mozilla Developer Network (MDN)" にリネームするものです。
 
 ```js
 function updateFolders(items) {
@@ -55,7 +55,7 @@ function updateFolders(items) {
     // only folders, so skip items with a `url`
     if (!item.url) {
       chrome.bookmarks.update(item.id, {
-        title: "Mozilla Developer Network (MDN)"
+        title: "Mozilla Developer Network (MDN)",
       });
     }
   }
@@ -66,9 +66,11 @@ chrome.bookmarks.search({ title: "MDN" }, updateFolders);
 
 {{WebExtExamples}}
 
-> **メモ:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-update) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> [!NOTE]
+> This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-update) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -95,4 +97,4 @@ chrome.bookmarks.search({ title: "MDN" }, updateFolders);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

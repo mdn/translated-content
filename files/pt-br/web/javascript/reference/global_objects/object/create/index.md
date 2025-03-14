@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/create
 
 O método **`Object.create()`** cria um novo objeto, utilizando um outro objeto existente como protótipo para o novo objeto a ser criado.
 
-{{EmbedInteractiveExample("pages/js/object-create.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Object.create()", "taller")}}
+
+```js interactive-example
+const person = {
+  isHuman: false,
+  printIntroduction: function () {
+    console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+  },
+};
+
+const me = Object.create(person);
+
+me.name = "Matthew"; // "name" is a property set on "me", but not on "person"
+me.isHuman = true; // Inherited properties can be overwritten
+
+me.printIntroduction();
+// Expected output: "My name is Matthew. Am I human? true"
+```
 
 ## Sintaxe
 
@@ -44,10 +61,10 @@ function Shape() {
 }
 
 // método da superclasse
-Shape.prototype.move = function(x, y) {
+Shape.prototype.move = function (x, y) {
   this.x += x;
   this.y += y;
-  console.info('Shape moved.');
+  console.info("Shape moved.");
 };
 
 // Rectangle - subclasse
@@ -61,8 +78,8 @@ Rectangle.prototype.constructor = Rectangle;
 
 var rect = new Rectangle();
 
-console.log('Rect é uma instância de Rectangle?', rect instanceof Rectangle);// true
-console.log('Rect é uma instância de Shape?', rect instanceof Shape);// true
+console.log("Rect é uma instância de Rectangle?", rect instanceof Rectangle); // true
+console.log("Rect é uma instância de Shape?", rect instanceof Shape); // true
 rect.move(1, 1); // Saída: 'Shape moved.'
 ```
 
@@ -77,7 +94,7 @@ function MyClass() {
 MyClass.prototype = Object.create(SuperClass.prototype); // herança
 mixin(MyClass.prototype, OtherSuperClass.prototype); // mixin
 
-MyClass.prototype.myMethod = function() {
+MyClass.prototype.myMethod = function () {
   // faz algo
 };
 ```
@@ -92,28 +109,29 @@ var o;
 // cria um objeto com protótipo null
 o = Object.create(null);
 
-
 o = {};
 // equivalente a:
 o = Object.create(Object.prototype);
-
 
 // Exemplo em que criamos um objeto com algumas propriedades
 // (Note que o segundo parâmetro mapeia as chaves para *descritores de propriedade*.)
 o = Object.create(Object.prototype, {
   // foo é uma 'propriedade de valor' ('value property') normal
-  foo: { writable: true, configurable: true, value: 'hello' },
+  foo: { writable: true, configurable: true, value: "hello" },
   // bar é uma propriedade getter-setter (accessor)
   bar: {
     configurable: false,
-    get: function() { return 10; },
-    set: function(value) { console.log('Setting `o.bar` to', value); }
-/* com os ES5 Accessors nosso código pode ser escrito como:
+    get: function () {
+      return 10;
+    },
+    set: function (value) {
+      console.log("Setting `o.bar` to", value);
+    },
+    /* com os ES5 Accessors nosso código pode ser escrito como:
     get() { return 10; },
     set(value) { console.log('setting `o.bar` to', value); } */
-  }
+  },
 });
-
 
 function Constructor() {}
 o = new Constructor();
@@ -121,7 +139,6 @@ o = new Constructor();
 o = Object.create(Constructor.prototype);
 // Claro, se há de fato um código de inicialização na função
 // Constructor, o Object.create() não pode refleti-la
-
 
 // Cria um novo objeto cujo protóptipo é um objeto novo, vazio
 // e adiciona a propriedade 'p' com o valor 42.
@@ -142,14 +159,17 @@ delete o.p;
 // false
 
 // especificar uma propriedade ES3
-o2 = Object.create({}, {
-  p: {
-    value: 42,
-    writable: true,
-    enumerable: true,
-    configurable: true
-  }
-});
+o2 = Object.create(
+  {},
+  {
+    p: {
+      value: 42,
+      writable: true,
+      enumerable: true,
+      configurable: true,
+    },
+  },
+);
 ```
 
 ## Polyfill
@@ -159,15 +179,15 @@ Este polyfill cobre o caso de uso principal que é a crição de um novo objeto 
 Note que, enquanto a configuração `null` as `[[Prototype]]` é suportada no ES5 `Object.create`, este polyfill não suporta devido à limitação inerente em versões do ECMAScript inferiores a 5.
 
 ```js
-if (typeof Object.create != 'function') {
-  Object.create = (function() {
-    var Temp = function() {};
+if (typeof Object.create != "function") {
+  Object.create = (function () {
+    var Temp = function () {};
     return function (prototype) {
       if (arguments.length > 1) {
-        throw Error('Second argument not supported');
+        throw Error("Second argument not supported");
       }
-      if (typeof prototype != 'object') {
-        throw TypeError('Argument must be an object');
+      if (typeof prototype != "object") {
+        throw TypeError("Argument must be an object");
       }
       Temp.prototype = prototype;
       var result = new Temp();
@@ -180,15 +200,11 @@ if (typeof Object.create != 'function') {
 
 ## Especificações
 
-| Especificação                                                                        | Status                       | Comentários                                          |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.5', 'Object.create')}}             | {{Spec2('ES5.1')}}     | Definição inicial. Implementada no JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.create', 'Object.create')}}         | {{Spec2('ES6')}}         |                                                      |
-| {{SpecName('ESDraft', '#sec-object.create', 'Object.create')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.create")}}
+{{Compat}}
 
 ## Veja também
 

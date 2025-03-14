@@ -1,7 +1,6 @@
 ---
-title: "aria-label"
+title: aria-label
 slug: Web/Accessibility/ARIA/Attributes/aria-label
-spec-urls: https://w3c.github.io/aria/#aria-label
 ---
 
 O atributo `aria-label` define um valor de string que rotula um elemento interativo.
@@ -31,7 +30,7 @@ Nos casos em que um elemento interativo não tem um nome acessível, ou um nome 
 
 A maior parte do conteúdo tem um nome acessível gerado a partir do conteúdo de texto de seu elemento de encapsulamento imediato. Nomes acessíveis também podem ser criados por certos atributos ou elementos associados.
 
-Por padrão, o nome acessível de um botão é o conteúdo entre as tags {{HTMLElement('button')}} de abertura e fechamento, o nome acessível de uma imagem é o conteúdo de seu [`alt`](/pt-BR/docs/Web /HTML/Element/img#attr-alt) e o nome acessível de uma entrada de formulário é o conteúdo do elemento {{HTMLElement('label')}} associado.
+Por padrão, o nome acessível de um botão é o conteúdo entre as tags {{HTMLElement('button')}} de abertura e fechamento, o nome acessível de uma imagem é o conteúdo de seu [`alt`](/pt-BR/docs/Web /HTML/Element/img#alt) e o nome acessível de uma entrada de formulário é o conteúdo do elemento {{HTMLElement('label')}} associado.
 
 Se nenhuma dessas opções estiver disponível, ou se o nome acessível padrão não for apropriado, use o atributo `aria-label` para definir o nome acessível de um elemento.
 
@@ -43,11 +42,12 @@ O atributo `aria-label` pode ser usado com elementos HTML semânticos regulares;
 
 Não "exagere" o `aria-label`. Por exemplo, use texto visível com `aria-describedby` ou `aria-description`, não `aria-label`, para fornecer instruções adicionais ou esclarecer a interface do usuário. Lembre-se sempre de que você não precisa direcionar instruções apenas para leitores de tela; se forem necessárias instruções, forneça-as a todos (ou, de preferência, torne sua interface do usuário mais intuitiva).
 
-Nem todos os elementos podem receber um nome acessível. Nem `aria-label` nem `aria-labelledby` devem ser usados ​​com elementos não interativos ou papéis estruturais embutidos como `código`, `termo` ou `ênfase` nem papéis cuja semântica não será mapeada para a acessibilidade API, incluindo `presentation`, `none` e `hidden`. O atributo `aria-label` destina-se apenas a elementos interativos. Use `aria-label` para garantir que um nome acessível seja fornecido quando nenhum estiver visível no DOM para todos os elementos interativos, como links, vídeos, controles de formulário, [papéis de referência](/pt-BR/docs/Web/Accessibility/ARIA /Roles#3._landmark_roles) e [funções de widget](/pt-BR/docs/Web/Accessibility/ARIA/Roles#2._widget_roles).
+Nem todos os elementos podem receber um nome acessível. Nem `aria-label` nem `aria-labelledby` devem ser usados com elementos não interativos ou papéis estruturais embutidos como `código`, `termo` ou `ênfase` nem papéis cuja semântica não será mapeada para a acessibilidade API, incluindo `presentation`, `none` e `hidden`. O atributo `aria-label` destina-se apenas a elementos interativos. Use `aria-label` para garantir que um nome acessível seja fornecido quando nenhum estiver visível no DOM para todos os elementos interativos, como links, vídeos, controles de formulário, [papéis de referência](/pt-BR/docs/Web/Accessibility/ARIA /Roles#3.\_landmark_roles) e [funções de widget](/pt-BR/docs/Web/Accessibility/ARIA/Roles#2._widget_roles).
 
 Se você der a seus {{HTMLElement('iframe')}}s um `title`, suas imagens um atributo `alt` e os {{HTMLElement('label')}}s associados à sua entrada, `aria-label` não é necessário. Mas, se presente, o `aria-label` terá precedência sobre o `title`, `alt` e `<label>` como seu `iframe`, imagem ou nome acessível da entrada, respectivamente.
 
-> **Observação:** O `aria-label` só é "visível" para tecnologias assistivas. Se as informações forem importantes o suficiente para serem adicionadas aos usuários AT, considere torná-las visíveis para todos os usuários.
+> [!CALLOUT]
+> O `aria-label` só é "visível" para tecnologias assistivas. Se as informações forem importantes o suficiente para serem adicionadas aos usuários AT, considere torná-las visíveis para todos os usuários.
 
 ## Valores
 
@@ -83,7 +83,8 @@ O atributo `aria-label` **NÃO** é suportado em:
 - [`term`](/pt-BR/docs/Web/Accessibility/ARIA/Roles/term_role)
 - [`time`](/pt-BR/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 
-> **Observação:** O atributo `aria-label` destina-se apenas a elementos interativos. Quando colocado em elementos não interativos, como os listados acima, pode não ser lido ou pode confundir seus usuários como um elemento não interativo que age como interativo.
+> [!CALLOUT]
+> O atributo `aria-label` destina-se apenas a elementos interativos. Quando colocado em elementos não interativos, como os listados acima, pode não ser lido ou pode confundir seus usuários como um elemento não interativo que age como interativo.
 
 ## Especificações
 

@@ -1,27 +1,33 @@
 ---
 title: Object.defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Object
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/defineProperties
 ---
 
 {{JSRef}}
 
 La méthode **`Object.defineProperties()`** permet de définir ou de modifier les propriétés d'un objet directement sur celui-ci. La valeur renvoyée est l'objet modifié.
 
-{{EmbedInteractiveExample("pages/js/object-defineproperties.html")}}
+{{InteractiveExample("JavaScript Demo: Object.defineProperties()")}}
+
+```js interactive-example
+const object1 = {};
+
+Object.defineProperties(object1, {
+  property1: {
+    value: 42,
+    writable: true,
+  },
+  property2: {},
+});
+
+console.log(object1.property1);
+// Expected output: 42
+```
 
 ## Syntaxe
 
 ```js
-Object.defineProperties(obj, props)
+Object.defineProperties(obj, props);
 ```
 
 ### Paramètres
@@ -72,14 +78,14 @@ L'objet passé à la fonction, éventuellement modifié.
 ```js
 var obj = {};
 Object.defineProperties(obj, {
-  "propriété1": {
+  propriété1: {
     value: true,
-    writable: true
+    writable: true,
   },
-  "propriété2": {
+  propriété2: {
     value: "Coucou",
-    writable: false
-  }
+    writable: false,
+  },
   // etc.
 });
 ```
@@ -107,22 +113,18 @@ function defineProperties(obj, properties) {
 
     var d = {};
 
-    if (hasProperty(desc, "enumerable"))
-      d.enumerable = !!desc.enumerable;
-    if (hasProperty(desc, "configurable"))
-      d.configurable = !!desc.configurable;
-    if (hasProperty(desc, "value"))
-      d.value = desc.value;
-    if (hasProperty(desc, "writable"))
-      d.writable = !!desc.writable;
-    if ( hasProperty(desc, "get") ) {
+    if (hasProperty(desc, "enumerable")) d.enumerable = !!desc.enumerable;
+    if (hasProperty(desc, "configurable")) d.configurable = !!desc.configurable;
+    if (hasProperty(desc, "value")) d.value = desc.value;
+    if (hasProperty(desc, "writable")) d.writable = !!desc.writable;
+    if (hasProperty(desc, "get")) {
       var g = desc.get;
 
       if (!isCallable(g) && typeof g !== "undefined")
         throw new TypeError("bad get");
       d.get = g;
     }
-    if ( hasProperty(desc, "set") ) {
+    if (hasProperty(desc, "set")) {
       var s = desc.set;
       if (!isCallable(s) && typeof s !== "undefined")
         throw new TypeError("bad set");
@@ -135,8 +137,7 @@ function defineProperties(obj, properties) {
     return d;
   }
 
-  if (typeof obj !== "object" || obj === null)
-    throw new TypeError("bad obj");
+  if (typeof obj !== "object" || obj === null) throw new TypeError("bad obj");
 
   properties = Object(properties);
 
@@ -165,4 +166,4 @@ function defineProperties(obj, properties) {
 
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.keys()")}}
-- [Détention et énumération des propriétés](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)
+- [Détention et énumération des propriétés](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)

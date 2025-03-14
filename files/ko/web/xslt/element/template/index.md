@@ -1,12 +1,9 @@
 ---
 title: template
 slug: Web/XSLT/Element/template
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/template
-original_slug: Web/XSLT/template
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:template>` 요소는 출력 생성 템플릿을 정의합니다. 이 요소는 match 속성이나 name 속성 집합이 있어야 합니다.
 
@@ -44,7 +41,7 @@ original_slug: Web/XSLT/template
 
 ### 정의
 
-[XSLT section 5.3, Defining Template Rules](http://www.w3.org/TR/xslt#section-Defining-Template-Rules)
+[XSLT section 5.3, Defining Template Rules](https://www.w3.org/TR/xslt#section-Defining-Template-Rules)
 
 ### Gecko 지원
 

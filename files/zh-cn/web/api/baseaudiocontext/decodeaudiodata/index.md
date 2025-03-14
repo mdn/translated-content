@@ -11,20 +11,13 @@ slug: Web/API/BaseAudioContext/decodeAudioData
 
 ## 语法
 
-旧版的回调函数语法
+```js-nolint
+// 基于 Promise 的语法返回一个 Promise：
+decodeAudioData(arrayBuffer)
 
-```
-audioCtx.decodeAudioData(audioData, function(decodedData) {
-  // use the dec​oded data here
-});
-```
-
-新版的 promise-based 语法：
-
-```
-audioCtx.decodeAudioData(audioData).then(function(decodedData) {
-  // use the decoded data here
-});
+// 回调语法没有返回值：
+decodeAudioData(arrayBuffer, successCallback)
+decodeAudioData(arrayBuffer, successCallback, errorCallback)
 ```
 
 ## 举例
@@ -37,7 +30,8 @@ audioCtx.decodeAudioData(audioData).then(function(decodedData) {
 
 通过按钮来运行 `getData()` 来获取音轨并播放它。当使用 `stop()` 方法后 source 将会被清除。
 
-> **备注：** You can [run the example live](http://mdn.github.io/decode-audio-data/) (or [view the source](https://github.com/mdn/decode-audio-data).)
+> [!NOTE]
+> You can [run the example live](https://mdn.github.io/decode-audio-data/) (or [view the source](https://github.com/mdn/decode-audio-data).)
 
 ```js
 // define variables
@@ -45,10 +39,10 @@ audioCtx.decodeAudioData(audioData).then(function(decodedData) {
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var source;
 
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
-var play = document.querySelector('.play');
-var stop = document.querySelector('.stop');
+var pre = document.querySelector("pre");
+var myScript = document.querySelector("script");
+var play = document.querySelector(".play");
+var stop = document.querySelector(".stop");
 
 // use XHR to load an audio track, and
 // decodeAudioData to decode it and stick it in a buffer.
@@ -58,41 +52,43 @@ function getData() {
   source = audioCtx.createBufferSource();
   var request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
+  request.open("GET", "viper.ogg", true);
 
-  request.responseType = 'arraybuffer';
+  request.responseType = "arraybuffer";
 
-
-  request.onload = function() {
+  request.onload = function () {
     var audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(
+      audioData,
+      function (buffer) {
         source.buffer = buffer;
 
         source.connect(audioCtx.destination);
         source.loop = true;
       },
 
-      function(e){"Error with decoding audio data" + e.err});
-
-  }
+      function (e) {
+        "Error with decoding audio data" + e.err;
+      },
+    );
+  };
 
   request.send();
 }
 
 // wire up buttons to stop and play audio
 
-play.onclick = function() {
+play.onclick = function () {
   getData();
   source.start(0);
-  play.setAttribute('disabled', 'disabled');
-}
+  play.setAttribute("disabled", "disabled");
+};
 
-stop.onclick = function() {
+stop.onclick = function () {
   source.stop(0);
-  play.removeAttribute('disabled');
-}
-
+  play.removeAttribute("disabled");
+};
 
 // dump script to pre element
 
@@ -102,8 +98,8 @@ pre.innerHTML = myScript.innerHTML;
 ### 新的 promise-based 语法
 
 ```js
-ctx.decodeAudioData(compressedBuffer).then(function(decodedData) {
- // use the decoded data here
+ctx.decodeAudioData(compressedBuffer).then(function (decodedData) {
+  // use the decoded data here
 });
 ```
 
@@ -120,14 +116,14 @@ ctx.decodeAudioData(compressedBuffer).then(function(decodedData) {
 
 一个 {{domxref("Promise") }}对象。
 
-## 标准
+## 规范
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

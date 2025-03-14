@@ -1,13 +1,13 @@
 ---
 title: scrollbar-width
 slug: Web/CSS/scrollbar-width
+l10n:
+  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
 {{CSSRef}}
 
 **`scrollbar-width`** プロパティは、要素のスクロールバーが表示される時の最大の太さを設定することができます。
-
-{{EmbedInteractiveExample("pages/css/scrollbar-width.html")}}
 
 ## 構文
 
@@ -21,12 +21,13 @@ scrollbar-width: none;
 scrollbar-width: inherit;
 scrollbar-width: initial;
 scrollbar-width: revert;
+scrollbar-width: revert-layer;
 scrollbar-width: unset;
 ```
 
 ### 値
 
-- _\<scrollbar-width>_
+- `<scrollbar-width>`
 
   - : スクロールバーの幅を、長さまたはキーワードのどちらかで定義します。キーワードが使用する場合は、以下の値のうちの一つでなければなりません。
 
@@ -49,16 +50,17 @@ scrollbar-width: unset;
       </tbody>
     </table>
 
-     > **メモ:** ユーザーエージェントは、ビューポートのルート要素に何らかの `scrollbar-width` の値を設定する必要があります。
+    > [!NOTE]
+    > ユーザーエージェントは、ビューポートのルート要素に何らかの `scrollbar-width` の値を設定する必要があります。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
 このプロパティは注意して使用してください。 — `scrollbar-width` を `thin` または `none` に設定すると、作者が別なスクロールの仕組みを提供していない限り、スクロールすることが困難または不可能になります。そのようなコンテンツはスワイプのジェスチャーやマウスホイールでスクロールできるものの、端末によっては代替スクロール手段がないことがあります。
 
 WCAG 基準 2.1.1 (キーボード) は、長らく基本的なキーボードのアクセシビリティを勧告してきており、これはコンテンツ領域のスクロールも含みます。また、 WCAG 2.1 で導入された基準 2.5.5 (対象の寸法) では、タッチ対象の幅と高さを 44px 以上にすることを推奨しています (ただし、この問題は高解像度の画面ではさらに複雑になるため、十分なテストが必要です)。
 
-- [MDN WCAG の理解、ガイドライン 2.1 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.1_%E2%80%94_keyboard_accessible_make_all_functionality_available_from_a_keyboard)
-- [MDN WCAG の理解、ガイドライン 2.5 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.5_input_modalities_make_it_easier_for_users_to_operate_functionality_through_various_inputs_beyond_keyboard.s/)
+- [MDN WCAG の理解、ガイドライン 2.1 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#ガイドライン_2.1_—_キーボードアクセス可能_キーボードから全ての機能を利用可能にする)
+- [MDN WCAG の理解、ガイドライン 2.5 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#ガイドライン_2.5_—_入力様式_キーボードを超えた様々な入力を通して機能をユーザーが操作しやすくする)
 - [Understanding Success Criterion 2.1.1 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/keyboard)
 - [Understanding Success Criterion 2.5.5 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
 
@@ -88,7 +90,13 @@ WCAG 基準 2.1.1 (キーボード) は、長らく基本的なキーボード�
 #### HTML
 
 ```html
-<div class="scroller">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</div>
+<div class="scroller">
+  Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+  daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
+  corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts
+  fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
+  earthnut pea peanut soko zucchini.
+</div>
 ```
 
 #### 結果
@@ -105,5 +113,8 @@ WCAG 基準 2.1.1 (キーボード) は、長らく基本的なキーボード�
 
 ## 関連情報
 
-- {{CSSxRef("-ms-overflow-style")}}
-- {{CSSxRef("::-webkit-scrollbar")}}
+- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
+- [CSS スクロールバースタイル設定](/ja/docs/Web/CSS/CSS_scrollbars_styling)モジュール
+- {{CSSxRef("overflow")}}
+- {{CSSxRef("scrollbar-gutter")}}
+- {{CSSxRef("scrollbar-color")}}

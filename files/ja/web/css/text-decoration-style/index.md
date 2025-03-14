@@ -1,13 +1,55 @@
 ---
 title: text-decoration-style
 slug: Web/CSS/text-decoration-style
+l10n:
+  sourceCommit: 75326725db2daa924618e58ae31a43345c7a16dc
 ---
 
 {{CSSRef}}
 
-[CSS](/ja/docs/Web/CSS) の **`text-decoration-style`** プロパティは、 {{ cssxref("text-decoration-line") }} で指定された線の種類を設定します。線の種類はすべての線に適用され `text-decoration-line` で定義された線ごとに異なる種類を定義する方法はありません。
+**`text-decoration-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{ cssxref("text-decoration-line") }} で指定された線の種類を設定します。線の種類はすべての線に適用され `text-decoration-line` で定義された線ごとに異なる種類を定義する方法はありません。
 
-{{EmbedInteractiveExample("pages/css/text-decoration-style.html")}}
+{{InteractiveExample("CSS Demo: text-decoration-style")}}
+
+```css interactive-example-choice
+text-decoration-style: solid;
+```
+
+```css interactive-example-choice
+text-decoration-style: double;
+```
+
+```css interactive-example-choice
+text-decoration-style: dotted;
+```
+
+```css interactive-example-choice
+text-decoration-style: dashed;
+```
+
+```css interactive-example-choice
+text-decoration-style: wavy;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+
+#example-element {
+  text-decoration-line: underline;
+}
+```
 
 文字列を貫く線で文字列が削除されたことを示すように、指定された装飾が特定の意味を持つ場合は、 {{ HTMLElement("del") }} や {{ HTMLElement("s") }} といった HTML タグでその意味を示すことが推奨されます。ブラウザーはスタイルを無効にする場合がありますが、そのようなときでも意味論上の意味が失われません。
 
@@ -27,6 +69,7 @@ text-decoration-style: wavy;
 text-decoration-style: inherit;
 text-decoration-style: initial;
 text-decoration-style: revert;
+text-decoration-style: revert-layer;
 text-decoration-style: unset;
 ```
 
@@ -42,8 +85,8 @@ text-decoration-style: unset;
   - : 破線を描画します。
 - wavy
   - : 波線を描画します。
-- \-moz-none{{ non-standard_inline }}
-  - : 線を描画しません。代わりに {{ cssxref("text-decoration-line") }}`: none` を使用してください。
+- \-moz-none
+  - : 線を描画しません。代わりに {{cssxref("text-decoration-line", "text-decoration-line: none")}} を使用してください。
 
 ## 公式定義
 
@@ -55,18 +98,9 @@ text-decoration-style: unset;
 
 ## 例
 
-<h3 id="Setting_a_wavy_underline">波線の下線を設定</h3>
+### 波線の下線を設定
 
-```css
-.example {
-       -moz-text-decoration-line: underline;
-       -moz-text-decoration-style: wavy;
-       -moz-text-decoration-color: red;
-    -webkit-text-decoration-line: underline;
-    -webkit-text-decoration-style: wavy;
-    -webkit-text-decoration-color: red;
-}
-```
+次の例は、赤い波線の下線を生成します。
 
 #### CSS
 
@@ -80,13 +114,13 @@ text-decoration-style: unset;
 
 #### HTML
 
-```html
+```html-nolint
 <p class="wavy">このテキストには付近に赤い波線があります。</p>
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_a_wavy_underline', '', '', '') }}
+{{EmbedLiveSample('Setting_a_wavy_underline')}}
 
 ## 仕様書
 
@@ -99,3 +133,7 @@ text-decoration-style: unset;
 ## 関連情報
 
 - 複数の行内装飾プロパティを一度に設定するときは、代わりに一括指定の {{cssxref("text-decoration")}} プロパティを使った方が便利かもしれません。
+- {{cssxref("text-decoration-line")}}
+- {{cssxref("text-decoration-color")}}
+- {{cssxref("text-decoration-thickness")}}
+- {{cssxref("text-underline-offset")}}

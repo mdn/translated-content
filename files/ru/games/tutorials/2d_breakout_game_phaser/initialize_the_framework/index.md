@@ -1,21 +1,9 @@
 ---
 title: Инициализация фреймворка
 slug: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
-tags:
-  - 2D
-  - Canvas
-  - HTML
-  - JavaScript
-  - Phaser
-  - Игры
-  - Руководство
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
-original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework
 ---
 
-{{GamesSidebar}}{{IncludeSubnav("ru/docs/")}}
-
-{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Scaling")}}
+{{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Scaling")}}
 
 Это первый из 16 уроков о том, как пользоваться [Gamedev Phaser](/ru/docs/Games/Tutorials/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_2D_Breakout_%D0%B8%D0%B3%D1%80%D1%8B_%D0%BD%D0%B0_Phaser). После прочтения вы можете найти исходный код для этого урока на [Gamedev-Phaser-Content-Kit/demos/lesson01.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson01.html).
 
@@ -26,24 +14,31 @@ original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser
 Структура HTML-документа достаточно простая. Игра будет отображаться в элементе {{htmlelement("canvas")}}, который будет сгенерирован фреймворком. Используя свой любимый редактор, создайте новый HTML-документ, сохраните его как `index.html` и добавьте в него следующий код:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Gamedev Phaser Workshop - lesson 01: Initialize the framework</title>
-    <style>* { padding: 0; margin: 0; }</style>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
     <script src="js/phaser.min.js"></script>
-</head>
-<body>
-<script>
-    var game = new Phaser.Game(480, 320, Phaser.CANVAS, null, {
-      preload: preload, create: create, update: update
-    });
-    function preload() {}
-    function create() {}
-    function update() {}
-</script>
-</body>
+  </head>
+  <body>
+    <script>
+      var game = new Phaser.Game(480, 320, Phaser.CANVAS, null, {
+        preload: preload,
+        create: create,
+        update: update,
+      });
+      function preload() {}
+      function create() {}
+      function update() {}
+    </script>
+  </body>
 </html>
 ```
 
@@ -71,7 +66,8 @@ original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser
   - `create` вызывается только один раз, когда всё загружено и готово
   - `update` вызывается на каждом кадре
 
-> **Предупреждение:** До конца прохождения всех уроков вы должны использовать `CANVAS`, как метод рендеринга, а не `AUTO`, как это было в нашем коде. Всё это нужно, потому что метод `AUTO` больше не поддерживается в последних версиях браузера.
+> [!WARNING]
+> До конца прохождения всех уроков вы должны использовать `CANVAS`, как метод рендеринга, а не `AUTO`, как это было в нашем коде. Всё это нужно, потому что метод `AUTO` больше не поддерживается в последних версиях браузера.
 
 ## Сравните свой код
 

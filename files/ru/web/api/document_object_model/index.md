@@ -1,21 +1,15 @@
 ---
 title: Руководство по DOM
 slug: Web/API/Document_Object_Model
-tags:
-  - DOM
-  - DOM Reference
-  - DOM интерфейс
-  - Intermediate
-  - Руководство
-translation_of: Web/API/Document_Object_Model
-original_slug: DOM/DOM_Reference
 ---
+
+{{DefaultAPISidebar("DOM")}}
 
 **Объектная Модель Документа (_DOM_)** является программным интерфейсом для HTML, XML и SVG документов. Это обеспечивает структурированное представление документа (дерева), и определяет способ, по которому структура может быть доступна для программы, для изменения структуры документа, его стиля и содержания. DOM обеспечивает представление документа в виде структурированной группы узлов и объектов, которые имеют свойства и методы. По сути, она связывает веб -страницы со скриптами или языками программирования.
 
 DOM чаще всего используется в JavaScript, но не является его частью, поэтому иногда с DOM работают в других языках.
 
-[Введение](/ru/docs/DOM/DOM_Reference/Введение) в DOM доступно.
+[Введение](/ru/docs/Web/API/Document_Object_Model/Introduction) в DOM доступно.
 
 ## DOM интерфейсы
 
@@ -114,7 +108,6 @@ DOM чаще всего используется в JavaScript, но не явл
 - {{domxref("HTMLIFrameElement")}}
 - {{domxref("HTMLImageElement")}}
 - {{domxref("HTMLInputElement")}}
-- {{domxref("HTMLKeygenElement")}}
 - {{domxref("HTMLLabelElement")}}
 - {{domxref("HTMLLegendElement")}}
 - {{domxref("HTMLLIElement")}}
@@ -175,7 +168,6 @@ DOM чаще всего используется в JavaScript, но не явл
 
 ### Устаревшие HTML интерфейсы
 
-- {{domxref("HTMLBaseFontElement")}}
 - {{domxref("HTMLIsIndexElement")}}
 
 ## SVG интерфейсы
@@ -272,7 +264,8 @@ DOM чаще всего используется в JavaScript, но не явл
 
 DOM API для типов данных, используемых в определениях SVG свойств и атрибутов.
 
-> **Примечание:** **Замечание:** Начиная с {{Gecko("5.0")}}, следующие относящиеся к SVG DOM интерфейсы, представляя списки объектов, индексируются и к ним можно иметь доступ как к массивам; к тому же, у них есть свойство длины, обозначающее количество элементов в списках: {{domxref("SVGLengthList")}}, {{domxref("SVGNumberList")}}, {{domxref("SVGPathSegList")}} и {{domxref("SVGPointList")}}.
+> [!NOTE]
+> Начиная с Gecko 5.0, следующие относящиеся к SVG DOM интерфейсы, представляя списки объектов, индексируются и к ним можно иметь доступ как к массивам; к тому же, у них есть свойство длины, обозначающее количество элементов в списках: {{domxref("SVGLengthList")}}, {{domxref("SVGNumberList")}}, {{domxref("SVGPathSegList")}} и {{domxref("SVGPointList")}}.
 
 #### Статический тип
 
@@ -338,4 +331,4 @@ DOM API для типов данных, используемых в опреде
 
 ## Смотрите также
 
-- [Примеры DOM](/ru/docs/DOM/DOM_Reference/Examples)
+- [Примеры DOM](/ru/docs/Web/API/Document_Object_Model/Examples)

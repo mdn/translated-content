@@ -1,8 +1,6 @@
 ---
 title: Constructeur AggregateError()
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError
-translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError
-browser-compat: javascript.builtins.AggregateError.AggregateError
 ---
 
 {{JSRef}}
@@ -12,8 +10,8 @@ Le **constructeur `AggregateError()`** permet de créer une erreur qui agrège p
 ## Syntaxe
 
 ```js
-new AggregateError(erreurs)
-new AggregateError(erreurs, message)
+new AggregateError(erreurs);
+new AggregateError(erreurs, message);
 ```
 
 ### Paramètres
@@ -29,14 +27,12 @@ new AggregateError(erreurs, message)
 
 ```js
 try {
-  throw new AggregateError([
-    new Error('une erreur'),
-  ], 'Coucou');
+  throw new AggregateError([new Error("une erreur")], "Coucou");
 } catch (e) {
   console.log(e instanceof AggregateError); // true
-  console.log(e.message);                   // "Coucou"
-  console.log(e.name);                      // "AggregateError"
-  console.log(e.errors);                    // [ Error: "une erreur" ]
+  console.log(e.message); // "Coucou"
+  console.log(e.name); // "AggregateError"
+  console.log(e.errors); // [ Error: "une erreur" ]
 }
 ```
 

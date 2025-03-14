@@ -1,13 +1,6 @@
 ---
-title: ':hover'
+title: :hover
 slug: Web/CSS/:hover
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Web
-translation_of: Web/CSS/:hover
 ---
 
 {{ CSSRef }}
@@ -42,7 +35,7 @@ a:hover {
 ```css
 a {
   background-color: powderblue;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
 }
 
 a:hover {

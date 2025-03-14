@@ -3,11 +3,9 @@ title: <image>
 slug: Web/CSS/image
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
-## 综述：
-
-CSS 的\<image>数据类型描述的是 2D 图形。在 CSS 中有两种类型的图像：简单的静态图像，经常被一个在使用的 URL 引用，动态生成的图像，比如 DOM 树的部分元素样式渐变或者计算样式产生。
+CSS 的 **`<image>`** 数据类型描述的是 2D 图形。在 CSS 中有两种类型的图像：简单的静态图像，经常被一个在使用的 URL 引用，动态生成的图像，比如 DOM 树的部分元素样式渐变或者计算样式产生。
 
 CSS 可以处理以下情形中的不同类型图像：
 
@@ -18,13 +16,13 @@ CSS 可以处理以下情形中的不同类型图像：
 
 CSS 确定一个图像对象实际尺寸的依据有三条：(1) 图像的原始尺寸；(2) 用 CSS 属性指定的宽和高，比如{{ cssxref("width") }}, {{ cssxref("height") }} or {{ cssxref("background-size") }}中，(3) 图像对象默认大小，由图像使用用途的属性类型决定：
 
-| 图像对象类型                                                                                                                                | 默认的图像对象尺寸                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| {{ cssxref("background-image") }}                                                                                                | DOM 元素的背景定位的范围尺寸（大小）                   |
-| {{ cssxref("list-style-image") }}                                                                                                | 字符的 `1em` 尺寸（大小）                                |
-| {{ cssxref("border-image") }}                                                                                                    | DOM 元素的边框图像范围尺寸（大小）                     |
-| {{ cssxref("cursor") }}                                                                                                            | 浏览器定义的光标尺寸匹配在使用操作系统上常规的光标尺寸 |
-| 用 CSS {{ cssxref("content") }}属性，和 CSS 伪元素 {{ cssxref("::after") }} 和 {{ cssxref("::before") }}替换元素内容 | 一个 `300px × 150px` 矩形                           |
+| 图像对象类型                                                                                                         | 默认的图像对象尺寸                                     |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| {{ cssxref("background-image") }}                                                                                    | DOM 元素的背景定位的范围尺寸（大小）                   |
+| {{ cssxref("list-style-image") }}                                                                                    | 字符的 `1em` 尺寸（大小）                              |
+| {{ cssxref("border-image") }}                                                                                        | DOM 元素的边框图像范围尺寸（大小）                     |
+| {{ cssxref("cursor") }}                                                                                              | 浏览器定义的光标尺寸匹配在使用操作系统上常规的光标尺寸 |
+| 用 CSS {{ cssxref("content") }}属性，和 CSS 伪元素 {{ cssxref("::after") }} 和 {{ cssxref("::before") }}替换元素内容 | 一个 `300px × 150px` 矩形                              |
 
 图像对象的实际尺寸计算算法如下：
 
@@ -34,7 +32,8 @@ CSS 确定一个图像对象实际尺寸的依据有三条：(1) 图像的原始
 
 图像可以使用很多 CSS 属性，比如 {{ cssxref("background-image") }}, {{ cssxref("border-image") }}, {{ cssxref("content") }}, {{ cssxref("list-style-image") }} 和{{ cssxref("cursor") }}；
 
-> **备注：** 不是所有的浏览器都支持任何类型的图像的任何属性，详情查看[浏览器兼容性](#浏览器兼容性)了全面的条目列表
+> [!NOTE]
+> 不是所有的浏览器都支持任何类型的图像的任何属性，详情查看[浏览器兼容性](#浏览器兼容性)了全面的条目列表
 
 ## 语法
 
@@ -48,19 +47,30 @@ CSS 确定一个图像对象实际尺寸的依据有三条：(1) 图像的原始
 
 以下是有效的图像引用值：
 
-```css
-url(test.jpg)                          url() 方法，只要 test.jpg 是图像文件
-linear-gradient(to bottom, blue, red)  一个 <gradient>标签
-element(#colonne3)                     页面的一部分，使用了 element() 方法，
-                                       如果 colonne3 是存在于页面中的一个元素 id 即可
+```css example-good
+url(test.jpg)               /* <url> 值，只要 test.jpg 是实际的图像 */
+linear-gradient(blue, red)  /* <gradient> 值 */
+element(#realid)            /* 网页中的一部分，如果“realid”是页面上现有的元素，
+                               则会被 element() 函数所引用 */
+image(ltr 'arrow.png#xywh=0,0,16,16', red)
+                            /* <url> 中的一个 16x16 的部分，从原始图像的左上角开始（只要
+                               arrow.png 是受支持的图像，否则为纯红色的方块）。如果语言为从
+                               右到左的（rtl），则图像将水平翻转。 */
+cross-fade(20% url(twenty.png), url(eighty.png))
+                            /* 半透明叠加的图像，其中 twenty 的不透明度为 20%，
+                               而 eighty 的不透明度为 80%。 */
+image-set('test.jpg' 1x, 'test-2x.jpg' 2x)
+                            /* 一系列具有不同分辨率的图像 */
 ```
 
 以下是无效的图像引用值：
 
-```
-cervin.jpg                             图像文件必须使用 url() 方法定义
-url(report.pdf)                        url() 方法指向的文件链接必须是一个图像文件
-element(#fakeid)                       如果 fakeid 是一个不存在与页面的元素 id
+```css example-bad
+nourl.jpg            /* 图像文件必须使用 url() 函数定义。 */
+url(report.pdf)      /* url() 函数指向的文件链接必须是一个图像。 */
+element(#fakeid)     /* 元素 ID 必须是当前页面中存在的 ID。 */
+image(z.jpg#xy=0,0)  /* 块片段的格式必须为 xywh=#,#,#,# */
+image-set('cat.jpg' 1x, 'dog.jpg' 1x) /* 图像集中的每个图像必须具有不同的分辨率 */
 ```
 
 ## 规范
@@ -71,7 +81,10 @@ element(#fakeid)                       如果 fakeid 是一个不存在与页面
 
 {{Compat}}
 
-## 参阅：
+## 参见
 
-- [Using CSS gradients](/zh-CN/docs/Web/Guide/CSS/Using_CSS_gradients), {{cssxref("&lt;gradient&gt;")}}, {{cssxref("linear-gradient","linear-gradient()")}}, {{cssxref("radial-gradient","radial-gradient()")}}, {{cssxref("repeating-linear-gradient","repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient","repeating-radial-gradient()")}}
-- {{cssxref("element","element()")}}
+- {{CSSxRef("&lt;gradient&gt;")}}
+- {{CSSxRef("element","element()")}} {{Experimental_Inline}}
+- {{CSSxRef("image/image", "image()")}}
+- {{CSSxRef("image/image-set","image-set()")}}
+- {{CSSxRef("cross-fade","cross-fade()")}}

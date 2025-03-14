@@ -1,18 +1,20 @@
 ---
 title: CRLF
 slug: Glossary/CRLF
+l10n:
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-回车符（CR）和换行符（LF）是文本文件用于标记换行的控制字符（[control characters](https://en.wikipedia.org/wiki/Control_character)）或字节码（[bytecode](https://en.wikipedia.org/wiki/Bytecode)）。
+{{GlossarySidebar}}
 
-- CR = **Carriage Return**，回车符号（`\r`，十六进制 ascii 码为`0x0D`，十进制 ascii 码为 13），用于将鼠标移动到行首，并不前进至下一行。
-- LF = **Line Feed**，换行符号（ `\n`, 十六进制 ascii 码为 `0x0A`，十进制 ascii 码为 10）。
+**回车符和换行符**（CR 和 LF）是文本文件用于标记换行的[控制字符](https://zh.wikipedia.org/wiki/控制字符)或[字节码](https://zh.wikipedia.org/wiki/字节码)。
 
-紧邻的 CR 和 LF（组成 CRLF，`\r\n`，或十六进制 `0x0D0A`）将鼠标移动到下一行行首。（Windows 操作系统默认的文本换行符为 CRLF；Linux 以及 macOS 系统默认使用 LF，早期的 mac os 系统使用 CR 换行。）
+- CR = **回车符号**（Carriage Return，`\r`，十六进制为 `0x0D`，十进制为 13），用于将光标移动到行首，并不前进至下一行。
+- LF = **换行符号**（Line Feed，`\n`, 十六进制为 `0x0A`，十进制为 10），用于将光标移动到下一行，而不返回到当前行的开头。
 
-## 相关链接
+紧邻的 CR 和 LF（组成 CRLF，`\r\n`，或十六进制 `0x0D0A`）用于将光标移动到行首，然后再移动至下一行。
 
-### General knowledge
+## 参见
 
-- [Newline](https://zh.wikipedia.org/wiki/Newline#In_programming_languages) on Wikipedia
-- [Carriage return](https://zh.wikipedia.org/wiki/Carriage_return#Computers) on Wikipedia
+- 维基百科上的[换行符](https://zh.wikipedia.org/wiki/換行#程式語言)
+- 维基百科上的[回车符](https://zh.wikipedia.org/wiki/回车符)

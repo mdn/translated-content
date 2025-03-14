@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Functions/set
 
 **`set`** 構文は、あるオブジェクトプロパティを、プロパティに設定しようとしたときに呼び出される関数に結びつけます。
 
-{{EmbedInteractiveExample("pages/js/functions-setter.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Setter")}}
+
+```js interactive-example
+const language = {
+  set current(name) {
+    this.log.push(name);
+  },
+  log: [],
+};
+
+language.current = "EN";
+language.current = "FA";
+
+console.log(language.log);
+// Expected output: Array ["EN", "FA"]
+```
 
 ## 構文
 
@@ -47,13 +62,13 @@ const language = {
   set current(name) {
     this.log.push(name);
   },
-  log: []
-}
+  log: [],
+};
 
-language.current = 'EN';
+language.current = "EN";
 console.log(language.log); // ['EN']
 
-language.current = 'FA';
+language.current = "FA";
 console.log(language.log); // ['EN', 'FA']
 ```
 
@@ -72,33 +87,37 @@ delete language.current;
 *既存の*オブジェクトにセッターを追加するには、 {{jsxref("Object.defineProperty()")}} を使用します。
 
 ```js
-const o = {a: 0};
+const o = { a: 0 };
 
-Object.defineProperty(o, 'b', {
-  set: function(x) { this.a = x / 2; }
+Object.defineProperty(o, "b", {
+  set: function (x) {
+    this.a = x / 2;
+  },
 });
 
 o.b = 10;
 // セッターを実行し、 10 / 2 (5) を 'a' プロパティに代入
 
-console.log(o.a)
+console.log(o.a);
 //  5
 ```
 
 ### 算出されたプロパティ名の使用
 
 ```js
-const expr = 'foo';
+const expr = "foo";
 
 const obj = {
-  baz: 'bar',
-  set [expr](v) { this.baz = v; }
+  baz: "bar",
+  set [expr](v) {
+    this.baz = v;
+  },
 };
 
 console.log(obj.baz);
 //  "bar"
 
-obj.foo = 'baz';
+obj.foo = "baz";
 // セッターを実行
 
 console.log(obj.baz);
@@ -118,6 +137,6 @@ console.log(obj.baz);
 - [ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
-- [ゲッターとセッターの定義](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters) (JavaScript ガイド)
+- [`Object.prototype.__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
+- [ゲッターとセッターの定義](/ja/docs/Web/JavaScript/Guide/Working_with_objects#ゲッターとセッターの定義) (JavaScript ガイド)

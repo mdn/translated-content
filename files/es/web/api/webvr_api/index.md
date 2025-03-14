@@ -1,17 +1,6 @@
 ---
 title: WebVR API
 slug: Web/API/WebVR_API
-tags:
-  - API
-  - Experimental
-  - Landing
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - VR
-  - Virtual Reality
-  - WebVR
-translation_of: Web/API/WebVR_API
 ---
 
 {{SeeCompatTable}}{{APIRef("WebVR API")}}
@@ -22,7 +11,7 @@ WebVR proporciona soporte para la exposición de dispositivos de realidad virtua
 
 Any VR devices attached to your computer will be returned by the {{domxref("Navigator.getVRDisplays()")}} method; each one will be represented by a {{domxref("VRDisplay")}} object.
 
-![Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labelled "Position sensor"](https://mdn.mozillademos.org/files/11035/hw-setup.png)
+![Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labelled "Position sensor"](hw-setup.png)
 
 {{domxref("VRDisplay")}} is the central interface in the WebVR API — via its properties and methods you can access functionality to:
 
@@ -39,13 +28,15 @@ A typical (simple) WebVR app would work like so:
 
 In addition, WebVR 1.1 adds a number of events on the {{domxref("Window")}} object to allow JavaScript to respond to changes to the status of the display.
 
-> **Nota:** You can find a lot more out about how the API works in our [Using the WebVR API](/es/docs/Web/API/WebVR_API/Using_the_WebVR_API) and [WebVR Concepts](/es/docs/Web/API/WebVR_API/Concepts) articles.
+> [!NOTE]
+> You can find a lot more out about how the API works in our [Using the WebVR API](/es/docs/Web/API/WebVR_API/Using_the_WebVR_API) and [WebVR Concepts](/es/docs/Web/API/WebVR_API/Concepts) articles.
 
 ### Using controllers: Combining WebVR with the Gamepad API
 
-Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the [Gamepad API](/es/docs/Web/API/Gamepad_API), and specifically the [Gamepad Extensions API](/es/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions) that adds API features for accessing [controller pose](/es/docs/Web/API/GamepadPose), [haptic actuators](/es/docs/Web/API/GamepadHapticActuator), and more.
+Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the [Gamepad API](/es/docs/Web/API/Gamepad_API), and specifically the [Gamepad Extensions API](/es/docs/Web/API/Gamepad_API#experimental_gamepad_extensions) that adds API features for accessing [controller pose](/es/docs/Web/API/GamepadPose), [haptic actuators](/es/docs/Web/API/GamepadHapticActuator), and more.
 
-> **Nota:** Our [Using VR controllers with WebVR](/es/docs/Web/API/WebVR_API/Using_VR_controllers_with_WebVR) article explains the basics of how to use VR controllers with WebVR apps.
+> [!NOTE]
+> Our [Using VR controllers with WebVR](/es/docs/Web/API/WebVR_API/Using_VR_controllers_with_WebVR) article explains the basics of how to use VR controllers with WebVR apps.
 
 ## WebVR Interfaces
 
@@ -118,17 +109,18 @@ You can find a number of examples at these locations:
 
 ## Especificaciones
 
-{{Specifications}}
+Esta API se especificó en la antigua [API de WebVR](https://immersive-web.github.io/webvr/spec/1.1/) que fue reemplazada por la [API del dispositivo WebXR](https://immersive-web.github.io/webxr/). Ya no está en camino de convertirse en un estándar.
 
-## Browser compatibility
+Hasta que todos los navegadores hayan implementado las nuevas [API de WebXR](/es/docs/Web/API/WebXR_Device_API/Fundamentals), se recomienda confiar en _frameworks_, como [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), o [Three.js](https://threejs.org/), o un [polyfill](https://github.com/immersive-web/webxr-polyfill), para desarrollar aplicaciones WebXR que funcionen en todos los navegadores [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/).
 
-{{Compat("api.Navigator.getVRDisplays")}}
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## See also
 
 - [vr.mozilla.org](https://vr.mozilla.org) — The main Mozilla landing pad for WebVR, with demos, utilities, and other information.
 - [A-Frame](https://aframe.io/) — Open source web framework for building VR experiences.
 - [webvr.info](https://webvr.info) — Up-to-date information about WebVR, browser setup, and community.
-- [MozVr.com](http://mozvr.com/) — Demos, downloads, and other resources from the Mozilla VR team.
 - [threejs-vr-boilerplate](https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate) — A useful starter template for writing WebVR apps into.
 - [Web VR polyfill](https://github.com/googlevr/webvr-polyfill/) — JavaScript implementation of WebVR.

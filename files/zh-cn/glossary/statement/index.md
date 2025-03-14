@@ -1,16 +1,15 @@
 ---
-title: Statement
+title: 语句
 slug: Glossary/Statement
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-在计算机编程语言中，**语句** 是一行任务指令的代码。每个程序都包含若干语句。
+{{GlossarySidebar}}
 
-## 更多
+在计算机编程语言中，**语句**是一行任务指令的代码。每个程序都包含若干语句。
 
-### 一般知识
+## 参见
 
-- [Statement (computer science)](https://zh.wikipedia.org/wiki/Statement_(computer_science)) on Wikipedia
-
-### 技术参考
-
-- [JavaScript statements and declarations](/zh-CN/docs/Web/JavaScript/Reference/Statements)
+- 维基百科上的[语句（程序设计）](https://zh.wikipedia.org/wiki/陳述式)
+- [JavaScript 语句和声明](/zh-CN/docs/Web/JavaScript/Reference/Statements)

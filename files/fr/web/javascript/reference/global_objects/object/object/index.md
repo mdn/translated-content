@@ -1,15 +1,13 @@
 ---
 title: Constructeur Object()
 slug: Web/JavaScript/Reference/Global_Objects/Object/Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/Object
-browser-compat: javascript.builtins.Object.Object
 ---
 
 {{JSRef}}
 
 Le **constructeur `Object`** crée une enveloppe objet pour la valeur passée en argument.
 
-- Si la valeur est [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), il crée et renvoie un nouvel objet vide.
+- Si la valeur est [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), il crée et renvoie un nouvel objet vide.
 - Sinon, il renvoie un objet du type correspondant à la valeur passée en argument.
 - Si la valeur est déjà un objet, il renvoie la valeur.
 
@@ -18,8 +16,8 @@ Lorsqu'il est appelé comme une fonction plutôt que comme un constructeur (c'es
 ## Syntaxe
 
 ```js
-new Object()
-new Object(valeur)
+new Object();
+new Object(valeur);
 ```
 
 ### Paramètres

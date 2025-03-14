@@ -1,12 +1,9 @@
 ---
 title: param
 slug: Web/XSLT/Element/param
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/param
-original_slug: Web/XSLT/param
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:param>` 요소는 이름과 선택에 따라 기본값으로 매개변수를 설정합니다. 최상위 요소로 쓸 때, 매개변수는 전역입니다. `<xsl:template>` 요소 안에서 쓰면, 매개변수는 그 템플릿에 대해 지역입니다. 이 경우에 요소는 템플릿의 첫 자식 요소여야 합니다.
 
@@ -34,7 +31,7 @@ original_slug: Web/XSLT/param
 
 ### 정의
 
-[XSLT section 11, Variables and Parameters](http://www.w3.org/TR/xslt#variables)
+[XSLT section 11, Variables and Parameters](https://www.w3.org/TR/xslt#variables)
 
 ### Gecko 지원
 

@@ -5,7 +5,7 @@ slug: Web/API/MutationObserver
 
 {{APIRef("DOM")}}
 
-`MutationObserver` 提供開發人員一個方法，來對 [DOM](/zh-TW/docs/DOM) tree 的變動來作反應，這被設計用來替換在 DOM3 事件規範中的 [Mutation Events](/zh-TW/docs/DOM/Mutation_events)。
+`MutationObserver` 提供開發人員一個方法，來對 [DOM](/zh-TW/docs/Web/API/Document_Object_Model) tree 的變動來作反應，這被設計用來替換在 DOM3 事件規範中的 [Mutation Events](/zh-TW/docs/DOM/Mutation_events)。
 
 ## 建構式
 
@@ -27,9 +27,9 @@ new MutationObserver(
 ## Instance methods
 
 | `void observe( {{domxref("Node")}} target, MutationObserverInit options );` |
-| -------------------------------------------------------------------------------- |
-| `void disconnect();`                                                             |
-| `Array takeRecords();`                                                           |
+| --------------------------------------------------------------------------- |
+| `void disconnect();`                                                        |
+| `Array takeRecords();`                                                      |
 
 > **備註：** {{domxref("Node")}} target should not be confused with [NodeJS](https://nodejs.org/en/).
 
@@ -49,9 +49,10 @@ void observe(
 - `target`
   - : The {{domxref("Node")}} on which to observe DOM mutations.
 - `options`
-  - : A [`MutationObserverInit`](#MutationObserverInit) object, specifies which DOM mutations should be reported.
+  - : A [`MutationObserverInit`](#mutationobserverinit) object, specifies which DOM mutations should be reported.
 
-> **備註：** Adding an observer to an element is just like addEventListener, if you observe the element multiple times it does not make a difference. Meaning if you observe element twice, the observe callback does not fire twice, nor will you have to run disconnect() twice. In other words, once an element is observed, observing it again with the same observer instance will do nothing. However if the callback object is different it will of course add another observer to it.
+> [!NOTE]
+> Adding an observer to an element is just like addEventListener, if you observe the element multiple times it does not make a difference. Meaning if you observe element twice, the observe callback does not fire twice, nor will you have to run disconnect() twice. In other words, once an element is observed, observing it again with the same observer instance will do nothing. However if the callback object is different it will of course add another observer to it.
 
 ### `disconnect()`
 
@@ -71,13 +72,14 @@ Array takeRecords();
 
 #### Return value
 
-Returns an Array of [`MutationRecord`s](#MutationRecord).
+Returns an Array of [`MutationRecord`s](#mutationrecord).
 
 ## `MutationObserverInit`
 
 `MutationObserverInit` is an object which can specify the following properties:
 
-> **備註：** At the very least, `childList`, `attributes`, or `characterData` must be set to `true`. Otherwise, "An invalid or illegal string was specified" error is thrown.
+> [!NOTE]
+> At the very least, `childList`, `attributes`, or `characterData` must be set to `true`. Otherwise, "An invalid or illegal string was specified" error is thrown.
 
 | Property                | Description                                                                                                            |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------- |
@@ -93,29 +95,29 @@ Returns an Array of [`MutationRecord`s](#MutationRecord).
 
 `MutationRecord` is the object that will be passed to the observer's callback. It has the following properties:
 
-| Property             | Type                               | Description                                                                                                                                                                                                                                |
-| -------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `type`               | `String`                           | Returns `attributes` if the mutation was an attribute mutation, `characterData` if it was a mutation to a `CharacterData` node, and `childList` if it was a mutation to the tree of nodes.                                                 |
-| `target`             | `{{domxref("Node")}}`         | Returns the node the mutation affected, depending on the `type`. For `attributes`, it is the element whose attribute changed. For `characterData`, it is the `CharacterData` node. For `childList`, it is the node whose children changed. |
-| `addedNodes`         | `{{domxref("NodeList")}}` | Return the nodes added. Will be an empty `NodeList` if no nodes were added.                                                                                                                                                                |
-| `removedNodes`       | `{{domxref("NodeList")}}` | Return the nodes removed. Will be an empty `NodeList` if no nodes were removed.                                                                                                                                                            |
-| `previousSibling`    | `{{domxref("Node")}}`         | Return the previous sibling of the added or removed nodes, or `null`.                                                                                                                                                                      |
-| `nextSibling`        | `{{domxref("Node")}}`         | Return the next sibling of the added or removed nodes, or `null`.                                                                                                                                                                          |
-| `attributeName`      | `String`                           | Returns the local name of the changed attribute, or `null`.                                                                                                                                                                                |
-| `attributeNamespace` | `String`                           | Returns the namespace of the changed attribute, or `null`.                                                                                                                                                                                 |
-| `oldValue`           | `String`                           | The return value depends on the `type`. For `attributes`, it is the value of the changed attribute before the change. For `characterData`, it is the data of the changed node before the change. For `childList`, it is `null`.            |
+| Property             | Type                    | Description                                                                                                                                                                                                                                |
+| -------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `type`               | `String`                | Returns `attributes` if the mutation was an attribute mutation, `characterData` if it was a mutation to a `CharacterData` node, and `childList` if it was a mutation to the tree of nodes.                                                 |
+| `target`             | {{domxref("Node")}}     | Returns the node the mutation affected, depending on the `type`. For `attributes`, it is the element whose attribute changed. For `characterData`, it is the `CharacterData` node. For `childList`, it is the node whose children changed. |
+| `addedNodes`         | {{domxref("NodeList")}} | Return the nodes added. Will be an empty `NodeList` if no nodes were added.                                                                                                                                                                |
+| `removedNodes`       | {{domxref("NodeList")}} | Return the nodes removed. Will be an empty `NodeList` if no nodes were removed.                                                                                                                                                            |
+| `previousSibling`    | {{domxref("Node")}}     | Return the previous sibling of the added or removed nodes, or `null`.                                                                                                                                                                      |
+| `nextSibling`        | {{domxref("Node")}}     | Return the next sibling of the added or removed nodes, or `null`.                                                                                                                                                                          |
+| `attributeName`      | `String`                | Returns the local name of the changed attribute, or `null`.                                                                                                                                                                                |
+| `attributeNamespace` | `String`                | Returns the namespace of the changed attribute, or `null`.                                                                                                                                                                                 |
+| `oldValue`           | `String`                | The return value depends on the `type`. For `attributes`, it is the value of the changed attribute before the change. For `characterData`, it is the data of the changed node before the change. For `childList`, it is `null`.            |
 
 ## Example usage
 
-The following example was taken from [this blog post](http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/).
+The following example was taken from [this blog post](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/).
 
 ```js
 // select the target node
-var target = document.querySelector('#some-id');
+var target = document.querySelector("#some-id");
 
 // create an observer instance
-var observer = new MutationObserver(function(mutations) {
-  mutations.forEach(function(mutation) {
+var observer = new MutationObserver(function (mutations) {
+  mutations.forEach(function (mutation) {
     console.log(mutation.type);
   });
 });
@@ -133,10 +135,10 @@ observer.disconnect();
 ## Additional reading
 
 - [A brief overview](http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers)
-- [A more in-depth discussion](http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)
-- [A screencast by Chromium developer Rafael Weinstein](http://www.youtube.com/watch?v=eRZ4pO0gVWw)
-- [The mutation summary library](http://code.google.com/p/mutation-summary/)
-- [The DOM standard](http://dom.spec.whatwg.org/#mutation-observers) which defines the `MutationObserver` interface
+- [A more in-depth discussion](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)
+- [A screencast by Chromium developer Rafael Weinstein](https://www.youtube.com/watch?v=eRZ4pO0gVWw)
+- [The mutation summary library](https://github.com/rafaelw/mutation-summary)
+- [The DOM standard](https://dom.spec.whatwg.org/#mutation-observers) which defines the `MutationObserver` interface
 
 ## Browser compatibility
 

@@ -1,5 +1,5 @@
 ---
-title: ':link'
+title: :link
 slug: Web/CSS/:link
 ---
 
@@ -16,7 +16,8 @@ a:link {
 
 Los estilos definidos por la pseudo-clase `:link` serán anulados por cualquier pseudo-clase posterior relacionada con el enlace ({{cssxref(":active")}}, {{cssxref(":hover")}}, o {{cssxref(":visited")}}) que tenga al menos la misma especificidad. Para darle un estilo apropiado a los enlaces, coloque la regla `:link` antes de todas las demás reglas relacionadas con el enlace, tal como lo define el _orden LVHA_: `:link` — `:visited` — `:hover` — `:active`.
 
-> **Nota:** Use {{cssxref(":any-link")}} para seleccionar un elemento independientemente de si ha sido visitado o no.
+> [!NOTE]
+> Use {{cssxref(":any-link")}} para seleccionar un elemento independientemente de si ha sido visitado o no.
 
 ## Sintaxis
 
@@ -29,8 +30,8 @@ Por defecto, la mayoría de los navegadores aplican un valor especial {{cssxref(
 ### HTML
 
 ```html
-<a href="#ordinary-target">Este es un enlace ordinario.</a><br>
-<a href="">Ya has visitado este enlace.</a><br>
+<a href="#ordinary-target">Este es un enlace ordinario.</a><br />
+<a href="">Ya has visitado este enlace.</a><br />
 <a>Enlace de marcador de posición (no se personalizará)</a>
 ```
 
@@ -53,7 +54,7 @@ a:link {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.link")}}
+{{Compat}}
 
 ## Ver también
 

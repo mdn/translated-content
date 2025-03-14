@@ -1,36 +1,88 @@
 ---
 title: float
 slug: Web/CSS/float
+l10n:
+  sourceCommit: 6aa664dc5ccb5edf0897f99ad5feb59325dff831
 ---
 
 {{CSSRef}}
 
-**`float`** は CSS のプロパティで、要素を包含ブロックの左右どちらかの側に沿うように設置し、テキストやインライン要素がその周りを回りこめるように定義します。要素はウェブページの通常のフローから外れますが、 ([絶対位置指定](/ja/docs/Web/CSS/position#absolute_positioning) とは対照的に) フローの一部であり続けます。
+**`float`** は CSS のプロパティで、要素を包含ブロックの左右どちらかの側に沿うように設置し、テキストやインライン要素がその周りを回りこめるように定義します。要素はウェブページの通常のフローから外れますが、（[絶対位置指定](/ja/docs/Web/CSS/position#absolute_positioning) とは対照的に）フローの一部であり続けます。
 
-{{EmbedInteractiveExample("pages/css/float.html")}}
+{{InteractiveExample("CSS Demo: float")}}
 
-*浮動要素* (floating element) とは、`float` の計算値が `none` 以外の要素です。
+```css interactive-example-choice
+float: none;
+```
+
+```css interactive-example-choice
+float: left;
+```
+
+```css interactive-example-choice
+float: right;
+```
+
+```css interactive-example-choice
+float: inline-start;
+```
+
+```css interactive-example-choice
+float: inline-end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">Float me</div>
+    As much mud in the streets as if the waters had but newly retired from the
+    face of the earth, and it would not be wonderful to meet a Megalosaurus,
+    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  padding: 0.75em;
+  text-align: left;
+  width: 80%;
+  line-height: normal;
+}
+
+#example-element {
+  border: solid 10px #efac09;
+  background-color: #040d46;
+  color: white;
+  padding: 1em;
+  width: 40%;
+}
+```
+
+_浮動要素_ (floating element) とは、`float` の計算値が `none` 以外の要素です。
 
 `float` は暗黙的にブロックレイアウトの使用を意味しており、 {{cssxref("display")}} の計算値を変更する場合があります。
 
-| 指定値               | 計算値         |
-| -------------------- | -------------- |
-| `inline`             | `block`        |
-| `inline-block`       | `block`        |
-| `inline-table`       | `table`        |
-| `table-row`          | `block`        |
-| `table-row-group`    | `block`        |
-| `table-column`       | `block`        |
-| `table-column-group` | `block`        |
-| `table-cell`         | `block`        |
-| `table-caption`      | `block`        |
-| `table-header-group` | `block`        |
-| `table-footer-group` | `block`        |
-| `inline-flex`        | `flex`         |
-| `inline-grid`        | `grid`         |
-| _その他_             | _変更なし_     |
+| 指定値               | 計算値     |
+| -------------------- | ---------- |
+| `inline`             | `block`    |
+| `inline-block`       | `block`    |
+| `inline-table`       | `table`    |
+| `table-row`          | `block`    |
+| `table-row-group`    | `block`    |
+| `table-column`       | `block`    |
+| `table-column-group` | `block`    |
+| `table-cell`         | `block`    |
+| `table-caption`      | `block`    |
+| `table-header-group` | `block`    |
+| `table-footer-group` | `block`    |
+| `inline-flex`        | `flex`     |
+| `inline-grid`        | `grid`     |
+| _その他_             | _変更なし_ |
 
-> **メモ:** JavaScript で {{domxref("HTMLElement.style")}} オブジェクトのメンバーとしてこのプロパティを参照する場合、最近のブラウザーは `float` に対応していますが、古いブラウザーは `cssFloat` という綴りになり、 Internet Explorer のバージョン 8 以前では、 `styleFloat` を使用しています。これは、ダッシュ区切りの CSS 名は DOM メンバーとしてキャメルケースで綴るというルールの例外でした (これは "float" が JavaScript の予約語であるためで、 "class" を "className" とする必要があったり、 \<label> の "for" を "htmlFor" とする必要があったりするのと同じです)。
+> [!NOTE]
+> JavaScript で {{domxref("HTMLElement.style")}} オブジェクトのメンバーとしてこのプロパティを参照する場合、最近のブラウザーは `float` に対応していますが、古いブラウザーは `cssFloat` という綴りになります。これは、ハイフン区切りの CSS 名は DOM メンバーとして{{Glossary("camel_case", "キャメルケース")}}で綴るというルールの例外でした（これは "float" が JavaScript の予約語であるためで、 "class" を "className" とする必要があったり、 \<label> の "for" を "htmlFor" とする必要があったりするのと同じです）。
 
 ## 構文
 
@@ -46,6 +98,7 @@ float: inline-end;
 float: inherit;
 float: initial;
 float: revert;
+float: revert-layer;
 float: unset;
 ```
 
@@ -74,7 +127,7 @@ float: unset;
 
 ## 例
 
-<h3 id="How_floated_elements_are_positioned">浮動要素の位置をどのように決めるか</h3>
+### 浮動要素の位置をどのように決めるか
 
 上述のとおり、要素は浮動すると、文書の通常のフローから外されます (ただし、フローの一部であり続けます)。浮動要素は、包含ブロックか*他の浮動要素*の辺に触れるまで、左側または右側に移動させられます。
 
@@ -89,11 +142,13 @@ float: unset;
   <div class="left">1</div>
   <div class="left">2</div>
   <div class="right">3</div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-     Morbi tristique sapien ac erat tincidunt, sit amet dignissim
-     lectus vulputate. Donec id iaculis velit. Aliquam vel
-     malesuada erat. Praesent non magna ac massa aliquet tincidunt
-     vel in massa. Phasellus feugiat est vel leo finibus congue.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique
+    sapien ac erat tincidunt, sit amet dignissim lectus vulputate. Donec id
+    iaculis velit. Aliquam vel malesuada erat. Praesent non magna ac massa
+    aliquet tincidunt vel in massa. Phasellus feugiat est vel leo finibus
+    congue.
+  </p>
 </section>
 ```
 
@@ -142,5 +197,5 @@ div {
 
 ## 関連情報
 
-- [ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)
+- [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
 - アイテムを浮動要素の下へ強制的に移動させるには {{cssxref("clear")}} を使用します。

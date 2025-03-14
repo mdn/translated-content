@@ -1,24 +1,13 @@
 ---
 title: Botones
 slug: Games/Tutorials/2D_breakout_game_Phaser/Buttons
-tags:
-  - 2D
-  - Botones
-  - JavaScript
-  - Lienzo
-  - Phaser
-  - Principiante
-  - Tutorial
-  - juegos
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Buttons
-original_slug: Games/Tutorials/2D_breakout_game_Phaser/Botones
 ---
 
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens", "Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay")}}
 
-Este es el **paso 15** de 16 del tutorial [Gamedev Phaser](/es/docs/Games/Workflows/2D_Breakout_game_Phaser). Puedes encontrar el código fuente como debería quedar después de completar el tutorial en [Gamedev-Phaser-Content-Kit/demos/lesson15.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson15.html).
+Este es el **paso 15** de 16 del tutorial [Gamedev Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Puedes encontrar el código fuente como debería quedar después de completar el tutorial en [Gamedev-Phaser-Content-Kit/demos/lesson15.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson15.html).
 
 En lugar de comenzar el juego de inmediato, podemos dejar la decisión en el jugador añadiendo un botón de Inicio que pueda pulsar. Vamos a investigar cómo hacerlo.
 
@@ -36,7 +25,7 @@ var startButton;
 Podemos cargar el botón de spritesheet de la misma manera que cargamos la animación del movimiento de la pelota. Añade lo siguiente al botón de la función `preload()`:
 
 ```js
-game.load.spritesheet('button', 'img/button.png', 120, 40);
+game.load.spritesheet("button", "img/button.png", 120, 40);
 ```
 
 El marco de un solo botón mide 120 pixels de ancho y 40 pixels de alto.
@@ -48,7 +37,16 @@ También se debe tomar el botón de spritesheet de [Github](https://github.com/e
 Para añadir el botón al juego usaremos el método `add.button`. Añade las siguientes lineas del botón a la función `create()`:
 
 ```js
-startButton = game.add.button(game.world.width*0.5, game.world.height*0.5, 'button', startGame, this, 1, 0, 2);
+startButton = game.add.button(
+  game.world.width * 0.5,
+  game.world.height * 0.5,
+  "button",
+  startGame,
+  this,
+  1,
+  0,
+  2,
+);
 startButton.anchor.set(0.5);
 ```
 
@@ -60,15 +58,16 @@ Los parámetros del método `button()` son los siguientes:
 - Una referencia a `this` para especificar el contexto de ejecución.
 - Los marcos que usaremos para los eventos _over_, _out_ and _down_.
 
-> **Nota:** El evento over es igual al hover, out es cuando el puntero se mueve fuera del botón y down cuando el botón es presionado.
+> [!NOTE]
+> El evento over es igual al hover, out es cuando el puntero se mueve fuera del botón y down cuando el botón es presionado.
 
 Ahora necesitamos definir la función `startGame()` referenciada en el siguiente código:
 
 ```js
 function startGame() {
-    startButton.destroy();
-    ball.body.velocity.set(150, -150);
-    playing = true;
+  startButton.destroy();
+  ball.body.velocity.set(150, -150);
+  playing = true;
 }
 ```
 
@@ -82,11 +81,11 @@ Funciona como se esperaba, pero aún podemos mover la paleta cuando el juego aú
 
 ```js
 function update() {
-    game.physics.arcade.collide(ball, paddle, ballHitPaddle);
-    game.physics.arcade.collide(ball, bricks, ballHitBrick);
-    if(playing) {
-        paddle.x = game.input.x || game.world.width*0.5;
-    }
+  game.physics.arcade.collide(ball, paddle, ballHitPaddle);
+  game.physics.arcade.collide(ball, bricks, ballHitBrick);
+  if (playing) {
+    paddle.x = game.input.x || game.world.width * 0.5;
+  }
 }
 ```
 

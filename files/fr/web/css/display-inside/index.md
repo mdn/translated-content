@@ -1,11 +1,6 @@
 ---
 title: display-inside
 slug: Web/CSS/display-inside
-tags:
-  - CSS
-  - Reference
-  - Type
-translation_of: Web/CSS/display-inside
 ---
 
 {{CSSRef}}
@@ -22,20 +17,21 @@ Une valeur `<display-inside>` est définie avec l'un des mots-clés suivants :
 
     Si le type d'affichage extérieur est `inline` ou `run-in` et que l'élément participe à un contexte de formatage bloc ou en ligne, il génèrera une boîte en ligne. Sinon, il génèrera un conteneur de bloc.
 
-    Selon la valeur d'autres propriétés (telles que {{CSSxRef("position")}}, {{CSSxRef("float")}}, ou {{CSSxRef("overflow")}}) et selon que l'élément partcipe à un contexte de mise en forme de bloc ou en ligne, l'élément crée un nouveau [contexte de formatage de bloc](/fr/docs/Web/Guide/CSS/Block_formatting_context) (BFC) pour son contenu ou intègre son contenu dans le contexte parent.
+    Selon la valeur d'autres propriétés (telles que {{CSSxRef("position")}}, {{CSSxRef("float")}}, ou {{CSSxRef("overflow")}}) et selon que l'élément partcipe à un contexte de mise en forme de bloc ou en ligne, l'élément crée un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) pour son contenu ou intègre son contenu dans le contexte parent.
 
 - `flow-root` {{Experimental_Inline}}
-  - : L'élément génère un bloc qui établit un nouveau [contexte de formatage de bloc](/fr/docs/Web/Guide/CSS/Block_formatting_context), définissant ainsi une nouvelle racine pour le formatage.
+  - : L'élément génère un bloc qui établit un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context), définissant ainsi une nouvelle racine pour le formatage.
 - `table`
   - : L'élément se comporte comme un élément HTML {{HTMLElement("table")}}. Il définit une boîte de bloc.
 - `flex`
-  - : L'élément se comporte comme un élément de bloc et dispose son contenu selon [le modèle des boîtes flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout).
+  - : L'élément se comporte comme un élément de bloc et dispose son contenu selon [le modèle des boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout).
 - `grid`
-  - : L'élément se comporte comme un élément de bloc et dispose son contenu selon [le modèle des grilles](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout).
+  - : L'élément se comporte comme un élément de bloc et dispose son contenu selon [le modèle des grilles](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout).
 - `ruby` {{Experimental_Inline}}
   - : L'élément se comporte comme un élément en ligne et dispose son contenu selon le modèle de formatage ruby. Il se comporte comme un élément HTML {{HTMLElement("ruby")}}.
 
-> **Note :** Les navigateurs qui prennent en charge la syntaxe avec deux valeurs peuvent n'utiliser que `<display-inside>` lorsque c'est cohérent. Ainsi, avec `display: flex` ou `display: grid`, la valeur utilisée de `<display-outside>` sera nécessairement `block`. On a ainsi le résultat attendu car on doit avoir `display: grid` avec un conteneur qui soit un bloc.
+> [!NOTE]
+> Les navigateurs qui prennent en charge la syntaxe avec deux valeurs peuvent n'utiliser que `<display-inside>` lorsque c'est cohérent. Ainsi, avec `display: flex` ou `display: grid`, la valeur utilisée de `<display-outside>` sera nécessairement `block`. On a ainsi le résultat attendu car on doit avoir `display: grid` avec un conteneur qui soit un bloc.
 
 ### Syntaxe formelle
 
@@ -59,7 +55,7 @@ Dans l'exemple qui suit, la boîte parente est ciblée avec `display: flow-root`
   width: 200px;
   height: 150px;
   background-color: white;
-  border:1px solid black;
+  border: 1px solid black;
   padding: 10px;
 }
 ```
@@ -79,29 +75,7 @@ Dans l'exemple qui suit, la boîte parente est ciblée avec `display: flow-root`
 
 ## Compatibilité des navigateurs
 
-### Prise en charge des valeurs multiples
-
-{{Compat("css.properties.display.multi-keyword_values", 10)}}
-
-### Prise en charge de `flow-root`
-
-{{Compat("css.properties.display.flow-root", 10)}}
-
-### Prise en charge des tableaux
-
-{{Compat("css.properties.display.table_values", 10)}}
-
-### Prise en charge des grilles
-
-{{Compat("css.properties.display.grid", 10)}}
-
-### Prise en charge des boîtes flexibles
-
-{{Compat("css.properties.display.flex", 10)}}
-
-### Prise en charge des annotations ruby
-
-{{Compat("css.properties.display.ruby_values", 10)}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -113,5 +87,5 @@ Dans l'exemple qui suit, la boîte parente est ciblée avec `display: flow-root`
   - {{CSSxRef("&lt;display-box&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [Concepts de base des boîtes flexibles (_flexbox_)](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
-- [Concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [Concepts de base des boîtes flexibles (_flexbox_)](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)

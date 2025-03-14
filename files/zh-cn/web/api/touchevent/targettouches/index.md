@@ -28,7 +28,7 @@ var touches = touchEvent.targetTouches;
 function touches_in_target(ev) {
   // Return true if all of the touches are within the target element;
   // otherwise return false.
-  return (ev.touches.length == ev.targetTouches.length ? true : false);
+  return ev.touches.length == ev.targetTouches.length ? true : false;
 }
 ```
 

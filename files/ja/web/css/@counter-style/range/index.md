@@ -20,8 +20,12 @@ range: 6 infinite;
 range: infinite infinite;
 
 /* 複数の範囲の値 */
-range: 2 5, 8 10;
-range: infinite 6, 10 infinite;
+range:
+  2 5,
+  8 10;
+range:
+  infinite 6,
+  10 infinite;
 ```
 
 ### 値
@@ -81,7 +85,9 @@ auto
 @counter-style range-multi-example {
   system: cyclic;
   symbols: "\25A0" "\25A1";
-  range: 2 4, 7 9;
+  range:
+    2 4,
+    7 9;
 }
 
 .list {

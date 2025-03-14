@@ -1,11 +1,11 @@
 ---
-title: '@charset'
+title: "@charset"
 slug: Web/CSS/@charset
 ---
 
 {{CSSRef}}
 
-**`@charset`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule) で、スタイルシートで使う文字エンコーディングを定義します。このルールはスタイルシートの最初の要素でなければならず、これより前には文字を一切記述してはいけません。[入れ子の文](/ja/docs/CSS/Syntax#nested_statements)でないとしても、[条件付きグループルール](/ja/docs/CSS/At-rule#条件付きグループルール)の中で使うことはできません。複数の `@charset` アットルールが定義されると、最初のものだけが使われます。HTML 要素の `style` 属性や、HTML ページの文字セットが関係している {{ HTMLElement("style") }} 要素の中では使えません。
+**`@charset`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule) で、スタイルシートで使う文字エンコーディングを定義します。このルールはスタイルシートの最初の要素でなければならず、これより前には文字を一切記述してはいけません。[入れ子の文](/ja/docs/Web/CSS/Syntax#nested_statements)でないとしても、[条件付きグループルール](/ja/docs/Web/CSS/At-rule#条件付きグループルール)の中で使うことはできません。複数の `@charset` アットルールが定義されると、最初のものだけが使われます。HTML 要素の `style` 属性や、HTML ページの文字セットが関係している {{ HTMLElement("style") }} 要素の中では使えません。
 
 ```css
 @charset "utf-8";
@@ -31,7 +31,7 @@ slug: Web/CSS/@charset
 ここで、
 
 - _charset_
-  - : 使う文字エンコーディングを意味する {{cssxref("&lt;string&gt;")}} です。[IANA-registry](http://www.iana.org/assignments/character-sets) で定義されているウェブセーフな文字エンコーディングの名前でなければなりません。この名前は必ず 1 文字分の空白文字 (U+0020) の後に続き、二重引用符で囲われ、セミコロン記号で終わる必要があります。もし 1 つのエンコーディングに複数の名前が関連付けられている場合には、使用できるのは *preferred* とマークされているものだけです。
+  - : 使う文字エンコーディングを意味する {{cssxref("&lt;string&gt;")}} です。[IANA-registry](https://www.iana.org/assignments/character-sets) で定義されているウェブセーフな文字エンコーディングの名前でなければなりません。この名前は必ず 1 文字分の空白文字 (U+0020) の後に続き、二重引用符で囲われ、セミコロン記号で終わる必要があります。もし 1 つのエンコーディングに複数の名前が関連付けられている場合には、使用できるのは _preferred_ とマークされているものだけです。
 
 ## 形式文法
 
@@ -41,11 +41,11 @@ slug: Web/CSS/@charset
 
 ### 有効・無効な文字セットの宣言
 
-```css
-@charset "UTF-8";       /* スタイルシートのエンコーディングを Unicode UTF-8 にします*/
+```css-nolint
+@charset "UTF-8"; /* スタイルシートのエンコーディングを Unicode UTF-8 にします*/
 @charset 'iso-8859-15'; /* 無効です。正しくない引用符が使用されています */
- @charset "UTF-8";      /* 無効です。アットルールより前に文字（空白）があります */
-@charset UTF-8;         /* 無効です。' か " がなく、文字セットは CSS の {{cssxref("&lt;string&gt;")}} ではありません */
+ @charset "UTF-8"; /* 無効です。アットルールより前に文字（空白）があります */
+@charset UTF-8; /* 無効です。' か " がなく、文字セットは CSS の {{cssxref("&lt;string&gt;")}} ではありません */
 ```
 
 ## 仕様書
@@ -58,5 +58,5 @@ slug: Web/CSS/@charset
 
 ## 関連情報
 
-- 用語集: [文字セット](/ja/docs/Glossary/character_set)
+- 用語集: [文字セット](/ja/docs/Glossary/Character_set)
 - 用語集: [Unicode](/ja/docs/Glossary/Unicode)

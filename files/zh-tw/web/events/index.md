@@ -105,7 +105,7 @@ This article offers a list of events that can be sent; some are standard events 
       <td>
         <p>
           Events related to
-          <a href="/zh-TW/docs/Web/CSS/CSS_Transitions">CSS Transitions</a>.
+          <a href="/zh-TW/docs/Web/CSS/CSS_transitions">CSS Transitions</a>.
         </p>
         <p>
           Provides notification events when CSS transitions start, stop, are
@@ -420,7 +420,7 @@ This article offers a list of events that can be sent; some are standard events 
       <td>
         <p>
           Events related to installation of
-          <a href="/zh-TW/docs/Web/Manifest">progressive web app manifests</a>.
+          <a href="/zh-TW/docs/Web/Progressive_web_apps/Manifest">progressive web app manifests</a>.
         </p>
       </td>
       <td>
@@ -880,51 +880,51 @@ This article offers a list of events that can be sent; some are standard events 
 
 - {{DOMxRef("Document")}}
 
-  - [animationcancel 事件](/zh-TW/docs/Web/API/Document/animationcancel_event)
-  - [animationend 事件](/zh-TW/docs/Web/API/Document/animationend_event)
-  - [animationiteration 事件](/zh-TW/docs/Web/API/Document/animationiteration_event)
-  - [animationstart 事件](/zh-TW/docs/Web/API/Document/animationstart_event)
+  - [animationcancel 事件](/zh-TW/docs/Web/API/Element/animationcancel_event)
+  - [animationend 事件](/zh-TW/docs/Web/API/Element/animationend_event)
+  - [animationiteration 事件](/zh-TW/docs/Web/API/Element/animationiteration_event)
+  - [animationstart 事件](/zh-TW/docs/Web/API/Element/animationstart_event)
   - [copy 事件](/zh-TW/docs/Web/API/Document/copy_event)
   - [cut 事件](/zh-TW/docs/Web/API/Document/cut_event)
   - [DOMContentLoaded 事件](/zh-TW/docs/Web/API/Document/DOMContentLoaded_event)
-  - [dragend 事件](/zh-TW/docs/Web/API/Document/dragend_event)
-  - [dragenter 事件](/zh-TW/docs/Web/API/Document/dragenter_event)
-  - [dragleave 事件](/zh-TW/docs/Web/API/Document/dragleave_event)
-  - [dragover 事件](/zh-TW/docs/Web/API/Document/dragover_event)
-  - [dragstart 事件](/zh-TW/docs/Web/API/Document/dragstart_event)
-  - [drag 事件](/zh-TW/docs/Web/API/Document/drag_event)
-  - [drop 事件](/zh-TW/docs/Web/API/Document/drop_event)
+  - [dragend 事件](/zh-TW/docs/Web/API/HTMLElement/dragend_event)
+  - [dragenter 事件](/zh-TW/docs/Web/API/HTMLElement/dragenter_event)
+  - [dragleave 事件](/zh-TW/docs/Web/API/HTMLElement/dragleave_event)
+  - [dragover 事件](/zh-TW/docs/Web/API/HTMLElement/dragover_event)
+  - [dragstart 事件](/zh-TW/docs/Web/API/HTMLElement/dragstart_event)
+  - [drag 事件](/zh-TW/docs/Web/API/HTMLElement/drag_event)
+  - [drop 事件](/zh-TW/docs/Web/API/HTMLElement/drop_event)
   - [fullscreenchange 事件](/zh-TW/docs/Web/API/Document/fullscreenchange_event)
   - [fullscreenerror 事件](/zh-TW/docs/Web/API/Document/fullscreenerror_event)
-  - [gotpointercapture 事件](/zh-TW/docs/Web/API/Document/gotpointercapture_event)
-  - [keydown 事件](/zh-TW/docs/Web/API/Document/keydown_event)
-  - [keypress 事件](/zh-TW/docs/Web/API/Document/keypress_event)
-  - [keyup 事件](/zh-TW/docs/Web/API/Document/keyup_event)
-  - [lostpointercapture 事件](/zh-TW/docs/Web/API/Document/lostpointercapture_event)
+  - [gotpointercapture 事件](/zh-TW/docs/Web/API/Element/gotpointercapture_event)
+  - [keydown 事件](/zh-TW/docs/Web/API/Element/keydown_event)
+  - [keypress 事件](/zh-TW/docs/Web/API/Element/keypress_event)
+  - [keyup 事件](/zh-TW/docs/Web/API/Element/keyup_event)
+  - [lostpointercapture 事件](/zh-TW/docs/Web/API/Element/lostpointercapture_event)
   - [paste 事件](/zh-TW/docs/Web/API/Document/paste_event)
-  - [pointercancel 事件](/zh-TW/docs/Web/API/Document/pointercancel_event)
-  - [pointerdown 事件](/zh-TW/docs/Web/API/Document/pointerdown_event)
-  - [pointerenter 事件](/zh-TW/docs/Web/API/Document/pointerenter_event)
-  - [pointerleave 事件](/zh-TW/docs/Web/API/Document/pointerleave_event)
+  - [pointercancel 事件](/zh-TW/docs/Web/API/Element/pointercancel_event)
+  - [pointerdown 事件](/zh-TW/docs/Web/API/Element/pointerdown_event)
+  - [pointerenter 事件](/zh-TW/docs/Web/API/Element/pointerenter_event)
+  - [pointerleave 事件](/zh-TW/docs/Web/API/Element/pointerleave_event)
   - [pointerlockchange 事件](/zh-TW/docs/Web/API/Document/pointerlockchange_event)
   - [pointerlockerror 事件](/zh-TW/docs/Web/API/Document/pointerlockerror_event)
-  - [pointermove 事件](/zh-TW/docs/Web/API/Document/pointermove_event)
-  - [pointerout 事件](/zh-TW/docs/Web/API/Document/pointerout_event)
-  - [pointerover 事件](/zh-TW/docs/Web/API/Document/pointerover_event)
-  - [pointerup 事件](/zh-TW/docs/Web/API/Document/pointerup_event)
+  - [pointermove 事件](/zh-TW/docs/Web/API/Element/pointermove_event)
+  - [pointerout 事件](/zh-TW/docs/Web/API/Element/pointerout_event)
+  - [pointerover 事件](/zh-TW/docs/Web/API/Element/pointerover_event)
+  - [pointerup 事件](/zh-TW/docs/Web/API/Element/pointerup_event)
   - [readystatechange 事件](/zh-TW/docs/Web/API/Document/readystatechange_event)
   - [scroll 事件](/zh-TW/docs/Web/API/Document/scroll_event)
   - [selectionchange 事件](/zh-TW/docs/Web/API/Document/selectionchange_event)
-  - [touchcancel 事件](/zh-TW/docs/Web/API/Document/touchcancel_event)
-  - [touchend 事件](/zh-TW/docs/Web/API/Document/touchend_event)
-  - [touchmove 事件](/zh-TW/docs/Web/API/Document/touchmove_event)
-  - [touchstart 事件](/zh-TW/docs/Web/API/Document/touchstart_event)
-  - [transitioncancel 事件](/zh-TW/docs/Web/API/Document/transitioncancel_event)
-  - [transitionend 事件](/zh-TW/docs/Web/API/Document/transitionend_event)
-  - [transitionrun 事件](/zh-TW/docs/Web/API/Document/transitionrun_event)
-  - [transitionstart 事件](/zh-TW/docs/Web/API/Document/transitionstart_event)
+  - [touchcancel 事件](/zh-TW/docs/Web/API/Element/touchcancel_event)
+  - [touchend 事件](/zh-TW/docs/Web/API/Element/touchend_event)
+  - [touchmove 事件](/zh-TW/docs/Web/API/Element/touchmove_event)
+  - [touchstart 事件](/zh-TW/docs/Web/API/Element/touchstart_event)
+  - [transitioncancel 事件](/zh-TW/docs/Web/API/Element/transitioncancel_event)
+  - [transitionend 事件](/zh-TW/docs/Web/API/Element/transitionend_event)
+  - [transitionrun 事件](/zh-TW/docs/Web/API/Element/transitionrun_event)
+  - [transitionstart 事件](/zh-TW/docs/Web/API/Element/transitionstart_event)
   - [visibilitychange 事件](/zh-TW/docs/Web/API/Document/visibilitychange_event)
-  - [wheel 事件](/zh-TW/docs/Web/API/Document/wheel_event)
+  - [wheel 事件](/zh-TW/docs/Web/API/Element/wheel_event)
 
 - {{DOMxRef("Element")}}
 
@@ -946,7 +946,7 @@ This article offers a list of events that can be sent; some are standard events 
   - [dblclick 事件](/zh-TW/docs/Web/API/Element/dblclick_event)
   - [DOMActivate 事件](/zh-TW/docs/Web/API/Element/DOMActivate_event)
   - [DOMMouseScroll 事件](/zh-TW/docs/Web/API/Element/DOMMouseScroll_event)
-  - [error 事件](/zh-TW/docs/Web/API/Element/error_event)
+  - [error 事件](/zh-TW/docs/Web/API/HTMLElement/error_event)
   - [focusin 事件](/zh-TW/docs/Web/API/Element/focusin_event)
   - [focusout 事件](/zh-TW/docs/Web/API/Element/focusout_event)
   - [focus 事件](/zh-TW/docs/Web/API/Element/focus_event)
@@ -986,7 +986,7 @@ This article offers a list of events that can be sent; some are standard events 
   - [pointerover 事件](/zh-TW/docs/Web/API/Element/pointerover_event)
   - [pointerup 事件](/zh-TW/docs/Web/API/Element/pointerup_event)
   - [scroll 事件](/zh-TW/docs/Web/API/Element/scroll_event)
-  - [select 事件](/zh-TW/docs/Web/API/Element/select_event)
+  - [select 事件](/zh-TW/docs/Web/API/HTMLInputElement/select_event)
   - [show 事件](/zh-TW/docs/Web/API/Element/show_event)
   - [touchcancel 事件](/zh-TW/docs/Web/API/Element/touchcancel_event)
   - [touchend 事件](/zh-TW/docs/Web/API/Element/touchend_event)
@@ -1025,7 +1025,7 @@ This article offers a list of events that can be sent; some are standard events 
 
 - {{DOMxRef("HTMLDetailsElement")}}
 
-  - [toggle 事件](/zh-TW/docs/Web/API/HTMLDetailsElement/toggle_event)
+  - [toggle 事件](/zh-TW/docs/Web/API/HTMLElement/toggle_event)
 
 - {{DOMxRef("HTMLDialogElement")}}
 
@@ -1034,9 +1034,9 @@ This article offers a list of events that can be sent; some are standard events 
 
 - {{DOMxRef("HTMLElement")}}
 
-  - [beforeinput 事件](/zh-TW/docs/Web/API/HTMLElement/beforeinput_event)
+  - [beforeinput 事件](/zh-TW/docs/Web/API/Element/beforeinput_event)
   - [change 事件](/zh-TW/docs/Web/API/HTMLElement/change_event)
-  - [input 事件](/zh-TW/docs/Web/API/HTMLElement/input_event)
+  - [input 事件](/zh-TW/docs/Web/API/Element/input_event)
 
 - {{DOMxRef("HTMLFormElement")}}
 
@@ -1296,10 +1296,10 @@ This article offers a list of events that can be sent; some are standard events 
 - {{DOMxRef("Window")}}
 
   - [afterprint 事件](/zh-TW/docs/Web/API/Window/afterprint_event)
-  - [animationcancel 事件](/zh-TW/docs/Web/API/Window/animationcancel_event)
-  - [animationend 事件](/zh-TW/docs/Web/API/Window/animationend_event)
-  - [animationiteration 事件](/zh-TW/docs/Web/API/Window/animationiteration_event)
-  - [animationstart 事件](/zh-TW/docs/Web/API/Window/animationstart_event)
+  - [animationcancel 事件](/zh-TW/docs/Web/API/Element/animationcancel_event)
+  - [animationend 事件](/zh-TW/docs/Web/API/Element/animationend_event)
+  - [animationiteration 事件](/zh-TW/docs/Web/API/Element/animationiteration_event)
+  - [animationstart 事件](/zh-TW/docs/Web/API/Element/animationstart_event)
   - [appinstalled 事件](/zh-TW/docs/Web/API/Window/appinstalled_event)
   - [beforeprint 事件](/zh-TW/docs/Web/API/Window/beforeprint_event)
   - [beforeunload 事件](/zh-TW/docs/Web/API/Window/beforeunload_event)
@@ -1308,7 +1308,6 @@ This article offers a list of events that can be sent; some are standard events 
   - [cut 事件](/zh-TW/docs/Web/API/Window/cut_event)
   - [devicemotion 事件](/zh-TW/docs/Web/API/Window.devicemotion_event)
   - [deviceorientation 事件](/zh-TW/docs/Web/API/Window.deviceorientation_event)
-  - [DOMContentLoaded 事件](/zh-TW/docs/Web/API/Window/DOMContentLoaded_event)
   - [error 事件](/zh-TW/docs/Web/API/Window/error_event)
   - [focus 事件](/zh-TW/docs/Web/API/Window/focus_event)
   - [gamepadconnected 事件](/zh-TW/docs/Web/API/Window/gamepadconnected_event)
@@ -1328,20 +1327,20 @@ This article offers a list of events that can be sent; some are standard events 
   - [rejectionhandled 事件](/zh-TW/docs/Web/API/Window/rejectionhandled_event)
   - [resize 事件](/zh-TW/docs/Web/API/Window/resize_event)
   - [storage 事件](/zh-TW/docs/Web/API/Window/storage_event)
-  - [transitioncancel 事件](/zh-TW/docs/Web/API/Window/transitioncancel_event)
-  - [transitionend 事件](/zh-TW/docs/Web/API/Window/transitionend_event)
-  - [transitionrun 事件](/zh-TW/docs/Web/API/Window/transitionrun_event)
-  - [transitionstart 事件](/zh-TW/docs/Web/API/Window/transitionstart_event)
+  - [transitioncancel 事件](/zh-TW/docs/Web/API/Element/transitioncancel_event)
+  - [transitionend 事件](/zh-TW/docs/Web/API/Element/transitionend_event)
+  - [transitionrun 事件](/zh-TW/docs/Web/API/Element/transitionrun_event)
+  - [transitionstart 事件](/zh-TW/docs/Web/API/Element/transitionstart_event)
   - [unhandledrejection 事件](/zh-TW/docs/Web/API/Window/unhandledrejection_event)
   - [unload 事件](/zh-TW/docs/Web/API/Window/unload_event)
   - [vrdisplayactivate 事件](/zh-TW/docs/Web/API/Window/vrdisplayactivate_event)
-  - [vrdisplayblur 事件](/zh-TW/docs/Web/API/Window/vrdisplayblur_event)
+  - [vrdisplayblur 事件](/zh-TW/docs/Web/API/Window)
   - [vrdisplayconnect 事件](/zh-TW/docs/Web/API/Window/vrdisplayconnect_event)
   - [vrdisplaydeactivate 事件](/zh-TW/docs/Web/API/Window/vrdisplaydeactivate_event)
   - [vrdisplaydisconnect 事件](/zh-TW/docs/Web/API/Window/vrdisplaydisconnect_event)
-  - [vrdisplayfocus 事件](/zh-TW/docs/Web/API/Window/vrdisplayfocus_event)
-  - [vrdisplaypointerrestricted 事件](/zh-TW/docs/Web/API/Window/vrdisplaypointerrestricted_event)
-  - [vrdisplaypointerunrestricted 事件](/zh-TW/docs/Web/API/Window/vrdisplaypointerunrestricted_event)
+  - [vrdisplayfocus 事件](/zh-TW/docs/Web/API/Window)
+  - [vrdisplaypointerrestricted 事件](/zh-TW/docs/Web/API/Window)
+  - [vrdisplaypointerunrestricted 事件](/zh-TW/docs/Web/API/Window)
   - [vrdisplaypresentchange 事件](/zh-TW/docs/Web/API/Window/vrdisplaypresentchange_event)
 
 - {{DOMxRef("Worker")}}
@@ -1389,6 +1388,6 @@ This article offers a list of events that can be sent; some are standard events 
 
 <section id="Quick_links">
   <ol>
-    <li><a href="/zh-TW/docs/Learn/JavaScript/Building_blocks/Events">事件介紹</a></li>
+    <li><a href="/zh-TW/docs/Learn_web_development/Core/Scripting/Events">事件介紹</a></li>
   </ol>{{ListSubpages}}
 </section>

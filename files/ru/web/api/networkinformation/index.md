@@ -1,7 +1,6 @@
 ---
 title: NetworkInformation
 slug: Web/API/NetworkInformation
-translation_of: Web/API/NetworkInformation
 ---
 
 {{APIRef("Network Information API")}}{{SeeCompatTable}}
@@ -25,12 +24,12 @@ _`Интерфейс NetworkInformation`_ _не наследует других 
 
 {{Specifications}}
 
-## Доступность в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Информация о API сети.](/ru/docs/WebAPI/Network_Information)
-- [Онлайн- и офлайн-события.](/en/Online_and_offline_events)
+- [Информация о API сети.](/ru/docs/Web/API/Network_Information_API)
+- [Онлайн- и офлайн-события.](/en-US/Online_and_offline_events)
 - Интерфейс {{domxref("Navigator")}} который реализует его.

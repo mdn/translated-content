@@ -1,15 +1,13 @@
 ---
 title: Mueve la bola
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
-original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola
 ---
 
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Create_the_Canvas_and_draw_on_it", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off_the_walls")}}
 
-Este es el segundo paso de los 10 del [tutorial de Canvas para el desarrollo de juegos](/es/docs/Games/Workflows/Breakout_game_from_scratch). Puedes encontrar el código fuente como debería quedar después de completar la lección en [Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html).
+Este es el segundo paso de los 10 del [tutorial de Canvas para el desarrollo de juegos](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente como debería quedar después de completar la lección en [Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html).
 
 Ya sabes cómo dibujar una pelota, lo has aprendido en el artículo anterior. Ahora vamos a hacer que se mueva. Técnicamente, estaremos pintando la pelota en la pantalla, borrándola y luego pintándola de nuevo en una posición ligeramente diferente cada fotograma para dar la impresión de movimiento, igual que se hace en las películas.
 
@@ -21,7 +19,7 @@ Elimina todo el código JavaScript que tienes ahora mismo en de tu archivo HTML,
 
 ```js
 function draw() {
-    // código para dibujar
+  // código para dibujar
 }
 setInterval(draw, 10);
 ```
@@ -30,7 +28,7 @@ Gracias a la naturaleza infinita de setInterval, la función draw () se llamará
 
 ```js
 ctx.beginPath();
-ctx.arc(50, 50, 10, 0, Math.PI*2);
+ctx.arc(50, 50, 10, 0, Math.PI * 2);
 ctx.fillStyle = "#0095DD";
 ctx.fill();
 ctx.closePath();
@@ -45,19 +43,19 @@ Aunque la bola se está dibujando cada 10 milisegundos no se nota porque no hay 
 Primero, agrega las dos líneas siguientes a la función draw (), para definir x e y:
 
 ```js
-var x = canvas.width/2;
-var y = canvas.height-30;
+var x = canvas.width / 2;
+var y = canvas.height - 30;
 ```
 
 A continuación actualiza la función `draw()` para usar las variables x e y en el método {{domxref("CanvasRenderingContext2D.arc()","arc()")}}, como se muestra en la siguiente línea resaltada:
 
 ```js
 function draw() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
 }
 ```
 
@@ -72,19 +70,19 @@ Lo último que hay que hacer es actualizar x e y con nuestras variables dx y dy 
 
 ```js
 function draw() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
-    x += dx;
-    y += dy;
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+  x += dx;
+  y += dy;
 }
 ```
 
 Guarda el código de nuevo y pruébalo en tu navegador. Esto funciona bien, aunque parece que la bola está dejando un rastro detrás de ella:
 
-![](https://mdn.mozillademos.org/files/10430/ball-trail.png)
+![](ball-trail.png)
 
 ## Borrar el lienzo antes de cada fotograma
 
@@ -94,14 +92,14 @@ Añade la siguiente nueva línea resaltada a la función draw():
 
 ```js
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
-    x += dx;
-    y += dy;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+  x += dx;
+  y += dy;
 }
 ```
 
@@ -115,18 +113,18 @@ Reemplaza la función draw() con las dos funciones siguientes:
 
 ```js
 function drawBall() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
 }
 
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawBall();
-    x += dx;
-    y += dy;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBall();
+  x += dx;
+  y += dy;
 }
 ```
 
@@ -136,10 +134,11 @@ Puedes comprobar el código terminado de este artículo en la demostración en v
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/3x5foxb1/","","415")}}
 
-> **Nota:** intenta cambiar la velocidad de la bola en movimiento o la dirección hacia la que se mueve.
+> [!NOTE]
+> Intenta cambiar la velocidad de la bola en movimiento o la dirección hacia la que se mueve.
 
 ## Siguientes pasos
 
-Hemos dibujado nuestra bola y hemos hecho que se mueva, pero cuando supera el borde del canvas, desaparece. En el tercer capítulo exploraremos como hacer que [rebote en las paredes](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off_the_walls).
+Hemos dibujado nuestra bola y hemos hecho que se mueva, pero cuando supera el borde del canvas, desaparece. En el tercer capítulo exploraremos como hacer que [rebote en las paredes](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls).
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Create_the_Canvas_and_draw_on_it", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off_the_walls")}}

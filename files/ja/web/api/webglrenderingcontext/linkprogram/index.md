@@ -33,22 +33,19 @@ gl.attachShader(program, fragmentShader);
 
 gl.linkProgram(program);
 
-if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
+if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
   var info = gl.getProgramInfoLog(program);
-  throw new Error('Could not compile WebGL program. \n\n' + info);
+  throw new Error("Could not compile WebGL program. \n\n" + info);
 }
 ```
 
 ## 仕様策定状況
 
-| 仕様                                                                                     | 策定状況                             | コメント                        |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------- |
-| {{SpecName('WebGL', "#5.14.9", "linkProgram")}}                         | {{Spec2('WebGL')}}             | 初回定義。                      |
-| {{SpecName('OpenGL ES 2.0', "glLinkProgram.xml", "glLinkProgram")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API のマニュアルページ。 |
+{{Specifications}}
 
 ## ブラウザーの対応
 
-{{Compat("api.WebGLRenderingContext.linkProgram")}}
+{{Compat}}
 
 ## 関連項目
 

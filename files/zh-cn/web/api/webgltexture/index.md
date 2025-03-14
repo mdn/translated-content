@@ -3,6 +3,8 @@ title: WebGLTexture
 slug: Web/API/WebGLTexture
 ---
 
+{{APIRef("WebGL")}}
+
 **WebGLTexture**接口是[WebGL API](/zh-CN/docs/Web/API/WebGL_API)的一部分，为不透明的纹理对象提供储存和状态等纹理操作。
 
 ## 描述
@@ -19,8 +21,8 @@ slug: Web/API/WebGLTexture
 ### 创建一个纹理
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 var texture = gl.createTexture();
 ```
 

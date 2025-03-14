@@ -1,20 +1,9 @@
 ---
 title: runtime.OnRestartRequiredReason
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/OnRestartRequiredReason
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - OnRestartsRequiredReason
-  - Reference
-  - Type
-  - WebExtensions
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/OnRestartRequiredReason
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La raison pour laquelle l'événement {{WebExtAPIRef("runtime.onRestartRequired", "onRestartRequired")}} est en cours d'exécution.
 
@@ -26,15 +15,15 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - `"os_update"`: Le navigateur / Système d'exploitation est mise à jour vers une nouvelle verion plus récente.
 - `"periodic"`: Le système a fonctionné pendant plus logntemps que la durée de disponibilité autorisée dans la stratégie d'entreprise.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.OnRestartRequiredReason")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

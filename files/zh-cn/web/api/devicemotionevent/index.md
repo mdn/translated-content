@@ -7,7 +7,8 @@ slug: Web/API/DeviceMotionEvent
 
 `DeviceMotionEvent` 为 web 开发者提供了关于设备的位置和方向的改变速度的信息。
 
-> **警告：** 目前，Firefox 和 Chrome 处理坐标的方式不同。使用时要多加注意。
+> [!WARNING]
+> 目前，Firefox 和 Chrome 处理坐标的方式不同。使用时要多加注意。
 
 ## 构造函数
 
@@ -28,8 +29,8 @@ slug: Web/API/DeviceMotionEvent
 ## 示例
 
 ```js
-window.addEventListener('devicemotion', function(event) {
-  console.log(event.acceleration.x + ' m/s2');
+window.addEventListener("devicemotion", function (event) {
+  console.log(event.acceleration.x + " m/s2");
 });
 ```
 
@@ -46,5 +47,5 @@ window.addEventListener('devicemotion', function(event) {
 - [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)
 - {{DOMxRef("DeviceOrientationEvent")}}
 - [`devicemotion`](/zh-CN/docs/Web/API/Window/devicemotion_event)
-- [Detecting device orientation](/zh-CN/docs/WebAPI/Detecting_device_orientation)
-- [Orientation and motion data explained](/zh-CN/DOM/Orientation_and_motion_data_explained)
+- [Detecting device orientation](/zh-CN/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- [Orientation and motion data explained](/zh-CN/docs/DOM/Orientation_and_motion_data_explained)

@@ -1,32 +1,30 @@
 ---
-title: Gamepad.timestamp
+title: "Gamepad: timestamp プロパティ"
+short-title: timestamp
 slug: Web/API/Gamepad/timestamp
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("Gamepad API")}}
 
-{{domxref("Gamepad")}} インターフェイスの **`Gamepad.timestamp`** プロパティは、このゲームパッドのデータが最後に更新された時刻を表す {{domxref("DOMHighResTimeStamp")}} を返します。
+**`Gamepad.timestamp`** は {{domxref("Gamepad")}} インターフェイスのプロパティで、このゲームパッドのデータが最後に更新された時刻を表す {{domxref("DOMHighResTimeStamp")}} を返します。
 
 このプロパティの背景にある考え方は、ハードウェアにより `axes` や `button` のデータが更新されたかどうかを開発者が判断できるようにすることです。このプロパティの値は `{{domxref("PerformanceTiming")}}` インターフェイスの `navigationStart` 属性との相対的な値になります。値は単調増加しています。つまり、新しい値は常に古い値以上であるため、新旧の値を比較することでデータの更新を判断できます。
 
-> **メモ:** このプロパティは現在サポートされていない環境があります。
+> [!NOTE]
+> このプロパティは、現在、どこでも対応しているわけではありません。
 
-## 構文
+## 値
 
-```
-readonly    attribute DOMHighResTimeStamp timestamp;
-```
+{{domxref("DOMHighResTimeStamp")}} オブジェクトです。
 
 ## 例
 
 ```js
-var gp = navigator.getGamepads()[0];
+const gp = navigator.getGamepads()[0];
 console.log(gp.timestamp);
 ```
-
-## 値
-
-{{domxref("DOMHighResTimeStamp")}} 。
 
 ## 仕様書
 
@@ -34,8 +32,8 @@ console.log(gp.timestamp);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Gamepad.timestamp")}}
+{{Compat}}
 
 ## 関連情報
 
-[ゲームパッド API の使用](/ja/docs/Web/Guide/API/Gamepad)
+[ゲームパッド API の使用](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

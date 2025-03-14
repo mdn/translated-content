@@ -1,17 +1,71 @@
 ---
 title: grid
 slug: Web/CSS/grid
+l10n:
+  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
 {{CSSRef}}
 
-**`grid`** は CSS のプロパティで、[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)として明示的・暗黙的なすべてのグリッドプロパティを単一の宣言で設定します。
+**`grid`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)として明示的・暗黙的なすべてのグリッドプロパティを単一の宣言で設定します。
 
 `grid` を使用すると、一方の軸を {{cssxref("grid-template-rows")}} または {{cssxref("grid-template-columns")}} を使用して設定し、もう一方の軸でどのように内容物を自動反復させるかを、暗黙のグリッドプロパティである {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}} で設定します。
 
-{{EmbedInteractiveExample("pages/css/grid.html")}}
+{{InteractiveExample("CSS Demo: grid")}}
 
-> **メモ:** 指定しないサブプロパティは、通常の一括指定と同様に初期値に設定されます。また、溝に関するプロパティはこの一括指定では初期化されません。
+```css interactive-example-choice
+grid: auto-flow / 1fr 1fr 1fr;
+```
+
+```css interactive-example-choice
+grid: auto-flow dense / 40px 40px 1fr;
+```
+
+```css interactive-example-choice
+grid: repeat(3, 80px) / auto-flow;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-gap: 10px;
+  width: 200px;
+}
+
+#example-element :nth-child(1) {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+
+#example-element :nth-child(2) {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+  grid-column: auto / span 3;
+  grid-row: auto / span 2;
+}
+
+#example-element :nth-child(3) {
+  background-color: rgba(94, 255, 0, 0.2);
+  border: 3px solid green;
+  grid-column: auto / span 2;
+}
+```
+
+> [!NOTE]
+> 指定しないサブプロパティは、通常の一括指定と同様に初期値に設定されます。また、溝に関するプロパティはこの一括指定では初期化されません。
 
 ## 構成要素のプロパティ
 
@@ -30,7 +84,7 @@ slug: Web/CSS/grid
 /* <'grid-template'> 値 */
 grid: none;
 grid: "a" 100px "b" 1fr;
-grid: [linename1] "a" 100px [linename2];
+grid: [line-name1] "a" 100px [line-name2];
 grid: "a" 200px "b" min-content;
 grid: "a" minmax(100px, max-content) "b" 20%;
 grid: 100px / 200px;
@@ -54,6 +108,7 @@ grid: auto-flow dense 40% / [line1] minmax(20em, max-content);
 grid: inherit;
 grid: initial;
 grid: revert;
+grid: revert-layer;
 grid: unset;
 ```
 
@@ -87,7 +142,7 @@ grid: unset;
 
 #### HTML
 
-```html
+```html live-sample___creating_a_grid_layout
 <div id="container">
   <div></div>
   <div></div>
@@ -102,7 +157,7 @@ grid: unset;
 
 #### CSS
 
-```css
+```css live-sample___creating_a_grid_layout
 #container {
   display: grid;
   grid: repeat(2, 60px) / auto-flow 80px;
@@ -129,6 +184,12 @@ grid: unset;
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}
-- グリッドレイアウトガイド: [CSS グリッドでの行ベースの配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-- グリッドレイアウトガイド: [グリッドテンプレート領域 - グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#グリッド定義の一括指定)
+- {{cssxref("grid-template")}}
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-areas")}}
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid-auto-flow")}}
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [グリッドテンプレート領域: グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#グリッド定義の一括指定)

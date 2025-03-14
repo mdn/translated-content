@@ -26,26 +26,27 @@ _继承自父接口，{{DOMxRef("HTMLElement")}}。_
 
 ### 过时的属性
 
-> **警告：** 以下属性已经过时，应当避免使用它们。
+> [!WARNING]
+> 以下属性已经过时，应当避免使用它们。
 
 - {{DOMxRef("HTMLTableElement.align")}} {{Deprecated_Inline}}
-  - : Is a {{DOMxRef("DOMString")}} containing an enumerated value reflecting the {{HTMLAttrxRef("align", "table")}} attribute. It indicates the alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, and `"center"`.
+  - : Is a {{DOMxRef("DOMString")}} containing an enumerated value reflecting the [`align`](/zh-CN/docs/Web/HTML/Element/table#align) attribute. It indicates the alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, and `"center"`.
 - {{DOMxRef("HTMLTableElement.bgColor")}} {{Deprecated_Inline}}
-  - : Is a {{DOMxRef("DOMString")}} containing the background color of the cells. It reflects the obsolete {{HTMLAttrxRef("bgColor", "table")}} attribute.
+  - : Is a {{DOMxRef("DOMString")}} containing the background color of the cells. It reflects the obsolete [`bgcolor`](/zh-CN/docs/Web/HTML/Element/table#bgcolor) attribute.
 - {{DOMxRef("HTMLTableElement.border")}} {{Deprecated_Inline}}
-  - : Is a {{DOMxRef("DOMString")}} containing the width in pixels of the border of the table. It reflects the obsolete {{HTMLAttrxRef("border", "table")}} attribute.
+  - : Is a {{DOMxRef("DOMString")}} containing the width in pixels of the border of the table. It reflects the obsolete [`border`](/zh-CN/docs/Web/HTML/Element/table#border) attribute.
 - {{DOMxRef("HTMLTableElement.cellPadding")}} {{Deprecated_Inline}}
-  - : Is a {{DOMxRef("DOMString")}} containing the width in pixels of the horizontal and vertical sapce between cell content and cell borders. It reflects the obsolete {{HTMLAttrxRef("cellpadding", "table")}} attribute.
+  - : Is a {{DOMxRef("DOMString")}} containing the width in pixels of the horizontal and vertical sapce between cell content and cell borders. It reflects the obsolete [`cellpadding`](/zh-CN/docs/Web/HTML/Element/table#cellpadding) attribute.
 - {{DOMxRef("HTMLTableElement.cellSpacing")}} {{Deprecated_Inline}}
-  - : Is a {{DOMxRef("DOMString")}} containing the width in pixels of the horizontal and vertical separation between cells. It reflects the obsolete {{HTMLAttrxRef("cellspacing", "table")}} attribute.
+  - : Is a {{DOMxRef("DOMString")}} containing the width in pixels of the horizontal and vertical separation between cells. It reflects the obsolete [`cellspacing`](/zh-CN/docs/Web/HTML/Element/table#cellspacing) attribute.
 - {{DOMxRef("HTMLTableElement.frame")}} {{Deprecated_Inline}}
-  - : Is a {{DOMxRef("DOMString")}} containing the type of the external borders of the table. It reflects the obsolete {{HTMLAttrxRef("frame", "table")}} attribute and can take one of the following values: `"void"`, `"above"`, `"below"`, `"hsides"`, `"vsides"`, `"lhs"`, `"rhs"`, `"box"`, or `"border"`.
+  - : Is a {{DOMxRef("DOMString")}} containing the type of the external borders of the table. It reflects the obsolete [`frame`](/zh-CN/docs/Web/HTML/Element/table#frame) attribute and can take one of the following values: `"void"`, `"above"`, `"below"`, `"hsides"`, `"vsides"`, `"lhs"`, `"rhs"`, `"box"`, or `"border"`.
 - {{DOMxRef("HTMLTableElement.rules")}} {{Deprecated_Inline}}
-  - : Is a {{DOMxRef("DOMString")}} containing the type of the internal borders of the table. It reflects the obsolete {{HTMLAttrxRef("rules", "table")}} attribute and can take one of the following values: `"none"`, `"groups"`, `"rows"`, `"cols"`, or `"all"`.
+  - : Is a {{DOMxRef("DOMString")}} containing the type of the internal borders of the table. It reflects the obsolete [`rules`](/zh-CN/docs/Web/HTML/Element/table#rules) attribute and can take one of the following values: `"none"`, `"groups"`, `"rows"`, `"cols"`, or `"all"`.
 - {{DOMxRef("HTMLTableElement.summary")}} {{Deprecated_Inline}}
-  - : Is a {{DOMxRef("DOMString")}} containing a description of the purpose or the structure of the table. It reflects the obsolete {{HTMLAttrxRef("summary", "table")}} attribute.
+  - : Is a {{DOMxRef("DOMString")}} containing a description of the purpose or the structure of the table. It reflects the obsolete [`summary`](/zh-CN/docs/Web/HTML/Element/table#summary) attribute.
 - {{DOMxRef("HTMLTableElement.width")}} {{Deprecated_Inline}}
-  - : Is a {{DOMxRef("DOMString")}} containing the length in pixels or in percentage of the desired width fo the entire table. It reflects the obsolete {{HTMLAttrxRef("width", "table")}} attribute.
+  - : Is a {{DOMxRef("DOMString")}} containing the length in pixels or in percentage of the desired width fo the entire table. It reflects the obsolete [`width`](/zh-CN/docs/Web/HTML/Element/table#width) attribute.
 
 ## 方法
 
@@ -76,6 +77,6 @@ _继承自父接口，{{DOMxRef("HTMLElement")}}_。
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - 实现了这个接口的 HTML 元素：{{HTMLElement("table")}}。

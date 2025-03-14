@@ -1,15 +1,6 @@
 ---
 title: Geolocation
 slug: Web/API/Geolocation
-tags:
-  - API
-  - Advanced
-  - Geolocation API
-  - Interface
-  - Reference
-  - Secure context
-  - 위치정보
-translation_of: Web/API/Geolocation
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
@@ -18,7 +9,8 @@ translation_of: Web/API/Geolocation
 
 {{domxref("Navigator")}} 객체의 {{domxref("Navigator.geolocation", "geolocation")}} 속성으로 이 인터페이스를 구현하는 객체에 접근할 수 있습니다.
 
-> **참고:** 보안 상의 문제로, 웹 페이지가 위치 정보에 접근을 시도하면 사용자에게 알림을 보내고 권한을 허용할지 묻습니다. 각 브라우저는 자신만의 권한 정책과 요청 방식을 가지고 있으므로 주의해야 합니다.
+> [!NOTE]
+> 보안 상의 문제로, 웹 페이지가 위치 정보에 접근을 시도하면 사용자에게 알림을 보내고 권한을 허용할지 묻습니다. 각 브라우저는 자신만의 권한 정책과 요청 방식을 가지고 있으므로 주의해야 합니다.
 
 ## 속성
 

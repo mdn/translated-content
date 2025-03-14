@@ -1,18 +1,18 @@
 ---
 title: Event.initEvent()
 slug: Web/API/Event/initEvent
-translation_of: Web/API/Event/initEvent
 ---
 
-{{ ApiRef("DOM") }}{{deprecated_header}}
+{{APIRef("DOM")}} {{deprecated_header}} {{AvailableInWorkers}}
 
 The **`Event.initEvent()`** method is used to initialize the value of an {{ domxref("event") }} created using {{ domxref("Document.createEvent()") }}.
 
 Events initialized in this way must have been created with the {{ domxref("Document.createEvent()") }} method. This method must be called to set the event before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}. Once dispatched, it doesn't do anything anymore.
 
-> **Примечание:** **Не используйте этот метод, т.к. он устаревший. (deprecated)**
+> [!NOTE]
+> Не используйте этот метод, т.к. он устаревший. (deprecated)
 >
-> Вместо него используйте такой специальный конструктор событий, как {{domxref("Event.Event", "Event()")}}. Страница [Creating and triggering events](/ru/docs/Web/Guide/Events/Creating_and_triggering_events) даст больше информации о возможностях использования.
+> Вместо него используйте такой специальный конструктор событий, как {{domxref("Event.Event", "Event()")}}. Страница [Creating and triggering events](/ru/docs/Web/Events/Creating_and_triggering_events) даст больше информации о возможностях использования.
 
 ## Синтаксис
 
@@ -45,14 +45,11 @@ elem.addEventListener('click', function (e) {
 elem.dispatchEvent(event);
 ```
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                         | Статус                           | Комментарий                                                                                  |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-event-initevent','Event.initEvent()')}}         | {{Spec2("DOM WHATWG")}} | Начиная с {{SpecName('DOM2 Events')}} - deprecated, заменено на event constructors. |
-| {{SpecName('DOM2 Events','##Events-Event-initEvent','Event.initEvent()')}} | {{Spec2('DOM2 Events')}} | Начальное определение.                                                                       |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

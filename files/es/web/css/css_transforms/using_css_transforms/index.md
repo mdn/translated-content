@@ -1,6 +1,6 @@
 ---
 title: Uso de CSS transforms
-slug: Web/CSS/CSS_Transforms/Using_CSS_transforms
+slug: Web/CSS/CSS_transforms/Using_CSS_transforms
 ---
 
 {{CSSRef}}
@@ -27,9 +27,10 @@ Esta es una imagen inalterada del logo de MDN:
 Aquí está el logo MDN en un iframe rotado 90 grados desde su esquina inferior izquierda.
 
 ```html
-<img style="transform: rotate(90deg);
+<img
+  style="transform: rotate(90deg);
             transform-origin: bottom left;"
-     src="logo.png">
+  src="logo.png" />
 ```
 
 {{EmbedLiveSample('', 'auto', 240)}}
@@ -39,9 +40,10 @@ Aquí está el logo MDN en un iframe rotado 90 grados desde su esquina inferior 
 Aquí está el logo MDN torcido 10 grados y desplazado 150 pixels en el eje X.
 
 ```html
-<img style="transform: skewx(10deg) translatex(150px);
+<img
+  style="transform: skewx(10deg) translatex(150px);
             transform-origin: bottom left;"
-     src="logo.png">
+  src="logo.png" />
 ```
 
 {{EmbedLiveSample('', '', '')}}
@@ -72,4 +74,4 @@ Una vez has hecho esto, ya puedes trabajar con los elementos en el espacio 3D.
 
 ## See also
 
-- [Using deviceorientation in 3D Transforms](/en/Using_Deviceorientation_In_3D_Transforms)
+- [Using deviceorientation in 3D Transforms](/en-US/Using_Deviceorientation_In_3D_Transforms)

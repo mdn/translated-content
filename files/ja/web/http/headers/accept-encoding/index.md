@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**`Accept-Encoding`** は HTTP のリクエストヘッダーで、クライアントが理解することができるコンテンツのエンコーディング（ふつうは圧縮アルゴリズム）を示します。[コンテンツ交渉](/ja/docs/Web/HTTP/Content_negotiation)を使用して、サーバーは提案されたものから一つを選択して使用し、 {{HTTPHeader("Content-Encoding")}} レスポンスヘッダーを使用してクライアントに選択結果を知らせます。
+**`Accept-Encoding`** は HTTP のリクエストヘッダーで、クライアントが理解することができるコンテンツのエンコーディング（ふつうは圧縮アルゴリズム）を示します。[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)を使用して、サーバーは提案されたものから一つを選択して使用し、 {{HTTPHeader("Content-Encoding")}} レスポンスヘッダーを使用してクライアントに選択結果を知らせます。
 
 クライアントとサーバーが同じ圧縮アルゴリズムに対応していた場合でも、 `identity` の値が受け付けられる場合は、サーバーはレスポンスの本体を圧縮しないことを選択する場合があります。これには主に 2 つの場合があります。
 
@@ -16,7 +16,7 @@ l10n:
 
 `identity` の値、つまりエンコードをしないということは、 `identity;q=0` または `*;q=0` で `identity` とは別な値が明確に設定されていない限り、サーバーは {{HTTPStatus("406")}} `Not Acceptable` エラーを返してはいけません。
 
-> **メモ:**
+> [!NOTE]
 >
 > - IANA レジストリーが[公式なコンテンツエンコーディングの完全なリスト](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)を管理しています。
 > - 他にも `bzip` および `bzip2` の 2 種類のエンコーディングが使用されることがありますが、標準ではありません。これはこれら 2 つの UNIX プログラムで使用されているアルゴリズムを実装しています。なお、前者は特許ライセンスの問題で開発終了しています。
@@ -85,6 +85,6 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 
 ## 関連情報
 
-- HTTP [コンテンツ交渉](/ja/docs/Web/HTTP/Content_negotiation)
-- コンテンツ交渉の結果を伴うヘッダー: {{HTTPHeader("Content-Encoding")}}
+- HTTP [コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)
+- コンテンツネゴシエーションの結果を伴うヘッダー: {{HTTPHeader("Content-Encoding")}}
 - 他の同様のヘッダー: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}

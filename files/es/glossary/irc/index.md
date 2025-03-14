@@ -1,8 +1,9 @@
 ---
 title: IRC
 slug: Glossary/IRC
-translation_of: Glossary/IRC
 ---
+
+{{GlossarySidebar}}
 
 **IRC** (_Internet Relay Chat_) es un sistema de chat mundial que requiere una conexión a Internet y un cliente IRC, que envía y recibe mensajes atravéz del servidor IRC.
 

@@ -35,30 +35,27 @@ The review teams for each locale are:
   - [kenji-yamasaki](https://github.com/kenji-yamasaki)
   - [mfuji09](https://github.com/mfuji09)
 - Korea (`ko`) content — the [yari-content-ko](https://github.com/orgs/mdn/teams/yari-content-ko) team, which consists of:
-  - [cos18](https://github.com/cos18)
+  - [1ilsang](https://github.com/1ilsang)
+  - [sunhpark42](https://github.com/sunhpark42)
+  - [wisedog](https://github.com/wisedog)
   - [yechoi42](https://github.com/yechoi42)
-  - [GwangYeol-Im](https://github.com/GwangYeol-Im)
-  - [pje1740](https://github.com/pje1740)
-  - [yujo11](https://github.com/yujo11)
   - [hochan222](https://github.com/hochan222)
 - Russian (`ru`) content — the [yari-content-ru](https://github.com/orgs/mdn/teams/yari-content-ru) team, which consists of:
-  - [armanpwnz](https://github.com/armanpwnz)
-  - [captainspring](https://github.com/captainspring)
-  - [myshov](https://github.com/myshov)
-  - [Saionaro](https://github.com/Saionaro)
+  - [leon-win](https://github.com/leon-win)
   - [sashasushko](https://github.com/sashasushko)
+  - [Saionaro](https://github.com/Saionaro)
+  - [yanaklose](https://github.com/yanaklose)
+  - [myshov](https://github.com/myshov)
   - [lex111](https://github.com/lex111)
 - Chinese (`zh-CN` and `zh-TW`) content — the [yari-content-zh](https://github.com/orgs/mdn/teams/yari-content-zh) team, which consists of:
   - [t7yang](https://github.com/t7yang)
   - [irvin](https://github.com/irvin)
   - [yin1999](https://github.com/yin1999)
+  - [jasonren0403](https://github.com/jasonren0403)
+  - [JasonLamv-t](https://github.com/JasonLamv-t)
 - Spanish (`es`) content - the [yari-content-es](https://github.com/orgs/mdn/teams/yari-content-es) team, which consists of:
   - [JuanVqz](https://github.com/JuanVqz)
   - [Graywolf9](https://github.com/Graywolf9)
-  - [davbrito](https://github.com/davbrito)
-  - [Vallejoanderson](https://github.com/vallejoanderson)
-  - [marcelozarate](https://github.com/marcelozarate)
-  - [Jalkhov](https://github.com/Jalkhov)
 
 ---
 
@@ -74,48 +71,9 @@ See [the guide about orphaned and conflicting pages](./docs/orphaned_and_conflic
 
 ---
 
-## Activating a locale
-
-To activate a locale you must apply with the following information:
-
-### Your locale
-
-Please specify which of the following two locales you wish to have unfrozen:
-
-- German (de)
-- Polish (pl)
-
-NB These are the only frozen locales we will consider - see [The future of MDN localization in this Hacks post](https://hacks.mozilla.org/2020/10/mdn-web-docs-evolves-lowdown-on-the-upcoming-new-platform/)
-
-### Your team members
-
-You need to put together a community maintenance team. This requires:
-
-- A team lead who will be the communication point between that team and the MDN core team, and have overall responsibility for the team.
-- At least two other members, so that members can review other members work.
-- A place to discuss this team's localization work. This can be a Telegram group, Matrix chat room, or whatever the team thinks is best.
-
-To find out more about our existing teams see [Review teams](#review-teams) above.
-
-### Agree to our terms
-
-Please indicate that you agree to our [Requirements for keeping locales up-to-date](#requirements-for-keeping-locales-up-to-date) above.
-
-### The team agrees to our CoC and license
-
-Also indicate that your team agrees to adhere by our Code of Conduct and License (see below)
-
-### Acceptance
-
-If the application is been successful you can start work on your locale. See the [guidelines for set up in the README](README.md).
-
-You can add your team to the [localizing MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Localize) page.
-
 ## Get in touch
 
-If you want to ask questions or talk to us about forming a new community maintenance team, see [ask for help](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
-
----
+If you want to ask questions or talk to us about forming a new community maintenance team, see [ask for help][].
 
 ### Code of Conduct
 
@@ -125,4 +83,4 @@ Everyone participating in this project is expected to follow our [Code of Conduc
 
 When contributing to the content you agree to license your contributions according to [our license](LICENSE.md).
 
----
+[ask for help]: https://developer.mozilla.org/docs/MDN/Community/Communication_channels

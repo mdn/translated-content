@@ -1,14 +1,6 @@
 ---
 title: PerformanceEntry
 slug: Web/API/PerformanceEntry
-tags:
-  - API
-  - Interface
-  - Performance Timeline API
-  - PerformanceEntry
-  - Reference
-  - Performance Web
-translation_of: Web/API/PerformanceEntry
 ---
 
 {{APIRef("Performance Timeline API")}}
@@ -31,7 +23,7 @@ Les instances `PerformanceEntry` auront toujours l'un des sous-types suivants :
 - [`PerformanceEntry.name`](/fr/docs/Web/API/PerformanceEntry/name) {{readonlyInline}}
   - : Une valeur qui précise davantage la valeur renvoyée par la propriété [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType). La valeur des deux dépend du sous-type. Voir la page de la propriété pour les valeurs valides.
 - [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) {{readonlyInline}}
-  - : Une chaîne de caractère [`DOMString`](/fr/docs/Web/API/DOMString) représentant le type de mesure de performance comme, par exemple, "`mark`". Voir la page des propriétés pour les valeurs valides.
+  - : Une chaîne de caractère [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le type de mesure de performance comme, par exemple, "`mark`". Voir la page des propriétés pour les valeurs valides.
 - [`PerformanceEntry.startTime`](/fr/docs/Web/API/PerformanceEntry/startTime) {{readonlyInline}}
   - : Un objet [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant l'heure de départ de la mesure de performance.
 - [`PerformanceEntry.duration`](/fr/docs/Web/API/PerformanceEntry/duration) {{readonlyInline}}
@@ -56,10 +48,7 @@ function print_PerformanceEntries() {
   }
 }
 function print_PerformanceEntry(perfEntry) {
-  let properties = ["name",
-                    "entryType",
-                    "startTime",
-                    "duration"];
+  let properties = ["name", "entryType", "startTime", "duration"];
 
   for (let i = 0; i < properties.length; i++) {
     // Vérifie chaque propriété

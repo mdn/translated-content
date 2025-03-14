@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Error
 
 ### 错误类型
 
-除了通用的 `Error` 构造函数外，JavaScript 还有其它类型的错误构造函数。对于客户端异常，详见[异常处理语句](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#异常处理语句)。
+除了通用的 `Error` 构造函数外，JavaScript 还有其他类型的错误构造函数。对于客户端异常，详见[异常处理语句](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#异常处理语句)。
 
 - {{jsxref("EvalError")}}
   - : 创建一个 error 实例，表示错误的原因：与 {{jsxref("Global_Objects/eval", "eval()")}} 有关。
@@ -40,9 +40,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Error
 ## 静态方法
 
 - `Error.captureStackTrace()` {{non-standard_inline}}
+
   - : 一个非标准的 V8 函数，用于在 Error 实例上创建 {{JSxRef("Error.prototype.stack", "stack")}} 属性。
 
 - `Error.stackTraceLimit` {{non-standard_inline}}
+
   - : 一个非标准的 V8 数值属性，用于限制错误堆栈跟踪中包含堆栈帧数量。
 
 - `Error.prepareStackTrace()` {{non-standard_inline}} {{optional_inline}}
@@ -78,9 +80,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Error
 
 ```js
 try {
-  throw new Error('Whoops!')
+  throw new Error("Whoops!");
 } catch (e) {
-  console.error(e.name + ': ' + e.message)
+  console.error(e.name + ": " + e.message);
 }
 ```
 
@@ -90,15 +92,14 @@ try {
 
 ```js
 try {
-  foo.bar()
+  foo.bar();
 } catch (e) {
   if (e instanceof EvalError) {
-    console.error(e.name + ': ' + e.message)
+    console.error(e.name + ": " + e.message);
   } else if (e instanceof RangeError) {
-    console.error(e.name + ': ' + e.message)
+    console.error(e.name + ": " + e.message);
   }
   // ... etc
-
   else {
     // If none of our cases matched leave the Error unhandled
     throw e;
@@ -119,30 +120,31 @@ function doWork() {
   try {
     doFailSomeWay();
   } catch (err) {
-    throw new Error('Failed in some way', { cause: err });
+    throw new Error("Failed in some way", { cause: err });
   }
   try {
     doFailAnotherWay();
   } catch (err) {
-    throw new Error('Failed in another way', { cause: err });
+    throw new Error("Failed in another way", { cause: err });
   }
 }
 
 try {
   doWork();
 } catch (err) {
-  switch(err.message) {
-    case 'Failed in some way':
+  switch (err.message) {
+    case "Failed in some way":
       handleFailSomeWay(err.cause);
       break;
-    case 'Failed in another way':
+    case "Failed in another way":
       handleFailAnotherWay(err.cause);
       break;
   }
 }
 ```
 
-> **备注：** 如果你在创建一个函数库，你应该使用错误原因来区分不同的错误——而不是要求你的函数库的使用者来解析错误消息。相关的示例，请参见[提供错误原因](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause)。
+> [!NOTE]
+> 如果你在创建一个函数库，你应该使用错误原因来区分不同的错误——而不是要求你的函数库的使用者来解析错误消息。相关的示例，请参见[提供错误原因](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause)。
 
 [自定义错误类型](#自定义错误类型)也可以使用 [`cause`](#error.prototype.cause) 属性，前提是通过 `super()` 调用子类的构造函数时传递 `options` 参数。
 
@@ -163,13 +165,15 @@ class MyError extends Error {
 
 #### ES6 自定义错误类
 
-> **警告：** Babel 7 之前的版本可以处理 `CustomError` 类方法，但类方法需要使用 [Object.defineProperty()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 定义。否则，旧版本的 Babel 和其它转译器在没有[额外配置](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend)的情况下将无法正确处理下面的代码。
+> [!WARNING]
+> Babel 7 之前的版本可以处理 `CustomError` 类方法，但类方法需要使用 [Object.defineProperty()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 定义。否则，旧版本的 Babel 和其他转译器在没有[额外配置](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend)的情况下将无法正确处理下面的代码。
 
-> **备注：** 在使用 ES2015 的类时，一些浏览器会在堆栈跟踪中包含 `CustomError` 构造函数。
+> [!NOTE]
+> 在使用 ES2015 的类时，一些浏览器会在堆栈跟踪中包含 `CustomError` 构造函数。
 
 ```js
 class CustomError extends Error {
-  constructor(foo = 'bar', ...params) {
+  constructor(foo = "bar", ...params) {
     // Pass remaining arguments (including vendor specific ones) to parent constructor
     super(...params);
 
@@ -178,7 +182,7 @@ class CustomError extends Error {
       Error.captureStackTrace(this, CustomError);
     }
 
-    this.name = 'CustomError';
+    this.name = "CustomError";
     // Custom debugging information
     this.foo = foo;
     this.date = new Date();
@@ -186,18 +190,19 @@ class CustomError extends Error {
 }
 
 try {
-  throw new CustomError('baz', 'bazMessage');
-} catch(e) {
-  console.error(e.name);    // CustomError
-  console.error(e.foo);     // baz
+  throw new CustomError("baz", "bazMessage");
+} catch (e) {
+  console.error(e.name); // CustomError
+  console.error(e.foo); // baz
   console.error(e.message); // bazMessage
-  console.error(e.stack);   // stacktrace
+  console.error(e.stack); // stacktrace
 }
 ```
 
 #### ES5 自定义错误对象
 
-> **警告：** 在使用原型声明时，所有浏览器都会在堆栈跟踪中包含 `CustomError` 的构造函数。
+> [!WARNING]
+> 在使用原型声明时，所有浏览器都会在堆栈跟踪中包含 `CustomError` 的构造函数。
 
 ```js
 function CustomError(foo, message, fileName, lineNumber) {
@@ -214,11 +219,11 @@ Object.setPrototypeOf(CustomError.prototype, Error.prototype);
 
 Object.setPrototypeOf(CustomError, Error);
 
-CustomError.prototype.name = 'CustomError';
+CustomError.prototype.name = "CustomError";
 
 try {
-  throw new CustomError('baz', 'bazMessage');
-} catch(e) {
+  throw new CustomError("baz", "bazMessage");
+} catch (e) {
   console.error(e.name); // CustomError
   console.error(e.foo); // baz
   console.error(e.message); // bazMessage

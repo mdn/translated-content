@@ -1,5 +1,5 @@
 ---
-title: '-webkit-mask-repeat-y'
+title: -webkit-mask-repeat-y
 slug: Web/CSS/-webkit-mask-repeat-y
 ---
 
@@ -51,12 +51,12 @@ La propiedad CSS `-webkit-mask-repeat-y` especifica si una imagen de máscara se
 
 ```css
 .exampleone {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-y: repeat;
 }
 
 .exampletwo {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-y: no-repeat;
 }
 ```
@@ -67,16 +67,16 @@ Es posible especificar un `<repeat-style>` diferente para cada una de las imáge
 
 ```css
 .examplethree {
-  -webkit-mask-image: url('mask1.png'), url('mask2.png');
+  -webkit-mask-image: url("mask1.png"), url("mask2.png");
   -webkit-mask-repeat-y: repeat, space;
 }
 ```
 
 Cada imagen se asocia con el correspondiente estilo de repetición, desde la primera hasta la última y siguiendo el orden que se ha establecido.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.-webkit-mask-repeat-y")}}
+{{Compat}}
 
 ## Ver además
 

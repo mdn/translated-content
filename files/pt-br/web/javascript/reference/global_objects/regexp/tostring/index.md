@@ -7,12 +7,29 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 
 O método **`toString()`** retorna uma string que representa uma expressão regular.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-tostring.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.toString()", "taller")}}
+
+```js interactive-example
+console.log(new RegExp("a+b+c"));
+// Expected output: /a+b+c/
+
+console.log(new RegExp("a+b+c").toString());
+// Expected output: "/a+b+c/"
+
+console.log(new RegExp("bar", "g").toString());
+// Expected output: "/bar/g"
+
+console.log(new RegExp("\n", "g").toString());
+// Expected output (if your browser supports escaping): "/\n/g"
+
+console.log(new RegExp("\\n", "g").toString());
+// Expected output: "/\n/g"
+```
 
 ## Sintaxe
 
 ```js
-toString()
+toString();
 ```
 
 ### Valor retornado
@@ -33,10 +50,10 @@ representação da expressão regular como string.
 O exemplo a seguir exibe o valor em string de um objeto {{jsxref("RegExp")}}
 
 ```js
-const myExp = new RegExp('a+b+c');
-console.log(myExp.toString());  // logs '/a+b+c/'
-const foo = new RegExp('bar', 'g');
-console.log(foo.toString());    // logs '/bar/g'
+const myExp = new RegExp("a+b+c");
+console.log(myExp.toString()); // logs '/a+b+c/'
+const foo = new RegExp("bar", "g");
+console.log(foo.toString()); // logs '/bar/g'
 ```
 
 ### Expressões regulares vazias e escape
@@ -46,8 +63,8 @@ terminadores de linha como "\n" são utilizados
 
 ```js
 new RegExp().toString(); // "/(?:)/"
-new RegExp('\n').toString() === '/\n/';  // verdadeiro, antes do ES5
-new RegExp('\n').toString() === '/\\n/'; // verdadeiro, introduzindo o ES5
+new RegExp("\n").toString() === "/\n/"; // verdadeiro, antes do ES5
+new RegExp("\n").toString() === "/\\n/"; // verdadeiro, introduzindo o ES5
 ```
 
 ## Especificações

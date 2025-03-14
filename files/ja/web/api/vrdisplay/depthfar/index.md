@@ -1,14 +1,14 @@
 ---
 title: VRDisplay.depthFar
 slug: Web/API/VRDisplay/depthFar
-original_slug: Web/API/VRDevice/depthFar
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`depthFar`** は {{domxref("VRDisplay")}} インターフェイスのプロパティで、 [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum) (ビューフラスタム；つまりシーンの可視領域の境界) の far 平面を定義している z-depth の取得と設定を行います．
 
-> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!NOTE]
+> このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 一般的にはこの値をそのままにしておきますが、低速のコンピューターでパフォーマンスを向上させる場合は、この値を小さくするとよいでしょう。
 
@@ -21,7 +21,7 @@ double 値で、 z-depth をメートル単位で表します。初期値は `10
 ```js
 var vrDisplay;
 
-navigator.getVRDisplays().then(function(displays) {
+navigator.getVRDisplays().then(function (displays) {
   vrDisplay = displays[0];
   vrDisplay.depthNear = 1.0;
   vrDisplay.depthFar = 7500.0;
@@ -40,5 +40,4 @@ navigator.getVRDisplays().then(function(displays) {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

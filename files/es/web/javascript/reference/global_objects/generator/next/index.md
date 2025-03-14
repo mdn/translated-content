@@ -1,8 +1,6 @@
 ---
 title: Generator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/next
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador/next
 ---
 
 {{JSRef}}
@@ -45,10 +43,10 @@ function* gen() {
 }
 
 var g = gen(); // "Generator { }"
-g.next();      // "Object { value: 1, done: false }"
-g.next();      // "Object { value: 2, done: false }"
-g.next();      // "Object { value: 3, done: false }"
-g.next();      // "Object { value: undefined, done: true }"
+g.next(); // "Object { value: 1, done: false }"
+g.next(); // "Object { value: 2, done: false }"
+g.next(); // "Object { value: 3, done: false }"
+g.next(); // "Object { value: undefined, done: true }"
 ```
 
 ### Sending values to the generator
@@ -57,7 +55,7 @@ In this example, `next` is called with a value. Note that the first call did not
 
 ```js
 function* gen() {
-  while(true) {
+  while (true) {
     var value = yield null;
     console.log(value);
   }
@@ -75,11 +73,11 @@ g.next(2);
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Generator.next")}}
+{{Compat}}
 
 ## See also
 
 - [`function*`](/es/docs/Web/JavaScript/Reference/Statements/function*)
-- [Iterators and generators](/es/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Iterators and generators](/es/docs/Web/JavaScript/Guide/Iterators_and_generators)

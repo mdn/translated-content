@@ -19,13 +19,13 @@ slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
 2. その例のダウンロード可能なバージョンも、CSS Examples リポジトリーに保存します。
 3. [CSS レイアウト料理帳](/ja/docs/Web/CSS/Layout_cookbook)内のページの詳細は次のとおりです。
 
-    1. 要件 (Requirements)
-    2. レシピ (Recipe)
-    3. 行った選択 (Choices made)
-    4. 有用な代替策または代替方法 (Useful fallbacks or alternative methods)
-    5. アクセシビリティの考慮 (Accessibility concerns)
-    6. ブラウザーの互換性 (Browser compatibility)
-    7. 関連資料 (Additional resources)
+   1. 要件 (Requirements)
+   2. レシピ (Recipe)
+   3. 行った選択 (Choices made)
+   4. 有用な代替策または代替方法 (Useful fallbacks or alternative methods)
+   5. アクセシビリティの考慮 (Accessibility concerns)
+   6. ブラウザーの互換性 (Browser compatibility)
+   7. 関連資料 (Additional resources)
 
 ### 1. パターンの作成
 
@@ -69,7 +69,7 @@ head の中の 2 番目のブロックからの `editable` クラスの CSS も�
 
 ### 5. ページを作成する
 
-例がマージされたら、ページを作成することができます。 そのためには[ページ作成権限](/ja/docs/MDN/Contribute/Howto/Create_and_edit_pages#getting_page-creation_permissions)付き MDN アカウントが必要です。その後、そのページを CSS 料理帳のページのサブページとして作成できます。[ここに料理帳のページ用のテンプレートがあります](/ja/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template)。
+例がマージされたら、ページを作成することができます。 そのためには[ページ作成権限](/ja/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#getting_page-creation_permissions)付き MDN アカウントが必要です。その後、そのページを CSS 料理帳のページのサブページとして作成できます。[ここに料理帳のページ用のテンプレートがあります](/ja/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template)。
 
 テンプレートは各セクションの一部になるべきものを説明し、より多くの助けを得るために他の料理帳の例を参照することができます。 これらのページのいずれかの編集ボタンをクリックすると、互換性データを埋め込むために使用されるマクロやライブサンプルなどが表示されます。
 

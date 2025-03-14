@@ -1,30 +1,24 @@
 ---
-title: CanvasRenderingContext2D.fillStyle
+title: "CanvasRenderingContext2D: fillStyle プロパティ"
 slug: Web/API/CanvasRenderingContext2D/fillStyle
+l10n:
+  sourceCommit: c8b447485fd893d5511d88f592f5f3aec29a725b
 ---
 
 {{APIRef}}
 
 **`CanvasRenderingContext2D.fillStyle`** は[キャンバス 2D API](/ja/docs/Web/API/Canvas_API) のプロパティで、図形の内側を塗りつぶすために使用する色、グラデーション、またはパターンを指定します。既定値は `#000` (黒色)です。
 
-> **メモ:** 輪郭と塗りつぶしのスタイル例については、[キャンバスのチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)の[スタイルと色を適用する](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)をご覧ください。
+> [!NOTE]
+> 輪郭と塗りつぶしのスタイル例については、[キャンバスのチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)の[スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)をご覧ください。
 
-## 構文
+## 値
 
-```js
-ctx.fillStyle = color;
-ctx.fillStyle = gradient;
-ctx.fillStyle = pattern;
-```
+以下のいずれかです。
 
-### オプション
-
-- `color`
-  - : {{domxref("DOMString")}} で、 [CSS](/ja/docs/Web/CSS) の {{cssxref("&lt;color&gt;")}} 値として解釈される値です。
-- `gradient`
-  - : {{domxref("CanvasGradient")}} オブジェクト (線形または放射状のグラデーション) 。
-- `pattern`
-  - : {{domxref("CanvasPattern")}} オブジェクト (繰り返し画像) 。
+- CSS の {{cssxref("&lt;color&gt;")}} 値として解釈される文字列。
+- {{domxref("CanvasGradient")}} オブジェクト（線形または放射状のグラデーション）。
+- {{domxref("CanvasPattern")}} オブジェクト（繰り返し画像）。
 
 ## 例
 
@@ -41,10 +35,10 @@ ctx.fillStyle = pattern;
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(10, 10, 100, 100);
 ```
 
@@ -61,14 +55,14 @@ ctx.fillRect(10, 10, 100, 100);
 ```
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 for (let i = 0; i < 6; i++) {
   for (let j = 0; j < 6; j++) {
     ctx.fillStyle = `rgb(
-        ${Math.floor(255 - 42.5 * i)},
-        ${Math.floor(255 - 42.5 * j)},
+        ${Math.floor(255 - 42.5 * i)}
+        ${Math.floor(255 - 42.5 * j)}
         0)`;
     ctx.fillRect(j * 25, i * 25, 25, 25);
   }
@@ -77,8 +71,7 @@ for (let i = 0; i < 6; i++) {
 
 結果はこのようになります:
 
-{{EmbedLiveSample("Creating_multiple_fill_colors_using_loops", 160, 160,
-  "canvas_fillstyle.png")}}
+{{EmbedLiveSample("Creating_multiple_fill_colors_using_loops", "", "160")}}
 
 ## 仕様書
 
@@ -93,8 +86,8 @@ for (let i = 0; i < 6; i++) {
 WebKit および Blink ベースのブラウザーの場合、このプロパティに加えて、非標準で非推奨のメソッド `ctx.setFillColor()` が実装されています。
 
 ```js
-setFillColor(color, optional alpha);
-setFillColor(grayLevel, optional alpha);
+setFillColor(color, /* (optional) */ alpha);
+setFillColor(grayLevel, /* (optional) */ alpha);
 setFillColor(r, g, b, a);
 setFillColor(c, m, y, k, a);
 ```

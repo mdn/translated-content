@@ -1,8 +1,6 @@
 ---
 title: Effets de boîte avancés
 slug: Learn/CSS/Building_blocks/Advanced_styling_effects
-translation_of: Learn/CSS/Building_blocks/Advanced_styling_effects
-original_slug: Apprendre/CSS/Building_blocks/Advanced_styling_effects
 ---
 
 {{LearnSidebar}}
@@ -44,7 +42,10 @@ Débutons avec un exemple simple. D'abord, un peu de HTML :
 
 ```html
 <article class="simple">
-  <p><strong>Attention</strong> : Le thermostat sur le transcendeur cosmique a atteint un niveau critique.</p>
+  <p>
+    <strong>Attention</strong> : Le thermostat sur le transcendeur cosmique a
+    atteint un niveau critique.
+  </p>
 </article>
 ```
 
@@ -61,11 +62,15 @@ article {
   color: white;
   text-align: center;
   background-color: red;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.25));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.25)
+  );
 }
 
 .simple {
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
 }
 ```
 
@@ -88,7 +93,10 @@ Vous pouvez également définir plusieurs ombres de boîtes dans une seule décl
 
 ```html hidden
 <article class="multiple">
-  <p><strong>Attention</strong> : Le thermostat sur le transcendeur cosmique a atteint un niveau critique.</p>
+  <p>
+    <strong>Attention</strong> : Le thermostat sur le transcendeur cosmique a
+    atteint un niveau critique.
+  </p>
 </article>
 ```
 
@@ -103,14 +111,22 @@ article {
   color: white;
   text-align: center;
   background-color: red;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.25)); }
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.25)
+  );
+}
 
-.multiple { box-shadow: 1px 1px 1px black,
-                        2px 2px 1px black,
-                        3px 3px 1px red,
-                        4px 4px 1px red,
-                        5px 5px 1px black,
-                        6px 6px 1px black; }
+.multiple {
+  box-shadow:
+    1px 1px 1px black,
+    2px 2px 1px black,
+    3px 3px 1px red,
+    4px 4px 1px red,
+    5px 5px 1px black,
+    6px 6px 1px black;
+}
 ```
 
 Nous obtenons le résultat suivant :
@@ -137,19 +153,22 @@ button {
   border-radius: 10px;
   border: none;
   background-image: linear-gradient(to bottom right, #777, #ddd);
-  box-shadow: 1px 1px 1px black,
-              inset 2px 3px 5px rgba(0,0,0,0.3),
-              inset -2px -3px 5px rgba(255,255,255,0.5);
+  box-shadow:
+    1px 1px 1px black,
+    inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -3px 5px rgba(255, 255, 255, 0.5);
 }
 
-button:focus, button:hover {
+button:focus,
+button:hover {
   background-image: linear-gradient(to bottom right, #888, #eee);
 }
 
 button:active {
-  box-shadow: inset 2px 2px 1px black,
-              inset 2px 3px 5px rgba(0,0,0,0.3),
-              inset -2px -3px 5px rgba(255,255,255,0.5);
+  box-shadow:
+    inset 2px 2px 1px black,
+    inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -3px 5px rgba(255, 255, 255, 0.5);
 }
 ```
 
@@ -161,7 +180,8 @@ Ici, nous avons mis en place un style de bouton avec des états différents selo
 
 Lorsque le bouton est cliqué, l'état actif entraîne le remplacement de la première ombre de la boîte par une ombre d'insertion très sombre, donnant l'apparence que le bouton est enfoncé.
 
-> **Note :** il y a un autre élément qui peut être paramétré parmi les valeurs de `box-shadow` — une autre valeur de longueur peut être facultativement définie juste avant la définition de la couleur : le **rayon de diffusion**. S'il est défini, l'ombre devient plus grande que la boîte originelle. Ce paramètre n'est pas couramment utilisé, mais il est bon de le signaler.
+> [!NOTE]
+> Il y a un autre élément qui peut être paramétré parmi les valeurs de `box-shadow` — une autre valeur de longueur peut être facultativement définie juste avant la définition de la couleur : le **rayon de diffusion**. S'il est défini, l'ombre devient plus grande que la boîte originelle. Ce paramètre n'est pas couramment utilisé, mais il est bon de le signaler.
 
 ## Filtres
 
@@ -189,12 +209,12 @@ p {
 }
 
 .filter {
-  -webkit-filter: drop-shadow(5px 5px 1px rgba(0,0,0,0.7));
-  filter: drop-shadow(5px 5px 1px rgba(0,0,0,0.7));
+  -webkit-filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.7));
 }
 
 .box-shadow {
-  box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.7);
 }
 ```
 
@@ -209,7 +229,8 @@ Quelques autres points à noter :
 - Les filtres sont une fonctionnalité très récente — ils sont pris en charge dans la plupart des navigateurs modernes, y compris Microsoft Edge, mais ils ne sont pas du tout pris en charge dans Internet Explorer. Si vous utilisez des filtres dans vos designs, vous devrez vous assurer que le contenu reste utilisable sans filtres.
 - Comme vous pouvez le voir, nous avons inclus une version de la propriété `filter` préfixée par `-webkit-`. On appelle cela un {{glossary("Vendor Prefix")}} (préfixe fournisseur) : c'est parfois utilisé par un navigateur avant de rendre définitive l'implémentation d'une nouvelle fonctionnalité. Cela permet de la prendre en charge et de l'expérimenter sans entrer en conflit avec la version non préfixée. Les préfixes fournisseur ne sont pas destinés à être utilisés par les développeurs web, mais ils sont parfois utilisés dans les pages de production si ces fonctionnalités expérimentales sont vraiment désirées. Dans notre cas, la version `-webkit-` de la propriété est actuellement requise pour une prise en charge par Chrome/Safari/Opera, alors que Edge et Firefox utilisent la version finale non préfixée.
 
-> **Note :** Si vous décidez d'utiliser des préfixes dans votre code, assurez-vous d'inclure tous les préfixes requis ainsi que la version non préfixée, afin que le plus grand nombre possible de navigateurs puissent utiliser la fonction, et lorsque les navigateurs abandonneront plus tard les préfixes, ils pourront également utiliser la version non préfixée. Soyez également averti que ces caractéristiques expérimentales pourraient changer, de sorte que votre code pourrait casser. Il est vraiment préférable d'expérimenter avec ces fonctions jusqu'à ce que les préfixes soient supprimés.
+> [!NOTE]
+> Si vous décidez d'utiliser des préfixes dans votre code, assurez-vous d'inclure tous les préfixes requis ainsi que la version non préfixée, afin que le plus grand nombre possible de navigateurs puissent utiliser la fonction, et lorsque les navigateurs abandonneront plus tard les préfixes, ils pourront également utiliser la version non préfixée. Soyez également averti que ces caractéristiques expérimentales pourraient changer, de sorte que votre code pourrait casser. Il est vraiment préférable d'expérimenter avec ces fonctions jusqu'à ce que les préfixes soient supprimés.
 
 Vous pouvez voir d'autres exemples de filtres sur [filters.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/filters.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/filters.html)).
 
@@ -224,17 +245,16 @@ Deux propriétés utilisent les modes de mélange de couleurs dans les CSS :
 
 Vous trouverez beaucoup plus d'exemples de ce qui est disponible à la page [blend-modes.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html)) et à la page de référence de {{cssxref("&lt;blend-mode&gt;")}}.
 
-> **Note :** Les modes de mélange sont aussi une toute nouvelle fonctionnalité un petit peu moins bien prise en charge que les filtres. Il n'y a pas de prise en charge encore dans Edge et Safari ne l'accepte que partiellement.
+> [!NOTE]
+> Les modes de mélange sont aussi une toute nouvelle fonctionnalité un petit peu moins bien prise en charge que les filtres. Il n'y a pas de prise en charge encore dans Edge et Safari ne l'accepte que partiellement.
 
 ### background-blend-mode
 
 Regardons à nouveau des exemples pour mieux comprendre. D'abord, {{cssxref("background-blend-mode")}} — nous montrons une couple de simples éléments {{htmlelement("div")}} avec lesquels vous pourrez comparer l'original et la version avec mélange de couleurs :
 
 ```html
-<div>
-</div>
-<div class="multiply">
-</div>
+<div></div>
+<div class="multiply"></div>
 ```
 
 Maintenant la CSS — nous ajoutons aux `<div>` une image d'arrière‑plan sur un fond vert :
@@ -266,20 +286,14 @@ Voyons maintenant {{cssxref("mix-blend-mode")}}. Nous présentons les deux même
 ```html
 <article>
   Mode sans mélange
-  <div>
-
-  </div>
-  <div>
-  </div>
+  <div></div>
+  <div></div>
 </article>
 
 <article>
   Mélange "multiply"
-  <div class="multiply-mix">
-
-  </div>
-  <div>
-  </div>
+  <div class="multiply-mix"></div>
+  <div></div>
 </article>
 ```
 
@@ -328,7 +342,8 @@ Nous obtenons le résultat suivant :
 
 Vous voyez ici que `mix-blend-mode: multiply;` a mélangé non seulement les deux images d'arrière plan, mais également la couleur du `<div>` situé dessous.
 
-> **Note :** Ne vous inquiétez pas si vous ne saisissez pas certaines propriétés de mise en page telles que {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}}, etc. Nous en reparlerons en détail dans le module [CSS Layout](/fr/docs/Learn/CSS/CSS_layout).
+> [!NOTE]
+> Ne vous inquiétez pas si vous ne saisissez pas certaines propriétés de mise en page telles que {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}}, etc. Nous en reparlerons en détail dans le module [CSS Layout](/fr/docs/Learn/CSS/CSS_layout).
 
 ## -webkit-background-clip: text
 
@@ -345,7 +360,8 @@ Alors pourquoi d'autres navigateurs ont-ils implémenté un préfixe `-webkit-` 
 
 Si vous voulez utiliser de telles fonctionnalités dans votre travail de production, assurez-vous de tester minutieusement tous les navigateurs et vérifiez que, lorsque ces fonctionnalités ne sont pas prises en charge , le site reste toujours utilisable.
 
-> **Note :** Pour un exemple de code complet avec `-webkit-background-clip: text`, allez à la page [background-clip-text.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html)).
+> [!NOTE]
+> Pour un exemple de code complet avec `-webkit-background-clip: text`, allez à la page [background-clip-text.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html)).
 
 ## Apprentissage actif : expérimenter certains effets
 
@@ -354,13 +370,24 @@ Si vous voulez utiliser de telles fonctionnalités dans votre travail de product
 Si vous faites une erreur, vous pouvez toujours _Réinitialiser_ l'exemple avec le bouton correspondant.
 
 ```html hidden
-<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+<div
+  class="body-wrapper"
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>Zone de saisie HTML</h2>
-  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"><div class="style-me">
-</div></textarea>
+  <textarea
+    id="code"
+    class="html-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+<div class="style-me">
+</div></textarea
+  >
 
   <h2>Zone de saisie de la CSS</h2>
-  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">.style-me {
+  <textarea
+    id="code"
+    class="css-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+.style-me {
   width: 280px;
   height: 130px;
   padding: 10px;
@@ -369,12 +396,19 @@ Si vous faites une erreur, vous pouvez toujours _Réinitialiser_ l'exemple avec 
   background-color: red;
   background: url(colorful-heart.png) no-repeat center 20px,
               linear-gradient(to bottom right, #f33, #a33);
-} </textarea>
+} </textarea
+  >
 
   <h2>Zone de rendu</h2>
-  <div class="output" style="width: 90%;height: 15em;padding: 10px;border: 1px solid #0095dd;overflow:hidden;"></div>
+  <div
+    class="output"
+    style="width: 90%;height: 15em;padding: 10px;border: 1px solid #0095dd;overflow:hidden;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="Réinitialiser" style="margin: 10px 10px 0 0;">
+    <input
+      id="reset"
+      type="button"
+      value="Réinitialiser"
+      style="margin: 10px 10px 0 0;" />
   </div>
 </div>
 ```
@@ -387,8 +421,8 @@ var htmlCode = htmlInput.value;
 var cssCode = cssInput.value;
 var output = document.querySelector(".output");
 
-var styleElem = document.createElement('style');
-var headElem = document.querySelector('head');
+var styleElem = document.createElement("style");
+var headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -396,7 +430,7 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();

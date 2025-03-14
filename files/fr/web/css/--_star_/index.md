@@ -1,13 +1,6 @@
 ---
 title: Propriétés personnalisées (--*)
 slug: Web/CSS/--*
-tags:
-  - CSS
-  - Experimental
-  - Reference
-  - Variables
-  - Variables CSS
-translation_of: Web/CSS/--*
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -38,8 +31,12 @@ La portée des propriétés personnalisées est celle des éléments sur lesquel
 ### HTML
 
 ```html
-<p id="premierParagraphe">Ce paragraphe devrait être sur fond bleu avec un texte jaune.</p>
-<p id="secondParagraphe">Ce paragraphe devrait être sur fond jaune avec un texte bleu.</p>
+<p id="premierParagraphe">
+  Ce paragraphe devrait être sur fond bleu avec un texte jaune.
+</p>
+<p id="secondParagraphe">
+  Ce paragraphe devrait être sur fond jaune avec un texte bleu.
+</p>
 ```
 
 ### CSS
@@ -75,4 +72,4 @@ La portée des propriétés personnalisées est celle des éléments sur lesquel
 
 ## Voir aussi
 
-- [Utiliser les variables CSS](/fr/docs/Web/CSS/Les_variables_CSS)
+- [Utiliser les variables CSS](/fr/docs/Web/CSS/Using_CSS_custom_properties)

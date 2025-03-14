@@ -1,71 +1,116 @@
 ---
 title: outline-offset
 slug: Web/CSS/outline-offset
+l10n:
+  sourceCommit: cc4592258b952f452e8715b67b14ce3534ccfa69
 ---
 
 {{CSSRef}}
 
-## 概要
+**`outline-offset`** CSS 属性设置[轮廓](/zh-CN/docs/Web/CSS/outline)与元素边缘或边框之间的间距。
 
-**`outline-offset`** CSS 属性用于设置 {{ cssxref("outline") }} 与一个元素边缘或边框之间的间隙。
+{{InteractiveExample("CSS Demo: outline-offset")}}
 
-outline 是元素的轮廓，悬浮在元素边框之上。元素和其轮廓之间是透明的。也就是说，它们之间的颜色会继承父元素的背景色。
-
-{{cssinfo}}
-
-The space will be transparent (the parent will determine the background).
-
-## Syntax
-
-```css
-/* <length> values */
-outline-offset: 3px;
-outline-offset: 0.2em;
-
-/* Global values */
-outline-offset: inherit;
-outline-offset: initial;
-outline-offset: unset;
+```css interactive-example-choice
+outline-offset: 4px;
 ```
 
-### Values
+```css interactive-example-choice
+outline-offset: 0.6rem;
+```
 
-- `<length>`
-  - : 元素和轮廓间的宽度。详见 {{cssxref("&lt;length&gt;")}} . 负值将轮廓绘制在元素之内。
+```css interactive-example-choice
+outline-offset: 12px;
+outline: 5px dashed blue;
+```
 
-### Formal syntax
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
 
-{{csssyntax}}
-
-## Examples
-
-```css
-p {
-  outline: dashed thin;
-  /* Move the outline 10px away from the border */
-  outline-offset: 10px;
-  border:1px solid black;
+```css interactive-example
+#example-element {
+  border: 2px solid crimson;
+  outline: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
 }
 ```
 
-Html
+## 语法
 
-```html
-<p>outline: offset 10px. Border is solid and outline is dashed</p>
+```css
+/* <length> 值 */
+outline-offset: 3px;
+outline-offset: 0.2em;
+
+/* 全局值 */
+outline-offset: inherit;
+outline-offset: initial;
+outline-offset: revert;
+outline-offset: revert-layer;
+outline-offset: unset;
 ```
 
-上面的代码将产生以下效果：
+### 值
 
-{{ EmbedLiveSample('Examples', '', '', '') }}
+- {{cssxref("&lt;length&gt;")}}
+  - : 元素与其轮廓线之间的间距宽度。负值会将轮廓线置于元素内部。当值为 `0` 时，轮廓线与元素之间没有间距。
 
-另一个例子：
+## 描述
 
-outline: multiple offsets;
+轮廓线是绘制在元素周围、边框边缘之外的一条线。元素与其轮廓线之间的空间是透明的。换句话说，它与父元素具有相同的背景。
 
-## Specifications
+## 形式定义
+
+{{cssinfo}}
+
+## 形式语法
+
+{{csssyntax}}
+
+## 示例
+
+### 以像素为单位设置轮廓线偏移
+
+#### HTML
+
+```html
+<p>这是一段文本，这是一段文本。</p>
+```
+
+#### CSS
+
+```css
+p {
+  outline: 1px dashed red;
+  outline-offset: 10px;
+  background: yellow;
+  border: 1px solid blue;
+  margin: 15px;
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample('以像素为单位设置轮廓线偏移')}}
+
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{cssxref("outline")}}
+- {{cssxref("outline-color")}}
+- {{cssxref("outline-style")}}
+- {{cssxref("outline-width")}}

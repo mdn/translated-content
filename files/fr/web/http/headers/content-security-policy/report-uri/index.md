@@ -1,22 +1,14 @@
 ---
-title: 'CSP: report-uri'
+title: "CSP: report-uri"
 slug: Web/HTTP/Headers/Content-Security-Policy/report-uri
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - Sécurité
-translation_of: Web/HTTP/Headers/Content-Security-Policy/report-uri
 ---
 
 {{HTTPSidebar}}{{deprecated_header}}
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`report-uri`** demande à l'agent utilisateur de rapporter les violations de règles CSP. Ces rapports de violation sont constituées d'un document JSON envoyé via une requête HTTP POST à l'URI fournie.
 
-> **Attention :** Bien que la directive {{CSP("report-to")}} est prévue remplacer la directive **`report-uri`** maintenant dépréciée, {{CSP("report-to")}} n'est pas encore supportée par la plupart des navigateurs modernes. Par rétrocompatibilité avec les navigateurs courants et tout en prévoyant une compatibilité future quand les navigateurs supporteront {{CSP("report-to")}}, vous pouvez spécifier les deux directives **`report-uri`** et {{CSP("report-to")}}:
+> [!WARNING]
+> Bien que la directive {{CSP("report-to")}} est prévue remplacer la directive **`report-uri`** maintenant dépréciée, {{CSP("report-to")}} n'est pas encore supportée par la plupart des navigateurs modernes. Par rétrocompatibilité avec les navigateurs courants et tout en prévoyant une compatibilité future quand les navigateurs supporteront {{CSP("report-to")}}, vous pouvez spécifier les deux directives **`report-uri`** et {{CSP("report-to")}}:
 >
 > ```
 > Content-Security-Policy: ...; report-uri https://endpoint.com; report-to groupname

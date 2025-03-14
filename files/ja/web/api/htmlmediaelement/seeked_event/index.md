@@ -1,62 +1,52 @@
 ---
-title: 'HTMLMediaElement: seeked イベント'
+title: "HTMLMediaElement: seeked イベント"
+short-title: seeked
 slug: Web/API/HTMLMediaElement/seeked_event
+l10n:
+  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
 {{APIRef("HTMLMediaElement")}}
 
 `seeked` イベントは、シーク操作が完了したことで、現在の再生位置が変更され、論理属性の `seeking` が `false` に変更されたときに発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">対象</th>
-      <td>要素</td>
-    </tr>
-    <tr>
-      <th scope="row">既定のアクション</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>{{domxref("GlobalEventHandlers.onseeked")}}</td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("seeked", (event) => {});
+
+onseeked = (event) => {};
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
-これらの例では、`HTMLMediaElement` の `seeked` イベントにイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。
+これらの例では、`HTMLMediaElement` の `seeked` イベントにイベントリスナーを追加し、そのイベントハンドラーがイベントの発生に反応したときにメッセージを投稿します。
 
 `addEventListener()` を使用する場合
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('seeked', (event) => {
-  console.log('動画が探していた再生位置を見つけました。');
+video.addEventListener("seeked", (event) => {
+  console.log("動画が探していた再生位置を見つけました。");
 });
 ```
 
 `onseeked` イベントハンドラープロパティを使用する場合
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onseeked = (event) => {
-  console.log('動画が探していた再生位置を見つけました。');
+  console.log("動画が探していた再生位置を見つけました。");
 };
 ```
 
@@ -73,7 +63,6 @@ video.onseeked = (event) => {
 - HTMLMediaElement {{domxref("HTMLMediaElement.playing_event", 'playing')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.waiting_event", 'waiting')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.seeking_event", 'seeking')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.seeked_event", 'seeked')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.ended_event", 'ended')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}} イベント

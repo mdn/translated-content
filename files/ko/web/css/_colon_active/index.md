@@ -1,13 +1,6 @@
 ---
-title: ':active'
+title: :active
 slug: Web/CSS/:active
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Web
-translation_of: Web/CSS/:active
 ---
 
 {{CSSRef}}
@@ -25,7 +18,8 @@ a:active {
 
 `:active` 의사 클래스로 정의한 스타일은 자신보다 뒤에 위치하고 동등한 명시성을 가진 다른 링크 의사 클래스({{cssxref(":link")}}, {{cssxref(":hover")}}, {{cssxref(":visited")}})가 덮어씁니다. 링크를 적절히 디자인하려면 _LVHA-순서(_`:link` — `:visited` — `:hover` — `:active`)를 따라, `:active` 규칙을 다른 모든 링크 규칙들보다 뒤에 배치하세요.
 
-> **참고:** CSS3 명세에 따르면, 다수의 버튼을 가진 마우스라도 `:active` 의사 클래스는 주 버튼에만 적용돼야 합니다. 오른손잡이 마우스 기준, 주 버튼은 보통 맨 왼쪽 버튼입니다.
+> [!NOTE]
+> CSS3 명세에 따르면, 다수의 버튼을 가진 마우스라도 `:active` 의사 클래스는 주 버튼에만 적용돼야 합니다. 오른손잡이 마우스 기준, 주 버튼은 보통 맨 왼쪽 버튼입니다.
 
 ## 구문
 
@@ -38,7 +32,8 @@ a:active {
 #### HTML
 
 ```html
-<p>링크를 포함하는 문단입니다.
+<p>
+  링크를 포함하는 문단입니다.
   <a href="#">이 링크는 클릭하는 동안 색이 빨갛게 됩니다.</a>
   이 문단은 클릭하는 동안 배경색이 회색이 됩니다.
 </p>
@@ -47,12 +42,22 @@ a:active {
 #### CSS
 
 ```css
-a:link { color: blue; }          /* 방문하지 않은 링크 */
-a:visited { color: purple; }     /* 방문한 링크 */
-a:hover { background: yellow; }  /* 마우스를 올린 링크 */
-a:active { color: red; }         /* 활성화한 링크 */
+a:link {
+  color: blue;
+} /* 방문하지 않은 링크 */
+a:visited {
+  color: purple;
+} /* 방문한 링크 */
+a:hover {
+  background: yellow;
+} /* 마우스를 올린 링크 */
+a:active {
+  color: red;
+} /* 활성화한 링크 */
 
-p:active { background: #eee; }   /* 활성화한 문단 */
+p:active {
+  background: #eee;
+} /* 활성화한 문단 */
 ```
 
 #### 결과

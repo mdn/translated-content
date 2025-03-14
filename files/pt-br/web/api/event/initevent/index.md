@@ -11,7 +11,7 @@ Eventos inicializados desta maneira precisam ter sido criados com o método {{ d
 
 > **Nota:** **Não use esse método mais, pois está depreciado.**
 >
-> Ao invés, use construtores de eventos específicos, como {{domxref("Event.Event", "Event()")}}. A página sobre [Criando e disparando eventos](/pt-BR/docs/Web/Guide/Events/Creating_and_triggering_events) detalha mais informações sobre o uso desses eventos.
+> Ao invés, use construtores de eventos específicos, como {{domxref("Event.Event", "Event()")}}. A página sobre [Criando e disparando eventos](/pt-BR/docs/Web/Events/Creating_and_triggering_events) detalha mais informações sobre o uso desses eventos.
 
 ## Syntax
 
@@ -46,14 +46,11 @@ elem.dispatchEvent(event);
 
 ## Especificações
 
-| Especificação                                                                                        | Estado                           | Comentário                                                                                  |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-event-initevent','Event.initEvent()')}}         | {{Spec2("DOM WHATWG")}} | From {{SpecName('DOM2 Events')}}, deprecated it, superseded by event constructors. |
-| {{SpecName('DOM2 Events','##Events-Event-initEvent','Event.initEvent()')}} | {{Spec2('DOM2 Events')}} | Initial definition.                                                                         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Event.initEvent")}}
+{{Compat}}
 
 ## Veja também
 

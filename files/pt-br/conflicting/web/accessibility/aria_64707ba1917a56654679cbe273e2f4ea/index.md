@@ -1,8 +1,6 @@
 ---
 title: Dicas básicas de form
 slug: conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
-translation_of: Web/Accessibility/ARIA/forms/Basic_form_hints
-original_slug: Web/Accessibility/ARIA/forms/Basic_form_hints
 ---
 
 ## Form labels
@@ -119,6 +117,7 @@ var validate = function () {
 
 Leia como usar [alertas ARIA para melhorar forms](/pt-BR/docs/aria/forms/alerts "aria/forms/alerts").
 
-> **Nota:** A ser decidido: devemos ou combinar em um artigo ou separar em técnicas, ou ambos. Além disso, é ARIA marcação apropriada para mensagens de erro em uma página carregada após a validação do lado do servidor?
+> [!NOTE]
+> A ser decidido: devemos ou combinar em um artigo ou separar em técnicas, ou ambos. Além disso, é ARIA marcação apropriada para mensagens de erro em uma página carregada após a validação do lado do servidor?
 
 Para maiores informações usando ARIA para acessibilidade de forms, veja o documento [Práticas de Cricação de WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/).

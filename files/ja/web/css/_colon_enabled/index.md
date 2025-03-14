@@ -1,5 +1,5 @@
 ---
-title: ':enabled'
+title: :enabled
 slug: Web/CSS/:enabled
 ---
 
@@ -12,6 +12,38 @@ slug: Web/CSS/:enabled
 input:enabled {
   color: blue;
 }
+```
+
+{{InteractiveExample("CSS Demo: :enabled", "tabbed-standard")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+*:enabled {
+  background-color: gold;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="name">Name:</label>
+  <input id="name" name="name" type="text" />
+
+  <label for="emp">Employed:</label>
+  <select id="emp" name="emp" disabled>
+    <option>No</option>
+    <option>Yes</option>
+  </select>
+
+  <label for="empDate">Employment Date:</label>
+  <input id="empDate" name="empDate" type="date" disabled />
+
+  <label for="resume">Resume:</label>
+  <input id="resume" name="resume" type="file" />
+</form>
 ```
 
 ## 構文
@@ -29,12 +61,12 @@ input:enabled {
 ```html
 <form action="url_of_form">
   <label for="FirstField">First field (enabled):</label>
-  <input type="text" id="FirstField" value="Lorem"><br>
+  <input type="text" id="FirstField" value="Lorem" /><br />
 
   <label for="SecondField">Second field (disabled):</label>
-  <input type="text" id="SecondField" value="Ipsum" disabled="disabled"><br>
+  <input type="text" id="SecondField" value="Ipsum" disabled="disabled" /><br />
 
-  <input type="button" value="Submit">
+  <input type="button" value="Submit" />
 </form>
 ```
 

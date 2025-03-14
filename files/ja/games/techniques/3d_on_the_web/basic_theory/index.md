@@ -70,15 +70,15 @@ WebGL は右手系座標系を利用します。上記の図のように `x` 軸
 
 ## 断片処理
 
-断片処理はテクスチャと照明に焦点を当てます - これは与えられたパラメータを元に最終的な色を計算します。
+断片処理はテクスチャと照明に焦点を当てます - これは与えられたパラメーターを元に最終的な色を計算します。
 
 ![Fragment processing](mdn-games-3d-fragment-processing.png)
 
 ### テクスチャ
 
-テクスチャは 3D 空間上でより見た目がよく、よりリアルなオブジェクトを作成するために使われる 2D 画像です。テクスチャは texels と呼ばれる単一テクスチャ要素から組み合わされており、texels は写真の要素と同様のピクセルの組み合わせです。レンダリングパイプラインの断片処理の段階でテクスチャをオブジェクトに追加することで必要によってオブジェクトを覆うよう調整したり、フィルターリングをすることができます。
+テクスチャは 3D 空間上でより見た目がよく、よりリアルなオブジェクトを作成するために使われる 2D 画像です。テクスチャは texels と呼ばれる単一テクスチャ要素から組み合わされており、texels は写真の要素と同様のピクセルの組み合わせです。レンダリングパイプラインの断片処理の段階でテクスチャをオブジェクトに追加することで必要によってオブジェクトを覆うよう調整したり、フィルタリングをすることができます。
 
-テクスチャは 3D オブジェクトの間で繰り返し 2D 画像を覆うことができます。テクスチャのフィルターリングは元の解像度またはテクスチャの画像が表示される断片と異なる場合に適用されます - これは結果的に縮小または拡大となります。
+テクスチャは 3D オブジェクトの間で繰り返し 2D 画像を覆うことができます。テクスチャのフィルタリングは元の解像度またはテクスチャの画像が表示される断片と異なる場合に適用されます - これは結果的に縮小または拡大となります。
 
 ### 照明
 
@@ -103,7 +103,7 @@ WebGL は右手系座標系を利用します。上記の図のように `x` 軸
 
 - [Three.js でデモを作る](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)
 - [Babylon.js を使った基本的なデモの作成](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js)
-- [Play​Canva を使った基本的なデモの作成](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas)
+- [PlayCanvas を使った基本的なデモの作成](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas)
 - [A-Frame を使った基本的なデモの作成](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame)
 
 さらに進んで、クールな最先端な 3D の試みをあなた自身で作ってください！

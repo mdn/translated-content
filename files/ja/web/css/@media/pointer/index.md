@@ -27,8 +27,7 @@ slug: Web/CSS/@media/pointer
 ### HTML
 
 ```html
-<input id="test" type="checkbox" />
-<label for="test">Look at me!</label>
+<input id="test" type="checkbox" /> <label for="test">Look at me!</label>
 ```
 
 ### CSS

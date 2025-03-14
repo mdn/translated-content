@@ -1,10 +1,10 @@
 ---
 title: Elements
 slug: Web/XSLT/Element
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element
 ---
+
+{{XsltSidebar}}
+
 {{ XsltRef() }} 여기에서 다루는 요소의 두 타입은 최상위 요소와 명령(instruction)입니다. 최상위 요소는 `<xsl:stylesheet>`나 `<xsl:transform>`의 자식으로 나타나야 합니다. 이에 반해, 명령은 템플릿과 관련이 있습니다. 스타일시트는 여러 템플릿을 포함할지도 모릅니다. 여기서 다루지 않는 세 번째 타입의 요소는 LRE(literal result element)입니다. LRE 또한 템플릿에 나타납니다. LRE는 예를 들어, HTML 변환 스타일시트 안의 `<hr>` 요소처럼 결과 문서에 복사되는게 좋은 어떤 비명령 요소로 이루어져 있습니다.
 
 관련 기록에 따르면, LRE의 어떤 속성과 한정된 수의 XSLT 요소의 속성도 속성값 템플릿으로 알려진 것을 또한 포함할 수 있습니다. 속성값 템플릿은 단순히 속성값 지정에 쓰이는 임베드된 XPath 식을 포함하는 문자열입니다. 실행할 때 식을 평가하고 평가 결과는 XPath 식으로 바꾸어 놓습니다. 예를 들어, "`image-dir`" 변수를 다음처럼 정의했다고 하면,

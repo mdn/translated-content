@@ -1,10 +1,9 @@
 ---
 title: Document.createComment()
 slug: Web/API/Document/createComment
-translation_of: Web/API/Document/createComment
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
 ## Основное
 
@@ -24,10 +23,10 @@ CommentNode = document.createComment(data)
 ## Пример
 
 ```js
-var docu = new DOMParser().parseFromString('<xml></xml>',  "application/xml");
-var comment = docu.createComment('Это комментарий на странице');
+var docu = new DOMParser().parseFromString("<xml></xml>", "application/xml");
+var comment = docu.createComment("Это комментарий на странице");
 
-docu.getElementsByTagName('xml')[0].appendChild(comment);
+docu.getElementsByTagName("xml")[0].appendChild(comment);
 
 alert(new XMLSerializer().serializeToString(docu));
 // Выведет: <xml><!--Это комментарий на странице--></xml>
@@ -37,6 +36,6 @@ alert(new XMLSerializer().serializeToString(docu));
 
 - Вернёт **`NS_ERROR_DOM_INVALID_CHARACTER_ERR`**, если "--" есть в содержимом тега.
 
-## Спецификация
+## Спецификации
 
-- [createComment](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createComment)
+- [createComment](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createComment)

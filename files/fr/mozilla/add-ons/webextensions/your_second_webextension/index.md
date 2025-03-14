@@ -1,9 +1,6 @@
 ---
 title: Votre deuxième WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 ---
 
 {{AddonSidebar}}
@@ -14,7 +11,7 @@ L'extension ajoute un nouveau bouton à la barre d'outils Firefox. Lorsque l'uti
 
 Pour implémenter ce module, il nous faut :
 
-- **Définir une [action du navigateur (_browser action_)](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action), matérialisée par un bouton dans la barre d'outils de Firefox**. Pour ce bouton, nous avons besoin :
+- **Définir une [action du navigateur (_browser action_)](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button), matérialisée par un bouton dans la barre d'outils de Firefox**. Pour ce bouton, nous avons besoin :
 
   - d'une icône, nommée "beasts-32.png"
   - d'une popup qui s'ouvrira lorsqu'on cliquera sur le bouton. La popup sera constituée d'HTML, de CSS et de JavaScript.
@@ -54,7 +51,6 @@ Créez un nouveau fichier nommé "manifest.json" directement dans le répertoire
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Beastify",
   "version": "1.0",
@@ -65,9 +61,7 @@ Créez un nouveau fichier nommé "manifest.json" directement dans le répertoire
     "48": "icons/beasts-48.png"
   },
 
-  "permissions": [
-    "activeTab"
-  ],
+  "permissions": ["activeTab"],
 
   "browser_action": {
     "default_icon": "icons/beasts-32.png",
@@ -141,28 +135,27 @@ touch choose_beast.html choose_beast.css choose_beast.js
 Voici le contenu du fichier HTML :
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="choose_beast.css"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="choose_beast.css" />
   </head>
 
-<body>
-  <div id="popup-content">
-    <div class="button beast">Grenouille</div>
-    <div class="button beast">Tortue</div>
-    <div class="button beast">Serpent</div>
-    <div class="button reset">Réinitialiser</div>
-  </div>
-  <div id="error-content" class="hidden">
-    <p>Cette page ne peut être transformée.</p>
-    <p>Veuillez essayer une autre page.</p>
-  </div>
-  <script src="choose_beast.js"></script>
-</body>
-
+  <body>
+    <div id="popup-content">
+      <div class="button beast">Grenouille</div>
+      <div class="button beast">Tortue</div>
+      <div class="button beast">Serpent</div>
+      <div class="button reset">Réinitialiser</div>
+    </div>
+    <div id="error-content" class="hidden">
+      <p>Cette page ne peut être transformée.</p>
+      <p>Veuillez essayer une autre page.</p>
+    </div>
+    <script src="choose_beast.js"></script>
+  </body>
 </html>
 ```
 
@@ -175,7 +168,8 @@ Il est à noter que le ficher CSS et le fichier JS sont inclus depuis ce fichier
 Le CSS fixe la taille de la popup, s'assure que les trois choix remplissent l'espace et les met en forme de façon élémentaire. C'est aussi le CSS qui masque les éléments avec `class="hidden"`, cela signifie que l'élément `<div>` `"error-content"` sera masqué par défaut :
 
 ```css
-html, body {
+html,
+body {
   width: 100px;
 }
 
@@ -192,19 +186,19 @@ html, body {
 }
 
 .beast:hover {
-  background-color: #CFF2F2;
+  background-color: #cff2f2;
 }
 
 .beast {
-  background-color: #E5F2F2;
+  background-color: #e5f2f2;
 }
 
 .reset {
-  background-color: #FBFBC9;
+  background-color: #fbfbc9;
 }
 
 .reset:hover {
-  background-color: #EAEA9D;
+  background-color: #eaea9d;
 }
 ```
 
@@ -225,7 +219,6 @@ const hidePage = `body > :not(.beastify-image) {
  */
 function listenForClicks() {
   document.addEventListener("click", (e) => {
-
     /**
      * Selon le nom de la bête, on fournit l'URL vers
      * l'image correspondante.
@@ -248,11 +241,11 @@ function listenForClicks() {
      * dans l'onglet actif.
      */
     function beastify(tabs) {
-      browser.tabs.insertCSS({code: hidePage}).then(() => {
+      browser.tabs.insertCSS({ code: hidePage }).then(() => {
         let url = beastNameToURL(e.target.textContent);
         browser.tabs.sendMessage(tabs[0].id, {
           command: "beastify",
-          beastURL: url
+          beastURL: url,
         });
       });
     }
@@ -263,7 +256,7 @@ function listenForClicks() {
      * l'onglet actif.
      */
     function reset(tabs) {
-      browser.tabs.removeCSS({code: hidePage}).then(() => {
+      browser.tabs.removeCSS({ code: hidePage }).then(() => {
         browser.tabs.sendMessage(tabs[0].id, {
           command: "reset",
         });
@@ -282,12 +275,13 @@ function listenForClicks() {
      * "beastify()" ou "reset()" lorsque c'est pertinent.
      */
     if (e.target.classList.contains("beast")) {
-      browser.tabs.query({active: true, currentWindow: true})
+      browser.tabs
+        .query({ active: true, currentWindow: true })
         .then(beastify)
         .catch(reportError);
-    }
-    else if (e.target.classList.contains("reset")) {
-      browser.tabs.query({active: true, currentWindow: true})
+    } else if (e.target.classList.contains("reset")) {
+      browser.tabs
+        .query({ active: true, currentWindow: true })
         .then(reset)
         .catch(reportError);
     }
@@ -302,7 +296,9 @@ function listenForClicks() {
 function reportExecuteScriptError(error) {
   document.querySelector("#popup-content").classList.add("hidden");
   document.querySelector("#error-content").classList.remove("hidden");
-  console.error(`Erreur d'exécution du script de contenu beastify : ${error.message}`);
+  console.error(
+    `Erreur d'exécution du script de contenu beastify : ${error.message}`,
+  );
 }
 
 /**
@@ -310,9 +306,10 @@ function reportExecuteScriptError(error) {
  * and add a click handler.
  * If we couldn't inject the script, handle the error.
  */
-browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
-.then(listenForClicks)
-.catch(reportExecuteScriptError);
+browser.tabs
+  .executeScript({ file: "/content_scripts/beastify.js" })
+  .then(listenForClicks)
+  .catch(reportExecuteScriptError);
 ```
 
 Pour commencer, le script de la popup exécute un script de contenu dans l'onglet actif dès que la popup est chargée grâce à la méthode [`browser.tabs.executeScript()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript). Si l'exécution du script est réussie, le script de contenu sera chargé dans la page jusqu'à ce que l'onglet soit fermé ou que l'utilisateur navigue sur une autre page.
@@ -340,7 +337,7 @@ La fonction `reset()` annule la transformation de l'onglet courant en :
 Créez un nouveau répertoire sous la racine du module nommé "content_scripts" et créez un nouveau fichier nommé "beastify.js", contenant :
 
 ```js
-(function() {
+(function () {
   /**
    * On vérifie et on initialise une variable globale
    * permettant de s'assurer que le script ne fera rien
@@ -394,7 +391,7 @@ La première chose que fait le script de contenu est de vérifier une variable g
 
 Après ça, on voit plus loin que le script de contenu utilise [`browser.runtime.onMessage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage). Cela permet de faire le lien avec le script de popup qui envoyait deux messages : "beastify" et "reset".
 
-- Si le message est "beastify", on s'attend à ce que celui-ci contienne une URL pointant vers une image. On supprime alors toute image de bête ayant été placée par d'éventuels appels précédents puis on construit et on ajoute un élément [`<img>`](/fr/docs/Web/HTML/Element/Img) dont l'attribut `src` est défini avec l'URL pointant vers l'image de la bête sélectionnée.
+- Si le message est "beastify", on s'attend à ce que celui-ci contienne une URL pointant vers une image. On supprime alors toute image de bête ayant été placée par d'éventuels appels précédents puis on construit et on ajoute un élément [`<img>`](/fr/docs/Web/HTML/Element/img) dont l'attribut `src` est défini avec l'URL pointant vers l'image de la bête sélectionnée.
 - Si le message est "reset", on retire toute image de bête ayant été ajoutée.
 
 ### Les bêtes
@@ -457,5 +454,5 @@ Maitenant que vous avez créé une WebExtension avancée pour Firefox, vous pouv
 
 - [Explorer l'anatomie d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [Explorer les exemples d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Examples)
-- [Découvrir ce dont vous avez besoin pour développer, tester et publier votre extension](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_)
-- [Approfondir votre apprentissage](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_#continuez_votre_exp%c3%a9rience_d'apprentissage).
+- [Découvrir ce dont vous avez besoin pour développer, tester et publier votre extension](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next)
+- [Approfondir votre apprentissage](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next#continuez_votre_expérience_d'apprentissage).

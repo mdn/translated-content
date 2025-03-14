@@ -1,11 +1,6 @@
 ---
 title: version_name
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/version_name
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/version_name
 ---
 
 {{AddonSidebar}}
@@ -27,10 +22,10 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/version_name
   </tbody>
 </table>
 
-En plus du champ [version](/fr/Add-ons/WebExtensions/manifest.json/version), qui est utilisé à des fins de mise à jour, [version_name](https://developer.chrome.com/extensions/manifest/version) peut être défini sur une chaîne de version descriptive et sera utilisé à des fins d'affichage s'il est présent.
+En plus du champ [version](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version), qui est utilisé à des fins de mise à jour, [version_name](https://developer.chrome.com/docs/extensions/reference/manifest/version) peut être défini sur une chaîne de version descriptive et sera utilisé à des fins d'affichage s'il est présent.
 
 Si aucun **version_name** n'est présent, le champ de **version** sera également utilisé à des fins d'affichage.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.version_name")}}
+{{Compat}}

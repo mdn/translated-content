@@ -1,10 +1,9 @@
 ---
 title: Document.documentURI
 slug: Web/API/Document/documentURI
-translation_of: Web/API/Document/documentURI
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
 Свойство **`documentURI`** интерфейса {{domxref("Document")}} возвращает строку с текущим адресом документа.
 

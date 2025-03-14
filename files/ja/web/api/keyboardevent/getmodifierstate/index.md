@@ -1,8 +1,9 @@
 ---
-title: KeyboardEvent.getModifierState()
+title: "KeyboardEvent: getModifierState() メソッド"
+short-title: getModifierState()
 slug: Web/API/KeyboardEvent/getModifierState
 l10n:
-  sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
+  sourceCommit: b2a5f62d66b4e3d71704017d0fab7ad710e68057
 ---
 
 {{APIRef("UI Events")}}
@@ -24,14 +25,9 @@ getModifierState(key)
 
 論理値です。
 
-## Internet Explorer での修飾キー
+## Firefox での修飾キー
 
-IE9 は `"Scroll"` が `"ScrollLock"` を、 `"Win"` が
-`"OS"` を表します。
-
-## Gecko での修飾キー
-
-Gecko で `getModifierState()` が true を返すときです。
+Firefox で `getModifierState()` が true を返すときです。
 
 <table class="standard-table">
   <thead>
@@ -41,7 +37,7 @@ Gecko で `getModifierState()` が true を返すときです。
       <th scope="col">Linux (GTK)</th>
       <th scope="col">Mac</th>
       <th scope="col">Android 2.3</th>
-      <th scope="col">Android 3.0 or latter</th>
+      <th scope="col">Android 3.0 or later</th>
     </tr>
   </thead>
   <tbody>
@@ -110,7 +106,7 @@ Gecko で `getModifierState()` が true を返すときです。
     </tr>
     <tr>
       <th scope="row"><code>"Meta"</code></th>
-      <td>❌ <em>未対応</em></td>
+      <td><kbd>⊞ Windows ロゴ</kbd> キーが押されている（Firefox 118 以降）</td>
       <td><kbd>Meta</kbd> キーが押されている</td>
       <td><kbd>⌘ Command</kbd> キーが押されている</td>
       <td>❌ <em>未対応</em></td>
@@ -125,7 +121,7 @@ Gecko で `getModifierState()` が true を返すときです。
     </tr>
     <tr>
       <th scope="row"><code>"OS"</code></th>
-      <td><kbd>⊞ Windows ロゴ</kbd> キーが押されている</td>
+      <td><kbd>⊞ Windows ロゴ</kbd> キーが押されている（Firefox 118 より前）</td>
       <td>
         <kbd>Super</kbd> キーまたは <kbd>Hyper</kbd> キーが押されている（ふつう、 <kbd>⊞ Windows ロゴ</kbd> キーに割り当てられている）
       </td>
@@ -174,8 +170,9 @@ Gecko で `getModifierState()` が true を返すときです。
   </tbody>
 </table>
 
-- その他のプラットフォームでは、 "Alt", "Control", "Shift" に対応する場合があります。
-- すべての修飾子（Gecko がこれを実装した後に定義された `"FnLock"`, `"Hyper"`, `"Super"`, `"Symbol"`）が、Gecko 上の信頼されないイベントに対して常にサポートされます。これはプラットフォームには依存しません。
+- その他のプラットフォームでは、 "Alt", "Control", "Shift" に対応している場合があります。
+- すべての修飾キー（Firefox が実装した後に定義された `"FnLock"`、`"Hyper"`、`"Super"`、`"Symbol"` を除く）は、 Firefox は信頼されないイベントに対して常に対応します。
+  これはプラットフォームに依存しません。
 
 ## `"Accel"` 仮想修飾子
 
@@ -192,18 +189,23 @@ Gecko で `getModifierState()` が true を返すときです。
 ```js
 function handleKeyboardEvent(event) {
   // Ignore if following modifier is active.
-  if (event.getModifierState("Fn") ||
-      event.getModifierState("Hyper") ||
-      event.getModifierState("OS") ||
-      event.getModifierState("Super") ||
-      event.getModifierState("Win") /* hack for IE */) {
+  if (
+    event.getModifierState("Fn") ||
+    event.getModifierState("Hyper") ||
+    event.getModifierState("OS") ||
+    event.getModifierState("Super") ||
+    event.getModifierState("Win") /* hack for IE */
+  ) {
     return;
   }
 
   // Also ignore if two or more modifiers except Shift are active.
-  if (event.getModifierState("Control") +
+  if (
+    event.getModifierState("Control") +
       event.getModifierState("Alt") +
-      event.getModifierState("Meta") > 1) {
+      event.getModifierState("Meta") >
+    1
+  ) {
     return;
   }
 
@@ -227,28 +229,30 @@ function handleKeyboardEvent(event) {
   }
 
   // Do something different for arrow keys if ScrollLock is locked.
-  if ((event.getModifierState("ScrollLock") ||
-        event.getModifierState("Scroll") /* hack for IE */) &&
-      !event.getModifierState("Control") &&
-      !event.getModifierState("Alt") &&
-      !event.getModifierState("Meta")) {
+  if (
+    (event.getModifierState("ScrollLock") ||
+      event.getModifierState("Scroll")) /* hack for IE */ &&
+    !event.getModifierState("Control") &&
+    !event.getModifierState("Alt") &&
+    !event.getModifierState("Meta")
+  ) {
     switch (event.key) {
       case "ArrowDown":
-      case "Down": // hack for IE and old Gecko
+      case "Down": // hack for IE and old Firefox
         event.preventDefault(); // consume the key event
         break;
       case "ArrowLeft":
-      case "Left": // hack for IE and old Gecko
+      case "Left": // hack for IE and old Firefox
         // Do something different if ScrollLock is locked.
         event.preventDefault(); // consume the key event
         break;
       case "ArrowRight":
-      case "Right": // hack for IE and old Gecko
+      case "Right": // hack for IE and old Firefox
         // Do something different if ScrollLock is locked.
         event.preventDefault(); // consume the key event
         break;
       case "ArrowUp":
-      case "Up": // hack for IE and old Gecko
+      case "Up": // hack for IE and old Firefox
         // Do something different if ScrollLock is locked.
         event.preventDefault(); // consume the key event
         break;
@@ -257,7 +261,8 @@ function handleKeyboardEvent(event) {
 }
 ```
 
-> **メモ:** この例は `.getModifierState()` を `"Alt"`,
+> [!NOTE]
+> この例は `.getModifierState()` を `"Alt"`,
 > `"Control"`, `"Meta"`, `"Shift"` で使用していますが、
 > `event.altKey`, `event.ctrlKey`, `event.metaKey`,
 > `event.shiftKey` の方がよりお勧めです。

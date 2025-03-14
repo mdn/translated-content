@@ -1,19 +1,9 @@
 ---
 title: tabs.goForward()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/goForward
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - goForward
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/goForward
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Passez à la page suivante dans l'historique de l'onglet, si disponible.
 
@@ -23,9 +13,9 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var goingForward = browser.tabs.goForward(
-  tabId,                       // optional integer
-  callback                     // optional function
-)
+  tabId, // optional integer
+  callback, // optional function
+);
 ```
 
 ### Paramètres
@@ -39,9 +29,9 @@ var goingForward = browser.tabs.goForward(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est tenue lorsque la navigation sur la page se termine.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.goForward")}}
+{{Compat}}
 
 ## Exemples
 
@@ -62,9 +52,9 @@ goingForward.then(onGoForward, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-getZoomSettings) de Chromium.Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium.
+> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-getZoomSettings) de Chromium.Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium.
 >
 > Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence américaine Creative Commons Attribution 3.0.
 

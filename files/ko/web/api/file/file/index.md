@@ -1,14 +1,8 @@
 ---
 title: File()
 slug: Web/API/File/File
-tags:
-  - API
-  - Constructor
-  - File
-  - Reference
-browser-compat: api.File.File
-translation_of: Web/API/File/File
 ---
+
 {{APIRef("File")}}
 
 **`File()`** 생성자는 {{domxref("File")}} 객체의 새로운 인스턴스를 생성합니다.
@@ -16,8 +10,8 @@ translation_of: Web/API/File/File
 ## 구문
 
 ```js
-new File(bits, name)
-new File(bits, name, options)
+new File(bits, name);
+new File(bits, name, options);
 ```
 
 ### 매개변수

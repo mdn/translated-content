@@ -15,19 +15,22 @@ O elemento `symbol` é usado para definir um template que pode ser inicializado 
 
 ```html
 <svg>
-<!-- definição de symbol NUNCA é renderizada -->
-<symbol id="sym01" viewBox="0 0 150 110">
-  <circle cx="50" cy="50" r="40" stroke-width="8" stroke="red" fill="red"/>
-  <circle cx="90" cy="60" r="40" stroke-width="8" stroke="green" fill="white"/>
-</symbol>
+  <!-- definição de symbol NUNCA é renderizada -->
+  <symbol id="sym01" viewBox="0 0 150 110">
+    <circle cx="50" cy="50" r="40" stroke-width="8" stroke="red" fill="red" />
+    <circle
+      cx="90"
+      cy="60"
+      r="40"
+      stroke-width="8"
+      stroke="green"
+      fill="white" />
+  </symbol>
 
-<!-- renderização por elementos "use" -->
-<use xlink:href="#sym01"
-     x="0" y="0" width="100" height="50"/>
-<use xlink:href="#sym01"
-     x="0" y="50" width="75" height="38"/>
-<use xlink:href="#sym01"
-     x="0" y="100" width="50" height="25"/>
+  <!-- renderização por elementos "use" -->
+  <use xlink:href="#sym01" x="0" y="0" width="100" height="50" />
+  <use xlink:href="#sym01" x="0" y="50" width="75" height="38" />
+  <use xlink:href="#sym01" x="0" y="100" width="50" height="25" />
 </svg>
 ```
 
@@ -37,9 +40,9 @@ O elemento `symbol` é usado para definir um template que pode ser inicializado 
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
-- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent) »
-- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
+- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#graphicalevent) »
+- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -51,11 +54,11 @@ O elemento `symbol` é usado para definir um template que pode ser inicializado 
 
 ## Interface DOM
 
-Esse elemento implementa a interface do [`SVGSymbolElement`](/pt-BR/DOM/SVGSymbolElement).
+Esse elemento implementa a interface do [`SVGSymbolElement`](/pt-BR/docs/DOM/SVGSymbolElement).
 
 ## Compatibilidade
 
-{{Compat("svg.elements.symbol")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,21 +1,23 @@
 ---
 title: TypedArray.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/copyWithin
 ---
 
 {{JSRef}}
 
-La méthode **`copyWithin()`** permet de copier des éléments d'un tableau dans le tableau typé à partir de la position `cible`. Les éléments copiés sont ceux contenus entre les index `début` et `fin`. L'argument `fin` est optionnel, sa valeur par défaut correspondra à la longueur du tableau dont on souhaite copier les éléments. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.copyWithin")}}_._ _TypedArray_ est l'un des types de [tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
+La méthode **`copyWithin()`** permet de copier des éléments d'un tableau dans le tableau typé à partir de la position `cible`. Les éléments copiés sont ceux contenus entre les index `début` et `fin`. L'argument `fin` est optionnel, sa valeur par défaut correspondra à la longueur du tableau dont on souhaite copier les éléments. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.copyWithin")}}_._ _TypedArray_ est l'un des types de [tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
 
-{{EmbedInteractiveExample("pages/js/typedarray-copywithin.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.copyWithin()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
+
+// Insert position, start position, end position
+uint8.copyWithin(3, 1, 3);
+
+console.log(uint8);
+// Expected output: Uint8Array [1, 2, 3, 2, 3, 6, 7, 8]
+```
 
 ## Syntaxe
 
@@ -47,9 +49,9 @@ Cette méthode remplace la méthode expérimentale {{jsxref("TypedArray.prototyp
 ```js
 var buffer = new ArrayBuffer(8);
 var uint8 = new Uint8Array(buffer);
-uint8.set([1,2,3]);
+uint8.set([1, 2, 3]);
 console.log(uint8); // Uint8Array [ 1, 2, 3, 0, 0, 0, 0, 0 ]
-uint8.copyWithin(3,0,3);
+uint8.copyWithin(3, 0, 3);
 console.log(uint8); // Uint8Array [ 1, 2, 3, 1, 2, 3, 0, 0 ]
 ```
 

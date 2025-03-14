@@ -1,11 +1,6 @@
 ---
 title: EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
-tags:
-  - Method
-  - Reference
-browser-compat: api.EventTarget.removeEventListener
-translation_of: Web/API/EventTarget/removeEventListener
 ---
 
 {{APIRef("DOM")}}
@@ -16,7 +11,8 @@ translation_of: Web/API/EventTarget/removeEventListener
 
 {{domxref("EventTarget")}}의 어느 수신기 중 하나가 이벤트를 처리하는 중에 다른 수신기를 제거할 경우, 제거된 [이벤트 수신기](/ko/docs/Web/API/EventTarget/addEventListener#이벤트_수신기_콜백)는 현재 이벤트에 대해 발동하지 않습니다. 그러나 다시 부착할 수는 있습니다.
 
-> **경고:** 같은 수신기를 다른 캡처 플래그 값으로 두 번, 즉 한 번은 `capture` 플래그를 지정하고 한 번은 지정하지 않은 채 부착하는 경우 각각 따로따로 제거해야 합니다. 캡처 플래그를 지정한 수신기의 제거는 비 캡처 수신기에 영향을 주지 않고, 그 반대도 마찬가지입니다.
+> [!WARNING]
+> 같은 수신기를 다른 캡처 플래그 값으로 두 번, 즉 한 번은 `capture` 플래그를 지정하고 한 번은 지정하지 않은 채 부착하는 경우 각각 따로따로 제거해야 합니다. 캡처 플래그를 지정한 수신기의 제거는 비 캡처 수신기에 영향을 주지 않고, 그 반대도 마찬가지입니다.
 
 {{domxref("EventTarget.addEventListener", "addEventListener()")}}에 {{domxref("AbortSignal")}}을 지정한 후, 나중에 {{domxref("AbortSignal.abort", "abort()")}}를 호출해서 수신기를 제거하는 방법도 있습니다.
 
@@ -35,6 +31,7 @@ removeEventListener(type, listener, useCapture);
 - `listener`
   - : 이벤트 대상에서 제거할 수신기 {{domxref("EventListener")}} 함수입니다.
 - `options` {{optional_inline}}
+
   - : 제거할 이벤트 수신기의 특징을 나타내는 옵션 객체입니다.
 
     가능한 옵션은 다음과 같습니다.
@@ -44,7 +41,7 @@ removeEventListener(type, listener, useCapture);
 - `useCapture` {{optional_inline}}
   - : 제거할 {{domxref("EventListener")}}가 캡처링 수신기로 등록됐는지에 대한 여부를 나타내는 불리언 값입니다. 기본 값은 `false`입니다.
 
-### 반환 값.
+### 반환 값
 
 없음.
 
@@ -63,8 +60,8 @@ element.addEventListener("mousedown", handleMouseDown, true);
 이제 아래의 두 `removeEventListener()` 호출을 살펴보세요.
 
 ```js
-element.removeEventListener("mousedown", handleMouseDown, false);     // 실패
-element.removeEventListener("mousedown", handleMouseDown, true);      // 성공
+element.removeEventListener("mousedown", handleMouseDown, false); // 실패
+element.removeEventListener("mousedown", handleMouseDown, true); // 성공
 ```
 
 첫 번째 호출은 `useCapture`가 일치하지 않았기 때문에 실패하고, 두 번째 호출은 일치하기 때문에 성공합니다.
@@ -82,12 +79,12 @@ element.addEventListener("mousedown", handleMouseDown, { passive: true });
 `removeEventListener()`에 영향을 주는 옵션은 `capture` 뿐입니다.
 
 ```js
-element.removeEventListener("mousedown", handleMouseDown, { passive: true });     // 성공
-element.removeEventListener("mousedown", handleMouseDown, { capture: false });    // 성공
-element.removeEventListener("mousedown", handleMouseDown, { capture: true });     // 실패
-element.removeEventListener("mousedown", handleMouseDown, { passive: false });    // 성공
-element.removeEventListener("mousedown", handleMouseDown, false);                 // 성공
-element.removeEventListener("mousedown", handleMouseDown, true);                  // 실패
+element.removeEventListener("mousedown", handleMouseDown, { passive: true }); // 성공
+element.removeEventListener("mousedown", handleMouseDown, { capture: false }); // 성공
+element.removeEventListener("mousedown", handleMouseDown, { capture: true }); // 실패
+element.removeEventListener("mousedown", handleMouseDown, { passive: false }); // 성공
+element.removeEventListener("mousedown", handleMouseDown, false); // 성공
+element.removeEventListener("mousedown", handleMouseDown, true); // 실패
 ```
 
 다만 일부 브라우저 버전에서는 이 동작이 일관적이지 않으므로, 어쩔 수 없는 경우가 아니라면 `addEventListener()`에 지정한 옵션을 그대로 `removeEventListener()`에 제공하는 편이 낫습니다.
@@ -97,31 +94,25 @@ element.removeEventListener("mousedown", handleMouseDown, true);                
 이 예제는 `click` 이벤트 수신기를 제거하는 `mouseover` 이벤트 수신기를 보입니다.
 
 ```js
-const body = document.querySelector('body')
-const clickTarget = document.getElementById('click-target')
-const mouseOverTarget = document.getElementById('mouse-over-target')
+const body = document.querySelector("body");
+const clickTarget = document.getElementById("click-target");
+const mouseOverTarget = document.getElementById("mouse-over-target");
 
 let toggle = false;
 function makeBackgroundYellow() {
   if (toggle) {
-    body.style.backgroundColor = 'white';
+    body.style.backgroundColor = "white";
   } else {
-    body.style.backgroundColor = 'yellow';
+    body.style.backgroundColor = "yellow";
   }
 
   toggle = !toggle;
 }
 
-clickTarget.addEventListener('click',
-  makeBackgroundYellow,
-  false
-);
+clickTarget.addEventListener("click", makeBackgroundYellow, false);
 
-mouseOverTarget.addEventListener('mouseover', function () {
-  clickTarget.removeEventListener('click',
-    makeBackgroundYellow,
-    false
-  );
+mouseOverTarget.addEventListener("mouseover", function () {
+  clickTarget.removeEventListener("click", makeBackgroundYellow, false);
 });
 ```
 

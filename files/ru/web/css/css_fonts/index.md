@@ -1,7 +1,6 @@
 ---
 title: CSS Fonts
-slug: Web/CSS/CSS_Fonts
-translation_of: Web/CSS/CSS_Fonts
+slug: Web/CSS/CSS_fonts
 ---
 
 {{CSSRef}}
@@ -26,10 +25,12 @@ p {
 ```
 
 ```html
-<p>Three hundred years ago<br>
-  I thought I might get some sleep<br>
-  I stretched myself out onna antique bed<br>
-  An' my spirit did a midnite creep</p>
+<p>
+  Three hundred years ago<br />
+  I thought I might get some sleep<br />
+  I stretched myself out onna antique bed<br />
+  An' my spirit did a midnite creep
+</p>
 ```
 
 Вывод на экран будет следующим:
@@ -42,7 +43,7 @@ p {
 
 ## Отсылки
 
-### Properties
+### Свойства
 
 - {{cssxref("font")}}
 - {{cssxref("font-family")}}
@@ -66,7 +67,7 @@ p {
 - {{cssxref("font-weight")}}
 - {{cssxref("line-height")}}
 
-### At-rules
+### @-правила
 
 - {{cssxref("@font-face")}}
   - : {{cssxref("@font-face/font-family", "font-family")}}
@@ -88,11 +89,6 @@ p {
 - [Variable fonts guide](/ru/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
   - : **Variable fonts** are an evolution of the OpenType font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. This article will give you all you need to know to get you started using variable fonts.
 
-## Specifications
+## Спецификации
 
-| Specification                                                            | Status                           | Comment                                                                                         |
-| ------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Fonts')}}                                     | {{Spec2('CSS4 Fonts')}} | Adds `font-variation-settings` (and related higher-level properties) and `font-optical-sizing`. |
-| {{SpecName('CSS3 Fonts')}}                                     | {{Spec2('CSS3 Fonts')}} | Adds `font-feature-settings` (and related higher-level properties)                              |
-| {{SpecName('CSS2.1', 'fonts.html#font-shorthand', '')}} | {{Spec2('CSS2.1')}}         |                                                                                                 |
-| {{SpecName('CSS1', '#font', '')}}                             | {{Spec2('CSS1')}}         | Initial definition                                                                              |
+{{Specifications}}

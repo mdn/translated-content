@@ -3,13 +3,13 @@ title: KeyboardEvent.code
 slug: Web/API/KeyboardEvent/code
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 `KeyboardEvent.code`属性表示键盘上的物理键（与按键生成的字符相对）。换句话说，此属性返回一个值，该值不会被键盘布局或修饰键的状态改变。
 
 如果输入设备不是物理键盘，而是虚拟键盘或辅助功能设备，则浏览器将设置返回值，以尽可能地匹配物理键盘所发生的情况，从而最大限度地提高物理和虚拟输入设备之间的兼容性。
 
-当您想要根据输入设备上的物理位置处理键而不是与这些键相关联的字符时，此属性非常有用;这在编写代码来处理游戏输入时尤为常见，这些游戏使用键盘上的键来模拟类似游戏板的环境。但请注意，您无法使用 `KeyboardEvent.code`报告的值来确定击键生成的字符，因为键码的名称可能与按键上打印的实际字符或按下键时计算机生成的字符不匹配。
+当你想要根据输入设备上的物理位置处理键而不是与这些键相关联的字符时，此属性非常有用;这在编写代码来处理游戏输入时尤为常见，这些游戏使用键盘上的键来模拟类似游戏板的环境。但请注意，你无法使用 `KeyboardEvent.code`报告的值来确定击键生成的字符，因为键码的名称可能与按键上打印的实际字符或按下键时计算机生成的字符不匹配。
 
 例如，QWERTY 布局键盘上的“<kbd>q</kbd>”键返回的`code`是“`KeyQ`”，但 Dvorak 键盘上的“<kbd>'</kbd>”键和 AZERTY 键盘上的“<kbd>a</kbd>”键也返回的相同`code`值。这使得如果用户没有使用预期的键盘布局，则无法使用`code`值来确定用户按键的名称。
 
@@ -22,10 +22,11 @@ slug: Web/API/KeyboardEvent/code
 #### HTML
 
 ```html
-<p>Press keys on the keyboard to see what the KeyboardEvent's key and code
-   values are for each one.</p>
-<div id="output">
-</div>
+<p>
+  Press keys on the keyboard to see what the KeyboardEvent's key and code values
+  are for each one.
+</p>
+<div id="output"></div>
 ```
 
 #### CSS
@@ -40,21 +41,25 @@ slug: Web/API/KeyboardEvent/code
 #### JavaScript
 
 ```js
-window.addEventListener("keydown", function(event) {
-  let str = "KeyboardEvent: key='" + event.key + "' | code='" +
-            event.code + "'";
-  let el = document.createElement("span");
-  el.innerHTML = str + "<br/>";
+window.addEventListener(
+  "keydown",
+  function (event) {
+    let str =
+      "KeyboardEvent: key='" + event.key + "' | code='" + event.code + "'";
+    let el = document.createElement("span");
+    el.innerHTML = str + "<br/>";
 
-  document.getElementById("output").appendChild(el);
-}, true);
+    document.getElementById("output").appendChild(el);
+  },
+  true,
+);
 ```
 
 #### Try it out
 
 To ensure that keystrokes go to the sample, click in the output box below before pressing keys.
 
-{{ EmbedLiveSample('Exercising_KeyboardEvent', 600, 300) }}
+{{ EmbedLiveSample('练习 KeyboardEvent', 600, 300) }}
 
 ### Handle keyboard events in a game
 
@@ -65,9 +70,11 @@ This example establishes an event listener for [`keydown`](/zh-CN/docs/Web/API/E
 ```html
 <p>Use the WASD (ZQSD on AZERTY) keys to move and steer.</p>
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="world">
-  <polygon id="spaceship" points="15,0 0,30 30,30"/>
+  <polygon id="spaceship" points="15,0 0,30 30,30" />
 </svg>
-<script>refresh();</script>
+<script>
+  refresh();
+</script>
 ```
 
 #### CSS
@@ -95,12 +102,12 @@ The first section of the JavaScript code establishes some variables we'll be usi
 ```js
 let shipSize = {
   width: 30,
-  height: 30
+  height: 30,
 };
 
 let position = {
   x: 200,
-  y: 200
+  y: 200,
 };
 
 let moveRate = 9;
@@ -115,9 +122,9 @@ Next comes the function `updatePosition()`. This function takes as input the dis
 
 ```js
 function updatePosition(offset) {
-  let rad = angle * (Math.PI/180);
-  position.x += (Math.sin(rad) * offset);
-  position.y -= (Math.cos(rad) * offset);
+  let rad = angle * (Math.PI / 180);
+  position.x += Math.sin(rad) * offset;
+  position.y -= Math.cos(rad) * offset;
 
   if (position.x < 0) {
     position.x = 399;
@@ -137,8 +144,8 @@ The `refresh()` function handles applying the rotation and position by using an 
 
 ```js
 function refresh() {
-  let x = position.x - (shipSize.width/2);
-  let y = position.y - (shipSize.height/2);
+  let x = position.x - shipSize.width / 2;
+  let y = position.y - shipSize.height / 2;
   let transform = "translate(" + x + " " + y + ") rotate(" + angle + " 15 15) ";
 
   spaceship.setAttribute("transform", transform);
@@ -148,39 +155,43 @@ function refresh() {
 Finally, the `addEventListener()` method is used to start listening for [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) events, acting on each key by updating the ship position and rotation angle, then calling `refresh()` to draw the ship at its new position and angle.
 
 ```js
-window.addEventListener("keydown", function(event) {
-  if (event.preventDefaulted) {
-    return; // Do nothing if event already handled
-  }
+window.addEventListener(
+  "keydown",
+  function (event) {
+    if (event.preventDefaulted) {
+      return; // Do nothing if event already handled
+    }
 
-  switch(event.code) {
-    case "KeyS":
-    case "ArrowDown":
-      // Handle "back"
-      updatePosition(-moveRate);
-      break;
-    case "KeyW":
-    case "ArrowUp":
-      // Handle "forward"
-      updatePosition(moveRate);
-      break;
-    case "KeyA":
-    case "ArrowLeft":
-      // Handle "turn left"
-      angle -= turnRate;
-      break;
-    case "KeyD":
-    case "ArrowRight":
-      // Handle "turn right"
-      angle += turnRate;
-      break;
-  }
+    switch (event.code) {
+      case "KeyS":
+      case "ArrowDown":
+        // Handle "back"
+        updatePosition(-moveRate);
+        break;
+      case "KeyW":
+      case "ArrowUp":
+        // Handle "forward"
+        updatePosition(moveRate);
+        break;
+      case "KeyA":
+      case "ArrowLeft":
+        // Handle "turn left"
+        angle -= turnRate;
+        break;
+      case "KeyD":
+      case "ArrowRight":
+        // Handle "turn right"
+        angle += turnRate;
+        break;
+    }
 
-  refresh();
+    refresh();
 
-  // Consume the event so it doesn't get handled twice
-  event.preventDefault();
-}, true);
+    // Consume the event so it doesn't get handled twice
+    event.preventDefault();
+  },
+  true,
+);
 ```
 
 #### Try it out

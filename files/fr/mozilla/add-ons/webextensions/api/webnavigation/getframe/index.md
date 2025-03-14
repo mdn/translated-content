@@ -1,20 +1,9 @@
 ---
 title: webNavigation.getFrame()
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/getFrame
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getFrame
-  - webNavigation
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/getFrame
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Récupère des informations sur un cadre particulier. Un cadre peut être l'image de niveau supérieur dans un onglet ou un [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué, et est identifié de manière unique par un ID de tabulation et un ID de cadre.
 
@@ -24,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var gettingFrame = browser.webNavigation.getFrame(
-  details                // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -54,9 +43,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se
 
 Si l'onglet ou l'ID de trame spécifié n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.getFrame")}}
+{{Compat}}
 
 ## Exemples
 
@@ -71,7 +60,7 @@ function onError(error) {
 
 var gettingFrame = browser.webNavigation.getFrame({
   tabId: 19,
-  frameId: 1537
+  frameId: 1537,
 });
 
 // Edge specific - processId is required not optional, must be integer not null
@@ -82,9 +71,9 @@ gettingFrame.then(onGot, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

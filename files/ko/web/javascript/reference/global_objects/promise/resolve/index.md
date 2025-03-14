@@ -1,21 +1,24 @@
 ---
 title: Promise.resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Promise
-  - 레퍼런스
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 ---
+
 {{JSRef}}
 
 **`Promise.resolve(value)`** 메서드는 주어진 값으로 이행하는 {{jsxref("Promise.then")}} 객체를 반환합니다. 그 값이 프로미스인 경우, 해당 프로미스가 반환됩니다. 그 값이 thenable(예, {{jsxref("Promise.then", "\"then\" 메소드")}} 가 있음)인 경우, 반환된 프로미스는 그 thenable을 "따르며", 그 최종 상태를 취합니다. 그렇지 않으면 반환된 프로미스는 그 값으로 이행합니다. 이 함수는 프로미스형의 객체(무언가를 결정하는 프로미스를 결정하는 프로미스 등)의 중첩된 레이어를 단일 레이어로 펼칩니다.
 
 > **경고:** **주의**: 스스로를 결정하는 thenable 에서 `Promise.resolve` 를 호출하면 안됩니다. 이는 무한히 중첩된 프로미스를 펼치려고하므로 무한 재귀를 유발할 것입니다. Angular 에서 `async` Pipe 를 함께 사용한 [예제](https://stackblitz.com/edit/angular-promiseresovle-with-async-pipe?file=src/app/app.component.ts)입니다. 자세한 내용은 [여기](https://angular.io/guide/template-syntax#avoid-side-effects)에서 확인하세요.
 
-{{EmbedInteractiveExample("pages/js/promise-resolve.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.resolve()")}}
+
+```js interactive-example
+const promise1 = Promise.resolve(123);
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: 123
+});
+```
 
 ## 구문
 
@@ -41,18 +44,21 @@ Promise.resolve(value);
 ### 정적 `Promise.resolve` 메소드 사용
 
 ```js
-Promise.resolve("Success").then(function(value) {
-  console.log(value); // "Success"
-}, function(value) {
-  // 호출되지 않음
-});
+Promise.resolve("Success").then(
+  function (value) {
+    console.log(value); // "Success"
+  },
+  function (value) {
+    // 호출되지 않음
+  },
+);
 ```
 
 ### 배열 이행
 
 ```js
-var p = Promise.resolve([1,2,3]);
-p.then(function(v) {
+var p = Promise.resolve([1, 2, 3]);
+p.then(function (v) {
   console.log(v[0]); // 1
 });
 ```
@@ -62,10 +68,10 @@ p.then(function(v) {
 ```js
 var original = Promise.resolve(33);
 var cast = Promise.resolve(original);
-cast.then(function(value) {
-  console.log('value: ' + value);
+cast.then(function (value) {
+  console.log("value: " + value);
 });
-console.log('original === cast ? ' + (original === cast));
+console.log("original === cast ? " + (original === cast));
 
 // 로그 순서:
 // original === cast ? true
@@ -79,43 +85,58 @@ console.log('original === cast ? ' + (original === cast));
 ```js
 // thenable 객체 이행
 var p1 = Promise.resolve({
-  then: function(onFulfill, onReject) { onFulfill("fulfilled!"); }
+  then: function (onFulfill, onReject) {
+    onFulfill("fulfilled!");
+  },
 });
-console.log(p1 instanceof Promise) // true, 객체는 Promise 로 변환됨
+console.log(p1 instanceof Promise); // true, 객체는 Promise 로 변환됨
 
-p1.then(function(v) {
+p1.then(
+  function (v) {
     console.log(v); // "fulfilled!"
-  }, function(e) {
+  },
+  function (e) {
     // 호출되지 않음
-});
+  },
+);
 
 // thenable 이 콜백 이전에 오류를 throw
 // Promise 거부
-var thenable = { then: function(resolve) {
-  throw new TypeError("Throwing");
-  resolve("Resolving");
-}};
+var thenable = {
+  then: function (resolve) {
+    throw new TypeError("Throwing");
+    resolve("Resolving");
+  },
+};
 
 var p2 = Promise.resolve(thenable);
-p2.then(function(v) {
-  // 호출되지 않음
-}, function(e) {
-  console.log(e); // TypeError: Throwing
-});
+p2.then(
+  function (v) {
+    // 호출되지 않음
+  },
+  function (e) {
+    console.log(e); // TypeError: Throwing
+  },
+);
 
 // thenable 이 콜백 이후에 오류를 throw
 // Promise 이행
-var thenable = { then: function(resolve) {
-  resolve("Resolving");
-  throw new TypeError("Throwing");
-}};
+var thenable = {
+  then: function (resolve) {
+    resolve("Resolving");
+    throw new TypeError("Throwing");
+  },
+};
 
 var p3 = Promise.resolve(thenable);
-p3.then(function(v) {
-  console.log(v); // "Resolving"
-}, function(e) {
-  // 호출되지 않음
-});
+p3.then(
+  function (v) {
+    console.log(v); // "Resolving"
+  },
+  function (e) {
+    // 호출되지 않음
+  },
+);
 ```
 
 ## 명세

@@ -1,18 +1,12 @@
 ---
 title: panneaux devtools
 slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
-tags:
-  - Débutant
-  - Guide
-  - WebExtensions
-  - interface utilisateur
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
-original_slug: Mozilla/Add-ons/WebExtensions/user_interface/panneaux_devtools
 ---
 
 {{AddonSidebar}}
 
-> **Note :** Cette fonctionnalité deviendra disponible dans Firefox 54.
+> [!NOTE]
+> Cette fonctionnalité deviendra disponible dans Firefox 54.
 
 Lorsqu'une extension fournit des outils utiles aux développeurs, il est possible d'ajouter une interface utilisateur pour les outils de développement du navigateur en tant que nouveau panneau.
 
@@ -20,9 +14,9 @@ Lorsqu'une extension fournit des outils utiles aux développeurs, il est possibl
 
 ## Spécification d'un panneau d'outils de développement
 
-Un panneau d'outils de développement est ajouté à l'aide de l'API [`devtools.panels`](/fr/Add-ons/WebExtensions/API/devtools.panels), qui, à son tour, doit être exécutée à partir d'une page spéciale devtools.
+Un panneau d'outils de développement est ajouté à l'aide de l'API [`devtools.panels`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels), qui, à son tour, doit être exécutée à partir d'une page spéciale devtools.
 
-Ajoutez la page devtools en incluant la clé [`devtools_page`](/fr/Add-ons/WebExtensions/manifest.json/devtools_page) dans l'extension [manifest.json](/fr/Add-ons/WebExtensions/manifest.json) et fournissez l'emplacement du fichier de la page HTML dans l'extension :
+Ajoutez la page devtools en incluant la clé [`devtools_page`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) dans l'extension [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) et fournissez l'emplacement du fichier de la page HTML dans l'extension :
 
 ```json
 "devtools_page": "devtools-page.html"
@@ -47,17 +41,19 @@ function handleHidden() {
   console.log("panel is being hidden");
 }
 
-browser.devtools.panels.create(
-  "My Panel",           // title
-  "icons/star.png",           // icon
-  "devtools/panel/panel.html"          // content
-).then((newPanel) => {
-  newPanel.onShown.addListener(handleShown);
-  newPanel.onHidden.addListener(handleHidden);
-});
+browser.devtools.panels
+  .create(
+    "My Panel", // title
+    "icons/star.png", // icon
+    "devtools/panel/panel.html", // content
+  )
+  .then((newPanel) => {
+    newPanel.onShown.addListener(handleShown);
+    newPanel.onHidden.addListener(handleHidden);
+  });
 ```
 
-L'extension peut maintenant exécuter un code dans la fenêtre inspectée à l'aide de [`devtools`.inspectedWindow.eval()](/fr/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval) ou en injectant un script de contenu via le script en arrière en passant un message. Vous pouvez trouver plus de détails sur la façon de procéder dans l'[Extension des outils de développement.](/fr/Add-ons/WebExtensions/Extending_the_developer_tools)
+L'extension peut maintenant exécuter un code dans la fenêtre inspectée à l'aide de [`devtools`.inspectedWindow.eval()](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval) ou en injectant un script de contenu via le script en arrière en passant un message. Vous pouvez trouver plus de détails sur la façon de procéder dans l'[Extension des outils de développement.](/fr/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
 
 ## Conception du panneau de développement
 

@@ -1,6 +1,8 @@
 ---
 title: HTML DOM API
 slug: Web/API/HTML_DOM_API
+l10n:
+  sourceCommit: 722311032dbf520bf6aeba3d1f432aca38779ffd
 ---
 
 {{DefaultAPISidebar("HTML DOM")}}
@@ -12,10 +14,10 @@ HTML DOM API に含まれる機能領域には、以下のようなものがあ�
 - {{Glossary("DOM")}} を介した HTML 要素へのアクセスと制御。
 - フォームデータへのアクセスと操作。
 - 二次元画像の内容と HTML の {{HTMLElement("canvas")}} のコンテキストとの相互作用、例えば、それらの上に描画すること。
-- HTML のメディア要素 ({{HTMLElement("audio")}} と {{HTMLElement("video")}} に接続されたメディアの管理。
+- HTML のメディア要素 ({{HTMLElement("audio")}} と {{HTMLElement("video")}}) に接続されたメディアの管理。
 - ウェブページ上のコンテンツのドラッグ＆ドロップ。
 - ブラウザーのナビゲーション履歴へのアクセス。
-- [ウェブコンポーネント](/ja/docs/Web/Web_Components)、{{DOMxRef("Web_Storage_API", "ウェブストレージ", "", "1")}}、{{DOMxRef("Web_Workers_API", "ウェブワーカー", "", "1")}}、{{DOMxRef("WebSockets_API", "ウェブソケット", "", "1")}}、{{DOMxRef("Server-sent_events", "サーバー側イベント", "", "1")}} などの他の API のサポートおよび接続インターフェイス。
+- [ウェブコンポーネント](/ja/docs/Web/API/Web_components)、{{DOMxRef("Web_Storage_API", "ウェブストレージ", "", "1")}}、{{DOMxRef("Web_Workers_API", "ウェブワーカー", "", "1")}}、{{DOMxRef("WebSockets_API", "ウェブソケット", "", "1")}}、{{DOMxRef("Server-sent_events", "サーバー側イベント", "", "1")}} などの他の API のサポートおよび接続インターフェイス。
 
 ## HTML DOM の概念と利用方法
 
@@ -25,7 +27,7 @@ HTML DOM API に含まれる機能領域には、以下のようなものがあ�
 
 ドキュメントオブジェクトモデル ({{Glossary("DOM")}}) は、文書 ({{domxref("document")}}) の構造を記述する構造で、それぞれの文書は {{domxref("Document")}} インターフェイスのインスタンスで表現されます。文書は**ノード**の階層ツリーで構成され、ノードは文書内の単一のオブジェクト（要素やテキストノードなど）を表す基本的なレコードです。
 
-ノードは厳密に組織化することができ、他のノードをグループ化する手段を提供したり、階層構造を構築するためのポイントを提供したりします。各ノードは、そのノードに関する情報を取得するためのプロパティと、DOM 内でノードを作成、削除、整理するためのメソッドを提供する {{domxref("Node")}} インタフェースに基づいています。
+ノードは厳密に組織化することができ、他のノードをグループ化する手段を提供したり、階層構造を構築するためのポイントを提供したりします。各ノードは、そのノードに関する情報を取得するためのプロパティと、DOM 内でノードを作成、削除、整理するためのメソッドを提供する {{domxref("Node")}} インターフェイスに基づいています。
 
 ノードには、実際に文書に表示されるコンテンツを含むという概念はありません。これは空っぽの器です。視覚的な内容を表現できるノードの基本的な概念は {{domxref("Element")}} インターフェイスで紹介されています。 `Element` オブジェクトのインスタンスは、 HTML または {{glossary("XML")}} の語彙（{{glossary("SVG")}} など）を用いて作成された文書内の 1 つの要素を表します。
 
@@ -33,19 +35,19 @@ HTML DOM API に含まれる機能領域には、以下のようなものがあ�
 
 ![ウィンドウ内の文書に要素を持たせた構造](dom-structure.svg)
 
-{{domxref("Document")}} インターフェイスは {{DOMxRef("Document_Object_Model", "DOM", "", "1")}} 仕様の一部として定義されていますが、 HTML 仕様ではこれを大幅に拡張して Web ブラウザのコンテキストで DOM を使うための固有の情報と HTML 文書を表すための固有の情報が追加されています。
+{{domxref("Document")}} インターフェイスは {{DOMxRef("Document_Object_Model", "DOM", "", "1")}} 仕様の一部として定義されていますが、 HTML 仕様ではこれを大幅に拡張してウェブブラウザーのコンテキストで DOM を使うための固有の情報と HTML 文書を表すための固有の情報が追加されています。
 
 HTML 標準によって `Document` に追加されたものには、次のようなものがあります。
 
 - ページを読み込む際に、 {{Glossary("HTTP")}} ヘッダーが提供する様々な情報へのアクセスに対応すること。例えば {{DOMxRef("Document/location", "location", "", "1")}} から文書を読み込んだ場所、{{DOMxRef("Document/cookie", "Cookie", "", "1")}}、{{DOMxRef("Document/lastModified", "最終更新日時", "", "1")}}、{{DOMxRef("Document/referrer", "リファラーサイト", "", "1")}}などです。
 - 文書の {{HTMLElement("head")}} ブロックや{{DOMxRef("Document/body", "本文", "", "1")}}に含まれている要素リストへのアクセス、また文書に含まれている{{DOMxRef("Document/images", "画像", "", "1")}}や{{DOMxRef("Document/links", "リンク", "", "1")}}のリストへのアクセス。
 - [編集可能なコンテンツ](/ja/docs/Web/HTML/Global_attributes/contenteditable)の {{DOMxRef("Document/hasFocus", "focus", "", "1")}} 検査やコマンドの実行によるユーザーとの対話への対応。
-- HTML 標準で定義されている文書の{{DOMxRef("GlobalEventHandlers", "イベントハンドラー", "", "1")}}で、{{DOMxRef("MouseEvent", "マウス", "", "1")}}や{{DOMxRef("KeyboardEvent", "キーボード", "", "1")}}イベント、{{DOMxRef("HTML_Drag_and_Drop_API", "ドラッグ＆ドロップ", "", "1")}}や{{DOMxRef("HTMLMediaElement", "メディア制御", "", "1")}}などのイベントにアクセスできるようにすること。
+- HTML 標準で定義されている文書のイベントハンドラーで、{{DOMxRef("MouseEvent", "マウス", "", "1")}}や{{DOMxRef("KeyboardEvent", "キーボード", "", "1")}}イベント、{{DOMxRef("HTML_Drag_and_Drop_API", "ドラッグ＆ドロップ", "", "1")}}や{{DOMxRef("HTMLMediaElement", "メディア制御", "", "1")}}などのイベントにアクセスできるようにすること。
 - 要素と文書の両方に配信できるイベントのイベントハンドラー。現在のところ、{{DOMxRef("HTMLElement/copy_event", "コピー", "", "1")}}、{{DOMxRef("HTMLElement/cut_event", "切り取り", "", "1")}}、{{DOMxRef("HTMLElement/paste_event", "貼り付け", "", "1")}}操作のみが含まれています。
 
 ### HTML 要素インターフェイス
 
-`Element` インターフェイスは、さらに HTML 要素の具体的な表現に適応するため、さらに {{domxref("HTMLElement")}} インターフェイスが導入されており、これがもっと具体的な HTML 要素のクラスすべてから継承されています。これにより `Element` クラスが拡張され、要素ノードに HTML 固有の全般的な機能が追加できるようになりました。 `HTMLElement` によって追加されているプロパティには、例えば {{domxref("HTMLElement.hidden", "hidden")}} や {{domxref("HTMLElement.innerText", "innerText")}} があります。 `HTMLElement` はまた、すべての{{DOMxRef("GlobalEventHandlers", "グローバルイベントハンドラー", "", "1")}}を追加します。
+`Element` インターフェイスは、さらに HTML 要素の具体的な表現に適応するため、さらに {{domxref("HTMLElement")}} インターフェイスが導入されており、これがもっと具体的な HTML 要素のクラスすべてから継承されています。これにより `Element` クラスが拡張され、要素ノードに HTML 固有の全般的な機能が追加できるようになりました。 `HTMLElement` によって追加されているプロパティには、例えば {{domxref("HTMLElement.hidden", "hidden")}} や {{domxref("HTMLElement.innerText", "innerText")}} があります。
 
 {{Glossary("HTML")}} 文書は DOM ツリーで、その中の各ノードは HTML 要素であり、 {{domxref("HTMLElement")}} インターフェイスで表されています。 `HTMLElement` クラスは `Node` を実装しているので、すべての要素はノードでもあります（逆は成立しません）。すなわち、 {{domxref("Node")}} インターフェイスが実装している構造的な機能は HTML 要素でも利用可能で、要素間を入れ子にしたり、生成と削除、移動などを行ったりすることができます。
 
@@ -67,7 +69,7 @@ HTML の要素クラスの全体的な継承は次のようになります。
 
 ## HTML DOM の対象読者
 
-HTML DOM が公開する機能は、ウェブ開発者が最もよく使う API の一つです。最も単純なウェブアプリケーションを除いて、すべて HTML DOM のいくつかの機能を使用します。
+HTML DOM が公開する機能は、ウェブ開発者のツールキットの中で最もよく使われる API の一つです。最も単純なウェブアプリケーションを除いて、すべて HTML DOM のいくつかの機能を使用します。
 
 ## HTML DOM API インターフェイス
 
@@ -150,7 +152,6 @@ HTML DOM API を構成するインターフェイスの大部分は、個々の 
 
 #### 廃止された HTML Element インターフェイス
 
-- {{DOMxRef("HTMLBaseFontElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFontElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameSetElement")}} {{deprecated_inline}}
@@ -216,9 +217,9 @@ HTML DOM API を構成するインターフェイスの大部分は、個々の 
 - {{DOMxRef("VideoTrack")}}
 - {{DOMxRef("VideoTrackList")}}
 
-### ドラッグ＆ドロップインターフェイス
+### ドラッグ & ドロップインターフェイス
 
-これらのインターフェイスは {{DOMxRef("HTML_Drag_and_Drop_API", "HTML ドラッグ＆ドロップ API", "", "1")}} によって、ドラッグできる（またはドラッグした）個々のアイテム、ドラッグまたはドラッグできるアイテムのグループ、およびドラッグ＆ドロップ処理を表すために使用されています。
+これらのインターフェイスは [HTML ドラッグ & ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) によって、ドラッグできる（またはドラッグした）個々のアイテム、ドラッグまたはドラッグできるアイテムのグループ、およびドラッグ＆ドロップ処理を表すために使用されています。
 
 - {{DOMxRef("DataTransfer")}}
 - {{DOMxRef("DataTransferItem")}}
@@ -233,12 +234,14 @@ HTML DOM API を構成するインターフェイスの大部分は、個々の 
 - {{DOMxRef("HashChangeEvent")}}
 - {{DOMxRef("History")}}
 - {{DOMxRef("Location")}}
+- {{DOMxRef("PageRevealEvent")}}
+- {{DOMxRef("PageSwapEvent")}}
 - {{DOMxRef("PageTransitionEvent")}}
 - {{DOMxRef("PopStateEvent")}}
 
 ### ウェブコンポーネントインターフェイス
 
-これらのインターフェイスは[ウェブコンポーネント API](/ja/docs/Web/Web_Components)で使用され、利用可能な[カスタム要素](/ja/docs/Web/Web_Components/Using_custom_elements)を作成・管理します。
+これらのインターフェイスは[ウェブコンポーネント API](/ja/docs/Web/API/Web_components) で使用され、利用可能な[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)を作成・管理します。
 
 - {{DOMxRef("CustomElementRegistry")}}
 
@@ -281,9 +284,9 @@ HTML DOM API を構成するインターフェイスの大部分は、個々の 
 - {{DOMxRef("WorkerLocation")}}
 - {{DOMxRef("WorkerNavigator")}}
 
-#### WebSocket インターフェイス
+#### ウェブソケットインターフェイス
 
-これらのインターフェイスは、 HTML 仕様書で定義されており、 {{DOMxRef("WebSockets_API", "WebSocket API", "", "1")}} で使用されます。
+これらのインターフェイスは、 HTML 仕様書で定義されており、{{DOMxRef("WebSockets_API", "ウェブソケット API", "", "1")}} で使用されます。
 
 - {{DOMxRef("CloseEvent")}}
 - {{DOMxRef("WebSocket")}}
@@ -296,21 +299,21 @@ HTML DOM API を構成するインターフェイスの大部分は、個々の 
 
 ## 例
 
-この例では、 {{HTMLElement("input")}} 要素の {{domxref("HTMLElement/input_event", "input")}} イベントを監視し、与えられたフィールドに現在値があるかどうかによって、フォームの「送信」ボタンの状態を更新しています。
+この例では、 {{HTMLElement("input")}} 要素の {{domxref("Element/input_event", "input")}} イベントを監視し、与えられたフィールドに現在値があるかどうかによって、フォームの「送信」ボタンの状態を更新しています。
 
-#### JavaScript
+### JavaScript
 
 ```js
 const nameField = document.getElementById("userName");
-const sendButton = document.getElementById("sendButton")
+const sendButton = document.getElementById("sendButton");
 
 sendButton.disabled = true;
 // [注：このサンプルにフォーカスし、スクロールして表示した状態でこの記事を常に読み込むことになるため、無効にしています。]
 //nameField.focus();
 
-nameField.addEventListener("input", event => {
+nameField.addEventListener("input", (event) => {
   const elem = event.target;
-  const valid = elem.value.length != 0;
+  const valid = elem.value.length !== 0;
 
   if (valid && sendButton.disabled) {
     sendButton.disabled = false;
@@ -328,7 +331,7 @@ nameField.addEventListener("input", event => {
 
 このコードにより、ユーザー名の入力フィールドに値があるときは常に「送信」ボタンが有効になり、空のときは無効になります。
 
-#### HTML
+### HTML
 
 このフォームの HTML は次のようになります。
 
@@ -337,17 +340,17 @@ nameField.addEventListener("input", event => {
 <form action="" method="get">
   <p>
     <label for="userName" required>あなたの名前:</label>
-    <input type="text" id="userName"> (*)
+    <input type="text" id="userName" /> (*)
   </p>
   <p>
-    <label for="email">メールアドレス:</label>
-    <input type="email" id="userEmail">
+    <label for="userEmail">メールアドレス:</label>
+    <input type="email" id="userEmail" />
   </p>
-  <input type="submit" value="送信" id="sendButton">
+  <input type="submit" value="送信" id="sendButton" />
 </form>
 ```
 
-#### 結果
+### 結果
 
 {{EmbedLiveSample("Examples", 640, 300)}}
 
@@ -357,7 +360,7 @@ nameField.addEventListener("input", event => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.HTMLElement")}}
+{{Compat}}
 
 ## 関連情報
 
@@ -365,7 +368,7 @@ nameField.addEventListener("input", event => {
 
 - [HTML 要素リファレンス](/ja/docs/Web/HTML/Element)
 - [HTML 属性リファレンス](/ja/docs/Web/HTML/Attributes)
-- {{DOMxRef("Document_Object_Model", "ドキュメントオブジェクトモデル (DOM)", "", "1")}} インターフェイス
+- {{DOMxRef("Document_Object_Model", "ドキュメントオブジェクトモデル (DOM)", "", "1")}} リファレンス
 
 ### ガイド
 

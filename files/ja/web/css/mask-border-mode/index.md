@@ -1,11 +1,13 @@
 ---
 title: mask-border-mode
 slug: Web/CSS/mask-border-mode
+l10n:
+  sourceCommit: 82586e39bd8df5ffabdec58ee3361ed97856f870
 ---
 
 {{CSSRef}}
 
-**`mask-border-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[マスク境界](/ja/docs/Web/CSS/mask-border)の混合モードを指定します。
+**`mask-border-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[マスク境界](/ja/docs/Web/CSS/mask-border)のブレンドモードを指定します。
 
 ## 構文
 
@@ -17,7 +19,8 @@ mask-border-mode: alpha;
 /* グローバル値 */
 mask-border-mode: inherit;
 mask-border-mode: initial;
-mask-border-mode: repeat;
+mask-border-mode: revert;
+mask-border-mode: revert-layer;
 mask-border-mode: unset;
 ```
 
@@ -36,24 +39,13 @@ mask-border-mode: unset;
 
 {{csssyntax}}
 
-## 例
-
-### 基本的な使用
-
-このプロパティは、まだどこでも対応されていないようです。このプロパティが対応されるようになれば、マスク境界に使用される混合モードの種類を、輝度値とアルファ値から指定することができるようになります。
-
-```css
-mask-border-mode: luminance;
-mask-border-mode: alpha;
-```
-
 ## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+このプロパティは、まだどのブラウザーも対応していません。
 
 ## 関連情報
 

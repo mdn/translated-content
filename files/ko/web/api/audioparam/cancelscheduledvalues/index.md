@@ -1,14 +1,6 @@
 ---
 title: AudioParam.cancelScheduledValues()
 slug: Web/API/AudioParam/cancelScheduledValues
-tags:
-  - API
-  - AudioParam
-  - Method
-  - Reference
-  - Web Audio API
-  - cancelScheduledValues
-browser-compat: api.AudioParam.cancelScheduledValues
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -18,7 +10,7 @@ browser-compat: api.AudioParam.cancelScheduledValues
 ## 구문
 
 ```js
-var AudioParam = AudioParam.cancelScheduledValues(startTime)
+var AudioParam = AudioParam.cancelScheduledValues(startTime);
 ```
 
 ### 매개변수

@@ -3,11 +3,12 @@ title: WebGL 拡張機能の使用
 slug: Web/API/WebGL_API/Using_Extensions
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
-WebGL は姉妹 API (OpenGL や OpenGL ES) と同様に、拡張機能に対応しています。拡張機能の完全な一覧は [Khronos WebGL Extension レジストリー](http://www.khronos.org/registry/webgl/extensions/)で確認できます。
+WebGL は姉妹 API (OpenGL や OpenGL ES) と同様に、拡張機能に対応しています。拡張機能の完全な一覧は [Khronos WebGL Extension レジストリー](https://www.khronos.org/registry/webgl/extensions/)で確認できます。
 
-> **メモ:** 他の GL API とは異なり、WebGL の拡張機能は明示的に要求した場合に限り使用できます。
+> [!NOTE]
+> 他の GL API とは異なり、WebGL の拡張機能は明示的に要求した場合に限り使用できます。
 
 ## 正規拡張機能名とベンダー接頭辞と設定
 
@@ -16,11 +17,10 @@ WebGL は姉妹 API (OpenGL や OpenGL ES) と同様に、拡張機能に対応�
 最先端の拡張機能を使用したい場合、および公認されたときにも動作し続けるようにしたい（もちろん、その拡張機能が互換性を失うように変更されていないものとします）場合は、ベンダー拡張機能名だけでなく正規拡張機能名も問い合わせます。例えば以下のようにします。
 
 ```js
-var ext = (
-  gl.getExtension('OES_vertex_array_object') ||
-  gl.getExtension('MOZ_OES_vertex_array_object') ||
-  gl.getExtension('WEBKIT_OES_vertex_array_object')
-);
+var ext =
+  gl.getExtension("OES_vertex_array_object") ||
+  gl.getExtension("MOZ_OES_vertex_array_object") ||
+  gl.getExtension("WEBKIT_OES_vertex_array_object");
 ```
 
 ベンダー接頭辞は次第に採用されなくなっており、ほとんどのブラウザーは実験的な拡張機能をベンダー接頭辞ではなく機能フラグで制御するように実装しています。
@@ -98,7 +98,7 @@ var available_extensions = gl.getSupportedExtensions();
 拡張機能を使用する前に、 {{domxref("WebGLRenderingContext.getExtension()")}} を使用して機能を有効化しなければなりません。例えば以下のようにします。
 
 ```js
-var float_texture_ext = gl.getExtension('OES_texture_float');
+var float_texture_ext = gl.getExtension("OES_texture_float");
 ```
 
 拡張機能に対応していない場合の戻り値は `null`、対応している場合の返値は拡張機能オブジェクトです。

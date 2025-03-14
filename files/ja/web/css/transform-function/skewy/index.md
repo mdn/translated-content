@@ -1,16 +1,41 @@
 ---
 title: skewY()
 slug: Web/CSS/transform-function/skewY
-original_slug: Web/CSS/transform-function/skewY()
 l10n:
-  sourceCommit: 6be1b954a117202d7635caeec74ebbbde984d3f3
+  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
 {{CSSRef}}
 
-**`skewY()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を二次元平面上で垂直方向にゆがめる変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+**`skewY()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を 2D 平面上で垂直方向にゆがめる変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-{{EmbedInteractiveExample("pages/css/function-skewY.html")}}
+{{InteractiveExample("CSS Demo: skewY()")}}
+
+```css interactive-example-choice
+transform: skewY(0);
+```
+
+```css interactive-example-choice
+transform: skewY(35deg);
+```
+
+```css interactive-example-choice
+transform: skewY(-0.06turn);
+```
+
+```css interactive-example-choice
+transform: skewY(0.352rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 この変換はシアー変形（[せん断写像](https://ja.wikipedia.org/wiki/せん断写像)）で、要素内のそれぞれの点を垂直方向に指定された角度でゆがませます。
 それぞれの点の縦座標は、指定された角度と原点からの距離に比例した値によって変更されます。
@@ -30,10 +55,10 @@ skewY(a)
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">ℝ^2 のデカルト座標</th>
-      <th scope="col">ℝℙ^2 の同次座標</th>
-      <th scope="col">ℝ^3 のデカルト座標</th>
-      <th scope="col">ℝℙ^3 の同次座標</th>
+      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
+      <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
+      <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
     </tr>
   </thead>
   <tbody>
@@ -173,3 +198,8 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
+- 独立した座標変換プロパティ:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}
+  - 注: `skew` プロパティはありません

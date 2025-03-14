@@ -1,6 +1,6 @@
 ---
 title: Aligning Items in a Flex Container
-slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
+slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 ---
 
 {{CSSRef}}
@@ -9,7 +9,7 @@ Uma das razões pela qual flexbox rapidamente despertou interesse dos desenvolve
 
 Para centralizar nossa caixa nós usamos a propriedade `align-items` para alinhar nosso item no eixo transversal, que neste caso é o eixo do bloco indo verticalmente. Nós usamos `justify-content` para alinhar o item no eixo principal, que neste caso é o eixo indo horizontalmente.
 
-![A containing element with another box centered inside it.](https://mdn.mozillademos.org/files/15627/align1.png)
+![A containing element with another box centered inside it.](align1.png)
 
 Você pode dar uma olhada no código deste exemplo abaixo. Altere o tamanho do container ou elemento aninhado e o elemento aninhado sempre permanece centralizado.
 
@@ -22,11 +22,12 @@ As propriedades que nós veremos neste guia são as seguintes.
 - {{cssxref("justify-content")}} — controla o alinhamento de todos os itens no eixo principal.
 - {{cssxref("align-items")}} — controla o alinhamento de todos os itens no eixo transversal.
 - {{cssxref("align-self")}} — controla o alinhamento individual de um item no eixo transversal.
-- {{cssxref("align-content")}} — descrito na especificação como “packing flex lines”; controla o espaço entre as linhas no eixo transversal.
+- {{cssxref("align-content")}} — descrito na especificação como "packing flex lines"; controla o espaço entre as linhas no eixo transversal.
 
 Nós também descobriremos como margens automáticas podem ser utilizadas para o alinhamento no flexbox.
 
-> **Note:** The alignment properties in Flexbox have been placed into their own specification — [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/). It is expected that this spec will ultimately supersede the properties as defined in Flexbox Level One.
+> [!NOTE]
+> The alignment properties in Flexbox have been placed into their own specification — [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/). It is expected that this spec will ultimately supersede the properties as defined in Flexbox Level One.
 
 ## The Cross Axis
 
@@ -34,9 +35,9 @@ As propriedades `align-items` e `align-self` controlam o alinhamento dos nossos 
 
 Nós estamos usando o alinhamento transversal na maioria dos exemplos. Se adicionarmos `display: flex` para um contêiner, todos os itens filhos se tornam itens flexíveis organizados em uma linha. Todos irão se esticar para serem tão altos quanto o item mais alto, pois este item define a altura dos itens no eixo transversal. Se o seu contêiner possui uma altura definida, então os itens se estenderão para esta altura, independemente da quantidade de conteúdo que está dentro deste item.
 
-![Three items, one with additional text causing it to be taller than the others.](https://mdn.mozillademos.org/files/15628/align2.png)
+![Three items, one with additional text causing it to be taller than the others.](align2.png)
 
-![Three items stretched to 200 pixels tall](https://mdn.mozillademos.org/files/15629/align3.png)
+![Three items stretched to 200 pixels tall](align3.png)
 
 A razão pela qual os itens passam a ter a mesma altura é que o valor inicial do `align-items`, a propriedade que controla o alinhamento do eixo transversal, está definida como `stretch`.
 
@@ -64,11 +65,11 @@ Neste próximo exemplo, o container flex possui `align-items: flex-start`, que i
 
 So far we have looked at the behaviour when our `flex-direction` is `row`, and while working in a language written top to bottom. This means that the main axis runs along the row horizontally, and our cross axis alignment moves the items up and down.
 
-![Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the vertical axis.](https://mdn.mozillademos.org/files/15630/align4.png)
+![Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the vertical axis.](align4.png)
 
 If we change our `flex-direction` to column, `align-items` and `align-self` will align the items to the left and right.
 
-![Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the horizontal axis.](https://mdn.mozillademos.org/files/15631/align5.png)
+![Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the horizontal axis.](align5.png)
 
 You can try this out in the example below, which has a flex container with `flex-direction: column` yet otherwise is exactly the same as the previous example.
 
@@ -100,7 +101,8 @@ Once again we can switch our `flex-direction` to `column` in order to see how th
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content-column.html", '100%', 860)}}
 
-> **Note:** the value `space-evenly` is not defined in the flexbox specification and is a later addition to the Box Alignment specification. Browser support for this value is not as good as that of the values defined in the flexbox spec.
+> [!NOTE]
+> the value `space-evenly` is not defined in the flexbox specification and is a later addition to the Box Alignment specification. Browser support for this value is not as good as that of the values defined in the flexbox spec.
 
 See the [documentation for `justify-content` on MDN](/pt-BR/docs/Web/CSS/justify-content) for more details on all of these values and browser support.
 
@@ -110,7 +112,7 @@ Now that we have seen how alignment works on the cross axis, we can take a look 
 
 In our initial example with `display: flex` on the container, the items display as a row and all line up at the start of the container. This is due to the initial value of `justify-content` being `flex-start`. Any available space is placed at the end of the items.
 
-![Three items, each 100 pixels wide in a 500 pixel container. The available space is at the end of the items.](https://mdn.mozillademos.org/files/15632/align6.png)
+![Three items, each 100 pixels wide in a 500 pixel container. The available space is at the end of the items.](align6.png)
 
 The `justify-content` property accepts the same values as `align-content`.
 
@@ -134,11 +136,11 @@ If the main axis is in the block direction because `flex-direction` is set to `c
 
 Remember that with all of these alignment methods, the values of `flex-start` and `flex-end` are writing mode-aware. If the value of `justify-content` is `start` and the writing mode is left-to-right as in English, the items will line up starting at the left side of the container.
 
-![Three items lined up on the left](https://mdn.mozillademos.org/files/15638/Basics5.png)
+![Three items lined up on the left](basics5.png)
 
 However if the writing mode is right-to-left as in Arabic, the items will line up starting at the right side of the container.
 
-![Three items lined up from the right](https://mdn.mozillademos.org/files/15639/Basics6.png)
+![Three items lined up from the right](basics6.png)
 
 The live example below has the `direction` property set to `rtl` to force a right-to-left flow for our items. You can remove this, or change the values of `justify-content` to see how flexbox behaves when the start of the inline direction is on the right.
 
@@ -154,25 +156,25 @@ In this next example I have items laid out with `flex-direction: row-reverse` an
 
 While this may all seem a little confusing, the rule to remember is that unless you do something to change it, flex items lay themselves out in the direction that words are laid out in the language of your document along the inline, row axis. `flex-start` will be where the start of a sentence of text would begin.
 
-![Diagram showing start on the left and end on the right.](https://mdn.mozillademos.org/files/15634/align8.png)
+![Diagram showing start on the left and end on the right.](align8.png)
 
 You can switch them to display in the block direction for the language of your document by selecting `flex-direction: column`. Then `flex-start` will then be where the top of your first paragraph of text would start.
 
-![Diagram showing start at the top and end at the bottom.](https://mdn.mozillademos.org/files/15636/align10.png)
+![Diagram showing start at the top and end at the bottom.](align10.png)
 
 If you change flex-direction to one of the reverse values, then they will lay themselves out from the end axis and in the reverse order to the way words are written in the language of your document. `flex-start` will then change to the end of that axis — so to the location where your lines would wrap if working in rows, or at the end of your last paragraph of text in the block direction.
 
-![Diagram showing start on the right and end on the left.](https://mdn.mozillademos.org/files/15635/align9.png)
+![Diagram showing start on the right and end on the left.](align9.png)
 
-![Diagram showing end at the top and start at the bottom](https://mdn.mozillademos.org/files/15637/align11.png)
+![Diagram showing end at the top and start at the bottom](align11.png)
 
 ## Using auto margins for main axis alignment
 
-We don’t have a `justify-items` or `justify-self` property available to us on the main axis as our items are treated as a group on that axis. However it is possible to do some individual alignment in order to separate an item or a group of items from others by using auto margins along with flexbox.
+We don't have a `justify-items` or `justify-self` property available to us on the main axis as our items are treated as a group on that axis. However it is possible to do some individual alignment in order to separate an item or a group of items from others by using auto margins along with flexbox.
 
 A common pattern is a navigation bar where some key items are aligned to the right, with the main group on the left. You might think that this should be a use case for a `justify-self` property, however consider the image below. I have three items on one side and two on the other. If I were able to use `justify-self` on item _d_, it would also change the alignment of item _e_ that follows, which may or may not be my intention.
 
-![Five items, in two groups. Three on the left and two on the right.](https://mdn.mozillademos.org/files/15633/align7.png)
+![Five items, in two groups. Three on the left and two on the right.](align7.png)
 
 Instead we can target item 4 and separate it from the first three items by giving it a `margin-left` value of `auto`. Auto margins will take up all of the space that they can in their axis — it is how centering a block with margin auto left and right works. Each side tries to take as much space as it can, and so the block is pushed into the middle.
 
@@ -184,9 +186,9 @@ In this live example, I have flex items arranged simply into a row with the basi
 
 At the beginning of this article I explained that the alignment properties currently contained in the Level 1 flexbox specification are also included in Box Alignment Level 3, which may well extend these properties and values in the future. We have already seen one place where this has happened, with the introduction of the `space-evenly` value for `align-content` and `justify-content` properties.
 
-The Box Alignment module also includes other methods of creating space between items, such as the `column-gap` and `row-gap` feature as seen in [CSS Grid Layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout). The inclusion of these properties in Box Alignment means that in future we should be able to use `column-gap` and `row-gap` in flex layouts too, and in Firefox 63 you will find the first browser implementation of the gap properties in flex layout.
+The Box Alignment module also includes other methods of creating space between items, such as the `column-gap` and `row-gap` feature as seen in [CSS Grid Layout](/pt-BR/docs/Web/CSS/CSS_grid_layout). The inclusion of these properties in Box Alignment means that in future we should be able to use `column-gap` and `row-gap` in flex layouts too, and in Firefox 63 you will find the first browser implementation of the gap properties in flex layout.
 
-My suggestion when exploring flexbox alignment in depth is to do so alongside looking at alignment in Grid Layout. Both specifications use the alignment properties as detailed in the Box Alignment specification. You can see how these properties behave when working with a grid in the MDN article [Box Alignment in Grid Layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout), and I have also compared how alignment works in these specifications in my [Box Alignment Cheatsheet](https://rachelandrew.co.uk/css/cheatsheets/box-alignment).
+My suggestion when exploring flexbox alignment in depth is to do so alongside looking at alignment in Grid Layout. Both specifications use the alignment properties as detailed in the Box Alignment specification. You can see how these properties behave when working with a grid in the MDN article [Box Alignment in Grid Layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout), and I have also compared how alignment works in these specifications in my [Box Alignment Cheatsheet](https://rachelandrew.co.uk/css/cheatsheets/box-alignment).
 
 ## See Also
 

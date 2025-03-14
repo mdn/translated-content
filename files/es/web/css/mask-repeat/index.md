@@ -1,7 +1,6 @@
 ---
-title: '-webkit-mask-repeat'
+title: -webkit-mask-repeat
 slug: Web/CSS/mask-repeat
-original_slug: Web/CSS/-webkit-mask-repeat
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -49,12 +48,12 @@ original_slug: Web/CSS/-webkit-mask-repeat
 
 ```css
 .exampleone {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat: repeat-x;
 }
 
 .exampletwo {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat: no-repeat;
 }
 ```
@@ -65,16 +64,16 @@ Se puede especificar, seperados por comas, un `<repeat-style>` para cada una de 
 
 ```css
 .examplethree {
-  -webkit-mask-image: url('mask1.png'), url('mask2.png');
+  -webkit-mask-image: url("mask1.png"), url("mask2.png");
   -webkit-mask-repeat: repeat-x, repeat-y;
 }
 ```
 
 Cada imagen se relaciona con el correspondiente estilo, desde la primera especificada hasta la última.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.mask-repeat")}}
+{{Compat}}
 
 ## Ver además
 

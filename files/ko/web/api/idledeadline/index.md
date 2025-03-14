@@ -1,8 +1,8 @@
 ---
 title: IdleDeadline
 slug: Web/API/IdleDeadline
-translation_of: Web/API/IdleDeadline
 ---
+
 {{APIRef("Background Tasks")}}
 
 `IdleDeadline` 인터페이스는 {{domxref("Window.requestIdleCallback()")}}을 호출하여 설정된 유휴 콜백(idle callback)에 대한 입력 매개변수(parameter)의 데이터 타입으로 사용됩니다. {{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} 메서드를 제공하여 사용자 에이전트가 유휴 상태로있을 것으로 추정하는 시간과 속성(property)인 {{domxref("IdleDeadline.didTimeout", "didTimeout")}}을 결정할 수있게하여, timeout 기간이 만료되어 콜백이 실행 중인지 여부를 결정할 수 있습니다.
@@ -21,13 +21,13 @@ request callback이 작동하는 방식에 대해 자세히알아 보려면, [Co
 
 ## Example
 
-[Cooperative Scheduling of Background Tasks API](/ko/docs/Web/API/Background_Tasks_API)의 [complete example](/ko/docs/Web/API/Background_Tasks_API#Example)를 참조하세요.
+[Cooperative Scheduling of Background Tasks API](/ko/docs/Web/API/Background_Tasks_API)의 [complete example](/ko/docs/Web/API/Background_Tasks_API#example)를 참조하세요.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

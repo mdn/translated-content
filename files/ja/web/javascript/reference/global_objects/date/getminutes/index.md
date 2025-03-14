@@ -9,7 +9,14 @@ l10n:
 
 **`getMinutes()`** メソッドは、地方時に基づき、指定された日時の「分」を返します。
 
-{{EmbedInteractiveExample("pages/js/date-getminutes.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.getMinutes()", "shorter")}}
+
+```js interactive-example
+const birthday = new Date("March 13, 08 04:20");
+
+console.log(birthday.getMinutes());
+// Expected output: 20
+```
 
 ## 構文
 
@@ -28,7 +35,7 @@ getMinutes()
 以下の 2 行目の文は、{{jsxref("Global_Objects/Date", "Date")}} オブジェクトである `xmas95` の値に基づき、変数 `minutes` に 15 という値を代入します。
 
 ```js
-const xmas95 = new Date('December 25, 1995 23:15:30');
+const xmas95 = new Date("December 25, 1995 23:15:30");
 const minutes = xmas95.getMinutes();
 
 console.log(minutes); // 15

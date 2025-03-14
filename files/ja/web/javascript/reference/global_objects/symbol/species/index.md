@@ -1,36 +1,65 @@
 ---
 title: Symbol.species
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
+l10n:
+  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
 {{JSRef}}
 
-ウェルノウンシンボルの **`Symbol.species`** は、コンストラクター関数が派生オブジェクトを生成する際に使用する関数値プロパティを指定します。
+**`Symbol.species`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.species` を表します。オブジェクトのコピーを作成するメソッドは、このシンボルで、コピーを作成するときに使用するコンストラクター関数を探すことがあります。
 
-{{EmbedInteractiveExample("pages/js/symbol-species.html")}}
+> **警告:** `[Symbol.species]` が存在することで、任意のコードの実行を可能にし、セキュリティの脆弱性を生み出す可能性があります。また、一部の最適化がとても難しくなります。エンジンの実装者は[この機能を削除するかどうかを調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。可能であれば、この機能への依存は避けてください。
+
+{{InteractiveExample("JavaScript Demo: Symbol.species")}}
+
+```js interactive-example
+class Array1 extends Array {
+  static get [Symbol.species]() {
+    return Array;
+  }
+}
+
+const a = new Array1(1, 2, 3);
+const mapped = a.map((x) => x * x);
+
+console.log(mapped instanceof Array1);
+// Expected output: false
+
+console.log(mapped instanceof Array);
+// Expected output: true
+```
+
+## 値
+
+ウェルノウンシンボル `Symbol.species` です。
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## 解説
 
-`species` アクセサープロパティを使用すると、オブジェクトの生成に使われるデフォルトコンストラクターを上書きすることができます。
+`[Symbol.species]` アクセサープロパティを使用すると、サブクラスがオブジェクトの既定のコンストラクターをオーバーライドできるようになります。これは、インスタンスをコピーするときの手順を指定します。例えば、{{jsxref("Array/map", "map()")}} のような配列のコピーメソッドを使用する場合、`map()` メソッドは `instance.constructor[Symbol.species]` を使用して新しい配列を構築するコンストラクターを取得します。詳細については、[組み込みオブジェクトのサブクラス化](/ja/docs/Web/JavaScript/Reference/Classes/extends#組み込みクラスのサブクラス化)を参照してください。
 
-{{js_property_attributes(0,0,0)}}
+すべての組み込みオブジェクトにおいて、`[Symbol.species]` は現在のインスタンスのコンストラクターである `this` の値を返すよう実装されています。これにより、メソッドをコピーして基底クラスではなく派生クラスのインスタンスを作成することができます。例えば、`map()` は元の配列と同じ型の配列を返します。
 
 ## 例
 
 ### species の使用
 
-{{jsxref("Array")}} オブジェクトを派生した配列クラス `MyArray` で返したいことがあるでしょう。例えば、デフォルトのコンストラクターを返す {{jsxref("Array.map", "map()")}} のようなメソッドを使用している場合、これらのメソッドは `MyArray` オブジェクトではなく親の `Array` オブジェクトを返したいとします。 `species` シンボルでこれを実現することができます。
+{{jsxref("Array")}} オブジェクトを派生した配列クラス `MyArray` で返したいことがあるでしょう。例えば、既定のコンストラクターを返す {{jsxref("Array/map", "map()")}} のようなメソッドを使用している場合、これらのメソッドは親の `Array` オブジェクトを、`MyArray` オブジェクトの代わりに返したいとします。`species` シンボルでこれを実現することができます。
 
 ```js
 class MyArray extends Array {
-  // Overwrite species to the parent Array constructor
-  static get [Symbol.species]() { return Array; }
+  // species を親である Array コンストラクターで上書き
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
-let a = new MyArray(1,2,3);
-let mapped = a.map(x => x * x);
+const a = new MyArray(1, 2, 3);
+const mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true
+console.log(mapped instanceof Array); // true
 ```
 
 ## 仕様書
@@ -39,9 +68,14 @@ console.log(mapped instanceof Array);   // true
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Symbol.species")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{jsxref("Map.@@species", "Map[@@species]")}}
-- {{jsxref("Set.@@species", "Set[@@species]")}}
+- [`Array[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
+- [`ArrayBuffer[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species)
+- [`Map[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species)
+- [`Promise[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species)
+- [`RegExp[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species)
+- [`Set[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species)
+- [`TypedArray[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species)

@@ -1,31 +1,33 @@
 ---
 title: unicode-range
 slug: Web/CSS/@font-face/unicode-range
+l10n:
+  sourceCommit: 0326d9301650304ef67a56e88b542b160093042e
 ---
 
 {{CSSRef}}
 
-**`unicode-range`** は CSS の記述子で、 {{cssxref("@font-face")}} で定義されたフォントから使用される特定の文字範囲を設定し、現在のページで使用できるようにします。ページがこの範囲内の文字を使用しない場合、フォントはダウンロードされません。少なくとも 1 つの文字を使用すると、フォント全体がダウンロードされます。
+**`unicode-range`** は CSS の記述子で、 {{cssxref("@font-face")}} を用いて定義されたフォントから使用される特定の文字範囲を設定し、現在のページで使用できるようにします。ページがこの範囲内の文字を使用しない場合、フォントはダウンロードされません。少なくとも 1 つの文字を使用すると、フォント全体がダウンロードされます。
 
 ## 構文
 
 ```css
 /* <unicode-range> 値 */
-unicode-range: U+26;               /* 単一の符号位置 */
+unicode-range: U+26; /* 単一のコードポイント */
 unicode-range: U+0-7F;
-unicode-range: U+0025-00FF;        /* 符号位置の範囲 */
-unicode-range: U+4??;              /* ワイルドカードの範囲 */
+unicode-range: U+0025-00FF; /* コードポイントの範囲 */
+unicode-range: U+4??; /* ワイルドカードの範囲 */
 unicode-range: U+0025-00FF, U+4??; /* 複数の値 */
 ```
 
 ### 値
 
-- **_単一の符号位置_**
-  - : 単一の Unicode 符号位置。例: `U+26`
-- **_符号位置の範囲_**
-  - : Unicode 符号位置の範囲。例えば、 `U+0025-00FF` は、 *`U+0025` から `U+00FF` の範囲内の全文字を含む*こと意味します。
+- **_単一のコードポイント_**
+  - : 単一の Unicode コードポイント。例: `U+26`
+- **_コードポイントの範囲_**
+  - : Unicode コードポイントの範囲。例えば、 `U+0025-00FF` は、 *`U+0025` から `U+00FF` の範囲内の全文字を含む*こと意味します。
 - **_ワイルドカードの範囲_**
-  - : ワイルドカード文字を含む Unicode 符号位置の範囲。 `'?'` 文字を使用します。例えば、`U+4??` は *`U+400` から `U+4FF` の範囲の全文字を含む*ことを意味します。
+  - : ワイルドカード文字を含む Unicode コードポイントの範囲。 `'?'` 文字を使用します。例えば、`U+4??` は *`U+400` から `U+4FF` の範囲の全文字を含む*ことを意味します。
 
 ## 解説
 
@@ -57,8 +59,8 @@ CSS において、1 つの文字だけを含んだ完全に別個の {{cssxref(
 
 ```css
 @font-face {
-  font-family: 'Ampersand';
-  src: local('Times New Roman');
+  font-family: "Ampersand";
+  src: local("Times New Roman");
   unicode-range: U+26;
 }
 
@@ -87,7 +89,6 @@ div {
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
 - {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/src", "src")}}

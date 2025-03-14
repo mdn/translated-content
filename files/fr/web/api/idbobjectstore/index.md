@@ -1,7 +1,6 @@
 ---
 title: IDBObjectStore
 slug: Web/API/IDBObjectStore
-translation_of: Web/API/IDBObjectStore
 ---
 
 {{APIRef("IndexedDB")}}
@@ -10,14 +9,14 @@ L'interface **`IDBObjectStore`** de l'{{domxref("IndexedDB_API","API IndexedDB")
 
 Le magasin d'objet emmagasine des enregistrements. Chaque enregistrement est constitué d'un couple clé/valeur. Chaque valeurs est indexée sur sa clé. Les clés sont triées pour former l'index primaire du magasin. Ce qui permet un accès rapide et ordonnée aux valeurs.
 
-Le magasin d'objet peut en plus de l'index primaire avoir des index qui ordonnent les enregistrements sur d'autres clés. Ces index se mettent automatiquement à jour dans la plupart des cas et permettent de mettre des contraintes d’unicités pour d'autres clés que la clé primaire du magasin d'objet.
+Le magasin d'objet peut en plus de l'index primaire avoir des index qui ordonnent les enregistrements sur d'autres clés. Ces index se mettent automatiquement à jour dans la plupart des cas et permettent de mettre des contraintes d'unicités pour d'autres clés que la clé primaire du magasin d'objet.
 
 {{AvailableInWorkers}}
 
 ## Méthodes
 
 - {{domxref("IDBObjectStore.add()")}}
-  - : Une {{domxref("IDBRequest","requête")}} pour ajouter un enregistrement au magasin d'objet relié, un [clone structuré](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) de la valeur passé en paramètre et sa clé .
+  - : Une {{domxref("IDBRequest","requête")}} pour ajouter un enregistrement au magasin d'objet relié, un [clone structuré](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) de la valeur passé en paramètre et sa clé .
 - {{domxref("IDBObjectStore.clear()")}}
   - : Une {{domxref("IDBRequest","requête")}} pour vider le magasin d'objet relié.
 - {{domxref("IDBObjectStore.delete()")}}
@@ -35,7 +34,7 @@ Le magasin d'objet peut en plus de l'index primaire avoir des index qui ordonnen
 - {{domxref("IDBObjectStore.index()")}}
   - : L'{{domxref("IDBIndex","accès")}} à l'index dont le nom est passé en paramètre du magasin d'objet relié.
 - {{domxref("IDBObjectStore.put()")}}
-  - : Une {{domxref("IDBRequest","requête")}} pour ajouter ou mettre à jour un enregistrement du magasin d'objet relié, un [clone structuré](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) de la valeur passée en paramètre et sa clé.
+  - : Une {{domxref("IDBRequest","requête")}} pour ajouter ou mettre à jour un enregistrement du magasin d'objet relié, un [clone structuré](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) de la valeur passée en paramètre et sa clé.
 - {{domxref("IDBObjectStore.openCursor()")}}
   - : Une {{domxref("IDBRequest","requête")}} récursive suivant un {{domxref("IDBCursorWithValue","curseur avec valeur")}} qui itère le magasin d'objet relié.
 - {{domxref("IDBObjectStore.openKeyCursor()")}}
@@ -48,13 +47,13 @@ Le magasin d'objet peut en plus de l'index primaire avoir des index qui ordonnen
 - {{domxref("IDBObjectStore.indexNames")}} {{readonlyInline}}
   - : La liste des noms d'index du magasin d'objet relié.
 - {{domxref("IDBObjectStore.keyPath")}} {{readonlyInline}}
-  - : Le [nom de la clé](/fr/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath) du magasin d'objets relié.
+  - : Le [nom de la clé](/fr/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keypath) du magasin d'objets relié.
 - {{domxref("IDBObjectStore.name")}} {{readonlyInline}}
   - : Le nom du magasin d'objet relié.
 - {{domxref("IDBObjectStore.transaction")}} {{readonlyInline}}
   - : La {{domxref("IDBTransaction","transaction")}} à laquelle l'accès du magasin d'objet appartient.
 - {{domxref("IDBObjectStore.autoIncrement")}} {{readonlyInline}}
-  - : La position du drapeau d’incrémentation automatique du magasin d'objet relié.
+  - : La position du drapeau d'incrémentation automatique du magasin d'objet relié.
 
 <!---->
 
@@ -67,8 +66,8 @@ Cet exemple montre différents usages de l'accès au magasin d'objet. On met à 
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // gère le succès de la connexion
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Connexion ouverte.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Connexion ouverte.</li>";
 
   //affect la connexion à la variable db.
   db = DBOpenRequest.result;
@@ -77,11 +76,11 @@ DBOpenRequest.onsuccess = function(event) {
 // Ce gestionnaire d'événement s'active quand on à besoin d'une nouvelle version de la base de donnée.
 // Si la base n'existais pas avant ou
 // si on ouvre une nouvelle version avec window.indexedDB.open.
-DBOpenRequest.onupgradeneeded = function(event) {
+DBOpenRequest.onupgradeneeded = function (event) {
   var db = event.target.result;
 
-  db.onerror = function(event) {
-    note.innerHTML += '<li>Erreur de chargement de la base.</li>';
+  db.onerror = function (event) {
+    note.innerHTML += "<li>Erreur de chargement de la base.</li>";
   };
 
   // Ajoute un magasin d'objets à la base de données
@@ -97,24 +96,32 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  note.innerHTML += '<li>Le magasin d\'objet est ajouté.</li>';
+  note.innerHTML += "<li>Le magasin d'objet est ajouté.</li>";
 };
 
 // Un nouvel enregistrement à ajouter
 var newItem = [
- { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: 'December', year: 2013, notified: "no" }
+  {
+    taskTitle: "Walk dog",
+    hours: 19,
+    minutes: 30,
+    day: 24,
+    month: "December",
+    year: 2013,
+    notified: "no",
+  },
 ];
 
 // ouvre une transaction en lecture/écriture sur la connexion, prête à ajouter l'enregistrement.
 var transaction = db.transaction(["toDoList"], "readwrite");
 
 // affiche le succès de la transaction
-transaction.oncomplete = function(event) {
-  note.innerHTML += '<li>La transaction à été effectuée.</li>';
+transaction.oncomplete = function (event) {
+  note.innerHTML += "<li>La transaction à été effectuée.</li>";
 };
 
-transaction.onerror = function(event) {
-  note.innerHTML += '<li>La transaction n\'as pue aboutir.</li>';
+transaction.onerror = function (event) {
+  note.innerHTML += "<li>La transaction n'as pue aboutir.</li>";
 };
 
 // Un accès à toDoList pour la transaction
@@ -123,12 +130,14 @@ var objectStore = transaction.objectStore("toDoList");
 var objectStoreRequest = objectStore.add(newItem[0]);
 
 //l'enregistrement s'est bien passé.
-objectStoreRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>L\'enregistrement à été ajouté au magasin d\'objet.</li>';
-}
+objectStoreRequest.onsuccess = function (event) {
+  note.innerHTML +=
+    "<li>L'enregistrement à été ajouté au magasin d'objet.</li>";
+};
 ```
 
-> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
+> [!NOTE]
+> Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 
@@ -145,4 +154,4 @@ objectStoreRequest.onsuccess = function(event) {
 - {{domxref("IDBTransaction","Utilisé les transactions")}}
 - {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
 - {{domxref("IDBCursor","Utiliser les curseur")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

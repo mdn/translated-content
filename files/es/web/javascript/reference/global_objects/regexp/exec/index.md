@@ -1,15 +1,6 @@
 ---
 title: RegExp.prototype.exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
-tags:
-  - Expresiones Regulares
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - RegExp
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/exec
-original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/exec
 ---
 
 {{JSRef}}
@@ -44,8 +35,8 @@ Considerando el siguiente ejemplo:
 // encuentren entre medias.
 // Recuerda "brown" y "jumps"
 // Ignora mayusculas y minusculas
-var re = /quick\s(brown).+?(jumps)/ig;
-var result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
+var re = /quick\s(brown).+?(jumps)/gi;
+var result = re.exec("The Quick Brown Fox Jumps Over The Lazy Dog");
 ```
 
 La siguiente tabla muestra el resultado de este script:
@@ -135,11 +126,11 @@ Si tu expresión regular contiene la bandera "`g`", puedes usar el método `exec
 
 ```js
 var myRe = /ab*/g;
-var str = 'abbcdefabh';
+var str = "abbcdefabh";
 var myArray;
 while ((myArray = myRe.exec(str)) !== null) {
-  var msg = 'Se ha encontrado ' + myArray[0] + '. ';
-  msg += 'La siguiente coincidencia empieza en el indice ' + myRe.lastIndex;
+  var msg = "Se ha encontrado " + myArray[0] + ". ";
+  msg += "La siguiente coincidencia empieza en el indice " + myRe.lastIndex;
   console.log(msg);
 }
 ```
@@ -158,7 +149,7 @@ Nota: No uses la expresión regular literalmente (o el constructor {{jsxref("Reg
 También se puede usar `exec()` sin crear un objeto de {{jsxref("RegExp")}}:
 
 ```js
-var matches = /(hola \S+)/.exec('Esto es un hola mundo!');
+var matches = /(hola \S+)/.exec("Esto es un hola mundo!");
 console.log(matches[1]);
 ```
 
@@ -168,11 +159,11 @@ Esto logueará un mensaje que contiene 'hola mundo!'.
 
 {{Specifications}}
 
-## Compatiblidad con navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.RegExp.exec")}}
+{{Compat}}
 
 ## Ver también
 
-- Capítulo de [Expresiones Regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions) en la [Guía de Javascript](/es/docs/Web/JavaScript/Guide)
+- Capítulo de [Expresiones Regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions) en la [Guía de Javascript](/es/docs/Web/JavaScript/Guide)
 - {{jsxref("RegExp")}}

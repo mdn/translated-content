@@ -1,20 +1,16 @@
 ---
 title: counter-reset
 slug: Web/CSS/counter-reset
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/counter-reset
 ---
 
 {{CSSRef}}
 
-La propriété **`counter-reset`** permet de réinitialiser un [compteur CSS](/fr/docs/Web/CSS/Compteurs_CSS) avec une valeur donnée.
+La propriété **`counter-reset`** permet de réinitialiser un [compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) avec une valeur donnée.
 
 {{EmbedInteractiveExample("pages/css/counter-reset.html")}}
 
-> **Note :** Pour incrémenter ou décrémenter le compteur, on pourra utiliser la propriété CSS {{cssxref("counter-increment")}}.
+> [!NOTE]
+> Pour incrémenter ou décrémenter le compteur, on pourra utiliser la propriété CSS {{cssxref("counter-increment")}}.
 
 ## Syntaxe
 
@@ -107,7 +103,7 @@ li::before {
 
 ## Voir aussi
 
-- [Les compteurs CSS](/fr/docs/Web/CSS/Compteurs_CSS)
+- [Les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
 - {{cssxref("counter-increment")}}
 - {{cssxref("@counter-style")}}
 - {{cssxref("counter-set")}}

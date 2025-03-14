@@ -1,8 +1,9 @@
 ---
 title: URL
 slug: Glossary/URL
-original_slug: Glossario/URL
 ---
+
+{{GlossarySidebar}}
 
 _Uniform Resource Locator_ (**URL**) é uma sequência de texto que especifica onde um recurso pode ser encontrado na Internet.
 
@@ -14,8 +15,8 @@ URLs também podem ser usadas para transferir arquivos por ({{Glossary("FTP")}})
 
 ### Conhecimento Geral
 
-- {{Interwiki("wikipedia", "URL")}} na Wikipedia
+- [URL](https://pt.wikipedia.org/wiki/URL) na Wikipedia
 
 ### Saiba mais
 
-- [Entendendo URLs e sua estrutura](/en-US/Learn/Understanding_URLs)
+- [Entendendo URLs e sua estrutura](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)

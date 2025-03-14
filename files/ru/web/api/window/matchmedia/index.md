@@ -1,13 +1,13 @@
 ---
 title: Window.matchMedia()
 slug: Web/API/Window/matchMedia
-translation_of: Web/API/Window/matchMedia
 ---
+
 {{APIRef}}
 
 ## Сводка
 
-Возвращает новый объект {{domxref("MediaQueryList")}}, использующийся для определения соответствия документа переданной строке [медиавыражения](/ru/docs/CSS/Media_queries).
+Возвращает новый объект {{domxref("MediaQueryList")}}, использующийся для определения соответствия документа переданной строке [медиавыражения](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 
 ## Синтаксис
 
@@ -29,19 +29,19 @@ if (window.matchMedia("(min-width: 400px)").matches) {
 
 Данный код позволяет обрабатывать поведение по другому, когда размер окна очень узкий.
 
-Смотрите [Использование медиавыражений из кода](/ru/docs/DOM/Using_media_queries_from_code) для дополнительных примеров.
+Смотрите [Использование медиавыражений из кода](/ru/docs/Web/CSS/CSS_media_queries/Testing_media_queries) для дополнительных примеров.
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
-## Спецификация
+## Спецификации
 
-- [The CSSOM View Module: The MediaQueryList Interface](http://dev.w3.org/csswg/cssom-view/#the-mediaquerylist-interface)
+- [The CSSOM View Module: The MediaQueryList Interface](https://dev.w3.org/csswg/cssom-view/#the-mediaquerylist-interface)
 
 ## Смотрите также
 
-- [Media queries](/ru/docs/CSS/Media_queries)
-- [Using media queries from code](/ru/docs/DOM/Using_media_queries_from_code)
+- [Media queries](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using media queries from code](/ru/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{domxref("MediaQueryList")}}
 - {{domxref("MediaQueryListListener")}}

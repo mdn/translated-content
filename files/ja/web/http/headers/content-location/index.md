@@ -1,20 +1,23 @@
 ---
 title: Content-Location
 slug: Web/HTTP/Headers/Content-Location
+l10n:
+  sourceCommit: 1176e753733ee9d2e8966cc7cf03df495dce9aba
 ---
 
 {{HTTPSidebar}}
 
-**`Content-Location`** ヘッダーは、返されるデータの代替場所を示します。主な用途は[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)の結果として送信されたリソースの URL を示すことです。
+**`Content-Location`** ヘッダーは、返されるデータの代替場所を示します。主な用途は、[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)の結果として送信されたリソースの URL を示すことです。
 
-{{HTTPHeader("Location")}} と `Content-Location` は異なります。`Location` はリダイレクトの URL を示し、`Content-Location` は今後のコンテンツネゴシエーションなしでリソースへのアクセスに使用する直接 URL を示します。 `Location` はレスポンスに関連付けられたヘッダーで、 `Content-Location` は返されたデータに関連付けられます。この区別は[例](#Examples)がないと抽象的に見えるかもしれません。
+{{HTTPHeader("Location")}} と `Content-Location` は異なります。
+`Location` はリダイレクトの URL を示し、`Content-Location` は今後のコンテンツネゴシエーションなしでリソースへのアクセスに使用する直接 URL を示します。 `Location` はレスポンスに関連付けられたヘッダーで、 `Content-Location` は返されたデータに関連付けられます。この区別は[例](#例)がないと抽象的に見えるかもしれません。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">ヘッダー種別</th>
       <td>
-        {{Glossary("Entity header", "エンティティヘッダー")}}
+        {{Glossary("Representation header", "表現ヘッダー")}}
       </td>
     </tr>
     <tr>
@@ -28,14 +31,14 @@ slug: Web/HTTP/Headers/Content-Location
 
 ## 構文
 
-```
+```http
 Content-Location: <url>
 ```
 
 ## ディレクティブ
 
 - \<url>
-  - : (リクエスト URL に対する) [相対](/ja/docs/Learn/Common_questions/What_is_a_URL#Examples_of_relative_URLs) URL または[絶対](/ja/docs/Learn/Common_questions/What_is_a_URL#Examples_of_absolute_URLs) URL。
+  - : （リクエスト URL に対する）[相対](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#絶対_url_と相対_url) URL または[絶対](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#絶対_url_と相対_url) URL。
 
 ## 例
 
@@ -49,18 +52,18 @@ Content-Location: <url>
 | `Accept: application/xml, text/xml`   | `Content-Location: /documents/foo.xml`  |
 | `Accept: text/plain, text/*`          | `Content-Location: /documents/foo.txt`  |
 
-これらの URL は例です。サイトではクエリ文字列パラメータ：`/documents/foo?format=json`、`/documents/foo?format=xml` など、任意の URL パターンでさまざまなファイルタイプを提供できます。
+これらのURLは例です。サイトは、[クエリー文字列引数](/ja/docs/Web/API/HTMLAnchorElement/search)、例えば `/documents/foo?format=json`、`/documents/foo?format=xml` など、任意の URL パターンでさまざまなファイル形式を提供することができます。
 
 その後クライアントはその特定の URL で JSON バージョンが利用可能であることを覚えて、次に文書を要求するときにコンテンツのネゴシエーションをスキップします。
 
-サーバーは {{HTTPHeader("Accept-Language")}} のような他の[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)ヘッダーを考慮することもできます。
+サーバーは {{HTTPHeader("Accept-Language")}} のような他の[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)ヘッダーを考慮することもあります。
 
 ### 新しい文書を指す (HTTP 201 Created)
 
 サイトの API を通じて新しいブログ投稿を作成しているとします。
 
-```
-PUT /new/post
+```http
+POST /new/post
 Host: example.com
 Content-Type: text/markdown
 
@@ -69,14 +72,16 @@ Content-Type: text/markdown
 I made this through `example.com`'s API. I hope it worked.
 ```
 
-サイトは投稿が公開されたことを確認する一般的な成功メッセージを返します。サーバーは `Content-Location` を使用して新しい投稿がどこにあるかを指定します。
+サイトは公開された投稿をレスポンス本体で返します。サーバーは、新しい投稿の場所を `Content-Location` ヘッダーで指定し、この場所がこのレスポンスのコンテンツ（本体）を参照することを示します。
 
-```
+```http
 HTTP/1.1 201 Created
-Content-Type: text/plain; charset=utf-8
+Content-Type: text/markdown
 Content-Location: /my-first-blog-post
 
-✅ Success!
+# My first blog post
+
+I made this through `example.com`'s API. I hope it worked.
 ```
 
 ### トランザクションの結果の URL を示す
@@ -86,24 +91,26 @@ Content-Location: /my-first-blog-post
 ```html
 <form action="/send-payment" method="post">
   <p>
-    <label>Who do you want to send the money to?
-      <input type="text" name="recipient">
+    <label
+      >送金したい宛先は？
+      <input type="text" name="recipient" />
     </label>
   </p>
 
   <p>
-    <label>How much?
-      <input type="number" name="amount">
+    <label
+      >金額は？
+      <input type="number" name="amount" />
     </label>
   </p>
 
-  <button type="submit">Send Money</button>
+  <button type="submit">送金する</button>
 </form>
 ```
 
 フォームが送信されると、サイトは取引の領収書を生成します。サーバーは `Content-Location` を使用して、将来のアクセスのために領収書の URL を示すことができます。
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Type: text/html; charset=utf-8
 Content-Location: /my-receipts/38
@@ -118,13 +125,11 @@ Content-Location: /my-receipts/38
 
 ## 仕様書
 
-| 仕様書                                                       | 題名                                                          |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "Content-Location", "3.1.4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Content-Location")}}
+{{Compat}}
 
 ## 関連情報
 

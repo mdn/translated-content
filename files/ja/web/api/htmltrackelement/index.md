@@ -1,6 +1,8 @@
 ---
 title: HTMLTrackElement
 slug: Web/API/HTMLTrackElement
+l10n:
+  sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -9,41 +11,41 @@ slug: Web/API/HTMLTrackElement
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
-_親である {{domxref("HTMLElement")}} から継承したプロパティもあります。_
+_親である {{domxref("HTMLElement")}} から継承したプロパティがあります。_
 
 - {{domxref("HTMLTrackElement.kind")}}
-  - : HTML の {{htmlattrxref("kind", "track")}} 属性を反映した文字列で、使用する予定のテキストトラックを示します。可能な値は `subtitles`, `captions`, `descriptions`, `chapters`, `metadata` です。
+  - : HTML の [`kind`](/ja/docs/Web/HTML/Element/track#kind) 属性を反映した文字列で、使用する予定のテキストトラックを示します。可能な値は `subtitles`, `captions`, `descriptions`, `chapters`, `metadata` です。
 - {{domxref("HTMLTrackElement.src")}}
-  - : HTML の {{htmlattrxref("src", "track")}} 属性を反映した文字列で、テキストトラックデータの在りかを示します。
+  - : HTML の [`src`](/ja/docs/Web/HTML/Element/track#src) 属性を反映した文字列で、テキストトラックデータの在りかを示します。
 - {{domxref("HTMLTrackElement.srclang")}}
-  - : HTML の {{htmlattrxref("srclang", "track")}} 属性を反映した文字列で、テキストのトラックデータの言語を示します。
+  - : HTML の [`srclang`](/ja/docs/Web/HTML/Element/track#srclang) 属性を反映した文字列で、テキストのトラックデータの言語を示します。
 - {{domxref("HTMLTrackElement.label")}}
-  - : HTML の {{htmlattrxref("label", "track")}} 属性を反映した文字列で、トラックのユーザーが読めるタイトルを示します。
+  - : HTML の [`label`](/ja/docs/Web/HTML/Element/track#label) 属性を反映した文字列で、トラックのユーザーが読めるタイトルを示します。
 - {{domxref("HTMLTrackElement.default")}}
-  - : {{htmlattrxref("default", "track")}} 属性を反映した論理値で、ユーザーの環境設定で他のトラックがより適切であることが示されていない場合、そのトラックを有効にすることを示します。
+  - : [`default`](/ja/docs/Web/HTML/Element/track#default) 属性を反映した論理値で、ユーザーの環境設定で他のトラックがより適切であることが示されていない場合、そのトラックを有効にすることを示します。
 - {{domxref("HTMLTrackElement.readyState")}} {{ReadOnlyInline}}
 
   - : トラックの準備状態を示す `unsigned short` を返します。
 
-    | 定数  | 値 | 説明                                                                                                                                                                              |
-    | --------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `NONE`    | 0     | テキストトラックのキューが得られていないことを示します。                                                                                                                             |
-    | `LOADING` | 1     | テキストトラックが読み込まれ、今のところ致命的なエラーはないことを示します。パーサーによって、さらにキューがトラックに追加されるかもしれません。                           |
-    | `LOADED`  | 2     | テキストトラックが致命的なエラーなしに読み込まれたことを示します。                                                                                                                      |
-    | `ERROR`   | 3     | テキストトラックが有効であったが，ユーザーエージェントがそれを取得しようとしたとき，これが何らかの形で失敗したことを示す。一部または全部のキューが欠落している可能性が高く、取得できない。 |
+    | 定数      | 値  | 説明                                                                                                                                                                                       |
+    | --------- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+    | `NONE`    | 0   | テキストトラックのキューが得られていないことを示します。                                                                                                                                   |
+    | `LOADING` | 1   | テキストトラックが読み込まれ、今のところ致命的なエラーはないことを示します。パーサーによって、さらにキューがトラックに追加されるかもしれません。                                           |
+    | `LOADED`  | 2   | テキストトラックが致命的なエラーなしに読み込まれたことを示します。                                                                                                                         |
+    | `ERROR`   | 3   | テキストトラックが有効であったが，ユーザーエージェントがそれを取得しようとしたとき，これが何らかの形で失敗したことを示す。一部または全部のキューが欠落している可能性が高く、取得できない。 |
 
 - {{domxref("HTMLTrackElement.track")}} {{ReadOnlyInline}}
   - : track 要素のテキストトラックデータである {{Domxref("TextTrack")}} を返します。
 
-## メソッド
+## インスタンスメソッド
 
-_固有のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
+_固有のメソッドはありません。親である {{domxref("HTMLElement")}} から継承したメソッドがあります。_
 
 ## イベント
 
-_親である {{domxref("HTMLElement")}} で発生する可能性があるイベントに加えて、以下のイベントが {{HTMLElement("track")}} 要素で発生する可能性があります。_
+_{{HTMLElement("track")}} 要素では、親である {{domxref("HTMLElement")}} で発生する可能性があるイベントに加えて、以下のイベントが発生する可能性があります。_
 
 - {{domxref("HTMLTrackElement.cuechange_event", "cuechange")}}
   - : 基礎となる {{domxref("TextTrack")}} が、現在表示されているキューを変更したときに送られます。このイベントは常に `TextTrack` に送られますが、もし `HTMLTrackElement` がトラックと関連付けられていれば、そちらにも送られます。

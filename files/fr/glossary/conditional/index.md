@@ -1,13 +1,9 @@
 ---
 title: Condition
 slug: Glossary/Conditional
-tags:
-  - Débutant
-  - Glossaire
-  - scripts
-translation_of: Glossary/Conditional
-original_slug: Glossaire/Conditionnel
 ---
+
+{{GlossarySidebar}}
 
 Une **condition** est un ensemble de règles qui peut interrompre ou modifier l'exécution normale du code, selon que la condition est remplie ou non.
 
@@ -17,12 +13,12 @@ Une instruction, ou un ensemble d'instructions, est démarrée si une condition 
 
 ### Culture générale
 
-- [Structure de contrôle](https://fr.wikipedia.org/wiki/Structure_de_contr%C3%B4le#Alternatives) sur Wikipédia
+- [Structure de contrôle](https://fr.wikipedia.org/wiki/Structure_de_contrôle#Alternatives) sur Wikipédia
 
 ### Référence technique
 
-- [Contrôle de flux](/fr/docs/Glossaire/Structure_de_contr%C3%B4le) sur MDN
+- [Contrôle de flux](/fr/docs/Glossary/Control_flow) sur MDN
 
 ### Apprendre
 
-- [Contrôle du flux d'instructions et gestion des erreurs en JavaScript](/fr/docs/Web/JavaScript/Guide/Contr%C3%B4le_du_flux_Gestion_des_erreurs) sur MDN
+- [Contrôle du flux d'instructions et gestion des erreurs en JavaScript](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling) sur MDN

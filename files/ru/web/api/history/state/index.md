@@ -1,9 +1,11 @@
 ---
 title: History.state
 slug: Web/API/History/state
-translation_of: Web/API/History/state
 ---
-{{APIRef("History API")}}Свойство **`History.state`** возвращает значение последнего состояния стека истории (history stack). Этим способом можно проверить состояние не дожидаясь события {{event("popstate")}}.
+
+{{APIRef("History API")}}
+
+Свойство **`History.state`** возвращает значение последнего состояния стека истории (history stack). Этим способом можно проверить состояние не дожидаясь события [`popstate`](/ru/docs/Web/API/Window/popstate_event).
 
 ## Синтаксис
 
@@ -24,7 +26,7 @@ const currentState = history.state
 console.log(`History.state before pushState: ${history.state}`);
 
 // Теперь запишем какое-нибудь значение в стек
-history.pushState({name: 'Example'}, "pushState example", 'page3.html');
+history.pushState({ name: "Example" }, "pushState example", "page3.html");
 
 // Выведет значение history.state, которое было записано в предыдущей строке
 console.log(`History.state after pushState: ${history.state}`);
@@ -32,12 +34,9 @@ console.log(`History.state after pushState: ${history.state}`);
 
 ## Спецификации
 
-| Specification                                                                                            | Status                           | Comment                  |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------ |
-| {{SpecName("HTML WHATWG", "#dom-history-state", "History.state")}}                 | {{Spec2("HTML WHATWG")}} |                          |
-| {{SpecName("HTML5 W3C", "browsers.html#dom-history-state", "History.state")}} | {{Spec2("HTML5 W3C")}}     | Изначальное определение. |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

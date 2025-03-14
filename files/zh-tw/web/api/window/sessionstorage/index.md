@@ -13,13 +13,13 @@ slug: Web/API/Window/sessionStorage
 
 ```js
 // 將資料存到sessionStorage
-sessionStorage.setItem('key', 'value');
+sessionStorage.setItem("key", "value");
 
 // 從sessionStorage取得之前存的資料
-var data = sessionStorage.getItem('key');
+var data = sessionStorage.getItem("key");
 
 // 從sessionStorage移除之前存的資料
-sessionStorage.removeItem('key');
+sessionStorage.removeItem("key");
 
 // 從sessionStorage移除之前存的所有資料
 sessionStorage.clear();
@@ -34,7 +34,7 @@ sessionStorage.clear();
 下面簡短的程式碼，訪問了當前域名下的 session {{DOMxRef("Storage")}} 物件，並使用 {{DOMxRef("Storage.setItem()")}} 添加了資料單元。
 
 ```js
-sessionStorage.setItem('myCat', 'Tom');
+sessionStorage.setItem("myCat", "Tom");
 ```
 
 以下提供的範例為將文字輸入元件的內容自動保存，如果瀏覽器不小心重新整理，在頁面恢復後，會自動將內容還原，不會造成尚未送出的資料被清空。
@@ -51,13 +51,14 @@ if (sessionStorage.getItem("autosave")) {
 }
 
 // 註冊事件監聽text field內容的變化
-field.addEventListener("change", function() {
+field.addEventListener("change", function () {
   // 並儲存變化後的內容至sessionStorage的物件裡
   sessionStorage.setItem("autosave", field.value);
 });
 ```
 
-> **備註：** 完整的範例可參考這篇文章: [Using the Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)。
+> [!NOTE]
+> 完整的範例可參考這篇文章: [Using the Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)。
 
 ## 規格
 

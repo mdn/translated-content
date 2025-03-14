@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Operators/Addition_assignment
 
 加法赋值运算符（`+=`）将右操作数的值添加到变量，并将结果分配给该变量。两个操作数的类型决定了加法赋值运算符的行为，可能为加法或拼接。
 
-{{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Addition assignment operator")}}
+
+```js interactive-example
+let a = 2;
+let b = "hello";
+
+console.log((a += 3)); // Addition
+// Expected output: 5
+
+console.log((b += " world")); // Concatenation
+// Expected output: "hello world"
+```
 
 ## 语法
 
@@ -30,13 +41,13 @@ baz += false; // 2
 ```
 
 ```js
-let foo = 'foo';
+let foo = "foo";
 
 // String + Boolean -> 拼接
 foo += false; // "foofalse"
 
 // String + String -> 拼接
-foo += 'bar'; // "foofalsebar"
+foo += "bar"; // "foofalsebar"
 ```
 
 ```js
@@ -46,7 +57,7 @@ let bar = 5;
 bar += 2; // 7
 
 // Number + String -> 拼接
-bar += 'foo'; // "7foo"
+bar += "foo"; // "7foo"
 ```
 
 ## 规范
@@ -59,5 +70,5 @@ bar += 'foo'; // "7foo"
 
 ## 参见
 
-- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#赋值运算符)
+- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#赋值运算符)
 - [加法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)

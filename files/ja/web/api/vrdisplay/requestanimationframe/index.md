@@ -1,14 +1,14 @@
 ---
 title: VRDisplay.requestAnimationFrame()
 slug: Web/API/VRDisplay/requestAnimationFrame
-original_slug: Web/API/VRDevice/requestAnimationFrame
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`requestAnimationFrame()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、 {{domxref("Window.requestAnimationFrame")}} の特別な実装です．このメソッドは `VRDisplay` がレンダリングされている間、新しいフレームが来るたびに呼び出されるコールバック関数を含みます。
 
-> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!NOTE]
+> このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 - `VRDisplay` がシーンを表示していないときは、 {{domxref("Window.requestAnimationFrame")}} と等価に動作します。
 - `VRDisplay` が表示されている場合は、ネイティブのリフレッシュレートでコールバックが呼び出されます。
@@ -16,7 +16,7 @@ original_slug: Web/API/VRDevice/requestAnimationFrame
 ## 構文
 
 ```js
-requestAnimationFrame(callback)
+requestAnimationFrame(callback);
 ```
 
 ### 引数
@@ -91,7 +91,8 @@ function drawVRScene() {
 }
 ```
 
-> **メモ:** この完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で見ることができます。
+> [!NOTE]
+> この完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で見ることができます。
 
 ## 仕様書
 
@@ -105,5 +106,4 @@ function drawVRScene() {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

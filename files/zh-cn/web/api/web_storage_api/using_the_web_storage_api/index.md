@@ -3,16 +3,18 @@ title: 使用 Web Storage API
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
 
+{{DefaultAPISidebar("Web Storage API")}}
+
 Web Storage API 提供了存储机制，通过该机制，浏览器可以安全地存储键值对，比使用 cookie 更加直观。这篇文章一步一步讲解如何使用这项简单的技术。
 
 ## 基本概念
 
-存储对象是简单的键值存储，类似于对象，但是它们在页面加载时保持完整。键和值始终是字符串（请注意，与对象一样，整数键将自动转换为字符串）。您可以像访问对象一样访问这些值，或者使用 {{domxref("Storage.getItem()")}} 和 {{domxref("Storage.setItem()")}} 方法。这三行都设置了（相同的）colorSetting 条目：
+存储对象是简单的键值存储，类似于对象，但是它们在页面加载时保持完整。键和值始终是字符串（请注意，与对象一样，整数键将自动转换为字符串）。你可以像访问对象一样访问这些值，或者使用 {{domxref("Storage.getItem()")}} 和 {{domxref("Storage.setItem()")}} 方法。这三行都设置了（相同的）colorSetting 条目：
 
 ```js
-localStorage.colorSetting = '#a4509b';
-localStorage['colorSetting'] = '#a4509b';
-localStorage.setItem('colorSetting', '#a4509b');
+localStorage.colorSetting = "#a4509b";
+localStorage["colorSetting"] = "#a4509b";
+localStorage.setItem("colorSetting", "#a4509b");
 ```
 
 Web Storage 包含如下两种机制：
@@ -20,7 +22,7 @@ Web Storage 包含如下两种机制：
 - `sessionStorage` 为每一个给定的源（given origin）维持一个独立的存储区域，该存储区域在页面会话期间可用（即只要浏览器处于打开状态，包括页面重新加载和恢复）。
 - `localStorage` 同样的功能，但是在浏览器关闭，然后重新打开后数据仍然存在。
 
-这两种机制是通过 {{domxref("Window.sessionStorage")}} 和 {{domxref("Window.localStorage")}} 属性使用（更确切的说，在支持的浏览器中 `Window` 对象实现了 `WindowLocalStorage` 和 `WindowSessionStorage` 对象并挂在其 `localStorage` 和 `sessionStorage` 属性下）—— 调用其中任一对象会创建 {{domxref("Storage")}} 对象，通过 {{domxref("Storage")}} 对象，可以设置、获取和移除数据项。对于每个源（origin）`sessionStorage` 和 `localStorage` 使用不同的 Storage 对象——独立运行和控制。
+这两种机制是通过 {{domxref("Window.sessionStorage")}} 和 {{domxref("Window.localStorage")}} 属性使用（更确切的说，在支持的浏览器中 `Window` 对象实现了 `WindowLocalStorage` 和 `WindowSessionStorage` 对象并挂在其 `localStorage` 和 `sessionStorage` 属性下）——调用其中任一对象会创建 {{domxref("Storage")}} 对象，通过 {{domxref("Storage")}} 对象，可以设置、获取和移除数据项。对于每个源（origin）`sessionStorage` 和 `localStorage` 使用不同的 Storage 对象——独立运行和控制。
 
 例如，在文档中调用 `localStorage` 将会返回一个 {{domxref("Storage")}} 对象；调用 `sessionStorage` 返回一个不同的 {{domxref("Storage")}} 对象。可以使用相同的方式操作这些对象，但是操作是独立的。
 
@@ -38,43 +40,44 @@ Web Storage 包含如下两种机制：
 
 ```js
 function storageAvailable(type) {
-    var storage;
-    try {
-        storage = window[type];
-        var x = '__storage_test__';
-        storage.setItem(x, x);
-        storage.removeItem(x);
-        return true;
-    }
-    catch(e) {
-        return e instanceof DOMException && (
-            // everything except Firefox
-            e.code === 22 ||
-            // Firefox
-            e.code === 1014 ||
-            // test name field too, because code might not be present
-            // everything except Firefox
-            e.name === 'QuotaExceededError' ||
-            // Firefox
-            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-            // acknowledge QuotaExceededError only if there's something already stored
-            (storage && storage.length !== 0);
-    }
+  var storage;
+  try {
+    storage = window[type];
+    var x = "__storage_test__";
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (e) {
+    return (
+      e instanceof DOMException &&
+      // everything except Firefox
+      (e.code === 22 ||
+        // Firefox
+        e.code === 1014 ||
+        // test name field too, because code might not be present
+        // everything except Firefox
+        e.name === "QuotaExceededError" ||
+        // Firefox
+        e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+      // acknowledge QuotaExceededError only if there's something already stored
+      storage &&
+      storage.length !== 0
+    );
+  }
 }
 ```
 
-这是您将如何使用它：
+这是你将如何使用它：
 
 ```js
-if (storageAvailable('localStorage')) {
+if (storageAvailable("localStorage")) {
   // Yippee! We can use localStorage awesomeness
-}
-else {
+} else {
   // Too bad, no localStorage for us
 }
 ```
 
-您可以通过调用 `storageAvailable('sessionStorage')` 来测试 sessionStorage。
+你可以通过调用 `storageAvailable('sessionStorage')` 来测试 sessionStorage。
 
 请参阅此处，[brief history of feature-detecting localStorage](https://gist.github.com/paulirish/5558557).。
 
@@ -88,14 +91,15 @@ else {
 
 ![](event-output.png)
 
-> **备注：** 除了使用上面的链接查看示例页面外，还可以[获取源码](https://github.com/mdn/dom-examples/tree/master/web-storage)。
+> [!NOTE]
+> 除了使用上面的链接查看示例页面外，还可以[获取源码](https://github.com/mdn/dom-examples/tree/master/web-storage)。
 
 ### 测试本地存储是否已被填充
 
 在 [main.js](https://github.com/mdn/dom-examples/blob/master/web-storage/main.js) 开头，我们先测试本地存储是否已被填充（即，页面之前被访问过）：
 
 ```js
-if(!localStorage.getItem('bgcolor')) {
+if (!localStorage.getItem("bgcolor")) {
   populateStorage();
 } else {
   setStyles();
@@ -104,7 +108,8 @@ if(!localStorage.getItem('bgcolor')) {
 
 {{domxref("Storage.getItem()")}} 方法用来从存储中获取一个数据项。该例中，我们测试 `bgcolor` 数据项是否存在。如果不存在，执行 `populateStorage()` 来将存在的自定义值添加到存储中。如果有值存在，则执行 `setStyles()` 来使用存储的值更新页面的样式。
 
-> **备注：** 你还可以使用 {{domxref("Storage.length")}} 来测试存储对象是否为空。
+> [!NOTE]
+> 你还可以使用 {{domxref("Storage.length")}} 来测试存储对象是否为空。
 
 ### 从存储中获取值
 
@@ -112,17 +117,17 @@ if(!localStorage.getItem('bgcolor')) {
 
 ```js
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  var currentColor = localStorage.getItem("bgcolor");
+  var currentFont = localStorage.getItem("font");
+  var currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = "#" + currentColor;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 
@@ -134,9 +139,9 @@ function setStyles() {
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
-  localStorage.setItem('font', document.getElementById('font').value);
-  localStorage.setItem('image', document.getElementById('image').value);
+  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
+  localStorage.setItem("font", document.getElementById("font").value);
+  localStorage.setItem("image", document.getElementById("image").value);
 
   setStyles();
 }
@@ -159,12 +164,12 @@ imageForm.onchange = populateStorage;
 在事件结果页面中的 JavaScript 如下所示（可见 [events.js](https://github.com/mdn/dom-examples/blob/master/web-storage/event.js)）：
 
 ```js
-window.addEventListener('storage', function(e) {
-  document.querySelector('.my-key').textContent = e.key;
-  document.querySelector('.my-old').textContent = e.oldValue;
-  document.querySelector('.my-new').textContent = e.newValue;
-  document.querySelector('.my-url').textContent = e.url;
-  document.querySelector('.my-storage').textContent = e.storageArea;
+window.addEventListener("storage", function (e) {
+  document.querySelector(".my-key").textContent = e.key;
+  document.querySelector(".my-old").textContent = e.oldValue;
+  document.querySelector(".my-new").textContent = e.newValue;
+  document.querySelector(".my-url").textContent = e.url;
+  document.querySelector(".my-storage").textContent = e.storageArea;
 });
 ```
 
@@ -187,7 +192,8 @@ Web Storage 提供了一对简单的方法用于移除数据。我们没用在�
 
 各浏览器支持的 localStorage 和 sessionStorage 容量上限不同。测试页面 [detailed rundown of all the storage capacities for various browsers](http://dev-test.nemikor.com/web-storage/support-test/)。
 
-> **备注：** 从 ios 5.1 后，Safari 移动存储本地存储的数据在缓存文件夹，这样在系统空间不足的情况下，方便系统自动清理。
+> [!NOTE]
+> 从 ios 5.1 后，Safari 移动存储本地存储的数据在缓存文件夹，这样在系统空间不足的情况下，方便系统自动清理。
 
 ## 相关链接
 

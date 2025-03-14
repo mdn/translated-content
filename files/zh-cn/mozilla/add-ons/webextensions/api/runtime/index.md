@@ -10,7 +10,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime
 它提供一组消息通信 API，允许你：
 
 - 在附加组件的不同模块间通信。
-- 和其它的附加组件通信。
+- 和其他的附加组件通信。
 - 和 native 应用通信。
 
 ## Types
@@ -44,7 +44,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime
 - {{WebExtAPIRef("runtime.getBackgroundPage()")}}
   - : 取得当前扩展的后台页的 [Window](/zh-CN/docs/Web/API/Window) 对象。
 - {{WebExtAPIRef("runtime.openOptionsPage()")}}
-  - : 打开你的扩展的 [选项页面](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages)。
+  - : 打开你的扩展的 [选项页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages)。
 - {{WebExtAPIRef("runtime.getManifest()")}}
   - : 获得完整的 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 声明文件的序列化对象。
 - {{WebExtAPIRef("runtime.getURL()")}}
@@ -99,9 +99,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime
 
 {{Compat}} {{WebExtExamples("h2")}}
 
-> **备注：** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.google.cn/docs/extensions/reference/api/runtime) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

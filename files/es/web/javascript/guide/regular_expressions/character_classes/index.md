@@ -1,22 +1,25 @@
 ---
 title: Clases de caracteres
-slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
-tags:
-  - Expresiones Regulares
-  - Guía
-  - JavaScript
-  - Referencia
-  - RegExp
-  - clases de caracteres
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
-original_slug: Web/JavaScript/Guide/Regular_Expressions/Clases_de_caracteres
+slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 ---
 
 {{JsSidebar("Guía de JavaScript")}}
 
 Las clases de caracteres distinguen tipos de caracteres como, por ejemplo, distinguen entre letras y dígitos.
 
-{{EmbedInteractiveExample("pages/js/regexp-character-classes.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp Character classes")}}
+
+```js interactive-example
+const chessStory = "He played the King in a8 and she moved her Queen in c2.";
+const regexpCoordinates = /\w\d/g;
+console.log(chessStory.match(regexpCoordinates));
+// Expected output: Array [ 'a8', 'c2']
+
+const moods = "happy 🙂, confused 😕, sad 😢";
+const regexpEmoticons = /[\u{1F600}-\u{1F64F}]/gu;
+console.log(moods.match(regexpEmoticons));
+// Expected output: Array ['🙂', '😕', '😢']
+```
 
 ## Tipos
 
@@ -153,7 +156,6 @@ var regexpCuatroDigitos = /\b\d{4}\b/g;
 // \d{4} indica un dígito, cuatro veces
 // \b indica otro límite (es decir, no termina la coincidencia en medio de una palabra)
 
-
 console.table(datosAleatorios.match(regexpCuatroDigitos));
 // ['8787', '3512', '8735']
 ```
@@ -161,7 +163,8 @@ console.table(datosAleatorios.match(regexpCuatroDigitos));
 ### Busca una palabra (del alfabeto latino) que comience con A
 
 ```js
-var extractoAlicia = "Estoy segura de que no soy Ada, dijo, 'porque su cabello se hace en rizos tan largos, y el mío no se riza en absoluto'.";
+var extractoAlicia =
+  "Estoy segura de que no soy Ada, dijo, 'porque su cabello se hace en rizos tan largos, y el mío no se riza en absoluto'.";
 var regexpPalabraEmpiezaConA = /\b[aA]\w+/g;
 // \b indica un límite (es decir, no empieza a coincidir en medio de una palabra)
 // [aA] indica las letras a o A
@@ -181,16 +184,14 @@ var regexpPalabraBMP = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
 // BMP pasa por U+0000 a U+FFFF pero el espacio es U+0020
 
 console.table(textoNoEs.match(regexpPalabraBMP));
-[ 'Приключения', 'Алисы', 'в', 'Стране', 'чудес' ]
+["Приключения", "Алисы", "в", "Стране", "чудес"];
 ```
 
 Nota para los editores de MDN: no intentes agregar ejemplos divertidos con emojis, ya que esos caracteres no los maneja la plataforma (Kuma).
 
 ## Especificaciones
 
-| Especificación                                                                                           |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-characterclass', 'RegExp: Clases de caracteres')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

@@ -1,21 +1,24 @@
 ---
 title: WritableStreamDefaultController
 slug: Web/API/WritableStreamDefaultController
+l10n:
+  sourceCommit: 6a852f07c0b077df0d7b82d3eff99837fc6eff36
 ---
 
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
-[Streams API](/ja/docs/Web/API/Streams_API) の **`WritableStreamDefaultController`** インターフェイスは、{{domxref("WritableStream")}} の状態を制御できるコントローラーを表します。 `WritableStream` を構築する場合、基になるシンクには、対応する `WritableStreamDefaultController` インスタンスが与えられて操作します。
+**`WritableStreamDefaultController`** は[ストリーム API](/ja/docs/Web/API/Streams_API) のインターフェイスで、{{domxref("WritableStream")}} の状態を制御できるコントローラーを表します。 `WritableStream` を構築する場合、基になるシンクには、操作のために対応する `WritableStreamDefaultController` インスタンスが与えられます。
 
 ## コンストラクター
 
 なし。 `WritableStreamDefaultController` インスタンスは、`WritableStream` の構築中に自動的に作成されます。
 
-## プロパティ
+## インスタンスプロパティ
 
-なし。
+- {{domxref("WritableStreamDefaultController.signal")}} {{ReadOnlyInline}}
+  - : このコントローラーに関連付けられた {{domxref("AbortSignal")}} です。
 
-## メソッド
+## インスタンスメソッド
 
 - {{domxref("WritableStreamDefaultController.error()")}}
   - : 関連するストリームとの今後のやり取りでエラーが発生します。
@@ -28,26 +31,24 @@ const writableStream = new WritableStream({
     // コントローラーで何かをする
 
     // 必要に応じてストリームをエラーにする
-    controller.error('My stream is broken');
+    controller.error("My stream is broken");
   },
   write(chunk, controller) {
-    ...
+    // ...
   },
   close(controller) {
-    ...
+    // ...
   },
   abort(err) {
-    ...
-  }
+    // ...
+  },
 });
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                 | 状態                         | コメント |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Streams','#ws-default-controller-class','WritableStreamDefaultController')}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.WritableStreamDefaultController")}}
+{{Compat}}

@@ -1,6 +1,9 @@
 ---
-title: Range.endOffset
+title: "Range: endOffset プロパティ"
+short-title: endOffset
 slug: Web/API/Range/endOffset
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
 {{ApiRef("DOM")}}
@@ -18,8 +21,8 @@ slug: Web/API/Range/endOffset
 ```js
 const range = document.createRange();
 
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
 endRangeOffset = range.endOffset;
 ```
 

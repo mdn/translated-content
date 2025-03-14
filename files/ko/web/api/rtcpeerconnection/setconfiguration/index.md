@@ -1,8 +1,8 @@
 ---
 title: RTCPeerConnection.setConfiguration()
 slug: Web/API/RTCPeerConnection/setConfiguration
-translation_of: Web/API/RTCPeerConnection/setConfiguration
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCPeerConnection.setConfiguration()`** 메소드는 {{domxref("RTCConfiguration")}}객체에 명시한 값을 가지고 {{domxref("RTCPeerConnection")}}의 현재 설정을 지정합니다. 이 메소드를 사용해서 연결에서 사용되는 ICE 서버와 전송 정책을 변경 할 수 있습니다.
@@ -12,7 +12,8 @@ translation_of: Web/API/RTCPeerConnection/setConfiguration
 - {{domxref("RTCPeerConnection")}}가 ICE 서버를 명시하지 않고 시작된 경우. 예를 들어, {{domxref("RTCPeerConnection.RTCPeerConnection()", "RTCPeerConnection()")}} 생성자를 매개변수 없이 호출하게되면, 개발자가 직접 `setConfiguration()`를 호출해서 ICE 협상 시작 전에 ICE 서버를 추가해줘야 합니다.
 - 연결의 재협상이 필요하거나, 어떤 이유로 인해서 다른 종류의 ICE 서버를 사용해야하는 경우. 예를 들어, 사용자가 새로운 지역으로 이동을 했기 때문에 지역 ICE 서버를 바꿔야하는 경우입니다. 이런 경우에는, `setConfiguration()`를 호출해서 신규 지역 ICE 서버로 바꿔주고, [ICE restart](/ko/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart)을 시작하게됩니다.
 
-> **참고:** 연결이 이미 설정이 되어있다면, 식별 정보는 변경 할 수 없습니다.
+> [!NOTE]
+> 연결이 이미 설정이 되어있다면, 식별 정보는 변경 할 수 없습니다.
 
 ## Syntax
 
@@ -41,31 +42,34 @@ RTCPeerConnection.setConfiguration(configuration);
 아래의 예시에서는 ICE 재시작이 필요한 것을 확인하고, 다른 ICE 서버를 사용해서 협상이 이루어지도록 합니다.
 
 ```js
-var restartConfig = { iceServers: [{
-                          urls: "turn:asia.myturnserver.net",
-                          username: "allie@oopcode.com",
-                          credential: "topsecretpassword"
-                      }]
+var restartConfig = {
+  iceServers: [
+    {
+      urls: "turn:asia.myturnserver.net",
+      username: "allie@oopcode.com",
+      credential: "topsecretpassword",
+    },
+  ],
 };
 
 myPeerConnection.setConfiguration(restartConfig);
 
-myPeerConnection.createOffer({"iceRestart": true}).then(function(offer) {
-  return myPeerConnection.setLocalDescription(offer);
-})
-.then(function() {
-  // send the offer to the other peer using the signaling server
-})
-.catch(reportError);
+myPeerConnection
+  .createOffer({ iceRestart: true })
+  .then(function (offer) {
+    return myPeerConnection.setLocalDescription(offer);
+  })
+  .then(function () {
+    // send the offer to the other peer using the signaling server
+  })
+  .catch(reportError);
 ```
 
 먼저, 신규 {{domxref("RTCConfiguration")}}가 신규 ICE 서버와 인증 정보를 명시한 `restartConfig`를 가지도록 생성됩니다. 그리고 설정한 {{domxref("RTCConfiguration")}}가 `setConfiguration()`에 전달됩니다. `iceRestart` 옵션의 값을 `true`로 지정하고, {{domxref("RTCPeerConnection.createOffer()", "createOffer()")}}을 호출해서 ICE 협상이 재시작됩니다. 이후에, 반환받은 offer를 local description으로 설정하고, 다른 피어에게 offer를 전달하는 것과 같이 일반적으로 진행되도록 처리합니다.
 
-## 사양서
+## 명세서
 
-| 사양서                                                                                                                                                                       | 상태                             | 코멘트              |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('WebRTC 1.0', '#widl-RTCPeerConnection-setConfiguration-void-RTCConfiguration-configuration', 'setConfiguration()')}} | {{Spec2('WebRTC 1.0')}} | Initial definition. |
+{{Specifications}}
 
 ## 브라우저 호환성
 

@@ -1,15 +1,17 @@
 ---
 title: JavaScript で queueMicrotask() によるマイクロタスクの使用
 slug: Web/API/HTML_DOM_API/Microtask_guide
+l10n:
+  sourceCommit: b21df53ffbb066cfb9347d7f0e5aebb792ed73e5
 ---
 
 {{APIRef("HTML DOM")}}
 
-**マイクロタスク**は、それを作成した関数やプログラムが終了した後、 [JavaScript 実行スタック](/ja/docs/Web/JavaScript/EventLoop#stack)が空の場合にのみ実行され、{{Glossary("user agent", "ユーザーエージェント")}}がスクリプトの実行環境を動かすために使用しているイベントループにコントロールを返す前に実行される短い関数です。
+**マイクロタスク**は、それを作成した関数やプログラムが終了した後、 [JavaScript 実行スタック](/ja/docs/Web/JavaScript/Event_loop#stack)が空の場合にのみ実行され、{{Glossary("user agent", "ユーザーエージェント")}}がスクリプトの実行環境を動かすために使用しているイベントループにコントロールを返す前に実行される短い関数です。
 
 このイベントループは、ブラウザーのメインイベントループか、[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)を駆動するイベントループのどちらかです。これにより、他のスクリプトの実行を妨げるリスクなしに与えられた関数を実行することができ、同時に、ユーザーエージェントがマイクロタスクによって行われるアクションに反応する機会を得る前に、マイクロタスクが確実に実行されるようにします。
 
-JavaScript の[プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)と[変更監視 API](/ja/docs/Web/API/MutationObserver) は、どちらもコールバック実行にマイクロタスクキューを使用しますが、現在のイベントループパスがラップされるまで作業を遅延する能力がある他の場合があります。サードパーティのライブラリー、フレームワーク、ポリフィルによってマイクロタスクが使用できるようにするために、 {{domxref("queueMicrotask()")}} メソッドが {{domxref("Window")}} と {{domxref("Worker")}} インターフェイスで公開されています。
+JavaScript の[プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)と[変更監視 API](/ja/docs/Web/API/MutationObserver) は、どちらもコールバック実行にマイクロタスクキューを使用しますが、他にも、現在のイベントループのパスが終了するまで作業を延期する機能が役に立つ時があります。サードパーティのライブラリー、フレームワーク、ポリフィルによってマイクロタスクが使用できるようにするために、 {{domxref("queueMicrotask()")}} メソッドが {{domxref("Window")}} と {{domxref("Worker")}} インターフェイスで公開されています。
 
 ## タスクとマイクロタスク
 
@@ -25,7 +27,7 @@ JavaScript の[プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Pr
 - イベントが発生し、イベントのコールバック関数がタスクキューに追加された場合。
 - {{domxref("setTimeout()")}} または {{domxref("setInterval()")}} で作成したタイムアウトまたはインターバルに達すると、対応するコールバックがタスクキューに追加されます。
 
-コードを駆動するイベントループは、これらのタスクがキューに入れられた順番に次々と処理します。タスクキューで最も古い実行可能なタスクは、イベントループの 1 回の反復の間に実行されます。その後、マイクロタスクはマイクロタスクキューが空になるまで実行され、ブラウザーはレンダリングの更新を選択できます。その後、ブラウザーはイベントループの次の反復処理に移行します。
+コードを駆動するイベントループは、これらのタスクがキューに入れられた順番に次々と処理します。イベントループの一回の処理中に、タスクキューで最も古い実行可能なタスクが実行されます。その後、マイクロタスクキューが空になるまでマイクロタスクが実行され、ブラウザーはレンダリングの更新を選べます。その後、ブラウザーはイベントループの次の反復処理に移されます。
 
 ### マイクロタスク
 
@@ -37,7 +39,8 @@ JavaScript の[プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Pr
 
 次に、マイクロタスクが {{domxref("queueMicrotask()")}} を呼び出してキューにさらにマイクロタスクを追加すると、それらの新しく追加されたマイクロタスクは次のタスクが実行される前に*実行*されます。これは、イベントループが、たとえ追加され続けても、キューに何も残らなくなるまでマイクロタスクを呼び続けるからです。
 
-> **警告:** マイクロタスクはそれ自身がさらにマイクロタスクをキューに入れることができ、イベントループはキューが空になるまでマイクロタスクを処理し続けるので、イベントループがマイクロタスクを延々と処理し続けるという現実的なリスクが存在します。再帰的にマイクロタスクを追加する方法には注意が必要です。
+> [!WARNING]
+> マイクロタスクはそれ自身がさらにマイクロタスクをキューに入れることができ、イベントループはキューが空になるまでマイクロタスクを処理し続けるので、イベントループがマイクロタスクを延々と処理し続けるという現実的なリスクが存在します。再帰的にマイクロタスクを追加する方法には注意が必要です。
 
 ## マイクロタスクの使用
 
@@ -47,7 +50,7 @@ JavaScript の[プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Pr
 
 そのため、通常、マイクロタスクは他に解決策がない場合、または実装している機能を作るためにマイクロタスクを使う必要があるフレームワークやライブラリーを作る場合にのみ、使用すべきです。これまでもマイクロタスクをキューに挿入するためのトリックはありましたが（すぐに解決するプロミスを作るなど）、{{domxref("queueMicrotask()")}} メソッドの追加により、トリックなしで安全にマイクロタスクを導入するための標準的な方法が追加されました。
 
-`queueMicrotask()` を導入することで、マイクロタスクを作成するためにプロミスを使用してこっそり行うときに発生する癖を回避することができます。例えば、マイクロタスクを作成するためにプロミスを使用する場合、コールバックによって投げられた例外は標準的な例外として報告されるのではなく、プロミスが拒否されたものとして報告されます。また、プロミスの作成と破棄は、マイクロタスクを適切にキューに挿入する関数が回避する、時間とメモリの両方において追加のオーバーヘッドを取ります。
+`queueMicrotask()` を導入することで、マイクロタスクを作成するためにプロミスを使用してこっそり行うときに発生する癖を回避することができます。例えば、マイクロタスクを作成するためにプロミスを使用する場合、コールバックによって投げられた例外は標準的な例外として報告されるのではなく、プロミスが拒否されたものとして報告されます。また、プロミスの作成と破棄は、マイクロタスクを適切にキューに挿入する関数が回避する、時間とメモリーの両方において追加のオーバーヘッドを取ります。
 
 コンテキストがマイクロタスクを処理している間に呼び出す JavaScript 関数 ({{jsxref("Function")}}) を `queueMicrotask()` メソッドに渡します。このメソッドは、現在の実行コンテキストに応じて {{domxref("Window")}} または {{domxref("Worker")}} インターフェイスによって定義されたグローバルコンテキストで公開されます。
 
@@ -72,16 +75,18 @@ queueMicrotask(() => {
 マイクロタスクが実行順序が常に一貫していることを保証するために使われる 1 つの状況は、プロミスが `if...else` 文（または他の条件文）の 1 つの節で使われ、他の節では使われないときです。次のようなコードを考えてみてください。
 
 ```js
-customElement.prototype.getData = url => {
+customElement.prototype.getData = (url) => {
   if (this.cache[url]) {
     this.data = this.cache[url];
     this.dispatchEvent(new Event("load"));
   } else {
-    fetch(url).then(result => result.arrayBuffer()).then(data => {
-      this.cache[url] = data;
-      this.data = data;
-      this.dispatchEvent(new Event("load"));
-    });
+    fetch(url)
+      .then((result) => result.arrayBuffer())
+      .then((data) => {
+        this.cache[url] = data;
+        this.data = data;
+        this.dispatchEvent(new Event("load"));
+      });
   }
 };
 ```
@@ -90,7 +95,7 @@ customElement.prototype.getData = url => {
 
 ```js
 element.addEventListener("load", () => console.log("Loaded data"));
-console.log("Fetching data...");
+console.log("Fetching data…");
 element.getData();
 console.log("Data fetched");
 ```
@@ -99,7 +104,7 @@ console.log("Data fetched");
 
 データをキャッシュしていない場合
 
-```
+```plain
 Fetching data
 Data fetched
 Loaded data
@@ -107,7 +112,7 @@ Loaded data
 
 データをキャッシュしている場合
 
-```
+```plain
 Fetching data
 Loaded data
 Data fetched
@@ -118,23 +123,25 @@ Data fetched
 この 2 つの節のバランスをとるために、 `if` 節でマイクロタスクを使用することで、これらの操作の一貫した順序を保証することができます。
 
 ```js
-customElement.prototype.getData = url => {
+customElement.prototype.getData = (url) => {
   if (this.cache[url]) {
     queueMicrotask(() => {
       this.data = this.cache[url];
       this.dispatchEvent(new Event("load"));
     });
   } else {
-    fetch(url).then(result => result.arrayBuffer()).then(data => {
-      this.cache[url] = data;
-      this.data = data;
-      this.dispatchEvent(new Event("load"));
-    });
+    fetch(url)
+      .then((result) => result.arrayBuffer())
+      .then((data) => {
+        this.cache[url] = data;
+        this.data = data;
+        this.dispatchEvent(new Event("load"));
+      });
   }
 };
 ```
 
-これは、マイクロタスク内で `data` の設定と `load` イベントの発行の両方を処理させることで、節のバランスを取っています（`if` 節では `queueMicrotask()` を使い、 `else` 節では {{domxref("fetch()")}} が使うプロミスを使用する）。
+これは、マイクロタスク内で `data` の設定と `load` イベントの発行の両方を処理させることで、節のバランスを取っています（`if` 節では `queueMicrotask()` を使い、 `else` 節では {{domxref("Window/fetch", "fetch()")}} が使うプロミスを使用する）。
 
 #### 操作のバッチ化
 
@@ -145,7 +152,7 @@ customElement.prototype.getData = url => {
 ```js
 const messageQueue = [];
 
-let sendMessage = message => {
+let sendMessage = (message) => {
   messageQueue.push(message);
 
   if (messageQueue.length === 1) {
@@ -162,7 +169,7 @@ let sendMessage = message => {
 
 配列に追加したメッセージが最初のものであれば、バッチを送信するマイクロタスクをキューに入れます。マイクロタスクは、いつものように、 JavaScript の実行パスが最上位に達したとき、コールバックを実行する直前に実行されます。つまり、その間に行われる `sendMessage()` のさらなる呼び出しは、メッセージをメッセージキューにプッシュしますが、マイクロタスクを追加する前に配列の長さをチェックするため、新しいマイクロタスクはキューに入れません。
 
-マイクロタスクが実行されるとき、それは潜在的に多くのメッセージが待っている配列を持っています。それは、 {{jsxref("JSON.stringify()")}} メソッドを使用して JSON としてそれをエンコードすることから始まります。その後、配列の内容が不要になったので、 `messageQueue` 配列を空にします。最後に、{{domxref("fetch()")}} メソッドを用いて、 JSON 文字列をサーバーに送信します。
+マイクロタスクが実行されるとき、それは潜在的に多くのメッセージが待っている配列を持っています。それは、 {{jsxref("JSON.stringify()")}} メソッドを使用して JSON としてそれをエンコードすることから始まります。その後、配列の内容が不要になったので、 `messageQueue` 配列を空にします。最後に、{{domxref("Window/fetch", "fetch()")}} メソッドを用いて、 JSON 文字列をサーバーに送信します。
 
 これにより、イベントループの同じイテレーションの中で行われる `sendMessage()` のすべての呼び出しが、タイムアウトなどの他のタスクによって送信が遅れる可能性を排除して、同じ `fetch()` 操作にメッセージを追加することができます。
 
@@ -175,15 +182,14 @@ let sendMessage = message => {
 この単純な例では、マイクロタスクをキューに入れるすることで、この最上位スクリプトの本体が実行され終わった後に、マイクロタスクのコールバックが実行されることがわかります。
 
 ```html hidden
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
 
 ```js hidden
-let logElem = document.getElementById("log");
-let log = s => logElem.innerHTML += s + "<br>";
+const logElem = document.getElementById("log");
+const log = (s) => (logElem.innerText += `${s}\n`);
 ```
 
 次のコードでは、マイクロタスクの実行をスケジュールするために {{domxref("queueMicrotask()")}} を呼び出しています。この呼び出しは、画面にテキストを出力するカスタム関数である `log()` への呼び出しで括られています。
@@ -191,7 +197,7 @@ let log = s => logElem.innerHTML += s + "<br>";
 ```js
 log("Before enqueueing the microtask");
 queueMicrotask(() => {
-  log("The microtask has run.")
+  log("The microtask has run.");
 });
 log("After enqueueing the microtask");
 ```
@@ -205,15 +211,14 @@ log("After enqueueing the microtask");
 この例では、タイムアウトは 0 ミリ秒後に（または「できるだけ早く」）発生するようにスケジュールされています。これは、新しいタスクをスケジューリングするとき（例えば `setTimeout()`）とマイクロタスクを使うときの「できるだけ早く」が何を意味するかの違いを示しています。
 
 ```html hidden
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
 
 ```js hidden
-let logElem = document.getElementById("log");
-let log = s => logElem.innerHTML += s + "<br>";
+const logElem = document.getElementById("log");
+const log = (s) => (logElem.innerText += `${s}\n`);
 ```
 
 次のコードでは、マイクロタスクの実行をスケジュールするために {{domxref("queueMicrotask()")}} を呼び出しています。この呼び出しは、画面にテキストを出力するカスタム関数である `log()` への呼び出しで括られています。
@@ -221,9 +226,9 @@ let log = s => logElem.innerHTML += s + "<br>";
 以下のコードでは、 0 ミリ秒後にタイムアウトが発生するようにスケジュールし、マイクロタスクをキューに入れています。これは、追加のメッセージを出力するために `log()` を呼び出すことで括られています。
 
 ```js
-let callback = () => log("Regular timeout callback has run");
+const callback = () => log("Regular timeout callback has run");
 
-let urgentCallback = () => log("*** Oh noes! An urgent callback has run!");
+const urgentCallback = () => log("*** Oh noes! An urgent callback has run!");
 
 log("Main program started");
 setTimeout(callback, 0);
@@ -242,30 +247,29 @@ log("Main program exiting");
 この例では、いくつかの作業を行う関数を追加することで、前の例を少し拡張しています。この関数は `queueMicrotask()` を使ってマイクロタスクのスケジューリングを行っています。この例で重要なことは、マイクロタスクは関数が終了するときに処理されるのではなく、メインプログラムが終了するときに処理されるということです。
 
 ```html hidden
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
 
 ```js hidden
-let logElem = document.getElementById("log");
-let log = s => logElem.innerHTML += s + "<br>";
+const logElem = document.getElementById("log");
+const log = (s) => (logElem.innerText += `${s}\n`);
 ```
 
 メインプログラムのコードは以下の通りです。ここで `doWork()` 関数は `queueMicrotask()` を呼び出しますが、それでもマイクロタスクはプログラム全体が終了するまで起動しません。なぜなら、タスクが終了して実行スタック上に何もなくなったときがそうだからです。
 
 ```js
-let callback = () => log("Regular timeout callback has run");
+const callback = () => log("Regular timeout callback has run");
 
-let urgentCallback = () => log("*** Oh noes! An urgent callback has run!");
+const urgentCallback = () => log("*** Oh noes! An urgent callback has run!");
 
-let doWork = () => {
+const doWork = () => {
   let result = 1;
 
   queueMicrotask(urgentCallback);
 
-  for (let i=2; i<=10; i++) {
+  for (let i = 2; i <= 10; i++) {
     result *= i;
   }
   return result;
@@ -275,7 +279,6 @@ log("Main program started");
 setTimeout(callback, 0);
 log(`10! equals ${doWork()}`);
 log("Main program exiting");
-log("Regular timeout callback has run");
 ```
 
 #### 結果
@@ -287,9 +290,6 @@ log("Regular timeout callback has run");
 - [徹底解説: マイクロタスクと JavaScript ランタイム環境](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth)
 - {{domxref("queueMicrotask()")}}
 - [非同期 JavaScript](/ja/docs/Learn/JavaScript/Asynchronous)
-
-  - [非同期プログラミングの一般的概念](/ja/docs/Learn/JavaScript/Asynchronous/Concepts)
-  - [非同期 JavaScript 入門](/ja/docs/Learn/JavaScript/Asynchronous/Introducing)
-  - [強調的非同期 JavaScript: タイムアウトとインターバル](/ja/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
-  - [プロミスによる礼儀正しい非同期プログラミング](/ja/docs/Learn/JavaScript/Asynchronous/Promises)
-  - [正しいアプローチの選択](/ja/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)
+  - [非同期 JavaScript 入門](/ja/docs/Learn_web_development/Extensions/Async_JS/Introducing)
+  - [強調的非同期 JavaScript: タイムアウトとインターバル](/ja/docs/Learn/JavaScript/Asynchronous)
+  - [プロミスによる礼儀正しい非同期プログラミング](/ja/docs/Learn_web_development/Extensions/Async_JS/Promises)

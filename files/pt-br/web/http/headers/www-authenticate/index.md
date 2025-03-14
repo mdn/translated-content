@@ -31,7 +31,7 @@ WWW-Authenticate: <type> realm=<realm>
 ## Diretivas
 
 - \<type>
-  - : [Tipo de autenticação.](/pt-BR/docs/Web/HTTP/Authentication#Authentication_schemes) Um tipo comum de autenticação é ["Basic"](/pt-BR/docs/Web/HTTP/Authentication#Basic_authentication_scheme). IANA mantém uma [lista de esquema de autenticação](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
+  - : [Tipo de autenticação.](/pt-BR/docs/Web/HTTP/Authentication#authentication_schemes) Um tipo comum de autenticação é ["Basic"](/pt-BR/docs/Web/HTTP/Authentication#basic_authentication_scheme). IANA mantém uma [lista de esquema de autenticação](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
 - realm=\<realm>
   - : Uma descrição da área protegida. Se nenhuma área for informada, os clientes frequentemente exibirão um hostname formatado.
 - charset=\<charset>
@@ -51,14 +51,14 @@ Veja também [autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication) para exe
 
 ## Especificações
 
-| Especificação                                            | Título                                 |
-| -------------------------------------------------------- | -------------------------------------- |
+| Especificação                              | Título                                 |
+| ------------------------------------------ | -------------------------------------- |
 | {{RFC("7235", "WWW-Authenticate", "4.1")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                                     | The 'Basic' HTTP Authentication Scheme |
+| {{RFC("7617")}}                            | The 'Basic' HTTP Authentication Scheme |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.WWW-Authenticate")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,14 +1,11 @@
 ---
 title: Subgrid
-slug: Web/CSS/CSS_Grid_Layout/Subgrid
-translation_of: Web/CSS/CSS_Grid_Layout/Subgrid
+slug: Web/CSS/CSS_grid_layout/Subgrid
 ---
 
 {{CSSRef}}
 
 2 уровень спецификации CSS Grid включает в себя значение `subgrid` для свойств [grid-template-columns](/ru/docs/Web/CSS/grid-template-columns) и [grid-template-rows](/ru/docs/Web/CSS/grid-template-rows). Это руководство содержит описание принципа работы subgrid и показывает некоторые примеры использования этой функции.
-
-> **Предупреждение:** **Важно**: Эта функция поставляется с Firefox 71, являющимся в данный момент единственным браузером, в котором реализован subgrid.
 
 ## Введение в subgrid
 
@@ -66,7 +63,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Subgrid
 
 Если вы откроете Firefox Grid Inspector, сможете увидеть, как линия сетки находится в правильном месте по центру промежутка, поэтому когда мы устанавливаем gap = 0, он действует аналогично применению отрицательного margin для элемента, создавая пространство от промежутка обратно до элемента.
 
-![The smaller item displays in the gap as row-gap is set to 0 on the subgrid.](https://mdn.mozillademos.org/files/16628/gap.png)
+![The smaller item displays in the gap as row-gap is set to 0 on the subgrid.](gap.png)
 
 ## Именованные grid-линии
 
@@ -91,8 +88,6 @@ translation_of: Web/CSS/CSS_Grid_Layout/Subgrid
 - На YouTube-канале Mozilla Developers смотрите видео [Laying out forms using subgrid](https://www.youtube.com/watch?v=gmQlK3kRft4) и [Don't Wait To Use Subgrid For Better Card Layouts](https://www.youtube.com/watch?v=lLnFtK1LNu4)
 - [Hello Subgrid!](https://noti.st/rachelandrew/i6gUcF/hello-subgrid) Презентация с CSSConf.eu
 
-## Спецификация
+## Спецификации
 
-| Specification                        | Status                           | Comment                                                                                                   |
-| ------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS Grid 2")}} | {{Spec2("CSS Grid 2")}} | Initial definition of [subgrids](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#subgrid). |
+{{Specifications}}

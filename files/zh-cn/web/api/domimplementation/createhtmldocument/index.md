@@ -7,7 +7,7 @@ slug: Web/API/DOMImplementation/createHTMLDocument
 
 ### 概述
 
-该方法 (属于[`document.implementation`](/zh-CN/DOM/document.implementation)) 用来创建一个新的 HTML 文档。
+该方法 (属于[`document.implementation`](/zh-CN/docs/DOM/document.implementation)) 用来创建一个新的 HTML 文档。
 
 ### 语法
 
@@ -22,13 +22,16 @@ var doc = document.implementation.createHTMLDocument(title);
 
 下面的例子演示如何创建了一个新的 HTML 文档，并把它插入到当前文档的一个{{ HTMLElement("iframe") }}中。
 
-[查看在线演示](/samples/domref/createHTMLDocument.html)
+[查看在线演示](https://mdn.dev/archives/media/samples/domref/createHTMLDocument.html)
 
 例子中的 HTML 代码如下：
 
 ```html
 <body>
-  <p>Click <a href="javascript:makeDocument()">here</a> to create a new document and insert it below.</p>
+  <p>
+    Click <a href="javascript:makeDocument()">here</a> to create a new document
+    and insert it below.
+  </p>
   <iframe id="theFrame" src="about:blank" />
 </body>
 ```
@@ -45,7 +48,7 @@ function makeDocument() {
 
   try {
     doc.body.appendChild(p);
-  } catch(e) {
+  } catch (e) {
     console.log(e);
   }
 
@@ -70,11 +73,10 @@ function makeDocument() {
 ```html
 <!doctype html>
 <html>
-<head>
-<title>title</title>
-</head>
-<body>
-</body>
+  <head>
+    <title>title</title>
+  </head>
+  <body></body>
 </html>
 ```
 
@@ -88,4 +90,4 @@ alert(document.implementation.createHTMLDocument("myTitle").documentElement.oute
 
 ### 规范
 
-- [`createHTMLDocument` specification](http://www.whatwg.org/html/#dom-domhtmlimplementation-createhtmldocument)
+- [`createHTMLDocument` specification](https://www.whatwg.org/html/#dom-domhtmlimplementation-createhtmldocument)

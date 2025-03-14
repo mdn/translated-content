@@ -1,8 +1,6 @@
 ---
 title: Grilles
 slug: Learn/CSS/CSS_layout/Grids
-translation_of: Learn/CSS/CSS_layout/Grids
-original_slug: Apprendre/CSS/CSS_layout/Grids
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
@@ -56,7 +54,7 @@ Pour définir un tramage, on affecte la valeur `grid` à la propriété [`displa
 
 ```css
 .container {
-    display: grid;
+  display: grid;
 }
 ```
 
@@ -71,26 +69,29 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 ```
 
 ```html hidden
 <div class="container">
- <div>Un</div>
- <div>Deux</div>
- <div>Trois</div>
- <div>Quatre</div>
- <div>Cinq</div>
- <div>Six</div>
- <div>Sept</div>
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois</div>
+  <div>Quatre</div>
+  <div>Cinq</div>
+  <div>Six</div>
+  <div>Sept</div>
 </div>
 ```
 
@@ -111,8 +112,8 @@ En changeant la liste des chaînes par la suivante, on crée trois chaînes de `
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 ```
 
@@ -120,8 +121,8 @@ Vous avez maintenant des chaînes de trame adaptables. L'espace est distribué e
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
 }
 ```
 
@@ -132,7 +133,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container {
@@ -143,27 +147,27 @@ body {
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
-
 ```
 
 ```html hidden
 <div class="container">
- <div>Un</div>
- <div>Deux</div>
- <div>Trois</div>
- <div>Quatre</div>
- <div>Cinq</div>
- <div>Six</div>
- <div>Sept</div>
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois</div>
+  <div>Quatre</div>
+  <div>Cinq</div>
+  <div>Six</div>
+  <div>Sept</div>
 </div>
 ```
 
 {{ EmbedLiveSample('', '100%', 400) }}
 
-> **Note :** L'unité `fr` distribue l'espace disponible, et non sa _totalité_. Donc, si une des pistes contient quelque chose de grande taille, il y aura moins d'espace disponible à partager.
+> [!NOTE]
+> L'unité `fr` distribue l'espace disponible, et non sa _totalité_. Donc, si une des pistes contient quelque chose de grande taille, il y aura moins d'espace disponible à partager.
 
 ### Espaces entre pistes
 
@@ -171,9 +175,9 @@ Pour créer des «&nbsp;gouttières&nbsp;» entre chaînes et trames, nous nous 
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
 }
 ```
 
@@ -184,40 +188,43 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
-
 ```
 
 ```html hidden
 <div class="container">
- <div>Un</div>
- <div>Deux</div>
- <div>Trois</div>
- <div>Quatre</div>
- <div>Cinq</div>
- <div>Six</div>
- <div>Sept</div>
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois</div>
+  <div>Quatre</div>
+  <div>Cinq</div>
+  <div>Six</div>
+  <div>Sept</div>
 </div>
 ```
 
 {{ EmbedLiveSample('', '100%', 400) }}
 
-> **Note :** Les propriétés `-gap` (`column-gap`, `row-gap` et `gap`) étaient traditionnellement préfixées par `grid-`, mais la norme a été modifiée avec l'intention de la rendre utilisable dans les diverses méthodes de mise en page. Les versions préfixées seront maintenues en tant qu'alias, de sorte qu'elles seront utilisables en toute sécurité pendant un certain temps. En appliquant le principe de précaution, vous pouvez doubler et mettre les deux types de propriétés pour «&nbsp;blinder&nbsp;» votre code&nbsp;:
+> [!NOTE]
+> Les propriétés `-gap` (`column-gap`, `row-gap` et `gap`) étaient traditionnellement préfixées par `grid-`, mais la norme a été modifiée avec l'intention de la rendre utilisable dans les diverses méthodes de mise en page. Les versions préfixées seront maintenues en tant qu'alias, de sorte qu'elles seront utilisables en toute sécurité pendant un certain temps. En appliquant le principe de précaution, vous pouvez doubler et mettre les deux types de propriétés pour «&nbsp;blinder&nbsp;» votre code&nbsp;:
 >
 > ```css
 > .container {
->     display: grid;
->     grid-template-columns: 2fr 1fr 1fr;
->     grid-gap: 20px;
->     gap: 20px;
+>   display: grid;
+>   grid-template-columns: 2fr 1fr 1fr;
+>   grid-gap: 20px;
+>   gap: 20px;
 > }
 > ```
 
@@ -227,9 +234,9 @@ Vous pouvez répéter tout ou partie d'une liste de chaînes à l'aide d'une not
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 ```
 
@@ -246,28 +253,30 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 ```
 
 ```html hidden
 <div class="container">
- <div>Un</div>
- <div>Deux</div>
- <div>Trois</div>
- <div>Quatre</div>
- <div>Cinq</div>
- <div>Six</div>
- <div>Sept</div>
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois</div>
+  <div>Quatre</div>
+  <div>Cinq</div>
+  <div>Six</div>
+  <div>Sept</div>
 </div>
-
 ```
 
 ```css
@@ -285,14 +294,14 @@ body {
 
 Les rangées de trame de 100 pixels de haut ne seront pas très utiles si nous y plaçons des contenus de plus de 100 pixels de haut&nbsp;: il y aurait alors débordement. Il est préférable d'avoir des pistes d'_au moins_ 100 pixels de haut, mais susceptibles de s'agrandir si le contenu déposé le nécessite. C'est un constat classique à propos du web&nbsp;: vous ne savez jamais vraiment quelle sera la hauteur d'un élément — du contenu supplémentaire ou des tailles de police plus grandes peuvent amener des problèmes avec des designs en pixels visant la perfection dans toute dimension.
 
-La fonction [`minmax()`](/fr/docs/Web/CSS/minmax()) nous permet de fixer une taille maximale et minimale pour une trame, par exemple `minmax(100px, auto)`. La taille minimale est de 100 pixels, mais la maximale est `auto` — elle s'agrandira selon le contenu. Changeons `grid-auto-rows` en utilisant une valeur `minmax`&nbsp;:
+La fonction [`minmax()`](</fr/docs/Web/CSS/minmax()>) nous permet de fixer une taille maximale et minimale pour une trame, par exemple `minmax(100px, auto)`. La taille minimale est de 100 pixels, mais la maximale est `auto` — elle s'agrandira selon le contenu. Changeons `grid-auto-rows` en utilisant une valeur `minmax`&nbsp;:
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 20px;
 }
 ```
 
@@ -300,7 +309,7 @@ Si vous ajoutez du contenu supplémentaire, vous verrez que la trame grandit pou
 
 ### Autant de chaînes que possible
 
-Il est possible de combiner nos savoirs à propos des listes de pistes, la notation `repeat()` et [`minmax()`](/fr/docs/Web/CSS/minmax()) pour créer un modèle utile. Parfois, demander à ce que la génération automatique crée autant de chaînes que possible dans un conteneur nous faciliterait la tâche. Pour réaliser cela, définissez la valeur de `grid-template-columns` égale à [`repeat()`](/fr/docs/Web/CSS/repeat()) avec le mot-clé `auto-fill` comme premier paramètre au lieu d'un nombre. Pour le second paramètre de la fonction, utilisez `minmax()` avec pour minimum la taille souhaitée pour la piste et `1fr` pour maximum.
+Il est possible de combiner nos savoirs à propos des listes de pistes, la notation `repeat()` et [`minmax()`](</fr/docs/Web/CSS/minmax()>) pour créer un modèle utile. Parfois, demander à ce que la génération automatique crée autant de chaînes que possible dans un conteneur nous faciliterait la tâche. Pour réaliser cela, définissez la valeur de `grid-template-columns` égale à [`repeat()`](</fr/docs/Web/CSS/repeat()>) avec le mot-clé `auto-fill` comme premier paramètre au lieu d'un nombre. Pour le second paramètre de la fonction, utilisez `minmax()` avec pour minimum la taille souhaitée pour la piste et `1fr` pour maximum.
 
 Essayez ceci dans le fichier avec la CSS ci-dessous&nbsp;:
 
@@ -309,16 +318,18 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
-
 ```
 
 ```html hidden
@@ -348,7 +359,7 @@ Il a été créé autant de chaînes de 200 pixels qu'il y a de place dans le co
 
 ## Placement sur les lignes
 
-Nous passons maintenant de la création du quadrillage à la mise en place des choses dans celui-ci. Le quadrillage a toujours des fils de chaîne, ils commencent à 1 et sont en relation avec le [«&nbsp;_writing mode_&nbsp;» (mode d'écriture)](/fr/docs/Web/CSS/CSS_Writing_Modes) du document. Ainsi, en anglais, la rangée de la chaîne 1 sera une colonne et se trouvera à gauche du quadrillage et la rangée de la trame sera une ligne 1 en haut. En arabe, la rangée de la chaîne 1 se situera du côté droit, car l'arabe s'écrit de droite à gauche.
+Nous passons maintenant de la création du quadrillage à la mise en place des choses dans celui-ci. Le quadrillage a toujours des fils de chaîne, ils commencent à 1 et sont en relation avec le [«&nbsp;_writing mode_&nbsp;» (mode d'écriture)](/fr/docs/Web/CSS/CSS_writing_modes) du document. Ainsi, en anglais, la rangée de la chaîne 1 sera une colonne et se trouvera à gauche du quadrillage et la rangée de la trame sera une ligne 1 en haut. En arabe, la rangée de la chaîne 1 se situera du côté droit, car l'arabe s'écrit de droite à gauche.
 
 Nous pouvons placer les choses dans ces rangées en indiquant les rangées de début et de fin. Pour ce faire, nous utilisons les propriétés suivantes&nbsp;:
 
@@ -392,43 +403,46 @@ footer {
 
 ```css hidden
 body {
-    width: 90%;
-    max-width: 900px;
-    margin: 2em auto;
-    font: .9em/1.2 Arial, Helvetica, sans-serif;
+  width: 90%;
+  max-width: 900px;
+  margin: 2em auto;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
 }
 header {
-    grid-column: 1 / 3;
-    grid-row: 1;
+  grid-column: 1 / 3;
+  grid-row: 1;
 }
 
 article {
-    grid-column: 2;
-    grid-row: 2;
+  grid-column: 2;
+  grid-row: 2;
 }
 
 aside {
-    grid-column: 1;
-    grid-row: 2;
+  grid-column: 1;
+  grid-row: 2;
 }
 
 footer {
-    grid-column: 1 / 3;
-    grid-row: 3;
+  grid-column: 1 / 3;
+  grid-row: 3;
 }
 
 header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 
 aside {
@@ -441,13 +455,34 @@ aside {
   <header>Voici mon joli blog</header>
   <article>
     <h1>Mon article</h1>
-    <p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+    <p>
+      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
+      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
+      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
+      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
+      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
 
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
+      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
+      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
   </article>
   <aside>
     <h2>Autres sujets</h2>
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est.
+    </p>
   </aside>
   <footer>Contactez moi@monsite.com</footer>
 </div>
@@ -455,7 +490,8 @@ aside {
 
 {{ EmbedLiveSample('', '100%', 600) }}
 
-> **Note :** Vous pouvez aussi utiliser la valeur `-1` pour cibler la dernière rangée de la chaîne et compter vers l'intérieur à partir de la fin en utilisant des valeurs négatives. Cependant, cela ne fonctionne que pour la chaîne explicite. La valeur `-1` ne ciblera pas le rang de fin de [trame implicite](/fr/docs/Glossary/Grid).
+> [!NOTE]
+> Vous pouvez aussi utiliser la valeur `-1` pour cibler la dernière rangée de la chaîne et compter vers l'intérieur à partir de la fin en utilisant des valeurs négatives. Cependant, cela ne fonctionne que pour la chaîne explicite. La valeur `-1` ne ciblera pas le rang de fin de [trame implicite](/fr/docs/Glossary/Grid).
 
 ## Placer avec grid-template-areas
 
@@ -467,9 +503,9 @@ Supprimez le placement sur les lignes du dernier exemple (ou bien rechargez le f
 .container {
   display: grid;
   grid-template-areas:
-      "header header"
-      "sidebar content"
-      "footer footer";
+    "header header"
+    "sidebar content"
+    "footer footer";
   grid-template-columns: 1fr 3fr;
   gap: 20px;
 }
@@ -498,15 +534,18 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 
 aside {
@@ -516,9 +555,9 @@ aside {
 .container {
   display: grid;
   grid-template-areas:
-  "header header"
-  "sidebar content"
-  "footer footer";
+    "header header"
+    "sidebar content"
+    "footer footer";
   grid-template-columns: 1fr 3fr;
   grid-gap: 20px;
 }
@@ -538,7 +577,6 @@ aside {
 footer {
   grid-area: footer;
 }
-
 ```
 
 ```html hidden
@@ -546,13 +584,34 @@ footer {
   <header>Voici mon joli blog</header>
   <article>
     <h1>Mon article</h1>
-    <p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+    <p>
+      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
+      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
+      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
+      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
+      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
 
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
+      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
+      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
   </article>
   <aside>
     <h2>Autres sujets</h2>
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est.
+    </p>
   </aside>
   <footer>Contactez moi@monsite.com</footer>
 </div>
@@ -603,12 +662,15 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0,1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-gap: 20px;
 }
 
@@ -636,14 +698,13 @@ header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 
 aside {
   border-right: 1px solid #999;
 }
-
 ```
 
 ```html hidden
@@ -651,13 +712,34 @@ aside {
   <header>Voici mon joli blog</header>
   <article>
     <h1>Mon article</h1>
-    <p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+    <p>
+      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
+      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
+      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
+      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
+      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
 
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
+      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
+      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
   </article>
   <aside>
     <h2>Autres sujets</h2>
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est.
+    </p>
   </aside>
   <footer>Contactez moi@monsite.com</footer>
 </div>
@@ -665,7 +747,7 @@ aside {
 
 {{ EmbedLiveSample('', '100%', 600) }}
 
-Si vous utilisez [_Firefox Grid Inspector_ (inspecteur de grilles)](/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) (Inspecteur > Mise en page > Grilles) pour superposer les lignes du quadrillage sur le design, vous verrez comment le quadrillage à 12 colonnes fonctionne.
+Si vous utilisez [_Firefox Grid Inspector_ (inspecteur de grilles)](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) (Inspecteur > Mise en page > Grilles) pour superposer les lignes du quadrillage sur le design, vous verrez comment le quadrillage à 12 colonnes fonctionne.
 
 ![Les lignes d'un quadrillage à 12 colonnes superposées sur notre design.](learn-grids-inspector.png)
 
@@ -679,20 +761,7 @@ Dans cet aperçu, nous avons parcouru les principales caractéristiques de la mi
 
 ## Voir aussi
 
-- [Grilles CSS (CSS Grid)&nbsp;: Guides](/fr/docs/Web/CSS/CSS_Grid_Layout#guides)
-- [Inspecteur de grille CSS&nbsp;: examiner les grilles](/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
+- [Grilles CSS (CSS Grid)&nbsp;: Guides](/fr/docs/Web/CSS/CSS_grid_layout#guides)
+- [Inspecteur de grille CSS&nbsp;: examiner les grilles](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
-
-## Dans ce module
-
-- [Introduction à la mise en page en CSS](/fr/docs/Learn/CSS/CSS_layout/Introduction)
-- [Cours normal](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grilles](/fr/docs/Learn/CSS/CSS_layout/Grids)
-- [Les boîtes flottantes](/fr/docs/Learn/CSS/CSS_layout/Floats)
-- [Le positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning)
-- [Disposition sur plusieurs colonnes](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Méthodes de mises en page traditionnelles](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Prise en charge des anciens navigateurs](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Compréhension fondamentale de la mise en page](/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

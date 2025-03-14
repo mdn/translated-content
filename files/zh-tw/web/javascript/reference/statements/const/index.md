@@ -14,7 +14,7 @@ const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
 - `nameN`
   - : 常數的名稱，可以是任何合法的 {{Glossary("identifier")}}。
 - `valueN`
-  - : 常數的值，可以是任何合法的 [expression](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions), 包括 function expression。
+  - : 常數的值，可以是任何合法的 expression，包括 function expression。
 
 ## 描述
 
@@ -22,7 +22,7 @@ const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
 
 宣告 **`const`** 會對於它的值建立一個唯讀的參考。並不是說這個值不可變更，而是這個變數不能再一次指定值。例如，假設常數的內容(值)是個物件，那麼此物件的內容(物件的參數)是可以更改的。
 
-所有關於 "[temporal dead zone](/zh-TW/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)" 的狀況，都適用於 [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) and `const` 。
+所有關於 "[temporal dead zone](/zh-TW/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)" 的狀況，都適用於 [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) and `const` 。
 
 在相同的可視範圍內，常數不能和函數，變數具有相同名稱。
 
@@ -101,4 +101,4 @@ MY_ARRAY = ['B'];
 
 - [`var`](/zh-TW/docs/Web/JavaScript/Reference/Statements/var)
 - [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let)
-- [Constants in the JavaScript Guide](/zh-TW/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Constants)
+- [Constants in the JavaScript Guide](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#constants)

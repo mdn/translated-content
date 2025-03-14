@@ -1,5 +1,5 @@
 ---
-title: '::before (:before)'
+title: ::before (:before)
 slug: Web/CSS/::before
 ---
 
@@ -14,13 +14,15 @@ a::before {
 }
 ```
 
-> **Nota:** Los pseudoelementos generados por `::before` y `::after` son [contenidos por la caja de formato del elemento](https://www.w3.org/TR/CSS2/generate.html#before-after-content), y por lo tanto, no aplica a _[elementos de reemplazo](/es/docs/Web/CSS/Replaced_element)_ como los elementos {{htmlelement("img")}}, o {{htmlelement("br")}}.
+> [!NOTE]
+> Los pseudoelementos generados por `::before` y `::after` son [contenidos por la caja de formato del elemento](https://www.w3.org/TR/CSS2/generate.html#before-after-content), y por lo tanto, no aplica a _[elementos de reemplazo](/es/docs/Web/CSS/Replaced_element)_ como los elementos {{htmlelement("img")}}, o {{htmlelement("br")}}.
 
 ## Sintaxis
 
 {{csssyntax}}
 
-> **Nota:** CSS3 introdujo la notación `::before` (con doble dos puntos) para diferenciar [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) con [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores aceptan `:before`, añadido en CSS2.
+> [!NOTE]
+> CSS3 introdujo la notación `::before` (con doble dos puntos) para diferenciar [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) con [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores aceptan `:before`, añadido en CSS2.
 
 ## Ejemplos
 
@@ -65,12 +67,12 @@ Podemos estilizar el texto o imágenes en la propiedad {{cssxref("content")}} de
 
 ```css
 .ribbon {
-  background-color: #5BC8F7;
+  background-color: #5bc8f7;
 }
 
 .ribbon::before {
   content: "Look at this orange box.";
-  background-color: #FFBA10;
+  background-color: #ffba10;
   border-color: black;
   border-style: dotted;
 }
@@ -110,11 +112,11 @@ li {
 }
 
 li.done {
-  background: #CCFF99;
+  background: #ccff99;
 }
 
 li.done::before {
-  content: '';
+  content: "";
   position: absolute;
   border-color: #009933;
   border-style: solid;
@@ -131,12 +133,16 @@ li.done::before {
 #### JavaScript
 
 ```js
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if( ev.target.tagName === 'LI') {
-     ev.target.classList.toggle('done');
-  }
-}, false);
+var list = document.querySelector("ul");
+list.addEventListener(
+  "click",
+  function (ev) {
+    if (ev.target.tagName === "LI") {
+      ev.target.classList.toggle("done");
+    }
+  },
+  false,
+);
 ```
 
 Aquí se está ejecutando el ejemplo de arriba. Nótese que no se están usando íconos, y la marca de selección en realidad es el pseudoelemento `::before` que ha sido estilizado en CSS. Puedes interactuar con el ejemplo para ver los cambios.
@@ -156,7 +162,7 @@ Como esto es CSS y no HTML, **no** se pueden usar entidades de marcado en los va
   <li>Crack Eggs into bowl</li>
   <li>Add Milk</li>
   <li>Add Flour</li>
-  <li aria-current='step'>Mix thoroughly into a smooth batter</li>
+  <li aria-current="step">Mix thoroughly into a smooth batter</li>
   <li>Pour a ladleful of batter onto a hot, greased, flat frying pan</li>
   <li>Fry until the top of the pancake loses its gloss</li>
   <li>Flip it over and fry for a couple more minutes</li>
@@ -167,16 +173,15 @@ Como esto es CSS y no HTML, **no** se pueden usar entidades de marcado en los va
 #### CSS
 
 ```css
-
 li {
-  padding:0.5em;
+  padding: 0.5em;
 }
 
-li[aria-current='step'] {
-  font-weight:bold;
+li[aria-current="step"] {
+  font-weight: bold;
 }
 
-li[aria-current='step']::after {
+li[aria-current="step"]::after {
   content: " \21E6"; /* Hexadecimal for Unicode Leftwards white arrow*/
   display: inline;
 }
@@ -186,9 +191,9 @@ li[aria-current='step']::after {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.before")}}
+{{Compat}}
 
 ## Véase también
 

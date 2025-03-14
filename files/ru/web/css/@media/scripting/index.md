@@ -1,12 +1,11 @@
 ---
 title: scripting
 slug: Web/CSS/@media/scripting
-translation_of: Web/CSS/@media/scripting
 ---
 
 {{cssref}}
 
-[CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/Media_Queries/Using_media_queries) **`scripting`** может использоваться для проверки доступности скриптов (таких как JavaScript)
+[CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries) **`scripting`** может использоваться для проверки доступности скриптов (таких как JavaScript)
 
 ## Синтаксис
 
@@ -25,7 +24,9 @@ translation_of: Web/CSS/@media/scripting
 
 ```html
 <p class="script-none">You do not have scripting available. :-(</p>
-<p class="script-initial-only">Your scripting is only enabled during the initial page load. Weird.</p>
+<p class="script-initial-only">
+  Your scripting is only enabled during the initial page load. Weird.
+</p>
 <p class="script-enabled">You have scripting enabled! :-)</p>
 ```
 
@@ -38,7 +39,7 @@ p {
 
 @media (scripting: none) {
   .script-none {
-     color: red;
+    color: red;
   }
 }
 
@@ -59,7 +60,7 @@ p {
 
 {{EmbedLiveSample("Пример")}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

@@ -1,6 +1,9 @@
 ---
-title: HTMLMediaElement.ended
+title: "HTMLMediaElement: ended プロパティ"
+short-title: ended
 slug: Web/API/HTMLMediaElement/ended
+l10n:
+  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
 {{APIRef("HTML DOM")}}
@@ -11,12 +14,12 @@ slug: Web/API/HTMLMediaElement/ended
 
 論理値で、要素に含まれているメディアの再生が終了した場合に `true` となります。
 
-メディアのソースが {{domxref("MediaStream")}} の場合、ストリームの {{domxref("MediaStream.active", "active")}} プロパティの値が `false` の場合、この値は `true` です。
+メディアのソースが {{domxref("MediaStream")}} の場合、ストリームの {{domxref("MediaStream.active", "active")}} プロパティの値が `false` であれば、この値は `true` です。
 
 ## 例
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.ended); // false
 ```
 
@@ -30,6 +33,6 @@ console.log(obj.ended); // false
 
 ## 関連情報
 
-- 定義している {{domxref("HTMLMediaElement")}} インターフェイス
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.ended` プロパティを定義しているインターフェイス
 - {{domxref("MediaStream")}}
 - {{domxref("MediaStream.active")}}

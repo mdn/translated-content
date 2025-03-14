@@ -1,7 +1,6 @@
 ---
 title: rotate3d()
 slug: Web/CSS/transform-function/rotate3d
-original_slug: Web/CSS/transform-function/rotate3d()
 ---
 
 {{CSSRef}}
@@ -10,7 +9,8 @@ A função [CSS](/pt-BR/docs/Web/CSS) **`rotate3d()`** define uma transformaçã
 
 No espaço 3D, rotações têm três graus de liberdade que, juntos, descrevem um único eixo de rotação. O eixo de rotação é definido por um vetor \[x, y, z] e passado pela origem (como definido pela propriedade {{ cssxref("transform-origin") }}). Se, como especificado, o vetor não for _normalizado_ (isto é, se a soma dos quadrados das suas três coordenadas não for 1), o {{glossary("user agent")}} irá normalizá-lo internamente. Um vetor não-normalizável, como o vetor nulo \[0, 0, 0], fará com que a rotação seja ignorada, mas sem invalidar toda a propriedade CSS.
 
-> **Note:** **Nota:** Diferente de rotações no plano 2D, a composição de rotações 3D normalmente não é comutativa. Em outras palavras, a ordem na qual as rotações são aplicadas impacta o resultado.
+> [!NOTE]
+> Diferente de rotações no plano 2D, a composição de rotações 3D normalmente não é comutativa. Em outras palavras, a ordem na qual as rotações são aplicadas impacta o resultado.
 
 ## Sintaxe
 
@@ -46,9 +46,9 @@ rotate3d(x, y, z, a)
     <tr>
       <th scope="col">Coordenadas cartesianas em ℝ<sup>3</sup></th>
       <td colspan="1">
-        <a href="/@api/deki/files/5987/=transform-functions-rotate3d_cart.png"
+        <a href="transform-functions-rotate3d_cart.png"
           ><img
-            src="/@api/deki/files/5987/=transform-functions-rotate3d_cart.png?size=webview"
+            src="transform-functions-rotate3d_cart.png"
             style="height: 47px; width: 510px" /></a
         ><math>
           <mfenced
@@ -91,9 +91,9 @@ rotate3d(x, y, z, a)
     <tr>
       <th scope="col">Coordenadas homogêneas em ℝℙ<sup>3</sup></th>
       <td colspan="1">
-        <a href="/@api/deki/files/5986/=transform-functions-rotate3d_hom4.png"
+        <a href="transform-functions-rotate3d_hom4.png"
           ><img
-            src="/@api/deki/files/5986/=transform-functions-rotate3d_hom4.png?size=webview"
+            src="transform-functions-rotate3d_hom4.png"
             style="height: 61px; width: 522px"
         /></a>
       </td>

@@ -28,10 +28,7 @@ Crie um novo diretório chamado "requests". Neste diretório, crie um arquivo ch
   "name": "webRequest-demo",
   "version": "1.0",
 
-  "permissions": [
-    "webRequest",
-    "<all_urls>"
-  ],
+  "permissions": ["webRequest", "<all_urls>"],
 
   "background": {
     "scripts": ["background.js"]
@@ -46,15 +43,14 @@ function logURL(requestDetails) {
   console.log("Loading: " + requestDetails.url);
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  logURL,
-  {urls: ["<all_urls>"]}
-);
+browser.webRequest.onBeforeRequest.addListener(logURL, {
+  urls: ["<all_urls>"],
+});
 ```
 
-Aqui vamos usar {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} para chamar a função `logURL()` antes do inicio da requisição. A função `logURL()` guarda a URL da requisição para o objeto event e efetua log no console do navegador. O [padrão](/pt-BR/Add-ons/WebExtensions/Match_patterns) `{urls: ["<all_urls>"]}` significa que iremos interceptar as requisições HTTP para todas URLs.
+Aqui vamos usar {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} para chamar a função `logURL()` antes do inicio da requisição. A função `logURL()` guarda a URL da requisição para o objeto event e efetua log no console do navegador. O [padrão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `{urls: ["<all_urls>"]}` significa que iremos interceptar as requisições HTTP para todas URLs.
 
-Para testá-lo, [instale a extensão](/pt-BR/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), [abra o console do navegador](/pt-BR/docs/Tools/Browser_Console), e abra alguma página da internet. No console do navegador você pode ver as URLs para alguns recursos que o navegador requisita:
+Para testá-lo, [instale a extensão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), [abra o console do navegador](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html), e abra alguma página da internet. No console do navegador você pode ver as URLs para alguns recursos que o navegador requisita:
 
 {{EmbedYouTube("X3rMgkRkB1Q")}}
 
@@ -64,7 +60,6 @@ Agora vamos usar o `webRequest` para redirecionar requisições HTTP. Primeiro, 
 
 ```json
 {
-
   "description": "Demonstrating webRequests",
   "manifest_version": 2,
   "name": "webRequest-demo",
@@ -80,7 +75,6 @@ Agora vamos usar o `webRequest` para redirecionar requisições HTTP. Primeiro, 
   "background": {
     "scripts": ["background.js"]
   }
-
 }
 ```
 
@@ -94,14 +88,15 @@ var pattern = "https://mdn.mozillademos.org/*";
 function redirect(requestDetails) {
   console.log("Redirecting: " + requestDetails.url);
   return {
-    redirectUrl: "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif"
+    redirectUrl:
+      "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif",
   };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   redirect,
-  {urls:[pattern], types:["image"]},
-  ["blocking"]
+  { urls: [pattern], types: ["image"] },
+  ["blocking"],
 );
 ```
 
@@ -111,7 +106,7 @@ Desta vez não estamos interceptando cada requisição: a opção `{urls:[patter
 
 Observe também que estamos passando uma opção chamada `"blocking"`: precisamos informá-la toda vez que desejamos modificar a requisição. Isto faz com que a função bloqueie a requisição de rede, então o navegador espera pelo event listener retornar antes de continuar. Veja a documentação {{WebExtAPIRef("webRequest.onBeforeRequest")}} para mais no `"blocking"`.
 
-Teste abrindo uma página no MDN que possua muitas imagens (por exemplo [https://developer.mozilla.org/pt-BR/docs/Tools/Network_Monitor](/pt-BR/docs/Tools/Network_Monitor)), [recarregue a extensão](/pt-BR/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on) e então recarregue a página:
+Teste abrindo uma página no MDN que possua muitas imagens (por exemplo [https://developer.mozilla.org/pt-BR/docs/Tools/Network_Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)), [recarregue a extensão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#reloading_a_temporary_add-on) e então recarregue a página:
 
 {{EmbedYouTube("ix5RrXGr0wA")}}
 
@@ -126,27 +121,28 @@ Modifique o "background.js" com este código:
 ```js
 var targetPage = "http://useragentstring.com/*";
 
-var ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+var ua =
+  "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 function rewriteUserAgentHeader(e) {
-  e.requestHeaders.forEach(function(header){
+  e.requestHeaders.forEach(function (header) {
     if (header.name.toLowerCase() == "user-agent") {
       header.value = ua;
     }
   });
-  return {requestHeaders: e.requestHeaders};
+  return { requestHeaders: e.requestHeaders };
 }
 
 browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentHeader,
-  {urls: [targetPage]},
-  ["blocking", "requestHeaders"]
+  { urls: [targetPage] },
+  ["blocking", "requestHeaders"],
 );
 ```
 
 Aqui vamos usar event listener {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} para executar a função somente quando os cabeçalhos forem enviados.
 
-O event listener será chamada somente para requisitar as URLs que batem com o [padrão](/pt-BR/Add-ons/WebExtensions/Match_patterns). Observe também que passamos novamente `"blocking"` como uma opção. Passamos também `"requestHeaders"`, que significa que o listener será passado como um array contendo os cabeçalhos da requisição que desejamos enviar. Veja {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}} para mais informações dessas opções.
+O event listener será chamada somente para requisitar as URLs que batem com o [padrão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). Observe também que passamos novamente `"blocking"` como uma opção. Passamos também `"requestHeaders"`, que significa que o listener será passado como um array contendo os cabeçalhos da requisição que desejamos enviar. Veja {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}} para mais informações dessas opções.
 
 A função listener procura pelo cabeçalho "User-Agent" no array de cabeçalhos da requisição, substitui seu valor com o valor `ua` da variável, e retorna o array modificado. Este array modificado será agora enviado para o servidor.
 
@@ -156,4 +152,4 @@ Teste abrindo [useragentstring.com](http://useragentstring.com/) e veja como ele
 
 ## Aprenda mais
 
-Para aprender sobre todas as coisas que você pode fazer com a API `webRequest`, veja sua [documentação de referência](/pt-BR/Add-ons/WebExtensions/API/WebRequest).
+Para aprender sobre todas as coisas que você pode fazer com a API `webRequest`, veja sua [documentação de referência](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest).

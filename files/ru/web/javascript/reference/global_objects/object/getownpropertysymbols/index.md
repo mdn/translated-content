@@ -1,25 +1,32 @@
 ---
 title: Object.getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
-tags:
-  - ECMAScript6
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 ---
-{{JSRef("Global_Objects", "Object")}}
+
+{{JSRef}}
 
 Метод **`Object.getOwnPropertySymbols()`** возвращает массив всех символьных свойств, найденных непосредственно на переданном объекте.
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertysymbols.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getOwnPropertySymbols()")}}
+
+```js interactive-example
+const object1 = {};
+const a = Symbol("a");
+const b = Symbol.for("b");
+
+object1[a] = "localSymbol";
+object1[b] = "globalSymbol";
+
+const objectSymbols = Object.getOwnPropertySymbols(object1);
+
+console.log(objectSymbols.length);
+// Expected output: 2
+```
 
 ## Синтаксис
 
 ```js
-Object.getOwnPropertySymbols(obj)
+Object.getOwnPropertySymbols(obj);
 ```
 
 ### Параметры
@@ -41,17 +48,17 @@ Object.getOwnPropertySymbols(obj)
 
 ```js
 var obj = {};
-var a = Symbol('a');
-var b = Symbol.for('b');
+var a = Symbol("a");
+var b = Symbol.for("b");
 
-obj[a] = 'localSymbol';
-obj[b] = 'globalSymbol';
+obj[a] = "localSymbol";
+obj[b] = "globalSymbol";
 
 var objectSymbols = Object.getOwnPropertySymbols(obj);
 
 console.log(objectSymbols.length); // 2
-console.log(objectSymbols);        // [Symbol(a), Symbol(b)]
-console.log(objectSymbols[0]);     // Symbol(a)
+console.log(objectSymbols); // [Symbol(a), Symbol(b)]
+console.log(objectSymbols[0]); // Symbol(a)
 ```
 
 ## Спецификации

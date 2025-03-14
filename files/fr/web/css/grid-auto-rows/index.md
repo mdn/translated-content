@@ -1,11 +1,6 @@
 ---
 title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/grid-auto-rows
 ---
 
 {{CSSRef}}
@@ -52,7 +47,6 @@ grid-auto-rows: 0.5fr 3fr 1fr;
 grid-auto-rows: minmax(100px, auto) minmax(max-content, 2fr) minmax(20%, 80vmax);
 grid-auto-rows: 100px minmax(100px, auto) 10% 0.5fr fit-content(400px);
 
-
 /* Valeurs globales */
 grid-auto-rows: inherit;
 grid-auto-rows: initial;
@@ -81,7 +75,8 @@ grid-auto-rows: unset;
 
   - : Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille.
 
-    > **Note :** Les pistes de taille `auto` (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}.
+    > [!NOTE]
+    > Les pistes de taille `auto` (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}.
 
 ## Définition formelle
 
@@ -136,5 +131,5 @@ grid-auto-rows: unset;
 - {{cssxref("grid-auto-columns")}}
 - {{cssxref("grid-auto-flow")}}
 - {{cssxref("grid")}}
-- [Guide : le placement automatique sur la grille - dimensionner les lignes de la grille implicite](/fr/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#dimensionner_les_lignes_de_la_grille_implicite)
+- [Guide : le placement automatique sur la grille - dimensionner les lignes de la grille implicite](/fr/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout#dimensionner_les_lignes_de_la_grille_implicite)
 - Tutoriel vidéo : [Introduction au placement automatique sur la grille et à l'ordre des éléments (en anglais)](https://gridbyexample.com/video/series-auto-placement-order/)

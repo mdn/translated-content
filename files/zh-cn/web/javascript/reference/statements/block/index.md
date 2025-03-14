@@ -1,111 +1,150 @@
 ---
-title: block
+title: 块语句
 slug: Web/JavaScript/Reference/Statements/block
+l10n:
+  sourceCommit: 8d538e9521d52d96f590b72101b4b50b0b259c4b
 ---
 
 {{jsSidebar("Statements")}}
 
-**块语句**（或其他语言的**复合语句**）用于组合零个或多个语句。该块由一对大括号界定，可以是{{jsxref("Statements/label", "labelled")}}：
+**块语句**用于将零个或多个语句组合在一起。块由一对大括号（“花括号”）界定，并包含零个或多个语句和声明。
+
+{{InteractiveExample("JavaScript Demo: Statement - Block", "taller")}}
+
+```js interactive-example
+var x = 1;
+let y = 1;
+
+if (true) {
+  var x = 2;
+  let y = 2;
+}
+
+console.log(x);
+// Expected output: 2
+
+console.log(y);
+// Expected output: 1
+```
 
 ## 语法
 
-### 块声明
-
-```plain
-{ StatementList }
-```
-
-### 标记块声明
-
-```plain
-LabelIdentifier: { StatementList }
+```js-nolint
+{
+  StatementList
+}
 ```
 
 - `StatementList`
-  - : 在块语句中分组的语句。
-- `LabelIdentifier`
-  - : 用于视觉识别的可选{{jsxref("Statements/label", "label")}}或{{jsxref("Statements/break", "break")}}的目标。
+  - : 块语句中的语句和声明
 
 ## 描述
 
-其他语言中通常将语句块称为**复合语句**。它允许你使用多个语句，其中 JavaScript 只需要一个语句。将语句组合成块是 JavaScript 中的常见做法。相反的做法是可以使用一个[空语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/Empty)，你不提供任何语句，虽然一个是必需的。
+在其他语言中，块语句通常称为*复合语句*。它允许你在 JavaScript 期望仅一条语句的地方使用多条语句。在 JavaScript 中将语句组合成块是常见的做法，尤其是在与控制流语句（例如 {{jsxref("Statements/if...else", "if...else")}} 和 {{jsxref("Statements/for", "for")}}）一起使用时。使用[空语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/Empty)可以实现相反的行为，即在需要语句情况下不提供任何语句。
 
-### 块级作用域
+此外，结合使用块作用域声明（如 [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)、[`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 和 [`class`](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)），块可以防止临时变量污染全局命名空间，就像 [IIFE（立即调用函数表达式）](/zh-CN/docs/Glossary/IIFE)一样。
 
-#### 在非严格模式 (non-strict mode) 下的`var` 或者函数声明时
+### 非严格模式下使用 var 或函数声明时的块作用域规则
 
-通过`var`声明的变量或者非严格模式下 (non-strict mode) 创建的函数声明**没有**块级作用域。在语句块里声明的变量的作用域不仅是其所在的函数或者 script 标签内，所设置变量的影响会在超出语句块本身之外持续存在。换句话说，这种语句块不会引入一个作用域。尽管单独的语句块是合法的语句，但在 JavaScript 中你不会想使用单独的语句块，因为它们不像你想象的 C 或 Java 中的语句块那样处理事物。例如：
+非严格模式下，使用 `var` 声明或由[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)创建的变量**不具有**块级作用域。在块内部引入的变量的作用域限于包含的函数或脚本，并且对它们的设置会在块本身之外仍然有效。例如：
 
-```js example-bad
+```js
 var x = 1;
 {
   var x = 2;
 }
-console.log(x); // 输出 2
+console.log(x); // 2
 ```
 
-输出结果是 2，因为块中的 `var x`语句与块前面的`var x`语句作用域相同。在 C 或 Java 中，这段代码会输出 1。
+这段代码输出内容为 2，因为块内的 `var x` 语句与块之前的 `var x` 语句处于同一个作用域。
 
-#### 使用`let`和 `const`
+在非严格模式下，块内函数声明的行为很奇怪。请勿使用它们。
 
-相比之下，使用 {{jsxref("Statements/let", "let")}}和{{jsxref("Statements/const", "const")}}声明的变量是**有**块级作用域的。
+### 严格模式下使用 let、const、class 或函数声明时的块作用域规则
+
+与之相反，使用 [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)、[`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 和 [`class`](/zh-CN/docs/Web/JavaScript/Reference/Statements/class) 声明的标识符具有块级作用域。
 
 ```js
 let x = 1;
 {
   let x = 2;
 }
-console.log(x); // 输出 1
+console.log(x); // 1
 ```
 
-`x = 2`仅限在定义它的块中。
+`x = 2` 的作用域仅限于定义它的块内。
 
-`const`的结果也是一样的：
+`const` 也是如此：
 
 ```js
 const c = 1;
 {
   const c = 2;
 }
-console.log(c); // 输出 1，而且不会报错
+console.log(c); // 1; 不会抛出 SyntaxError
 ```
 
-注意，位于块范围之内的 `const c = 2` 并不会抛出`SyntaxError: Identifier 'c' has already been declared`这样的语法错误，因为在它自己的块中它可能是唯一一个被声明的常量。
+请注意，块作用域的 `const c = 2` *不会*抛出 `SyntaxError: Identifier 'c' has already been declared`，因为它可以在块内唯一地声明。
 
-##### 使用 let 声明的变量在块级作用域内能强制执行更新变量，下面的两个例子对比：
+在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下，块内的函数声明的作用域是该块，并且会被提升到该块的顶部。
 
 ```js
-var a = [];
-for (var i = 0; i < 10; i++) {
-      a[i] = function () {console.log(i);};
-}
-a[0]();                // 10
-a[1]();                // 10
-a[6]();                // 10
+"use strict";
 
-/********************/
-
-var a = [];
-for (let i = 0; i < 10; i++) {
-      a[i] = function () {console.log(i);};
+{
+  foo(); // 输出 "foo"
+  function foo() {
+    console.log("foo");
+  }
 }
-a[0]();                // 0
-a[1]();                // 1
-a[6]();                // 6
+
+foo(); // ReferenceError: foo is not defined
 ```
 
-#### 使用`function`
+## 示例
 
-[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)同样被限制在声明他的语句块内：
+### 使用块语句作为 for 循环的循环体
 
-```plain
-foo('outside');  // TypeError: foo is not a function
-{
-  function foo(location) {
-   console.log('foo is called ' + location);
-  }
-  foo('inside'); // 正常工作并且打印 'foo is called inside'
+[`for`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for) 循环接受单个语句作为其循环体。
+
+```js
+for (let i = 0; i < 10; i++) console.log(i);
+```
+
+如果循环体中需要使用多个语句，可以将它们组合成一个块语句：
+
+```js
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+  console.log(i ** 2);
 }
+```
+
+### 使用块语句封装数据
+
+`let` 和 `const` 声明的作用域是其所在的块。这意味着你可以将数据隐藏在全局作用域之外，而无需将其包装在一个函数中。
+
+```js
+let sector;
+{
+  // 这些变量的作用域仅限于此块，并且在块结束后不可访问。
+  const angle = Math.PI / 3;
+  const radius = 10;
+  sector = {
+    radius,
+    angle,
+    area: (angle / 2) * radius ** 2,
+    perimeter: 2 * radius + angle * radius,
+  };
+}
+console.log(sector);
+// {
+//   radius: 10,
+//   angle: 1.0471975511965976,
+//   area: 52.35987755982988,
+//   perimeter: 30.471975511965976
+// }
+console.log(typeof radius); // "undefined"
 ```
 
 ## 规范
@@ -116,7 +155,7 @@ foo('outside');  // TypeError: foo is not a function
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Statements/while", "while")}}
 - {{jsxref("Statements/if...else", "if...else")}}

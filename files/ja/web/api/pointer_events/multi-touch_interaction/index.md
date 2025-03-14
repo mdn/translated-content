@@ -2,7 +2,7 @@
 title: マルチタッチ操作
 slug: Web/API/Pointer_events/Multi-touch_interaction
 l10n:
-  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
+  sourceCommit: c244d3b2cb6c17e6ba8692e3faec393afd9988ca
 ---
 
 {{DefaultAPISidebar("Pointer Events")}}
@@ -62,13 +62,13 @@ const evCache3 = [];
 
 ```js
 function setHandlers(name) {
- // 指定された要素にイベントハンドラーをインストールする
+  // 指定された要素にイベントハンドラーをインストールする
   const el = document.getElementById(name);
   el.onpointerdown = pointerdownHandler;
   el.onpointermove = pointermoveHandler;
 
- // pointer{up,cancel,out,leave} イベントの意味は - このアプリでは -
- // 同じであるため、これらのイベントに同じハンドラーを使用する。
+  // pointer{up,cancel,out,leave} イベントの意味は - このアプリでは -
+  // 同じであるため、これらのイベントに同じハンドラーを使用する。
   el.onpointerup = pointerupHandler;
   el.onpointercancel = pointerupHandler;
   el.onpointerout = pointerupHandler;
@@ -90,9 +90,9 @@ function init() {
 
 ```js
 function pointerdownHandler(ev) {
- // pointerdown イベントは、タッチ操作の開始を知らせます。
- // このイベントを後で処理するために保存し（これはマルチタッチ
- // 操作の一部になる可能性があります）、背景色を更新します
+  // pointerdown イベントは、タッチ操作の開始を知らせます。
+  // このイベントを後で処理するために保存し（これはマルチタッチ
+  // 操作の一部になる可能性があります）、背景色を更新します
   pushEvent(ev);
   if (logEvents) {
     log(`pointerDown: name = ${ev.target.id}`, ev);
@@ -109,11 +109,11 @@ function pointerdownHandler(ev) {
 
 ```js
 function pointermoveHandler(ev) {
- // 注: ユーザーが複数の「同時」タッチを行うと、ほとんどのブラウザーは少なくとも1つの
- // pointermove イベントを発生させ、一部はいくつかの pointermove イベントを発生させます。
- //
- // この関数は、ターゲットが移動イベントを受け取ったことを視覚的に示すために、
- // ターゲット要素の border を "dashed" に設定します。
+  // 注: ユーザーが複数の「同時」タッチを行うと、ほとんどのブラウザーは少なくとも1つの
+  // pointermove イベントを発生させ、一部はいくつかの pointermove イベントを発生させます。
+  //
+  // この関数は、ターゲットが移動イベントを受け取ったことを視覚的に示すために、
+  // ターゲット要素の border を "dashed" に設定します。
   if (logEvents) {
     log("pointerMove", ev);
   }
@@ -173,10 +173,14 @@ function pointerupHandler(ev) {
 function getCache(ev) {
   // このイベントのターゲット要素のキャッシュを返す
   switch (ev.target.id) {
-    case "target1": return evCache1;
-    case "target2": return evCache2;
-    case "target3": return evCache3;
-    default: log("Error with cache handling", ev);
+    case "target1":
+      return evCache1;
+    case "target2":
+      return evCache2;
+    case "target3":
+      return evCache3;
+    default:
+      log("Error with cache handling", ev);
   }
 }
 
@@ -189,7 +193,9 @@ function pushEvent(ev) {
 function removeEvent(ev) {
   // このイベントをターゲットのキャッシュから削除する
   const evCache = getCache(ev);
-  const index = evCache.findIndex((cachedEv) => cachedEv.pointerId === ev.pointerId);
+  const index = evCache.findIndex(
+    (cachedEv) => cachedEv.pointerId === ev.pointerId,
+  );
   evCache.splice(index, 1);
 }
 ```
@@ -240,16 +246,17 @@ function enableLog(ev) {
 }
 
 function log(name, ev) {
-  const o = document.getElementsByTagName('output')[0];
-  const s = `${name}:<br>`
-    + `  pointerID   = ${ev.pointerId}<br>`
-    + `  pointerType = ${ev.pointerType}<br>`
-    + `  isPrimary   = ${ev.isPrimary}`;
+  const o = document.getElementsByTagName("output")[0];
+  const s =
+    `${name}:<br>` +
+    `  pointerID   = ${ev.pointerId}<br>` +
+    `  pointerType = ${ev.pointerType}<br>` +
+    `  isPrimary   = ${ev.isPrimary}`;
   o.innerHTML += `${s}<br>`;
 }
 
 function clearLog(event) {
-  const o = document.getElementsByTagName('output')[0];
+  const o = document.getElementsByTagName("output")[0];
   o.innerHTML = "";
 }
 ```

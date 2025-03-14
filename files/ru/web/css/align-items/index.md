@@ -1,18 +1,17 @@
 ---
 title: align-items
 slug: Web/CSS/align-items
-translation_of: Web/CSS/align-items
 ---
 
 {{CSSRef}}
 
 ## Описание
 
-[CSS](/ru/docs/CSS) свойство **`align-items`** выравнивает flex-элементы текущей flex-линии таким же образом, как и [`justify-content`](/en/CSS/justify-content), но в перпендикулярном направлении.
+[CSS](/ru/docs/Web/CSS) свойство **`align-items`** выравнивает flex-элементы текущей flex-линии таким же образом, как и [`justify-content`](/en-US/CSS/justify-content), но в перпендикулярном направлении.
 
 {{cssinfo}}
 
-Подробнее и больше информации читайте в [Использование гибких блоков CSS](/en/CSS/Using_CSS_flexible_boxes).
+Подробнее и больше информации читайте в [Использование гибких блоков CSS](/en-US/CSS/Using_CSS_flexible_boxes).
 
 ## Синтаксис
 
@@ -68,14 +67,8 @@ align-items: unset;
 
 ## Совместимость с браузерами
 
-### Support in Flex layout
-
-{{Compat}}
-
-### Support in Grid layout
-
 {{Compat}}
 
 ## Смотрите также
 
-- [Использование гибких блоков CSS](/ru/docs/CSS/Using_CSS_flexible_boxes)
+- [Использование гибких блоков CSS](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)

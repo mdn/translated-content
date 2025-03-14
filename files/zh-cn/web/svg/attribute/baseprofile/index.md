@@ -3,7 +3,7 @@ title: baseProfile
 slug: Web/SVG/Attribute/baseProfile
 ---
 
-« 返回 SVG 特性参考
+{{SVGRef}}
 
 `baseProfile` 特性描述了作者认为正确渲染内容所需要的最小的 SVG 语言概述。这个特性不会说明任何处理限制，可以把它看作是元数据。比如，这个特性的值可以被编辑工具用来在用户的修改超出所指定的基准概述范围时发出警告。
 
@@ -11,11 +11,11 @@ slug: Web/SVG/Attribute/baseProfile
 
 ## 使用背景
 
-| 目录     | 无                                                                             |
-| -------- | ------------------------------------------------------------------------------ |
-| 值       | **none** \| full\| basic\| tiny                                                |
-| 动画特性 | 无                                                                             |
-| 规范文档 | [SVG 1.1 (第二版)](http://www.w3.org/TR/SVG11/text.html#BaselineShiftProperty) |
+| 目录     | 无                                                                              |
+| -------- | ------------------------------------------------------------------------------- |
+| 值       | **none** \| full\| basic\| tiny                                                 |
+| 动画特性 | 无                                                                              |
+| 规范文档 | [SVG 1.1 (第二版)](https://www.w3.org/TR/SVG11/text.html#BaselineShiftProperty) |
 
 - none
   - : 代表了最小的 SVG 语言配置，没有描述作者关于正确渲染内容的观点。
@@ -29,11 +29,13 @@ slug: Web/SVG/Attribute/baseProfile
 ## 例子
 
 ```html
-<svg width="120" height="120" version="1.1"
- xmlns="http://www.w3.org/2000/svg" baseProfile="full">
-
+<svg
+  width="120"
+  height="120"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  baseProfile="full">
   ...
-
 </svg>
 ```
 

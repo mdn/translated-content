@@ -1,13 +1,18 @@
 ---
-title: Strict mode（严格模式）
-slug: Glossary/strict_mode
+title: 严格模式
+slug: Glossary/Strict_mode
+l10n:
+  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
-JavaScript 的**严格模式**是使用受限制的 JavaScript 的一种方式，从而隐式地退出“[草率模式](/zh-CN/docs/Glossary/Sloppy_mode)”。严格模式不仅仅是一个子集：这种模式有意地与普通情形下的代码有所区别。
+{{GlossarySidebar}}
 
-通过在脚本文件/函数开头添加 `"use strict";` 声明，即可启用严格模式。
+JavaScript 的**严格模式**是使用受限制的 JavaScript 的一种方式，从而隐式地退出“{{Glossary("Sloppy_mode", "正常模式")}}”。严格模式不仅仅是一个子集：这种模式*有意地*与普通代码具有不同语义。
 
-## 另请参见
+通过在任何其他语句前面添加 `"use strict";` 语句，即可对整个脚本启用严格模式。
+
+## 参见
 
 - [严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
-- [过渡到严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)
+- 相关术语：
+  - {{Glossary("Sloppy mode", "正常模式")}}

@@ -1,35 +1,34 @@
 ---
-title: WindowClient.navigate()
+title: "WindowClient: navigate() メソッド"
+short-title: navigate()
 slug: Web/API/WindowClient/navigate
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef("Service Workers API")}}
 
-{{domxref("WindowClient")}} インターフェイスの **`navigate()`** メソッドは、指定された URL を制御されたクライアントのページに読み込んでから、既存の {{domxref("WindowClient")}} に解決される {{jsxref("Promise")}} を返します。
+**`navigate()`** は {{domxref("WindowClient")}} インターフェイスのメソッドで、指定された URL を制御されたクライアントのページに読み込んでから、既存の {{domxref("WindowClient")}} に解決されるプロミス ({{jsxref("Promise")}}) を返します。
 
 ## 構文
 
-```
-windowClient.navigate(url).then(function(windowClient) {
-  // ナビゲーション後に WindowClient で何かを行います
-});
+```js-nolint
+navigate(url)
 ```
 
-### パラメーター
+### 引数
 
 - `url`
-  - : ナビゲートする場所。
+  - : 移動先の場所。
 
-### 戻り値
+### 返値
 
-既存の {{domxref("WindowClient")}} に解決される {{jsxref("Promise")}}。
+既存の {{domxref("WindowClient")}} に解決されるプロミス ({{jsxref("Promise")}})。
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                 | 状態                                 | コメント |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-windowclient-navigate', 'navigate()')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.WindowClient.navigate")}}
+{{Compat}}

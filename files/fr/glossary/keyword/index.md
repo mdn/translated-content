@@ -1,14 +1,9 @@
 ---
 title: Mot-clé
 slug: Glossary/Keyword
-tags:
-  - Glossaire
-  - Mot-clé
-  - Recherche
-  - recherche par mot-clé
-translation_of: Glossary/Keyword
-original_slug: Glossaire/Keyword
 ---
+
+{{GlossarySidebar}}
 
 Un **mot-clé** est un mot ou une phrase décrivant un contenu. En ligne, les mots-clés sont utilisés comme requêtes pour les moteurs de recherche ou comme des termes identifiant le contenu de sites web.
 
@@ -18,4 +13,4 @@ Lorsque vous utilisez un moteur de recherche, les mots-clés désignent ce que v
 
 ### Culture générale
 
-- [Mot-clé](https://fr.wikipedia.org/wiki/Mot_cl%C3%A9) sur Wikipédia
+- [Mot-clé](https://fr.wikipedia.org/wiki/Mot_clé) sur Wikipédia

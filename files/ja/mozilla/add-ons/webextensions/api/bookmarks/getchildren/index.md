@@ -3,23 +3,23 @@ title: bookmarks.getChildren()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getChildren
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-**`bookmarks.getChildren()`** は、ブックマークフォルダの ID を {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} で指定し、その直下にあたる子要素をすべて取得します。
+**`bookmarks.getChildren()`** は、ブックマークフォルダーの ID を {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} で指定し、その直下にあたる子要素をすべて取得します。
 
 ## 構文
 
 ```js
 browser.bookmarks.getChildren(
-  id,      // 文字列
-  callback // 関数
-)
+  id, // 文字列
+  callback, // 関数
+);
 ```
 
-### Parameters
+### 引数
 
 - `id`
-  - : 取得したい子要素を持つフォルダ ID を指定する {{jsxref("string")}} です。
+  - : 取得したい子要素を持つフォルダー ID を指定する {{jsxref("string")}} です。
 - `callback`
 
   - : 子ノードのリストが取得された際に実行される関数です。この関数には以下の引数が渡ります。
@@ -29,7 +29,7 @@ browser.bookmarks.getChildren(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.getChildren")}}
+{{Compat}}
 
 ## 使用例
 
@@ -43,14 +43,14 @@ function gotChildren(children) {
 chrome.bookmarks.getChildren(bookmarkItemId, gotChildren);
 ```
 
-### 指定したフォルダでブックマークを切替
+### 指定したフォルダーでブックマークを切替
 
-以下の例は、フォルダを {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} で指定し、そのフォルダに新しいブックマークを作成するものです。ただし、既に同じ名前のブックマークがあった場合は、逆に既存のブックマークを削除することとします。このとき新しいブックマークは作成されません。
+以下の例は、フォルダーを {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} で指定し、そのフォルダーに新しいブックマークを作成するものです。ただし、既に同じ名前のブックマークがあった場合は、逆に既存のブックマークを削除することとします。このとき新しいブックマークは作成されません。
 
 ```js
 function toggleBookmark(folderNode, title, url) {
-  chrome.bookmarks.getChildren(folderNode.id, function(results) {
-    let node = results.find(function(el) {
+  chrome.bookmarks.getChildren(folderNode.id, function (results) {
+    let node = results.find(function (el) {
       return el.title === title;
     });
 
@@ -63,7 +63,7 @@ function toggleBookmark(folderNode, title, url) {
       chrome.bookmarks.create({
         parentId: folderNode.id,
         title: title,
-        url: url
+        url: url,
       });
     }
   });
@@ -72,15 +72,17 @@ function toggleBookmark(folderNode, title, url) {
 
 先の `toggleBookmark()` 関数は、`folderNode` で指定した {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} の中に既に存在しているすべてのブックマークのリストを取得するため、最初に `bookmarks.getChildren()` を呼び出しています。
 
-コールバックに指定された匿名関数には `results` という引数が 1 つ渡されます。この引数は、フォルダの直下にある子要素をすべて含んだ配列です。まず初めに、与えられたタイトルを持つノードがフォルダに存在するかどうかを調べます。ここでは {{jsxref("Array.find()")}} メソッドを使い、タイトルが等しいかどうかをコールバック内で判定しています。
+コールバックに指定された匿名関数には `results` という引数が 1 つ渡されます。この引数は、フォルダーの直下にある子要素をすべて含んだ配列です。まず初めに、与えられたタイトルを持つノードがフォルダーに存在するかどうかを調べます。ここでは {{jsxref("Array.find()")}} メソッドを使い、タイトルが等しいかどうかをコールバック内で判定しています。
 
 マッチするノードがあった場合（すなわち、`node` が `undefined` ではない場合）、指定した `title` を持つブックマークが既に存在していたことが分かったので、既存のブックマークを削除するために {{WebExtAPIRef("bookmarks.remove()")}} を呼び出します。
 
-そうではなかった場合、新しいブックマークを作成するために {{WebExtAPIRef("bookmarks.create()")}} が呼び出します。この際、引数 `folderNode` で与えられていたフォルダ ID を新しい親フォルダの ID に指定し、合わせて `title` と `url` も指定します。
+そうではなかった場合、新しいブックマークを作成するために {{WebExtAPIRef("bookmarks.create()")}} が呼び出します。この際、引数 `folderNode` で与えられていたフォルダー ID を新しい親フォルダーの ID に指定し、合わせて `title` と `url` も指定します。
 
-> **メモ:** この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-getChildren) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> [!NOTE]
+> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-getChildren) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -107,4 +109,4 @@ function toggleBookmark(folderNode, title, url) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

@@ -1,18 +1,32 @@
 ---
 title: TypedArray.prototype.subarray()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
+l10n:
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
 
-**`subarray()`** メソッドは、同じ {{jsxref("ArrayBuffer")}} ストアで、この _TypedArray_ オブジェクトと同じ要素の型をもつ新しい _TypedArray_ を返します。先頭のオフセットは**含み**、末尾のオフセットは**含みません**。 _TypedArray_ は[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)の一つです。
+**`subarray()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、同じ {{jsxref("ArrayBuffer")}} ストアにおいて、この型付き配列オブジェクトと同じ要素の型をもつ新しい型付き配列を返します。先頭のオフセットは**含み**、末尾のオフセットは**含みません**。
 
-{{EmbedInteractiveExample("pages/js/typedarray-subarray.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.subarray()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+
+console.log(uint8.subarray(1, 3));
+// Expected output: Uint8Array [20, 30]
+
+console.log(uint8.subarray(1));
+// Expected output: Uint8Array [20, 30, 40, 50]
+```
 
 ## 構文
 
-```
-typedarray.subarray([begin[, end]])
+```js-nolint
+subarray()
+subarray(begin)
+subarray(begin, end)
 ```
 
 ### 引数
@@ -28,24 +42,24 @@ typedarray.subarray([begin[, end]])
 
 ## 解説
 
-`begin` と `end` によって指定される範囲は、現在の配列に対して有効なインデックスの範囲に丸められます。すなわち、新しい範囲の計算された長さがマイナスなら、ゼロに縮められます。 `begin` か `end` のどちらかがマイナスなら、配列の最初からではなく、最後からインデックスを参照します。
+`begin` と `end` によって指定される範囲は、現在の配列に対して有効なインデックスの範囲に丸められます。すなわち、新しい範囲の計算された長さがマイナスなら、ゼロになります。 `begin` か `end` のどちらかがマイナスなら、配列の最初からではなく、最後からインデックスを参照します。
 
-既存のバッファ上に新しいビューを作っていることにも注意して下さい。すなわち、新しいオブジェクトの内容への変更は、元のオブジェクトに強い影響を与えます。逆もまた同様です。
+既存のバッファー上に新しいビューを作っていることにも注意して下さい。すなわち、新しいオブジェクトの内容への変更は、元のオブジェクトに強い影響を与えます。逆もまた同様です。
 
 ## 例
 
 ### subarray() メソッドの使用
 
 ```js
-var buffer = new ArrayBuffer(8);
-var uint8 = new Uint8Array(buffer);
-uint8.set([1,2,3]);
+const buffer = new ArrayBuffer(8);
+const uint8 = new Uint8Array(buffer);
+uint8.set([1, 2, 3]);
 
 console.log(uint8); // Uint8Array [ 1, 2, 3, 0, 0, 0, 0, 0 ]
 
-var sub = uint8.subarray(0,4);
+const sub = uint8.subarray(0, 4);
 
-console.log(sub);   // Uint8Array [ 1, 2, 3, 0 ]
+console.log(sub); // Uint8Array [ 1, 2, 3, 0 ]
 ```
 
 ## 仕様書
@@ -54,10 +68,11 @@ console.log(sub);   // Uint8Array [ 1, 2, 3, 0 ]
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.TypedArray.subarray")}}
+{{Compat}}
 
 ## 関連情報
 
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [`TypedArray.prototype.subarray` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}

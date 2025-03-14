@@ -1,21 +1,13 @@
 ---
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - RegExp
-  - 정규 표현식
-  - 정규식
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
 
 {{JSRef}}
 
 **`RegExp`** 생성자는 패턴을 사용해 텍스트를 판별할 때 사용합니다.
 
-정규 표현식에 대한 소개는 [JavaScript 안내서의 정규 표현식 장](/ko/docs/Web/JavaScript/Guide/Regular_Expressions)을 참고하세요.
+정규 표현식에 대한 소개는 JavaScript 안내서의 [정규 표현식 장](/ko/docs/Web/JavaScript/Guide/Regular_expressions)을 참고하세요. 정규 표현식 구문에 대한 더 자세한 정보는 [정규 표현식 참고서](/ko/docs/Web/JavaScript/Reference/Regular_expressions)를 참고하시기 바랍니다.
 
 ## 설명
 
@@ -23,32 +15,37 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 
 `RegExp` 객체는 리터럴 표기법과 생성자로써 생성할 수 있습니다.
 
-- **리터럴 표기법**의 매개변수는 두 빗금으로 감싸야 하며 따옴표를 사용하지 않습니다.
-- **생성자 함수**의 매개변수는 빗금으로 감싸지 않으나 따옴표를 사용합니다.
+- **리터럴 표기법**은 두 빗금 사이에 패턴을 사용하며, 두 번째 빗금 뒤에 선택적으로 [플래그](/ko/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags)가 올 수 있습니다.
+- **생성자 함수**은 첫 번째 매개변수로 문자열이나 `RegExp` 객체 중 하나를 받고 두 번째 매개변수로 선택적 [플래그](/ko/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) 문자열을 받습니다.
 
 다음의 세 표현식은 모두 같은 정규 표현식을 생성합니다.
 
 ```js
-/ab+c/i
-new RegExp(/ab+c/, 'i') // 리터럴
-new RegExp('ab+c', 'i') // 생성자
+const re = /ab+c/i; // 리터럴 표기법
+// 혹은
+const re = new RegExp("ab+c", "i"); // 첫 번째 인수로 문자열 패턴과 함께 생성자 사용
+// 혹은
+const re = new RegExp(/ab+c/, "i"); // 첫 번째 인수로 정규 표현식 리터럴과 함께 생성자 사용
 ```
 
-리터럴 표기법은 표현식을 평가할 때 정규 표현식을 컴파일합니다. 정규 표현식이 변하지 않으면 리터럴 표기법을 사용하세요. 예를 들어, 반복문 안에서 사용할 정규 표현식을 리터럴 표기법으로 생성하면 정규 표현식을 매번 다시 컴파일하지 않습니다.
+정규 표현식을 사용하려면 먼저 정규 표현식을 컴파일해야 합니다. 이 과정을 통해 보다 효율적으로 매칭을 수행할 수 있습니다. 이 프로세스에 대한 보다 자세한 내용은 [dotnet 문서](https://docs.microsoft.com/dotnet/standard/base-types/compilation-and-reuse-in-regular-expressions)에서 확인할 수 있습니다.
 
-정규 표현식 객체의 생성자(`new RegExp('ab+c')`)를 사용하면 정규 표현식이 런타임에 컴파일됩니다. 패턴이 변할 가능성이 있거나, 사용자 입력과 같이 알 수 없는 외부 소스에서 가져오는 정규 표현식의 경우 생성자 함수를 사용하세요.
+리터럴 표기법은 표현식이 평가될 때 정규 표현식이 컴파일됩니다. 반면에 `RegExp` 객체의 생성자 `new RegExp('ab+c')`는 정규 표현식을 런타임에 컴파일합니다.
+
+[동적 입력에서 정규식을 빌드](#building_a_regular_expression_from_dynamic_inputs)하려면 `RegExp()` 생성자의 첫 번째 인수로 문자열을 사용합니다.
 
 ### 생성자의 플래그
 
-ECMAScript 6부터는 `new RegExp(/ab+c/, 'i')`처럼, 첫 매개변수가 `RegExp`이면서 `flags`를 지정해도 {{jsxref("TypeError")}} (`"can't supply flags when constructing one RegExp from another"`)가 발생하지 않고, 매개변수로부터 새로운 정규 표현식을 생성합니다.
+표현식 `new RegExp(/ab+c/, flags)`은 첫 번째 매개변수의 소스와 두 번째 매개변수의 [플래그](/ko/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags)를 사용하여 새로운 `RegExp`를 생성합니다.
 
-생성자 함수를 사용할 경우 보통의 문자열 이스케이프 규칙(특수 문자를 문자열에 사용할 때 앞에 역빗금(`\`)을 붙이는 것)을 준수해야 합니다.
+생성자 함수를 사용할 경우, 일반 문자열 이스케이프 규칙(문자열에 포함될 때 특수 문자 앞에 `\` 추가)이 필요합니다.
 
 예를 들어 다음 두 줄은 동일한 정규 표현식을 생성합니다.
 
 ```js
-let re = /\w+/
-let re = new RegExp('\\w+')
+const re = /\w+/;
+// 혹은
+const re = new RegExp("\\w+");
 ```
 
 ### Perl 형태의 `RegExp` 속성
@@ -116,10 +113,10 @@ let re = new RegExp('\\w+')
 대치 문자열에는 `$1`과 `$2`를 사용하여 정규 표현식 패턴의 각 괄호에 일치한 결과를 받아옵니다.
 
 ```js
-let re = /(\w+)\s(\w+)/
-let str = 'John Smith'
-let newstr = str.replace(re, '$2, $1')
-console.log(newstr)
+let re = /(\w+)\s(\w+)/;
+let str = "John Smith";
+let newstr = str.replace(re, "$2, $1");
+console.log(newstr);
 ```
 
 실행 결과는 `"Smith, John"`입니다.
@@ -129,9 +126,9 @@ console.log(newstr)
 기본 줄 바꿈 문자는 플랫폼(Unix, Windows 등)마다 다릅니다. 아래의 분할 스크립트는 모든 플랫폼의 줄 바꿈을 인식합니다.
 
 ```js
-let text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end'
-let lines = text.split(/\r\n|\r|\n/)
-console.log(lines) // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
+let text = "Some text\nAnd some more\r\nAnd yet\rThis is the end";
+let lines = text.split(/\r\n|\r|\n/);
+console.log(lines); // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
 ```
 
 정규 표현식 패턴의 순서를 바꾸면 작동하지 않을 수 있습니다.
@@ -139,7 +136,7 @@ console.log(lines) // logs [ 'Some text', 'And some more', 'And yet', 'This is t
 ### 여러 줄에서 정규 표현식 사용하기
 
 ```js
-let s = 'Please yes\nmake my day!'
+let s = "Please yes\nmake my day!";
 
 s.match(/yes.*day/);
 // Returns null
@@ -153,14 +150,14 @@ s.match(/yes[^]*day/);
 {{JSxRef("Global_Objects/RegExp/sticky", "sticky")}} 플래그는 해당 정규 표현식이 접착 판별, 즉 {{jsxref("RegExp.prototype.lastIndex")}}에서 시작하는 일치만 확인하도록 할 수 있습니다.
 
 ```js
-let str = '#foo#'
-let regex = /foo/y
+let str = "#foo#";
+let regex = /foo/y;
 
-regex.lastIndex = 1
-regex.test(str)      // true
-regex.lastIndex = 5
-regex.test(str)      // false (lastIndex is taken into account with sticky flag)
-regex.lastIndex      // 0 (reset after match failure)
+regex.lastIndex = 1;
+regex.test(str); // true
+regex.lastIndex = 5;
+regex.test(str); // false (lastIndex is taken into account with sticky flag)
+regex.lastIndex; // 0 (reset after match failure)
 ```
 
 ### 접착과 전역 플래그의 차이
@@ -169,7 +166,8 @@ regex.lastIndex      // 0 (reset after match failure)
 
 ```js
 re = /\d/y;
-while (r = re.exec("123 456")) console.log(r, "AND re.lastIndex", re.lastIndex);
+while ((r = re.exec("123 456")))
+  console.log(r, "AND re.lastIndex", re.lastIndex);
 
 // [ '1', index: 0, input: '123 456', groups: undefined ] AND re.lastIndex 1
 // [ '2', index: 1, input: '123 456', groups: undefined ] AND re.lastIndex 2
@@ -186,30 +184,31 @@ while (r = re.exec("123 456")) console.log(r, "AND re.lastIndex", re.lastIndex);
 러시아어나 히브리어와 같은 다른 언어의 문자까지 일치하려면 `\uhhhh`(이때 hhhh는 해당 문자의 16진법 Unicode 값) 문법을 사용하세요. 아래 예제에서는 문자열에서 Unicode 문자를 추출합니다.
 
 ```js
-let text = 'Образец text на русском языке'
-let regex = /[\u0400-\u04FF]+/g
+let text = "Образец text на русском языке";
+let regex = /[\u0400-\u04FF]+/g;
 
-let match = regex.exec(text)
-console.log(match[0])        // logs 'Образец'
-console.log(regex.lastIndex) // logs '7'
+let match = regex.exec(text);
+console.log(match[0]); // logs 'Образец'
+console.log(regex.lastIndex); // logs '7'
 
-let match2 = regex.exec(text)
-console.log(match2[0])       // logs 'на' [did not log 'text']
-console.log(regex.lastIndex) // logs '15'
+let match2 = regex.exec(text);
+console.log(match2[0]); // logs 'на' [did not log 'text']
+console.log(regex.lastIndex); // logs '15'
 
 // and so on
 ```
 
-[유니코드 속성 이스케이프](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) 기능을 사용해 `\p{scx=Cyrl}`과 같은 간단한 구문으로 이 문제를 해결할 수 있습니다.
+[유니코드 속성 이스케이프](/ko/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) 기능을 사용해 `\p{scx=Cyrl}`과 같은 간단한 구문으로 이 문제를 해결할 수 있습니다.
 
 ### URL에서 서브도메인 추출하기
 
 ```js
-let url = 'http://xxx.domain.com'
-console.log(/[^.]+/.exec(url)[0].substr(7)) // logs 'xxx'
+let url = "http://xxx.domain.com";
+console.log(/[^.]+/.exec(url)[0].substr(7)); // logs 'xxx'
 ```
 
-> **참고:** 이 때는 정규표현식보단 [URL API](/ko/docs/Web/API/URL_API)를 통해 브라우저에 내장된 URL 구문 분석기를 사용하는 것이 좋습니다.
+> [!NOTE]
+> 이 때는 정규표현식보단 [URL API](/ko/docs/Web/API/URL_API)를 통해 브라우저에 내장된 URL 구문 분석기를 사용하는 것이 좋습니다.
 
 ## 명세
 
@@ -221,6 +220,6 @@ console.log(/[^.]+/.exec(url)[0].substr(7)) // logs 'xxx'
 
 ## 같이 보기
 
-- [JavaScript 안내서의 정규 표현식 장](/ko/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [JavaScript 안내서의 정규 표현식 장](/ko/docs/Web/JavaScript/Guide/Regular_expressions)
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.replace()")}}

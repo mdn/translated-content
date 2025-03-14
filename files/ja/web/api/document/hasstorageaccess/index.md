@@ -1,18 +1,24 @@
 ---
-title: Document.hasStorageAccess()
+title: "Document: hasStorageAccess() メソッド"
+short-title: hasStorageAccess()
 slug: Web/API/Document/hasStorageAccess
+l10n:
+  sourceCommit: b97c61b40d8b71532d54fe5af1eab4ca014605ec
 ---
 
-{{APIRef}}{{seecompattable}}
+{{APIRef("Storage Access API")}}
 
-{{domxref("Document")}} インターフェイスの **`hasStorageAccess()`** メソッドは、文書がファーストパーティのストレージへのアクセス権を持っているかどうかを真偽値で解決する {{jsxref("Promise")}} を返します。
+**`hasStorageAccess()`** は {{domxref("Document")}} インターフェイスのメソッドで、この文書が[サードパーティ](/ja/docs/Web/Privacy/Third-party_cookies)の[分離された](/ja/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies)クッキーへのアクセス権を持っているかどうかを示す論理値で解決する {{jsxref("Promise")}} を返します。
 
-詳しくは [Storage Access API](/ja/docs/Web/API/Storage_Access_API) を参照してください。
+詳しくは [ストレージアクセス API](/ja/docs/Web/API/Storage_Access_API) を参照してください。
+
+> [!NOTE]
+> このメソッドは {{DOMxRef("Document.hasUnpartitionedCookieAccess()")}} の別名です。{{DOMxRef("Document.hasUnpartitionedCookieAccess()")}} のためにこのメソッドを削除する予定はありません。
 
 ## 構文
 
-```
-var promise = document.hasStorageAccess();
+```js-nolint
+hasStorageAccess()
 ```
 
 ### 引数
@@ -21,26 +27,42 @@ var promise = document.hasStorageAccess();
 
 ### 返値
 
-文書がファーストパーティのストレージへのアクセス権を持っているかどうかを真偽値で解決する {{jsxref("Promise")}} です。
+文書がサードパーティ Cookie にアクセスできるかどうかを示す論理値で解決する {{jsxref("Promise")}} です。サードパーティ Cookie にアクセスできる場合は `true`、できない場合は `false` です。
 
-Promise が解決され、関数が最初に呼び出されたときにユーザージェスチャーイベントを処理していた場合、解決ハンドラーはユーザージェスチャーが処理されているかのように実行されるため、ユーザーによるアクティベーションを必要とする API を呼び出すことができます。
+このメソッドが返す結果は、状況によっては不正確なことがあります。
+
+1. ユーザーがサードパーティクッキーをブロックするブラウザー設定をアクティブにしている場合があります。この場合、サードパーティのクッキーにはまだアクセスできないにもかかわらず、`true` が返されるかもしれません。このような状況を処理するには、クッキーの値が回復不可能になるようなエラーを適切に処理しなければなりません。例えば、個人設定へのアクセスがブロックされていることをユーザーに知らせ、それを使用するには再度サインインするよう促してください。
+2. ブラウザーは既定で、サードパーティクッキーへのアクセスをブロックしない場合があります。この場合、サードパーティクッキーがアクセス可能であっても `false` が返されるかもしれませんし、ストレージへのアクセスは（つまり {{domxref("Document.requestStorageAccess()")}} を通して）リクエストされる必要はないでしょう。この課題を回避するには、{{domxref("Document.cookie")}} に問い合わせてクッキーがアクセス可能かどうかを探し、アクセス可能でない場合は {{domxref("Document.requestStorageAccess()")}} を呼び出します。
+
+> [!NOTE]
+> プロミスが解決され、関数が元々呼び出されたときにユーザージェスチャーイベントが処理されていた場合、解決ハンドラーはユーザーによるジェスチャーが処理されているかのように実行サレルるので、ユーザーによるアクティブ化が要求される API を呼び出すことができます。
+
+### 例外
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : 現在の {{domxref("Document")}} がまだアクティブでない場合に発生します。
 
 ## 例
 
 ```js
-document.hasStorageAccess().then(hasAccess => {
+document.hasStorageAccess().then((hasAccess) => {
   if (hasAccess) {
     // ストレージへのアクセスはすでに許可されています。
+    console.log("クッキーへのアクセスが許可されました");
   } else {
     // ストレージへのアクセスはまだ許可されていません。
     // requestStorageAccess() を呼び出す必要があります。
+    console.log("クッキーへのアクセスが拒否されました");
   }
 });
 ```
 
+> [!NOTE]
+> より完全な例は、[ストレージアクセス API の使用](/ja/docs/Web/API/Storage_Access_API/Using)を参照してください。
+
 ## 仕様書
 
-この API はまだ提案段階にあります。 — 標準化プロセスはまだ始まっていません。現在のところ、この API の詳細の仕様書は、アップルのブログ投稿の [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/)、および [WHATWG HTML issue 3338 — Proposal: Storage Access API](https://github.com/whatwg/html/issues/3338) で見ることができます。
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -48,4 +70,6 @@ document.hasStorageAccess().then(hasAccess => {
 
 ## 関連情報
 
-[Storage Access API](/ja/docs/Web/API/Storage_Access_API)
+- {{domxref("Document.hasUnpartitionedCookieAccess()")}}, {{domxref("Document.requestStorageAccess()")}}, {{domxref("Document.requestStorageAccessFor()")}}
+- [ストレージアクセス API の使用](/ja/docs/Web/API/Storage_Access_API/Using)
+- [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) (WebKit blog)

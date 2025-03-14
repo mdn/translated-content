@@ -25,24 +25,20 @@ var number = event.timeStamp;
 
 ```html
 <html>
-<head>
+  <head>
+    <title>timeStamp example</title>
 
-<title>timeStamp example</title>
+    <script type="text/javascript">
+      function getTime(event) {
+        document.getElementById("time").firstChild.nodeValue = event.timeStamp;
+      }
+    </script>
+  </head>
 
-<script type="text/javascript">
-function getTime(event) {
-  document.getElementById("time").firstChild.nodeValue = event.timeStamp;
-}
-</script>
-</head>
-
-<body onkeypress="getTime(event)">
-
-<p>Press any key to get the current timestamp
-for the onkeypress event.</p>
-<p>timeStamp: <span id="time">-</span></p>
-
-</body>
+  <body onkeypress="getTime(event)">
+    <p>Press any key to get the current timestamp for the onkeypress event.</p>
+    <p>timeStamp: <span id="time">-</span></p>
+  </body>
 </html>
 ```
 
@@ -52,4 +48,4 @@ for the onkeypress event.</p>
 
 ## 詳細資料
 
-- [timestamp](http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-Event-timeStamp)
+- [timestamp](https://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-Event-timeStamp)

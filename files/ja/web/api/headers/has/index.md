@@ -1,15 +1,16 @@
 ---
-title: Headers.has()
+title: "Headers: has() メソッド"
+short-title: has()
 slug: Web/API/Headers/has
 l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 **`has()`** は {{domxref("Headers")}} インターフェイスのメソッドで、 `Headers` オブジェクトに指定された特定のヘッダーがあるかどうかを示す論理値を返します。
 
-セキュリティ上の理由から、いくつかのヘッダーはユーザーエージェントでしか制御できません。これには、{{Glossary("Forbidden_header_name", "禁止ヘッダー名", 1)}}と{{Glossary("Forbidden_response_header_name", "禁止レスポンスヘッダー名", 1)}}があります。
+セキュリティ上の理由から、いくつかのヘッダーはユーザーエージェントでしか制御できません。これには、{{Glossary("Forbidden_header_name", "禁止ヘッダー名")}}と{{Glossary("Forbidden_response_header_name", "禁止レスポンスヘッダー名")}}があります。
 
 ## 構文
 
@@ -37,9 +38,9 @@ const myHeaders = new Headers(); // Currently empty
 これに {{domxref("Headers.append")}} を使用してヘッダーを追加し、`has()` を使用してヘッダーが存在するかどうかをテストすることができます。
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.has('Content-Type'); // Returns true
-myHeaders.has('Accept-Encoding'); // Returns false
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.has("Content-Type"); // Returns true
+myHeaders.has("Accept-Encoding"); // Returns false
 ```
 
 ## 仕様書

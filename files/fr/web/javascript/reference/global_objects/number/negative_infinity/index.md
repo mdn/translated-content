@@ -1,20 +1,30 @@
 ---
 title: Number.NEGATIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
-tags:
-  - JavaScript
-  - Number
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/NEGATIVE_INFINITY
 ---
 
 {{JSRef}}
 
 La propriété **`Number.NEGATIVE_INFINITY`** représente l'infini négatif.
 
-{{EmbedInteractiveExample("pages/js/number-negative-infinity.html")}}{{js_property_attributes(0,0,0)}}
+{{InteractiveExample("JavaScript Demo: Number.NEGATIVE_INFINITY")}}
+
+```js interactive-example
+function checkNumber(smallNumber) {
+  if (smallNumber === Number.NEGATIVE_INFINITY) {
+    return "Process number as -Infinity";
+  }
+  return smallNumber;
+}
+
+console.log(checkNumber(-Number.MAX_VALUE));
+// Expected output: -1.7976931348623157e+308
+
+console.log(checkNumber(-Number.MAX_VALUE * 2));
+// Expected output: "Process number as -Infinity"
+```
+
+{{js_property_attributes(0,0,0)}}
 
 ## Description
 
@@ -41,10 +51,10 @@ La propriété `Number.NEGATIVE_INFINITY` peut être utilisée pour indiquer une
 Dans l'exemple qui suit, on affecte une variable inférieure à la valeur numérique minimale à la variable `petitNombre`. Lorsque l'instruction conditionnelle `if` est exécutée, `petitNombre` possède la valeur "`-Infinity`", on modifie donc la valeur de `petitNombre` afin qu'il puisse être géré.
 
 ```js
-var petitNombre = (-Number.MAX_VALUE) * 2
+var petitNombre = -Number.MAX_VALUE * 2;
 
 if (petitNombre === Number.NEGATIVE_INFINITY) {
- petitNombre = renvoyerUneValeurFinie();
+  petitNombre = renvoyerUneValeurFinie();
 }
 ```
 

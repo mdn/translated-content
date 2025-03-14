@@ -5,7 +5,7 @@ slug: Web/HTML/Global_attributes/data-*
 
 > **Note:** {{HTMLSidebar("Global_attributes")}}
 
-Os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes) **data-\*** formam uma classe de atributos conhecida como **custom data attributes**, a qual permite que informações proprietárias sejam trocadas via script entre o [HTML](/pt-BR/docs/Web/HTML) e sua representação [DOM](/pt-BR/docs/DOM) . Todos esses dados personalizados estão disponíveis através da interface {{domxref("HTMLElement")}} do elemento, onde o atributo está definido. A propriedade {{domxref("HTMLElement.dataset")}} concede acesso a estes atributos .
+Os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes) **data-\*** formam uma classe de atributos conhecida como **custom data attributes**, a qual permite que informações proprietárias sejam trocadas via script entre o [HTML](/pt-BR/docs/Web/HTML) e sua representação [DOM](/pt-BR/docs/Web/API/Document_Object_Model) . Todos esses dados personalizados estão disponíveis através da interface {{domxref("HTMLElement")}} do elemento, onde o atributo está definido. A propriedade {{domxref("HTMLElement.dataset")}} concede acesso a estes atributos .
 O `*` pode ser substituído por qualquer nome, desde que siga [a regra de criação de nomes xml](https://www.w3.org/TR/REC-xml/#NT-Name) com as seguintes restrições:
 
 - O nome não deve começar com xml, independente da caixa destas letras (Ex: XML, xml, XMl, XmL, ...);
@@ -30,15 +30,11 @@ Para adicionar atributos **data-\*** , mesmo os elementos HTML mais comuns podem
 
 ## Especificações
 
-| Specification                                                                                                                                        | Status                           | Comment                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes", "data-*")}} | {{Spec2('HTML WHATWG')}} | No change from latest snapshot, {{SpecName('HTML5.1')}}                                  |
-| {{SpecName('HTML5.1', "dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes", "data-*")}}         | {{Spec2('HTML5.1')}}     | Snapshot of {{SpecName('HTML WHATWG')}}, no change from {{SpecName('HTML5 W3C')}} |
-| {{SpecName('HTML5 W3C', "dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes", "data-*")}}     | {{Spec2('HTML5 W3C')}}     | Snapshot of {{SpecName('HTML WHATWG')}}, initial definition.                             |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.global_attributes.data_attributes")}}
+{{Compat}}
 
 ## See also
 

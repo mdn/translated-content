@@ -1,26 +1,23 @@
 ---
 title: blockquote
 slug: Web/HTML/Element/blockquote
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/blockquote
-original_slug: Web/HTML/Elemento/blockquote
 ---
+
+{{HTMLSidebar}}
 
 ### Definición
 
 - **blockquote** -_cita en bloque_ . Crea citas en bloque, marca las citas a otros autores o documentos.
+
   - : **Sus etiquetas son**: `<blockquote>` y `</blockquote>` (ambas obligatorias).
-  
-    **Está definido como**: Elemento [en bloque](/es/HTML/Elemento/Tipos_de_elementos#enbloque).
+
+    **Está definido como**: Elemento [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#enbloque).
 
     **Crea una caja**: En bloque.
 
-    **Puede y debe contener**: Uno o más elementos [en bloque](/es/HTML/Elemento/Tipos_de_elementos#enbloque) o [script](/es/HTML/Elemento/script)
+    **Puede y debe contener**: Uno o más elementos [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#enbloque) o [script](/es/docs/HTML/Elemento/script)
 
-    Con un doctype transicional **Puede contener**: texto, y/o cero o más elementos [en bloque](/es/HTML/Elemento/Tipos_de_elementos#enbloque) o [en línea](/es/HTML/Elemento/Tipos_de_elementos#enlinea)
+    Con un doctype transicional **Puede contener**: texto, y/o cero o más elementos [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#enbloque) o [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#enlinea)
 
 #### Atributos
 
@@ -232,11 +229,11 @@ original_slug: Web/HTML/Elemento/blockquote
 </blockquote>
 ```
 
-- **blockquote** tiene un hermano menor: [q](/es/HTML/Elemento/q). **blockquote** sirve para citas en bloque y [q](/es/HTML/Elemento/q) para citas en línea.
+- **blockquote** tiene un hermano menor: [q](/es/docs/Web/HTML/Element/q). **blockquote** sirve para citas en bloque y [q](/es/docs/Web/HTML/Element/q) para citas en línea.
 
 <!---->
 
-- A diferencia de [q](/es/HTML/Elemento/q), **blockquote** no entrecomilla los contenidos, debe hacerlo el autor (con CSS).
+- A diferencia de [q](/es/docs/Web/HTML/Element/q), **blockquote** no entrecomilla los contenidos, debe hacerlo el autor (con CSS).
 
 ### Referencia
 
@@ -248,7 +245,8 @@ Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html
 
 ---
 
-> **Nota:** Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!NOTE]
+> Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
 >
 > ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.
 

@@ -1,15 +1,65 @@
 ---
 title: border-left-style
 slug: Web/CSS/border-left-style
+l10n:
+  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
 {{CSSRef}}
 
-**`border-left-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の {{cssxref("border")}} における線の形状を設定します。
+**`border-left-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の境界線 ({{cssxref("border")}}) のスタイルを設定します。
 
-{{EmbedInteractiveExample("pages/css/border-left-style.html")}}
+{{InteractiveExample("CSS Demo: border-left-style")}}
 
-> **メモ:** 仕様書では、異なる形状の境界線を角でどの様に接続するかを定義していません。
+```css interactive-example-choice
+border-left-style: none;
+```
+
+```css interactive-example-choice
+border-left-style: dotted;
+```
+
+```css interactive-example-choice
+border-left-style: dashed;
+```
+
+```css interactive-example-choice
+border-left-style: solid;
+```
+
+```css interactive-example-choice
+border-left-style: groove;
+```
+
+```css interactive-example-choice
+border-left-style: inset;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+
+body {
+  background-color: #fff;
+}
+```
+
+> [!NOTE]
+> 仕様書では、異なるスタイルの境界線を角でどの様に接続するかを定義していません。
 
 ## 構文
 
@@ -30,10 +80,11 @@ border-left-style: outset;
 border-left-style: inherit;
 border-left-style: initial;
 border-left-style: revert;
+border-left-style: revert-layer;
 border-left-style: unset;
 ```
 
-`border-left-style` プロパティは、 {{cssxref("border-style")}} プロパティで利用できるキーワードのうちの一つで指定します。
+`border-left-style` プロパティは、単一の {{cssxref("line-style")}} キーワード値で指定します。
 
 ## 公式定義
 
@@ -43,13 +94,13 @@ border-left-style: unset;
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### border-left-style の設定
 
 #### HTML
 
-```html
+```html live-sample___examples
 <table>
   <tr>
     <td class="b1">none</td>
@@ -72,27 +123,48 @@ border-left-style: unset;
 
 #### CSS
 
-```css
+```css live-sample___examples
 /* 表の外見を定義 */
 table {
   border-width: 2px;
-  background-color: #52E385;
+  background-color: #52e385;
 }
-tr, td {
+tr,
+td {
   padding: 3px;
 }
 
 /* border-left-style の例のクラス */
-.b1 {border-left-style: none;}
-.b2 {border-left-style: hidden;}
-.b3 {border-left-style: dotted;}
-.b4 {border-left-style: dashed;}
-.b5 {border-left-style: solid;}
-.b6 {border-left-style: double;}
-.b7 {border-left-style: groove;}
-.b8 {border-left-style: ridge;}
-.b9 {border-left-style: inset;}
-.b10 {border-left-style: outset;}
+.b1 {
+  border-left-style: none;
+}
+.b2 {
+  border-left-style: hidden;
+}
+.b3 {
+  border-left-style: dotted;
+}
+.b4 {
+  border-left-style: dashed;
+}
+.b5 {
+  border-left-style: solid;
+}
+.b6 {
+  border-left-style: double;
+}
+.b7 {
+  border-left-style: groove;
+}
+.b8 {
+  border-left-style: ridge;
+}
+.b9 {
+  border-left-style: inset;
+}
+.b10 {
+  border-left-style: outset;
+}
 ```
 
 #### 結果
@@ -109,5 +181,5 @@ tr, td {
 
 ## 関連情報
 
-- その他の形状に関する境界のプロパティ: {{Cssxref("border-bottom-style")}}, {{Cssxref("border-right-style")}}, {{Cssxref("border-top-style")}}, {{Cssxref("border-style")}}
+- その他のスタイルに関する境界のプロパティ: {{Cssxref("border-bottom-style")}}, {{Cssxref("border-right-style")}}, {{Cssxref("border-top-style")}}, {{Cssxref("border-style")}}
 - その他の左側の境界に関するプロパティ: {{Cssxref("border-left")}}, {{Cssxref("border-left-color")}}, {{Cssxref("border-left-width")}}

@@ -7,10 +7,10 @@ slug: Web/API/Element/insertAdjacentText
 
 **`insertAdjacentText()`** 方法将一个给定的文本节点插入在相对于被调用的元素给定的位置。
 
-## 句法
+## 语法
 
-```
-element.insertAdjacentText(position, element);
+```js-nolint
+insertAdjacentText(where, data)
 ```
 
 ### 参数
@@ -42,24 +42,25 @@ Void.
 ```html
 <!-- beforebegin -->
 <p>
-<!-- afterbegin -->
-foo
-<!-- beforeend -->
+  <!-- afterbegin -->
+  foo
+  <!-- beforeend -->
 </p>
 <!-- afterend -->
 ```
 
-> **备注：** 只有当节点位于树中并具有元素父元素时，beforebegin 和 afterend 位置才能工作。
+> [!NOTE]
+> 只有当节点位于树中并具有元素父元素时，beforebegin 和 afterend 位置才能工作。
 
 ## 范例
 
 ```js
-beforeBtn.addEventListener('click', function() {
-  para.insertAdjacentText('afterbegin',textInput.value);
+beforeBtn.addEventListener("click", function () {
+  para.insertAdjacentText("afterbegin", textInput.value);
 });
 
-afterBtn.addEventListener('click', function() {
-  para.insertAdjacentText('beforeend',textInput.value);
+afterBtn.addEventListener("click", function () {
+  para.insertAdjacentText("beforeend", textInput.value);
 });
 ```
 
@@ -73,7 +74,7 @@ Have a look at our [insertAdjacentText.html](https://mdn.github.io/dom-examples/
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - {{domxref("Element.insertAdjacentElement()")}}
 - {{domxref("Element.insertAdjacentHTML()")}}

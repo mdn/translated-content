@@ -1,32 +1,21 @@
 ---
 title: Partage d'objets avec des scripts de page
 slug: Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
-tags:
-  - Add-ons
-  - Extensions
-  - Firefox
-  - Guide
-  - Mozilla
-  - Non-standard
-  - WebExtensions
-  - XPCOM
-  - script de contenu
-  - scripts de page
-translation_of: Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
-original_slug: Mozilla/Add-ons/WebExtensions/partage_d_objets_avec_des_scripts_de_page
 ---
 
 {{AddonSidebar}}
 
-> **Note :** Les techniques décrites dans cette section sont uniquement disponibles dans Firefox, et seulement à partir de Firefox 49
+> [!NOTE]
+> Les techniques décrites dans cette section sont uniquement disponibles dans Firefox, et seulement à partir de Firefox 49
 
-> **Attention :** En tant que développeur d'extensions, vous devez considérer que les scripts s'exécutant sur des pages Web arbitraires sont des codes hostiles dont le but est de voler les informations personnelles de l'utilisateur, d'endommager leur ordinateur ou de les attaquer d'une autre manière.
+> [!WARNING]
+> En tant que développeur d'extensions, vous devez considérer que les scripts s'exécutant sur des pages Web arbitraires sont des codes hostiles dont le but est de voler les informations personnelles de l'utilisateur, d'endommager leur ordinateur ou de les attaquer d'une autre manière.
 >
 > L'isolation entre les scripts de contenu et les scripts chargés par les pages Web a pour but de rendre plus difficile la tâche des pages Web hostiles.
 >
 > Puisque les techniques décrites dans cette section décompose cet isolement, elles sont intrinsèquement dangereuses et devraient être utilisées avec beaucoup de soin.
 
-Comme les [notes du guide de scripts de contenu](/fr/Add-ons/WebExtensions/Content_scripts#DOM_access), les scripts de contenu ne voient pas les modifications apportées au DOM par des scripts chargés par des pages Web.Cela signifie que, par exemple, si une page Web charge une bibliothèque comme jQuery, les scripts de contenu ne pourront pas l'utiliser et devront charger leur propre copie. À l'inverse, les scripts chargés par les pages Web ne peuvent pas voir les modifications apportées par les scripts de contenu.
+Comme les [notes du guide de scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#dom_access), les scripts de contenu ne voient pas les modifications apportées au DOM par des scripts chargés par des pages Web.Cela signifie que, par exemple, si une page Web charge une bibliothèque comme jQuery, les scripts de contenu ne pourront pas l'utiliser et devront charger leur propre copie. À l'inverse, les scripts chargés par les pages Web ne peuvent pas voir les modifications apportées par les scripts de contenu.
 
 Cependant, Firefox fournit des API qui permettent aux scripts de contenu de :
 
@@ -41,7 +30,7 @@ Le but de cette fonctionnalité est de rendre le script moins privilégié plus 
 
 Par exemple, lorsqu'un script de contenu accède à la [fenêtre](/fr/docs/Web/API/Window) de la page, il ne voit aucune propriété ajoutée au script de la page, et si le script de la page a redéfini les propriétés de la fenêtre, le script de contenu verra la version originale .
 
-Pour l'histoire complète sur la vision Xray, voir les articles sur [Vision Xray](en-US/docs/Mozilla/Tech/Xray_vision) et la [securité des Scripts](en-US/docs/Mozilla/Gecko/Script_security).
+Pour l'histoire complète sur la vision Xray, voir les articles sur [Vision Xray](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html) et la [securité des Scripts](/fr/docs/Mozilla/Gecko/Script_security).
 
 ## Accès aux objets de script de page à partir de scripts de contenu
 
@@ -50,10 +39,10 @@ Dans Firefox, les objets DOM dans les scripts de contenu obtiennent une proprié
 Prenons un exemple simple. Supposons qu'une page Web charge un script:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
   </head>
   <body>
     <script type="text/javascript" src="main.js"></script>
@@ -99,8 +88,8 @@ voir le document [vision Xray](/fr/Tech/Xray_vision) pour plus de détails à ce
 
 Firefox fournit également des API permettant aux scripts de contenu de rendre les objets disponibles pour les scripts de page. Il y a plusieurs approches ici:
 
-- [`exportFunction()`](#exportFunction): exporte une fonction vers des scripts de page
-- [`cloneInto()`](#cloneInto): exporte un objet vers des scripts de page.
+- [`exportFunction()`](#exportfunction): exporte une fonction vers des scripts de page
+- [`cloneInto()`](#cloneinto): exporte un objet vers des scripts de page.
 - constructeurs du contexte de la page
 
 ### exportFunction
@@ -115,7 +104,7 @@ Execute content script in the active tab.
 */
 function loadContentScript() {
   browser.tabs.executeScript({
-    file: "/content_scripts/export.js"
+    file: "/content_scripts/export.js",
   });
 }
 
@@ -133,7 +122,7 @@ browser.runtime.onMessage.addListener((message) => {
   browser.notifications.create({
     type: "basic",
     title: "Message from the page",
-    message: message.content
+    message: message.content,
   });
 });
 ```
@@ -141,7 +130,7 @@ browser.runtime.onMessage.addListener((message) => {
 Cela fait deux choses :
 
 - exécuter un script de contenu dans l'onglet en cours, lorsque l'utilisateur clique sur une action du navigateur
-- écouter les messages du script de contenu et afficher une [notification](/fr/Add-ons/WebExtensions/API/notifications) lorsque le message arrive.
+- écouter les messages du script de contenu et afficher une [notification](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications) lorsque le message arrive.
 
 Le script de contenu ressemble à ceci :
 
@@ -151,10 +140,10 @@ Define a function in the content script's scope, then export it
 into the page script's scope.
 */
 function notify(message) {
-  browser.runtime.sendMessage({content: "Function call: " + message});
+  browser.runtime.sendMessage({ content: "Function call: " + message });
 }
 
-exportFunction(notify, window, {defineAs:'notify'});
+exportFunction(notify, window, { defineAs: "notify" });
 ```
 
 Cela définit une fonction `notify()`, qui envoie simplement son argument au script d'arrière-plan. Il exporte ensuite la fonction vers la portée du script de page. Maintenant, le script de la page peut appeler cette fonction:
@@ -182,17 +171,16 @@ the cloneInto call must include
 the `cloneFunctions` option.
 */
 var messenger = {
-  notify: function(message) {
+  notify: function (message) {
     browser.runtime.sendMessage({
-      content: "Object method call: " + message
+      content: "Object method call: " + message,
     });
-  }
+  },
 };
 
-window.wrappedJSObject.messenger = cloneInto(
-  messenger,
-  window,
-  {cloneFunctions: true});
+window.wrappedJSObject.messenger = cloneInto(messenger, window, {
+  cloneFunctions: true,
+});
 ```
 
 Maintenant les scripts de page vont voir une nouvelle propriété sur la fenêtre, `messenger`, qui a une fonction `notify()`:
@@ -205,7 +193,7 @@ Pour l'histoire complète, voir [`Components.utils.cloneInto`](/fr/Tech/XPCOM/La
 
 ### Constructeurs du contexte de la page
 
-Sur l'objet fenêtre de xrayed, des constructeurs immaculés pour certains objets javascript intégrés tels que `Object`, `Function` ou `Proxy` et différentes classe DOM sont disponibles. `XMLHttpRequest` ne se comporte pas de cette manière, voir la section [XHR and fetch](/fr/Add-ons/WebExtensions/Content_scripts#XHR_and_Fetch) pour plus de détails. Ils créeront des instances appartenant à la hiérarchie d'objets de la page global, puis retourneront un wrapper xray.
+Sur l'objet fenêtre de xrayed, des constructeurs immaculés pour certains objets javascript intégrés tels que `Object`, `Function` ou `Proxy` et différentes classe DOM sont disponibles. `XMLHttpRequest` ne se comporte pas de cette manière, voir la section [XHR and fetch](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#xhr_and_fetch) pour plus de détails. Ils créeront des instances appartenant à la hiérarchie d'objets de la page global, puis retourneront un wrapper xray.
 
 Puisque les objets créés de cette manière appartiennent déjà à la page et que le script de contenu ne les renvoie pas à la page, il ne nécessitera pas de clonage ou d'exportation supplémentaire.
 

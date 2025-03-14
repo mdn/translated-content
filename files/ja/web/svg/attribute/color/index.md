@@ -7,7 +7,8 @@ slug: Web/SVG/Attribute/color
 
 **`color`** 属性は、間接的な値の候補である `currentcolor` を {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, {{SVGAttr("lighting-color")}} の各属性に与えるために使用します。
 
-> **メモ:** プレゼンテーション属性として、`color` は CSS プロパティとして使用できます。詳しい情報は [CSS 色](/ja/docs/Web/CSS/color) を参照してください。
+> [!NOTE]
+> プレゼンテーション属性として、`color` は CSS プロパティとして使用できます。詳しい情報は [CSS 色](/ja/docs/Web/CSS/color) を参照してください。
 
 プレゼンテーション属性として、任意の要素に適用することができますが、上記のように SVG 要素には直接影響を与えません。
 
@@ -36,7 +37,9 @@ slug: Web/SVG/Attribute/color
 <h2 id="Example">例</h2>
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -45,7 +48,13 @@ html, body, svg {
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <g color="green">
     <rect width="50" height="50" fill="currentcolor" />
-    <circle r="25" cx="70" cy="70" stroke="currentcolor" fill="none" stroke-width="5" />
+    <circle
+      r="25"
+      cx="70"
+      cy="70"
+      stroke="currentcolor"
+      fill="none"
+      stroke-width="5" />
   </g>
 </svg>
 ```

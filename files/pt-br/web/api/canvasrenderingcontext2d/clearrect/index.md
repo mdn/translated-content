@@ -26,7 +26,7 @@ void ctx.clearRect(x, y, width, height);
 
 ## Notas de uso
 
-Um problema comum com `clearRect` que pode acontecer, é que pode não funcionar corretamente, caso não seja usada alguma [propriedade de _path_](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#Drawing_paths). Não esqueça de usar {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} antes de começar um novo frame depois de chamar `clearRect`.
+Um problema comum com `clearRect` que pode acontecer, é que pode não funcionar corretamente, caso não seja usada alguma [propriedade de _path_](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#drawing_paths). Não esqueça de usar {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} antes de começar um novo frame depois de chamar `clearRect`.
 
 ## Exemplos
 
@@ -43,8 +43,8 @@ Isto é só um simples trecho de código que usa o método `clearRect`.
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.moveTo(20, 20);
@@ -75,7 +75,8 @@ ctx.lineTo(120,120);
 ctx.closePath(); // draws last line of the triangle
 ctx.stroke();
 
-ctx.clearRect(10, 10, 100, 100);</textarea>
+ctx.clearRect(10, 10, 100, 100);</textarea
+>
 ```
 
 ```js hidden
@@ -91,14 +92,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -108,13 +109,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Especificações
 
-| Especificação                                                                                                                                    | Estado                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-clearrect", "CanvasRenderingContext2D.clearRect")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.CanvasRenderingContext2D.clearRect")}}
+{{Compat}}
 
 ## Veja também
 

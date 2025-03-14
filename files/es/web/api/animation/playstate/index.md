@@ -7,7 +7,8 @@ slug: Web/API/Animation/playState
 
 La propiedad `Animation.playState` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve y establece un valor enumerado que describe el estado de reproducción de una animación.
 
-> **Nota:** Esta propiedad es de solo lectura para las Animaciones y Transiciones en CSS.
+> [!NOTE]
+> Esta propiedad es de solo lectura para las Animaciones y Transiciones en CSS.
 
 ## Sintaxis
 
@@ -37,29 +38,25 @@ En el ejemplo [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen
 ```js
 // Configurando las animaciones de lágrimas
 
-tears.forEach(function(el) {
-  el.animate(
-    tearsFalling,
-    {
-      delay: getRandomMsRange(-1000, 1000), // cada lágrima aleatoria
-      duration: getRandomMsRange(2000, 6000), // cada lágrima aleatoria
-      iterations: Infinity,
-      easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)"
-    });
-  el.playState = 'paused';
+tears.forEach(function (el) {
+  el.animate(tearsFalling, {
+    delay: getRandomMsRange(-1000, 1000), // cada lágrima aleatoria
+    duration: getRandomMsRange(2000, 6000), // cada lágrima aleatoria
+    iterations: Infinity,
+    easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)",
+  });
+  el.playState = "paused";
 });
-
 
 // Reproduce las lágrimas cayendo cuando el final necesita mostrarlas.
 
-tears.forEach(function(el) {
-  el.playState = 'playing';
+tears.forEach(function (el) {
+  el.playState = "playing";
 });
-
 
 // Reinicia la animación de las lágrimas y la detiene.
 
-tears.forEach(function(el) {
+tears.forEach(function (el) {
   el.playState = "paused";
   el.currentTime = 0;
 });

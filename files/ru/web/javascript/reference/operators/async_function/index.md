@@ -1,8 +1,8 @@
 ---
 title: async function expression
 slug: Web/JavaScript/Reference/Operators/async_function
-translation_of: Web/JavaScript/Reference/Operators/async_function
 ---
+
 {{jsSidebar("Operators")}}
 
 Ключевое слово **`async function`** используется для определения асинхронной функции внутри выражений.
@@ -17,7 +17,7 @@ async function [name]([param1[, param2[, ..., paramN]]]) {
 }
 ```
 
-Согласно спецификации [ES2015](/ru/docs/), вы также можете использовать [стрелочные функции](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+Согласно спецификации [ES2015](/ru/docs/Web), вы также можете использовать [стрелочные функции](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Параметры
 
@@ -38,39 +38,39 @@ async function [name]([param1[, param2[, ..., paramN]]]) {
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
   });
-};
+}
 
-(async function(x) { // выражение асинхронной функции в виде IIFE
+(async function (x) {
+  // выражение асинхронной функции в виде IIFE
   var a = resolveAfter2Seconds(20);
   var b = resolveAfter2Seconds(30);
-  return x + await a + await b;
-})(10).then(v => {
-  console.log(v);  // выведет 60 после 2 секунд.
+  return x + (await a) + (await b);
+})(10).then((v) => {
+  console.log(v); // выведет 60 после 2 секунд.
 });
 
-var add = async function(x) { // назначение выражения асинхронной функции переменной
+var add = async function (x) {
+  // назначение выражения асинхронной функции переменной
   var a = await resolveAfter2Seconds(20);
   var b = await resolveAfter2Seconds(30);
   return x + a + b;
 };
 
-add(10).then(v => {
-  console.log(v);  // выведет 60 после 4 секунд.
+add(10).then((v) => {
+  console.log(v); // выведет 60 после 4 секунд.
 });
 ```
 
 ## Спецификации
 
-| Specification                                                                                        | Status                       | Comment                       |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ESDraft')}} | Initial definition in ES2017. |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

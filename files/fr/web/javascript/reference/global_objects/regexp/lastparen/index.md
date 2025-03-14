@@ -1,13 +1,6 @@
 ---
 title: RegExp.lastParen ($+)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastParen
-tags:
-  - JavaScript
-  - Propriété
-  - Reference
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/lastParen
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/lastParen
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -17,8 +10,8 @@ La propriété **`lastParen`** est une propriété statique accessible en lectur
 ## Syntaxe
 
 ```js
-RegExp.lastParen
-RegExp['$+']
+RegExp.lastParen;
+RegExp["$+"];
 ```
 
 ## Description
@@ -27,7 +20,7 @@ La propriété `lastParen` est une propriété statique, ce n'est pas une propri
 
 La valeur de la propriété `lastParen` n'est accessible qu'en lecture seule et est modifiée automatiquement à chaque fois qu'il y a une correspondance.
 
-Cet alias ne peut pas être utilisé avec la notation utilisant le point pour l'accès aux propriétés (`RegExp.$+`). En effet, le parseur attend une expression avec "+", dans ce cas, une exception {{jsxref("SyntaxError")}} est levée. Pour utiliser cette notation raccourcie, on utilisera [la notation avec les crochets](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres#Notation_avec_crochets).
+Cet alias ne peut pas être utilisé avec la notation utilisant le point pour l'accès aux propriétés (`RegExp.$+`). En effet, le parseur attend une expression avec "+", dans ce cas, une exception {{jsxref("SyntaxError")}} est levée. Pour utiliser cette notation raccourcie, on utilisera [la notation avec les crochets](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors#notation_avec_crochets).
 
 ## Exemples
 
@@ -37,7 +30,7 @@ Cet alias ne peut pas être utilisé avec la notation utilisant le point pour l'
 var re = /(coucou)/g;
 re.test("coucou toi !");
 RegExp.lastParen; // "coucou"
-RegExp['$+'];     // "coucou"
+RegExp["$+"]; // "coucou"
 ```
 
 ## Spécifications
@@ -46,7 +39,7 @@ Cette propriété n'est pas standard. Elle ne fait partie d'aucune spécificatio
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.lastParen")}}
+{{Compat}}
 
 ## Voir aussi
 

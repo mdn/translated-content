@@ -3,13 +3,13 @@ title: search.search()
 slug: Mozilla/Add-ons/WebExtensions/API/search/search
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 使用指定的搜索引擎或默认搜索引擎进行搜索。
 
 结果将显示在一个新的选项卡中，或者如果给出了 tabId 参数，则显示在由此标识的选项卡中。
 
-要在扩展程序中使用此功能，您必须要求`"search"` [有明确许可](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+要在扩展程序中使用此功能，你必须要求`"search"` [有明确许可](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
 获取安装的搜索引擎，请使用 {{WebExtAPIRef("search.get()")}}.
 
@@ -17,8 +17,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/search/search
 
 ```js
 browser.search.search(
-  searchProperties       // object
-)
+  searchProperties, // object
+);
 ```
 
 ### 参数
@@ -38,7 +38,7 @@ browser.search.search(
 
 无。
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 
@@ -49,7 +49,7 @@ browser.search.search(
 ```js
 function search() {
   browser.search.search({
-    query: "styracosaurus"
+    query: "styracosaurus",
   });
 }
 
@@ -62,7 +62,7 @@ browser.browserAction.onClicked.addListener(search);
 function search() {
   browser.search.search({
     query: "styracosaurus",
-    engine: "Wikipedia (en)"
+    engine: "Wikipedia (en)",
   });
 }
 
@@ -76,7 +76,7 @@ function search(tab) {
   browser.search.search({
     query: "styracosaurus",
     engine: "Wikipedia (en)",
-    tabId: tab.id
+    tabId: tab.id,
   });
 }
 

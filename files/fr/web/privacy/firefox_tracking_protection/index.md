@@ -1,13 +1,6 @@
 ---
 title: Protection contre le pistage
 slug: Web/Privacy/Firefox_tracking_protection
-tags:
-  - Privacy
-  - Private browsing
-  - blocking
-  - tracking
-translation_of: Web/Privacy/Tracking_Protection
-original_slug: Web/Privacy/Tracking_Protection
 ---
 
 ## La protection contre le pistage, qu'est-ce que c'est ?
@@ -56,45 +49,52 @@ De façon plus subtile, si d'autres parties de votre site dépendent des traqueu
 Par exemple, vous ne devriez pas utiliser Google Analytics de la façon suivante :
 
 ```html example-bad
-<a href="http://www.exemple.com" onclick="trackLink('http://www.exemple.com', event);">
+<a
+  href="http://www.exemple.com"
+  onclick="trackLink('http://www.exemple.com', event);">
   Visiter exemple.com
 </a>
 
 <script>
-function trackLink(url,event) {
-  event.preventDefault();
-  ga('send', 'event', 'outbound', 'click', url, {
-    'transport': 'beacon',
-    'hitCallback': function() {
-      document.location = url;
-    }
-  });
-}
+  function trackLink(url, event) {
+    event.preventDefault();
+    ga("send", "event", "outbound", "click", url, {
+      transport: "beacon",
+      hitCallback: function () {
+        document.location = url;
+      },
+    });
+  }
 </script>
 ```
 
 Au lieu de cela, prenez en compte le cas où Google Analytics est absent, en vérifiant si l'objet `ga` a été initialisé :
 
 ```html example-good
-<a href="http://www.exemple.com" onclick="trackLink('http://www.exemple.com', event);">
+<a
+  href="http://www.exemple.com"
+  onclick="trackLink('http://www.exemple.com', event);">
   Visiter exemple.com
 </a>
 
 <script>
-function trackLink(url,event) {
-  event.preventDefault();
-  if (window.ga && ga.loaded) {
-    ga('send', 'event', 'outbound', 'click', url, {
-      'transport': 'beacon',
-      'hitCallback': function() { document.location = url; }
-    });
-  } else {
+  function trackLink(url, event) {
+    event.preventDefault();
+    if (window.ga && ga.loaded) {
+      ga("send", "event", "outbound", "click", url, {
+        transport: "beacon",
+        hitCallback: function () {
+          document.location = url;
+        },
+      });
+    } else {
       document.location = url;
+    }
   }
-}
 </script>
 ```
 
 Pour plus d'information sur cette technique, regardez l'article sur [Google Analytics, Vie privée et Suivi d'événements](https://hacks.mozilla.org/2016/01/google-analytics-privacy-and-event-tracking/) (en anglais).
 
-> **Note :** Dépendre d'un élément tiers de cette façon n'est dans tous les cas pas une bonne pratique, car votre site peut se retrouver hors d'usage si la partie tierce est lente ou indisponible, ou si le traqueur a été bloqué par une extension.
+> [!NOTE]
+> Dépendre d'un élément tiers de cette façon n'est dans tous les cas pas une bonne pratique, car votre site peut se retrouver hors d'usage si la partie tierce est lente ou indisponible, ou si le traqueur a été bloqué par une extension.

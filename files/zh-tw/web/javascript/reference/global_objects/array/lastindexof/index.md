@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 
 **`lastIndexOf()`** 方法會回傳給定元素於陣列中最後一個被找到之索引，若不存在於陣列中則回傳 -1。搜尋的方向為由陣列尾部向後（即向前）尋找，啟始於 `fromIndex`。
 
-{{EmbedInteractiveExample("pages/js/array-lastindexof.html")}}
+{{InteractiveExample("JavaScript Demo: Array.lastIndexOf()")}}
+
+```js interactive-example
+const animals = ["Dodo", "Tiger", "Penguin", "Dodo"];
+
+console.log(animals.lastIndexOf("Dodo"));
+// Expected output: 3
+
+console.log(animals.lastIndexOf("Tiger"));
+// Expected output: 1
+```
 
 ## 語法
 
@@ -29,7 +39,7 @@ arr.lastIndexOf(searchElement, fromIndex)
 
 ## 描述
 
-`lastIndexOf` compares `searchElement` to elements of the Array using [strict equality](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) (the same method used by the ===, or triple-equals, operator).
+`lastIndexOf` compares `searchElement` to elements of the Array using [strict equality](/zh-TW/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators) (the same method used by the ===, or triple-equals, operator).
 
 ## 範例
 
@@ -39,10 +49,10 @@ The following example uses `lastIndexOf` to locate values in an array.
 
 ```js
 var numbers = [2, 5, 9, 2];
-numbers.lastIndexOf(2);     // 3
-numbers.lastIndexOf(7);     // -1
-numbers.lastIndexOf(2, 3);  // 3
-numbers.lastIndexOf(2, 2);  // 0
+numbers.lastIndexOf(2); // 3
+numbers.lastIndexOf(7); // -1
+numbers.lastIndexOf(2, 3); // 3
+numbers.lastIndexOf(2, 2); // 0
 numbers.lastIndexOf(2, -2); // 0
 numbers.lastIndexOf(2, -1); // 3
 ```
@@ -53,12 +63,12 @@ The following example uses `lastIndexOf` to find all the indices of an element i
 
 ```js
 var indices = [];
-var array = ['a', 'b', 'a', 'c', 'a', 'd'];
-var element = 'a';
+var array = ["a", "b", "a", "c", "a", "d"];
+var element = "a";
 var idx = array.lastIndexOf(element);
 while (idx != -1) {
   indices.push(idx);
-  idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);
+  idx = idx > 0 ? array.lastIndexOf(element, idx - 1) : -1;
 }
 
 console.log(indices);
@@ -75,14 +85,15 @@ Note that we have to handle the case `idx == 0` separately here because the elem
 // Production steps of ECMA-262, Edition 5, 15.4.4.15
 // Reference: http://es5.github.io/#x15.4.4.15
 if (!Array.prototype.lastIndexOf) {
-  Array.prototype.lastIndexOf = function(searchElement /*, fromIndex*/) {
-    'use strict';
+  Array.prototype.lastIndexOf = function (searchElement /*, fromIndex*/) {
+    "use strict";
 
     if (this === void 0 || this === null) {
       throw new TypeError();
     }
 
-    var n, k,
+    var n,
+      k,
       t = Object(this),
       len = t.length >>> 0;
     if (len === 0) {
@@ -94,8 +105,7 @@ if (!Array.prototype.lastIndexOf) {
       n = Number(arguments[1]);
       if (n != n) {
         n = 0;
-      }
-      else if (n != 0 && n != (1 / 0) && n != -(1 / 0)) {
+      } else if (n != 0 && n != 1 / 0 && n != -(1 / 0)) {
         n = (n > 0 || -1) * Math.floor(Math.abs(n));
       }
     }
@@ -122,7 +132,7 @@ Again, note that this implementation aims for absolute compatibility with `lastI
 
 ## 相容性備註
 
-- Starting with Firefox 47, this method will no longer return `-0`. For example, `[0].lastIndexOf(0, -0)` will now always return `+0` ({{bug(1242043)}}).
+- Starting with Firefox 47, this method will no longer return `-0`. For example, `[0].lastIndexOf(0, -0)` will now always return `+0` ([Firefox bug 1242043](https://bugzil.la/1242043)).
 
 ## 參見
 

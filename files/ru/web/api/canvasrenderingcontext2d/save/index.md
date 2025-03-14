@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.save()
 slug: Web/API/CanvasRenderingContext2D/save
-translation_of: Web/API/CanvasRenderingContext2D/save
 ---
 
 {{APIRef}}

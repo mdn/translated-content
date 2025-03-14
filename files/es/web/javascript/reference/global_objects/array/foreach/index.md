@@ -1,24 +1,23 @@
 ---
 title: Array.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
-tags:
-  - Array
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.6
-  - Method
-  - Prototype
-  - Referencia
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/forEach
 ---
 
 {{JSRef}}
 
 El método **`forEach()`** ejecuta la función indicada una vez por cada elemento del array.
 
-{{EmbedInteractiveExample("pages/js/array-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Array.forEach()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+array1.forEach((element) => console.log(element));
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## Sintaxis
 
@@ -58,7 +57,7 @@ arr.forEach(function callback(currentValue, index, array) {
 2. el índice del elemento
 3. el array que está siendo recorrido
 
-Si un parámetro `thisArg` es proporcionado a `forEach`, será usado como el valor `this` para cada invocación de `callback` como si se llamara a `callback.call(thisArg, element, index, array)`. Si `thisArg` es `undefined` o `null`, el valor `this` dentro de la función depende si la función está o no en [modo estricto](/es/docs/Web/JavaScript/Referencia/Modo_estricto) (valor pasado si está en modo estricto, objeto global si está en modo no-estricto).
+Si un parámetro `thisArg` es proporcionado a `forEach`, será usado como el valor `this` para cada invocación de `callback` como si se llamara a `callback.call(thisArg, element, index, array)`. Si `thisArg` es `undefined` o `null`, el valor `this` dentro de la función depende si la función está o no en [modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode) (valor pasado si está en modo estricto, objeto global si está en modo no-estricto).
 
 El rango de elementos procesados por `forEach()` se establece antes de la primera invocación del `callback`. Los elementos que sean añadidos al vector después de que inicie la llamada a `forEach` no serán visitados por `callback`. Si los valores de los elementos existentes en el vector son modificados, el valor pasado al `callback` será el valor al momento de que forEach los visite; no se evaluarán los elementos borrados antes de ser visitados por `forEach`.
 
@@ -66,7 +65,8 @@ El rango de elementos procesados por `forEach()` se establece antes de la primer
 
 `foreach()` no muta/modifica el array desde el que es llamado (aunque `callback`, si se invoca, podría hacerlo).
 
-> **Nota:** **Nota :** No hay forma de detener o cortar un bucle `forEach` que no sea lanzar una excepción. Si necesita dicho comportamiento, el método `.forEach()` es la herramienta equivocada, use una simple iteración en su lugar. Si está probando los elementos del array para un predicado y necesita devolver un valor boleano, puede usar {{jsxref("Array.prototype.every()", "every()")}} o {{jsxref("Array.prototype.some()", "some()")}} en su lugar.
+> [!NOTE]
+> No hay forma de detener o cortar un bucle `forEach` que no sea lanzar una excepción. Si necesita dicho comportamiento, el método `.forEach()` es la herramienta equivocada, use una simple iteración en su lugar. Si está probando los elementos del array para un predicado y necesita devolver un valor boleano, puede usar {{jsxref("Array.prototype.every()", "every()")}} o {{jsxref("Array.prototype.some()", "some()")}} en su lugar.
 
 ## Ejemplos
 
@@ -76,7 +76,7 @@ El siguiente código imprime una línea por cada elemento en un array:
 
 ```js
 function logArrayElements(element, index, array) {
-    console.log("a[" + index + "] = " + element);
+  console.log("a[" + index + "] = " + element);
 }
 // Nótese que se evita el 2° índice ya que no hay ningún elemento en esa posición del array
 [2, 5, , 9].forEach(logArrayElements);
@@ -95,8 +95,8 @@ function Counter() {
   this.sum = 0;
   this.count = 0;
 }
-Counter.prototype.add = function(array) {
-  array.forEach(function(entry) {
+Counter.prototype.add = function (array) {
+  array.forEach(function (entry) {
     this.sum += entry;
     ++this.count;
   }, this);
@@ -105,9 +105,9 @@ Counter.prototype.add = function(array) {
 
 var obj = new Counter();
 obj.add([2, 5, 9]);
-obj.count
+obj.count;
 // 3
-obj.sum
+obj.sum;
 // 16
 ```
 
@@ -118,11 +118,11 @@ Nota: Dado que el parámetro `thisArg` (this) se referencia en el `forEach()`, s
 El siguiente código crea una copia de un objeto dado. Hay diferentes formas de crear una copia de un objeto, ésta es sólo una de ellas y sirve para explicar cómo funciona `Array.prototype.forEach` utilizando funciones `Object.*` de ECMAScript 5.
 
 ```js
-function copy(o){
-  var copy = Object.create( Object.getPrototypeOf(o) );
+function copy(o) {
+  var copy = Object.create(Object.getPrototypeOf(o));
   var propNames = Object.getOwnPropertyNames(o);
 
-  propNames.forEach(function(name){
+  propNames.forEach(function (name) {
     var desc = Object.getOwnPropertyDescriptor(o, name);
     Object.defineProperty(copy, name, desc);
   });
@@ -130,19 +130,19 @@ function copy(o){
   return copy;
 }
 
-var o1 = {a:1, b:2};
+var o1 = { a: 1, b: 2 };
 var o2 = copy(o1); // o2 ahora se parece a o1
 ```
 
-### Si el array se modifica durante la iteración, otros elementos pueden ser omitidos.
+### Si el array se modifica durante la iteración, otros elementos pueden ser omitidos
 
 El siguiente ejemplo muestra por consola "uno", "dos", "cuatro". Cuando se alcanza el registro que contiene el valor "dos", el primer registro del array se desplaza, lo que hace que los registros restantes se muevan una posición. Debido a que el elemento "cuatro" está ahora en una posición anterior en el array, "tres" se omitirá. `forEach()` no hace una copia del array antes de iterar.
 
 ```js
-var words = ['uno', 'dos', 'tres', 'cuatro'];
-words.forEach(function(word) {
+var words = ["uno", "dos", "tres", "cuatro"];
+words.forEach(function (word) {
   console.log(word);
-  if (word === 'dos') {
+  if (word === "dos") {
     words.shift();
   }
 });
@@ -159,9 +159,8 @@ words.forEach(function(word) {
 // Production steps of ECMA-262, Edition 5, 15.4.4.18
 // Reference: http://es5.github.com/#x15.4.4.18
 if (!Array.prototype.forEach) {
-
   Array.prototype.forEach = function forEach(callback, thisArg) {
-    'use strict';
+    "use strict";
     var T, k;
 
     if (this == null) {
@@ -169,12 +168,11 @@ if (!Array.prototype.forEach) {
     }
 
     var kValue,
-        // 1. Let O be the result of calling ToObject passing the |this| value as the argument.
-        O = Object(this),
-
-        // 2. Let lenValue be the result of calling the Get internal method of O with the argument "length".
-        // 3. Let len be ToUint32(lenValue).
-        len = O.length >>> 0; // Hack to convert O.length to a UInt32
+      // 1. Let O be the result of calling ToObject passing the |this| value as the argument.
+      O = Object(this),
+      // 2. Let lenValue be the result of calling the Get internal method of O with the argument "length".
+      // 3. Let len be ToUint32(lenValue).
+      len = O.length >>> 0; // Hack to convert O.length to a UInt32
 
     // 4. If IsCallable(callback) is false, throw a TypeError exception.
     // See: http://es5.github.com/#x9.11
@@ -192,14 +190,12 @@ if (!Array.prototype.forEach) {
 
     // 7. Repeat, while k < len
     while (k < len) {
-
       // a. Let Pk be ToString(k).
       //   This is implicit for LHS operands of the in operator
       // b. Let kPresent be the result of calling the HasProperty internal method of O with argument Pk.
       //   This step can be combined with c
       // c. If kPresent is true, then
       if (k in O) {
-
         // i. Let kValue be the result of calling the Get internal method of O with argument Pk.
         kValue = O[k];
 
@@ -221,7 +217,7 @@ if (!Array.prototype.forEach) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.forEach")}}
+{{Compat}}
 
 ## Vea también
 

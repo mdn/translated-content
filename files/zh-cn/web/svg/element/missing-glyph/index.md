@@ -1,41 +1,40 @@
 ---
-title: missing-glyph
+title: <missing-glyph>
 slug: Web/SVG/Element/missing-glyph
+l10n:
+  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-{{SVGRef}}
+{{SVGRef}}{{deprecated_header}}
 
-如果对于给定的字符，字体没有定义一个合适的 {{ SVGElement("glyph") }}，那么就会呈现`missing-glyph`元素的内容。
+**`<missing-glyph>`** [SVG](/zh-CN/docs/Web/SVG) 元素用于在字体中没有为给定的字符定义适当的 {{SVGElement("glyph")}} 时渲染内容。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
-## 示例
-
 ## 属性
 
-### 全局属性
-
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-
-### 专有属性
-
-- {{ SVGAttr("d") }}
-- {{ SVGAttr("horiz-adv-x") }}
-- {{ SVGAttr("vert-origin-x") }}
-- {{ SVGAttr("vert-origin-y") }}
-- {{ SVGAttr("vert-adv-y") }}
+- {{SVGAttr("d")}} {{Deprecated_Inline}}
+- {{SVGAttr("horiz-adv-x")}} {{Deprecated_Inline}}
+- {{SVGAttr("vert-origin-x")}} {{Deprecated_Inline}}
+- {{SVGAttr("vert-origin-y")}} {{Deprecated_Inline}}
+- {{SVGAttr("vert-adv-y")}} {{Deprecated_Inline}}
 
 ## DOM 接口
 
-该元素实现了[`SVGMissingGlyphElement`](/zh-CN/DOM/SVGMissingGlyphElement)接口。
+此元素实现了 {{domxref("SVGMissingGlyphElement")}} 接口。
 
-## 相关内容
+## 规范
 
-- {{ SVGElement("font") }}
-- {{ SVGElement("glyph") }}
-- [SVG 教程：SVG 字体](/zh-CN/SVG/Tutorial/SVG_fonts)
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{SVGElement("font")}}
+- {{SVGElement("glyph")}}
+- [SVG 教程：SVG 字体](/zh-CN/docs/Web/SVG/Tutorial/SVG_fonts)

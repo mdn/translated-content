@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/isFinite
 
 グローバル関数 **`isFinite()`** は渡された値が有限数かどうかを判定します。必要に応じて、引数はまず数値へと変換されます。
 
-{{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - isFinite()")}}
+
+```js interactive-example
+function div(x) {
+  if (isFinite(1000 / x)) {
+    return "Number is NOT Infinity.";
+  }
+  return "Number is Infinity!";
+}
+
+console.log(div(0));
+// Expected output: "Number is Infinity!""
+
+console.log(div(1));
+// Expected output: "Number is NOT Infinity."
+```
 
 ## 構文
 
@@ -35,19 +50,19 @@ isFinite(testValue)
 ### isFinite の使用
 
 ```js
-isFinite(Infinity);  // false
-isFinite(NaN);       // false
+isFinite(Infinity); // false
+isFinite(NaN); // false
 isFinite(-Infinity); // false
 
-isFinite(0);         // true
-isFinite(2e64);      // true
-isFinite(910);       // true
+isFinite(0); // true
+isFinite(2e64); // true
+isFinite(910); // true
 
-isFinite(null);      // true が返される、より堅牢性の高い
-                     // Number.isFinite(null) では false となる
+isFinite(null); // true が返される、より堅牢性の高い
+// Number.isFinite(null) では false となる
 
-isFinite('0');       // true が返される、より堅牢性の高い
-                     // Number.isFinite("0") では false となる
+isFinite("0"); // true が返される、より堅牢性の高い
+// Number.isFinite("0") では false となる
 ```
 
 ## 仕様書
@@ -56,7 +71,7 @@ isFinite('0');       // true が返される、より堅牢性の高い
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.isFinite")}}
+{{Compat}}
 
 ## 関連情報
 

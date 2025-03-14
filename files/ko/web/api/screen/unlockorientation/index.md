@@ -1,14 +1,14 @@
 ---
 title: window.screen.unlockOrientation
 slug: Web/API/Screen/unlockOrientation
-translation_of: Web/API/Screen/unlockOrientation
 ---
 
 {{APIRef("CSSOM View")}}{{Deprecated_header}}
 
 **`Screen.unlockOrientation()`** 함수는 이전의 page나 앱을 통해 지정한 화면 고정 값들을 모두 제거 한다.
 
-> **참고:** 이 함수는 설치된 웹앱 또는 [full-screen mode](/ko/docs/Web/Guide/DOM/Using_full_screen_mode) 의 웹 페이지들에서 동작한다..
+> [!NOTE]
+> 이 함수는 설치된 웹앱 또는 [full-screen mode](/ko/docs/Web/API/Fullscreen_API) 의 웹 페이지들에서 동작한다..
 
 ## Syntax
 
@@ -30,11 +30,11 @@ if (window.screen.unlockOrientation()) {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
@@ -43,4 +43,4 @@ if (window.screen.unlockOrientation()) {
 - {{domxref("window.screen.orientation")}}
 - {{domxref("window.screen.lockOrientation()")}}
 - {{domxref("window.screen.onorientationchange")}}
-- [Managing screen orientation](/ko/docs/Managing_screen_orientation)
+- [Managing screen orientation](/ko/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

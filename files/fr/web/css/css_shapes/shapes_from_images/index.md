@@ -1,12 +1,6 @@
 ---
 title: Générer des formes avec des images
-slug: Web/CSS/CSS_Shapes/Shapes_From_Images
-tags:
-  - CSS
-  - Formes CSS
-  - Guide
-translation_of: Web/CSS/CSS_Shapes/Shapes_From_Images
-original_slug: Web/CSS/CSS_Shapes/Générer_formes_images
+slug: Web/CSS/CSS_shapes/Shapes_from_images
 ---
 
 {{CSSRef}}
@@ -51,7 +45,7 @@ Il est nécessaire d'avoir un contenu flottant pour créer une forme mais ce con
 
 ## Créer des formes avec un dégradé
 
-En CSS, [un dégradé](/fr/docs/Web/CSS/Utilisation_de_dégradés_CSS) est une image. On peut donc utiliser un dégradé afin de générer une forme.
+En CSS, [un dégradé](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) est une image. On peut donc utiliser un dégradé afin de générer une forme.
 
 Dans le prochain exemple, on utilise un contenu généré flottant dont l'image d'arrière-plan est un dégradé linéaire. On utilise la même valeur pour {{cssxref("shape-outside")}}. Le dégradé linéaire évolue du mauve vers le transparent. En modifiant la valeur de {{cssxref("shape-image-threshold")}}, on peut donc sélectionner le niveau de transparence nécessaire à la création de la forme. N'hésitez pas à modifier la valeur du seuil dans l'exemple suivant afin de voir le déplacement du contour en fonction du niveau de dégradé.
 

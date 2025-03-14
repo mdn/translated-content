@@ -7,7 +7,8 @@ slug: Web/API/Document/querySelector
 
 文档对象模型{{domxref("Document")}}引用的 **`querySelector()`** 方法返回文档中与指定选择器或选择器组匹配的第一个 {{domxref("Element")}}对象。如果找不到匹配项，则返回`null`。
 
-> **备注：** 匹配是使用深度优先先序遍历，从文档标记中的第一个元素开始，并按子节点的顺序依次遍历。
+> [!NOTE]
+> 匹配是使用深度优先先序遍历，从文档标记中的第一个元素开始，并按子节点的顺序依次遍历。
 
 ## 语法
 
@@ -20,13 +21,14 @@ element = document.querySelector(selectors);
 - `selectors`
   - : 包含一个或多个要匹配的选择器的 DOM 字符串{{domxref("DOMString")}}。该字符串必须是有效的 CSS 选择器字符串；如果不是，则引发`SYNTAX_ERR`异常。请参阅[使用选择器定位 DOM 元素](/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)以获取有关选择器以及如何管理它们的更多信息。
 
-> **备注：** 必须使用反斜杠字符转义不属于标准 CSS 语法的字符。由于 JavaScript 也使用退格转义，因此在使用这些字符编写字符串文字时必须特别小心。有关详细信息，请参阅[转义特殊字符](#转义特殊字符)。
+> [!NOTE]
+> 必须使用反斜杠字符转义不属于标准 CSS 语法的字符。由于 JavaScript 也使用退格转义，因此在使用这些字符编写字符串文字时必须特别小心。有关详细信息，请参阅[转义特殊字符](#转义特殊字符)。
 
 ### 返回值
 
 表示文档中与指定的一组 CSS 选择器匹配的第一个元素，一个 {{domxref("Element")}}对象。如果没有匹配到，则返回 null。
 
-如果您需要与指定选择器匹配的所有元素的列表，则应该使用{{domxref("Document.querySelectorAll", "querySelectorAll()")}} 。
+如果你需要与指定选择器匹配的所有元素的列表，则应该使用{{domxref("Document.querySelectorAll", "querySelectorAll()")}} 。
 
 ### 异常
 
@@ -48,15 +50,15 @@ CSS 伪类不会返回任何元素，见 [Selectors API](https://www.w3.org/TR/s
 <div id="foo:bar"></div>
 
 <script>
-  console.log('#foo\bar')               // "#fooar"
-  document.querySelector('#foo\bar')    // 不匹配任何元素
+  console.log("#foo\bar"); // "#fooar"
+  document.querySelector("#foo\bar"); // 不匹配任何元素
 
-  console.log('#foo\\bar')              // "#foo\bar"
-  console.log('#foo\\\\bar')            // "#foo\\bar"
-  document.querySelector('#foo\\\\bar') // 匹配第一个 div
+  console.log("#foo\\bar"); // "#foo\bar"
+  console.log("#foo\\\\bar"); // "#foo\\bar"
+  document.querySelector("#foo\\\\bar"); // 匹配第一个 div
 
-  document.querySelector('#foo:bar')    // 不匹配任何元素
-  document.querySelector('#foo\\:bar')  // 匹配第二个 div
+  document.querySelector("#foo:bar"); // 不匹配任何元素
+  document.querySelector("#foo\\:bar"); // 匹配第二个 div
 </script>
 ```
 
@@ -88,7 +90,7 @@ var el = document.querySelector("div.user-panel.main input[name='login']");
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [Locating DOM elements using selectors](/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - {{domxref("Element.querySelector()")}}

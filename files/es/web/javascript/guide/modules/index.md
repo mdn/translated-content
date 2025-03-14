@@ -1,15 +1,6 @@
 ---
 title: Módulos JavaScript
 slug: Web/JavaScript/Guide/Modules
-tags:
-  - Guía
-  - JavaScript
-  - Modules
-  - Módulos
-  - export
-  - import
-translation_of: Web/JavaScript/Guide/Modules
-original_slug: Web/JavaScript/Guide/Módulos
 ---
 
 {{JSSidebar("Guía de JavaScript")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
@@ -24,17 +15,9 @@ Por lo tanto, en los últimos años se ha comenzado a pensar en proporcionar mec
 
 La buena noticia es que los navegadores modernos han comenzado a admitir la funcionalidad de los módulos de forma nativa, y de esto se trata este artículo. Esto solo puede ser algo bueno — los navegadores pueden optimizar la carga de módulos, haciéndolo más eficiente que tener que usar una biblioteca y hacer todo ese procesamiento adicional de lado del cliente, ahorrando viajes de ida y vuelta adicionales.
 
-## Soporte del navegador
+## Compatibilidad con navegadores
 
-El uso de módulos JavaScript nativos depende de las declaraciones {{jsxref("Statements/import", "import")}} y {{jsxref("Statements/export", "export")}}; estas son compatibles con los navegadores de la siguiente manera:
-
-### import
-
-{{Compat("javascript.statements.import")}}
-
-### export
-
-{{Compat("javascript.statements.export")}}
+{{Compat}}
 
 ## Introducción — un ejemplo
 
@@ -42,7 +25,8 @@ Para demostrar el uso de módulos, hemos creado un [sencillo conjunto de ejemplo
 
 Estos son bastante triviales, pero se han mantenido deliberadamente simples para demostrar los módulos con claridad.
 
-> **Nota:** Si deseas descargar los ejemplos y ejecutarlos localmente, deberás ejecutarlos a través de un servidor web local.
+> [!NOTE]
+> Si deseas descargar los ejemplos y ejecutarlos localmente, deberás ejecutarlos a través de un servidor web local.
 
 ## Estructura básica de los ejemplos
 
@@ -56,7 +40,8 @@ modules/
     square.js
 ```
 
-> **Nota:** Todos los ejemplos de esta guía básicamente tienen la misma estructura; lo anterior debería empezar a resultarte bastante familiar.
+> [!NOTE]
+> Todos los ejemplos de esta guía básicamente tienen la misma estructura; lo anterior debería empezar a resultarte bastante familiar.
 
 Los dos módulos del directorio `modules` se describen a continuación:
 
@@ -99,7 +84,7 @@ Lo primero que debes hacer para acceder a las funciones del módulo es exportarl
 La forma más sencilla de utilizarla es colocarla delante de cualquier elemento que desees exportar fuera del módulo, por ejemplo:
 
 ```js
-export const name = 'square';
+export const name = "square";
 
 export function draw(ctx, length, x, y, color) {
   ctx.fillStyle = color;
@@ -109,7 +94,7 @@ export function draw(ctx, length, x, y, color) {
     length: length,
     x: x,
     y: y,
-    color: color
+    color: color,
   };
 }
 ```
@@ -127,7 +112,7 @@ export { name, draw, reportArea, reportPerimeter };
 Una vez que hayas declarado las funciones y características que deseas exportar de tu módulo, debes importarlas en tu script para poder usarlas. La forma más sencilla de hacerlo es la siguiente:
 
 ```js
-import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
+import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
 ```
 
 Utiliza la declaración {{jsxref("Statements/import", "import")}}, seguida de una lista separada por comas de las características que deseas importar entre llaves, seguida de la palabra clave `from`, seguida de la ruta al archivo del módulo — una ruta relativa a la raíz del sitio, que para nuestro ejemplo de `basic-modules` sería `/js-examples/modules/basic-modules`.
@@ -148,20 +133,22 @@ se convierte en
 
 Puedes ver estas líneas en acción en [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js).
 
-> **Nota:** En algunos sistemas de módulos, puedes omitir la extensión del archivo y el punto (por ejemplo, `'/modules/square'`). Esto no funciona en módulos de JavaScript nativos.
+> [!NOTE]
+> En algunos sistemas de módulos, puedes omitir la extensión del archivo y el punto (por ejemplo, `'/modules/square'`). Esto no funciona en módulos de JavaScript nativos.
 
 Una vez que hayas importado las funciones a tu script, las puedes usar tal como se definieron dentro del mismo archivo. Lo siguiente se encuentra en `main.js`, debajo de las líneas `import`:
 
 ```js
-let myCanvas = create('myCanvas', document.body, 480, 320);
+let myCanvas = create("myCanvas", document.body, 480, 320);
 let reportList = createReportList(myCanvas.id);
 
-let square1 = draw(myCanvas.ctx, 50, 50, 100, 'blue');
+let square1 = draw(myCanvas.ctx, 50, 50, 100, "blue");
 reportArea(square1.length, reportList);
 reportPerimeter(square1.length, reportList);
 ```
 
-> **Nota:** Aunque las funciones importadas están disponibles en el archivo, son vistas de solo lectura de la función que se exportó. No puedes cambiar la variable que se importó, pero aún puedes modificar propiedades similares a `const`. Además, estas características se importan como enlaces activos, lo cual significa que pueden cambiar de valor incluso si no puedes modificar el enlace a diferencia de `const`.
+> [!NOTE]
+> Aunque las funciones importadas están disponibles en el archivo, son vistas de solo lectura de la función que se exportó. No puedes cambiar la variable que se importó, pero aún puedes modificar propiedades similares a `const`. Además, estas características se importan como enlaces activos, lo cual significa que pueden cambiar de valor incluso si no puedes modificar el enlace a diferencia de `const`.
 
 ## Aplicar el módulo a tu HTML
 
@@ -176,9 +163,7 @@ En primer lugar, debes incluir `type="module"` en el elemento [`<script>`](/es/d
 También puedes incrustar el script del módulo directamente en el archivo HTML colocando el código JavaScript dentro del cuerpo del elemento `<script>`:
 
 ```js
-<script type="module">
-  /* El código del módulo JavaScript va aquí */
-</script>
+<script type="module">/* El código del módulo JavaScript va aquí */</script>
 ```
 
 El script en el que importas las características del módulo básicamente actúa como el módulo de nivel superior. Si lo omite, Firefox, por ejemplo, te da un error de "SyntaxError: Las declaraciones import solo pueden aparecer en el nivel superior de un módulo".
@@ -218,16 +203,17 @@ export default function(ctx) {
 En nuestro archivo `main.js`, importamos la función predeterminada usando esta línea:
 
 ```js
-import randomSquare from './modules/square.js';
+import randomSquare from "./modules/square.js";
 ```
 
 Una vez más, ten en cuenta la falta de llaves. Esto se debe a que solo se permite una exportación predeterminada por módulo, y sabemos que `randomSquare` lo es. La línea anterior es básicamente una abreviatura de:
 
 ```js
-import {default as randomSquare} from './modules/square.js';
+import { default as randomSquare } from "./modules/square.js";
 ```
 
-> **Nota:** La sintaxis as para cambiar el nombre de los elementos exportados se explica a continuación en la sección [Renombrar importaciones y exportaciones](#Renombrar_impotaciones_y_exportaciones).
+> [!NOTE]
+> La sintaxis as para cambiar el nombre de los elementos exportados se explica a continuación en la sección [Renombrar importaciones y exportaciones](#renombrar_impotaciones_y_exportaciones).
 
 ## Evitar conflictos de nombres
 
@@ -243,22 +229,21 @@ Entonces, por ejemplo, ambos de los siguientes harían el mismo trabajo, aunque 
 
 ```js
 // dentro de module.js
-export {
-  function1 as newFunctionName,
-  function2 as anotherNewFunctionName
-};
+export { function1 as newFunctionName, function2 as anotherNewFunctionName };
 
 // dentro de main.js
-import {newFunctionName, anotherNewFunctionName} from './modules/module.js';
+import { newFunctionName, anotherNewFunctionName } from "./modules/module.js";
 ```
 
 ```js
 // dentro de module.js
-export {function1, function2};
+export { function1, function2 };
 
 // dentro de main.js
-import {function1 as newFunctionName,
-         function2 as anotherNewFunctionName } from './modules/module.js';
+import {
+  function1 as newFunctionName,
+  function2 as anotherNewFunctionName,
+} from "./modules/module.js";
 ```
 
 Veamos un ejemplo real. En nuestro directorio [renaming](https://github.com/mdn/js-examples/tree/master/module-examples/renaming), verás el mismo sistema de módulos que en el ejemplo anterior, excepto que hemos agregado los módulos `circle.js` y `triangle.js` para dibujar e informar sobre círculos y triángulos.
@@ -272,9 +257,9 @@ export { name, draw, reportArea, reportPerimeter };
 Al importarlos a `main.js`, si intentamos usar esto:
 
 ```js
-import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
-import { name, draw, reportArea, reportPerimeter } from './modules/circle.js';
-import { name, draw, reportArea, reportPerimeter } from './modules/triangle.js';
+import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
+import { name, draw, reportArea, reportPerimeter } from "./modules/circle.js";
+import { name, draw, reportArea, reportPerimeter } from "./modules/triangle.js";
 ```
 
 El navegador arrojará un error como "SyntaxError: redeclaración de nombre import" (Firefox).
@@ -282,35 +267,48 @@ El navegador arrojará un error como "SyntaxError: redeclaración de nombre impo
 En su lugar, necesitamos cambiar el nombre de las importaciones para que sean únicas:
 
 ```js
-import { name as squareName,
-         draw as drawSquare,
-         reportArea as reportSquareArea,
-         reportPerimeter as reportSquarePerimeter } from './modules/square.js';
+import {
+  name as squareName,
+  draw as drawSquare,
+  reportArea as reportSquareArea,
+  reportPerimeter as reportSquarePerimeter,
+} from "./modules/square.js";
 
-import { name as circleName,
-         draw as drawCircle,
-         reportArea as reportCircleArea,
-         reportPerimeter as reportCirclePerimeter } from './modules/circle.js';
+import {
+  name as circleName,
+  draw as drawCircle,
+  reportArea as reportCircleArea,
+  reportPerimeter as reportCirclePerimeter,
+} from "./modules/circle.js";
 
-import { name as triangleName,
-        draw as drawTriangle,
-        reportArea as reportTriangleArea,
-        reportPerimeter as reportTrianglePerimeter } from './modules/triangle.js';
+import {
+  name as triangleName,
+  draw as drawTriangle,
+  reportArea as reportTriangleArea,
+  reportPerimeter as reportTrianglePerimeter,
+} from "./modules/triangle.js";
 ```
 
 Ten en cuenta que podrías resolver el problema en los archivos del módulo, p. ej.
 
 ```js
 // en square.js
-export {name as squareName,
-         draw as drawSquare,
-         reportArea as reportSquareArea,
-         reportPerimeter as reportSquarePerimeter };
+export {
+  name as squareName,
+  draw as drawSquare,
+  reportArea as reportSquareArea,
+  reportPerimeter as reportSquarePerimeter,
+};
 ```
 
 ```js
 // en main.js
-import {squareName, drawSquare, reportSquareArea, reportSquarePerimeter} from './modules/square.js';
+import {
+  squareName,
+  drawSquare,
+  reportSquareArea,
+  reportSquarePerimeter,
+} from "./modules/square.js";
 ```
 
 Y funcionaría igual. El estilo que uses depende de ti, sin embargo, podría decirse que tiene más sentido dejar el código de tu módulo tal cual y realizar los cambios en las importaciones. Esto tiene sentido especialmente cuando estás importando desde módulos de terceros sobre los que no tienes ningún control.
@@ -320,7 +318,7 @@ Y funcionaría igual. El estilo que uses depende de ti, sin embargo, podría dec
 El método anterior funciona bien, pero es un poco complicado y largo. Una solución aún mejor es importar las características de cada módulo dentro de un objeto `module`. La siguiente forma de sintaxis hace eso:
 
 ```js
-import * as Module from './modules/module.js';
+import * as Module from "./modules/module.js";
 ```
 
 Esto toma todas las exportaciones disponibles dentro de `module.js` y las hace disponibles como miembros de un objeto `Module`, dándole efectivamente su propio espacio de nombres. Así por ejemplo:
@@ -340,17 +338,17 @@ export { name, draw, reportArea, reportPerimeter };
 Las importaciones, por otro lado, se ven así:
 
 ```js
-import * as Canvas from './modules/canvas.js';
+import * as Canvas from "./modules/canvas.js";
 
-import * as Square from './modules/square.js';
-import * as Circle from './modules/circle.js';
-import * as Triangle from './modules/triangle.js';
+import * as Square from "./modules/square.js";
+import * as Circle from "./modules/circle.js";
+import * as Triangle from "./modules/triangle.js";
 ```
 
 En cada caso, ahora puedes acceder a las importaciones del módulo debajo del nombre del objeto especificado, por ejemplo:
 
 ```js
-let square1 = Square.draw(myCanvas.ctx, 50, 50, 100, 'blue');
+let square1 = Square.draw(myCanvas.ctx, 50, 50, 100, "blue");
 Square.reportArea(square1.length, reportList);
 Square.reportPerimeter(square1.length, reportList);
 ```
@@ -386,13 +384,13 @@ export { Square };
 En [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/classes/main.js), lo importamos así:
 
 ```js
-import { Square } from './modules/square.js';
+import { Square } from "./modules/square.js";
 ```
 
 Y luego usas la clase para dibujar nuestro cuadrado:
 
 ```js
-let square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
+let square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, "blue");
 square1.draw();
 square1.reportArea();
 square1.reportPerimeter();
@@ -403,8 +401,8 @@ square1.reportPerimeter();
 Habrá ocasiones en las que querrás agregar módulos juntos. Es posible que tengas varios niveles de dependencias, donde desees simplificar las cosas, combinando varios submódulos en un módulo principal. Esto es posible utilizando la sintaxis de exportación de los siguientes formas en el módulo principal:
 
 ```js
-export * from 'x.js'
-export { name } from 'x.js'
+export * from "x.js";
+export { name } from "x.js";
 ```
 
 Para ver un ejemplo, ve nuestro directorio [module-aggregation](https://github.com/mdn/js-examples/tree/master/module-examples/module-aggregation). En este ejemplo (basado en nuestro ejemplo de clases anterior) tenemos un módulo adicional llamado `shapes.js`, que reúne toda la funcionalidad de `circle.js`, `square.js` y `triangle.js`. También hemos movido nuestros submódulos dentro de un subdirectorio dentro del directorio `modules` llamado `shapes`. Entonces, la estructura del módulo en este ejemplo es:
@@ -428,40 +426,40 @@ export { Square };
 Luego viene la parte de agregación. Dentro de [`shapes.js`](https://github.com/mdn/js-examples/blob/master/module-examples/module-aggregation/modules/shapes.js), incluimos las siguientes líneas:
 
 ```js
-export { Square } from './shapes/square.js';
-export { Triangle } from './shapes/triangle.js';
-export { Circle } from './shapes/circle.js';
+export { Square } from "./shapes/square.js";
+export { Triangle } from "./shapes/triangle.js";
+export { Circle } from "./shapes/circle.js";
 ```
 
 Estas toman las exportaciones de los submódulos individuales y las ponen a disposición de manera efectiva desde el módulo `shapes.js`.
 
-> **Nota:** Las exportaciones a las que se hace referencia en `shapes.js` básicamente se redirigen a través del archivo y realmente no existen allí, por lo que no podrás escribir ningún código relacionado útil dentro del mismo archivo.
+> [!NOTE]
+> Las exportaciones a las que se hace referencia en `shapes.js` básicamente se redirigen a través del archivo y realmente no existen allí, por lo que no podrás escribir ningún código relacionado útil dentro del mismo archivo.
 
 Entonces, ahora en el archivo `main.js`, podemos obtener acceso a las tres clases de módulos reemplazando
 
 ```js
-import { Square } from './modules/square.js';
-import { Circle } from './modules/circle.js';
-import { Triangle } from './modules/triangle.js';
+import { Square } from "./modules/square.js";
+import { Circle } from "./modules/circle.js";
+import { Triangle } from "./modules/triangle.js";
 ```
 
 con la siguiente única línea:
 
 ```js
-import { Square, Circle, Triangle } from './modules/shapes.js';
+import { Square, Circle, Triangle } from "./modules/shapes.js";
 ```
 
 ## Carga dinámica de módulos
 
 La parte más nueva de la funcionalidad de los módulos de JavaScript que estará disponible en los navegadores es la carga dinámica de módulos. Esto te permite cargar módulos dinámicamente solo cuando son necesarios, en lugar de tener que cargar todo por adelantado. Esto tiene algunas obvias ventajas de rendimiento; sigue leyendo y veamos cómo funciona.
 
-Esta nueva funcionalidad te permite llamar a {{jsxref("Statements/import", "import()", "#Importaciones_Dinámicas")}} como una función, pasándole la ruta al módulo como parámetro. Devuelve una {{jsxref("Promise")}}, que se cumple con un objeto `module` (consulta [Crear un objeto `module`](#Crear_un_objeto_module)) que te da acceso a las exportaciones de ese objeto, p. ej.
+Esta nueva funcionalidad te permite llamar a {{jsxref("Statements/import", "import()", "#Importaciones_Dinámicas")}} como una función, pasándole la ruta al módulo como parámetro. Devuelve una {{jsxref("Promise")}}, que se cumple con un objeto `module` (consulta [Crear un objeto `module`](#crear_un_objeto_module)) que te da acceso a las exportaciones de ese objeto, p. ej.
 
 ```js
-import('./modules/myModule.js')
-  .then((module) => {
-    // Haz algo con el módulo.
-  });
+import("./modules/myModule.js").then((module) => {
+  // Haz algo con el módulo.
+});
 ```
 
 Veamos un ejemplo. En el directorio [dynamic-module-import](https://github.com/mdn/js-examples/tree/master/module-examples/dynamic-module-imports) tenemos otro ejemplo basado en nuestro ejemplo de clases. Esta vez, sin embargo, no dibujamos nada en el lienzo cuando se carga el ejemplo. En su lugar, incluimos tres botones — "Círculo", "Cuadrado" y "Triángulo" — que, cuando se presionan, cargan dinámicamente el módulo requerido y luego lo usan para dibujar la forma asociada.
@@ -471,19 +469,26 @@ En este ejemplo, solo hemos realizado cambios en nuestros archivos [`index.html`
 En `main.js` hemos tomado una referencia a cada botón usando una llamada a [`Document.querySelector()`](/es/docs/Web/API/Document/querySelector), por ejemplo:
 
 ```js
-let squareBtn = document.querySelector('.square');
+let squareBtn = document.querySelector(".square");
 ```
 
 Luego adjuntamos un escucha de eventos a cada botón para que cuando se presione, el módulo relevante se cargue dinámicamente y se use para dibujar la forma:
 
 ```js
-squareBtn.addEventListener('click', () => {
-  import('./modules/square.js').then((Module) => {
-    let square1 = new Module.Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
+squareBtn.addEventListener("click", () => {
+  import("./modules/square.js").then((Module) => {
+    let square1 = new Module.Square(
+      myCanvas.ctx,
+      myCanvas.listId,
+      50,
+      50,
+      100,
+      "blue",
+    );
     square1.draw();
     square1.reportArea();
     square1.reportPerimeter();
-  })
+  });
 });
 ```
 
@@ -502,6 +507,6 @@ Aquí hay algunos consejos que te pueden ayudar si tienes problemas para hacer q
 - [Uso de módulos JavaScript en la web](https://developers.google.com/web/fundamentals/primers/modules#mjs), por Addy Osmani y Mathias Bynens
 - [Módulos ES: un análisis profundo de dibujos animados](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), publicación en el blog Hacks de Lin Clark
 - [ES6 en profundidad: Módulos](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), publicación en el blog Hacks de Jason Orendorff
-- Libro de Axel Rauschmayer [Explorando JS: Módulos](http://exploringjs.com/es6/ch_modules.html)
+- Libro de Axel Rauschmayer [Explorando JS: Módulos](https://exploringjs.com/es6/ch_modules.html)
 
 {{Previous("Web/JavaScript/Guide/Meta_programming")}}

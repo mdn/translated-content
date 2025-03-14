@@ -1,13 +1,9 @@
 ---
 title: Флекс-элемент
 slug: Glossary/Flex_Item
-tags:
-  - CSS
-  - флекс-элемент
-  - флексбокс
-translation_of: Glossary/Flex_Item
-original_slug: Глоссарий/Flex_Item
 ---
+
+{{GlossarySidebar}}
 
 Непосредственные дочерние элементы {{glossary("флекс-контейнера")}} (элемент для которого установлено `display: flex` или `display: inline-flex`) становятся **флекс-элементами**.
 
@@ -25,6 +21,6 @@ original_slug: Глоссарий/Flex_Item
 
 ### Читать далее
 
-- Руководство по флексбоксу: [Основные понятия флексбокса](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox).
+- Руководство по флексбоксу: [Основные понятия флексбокса](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
 - Руководство по флексбоксу: _[Ordering flex items](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
 - Руководство по флексбоксу: [Управление соотношением элементов вдоль главной оси](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Контролирование_соотношения_элементов_вдоль_главной_оси)

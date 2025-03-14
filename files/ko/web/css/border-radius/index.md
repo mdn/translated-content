@@ -1,28 +1,65 @@
 ---
 title: border-radius
 slug: Web/CSS/border-radius
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
-translation_of: Web/CSS/border-radius
 ---
 
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`border-radius`** 속성은 요소 테두리 경계의 꼭짓점을 둥글게 만듭니다. 하나의 값을 사용해 원형 꼭짓점을, 두 개의 값을 사용해 타원형 꼭짓점을 적용할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/css/border-radius.html")}}
+{{InteractiveExample("CSS Demo: border-radius")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+```css interactive-example-choice
+border-radius: 30px;
+```
+
+```css interactive-example-choice
+border-radius: 25% 10%;
+```
+
+```css interactive-example-choice
+border-radius: 10% 30% 50% 70%;
+```
+
+```css interactive-example-choice
+border-radius: 10% / 50%;
+```
+
+```css interactive-example-choice
+border-radius: 10px 100px / 120px;
+```
+
+```css interactive-example-choice
+border-radius: 50% 20% / 10% 40%;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with rounded corners.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  color: white;
+  padding: 10px;
+}
+```
 
 꼭짓점 반경은 요소의 테두리 존재 여부와는 별개로 전체 {{Cssxref("background")}}에 적용됩니다. 원형 꼭짓점으로 인해 배경이 잘리는 지점은 {{cssxref("background-clip")}} 속성이 지정합니다.
 
 {{cssxref("border-collapse")}}의 값이 `collapse`인 표 요소는 `border-radius` 속성의 영향을 받지 않습니다.
 
-> **참고:** 다른 단축 속성과 마찬가지로, 각각의 하위 속성이 부모를 상속하도록 할 수는 없습니다. 즉, `border-radius: 0 0 inherit inherit`처럼 일부만 재정의할 수 없습니다. 대신, 원래의 본디속성을 하나씩 사용하세요.
+> [!NOTE]
+> 다른 단축 속성과 마찬가지로, 각각의 하위 속성이 부모를 상속하도록 할 수는 없습니다. 즉, `border-radius: 0 0 inherit inherit`처럼 일부만 재정의할 수 없습니다. 대신, 원래의 본디속성을 하나씩 사용하세요.
 
 ## 구성 속성
 
@@ -75,14 +112,14 @@ border-radius: unset;
 
 ### 값
 
-| _radius_                    | ![all-corner.png](/@api/deki/files/6138/=all-corner.png)                       | 테두리의 각 꼭짓점 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 한 개 값 구문에서만 사용합니다.                        |
-| --------------------------- | ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| _top-left-and-bottom-right_ | ![top-left-bottom-right.png](/@api/deki/files/6141/=top-left-bottom-right.png) | 왼쪽 위와 오른쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 두 개 값 구문에서만 사용합니다.            |
-| _top-right-and-bottom-left_ | ![top-right-bottom-left.png](/@api/deki/files/6143/=top-right-bottom-left.png) | 오른쪽 위와 왼쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 두 개 또는 세 개 값 구문에서만 사용합니다. |
-| _top-left_                  | ![top-left.png](/@api/deki/files/6142/=top-left.png)                           | 왼쪽 위 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 세 개 또는 네 개 값 구문에서만 사용합니다.               |
-| _top-right_                 | ![top-right.png](/@api/deki/files/6144/=top-right.png)                         | 오른쪽 위 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 네 개 값 구문에서만 사용합니다.                        |
-| _bottom-right_              | ![bottom-rigth.png](/@api/deki/files/6140/=bottom-rigth.png)                   | 오른쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 네 개 값 구문에서만 사용합니다.                      |
-| _bottom-left_               | ![bottom-left.png](/@api/deki/files/6139/=bottom-left.png)                     | 왼쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 네 개 값 구문에서만 사용합니다.                        |
+| _radius_                    | ![all-corner.png](all-corner.png)                       | 테두리의 각 꼭짓점 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 한 개 값 구문에서만 사용합니다.                        |
+| --------------------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| _top-left-and-bottom-right_ | ![top-left-bottom-right.png](top-left-bottom-right.png) | 왼쪽 위와 오른쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 두 개 값 구문에서만 사용합니다.            |
+| _top-right-and-bottom-left_ | ![top-right-bottom-left.png](top-right-bottom-left.png) | 오른쪽 위와 왼쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 두 개 또는 세 개 값 구문에서만 사용합니다. |
+| _top-left_                  | ![top-left.png](top-left.png)                           | 왼쪽 위 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 세 개 또는 네 개 값 구문에서만 사용합니다.               |
+| _top-right_                 | ![top-right.png](top-right.png)                         | 오른쪽 위 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 네 개 값 구문에서만 사용합니다.                        |
+| _bottom-right_              | ![bottom-right.png](bottom-right.png)                   | 오른쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 네 개 값 구문에서만 사용합니다.                      |
+| _bottom-left_               | ![bottom-left.png](bottom-left.png)                     | 왼쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 네 개 값 구문에서만 사용합니다.                        |
 
 - {{cssxref("&lt;length&gt;")}}
   - : 길이 값을 사용해 원의 반지름 또는 타원의 짧은반지름과 긴반지름을 지정합니다. 음의 값은 유효하지 않습니다.
@@ -95,20 +132,20 @@ border-radius: unset;
 border-radius: 1em/5em;
 
 /* 아래와 같음 */
-border-top-left-radius:     1em 5em;
-border-top-right-radius:    1em 5em;
+border-top-left-radius: 1em 5em;
+border-top-right-radius: 1em 5em;
 border-bottom-right-radius: 1em 5em;
-border-bottom-left-radius:  1em 5em;
+border-bottom-left-radius: 1em 5em;
 ```
 
 ```css
 border-radius: 4px 3px 6px / 2px 4px;
 
 /* 아래와 같음 */
-border-top-left-radius:     4px 2px;
-border-top-right-radius:    3px 4px;
+border-top-left-radius: 4px 2px;
+border-top-right-radius: 3px 4px;
 border-bottom-right-radius: 6px 2px;
-border-bottom-left-radius:  3px 4px;
+border-bottom-left-radius: 3px 4px;
 ```
 
 ## 형식 정의
@@ -162,11 +199,11 @@ border-bottom-left-radius:  3px 4px;
 
 ### 라이브 샘플
 
-1. <http://jsfiddle.net/Tripad/qnGKj/2/>
-2. <http://jsfiddle.net/Tripad/qnGKj/3/>
-3. <http://jsfiddle.net/Tripad/qnGKj/4/>
-4. <http://jsfiddle.net/Tripad/qnGKj/5/>
-5. <http://jsfiddle.net/Tripad/qnGKj/6/>
+1. <https://jsfiddle.net/Tripad/qnGKj/2/>
+2. <https://jsfiddle.net/Tripad/qnGKj/3/>
+3. <https://jsfiddle.net/Tripad/qnGKj/4/>
+4. <https://jsfiddle.net/Tripad/qnGKj/5/>
+5. <https://jsfiddle.net/Tripad/qnGKj/6/>
 
 ## 명세
 

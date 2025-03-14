@@ -1,19 +1,24 @@
 ---
 title: VTTCue
 slug: Web/API/VTTCue
+l10n:
+  sourceCommit: 0fe27ff068e18f54bc689577c036fd7d82a55c4a
 ---
 
 {{APIRef("WebVTT")}}
-WebVTT（メディアプレゼンテーションに関するテキストトラック）を処理するための API の一部である `VTTCue` インターフェイスは、特定の {{HTMLElement("track")}} 要素に関連付けられたテキストトラックを記述および制御します。
 
-## コンストラクタ
+`VTTCue` インターフェイスは WebVTT（メディアプレゼンテーションに関するテキストトラック）を処理するための API の一部で、特定の {{HTMLElement("track")}} 要素に関連付けられたテキストトラックを記述および制御します。
 
-- {{domxref("VTTCue.VTTCue", "VTTCue(startTime, endTime, text)")}}
+{{InheritanceDiagram}}
+
+## コンストラクター
+
+- {{domxref("VTTCue.VTTCue", "VTTCue()")}}
   - : 指定された時間範囲をカバーし、指定されたテキストを持つ、新しく作成された `VTTCue` オブジェクトを返します。
 
-## プロパティ
+## インスタンスプロパティ
 
-_このインターフェイスは {{domxref("TextTrackCue")}} からもプロパティを継承しています。_
+_このインターフェイスには {{domxref("TextTrackCue")}} から継承したプロパティもあります。_
 
 - {{domxref("VTTCue.region")}}
   - : キューが描画される動画のサブ領域を説明する {{domxref("VTTRegion")}} オブジェクト。 割り当てられていない場合は `null`。
@@ -26,37 +31,64 @@ _このインターフェイスは {{domxref("TextTrackCue")}} からもプロ�
 - {{domxref("VTTCue.lineAlign")}}
   - : {{domxref("VTTCue.line")}} の配置を表す列挙型を返します。
 - {{domxref("VTTCue.position")}}
-  - : 行内のキューのインデントを返します。 これは、文字列 `auto` または {{domxref("VTTCue.region")}} のパーセントを表す数値、または {{domxref("VTTCue.region")}} が `null` の場合は動画サイズです。
+  - : 行内のキューのインデントを返します。 これは、文字列 `auto` または {{domxref("VTTCue.region")}} のパーセント値、または {{domxref("VTTCue.region")}} が `null` の場合は動画サイズです。
 - {{domxref("VTTCue.positionAlign")}}
   - : キューの配置を表す列挙型を返します。 これは {{domxref("VTTCue.position")}} が何に固定されているかを決定するために使用されます。
 - {{domxref("VTTCue.size")}}
   - : キューのサイズを表す `double` 型を動画サイズのパーセントで返します。
-- {{domxref("VTTCue.textAlign")}}
+- {{domxref("VTTCue.align")}}
   - : キューボックス内のすべてのテキスト行の配置を表す列挙型を返します。
 - {{domxref("VTTCue.text")}}
-  - : キューの内容を含む {{domxref("DOMString")}} を返します。
+  - : キューの内容を含む文字列を返します。
 
 ## メソッド
 
-- {{domxref("VTTCue.getCueAsHTML")}}
+- {{domxref("VTTCue.getCueAsHTML", "getCueAsHTML()")}}
   - : キューのテキストを {{domxref("DocumentFragment")}} として返します。
 
 ## 例
 
-```js
-var cue = new VTTCue(2, 3, 'かっこいい文章を表示する');
-var tracks = document.querySelector('video').textTracks;
-tracks[0].addCue(cue);
+### HTML
+
+次の例は、新しい {{domxref("TextTrack")}} を動画に追加し、次に {{domxref("TextTrack.addCue()")}} メソッドを使用して `VTTCue` オブジェクトを値としてキューを追加します。
+
+```html
+<video
+  controls
+  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
 ```
 
-新しいキューを作成したら、それを {{domxref("TextTrack")}} に追加する必要があります。 追加すると、このキューを 2 秒から 3 秒の間に描画し、「`かっこいい文章を表示する`」というテキストを表示します。
+### CSS
 
-## 仕様
+```css
+video {
+  width: 420px;
+  height: 300px;
+}
+```
 
-| 仕様                         | 状態                     | コメント |
-| ---------------------------- | ------------------------ | -------- |
-| {{SpecName("WebVTT")}} | {{Spec2("WebVTT")}} |          |
+### JavaScript
+
+```js
+let video = document.querySelector("video");
+let track = video.addTextTrack("captions", "Captions", "en");
+track.mode = "showing";
+track.addCue(new VTTCue(0, 0.9, "Hildy!"));
+track.addCue(new VTTCue(1, 1.4, "How are you?"));
+track.addCue(new VTTCue(1.5, 2.9, "Tell me, is the lord of the universe in?"));
+track.addCue(new VTTCue(3, 4.2, "Yes, he's in - in a bad humor"));
+track.addCue(new VTTCue(4.3, 6, "Somebody must've stolen the crown jewels"));
+console.log(track.cues);
+```
+
+### 結果
+
+{{EmbedLiveSample('Example','400','330')}}
+
+## 仕様書
+
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.VTTCue")}}
+{{Compat}}

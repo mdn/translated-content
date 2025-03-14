@@ -1,17 +1,31 @@
 ---
-title: 一元負號運算子 (-)
+title: 一元負號運算子（-）
 slug: Web/JavaScript/Reference/Operators/Unary_negation
 ---
 
 {{jsSidebar("Operators")}}
 
-一元負號運算子 (`-`) 置於運算元之前，並將運算元轉為其負值。
+一元負號運算子（`-`）置於運算元之前，並將運算元轉為其負值。
 
-{{EmbedInteractiveExample("pages/js/expressions-unary-negation.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Unary negation operator")}}
+
+```js interactive-example
+const x = 4;
+const y = -x;
+
+console.log(y);
+// Expected output: -4
+
+const a = "4";
+const b = -a;
+
+console.log(b);
+// Expected output: -4
+```
 
 ## 語法
 
-```js
+```js-nolint
 -x
 ```
 

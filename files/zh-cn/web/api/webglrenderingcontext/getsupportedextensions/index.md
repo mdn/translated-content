@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/getSupportedExtensions
 
 ## 语法
 
-```js
+```js-nolint
 getSupportedExtensions()
 ```
 
@@ -19,13 +19,13 @@ getSupportedExtensions()
 
 ### 返回值
 
-一个字符串{{jsxref("Array", "数组", "", "true")}}，包含所有支持 WebGL 的扩展。
+一个字符串{{jsxref("Array", "数组", "", 1)}}，包含所有支持 WebGL 的扩展。
 
 ## 示例
 
 ```js
-const canvas = document.getElementById('canvas');
-gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+gl = canvas.getContext("webgl");
 
 const extensions = gl.getSupportedExtensions();
 // Array [ 'ANGLE_instanced_arrays', 'EXT_blend_minmax', … ]

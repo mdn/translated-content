@@ -1,6 +1,6 @@
 ---
 title: CSS 動畫
-slug: Web/CSS/CSS_Animations/Using_CSS_animations
+slug: Web/CSS/CSS_animations/Using_CSS_animations
 ---
 
 {{SeeCompatTable}}{{CSSRef}}
@@ -46,7 +46,8 @@ CSS animations 使 CSS style configuration 的轉變變得可行。在這種動�
 
 ## 範例
 
-> **備註：** 為了簡潔起見，以下的範例中我們只列出前綴為 `-moz-` 的部份。當你查看 Live Sample 的原始碼時，可以看到前綴為 `-webkit-` 的部份。
+> [!NOTE]
+> 為了簡潔起見，以下的範例中我們只列出前綴為 `-moz-` 的部份。當你查看 Live Sample 的原始碼時，可以看到前綴為 `-webkit-` 的部份。
 
 ### 使文字滑過畫面
 
@@ -82,9 +83,11 @@ CSS animations 使 CSS style configuration 的轉變變得可行。在這種動�
 結束影格描述 width 為 100% 可以確保 {{ HTMLElement("p") }} element 在可視範圍內。
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("使文字滑過畫面","100%","250")}}
@@ -121,9 +124,11 @@ p {
 ```
 
 ```html hidden
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 這段程式碼告訴瀏覽器在開始後過了 75% 的時間後字體增大到三倍，且位置在離左側 25 % 處，此時總寬度為 150%。
@@ -157,9 +162,11 @@ p {
 ```
 
 ```html hidden
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("重複播放","100%","250")}}
@@ -192,9 +199,11 @@ p {
 ```
 
 ```html hidden
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("播放完畢後反向播放","100%","250")}}
@@ -223,38 +232,38 @@ her in a languid, sleepy voice.</p>
 
 @-moz-keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-    margin-left:0%;
-    width:100%;
+    margin-left: 0%;
+    width: 100%;
   }
 }
 
 @-webkit-keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-   margin-left:0%;
-   width:100%;
- }
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 @keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-   margin-left:0%;
-   width:100%;
- }
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 ```
 
@@ -285,7 +294,7 @@ function setup() {
 ```js
 function listener(e) {
   var l = document.createElement("li");
-  switch(e.type) {
+  switch (e.type) {
     case "animationstart":
       l.innerHTML = "Started: elapsed time is " + e.elapsedTime;
       break;
@@ -318,11 +327,15 @@ function listener(e) {
 ```html
 <body onload="setup()">
   <h1 id="watchme">Watch me move</h1>
-  <p>This example shows how to use CSS animations to make <code>h1</code> elements
-  move across the page.</p>
-  <p>In addition, we output some text each time an animation event fires, so you can see them in action.</p>
-  <ul id="output">
-  </ul>
+  <p>
+    This example shows how to use CSS animations to make
+    <code>h1</code> elements move across the page.
+  </p>
+  <p>
+    In addition, we output some text each time an animation event fires, so you
+    can see them in action.
+  </p>
+  <ul id="output"></ul>
 </body>
 ```
 
@@ -331,4 +344,4 @@ function listener(e) {
 ## 更多資訊
 
 - {{ domxref("Event/AnimationEvent", "AnimationEvent") }}
-- [Detecting CSS animation support](/zh-TW/CSS/CSS_animations/Detecting_CSS_animation_support)
+- [Detecting CSS animation support](/zh-TW/docs/CSS/CSS_animations/Detecting_CSS_animation_support)

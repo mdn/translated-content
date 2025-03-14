@@ -7,7 +7,7 @@ slug: Web/SVG/Element/script
 
 任何定义在`script`元素中的函数拥有一个跨当前文档的全局范围。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
@@ -16,8 +16,11 @@ slug: Web/SVG/Element/script
 下面的代码片段演示了 SVG `script`标签的作用。在代码中，我们使用 JavaScript 改变 SVG {{SVGElement("circle")}} 元素的半径。
 
 ```html
-<svg width="100%" height="100%" viewBox="0 0 100 100"
-     xmlns="http://www.w3.org/2000/svg">
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg">
   <script type="text/javascript">
     // <![CDATA[
     function change(evt) {
@@ -30,26 +33,25 @@ slug: Web/SVG/Element/script
         radius = 15;
       }
 
-      target.setAttribute("r",radius);
-   }
-   // ]]>
+      target.setAttribute("r", radius);
+    }
+    // ]]>
   </script>
 
-  <circle cx="50" cy="50" r="45" fill="green"
-          onclick="change(evt)" />
+  <circle cx="50" cy="50" r="45" fill="green" onclick="change(evt)" />
 </svg>
 ```
 
 示例输出：
 
-{{EmbedLiveSample("Example",150,165)}}
+{{EmbedLiveSample("示例",150,165)}}
 
 ## 属性
 
 ### 全局属性
 
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [Xlink 属性](/zh-CN/SVG/Attribute#XLink) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
+- [Xlink 属性](/zh-CN/docs/SVG/Attribute#xlink) »
 - {{SVGAttr("externalResourcesRequired")}}
 
 ### 专有属性
@@ -59,7 +61,7 @@ slug: Web/SVG/Element/script
 
 ## DOM 接口
 
-该元素实现了[`SVGScriptElement`](/zh-CN/DOM/SVGScriptElement)接口。
+该元素实现了 [`SVGScriptElement`](/zh-CN/docs/DOM/SVGScriptElement) 接口。
 
 ## 浏览器兼容性
 
@@ -67,6 +69,6 @@ slug: Web/SVG/Element/script
 
 ## 参见
 
-- [HTML 中的`script`元素](/zh-CN/HTML/Element/Script)
+- [HTML 中的 `script` 元素](/zh-CN/docs/HTML/Element/Script)
 
 {{SVGRef}}

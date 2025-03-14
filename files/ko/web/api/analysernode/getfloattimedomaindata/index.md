@@ -1,14 +1,8 @@
 ---
 title: AnalyserNode.getFloatTimeDomainData()
 slug: Web/API/AnalyserNode/getFloatTimeDomainData
-tags:
-  - API
-  - AnalyserNode
-  - Method
-  - Reference
-  - Web Audio API
-browser-compat: api.AnalyserNode.getFloatTimeDomainData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AnalyserNode") }} 인터페이스의 **`getFloatTimeDomainData()`** 메서드는 전달된 {{domxref("Float32Array")}} 배열 내로 현재 파형, 즉 시간 영역 데이터를 복사합니다.

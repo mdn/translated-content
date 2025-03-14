@@ -3,7 +3,7 @@ title: Math.sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## 概述
 
@@ -29,32 +29,24 @@ Math.sinh(x)
 ## 示例
 
 ```js
-Math.sinh(0)      // 0
-Math.sinh(1)      // 1.1752011936438014
-Math.sinh("-1")   // -1.1752011936438014
-Math.sinh("foo")  // NaN
+Math.sinh(-Infinity); // -Infinity
+Math.sinh(-0); // -0
+Math.sinh(0); // 0
+Math.sinh(1); // 1.1752011936438014
+Math.sinh(Infinity); // Infinity
 ```
 
 ## 规范
 
 {{Specifications}}
 
-## Polyfill
-
-该函数可以使用 {{jsxref("Math.exp()")}} 函数来实现：
-
-```js
-function sinh(x){
-    return  (Math.exp(x) - Math.exp(-x)) / 2;
-}
-```
-
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [`core-js` 中 `Math.sinh` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.acos()")}}
 - {{jsxref("Math.asin()")}}
 - {{jsxref("Math.atan()")}}

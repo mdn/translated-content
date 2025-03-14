@@ -1,40 +1,47 @@
 ---
-title: CanvasRenderingContext2D.fill()
+title: CanvasRenderingContext2D：fill() 方法
 slug: Web/API/CanvasRenderingContext2D/fill
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.fill()`** 是 Canvas 2D API 根据当前的填充样式，填充当前或已存在的路径的方法。采取非零环绕或者奇偶环绕规则。
+Canvas 2D API 的 **`CanvasRenderingContext2D.fill()`** 方法用于根据当前的 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}，填充当前或给定的路径。
 
 ## 语法
 
-```
-void ctx.fill();
-void ctx.fill(fillRule);
-void ctx.fill(path, fillRule);
+```js-nolint
+fill()
+fill(path)
+fill(fillRule)
+fill(path, fillRule)
 ```
 
 ### 参数
 
 - `fillRule`
 
-  - : 一种算法，决定点是在路径内还是在路径外。
+  - : 一种算法，确定点是在路径内还是在路径外。
     允许的值：
 
     - `nonzero`
-      - : [非零环绕规则](http://en.wikipedia.org/wiki/Nonzero-rule)，默认的规则。
+      - : [非零环绕规则](https://en.wikipedia.org/wiki/Nonzero-rule)，默认的规则。
     - `evenodd`
-      - : [奇偶环绕规则](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)。
+      - : [奇偶环绕规则](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)。
 
 - `path`
-  - : 需要填充的{{domxref("Path2D")}} 路径。
+  - : 需要填充的 {{domxref("Path2D")}} 路径。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
-### 使用 `fill` 方法
+### 填充矩形
 
-这是一段简单的代码片段，使用 `fill` 方法填充路径。
+该示例使用 `fill()` 方法填充矩形。
 
 #### HTML
 
@@ -45,54 +52,52 @@ void ctx.fill(path, fillRule);
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-ctx.rect(10, 10, 100, 100);
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+ctx.rect(10, 10, 150, 100);
 ctx.fill();
 ```
 
-修改下面的代码并在线查看 canvas 变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.rect(10, 10, 100, 100);
-ctx.fill();</textarea>
+{{ EmbedLiveSample('填充矩形', 700, 180) }}
+
+### 指定路径和填充规则
+
+该示例将一些相交的线条保存到一个 `Path2D` 对象中。然后使用 `fill()` 方法将对象渲染到画布上。通过使用 `"evenodd"` 规则，在对象中心留下一个未填充的孔；默认情况下（使用 `"nonzero"` 规则），这个孔也会被填充。
+
+#### HTML
+
+```html
+<canvas id="canvas"></canvas>
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+#### JavaScript
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
+```js
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
+// 创建路径
+let region = new Path2D();
+region.moveTo(30, 90);
+region.lineTo(110, 20);
+region.lineTo(240, 130);
+region.lineTo(60, 130);
+region.lineTo(190, 20);
+region.lineTo(270, 90);
+region.closePath();
 
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+// 填充路径
+ctx.fillStyle = "green";
+ctx.fill(region, "evenodd");
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+#### 结果
 
-## 规范描述
+{{ EmbedLiveSample('指定路径和填充规则', 700, 180) }}
+
+## 规范
 
 {{Specifications}}
 
@@ -102,4 +107,5 @@ window.addEventListener("load", drawCanvas);
 
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}.
+- 定义该方法的接口：{{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.fillStyle")}}

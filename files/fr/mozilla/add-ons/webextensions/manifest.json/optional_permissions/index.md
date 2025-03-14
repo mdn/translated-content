@@ -1,12 +1,6 @@
 ---
 title: optional_permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
-tags:
-  - Add-ons
-  - WebExtensions
-  - manifest.json
-  - optional_permissions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
 ---
 
 {{AddonSidebar}}
@@ -45,7 +39,7 @@ La clé peut contenir deux types d'autorisations: les permissions d'hôte et les
 
 ## Permissions d'hôte
 
-Ce sont les mêmes que les permissions d'hôte que vous pouvez spécifier dans la clé [`permissions`](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions).
+Ce sont les mêmes que les permissions d'hôte que vous pouvez spécifier dans la clé [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions).
 
 ## Permissions d'API
 
@@ -78,7 +72,7 @@ Vous pouvez inclure l'un des éléments suivants ici, mais pas dans tous les nav
 - `webRequest`
 - `webRequestBlocking`
 
-Notez qu'il s'agit d'un sous-ensemble des permissions API permises dans les [`permissions`](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions).
+Notez qu'il s'agit d'un sous-ensemble des permissions API permises dans les [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
 
 Dans cet ensemble, les permissions suivantes sont accordées en silence, sans invite de l'utilisateur : `activeTab`, `cookies`, `idle`, `webRequest`, `webRequestBlocking`.
 
@@ -102,6 +96,6 @@ Activez l'extension pour demander l'accès aux éléments privilégiés de l'API
 
 Activez l'extension pour demander les deux permissions ci-dessus.
 
-## Comptabilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.optional_permissions")}}
+{{Compat}}

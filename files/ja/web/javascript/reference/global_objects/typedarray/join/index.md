@@ -1,18 +1,34 @@
 ---
 title: TypedArray.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/join
+l10n:
+  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
 ---
 
 {{JSRef}}
 
-**`join()`** メソッドは、配列のすべての要素を 1 本の文字列に結合します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.join()")}} と同じです。ここで _TypedArray_ は、[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの 1 つです。
+**`join()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、この型付き配列のすべての要素を、カンマまたは指定する区切り文字で連結して新しい文字列を作成して返します。型付き配列に 1 つの項目しかない場合、その項目は区切り文字を使用せずに返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.join()")}} と同じです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-join.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.join()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+
+console.log(uint8.join());
+// Expected output: "10,20,30,40,50"
+
+console.log(uint8.join(""));
+// Expected output: "1020304050"
+
+console.log(uint8.join("-"));
+// Expected output: "10-20-30-40-50"
+```
 
 ## 構文
 
-```
-arr.join([separator])
+```js-nolint
+join()
+join(separator)
 ```
 
 ### 引数
@@ -22,33 +38,22 @@ arr.join([separator])
 
 ### 返値
 
-配列のすべての要素が結合された文字列です。
+型付き配列の要素をすべて連結した文字列です。 `array.length` が `0` の場合は空文字列を返します。
+
+## 解説
+
+詳細については、 {{jsxref("Array.prototype.join()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
 
 ## 例
 
 ### join() の使用
 
 ```js
-var uint8 = new Uint8Array([1,2,3]);
-uint8.join();      // '1,2,3'
-uint8.join(' / '); // '1 / 2 / 3'
-uint8.join('');    // '123'
+const uint8 = new Uint8Array([1, 2, 3]);
+uint8.join(); // '1,2,3'
+uint8.join(" / "); // '1 / 2 / 3'
+uint8.join(""); // '123'
 ```
-
-## ポリフィル
-
-_TypedArray_ という名前のグローバルオブジェクトはないため、ポリフィルの使用は「必要に応じて」の原則で行う必要があります。
-
-```js
-// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.join
-if (!Uint8Array.prototype.join) {
-  Object.defineProperty(Uint8Array.prototype, 'join', {
-    value: Array.prototype.join
-  });
-}
-```
-
-{{jsxref("Object.defineProperty")}} に対応していない本当に古い JavaScript エンジンに対応する必要がある場合は、列挙不可能にすることができないため、 `Array.prototype` メソッドのポリフィルを行わないことが適切です。
 
 ## 仕様書
 
@@ -56,9 +61,13 @@ if (!Uint8Array.prototype.join) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.TypedArray.join")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`TypedArray.prototype.join` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
+- {{jsxref("TypedArray.prototype.toString()")}}
 - {{jsxref("Array.prototype.join()")}}
+- {{jsxref("String.prototype.split()")}}

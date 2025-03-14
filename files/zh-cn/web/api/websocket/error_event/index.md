@@ -1,5 +1,5 @@
 ---
-title: 'WebSocket: 错误事件'
+title: "WebSocket: 错误事件"
 slug: Web/API/WebSocket/error_event
 ---
 
@@ -33,12 +33,12 @@ slug: Web/API/WebSocket/error_event
 ```js
 // Create WebSocket connection
 // 创建一个 WebSocket 连接
-const socket = new WebSocket('ws://localhost:8080');
+const socket = new WebSocket("ws://localhost:8080");
 
 // Listen for possible errors
 // 监听可能发生的错误
-socket.addEventListener('error', function (event) {
-  console.log('WebSocket error: ', event);
+socket.addEventListener("error", function (event) {
+  console.log("WebSocket error: ", event);
 });
 ```
 
@@ -55,4 +55,4 @@ socket.addEventListener('error', function (event) {
 - [WebSocket: close event](/zh-CN/docs/Web/API/WebSocket/close_event)
 - [WebSocket: message event](/zh-CN/docs/Web/API/WebSocket/message_event)
 - [WebSocket: open event](/zh-CN/docs/Web/API/WebSocket/open_event)
-- [Writing WebSocket client applications](/zh-CN/docs/WebSockets/Writing_WebSocket_client_applications)
+- [Writing WebSocket client applications](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)

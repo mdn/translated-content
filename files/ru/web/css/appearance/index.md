@@ -1,10 +1,6 @@
 ---
 title: appearance (-moz-appearance, -webkit-appearance)
 slug: Web/CSS/appearance
-tags:
-  - Стилизация
-  - кастомные свойства
-translation_of: Web/CSS/appearance
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -13,11 +9,39 @@ CSS-свойство **`-moz-appearance`** используется в Gecko (Fi
 
 Свойство **`-webkit-appearance`** используется в браузерах WebKit-based (например, Safari) и Blink-based (например, Chrome, Opera) для того же эффекта. Заметьте, что Firefox и Edge также поддерживают `-webkit-appearance`, для обеспечения совместимости.
 
-{{EmbedInteractiveExample("pages/css/appearance.html")}}
+{{InteractiveExample("CSS Demo: appearance")}}
+
+```css interactive-example-choice
+appearance: none;
+```
+
+```css interactive-example-choice
+appearance: auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="background">
+    <button id="example-element">button</button>
+  </div>
+</section>
+```
+
+```css interactive-example
+.background {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+}
+```
 
 Это свойство часто используется в таблицах стилей [XUL](/ru/docs/Mozilla/Tech/XUL/Tutorial) для разработки пользовательских виджетов в стиле, соответствующем платформе. Оно, также, используется в реализации [XBL](/ru/docs/XBL) виджетов, которые поставляются с платформой Mozilla.
 
-> **Примечание:** **Примечание о совместимости**: Если вы хотите использовать это свойство на веб-сайте, вы должны тестировать его очень осторожно. Хотя оно поддерживается в большинстве современных браузерах, его реализация широко варьируется. В старых браузерах, даже ключевое слово `none` не окажет одинакового эффекта на все элементы формы различных браузеров, а некоторые его совсем не поддерживают. Различия меньше в более современных браузерах.
+> [!NOTE]
+> Если вы хотите использовать это свойство на веб-сайте, вы должны тестировать его очень осторожно. Хотя оно поддерживается в большинстве современных браузерах, его реализация широко варьируется. В старых браузерах, даже ключевое слово `none` не окажет одинакового эффекта на все элементы формы различных браузеров, а некоторые его совсем не поддерживают. Различия меньше в более современных браузерах.
 
 ## Синтаксис
 
@@ -258,7 +282,7 @@ The following values may be operational on historical browser versions using **`
 }
 ```
 
-Смотрите также [this JSFiddle](http://jsfiddle.net/go392m5s/) в качестве примера, показывающего как вы можете использовать `appearance: none` для стилизации радио кнопок и чекбоксов.
+Смотрите также [this JSFiddle](https://jsfiddle.net/go392m5s/) в качестве примера, показывающего как вы можете использовать `appearance: none` для стилизации радио кнопок и чекбоксов.
 
 ## Спецификации
 
@@ -266,11 +290,11 @@ The following values may be operational on historical browser versions using **`
 
 {{CSSInfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Definition of `appearance` in CSS 3 Basic User Interface](http://www.w3.org/TR/2004/CR-css3-ui-20040511/#appearance) (Candidate Recommendation from 2004-05-11).
-- [Dropped CSS3 features from the UI spec.4](http://wiki.csswg.org/spec/css4-ui#dropped-css3-features)
+- [Definition of `appearance` in CSS 3 Basic User Interface](https://www.w3.org/TR/2004/CR-css3-ui-20040511/#appearance) (Candidate Recommendation from 2004-05-11).
+- [Dropped CSS3 features from the UI spec.4](https://wiki.csswg.org/spec/css4-ui#dropped-css3-features)

@@ -1,21 +1,27 @@
 ---
-title: '<samp>: 출력 예시 요소'
+title: "<samp>: 출력 예시 요소"
 slug: Web/HTML/Element/samp
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/samp
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<samp>` 요소**는 컴퓨터 프로그램 출력의 예시(혹은 인용문)를 나타냅니다. 보통 브라우저의 기본 고정폭 글씨체(보통 Courier, Lucida Console)를 사용해 렌더링합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/samp.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;samp&gt;", "tabbed-shorter")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
+```html interactive-example
+<p>I was trying to boot my computer, but I got this hilarious message:</p>
+
+<p>
+  <samp>Keyboard not found <br />Press F1 to continue</samp>
+</p>
+```
+
+```css interactive-example
+samp {
+  font-weight: bold;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -45,7 +51,7 @@ translation_of: Web/HTML/Element/samp
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -82,7 +88,8 @@ samp {
 }
 ```
 
-> **참고:** 웹사이트나 앱의 JavaScript 코드 출력을 담을 컨테이너 요소가 필요하다면 {{HTMLElement("output")}} 요소를 사용해야 합니다.
+> [!NOTE]
+> 웹사이트나 앱의 JavaScript 코드 출력을 담을 컨테이너 요소가 필요하다면 {{HTMLElement("output")}} 요소를 사용해야 합니다.
 
 ## 예제
 
@@ -91,8 +98,11 @@ samp {
 다음 간단한 예제는 문단이 프로그램 출력 예시를 포함하고 있습니다.
 
 ```html
-<p>프로세스가 완료되면 유틸리티가 <samp>Scan complete. Found <em>N</em> results.</samp>
-를 출력합니다. 출력을 확인한 후 다음 단계로 진행하세요.</p>
+<p>
+  프로세스가 완료되면 유틸리티가
+  <samp>Scan complete. Found <em>N</em> results.</samp> 를 출력합니다. 출력을
+  확인한 후 다음 단계로 진행하세요.
+</p>
 ```
 
 결과는 다음과 같습니다.
@@ -145,7 +155,7 @@ samp > kbd {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.samp")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -1,14 +1,9 @@
 ---
 title: Грязный режим
 slug: Glossary/Sloppy_mode
-tags:
-  - Glossary
-  - JavaScript
-  - Sloppy
-  - Глоссарий
-translation_of: Glossary/Sloppy_mode
-original_slug: Глоссарий/Sloppy_mode
 ---
+
+{{GlossarySidebar}}
 
 {{Glossary("ECMAScript")}} 5 и более поздние версии выполняют скрипты в [Строгом режиме](/ru/docs/Web/JavaScript/Reference/Strict_mode), который определённым образом изменяет семантику JavaScript для улучшения стабильности, и который упрощает понимание того, что происходит в программе при возникновении проблем.
 

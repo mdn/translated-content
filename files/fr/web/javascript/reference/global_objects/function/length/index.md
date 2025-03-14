@@ -1,20 +1,27 @@
 ---
 title: Function.length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
-tags:
-  - Function
-  - JavaScript
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/length
-original_slug: Web/JavaScript/Reference/Objets_globaux/Function/length
 ---
 
 {{JSRef}}
 
 La propriété **`length`** définit le nombre de paramètres attendus par la fonction.
 
-{{EmbedInteractiveExample("pages/js/function-length.html")}}{{js_property_attributes(0,0,1)}}
+{{InteractiveExample("JavaScript Demo: Function.length")}}
+
+```js interactive-example
+function func1() {}
+
+function func2(a, b) {}
+
+console.log(func1.length);
+// Expected output: 0
+
+console.log(func2.length);
+// Expected output: 2
+```
+
+{{js_property_attributes(0,0,1)}}
 
 ## Description
 
@@ -33,12 +40,12 @@ La propriété `length` du prototype de {{jsxref("Function")}} vaut 0.
 ```js
 console.log(Function.length); /* 1 */
 
-console.log((function()        {}).length); /* 0 */
-console.log((function(a)       {}).length); /* 1 */
-console.log((function(a, b)    {}).length); /* 2 etc. */
-console.log((function(...args) {}).length);
+console.log(function () {}.length); /* 0 */
+console.log(function (a) {}.length); /* 1 */
+console.log(function (a, b) {}.length); /* 2 etc. */
+console.log(function (...args) {}.length);
 // 0, le paramètre du reste n'est pas compté
-console.log((function(a, b = 1, c) {}).length);
+console.log(function (a, b = 1, c) {}.length);
 // 1, seuls les paramètres avant les valeurs par
 // défaut sont comptés
 ```

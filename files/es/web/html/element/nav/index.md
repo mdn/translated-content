@@ -1,38 +1,28 @@
 ---
-title: '<nav>: El elemento de sección de navegación'
+title: "<nav>: El elemento de sección de navegación"
 slug: Web/HTML/Element/nav
-tags:
-  - Elemento
-  - HTML5
-  - menu
-  - nav
-  - navegación
-  - programacion
-  - sección
-translation_of: Web/HTML/Element/nav
-original_slug: Web/HTML/Elemento/nav
 ---
 
 {{HTMLSidebar}}
 
 El **elemento** **HTML `<nav>`** representa una sección de una página cuyo propósito es proporcionar enlaces de navegación, ya sea dentro del documento actual o a otros documentos. Ejemplos comunes de secciones de navegación son menús, tablas de contenido e índices.
 
-| [Content categories](/es/docs/Web/Guide/HTML/categorias_de_contenido) | [Flow content](/es/docs/HTML/Content_categories#Flow_content), [sectioning content](/es/docs/HTML/Content_categories#Sectioning_content), palpable content. |
-| --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                                   | [Flow content](/es/docs/HTML/Content_categories#Flow_content).                                                                                              |
-| Omisión de etiquetas                                                  | {{no_tag_omission}}                                                                                                                                    |
-| Elementos padres permitidos                                           | Cualquier elemento que acepte [flow content](/es/docs/HTML/Content_categories#Flow_content).                                                                |
-| Roles ARIA permitidos                                                 | Ninguno                                                                                                                                                     |
-| Interfaz DOM                                                          | {{domxref("HTMLElement")}}                                                                                                                        |
+| [Content categories](/es/docs/Web/HTML/Content_categories) | [Flow content](/es/docs/Web/HTML/Content_categories#flow_content), [sectioning content](/es/docs/Web/HTML/Content_categories#sectioning_content), palpable content. |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Contenido permitido                                        | [Flow content](/es/docs/Web/HTML/Content_categories#flow_content).                                                                                                  |
+| Omisión de etiquetas                                       | Ninguna, tanto la etiqueta inicial como la final son obligatorias.                                                                                                  |
+| Elementos padres permitidos                                | Cualquier elemento que acepte [flow content](/es/docs/Web/HTML/Content_categories#flow_content).                                                                    |
+| Roles ARIA permitidos                                      | Ninguno                                                                                                                                                             |
+| Interfaz DOM                                               | {{domxref("HTMLElement")}}                                                                                                                                          |
 
 ## Atributos
 
-Este elemento sólo incluye [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
+Este elemento sólo incluye [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
 ## Notas de uso
 
 - No es necesario que todos los enlaces estén contenidos en un elemento `<nav>`. `<nav>` está destinado sólo para el bloque principal de enlaces de navegación; por lo general, el elemento {{HTMLElement("footer")}} a menudo tiene una lista de enlaces que no necesitan estar en un elemento {{HTMLElement("nav")}}.
-- Un documento puede tener varios elementos {{HTMLElement("nav")}}, por ejemplo, uno para la navegación del sitio y otro para la navegación dentro de la página. [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) puede ser utilizado en tal caso para promover la accesibilidad, ver [ejemplo](/es/docs/Web/HTML/Element/Heading_Elements#Labeling_section_content).
+- Un documento puede tener varios elementos {{HTMLElement("nav")}}, por ejemplo, uno para la navegación del sitio y otro para la navegación dentro de la página. [`aria-labelledby`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) puede ser utilizado en tal caso para promover la accesibilidad, ver [ejemplo](/es/docs/Web/HTML/Element/Heading_Elements#labeling_section_content).
 - Los agentes de usuario, como los lectores de pantalla dirigidos a usuarios con discapacidades, pueden usar este elemento para determinar si se omite la representación inicial del contenido de solo navegación.
 
 ## Ejemplo
@@ -53,9 +43,9 @@ En este ejemplo, un bloque `<nav>` es usado para contener una lista no ordenada 
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.nav")}}
+{{Compat}}
 
 ## Ver también
 

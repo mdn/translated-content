@@ -1,25 +1,26 @@
 ---
 title: Date.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toString
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toString
 ---
 
 {{JSRef}}
 
 **`toString()`** 메서드는 {{jsxref("Date")}} 객체의 시간을 문자열로 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/date-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toString()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+console.log(event.toString());
+// Expected output: "Tue Aug 19 1975 23:15:30 GMT+0200 (CEST)"
+// Note: your timezone may vary
+```
 
 ## 구문
 
 ```js
-    dateObj.toString()
+dateObj.toString();
 ```
 
 ### 반환 값
@@ -74,7 +75,7 @@ ECMAScript 2018(제9판) 전까지 `toString()`의 반환 형식은 구현에 �
 ```js
 var x = new Date();
 var myVar = x.toString(); // assigns a string value to myVar in the same format as:
-                          // Mon Sep 08 1998 14:36:22 GMT+0900 (KST)
+// Mon Sep 08 1998 14:36:22 GMT+0900 (KST)
 ```
 
 ## 명세

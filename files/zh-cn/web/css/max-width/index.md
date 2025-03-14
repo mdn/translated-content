@@ -1,106 +1,141 @@
 ---
 title: max-width
 slug: Web/CSS/max-width
+l10n:
+  sourceCommit: 925b2bd8beeae6ce8237863637bcd28ccbb8d47f
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
-## 摘要
+**`max-width`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素的最大宽度。它可防止 {{cssxref("width")}} 属性的[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)大于 `max-width` 指定的值。
 
-max-width 属性用来给元素设置最大宽度值。定义了 max-width 的元素会在达到 max-width 值之后避免进一步按照 width 属性设置变大。
+{{InteractiveExample("CSS Demo: max-width")}}
 
-{{ Cssxref("max-width") }} 会覆盖{{cssxref("width")}}设置，但 {{ Cssxref("min-width") }}设置会覆盖 {{ Cssxref("max-width") }}.
+```css interactive-example-choice
+max-width: 150px;
+```
 
-{{cssinfo}}
+```css interactive-example-choice
+max-width: 20em;
+```
+
+```css interactive-example-choice
+max-width: 75%;
+```
+
+```css interactive-example-choice
+max-width: 20ch;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Change the maximum width.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
+
+`max-width` 会覆盖 {{cssxref("width")}} 的设置，但 {{ Cssxref("min-width") }} 的设置会覆盖 `max-width`。
 
 ## 语法
 
 ```css
-/* <长度> 值 */
+/* <length> 值 */
 max-width: 3.5em;
 
-/* <百分比> 值 */
+/* <percentage> 值 */
 max-width: 75%;
 
-/* 关键字 */
+/* 关键字值 */
 max-width: none;
 max-width: max-content;
 max-width: min-content;
 max-width: fit-content;
-max-width: fill-available;
+max-width: fit-content(20em);
 
-/* 全局设置 */
+/* 全局值 */
 max-width: inherit;
 max-width: initial;
+max-width: revert;
+max-width: revert-layer;
 max-width: unset;
 ```
 
-### 可选值
+### 值
 
+- `<length>`
+  - : 以绝对值定义 `max-width`。
+- `<percentage>`
+  - : 以包含区块的宽度百分比定义 `max-width`。
 - `none`
-  - : 元素未设置最大值
-- `<长度>`
-  - : 请参阅{{cssxref("&lt;length&gt;")}}所提及的长度单位。
-- `<百分比>`
-  - : 以父级块级容器宽度的百分比{{cssxref("&lt;percentage&gt;")}}作为最大宽度。
-- `max-content`{{experimental_inline()}}
-  - : The intrinsic preferred width.
-- `min-content`{{experimental_inline()}}
-  - : The intrinsic minimum width.
-- `fill-available`{{experimental_inline()}}
-  - : The containing block width minus horizontal margin, border, and padding. Some browsers implement an ancient name for this keyword, `available`.
-- `fit-content`{{experimental_inline()}}
-  - : 与 `max-content` 等价。
+  - : 盒子大小没有限制。
+- `max-content`
+  - : 固有首选 `max-width`。
+- `min-content`
+  - : 固有最小 `max-width`。
+- `fit-content`
+  - : 使用可用空间，但不得超过 [max-content](/zh-CN/docs/Web/CSS/max-content)，即 `min(max-content,max(min-content,stretch))`。
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})` {{Experimental_Inline}}
+  - : 使用 `fit-content` 公式，用指定参数替换可用空间，即 `min(max-content, max(min-content, argument))`。
 
-### 形式语法
+## 无障碍考虑
+
+确保设置了 `max-width` 的元素在页面缩放以增大文字大小时不会被截断和/或遮挡其他内容。
+
+- [MDN 理解 WCAG 准则 1.4](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#准则_1.4：让用户更容易看到和听到内容，包括将前景与背景分开)
+- [理解成功标准 1.4.4 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+
+## 形式定义
+
+{{cssinfo}}
+
+## 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
-在下面的例子里，id 为"child"的\<div>元素设置了 width 值，使它的宽度与父元素"parent"相等 (100%),但是 max-width 值限制了它最大宽度只能到 150px.
+### 设置最大像素宽度
 
-```html
-<div id="parent">
-    <div id="child">
-        The Mozilla community produces a lot of great software.
-    </div>
-</div>
-```
+在本例中，“child”的宽度为 150 像素或“parent”的宽度，以较小者为准。
 
-```css
-#parent { width: 300px; }
-
-#child  { background: gold;
-          width: 100%;
-          max-width: 150px;
-        }
-```
-
-{{EmbedLiveSample("basic-max-width-demo", 350, 100)}}
-
-fit-content 值可以用来给元素设置基于其内容大小的宽度：
+#### HTML
 
 ```html
 <div id="parent">
-    <div id="child">
-        Child Text
-    </div>
+  <div id="child">
+    Fusce pulvinar vestibulum eros, sed luctus ex lobortis quis.
+  </div>
 </div>
 ```
 
-```css
-#parent { background: lightblue;
-          width: 300px; }
+#### CSS
 
-#child  { background: gold;
-          width: 100%;
-          max-width: -moz-fit-content;
-          max-width: -webkit-fit-content;
-        }
+```css
+#parent {
+  background: lightblue;
+  width: 300px;
+}
+
+#child {
+  background: gold;
+  width: 100%;
+  max-width: 150px;
+}
 ```
 
-{{EmbedLiveSample("fit-content-demo", 400, 100)}}
+{{EmbedLiveSample("设置最大像素宽度", 350, 100)}}
 
 ## 规范
 
@@ -110,7 +145,8 @@ fit-content 值可以用来给元素设置基于其内容大小的宽度：
 
 {{Compat}}
 
-## 参考链接
+## 参见
 
-- {{ Cssxref("width") }}, {{ Cssxref("min-width") }}, {{ Cssxref("max-height") }}
-- [The box model](/zh-CN/CSS/box_model), {{ Cssxref("box-sizing") }}
+- [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)，{{cssxref("box-sizing")}}
+- {{cssxref("width")}}、{{cssxref("min-width")}}
+- 映射的逻辑属性：{{cssxref("max-inline-size")}}、{{cssxref("max-block-size")}}

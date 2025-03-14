@@ -1,13 +1,57 @@
 ---
 title: text-shadow
 slug: Web/CSS/text-shadow
-translation_of: Web/CSS/text-shadow
 ---
+
 {{CSSRef}}
 
-CSS-свойство **`text-shadow`** добавляет тени к тексту. Свойство задаётся разделённым запятыми списком теней, которые будут применены к тексту и к любым его свойствам [`decorations`](/en-US/docs/Web/CSS/text-decoration). Любая тень описывается комбинацией смещений по осям X и Y относительно элемента, радиусом размытия и цветом.
+CSS-свойство **`text-shadow`** добавляет тени к тексту. Свойство задаётся разделённым запятыми списком теней, которые будут применены к тексту и к любым его свойствам [`decorations`](/ru/docs/Web/CSS/text-decoration). Любая тень описывается комбинацией смещений по осям X и Y относительно элемента, радиусом размытия и цветом.
 
-{{EmbedInteractiveExample("pages/css/text-shadow.html")}}
+{{InteractiveExample("CSS Demo: text-shadow")}}
+
+```css interactive-example-choice
+text-shadow: 1px 1px 2px pink;
+```
+
+```css interactive-example-choice
+text-shadow: #fc0 1px 0 10px;
+```
+
+```css interactive-example-choice
+text-shadow: 5px 5px #558abb;
+```
+
+```css interactive-example-choice
+text-shadow: red 2px 5px;
+```
+
+```css interactive-example-choice
+text-shadow: 5px 10px;
+```
+
+```css interactive-example-choice
+text-shadow:
+  1px 1px 2px red,
+  0 0 1em blue,
+  0 0 0.2em blue;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    Far out in the uncharted backwaters of the unfashionable end of the western
+    spiral arm of the Galaxy...
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font:
+    1.5em Georgia,
+    serif;
+}
+```
 
 ## Syntax
 
@@ -28,7 +72,7 @@ text-shadow: white 2px 5px;
 /* Используем значения по умолчанию для цвета и радиуса-размытия */
 text-shadow: 5px 10px;
 
-/* Значения принятые глобально */
+/* Глобальные значения */
 text-shadow: inherit;
 text-shadow: initial;
 text-shadow: unset;
@@ -66,9 +110,10 @@ text-shadow: unset;
 ```
 
 ```html
-<p class="red-text-shadow">Sed ut perspiciatis unde omnis iste
-    natus error sit voluptatem accusantium doloremque laudantium,
-    totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+<p class="red-text-shadow">
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+</p>
 ```
 
 {{EmbedLiveSample('Простая_тень', '660px', '90px')}}
@@ -77,26 +122,29 @@ text-shadow: unset;
 
 ```css
 .white-text-with-blue-shadow {
-  text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
+  text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
   color: white;
-  font: 1.5em Georgia, serif;
+  font:
+    1.5em Georgia,
+    serif;
 }
 ```
 
 ```html
-<p class="white-text-with-blue-shadow">Sed ut perspiciatis unde omnis iste
-    natus error sit voluptatem accusantium doloremque laudantium,
-    totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+<p class="white-text-with-blue-shadow">
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+</p>
 ```
 
 {{EmbedLiveSample('Множественные_тени', '660px', '170px')}}
 
 ## Спецификации
 
-| Specification                                                                            | Status                                       | Comment                                                                                                                                                                                                                                                                                                                                     |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'text-shadow')}} | {{Spec2('CSS3 Transitions')}}     | Определяет `text-shadow` как анимируемую.                                                                                                                                                                                                                                                                                                   |
-| {{SpecName('CSS3 Text Decoration', '#text-shadow', 'text-shadow')}} | {{Spec2('CSS3 Text Decoration')}} | Свойство CSS `text-shadow` было [ошибочно определено в CSS2](http://www.w3.org/TR/2008/REC-CSS2-20080411/text.html#text-shadow-props) и удалено из CSS2 (Level 1). Спецификация The CSS Text Module Level 3 исправила синтаксис. Позже оно было перемещено в [CSS Text Decoration Module Level 3](https://www.w3.org/TR/css-text-decor-3/). |
+{{Specifications}}
 
 {{cssinfo}}
 
@@ -106,11 +154,11 @@ text-shadow: unset;
 
 ### Примечание Quantum CSS
 
-- В движке Gecko есть программная ошибка в результате которой метод перехода ({{cssxref("transition")}}) не будет производить переход от элемента со свойством `text-shadow` с заданным цветом к элементу со свойством `text-shadow` без заданного цвета ({{bug(726550)}}). Данная ошибка была исправлена в параллельной ветке движка CSS для Firefox (так же известном как [Quantum CSS](https://wiki.mozilla.org/Quantum) или [Stylo](https://wiki.mozilla.org/Quantum/Stylo), выпуск которого запланирован уже в версии Firefox 57).
+- В движке Gecko есть программная ошибка в результате которой метод перехода ({{cssxref("transition")}}) не будет производить переход от элемента со свойством `text-shadow` с заданным цветом к элементу со свойством `text-shadow` без заданного цвета ([Firefox bug 726550](https://bugzil.la/726550)). Данная ошибка была исправлена в параллельной ветке движка CSS для Firefox (так же известном как [Quantum CSS](https://wiki.mozilla.org/Quantum) или [Stylo](https://wiki.mozilla.org/Quantum/Stylo), выпуск которого запланирован уже в версии Firefox 57).
 
-## Также смотрите
+## Смотрите также
 
 - [Text Shadow CSS Generator](https://cssgenerator.org/text-shadow-css-generator.html) - Интерактивный генератор теней CSS.
 - {{cssxref("box-shadow")}}
 - Тип данных {{cssxref("&lt;color&gt;")}} (для определения цвета теней)
-- [Определение цвета для элемента HTML посредством CSS](/ru/docs/Web/HTML/Applying_color)
+- [Определение цвета для элемента HTML посредством CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color)

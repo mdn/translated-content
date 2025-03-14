@@ -1,21 +1,13 @@
 ---
 title: Window.mozAnimationStartTime
 slug: Web/API/Animation/startTime
-tags:
-  - >-
-    API  HTML DOM  NeedsExample  NeedsMarkupWork NeedsSpecTable  Property 
-    Reference  Window
-translation_of: Web/API/Window/mozAnimationStartTime
-original_slug: Web/API/Window/mozAnimationStartTime
 ---
 
-{{ APIRef() }}
-
-{{ gecko_minversion_header("2.0") }}{{ non-standard_header() }}
+{{APIRef("Web Animations")}}
 
 ### Summary
 
-Возвращает время в миллисекундах с начала эпохи UNIX, начиная с которого анимации, начавшиеся в определённый момент, должны быть сочтены уже начавшимися. Это значение должно быть использовано вместо, например, [`Date.now()`](/en/JavaScript/Reference/Global_Objects/Date/now), потому что оно будет тем же самым для анимаций, начавшихся в этом окне в течение этого интервала, позволяя им синхронизироваться между собой.
+Возвращает время в миллисекундах с начала эпохи UNIX, начиная с которого анимации, начавшиеся в определённый момент, должны быть сочтены уже начавшимися. Это значение должно быть использовано вместо, например, [`Date.now()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date/now), потому что оно будет тем же самым для анимаций, начавшихся в этом окне в течение этого интервала, позволяя им синхронизироваться между собой.
 
 Это также позволяет анимациям JavaScript оставаться синхронизированными с CSS переходами и SMIL анимациями, запущенными в течение того же интервала обновления.
 
@@ -29,15 +21,16 @@ time = window.mozAnimationStartTime;
 
 - _`time`_ это время в миллисекундах с начала эпохи UNIX, начиная с которого анимации для текущего окна принимаются уже начавшимися.
 
-### Specification
+## Спецификации
 
-Not part of specification.
+{{Specifications}}
 
-### Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-### See also
+## Смотрите также
 
-- {{ domxref("window.mozRequestAnimationFrame()") }}
-- {{ domxref("window.onmozbeforepaint") }}
+- [Web Animations API](/ru/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}}
+- {{domxref("Animation.currentTime")}}

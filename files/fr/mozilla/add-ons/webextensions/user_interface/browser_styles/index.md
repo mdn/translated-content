@@ -1,15 +1,14 @@
 ---
 title: Styles des navigateurs
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 ---
 
 {{AddonSidebar}}
 
-Certains composants de l'interface utilisateur - les [fenêtres contextuelles](/fr/Add-ons/WebExtensions/user_interface/Popups), [fenêtres latérales](/fr/Add-ons/WebExtensions/user_interface/Sidebars), et les [pages d'options](/fr/Add-ons/WebExtensions/user_interface/Options_pages) du navigateur et de la page - sont spécifiés par votre extension de la même manière :
+Certains composants de l'interface utilisateur - les [fenêtres contextuelles](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [fenêtres latérales](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), et les [pages d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) du navigateur et de la page - sont spécifiés par votre extension de la même manière :
 
 1. créer un fichier HTML définissant la structure de l'élément d'interface utilisateur
-2. ajoutez une clé manifest.json ([`browser_action`](/fr/Add-ons/WebExtensions/manifest.json/browser_action), [`page_action`](/fr/Add-ons/WebExtensions/manifest.json/page_action), [`sidebar_action`](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action), ou [`options_ui`](/fr/Add-ons/WebExtensions/manifest.json/options_ui)) pointant vers ce fichier HTML.
+2. ajoutez une clé manifest.json ([`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action), [`page_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), [`sidebar_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action), ou [`options_ui`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)) pointant vers ce fichier HTML.
 
 L'un des défis de cette approche est de styliser l'élément de telle sorte qu'il s'intègre au style du navigateur.
 Pour aider à cela, les clés manifest.json keys incluent une propriété optionnelle supplémentaire : `browser_style`.
@@ -17,7 +16,8 @@ Si cela est inclus et défini sur `true`, votre document obtiendra une ou plusie
 
 Lorsque vous envisagez d'utiliser le `browser_style: true`, vous devez tester votre extension avec différents thèmes (intégrés ou AMO) pour vous assurer que l'interface d'extension se comporte comme vous l'attendez..
 
-> **Attention :** Quand `browser_style: true` est inclus dans le manifest de votre extension web, la sélection de texte dans l'interface utilisateur de votre extension est désactivée sauf dans les contrôles de saisie. Si cela pose un problème, incluez plutôt browser_style:false.
+> [!WARNING]
+> Quand `browser_style: true` est inclus dans le manifest de votre extension web, la sélection de texte dans l'interface utilisateur de votre extension est désactivée sauf dans les contrôles de saisie. Si cela pose un problème, incluez plutôt browser_style:false.
 
 > **Note :** **Google Chrome** et **Opera** utilisent `chrome_style` au lieu de `browser_style`, donc si vous souhaitez les prendre en charge, vous devez ajouter les deux clés.
 
@@ -92,21 +92,24 @@ La plupart des styles sont automatiquement appliqués, mais certains éléments 
 &#x3C;label for="op2">Option 2&#x3C;/label>
 &#x3C;/div></pre
         >
+
 </td>
 </tr>
 
   </tbody>
 </table>
 
-> **Note :** Voir le {{bug(1465256)}} pour la suppression de cette exigence inutile.
+> [!NOTE]
+> Voir le [bug Firefox 1465256](https://bugzil.la/1465256) pour la suppression de cette exigence inutile.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
 {{Compat}}
 
 ## Composants du panneau Firefox
 
-> **Attention :** Cette fonctionnalité est non standard et ne fonctionne que dans Firefox.
+> [!WARNING]
+> Cette fonctionnalité est non standard et ne fonctionne que dans Firefox.
 
 La feuille de style `chrome://browser/content/extension.css` contient également les styles des composants du panneau Firefox.
 
@@ -223,6 +226,7 @@ L'[ancien guide de style de Firefox](https://firefoxux.github.io/StyleGuide/#/na
 &#x3C;/div>
 &#x3C;/div></pre
         >
+
 </td>
 </tr>
 
@@ -387,7 +391,7 @@ button.panel-section-tabs-button {
 .panel-list-item > .text-shortcut {
   color: #808080;
   font-family: "Lucida Grande", caption;
-  font-size: .847em;
+  font-size: 0.847em;
   justify-content: flex-end;
 }
 
@@ -418,7 +422,7 @@ button.panel-section-tabs-button {
 .panel-section-footer-button > .text-shortcut {
   color: #808080;
   font-family: "Lucida Grande", caption;
-  font-size: .847em;
+  font-size: 0.847em;
 }
 
 .panel-section-footer-button:hover {
@@ -457,10 +461,12 @@ button.panel-section-tabs-button {
 body {
   background: #fcfcfc;
   background-clip: padding-box;
-  border: 1px solid rgba(24,26,27,.2);
-  box-shadow: 0 3px 5px rgba(24,26,27,.1),0 0 7px rgba(24,26,27,.1);
+  border: 1px solid rgba(24, 26, 27, 0.2);
+  box-shadow:
+    0 3px 5px rgba(24, 26, 27, 0.1),
+    0 0 7px rgba(24, 26, 27, 0.1);
   box-sizing: content-box;
-  margin: 2em auto .5em;
+  margin: 2em auto 0.5em;
   width: 384px;
 }
 

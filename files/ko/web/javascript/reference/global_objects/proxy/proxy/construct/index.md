@@ -1,27 +1,39 @@
 ---
 title: handler.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-browser-compat: javascript.builtins.Proxy.handler.construct
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 ---
 
 {{JSRef}}
 
 **`handler.construct()`** 메서드는 {{jsxref("Operators/new", "new")}} 연산자에 대한 트랩입니다. 결과 Proxy 객체에서 new 연산이 유효하려면 프록시를 초기화하는 데 사용되는 대상 객체 자체에 내부 `[[Construct]]` 메서드가 있어야 합니다(즉, `new target`이 유효해야 함).
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-construct.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.construct()", "taller")}}
+
+```js interactive-example
+function monster1(disposition) {
+  this.disposition = disposition;
+}
+
+const handler1 = {
+  construct(target, args) {
+    console.log(`Creating a ${target.name}`);
+    // Expected output: "Creating a monster1"
+
+    return new target(...args);
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+console.log(new proxy1("fierce").disposition);
+// Expected output: "fierce"
+```
 
 ## 구문
 
 ```js
 new Proxy(target, {
-  construct(target, argumentsList, newTarget) {
-  }
+  construct(target, argumentsList, newTarget) {},
 });
 ```
 
@@ -68,11 +80,11 @@ const p = new Proxy(function () {}, {
   construct(target, argumentsList, newTarget) {
     console.log(`called: ${argumentsList}`);
     return { value: argumentsList[0] * 10 };
-  }
+  },
 });
 
 console.log(new p(1).value); // "호출: 1"
-                             // 10
+// 10
 ```
 
 다음 코드는 불변 조건을 위반합니다.
@@ -81,7 +93,7 @@ console.log(new p(1).value); // "호출: 1"
 const p = new Proxy(function () {}, {
   construct(target, argumentsList, newTarget) {
     return 1;
-  }
+  },
 });
 
 new p(); // TypeError 예외 발생
@@ -90,11 +102,14 @@ new p(); // TypeError 예외 발생
 다음 코드는 프록시를 부적절하게 초기화합니다. 프록시 초기화의 `target` 자체는 {{jsxref("Operators/new", "new")}} 연산에 대한 유효한 생성자여야 합니다.
 
 ```js example-bad
-const p = new Proxy({}, {
-  construct(target, argumentsList, newTarget) {
-    return {};
-  }
-});
+const p = new Proxy(
+  {},
+  {
+    construct(target, argumentsList, newTarget) {
+      return {};
+    },
+  },
+);
 
 new p(); // TypeError is thrown, "p" is not a constructor
 ```

@@ -1,16 +1,9 @@
 ---
 title: Compression sans perte
 slug: Glossary/Lossless_compression
-tags:
-  - Débutant
-  - Glossaire
-  - Images
-  - Performance Web
-  - compression
-  - données
-translation_of: Glossary/Lossless_compression
-original_slug: Glossaire/Compression_sans_perte
 ---
+
+{{GlossarySidebar}}
 
 **La compression** **sans perte** est un type d'algorithme de compression qui permet aux données d'origine d'être parfaitement restituées à partir des données compressées. Les méthodes de compression sans perte sont réversibles. Parmi les exemples de compression sans perte on retrouve {{glossary("GZIP")}}, {{glossary("Brotli")}}, WebP, and {{glossary("PNG")}},
 

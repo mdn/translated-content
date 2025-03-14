@@ -1,22 +1,46 @@
 ---
 title: <map>
 slug: Web/HTML/Element/map
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - Multimedia
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/map
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<map>` 요소**는 {{htmlelement("area")}} 요소와 함께 이미지 맵(클릭 가능한 링크 영역)을 정의할 때 사용합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/map.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;map&gt;", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
+```html interactive-example
+<map name="infographic">
+  <area
+    shape="poly"
+    coords="130,147,200,107,254,219,130,228"
+    href="https://developer.mozilla.org/docs/Web/HTML"
+    alt="HTML" />
+  <area
+    shape="poly"
+    coords="130,147,130,228,6,219,59,107"
+    href="https://developer.mozilla.org/docs/Web/CSS"
+    alt="CSS" />
+  <area
+    shape="poly"
+    coords="130,147,200,107,130,4,59,107"
+    href="https://developer.mozilla.org/docs/Web/JavaScript"
+    alt="JavaScript" />
+</map>
+<img
+  usemap="#infographic"
+  src="/shared-assets/images/examples/mdn-info2.png"
+  alt="MDN infographic" />
+```
+
+```css interactive-example
+img {
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 232px;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -45,7 +69,7 @@ translation_of: Web/HTML/Element/map
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -70,17 +94,17 @@ translation_of: Web/HTML/Element/map
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("name")}}
-  - : 맵을 참조할 때 사용할 수 있는 이름. 반드시 존재해야 하고, 값이 비면 안되며, 값에 공백 문자가 포함되어도 안됩니다. `name` 특성은 문서 내의 모든 `<map>`에서 유일해야 합니다. {{htmlattrxref("id")}} 특성이 존재하는 경우 `name`과 값이 동일해야 합니다.
+- `name`
+  - : 맵을 참조할 때 사용할 수 있는 이름. 반드시 존재해야 하고, 값이 비면 안되며, 값에 공백 문자가 포함되어도 안됩니다. `name` 특성은 문서 내의 모든 `<map>`에서 유일해야 합니다. [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성이 존재하는 경우 `name`과 값이 동일해야 합니다.
 
 ## 예제
 
 ```html
 <map name="primary">
-  <area shape="circle" coords="75,75,75" href="left.html">
-  <area shape="circle" coords="275,75,75" href="right.html">
+  <area shape="circle" coords="75,75,75" href="left.html" />
+  <area shape="circle" coords="275,75,75" href="right.html" />
 </map>
-<img usemap="#primary" src="https://placehold.it/350x150" alt="350 x 150 pic">
+<img usemap="#primary" src="https://placehold.it/350x150" alt="350 x 150 pic" />
 ```
 
 ### 결과
@@ -92,10 +116,10 @@ translation_of: Web/HTML/Element/map
 키보드의 탭을 눌렀을 때, 위의 예제는 아래 사진처럼 나와야 합니다.
 
 `left.html` 링크:
-![](https://mdn.mozillademos.org/files/14595/Screen%20Shot%202017-02-02%20at%2010.48.40%20PM.png)
+![](screen_shot_2017-02-02_at_10.48.40_pm.png)
 
 `right:html` 링크:
-![](https://mdn.mozillademos.org/files/14597/Screen%20Shot%202017-02-02%20at%2010.49.04%20PM.png)
+![](screen_shot_2017-02-02_at_10.49.04_pm.png)
 
 ## 명세
 
@@ -103,7 +127,7 @@ translation_of: Web/HTML/Element/map
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.map")}}
+{{Compat}}
 
 ## 같이 보기
 

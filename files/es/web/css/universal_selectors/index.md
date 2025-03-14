@@ -1,12 +1,6 @@
 ---
 title: Selectores universales
 slug: Web/CSS/Universal_selectors
-tags:
-  - CSS
-  - Principiante
-  - Referencia CSS
-  - Selectores
-translation_of: Web/CSS/Universal_selectors
 ---
 
 {{CSSRef}}
@@ -39,7 +33,7 @@ El asterisco es opcional con selectores simples. Por ejemplo, `*.warning` y `.wa
 ### CSS
 
 ```css
-* [lang^=en] {
+* [lang^="en"] {
   color: green;
 }
 
@@ -52,7 +46,7 @@ El asterisco es opcional con selectores simples. Por ejemplo, `*.warning` y `.wa
 }
 
 .floating {
-  float: left
+  float: left;
 }
 
 /* despejar automáticamente el siguiente hermano después de un elemento flotante */
@@ -82,4 +76,4 @@ El asterisco es opcional con selectores simples. Por ejemplo, `*.warning` y `.wa
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.universal")}}
+{{Compat}}

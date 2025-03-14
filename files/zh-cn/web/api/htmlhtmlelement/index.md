@@ -7,7 +7,7 @@ slug: Web/API/HTMLHtmlElement
 
 **`HTMLHtmlElement`** 接口是给定 HTML 文档的根节点。它继承了 {{domxref("HTMLElement")}} 对象的属性和方法。
 
-您可以通过读取 {{domxref("document.documentElement")}} 属性的值来获取文档的 `HTMLHtmlElement` 对象。
+你可以通过读取 {{domxref("document.documentElement")}} 属性的值来获取文档的 `HTMLHtmlElement` 对象。
 
 {{InheritanceDiagram(600,120)}}
 
@@ -20,7 +20,7 @@ _继承 {{domxref("HTMLElement")}}的属性。_
 
 ## 方法
 
-_没有明确的方法；可从父项继承—— {{domxref("HTMLElement")}}。_
+_没有明确的方法；可从父项继承——{{domxref("HTMLElement")}}。_
 
 ## 规范
 

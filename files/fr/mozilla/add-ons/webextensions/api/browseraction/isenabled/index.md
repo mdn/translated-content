@@ -1,30 +1,20 @@
 ---
 title: browserAction.isEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/isEnabled
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browserAction
-  - isEnabled
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/isEnabled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Renvoie `true` si l'action du navigateur est activée.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 let gettingIsEnabled = browser.browserAction.isEnabled(
-  details // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -45,18 +35,14 @@ let gettingIsEnabled = browser.browserAction.isEnabled(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec `true` si l'action du navigateur de l'extension est activée, et `false` dans le cas contraire.
-
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.isEnabled",2)}}
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec `true` si l'action du navigateur de l'extension est activée, et `false` dans le cas contraire.
 
 ## Exemples
 
 Vérifiez l'état global :
 
 ```js
-browser.browserAction.isEnabled({}).then(result => {
+browser.browserAction.isEnabled({}).then((result) => {
   console.log(result);
 });
 ```
@@ -66,14 +52,18 @@ Vérifiez l'état de l'onglet actuellement actif :
 ```js
 async function enabledInActiveTab() {
   let tabs = await browser.tabs.query({
-    currentWindow:true,
-    active: true
+    currentWindow: true,
+    active: true,
   });
   let enabled = await browser.browserAction.isEnabled({
-    tabId: tabs[0].id
+    tabId: tabs[0].id,
   });
   console.log(enabled);
 }
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}

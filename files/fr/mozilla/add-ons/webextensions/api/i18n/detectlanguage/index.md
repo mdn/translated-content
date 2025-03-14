@@ -1,31 +1,20 @@
 ---
 title: i18n.detectLanguage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - detectLanguage
-  - i18n
-translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Détecte la langue du texte fourni à l'aide du [détecteur de langue compact](https://github.com/CLD2Owners/cld2) (CLD).
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var detectingLanguages = browser.i18n.detectLanguage(
-  text                  // string
-)
+  text, // string
+);
 ```
 
 ### Paramètres
@@ -35,7 +24,7 @@ var detectingLanguages = browser.i18n.detectLanguage(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet résultat. L'objet résultat a deux propriétés :
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet résultat. L'objet résultat a deux propriétés :
 
 - `isReliable`
   - : `boolean`. Si la langue a été détectée de manière fiable.
@@ -48,9 +37,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
     - `percentage`
       - : `integer`. Le pourcentage de la chaîne d'entrée qui était dans la langue détectée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.i18n.detectLanguage")}}
+{{Compat}}
 
 ## Exemples
 
@@ -62,7 +51,7 @@ function onLanguageDetected(langInfo) {
   }
 }
 
-var text = "L'homme est né libre, et partout il est dans les fers."
+var text = "L'homme est né libre, et partout il est dans les fers.";
 
 var detecting = browser.i18n.detectLanguage(text);
 detecting.then(onLanguageDetected);
@@ -70,9 +59,9 @@ detecting.then(onLanguageDetected);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.i18n`](https://developer.chrome.com/extensions/i18n). Cette documentation est dérivée de [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n). Cette documentation est dérivée de [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

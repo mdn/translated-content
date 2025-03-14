@@ -1,9 +1,9 @@
 ---
 title: Semantics
 slug: Glossary/Semantics
-translation_of: Glossary/Semantics
-original_slug: Глоссарий/Semantics
 ---
+
+{{GlossarySidebar}}
 
 В программировании, **Семантика** означает _значение_ фрагмента кода - например, «К какому результату приведёт выполнение этой строки JavaScript?», или «Каково предназначение или какая роль у этого элемента HTML?», а не «Как он выглядит?».
 
@@ -28,7 +28,9 @@ original_slug: Глоссарий/Semantics
 С другой стороны, вы можете сделать любой элемент _похожим_ на заголовок первого уровня. Рассмотрим следующее:
 
 ```html
-<span style="font-size: 32px; margin: 21px 0;">Is this a top level heading?</span>
+<span style="font-size: 32px; margin: 21px 0;"
+  >Is this a top level heading?</span
+>
 ```
 
 Эти стили сделают элемент похожим на заголовок первого уровня, но он не будет иметь семантического значения, поэтому не получит никаких дополнительных преимуществ, описанных выше. Поэтому хорошей практикой является выбор подходящего элемента HTML для каждого отдельного случая.
@@ -65,12 +67,8 @@ HTML должен предоставлять структуру информац
 
 ## Learn more
 
-- [HTML element reference](/ru/docs/Web/HTML/Element#Inline_text_semantics) on MDN
-- [Using HTML sections and outlines](/ru/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Problems_solved_by_HTML5) on MDN
-- {{interwiki("wikipedia", "Semantics#Computer_science", "The meaning of semantics in computer science")}} on Wikipedia
-
-<!---->
-
+- [HTML element reference](/ru/docs/Web/HTML/Element#inline_text_semantics) on MDN
+- [Using HTML sections and outlines](/ru/docs/Web/HTML/Element/Heading_Elements#problems_solved_by_html5) on MDN
 - [MDN Web Docs Glossary](/ru/docs/Glossary)
 
   - {{Glossary("SEO")}}

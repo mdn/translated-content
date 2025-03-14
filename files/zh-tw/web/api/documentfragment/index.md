@@ -33,7 +33,7 @@ _This interface has no specific properties, but inherits those of its parent,_ _
 
 ## 方法
 
-_This interface inherits the methods of its parent, {{domxref("Node")}}, and implements those of the {{domxref("ParentNode")}} interface*.*_
+_This interface inherits the methods of its parent, {{domxref("Node")}}, and implements those of the {{domxref("ParentNode")}} interface._
 
 - {{domxref("DocumentFragment.find()")}} {{experimental_inline}}
   - : Returns the first matching {{domxref("Element")}} in the tree of the `DocumentFragment`.

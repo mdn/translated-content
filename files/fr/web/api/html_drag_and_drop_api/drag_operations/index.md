@@ -1,13 +1,14 @@
 ---
 title: Opérations de glissement
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
-translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
-original_slug: Web/API/API_HTML_Drag_and_Drop/Opérations_de_glissement
 ---
+
+{{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 Ce qui suit décrit les étapes qui se déroulent lors d'un Glisser Déposer.
 
-> **Note :** Les opérations de glisser décrits dans ce document utilisent l'interface {{domxref("DataTransfer")}}. Ce document n'utilise pas l'interface {{domxref("DataTransferItem")}} ni l'interface {{domxref("DataTransferItemList")}}.
+> [!NOTE]
+> Les opérations de glisser décrits dans ce document utilisent l'interface {{domxref("DataTransfer")}}. Ce document n'utilise pas l'interface {{domxref("DataTransferItem")}} ni l'interface {{domxref("DataTransferItemList")}}.
 
 ## L'attribut draggable
 
@@ -17,26 +18,30 @@ En HTML, excepté le comportement par défaut des images, des liens et des séle
 
 Pour rendre un autre élément HTML glissable, deux choses doivent être faites&nbsp;:
 
-- Définissez l'attribut `{{htmlattrxref("draggable")}}` à `true` sur l'élément que vous voulez rendre glissable.
+- Définissez l'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#draggable) à `true` sur l'élément que vous voulez rendre glissable.
 - Ajoutez un scrutateur sur l'événement [`dragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event) et définissez les données du glissement dans ce scrutateur.
 - {{domxref("DataTransfer.setData","Définir la donnée de glissement")}} au sein du scrutateur ajouté précédemment.
 
 Voici un exemple qui permet à une section de contenu d'être glissée&nbsp;:
 
 ```html
-<div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'Ce texte peut être glissé')">
+<div
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'Ce texte peut être glissé')">
   Ce texte <strong>peut</strong> être glissé.
 </div>
 ```
 
-L'attribut `{{htmlattrxref("draggable")}}` est défini à true, ce qui rend l'élément glissant. Si cet attribut est omis ou défini à false, l'élément ne serait pas glissant et le texte serait alors simplement sélectionné. Cet attribut peut être placé sur n'importe quel élément, y compris des images et des liens. Toutefois, pour les deux derniers, la valeur par défaut est true, donc vous n'utiliserez l'attribut `{{htmlattrxref("draggable")}}` que pour le définir à `false` pour interdire le glissement de ces éléments.
+L'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#draggable) est défini à true, ce qui rend l'élément glissant. Si cet attribut est omis ou défini à false, l'élément ne serait pas glissant et le texte serait alors simplement sélectionné. Cet attribut peut être placé sur n'importe quel élément, y compris des images et des liens. Toutefois, pour les deux derniers, la valeur par défaut est true, donc vous n'utiliserez l'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#draggable) que pour le définir à `false` pour interdire le glissement de ces éléments.
 
 Notez que lorsqu'un élément est rendu glissable, le texte ou les autres éléments qu'il contient ne peuvent plus être sélectionné de manière classique en cliquant et déplaçant la souris. Au lieu de cela, l'utilisateur doit maintenir la touche <kbd>Alt</kbd> appuyée pour sélectionner le texte avec la souris, ou bien utilisez le clavier.
 
-Pour des éléments XUL, il n'est pas nécessaire d'utiliser l'attribut `{{htmlattrxref("draggable")}}`, car tous les éléments XUL sont glissables.
+Pour des éléments XUL, il n'est pas nécessaire d'utiliser l'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#draggable), car tous les éléments XUL sont glissables.
 
 ```html
-<button label="Glisse moi" ondragstart="event.dataTransfer.setData('text/plain', 'Bouton à glisser');">
+<button
+  label="Glisse moi"
+  ondragstart="event.dataTransfer.setData('text/plain', 'Bouton à glisser');"></button>
 ```
 
 ## Démarrer une opération de glissement
@@ -44,7 +49,9 @@ Pour des éléments XUL, il n'est pas nécessaire d'utiliser l'attribut `{{htmla
 Dans cet exemple, un scrutateur est ajouté à l'événement dragstart en utilisant l'attribut `ondragstart`.
 
 ```html
-<div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'Ce texte peut être glissé')">
+<div
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'Ce texte peut être glissé')">
   Ce texte <strong>peut</strong> être glissé.
 </div>
 ```
@@ -105,8 +112,7 @@ event.dataTransfer.setDragImage(image, xOffset, yOffset);
 Trois arguments sont nécessaires. Le premier est la référence à une image. Cette référence pointera en gérénal vers un élément image, mais elle peut pointer aussi vers un canvas ou vers tous autres éléments. L'image filigrane sera simplement générée telle qu'elle ressemble à l'écran, et dessinée à sa taille d'origine. Il est également possible d'utiliser des images et des canvas qui ne sont pas dans un document, comme le montre cet exemple&nbsp;:
 
 ```js
-function dragWithCustomImage(event)
-{
+function dragWithCustomImage(event) {
   var canvas = document.createElement("canvas");
   canvas.width = canvas.height = 50;
 
@@ -119,7 +125,7 @@ function dragWithCustomImage(event)
   ctx.stroke();
 
   var dt = event.dataTransfer;
-  dt.setData('text/plain', 'Data to Drag');
+  dt.setData("text/plain", "Data to Drag");
   dt.setDragImage(canvas, 25, 25);
 }
 ```
@@ -180,23 +186,22 @@ Vous pouvez utiliser la valeur `none` pour interdir tout dépôt à cet emplacem
 
 Un scrutateur pour les événements `dragenter` et `dragover` est utilisé pour indiquer des cibles de dépôt valides, c'est-à-dire là où les items pourront être déposés. La plupart des zones d'une page Web ne sont pas des endroits valides pour déposer des données. Ainsi, le comportement par défaut pour ces événements ne permet pas un dépôt.
 
-Si vous voulez autoriser un dépôt, vous devez empêcher le comportement par défaut en annulant l'événement. Il suffit soit de retourner `false` à partir d'un scrutateur d'événement, ou par l'appel de la méthode événementielle [event.preventDefault](/fr/DOM/event.preventDefault). Cette dernière solution est plus faisable avec une fonction définie dans un script séparé.
+Si vous voulez autoriser un dépôt, vous devez empêcher le comportement par défaut en annulant l'événement. Il suffit soit de retourner `false` à partir d'un scrutateur d'événement, ou par l'appel de la méthode événementielle [event.preventDefault](/fr/docs/DOM/event.preventDefault). Cette dernière solution est plus faisable avec une fonction définie dans un script séparé.
 
 ```html
 <div ondragover="return false">
-<div ondragover="event.preventDefault()">
+  <div ondragover="event.preventDefault()"></div>
+</div>
 ```
 
-L'appel de la méthode [event.preventDefault](/fr/DOM/event.preventDefault) pendant les événements `dragenter` et `dragover` indiquera qu'un dépôt est permis à cet endroit. Toutefois, il est fréquent d'appeler la méthode [event.preventDefault](/fr/DOM/event.preventDefault) seulement dans certaines situations, par exemple si un lien est en train d'être glissé. Pour cela, appelez une fonction qui testera une condition et annulera l'événement seulement si cette condition est rencontrée. Dans le cas contraire, il suffit de ne pas annuler l'événement et aucun dépôt ne se réalisera si l'utilisateur lache le bouton de la souris.
+L'appel de la méthode [event.preventDefault](/fr/docs/DOM/event.preventDefault) pendant les événements `dragenter` et `dragover` indiquera qu'un dépôt est permis à cet endroit. Toutefois, il est fréquent d'appeler la méthode [event.preventDefault](/fr/docs/DOM/event.preventDefault) seulement dans certaines situations, par exemple si un lien est en train d'être glissé. Pour cela, appelez une fonction qui testera une condition et annulera l'événement seulement si cette condition est rencontrée. Dans le cas contraire, il suffit de ne pas annuler l'événement et aucun dépôt ne se réalisera si l'utilisateur lache le bouton de la souris.
 
 Il est plus fréquent d'accepter ou non un dépôt en fonction du type de la donnée glissée. Par exemple, permettre les images ou les liens, ou bien les deux. Pour cela, testez les [types](/fr/docs/Web/API/DataTransfer/types) de l'objet `dataTransfer`. Les types sont sous la forme d'une liste de chaînes de caractères ajoutées au début du glissement, du plus signifiant au moins signifiant.
 
 ```js
-function doDragOver(event)
-{
+function doDragOver(event) {
   var isLink = event.dataTransfer.types.contains("text/uri-list");
-  if (isLink)
-    event.preventDefault();
+  if (isLink) event.preventDefault();
 }
 ```
 
@@ -220,7 +225,7 @@ Dans cet example, l'élement comportant la classe `droparea` va recevoir un bord
 
 For more complex visual effects, you can also perform other operations during the `dragenter` event, for example, by inserting an element at the location where the drop will occur. For example, this might be an insertion marker or an element that represents the dragged element in its new location. To do this, you could create an [image](/fr/docs/XUL/image) or [separator](/fr/docs/XUL/separator) element for example, and simply insert it into the document during the `dragenter` event.
 
-The `dragover` event will fire at the element the mouse is pointing at. Naturally, you may need to move the insertion marker around a `dragover` event as well. You can use the event's [clientX](/fr/docs/DOM/event.clientX) and [clientY](/fr/docs/DOM/event.clientY) properties as with other mouse events to determine the location of the mouse pointer.
+The `dragover` event will fire at the element the mouse is pointing at. Naturally, you may need to move the insertion marker around a `dragover` event as well. You can use the event's [clientX](/fr/docs/Web/API/MouseEvent/clientX) and [clientY](/fr/docs/Web/API/MouseEvent/clientY) properties as with other mouse events to determine the location of the mouse pointer.
 
 Finally, the `dragleave` event will fire at an element when the drag leaves the element. This is the time when you should remove any insertion markers or highlighting. You do not need to cancel this event. Any highlighting or other visual effects specified using the `-moz-drag-over` pseudoclass will be removed automatically. The `dragleave` event will always fire, even if the drag is cancelled, so you can always ensure that any insertion point cleanup can be done during this event.
 
@@ -233,8 +238,7 @@ During the `drop` event, you should retrieve that data that was dropped from the
 As with all drag related events, the event's `dataTransfer` property will hold the data that is being dragged. The [getData](/fr/docs/Web/API/DragDrop/DataTransfer#getData.28.29) method may be used to retrieve the data again.
 
 ```js
-function onDrop(event)
-{
+function onDrop(event) {
   var data = event.dataTransfer.getData("text/plain");
   event.target.textContent = data;
   event.preventDefault();
@@ -266,7 +270,7 @@ function doDrop(event)
 }
 ```
 
-This example inserts a link from the dragged data. As you might be able to guess from the name, the [text/uri-list](/fr/docs/Web/API/DragDrop/Recommended_Drag_Types#link) type actually may contain a list of URLs, each on a separate line. In this code, we use the [split](/fr/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/split) to split the string into lines, then iterate over the list of lines, inserting each as a link into the document. Note also that we skip links starting with a number sign (#) as these are comments.
+This example inserts a link from the dragged data. As you might be able to guess from the name, the [text/uri-list](/fr/docs/Web/API/DragDrop/Recommended_Drag_Types#link) type actually may contain a list of URLs, each on a separate line. In this code, we use the [split](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split) to split the string into lines, then iterate over the list of lines, inserting each as a link into the document. Note also that we skip links starting with a number sign (#) as these are comments.
 
 For simple cases, you can use the special type `URL` to just retrieve the first valid URL in the list. For example:
 

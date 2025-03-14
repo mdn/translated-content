@@ -1,7 +1,6 @@
 ---
 title: AbstractRange.collapsed
 slug: Web/API/AbstractRange/collapsed
-translation_of: Web/API/AbstractRange/collapsed
 ---
 
 {{APIRef("DOM WHATWG")}}
@@ -11,7 +10,7 @@ translation_of: Web/API/AbstractRange/collapsed
 ## 문법
 
 ```js
-    var isCollpased = range.collapsed
+var isCollpased = range.collapsed;
 ```
 
 ### Value

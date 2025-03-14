@@ -1,24 +1,27 @@
 ---
 title: Присваивание (=)
 slug: Web/JavaScript/Reference/Operators/Assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-  - Оператор
-  - Оператор присваивания
-  - "Особенность_языка"
-  - справочник
-translation_of: Web/JavaScript/Reference/Operators/Assignment
-original_slug: Web/JavaScript/Reference/Operators/Присваивание
 ---
+
 {{jsSidebar("Operators")}}
 
 Простой оператор присваивания (`=`) используется для присваивания значения переменной. Операция присваивания вычисляется в присваиваемую величину. Присваивание по цепочке (_chaining_) используется для назначения нескольким переменным одинакового значения.
 
-{{EmbedInteractiveExample("pages/js/expressions-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Assignment")}}
+
+```js interactive-example
+let x = 2;
+const y = 3;
+
+console.log(x);
+// Expected output: 2
+
+console.log((x = y + 1)); // 3 + 1
+// Expected output: 4
+
+console.log((x = x * y)); // 4 * 3
+// Expected output: 12
+```
 
 ## Синтаксис
 
@@ -36,8 +39,8 @@ original_slug: Web/JavaScript/Reference/Operators/Присваивание
 //  y = 10
 //  z = 25
 
-x = y     // x будет присвоено значение 10
-x = y = z // x, y и z будут равны 25
+x = y; // x будет присвоено значение 10
+x = y = z; // x, y и z будут равны 25
 ```
 
 ## Спецификации
@@ -50,4 +53,4 @@ x = y = z // x, y и z будут равны 25
 
 ## Смотрите также
 
-- [Assignment operators in the JS guide](/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Assignment operators in the JS guide](/ru/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment)

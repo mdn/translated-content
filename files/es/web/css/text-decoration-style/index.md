@@ -1,10 +1,6 @@
 ---
 title: text-decoration-style
 slug: Web/CSS/text-decoration-style
-tags:
-  - Propiedad CSS
-  - Texto CSS
-translation_of: Web/CSS/text-decoration-style
 ---
 
 {{CSSRef}}
@@ -39,13 +35,13 @@ text-decoration-style: unset;
 
   - : Es una de las siguientes palabras clave:
 
-    | Palabra clave                                 | Descripción                  | Comentario                                                                               |
-    | --------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------------- |
-    | `solid`                                       | Dibuja una línea simple      |                                                                                          |
-    | `double`                                      | Dibuja una línea doble       |                                                                                          |
-    | `dotted`                                      | Dibuja una línea punteada    |                                                                                          |
-    | `dashed`                                      | Dibuja una línea discontinua |                                                                                          |
-    | `wavy`                                        | Dibuja una línea ondulada    |                                                                                          |
+    | Palabra clave                        | Descripción                  | Comentario                                                                    |
+    | ------------------------------------ | ---------------------------- | ----------------------------------------------------------------------------- |
+    | `solid`                              | Dibuja una línea simple      |                                                                               |
+    | `double`                             | Dibuja una línea doble       |                                                                               |
+    | `dotted`                             | Dibuja una línea punteada    |                                                                               |
+    | `dashed`                             | Dibuja una línea discontinua |                                                                               |
+    | `wavy`                               | Dibuja una línea ondulada    |                                                                               |
     | `-moz-none`{{ non-standard_inline }} | No dibuja una línea          | **No usarse:** usar {{ cssxref("text-decoration-line") }}`: none` en su lugar |
 
 - `inherit`
@@ -59,20 +55,20 @@ text-decoration-style: unset;
 
 ```css
 .example {
-       -moz-text-decoration-line: underline;
-       -moz-text-decoration-style: wavy;
-       -moz-text-decoration-color: red;
-    -webkit-text-decoration-line: underline;
-    -webkit-text-decoration-style: wavy;
-    -webkit-text-decoration-color: red;
+  -moz-text-decoration-line: underline;
+  -moz-text-decoration-style: wavy;
+  -moz-text-decoration-color: red;
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-style: wavy;
+  -webkit-text-decoration-color: red;
 }
 ```
 
 ```css
 .example {
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
-    text-decoration-color: red;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: red;
 }
 ```
 
@@ -86,6 +82,6 @@ text-decoration-style: unset;
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-decoration-style")}}
+{{Compat}}

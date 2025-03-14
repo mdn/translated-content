@@ -15,9 +15,9 @@ Uma **`view`** é uma maneira definida de visualizar a imagem, como um nível de
 
 ### Global attributes
 
-- [Aria attributes](/pt-BR/docs/Web/SVG/Attribute#Aria_attributes) »
-- [Core attributes](/pt-BR/docs/Web/SVG/Attribute#Core_attributes) »
-- [Global event attributes](/pt-BR/docs/Web/SVG/Attribute#Global_event_attributes) »
+- [Aria attributes](/pt-BR/docs/Web/SVG/Attribute#aria_attributes) »
+- [Core attributes](/pt-BR/docs/Web/SVG/Attribute#core_attributes) »
+- [Global event attributes](/pt-BR/docs/Web/SVG/Attribute#global_event_attributes) »
 - {{SVGAttr("externalResourcesRequired")}}
 
 ### Specific attributes
@@ -32,9 +32,12 @@ Uma **`view`** é uma maneira definida de visualizar a imagem, como um nível de
 ### SVG
 
 ```html
-<svg width="600" height="200" viewBox="0 0 600 200"
-    xmlns="https://www.w3.org/2000/svg"
-    xmlns:xlink="https://www.w3.org/1999/xlink">
+<svg
+  width="600"
+  height="200"
+  viewBox="0 0 600 200"
+  xmlns="https://www.w3.org/2000/svg"
+  xmlns:xlink="https://www.w3.org/1999/xlink">
   <defs>
     <radialGradient id="gradient">
       <stop offset="0%" stop-color="#8cffa0" />
@@ -42,11 +45,11 @@ Uma **`view`** é uma maneira definida de visualizar a imagem, como um nível de
     </radialGradient>
   </defs>
 
-  <circle r="50" cx="180" cy="50" style="fill:url(#gradient)"/>
+  <circle r="50" cx="180" cy="50" style="fill:url(#gradient)" />
 
-  <view id="halfSizeView" viewBox="0 0 1200 400"/>
-  <view id="normalSizeView" viewBox="0 0 600 200"/>
-  <view id="doubleSizeView" viewBox="0 0 300 100"/>
+  <view id="halfSizeView" viewBox="0 0 1200 400" />
+  <view id="normalSizeView" viewBox="0 0 600 200" />
+  <view id="doubleSizeView" viewBox="0 0 300 100" />
 
   <a xlink:href="#halfSizeView">
     <text x="5" y="20" font-size="20">half size</text>
@@ -70,11 +73,8 @@ This element implements the {{domxref("SVGViewElement")}} interface.
 
 ## Specifications
 
-| Specification                                                                            | Status                   | Comment            |
-| ---------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('SVG2', 'linking.html#ViewElement', '&lt;view&gt;')}}     | {{Spec2('SVG2')}} |                    |
-| {{SpecName('SVG1.1', 'linking.html#ViewElement', '&lt;view&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.view")}}
+{{Compat}}

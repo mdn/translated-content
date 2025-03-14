@@ -1,22 +1,9 @@
 ---
 title: Ajouter du contenu à WebGL
 slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
-tags:
-  - 3D
-  - API WebGL
-  - Graphismes
-  - Graphismes 2D
-  - Graphismes 3D
-  - Intermédiaire
-  - Shaders
-  - Tutoriel
-  - WebGL
-  - dessin
-translation_of: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
-original_slug: Web/API/WebGL_API/Tutorial/Ajouter_du_contenu_à_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
 
 Une fois que vous avez correctement créé un contexte WebGL, vous pouvez commencer à y dessiner. Une chose simple que nous pouvons faire est de dessiner un simple carré 2D sans texture, commençons donc par là, en construisant un code pour dessiner un carré 2D.
 
@@ -38,7 +25,7 @@ Chaque fois qu'une forme est rendue, le shader de sommet est exécuté pour chaq
 
 Les informations de position sont stockées dans une variable spéciale fournie par GLSL, appelée `gl_Position`.
 
-Le shader de sommet peut, au besoin, aussi faire des choses comme déterminer les coordonnées dans la texture des faces du [texel](https://fr.wikipedia.org/wiki/Texel_(infographie)) à appliquer au sommet, appliquer les normales pour déterminer le facteur d'éclairage à appliquer au sommet, et ainsi de suite. Ces informations peuvent alors être stockées dans des variations ou des attributs comme approprié, pour être partagées avec le shader de fragment.
+Le shader de sommet peut, au besoin, aussi faire des choses comme déterminer les coordonnées dans la texture des faces du [texel](<https://fr.wikipedia.org/wiki/Texel_(infographie)>) à appliquer au sommet, appliquer les normales pour déterminer le facteur d'éclairage à appliquer au sommet, et ainsi de suite. Ces informations peuvent alors être stockées dans des variations ou des attributs comme approprié, pour être partagées avec le shader de fragment.
 
 Notre shader de sommet ci-dessous reçoit des valeurs de position de sommet à partir d'un attribut que nous définissons, appelé `aVertexPosition`. Cette position est ensuite multipliée par deux matrices 4x4 que nous fournissons, appelées `uProjectionMatrix` et `uModelMatrix` ; `gl_Position` est définie comme étant le résultat. Pour plus d'informations sur la projection et autres matrices, [vous pourriez trouver cet article utile](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html).
 
@@ -57,7 +44,7 @@ const vsSource = `
 `;
 ```
 
-Dans cet exemple, nous ne calculons pas d'éclairage du tout, puisque nous n'en avons pas encore appliqué à la scène. Cela viendra plus tard, dans l'exemple [Éclairage en WebGL](/fr-FR/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL). Notez également l'absence de tout travail sur les textures ici ; cela sera ajouté dans [Utilisation de textures en WebGL](/fr-FR/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
+Dans cet exemple, nous ne calculons pas d'éclairage du tout, puisque nous n'en avons pas encore appliqué à la scène. Cela viendra plus tard, dans l'exemple [Éclairage en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL). Notez également l'absence de tout travail sur les textures ici ; cela sera ajouté dans [Utilisation de textures en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 
 #### Le shader de fragment
 
@@ -95,7 +82,10 @@ function initShaderProgram(gl, vsSource, fsSource) {
   // Si la création du programme shader a échoué, alerte
 
   if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
-    alert('Impossible d\'initialiser le programme shader : ' + gl.getProgramInfoLog(shaderProgram));
+    alert(
+      "Impossible d'initialiser le programme shader : " +
+        gl.getProgramInfoLog(shaderProgram),
+    );
     return null;
   }
 
@@ -119,7 +109,9 @@ function loadShader(gl, type, source) {
   // Vérifier s'il a ét compilé avec succès
 
   if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-    alert('An error occurred compiling the shaders: ' + gl.getShaderInfoLog(shader));
+    alert(
+      "An error occurred compiling the shaders: " + gl.getShaderInfoLog(shader),
+    );
     gl.deleteShader(shader);
     return null;
   }
@@ -148,11 +140,11 @@ Après avoir créé un programme de shaders, nous devons rechercher les emplacem
 const programInfo = {
   program: shaderProgram,
   attribLocations: {
-    vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
+    vertexPosition: gl.getAttribLocation(shaderProgram, "aVertexPosition"),
   },
   uniformLocations: {
-    projectionMatrix: gl.getUniformLocation(shaderProgram, 'uProjectionMatrix'),
-    modelViewMatrix: gl.getUniformLocation(shaderProgram, 'uModelViewMatrix'),
+    projectionMatrix: gl.getUniformLocation(shaderProgram, "uProjectionMatrix"),
+    modelViewMatrix: gl.getUniformLocation(shaderProgram, "uModelViewMatrix"),
   },
 };
 ```
@@ -163,7 +155,6 @@ Avant de pouvoir faire un rendu de notre carré 2D, nous devons créer le tampon
 
 ```js
 function initBuffers(gl) {
-
   // Créer un tampon des positions pour le carré.
 
   const positionBuffer = gl.createBuffer();
@@ -175,20 +166,13 @@ function initBuffers(gl) {
 
   // Créer maintenant un tableau des positions pour le carré.
 
-  const positions = [
-      1.0,  1.0,
-    -1.0,  1.0,
-      1.0, -1.0,
-    -1.0, -1.0,
-  ];
+  const positions = [1.0, 1.0, -1.0, 1.0, 1.0, -1.0, -1.0, -1.0];
 
   // Passer mainenant la liste des positions à WebGL pour construire la forme.
   // Nous faisons cela en créant un Float32Array à partir du tableau JavaScript,
   // puis en l'utilisant pour remplir le tampon en cours.
 
-  gl.bufferData(gl.ARRAY_BUFFER,
-                new Float32Array(positions),
-                gl.STATIC_DRAW);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
 
   return {
     position: positionBuffer,
@@ -204,14 +188,15 @@ Une fois que cela est fait, nous créons un tableau JavaScript contenant la posi
 
 Une fois que les shaders sont définis, que les emplacements sont retrouvés, et que les positions des sommets du carré 2D sont stockées dans le tampon, nous pouvons faire effectivement le rendu de la scène. Puisque nous n'animons rien dans cet exemple, notre fonction `drawScene()` est très simple. Elle utilise quelques routines utilitaires que nous décrirons sous peu.
 
-> **Note :** Vous pourriez obtenir une erreur JavaScript indiquant _"mat4 n'est pas défini"_. Cela signifie qu'il existe une dépendance à **glmatrix**. Vous pouvez inclure [gl-matrix.js](https://mdn.github.io/webgl-examples/tutorial/gl-matrix.js) pour résoudre ce problème, comme suggéré [ici](https://github.com/mdn/webgl-examples/issues/20).
+> [!NOTE]
+> Vous pourriez obtenir une erreur JavaScript indiquant _"mat4 n'est pas défini"_. Cela signifie qu'il existe une dépendance à **glmatrix**. Vous pouvez inclure [gl-matrix](https://www.npmjs.com/package/gl-matrix) pour résoudre ce problème.
 
 ```js
 function drawScene(gl, programInfo, buffers) {
-  gl.clearColor(0.0, 0.0, 0.0, 1.0);  // effacement en noir, complètement opaque
-  gl.clearDepth(1.0);                 // tout effacer
-  gl.enable(gl.DEPTH_TEST);           // activer le test de profondeur
-  gl.depthFunc(gl.LEQUAL);            // les choses proches cachent les choses lointaines
+  gl.clearColor(0.0, 0.0, 0.0, 1.0); // effacement en noir, complètement opaque
+  gl.clearDepth(1.0); // tout effacer
+  gl.enable(gl.DEPTH_TEST); // activer le test de profondeur
+  gl.depthFunc(gl.LEQUAL); // les choses proches cachent les choses lointaines
 
   // Effacer le canevas avant que nous ne commencions à dessiner dessus.
 
@@ -224,7 +209,7 @@ function drawScene(gl, programInfo, buffers) {
   // et nous voulons seulement voir les objets situés entre 0,1 unité et 100 unités
   // à partir de la caméra.
 
-  const fieldOfView = 45 * Math.PI / 180;   // en radians
+  const fieldOfView = (45 * Math.PI) / 180; // en radians
   const aspect = gl.canvas.clientWidth / gl.canvas.clientHeight;
   const zNear = 0.1;
   const zFar = 100.0;
@@ -232,11 +217,7 @@ function drawScene(gl, programInfo, buffers) {
 
   // note: glmatrix.js a toujours comme premier argument la destination
   // où stocker le résultat.
-  mat4.perspective(projectionMatrix,
-                    fieldOfView,
-                    aspect,
-                    zNear,
-                    zFar);
+  mat4.perspective(projectionMatrix, fieldOfView, aspect, zNear, zFar);
 
   // Définir la position de dessin comme étant le point "origine", qui est
   // le centre de la scène.
@@ -245,29 +226,31 @@ function drawScene(gl, programInfo, buffers) {
   // Commencer maintenant à déplacer la position de dessin un peu vers là où
   // nous voulons commencer à dessiner le carré.
 
-  mat4.translate(modelViewMatrix,     // matrice de destination
-                  modelViewMatrix,     // matrice de déplacement
-                  [-0.0, 0.0, -6.0]);  // quantité de déplacement
+  mat4.translate(
+    modelViewMatrix, // matrice de destination
+    modelViewMatrix, // matrice de déplacement
+    [-0.0, 0.0, -6.0],
+  ); // quantité de déplacement
 
   // Indiquer à WebGL comment extraire les positions à partir du tampon des
   // positions pour les mettre dans l'attribut vertexPosition.
   {
-    const numComponents = 2;  // extraire 2 valeurs par itération
-    const type = gl.FLOAT;    // les données dans le tampon sont des flottants 32bit
-    const normalize = false;  // ne pas normaliser
-    const stride = 0;         // combien d'octets à extraire entre un jeu de valeurs et le suivant
-                              // 0 = utiliser le type et numComponents ci-dessus
-    const offset = 0;         // démarrer à partir de combien d'octets dans le tampon
+    const numComponents = 2; // extraire 2 valeurs par itération
+    const type = gl.FLOAT; // les données dans le tampon sont des flottants 32bit
+    const normalize = false; // ne pas normaliser
+    const stride = 0; // combien d'octets à extraire entre un jeu de valeurs et le suivant
+    // 0 = utiliser le type et numComponents ci-dessus
+    const offset = 0; // démarrer à partir de combien d'octets dans le tampon
     gl.bindBuffer(gl.ARRAY_BUFFER, buffers.position);
     gl.vertexAttribPointer(
-        programInfo.attribLocations.vertexPosition,
-        numComponents,
-        type,
-        normalize,
-        stride,
-        offset);
-    gl.enableVertexAttribArray(
-        programInfo.attribLocations.vertexPosition);
+      programInfo.attribLocations.vertexPosition,
+      numComponents,
+      type,
+      normalize,
+      stride,
+      offset,
+    );
+    gl.enableVertexAttribArray(programInfo.attribLocations.vertexPosition);
   }
 
   // Indiquer à WebGL d'utiliser notre programme pour dessiner
@@ -277,13 +260,15 @@ function drawScene(gl, programInfo, buffers) {
   // Définir les uniformes du shader
 
   gl.uniformMatrix4fv(
-      programInfo.uniformLocations.projectionMatrix,
-      false,
-      projectionMatrix);
+    programInfo.uniformLocations.projectionMatrix,
+    false,
+    projectionMatrix,
+  );
   gl.uniformMatrix4fv(
-      programInfo.uniformLocations.modelViewMatrix,
-      false,
-      modelViewMatrix);
+    programInfo.uniformLocations.modelViewMatrix,
+    false,
+    modelViewMatrix,
+  );
 
   {
     const offset = 0;
@@ -297,18 +282,18 @@ La première étape consiste à effacer le canevas avec notre arrière plan ; en
 
 Ensuite, nous établissons la position du carré 2D en chargeant la position de l'origine et en nous déplaçant de 6 unités à partir de la caméra. Après cela, nous lions le tampon des sommets du carré à l'attribut que le shader utilise comme `aVertexPosition` et nous indiquons à WebGL comment en extraire les données. Enfin, nous dessinons l'objet en appelant la méthode {{domxref ("WebGLRenderingContext.drawArrays()", "drawArrays()")}}.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
-[Voir le code complet](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2) | [Ouvrir cette démo dans une nouvelle page](http://mdn.github.io/webgl-examples/tutorial/sample2/)
+[Voir le code complet](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2) | [Ouvrir cette démo dans une nouvelle page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)
 
 ## Opérations utilitaires matricielles
 
-Les opérations matricielles peuvent sembler compliquées, mais [elles sont en fait assez simples si vous en prenez une à la fois](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html). En général, les gens utilisent une bibliothèque matricielle plutôt que d'écrire la leur. Dans notre cas, nous utilisons la bibliothèque populaire [glMatrix](http://glmatrix.net/).
+Les opérations matricielles peuvent sembler compliquées, mais [elles sont en fait assez simples si vous en prenez une à la fois](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html). En général, les gens utilisent une bibliothèque matricielle plutôt que d'écrire la leur. Dans notre cas, nous utilisons la bibliothèque populaire [glMatrix](https://glmatrix.net/).
 
 Voir aussi&nbsp;:
 
 - les [matrices](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html) sur WebGLFundamentals ;
-- les [matrices](http://mathworld.wolfram.com/Matrix.html) sur Wolfram MathWorld ;
-- l'article [matrice](https://fr.wikipedia.org/wiki/Matrice_(math%C3%A9matiques)) sur Wikipédia.
+- les [matrices](https://mathworld.wolfram.com/Matrix.html) sur Wolfram MathWorld ;
+- l'article [matrice](<https://fr.wikipedia.org/wiki/Matrice_(mathématiques)>) sur Wikipédia.
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

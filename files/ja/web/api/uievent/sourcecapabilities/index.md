@@ -1,9 +1,12 @@
 ---
-title: UIEvent.sourceCapabilities
+title: "UIEvent: sourceCapabilities プロパティ"
+short-title: sourceCapabilities
 slug: Web/API/UIEvent/sourceCapabilities
+l10n:
+  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{SeeCompatTable}}{{APIRef()}}
+{{APIRef("UI Events")}}{{SeeCompatTable}}
 
 **`UIEvent.sourceCapabilities`** は読み取り専用のプロパティで、タッチイベントの生成を担当した物理的な機器に関する情報を提供する {{domxref('InputDeviceCapabilities')}} インターフェイスのインスタンスを返します。このイベントを担当した入力機器がない場合は、 `null` を返します。
 
@@ -11,13 +14,7 @@ slug: Web/API/UIEvent/sourceCapabilities
 
 機器がイベントを「担当している」と見なされるのは、その操作がウェブプラットフォームによって提供される抽象化の一部である場合のみです。例えば、多くのユーザーエージェントはマウスやキーボードでウィンドウのサイズを変更することができますが、この詳細はウェブプラットフォームには一切公開されないため、 resize イベントの sourceCapabilities は通常 null になります。
 
-## 構文
-
-```js
-var iDC = event.sourceCapabilities
-```
-
-### 値
+## 値
 
 {{domxref('InputDeviceCapabilities')}} のインスタンスです。
 

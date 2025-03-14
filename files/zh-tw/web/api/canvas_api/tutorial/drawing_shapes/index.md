@@ -3,7 +3,7 @@ title: 繪製圖形
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
 網格(Grid)
 
@@ -11,7 +11,7 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 ## 畫矩形
 
-不同於[SVG](/zh-TW/docs/SVG)，{{HTMLElement("canvas")}}只支援一種原始圖形，矩形。所有的圖形都必須由一或多個繪圖路徑構成，而我們正好有一些繪圖路徑函數可以讓我們畫出複雜的圖形。
+不同於[SVG](/zh-TW/docs/Web/SVG)，{{HTMLElement("canvas")}}只支援一種原始圖形，矩形。所有的圖形都必須由一或多個繪圖路徑構成，而我們正好有一些繪圖路徑函數可以讓我們畫出複雜的圖形。
 
 首先來看看矩形，共有三個矩形繪圖函數:
 
@@ -28,28 +28,28 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
-    ctx.fillRect(25,25,100,100);
-    ctx.clearRect(45,45,60,60);
-    ctx.strokeRect(50,50,50,50);
+    ctx.fillRect(25, 25, 100, 100);
+    ctx.clearRect(45, 45, 60, 60);
+    ctx.strokeRect(50, 50, 50, 50);
   }
 }
 ```
 
 本例結果如下:
 
-{{EmbedLiveSample("Rectangular_shape_example", 160, 160, "canvas_rect.png")}}
+{{EmbedLiveSample("矩形範例", 160, 160)}}
 
 fillRect()函數畫出一個寬高都 100 pixels 的矩形，clearRect()函數清除中央 60 x 60 pixels 大的正方形區域，接著 strokeRect()在被清除區域內畫上一個 50 x 50 pixels 的矩形邊框。
 
@@ -74,13 +74,15 @@ fillRect()函數畫出一個寬高都 100 pixels 的矩形，clearRect()函數�
 
 第一步呼叫 beginPath() 產生一個路徑，表面下，路徑會被存在一個次路徑 (sub-path) 清單中，例如直線、曲線等，這些次路徑集合起來就形成一塊圖形。每一次呼叫這個方法，次路徑清單就會被重設，然後我們便能夠畫另一個新圖形。
 
-> **備註：** 當目前路徑為空(例如接著呼叫 beginPath()完後)或是在一個新畫布上，不論為何，第一個路徑繪圖指令總是 moveTo()；因為每當重設路徑後，你幾乎都會需要設定繪圖起始點。
+> [!NOTE]
+> 當目前路徑為空(例如接著呼叫 beginPath()完後)或是在一個新畫布上，不論為何，第一個路徑繪圖指令總是 moveTo()；因為每當重設路徑後，你幾乎都會需要設定繪圖起始點。
 
 第二步是呼叫各式方法來實際設定繪圖路徑，稍後我們將會介紹這部分。
 
 第三步，也是非必要的一步，就是呼叫 closePath()。這個方法會在現在所在點到起始點間畫一條直線以閉合圖形，如果圖形已經閉合或是只含一個點，這個方法不會有任何效果。
 
-> **備註：** 當呼叫 fill()，任何開放的圖形都會自動閉合，所以不需要再呼叫 closePath()，但是 stroke()並非如此。
+> [!NOTE]
+> 當呼叫 fill()，任何開放的圖形都會自動閉合，所以不需要再呼叫 closePath()，但是 stroke()並非如此。
 
 ### 畫一個三角形
 
@@ -88,22 +90,22 @@ fillRect()函數畫出一個寬高都 100 pixels 的矩形，clearRect()函數�
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext){
-    var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    var ctx = canvas.getContext("2d");
 
     ctx.beginPath();
-    ctx.moveTo(75,50);
-    ctx.lineTo(100,75);
-    ctx.lineTo(100,25);
+    ctx.moveTo(75, 50);
+    ctx.lineTo(100, 75);
+    ctx.lineTo(100, 25);
     ctx.fill();
   }
 }
@@ -111,7 +113,7 @@ function draw() {
 
 結果如下:
 
-{{EmbedLiveSample("Drawing_a_triangle", 110, 110, "triangle.png")}}
+{{EmbedLiveSample("畫一個三角形", 110, 110)}}
 
 ### 移動畫筆
 
@@ -126,26 +128,26 @@ moveTo()是一個很有用的函數，moveTo()不會畫任何圖形，但卻是�
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext){
-    var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    var ctx = canvas.getContext("2d");
 
     ctx.beginPath();
-    ctx.arc(75,75,50,0,Math.PI*2,true); // Outer circle
-    ctx.moveTo(110,75);
-    ctx.arc(75,75,35,0,Math.PI,false);   // Mouth (clockwise)
-    ctx.moveTo(65,65);
-    ctx.arc(60,65,5,0,Math.PI*2,true);  // Left eye
-    ctx.moveTo(95,65);
-    ctx.arc(90,65,5,0,Math.PI*2,true);  // Right eye
+    ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+    ctx.moveTo(110, 75);
+    ctx.arc(75, 75, 35, 0, Math.PI, false); // Mouth (clockwise)
+    ctx.moveTo(65, 65);
+    ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Left eye
+    ctx.moveTo(95, 65);
+    ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Right eye
     ctx.stroke();
   }
 }
@@ -153,15 +155,16 @@ function draw() {
 
 結果如下:
 
-{{EmbedLiveSample("Moving_the_pen", 160, 160, "canvas_smiley.png")}}
+{{EmbedLiveSample("移動畫筆", 160, 160)}}
 
-移除 moveTo()便可以看到線條連結起來。
+移除 moveTo() 便可以看到線條連結起來。
 
-> **備註：** 有關 arc()，請參照下方[弧形](#弧形)。
+> [!NOTE]
+> 有關 arc()，請參照下方[弧形](#弧形)。
 
 ### 線條
 
-用 lineTo()方法畫直線。
+用 lineTo() 方法畫直線。
 
 - {{domxref("CanvasRenderingContext2D.lineTo", "lineTo(x, y)")}}
   - : 從目前繪圖點畫一條直線到指定的(x, y)座標點。
@@ -172,30 +175,30 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext){
-    var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    var ctx = canvas.getContext("2d");
 
     // Filled triangle
     ctx.beginPath();
-    ctx.moveTo(25,25);
-    ctx.lineTo(105,25);
-    ctx.lineTo(25,105);
+    ctx.moveTo(25, 25);
+    ctx.lineTo(105, 25);
+    ctx.lineTo(25, 105);
     ctx.fill();
 
     // Stroked triangle
     ctx.beginPath();
-    ctx.moveTo(125,125);
-    ctx.lineTo(125,45);
-    ctx.lineTo(45,125);
+    ctx.moveTo(125, 125);
+    ctx.lineTo(125, 45);
+    ctx.lineTo(45, 125);
     ctx.closePath();
     ctx.stroke();
   }
@@ -204,7 +207,7 @@ function draw() {
 
 從呼叫 beginPath()起始一個新圖形路徑，然後用 moveTo()移到我們想要的起始點，然後再畫兩條線形成三角形的兩邊。
 
-{{EmbedLiveSample("Lines", 160, 160, "canvas_lineTo.png")}}
+{{EmbedLiveSample("線條", 160, 160)}}
 
 我們可以看到填滿(fill)三角形和勾勒(stroke)三角形的區別；當填滿時，圖形會自動閉合，不過勾勒則不會，所以如果沒有呼叫 closePaht()的話，只會畫出兩條線而非三角形。
 
@@ -217,7 +220,8 @@ function draw() {
 
 本方法接受五個參數: x, y 代表圓心座標點，radius 代表半徑，startAngle, endAngle 分別代表沿著弧形曲線上的起始點與結束點的弧度，弧度測量是相對於 x 軸，anticlockwise 為 true 代表逆時針作圖、false 代表順時針作圖。
 
-> **備註：** arc()方法用的是弧度(radians)而非角度(degrees)，如果要在弧度與角度間換算，可以利用以下 javascript 程式碼: radians = (Math.PI/180) \* degrees.
+> [!NOTE]
+> arc()方法用的是弧度(radians)而非角度(degrees)，如果要在弧度與角度間換算，可以利用以下 javascript 程式碼: radians = (Math.PI/180) \* degrees.
 
 以下例子比較複雜，它會畫出 12 個不同的弧形。
 
@@ -229,31 +233,31 @@ x, y 座標點的部分應該相當淺顯，radius 和 startAngle 是定值，en
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="200"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="200"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext){
-    var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    var ctx = canvas.getContext("2d");
 
-    for(var i=0;i<4;i++){
-      for(var j=0;j<3;j++){
+    for (var i = 0; i < 4; i++) {
+      for (var j = 0; j < 3; j++) {
         ctx.beginPath();
-        var x              = 25+j*50;               // x coordinate
-        var y              = 25+i*50;               // y coordinate
-        var radius         = 20;                    // Arc radius
-        var startAngle     = 0;                     // Starting point on circle
-        var endAngle       = Math.PI+(Math.PI*j)/2; // End point on circle
-        var anticlockwise  = i%2==0 ? false : true; // clockwise or anticlockwise
+        var x = 25 + j * 50; // x coordinate
+        var y = 25 + i * 50; // y coordinate
+        var radius = 20; // Arc radius
+        var startAngle = 0; // Starting point on circle
+        var endAngle = Math.PI + (Math.PI * j) / 2; // End point on circle
+        var anticlockwise = i % 2 == 0 ? false : true; // clockwise or anticlockwise
 
         ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
 
-        if (i>1){
+        if (i > 1) {
           ctx.fill();
         } else {
           ctx.stroke();
@@ -264,11 +268,11 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Arcs", 160, 210, "canvas_arc.png")}}
+{{EmbedLiveSample("弧形", 160, 210)}}
 
-### 貝茲曲線(Bezier curve)與二次曲線(quadratic curve)
+### 貝茲曲線與二次曲線
 
-二次與三次[貝茲曲線(Bézier curves)](http://en.wikipedia.org/wiki/B%C3%A9zier_curve)是另一種可用來構成複雜有機圖形的路徑。
+二次與三次[貝茲曲線](https://zh.wikipedia.org/wiki/貝茲曲線)是另一種可用來構成複雜有機圖形的路徑。
 
 - {{domxref("CanvasRenderingContext2D.quadraticCurveTo", "quadraticCurveTo(cp1x, cp1y, x, y)")}}
   - : 從目前起始點畫一條二次貝茲曲線到 x, y 指定的終點，控制點由 cp1x, cp1y 指定。
@@ -287,33 +291,33 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     // Quadratric curves example
     ctx.beginPath();
-    ctx.moveTo(75,25);
-    ctx.quadraticCurveTo(25,25,25,62.5);
-    ctx.quadraticCurveTo(25,100,50,100);
-    ctx.quadraticCurveTo(50,120,30,125);
-    ctx.quadraticCurveTo(60,120,65,100);
-    ctx.quadraticCurveTo(125,100,125,62.5);
-    ctx.quadraticCurveTo(125,25,75,25);
+    ctx.moveTo(75, 25);
+    ctx.quadraticCurveTo(25, 25, 25, 62.5);
+    ctx.quadraticCurveTo(25, 100, 50, 100);
+    ctx.quadraticCurveTo(50, 120, 30, 125);
+    ctx.quadraticCurveTo(60, 120, 65, 100);
+    ctx.quadraticCurveTo(125, 100, 125, 62.5);
+    ctx.quadraticCurveTo(125, 25, 75, 25);
     ctx.stroke();
   }
 }
 ```
 
-{{EmbedLiveSample("Quadratic_Bezier_curves", 160, 160, "canvas_quadratic.png")}}
+{{EmbedLiveSample("二次貝茲曲線", 160, 160)}}
 
 #### 三次貝茲曲線
 
@@ -321,33 +325,33 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext){
-    var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    var ctx = canvas.getContext("2d");
 
     // Quadratric curves example
     ctx.beginPath();
-    ctx.moveTo(75,40);
-    ctx.bezierCurveTo(75,37,70,25,50,25);
-    ctx.bezierCurveTo(20,25,20,62.5,20,62.5);
-    ctx.bezierCurveTo(20,80,40,102,75,120);
-    ctx.bezierCurveTo(110,102,130,80,130,62.5);
-    ctx.bezierCurveTo(130,62.5,130,25,100,25);
-    ctx.bezierCurveTo(85,25,75,37,75,40);
+    ctx.moveTo(75, 40);
+    ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
+    ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
+    ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
+    ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
+    ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
+    ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
     ctx.fill();
   }
 }
 ```
 
-{{EmbedLiveSample("Cubic_Bezier_curves", 160, 160, "canvas_bezier.png")}}
+{{EmbedLiveSample("三次貝茲曲線", 160, 160)}}
 
 ### 矩形
 
@@ -364,101 +368,101 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext){
-    var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    var ctx = canvas.getContext("2d");
 
-    roundedRect(ctx,12,12,150,150,15);
-    roundedRect(ctx,19,19,150,150,9);
-    roundedRect(ctx,53,53,49,33,10);
-    roundedRect(ctx,53,119,49,16,6);
-    roundedRect(ctx,135,53,49,33,10);
-    roundedRect(ctx,135,119,25,49,10);
+    roundedRect(ctx, 12, 12, 150, 150, 15);
+    roundedRect(ctx, 19, 19, 150, 150, 9);
+    roundedRect(ctx, 53, 53, 49, 33, 10);
+    roundedRect(ctx, 53, 119, 49, 16, 6);
+    roundedRect(ctx, 135, 53, 49, 33, 10);
+    roundedRect(ctx, 135, 119, 25, 49, 10);
 
     ctx.beginPath();
-    ctx.arc(37,37,13,Math.PI/7,-Math.PI/7,false);
-    ctx.lineTo(31,37);
+    ctx.arc(37, 37, 13, Math.PI / 7, -Math.PI / 7, false);
+    ctx.lineTo(31, 37);
     ctx.fill();
 
-    for(var i=0;i<8;i++){
-      ctx.fillRect(51+i*16,35,4,4);
+    for (var i = 0; i < 8; i++) {
+      ctx.fillRect(51 + i * 16, 35, 4, 4);
     }
 
-    for(i=0;i<6;i++){
-      ctx.fillRect(115,51+i*16,4,4);
+    for (i = 0; i < 6; i++) {
+      ctx.fillRect(115, 51 + i * 16, 4, 4);
     }
 
-    for(i=0;i<8;i++){
-      ctx.fillRect(51+i*16,99,4,4);
+    for (i = 0; i < 8; i++) {
+      ctx.fillRect(51 + i * 16, 99, 4, 4);
     }
 
     ctx.beginPath();
-    ctx.moveTo(83,116);
-    ctx.lineTo(83,102);
-    ctx.bezierCurveTo(83,94,89,88,97,88);
-    ctx.bezierCurveTo(105,88,111,94,111,102);
-    ctx.lineTo(111,116);
-    ctx.lineTo(106.333,111.333);
-    ctx.lineTo(101.666,116);
-    ctx.lineTo(97,111.333);
-    ctx.lineTo(92.333,116);
-    ctx.lineTo(87.666,111.333);
-    ctx.lineTo(83,116);
+    ctx.moveTo(83, 116);
+    ctx.lineTo(83, 102);
+    ctx.bezierCurveTo(83, 94, 89, 88, 97, 88);
+    ctx.bezierCurveTo(105, 88, 111, 94, 111, 102);
+    ctx.lineTo(111, 116);
+    ctx.lineTo(106.333, 111.333);
+    ctx.lineTo(101.666, 116);
+    ctx.lineTo(97, 111.333);
+    ctx.lineTo(92.333, 116);
+    ctx.lineTo(87.666, 111.333);
+    ctx.lineTo(83, 116);
     ctx.fill();
 
     ctx.fillStyle = "white";
     ctx.beginPath();
-    ctx.moveTo(91,96);
-    ctx.bezierCurveTo(88,96,87,99,87,101);
-    ctx.bezierCurveTo(87,103,88,106,91,106);
-    ctx.bezierCurveTo(94,106,95,103,95,101);
-    ctx.bezierCurveTo(95,99,94,96,91,96);
-    ctx.moveTo(103,96);
-    ctx.bezierCurveTo(100,96,99,99,99,101);
-    ctx.bezierCurveTo(99,103,100,106,103,106);
-    ctx.bezierCurveTo(106,106,107,103,107,101);
-    ctx.bezierCurveTo(107,99,106,96,103,96);
+    ctx.moveTo(91, 96);
+    ctx.bezierCurveTo(88, 96, 87, 99, 87, 101);
+    ctx.bezierCurveTo(87, 103, 88, 106, 91, 106);
+    ctx.bezierCurveTo(94, 106, 95, 103, 95, 101);
+    ctx.bezierCurveTo(95, 99, 94, 96, 91, 96);
+    ctx.moveTo(103, 96);
+    ctx.bezierCurveTo(100, 96, 99, 99, 99, 101);
+    ctx.bezierCurveTo(99, 103, 100, 106, 103, 106);
+    ctx.bezierCurveTo(106, 106, 107, 103, 107, 101);
+    ctx.bezierCurveTo(107, 99, 106, 96, 103, 96);
     ctx.fill();
 
     ctx.fillStyle = "black";
     ctx.beginPath();
-    ctx.arc(101,102,2,0,Math.PI*2,true);
+    ctx.arc(101, 102, 2, 0, Math.PI * 2, true);
     ctx.fill();
 
     ctx.beginPath();
-    ctx.arc(89,102,2,0,Math.PI*2,true);
+    ctx.arc(89, 102, 2, 0, Math.PI * 2, true);
     ctx.fill();
   }
 }
 
 // A utility function to draw a rectangle with rounded corners.
 
-function roundedRect(ctx,x,y,width,height,radius){
+function roundedRect(ctx, x, y, width, height, radius) {
   ctx.beginPath();
-  ctx.moveTo(x,y+radius);
-  ctx.lineTo(x,y+height-radius);
-  ctx.quadraticCurveTo(x,y+height,x+radius,y+height);
-  ctx.lineTo(x+width-radius,y+height);
-  ctx.quadraticCurveTo(x+width,y+height,x+width,y+height-radius);
-  ctx.lineTo(x+width,y+radius);
-  ctx.quadraticCurveTo(x+width,y,x+width-radius,y);
-  ctx.lineTo(x+radius,y);
-  ctx.quadraticCurveTo(x,y,x,y+radius);
+  ctx.moveTo(x, y + radius);
+  ctx.lineTo(x, y + height - radius);
+  ctx.quadraticCurveTo(x, y + height, x + radius, y + height);
+  ctx.lineTo(x + width - radius, y + height);
+  ctx.quadraticCurveTo(x + width, y + height, x + width, y + height - radius);
+  ctx.lineTo(x + width, y + radius);
+  ctx.quadraticCurveTo(x + width, y, x + width - radius, y);
+  ctx.lineTo(x + radius, y);
+  ctx.quadraticCurveTo(x, y, x, y + radius);
   ctx.stroke();
 }
 ```
 
 結果如下:
 
-{{EmbedLiveSample("Making_combinations", 160, 160)}}
+{{EmbedLiveSample("多樣組合", 160, 160)}}
 
 畫出這樣的圖其實沒有想像中的困難，所以我們就不再描述細節了，其中比較需要注意的是，我們在繪圖環境上用了 fillStyle 屬性以及一個自定義的效用函數(roundedRect())，利用效用函數來執行時常重複的繪圖工作可以幫忙減少程式碼數量與複雜度。
 
@@ -475,9 +479,9 @@ function roundedRect(ctx,x,y,width,height,radius){
 Path2D 的建構子，可接受的參數有無參數、另一個 Path2D 物件、 字元表式的 [SVG path](/zh-TW/docs/Web/SVG/Tutorial/Paths):
 
 ```js
-new Path2D();     // 不傳入參數會回傳一個空的 Path2D 物件
+new Path2D(); // 不傳入參數會回傳一個空的 Path2D 物件
 new Path2D(path); // 複製傳入的 Path2D 物件，然後以之建立 Path2D 物件
-new Path2D(d);    // 以傳入的 SVG 路徑建立 Path2D 物件
+new Path2D(d); // 以傳入的 SVG 路徑建立 Path2D 物件
 ```
 
 所有已知的 [路徑 API](/zh-TW/docs/Web/API/CanvasRenderingContext2D#Paths)，如 rect, arc 等等，都可以在 Path2D 上找到。
@@ -494,9 +498,9 @@ addPath 增加一個 Path2D 物件，其中的非必要參數是變形矩陣。
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext){
-    var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    var ctx = canvas.getContext("2d");
 
     var rectangle = new Path2D();
     rectangle.rect(10, 10, 50, 50);
@@ -511,13 +515,13 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Path2D_example", 130, 110, "path2d.png")}}
+{{EmbedLiveSample("Path2D_example", 130, 110)}}
 
 ### 使用向量路徑 (SVG paths)
 
 另一個強而有力的特色是在 SVG 和 Canvas 中我們都可以使用 SVG path。
 
-下面的路徑會移到座標點 (10, 10) (M10, 10)，然後水平右移 80 點 (h 80)，垂至下移 80 點 (v 80) 水平左移 80 點 (h -80) 最後回到起始點 (z)，請到[`Path2D` 建構子頁面](/zh-TW/docs/Web/API/Path2D.Path2D#Using_SVG_paths)看繪圖範例結果。
+下面的路徑會移到座標點 (10, 10) (M10, 10)，然後水平右移 80 點 (h 80)，垂至下移 80 點 (v 80) 水平左移 80 點 (h -80) 最後回到起始點 (z)，請到[`Path2D` 建構子頁面](/zh-TW/docs/Web/API/Path2D/Path2D#using_svg_paths)看繪圖範例結果。
 
 ```js
 var p = new Path2D("M10 10 h 80 v 80 h -80 Z");

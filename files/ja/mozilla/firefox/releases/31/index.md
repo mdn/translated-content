@@ -18,7 +18,7 @@ l10n:
 - [ボックスモデルビューで編集が可能](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html)
 - [コンソールのメッセージにスタイルを設定する %c 書式](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html)
 - [ネットワークモニタの "cURL としてコピー" コマンド](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#copy-as-curl)
-- [ソースエディタで Sublime Text のキーバインドをサポート](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#source-editor)
+- [ソースエディターで Sublime Text のキーバインドをサポート](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#source-editor)
 - [ネットワークモニタのログを残し続けるオプション](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#network-request-list)
 - [ウェブコンソールで、JavaScript の警告をデフォルトで表示するように変更](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#javascript-errors-and-warnings)
 - [Alt+クリックでノードの子孫をすべて展開](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#page-inspector-ui-tour-html-pane)
@@ -27,46 +27,46 @@ l10n:
 
 ### CSS
 
-- 最新の仕様の変更を反映して、CSS Variables の接頭辞 `var-` を `--` に変更しました ({{Bug(985838)}})。
-- {{cssxref("hyphens")}} プロパティでポーランド語のハイフネーション規則をサポートしました ({{Bug(987668)}})。
-- 韓国語のカウンタスタイルで、10,000 の倍数に不要なホワイトスペースがある問題を修正しました ({{Bug(985186)}})。
-- 親の :before 疑似要素が存在して overflow が auto である場合に、CSS opacity のトランジションが機能しない問題を修正しました ({{Bug(990340)}})。
-- `::-moz-math-stretchy` 疑似要素を削除しました ({{Bug(1000879)}})。
+- 最新の仕様の変更を反映して、CSS Variables の接頭辞 `var-` を `--` に変更しました ([Firefox バグ 985838](https://bugzil.la/985838))。
+- {{cssxref("hyphens")}} プロパティでポーランド語のハイフネーション規則をサポートしました ([Firefox バグ 987668](https://bugzil.la/987668))。
+- 韓国語のカウンタスタイルで、10,000 の倍数に不要なホワイトスペースがある問題を修正しました ([Firefox バグ 985186](https://bugzil.la/985186))。
+- 親の :before 擬似要素が存在して overflow が auto である場合に、CSS opacity のトランジションが機能しない問題を修正しました ([Firefox バグ 990340](https://bugzil.la/990340))。
+- `::-moz-math-stretchy` 擬似要素を削除しました ([Firefox バグ 1000879](https://bugzil.la/1000879))。
 
 ### HTML
 
-- {{HTMLElement("track")}} を実装しました ({{Bug(629350)}})。
+- {{HTMLElement("track")}} を実装しました ([Firefox バグ 629350](https://bugzil.la/629350))。
 
 ### JavaScript
 
 新たな ECMAScript 2015 の機能を実装しました。
 
-- 新たな `Array` のメソッド: {{jsxref("Array.prototype.fill()")}} ({{Bug(911147)}})
-- 新たな `Math` の関数: {{jsxref("Math.clz32()")}} ({{Bug(925123)}})
-- 新たな `String` のメソッド: デスクトップ版 Firefox で {{jsxref("String.prototype.normalize()")}} が利用可能になりました ({{Bug(918987)}})。
+- 新たな `Array` のメソッド: {{jsxref("Array.prototype.fill()")}} ([Firefox バグ 911147](https://bugzil.la/911147))
+- 新たな `Math` の関数: {{jsxref("Math.clz32()")}} ([Firefox バグ 925123](https://bugzil.la/925123))
+- 新たな `String` のメソッド: デスクトップ版 Firefox で {{jsxref("String.prototype.normalize()")}} が利用可能になりました ([Firefox バグ 918987](https://bugzil.la/918987))。
 - 新たな `Object` のメソッド: {{jsxref("Object.setPrototypeOf()")}}
 - 新たな `Number` 定数: {{jsxref("Number.MAX_SAFE_INTEGER")}} および {{jsxref("Number.MIN_SAFE_INTEGER")}}。
 
 ### インターフェイス/API/DOM
 
-- `KeyboardEvent` のコンストラクターを実装しました ({{Bug(930893)}})。
-- Resource Timing API を実装しました ({{Bug("822480")}})。
-- `KeyboardEvent.isComposing` 属性を実装しました ({{Bug(993234)}})。
-- `InputEvent` インターフェイスを実装しました ({{Bug(993253)}})。
-- `InputEvent.isComposing` 属性を実装しました ({{Bug(993253)}})。
-- {{domxref("CSS.escape", "CSS.escape()")}} を実装しました ({{Bug(955860)}})。
-- 他のブラウザと同様に {{domxref("Element/mousemove_event", "mousemove")}} がキャンセル可能になりました ({{Bug(704423)}})。`preventDefault()` の呼び出しは `defaultPrevented` 属性に `true` を設定するだけであり、他の動作は変わりません。たとえば、`:hover` ステートの設定を抑止することはできません。
+- `KeyboardEvent` のコンストラクターを実装しました ([Firefox バグ 930893](https://bugzil.la/930893))。
+- Resource Timing API を実装しました ([Firefox バグ 822480](https://bugzil.la/822480))。
+- `KeyboardEvent.isComposing` 属性を実装しました ([Firefox バグ 993234](https://bugzil.la/993234))。
+- `InputEvent` インターフェイスを実装しました ([Firefox バグ 993253](https://bugzil.la/993253))。
+- `InputEvent.isComposing` 属性を実装しました ([Firefox バグ 993253](https://bugzil.la/993253))。
+- {{domxref("CSS.escape", "CSS.escape()")}} を実装しました ([Firefox バグ 955860](https://bugzil.la/955860))。
+- 他のブラウザーと同様に {{domxref("Element/mousemove_event", "mousemove")}} がキャンセル可能になりました ([Firefox バグ 704423](https://bugzil.la/704423))。`preventDefault()` の呼び出しは `defaultPrevented` 属性に `true` を設定するだけであり、他の動作は変わりません。たとえば、`:hover` ステートの設定を抑止することはできません。
 - {{domxref("Path2D")}} インターフェイスが実装されました。
 - {{domxref("CanvasRenderingContext2D.isPointInPath()")}}、{{domxref("CanvasRenderingContext2D.isPointInStroke()")}}、{{domxref("CanvasRenderingContext2D.clip()")}}、{{domxref("CanvasRenderingContext2D.fill()")}}、{{domxref("CanvasRenderingContext2D.stroke()")}} メソッドがオプションで {{domxref("Path2D")}} オブジェクトを受け付けるように更新されました。
 - {{domxref("HTMLMediaElement.fastSeek()")}} を実装しました。
-- `Connection` インターフェイスは {{domxref("NetworkInformation")}} に名称が変更され、新しい仕様に一致するように変更されました ({{bug(960426)}})。
+- `Connection` インターフェイスは {{domxref("NetworkInformation")}} に名称が変更され、新しい仕様に一致するように変更されました ([Firefox バグ 960426](https://bugzil.la/960426))。
 - {{domxref("Navigator.sendBeacon()")}} が実装されました。これは、解析や他のデータの非同期送信を、送信するページが読み込まれているかどうかに依存しない方法で行うもので、 {{domxref("Window/unload_event", "unload")}} または {{domxref("Window.beforeunload_event", "beforeunload")}} ハンドラーで使用することができます。
 
 ### MathML
 
-- ISO/IEC CD 14496-22 3rd edtion のセクション 6.3.6 にある [OpenType MATH table](http://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition) を部分的に実装しました ({{Bug(407059)}})。詳しくは [MathML torture test](/ja/docs/Mozilla/MathML_Project/MathML_Torture_Test) をお試しください。
-- `::-moz-math-stretchy` 擬似要素を削除しました ({{Bug(1000879)}})。
-- 可能であれば、math valiant が bold、italic、bold-italic である場合に Unicode の数学用英数字記号を使用するようになりました ({{Bug(930504)}})。
+- ISO/IEC CD 14496-22 3rd edtion のセクション 6.3.6 にある [OpenType MATH table](http://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition) を部分的に実装しました ([Firefox バグ 407059](https://bugzil.la/407059))。詳しくは [MathML torture test](/ja/docs/Mozilla/MathML_Project/MathML_Torture_Test) をお試しください。
+- `::-moz-math-stretchy` 擬似要素を削除しました ([Firefox バグ 1000879](https://bugzil.la/1000879))。
+- 可能であれば、math valiant が bold、italic、bold-italic である場合に Unicode の数学用英数字記号を使用するようになりました ([Firefox バグ 930504](https://bugzil.la/930504))。
 
 ### SVG
 
@@ -78,7 +78,7 @@ _変更なし。_
 
 ## セキュリティ
 
-- [特権コードは `Date` のインスタンスで Xray vision が適用されるようになりました](/ja/docs/Xray_vision#Xrays_for_JavaScript_objects)。
+- [特権コードは `Date` のインスタンスで Xray vision が適用されるようになりました](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xrays_for_javascript_objects)。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 

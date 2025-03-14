@@ -1,11 +1,15 @@
 ---
 title: transform-box
 slug: Web/CSS/transform-box
+l10n:
+  sourceCommit: b195721acf6cc4829f55168a415f3578c5b32a09
 ---
 
 {{CSSRef}}
 
-CSS の **`transform-box`** プロパティは、 {{cssxref("transform")}} と {{cssxref("transform-origin")}} プロパティに関連したレイアウトボックスを定義します。
+**`transform-box`** は CSS のプロパティで {{cssxref("transform")}}、独立した変換プロパティである {{cssxref("translate")}}、{{cssxref("scale")}}、{{cssxref("rotate")}}、および {{cssxref("transform-origin")}} プロパティが相対するレイアウトボックスを定義します。
+
+## 構文
 
 ```css
 /* キーワード値 */
@@ -19,25 +23,24 @@ transform-box: view-box;
 transform-box: inherit;
 transform-box: initial;
 transform-box: revert;
+transform-box: revert-layer;
 transform-box: unset;
 ```
 
-## 構文
-
-`transform-box` プロパティは、以下のキーワードの 1 つで指定されます。
+`transform-box` プロパティは、以下のいずれかのキーワードで指定されます。
 
 ### 値
 
 - `content-box`
   - : コンテンツボックスを参照ボックスとして使用します。 {{htmlElement("table")}} の参照ボックスはテーブルのボックスではなく、テーブルを囲んでいるボックスの境界ボックスになります。
 - `border-box`
-  - : 境界ボックスを参照ボックスとして使用します。 {{htmlElement("table")}} の参照ボックスはテーブルのボックスではなく、テーブルを囲んでいるボックスの境界ボックスになります。
+  - : 境界ボックスを参照ボックスとして使用します。 {{htmlElement("table")}} の参照ボックスはテーブルのボックスではなく、[テーブルを囲んでいるボックス](/ja/docs/Glossary/Table_Wrapper_Box)の境界ボックスになります。
 - `fill-box`
   - : そのオブジェクトのバウンディングボックスを参照ボックスとして使用します。
 - `stroke-box`
   - : ストロークのバウンディングボックスを参照ボックスとして使用します。
 - `view-box`
-  - : 直近の {{Glossary("SVG")}} のビューポートを参照ボックスとして使用します。SVG ビューポートに {{SVGAttr("viewBox")}} 属性が指定されていた場合、参照ボックスは `viewBox` 属性によって設定された座標系の原点に配置されます。また、参照ボックスの寸法は `viewBox` 属性の幅と高さの値に設定されます。
+  - : 直近の {{Glossary("SVG")}} のビューポートを参照ボックスとして使用します。 SVG ビューポートに {{SVGAttr("viewBox")}} 属性が指定されていた場合、参照ボックスは `viewBox` 属性によって設定された座標系の原点に配置されます。また、参照ボックスの寸法は `viewBox` 属性の幅と高さの値に設定されます。関連する CSS レイアウトボックスを持つ要素の場合、 `border-box` として動作します。
 
 ## 公式定義
 
@@ -58,18 +61,27 @@ transform-box: unset;
   <g>
     <circle id="center" fill="red" r="1" transform="translate(25 25)" />
     <circle id="boxcenter" fill="blue" r=".5" transform="translate(15 15)" />
-    <rect id="box" x="10" y="10" width="10" height="10" rx="1" ry="1" stroke="black" fill="none" />
+    <rect
+      id="box"
+      x="10"
+      y="10"
+      width="10"
+      height="10"
+      rx="1"
+      ry="1"
+      stroke="black"
+      fill="none" />
   </g>
 </svg>
 ```
 
-この CSS では、変換を使用して矩形を無限に回転させるアニメーションを作成しています。 `transform-box: fill-box` を使用して、変換の原点をバウンディングボックスの中心にし、矩形が所定の位置で回転するようにします。 `fill-box` がない場合、変換の原点は SVG キャンバスの中心となるため、まったく異なる効果が得られます。
+CSS では、長方形を無限に回転させるために変換を使用するアニメーションがあります。 `transform-box: fill-box` は `transform-origin` をバウンディングボックスの中心にするために使用しているので、長方形は配置されたまま回転します。これがないと、座標変換の原点は SVG キャンバスの中心になるので、極めて異なる効果になります。
 
 ```css
-svg{
-  width:80vh;
-  border:1px solid #d9d9d9;
-  position:absolute;
+svg {
+  width: 80vh;
+  border: 1px solid #d9d9d9;
+  position: absolute;
   margin: auto;
   top: 0;
   right: 0;
@@ -77,14 +89,9 @@ svg{
   left: 0;
 }
 
-#box{
-  transform-origin:50% 50%;
-  /*+++++++++++++++++++++++++++*/
-  /* if I remove this rule the pen won't work properly on Chrome for Mac, FF, Safari
-  Will still work properly on Chrome for PC & Opera*/
+#box {
+  transform-origin: 50% 50%; /* 効果を見るには `0 0` 以外を指定する */
   transform-box: fill-box;
-  /*Alternatively  I can use transform-origin:15px 15px;*/
-  /*+++++++++++++++++++++++++++*/
   animation: rotateBox 3s linear infinite;
 }
 
@@ -92,6 +99,7 @@ svg{
   to {
     transform: rotate(360deg);
   }
+}
 ```
 
 この例は [Pogany](https://codepen.io/giaco) 氏によるものです。ライブ版は[この codepen](https://codepen.io/giaco/pen/OwowJQ) をご覧ください。
@@ -106,5 +114,9 @@ svg{
 
 ## 関連情報
 
-- [CSS 変換の使用](/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [CSS 変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - {{cssxref("transform")}}, {{cssxref("transform-origin")}}
+- 独立した座標変換プロパティ:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}

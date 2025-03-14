@@ -1,9 +1,11 @@
 ---
 title: Notification.renotify
 slug: Web/API/Notification/renotify
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 **`renotify`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `renotify` オプションで指定され、新しい通知が古い通知を置き換えたときにユーザーに通知されるかどうかを指定します。
 
@@ -17,13 +19,13 @@ slug: Web/API/Notification/renotify
 
 ```js
 const options = {
-  body: 'Do you like my Notification?',
-  renotify: true
-}
+  body: "Do you like my Notification?",
+  renotify: true,
+};
 
-const n = new Notification('Test notification', options);
+const n = new Notification("Test notification", options);
 
-console.log(n.renotify) // should log true
+console.log(n.renotify); // should log true
 ```
 
 ## 仕様書

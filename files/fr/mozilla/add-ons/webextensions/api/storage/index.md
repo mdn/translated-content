@@ -1,16 +1,6 @@
 ---
 title: storage
 slug: Mozilla/Add-ons/WebExtensions/API/storage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - Storage
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage
 ---
 
 {{AddonSidebar}}
@@ -30,7 +20,8 @@ Chaque extension a sa propre zone de stockage, qui peut être divisée entre plu
 
 Bien que cette API soit semblable à {{domxref("Window.localStorage")}} il est conseillé de ne pas utiliser `Window.localStorage` dans le code de l'extension pour stocker ses données. Firefox effacera les données stockées via l'API localStorage par les extensions dans plusieurs scénarios où les utilisateurs effacent leur historique de navigation ou des données pour des raisons de confidentialité, alors que les données sauvées en utilisant l'API [`storage.local`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) seront correctement conservées dans ces scénarios.
 
-> **Note :** La zone de stockage n'est pas chiffrée et ne doit pas être utilisée pour stocker des informations confidentielles sur les utilisateurs.
+> [!NOTE]
+> La zone de stockage n'est pas chiffrée et ne doit pas être utilisée pour stocker des informations confidentielles sur les utilisateurs.
 
 ## Types
 
@@ -55,15 +46,15 @@ Bien que cette API soit semblable à {{domxref("Window.localStorage")}} il est c
 - {{WebExtAPIRef("storage.onChanged")}}
   - : Activé quand un ou plusieurs items d'une zone de stockage sont modifiés.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.storage")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/extensions/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

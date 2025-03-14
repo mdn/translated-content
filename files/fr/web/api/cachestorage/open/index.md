@@ -1,30 +1,21 @@
 ---
 title: CacheStorage.open()
 slug: Web/API/CacheStorage/open
-tags:
-  - API
-  - CacheStorage
-  - Experimental
-  - Méthode
-  - Reference
-  - Service Workers
-  - ServiceWorkers
-  - open
-translation_of: Web/API/CacheStorage/open
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 La fonction **`open()`** de l'interface {{domxref("CacheStorage")}} retourne une {{jsxref("Promise", "Promesse")}} qui renvoie l'objet {{domxref("Cache")}} correspondant a un `cacheName`.
 
-Vous pouvez accéder à `CacheStorage` via la propriété globale [`caches`](/fr/docs/Web/API/caches).
+Vous pouvez accéder à `CacheStorage` via la propriété globale [`caches`](/fr/docs/Web/API/Window/caches).
 
-> **Note :** Si le {{domxref("Cache")}} spécifié n'existe pas, un nouveau cache sera crée avec `cacheName` et retournera une {{jsxref("Promise", "Promesse")}} renvoyant le nouvel objet {{domxref("Cache")}}.
+> [!NOTE]
+> Si le {{domxref("Cache")}} spécifié n'existe pas, un nouveau cache sera crée avec `cacheName` et retournera une {{jsxref("Promise", "Promesse")}} renvoyant le nouvel objet {{domxref("Cache")}}.
 
 ## Syntaxe
 
 ```js
-caches.open(cacheName).then(function(cache) {
+caches.open(cacheName).then(function (cache) {
   // faire quelque-chose avec le cache
 });
 ```

@@ -1,7 +1,9 @@
 ---
 title: minification
-slug: Glossary/minification
+slug: Glossary/Minification
 ---
+
+{{GlossarySidebar}}
 
 **minification** とは、ブラウザーによるリソースの処理に影響を与えることなく、不要なデータや冗長なデータを削除する処理です。
 

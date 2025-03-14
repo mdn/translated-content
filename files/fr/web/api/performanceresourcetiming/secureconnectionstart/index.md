@@ -1,15 +1,6 @@
 ---
 title: PerformanceResourceTiming.secureConnectionStart
 slug: Web/API/PerformanceResourceTiming/secureConnectionStart
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - secureConnectionStart
-translation_of: Web/API/PerformanceResourceTiming/secureConnectionStart
 ---
 
 {{APIRef("Resource Timing API")}}
@@ -42,13 +33,19 @@ function print_PerformanceEntries() {
 }
 function print_start_and_end_properties(perfEntry) {
   // Imprime les horodatages des propriétés *start et *end
-  properties = ["connectStart", "connectEnd",
-                "domainLookupStart", "domainLookupEnd",
-                "fetchStart",
-                "redirectStart", "redirectEnd",
-                "requestStart",
-                "responseStart", "responseEnd",
-                "secureConnectionStart"];
+  properties = [
+    "connectStart",
+    "connectEnd",
+    "domainLookupStart",
+    "domainLookupEnd",
+    "fetchStart",
+    "redirectStart",
+    "redirectEnd",
+    "requestStart",
+    "responseStart",
+    "responseEnd",
+    "secureConnectionStart",
+  ];
 
   for (let i = 0; i < properties.length; i++) {
     // vérifie chaque propriété

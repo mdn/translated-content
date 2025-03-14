@@ -1,12 +1,8 @@
 ---
 title: debugger
 slug: Web/JavaScript/Reference/Statements/debugger
-tags:
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/debugger
 ---
+
 {{jsSidebar("Statements")}}
 
 **`debugger` 문**은 중단점 설정 등 현재 사용할 수 있는 디버그 기능을 호출합니다. 사용할 수있는 디버깅 기능이 없으면 아무런 동작도 하지 않습니다.
@@ -14,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Statements/debugger
 ## 구문
 
 ```js
-    debugger;
+debugger;
 ```
 
 ## 예제
@@ -23,14 +19,14 @@ translation_of: Web/JavaScript/Reference/Statements/debugger
 
 ```js
 function potentiallyBuggyCode() {
-    debugger;
-    // 버그가 있을 것으로 생각하는 코드를 분석하거나, 한 단계씩 진행해보거나...
+  debugger;
+  // 버그가 있을 것으로 생각하는 코드를 분석하거나, 한 단계씩 진행해보거나...
 }
 ```
 
 디버거가 활성화되면 디버거 문의 위치에서 실행이 일시중지됩니다. 스크립트 소스의 중단점과 비슷합니다.
 
-[![Paused at a debugger statement.](https://mdn.mozillademos.org/files/6963/Screen%20Shot%202014-02-07%20at%209.14.35%20AM.png)](<https://mdn.mozillademos.org/files/6963/Screen Shot 2014-02-07 at 9.14.35 AM.png>)
+[![Paused at a debugger statement.](screen_shot_2014-02-07_at_9.14.35_am.png)](screen_shot_2014-02-07_at_9.14.35_am.png)
 
 ## 명세서
 
@@ -43,4 +39,4 @@ function potentiallyBuggyCode() {
 ## 같이 보기
 
 - [JavaScript 디버깅](/ko/docs/Mozilla/Debugging/Debugging_JavaScript)
-- [Firefox 개발자 도구의 디버거](/ko/docs/도구들/Debugger)
+- [Firefox 개발자 도구의 디버거](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)

@@ -12,7 +12,11 @@ slug: Web/SVG/Element/clipPath
 ## 例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -26,7 +30,9 @@ html,body,svg { height:100% }
   </clipPath>
 
   <!-- The original black heart, for reference -->
-  <path id="heart" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
+  <path
+    id="heart"
+    d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
 
   <!--
     Only the portion of the red heart
@@ -40,7 +46,14 @@ html,body,svg { height:100% }
 /* With a touch of CSS for browsers who *
  * implemented the r Geometry Property. */
 
-@keyframes openYourHeart {from {r: 0} to {r: 60px}}
+@keyframes openYourHeart {
+  from {
+    r: 0;
+  }
+  to {
+    r: 60px;
+  }
+}
 
 #myClip circle {
   animation: openYourHeart 15s infinite;
@@ -57,17 +70,17 @@ html,body,svg { height:100% }
 
 - {{SVGAttr("clipPathUnits")}}
   - : `<clipPath>` 要素の内容物の座標系を定義します。
-    *値の型*: `userSpaceOnUse`|`objectBoundingBox` ; *既定値*: `userSpaceOnUse`; *アニメーション*: **可**
+    _値の型_: `userSpaceOnUse`|`objectBoundingBox` ; _既定値_: `userSpaceOnUse`; _アニメーション_: **可**
 
 ### グローバル属性
 
-- [コア属性](/ja/docs/Web/SVG/Attribute/Core)
+- [コア属性](/ja/docs/Web/SVG/Attribute)
   - : 最重要なもの: {{SVGAttr('id')}}
-- [スタイル付け属性](/ja/docs/Web/SVG/Attribute/Styling)
+- [スタイル付け属性](/ja/docs/Web/SVG/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [条件処理属性](/ja/docs/Web/SVG/Attribute/Conditional_Processing)
+- [条件処理属性](/ja/docs/Web/SVG/Attribute)
   - : 最重要なもの: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute/Presentation)
+- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute)
   - : 最重要なもの: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 
 ## 利用メモ

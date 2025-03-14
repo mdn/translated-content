@@ -1,95 +1,108 @@
 ---
 title: tabs.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
+l10n:
+  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-从 background scripts 中发送单个消息 (or other privileged scripts, such as popup scripts or options page scripts) 到任何 content scripts that belong to the extension and are running in the specified tab.
+从扩展的后台脚本（或其他特权脚本，如弹出窗口脚本或选项页脚本）向任何运行在指定标签页中的[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)或在扩展的页面或 iframe 发送一条消息。
 
-这个消息将被 content scripts 中 {{WebExtAPIRef("runtime.onMessage")}} 事件的所有监听者收到，然后它们可以选择通过使用 `sendResponse` 这个方法发送一个 response 到 background scripts。
+该消息将在扩展上下文中由监听 [`runtime.onMessage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) 事件的监听器接收。监听器可以选择性地返回一个响应给发送者。
 
-This is an asynchronous function that returns a [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
-## Syntax
+> [!NOTE]
+> 你还可以使用[基于连接的消息传递](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#基于连接的消息传递)。
+
+## 语法
 
 ```js
-var sending = browser.tabs.sendMessage(
-  tabId,                   // integer
-  message,                 // any
-  options                  // optional object
-)
+const sending = browser.tabs.sendMessage(
+  tabId, // 整型
+  message, // 任意
+  options, // 可选的对象
+);
 ```
 
-### Parameters
+### 参数
 
 - `tabId`
-  - : `integer`. ID of the tab whose content scripts we want to send a message to.
+  - : `integer`。要向其发送消息的标签页的 ID。
 - `message`
-  - : `any`. An object that can be serialized to JSON.
-- `options`{{optional_inline}}
-  - : `object`.
-    - `frameId`{{optional_inline}}
-      - : `integer`. Sends the message to a specific frame identified by `frameId` instead of all frames in the tab. Whether the content script is executed in all frames depends on the `all_frames` setting in the [`content_scripts`](/zh-CN/Add-ons/WebExtensions/manifest.json/content_scripts) section of manifest.json.
+  - : `any`。可序列化的对象（参见[数据克隆算法](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#数据克隆算法)）。
+- `options` {{optional_inline}}
 
-### Return value
+  - : `object`。
 
-A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with the JSON response object sent by the handler of the message in the content script, or with no arguments if the content script did not send a response. If an error occurs while connecting to the specified tab or any other error occurs, the promise will be rejected with an error message. If several frames response to the message, the promise is resolved to one of answers.
+    - `frameId` {{optional_inline}}
+      - : `integer`。将消息发送到指定的框架（frame），而不是标签页中的所有框架。内容脚本是否在所有框架中执行取决于 `manifest.json` 的 [`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 部分中的 `all_frames` 设置。
 
-## Browser compatibility
+### 返回值
 
-{{Compat}}
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，如果内容脚本未发送响应其会被兑现且不带有参数。
 
-## Examples
+如果在连接到指定标签页时或发生任何其他错误时出现错误，promise 将以错误信息拒绝。
 
-Here's an example of a background script that sends a message to the content scripts running in the active tab when the user clicks the browser action. The background script also expects the content script to send a response:
+如果多个框架响应了消息，promise 会兑现为其中一个响应。
+
+## 示例
+
+以下是一个后台脚本示例，当用户点击浏览器操作按钮时，向当前活动标签页中运行的内容脚本发送消息。后台脚本还期望内容脚本发送一个响应：
 
 ```js
 // background-script.js
 "use strict";
 
 function onError(error) {
-  console.error(`Error: ${error}`);
+  console.error(`发生错误：${error}`);
 }
 
 function sendMessageToTabs(tabs) {
-  for (let tab of tabs) {
-    browser.tabs.sendMessage(
-      tab.id,
-      {greeting: "Hi from background script"}
-    ).then(response => {
-      console.log("Message from the content script:");
-      console.log(response.response);
-    }).catch(onError);
+  for (const tab of tabs) {
+    browser.tabs
+      .sendMessage(tab.id, { greeting: "Hi from background script" })
+      .then((response) => {
+        console.log("Message from the content script:");
+        console.log(response.response);
+      })
+      .catch(onError);
   }
 }
 
 browser.browserAction.onClicked.addListener(() => {
-  browser.tabs.query({
-    currentWindow: true,
-    active: true
-  }).then(sendMessageToTabs).catch(onError);
+  browser.tabs
+    .query({
+      currentWindow: true,
+      active: true,
+    })
+    .then(sendMessageToTabs)
+    .catch(onError);
 });
 ```
 
-Here's the corresponding content script:
+以下是相应的内容脚本示例：
 
 ```js
 // content-script.js
 "use strict";
 
-browser.runtime.onMessage.addListener(request => {
+browser.runtime.onMessage.addListener((request) => {
   console.log("Message from the background script:");
   console.log(request.greeting);
-  return Promise.resolve({response: "Hi from content script"});
+  return Promise.resolve({ response: "Hi from content script" });
 });
 ```
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-sendMessage) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+## 浏览器兼容性
+
+{{Compat}}
+
+> [!NOTE]
+> 这个 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-sendMessage) API。本文档内容源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

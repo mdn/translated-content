@@ -1,11 +1,6 @@
 ---
 title: justify-self
 slug: Web/CSS/justify-self
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/justify-self
 ---
 
 {{CSSRef}}
@@ -16,9 +11,9 @@ La propriété CSS **`justify-self`** définit la façon dont une boîte est ali
 
 - Pour les dispositions de bloc : elle permet d'aligner un élément sur l'axe en ligne par rapport à son bloc englobant.
 - Pour les éléments positionnés de façon absolue : elle permet d'aligner un élément dans le bloc englobant par rapport à l'axe en ligne en prenant en compte les valeurs de décalage pour les côtés haut, gauche, bas et droit.
-- Pour les dispositions des cellules de tableau : cette propriété est ignorée ([en savoir plus](/fr/docs/Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_bloc_absolue_tableau)).
-- Pour les dispositions flexibles : cette propriété est ignorée ([en savoir plus](/fr/docs/Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_Flexbox)).
-- Pour les dispositions avec les grilles : cette propriété permet d'aligner un objet sur l'axe en ligne sur la zone de grille à laquelle il appartient ([en savoir plus](/fr/docs/Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_grille)).
+- Pour les dispositions des cellules de tableau : cette propriété est ignorée ([en savoir plus](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)).
+- Pour les dispositions flexibles : cette propriété est ignorée ([en savoir plus](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)).
+- Pour les dispositions avec les grilles : cette propriété permet d'aligner un objet sur l'axe en ligne sur la zone de grille à laquelle il appartient ([en savoir plus](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)).
 
 ## Syntaxe
 
@@ -29,15 +24,15 @@ justify-self: normal;
 justify-self: stretch;
 
 /* Alignement par rapport à l'axe */
-justify-self: center;     /* L'élément est aligné au centre */
-justify-self: start;      /* L'élément est aligné au début  */
-justify-self: end;        /* L'élément est aligné à la fin  */
+justify-self: center; /* L'élément est aligné au centre */
+justify-self: start; /* L'élément est aligné au début  */
+justify-self: end; /* L'élément est aligné à la fin  */
 justify-self: flex-start; /* L'élément est aligné au début de l'axe */
-justify-self: flex-end;   /* L'élément est aligné à la fin de l'axe */
+justify-self: flex-end; /* L'élément est aligné à la fin de l'axe */
 justify-self: self-start;
 justify-self: self-end;
-justify-self: left;       /* L'élément est aligné à gauche */
-justify-self: right;      /* L'élément est aligné à droite */
+justify-self: left; /* L'élément est aligné à gauche */
+justify-self: right; /* L'élément est aligné à droite */
 
 /* Alignement par rapport à la ligne de base */
 justify-self: baseline;
@@ -117,7 +112,9 @@ Cette propriété peut être définie selon trois formes différentes :
 ### CSS
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -138,7 +135,7 @@ Cette propriété peut être définie selon trois formes différentes :
 .wrapper {
   display: grid;
   grid-template-columns: repeat(2, 100px);
-  grid-template-rows: repeat(2,100px);
+  grid-template-rows: repeat(2, 100px);
   height: 300px;
   width: 300px;
   grid-gap: 10px;
@@ -177,6 +174,6 @@ Cette propriété peut être définie selon trois formes différentes :
 
 ## Voir aussi
 
-- [L'alignement des boîtes avec les grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_CSS)
+- [L'alignement des boîtes avec les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - La propriété {{cssxref("justify-items")}}
-- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)
+- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/CSS_box_alignment)

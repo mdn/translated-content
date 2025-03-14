@@ -1,21 +1,29 @@
 ---
 title: String.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
-tags:
-  - Chaîne
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/slice
 ---
 
 {{JSRef}}
 
 La méthode **`slice()`** extrait une section d'une chaine de caractères et la retourne comme une nouvelle chaine de caractères. La chaîne de caractères courante n'est pas modifiée.
 
-{{EmbedInteractiveExample("pages/js/string-slice.html")}}
+{{InteractiveExample("JavaScript Demo: String.slice()")}}
+
+```js interactive-example
+const str = "The quick brown fox jumps over the lazy dog.";
+
+console.log(str.slice(31));
+// Expected output: "the lazy dog."
+
+console.log(str.slice(4, 19));
+// Expected output: "quick brown fox"
+
+console.log(str.slice(-4));
+// Expected output: "dog."
+
+console.log(str.slice(-9, -5));
+// Expected output: "lazy"
+```
 
 ## Syntaxe
 
@@ -49,11 +57,11 @@ Par exemple, `chn.slice(2, -1)` extrait du troisième caractère jusqu'à l'avan
 L'exemple suivant utilise `slice()` pour créer une nouvelle chaîne de caractères.
 
 ```js
-var chn1 = 'Le matin est sur nous.', // la longueur de chn1 est de 22
-    chn2 = chn1.slice(1, 8),
-    chn3 = chn1.slice(3, -2),
-    chn4 = chn1.slice(13),
-    chn5 = chn1.slice(30);
+var chn1 = "Le matin est sur nous.", // la longueur de chn1 est de 22
+  chn2 = chn1.slice(1, 8),
+  chn3 = chn1.slice(3, -2),
+  chn4 = chn1.slice(13),
+  chn5 = chn1.slice(30);
 console.log(chn2); // SORTIE : e matin
 console.log(chn3); // SORTIE : matin est sur nou
 console.log(chn4); // SORTIE : sur nous.
@@ -65,10 +73,10 @@ console.log(chn5); // SORTIE : ""
 L'exemple suivant utilise `slice()` avec des indices négatifs.
 
 ```js
-var chn = 'Le matin est sur nous.';
-chn.slice(-3);     // retourne "us."
+var chn = "Le matin est sur nous.";
+chn.slice(-3); // retourne "us."
 chn.slice(-3, -1); // retourne "us"
-chn.slice(0, -1);  // retourne "Le matin est sur nous"
+chn.slice(0, -1); // retourne "Le matin est sur nous"
 ```
 
 Dans l'exemple qui suit, on commence à chercher l'indice de début à partir de la fin de la chaîne avec l'argument `-11` et on utilise un indice de fin positif avec `16` :

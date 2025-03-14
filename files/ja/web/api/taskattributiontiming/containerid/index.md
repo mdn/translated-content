@@ -1,26 +1,23 @@
 ---
-title: TaskAttributionTiming.containerId
+title: "TaskAttributionTiming: containerId プロパティ"
+short-title: containerId
 slug: Web/API/TaskAttributionTiming/containerId
+l10n:
+  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{SeeCompatTable}}{{APIRef("Long Tasks")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
-{{domxref("TaskAttributionTiming")}} インタフェースの **`containerId`** 読み取り専用プロパティは、コンテナの `id` 属性を返します。 コンテナは、全体として長いタスクに関係している iframe、embed、object などです。
+**`containerId`** は {{domxref("TaskAttributionTiming")}} インターフェイスの読み取り専用プロパティで、コンテナーの `id` 属性を返します。コンテナーは、全体として長いタスクに関係している iframe、embed、object などです。
 
-## 構文
+## 値
 
-```
-var containerId = TaskAttributionTiming.containerId;
-```
+文字列で、コンテナーの [`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性が入ります。
 
-### 値
-
-コンテナの `id` 属性を含む {{domxref("DOMString")}}。
-
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.TaskAttributionTiming.containerId")}}
+{{Compat}}

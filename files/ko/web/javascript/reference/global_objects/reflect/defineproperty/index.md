@@ -1,24 +1,32 @@
 ---
 title: Reflect.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 ---
+
 {{JSRef}}
 
 **`Reflect.defineProperty()`** 정적 메서드는 {{jsxref("Object.defineProperty()")}}와 같은 동작을 하지만 {{jsxref("Boolean")}}을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.defineProperty()")}}
+
+```js interactive-example
+const object1 = {};
+
+if (Reflect.defineProperty(object1, "property1", { value: 42 })) {
+  console.log("property1 created!");
+  // Expected output: "property1 created!"
+} else {
+  console.log("problem creating property1");
+}
+
+console.log(object1.property1);
+// Expected output: 42
+```
 
 ## 구문
 
 ```js
-Reflect.defineProperty(target, propertyKey, attributes)
+Reflect.defineProperty(target, propertyKey, attributes);
 ```
 
 ### 매개변수
@@ -48,7 +56,7 @@ Reflect.defineProperty(target, propertyKey, attributes)
 
 ```js
 var obj = {};
-Reflect.defineProperty(obj, 'x', {value: 7}); // true
+Reflect.defineProperty(obj, "x", { value: 7 }); // true
 obj.x; // 7
 ```
 

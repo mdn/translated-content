@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/find
 
 **`find()`** 方法會回傳第一個滿足所提供之測試函式的元素**值**。否則回傳 {{jsxref("undefined")}}。
 
-{{EmbedInteractiveExample("pages/js/array-find.html")}}
+{{InteractiveExample("JavaScript Demo: Array.find()")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find((element) => element > 10);
+
+console.log(found);
+// Expected output: 12
+```
 
 也可以參考 {{jsxref("Array.findIndex", "findIndex()")}} 方法，它回傳被找到的元素在陣列中的**索引**，而不是它的值。
 
@@ -57,13 +66,13 @@ The range of elements processed by `find` is set before the first invocation of 
 
 ```js
 var inventory = [
-    {name: 'apples', quantity: 2},
-    {name: 'bananas', quantity: 0},
-    {name: 'cherries', quantity: 5}
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "cherries", quantity: 5 },
 ];
 
 function isCherries(fruit) {
-    return fruit.name === 'cherries';
+  return fruit.name === "cherries";
 }
 
 console.log(inventory.find(isCherries));
@@ -93,23 +102,22 @@ The following examples show that non-existent and deleted elements are visited a
 
 ```js
 // Declare array with no element at index 2, 3 and 4
-var a = [0,1,,,,5,6];
+var a = [0, 1, , , , 5, 6];
 
 // Shows all indexes, not just those that have been assigned values
-a.find(function(value, index) {
-  console.log('Visited index ' + index + ' with value ' + value);
+a.find(function (value, index) {
+  console.log("Visited index " + index + " with value " + value);
 });
 
 // Shows all indexes, including deleted
-a.find(function(value, index) {
-
+a.find(function (value, index) {
   // Delete element 5 on first iteration
   if (index == 0) {
-    console.log('Deleting a[5] with value ' + a[5]);
+    console.log("Deleting a[5] with value " + a[5]);
     delete a[5];
   }
   // Element 5 is still visited even though deleted
-  console.log('Visited index ' + index + ' with value ' + value);
+  console.log("Visited index " + index + " with value " + value);
 });
 ```
 
@@ -120,9 +128,9 @@ a.find(function(value, index) {
 ```js
 // https://tc39.github.io/ecma262/#sec-array.prototype.find
 if (!Array.prototype.find) {
-  Object.defineProperty(Array.prototype, 'find', {
-    value: function(predicate) {
-     // 1. Let O be ? ToObject(this value).
+  Object.defineProperty(Array.prototype, "find", {
+    value: function (predicate) {
+      // 1. Let O be ? ToObject(this value).
       if (this == null) {
         throw new TypeError('"this" is null or not defined');
       }
@@ -133,8 +141,8 @@ if (!Array.prototype.find) {
       var len = o.length >>> 0;
 
       // 3. If IsCallable(predicate) is false, throw a TypeError exception.
-      if (typeof predicate !== 'function') {
-        throw new TypeError('predicate must be a function');
+      if (typeof predicate !== "function") {
+        throw new TypeError("predicate must be a function");
       }
 
       // 4. If thisArg was supplied, let T be thisArg; else let T be undefined.
@@ -159,7 +167,7 @@ if (!Array.prototype.find) {
 
       // 7. Return undefined.
       return undefined;
-    }
+    },
   });
 }
 ```

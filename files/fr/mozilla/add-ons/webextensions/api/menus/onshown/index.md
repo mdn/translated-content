@@ -1,19 +1,9 @@
 ---
 title: menus.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onShown
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensiosn
-  - Reference
-  - WebExtensions
-  - menus
-  - onShown
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/onShown
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsque le navigateur a montré un menu.
 
@@ -25,7 +15,7 @@ Par exemple, l'extension d'exemple [menu-labelled-open](https://github.com/mdn/w
 
 Notez qu'une extension ne devrait pas prendre trop de temps avant d'appeler `refresh()`, sinon la mise à jour sera visible par l'utilisateur.
 
-Le gestionnaire reçoit des informations sur le menu et son contenu, ainsi que des informations sur la page (telles que le lien et / ou le texte de sélection). Pour accéder aux informations de la page, votre extension doit avoir la [permission de l'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions).
+Le gestionnaire reçoit des informations sur le menu et son contenu, ainsi que des informations sur la page (telles que le lien et / ou le texte de sélection). Pour accéder aux informations de la page, votre extension doit avoir la [permission de l'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions).
 
 Si le gestionnaire `onShown` appelle des API asynchrones, il est possible que le menu ait été fermé à nouveau avant que le gestionnaire ne reprenne l'exécution. Pour cette raison, si un gestionnaire appelle des API asynchrones, il doit vérifier que le menu est toujours affiché avant la mise à jour du menu. Par exemple :
 
@@ -83,9 +73,9 @@ Firefox rend cet événement disponible via l'espace de noms `contextMenus` ains
 ## Syntaxe
 
 ```js
-browser.menus.onShown.addListener(listener)
-browser.menus.onShown.removeListener(listener)
-browser.menus.onShown.hasListener(listener)
+browser.menus.onShown.addListener(listener);
+browser.menus.onShown.removeListener(listener);
+browser.menus.onShown.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -114,16 +104,16 @@ Les événements ont trois fonctions :
 
         En comparaison avec `menus.OnClickData`, l'objet `info` omet également les propriétés `menuItemId` et `modifiers`, car bien sûr, celles-ci ne sont pas disponibles tant qu'un élément de menu n'a pas été sélectionné.
 
-        Les propriétés `contexts`, `menuIds`, `frameId`, et `editable` modifiables sont toujours fournis. Toutes les autres propriétés dans `info` sont uniquement fournies si l'extension a la [permission d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour la page.
+        Les propriétés `contexts`, `menuIds`, `frameId`, et `editable` modifiables sont toujours fournis. Toutes les autres propriétés dans `info` sont uniquement fournies si l'extension a la [permission d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour la page.
 
     <!---->
 
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. Les détails de l'onglet où le clic a eu lieu. Si le clic n'a pas eu lieu dans ou sur un onglet, ce paramètre sera manquant.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.onShown", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -132,12 +122,12 @@ Cet exemple permet d'afficher le menu contextuel sur un lien, puis met à jour l
 ```js
 function updateMenuItem(linkHostname) {
   browser.menus.update(openLabelledId, {
-    title: `Open (${linkHostname})`
+    title: `Open (${linkHostname})`,
   });
   browser.menus.refresh();
 }
 
-browser.menus.onShown.addListener(info => {
+browser.menus.onShown.addListener((info) => {
   if (!info.linkUrl) {
     return;
   }

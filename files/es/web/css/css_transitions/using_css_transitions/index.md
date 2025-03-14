@@ -1,14 +1,14 @@
 ---
 title: Transiciones de CSS
-slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
-original_slug: Web/CSS/Transiciones_de_CSS
+slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 ---
 
-{{ SeeCompatTable() }}
+{{CSSRef}}{{ SeeCompatTable() }}
 
 Las transiciones CSS, parte del borrador de la especificación CSS3, proporcionan una forma de animar los cambios de las propiedades CSS, en lugar de que los cambios surtan efecto de manera instantánea. Por ejemplo, si cambias el color de un elemento de blanco a negro, normalmente el cambio es instantáneo. Al habilitar las transiciones CSS, el cambio sucede en un intervalo de tiempo que puedes especificar, siguiendo una curva de aceleración que puedes personalizar.
 
-> **Nota:** como la especificación de las transiciones CSS todavía se encuentra en fase de borrador, a todas las propiedades asociadas con ellas se les añade el prefijo "-moz-" para usarse en Gecko. Para la compatibilidad con WebKit, se aconseja usar también el prefijo "-webkit-" y para la compatibilidad con Opera, el prefijo "-o-". Es decir, por ejemplo, la propiedad de transición se especificaría como `-moz-transition`, `-webkit-transition` y `-o-transition`.
+> [!NOTE]
+> Como la especificación de las transiciones CSS todavía se encuentra en fase de borrador, a todas las propiedades asociadas con ellas se les añade el prefijo "-moz-" para usarse en Gecko. Para la compatibilidad con WebKit, se aconseja usar también el prefijo "-webkit-" y para la compatibilidad con Opera, el prefijo "-o-". Es decir, por ejemplo, la propiedad de transición se especificaría como `-moz-transition`, `-webkit-transition` y `-o-transition`.
 
 ## Las propiedades de transición CSS
 
@@ -40,78 +40,80 @@ Como es habitual, puedes usar el método {{ domxref("element.addEventListener()"
 el.addEventListener("transitionend", updateTransition, true);
 ```
 
-> **Nota:** el evento "transitionend" no se dispara si la transición se anula debido a que el valor de la propiedad de animación es modificado antes de que la transición se complete.
+> [!NOTE]
+> El evento "transitionend" no se dispara si la transición se anula debido a que el valor de la propiedad de animación es modificado antes de que la transición se complete.
 
 ## Propiedades que pueden ser animadas
 
 Las transiciones y las animaciones CSS pueden usarse para animar las siguientes propiedades.
 
-> **Nota:** el conjunto de propiedades que puede animarse está sujeto a cambios, por lo tanto se recomienda evitar incluir cualquier propiedad en la lista que no anime porque en un futuro podría provocar resultados inesperados.
+> [!NOTE]
+> El conjunto de propiedades que puede animarse está sujeto a cambios, por lo tanto se recomienda evitar incluir cualquier propiedad en la lista que no anime porque en un futuro podría provocar resultados inesperados.
 
-| Propiedad                                                                   | Tipo de valor                                                                                            |
-| --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| {{ cssxref("background-color") }}                                | {{cssxref("&lt;color&gt;")}}                                                                     |
-| {{ cssxref("background-image") }}                                | solo degradado; no está implementado en Firefox (see {{ bug(536540) }})                           |
-| {{ cssxref("background-position") }}                            | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("background-size") }}                                | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("border-color") }} (including sub-properties)         | {{cssxref("&lt;color&gt;")}}                                                                     |
-| {{ cssxref("border-radius") }} (including sub-properties)         | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("border-width") }} (including sub-properties)         | {{cssxref("&lt;length&gt;")}}                                                                 |
-| {{ cssxref("border-spacing") }}                                    | {{cssxref("&lt;length&gt;")}}                                                                 |
-| {{ cssxref("bottom") }}                                            | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("-moz-box-flex") }}                                    | número                                                                                                   |
-| {{ cssxref("box-shadow") }}                                        | sombra                                                                                                   |
-| {{ cssxref("color") }}                                                | {{cssxref("&lt;color&gt;")}}                                                                     |
-| {{ cssxref("-moz-column-count") }}                                | número                                                                                                   |
-| {{ cssxref("-moz-column-gap") }}                                | {{cssxref("&lt;length&gt;")}}, palabras clave                                                 |
-| {{ cssxref("-moz-column-rule-color") }}                        | {{cssxref("&lt;color&gt;")}}                                                                     |
-| {{ cssxref("-moz-column-rule-width") }}                        | {{cssxref("&lt;length&gt;")}}, palabras clave                                                 |
-| {{ cssxref("-moz-column-width") }}                                | {{cssxref("&lt;length&gt;")}}                                                                 |
-| {{ cssxref("clip") }}                                                | rectágulo                                                                                                |
-| {{ svgattr("fill") }}                                                | pintar                                                                                                   |
-| {{ svgattr("fill-opacity") }}                                    | valor de opacidad                                                                                        |
-| {{ svgattr("flood-color") }}                                        | {{cssxref("&lt;color&gt;")}} \| palabras clave                                                   |
-| {{ cssxref("font-size") }}                                        | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("font-size-adjust") }}                                | números, palabras clave                                                                                  |
-| {{ cssxref("font-stretch") }}                                    | palabras clave                                                                                           |
-| {{ cssxref("font-weight") }}                                        | números\| palabras clave (excluyendo `bolder`, `lighter`)                                                |
-| {{ cssxref("height") }}                                            | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("-moz-image-region") }}                                | `rect()`                                                                                                 |
-| {{ cssxref("left") }}                                                | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("letter-spacing") }}                                    | {{cssxref("&lt;length&gt;")}}                                                                 |
-| {{ svgattr("lighting-color") }}                                    | {{cssxref("&lt;color&gt;")}} \| palabras clave                                                   |
-| {{ cssxref("line-height") }}                                        | número \| {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}       |
-| {{ cssxref("margin") }} (including sub-properties)                 | {{cssxref("&lt;length&gt;")}}                                                                 |
-| {{ cssxref("marker-offset") }}                                    | {{cssxref("&lt;length&gt;")}}                                                                 |
-| {{ cssxref("max-height") }}                                        | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("max-width") }}                                        | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("min-height") }}                                        | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("min-width") }}                                        | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("opacity") }}                                            | número                                                                                                   |
-| {{ cssxref("outline-color") }}                                    | {{cssxref("&lt;color&gt;")}}                                                                     |
-| {{ cssxref("outline-offset") }}                                    | entero                                                                                                   |
-| {{ cssxref("-moz-outline-radius") }} (including sub-properties) | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("outline-width") }}                                    | {{cssxref("&lt;length&gt;")}}                                                                 |
-| {{ cssxref("padding") }} (including sub-properties)                 | {{cssxref("&lt;length&gt;")}}                                                                 |
-| {{ cssxref("right") }}                                                | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ svgattr("stop-color") }}                                        | {{cssxref("&lt;color&gt;")}} \| palabras clave                                                   |
-| {{ svgattr("stop-opacity") }}                                    | valor de opacidad                                                                                        |
-| {{ svgattr("stroke") }}                                            | pintar                                                                                                   |
-| {{ svgattr("stroke-dasharray") }}                                | dasharray                                                                                                |
-| {{ svgattr("stroke-dashoffset") }}                                | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ svgattr("stroke-miterlimit") }}                                | miterlimit                                                                                               |
-| {{ svgattr("stroke-opacity") }}                                    | valor de opacidad                                                                                        |
-| {{ svgattr("stroke-width") }}                                    | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("text-indent") }}                                        | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("text-shadow") }}                                        | sombra                                                                                                   |
-| {{ cssxref("top") }}                                                | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("-moz-transform-origin") }}                        | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}, keywords       |
-| {{ cssxref("-moz-transform") }}                                    | transform-function                                                                                       |
-| {{ cssxref("vertical-align") }}                                    | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}, palabras clave |
-| {{ cssxref("visibility") }}                                        | visibilidad                                                                                              |
-| {{ cssxref("width") }}                                                | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("word-spacing") }}                                    | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("z-index") }}                                            | entero                                                                                                   |
+| Propiedad                                                       | Tipo de valor                                                                                             |
+| --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| {{ cssxref("background-color") }}                               | {{cssxref("&lt;color&gt;")}}                                                                              |
+| {{ cssxref("background-image") }}                               | solo degradado; no está implementado en Firefox (see [Error 536540 en Firefox](https://bugzil.la/536540)) |
+| {{ cssxref("background-position") }}                            | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("background-size") }}                                | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("border-color") }} (including sub-properties)        | {{cssxref("&lt;color&gt;")}}                                                                              |
+| {{ cssxref("border-radius") }} (including sub-properties)       | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("border-width") }} (including sub-properties)        | {{cssxref("&lt;length&gt;")}}                                                                             |
+| {{ cssxref("border-spacing") }}                                 | {{cssxref("&lt;length&gt;")}}                                                                             |
+| {{ cssxref("bottom") }}                                         | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("-moz-box-flex") }}                                  | número                                                                                                    |
+| {{ cssxref("box-shadow") }}                                     | sombra                                                                                                    |
+| {{ cssxref("color") }}                                          | {{cssxref("&lt;color&gt;")}}                                                                              |
+| {{ cssxref("-moz-column-count") }}                              | número                                                                                                    |
+| {{ cssxref("-moz-column-gap") }}                                | {{cssxref("&lt;length&gt;")}}, palabras clave                                                             |
+| {{ cssxref("-moz-column-rule-color") }}                         | {{cssxref("&lt;color&gt;")}}                                                                              |
+| {{ cssxref("-moz-column-rule-width") }}                         | {{cssxref("&lt;length&gt;")}}, palabras clave                                                             |
+| {{ cssxref("-moz-column-width") }}                              | {{cssxref("&lt;length&gt;")}}                                                                             |
+| {{ cssxref("clip") }}                                           | rectágulo                                                                                                 |
+| {{ svgattr("fill") }}                                           | pintar                                                                                                    |
+| {{ svgattr("fill-opacity") }}                                   | valor de opacidad                                                                                         |
+| {{ svgattr("flood-color") }}                                    | {{cssxref("&lt;color&gt;")}} \| palabras clave                                                            |
+| {{ cssxref("font-size") }}                                      | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("font-size-adjust") }}                               | números, palabras clave                                                                                   |
+| {{ cssxref("font-stretch") }}                                   | palabras clave                                                                                            |
+| {{ cssxref("font-weight") }}                                    | números\| palabras clave (excluyendo `bolder`, `lighter`)                                                 |
+| {{ cssxref("height") }}                                         | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("-moz-image-region") }}                              | `rect()`                                                                                                  |
+| {{ cssxref("left") }}                                           | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("letter-spacing") }}                                 | {{cssxref("&lt;length&gt;")}}                                                                             |
+| {{ svgattr("lighting-color") }}                                 | {{cssxref("&lt;color&gt;")}} \| palabras clave                                                            |
+| {{ cssxref("line-height") }}                                    | número \| {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                              |
+| {{ cssxref("margin") }} (including sub-properties)              | {{cssxref("&lt;length&gt;")}}                                                                             |
+| {{ cssxref("marker-offset") }}                                  | {{cssxref("&lt;length&gt;")}}                                                                             |
+| {{ cssxref("max-height") }}                                     | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("max-width") }}                                      | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("min-height") }}                                     | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("min-width") }}                                      | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("opacity") }}                                        | número                                                                                                    |
+| {{ cssxref("outline-color") }}                                  | {{cssxref("&lt;color&gt;")}}                                                                              |
+| {{ cssxref("outline-offset") }}                                 | entero                                                                                                    |
+| {{ cssxref("-moz-outline-radius") }} (including sub-properties) | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("outline-width") }}                                  | {{cssxref("&lt;length&gt;")}}                                                                             |
+| {{ cssxref("padding") }} (including sub-properties)             | {{cssxref("&lt;length&gt;")}}                                                                             |
+| {{ cssxref("right") }}                                          | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ svgattr("stop-color") }}                                     | {{cssxref("&lt;color&gt;")}} \| palabras clave                                                            |
+| {{ svgattr("stop-opacity") }}                                   | valor de opacidad                                                                                         |
+| {{ svgattr("stroke") }}                                         | pintar                                                                                                    |
+| {{ svgattr("stroke-dasharray") }}                               | dasharray                                                                                                 |
+| {{ svgattr("stroke-dashoffset") }}                              | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ svgattr("stroke-miterlimit") }}                              | miterlimit                                                                                                |
+| {{ svgattr("stroke-opacity") }}                                 | valor de opacidad                                                                                         |
+| {{ svgattr("stroke-width") }}                                   | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("text-indent") }}                                    | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("text-shadow") }}                                    | sombra                                                                                                    |
+| {{ cssxref("top") }}                                            | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("-moz-transform-origin") }}                          | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}, keywords                              |
+| {{ cssxref("-moz-transform") }}                                 | transform-function                                                                                        |
+| {{ cssxref("vertical-align") }}                                 | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}, palabras clave                        |
+| {{ cssxref("visibility") }}                                     | visibilidad                                                                                               |
+| {{ cssxref("width") }}                                          | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("word-spacing") }}                                   | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("z-index") }}                                        | entero                                                                                                    |
 
 ## Cuando las listas de valores de propiedades tienen longitudes diferentes
 
@@ -155,7 +157,7 @@ div {
 
 Las funciones de intervalos determinan el cálculo de los valores intermedios de la transición. La función de intervalo puede especificarse proporcionando el gráfico de la función correspondiente, como lo definen los cuatro puntos que definen una cúbica bézier:
 
-![](/@api/deki/files/5226/=transition-timing-function.png)
+![](transition-timing-function.png)
 
 En lugar de especificar directamente una bézier, existen valores de intervalos predeterminados:
 
@@ -288,14 +290,17 @@ Después construimos la CSS para implementar el aspecto de nuestro menú. Las po
 
 Esta CSS establece el aspecto del menú con los colores de fondo y del texto que cambian cuando el elemento está en su estado {{ cssxref(":hover") }}.
 
-En lugar de describir el efecto con todo detalle, puedes echar un [vistazo a la muestra en vivo](/samples/cssref/transitions/sample2) si tu navegador admite transiciones (Firefox y WebKit nightlies, Opera 10.5).
+En lugar de describir el efecto con todo detalle, puedes echar un [vistazo a la muestra en vivo](https://mdn.dev/archives/media/samples/cssref/transitions/sample2) si tu navegador admite transiciones (Firefox y WebKit nightlies, Opera 10.5).
 
 ### Usar eventos de transición para animar un objeto
 
 En este ejemplo, una pequeña caja con texto dentro se mueve hacia atrás y hacia delante a través de la pantalla y los colores de fondo y del texto se difuminan entre dos valores mientras tiene lugar la animación.
 
 ```html hidden
-<video controls autoplay src="https://developer.mozilla.org/samples/cssref/transitions/sample1/transitiondemo1.ogv"></video>
+<video
+  controls
+  autoplay
+  src="https://developer.mozilla.org/samples/cssref/transitions/sample1/transitiondemo1.ogv"></video>
 ```
 
 {{EmbedLiveSample}}
@@ -324,7 +329,7 @@ Lo único que hay que observar aquí es que establecemos la clase para nuestra c
 
 #### La CSS
 
-Para crear nuestro efecto de animación, usamos dos clases de CSS, "slideRight" y "slideLeft". Si deseas ver el código completo de CSS, puedes mirar el archivo [`transitions.css`](/samples/cssref/transitions/sample1/transitions.css) en su totalidad. A continuación se muestran sólo los trozos relevantes:
+Para crear nuestro efecto de animación, usamos dos clases de CSS, "slideRight" y "slideLeft". Si deseas ver el código completo de CSS, puedes mirar el archivo [`transitions.css`](https://mdn.dev/archives/media/samples/cssref/transitions/sample1/transitions.css) en su totalidad. A continuación se muestran sólo los trozos relevantes:
 
 ```
 .slideRight {
@@ -375,7 +380,8 @@ Los valores de color aquí se han cambiado para hacer que los colores de fondo y
 
 Una vez que hemos establecido los extremos de la secuencia de animación, lo que tenemos que hacer es iniciar la animación. Podemos hacerlo fácilmente usando JavaScript.
 
-> **Nota:** una vez que [la compatibilidad para las animaciones](http://dev.w3.org/csswg/css3-animations/) CSS esté disponible, el código JavaScript no será necesario para lograr este efecto.
+> [!NOTE]
+> Una vez que [la compatibilidad para las animaciones](https://dev.w3.org/csswg/css3-animations/) CSS esté disponible, el código JavaScript no será necesario para lograr este efecto.
 
 En primer lugar, la función `runDemo()` que se llama cuando el documento se carga para inicializar la secuencia de animación:
 
@@ -415,7 +421,7 @@ Si no se halla ningún elemento que coincida con la clase "slideLeft", buscamos 
 
 ## Consultar también
 
-- [Módulo de transiciones CSS nivel 3](http://www.w3.org/TR/css3-transitions)
+- [Módulo de transiciones CSS nivel 3](https://www.w3.org/TR/css3-transitions)
 - {{ cssxref("-moz-transition") }}
 - {{ cssxref("-moz-transition-property") }}
 - {{ cssxref("-moz-transition-duration") }}

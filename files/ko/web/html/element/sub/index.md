@@ -1,23 +1,29 @@
 ---
-title: '<sub>: 아래 첨자 요소'
+title: "<sub>: 아래 첨자 요소"
 slug: Web/HTML/Element/sub
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/sub
 ---
 
 {{HTMLSidebar}}
 
 **HTML** **`<sub>`** 요소는 활자 배치를 아래 첨자로 해야 하는 인라인 텍스트를 지정합니다. 아래 첨자는 보통 더 작은 글씨 크기를 가지고, 기준선을 아래로 내려 렌더링 합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/sub.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;sub&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  Almost every developer's favorite molecule is
+  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as
+  "caffeine."
+</p>
+```
+
+```css interactive-example
+p {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -44,7 +50,7 @@ translation_of: Web/HTML/Element/sub
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -88,9 +94,10 @@ translation_of: Web/HTML/Element/sub
 각주의 숫자를 아래 첨자로 나타내는 경우도 있으며, `<sub>`가 흔히 쓰이는 경우입니다.
 
 ```html
-<p>According to the computations by Nakamura, Johnson, and
-Mason<sub>1</sub> this will result in the complete annihilation
-of both particles.</p>
+<p>
+  According to the computations by Nakamura, Johnson, and Mason<sub>1</sub> this
+  will result in the complete annihilation of both particles.
+</p>
 ```
 
 {{EmbedLiveSample("각주_표기", 650, 80)}}
@@ -100,8 +107,11 @@ of both particles.</p>
 수학에서는 같은 축 위의 점 여럿과 같이, 동일한 개념을 가리키는 변수의 무리는 같은 변수명을 사용하며, 뒤의 아래 첨자 숫자로 서로 구분합니다.
 
 ```html
-<p>The horizontal coordinates' positions along the X-axis are
-represented as <var>x<sub>1</sub></var> ... <var>x<sub>n</sub></var>.</p>
+<p>
+  The horizontal coordinates' positions along the X-axis are represented as
+  <var>x<sub>1</sub></var> ... <var>x<sub>n</sub></var
+  >.
+</p>
 ```
 
 {{EmbedLiveSample("변수_표기", 650, 80)}}
@@ -111,9 +121,11 @@ represented as <var>x<sub>1</sub></var> ... <var>x<sub>n</sub></var>.</p>
 화학식에서 특정 원자의 수를 나타낼 때 아래 첨자를 사용합니다. H20의 아래 첨자 "2"는 화학식이 나타내는 물질에 수소 원자가 2개 존재한다는 뜻입니다.:
 
 ```html
-<p>Almost every developer's favorite molecule is
-C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, which is
-commonly known as "caffeine."</p>
+<p>
+  Almost every developer's favorite molecule is
+  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, which is commonly known
+  as "caffeine."
+</p>
 ```
 
 {{EmbedLiveSample("화학식", 650, 120)}}
@@ -124,7 +136,7 @@ commonly known as "caffeine."</p>
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.sub")}}
+{{Compat}}
 
 ## 같이 보기
 

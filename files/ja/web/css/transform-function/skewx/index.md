@@ -1,14 +1,41 @@
 ---
 title: skewX()
 slug: Web/CSS/transform-function/skewX
-original_slug: Web/CSS/transform-function/skewX()
+l10n:
+  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
 {{CSSRef}}
 
-**`skewX()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を二次元平面上で水平方向にゆがめる変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+**`skewX()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を 2D 平面上で水平方向にゆがめる変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-{{EmbedInteractiveExample("pages/css/function-skewX.html")}}
+{{InteractiveExample("CSS Demo: skewX()")}}
+
+```css interactive-example-choice
+transform: skewX(0);
+```
+
+```css interactive-example-choice
+transform: skewX(35deg);
+```
+
+```css interactive-example-choice
+transform: skewX(-0.06turn);
+```
+
+```css interactive-example-choice
+transform: skewX(0.352rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 この変換はシアー変形 ([せん断写像](https://ja.wikipedia.org/wiki/せん断写像)) で、要素内のそれぞれの点を水平方向に指定された角度でゆがませます。それぞれの点の横座標は、指定された角度と原点からの距離に比例した値によって変更されます。よって、原点から遠くなるにしたがって、加えられる値が大きくなります。
 
@@ -28,17 +55,17 @@ skewX(a)
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">ℝ^2 のデカルト座標</th>
-      <th scope="col">ℝℙ^2 の同次座標</th>
-      <th scope="col">ℝ^3 のデカルト座標</th>
-      <th scope="col">ℝℙ^3 の同次座標</th>
+      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
+      <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
+      <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mn>1</mn> </mtd
@@ -51,13 +78,13 @@ skewX(a)
               ><mtr
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td>
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mn>1</mn> </mtd
@@ -74,13 +101,13 @@ skewX(a)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mn>1</mn> </mtd
@@ -97,13 +124,13 @@ skewX(a)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mn>1</mn> </mtd
@@ -123,7 +150,7 @@ skewX(a)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
@@ -134,7 +161,7 @@ skewX(a)
   </tbody>
 </table>
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 
@@ -174,3 +201,8 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
+- 独立した座標変換プロパティ:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}
+  - 注: `skew` プロパティはありません

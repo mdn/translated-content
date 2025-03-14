@@ -1,7 +1,6 @@
 ---
 title: Comment CSS est structuré
 slug: Learn/CSS/First_steps/How_CSS_is_structured
-translation_of: Learn/CSS/First_steps/How_CSS_is_structured
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
@@ -47,12 +46,12 @@ Dans la leçon [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_start
 Dans le cas d'une feuille de style externe, les règles CSS sont écrites dans un fichier séparé, avec l'extension `.css`. Un élément HTML `<link>` fait référence à ce fichier.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Une expérience avec CSS</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h1>Hello World!</h1>
@@ -60,8 +59,6 @@ Dans le cas d'une feuille de style externe, les règles CSS sont écrites dans u
   </body>
 </html>
 ```
-
-e
 
 Le fichier CSS devrait ressembler à cela :
 
@@ -83,13 +80,13 @@ Dans l'exemple ci-dessus, le fichier CSS et le document HTML sont dans le même 
 
 ```html
 <!-- Dans un sous-répertoire nommé styles dans le répertoire courant -->
-<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/style.css" />
 
 <!-- Dans un sous-répertoire nommé general, lui-même dans un sous-répertoire nommé styles, dans le répertoire courant -->
-<link rel="stylesheet" href="styles/general/style.css">
+<link rel="stylesheet" href="styles/general/style.css" />
 
 <!-- Dans un sous-répertoire nommé styles, un niveau plus haut -->
-<link rel="stylesheet" href="../styles/style.css">
+<link rel="stylesheet" href="../styles/style.css" />
 ```
 
 ### Feuille de style interne
@@ -99,10 +96,10 @@ Les règles CSS peuvent être écrites directement dans l'en-tête HTML [`<head>
 Le code HTML ci-dessous illustre cette technique :
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Mes expérimentations CSS</title>
     <style>
       h1 {
@@ -130,14 +127,16 @@ Cette méthode peut être utile dans certaines circonstances (un système de ges
 Les styles en ligne sont des déclarations CSS qui n'affectent qu'un seul élément, elles sont déclarées grâce à l'attribut `style`:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Mes expérimentations CSS</title>
   </head>
   <body>
-    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">Hello World!</h1>
+    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">
+      Hello World!
+    </h1>
     <p style="color:red;">Ceci est mon premier exemple CSS</p>
   </body>
 </html>
@@ -154,17 +153,15 @@ Les exemples de cet article sont autant d'occasions pour faire vos premiers test
 **index.html** :
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Mes expériences CSS</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-
     <p>Créez votre test ici !</p>
-
   </body>
 </html>
 ```
@@ -206,7 +203,8 @@ h1, h2, .intro
 
 Essayez de créer des règles CSS qui utilisent les sélecteurs ci-dessus et du code HTML à styler. Si vous ne savez pas ce que signifie la syntaxe ci-dessus, essayez de la rechercher sur MDN !
 
-> **Note :** Vous en apprendrez beaucoup plus sur les sélecteurs dans nos tutoriels sur [les sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors), dans un prochain cours.
+> [!NOTE]
+> Vous en apprendrez beaucoup plus sur les sélecteurs dans nos tutoriels sur [les sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors), dans un prochain cours.
 
 ### Spécificité
 
@@ -275,9 +273,11 @@ Définir les propriétés CSS sur des valeurs spécifiques est la fonction princ
 - **[`color`](/fr/docs/Web/CSS/color)**
 - **[`border`](/fr/docs/Web/CSS/border)**
 
-> **Attention :** Si la propriété est inconnue ou si la valeur est invalide pour une propriété donnée, la déclaration est considérée comme _invalide_ et complètement ignorée par le moteur CSS du navigateur.
+> [!WARNING]
+> Si la propriété est inconnue ou si la valeur est invalide pour une propriété donnée, la déclaration est considérée comme _invalide_ et complètement ignorée par le moteur CSS du navigateur.
 
-> **Attention :** En CSS (et dans les autres standards web), l'orthographe américaine a été adoptée comme norme à respecter en cas d'incertitude linguistique. Par exemple, la couleur doit _toujours_ être notée `color`. `couleur` ne fonctionnera pas.
+> [!WARNING]
+> En CSS (et dans les autres standards web), l'orthographe américaine a été adoptée comme norme à respecter en cas d'incertitude linguistique. Par exemple, la couleur doit _toujours_ être notée `color`. `couleur` ne fonctionnera pas.
 
 ### Fonctions
 
@@ -286,7 +286,9 @@ Bien que la plupart des valeurs soient des mots-clés relativement simples ou de
 #### Exemple calc
 
 ```html
-<div class="outer"><div class="box">la boite interne vaut 90% - 30px.</div></div>
+<div class="outer">
+  <div class="box">la boite interne vaut 90% - 30px.</div>
+</div>
 ```
 
 ```css
@@ -322,7 +324,7 @@ Un autre exemple serait les différentes valeurs de la propriété [`<transform>
   width: 100px;
   height: 100px;
   background-color: rebeccapurple;
-  transform: rotate(0.8turn)
+  transform: rotate(0.8turn);
 }
 ```
 
@@ -343,16 +345,16 @@ e
 Nous n'avons pas rencontré jusqu'ici les [`@rules`](/fr/docs/Web/CSS/At-rule) (prononcer "at-rules"). Ce sont des règles spéciales dictant un comportement CSS. Certaines `@rules` simples sont composées d'un nom et d'une valeur. Par exemple, pour importer une feuille de style additionnelle dans le CSS principal on utilisera `@import` :
 
 ```css
-@import 'styles2.css';
+@import "styles2.css";
 ```
 
-L'une des `@rules` les plus fréquemment rencontrée est `@media`, qui permet d'utiliser les [<i lang="en">media queries</i>](/fr/docs/Web/CSS/Media_Queries) pour appliquer CSS seulement quand certaines conditions sont vérifiées (par ex. quand la résolution de l'écran dépasse une certaine valeur, ou quand l'écran dépasse une certaine largeur).
+L'une des `@rules` les plus fréquemment rencontrée est `@media`, qui permet d'utiliser les [<i lang="en">media queries</i>](/fr/docs/Web/CSS/CSS_media_queries) pour appliquer CSS seulement quand certaines conditions sont vérifiées (par ex. quand la résolution de l'écran dépasse une certaine valeur, ou quand l'écran dépasse une certaine largeur).
 
 Dans le CSS ci-dessous, une règle donne à l'élément `<body>` un fond rose. La section `@media` ne s'appliquera que dans les navigateurs dont la fenêtre est plus large que 30em. Dans ce cas la couleur de fond sera redéfinie à bleue.
 
 ```css
 body {
-  background-color: pink
+  background-color: pink;
 }
 
 @media (min-width: 30em) {
@@ -409,7 +411,8 @@ Ce n'est pas le moment d'apprendre tous ces raccourcis — vous les croiserez à
 
 **Ajoutez les déclarations précédentes à votre CSS pour voir comment elles affectent la mise en forme de votre document HTML. Testez différentes valeurs.**
 
-> **Attention :** Les raccourcis vous autorisent à ne pas déclarer certaines valeurs, mais dans ce cas, les valeurs non déclarées sont restaurées à leur valeur par défaut. Cela garantit l'usage d'un ensemble de valeurs qui restent raisonnables. Cela peut par contre vous surprendre, si vous pensiez que le raccourci ne changeait que les valeurs passées en argument.
+> [!WARNING]
+> Les raccourcis vous autorisent à ne pas déclarer certaines valeurs, mais dans ce cas, les valeurs non déclarées sont restaurées à leur valeur par défaut. Cela garantit l'usage d'un ensemble de valeurs qui restent raisonnables. Cela peut par contre vous surprendre, si vous pensiez que le raccourci ne changeait que les valeurs passées en argument.
 
 ## Commentaires
 
@@ -421,7 +424,10 @@ En CSS le début des commentaires est signalé par `/*` et la fin par `*/`. Dans
 /* mise en forme des éléments de base */
 /* -------------------------------------------------------------------------------------------- */
 body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;
@@ -436,16 +442,19 @@ body {
   }
 }
 
-h1 {font-size: 1.5em;}
+h1 {
+  font-size: 1.5em;
+}
 
 /* mise en forme des éléments imbriqués dans le DOM */
 /* -------------------------------------------------------------------------------------------- */
-div p, #id:first-line {
+div p,
+#id:first-line {
   background-color: red;
-  background-style: none
+  background-style: none;
 }
 
-div p{
+div p {
   margin: 0;
   padding: 1em;
 }
@@ -477,7 +486,10 @@ L'exemple ci-dessous propose d'écrire une déclaration par ligne — le code pr
 
 ```css
 body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;
@@ -496,7 +508,7 @@ h1 {
 div p,
 #id:first-line {
   background-color: red;
-  background-style: none
+  background-style: none;
 }
 
 div p {
@@ -512,14 +524,37 @@ div p + p {
 On peut écrire le même code CSS en retirant la plupart des espaces — le code ci-dessous est équivalent au précédent pour un navigateur, mais, vous l'admettrez, plus difficile à lire pour un humain !
 
 ```css
-body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
-@media (min-width: 70em) { body {font-size: 130%;} }
+body {
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
+  padding: 1em;
+  margin: 0 auto;
+  max-width: 33em;
+}
+@media (min-width: 70em) {
+  body {
+    font-size: 130%;
+  }
+}
 
-h1 {font-size: 1.5em;}
+h1 {
+  font-size: 1.5em;
+}
 
-div p, #id:first-line {background-color: red; background-style: none}
-div p {margin: 0; padding: 1em;}
-div p + p {padding-top: 0;}
+div p,
+#id:first-line {
+  background-color: red;
+  background-style: none;
+}
+div p {
+  margin: 0;
+  padding: 1em;
+}
+div p + p {
+  padding-top: 0;
+}
 ```
 
 La mise en forme de votre code est une question de goût personnel. Si vous travaillez en équipe, vous devrez sans doute vous plier aux conventions admises au sein de cette équipe.
@@ -549,11 +584,3 @@ Le navigateur ne connaît pas la propriété `padding-` . Les noms de propriét�
 Il est utile de comprendre, au moins dans les grandes lignes, comment votre navigateur calcule le rendu d'une page web à partir des fichiers HTML et CSS. Dans la prochaine leçon — [Comment CSS fonctionne](/fr/docs/Learn/CSS/First_steps/How_CSS_works) — nous examinerons donc ce point.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## Dans ce cours
-
-1. [Qu'est ce que CSS?](/fr/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
-3. Comment CSS est structuré
-4. [CSS comment ça marche ?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Mettre en œuvre vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

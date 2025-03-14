@@ -5,12 +5,14 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
 
 {{JSRef}}
 
-`fill() 方法将`类型化数组中的从起始索引到终止索引内的全部元素。这个方法的算法和 {{jsxref("Array.prototype.fill()")}} 相同。_TypedArray_ 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)之一。
+`fill() 方法将`类型化数组中的从起始索引到终止索引内的全部元素。这个方法的算法和 {{jsxref("Array.prototype.fill()")}} 相同。_TypedArray_ 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects)之一。
 
 ## 语法
 
-```plain
-typedarray.fill(value[, start = 0[, end = this.length]])
+```js-nolint
+fill(value)
+fill(value, start)
+fill(value, start, end)
 ```
 
 ### 参数
@@ -37,10 +39,10 @@ typedarray.fill(value[, start = 0[, end = this.length]])
 ## 示例
 
 ```js
-new Uint8Array([1, 2, 3]).fill(4);         // Uint8Array [4, 4, 4]
-new Uint8Array([1, 2, 3]).fill(4, 1);      // Uint8Array [1, 4, 4]
-new Uint8Array([1, 2, 3]).fill(4, 1, 2);   // Uint8Array [1, 4, 3]
-new Uint8Array([1, 2, 3]).fill(4, 1, 1);   // Uint8Array [1, 2, 3]
+new Uint8Array([1, 2, 3]).fill(4); // Uint8Array [4, 4, 4]
+new Uint8Array([1, 2, 3]).fill(4, 1); // Uint8Array [1, 4, 4]
+new Uint8Array([1, 2, 3]).fill(4, 1, 2); // Uint8Array [1, 4, 3]
+new Uint8Array([1, 2, 3]).fill(4, 1, 1); // Uint8Array [1, 2, 3]
 new Uint8Array([1, 2, 3]).fill(4, -3, -2); // Uint8Array [4, 2, 3]
 ```
 

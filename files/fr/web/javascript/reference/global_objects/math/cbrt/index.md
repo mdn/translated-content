@@ -1,15 +1,6 @@
 ---
 title: Math.cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/cbrt
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/cbrt
 ---
 
 {{JSRef}}
@@ -18,12 +9,26 @@ La fonction **`Math.cbrt()`** renvoie la racine cubique (le nom anglais étant _
 
 <math><semantics><mrow><mstyle mathvariant="monospace"><mrow><mi>M</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>c</mi><mi>b</mi><mi>r</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><mtext>le seul</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>tel que</mtext><mspace width="thickmathspace"></mspace><msup><mi>y</mi><mn>3</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{Math.cbrt(x)} = \sqrt[3]{x} = \text{the unique} \; y \; \text{such that} \; y^3 = x</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-cbrt.html")}}
+{{InteractiveExample("JavaScript Demo: Math.cbrt()")}}
+
+```js interactive-example
+console.log(Math.cbrt(-1));
+// Expected output: -1
+
+console.log(Math.cbrt(1));
+// Expected output: 1
+
+console.log(Math.cbrt(Infinity));
+// Expected output: Infinity
+
+console.log(Math.cbrt(64));
+// Expected output: 4
+```
 
 ## Syntaxe
 
 ```js
-Math.cbrt(x)
+Math.cbrt(x);
 ```
 
 ### Paramètres
@@ -52,7 +57,7 @@ Math.cbrt(0); // 0
 Math.cbrt(1); // 1
 Math.cbrt(Infinity); // Infinity
 Math.cbrt(null); // 0
-Math.cbrt(2);  // 1.2599210498948732
+Math.cbrt(2); // 1.2599210498948732
 ```
 
 ## Spécifications

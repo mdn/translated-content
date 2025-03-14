@@ -1,10 +1,8 @@
 ---
-title: ':first-child'
+title: :first-child
 slug: Web/CSS/:first-child
-tags:
-  - Псевдо-классы
-translation_of: Web/CSS/:first-child
 ---
+
 {{CSSRef}}
 
 {{cssxRef('', 'CSS')}} {{cssxRef('Pseudo-classes', 'псевдокласс')}} **`:first-child`** находит любой элемент, являющийся первым в своём родителе.
@@ -18,7 +16,8 @@ p:first-child {
 }
 ```
 
-> **Примечание:** Как изначально определено, выбранный элемент должен иметь родителя. Начиная с Selectors Level 4, это больше не требуется.
+> [!NOTE]
+> Как изначально определено, выбранный элемент должен иметь родителя. Начиная с Selectors Level 4, это больше не требуется.
 
 ## Синтаксис
 
@@ -64,7 +63,8 @@ p:first-child {
 <ul>
   <li>Item 1</li>
   <li>Item 2</li>
-  <li>Item 3
+  <li>
+    Item 3
     <ul>
       <li>Item 3.1</li>
       <li>Item 3.2</li>
@@ -95,7 +95,7 @@ ul li:first-child {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

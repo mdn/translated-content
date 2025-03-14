@@ -1,11 +1,69 @@
 ---
 title: inset-block-end
 slug: Web/CSS/inset-block-end
+l10n:
+  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
 {{CSSRef}}
 
 **`inset-block-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素における末尾からの論理的なオフセットを定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+
+{{InteractiveExample("CSS Demo: inset-block-end")}}
+
+```css interactive-example-choice
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container" id="example-element">
+    <div id="abspos">I am absolutely positioned with inset-block-end: 20px</div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 0.75em solid;
+  padding: 0.75em;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  unicode-bidi: bidi-override;
+}
+
+#abspos {
+  background-color: yellow;
+  color: black;
+  border: 3px solid red;
+  position: absolute;
+  inset-block-end: 20px;
+  inline-size: 140px;
+  min-block-size: 200px;
+}
+```
+
+## 構文
 
 ```css
 /* <length> 値 */
@@ -22,10 +80,9 @@ inset-block-end: auto;
 inset-block-end: inherit;
 inset-block-end: initial;
 inset-block-end: revert;
+inset-block-end: revert-layer;
 inset-block-end: unset;
 ```
-
-## 構文
 
 ### 値
 
@@ -41,7 +98,7 @@ inset-block-end: unset;
 
 ## 例
 
-<h3 id="Setting_block_end_offset">ブロック方向の末尾のオフセットの設定</h3>
+### ブロック方向の末尾のオフセットの設定
 
 #### HTML
 
@@ -70,7 +127,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_block_end_offset", 140, 140)}}
+{{EmbedLiveSample("ブロック方向の末尾のオフセットの設定", 140, 140)}}
 
 ## 仕様書
 

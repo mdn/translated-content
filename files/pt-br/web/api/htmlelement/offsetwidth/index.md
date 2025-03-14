@@ -15,28 +15,23 @@ var offsetWidth =element.offsetWidth;
 
 `offsetWidth` é uma propriedade somente leitura.
 
-> **Nota:** Esta propriedade irá arredondar o valor para um inteiro. se você precisa um valor fracionado, use {{ domxref("element.getBoundingClientRect()") }}.
+> [!NOTE]
+> Esta propriedade irá arredondar o valor para um inteiro. se você precisa um valor fracionado, use {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Exemplo
 
-![Image:Dimensions-offset.png](/@api/deki/files/186/=Dimensions-offset.png)
+![Image:Dimensions-offset.png](dimensions-offset.png)
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                    | Situação                         | Comentário |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-offsetwidth', 'offsetWidth')}} | {{Spec2('CSSOM View')}} |            |
-
-### Notas
-
-`offsetWidth` é uma propriedade do modelo de objeto DHTML que foi primeiro apresentado pelo MSIE. Algumas vezes referenciado como as dimensões físicas/gráficas do elemento, ou a largura do border-box.
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.HTMLElement.offsetWidth")}}
+{{Compat}}
 
 ## Veja também
 
 - {{domxref("Element.clientWidth")}}
 - {{domxref("Element.scrollWidth")}}
-- [Determinando as dimensões dos elementos](/pt-BR/docs/Determining_the_dimensions_of_elements)
+- [Determinando as dimensões dos elementos](/pt-BR/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

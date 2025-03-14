@@ -1,19 +1,30 @@
 ---
 title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
-tags:
-  - JavaScript
-  - NeedsUpdate
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/eval
 ---
+
 {{jsSidebar("Objects")}}
 
-> **Предупреждение:** Выполнение кода JavaScript с текстовой строки - это невероятный риск для безопасности. Злоумышленнику слишком легко запустить какой угодно код, когда вы используете `eval()`. Смотрите [Никогда не используйте eval()!](#Не_используйте_eval_без_необходимости), ниже.
+> [!WARNING]
+> Выполнение кода JavaScript с текстовой строки - это невероятный риск для безопасности. Злоумышленнику слишком легко запустить какой угодно код, когда вы используете `eval()`. Смотрите [Никогда не используйте eval()!](#не_используйте_eval_без_необходимости), ниже.
 
 Метод **`eval()`** выполняет JavaScript-код, представленный строкой.
 
-{{EmbedInteractiveExample("pages/js/globalprops-eval.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - eval()")}}
+
+```js interactive-example
+console.log(eval("2 + 2"));
+// Expected output: 4
+
+console.log(eval(new String("2 + 2")));
+// Expected output: 2 + 2
+
+console.log(eval("2 + 2") === eval("4"));
+// Expected output: true
+
+console.log(eval("2 + 2") === eval(new String("2 + 2")));
+// Expected output: false
+```
 
 ## Синтаксис
 
@@ -42,7 +53,7 @@ eval(string)
 
 ```js
 eval(new String("2 + 2")); // возвращает объект типа String, содержащий "2 + 2"
-eval("2 + 2");             // возвращает 4
+eval("2 + 2"); // возвращает 4
 ```
 
 Это ограничение легко обойти при помощи `toString()`.
@@ -52,12 +63,13 @@ var expression = new String("2 + 2");
 eval(expression.toString());
 ```
 
-Если вы используете `eval` косвенно, вызовом его через ссылку, а не просто `eval`, в [ECMAScript 5](http://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2) это работает в глобальной области видимости, а не в локальной; это значит, что `eval` будет вызван в глобальной области видимости, а код будет выполнен с отсутствием доступа к локальным переменным в пределах области видимости, где он был вызван.
+Если вы используете `eval` косвенно, вызовом его через ссылку, а не просто `eval`, в [ECMAScript 5](https://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2) это работает в глобальной области видимости, а не в локальной; это значит, что `eval` будет вызван в глобальной области видимости, а код будет выполнен с отсутствием доступа к локальным переменным в пределах области видимости, где он был вызван.
 
 ```js
 function test() {
-  var x = 2, y = 4;
-  console.log(eval("x + y"));  // Прямой вызов, использует локальную области видимости, результат - 6
+  var x = 2,
+    y = 4;
+  console.log(eval("x + y")); // Прямой вызов, использует локальную области видимости, результат - 6
   var geval = eval;
   console.log(geval("x + y")); // Непрямой вызов, использует глобальную область видимости, бросит ReferenceError, т.к. `x` - не определён
 }
@@ -77,17 +89,17 @@ function test() {
 
 ```js
 var obj = { a: 20, b: 30 };
-var propname = getPropName();  // возвращает "a" или "b"
+var propname = getPropName(); // возвращает "a" или "b"
 
-eval( "var result = obj." + propname );
+eval("var result = obj." + propname);
 ```
 
-Однако, `eval()` здесь не нужен. По факту, использование здесь его удивляет. Вместо него используйте [доступ к свойствам](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors), который быстрее и безопаснее:
+Однако, `eval()` здесь не нужен. По факту, использование здесь его удивляет. Вместо него используйте [доступ к свойствам](/ru/docs/Web/JavaScript/Reference/Operators/Property_accessors), который быстрее и безопаснее:
 
 ```js
 var obj = { a: 20, b: 30 };
-var propname = getPropName();  // возвращает "a" или "b"
-var result = obj[ propname ];  //  obj[ "a" ] то же, что и obj.a
+var propname = getPropName(); // возвращает "a" или "b"
+var result = obj[propname]; //  obj[ "a" ] то же, что и obj.a
 ```
 
 ### Используйте функции вместо исполнения фрагментов кода
@@ -112,7 +124,7 @@ elt.addEventListener("click", function() { ... } , false);
 
 ### Передавайте данные вместо кода
 
-К примеру, расширение, созданное изменять содержимое веб-страниц, должно иметь правила, определённые в [XPath](/ru/docs/XPath), а не JS коде.
+К примеру, расширение, созданное изменять содержимое веб-страниц, должно иметь правила, определённые в [XPath](/ru/docs/Web/XPath), а не JS коде.
 
 ### Выполняйте код с ограниченными правами
 
@@ -129,7 +141,7 @@ var x = 2;
 var y = 39;
 var z = "42";
 eval("x + y + 1"); // возвращает 42
-eval(z);           // вернёт 42
+eval(z); // вернёт 42
 ```
 
 ### Использование `eval` для исполнения строки, содержащей операторы JavaScript
@@ -150,12 +162,12 @@ console.log("z is ", eval(str));
 ```js
 var str = "if ( a ) { 1+1; } else { 1+2; }";
 var a = true;
-var b = eval(str);  // вернёт 2
+var b = eval(str); // вернёт 2
 
 console.log("b is : " + b);
 
 a = false;
-b = eval(str);  // вернёт 3
+b = eval(str); // вернёт 3
 
 console.log("b is : " + b);
 ```
@@ -163,25 +175,25 @@ console.log("b is : " + b);
 ### `eval` как строковое определение функции, включающее "(" и ")" как префикс и суффикс
 
 ```js
-var fctStr1 = "function a() {}"
-var fctStr2 = "(function a() {})"
-var fct1 = eval(fctStr1)  // вернёт undefined
-var fct2 = eval(fctStr2)  // вернёт функцию
+var fctStr1 = "function a() {}";
+var fctStr2 = "(function a() {})";
+var fct1 = eval(fctStr1); // вернёт undefined
+var fct2 = eval(fctStr2); // вернёт функцию
 ```
 
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ### Gecko-специфичные замечания
 
-- Исторически `eval()` имел второй необязательный аргумент, указывающий на то, в контексте какого объекта будет выполняться выражение. Этот аргумент не был стандартизован и был удалён из SpiderMonkey в Gecko 1.9.1 (Firefox 3.5). См. {{bug(442333)}}.
+- Исторически `eval()` имел второй необязательный аргумент, указывающий на то, в контексте какого объекта будет выполняться выражение. Этот аргумент не был стандартизован и был удалён из SpiderMonkey в Gecko 1.9.1 (Firefox 3.5). См. [Firefox bug 442333](https://bugzil.la/442333).
 
 ## Смотрите также
 
 - {{jsxref("Global_Objects/uneval", "uneval()")}}
-- [Доступ к свойствам](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Доступ к свойствам](/ru/docs/Web/JavaScript/Reference/Operators/Property_accessors)

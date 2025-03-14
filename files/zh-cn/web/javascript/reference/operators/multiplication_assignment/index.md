@@ -5,9 +5,19 @@ slug: Web/JavaScript/Reference/Operators/Multiplication_assignment
 
 {{jsSidebar("Operators")}}
 
-乘法赋值运算符（`*=`）将变量乘以右操作数的值，并将结果赋值给该变量。
+**乘法赋值**（**`*=`**）运算符将变量乘以右操作数的值，并将结果赋值给该变量。
 
-{{EmbedInteractiveExample("pages/js/expressions-multiplication-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Multiplication assignment operator")}}
+
+```js interactive-example
+let a = 2;
+
+console.log((a *= 3));
+// Expected output: 6
+
+console.log((a *= "hello"));
+// Expected output: NaN
+```
 
 ## 语法
 
@@ -20,11 +30,10 @@ x *= y // x = x * y
 ### 使用乘法赋值
 
 ```js
-// 假设以下变量
-//  bar = 5
+let bar = 5;
 
-bar *= 2     // 10
-bar *= 'foo' // NaN
+bar *= 2; // 10
+bar *= "foo"; // NaN
 ```
 
 ## 规范
@@ -37,5 +46,5 @@ bar *= 'foo' // NaN
 
 ## 参见
 
-- [JS 指南中的赋值操作符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#赋值运算符)
+- [JS 指南中的赋值操作符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#赋值运算符)
 - [乘法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Multiplication)

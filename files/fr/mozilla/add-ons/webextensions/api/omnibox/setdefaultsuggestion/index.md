@@ -1,19 +1,9 @@
 ---
 title: omnibox.setDefaultSuggestion()
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/setDefaultSuggestion
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - omnibox
-  - setDefaultSuggestion
-translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/setDefaultSuggestion
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Définissez la suggestion par défaut à afficher dans la liste déroulante de la barre d'adresse lorsque l'utilisateur commence à interagir avec votre extension.
 
@@ -23,8 +13,8 @@ Une fois que l'utilisateur a entré votre mot clé et a commencé à interagir a
 
 ```js
 browser.omnibox.setDefaultSuggestion(
-  suggestion            // object
-)
+  suggestion, // object
+);
 ```
 
 ### Paramètres
@@ -36,22 +26,22 @@ browser.omnibox.setDefaultSuggestion(
 
 None.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.omnibox.setDefaultSuggestion")}}
+{{Compat}}
 
 ## Exemples
 
 ```js
 browser.omnibox.setDefaultSuggestion({
-  description: "Type the name of a CSS property"
+  description: "Type the name of a CSS property",
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/extensions/omnibox).
+> Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

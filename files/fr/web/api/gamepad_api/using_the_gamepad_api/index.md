@@ -1,8 +1,6 @@
 ---
 title: Utiliser l'API Gamepad
 slug: Web/API/Gamepad_API/Using_the_Gamepad_API
-translation_of: Web/API/Gamepad_API/Using_the_Gamepad_API
-original_slug: Web/Guide/API/Gamepad
 ---
 
 {{DefaultAPISidebar("Gamepad API")}}
@@ -15,15 +13,20 @@ L'API [<i lang="en">Gamepad</i>](/fr/docs/Web/API/Gamepad_API) introduit de nouv
 
 Lorsqu'une nouvelle manette est connectée à l'ordinateur, la page qui a le focus reçoit d'abord un évènement [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event). Si une manette est déjà connectée lorsque la page est chargée, l'évènement [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) est émis sur la page lorsque la personne appuie sur un bouton ou déplace un axe.
 
-> **Note :** Dans Firefox, les manettes sont uniquement exposées à la page après qu'il y a eu une interaction de la personne avec la page. Cela permet d'éviter à ce que les manettes soient utilisées pour créer une empreinte, de faciliter le pistage. Une fois qu'une manette a interagi avec la page, les autres manettes connectées seront automatiquement visibles.
+> [!NOTE]
+> Dans Firefox, les manettes sont uniquement exposées à la page après qu'il y a eu une interaction de la personne avec la page. Cela permet d'éviter à ce que les manettes soient utilisées pour créer une empreinte, de faciliter le pistage. Une fois qu'une manette a interagi avec la page, les autres manettes connectées seront automatiquement visibles.
 
 On peut utiliser [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) comme ceci&nbsp;:
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
-  console.log("Manette connectée à l'indice %d : %s. %d boutons, %d axes.",
-    e.gamepad.index, e.gamepad.id,
-    e.gamepad.buttons.length, e.gamepad.axes.length);
+window.addEventListener("gamepadconnected", function (e) {
+  console.log(
+    "Manette connectée à l'indice %d : %s. %d boutons, %d axes.",
+    e.gamepad.index,
+    e.gamepad.id,
+    e.gamepad.buttons.length,
+    e.gamepad.axes.length,
+  );
 });
 ```
 
@@ -34,9 +37,12 @@ Chaque manette dispose d'un identifiant unique qui lui est associé et qui est d
 Lorsqu'une manette est déconnectée et si la page avait déjà reçu des données pour cette manette (par exemple avec [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event)), un deuxième évènement est envoyé sur la fenêtre, [`gamepaddisconnected`](/fr/docs/Web/API/Window/gamepaddisconnected_event)&nbsp;:
 
 ```js
-window.addEventListener("gamepaddisconnected", function(e) {
-  console.log("Manette déconnectée à l'indice %d : %s",
-    e.gamepad.index, e.gamepad.id);
+window.addEventListener("gamepaddisconnected", function (e) {
+  console.log(
+    "Manette déconnectée à l'indice %d : %s",
+    e.gamepad.index,
+    e.gamepad.id,
+  );
 });
 ```
 
@@ -57,8 +63,20 @@ function gamepadHandler(event, connecting) {
   }
 }
 
-window.addEventListener("gamepadconnected", function(e) { gamepadHandler(e, true); }, false);
-window.addEventListener("gamepaddisconnected", function(e) { gamepadHandler(e, false); }, false);
+window.addEventListener(
+  "gamepadconnected",
+  function (e) {
+    gamepadHandler(e, true);
+  },
+  false,
+);
+window.addEventListener(
+  "gamepaddisconnected",
+  function (e) {
+    gamepadHandler(e, false);
+  },
+  false,
+);
 ```
 
 L'exemple qui précède illustre également comment la propriété `gamepad` peut être retenue après la fin de l'évènement. Nous utiliserons cette technique plus tard pour faire des requêtes sur l'état de l'appareil.
@@ -72,11 +90,15 @@ Généralement, ces opérations sont effectuées en utilisant un objet [`Gamepad
 La méthode [`Navigator.getGamepads()`](/fr/docs/Web/API/Navigator/getGamepads) renvoie un tableau de l'ensemble des appareils qui sont actuellement visibles de la page web sous la forme d'objets [`Gamepad`](/fr/docs/Web/API/Gamepad) (la première valeur vaut toujours `null`, et c'est `null` qui est renvoyé s'il n'y a pas de manettes connectées). On peut l'utiliser pour obtenir les mêmes informations. Ainsi, le premier exemple de code ci-avant pourrait être réécrit de la façon suivante&nbsp;:
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
+window.addEventListener("gamepadconnected", function (e) {
   var gp = navigator.getGamepads()[e.gamepad.index];
-  console.log("Manette connectée à l'indice %d : %s. %d boutons, %d axes.",
-    gp.index, gp.id,
-    gp.buttons.length, gp.axes.length);
+  console.log(
+    "Manette connectée à l'indice %d : %s. %d boutons, %d axes.",
+    gp.index,
+    gp.id,
+    gp.buttons.length,
+    gp.axes.length,
+  );
 });
 ```
 
@@ -101,7 +123,8 @@ Les propriétés d'un objet [`Gamepad`](/fr/docs/Web/API/Gamepad) sont&nbsp;:
 - `timestamp`
   - : : Un objet [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) indiquant le dernier instant auquel les données des manettes ont été mises à jour. Cela permet de déterminer si les données fournies par `axes` et `button` ont été mises à jour par le matériel. Cette valeur doit être relative à l'attribut `navigationStart` de l'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming). Les valeurs augmentent de façon monotone, ce qui signifie qu'on peut les comparer pour déterminer l'ordre des mises à jour (les valeurs les plus récentes seront toujours supérieures aux valeurs antérieures). Cette propriété n'est actuellement pas prise en charge par Firefox.
 
-> **Note :** L'objet `Gamepad` est disponible sur l'évènement [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) plutôt que sur l'objet [`Window`](/fr/docs/Web/API/Window) pour des raisons de sécurité. Une fois qu'une référence est obtenue, on peut consulter ses propriétés pour obtenir des informations à propos de la manette. Sous le capot, cet objet est mis à jour à chaque fois que l'état de la manette change.
+> [!NOTE]
+> L'objet `Gamepad` est disponible sur l'évènement [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) plutôt que sur l'objet [`Window`](/fr/docs/Web/API/Window) pour des raisons de sécurité. Une fois qu'une référence est obtenue, on peut consulter ses propriétés pour obtenir des informations à propos de la manette. Sous le capot, cet objet est mis à jour à chaque fois que l'état de la manette change.
 
 ### Utiliser les informations des boutons
 
@@ -127,9 +150,18 @@ let b = 0;
 Ensuite, on utilise l'évènement [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) pour vérifier si une manette est connectée. Lorsqu'une manette est connectée, on récupère l'objet correspondant avec [`Navigator.getGamepads()[0]`](/fr/docs/Web/API/Navigator/getGamepads) et on affiche les informations dans l'élément `div` correspondant puis on déclenche la fonction `gameLoop()` qui démarre la procédure pour le mouvement de la balle.
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
+window.addEventListener("gamepadconnected", function (e) {
   let gp = navigator.getGamepads()[e.gamepad.index];
-  gamepadInfo.innerHTML = "Manette connectée à l'indice" + gp.index + " : " + gp.id + ". Elle a " + gp.buttons.length + " boutons et " + gp.axes.length + " axes.";
+  gamepadInfo.innerHTML =
+    "Manette connectée à l'indice" +
+    gp.index +
+    " : " +
+    gp.id +
+    ". Elle a " +
+    gp.buttons.length +
+    " boutons et " +
+    gp.axes.length +
+    " axes.";
 
   gameLoop();
 });
@@ -138,31 +170,43 @@ window.addEventListener("gamepadconnected", function(e) {
 On gère également l'évènement [`gamepaddisconnected`](/fr/docs/Web/API/Window/gamepaddisconnected_event) pour vérifier si la manette a été déconnectée. Si c'est le cas, on arrête la boucle [`requestAnimationFrame()`](/fr/docs/Web/API/Window/requestAnimationFrame) (voir après) et on réinitialise les informations affichées sur la manette.
 
 ```js
-window.addEventListener("gamepaddisconnected", function(e) {
+window.addEventListener("gamepaddisconnected", function (e) {
   gamepadInfo.innerHTML = "En attente d'une manette.";
 
   cancelRequestAnimationFrame(start);
 });
 ```
 
-Pour Chrome, les choses sont différentes. Le navigateur ne stocke qu'un instantané de l'état de la manette et il faut donc continuellement rafraîchir l'état connu avant d'utiliser l'objet [`Gamepad`](/fr/docs/Web/API/Gamepad) lorsque celui-ci devient disponible. Dans le code qui suit, on fait cela avec [`setInterval()`](/fr/docs/Web/API/setInterval). Une fois que l'objet est disponible, les informations sont affichées, la boucle de jeu commence et l'intervalle de répétition pour l'état de la manette est arrêté avec [`clearInterval`](/fr/docs/Web/API/clearInterval). Pour les versions les plus anciennes de Chrome, [`Navigator.getGamepads()`](/fr/docs/Web/API/Navigator/getGamepads) est implémentée avec un préfixe `webkit`. Pour une rétro-compatibilité, on essaie ici de détecter et de gérer les deux cas (avec et sans préfixe).
+Pour Chrome, les choses sont différentes. Le navigateur ne stocke qu'un instantané de l'état de la manette et il faut donc continuellement rafraîchir l'état connu avant d'utiliser l'objet [`Gamepad`](/fr/docs/Web/API/Gamepad) lorsque celui-ci devient disponible. Dans le code qui suit, on fait cela avec [`setInterval()`](/fr/docs/Web/API/Window/setInterval). Une fois que l'objet est disponible, les informations sont affichées, la boucle de jeu commence et l'intervalle de répétition pour l'état de la manette est arrêté avec [`clearInterval`](/fr/docs/Web/API/Window/clearInterval). Pour les versions les plus anciennes de Chrome, [`Navigator.getGamepads()`](/fr/docs/Web/API/Navigator/getGamepads) est implémentée avec un préfixe `webkit`. Pour une rétro-compatibilité, on essaie ici de détecter et de gérer les deux cas (avec et sans préfixe).
 
 ```js
 let interval;
 
-if (!('ongamepadconnected' in window)) {
+if (!("ongamepadconnected" in window)) {
   // Les évènements gamepad ne sont pas disponibles
   // On boucle pour connaître l'état à la place
   interval = setInterval(pollGamepads, 500);
 }
 
 function pollGamepads() {
-  let gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads : []);
+  let gamepads = navigator.getGamepads
+    ? navigator.getGamepads()
+    : navigator.webkitGetGamepads
+      ? navigator.webkitGetGamepads
+      : [];
   for (let i = 0; i < gamepads.length; i++) {
     let gp = gamepads[i];
     if (gp) {
-      gamepadInfo.innerHTML = "Manette connectée à l'indice " + gp.index + " : " + gp.id +
-        ". Elle a " + gp.buttons.length + " boutons et " + gp.axes.length + " axes.";
+      gamepadInfo.innerHTML =
+        "Manette connectée à l'indice " +
+        gp.index +
+        " : " +
+        gp.id +
+        ". Elle a " +
+        gp.buttons.length +
+        " boutons et " +
+        gp.axes.length +
+        " axes.";
       gameLoop();
       clearInterval(interval);
     }
@@ -176,14 +220,18 @@ Une fois que tout ça est fait, on utilise `requestAnimationFrame()` pour passer
 
 ```js
 function buttonPressed(b) {
-  if (typeof(b) == "object") {
+  if (typeof b == "object") {
     return b.pressed;
   }
   return b == 1.0;
 }
 
 function gameLoop() {
-  let gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads() : []);
+  let gamepads = navigator.getGamepads
+    ? navigator.getGamepads()
+    : navigator.webkitGetGamepads
+      ? navigator.webkitGetGamepads()
+      : [];
   if (!gamepads) {
     return;
   }
@@ -212,9 +260,8 @@ function gameLoop() {
 Cet exemple illustre comment utiliser l'objet [`Gamepad`](/fr/docs/Web/API/Gamepad) ainsi que les évènements [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) et [`gamepaddisconnected`](/fr/docs/Web/API/Window/gamepaddisconnected_event) afin d'afficher l'état de l'ensemble des manettes connectées au système. Vous pouvez [voir la démonstration fonctionner](https://luser.github.io/gamepadtest/) et consulter [le code source complet sur GitHub](https://github.com/luser/gamepadtest).
 
 ```js
-let haveEvents = 'ongamepadconnected' in window;
+let haveEvents = "ongamepadconnected" in window;
 let controllers = {};
-
 
 function connecthandler(e) {
   addgamepad(e.gamepad);
@@ -294,7 +341,7 @@ function updateStatus() {
       let b = buttons[i];
       let val = controller.buttons[i];
       let pressed = val == 1.0;
-      if (typeof(val) == "object") {
+      if (typeof val == "object") {
         pressed = val.pressed;
         val = val.value;
       }
@@ -321,7 +368,11 @@ function updateStatus() {
 }
 
 function scangamepads() {
-  let gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads() : []);
+  let gamepads = navigator.getGamepads
+    ? navigator.getGamepads()
+    : navigator.webkitGetGamepads
+      ? navigator.webkitGetGamepads()
+      : [];
   for (let i = 0; i < gamepads.length; i++) {
     if (gamepads[i]) {
       if (gamepads[i].index in controllers) {
@@ -337,7 +388,7 @@ window.addEventListener("gamepadconnected", connecthandler);
 window.addEventListener("gamepaddisconnected", disconnecthandler);
 
 if (!haveEvents) {
- setInterval(scangamepads, 500);
+  setInterval(scangamepads, 500);
 }
 ```
 

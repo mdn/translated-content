@@ -1,17 +1,11 @@
 ---
 title: is
 slug: Web/HTML/Global_attributes/is
-tags:
-  - Attribut universel
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/is
-original_slug: Web/HTML/Attributs_universels/is
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
-L'attribut **`is`** est un [attribut universel](/fr/docs/Web/HTML/Attributs_universels) qui indique qu'un élément HTML standard devrait se comporter comme un élément natif personnalisé (_custom element_) défini (voir [Manipuler les _custom elements_](/fr/docs/Web/Web_Components/Using_custom_elements) pour plus de détails).
+L'attribut **`is`** est un [attribut universel](/fr/docs/Web/HTML/Global_attributes) qui indique qu'un élément HTML standard devrait se comporter comme un élément natif personnalisé (_custom element_) défini (voir [Manipuler les _custom elements_](/fr/docs/Web/API/Web_components/Using_custom_elements) pour plus de détails).
 
 Cet attribut peut uniquement être utilisé si l'élément personnalisé indiqué a été correctement [défini](/fr/docs/Web/API/CustomElementRegistry/define) dans le document courant et qu'il étend le type d'élément sur lequel il est appliqué.
 
@@ -51,4 +45,4 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 ## Voir aussi
 
-- Les différents [attributs universels](/fr/docs/Web/HTML/Attributs_universels)
+- Les différents [attributs universels](/fr/docs/Web/HTML/Global_attributes)

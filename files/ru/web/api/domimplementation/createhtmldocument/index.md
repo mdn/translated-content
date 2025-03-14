@@ -1,16 +1,9 @@
 ---
 title: DOMImplementation.createHTMLDocument()
 slug: Web/API/DOMImplementation/createHTMLDocument
-tags:
-  - API
-  - DOM Reference
-  - DOMImplementation
-  - Method
-  - Reference
-translation_of: Web/API/DOMImplementation/createHTMLDocument
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
 Метод **`DOMImplementation.createHTMLDocument()`** создаёт новый HTML {{ domxref("Document") }}.
 
@@ -33,7 +26,10 @@ const newDoc = document.implementation.createHTMLDocument(title)
 
 ```html
 <body>
-  <p>Click <a href="javascript:makeDocument()">here</a> to create a new document and insert it below.</p>
+  <p>
+    Click <a href="javascript:makeDocument()">here</a> to create a new document
+    and insert it below.
+  </p>
   <iframe id="theFrame" src="about:blank" />
 </body>
 ```
@@ -50,7 +46,7 @@ function makeDocument() {
 
   try {
     doc.body.appendChild(p);
-  } catch(e) {
+  } catch (e) {
     console.log(e);
   }
 
@@ -68,18 +64,17 @@ function makeDocument() {
 
 Строка 16 вытягивает `contentDocument` фрейма; это документ, в который мы будем вводить новое содержимое. Следующие две строки обрабатывают импорт содержимого нашего нового документа в контекст нового документа. Наконец, строка 20 фактически заменяет содержимое фрейма содержимым нового документа.
 
-[Смотреть Видео Примеры](/samples/domref/createHTMLDocument.html)
+[Смотреть Видео Примеры](https://mdn.dev/archives/media/samples/domref/createHTMLDocument.html)
 
 Возвращаемый документ предварительно сконструирован со следующим HTML-кодом:
 
 ```html
 <!doctype html>
 <html>
-<head>
-<title>title</title>
-</head>
-<body>
-</body>
+  <head>
+    <title>title</title>
+  </head>
+  <body></body>
 </html>
 ```
 

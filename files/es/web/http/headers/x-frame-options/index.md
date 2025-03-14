@@ -9,7 +9,8 @@ El encabezado de respuesta [HTTP](/es/docs/Web/HTTP) **`X-Frame-Options`** puede
 
 La seguridad añadida sólo es proporcionada si el usuario que está accediendo al documento está utilizando un navegador que soporte `X-Frame-Options`.
 
-> **Nota:** El encabezado HTTP {{HTTPHeader("Content-Security-Policy")}} tiene una directiva {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} que deja [obsoleto](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options) este encabezado para los navegadores compatibles.
+> [!NOTE]
+> El encabezado HTTP {{HTTPHeader("Content-Security-Policy")}} tiene una directiva {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} que deja [obsoleto](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options) este encabezado para los navegadores compatibles.
 
 <table class="properties">
   <tbody>
@@ -40,13 +41,14 @@ Si especifica `DENY`, fallarán no sólo los intentos de cargar la página en un
 - `DENY`
   - : La página no puede ser mostrada en un marco, independiente del sitio que esté intentándolo.
 - `SAMEORIGIN`
-  - : La página sólo puede ser mostrada en un marco del mismo origen que dicha página.   La especificación deja que los proveedores de navegadores decidan si esta opción se aplica al nivel superior, al padre o a toda la cadena, aunque se argumenta que la opción no es muy útil a menos que todos los padres también estén en el mismo origen (ver {{bug(725490)}}). Consulte también [Browser compatibility](#browser_compatibility) para obtener detalles de soporte.
+  - : La página sólo puede ser mostrada en un marco del mismo origen que dicha página. La especificación deja que los proveedores de navegadores decidan si esta opción se aplica al nivel superior, al padre o a toda la cadena, aunque se argumenta que la opción no es muy útil a menos que todos los padres también estén en el mismo origen (ver [Error 725490 en Firefox](https://bugzil.la/725490)). Consulte también [Browser compatibility](#browser_compatibility) para obtener detalles de soporte.
 - `ALLOW-FROM uri` {{deprecated_inline}}
   - : Esta es una directiva obsoleta que ya no funciona en navegadores modernos. No usar. En el soporte de navegadores antiguos, una página se puede mostrar en un marco solo en el origen especificado _uri_. Tenga en cuenta que en versiones anteriores de Firefox esto todavía sufre del mismo problema que `SAMEORIGIN` — no verifica los antecesores del marco para ver si están en el mismo origen. El encabezado HTTP {{HTTPHeader("Content-Security-Policy")}} tiene una directiva {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} que puede usar en su lugar.
 
 ## Ejemplos
 
-> **Nota:** ¡Configurar X-Frame-Options en el tag {{HTMLElement("meta")}} es inútil! Por ejemplo, `<meta http-equiv="X-Frame-Options" content="deny">` no tiene efecto. ¡No lo use! `X-Frame-Options` sólo funcionará configurandolo a tráves del encabezado HTTP, como en los ejemplos a continuación.
+> [!NOTE]
+> ¡Configurar X-Frame-Options en el tag {{HTMLElement("meta")}} es inútil! Por ejemplo, `<meta http-equiv="X-Frame-Options" content="deny">` no tiene efecto. ¡No lo use! `X-Frame-Options` sólo funcionará configurandolo a tráves del encabezado HTTP, como en los ejemplos a continuación.
 
 ### Configurando Apache
 
@@ -109,16 +111,16 @@ http-response set-header X-Frame-Options SAMEORIGIN
 Para hacer que Express envíe el encabezado `X-Frame-Options`, puede usar [helmet](https://helmetjs.github.io/) que utiliza [frameguard](https://helmetjs.github.io/docs/frameguard/) para establecer el encabezado. Agregue lo siguiente a la configuración de su servidor:
 
 ```js
-const helmet = require('helmet');
+const helmet = require("helmet");
 const app = express();
-app.use(helmet.frameguard({ action: 'SAMEORIGIN' }));
+app.use(helmet.frameguard({ action: "SAMEORIGIN" }));
 ```
 
 Opcionalmente, puede usar frameguard directamente:
 
 ```js
-const frameguard = require('frameguard')
-app.use(frameguard({ action: 'SAMEORIGIN' }))
+const frameguard = require("frameguard");
+app.use(frameguard({ action: "SAMEORIGIN" }));
 ```
 
 ## Especificaciones

@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows
 
 {{AddonSidebar}}
 
-与浏览器窗口互动。您可以使用此 API 获取有关已打开窗口的信息，以及打开、修改和关闭窗口。您也可以监听窗口的打开、关闭和其激活事件。
+与浏览器窗口互动。你可以使用此 API 获取有关已打开窗口的信息，以及打开、修改和关闭窗口。你也可以监听窗口的打开、关闭和其激活事件。
 
 ## 类型
 
@@ -61,7 +61,8 @@ Edge 中不支持 Promises。需使用回调。
 
 {{WebExtExamples("h2")}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.com/extensions/windows) API。此文档基于 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows) API。此文档基于 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
 >
 > Microsoft Edge 兼容性数据由微软公司提供，并包含在创作共用 署名 3.0 美国许可证下。
 

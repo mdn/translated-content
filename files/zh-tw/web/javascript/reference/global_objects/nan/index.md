@@ -9,7 +9,22 @@ slug: Web/JavaScript/Reference/Global_Objects/NaN
 
 {{js_property_attributes(0,0,0)}}
 
-{{EmbedInteractiveExample("pages/js/globalprops-nan.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - NaN")}}
+
+```js interactive-example
+function sanitize(x) {
+  if (isNaN(x)) {
+    return NaN;
+  }
+  return x;
+}
+
+console.log(sanitize("1"));
+// Expected output: "1"
+
+console.log(sanitize("NotANumber"));
+// Expected output: NaN
+```
 
 ## 語法
 
@@ -30,14 +45,16 @@ NaN
 `NaN` 不等於（`==`、`!=`、`===`、`!==`）任何值，包括 NaN 本身。請使用 {{jsxref("Number.isNaN()")}} 或 {{jsxref("Global_Objects/isNaN", "isNaN()")}} 來確認某個數值是否為 NaN。Or perform a self-comparison: NaN, and only NaN, will compare unequal to itself.
 
 ```js
-NaN === NaN;        // false
+NaN === NaN; // false
 Number.NaN === NaN; // false
-isNaN(NaN);         // true
-isNaN(Number.NaN);  // true
+isNaN(NaN); // true
+isNaN(Number.NaN); // true
 
-function valueIsNaN(v) { return v !== v; }
-valueIsNaN(1);          // false
-valueIsNaN(NaN);        // true
+function valueIsNaN(v) {
+  return v !== v;
+}
+valueIsNaN(1); // false
+valueIsNaN(NaN); // true
 valueIsNaN(Number.NaN); // true
 ```
 

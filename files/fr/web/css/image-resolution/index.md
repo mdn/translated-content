@@ -1,8 +1,6 @@
 ---
 title: image-resolution
 slug: Web/CSS/image-resolution
-browser-compat: css.properties.image-resolution
-translation_of: Web/CSS/image-resolution
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -35,7 +33,8 @@ image-resolution: unset;
 - `snap`
   - : Si le mot-clé `snap` est fourni, la résolution calculée sera la résolution spécifiée arrondie à la valeur la plus proche correspondant à un pixel image défini sous la forme d'un nombre entier de pixels de l'appareil. Si la résolution est récupérée à partir de l'image, alors la résolution intrinsèque utilisée est la résolution native de l'image, arrondie de la même façon.
 
-> **Note :** Les formats vectoriels tels que SVG n'ont pas de résolution intrinsèque, cette propriété n'a aucun effet sur les images vectorielles.
+> [!NOTE]
+> Les formats vectoriels tels que SVG n'ont pas de résolution intrinsèque, cette propriété n'a aucun effet sur les images vectorielles.
 
 ## Définition formelle
 

@@ -9,11 +9,12 @@ slug: Web/API/ReadableStreamDefaultReader/cancel
 
 cancel 用于在不再需要来自一个流的任何数据的情况下完全结束这个流，即使仍有排队等待的数据块。调用 cancel 后该数据丢失，并且流不再可读。为了仍然可以读这些数据块而不完全结束这个流，你应该使用 {{domxref("ReadableStreamDefaultController.close()")}}。
 
-> **备注：** 如果 reader 处于激活状态，`cancel()` 方法的行为和关联流 ({{domxref("ReadableStream.cancel()")}}) 的行为相同。
+> [!NOTE]
+> 如果 reader 处于激活状态，`cancel()` 方法的行为和关联流 ({{domxref("ReadableStream.cancel()")}}) 的行为相同。
 
 ## 语法
 
-```js
+```js-nolint
 cancel()
 cancel(reason)
 ```
@@ -53,8 +54,12 @@ function fetchStream() {
     // 从流中获取的数据是一个 Uint8Array
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
-    listItem.textContent = 'Received ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
+    let listItem = document.createElement("li");
+    listItem.textContent =
+      "Received " +
+      charsReceived +
+      " characters so far. Current chunk = " +
+      chunk;
     list2.appendChild(listItem);
     result += chunk;
     // 再次调用该函数以读取更多数据
@@ -70,3 +75,8 @@ function fetchStream() {
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("ReadableStreamDefaultReader.ReadableStreamDefaultReader", "ReadableStreamDefaultReader()")}} 构造函数
+- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)

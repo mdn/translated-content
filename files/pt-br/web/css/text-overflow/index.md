@@ -7,13 +7,13 @@ slug: Web/CSS/text-overflow
 
 ## Sumário
 
-A propriedade `text-overflow` do [CSS](/pt-BR/CSS) determina como o conteúdo que ultrapassou a sua div e que não é mostrado ao usuário deve ser exibido. Ele pode ser cortado, mostrar reticências ou até mesmo exibir qualquer string definida pelo autor.
+A propriedade `text-overflow` do [CSS](/pt-BR/docs/Web/CSS) determina como o conteúdo que ultrapassou a sua div e que não é mostrado ao usuário deve ser exibido. Ele pode ser cortado, mostrar reticências ou até mesmo exibir qualquer string definida pelo autor.
 
-![text-overflow.png](/@api/deki/files/5846/=text-overflow.png)
+![text-overflow.png](text-overflow.png)
 
 O corte acontece na borda da caixa; para cortar no limite de caracteres de uma string personalizada, pode-se usar (`''`).
 
-Essa propriedade afeta apenas o conteúdo que está ultrapassando o bloco ou a div no sentido da linha horizontal (não corta o texto na parte de baixo de um bloco ou div, por exemplo). O texto pode ultrapassar ou transbordar quando utilizado ‘`white-space:nowrap`’ ou quando uma palavra for muito grande.
+Essa propriedade afeta apenas o conteúdo que está ultrapassando o bloco ou a div no sentido da linha horizontal (não corta o texto na parte de baixo de um bloco ou div, por exemplo). O texto pode ultrapassar ou transbordar quando utilizado '`white-space:nowrap`' ou quando uma palavra for muito grande.
 
 Essa propriedade do CSS não força um estouro para que ele ocorra. Para que isso aconteça, é necessário que o autor utilize algumas propriedades adicionais no elemento, como setar a propriedade overflow para hidden.
 
@@ -43,11 +43,11 @@ text-overflow: inherit
 ### Values
 
 - `clip`
-  - : This keyword value indicates to truncate the text at the limit of the [content area](/pt-BR/CSS/box_model), therefore the truncation can happen in the middle of a character. To truncate at the transition between two characters, the empty string value (`''`) must be used. The value `clip` is the default for this property.
+  - : This keyword value indicates to truncate the text at the limit of the [content area](/pt-BR/docs/CSS/box_model), therefore the truncation can happen in the middle of a character. To truncate at the transition between two characters, the empty string value (`''`) must be used. The value `clip` is the default for this property.
 - `ellipsis`
-  - : This keyword value indicates to display ellipses (`'…'`, `U+2026 Horizontal Ellipsis`) to represent clipped text. The ellipsis is displayed inside the [content area](/pt-BR/CSS/box_model), shortening more the size of the displayed text. If there is not enough place to display ellipsis, they are clipped.
+  - : This keyword value indicates to display ellipses (`'…'`, `U+2026 Horizontal Ellipsis`) to represent clipped text. The ellipsis is displayed inside the [content area](/pt-BR/docs/CSS/box_model), shortening more the size of the displayed text. If there is not enough place to display ellipsis, they are clipped.
 - `<string>` {{ experimental_inline() }}
-  - : The {{cssxref("&lt;string&gt;")}} to be used to represent clipped text. The string is displayed inside the [content area](/pt-BR/CSS/box_model), shortening more the size of the displayed text. If there is not enough place to display the string itself, it is clipped.
+  - : The {{cssxref("&lt;string&gt;")}} to be used to represent clipped text. The string is displayed inside the [content area](/pt-BR/docs/CSS/box_model), shortening more the size of the displayed text. If there is not enough place to display the string itself, it is clipped.
 
 ## Examples
 
@@ -55,9 +55,9 @@ text-overflow: inherit
 p {
   white-space: nowrap;
   width: 100%;
-  overflow: hidden;              /* "overflow" value must be different from "visible" */
+  overflow: hidden; /* "overflow" value must be different from "visible" */
 
-  text-overflow:    ellipsis;
+  text-overflow: ellipsis;
 }
 ```
 
@@ -116,7 +116,7 @@ p {
         <img
           alt="t-o_clip.png"
           class="default internal"
-          src="/@api/deki/files/6056/=t-o_clip.png"
+          src="t-o_clip.png"
         />
       </td>
       <td style="direction: ltr">
@@ -137,7 +137,7 @@ p {
         <img
           alt="t-o_clip_rtl.png"
           class="default internal"
-          src="/@api/deki/files/6057/=t-o_clip_rtl.png"
+          src="t-o_clip_rtl.png"
         />
       </td>
       <td style="direction: rtl">
@@ -493,18 +493,20 @@ We have the example of the use of abbr tag inside a div with width 250px;
 
 ```css
 div {
-    width: 250px;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    direction: ltr;
+  width: 250px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
 }
 ```
 
 ```html
 <div>
-    <abbr title="https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-overflow">https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-overflow</abbr>
+  <abbr title="https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-overflow"
+    >https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-overflow</abbr
+  >
 </div>
 ```
 
@@ -512,17 +514,13 @@ The full path of the URL will be displayed over the mouse, and the screen will b
 
 ## Specifications
 
-| Specification                                                                    | Status                       | Comment |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------- |
-| {{ SpecName('CSS3 UI', '#text-overflow', 'text-overflow') }} | {{ Spec2('CSS3 UI') }} |         |
-
-A previous version of this interface reached the _Candidate Recommendation_ status. As some not-listed-at-risk features needed to be removed, the spec was demoted to the _Working Draft_ level, explaining why browsers implemented this property unprefixed, though not at the CR state.
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.text-overflow")}}
+{{Compat}}
 
 ## See also
 
-- [CSS Reference](/pt-BR/CSS/CSS_Reference) index
+- [CSS Reference](/pt-BR/docs/Web/CSS/Reference) index
 - Related CSS properties: {{ cssxref("overflow") }}, {{ cssxref("white-space") }}

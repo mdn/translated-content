@@ -5,7 +5,7 @@ slug: Web/API/StylePropertyMapReadOnly
 
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-**`StylePropertyMapReadOnly`** は [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_Object_Model_API) のインターフェイスで、 {{domxref("CSSStyleDeclaration")}} の代替となる読み取り専用の CSS 宣言ブロックの表現を提供します。このインターフェイスのインスタンスを取得するには、 {{domxref('Element.computedStyleMap','Element.computedStyleMap()')}} を使用してください。
+**`StylePropertyMapReadOnly`** は [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Object_Model#CSS_Typed_Object_Model) のインターフェイスで、 {{domxref("CSSStyleDeclaration")}} の代替となる読み取り専用の CSS 宣言ブロックの表現を提供します。このインターフェイスのインスタンスを取得するには、 {{domxref('Element.computedStyleMap','Element.computedStyleMap()')}} を使用してください。
 
 ## プロパティ
 
@@ -25,9 +25,9 @@ slug: Web/API/StylePropertyMapReadOnly
 - {{domxref('StylePropertyMapReadOnly.has()')}}
   - : 指定されたプロパティが `StylePropertyMapReadOnly` オブジェクトにあるかどうかを示します。
 - {{domxref('StylePropertyMapReadOnly.keys()')}}
-  - : `StylePropertyMapReadOnly` 内のそれぞれの項目のキーを含む新しい*配列反復子*を返します。
+  - : `StylePropertyMapReadOnly` 内のそれぞれの項目のキーを含む新しい*配列イテレーター*を返します。
 - {{domxref('StylePropertyMapReadOnly.values()')}}
-  - : `StylePropertyMapReadOnly` 内のそれぞれの項目の値を含む新しい*配列反復子*を返します。
+  - : `StylePropertyMapReadOnly` 内のそれぞれの項目の値を含む新しい*配列イテレーター*を返します。
 
 ## 例
 
@@ -35,7 +35,9 @@ slug: Web/API/StylePropertyMapReadOnly
 
 ```html
 <p>
-   これは、いくつかのテキストを含む段落です。 CSS を追加することもできますし、しないこともできます。スタイルマップには、既定のものと継承されたすべての CSS プロパティ値が含まれます。
+  これは、いくつかのテキストを含む段落です。 CSS
+  を追加することもできますし、しないこともできます。スタイルマップには、既定のものと継承されたすべての
+  CSS プロパティ値が含まれます。
 </p>
 <dl id="output"></dl>
 ```
@@ -44,10 +46,10 @@ slug: Web/API/StylePropertyMapReadOnly
 
 ```css
 p {
-   --someVariable: 1.6em;
-   --someOtherVariable: translateX(33vw);
-   --anotherVariable: 42;
-   line-height: var(--someVariable);
+  --someVariable: 1.6em;
+  --someOtherVariable: translateX(33vw);
+  --anotherVariable: 42;
+  line-height: var(--someVariable);
 }
 ```
 
@@ -55,10 +57,10 @@ JavaScript を追加して段落を取得し、 {{domxref('Element.computedStyle
 
 ```js
 // 要素を取得
-const myElement = document.querySelector('p');
+const myElement = document.querySelector("p");
 
 // 入力する <dl> を取得
-const stylesList = document.querySelector('#output');
+const stylesList = document.querySelector("#output");
 
 // computedStyleMap() ですべての計算済みスタイルを取得
 const stylePropertyMap = myElement.computedStyleMap();
@@ -66,12 +68,12 @@ const stylePropertyMap = myElement.computedStyleMap();
 // すべてのプロパティと値のマップを反復処理して、それぞれ <dt> と <dd> を追加
 for (const [prop, val] of stylePropertyMap) {
   // プロパティ
-  const cssProperty = document.createElement('dt');
+  const cssProperty = document.createElement("dt");
   cssProperty.innerText = prop;
   stylesList.appendChild(cssProperty);
 
   // 値
-  const cssValue = document.createElement('dd');
+  const cssValue = document.createElement("dd");
   cssValue.innerText = val;
   stylesList.appendChild(cssValue);
 }

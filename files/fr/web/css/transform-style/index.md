@@ -1,13 +1,6 @@
 ---
 title: transform-style
 slug: Web/CSS/transform-style
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-  - Transformations CSS
-translation_of: Web/CSS/transform-style
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -58,4 +51,4 @@ transform-style: unset;
 
 ## Voir aussi
 
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Utilisation_des_transformations_CSS)
+- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

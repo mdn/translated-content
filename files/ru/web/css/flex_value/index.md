@@ -1,7 +1,6 @@
 ---
 title: <flex>
 slug: Web/CSS/flex_value
-translation_of: Web/CSS/flex_value
 ---
 
 {{CSSRef}}
@@ -29,4 +28,4 @@ translation_of: Web/CSS/flex_value
 
 ## Смотрите также
 
-- [CSS Grid Layout](/ru/docs/Web/CSS/CSS_Grid_Layout)
+- [CSS Grid Layout](/ru/docs/Web/CSS/CSS_grid_layout)

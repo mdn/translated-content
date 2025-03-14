@@ -3,19 +3,20 @@ title: visibility
 slug: Web/SVG/Attribute/visibility
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
 `visibility`属性让你能够控制一个图形元素的可见性。用了值`hidden`或者值`collapse`，当前的图形元素将不可见。
 
-> **备注：** 如果 {{ SVGElement("tspan") }}元素、{{ SVGElement("tref") }}元素或{{ SVGElement("altGlyph") }}元素上的`visibility`属性设置为`hidden`，则文本变得不可见，但是依然占用文本布局计算的空间。
+> [!NOTE]
+> 如果 {{ SVGElement("tspan") }} 或 {{ SVGElement("tref") }} 元素上的 `visibility` 属性设置为 `hidden`，则文本变得不可见，但是依然占用文本布局计算的空间。
 
-根据属性{{ SVGAttr("pointer-events") }}的值，图形元素如果属性`visibility` 值设置为 `hidden`，依然能够响应事件。
+根据属性 {{ SVGAttr("pointer-events") }} 的值，图形元素如果属性 `visibility` 值设置为 `hidden`，依然能够响应事件。
 
-作为一个外观属性，它可以直接用作 CSS 样式表内部的属性。请阅读{{ cssxref("visibility","CSS visibility") }}以了解更多信息。
+作为一个表现属性，它可以直接用作 CSS 样式表内部的属性。请阅读 {{ cssxref("visibility","CSS visibility") }} 以了解更多信息。
 
-## 用法
+## 使用说明
 
-| 类别   | 外观属性                                     |
+| 类别   | 表现属性                                     |
 | ------ | -------------------------------------------- |
 | 值     | **visible** \| hidden \| collapse \| inherit |
 | 可变性 | Yes                                          |
@@ -26,8 +27,8 @@ slug: Web/SVG/Attribute/visibility
 
 下列元素楞以使用`visibility`属性：
 
-- [图形元素](/zh-CN/SVG/Element#Graphics) »
-- [文本内容元素](/zh-CN/SVG/Element#Text_content_elements) »
+- [图形元素](/zh-CN/docs/Web/SVG/Element#graphics) »
+- [文本内容元素](/zh-CN/docs/Web/SVG/Element#text_content_elements) »
 
 ## 规范
 

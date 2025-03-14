@@ -1,5 +1,5 @@
 ---
-title: ':left'
+title: :left
 slug: Web/CSS/:left
 ---
 
@@ -16,7 +16,8 @@ La **`:left`** [CSS](/es/docs/Web/CSS) [pseudo-clase](/es/docs/Web/CSS/Pseudo-cl
 
 La dirección principal de escritura del documento determina si una página es "izquierda" o "derecha". Por ejemplo, si la primera página tiene una dirección de escritura principal de izquierda a derecha, entonces será una página :right (derecha); si tiene una dirección de escritura importante de derecha a izquierda, será una página :left (izquierda).
 
-> **Nota:** Esta pseudoclase se puede usar para cambiar solo las propiedades margin, padding, border y background del cuadro de página. Se ignorarán todas las demás propiedades y solo se verá afectado el cuadro de página, no el contenido del documento en la página.
+> [!NOTE]
+> Esta pseudoclase se puede usar para cambiar solo las propiedades margin, padding, border y background del cuadro de página. Se ignorarán todas las demás propiedades y solo se verá afectado el cuadro de página, no el contenido del documento en la página.
 
 ## Sintaxis
 
@@ -36,7 +37,7 @@ La dirección principal de escritura del documento determina si una página es "
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.left")}}
+{{Compat}}
 
 ## Ver También
 

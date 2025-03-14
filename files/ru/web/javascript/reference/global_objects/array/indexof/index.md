@@ -1,18 +1,9 @@
 ---
 title: Array.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -33,7 +24,7 @@ arr.indexOf(searchElement[, fromIndex = 0])
 
 ## Описание
 
-Метод `indexOf()` сравнивает искомый элемент `searchElement` с элементами в массиве, используя [строгое сравнение](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) (тот же метод используется оператором `===`, тройное равно).
+Метод `indexOf()` сравнивает искомый элемент `searchElement` с элементами в массиве, используя [строгое сравнение](/ru/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators) (тот же метод используется оператором `===`, тройное равно).
 
 ## Примеры
 
@@ -43,9 +34,9 @@ arr.indexOf(searchElement[, fromIndex = 0])
 
 ```js
 var array = [2, 5, 9];
-array.indexOf(2);     // 0
-array.indexOf(7);     // -1
-array.indexOf(9, 2);  // 2
+array.indexOf(2); // 0
+array.indexOf(7); // -1
+array.indexOf(9, 2); // 2
 array.indexOf(2, -1); // -1
 array.indexOf(2, -3); // 0
 ```
@@ -56,8 +47,8 @@ array.indexOf(2, -3); // 0
 
 ```js
 var indices = [];
-var array = ['a', 'b', 'a', 'c', 'a', 'd'];
-var element = 'a';
+var array = ["a", "b", "a", "c", "a", "d"];
+var element = "a";
 var idx = array.indexOf(element);
 while (idx != -1) {
   indices.push(idx);
@@ -77,7 +68,7 @@ console.log(indices);
 // Ссылка (en): http://es5.github.io/#x15.4.4.14
 // Ссылка (ru): http://es5.javascript.ru/x15.4.html#x15.4.4.14
 if (!Array.prototype.indexOf) {
-  Array.prototype.indexOf = function(searchElement, fromIndex) {
+  Array.prototype.indexOf = function (searchElement, fromIndex) {
     var k;
 
     // 1. Положим O равным результату вызова ToObject с передачей ему

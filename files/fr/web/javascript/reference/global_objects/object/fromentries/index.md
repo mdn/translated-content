@@ -1,20 +1,25 @@
 ---
 title: Object.fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
-tags:
-  - JavaScript
-  - Méthode
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/fromEntries
 ---
 
 {{JSRef}}
 
 La méthode **`Object.fromEntries()`** permet de transformer une liste de paires de clés/valeurs en un objet.
 
-{{EmbedInteractiveExample("pages/js/object-fromentries.html")}}
+{{InteractiveExample("JavaScript Demo: Object.fromEntries()")}}
+
+```js interactive-example
+const entries = new Map([
+  ["foo", "bar"],
+  ["baz", 42],
+]);
+
+const obj = Object.fromEntries(entries);
+
+console.log(obj);
+// Expected output: Object { foo: "bar", baz: 42 }
+```
 
 ## Syntaxe
 
@@ -25,7 +30,7 @@ Object.fromEntries(iterable);
 ### Paramètres
 
 - `iterable`
-  - : Un itérable tel qu'un tableau ({{jsxref("Array")}}) ou une {{jsxref("Map")}} ou tout autre objet qui implémente [le protocole itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérable_»).
+  - : Un itérable tel qu'un tableau ({{jsxref("Array")}}) ou une {{jsxref("Map")}} ou tout autre objet qui implémente [le protocole itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»).
 
 ### Valeur de retour
 
@@ -44,7 +49,10 @@ La méthode `Object.fromEntries()` prend comme argument une liste de paires de c
 Grâce à `Object.fromEntries`, on peut convertir des objets {{jsxref("Map")}} en {{jsxref("Object")}} :
 
 ```js
-const map = new Map([ ['toto', 'truc'], ['machin', 42] ]);
+const map = new Map([
+  ["toto", "truc"],
+  ["machin", 42],
+]);
 const obj = Object.fromEntries(map);
 console.log(obj); // { toto: "truc", machin: 42 }
 ```
@@ -54,21 +62,24 @@ console.log(obj); // { toto: "truc", machin: 42 }
 Grâce à `Object.fromEntries`, on peut convertir des objets {{jsxref("Array")}} en {{jsxref("Object")}} :
 
 ```js
-const arr = [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ];
+const arr = [
+  ["0", "a"],
+  ["1", "b"],
+  ["2", "c"],
+];
 const obj = Object.fromEntries(arr);
 console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 ```
 
 ### Transformer des objets
 
-Avec `Object.fromEntries` et la méthode réciproque {{jsxref("Object.entries()")}}, et [les méthodes de manipulation de tableaux](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array#Méthodes), on peut transformer des objets :
+Avec `Object.fromEntries` et la méthode réciproque {{jsxref("Object.entries()")}}, et [les méthodes de manipulation de tableaux](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes), on peut transformer des objets :
 
 ```js
 const object1 = { a: 1, b: 2, c: 3 };
 
 const object2 = Object.fromEntries(
-  Object.entries(object1)
-  .map(([ key, val ]) => [ key, val * 2 ])
+  Object.entries(object1).map(([key, val]) => [key, val * 2]),
 );
 
 console.log(object2);

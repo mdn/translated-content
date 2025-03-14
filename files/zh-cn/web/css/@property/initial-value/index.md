@@ -13,13 +13,13 @@ slug: Web/CSS/@property/initial-value
 
 ```css
 @property --property-name {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
 
 @property --property-name {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: true;
   initial-value: #c0ffee;
 }
@@ -29,25 +29,23 @@ slug: Web/CSS/@property/initial-value
 
 对于设定的`syntax`，具有正确值的字符串。
 
-## 标准定义
+## 形式定义
 
 {{cssinfo}}
 
-## 标准语法
+## 形式语法
 
-```css
 {{csssyntax}}
-```
 
 ## 实例
 
 为 `--my-color` {{cssxref('--*', '自定义属性')}}添加颜色值类型检测、设置默认值并且设置属性值不允许被继承。
 
-使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('@property')}} [规则](/zh-CN/docs/Web/CSS/At-rule):
+使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('@property')}} [规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule):
 
 ```css
 @property --my-color {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
@@ -57,17 +55,11 @@ slug: Web/CSS/@property/initial-value
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
-```
-
-## 标准语法
-
-```css
-{{csssyntax}}
 ```
 
 ## 规范
@@ -78,9 +70,9 @@ window.CSS.registerProperty({
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [CSS 属性与值 API](/zh-CN/docs/Web/API/CSS_Properties_and_Values_API)
 - [CSS 绘图 API](/zh-CN/docs/Web/API/CSS_Painting_API)
 - [CSS 类型对象模型](/zh-CN/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/zh-CN/docs/Web/Houdini)
+- [CSS Houdini](/zh-CN/docs/Web/API/Houdini_APIs)

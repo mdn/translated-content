@@ -9,7 +9,7 @@ slug: Web/HTTP/Methods/POST
 
 {{HTTPMethod("PUT")}} と `POST` との違いは、 `PUT` がべき等であることです。一度呼び出しても複数回呼び出しても成功すれば同じ効果になる（*副*作用がない）のに対して、同じ `POST` に成功すると、複数回の注文を行うような、追加の効果が出ます。
 
-`POST` リクエストは、ふつう [HTML フォーム](/ja/docs/Learn/Forms)を介して送信され、サーバーに変化をもたらします。この場合、{{HTMLElement("form")}} 要素の {{htmlattrxref("enctype", "form")}} 属性や{{HTMLElement("input") }} または {{HTMLElement("button")}} 要素の {{htmlattrxref("formenctype", "input")}} 属性に適切な文字列が指定することで、コンテンツタイプを選択することができます。
+`POST` リクエストは、ふつう [HTML フォーム](/ja/docs/Learn/Forms)を介して送信され、サーバーに変化をもたらします。この場合、{{HTMLElement("form")}} 要素の [`enctype`](/ja/docs/Web/HTML/Element/form#enctype) 属性や{{HTMLElement("input") }} または {{HTMLElement("button")}} 要素の [`formenctype`](/ja/docs/Web/HTML/Element/input#formenctype) 属性に適切な文字列が指定することで、コンテンツタイプを選択することができます。
 
 - `application/x-www-form-urlencoded`: キーと値は、 `'&'` で区切られ、キーと値の組が `'='` で結ばれた形でエンコードされます。キーや値が英数字以外の文字であった場合は、{{glossary("percent-encoding", "パーセントエンコーディング")}}されます。このため、このタイプはバイナリデータを扱うのには向きません（代わりに `multipart/form-data` を使用してください）
 - `multipart/form-data`: それぞれの値はデータのブロック ("body part") として送信され、ユーザーエージェントが定義するデリミター ("boundary") がそれぞれの部分を区切ります。キーはそれぞれの部分の `Content-Disposition` ヘッダーの中で与えられます。

@@ -1,19 +1,35 @@
 ---
 title: title
 slug: Web/HTML/Global_attributes/title
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/title
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`title`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 요소와 관련된 추가 정보를 제공하는 텍스트를 나타냅니다.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-title.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: title", "tabbed-shorter")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</div>
+```html interactive-example
+<p>
+  Use the <code>title</code> attribute on an <code>iframe</code> to clearly
+  identify the content of the <code>iframe</code> to screen readers.
+</p>
+
+<iframe
+  title="Wikipedia page for the HTML language"
+  src="https://en.m.wikipedia.org/wiki/HTML"></iframe>
+<iframe
+  title="Wikipedia page for the CSS language"
+  src="https://en.m.wikipedia.org/wiki/CSS"></iframe>
+```
+
+```css interactive-example
+iframe {
+  height: 200px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+```
 
 다음과 같은 경우 많이 쓰입니다.
 
@@ -30,9 +46,14 @@ translation_of: Web/HTML/Global_attributes/title
 ### HTML
 
 ```html
-<p><code>title</code> 안에서 줄을 바꿀 땐 조심해야 합니다.
-이 <abbr title="This is a
-multiline title">예제</abbr>처럼요.</p>
+<p>
+  <code>title</code> 안에서 줄을 바꿀 땐 조심해야 합니다. 이
+  <abbr
+    title="This is a
+multiline title"
+    >예제</abbr
+  >처럼요.
+</p>
 ```
 
 ### 결과
@@ -81,7 +102,7 @@ multiline title">예제</abbr>처럼요.</p>
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.title")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -1,84 +1,56 @@
 ---
 title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
-tags:
-  - Error
-  - EvalError
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/EvalError
+l10n:
+  sourceCommit: 6558de67a347fee30c303da8a0b262a9270a6885
 ---
-{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
 
-## Сводка
+{{JSRef}}
 
-Объект **`EvalError`** представляет ошибку, возникающую в глобальной функции {{jsxref("Global_objects/eval()", "eval()")}}.
+Объект **`EvalError`** представляет ошибку, возникающую в глобальной функции {{jsxref("Global_Objects/eval", "eval()")}}. JavaScript больше не генерирует это исключение, однако объект `EvalError` остается для совместимости.
 
-## Синтаксис
+`EvalError` является {{Glossary("serializable object", "сериализуемым объектом")}}, поэтому он может быть клонирован с помощью {{domxref("structuredClone()")}} или передан между [воркерами](/ru/docs/Web/API/Worker) с использованием {{domxref("Worker/postMessage()", "postMessage()")}}.
 
-```
-new EvalError([message[, fileName[, lineNumber]]])
-```
+`EvalError` является подклассом {{jsxref("Error")}}.
 
-### Параметры
+## Конструктор
 
-- `message`
-  - : Необязательный параметр. Человеко-читаемое описание ошибки.
-- `fileName` {{non-standard_inline}}
-  - : Необязательный параметр. Имя файла, содержащего код, вызвавший исключение.
-- `lineNumber` {{non-standard_inline}}
-  - : Необязательный параметр. Номер строки кода, вызвавшей исключение.
+- {{jsxref("EvalError/EvalError", "EvalError()")}}
+  - : Создаёт новый объект `EvalError`.
 
-## Описание
+## Свойства экземпляра
 
-Исключение `EvalError` выбрасывается при неправильном использовании глобальной функции {{jsxref("Global_objects/eval()", "eval()")}}.
+_Также наследует свойства своего родителя {{jsxref("Error")}}_.
 
-## Свойства
+Эти свойства определены в `EvalError.prototype` и есть у всех экземпляров `EvalError`.
 
-- {{jsxref("EvalError.prototype")}}
-  - : Позволяет добавлять свойства в объект `EvalError`.
+- {{jsxref("Object/constructor", "EvalError.prototype.constructor")}}
+  - : Функция-конструктор, создающая экземпляр объекта. Для экземпляров `EvalError` начальным значением является конструктор {{jsxref("EvalError/EvalError", "EvalError")}}.
+- {{jsxref("Error/name", "EvalError.prototype.name")}}
+  - : Представляет название типа ошибки. Начальным значением `EvalError.prototype.name` является `"EvalError"`.
 
-## Методы
+## Методы экземпляра
 
-Глобальный объект `EvalError` не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.
-
-## Экземпляры объекта `EvalError`
-
-### Свойства
-
-{{page('/ru/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Properties')}}
-
-### Методы
-
-{{page('/ru/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Methods')}}
+_Наследует методы своего родителя {{jsxref("Error")}}_.
 
 ## Примеры
 
-Объект `EvalError` в настоящий момент не используется и он никогда не выбрасывается в процессе выполнения.
-
-### Пример: создание экземпляра объекта `EvalError`
+### Создание `EvalError`
 
 ```js
 try {
-  throw new EvalError('Привет', 'someFile.js', 10);
+  throw new EvalError("Привет");
 } catch (e) {
   console.log(e instanceof EvalError); // true
-  console.log(e.message);              // "Привет"
-  console.log(e.name);                 // "EvalError"
-  console.log(e.fileName);             // "someFile.js"
-  console.log(e.lineNumber);           // 10
-  console.log(e.columnNumber);         // 0
-  console.log(e.stack);                // "@Scratchpad/2:2:9\n"
+  console.log(e.message); // "Привет"
+  console.log(e.name); // "EvalError"
+  console.log(e.stack); // Стек ошибок
 }
 ```
 
 ## Спецификации
 
-| Спецификация                                                                                                             | Статус                   | Комментарии                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ----------------------------------------------------------------------------- |
-| ECMAScript 3-е издание.                                                                                                  | Стандарт                 | Изначальное определение.                                                      |
-| {{SpecName('ES5.1', '#sec-15.11.6.1', 'EvalError')}}                                                     | {{Spec2('ES5.1')}} | Не используется в этой спецификации. Присутствует для обратной совместимости. |
-| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}} | {{Spec2('ES6')}}     | Не используется в этой спецификации. Присутствует для обратной совместимости. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
@@ -87,5 +59,4 @@ try {
 ## Смотрите также
 
 - {{jsxref("Error")}}
-- {{jsxref("EvalError.prototype")}}
-- {{jsxref("Global_objects/eval", "eval()")}}
+- {{jsxref("Global_Objects/eval", "eval()")}}

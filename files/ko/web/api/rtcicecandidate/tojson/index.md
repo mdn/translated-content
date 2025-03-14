@@ -1,11 +1,11 @@
 ---
 title: RTCIceCandidate. toJSON()
 slug: Web/API/RTCIceCandidate/toJSON
-translation_of: Web/API/RTCIceCandidate/toJSON
 ---
+
 {{APIRef("WebRTC")}}
 
-{{domxref("RTCIceCandidate")}} 메소드인 **`toJSON()`**은 JSON 형식으로 호출된 RTCIceCandidate를 {{domxref("RTCIceCandidateInit")}} 객체 형식으로 변환합니다. .
+{{domxref("RTCIceCandidate")}} 메소드인 **`toJSON()`** 은 JSON 형식으로 호출된 RTCIceCandidate를 {{domxref("RTCIceCandidateInit")}} 객체 형식으로 변환합니다. .
 
 ## Syntax
 

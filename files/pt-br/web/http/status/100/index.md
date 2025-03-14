@@ -17,13 +17,13 @@ Para ter uma verificação pelo servidor o cliente deve enviar o header {{HTTPHe
 
 ## Specifications
 
-| Specification                                            | Title                                                         |
-| -------------------------------------------------------- | ------------------------------------------------------------- |
+| Specification                             | Title                                                         |
+| ----------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "100 Continue" , "6.2.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.100")}}
+{{Compat}}
 
 ## See also
 

@@ -8,7 +8,8 @@ Este tipo representa um atributo de elemento DOM como um objeto. Na maioria dos 
 
 {{InheritanceDiagram}}
 
-> **Aviso:** Começando no Gecko 7.0 {{geckoRelease("7.0")}}, os que serão removidos mostram mensagens de aviso no console. Você deve revisar seu código de acordo. Veja [métodos e propriedades descontinuadas](#propriedades_e_métodos_descontinuados) para uma lista completa.
+> [!WARNING]
+> Começando no Gecko 7.0, os que serão removidos mostram mensagens de aviso no console. Você deve revisar seu código de acordo. Veja [métodos e propriedades descontinuadas](#propriedades_e_métodos_descontinuados) para uma lista completa.
 
 ## Propriedades
 
@@ -25,10 +26,11 @@ Este tipo representa um atributo de elemento DOM como um objeto. Na maioria dos 
 - {{domxref("Attr.ownerElement", "ownerElement")}} {{readOnlyInline}}
   - : O elemento que possui o atributo.
 
-> **Nota:** DOM Level 4 removeu esta propriedade. Foi suposto que como você recebe um objeto `Attr` de um {{domxref("Element")}}, você já deve saber qual é o elemento associado.
+> [!NOTE]
+> DOM Level 4 removeu esta propriedade. Foi suposto que como você recebe um objeto `Attr` de um {{domxref("Element")}}, você já deve saber qual é o elemento associado.
 > Como isto não é sempre verdadeiro em casos como objetos `Attr` sendo retornados pelo {{domxref("Document.evaluate")}}, o DOM Living Standard reintroduziu a propriedade.
 >
-> Gecko mostra uma mensagem de descontinuação começando no Gecko 7.0 {{geckoRelease("7.0")}}. Esta mensagem foi removida novamente no Gecko 49.0 {{geckoRelease("49.0")}}.
+> Gecko mostra uma mensagem de descontinuação começando no Gecko 7.0. Esta mensagem foi removida novamente no Gecko 49.0.
 
 ## Propriedades e métodos descontinuados
 
@@ -77,14 +79,12 @@ Os seguintes métodos foram reprovados:
   - : Use {{domxref("Element.getAttribute()")}} no lugar.
 - `getAttributeNodeNS()`
   - : Use {{domxref("Element.getAttributeNS()")}} no lugar.
-- `hasAttributes()` {{obsolete_inline("21.0")}}
+- `hasAttributes()`
   - : Este método agora sempre retorna false.
 - `hasChildNodes()`
   - : Este método agora sempre retorna false.
 - `insertBefore()`
   - : Modifique o valor de {{domxref("Attr.value")}} no lugar.
-- `isSupported()`
-  - : Provavelmente você nunca utilizou isto, então você não se importa que isso vai desaparecer.
 - `isEqualNode()`
   - : Provavelmente você nunca utilizou isto, então você não se importa que isso vai desaparecer.
 - `normalize()`

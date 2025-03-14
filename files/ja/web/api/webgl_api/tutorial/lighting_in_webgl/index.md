@@ -3,7 +3,7 @@ title: WebGL でのライティング
 slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
 
 始めに WebGL について理解すべきことは、より広い OpenGL 標準とは異なり、WebGL はライティングをサポートしていないということです。これは自分自身で行う必要があります。幸いそれは難しいことではありませんので、この記事では基礎的な内容を扱います。
 
@@ -38,43 +38,29 @@ gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesNormalBuffer);
 
 var vertexNormals = [
   // 前面
-   0.0,  0.0,  1.0,
-   0.0,  0.0,  1.0,
-   0.0,  0.0,  1.0,
-   0.0,  0.0,  1.0,
+  0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0,
 
   // 背面
-   0.0,  0.0, -1.0,
-   0.0,  0.0, -1.0,
-   0.0,  0.0, -1.0,
-   0.0,  0.0, -1.0,
+  0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0,
 
   // 上面
-   0.0,  1.0,  0.0,
-   0.0,  1.0,  0.0,
-   0.0,  1.0,  0.0,
-   0.0,  1.0,  0.0,
+  0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0,
 
   // 底面
-   0.0, -1.0,  0.0,
-   0.0, -1.0,  0.0,
-   0.0, -1.0,  0.0,
-   0.0, -1.0,  0.0,
+  0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0,
 
   // 右側面
-   1.0,  0.0,  0.0,
-   1.0,  0.0,  0.0,
-   1.0,  0.0,  0.0,
-   1.0,  0.0,  0.0,
+  1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0,
 
   // 左側面
-  -1.0,  0.0,  0.0,
-  -1.0,  0.0,  0.0,
-  -1.0,  0.0,  0.0,
-  -1.0,  0.0,  0.0
+  -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0,
 ];
 
-gl.bufferData(gl.ARRAY_BUFFER, new WebGLFloatArray(vertexNormals), gl.STATIC_DRAW);
+gl.bufferData(
+  gl.ARRAY_BUFFER,
+  new WebGLFloatArray(vertexNormals),
+  gl.STATIC_DRAW,
+);
 ```
 
 これは、今ではもう見慣れたものでしょう。新しいバッファを作成し、これを作業用の配列にバインドします。そして、`bufferData()` を呼び出して頂点の法線の配列をバッファに送り込みます。
@@ -92,7 +78,11 @@ gl.vertexAttribPointer(vertexNormalAttribute, 3, gl.FLOAT, false, 0, 0);
 var normalMatrix = mvMatrix.inverse();
 normalMatrix = normalMatrix.transpose();
 var nUniform = gl.getUniformLocation(shaderProgram, "uNormalMatrix");
-gl.uniformMatrix4fv(nUniform, false, new WebGLFloatArray(normalMatrix.flatten()));
+gl.uniformMatrix4fv(
+  nUniform,
+  false,
+  new WebGLFloatArray(normalMatrix.flatten()),
+);
 ```
 
 ## シェーダーを更新する
@@ -163,9 +153,9 @@ gl.uniformMatrix4fv(nUniform, false, new WebGLFloatArray(normalMatrix.flatten())
 
 以上で完成です!
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample7/index.html', 670, 510)}}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample7/index.html', 670, 510)}}
 
-[コードを確認する](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample7) | [新しいページでデモを開く](http://mdn.github.io/webgl-examples/tutorial/sample7/)
+[コードを確認する](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample7) | [新しいページでデモを開く](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample7/)
 
 ## 読者への課題
 

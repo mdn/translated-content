@@ -1,19 +1,24 @@
 ---
 title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 ---
 
 {{JSRef}}
 
 Метод **`Object.values()`** возвращает массив значений перечисляемых свойств объекта в том же порядке что и цикл {{jsxref("Statements/for...in", "for...in")}}. Разница между циклом и методом в том, что цикл перечисляет свойства и из цепочки прототипов.
 
-{{EmbedInteractiveExample("pages/js/object-values.html")}}
+{{InteractiveExample("JavaScript Demo: Object.values()")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+  c: false,
+};
+
+console.log(Object.values(object1));
+// Expected output: Array ["somestring", 42, false]
+```
 
 ## Синтаксис
 
@@ -41,16 +46,25 @@ var obj = { foo: "bar", baz: 42 };
 console.log(Object.values(obj)); // ['bar', 42]
 
 // Массив как объект
-var obj = { 0: 'a', 1: 'b', 2: 'c' };
+var obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.values(obj)); // ['a', 'b', 'c']
 
 // Массив как объект со случайным порядком ключей
 // Когда мы используем нумерованные ключ, значения возвращаются в порядке возрастания
-var an_obj = { 100: 'a', 2: 'b', 7: 'c' };
+var an_obj = { 100: "a", 2: "b", 7: "c" };
 console.log(Object.values(an_obj)); // ['b', 'c', 'a']
 
 // getFoo неперечисляемое свойство
-var my_obj = Object.create({}, { getFoo: { value: function() { return this.foo; } } });
+var my_obj = Object.create(
+  {},
+  {
+    getFoo: {
+      value: function () {
+        return this.foo;
+      },
+    },
+  },
+);
 my_obj.foo = "bar";
 console.log(Object.values(my_obj)); // ['bar']
 

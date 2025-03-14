@@ -1,69 +1,73 @@
 ---
 title: Array.length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
-tags:
-  - Array
-  - JavaScript
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/length
+l10n:
+  sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
 ---
+
 {{JSRef}}
 
-`Array` 인스턴스의 **`length`** 속성은 배열의 길이를 반환합니다. 반환값은 부호 없는 32비트 정수형이며, 배열의 최대 인덱스보다 항상 큽니다. **`length`** 속성에 값을 설정할 경우 배열의 길이를 변경합니다.
+{{jsxref("Array")}} 인스턴스의 **`length`** 데이터 속성은 해당 배열의 요소 수를 나타냅니다. 해당 값은 부호 없는 32비트 정수이며 배열의 최대 인덱스 보다 항상 큽니다.
 
-{{EmbedInteractiveExample("pages/js/array-length.html")}}
+{{InteractiveExample("JavaScript Demo: Array.length", "shorter")}}
+
+```js interactive-example
+const clothing = ["shoes", "shirts", "socks", "sweaters"];
+
+console.log(clothing.length);
+// Expected output: 4
+```
+
+## 값
+
+2<sup>32</sup>보다 작은 음수가 아닌 정수.
+
+{{js_property_attributes(1, 0, 0)}}
 
 ## 설명
 
-`length` 속성의 값은 양의 정수이며 2^32 미만의 값을 가집니다.
+`length` 속성의 값은 양의 정수이며 2<sup>32</sup> 미만의 값을 가집니다.
 
 ```js
-var namelistA = new Array(4294967296); // 2의 32제곱 = 4294967296
-var namelistC = new Array(-100) // 음수
+const listA = [1, 2, 3];
+const listB = new Array(6);
 
-console.log(namelistA.length); // RangeError: Invalid array length
-console.log(namelistC.length); // RangeError: Invalid array length
+console.log(listA.length);
+// 3
 
-var namelistB = [];
-namelistB.length = Math.pow(2,32)-1; // 길이를 2의 32제곱 미만으로 설정
-console.log(namelistB.length);
+console.log(listB.length);
+// 6
 
-// 4294967295
+listB.length = 2 ** 32; // 4294967296
+// RangeError: Invalid array length
+
+const listC = new Array(-100); // 음수 값은 허용되지 않습니다
+// RangeError: Invalid array length
 ```
 
-아무 때나 `length` 속성에 값을 설정해 배열을 절단할 수 있습니다. `length` 속성으로 배열의 길이를 늘리면 실제 원소의 수가 증가합니다. 예를 들어 길이가 2인 배열의 `length`를 3으로 설정한다면 마지막에 `undefined`가 추가돼 총 3개의 요소를 갖게 됩니다.
+배열 객체는 `length` 속성을 주시하여, `length` 값을 배열의 내용과 자동으로 동기화합니다. 이것은 다음을 의미합니다.
+
+- `length`를 현재 길이보다 작은 값으로 설정하면 배열이 잘립니다. 새 `length`를 초과하는 요소는 삭제됩니다.
+- 배열 인덱스(2<sup>32</sup>보다 작은, 음이 아닌 정수)를 현재 `length` 이상으로 설정하면 배열이 확장됩니다. 새로운 가장 큰 인덱스를 반영하도록 `length` 속성이 증가합니다.
+- `length`를 잘못된 값(예: 음수 또는 정수가 아닌 값)으로 설정하면 `RangeError` 예외가 발생합니다.
+
+`length`가 현재 길이보다 큰 값으로 설정되면 실제 `undefined` 값이 아닌 [빈 슬롯](/ko/docs/Web/JavaScript/Guide/Indexed_collections#희소_배열)을 추가하여 배열을 확장합니다. 빈 슬롯은 배열 방법과 몇 가지 특별한 상호 작용을 합니다. [배열 방법과 빈 슬롯](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#배열_메서드와_빈_슬롯)을 참조하십시오.
 
 ```js
-var arr = [1, 2, 3];
-printEntries(arr);
+const arr = [1, 2];
+console.log(arr);
+// [ 1, 2 ]
 
-arr.length = 5; // set array length to 5 while currently 3.
-printEntries(arr);
+arr.length = 5; // 현재 길이가 2이지만 배열의 길이를 5로 설정합니다.
+console.log(arr);
+// [ 1, 2, <3 empty items> ]
 
-function printEntries(arr) {
-  var length = arr.length;
-  for (var i = 0; i < length; i++) {
-    console.log(arr[i]);
-  }
-  console.log('=== printed ===');
-}
-
+arr.forEach((element) => console.log(element));
 // 1
 // 2
-// 3
-// === printed ===
-// 1
-// 2
-// 3
-// undefined
-// undefined
-// === printed ===
 ```
 
-그러나 `length` 속성의 값이 꼭 배열에 정의된 원소의 수를 나타내진 않습니다. [`length`와 숫자형 속성의 관계](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#length_%EC%99%80_%EC%88%AB%EC%9E%90%ED%98%95_%EC%86%8D%EC%84%B1%EC%9D%98_%EA%B4%80%EA%B3%84)를 참고하세요.
-
-{{js_property_attributes(1, 0, 0)}}
+[length와 숫자 속성의 관계](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#length와_숫자_속성의_관계)를 참고하시기 바랍니다.
 
 ## 예제
 
@@ -72,9 +76,9 @@ function printEntries(arr) {
 다음 예제는 `numbers` 배열을 length 속성의 크기만큼 순회합니다. 각 원소의 값은 두 배가 됩니다.
 
 ```js
-var numbers = [1, 2, 3, 4, 5];
-var length = numbers.length;
-for (var i = 0; i < length; i++) {
+const numbers = [1, 2, 3, 4, 5];
+const length = numbers.length;
+for (let i = 0; i < length; i++) {
   numbers[i] *= 2;
 }
 // numbers is now [2, 4, 6, 8, 10]
@@ -85,17 +89,41 @@ for (var i = 0; i < length; i++) {
 다음 예제는 `numbers` 배열의 현재 길이가 3보다 클 경우 3으로 줄입니다.
 
 ```js
-var numbers = [1, 2, 3, 4, 5];
+const numbers = [1, 2, 3, 4, 5];
 
 if (numbers.length > 3) {
-    numbers.length = 3;
+  numbers.length = 3;
 }
 
 console.log(numbers); // [1, 2, 3]
 console.log(numbers.length); // 3
+console.log(numbers[3]); // undefined; 추가 요소는 삭제되었습니다.
 ```
 
-## 명세
+### 고정 길이의 빈 배열 생성하기
+
+`length`를 현재 크기보다 더 크게 설정하면 [희소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#희소_배열)을 생성합니다.
+
+```js
+const numbers = [];
+numbers.length = 3;
+console.log(numbers); // [empty x 3]
+```
+
+### length 쓰기 불가능한 배열
+
+`length` 속성은 현재 길이를 넘어 요소가 추가되면 Array에 의해 자동으로 업데이트됩니다. `length` 속성이 쓰기 불가능한 경우 Array는 이를 업데이트할 수 없습니다. 이로 인해 [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)에서 오류가 발생합니다.
+
+```js
+"use strict";
+
+const numbers = [1, 2, 3, 4, 5];
+Object.defineProperty(numbers, "length", { writable: false });
+numbers[5] = 6; // TypeError: Cannot assign to read only property 'length' of object '[object Array]'
+numbers.push(5); // // TypeError: Cannot assign to read only property 'length' of object '[object Array]'
+```
+
+## 명세서
 
 {{Specifications}}
 
@@ -105,4 +133,8 @@ console.log(numbers.length); // 3
 
 ## 같이 보기
 
+- [인덱스 기반 컬렉션](/ko/docs/Web/JavaScript/Guide/Indexed_collections) 안내서
 - {{jsxref("Array")}}
+- [`TypedArray.prototype.length`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/length)
+- [`String`: `length`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/length)
+- [RangeError: invalid array length](/ko/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

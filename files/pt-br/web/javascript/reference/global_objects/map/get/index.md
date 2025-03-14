@@ -9,12 +9,23 @@ O método **`get()`** retorna um elemento específico do objeto `Map`. Se o valo
 associado à chave for um objeto, será retornado a referência do objeto e qualquer mudança no mesmo
 irá afetar o valor que está dentro do objeto `Map`.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-get.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.get()")}}
+
+```js interactive-example
+const map1 = new Map();
+map1.set("bar", "foo");
+
+console.log(map1.get("bar"));
+// Expected output: "foo"
+
+console.log(map1.get("baz"));
+// Expected output: undefined
+```
 
 ## Sintaxe
 
 ```js
-get(key)
+get(key);
 ```
 
 ### Parâmetros
@@ -33,10 +44,10 @@ a chave não puder ser encontrada no objeto `Map`.
 
 ```js
 let myMap = new Map();
-myMap.set('bar', 'foo');
+myMap.set("bar", "foo");
 
-myMap.get('bar');   // Returns "foo"
-myMap.get('baz');   // Returns undefined
+myMap.get("bar"); // Returns "foo"
+myMap.get("baz"); // Returns undefined
 ```
 
 ## Especificações

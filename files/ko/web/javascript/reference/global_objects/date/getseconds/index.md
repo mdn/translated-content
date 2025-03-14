@@ -1,25 +1,25 @@
 ---
 title: Date.prototype.getSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 ---
 
 {{JSRef}}
 
-**`getSeconds()` **메서드는 `Date` 객체의 초 값을 현지 시간에 맞춰 반환합니다.
+**`getSeconds()`** 메서드는 `Date` 객체의 초 값을 현지 시간에 맞춰 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/date-getseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getSeconds()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+
+console.log(moonLanding.getSeconds());
+// Expected output: 18
+```
 
 ## 구문
 
 ```js
-    dateObj.getSeconds()
+dateObj.getSeconds();
 ```
 
 ### 반환 값
@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 다음 예제는 {{jsxref("Date")}} 객체 `Xmas95`의 값을 사용해 변수 `seconds`에 30을 할당합니다.
 
 ```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
+var Xmas95 = new Date("December 25, 1995 23:15:30");
 var seconds = Xmas95.getSeconds();
 
 console.log(seconds); // 30

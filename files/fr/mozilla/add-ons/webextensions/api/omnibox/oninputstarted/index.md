@@ -1,19 +1,9 @@
 ---
 title: omnibox.onInputStarted
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputStarted
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - omnibox
-  - onInputStarted
-translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputStarted
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsque l'utilisateur commence à interagir avec votre extension en entrant son mot-clé dans la barre d'adresse, puis en appuyant sur la touche espace.
 
@@ -22,9 +12,9 @@ Cela sera envoyé avant tout événement {{WebExtAPIRef("omnibox.onInputChanged"
 ## Syntaxe
 
 ```js
-browser.omnibox.onInputStarted.addListener(listener)
-browser.omnibox.onInputStarted.removeListener(listener)
-browser.omnibox.onInputStarted.hasListener(listener)
+browser.omnibox.onInputStarted.addListener(listener);
+browser.omnibox.onInputStarted.removeListener(listener);
+browser.omnibox.onInputStarted.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -43,22 +33,22 @@ Les événements ont trois fonctions :
 - `callback`
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction sera passée sans arguments.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.omnibox.onInputStarted")}}
+{{Compat}}
 
 ## Exemples
 
 ```js
 browser.omnibox.onInputStarted.addListener(() => {
-  console.log("User has started interacting with me.")
+  console.log("User has started interacting with me.");
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/extensions/omnibox).
+> Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

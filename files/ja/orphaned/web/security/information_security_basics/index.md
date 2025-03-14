@@ -1,7 +1,6 @@
 ---
 title: 情報セキュリティの基本
 slug: orphaned/Web/Security/Information_Security_Basics
-original_slug: Web/Security/Information_Security_Basics
 ---
 
 情報セキュリティを基本的に理解しておくことは、ソフトウェアやサイトが危険で脆弱なままで、資産を奪ったりその他の悪意の理由のために弱点を悪用されるのを防ぐのに役立ちます。これらの記事は知るべきことを学ぶのに役立ちます。 この情報から、ウェブ開発を通じて、またそれ以外のコンテンツのデプロイにおいても、セキュリティの役割と重要性に気づくでしょう。
@@ -24,7 +23,7 @@ original_slug: Web/Security/Information_Security_Basics
 
 - [ブラウザーセキュリティ](/ja/docs/Mozilla/Security)
 - [ウェブセキュリティ](/ja/docs/Web/Security)
-- [サイトを安全にする](/ja/docs/Web/Security/Securing_your_site)
+- [サイトを安全にする](/ja/docs/Web/Security/Practical_implementation_guides)
 - [開発者向け Firefox セキュリティの基本](/ja/docs/Security/Firefox_Security_Basics_For_Developers)
 - [プライバシー、アクセス制限、情報セキュリティ](/ja/docs/Web/Privacy)
 

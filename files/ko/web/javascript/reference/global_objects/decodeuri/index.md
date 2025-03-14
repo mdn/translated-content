@@ -1,25 +1,28 @@
 ---
 title: decodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURI
-tags:
-  - Decode
-  - JavaScript
-  - Method
-  - String
-  - Text
-  - URI
-  - URL
-  - decodeURI
-  - decoding
-browser-compat: javascript.builtins.decodeURI
-translation_of: Web/JavaScript/Reference/Global_Objects/decodeURI
 ---
 
 {{jsSidebar("Objects")}}
 
 **`decodeURI()`** 함수는 {{jsxref("encodeURI")}}이나 비슷한 루틴으로 사전에 만들어진 URI(Uniform Resource Identifier, 인터넷식별자)를 디코딩합니다.
 
-{{EmbedInteractiveExample("pages/js/globalprops-decodeuri.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - decodeURI()")}}
+
+```js interactive-example
+const uri = "https://mozilla.org/?x=шеллы";
+const encoded = encodeURI(uri);
+console.log(encoded);
+// Expected output: "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+
+try {
+  console.log(decodeURI(encoded));
+  // Expected output: "https://mozilla.org/?x=шеллы"
+} catch (e) {
+  // Catches a malformed URI
+  console.error(e);
+}
+```
 
 ## 구문
 
@@ -49,20 +52,22 @@ decodeURI(encodedURI)
 ### 키릴 URL 디코딩
 
 ```js
-decodeURI('https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
+decodeURI(
+  "https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B",
+);
 // "https://developer.mozilla.org/ru/docs/JavaScript_шеллы"
 ```
 
 ### 예외 처리
 
 ```js
-    try {
-      var a = decodeURI('%E0%A4%A');
-    } catch(e) {
-      console.error(e);
-    }
+try {
+  var a = decodeURI("%E0%A4%A");
+} catch (e) {
+  console.error(e);
+}
 
-    // URIError: malformed URI sequence
+// URIError: malformed URI sequence
 ```
 
 ## 사양

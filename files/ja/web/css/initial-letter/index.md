@@ -1,9 +1,11 @@
 ---
 title: initial-letter
 slug: Web/CSS/initial-letter
+l10n:
+  sourceCommit: c77cfcd17e85db6c1b93160c70668f2ff6c2809c
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 `initial-letter` は CSS のプロパティで、頭文字をドロップキャップにしたり、上げたり、下げたりすることを設定します。
 
@@ -12,18 +14,18 @@ slug: Web/CSS/initial-letter
 initial-letter: normal;
 
 /* 数値 */
-initial-letter: 1.5;    /* 頭文字が1.5行分を占める */
-initial-letter: 3.0;    /* 頭文字が3行分を占める */
-initial-letter: 3.0 2;  /* 頭文字が3行分を占め、
-                           2行分下がる */
+initial-letter: 1.5; /* 頭文字が 1.5 行分を占める */
+initial-letter: 3; /* 頭文字が 3 行分を占める */
+initial-letter: 3 2; /* 頭文字が 3 行分を占め、
+                           2 行分下がる */
 
 /* グローバル値 */
 initial-letter: inherit;
 initial-letter: initial;
+initial-letter: revert;
+initial-letter: revert-layer;
 initial-letter: unset;
 ```
-
-## 構文
 
 キーワード値の `normal`、または `<number>` と、その後に任意で `<integer>` が付きます。
 
@@ -59,25 +61,25 @@ initial-letter: unset;
 #### CSS
 
 ```css
-.normal {
+.normal::first-letter {
   -webkit-initial-letter: normal;
   initial-letter: normal;
 }
 
-.onefive {
+.onefive::first-letter {
   -webkit-initial-letter: 1.5;
   initial-letter: 1.5;
 }
 
-.three {
-  -webkit-initial-letter: 3.0;
-  initial-letter: 3.0;
+.three::first-letter {
+  -webkit-initial-letter: 3;
+  initial-letter: 3;
 }
 ```
 
-#### Result
+#### 結果
 
-{{EmbedLiveSample('Setting_initial_letter_size', 250, 180)}}
+{{EmbedLiveSample('先頭文字の大きさの設定', 250, 180)}}
 
 ## 仕様書
 
@@ -85,4 +87,9 @@ initial-letter: unset;
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.initial-letter")}}
+{{Compat}}
+
+## 関連情報
+
+- {{cssxref("initial-letter-align")}}
+- [Drop caps in CSS](https://www.oddbird.net/2017/01/03/initial-letter/)

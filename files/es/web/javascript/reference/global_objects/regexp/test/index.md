@@ -1,12 +1,6 @@
 ---
 title: RegExp.prototype.test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
-tags:
-  - Expresion Regular
-  - Prototipo
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
-original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/test
 ---
 
 {{JSRef}}
@@ -49,12 +43,12 @@ console.log(result); // true
 El siguiente ejemplo registra un mensaje que depende del éxito de la prueba:
 
 ```js
-function probarEntrada(regexp, cadena){
+function probarEntrada(regexp, cadena) {
   var subcadena;
   if (regexp.test(cadena)) {
-    subcadena = ' contiene ';
+    subcadena = " contiene ";
   } else {
-    subcadena = ' no contiene ';
+    subcadena = " no contiene ";
   }
   console.log(cadena + subcadena + regexp.source);
 }
@@ -64,11 +58,11 @@ function probarEntrada(regexp, cadena){
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.RegExp.test")}}
+{{Compat}}
 
 ## Vea también
 
-- El capítulo [Expresiones Regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions) de la [Guía JavaScript](/es/docs/Web/JavaScript/Guide)
+- El capítulo [Expresiones Regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions) de la [Guía JavaScript](/es/docs/Web/JavaScript/Guide)
 - {{jsxref("RegExp")}}

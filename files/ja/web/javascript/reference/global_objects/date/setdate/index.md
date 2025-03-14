@@ -11,7 +11,22 @@ l10n:
 
 指定された日時の月日を UTC 時間に基づいて変更するには、代わりに {{jsxref("Date.prototype.setUTCDate()", "setUTCDate()")}} メソッドを使用してください。
 
-{{EmbedInteractiveExample("pages/js/date-setdate.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setDate()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+event.setDate(24);
+
+console.log(event.getDate());
+// Expected output: 24
+
+event.setDate(32);
+// Only 31 days in August!
+
+console.log(event.getDate());
+// Expected output: 1
+```
 
 ## 構文
 
@@ -42,11 +57,11 @@ setDate(dayValue)
 
 ```js
 const theBigDay = new Date(1962, 6, 7, 12); // noon of 1962-07-07 (7th of July 1962, month is 0-indexed)
-const theBigDay2 = new Date(theBigDay).setDate(24);  // 1962-07-24 (24th of July 1962)
-const theBigDay3 = new Date(theBigDay).setDate(32);  // 1962-08-01 (1st of August 1962)
-const theBigDay4 = new Date(theBigDay).setDate(22);  // 1962-07-22 (22nd of July 1962)
-const theBigDay5 = new Date(theBigDay).setDate(0);   // 1962-06-30 (30th of June 1962)
-const theBigDay6 = new Date(theBigDay).setDate(98);  // 1962-10-06 (6th of October 1962)
+const theBigDay2 = new Date(theBigDay).setDate(24); // 1962-07-24 (24th of July 1962)
+const theBigDay3 = new Date(theBigDay).setDate(32); // 1962-08-01 (1st of August 1962)
+const theBigDay4 = new Date(theBigDay).setDate(22); // 1962-07-22 (22nd of July 1962)
+const theBigDay5 = new Date(theBigDay).setDate(0); // 1962-06-30 (30th of June 1962)
+const theBigDay6 = new Date(theBigDay).setDate(98); // 1962-10-06 (6th of October 1962)
 const theBigDay7 = new Date(theBigDay).setDate(-50); // 1962-05-11 (11th of May 1962)
 ```
 

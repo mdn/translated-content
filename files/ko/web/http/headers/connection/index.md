@@ -1,18 +1,13 @@
 ---
 title: Connection
 slug: Web/HTTP/Headers/Connection
-tags:
-  - HTTP
-  - 웹
-  - 참조
-  - 헤더
-translation_of: Web/HTTP/Headers/Connection
 ---
+
 {{HTTPSidebar}}
 
 **`Connection`** 일반 헤더는 현재의 전송이 완료된 후 네트워크 접속을 유지할지 말지를 제어합니다. 만약 전송된 값이 `keep-alive`면, 연결은 지속되고 끊기지 않으며, 동일한 서버에 대한 후속 요청을 수행할 수 있습니다.
 
-> **경고:** {{HTTPHeader("Connection")}} 와 {{HTTPHeader("Keep-Alive")}} 같은 연결-지정(Connection-specific) 헤더 필드들은 [HTTP/2.에서 금지되었습니다](https://tools.ietf.org/html/rfc7540#section-8.1.2.2). 크롬과 파이어폭스는 HTTP/2 응답에서 그들을 무시하지만, 사파리는 HTTP/2 규격 요건에 따라 해당 필드가 포함된 응답은 처리하지 않습니다.
+> **경고:** {{HTTPHeader("Connection")}} 와 {{HTTPHeader("Keep-Alive")}} 같은 연결-지정(Connection-specific) 헤더 필드들은 [HTTP/2.에서 금지되었습니다](https://tools.ietf.org/html/rfc7540#section-8.1.2.2). 크롬과 Firefox는 HTTP/2 응답에서 그들을 무시하지만, Safari는 HTTP/2 규격 요건에 따라 해당 필드가 포함된 응답은 처리하지 않습니다.
 
 표준 홉 간 헤더인 ({{HTTPHeader("Keep-Alive")}}, {{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Connection")}}, {{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}}, {{HTTPHeader("Proxy-Authorization")}} 그리고 {{HTTPHeader("Proxy-Authenticate")}})를 제외하고, 메시지에 의해 사용되는 모든 홉 간 헤더들이 `Connection` 헤더 내에 연결되기에, 첫번째 프록시는 자신이 해당 헤더들을 소비해야 하며 포워드해서는 안된다는 것을 알 게 됩니다. 표준 홉 간 헤더들도 나열될 수 있지만(대게 {{HTTPHeader("Keep-Alive")}}의 경우가 그렇습니다), 강제적인 것은 아닙니다.
 
@@ -45,4 +40,4 @@ Connection: close
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Connection")}}
+{{Compat}}

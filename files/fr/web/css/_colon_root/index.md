@@ -1,16 +1,11 @@
 ---
-title: ':root'
+title: :root
 slug: Web/CSS/:root
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:root
 ---
 
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:root`** permet de cibler la racine de l'arbre représentant le document. Pour un document HTML, `:root` ciblera donc l'élément {{HTMLElement("html")}} et aura le même comportement que le sélecteur `html` mais [sa spécificité](/fr/Apprendre/CSS/Introduction_à_CSS/La_cascade_et_l_héritage#Le_poids_des_sélecteurs) sera plus forte.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:root`** permet de cibler la racine de l'arbre représentant le document. Pour un document HTML, `:root` ciblera donc l'élément {{HTMLElement("html")}} et aura le même comportement que le sélecteur `html` mais [sa spécificité](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#le_poids_des_sélecteurs) sera plus forte.
 
 ```css
 /* Sélectionne l'élément racine du document */

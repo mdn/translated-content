@@ -1,16 +1,20 @@
 ---
-title: Navigator.share()
+title: "Navigator: share() メソッド"
+short-title: share()
 slug: Web/API/Navigator/share
 l10n:
-  sourceCommit: a243190b798aa57b6cc08b9ef3216aed8ab9c895
+  sourceCommit: 91907f1383139ec2bd1d309d02ffac30b4eee757
 ---
 
 {{APIRef("Web Share API")}}{{securecontext_header}}
 
-**`navigator.share()`** は[ウェブ共有 API](/en-US/docs/Web/API/Web_Share_API) のメソッドで、テキスト、URL、ファイルなどのデータを共有するために、端末のネイティブ共有メカニズムを呼び出します。利用できる共有ターゲットは機器によって異なりますが、クリップボード、連絡先やメールアプリケーション、ウェブサイト、Bluetooth などが含まれる場合があります。
+**`share()`** は {{domxref("Navigator")}} インターフェイスのメソッドで、テキスト、URL、ファイルなどのデータを共有するために、端末のネイティブ共有メカニズムを呼び出します。利用できる共有ターゲットは機器によって異なりますが、クリップボード、連絡先やメールアプリケーション、ウェブサイト、Bluetooth などが含まれる場合があります。
 
 このメソッドは {{jsxref("Promise")}} を `undefined` で解決します。
 Windows では、これは共有ポップアップが起動されたときに発生し、Android では、データが共有ターゲットに正常に渡されたときにプロミスが解決されます。
+
+[ウェブ共有 API](/ja/docs/Web/API/Web_Share_API) は、[web-share](/ja/docs/Web/HTTP/Headers/Permissions-Policy/web-share) 権限ポリシーで制限されます。
+`share()` メソッドは、その権限に対応してはいるが許可されていない場合に例外を発生させます。
 
 ## 構文
 
@@ -20,7 +24,7 @@ navigator.share(data)
 
 ### 引数
 
-- `data`
+- `data` {{optional_inline}}
 
   - : 共有するデータを含むオブジェクト。
 
@@ -29,10 +33,14 @@ navigator.share(data)
 
     使用可能な値は以下の通りです。
 
-    - `url`: 共有される URL を表す文字列。
-    - `text`: 共有されるテキストを表す文字列。
-    - `title`: 共有されるタイトルを表す文字列。
-    - `files`: 共有されるファイルを表す {{domxref("File")}} オブジェクトの配列。
+    - `url` {{optional_inline}}
+      - : 共有される URL を表す文字列。
+    - `text` {{optional_inline}}
+      - : 共有されるテキストを表す文字列。
+    - `title` {{optional_inline}}
+      - : 共有されるタイトルを表す文字列。
+    - `files` {{optional_inline}}
+      - : 共有されるファイルを表す {{domxref("File")}} オブジェクトの配列。共有可能なファイルの種類については、[下記](#共有可能なファイル形式)を参照してください。
 
 ### 返値
 
@@ -42,8 +50,10 @@ navigator.share(data)
 
 {{jsxref("Promise")}} は以下の `DOMException` 値のいずれかで拒否される可能性がある。
 
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : 文書が完全にアクティブになっていない、または他にも共有操作が進行中です。
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : [web-share](/ja/docs/Web/HTTP/Headers/Feature-Policy/web-share) の権限が与えられていないか、ウィンドウが{{Glossary("transient activation", "単発の活性化")}}されていないか、セキュリティ上の配慮からファイル共有がブロックされているかです。
+  - : `web-share` [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によってこの機能の使用がブロックされているか、ウィンドウが{{Glossary("transient activation", "一時的な有効化")}}されていないか、セキュリティ上の配慮からファイル共有がブロックされているかです。
 - {{jsxref("TypeError")}}
 
   - : 指定した共有データを検証することができません。想定される理由は以下の通りです。
@@ -58,9 +68,9 @@ navigator.share(data)
 - `DataError` {{domxref("DOMException")}}
   - : 共有対象を開始する、またはデータを送信する際に問題が発生した場合。
 
-## 共有可能なファイル型
+## 共有可能なファイル形式
 
-以下は、通常共有できるファイル型の一覧です。ただし、共有が成功するかどうかは常に {{domxref("navigator.canShare()")}} でテストしてください。
+以下は、通常共有できるファイル形式の一覧です。ただし、共有が成功するかどうかは常に {{domxref("navigator.canShare()")}} でテストしてください。
 
 - アプリケーション
   - `.pdf` - `application/pdf`
@@ -111,7 +121,7 @@ navigator.share(data)
 
 ## セキュリティ
 
-このメソッドは、現在の文書が [web-share](/ja/docs/Web/HTTP/Headers/Feature-Policy/web-share) 権限ポリシーと{{Glossary("transient activation", "単発の活性化")}}を持っていることが必要です（ボタンクリックなどのUIイベントをきっかけに起動しなければならず、スクリプトによって任意の時点で起動させることはできない）。さらに、このメソッドでは、ネイティブ実装で共有に対応している有効なデータを指定する必要があります。
+このメソッドは、現在の文書が [web-share](/ja/docs/Web/HTTP/Headers/Permissions-Policy/web-share) 権限ポリシーと{{Glossary("transient activation", "一時的な有効化")}}を持っていることが必要です（ボタンクリックなどのUIイベントをきっかけに起動しなければならず、スクリプトによって任意の時点で起動させることはできない）。さらに、このメソッドでは、ネイティブ実装で共有に対応している有効なデータを指定する必要があります。
 
 ## 例
 
@@ -124,7 +134,7 @@ navigator.share(data)
 HTML は、共有を発生させるためのボタンと、テストの結果を表示するための段落を作成するだけです。
 
 ```html
-<p><button>Share MDN!</button></p>
+<p><button>MDN を共有!</button></p>
 <p class="result"></p>
 ```
 
@@ -132,19 +142,19 @@ HTML は、共有を発生させるためのボタンと、テストの結果を
 
 ```js
 const shareData = {
-  title: 'MDN',
-  text: 'MDN でウェブ開発を学びましょう。',
-  url: 'https://developer.mozilla.org',
-}
+  title: "MDN",
+  text: "MDN でウェブ開発を学びましょう。",
+  url: "https://developer.mozilla.org",
+};
 
-const btn = document.querySelector('button');
-const resultPara = document.querySelector('.result');
+const btn = document.querySelector("button");
+const resultPara = document.querySelector(".result");
 
-// 共有は「ユーザーによる活性化」で発生させること。
-btn.addEventListener('click', async () => {
+// 共有は「ユーザーによる有効化」で発生させること。
+btn.addEventListener("click", async () => {
   try {
     await navigator.share(shareData);
-    resultPara.textContent = 'MDN shared successfully';
+    resultPara.textContent = "MDN の共有に成功しました";
   } catch (err) {
     resultPara.textContent = `Error: ${err}`;
   }
@@ -155,7 +165,7 @@ btn.addEventListener('click', async () => {
 
 ボタンをクリックすると、お使いのプラットフォームで共有ダイアログが起動します。ボタンの下に、共有が成功したかどうか、またはエラーコードを提供するためのテキストが表示されます。
 
-{{EmbedLiveSample('Sharing a URL')}}
+{{EmbedLiveSample('Sharing a URL','','','','','','web-share')}}
 
 ### ファイルの共有
 
@@ -165,10 +175,10 @@ btn.addEventListener('click', async () => {
 
 ```html
 <div>
-  <label for="files">Select images to share:</label>
+  <label for="files">共有する画像を選択:</label>
   <input id="files" type="file" accept="image/*" multiple />
 </div>
-<button id="share" type="button">Share your images!</button>
+<button id="share" type="button">画像を共有</button>
 <output id="output"></output>
 ```
 
@@ -177,39 +187,39 @@ btn.addEventListener('click', async () => {
 `navigator.canShare()` に渡されるデータオブジェクトには、 `title` と `text` は重要ではないので、`files`プロパティのみが記載されます。
 
 ```js
-const input = document.getElementById('files')
-const output = document.getElementById('output')
+const input = document.getElementById("files");
+const output = document.getElementById("output");
 
-document.getElementById('share').addEventListener('click', async () => {
-  const files = input.files
+document.getElementById("share").addEventListener("click", async () => {
+  const files = input.files;
 
   if (files.length === 0) {
-    output.textContent = 'No files selected.'
-    return
+    output.textContent = "ファイルが選択されていません。";
+    return;
   }
 
-  // feature detecting navigator.canShare() also implies
-  // the same for the navigator.share()
+  // navigator.canShare() による機能検出は、navigator.share() についても
+  // 同じことを意味します。
   if (!navigator.canShare) {
-    output.textContent = `Your browser doesn't support the Web Share API.`
-    return
+    output.textContent = `このブラウザーはウェブ共有 API に対応していません。`;
+    return;
   }
 
   if (navigator.canShare({ files })) {
     try {
       await navigator.share({
         files,
-        title: 'Images',
-        text: 'Beautiful images'
-      })
-      output.textContent = 'Shared!'
+        title: "Images",
+        text: "美しい画像",
+      });
+      output.textContent = "共有しました!";
     } catch (error) {
-      output.textContent = `Error: ${error.message}`
+      output.textContent = `エラー: ${error.message}`;
     }
   } else {
-    output.textContent = `Your system doesn't support sharing these files.`
+    output.textContent = `このシステムはこのファイルの共有に対応していません。`;
   }
-})
+});
 ```
 
 #### 結果

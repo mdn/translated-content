@@ -1,16 +1,6 @@
 ---
 title: extension
 slug: Mozilla/Add-ons/WebExtensions/API/extension
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension
 ---
 
 {{AddonSidebar}}
@@ -55,15 +45,15 @@ Utilitaires liés à votre extension. Obtenez des URL vers des packages de resso
 - {{WebExtAPIRef("extension.onRequestExternal")}} {{deprecated_inline}}
   - : Lancé lorsqu'une requête est envoyée depuis une autre extension.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/extensions/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

@@ -1,13 +1,6 @@
 ---
 title: 한 번에 여러 배경 사용하기
-slug: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-tags:
-  - CSS
-  - CSS Background
-  - Example
-  - Guide
-  - Reference
-translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
+slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 ---
 
 {{CSSRef}}
@@ -18,7 +11,11 @@ translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 
 ```css
 .myclass {
-  background: background1, background 2, ..., backgroundN;
+  background:
+    background1,
+    background 2,
+    ...,
+    backgroundN;
 }
 ```
 
@@ -26,7 +23,7 @@ translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 
 ## 예제
 
-다음 예제는 Firefox 로고, 거품, [선형 그레이디언트](/ko/docs/Web/CSS/linear-gradient) 총 세 개의 배경을 사용합니다.
+다음 예제는 Firefox 로고, 거품, [선형 그레이디언트](/ko/docs/Web/CSS/gradient/linear-gradient) 총 세 개의 배경을 사용합니다.
 
 ### HTML
 
@@ -40,15 +37,14 @@ translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 .multi-bg-example {
   width: 100%;
   height: 400px;
-  background-image: url(https://mdn.mozillademos.org/files/11305/firefox.png),
-      url(https://mdn.mozillademos.org/files/11307/bubbles.png),
-      linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
-  background-repeat: no-repeat,
-      no-repeat,
-      no-repeat;
-  background-position: bottom right,
-      left,
-      right;
+  background-image:
+    url(firefox.png), url(bubbles.png),
+    linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position:
+    bottom right,
+    left,
+    right;
 }
 ```
 
@@ -60,4 +56,4 @@ translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 
 ## 같이 보기
 
-- [CSS 그레이디언트 사용하기](/ko/docs/CSS/Using_CSS_gradients)
+- [CSS 그레이디언트 사용하기](/ko/docs/Web/CSS/CSS_images/Using_CSS_gradients)

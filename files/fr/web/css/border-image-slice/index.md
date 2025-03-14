@@ -1,8 +1,6 @@
 ---
 title: border-image-slice
 slug: Web/CSS/border-image-slice
-translation_of: Web/CSS/border-image-slice
-browser-compat: css.properties.border-image-slice
 ---
 
 {{CSSRef}}
@@ -64,7 +62,7 @@ La valeur optionnelle `fill` peut être utilisée et placée à n'importe quel e
 - [`<percentage>`](/fr/docs/Web/CSS/percentage)
   - : Représente un décalage par rapport au bord comme pourcentage par rapport à la taille de l'image source&nbsp;: c'est la largeur de l'image qui sert de référence pour les décalages horizontaux et la hauteur de l'image qui sert de référence pour les décalages verticaux.
 - `fill`
-  - : La région au centre de l'image est conservée et celle-ci est affichée comme image d'arrière-plan mais empilée *sous* l'arrière-plan fourni par [`background`](/fr/docs/Web/CSS/background). La largeur et la hauteur sont dimensionnées afin de correspondre aux tailles des régions haute et gauche.
+  - : La région au centre de l'image est conservée et celle-ci est affichée comme image d'arrière-plan mais empilée _sous_ l'arrière-plan fourni par [`background`](/fr/docs/Web/CSS/background). La largeur et la hauteur sont dimensionnées afin de correspondre aux tailles des régions haute et gauche.
 
 ## Définition formelle
 
@@ -105,12 +103,14 @@ Ce sont les valeurs par défaut que nous avons utilisées dans cet exemple. Nous
 <ul>
   <li>
     <label for="width">Déplacez pour ajuster <code>border-width</code></label>
-    <input type="range" min="10" max="45" id="width">
+    <input type="range" min="10" max="45" id="width" />
     <output id="width-output">30px</output>
   </li>
   <li>
-    <label for="slice">Déplacez pour ajuster <code>border-image-slice</code></label>
-    <input type="range" min="10" max="45" id="slice">
+    <label for="slice"
+      >Déplacez pour ajuster <code>border-image-slice</code></label
+    >
+    <input type="range" min="10" max="45" id="slice" />
     <output id="slice-output">30</output>
   </li>
 </ul>
@@ -143,23 +143,23 @@ li {
 #### JavaScript
 
 ```js
-const widthSlider = document.getElementById('width');
-const sliceSlider = document.getElementById('slice');
-const widthOutput = document.getElementById('width-output');
-const sliceOutput = document.getElementById('slice-output');
-const divElem = document.querySelector('div > div');
+const widthSlider = document.getElementById("width");
+const sliceSlider = document.getElementById("slice");
+const widthOutput = document.getElementById("width-output");
+const sliceOutput = document.getElementById("slice-output");
+const divElem = document.querySelector("div > div");
 
-widthSlider.addEventListener('input', () => {
-  const newValue = widthSlider.value + 'px';
+widthSlider.addEventListener("input", () => {
+  const newValue = widthSlider.value + "px";
   divElem.style.borderWidth = newValue;
   widthOutput.textContent = newValue;
-})
+});
 
-sliceSlider.addEventListener('input', () => {
+sliceSlider.addEventListener("input", () => {
   const newValue = sliceSlider.value;
   divElem.style.borderImageSlice = newValue;
   sliceOutput.textContent = newValue;
-})
+});
 ```
 
 #### Résultat
@@ -176,4 +176,4 @@ sliceSlider.addEventListener('input', () => {
 
 ## Voir aussi
 
-- [Description illustrée de la syntaxe multi-valuée](/fr/docs/Web/CSS/Shorthand_properties#quelques_cas_aux_limites_%c3%a9pineux)
+- [Description illustrée de la syntaxe multi-valuée](/fr/docs/Web/CSS/Shorthand_properties#quelques_cas_aux_limites_épineux)

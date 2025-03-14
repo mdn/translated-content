@@ -1,26 +1,13 @@
 ---
-title: CSS
+title: "CSS: каскадные таблицы стилей"
 slug: Web/CSS
-tags:
-  - CSS
-  - Landing
-  - Layout
-  - Learning
-  - Reference
-  - Référence(2)
-  - Вёрстка
-  - Главная
-  - Дизайн
-  - Справка
-  - Стиль
-translation_of: Web/CSS
 ---
 
 {{CSSRef}}
 
-**Cascading Style Sheets** (**CSS**) — это язык иерархических правил ([таблиц стилей](/ru/docs/DOM/stylesheet)), используемый для представления внешнего вида документа, написанного на [HTML](/ru/docs/HTML) или [XML](/ru/docs/XML) (включая различные языки XML, такие как [SVG](/ru/docs/SVG) и [XHTML](/ru/docs/XHTML)). CSS описывает, каким образом элемент должен отображаться на экране, на бумаге, голосом или с использованием других медиа средств.
+**Cascading Style Sheets** (**CSS**) — это язык иерархических правил ([таблиц стилей](/ru/docs/Web/API/StyleSheet)), используемый для представления внешнего вида документа, написанного на [HTML](/ru/docs/Web/HTML) или [XML](/ru/docs/Web/XML/XML_introduction) (включая различные языки XML, такие как [SVG](/ru/docs/Web/SVG) и {{Glossary("XHTML")}}. CSS описывает, каким образом элемент должен отображаться на экране, на бумаге, голосом или с использованием других медиа средств.
 
-**CSS** является одним из основных языков _свободной веб-разработки,_ который стандартизован [спецификацией W3C](http://w3.org/Style/CSS/#specs). Стандарт CSS делится на уровни: CSS1 в настоящее время устарел, CSS2.1 — рекомендован для применения, а [CSS3](/ru/docs/CSS/CSS3), разбитый на более мелкие модули, развивается на пути стандартизации.
+**CSS** является одним из основных языков _свободной веб-разработки,_ который стандартизован [спецификацией W3C](https://w3.org/Style/CSS/#specs). Стандарт CSS делится на уровни: CSS1 в настоящее время устарел, CSS2.1 — рекомендован для применения, а CSS3, разбитый на более мелкие модули, развивается на пути стандартизации.
 
 - Справочник по CSS
 
@@ -28,31 +15,42 @@ translation_of: Web/CSS
 
 - Самоучитель по CSS
 
-  [Пошаговое руководство](/Learn/CSS/Introduction_to_CSS) для помощи начинающим программистам CSS. Содержит все необходимые основы.
+  [Пошаговое руководство](/ru/docs/Learn/CSS/First_steps) для помощи начинающим программистам CSS. Содержит все необходимые основы.
 
 - Примеры CSS3
 
-  [Набор примеров](/ru/demos/tag/tech:css3) представляющий новейшие технологии CSS в действии: толчок к креативности.
+  [Набор примеров](/ru/docs/Web/Demos_of_open_web_technologies) представляющий новейшие технологии CSS в действии: толчок к креативности.
 
-## Документация и самоучители
+## Документация
 
-- Ключевые понятия CSS
-  - : Описание [синтаксиса и внешнего вида языка](/ru/docs/CSS/Syntax) и введение в фундаментальные понятия такие как [специфичность](/ru/docs/CSS/Specificity), [наследование(каскадирование)](/ru/docs/CSS/inheritance), блочная модель([box-model](/ru/docs//ru/docs/CSS/box_model)) и схлопывание отступов([margin-collapse](/ru/docs/CSS/margin_collapsing)), [наложение](/ru/docs/CSS/Understanding_z-index/The_stacking_context) и контекст форматирования([Block formatting context](/ru/docs/CSS/block_formatting_context)), начальное([initial](/ru/docs/CSS/initial_value)), вычисленное([computed](/ru/docs/CSS/computed_value)), используемое([used](/ru/docs/CSS/used_value)) и актуальное([actual](/ru/docs/CSS/actual_value)) значения. Кроме того, описана [краткая форма записи](/ru/docs/CSS/Shorthand_properties) свойств CSS.
-- [Руководство разработчика CSS](/ru/docs/Web/Guide/CSS)
-  - : Статьи, которые помогут вам узнать все: начиная от основ организации стилей в HTML, заканчивая различными методами языка CSS, чтобы сделать свой контент сияющим.
-- [Распространённые вопросы по CSS](/ru/docs/Web/CSS/Common_CSS_Questions)
-  - : Ответы на часто возникающие вопросы о **CSS**.
+- [Справочник CSS](/ru/docs/Web/CSS/Reference): исчерпывающий справочник для опытных веб-разработчиков, в котором описаны все свойства и понятия CSS.
+- Ключевые понятия CSS:
+  - [Описание синтаксиса и внешнего вида языка](/ru/docs/Web/CSS/Syntax)
+  - [Специфичность](/ru/docs/Web/CSS/Specificity), [наследование](/ru/docs/Web/CSS/Inheritance) и [каскадирование](/ru/docs/Web/CSS/Cascade)
+  - [Единицы измерения в CSS](/ru/docs/Web/CSS/CSS_Values_and_Units) и [функции в CSS](/ru/docs/Web/CSS/CSS_Functions)
+  - [Блоковая модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) и [схлопывание внешних отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [Содержащий блок](/ru/docs/Web/CSS/Containing_block)
+  - [Контекст наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) и [блочный контекст форматирования](/ru/docs/Web/CSS/CSS_display/Block_formatting_context)
+  - [Начальное](/ru/docs/Web/CSS/initial_value), [вычисленное](/ru/docs/Web/CSS/computed_value), [используемое](/ru/docs/Web/CSS/used_value) и [действительное](/ru/docs/Web/CSS/actual_value) значения
+  - [Краткая форма записи CSS свойств](/ru/docs/Web/CSS/Shorthand_properties)
+  - [Флексбокс-раскладка в CSS](/ru/docs/Web/CSS/CSS_flexible_box_layout)
+  - [Грид-раскладка в CSS](/ru/docs/Web/CSS/CSS_grid_layout)
+  - [CSS-селекторы](/ru/docs/Web/CSS/CSS_selectors)
+  - [Медиавыражения](/ru/docs/Web/CSS/CSS_media_queries)
+  - [Анимация](/ru/docs/Web/CSS/animation)
+
+## Книга рецептов
+
+В [Книге рецептов CSS разметки](/ru/docs/Web/CSS/Layout_cookbook) собраны примеры распространённых подходов, используемых для реализации разметки, которые вы сможете реализовать на своих сайтах. Эти рецепты также освещают различные способы использования спецификаций разметки и помогают сделать выбор нужной.
 
 ## Инструменты для разработки CSS
 
-- [Служба проверки W3C CSS](http://jigsaw.w3.org/css-validator/) проверяет правильность работы вашего CSS кода. Служба [OnlineWebCheck.com](//www.OnlineWebCheck.com/) делает то же самое. Это отличные инструменты для отладки.
-- [Инструменты разработчика Firefox](/ru/docs/Tools) позволяют рассматривать и изменять "на лету" CSS страницы с помощью инструментов [Инспектор](/ru/docs/Tools/Page_Inspector) и [Редактор таблиц стилей](/ru/docs/Tools/Style_Editor).
-- [Расширение Firebug](https://addons.mozilla.org/ru/firefox/addon/1843) для Firefox, популярное расширение для этого браузера, которое также позволяет редактировать "на лету" CSS код при просмотре сайтов. Помогает легко тестировать работу кода при внесении различных изменений. Помимо этого, расширение имеет другие полезные функции.
-- [Расширение Web Developer](https://addons.mozilla.org/ru/firefox/addon/60) для Firefox позволяет отслеживать и изменять "на лету" CSS код на просматриваемых сайтах. Проще чем Firebug, но обладает меньшей функциональностью.
-- [Прочие инструменты CSS.](/ru/docs/Web/CSS/Tools)
+- Используйте [Службу проверки W3C CSS](https://jigsaw.w3.org/css-validator/) для проверки правильности вашего CSS кода. Это отличный инструмент для отладки.
+- [Инструменты разработчика Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html) позволяют просматривать и изменять «на лету» CSS страницы с помощью инструментов [Инспектор](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) и [Редактор стилей](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html).
+- [Расширение Web Developer](https://addons.mozilla.org/ru/firefox/addon/web-developer/) для Firefox позволяет отслеживать и изменять «на лету» CSS код на просматриваемых сайтах.
 
 ## Смотрите также
 
-- Изучение [CSS](/ru/docs/Learn/CSS) от Mozilla.
-- Веб-языки для которых часто применяется CSS: [HTML](/ru/docs/HTML), [SVG](/ru/docs/Web/SVG), [XHTML](/ru/docs/XHTML), [XML](/ru/docs/XML).
-- Технологии Mozilla, широко использующие CSS: [XUL](/ru/docs/Mozilla/Tech/XUL), [Firefox](/ru/Firefox), а также [Thunderbird](/ru/docs/Mozilla/Thunderbird) [расширения](/ru/docs/Extensions) и [темы](/ru/Add-ons/Themes).
+- [CSS демо](/ru/docs/Web/Demos#css): почерпните вдохновение, изучив примеры новейших технологий CSS в действии.
+- Веб-языки в которых часто применяется CSS: [HTML](/ru/docs/Web/HTML), [SVG](/ru/docs/Web/SVG), [MathML](/ru/docs/Web/MathML), {{Glossary("XHTML")}} и [XML](/ru/docs/Web/XML/XML_introduction).
+- [Вопросы о CSS на Stack Overflow](https://stackoverflow.com/questions/tagged/css)

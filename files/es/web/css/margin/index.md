@@ -65,14 +65,14 @@ HTML
 
 ```html
 <div class="ex1">
-  margin:     auto;
-  background: gold;
-  width:      66%;
+  margin: auto;<br />
+  background: gold;<br />
+  width: 66%;
 </div>
 <div class="ex2">
-  margin:     20px 0 0 -20px;
-  background: gold;
-  width:      66%;
+  margin: 20px 0 0 -20px;<br />
+  background: gold;<br />
+  width: 66%;
 </div>
 ```
 
@@ -96,19 +96,19 @@ CSS
 ### Otro ejemplo
 
 ```css
-margin: 5%;                /* 5% para todos los lados */
+margin: 5%; /* 5% para todos los lados */
 
-margin: 10px;              /* 10px para todos los lados */
+margin: 10px; /* 10px para todos los lados */
 
-margin: 1.6em 20px;        /* 1.6em arriba y abajo, 20px izquierda y derecha */
+margin: 1.6em 20px; /* 1.6em arriba y abajo, 20px izquierda y derecha */
 
-margin: 10px 3% 1em;       /* 10px arriba, 3% izquierda y derecha, 1em abajo */
+margin: 10px 3% 1em; /* 10px arriba, 3% izquierda y derecha, 1em abajo */
 
 margin: 10px 3px 30px 5px; /* 10px arriba, 3px derecha, 30px abajo, 5px izquierda */
 
-margin: 1em auto;          /* 1em arriba y abajo, centrado horizontalmente */
+margin: 1em auto; /* 1em arriba y abajo, centrado horizontalmente */
 
-margin: auto;              /* 0px de margen vertical, centrado horizontalmente */
+margin: auto; /* 0px de margen vertical, centrado horizontalmente */
 ```
 
 ## Centrado horizontal con `margin: 0 auto;`
@@ -121,10 +121,10 @@ Sin embargo, en navegadores antiguos como IE8-9, **flexbox** no está disponible
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.margin")}}
+{{Compat}}
 
 ## Ver también
 
-- [Entendiendo el colapso de margen](/es/docs/Web/CSS/CSS_Modelo_Caja/Mastering_margin_collapsing)
+- [Entendiendo el colapso de margen](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)

@@ -1,5 +1,5 @@
 ---
-title: '::-moz-range-progress'
+title: ::-moz-range-progress
 slug: Web/CSS/::-moz-range-progress
 ---
 
@@ -7,7 +7,8 @@ slug: Web/CSS/::-moz-range-progress
 
 The **`::-moz-range-progress`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 是一个 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)。它代表了指示器在其中滑动的轨道的下部（即凹槽）是一个 `type="range"` 类型的 {{HTMLElement("input")}} 。此部分对应的值低于揪揪当前选择的值（即虚拟旋钮）。
 
-> **备注：** 在 `<input type="range">`上应用`::-moz-range-progress` 不会匹配任何元素，也不会有任何效果。
+> [!NOTE]
+> 在 `<input type="range">`上应用`::-moz-range-progress` 不会匹配任何元素，也不会有任何效果。
 
 ## 语法
 
@@ -18,13 +19,13 @@ The **`::-moz-range-progress`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/do
 ### HTML
 
 ```html
-<input type="range" min="0" max="100" step="5" value="50"/>
+<input type="range" min="0" max="100" step="5" value="50" />
 ```
 
 ### CSS
 
 ```css
-input[type=range]::-moz-range-progress {
+input[type="range"]::-moz-range-progress {
   background-color: green;
   height: 1em;
 }
@@ -32,7 +33,7 @@ input[type=range]::-moz-range-progress {
 
 ### 结果
 
-{{EmbedLiveSample("Example", 300, 50)}}
+{{EmbedLiveSample("示例", 300, 50)}}
 
 使用了这个样式的进度条可能会看起来这样：
 
@@ -46,7 +47,7 @@ input[type=range]::-moz-range-progress {
 
 {{Compat}}
 
-## 相关阅读
+## 参见
 
 - Gecko 用于设置范围输入的其他部分样式的伪元素：
 
@@ -58,4 +59,4 @@ input[type=range]::-moz-range-progress {
   - {{cssxref("::-ms-fill-upper")}}, Internet Explorer 和 Edge 支持的伪元素
 
 - [CSS-Tricks：使用 CSS 设置跨浏览器兼容范围输入的样式](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode：样式和脚本滑块](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [QuirksMode：样式和脚本滑块](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

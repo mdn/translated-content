@@ -1,27 +1,13 @@
 ---
 title: ServiceWorkerRegistration
 slug: Web/API/ServiceWorkerRegistration
-tags:
-  - API
-  - Interface
-  - NeedsTranslation
-  - Offline
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorkerRegistration
-  - TopicStub
-  - Workers
-translation_of: Web/API/ServiceWorkerRegistration
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 Интерфейс `ServiceWorkerRegistration` ссылается на регистрацию Service Worker. Вы можете зарегистрировать Service Worker, чтобы контролировать одну или несколько страниц на одном домене.
 
 The lifetime of a service worker registration is beyond that of the `ServiceWorkerRegistration` objects that represent them within the lifetime of their corresponding service worker clients. The browser maintains a persistent list of active `ServiceWorkerRegistration` objects.
-
-> **Примечание:** **Эта функция доступна в** [Web Workers](/ru/docs/Web/API/Web_Workers_API).
 
 ## Свойства
 
@@ -47,7 +33,7 @@ _Also implements properties from its parent interface,_ {{domxref("EventTarget")
 ### Event handlers
 
 - {{domxref("ServiceWorkerRegistration.onupdatefound")}} {{readonlyinline}}
-  - : An [`EventListener`](/ru/docs/Web/API/EventListener) property called whenever an event of type `updatefound` is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
+  - : An [`EventListener`](/ru/docs/Web/API/EventTarget/addEventListener) property called whenever an event of type `updatefound` is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
 
 ## Методы
 
@@ -67,25 +53,28 @@ _Also implements methods from its parent interface,_ {{domxref("EventTarget")}}.
 In this example, the code first checks whether the browser supports service workers and if so registers one. Next, it adds and `updatefound` event in which it uses the service worker registration to listen for further changes to the service worker's state. If the service worker hasn't changed since the last time it was registered, than the `updatefound` event will not be fired.
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js')
-  .then(function(registration) {
-    registration.addEventListener('updatefound', function() {
-      // If updatefound is fired, it means that there's
-      // a new service worker being installed.
-      var installingWorker = registration.installing;
-      console.log('A new service worker is being installed:',
-        installingWorker);
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/sw.js")
+    .then(function (registration) {
+      registration.addEventListener("updatefound", function () {
+        // If updatefound is fired, it means that there's
+        // a new service worker being installed.
+        var installingWorker = registration.installing;
+        console.log(
+          "A new service worker is being installed:",
+          installingWorker,
+        );
 
-      // You can listen for changes to the installing service worker's
-      // state via installingWorker.onstatechange
+        // You can listen for changes to the installing service worker's
+        // state via installingWorker.onstatechange
+      });
+    })
+    .catch(function (error) {
+      console.log("Service worker registration failed:", error);
     });
-  })
-  .catch(function(error) {
-    console.log('Service worker registration failed:', error);
-  });
 } else {
-  console.log('Service workers are not supported.');
+  console.log("Service workers are not supported.");
 }
 ```
 
@@ -93,14 +82,14 @@ if ('serviceWorker' in navigator) {
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Использование Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Использование Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web workers](/ru/docs/Web/Guide/Performance/Using_web_workers)
+- [Using web workers](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)

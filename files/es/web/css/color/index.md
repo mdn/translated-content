@@ -7,7 +7,7 @@ slug: Web/CSS/color
 
 La propiedad de CSS **`color`** selecciona el [valor de color](/es/docs/Web/CSS/color_value) de primer plano del contenido de elemento de texto y [decoraciones de texto](/es/docs/Web/CSS/text-decoration). Tambien establece el valor {{cssxref("currentcolor")}} que se puede usar como un valor indirecto en otras propiedades, y es el valor predeterminado para otras propiedades de color, como {{cssxref("border-color")}}.
 
-Para obtener una descripción general del uso del color en HTML, consulte [Aplicando color a los elementos HTML mediante CSS](/es/docs/Web/HTML/Applying_color).
+Para obtener una descripción general del uso del color en HTML, consulte [Aplicando color a los elementos HTML mediante CSS](/es/docs/Web/CSS/CSS_colors/Applying_color).
 
 #### Ejemplo
 
@@ -32,7 +32,7 @@ color: rgb(34, 12, 64, 0.6);
 color: rgba(34, 12, 64, 0.6);
 color: rgb(34 12 64 / 0.6);
 color: rgba(34 12 64 / 0.3);
-color: rgb(34.0 12 64 / 60%);
+color: rgb(34 12 64 / 60%);
 color: rgba(34.6 12 64 / 30%);
 
 /* Valores <hsl()> */
@@ -40,7 +40,7 @@ color: hsl(30, 100%, 50%, 0.6);
 color: hsla(30, 100%, 50%, 0.6);
 color: hsl(30 100% 50% / 0.6);
 color: hsla(30 100% 50% / 0.6);
-color: hsl(30.0 100% 50% / 60%);
+color: hsl(30 100% 50% / 60%);
 color: hsla(30.2 100% 50% / 60%);
 
 /* Valores Globales */
@@ -91,7 +91,8 @@ Ten en cuenta que el valor debe ser un {{cssxref("color")}} uniforme . No puede 
 ```
 
 ```css hidden
-html,body {
+html,
+body {
   height: 100%;
   box-sizing: border-box;
 }
@@ -100,7 +101,7 @@ html,body {
   width: 100%;
   height: 100%;
   display: flex;
-  background: #EEE;
+  background: #eee;
   font: 1em monospace;
 }
 
@@ -111,9 +112,9 @@ html,body {
 }
 
 .cell {
-  margin: .5em;
-  padding: .5em;
-  background-color: #FFF;
+  margin: 0.5em;
+  padding: 0.5em;
+  background-color: #fff;
   overflow: hidden;
   text-align: left;
   font-style: italic;
@@ -122,40 +123,74 @@ html,body {
 p {
   font-size: 1rem;
   font-style: normal;
-  padding: 0 .5em .5em;
+  padding: 0 0.5em 0.5em;
   margin: 0;
 }
 
 p:first-child {
-  padding-top: .5em;
+  padding-top: 0.5em;
 }
 
 /* Valores de palabras clave */
-.c1 { color: currentcolor; }
+.c1 {
+  color: currentcolor;
+}
 
 /*  values */
-.c2 { color: red; }
-.c3 { color: orange; }
-.c4 { color: tan; }
-.c5 { color: rebeccapurple; }
+.c2 {
+  color: red;
+}
+.c3 {
+  color: orange;
+}
+.c4 {
+  color: tan;
+}
+.c5 {
+  color: rebeccapurple;
+}
 
 /*  valores */
-.c6 { color: #090; }
-.c7 { color: #009900; }
-.c8 { color: #090A; }
-.c9 { color: #009900AA; }
+.c6 {
+  color: #090;
+}
+.c7 {
+  color: #009900;
+}
+.c8 {
+  color: #090a;
+}
+.c9 {
+  color: #009900aa;
+}
 
 /*  valores */
-.c10 { color: rgb(34, 12, 64, 0.6); }
-.c11 { color: rgba(34, 12, 64, 0.6); }
-.c12 { color: rgb(34 12 64 / 0.6); }
-.c13 { color: rgba(34 12 64 / 0.6); }
+.c10 {
+  color: rgb(34, 12, 64, 0.6);
+}
+.c11 {
+  color: rgba(34, 12, 64, 0.6);
+}
+.c12 {
+  color: rgb(34 12 64 / 0.6);
+}
+.c13 {
+  color: rgba(34 12 64 / 0.6);
+}
 
 /*  valores */
-.c14 { color: hsl(30, 100%, 50%, 0.6); }
-.c15 { color: hsla(30, 100%, 50%, 0.6); }
-.c16 { color: hsl(30 100% 50% / 0.6); }
-.c17 { color: hsla(30 100% 50% / 0.6); }
+.c14 {
+  color: hsl(30, 100%, 50%, 0.6);
+}
+.c15 {
+  color: hsla(30, 100%, 50%, 0.6);
+}
+.c16 {
+  color: hsl(30 100% 50% / 0.6);
+}
+.c17 {
+  color: hsla(30 100% 50% / 0.6);
+}
 ```
 
 {{EmbedLiveSample("", "100%", 630, "", "", "")}}
@@ -180,28 +215,44 @@ La propiedad `color` esta especificada como un solo un valor de {{cssxref("&lt;c
 Las siguientes son todas las formas de hacer que el texto de un párrafo sea rojo:
 
 ```css
-p { color: red; }
-p { color: #f00; }
-p { color: #ff0000; }
-p { color: rgb(255,0,0); }
-p { color: rgb(100%, 0%, 0%); }
-p { color: hsl(0, 100%, 50%); }
+p {
+  color: red;
+}
+p {
+  color: #f00;
+}
+p {
+  color: #ff0000;
+}
+p {
+  color: rgb(255, 0, 0);
+}
+p {
+  color: rgb(100%, 0%, 0%);
+}
+p {
+  color: hsl(0, 100%, 50%);
+}
 
 /* 50% translúcido */
-p { color: rgba(255, 0, 0, 0.5); }
-p { color: hsla(0, 100%, 50%, 0.5); }
+p {
+  color: rgba(255, 0, 0, 0.5);
+}
+p {
+  color: hsla(0, 100%, 50%, 0.5);
+}
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.color")}}
+{{Compat}}
 
 ## Ver también
 
 - El tipo de datos de {{cssxref("&lt;color&gt;")}}
 - Otras propiedades relacionadas con el color: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, y {{cssxref("column-rule-color")}}
-- [Aplicar color a elementos HTML usando CSS](/es/docs/Web/HTML/Applying_color)
+- [Aplicar color a elementos HTML usando CSS](/es/docs/Web/CSS/CSS_colors/Applying_color)

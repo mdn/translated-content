@@ -1,8 +1,6 @@
 ---
-title: 'CSP : frame-src'
+title: "CSP : frame-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/frame-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/frame-src
-browser-compat: http.headers.csp.Content-Security-Policy.frame-src
 ---
 
 {{HTTPSidebar}}
@@ -39,9 +37,9 @@ Content-Security-Policy: frame-src <source> <source>;
 
 ### Sources
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#directives_associées)).
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
 
 ## Exemples
 

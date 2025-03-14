@@ -1,8 +1,6 @@
 ---
 title: paint()
 slug: Web/CSS/image/paint
-translation_of: Web/CSS/image/paint
-browser-compat: css.types.image.paint
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -54,22 +52,24 @@ Il est possible de passer des arguments supplémentaires grâce à la fonction C
 ```
 
 ```js hidden
-CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');
+CSS.paintWorklet.addModule(
+  "https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js",
+);
 ```
 
 ```css
 li {
-  --boxColor: hsla(55, 90%, 60%, 1.0);
+  --boxColor: hsla(55, 90%, 60%, 1);
   background-image: paint(hollowHighlights, stroke, 2px);
 }
 
 li:nth-of-type(3n) {
-  --boxColor: hsla(155, 90%, 60%, 1.0);
-  background-image: paint(hollowHighlights, filled,  3px);
+  --boxColor: hsla(155, 90%, 60%, 1);
+  background-image: paint(hollowHighlights, filled, 3px);
 }
 
-li:nth-of-type(3n+1) {
-  --boxColor: hsla(255, 90%, 60%, 1.0);
+li:nth-of-type(3n + 1) {
+  --boxColor: hsla(255, 90%, 60%, 1);
   background-image: paint(hollowHighlights, stroke, 1px);
 }
 ```
@@ -88,8 +88,8 @@ On a ajouté une propriété personnalisée dans le sélecteur pour définir `bo
 
 ## Voir aussi
 
-- [`PaintWorklet`](/fr/docs/Web/API/PaintWorklet)
+- [`PaintWorklet`](/fr/docs/Web/API/PaintWorkletGlobalScope)
 - [L'API `CSS Painting`](/fr/docs/Web/API/CSS_Painting_API)
 - [Utiliser l'API CSS Painting](/fr/docs/Web/API/CSS_Painting_API/Guide)
 - [`<image>`](/fr/docs/Web/CSS/image)
-- [`canvas`](/fr/docs/Web/API/canvas)
+- [`canvas`](/fr/docs/Web/API/Canvas_API)

@@ -1,46 +1,84 @@
 ---
 title: Атрибут justify-items
 slug: Web/CSS/justify-items
-tags:
-  - CSS
-  - CSS атрибут
-  - CSS выравнивание блоков
-  - Ссылки
-translation_of: Web/CSS/justify-items
 ---
 
 {{CSSRef}}
 
 Атрибут [CSS](/ru/docs/Web/CSS) **`justify-items`** определяет атрибут по умолчанию {{CSSxRef ("justify-self")}} для всех элементов блока, предоставляя всем им способ выравнивания по умолчанию каждого блока вдоль соответствующей оси.
 
-{{EmbedInteractiveExample("pages/css/justify-items.html")}}
+{{InteractiveExample("CSS Demo: justify-items")}}
+
+```css interactive-example-choice
+justify-items: stretch;
+```
+
+```css interactive-example-choice
+justify-items: center;
+```
+
+```css interactive-example-choice
+justify-items: start;
+```
+
+```css interactive-example-choice
+justify-items: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 Эффект этого атрибута зависит от выбранного способа разметки:
 
 - Используя разметку с помощью блоков (block-level layout), элементы выравниваются внутри содержащего их блока по внутренней оси.
 - Для абсолютно позиционированых элементов выравнивание происходит внутри содержащего их блока по внутренней оси, учитывая значения смещения сверху, слева, снизу и справа.
 - Используя разметку с помощью ячеек таблицы (table cell layout), этот атрибут игнорируется ([подробнее](/ru/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables) о выравнивании в блочной структуре, абсолютном позиционировании и о табличной разметке).
-- Используя разметку с помощью гибких или адаптивных блоков (flexbox layout), этот атрибут игнорируется ([подробнее](/ru/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox) о выравнивании в разметке flexbox).
+- Используя разметку с помощью гибких или адаптивных блоков (flexbox layout), этот атрибут игнорируется ([подробнее](/ru/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox) о выравнивании в разметке flexbox).
 - Используя разметку с помощью сетки (grid layout), элементы выравниваются внутри их сеточной области по внутренней оси ([подробнее](/ru/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout) о выравнивании в разметке grid).
 
 ## Синтаксис
 
 ```css
-/* Основные ключевые слова */
+/* Ключевые слова */
 justify-items: auto;
 justify-items: normal;
 justify-items: stretch;
 
 /* Выравнивание положения */
-justify-items: center;     /* Выровнять элементы по центру */
-justify-items: start;      /* Выровнять элементы в начале */
-justify-items: end;        /* Выровнять элементы в конце */
+justify-items: center; /* Выровнять элементы по центру */
+justify-items: start; /* Выровнять элементы в начале */
+justify-items: end; /* Выровнять элементы в конце */
 justify-items: flex-start; /* Эквивалентно 'start'. Обратите внимание, что justify-items игнорируется в разметке Flexbox. */
-justify-items: flex-end;   /* Эквивалентно 'end'. Обратите внимание, что justify-items игнорируется в разметке Flexbox. */
+justify-items: flex-end; /* Эквивалентно 'end'. Обратите внимание, что justify-items игнорируется в разметке Flexbox. */
 justify-items: self-start;
 justify-items: self-end;
-justify-items: left;       /* Выровнять элементы по левому краю */
-justify-items: right;      /* Выровнять элементы по правому краю */
+justify-items: left; /* Выровнять элементы по левому краю */
+justify-items: right; /* Выровнять элементы по правому краю */
 
 /* Исходное выравнивание */
 justify-items: baseline;
@@ -116,26 +154,18 @@ justify-items: unset;
 
 ## Спецификации
 
-| Спецификация                                                                                             | Статус                                   | Комментарий                |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------- |
-| {{SpecName("CSS3 Box Alignment", "#propdef-justify-items", "justify-items")}} | {{Spec2("CSS3 Box Alignment")}} | Первоначальное определение |
+{{Specifications}}
 
 {{CSSInfo}}
 
-## Поддержка браузерами
-
-### Поддержка в разметке Flex
-
-{{Compat}}
-
-### Поддержка в разметке Grid
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- CSS Руководство по Grid: _[Выравнивание блоков в разметке Grid](/ru/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [CSS Выравнивание блоков](/ru/docs/Web/CSS/CSS_Box_Alignment)
+- CSS Руководство по Grid: _[Выравнивание блоков в разметке Grid](/ru/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- [CSS Выравнивание блоков](/ru/docs/Web/CSS/CSS_box_alignment)
 - Сокращённый атрибут {{CSSxRef("place-items")}}
 - Атрибут {{CSSxRef("justify-self")}}
 - Атрибут {{CSSxRef("align-items")}}

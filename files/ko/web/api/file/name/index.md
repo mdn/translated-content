@@ -1,14 +1,6 @@
 ---
 title: File.name
 slug: Web/API/File/name
-tags:
-  - API
-  - File API
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.File.name
-translation_of: Web/API/File/name
 ---
 
 {{APIRef("File API")}}
@@ -24,7 +16,7 @@ translation_of: Web/API/File/name
 ### HTML
 
 ```html
-<input type="file" id="filepicker" multiple>
+<input type="file" id="filepicker" multiple />
 <div>
   <p>선택한 파일 목록:</p>
   <ul id="output"></ul>
@@ -34,19 +26,19 @@ translation_of: Web/API/File/name
 ### JavaScript
 
 ```js
-const output = document.getElementById('output');
-const filepicker = document.getElementById('filepicker');
+const output = document.getElementById("output");
+const filepicker = document.getElementById("filepicker");
 
-filepicker.addEventListener('change', (event) => {
+filepicker.addEventListener("change", (event) => {
   const files = event.target.files;
-  output.textContent = '';
+  output.textContent = "";
 
   for (const file of files) {
-    const li = document.createElement('li');
+    const li = document.createElement("li");
     li.textContent = file.name;
     output.appendChild(li);
   }
-})
+});
 ```
 
 ### 결과
@@ -63,4 +55,4 @@ filepicker.addEventListener('change', (event) => {
 
 ## 같이 보기
 
-- [웹 어플리케이션에서 파일 사용하기](/ko/docs/Web/API/File/Using_files_from_web_applications)
+- [웹 어플리케이션에서 파일 사용하기](/ko/docs/Web/API/File_API/Using_files_from_web_applications)

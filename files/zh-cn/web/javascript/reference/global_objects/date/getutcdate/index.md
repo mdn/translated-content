@@ -3,11 +3,22 @@ title: Date.prototype.getUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`getUTCDate()`** 方法以世界时为标准，返回一个指定的日期对象为一个月中的第几天
 
-{{EmbedInteractiveExample("pages/js/date-getutcdate.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getUTCDate()")}}
+
+```js interactive-example
+const date1 = new Date("August 19, 1975 23:15:30 GMT+11:00");
+const date2 = new Date("August 19, 1975 23:15:30 GMT-11:00");
+
+console.log(date1.getUTCDate());
+// Expected output: 19
+
+console.log(date2.getUTCDate());
+// Expected output: 20
+```
 
 ## 语法
 
@@ -23,9 +34,9 @@ dateObj.getUTCDate()
 
 `getUTCDate()` 返回一个 1 到 31 的整数值
 
-## 例子
+## 示例
 
-### 例子：使用 `getUTCDate()` 方法
+### 示例：使用 `getUTCDate()` 方法
 
 下面的例子是把当前日期的天数部分赋值给变量 `day`.
 
@@ -42,7 +53,7 @@ var day = today.getUTCDate();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getDate()")}}
 - {{jsxref("Date.prototype.getUTCDay()")}}

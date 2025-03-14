@@ -1,49 +1,46 @@
 ---
-title: HTMLMediaElement.readyState
+title: HTMLMediaElement：readyState 属性
 slug: Web/API/HTMLMediaElement/readyState
+l10n:
+  sourceCommit: e932acf254c5dd06e26798b9d8fe01ce8dab1fb7
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.readyState`** 属性返回音频/视频的当前就绪状态。
+**`HTMLMediaElement.readyState`** 属性返回媒体的就绪状态。
 
-## 语法
+## 返回值
 
-```plain
-var readyState = audioOrVideo.readyState;
-```
+一个数字，为 {{domxref("HTMLMediaElement")}} 接口上定义的五个可能的状态常量之一：
 
-### 返回值
+- `HTMLMediaElement.HAVE_NOTHING`（0）
+  - : 没有可用的关于媒体资源的信息。
+- `HTMLMediaElement.HAVE_METADATA`（1）
+  - : 已检索到足够的媒体资源，元数据属性已经初始化。查询操作将不再引发异常。
+- `HTMLMediaElement.HAVE_CURRENT_DATA`（2）
+  - : 当前播放位置的数据已经可用，但不足以实际播放多个帧。
+- `HTMLMediaElement.HAVE_FUTURE_DATA`（3）
+  - : 当前播放位置和提供至少一小段时间的数据已经可用（换句话说，至少有两个视频帧）。
+- `HTMLMediaElement.HAVE_ENOUGH_DATA`（4）
+  - : 有足够的数据可用，并且下载速度足够高，因此媒体可以不间断地播放到最后。
 
-无符号整型 An `unsigned short`.
+## 示例
 
-| Constant          | Value | Description                                                      |
-| ----------------- | ----- | ---------------------------------------------------------------- |
-| HAVE_NOTHING      | 0     | 没有关于音频/视频是否就绪的信息                                  |
-| HAVE_METADATA     | 1     | 音频/视频已初始化                                                |
-| HAVE_CURRENT_DATA | 2     | 数据已经可以播放 (当前位置已经加载) 但没有数据能播放下一帧的内容 |
-| HAVE_FUTURE_DATA  | 3     | 当前及至少下一帧的数据是可用的 (换句话来说至少有两帧的数据)      |
-| HAVE_ENOUGH_DATA  | 4     | 可用数据足以开始播放 - 如果网速得到保障 那么视频可以一直播放到底 |
-
-## 实例
-
-这个例子会监听 id 为 example 的 audio 的数据。他会检查当前位置是否可以播放，会的话执行播放。
+这个示例将会监听一个 id 为 `example` 的音频数据的加载。它会检查当前播放位置是否已加载。如果是，则会播放音频。
 
 ```html
 <audio id="example" preload="auto">
- <source src="sound.ogg" type="audio/ogg" />
+  <source src="sound.ogg" type="audio/ogg" />
 </audio>
 ```
 
 ```js
-var obj = document.getElementById('example');
+const obj = document.getElementById("example");
 
-obj.addEventListener('loadeddata', function() {
-
-  if(obj.readyState >= 2) {
+obj.addEventListener("loadeddata", () => {
+  if (obj.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
     obj.play();
   }
-
 });
 ```
 
@@ -55,6 +52,6 @@ obj.addEventListener('loadeddata', function() {
 
 {{Compat}}
 
-## 你或许还可以看看
+## 参见
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}：用于定义 `HTMLMediaElement.readyState` 属性的接口

@@ -20,7 +20,9 @@ peerconnection.onaddstream = function;
 ## 示例
 
 ```js
-pc.onaddstream = function(ev) { alert("onaddstream event detected!"); };
+pc.onaddstream = function (ev) {
+  alert("onaddstream event detected!");
+};
 ```
 
 ## 浏览器兼容性

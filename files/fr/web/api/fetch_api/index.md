@@ -1,7 +1,6 @@
 ---
 title: API Fetch
 slug: Web/API/Fetch_API
-translation_of: Web/API/Fetch_API
 ---
 
 {{DefaultAPISidebar("Fetch API")}}
@@ -22,7 +21,8 @@ Une fois que la {{domxref("Response")}} a été retournée, il y a un ensemble d
 
 Vous pourriez créer une requête et une réponse directement en utilisant les constructeurs {{domxref("Request.Request","Request()")}} et {{domxref("Response.Response","Response()")}}, même s'il est improbable que vous procédiez ainsi. Il est plus probable cependant que leur création résulte des actions d'une autre API (par exemple, {{domxref("FetchEvent.respondWith")}} des _service workers_).
 
-> **Note :** Pour en savoir plus sur l'utilisation des fonctionnalités de l'API Fetch et en approfondir les concepts, consulter respectivement [Utiliser Fetch](/fr/docs/Web/API/Fetch_API/Using_Fetch) et [Fetch, les concepts de base](/fr/docs/Web/API/Fetch_API/Basic_concepts).
+> [!NOTE]
+> Pour en savoir plus sur l'utilisation des fonctionnalités de l'API Fetch et en approfondir les concepts, consulter respectivement [Utiliser Fetch](/fr/docs/Web/API/Fetch_API/Using_Fetch) et [Fetch, les concepts de base](/fr/docs/Web/API/Fetch_API/Using_Fetch).
 
 ### Interrompre un fetch
 
@@ -54,8 +54,8 @@ Les navigateurs ont commencé à ajouter le support expérimental des interfaces
 
 ## Voir aussi
 
-- [ServiceWorker API](/fr/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/fr/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/fr/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/fr/docs/Web/HTTP/CORS)
 - [HTTP](/fr/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
-- [Fetch basic concepts](/fr/docs/Web/API/Fetch_API/Basic_concepts)
+- [Fetch basic concepts](/fr/docs/Web/API/Fetch_API/Using_Fetch)

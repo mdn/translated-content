@@ -1,24 +1,12 @@
 ---
 title: PerformanceTiming
 slug: Web/API/PerformanceTiming
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Interface
-  - Navigation Timing
-  - Navigation Timing API
-  - Optimization
-  - Performance
-  - Reference
-  - Timing
-  - legacy
-translation_of: Web/API/PerformanceTiming
 ---
 
 {{APIRef("Navigation Timing")}}
 
-> **Attention :** Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
+> [!WARNING]
+> Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
 
 L'interface **`PerformanceTiming`** est une interface héritée conservée pour la rétrocompatibilité et contient des propriétés qui offrent des informations sur la chronologie des performances pour divers événements qui se produisent pendant le chargement et l'utilisation de la page actuelle. Vous obtenez un objet `PerformanceTiming` décrivant votre page en utilisant la propriété [`window.performance.timing`](/fr/docs/Web/API/Performance/timing).
 

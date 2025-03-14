@@ -1,8 +1,9 @@
 ---
-title: HTMLFormElement.reportValidity()
+title: "HTMLFormElement: reportValidity() メソッド"
+short-title: reportValidity()
 slug: Web/API/HTMLFormElement/reportValidity
 l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
@@ -24,9 +25,13 @@ reportValidity()
 ## 例
 
 ```js
-document.forms['myform'].addEventListener('submit', () => {
-  document.forms['myform'].reportValidity();
-}, false);
+document.forms["myform"].addEventListener(
+  "submit",
+  () => {
+    document.forms["myform"].reportValidity();
+  },
+  false,
+);
 ```
 
 ## 仕様書

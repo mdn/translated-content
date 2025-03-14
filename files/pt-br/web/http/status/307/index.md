@@ -19,13 +19,13 @@ A única diferença entre `307` e {{HTTPStatus("302")}} é que o `307` garante q
 
 ## Especificações
 
-| Especificação                                                        | Título                                                        |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                                       | Título                                                        |
+| --------------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "307 Temporary Redirect" , "6.4.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.307")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,20 +1,14 @@
 ---
 title: inset-inline-start
 slug: Web/CSS/inset-inline-start
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/inset-inline-start
-original_slug: inset-inline-start
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`inset-inline-start`** définit le début du décalage logique en ligne (_inline_) d'un élément, selon le mode d'écriture, la directionnalité et l'orientation. Elle correspond à une des propriétés parmi {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} ou {{cssxref("left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
-> **Note :** Avant Firefox 63, cette propriété était implémentée avec le nom `offset-inline-start`. Firefox 63 a mis à jour son implémentation afin de suivre les modifications apportées à la spécification.
+> [!NOTE]
+> Avant Firefox 63, cette propriété était implémentée avec le nom `offset-inline-start`. Firefox 63 a mis à jour son implémentation afin de suivre les modifications apportées à la spécification.
 
 ```css
 /* Valeurs de longueur */

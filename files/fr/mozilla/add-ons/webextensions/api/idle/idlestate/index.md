@@ -1,20 +1,9 @@
 ---
 title: idle.IdleState
 slug: Mozilla/Add-ons/WebExtensions/API/idle/IdleState
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Idle
-  - IdleState
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/idle/IdleState
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Chaîne d'écrivant l'état d'inactivité du périphérique.
 
@@ -22,15 +11,15 @@ Chaîne d'écrivant l'état d'inactivité du périphérique.
 
 Les valeurs de ce type sont des chaînes. Les valeurs possibles sont : `"active"`, `"idle"`, `"locked"`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.idle.IdleState")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.idle`](https://developer.chrome.com/extensions/idle). Cette documentation est dérivée de [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.idle`](https://developer.chrome.com/docs/extensions/reference/api/idle). Cette documentation est dérivée de [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

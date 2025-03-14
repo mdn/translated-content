@@ -52,7 +52,7 @@ JavaScript 有三種宣告方式
 
 在 JavaScript 中，變數必須使用字母（letter）、下底線（\_）、錢號（$）作為開頭；後面的字員組成可以包含數字（0-9）。JavaScript 是區分大小寫（case sensitive）的，大寫字母（'A' \~ 'Z'）和小寫字母（'a' \~ 'z'）皆可使用且不相等。
 
-You can use most of ISO 8859-1 or Unicode letters such as å and ü in identifiers (for more details see [this blog post](https://mathiasbynens.be/notes/javascript-identifiers-es6)). You can also use the [Unicode escape sequences](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals) as characters in identifiers.
+You can use most of ISO 8859-1 or Unicode letters such as å and ü in identifiers (for more details see [this blog post](https://mathiasbynens.be/notes/javascript-identifiers-es6)). You can also use the [Unicode escape sequences](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) as characters in identifiers.
 
 Some examples of legal names are `Number_hits`, `temp99`, `$credit`, and `_name`.
 
@@ -70,17 +70,17 @@ Some examples of legal names are `Number_hits`, `temp99`, `$credit`, and `_name`
 
 ```js
 var a;
-console.log('The value of a is ' + a); // The value of a is undefined
+console.log("The value of a is " + a); // The value of a is undefined
 
-console.log('The value of b is ' + b); // The value of b is undefined
+console.log("The value of b is " + b); // The value of b is undefined
 var b;
 
-console.log('The value of c is ' + c); // Uncaught ReferenceError: c is not defined
+console.log("The value of c is " + c); // Uncaught ReferenceError: c is not defined
 
 let x;
-console.log('The value of x is ' + x); // The value of x is undefined
+console.log("The value of x is " + x); // The value of x is undefined
 
-console.log('The value of y is ' + y); // Uncaught ReferenceError: y is not defined
+console.log("The value of y is " + y); // Uncaught ReferenceError: y is not defined
 let y;
 ```
 
@@ -106,7 +106,7 @@ if (!myArray[0]) myFunction();
 
 ```js
 var a;
-a + 2;  // Evaluates to NaN
+a + 2; // Evaluates to NaN
 ```
 
 當你對 {{jsxref("null")}} 進行運算，{{jsxref("null")}} 會自動轉換成數值 0，如果當做布林值運算，會被當成 `false`，舉例來說：
@@ -120,7 +120,7 @@ console.log(n * 32); // Will log 0 to the console
 
 當我們在函式外宣告一個變數時，這個變數會是一個全域變數 (global variable), 因為在這份程式文件裡面的所有程式碼都可以使用到這個變數。但當我們只在函式內宣告變數時，這變數是區域變數 (local variable)，因為變數只會在函式內被使用到。
 
-**請注意!!** 在 ECMAScript 2015 以前的 JavaScript 版本裡，並沒有定義區塊描述 ([block statement](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Block_statement)) 的變數有效範圍。更精確的說，之前版本所定義的變數，其特性相當於全域變數；不只在宣告的區塊或函數裡面有效 ，其變數值還會超出宣告區塊而影響到全部的描述碼。
+**請注意!!** 在 ECMAScript 2015 以前的 JavaScript 版本裡，並沒有定義區塊描述 ([block statement](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#block_statement)) 的變數有效範圍。更精確的說，之前版本所定義的變數，其特性相當於全域變數；不只在宣告的區塊或函數裡面有效 ，其變數值還會超出宣告區塊而影響到全部的描述碼。
 
 從下面例子來看，其輸出結果會是 5。雖然 x 是在 if { } 區塊裡面被宣告的，但卻因為有全域變數的特性，因此溢出大括號而成為後續描述碼的變數值。
 
@@ -128,7 +128,7 @@ console.log(n * 32); // Will log 0 to the console
 if (true) {
   var x = 5;
 }
-console.log(x);  // x is 5
+console.log(x); // x is 5
 ```
 
 接著舉一個 ECMAScript 2015 之後的宣告範例。當使用了 `let` 這個區域變數宣告方式，變數 y 的有效範圍只有在 if { } 的範圍內，因此輸出結果是 ReferenceError。
@@ -137,7 +137,7 @@ console.log(x);  // x is 5
 if (true) {
   let y = 5;
 }
-console.log(y);  // ReferenceError: y is not defined (y沒有被定義)
+console.log(y); // ReferenceError: y is not defined (y沒有被定義)
 ```
 
 ### 變數提升
@@ -156,11 +156,11 @@ var x = 3;
  * Example 2
  */
 // will return a value of undefined
-var myvar = 'my value';
+var myvar = "my value";
 
-(function() {
+(function () {
   console.log(myvar); // undefined
-  var myvar = 'local value';
+  var myvar = "local value";
 })();
 ```
 
@@ -177,12 +177,12 @@ x = 3;
 /**
  * Example 2
  */
-var myvar = 'my value';
+var myvar = "my value";
 
-(function() {
+(function () {
   var myvar;
   console.log(myvar); // undefined
-  myvar = 'local value';
+  myvar = "local value";
 })();
 ```
 
@@ -205,16 +205,15 @@ let x = 3;
 foo(); // "bar"
 
 function foo() {
-  console.log('bar');
+  console.log("bar");
 }
-
 
 /* Function expression */
 
 baz(); // TypeError: baz is not a function
 
-var baz = function() {
-  console.log('bar2');
+var baz = function () {
+  console.log("bar2");
 };
 ```
 
@@ -240,7 +239,7 @@ The scope rules for constants are the same as those for `let` block-scope variab
 
 ```js
 // THIS WILL CAUSE AN ERROR
-function f() {};
+function f() {}
 const f = 5;
 
 // THIS WILL CAUSE AN ERROR ALSO
@@ -255,8 +254,8 @@ function f() {
 但是常數物件內的物件屬性並不受到保護，因此以下陳述式可以正常執行。
 
 ```js
-const MY_OBJECT = {'key': 'value'};
-MY_OBJECT.key = 'otherValue';
+const MY_OBJECT = { key: "value" };
+MY_OBJECT.key = "otherValue";
 ```
 
 ## 資料結構及型別
@@ -276,9 +275,9 @@ MY_OBJECT.key = 'otherValue';
 
 - and {{Glossary("Object")}}
 
-儘管這些變數關聯性很小, 他們可以讓你在你的應用程式中, 產生出有意義的函數.
+儘管這些變數關聯性很小，他們可以讓你在你的應用程式中，產生出有意義的函數。
 
-[物件](/zh-TW/docs/JavaScript/Reference/Global_Objects/Object)與 [函數](/zh-TW/docs/JavaScript/Reference/Global_Objects/Function) 在語言中是其它的基本元素. 你可以把物件想成是一個被命名過且用來裝數值的容器,以及函數則為你的應用程式所執行的步驟.
+[物件](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object)與 [函數](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function) 在語言中是其它的基本元素. 你可以把物件想成是一個被命名過且用來裝數值的容器,以及函數則為你的應用程式所執行的步驟.
 
 ### 資料型別轉換
 
@@ -299,15 +298,15 @@ answer = "Thanks for all the fish...";
 在該陳述式中，它調用了字串和數字，並使用 + 進行運算，JavaScript 會自動把數字轉換成字串，例如：
 
 ```js
-x = "The answer is " + 42 // "The answer is 42"
-y = 42 + " is the answer" // "42 is the answer"
+x = "The answer is " + 42; // "The answer is 42"
+y = 42 + " is the answer"; // "42 is the answer"
 ```
 
 在該陳述式中，它調用了其它運算子，JavaScript 就不會將數字轉換成字串，例如：
 
 ```js
-"37" - 7 // 30
-"37" + 7 // "377"
+"37" - 7; // 30
+"37" + 7; // "377"
 ```
 
 ### 字串轉數值
@@ -329,7 +328,7 @@ y = 42 + " is the answer" // "42 is the answer"
 
 ## 字面值（Literals）
 
-您能使用字面值來表示 JavaScript 中的值。這些是您在腳本中實際提供的固定值，而不是變量。本節描述以下類型的字面值：
+你能使用字面值來表示 JavaScript 中的值。這些是你在腳本中實際提供的固定值，而不是變量。本節描述以下類型的字面值：
 
 - [Array literals](#陣列字面值_array_literals)
 - [Boolean literals](#布林字面值_boolean_literals)
@@ -346,10 +345,11 @@ y = 42 + " is the answer" // "42 is the answer"
 以下範例創建了陣列 `coffees` ，長度為 3 並包含三個元素：
 
 ```js
-var coffees = ['French Roast', 'Colombian', 'Kona'];
+var coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
-> **備註：** An array literal is a type of object initializer. See [Using Object Initializers](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers).
+> [!NOTE]
+> An array literal is a type of object initializer. See [Using Object Initializers](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers).
 
 If an array is created using a literal in a top-level script, JavaScript interprets the array each time it evaluates the expression containing the array literal. In addition, a literal used in a function is created each time the function is called.
 
@@ -360,29 +360,30 @@ Array literals are also `Array` objects. See {{jsxref("Array")}} and [Indexed co
 You do not have to specify all elements in an array literal. If you put two commas in a row, the array is created with `undefined` for the unspecified elements. The following example creates the `fish` array:
 
 ```js
-var fish = ['Lion', , 'Angel'];
+var fish = ["Lion", , "Angel"];
 ```
 
 This array has two elements with values and one empty element (`fish[0]` is "Lion", `fish[1]` is `undefined`, and `fish[2]` is "Angel").
 
 If you include a trailing comma at the end of the list of elements, the comma is ignored. In the following example, the length of the array is three. There is no `myList[3]`. All other commas in the list indicate a new element.
 
-> **備註：** Trailing commas can create errors in older browser versions and it is a best practice to remove them.
+> [!NOTE]
+> Trailing commas can create errors in older browser versions and it is a best practice to remove them.
 
 ```js
-var myList = ['home', , 'school', ];
+var myList = ["home", , "school"];
 ```
 
 In the following example, the length of the array is four, and `myList[0]` and `myList[2]` are missing.
 
 ```js
-var myList = [ ,'home', , 'school'];
+var myList = [, "home", , "school"];
 ```
 
 In the following example, the length of the array is four, and `myList[1]` and `myList[3]` are missing. **Only the last comma is ignored.**
 
 ```js
-var myList = ['home', , 'school', , ];
+var myList = ["home", , "school", ,];
 ```
 
 Understanding the behavior of extra commas is important to understanding JavaScript as a language, however when writing your own code: explicitly declaring the missing elements as `undefined` will increase your code's clarity and maintainability.
@@ -411,7 +412,7 @@ Do not confuse the primitive Boolean values `true` and `false` with the true and
 0b11, 0b0011 and -0b11 (binary, base 2)
 ```
 
-更多資訊請參閱 [Numeric literals in the Lexical grammar reference](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_literals).
+更多資訊請參閱 [Numeric literals in the Lexical grammar reference](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals).
 
 ### 浮點數字面值 (Floating-point literals)
 
@@ -450,27 +451,27 @@ Do not confuse the primitive Boolean values `true` and `false` with the true and
 - 第三個屬性 `special` 使用現有變量 `sales` 賦值
 
 ```js
-var sales = 'Toyota';
+var sales = "Toyota";
 
 function carTypes(name) {
-  if (name === 'Honda') {
+  if (name === "Honda") {
     return name;
   } else {
     return "Sorry, we don't sell " + name + ".";
   }
 }
 
-var car = { myCar: 'Saturn', getCar: carTypes('Honda'), special: sales };
+var car = { myCar: "Saturn", getCar: carTypes("Honda"), special: sales };
 
-console.log(car.myCar);   // Saturn
-console.log(car.getCar);  // Honda
+console.log(car.myCar); // Saturn
+console.log(car.getCar); // Honda
 console.log(car.special); // Toyota
 ```
 
-此外，您可以使用數字或字串字面值作為屬性名，也可將物件嵌套在另一個物件中。如下範例：
+此外，你可以使用數字或字串字面值作為屬性名，也可將物件嵌套在另一個物件中。如下範例：
 
 ```js
-var car = { manyCars: {a: 'Saab', 'b': 'Jeep'}, 7: 'Mazda' };
+var car = { manyCars: { a: "Saab", b: "Jeep" }, 7: "Mazda" };
 
 console.log(car.manyCars.b); // Jeep
 console.log(car[7]); // Mazda
@@ -495,30 +496,30 @@ In ES2015, object literals are extended to support setting the prototype at cons
 
 ```js
 var obj = {
-    // __proto__
-    __proto__: theProtoObj,
-    // Shorthand for ‘handler: handler’
-    handler,
-    // Methods
-    toString() {
-     // Super calls
-     return 'd ' + super.toString();
-    },
-    // Computed (dynamic) property names
-    [ 'prop_' + (() => 42)() ]: 42
+  // __proto__
+  __proto__: theProtoObj,
+  // Shorthand for ‘handler: handler’
+  handler,
+  // Methods
+  toString() {
+    // Super calls
+    return "d " + super.toString();
+  },
+  // Computed (dynamic) property names
+  ["prop_" + (() => 42)()]: 42,
 };
 ```
 
 Please note:
 
 ```js
-var foo = {a: 'alpha', 2: 'two'};
-console.log(foo.a);    // alpha
-console.log(foo[2]);   // two
+var foo = { a: "alpha", 2: "two" };
+console.log(foo.a); // alpha
+console.log(foo[2]); // two
 //console.log(foo.2);  // Error: missing ) after argument list
 //console.log(foo[a]); // Error: a is not defined
-console.log(foo['a']); // alpha
-console.log(foo['2']); // two
+console.log(foo["a"]); // alpha
+console.log(foo["2"]); // two
 ```
 
 ### 正規表達式字面值 (RegExp literals)
@@ -531,38 +532,37 @@ var re = /ab+c/;
 
 ### 字串字面值 (String literals)
 
-字串字面值是用雙引號（“）或單引號（'）包住的零或多個字元。字串必須用同類的引號定界；也就是「兩個單引號」或「兩個雙引號」。以下是字串字面值的範例：
+字串字面值是用雙引號（"）或單引號（'）包住的零或多個字元。字串必須用同類的引號定界；也就是「兩個單引號」或「兩個雙引號」。以下是字串字面值的範例：
 
 ```js
-'foo'
-"bar"
-'1234'
-'one line \n another line'
-"John's cat"
+"foo";
+"bar";
+"1234";
+"one line \n another line";
+"John's cat";
 ```
 
-你可以在字串字面值上調用 String 物件的任何方法 - JavaScript 將自動轉換字串字面值為臨時 String 物件並調用該方法，然後丟棄該臨時 String 物件。您還可以將 String.length 屬性與字串字面值一起使用：
+你可以在字串字面值上調用 String 物件的任何方法 - JavaScript 將自動轉換字串字面值為臨時 String 物件並調用該方法，然後丟棄該臨時 String 物件。你還可以將 String.length 屬性與字串字面值一起使用：
 
 ```js
-console.log("John's cat".length)
+console.log("John's cat".length);
 // Will print the number of symbols in the string including whitespace.
 // In this case, 10.
 ```
 
-In ES2015, template literals are also available. Template literals are enclosed by the back-tick (\` \`) ([grave accent](http://en.wikipedia.org/wiki/Grave_accent)) character instead of double or single quotes. Template strings provide syntactic sugar for constructing strings. This is similar to string interpolation features in Perl, Python and more. Optionally, a tag can be added to allow the string construction to be customized, avoiding injection attacks or constructing higher level data structures from string contents.
+In ES2015, template literals are also available. Template literals are enclosed by the back-tick (\` \`) ([grave accent](https://en.wikipedia.org/wiki/Grave_accent)) character instead of double or single quotes. Template strings provide syntactic sugar for constructing strings. This is similar to string interpolation features in Perl, Python and more. Optionally, a tag can be added to allow the string construction to be customized, avoiding injection attacks or constructing higher level data structures from string contents.
 
 ```js
 // Basic literal string creation
-`In JavaScript '\n' is a line-feed.`
-
-// Multiline strings
+`In JavaScript '\n' is a line-feed.` // Multiline strings
 `In JavaScript template strings can run
  over multiple lines, but double and single
- quoted strings cannot.`
+ quoted strings cannot.`;
 
 // String interpolation
-var name = 'Bob', time = 'today';
-`Hello ${name}, how are you ${time}?`
+var name = "Bob",
+  time = "today";
+`Hello ${name}, how are you ${time}?`;
 
 // Construct an HTTP request prefix is used to interpret the replacements and construction
 POST`http://foo.org/bar?a=${a}&b=${b}
@@ -579,7 +579,7 @@ You should use string literals unless you specifically need to use a String obje
 除了普通字元，字串也能包含特殊字元，範例如下：
 
 ```js
-'one line \n another line'
+"one line \n another line";
 ```
 
 下表列出了可以在 JavaScript 字串中使用的特殊字元。
@@ -600,7 +600,7 @@ You should use string literals unless you specifically need to use a String obje
 |             |                                                                                                                                                                                                                                                    |
 | `\xXX`      | The character with the Latin-1 encoding specified by the two hexadecimal digits _XX_ between 00 and FF. For example, \xA9 is the hexadecimal sequence for the copyright symbol.                                                                    |
 |             |                                                                                                                                                                                                                                                    |
-| `\uXXXX`    | The Unicode character specified by the four hexadecimal digits _XXXX_. For example, \u00A9 is the Unicode sequence for the copyright symbol. See [Unicode escape sequences](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals). |
+| `\uXXXX`    | The Unicode character specified by the four hexadecimal digits _XXXX_. For example, \u00A9 is the Unicode sequence for the copyright symbol. See [Unicode escape sequences](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals). |
 | `\u{XXXXX}` | Unicode code point escapes. For example, \u{2F804} is the same as the simple Unicode escapes \uD87E\uDC04.                                                                                                                                         |
 
 #### Escaping characters
@@ -610,7 +610,7 @@ For characters not listed in the table, a preceding backslash is ignored, but th
 You can insert a quotation mark inside a string by preceding it with a backslash. This is known as _escaping_ the quotation mark. For example:
 
 ```js
-var quote = "He read \"The Cremation of Sam McGee\" by R.W. Service.";
+var quote = 'He read "The Cremation of Sam McGee" by R.W. Service.';
 console.log(quote);
 ```
 
@@ -623,37 +623,37 @@ He read "The Cremation of Sam McGee" by R.W. Service.
 To include a literal backslash inside a string, you must escape the backslash character. For example, to assign the file path `c:\temp` to a string, use the following:
 
 ```js
-var home = 'c:\\temp';
+var home = "c:\\temp";
 ```
 
 You can also escape line breaks by preceding them with backslash. The backslash and line break are both removed from the value of the string.
 
 ```js
-var str = 'this string \
+var str =
+  "this string \
 is broken \
 across multiple \
-lines.'
-console.log(str);   // this string is broken across multiplelines.
+lines.";
+console.log(str); // this string is broken across multiplelines.
 ```
 
 Although JavaScript does not have "heredoc" syntax, you can get close by adding a line break escape and an escaped line break at the end of each line:
 
 ```js
 var poem =
-'Roses are red,\n\
+  "Roses are red,\n\
 Violets are blue.\n\
 Sugar is sweet,\n\
-and so is foo.'
+and so is foo.";
 ```
 
-ECMAScript 2015 introduces a new type of literal, namely [**template literals**](/zh-TW/docs/Web/JavaScript/Reference/template_strings). This allows for many new features including multiline strings!
+ECMAScript 2015 introduces a new type of literal, namely [**template literals**](/zh-TW/docs/Web/JavaScript/Reference/Template_literals). This allows for many new features including multiline strings!
 
 ```js
-var poem =
-`Roses are red,
+var poem = `Roses are red,
 Violets are blue.
 Sugar is sweet,
-and so is foo.`
+and so is foo.`;
 ```
 
 ## More information
@@ -663,7 +663,7 @@ This chapter focuses on basic syntax for declarations and types. To learn more a
 - [Control flow and error handling](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 - [Loops and iteration](/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [Functions](/zh-TW/docs/Web/JavaScript/Guide/Functions)
-- [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
 In the next chapter, we will have a look at control flow constructs and error handling.
 

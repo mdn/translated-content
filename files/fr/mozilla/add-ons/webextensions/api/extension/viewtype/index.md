@@ -1,20 +1,9 @@
 ---
 title: extension.ViewType
 slug: Mozilla/Add-ons/WebExtensions/API/extension/ViewType
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - ViewType
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/ViewType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type de vue de l'extension.
 
@@ -22,15 +11,15 @@ Le type de vue de l'extension.
 
 Les valeurs de ce type sont des chaînes. Les valeurs possibles sont : `"tab"`, `"popup"`, `"sidebar"`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.ViewType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/extensions/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

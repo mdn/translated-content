@@ -1,6 +1,8 @@
 ---
 title: x
 slug: Web/SVG/Attribute/x
+l10n:
+  sourceCommit: 5f7c22deaa74973658257aeaa012ac2ec0be87ae
 ---
 
 {{SVGRef}}
@@ -9,7 +11,6 @@ slug: Web/SVG/Attribute/x
 
 この属性は、以下の SVG 要素で使用することができます。
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("cursor")}}
 - {{SVGElement("feBlend")}}
 - {{SVGElement("feColorMatrix")}}
@@ -52,48 +53,22 @@ slug: Web/SVG/Attribute/x
 ## 例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20"  y="20" width="60" height="60" />
+  <rect x="20" y="20" width="60" height="60" />
   <rect x="120" y="20" width="60" height="60" />
   <rect x="220" y="20" width="60" height="60" />
 </svg>
 ```
 
 {{EmbedLiveSample("Example", '100%', 200)}}
-
-## altGlyph
-
-> **警告:** SVG2 では {{SVGElement('altGlyph')}} は非推奨であるため、使用しないでください。
-
-{{SVGElement('altGlyph')}} の場合、 `x` は代替文字の X 軸の座標を定義します。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
-            >&#x3C;length></a
-          ></strong
-        >
-        のリスト
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>可</td>
-    </tr>
-  </tbody>
-</table>
 
 ## feBlend
 
@@ -910,7 +885,7 @@ html,body,svg { height:100% }
 
 ## foreignObject
 
-{{SVGElement('foreignObject')}} の場合、 `x` はこのフィルターの描画領域における左上隅の X 座標をを定義します。
+{{SVGElement('foreignObject')}} の場合、 `x` はビューポートの左上隅の X 座標をを定義します。
 
 <table class="properties">
   <tbody>
@@ -941,11 +916,13 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-> **メモ:** SVG2 からは、`x` は*幾何プロパティ*であり、この属性は `<foreignObject>` の CSS プロパティとして使用することもできます。
+> [!NOTE]
+> SVG2 からは、`x` は*幾何プロパティ*であり、この属性は `<foreignObject>` の CSS プロパティとして使用することもできます。
 
 ## glyphRef
 
-> **警告:** SVG2 では {{SVGElement('glyphRef')}} は非推奨であり、使用すべきではありません。
+> [!WARNING]
+> SVG2 では {{SVGElement('glyphRef')}} は非推奨であり、使用すべきではありません。
 
 {{SVGElement('glyphRef')}} の場合、 `x` が文字の x 軸の座標を定義します。
 
@@ -1007,11 +984,12 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-> **メモ:** SVG2 からは、`x` は*幾何プロパティ*であり、この属性は画像用の CSS プロパティとしても使用できます。
+> [!NOTE]
+> SVG2 からは、`x` は*幾何プロパティ*であり、この属性は画像用の CSS プロパティとしても使用できます。
 
 ## mask
 
-{{SVGElement('mask')}} の場合、 `x` は、その影響する領域の左上隅の X 座標を定義します。この属性の正確な効果は、 {{SVGAttr('maskUnits')}} 属性に影響されます。
+{{SVGElement('mask')}} の場合、 `x` は、その効果の領域の左上隅の X 座標を定義します。この属性の正確な効果は、 {{SVGAttr('maskUnits')}} 属性に影響されます。
 
 <table class="properties">
   <tbody>
@@ -1102,7 +1080,8 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-> **メモ:** SVG2 からは、`x` は*幾何プロパティ*であり、この属性は矩形の CSS プロパティとして使用することもできる。
+> [!NOTE]
+> SVG2 からは、`x` は*幾何プロパティ*であり、この属性は矩形の CSS プロパティとして使用することもできる。
 
 ## svg
 
@@ -1137,11 +1116,12 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-> **メモ:** SVG2 からは、`x` は*幾何プロパティ*であり、この属性は `<svg>` の CSS プロパティとして使用することもできます。
+> [!NOTE]
+> SVG2 からは、`x` は*幾何プロパティ*であり、この属性は `<svg>` の CSS プロパティとして使用することもできます。
 
 ## text
 
-{{SVGElement('text')}} にある値が  1 つの場合、 `x` は*コンテンツテキストの位置*を配置しなければならない X 座標を定義します。コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
+{{SVGElement('text')}} にある値が 1 つの場合、 `x` は*コンテンツテキストの位置*を配置しなければならない X 座標を定義します。*コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
 
 複数の値がある場合、`x` はテキストから個々の文字への X 座標を定義します。値が文字よりも少ない場合、残りの文字は最後に配置された文字と一直線上に配置されます。値が文字よりも多い場合は、余分な値は無視されます。
 
@@ -1175,7 +1155,11 @@ html,body,svg { height:100% }
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -1205,7 +1189,7 @@ text {
 line {
   fill: none;
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 2px;
 }
 ```
@@ -1214,9 +1198,10 @@ line {
 
 ## tref
 
-> **警告:** SVG2 では {{SVGElement('tref')}} は非推奨であり、使用すべきではありません。
+> [!WARNING]
+> SVG2 では {{SVGElement('tref')}} は非推奨であり、使用すべきではありません。
 
-{{SVGElement('tref')}} にある値が  1 つの場合、 `x` は*コンテンツテキストの位置*を配置しなければならない X 座標を定義します。コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
+{{SVGElement('tref')}} にある値が 1 つの場合、 `x` は*コンテンツテキストの位置*を配置しなければならない X 座標を定義します。*コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
 
 複数の値がある場合、`x` はテキストから個々の文字への X 座標を定義します。値が文字よりも少ない場合、残りの文字は最後に配置された文字と一直線上に配置されます。値が文字よりも多い場合は、余分な値は無視されます。
 
@@ -1251,7 +1236,7 @@ line {
 
 ## tspan
 
-{{SVGElement('tspan')}} にある値が  1 つの場合、 `x` は*コンテンツテキストの位置*を配置しなければならない X 座標を定義します。コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
+{{SVGElement('tspan')}} にある値が 1 つの場合、 `x` は*コンテンツテキストの位置*を配置しなければならない X 座標を定義します。*コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
 
 複数の値がある場合、`x` はテキストから個々の文字への X 座標を定義します。値が文字よりも少ない場合、残りの文字は最後に配置された文字と一直線上に配置されます。値が文字よりも多い場合は、余分な値は無視されます。
 
@@ -1285,7 +1270,11 @@ line {
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -1317,7 +1306,7 @@ text {
 line {
   fill: none;
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 2px;
 }
 ```
@@ -1357,7 +1346,8 @@ line {
   </tbody>
 </table>
 
-> **メモ:** SVG2 からは、`x` は*幾何プロパティ*であり、この属性は使用される要素の CSS プロパティとしても使用できます。
+> [!NOTE]
+> SVG2 からは、`x` は*幾何プロパティ*であり、この属性は使用される要素の CSS プロパティとしても使用できます。
 
 ## 仕様書
 

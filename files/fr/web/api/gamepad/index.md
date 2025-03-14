@@ -1,7 +1,6 @@
 ---
 title: Gamepad
 slug: Web/API/Gamepad
-translation_of: Web/API/Gamepad
 ---
 
 {{APIRef("Gamepad API")}}
@@ -46,10 +45,14 @@ Les interfaces suivantes sont définies dans la spécification `GamepadExtension
 ## Exemples
 
 ```js
-window.addEventListener("gamepadconnected", function(event) {
-  console.log("Contrôleur connecté à %d: %s. %d boutons, %d axes.",
-  event.gamepad.index, event.gamepad.id,
-  event.gamepad.buttons.length, event.gamepad.axes.length);
+window.addEventListener("gamepadconnected", function (event) {
+  console.log(
+    "Contrôleur connecté à %d: %s. %d boutons, %d axes.",
+    event.gamepad.index,
+    event.gamepad.id,
+    event.gamepad.buttons.length,
+    event.gamepad.axes.length,
+  );
 });
 ```
 
@@ -63,5 +66,5 @@ window.addEventListener("gamepadconnected", function(event) {
 
 ## Voir aussi
 
-- [Utilisation de l'API Gamepad](/fr/docs/Web/Guide/API/Gamepad)
+- [Utilisation de l'API Gamepad](/fr/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
 - [API Gamepad](/fr/docs/Web/API/Gamepad_API)

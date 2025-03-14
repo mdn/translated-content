@@ -1,8 +1,6 @@
 ---
 title: IDBObjectStore.get()
 slug: Web/API/IDBObjectStore/get
-translation_of: Web/API/IDBObjectStore/get
-browser-compat: api.IDBObjectStore.get
 ---
 
 {{APIRef("IndexedDB")}}
@@ -11,14 +9,15 @@ La méthode **`get()`**, rattachée à l'interface [`IDBObjectStore`](/fr/docs/W
 
 Si une valeur est trouvée, un clone structuré est créé et placé comme valeur de l'attribut [`result`](/fr/docs/Web/API/IDBRequest#attr_result) de l'objet qui représente la requête.
 
-> **Note :** Cette méthode produira le même résultat si l'enregistrement n'existe pas dans la base de données ou s'il a une valeur indéfinie. Pour distinguer ces deux cas, on appellera la méthode avec la même clé&nbsp;: elle fournira un curseur si l'enregistrement existe et aucun curseur sinon.
+> [!NOTE]
+> Cette méthode produira le même résultat si l'enregistrement n'existe pas dans la base de données ou s'il a une valeur indéfinie. Pour distinguer ces deux cas, on appellera la méthode avec la même clé&nbsp;: elle fournira un curseur si l'enregistrement existe et aucun curseur sinon.
 
 {{AvailableInWorkers}}
 
 ## Syntaxe
 
 ```js
-get(key)
+get(key);
 ```
 
 ### Paramètres
@@ -43,14 +42,14 @@ Cette méthode peut déclencher une exception [`DOMException`](/fr/docs/Web/API/
 
 ## Exemples
 
-Dans le fragment de code qui suit, on ouvre une transaction en lecture/écriture sur la base de données et on récupère un enregistrement particulier du magasin d'objets à l'aide de `get()` (un enregistrement de test dont la clé est "Walk dog"). Une fois l'objet de données récupéré, on pourait le mettre à jour à l'aide de JavaScript, puis le replacer dans la base de données à l'aide de l'opération [`IDBObjectStore.put()`](/fr/docs/Web/API/IDBObjectStore/put). Pour un exemple complet, voir notre application [Notifications d'une liste de tâches](https://github.com/mdn/to-do-notifications/) ([voir l'exemple qui fonctionne](https://mdn.github.io/to-do-notifications/)).
+Dans le fragment de code qui suit, on ouvre une transaction en lecture/écriture sur la base de données et on récupère un enregistrement particulier du magasin d'objets à l'aide de `get()` (un enregistrement de test dont la clé est "Walk dog"). Une fois l'objet de données récupéré, on pourait le mettre à jour à l'aide de JavaScript, puis le replacer dans la base de données à l'aide de l'opération [`IDBObjectStore.put()`](/fr/docs/Web/API/IDBObjectStore/put). Pour un exemple complet, voir notre application [Notifications d'une liste de tâches](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple qui fonctionne](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // On ouvre la base de données
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Base de données initialisée.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Base de données initialisée.</li>";
 
   // On récupère le résultat de l'ouverture dans la variable db
   // qui sera utilisée ensuite
@@ -67,12 +66,15 @@ function getData() {
   const transaction = db.transaction(["toDoList"], "readwrite");
 
   // On indique le succès ou l'échec de l'opération
-  transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction terminée.</li>';
+  transaction.oncomplete = function (event) {
+    note.innerHTML += "<li>Transaction terminée.</li>";
   };
 
-  transaction.onerror = function(event) {
-    note.innerHTML += "<li>Transaction non ouverte pour cause d'erreur : " + transaction.error + "</li>";
+  transaction.onerror = function (event) {
+    note.innerHTML +=
+      "<li>Transaction non ouverte pour cause d'erreur : " +
+      transaction.error +
+      "</li>";
   };
 
   // On crée un magasin d'objets sur la transaction
@@ -82,14 +84,13 @@ function getData() {
   // à partir de la clé dans le magasin d'objets
   const objectStoreRequest = objectStore.get("Walk dog");
 
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = function (event) {
     // On indique que la requête a réussi
-    note.innerHTML += '<li>Requête réussie.</li>';
+    note.innerHTML += "<li>Requête réussie.</li>";
 
     const myRecord = objectStoreRequest.result;
   };
-
-};
+}
 ```
 
 ## Spécifications
@@ -108,4 +109,4 @@ function getData() {
 - Définir un intervalle de clés&nbsp;: [`IDBKeyRange`](/fr/docs/Web/API/IDBKeyRange)
 - Récupérer et modifier les données&nbsp;: [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore)
 - Utiliser les curseurs&nbsp;: [`IDBCursor`](/fr/docs/Web/API/IDBCursor)
-- Exemples&nbsp;: [Notifications d'une liste de tâches](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([voir l'exemple qui fonctionne](https://mdn.github.io/to-do-notifications/))
+- Exemples&nbsp;: [Notifications d'une liste de tâches](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple qui fonctionne](https://mdn.github.io/dom-examples/to-do-notifications/))

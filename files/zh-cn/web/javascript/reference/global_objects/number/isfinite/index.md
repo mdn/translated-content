@@ -5,51 +5,58 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 
 {{JSRef}}
 
-**`Number.isFinite()`** 方法用来检测传入的参数是否是一个有穷数。
+**`Number.isFinite()`** 静态方法判断传入值是否是一个有限数——也就是说，它检查给定值是一个数字，且该数字既不是正的 {{jsxref("Infinity")}}，也不是负的 `Infinity` 或 {{jsxref("NaN")}}。
 
-{{EmbedInteractiveExample("pages/js/number-isfinite.html")}}
+{{InteractiveExample("JavaScript Demo: Number.isFinite()")}}
+
+```js interactive-example
+console.log(Number.isFinite(1 / 0));
+// Expected output: false
+
+console.log(Number.isFinite(10 / 5));
+// Expected output: true
+
+console.log(Number.isFinite(0 / 0));
+// Expected output: false
+```
 
 ## 语法
 
-```plain
+```js-nolint
 Number.isFinite(value)
 ```
 
 ### 参数
 
 - `value`
-  - : 要被检测有穷性的值。
+  - : 要测试有限性的值。
 
 ### 返回值
 
-一个 {{jsxref("Boolean", "布尔值")}} 表示给定的值是否是一个有穷数。
-
-## 描述
-
-和全局的 {{jsxref("Global_Objects/isFinite", "isFinite()")}} 函数相比，这个方法不会强制将一个非数值的参数转换成数值，这就意味着，只有数值类型的值，且是有穷的（finite），才返回 `true`。
-
-## Polyfill
-
-```js
-if (Number.isFinite === undefined) Number.isFinite = function(value) {
-    return typeof value === 'number' && isFinite(value);
-}
-```
+如果给定值是有限数，则返回布尔值 `true`。否则为 `false`。
 
 ## 示例
 
+### 使用 isFinite()
+
 ```js
-Number.isFinite(Infinity);  // false
-Number.isFinite(NaN);       // false
+Number.isFinite(Infinity); // false
+Number.isFinite(NaN); // false
 Number.isFinite(-Infinity); // false
 
-Number.isFinite(0);         // true
-Number.isFinite(2e64);      // true
+Number.isFinite(0); // true
+Number.isFinite(2e64); // true
+```
 
-Number.isFinite('0');       // false, would've been true with
-                            // global isFinite('0')
-Number.isFinite(null);      // false, would've been true with
-                            // global isFinite(null)
+### Number.isFinite() 和全局 isFinite() 之间的不同
+
+与全局 {{jsxref("isFinite", "isFinite()")}} 函数相比，此方法不会先将参数转换为数字，这意味着只有类型为数字*且*为有限数的值才返回 `true`，而非数字的值始终返回 `false`。
+
+```js
+isFinite("0"); // true；强制转换为数字 0
+Number.isFinite("0"); // false
+isFinite(null); // true；强制转换为数字 0
+Number.isFinite(null); // false
 ```
 
 ## 规范
@@ -60,7 +67,8 @@ Number.isFinite(null);      // false, would've been true with
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- The {{jsxref("Number")}} object it belongs to.
-- The global function {{jsxref("isFinite")}}.
+- [`core-js` 中 `Number.isFinite` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-number)
+- {{jsxref("Number")}}
+- {{jsxref("isFinite", "isFinite()")}}

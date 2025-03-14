@@ -1,7 +1,6 @@
 ---
 title: SubtleCrypto.digest()
 slug: Web/API/SubtleCrypto/digest
-translation_of: Web/API/SubtleCrypto/digest
 ---
 
 {{APIRef("Web Crypto API")}}
@@ -39,7 +38,8 @@ Los argoritmos digest, también conocidos como [funciones criptográficas hash](
 
 Este algoritmo se especifica en [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), sección 6.1, y produce una salida de 160 bits de largo.
 
-> **Advertencia:** Este algoritmo se considera ahora vulnerable y no debe utilizarse para aplicaciones criptográficas.
+> [!WARNING]
+> Este algoritmo se considera ahora vulnerable y no debe utilizarse para aplicaciones criptográficas.
 
 ### SHA-256
 
@@ -53,7 +53,8 @@ Este algoritmo se especifica en [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/F
 
 Este algoritmo se especifica en [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), sección 6.4, y produce una salida de 512 bits de largo.
 
-> **Nota:** Sugerencia: Si estás buscando aquí cómo crear un código de autenticación de mensajes "keyed-hash" ([HMAC](/es/docs/Glossary/HMAC)), necesitas usar [SubtleCrypto.sign()](/es/docs/Web/API/SubtleCrypto/sign#HMAC) en su lugar.
+> [!NOTE]
+> Si estás buscando aquí cómo crear un código de autenticación de mensajes "keyed-hash" ([HMAC](/es/docs/Glossary/HMAC)), necesitas usar [SubtleCrypto.sign()](/es/docs/Web/API/SubtleCrypto/sign#HMAC) en su lugar.
 
 ## Ejemplos
 
@@ -62,12 +63,13 @@ Este algoritmo se especifica en [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/F
 Este ejemplo codifica un mensaje, luego calcula su digest SHA-256 y muestra la longitud del mismo:
 
 ```js
-const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
+const text =
+  "An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.";
 
 async function digestMessage(message) {
   const encoder = new TextEncoder();
   const data = encoder.encode(message);
-  const hash = await crypto.subtle.digest('SHA-256', data);
+  const hash = await crypto.subtle.digest("SHA-256", data);
   return hash;
 }
 
@@ -80,13 +82,16 @@ console.log(digestBuffer.byteLength);
 El resumen se devuelve como un `ArrayBuffer`, pero para la comparación y visualización los digests se representan a menudo como cadenas hexadecimales. Este ejemplo calcula un digest, y luego convierte el `ArrayBuffer` a un string hexadecimal:
 
 ```js
-const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
+const text =
+  "An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.";
 
 async function digestMessage(message) {
-  const msgUint8 = new TextEncoder().encode(message);                           // encode as (utf-8) Uint8Array
-  const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);           // hash the message
-  const hashArray = Array.from(new Uint8Array(hashBuffer));                     // convert buffer to byte array
-  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
+  const msgUint8 = new TextEncoder().encode(message); // encode as (utf-8) Uint8Array
+  const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8); // hash the message
+  const hashArray = Array.from(new Uint8Array(hashBuffer)); // convert buffer to byte array
+  const hashHex = hashArray
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join(""); // convert bytes to hex string
   return hashHex;
 }
 
@@ -98,11 +103,9 @@ console.log(digestHex);
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.SubtleCrypto.digest")}}
-
-> **Nota:** En Chrome 60, se añadió una característica que deshabilita crypto.subtle para conexiones no TLS.
+{{Compat}}
 
 ## Ver también
 

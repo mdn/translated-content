@@ -1,27 +1,45 @@
 ---
 title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-browser-compat: javascript.builtins.Proxy.handler.set
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 ---
 
 {{JSRef}}
 
 **`handler.set()`** 메서드는 속성 값을 설정을 위한 트랩입니다.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-set.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.set()", "taller")}}
+
+```js interactive-example
+const monster1 = { eyeCount: 4 };
+
+const handler1 = {
+  set(obj, prop, value) {
+    if (prop === "eyeCount" && value % 2 !== 0) {
+      console.log("Monsters must have an even number of eyes");
+    } else {
+      return Reflect.set(...arguments);
+    }
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+proxy1.eyeCount = 1;
+// Expected output: "Monsters must have an even number of eyes"
+
+console.log(proxy1.eyeCount);
+// Expected output: 4
+
+proxy1.eyeCount = 2;
+console.log(proxy1.eyeCount);
+// Expected output: 2
+```
 
 ## 구문
 
 ```js
 new Proxy(target, {
-  set(target, property, value, receiver) {
-  }
+  set(target, property, value, receiver) {},
 });
 ```
 
@@ -40,7 +58,7 @@ new Proxy(target, {
   - : 할당이 지시된 원래 객체입니다. 이것은 일반적으로 프록시 자체입니다.
     그러나 `set()` 처리기는 프로토타입 체인이나 다양한 다른 방법 등을 통해
     간접적으로 호출할 수도 있습니다.
-  
+
     예를 들어, 스크립트가 `obj.name = "jen"`을 수행하는데,
     `obj`는 프록시가 아니면서 속성 `.name`이 없고,
     프로토타입 체인에는 프록시가 있다고 가정해봅시다.
@@ -81,19 +99,22 @@ new Proxy(target, {
 다음 코드는 속성 값을 설정하는 것을 트랩합니다.
 
 ```js
-const p = new Proxy({}, {
-  set(target, prop, value, receiver) {
-    target[prop] = value;
-    console.log(`property set: ${prop} = ${value}`);
-    return true;
-  }
-})
+const p = new Proxy(
+  {},
+  {
+    set(target, prop, value, receiver) {
+      target[prop] = value;
+      console.log(`property set: ${prop} = ${value}`);
+      return true;
+    },
+  },
+);
 
-console.log('a' in p);  // false
+console.log("a" in p); // false
 
-p.a = 10;               // "property set: a = 10"
-console.log('a' in p);  // true
-console.log(p.a);       // 10
+p.a = 10; // "property set: a = 10"
+console.log("a" in p); // true
+console.log(p.a); // 10
 ```
 
 ## 명세서

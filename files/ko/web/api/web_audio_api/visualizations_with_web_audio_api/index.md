@@ -1,18 +1,14 @@
 ---
 title: Web Audio API로 시각화하기
 slug: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
-tags:
-  - API
-  - Web Audio API
-  - analyser
-  - fft
-  - visualisation
-  - visualization
-  - waveform
 ---
+
+{{DefaultAPISidebar("Web Audio API")}}
+
 Web Audio API의 가장 흥미로운 기능 중 하나는 주파수, 파형, 그리고 다른 데이터들을 오디오 소스로부터 추출할 수 있는 능력인데, 이는 그리고 나서 시각화하는 데 사용될 수 있습니다. 이 글은 어떻게 시각화를 하는지 설명하고, 기초적인 사용 방법을 두 개 제공합니다.
 
-> **참고:** 모든 코드의 작동 예제를 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 데모에서 찾을 수 있습니다.
+> [!NOTE]
+> 모든 코드의 작동 예제를 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 데모에서 찾을 수 있습니다.
 
 ## 기본 개념
 
@@ -32,11 +28,13 @@ analyser.connect(distortion);
 distortion.connect(audioCtx.destination);
 ```
 
-> **참고:** 입력이 소스에 직접적으로든 혹은 다른 노드를 경유하든 연결되어 있는 한, 여러분은 analyser의 출력을 다른 노드에 이것이 작동하도록 연결할 필요가 없습니다.
+> [!NOTE]
+> 입력이 소스에 직접적으로든 혹은 다른 노드를 경유하든 연결되어 있는 한, 여러분은 analyser의 출력을 다른 노드에 이것이 작동하도록 연결할 필요가 없습니다.
 
 analyser 노드는 그리고 나서, 여러분이 {{ domxref("AnalyserNode.fftSize") }} 속성 값에 명시한 것에 따라, 고속 푸리에 변환 (fft) 을 사용하여 특정한 주파수 도메인에 있는 오디오 데이터를 캡쳐합니다. (만약 값이 명시되어 있지 않으면, 기본값은 2048입니다.)
 
-> **참고:** 여러분은 또한 {{ domxref("AnalyserNode.minDecibels") }}과 {{ domxref("AnalyserNode.maxDecibels") }}을 사용하여 fft 데이터 스케일링 범위에 대해 최소와 최대 power 값을 명시할 수 있고, {{ domxref("AnalyserNode.smoothingTimeConstant") }}를 사용하여 각각 다른 데이터 averaging 상수를 명시할 수 있습니다. 이것들을 어떻게 사용하는지에 대해서는 각 페이지를 읽어 보세요.
+> [!NOTE]
+> 여러분은 또한 {{ domxref("AnalyserNode.minDecibels") }}과 {{ domxref("AnalyserNode.maxDecibels") }}을 사용하여 fft 데이터 스케일링 범위에 대해 최소와 최대 power 값을 명시할 수 있고, {{ domxref("AnalyserNode.smoothingTimeConstant") }}를 사용하여 각각 다른 데이터 averaging 상수를 명시할 수 있습니다. 이것들을 어떻게 사용하는지에 대해서는 각 페이지를 읽어 보세요.
 
 데이터를 캡쳐하기 위해서는, 여러분은 주파수 데이터를 캡쳐하기 위해 {{ domxref("AnalyserNode.getFloatFrequencyData()") }}와 {{ domxref("AnalyserNode.getByteFrequencyData()") }} 메서드를 사용할 필요가 있고, 파형 데이터를 캡쳐하기 위해서는 {{ domxref("AnalyserNode.getByteTimeDomainData()") }}와 {{ domxref("AnalyserNode.getFloatTimeDomainData()") }}를 사용할 필요가 있습니다.
 
@@ -97,7 +95,7 @@ analyser.getByteTimeDomainData(dataArray);
 다음으로, 시작하기 위해 캔버스를 단색으로 채웁니다.
 
 ```js
-canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+canvasCtx.fillStyle = "rgb(200, 200, 200)";
 canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 ```
 
@@ -105,33 +103,32 @@ canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
 ```js
 canvasCtx.lineWidth = 2;
-canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+canvasCtx.strokeStyle = "rgb(0, 0, 0)";
 canvasCtx.beginPath();
 ```
 
 캔버스 너비를 (앞서 정의된 바와 같이 FrequencyBinCount와 동일한) 배열 길이로 나눔으로써 그려질 선의 각 부분의 너비를 결정하고, 선의 각 부분을 그리기 위해 이동할 위치를 정의하기 위해 x 변수를 정의합니다.
 
 ```js
-var sliceWidth = WIDTH * 1.0 / bufferLength;
+var sliceWidth = (WIDTH * 1.0) / bufferLength;
 var x = 0;
 ```
 
 이제 배열로부터의 데이터 포인트 값에 기반한 특정한 높이에서의 버퍼의 각 부분에 대해 파동의 작은 부분의 위치를 정의하고, 다음 파동 부분이 그려질 지점까지 선을 이동하는 반복문을 실행합니다.
 
 ```js
-      for(var i = 0; i < bufferLength; i++) {
+for (var i = 0; i < bufferLength; i++) {
+  var v = dataArray[i] / 128.0;
+  var y = (v * HEIGHT) / 2;
 
-        var v = dataArray[i] / 128.0;
-        var y = v * HEIGHT/2;
+  if (i === 0) {
+    canvasCtx.moveTo(x, y);
+  } else {
+    canvasCtx.lineTo(x, y);
+  }
 
-        if(i === 0) {
-          canvasCtx.moveTo(x, y);
-        } else {
-          canvasCtx.lineTo(x, y);
-        }
-
-        x += sliceWidth;
-      }
+  x += sliceWidth;
+}
 ```
 
 마지막으로, 우리는 캔버스의 우측 중앙에서 선을 끝내고, 우리가 정의한 획을 그립니다:
@@ -145,7 +142,7 @@ var x = 0;
 코드의 이 섹션의 마지막에서, 우리는 전체 과정을 시작하기 위해 `draw()` 함수를 호출합니다:
 
 ```js
-    draw();
+draw();
 ```
 
 이것은 초당 수 차례 갱신되는 멋진 파형 디스플레이를 보여줍니다:
@@ -215,4 +212,5 @@ draw();
 
 ![오디오 신호의 각각 다른 주파수들의 강도를 보여주는 막대 그래프의 일련의 붉은 색 막대들](bar-graph.png)
 
-> **참고:** 이 글에서 언급된 예제들은 {{ domxref("AnalyserNode.getByteFrequencyData()") }} 와 {{ domxref("AnalyserNode.getByteTimeDomainData()") }}의 사용을 보여주었습니다. {{ domxref("AnalyserNode.getFloatFrequencyData()") }} 와 {{ domxref("AnalyserNode.getFloatTimeDomainData()") }}를 보여주는 작동 예제에 대해서는, [Voice-change-O-matic-float-data](https://mdn.github.io/voice-change-o-matic-float-data/) 데모 ([소스 코드](https://github.com/mdn/voice-change-o-matic-float-data) 도 확인할 수 있습니다) 를 참고하세요 — 이것은 unsigned 바이트 데이터가 아니라, Float 데이터를 사용한다는 것을 제외하면, 이것은 정확히 원래 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/)와 똑같습니다.
+> [!NOTE]
+> 이 글에서 언급된 예제들은 {{ domxref("AnalyserNode.getByteFrequencyData()") }} 와 {{ domxref("AnalyserNode.getByteTimeDomainData()") }}의 사용을 보여주었습니다. {{ domxref("AnalyserNode.getFloatFrequencyData()") }} 와 {{ domxref("AnalyserNode.getFloatTimeDomainData()") }}를 보여주는 작동 예제에 대해서는, [Voice-change-O-matic-float-data](https://mdn.github.io/voice-change-o-matic-float-data/) 데모 ([소스 코드](https://github.com/mdn/voice-change-o-matic-float-data) 도 확인할 수 있습니다) 를 참고하세요 — 이것은 unsigned 바이트 데이터가 아니라, Float 데이터를 사용한다는 것을 제외하면, 이것은 정확히 원래 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/)와 똑같습니다.

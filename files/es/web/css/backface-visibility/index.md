@@ -7,7 +7,7 @@ slug: Web/CSS/backface-visibility
 
 ## Resumen
 
-La propiedad [CSS](/es/docs/CSS) **`backface-visibility`** determina si la cara posterior de un elemento es visible de frente al usuario. La cara posterior de un elemento siempre es un fondo transparente, permitiendo, cuando es visible, que se muestre una imagen de espejo de la cara frontal.
+La propiedad [CSS](/es/docs/Web/CSS) **`backface-visibility`** determina si la cara posterior de un elemento es visible de frente al usuario. La cara posterior de un elemento siempre es un fondo transparente, permitiendo, cuando es visible, que se muestre una imagen de espejo de la cara frontal.
 
 Hay casos en los que no queremos que la cara frontal de un elemento sea visible a través de la cara posterior, como cuando se hace el efecto de voltear una tarjeta (estableciendo dos elementos lado a lado).
 
@@ -58,7 +58,10 @@ Esta propiedad puede tener dos valores diferentes (y exclusivos):
             <div class="face bottom">6</div>
           </div>
         </div>
-        <p>All the faces are transparent and the three back faces are visible through the front ones.</p>
+        <p>
+          All the faces are transparent and the three back faces are visible
+          through the front ones.
+        </p>
       </td>
       <td>
         <div class="container">
@@ -71,7 +74,9 @@ Esta propiedad puede tener dos valores diferentes (y exclusivos):
             <div class="face bottom">6</div>
           </div>
         </div>
-        <p>No face is opaque, but the three back faces are always hidden now.</p>
+        <p>
+          No face is opaque, but the three back faces are always hidden now.
+        </p>
       </td>
     </tr>
   </tbody>
@@ -153,7 +158,7 @@ Esta propiedad puede tener dos valores diferentes (y exclusivos):
 .top {
   background: rgba(196, 196, 0, 0.7);
   transform: rotateX(90deg) translateZ(50px);
-  -webkit-transform: rotateX(90deg) translateZ(50px)
+  -webkit-transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
@@ -163,8 +168,10 @@ Esta propiedad puede tener dos valores diferentes (y exclusivos):
 }
 
 /* Make the table a little nicer */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   margin: 0px;
   padding: 6px;
   font-family: sans-serif;
@@ -180,10 +187,10 @@ th, p, td {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.backface-visibility")}}
+{{Compat}}
 
 ## Véase también
 
-- [Uso de CSS transforms](/es/docs/CSS/Using_CSS_transforms)
+- [Uso de CSS transforms](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

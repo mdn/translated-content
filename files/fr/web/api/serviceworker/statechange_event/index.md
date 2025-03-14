@@ -1,12 +1,6 @@
 ---
 title: ServiceWorker.onstatechange
 slug: Web/API/ServiceWorker/statechange_event
-tags:
-  - API
-  - Propriété
-  - Reference
-translation_of: Web/API/ServiceWorker/onstatechange
-original_slug: Web/API/ServiceWorker/onstatechange
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
@@ -28,19 +22,19 @@ Ce fragment de code présente [un exemple d'enregistrement d'évenements pour le
 var serviceWorker;
 if (registration.installing) {
   serviceWorker = registration.installing;
-  document.querySelector('#kind').textContent = 'installé';
+  document.querySelector("#kind").textContent = "installé";
 } else if (registration.waiting) {
   serviceWorker = registration.waiting;
-  document.querySelector('#kind').textContent = 'en attente';
+  document.querySelector("#kind").textContent = "en attente";
 } else if (registration.active) {
   serviceWorker = registration.active;
-  document.querySelector('#kind').textContent = 'actif';
+  document.querySelector("#kind").textContent = "actif";
 }
 
 if (serviceWorker) {
   logState(serviceWorker.state);
-  serviceWorker.addEventListener('statechange', function(e) {
-  logState(e.target.state);
+  serviceWorker.addEventListener("statechange", function (e) {
+    logState(e.target.state);
   });
 }
 ```

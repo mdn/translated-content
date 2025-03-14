@@ -1,12 +1,6 @@
 ---
 title: <tspan>
 slug: Web/SVG/Element/tspan
-tags:
-  - Contenu texte SVG
-  - Elément(3)
-  - Référence(2)
-  - SVG
-translation_of: Web/SVG/Element/tspan
 ---
 
 {{SVGRef}}
@@ -20,14 +14,23 @@ A l'intérieur d'un élément {{SVGElement("text")}}, les propriétés du texte 
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg">
   <style>
-    text  { font: italic 12px serif; }
-    tspan { font: bold 10px sans-serif; fill: red; }
+    text {
+      font: italic 12px serif;
+    }
+    tspan {
+      font: bold 10px sans-serif;
+      fill: red;
+    }
   </style>
 
   <text x="10" y="30" class="small">
@@ -44,10 +47,10 @@ html,body,svg { height:100% }
 
 ### Attributs globaux
 
-- [Attributs de traitement conditionnel](/fr/docs/SVG/Attribute#ConditionalProccessing) »
-- [Attributs de base](/fr/docs/SVG/Attribute#Core) »
-- [Attributs d'évènements graphiques](/fr/docs/SVG/Attribute#GraphicalEvent) »
-- [Attributs de présentation](/fr/docs/SVG/Attribute#Presentation) »
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#core) »
+- [Attributs d'évènements graphiques](/fr/docs/Web/SVG/Attribute#graphicalevent) »
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}

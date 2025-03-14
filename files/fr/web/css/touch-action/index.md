@@ -1,11 +1,6 @@
 ---
 title: touch-action
 slug: Web/CSS/touch-action
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/touch-action
 ---
 
 {{CSSRef}}
@@ -37,7 +32,8 @@ On utilise parfois cette propriété pour désactiver les interactions tactiles 
 
 Lorsqu'une interaction tactile a lieu, le navigateur inspecte les valeurs de `touch-action` pour l'élément et ses ancêtres jusqu'à atteindre l'élément qui implémente le geste (c'est-à-dire celui qui peut défiler/zoomer). En pratique, `touch-action` est généralement uniquement appliquée aux éléments de plus haut niveau ayant besoin d'un comportement spécifique. Il n'est pas nécessaire de redéfinir `touch-action` sur les descendants.
 
-> **Note :** Lorsqu'un geste est déjà initié, tout changement sur `touch-action` n'aura aucun impact sur le geste en cours.
+> [!NOTE]
+> Lorsqu'un geste est déjà initié, tout changement sur `touch-action` n'aura aucun impact sur le geste en cours.
 
 ## Syntaxe
 
@@ -78,9 +74,12 @@ La propriété `touch-action` peut être définie grâce à :
 ### HTML
 
 ```html
-<ul>Ma list
+<ul>
+  Ma list
   <li>UnLongTexteQuiDevraitTenirSurUneLigneHeureusementQuOnAOverflowScroll</li>
-  <li>UnAutreLongTexteQuiDevraitTenirSurUneLigneHeureusementQuOnAOverflowScroll</li>
+  <li>
+    UnAutreLongTexteQuiDevraitTenirSurUneLigneHeureusementQuOnAOverflowScroll
+  </li>
 </ul>
 ```
 
@@ -102,14 +101,15 @@ ul > li {
 
 {{EmbedLiveSample('Exemples')}}
 
-> **Note :** La propriété `touch-action` est également utilisée afin de supprimer le délai donné à l'évènement `click` pour prendre en charge le zoom via la double-touche.
+> [!NOTE]
+> La propriété `touch-action` est également utilisée afin de supprimer le délai donné à l'évènement `click` pour prendre en charge le zoom via la double-touche.
 
 ## Accessibilité
 
 Une déclaration `touch action: none;` empêchera le navigateur de zoomer. Cela peut empêcher les personnes à faible vision de lire et de comprendre le contenu de la page.
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- _[Understanding Success Criterion 1.4.4 - Understanding WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- _[Understanding Success Criterion 1.4.4 - Understanding WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)_
 
 ## Spécifications
 
@@ -123,5 +123,5 @@ Une déclaration `touch action: none;` empêchera le navigateur de zoomer. Cela 
 
 - [Les événements de pointage](/fr/docs/Web/API/Pointer_events)
 - Un billet du blog WebKit : [une gestion plus responsive du toucher sur iOS (en anglais)](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/)
-- [Rendre le défilement tactile rapide, par défaut sur le Google Developers Blog](*https://developers.google.com/web/updates/2017/01/scrolling-intervention)
-- [Le module de spécification CSS Scroll Snap](/fr/docs/Web/CSS/CSS_Scroll_Snap)
+- [Rendre le défilement tactile rapide, par défaut sur le Google Developers Blog](https://developers.google.com/web/updates/2017/01/scrolling-intervention)
+- [Le module de spécification CSS Scroll Snap](/fr/docs/Web/CSS/CSS_scroll_snap)

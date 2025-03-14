@@ -1,26 +1,35 @@
 ---
 title: Reflect.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
-original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/deleteProperty
 ---
 
 {{JSRef}}
 
-La méthode statique **`Reflect.deleteProperty()`** permet de supprimer des propriétés. Il agit comme l'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_delete).
+La méthode statique **`Reflect.deleteProperty()`** permet de supprimer des propriétés. Il agit comme l'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete).
 
-{{EmbedInteractiveExample("pages/js/reflect-deleteproperty.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Reflect.deleteProperty()", "taller")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+Reflect.deleteProperty(object1, "property1");
+
+console.log(object1.property1);
+// Expected output: undefined
+
+const array1 = [1, 2, 3, 4, 5];
+Reflect.deleteProperty(array1, "3");
+
+console.log(array1);
+// Expected output: Array [1, 2, 3, undefined, 5]
+```
 
 ## Syntaxe
 
 ```js
-Reflect.deleteProperty(cible, cléPropriété)
+Reflect.deleteProperty(cible, cléPropriété);
 ```
 
 ### Paramètres
@@ -40,7 +49,7 @@ Une erreur {{jsxref("TypeError")}} si `cible` n'est pas un {{jsxref("Object")}}.
 
 ## Description
 
-La méthode `Reflect.deleteProperty` permet de supprimer une propriété d'un objet. Elle renvoie un {{jsxref("Boolean")}} qui indique si la propriété a été supprimée correctement. Cette méthode est très proche de l'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_delete).
+La méthode `Reflect.deleteProperty` permet de supprimer une propriété d'un objet. Elle renvoie un {{jsxref("Boolean")}} qui indique si la propriété a été supprimée correctement. Cette méthode est très proche de l'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete).
 
 ## Exemples
 
@@ -57,7 +66,7 @@ arr; // [1, 2, 3, , 5]
 Reflect.deleteProperty({}, "toto"); // true
 
 // Renvoie false si une propriété n'est pas configurable
-Reflect.deleteProperty(Object.freeze({toto: 1}),"toto"); // false
+Reflect.deleteProperty(Object.freeze({ toto: 1 }), "toto"); // false
 ```
 
 ## Spécifications
@@ -71,4 +80,4 @@ Reflect.deleteProperty(Object.freeze({toto: 1}),"toto"); // false
 ## Voir aussi
 
 - {{jsxref("Reflect")}}
-- [Opérateur `delete`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_delete)
+- [Opérateur `delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete)

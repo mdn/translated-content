@@ -1,13 +1,13 @@
 ---
 title: clip-path
 slug: Web/CSS/clip-path
-translation_of: Web/CSS/clip-path
-browser-compat: css.properties.clip-path
+l10n:
+  sourceCommit: 82ef8b5c50a0045add71f1a06f5be1db781aede4
 ---
 
 {{CSSRef}}
 
-La propriété **`clip-path`** empêche une portion d'un élément d'être affichée en définissant une région de rognage. Seule une zone spécifique de l'élément sera affichée.
+La propriété [CSS](/fr/docs/Web/CSS) **`clip-path`** empêche une portion d'un élément d'être affichée en définissant une région de rognage. Seule la zone spécifique de l'élément à l'intérieur de la région sera affichée, le reste sera masqué.
 
 {{EmbedInteractiveExample("pages/css/clip-path.html")}}
 
@@ -36,7 +36,9 @@ clip-path: inset(100px 50px);
 clip-path: circle(50px at 0 100px);
 clip-path: ellipse(50px 60px at 0 10% 20%);
 clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-clip-path: path('M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z');
+clip-path: path(
+  "M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z"
+);
 
 /* Combinaison boîte & géométrie */
 clip-path: padding-box circle(50px at 0 100px);
@@ -45,6 +47,7 @@ clip-path: padding-box circle(50px at 0 100px);
 clip-path: inherit;
 clip-path: initial;
 clip-path: revert;
+clip-path: revert-layer;
 clip-path: unset;
 ```
 
@@ -53,21 +56,22 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
 ### Valeurs
 
 - `<clip-source>`
-  - : Une [`url()`](/fr/docs/Web/CSS/url()) qui référence un élément [SVG](/fr/docs/Web/SVG) [`<clipPath>`](/fr/docs/Web/SVG/Element/clipPath).
+
+  - : Une [`url()`](/fr/docs/Web/CSS/url_value) qui référence un élément [SVG](/fr/docs/Web/SVG) [`<clipPath>`](/fr/docs/Web/SVG/Element/clipPath).
 
 - [`<basic-shape>`](/fr/docs/Web/CSS/basic-shape)
 
   - : Une forme dont la taille et la position sont définies par la valeur `<geometry-box>`. Si aucune valeur de géométrie n'est fournie, `border-box` sera utilisée comme boîte de référence. La forme peut être définie avec l'une de ces valeurs&nbsp;:
 
-    - [`inset()`](/fr/docs/Web/CSS/basic-shape/inset())
+    - [`inset()`](/fr/docs/Web/CSS/basic-shape/inset)
       - : Définit un rectangle.
-    - [`circle()`](/fr/docs/Web/CSS/basic-shape/circle())
+    - [`circle()`](/fr/docs/Web/CSS/basic-shape/circle)
       - : Définit un cercle avec un rayon et une position.
-    - [`ellipse()`](/fr/docs/Web/CSS/basic-shape/ellipse())
+    - [`ellipse()`](/fr/docs/Web/CSS/basic-shape/ellipse)
       - : Définit une ellipse avec ses deux demi-rayons et une position.
-    - [`polygon()`](/fr/docs/Web/CSS/basic-shape/polygon())
+    - [`polygon()`](/fr/docs/Web/CSS/basic-shape/polygon)
       - : Définit un polygone en utilisant une règle de remplissage SVG et un ensemble d'arêtes.
-    - [`path()`](/fr/docs/Web/CSS/path())
+    - [`path()`](/fr/docs/Web/CSS/basic-shape/path)
       - : Définit une forme en utilisant une règle de remplissage SVG optionnelle et une définition de chemin SVG.
 
 - `<geometry-box>`
@@ -75,15 +79,15 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
   - : Si cette valeur est combinée avec une valeur `<basic-shape>`, elle définira la boîte de référence dans laquelle placer la forme. Si elle est utilisée seule, ce sont les bords de la boîte (ainsi que les éventuels coins arrondis définis avec [`border-radius`](/fr/docs/Web/CSS/border-radius)) qui sont utilisés comme ligne de rognage. Cette composante peut prendre les valeurs suivantes&nbsp;:
 
     - `margin-box`
-      - : La [boîte de marge](/fr/docs/Web/CSS/CSS_Shapes/From_box_values#margin-box) est utilisée comme boîte de référence.
+      - : La [boîte de marge](/fr/docs/Web/CSS/CSS_shapes/From_box_values#margin-box) est utilisée comme boîte de référence.
     - `border-box`
-      - : La [boîte de bordure](/fr/docs/Web/CSS/CSS_Shapes/From_box_values#border-box) est utilisée comme boîte de référence.
+      - : La [boîte de bordure](/fr/docs/Web/CSS/CSS_shapes/From_box_values#border-box) est utilisée comme boîte de référence.
     - `padding-box`
-      - : La [boîte de remplissage (<i lang="en">padding</i>)](/fr/docs/Web/CSS/CSS_Shapes/From_box_values#padding-box) est utilisée comme boîte de référence.
+      - : La [boîte de remplissage (<i lang="en">padding</i>)](/fr/docs/Web/CSS/CSS_shapes/From_box_values#padding-box) est utilisée comme boîte de référence.
     - `content-box`
-      - : La [boîte de contenu](/fr/docs/Web/CSS/CSS_Shapes/From_box_values#content-box) est utilisée comme boîte de référence.
+      - : La [boîte de contenu](/fr/docs/Web/CSS/CSS_shapes/From_box_values#content-box) est utilisée comme boîte de référence.
     - `fill-box`
-      - : La boîte englobant (<i lang="en">bounding box</i>) est utilisée comme boîte de référence.
+      - : La boîte englobante (<i lang="en">bounding box</i>) est utilisée comme boîte de référence.
     - `stroke-box`
       - : La boîte de contour de la boîte englobante est utilisée comme boîte de référence.
     - `view-box`
@@ -92,7 +96,8 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
 - `none`
   - : Aucun chemin de rognage n'est créé.
 
-> **Note :** Si [la valeur calculée](/fr/docs/Web/CSS/computed_value) est différente de `none`, cela entraînera la création d'un nouveau [contexte d'empilement](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) (de la même façon qu'[`opacity`](/fr/docs/Web/CSS/opacity) avec des valeurs différentes de `1`).
+> [!NOTE]
+> Si [la valeur calculée](/fr/docs/Web/CSS/computed_value) est différente de `none`, cela entraînera la création d'un nouveau [contexte d'empilement](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) (de la même façon qu'[`opacity`](/fr/docs/Web/CSS/opacity) avec des valeurs différentes de `1`).
 
 ## Définition formelle
 
@@ -110,7 +115,8 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
 <svg class="defs">
   <defs>
     <clipPath id="myPath" clipPathUnits="objectBoundingBox">
-      <path d="M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z" />
+      <path
+        d="M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z" />
     </clipPath>
   </defs>
 </svg>
@@ -119,15 +125,15 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
   <div class="col">
     <div class="note">clip-path: none</div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="none">
-            J'ADORE<br><em>le rognage</em>
-          </p>
+          <p class="none">J'ADORE<br /><em>le rognage</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+      <div class="cell">
+        <span>SVG</span>
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="none">
               <rect x="24" y="24" width="144" height="144" />
@@ -139,8 +145,9 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
       </div>
     </div>
 
-    <div class="note">clip-path: url(#myPath)<br><br>
-      Assuming the following clipPath definition:
+    <div class="note">
+      clip-path: url(#myPath)<br /><br />
+      Si on prend la définition de clipPath suivante :
       <pre>
 &lt;svg&gt;
   &lt;clipPath id="myPath" clipPathUnits="objectBoundingBox"&gt;
@@ -150,18 +157,19 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
       A 0.25,0.25,1,1,1,1,0.3
       C 1,0.7,0.5,1,0.5,1 Z" /&gt;
   &lt;/clipPath&gt;
-&lt;/svg&gt;</pre>
+&lt;/svg&gt;</pre
+      >
     </div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="svg">
-            J'ADORE<br><em>le rognage</em>
-          </p>
+          <p class="svg">J'ADORE<br /><em>le rognage</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+      <div class="cell">
+        <span>SVG</span>
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="svg">
               <rect x="24" y="24" width="144" height="144" />
@@ -173,18 +181,20 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
       </div>
     </div>
 
-    <div class="note">clip-path: path('M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45 Q135,90,75,130 Q15,90,15,45 Z')
+    <div class="note">
+      clip-path: path('M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45
+      Q135,90,75,130 Q15,90,15,45 Z')
     </div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="svg2">
-            J'ADORE<br><em>le rognage</em>
-          </p>
+          <p class="svg2">J'ADORE<br /><em>le rognage</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+      <div class="cell">
+        <span>SVG</span>
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="svg2">
               <rect x="24" y="24" width="144" height="144" />
@@ -196,19 +206,17 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
       </div>
     </div>
 
-
-
     <div class="note">clip-path: circle(25%)</div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="shape1">
-            J'ADORE<br><em>le rognage</em>
-          </p>
+          <p class="shape1">J'ADORE<br /><em>le rognage</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+      <div class="cell">
+        <span>SVG</span>
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape1">
               <rect x="24" y="24" width="144" height="144" />
@@ -222,15 +230,15 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
 
     <div class="note">clip-path: circle(25% at 25% 25%)</div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="shape2">
-            J'ADORE<br><em>le rognage</em>
-          </p>
+          <p class="shape2">J'ADORE<br /><em>le rognage</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+      <div class="cell">
+        <span>SVG</span>
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape2">
               <rect x="24" y="24" width="144" height="144" />
@@ -244,15 +252,15 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
 
     <div class="note">clip-path: fill-box circle(25% at 25% 25%)</div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="shape3">
-            J'ADORE<br><em>le rognage</em>
-          </p>
+          <p class="shape3">J'ADORE<br /><em>le rognage</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+      <div class="cell">
+        <span>SVG</span>
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape3">
               <rect x="24" y="24" width="144" height="144" />
@@ -266,15 +274,15 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
 
     <div class="note">clip-path: stroke-box circle(25% at 25% 25%)</div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="shape4">
-            J'ADORE<br><em>le rognage</em>
-          </p>
+          <p class="shape4">J'ADORE<br /><em>le rognage</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+      <div class="cell">
+        <span>SVG</span>
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape4">
               <rect x="24" y="24" width="144" height="144" />
@@ -288,15 +296,15 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
 
     <div class="note">clip-path: view-box circle(25% at 25% 25%)</div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="shape5">
-            J'ADORE<br><em>le rognage</em>
-          </p>
+          <p class="shape5">J'ADORE<br /><em>le rognage</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+      <div class="cell">
+        <span>SVG</span>
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape5">
               <rect x="24" y="24" width="144" height="144" />
@@ -310,15 +318,15 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
 
     <div class="note">clip-path: margin-box circle(25% at 25% 25%)</div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="shape6">
-            J'ADORE<br><em>le rognage</em>
-          </p>
+          <p class="shape6">J'ADORE<br /><em>le rognage</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+      <div class="cell">
+        <span>SVG</span>
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape6">
               <rect x="24" y="24" width="144" height="144" />
@@ -332,15 +340,15 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
 
     <div class="note">clip-path: border-box circle(25% at 25% 25%)</div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="shape7">
-            J'ADORE<br><em>le rognage</em>
-          </p>
+          <p class="shape7">J'ADORE<br /><em>le rognage</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+      <div class="cell">
+        <span>SVG</span>
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape7">
               <rect x="24" y="24" width="144" height="144" />
@@ -354,15 +362,15 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
 
     <div class="note">clip-path: padding-box circle(25% at 25% 25%)</div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="shape8">
-            J'ADORE<br><em>le rognage</em>
-          </p>
+          <p class="shape8">J'ADORE<br /><em>le rognage</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+      <div class="cell">
+        <span>SVG</span>
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape8">
               <rect x="24" y="24" width="144" height="144" />
@@ -376,15 +384,15 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
 
     <div class="note">clip-path: content-box circle(25% at 25% 25%)</div>
     <div class="row">
-      <div class="cell"> <span>HTML</span>
+      <div class="cell">
+        <span>HTML</span>
         <div class="container">
-          <p class="shape9">
-            J'ADORE<br><em>le rognage</em>
-          </p>
+          <p class="shape9">J'ADORE<br /><em>le rognage</em></p>
         </div>
       </div>
-      <div class="cell"> <span>SVG</span>
-        <div class="container viewbox">
+      <div class="cell">
+        <span>SVG</span>
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape9">
               <rect x="24" y="24" width="144" height="144" />
@@ -400,10 +408,11 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
 ```
 
 ```css
-html,body {
+html,
+body {
   height: 100%;
   box-sizing: border-box;
-  background: #EEE;
+  background: #eee;
 }
 
 .grid {
@@ -425,9 +434,9 @@ html,body {
 }
 
 .cell {
-  margin: .5em;
-  padding: .5em;
-  background-color: #FFF;
+  margin: 0.5em;
+  padding: 0.5em;
+  background-color: #fff;
   overflow: hidden;
   text-align: center;
   flex: 1;
@@ -436,8 +445,8 @@ html,body {
 .note {
   background: #fff3d4;
   padding: 1em;
-  margin: .5em .5em 0;
-  font: .8em sans-serif;
+  margin: 0.5em 0.5em 0;
+  font: 0.8em sans-serif;
   text-align: left;
   white-space: nowrap;
 }
@@ -449,32 +458,34 @@ html,body {
 .container {
   display: inline-block;
   border: 1px dotted grey;
-  position:relative;
+  position: relative;
 }
 
-.container:before {
-  content: 'margin';
+.container::before {
+  content: "margin";
   position: absolute;
   top: 2px;
   left: 2px;
-  font: italic .6em sans-serif;
+  font: italic 0.6em sans-serif;
 }
 
-.viewbox {
-  box-shadow: 1rem 1rem 0 #EFEFEF inset, -1rem -1rem 0 #EFEFEF inset;
+.view-box {
+  box-shadow:
+    1rem 1rem 0 #efefef inset,
+    -1rem -1rem 0 #efefef inset;
 }
 
-.container.viewbox:after {
-  content: 'viewbox';
+.container.view-box::after {
+  content: "view-box";
   position: absolute;
   left: 1.1rem;
   top: 1.1rem;
-  font: italic .6em sans-serif;
+  font: italic 0.6em sans-serif;
 }
 
 .cell span {
   display: block;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 p {
@@ -487,18 +498,44 @@ p {
   width: 6em;
 }
 
-.none { clip-path: none; }
-.svg  { clip-path: url(#myPath); }
-.svg2 { clip-path: path('M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45 Q135,90,75,130 Q15,90,15,45 Z');}
-.shape1 { clip-path: circle(25%); }
-.shape2 { clip-path: circle(25% at 25% 25%); }
-.shape3 { clip-path: fill-box    circle(25% at 25% 25%); }
-.shape4 { clip-path: stroke-box circle(25% at 25% 25%); }
-.shape5 { clip-path: view-box    circle(25% at 25% 25%); }
-.shape6 { clip-path: margin-box circle(25% at 25% 25%); }
-.shape7 { clip-path: border-box circle(25% at 25% 25%); }
-.shape8 { clip-path: padding-box circle(25% at 25% 25%); }
-.shape9 { clip-path: content-box circle(25% at 25% 25%); }
+.none {
+  clip-path: none;
+}
+.svg {
+  clip-path: url(#myPath);
+}
+.svg2 {
+  clip-path: path(
+    "M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45 Q135,90,75,130 Q15,90,15,45 Z"
+  );
+}
+.shape1 {
+  clip-path: circle(25%);
+}
+.shape2 {
+  clip-path: circle(25% at 25% 25%);
+}
+.shape3 {
+  clip-path: fill-box circle(25% at 25% 25%);
+}
+.shape4 {
+  clip-path: stroke-box circle(25% at 25% 25%);
+}
+.shape5 {
+  clip-path: view-box circle(25% at 25% 25%);
+}
+.shape6 {
+  clip-path: margin-box circle(25% at 25% 25%);
+}
+.shape7 {
+  clip-path: border-box circle(25% at 25% 25%);
+}
+.shape8 {
+  clip-path: padding-box circle(25% at 25% 25%);
+}
+.shape9 {
+  clip-path: content-box circle(25% at 25% 25%);
+}
 
 .defs {
   width: 0;
@@ -506,7 +543,9 @@ p {
   margin: 0;
 }
 
-pre { margin-bottom: 0; }
+pre {
+  margin-bottom: 0;
+}
 
 svg {
   margin: 1em;
@@ -530,32 +569,33 @@ svg text.em {
 }
 ```
 
-{{EmbedLiveSample("", "100%", 800, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("", "100%", "800px")}}
 
 ### Exemple complet
 
 #### HTML
 
 ```html
-<img id="clipped" src="mdn.svg"
-    alt="MDN logo">
+<img id="clipped" src="mdn.svg" alt="Logo de MDN" />
 <svg height="0" width="0">
   <defs>
     <clipPath id="cross">
-      <rect y="110" x="137" width="90" height="90"/>
-      <rect x="0" y="110" width="90" height="90"/>
-      <rect x="137" y="0" width="90" height="90"/>
-      <rect x="0" y="0" width="90" height="90"/>
+      <rect y="110" x="137" width="90" height="90" />
+      <rect x="0" y="110" width="90" height="90" />
+      <rect x="137" y="0" width="90" height="90" />
+      <rect x="0" y="0" width="90" height="90" />
     </clipPath>
   </defs>
 </svg>
 
 <select id="clipPath">
-  <option value="none">none</option>
-  <option value="circle(100px at 110px 100px)">circle</option>
-  <option value="url(#cross)" selected>cross</option>
-  <option value="inset(20px round 20px)">inset</option>
-  <option value="path('M 0 200 L 0,110 A 110,90 0,0,1 240,100 L 200 340 z')">path</option>
+  <option value="none">aucun</option>
+  <option value="circle(100px at 110px 100px)">cercle</option>
+  <option value="url(#cross)" selected>croix</option>
+  <option value="inset(20px round 20px)">angles</option>
+  <option value="path('M 0 200 L 0,110 A 110,90 0,0,1 240,100 L 200 340 z')">
+    chemin
+  </option>
 </select>
 ```
 
@@ -569,15 +609,15 @@ svg text.em {
 ```
 
 ```js hidden
-var clipPathSelect = document.getElementById("clipPath");
-clipPathSelect.addEventListener("change", function (evt) {
+const clipPathSelect = document.getElementById("clipPath");
+clipPathSelect.addEventListener("change", (evt) => {
   document.getElementById("clipped").style.clipPath = evt.target.value;
 });
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("", 230, 300)}}
+{{EmbedLiveSample("", 230, 250)}}
 
 ## Spécifications
 
@@ -592,8 +632,8 @@ clipPathSelect.addEventListener("change", function (evt) {
 - Les propriétés CSS
   - [`mask`](/fr/docs/Web/CSS/mask)
   - [`filter`](/fr/docs/Web/CSS/filter)
-- [Appliquer des effets SVG sur du contenu HTML](/fr/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
-- [Les formes CSS, le rognage et le masquage&nbsp;: comment les utiliser (en anglais)](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
-- Les attributs SVG&nbsp;:
+- Les attributs SVG
   - [`clip-path`](/fr/docs/Web/SVG/Attribute/clip-path)
   - [`clip-rule`](/fr/docs/Web/SVG/Attribute/clip-rule)
+- [Appliquer des effets SVG sur du contenu HTML](/fr/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Les formes CSS, le rognage et le masquage&nbsp;: comment les utiliser (un billet de blog Hacks en anglais)](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)

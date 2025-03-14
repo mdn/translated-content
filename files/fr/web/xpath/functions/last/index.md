@@ -1,13 +1,9 @@
 ---
 title: last
 slug: Web/XPath/Functions/last
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/last
-original_slug: Web/XPath/Fonctions/last
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `last` retourne un nombre égal à la taille du contexte dans le contexte d'évaluation d'expression.
 
@@ -27,7 +23,7 @@ Un entier égal à la taille du contexte dans le contexte d'évaluation d'expres
 
 ### Définition
 
-[XPath 1.0, section 4.1](http://www.w3.org/TR/xpath#function-last).
+[XPath 1.0, section 4.1](https://www.w3.org/TR/xpath#function-last).
 
 ### Support Gecko
 

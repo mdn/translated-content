@@ -25,18 +25,20 @@ O construtor do elemento personalizado nomeado, ou `undefined`se não há defini
 ## Examples
 
 ```js
-customElements.define('my-paragraph',
+customElements.define(
+  "my-paragraph",
   class extends HTMLElement {
     constructor() {
-      let templateContent = document.getElementById('my-paragraph').content;
+      let templateContent = document.getElementById("my-paragraph").content;
       super() // returns element this scope
-        .attachShadow({mode: 'open'}) // sets AND returns this.shadowRoot
+        .attachShadow({ mode: "open" }) // sets AND returns this.shadowRoot
         .append(templateContent.cloneNode(true));
-  }
-})
+    }
+  },
+);
 
 // Retorne uma referência ao construtor my-paragraph
-let ctor = customElements.get('my-paragraph');
+let ctor = customElements.get("my-paragraph");
 ```
 
 ## Especificações

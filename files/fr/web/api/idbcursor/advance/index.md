@@ -1,12 +1,6 @@
 ---
 title: IDBCursor.advance()
 slug: Web/API/IDBCursor/advance
-tags:
-  - API
-  - IndexedDB
-  - Méthode
-  - Reference
-translation_of: Web/API/IDBCursor/advance
 ---
 
 {{APIRef("IndexedDB")}}
@@ -48,22 +42,23 @@ On notera également que, dans chaque itération de la boucle, on peut récupér
 
 ```js
 function advanceResult() {
-  list.innerHTML = '';
-  var transaction = db.transaction(['granListAlbum'], "readonly");
-  var objectStore = transaction.objectStore('granListAlbum');
+  list.innerHTML = "";
+  var transaction = db.transaction(["granListAlbum"], "readonly");
+  var objectStore = transaction.objectStore("granListAlbum");
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = function (event) {
     var curseur = event.target.result;
-    if(curseur) {
-      var listItem = document.createElement('li');
-      listItem.innerHTML = '' + curseur.value.titreAlbum + ', ' + curseur.value.annee;
+    if (curseur) {
+      var listItem = document.createElement("li");
+      listItem.innerHTML =
+        "" + curseur.value.titreAlbum + ", " + curseur.value.annee;
       list.appendChild(listItem);
       curseur.advance(2);
     } else {
-      console.log('moitié des resultats affichée');
+      console.log("moitié des resultats affichée");
     }
   };
-};
+}
 ```
 
 ## Spécifications
@@ -76,10 +71,10 @@ function advanceResult() {
 
 ## Voir aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Démarrer des transactions : {{domxref("IDBDatabase")}}
 - Manipuler des transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
 - Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)

@@ -1,7 +1,6 @@
 ---
 title: Request()
 slug: Web/API/Request/Request
-translation_of: Web/API/Request/Request
 ---
 
 {{APIRef("Fetch")}}
@@ -32,28 +31,30 @@ var myRequest = new Request(input, init);
 
 ## 에러
 
-| **타입**    | **내용**                                                                                                                                                          |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **타입**    | **내용**                                                                                                                                                             |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `TypeError` | [Firefox 43](/ko/docs/Mozilla/Firefox/Releases/43)부터, `http://user:password@example.com` 와 같인 credential을 포함하는 경우 `Request()` 는 타입 에러를 반환합니다. |
 
 ## 예시
 
-[Fetch Request example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request)에서는, 생성자를 사용해 새로운 Requst 객체를 생성하고 나서 {{domxref("GlobalFetch.fetch")}}인터페이스를 이용해 Request로 읽어온 결과를 취득하고 있습니다. 특정 사진을 가져와서 사용할 수 있게 만들기 위해서 MIME타입을 설정하고, Response의 {{domxref("Body.blob")}}를 반환합니다. 그 후로 오브젝트 URL을 생성해 {{htmlelement("img")}}요소를 표시하도록 합니다. [Fetch Request live](http://mdn.github.io/fetch-examples/fetch-request/)를 참고해주시기 바랍니다.
+[Fetch Request example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request)에서는, 생성자를 사용해 새로운 Requst 객체를 생성하고 나서 {{domxref("GlobalFetch.fetch")}}인터페이스를 이용해 Request로 읽어온 결과를 취득하고 있습니다. 특정 사진을 가져와서 사용할 수 있게 만들기 위해서 MIME타입을 설정하고, Response의 {{domxref("Body.blob")}}를 반환합니다. 그 후로 오브젝트 URL을 생성해 {{htmlelement("img")}}요소를 표시하도록 합니다. [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)를 참고해주시기 바랍니다.
 
 ```js
-var myImage = document.querySelector('img');
+var myImage = document.querySelector("img");
 
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 
-fetch(myRequest).then(function(response) {
-  return response.blob();
-}).then(function(response) {
-  var objectURL = URL.createObjectURL(response);
-  myImage.src = objectURL;
-});
+fetch(myRequest)
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (response) {
+    var objectURL = URL.createObjectURL(response);
+    myImage.src = objectURL;
+  });
 ```
 
-[Fetch Request with init example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request-with-init)에서는 fetch()를 실행할 때 마다, init객체를 전달하는 것 이외에는 거의 동일한 기능을 수행합니다. [Fetch Request init live](http://mdn.github.io/fetch-examples/fetch-request-with-init/) 를 참조해주시기 바랍니다.
+[Fetch Request with init example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request-with-init)에서는 fetch()를 실행할 때 마다, init객체를 전달하는 것 이외에는 거의 동일한 기능을 수행합니다. [Fetch Request init live](https://mdn.github.io/fetch-examples/fetch-request-with-init/) 를 참조해주시기 바랍니다.
 
 ```js
 var myImage = document.querySelector('img');
@@ -87,13 +88,11 @@ Request 객체ㅡ이 클론을 생성하기 위해서 `Request()` 생성자에 {
 var copy = new Request(myRequest);
 ```
 
-**노트**：마지막의 예시는 [ServiceWorkers](/ko/docs/Web/API/ServiceWorker_API)안에서만 사용 가능합니다。
+> **참고**：마지막의 예시는 [ServiceWorkers](/ko/docs/Web/API/Service_Worker_API)안에서만 사용 가능합니다。
 
-## 사용
+## 명세서
 
-| 사용                                                             | 상태                     | 꼬릿말 |
-| ---------------------------------------------------------------- | ------------------------ | ------ |
-| {{SpecName('Fetch','#dom-request','Request()')}} | {{Spec2('Fetch')}} |        |
+{{Specifications}}
 
 ## 브라우저 지원현황
 
@@ -101,6 +100,6 @@ var copy = new Request(myRequest);
 
 ## 관련항목
 
-- [ServiceWorker API](/ko/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ko/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/ko/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/ko/docs/Web/HTTP/CORS)
 - [HTTP](/ko/docs/Web/HTTP)

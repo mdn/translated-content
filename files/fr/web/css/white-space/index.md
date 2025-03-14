@@ -1,11 +1,6 @@
 ---
 title: white-space
 slug: Web/CSS/white-space
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/white-space
 ---
 
 {{CSSRef}}
@@ -14,7 +9,8 @@ La propriété **`white-space`** est utilisée pour décrire la façon dont les 
 
 {{EmbedInteractiveExample("pages/css/white-space.html")}}
 
-> **Note :** Afin d'obtenir une césure au sein des mots, il faudra utiliser {{cssxref("overflow-wrap")}}, {{cssxref("word-break")}} ou bien {{cssxref("hyphens")}}.
+> [!NOTE]
+> Afin d'obtenir une césure au sein des mots, il faudra utiliser {{cssxref("overflow-wrap")}}, {{cssxref("word-break")}} ou bien {{cssxref("hyphens")}}.
 
 ## Syntaxe
 
@@ -124,17 +120,9 @@ Le tableau qui suit résume le comportement des différentes valeurs :
 
 ```html
 <code>
-var coucou = function(){
-  // on notera l'indentation
-  // avec deux espaces
-  console.log("Hello World");
-
-  var toto = function(){
-    // ici 4 espaces
-    console.log("Toto");
-  }
-  toto();
-}
+  var coucou = function(){ // on notera l'indentation // avec deux espaces
+  console.log("Hello World"); var toto = function(){ // ici 4 espaces
+  console.log("Toto"); } toto(); }
 </code>
 ```
 
@@ -166,8 +154,8 @@ function jeNAuraisJamaisDuAppelerCetteFonctionAvecUnNomAussiLong(toto){
 
 ```css
 pre {
-  word-wrap: break-word;      /* IE 5.5-7 */
-  white-space: pre-wrap;      /* current browsers */
+  word-wrap: break-word; /* IE 5.5-7 */
+  white-space: pre-wrap; /* current browsers */
 }
 ```
 

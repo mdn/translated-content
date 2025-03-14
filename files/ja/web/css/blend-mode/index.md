@@ -2,7 +2,7 @@
 title: <blend-mode>
 slug: Web/CSS/blend-mode
 l10n:
-  sourceCommit: 31a11c2af1ecf81524971f85424b0462334be3c4
+  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
 {{CSSRef}}
@@ -17,7 +17,7 @@ l10n:
 
 - `normal`
   - : 下の色が何であるかに関わらず、上の色が最終的な色になります。
-     この効果は 2 枚の不透明の紙が重なっているようなものです。
+    この効果は 2 枚の不透明の紙が重なっているようなものです。
 - `multiply`
   - : 上の色と下の色を掛け合わせた結果が最終的な色になります。
     黒いレイヤーは最終的に黒いレイヤーになり、白いレイヤーは変化をもたらしません。
@@ -386,18 +386,20 @@ l10n:
 div {
   width: 300px;
   height: 300px;
-  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png)
-      no-repeat center, linear-gradient(to bottom, blue, orange);
+  background:
+    url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png)
+      no-repeat center,
+    linear-gradient(to bottom, blue, orange);
 }
 ```
 
 #### JavaScript
 
 ```js
-const selectElem = document.querySelector('select');
-const divElem = document.querySelector('div');
+const selectElem = document.querySelector("select");
+const divElem = document.querySelector("div");
 
-selectElem.addEventListener('change', () => {
+selectElem.addEventListener("change", () => {
   divElem.style.backgroundBlendMode = selectElem.value;
 });
 ```
@@ -416,9 +418,10 @@ selectElem.addEventListener('change', () => {
 
 ## 関連情報
 
+- [CSS 合成と混合](/ja/docs/Web/CSS/CSS_compositing_and_blending)モジュールで、 `<blend-mode>` の値を定義しています。
 - このデータ型を使用するプロパティ: {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
 
 様々な混合モードの他のウェブサイトにおける解説:
 
-- Wikipedia の[ブレンドモード](https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%AC%E3%83%B3%E3%83%89%E3%83%A2%E3%83%BC%E3%83%89)の記事
+- [ブレンドモード](https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%AC%E3%83%B3%E3%83%89%E3%83%A2%E3%83%BC%E3%83%89)（ウィキペディア）
 - [Adobe Photoshop における描画モード](https://helpx.adobe.com/jp/photoshop/using/blending-modes.html) (Adobe)

@@ -1,11 +1,6 @@
 ---
 title: flex-grow
 slug: Web/CSS/flex-grow
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/flex-grow
 ---
 
 {{CSSRef}}
@@ -20,7 +15,7 @@ La plupart du temps `flex-grow` est utilisé avec les autres propriétés flexib
 
 {{EmbedInteractiveExample("pages/css/flex-grow.html")}}
 
-Pour plus d'informations, voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Utilisation_des_flexbox_en_CSS).
+Pour plus d'informations, voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
 
 ## Syntaxe
 
@@ -78,12 +73,12 @@ La propriété `flex-grow` se définit avec une valeur de type [`<number>`](#num
 
 .box {
   flex-shrink: 1;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .box1 {
   flex-grow: 1;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 ```
 
@@ -102,5 +97,5 @@ La propriété `flex-grow` se définit avec une valeur de type [`<number>`](#num
 ## Voir aussi
 
 - [`flex-grow` est étrange ?](https://css-tricks.com/flex-grow-is-weird/) un article (en anglais) écrit par Manuel Matuzovic sur CSS-Tricks et qui illustre le fonctionnement de `flex-grow`
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox)_
-- Guide sur les boîtes flexibles : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Contrôler_les_proportions_des_boîtes_flexibles_le_long_de_l_axe_principal)_
+- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- Guide sur les boîtes flexibles : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_

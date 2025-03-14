@@ -1,38 +1,40 @@
 ---
 title: CSSKeyframesRule
 slug: Web/API/CSSKeyframesRule
+l10n:
+  sourceCommit: 4da6c30730190b55e9b405711fedf6cdc755972d
 ---
 
 {{APIRef("CSSOM")}}
 
-**`CSSKeyframesRule`** インターフェイスは、 CSS アニメーションにおけるキーフレームの完全なセットを表すオブジェクトを記述します。これは {{cssxref("@keyframes")}} {{cssxref("at-rule", "アットルール", "", 1)}}全体の内容に対応します。
+**`CSSKeyframesRule`** インターフェイスは、 CSS アニメーションにおけるキーフレームの完全なセットを表すオブジェクトを記述します。これは {{cssxref("@keyframes")}} [アットルール](/ja/docs/Web/CSS/At-rule)全体の内容に対応します。
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
 _祖先である {{domxref("CSSRule")}} からプロパティを継承しています。_
 
 - {{domxref("CSSKeyframesRule.name")}}
   - : キーフレームの名前を表します。 {{cssxref("animation-name")}} プロパティで使用されます。
-- {{domxref("CSSKeyframesRule.cssRules")}} {{readOnlyInline}}
+- {{domxref("CSSKeyframesRule.cssRules")}} {{ReadOnlyInline}}
   - : リスト内のキーフレームの {{domxref("CSSRuleList")}} を返します。
 
-## メソッド
+## インスタンスメソッド
 
 _祖先である {{domxref("CSSRule")}} からメソッドを継承しています。_
 
 - {{domxref("CSSKeyframesRule.appendRule()")}}
-  - : 現在の CSSKeyframesRule の中に新しいキーフレームを挿入します。引数は {{domxref("DOMString")}} で、 {{cssxref("@keyframes")}} アットルールの項目と同じ書式でキーフレームを指定します。複数のキーフレームのルールが含まれていた場合は、 {{domxref("DOMException")}} が `SYNTAX_ERR` で発生します。
+  - : 現在の CSSKeyframesRule の中に新しいキーフレームを挿入します。引数は文字列で、{{cssxref("@keyframes")}} アットルールの項目と同じ書式でキーフレームを指定します。複数のキーフレームのルールが含まれていた場合は、 {{domxref("DOMException")}} が `SYNTAX_ERR` で発生します。
 - {{domxref("CSSKeyframesRule.deleteRule()")}}
-  - : 現在の CSSKeyframesRule からキーフレームのルールを削除します。引数は削除するキーフレームの見出しで、 {{domxref("DOMString")}} で `0%` から `100%` までの間に解決する値で表します。
+  - : 現在の CSSKeyframesRule からキーフレームのルールを削除します。引数は削除するキーフレームの見出しで、`0%` から `100%` までの間に解決する値を表す文字列です。
 - {{domxref("CSSKeyframesRule.findRule()")}}
-  - : 指定されたキーに対応するキーフレームのルールを返します。このキーは {{domxref("DOMString")}} で、返却するキーフレームの見出しを指定し、 `0%` から `100%` までのパーセント値に解決するものです。そのキーフレームが存在しない場合は、 `findRule` は `null` を返します。
+  - : 指定されたキーに対応するキーフレームのルールを返します。このキーは文字列で、返却するキーフレームの見出しを指定し、`0%` から `100%` までのパーセント値に解決するものです。そのキーフレームが存在しない場合は、 `findRule` は `null` を返します。
 
 ## 例
 
 この CSS には keyframes アットルールがあります。これは `document.styleSheets[0].cssRules` で返される最初の {{domxref("CSSRule")}} になります。
-`myRules[0]` は {{domxref("CSSKeyframesRule")}} オブジェクト 1 つを返します。
+`myRules[0]` は `CSSKeyframesRule` オブジェクト 1 つを返します。
 
 ```css
 @keyframes slidein {

@@ -1,17 +1,11 @@
 ---
 title: title
 slug: Web/HTML/Global_attributes/title
-tags:
-  - Atributos globales
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Global_attributes/title
-original_slug: Web/HTML/Atributos_Globales/title
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
-El [atributo global](/es/docs/Web/HTML/Atributos_Globales) **title** contiene un texto representado información relacionada al elemento al cual pertenece . Tal información puede típicamente , pero no necesariamente , ser presentada al usuario como un tip . Aquí hay algunos usos típicos para este atributo :
+El [atributo global](/es/docs/Web/HTML/Global_attributes) **title** contiene un texto representado información relacionada al elemento al cual pertenece . Tal información puede típicamente , pero no necesariamente , ser presentada al usuario como un tip . Aquí hay algunos usos típicos para este atributo :
 
 - Vínculo : el título o la descripción del documento vinculado
 - Elemento mediático como una imagen : una descripción o créditos asociados
@@ -25,7 +19,10 @@ Semánticas adicionales se adjuntan a los atributos de **title** de los elemento
 El atributo **title** puede contener varias líneas . Cada `U+000A LINE FEED` (`LF`) insertada representa una línea nueva . Se debe tener precaución ya que esto significa que :
 
 ```html
-<p>Líneas nuevas en title deben de tomarse en cuenta , como esta <abbr title="Este es un título multilínea">ejemplo </abbr>.</p>
+<p>
+  Líneas nuevas en title deben de tomarse en cuenta , como esta
+  <abbr title="Este es un título multilínea">ejemplo </abbr>.
+</p>
 ```
 
 define un título de dos líneas .
@@ -34,11 +31,11 @@ define un título de dos líneas .
 
 {{Specifications}}
 
-## Compatibilidad en exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.title")}}
+{{Compat}}
 
 ## Ver también
 
-- [atributos globales](/es/docs/Web/HTML/Atributos_Globales) .
+- [atributos globales](/es/docs/Web/HTML/Global_attributes) .
 - {{domxref("HTMLElement.title")}} que refleja a este atributo .

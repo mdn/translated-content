@@ -1,14 +1,6 @@
 ---
 title: AudioBufferSourceNode.loopEnd
 slug: Web/API/AudioBufferSourceNode/loopEnd
-tags:
-  - API
-  - Audio
-  - AudioBufferSourceNode
-  - Propriété
-  - Reference
-  - Web Audio API
-translation_of: Web/API/AudioBufferSourceNode/loopEnd
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -32,7 +24,8 @@ Dans cet exemple, la fonction {{domxref("AudioContext.decodeAudioData")}} est ut
 
 Lorsque la lecture de la source audio est terminée, elle boucle. Il est possible de contrôler la durée de la boucle en modifiant `loopStart` et `loopEnd`. Par exemple, si leurs valeurs sont fixées à 20 et 25, respectivement, le son bouclera entre la 20ème et la 25ème secondes du morceau.
 
-> **Note :** Voir [l'exemple complet](http://mdn.github.io/decode-audio-data/) et [son code source](https://github.com/mdn/decode-audio-data).
+> [!NOTE]
+> Voir [l'exemple complet](https://mdn.github.io/decode-audio-data/) et [son code source](https://github.com/mdn/decode-audio-data).
 
 ```js
 function getData() {

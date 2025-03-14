@@ -13,8 +13,8 @@ slug: Web/API/AnalyserNode/getFloatFrequencyData
 
 ## 语法
 
-```
-void analyser.getFloatFrequencyData(array);
+```js-nolint
+getFloatFrequencyData(array)
 ```
 
 ### 参数
@@ -42,68 +42,73 @@ analyser.getFloatFrequencyData(myDataArray);
 
 下面的示例展示了一个 {{domxref("AudioContext")}}对象连接 {{domxref("MediaElementAudioSourceNode")}}到`AnalyserNode 对象的基本用法（即用 AudioContext 将音频内容连接到分析节点，从而可以展开对音频数据的分析）`. 当音频播放时，我们使用 {{domxref("window.requestAnimationFrame()","requestAnimationFrame()")}}方法产生轮询从而不断地收集频率数据，进而在 {{htmlelement("canvas")}} 元素上绘制 winamp（windows 上的一款 MP3 播放软件）条形图风格的频谱。
 
-更多的应用示例和应用信息，可以参看我们 [Voice-change-O-matic-float-data](http://mdn.github.io/voice-change-o-matic-float-data/) 示例 (在 [source code](https://github.com/mdn/voice-change-o-matic-float-data) 同样有).
+更多的应用示例和应用信息，可以参看我们 [Voice-change-O-matic-float-data](https://mdn.github.io/voice-change-o-matic-float-data/) 示例 (在 [source code](https://github.com/mdn/voice-change-o-matic-float-data) 同样有).
 
 ```html
 <!doctype html>
 <body>
-<script>
-const audioCtx = new AudioContext();
+  <script>
+    const audioCtx = new AudioContext();
 
-//创建一个音频源
-//在示例中我们使用了一个音频文件，但其实这里也可以用麦克风输入
-const audioEle = new Audio();
-audioEle.src = 'my-audio.mp3';//这里是文件名
-audioEle.autoplay = true;
-audioEle.preload = 'auto';
-const audioSourceNode = audioCtx.createMediaElementSource(audioEle);
+    //创建一个音频源
+    //在示例中我们使用了一个音频文件，但其实这里也可以用麦克风输入
+    const audioEle = new Audio();
+    audioEle.src = "my-audio.mp3"; //这里是文件名
+    audioEle.autoplay = true;
+    audioEle.preload = "auto";
+    const audioSourceNode = audioCtx.createMediaElementSource(audioEle);
 
-//生成一个分析节点 (analyser node)
-const analyserNode = audioCtx.createAnalyser();
-analyserNode.fftSize = 256;
-const bufferLength = analyserNode.frequencyBinCount;
-const dataArray = new Float32Array(bufferLength);
+    //生成一个分析节点 (analyser node)
+    const analyserNode = audioCtx.createAnalyser();
+    analyserNode.fftSize = 256;
+    const bufferLength = analyserNode.frequencyBinCount;
+    const dataArray = new Float32Array(bufferLength);
 
-//设置音频节点网络（音频源->分析节点->输出）
-audioSourceNode.connect(analyserNode);
-analyserNode.connect(audioCtx.destination);
+    //设置音频节点网络（音频源->分析节点->输出）
+    audioSourceNode.connect(analyserNode);
+    analyserNode.connect(audioCtx.destination);
 
-//生成 2D canvas
-const canvas = document.createElement('canvas');
-canvas.style.position = 'absolute';
-canvas.style.top = 0;
-canvas.style.left = 0;
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-document.body.appendChild(canvas);
-const canvasCtx = canvas.getContext('2d');
-canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
+    //生成 2D canvas
+    const canvas = document.createElement("canvas");
+    canvas.style.position = "absolute";
+    canvas.style.top = 0;
+    canvas.style.left = 0;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    document.body.appendChild(canvas);
+    const canvasCtx = canvas.getContext("2d");
+    canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
 
+    function draw() {
+      //准备好下次重绘
+      requestAnimationFrame(draw);
 
-function draw() {
-  //准备好下次重绘
-  requestAnimationFrame(draw);
+      //获取实时的频谱信息
+      analyserNode.getFloatFrequencyData(dataArray);
 
-  //获取实时的频谱信息
-  analyserNode.getFloatFrequencyData(dataArray);
+      //画一个黑色的背景
+      canvasCtx.fillStyle = "rgb(0, 0, 0)";
+      canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
 
-  //画一个黑色的背景
-  canvasCtx.fillStyle = 'rgb(0, 0, 0)';
-  canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+      //绘制频谱
+      const barWidth = (canvas.width / bufferLength) * 2.5;
+      let posX = 0;
+      for (let i = 0; i < bufferLength; i++) {
+        const barHeight = (dataArray[i] + 140) * 2;
+        canvasCtx.fillStyle =
+          "rgb(" + Math.floor(barHeight + 100) + ", 50, 50)";
+        canvasCtx.fillRect(
+          posX,
+          canvas.height - barHeight / 2,
+          barWidth,
+          barHeight / 2,
+        );
+        posX += barWidth + 1;
+      }
+    }
 
-  //绘制频谱
-  const barWidth = (canvas.width / bufferLength) * 2.5;
-  let posX = 0;
-  for (let i = 0; i < bufferLength; i++) {
-    const barHeight = (dataArray[i] + 140) * 2;
-    canvasCtx.fillStyle = 'rgb(' + Math.floor(barHeight + 100) + ', 50, 50)';
-    canvasCtx.fillRect(posX, canvas.height - barHeight / 2, barWidth, barHeight / 2);
-    posX += barWidth + 1;
-  }
-};
-
-draw();
-</script>
+    draw();
+  </script>
 </body>
 ```
 
@@ -117,4 +122,4 @@ draw();
 
 ## See also
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

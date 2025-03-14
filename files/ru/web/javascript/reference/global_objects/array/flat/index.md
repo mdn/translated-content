@@ -1,29 +1,23 @@
 ---
 title: Array.prototype.flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
-tags:
-  - Массив
-  - Ссылка
-  - Экспериментальная
-  - метод
-  - прототип
-  - яваскрипт
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
 ---
+
 {{JSRef}}
 
-Метод **`flat()`** возвращает новый массив, в котором все элементы вложенных подмассивов были рекурсивно "подняты" на указанный уровень depth.
+Метод **`flat()`** экземпляров {{jsxref("Array")}} возвращает новый массив, в котором все элементы вложенных подмассивов рекурсивно "подняты" на указанный уровень.
 
 ## Синтаксис
 
-```
-var newArray = arr.flat(depth);
+```js-nolint
+flat()
+flat(depth)
 ```
 
 ### Параметры
 
 - `depth` {{optional_inline}}
-  - : На сколько уровней вложенности уменьшается мерность исходного массива. По умолчанию 1.
+  - : Указывает, на сколько уровней вложенности уменьшается мерность исходного массива. По умолчанию 1.
 
 ### Возвращаемое значение
 
@@ -31,98 +25,40 @@ var newArray = arr.flat(depth);
 
 ## Примеры
 
-### Упрощение вложенных массивов
+### Уплощение вложенных массивов
 
 ```js
-var arr1 = [1, 2, [3, 4]];
+const arr1 = [1, 2, [3, 4]];
 arr1.flat();
 // [1, 2, 3, 4]
 
-var arr2 = [1, 2, [3, 4, [5, 6]]];
+const arr2 = [1, 2, [3, 4, [5, 6]]];
 arr2.flat();
 // [1, 2, 3, 4, [5, 6]]
 
-var arr3 = [1, 2, [3, 4, [5, 6]]];
+const arr3 = [1, 2, [3, 4, [5, 6]]];
 arr3.flat(2);
 // [1, 2, 3, 4, 5, 6]
 
-var arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
+const arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
 arr4.flat(Infinity);
 // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-### Упрощение и "дырки" в массивах
+### Использование flat() для разреженных массивов
 
-Метод flat удаляет пустые слоты из массива:
-
-```js
-var arr4 = [1, 2, , 4, 5];
-arr4.flat();
-// [1, 2, 4, 5]
-```
-
-## Альтернативы
-
-### `reduce` и `concat`
+Метод `flat()` удаляет пустые слоты в массивах:
 
 ```js
-var arr1 = [1, 2, [3, 4]];
-arr1.flat();
+const arr5 = [1, 2, , 4, 5];
+console.log(arr5.flat()); // [1, 2, 4, 5]
 
-// В одномерный массив
-arr1.reduce((acc, val) => acc.concat(val), []);// [1, 2, 3, 4]
+const array = [1, , 3, ["a", , "c"]];
+console.log(array.flat()); // [ 1, 3, "a", "c" ]
 
-//или
-const flatSingle = arr => [].concat(...arr);
-```
-
-```js
-// Для развёртывания многомерных массивов используем рекурсию, reduce и concat
-const arr = [1, 2, [3, 4, [5, 6]]];
-
-function flatDeep(arr, d = 1) {
-   return d > 0 ? arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
-                : arr.slice();
-};
-
-flatDeep(arr, Infinity);
-// [1, 2, 3, 4, 5, 6]
-```
-
-```js
-//не рекурсивное упрощение с использованием стэка
-var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
-function flatten(input) {
-  const stack = [...input];
-  const res = [];
-  while (stack.length) {
-    // забираем последнее значение
-    const next = stack.pop();
-    if (Array.isArray(next)) {
-      // добавляем к массиву элементы не модифицируя исходное значение
-      stack.push(...next);
-    } else {
-      res.push(next);
-    }
-  }
-  //разворачиваем массив, чтобы восстановить порядок элементов
-  return res.reverse();
-}
-flatten(arr1);// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
-```
-
-```js
-//рекурсивно упрощаем массив
-function flatten(array) {
-  var flattend = [];
-  (function flat(array) {
-    array.forEach(function(el) {
-      if (Array.isArray(el)) flat(el);
-      else flattend.push(el);
-    });
-  })(array);
-  return flattend;
-}
+const array2 = [1, , 3, ["a", , ["d", , "e"]]];
+console.log(array2.flat()); // [ 1, 3, "a", ["d", empty, "e"] ]
+console.log(array2.flat(2)); // [ 1, 3, "a", "d", "e"]
 ```
 
 ## Спецификации

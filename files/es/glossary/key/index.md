@@ -1,13 +1,9 @@
 ---
 title: Clave
 slug: Glossary/Key
-tags:
-  - Criptografía
-  - Glosario
-  - Seguridad
-translation_of: Glossary/Key
-original_slug: Glossary/Clave
 ---
+
+{{GlossarySidebar}}
 
 Una clave es una pieza de información utilizada por un algoritmo criptográfico para el {{Glossary("encryption", "cifrado")}} y/o {{Glossary("decryption", "descifrado")}}. Los mensajes cifrados deben permanecer seguros incluso si todo lo relacionado con el {{Glossary("cryptosystem","sistema de cifrado")}}, excepto la clave, es de conocimiento público.
 
@@ -16,4 +12,4 @@ En la {{Glossary("symmetric-key cryptography", "criptografía de clave simétric
 ## Saber más
 
 - [Principos de Kerckhoffs](https://es.wikipedia.org/wiki/Principios_de_Kerckhoffs) en Wikipedia
-- [Cifrado](/es/docs/Glossary/Cifrado)
+- [Cifrado](/es/docs/Glossary/Cipher)

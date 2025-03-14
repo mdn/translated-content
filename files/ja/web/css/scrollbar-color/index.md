@@ -1,6 +1,8 @@
 ---
 title: scrollbar-color
 slug: Web/CSS/scrollbar-color
+l10n:
+  sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
 ---
 
 {{CSSRef}}
@@ -11,7 +13,7 @@ slug: Web/CSS/scrollbar-color
 
 **つまみ**はスクロールバーの動く部分で、ふつうはトラックの上を動きます。
 
-{{EmbedInteractiveExample("pages/css/scrollbar-color.html")}}
+`scrollbar-color` の値がドキュメントのルート要素に設定されている場合、その値はビューポートのスクロールバーに適用されます。
 
 ## 構文
 
@@ -20,13 +22,14 @@ slug: Web/CSS/scrollbar-color
 scrollbar-color: auto;
 
 /* <color> 値 */
-scrollbar-color: rebeccapurple green;   /* 二つの有効な色。
+scrollbar-color: rebeccapurple green; /* 二つの有効な色。
 一つ目はスクロールバーのつまみ、二つ目はトラックに適用される。 */
 
 /* グローバル値 */
 scrollbar-color: inherit;
 scrollbar-color: initial;
 scrollbar-color: revert;
+scrollbar-color: revert-layer;
 scrollbar-color: unset;
 ```
 
@@ -53,9 +56,9 @@ scrollbar-color: unset;
       </tbody>
     </table>
 
-    > **メモ:** ユーザーエージェントはビューポートのルート要素に、何らかの `scrollbar-color` の値を適用しなければなりません。
+> **メモ:** [`@media (forced-colors: active)`](/ja/docs/Web/CSS/@media/forced-colors) とすると、`scrollbar-color` が `auto` になります。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
 `scrollbar-color` プロパティで色の値を指定して使用する場合、指定した色の間に十分なコントラストがあることを確認してください。キーワード値の場合、ユーザーエージェントは使用する色の間に十分なコントラストがあることを保証してください。 [Techniques for WCAG 2.0: G183: Using a contrast ratio of 3:1](https://www.w3.org/TR/WCAG20-TECHS/G183.html) を参照してください。
 
@@ -78,14 +81,20 @@ scrollbar-color: unset;
   width: 300px;
   height: 100px;
   overflow-y: scroll;
-  scrollbar-color: rebeccapurple green;
+  scrollbar-color: #007 #bada55;
 }
 ```
 
 #### HTML
 
 ```html
-<div class="scroller">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</div>
+<div class="scroller">
+  Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+  daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
+  corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts
+  fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
+  earthnut pea peanut soko zucchini.
+</div>
 ```
 
 #### 結果
@@ -102,5 +111,8 @@ scrollbar-color: unset;
 
 ## 関連情報
 
-- [`scrollbar-width`](/ja/docs/Web/CSS/scrollbar-width)
-- [`overflow`](/ja/docs/Web/CSS/overflow)
+- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
+- [CSS スクロールバースタイル設定](/ja/docs/Web/CSS/CSS_scrollbars_styling)モジュール
+- {{CSSxRef("overflow")}}
+- {{CSSxRef("scrollbar-gutter")}}
+- {{CSSxRef("scrollbar-width")}}

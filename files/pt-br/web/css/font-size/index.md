@@ -60,7 +60,8 @@ The `font-size` property is specified in one of the following ways:
 - {{cssxref("&lt;percentage&gt;")}}
   - : A positive {{cssxref("&lt;percentage&gt;")}} value, relative to the parent element's font size.
 
-> **Note:** To maximize accessibility, it is generally best to use values that are relative to the user's default font size.
+> [!NOTE]
+> To maximize accessibility, it is generally best to use values that are relative to the user's default font size.
 
 ### Formal syntax
 
@@ -80,7 +81,8 @@ Setting the font size in pixel values (`px`) is a good choice when you need pixe
 
 Font sizing settings can also be used in combination. For example, if a parent element is set to `16px` and its child element is set to `larger`, the child element displays larger than the parent element in the page.
 
-> **Note:** Defining font sizes in `px` is _[not accessible](https://en.wikipedia.org/wiki/Web_accessibility)_, because the user cannot change the font size from the browser. For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer. Avoid using them for font sizes if you wish to create an inclusive design.
+> [!NOTE]
+> Defining font sizes in `px` is _[not accessible](https://en.wikipedia.org/wiki/Web_accessibility)_, because the user cannot change the font size from the browser. For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer. Avoid using them for font sizes if you wish to create an inclusive design.
 
 ### Ems
 
@@ -109,7 +111,7 @@ span {
 
 ```html
 <div>
-<span>Outer <span>inner</span> outer</span>
+  <span>Outer <span>inner</span> outer</span>
 </div>
 ```
 
@@ -117,7 +119,7 @@ The result is:
 
 {{EmbedLiveSample("Ems", 400, 40)}}
 
-Assuming that the browser's default `font-size` is 16px, the words “outer” would be rendered at 16px, but the word “inner” would be rendered at 25.6px. This is because the inner {{HTMLElement("span")}}'s `font-size` is 1.6em which is relative to its parent's `font-size`, which is in turn relative to its parent's `font-size`. This is often called **compounding**.
+Assuming that the browser's default `font-size` is 16px, the words "outer" would be rendered at 16px, but the word "inner" would be rendered at 25.6px. This is because the inner {{HTMLElement("span")}}'s `font-size` is 1.6em which is relative to its parent's `font-size`, which is in turn relative to its parent's `font-size`. This is often called **compounding**.
 
 ### Rems
 
@@ -142,7 +144,7 @@ Then we apply this CSS to the same HTML, which looks like this:
 
 {{EmbedLiveSample("Rems", 400, 40)}}
 
-In this example, the words “outer inner outer” are all displayed at 16px (assuming that the browser's `font-size` has been left at the default value of 16px).
+In this example, the words "outer inner outer" are all displayed at 16px (assuming that the browser's `font-size` has been left at the default value of 16px).
 
 ## Examples
 
@@ -150,14 +152,20 @@ In this example, the words “outer inner outer” are all displayed at 16px (as
 
 ```css
 /* Sets paragraph text to be very large */
-p { font-size: xx-large; }
+p {
+  font-size: xx-large;
+}
 
 /* Sets <h1> text to be 2.5 times the size
    of the text around it */
-h1 { font-size: 250%; }
+h1 {
+  font-size: 250%;
+}
 
 /* Sets text enclosed within span tag to be 16px */
-span { font-size: 16px; }
+span {
+  font-size: 16px;
+}
 ```
 
 ### Example 2
@@ -198,15 +206,10 @@ span { font-size: 16px; }
 
 ## Specifications
 
-| Specification                                                                            | Status                                   | Comment                            |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------- |
-| {{SpecName('CSS3 Fonts', '#font-size-prop', 'font-size')}}             | {{Spec2('CSS3 Fonts')}}         | No change.                         |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'font-size')}}     | {{Spec2('CSS3 Transitions')}} | Defines `font-size` as animatable. |
-| {{SpecName('CSS2.1', 'fonts.html#propdef-font-size', 'font-size')}} | {{Spec2('CSS2.1')}}                 | No change.                         |
-| {{SpecName('CSS1', '#font-size', 'font-size')}}                         | {{Spec2('CSS1')}}                 | Initial definition.                |
+{{Specifications}}
 
 {{cssinfo}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.font-size")}}
+{{Compat}}

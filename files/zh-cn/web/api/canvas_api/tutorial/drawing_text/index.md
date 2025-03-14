@@ -3,7 +3,7 @@ title: 绘制文本
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
 在前一个章节中看过 [应用样式和颜色](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) 之后，我们现在来看一下如何在 canvas 中绘制文本
 
@@ -22,7 +22,7 @@ canvas 提供了两种方法来渲染文本：
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.font = "48px serif";
   ctx.fillText("Hello world", 10, 50);
 }
@@ -36,7 +36,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_fillText_example", 310, 110)}}
+{{EmbedLiveSample("一个填充文本的示例", 310, 110)}}
 
 ### 一个文本边框的示例
 
@@ -44,7 +44,7 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.font = "48px serif";
   ctx.strokeText("Hello world", 10, 50);
 }
@@ -58,7 +58,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_strokeText_example", 310, 110)}}
+{{EmbedLiveSample("一个文本边框的示例", 310, 110)}}
 
 ## 有样式的文本
 
@@ -75,7 +75,7 @@ draw();
 
 如果你之前使用过 CSS，那么这些选项你会很熟悉。
 
-下面的图片（from the [WHATWG](http://www.whatwg.org/)）展示了 textBaseline 属性支持的不同的基线情况：
+下面的图片（from the [WHATWG](https://www.whatwg.org/)）展示了 textBaseline 属性支持的不同的基线情况：
 
 ![The top of the em square is
 roughly at the top of the glyphs in a font, the hanging baseline is
@@ -107,7 +107,8 @@ ctx.strokeText("Hello world", 0, 100);
 <textarea id="code" class="playable-code">
 ctx.font = "48px serif";
 ctx.textBaseline = "hanging";
-ctx.strokeText("Hello world", 0, 100);</textarea>
+ctx.strokeText("Hello world", 0, 100);</textarea
+>
 ```
 
 ```js hidden
@@ -123,20 +124,20 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ EmbedLiveSample('textBaseline 例子', 700, 360) }}
 
 ## 预测量文本宽度
 
@@ -149,7 +150,7 @@ window.addEventListener("load", drawCanvas);
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   var text = ctx.measureText("foo"); // TextMetrics object
   text.width; // 16;
 }
@@ -157,6 +158,6 @@ function draw() {
 
 ## Geoko 特性说明
 
-在 Geoko（Firefox，Firefox OS 及基于 Mozilla 的应用的渲染引擎）中，曾有一些版本较早的 [API](/zh-CN/docs/Web/API/CanvasRenderingContext2D#Prefixed_APIs) 实现了在 canvas 上对文本作画的功能，但它们现在已不再使用。
+在 Geoko（Firefox，Firefox OS 及基于 Mozilla 的应用的渲染引擎）中，曾有一些版本较早的 [API](/zh-CN/docs/Web/API/CanvasRenderingContext2D#prefixed_apis) 实现了在 canvas 上对文本作画的功能，但它们现在已不再使用。
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}

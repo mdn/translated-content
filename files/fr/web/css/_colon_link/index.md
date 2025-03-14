@@ -1,11 +1,6 @@
 ---
-title: ':link'
+title: :link
 slug: Web/CSS/:link
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:link
 ---
 
 {{CSSRef}}
@@ -22,7 +17,8 @@ a:link {
 
 Afin que la mise en forme s'applique au mieux, la règle `:link` doit être placée avant les autres : `:link` — `:visited` — `:hover` — `:active`. La pseudo-classe {{cssxref(":focus")}} est habituellement placée juste avant ou juste après `:hover`, en fonction de l'effet désiré.
 
-> **Note :** On utilisera {{cssxref(":any-link")}} pour sélectionner un élément qu'il ait été visité ou non.
+> [!NOTE]
+> On utilisera {{cssxref(":any-link")}} pour sélectionner un élément qu'il ait été visité ou non.
 
 ## Syntaxe
 
@@ -45,15 +41,15 @@ a:link {
 ### HTML
 
 ```html
-<p>Et si on allait voir
+<p>
+  Et si on allait voir
   <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/">
-  un peu de JavaScript ?
+    un peu de JavaScript ?
   </a>
 </p>
-<p>Sinon, on peut continuer à se cultiver sur CSS autre part
-  <a class="external" href="https://css-tricks.com/">
-  comme CSS Tricks.
-  </a>
+<p>
+  Sinon, on peut continuer à se cultiver sur CSS autre part
+  <a class="external" href="https://css-tricks.com/"> comme CSS Tricks. </a>
 </p>
 ```
 

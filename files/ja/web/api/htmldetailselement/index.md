@@ -1,36 +1,42 @@
 ---
 title: HTMLDetailsElement
 slug: Web/API/HTMLDetailsElement
+l10n:
+  sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
 ---
-
-> **メモ:** translation in progress
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLDetailsElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("details")}} elements.
+**`HTMLDetailsElement`** インターフェイスは、（継承によって利用できる通常の {{domxref("HTMLElement")}} インターフェイスのもの以外の）{{HTMLElement("details")}} を操作するための特殊なプロパティを提供します。
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
-## Properties
+## インスタンスプロパティ
 
-_Inherits properties from its parent, {{domxref("HTMLElement")}}._
+_親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
 - {{domxref("HTMLDetailsElement.open")}}
-  - : Is a {{domxref("boolean")}} reflecting the {{htmlattrxref("open", "details")}} HTML attribute, indicating whether or not the element’s contents (not counting the {{HTMLElement("summary")}}) is to be shown to the user.
+  - : HTML の [`open`](/ja/docs/Web/HTML/Element/details#open) 属性を反映する論理値で、要素の内容（{{HTMLElement("summary")}} を除く）がユーザーに表示されているかどうかを示します。
 
-## Methods
+## インスタンスメソッド
 
-_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
+_固有のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
+
+## イベント
+
+このイベントは [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使用するか、このインターフェイスの `onイベント名` プロパティにイベントリスナーを代入することで待ち受けします。
+
+- [`toggle`](/ja/docs/Web/API/HTMLElement/toggle_event)
+  - : {{HtmlElement("details")}} 要素の `open`/`closed` 状態がトグル切り替えされたときに発生します。
 
 ## 仕様書
 
-- [HTML Living Standard](https://html.spec.whatwg.org/multipage/interactive-elements.html#htmldetailselement)
-- [HTML 5.2 (W3C Proposed Recommendation)](https://www.w3.org/TR/html52/interactive-elements.html#htmldetailselement)
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.HTMLDetailsElement")}}
+{{Compat}}
 
 ## 関連情報
 
-- The HTML element implementing this interface: {{HTMLElement("details")}}
+- このインターフェイスを実装している HTML 要素: {{HTMLElement("details")}}

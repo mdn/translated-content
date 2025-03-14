@@ -1,7 +1,6 @@
 ---
 title: glyph
 slug: Web/SVG/Element/glyph
-original_slug: Web/SVG/Element/glifo
 ---
 
 {{SVGRef}}
@@ -10,10 +9,10 @@ Un glifo define a un glifo en particular en una fuente SVG.
 
 ## Contexto de uso
 
-| Categories         | Elemento de contenido de texto.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Permitted content  | Cualquier número de los siguientes elementos, en cualquier orden: [elementos de animación](/en/SVG/Element#Animation) » [elementos descriptivos](/en/SVG/Element#Descriptive) » [elementos de forma](/en/SVG/Element#Shape) » [elementos estructurales](/en/SVG/Element#Structural) » [elementos de gradiente](/en/SVG/Element#Gradient) » {{ SVGElement("a") }}, {{ SVGElement("altGlyphDef") }}, {{ SVGElement("clipPath") }}, {{ SVGElement("color-profile") }}, {{ SVGElement("cursor") }}, {{ SVGElement("filter") }}, {{ SVGElement("font") }}, {{ SVGElement("font-face") }}, {{ SVGElement("foreignObject") }}, {{ SVGElement("image") }}, {{ SVGElement("marker") }}, {{ SVGElement("mask") }}, {{ SVGElement("pattern") }}, {{ SVGElement("script") }}, {{ SVGElement("style") }}, {{ SVGElement("switch") }}, {{ SVGElement("text") }}, {{ SVGElement("view") }} |
-| Normative document | [SVG 1.1 (Segunda edición)](http://www.w3.org/TR/SVG/fonts.html#GlyphElement)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Categories         | Elemento de contenido de texto.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Permitted content  | Cualquier número de los siguientes elementos, en cualquier orden: [elementos de animación](/es/docs/Web/SVG/Element#animation) » [elementos descriptivos](/es/docs/Web/SVG/Element#descriptive) » [elementos de forma](/es/docs/Web/SVG/Element#shape) » [elementos estructurales](/es/docs/Web/SVG/Element#structural) » [elementos de gradiente](/es/docs/Web/SVG/Element#gradient) » {{ SVGElement("a") }}, {{ SVGElement("altGlyphDef") }}, {{ SVGElement("clipPath") }}, {{ SVGElement("color-profile") }}, {{ SVGElement("cursor") }}, {{ SVGElement("filter") }}, {{ SVGElement("font") }}, {{ SVGElement("font-face") }}, {{ SVGElement("foreignObject") }}, {{ SVGElement("image") }}, {{ SVGElement("marker") }}, {{ SVGElement("mask") }}, {{ SVGElement("pattern") }}, {{ SVGElement("script") }}, {{ SVGElement("style") }}, {{ SVGElement("switch") }}, {{ SVGElement("text") }}, {{ SVGElement("view") }} |
+| Normative document | [SVG 1.1 (Segunda edición)](https://www.w3.org/TR/SVG/fonts.html#GlyphElement)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 ## Ejemplo
 
@@ -51,8 +50,8 @@ Un glifo define a un glifo en particular en una fuente SVG.
 
 ### Atributos globales
 
-- [Atributos centrales](/en/SVG/Attribute#Core)»
-- [Atributos de presentación](/en/SVG/Attribute#Presentation) »
+- [Atributos centrales](/es/docs/Web/SVG/Attribute#core)»
+- [Atributos de presentación](/es/docs/Web/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -71,10 +70,10 @@ Un glifo define a un glifo en particular en una fuente SVG.
 
 ## Interfaz DOM
 
-Este elemento implementa la interfaz [`SVGGlyphElement`](/en/DOM/SVGGlyphElement).
+Este elemento implementa la interfaz [`SVGGlyphElement`](/es/docs/Web/API/SVGGlyphElement).
 
 ## Relacionado
 
 - {{ SVGElement("font") }}
 - {{ SVGElement("missing-glyph") }}
-- [Tutorial SVG: Fuentes SVG](/en/SVG/Tutorial/SVG_fonts)
+- [Tutorial SVG: Fuentes SVG](/es/docs/Web/SVG/Tutorial/SVG_fonts)

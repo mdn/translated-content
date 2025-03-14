@@ -1,19 +1,9 @@
 ---
 title: bookmarks.BookmarkTreeNodeType
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType
-tags:
-  - API
-  - Add-ons
-  - BookmarkTreeNodeType
-  - Bookmarks
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type **`bookmarks.BookmarkTreeNodeType`** est utilisé pour décrire si un nœud de l'arborescence de signets est un signet, un dossier ou un séparateur.
 
@@ -25,8 +15,8 @@ Le type **`bookmarks.BookmarkTreeNodeType`** est utilisé pour décrire si un n�
 - `"folder"`: le noeud est un dossier.
 - `"separator"`: le noeud est un séparateur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.BookmarkTreeNodeType", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}

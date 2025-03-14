@@ -1,20 +1,9 @@
 ---
 title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
-tags:
-  - Array
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.6
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -90,7 +79,7 @@ const doubles = numbers.map((num) => num * 2);
 
 ```js
 const map = Array.prototype.map;
-const charCodes = map.call('Hello World', (x) => x.charCodeAt(0));
+const charCodes = map.call("Hello World", (x) => x.charCodeAt(0));
 // теперь charCodes равен [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
 ```
 
@@ -99,7 +88,7 @@ const charCodes = map.call('Hello World', (x) => x.charCodeAt(0));
 Этот пример показывает, как пройтись по коллекции объектов, собранных с помощью `querySelectorAll`. В данном случае мы получаем все выбранные опции на экране и печатаем их в консоль:
 
 ```js
-const elems = document.querySelectorAll('select option:checked');
+const elems = document.querySelectorAll("select option:checked");
 const values = Array.prototype.map.call(elems, ({ value }) => value);
 ```
 
@@ -108,13 +97,16 @@ const values = Array.prototype.map.call(elems, ({ value }) => value);
 ### Пример: использование `map` для переворачивания строки
 
 ```js
-const string = '12345';
-const reversed = Array.prototype.map.call(string, (x) => x).reverse().join('');
+const string = "12345";
+const reversed = Array.prototype.map
+  .call(string, (x) => x)
+  .reverse()
+  .join("");
 // reversed равен '54321'
 // Бонус: используйте '===' для проверки того, является ли строка палиндромом
 ```
 
-Более простым способом будет использование метода {{jsxref("String.split()")}} (см. пример [обращение строки при помощи метода split()](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/split#Example:_Reversing_a_String_using_split)).
+Более простым способом будет использование метода {{jsxref("String.split()")}} (см. пример [обращение строки при помощи метода split()](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/split#example:_reversing_a_string_using_split)).
 
 ### Пример: хитрый вариант использования
 
@@ -124,7 +116,7 @@ const reversed = Array.prototype.map.call(string, (x) => x).reverse().join('');
 
 ```js
 // Рассмотрим пример:
-['1', '2', '3'].map(parseInt);
+["1", "2", "3"].map(parseInt);
 // Хотя ожидаемый результат вызова равен [1, 2, 3],
 // в действительности получаем [1, NaN, NaN]
 
@@ -137,11 +129,11 @@ const reversed = Array.prototype.map.call(string, (x) => x).reverse().join('');
 
 const returnInt = (element) => parseInt(element, 10);
 
-['1', '2', '3'].map(returnInt);
+["1", "2", "3"].map(returnInt);
 // Результатом является массив чисел (как и ожидалось)
 
 // Простейший способ добиться вышеозначенного поведения и избежать чувства "чё за!?":
-['1', '2', '3'].map(Number); // [1, 2, 3]
+["1", "2", "3"].map(Number); // [1, 2, 3]
 ```
 
 ## Спецификации

@@ -1,12 +1,9 @@
 ---
 title: apply-templates
 slug: Web/XSLT/Element/apply-templates
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/apply-templates
-original_slug: Web/XSLT/apply-templates
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:apply-templates>` 요소는 입력 트리 안 노드 집합을 선택하고 그 집합에 알맞은 템플릿을 적용하도록 처리기에게 지시합니다.
 
@@ -36,7 +33,7 @@ original_slug: Web/XSLT/apply-templates
 
 ### 정의
 
-[XSLT section 5.4, Applying Template Rules](http://www.w3.org/TR/xslt#section-Applying-Template-Rules)
+[XSLT section 5.4, Applying Template Rules](https://www.w3.org/TR/xslt#section-Applying-Template-Rules)
 
 ### Gecko 지원
 

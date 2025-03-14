@@ -64,14 +64,15 @@ Você pode criar um novo objeto `Request` usando o construtor {{domxref("Request
 - {{domxref("Body.text()")}}
   - : Retorna um objeto do tipo promise que resolve um {{domxref("USVString")}} (texto) com a representação do corpo da requisição.
 
-> **Nota:** Os métodos de {{domxref("Body")}} só poderão ser executadas apenas uma vez; As chamadas subsequentes serão resolvidas com strings/ArrayBuffers vazias.
+> [!NOTE]
+> Os métodos de {{domxref("Body")}} só poderão ser executadas apenas uma vez; As chamadas subsequentes serão resolvidas com strings/ArrayBuffers vazias.
 
 ## Exemplos
 
 No exemplo a seguir, nós criamos uma nova requisição utilizando o construtor `Request()` (para um arquivo de imagem no mesmo diretório do código) e, em seguida, nos retorna alguns valores das propriedades da requisição:
 
 ```js
-const myRequest = new Request('http://localhost/flowers.jpg');
+const myRequest = new Request("http://localhost/flowers.jpg");
 
 const myURL = myRequest.url; // http://localhost/flowers.jpg
 const myMethod = myRequest.method; // GET
@@ -82,8 +83,8 @@ Você poderá, então, solicitar uma nova requisição passando o objeto `Reques
 
 ```js
 fetch(myRequest)
-  .then(response => response.blob())
-  .then(blob => {
+  .then((response) => response.blob())
+  .then((blob) => {
     myImage.src = URL.createObjectURL(blob);
   });
 ```
@@ -91,7 +92,10 @@ fetch(myRequest)
 No exemplo a seguir, nós criamos uma nova requisição utilizando o construtor `Request()` com alguns valores iniciais e contendo o corpo para APIs que precisam processar essas informações:
 
 ```js
-const myRequest = new Request('http://localhost/api', {method: 'POST', body: '{"foo":"bar"}'});
+const myRequest = new Request("http://localhost/api", {
+  method: "POST",
+  body: '{"foo":"bar"}',
+});
 
 const myURL = myRequest.url; // http://localhost/api
 const myMethod = myRequest.method; // POST
@@ -99,39 +103,39 @@ const myCred = myRequest.credentials; // omit
 const bodyUsed = myRequest.bodyUsed; // true
 ```
 
-> **Nota:** O tipo do corpo poderá ser apenas: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} ou {{domxref("ReadableStream")}}. Para adicionar um objeto JSON ao corpo, é necessário converter esse objeto para string.
+> [!NOTE]
+> O tipo do corpo poderá ser apenas: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} ou {{domxref("ReadableStream")}}. Para adicionar um objeto JSON ao corpo, é necessário converter esse objeto para string.
 
 Você poderá, então, solicitar uma nova requisição passando o objeto `Request` como parâmetro para a chamada {{domxref("GlobalFetch.fetch()")}}, por exemplo, e poderá capturar a resposta da seguinte forma:
 
 ```js
 fetch(myRequest)
-  .then(response => {
+  .then((response) => {
     if (response.status === 200) {
       return response.json();
     } else {
-      throw new Error('Ops! Houve um erro em nosso servidor.');
+      throw new Error("Ops! Houve um erro em nosso servidor.");
     }
   })
-  .then(response => {
+  .then((response) => {
     console.debug(response);
     // ...
-  }).catch(error => {
+  })
+  .catch((error) => {
     console.error(error);
   });
 ```
 
 ## Especificações
 
-| Specification                                                    | Status                   | Comment            |
-| ---------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#request-class','Request')}} | {{Spec2('Fetch')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Request")}}
+{{Compat}}
 
 ## Veja também
 
-- [ServiceWorker API](/pt-BR/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/pt-BR/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/CORS)
 - [HTTP](/pt-BR/docs/Web/HTTP)

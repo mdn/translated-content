@@ -3,20 +3,25 @@ title: 剪切和遮罩
 slug: Web/SVG/Tutorial/Clipping_and_masking
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}
 
 擦除已经创建的元素的部分内容，最初看起来有点矛盾。但是如果你打算在 SVG 中创建一个半圆形，你将很快发现下面的属性的作用了。
 
-**Clipping**用来移除在别处定义的元素的部分内容。在这里，任何半透明效果都是不行的。它只能要么显示要么不显示。
+- **Clipping** 用来移除在别处定义的元素的部分内容。在这里，任何半透明效果都是不行的。它只能要么显示要么不显示。
 
-**Masking**允许使用透明度和灰度值遮罩计算得的软边缘。
+- **Masking** 允许使用透明度和灰度值遮罩计算得的软边缘。
 
-### 创建剪切
+## 创建剪切
 
 我们在一个圆形的基础上创建上面提到的半圆形：
 
 ```html
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <clipPath id="cut-off-bottom">
       <rect x="0" y="0" width="200" height="100" />
@@ -35,19 +40,22 @@ slug: Web/SVG/Tutorial/Clipping_and_masking
 
 现在我们已经有了一个半圆形，不用处理弧形路径元素。对于这个剪切，`clipPath`内部的每个路径都会被检查到、与它的描边属性一起被估值、变形。然后目标的位于 clipPath 内容的结果的透明度区域的每一块都不会呈现。颜色、不透明度都没有这种效果，因为它们不能让一部分彻底消失。
 
-### 遮罩
+## 遮罩
 
 遮罩的效果最令人印象深刻的是表现为一个渐变。如果你想要让一个元素淡出，你可以利用遮罩效果实现这一点。
 
 ```html
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <linearGradient id="Gradient">
       <stop offset="0" stop-color="white" stop-opacity="0" />
       <stop offset="1" stop-color="white" stop-opacity="1" />
     </linearGradient>
     <mask id="Mask">
-      <rect x="0" y="0" width="200" height="200" fill="url(#Gradient)"  />
+      <rect x="0" y="0" width="200" height="200" fill="url(#Gradient)" />
     </mask>
   </defs>
 
@@ -60,7 +68,7 @@ slug: Web/SVG/Tutorial/Clipping_and_masking
 
 {{ EmbedLiveSample('遮罩','240','240') }}
 
-### 用 `opacity` 定义透明度
+## 用 `opacity` 定义透明度
 
 有一个简单方法可以用来为整个元素设置透明度。它就是`opacity`属性：
 
@@ -71,18 +79,30 @@ slug: Web/SVG/Tutorial/Clipping_and_masking
 上面的矩形将绘制为半透明。填充和描边还有两个属性是`fill-opacity`和`stroke-opacity`，分别用来控制填充和描边的不透明度。需要注意的是描边将绘制在填充的上面。因此，如果你在一个元素上设置了描边透明度，但它同时设有填充，则描边的一半应用填充色，另一半将应用背景色。
 
 ```html
-<svg  width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<svg
+  width="200"
+  height="200"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <rect x="0" y="0" width="200" height="200" fill="blue" />
-  <circle cx="100" cy="100" r="50" stroke="yellow" stroke-width="40" stroke-opacity=".5" fill="red" />
+  <circle
+    cx="100"
+    cy="100"
+    r="50"
+    stroke="yellow"
+    stroke-width="40"
+    stroke-opacity=".5"
+    fill="red" />
 </svg>
 ```
 
 {{ EmbedLiveSample('用 opacity 定义透明度','240','240') }}
 
-你看到这个示例，红色的圆形在蓝色的背景上，黄色描边设置为 50% 不透明度，导到双色描边的效果。
+你看到这个示例，红色的圆形在蓝色的背景上，黄色描边设置为 50% 不透明度，达到双色描边的效果。
 
 ## 利用广为人知的 CSS 技术
 
-Web 开发工具箱中有一个很有用的工具是`display:none`。它虽然几无悬念，但是依然可以在 SVG 上使用该 CSS 属性，连同 CSS2 定义的`visibility`和`clip`属性。为了恢复以前设置的`display:none`，知道这一点很重要：所有的 SVG 元素的初始`display`值都是`inline`。
+Web 开发工具箱中有一个很有用的工具是 `display:none`。因此，决定将此 CSS 属性与 CSS 2 中定义的 `visibility` 和 `clip` 属性一起纳入 SVG 并不奇怪。对于恢复以前设置的 `display:none`，重要的是知道所有的 SVG 元素的初始 `display` 值都是 `inline`。
 
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}

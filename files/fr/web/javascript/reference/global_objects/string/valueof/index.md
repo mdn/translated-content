@@ -1,26 +1,28 @@
 ---
 title: String.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/valueOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/valueOf
 ---
 
 {{JSRef}}
 
 La méthode **`valueOf()`** renvoie la valeur primitive de l'objet {{jsxref("String")}}.
 
-{{EmbedInteractiveExample("pages/js/string-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: String.valueOf()")}}
+
+```js interactive-example
+const stringObj = new String("foo");
+
+console.log(stringObj);
+// Expected output: String { "foo" }
+
+console.log(stringObj.valueOf());
+// Expected output: "foo"
+```
 
 ## Syntaxe
 
 ```js
-str.valueOf()
+str.valueOf();
 ```
 
 ### Valeur de retour

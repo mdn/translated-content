@@ -7,7 +7,8 @@ slug: Web/API/Window/setImmediate
 
 Esse método é usado para interromper operações de longa duração e executar uma função de retorno de chamada imediatamente após o navegador ter concluído outras operações, como eventos e atualizações de exibição.
 
-> **Nota:** Não se espera que este método se torne padrão, e é implementado somente por compilações recentes do Internet Explorer e Node.js 0.10+. Existem resistencias de ambos [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) e [Webkit](http://code.google.com/p/chromium/issues/detail?id=146172) (Google/Apple).
+> [!NOTE]
+> Não se espera que este método se torne padrão, e é implementado somente por compilações recentes do Internet Explorer e Node.js 0.10+. Existem resistencias de ambos [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) e [Webkit](https://code.google.com/p/chromium/issues/detail?id=146172) (Google/Apple).
 
 ## Sintaxe
 
@@ -25,7 +26,7 @@ Todos parametros serão passados diretamente para sua função .
 
 O método {{ domxref("window.clearImmediate") }} pode ser usado para limpar as ações immediate, como por exemplo {{ domxref("window.clearTimeout") }} para {{ domxref("window.setTimeout") }}.
 
-Esse método pode ser usado ao invés de `setTimeout(fn, 0)`, para executar [operações pesadas](http://www.nczonline.net/blog/2009/08/11/timed-array-processing-in-javascript/).
+Esse método pode ser usado ao invés de `setTimeout(fn, 0)`, para executar [operações pesadas](https://www.nczonline.net/blog/2009/08/11/timed-array-processing-in-javascript/).
 
 Essa função pode ser emulada de algumas maneiras:
 
@@ -35,18 +36,16 @@ Essa função pode ser emulada de algumas maneiras:
 
 Todas essas técnicas são incorporadas em um [setImmediate polyfill](https://github.com/NobleJS/setImmediate).
 
-## Especificações
+## Especificação
 
-Não faz parte de nenhuma especificação e não em uma faixa de padrões.
+Não faz parte de denhuma especificação.
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Window.setImmediate")}}
+{{Compat}}
 
 ## Ver também
 
 {{ domxref("window.clearImmediate") }}
-
-{{ spec("https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/setImmediate/Overview.html", "Specification: Efficient Script Yielding") }}
 
 [Microsoft setImmediate API Demo](http://ie.microsoft.com/testdrive/Performance/setImmediateSorting/Default.html)

@@ -1,10 +1,6 @@
 ---
 title: <symbol>
 slug: Web/SVG/Element/symbol
-tags:
-  - SVG
-  - SVG Conteneur
-translation_of: Web/SVG/Element/symbol
 ---
 
 {{SVGRef}}
@@ -16,22 +12,31 @@ L'utilisation d'éléments `symbol` pour les graphiques qui sont utilisés de mu
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  viewBox="0 0 80 20"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- Notre symbol a son propre système de coordonnées -->
   <symbol id="myDot" width="10" height="10" viewBox="0 0 2 2">
     <circle cx="1" cy="1" r="1" />
   </symbol>
 
-   <!-- Une grille pour matérialiser le positionnement du symbole -->
-  <path d="M0,10 h80 M10,0 v20 M25,0 v20 M40,0 v20 M55,0 v20 M70,0 v20" fill="none" stroke="pink" />
+  <!-- Une grille pour matérialiser le positionnement du symbole -->
+  <path
+    d="M0,10 h80 M10,0 v20 M25,0 v20 M40,0 v20 M55,0 v20 M70,0 v20"
+    fill="none"
+    stroke="pink" />
 
   <!-- Multiples instances de notre symbole -->
-  <use xlink:href="#myDot" x="5"  y="5" style="opacity:1.0" />
+  <use xlink:href="#myDot" x="5" y="5" style="opacity:1.0" />
   <use xlink:href="#myDot" x="20" y="5" style="opacity:0.8" />
   <use xlink:href="#myDot" x="35" y="5" style="opacity:0.6" />
   <use xlink:href="#myDot" x="50" y="5" style="opacity:0.4" />
@@ -70,13 +75,13 @@ html,body,svg { height:100% }
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute/Core)
+- [Attributs de base](/fr/docs/Web/SVG/Attribute)
   - : Notamment: {{SVGAttr('id')}}
-- [Attributs de style](/fr/docs/Web/SVG/Attribute/Styling)
+- [Attributs de style](/fr/docs/Web/SVG/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
 - Attributs d'événement
-  - : [Attributs d'événement globaux](/fr/docs/Web/SVG/Attribute/Events#Attributs_d'événement_globaux), [Attributs d'événement des éléments du document](/fr/docs/Web/SVG/Attribute/Events#Attributs_d'événement_des_éléments_du_document), [Attributs d'événement graphiques](/fr/docs/Web/SVG/Attribute/Events#Attributs_d'événement_graphiques)
-- [Atttributs de présentation](/fr/docs/Web/SVG/Attribute/Presentation)
+  - : [Attributs d'événement globaux](/fr/docs/Web/SVG/Attribute#attributs_d'événement_globaux), [Attributs d'événement des éléments du document](/fr/docs/Web/SVG/Attribute#attributs_d'événement_des_éléments_du_document), [Attributs d'événement graphiques](/fr/docs/Web/SVG/Attribute#attributs_d'événement_graphiques)
+- [Atttributs de présentation](/fr/docs/Web/SVG/Attribute)
   - : Notamment: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 - Attributs Aria
   - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
@@ -85,7 +90,8 @@ html,body,svg { height:100% }
 
 {{svginfo}}
 
-> **Note :** Un élément `<symbol>` n'est pas destiné à être affiché par lui-même. Seules les instances d'un élément `<symbol>` (c'est à dire une référence vers un `<symbol>` par un élément {{SVGElement("use")}}) sont affichées. Cela signifie que certains navigateurs peuvent refuser d'afficher directement un élément `<symbol>` quand bien même la propriété CSS {{cssxref('display')}} indique le contraire.
+> [!NOTE]
+> Un élément `<symbol>` n'est pas destiné à être affiché par lui-même. Seules les instances d'un élément `<symbol>` (c'est à dire une référence vers un `<symbol>` par un élément {{SVGElement("use")}}) sont affichées. Cela signifie que certains navigateurs peuvent refuser d'afficher directement un élément `<symbol>` quand bien même la propriété CSS {{cssxref('display')}} indique le contraire.
 
 ## Spécifications
 

@@ -1,46 +1,40 @@
 ---
-title: InputEvent.data
+title: InputEvent：data 属性
 slug: Web/API/InputEvent/data
+l10n:
+  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
 ---
 
-{{SeeCompatTable}}{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
-> **备注：** 请注意，**`data`** 属性在使用键盘输入时会返回输入的字符内容，但在粘贴、拖动时可能会返回 `null`，这取决于浏览器。浏览器也可能把一些数据保存在 {{domxref("InputEvent.dataTransfer")}}，而不是该 **`data`** 属性中。
+{{domxref("InputEvent")}} 接口中的只读属性 **`data`** 返回插入字符的字符串。如果更改未插入文本（例如删除字符时），则其可能为空字符串。
 
-{{domxref("InputEvent")}} 接口中的只读属性 **`data`** 返回含有插入字符数据的 {{domxref("DOMString")}}。如果更改未插入文本（例如删除字符时），则其可能为空字符串。
+## 值
 
-## 语法
-
-```
-var string = inputEvent.data;
-```
-
-### 返回值
-
-一个 {{domxref("DOMString")}}。
+一个字符串。
 
 ## 示例
 
-在下面的简单示例中，我们在 [input](/zh-CN/docs/Web/API/HTMLElement/input_event) 事件上设置了一个事件监听器，以便在对 {{htmlelement("input")}} 元素的内容进行任何更改时（通过键入或粘贴），通过 **`InputEvent.data`** 属性检索添加的文本，并在 `<input>` 下面的段落中报告。
+在下面的简单示例中，我们在 [input](/zh-CN/docs/Web/API/Element/input_event) 事件上设置了一个事件监听器，任何对 {{htmlelement("input")}} 元素的文本更改都会被 `InputEvent.data` 获取，使用 [`Node.textContent`](/zh-CN/docs/Web/API/Node/textContent) 属性将其插入到段落中。
 
 ```html
 <p>Some text to copy and paste.</p>
 
-<input type="text">
+<input type="text" />
 
 <p class="result"></p>
 ```
 
 ```js
-var editable = document.querySelector('input')
-var result = document.querySelector('.result');
+const editable = document.querySelector("input");
+const result = document.querySelector(".result");
 
-editable.addEventListener('input', (e) => {
-  result.textContent = "Inputted text: " + e.data;
+editable.addEventListener("input", (e) => {
+  result.textContent = `输入的文字：${e.data}`;
 });
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 

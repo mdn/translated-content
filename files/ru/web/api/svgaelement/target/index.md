@@ -1,7 +1,6 @@
 ---
 title: SVGAElement.target
 slug: Web/API/SVGAElement/target
-translation_of: Web/API/SVGAElement/target
 ---
 
 {{APIRef("SVGAElement")}}
@@ -25,7 +24,7 @@ myLink.target = 'value';
 
 ## Пример
 
-Код взят из [«Пример кода SVGAElement»](/ru/docs/Web/API/SVGAElement#Example).
+Код взят из [«Пример кода SVGAElement»](/ru/docs/Web/API/SVGAElement#example).
 
 ```js
 ...
@@ -36,11 +35,9 @@ linkRef.target ='_blank';
 
 ## Характеристики
 
-| Спецификация                                                                             | Статус                   | Коммент |
-| ---------------------------------------------------------------------------------------- | ------------------------ | ------- |
-| {{SpecName('SVG1.1', 'text.html#InterfaceSVGAElement', 'target')}} | {{Spec2('SVG1.1')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

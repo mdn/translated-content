@@ -1,13 +1,6 @@
 ---
 title: document.getElementsByName()
 slug: Web/API/Document/getElementsByName
-tags:
-  - API
-  - DOM
-  - Document
-  - HTML
-  - Méthodes
-translation_of: Web/API/Document/getElementsByName
 ---
 
 {{ ApiRef("DOM") }}
@@ -17,7 +10,7 @@ Renvoie une liste des éléments portant un {{domxref("element.name","name")}} d
 ## Syntaxe
 
 ```js
-elements = document.getElementsByName(name)
+elements = document.getElementsByName(name);
 ```
 
 - `elements` est une collection de {{domxref("NodeList")}}
@@ -26,27 +19,27 @@ elements = document.getElementsByName(name)
 ## Exemple
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
- ...
-</head>
+  <head>
+    ...
+  </head>
 
-<body>
-<form name="up"><input type="text"></form>
-<div name="down"><input type="text"></div>
+  <body>
+    <form name="up"><input type="text" /></form>
+    <div name="down"><input type="text" /></div>
 
-<script>
-var up_forms = document.getElementsByName("up");
-console.log(up_forms[0].tagName); // retourne "FORM"
-</script>
-</body>
+    <script>
+      var up_forms = document.getElementsByName("up");
+      console.log(up_forms[0].tagName); // retourne "FORM"
+    </script>
+  </body>
 </html>
 ```
 
 ## Notes
 
-L'attribut [`name`](/fr/docs/Web/API/Element/name) est uniquement applicable aux documents (X) HTML. La méthode renvoie une collection {{domxref("NodeList")}} en cours qui contient tous les éléments avec une valeur donnée pour l'attribut name, tels que {{htmlelement("meta")}} ou {{htmlelement("object")}} ou même si le nom est placé sur des éléments qui ne supportent pas du tout un attribut `name`.
+L'attribut [`name`](/fr/docs/Web/API) est uniquement applicable aux documents (X) HTML. La méthode renvoie une collection {{domxref("NodeList")}} en cours qui contient tous les éléments avec une valeur donnée pour l'attribut name, tels que {{htmlelement("meta")}} ou {{htmlelement("object")}} ou même si le nom est placé sur des éléments qui ne supportent pas du tout un attribut `name`.
 
 La méthode **getElementsByName** fonctionne différemment dans différents navigateurs. Dans IE <10, la méthode getElementsByName () renvoie également les éléments qui ont un attribut id avec la valeur spécifiée. Vous devriez donc faire attention à ne pas utiliser la même chaîne pour le nom et l'identifiant.
 

@@ -1,13 +1,6 @@
 ---
 title: Error.prototype.fileName
 slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
-tags:
-  - JavaScript
-  - No estandar
-  - Propiedad
-  - Prototipo
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/fileName
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/fileName
 ---
 
 {{jsRef}} {{non-standard_header}}
@@ -23,7 +16,7 @@ Esta propiedad no estándar contiene la ruta al archivo que generó este error. 
 ### Usar `fileName`
 
 ```js
-var e = new Error('No se pudo procesar la entrada');
+var e = new Error("No se pudo procesar la entrada");
 throw e;
 // e.fileName podría verse como "file:///C:/ejemplo.html"
 ```
@@ -32,9 +25,9 @@ throw e;
 
 No forma parte de ningún estándar.
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Error.fileName")}}
+{{Compat}}
 
 ## Ve también
 

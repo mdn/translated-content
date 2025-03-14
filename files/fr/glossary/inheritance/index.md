@@ -1,15 +1,9 @@
 ---
 title: Héritage
 slug: Glossary/Inheritance
-tags:
-  - Encodage
-  - Glossaire
-  - Héritage
-  - Langage de programmation
-  - Programmation
-translation_of: Glossary/Inheritance
-original_slug: Glossaire/Héritage
 ---
+
+{{GlossarySidebar}}
 
 L'héritage est une fonctionnalité majeure de la {{glossary("OOP","programmation orientée objet")}}. L'abstraction de données peut être exprimée à plusieurs niveaux, c'est-à-dire que des {{glossary("Class","classes")}} peuvent avoir des superclasses et des sous-classes.
 
@@ -19,4 +13,4 @@ En tant que développeur d'applications, vous pouvez choisir quels seront les {{
 
 ### Apprendre sur ce sujet
 
-- [Héritage et chaîne de prototypes](/fr/docs/Web/JavaScript/Héritage_et_chaîne_de_prototypes)
+- [Héritage et chaîne de prototypes](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

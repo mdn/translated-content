@@ -1,11 +1,9 @@
 ---
 title: background
 slug: Web/CSS/background
-browser-compat: css.properties.background
-translation_of: Web/CSS/background
 ---
 
-{{CSSRef("CSS Background")}}
+{{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir les différentes valeurs des propriétés liées à la gestion des arrière-plans d'un élément (couleur, image, origine, taille, répétition, etc.).
 
@@ -26,7 +24,8 @@ Cette propriété permet de définir une ou plusieurs valeurs pour&nbsp;:
 
 Lorsqu'on utilise la propriété raccourcie `background`, les valeurs fournies sont appliquées et pour les valeurs absentes, la propriété réinitialisera les propriétés détaillées avec leurs valeurs initiales.
 
-> **Note :** La propriété [`background-color`](/fr/docs/Web/CSS/background-color) ne peut être définie que sur le dernier arrière-plan, car il n'y a qu'une seule couleur d'arrière-plan pour un élément.
+> [!NOTE]
+> La propriété [`background-color`](/fr/docs/Web/CSS/background-color) ne peut être définie que sur le dernier arrière-plan, car il n'y a qu'une seule couleur d'arrière-plan pour un élément.
 
 ## Syntaxe
 
@@ -103,11 +102,11 @@ Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assi
 
 ```html
 <p class="banniere">
-  Dessine-moi une étoile<br/>
-  Qui brille<br/>
+  Dessine-moi une étoile<br />
+  Qui brille<br />
   Dans le ciel.
 </p>
-<p class="attention">Voici un paragraphe !<p>
+<p class="attention">Voici un paragraphe !</p>
 ```
 
 ### CSS
@@ -118,7 +117,7 @@ Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assi
 }
 
 .banniere {
-  background: url("starsolid.gif") #99f repeat-y fixed;
+  background: url("star-solid.gif") #99f repeat-y fixed;
 }
 ```
 
@@ -137,5 +136,5 @@ Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assi
 ## Voir aussi
 
 - [`box-decoration-break`](/fr/docs/Web/CSS/box-decoration-break)
-- [Les dégradés](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
-- [Gérer plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Les dégradés](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Gérer plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

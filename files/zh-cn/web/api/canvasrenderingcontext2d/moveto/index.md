@@ -1,32 +1,36 @@
 ---
-title: CanvasRenderingContext2D.moveTo()
+title: CanvasRenderingContext2D：moveTo() 方法
 slug: Web/API/CanvasRenderingContext2D/moveTo
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.moveTo()`** 是 Canvas 2D API 将一个新的子路径的起始点移动到 (x，y) 坐标的方法。
+Canvas 2D API 的 **`CanvasRenderingContext2D.moveTo()`** 方法用于在给定的 `(x，y)` 坐标处开始一个新的子路径。
 
 ## 语法
 
-```
-void ctx.moveTo(x, y);
+```js-nolint
+moveTo(x, y)
 ```
 
 ### 参数
 
 - `x`
-  - : 点的 x 轴。
+  - : 点的 x 轴（横）坐标。
 - `y`
-  - : 点的 y 轴。
+  - : 点的 y 轴（纵）坐标。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
-### 使用 `moveTo` 方法
+### 绘制多条子路径
 
-这是一段使用 `moveTo` 方法的简单的代码片段，移动画笔到起始点绘制一条线。
-
-#### HTML
+此示例使用 `moveTo()` 方法在单个路径中创建了两条子路径。然后，这两条子路径通过单个 `stroke()` 方法调用进行渲染。
 
 ```html
 <canvas id="canvas"></canvas>
@@ -34,60 +38,25 @@ void ctx.moveTo(x, y);
 
 #### JavaScript
 
+第一条线从 (50, 50) 处开始，至 (200, 50) 处结束。第二条线从 (50, 90) 处开始，至 (280, 120) 处结束。
+
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
-ctx.moveTo(50,50);
+ctx.moveTo(50, 50); // 开始第一条子路径
 ctx.lineTo(200, 50);
+ctx.moveTo(50, 90); // 开始第二条子路径
+ctx.lineTo(280, 120);
 ctx.stroke();
 ```
 
-修改下面的代码并在线查看 canvas 的变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.beginPath();
-ctx.moveTo(50,50);
-ctx.lineTo(200, 50);
-ctx.stroke()</textarea>
-```
+{{ EmbedLiveSample('绘制多条子路径', 700, 180) }}
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 
@@ -97,6 +66,6 @@ window.addEventListener("load", drawCanvas);
 
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}
+- 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.lineTo()")}}
 - {{domxref("CanvasRenderingContext2D.stroke()")}}

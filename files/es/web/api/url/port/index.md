@@ -1,7 +1,6 @@
 ---
 title: URL.port
 slug: Web/API/URL/port
-translation_of: Web/API/URL/port
 ---
 
 {{ApiRef("URL API")}}
@@ -24,7 +23,7 @@ Un {{domxref("USVString")}}.
 ## Ejemplos
 
 ```js
-var url = new URL('https://mydomain.com:80/svn/Repos/');
+var url = new URL("https://mydomain.com:80/svn/Repos/");
 var result = url.port; // Devuelve:'80'
 ```
 
@@ -32,9 +31,9 @@ var result = url.port; // Devuelve:'80'
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.URL.port")}}
+{{Compat}}
 
 ## Ver también
 

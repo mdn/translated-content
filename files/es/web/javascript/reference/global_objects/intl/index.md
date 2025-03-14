@@ -1,9 +1,8 @@
 ---
 title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl
 ---
+
 {{JSRef}}
 
 El objeto de ámbito global **`Intl`** es el espacio de nombres para el API de Internacionalización de ECMAScript, éste provee comparación de cadenas y formato de números, fechas y tiempos con sensibilidad al lenguaje. Los constructores para los objetos {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, y {{jsxref("DateTimeFormat")}} son propiedades del objeto `Intl`. En ésta página se documentan tales propiedades, así como la funcionalidad común a los constructores de internacionalización y otras funciones sensibles al lenguaje.
@@ -30,7 +29,7 @@ Los constructores de internacionalización, así como otros metodos de construct
 
 ### `locales`
 
-`El argumento locales` debe ser tanto una cadena que contenga una [Etiqueta de Idioma BCP 47](http://tools.ietf.org/html/rfc5646), o una matriz de etiquetas de dicho idioma. Si el argumento `locales` no es provisto o es indefinido, será usado la localicacion predeterminada.
+`El argumento locales` debe ser tanto una cadena que contenga una [Etiqueta de Idioma BCP 47](https://tools.ietf.org/html/rfc5646), o una matriz de etiquetas de dicho idioma. Si el argumento `locales` no es provisto o es indefinido, será usado la localicacion predeterminada.
 
 Una etiqueta de idioma BCP 47 define un idioma y minimamente contiene un código primario de idioma. En estos la forma mas comun puede contener, : un código de idioma, un código del sistema de escritura, y un código de país o región, todo separado por guiones. Mientras la etiqueta no es case sensitive, es recomendable usar un titulo para el código del sistema de escritura, mayúsculas para el país y región y minúsculas para todo lo demás.
 
@@ -40,7 +39,7 @@ Ejemplos:
 - `"de-AT"`: Alemán usado en Austria (idioma principal con código del país).
 - `"zh-Hans-CN"`: Escritura China en caracteres simplificados como se usa en China (idioma principal con código de escritura y código del país).
 
-Las subetiquetas que identifican idiomas, scripts, países (regiones), y (raramente utilizadas) variantes en las etiquetas de idiomas BCP 47 pueden ser encontradas en el [Registro de subetiquetas de idioma de la IANA](http://www.iana.org/assignments/language-subtag-registry).
+Las subetiquetas que identifican idiomas, scripts, países (regiones), y (raramente utilizadas) variantes en las etiquetas de idiomas BCP 47 pueden ser encontradas en el [Registro de subetiquetas de idioma de la IANA](https://www.iana.org/assignments/language-subtag-registry).
 
 BCP 47 permite también extensiones. Las funciones de internacionalización de JavaScript utilizan la extensión `"u"` (Unicode), misma que puede emplearse para requerir personalizacioón de los objetos {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, o {{jsxref("DateTimeFormat")}}. A continuación algunos ejemplos:
 
@@ -51,7 +50,7 @@ BCP 47 permite también extensiones. Las funciones de internacionalización de J
 
 ### Locale negotiation
 
-The `locales` argument, after stripping off all Unicode extensions, is interpreted as a prioritized request from the application. The runtime compares it against the locales it has available and picks the best one available. Two matching algorithms exist: the `"lookup"` matcher follows the Lookup algorithm specified in [BCP 47](http://tools.ietf.org/html/rfc4647#section-3.4); the `"best fit"` matcher lets the runtime provide a locale that's at least, but possibly more, suited for the request than the result of the Lookup algorithm. If the application doesn't provide a `locales` argument, or the runtime doesn't have a locale that matches the request, then the runtime's default locale is used. The matcher can be selected using a property of the `options` argument (see below).
+The `locales` argument, after stripping off all Unicode extensions, is interpreted as a prioritized request from the application. The runtime compares it against the locales it has available and picks the best one available. Two matching algorithms exist: the `"lookup"` matcher follows the Lookup algorithm specified in [BCP 47](https://tools.ietf.org/html/rfc4647#section-3.4); the `"best fit"` matcher lets the runtime provide a locale that's at least, but possibly more, suited for the request than the result of the Lookup algorithm. If the application doesn't provide a `locales` argument, or the runtime doesn't have a locale that matches the request, then the runtime's default locale is used. The matcher can be selected using a property of the `options` argument (see below).
 
 If the selected language tag had a Unicode extension substring, that extension is now used to customize the constructed object or the behavior of the function. Each constructor or function supports only a subset of the keys defined for the Unicode extension, and the supported values often depend on the language tag. For example, the `"co"` key (collation) is only supported by {{jsxref("Collator")}}, and its `"phonebk"` value is only supported for German.
 
@@ -65,9 +64,9 @@ One property is supported by all language sensitive constructors and functions: 
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Intl")}}
+{{Compat}}
 
 ## See also
 

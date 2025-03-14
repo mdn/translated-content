@@ -11,22 +11,23 @@ slug: Web/CSS/background-origin
 
 注意：当使用 {{Cssxref("background-attachment")}} 为 fixed 时，该属性将被忽略不起作用。
 
-> **备注：** 假如{{cssxref("background")}}简写中没有设置该值，那么在 background 简写值后指定 background-origin，那么后面的值就会覆盖简写值，其实说白了，就是后出现的值会覆盖前面的值。
-
-{{cssinfo}}
+> [!NOTE]
+> 假如{{cssxref("background")}}简写中没有设置该值，那么在 background 简写值后指定 background-origin，那么后面的值就会覆盖简写值，其实说白了，就是后出现的值会覆盖前面的值。
 
 ## 语法
 
-```
-Formal syntax: {{csssyntax("background-origin")}}
-```
+```css
+/* 关键字值 */
+background-origin: border-box;
+background-origin: padding-box;
+background-origin: content-box;
 
-```
-background-origin: border-box
-background-origin: padding-box
-background-origin: content-box
-
-background-origin: inherit
+/* 全局值 */
+background-origin: inherit;
+background-origin: initial;
+background-origin: revert;
+background-origin: revert-layer;
+background-origin: unset;
 ```
 
 ### 属性值
@@ -38,38 +39,43 @@ background-origin: inherit
 - `content-box`
   - : 背景图片的摆放以 content 区域为参考
 
-### 形式化语法
+## 形式语法
 
-[How to read CSS syntax.](/zh-CN/docs/Web/CSS/Value_definition_syntax)
-{{csssyntax("background-origin")}}
+{{cssinfo}}
 
-## 例子
+## 形式定义
+
+{{csssyntax}}
+
+## 示例
 
 ```css
- .example {
-   border: 10px double;
-   padding: 10px;
-   background: url('image.jpg');
-   background-position: center left;
-   /* 背景将在内容区 padding 内部填充 */
-   background-origin: content-box;
+.example {
+  border: 10px double;
+  padding: 10px;
+  background: url("image.jpg");
+  background-position: center left;
+  /* 背景将在内容区 padding 内部填充 */
+  background-origin: content-box;
 }
 ```
 
 ```css
 #example2 {
-    border: 4px solid black;
-    padding: 10px;
-    background: url('image.gif');
-    background-repeat: no-repeat;
-    background-origin: border-box;
- }
+  border: 4px solid black;
+  padding: 10px;
+  background: url("image.gif");
+  background-repeat: no-repeat;
+  background-origin: border-box;
+}
 ```
 
 ```css
 div {
-  background-image: url('logo.jpg'), url('mainback.png');
-  background-position: top right, 0px 0px;
+  background-image: url("logo.jpg"), url("mainback.png");
+  background-position:
+    top right,
+    0px 0px;
   background-origin: content-box, padding-box;
 }
 ```

@@ -1,11 +1,6 @@
 ---
 title: Miembros
-slug: Web/JavaScript/Reference/Operators/Property_Accessors
-tags:
-  - JavaScript
-  - Operator
-translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
-original_slug: Web/JavaScript/Referencia/Operadores/Miembros
+slug: Web/JavaScript/Reference/Operators/Property_accessors
 ---
 
 {{jsSidebar("Operators")}}
@@ -30,7 +25,7 @@ objeto.propiedad = set;
 Ejemplo:
 
 ```js
-document.createElement('pre');
+document.createElement("pre");
 ```
 
 Aquí, el método llamado "createElement" se recupera de `document` y se le llama.
@@ -47,7 +42,7 @@ objeto[nombre_propiedad] = set;
 Ejemplo:
 
 ```js
-document['createElement']('pre');
+document["createElement"]("pre");
 ```
 
 Esto hace exactamente lo mismo que el ejemplo anterior.
@@ -60,15 +55,17 @@ Ejemplos:
 
 ```js
 var objeto = {};
-objeto['1'] = 'valor';
+objeto["1"] = "valor";
 alert(objeto[1]);
 ```
 
 Ésto tendrá como resultado "valor", ya que 1 se convertirá por tipo a '1'.
 
 ```js
-var foo = {propiedad_unica: 1}, bar = {propiedad_unica: 2}, objeto = {};
-objeto[foo] = 'valor';
+var foo = { propiedad_unica: 1 },
+  bar = { propiedad_unica: 2 },
+  objeto = {};
+objeto[foo] = "valor";
 alert(objeto[bar]);
 ```
 
@@ -78,14 +75,14 @@ alert(objeto[bar]);
 
 Un método no está enlazado al objeto del que es método. Específicamente, `this` no está establecido en un método, es decir, `this` no se refiere necesariamente a un objeto conteniendo el método. `this`, en cambio, se "pasa" mediante la llamada de función.
 
-Vea [enlace a métodos](/es/docs/Web/JavaScript/Referencia/Operadores/this#Funciones_enlazadas).
+Vea [enlace a métodos](/es/docs/Web/JavaScript/Reference/Operators/this#funciones_enlazadas).
 
 ### Nota sobre `eval`
 
 Los principiantes en JavaScript a menudo tienen el error de usar {{jsxref("eval")}} cuando la notación por corchetes puede usarse a cambio. Por ejemplo, la siguiente sintaxis se ve a menudo en muchos scripts.
 
 ```js
-x = eval('document.nombre_formulario.' + cadenaControlFormulario + '.value');
+x = eval("document.nombre_formulario." + cadenaControlFormulario + ".value");
 ```
 
 `eval` es lenta y se debería evitar en la medida de lo posible. Es mejor usar la notación por corchetes a cambio:

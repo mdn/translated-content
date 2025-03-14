@@ -1,6 +1,9 @@
 ---
-title: HTMLMediaElement.networkState
+title: "HTMLMediaElement: networkState プロパティ"
+short-title: networkState
 slug: Web/API/HTMLMediaElement/networkState
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -11,12 +14,12 @@ slug: Web/API/HTMLMediaElement/networkState
 
 `unsigned short` 型。 可能な値は次のとおりです。
 
-| 定数            | 値 | 説明                                                                           |
-| ------------------- | ----- | ------------------------------------------------------------------------------------- |
-| `NETWORK_EMPTY`     | 0     | まだデータがありません。 また、`readyState` は `HAVE_NOTHING` です。                           |
-| `NETWORK_IDLE`      | 1     | `HTMLMediaElement` はアクティブで、リソースを選択しましたが、ネットワークを使用していません。 |
-| `NETWORK_LOADING`   | 2     | ブラウザーは `HTMLMediaElement` のデータをダウンロードしています。                                     |
-| `NETWORK_NO_SOURCE` | 3     | `HTMLMediaElement` の `src` が見つかりません。                                                        |
+| 定数                | 値  | 説明                                                                                          |
+| ------------------- | --- | --------------------------------------------------------------------------------------------- |
+| `NETWORK_EMPTY`     | 0   | まだデータがありません。 また、`readyState` は `HAVE_NOTHING` です。                          |
+| `NETWORK_IDLE`      | 1   | `HTMLMediaElement` はアクティブで、リソースを選択しましたが、ネットワークを使用していません。 |
+| `NETWORK_LOADING`   | 2   | ブラウザーは `HTMLMediaElement` のデータをダウンロードしています。                            |
+| `NETWORK_NO_SOURCE` | 3   | `HTMLMediaElement` の `src` が見つかりません。                                                |
 
 ## 例
 
@@ -24,19 +27,17 @@ slug: Web/API/HTMLMediaElement/networkState
 
 ```html
 <audio id="example" preload="auto">
- <source src="sound.ogg" type="audio/ogg" />
+  <source src="sound.ogg" type="audio/ogg" />
 </audio>
 ```
 
 ```js
-var obj = document.getElementById('example');
+const obj = document.getElementById("example");
 
-obj.addEventListener('playing', function() {
-
+obj.addEventListener("playing", () => {
   if (obj.networkState === 2) {
     // 読み込み中...
   }
-
 });
 ```
 
@@ -50,4 +51,4 @@ obj.addEventListener('playing', function() {
 
 ## 関連情報
 
-- 定義している {{domxref("HTMLMediaElement")}} インターフェイス
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.networkState` プロパティを定義しているインターフェイス

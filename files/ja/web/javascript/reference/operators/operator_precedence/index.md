@@ -1,13 +1,27 @@
 ---
 title: 演算子の優先順位
-slug: Web/JavaScript/Reference/Operators/Operator_Precedence
+slug: Web/JavaScript/Reference/Operators/Operator_precedence
 ---
 
 {{jsSidebar("Operators")}}
 
 **演算子の優先順位**は、演算子が互いにどのように解釈されるかを決定します。優先度の高い演算子は、優先度の低い演算子のオペランドになります。
 
-{{EmbedInteractiveExample("pages/js/expressions-operatorprecedence.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Operator precedence")}}
+
+```js interactive-example
+console.log(3 + 4 * 5); // 3 + 20
+// Expected output: 23
+
+console.log(4 * 3 ** 2); // 4 * 9
+// Expected output: 36
+
+let a;
+let b;
+
+console.log((a = b = 5));
+// Expected output: 5
+```
 
 ## 優先度と結合性
 
@@ -20,8 +34,8 @@ a OP1 b OP2 c
 `OP1` と `OP2` の優先順位（下記の一覧表を参照）が異なる場合は、優先順位の高い演算子が先に実行され、結合性は関係ありません。コードの中で加算が先に書かれているにもかかわらず、乗算の方が加算よりも優先順位が高く、先に実行されていることを確認してください。
 
 ```js
-console.log(3 + 10 * 2);   // 23 を出力
-console.log(3 + (10 * 2)); // 括弧の優先順位が高いので、23 を出力
+console.log(3 + 10 * 2); // 23 を出力
+console.log(3 + 10 * 2); // 括弧の優先順位が高いので、23 を出力
 console.log((3 + 10) * 2); // 括弧が順位を変更するので 26 を出力
 ```
 
@@ -162,19 +176,19 @@ Evaluating the right side
 短絡評価は、条件付き評価を表す用語です。例えば、`a && (b + c)` という式において、`a` が{{Glossary("falsy", "偽値")}}である場合、従属式である `(b + c)` は括弧で囲まれていても評価されません。この論理的分離演算子 ("OR") は「短絡的」といえるでしょう。論理的分離演算子の他にも、ほかに短絡が発生する演算子には、論理的結合 ("AND") 演算子、Null 合体演算子、オプション連鎖演算子、条件演算子があります。以下に例を示します。
 
 ```js
-a || (b * c);  // 最初に `a` を評価し、 `a` が「真値」であれば `a` を出力
-a && (b < c);  // 最初に `a` を評価し、 `a` が「偽値」であれば `a` を出力
+a || b * c; // 最初に `a` を評価し、 `a` が「真値」であれば `a` を出力
+a && b < c; // 最初に `a` を評価し、 `a` が「偽値」であれば `a` を出力
 a ?? (b || c); // 最初に `a` を評価し、 `a` が `null` または `undefined` でなければ `a` を出力
-a?.b.c;        // 最初に `a` を評価し、 `a` が `null` または `undefined` であれば `undefined` を出力
+a?.b.c; // 最初に `a` を評価し、 `a` が `null` または `undefined` であれば `undefined` を出力
 ```
 
 ## 例
 
 ```js
-3 > 2 && 2 > 1
+3 > 2 && 2 > 1;
 // true を返す
 
-3 > 2 > 1
+3 > 2 > 1;
 // 結果は false となる。3 > 2 は true であり、true は
 // 不等号で 1 に変換されるため、true > 1 は 1 > 1 となり、
 // false となる。(3 > 2) > 1 のように括弧を付けると明確になる。
@@ -233,7 +247,7 @@ a?.b.c;        // 最初に `a` を評価し、 `a` が `null` または `undefi
     </tr>
     <tr>
       <td>
-        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining">オプション連鎖</a>
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining">オプショナルチェーン</a>
       </td>
       <td>左から右</td>
       <td><code>?.</code></td>
@@ -268,7 +282,7 @@ a?.b.c;        // 最初に `a` を評価し、 `a` が `null` または `undefi
     </tr>
     <tr>
       <td>
-        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT">ビットごとの NOT (~)</a>
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT">ビット単位 NOT (~)</a>
       </td>
       <td><code>~ …</code></td>
     </tr>
@@ -484,7 +498,7 @@ a?.b.c;        // 最初に `a` を評価し、 `a` が `null` または `undefi
     <tr>
       <td>3</td>
       <td>
-        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">条件（三項）演算子</a>
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Conditional_operator">条件（三項）演算子</a>
       </td>
       <td>右から左</td>
       <td><code>… ? … : …</code></td>
@@ -492,7 +506,7 @@ a?.b.c;        // 最初に `a` を評価し、 `a` が `null` または `undefi
     <tr>
       <td rowspan="18">2</td>
       <td rowspan="16">
-        <a href="/ja/docs/Web/JavaScript/Reference/Operators#assignment_operators">代入</a>
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators#代入演算子">代入</a>
       </td>
       <td rowspan="16">右から左</td>
       <td><code>… = …</code></td>
@@ -554,7 +568,7 @@ a?.b.c;        // 最初に `a` を評価し、 `a` が `null` または `undefi
     <tr>
       <td>1</td>
       <td>
-        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Comma_Operator">カンマ / シーケンス</a>
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Comma_operator">カンマ / シーケンス</a>
       </td>
       <td>左から右</td>
       <td><code>… , …</code></td>

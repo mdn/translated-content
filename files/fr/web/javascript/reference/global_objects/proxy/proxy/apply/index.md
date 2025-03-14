@@ -1,28 +1,41 @@
 ---
 title: handler.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Proxy
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/apply
 ---
 
 {{JSRef}}
 
 La méthode **`handler.apply()`** représente une trappe pour un appel de fonctions.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-apply.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.apply()", "taller")}}
+
+```js interactive-example
+function sum(a, b) {
+  return a + b;
+}
+
+const handler = {
+  apply: function (target, thisArg, argumentsList) {
+    console.log(`Calculate sum: ${argumentsList}`);
+    // Expected output: "Calculate sum: 1,2"
+
+    return target(argumentsList[0], argumentsList[1]) * 10;
+  },
+};
+
+const proxy1 = new Proxy(sum, handler);
+
+console.log(sum(1, 2));
+// Expected output: 3
+console.log(proxy1(1, 2));
+// Expected output: 30
+```
 
 ## Syntaxe
 
 ```js
 var p = new Proxy(cible, {
-  apply: function(cible, thisArg, listeArguments) {
-  }
+  apply: function (cible, thisArg, listeArguments) {},
 });
 ```
 
@@ -64,15 +77,15 @@ Si les invariants suivants ne sont pas respectés, le proxy lèvera une exceptio
 Dans l'exemple ci-dessous, on piège un appel de fonction.
 
 ```js
-var p = new Proxy(function() {}, {
-  apply: function(target, thisArg, argumentsList) {
+var p = new Proxy(function () {}, {
+  apply: function (target, thisArg, argumentsList) {
     console.log("called: " + argumentsList.join(", "));
     return argumentsList[0] + argumentsList[1] + argumentsList[2];
-  }
+  },
 });
 
 console.log(p(1, 2, 3)); // "called: 1, 2, 3"
-                         // 6
+// 6
 ```
 
 ## Spécifications

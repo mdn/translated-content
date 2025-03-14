@@ -16,17 +16,17 @@ Firefox 14 は 米国時間 2012 年 7 月 17 日にリリースされました�
 
 ### DOM
 
-- [input](/ja/docs/Web/API/HTMLElement/input_event) イベントが [contenteditable](/ja/docs/Web/API/HTMLElement/contentEditable) エディターをホストしている要素および [designMode](/ja/docs/Web/API/Document/designMode) エディターのルート要素上での編集でも発生するようになりました。
+- [input](/ja/docs/Web/API/Element/input_event) イベントが [contenteditable](/ja/docs/Web/API/HTMLElement/contentEditable) エディターをホストしている要素および [designMode](/ja/docs/Web/API/Document/designMode) エディターのルート要素上での編集でも発生するようになりました。
 - {{domxref("DOMException", "DOMException.code")}} は最新の DOM Level 4 仕様に従って非推奨になりました。
 - {{domxref("Range.insertNode()")}} が 折り畳まれた (collapsed) 範囲上で用いられたときに正しく動作するようになりました。
 - {{domxref("BlobBuilder", "MozBlobBuilder")}} インターフェイスが {{domxref("Blob")}} コンストラクターの利用を促すために非推奨になりました。 `MozBlobBuilder` を利用した場合、ウェブコンソールに警告が表示されます。
-- [Mutation Observers](/ja/docs/Web/API/MutationObserver) のサポートが導入されました。これは、パフォーマンスに関する多くの問題がある DOM3  の Mutation Events の置き換えとして設計されました。
+- [Mutation Observers](/ja/docs/Web/API/MutationObserver) のサポートが導入されました。これは、パフォーマンスに関する多くの問題がある DOM3 の Mutation Events の置き換えとして設計されました。
 - {{domxref("HTMLImageElement")}} インターフェイスの `x` プロパティおよび `y` プロパティは Gecko 7.0 で削除されましたが、互換性の理由でこのリリースから復活しました。
 - {{domxref("Document")}} のメソッドである `execCommandShowHelp()` と `queryCommandText()` は、今まで何もしませんでしたが、削除されました。`
 - `GeoPositionAddress` インターフェイスは、 [Geolocation](/ja/docs/Web/API/Geolocation_API) API で廃止された仕様の一部であり、削除されました。
 - {{domxref("Storage", "localStorage/sessionStorage")}} がプロパティアクセスを通した宣言されていないキーに対して `null` ではなく `undefined` を正しく返すようになりました。
-- {{domxref("ImageData")}} オブジェクトが実装されました ({{bug(550309)}})。
-- {{domxref("Attr")}} インターフェイスの子ノードに関する属性やメソッドが廃止されました ({{bug(737122)}})。
+- {{domxref("ImageData")}} オブジェクトが実装されました ([Firefox バグ 550309](https://bugzil.la/550309))。
+- {{domxref("Attr")}} インターフェイスの子ノードに関する属性やメソッドが廃止されました ([Firefox バグ 737122](https://bugzil.la/737122))。
 
 ### CSS
 
@@ -54,7 +54,7 @@ Gecko で新しい [HTTP](/ja/docs/Web/HTTP) [`308 Permanent Redirect`](/ja/docs
 #### source-editor.jsm
 
 - 現在の選択範囲をコメントアウトする、もしくは、コメントアウトを解除するためのキーボードショートカットが追加されました（Ctrl-/ もしくは Mac OS X では Cmd-/）。
-- 現在のブロックの開始と終端にテキスト入力位置を移動するための Ctrl-\[ および Ctrl-]  キーボードショートカットが追加されました。
+- 現在のブロックの開始と終端にテキスト入力位置を移動するための Ctrl-\[ および Ctrl-] キーボードショートカットが追加されました。
 - 新しく [`getLineStart()`](/ja/docs/JavaScript_code_modules/source-editor.jsm#getLineStart%28%29) および [`getLineEnd()`](docs/JavaScript_code_modules/source-editor.jsm#getLineEnd%28%29) メソッドが追加されました。
 
 ### XUL
@@ -65,8 +65,8 @@ Gecko で新しい [HTTP](/ja/docs/Web/HTTP) [`308 Permanent Redirect`](/ja/docs
 
 - `nsILocalFile` インターフェイスは `nsIFile` にマージされました ([bug 682360](https://bugzilla.mozilla.org/show_bug.cgi?id=682360))。
 - ブックマークをインポートするための `nsIPlacesImportExportService` におけるメソッドは [`BookmarkHTMLUtils.jsm`](/ja/docs/JavaScript_code_modules/BookmarkHTMLUtils.jsm) JavaScript コードモジュールの利用を促すために削除されました。
-- `nsIDOMGeoPositionAddress` インターフェースは削除されました。
-- `getItemGUID`, `setItemGUID`, `getItemIdForGUID` の各メソッドが `nsINavBookmarksService` から削除されました ({{bug("715355")}})。
+- `nsIDOMGeoPositionAddress` インターフェイスは削除されました。
+- `getItemGUID`, `setItemGUID`, `getItemIdForGUID` の各メソッドが `nsINavBookmarksService` から削除されました ([Firefox バグ 715355](https://bugzil.la/715355))。
 
 ### スペルチェック
 

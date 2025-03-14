@@ -9,8 +9,9 @@ slug: Web/API/Path2D/addPath
 
 ## 语法
 
-```
-void path.addPath(path [, transform]);
+```js-nolint
+addPath(path)
+addPath(path, transform)
 ```
 
 ### 参数
@@ -18,90 +19,53 @@ void path.addPath(path [, transform]);
 - `path`
   - : 需要添加的 {{domxref("Path2D")}} 路径。
 - `transform` {{optional_inline}}
-  - : {{domxref("SVGMatrix")}} 作为新增路径的变换矩阵。
+  - : {{domxref("DOMMatrix")}} 作为新增路径的变换矩阵。
 
 ## 示例
 
-### 使用 `addPath` 方法
+### 在已有的路径上添加一条路径
 
 这是一段使用 `addPath` 方法的简单的代码片段。
 
+#### HTML
+
+```html
+<canvas id="canvas"></canvas>
+```
+
+#### JavaScript
+
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-// Create a new path with a rect
-var p1 = new Path2D();
-p1.rect(0,0,100,100);
+// Create first path and add a rectangle
+let p1 = new Path2D();
+p1.rect(0, 0, 100, 150);
 
-// Create another path with a rect
-var p2 = new Path2D();
-p2.rect(0,0,100,100);
+// Create second path and add a rectangle
+let p2 = new Path2D();
+p2.rect(0, 0, 100, 75);
 
-// Create transformation matrix that moves vertically 300 points to the right
-var m = document.createElementNS("http://www.w3.org/2000/svg", "svg").createSVGMatrix();
-m.a = 1; m.b = 0;
-m.c = 0; m.d = 1;
-m.e = 300; m.f = 0;
+// Create transformation matrix that moves 200 points to the right
+let m = new DOMMatrix();
+m.a = 1;
+m.b = 0;
+m.c = 0;
+m.d = 1;
+m.e = 200;
+m.f = 0;
 
-// add the second path to the first path
+// Add second path to the first path
 p1.addPath(p2, m);
 
-// Finally, fill the first path onto the canvas
+// Draw the first path
 ctx.fill(p1);
 ```
 
-修改下面的代码并在线查看 canvas 的变化 (查看浏览器兼容性列表，确定你目前的浏览器是否支持这个方法)：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code" style="height:220px;">
-var p1 = new Path2D();
-p1.rect(0,0,100,100);
-
-var p2 = new Path2D();
-p2.rect(0,0,100,100);
-
-var m = document.createElementNS("http://www.w3.org/2000/svg", "svg").createSVGMatrix();
-m.a = 1; m.b = 0;
-m.c = 0; m.d = 1;
-m.e = 300; m.f = 0;
-
-p1.addPath(p2, m);
-ctx.fill(p1);</textarea>
-```
-
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 500) }}
+{{ EmbedLiveSample('在已有的路径上添加一条路径', 700, 180) }}
 
 ## 规范
 
@@ -113,4 +77,4 @@ window.addEventListener("load", drawCanvas);
 
 ## 参见
 
-- 接口定义， {{domxref("Path2D")}}.
+- 接口定义，{{domxref("Path2D")}}

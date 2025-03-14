@@ -10,18 +10,29 @@ O elemento SVG **`<text>`** desenha um elemento gráfico que consiste em texto. 
 If text is included in SVG not inside of a `<text>` element, it is not rendered. This is different than being hidden by default, as setting the {{SVGAttr('display')}} property won't show the text.
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 240 80" xmlns="https://www.w3.org/2000/svg">
   <style>
-    .small { font: italic 13px sans-serif; }
-    .heavy { font: bold 30px sans-serif; }
+    .small {
+      font: italic 13px sans-serif;
+    }
+    .heavy {
+      font: bold 30px sans-serif;
+    }
 
     /* Note that the color of the text is set with the    *
      * fill property, the color property is for HTML only */
-    .Rrrrr { font: italic 40px serif; fill: red; }
+    .Rrrrr {
+      font: italic 40px serif;
+      fill: red;
+    }
   </style>
 
   <text x="20" y="35" class="small">My</text>
@@ -37,25 +48,25 @@ html,body,svg { height:100% }
 
 - {{SVGAttr("x")}}
   - : The x coordinate of the starting point of the text baseline.
-    _Value type_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/pt-BR/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/pt-BR/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("y")}}
   - : The y coordinate of the starting point of the text baseline.
-    _Value type_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/pt-BR/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/pt-BR/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("dx")}}
   - : Shifts the text position horizontally from a previous text element.
-    _Value type_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Default value_: _none_; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/pt-BR/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/pt-BR/docs/Web/SVG/Content_type#percentage) ; _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("dy")}}
   - : Shifts the text position vertically from a previous text element.
-    _Value type_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Default value_: _none_; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/pt-BR/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/pt-BR/docs/Web/SVG/Content_type#percentage) ; _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("rotate")}}
   - : Rotates orientation of each individual glyph. Can rotate glyphs individually.
-    _Value type_: [**\<list-of-number>**](/docs/Web/SVG/Content_type#List-of-Ts) ; _Default value_: none; _Animatable_: **yes**
+    _Value type_: [**\<list-of-number>**](/pt-BR/docs/Web/SVG/Content_type#list-of-ts) ; _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("lengthAdjust")}}
   - : How the text is stretched or compressed to fit the width defined by the `textLength` attribute.
     _Value type_: `spacing`|`spacingAndGlyphs`; _Default value_: `spacing`; _Animatable_: **yes**
 - {{SVGAttr("textLength")}}
   - : A width that the text should be scaled to fit.
-    _Value type_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Default value_: _none_; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/pt-BR/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/pt-BR/docs/Web/SVG/Content_type#percentage) ; _Default value_: _none_; _Animatable_: **yes**
 
 ### Global attributes
 
@@ -76,16 +87,13 @@ html,body,svg { height:100% }
 
 {{svginfo}}
 
-## Specifications
+## Especificações
 
-| Specification                                                                        | Status                   | Comment            |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('SVG2', 'text.html#TextElement', '&lt;text&gt;')}}     | {{Spec2('SVG2')}} |                    |
-| {{SpecName('SVG1.1', 'text.html#TextElement', '&lt;text&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.text")}}
+{{Compat}}
 
 ## Related
 

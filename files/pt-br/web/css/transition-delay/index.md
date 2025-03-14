@@ -5,7 +5,7 @@ slug: Web/CSS/transition-delay
 
 {{CSSRef}}
 
-A propriedade CSS **`transition-delay`** (atraso de transição) determina o tempo de duração da espera antes de iniciar um efeito de transição([transition effect](/pt-BR/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)) quando seu valor muda.
+A propriedade CSS **`transition-delay`** (atraso de transição) determina o tempo de duração da espera antes de iniciar um efeito de transição([transition effect](/pt-BR/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)) quando seu valor muda.
 
 {{EmbedInteractiveExample("pages/css/transition-delay.html")}}
 
@@ -33,7 +33,7 @@ transition-delay: unset;
 ### Valores
 
 - {{cssxref("&lt;time&gt;")}}
-  - : Indica a quantidade de tempo de espera entre um valor de propriedade e o inicio do efeito de transição([transition effect](/pt-BR/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)).
+  - : Indica a quantidade de tempo de espera entre um valor de propriedade e o inicio do efeito de transição([transition effect](/pt-BR/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)).
 
 ### Sintaxe Formal
 
@@ -44,48 +44,52 @@ transition-delay: unset;
 `transition-delay: 0.5s`
 
 ```html hidden
- <div class="parent">
+<div class="parent">
   <div class="box">Lorem</div>
 </div>
-
 ```
 
 ```css hidden
-.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:0.5s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:0.5s;
-    transition-timing-function: linear;
+.parent {
+  width: 250px;
+  height: 125px;
 }
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-     -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:0.5s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:0.5s;
-    transition-timing-function: linear;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 20px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-delay: 0.5s;
+  -webkit-transition-timing-function: linear;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-delay: 0.5s;
+  transition-timing-function: linear;
+}
+.box1 {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  color: yellow;
+  font-size: 18px;
+  left: 150px;
+  top: 25px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-delay: 0.5s;
+  -webkit-transition-timing-function: linear;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-delay: 0.5s;
+  transition-timing-function: linear;
 }
 ```
 
@@ -111,48 +115,52 @@ var intervalID = window.setInterval(updateTransition, 7000);
 `transition-delay: 1s`
 
 ```html hidden
- <div class="parent">
+<div class="parent">
   <div class="box">Lorem</div>
 </div>
-
 ```
 
 ```css hidden
-.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-     -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:1s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:1s;
-    transition-timing-function: linear;
+.parent {
+  width: 250px;
+  height: 125px;
 }
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:1s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:1s;
-    transition-timing-function: linear;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 20px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-delay: 1s;
+  -webkit-transition-timing-function: linear;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-delay: 1s;
+  transition-timing-function: linear;
+}
+.box1 {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  color: yellow;
+  font-size: 18px;
+  left: 150px;
+  top: 25px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-delay: 1s;
+  -webkit-transition-timing-function: linear;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-delay: 1s;
+  transition-timing-function: linear;
 }
 ```
 
@@ -178,48 +186,52 @@ var intervalID = window.setInterval(updateTransition, 7000);
 `transition-delay: 2s`
 
 ```html hidden
- <div class="parent">
+<div class="parent">
   <div class="box">Lorem</div>
 </div>
-
 ```
 
 ```css hidden
-.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:2s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:2s;
-    transition-timing-function: linear;
+.parent {
+  width: 250px;
+  height: 125px;
 }
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:2s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:2s;
-    transition-timing-function: linear;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 20px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-delay: 2s;
+  -webkit-transition-timing-function: linear;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-delay: 2s;
+  transition-timing-function: linear;
+}
+.box1 {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  color: yellow;
+  font-size: 18px;
+  left: 150px;
+  top: 25px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-delay: 2s;
+  -webkit-transition-timing-function: linear;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-delay: 2s;
+  transition-timing-function: linear;
 }
 ```
 
@@ -245,48 +257,52 @@ var intervalID = window.setInterval(updateTransition, 7000);
 `transition-delay: 4s`
 
 ```html hidden
- <div class="parent">
+<div class="parent">
   <div class="box">Lorem</div>
 </div>
-
 ```
 
 ```css hidden
-.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:4s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:4s;
-    transition-timing-function: ease-in-out;
+.parent {
+  width: 250px;
+  height: 125px;
 }
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:4s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:4s;
-    transition-timing-function: ease-in-out;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 20px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-delay: 4s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-delay: 4s;
+  transition-timing-function: ease-in-out;
+}
+.box1 {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  color: yellow;
+  font-size: 18px;
+  left: 150px;
+  top: 25px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-delay: 4s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-delay: 4s;
+  transition-timing-function: ease-in-out;
 }
 ```
 
@@ -311,17 +327,15 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 ## Especificações
 
-| Especificação                                                                                                | Status                                   | Comentário        |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------- |
-| {{SpecName('CSS3 Transitions', '#transition-delay-property', 'transition-delay')}} | {{Spec2('CSS3 Transitions')}} | Definição inicial |
+{{Specifications}}
 
 {{cssinfo}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.transition-delay")}}
+{{Compat}}
 
 ## Veja também
 
-- [Usando Transições CSS](/pt-BR/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Usando Transições CSS](/pt-BR/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{domxref("TransitionEvent")}} API

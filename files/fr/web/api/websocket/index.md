@@ -1,8 +1,6 @@
 ---
 title: WebSocket
 slug: Web/API/WebSocket
-translation_of: Web/API/WebSocket
-browser-compat: api.WebSocket
 ---
 
 {{APIRef("Web Sockets API")}}
@@ -53,13 +51,13 @@ Pour construire un objet `WebSocket`, on utilisera le constructeur [`WebSocket()
   - : Le nombre d'octets de données dans la queue.
 - [`WebSocket.extensions`](/fr/docs/Web/API/WebSocket/extensions) {{readonlyinline}}
   - : Les extensions sélectionnées par le serveur.
-- [`WebSocket.onclose`](/fr/docs/Web/API/WebSocket/onclose)
+- [`WebSocket.onclose`](/fr/docs/Web/API/WebSocket/close_event)
   - : Un gestionnaire d'évènement à appeler lorsque la connexion est fermée.
-- [`WebSocket.onerror`](/fr/docs/Web/API/WebSocket/onerror)
+- [`WebSocket.onerror`](/fr/docs/Web/API/WebSocket/error_event)
   - : Un gestionnaire d'évènement à appeler en cas d'erreur.
-- [`WebSocket.onmessage`](/fr/docs/Web/API/WebSocket/onmessage)
+- [`WebSocket.onmessage`](/fr/docs/Web/API/WebSocket/message_event)
   - : Un gestionnaire d'évènement à appeler lors de la réception d'un message du serveur.
-- [`WebSocket.onopen`](/fr/docs/Web/API/WebSocket/onopen)
+- [`WebSocket.onopen`](/fr/docs/Web/API/WebSocket/open_event)
   - : Un gestionnaire d'évènement à appeler lorsque la connexion est ouverte.
 - [`WebSocket.protocol`](/fr/docs/Web/API/WebSocket/protocol) {{readonlyinline}}
   - : Le sous-protocole sélectionné par le serveur.
@@ -78,28 +76,28 @@ Pour construire un objet `WebSocket`, on utilisera le constructeur [`WebSocket()
 ## Évènements
 
 - [`close`](/fr/docs/Web/API/WebSocket/close_event)
-  - : Déclenché lorsqu'une connexion avec une `WebSocket` est fermée. Également disponible avec la propriété [`onclose`](/fr/docs/Web/API/WebSocket/onclose).
+  - : Déclenché lorsqu'une connexion avec une `WebSocket` est fermée. Également disponible avec la propriété [`onclose`](/fr/docs/Web/API/WebSocket/close_event).
 - [`error`](/fr/docs/Web/API/WebSocket/error_event)
-  - : Déclenché lorsqu'une connexion avec une `WebSocket` a été fermée à cause d'une erreur, par exemple lorsque des données n'ont pu être envoyées. Également disponible avec la propriété [`onerror`](/fr/docs/Web/API/WebSocket/onerror).
+  - : Déclenché lorsqu'une connexion avec une `WebSocket` a été fermée à cause d'une erreur, par exemple lorsque des données n'ont pu être envoyées. Également disponible avec la propriété [`onerror`](/fr/docs/Web/API/WebSocket/error_event).
 - [`message`](/fr/docs/Web/API/WebSocket/message_event)
-  - : Déclenché lorsque des données sont reçues via une `WebSocket`. Également disponible avec la propriété [`onmessage`](/fr/docs/Web/API/WebSocket/onmessage).
+  - : Déclenché lorsque des données sont reçues via une `WebSocket`. Également disponible avec la propriété [`onmessage`](/fr/docs/Web/API/WebSocket/message_event).
 - [`open`](/fr/docs/Web/API/WebSocket/open_event)
-  - : Déclenché lorsqu'une connexion avec une `WebSocket` est ouverte. Également disponible avec la propriété [`onopen`](/fr/docs/Web/API/WebSocket/onopen).
+  - : Déclenché lorsqu'une connexion avec une `WebSocket` est ouverte. Également disponible avec la propriété [`onopen`](/fr/docs/Web/API/WebSocket/open_event).
 
 ## Exemples
 
 ```js
 // Créer une connexion WebSocket
-const socket = new WebSocket('ws://localhost:8080');
+const socket = new WebSocket("ws://localhost:8080");
 
 // La connexion est ouverte
-socket.addEventListener('open', function (event) {
- socket.send('Coucou le serveur !');
+socket.addEventListener("open", function (event) {
+  socket.send("Coucou le serveur !");
 });
 
 // Écouter les messages
-socket.addEventListener('message', function (event) {
-  console.log('Voici un message du serveur', event.data);
+socket.addEventListener("message", function (event) {
+  console.log("Voici un message du serveur", event.data);
 });
 ```
 

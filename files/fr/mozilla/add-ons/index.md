@@ -1,13 +1,6 @@
 ---
 title: Modules
 slug: Mozilla/Add-ons
-tags:
-  - Add-ons
-  - Extensions
-  - Landing
-  - Modules
-  - Mozilla
-translation_of: Mozilla/Add-ons
 ---
 
 {{AddonSidebar}}
@@ -22,15 +15,15 @@ Il y a plusieurs types de modules complémentaires _(add-ons)_, mais le plus cou
 
 ## Développer des modules complémentaires
 
-Par le passé, il a existé différents outils et formats pour développer des modules complémentaires pour Firefox. Cependant,depuis Novembre 2017, les [WebExtensions](/fr/Add-ons/WebExtensions) sont devenues le format standard. Les autres outils (le SDK Add-On par exemple) sont maintenant dépréciés.
+Par le passé, il a existé différents outils et formats pour développer des modules complémentaires pour Firefox. Cependant,depuis Novembre 2017, les [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions) sont devenues le format standard. Les autres outils (le SDK Add-On par exemple) sont maintenant dépréciés.
 
-[En savoir plus à propos des WebExtensions](/fr/Add-ons/WebExtensions)
+[En savoir plus à propos des WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions)
 
 Si vous développez un nouveau module complémentaire, nous vous recommandons d'utiliser WebExtension.
 
 Les extensions qui respectent le format WebExtensions de Firefox sont conçues pour pouvoir être utilisées sur différents navigateurs. Les extensions WebExtensions écrites pour Firefox fonctionneront pour la plupart dans Chrome, Edge et Opera, nécessitant peu, si ce n'est aucun changements. Elles sont également compatibles avec le mode multi-processus de Firefox.
 
-[Voici la liste des API actuellement prises en charge par Firefox et les autres navigateurs](/fr/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs). Nous continuons à concevoir et à implémenter de nouvelles API afin de répondre aux besoins des développeurs.
+[Voici la liste des API actuellement prises en charge par Firefox et les autres navigateurs](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs). Nous continuons à concevoir et à implémenter de nouvelles API afin de répondre aux besoins des développeurs.
 
 La plupart des API utilisées pour WebExtension sont également disponibles pour Firefox pour Android.
 
@@ -52,7 +45,7 @@ En 2020, Mozilla sortira une nouvelle expérience Firefox pour Android. Le nouve
 
 ### Migrer un module existant
 
-Si vous maintenez un module complémentaire historique utilisant XUL ou le SDK Add-on, nous vous recommandons de le porter vers une extension WebExtensions. [Voici quelques ressources MDN à propos du portage d'extension](/fr/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on).
+Si vous maintenez un module complémentaire historique utilisant XUL ou le SDK Add-on, nous vous recommandons de le porter vers une extension WebExtensions. [Voici quelques ressources MDN à propos du portage d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on).
 
 Nous avons rassemblé [un ensemble de ressources](https://wiki.mozilla.org/Add-ons/developer/communication) sur un page wiki afin d'aider les développeurs pendant cette phase de transition. Pour commencer, vous pouvez utiliser l'outil [Lookup](https://compatibility-lookup.services.mozilla.com/) afin de détecter si votre module complémentaire est impacté.
 
@@ -62,15 +55,15 @@ Nous avons rassemblé [un ensemble de ressources](https://wiki.mozilla.org/Add-o
 
 Il n'est pas nécessaire que votre module soit publié sur AMO. En revanche, votre module doit être signé par Mozilla afin que les utilisateurs puissent l'installer.
 
-[Dans cet article](/fr/Add-ons/Distribution), vous trouverez différentes informations relatives au processus de publication de son module.
+[Dans cet article](/fr/docs/Mozilla/Add-ons/Distribution), vous trouverez différentes informations relatives au processus de publication de son module.
 
 ## Les autres types de modules
 
 Généralement, lorsqu'on évoque les modules complémentaires, on parle des extensions. Ceci étant dit, il existe d'autres types de modules qui permettent aux utilisateurs de personnaliser Firefox. Ces modules peuvent être :
 
-- [Des thèmes légers](/fr/Add-ons/Thèmes/Fond) : un outil simple qui permet de personnaliser Firefox de façon limitée
+- [Des thèmes légers](/fr/docs/Mozilla/Add-ons/Thèmes/Fond) : un outil simple qui permet de personnaliser Firefox de façon limitée
 - [Les modules mobiles](/fr/docs/Extensions/Mobile) : des modules complémentaires destinés à Firefox pour Android. Attention, certaines des API utilisées pour ces modules sont dépréciées (ou le seront dans un avenir proche). Par la suite, Firefox pour Android prendra pleinement en charge le format WebExtension
-- [Des plugins pour les moteurs de recherche](/fr/Add-ons/Creating_OpenSearch_plugins_for_Firefox) qui permettent d'ajouter de nouveaux moteurs de recherche à la barre de recherche du navigateur
+- [Des plugins pour les moteurs de recherche](/fr/docs/Mozilla/Add-ons/Creating_OpenSearch_plugins_for_Firefox) qui permettent d'ajouter de nouveaux moteurs de recherche à la barre de recherche du navigateur
 - [Des dictionnaires utilisateur](/fr/docs/Mozilla/Creating_a_spell_check_dictionary_add-on) qui permettent d'utiliser la vérification orthographique dans différentes langues
 - [Des packs de langues](https://support.mozilla.org/kb/use-firefox-interface-other-languages-language-pack) qui permettent de traduire l'interface de Firefox dans plus de langues.
 

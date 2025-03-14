@@ -1,25 +1,26 @@
 ---
-title: '<dfn> : l''élément de définition'
+title: "<dfn> : l'élément de définition"
 slug: Web/HTML/Element/dfn
-tags:
-  - Definition
-  - Definitions
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Semantic Markup
-  - Web
-  - dfn
-translation_of: Web/HTML/Element/dfn
-browser-compat: html.elements.dfn
 ---
 
 {{HTMLSidebar}}
 
 L'élément HTML **`<dfn>`** (aussi nommé « définition ») est utilisé pour indiquer le terme défini dans le contexte d'une expression ou d'une phrase de définition. L'élément [`<p>`](/fr/docs/Web/HTML/Element/p), le couple [`<dt>`](/fr/docs/Web/HTML/Element/dt)/[`<dd>`](/fr/docs/Web/HTML/Element/dd) ou l'élément [`<section>`](/fr/docs/Web/HTML/Element/section) qui est le plus proche ancêtre de `<dfn>` est considéré comme la définition du terme.
 
-{{EmbedInteractiveExample("pages/tabbed/dfn.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;dfn&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  A <dfn id="def-validator">validator</dfn> is a program that checks for syntax
+  errors in code or documents.
+</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+dfn {
+}
+```
 
 <table class="properties">
   <tbody>
@@ -104,7 +105,8 @@ Le terme à définir est identifié selon ces règles :
 2. Si le `<dfn>` contient un seul élément enfant et n'a pas de contenu textuel propre, et que l'élément enfant est un élément [`<abbr>`](/fr/docs/Web/HTML/Element/abbr) avec un attribut `title` lui-même, alors la valeur exacte du `<abbr>` de l'élément `title` est le terme défini.
 3. Sinon, le contenu textuel de l'élément `<dfn>` est le terme défini. Ceci est illustré [dans le premier exemple ci-dessous](#basic_identification_of_a_term).
 
-> **Note :** Si l'élément `<dfn>` possède un attribut `title`, il _doit_ contenir le terme défini et aucun autre texte.
+> [!NOTE]
+> Si l'élément `<dfn>` possède un attribut `title`, il _doit_ contenir le terme défini et aucun autre texte.
 
 ### Liens vers des éléments de type `<dfn>`
 
@@ -124,10 +126,8 @@ Dans cet exemple, on utilise simplement l'élément `<dfn>` afin d'identifier l'
 
 ```html
 <p>
-  L'élément HTML de définition
-  (<strong><dfn>&lt;dfn&gt;</dfn></strong>) est
-  utilisé afin d'indiquer le terme en cours de
-  définition dans la phrase.
+  L'élément HTML de définition (<strong><dfn>&lt;dfn&gt;</dfn></strong
+  >) est utilisé afin d'indiquer le terme en cours de définition dans la phrase.
 </p>
 ```
 
@@ -144,26 +144,34 @@ Il est possible d'utiliser l'attribut `id` afin de créer des liens avec des él
 #### HTML
 
 ```html
-<p>L'élément de définition
-(<strong><dfn id="definition-dfn">&lt;dfn&gt;</dfn></strong>) est
-utilisé afin d'indiquer le terme en train d'être défini dans le
-contexte d'une phrase.</p>
+<p>
+  L'élément de définition (<strong
+    ><dfn id="definition-dfn">&lt;dfn&gt;</dfn></strong
+  >) est utilisé afin d'indiquer le terme en train d'être défini dans le
+  contexte d'une phrase.
+</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Graece
-donan, Latine voluptatem vocant. Confecta res esset. Duo Reges:
-constructio interrete. Scrupulum, inquam, abeunti; </p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Graece donan, Latine
+  voluptatem vocant. Confecta res esset. Duo Reges: constructio interrete.
+  Scrupulum, inquam, abeunti;
+</p>
 
-<p>Negare non possum. Dat enim intervalla et relaxat. Quonam modo?
-Equidem e Cn. Quid de Pythagora? In schola desinis. </p>
+<p>
+  Negare non possum. Dat enim intervalla et relaxat. Quonam modo? Equidem e Cn.
+  Quid de Pythagora? In schola desinis.
+</p>
 
-<p>Ubi ut eam caperet aut quando? Cur iustitia laudatur? Aperiendum
-est igitur, quid sit voluptas; Quid enim? Non est igitur voluptas
-bonum. Urgent tamen et nihil remittunt. Quid enim possumus hoc
-agere divinius? </p>
+<p>
+  Ubi ut eam caperet aut quando? Cur iustitia laudatur? Aperiendum est igitur,
+  quid sit voluptas; Quid enim? Non est igitur voluptas bonum. Urgent tamen et
+  nihil remittunt. Quid enim possumus hoc agere divinius?
+</p>
 
-<p>C'est pourquoi nous avons décidé d'utiliser l'élément
-<code><a href="#definition-dfn">&lt;dfn&gt;</a></code> pour
-ce projet.</p>
+<p>
+  C'est pourquoi nous avons décidé d'utiliser l'élément
+  <code><a href="#definition-dfn">&lt;dfn&gt;</a></code> pour ce projet.
+</p>
 ```
 
 On voit ici que l'élément possède désormais un attribut [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) avec la valeur `"definition-dfn"`. Cet attribut permet d'utiliser l'élément comme cible d'un lien. Plus bas, on crée un tel lien avec un élément [`<a>`](/fr/docs/Web/HTML/Element/a) dont l'attribut [`href`](/fr/docs/Web/HTML/Element/a#attr-href) vaut `"#definition-dfn"`, ce qui permet de remonter à la définition.
@@ -179,15 +187,18 @@ Dans certains cas, on souhaite utiliser l'abréviation d'un terme lorsqu'on le d
 #### HTML
 
 ```html
-<p>Le <dfn><abbr title="Télescope Spatial Hubble">TSH</abbr></dfn>
-est l'un des instruments scientifiques les plus productifs jamais
-construits. Il est en orbite depuis plus de 20 ans, scrutant le ciel
-et renvoyant des données et des photographies d'une qualité et d'un
-niveau de détail sans précédent.</p>
+<p>
+  Le <dfn><abbr title="Télescope Spatial Hubble">TSH</abbr></dfn> est l'un des
+  instruments scientifiques les plus productifs jamais construits. Il est en
+  orbite depuis plus de 20 ans, scrutant le ciel et renvoyant des données et des
+  photographies d'une qualité et d'un niveau de détail sans précédent.
+</p>
 
-<p>En effet, le <abbr title="Télescope Spatial Hubble">TSH</abbr> a sans
-doute fait plus pour faire avancer la science que tout autre appareil
-jamais construit.</p>
+<p>
+  En effet, le <abbr title="Télescope Spatial Hubble">TSH</abbr> a sans doute
+  fait plus pour faire avancer la science que tout autre appareil jamais
+  construit.
+</p>
 ```
 
 On notera que l'élément `<abbr>` est imbriqué dans l'élément `<dfn>`. L'élément `<abbr>` indique que le terme est une abréviation ("HST") et indique le détail de cette abrévation ("Hubble Space Telescope") grâce à son attribut `title`. L'élément `<dfn>` indique quant à lui que c'est bien ce terme abrégé qu'on est en train de définir.

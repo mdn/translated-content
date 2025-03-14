@@ -1,17 +1,16 @@
 ---
 title: WebAssembly.Table()
 slug: WebAssembly/JavaScript_interface/Table
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.Table()`** 생성자는 지정된 크기 및 요소 유형의 새 `Table` 객체를 만듭니다.
 
 이것은 자바 스크립트 래퍼 객체로, 함수 참조를 저장하는 WebAssembly 테이블을 나타내는 배열과 같은 구조입니다. JavaScript 또는 WebAssembly 코드로 작성된 테이블은 JavaScript 및 WebAssembly에서 액세스 및 변경할 수 있습니다.
 
-> **참고:** 테이블은 현재 function references만 저장할 수 있지만 나중에 확장 될 수 있습니다.
+> [!NOTE]
+> 테이블은 현재 function references만 저장할 수 있지만 나중에 확장 될 수 있습니다.
 
 ## Syntax
 
@@ -36,7 +35,7 @@ var myTable = new WebAssembly.Table(tableDescriptor);
 
 ## `Table` instances
 
-모든 `Table` 인스턴스는 `Table()`생성자의 [prototype object](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/prototype)에서 상속받습니다.이 인스턴스는 모든 `Table` 인스턴스에 적용되도록 수정할 수 있습니다.
+모든 `Table` 인스턴스는 `Table()`생성자의 [prototype object](/ko/docs/WebAssembly/JavaScript_interface/Table)에서 상속받습니다.이 인스턴스는 모든 `Table` 인스턴스에 적용되도록 수정할 수 있습니다.
 
 ### Instance properties
 
@@ -59,10 +58,10 @@ var myTable = new WebAssembly.Table(tableDescriptor);
 다음 예제 (table2.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) 및 [live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html) 참조)는 초기 크기가 2인 새 WebAssembly Table 인스턴스를 만듭니다. 그런 다음 두 개의 인덱스 (표 {{jsxref ( "WebAssembly / Table / get", "Table.prototype.get ()")}}를 통해 검색하여 테이블의 길이와 내용을 인쇄합니다. 길이가 2이고 {{jsxref ( "null")}}이 두개라고 출력됩니다.
 
 ```js
-var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
-console.log(tbl.length);  // "2"
-console.log(tbl.get(0));  // "null"
-console.log(tbl.get(1));  // "null"
+var tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
+console.log(tbl.length); // "2"
+console.log(tbl.get(0)); // "null"
+console.log(tbl.get(1)); // "null"
 ```
 
 그런 다음 테이블을 포함한 `importObj`를 만듭니다.
@@ -70,31 +69,32 @@ console.log(tbl.get(1));  // "null"
 ```js
 var importObj = {
   js: {
-    tbl:tbl
-  }
+    tbl: tbl,
+  },
 };
 ```
 
 마지막으로 {{jsxref ( "WebAssembly.instantiateStreaming ()")}} 메소드를 사용하여 wasm 모듈 (table2.wasm)을 로드하고 인스턴스화합니다. table2.wasm 모듈에는 두 개의 함수 (하나는 42를 반환하고 다른 하나는 83을 반환하는 함수)가 들어 있고 가져온 테이블의 요소 0과 1에 둘 다 저장합니다 ([text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat) 참조). 인스턴스화 후에도 테이블의 길이는 여전히 2이지만 JS에 호출 할 수있는 호출 가능한 [Exported WebAssembly Functions](/ko/docs/WebAssembly/Exported_functions)가 요소에 포함됩니다.
 
 ```js
-WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
-.then(function(obj) {
-  console.log(tbl.length);
-  console.log(tbl.get(0)());
-  console.log(tbl.get(1)());
-});
+WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
+  function (obj) {
+    console.log(tbl.length);
+    console.log(tbl.get(0)());
+    console.log(tbl.get(1)());
+  },
+);
 ```
 
 액세서의 끝 부분에 두 번째 함수 호출 연산자를 포함시켜 실제로 참조 된 함수를 호출하고 그 안에 저장된 값을 기록해야합니다 (예 : `get(0)` 대신 `get(0)()`).
 
 이 예제는 자바 스크립트에서 테이블을 만들고 액세스하고 있지만 wasm 인스턴스 내부에서도 같은 테이블을 볼 수 있고 호출 할 수 있음을 보여줍니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

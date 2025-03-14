@@ -1,16 +1,36 @@
 ---
-title: '::file-selector-button'
+title: ::file-selector-button
 slug: Web/CSS/::file-selector-button
-original_slug: Web/CSS/::file-selector-button
 ---
 
 {{CSSRef}}
 
 El [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::file-selector-button`** representa el botón de un {{HTMLElement("input") }} con el atributo [`type="file"`](/es/docs/Web/HTML/Element/input/file).
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-file-selector-button.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::file-selector-button", "tabbed-shorter")}}
 
-> **Nota:** Las versiones anteriores de navegadores compatibles con WebKit/Blink como Chrome, Opera y Safari (indicados por el prefijo `-webkit`) admitían un pseudoelemento no estándar `::-webkit-file-upload-button`.
+```css interactive-example
+input {
+  margin-top: 1rem;
+}
+
+input::file-selector-button {
+  font-weight: bold;
+  color: dodgerblue;
+  padding: 0.5em;
+  border: thin solid grey;
+  border-radius: 3px;
+}
+```
+
+```html interactive-example
+<label for="avatar">Choose a profile picture:</label><br />
+
+<input id="avatar" type="file" name="avatar" accept="image/png, image/jpeg" />
+```
+
+> [!NOTE]
+> Las versiones anteriores de navegadores compatibles con WebKit/Blink como Chrome, Opera y Safari (indicados por el prefijo `-webkit`) admitían un pseudoelemento no estándar `::-webkit-file-upload-button`.
 >
 > Legacy Edge y las versiones posteriores de IE admitían un pseudoelemento no estándar `::-ms-browse`.
 >
@@ -31,7 +51,7 @@ selector::file-selector-button
 ```html
 <form>
   <label for="fileUpload">Subir archivo</label>
-  <input type="file" id="fileUpload">
+  <input type="file" id="fileUpload" />
 </form>
 ```
 
@@ -46,15 +66,15 @@ form {
 ```
 
 ```css
-input[type=file]::file-selector-button {
+input[type="file"]::file-selector-button {
   border: 2px solid #6c5ce7;
-  padding: .2em .4em;
-  border-radius: .2em;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
   background-color: #a29bfe;
   transition: 1s;
 }
 
-input[type=file]::file-selector-button:hover {
+input[type="file"]::file-selector-button:hover {
   background-color: #81ecec;
   border: 2px solid #00cec9;
 }
@@ -75,7 +95,7 @@ Tenga en cuenta que `::file-selector-button` es un elemento completo y, como tal
 ```html
 <form>
   <label for="fileUpload">Subir archivo</label>
-  <input type="file" id="fileUpload">
+  <input type="file" id="fileUpload" />
 </form>
 ```
 
@@ -90,40 +110,40 @@ form {
 ```
 
 ```css
-input[type=file]::-ms-browse {
+input[type="file"]::-ms-browse {
   border: 2px solid #6c5ce7;
-  padding: .2em .4em;
-  border-radius: .2em;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
   background-color: #a29bfe;
 }
 
-input[type=file]::-webkit-file-upload-button {
+input[type="file"]::-webkit-file-upload-button {
   border: 2px solid #6c5ce7;
-  padding: .2em .4em;
-  border-radius: .2em;
-  background-color: #a29bfe;
-  transition: 1s;
-}
-
-input[type=file]::file-selector-button {
-  border: 2px solid #6c5ce7;
-  padding: .2em .4em;
-  border-radius: .2em;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
   background-color: #a29bfe;
   transition: 1s;
 }
 
-input[type=file]::-ms-browse:hover {
+input[type="file"]::file-selector-button {
+  border: 2px solid #6c5ce7;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: #a29bfe;
+  transition: 1s;
+}
+
+input[type="file"]::-ms-browse:hover {
   background-color: #81ecec;
   border: 2px solid #00cec9;
 }
 
-input[type=file]::-webkit-file-upload-button:hover {
+input[type="file"]::-webkit-file-upload-button:hover {
   background-color: #81ecec;
   border: 2px solid #00cec9;
 }
 
-input[type=file]::file-selector-button:hover {
+input[type="file"]::file-selector-button:hover {
   background-color: #81ecec;
   border: 2px solid #00cec9;
 }

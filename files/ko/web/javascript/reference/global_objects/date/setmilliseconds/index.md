@@ -1,8 +1,6 @@
 ---
 title: Date.prototype.setMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
-browser-compat: javascript.builtins.Date.setMilliseconds
 ---
 
 {{JSRef}}
@@ -12,7 +10,7 @@ setMilliseconds () 메서드는 현지 시간에 따라 지정된 날짜의 밀�
 ## Syntax
 
 ```js
-    dateObj.setMilliseconds(millisecondsValue)
+dateObj.setMilliseconds(millisecondsValue);
 ```
 
 ### Parameters

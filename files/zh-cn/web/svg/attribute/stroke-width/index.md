@@ -3,28 +3,86 @@ title: stroke-width
 slug: Web/SVG/Attribute/stroke-width
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-`stroke-width`属性指定了当前对象的轮廓的宽度。它的默认值是**1**。如果使用了一个\<percentage>，这个值代表当前视口的百分比。如果使用了**0**值，则将不绘制轮廓。
+**`stroke-width`** 表现属性定义了应用于图形的外轮廓的宽度。
 
-作为一个外观属性，它可以直接用作 CSS 样式表内部的属性。
+你可以将此属性与以下 SVG 元素一起使用：
 
-## 用法
-
-| 类别   | 外观属性                                                                                              |
-| ------ | ----------------------------------------------------------------------------------------------------- |
-| 值     | [\<length>](/zh-CN/SVG/Content_type#Length) \| [\<percentage>](/zh-CN/SVG/Content_type#Percentage) \| inherit |
-| 可变性 | Yes                                                                                                   |
+- {{SVGElement('circle')}}
+- {{SVGElement('ellipse')}}
+- {{SVGElement('line')}}
+- {{SVGElement('path')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
 
 ## 示例
 
-## 元素
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
 
-下列元素可以使用`stroke-width`属性：
+```html
+<svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
+  <!-- 默认外轮廓宽度为 1 -->
+  <circle cx="5" cy="5" r="3" stroke="green" />
 
-- [形状元素](/zh-CN/SVG/Element#Shape) »
-- [文本内容元素](/zh-CN/SVG/Element#TextContent) »
+  <!-- 使用数值设置外轮廓宽度 -->
+  <circle cx="15" cy="5" r="3" stroke="green" stroke-width="3" />
+
+  <!-- 使用百分数设置外轮廓宽度 -->
+  <circle cx="25" cy="5" r="3" stroke="green" stroke-width="2%" />
+</svg>
+```
+
+{{EmbedLiveSample("示例", '100%', 150)}}
+
+## 使用说明
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">值</th>
+      <td>
+        <strong
+          ><a href="/zh-CN/docs/Web/SVG/Content_type#长度"
+            >&#x3C;length></a
+          ></strong
+        > |
+        <strong
+          ><a href="/zh-CN/docs/Web/SVG/Content_type#百分数"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">默认值</th>
+      <td><code>1px</code></td>
+    </tr>
+    <tr>
+      <th scope="row">动画性</th>
+      <td>是</td>
+    </tr>
+  </tbody>
+</table>
+
+> [!NOTE]
+> 百分数值始终以标准化 {{SVGAttr('viewBox')}} 的对角线长度的百分比计算。
 
 ## 规范
 
 {{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}

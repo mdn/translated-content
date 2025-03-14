@@ -1,26 +1,35 @@
 ---
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
-tags:
-  - Function
-  - JavaScript
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 ---
 
 {{JSRef}}
 
-**`apply()`** 메서드는 주어진 `this` 값과 배열 (또는 [유사 배열 객체](/ko/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Working_with_Array-like_objects)) 로 제공되는 `arguments` 로 함수를 호출합니다.
+**`apply()`** 메서드는 주어진 `this` 값과 배열 (또는 [유사 배열 객체](/ko/docs/Web/JavaScript/Guide#working_with_array-like_objects)) 로 제공되는 `arguments` 로 함수를 호출합니다.
 
-> **참고:** 이 함수의 구문은 거의 {{jsxref("Function.call", "call()")}} 구문과 유사합니다. 근본적인 차이점은 `call()` 은 함수에 전달될 **인수 리스트**를 받는데 비해, `apply()` 는 **인수들의 단일 배열**을 받는다는 점입니다.
+> [!NOTE]
+> 이 함수의 구문은 거의 {{jsxref("Function.call", "call()")}} 구문과 유사합니다. 근본적인 차이점은 `call()` 은 함수에 전달될 **인수 리스트**를 받는데 비해, `apply()` 는 **인수들의 단일 배열**을 받는다는 점입니다.
 
-{{EmbedInteractiveExample("pages/js/function-apply.html")}}
+{{InteractiveExample("JavaScript Demo: Function.apply()")}}
+
+```js interactive-example
+const numbers = [5, 6, 2, 3, 7];
+
+const max = Math.max.apply(null, numbers);
+
+console.log(max);
+// Expected output: 7
+
+const min = Math.min.apply(null, numbers);
+
+console.log(min);
+// Expected output: 2
+```
 
 ## 구문
 
 ```js
-    func.apply(thisArg, [argsArray])
+func.apply(thisArg, [argsArray]);
 ```
 
 ### 매개변수
@@ -44,7 +53,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 ECMAScript 5번 째 판의 시작으로, 모든 유사 배열 객체 타입을 사용할 수 있으며, 실제로 이는 프로퍼티 `length` 와 범위 `(0..length-1)` 내의 정수 프로퍼티를 갖는 다는 것을 의미합니다. 예를 들면, 이제 {{domxref("NodeList")}} 또는 `{ 'length': 2, '0': 'eat', '1': 'bananas' }` 와 같은 커스텀 객체를 사용할 수 있습니다.
 
-> **참고:** Chrome 14와 Internet Explorer 9를 포함한 대부분의 브라우저는 아직 유사배열객체를 apply에 사용할 수 없으며 오류가 출력됩니다.
+> [!NOTE]
+> Chrome 14와 Internet Explorer 9를 포함한 대부분의 브라우저는 아직 유사배열객체를 apply에 사용할 수 없으며 오류가 출력됩니다.
 
 ## 예제
 
@@ -55,7 +65,7 @@ ECMAScript 5번 째 판의 시작으로, 모든 유사 배열 객체 타입을 �
 방법은 `apply` !
 
 ```js
-var array = ['a', 'b'];
+var array = ["a", "b"];
 var elements = [0, 1, 2];
 array.push.apply(array, elements);
 console.info(array); // ["a", "b", 0, 1, 2]
@@ -77,7 +87,7 @@ var max = Math.max.apply(null, numbers);
 var min = Math.min.apply(null, numbers);
 
 // vs. simple loop based algorithm
-max = -Infinity, min = +Infinity;
+(max = -Infinity), (min = +Infinity);
 
 for (var i = 0; i < numbers.length; i++) {
   if (numbers[i] > max) {
@@ -99,8 +109,7 @@ function minOfArray(arr) {
   var QUANTUM = 32768;
 
   for (var i = 0, len = arr.length; i < len; i += QUANTUM) {
-    var submin = Math.min.apply(null,
-                                arr.slice(i, Math.min(i + QUANTUM, len)));
+    var submin = Math.min.apply(null, arr.slice(i, Math.min(i + QUANTUM, len)));
     min = Math.min(submin, min);
   }
 
@@ -115,7 +124,7 @@ var min = minOfArray([5, 6, 2, 3, 7]);
 Java 와 유사하게, 객체를 위한 {{jsxref("Operators/new", "constructors", "", 1)}} 체이닝을 위해 `apply` 를 사용할 수 있습니다. 다음 예제에서 인수 리스트 대신 생성자로 유사 배열 객체를 사용할 수 있게 해주는 `construct` 라는 전역 {{jsxref("Function")}} 메소드를 생성할 것입니다.
 
 ```js
-Function.prototype.construct = function(aArgs) {
+Function.prototype.construct = function (aArgs) {
   var oNew = Object.create(this.prototype);
   this.apply(oNew, aArgs);
   return oNew;
@@ -124,18 +133,18 @@ Function.prototype.construct = function(aArgs) {
 
 > **참고:** **알림:** 위에서 사용된 `Object.create()` 메소드는 상대적으로 새로운 것입니다. 대안으로, 다음 접근법 중 하나를 고려하세요.
 
-{{jsxref("Object/__proto__", "Object.__proto__")}} 사용:
+[`Object.prototype.__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 사용:
 
 ```js
 Function.prototype.construct = function (aArgs) {
   var oNew = {};
-  oNew.**proto** = this.prototype;
+  oNew.__proto__ = this.prototype;
   this.apply(oNew, aArgs);
   return oNew;
-  };
+};
 ```
 
-[클로져](/ko/docs/Web/JavaScript/Guide/Closures) 사용:
+[클로져](/ko/docs/Web/JavaScript/Closures) 사용:
 
 ```JS
 Function.prototype.construct = function(aArgs) {
@@ -162,18 +171,18 @@ Function.prototype.construct = function (aArgs) {
 사용 예제
 
 ```js
-    function MyConstructor() {
-      for (var nProp = 0; nProp < arguments.length; nProp++) {
-        this['property' + nProp] = arguments[nProp];
-      }
-    }
+function MyConstructor() {
+  for (var nProp = 0; nProp < arguments.length; nProp++) {
+    this["property" + nProp] = arguments[nProp];
+  }
+}
 
-    var myArray = [4, 'Hello world!', false];
-    var myInstance = MyConstructor.construct(myArray);
+var myArray = [4, "Hello world!", false];
+var myInstance = MyConstructor.construct(myArray);
 
-    console.log(myInstance.property1);                // logs 'Hello world!'
-    console.log(myInstance instanceof MyConstructor); // logs 'true'
-    console.log(myInstance.constructor);              // logs 'MyConstructor'
+console.log(myInstance.property1); // logs 'Hello world!'
+console.log(myInstance instanceof MyConstructor); // logs 'true'
+console.log(myInstance.constructor); // logs 'MyConstructor'
 ```
 
 **알림:** 네이티브가 아닌 `Function.construct` 메소드는 {{jsxref("Date")}} 와 같은 일부 네이티브 생성자와 동작하지 않을 것입니다. 그런 경우, {{jsxref("Function.prototype.bind")}} 메소드를 사용해야 합니다. 예를 들어, 다음과 같은 배열이 있다고 할 때, {{jsxref("Global_Objects/Date", "Date")}} 생성자: `[2012, 11, 4]` 와 함께 사용되려면 다음과 같이 작성해야 합니다: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()`. 이는 가장 좋은 방법이 아니며, 어떤 상용 환경에서도 사용되지 않을 수 있습니다.

@@ -28,7 +28,7 @@ XMLHttpRequest.responseType = type;
 - `"blob"`
   - : {{DOMxRef("XMLHttpRequest.response", "response")}} 是一个包含二进制数据的 {{DOMxRef("Blob")}} 对象。
 - `"document"`
-  - : {{DOMxRef("XMLHttpRequest.response", "response")}} 是一个 {{Glossary("HTML")}} {{DOMxRef("Document")}} 或 {{Glossary("XML")}} {{DOMxRef("XMLDocument")}}，根据接收到的数据的 MIME 类型而定。请参阅 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) 中的 HTML，了解有关使用 XHR 获取 HTML 内容的更多信息。
+  - : {{DOMxRef("XMLHttpRequest.response", "response")}} 是一个 {{Glossary("HTML")}} {{DOMxRef("Document")}} 或 {{Glossary("XML")}} {{DOMxRef("XMLDocument")}}，根据接收到的数据的 MIME 类型而定。请参阅 [XMLHttpRequest 中的 HTML](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)，了解有关使用 XHR 获取 HTML 内容的更多信息。
 - `"json"`
   - : {{DOMxRef("XMLHttpRequest.response", "response")}} 是通过将接收到的数据内容解析为 {{Glossary("JSON")}} 而创建的 JavaScript 对象。
 - `"text"`
@@ -36,7 +36,8 @@ XMLHttpRequest.responseType = type;
 - `"ms-stream"` {{non-standard_inline}}
   - : {{DOMxRef("XMLHttpRequest.response", "response")}} 是流式下载的一部分；此响应类型仅允许用于下载请求，并且仅受 Internet Explorer 支持。
 
-> **备注：** 将 `responseType` 设置为特定值时，作者应确保服务器实际发送的响应与该格式兼容。如果服务器返回的数据与设置的 `responseType` 不兼容，则 {{DOMxRef("XMLHttpRequest.response", "response")}} 的值将为`null` .
+> [!NOTE]
+> 将 `responseType` 设置为特定值时，作者应确保服务器实际发送的响应与该格式兼容。如果服务器返回的数据与设置的 `responseType` 不兼容，则 {{DOMxRef("XMLHttpRequest.response", "response")}} 的值将为`null` .
 
 ### 异常
 
@@ -47,7 +48,7 @@ XMLHttpRequest.responseType = type;
 
 ### 同步 XHR 限制
 
-您不能在同步`XMLHttpRequest` 中更改 `responseType` 的值，除非请求属于 {{DOMxRef("Worker")}}。此限制部分旨在帮助确保同步操作不会用于阻塞浏览器主线程的大型事务，从而阻碍用户体验。
+你不能在同步`XMLHttpRequest` 中更改 `responseType` 的值，除非请求属于 {{DOMxRef("Worker")}}。此限制部分旨在帮助确保同步操作不会用于阻塞浏览器主线程的大型事务，从而阻碍用户体验。
 
 XHR 请求默认是异步的；它们仅通过在调用 {{DOMxRef("XMLHttpRequest.open", "open()")}} 时将 `false` 作为可选`async` 参数的值传递来置于同步模式。
 
@@ -63,8 +64,9 @@ XHR 请求默认是异步的；它们仅通过在调用 {{DOMxRef("XMLHttpReques
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-- {{DOMxRef("XMLHttpRequest.response", "response")}}, {{DOMxRef("XMLHttpRequest.responseText", "responseText")}} 和 {{DOMxRef("XMLHttpRequest.responseXML", "responseXML")}}
+- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [XMLHttpRequest 中的 HTML](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
+- 响应数据：{{domxref("XMLHttpRequest.response", "response")}}、
+  {{domxref("XMLHttpRequest.responseText", "responseText")}} 和 {{domxref("XMLHttpRequest.responseXML", "responseXML")}}

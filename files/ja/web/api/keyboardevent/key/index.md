@@ -1,8 +1,9 @@
 ---
-title: KeyboardEvent.key
+title: "KeyboardEvent: key プロパティ"
+short-title: key
 slug: Web/API/KeyboardEvent/key
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("UI Events")}}
@@ -21,7 +22,7 @@ l10n:
 - 一部の特殊なキーボードのキー（マルチメディアキーボードでメディアを制御するための拡張キーなど）は、 Windows ではキーコードを生成しません。その代わりに、 `WM_APPCOMMAND` イベントが発生します。これらのイベントは DOM キーボードイベントにマッピングされ、 Windows の「仮想キーコード」にリストアップされます（実際にはキーコードではありませんが）。
 - キーを特定できない場合、返される値は `Unidentified` になります。
 
-> **注目:**
+> [!CALLOUT]
 >
 > [キー値の完全なリスト](/ja/docs/Web/API/UI_Events/Keyboard_event_key_values)をご覧ください。
 
@@ -93,15 +94,15 @@ l10n:
 ### JavaScript
 
 ```js
-let textarea = document.getElementById('test-target'),
-consoleLog = document.getElementById('console-log'),
-btnReset = document.getElementById('btn-reset');
+let textarea = document.getElementById("test-target"),
+  consoleLog = document.getElementById("console-log"),
+  btnReset = document.getElementById("btn-reset");
 
 function logMessage(message) {
   consoleLog.innerHTML += `${message}<br>`;
 }
 
-textarea.addEventListener('keydown', (e) => {
+textarea.addEventListener("keydown", (e) => {
   if (!e.repeat) {
     logMessage(`Key "${e.key}" pressed [event: keydown]`);
   } else {
@@ -109,25 +110,25 @@ textarea.addEventListener('keydown', (e) => {
   }
 });
 
-textarea.addEventListener('beforeinput', (e) => {
+textarea.addEventListener("beforeinput", (e) => {
   logMessage(`Key "${e.data}" about to be input [event: beforeinput]`);
 });
 
-textarea.addEventListener('input', (e) => {
+textarea.addEventListener("input", (e) => {
   logMessage(`Key "${e.data}" input [event: input]`);
 });
 
-textarea.addEventListener('keyup', (e) => {
+textarea.addEventListener("keyup", (e) => {
   logMessage(`Key "${e.key}" released [event: keyup]`);
 });
 
-btnReset.addEventListener('click', (e) => {
+btnReset.addEventListener("click", (e) => {
   let child = consoleLog.firstChild;
   while (child) {
-   consoleLog.removeChild(child);
-   child = consoleLog.firstChild;
+    consoleLog.removeChild(child);
+    child = consoleLog.firstChild;
   }
-  textarea.value = ''
+  textarea.value = "";
 });
 ```
 
@@ -162,42 +163,41 @@ Shift キーが押されると、まず {{domxref("Element/keydown_event", "keyd
 この例では {{domxref("EventTarget.addEventListener()")}} を使用して {{domxref("Element/keydown_event", "keydown")}} イベントを待ち受けています。イベントが発生すると、キーの値がチェックされ、コードが関心を持つキーの一つであるかどうかが確認され、もしそうであれば、何らかの方法で処理されます（宇宙船の操縦や、スプレッドシートの選択セルの変更など）。
 
 ```js
-window.addEventListener("keydown", (event) => {
-  if (event.defaultPrevented) {
-    return; // Do nothing if the event was already processed
-  }
+window.addEventListener(
+  "keydown",
+  (event) => {
+    if (event.defaultPrevented) {
+      return; // Do nothing if the event was already processed
+    }
 
-  switch (event.key) {
-    case "Down": // IE/Edge specific value
-    case "ArrowDown":
-      // Do something for "down arrow" key press.
-      break;
-    case "Up": // IE/Edge specific value
-    case "ArrowUp":
-      // Do something for "up arrow" key press.
-      break;
-    case "Left": // IE/Edge specific value
-    case "ArrowLeft":
-      // Do something for "left arrow" key press.
-      break;
-    case "Right": // IE/Edge specific value
-    case "ArrowRight":
-      // Do something for "right arrow" key press.
-      break;
-    case "Enter":
-      // Do something for "enter" or "return" key press.
-      break;
-    case "Esc": // IE/Edge specific value
-    case "Escape":
-      // Do something for "esc" key press.
-      break;
-    default:
-      return; // Quit when this doesn't handle the key event.
-  }
+    switch (event.key) {
+      case "ArrowDown":
+        // Do something for "down arrow" key press.
+        break;
+      case "ArrowUp":
+        // Do something for "up arrow" key press.
+        break;
+      case "ArrowLeft":
+        // Do something for "left arrow" key press.
+        break;
+      case "ArrowRight":
+        // Do something for "right arrow" key press.
+        break;
+      case "Enter":
+        // Do something for "enter" or "return" key press.
+        break;
+      case "Escape":
+        // Do something for "esc" key press.
+        break;
+      default:
+        return; // Quit when this doesn't handle the key event.
+    }
 
-  // Cancel the default action to avoid it being handled twice
-  event.preventDefault();
-}, true);
+    // Cancel the default action to avoid it being handled twice
+    event.preventDefault();
+  },
+  true,
+);
 ```
 
 ## 仕様書

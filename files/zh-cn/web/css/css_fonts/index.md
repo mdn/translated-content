@@ -1,6 +1,6 @@
 ---
 title: CSS 字体
-slug: Web/CSS/CSS_Fonts
+slug: Web/CSS/CSS_fonts
 ---
 
 {{CSSRef}}
@@ -25,10 +25,12 @@ p {
 ```
 
 ```html
-<p>Three hundred years ago<br>
-  I thought I might get some sleep<br>
-  I stretched myself out on an antique bed<br>
-  An' my spirit did a midnite creep</p>
+<p>
+  Three hundred years ago<br />
+  I thought I might get some sleep<br />
+  I stretched myself out on an antique bed<br />
+  An' my spirit did a midnite creep
+</p>
 ```
 
 它的结果如下所示：
@@ -37,7 +39,7 @@ p {
 
 ## 可变字体示例
 
-你可以在 [v-fonts.com](https://v-fonts.com/) 和 [axis-praxis.org](https://www.axis-praxis.org/) 找到可变字体示例；参见[可变字体指南](/zh-CN/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)以获取更多信息。
+你可以在 [v-fonts.com](https://v-fonts.com/) 和 [axis-praxis.org](https://www.axis-praxis.org/) 找到可变字体示例；参见[可变字体指南](/zh-CN/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)以获取更多信息。
 
 ## 参考文献
 
@@ -72,11 +74,11 @@ p {
 
 ## 指南
 
-- [文本和字体样式基础](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)
-  - : 在这篇面向初学者的文章中，我们详细介绍了文本和字体样式的基础知识，包括设置字重、字体家族和样式、字体简写、文本对齐和其它效果，以及行和字母间距。
-- [OpenType 字体特性指南](/zh-CN/docs/Web/CSS/CSS_Fonts/OpenType_fonts_guide)
-  - : 字体特性（font feature）或变体（variant）指的是在同一个 OpenType 字体中包含的不同的字形或字符风格。它包括了连字（ligature，由字符组合而成的特殊字形，如“ﬁ”或“ﬄ” ）、字偶距（kerning，调整特定字母组合的间距）、分数形式、数字风格，和一票其它内容。这些都被称为 OpenType 特性，而且可以通过特定属性和一种底层属性指定（见 {{cssxref("font-feature-settings")}}）来控制。本文将介绍在 CSS 中使用 OpenType 字体特性的全部内容。
-- [可变字体指南](/zh-CN/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
+- [文本和字体样式基础](/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+  - : 在这篇面向初学者的文章中，我们详细介绍了文本和字体样式的基础知识，包括设置字重、字体家族和样式、字体简写、文本对齐和其他效果，以及行和字母间距。
+- [OpenType 字体特性指南](/zh-CN/docs/Web/CSS/CSS_fonts/OpenType_fonts_guide)
+  - : 字体特性（font feature）或变体（variant）指的是在同一个 OpenType 字体中包含的不同的字形或字符风格。它包括了连字（ligature，由字符组合而成的特殊字形，如“ﬁ”或“ﬄ” ）、字偶距（kerning，调整特定字母组合的间距）、分数形式、数字风格，和一票其他内容。这些都被称为 OpenType 特性，而且可以通过特定属性和一种底层属性指定（见 {{cssxref("font-feature-settings")}}）来控制。本文将介绍在 CSS 中使用 OpenType 字体特性的全部内容。
+- [可变字体指南](/zh-CN/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
   - : **可变字体指南**是 OpenType 字体规范上的演进，它允许将同一字体的多个变体统合进单独的字体文件中。从而无需再将不同字宽、字重或不同样式的字体分割成不同的字体文件。本文将介绍你需要知道的有关使用可变字体的所有内容。
 
 ## 规范

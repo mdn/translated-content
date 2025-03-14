@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.fill()
 slug: Web/API/CanvasRenderingContext2D/fill
-translation_of: Web/API/CanvasRenderingContext2D/fill
 ---
 
 {{APIRef}}
@@ -45,8 +44,8 @@ Ceci est un simple snippet de code qui utilise la méthode `fill` pour remplir u
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
 ```
@@ -63,7 +62,8 @@ ctx.fill();
 </div>
 <textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.fill();</textarea>
+ctx.fill();</textarea
+>
 ```
 
 ```js hidden
@@ -79,14 +79,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -105,16 +105,16 @@ window.addEventListener("load", drawCanvas);
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
-ctx.moveTo(96.50,50.00);
-ctx.bezierCurveTo(96.50,62.84,0.22,99.82,50.74,47.17);
-ctx.bezierCurveTo(100.18,0.58,62.84,96.50,50.00,96.50);
-ctx.bezierCurveTo(24.32,96.50,3.50,75.68,3.50,50.00);
-ctx.bezierCurveTo(3.50,24.32,24.32,3.50,50.00,3.50);
-ctx.bezierCurveTo(75.68,3.50,96.50,24.32,96.50,50.00);
+ctx.moveTo(96.5, 50.0);
+ctx.bezierCurveTo(96.5, 62.84, 0.22, 99.82, 50.74, 47.17);
+ctx.bezierCurveTo(100.18, 0.58, 62.84, 96.5, 50.0, 96.5);
+ctx.bezierCurveTo(24.32, 96.5, 3.5, 75.68, 3.5, 50.0);
+ctx.bezierCurveTo(3.5, 24.32, 24.32, 3.5, 50.0, 3.5);
+ctx.bezierCurveTo(75.68, 3.5, 96.5, 24.32, 96.5, 50.0);
 ctx.closePath();
 
 ctx.fillStyle = "lightblue";
@@ -146,7 +146,8 @@ ctx.closePath();
 ctx.fillStyle = "lightblue";
 ctx.lineWidth = 2;
 ctx.fill("nonzero");
-ctx.stroke();</textarea>
+ctx.stroke();</textarea
+>
 ```
 
 ```js hidden
@@ -162,14 +163,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

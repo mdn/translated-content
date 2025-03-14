@@ -1,17 +1,45 @@
 ---
 title: hyphens
 slug: Web/CSS/hyphens
-translation_of: Web/CSS/hyphens
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`hyphens`** указывает, как следует переносить слова через дефис, когда текст переносится на несколько строк. Оно может полностью запретить перенос, делать перенос в местах, заданных вручную или позволять браузеру автоматически расставлять переносы, где это необходимо.
 
-{{EmbedInteractiveExample("pages/css/hyphens.html")}}
+{{InteractiveExample("CSS Demo: hyphens")}}
 
-Правила расстановки переносов зависят от языка. В HTML язык определяется атрибутом [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang), и браузеры применяют правила переноса только при присутствии данного атрибута и доступности соответствующего словаря для расстановки переносов. В XML необходимо использовать атрибут [`xml:lang`](/en-US/docs/Web/SVG/Attribute/xml:lang).
+```css interactive-example-choice
+hyphens: none;
+```
 
-> **Примечание:** Правила, определяющие, как выполняется расстановка переносов, явно не определены в спецификации, поэтому точная расстановка переносов может варьироваться от браузера к браузеру.
+```css interactive-example-choice
+hyphens: manual;
+```
+
+```css interactive-example-choice
+hyphens: auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">An extra­ordinarily long English word!</p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 2px dashed #999;
+  font-size: 1.5rem;
+  text-align: left;
+  width: 7rem;
+}
+```
+
+Правила расстановки переносов зависят от языка. В HTML язык определяется атрибутом [`lang`](/ru/docs/Web/HTML/Global_attributes/lang), и браузеры применяют правила переноса только при присутствии данного атрибута и доступности соответствующего словаря для расстановки переносов. В XML необходимо использовать атрибут [`xml:lang`](/ru/docs/Web/SVG/Attribute/xml:lang).
+
+> [!NOTE]
+> Правила, определяющие, как выполняется расстановка переносов, явно не определены в спецификации, поэтому точная расстановка переносов может варьироваться от браузера к браузеру.
 
 ## Синтаксис
 
@@ -38,7 +66,8 @@ hyphens: unset;
 - `auto`
   - : Браузер может автоматически разбивать слова в соответствующих точках переноса, следуя любым правилам, которые он выбирает. Однако предлагаемые возможности разрыва строки (смотреть [Предлагаемые возможности разрыва строки](#предлагаемые_возможности_разрыва_строки) ниже) переопределят автоматический выбор точки разрыва, если таковые имеются.
 
-> **Примечание:** Поведение параметра `auto` зависит от того, на каком языке применяются правила переноса. Вы должны указать язык с помощью HTML атрибута `lang`, чтобы гарантировать, что на этом языке применяется автоматическая расстановка переносов.
+> [!NOTE]
+> Поведение параметра `auto` зависит от того, на каком языке применяются правила переноса. Вы должны указать язык с помощью HTML атрибута `lang`, чтобы гарантировать, что на этом языке применяется автоматическая расстановка переносов.
 
 ## Предлагаемые возможности разрыва строки
 
@@ -49,7 +78,8 @@ hyphens: unset;
 - U+00AD (SHY)
   - : Невидимый «мягкий» перенос. Этот символ не отображается визуально, вместо этого он отмечает место, где браузер должен разорвать слово, если расстановка переносов необходима. В HTML, используйте `&shy;` для вставки мягкого дефиса.
 
-> **Примечание:** Когда HTML-элемент [`<wbr>`](/en-US/docs/Web/HTML/Element/wbr) приводит к разрыву строки, дефис не добавляется.
+> [!NOTE]
+> Когда HTML-элемент [`<wbr>`](/ru/docs/Web/HTML/Element/wbr) приводит к разрыву строки, дефис не добавляется.
 
 ## Формальное определение
 
@@ -71,7 +101,9 @@ hyphens: unset;
 <dl>
   <dt><code>none</code>: no hyphen; overflow if needed</dt>
   <dd lang="en" class="none">An extreme&shy;ly long English word</dd>
-  <dt><code>manual</code>: hyphen only at &amp;hyphen; or &amp;shy; (if needed)</dt>
+  <dt>
+    <code>manual</code>: hyphen only at &amp;hyphen; or &amp;shy; (if needed)
+  </dt>
   <dd lang="en" class="manual">An extreme&shy;ly long English word</dd>
   <dt><code>auto</code>: hyphens where the algorithm decides (if needed)</dt>
   <dd lang="en" class="auto">An extreme&shy;ly long English word</dd>
@@ -84,7 +116,7 @@ hyphens: unset;
 dd {
   width: 55px;
   border: 1px solid black;
- }
+}
 dd.none {
   -webkit-hyphens: none;
   -ms-hyphens: none;
@@ -108,11 +140,9 @@ dd.auto {
 
 ## Характеристики
 
-| Характеристика                                                               | Статус                       | Комментарий                |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------- |
-| {{SpecName("CSS3 Text", "#hyphens-property", "hyphens")}} | {{Spec2("CSS3 Text")}} | Первоначальное определение |
+{{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

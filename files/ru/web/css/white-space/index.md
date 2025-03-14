@@ -1,17 +1,17 @@
 ---
 title: white-space
 slug: Web/CSS/white-space
-translation_of: Web/CSS/white-space
 ---
 
 {{CSSRef}}Свойство **`white-space`** управляет тем, как обрабатываются {{Glossary("whitespace", "пробельные символы")}} внутри элемента.{{EmbedInteractiveExample("pages/css/white-space.html")}}
 
-> **Примечание:** Для управления переносами _внутри слов_ используйте {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}} или {{CSSxRef("hyphens")}}.
+> [!NOTE]
+> Для управления переносами _внутри слов_ используйте {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}} или {{CSSxRef("hyphens")}}.
 
 ## Сводка
 
 ```css
-/* Ключевые значения */
+/* Ключевые слова */
 white-space: normal;
 white-space: nowrap;
 white-space: pre;
@@ -78,8 +78,8 @@ code {
 
 ```css
 pre {
-  word-wrap: break-word;      /* IE 5.5-7 */
-  white-space: pre-wrap;      /* текущие браузеры */
+  word-wrap: break-word; /* IE 5.5-7 */
+  white-space: pre-wrap; /* текущие браузеры */
 }
 ```
 
@@ -87,6 +87,6 @@ pre {
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}

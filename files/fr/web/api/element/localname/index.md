@@ -1,27 +1,19 @@
 ---
 title: Element.localName
 slug: Web/API/Element/localName
-tags:
-  - API
-  - DOM
-  - Element
-  - Nom
-  - Propriétés
-  - XML
-  - local
-translation_of: Web/API/Element/localName
 ---
 
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Element.localName`** renvoie la partie locale du nom qualifié d'un élément.
 
-> **Note :** Dans les versions précédentes de la spécification DOM, cet API était défini dans l'interface {{domxref("Node")}}.
+> [!NOTE]
+> Dans les versions précédentes de la spécification DOM, cet API était défini dans l'interface {{domxref("Node")}}.
 
 ## Syntaxe
 
 ```js
-name = element.localName
+name = element.localName;
 ```
 
 ### Valeur renvoyée
@@ -71,7 +63,8 @@ Le nom local d'un noeud est la partie du nom qualifié du noeud qui arrive aprè
 </ecomm:business>
 ```
 
-> **Note :** Dans {{Gecko("1.9.2")}} et antérieurs, la propriété renvoie la version majuscule du nom local pour les éléments HTML dans les DOM HTML (par opposition aux éléments XHTML dans les DOM XML). Dans les versions plus tardives, en conformité avec HTML5, la propriété renvoie dans la cas du stockage interne du DOM, en minuscule pour les éléments HTML dans les DOM HTML et les éléments XHTML dans les DOM XML. La propriété {{domxref("element.tagName","tagName")}} continue à renvoyer la casse majuscule pour les éléments HTML dans les DOM HTML.
+> [!NOTE]
+> Dans Gecko 1.9.2 et antérieurs, la propriété renvoie la version majuscule du nom local pour les éléments HTML dans les DOM HTML (par opposition aux éléments XHTML dans les DOM XML). Dans les versions plus tardives, en conformité avec HTML5, la propriété renvoie dans la cas du stockage interne du DOM, en minuscule pour les éléments HTML dans les DOM HTML et les éléments XHTML dans les DOM XML. La propriété {{domxref("element.tagName","tagName")}} continue à renvoyer la casse majuscule pour les éléments HTML dans les DOM HTML.
 
 ## Spécifications
 

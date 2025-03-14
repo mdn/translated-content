@@ -1,10 +1,6 @@
 ---
 title: CSS Object Model (CSSOM)
 slug: Web/API/CSS_Object_Model
-tags:
-  - API
-  - CSSOM
-translation_of: Web/API/CSS_Object_Model
 ---
 
 {{DefaultAPISidebar('CSSOM')}}
@@ -92,18 +88,16 @@ translation_of: Web/API/CSS_Object_Model
 - {{DOMxRef("StylePropertyMap")}} {{experimental_inline}}
 - {{DOMxRef("StylePropertyMapReadOnly")}} {{experimental_inline}}
 
-### Устаревшие CSSOM interfaces {{obsolete_inline}}
+### Устаревшие CSSOM interfaces
 
-{{obsolete_header}}
-
-- {{DOMxRef("CSSPrimitiveValue")}} {{obsolete_inline}}
-- {{DOMxRef("CSSValue")}} {{obsolete_inline}}
-- {{DOMxRef("CSSValueList")}} {{obsolete_inline}}
+- {{DOMxRef("CSSPrimitiveValue")}}
+- {{DOMxRef("CSSValue")}}
+- {{DOMxRef("CSSValueList")}}
 
 ## Уроки
 
-- [Определение размеров элементов](/ru/docs/Determining_the_dimensions_of_elements) (урок нуждается в обновлении,так как он был сделан в эпоху DHTML/Ajax).
-- [Управление ориентацией экрана](/ru/docs/WebAPI/Managing_screen_orientation)
+- [Определение размеров элементов](/ru/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements) (урок нуждается в обновлении,так как он был сделан в эпоху DHTML/Ajax).
+- [Управление ориентацией экрана](/ru/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 
 ## Спецификации
 

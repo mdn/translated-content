@@ -1,6 +1,9 @@
 ---
-title: CanvasRenderingContext2D.closePath()
+title: "CanvasRenderingContext2D: closePath() メソッド"
+short-title: closePath()
 slug: Web/API/CanvasRenderingContext2D/closePath
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}
@@ -11,9 +14,17 @@ slug: Web/API/CanvasRenderingContext2D/closePath
 
 ## 構文
 
-```js
-void ctx.closePath();
+```js-nolint
+closePath()
 ```
+
+### 引数
+
+なし。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -29,17 +40,17 @@ void ctx.closePath();
 
 #### JavaScript
 
-三角形の頂点は、 (20, 150), (120, 20), (220, 150) とします。
+三角形の頂点は、 (20, 140), (120, 10), (220, 140) とします。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
-ctx.moveTo(20, 140);   // ペンを左下の隅へ移動
-ctx.lineTo(120, 10);   // 上中央へ線を引く
-ctx.lineTo(220, 140);  // 右下の隅へ線を引く
-ctx.closePath();       // 左下の隅へ線を引く
+ctx.moveTo(20, 140); // ペンを左下の隅へ移動
+ctx.lineTo(120, 10); // 上中央へ線を引く
+ctx.lineTo(220, 140); // 右下の隅へ線を引く
+ctx.closePath(); // 左下の隅へ線を引く
 ctx.stroke();
 ```
 
@@ -49,9 +60,10 @@ ctx.stroke();
 
 ### サブパスを 1 つだけ閉じる
 
-この例では、非接続のサブパス3つからなるスマイリーの顔マークを描画します。
+この例では、非接続のサブパス 3 つからなるスマイリーの顔マークを描画します。
 
-> **メモ:** すべての弧について、作成された後で `closePath()` が呼び出されていますが、最後の弧 (サブパス) のみが閉じられます。
+> [!NOTE]
+> すべての弧について、作成された後で `closePath()` が呼び出されていますが、最後の弧（サブパス）のみが閉じられます。
 
 #### HTML
 
@@ -64,8 +76,8 @@ ctx.stroke();
 最初の 2 つの弧は顔の目を作成します。最後の弧は口を作成します。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.arc(240, 20, 40, 0, Math.PI);

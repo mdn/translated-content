@@ -1,53 +1,58 @@
 ---
-title: NodeList.values()
+title: NodeList：values() 方法
 slug: Web/API/NodeList/values
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-该方法返回一个 iterator 迭代器，可以利用迭代器遍历所有 value。
+{{APIRef("DOM")}}
 
-## Syntax
+**`NodeList.values()`** 方法返回一个用于遍历该对象中包含的所有值（值为 {{domxref("Node")}} 对象）的{{jsxref("Iteration_protocols","迭代器", "", 1)}}。
 
+## 语法
+
+```js-nolint
+values()
 ```
-nodeList.values();
-```
 
-### Return value
+### 返回值
 
-Returns an {{jsxref("Iteration_protocols","iterator")}}.
+返回一个{{jsxref("Iteration_protocols","迭代器", "", 1)}}。
 
-## Example
+## 示例
 
 ```js
-var node = document.createElement("div");
-var kid1 = document.createElement("p");
-var kid2 = document.createTextNode("hey");
-var kid3 = document.createElement("span");
+const node = document.createElement("div");
+const kid1 = document.createElement("p");
+const kid2 = document.createTextNode("hey");
+const kid3 = document.createElement("span");
 
 node.appendChild(kid1);
 node.appendChild(kid2);
 node.appendChild(kid3);
 
-var list = node.childNodes;
+const list = node.childNodes;
 
-// Using for..of
-for(var value of list.values()) {
+// 使用 for...of
+for (const value of list.values()) {
   console.log(value);
 }
 ```
 
-The result is:
+结果为：
 
-```
+```plain
 <p>
 #text "hey"
 <span>
 ```
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
+- [`core-js` 中 `NodeList.prototype.values` 的 polyfill](https://github.com/zloirock/core-js#iterable-dom-collections)
 - {{domxref("Node")}}
 - {{domxref("NodeList")}}

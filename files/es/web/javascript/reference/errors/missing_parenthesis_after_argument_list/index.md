@@ -1,7 +1,6 @@
 ---
-title: 'SyntaxError: missing ) after argument list'
+title: "SyntaxError: missing ) after argument list"
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
-translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 ---
 
 {{jsSidebar("Errors")}}
@@ -32,24 +31,24 @@ console.log('PI: ' Math.PI);
 Puedes corregir la llamada del `log`, agregando el operador "`+`":
 
 ```js example-good
-console.log('PI: ' + Math.PI);
+console.log("PI: " + Math.PI);
 // "PI: 3.141592653589793"
 ```
 
 ### Strings sin cierre
 
-```js example-bad
-console.log('"Java" + "Script" = \"' + 'Java' + 'Script\");
+```js-nolint example-bad
+console.log('"Java" + "Script" = "' + 'Java' + 'Script");
 // SyntaxError: missing ) after argument list
 ```
 
 Aquí JavaScript piensa que tienes `);` dentro del string y lo ignora, y termina no sabiendo que quisiste utilizar `);` para cerrar la función `console.log`. Para solucionar esto, podemos poner un `'` después del string "Script":
 
 ```js example-good
-console.log('"Java" + "Script" = \"' + 'Java' + 'Script\"');
+console.log('"Java" + "Script" = "' + "Java" + 'Script"');
 // '"Java" + "Script" = "JavaScript"'
 ```
 
 ## Véase también
 
-- [Funciones](/es/docs/Web/JavaScript/Guide/Funciones)
+- [Funciones](/es/docs/Web/JavaScript/Guide/Functions)

@@ -1,14 +1,8 @@
 ---
 title: URL.href
 slug: Web/API/URL/href
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/href
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} 인터페이스의 **`href`** 속성은 전체 URL을 담은 {{domxref("USVString")}}입니다.
@@ -18,8 +12,8 @@ translation_of: Web/API/URL/href
 ## 구문
 
 ```js
-const urlString = url.href
-url.href = newUrlString
+const urlString = url.href;
+url.href = newUrlString;
 ```
 
 ### 값
@@ -29,7 +23,7 @@ url.href = newUrlString
 ## 예제
 
 ```js
-const url = new URL('https://developer.mozilla.org/ko/docs/Web/API/URL/href');
+const url = new URL("https://developer.mozilla.org/ko/docs/Web/API/URL/href");
 console.log(url.href); // Logs: 'https://developer.mozilla.org/ko/docs/Web/API/URL/href'
 ```
 

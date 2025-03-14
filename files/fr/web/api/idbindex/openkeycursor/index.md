@@ -1,14 +1,6 @@
 ---
 title: IDBIndex.openKeyCursor()
 slug: Web/API/IDBIndex/openKeyCursor
-tags:
-  - API
-  - IDBIndex
-  - IndexedDB
-  - Méthode
-  - Reference
-  - openKeyCursor
-translation_of: Web/API/IDBIndex/openKeyCursor
 ---
 
 {{APIRef("IndexedDB")}}
@@ -27,7 +19,7 @@ Cette méthode positionne le curseur sur la clé appropriée, dans la direction 
 
 ```js
 var monIndex = objectStore.index("index");
-var request = monIndex.openKeyCursor(keyRange,direction);
+var request = monIndex.openKeyCursor(keyRange, direction);
 ```
 
 ### Paramètres
@@ -87,40 +79,39 @@ Ensuite, on itère sur l'ensemble des enregistrements pour en insérer leur clé
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = '';
+  tableEntry.innerHTML = "";
 
   //ouvre un transaction
-  var transaction = db.transaction(['contactsList'], 'readonly');
+  var transaction = db.transaction(["contactsList"], "readonly");
   //accés au magasin d'objet
-  var objectStore = transaction.objectStore('contactsList');
+  var objectStore = transaction.objectStore("contactsList");
 
   //on récupère l'index
-  var myIndex = objectStore.index('lName');
+  var myIndex = objectStore.index("lName");
 
   //un curseur qui itère sur l'index
   var request = myIndex.openCursor();
-  request.onsuccess = function(event) {
+  request.onsuccess = function (event) {
     var cursor = request.result;
-    if(cursor) {
-
-
+    if (cursor) {
       // cursor.key la clé de l'enregistrement à la position du curseur
       // il n'y as pas de cursor.value contrairement à openCursor()
 
-      var tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '<td>' + cursor.key + '</td>'
+      var tableRow = document.createElement("tr");
+      tableRow.innerHTML = "<td>" + cursor.key + "</td>";
       tableEntry.appendChild(tableRow);
 
       //on relance la requête pour la position suivante du curseur
       cursor.continue();
     } else {
-      console.log('Toutes les clé ont été affichés.');
+      console.log("Toutes les clé ont été affichés.");
     }
   };
-};
+}
 ```
 
-> **Note :** pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/to-do-notifications/) ([exemple](https://mdn.github.io/to-do-notifications/)).
+> [!NOTE]
+> Pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 
@@ -132,7 +123,7 @@ function displayDataByIndex() {
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Initier une connexion : {{domxref("IDBDatabase")}}
 - Utiliser les transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}

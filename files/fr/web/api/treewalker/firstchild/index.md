@@ -1,13 +1,6 @@
 ---
 title: TreeWalker.firstChild()
 slug: Web/API/TreeWalker/firstChild
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Méthodes
-  - Noeuds
-translation_of: Web/API/TreeWalker/firstChild
 ---
 
 {{ APIRef("DOM") }}
@@ -24,10 +17,14 @@ node = treeWalker.firstChild;
 
 ```js
 var treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode: function (node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 var node = treeWalker.firstChild(); // renvoie le premier enfant de l'élément racine ou null si aucun
 ```

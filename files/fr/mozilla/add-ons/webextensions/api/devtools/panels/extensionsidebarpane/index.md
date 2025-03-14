@@ -1,17 +1,6 @@
 ---
 title: devtools.panels.ExtensionSidebarPane
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane
-tags:
-  - API
-  - Add-ons
-  - DevTools
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.panels
-  - devtools.panels.ExtensionSidebarPane
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane
 ---
 
 {{AddonSidebar}}
@@ -20,31 +9,31 @@ L'objet `ExtensionSidebarPane` représente un volet qu'une extension a ajouté �
 
 ![](inspector-sidebar.png)
 
-Pour créer un `ExtensionSidebarPane`, appelez la fonction [`browser.devtools.panels.elements.createSidebarane()`](/fr/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/createSidebarPane).
+Pour créer un `ExtensionSidebarPane`, appelez la fonction [`browser.devtools.panels.elements.createSidebarane()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane).
 
 ## Fonctions
 
-- [`devtools.panels.ExtensionSidebarPane.setExpression()`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setExpression)
+- [`devtools.panels.ExtensionSidebarPane.setExpression()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setExpression)
   - : Évaluer une expression JavaScript dans la page Web inspectée par l'inspecteur. Le résultat est affiché dans le volet de la barre latérale.
-- [`devtools.panels.ExtensionSidebarPane.setObject()`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setObject)
+- [`devtools.panels.ExtensionSidebarPane.setObject()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setObject)
   - : Définit un objet JSON qui sera affiché dans le volet de la barre latérale.
-- [`devtools.panels.ExtensionSidebarPane.setPage()`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setPage)
+- [`devtools.panels.ExtensionSidebarPane.setPage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setPage)
   - : Charge la page pointée par l'URL fournie.
 
 ## Evénements
 
-- [`devtools.panels.ExtensionSidebarPane.onShown`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onShown)
+- [`devtools.panels.ExtensionSidebarPane.onShown`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onShown)
   - : Lancé lorsque le volet latéral est affiché.
-- [`devtools.panels.ExtensionSidebarPane.onHidden`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onHidden)
+- [`devtools.panels.ExtensionSidebarPane.onHidden`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onHidden)
   - : Lancé lorsque le volet de la barre latérale est masqué.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.ExtensionSidebarPane", 10)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
 

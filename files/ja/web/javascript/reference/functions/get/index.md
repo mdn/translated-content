@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Functions/get
 
 **`get`** 構文は、オブジェクトのプロパティを関数に結びつけ、プロパティが参照された時に関数が呼び出されるようにします。
 
-{{EmbedInteractiveExample("pages/js/functions-getter.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Getter")}}
+
+```js interactive-example
+const obj = {
+  log: ["a", "b", "c"],
+  get latest() {
+    return this.log[this.log.length - 1];
+  },
+};
+
+console.log(obj.latest);
+// Expected output: "c"
+```
 
 ## 構文
 
@@ -57,12 +69,12 @@ slug: Web/JavaScript/Reference/Functions/get
 
 ```js
 const obj = {
-  log: ['example','test'],
+  log: ["example", "test"],
   get latest() {
     if (this.log.length === 0) return undefined;
     return this.log[this.log.length - 1];
-  }
-}
+  },
+};
 console.log(obj.latest); // "test"
 ```
 
@@ -81,20 +93,26 @@ delete obj.latest;
 既存のオブジェクトに任意のタイミングでゲッターを追加するには、 {{jsxref("Object.defineProperty()")}} を使用します。
 
 ```js
-const o = {a: 0};
+const o = { a: 0 };
 
-Object.defineProperty(o, 'b', { get: function() { return this.a + 1; } });
+Object.defineProperty(o, "b", {
+  get: function () {
+    return this.a + 1;
+  },
+});
 
-console.log(o.b) // getter を実行。a + 1 を算出する (結果は 1)
+console.log(o.b); // getter を実行。a + 1 を算出する (結果は 1)
 ```
 
 ### 算出されたプロパティ名の使用
 
 ```js
-const expr = 'foo';
+const expr = "foo";
 
 const obj = {
-  get [expr]() { return 'bar'; }
+  get [expr]() {
+    return "bar";
+  },
 };
 
 console.log(obj.foo); // "bar"
@@ -105,12 +123,12 @@ console.log(obj.foo); // "bar"
 ```js
 class MyConstants {
   static get foo() {
-    return 'foo';
+    return "foo";
   }
 }
 
 console.log(MyConstants.foo); // 'foo'
-MyConstants.foo = 'bar';
+MyConstants.foo = "bar";
 console.log(MyConstants.foo); // 'foo' です。静的ゲッターの値は変更できません
 ```
 
@@ -118,13 +136,14 @@ console.log(MyConstants.foo); // 'foo' です。静的ゲッターの値は変�
 
 ゲッターはオブジェクトのプロパティを*定義*する手段を提供しますが、アクセスされるまでプロパティの値を*計算*しません。ゲッターは値を計算するコストを、値が必要になるまで先送りします。値が必要でなければ、そのコストを負担しません。
 
-プロパティの値の計算を先送りしたり後のアクセスのためにキャッシュするための付加的な最適化技術が、*スマート*（または *[メモ化](https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%A2%E5%8C%96)*）ゲッターです。初めてゲッターにアクセスされたときに、値を計算してキャッシュします。以降のアクセスでは再計算せずに、キャッシュした値を返します。これは次のような状況で役に立ちます。
+プロパティの値の計算を先送りしたり後のアクセスのためにキャッシュするための付加的な最適化技術が、_スマート_（または _[メモ化](https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%A2%E5%8C%96)_）ゲッターです。初めてゲッターにアクセスされたときに、値を計算してキャッシュします。以降のアクセスでは再計算せずに、キャッシュした値を返します。これは次のような状況で役に立ちます。
 
 - プロパティの値の計算コストが高い場合 (大量の RAM や CPU 時間を使用する、ワーカースレッドを生成する、リモートのファイルを読み込むなど)。
 - 値がすぐに必要ではない場合。値を後で使用する、あるいはまったく使用しない場合がある状況。
 - 何度もアクセスされる値で、値が変更されないため再計算の必要がない、あるいは再計算すべきではない場合。
 
-> **メモ:** 値が変わると見込まれるプロパティで、遅延ゲッターを使用してはいけません。ゲッターが遅延である場合、値を再計算しないためです。
+> [!NOTE]
+> 値が変わると見込まれるプロパティで、遅延ゲッターを使用してはいけません。ゲッターが遅延である場合、値を再計算しないためです。
 >
 > なお、ゲッターの本質は「遅延」や「メモ化」ではありません。この動作を望む場合、この技術を実装する必要があります。
 
@@ -146,7 +165,7 @@ get notifier() {
 ```js
 class Example {
   get hello() {
-    return 'world';
+    return "world";
   }
 }
 
@@ -154,13 +173,11 @@ const obj = new Example();
 console.log(obj.hello);
 // "world"
 
-console.log(Object.getOwnPropertyDescriptor(obj, 'hello'));
+console.log(Object.getOwnPropertyDescriptor(obj, "hello"));
 // undefined
 
 console.log(
-  Object.getOwnPropertyDescriptor(
-    Object.getPrototypeOf(obj), 'hello'
-  )
+  Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), "hello"),
 );
 // { configurable: true, enumerable: false, get: function get hello() { return 'world'; }, set: undefined }
 ```
@@ -178,6 +195,6 @@ console.log(
 - [セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object/__defineGetter__", "__defineGetter__")}}
-- {{jsxref("Object/__defineSetter__", "__defineSetter__")}}
-- [ゲッターとセッターの定義](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters) (JavaScript ガイド)
+- [`Object.prototype.__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
+- [ゲッターとセッターの定義](/ja/docs/Web/JavaScript/Guide/Working_with_objects#ゲッターとセッターの定義) (JavaScript ガイド)

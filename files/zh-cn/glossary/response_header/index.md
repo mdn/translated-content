@@ -1,15 +1,19 @@
 ---
-title: Response header 响应头
+title: 响应标头
 slug: Glossary/Response_header
+l10n:
+  sourceCommit: 659d8ae39e05a7a9f260f1194bb325438cea5d34
 ---
 
-**响应头（Response header）** 可以定义为：被用于 http 响应中并且和响应消息主体无关的那一类 {{glossary("header", "HTTP header")}}。像{{HTTPHeader("Age")}}, {{HTTPHeader("Location")}} 和 {{HTTPHeader("Server")}}都属于响应头，他们被用于描述响应。
+{{GlossarySidebar}}
 
-并非所有出现在响应中的 http header 都属于响应头，例如{{HTTPHeader("Content-Length")}}就是一个代表响应体消息大小的{{glossary("entity header")}}，虽然你也可以把它叫做响应头。
+**响应标头**是一种与响应消息主体无关的 {{glossary("HTTP header","HTTP 标头")}}，可以用于 HTTP 响应。像 {{HTTPHeader("Age")}}、{{HTTPHeader("Location")}} 或 {{HTTPHeader("Server")}} 都属于响应标头，被用于提供更详细的响应上下文。
 
-下面展示了一个 {{HTTPMethod("GET")}}请求的响应头。需要注意的是，严格来说{{HTTPHeader("Content-Encoding")}}和{{HTTPHeader("Content-Type")}}都是属于{{glossary("entity headers")}}。
+并非所有出现在响应中的标头都根据规范将其归类为*响应标头*。例如，{{HTTPHeader("Content-Type")}} 标头就是一个{{glossary("representation header", "表示标头")}}，在应用 {{HTTPHeader("Content-Encoding")}} 表示标头中的编码前指示响应信息正文中的原始数据类型。然而，“会话式”的所有标头通常在响应消息中称为响应标头。
 
-```
+以下展示了 {{HTTPMethod("GET")}} 请求后的一些响应和表示标头。
+
+```http
 200 OK
 Access-Control-Allow-Origin: *
 Connection: Keep-Alive
@@ -29,8 +33,11 @@ X-kuma-revision: 1085259
 x-frame-options: DENY
 ```
 
-## 更多
+## 参见
 
-### 相关内容
+- [所有 HTTP 标头列表](/zh-CN/docs/Web/HTTP/Reference/Headers)
+- [术语](/zh-CN/docs/Glossary)
 
-- [HTTP 头部列表](/zh-CN/docs/Web/HTTP/Headers)
+  - {{Glossary("Representation header", "表示标头")}}
+  - {{Glossary("HTTP header", "HTTP 标头")}}
+  - {{Glossary("Request header", "请求标头")}}

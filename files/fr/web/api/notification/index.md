@@ -1,13 +1,6 @@
 ---
 title: Notification
-slug: Web/API/notification
-tags:
-  - API
-  - API Notifications
-  - Interface
-  - Notifications
-  - Reference
-translation_of: Web/API/Notification
+slug: Web/API/Notification
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -93,7 +86,7 @@ _Ces méthodes ne sont disponibles que sur l'objet_ `Notification` _lui-même._
 
 ### Méthodes d'instance
 
-_Ces propriétés ne sont disponibles que sur une instance de l'objet_ `Notification` _ou via son_ [prototype](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)_. L'objet_ `Notification` _hérite également de l'interface {{domxref ("EventTarget")}}._
+_Ces propriétés ne sont disponibles que sur une instance de l'objet_ `Notification` _ou via son_ [prototype](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)_. L'objet_ `Notification` _hérite également de l'interface {{domxref ("EventTarget")}}._
 
 - {{domxref("Notification.close()")}}
   - : Ferme programmatiquement une instance de notification.
@@ -111,24 +104,24 @@ Il est possible d'envoyer une notification comme suit - nous présentons ici un 
 ```js
 function notifyMe() {
   // Vérifions si le navigateur prend en charge les notifications
-  if (!('Notification' in window)) {
-    alert('Ce navigateur ne prend pas en charge la notification de bureau')
+  if (!("Notification" in window)) {
+    alert("Ce navigateur ne prend pas en charge la notification de bureau");
   }
 
   // Vérifions si les autorisations de notification ont déjà été accordées
-  else if (Notification.permission === 'granted') {
+  else if (Notification.permission === "granted") {
     // Si tout va bien, créons une notification
-    const notification = new Notification('Salut toi!')
+    const notification = new Notification("Salut toi!");
   }
 
   // Sinon, nous devons demander la permission à l'utilisateur
-  else if (Notification.permission !== 'denied') {
+  else if (Notification.permission !== "denied") {
     Notification.requestPermission().then((permission) => {
       // Si l'utilisateur accepte, créons une notification
-      if (permission === 'granted') {
-        const notification = new Notification('Salut toi!')
+      if (permission === "granted") {
+        const notification = new Notification("Salut toi!");
       }
-    })
+    });
   }
 
   // Enfin, si l'utilisateur a refusé les notifications, et que vous
@@ -136,9 +129,10 @@ function notifyMe() {
 }
 ```
 
-Nous ne montrons plus d'exemple en direct sur cette page, car Chrome et Firefox n'autorisent plus les demandes de notification des {{htmlelement ("iframe")}}s d'origine croisée, avec d'autres navigateurs à suivre. Pour voir un exemple en action, consultez notre [exemple de liste de tâches](https://github.com/mdn/to-do-notifications/tree/gh-pages) (voir également l'[application en cours d'exécution](https://mdn.github.io/to-do-notifications/).)
+Nous ne montrons plus d'exemple en direct sur cette page, car Chrome et Firefox n'autorisent plus les demandes de notification des {{htmlelement ("iframe")}}s d'origine croisée, avec d'autres navigateurs à suivre. Pour voir un exemple en action, consultez notre [exemple de liste de tâches](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) (voir également l'[application en cours d'exécution](https://mdn.github.io/dom-examples/to-do-notifications/).)
 
-> **Note :** Dans l'exemple ci-dessus, nous générons des notifications en réponse à un geste de l'utilisateur (en cliquant sur un bouton). Il ne s'agit pas seulement d'une bonne pratique - vous ne devriez pas envoyer de spam aux utilisateurs avec des notifications qu'ils n'acceptent pas - mais les navigateurs suivants interdiront explicitement les notifications non déclenchées en réponse à un geste de l'utilisateur. Firefox le fait déjà depuis la version 72, par exemple.
+> [!NOTE]
+> Dans l'exemple ci-dessus, nous générons des notifications en réponse à un geste de l'utilisateur (en cliquant sur un bouton). Il ne s'agit pas seulement d'une bonne pratique - vous ne devriez pas envoyer de spam aux utilisateurs avec des notifications qu'ils n'acceptent pas - mais les navigateurs suivants interdiront explicitement les notifications non déclenchées en réponse à un geste de l'utilisateur. Firefox le fait déjà depuis la version 72, par exemple.
 
 ## Spécifications
 

@@ -1,27 +1,32 @@
 ---
 title: Object.isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Méthode
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isSealed
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/isSealed
 ---
 
 {{JSRef}}
 
 La méthode **`Object.isSealed()`** permet de déterminer si un objet est scellé.
 
-{{EmbedInteractiveExample("pages/js/object-issealed.html")}}
+{{InteractiveExample("JavaScript Demo: Object.isSealed()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+console.log(Object.isSealed(object1));
+// Expected output: false
+
+Object.seal(object1);
+
+console.log(Object.isSealed(object1));
+// Expected output: true
+```
 
 ## Syntaxe
 
 ```js
-Object.isSealed(obj)
+Object.isSealed(obj);
 ```
 
 ### Paramètres
@@ -76,10 +81,14 @@ Object.isFrozen(scellé); // true
 var s2 = Object.seal({ p: 3 });
 Object.isFrozen(s2); // false ("p" est toujours modifiable)
 
-var s3 = Object.seal({ get p() { return 0; } });
+var s3 = Object.seal({
+  get p() {
+    return 0;
+  },
+});
 // pour les accesseurs, seule l'accès en
 // configuration est important
-Object.isFrozen(s3); // true 
+Object.isFrozen(s3); // true
 ```
 
 ## Notes

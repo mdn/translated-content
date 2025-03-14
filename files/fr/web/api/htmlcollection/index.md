@@ -1,16 +1,11 @@
 ---
 title: HTMLCollection
 slug: Web/API/HTMLCollection
-tags:
-  - API
-  - DOM
-  - Reference
-translation_of: Web/API/HTMLCollection
 ---
 
 {{APIRef("HTML DOM")}}
 
-L'interface **HTMLCollection** est constituée d'une collection générique (à la manière d'un tableau similaire à [arguments](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments)) d'éléments (dans l'ordre du document) et offre des méthodes et des propriétés pour sélectionner ces éléments dans la liste.
+L'interface **HTMLCollection** est constituée d'une collection générique (à la manière d'un tableau similaire à [arguments](/fr/docs/Web/JavaScript/Reference/Functions/arguments)) d'éléments (dans l'ordre du document) et offre des méthodes et des propriétés pour sélectionner ces éléments dans la liste.
 
 **Note:** Cette interface est appelée `HTMLCollection` pour des raisons historiques (avant DOM4, les collections implémentant cette interface pouvaient uniquement êtres constituées d'élements HTML).
 
@@ -34,7 +29,7 @@ Une HTMLCollection dans le DOM HTML est automatiquement mise à jour quand le do
 
 Par exemple, en supposant qu'il y ait un élément `<form>` _(formulaire)_ dans le document et que son `id` soit `"myForm"`&nbsp;:
 
-```html
+```js
 var elem1, elem2;
 
 // document.forms est une HTMLCollection

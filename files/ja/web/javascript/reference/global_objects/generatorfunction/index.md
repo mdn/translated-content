@@ -10,7 +10,27 @@ slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 `GeneratorFunction` はグローバルオブジェクトではないことに注意してください。次のコードを評価することによって得られます。
 
 ```js
-Object.getPrototypeOf(function*(){}).constructor
+Object.getPrototypeOf(function* () {}).constructor;
+```
+
+{{InteractiveExample("JavaScript Demo: GeneratorFunction()", "taller")}}
+
+```js interactive-example
+const GeneratorFunction = function* () {}.constructor;
+
+const foo = new GeneratorFunction(`
+  yield 'a';
+  yield 'b';
+  yield 'c';
+`);
+
+let str = "";
+for (const val of foo()) {
+  str = str + val;
+}
+
+console.log(str);
+// Expected output: "abc"
 ```
 
 ## 構文
@@ -45,8 +65,8 @@ new GeneratorFunction ([arg1[, arg2[, ...argN]],] functionBody)
 ### GeneratorFunction() コンストラクターからジェネレーター関数を生成する
 
 ```js
-var GeneratorFunction = Object.getPrototypeOf(function*(){}).constructor
-var g = new GeneratorFunction('a', 'yield a * 2');
+var GeneratorFunction = Object.getPrototypeOf(function* () {}).constructor;
+var g = new GeneratorFunction("a", "yield a * 2");
 var iterator = g(10);
 console.log(iterator.next().value); // 20
 ```
@@ -57,7 +77,7 @@ console.log(iterator.next().value); // 20
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.GeneratorFunction")}}
+{{Compat}}
 
 ## 関連情報
 

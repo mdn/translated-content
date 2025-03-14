@@ -1,18 +1,9 @@
 ---
 title: Object.prototype.__lookupGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Non-standard
-  - Object
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 ---
 
-{{JSRef("Global_Objects", "Object")}} {{non-standard_header}} {{deprecated_header}}
+{{JSRef}} {{non-standard_header}} {{deprecated_header}}
 
 ## Сводка
 
@@ -40,18 +31,16 @@ obj.__lookupGetter__(sprop)
 ```js
 var obj = {
   get foo() {
-    return Math.random() > 0.5 ? 'foo' : 'bar';
-  }
+    return Math.random() > 0.5 ? "foo" : "bar";
+  },
 };
 
-
 // Нестандартный и устаревший способ
-obj.__lookupGetter__('foo');
+obj.__lookupGetter__("foo");
 // (function() { return Math.random() > 0.5 ? 'foo' : 'bar'; })
 
-
 // Способ, совместимый со стандартом
-Object.getOwnPropertyDescriptor(obj, 'foo').get;
+Object.getOwnPropertyDescriptor(obj, "foo").get;
 // (function() { return Math.random() > 0.5 ? 'foo' : 'bar'; })
 ```
 
@@ -65,9 +54,9 @@ Object.getOwnPropertyDescriptor(obj, 'foo').get;
 
 ## Смотрите также
 
-- {{jsxref("Object.prototype.__lookupSetter__()")}}
+- [`Object.prototype.__lookupSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
 - оператор {{jsxref("Operators/get", "get")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}} и {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.prototype.__defineGetter__()")}}
-- {{jsxref("Object.prototype.__defineSetter__()")}}
-- [Руководство по JS: определение геттеров и сеттеров](/ru/docs/Web/JavaScript/Guide_ru/Working_with_Objects#.D0.9E.D0.BF.D1.80.D0.B5.D0.B4.D0.B5.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5_.D0.B3.D0.B5.D1.82.D1.82.D0.B5.D1.80.D0.BE.D0.B2_.D0.B8_.D1.81.D0.B5.D1.82.D1.82.D0.B5.D1.80.D0.BE.D0.B2)
+- [`Object.prototype.__defineGetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
+- [Руководство по JS: определение геттеров и сеттеров](/ru/docs/Web/JavaScript/Guide/Working_with_objects#.d0.9e.d0.bf.d1.80.d0.b5.d0.b4.d0.b5.d0.bb.d0.b5.d0.bd.d0.b8.d0.b5_.d0.b3.d0.b5.d1.82.d1.82.d0.b5.d1.80.d0.be.d0.b2_.d0.b8_.d1.81.d0.b5.d1.82.d1.82.d0.b5.d1.80.d0.be.d0.b2)

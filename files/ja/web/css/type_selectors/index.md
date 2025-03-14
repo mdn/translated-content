@@ -54,7 +54,9 @@ span {
 
 ```css
 @namespace example url(http://www.example.com);
-example|h1 { color: blue }
+example|h1 {
+  color: blue;
+}
 ```
 
 ## 仕様書
@@ -67,5 +69,5 @@ example|h1 { color: blue }
 
 ## 関連情報
 
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)
+- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
 - [CSS の学習: セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)

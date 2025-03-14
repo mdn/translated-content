@@ -1,8 +1,6 @@
 ---
 title: Array.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/at
-browser-compat: javascript.builtins.Array.at
 ---
 
 {{JSRef}}
@@ -11,12 +9,26 @@ La méthode **`at()`** prend un entier en argument et renvoie l'élément du tab
 
 L'accès aux éléments d'un tableau en utilisant les crochets ne permet que d'utiliser des indices positifs&nbsp;: `array[0]` renverra le premier élément, `array[array.length-1]` renverra le dernier. Avec `array.at(-1)`, on peut avoir une écriture plus concise pour accéder au dernier élément. Voir les exemples ci-après.
 
-{{EmbedInteractiveExample("pages/js/array-at.html")}}
+{{InteractiveExample("JavaScript Demo: Array.at()")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+let index = 2;
+
+console.log(`An index of ${index} returns ${array1.at(index)}`);
+// Expected output: "An index of 2 returns 8"
+
+index = -2;
+
+console.log(`An index of ${index} returns ${array1.at(index)}`);
+// Expected output: "An index of -2 returns 130"
+```
 
 ## Syntaxe
 
 ```js
-at(indice)
+at(indice);
 ```
 
 ### Paramètres
@@ -36,9 +48,9 @@ L'exemple qui suit fournit une fonction qui renvoie le dernier élément trouvé
 
 ```js
 // Le tableau avec des éléments
-const corbeille = ['pomme', 'banane', 'poire'];
+const corbeille = ["pomme", "banane", "poire"];
 
-// Une fonction qui renvoie le dernier 
+// Une fonction qui renvoie le dernier
 // élément d'un tableau
 function dernierElem(arr) {
   return arr.at(-1);
@@ -52,7 +64,7 @@ console.log(item1);
 
 // On ajoute un élément au tableau
 // 'corbeille'
-corbeille.push('orange');
+corbeille.push("orange");
 const item2 = dernierElem(corbeille);
 console.log(item2);
 // Affiche 'orange' dans la console
@@ -64,22 +76,22 @@ On compare ici différentes façons d'accéder à l'avant-dernier élément d'un
 
 ```js
 // Un tableau de valeurs
-const couleurs = ['rouge', 'vert', 'bleu'];
+const couleurs = ["rouge", "vert", "bleu"];
 
 // En utilisant la propriété length
-const avecLength = couleurs[couleurs.length-2];
-console.log(avecLength); 
+const avecLength = couleurs[couleurs.length - 2];
+console.log(avecLength);
 // Affiche 'vert' dans la console
 
 // En utilisant la méthode slice()
 // qui renvoie un tableau
 const avecSlice = couleurs.slice(-2, -1);
-console.log(avecSlice[0]); 
+console.log(avecSlice[0]);
 // Affiche 'vert' dans la console
 
 // En utilisant la méthode at()
 const avecAt = couleurs.at(-2);
-console.log(avecAt); 
+console.log(avecAt);
 // Affiche 'vert' dans la console
 ```
 

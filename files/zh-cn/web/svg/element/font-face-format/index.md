@@ -1,33 +1,35 @@
 ---
-title: font-face-format
+title: <font-face-format>
 slug: Web/SVG/Element/font-face-format
+l10n:
+  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-{{SVGRef}}
+{{SVGRef}}{{deprecated_header}}
 
-`font-face-format`元素描述了它的父{{ SVGElement("font-face-uri") }}元素引用的字体的类型。
+**`<font-face-format>`** [SVG](/zh-CN/docs/Web/SVG) 元素用于描述其父元素 {{SVGElement("font-face-uri")}} 引用的字体类型。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
-## 示例
-
 ## 属性
 
-### 全局属性
-
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-
-### 专有属性
-
-- {{ SVGAttr("string") }}
+{{SVGAttr("string")}} {{Deprecated_Inline}}
 
 ## DOM 接口
 
-该元素实现了[`SVGFontFaceFormatElement`](/zh-CN/DOM/SVGFontFaceFormatElement)接口。
+此元素实现了 {{domxref("SVGFontFaceFormatElement")}} 接口。
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
 
 ## 参见
 
-- {{ SVGElement("font-face-uri") }}
-- [SVG tutorial: SVG fonts](/zh-CN/SVG/Tutorial/SVG_fonts)
+- {{SVGElement("font-face-uri")}}
+- [SVG 教程：SVG 字体](/zh-CN/docs/Web/SVG/Tutorial/SVG_fonts)

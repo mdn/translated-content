@@ -105,7 +105,7 @@ console.log(float64.length); // 2
 console.log(float64.BYTES_PER_ELEMENT); // 8
 
 // 配列から
-var arr = new Float64Array([21,31]);
+var arr = new Float64Array([21, 31]);
 console.log(arr[1]); // 31
 
 // 他の TypedArray から
@@ -118,7 +118,9 @@ var buffer = new ArrayBuffer(32);
 var z = new Float64Array(buffer, 0, 4);
 
 // 反復可能オブジェクトから
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var float64 = new Float64Array(iterable);
 // Float64Array[1, 2, 3]
 ```
@@ -134,6 +136,6 @@ var float64 = new Float64Array(iterable);
 ## 関連情報
 
 - `Float64Array` のポリフィルが [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays) で利用できます
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

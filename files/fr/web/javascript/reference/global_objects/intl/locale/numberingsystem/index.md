@@ -1,15 +1,6 @@
 ---
 title: Intl.Locale.prototype.numberingSystem
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Locale
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/numberingSystem
 ---
 
 {{JSRef}}
@@ -115,7 +106,7 @@ Un système de numération est un système qui permet d'exprimer les nombres. La
 
 D'après [la spécification Unicode sur les chaînes décrivant les locales](https://www.unicode.org/reports/tr35/), l'extension décrivant le système de numération est indiquée par la clé `nu`.
 
-Le constructeur [`Intl.locale`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale) prend comme premier argument une chaîne de caractères décrivant la locale. Aussi, on peut indiquer le système de numération après les composantes principales de la chaîne de caractères en lui ajoutant un `"-u"` (indiquant la présence d'une extension), suivi d'un `"-nu"` (indiquant que l'extension qui sera indiquée décrit le système de numération, suivi de la valeur voulue pour le système de numération.
+Le constructeur [`Intl.locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) prend comme premier argument une chaîne de caractères décrivant la locale. Aussi, on peut indiquer le système de numération après les composantes principales de la chaîne de caractères en lui ajoutant un `"-u"` (indiquant la présence d'une extension), suivi d'un `"-nu"` (indiquant que l'extension qui sera indiquée décrit le système de numération, suivi de la valeur voulue pour le système de numération.
 
 ```js
 let numberingSystemViaStr = new Intl.Locale("fr-Latn-FR-u-nu-mong");
@@ -125,23 +116,23 @@ console.log(numberingSystemStr.numberingSystem);
 
 ### Définir la valeur de `numberingSystem` grâce à un objet de configuration
 
-Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale) possède un deuxième argument, optionnel, qui est un objet permettant de configurer la locale. Les propriétés de cet objet sont utilisées comme extensions pour la locale ; les clés des propriétés sont les noms des extensions et leurs valeurs sont celles utilisées pour chaque extension. On peut donc utiliser la propriété `numberingSystem` sur cet objet afin de définir le système de numération à utiliser pour cette locale.
+Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) possède un deuxième argument, optionnel, qui est un objet permettant de configurer la locale. Les propriétés de cet objet sont utilisées comme extensions pour la locale ; les clés des propriétés sont les noms des extensions et leurs valeurs sont celles utilisées pour chaque extension. On peut donc utiliser la propriété `numberingSystem` sur cet objet afin de définir le système de numération à utiliser pour cette locale.
 
 ```js
-let numberingSystemViaObj= new Intl.Locale("en-Latn-US", {numberingSystem: "latn"});
+let numberingSystemViaObj = new Intl.Locale("en-Latn-US", {
+  numberingSystem: "latn",
+});
 console.log(us12hour.numberingSystem);
 // affichera "latn" dans la console
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------ | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.numberingSystem) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.numberingSystem")}}
+{{Compat}}
 
 ## Voir aussi
 

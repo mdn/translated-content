@@ -1,18 +1,18 @@
 ---
 title: History.go()
 slug: Web/API/History/go
-translation_of: Web/API/History/go
 ---
+
 {{APIRef("History API")}}
 
 **`History.go()`** 메서드는 history 세션에서 특정한 페이지를 로딩합니다. 인자로 전달하는 파라미터 값에 따라 history를 통해서 페이지를 앞 뒤로 이동할 수 있습니다.
 
-이 메서드는 {{glossary("asynchronous")}}(비동기)로 동작합니다. 페이지 앞, 뒤 이동이 언제 이뤄지는지 알려면 {{event("popstate")}} event에 대한 listener를 등록합니다.
+이 메서드는 {{glossary("asynchronous")}}(비동기)로 동작합니다. 페이지 앞, 뒤 이동이 언제 이뤄지는지 알려면 {{domxref("Window/popstate_event", "popstate")}} event에 대한 listener를 등록합니다.
 
 ## 구문
 
 ```js
-history.go([delta])
+history.go([delta]);
 ```
 
 ### Parameters
@@ -25,13 +25,13 @@ history.go([delta])
 한 페이지 뒤로 가기 ({{domxref("History.back", "back()")}}를 호출한 것과 동일):
 
 ```js
-history.go(-1)
+history.go(-1);
 ```
 
 {{domxref("History.forward", "forward()")}}와 동일한 한 페이지 앞으로 가기:
 
 ```js
-history.go(1)
+history.go(1);
 ```
 
 두 페이지 앞으로 가기:
@@ -66,5 +66,5 @@ history.go(0);
 - {{domxref("History")}}
 - {{DOMxRef("History.back","back()")}}
 - {{DOMxRef("History.forward","forward()")}}
-- {{event("popstate")}} event
+- {{domxref("Window/popstate_event", "popstate")}} event
 - [Working with the History API](/ko/docs/Web/API/History_API/Working_with_the_History_API)

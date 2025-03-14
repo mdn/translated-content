@@ -1,19 +1,11 @@
 ---
 title: IDBObjectStore.keyPath
 slug: Web/API/IDBObjectStore/keyPath
-tags:
-  - API
-  - IDBObjectStore
-  - IndexedDB
-  - Propriété
-  - Reference
-  - keyPath
-translation_of: Web/API/IDBObjectStore/keyPath
 ---
 
 {{APIRef("IndexedDB")}}
 
-La propriété **`keyPath`** de l'interface {{domxref("IDBObjectStore")}} renvoie le [chemin de la clé](/fr/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath) de ce magasin d'objet.
+La propriété **`keyPath`** de l'interface {{domxref("IDBObjectStore")}} renvoie le [chemin de la clé](/fr/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keypath) de ce magasin d'objet.
 
 Si cette propriété vaut `null` l'application doit fournir une clé pour chaque opération de modification.
 
@@ -31,7 +23,7 @@ N'importe quel type de valeur.
 
 ## Exemple
 
-Dans l'exemple suivant, on initialise une transaction de lecture/écriture sur une base de données en ajoutant des données dans un magasin d'objets via la méthode `add()`. Une fois l'objet créé, on affiche `objectStore.keyPath` en sortie de la console. Pour un exemple complet et fonctionnel, vous pouvez utiliser notre application [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([tester la démo](https://mdn.github.io/to-do-notifications/)).
+Dans l'exemple suivant, on initialise une transaction de lecture/écriture sur une base de données en ajoutant des données dans un magasin d'objets via la méthode `add()`. Une fois l'objet créé, on affiche `objectStore.keyPath` en sortie de la console. Pour un exemple complet et fonctionnel, vous pouvez utiliser notre application [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([tester la démo](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // On commence par ouvrir la base de données
@@ -95,10 +87,10 @@ function addData() {
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Initier une connexion : {{domxref("IDBDatabase")}}
 - Utiliser les transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

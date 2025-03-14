@@ -1,15 +1,6 @@
 ---
 title: String.length
 slug: Web/JavaScript/Reference/Global_Objects/String/length
-tags:
-  - JavaScript
-  - Propiedad
-  - Prototipo
-  - Referencia
-  - String
-  - length
-translation_of: Web/JavaScript/Reference/Global_Objects/String/length
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/length
 ---
 
 {{JSRef}}
@@ -37,13 +28,13 @@ La propiedad static `String.length` devuelve 1.
 ### Uso Básico
 
 ```js
-var x = 'Mozilla';
-var empty = '';
+var x = "Mozilla";
+var empty = "";
 
-console.log('Mozilla is ' + x.length + ' code units long');
+console.log("Mozilla is " + x.length + " code units long");
 /* "Mozilla is 7 code units long" */
 
-console.log('The empty string has a length of ' + empty.length);
+console.log("The empty string has a length of " + empty.length);
 /* "The empty string has a length of 0" */
 ```
 
@@ -64,7 +55,7 @@ console.log(myString);
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.length")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,5 +1,5 @@
 ---
-title: '<sub> : l''élément de mise en indice'
+title: "<sub> : l'élément de mise en indice"
 slug: Web/HTML/Element/sub
 l10n:
   sourceCommit: ca8d6889ade7fc6121aaf4d59158fa6a795f1a1b
@@ -9,7 +9,23 @@ l10n:
 
 L'élément HTML **`<sub>`** est utilisé, pour des raisons typographiques, afin d'afficher du texte en indice (sous la ligne de base et généralement plus petit) par rapport au bloc de texte environnant.
 
-{{EmbedInteractiveExample("pages/tabbed/sub.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;sub&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  Almost every developer's favorite molecule is
+  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as
+  "caffeine."
+</p>
+```
+
+```css interactive-example
+p {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -77,9 +93,8 @@ Voici certains cas d'utilisation (non exhaustifs) pour `<sub>`&nbsp;:
 
 ```html
 <p>
-  Selon les calculs effectués par Nakamura, Johnson et
-  Mason<sub>1</sub>, cela causera l'annulation complète
-  des deux particules.
+  Selon les calculs effectués par Nakamura, Johnson et Mason<sub>1</sub>, cela
+  causera l'annulation complète des deux particules.
 </p>
 ```
 
@@ -92,9 +107,7 @@ Voici certains cas d'utilisation (non exhaustifs) pour `<sub>`&nbsp;:
 #### HTML
 
 ```html
-<p>
-  La molécule d'eau est symbolisée par H<sub>2</sub>O.
-</p>
+<p>La molécule d'eau est symbolisée par H<sub>2</sub>O.</p>
 ```
 
 #### Résultat

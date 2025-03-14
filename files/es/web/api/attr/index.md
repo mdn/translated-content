@@ -26,7 +26,8 @@ Este tipo representa un atributo de un elemento DOM como un objeto. En muchos m�
 - {{domxref("Attr.value", "value")}}
   - : El valor del atributo.
 
-> **Nota:** DOM Level 3 defined `namespaceURI`, `localName` and `prefix` on the {{domxref("Node")}} interface. In DOM4 they were moved to `Attr`.
+> [!NOTE]
+> DOM Level 3 defined `namespaceURI`, `localName` and `prefix` on the {{domxref("Node")}} interface. In DOM4 they were moved to `Attr`.
 >
 > This change is implemented in Chrome since version 46.0 and Firefox since version 48.0.
 
@@ -54,7 +55,7 @@ Las siguientes propiedades son obsoletos. Where available, the appropriate repla
   - : Utilizar {{domxref("Attr.value")}} en su lugar.
 - `ownerDocument`
   - : Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.
-- `ownerElement` {{deprecated_inline("7.0")}} {{deprecated_inline("29.0")}} {{readOnlyInline}}
+- `ownerElement` {{deprecated_inline}} {{readOnlyInline}}
 
   - : Since you get an `Attr` object from an {{domxref("Element")}}, you should already know the associated element.
 
@@ -85,14 +86,12 @@ Los siguientes metodos ahora son obsoletos.
   - : Use {{domxref("Element.getAttribute()")}} instead.
 - `getAttributeNodeNS()`
   - : Use {{domxref("Element.getAttributeNS()")}} instead.
-- `hasAttributes()`{{deprecated_inline("21.0")}}
+- `hasAttributes()` {{deprecated_inline}}
   - : Estra propiedad ahora retorna false.
 - `hasChildNodes()`
   - : Estra propiedad ahora devuelve `false`.
 - `insertBefore()`
   - : Modify the value of {{domxref("Attr.value")}} instead.
-- `isSupported()`
-  - : Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.
 - `isEqualNode()`
   - : Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.
 - `normalize()`
@@ -114,4 +113,4 @@ Los siguientes metodos ahora son obsoletos.
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Attr")}}
+{{Compat}}

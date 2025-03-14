@@ -1,6 +1,9 @@
 ---
-title: DocumentFragment.querySelector()
+title: "DocumentFragment: querySelector() メソッド"
+short-title: querySelector()
 slug: Web/API/DocumentFragment/querySelector
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{ApiRef("DOM")}}
@@ -13,14 +16,18 @@ ID に一致するセレクターで、その ID が誤って文書中に複数�
 
 ## 構文
 
-```js
-element = documentfragment.querySelector(selectors);
+```js-nolint
+querySelector(selectors)
 ```
 
 ### 引数
 
-- _selectors_
-  - : {{domxref("DOMString")}} で、1 つ以上の CSS セレクターをカンマで区切って指定します。
+- `selectors`
+  - : 文字列で、1 つ以上の CSS セレクターをカンマで区切って指定します。
+
+### 返値
+
+指定された [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)の集合に一致する文書内の最初の要素を表す {{domxref("Element")}} オブジェクトです。一致する要素がない場合は `null` が返されます。
 
 ## 例
 
@@ -29,7 +36,7 @@ element = documentfragment.querySelector(selectors);
 この基本的な例では、 {{domxref("DocumentFragment")}} の中で "`myclass`" クラスが返されます。
 
 ```js
-var el = documentfragment.querySelector(".myclass");
+const el = documentfragment.querySelector(".myclass");
 ```
 
 ### CSS の構文とメソッドの引数
@@ -41,10 +48,10 @@ var el = documentfragment.querySelector(".myclass");
 <div id="foo:bar"></div>
 
 <script>
-document.querySelector('#foo\bar')    // 何にも一致しない
-document.querySelector('#foo\\\\bar') // 最初の div に一致する
-document.querySelector('#foo:bar')     // 何にも一致しない
-document.querySelector('#foo\\:bar')   // 2 つ目の div に一致する
+  document.querySelector("#foo\bar"); // 何にも一致しない
+  document.querySelector("#foo\\\\bar"); // 最初の div に一致する
+  document.querySelector("#foo:bar"); // 何にも一致しない
+  document.querySelector("#foo\\:bar"); // 2 つ目の div に一致する
 </script>
 ```
 

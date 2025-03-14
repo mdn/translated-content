@@ -1,23 +1,22 @@
 ---
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/find
 ---
 
 {{JSRef}}
 
 El método **`find()`** devuelve el **valor** del **primer elemento** del array que cumple la función de prueba proporcionada.
 
-{{EmbedInteractiveExample("pages/js/array-find.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.find()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find((element) => element > 10);
+
+console.log(found);
+// Expected output: 12
+```
 
 - Si necesitas el **índice** del elemento encontrado en el array, utiliza {{jsxref("Array.findIndex", "findIndex()")}}.
 - Si necesitas encontrar el **índice de un elemento**, {{jsxref("Array.prototype.indexOf()")}}. (Es similar a {{jsxref("Array.findIndex", "findIndex()")}}, pero comprueba la igualdad de cada elemento con el valor en lugar de usar una función de prueba.)
@@ -40,7 +39,7 @@ arr.find(callback(element[, index[, array]])[, thisArg])
     - `array` {{optional_inline}}
       - : El array desde el que se llama al método `find`.
 - `thisArg` {{optional_inline}}
-  - : Objeto a usar como [`this`](/es/docs/Web/JavaScript/Referencia/Operadores/this) cuando se ejecuta `callback`.
+  - : Objeto a usar como [`this`](/es/docs/Web/JavaScript/Reference/Operators/this) cuando se ejecuta `callback`.
 
 ### Valor devuelto
 
@@ -66,13 +65,13 @@ El método `find` no transforma el array desde el cual es llamado, pero la funci
 
 ```js
 const inventario = [
-    {nombre: 'manzanas', cantidad: 2},
-    {nombre: 'bananas', cantidad: 0},
-    {nombre: 'cerezas', cantidad: 5}
+  { nombre: "manzanas", cantidad: 2 },
+  { nombre: "bananas", cantidad: 0 },
+  { nombre: "cerezas", cantidad: 5 },
 ];
 
 function esCereza(fruta) {
-    return fruta.nombre === 'cerezas';
+  return fruta.nombre === "cerezas";
 }
 
 console.log(inventario.find(esCereza));
@@ -83,12 +82,12 @@ console.log(inventario.find(esCereza));
 
 ```js
 const inventario = [
-    {nombre: 'manzanas', cantidad: 2},
-    {nombre: 'bananas', cantidad: 0},
-    {nombre: 'cerezas', cantidad: 5}
+  { nombre: "manzanas", cantidad: 2 },
+  { nombre: "bananas", cantidad: 0 },
+  { nombre: "cerezas", cantidad: 5 },
 ];
 
-const resultado = inventario.find( fruta => fruta.nombre === 'cerezas' );
+const resultado = inventario.find((fruta) => fruta.nombre === "cerezas");
 
 console.log(resultado); // { nombre: 'cerezas', cantidad: 5 }
 ```
@@ -116,23 +115,22 @@ Los siguientes ejemplos muestran cómo elementos no existentes o eliminados son 
 
 ```js
 // Declarar un array sin elementos en los índices 2, 3 y 4
-const array = [0,1,,,,5,6];
+const array = [0, 1, , , , 5, 6];
 
 // Muestra todos los índices, no sólo aquellos que tienen valores asignados
-array.find(function(value, index) {
-  console.log('Visited index ' + index + ' with value ' + value);
+array.find(function (value, index) {
+  console.log("Visited index " + index + " with value " + value);
 });
 
 // Mostrar todos los índices, incluyendo los eliminados
-array.find(function(value, index) {
-
+array.find(function (value, index) {
   // Eliminar el elemento 5 en la primera iteración
   if (index == 0) {
-    console.log('Deleting array[5] with value ' + array[5]);
+    console.log("Deleting array[5] with value " + array[5]);
     delete array[5];
   }
   // El elemento 5 se visita aun habiendo sido eliminado
-  console.log('Visited index ' + index + ' with value ' + value);
+  console.log("Visited index " + index + " with value " + value);
 });
 // expected output:
 // Deleting array[5] with value 5
@@ -152,9 +150,9 @@ Este método ha sido añadido a la espeficicación ECMAScript 2015 y puede no es
 ```js
 // https://tc39.github.io/ecma262/#sec-array.prototype.find
 if (!Array.prototype.find) {
-  Object.defineProperty(Array.prototype, 'find', {
-    value: function(predicate) {
-     // 1. Let O be ? ToObject(this value).
+  Object.defineProperty(Array.prototype, "find", {
+    value: function (predicate) {
+      // 1. Let O be ? ToObject(this value).
       if (this == null) {
         throw new TypeError('"this" is null or not defined');
       }
@@ -165,8 +163,8 @@ if (!Array.prototype.find) {
       var len = o.length >>> 0;
 
       // 3. If IsCallable(predicate) is false, throw a TypeError exception.
-      if (typeof predicate !== 'function') {
-        throw new TypeError('predicate must be a function');
+      if (typeof predicate !== "function") {
+        throw new TypeError("predicate must be a function");
       }
 
       // 4. If thisArg was supplied, let T be thisArg; else let T be undefined.
@@ -193,7 +191,7 @@ if (!Array.prototype.find) {
       return undefined;
     },
     configurable: true,
-    writable: true
+    writable: true,
   });
 }
 ```
@@ -202,13 +200,11 @@ Si necesitas dar soporte a motores de JavaScript realmente obsoletos que no sopo
 
 ## Especificaciones
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array.prototype.find', 'Array.prototype.find')}} |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.find")}}
+{{Compat}}
 
 ## Ver también
 

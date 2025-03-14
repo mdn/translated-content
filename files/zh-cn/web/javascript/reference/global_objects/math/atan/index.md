@@ -3,7 +3,7 @@ title: Math.atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## 概述
 
@@ -30,11 +30,11 @@ Math.atan(x)
 
 ## 示例
 
-### 例子：使用 `Math.atan`
+### 示例：使用 `Math.atan`
 
 ```js
-Math.atan(1);  // 0.7853981633974483
-Math.atan(0);  // 0
+Math.atan(1); // 0.7853981633974483
+Math.atan(0); // 0
 ```
 
 ## 规范
@@ -45,9 +45,8 @@ Math.atan(0);  // 0
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.
 - {{jsxref("Math.acos()")}}
 - {{jsxref("Math.asin()")}}
 - {{jsxref("Math.atan2()")}}

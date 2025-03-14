@@ -45,9 +45,9 @@ void ctx.fillRect(x, y, width, height);
 矩形の左上は (20, 10) です。幅は 150 で高さは 100 です。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+ctx.fillStyle = "green";
 ctx.fillRect(20, 10, 150, 100);
 ```
 
@@ -60,8 +60,8 @@ ctx.fillRect(20, 10, 150, 100);
 このコードでは、キャンバス全体を矩形で塗りつぶします。これは、背景を作成し、その上に他のものを描画するのに便利です。このため、矩形の寸法は {{HtmlElement("canvas")}} 要素の `width` と `height` 属性に等しくなるように設定されています。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 ```
 

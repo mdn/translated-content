@@ -1,35 +1,26 @@
 ---
-title: HTMLHyperlinkElementUtils.password
+title: "HTMLAnchorElement: свойство password"
 slug: Web/API/HTMLAnchorElement/password
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/password
-original_slug: Web/API/HTMLHyperlinkElementUtils/password
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ApiRef("URL API")}}
+{{APIRef("HTML DOM")}}
 
-Свойство **`HTMLHyperlinkElementUtils.password`** – это {{domxref("USVString")}}, содержащий пароль, указанный перед именем домена.
+Свойство **`HTMLAnchorElement.password`** — это строка, содержащая пароль, указанный перед именем домена.
 
-`password` игнорируется без предупреждения, если свойство [`username`](/en-US/docs/Web/API/HTMLHyperlinkElementUtils/username) не установлено.
+Игнорируется, если свойство [`username`](/ru/docs/Web/API/HTMLAnchorElement/username) не установлено.
 
-## Синтаксис
+## Значение
 
-```
-string = object.password;
-object.password = string;
-```
+Строка.
 
 ## Примеры
 
 ```js
-// Допустим, что документ содержит элемент <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.username">
-var anchor = document.getElementByID("myAnchor");
-var result = anchor.password; // Вернёт: 'flabada'
+// Документ содержит элемент <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLAnchorElement">
+const anchor = document.getElementByID("myAnchor");
+anchor.password; // вернёт 'flabada'
 ```
 
 ## Спецификации
@@ -42,4 +33,4 @@ var result = anchor.password; // Вернёт: 'flabada'
 
 ## Смотрите также
 
-- Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.
+- Интерфейс {{domxref("HTMLAnchorElement")}}.

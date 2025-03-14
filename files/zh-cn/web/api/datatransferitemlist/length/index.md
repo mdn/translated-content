@@ -1,74 +1,74 @@
 ---
-title: DataTransferItemList.length
+title: DataTransferItemList：length 属性
 slug: Web/API/DataTransferItemList/length
+l10n:
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{domxref("DataTransferItemList")}} 接口的只读属性**`length`** 返回当前拖动项列表中项目的数量。
+{{APIRef("HTML Drag and Drop API")}}
 
-## 语法
+{{domxref("DataTransferItemList")}} 接口的只读属性 **`length`** 返回当前拖动项列表中项目的数量。
 
-```plain
-length = DataTransferItemList.length;
-```
+## 值
 
-### 值
-
-列表中拖动项的数量，如果列表为空或禁用则为 0。如果列表的{{domxref("DataTransfer")}}对象未与拖动数据存储关联，则认为拖动列表被禁用。
+列表中拖动项的数量，如果列表为空或禁用则为 0。如果列表的 {{domxref("DataTransfer")}} 对象未与拖动数据存储关联，则认为拖动项列表被禁用。
 
 ## 示例
 
-这个例子演示了`length` 属性的用法。
+这个示例演示了 `length` 属性的用法。
 
 ### JavaScript
 
 ```js
 function dragstart_handler(ev) {
-  console.log("dragStart");
-  // Add this element's id to the drag payload so the drop handler will
-  // know which element to add to its tree
-  var dataList = ev.dataTransfer.items;
+  console.log("拖动开始");
+  // 将此元素的 id 添加到拖动负载中，以便拖动处理器知道要将哪个元素添加到其树中
+  const dataList = ev.dataTransfer.items;
   dataList.add(ev.target.id, "text/plain");
-  // Add some other items to the drag payload
-  dataList.add("<p>... paragraph ...</p>", "text/html");
-  dataList.add("http://www.example.org","text/uri-list");
+  // 将其他的一些元素添加到拖动负载中
+  dataList.add("<p>段落……</p>", "text/html");
+  dataList.add("http://www.example.org", "text/uri-list");
 }
 
 function drop_handler(ev) {
-  console.log("Drop");
+  console.log("放置");
   ev.preventDefault();
-  var data = ev.dataTransfer.items;
-  // Loop through the dropped items and log their data
-  for (var i = 0; i < data.length; i++) {
-    if ((data[i].kind == 'string') && (data[i].type.match('^text/plain'))) {
-      // This item is the target node
-      data[i].getAsString(function (s){
+  const data = ev.dataTransfer.items;
+  // 循环遍历放置的元素，并记录它们的数据
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].kind === "string" && data[i].type.match("^text/plain")) {
+      // 该项目为目标节点
+      data[i].getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/html'))) {
-      // Drag data item is HTML
-      data[i].getAsString(function (s){
-        console.log("... Drop: HTML = " + s);
+    } else if (data[i].kind === "string" && data[i].type.match("^text/html")) {
+      // 放置的数据项为 HTML
+      data[i].getAsString((s) => {
+        console.log(`……放置：HTML = ${s}`);
       });
-    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/uri-list'))) {
-      // Drag data item is URI
-      data[i].getAsString(function (s){
-        console.log("... Drop: URI = " + s);
+    } else if (
+      data[i].kind === "string" &&
+      data[i].type.match("^text/uri-list")
+    ) {
+      // 放置的数据项为 URI
+      data[i].getAsString((s) => {
+        console.log(`……放置：URI = ${s}`);
       });
     }
   }
 }
 
 function dragover_handler(ev) {
-  console.log("dragOver");
+  console.log("拖至上方");
   ev.preventDefault();
-  // Set the dropEffect to move
-  ev.dataTransfer.dropEffect = "move"
+  // 将放置效果（dropEffect）设置为移动（move）
+  ev.dataTransfer.dropEffect = "move";
 }
 
 function dragend_handler(ev) {
-  console.log("dragEnd");
-  var dataList = ev.dataTransfer.items;
-  // Clear any remaining drag data
+  console.log("拖动结束");
+  const dataList = ev.dataTransfer.items;
+  // 清除剩余的拖动数据
   dataList.clear();
 }
 ```
@@ -77,10 +77,20 @@ function dragend_handler(ev) {
 
 ```html
 <div>
-  <p id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+  <p
+    id="source"
+    ondragstart="dragstart_handler(event);"
+    ondragend="dragend_handler(event);"
+    draggable="true">
+    选中此元素，拖动它到放置区域，然后取消选中以移动元素。
+  </p>
 </div>
-<div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+<div
+  id="target"
+  ondrop="drop_handler(event);"
+  ondragover="dragover_handler(event);">
+  放置区域
+</div>
 ```
 
 ### CSS
@@ -103,16 +113,12 @@ div {
 
 ### 结果
 
-{{EmbedLiveSample('Example_Drag_and_Drop')}}
-
-{{LiveSampleLink('Example_Drag_and_Drop', 'Drag and Drop demo link')}}
+{{EmbedLiveSample('示例', 100, 250)}}
 
 ## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
-
-{{APIRef("HTML Drag and Drop API")}}

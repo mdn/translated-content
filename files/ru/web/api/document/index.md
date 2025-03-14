@@ -1,24 +1,22 @@
 ---
 title: Document
 slug: Web/API/Document
-tags:
-  - DOM
-translation_of: Web/API/Document
 ---
-{{ ApiRef("DOM") }}
 
-Каждая веб-страница, которая загружается в браузер, имеет свой собственный объект **document**. Интерфейс документа служит точкой входа для получения содержимого веб-страницы (всего [DOM](/ru/docs/Using_the_W3C_DOM_Level_1_Core) - дерева, включая такие элементы как {{HTMLElement("body")}} и {{HTMLElement("table")}}), а также обеспечивает функциональность, которая является глобальной для документа, например, для получения URL-адреса страницы или создания новых элементов в документе).
+{{APIRef("DOM")}}
+
+Каждая веб-страница, которая загружается в браузер, имеет свой собственный объект **document**. Интерфейс документа служит точкой входа для получения содержимого веб-страницы (всего [DOM](/ru/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model) - дерева, включая такие элементы как {{HTMLElement("body")}} и {{HTMLElement("table")}}), а также обеспечивает функциональность, которая является глобальной для документа, например, для получения URL-адреса страницы или создания новых элементов в документе).
 
 Объект **document** может быть получен из разных API:
 
-- Чаще всего используется прямой доступ к объекту **document** из сценариев [scripts](/ru/docs/HTML/Element/Script) которые подгружаются документом. (Этот же объект доступен как {{domxref("window.document")}}.)
-- Через свойство [`contentDocument`](/en-US/docs/Web/API/HTMLIFrameElement#Properties) объекта iframe.
-- Как ответ [`responseXML`](/ru/docs/Web/API/XMLHttpRequest#responseXML) объекта [`XMLHttpRequest.`](/ru/docs/Web/API/XMLHttpRequest)
+- Чаще всего используется прямой доступ к объекту **document** из сценариев [scripts](/ru/docs/Web/HTML/Element/script) которые подгружаются документом. (Этот же объект доступен как {{domxref("window.document")}}.)
+- Через свойство [`contentDocument`](/ru/docs/Web/API/HTMLIFrameElement#Properties) объекта iframe.
+- Как ответ [`responseXML`](/ru/docs/Web/API/XMLHttpRequest#responsexml) объекта [`XMLHttpRequest.`](/ru/docs/Web/API/XMLHttpRequest)
 - Доступ к документу может быть получен из элемента или узла через свойство {{domxref("Node.ownerDocument","ownerDocument")}}.
 
-В зависимости от вида документа (т.е. [HTML](/ru/docs/HTML) или [XML](/ru/docs/XML)) у объекта **document** могут быть доступны разные API.
+В зависимости от вида документа (т.е. [HTML](/ru/docs/Web/HTML) или [XML](/ru/docs/Web/XML)) у объекта **document** могут быть доступны разные API.
 
-- Все объекты документов реализуют интерфейс [`Document`](http://dom.spec.whatwg.org/#interface-document) (и следовательно {{domxref("Node")}} и {{domxref("EventTarget")}} интерфейсы). Таким образом основные свойства и методы, описанные на этой странице, доступны для всех видов документов.
+- Все объекты документов реализуют интерфейс [`Document`](https://dom.spec.whatwg.org/#interface-document) (и следовательно {{domxref("Node")}} и {{domxref("EventTarget")}} интерфейсы). Таким образом основные свойства и методы, описанные на этой странице, доступны для всех видов документов.
 - В современных браузерах некоторые документы (т.е. те, которые содержат контент `text/html`) также реализуют {{domxref("HTMLDocument")}} интерфейс.
 - В современных браузерах SVG документы реализуют {{domxref("SVGDocument")}} интерфейс.
 
@@ -26,7 +24,8 @@ translation_of: Web/API/Document
 
 ## Свойства
 
-> **Примечание:** Интерфейс `Document` наследует также интерфейсы {{domxref("Node")}} и {{domxref("EventTarget")}}.
+> [!NOTE]
+> Интерфейс `Document` наследует также интерфейсы {{domxref("Node")}} и {{domxref("EventTarget")}}.
 
 - {{domxref("Document.all")}} {{Deprecated_inline}} {{non-standard_inline}}
   - : Обеспечивает доступ ко всем элементам с идентификаторами (id). Это нестандартный интерфейс, вместо него рекомендуется использовать метод {{domxref("Document.getElementById()")}}.
@@ -52,13 +51,13 @@ translation_of: Web/API/Document
   - : Возвращает кодировку, которая использовалась во время парсинга документа.
 - {{domxref("Document.lastStyleSheetSet")}}
   - : Возвращает имя последнего включённого набора таблиц стилей. Имеет значение `null` , пока таблица стилей не будет изменена путём установки значения {{domxref("Document.selectedStyleSheetSet","selectedStyleSheetSet")}}.
-- {{domxref("Document.mozSyntheticDocument")}} {{non-standard_inline}} {{gecko_minversion_inline("8.0")}}
+- {{domxref("Document.mozSyntheticDocument")}} {{non-standard_inline}}
   - : `true` если этот документ является синтетическим, например, отдельные изображения, видео, аудио файлы, или тому подобные.
-- {{domxref("Document.mozFullScreen")}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}
+- {{domxref("Document.mozFullScreen")}} {{non-standard_inline}}
   - : `true` когда документ находится в {{domxref("Using_full-screen_mode","full-screen mode")}}.
-- {{domxref("Document.mozFullScreenElement")}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}
+- {{domxref("Document.mozFullScreenElement")}} {{non-standard_inline}}
   - : Элемент, который в данный момент находится в полноэкранном режиме для этого документа.
-- {{domxref("Document.mozFullScreenEnabled")}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}
+- {{domxref("Document.mozFullScreenEnabled")}} {{non-standard_inline}}
   - : `true` if calling {{domxref("element.mozRequestFullscreen()")}} would succeed in the curent document.
 - {{domxref("Document.pointerLockElement")}} {{experimental_inline}}
   - : Returns the element set as the target for mouse events while the pointer is locked. `null` if lock is pending, pointer is unlocked, or if the target is in another document.
@@ -78,8 +77,6 @@ translation_of: Web/API/Document
   - : Returns the version number as specified in the XML declaration or `"1.0"` if the declaration is absent.
 
 The `Document` interface is extended with the {{domxref("ParentNode")}} interface:
-
-{{page("/en-US/docs/Web/API/ParentNode","Properties")}}
 
 ### Extension for HTML documents
 
@@ -115,7 +112,7 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
   - : Returns a list of the {{HTMLElement("form")}} elements within the current document.
 - {{domxref("Document.head")}}
   - : Returns the {{HTMLElement("head")}} element of the current document.
-- {{domxref("Document.height")}} {{non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Document.height")}} {{non-standard_inline}}
   - : Gets/sets the height of the current document.
 - {{domxref("Document.images")}}
   - : Returns a list of the images in the current document.
@@ -129,7 +126,7 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
   - : Returns the URI of the current document.
 - {{domxref("Document.plugins")}}
   - : Returns a list of the available plugins.
-- {{domxref("Document.readyState")}} {{gecko_minversion_inline("1.9.2")}}
+- {{domxref("Document.readyState")}}
   - : Returns loading status of the document.
 - {{domxref("Document.referrer")}}
   - : Returns the URI of the page that linked to this page.
@@ -141,21 +138,22 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
   - : Returns a string containing the URL of the current document.
 - {{domxref("Document.vlinkColor")}} {{Deprecated_inline}}
   - : Gets/sets the color of visited hyperlinks.
-- {{domxref("Document.width")}} {{non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Document.width")}} {{non-standard_inline}}
   - : Returns the width of the current document.
 
 ### Event handlers
 
 - {{domxref("Document.onpointerlockchange")}} {{experimental_inline}}
-  - : Returns the event handling code for the {{event("pointerlockchange")}} event.
+  - : Returns the event handling code for the [`pointerlockchange`](/ru/docs/Web/API/Document/pointerlockchange_event) event.
 - {{domxref("Document.onpointerlockerror")}} {{experimental_inline}}
-  - : Returns the event handling code for the {{event("pointerlockerror")}} event.
-- {{domxref("Document.onreadystatechange")}} {{gecko_minversion_inline("1.9.2")}}
+  - : Returns the event handling code for the [`pointerlockerror`](/ru/docs/Web/API/Document/pointerlockerror_event) event.
+- {{domxref("Document.onreadystatechange")}}
   - : Returns the event handling code for the `readystatechange` event.
 
 ## Methods
 
-> **Примечание:** The `Document` interface also inherits from the {{domxref("Node")}} and {{domxref("EventTarget")}} interfaces.
+> [!NOTE]
+> The `Document` interface also inherits from the {{domxref("Node")}} and {{domxref("EventTarget")}} interfaces.
 
 - {{domxref("Document.adoptNode","Document.adoptNode(Node node)")}}
   - : Adopt node from an external document.
@@ -177,7 +175,7 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
   - : Creates a new element with the given tag name.
 - {{domxref("Document.createElementNS","Document.createElementNS(String namespace, String name)")}}
   - : Creates a new element with the given tag name and namespace URI.
-- {{domxref("Document.createEntityReference","Document.createEntityReference(String name)")}} {{obsolete_inline}}
+- {{domxref("Document.createEntityReference","Document.createEntityReference(String name)")}}
   - : Creates a new entity reference object and returns it.
 - {{domxref("Document.createEvent","Document.createEvent(String interface)")}}
   - : Creates an event object.
@@ -205,30 +203,30 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
   - : Returns a list of elements with the given tag name and namespace.
 - {{domxref("Document.importNode","Document.importNode(Node node, Boolean deep)")}}
   - : Returns a clone of a node from an external document.
-- {{domxref("document.mozSetImageElement")}} {{non-standard_inline}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("document.mozSetImageElement")}} {{non-standard_inline}}
   - : Allows you to change the element being used as the background image for a specified element ID.
-- {{domxref("Document.normalizeDocument()")}} {{obsolete_inline}}
+- {{domxref("Document.normalizeDocument()")}}
   - : Replaces entities, normalizes text nodes, etc.
-- {{domxref("Document.releaseCapture()")}} {{non-standard_inline}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Document.releaseCapture()")}} {{non-standard_inline}}
   - : Releases the current mouse capture if it's on an element in this document.
 - {{domxref("Document.releaseEvents")}} {{non-standard_inline}} {{Deprecated_inline}}
   - : See {{domxref("window.releaseEvents")}}.
-- {{domxref("document.routeEvent")}} {{non-standard_inline}} {{obsolete_inline(24)}}
+- {{domxref("document.routeEvent")}} {{non-standard_inline}}
   - : See {{domxref("window.routeEvent")}}.
 
 The `Document` interface is extended with the {{domxref("ParentNode")}} interface:
 
 - {{domxref("Document.getElementById","Document.getElementById(String id)")}}
   - : Returns an object reference to the identified element.
-- {{domxref("Document.querySelector","Document.querySelector(String selector)")}} {{gecko_minversion_inline("1.9.1")}}
+- {{domxref("Document.querySelector","Document.querySelector(String selector)")}}
   - : Returns the first Element node within the document, in document order, that matches the specified selectors.
-- {{domxref("Document.querySelectorAll","Document.querySelectorAll(String selector)")}} {{gecko_minversion_inline("1.9.1")}}
+- {{domxref("Document.querySelectorAll","Document.querySelectorAll(String selector)")}}
   - : Returns a list of all the Element nodes within the document that match the specified selectors.
 
 The `Document` interface is extended with the {{domxref("XPathEvaluator")}} interface:
 
 - {{domxref("Document.createExpression","Document.createExpression(String expression, XPathNSResolver resolver)")}}
-  - : Compiles an [`XPathExpression`](/en-US/docs/XPathExpression) which can then be used for (repeated) evaluations.
+  - : Compiles an [`XPathExpression`](/ru/docs/Web/API/XPathExpression) which can then be used for (repeated) evaluations.
 - {{domxref("Document.createNSResolver","Document.createNSResolver(Node resolver)")}}
   - : Creates an {{domxref("XPathNSResolver")}} object.
 - {{domxref("Document.evaluate","Document.evaluate(String expression, Node contextNode, XPathNSResolver resolver, Number type, Object result)")}}
@@ -262,66 +260,16 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
   - : Returns true if the formating command is supported on the current range.
 - {{domxref("Document.queryCommandValue","Document.queryCommandValue(String command)")}}
   - : Returns the current value of the current range for a formatting command.
-- {{domxref("Document.registerElement","Document.registerElement(String tagname[, Object options])")}}
+- {{domxref("CustomElementRegistry/define","Document.registerElement(String tagname[, Object options])")}}
   - : Registers a new custom element in the browser and returns a constructor for the new element.
 - {{domxref("Document.write","Document.write(String text)")}}
   - : Writes text in a document.
 - {{domxref("Document.writeln","Document.writeln(String text)")}}
   - : Writes a line of text in a document.
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                            | Status                           | Comment                                                                                |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------- |
-| {{SpecName('DOM1','#i-Document','Document')}}                                             | {{Spec2('DOM1')}}         | Initial definition for the interface                                                   |
-| {{SpecName('DOM2 Core','#i-Document','Document')}}                                     | {{Spec2('DOM2 Core')}}     | Supersede DOM 1                                                                        |
-| {{SpecName('DOM3 Core','#i-Document','Document')}}                                     | {{Spec2('DOM3 Core')}}     | Supersede DOM 2                                                                        |
-| {{SpecName('DOM WHATWG','#interface-document','Document')}}                         | {{Spec2('DOM WHATWG')}} | Intend to supersede DOM 3                                                              |
-| {{SpecName('HTML WHATWG','dom.html#the-document-object','Document')}}             | {{Spec2('HTML WHATWG')}} | Turn the {{domxref("HTMLDocument")}} interface into a `Document` extension.   |
-| {{SpecName('DOM3 XPath','xpath.html#XPathEvaluator','XPathEvaluator')}}         | {{Spec2('DOM3 XPath')}} | Define the {{domxref("XPathEvaluator")}} interface which extend `Document`. |
-| {{SpecName('HTML Editing','#dom-document-getselection','Document')}}             | {{Spec2('HTML Editing')}} | Extend the `Document` interface                                                        |
-| {{SpecName('CSSOM View','#extensions-to-the-document-interface','Document')}} | {{Spec2('CSSOM View')}} | Extend the `Document` interface                                                        |
-| {{SpecName('CSSOM','#extensions-to-the-document-interface','Document')}}         | {{Spec2('CSSOM')}}         | Extend the `Document` interface                                                        |
-| {{SpecName('Pointer Lock','#extensions-to-the-document-interface','Document')}} | {{Spec2('Pointer Lock')}} | Extend the `Document` interface                                                        |
-
-## Browser compatibility
-
-### Firefox notes
-
-Mozilla defines a set of non-standard properties made only for XUL content:
-
-- {{domxref("document.currentScript")}} {{gecko_minversion_inline("2.0")}}
-  - : Returns the {{HTMLElement("script")}} element that is currently executing.
-- {{domxref("document.documentURIObject")}} {{gecko_minversion_inline("1.9")}}
-  - : (**Mozilla add-ons only!**) Returns the `nsIURI` object representing the URI of the document. This property only has special meaning in privileged JavaScript code (with UniversalXPConnect privileges).
-- {{domxref("document.popupNode")}}
-  - : Returns the node upon which a popup was invoked.
-- {{domxref("document.tooltipNode")}}
-  - : Returns the node which is the target of the current tooltip.
-
-Mozilla also define some non-standard methods:
-
-- {{domxref("Document.execCommandShowHelp")}} {{deprecated_inline}}
-  - : This method never did anything and always threw an exception, so it was removed in Gecko 14.0 {{geckoRelease("14.0")}}.
-- {{domxref("Document.getBoxObjectFor")}} {{deprecated_inline}}
-  - : Use the {{domxref("Element.getBoundingClientRect()")}} method instead.
-- {{domxref("Document.loadOverlay")}}
-  - : Loads a [XUL overlay](/ru/docs/XUL_Overlays) dynamically. This only works in XUL documents.
-- {{domxref("document.queryCommandText")}} {{deprecated_inline}}
-  - : This method never did anything but throw an exception, and was removed in Gecko 14.0 {{geckoRelease("14.0")}}.
-
-### Internet Explorer notes
-
-Microsoft defines some non-standard properties:
-
-- {{domxref("document.fileSize")}} {{Non-standard_Inline}} {{deprecated_inline}}
-
-  - : Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See [MSDN](http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx).
-
-    Internet Explorer does not support all methods from the `Node` interface in the `Document` interface:
-
-- {{domxref("document.contains")}}
-  - : As a work-around, `document.body.contains()` can be used.
+{{Specifications}}
 
 ## Совместимость с браузерами
 

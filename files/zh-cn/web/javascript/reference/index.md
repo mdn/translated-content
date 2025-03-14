@@ -1,144 +1,154 @@
 ---
 title: JavaScript 参考
 slug: Web/JavaScript/Reference
+l10n:
+  sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
 ---
 
-{{JsSidebar}}在 MDN 的 JavaScript 分区中，这一部分被作为 Javascript 的资料库。阅读[关于该参考](/zh-CN/docs/Web/JavaScript/Reference/About)以了解更多。
+{{jsSidebar}}
 
-## 内置
+JavaScript 参考提供了有关 JavaScript 语言的内容资料库。这里详细描述了整个语言。在编写 JavaScript 代码时，你经常会参考这些页面（因此，标题为“JavaScript 参考”）。
 
-{{JSxRef("Global_Objects", "JavaScript 标准内置对象")}}, 以及他们的方法和属性。
+JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务端脚本还是其他类似的环境。在大多数情况下，本参考与环境无关，且不针对 web 浏览器环境。
+
+如果你对 JavaScript 不熟悉，请先阅读[指南](/zh-CN/docs/Web/JavaScript/Guide)。一旦你牢牢地掌握了基础知识，就可以使用参考资料，来获取有关各个对象和语言结构的更加详细的知识。
+
+## 内置对象
+
+[JavaScript 标准内置对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects)，以及它们的方法和属性。
 
 ### 值属性
 
-- {{JSxRef("Infinity")}}
-- {{JSxRef("NaN")}}
-- {{JSxRef("undefined")}}
-- {{JSxRef("globalThis")}}
+- {{jsxref("globalThis")}}
+- {{jsxref("Infinity")}}
+- {{jsxref("NaN")}}
+- {{jsxref("undefined")}}
 
 ### Function 属性
 
-- {{JSxRef("Global_Objects/eval", "eval()")}}
-- {{JSxRef("Global_Objects/isFinite", "isFinite()")}}
-- {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
-- {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}
-- {{JSxRef("Global_Objects/parseInt", "parseInt()")}}
-- {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
-- {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}
-- {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxref("Global_Objects/eval", "eval()")}}
+- {{jsxref("isFinite()")}}
+- {{jsxref("isNaN()")}}
+- {{jsxref("parseFloat()")}}
+- {{jsxref("parseInt()")}}
+- {{jsxref("decodeURI()")}}
+- {{jsxref("decodeURIComponent()")}}
+- {{jsxref("encodeURI()")}}
+- {{jsxref("encodeURIComponent()")}}
+- {{jsxref("escape()")}} {{deprecated_inline}}
+- {{jsxref("unescape()")}} {{deprecated_inline}}
 
 ### 基本对象
 
-- {{JSxRef("Object")}}
-- {{JSxRef("Function")}}
-- {{JSxRef("Boolean")}}
-- {{JSxRef("Symbol")}}
+- {{jsxref("Object")}}
+- {{jsxref("Function")}}
+- {{jsxref("Boolean")}}
+- {{jsxref("Symbol")}}
 
 ### 错误对象
 
-- {{JSxRef("Error")}}
-- {{JSxRef("AggregateError")}}
-- {{JSxRef("EvalError")}}
-- {{JSxRef("InternalError")}}
-- {{JSxRef("RangeError")}}
-- {{JSxRef("ReferenceError")}}
-- {{JSxRef("SyntaxError")}}
-- {{JSxRef("TypeError")}}
-- {{JSxRef("URIError")}}
+- {{jsxref("Error")}}
+- {{jsxref("AggregateError")}}
+- {{jsxref("EvalError")}}
+- {{jsxref("RangeError")}}
+- {{jsxref("ReferenceError")}}
+- {{jsxref("SyntaxError")}}
+- {{jsxref("TypeError")}}
+- {{jsxref("URIError")}}
+- {{jsxref("InternalError")}} {{non-standard_inline}}
 
-### Numbers & dates
+### 数字和日期
 
-- {{JSxRef("Number")}}
-- {{JSxRef("BigInt")}}
-- {{JSxRef("Math")}}
-- {{JSxRef("Date")}}
+- {{jsxref("Number")}}
+- {{jsxref("BigInt")}}
+- {{jsxref("Math")}}
+- {{jsxref("Date")}}
 
 ### 文本处理
 
-- {{JSxRef("String")}} {{JSxRef("RegExp")}}
+- {{jsxref("String")}}
+- {{jsxref("RegExp")}}
 
-### 索引集合类
+### 索引集合
 
-- {{JSxRef("Array")}}
-- {{JSxRef("Int8Array")}}
-- {{JSxRef("Uint8Array")}}
-- {{JSxRef("Uint8ClampedArray")}}
-- {{JSxRef("Int16Array")}}
-- {{JSxRef("Uint16Array")}}
-- {{JSxRef("Int32Array")}}
-- {{JSxRef("Uint32Array")}}
-- {{JSxRef("Float32Array")}}
-- {{JSxRef("Float64Array")}}
-- {{JSxRef("BigInt64Array")}}
-- {{JSxRef("BigUint64Array")}}
+- {{jsxref("Array")}}
+- {{jsxref("Int8Array")}}
+- {{jsxref("Uint8Array")}}
+- {{jsxref("Uint8ClampedArray")}}
+- {{jsxref("Int16Array")}}
+- {{jsxref("Uint16Array")}}
+- {{jsxref("Int32Array")}}
+- {{jsxref("Uint32Array")}}
+- {{jsxref("BigInt64Array")}}
+- {{jsxref("BigUint64Array")}}
+- {{jsxref("Float32Array")}}
+- {{jsxref("Float64Array")}}
 
-### Keyed collections
+### 键集合类
 
-- {{JSxRef("Map")}}
-- {{JSxRef("Set")}}
-- {{JSxRef("WeakMap")}}
-- {{JSxRef("WeakSet")}}
+- {{jsxref("Map")}}
+- {{jsxref("Set")}}
+- {{jsxref("WeakMap")}}
+- {{jsxref("WeakSet")}}
 
 ### 结构化数据
 
-- {{JSxRef("ArrayBuffer")}}
-- {{JSxRef("SharedArrayBuffer")}}
-- {{JSxRef("Atomics")}}
-- {{JSxRef("DataView")}}
-- {{JSxRef("JSON")}}
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("SharedArrayBuffer")}}
+- {{jsxref("DataView")}}
+- {{jsxref("Atomics")}}
+- {{jsxref("JSON")}}
 
-### 控制抽象化
+### 内存管理
 
-- {{JSxRef("Promise")}}
-- {{JSxRef("Generator")}}
-- {{JSxRef("GeneratorFunction")}}
-- {{JSxRef("AsyncFunction")}}
+- {{jsxref("WeakRef")}}
+- {{jsxref("FinalizationRegistry")}}
+
+### 控制抽象对象
+
+- {{jsxref("Iterator")}}
+- {{jsxref("AsyncIterator")}}
+- {{jsxref("Promise")}}
+- {{jsxref("GeneratorFunction")}}
+- {{jsxref("AsyncGeneratorFunction")}}
+- {{jsxref("Generator")}}
+- {{jsxref("AsyncGenerator")}}
+- {{jsxref("AsyncFunction")}}
 
 ### 反射
 
-- {{JSxRef("Reflect")}}
-- {{JSxRef("Proxy")}}
+- {{jsxref("Reflect")}}
+- {{jsxref("Proxy")}}
 
 ### 国际化
 
-- {{JSxRef("Intl")}}
-- {{JSxRef("Global_Objects/Intl/Collator", "Intl.Collator")}}
-- {{JSxRef("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/DisplayNames", "Intl.DisplayNames")}}
-- {{JSxRef("Global_Objects/Intl/ListFormat", "Intl.ListFormat")}}
-- {{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}
-- {{JSxRef("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}
-- {{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}
-- {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
-
-### WebAssembly
-
-- {{JSxRef("WebAssembly")}}
-- {{JSxRef("WebAssembly.Module")}}
-- {{JSxRef("WebAssembly.Instance")}}
-- {{JSxRef("WebAssembly.Memory")}}
-- {{JSxRef("WebAssembly.Table")}}
-- {{JSxRef("WebAssembly.CompileError")}}
-- {{JSxRef("WebAssembly.LinkError")}}
-- {{JSxRef("WebAssembly.RuntimeError")}}
+- {{jsxref("Intl")}}
+- {{jsxref("Intl.Collator")}}
+- {{jsxref("Intl.DateTimeFormat")}}
+- {{jsxref("Intl.DisplayNames")}}
+- {{jsxref("Intl.DurationFormat")}}
+- {{jsxref("Intl.ListFormat")}}
+- {{jsxref("Intl.Locale")}}
+- {{jsxref("Intl.NumberFormat")}}
+- {{jsxref("Intl.PluralRules")}}
+- {{jsxref("Intl.RelativeTimeFormat")}}
+- {{jsxref("Intl.Segmenter")}}
 
 ## 语句
 
-{{JSxRef("Statements", "语句和声明")}}
+[JavaScript 语句和声明](/zh-CN/docs/Web/JavaScript/Reference/Statements)
 
 ### 控制流
 
-- {{jsxref("Statements/block", "Block")}}
+- {{jsxref("Statements/return", "return")}}
 - {{jsxref("Statements/break", "break")}}
 - {{jsxref("Statements/continue", "continue")}}
-- {{jsxref("Statements/Empty", "Empty")}}
+- {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/if...else", "if...else")}}
 - {{jsxref("Statements/switch", "switch")}}
-- {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/try...catch", "try...catch")}}
 
-### 声明
+### 声明变量
 
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/let", "let")}}
@@ -149,14 +159,13 @@ slug: Web/JavaScript/Reference
 - {{jsxref("Statements/function", "function")}}
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Statements/async_function", "async function")}}
-- {{jsxref("Statements/return", "return")}}
+- {{jsxref("Statements/async_function*", "async function*")}}
 - {{jsxref("Statements/class", "class")}}
 
 ### 迭代
 
 - {{jsxref("Statements/do...while", "do...while")}}
 - {{jsxref("Statements/for", "for")}}
-- {{jsxref("Statements/for_each...in", "for each...in")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Statements/for...of", "for...of")}}
 - {{jsxref("Statements/for-await...of", "for await...of")}}
@@ -164,131 +173,171 @@ slug: Web/JavaScript/Reference
 
 ### 其他
 
+- {{jsxref("Statements/Empty", "空语句", "", 1)}}
+- {{jsxref("Statements/block", "块语句", "", 1)}}
+- {{jsxref("Statements/Expression_statement", "表达式语句", "", 1)}}
 - {{jsxref("Statements/debugger", "debugger")}}
+- {{jsxref("Statements/export", "export")}}
 - {{jsxref("Statements/import", "import")}}
-- {{jsxref("Statements/label", "label")}}
-- {{jsxref("Statements/with", "with")}}
+- {{jsxref("Statements/label", "标记语句", "", 1)}}
+- {{jsxref("Statements/with", "with")}} {{deprecated_inline}}
 
 ## 表达式和运算符
 
-{{JSxRef("Operators", "表达式和运算符")}}.
+[JavaScript 表达式和运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators)。
 
-### Primary expressions
+### 主要表达式
 
-- {{JSxRef("Operators/this", "this")}}
-- {{JSxRef("Operators/function", "function")}}
-- {{JSxRef("Operators/class", "class")}}
-- {{JSxRef("Operators/function*", "function*")}}
-- {{JSxRef("Operators/yield", "yield")}}
-- {{JSxRef("Operators/yield*", "yield*")}}
-- {{JSxRef("Operators/async_function", "async function")}}
-- {{JSxRef("Operators/await", "await")}}
-- {{JSxRef("Global_Objects/Array", "[]")}}
-- {{JSxRef("Operators/Object_initializer", "{}")}}
-- {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}
-- {{JSxRef("Operators/Grouping", "( )")}}
-- {{JSxRef("null")}}
+- {{jsxref("Operators/this", "this")}}
+- [字面量](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#字面量)
+- {{jsxref("Array", "[]")}}
+- {{jsxref("Operators/Object_initializer", "{}")}}
+- {{jsxref("Operators/function", "function")}}
+- {{jsxref("Operators/class", "class")}}
+- {{jsxref("Operators/function*", "function*")}}
+- {{jsxref("Operators/async_function", "async function")}}
+- {{jsxref("Operators/async_function*", "async function*")}}
+- {{jsxref("RegExp", "/ab+c/i")}}
+- {{jsxref("Template_literals", "`string`")}}
+- {{jsxref("Operators/Grouping", "( )")}}
 
-### Left-hand-side expressions
+### 左值表达式
 
-- {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
-- {{JSxRef("Operators/new", "new")}}
-- {{JSxRef("Operators/new%2Etarget", "new.target")}}
-- {{JSxRef("Operators/super", "super")}}
-- {{JSxRef("Operators/Spread_syntax", "...obj")}}
+- {{jsxref("Operators/Property_accessors", "属性访问器", "", 1)}}
+- {{jsxref("Operators/Optional_chaining", "?.")}}
+- {{jsxref("Operators/new", "new")}}
+- {{jsxref("Operators/new%2Etarget", "new.target")}}
+- {{jsxref("Operators/import%2Emeta", "import.meta")}}
+- {{jsxref("Operators/super", "super")}}
+- {{jsxref("Operators/import", "import()")}}
 
-### Increment & decrement
+### 自增和自减
 
-- {{JSxRef("Operators/Arithmetic_Operators", "A++", "#Increment")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "A--", "#Decrement")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "++A", "#Increment")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "--A", "#Decrement")}}
+- {{jsxref("Operators/Increment", "A++")}}
+- {{jsxref("Operators/Decrement", "A--")}}
+- {{jsxref("Operators/Increment", "++A")}}
+- {{jsxref("Operators/Decrement", "--A")}}
 
 ### 一元运算符
 
-- {{JSxRef("Operators/delete", "delete")}}
-- {{JSxRef("Operators/void", "void")}}
-- {{JSxRef("Operators/typeof", "typeof")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "+", "#Unary_plus")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "-", "#Unary_negation")}}
-- {{JSxRef("Operators/Bitwise_Operators", "~", "#Bitwise_NOT")}}
-- {{JSxRef("Operators/Logical_Operators", "!", "#Logical_NOT")}}
+- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("Operators/void", "void")}}
+- {{jsxref("Operators/typeof", "typeof")}}
+- {{jsxref("Operators/Unary_plus", "+")}}
+- {{jsxref("Operators/Unary_negation", "-")}}
+- {{jsxref("Operators/Bitwise_NOT", "~")}}
+- {{jsxref("Operators/Logical_NOT", "!")}}
+- {{jsxref("Operators/await", "await")}}
 
 ### 算术运算符
 
-- {{JSxRef("Operators/Arithmetic_Operators", "+", "#Addition")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "-", "#Subtraction")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "/", "#Division")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "*", "#Multiplication")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "%", "#Remainder")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "**", "#Exponentiation")}}
+- {{jsxref("Operators/Exponentiation", "**")}}
+- {{jsxref("Operators/Multiplication", "*")}}
+- {{jsxref("Operators/Division", "/")}}
+- {{jsxref("Operators/Remainder", "%")}}
+- {{jsxref("Operators/Addition", "+")}}（加法）
+- {{jsxref("Operators/Subtraction", "-")}}
 
 ### 关系运算符
 
-- {{JSxRef("Operators/in", "in")}}
-- {{JSxRef("Operators/instanceof", "instanceof")}}
-- {{JSxRef("Operators/Comparison_Operators", "&lt;", "#Less_than_operator")}}
-- {{JSxRef("Operators/Comparison_Operators", "&gt;", "#Greater_than_operator")}}
-- {{JSxRef("Operators/Comparison_Operators", "&lt;=", "#Less_than_or_equal_operator")}}
-- {{JSxRef("Operators/Comparison_Operators", "&gt;=", "#Greater_than_or_equal_operator")}}
+- {{jsxref("Operators/Less_than", "&lt;")}}（小于）
+- {{jsxref("Operators/Greater_than", "&gt;")}}（大于）
+- {{jsxref("Operators/Less_than_or_equal", "&lt;=")}}
+- {{jsxref("Operators/Greater_than_or_equal", "&gt;=")}}
+- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("Operators/in", "in")}}
 
 ### 相等运算符
 
-- {{JSxRef("Operators/Comparison_Operators", "==", "#Equality")}}
-- {{JSxRef("Operators/Comparison_Operators", "!=", "#Inequality")}}
-- {{JSxRef("Operators/Comparison_Operators", "===", "#Identity")}}
-- {{JSxRef("Operators/Comparison_Operators", "!==", "#Nonidentity")}}
+- {{jsxref("Operators/Equality", "==")}}
+- {{jsxref("Operators/Inequality", "!=")}}
+- {{jsxref("Operators/Strict_equality", "===")}}
+- {{jsxref("Operators/Strict_inequality", "!==")}}
 
 ### 位移运算符
 
-- {{JSxRef("Operators/Bitwise_Operators", "&lt;&lt;", "#Left_shift")}}
-- {{JSxRef("Operators/Bitwise_Operators", "&gt;&gt;", "#Right_shift")}}
-- {{JSxRef("Operators/Bitwise_Operators", "&gt;&gt;&gt;", "#Unsigned_right_shift")}}
+- {{jsxref("Operators/Left_shift", "&lt;&lt;")}}
+- {{jsxref("Operators/Right_shift", "&gt;&gt;")}}
+- {{jsxref("Operators/Unsigned_right_shift", "&gt;&gt;&gt;")}}
 
-### 位运算
+### 二进制运算符
 
-- {{JSxRef("Operators/Bitwise_Operators", "&amp;", "#Bitwise_AND")}}
-- {{JSxRef("Operators/Bitwise_Operators", "|", "#Bitwise_OR")}}
-- {{JSxRef("Operators/Bitwise_Operators", "^", "#Bitwise_XOR")}}
+- {{jsxref("Operators/Bitwise_AND", "&amp;")}}
+- {{jsxref("Operators/Bitwise_OR", "|")}}
+- {{jsxref("Operators/Bitwise_XOR", "^")}}
 
-### 逻辑运算
+### 二元运算符
 
-- {{JSxRef("Operators/Logical_Operators", "&amp;&amp;", "#Logical_AND")}}
-- {{JSxRef("Operators/Logical_Operators", "||", "#Logical_OR")}}
+- {{jsxref("Operators/Logical_AND", "&amp;&amp;")}}
+- {{jsxref("Operators/Logical_OR", "||")}}
+- {{jsxref("Operators/Nullish_coalescing", "??")}}
 
-### 条件运算符
+### 条件（三元）运算符
 
-- {{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+- {{jsxref("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}
 
-### 赋值操作符
+### 赋值运算符
 
-- {{JSxRef("Operators/Assignment_Operators", "=", "#Assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "*=", "#Multiplication_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "/=", "#Division_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "%=", "#Remainder_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "+=", "#Addition_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "-=", "#Subtraction_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "&lt;&lt;=", "#Left_shift_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "&gt;&gt;=", "#Right_shift_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "&gt;&gt;&gt;=", "#Unsigned_right_shift_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "&amp;=", "#Bitwise_AND_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "^=", "#Bitwise_XOR_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "|=", "#Bitwise_OR_assignment")}}
-- {{JSxRef("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
-- {{JSxRef("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
+- {{jsxref("Operators/Assignment", "=")}}
+- {{jsxref("Operators/Multiplication_assignment", "*=")}}
+- {{jsxref("Operators/Division_assignment", "/=")}}
+- {{jsxref("Operators/Remainder_assignment", "%=")}}
+- {{jsxref("Operators/Addition_assignment", "+=")}}
+- {{jsxref("Operators/Subtraction_assignment", "-=")}}
+- {{jsxref("Operators/Left_shift_assignment", "&lt;&lt;=")}}
+- {{jsxref("Operators/Right_shift_assignment", "&gt;&gt;=")}}
+- {{jsxref("Operators/Unsigned_right_shift_assignment", "&gt;&gt;&gt;=")}}
+- {{jsxref("Operators/Bitwise_AND_assignment", "&amp;=")}}
+- {{jsxref("Operators/Bitwise_XOR_assignment", "^=")}}
+- {{jsxref("Operators/Bitwise_OR_assignment", "|=")}}
+- {{jsxref("Operators/Exponentiation_assignment", "**=")}}
+- {{jsxref("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
+- {{jsxref("Operators/Logical_OR_assignment", "||=")}}
+- {{jsxref("Operators/Nullish_coalescing_assignment", "??=")}}
+- [`[a, b] = arr`, `{ a, b } = obj`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)
+
+### Yield 运算符
+
+- {{jsxref("Operators/yield", "yield")}}
+- {{jsxref("Operators/yield*", "yield*")}}
+
+### 展开语法
+
+- {{jsxref("Operators/Spread_syntax", "...obj")}}
+
+### 逗号运算符
+
+- {{jsxref("Operators/Comma_operator", ",")}}
 
 ## 函数
 
-本章介绍如何使用 [JavaScript 函数](/zh-CN/docs/Web/JavaScript/Reference/Functions) 来开发应用程序。
+[JavaScript 函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)。
 
-- [`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)
-- [箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
-- [默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)
-- [剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- {{jsxref("Functions/Arrow_functions", "箭头函数", "", 1)}}
+- {{jsxref("Functions/Default_parameters", "默认参数", "", 1)}}
+- {{jsxref("Functions/rest_parameters", "剩余参数", "", 1)}}
+- {{jsxref("Functions/arguments", "arguments")}}
+- {{jsxref("Functions/Method_definitions", "方法定义", "", 1)}}
+- {{jsxref("Functions/get", "getter", "", 1)}}
+- {{jsxref("Functions/set", "setter", "", 1)}}
+
+## 类
+
+[JavaScript 类](/zh-CN/docs/Web/JavaScript/Reference/Classes)。
+
+- {{jsxref("Classes/Constructor", "constructor")}}
+- {{jsxref("Classes/extends", "extends")}}
+- [私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)
+- [公有类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+- {{jsxref("Classes/static", "static")}}
+- [静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
 
 ## 附加参考页面
 
-- [词法文法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)
-- [严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
-- [过时的特性](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
+- {{jsxref("Lexical_grammar", "词法语法", "", 1)}}
+- [数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)
+- [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [尾后逗号](/zh-CN/docs/Web/JavaScript/Reference/Trailing_commas)
+- [错误参考](/zh-CN/docs/Web/JavaScript/Reference/Errors)
+- {{jsxref("Strict_mode", "严格模式", "", 1)}}
+- {{jsxref("Deprecated_and_obsolete_features", "废弃特性", "", 1)}}

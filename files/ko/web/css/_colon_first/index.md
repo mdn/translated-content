@@ -1,13 +1,6 @@
 ---
-title: ':first'
+title: :first
 slug: Web/CSS/:first
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Web
-translation_of: Web/CSS/:first
 ---
 
 {{CSSRef}}
@@ -22,7 +15,8 @@ translation_of: Web/CSS/:first
 }
 ```
 
-> **참고:** :first 의사 클래스 안에서는 CSS 속성의 사용이 제한됩니다. 바깥 여백, {{cssxref("orphans")}}, {{cssxref("widows")}}와 페이지 넘김만 바꿀 수 있으며, 여백 지정 시 [절대길이 단위](/ko/docs/Web/CSS/length#절대길이_단위)만 사용할 수 있습니다. 다른 모든 속성은 무시합니다.
+> [!NOTE]
+> first 의사 클래스 안에서는 CSS 속성의 사용이 제한됩니다. 바깥 여백, {{cssxref("orphans")}}, {{cssxref("widows")}}와 페이지 넘김만 바꿀 수 있으며, 여백 지정 시 [절대길이 단위](/ko/docs/Web/CSS/length#절대길이_단위)만 사용할 수 있습니다. 다른 모든 속성은 무시합니다.
 
 ## 구문
 
@@ -54,7 +48,7 @@ p {
 ### JavaScript
 
 ```js
-document.querySelector("button").addEventListener('click', () => {
+document.querySelector("button").addEventListener("click", () => {
   window.print();
 });
 ```

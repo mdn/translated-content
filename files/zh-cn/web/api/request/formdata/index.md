@@ -9,7 +9,7 @@ slug: Web/API/Request/formData
 
 ## 语法
 
-```js
+```js-nolint
 formData()
 ```
 
@@ -27,15 +27,15 @@ formData()
 const formData = new FormData();
 const fileField = document.querySelector('input[type="file"]');
 
-formData.append('username', 'abc123');
-formData.append('avatar', fileField.files[0]);
+formData.append("username", "abc123");
+formData.append("avatar", fileField.files[0]);
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: formData
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: formData,
 });
 
-request.formData().then(function(data) {
+request.formData().then(function (data) {
   // do something with the formdata sent in the request
 });
 ```

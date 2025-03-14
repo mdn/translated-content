@@ -1,13 +1,6 @@
 ---
 title: Number.EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Number
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 ---
 
 {{JSRef}}
@@ -37,7 +30,7 @@ equal = (Math.abs(x - y + z) < Number.EPSILON);
 
 ```js
 if (Number.EPSILON === undefined) {
-    Number.EPSILON = Math.pow(2, -52);
+  Number.EPSILON = Math.pow(2, -52);
 }
 ```
 

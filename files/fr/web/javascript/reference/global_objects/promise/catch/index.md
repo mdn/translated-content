@@ -1,29 +1,31 @@
 ---
 title: Promise.prototype.catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Promise
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/catch
-original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/catch
 ---
 
 {{JSRef}}
 
 La méthode **`catch()`** renvoie un objet {{jsxref("Promise")}} et ne traite que des cas où la promesse initiale est rejetée. Elle a le même effet qu'un appel à {{jsxref("Promise.then", "Promise.prototype.then(undefined, siRejetée)")}} (c'est en fait ce qui se passe dans le moteur, `obj.catch(onRejected)` est traduit en `obj.then(undefined, onRejected)`). Cela signifie qu'il est nécessaire de fournir une fonction `onRejected`, même si on souhaite avoir une valeur de secours qui est `undefined` (par exemple avec `obj.catch(() => {})`.
 
-{{EmbedInteractiveExample("pages/js/promise-catch.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.catch()")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  throw new Error("Uh-oh!");
+});
+
+promise1.catch((error) => {
+  console.error(error);
+});
+// Expected output: Error: Uh-oh!
+```
 
 ## Syntaxe
 
 ```js
 p.catch(siRejetée);
 
-p.catch(function(raison) {
+p.catch(function (raison) {
   // rejet
 });
 ```
@@ -45,55 +47,59 @@ Une promesse ({{jsxref("Promise")}}).
 
 ## Description
 
-La méthode `catch()` est utile pour gérer les cas d'erreur en cas de compositions de plusieurs promesses. Elle renvoie elle-même une promesse et peut donc être utilisée lorsqu'on [chaîne des promesses](/fr/docs/Web/JavaScript/Guide/Utiliser_les_promesses#Chaînage_après_un_catch), à l'instar de la méthode sœur qu'est {{jsxref("Promise.prototype.then()")}}.
+La méthode `catch()` est utile pour gérer les cas d'erreur en cas de compositions de plusieurs promesses. Elle renvoie elle-même une promesse et peut donc être utilisée lorsqu'on [chaîne des promesses](/fr/docs/Web/JavaScript/Guide/Using_promises#chaînage_après_un_catch), à l'instar de la méthode sœur qu'est {{jsxref("Promise.prototype.then()")}}.
 
 ## Exemples
 
 ### Utilisation de la méthode `catch`
 
 ```js
-var p1 = new Promise(function(resolve, reject) {
+var p1 = new Promise(function (resolve, reject) {
   resolve("Succès");
 });
 
-p1.then(function(value) {
+p1.then(function (value) {
   console.log(value); // "Succès!"
   throw new Error("zut !");
-}).catch(function(e) {
-  console.error(e.message); // "zut !"
-}).then(function(e) {
-   console.log('après le catch, la chaîne est restaurée');
-});
+})
+  .catch(function (e) {
+    console.error(e.message); // "zut !"
+  })
+  .then(function (e) {
+    console.log("après le catch, la chaîne est restaurée");
+  });
 
 // Le code qui suit est équivalent :
-p1.then(function(value) {
+p1.then(function (value) {
   console.log(value); // "Succès!"
-  return Promise.reject('zut !');
-}).catch(function(e) {
-  console.log(e); // "zut !"
-}).then(function(e){
-  console.log('après le catch, la chaîne est restaurée');
-});
+  return Promise.reject("zut !");
+})
+  .catch(function (e) {
+    console.log(e); // "zut !"
+  })
+  .then(function (e) {
+    console.log("après le catch, la chaîne est restaurée");
+  });
 ```
 
 ### Les promesses n'interceptent pas les exceptions levées de façon asynchrone
 
 ```js
-var p1 = new Promise(function(resolve, reject) {
-  throw new Error('Oh oh!');
+var p1 = new Promise(function (resolve, reject) {
+  throw new Error("Oh oh!");
 });
 
-p1.catch(function(e) {
+p1.catch(function (e) {
   console.log(e.message); // "Oh oh!"
 });
 
-var p2 = new Promise(function(resolve, reject) {
-  setTimeout(function() {
-    throw new Error('Exception invisible !');
+var p2 = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    throw new Error("Exception invisible !");
   }, 1000);
 });
 
-p2.catch(function(e) {
+p2.catch(function (e) {
   console.log(e.message); // Cela n'est jamais appelé
 });
 ```
@@ -103,25 +109,30 @@ p2.catch(function(e) {
 ```js
 // On surcharge Promise.prototype.then/catch
 // pour y ajouter des logs
-(function(Promise){
-    var originalThen = Promise.prototype.then;
-    var originalCatch = Promise.prototype.catch;
+(function (Promise) {
+  var originalThen = Promise.prototype.then;
+  var originalCatch = Promise.prototype.catch;
 
-    Promise.prototype.then = function(){
-        console.log('> > > > > > appel de .then sur %o avec les arguments: %o', this, arguments);
-        return originalThen.apply(this, arguments);
-    };
-    Promise.prototype.catch = function(){
-        console.log('> > > > > > appel de .catch sur %o avec les arguments: %o', this, arguments);
-        return originalCatch.apply(this, arguments);
-    };
-
+  Promise.prototype.then = function () {
+    console.log(
+      "> > > > > > appel de .then sur %o avec les arguments: %o",
+      this,
+      arguments,
+    );
+    return originalThen.apply(this, arguments);
+  };
+  Promise.prototype.catch = function () {
+    console.log(
+      "> > > > > > appel de .catch sur %o avec les arguments: %o",
+      this,
+      arguments,
+    );
+    return originalCatch.apply(this, arguments);
+  };
 })(this.Promise);
 
-
-
 // On appelle catch sur une promesse déjà résolue
-Promise.resolve().catch(function XXX(){});
+Promise.resolve().catch(function XXX() {});
 
 // Dans la console, on aura :
 // > > > > > > appel de .catch sur Promise{} avec les arguments: Arguments{1} [0: function XXX()]

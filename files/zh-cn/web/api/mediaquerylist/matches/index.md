@@ -11,7 +11,7 @@ slug: Web/API/MediaQueryList/matches
 
 ## 值
 
- 一个布尔值，如果 {{DOMxRef("document")}} 目前匹配媒体查询列表，该值为 `true`，反之为 `false`。
+一个布尔值，如果 {{DOMxRef("document")}} 目前匹配媒体查询列表，该值为 `true`，反之为 `false`。
 
 ## 示例
 
@@ -26,15 +26,13 @@ function addMQListener(mq, callback) {
   }
 }
 
-addMQListener(window.matchMedia("(orientation:landscape)"),
-  event => {
-    if (event.matches) {
-       /* 现在是横向 */
-    } else {
-       /* 现在是纵向 */
-    }
+addMQListener(window.matchMedia("(orientation:landscape)"), (event) => {
+  if (event.matches) {
+    /* 现在是横向 */
+  } else {
+    /* 现在是纵向 */
   }
-);
+});
 ```
 
 ## 规范
@@ -47,8 +45,8 @@ addMQListener(window.matchMedia("(orientation:landscape)"),
 
 ## 参见
 
-- [媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [在代码中使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [在代码中使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

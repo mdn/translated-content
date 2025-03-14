@@ -3,13 +3,14 @@ title: Push API
 slug: Web/API/Push_API
 ---
 
-{{ApiRef("Push API")}}
+{{DefaultAPISidebar("Push API")}}{{AvailableInWorkers}}
 
 **Push API** 给与了 Web 应用程序接收从服务器发出的推送消息的能力，无论 Web 应用程序是否在用户设备前台，甚至刚加载完成。这样，开发人员就可以向用户投放异步通知和更新，从而让用户能更及时地获取新内容。
 
 ## Push 的概念及用法
 
-> **警告：** 在实现 PushManager 订阅时，请确保你的应用程序免受 CSRF/XSRF（跨站请求伪造）问题。参见以下的文章以了解更多信息：
+> [!WARNING]
+> 在实现 PushManager 订阅时，请确保你的应用程序免受 CSRF/XSRF（跨站请求伪造）问题。参见以下的文章以了解更多信息：
 >
 > - [跨站请求伪造（CSRF）预防清单](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
 > - [防止 CSRF 和 XSRF 攻击](https://blog.codinghorror.com/preventing-csrf-and-xsrf-attacks/)
@@ -20,7 +21,7 @@ slug: Web/API/Push_API
 
 Service worker 会在必要的时候启动并接收传入的推送消息，将其传递给 {{domxref("ServiceWorkerGlobalScope.push_event", "onpush")}} 事件处理器。该方法允许应用程序在接收到推送消息时作出反应，例如显示一条通知（使用 {{domxref("ServiceWorkerRegistration.showNotification()")}}）。
 
-每一个订阅对 service worker 来说都是唯一的。同时订阅的端点也是一个唯一的[功能性 URL](https://www.w3.org/TR/capability-urls/)：端点的信息是给应用发送信息的全部必要条件。所以端点地址需要保密，否则其它应用也可以向你的应用推送消息。
+每一个订阅对 service worker 来说都是唯一的。同时订阅的端点也是一个唯一的[功能性 URL](https://www.w3.org/TR/capability-urls/)：端点的信息是给应用发送信息的全部必要条件。所以端点地址需要保密，否则其他应用也可以向你的应用推送消息。
 
 激活一个 service worker 来提供推送消息会导致资源消耗的增加，尤其是电池。不同的浏览器对此有不同的方案——目前为止还没有标准的机制。Firefox 允许对发送给应用的推送消息做数量限制（配额），但生成通知的推送消息不受此限制。该限制会在站点每一次被访问之后刷新。相比之下，Chrome 选择不作限制。
 
@@ -63,7 +64,5 @@ Mozilla 的 [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbo
 ## 参见
 
 - [通过 Mozilla 推送服务发送具有 VAPID 标识的 WebPush 通知](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/)
-- [推送通知概述](https://web.dev/push-notifications-overview/)
+- [推送通知概述](https://web.developers.google.cn/articles/push-notifications-overview)
 - [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API)
-
-{{DefaultAPISidebar("Push API")}}

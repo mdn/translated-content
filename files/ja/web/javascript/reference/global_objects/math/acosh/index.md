@@ -1,30 +1,50 @@
 ---
 title: Math.acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
+l10n:
+  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
 {{JSRef}}
 
-**`Math.acosh()`** 関数は、数値の双曲線余弦 (ハイパーボリックアークコサイン) を返します。
+**`Math.acosh()`** は静的メソッドで、数値の双曲線余弦（ハイパーボリックアークコサイン）を返します。
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>1</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.acosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">cosh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \geq 1, \mathtt{\operatorname{Math.acosh}(x)} = \operatorname{arcosh}(x) = \text{ the unique } \; y \geq 0 \; \text{such that} \; \cosh(y) = x</annotation></semantics></math>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mtable columnalign="right left right left right left right left right left" columnspacing="0em" displaystyle="true"><mtr><mtd><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>1</mn><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚊𝚌𝚘𝚜𝚑</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow></mtd><mtd><mo>=</mo><mo lspace="0em" rspace="0.16666666666666666em">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mo>≥</mo><mn>0</mn><mtext>&nbsp;such that&nbsp;</mtext><mo lspace="0em" rspace="0em">cosh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mtd></mtr><mtr><mtd></mtd><mtd><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow></msqrt></mrow><mo>)</mo></mrow></mtd></mtr></mtable><annotation encoding="TeX">\begin{aligned}\forall x \geq 1,\;\mathtt{\operatorname{Math.acosh}(x)} &= \operatorname{arcosh}(x) = \text{the unique } y \geq 0 \text{ such that } \cosh(y) = x\\&= \ln\left(x + \sqrt{x^2 - 1}\right)\end{aligned}</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-acosh.html")}}
+{{InteractiveExample("JavaScript Demo: Math.acosh()")}}
+
+```js interactive-example
+console.log(Math.acosh(0.999999999999));
+// Expected output: NaN
+
+console.log(Math.acosh(1));
+// Expected output: 0
+
+console.log(Math.acosh(2));
+// Expected output: 1.3169578969248166
+
+console.log(Math.acosh(2.5));
+// Expected output: 1.566799236972411
+```
 
 ## 構文
 
-```
+```js-nolint
 Math.acosh(x)
 ```
 
 ### 引数
 
 - `x`
-  - : 数値。
+  - : 1 以上の数値です。
 
 ### 返値
 
-与えられた数値の双曲線余弦 (ハイパーボリックアークコサイン) です。数値が **1** 未満であれば、 {{jsxref("NaN")}} になります。
+与えられた数値の双曲線余弦 (ハイパーボリックアークコサイン) です。数値が 1 未満であれば、 {{jsxref("NaN")}} になります。
 
 ## 解説
 
@@ -35,23 +55,10 @@ Math.acosh(x)
 ### Math.acosh() の使用
 
 ```js
-Math.acosh(-1);  // NaN
-Math.acosh(0);   // NaN
-Math.acosh(0.5); // NaN
-Math.acosh(1);   // 0
-Math.acosh(2);   // 1.3169578969248166
-```
-
-1 未満の値に対しては、 `Math.acosh()` は {{jsxref("NaN")}} を返します。
-
-## ポリフィル
-
-<math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="TeX">x \geq 1</annotation></semantics></math>に対して、<math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mrow></msqrt></mrow><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {arcosh} (x) = \ln \left(x + \sqrt{x^{2} - 1} \right)</annotation></semantics></math> になり、次の関数でエミュレートできます。
-
-```js
-Math.acosh = Math.acosh || function(x) {
-  return Math.log(x + Math.sqrt(x * x - 1));
-};
+Math.acosh(0); // NaN
+Math.acosh(1); // 0
+Math.acosh(2); // 1.3169578969248166
+Math.acosh(Infinity); // 無限大
 ```
 
 ## 仕様書
@@ -60,10 +67,11 @@ Math.acosh = Math.acosh || function(x) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.acosh")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`Math.acosh` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.atanh()")}}
 - {{jsxref("Math.cosh()")}}

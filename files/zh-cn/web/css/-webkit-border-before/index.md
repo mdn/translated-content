@@ -1,66 +1,81 @@
 ---
-title: '-webkit-border-before'
+title: -webkit-border-before
 slug: Web/CSS/-webkit-border-before
+l10n:
+  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
 {{CSSRef}}{{Non-standard_header}}
 
-**`-webkit-border-before`** [CSS](/zh-CN/docs/Web/CSS) 属性 是一种用于简写的属性。它用于在样式表的单个位置设置各个起始边框属性值。
+**`-webkit-border-before`** [CSS](/zh-CN/docs/Web/CSS) 属性是一个用于在样式表中统一设置逻辑块起始边框各属性值的简写属性。
+
+## 组成属性
+
+该属性是以下 CSS 属性的简写：
+
+- {{cssxref("-webkit-border-before-color")}}
+- {{cssxref("-webkit-border-before-style")}}
+- {{cssxref("-webkit-border-before-width")}}
+
+## 语法
 
 ```css
-/* Border values */
+/* 边框值 */
 -webkit-border-before: 1px;
 -webkit-border-before: 2px dotted;
 -webkit-border-before: medium dashed blue;
 
-/* Global values */
+/* 全局值 */
 -webkit-border-before: inherit;
 -webkit-border-before: initial;
+-webkit-border-before: revert;
+-webkit-border-before: revert-layer;
 -webkit-border-before: unset;
 ```
 
-`-webkit-border-before` 可以使用以下一个或多个值：
+### 值
 
-1. {{cssxref("-webkit-border-before-width")}}
-2. {{cssxref("-webkit-border-before-style")}}
-3. {{cssxref("-webkit-border-before-color")}}.
-
-它根据元素的书写模式、方向以及文本方向映射到 Border 上。对应到四个边框属性{{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}或{{cssxref("border-left")}} ，具体取决于 {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}三个属性定义的值。
-
-这个属性和 {{cssxref("-webkit-border-after")}}、{{cssxref("-webkit-border-start")}}、{{cssxref("-webkit-border-end")}}三个属性用来定义元素的边界。
-
-此属性在相关标准上的命名为 {{cssxref("border-block-start")}}.
-
-{{cssinfo}}
-
-## 语法
-
-### 可选择的值
-
-按以下顺序，一个或多个值
+以下一个或多个，顺序不限：
 
 - `<'border-width'>`
-  - : 参考 {{cssxref("border-width")}}
+  - : 参阅 {{cssxref("border-width")}}
 - `<'border-style'>`
-  - : 参考 {{cssxref("border-style")}}
+  - : 参阅 {{cssxref("border-style")}}
 - `<'color'>`
-  - : 参考 {{cssxref("color")}}
+  - : 参阅 {{cssxref("color")}}
 
-### Formal syntax
+## 描述
 
-{{csssyntax}}
+`-webkit-border-before` 属性根据元素的书写模式、方向性和文本方向映射到物理边框。它对应于 {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}} 或 {{cssxref("border-left")}} 属性，具体取决于为 {{cssxref("writing-mode")}}、{{cssxref("direction")}} 和 {{cssxref("text-orientation")}} 定义的值。
+
+它与 {{cssxref("-webkit-border-after")}}、{{cssxref("-webkit-border-start")}} 和 {{cssxref("-webkit-border-end")}}（这些属性定义了元素的其他边框）相关。
+
+该属性的标准跟踪等效属性是 {{cssxref("border-block-start")}}。
+
+## 形式定义
+
+{{CSSInfo}}
+
+## 形式语法
+
+```plain
+-webkit-border-before =
+  <'border-width'> || <'border-style'> || <color>
+```
 
 ## 示例
 
-### HTML
+### 对垂直文本应用边框
+
+#### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">示例文本</p>
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 div {
@@ -75,18 +90,20 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Example", 140, 140)}}
+#### 结果
+
+{{EmbedLiveSample("对垂直文本应用边框", 140, 140)}}
 
 ## 规范
 
-尽管它和 {{cssxref("border-block-start")}} 属性有关，但现在并不存在与任何一标准规范。
+不属于任何标准，但它与标准跟踪的 {{cssxref("border-block-start")}} 属性相关。
 
-## 兼容性
+## 浏览器兼容性
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - {{cssxref("border-block-start")}}
-- The mapped physical properties: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, and {{cssxref("border-left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- 映射的物理属性：{{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}} 和 {{cssxref("border-left")}}
+- {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}

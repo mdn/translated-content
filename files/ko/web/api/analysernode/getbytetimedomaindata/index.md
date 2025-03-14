@@ -1,13 +1,6 @@
 ---
 title: AnalyserNode.getByteTimeDomainData()
 slug: Web/API/AnalyserNode/getByteTimeDomainData
-tags:
-  - API
-  - AnalyserNode
-  - Method
-  - Reference
-  - Web Audio API
-browser-compat: api.AnalyserNode.getByteTimeDomainData
 ---
 
 {{ APIRef("Mountain View APIRef Project") }}

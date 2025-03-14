@@ -1,24 +1,33 @@
 ---
 title: Number.prototype.toPrecision()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
-  - toPrecision
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 ---
+
 {{JSRef}}
 
 **`toPrecision()`** 메서드는 {{jsxref("Number")}} 객체를 지정된 정밀도로 나타내는 문자열을 반환한다.
 
-{{EmbedInteractiveExample("pages/js/number-toprecision.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toPrecision()")}}
+
+```js interactive-example
+function precise(x) {
+  return x.toPrecision(4);
+}
+
+console.log(precise(123.456));
+// Expected output: "123.5"
+
+console.log(precise(0.004));
+// Expected output: "0.004000"
+
+console.log(precise(1.23e5));
+// Expected output: "1.230e+5"
+```
 
 ## 문법
 
 ```js
-    numObj.toPrecision([precision])
+numObj.toPrecision([precision]);
 ```
 
 ### 파라미터
@@ -44,17 +53,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 ```js
 var numObj = 5.123456;
 
-console.log(numObj.toPrecision());    // logs '5.123456'
-console.log(numObj.toPrecision(5));   // logs '5.1235'
-console.log(numObj.toPrecision(2));   // logs '5.1'
-console.log(numObj.toPrecision(1));   // logs '5'
+console.log(numObj.toPrecision()); // logs '5.123456'
+console.log(numObj.toPrecision(5)); // logs '5.1235'
+console.log(numObj.toPrecision(2)); // logs '5.1'
+console.log(numObj.toPrecision(1)); // logs '5'
 
-numObj = 0.000123
+numObj = 0.000123;
 
-console.log(numObj.toPrecision());    // logs '0.000123'
-console.log(numObj.toPrecision(5));   // logs '0.00012300'
-console.log(numObj.toPrecision(2));   // logs '0.00012'
-console.log(numObj.toPrecision(1));   // logs '0.0001'
+console.log(numObj.toPrecision()); // logs '0.000123'
+console.log(numObj.toPrecision(5)); // logs '0.00012300'
+console.log(numObj.toPrecision(2)); // logs '0.00012'
+console.log(numObj.toPrecision(1)); // logs '0.0001'
 
 // 일부 상황에서는 지수 표기법이 반환 될 수 있습니다
 console.log((1234.5).toPrecision(2)); // logs '1.2e+3'

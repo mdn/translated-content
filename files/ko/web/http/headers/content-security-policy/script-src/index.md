@@ -1,11 +1,11 @@
 ---
-title: 'CSP: script-src'
+title: "CSP: script-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/script-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/script-src
 ---
+
 {{HTTPSidebar}}
 
-HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src`** 는 자바스크립트트에 대한 검증된 출처를 지정합니다. 여기에는 {{HTMLElement("script")}} 요소에서 직접 호출한 URL뿐만 아니라, 인라인 스크립트 이벤트 핸들러(`onclick`) 및 스크립트를 실행할 수 있는 [XSLT stylesheets](/ko/docs/Web/XSLT) 가 포함됩니다.
+HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src`** 는 JavaScript에 대한 검증된 출처를 지정합니다. 여기에는 {{HTMLElement("script")}} 요소에서 직접 호출한 URL뿐만 아니라, 인라인 스크립트 이벤트 핸들러(`onclick`) 및 스크립트를 실행할 수 있는 [XSLT stylesheets](/ko/docs/Web/XSLT) 가 포함됩니다.
 
 <table class="properties">
   <tbody>
@@ -38,9 +38,9 @@ Content-Security-Policy: script-src <source> <source>;
 
 ### Sources
 
-`<source>` can be any one of the values listed in [CSP Source Values](/ko/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+`<source>` can be any one of the values listed in [CSP Source Values](/ko/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
 
-Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/ko/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
+Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/ko/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#relevant_directives)).
 
 ## 예제
 
@@ -61,18 +61,19 @@ Content-Security-Policy: script-src https://example.com/
 인라인 스크립트도 실행되지 않습니다:
 
 ```html
-<button id="btn" onclick="doSomething()">
+<button id="btn" onclick="doSomething()"></button>
 ```
 
 {{domxref("EventTarget.addEventListener", "addEventListener")}}를 호출하는 것으로 대체해야 합니다.:
 
 ```js
-document.getElementById("btn").addEventListener('click', doSomething);
+document.getElementById("btn").addEventListener("click", doSomething);
 ```
 
 ### 안전하지 않은 인라인 스크립트
 
-> **참고:** 인라인 스타일 및 인라인 스크립트를 허용하지 않는 것이 CSP가 제공하는 가장 큰 보안 이점 중 하나 입니다. 그러나, 인라인 스크립트 및 스타일을 사용해야만 한다면 몇가지 방법을 제공합니다.
+> [!NOTE]
+> 인라인 스타일 및 인라인 스크립트를 허용하지 않는 것이 CSP가 제공하는 가장 큰 보안 이점 중 하나 입니다. 그러나, 인라인 스크립트 및 스타일을 사용해야만 한다면 몇가지 방법을 제공합니다.
 
 인라인 스크립트 및 인라인 이벤트 핸들러를 허용하려면, `'unsafe-inline'`, 인라인 태그에 정의한 값과 동일한 nonce-source 또는 hash-source를 지정할 수 있습니다.
 
@@ -111,15 +112,17 @@ Content-Security-Policy: script-src 'sha256-B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWt
 해시를 생성할 때에는 {{HTMLElement("script")}} 태그를 포함하지 말고, 대소문자, 태그의 앞뒤 공백이 포함되어야 하는 것을 유의해주십시요.
 
 ```html
-<script>var inline = 1;</script>
+<script>
+  var inline = 1;
+</script>
 ```
 
 ### 안전하지 않은 eval 표현식
 
 `'unsafe-eval'` 출처 표현식은 문자열에서 코드를 생성하는 여러 스크립트 실행 메소드를 제어합니다. 만약`'unsafe-eval'` 이 `script-src` 에 정의되어 있지 않으면, 아래믜 명령어는 차단되며 아무런 효과가 일어나지 않습니다.
 
-- [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)
-- [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
+- [`eval()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/eval)
+- [`Function()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function)
 - 아래와 같이 문자열 리터럴을 전달할 때 :
   `window.setTimeout("alert(\"Hello World!\");", 500);`
 
@@ -137,7 +140,7 @@ The `'strict-dynamic`' source expression specifies that the trust explicitly giv
 script-src 'strict-dynamic' 'nonce-someNonce'
 ```
 
-_Or_
+_Or:_
 
 ```bash
 script-src 'strict-dynamic' 'sha256-base64EncodedHash'
@@ -152,11 +155,11 @@ script-src 'unsafe-inline' https: 'nonce-abcdefg' 'strict-dynamic'
 
 will act like`'unsafe-inline' https:` in browsers that support CSP1, `https: 'nonce-abcdefg'` in browsers that support CSP2, and `'nonce-abcdefg' 'strict-dynamic'` in browsers that support CSP3.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -1,16 +1,6 @@
 ---
 title: Request
 slug: Web/API/Request
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Fetch API
-  - Interface
-  - Reference
-  - TopicStub
-  - request
-translation_of: Web/API/Request
 ---
 
 {{APIRef("Fetch API")}}
@@ -76,26 +66,27 @@ Vous pouvez créer un nouvel objet `Request` en utilisant le constructeur {{domx
 - {{domxref("Body.text()")}}
   - : Renvoie une promesse qui se résout avec une représentation {{domxref("USVString")}} (texte) du coprs de la requête.
 
-> **Note :** Les fonctions {{domxref("Body")}} ne peuvent être exécutées qu'une seule fois; les appels suivants seront résolus avec des chaînes vides / ArrayBuffers.
+> [!NOTE]
+> Les fonctions {{domxref("Body")}} ne peuvent être exécutées qu'une seule fois; les appels suivants seront résolus avec des chaînes vides / ArrayBuffers.
 
 ## Exemples
 
 Dans l'extrait de code suivant, nous créons une nouvelle requête à l'aide du constructeur `Request()` (pour un fichier image dans le même répertoire que le script), puis renvoyons certaines valeurs de propriété de la requête:
 
 ```js
-const request = new Request('https://www.mozilla.org/favicon.ico');
+const request = new Request("https://www.mozilla.org/favicon.ico");
 
 const URL = request.url;
 const method = request.method;
 const credentials = request.credentials;
 ```
 
-Vous pouvez ensuite récupérer cette requête en passant l'objet `Request` en tant que paramètre à un appel [`fetch()`](/fr/docs/Web/API/fetch), par exemple:
+Vous pouvez ensuite récupérer cette requête en passant l'objet `Request` en tant que paramètre à un appel [`fetch()`](/fr/docs/Web/API/Window/fetch), par exemple:
 
 ```js
 fetch(request)
-  .then(response => response.blob())
-  .then(blob => {
+  .then((response) => response.blob())
+  .then((blob) => {
     image.src = URL.createObjectURL(blob);
   });
 ```
@@ -103,7 +94,10 @@ fetch(request)
 Dans l'extrait de code suivant, nous créons une nouvelle requête à l'aide du constructeur `Request()` avec des données initiales et du contenu du body pour une requête api qui nécessite une charge utile de body:
 
 ```js
-const request = new Request('https://example.com', {method: 'POST', body: '{"foo": "bar"}'});
+const request = new Request("https://example.com", {
+  method: "POST",
+  body: '{"foo": "bar"}',
+});
 
 const URL = request.url;
 const method = request.method;
@@ -111,23 +105,25 @@ const credentials = request.credentials;
 const bodyUsed = request.bodyUsed;
 ```
 
-> **Note :** Le type de body ne peut être qu'un {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} ou {{domxref("ReadableStream")}} donc pour ajouter un objet JSON à la charge utile, vous devez stringify cet objet.
+> [!NOTE]
+> Le type de body ne peut être qu'un {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} ou {{domxref("ReadableStream")}} donc pour ajouter un objet JSON à la charge utile, vous devez stringify cet objet.
 
-Vous pouvez ensuite récupérer cette demande d'API en passant l'objet `Request` en tant que paramètre à un appel [`fetch()`](/fr/docs/Web/API/fetch), par exemple et obtenir la réponse:
+Vous pouvez ensuite récupérer cette demande d'API en passant l'objet `Request` en tant que paramètre à un appel [`fetch()`](/fr/docs/Web/API/Window/fetch), par exemple et obtenir la réponse:
 
 ```js
 fetch(request)
-  .then(response => {
+  .then((response) => {
     if (response.status === 200) {
       return response.json();
     } else {
-      throw new Error('Something went wrong on api server!');
+      throw new Error("Something went wrong on api server!");
     }
   })
-  .then(response => {
+  .then((response) => {
     console.debug(response);
     // ...
-  }).catch(error => {
+  })
+  .catch((error) => {
     console.error(error);
   });
 ```
@@ -142,6 +138,6 @@ fetch(request)
 
 ## Voir aussi
 
-- [ServiceWorker API](/fr/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/fr/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/fr/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/fr/docs/Web/HTTP/CORS)
 - [HTTP](/fr/docs/Web/HTTP)

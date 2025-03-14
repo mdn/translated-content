@@ -15,7 +15,8 @@ l10n:
 
 `waitUntil()` メソッドは、最初はイベントコールバック内で呼び出す必要がありますが、その後、すべてのプロミスが解決するまで、複数回呼び出すことができます。
 
-> **メモ:** 上記の段落で説明した動作は、 Firefox 43 で修正されました（{{bug(1180274)}} を参照）。
+> [!NOTE]
+> 上記の段落で説明した動作は、 Firefox 43 で修正されました（[Firefox バグ 1180274](https://bugzil.la/1180274) を参照）。
 
 ## 構文
 
@@ -36,14 +37,10 @@ waitUntil(promise)
 サービスワーカーの `install` イベント内で `waitUntil()` を使用します。
 
 ```js
-addEventListener('install', (event) => {
+addEventListener("install", (event) => {
   const preCache = async () => {
-    const cache = await caches.open('static-v1');
-    return cache.addAll([
-      '/',
-      '/about/',
-      '/static/styles.css'
-    ]);
+    const cache = await caches.open("static-v1");
+    return cache.addAll(["/", "/about/", "/static/styles.css"]);
   };
   event.waitUntil(preCache());
 });

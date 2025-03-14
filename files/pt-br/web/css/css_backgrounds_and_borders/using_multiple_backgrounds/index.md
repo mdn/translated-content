@@ -1,12 +1,11 @@
 ---
 title: Multiple backgrounds
-slug: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-original_slug: Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds
+slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 ---
 
 {{CSSRef}}
 
-Com [CSS3](/pt-BR/CSS/CSS3), você pode aplicar aos elementos multiplos planos de fundo. Estes ficam em camadas empilhadas uma acima da outra onde o o primeiro fundo dado será desenhado no topo e apenas o último fundo da lista poderá definir uma cor sólida de fundo.
+Com [CSS3](/pt-BR/docs/CSS/CSS3), você pode aplicar aos elementos multiplos planos de fundo. Estes ficam em camadas empilhadas uma acima da outra onde o o primeiro fundo dado será desenhado no topo e apenas o último fundo da lista poderá definir uma cor sólida de fundo.
 
 Especificar planos de fundo múltplos é fácil:
 
@@ -24,20 +23,24 @@ Neste exemplo, três planos de fundos estão empilhados: o logo do Firefox, um d
 
 ```css
 .multi_bg_example {
-  background: url(http://demos.hacks.mozilla.org/openweb/resources/images/logos/firefox-48.png),
-        -moz-linear-gradient(left, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1)),
-        url(http://demos.hacks.mozilla.org/openweb/resources/images/patterns/flowers-pattern.jpg);
+  background:
+    url(http://demos.hacks.mozilla.org/openweb/resources/images/logos/firefox-48.png),
+    -moz-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)),
+    url(http://demos.hacks.mozilla.org/openweb/resources/images/patterns/flowers-pattern.jpg);
   background-repeat: no-repeat, no-repeat, repeat;
-  background-position: bottom right, left, right;
+  background-position:
+    bottom right,
+    left,
+    right;
 }
 ```
 
-| Captura de Tela                                            | Demonstração |
-| ---------------------------------------------------------- | ------------ |
-| ![css_multibg.png](/@api/deki/files/4028/=css_multibg.png) |              |
+| Captura de Tela                     | Demonstração |
+| ----------------------------------- | ------------ |
+| ![css_multibg.png](css_multibg.png) |              |
 
 Como pode ver, o logo do firefox (listado primeiro) está no topo, seguido do gradiente que está uma camada acima do fundo florido. Cada uma das sub-propriedade subsequente, ({{ cssxref("background-repeat") }} e {{ cssxref("background-position") }}) se aplicam aos fundos correspondentes. Então o primeiro valor para {{ cssxref("background-repeat") }} se aplica ao primeiro plano de fundo (o mais da frente), e assim por adiante.
 
 ## Veja também
 
-- [Usando degradês](/pt-BR/CSS/Using_CSS_gradients)
+- [Usando degradês](/pt-BR/docs/CSS/Using_CSS_gradients)

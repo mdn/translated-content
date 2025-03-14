@@ -1,43 +1,63 @@
 ---
-title: プリフェッチ
+title: Prefetch (先読み)
 slug: Glossary/Prefetch
+l10n:
+  sourceCommit: 922c2b0f37e2f13887c50efe47e62bc23d94c3aa
 ---
 
-プリフェッチは、コンテンツが要求される可能性が高いことを前提にして、ユーザーが要求したときにコンテンツを即座にロードできるようにします。コンテンツはユーザーが明示的にリクエストすることなくダウンロードされ、将来の使用を想定してキャッシュされます。
+{{GlossarySidebar}}
 
-### DNS プリフェッチ
+先読み (Prefetching) は、近い将来ユーザーが移動する可能性のあるページに対して、バックグラウンドで文書やサブリソースを投機的に取得するということです。
+これによって、ユーザーが先読みされたページを選んだ場合、そのページの読み込む時間を大幅に短縮することができます。
+先読みは、例えば、 "Next" ボタンでリンクされたページやそのサブリソース、ユーザーが当てたリンクのポップアップ、検索結果などを取得するために使用する可能性があります。
 
-ドメインの解決は、携帯電話のネットワークでは遅延のために時間がかかることがあります。検索エンジンの結果のように、クリックされる可能性のある外部ウェブサイトへのリンクが多数ある場合、DNS プリフェッチはドメイン名を事前に解決するため、ドメイン解決に関連するリクエスト時間を短縮し、読み込み時間が短縮されます。
+### リソースの先読み
 
-```
-<link rel="dns-prefetch" href="https://example.com/">
-```
+リソースの先読みは、それが将来のナビゲーションで必要になる可能性の高さに基づいて行うべきです。ブラウザーは、アドレスバーの現在の URL のようないくつかのリソースについて、これを自動的に推測することができます。
 
-### リンクのプリフェッチ
+これは [`<link rel="prefetch">`](/ja/docs/Web/HTML/Attributes/rel/prefetch) を使用して行う言ことができます（[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) はナビゲーションのための文書の先読みだけを処理します）。
 
-リンクのプリフェッチは、ユーザーがクリックする可能性の高いリンクを想定し、それらのリンクのコンテンツを予めダウンロードしておくことで、パフォーマンスを最適化するテクニックです。ユーザーがリンクをクリックすると、コンテンツはすでにダウンロードされているため、ページが即座にレンダリングされます。
-
-プリフェッチヒントは HTTP ヘッダーで送信されます
-
-```
-Link: ; rel=dns-prefetch,
-      ; as=script; rel=preload,
-      ; rel=prerender,
-      ; as=style; rel=preload
+```html
+<link rel="prefetch" href="next.html" />
 ```
 
-### 属性値のプリフェッチ
+### 文書の先読み
 
-ブラウザーは、prefetch 属性値付きの [`<link>`](/ja/docs/Web/HTML/Element/link) タグが指示したコンテンツをプリフェッチするので、開発者はどのリソースをプリフェッチすべきかを制御することができます。
+開発者はさまざまな方法で、先読みすべきナビゲーションのヒントをブラウザーに提供することができます。
 
+[`<link rel="prefetch">`](/ja/docs/Web/HTML/Attributes/rel/prefetch) の場合:
+
+```html
+<link rel="prefetch" href="next.html" />
 ```
- <link rel="prefetch" href="https://www.example.com/solutions" />
+
+[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) の先読みの場合:
+
+```html
+<script type="speculationrules">
+  {
+    "prefetch": [
+      {
+        "source": "list",
+        "urls": ["next.html"]
+      }
+    ]
+  }
+</script>
+```
+
+投機ルール API は、ナビゲーションのための文書の先読みを `<link rel="prefetch">` よりもうまく扱います。前者はそのために特別に設計されたのに対して、後者は多くの制限があります。詳細は [`<link rel="prefetch">`](/ja/docs/Web/HTML/Attributes/rel/prefetch) を参照してください。
+
+### DNS 先読み
+
+[DNS 先読み](/ja/docs/Web/HTML/Attributes/rel/dns-prefetch)は、事前にドメイン名を解決し、リクエスト時のドメイン検索にかかる時間を短縮することで、読み込む時間を短縮します。
+
+```html
+<link rel="dns-prefetch" href="https://example.com/" />
 ```
 
 ## 関連情報
 
-- defer
-- async
-- [preload](/ja/docs/Web/HTML/Preloading_content)
-- [page prediction](/ja/docs/Glossary/Page_prediction)
-- [lazy loading](/ja/docs/Learn/Performance/Lazy_loading)
+- [投機的読み込み](/ja/docs/Web/Performance/Speculative_loading)
+- {{Glossary("prerender")}}
+- [投機ルール API](/ja/docs/Web/API/Speculation_Rules_API)

@@ -1,16 +1,9 @@
 ---
 title: String.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/valueOf
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/valueOf
 ---
 
-{{JSRef("Objetos_globales", "String")}}
+{{JSRef}}
 
 ## Resumen
 
@@ -19,7 +12,7 @@ The **`valueOf()`** método devuelve el valor primitivo de un objeto String.
 ## Sintaxis
 
 ```
-caneda.valueOf()
+cadena.valueOf()
 ```
 
 ## Descripción
@@ -34,7 +27,7 @@ Normalmente este método es llamado internamente por JavaScript y no en el códi
 
 ```js
 cadena = new String("Hello world");
-alert(cadena.valueOf())          // Displays "Hello world"
+alert(cadena.valueOf()); // Displays "Hello world"
 ```
 
 ## Vea También

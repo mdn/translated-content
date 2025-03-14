@@ -1,17 +1,14 @@
 ---
 title: CanvasRenderingContext2D.lineCap
 slug: Web/API/CanvasRenderingContext2D/lineCap
-tags:
-  - API
-  - Canvas
-  - Property
-translation_of: Web/API/CanvasRenderingContext2D/lineCap
 ---
+
 {{APIRef}}
 
 Свойство **`CanvasRenderingContext2D.lineCap`** предоставляемое Canvas 2D API определяет, как будут выглядеть концы нарисованных линий.
 
-> **Примечание:** Линии могут быть нарисованы с помощью методов {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}, и {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
+> [!NOTE]
+> Линии могут быть нарисованы с помощью методов {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}, и {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
 ## Синтаксис
 
@@ -43,13 +40,13 @@ ctx.lineCap = "butt" || "round" || "square";
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.moveTo(20, 20);
 ctx.lineWidth = 15;
-ctx.lineCap = 'round';
+ctx.lineCap = "round";
 ctx.lineTo(100, 100);
 ctx.stroke();
 ```
@@ -69,12 +66,12 @@ ctx.stroke();
 ```
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const lineCap = ['butt', 'round', 'square'];
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const lineCap = ["butt", "round", "square"];
 
 // Draw guides
-ctx.strokeStyle = '#09f';
+ctx.strokeStyle = "#09f";
 ctx.beginPath();
 ctx.moveTo(10, 10);
 ctx.lineTo(140, 10);
@@ -83,7 +80,7 @@ ctx.lineTo(140, 140);
 ctx.stroke();
 
 // Draw lines
-ctx.strokeStyle = 'black';
+ctx.strokeStyle = "black";
 for (let i = 0; i < lineCap.length; i++) {
   ctx.lineWidth = 15;
   ctx.lineCap = lineCap[i];
@@ -94,7 +91,7 @@ for (let i = 0; i < lineCap.length; i++) {
 }
 ```
 
-{{EmbedLiveSample("Разница_между_значениями_lineCap", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}
+{{EmbedLiveSample("Разница_между_значениями_lineCap", "180", "180", "canvas_linecap.png")}}
 
 ## Спецификации
 
@@ -103,10 +100,6 @@ for (let i = 0; i < lineCap.length; i++) {
 ## Совместимость с браузерами
 
 {{Compat}}
-
-### Особенности WebKit/Blink
-
-- В браузерах на базе Webkit и Blink помимо этого свойства, также поддерживается нестандартный метод `ctx.setLineCap()`.
 
 ## Смотрите также
 

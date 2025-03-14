@@ -39,23 +39,31 @@ O método `finally()` é bastante similar a chamar `.then(quandoEstabelecida, qu
 - Diferentemente de `Promise.resolve(2).then(() => {}, () => {})` (será resolvido como `undefined`), `Promise.resolve(2).finally(() => {})` será resolvido como `2`.
 - De maneira semelhante, diferentemente de `Promise.reject(3).then(() => {}, () => {})` (que será resolvido como `undefined`), `Promise.reject(3).finally(() => {})` será rejeitado como `3`.
 
-> **Nota:** Um `throw` (ou retorno de uma promise rejeitada) no callback de `finally` rejeitará a nova promise com a razão de rejeição especificada na chamada de `throw()`.
+> [!NOTE]
+> Um `throw` (ou retorno de uma promise rejeitada) no callback de `finally` rejeitará a nova promise com a razão de rejeição especificada na chamada de `throw()`.
 
 ## Exemplos
 
 ```js
 let carregando = true;
 
-fetch(minhaRequisicao).then(function(resposta) {
+fetch(minhaRequisicao)
+  .then(function (resposta) {
     var tipoConteudo = response.headers.get("content-type");
-    if(tipoConteudo && tipoConteudo.includes("application/json")) {
+    if (tipoConteudo && tipoConteudo.includes("application/json")) {
       return resposta.json();
     }
     throw new TypeError("Opa, isso não é JSON!");
   })
-  .then(function(json) { /* processamento do seu JSON */ })
-  .catch(function(erro) { console.log(erro); })
-  .finally(function() { carregando = false; });
+  .then(function (json) {
+    /* processamento do seu JSON */
+  })
+  .catch(function (erro) {
+    console.log(erro);
+  })
+  .finally(function () {
+    carregando = false;
+  });
 ```
 
 ## Especificações
@@ -66,7 +74,7 @@ fetch(minhaRequisicao).then(function(resposta) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Promise.finally")}}
+{{Compat}}
 
 ## Veja também
 

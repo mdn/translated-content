@@ -1,7 +1,6 @@
 ---
 title: Introdução ao DOM
 slug: Web/API/Document_Object_Model/Introduction
-original_slug: DOM/Referencia_do_DOM/Introdução
 ---
 
 O DOM (Document Object Model) é a representação de dados dos objetos que compõem a estrutura e o conteúdo de um documento na Web. Neste guia, apresentaremos brevemente o DOM. Veremos como o DOM representa um documento {{Glossary ("HTML")}} ou {{Glossary ("XML")}} na memória e como você usa APIs para criar aplicativos e conteúdo da Web.
@@ -23,9 +22,9 @@ var paragraphs = document.getElementsByTagName("p");
 alert(paragraphs[0].nodeName);
 ```
 
-Todas as propriedades, métodos e eventos disponíveis para manipular e criar páginas da Web são organizados em objetos (por exemplo, o objeto de `document` que representa o próprio documento, o objeto de `table` que implementa a Interface especial DOM {{domxref ("HTMLTableElement")}}}} para acessar tabelas HTML e assim por diante). Esta documentação fornece uma referência objeto a objeto ao DOM.
+Todas as propriedades, métodos e eventos disponíveis para manipular e criar páginas da Web são organizados em objetos (por exemplo, o objeto de `document` que representa o próprio documento, o objeto de `table` que implementa a Interface especial DOM {{domxref ("HTMLTableElement")}} para acessar tabelas HTML e assim por diante). Esta documentação fornece uma referência objeto a objeto ao DOM.
 
-O DOM moderno é construído usando várias APIs que trabalham juntas. O [DOM](/pt-BR/docs/Web/API/Document_Object_Model) principal define os objetos que descrevem fundamentalmente um documento e os objetos dentro dele. Isso é expandido conforme necessário por outras APIs que adicionam novos recursos e capacidades ao DOM. Por exemplo, a [HTML DOM API](/pt-BR/docs/Web/API/HTML_DOM) adiciona suporte para representar documentos HTML no DOM principal.
+O DOM moderno é construído usando várias APIs que trabalham juntas. O [DOM](/pt-BR/docs/Web/API/Document_Object_Model) principal define os objetos que descrevem fundamentalmente um documento e os objetos dentro dele. Isso é expandido conforme necessário por outras APIs que adicionam novos recursos e capacidades ao DOM. Por exemplo, a [HTML DOM API](/pt-BR/docs/Web/API/HTML_DOM_API) adiciona suporte para representar documentos HTML no DOM principal.
 
 ## DOM e JavaScript
 
@@ -56,7 +55,7 @@ Quando você cria um script - seja embutido em um elemento(tag) `<script>` ou in
 O JavaScript a seguir exibirá um alerta quando o documento for carregado (e quando todo o DOM estiver disponível para uso):
 
 ```html
-<body onload="window.alert('Welcome to my home page!');">
+<body onload="window.alert('Welcome to my home page!');"></body>
 ```
 
 Outro exemplo. Esta função cria um novo elemento H1, adiciona texto a esse elemento e, em seguida, adiciona o `H1` à árvore deste documento:
@@ -65,19 +64,17 @@ Outro exemplo. Esta função cria um novo elemento H1, adiciona texto a esse ele
 <html>
   <head>
     <script>
-       // run this function when the document is loaded
-       window.onload = function() {
-
-         // create a couple of elements in an otherwise empty HTML page
-         var heading = document.createElement("h1");
-         var heading_text = document.createTextNode("Big Head!");
-         heading.appendChild(heading_text);
-         document.body.appendChild(heading);
-      }
+      // run this function when the document is loaded
+      window.onload = function () {
+        // create a couple of elements in an otherwise empty HTML page
+        var heading = document.createElement("h1");
+        var heading_text = document.createTextNode("Big Head!");
+        heading.appendChild(heading_text);
+        document.body.appendChild(heading);
+      };
     </script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -85,7 +82,8 @@ Outro exemplo. Esta função cria um novo elemento H1, adiciona texto a esse ele
 
 Esta referência tenta descrever os vários objetos e tipos em termos simples. Mas há vários tipos de dados diferentes sendo transmitidos pela API que você deve conhecer.
 
-> **Nota:** Como a grande maioria do código que usa o DOM gira em torno da manipulação de documentos HTML, é comum sempre se referir aos nós no DOM como **elementos**, pois em um documento HTML, cada nó é um elemento. Apesar de não ser estritamente precisa, a documentação que você encontrará no MDN frequentemente fará a mesma coisa, por causa de quão comum é essa suposição.
+> [!NOTE]
+> Como a grande maioria do código que usa o DOM gira em torno da manipulação de documentos HTML, é comum sempre se referir aos nós no DOM como **elementos**, pois em um documento HTML, cada nó é um elemento. Apesar de não ser estritamente precisa, a documentação que você encontrará no MDN frequentemente fará a mesma coisa, por causa de quão comum é essa suposição.
 
 A tabela a seguir descreve brevemente esses tipos de dados.
 
@@ -104,7 +102,7 @@ A tabela a seguir descreve brevemente esses tipos de dados.
         exemplo, a propriedade <strong><code>ownerDocument </code></strong>de um
         elemento retorna o <code>document</code> ao qual ele pertence),esse
         objeto é o próprio objeto de <code>document</code> raiz. O capítulo
-        <a href="/en-US/docs/Web/API/Document"
+        <a href="/pt-BR/docs/Web/API/Document"
           >DOM <code>document</code> Reference</a
         >
         descreve o objeto do <code>document</code> .
@@ -134,7 +132,7 @@ A tabela a seguir descreve brevemente esses tipos de dados.
           um documento HTML, elementos são ainda mais aprimorados pelas APIs
           HTML DOM. A interface {{domxref("HTMLElement")}} bem como
           outras interfaces descrevem capacidades de tipos especifícos de
-          elementos (por exemlo, {{domxref("HTMLTableElement")}} para
+          elementos (por exemplo, {{domxref("HTMLTableElement")}} para
           elementos {{HTMLElement("table")}}).
         </p>
       </td>
@@ -169,13 +167,6 @@ A tabela a seguir descreve brevemente esses tipos de dados.
     <tr>
       <td>{{domxref("NamedNodeMap")}}</td>
       <td>
-        <p>
-          é como um array, mas os itens são acessados por nome ou índice, embora
-          este último caso seja meramente uma conveniência para enumeração, já
-          que eles não estão em uma ordem específica na lista. Um namedNodeMap
-          possui um método item () para esse propósito, e você também pode
-          adicionar e remover itens de um namedNodeMap.
-        </p>
         <p>
           Um <code>namedNodeMap</code> é como um array, mas os itens são
           acessados por nome ou índice, embora este último caso seja meramente
@@ -250,35 +241,47 @@ Você pode usar essa página teste ou criar uma similar para testar as interface
   <head>
     <title>Testes DOM</title>
     <script type="application/javascript">
-    function setBodyAttr(attr, value){
-      if (document.body) eval('document.body.'+attr+'="'+value+'"');
-      else notSupported();
-    }
+      function setBodyAttr(attr, value) {
+        if (document.body) eval("document.body." + attr + '="' + value + '"');
+        else notSupported();
+      }
     </script>
   </head>
   <body>
     <div style="margin: .5in; height: 400;">
-      <p><b><tt>text</tt></b></p>
+      <p>
+        <b><tt>text</tt></b>
+      </p>
       <form>
-        <select onChange="setBodyAttr('text',
+        <select
+          onChange="setBodyAttr('text',
         this.options[this.selectedIndex].value);">
-          <option value="black">preto
-          <option value="darkblue">azul escuro
+          <option value="black">preto</option>
+          <option value="darkblue">azul escuro</option>
         </select>
-        <p><b><tt>bgColor</tt></b></p>
-        <select onChange="setBodyAttr('bgColor',
+        <p>
+          <b><tt>bgColor</tt></b>
+        </p>
+        <select
+          onChange="setBodyAttr('bgColor',
         this.options[this.selectedIndex].value);">
-          <option value="white">branco
-          <option value="lightgrey">cinza
+          <option value="white">branco</option>
+          <option value="lightgrey">cinza</option>
         </select>
-        <p><b><tt>link</tt></b></p>
-        <select onChange="setBodyAttr('link',
+        <p>
+          <b><tt>link</tt></b>
+        </p>
+        <select
+          onChange="setBodyAttr('link',
         this.options[this.selectedIndex].value);">
-          <option value="blue">azul
-          <option value="green">verde
-        </select>  <small>
-        <a href="http://algum.website.tld/pagina.html" id="amostra">
-        (link)</a></small><br>
+          <option value="blue">azul</option>
+          <option value="green">verde</option>
+        </select>
+        <small>
+          <a href="http://algum.website.tld/pagina.html" id="amostra">
+            (link)</a
+          ></small
+        ><br />
       </form>
       <form>
         <input type="button" value="version" onclick="ver()" />
@@ -292,7 +295,7 @@ Para testar várias interfaces numa única página - por exemplo, um conjunto de
 
 Figura 0.1 Página de Teste DOM
 
-![Image:DOM_Ref_Introduction_to_the_DOM.gif](/@api/deki/files/173/=DOM_Ref_Introduction_to_the_DOM.gif)
+![Image:DOM_Ref_Introduction_to_the_DOM.gif](dom_ref_introduction_to_the_dom.gif)
 
 Nesse exemplo, os menus drop-down atualizam dinamicamente os aspectos acessáveis pelo DOM na página web como o fundo (`bgColor`), a cor dos hiperlinks (`aLink`), e a cor do texto (`text`). Porém, ao desenhar suas páginas de teste, testar as interfaces conforme for lendo sobre elas é uma parte importante para aprender a usar o DOM de forma efetiva.
 
@@ -300,7 +303,7 @@ Nesse exemplo, os menus drop-down atualizam dinamicamente os aspectos acessávei
 
 - [DOM Reference](/pt-BR/docs/Web/API/Document_Object_Model)
 - [Introduction to the DOM](/pt-BR/docs/Web/API/Document_Object_Model/Introduction)
-- [Events and the DOM](/pt-BR/docs/Web/API/Document_Object_Model/Events)
+- [Events and the DOM](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
 - [Examples](/pt-BR/docs/Web/API/Document_Object_Model/Examples)
 
 {{DefaultAPISidebar("DOM")}}

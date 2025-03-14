@@ -1,7 +1,6 @@
 ---
 title: CSS, comment ça marche ?
 slug: Learn/CSS/First_steps/How_CSS_works
-translation_of: Learn/CSS/First_steps/How_CSS_works
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
@@ -44,7 +43,7 @@ Pour afficher un document, un navigateur doit combiner le contenu du document et
 1. Le navigateur charge le HTML (par exemple, il le reçoit à travers le réseau).
 2. Il traduit le [HTML](/fr/docs/Glossary/HTML) en un [DOM](/fr/docs/Glossary/DOM) (_Document Object Model_)&nbsp;: une représentation du document HTML stockable en mémoire sur votre ordinateur. Nous expliquons le DOM plus en détails dans la prochaine section.
 3. Le navigateur récupère ensuite la plupart des ressources attachées au document HTML, telles les images, les vidéos ajoutées à la page… et la feuille CSS externe&nbsp;! JavaScript est traité un peu plus tard et nous n'en parlerons pas ici pour simplifier la présentation.
-4. Le navigateur *parse* le CSS, classe les différentes règles par types de sélecteur (par exemple, élément, classe, ID, etc.) dans des «&nbsp;_buckets_&nbsp;». En fonction des sélecteurs trouvés, le navigateur calcule quelle règle s'applique à quel nœud du DOM. Chaque nœud du DOM ciblé par CSS est étiqueté par sa règle de style. L'arbre ainsi obtenu s'appelle l'arbre de rendu (<i lang="en">render tree</i>).
+4. Le navigateur _parse_ le CSS, classe les différentes règles par types de sélecteur (par exemple, élément, classe, ID, etc.) dans des «&nbsp;_buckets_&nbsp;». En fonction des sélecteurs trouvés, le navigateur calcule quelle règle s'applique à quel nœud du DOM. Chaque nœud du DOM ciblé par CSS est étiqueté par sa règle de style. L'arbre ainsi obtenu s'appelle l'arbre de rendu (<i lang="en">render tree</i>).
 5. Pour chaque nœud de l'arbre de rendu, le navigateur calcule l'effet visuel de la règle CSS associée.
 6. Le visuel ainsi produit est affiché à l'écran (cette étape s'appelle «&nbsp;_painting_&nbsp;»).
 
@@ -93,7 +92,9 @@ C'est ainsi que le navigateur interprète notre fragment HTML — il transforme 
 {{EmbedLiveSample('', '100%', 55)}}
 
 ```css hidden
-p {margin:0;}
+p {
+  margin: 0;
+}
 ```
 
 ## Appliquer CSS au DOM
@@ -136,7 +137,7 @@ Quand un navigateur parse vos règles et rencontre une propriété ou une valeur
 
 De même quand le navigateur rencontre un sélecteur qu'il ne sait pas interpréter, il ignore la règle correspondante et passe à la suivante.
 
-Dans l'exemple ci-dessous, j'ai utilisé l'orthographe anglaise `colour` pour le mot *couleur.* Cela contredit la convention CSS et rend ce code incompréhensible pour le navigateur. En conséquence, le paragraphe n'a pas été colorié en bleu. Par contre, tout le reste du CSS est appliqué&nbsp;; seule la ligne invalide est ignorée.
+Dans l'exemple ci-dessous, j'ai utilisé l'orthographe anglaise `colour` pour le mot _couleur._ Cela contredit la convention CSS et rend ce code incompréhensible pour le navigateur. En conséquence, le paragraphe n'a pas été colorié en bleu. Par contre, tout le reste du CSS est appliqué&nbsp;; seule la ligne invalide est ignorée.
 
 ```html
 <p>Je veux que ce texte soit grand, gras et bleu.</p>
@@ -167,14 +168,6 @@ Dans les leçons à venir, nous rencontrerons d'autres méthodes pour adapter le
 
 ## Et enfin
 
-Ce cours est presque achevé&nbsp;; il nous reste un seul point à voir. Dans la prochaine leçon, vous allez [mettre en œuvre vos nouvelles connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)&nbsp;: vous allez remettre en forme un exemple, une occasion d'appliquer tout ce que vous avez appris sur les CSS.
+Ce cours est presque achevé&nbsp;; il nous reste un seul point à voir. Dans la prochaine leçon, vous allez [mettre en œuvre vos nouvelles connaissances](/fr/docs/Learn/CSS/First_steps/Styling_a_biography_page)&nbsp;: vous allez remettre en forme un exemple, une occasion d'appliquer tout ce que vous avez appris sur les CSS.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
-
-## Dans ce module
-
-1. [Qu'est-ce que CSS&nbsp;?](/fr/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
-3. [Comment CSS est structuré](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS, comment ça marche&nbsp;?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Mettre en œuvre vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

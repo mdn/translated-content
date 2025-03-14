@@ -1,21 +1,37 @@
 ---
 title: handler.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Proxy
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/getPrototypeOf
 ---
 
 {{JSRef}}
 
 La méthode **`handler.getPrototypeOf()`** représente une trappe pour la méthode interne `[[GetPrototypeOf]]`.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-getprototypeof.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.getPrototypeOf()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  eyeCount: 4,
+};
+
+const monsterPrototype = {
+  eyeCount: 2,
+};
+
+const handler = {
+  getPrototypeOf(target) {
+    return monsterPrototype;
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler);
+
+console.log(Object.getPrototypeOf(proxy1) === monsterPrototype);
+// Expected output: true
+
+console.log(Object.getPrototypeOf(proxy1).eyeCount);
+// Expected output: 2
+```
 
 ## Syntaxe
 
@@ -65,15 +81,15 @@ Si les invariants suivant ne sont pas respectés, le proxy renverra une exceptio
 var obj = {};
 var proto = {};
 var gestionnaire = {
-    getPrototypeOf(cible) {
-        console.log(cible === obj);   // true
-        console.log(this === gestionnaire); // true
-        return proto;
-    }
+  getPrototypeOf(cible) {
+    console.log(cible === obj); // true
+    console.log(this === gestionnaire); // true
+    return proto;
+  },
 };
 
 var p = new Proxy(obj, gestionnaire);
-console.log(Object.getPrototypeOf(p) === proto);    // true
+console.log(Object.getPrototypeOf(p) === proto); // true
 ```
 
 ### Cinq façons de déclencher la trappe `getPrototypeOf`
@@ -81,16 +97,16 @@ console.log(Object.getPrototypeOf(p) === proto);    // true
 ```js
 var obj = {};
 var p = new Proxy(obj, {
-    getPrototypeOf(cible) {
-        return Array.prototype;
-    }
+  getPrototypeOf(cible) {
+    return Array.prototype;
+  },
 });
 console.log(
-    Object.getPrototypeOf(p) === Array.prototype,  // true
-    Reflect.getPrototypeOf(p) === Array.prototype, // true
-    p.__proto__ === Array.prototype,               // true
-    Array.prototype.isPrototypeOf(p),              // true
-    p instanceof Array                             // true
+  Object.getPrototypeOf(p) === Array.prototype, // true
+  Reflect.getPrototypeOf(p) === Array.prototype, // true
+  p.__proto__ === Array.prototype, // true
+  Array.prototype.isPrototypeOf(p), // true
+  p instanceof Array, // true
 );
 ```
 
@@ -99,17 +115,17 @@ console.log(
 ```js
 var obj = {};
 var p = new Proxy(obj, {
-    getPrototypeOf(cible) {
-        return "toto";
-    }
+  getPrototypeOf(cible) {
+    return "toto";
+  },
 });
 Object.getPrototypeOf(p); // TypeError : "toto" n'est pas un objet ou null
 
 var obj = Object.preventExtensions({});
 var p = new Proxy(obj, {
-    getPrototypeOf(cible) {
-        return {};
-    }
+  getPrototypeOf(cible) {
+    return {};
+  },
 });
 Object.getPrototypeOf(p); // TypeError : on attend la même valeur pour le prototype
 ```

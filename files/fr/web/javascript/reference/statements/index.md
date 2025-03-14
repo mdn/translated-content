@@ -1,12 +1,6 @@
 ---
 title: Instructions
 slug: Web/JavaScript/Reference/Statements
-tags:
-  - JavaScript
-  - Reference
-  - statements
-translation_of: Web/JavaScript/Reference/Statements
-original_slug: Web/JavaScript/Reference/Instructions
 ---
 
 {{jsSidebar("Statements")}}
@@ -50,7 +44,7 @@ Pour une liste alphabétique, voir le volet de navigation situé à gauche sur c
 - {{jsxref("Instructions/function", "function")}}
   - : Cette instruction déclare une fonction avec les paramètres donnés.
 - {{jsxref("Instructions/function*", "function*")}}
-  - : Les fonctions génératrices permettent de créer des [itérateurs](/fr/docs/Web/JavaScript/Guide/Le_protocole_iterator) plus simplement.
+  - : Les fonctions génératrices permettent de créer des [itérateurs](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) plus simplement.
 - {{experimental_inline}} {{jsxref("Instructions/async_function", "async function")}}
   - : Cette instruction déclare une fonction asynchrone avec les paramètres associés.
 - {{jsxref("Instructions/return", "return")}}
@@ -69,9 +63,9 @@ Pour une liste alphabétique, voir le volet de navigation situé à gauche sur c
 - {{jsxref("Instructions/for...in", "for...in")}}
   - : Cette instruction effectue, dans un ordre arbitraire, une boucle sur les propriétés énumérables d'un objet. Pour chacune des différentes propriétés, des instructions peuvent être exécutées.
 - {{jsxref("Instructions/for...of", "for...of")}}
-  - : Cette instruction parcourt les objets sur lesquels on peut itérer (comme les tableaux, les [itérateurs et générateurs](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs)). Pour ce faire, elle utilise un mécanisme d'itération sur mesure utilisant des instructions à exécuter pour chacune des différentes propriétés.
+  - : Cette instruction parcourt les objets sur lesquels on peut itérer (comme les tableaux, les [itérateurs et générateurs](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators)). Pour ce faire, elle utilise un mécanisme d'itération sur mesure utilisant des instructions à exécuter pour chacune des différentes propriétés.
 - {{jsxref("Instructions/for-await...of","for await...of")}}
-  - : Cette instruction parcourt les objets itérables asynchrones tels que les tableaux, les [itérateurs et générateurs](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs). Elle utilise un mécanisme d'itération spécifique et des instructions sont exécutées pour la valeur de chaque propriété.
+  - : Cette instruction parcourt les objets itérables asynchrones tels que les tableaux, les [itérateurs et générateurs](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators). Elle utilise un mécanisme d'itération spécifique et des instructions sont exécutées pour la valeur de chaque propriété.
 - {{jsxref("Instructions/while", "while")}}
   - : Cette instruction permet de créer une boucle qui s'exécute tant qu'une condition de test est vérifiée. La condition est évaluée avant d'exécuter l'instruction contenue dans la boucle.
 
@@ -83,7 +77,7 @@ Pour une liste alphabétique, voir le volet de navigation situé à gauche sur c
   - : Cette instruction permet à un script signé de fournir des propriétés, fonctions et des objets à d'autres scripts (signés ou non).
 - {{jsxref("Instructions/import", "import")}}
   - : Cette instruction permet à un script d'importer des propriétés, fonctions ou objets depuis un script qui les exporte.
-- [`import.meta`](/fr/docs/Web/JavaScript/Reference/Instructions/import.meta)
+- [`import.meta`](/fr/docs/Web/JavaScript/Reference/Operators/import.meta)
   - : Une méta propriété qui expose des métadonnées à propos du module JavaScript.
 - {{jsxref("Instructions/label", "label")}}
   - : Cette instruction fournit un identifiant auquel il est possible de se référer en utilisant une instruction `break` ou `continue`.
@@ -100,4 +94,4 @@ Pour une liste alphabétique, voir le volet de navigation situé à gauche sur c
 
 ## Voir aussi
 
-- Le chapitre de cette référence sur les [opérateurs JavaScript](/fr/docs/JavaScript/Reference/Op%C3%A9rateurs).
+- Le chapitre de cette référence sur les [opérateurs JavaScript](/fr/docs/Web/JavaScript/Reference/Operators).

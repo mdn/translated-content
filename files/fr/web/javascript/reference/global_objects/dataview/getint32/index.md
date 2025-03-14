@@ -1,22 +1,24 @@
 ---
 title: DataView.prototype.getInt32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt32
-tags:
-  - DataView
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getInt32
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getInt32
 ---
 
 {{JSRef}}
 
 La méthode **`getInt32()`** permet de lire un entier signé sur 32 bits (type _long_ par analogie avec C) à l'octet donné par rapport au début de {{jsxref("DataView")}}.
 
-{{EmbedInteractiveExample("pages/js/dataview-getint32.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.getInt32()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setInt32(1, 2147483647); // Max signed 32-bit integer
+
+console.log(view.getInt32(1));
+// Expected output: 2147483647
+```
 
 ## Syntaxe
 

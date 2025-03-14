@@ -1,20 +1,11 @@
 ---
 title: MutationObserver
 slug: Web/API/MutationObserver
-tags:
-  - API
-  - Advanced
-  - DOM
-  - DOM Reference
-  - NeedsContent
-  - NeedsUpdate
-  - Reference
-translation_of: Web/API/MutationObserver
 ---
 
 {{APIRef("DOM")}}
 
-`MutationObserver` предоставляет возможность получать уведомления об изменении определённых [DOM](/ru/docs/DOM)-элементов. `MutationObserver` является заменой [Mutation Events](/ru/docs/DOM/Mutation_events), определённой в спецификации DOM3 Events.
+`MutationObserver` предоставляет возможность получать уведомления об изменении определённых [DOM](/ru/docs/Web/API/Document_Object_Model)-элементов. `MutationObserver` является заменой [Mutation Events](/ru/docs/DOM/Mutation_events), определённой в спецификации DOM3 Events.
 
 ## Конструктор
 
@@ -39,7 +30,8 @@ translation_of: Web/API/MutationObserver
 
 `MutationObserverInit` — объект, который может содержать следующие свойства:
 
-> **Примечание:** Так или иначе необходимо установить `true` для одного из следующих свойств: `childList`, `attributes`, `characterData`. В противном случае будет вызвана ошибка "An invalid or illegal string was specified"
+> [!NOTE]
+> Так или иначе необходимо установить `true` для одного из следующих свойств: `childList`, `attributes`, `characterData`. В противном случае будет вызвана ошибка "An invalid or illegal string was specified"
 
 | Property                | Description                                                                                                                             |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
@@ -57,28 +49,28 @@ translation_of: Web/API/MutationObserver
 
 ## Пример использования
 
-Приведённый ниже пример взят из [этого блога](http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/).
+Приведённый ниже пример взят из [этого блога](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/).
 
 ```js
 // Выбираем целевой элемент
-var target = document.getElementById('some-id');
+var target = document.getElementById("some-id");
 
 // Конфигурация observer (за какими изменениями наблюдать)
 const config = {
-    attributes: true,
-    childList: true,
-    subtree: true
+  attributes: true,
+  childList: true,
+  subtree: true,
 };
 
 // Колбэк-функция при срабатывании мутации
-const callback = function(mutationsList, observer) {
-    for (let mutation of mutationsList) {
-        if (mutation.type === 'childList') {
-            console.log('A child node has been added or removed.');
-        } else if (mutation.type === 'attributes') {
-            console.log('The ' + mutation.attributeName + ' attribute was modified.');
-        }
+const callback = function (mutationsList, observer) {
+  for (let mutation of mutationsList) {
+    if (mutation.type === "childList") {
+      console.log("A child node has been added or removed.");
+    } else if (mutation.type === "attributes") {
+      console.log("The " + mutation.attributeName + " attribute was modified.");
     }
+  }
 };
 
 // Создаём экземпляр наблюдателя с указанной функцией колбэка
@@ -95,7 +87,7 @@ observer.disconnect();
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -105,5 +97,5 @@ observer.disconnect();
 - {{domxref('ResizeObserver')}}
 - {{domxref('IntersectionObserver')}}
 - [Краткий обзор](http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers)
-- [Более детальное обсуждение](http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)
-- [Скринкаст от разработчика Chromium Rafael Weinstein](http://www.youtube.com/watch?v=eRZ4pO0gVWw)
+- [Более детальное обсуждение](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)
+- [Скринкаст от разработчика Chromium Rafael Weinstein](https://www.youtube.com/watch?v=eRZ4pO0gVWw)

@@ -1,12 +1,6 @@
 ---
 title: Node.isDefaultNamespace()
 slug: Web/API/Node/isDefaultNamespace
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - Noeuds
-translation_of: Web/API/Node/isDefaultNamespace
 ---
 
 {{APIRef("DOM")}}
@@ -16,7 +10,7 @@ La méthode **`Node.isDefaultNamespace()`** accepte un URI d'espace de nom comme
 ## Syntaxe
 
 ```js
-result = node.isDefaultNamespace(namespaceURI)
+result = node.isDefaultNamespace(namespaceURI);
 ```
 
 - `result` détient la valeur de retour `true` (_vrai_) ou `false` (_faux_).
@@ -26,12 +20,12 @@ result = node.isDefaultNamespace(namespaceURI)
 
 ```js
 var XULNS = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
-var el = document.getElementsByTagNameNS(XULNS, 'textbox')[0];
+var el = document.getElementsByTagNameNS(XULNS, "textbox")[0];
 
 alert(el.isDefaultNamespace(XULNS)); // true
 ```
 
 ## Spécification
 
-- [DOM Level 3 Core: isDefaultNamespace](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-isDefaultNamespace)
+- [DOM Level 3 Core: isDefaultNamespace](https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-isDefaultNamespace)
 - [Code snippets: isDefaultNamespace](/fr/docs/Code_snippets/IsDefaultNamespace)

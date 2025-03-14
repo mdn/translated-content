@@ -1,20 +1,11 @@
 ---
 title: 변형 (transformations)
 slug: Web/API/Canvas_API/Tutorial/Transformations
-tags:
-  - CSS
-  - HTML
-  - 이동
-  - 축소
-  - 캔버스
-  - 크기변형
-  - 트랜스폼
-  - 확대
-translation_of: Web/API/Canvas_API/Tutorial/Transformations
-original_slug: Web/HTML/Canvas/Tutorial/변형
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}이 튜토리얼에 앞서 [canvas 그리드](/ko/docs/Web/HTML/Canvas/Tutorial/Drawing_shapes)와 **좌표 공간**에 대해 알아 보았습니다. 지금까지는 기본적인 그리드를 사용해 요구에 맞추어 전체 canvas의 크기를 바꾸기만 했습니다. Transformation(변형)에는 그리드를 원점에서 다른 위치로 옮기고, 회전하며, 확대·축소까지 하는 더 강력한 방법들이 있습니다.
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
+
+이 튜토리얼에 앞서 [canvas 그리드](/ko/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)와 **좌표 공간**에 대해 알아 보았습니다. 지금까지는 기본적인 그리드를 사용해 요구에 맞추어 전체 canvas의 크기를 바꾸기만 했습니다. Transformation(변형)에는 그리드를 원점에서 다른 위치로 옮기고, 회전하며, 확대·축소까지 하는 더 강력한 방법들이 있습니다.
 
 ## 상태(state)의 저장과 복원
 
@@ -30,7 +21,7 @@ Canvas 상태는 스택(stack)에 쌓입니다. `save()` 메소드가 호출될 
 - 이전부터 적용된 변형(가령, `translate`과 `rotate`와 `scale` 같은 – 아래의 내용을 보세요).
 - 다음 속성(attributes)의 현재 값:
   {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}, {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}, {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}, {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}, {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}, {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}, {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}, {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}, {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}, {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}, {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}}, {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}}, {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.
-- 현재의 [clipping path](/ko/docs/Web/API/Canvas_API/Tutorial/Compositing#Clipping_paths), 이것은 다음 섹션에서 다루겠습니다.
+- 현재의 [clipping path](/ko/docs/Web/API/Canvas_API/Tutorial/Compositing#clipping_paths), 이것은 다음 섹션에서 다루겠습니다.
 
 여러분은 원하는 만큼 `save()` 메소드를 많이 호출할 수 있습니다. `restore()` 메소드를 호출할 때마다 마지막으로 저장된 상태가 스택에서 튀어나와 저장된 설정들을 모두 복원시킵니다.
 
@@ -40,24 +31,24 @@ Canvas 상태는 스택(stack)에 쌓입니다. `save()` 메소드가 호출될 
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
-  ctx.fillRect(0, 0, 150, 150);   // 기본 설정으로 사각형을 그리기
-  ctx.save();                  // 기본 상태를 저장하기
+  ctx.fillRect(0, 0, 150, 150); // 기본 설정으로 사각형을 그리기
+  ctx.save(); // 기본 상태를 저장하기
 
-  ctx.fillStyle = '#09F';      // 설정 변경하기
+  ctx.fillStyle = "#09F"; // 설정 변경하기
   ctx.fillRect(15, 15, 120, 120); // 새로운 설정으로 사각형 그리기
 
-  ctx.save();                  // 현재 상태 저장하기
-  ctx.fillStyle = '#FFF';      // 설정 변경하기
+  ctx.save(); // 현재 상태 저장하기
+  ctx.fillStyle = "#FFF"; // 설정 변경하기
   ctx.globalAlpha = 0.5;
-  ctx.fillRect(30, 30, 90, 90);   // 새로운 설정으로 사각형 그리기
+  ctx.fillRect(30, 30, 90, 90); // 새로운 설정으로 사각형 그리기
 
-  ctx.restore();               // 이전 상태 복원하기
-  ctx.fillRect(45, 45, 60, 60);   // 복원된 설정으로 사각형 그리기
+  ctx.restore(); // 이전 상태 복원하기
+  ctx.fillRect(45, 45, 60, 60); // 복원된 설정으로 사각형 그리기
 
-  ctx.restore();               // 초기 상태를 복원하기
-  ctx.fillRect(60, 60, 30, 30);   // 복원된 설정으로 사각형 그리기
+  ctx.restore(); // 초기 상태를 복원하기
+  ctx.fillRect(60, 60, 30, 30); // 복원된 설정으로 사각형 그리기
 }
 ```
 
@@ -75,11 +66,11 @@ draw();
 
 두 번째 `restore()`문이 호출될 때, 초기 상태( 처음으로 `save`를 호출하기 전에 설정한 상태)가 복원되고 마지막 사각형은 한번 더 검게 그려집니다.
 
-{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "https://mdn.mozillademos.org/files/249/Canvas_savestate.png")}}
+{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "canvas_savestate.png")}}
 
 ## 이동(translating)
 
-![](https://mdn.mozillademos.org/files/234/Canvas_grid_translate.png)우리가 살펴볼 첫 번째 변형 메소드는 `translate()`입니다. 이 메소드는 그리드에서 canvas를 원점에서 다른 점으로 옮기는 데 사용됩니다.
+![](canvas_grid_translate.png)우리가 살펴볼 첫 번째 변형 메소드는 `translate()`입니다. 이 메소드는 그리드에서 canvas를 원점에서 다른 점으로 옮기는 데 사용됩니다.
 
 - {{domxref("CanvasRenderingContext2D.translate", "translate(x, y)")}}
   - : 그리드에서 canvas와 그 원점을 이동합니다. `x`는 이동시킬 수평 거리를 가리키고, `y`는 그리드에서 수직으로 얼마나 멀리 떨어지는지를 표시합니다.
@@ -94,11 +85,11 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   for (var i = 0; i < 3; i++) {
     for (var j = 0; j < 3; j++) {
       ctx.save();
-      ctx.fillStyle = 'rgb(' + (51 * i) + ', ' + (255 - 51 * i) + ', 255)';
+      ctx.fillStyle = "rgb(" + 51 * i + ", " + (255 - 51 * i) + ", 255)";
       ctx.translate(10 + j * 50, 10 + i * 50);
       ctx.fillRect(0, 0, 25, 25);
       ctx.restore();
@@ -115,11 +106,11 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_translate_example", "160", "160", "https://mdn.mozillademos.org/files/9857/translate.png")}}
+{{EmbedLiveSample("A_translate_example", "160", "160", "translate.png")}}
 
 ## 회전(rotating)
 
-![](https://mdn.mozillademos.org/files/233/Canvas_grid_rotate.png)두 번째 변형 메소드는 `rotate()`입니다. canvas를 현재의 원점 둘레로 회전하는 데 사용합니다.
+![](canvas_grid_rotate.png)두 번째 변형 메소드는 `rotate()`입니다. canvas를 현재의 원점 둘레로 회전하는 데 사용합니다.
 
 - {{domxref("CanvasRenderingContext2D.rotate", "rotate(angle)")}}
   - : canvas를 현재 원점을 기준으로 라디안의 `angle` 숫자만큼 시계방향으로 회전시킵니다.
@@ -134,32 +125,32 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 좌측 사각형, canvas 원점에서 회전하기
   ctx.save();
   // 파란 사각형
-  ctx.fillStyle = '#0095DD';
+  ctx.fillStyle = "#0095DD";
   ctx.fillRect(30, 30, 100, 100);
   ctx.rotate((Math.PI / 180) * 25);
   // 회색 사각형
-  ctx.fillStyle = '#4D4E53';
+  ctx.fillStyle = "#4D4E53";
   ctx.fillRect(30, 30, 100, 100);
   ctx.restore();
 
   // 우측 사각형, 사각형 중심에서 회전하기
   // 파란 사각형 그리기
-  ctx.fillStyle = '#0095DD';
+  ctx.fillStyle = "#0095DD";
   ctx.fillRect(150, 30, 100, 100);
 
   ctx.translate(200, 80); // 사각형 중심으로 이동하기
-                          // x = x + 0.5 * width
-                          // y = y + 0.5 * height
+  // x = x + 0.5 * width
+  // y = y + 0.5 * height
   ctx.rotate((Math.PI / 180) * 25); // 회전
   ctx.translate(-200, -80); // 예전 위치로 이동하기
 
   // 회색 사각형 그리기
-  ctx.fillStyle = '#4D4E53';
+  ctx.fillStyle = "#4D4E53";
   ctx.fillRect(150, 30, 100, 100);
 }
 ```
@@ -174,7 +165,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_rotate_example", "310", "210", "https://mdn.mozillademos.org/files/9859/rotate.png")}}
+{{EmbedLiveSample("A_rotate_example", "310", "210", "rotate.png")}}
 
 ## 확대·축소(scaling)
 
@@ -193,7 +184,7 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 간단하지만 확대·축소 비율을 적용한 사각형 그리기
   ctx.save();
@@ -203,8 +194,8 @@ function draw() {
 
   // 수평으로 대칭하기
   ctx.scale(-1, 1);
-  ctx.font = '48px serif';
-  ctx.fillText('MDN', -135, 120);
+  ctx.font = "48px serif";
+  ctx.fillText("MDN", -135, 120);
 }
 ```
 
@@ -216,7 +207,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_scale_example", "160", "160", "https://mdn.mozillademos.org/files/9861/scale.png")}}
+{{EmbedLiveSample("A_scale_example", "160", "160", "scale.png")}}
 
 ## 변형(transforms)
 
@@ -225,7 +216,7 @@ draw();
 - {{domxref("CanvasRenderingContext2D.transform", "transform(a, b, c, d, e, f)")}}
   - : 인수(arguments)에 표시된 행렬을 이용해 현재 변환 행렬을 곱합니다. 변환 행렬은 다음과 같이 작성됩니다. <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
 
-<dl><dd>만일 인수 중에 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>가 있다면, 변환 행렬은 예외 처리하는 메소드 대신에 반드시 infinite로 표시되어야 합니다.</dd></dl>
+<dl><dd>만일 인수 중에 <code><a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Infinity" title="/ko/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>가 있다면, 변환 행렬은 예외 처리하는 메소드 대신에 반드시 infinite로 표시되어야 합니다.</dd></dl>
 
 이 function의 매개 변수들은 다음과 같습니다.
 
@@ -250,21 +241,21 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   var sin = Math.sin(Math.PI / 6);
   var cos = Math.cos(Math.PI / 6);
   ctx.translate(100, 100);
   var c = 0;
   for (var i = 0; i <= 12; i++) {
-    c = Math.floor(255 / 12 * i);
-    ctx.fillStyle = 'rgb(' + c + ', ' + c + ', ' + c + ')';
+    c = Math.floor((255 / 12) * i);
+    ctx.fillStyle = "rgb(" + c + ", " + c + ", " + c + ")";
     ctx.fillRect(0, 0, 100, 10);
     ctx.transform(cos, sin, -sin, cos, 0, 0);
   }
 
   ctx.setTransform(-1, 0, 0, 1, 100, 100);
-  ctx.fillStyle = 'rgba(255, 128, 255, 0.5)';
+  ctx.fillStyle = "rgba(255, 128, 255, 0.5)";
   ctx.fillRect(0, 50, 100, 100);
 }
 ```
@@ -277,6 +268,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Example_for_transform_and_setTransform", "230", "280", "https://mdn.mozillademos.org/files/255/Canvas_transform.png")}}
+{{EmbedLiveSample("Example_for_transform_and_setTransform", "230", "280", "canvas_transform.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

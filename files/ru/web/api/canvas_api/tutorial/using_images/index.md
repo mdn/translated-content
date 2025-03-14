@@ -1,13 +1,9 @@
 ---
 title: Использование изображений
 slug: Web/API/Canvas_API/Tutorial/Using_images
-tags:
-  - Графика
-translation_of: Web/API/Canvas_API/Tutorial/Using_images
-original_slug: Web/API/Canvas_API/Tutorial/Использование_изображений
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Трансформации")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Трансформации")}}
 
 До сих пор мы создавали наши собственные фигуры и применяли стили к ним. Одна из самых впечатляющих функций {{HTMLElement("canvas")}} это возможность использования изображений. Они могут быть использованы для динамического композитинга фото или как фоны графиков, для спрайтов в играх, и так далее. Внешние изображения могут быть использованы в любых поддерживаемых браузером форматах, таких как PNG, GIF, или JPEG. Вы можете даже использовать изображение, произведённое другими canvas элементами на той же странице как источник!
 
@@ -43,7 +39,7 @@ Canvas API может использовать все перечисленные
 
 ### Использование изображений из других доменов
 
-Использование {{htmlattrxref("crossorigin", "img")}} атрибута {{HTMLElement("img")}} элемент (отображается {{domxref("HTMLImageElement.crossOrigin")}} свойства), вы можете запросить разрешение на загрузку другого домена для использования в `drawImage()`. Если хостинг домен разрешает доступ к междоменному изображению, то изображение может быть использовано в вашем canvas без without tainting it;иначе он может испортить ваш canvas.
+Использование [`crossorigin`](/ru/docs/Web/HTML/Element/img#crossorigin) атрибута {{HTMLElement("img")}} элемент (отображается {{domxref("HTMLImageElement.crossOrigin")}} свойства), вы можете запросить разрешение на загрузку другого домена для использования в `drawImage()`. Если хостинг домен разрешает доступ к междоменному изображению, то изображение может быть использовано в вашем canvas без without tainting it;иначе он может испортить ваш canvas.
 
 ### Использование других canvas элементов
 
@@ -56,8 +52,8 @@ Canvas API может использовать все перечисленные
 Другой способ это создать новые {{domxref("HTMLImageElement")}} объекты в нашем скрипте. Чтобы это сделать, вы можете использовать удобный `Image()` конструктор:
 
 ```js
-var img = new Image();   // Создаёт новый элемент изображения
-img.src = 'myImage.png'; // Устанавливает путь
+var img = new Image(); // Создаёт новый элемент изображения
+img.src = "myImage.png"; // Устанавливает путь
 ```
 
 Когда этот скрипт выполнится, изображение начнёт загружаться.
@@ -65,22 +61,27 @@ img.src = 'myImage.png'; // Устанавливает путь
 Если вы попытаетесь вызвать функцию `drawImage()` перед тем как изображение загрузится, то скрипт ничего не сделает (или, в старых браузерах, может даже выдать исключение). Поэтому вам необходимо использовать событие load, чтобы вы не пытались сделать это прежде, чем изображение загрузится:
 
 ```js
-var img = new Image();   // Создаёт новое изображение
-img.addEventListener("load", function() {
-  // здесь выполняет drawImage функцию
-}, false);
-img.src = 'myImage.png'; // Устанавливает источник файла
+var img = new Image(); // Создаёт новое изображение
+img.addEventListener(
+  "load",
+  function () {
+    // здесь выполняет drawImage функцию
+  },
+  false,
+);
+img.src = "myImage.png"; // Устанавливает источник файла
 ```
 
 Если вы используете только одно стороннее изображение, то этот метод может быть хорошим примером, но если нужно следить за несколькими изображениями, то необходимо придумать что-то более умное. Хотя поиски тактики проверки загрузки изображений выходят за пределы этого обучающего курса, вы должны об этом помнить.
 
 ### Вложение изображения с помощью данных: URL
 
-Другой возможный способ включить изображение это через [data: url](/ru/docs/Web/HTTP/data_URIs). Data URLs позволяет вам полностью определить изображение как Base64 кодированную строку символов прямо в ваш код.
+Другой возможный способ включить изображение это через [data: url](/ru/docs/Web/URI/Schemes/data). Data URLs позволяет вам полностью определить изображение как Base64 кодированную строку символов прямо в ваш код.
 
 ```js
-var img = new Image();   // Создаёт новый элемент img
-img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==';
+var img = new Image(); // Создаёт новый элемент img
+img.src =
+  "data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==";
 ```
 
 Одним из преимуществ data URLs это то что полученное изображение доступно сразу без других запросов туда-обратно на сервер. Другое потенциальное преимущество в том, что также можно инкапсулировать всё в одном файле все ваши [CSS](/ru/docs/Web/CSS), [JavaScript](/ru/docs/Web/JavaScript), [HTML](/ru/docs/Web/HTML), и изображения, что делает его более портативным в других местах.
@@ -93,11 +94,11 @@ img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAs
 
 ```js
 function getMyVideo() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
-    return document.getElementById('myvideo');
+    return document.getElementById("myvideo");
   }
 }
 ```
@@ -111,7 +112,8 @@ function getMyVideo() {
 - {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, x, y)")}}
   - : Рисует изображение, указанное в `CanvasImageSource` в координатах (`x`, `y`).
 
-> **Примечание:** SVG изображения должны указывать ширину и высоту корневого \<svg> элемента.
+> [!NOTE]
+> SVG изображения должны указывать ширину и высоту корневого \<svg> элемента.
 
 ### Пример: Простой линейный график
 
@@ -119,32 +121,32 @@ function getMyVideo() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="180" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="180" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   var img = new Image();
-  img.onload = function(){
-    ctx.drawImage(img,0,0);
+  img.onload = function () {
+    ctx.drawImage(img, 0, 0);
     ctx.beginPath();
-    ctx.moveTo(30,96);
-    ctx.lineTo(70,66);
-    ctx.lineTo(103,76);
-    ctx.lineTo(170,15);
+    ctx.moveTo(30, 96);
+    ctx.lineTo(70, 66);
+    ctx.lineTo(103, 76);
+    ctx.lineTo(170, 15);
     ctx.stroke();
   };
-  img.src = 'https://mdn.mozillademos.org/files/5395/backdrop.png';
+  img.src = "backdrop.png";
 }
 ```
 
 Получившийся график выглядит так:
 
-{{EmbedLiveSample("Пример_Простой_линейный_график", 220, 160, "https://mdn.mozillademos.org/files/206/Canvas_backdrop.png")}}
+{{EmbedLiveSample("Пример_Простой_линейный_график", 220, 160, "canvas_backdrop.png")}}
 
 ## Изменение размеров
 
@@ -157,34 +159,35 @@ function draw() {
 
 В этом примере, мы будем использовать изображение в качестве обоев и повторим его в canvas несколько раз. Это может быть сделано просто через цикл, располагая изменённые изображения на разных позициях. В коде внизу, первый цикл `for` проходит по рядам. Второй цикл `for` проходит по колонкам. Изображение уменьшено на треть от реального размера, которое было 50x38 пикселей.
 
-> **Примечание:** **Обратите внимание**: Изображения могут стать размытыми, при большом увеличении или зернистыми при значительном уменьшении. Возможно, лучше всего не изменять размеры изображения, если на них есть текст, который должен остаться читаемым.
+> [!NOTE]
+> Изображения могут стать размытыми, при большом увеличении или зернистыми при значительном уменьшении. Возможно, лучше всего не изменять размеры изображения, если на них есть текст, который должен остаться читаемым.
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   var img = new Image();
-  img.onload = function(){
-    for (var i=0;i<4;i++){
-      for (var j=0;j<3;j++){
-        ctx.drawImage(img,j*50,i*38,50,38);
+  img.onload = function () {
+    for (var i = 0; i < 4; i++) {
+      for (var j = 0; j < 3; j++) {
+        ctx.drawImage(img, j * 50, i * 38, 50, 38);
       }
     }
   };
-  img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+  img.src = "rhino.jpg";
 }
 ```
 
 Получившийся рисунок canvas выглядит так:
 
-{{EmbedLiveSample("Пример_Тайлинг_изображения", 160, 160, "https://mdn.mozillademos.org/files/251/Canvas_scale_image.png")}}
+{{EmbedLiveSample("Пример_Тайлинг_изображения", 160, 160, "canvas_scale_image.png")}}
 
 ## Нарезка
 
@@ -193,7 +196,7 @@ function draw() {
 - {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)")}}
   - : В данном изображении, эта функция берёт фрагмент из изображения, в виде прямоугольника, левый верхний угол которого - (`sx`, `sy`), ширина и высота - `sWidth` и `sHeight` и рисует в canvas, располагая его в точке (`dx`, `dy`) и изменяя его размер на указанные величины в `dWidth` и `dHeight`.
 
-![](https://mdn.mozillademos.org/files/225/Canvas_drawimage.jpg)Чтобы понять что делает нарезка, можно посмотреть на изображение справа. Первые четыре параметра определяют местоположение и размер фрагмента исходного изображения. Последние четыре параметра определяют прямоугольник, в который будет вписано изображение на целевом рисунке canvas.
+![](canvas_drawimage.jpg)Чтобы понять что делает нарезка, можно посмотреть на изображение справа. Первые четыре параметра определяют местоположение и размер фрагмента исходного изображения. Последние четыре параметра определяют прямоугольник, в который будет вписано изображение на целевом рисунке canvas.
 
 Нарезка может быть полезным инструментом, когда вы захотите сделать композицию. Вы могли бы собрать все элементы в одном файле изображения и использовать этот метод для создания композиции. Например, если вы захотите сделать график, вы могли бы сделать PNG изображение, содержащее все необходимые тексты в одном файле и в зависимости от ваших данных, могли бы достаточно просто изменять график. Другим преимуществом является то, что нет необходимости загружать каждое изображение по отдельности, получив возможность увеличить скорость загрузки.
 
@@ -203,33 +206,42 @@ function draw() {
 
 ```html
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
-   <div style="display:none;">
-     <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227">
-     <img id="frame" src="https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png" width="132" height="150">
-   </div>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+    <div style="display:none;">
+      <img id="source" src="rhino.jpg" width="300" height="227" />
+      <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
+    </div>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
 
   // Рисуем фрагмент
-  ctx.drawImage(document.getElementById('source'),
-                33, 71, 104, 124, 21, 20, 87, 104);
+  ctx.drawImage(
+    document.getElementById("source"),
+    33,
+    71,
+    104,
+    124,
+    21,
+    20,
+    87,
+    104,
+  );
 
   // Рисуем рамку
-  ctx.drawImage(document.getElementById('frame'),0,0);
+  ctx.drawImage(document.getElementById("frame"), 0, 0);
 }
 ```
 
 В этот раз мы применили другой способ загрузки изображения. Вместо загрузки методом создания новых {{domxref("HTMLImageElement")}} объектов, мы включили их как {{HTMLElement("img")}} тэги прямо в наш HTML файл и из них выбрали изображения. Изображения скрыты с помощью CSS-свойства {{cssxref("display")}}, установленного в "none" для этих изображений.
 
-{{EmbedLiveSample("Пример_Обрамление_изображения", 160, 160, "https://mdn.mozillademos.org/files/226/Canvas_drawimage2.jpg")}}
+{{EmbedLiveSample("Пример_Обрамление_изображения", 160, 160, "canvas_drawimage2.jpg")}}
 
 Скрипт, сам по себе, очень простой. Каждому {{HTMLElement("img")}} присвоен атрибут ID, который делает удобным их выбор с использованием {{domxref("document.getElementById()")}}. Потом мы просто используем функцию `drawImage()`, чтобы из первого изображения вырезать фрагмент носорога и вставить его в canvas, затем рисуем рамку сверху, используя второй вызов функции `drawImage()`.
 
@@ -243,23 +255,23 @@ function draw() {
 
 ```html
 <html>
- <body onload="draw();">
-     <table>
+  <body onload="draw();">
+    <table>
       <tr>
-        <td><img src="https://mdn.mozillademos.org/files/5399/gallery_1.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5401/gallery_2.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5403/gallery_3.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5405/gallery_4.jpg"></td>
+        <td><img src="gallery_1.jpg" /></td>
+        <td><img src="gallery_2.jpg" /></td>
+        <td><img src="gallery_3.jpg" /></td>
+        <td><img src="gallery_4.jpg" /></td>
       </tr>
       <tr>
-        <td><img src="https://mdn.mozillademos.org/files/5407/gallery_5.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5409/gallery_6.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5411/gallery_7.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5413/gallery_8.jpg"></td>
+        <td><img src="gallery_5.jpg" /></td>
+        <td><img src="gallery_6.jpg" /></td>
+        <td><img src="gallery_7.jpg" /></td>
+        <td><img src="gallery_8.jpg" /></td>
       </tr>
-     </table>
-     <img id="frame" src="https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png" width="132" height="150">
- </body>
+    </table>
+    <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
+  </body>
 </html>
 ```
 
@@ -267,7 +279,7 @@ function draw() {
 
 ```css
 body {
-  background: 0 -100px repeat-x url(https://mdn.mozillademos.org/files/5415/bg_gallery.png) #4F191A;
+  background: 0 -100px repeat-x url(bg_gallery.png) #4f191a;
   margin: 10px;
 }
 
@@ -288,28 +300,25 @@ td {
 
 ```js
 function draw() {
-
   // Цикл по всем изображениям
-  for (var i=0;i<document.images.length;i++){
-
+  for (var i = 0; i < document.images.length; i++) {
     // Не добавляет canvas для изображения рамки
-    if (document.images[i].getAttribute('id')!='frame'){
-
+    if (document.images[i].getAttribute("id") != "frame") {
       // Создаёт элемент canvas
-      var canvas = document.createElement('canvas');
-      canvas.setAttribute('width',132);
-      canvas.setAttribute('height',150);
+      var canvas = document.createElement("canvas");
+      canvas.setAttribute("width", 132);
+      canvas.setAttribute("height", 150);
 
       // Вставляет перед изображением
-      document.images[i].parentNode.insertBefore(canvas,document.images[i]);
+      document.images[i].parentNode.insertBefore(canvas, document.images[i]);
 
-      var ctx = canvas.getContext('2d');
+      var ctx = canvas.getContext("2d");
 
       // Рисует изображение в canvas
-      ctx.drawImage(document.images[i],15,20);
+      ctx.drawImage(document.images[i], 15, 20);
 
       // Добавляет рамку
-      ctx.drawImage(document.getElementById('frame'),0,0);
+      ctx.drawImage(document.getElementById("frame"), 0, 0);
     }
   }
 }

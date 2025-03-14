@@ -17,28 +17,32 @@ let collection = document.forms;
 
 ```html
 <html>
+  <head>
+    <title>document.forms example</title>
+  </head>
 
-<head>
-<title> document.forms example</title>
-</head>
+  <body>
+    <form id="robby">
+      <input
+        type="button"
+        onclick="alert(document.forms[0].id);"
+        value="robby's form" />
+    </form>
 
-<body>
-<form id="robby">
- <input type="button" onclick="alert(document.forms[0].id);"
- value="robby's form" />
-</form>
+    <form id="dave">
+      <input
+        type="button"
+        onclick="alert(document.forms[1].id);"
+        value="dave's form" />
+    </form>
 
-<form id="dave">
- <input type="button" onclick="alert(document.forms[1].id);"
- value="dave's form" />
-</form>
-
-<form id="paul">
- <input type="button" onclick="alert(document.forms[2].id);"
- value="paul's form" />
-</form>
-
-</body>
+    <form id="paul">
+      <input
+        type="button"
+        onclick="alert(document.forms[2].id);"
+        value="paul's form" />
+    </form>
+  </body>
 </html>
 ```
 
@@ -51,8 +55,8 @@ var selectFormElement = document.forms[index].elements[index];
 
 ## 规范
 
-[forms DOM Level 2 HTML: forms](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-1689064)
+[forms DOM Level 2 HTML: forms](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-1689064)
 
-## 相关链接
+## 参见
 
-- [DOM:form](/zh-CN/DOM/HTMLFormElement)
+- [DOM:form](/zh-CN/docs/DOM/HTMLFormElement)

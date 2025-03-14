@@ -26,7 +26,7 @@ window.close();
 var openedWindow;
 
 function openWindow() {
-  openedWindow = window.open('moreinfo.htm');
+  openedWindow = window.open("moreinfo.htm");
 }
 
 function closeOpenedWindow() {
@@ -44,13 +44,10 @@ function closeCurrentWindow() {
 }
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様書                                                                                                   | 策定状況                         | 備考 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', '#dom-window-close', 'window.close()')}}                 | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', "browsers.html#dom-window-close", "Window.close()")}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 
-{{Compat("api.Window.close")}}
+{{Compat}}

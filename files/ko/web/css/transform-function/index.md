@@ -1,14 +1,8 @@
 ---
 title: <transform-function>
 slug: Web/CSS/transform-function
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Transforms
-  - Layout
-  - Reference
-translation_of: Web/CSS/transform-function
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`<transform-function>`** [자료형](/ko/docs/Web/CSS/CSS_Types)은 요소의 외형에 영향을 주는 변형을 나타냅니다. 변형 함수는 2D 또는 3D 공간 내에서 요소를 회전하고, 크기를 바꾸고, 왜곡하고, 이동할 수 있습니다. {{cssxref("transform")}} 속성에서 사용합니다.
@@ -17,9 +11,11 @@ translation_of: Web/CSS/transform-function
 
 HTML요소의 크기와 형태, 그리고 요소에 가해진 변형을 표현할 땐 다양한 좌표계를 사용할 수 있습니다. 가장 흔히 사용하는건 [직교좌표계](https://ko.wikipedia.org/wiki/%EC%A7%81%EA%B5%90_%EC%A2%8C%ED%91%9C%EA%B3%84)이나, 가끔 [동차좌표계](https://ko.wikipedia.org/wiki/%EB%8F%99%EC%B0%A8%EC%A2%8C%ED%91%9C)도 쓰입니다.
 
-### [![](/files/3438/coord_in_R2.png)](/@api/deki/files/5796/=coord_in_R2.png)직교좌표
+### 직교좌표계
 
 직교좌표계 평면 위의 점은 X 좌표(가로 좌표)와 Y 좌표(세로 좌표)를 사용해 표현하며, 벡터 표현 `(x, y)`를 사용해 나타냅니다.
+
+![직교 좌표계](coord_in_R2.png)
 
 CSS (및 다른 대부분의 컴퓨터 그래픽)에서, 원점 `(0, 0)`은 요소의 좌상단 꼭짓점을 가리킵니다. 양의 좌표는 원점의 오른쪽과 아래로 진행하고, 음의 좌표는 왼쪽과 위로 진행합니다. 따라서 오른쪽으로 2단위, 아래쪽으로 5단위에 위치한 점은 `(2, 5)`이고 왼쪽으로 3단위, 위쪽으로 12단위 나아간 점은 `(-3, -12)`입니다.
 
@@ -41,7 +37,8 @@ With this notation, it is possible to describe, and therefore compose, most comm
 
 However, one major transformation is not linear, and therefore must be special-cased when using this notation: translation. The translation vector `(tx, ty)` must be expressed separately, as two additional parameters.
 
-> **참고:** Though trickier than Cartesian coordinates, [homogeneous coordinates](https://en.wikipedia.org/wiki/Homogeneous_coordinates) in [projective geometry](https://en.wikipedia.org/wiki/Projective_geometry) lead to 3×3 transformation matrices, and can simply express translations as linear functions.
+> [!NOTE]
+> Though trickier than Cartesian coordinates, [homogeneous coordinates](https://en.wikipedia.org/wiki/Homogeneous_coordinates) in [projective geometry](https://en.wikipedia.org/wiki/Projective_geometry) lead to 3×3 transformation matrices, and can simply express translations as linear functions.
 
 ## 구문
 
@@ -49,62 +46,62 @@ The `<transform-function>` data type is specified using one of the transformatio
 
 ### 행렬 변형
 
-- [`matrix()`](/en-US/docs/Web/CSS/transform-function/matrix)
+- [`matrix()`](/ko/docs/Web/CSS/transform-function/matrix)
   - : Describes a homogeneous 2D transformation matrix.
-- [`matrix3d()`](/en-US/docs/Web/CSS/transform-function/matrix3d)
+- [`matrix3d()`](/ko/docs/Web/CSS/transform-function/matrix3d)
   - : Describes a 3D transformation as a 4×4 homogeneous matrix.
 
 ### 원근
 
-- [`perspective()`](/en-US/docs/Web/CSS/transform-function/perspective)
+- [`perspective()`](/ko/docs/Web/CSS/transform-function/perspective)
   - : Sets the distance between the user and the z=0 plane.
 
 ### 회전
 
-- [`rotate()`](/en-US/docs/Web/CSS/transform-function/rotate)
+- [`rotate()`](/ko/docs/Web/CSS/transform-function/rotate)
   - : Rotates an element around a fixed point on the 2D plane.
-- [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d)
+- [`rotate3d()`](/ko/docs/Web/CSS/transform-function/rotate3d)
   - : Rotates an element around a fixed axis in 3D space.
-- [`rotateX()`](/en-US/docs/Web/CSS/transform-function/rotateX)
+- [`rotateX()`](/ko/docs/Web/CSS/transform-function/rotateX)
   - : Rotates an element around the horizontal axis.
-- [`rotateY()`](/en-US/docs/Web/CSS/transform-function/rotateY)
+- [`rotateY()`](/ko/docs/Web/CSS/transform-function/rotateY)
   - : Rotates an element around the vertical axis.
-- [`rotateZ()`](/en-US/docs/Web/CSS/transform-function/rotateZ)
+- [`rotateZ()`](/ko/docs/Web/CSS/transform-function/rotateZ)
   - : Rotates an element around the z-axis.
 
 ### 크기 조절
 
-- [`scale()`](/en-US/docs/Web/CSS/transform-function/scale)
+- [`scale()`](/ko/docs/Web/CSS/transform-function/scale)
   - : Scales an element up or down on the 2D plane.
-- [`scale3d()`](/en-US/docs/Web/CSS/transform-function/scale3d)
+- [`scale3d()`](/ko/docs/Web/CSS/transform-function/scale3d)
   - : Scales an element up or down in 3D space.
-- [`scaleX()`](/en-US/docs/Web/CSS/transform-function/scaleX)
+- [`scaleX()`](/ko/docs/Web/CSS/transform-function/scaleX)
   - : Scales an element up or down horizontally.
-- [`scaleY()`](/en-US/docs/Web/CSS/transform-function/scaleY)
+- [`scaleY()`](/ko/docs/Web/CSS/transform-function/scaleY)
   - : Scales an element up or down vertically.
-- [`scaleZ()`](/en-US/docs/Web/CSS/transform-function/scaleZ)
+- [`scaleZ()`](/ko/docs/Web/CSS/transform-function/scaleZ)
   - : Scales an element up or down along the z-axis.
 
 ### 기울이기 (왜곡)
 
-- [`skew()`](/en-US/docs/Web/CSS/transform-function/skew)
+- [`skew()`](/ko/docs/Web/CSS/transform-function/skew)
   - : Skews an element on the 2D plane.
-- [`skewX()`](/en-US/docs/Web/CSS/transform-function/skewX)
+- [`skewX()`](/ko/docs/Web/CSS/transform-function/skewX)
   - : Skews an element in the horizontal direction.
-- [`skewY()`](/en-US/docs/Web/CSS/transform-function/skewY)
+- [`skewY()`](/ko/docs/Web/CSS/transform-function/skewY)
   - : Skews an element in the vertical direction.
 
 ### 이동
 
-- [`translate()`](/en-US/docs/Web/CSS/transform-function/translate)
+- [`translate()`](/ko/docs/Web/CSS/transform-function/translate)
   - : Translates an element on the 2D plane.
-- [`translate3d()`](/en-US/docs/Web/CSS/transform-function/translate3d)
+- [`translate3d()`](/ko/docs/Web/CSS/transform-function/translate3d)
   - : Translates an element in 3D space.
-- [`translateX()`](/en-US/docs/Web/CSS/transform-function/translateX)
+- [`translateX()`](/ko/docs/Web/CSS/transform-function/translateX)
   - : Translates an element horizontally.
-- [`translateY()`](/en-US/docs/Web/CSS/transform-function/translateY)
+- [`translateY()`](/ko/docs/Web/CSS/transform-function/translateY)
   - : Translates an element vertically.
-- [`translateZ()`](/en-US/docs/Web/CSS/transform-function/translateZ)
+- [`translateZ()`](/ko/docs/Web/CSS/transform-function/translateZ)
   - : Translates an element along the z-axis.
 
 ## 명세

@@ -13,11 +13,12 @@ slug: Web/API/Channel_Messaging_API/Using_channel_messaging
 
 ## 用途
 
-チャンネルメッセージングは​​、ゲーム、アドレス帳、または音楽を個人用に選択したオーディオプレーヤーなど、IFrame を介して他のサイトの機能をメインインターフェイスに埋め込むソーシャルサイトがある場合に主に役立ちます。 これらが独立したユニットとして機能する場合は問題ありませんが、メインサイトと IFrame、または異なる IFrame との間のやり取りが必要な場合は困難になります。 例えば、メインサイトからアドレス帳に連絡先を追加したり、メインプロファイルにゲームのハイスコアを追加したり、オーディオプレーヤーからゲームに新しい BGM の選択肢を追加したりする場合はどうすればよいのでしょうか。 ウェブが使用するセキュリティモデルのため、このようなことは従来のウェブテクノロジーを使用したのでは、それほど簡単ではありません。 オリジンがお互いを信頼しているかどうか、そしてメッセージをどのように渡すのかについて考えなければなりません。
+チャンネルメッセージングは、ゲーム、アドレス帳、または音楽を個人用に選択したオーディオプレーヤーなど、IFrame を介して他のサイトの機能をメインインターフェイスに埋め込むソーシャルサイトがある場合に主に役立ちます。 これらが独立したユニットとして機能する場合は問題ありませんが、メインサイトと IFrame、または異なる IFrame との間のやり取りが必要な場合は困難になります。 例えば、メインサイトからアドレス帳に連絡先を追加したり、メインプロファイルにゲームのハイスコアを追加したり、オーディオプレーヤーからゲームに新しい BGM の選択肢を追加したりする場合はどうすればよいのでしょうか。 ウェブが使用するセキュリティモデルのため、このようなことは従来のウェブテクノロジーを使用したのでは、それほど簡単ではありません。 オリジンがお互いを信頼しているかどうか、そしてメッセージをどのように渡すのかについて考えなければなりません。
 
 一方、メッセージチャンネルは、異なる閲覧コンテキスト間でデータを受け渡すことを可能にする安全なチャンネルを提供することができます。
 
-> **メモ:** 詳細情報とアイデアについては、仕様の[ウェブ上のオブジェクト機能モデルの基礎としてのポート](https://html.spec.whatwg.org/multipage/comms.html#ports-as-the-basis-of-an-object-capability-model-on-the-web)（英語）のセクションが役に立つでしょう。
+> [!NOTE]
+> 詳細情報とアイデアについては、仕様の[ウェブ上のオブジェクト機能モデルの基礎としてのポート](https://html.spec.whatwg.org/multipage/comms.html#ports-as-the-basis-of-an-object-capability-model-on-the-web)（英語）のセクションが役に立つでしょう。
 
 ## 簡単な例
 
@@ -34,10 +35,10 @@ slug: Web/API/Channel_Messaging_API/Using_channel_messaging
 デモのメインページには、 {{htmlelement("iframe")}} に送信するメッセージを入力するためのテキスト入力を含む単純なフォームがあります。 また、 {{htmlelement("iframe")}} から返される確認メッセージを表示するために後で使用する段落もあります。
 
 ```js
-var input = document.getElementById('message-input');
-var output = document.getElementById('message-output');
-var button = document.querySelector('button');
-var iframe = document.querySelector('iframe');
+var input = document.getElementById("message-input");
+var output = document.getElementById("message-output");
+var button = document.querySelector("button");
+var iframe = document.querySelector("iframe");
 
 var channel = new MessageChannel();
 var port1 = channel.port1;
@@ -47,13 +48,13 @@ iframe.addEventListener("load", onLoad);
 
 function onLoad() {
   // ボタンのクリックを待ち受けする
-  button.addEventListener('click', onClick);
+  button.addEventListener("click", onClick);
 
   // port1 でメッセージを待ち受けする
   port1.onmessage = onMessage;
 
   // port2 を iframe に移管する
-  iframe.contentWindow.postMessage('init', '*', [channel.port2]);
+  iframe.contentWindow.postMessage("init", "*", [channel.port2]);
 }
 
 // ボタンがクリックされたときに port1 にメッセージを投稿する
@@ -65,7 +66,7 @@ function onClick(e) {
 // port1 で受信したメッセージを処理する
 function onMessage(e) {
   output.innerHTML = e.data;
-  input.value = '';
+  input.value = "";
 }
 ```
 
@@ -86,11 +87,11 @@ IFrame が読み込まれたら、ボタン用の `onclick` ハンドラーと {
 IFrame では、次の JavaScript があります。
 
 ```js
-var list = document.querySelector('ul');
+var list = document.querySelector("ul");
 var port2;
 
 // 初期ポート移管メッセージを待ち受けする
-window.addEventListener('message', initPort);
+window.addEventListener("message", initPort);
 
 // 移管されたポートを設定する
 function initPort(e) {
@@ -100,7 +101,7 @@ function initPort(e) {
 
 // port2 で受信したメッセージを処理する
 function onMessage(e) {
-  var listItem = document.createElement('li');
+  var listItem = document.createElement("li");
   listItem.textContent = e.data;
   list.appendChild(listItem);
   port2.postMessage('Message received by IFrame: "' + e.data + '"');
@@ -121,7 +122,7 @@ function onMessage(e) {
 // port1 で受信したメッセージを処理する
 function onMessage(e) {
   output.innerHTML = e.data;
-  input.value = '';
+  input.value = "";
 }
 ```
 
@@ -135,11 +136,11 @@ function onMessage(e) {
 
 ### `MessageChannel`
 
-{{Compat("api.MessageChannel", 0)}}
+{{Compat}}
 
 ### `MessagePort`
 
-{{Compat("api.MessagePort", 0)}}
+{{Compat}}
 
 ## 関連情報
 

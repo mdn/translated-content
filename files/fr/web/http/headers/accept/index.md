@@ -1,12 +1,6 @@
 ---
 title: Accept
 slug: Web/HTTP/Headers/Accept
-tags:
-  - Entête HTTP
-  - Entête de Requête
-  - HTTP
-  - Reference
-translation_of: Web/HTTP/Headers/Accept
 ---
 
 {{HTTPSidebar}}
@@ -46,7 +40,7 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 ## Directives
 
 - `<MIME_type>/<MIME_subtype>`
-  - : Un type MIME unique et déterminé [MIME type](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types), comme par exemple `text/html`.
+  - : Un type MIME unique et déterminé [MIME type](/fr/docs/Web/HTTP/MIME_types), comme par exemple `text/html`.
 - `<MIME_type>/*`
   - : un type MIME type ne comprenant pas de sous-type. `image/*` prendra en charge `image/png`, `image/svg`, `image/gif` et tous autres types d'image.
 - `*/*`
@@ -64,15 +58,13 @@ Accept: image/*
 Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                | Titre                                                              |
-| -------------------------------------------- | ------------------------------------------------------------------ |
-| {{RFC("7231", "Accept", "5.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Vocabulaire et cas d'usage |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Accept")}}
+{{Compat}}
 
 ## Voir aussi
 

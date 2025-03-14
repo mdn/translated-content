@@ -1,6 +1,9 @@
 ---
-title: Document.importNode()
+title: "Document: importNode() メソッド"
+short-title: importNode()
 slug: Web/API/Document/importNode
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}
@@ -13,7 +16,7 @@ slug: Web/API/Document/importNode
 
 ## 構文
 
-```js
+```js-nolint
 importNode(externalNode)
 importNode(externalNode, deep)
 ```
@@ -38,7 +41,7 @@ importNode(externalNode, deep)
 ## 例
 
 ```js
-const iframe  = document.querySelector("iframe");
+const iframe = document.querySelector("iframe");
 const oldNode = iframe.contentWindow.document.getElementById("myNode");
 const newNode = document.importNode(oldNode, true);
 document.getElementById("container").appendChild(newNode);
@@ -51,7 +54,8 @@ document.getElementById("container").appendChild(newNode);
 - {{domXref("document.importNode()")}} でクローンする、または
 - {{domXref("document.adoptNode()")}} で移行する
 
-> **メモ:** Firefox は今のところこのルールを強制していませんが、将来の互換性を改善するために、このルールに従うことを強く推奨します。
+> [!NOTE]
+> Firefox は今のところこのルールを強制していませんが、将来の互換性を改善するために、このルールに従うことを強く推奨します。
 
 {{domXref("Node.ownerDocument")}} の問題に関して詳しくは、W3C DOM FAQ を参照してください。
 

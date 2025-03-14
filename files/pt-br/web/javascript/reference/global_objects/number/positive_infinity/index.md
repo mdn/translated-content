@@ -43,18 +43,13 @@ if (bigNumber == Number.POSITIVE_INFINITY) {
 }
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                                    | Status                       | Comentário                                         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.7.3.6', 'Number.POSITIVE_INFINITY')}}                         | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-number.positive_infinity', 'Number.POSITIVE_INFINITY')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-number.positive_infinity', 'Number.POSITIVE_INFINITY')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.POSITIVE_INFINITY")}}
+{{Compat}}
 
 ## Ver também
 

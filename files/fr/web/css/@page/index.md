@@ -1,16 +1,11 @@
 ---
-title: '@page'
+title: "@page"
 slug: Web/CSS/@page
-tags:
-  - CSS
-  - Reference
-  - Règle @
-translation_of: Web/CSS/@page
 ---
 
 {{CSSRef}}
 
-La règle @ **`@page`** est utilisée afin de modifier certaines propriétés CSS lorsqu'on imprime un document. La règle `@page` ne permet par de modifier toutes les propriétés mais uniquement celles qui portent sur les marges, les lignes orphelines et veuves ainsi que les sauts de page du document. Si on utilise cette règle @ pour modifier une autre propriété, ce changement sera ignoré.
+La règle @ **`@page`** est utilisée afin de modifier certaines propriétés CSS lorsqu'on imprime un document. La règle `@page` ne permet pas de modifier toutes les propriétés mais uniquement celles qui portent sur les marges, les lignes orphelines et veuves ainsi que les sauts de page du document. Si on utilise cette règle @ pour modifier une autre propriété, ce changement sera ignoré.
 
 ```css
 @page {
@@ -24,7 +19,8 @@ La règle @ **`@page`** est utilisée afin de modifier certaines propriétés CS
 
 La règle @ `@page` peut être manipulée via le CSSOM, notamment avec l'interface {{domxref("CSSPageRule")}}.
 
-> **Note :** Le W3C est en train de discuter de la gestion des unités de longueur ({{cssxref("&lt;length&gt;")}}) relative à la zone d'affichage (_viewport_) : `vh`, `vw`, `vmin` et `vmax`. En attendant, il est conseillé de ne pas les utiliser au sein d'une règle `@page`.
+> [!NOTE]
+> Le W3C est en train de discuter de la gestion des unités de longueur ({{cssxref("&lt;length&gt;")}}) relative à la zone d'affichage (_viewport_) : `vh`, `vw`, `vmin` et `vmax`. En attendant, il est conseillé de ne pas les utiliser au sein d'une règle `@page`.
 
 ## Syntaxe
 

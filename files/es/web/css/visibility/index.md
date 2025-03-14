@@ -1,12 +1,6 @@
 ---
 title: visibility
 slug: Web/CSS/visibility
-tags:
-  - CSS
-  - CSS:Referencias
-  - Referencia_CSS
-  - Todas_las_Categorías
-translation_of: Web/CSS/visibility
 ---
 
 {{ CSSRef() }}
@@ -22,7 +16,7 @@ La propiedad `visibility` se usa para dos efectos:
 - Se aplica a: Todos los elementos.
 - {{ Cssxref("inheritance", "Valor heredado") }}: Sí
 - Porcentajes: N/A
-- Medio: {{ Xref_cssvisual() }}
+- Medio: {{cssxref("Media/Visual", "visual")}}
 - {{ Cssxref("computed value", "Valor calculado") }}: Como se especifica.
 
 ### Sintaxis
@@ -56,7 +50,7 @@ El soporte para `visibility: collapse` no se encuentra o está implementado parc
 
 ### Especificaciones
 
-- [CSS 2.1](http://www.w3.org/TR/CSS21/visufx.html#visibility)
+- [CSS 2.1](https://www.w3.org/TR/CSS21/visufx.html#visibility)
 
 ### Ver también
 

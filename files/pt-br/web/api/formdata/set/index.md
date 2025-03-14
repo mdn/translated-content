@@ -3,13 +3,16 @@ title: FormData.set()
 slug: Web/API/FormData/set
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 O método **`set()`** da interface {{domxref("FormData")}} adiciona o novo valor para um chave existente em um objeto `FormData`, ou adicionar a combinação chave/valor caso ela não exista.
 
 A diferença entre `set()` e {{domxref("FormData.append")}} é que, se a chave especificada já existir, `set()` irá sobrescrever todos os valores existentes pelo novo valor, enquanto o {{domxref("FormData.append")}} apenas acrescenta o novo valor ao conjunto de valores existentes.
 
-> **Nota:** Esse método está disponível em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Esse método está disponível em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
 ## Sintaxe
 
@@ -29,7 +32,8 @@ formData.set(name, value, filename);
 - `filename` {{optional_inline}}
   - : O nome do arquivo a ser enviado (um {{domxref("USVString")}}), quando um {{domxref("Blob")}} ou um {{domxref("File")}} é passdo como o segundo parâmetro. O nome de arquivo padrão para objetos do tipo {{domxref("Blob")}} é "blob".
 
-> **Nota:** Se você especificar um {{domxref("Blob")}} como o dado a ser acrescentado ao objeto `FormData`, o nome do arquivo que será enviado para o servidor, enviado no atributo "Content-Disposition" no cabeçalho varia de navegador para navegador.
+> [!NOTE]
+> Se você especificar um {{domxref("Blob")}} como o dado a ser acrescentado ao objeto `FormData`, o nome do arquivo que será enviado para o servidor, enviado no atributo "Content-Disposition" no cabeçalho varia de navegador para navegador.
 
 ## Exemplo
 
@@ -42,23 +46,21 @@ var formData = new FormData(); // Currently empty
 Você pode adicionar os pares chave/valor usando (domxref("FormData.set")}}:
 
 ```js
-formData.set('username', 'Chris');
-formData.set('userpic', myFileInput.files[0], 'chris.jpg');
+formData.set("username", "Chris");
+formData.set("userpic", myFileInput.files[0], "chris.jpg");
 ```
 
 ## Especificações
 
-| Especificação                                                                | Status                               | Comentário |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata-set','set()')}} | {{Spec2('XMLHttpRequest')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.FormData.set")}}
+{{Compat}}
 
 ## Ver também
 
 - {{domxref("XMLHTTPRequest")}}
-- [Usando XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Usando objetos FormData](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Usando objetos FormData](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

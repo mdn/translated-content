@@ -1,26 +1,35 @@
 ---
 title: Number.isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Number
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isNaN
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/isNaN
 ---
 
 {{JSRef}}
 
 La méthode **`Number.isNaN()`** permet de déterminer si la valeur passée en argument est {{jsxref("NaN")}}, avec un type {{jsxref("Number")}}. Cette version est plus robuste que la méthode de l'objet global {{jsxref("isNaN")}}.
 
-{{EmbedInteractiveExample("pages/js/number-isnan.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Number.isNaN()", "taller")}}
+
+```js interactive-example
+function typeOfNaN(x) {
+  if (Number.isNaN(x)) {
+    return "Number NaN";
+  }
+  if (isNaN(x)) {
+    return "NaN";
+  }
+}
+
+console.log(typeOfNaN("100F"));
+// Expected output: "NaN"
+
+console.log(typeOfNaN(NaN));
+// Expected output: "Number NaN"
+```
 
 ## Syntaxe
 
 ```js
-Number.isNaN(valeurÀTester)
+Number.isNaN(valeurÀTester);
 ```
 
 ### Paramètres
@@ -66,9 +75,11 @@ Number.isNaN("blabla"); // ex : cette valeur aurait rendu true avec la méthode 
 La fonction suivant fonctionne car `NaN` est la seule valeur JavaScript qui n'est pas égale à elle-même.
 
 ```js
-Number.isNaN = Number.isNaN || function(value) {
+Number.isNaN =
+  Number.isNaN ||
+  function (value) {
     return typeof value === "number" && isNaN(value);
-}
+  };
 ```
 
 ## Spécifications

@@ -19,45 +19,33 @@ La propiedad `event.target` puede ser usada para implementar una **delegación d
 
 ```js
 // Crear una lista
-const ul = document.createElement('ul');
+const ul = document.createElement("ul");
 document.body.appendChild(ul);
 
-const li1 = document.createElement('li');
-const li2 = document.createElement('li');
+const li1 = document.createElement("li");
+const li2 = document.createElement("li");
 ul.appendChild(li1);
 ul.appendChild(li2);
 
-function hide(e){
+function hide(e) {
   // e.target se refiere elemento clickado <li>
   // Esto es diferente de e.currentTarget, que se referiría al padre <ul> en este contexto
-  e.target.style.visibility = 'hidden';
+  e.target.style.visibility = "hidden";
 }
 
 // Incluir el 'listener' a la lista
 // Se ejecutará cuando se haga click en cada <li>
-ul.addEventListener('click', hide, false);
+ul.addEventListener("click", hide, false);
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Event.target")}}
-
-## Notas de compatibilidad
-
-En IE 6-8 el evento 'model' es diferente. Los eventos 'listeners' son are incluidos con el método no estándar {{domxref('EventTarget.attachEvent')}}. En este modelo, el evento 'object' tiene una propiedad {{domxref('Event.srcElement')}}, en vez de la propiedad `target`, y tiene la misma semántica que `event.target`.
-
-```js
-function hide(e) {
-  // Soporte en IE6-8
-  var target = e.target || e.srcElement;
-  target.style.visibility = 'hidden';
-}
-```
+{{Compat}}
 
 ## También ver
 
-- [Comparación de los Eventos](/es/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [Comparación de los Eventos](/es/docs/Learn/JavaScript/Building_blocks/Event_bubbling)

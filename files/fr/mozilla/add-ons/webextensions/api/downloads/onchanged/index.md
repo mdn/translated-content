@@ -1,21 +1,9 @@
 ---
 title: downloads.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - Téléchargement
-  - WebExtensions
-  - downloads
-  - onChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/onChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 L'événement **`onChanged()`** de l'API {{WebExtAPIRef("downloads")}} est déclenché lorsque l'une des propriétés de {{WebExtAPIRef('downloads.DownloadItem')}} change (à l'exception de `bytesReceived`).
 
@@ -24,9 +12,9 @@ L'écouteur reçoit un fichier `downloadDelta` en tant que paramètre — un obj
 ## Syntaxe
 
 ```js
-browser.downloads.onChanged.addListener(listener)
-browser.downloads.onChanged.removeListener(listener)
-browser.downloads.onChanged.hasListener(listener)
+browser.downloads.onChanged.addListener(listener);
+browser.downloads.onChanged.removeListener(listener);
+browser.downloads.onChanged.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -47,7 +35,7 @@ Les événements ont trois fonctions :
   - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. Cette fonction recevra les arguments suivants :
 
     - `downloadDelta`
-      - : Un [`objet`](#downloadDelta) représentant l'objet {{WebExtAPIRef('downloads.DownloadItem')}} qui a été modifié, ainsi que l'état de toutes les propriétés qui y ont été modifiées.
+      - : Un [`objet`](#downloaddelta) représentant l'objet {{WebExtAPIRef('downloads.DownloadItem')}} qui a été modifié, ainsi que l'état de toutes les propriétés qui y ont été modifiées.
 
 ## Objets supplémentaires
 
@@ -56,7 +44,7 @@ Les événements ont trois fonctions :
 L'objet `downloadDelta` a les propriétés suivantes disponibles :
 
 - `id`
-  - : Un `integer` représentant l'identifiant de l'`id`  {{WebExtAPIRef('downloads.DownloadItem')}} qui a changé.
+  - : Un `integer` représentant l'identifiant de l'`id` {{WebExtAPIRef('downloads.DownloadItem')}} qui a changé.
 - `url`{{optional_inline}}
   - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant une modification d'une `url` {{WebExtAPIRef('downloads.DownloadItem')}}.
 - `filename`{{optional_inline}}
@@ -84,9 +72,9 @@ L'objet `downloadDelta` a les propriétés suivantes disponibles :
 - `exists`{{optional_inline}}
   - : Un objet {{WebExtAPIRef('downloads.BooleanDelta')}} décrivant un changement dans un état {{WebExtAPIRef('downloads.DownloadItem')}}.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.onChanged")}}
+{{Compat}}
 
 ## Exemples
 
@@ -104,9 +92,9 @@ browser.downloads.onChanged.addListener(handleChanged);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#event-onChanged) API.
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#event-onChanged) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -1,19 +1,18 @@
 ---
-title: HTMLSelectElement.type
+title: "HTMLSelectElement: type プロパティ"
+short-title: type
 slug: Web/API/HTMLSelectElement/type
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{ APIRef("HTML DOM") }}
 
 **`HTMLSelectElement.type`** は読み取り専用のプロパティで、フォームコントロールの `type` を返します。
 
-## 構文
+## 値
 
-```js
-var str = selectElt.type;
-```
-
-取りうる値は次の通りです。
+次のうちのいずれかです。
 
 - `"select-multiple"` 複数の値が選択可能な場合
 - `"select-one"` 一つの値だけが選択可能な場合
@@ -22,14 +21,14 @@ var str = selectElt.type;
 
 ```js
 switch (select.type) {
-  case 'select-multiple':
+  case "select-multiple":
     // 複数の値が選択可能
     break;
-  case 'select-one':
+  case "select-one":
     // 一つの値だけが選択可能
     break;
   default:
-    // 標準外の値 (または SELECT 要素ではない)
+  // 標準外の値（または SELECT 要素ではない）
 }
 ```
 

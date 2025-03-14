@@ -1,13 +1,6 @@
 ---
 title: Document.links
 slug: Web/API/Document/links
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-translation_of: Web/API/Document/links
 ---
 
 {{ APIRef("DOM") }}
@@ -28,7 +21,7 @@ nodeList = document.links
 
 ```js
 var links = document.links;
-for(var i = 0; i < links.length; i++) {
+for (var i = 0; i < links.length; i++) {
   var linkHref = document.createTextNode(links[i].href);
   var lineBreak = document.createElement("br");
   document.body.appendChild(linkHref);

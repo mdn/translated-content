@@ -9,7 +9,16 @@ l10n:
 
 La méthode **`findLast()`** parcourt un tableau dans le sens inverse et renvoie le premier élément rencontré qui correspond au critère fourni par la fonction passée en argument. Si aucun élément ne correspond au critère de la fonction de test, ce sera, [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) qui sera renvoyé.
 
-{{EmbedInteractiveExample("pages/js/array-findlast.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.findLast()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 50, 130, 44];
+
+const found = array1.findLast((element) => element > 45);
+
+console.log(found);
+// Expected output: 130
+```
 
 Si vous souhaitez trouver&nbsp;:
 
@@ -76,7 +85,8 @@ La méthode `findLast()` ne modifie pas le tableau sur lequel elle est appelée,
 - Si un élément existant du tableau et qui n'a pas encore été traité mais est modifié par `fnRappel`, la valeur qui sera passée à `fnRappel` sera la valeur au moment où `findLast()` visite l'indice de l'élément.
 - Les éléments qui sont [supprimés avec `delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete) sont tout de même parcourus.
 
-> **Attention :** Les modifications concurrentes comme celles qui sont décrites dans le paragraphe précédent mènent souvent à du code difficilement compréhensible et devraient généralement être évitées.
+> [!WARNING]
+> Les modifications concurrentes comme celles qui sont décrites dans le paragraphe précédent mènent souvent à du code difficilement compréhensible et devraient généralement être évitées.
 
 La méthode `findLast()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_génériques). Elle s'attend uniquement à ce que la valeur `this` ait une propriété `length` et des propriétés dont les clés sont des entiers.
 
@@ -88,10 +98,10 @@ Dans cet exemple, on illustre comment créer un test manipulant les propriétés
 
 ```js
 const inventaire = [
-  { nom: 'pommes', quantite: 2 },
-  { nom: 'bananes', quantite: 0 },
-  { nom: 'poissons', quantite: 1 },
-  { nom: 'cerises', quantite: 5 }
+  { nom: "pommes", quantite: 2 },
+  { nom: "bananes", quantite: 0 },
+  { nom: "poissons", quantite: 1 },
+  { nom: "cerises", quantite: 5 },
 ];
 
 // Renvoie true si le stock est faible
@@ -109,10 +119,10 @@ L'exemple précédent peut être écrit à l'aide d'une fonction fléchée et [u
 
 ```js
 const inventaire = [
-  { nom: 'pommes', quantite: 2 },
-  { nom: 'bananes', quantite: 0 },
-  { nom: 'poissons', quantite: 1 },
-  { nom: 'cerises', quantite: 5 },
+  { nom: "pommes", quantite: 2 },
+  { nom: "bananes", quantite: 0 },
+  { nom: "poissons", quantite: 1 },
+  { nom: "cerises", quantite: 5 },
 ];
 
 const resultat = inventaire.findLast(({ quantite }) => quantite < 2);

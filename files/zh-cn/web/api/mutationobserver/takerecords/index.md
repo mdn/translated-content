@@ -9,8 +9,8 @@ slug: Web/API/MutationObserver/takeRecords
 
 ## 语法
 
-```
-mutationRecords = mutationObserver.takeRecords()
+```js-nolint
+takeRecords()
 ```
 
 ### 参数
@@ -21,7 +21,8 @@ mutationRecords = mutationObserver.takeRecords()
 
 返回一个{{domxref("MutationRecord")}} 对象列表，每个对象都描述了应用于 DOM 树某部分的一次改动。
 
-> **备注：** 调用 `takeRecords()` 后，已发生但未传递给回调的变更队列将保留为空。
+> [!NOTE]
+> 调用 `takeRecords()` 后，已发生但未传递给回调的变更队列将保留为空。
 
 ## 示例
 
@@ -31,8 +32,8 @@ mutationRecords = mutationObserver.takeRecords()
 var targetNode = document.querySelector("#someElement");
 var observerOptions = {
   childList: true,
-  attributes: true
-}
+  attributes: true,
+};
 
 var observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);

@@ -5,7 +5,7 @@ slug: Web/API/IDBRequest
 
 {{APIRef("IndexedDB")}}
 
-**`IDBRequest`** は [IndexedDB API](/ja/docs/IndexedDB) のインターフェイスで、データベースやデータベースオブジェクトへの非同期の要求の結果へのアクセスをイベントハンドラープロパティによって提供します。データベースの読み書きは、それぞれ要求を用いて行います。
+**`IDBRequest`** は [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) のインターフェイスで、データベースやデータベースオブジェクトへの非同期の要求の結果へのアクセスをイベントハンドラープロパティによって提供します。データベースの読み書きは、それぞれ要求を用いて行います。
 
 要求オブジェクトは、最初は操作の結果の情報を何も持っていません。情報が得られるようになると、要求でイベントが発生し、`IDBRequest` のインスタンスのプロパティを通じて情報が得られるようになります。
 
@@ -26,7 +26,7 @@ _{{domxref("EventTarget")}} からもプロパティを継承しています。_
 - {{domxref("IDBRequest.error")}} {{readonlyInline}}
   - : 要求が失敗したとき {{domxref("DOMException")}} を返し、何が失敗したのかを示します。
 - {{domxref("IDBRequest.result")}} {{readonlyInline}}
-  - : 要求の結果を返します。要求に失敗し、結果が得られない場合は、`InvalidStateError` 例外が投げられます。
+  - : 要求の結果を返します。要求が完了していない場合は結果は参照できず、`InvalidStateError` 例外が投げられます。
 - {{domxref("IDBRequest.source")}} {{readonlyInline}}
   - : {{domxref("IDBIndex")}} や {{domxref("IDBObjectStore")}} などの要求元です。({{domxref("IDBFactory.open")}} を呼んだときなど) 要求元が存在しない場合は `null` を返します。
 - {{domxref("IDBRequest.readyState")}} {{readonlyInline}}
@@ -44,10 +44,10 @@ _メソッドはありませんが、メソッドを {{domxref("EventTarget")}} 
 
 - [`error`](/ja/docs/Web/API/IDBRequest/error_event)
   - : エラーにより要求が失敗した場合に発生します。
-    [`onerror`](/ja/docs/Web/API/IDBRequest/onerror) プロパティ経由でも利用可能です。
+    [`onerror`](/ja/docs/Web/API/IDBRequest/error_event) プロパティ経由でも利用可能です。
 - [`success`](/ja/docs/Web/API/IDBRequest/success_event)
   - : `IDBRequest` が成功した場合に発生します。
-    [`onsuccess`](/ja/docs/Web/API/IDBRequest/onsuccess) プロパティ経由でも利用可能です。
+    [`onsuccess`](/ja/docs/Web/API/IDBRequest/success_event) プロパティ経由でも利用可能です。
 
 ## 例
 
@@ -61,12 +61,12 @@ var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // これら 2 個のイベントハンドラーは､データベースが正常に開かれたか､
 // 失敗した時に動作します｡
-DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '<li>データベースの読み込みに失敗しました。</li>';
+DBOpenRequest.onerror = function (event) {
+  note.innerHTML += "<li>データベースの読み込みに失敗しました。</li>";
 };
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>データベースを初期化しました。</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>データベースを初期化しました。</li>";
 
   // データベースを開いた結果を保存します｡
   db = DBOpenRequest.result;
@@ -79,7 +79,7 @@ DBOpenRequest.onsuccess = function(event) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.IDBRequest")}}
+{{Compat}}
 
 ## 関連情報
 

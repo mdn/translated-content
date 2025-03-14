@@ -1,29 +1,31 @@
 ---
 title: CSS格線布局
-slug: Web/CSS/CSS_Grid_Layout
+slug: Web/CSS/CSS_grid_layout
 ---
 
 {{CSSRef}}
 
 **CSS 格線佈局**長於把頁面的主要區域分離、或是在 HTML 原生語法構建的區域間，定義大小、位置、層次等方面的關聯。
 
-格線佈局使作者能夠對齊元素為行和列，就像表格一樣，。然而，格線佈局可以更輕易的達成比一般表格更多元化的排版。例如，一個網格容器的子元素可以定位自己和層重疊，類似於 CSS 定位元素。
+格線佈局使作者能夠對齊元素為行和列，就像表格一樣。然而，格線佈局可以更輕易的達成比一般表格更多元化的排版。例如，一個網格容器的子元素可以定位自己和層重疊，類似於 CSS 定位元素。
 
 ## 基本示例
 
 以下示例展示了一個三列軌道格線，其中創建的行數最小為 100 像素，最大為 auto。Items 已經使用基於線放置在網格的位置上。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
   max-width: 940px;
   margin: 0 auto;
 }
 
 .wrapper > div {
-  border: 2px solid rgb(233,171,88);
+  border: 2px solid rgb(233, 171, 88);
   border-radius: 5px;
-  background-color: rgba(233,171,88,.5);
+  background-color: rgba(233, 171, 88, 0.5);
   padding: 1em;
   color: #d9480f;
 }
@@ -121,30 +123,30 @@ slug: Web/CSS/CSS_Grid_Layout
 - [格線區域](/zh-TW/docs/Glossary/Grid_Areas)
 - [間距](/zh-TW/docs/Glossary/Gutters)
 - [格線軸](/zh-TW/docs/Glossary/Grid_Axis)
-- [格線行](/zh-TW/docs/Glossary/Grid_Rows)
+- [格線行](/zh-TW/docs/Glossary/Grid_Row)
 - [格線列](/zh-TW/docs/Glossary/Grid_Column)
 
 ## 指引
 
-- [格線布局的基本概念](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-- [格線布局與其它布局的關係](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-- [使用指定的格線命名排版](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-- [格線模板區域](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-- [Layout using named grid lines](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-- [使用指定的網格線排版](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-- [在 CSS 自動放置格線布局](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-- [用 Box 對齊 CSS 格線布局](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-- [CSS 格線、邏輯值和寫作模式](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-- [CSS 格線布局與無障礙](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-- [CSS 格線與漸進增強](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-- [用 CSS 格線實做常見排版](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Realising_common_layouts_using_CSS_Grid_)
+- [格線布局的基本概念](/zh-TW/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [格線布局與其它布局的關係](/zh-TW/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+- [使用指定的格線命名排版](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+- [格線模板區域](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+- [Layout using named grid lines](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+- [使用指定的網格線排版](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+- [在 CSS 自動放置格線布局](/zh-TW/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+- [用 Box 對齊 CSS 格線布局](/zh-TW/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [CSS 格線、邏輯值和寫作模式](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+- [CSS 格線布局與無障礙](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+- [CSS 格線與漸進增強](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [用 CSS 格線實做常見排版](/zh-TW/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 ## 外部資源
 
-- [Jen Simmons 的示範](http://labs.jensimmons.com/)
-- [格線示例：一些影片教學與使用範例](http://gridbyexample.com/)
+- [Jen Simmons 的示範](https://labs.jensimmons.com/)
+- [格線示例：一些影片教學與使用範例](https://gridbyexample.com/)
 - [Codrops 格線參考](https://tympanus.net/codrops/css_reference/grid/)
-- [Firefox DevTools CSS Grid Inspector](/zh-TW/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
+- [Firefox DevTools CSS Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 - [CSS Grid Playground](https://mozilladevelopers.github.io/playground/)
 
 ## 規範

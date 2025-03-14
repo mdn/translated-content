@@ -13,14 +13,14 @@ slug: Web/SVG/Element/animate
 
 ### Atributos globales
 
-- [Conditional processing attributes](/es/docs/Web/SVG/Attribute#Conditional_processing_attributes) »
-- [Core attributes](/es/docs/Web/SVG/Attribute#Core_attributes) »
-- [Animation event attributes](/es/docs/Web/SVG/Attribute#Animation_event_attributes) »
-- [Xlink attributes](/es/docs/Web/SVG/Attribute#XLink_attributes) »
-- [Animation attribute target attributes](/es/docs/Web/SVG/Attribute#AnimationAttributeTarget) »
-- [Animation timing attributes](/es/docs/Web/SVG/Attribute#Animation_timing_attributes) »
-- [Animation value attributes](/es/docs/Web/SVG/Attribute#Animation_value_attributes) »
-- [Animation addition attributes](/es/docs/Web/SVG/Attribute#Animation_addition_attributes) »
+- [Conditional processing attributes](/es/docs/Web/SVG/Attribute#conditional_processing_attributes) »
+- [Core attributes](/es/docs/Web/SVG/Attribute#core_attributes) »
+- [Animation event attributes](/es/docs/Web/SVG/Attribute#animation_event_attributes) »
+- [Xlink attributes](/es/docs/Web/SVG/Attribute#xlink_attributes) »
+- [Animation attribute target attributes](/es/docs/Web/SVG/Attribute#animationattributetarget) »
+- [Animation timing attributes](/es/docs/Web/SVG/Attribute#animation_timing_attributes) »
+- [Animation value attributes](/es/docs/Web/SVG/Attribute#animation_value_attributes) »
+- [Animation addition attributes](/es/docs/Web/SVG/Attribute#animation_addition_attributes) »
 - {{SVGAttr("externalResourcesRequired")}}
 
 ### Atributos específicos
@@ -42,12 +42,20 @@ Este elemento implementa la interfaz de [`SVGAnimateElement`](/es/docs/Web/DOM/S
 
 ```html
 <?xml version="1.0"?>
-<svg width="120" height="120" viewBox="0 0 120 120" version="1.1"
-     xmlns="http://www.w3.org/2000/svg">
-
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg">
   <rect x="10" y="10" width="100" height="100">
-    <animate attributeType="XML" attributeName="x" from="-100" to="120"
-        dur="10s" repeatCount="indefinite"/>
+    <animate
+      attributeType="XML"
+      attributeName="x"
+      from="-100"
+      to="120"
+      dur="10s"
+      repeatCount="indefinite" />
   </rect>
 </svg>
 ```
@@ -76,4 +84,4 @@ Para más información (en inglés):
 
 ## Compatibilidad con navegadores
 
-{{Compat("svg.elements.animate")}}
+{{Compat}}

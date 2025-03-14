@@ -1,15 +1,17 @@
 ---
-title: Element.setPointerCapture()
+title: "Element: setPointerCapture() メソッド"
+short-title: setPointerCapture()
 slug: Web/API/Element/setPointerCapture
 l10n:
-  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}
 
 **`setPointerCapture()`** は {{domxref("Element")}} インターフェイスのメソッドで、特定の要素をこれ以降のポインターイベントの*キャプチャターゲット*として指定するために使用します。（{{domxref("Element.releasePointerCapture()")}} を介して、または {{domxref("Element/pointerup_event", "pointerup")}} イベントが発生して）キャプチャが解放されるまで、それ以降のポインターのイベントはキャプチャ要素をターゲットにします。
 
-> **メモ:** ポインターキャプチャ設定後、それ以降のポインターイベントはキャプチャ対象の要素内で発生したとみなされます。よって、 `pointerover`、`pointerenter`、`pointerleave`、`pointerout` は**発生しません**。
+> [!NOTE]
+> ポインターキャプチャ設定後、それ以降のポインターイベントはキャプチャ対象の要素内で発生したとみなされます。よって、 `pointerover`、`pointerenter`、`pointerleave`、`pointerout` は**発生しません**。
 > タッチ画面の機器などで[直接操作](https://w3c.github.io/pointerevents/#dfn-direct-manipulation)をしているブラウザーでは、 `pointerdown` イベント発生時に要素に対してポインターキャプチャが[自動的に適用](https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture)されます。ポインターキャプチャの解放は {{domxref('element.releasePointerCapture')}} メソッドを手動で呼び出したとき、または `pointerup` もしくは `pointercancel` イベント発生時に自動的に行われます。
 
 ### ポインターキャプチャの概要
@@ -76,7 +78,7 @@ function slide(e) {
   slider.style.transform = `translate(${e.clientX - 70}px)`;
 }
 
-const slider = document.getElementById('slider');
+const slider = document.getElementById("slider");
 
 slider.onpointerdown = beginSliding;
 slider.onpointerup = stopSliding;

@@ -1,25 +1,41 @@
 ---
-title: '<div> : l''élément de division du contenu'
+title: "<div> : l'élément de division du contenu"
 slug: Web/HTML/Element/div
-tags:
-  - Content Division
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Layout
-  - Reference
-  - Web
-  - div
-translation_of: Web/HTML/Element/div
-browser-compat: html.elements.div
 ---
 
 {{HTMLSidebar}}
 
 L'élément HTML **`<div>`** (ou division) est le conteneur générique du contenu du flux. Il n'a aucun effet sur le contenu ou la mise en page tant qu'il n'est pas mis en forme d'une manière quelconque à l'aide de [CSS](/fr/docs/Web/CSS).
 
-{{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;div&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<div class="warning">
+  <img
+    src="/shared-assets/images/examples/leopard.jpg"
+    alt="An intimidating leopard." />
+  <p>Beware of the leopard</p>
+</div>
+```
+
+```css interactive-example
+.warning {
+  border: 10px ridge #f00;
+  background-color: #ff0;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.warning img {
+  width: 100%;
+}
+
+.warning p {
+  font: small-caps bold 1.2rem sans-serif;
+  text-align: center;
+}
+```
 
 En tant que conteneur « pur », l'élément `<div>` ne représente rien en soi. Il est plutôt utilisé pour regrouper le contenu afin qu'il puisse être facilement stylé à l'aide des attributs [`class`](/fr/docs/Web/HTML/Global_attributes#attr-class) ou [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id), pour marquer une section d'un document comme étant écrite dans une langue différente (à l'aide de l'attribut [`lang`](/fr/docs/Web/HTML/Global_attributes#attr-lang)), etc.
 
@@ -104,7 +120,8 @@ En tant que conteneur « pur », l'élément `<div>` ne représente rien en soi.
 
 Comme tous les autres éléments HTML, cet élément accepte [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
-> **Note :** L'attribut **`align`** est désormais obsolète et ne doit plus être appliqué pour un `<div>`. On privilégiera l'utilisation des propriétés et outils CSS (tels que [la grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout) ou [les boîtes flexibles (flexbox)](/fr/docs/Glossary/Flexbox)) pour aligner et positionner des éléments `<div>`.
+> [!NOTE]
+> L'attribut **`align`** est désormais obsolète et ne doit plus être appliqué pour un `<div>`. On privilégiera l'utilisation des propriétés et outils CSS (tels que [la grille CSS](/fr/docs/Web/CSS/CSS_grid_layout) ou [les boîtes flexibles (flexbox)](/fr/docs/Glossary/Flexbox)) pour aligner et positionner des éléments `<div>`.
 
 ## Notes d'utilisation
 
@@ -116,14 +133,16 @@ Comme tous les autres éléments HTML, cet élément accepte [les attributs univ
 
 ```html
 <div>
-  <p>Tout type de contenu. Par exemple &lt;p&gt;,
-  &lt;table&gt;. À vous de voir&nbsp;!</p>
+  <p>
+    Tout type de contenu. Par exemple &lt;p&gt;, &lt;table&gt;. À vous de
+    voir&nbsp;!
+  </p>
 </div>
 ```
 
-Le résultat ressemble à ceci :
+#### Résultat
 
-{{EmbedLiveSample("Un_exemple_simple", "", 80)}}
+{{EmbedLiveSample("", "", 80)}}
 
 ### Un exemple mis en forme
 
@@ -133,8 +152,9 @@ Cet exemple crée une boîte avec une ombre en appliquant la mise en forme via d
 
 ```html
 <div class="shadowbox">
-  <p>Voici un paragraphe très intéressant inscrit dans une boîte
-  avec une ombre.</p>
+  <p>
+    Voici un paragraphe très intéressant inscrit dans une boîte avec une ombre.
+  </p>
 </div>
 ```
 
@@ -152,7 +172,7 @@ Cet exemple crée une boîte avec une ombre en appliquant la mise en forme via d
 
 #### Résultat
 
-{{EmbedLiveSample("Un_exemple_mis_en_forme", "", 150)}}
+{{EmbedLiveSample("", "", 150)}}
 
 ## Accessibilité
 

@@ -35,8 +35,8 @@ _从字典_ _{{domxref("AudioNodeOptions")}} 继承。_
 var ac = new AudioContext();
 
 var options = {
-  numberOfInputs : 2
-}
+  numberOfInputs: 2,
+};
 
 var myMerger = new ChannelMergerNode(ac, options);
 ```

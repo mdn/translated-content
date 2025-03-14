@@ -1,5 +1,5 @@
 ---
-title: ':nth-last-child'
+title: :nth-last-child
 slug: Web/CSS/:nth-last-child
 ---
 
@@ -15,7 +15,8 @@ slug: Web/CSS/:nth-last-child
 }
 ```
 
-> **备注：** 这个伪类和 {{Cssxref(":nth-child")}} 基本一致，但它是从*结尾*计数，而不是从开始计数。
+> [!NOTE]
+> 这个伪类和 {{Cssxref(":nth-child")}} 基本一致，但它是从*结尾*计数，而不是从开始计数。
 
 ## 语法
 
@@ -69,16 +70,16 @@ slug: Web/CSS/:nth-last-child
       <td>First line</td>
     </tr>
     <tr>
-       <td>Second line</td>
+      <td>Second line</td>
     </tr>
     <tr>
-       <td>Third line</td>
+      <td>Third line</td>
     </tr>
     <tr>
-       <td>Fourth line</td>
+      <td>Fourth line</td>
     </tr>
     <tr>
-       <td>Fifth line</td>
+      <td>Fifth line</td>
     </tr>
   </tbody>
 </table>
@@ -92,12 +93,12 @@ table {
 }
 
 /* Selects the last three elements */
-tr:nth-last-child(-n+3) {
+tr:nth-last-child(-n + 3) {
   background-color: pink;
 }
 
 /* Selects every element starting from the second to last item */
-tr:nth-last-child(n+2) {
+tr:nth-last-child(n + 2) {
   color: blue;
 }
 
@@ -113,7 +114,7 @@ tr:nth-last-child(2) {
 
 ### Quantity query
 
-数量查询样式元素取决于它们的数量。在本例中，当给定列表中至少有三个列表项时，列表项变为红色。这是通过组合`nth-last-child`和 [通用兄弟选择器](/zh-CN/docs/Web/CSS/General_sibling_selectors).的功能来实现的
+数量查询样式元素取决于它们的数量。在本例中，当给定列表中至少有三个列表项时，列表项变为红色。这是通过组合`nth-last-child`和 [通用兄弟选择器](/zh-CN/docs/Web/CSS/Subsequent-sibling_combinator).的功能来实现的
 
 #### HTML
 
@@ -138,8 +139,8 @@ tr:nth-last-child(2) {
 ```css
 /* If there are at least three list items,
    style them all */
-li:nth-last-child(n+3),
-li:nth-last-child(n+3) ~ li {
+li:nth-last-child(n + 3),
+li:nth-last-child(n + 3) ~ li {
   color: red;
 }
 ```

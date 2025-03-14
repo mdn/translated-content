@@ -1,12 +1,6 @@
 ---
 title: font-stretch
 slug: Web/CSS/@font-face/font-stretch
-tags:
-  - '@font-face'
-  - CSS
-  - Descripteur
-  - Reference
-translation_of: Web/CSS/@font-face/font-stretch
 ---
 
 {{CSSRef}}
@@ -36,7 +30,7 @@ font-stretch: 200%;
 
 /* Valeurs multiples */
 font-stretch: 75% 125%;
-font-stretch: condensed ultra-condensed;;
+font-stretch: condensed ultra-condensed;
 ```
 
 ### Valeurs
@@ -124,8 +118,9 @@ Dans l'exemple suivant, on charge une police Open Sans locale et on l'importe en
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: local("Open Sans") format("woff2"),
-       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src:
+    local("Open Sans") format("woff2"),
+    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
   font-stretch: 87.5% 112.5%;
 }
 ```

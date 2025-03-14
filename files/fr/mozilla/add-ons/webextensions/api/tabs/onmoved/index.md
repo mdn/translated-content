@@ -1,20 +1,9 @@
 ---
 title: tabs.onMoved
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onMoved
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onMoved
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onMoved
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsqu'un onglet est déplacé dans une fenêtre
 
@@ -23,9 +12,9 @@ Un seul événement de déplacement est déclenché, représentant l'onglet que 
 ## Syntaxe
 
 ```js
-browser.tabs.onMoved.addListener(listener)
-browser.tabs.onMoved.removeListener(listener)
-browser.tabs.onMoved.hasListener(listener)
+browser.tabs.onMoved.addListener(listener);
+browser.tabs.onMoved.removeListener(listener);
+browser.tabs.onMoved.hasListener(listener);
 ```
 
 Les événements ont trois fonctions:
@@ -51,7 +40,7 @@ Les événements ont trois fonctions:
     <!---->
 
     - `moveInfo`
-      - : [`object`](#moveInfo). Informations sur le déménagement.
+      - : [`object`](#moveinfo). Informations sur le déménagement.
 
 ## Objets supplémentaires
 
@@ -70,9 +59,14 @@ Les événements ont trois fonctions:
 
 ```js
 function handleMoved(tabId, moveInfo) {
-  console.log("Tab " + tabId +
-              " moved from " + moveInfo.fromIndex +
-              " to " + moveInfo.toIndex);
+  console.log(
+    "Tab " +
+      tabId +
+      " moved from " +
+      moveInfo.fromIndex +
+      " to " +
+      moveInfo.toIndex,
+  );
 }
 
 browser.tabs.onMoved.addListener(handleMoved);
@@ -80,13 +74,13 @@ browser.tabs.onMoved.addListener(handleMoved);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onMoved")}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

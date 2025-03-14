@@ -1,26 +1,56 @@
 ---
-title: ':first-child'
+title: :first-child
 slug: Web/CSS/:first-child
+l10n:
+  sourceCommit: 8d4fb1e2934111a13989d2796152dc601468e7b5
 ---
 
 {{CSSRef}}
 
 **`:first-child`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中で最初の要素を表します。
 
-```css
-/* 兄弟要素の中で最初の <p> を
-   すべてを選択 */
-p:first-child {
-  color: lime;
+{{InteractiveExample("CSS Demo: :first-child", "tabbed-shorter")}}
+
+```css interactive-example
+p {
+  font-weight: bold;
+}
+
+li:first-child {
+  border: 2px solid orange;
 }
 ```
 
-> **メモ:** 当初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。
+```html interactive-example
+<p>Track &amp; field champions:</p>
+<ul>
+  <li>Adhemar da Silva</li>
+  <li>Wang Junxia</li>
+  <li>Wilma Rudolph</li>
+  <li>Babe Didrikson-Zaharias</li>
+  <li>Betty Cuthbert</li>
+  <li>Fanny Blankers-Koen</li>
+  <li>Florence Griffith-Joyner</li>
+  <li>Irena Szewinska</li>
+  <li>Jackie Joyner-Kersee</li>
+  <li>Shirley Strickland</li>
+  <li>Carl Lewis</li>
+  <li>Emil Zatopek</li>
+  <li>Haile Gebrselassie</li>
+  <li>Jesse Owens</li>
+  <li>Jim Thorpe</li>
+  <li>Paavo Nurmi</li>
+  <li>Sergei Bubka</li>
+  <li>Usain Bolt</li>
+</ul>
+```
 
 ## 構文
 
-```
-:first-child
+```css
+:first-child {
+  /* ... */
+}
 ```
 
 ## 例
@@ -29,21 +59,21 @@ p:first-child {
 
 #### HTML
 
-```html
+```html live-sample___basic_example
 <div>
-  <p>This text is selected!</p>
-  <p>This text isn't selected.</p>
+  <p>このテキストは選択されます。</p>
+  <p>このテキストは選択されません。</p>
 </div>
 
 <div>
-  <h2>This text isn't selected: it's not a `p`.</h2>
-  <p>This text isn't selected.</p>
+  <h2>このテキストは選択されません。: `p` ではありません。</h2>
+  <p>このテキストは選択されません。</p>
 </div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___basic_example
 p:first-child {
   color: lime;
   background-color: black;
@@ -55,19 +85,20 @@ p:first-child {
 
 {{EmbedLiveSample('Basic_example', 500, 200)}}
 
-### リストのスタイル付け
+### リストのスタイル設定
 
 #### HTML
 
-```html
+```html live-sample___styling_a_list
 <ul>
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li>Item 3
+  <li>アイテム 1</li>
+  <li>アイテム 2</li>
+  <li>
+    アイテム 3
     <ul>
-      <li>Item 3.1</li>
-      <li>Item 3.2</li>
-      <li>Item 3.3</li>
+      <li>アイテム 3.1</li>
+      <li>アイテム 3.2</li>
+      <li>アイテム 3.3</li>
     </ul>
   </li>
 </ul>
@@ -75,7 +106,7 @@ p:first-child {
 
 #### CSS
 
-```css
+```css live-sample___styling_a_list
 ul li {
   color: blue;
 }
@@ -100,7 +131,7 @@ ul li:first-child {
 
 ## 関連情報
 
-- {{CSSxRef(":-moz-first-node")}} {{Non-standard_Inline}}
+- {{CSSxRef(":-moz-first-node")}}
 - {{CSSxRef(":first-of-type")}}
 - {{CSSxRef(":last-child")}}
 - {{CSSxRef(":nth-child", ":nth-child()")}}

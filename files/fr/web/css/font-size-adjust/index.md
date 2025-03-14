@@ -1,11 +1,6 @@
 ---
 title: font-size-adjust
 slug: Web/CSS/font-size-adjust
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/font-size-adjust
 ---
 
 {{CSSRef}}
@@ -70,21 +65,14 @@ On indique en fait que les minuscules de la fonte utilisée doivent mesurer `7px
 ```html
 <p>Exemples pour <code>font-size-adjust</code></p>
 
-<p class="times">
-  Voici la fonte Times sur 10 px,
-  difficile à lire en petit.
-</p>
+<p class="times">Voici la fonte Times sur 10 px, difficile à lire en petit.</p>
 
 <p class="verdana">
-  Voici la fonte Verdana sur 10px,
-  plus lisible car sans empattement
-  (serif).
+  Voici la fonte Verdana sur 10px, plus lisible car sans empattement (serif).
 </p>
 
 <p class="adjtimes">
-  et voilà le texte ajusté pour
-  avoir le même facteur de forme
-  qu'avec Verdana.
+  et voilà le texte ajusté pour avoir le même facteur de forme qu'avec Verdana.
 </p>
 ```
 

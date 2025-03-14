@@ -1,13 +1,9 @@
 ---
 title: Композиция и обрезка
 slug: Web/API/Canvas_API/Tutorial/Compositing
-tags:
-  - канвас
-translation_of: Web/API/Canvas_API/Tutorial/Compositing
-original_slug: Web/API/Canvas_API/Tutorial/Композиции
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
 Во всех наших [предыдущих примерах](/ru/docs/Web/API/Canvas_API/Tutorial/Transformations), фигуры всегда были нарисованы одна поверх другой. Это более чем достаточно для большинства ситуаций, но это ограничивает порядок, в котором построены композиционные формы. Однако, мы можем изменить это поведение, установив свойство `globalCompositeOperation`. Кроме того, свойства `clip` позволяет скрыть нежелательные части формы.
 
@@ -18,13 +14,11 @@ original_slug: Web/API/Canvas_API/Tutorial/Композиции
 - {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}
   - : Это задаёт Тип операции композиции для применения при разработке новых форм, где Тип является строкой, идентифицирующей, какие из двенадцати операций композитинг в использовании.
 
-См. [примеры компоновки](/ru/docs/Web/API/Canvas_API/Tutorial/Compositing/Example) кода из следующих примеров.
-
-{{EmbedLiveSample("Compositing_example", 750, 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
+См. [примеры компоновки](/ru/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation) кода из следующих примеров.
 
 ## Обрезка контуров
 
-![](https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png)Отсечённый контур похож на обычную форму холста, но он действует как маска, чтобы скрыть нежелательные части фигур. Это визуализируется на изображении справа. Форма красной звезды - наша отправочная дорожка. Все, что выходит за пределы этого пути, не будет нарисовано на холсте.
+![](canvas_clipping_path.png)Отсечённый контур похож на обычную форму холста, но он действует как маска, чтобы скрыть нежелательные части фигур. Это визуализируется на изображении справа. Форма красной звезды - наша отправочная дорожка. Все, что выходит за пределы этого пути, не будет нарисовано на холсте.
 
 Если мы сравниваем отсечённый контур со свойством `globalCompositeOperation` на изображении, мы видим два режима композитинга, которые достигают более или менее того же эффекта в исходном и исходном состоянии. Наиболее важные различия между ними заключаются в том, что отсечение контура фактически никогда не обращается к холсту и контур обрезки никогда не влияет добавление новых форм. Это делает обрезку контура идеальным для рисования нескольких фигур в ограниченной области.
 
@@ -43,7 +37,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Композиции
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.fillRect(0, 0, 150, 150);
   ctx.translate(75, 75);
 
@@ -54,8 +48,8 @@ function draw() {
 
   // draw background
   var lingrad = ctx.createLinearGradient(0, -75, 0, 75);
-  lingrad.addColorStop(0, '#232256');
-  lingrad.addColorStop(1, '#143778');
+  lingrad.addColorStop(0, "#232256");
+  lingrad.addColorStop(1, "#143778");
 
   ctx.fillStyle = lingrad;
   ctx.fillRect(-75, -75, 150, 150);
@@ -63,13 +57,14 @@ function draw() {
   // draw stars
   for (var j = 1; j < 50; j++) {
     ctx.save();
-    ctx.fillStyle = '#fff';
-    ctx.translate(75 - Math.floor(Math.random() * 150),
-                  75 - Math.floor(Math.random() * 150));
+    ctx.fillStyle = "#fff";
+    ctx.translate(
+      75 - Math.floor(Math.random() * 150),
+      75 - Math.floor(Math.random() * 150),
+    );
     drawStar(ctx, Math.floor(Math.random() * 4) + 2);
     ctx.restore();
   }
-
 }
 
 function drawStar(ctx, r) {
@@ -102,6 +97,6 @@ draw();
 
 Все, что нарисовано после создания отсечённого контура, появится только внутри этого пути. Вы можете видеть это чётко в линейном градиенте, который нарисован далее. После этого набирается набор из 50 случайно расположенных и масштабированных звёзд, используя `drawStar()`. Снова звезды появляются только в пределах определённого обтравочного контура.
 
-{{EmbedLiveSample("A_clip_example", "180", "180", "https://mdn.mozillademos.org/files/208/Canvas_clip.png")}}
+{{EmbedLiveSample("Пример_обрезки", 180, 190, "canvas_clip.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

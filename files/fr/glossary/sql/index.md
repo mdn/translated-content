@@ -1,14 +1,9 @@
 ---
 title: SQL
 slug: Glossary/SQL
-tags:
-  - CodingScripting
-  - Database
-  - Glossary
-  - Sql
-translation_of: Glossary/SQL
-original_slug: Glossaire/SQL
 ---
+
+{{GlossarySidebar}}
 
 **SQL** (Structured Query Language) est un langage normalisé pour mettre à jour, récupérer et calculer des données dans les tables d'une base de données.
 

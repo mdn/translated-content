@@ -1,17 +1,14 @@
 ---
 title: Worker()
 slug: Web/API/Worker/Worker
-tags:
-  - API
-  - Reference
-translation_of: Web/API/Worker/Worker
 ---
 
 {{APIRef("Worker")}}
 
 Le constructeur **`Worker()`** crée un objet {{domxref("Worker")}} qui exécute le script à l'URL spécifiée. Ce script doit obéir à la [same-origin policy](/fr/docs/Web/Security/Same-origin_policy).
 
-> **Note :** il y a un désaccord entre les éditeurs de navigateur sur la question de savoir si une donnée URI relève ou non de la même origine. Bien que Gecko 10.0 et suivant accepte les données URIs, ce n'est pas le cas dans tous les autres navigateurs.
+> [!NOTE]
+> Il y a un désaccord entre les éditeurs de navigateur sur la question de savoir si une donnée URI relève ou non de la même origine. Bien que Gecko 10.0 et suivant accepte les données URIs, ce n'est pas le cas dans tous les autres navigateurs.
 
 ## Syntaxe
 
@@ -28,7 +25,7 @@ var myWorker = new Worker(aURL, options);
   - : Un objet contenant des propriétés pour définir les options. Les propriétés suivantes sont valables:
 
     - `type`: Une {{domxref("DOMString")}} définissant le type de worker à créer. The valeur peuvent être `classic` ou `module`. Si cette prpriété n'est pas définie, la valeur sera `classic`.
-    - `credentials`&nbsp;: une [`DOMString`](/fr/docs/Web/API/DOMString) définissant le type de politique d'origine à utiliser pour le _worker_. Les valeurs peuvent être `omit`, `same-origin` ou *`include`*. *Si cette propriété n'est pas définie, ou que type est défini à `classic`, la valeur sera `classic`.*
+    - `credentials`&nbsp;: une [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) définissant le type de politique d'origine à utiliser pour le _worker_. Les valeurs peuvent être `omit`, `same-origin` ou _`include`_. _Si cette propriété n'est pas définie, ou que type est défini à `classic`, la valeur sera `classic`._
     - `name`: Une {{domxref("DOMString")}} définissant un identifiant pour l'environment du worker {{domxref("DedicatedWorkerGlobalScope")}}, souvent utilisé pour le débogage.
 
 ### Exceptions
@@ -44,10 +41,10 @@ L'extrait de code suivant illustre la création d'un objet {{domxref("Worker")}}
 ```js
 var myWorker = new Worker("worker.js");
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message envoyé au worker');
-}
+first.onchange = function () {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Message envoyé au worker");
+};
 ```
 
 Pour un exemple complet, consultez notre [exemple basique d'un worker dédié](https://github.com/mdn/simple-web-worker) ([lancer le worker dédié](https://mdn.github.io/simple-web-worker/)).

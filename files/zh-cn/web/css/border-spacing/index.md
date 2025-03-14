@@ -3,7 +3,7 @@ title: border-spacing
 slug: Web/CSS/border-spacing
 ---
 
-{{ CSSRef("CSS Tables") }}
+{{CSSRef}}
 
 ## 概述
 
@@ -47,10 +47,12 @@ border-spacing: unset;
 
 ## 示例
 
-[查看在线演示](/samples/cssref/border-spacing.html)
+[查看在线演示](https://mdn.dev/archives/media/samples/cssref/border-spacing.html)
 
 ```css
-table { border-spacing: 10px 5px; }
+table {
+  border-spacing: 10px 5px;
+}
 ```
 
 ## 规范

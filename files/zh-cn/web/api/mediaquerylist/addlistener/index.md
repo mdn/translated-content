@@ -18,7 +18,7 @@ MediaQueryList.addListener(func)
 ### 参数
 
 - func
-  - : 表示您要在媒体查询状态更改时运行的回调函数的函数或函数引用。在原始实现中，回调是一个非标准的{{DOMxRef("MediaQueryListListener")}}对象。在新的实现中，使用标准事件机制，回调是标准函数，事件对象是{{DOMxRef("MediaQueryListEvent")}}，它继承自{{DOMxRef("Event")}}。
+  - : 表示你要在媒体查询状态更改时运行的回调函数的函数或函数引用。在原始实现中，回调是一个非标准的{{DOMxRef("MediaQueryListListener")}}对象。在新的实现中，使用标准事件机制，回调是标准函数，事件对象是{{DOMxRef("MediaQueryListEvent")}}，它继承自{{DOMxRef("Event")}}。
 
 ### 返回值
 
@@ -27,17 +27,17 @@ Void.
 ## 例子
 
 ```js
-var mql = window.matchMedia('(max-width: 600px)');
+var mql = window.matchMedia("(max-width: 600px)");
 
 function screenTest(e) {
   if (e.matches) {
     /* the viewport is 600 pixels wide or less */
-    para.textContent = 'This is a narrow screen — less than 600px wide.';
-    document.body.style.backgroundColor = 'red';
+    para.textContent = "This is a narrow screen — less than 600px wide.";
+    document.body.style.backgroundColor = "red";
   } else {
     /* the viewport is more than than 600 pixels wide */
-    para.textContent = 'This is a wide screen — more than 600px wide.';
-    document.body.style.backgroundColor = 'blue';
+    para.textContent = "This is a wide screen — more than 600px wide.";
+    document.body.style.backgroundColor = "blue";
   }
 }
 
@@ -54,8 +54,8 @@ mql.addListener(screenTest);
 
 ## 参见
 
-- [Media queries](/zh-CN/docs/CSS/Media_queries)
-- [Using media queries from code](/zh-CN/docs/CSS/Using_media_queries_from_code)
+- [Media queries](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using media queries from code](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

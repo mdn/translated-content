@@ -19,7 +19,7 @@ map API は、4 つの API メソッドから共有される 2 つの配列 (1 �
 
 そうした実装では、主に 2 つの不都合が生じることとなります。
 
-1. 第一に、設定や探索の計算量が _O(\_n_)_ となること (\_n_ はマップ中におけるキーの数) で、どちらの操作も一致する値を見つけるためにキーのリストを反復しなければならないからです。
+1. 第一に、設定や探索の計算量が `O(n)` となること (_n_ はマップ中におけるキーの数) で、どちらの操作も一致する値を見つけるためにキーのリストを反復しなければならないからです。
 2. 第二の不都合は、配列が各キーと各値への参照を無期限に維持することを保証しているため、メモリリークが発生することです。これらの参照は、オブジェクトへの他の参照がない場合でも、キーがガベージコレクションされるのを防ぎます。これにより、対応する値がガベージコレクションされるのを防ぐことにもなります。
 
 これに対して、ネイティブの `WeakMap` では、キーとなるオブジェクトに対しては"弱い"参照が保持されます。これにより、キーとなったオブジェクトへの参照が他に存在しない場合に、そのオブジェクトはガベージコレクションの対象に含まれるようになります。ネイティブの WeakMap はキーとそのキーに関する情報をマッピングする場合に、キーがガベージコレクションされていないときにだけ意味があるため特に有用な構造です。
@@ -48,14 +48,14 @@ map API は、4 つの API メソッドから共有される 2 つの配列 (1 �
 
 ```js
 const wm1 = new WeakMap(),
-      wm2 = new WeakMap(),
-      wm3 = new WeakMap();
+  wm2 = new WeakMap(),
+  wm3 = new WeakMap();
 const o1 = {},
-      o2 = function() {},
-      o3 = window;
+  o2 = function () {},
+  o3 = window;
 
 wm1.set(o1, 37);
-wm1.set(o2, 'azerty');
+wm1.set(o2, "azerty");
 wm2.set(o1, o2); // 値は（オブジェクトまたは関数を含む）何であってもかまいません
 wm2.set(o3, undefined);
 wm2.set(wm1, wm2); // キーも値もどんなオブジェクトでもかまいません。 WeakMap であってもよいのです！
@@ -108,12 +108,12 @@ class ClearableWeakMap {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakMap")}}
+{{Compat}}
 
 ## 関連情報
 
-- [JavaScript ガイド内の `WeakMap`](/ja/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object)
-- [Hiding Implementation Details with ECMAScript 6 WeakMaps](http://fitzgeraldnick.com/weblog/53/)
+- [JavaScript ガイド内の `WeakMap`](/ja/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)
+- [Hiding Implementation Details with ECMAScript 6 WeakMaps](https://fitzgeraldnick.com/weblog/53/)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}

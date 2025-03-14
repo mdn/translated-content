@@ -1,6 +1,9 @@
 ---
-title: 'HTMLMediaElement: pause イベント'
+title: "HTMLMediaElement: pause イベント"
+short-title: pause
 slug: Web/API/HTMLMediaElement/pause_event
+l10n:
+  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
 {{APIRef("HTMLMediaElement")}}
@@ -9,36 +12,21 @@ slug: Web/API/HTMLMediaElement/pause_event
 
 イベントは `pause()` メソッドから戻り、メディア要素の {{domxref("HTMLMediaElement.paused", "paused")}} プロパティが `true` に変化した後で一度送信されます。
 
-## 基本情報
+このイベントはキャンセル不可で、バブリングしません。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">対象</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">既定のアクション</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>{{domxref("GlobalEventHandlers.onpause")}}</td>
-    </tr>
-  </tbody>
-</table>
+## 構文
+
+このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("pause", (event) => {});
+
+onpause = (event) => {};
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
@@ -47,22 +35,24 @@ slug: Web/API/HTMLMediaElement/pause_event
 `addEventListener()` を使用した例:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('pause', (event) => {
-  console.log('The Boolean paused property is now true. Either the ' +
-  'pause() method was called or the autoplay attribute was toggled.');
+video.addEventListener("pause", (event) => {
+  console.log(
+    "The Boolean paused property is now 'true'. Either the pause() method was called or the autoplay attribute was toggled.",
+  );
 });
 ```
 
 `onpause` イベントハンドラープロパティを使用した例:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onpause = (event) => {
-  console.log('The Boolean paused property is now true. Either the ' +
-  'pause() method was called or the autoplay attribute was toggled.');
+  console.log(
+    "The Boolean paused property is now 'true'. Either the pause() method was called or the autoplay attribute was toggled.",
+  );
 };
 ```
 
@@ -88,7 +78,6 @@ video.onpause = (event) => {
 - HTMLMediaElement {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.play_event", 'play')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.pause_event", 'pause')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.suspend_event", 'suspend')}} イベント

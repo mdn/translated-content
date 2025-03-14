@@ -1,16 +1,6 @@
 ---
 title: Window.event
 slug: Web/API/Window/event
-tags:
-  - API
-  - DOM
-  - Event
-  - Property
-  - Read-only
-  - Reference
-  - Window
-  - 이벤트
-translation_of: Web/API/Window/event
 ---
 
 {{APIRef("DOM")}}

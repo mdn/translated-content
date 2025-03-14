@@ -32,14 +32,13 @@ GitHub の "webextensions-examples" リポジトリーの ["`native-messaging`" 
 
 もし拡張機能をネイティブアプリケーションと通信させたい場合、
 
-- `"nativeMessaging"` [権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)または[オプション権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)を [`manifest.json`](/ja/Add-ons/WebExtensions/manifest.json) ファイルに設定する必要があります。
+- `"nativeMessaging"` [権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)または[オプション権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)を [`manifest.json`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルに設定する必要があります。
 - アドオンIDを明示的に指定します。 [`browser_specific_settings`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) マニフェストキーを使用してください（アプリのマニフェストは、 ID への接続を許可する拡張機能のセットを識別します）。
 
 以下に manifest.json の例を示します。
 
 ```json
 {
-
   "description": "Native messaging example add-on",
   "manifest_version": 2,
   "name": "Native messaging example",
@@ -64,13 +63,14 @@ GitHub の "webextensions-examples" リポジトリーの ["`native-messaging`" 
   },
 
   "permissions": ["nativeMessaging"]
-
 }
 ```
 
-> **メモ:** Chrome は [browser_specific_settings](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーに対応していません。 Chrome に同等の WebExtension をインストールするには、このキーを含まない別のマニフェストを使用する必要があります。以下の [Chrome の非互換性](#chrome_での非互換性)を参照してください。
+> [!NOTE]
+> Chrome は [browser_specific_settings](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーに対応していません。 Chrome に同等の WebExtension をインストールするには、このキーを含まない別のマニフェストを使用する必要があります。以下の [Chrome の非互換性](#chrome_での非互換性)を参照してください。
 
-> **メモ:** オプションの権限を使用する場合、権限が付与されていることを確認し、必要に応じて {{WebExtAPIRef("permissions")}} API でユーザーに権限を要求してからネイティブアプリケーションと通信してください。
+> [!NOTE]
+> オプションの権限を使用する場合、権限が付与されていることを確認し、必要に応じて {{WebExtAPIRef("permissions")}} API でユーザーに権限を要求してからネイティブアプリケーションと通信してください。
 
 ### アプリマニフェスト
 
@@ -88,13 +88,14 @@ GitHub の "webextensions-examples" リポジトリーの ["`native-messaging`" 
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
   "type": "stdio",
-  "allowed_extensions": [ "ping_pong@example.org" ]
+  "allowed_extensions": ["ping_pong@example.org"]
 }
 ```
 
 この設定では、 `"ping_pong@example.org"` という ID の 拡張機能において `"ping_pong"` という名前を {{WebExtAPIRef("runtime")}} API の関数に渡すことによる接続が許可されます。 アプリケーション自体は `"/path/to/native-messaging/app/ping_pong.py"` です。
 
-> **メモ:** Chrome は、 WebExtension の ID を使用して、`allowed_origins` という別のキーで許可される拡張機能を識別します。詳しくは [Chrome のドキュメント](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host)を参照し、以下の [Chrome での非互換性](#chrome_での非互換性)を参照してください。
+> [!NOTE]
+> Chrome は、 WebExtension の ID を使用して、`allowed_origins` という別のキーで許可される拡張機能を識別します。詳しくは [Chrome のドキュメント](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host)を参照し、以下の [Chrome での非互換性](#chrome_での非互換性)を参照してください。
 
 ### Windows セットアップ
 
@@ -110,7 +111,7 @@ GitHub の "webextensions-examples" リポジトリーの ["`native-messaging`" 
   "description": "Example host for native messaging",
   "path": "c:\\path\\to\\native-messaging\\app\\ping_pong_win.bat",
   "type": "stdio",
-  "allowed_extensions": [ "ping_pong@example.org" ]
+  "allowed_extensions": ["ping_pong@example.org"]
 }
 ```
 
@@ -138,7 +139,8 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"
 
   - このキーの既定値は、アプリケーションマニフェストへのパスへのパスとなります。
 
-> **メモ:** GitHub にあるサンプルを元に作業を行う場合は、ブラウザーに WebExtension をインストールする前に、 [readme のこの部分](https://github.com/SphinxKnight/webextensions-examples/tree/master/native-messaging#windows-setup)を読み、 `check_config_win.py` の出力をチェックしてください。
+> [!NOTE]
+> GitHub にあるサンプルを元に作業を行う場合は、ブラウザーに WebExtension をインストールする前に、 [readme のこの部分](https://github.com/SphinxKnight/webextensions-examples/tree/master/native-messaging#windows-setup)を読み、 `check_config_win.py` の出力をチェックしてください。
 
 ## メッセージの交換
 
@@ -159,7 +161,8 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"
 - アプリマニフェストの完全パス
 - (Firefox 55 以降で) 起動元のアドオンの ID (manifest.json の [browser_specific_settings](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーにて指定)
 
-> **メモ:** Chrome  では引数の扱いが異なります。
+> [!NOTE]
+> Chrome では引数の扱いが異なります。
 >
 > - Linux と Macでは、Chrome は引数を、拡張機能が開始するオリジンを次の形: `chrome-extension://[extensionID]`で渡します。これによりアプリは拡張機能を識別できます。
 > - Windowsでは、Chrome は 2 つの引数を渡します、 1 つ目は拡張機能のオリジンで、 2 つ目はアプリを開始するChrome ネイティブウィンドウのハンドルです。
@@ -223,9 +226,7 @@ On a click on the browser action, send the app a message.
 */
 browser.browserAction.onClicked.addListener(() => {
   console.log("Sending:  ping");
-  let sending = browser.runtime.sendNativeMessage(
-    "ping_pong",
-    "ping");
+  let sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
   sending.then(onResponse, onError);
 });
 ```
@@ -244,62 +245,60 @@ browser.browserAction.onClicked.addListener(() => {
 #!/usr/local/bin/node
 
 (() => {
+  let payloadSize = null;
 
-    let payloadSize = null;
+  // A queue to store the chunks as we read them from stdin.
+  // This queue can be flushed when `payloadSize` data has been read
+  let chunks = [];
 
-    // A queue to store the chunks as we read them from stdin.
-    // This queue can be flushed when `payloadSize` data has been read
-    let chunks = [];
+  // Only read the size once for each payload
+  const sizeHasBeenRead = () => Boolean(payloadSize);
 
-    // Only read the size once for each payload
-    const sizeHasBeenRead = () => Boolean(payloadSize);
+  // All the data has been read, reset everything for the next message
+  const flushChunksQueue = () => {
+    payloadSize = null;
+    chunks.splice(0);
+  };
 
-    // All the data has been read, reset everything for the next message
-    const flushChunksQueue = () => {
-        payloadSize = null;
-        chunks.splice(0);
-    };
+  const processData = () => {
+    // Create one big buffer with all the chunks
+    const stringData = Buffer.concat(chunks);
 
-    const processData = () => {
-        // Create one big buffer with all the chunks
-        const stringData = Buffer.concat(chunks);
+    // The browser will emit the size as a header of the payload,
+    // if it hasn't been read yet, do it.
+    // The next time we'll need to read the payload size is when all of the data
+    // of the current payload has been read (ie. data.length >= payloadSize + 4)
+    if (!sizeHasBeenRead()) {
+      payloadSize = stringData.readUInt32LE(0);
+    }
 
-        // The browser will emit the size as a header of the payload,
-        // if it hasn't been read yet, do it.
-        // The next time we'll need to read the payload size is when all of the data
-        // of the current payload has been read (ie. data.length >= payloadSize + 4)
-        if (!sizeHasBeenRead()) {
-            payloadSize = stringData.readUInt32LE(0);
-        }
+    // If the data we have read so far is >= to the size advertised in the header,
+    // it means we have all of the data sent.
+    // We add 4 here because that's the size of the bytes that old the payloadSize
+    if (stringData.length >= payloadSize + 4) {
+      // Remove the header
+      const contentWithoutSize = stringData.slice(4, payloadSize + 4);
 
-        // If the data we have read so far is >= to the size advertised in the header,
-        // it means we have all of the data sent.
-        // We add 4 here because that's the size of the bytes that old the payloadSize
-        if (stringData.length >= (payloadSize + 4)) {
-            // Remove the header
-            const contentWithoutSize = stringData.slice(4, (payloadSize + 4));
+      // Reset the read size and the queued chunks
+      flushChunksQueue();
 
-            // Reset the read size and the queued chunks
-            flushChunksQueue();
+      const json = JSON.parse(contentWithoutSize);
+      // Do something with the data…
+    }
+  };
 
-            const json = JSON.parse(contentWithoutSize);
-            // Do something with the data…
-         }
-    };
+  process.stdin.on("readable", () => {
+    // A temporary variable holding the nodejs.Buffer of each
+    // chunk of data read off stdin
+    let chunk = null;
 
-    process.stdin.on('readable', () => {
-        // A temporary variable holding the nodejs.Buffer of each
-        // chunk of data read off stdin
-        let chunk = null;
+    // Read all of the available data
+    while ((chunk = process.stdin.read()) !== null) {
+      chunks.push(chunk);
+    }
 
-        // Read all of the available data
-        while ((chunk = process.stdin.read()) !== null) {
-            chunks.push(chunk);
-        }
-
-        processData();
-
-    });
+    processData();
+  });
 })();
 ```
 
@@ -394,7 +393,7 @@ while True:
 ネイティブアプリケーションを閉じるためには、次のようにします。
 
 - OS X や Linux のような \*nix システムでは、ブラウザーはネイティブアプリケーションが正しく終了する機会を与えるために SIGTERM を送信し、その後 SIGKILL を送信します。これらのシグナルは新しいプロセスグループを作成して分けない限りすべてのサブプロセスに伝播します。
-- Windows では、ブラウザーはネイティブアプリケーションのプロセスを [Job オブジェクト](https://msdn.microsoft.com/en-us/library/windows/desktop/ms684161(v=vs.85).aspx)とし、ジョブを kill します。 ネイティブアプリケーションが追加でプロセスを立ち上げ、アプリケーション自体が kill された後もそのままにしたい場合、ネイティブアプリケーションは追加のプロセスを [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/library/windows/desktop/ms684863(v=vs.85).aspx>) フラグを立てて立ち上げる必要があります。
+- Windows では、ブラウザーはネイティブアプリケーションのプロセスを [Job オブジェクト](<https://msdn.microsoft.com/en-us/library/windows/desktop/ms684161(v=vs.85).aspx>)とし、ジョブを kill します。 ネイティブアプリケーションが追加でプロセスを立ち上げ、アプリケーション自体が kill された後もそのままにしたい場合、ネイティブアプリケーションは追加のプロセスを [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/library/windows/desktop/ms684863(v=vs.85).aspx>) フラグを立てて立ち上げる必要があります。
 
 ## トラブルシューティング
 
@@ -408,7 +407,7 @@ while True:
 
 - `runtime.connectNative()` に渡した名前がアプリマニフェスト中の名前と一致しているか確認してください。
 - OS X/Linux: アプリマニフェストのファイル名が `<name>.json` となっていることを確認してください。
-- OS X/Linux: ネイティブアプリのマニフェストの場所が[ここ](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#mac_OS_X)で述べているところにあるのを確認してください。
+- OS X/Linux: ネイティブアプリのマニフェストの場所が[ここ](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#mac_os_x)で述べているところにあるのを確認してください。
 - Windows: レジストリキーが正しい場所にあり、その名前がアプリマニフェスト中の名前と一致していることを確認してください。
 - Windows: レジストリキーに指定されたパスがアプリマニフェストを指していることを確認してください。
 

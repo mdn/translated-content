@@ -1,13 +1,6 @@
 ---
 title: element.ownerDocument
 slug: Web/API/Node/ownerDocument
-tags:
-  - API
-  - DOM
-  - Document
-  - Noeuds
-  - Propriétés
-translation_of: Web/API/Node/ownerDocument
 ---
 
 {{APIRef("DOM")}}
@@ -20,11 +13,11 @@ La propriété en lecture seule **`Node.ownerDocument`** renvoie l'objet documen
 document = element.ownerDocument;
 ```
 
-- `document` est l'objet [`document`](/fr/docs/Web/API/document) parent de l'élément courant.
+- `document` est l'objet [`document`](/fr/docs/Web/API/Document) parent de l'élément courant.
 
 ## Exemple
 
-```html
+```js
 // étant donné un nœud "p", obtient le premier enfant HTML
 // de l'objet document
 var d = p.ownerDocument;

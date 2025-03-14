@@ -1,10 +1,6 @@
 ---
 title: text-shadow
 slug: Web/CSS/text-shadow
-tags:
-  - Propiedad CSS
-  - Texto CSS
-translation_of: Web/CSS/text-shadow
 ---
 
 {{CSSRef}}
@@ -28,10 +24,10 @@ Esta propiedad aplica para los [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elemen
 text-shadow: 1px 1px 2px black;
 
 /* color | offset-x | offset-y | blur-radius */
-text-shadow: #CCC 1px 0 10px;
+text-shadow: #ccc 1px 0 10px;
 
 /* offset-x | offset-y | color */
-text-shadow: 5px 5px #558ABB;
+text-shadow: 5px 5px #558abb;
 
 /* color | offset-x | offset-y */
 text-shadow: white 2px 5px;
@@ -52,7 +48,8 @@ text-shadow: unset;
 
   - : Opcional. Puede ser especificado antes o después de los valores de offset. Si el color no es especificado, se usa el predeterminado del agente usuario.
 
-    > **Nota:** Para asegurar consistencia entre navegadores, se recomienda especificar un color explícito.
+    > [!NOTE]
+    > Para asegurar consistencia entre navegadores, se recomienda especificar un color explícito.
 
 - \<offset-x> \<offset-y>
   - : Requeridos. Estos valores `length` especifican el ófset de la sombra del texto. `<offset-x>` especifica la distancia horizontal; un valor negativo pone la sombra a la izquierda del texto. `<offset-y>` especifica la distancia vertical; un valor negativo pone la sombra encima del texto. Si ambos valores son `0`, la sombra es colocada detrás del texto (y puede generar un efecto de difuminado cuando se define el valor `<blur-radius>`).
@@ -70,14 +67,15 @@ text-shadow: unset;
 
 ```css
 .red-text-shadow {
-   text-shadow: red 0 -2px;
+  text-shadow: red 0 -2px;
 }
 ```
 
 ```html
 <p class="red-text-shadow">
-   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-   inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 </p>
 ```
 
@@ -87,16 +85,25 @@ text-shadow: unset;
 
 ```css
 .white-with-blue-shadow {
-   text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
-   color: white;
-   font: 1.5em Georgia, "Bitstream Charter", "URW Bookman L", "Century Schoolbook L", serif;
+  text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
+  color: white;
+  font:
+    1.5em Georgia,
+    "Bitstream Charter",
+    "URW Bookman L",
+    "Century Schoolbook L",
+    serif;
 }
 ```
 
 ```html
 <p class="white-with-blue-shadow">
-   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-   veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 </p>
 ```
 
@@ -106,18 +113,23 @@ text-shadow: unset;
 
 ```css
 .gold-on-gold {
-   text-shadow: rgba(0,0,0,0.1) -1px 0, rgba(0,0,0,0.1) 0 -1px,
-   rgba(255,255,255,0.1) 1px 0, rgba(255,255,255,0.1) 0 1px,
-   rgba(0,0,0,0.1) -1px -1px, rgba(255,255,255,0.1) 1px 1px;
-   color: gold;
-   background: gold;
+  text-shadow:
+    rgba(0, 0, 0, 0.1) -1px 0,
+    rgba(0, 0, 0, 0.1) 0 -1px,
+    rgba(255, 255, 255, 0.1) 1px 0,
+    rgba(255, 255, 255, 0.1) 0 1px,
+    rgba(0, 0, 0, 0.1) -1px -1px,
+    rgba(255, 255, 255, 0.1) 1px 1px;
+  color: gold;
+  background: gold;
 }
 ```
 
 ```html
 <p class="gold-on-gold">
-   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-   veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 </p>
 ```
 
@@ -127,9 +139,9 @@ text-shadow: unset;
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-shadow")}}
+{{Compat}}
 
 ## Véase también
 

@@ -1,12 +1,9 @@
 ---
 title: lang
 slug: Web/XPath/Functions/lang
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/lang
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `lang` 함수는 문맥 노드가 인수로 준 언어와 일치하는 지를 결정하고 true나 false를 반환합니다.
 
@@ -58,7 +55,7 @@ XSL 템플릿이 이렇다면
 
 ### 정의
 
-[XPath 1.0 4.3](http://www.w3.org/TR/xpath#function-lang)
+[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-lang)
 
 ### Gecko 지원
 

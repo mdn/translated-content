@@ -1,6 +1,9 @@
 ---
-title: CSSRule.type
+title: "CSSRule: type プロパティ"
+short-title: type
 slug: Web/API/CSSRule/type
+l10n:
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
 {{APIRef("CSSOM")}}{{Deprecated_header}}
@@ -11,7 +14,7 @@ slug: Web/API/CSSRule/type
 
 ```js
 const sheets = Array.from(document.styleSheets);
-const rules = sheets.map(sheet => Array.from(sheet.cssRules)).flat();
+const rules = sheets.map((sheet) => Array.from(sheet.cssRules)).flat();
 
 for (const rule of rules) {
   console.log(rule.constructor.name);
@@ -20,153 +23,36 @@ for (const rule of rules) {
 
 ## 値
 
-下表に示す定数のいずれかとなる整数です。
+- `CSSRule.STYLE_RULE` (`1`)
+  - : このルールは {{domxref("CSSStyleRule")}} で、 `selector { prop1: val1; prop2: val2; }` のような最も一般的な種類のルールです。
+- `CSSRule.IMPORT_RULE` (`3`)
+  - : このルールは {{domxref("CSSImportRule")}} で、 {{cssxref("@import")}} ルールを表します。
+- `CSSRule.MEDIA_RULE` (`4`)
+  - : このルールは {{domxref("CSSMediaRule")}} です。
+- `CSSRule.FONT_FACE_RULE` (`5`)
+  - : このルールは {{domxref("CSSFontFaceRule")}} です。
+- `CSSRule.PAGE_RULE` (`6`)
+  - : このルールは {{domxref("CSSPageRule")}} です。
+- `CSSRule.KEYFRAMES_RULE` (`7`)
+  - : このルールは {{domxref("CSSKeyframesRule")}} です。
+- `CSSRule.KEYFRAME_RULE` (`8`)
+  - : このルールは {{domxref("CSSKeyframeRule")}} です。
+- `CSSRule.NAMESPACE_RULE` (`10`)
+  - : このルールは {{domxref("CSSNamespaceRule")}} です。
+- `CSSRule.COUNTER_STYLE_RULE` (`11`)
+  - : このルールは {{domxref("CSSCounterStyleRule")}} です。
+- `CSSRule.SUPPORTS_RULE` (`12`)
+  - : このルールは {{domxref("CSSSupportsRule")}} です。
+- `CSSRule.DOCUMENT_RULE` (`13`)
+  - : このルールは {{domxref("CSSDocumentRule")}} です。
+- `CSSRule.FONT_FEATURE_VALUES_RULE` (`14`)
+  - : このルールは {{domxref("CSSFontFeatureValuesRule")}} です。
+- `CSSRule.VIEWPORT_RULE` (`15`)
+  - : このルールは {{domxref("CSSViewportRule")}} です。
+- `CSSRule.REGION_STYLE_RULE` (`16`)
+  - : このルールは {{domxref("CSSRegionStyleRule")}} です。
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th>型</th>
-      <th>値</th>
-      <th>ルールに特化したインターフェイス</th>
-      <th>コメントと例</th>
-    </tr>
-    <tr>
-      <td><code>CSSRule.STYLE_RULE</code></td>
-      <td><code>1</code></td>
-      <td>{{domxref("CSSStyleRule")}}</td>
-      <td>
-        この種のルールで最も一般的なもの:<br /><code
-          >selector { prop1: val1; prop2: val2; }</code
-        >
-      </td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.IMPORT_RULE</code></td>
-      <td><code>3</code></td>
-      <td>{{domxref("CSSImportRule")}}</td>
-      <td>
-        {{cssxref("@import")}} ルールです（文書が完了するまでは、 Mozilla のソースコードのインターフェイス定義
-        <a
-          href="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/css/nsIDOMCSSImportRule.idl#9"
-          >nsIDOMCSSImportRule</a
-        > を参照してください、）
-      </td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.MEDIA_RULE</code></td>
-      <td><code>4</code></td>
-      <td>{{domxref("CSSMediaRule")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.FONT_FACE_RULE</code></td>
-      <td><code>5</code></td>
-      <td>{{domxref("CSSFontFaceRule")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.PAGE_RULE</code></td>
-      <td><code>6</code></td>
-      <td>{{domxref("CSSPageRule")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.KEYFRAMES_RULE</code></td>
-      <td><code>7</code></td>
-      <td>
-        {{domxref("CSSKeyframesRule")}}
-        {{experimental_inline}}
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.KEYFRAME_RULE</code></td>
-      <td><code>8</code></td>
-      <td>
-        {{domxref("CSSKeyframeRule")}}
-        {{experimental_inline}}
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><em>将来使用するために予約</em></td>
-      <td><code>9</code></td>
-      <td></td>
-      <td>将来的にカラープロファイルを定義するために使用する予定。</td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.NAMESPACE_RULE</code></td>
-      <td><code>10</code></td>
-      <td>
-        {{domxref("CSSNamespaceRule")}}
-        {{experimental_inline}}
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.COUNTER_STYLE_RULE</code></td>
-      <td><code>11</code></td>
-      <td>
-        {{domxref("CSSCounterStyleRule")}}
-        {{experimental_inline}}
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.SUPPORTS_RULE</code></td>
-      <td><code>12</code></td>
-      <td>{{domxref("CSSSupportsRule")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.DOCUMENT_RULE</code></td>
-      <td><code>13</code></td>
-      <td>
-        {{domxref("CSSDocumentRule")}}
-        {{experimental_inline}}
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.FONT_FEATURE_VALUES_RULE</code></td>
-      <td><code>14</code></td>
-      <td>{{domxref("CSSFontFeatureValuesRule")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.VIEWPORT_RULE</code></td>
-      <td><code>15</code></td>
-      <td>
-        {{domxref("CSSViewportRule")}}
-        {{experimental_inline}}
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.REGION_STYLE_RULE</code></td>
-      <td><code>16</code></td>
-      <td>
-        {{domxref("CSSRegionStyleRule")}}
-        {{experimental_inline}}
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.UNKNOWN_RULE</code></td>
-      <td><code>0</code></td>
-      <td>
-        {{domxref("CSSUnknownRule")}} {{deprecated_inline}}
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.CHARSET_RULE</code></td>
-      <td><code>2</code></td>
-      <td><code>CSSCharsetRule</code> {{deprecated_inline}}</td>
-      <td>（多くのブラウザーでは削除済み。）</td>
-    </tr>
-  </tbody>
-</table>
+`CSSRule.UNKNOWN_RULE` (`0`) と `CSSRule.CHARSET_RULE` (`2`) は非推奨であり、受け取ることはできません。
 
 ## 例
 

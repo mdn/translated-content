@@ -1,14 +1,14 @@
 ---
 title: WebRTC подключение
 slug: Web/API/WebRTC_API/Connectivity
-translation_of: Web/API/WebRTC_API/Connectivity
-original_slug: Web/API/WebRTC_API/связь
 ---
-{{WebRTCSidebar}}
+
+{{DefaultAPISidebar("WebRTC")}}
 
 Теперь, когда мы рассмотрели протоколы по отдельности, мы можем сложить их вместе. Эта статья описывает, как различные связанные с WebRTC протоколы взаимодействуют друг с другом для того, чтобы создать соединение и передать данные и/или медиа между узлами.
 
-> **Примечание:** Эта страница требует серьёзной переделки для структурной целостности и полноты содержания. Много информации здесь - это хорошо, но организация являет собой путаницу, поскольку сейчас являет собой вид "местности разгрузки"(dumping ground).
+> [!NOTE]
+> Эта страница требует серьёзной переделки для структурной целостности и полноты содержания. Много информации здесь - это хорошо, но организация являет собой путаницу, поскольку сейчас являет собой вид "местности разгрузки"(dumping ground).
 
 ## Что такое Предложение/Ответ и Канал сигнализации?
 
@@ -51,7 +51,8 @@ original_slug: Web/API/WebRTC_API/связь
 
 При изменении описания путём вызова setLocalDescription() или setRemoteDescription(), указанное описание устанавливается как "рассматриваемое описание"(pending description), и WebRTC-слой начинает оценивать, действительно ли это приемлемо. После того, как предложенное описание было согласовано, значение currentLocalDescription или currentRemoteDescription изменяется на "рассматриваемое описание"(pending description), и pending description устанавливается снова в null, указывая, что "отложенного описания"(pending description) не существует.
 
-> **Примечание:** pendingLocalDescription содержит не только "предложение" или "ответ" на стадии рассмотрения, но и каких-либо ICE-кандидатов, которые уже были собраны с тех пор, как "предложение" или "ответ" были созданы. Подобным образом, pendingRemoteDescription включает любых удалённых ICE-кандидатов, которые были предоставлены вызовами {{domxref("RTCPeerConnection.addIceCandidate()")}}.
+> [!NOTE]
+> Свойство `pendingLocalDescription` содержит не только "предложение" или "ответ" на стадии рассмотрения, но и каких-либо ICE-кандидатов, которые уже были собраны с тех пор, как "предложение" или "ответ" были созданы. Подобным образом, pendingRemoteDescription включает любых удалённых ICE-кандидатов, которые были предоставлены вызовами {{domxref("RTCPeerConnection.addIceCandidate()")}}.
 
 Смотрите отдельные статьи по этим свойствам и методам для большей конкретики.
 
@@ -61,4 +62,6 @@ original_slug: Web/API/WebRTC_API/связь
 
 ## Весь обмен в сложной схеме
 
-[![A complete architectural diagram showing the whole WebRTC process.](https://mdn.mozillademos.org/files/6119/webrtc-complete-diagram.png)](https://hacks.mozilla.org/wp-content/uploads/2013/07/webrtc-complete-diagram.png)
+![A complete architectural diagram showing the whole WebRTC process.](webrtc-complete-diagram.png)
+
+[Источник](https://hacks.mozilla.org/2013/07/webrtc-and-the-ocean-of-acronyms/)

@@ -1,18 +1,14 @@
 ---
 title: Interface utilisateur
 slug: Mozilla/Add-ons/WebExtensions/user_interface
-tags:
-  - Landing
-  - User Interface
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface
 ---
 
 {{AddonSidebar}}
 
 Les WebExtensions disposent de plusieurs options d'interface utilisateur afin que leur fonctionnalité puisse être mise à la disposition de l'utilisateur. Un résumé de ces options est fourni ci-dessous, avec une introduction plus détaillée à chaque option d'interface utilisateur dans cette section.
 
-> **Note :** Pour en revenir des conseils sur l'utilisation de ces composants d'interface utilisateur afin de créer une expérience utilisateur générale dans votre extension, consultez l'article sur les [bonnes pratiques de l'expérience utilisateur](/fr/Add-ons/WebExtensions/User_experience_best_practices).
+> [!NOTE]
+> Pour en revenir des conseils sur l'utilisation de ces composants d'interface utilisateur afin de créer une expérience utilisateur générale dans votre extension, consultez l'article sur les [bonnes pratiques de l'expérience utilisateur](/fr/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices).
 
 <table class="standard-table">
   <thead>
@@ -196,8 +192,8 @@ Les WebExtensions disposent de plusieurs options d'interface utilisateur afin qu
 
 Les guides pratiques suivants fournissent des conseils étape par étape pour créer certaines options d'interface utilisateur:
 
-- [Lignes directrices en matière d'accessibilité](/fr/Add-ons/WebExtensions/user_interface/lignes_directrices_en_matiere_accessibilite)
-- [Ajouter un bouton à la barre d'outils](/fr/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
-- [Styles des navigateurs](/fr/Add-ons/WebExtensions/user_interface/Browser_styles)
-- [Extension des outils de développement](/fr/Add-ons/WebExtensions/Extending_the_developer_tools)
-- [Mettre en place une page de paramètres](/fr/Add-ons/WebExtensions/Implement_a_settings_page)
+- [Lignes directrices en matière d'accessibilité](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/lignes_directrices_en_matiere_accessibilite)
+- [Ajouter un bouton à la barre d'outils](/fr/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
+- [Styles des navigateurs](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)
+- [Extension des outils de développement](/fr/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
+- [Mettre en place une page de paramètres](/fr/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)

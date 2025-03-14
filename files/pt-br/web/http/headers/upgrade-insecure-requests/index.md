@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/Upgrade-Insecure-Requests
 
 {{HTTPSidebar}}
 
-O cabeçalho HTTP **`Upgrade-Insecure-Requests`** envia um sinal ao servidor expressando a preferência do cliente por uma resposta criptografada e autenticada, e podendo manipular com êxito a diretiva {{CSP("upgrade-insecure-requests")}} [CSP](/pt-BR/docs/Web/Security/CSP).
+O cabeçalho HTTP **`Upgrade-Insecure-Requests`** envia um sinal ao servidor expressando a preferência do cliente por uma resposta criptografada e autenticada, e podendo manipular com êxito a diretiva {{CSP("upgrade-insecure-requests")}} [CSP](/pt-BR/docs/Web/HTTP/CSP).
 
 <table class="properties">
   <tbody>
@@ -45,15 +45,13 @@ Vary: Upgrade-Insecure-Requests
 
 ## Especificações
 
-| Especificação                                                                                                    | Status                                               | Comentário          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ------------------- |
-| {{specName("Upgrade Insecure Requests", "#preference", "upgrade-insecure-requests")}} | {{Spec2('Upgrade Insecure Requests')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Upgrade-Insecure-Requests")}}
+{{Compat}}
 
-## Veja também:
+## Veja também
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - CSP {{CSP("upgrade-insecure-requests")}} directive

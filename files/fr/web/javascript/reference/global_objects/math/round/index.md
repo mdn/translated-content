@@ -1,25 +1,29 @@
 ---
 title: Math.round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/round
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/round
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/round
 ---
 
 {{JSRef}}
 
 La fonction **`Math.round()`** retourne la valeur d'un nombre arrondi à l'entier le plus proche.
 
-{{EmbedInteractiveExample("pages/js/math-round.html")}}
+{{InteractiveExample("JavaScript Demo: Math.round()")}}
+
+```js interactive-example
+console.log(Math.round(0.9));
+// Expected output: 1
+
+console.log(Math.round(5.95), Math.round(5.5), Math.round(5.05));
+// Expected output: 6 6 5
+
+console.log(Math.round(-5.05), Math.round(-5.5), Math.round(-5.95));
+// Expected output: -5 -5 -6
+```
 
 ## Syntaxe
 
 ```js
-Math.round(x)
+Math.round(x);
 ```
 
 ### Paramètres
@@ -41,10 +45,10 @@ Si la partie décimale du nombre est plus grande que 0.5, l'argument est arrondi
 
 ```js
 Math.round(20.49); //  20
-Math.round(20.5);  //  21
-Math.round(42);    //  42
+Math.round(20.5); //  21
+Math.round(42); //  42
 Math.round(-20.5); // -20
-Math.round(-20.51);// -21
+Math.round(-20.51); // -21
 ```
 
 ## Spécifications

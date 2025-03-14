@@ -1,14 +1,14 @@
 ---
-title: '-moz-box-ordinal-group'
+title: -moz-box-ordinal-group
 slug: Web/CSS/box-ordinal-group
-original_slug: Web/CSS/-moz-box-ordinal-group
 ---
 
 {{CSSRef}}
 
-> **Aviso:** Essa propriedade é parte do projeto do módulo original do CSS Flexible Box Layout, e foi substituído em projetos recentes.
+> [!WARNING]
+> Essa propriedade é parte do projeto do módulo original do CSS Flexible Box Layout, e foi substituído em projetos recentes.
 
-Veja [Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) para mais informações do que você deveria usar ao invés dessa propriedade.
+Veja [Flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) para mais informações do que você deveria usar ao invés dessa propriedade.
 
 ## Sumário
 

@@ -1,20 +1,9 @@
 ---
 title: history.onVisitRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/history/onVisitRemoved
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - History
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onVisitRemoved
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/onVisitRemoved
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsqu'une page est complètement supprimée de l'historique du navigateur.
 
@@ -25,9 +14,9 @@ Lancé lorsqu'une page est complètement supprimée de l'historique du navigateu
 ## Syntaxe
 
 ```js
-browser.history.onVisitRemoved.addListener(listener)
-browser.history.onVisitRemoved.removeListener(listener)
-browser.history.onVisitRemoved.hasListener(listener)
+browser.history.onVisitRemoved.addListener(listener);
+browser.history.onVisitRemoved.removeListener(listener);
+browser.history.onVisitRemoved.hasListener(listener);
 ```
 
 Les événements ont trois fonctions:
@@ -54,9 +43,9 @@ Les événements ont trois fonctions:
         - Si cet événement se déclenche parce qu'il est clair, `allHistory` sera `true` et `urls` sera un tableau vide.
         - Dans le cas contraire, `allHistory` sera `false` et `urls` contiendront un qui est l'URL de la page supprimée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.onVisitRemoved")}}
+{{Compat}}
 
 ## Exemples
 
@@ -74,9 +63,9 @@ browser.history.onVisitRemoved.addListener(onRemoved);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/extensions/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

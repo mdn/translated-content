@@ -1,6 +1,8 @@
 ---
 title: id
 slug: Web/SVG/Attribute/id
+l10n:
+  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
 ---
 
 {{SVGRef}}
@@ -9,9 +11,15 @@ slug: Web/SVG/Attribute/id
 
 すべての要素がこの属性を使用します。
 
+## 例
+
 ```html
-<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-  <style type="text/css">
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg">
+  <style>
     <![CDATA[
       #smallRect {
         stroke: #000066;
@@ -24,7 +32,7 @@ slug: Web/SVG/Attribute/id
 </svg>
 ```
 
-{{EmbedLiveSample("topExample", "120", "120")}}
+{{EmbedLiveSample("Example", "120", "120")}}
 
 ## 使用上の注意
 
@@ -49,7 +57,8 @@ slug: Web/SVG/Attribute/id
 
   - : 要素の ID を指定します。 ID はノードツリー内で固有でなければならず、空文字列であってはならず、ホワイトスペース文字を含んではなりません。
 
-    > **メモ:** URL の対象フラグメントとして使用されるときに `id` の値に SVG view 仕様書として解釈される値 (例えば `MyDrawing.svg#svgView(viewBox(0,200,1000,1000))`) や、基本メディアフラグメントを使用しないでください。
+    > [!NOTE]
+    > URL の対象フラグメントとして使用されるときに `id` の値に SVG view 仕様書として解釈される値 (例えば `MyDrawing.svg#svgView(viewBox(0,200,1000,1000))`) や、基本メディアフラグメントを使用しないでください。
 
     XML 文書内で妥当でなければなりません。独立した SVG 文書は XML 1.0 の構文を使用しており、有効な ID は指定された文字 (文字、数字、いくつかの句読点) のみを含み、数字、フルストップ (.) 文字、ハイフンマイナス (-) 文字で始まらないことを指定しています。
 

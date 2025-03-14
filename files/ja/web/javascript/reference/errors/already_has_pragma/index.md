@@ -1,6 +1,5 @@
 ---
-title: 'Warning: -file- is being assigned a //# sourceMappingURL, but already has
-  one'
+title: "Warning: -file- is being assigned a //# sourceMappingURL, but already has one"
 slug: Web/JavaScript/Reference/Errors/Already_has_pragma
 ---
 
@@ -42,5 +41,5 @@ X-SourceMap: /path/to/file.js.map
 
 ## 関連情報
 
-- [ソースマップを使用する – Firefox ツールドキュメント](/ja/docs/Tools/Debugger/How_to/Use_a_source_map)
+- [ソースマップを使用する – Firefox ツールドキュメント](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
 - [Introduction to source maps – HTML5 rocks](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)

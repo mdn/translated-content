@@ -13,7 +13,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/sessions
 
 この API は拡張機能にタブやウィンドウに関連する追加状態の保存させる関数グループも提供します。それで、タブやウィンドウが閉じられて順次復帰された場合、拡張機能は状態を取得できます。例えば、タブをグループ化する拡張機能は、これを使ってタブがどのグループにいるのかを記憶し、ユーザーがタブを復帰した時に正しいグループに復帰できるようになります。
 
-セッション API を使うには "sessions" [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)が必要です。
+セッション API を使うには "sessions" [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)が必要です。
 
 ## 型
 
@@ -57,13 +57,15 @@ slug: Mozilla/Add-ons/WebExtensions/API/sessions
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.sessions")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **メモ:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/extensions/sessions) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -90,4 +92,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/sessions
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

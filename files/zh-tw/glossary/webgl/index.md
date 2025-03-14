@@ -3,6 +3,8 @@ title: WebGL
 slug: Glossary/WebGL
 ---
 
+{{GlossarySidebar}}
+
 **WebGL** (_Web Graphics Library_) 是一個可以畫出，2D 和 3D 圖像的 {{Glossary("JavaScript")}} {{Glossary("API")}}
 
 WebGL 基於 {{Glossary("OpenGL")}} ES 2.0. 且 正被[科納斯組織](https://www.khronos.·org/) 維護

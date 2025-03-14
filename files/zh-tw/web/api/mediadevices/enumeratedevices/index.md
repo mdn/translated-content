@@ -11,7 +11,7 @@ slug: Web/API/MediaDevices/enumerateDevices
 
 ## 語法
 
-```js
+```js-nolint
 enumerateDevices()
 ```
 
@@ -23,7 +23,7 @@ enumerateDevices()
 
 當返回值{{jsxref("Promise")}}完成時，會得到一個{{domxref("MediaDeviceInfo")}}物件的陣列。陣列裡的每個物件描述一個可用的媒體輸入與輸出設備（只有被授予權限的裝置），物件的順序是有意義的，預設捕獲的裝置會被列在第一個。
 
-如果枚舉失敗，promise會被拒絕。
+如果枚舉失敗，promise 會被拒絕。
 
 ## 範例
 
@@ -37,16 +37,18 @@ if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
 
 // List cameras and microphones.
 
-navigator.mediaDevices.enumerateDevices()
-.then(function(devices) {
-  devices.forEach(function(device) {
-    console.log(device.kind + ": " + device.label +
-                " id = " + device.deviceId);
+navigator.mediaDevices
+  .enumerateDevices()
+  .then(function (devices) {
+    devices.forEach(function (device) {
+      console.log(
+        device.kind + ": " + device.label + " id = " + device.deviceId,
+      );
+    });
+  })
+  .catch(function (err) {
+    console.log(err.name + ": " + err.message);
   });
-})
-.catch(function(err) {
-  console.log(err.name + ": " + err.message);
-});
 ```
 
 這可能會產生：
@@ -77,6 +79,6 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 
 - {{domxref("MediaDevices.getUserMedia")}}
 - [WebRTC](/zh-TW/docs/Web/API/WebRTC_API) - the introductory page to the API
-- [MediaStream API](/zh-TW/docs/Web/API/Media_Streams_API) - the API for the media stream objects
-- [Taking webcam photos](/zh-TW/docs/Web/API/WebRTC_API/Taking_still_photos) - a
+- [MediaStream API](/zh-TW/docs/Web/API/Media_Capture_and_Streams_API) - the API for the media stream objects
+- [Taking webcam photos](/zh-TW/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - a
   tutorial on using `getUserMedia()` for taking photos rather than video.

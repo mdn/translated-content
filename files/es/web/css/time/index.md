@@ -1,13 +1,6 @@
 ---
 title: <time>
 slug: Web/CSS/time
-tags:
-  - CSS
-  - Presentación
-  - Referencia
-  - Tipo de Dato CSS
-  - Web
-translation_of: Web/CSS/time
 ---
 
 {{CSSRef}}
@@ -18,7 +11,8 @@ El [tipo de dato](/es/docs/Web/CSS/CSS_Types) **`<time>`** de [CSS](/es/docs/Web
 
 El tipo de datos `<time>` consta de un {{cssxref("&lt;number&gt;")}} seguido de una de las unidades enumeradas a continuación. Opcionalmente, puede estar precedido por un solo signo `+` o `-` . Al igual que con todas las dimensiones, no hay espacio entre la unidad literal y el número.
 
-> **Nota:** Aunque el número `0` es siempre el mismo independientemente de la unidad, la unidad no se puede omitir. En otras palabras, `0` no es válido y no representa `0s` o `0ms`.
+> [!NOTE]
+> Aunque el número `0` es siempre el mismo independientemente de la unidad, la unidad no se puede omitir. En otras palabras, `0` no es válido y no representa `0s` o `0ms`.
 
 ### Unidades
 
@@ -27,7 +21,8 @@ El tipo de datos `<time>` consta de un {{cssxref("&lt;number&gt;")}} seguido de 
 - **`ms`**
   - : Representa un tiempo en milisegundos. Ejemplos: `0ms`, `150.25ms`, `-60000ms`.
 
-> **Nota:** Nota: La conversión entre `s` y `ms` sigue la lógica `1s` = `1000ms`.
+> [!NOTE]
+> La conversión entre `s` y `ms` sigue la lógica `1s` = `1000ms`.
 
 ## Ejemplos
 
@@ -56,4 +51,4 @@ El tipo de datos `<time>` consta de un {{cssxref("&lt;number&gt;")}} seguido de 
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.types.time")}}
+{{Compat}}

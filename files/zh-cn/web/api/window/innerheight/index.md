@@ -9,15 +9,7 @@ slug: Web/API/Window/innerHeight
 
 浏览器窗口的视口（viewport）高度（以像素为单位）；如果有水平滚动条，也包括滚动条高度。
 
-> **备注：** If you use `nsIDOMWindowUtils.setCSSViewport()` to set the virtual window size for page layout purposes, the value returned by this property corresponds to the viewport height set using that method.
-
-## 语法
-
-```
-var intViewportHeight = window.innerHeight;
-```
-
-### 值
+## 值
 
 `intViewportHeight` 为浏览器窗口的视口的高度。
 
@@ -46,8 +38,6 @@ var intOuterFramesetHeight = top.innerHeight;
 // 返回最外部 frameset 的视口的高度
 ```
 
-{{todo("link to an interactive demo here")}}
-
 改变一个窗口的大小，可以查看 {{domxref("window.resizeBy()")}} 和 {{domxref("window.resizeTo()")}}。
 
 想获取窗口的外层高度（outer height），即整个浏览器窗口的高度，请查看 {{domxref("window.outerHeight")}}。
@@ -56,7 +46,7 @@ var intOuterFramesetHeight = top.innerHeight;
 
 下面的示意图展示了 `outerHeight` 和 `innerHeight` 两者的区别。
 
-![innerHeight vs outerHeight illustration](/@api/deki/files/213/=FirefoxInnerVsOuterHeight2.png)
+![innerHeight vs outerHeight illustration](firefoxinnervsouterheight2.png)
 
 ## 浏览器兼容性
 

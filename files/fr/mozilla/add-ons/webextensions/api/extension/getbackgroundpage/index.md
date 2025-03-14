@@ -1,29 +1,19 @@
 ---
 title: extension.getBackgroundPage()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getBackgroundPage
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Alias de {{WebExtAPIRef("runtime.getBackgroundPage()")}}.
 
-> **Note :** Cette méthode ne peut pas être utilisée en mode Navigation privée - elle renvoie toujours un tableau vide. Pour plus d'informations, voir {{bug(1329304)}}.
+> [!NOTE]
+> Cette méthode ne peut pas être utilisée en mode Navigation privée - elle renvoie toujours un tableau vide. Pour plus d'informations, voir le [bug Firefox 1329304](https://bugzil.la/1329304).
 
 ## Syntaxe
 
 ```js
-var page = browser.extension.getBackgroundPage()
+var page = browser.extension.getBackgroundPage();
 ```
 
 ### Paramètres
@@ -34,13 +24,13 @@ Aucun
 
 `object`. [Window](/fr/docs/Web/API/Window) de la page d'arrière plan.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.getBackgroundPage")}}
+{{Compat}}
 
 ## Exemples
 
-Supposons un [script d'arrière plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) définisse une fonction `foo()`:
+Supposons un [script d'arrière plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) définisse une fonction `foo()`:
 
 ```js
 // background.js
@@ -50,7 +40,7 @@ function foo() {
 }
 ```
 
-Un script exécuté dans un [popup](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2) peut appeler cette fonction directement comme ceci :
+Un script exécuté dans un [popup](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) peut appeler cette fonction directement comme ceci :
 
 ```js
 // popup.js
@@ -61,9 +51,9 @@ page.foo(); // -> "I'm defined in background.js"
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/extensions/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

@@ -1,7 +1,6 @@
 ---
 title: HTMLSelectElement.setCustomValidity()
 slug: Web/API/HTMLSelectElement/setCustomValidity
-translation_of: Web/API/HTMLSelectElement/setCustomValidity
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -16,7 +15,7 @@ ElmSelectionne.setCustomValidity(message);
 
 ### Paramètres
 
-- *message* est le {{domxref("DOMString")}} contenant le message d'erreur.
+- _message_ est le {{domxref("DOMString")}} contenant le message d'erreur.
 
 ## Spécifications
 
@@ -28,4 +27,4 @@ ElmSelectionne.setCustomValidity(message);
 
 ## Voir aussi
 
-- [Validation du formulaire](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation).
+- [Validation du formulaire](/fr/docs/Web/HTML/Constraint_validation).

@@ -5,9 +5,9 @@ slug: Web/API/URL
 
 {{APIRef("URL API")}}
 
-**`URL`** 接口用于解析，构造，规范化和编码 {{glossary("URL")}}。它通过提供允许您轻松阅读和修改 URL 组件的属性来工作。通常，通过在调用 URL 的构造函数时将 URL 指定为字符串或提供相对 URL 和基本 URL 来创建新的 URL 对象。然后，您可以轻松读取 URL 的已解析组成部分或对 URL 进行更改。
+**`URL`** 接口用于解析，构造，规范化和编码 {{glossary("URL")}}。它通过提供允许你轻松阅读和修改 URL 组件的属性来工作。通常，通过在调用 URL 的构造函数时将 URL 指定为字符串或提供相对 URL 和基本 URL 来创建新的 URL 对象。然后，你可以轻松读取 URL 的已解析组成部分或对 URL 进行更改。
 
-如果浏览器尚不支持{{domxref("URL.URL", "URL()")}}构造函数，则可以使用{{domxref("Window")}}中的{{domxref("Window.URL")}}属性。确保检查您的任何目标浏览器是否要求对此添加前缀。
+如果浏览器尚不支持{{domxref("URL.URL", "URL()")}}构造函数，则可以使用{{domxref("Window")}}中的{{domxref("Window.URL")}}属性。确保检查你的任何目标浏览器是否要求对此添加前缀。
 
 {{AvailableInWorkers}}
 
@@ -105,9 +105,10 @@ const response = await fetch(new URL('http://www.example.com/démonstration.html
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [`core-js` 中针对 `URL` 的 polyfill](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - [URL API](/zh-CN/docs/Web/API/URL_API)
-- [What is a URL?](/zh-CN/docs/Learn/Common_questions/What_is_a_URL)
-- Property to obtain a `URL` object: {{domxref("Window.URL")}}.
-- {{domxref("URLSearchParams")}}.
+- [什么是 URL？](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
+- 获取 `URL` 对象的属性：{{domxref("URL")}}
+- {{domxref("URLSearchParams")}}

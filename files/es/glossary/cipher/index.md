@@ -1,14 +1,9 @@
 ---
 title: Algoritmo criptográfico
 slug: Glossary/Cipher
-tags:
-  - Criptografía
-  - Glosario
-  - Seguridad
-  - privacidad
-translation_of: Glossary/Cipher
-original_slug: Glossary/Cifrado
 ---
+
+{{GlossarySidebar}}
 
 En {{glossary("cryptography", "criptografía")}}, un algoritmo criptográfico es un algoritmo que puede {{glossary("encryption", "encriptar")}} {{glossary("cleartext", "texto en lenguaje natural")}} para hacerlo ilegible, y para que sea {{glossary("decryption", "desencriptado")}} con el fin de recuperar el texto original.
 

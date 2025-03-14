@@ -1,13 +1,14 @@
 ---
-title: Event.originalTarget
+title: "Event: originalTarget プロパティ"
+short-title: originalTarget
 slug: Web/API/Event/originalTarget
+l10n:
+  sourceCommit: c20c12fab32381b983b4148d712fda227d34e2bd
 ---
 
-{{ ApiRef("DOM") }} {{Non-standard_header}}
+{{APIRef("DOM")}}{{Non-standard_header}}{{AvailableInWorkers}}
 
 **`originalTarget`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、このイベントが再ターゲットされる前の下のターゲットを返します。 {{domxref("Event.explicitOriginalTarget")}} とは異なり、ネイティブの無名コンテンツになることもあります。
-
-[イベントターゲットの比較](/ja/docs/Web/API/Event/Comparison_of_Event_Targets)も参照してください。
 
 ## 仕様書
 

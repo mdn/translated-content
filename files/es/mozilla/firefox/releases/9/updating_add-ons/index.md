@@ -1,7 +1,6 @@
 ---
 title: Actualizar add-ons para Firefox 9
 slug: Mozilla/Firefox/Releases/9/Updating_add-ons
-translation_of: Mozilla/Firefox/Releases/9/Updating_add-ons
 ---
 
 {{FirefoxSidebar}}
@@ -14,7 +13,8 @@ Si tu complemento se distribuye en [addons.mozilla.org](https://addons.mozilla.o
 
 Así que puedes empezar visitando AMO para comprobar si tu complemento requiere trabajo.
 
-> **Nota:** Todavía debes testear tu complemento en Firefox 9, incluso si ha sido actualizado automáticamente. Existen casos extremos que pueden no ser automáticamente detectados.
+> [!NOTE]
+> Todavía debes testear tu complemento en Firefox 9, incluso si ha sido actualizado automáticamente. Existen casos extremos que pueden no ser automáticamente detectados.
 
 ## Los componentes de inicio pueden remover scripts con carga retrasada
 
@@ -24,7 +24,7 @@ Empezando en Firefox 9, tu debes llamar al nuevo método `nsIChromeFrameMessageM
 
 ```js
 browser.messageManager.removeDelayedFrameScript(
-  "chrome://myextension/content/somescript.js"
+  "chrome://myextension/content/somescript.js",
 );
 ```
 

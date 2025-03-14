@@ -1,13 +1,6 @@
 ---
 title: AnalyserNode.getByteFrequencyData()
 slug: Web/API/AnalyserNode/getByteFrequencyData
-tags:
-  - API
-  - AnalyserNode
-  - Method
-  - Reference
-  - Web Audio API
-browser-compat: api.AnalyserNode.getByteFrequencyData
 ---
 
 {{ APIRef("Web Audio API") }}

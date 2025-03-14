@@ -1,19 +1,63 @@
 ---
 title: top
 slug: Web/CSS/top
-tags:
-  - CSS
-  - CSS Позиционирование
-  - CSS-свойство
-  - Справка
-translation_of: Web/CSS/top
 ---
 
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`top`** частично определяет вертикальную позицию позиционируемого элемента. Оно не влияет на непозиционируемые элементы (т.е. **`top`** не применится, если задано `position: static`).
 
-{{EmbedInteractiveExample("pages/css/top.html")}}
+{{InteractiveExample("CSS Demo: top")}}
+
+```css interactive-example-choice
+top: 0;
+```
+
+```css interactive-example-choice
+top: 4em;
+```
+
+```css interactive-example-choice
+top: 10%;
+```
+
+```css interactive-example-choice
+top: 20px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <div id="example-element">I am absolutely positioned.</div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 0.75em solid;
+  padding: 0.75em;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+#example-element {
+  background-color: #264653;
+  border: 4px solid #ffb500;
+  color: white;
+  position: absolute;
+  width: 140px;
+  height: 60px;
+}
+```
 
 Эффект свойства `top` зависит от того, как позиционируется элемент (то есть от значения свойства {{cssxref("position")}}):
 
@@ -66,7 +110,7 @@ top: unset;
 
 ```css
 /* Для body могут быть использованы единицы px, также и для div */
-body{
+body {
   width: 100%;
   height: 100%;
 }
@@ -80,46 +124,42 @@ div {
   width: 70%;
   height: 40%;
   text-align: left;
-  border: 3px rgb(0,0,0) solid;
+  border: 3px rgb(0, 0, 0) solid;
 }
 ```
 
 ```html
- <?xml version="1.0" encoding="utf-8"?>
- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
- <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-   <head>
-     <meta http-equiv="Content-Type" content="application/xhtml+xml" />
-     <title>Mozilla.org height top left width percentage CSS</title>
-     <style type="text/css">
-       /* Для body могут быть использованы единицы px, также и для div */
-       body {
-         width: 100%;
-         height: 100%;
-       }
-       /* div теперь может использовать значения в процентах (body ширина и высота установлены) */
-       div {
-         position: absolute;
-         left: 15%;
-         top: 30%;
-         bottom: 30%;
-         width: 70%;
-         height: 40%;
-         text-align: left;
-         border: 3px rgb(0,0,0) solid;
-       }
-     </style>
-   </head>
-   <body>
-      <center>
-        <div>
-             ...Some content...
-        </div>
-      </center>
-
-   </body>
- </html>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml" />
+    <title>Mozilla.org height top left width percentage CSS</title>
+    <style type="text/css">
+      /* Для body могут быть использованы единицы px, также и для div */
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      /* div теперь может использовать значения в процентах (body ширина и высота установлены) */
+      div {
+        position: absolute;
+        left: 15%;
+        top: 30%;
+        bottom: 30%;
+        width: 70%;
+        height: 40%;
+        text-align: left;
+        border: 3px rgb(0, 0, 0) solid;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <div>...Some content...</div>
+    </center>
+  </body>
+</html>
 ```
 
 ## Спецификации

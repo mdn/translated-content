@@ -1,12 +1,6 @@
 ---
-title: 'Guide : ancrage du défilement (scroll anchoring)'
+title: "Guide : ancrage du défilement (scroll anchoring)"
 slug: Web/CSS/overflow-anchor/Guide_to_scroll_anchoring
-tags:
-  - CSS
-  - Guide
-  - Intermédiaire
-translation_of: Web/CSS/overflow-anchor/Guide_to_scroll_anchoring
-original_slug: Web/CSS/overflow-anchor/Guide_ancrage_défilement
 ---
 
 {{CSSRef}}
@@ -48,13 +42,14 @@ Pour désactiver cette fonctionnalité sur une certaine partie du document, on c
 }
 ```
 
-> **Note :** Dans la spécification, il est indiqué qu'il n'est pas possible de « revenir » avec l'ancrage dans un élément fils si l'ancrage a été désactivé sur un élément parent. Ainsi, si on désactive l'ancrage pour l'ensemble du document, on ne pourra pas appliquer (avec succès) `overflow-anchor: auto` à un autre endroit du document.
+> [!NOTE]
+> Dans la spécification, il est indiqué qu'il n'est pas possible de « revenir » avec l'ancrage dans un élément fils si l'ancrage a été désactivé sur un élément parent. Ainsi, si on désactive l'ancrage pour l'ensemble du document, on ne pourra pas appliquer (avec succès) `overflow-anchor: auto` à un autre endroit du document.
 
 ### Supression triggers
 
 La spécification définit également certains évènements qui suppriment cette fonctionnalité où ça serait problématique. Si un évènement particulier se produit sur le nœud d'ancrage ou sur un ancêtre de celui-ci, l'ancrage est supprimé.
 
-Les évènements en question sont les modifications des [valeurs calculées](/fr/docs/Web/CSS/Valeur_calculée) des propriétés suivantes :
+Les évènements en question sont les modifications des [valeurs calculées](/fr/docs/Web/CSS/computed_value) des propriétés suivantes :
 
 - {{cssxref("top")}}, {{cssxref("left")}}, {{cssxref("right")}} ou {{cssxref("bottom")}}
 - {{cssxref("margin")}} ou {{cssxref("padding")}}
@@ -64,9 +59,7 @@ Les évènements en question sont les modifications des [valeurs calculées](/fr
 
 ## Compatibilité des navigateurs
 
-Si vous souhaitez appliquer une amélioration progressive et détecter si cette fonctionnalité est disponible dans le navigateur utilisé, vous pouvez utiliser [les requêtes de fonctionnalité](/fr/docs/Web/CSS/@supports) afin de tester la prise en charge de la propriété `overflow-anchor`.
-
-{{Compat("css.properties.overflow-anchor")}}
+{{Compat}}
 
 ## Voir aussi
 

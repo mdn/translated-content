@@ -1,19 +1,19 @@
 ---
 title: WorkerGlobalScope.dump()
 slug: Web/API/WorkerGlobalScope/dump
-translation_of: Web/API/WorkerGlobalScope/dump
 ---
 
 {{APIRef("Web Workers API")}}
 
-> **Attention :** Cette fonctionnalité n'est ni standard, ni en voie de standardisation. Ne l'utilisez pas pour des sites accessibles sur le Web : elle ne fonctionnera pas pour tout utilisateur. Il peut également y avoir d'importantes incompatibilités entre les implémentations et son comportement peut être modifié dans le futur.
+> [!WARNING]
+> Cette fonctionnalité n'est ni standard, ni en voie de standardisation. Ne l'utilisez pas pour des sites accessibles sur le Web : elle ne fonctionnera pas pour tout utilisateur. Il peut également y avoir d'importantes incompatibilités entre les implémentations et son comportement peut être modifié dans le futur.
 
 La méthode **`dump()`** de l'interface {{domxref("WorkerGlobalScope")}} permet d'écrire des messages vers `stdout` — i.e. dans le terminal, seulement sur Firefox. C'est la même chose que {{domxref("window.dump")}} dans Firefox, mais pour les *worker*s.
 
 ## Syntaxe
 
 ```js
-dump('Mon message\n');
+dump("Mon message\n");
 ```
 
 ### Paramètre
@@ -37,18 +37,18 @@ Maintenant allez dans `about:config` et activez la préférence `browser.dom.win
 Après, lancez un worker contenant la ligne suivante:
 
 ```js
-dump('test\n');
+dump("test\n");
 ```
 
 Vous devriez observer le message «test» apparaître dans le terminal.
 
 ## Spécifications
 
-Cette méthode n’apparaît dans aucune spécification.
+Cette méthode n'apparaît dans aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WorkerGlobalScope.dump")}}
+{{Compat}}
 
 ## Voir aussi
 

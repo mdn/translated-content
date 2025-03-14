@@ -1,12 +1,8 @@
 ---
 title: Сообщения HTTP
 slug: Web/HTTP/Messages
-tags:
-  - HTTP
-  - Веб Механика
-  - Руководство
-translation_of: Web/HTTP/Messages
 ---
+
 {{HTTPSidebar}}
 
 HTTP сообщения - это обмен данными между сервером и клиентом. Есть два типа сообщений: _**запросы**_, отправляемые клиентом, чтобы инициировать реакцию со стороны сервера, и **ответы** от сервера.
@@ -15,7 +11,7 @@ HTTP сообщения - это обмен данными между серве
 
 Веб разработчики не создают текстовые сообщения HTTP самостоятельно - это делает программа, браузер, прокси или веб-сервер. Они обеспечивают создание HTTP сообщений через конфигурационные файлы (для прокси и серверов), APIs (для браузеров) или другие интерфейсы.
 
-![From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent.](https://mdn.mozillademos.org/files/13825/HTTPMsg2.png)
+![From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent.](httpmsg2.png)
 
 Механизм бинарного фрагментирования в HTTP/2 разработан так, чтобы не потребовалось вносить изменения в имеющиеся APIs и конфигурационные файлы: он вполне прозрачен для пользователя.
 
@@ -28,7 +24,7 @@ HTTP запросы и ответы имеют близкую структуру
 
 Стартовую строку вместе с заголовками сообщения HTTP называют _головой_ запроса, а его данные - _телом_.
 
-![Requests and responses share a common structure in HTTP](https://mdn.mozillademos.org/files/13827/HTTPMsgStructure2.png)
+![Requests and responses share a common structure in HTTP](httpmsgstructure2.png)
 
 ## Запросы HTTP
 
@@ -39,14 +35,14 @@ HTTP запросы - это сообщения, отправляемые кли
 1. _[Метод HTTP](/ru/docs/Web/HTTP/Methods)_, глагол (например, {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} или {{HTTPMethod("POST")}}) или существительное (например, {{HTTPMethod("HEAD")}} или {{HTTPMethod("OPTIONS")}}), описывающие требуемое действие. Например, `GET` указывает, что нужно доставить некоторый ресурс, а `POST` означает отправку данных на сервер (для создания или модификации ресурса, или генерации возвращаемого документа).
 2. _Цель запроса_, обычно {{glossary("URL")}}, или абсолютный путь протокола, порт и домен обычно характеризуются контекстом запроса. Формат цели запроса зависит от используемого HTTP-метода. Это может быть
 
-    - Абсолютный путь, за которым следует `'?'` и строка запроса. Это самая распространённая форма, называемая _исходной формой_ (_origin form_) . Используется с методами `GET`, `POST`, `HEAD`, и `OPTIONS`.
-      `POST / HTTP 1.1 GET /background.png HTTP/1.0 HEAD /test.html?query=alibaba HTTP/1.1 OPTIONS /anypage.html HTTP/1.0`
-    - Полный URL _- абсолютная форма_ (_absolute form_) , обычно используется с `GET` при подключении к прокси.
-      `GET http://developer.mozilla.org/ru/docs/Web/HTTP/Messages HTTP/1.1`
-    - Компонента URL "authority", состоящая из имени домена и (необязательно) порта (предваряемого символом `':'`), _называется authority form_. Используется только с методом `CONNECT` при установке туннеля HTTP.
-      `CONNECT developer.mozilla.org:80 HTTP/1.1`
-    - Форма звёздочки (_asterisk form)_, просто "звёздочка" (`'*'`) используется `с методом OPTIONS` и представляет сервер.
-      `OPTIONS * HTTP/1.1`
+   - Абсолютный путь, за которым следует `'?'` и строка запроса. Это самая распространённая форма, называемая _исходной формой_ (_origin form_) . Используется с методами `GET`, `POST`, `HEAD`, и `OPTIONS`.
+     `POST / HTTP 1.1 GET /background.png HTTP/1.0 HEAD /test.html?query=alibaba HTTP/1.1 OPTIONS /anypage.html HTTP/1.0`
+   - Полный URL _- абсолютная форма_ (_absolute form_) , обычно используется с `GET` при подключении к прокси.
+     `GET http://developer.mozilla.org/ru/docs/Web/HTTP/Messages HTTP/1.1`
+   - Компонента URL "authority", состоящая из имени домена и (необязательно) порта (предваряемого символом `':'`), _называется authority form_. Используется только с методом `CONNECT` при установке туннеля HTTP.
+     `CONNECT developer.mozilla.org:80 HTTP/1.1`
+   - Форма звёздочки (_asterisk form)_, просто "звёздочка" (`'*'`) используется `с методом OPTIONS` и представляет сервер.
+     `OPTIONS * HTTP/1.1`
 
 3. _Версия HTTP_, определяющая структуру оставшегося сообщения, указывая, какую версию предполагается использовать для ответа.
 
@@ -59,7 +55,7 @@ HTTP запросы - это сообщения, отправляемые кли
 - _Основные заголовки (General headers_), например, {{HTTPHeader("Via")}}, относящиеся к сообщению в целом
 - _Заголовки запроса (Request headers_), например, {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Accept-Type")}}, уточняющие запрос (как, например, {{HTTPHeader("Accept-Language")}}), придающие контекст (как {{HTTPHeader("Referer")}}), или накладывающие ограничения на условия (like {{HTTPHeader("If-None")}}).
 - _Заголовки сущности_, например {{HTTPHeader("Content-Length")}}, относящиеся к телу сообщения. Как легко понять, они отсутствуют, если у запроса нет тела.
-- ![Example of headers in an HTTP request](https://mdn.mozillademos.org/files/13821/HTTP_Request_Headers2.png)
+- ![Example of headers in an HTTP request](http_request_headers2.png)
 
 ### Тело
 
@@ -68,7 +64,7 @@ HTTP запросы - это сообщения, отправляемые кли
 Тела можно грубо разделить на две категории:
 
 - Одноресурсные тела (Single-resource bodies), состоящие из одного отдельного файла, определяемого двумя заголовками: {{HTTPHeader("Content-Type")}} и {{HTTPHeader("Content-Length")}}.
-- [Многоресурсные тела (Multiple-resource bodies](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data)), состоящие из множества частей, каждая из которых содержит свой бит информации. Они обычно связаны с [HTML-формами](/ru/docs/Web/Guide/HTML/Forms).
+- [Многоресурсные тела (Multiple-resource bodies](/ru/docs/Web/HTTP/MIME_types#multipartform-data)), состоящие из множества частей, каждая из которых содержит свой сегмент информации. Они обычно связаны с [HTML-формами](/ru/docs/Learn/Forms).
 
 ## Ответы HTTP
 
@@ -90,9 +86,9 @@ HTTP запросы - это сообщения, отправляемые кли
 
 - _Основные заголовки (General headers_), например, {{HTTPHeader("Via")}}, относящиеся к сообщению в целом.
 - _Заголовки ответа (Response headers_), например, {{HTTPHeader("Vary")}} и {{HTTPHeader("Accept-Ranges")}}, сообщающие дополнительную информацию о сервере, которая не уместилась в строку состояния.
-- _Заголовки сущности (Entity headers_), например, {{HTTPHeader("Content-Length")}}, относящиеся к телу ответа. Отсутствуют, если у запроса нет тела.
+- _Заголовки сущности (Entity headers_), например, {{HTTPHeader("Content-Length")}}, относящиеся к телу ответа. Отсутствуют, если у ответа нет тела.
 
-![Example of headers in an HTTP response](https://mdn.mozillademos.org/files/13823/HTTP_Response_Headers2.png)
+![Example of headers in an HTTP response](http_response_headers2.png)
 
 ### Тело
 
@@ -102,7 +98,7 @@ HTTP запросы - это сообщения, отправляемые кли
 
 - Одноресурсные тела (Single-resource bodies), состоящие из отдельного файла известной длины, определяемые двумя заголовками: {{HTTPHeader("Content-Type")}} и {{HTTPHeader("Content-Length")}}.
 - Одноресурсные тела (Single-resource bodies), состоящие из отдельного файла неизвестной длины, разбитого на небольшие части (chunks) с заголовком {{HTTPHeader("Transfer-Encoding")}}, значением которого является `chunked`.
-- [Многоресурсные тела (Multiple-resource bodies)](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data), состоящие из многокомпонентного тела, каждая часть которого содержит свой сегмент информации. Они относительно редки.
+- [Многоресурсные тела (Multiple-resource bodies)](/ru/docs/Web/HTTP/MIME_types#multipartform-data), состоящие из многокомпонентного тела, каждая часть которого содержит свой сегмент информации. Они относительно редки.
 
 ## Фреймы HTTP/2
 
@@ -114,7 +110,7 @@ HTTP запросы - это сообщения, отправляемые кли
 
 HTTP/2 переходит на новый уровень: он делит сообщения HTTP/1.x на фреймы, которые внедряются в поток. Фреймы данных из заголовков отделены друг от друга, что позволяет сжимать заголовки. Несколько потоков можно объединять друг с другом - такой процесс называется мультиплексированием - что позволяет более эффективно использовать TCP-соединения.
 
-![HTTP/2 modify the HTTP message to divide them in frames (part of a single stream), allowing for more optimization.](https://mdn.mozillademos.org/files/13819/Binary_framing2.png)
+![HTTP/2 modify the HTTP message to divide them in frames (part of a single stream), allowing for more optimization.](binary_framing2.png)
 
 Фреймы HTTP сейчас прозрачны для веб-разработчиков. Это дополнительный шаг, который HTTP/2 делает по отношению к сообщениям HTTP/1.1 и лежащему в основе транспортному протоколу. Для реализации фреймов HTTP веб-разработчикам не требуется вносить изменения в имеющиеся APIs; если HTTP/2 доступен и на сервере, и на клиенте, он включается и используется.
 

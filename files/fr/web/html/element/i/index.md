@@ -1,23 +1,37 @@
 ---
 title: <i>
 slug: Web/HTML/Element/i
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/i
 ---
 
 {{HTMLSidebar}}
 
 L'élément HTML **`<i>`** représente un morceau de texte qui se différencie du texte principal. Cela peut par exemple être le cas pour des termes techniques, des phrases dans une langue étrangère ou encore l'expression des pensées d'un personnage. Le contenu de cet élément est généralement affiché en italique.
 
-{{EmbedInteractiveExample("pages/tabbed/i.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;i&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>I looked at it and thought <i>This can't be real!</i></p>
+
+<p>
+  <i>Musa</i> is one of two or three genera in the family <i>Musaceae</i>; it
+  includes bananas and plantains.
+</p>
+
+<p>
+  The term <i>bandwidth</i> describes the measure of how much information can
+  pass through a data connection in a given amount of time.
+</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+i {
+}
+```
 
 ## Attributs
 
-Cet élément possède uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément possède uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Exemples
 
@@ -26,9 +40,7 @@ Cet élément possède uniquement [les attributs universels](/fr/docs/Web/HTML/A
 ```html
 <p>
   La phrase latine
-  <i class="latin">
-    Veni, vidi, vici
-  </i>
+  <i class="latin"> Veni, vidi, vici </i>
   est souvent employée en littérature.
 </p>
 ```
@@ -85,7 +97,7 @@ C'est une bonne pratique que d'utiliser l'attribut **`class`** pour identifier l
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>

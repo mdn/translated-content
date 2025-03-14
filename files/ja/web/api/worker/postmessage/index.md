@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Workers API")}}
 
-**`postMessage()`** は {{domxref("Worker")}} インターフェイスのメソッドで、ワーカーの内部スコープにメッセージを送信します。これは、ワーカーに送信するデータを単一の引数として受け取ります。このデータは任意の値、または循環参照を含む場合は[構造化複製](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)アルゴリズムで扱う JavaScript オブジェクトが許可されます。
+**`postMessage()`** は {{domxref("Worker")}} インターフェイスのメソッドで、ワーカーの内部スコープにメッセージを送信します。これは、ワーカーに送信するデータを単一の引数として受け取ります。このデータは任意の値、または[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)で扱う JavaScript オブジェクト (循環参照を含んでもよい) が許可されます。
 
 {{domxref("Worker")}} の `postMessage()` メソッドは {{domxref("MessagePort")}} の {{domxref("MessagePort.postMessage", "postMessage()")}} メソッドに委任して、受信する {{domxref("MessagePort")}} に対応するイベントループのタスクを追加します。
 
@@ -16,15 +16,15 @@ l10n:
 ## 構文
 
 ```js
-postMessage(message)
-postMessage(message, transfer)
+postMessage(message);
+postMessage(message, transfer);
 ```
 
 ### 引数
 
 - `message`
 
-  - : ワーカーに送るオブジェクトです。これは {{domxref("DedicatedWorkerGlobalScope.message_event")}} イベントに配信されるイベントの `data` フィールドに入ります。このデータは任意の値、または循環参照を含む場合は[構造化複製](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)アルゴリズムで扱う JavaScript オブジェクトが許可されます。
+  - : ワーカーに送るオブジェクトです。これは {{domxref("DedicatedWorkerGlobalScope.message_event")}} イベントに配信されるイベントの `data` フィールドに入ります。このデータは任意の値、または[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)で扱う JavaScript オブジェクト (循環参照を含んでもよい) が許可されます。
 
     `message` 引数が提供されて*いない*場合は、 `TypeError` が発生します。ワーカーに渡すデータが重要でない場合は、 `null` または `undefined` を明示的に渡すことができます。
 
@@ -43,17 +43,17 @@ postMessage(message, transfer)
 次のコードスニペットは、 {{domxref("Worker.Worker", "Worker()")}} コンストラクターを使用して {{domxref("Worker")}} オブジェクトを作成しています。2 つのフォーム入力要素 (`first` と `second`) のどちらかの値が変更されると、 {{domxref("HTMLElement/change_event", "change")}} イベントによって `postMessage()` が呼び出され、両方の入力要素の値が現在のワーカーに送信されます。
 
 ```js
-const myWorker = new Worker('worker.js');
+const myWorker = new Worker("worker.js");
 
 first.onchange = () => {
   myWorker.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 
 second.onchange = () => {
   myWorker.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 ```
 
 完全な例は、[簡単なワーカーの例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) （[例を実行](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)）を参照してください。
@@ -64,7 +64,7 @@ second.onchange = () => {
 
 この最小限の例では、 `main` が `ArrayBuffer` を作成して `myWorker` に移転し、次に `myWorker` がそれを `main` に再移転して、それぞれの段階で大きさを記録します。
 
-#### main.js のコード:
+#### main.js のコード
 
 ```js
 // ワーカーの生成
@@ -78,7 +78,7 @@ myWorker.addEventListener("message", function handleMessageFromWorker(msg) {
 
   console.log(
     "buf.byteLength in main AFTER transfer back from worker:",
-    bufTransferredBackFromWorker.byteLength
+    bufTransferredBackFromWorker.byteLength,
   );
 });
 
@@ -87,7 +87,7 @@ const myBuf = new ArrayBuffer(8);
 
 console.log(
   "buf.byteLength in main BEFORE transfer to worker:",
-  myBuf.byteLength
+  myBuf.byteLength,
 );
 
 // myBuf を myWorker に送信し、配下の ArrayBuffer を移転する
@@ -95,7 +95,7 @@ myWorker.postMessage(myBuf, [myBuf]);
 
 console.log(
   "buf.byteLength in main AFTER transfer to worker:",
-  myBuf.byteLength
+  myBuf.byteLength,
 );
 ```
 
@@ -110,7 +110,7 @@ self.onmessage = function handleMessageFromMain(msg) {
 
   console.log(
     "buf.byteLength in worker BEFORE transfer back to main:",
-    bufTransferredFromMain.byteLength
+    bufTransferredFromMain.byteLength,
   );
 
   // バッファーを main に送信し返し、配下の ArrayBuffer を移転する
@@ -118,7 +118,7 @@ self.onmessage = function handleMessageFromMain(msg) {
 
   console.log(
     "buf.byteLength in worker AFTER transfer back to main:",
-    bufTransferredFromMain.byteLength
+    bufTransferredFromMain.byteLength,
   );
 };
 ```

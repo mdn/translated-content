@@ -1,11 +1,6 @@
 ---
 title: text-decoration-color
 slug: Web/CSS/text-decoration-color
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-decoration-color
 ---
 
 {{CSSRef}}
@@ -16,11 +11,13 @@ La propriété raccourcie {{cssxref("text-decoration")}} permet de paramétrer c
 
 {{EmbedInteractiveExample("pages/css/text-decoration-color.html")}}
 
-> **Note :** Lorsqu'on définit plusieurs décorations à la fois, il peut être plus pratique d'utiliser la propriété raccourcie {{cssxref("text-decoration")}}.
+> [!NOTE]
+> Lorsqu'on définit plusieurs décorations à la fois, il peut être plus pratique d'utiliser la propriété raccourcie {{cssxref("text-decoration")}}.
 
 Il est préférable d'utiliser cette propriété pour colorer ces décorations plutôt que d'utiliser d'autres éléments HTML.
 
-> **Note :** CSS ne fournit pas de mécanisme spécifique pour définir une couleur par type de ligne. On peut toutefois y parvenir en imbriquant des éléments mis en forme différemment.
+> [!NOTE]
+> CSS ne fournit pas de mécanisme spécifique pour définir une couleur par type de ligne. On peut toutefois y parvenir en imbriquant des éléments mis en forme différemment.
 
 ## Syntaxe
 
@@ -91,4 +88,4 @@ text-decoration-color: unset;
 - La propriété raccourcie {{cssxref("text-decoration")}} qui permet, entre autres, de paramétrer `text-decoration-color`.
 - Le type de données {{cssxref("&lt;color&gt;")}}
 - D'autres propriétés relatives aux couleurs : {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}
-- [Appliquer des couleurs aux éléments HTML](/fr/docs/Web/HTML/Applying_color)
+- [Appliquer des couleurs aux éléments HTML](/fr/docs/Web/CSS/CSS_colors/Applying_color)

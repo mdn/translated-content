@@ -1,16 +1,35 @@
 ---
 title: Intl.ListFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/ListFormat
-browser-compat: javascript.builtins.Intl.ListFormat
 ---
 
 {{JSRef}}
 
 L'objet **`Intl.ListFormat`** permet de formater des listes de façon différente selon la locale utilisée.
 
-{{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.ListFormat", "taller")}}
+
+```js interactive-example
+const vehicles = ["Motorcycle", "Bus", "Car"];
+
+const formatter = new Intl.ListFormat("en", {
+  style: "long",
+  type: "conjunction",
+});
+console.log(formatter.format(vehicles));
+// Expected output: "Motorcycle, Bus, and Car"
+
+const formatter2 = new Intl.ListFormat("de", {
+  style: "short",
+  type: "disjunction",
+});
+console.log(formatter2.format(vehicles));
+// Expected output: "Motorcycle, Bus oder Car"
+
+const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
+console.log(formatter3.format(vehicles));
+// Expected output: "Motorcycle Bus Car"
+```
 
 ## Constructeur
 
@@ -36,15 +55,25 @@ L'objet **`Intl.ListFormat`** permet de formater des listes de façon différent
 Dans l'exemple qui suit, on voit comment créer un formateur de liste pour l'anglais.
 
 ```js
-const list = ['Motorcycle', 'Bus', 'Car'];
+const list = ["Motorcycle", "Bus", "Car"];
 
- console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "long", type: "conjunction" }).format(
+    list,
+  ),
+);
 // > Motorcycle, Bus and Car
 
- console.log(new Intl.ListFormat('en-GB', { style: 'short', type: 'disjunction' }).format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "short", type: "disjunction" }).format(
+    list,
+  ),
+);
 // > Motorcycle, Bus or Car
 
- console.log(new Intl.ListFormat('en-GB', { style: 'narrow', type: 'unit' }).format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "narrow", type: "unit" }).format(list),
+);
 // > Motorcycle Bus Car
 ```
 
@@ -53,8 +82,13 @@ const list = ['Motorcycle', 'Bus', 'Car'];
 Dans l'exemple qui suit, on voit comment créer un formateur de liste, renvoyant les fragments, pour l'anglais.
 
 ```js
-const list = ['Motorcycle', 'Bus', 'Car'];
-console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).formatToParts(list));
+const list = ["Motorcycle", "Bus", "Car"];
+console.log(
+  new Intl.ListFormat("en-GB", {
+    style: "long",
+    type: "conjunction",
+  }).formatToParts(list),
+);
 
 // [ { "type": "element", "value": "Motorcycle" },
 //   { "type": "literal", "value": ", " },

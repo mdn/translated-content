@@ -12,7 +12,7 @@ l10n:
 ## 構文
 
 ```js
-terminate()
+terminate();
 ```
 
 ### 引数
@@ -28,7 +28,7 @@ terminate()
 次のコードでは {{domxref("Worker")}} オブジェクトを {{domxref("Worker.Worker", "Worker()")}} コンストラクターで作成したあと、すぐに停止させます。
 
 ```js
-const myWorker = new Worker('worker.js');
+const myWorker = new Worker("worker.js");
 
 myWorker.terminate();
 ```

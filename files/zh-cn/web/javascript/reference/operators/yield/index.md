@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Operators/yield
 
 `yield` 关键字用于暂停和恢复[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)。
 
-{{EmbedInteractiveExample("pages/js/expressions-yield.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - yield", "taller")}}
+
+```js interactive-example
+function* foo(index) {
+  while (index < 2) {
+    yield index;
+    index++;
+  }
+}
+
+const iterator = foo(0);
+
+console.log(iterator.next().value);
+// Expected output: 0
+
+console.log(iterator.next().value);
+// Expected output: 1
+```
 
 ## 语法
 
@@ -30,14 +47,15 @@ slug: Web/JavaScript/Reference/Operators/yield
 
 - `yield`，导致生成器再次暂停并返回生成器的新值。下一次调用 `next()` 时，在 `yield` 之后紧接着的语句继续执行。
 - {{jsxref("Statements/throw", "throw")}} 用于从生成器中抛出异常。这让生成器完全停止执行，并在调用者中继续执行，正如通常情况下抛出异常一样。
-- 到达生成器函数的结尾.在这种情况下，生成器的执行结束，并且 `IteratorResult` 给调用者返回 `value` 的值是 {{jsxref("undefined")}} 并且 `done` 为 `true`。
+- 到达生成器函数的结尾。在这种情况下，生成器的执行结束，并且 `IteratorResult` 给调用者返回 `value` 的值是 {{jsxref("undefined")}} 并且 `done` 为 `true`。
 - 到达 {{jsxref("Statements/return", "return")}} 语句。在这种情况下，生成器的执行结束，并将 `IteratorResult` 返回给调用者，其 `value` 的值是由 `return` 语句指定的，并且 `done` 为 `true`。
 
 如果将参数传递给生成器的 `next()` 方法，则该值将成为生成器当前 `yield` 操作返回的值。
 
 在生成器的代码路径中的 `yield` 运算符，以及通过将其传递给 {{jsxref("Generator.prototype.next()")}} 指定新的起始值的能力之间，生成器提供了强大的控制力。
 
-> **警告：** 不幸地是，`next()` 是不对称的，但这并不是没有帮助：它总是向当前暂停的 `yield` 发送一个值，但是返回的是 `yield` 之后表达式的运算结果。
+> [!WARNING]
+> 不幸地是，`next()` 是不对称的，但这并不是没有帮助：它总是向当前暂停的 `yield` 发送一个值，但是返回的是 `yield` 之后表达式的运算结果。
 
 ## 示例
 
@@ -46,7 +64,7 @@ slug: Web/JavaScript/Reference/Operators/yield
 以下代码是一个生成器函数的声明。
 
 ```js
-function* countAppleSales () {
+function* countAppleSales() {
   const saleList = [3, 7, 5];
   for (let i = 0; i < saleList.length; i++) {
     yield saleList[i];

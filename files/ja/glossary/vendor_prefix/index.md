@@ -3,9 +3,12 @@ title: Vendor Prefix (ベンダー接頭辞)
 slug: Glossary/Vendor_Prefix
 ---
 
+{{GlossarySidebar}}
+
 ブラウザーベンダー (提供元) は、時に試験的または非標準な CSS プロパティおよび JavaScript API に接頭辞を追加することがあります。これにより、開発者は標準化プロセスの中で、理論上は、ウェブ開発者のコードを壊すことなく新しいアイデアを試すことができます。開発者は、ブラウザーの振る舞いが標準化されるまで、接頭辞を外したプロパティを導入するのを待つべきです。
 
-> **メモ:** ブラウザーベンダーは、実験的な機能にベンダー接頭辞をつけることをやめるようになってきています。ウェブ開発者は、実験的な機能であるにもかかわらず、実運用のウェブサイトで使用し続けてきました。これはブラウザーベンダーが互換性を維持して、新しい機能を導入することを困難にしてしまいました。これはシェアの小さなブラウザーにとっても有害で、有名なウェブサイトを読み込むために他のブラウザーの接頭辞を追加せざるを得ない結果になりました。
+> [!NOTE]
+> ブラウザーベンダーは、実験的な機能にベンダー接頭辞をつけることをやめるようになってきています。ウェブ開発者は、実験的な機能であるにもかかわらず、実運用のウェブサイトで使用し続けてきました。これはブラウザーベンダーが互換性を維持して、新しい機能を導入することを困難にしてしまいました。これはシェアの小さなブラウザーにとっても有害で、有名なウェブサイトを読み込むために他のブラウザーの接頭辞を追加せざるを得ない結果になりました。
 >
 > 最近は、実験的な機能をユーザーが制御するフラグや設定によって隠して追加するようにし、より早く安定状態になるようにより小さな仕様を作成する傾向があります。
 
@@ -53,11 +56,12 @@ transition: all 4s ease;
 使用例:
 
 ```js
-var requestAnimationFrame = window.requestAnimationFrame ||
-                            window.mozRequestAnimationFrame ||
-                            window.webkitRequestAnimationFrame ||
-                            window.oRequestAnimationFrame ||
-                            window.msRequestAnimationFrame;
+var requestAnimationFrame =
+  window.requestAnimationFrame ||
+  window.mozRequestAnimationFrame ||
+  window.webkitRequestAnimationFrame ||
+  window.oRequestAnimationFrame ||
+  window.msRequestAnimationFrame;
 ```
 
 ## 理解を深める
@@ -65,5 +69,3 @@ var requestAnimationFrame = window.requestAnimationFrame ||
 ### 一般知識
 
 - Wikipedia の [Vendor prefix](https://en.wikipedia.org/wiki/CSS_hack#Browser_prefixes) の記事　【訳注：ウィキペディア日本語版には該当する節がありません】
-
-{{QuickLinksWithSubpages("/ja/docs/Glossary")}}

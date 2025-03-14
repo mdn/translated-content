@@ -1,9 +1,12 @@
 ---
-title: Document.preferredStyleSheetSet
+title: "Document: preferredStyleSheetSet プロパティ"
+short-title: preferredStyleSheetSet
 slug: Web/API/Document/preferredStyleSheetSet
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}
+{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 **`preferredStyleSheetSet`** プロパティは、ページ作者によって設定された推奨スタイルシートセットを返します。
 
@@ -17,7 +20,7 @@ slug: Web/API/Document/preferredStyleSheetSet
 
 ```js
 if (document.preferredStyleSheetSet) {
-  console.log("推奨スタイルシート: " + document.preferredStyleSheetSet);
+  console.log(`推奨スタイルシート: ${document.preferredStyleSheetSet}`);
 } else {
   console.log("推奨スタイルシートがありません。");
 }

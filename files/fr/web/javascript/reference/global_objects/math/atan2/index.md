@@ -1,21 +1,33 @@
 ---
 title: Math.atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan2
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/atan2
-browser-compat: javascript.builtins.Math.atan2
 ---
 
 {{JSRef}}
 
 La fonction **`Math.atan2()`** renvoie l'arc tangente du quotient de ses arguments, ce qui, pour `Math.atan2(y,x)`, correspond à l'angle plan (exprimé en radians) entre la droite passant par l'origine et le point de coordonnées (x,y).
 
-{{EmbedInteractiveExample("pages/js/math-atan2.html")}}
+{{InteractiveExample("JavaScript Demo: Math.atan2()")}}
+
+```js interactive-example
+function calcAngleDegrees(x, y) {
+  return (Math.atan2(y, x) * 180) / Math.PI;
+}
+
+console.log(calcAngleDegrees(5, 5));
+// Expected output: 45
+
+console.log(calcAngleDegrees(10, 10));
+// Expected output: 45
+
+console.log(calcAngleDegrees(0, 10));
+// Expected output: 90
+```
 
 ## Syntaxe
 
 ```js
-Math.atan2(y, x)
+Math.atan2(y, x);
 ```
 
 ### Paramètres

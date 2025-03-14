@@ -1,10 +1,9 @@
 ---
 title: Aplicando estilos e cores
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
-original_slug: Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
 No capítulo sobre [desenhando formas com canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes), usamos apenas os estilos padrões de preenchimento e linha. Aqui vamos explorar as opções do canvas que temos à nossa disposição para tornar nossos desenhos um pouco mais atraentes. Você aprenderá a adicionar cores diferentes, estilos de linhas, gradientes, padrões e sombras aos seus desenhos.
 
@@ -19,17 +18,18 @@ Até agora só vimos métodos do contexto de desenho. Se quisermos aplicar cores
 
 `color` é uma string que representa um CSS {{cssxref("&lt;color&gt;")}}, um objeto gradiente, ou um objeto padrão. Examinaremos sobre objetos de gradiente e padrão mais tarde. Por padrão, a cor do contorno (stroke color) e a cor de preenchimento (fill color) estão definidos como preto (valor de cor no CSS é `#000000`).
 
-> **Nota:** Quando você definir as propriedades `strokeStyle` e/ou `fillStyle` , o novo valor será o padrão para todas as formas desenhadas a partir de então. Para toda forma que você quiser uma cor diferente, você vai precisar alterar o valor da propriedade `fillStyle` ou `strokeStyle`.
+> [!NOTE]
+> Quando você definir as propriedades `strokeStyle` e/ou `fillStyle` , o novo valor será o padrão para todas as formas desenhadas a partir de então. Para toda forma que você quiser uma cor diferente, você vai precisar alterar o valor da propriedade `fillStyle` ou `strokeStyle`.
 
 As strings validas que você pode inserir devem, de acordo com a especificação ser valores CSS {{cssxref("&lt;color&gt;")}}. Cada um dos exemplos a seguir, descrevem a mesma cor.
 
 ```js
 // these all set the fillStyle to 'orange'
 
-ctx.fillStyle = 'orange';
-ctx.fillStyle = '#FFA500';
-ctx.fillStyle = 'rgb(255, 165, 0)';
-ctx.fillStyle = 'rgba(255, 165, 0, 1)';
+ctx.fillStyle = "orange";
+ctx.fillStyle = "#FFA500";
+ctx.fillStyle = "rgb(255, 165, 0)";
+ctx.fillStyle = "rgba(255, 165, 0, 1)";
 ```
 
 ### Um `fillStyle` exemplo
@@ -38,11 +38,15 @@ Neste exemplo, nós vamos mais uma vez utilizar dois `for` loops para desenhar u
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   for (var i = 0; i < 6; i++) {
     for (var j = 0; j < 6; j++) {
-      ctx.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ',' +
-                       Math.floor(255 - 42.5 * j) + ',0)';
+      ctx.fillStyle =
+        "rgb(" +
+        Math.floor(255 - 42.5 * i) +
+        "," +
+        Math.floor(255 - 42.5 * j) +
+        ",0)";
       ctx.fillRect(j * 25, i * 25, 25, 25);
     }
   }
@@ -59,25 +63,29 @@ draw();
 
 O resultado se parece com isto:
 
-{{EmbedLiveSample("A_fillStyle_example", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}
+{{EmbedLiveSample("A_fillStyle_example", 160, 160, "canvas_fillstyle.png")}}
 
 ### Um `strokeStyle` exemplo
 
 Este exemplo é similar com o anterior, porém utiliza a propriedade `strokeStyle` para alterar a cor de contorno das formas. Nós usamos o método `arc()` para desenhar círculos ao invés de quadrados.
 
 ```js
-  function draw() {
-    var ctx = document.getElementById('canvas').getContext('2d');
-    for (var i = 0; i < 6; i++) {
-      for (var j = 0; j < 6; j++) {
-        ctx.strokeStyle = 'rgb(0,' + Math.floor(255 - 42.5 * i) + ',' +
-                         Math.floor(255 - 42.5 * j) + ')';
-        ctx.beginPath();
-        ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
-        ctx.stroke();
-      }
+function draw() {
+  var ctx = document.getElementById("canvas").getContext("2d");
+  for (var i = 0; i < 6; i++) {
+    for (var j = 0; j < 6; j++) {
+      ctx.strokeStyle =
+        "rgb(0," +
+        Math.floor(255 - 42.5 * i) +
+        "," +
+        Math.floor(255 - 42.5 * j) +
+        ")";
+      ctx.beginPath();
+      ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
+      ctx.stroke();
     }
   }
+}
 ```
 
 ```html hidden
@@ -90,7 +98,7 @@ draw();
 
 O resultado se parece com isto:
 
-{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}
+{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}
 
 ## Transparência
 
@@ -107,8 +115,8 @@ Como as propriedades strokeStyle e fillStyle aceitam os valores de cor CSS rgba,
 ```js
 // Assigning transparent colors to stroke and fill style
 
-ctx.strokeStyle = 'rgba(255, 0, 0, 0.5)';
-ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
+ctx.strokeStyle = "rgba(255, 0, 0, 0.5)";
+ctx.fillStyle = "rgba(255, 0, 0, 0.5)";
 ```
 
 A função rgba () é semelhante à função rgb (), mas possui um parâmetro extra. O último parâmetro define o valor da transparência dessa cor específica. O intervalo válido é novamente entre 0,0 (totalmente transparente) e 1,0 (totalmente opaco).
@@ -119,17 +127,17 @@ Neste exemplo, desenharemos um plano de fundo de quatro quadrados coloridos dife
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   // draw background
-  ctx.fillStyle = '#FD0';
+  ctx.fillStyle = "#FD0";
   ctx.fillRect(0, 0, 75, 75);
-  ctx.fillStyle = '#6C0';
+  ctx.fillStyle = "#6C0";
   ctx.fillRect(75, 0, 75, 75);
-  ctx.fillStyle = '#09F';
+  ctx.fillStyle = "#09F";
   ctx.fillRect(0, 75, 75, 75);
-  ctx.fillStyle = '#F30';
+  ctx.fillStyle = "#F30";
   ctx.fillRect(75, 75, 75, 75);
-  ctx.fillStyle = '#FFF';
+  ctx.fillStyle = "#FFF";
 
   // set transparency value
   ctx.globalAlpha = 0.2;
@@ -151,7 +159,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}
+{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "canvas_globalalpha.png")}}
 
 ### Um exemplo usando o `rgba()`
 
@@ -159,21 +167,21 @@ Neste segundo exemplo, fazemos algo semelhante ao anterior, mas em vez de desenh
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // Draw background
-  ctx.fillStyle = 'rgb(255, 221, 0)';
+  ctx.fillStyle = "rgb(255, 221, 0)";
   ctx.fillRect(0, 0, 150, 37.5);
-  ctx.fillStyle = 'rgb(102, 204, 0)';
+  ctx.fillStyle = "rgb(102, 204, 0)";
   ctx.fillRect(0, 37.5, 150, 37.5);
-  ctx.fillStyle = 'rgb(0, 153, 255)';
+  ctx.fillStyle = "rgb(0, 153, 255)";
   ctx.fillRect(0, 75, 150, 37.5);
-  ctx.fillStyle = 'rgb(255, 51, 0)';
+  ctx.fillStyle = "rgb(255, 51, 0)";
   ctx.fillRect(0, 112.5, 150, 37.5);
 
   // Draw semi transparent rectangles
   for (var i = 0; i < 10; i++) {
-    ctx.fillStyle = 'rgba(255, 255, 255, ' + (i + 1) / 10 + ')';
+    ctx.fillStyle = "rgba(255, 255, 255, " + (i + 1) / 10 + ")";
     for (var j = 0; j < 4; j++) {
       ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
     }
@@ -189,7 +197,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("An_example_using_rgba()", "180", "180", "https://mdn.mozillademos.org/files/246/Canvas_rgba.png")}}
+{{EmbedLiveSample("An_example_using_rgba()", "180", "180", "canvas_rgba.png")}}
 
 ## Line styles
 
@@ -222,7 +230,7 @@ No exemplo abaixo, 10 linhas retas são desenhadas com larguras de linhas cresce
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   for (var i = 0; i < 10; i++) {
     ctx.lineWidth = 1 + i;
     ctx.beginPath();
@@ -241,10 +249,10 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineWidth_example", "180", "180", "https://mdn.mozillademos.org/files/239/Canvas_linewidth.png")}}
+{{EmbedLiveSample("A_lineWidth_example", "180", "180", "canvas_linewidth.png")}}
 
 A obtenção de linhas nítidas requer a compreensão de como os caminhos são traçados. Nas imagens abaixo, a grade representa a grade de coordenadas da tela. Os quadrados entre as linhas de grade são pixels reais na tela. Na primeira imagem da grade abaixo, um retângulo de (2,1) a (5,5) é preenchido. A área inteira entre eles (vermelho claro) cai nos limites dos pixels, portanto, o retângulo preenchido resultante terá bordas nítidas.
-![](https://mdn.mozillademos.org/files/201/Canvas-grid.png)
+![](canvas-grid.png)
 
 Se você considerar um caminho de (3,1) a (3,5) com uma espessura de linha de 1,0, você terminará com a situação na segunda imagem. A área real a ser preenchida (azul escuro) se estende apenas até a metade dos pixels dos dois lados do caminho. Uma aproximação disso deve ser renderizada, o que significa que esses pixels são sombreados apenas parcialmente e resultam em toda a área (azul claro e azul escuro) sendo preenchida com uma cor apenas metade da escuridão da cor real do traço. É o que acontece com a linha de largura 1.0 no código de exemplo anterior.
 
@@ -258,9 +266,9 @@ Para linhas de largura uniforme, cada metade acaba sendo uma quantidade inteira 
 
 Embora seja um pouco doloroso ao trabalhar inicialmente com gráficos 2D escalonáveis, prestar atenção à grade de pixels e à posição dos caminhos garante que seus desenhos pareçam corretos, independentemente da escala ou de qualquer outra transformação envolvida. Uma linha vertical de 1,0 largura desenhada na posição correta se tornará uma linha nítida de 2 pixels quando aumentada em 2 e aparecerá na posição correta.
 
-### Exemplo lineCap.
+### Exemplo lineCap
 
-A propriedade lineCap determina como os pontos finais de cada linha são desenhados. Existem três valores possíveis para essa propriedade e são: bunda, redondo e quadrado. Por padrão, essa propriedade está configurada para butt.![](https://mdn.mozillademos.org/files/236/Canvas_linecap.png)
+A propriedade lineCap determina como os pontos finais de cada linha são desenhados. Existem três valores possíveis para essa propriedade e são: bunda, redondo e quadrado. Por padrão, essa propriedade está configurada para butt.![](canvas_linecap.png)
 
 - `butt`
   - : As extremidades das linhas são quadradas nos pontos finais.
@@ -276,11 +284,11 @@ A linha à esquerda usa a opção de topo padrão. Você notará que está desen
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var lineCap = ['butt', 'round', 'square'];
+  var ctx = document.getElementById("canvas").getContext("2d");
+  var lineCap = ["butt", "round", "square"];
 
   // Draw guides
-  ctx.strokeStyle = '#09f';
+  ctx.strokeStyle = "#09f";
   ctx.beginPath();
   ctx.moveTo(10, 10);
   ctx.lineTo(140, 10);
@@ -289,7 +297,7 @@ function draw() {
   ctx.stroke();
 
   // Draw lines
-  ctx.strokeStyle = 'black';
+  ctx.strokeStyle = "black";
   for (var i = 0; i < lineCap.length; i++) {
     ctx.lineWidth = 15;
     ctx.lineCap = lineCap[i];
@@ -309,13 +317,13 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineCap_example", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}
+{{EmbedLiveSample("A_lineCap_example", "180", "180", "canvas_linecap.png")}}
 
 ### Um exemplo de lineJoin
 
 A propriedade lineJoin determina como dois segmentos de conexão (de linhas, arcos ou curvas) com comprimentos diferentes de zero em uma forma são unidos (segmentos degenerados com comprimentos zero, cujos pontos finais e pontos de controle especificados são exatamente na mesma posição, são ignorados) .
 
-Existem três valores possíveis para essa propriedade: round, chanfro e mitra. Por padrão, essa propriedade está configurada para mitra. Observe que a configuração lineJoin não terá efeito se os dois segmentos conectados tiverem a mesma direção, porque nenhuma área de junção será adicionada neste caso.![](https://mdn.mozillademos.org/files/237/Canvas_linejoin.png)
+Existem três valores possíveis para essa propriedade: round, chanfro e mitra. Por padrão, essa propriedade está configurada para mitra. Observe que a configuração lineJoin não terá efeito se os dois segmentos conectados tiverem a mesma direção, porque nenhuma área de junção será adicionada neste caso.![](canvas_linejoin.png)
 
 - `round`
   - : Arredonda os cantos de uma forma preenchendo um setor adicional de disco centralizado no ponto final comum dos segmentos conectados. O raio desses cantos arredondados é igual à metade da largura da linha.
@@ -328,8 +336,8 @@ O exemplo abaixo desenha três caminhos diferentes, demonstrando cada uma dessas
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var lineJoin = ['round', 'bevel', 'miter'];
+  var ctx = document.getElementById("canvas").getContext("2d");
+  var lineJoin = ["round", "bevel", "miter"];
   ctx.lineWidth = 10;
   for (var i = 0; i < lineJoin.length; i++) {
     ctx.lineJoin = lineJoin[i];
@@ -352,13 +360,13 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineJoin_example", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}
+{{EmbedLiveSample("A_lineJoin_example", "180", "180", "canvas_linejoin.png")}}
 
 ### Uma demonstração da propriedade miterLimit
 
 Como você viu no exemplo anterior, ao unir duas linhas com a opção de esquadria, as bordas externas das duas linhas de junção são estendidas até o ponto em que elas se encontram. Para linhas com ângulos amplos entre si, esse ponto não está longe do ponto de conexão interno. No entanto, à medida que os ângulos entre cada linha diminuem, a distância (comprimento da mitra) entre esses pontos aumenta exponencialmente.
 
-A propriedade miterLimit determina a que distância o ponto de conexão externo pode ser colocado do ponto de conexão interno. Se duas linhas excederem esse valor, uma junção de chanfro será desenhada. Observe que o comprimento máximo da esquadria é o produto da largura da linha medida no sistema de coordenadas atual, pelo valor dessa propriedade miterLimit (cujo valor padrão é 10.0 no HTML {{HTMLElement ("canvas")}}}), portanto, o O miterLimit pode ser definido independentemente da escala de exibição atual ou de quaisquer transformações afins de caminhos: apenas influencia a forma efetivamente renderizada das arestas da linha.
+A propriedade miterLimit determina a que distância o ponto de conexão externo pode ser colocado do ponto de conexão interno. Se duas linhas excederem esse valor, uma junção de chanfro será desenhada. Observe que o comprimento máximo da esquadria é o produto da largura da linha medida no sistema de coordenadas atual, pelo valor dessa propriedade miterLimit (cujo valor padrão é 10.0 no HTML {{HTMLElement ("canvas")}}), portanto, o O miterLimit pode ser definido independentemente da escala de exibição atual ou de quaisquer transformações afins de caminhos: apenas influencia a forma efetivamente renderizada das arestas da linha.
 
 Mais exatamente, o limite da mitra é a proporção máxima permitida do comprimento da extensão (na tela HTML, é medida entre o canto externo das arestas unidas da linha e o ponto de extremidade comum dos segmentos de conexão especificados no caminho) pela metade do espessura da linha. Pode ser definido de maneira equivalente como a proporção máxima permitida da distância entre os pontos interno e externo da junção das arestas e a largura total da linha. Em seguida, é igual ao coecante da metade do ângulo interno mínimo dos segmentos de conexão abaixo dos quais nenhuma junção de esquadria será renderizada, mas apenas uma junção de chanfro:
 
@@ -374,32 +382,32 @@ Se você especificar um valor de miterLimite abaixo de 4.2 nesta demonstração,
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // Clear canvas
   ctx.clearRect(0, 0, 150, 150);
 
   // Draw guides
-  ctx.strokeStyle = '#09f';
-  ctx.lineWidth   = 2;
+  ctx.strokeStyle = "#09f";
+  ctx.lineWidth = 2;
   ctx.strokeRect(-5, 50, 160, 50);
 
   // Set line styles
-  ctx.strokeStyle = '#000';
+  ctx.strokeStyle = "#000";
   ctx.lineWidth = 10;
 
   // check input
-  if (document.getElementById('miterLimit').value.match(/\d+(\.\d+)?/)) {
-    ctx.miterLimit = parseFloat(document.getElementById('miterLimit').value);
+  if (document.getElementById("miterLimit").value.match(/\d+(\.\d+)?/)) {
+    ctx.miterLimit = parseFloat(document.getElementById("miterLimit").value);
   } else {
-    alert('Value must be a positive number');
+    alert("Value must be a positive number");
   }
 
   // Draw lines
   ctx.beginPath();
   ctx.moveTo(0, 100);
-  for (i = 0; i < 24 ; i++){
-    var dy = i % 2 == 0 ? 25 : -25 ;
+  for (i = 0; i < 24; i++) {
+    var dy = i % 2 == 0 ? 25 : -25;
     ctx.lineTo(Math.pow(i, 1.5) * 2, 75 + dy);
   }
   ctx.stroke();
@@ -411,11 +419,13 @@ function draw() {
 <table>
   <tr>
     <td><canvas id="canvas" width="150" height="150"></canvas></td>
-    <td>Change the <code>miterLimit</code> by entering a new value below and clicking the redraw button.<br><br>
+    <td>
+      Change the <code>miterLimit</code> by entering a new value below and
+      clicking the redraw button.<br /><br />
       <form onsubmit="return draw();">
         <label>Miter limit</label>
-        <input type="text" size="3" id="miterLimit"/>
-        <input type="submit" value="Redraw"/>
+        <input type="text" size="3" id="miterLimit" />
+        <input type="submit" value="Redraw" />
       </form>
     </td>
   </tr>
@@ -423,11 +433,13 @@ function draw() {
 ```
 
 ```js hidden
-document.getElementById('miterLimit').value = document.getElementById('canvas').getContext('2d').miterLimit;
+document.getElementById("miterLimit").value = document
+  .getElementById("canvas")
+  .getContext("2d").miterLimit;
 draw();
 ```
 
-{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png")}}
+{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "canvas_miterlimit.png")}}
 
 ### Usando linhas tracejadas
 
@@ -440,7 +452,7 @@ Neste exemplo, criaremos um efeito de formigas caminhando. É uma técnica de an
 ```
 
 ```js
-var ctx = document.getElementById('canvas').getContext('2d');
+var ctx = document.getElementById("canvas").getContext("2d");
 var offset = 0;
 
 function draw() {
@@ -462,7 +474,7 @@ function march() {
 march();
 ```
 
-{{EmbedLiveSample("Using_line_dashes", "120", "120", "https://mdn.mozillademos.org/files/9853/marching-ants.png")}}
+{{EmbedLiveSample("Using_line_dashes", "120", "120", "marching-ants.png")}}
 
 ## Gradients
 
@@ -489,8 +501,8 @@ You can add as many color stops to a gradient as you need. Below is a very simpl
 
 ```js
 var lineargradient = ctx.createLinearGradient(0, 0, 150, 150);
-lineargradient.addColorStop(0, 'white');
-lineargradient.addColorStop(1, 'black');
+lineargradient.addColorStop(0, "white");
+lineargradient.addColorStop(1, "black");
 ```
 
 ### A `createLinearGradient` example
@@ -499,18 +511,18 @@ In this example, we'll create two different gradients. As you can see here, both
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // Create gradients
   var lingrad = ctx.createLinearGradient(0, 0, 0, 150);
-  lingrad.addColorStop(0, '#00ABEB');
-  lingrad.addColorStop(0.5, '#fff');
-  lingrad.addColorStop(0.5, '#26C000');
-  lingrad.addColorStop(1, '#fff');
+  lingrad.addColorStop(0, "#00ABEB");
+  lingrad.addColorStop(0.5, "#fff");
+  lingrad.addColorStop(0.5, "#26C000");
+  lingrad.addColorStop(1, "#fff");
 
   var lingrad2 = ctx.createLinearGradient(0, 50, 0, 95);
-  lingrad2.addColorStop(0.5, '#000');
-  lingrad2.addColorStop(1, 'rgba(0, 0, 0, 0)');
+  lingrad2.addColorStop(0.5, "#000");
+  lingrad2.addColorStop(1, "rgba(0, 0, 0, 0)");
 
   // assign gradients to fill and stroke styles
   ctx.fillStyle = lingrad;
@@ -519,7 +531,6 @@ function draw() {
   // draw shapes
   ctx.fillRect(10, 10, 130, 130);
   ctx.strokeRect(50, 50, 50, 50);
-
 }
 ```
 
@@ -535,7 +546,7 @@ The first is a background gradient. As you can see, we assigned two colors at th
 
 In the second gradient, we didn't assign the starting color (at position 0.0) since it wasn't strictly necessary, because it will automatically assume the color of the next color stop. Therefore, assigning the black color at position 0.5 automatically makes the gradient, from the start to this stop, black.
 
-{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "https://mdn.mozillademos.org/files/235/Canvas_lineargradient.png")}}
+{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "canvas_lineargradient.png")}}
 
 ### A `createRadialGradient` example
 
@@ -543,28 +554,28 @@ In this example, we'll define four different radial gradients. Because we have c
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // Create gradients
   var radgrad = ctx.createRadialGradient(45, 45, 10, 52, 50, 30);
-  radgrad.addColorStop(0, '#A7D30C');
-  radgrad.addColorStop(0.9, '#019F62');
-  radgrad.addColorStop(1, 'rgba(1, 159, 98, 0)');
+  radgrad.addColorStop(0, "#A7D30C");
+  radgrad.addColorStop(0.9, "#019F62");
+  radgrad.addColorStop(1, "rgba(1, 159, 98, 0)");
 
   var radgrad2 = ctx.createRadialGradient(105, 105, 20, 112, 120, 50);
-  radgrad2.addColorStop(0, '#FF5F98');
-  radgrad2.addColorStop(0.75, '#FF0188');
-  radgrad2.addColorStop(1, 'rgba(255, 1, 136, 0)');
+  radgrad2.addColorStop(0, "#FF5F98");
+  radgrad2.addColorStop(0.75, "#FF0188");
+  radgrad2.addColorStop(1, "rgba(255, 1, 136, 0)");
 
   var radgrad3 = ctx.createRadialGradient(95, 15, 15, 102, 20, 40);
-  radgrad3.addColorStop(0, '#00C9FF');
-  radgrad3.addColorStop(0.8, '#00B5E2');
-  radgrad3.addColorStop(1, 'rgba(0, 201, 255, 0)');
+  radgrad3.addColorStop(0, "#00C9FF");
+  radgrad3.addColorStop(0.8, "#00B5E2");
+  radgrad3.addColorStop(1, "rgba(0, 201, 255, 0)");
 
   var radgrad4 = ctx.createRadialGradient(0, 150, 50, 0, 140, 90);
-  radgrad4.addColorStop(0, '#F4F201');
-  radgrad4.addColorStop(0.8, '#E4C700');
-  radgrad4.addColorStop(1, 'rgba(228, 199, 0, 0)');
+  radgrad4.addColorStop(0, "#F4F201");
+  radgrad4.addColorStop(0.8, "#E4C700");
+  radgrad4.addColorStop(1, "rgba(228, 199, 0, 0)");
 
   // draw shapes
   ctx.fillStyle = radgrad4;
@@ -590,7 +601,7 @@ In this case, we've offset the starting point slightly from the end point to ach
 
 The last color stop in each of the four gradients uses a fully transparent color. If you want to have a nice transition from this to the previous color stop, both colors should be equal. This isn't very obvious from the code because it uses two different CSS color methods as a demonstration, but in the first gradient `#019F62 = rgba(1,159,98,1)`.
 
-{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "https://mdn.mozillademos.org/files/244/Canvas_radialgradient.png")}}
+{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "canvas_radialgradient.png")}}
 
 ## Patterns
 
@@ -614,11 +625,12 @@ We use this method to create a {{domxref("CanvasPattern")}} object which is very
 
 ```js
 var img = new Image();
-img.src = 'someimage.png';
-var ptrn = ctx.createPattern(img, 'repeat');
+img.src = "someimage.png";
+var ptrn = ctx.createPattern(img, "repeat");
 ```
 
-> **Nota:** Like with the `drawImage()` method, you must make sure the image you use is loaded before calling this method or the pattern may be drawn incorrectly.
+> [!NOTE]
+> Like with the `drawImage()` method, you must make sure the image you use is loaded before calling this method or the pattern may be drawn incorrectly.
 
 ### A `createPattern` example
 
@@ -626,19 +638,17 @@ In this last example, we'll create a pattern to assign to the `fillStyle` proper
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // create new image object to use as pattern
   var img = new Image();
-  img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
-  img.onload = function() {
-
+  img.src = "canvas_createpattern.png";
+  img.onload = function () {
     // create pattern
-    var ptrn = ctx.createPattern(img, 'repeat');
+    var ptrn = ctx.createPattern(img, "repeat");
     ctx.fillStyle = ptrn;
     ctx.fillRect(0, 0, 150, 150);
-
-  }
+  };
 }
 ```
 
@@ -650,7 +660,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_createPattern_example", "180", "180", "https://mdn.mozillademos.org/files/222/Canvas_createpattern.png")}}
+{{EmbedLiveSample("A_createPattern_example", "180", "180", "canvas_createpattern.png")}}
 
 ## Shadows
 
@@ -671,7 +681,8 @@ The `shadowBlur` property indicates the size of the blurring effect; this value 
 
 The `shadowColor` property is a standard CSS color value indicating the color of the shadow effect; by default, it is fully-transparent black.
 
-> **Nota:** Shadows are only drawn for `source-over` [compositing operations](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Compositing).
+> [!NOTE]
+> Shadows are only drawn for `source-over` [compositing operations](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Compositing).
 
 ### A shadowed text example
 
@@ -679,16 +690,16 @@ This example draws a text string with a shadowing effect.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   ctx.shadowOffsetX = 2;
   ctx.shadowOffsetY = 2;
   ctx.shadowBlur = 2;
-  ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+  ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
 
-  ctx.font = '20px Times New Roman';
-  ctx.fillStyle = 'Black';
-  ctx.fillText('Sample String', 5, 30);
+  ctx.font = "20px Times New Roman";
+  ctx.fillStyle = "Black";
+  ctx.fillText("Sample String", 5, 30);
 }
 ```
 
@@ -700,7 +711,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "https://mdn.mozillademos.org/files/2505/shadowed-string.png")}}
+{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "shadowed-string.png")}}
 
 We will look at the `font` property and `fillText` method in the next chapter about [drawing text](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
@@ -719,11 +730,11 @@ In this example we are using the `evenodd` rule.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.beginPath();
   ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
   ctx.arc(50, 50, 15, 0, Math.PI * 2, true);
-  ctx.fill('evenodd');
+  ctx.fill("evenodd");
 }
 ```
 
@@ -735,6 +746,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "https://mdn.mozillademos.org/files/9855/fill-rule.png")}}
+{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "fill-rule.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}

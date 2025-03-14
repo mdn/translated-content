@@ -1,19 +1,61 @@
 ---
 title: data-*
 slug: Web/HTML/Global_attributes/data-*
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/data-*
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`data-*`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 **사용자 지정 데이터 특성**(custom data attributes)이라는 특성 클래스를 형성함으로써 임의의 데이터를 스크립트로 [HTML](/ko/docs/Web/HTML)과 [DOM](/ko/docs/Web/API/Document_Object_Model) 사이에서 교환할 수 있는 방법입니다.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-data.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: data-*", "tabbed-standard")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</div>
+```html interactive-example
+<h1>Secret agents</h1>
+
+<ul>
+  <li data-id="10784">Jason Walters, 003: Found dead in "A View to a Kill".</li>
+  <li data-id="97865">
+    Alex Trevelyan, 006: Agent turned terrorist leader; James' nemesis in
+    "Goldeneye".
+  </li>
+  <li data-id="45732">
+    James Bond, 007: The main man; shaken but not stirred.
+  </li>
+</ul>
+```
+
+```css interactive-example
+h1 {
+  margin: 0;
+}
+
+ul {
+  margin: 10px 0 0;
+}
+
+li {
+  position: relative;
+  width: 200px;
+  padding-bottom: 10px;
+}
+
+li:after {
+  content: "Data ID: " attr(data-id);
+  position: absolute;
+  top: -22px;
+  left: 10px;
+  background: black;
+  color: white;
+  padding: 2px;
+  border: 1px solid #eee;
+  opacity: 0;
+  transition: 0.5s opacity;
+}
+
+li:hover:after {
+  opacity: 1;
+}
+```
 
 모든 사용자 지정 데이터는 해당 데이터를 지정한 요소의 {{domxref("HTMLElement")}} 인터페이스, {{domxref("HTMLElement.dataset", "dataset")}} 속성을 통해 사용할 수 있습니다. `data-*`의 `*`은 [XML 이름 생성 규칙](https://www.w3.org/TR/REC-xml/#NT-Name)을 따르는 모든 이름으로 대체할 수 있습니다.
 
@@ -28,10 +70,16 @@ translation_of: Web/HTML/Global_attributes/data-*
 `data-*` 속성을 추가함으로써, 평범한 HTML 요소조차 복잡하고 강력한 프로그램 객체가 될 수 있습니다. 예컨대, 게임의 우주선 스프라이트는 단순한 {{htmlelement("img")}} 태그와 [`class`](/ko/docs/Web/HTML/Global_attributes/class) 특성, 그리고 여러 `data-*` 특성으로 나타낼 수 있습니다.
 
 ```html
-<img class="spaceship cruiserX3" src="shipX3.png"
-  data-ship-id="324" data-weapons="laserI laserII" data-shields="72%"
-  data-x="414354" data-y="85160" data-z="31940"
-  onclick="spaceships[this.dataset.shipId].blasted()">
+<img
+  class="spaceship cruiserX3"
+  src="shipX3.png"
+  data-ship-id="324"
+  data-weapons="laserI laserII"
+  data-shields="72%"
+  data-x="414354"
+  data-y="85160"
+  data-z="31940"
+  onclick="spaceships[this.dataset.shipId].blasted()" />
 ```
 
 HTML 데이터 특성 사용법에 관한 보다 자세한 자습서는 [데이터 특성 사용하기](/ko/docs/Learn/HTML/Howto/Use_data_attributes)를 확인하세요.
@@ -42,7 +90,7 @@ HTML 데이터 특성 사용법에 관한 보다 자세한 자습서는 [데이�
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.data_attributes")}}
+{{Compat}}
 
 ## 같이 보기
 

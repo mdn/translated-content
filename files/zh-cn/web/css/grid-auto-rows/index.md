@@ -3,9 +3,62 @@ title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
 ---
 
+{{CSSRef}}
+
 CSS 属性 **`grid-auto-rows`** 用于指定隐式创建的行轨道大小。
 
-{{EmbedInteractiveExample("pages/css/grid-auto-rows.html")}}
+{{InteractiveExample("CSS Demo: grid-auto-rows")}}
+
+```css interactive-example-choice
+grid-auto-rows: auto;
+```
+
+```css interactive-example-choice
+grid-auto-rows: 50px;
+```
+
+```css interactive-example-choice
+grid-auto-rows: min-content;
+```
+
+```css interactive-example-choice
+grid-auto-rows: minmax(30px, auto);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  font-size: 22px;
+}
+
+#example-element div:last-child {
+  font-size: 13px;
+}
+```
 
 如果定位到某行中的网格元素没有使用 {{cssxref("grid-template-rows")}}来指定大小，则会隐式创建{{glossary("grid", "grid")}} 轨道来保存它。这可能在显示定位到超出范围的行，或者由自动放置算法创建额外的行时发生。
 
@@ -79,7 +132,7 @@ grid-auto-rows: unset;
 
 ## 示例
 
-### HTML 内容
+### HTML
 
 ```html
 <div id="grid">
@@ -89,7 +142,7 @@ grid-auto-rows: unset;
 </div>
 ```
 
-### CSS 内容
+### CSS
 
 ```css
 #grid {
@@ -105,7 +158,7 @@ grid-auto-rows: unset;
 }
 ```
 
-{{EmbedLiveSample("Example", "210px", "210px")}}
+{{EmbedLiveSample("示例", "210px", "210px")}}
 
 ## 规范
 
@@ -117,56 +170,8 @@ grid-auto-rows: unset;
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - 相关的 CSS 属性： {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}
-- 网格布局指南：_[网格布局中的自动定位 - 隐式网格中的行尺寸](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#Sizing_rows_in_the_implicit_grid)_
-- 视频教程：_[引入网格自动放置和排序](http://gridbyexample.com/video/series-auto-placement-order/)_
-
-1. [**CSS**](/zh-CN/docs/Web/CSS)
-2. [**CSS 参考**](/zh-CN/docs/Web/CSS/Reference)
-3. [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
-4. **指南**
-
-    1. [与其它布局方式的关系](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-    2. [线性布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-    3. [网格模板区域](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-    4. [使用命名网格行布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-    5. [风格布局中的自动定位](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    6. [网格布局中的框 (盒子) 对齐](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    7. [网格、逻辑值和书写模式](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    8. [CSS 网格布局和辅助功能](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-    9. [CSS 网格布局与渐进式增强](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-    10. [使用网格实现通用布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
-    11. [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-
-5. **属性**
-
-    1. [grid](/zh-CN/docs/Web/CSS/grid)
-    2. [grid-area](/zh-CN/docs/Web/CSS/grid-area)
-    3. [grid-auto-columns](/zh-CN/docs/Web/CSS/grid-auto-columns)
-    4. [grid-auto-flow](/zh-CN/docs/Web/CSS/grid-auto-flow)
-    5. [grid-auto-rows](/zh-CN/docs/Web/CSS/grid-auto-rows)
-    6. [grid-column](/zh-CN/docs/Web/CSS/grid-column)
-    7. [grid-column-end](/zh-CN/docs/Web/CSS/grid-column-end)
-    8. [grid-column-gap](/zh-CN/docs/Web/CSS/grid-column-gap)
-    9. [grid-column-start](/zh-CN/docs/Web/CSS/grid-column-start)
-    10. [grid-gap](/zh-CN/docs/Web/CSS/grid-gap)
-    11. [grid-row](/zh-CN/docs/Web/CSS/grid-row)
-    12. [grid-row-end](/zh-CN/docs/Web/CSS/grid-row-end)
-    13. [grid-row-gap](/zh-CN/docs/Web/CSS/grid-row-gap)
-    14. [grid-row-start](/zh-CN/docs/Web/CSS/grid-row-start)
-    15. [grid-template](/zh-CN/docs/Web/CSS/grid-template)
-    16. [grid-template-areas](/zh-CN/docs/Web/CSS/grid-template-areas)
-    17. [grid-template-columns](/zh-CN/docs/Web/CSS/grid-template-columns)
-    18. [grid-template-rows](/zh-CN/docs/Web/CSS/grid-template-rows)
-
-6. **术语表**
-
-    1. [Grid lines](/zh-CN/docs/Glossary/Grid_lines)
-    2. [Grid tracks](/zh-CN/docs/Glossary/Grid_tracks)
-    3. [Grid cell](/zh-CN/docs/Glossary/Grid_cell)
-    4. [Grid areas](/zh-CN/docs/Glossary/Grid_areas)
-    5. [Gutters](/zh-CN/docs/Glossary/Gutters)
-    6. [Grid row](/zh-CN/docs/Glossary/Grid_rows)
-    7. [Grid column](/zh-CN/docs/Glossary/Grid_column)
+- 网格布局指南：_[网格布局中的自动定位 - 隐式网格中的行尺寸](/zh-CN/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout#sizing_rows_in_the_implicit_grid)_
+- 视频教程：_[引入网格自动放置和排序](https://gridbyexample.com/video/series-auto-placement-order/)_

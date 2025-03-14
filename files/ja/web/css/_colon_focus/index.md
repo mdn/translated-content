@@ -1,34 +1,65 @@
 ---
-title: ':focus'
+title: :focus
 slug: Web/CSS/:focus
+l10n:
+  sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---
 
 {{CSSRef}}
 
 **`:focus`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、フォーカスを持っている (フォームの input のような) 要素を表します。普通はユーザーが要素をクリックやタップをしたり、キーボードの <kbd>Tab</kbd> キーで選択したりしたときです。
 
-```css
-/* フォーカスを持つ <input> 要素を選択 */
+{{InteractiveExample("CSS Demo: :focus", "tabbed-shorter")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
 input:focus {
-  color: red;
+  background-color: lightblue;
+}
+
+select:focus {
+  background-color: ivory;
 }
 ```
 
-> **メモ:** この擬似クラスはフォーカスを持つ要素に対してのみ適用されます。フォーカスを持つ要素を*含む*要素を選択したい場合は、{{CSSxRef(":focus-within")}} を使用してください。
+```html interactive-example
+<form>
+  <p>Which flavor would you like to order?</p>
+  <label>Full Name: <input name="firstName" type="text" /></label>
+  <label
+    >Flavor:
+    <select name="flavor">
+      <option>Cherry</option>
+      <option>Green Tea</option>
+      <option>Moose Tracks</option>
+      <option>Mint Chip</option>
+    </select>
+  </label>
+</form>
+```
+
+> [!NOTE]
+> この擬似クラスはフォーカスを持つ要素に対してのみ適用されます。フォーカスを持つ要素を*含む*要素を選択したい場合は、{{CSSxRef(":focus-within")}} を使用してください。
 
 ## 構文
 
-```
-:focus
+```css
+:focus {
+  /* ... */
+}
 ```
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 
 ```html
-<div><input class="red-input" value="フォーカスで赤くなります。"></div>
-<div><input class="blue-input" value="フォーカスで青くなります。"></div>
+<div><input class="red-input" value="フォーカスで赤くなります。" /></div>
+<div><input class="blue-input" value="フォーカスで青くなります。" /></div>
 ```
 
 ### CSS
@@ -57,9 +88,9 @@ input:focus {
 
 ### `:focus { outline: none; }`
 
-[WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) を満たすフォーカスの輪郭線で置き換えることなしに、フォーカスの輪郭線 (視覚的なフォーカスインジケーター) を削除しないでください。
+[WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) を満たすフォーカスの輪郭線で置き換えることなしに、フォーカスの輪郭線（視覚的なフォーカスインジケーター）を削除しないでください。
 
-- Quick Tip: [Never remove CSS outlines](https://a11yproject.com/posts/never-remove-css-outlines/)
+- Quick Tip: [Never remove CSS outlines](https://www.a11yproject.com/posts/never-remove-css-outlines/)
 
 ## 仕様書
 

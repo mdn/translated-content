@@ -1,26 +1,32 @@
 ---
 title: Intl.RelativeTimeFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/RelativeTimeFormat/formatToParts
 ---
 
 {{JSRef}}
 
-La méthode **`Intl.RelativeTimeFormat.prototype.formatToParts()`** est une méthode analogue à [`format()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Intl.RelativeTimeFormat/format) qui renvoie un tableau d'objets contenant les différentes parties représentant le message internationalisé pour le temps relatif.
+La méthode **`Intl.RelativeTimeFormat.prototype.formatToParts()`** est une méthode analogue à [`format()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format) qui renvoie un tableau d'objets contenant les différentes parties représentant le message internationalisé pour le temps relatif.
 
-{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-formattoparts.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.prototype.formatToParts")}}
+
+```js interactive-example
+const rtf1 = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+const parts = rtf1.formatToParts(10, "seconds");
+
+console.log(parts[0].value);
+// Expected output: "in "
+
+console.log(parts[1].value);
+// Expected output: "10"
+
+console.log(parts[2].value);
+// Expected output: " seconds"
+```
 
 ## Syntaxe
 
 ```js
-RelativeTimeFormat.formatToParts(valeur, unite)
+RelativeTimeFormat.formatToParts(valeur, unite);
 ```
 
 ### Paramètres
@@ -55,13 +61,11 @@ rtf.formatToParts(100, "day");
 
 ## Spécifications
 
-| Spécifications                                                                                                                                  | État                    | Commentaires |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.RelativeTime`](https://tc39.github.io/proposal-intl-relative-time/#sec-Intl.RelativeTimeFormat.prototype.formatToParts) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.RelativeTimeFormat.formatToParts")}}
+{{Compat}}
 
 ## Voir aussi
 

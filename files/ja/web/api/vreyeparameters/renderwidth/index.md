@@ -1,39 +1,37 @@
 ---
 title: VREyeParameters.renderWidth
 slug: Web/API/VREyeParameters/renderWidth
+l10n:
+  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-{{domxref("VREyeParameters")}} インターフェイスの **`renderWidth`** 読取専用プロパティは，各眼のビューポートの推奨レンダーターゲット幅をピクセル値で表します．
+**`renderWidth`** は {{domxref("VREyeParameters")}} インターフェイスの読み取り専用プロパティでそれぞれの目のビューポートの推奨レンダーターゲットの幅を、ピクセル単位で表します。
 
-## シンタックス
+> [!NOTE]
+> このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
-```js
-var curRenderWidth = myVRDisplay.getEyeParameters('left').renderWidth;
-```
+これは既にデバイスピクセル単位なので、 [Window.devicePixelRatio](/ja/docs/Web/API/Window/devicePixelRatio) を [HTMLCanvasElement.width](/ja/docs/Web/API/HTMLCanvasElement/width) に設定する前に掛け合わせる必要はありません。
 
 ### 値
 
-幅を表す数値．ピクセル単位．
+数値で、高さをピクセル単位で表します。
 
 ## 例
 
-```
-TBD.
-```
+コード例については [`VREyeParameters`](/ja/docs/Web/API/VREyeParameters#例) を参照してください。
 
-## 仕様
+## 仕様書
 
-| Specification                                                                                    | Status                   | Comment            |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('WebVR', '#dom-vreyeparameters-renderwidth', 'renderWidth')}} | {{Spec2('WebVR')}} | Initial definition |
+このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部であり、これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) で置き枯れられました。標準規格になる見込みはありません。
 
-## ブラウザの互換性
+すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、 [A-Frame](https://aframe.io/)、[Babylon.js](https://www.babylonjs.com/)、[Three.js](https://threejs.org/) などのフレームワークを使用するか、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を使用することが、すべてのブラウザーで動作する WebXR アプリを開発する上で推奨されます。[\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)
 
-{{Compat("api.VREyeParameters.renderWidth")}}
+## ブラウザーの互換性
 
-## 参照
+{{Compat}}
 
-- [WebVR API homepage](/ja/docs/Web/API/WebVR_API).
-- [MozVr.com](http://mozvr.com/) — Mozilla VR チームのデモ，ダウンロード，その他のリソース．
+## 関連情報
+
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

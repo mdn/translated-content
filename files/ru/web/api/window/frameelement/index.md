@@ -1,9 +1,9 @@
 ---
 title: Window.frameElement
 slug: Web/API/Window/frameElement
-translation_of: Web/API/Window/frameElement
 ---
-{{ ApiRef() }}
+
+{{APIRef}}
 
 ## Сводка
 
@@ -23,7 +23,7 @@ frameEl = window.frameElement;
 var frameEl = window.frameElement;
 // Если мы внутри фрейма, то изменить его URL на 'http://mozilla.org/'
 if (frameEl) {
-  frameEl.src = 'http://mozilla.org/';
+  frameEl.src = "http://mozilla.org/";
 }
 ```
 
@@ -31,9 +31,9 @@ if (frameEl) {
 
 Заметьте, что несмотря на своё имя, свойство также работает для документов внутри `<object>` и других встраиваемых элементов.
 
-## Спецификация
+## Спецификации
 
-[WHATWG](http://www.whatwg.org/specs/web-apps/current-work/#dom-frameelement)
+[WHATWG](https://www.whatwg.org/specs/web-apps/current-work/#dom-frameelement)
 
 ## Совместимость с браузерами
 

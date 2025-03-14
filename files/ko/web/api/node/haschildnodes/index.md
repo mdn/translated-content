@@ -1,22 +1,16 @@
 ---
 title: Node.hasChildNodes()
 slug: Web/API/Node/hasChildNodes
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-translation_of: Web/API/Node/hasChildNodes
 ---
 
 {{APIRef("DOM")}}
 
-**`Node.hasChildNodes()`** 메소드는 현재 노드({{domxref("Node")}})에게 자식노드([child nodes](/ko/docs/Web/API/Node.childNodes))가 있는지를 {{jsxref("Boolean")}} 값으로 반환합니다.
+**`Node.hasChildNodes()`** 메소드는 현재 노드({{domxref("Node")}})에게 자식노드([child nodes](/ko/docs/Web/API/Node/childNodes))가 있는지를 {{jsxref("Boolean")}} 값으로 반환합니다.
 
 ## 구문
 
 ```js
-node.hasChildNodes()
+node.hasChildNodes();
 ```
 
 ## 예시
@@ -26,8 +20,8 @@ node.hasChildNodes()
 ```js
 var foo = document.getElementById("foo");
 
-if ( foo.hasChildNodes() ) {
-  foo.removeChild( foo.childNodes[0] );
+if (foo.hasChildNodes()) {
+  foo.removeChild(foo.childNodes[0]);
 }
 ```
 

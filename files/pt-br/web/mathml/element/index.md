@@ -5,7 +5,7 @@ slug: Web/MathML/Element
 
 Essa é uma lista alfabética dos elementos de **apresentação** de MathML.
 
-O termo **marcação de apresentação** é usado para descrever a estrutura da notação matemática, enquanto que **marcação de conteúdo** fornece um significado matemático básico e não é feito para ser renderizado pelo parser de MathML (ver {{ bug(276028)}}). Se você desejar aprender mais sobre marcação de conteúdo considere o [Capítulo 4](https://www.w3.org/TR/MathML3/chapter4.html) na [especificação do MathML 3](https://www.w3.org/TR/MathML3/).
+O termo **marcação de apresentação** é usado para descrever a estrutura da notação matemática, enquanto que **marcação de conteúdo** fornece um significado matemático básico e não é feito para ser renderizado pelo parser de MathML (ver [Erro do Firefox 276028](https://bugzil.la/276028)). Se você desejar aprender mais sobre marcação de conteúdo considere o [Capítulo 4](https://www.w3.org/TR/MathML3/chapter4.html) na [especificação do MathML 3](https://www.w3.org/TR/MathML3/).
 
 ### math
 
@@ -94,8 +94,8 @@ O termo **marcação de apresentação** é usado para descrever a estrutura da 
 ### Other elements
 
 - {{ MathMLElement("semantics") }} (Container for semantic annotations)
-- [`<annotation>`](/pt-BR/docs/MathML/Element/semantics) (Anotações de dados)
-- [`<annotation-xml>`](/pt-BR/docs/MathML/Element/semantics) (Anotações XML)
+- [`<annotation>`](/pt-BR/docs/Web/MathML/Element/semantics) (Anotações de dados)
+- [`<annotation-xml>`](/pt-BR/docs/Web/MathML/Element/semantics) (Anotações XML)
 
 ## Ver também
 

@@ -1,21 +1,27 @@
 ---
 title: ArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
-tags:
-  - ArrayBuffer
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
-original_slug: Web/JavaScript/Reference/Objets_globaux/ArrayBuffer/slice
 ---
 
 {{JSRef}}
 
 La méthode **`slice()`** renvoie un nouvel `ArrayBuffer` dont le contenu est une copie des octets du `ArrayBuffer` courant, contenus entre `début` (compris) et `fin` (non-compris).
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-slice.html")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer.slice()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+const int32View = new Int32Array(buffer);
+// Produces Int32Array [0, 0, 0, 0]
+
+int32View[1] = 42;
+const sliced = new Int32Array(buffer.slice(4, 12));
+// Produces Int32Array [42, 0]
+
+console.log(sliced[0]);
+// Expected output: 42
+```
 
 ## Syntaxe
 
@@ -44,7 +50,7 @@ La méthode `slice` copie les octets contenus jusqu'au (au sens exclusif) param�
 
 ```js
 var buf1 = new ArrayBuffer(8);
-var buf2 = buf1.slice(0)
+var buf2 = buf1.slice(0);
 ```
 
 ## Spécifications

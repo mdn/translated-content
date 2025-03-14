@@ -1,304 +1,180 @@
 ---
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
+l10n:
+  sourceCommit: c1c96d74b416ee5cd86bb3b70fe2a1145beed70f
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
-**`HTMLInputElement`** 接口提供了特定的属性和方法（继承自常规的{{domxref("HTMLElement", "HTML 元素")}}接口）用于管理输入元素的布局和外观。
+**`HTMLInputElement`** 接口提供了特定的属性和方法，用于管理 {{HtmlElement("input")}} 元素的选项、布局和外观。
 
-{{InheritanceDiagram(600,120)}}
+{{InheritanceDiagram}}
 
-## 属性
+## 实例属性
 
-| `form` {{readonlyInline}} | _`{{domxref("HTMLFormElement")}} object:`_ 返回一个父表单元素的引用。                                                                                                                                                    |
-| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `formAction`                    | _`string`:_ **返回/ 设置** 元素的 {{ htmlattrxref("formaction", "input") }} 属性，包含处理元素提交信息程序的 URI. 这会重写父表单的 {{ htmlattrxref("action", "form") }} 属性。                           |
-| `formEncType`                   | _`string`:_ **返回/ 设置** 元素的 {{ htmlattrxref("formenctype", "input") }} 属性，包含将表单提交到服务器的内容类型。这会重写父表单的 {{ htmlattrxref("enctype", "form") }} 属性。                         |
-| `formMethod`                    | _`string`:_ **返回/ 设置** 元素的 {{ htmlattrxref("formmethod", "input") }} 属性，包含浏览器用于提交表单的 HTTP 方法。这会重写父表单的 {{ htmlattrxref("method", "form") }} 属性。                       |
-| `formNoValidate`                | _`boolean`:_ **返回/ 设置** 元素的 {{ htmlattrxref("formnovalidate", "input") }} 属性，表示在表单提交时不对其进行验证。这会重写父表单的 {{ htmlattrxref("novalidate", "form") }} 属性。                  |
-| `formTarget`                    | _`string`:_ **返回/ 设置** 元素的 {{ htmlattrxref("formtarget", "input") }} 属性，包含一个名称或关键字，表示在提交表单后接收响应的显示位置。这会重写父表单的 {{ htmlattrxref("target", "form") }} 属性。 |
+_还从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
-| `name`                                       | _`string`:_ **返回/ 设置** 元素的 {{ htmlattrxref("name", "input") }} 属性，包含其名称。                                                                                                                                                                                                                                                                                                |
-| -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`                                       | `string:` **返回/ 设置** 元素的 {{ htmlattrxref("type", "input") }} 属性，包含其显示类型。查看 {{ HTMLElement("input") }} 的 {{ htmlattrxref("type", "input") }} 属性可用值。                                                                                                                                                                                    |
-| `disabled`                                   | _`boolean`:_ **返回/ 设置** 元素的 {{ htmlattrxref("disabled", "input") }} 属性，表示是否禁用 {{ HTMLElement("input") }}. 该元素的值将不会被提交。也可以查看 {{ htmlattrxref("readOnly", "input") }}                                                                                                                                                            |
-| `autofocus`                                  | `boolean:` **返回/ 设置** 元素的 {{ htmlattrxref("autofocus", "input") }} 属性，指定的 {{ HTMLElement("input") }} 在页面加载时应当具有输入焦点，例如通过键入不同的控件。在文档中只有一个表单元素可以拥有 {{htmlattrxref("autofocus","input")}} 属性。如果 {{htmlattrxref("type","input")}} 属性被设置为 `hidden` 则无效 (即不可为隐藏控件设置自动焦点). |
-| `required`                                   | _`boolean`:_ **返回/ 设置** 元素的 {{ htmlattrxref("required", "input") }} 属性，表示用户必填项。                                                                                                                                                                                                                                                                                       |
-| `value`                                      | `string:` **返回/ 设置** 当前控件的值。**提示：** 如果用户输入与预期不同，可能会返回空。                                                                                                                                                                                                                                                                                                               |
-| `validity` {{readonlyInline}}          | `{{domxref("ValidityState")}} object:` Returns the validity state that this element is in.                                                                                                                                                                                                                                                                                                  |
-| `validationMessage` {{readonlyInline}} | `string:` **Returns** a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation ({{htmlattrxref("willValidate","input")}} is false), or it satisfies its constraints.                                                                              |
-| `willValidate` {{readonlyInline}}      | _`{{jsxref("Boolean")}}:`_ **Indicates** whether the element is a candidate for constraint validation. It is false if any conditions bar it from constraint validation.                                                                                                                                                                                                                      |
+某些属性仅适用于支持相应属性的输入元素类型。
 
-| `checked`        | `boolean:` **返回/ 设置** 当前选中状态，当控件{{htmlattrxref("type","input")}} 是 `checkbox` 或 `radio` 时。                                                                                                        |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `defaultChecked` | _`boolean:`_ **返回/ 设置** the default state of a radio button or checkbox as originally specified in HTML that created this object.                                                                                         |
-| `indeterminate`  | `boolean:` **indicates** that the checkbox is neither on nor off. Changes the appearance to resemble a third state. Does not affect the value of the **checked** 属性，and clicking the checkbox will set the value to false. |
+- {{domxref("HTMLInputElement.align", "align")}} {{Deprecated_Inline}}
+  - : 一个表示元素对齐方式的字符串。_请改用 CSS。_
+- {{domxref("HTMLInputElement.defaultValue", "defaultValue")}}
+  - : 一个表示元素默认值的字符串，该值最初是在创建此对象的 HTML 中指定的。
+- {{domxref("HTMLInputElement.dirName", "dirName")}}
+  - : 一个表示元素方向的字符串。
+- {{domxref("HTMLInputElement.incremental", "incremental")}} {{Non-standard_Inline}}
+  - : 一个表示搜索事件触发模式的布尔值，如果为 `true`，则在每次按键或单击取消按钮时触发；否则在按下 <kbd>Enter</kbd> 键时触发。
+- {{domxref("HTMLInputElement.labels", "labels")}} {{ReadOnlyInline}}
+  - : 返回一个 {{ HTMLElement("label") }} 元素的列表，这些元素是当前元素的标签。
+- {{domxref("HTMLInputElement.list", "list")}} {{ReadOnlyInline}}
+  - : 返回由 [`list`](/zh-CN/docs/Web/HTML/Element/input#list) 属性指向的元素。如果在同一树中找不到 HTML 元素，则该属性可能为 `null`。
+- {{domxref("HTMLInputElement.multiple", "multiple")}}
+  - : 一个表示元素的 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性的布尔值，表示是否可能有多个值（例如，多个文件）。
+- {{domxref("HTMLInputElement.name", "name")}}
+  - : 一个表示元素的 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性的字符串，包含在提交表单时标识元素的名称。
+- {{domxref("HTMLInputElement.popoverTargetAction", "popoverTargetAction")}}
+  - : 获取或设置要在由 `type="button"` 的 {{htmlelement("input")}} 元素控制的弹出窗口元素上执行的操作（`"hide"`、`"show"` 或 `"toggle"`）。它反映了 [`popovertargetaction`](/zh-CN/docs/Web/HTML/Element/input#popovertargetaction) HTML 属性的值。
+- {{domxref("HTMLInputElement.popoverTargetElement", "popoverTargetElement")}}
+  - : 获取或设置要通过 `type="button"` 的 {{htmlelement("input")}} 元素控制的弹出窗口元素。它反映了 [`popovertarget`](/zh-CN/docs/Web/HTML/Element/input#popovertarget) HTML 属性的值。
+- {{domxref("HTMLInputElement.step", "step")}}
+  - : 一个表示元素的 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) 属性的字符串，它与 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 一起使用，以限制可以设置数字或日期时间值的增量。它可以是字符串 `any` 或正浮点数。如果不设置为 `any`，则控件仅接受大于最小值的步长值的倍数。
+- {{domxref("HTMLInputElement.type", "type")}}
+  - : 一个表示元素的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性的字符串，表示要显示的控件类型。请参阅 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性的文档，以了解其可能的值。
+- {{domxref("HTMLInputElement.useMap", "useMap")}} {{Deprecated_Inline}}
+  - : 一个表示客户端图像映射的字符串。
+- {{domxref("HTMLInputElement.value", "value")}}
+  - : 一个表示控件当前值的字符串。如果用户输入与预期不同的值，则可能返回空字符串。
+- {{domxref("HTMLInputElement.valueAsDate", "valueAsDate")}}
+  - : 一个表示元素的值的 {{jsxref("Date")}}，以日期形式解释，如果无法转换，则为 `null`。
+- {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}}
+  - : 一个表示元素的值的数字，以以下顺序解释：时间值、数字或 `NaN`（如果无法转换）。
 
-| `alt`    | _`string`:_ **返回/ 设置** 元素的 {{ htmlattrxref("alt", "input") }} 属性，包含 alternative text to use when {{htmlattrxref("type","input")}} is `image.`                                                                                                    |
-| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `height` | _`string`:_ **返回/ 设置** 元素的 {{ htmlattrxref("height", "input") }} 属性，which defines the height of the image displayed for the button, if the value of {{htmlattrxref("type","input")}} is `image`.                                                  |
-| `src`    | `string:` **返回/ 设置** 元素的 {{ htmlattrxref("src", "input") }} 属性，which specifies a URI for the location of an image to display on the graphical submit button, if the value of {{htmlattrxref("type","input")}} is `image`; otherwise it is ignored. |
-| `width`  | `string:` **返回/ 设置** the document's {{ htmlattrxref("width", "input") }} 属性，which defines the width of the image displayed for the button, if the value of {{htmlattrxref("type","input")}} is `image`.                                             |
+### 与父表单相关的实例属性
 
-| `accept`                                                                                                                  | _`string`:_ **Returns / Sets** 元素的 {{ htmlattrxref("accept", "input") }} 属性，包含 comma-separated list of file types accepted by the server when {{htmlattrxref("type","input")}} is `file`. |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `allowdirs` {{non-standard_inline}}                                                                              | boolean: Part of the non-standard Directory Upload API; **indicates** whether or not to allow directories and files both to be selected in the file list. Implemented only in Firefox and is hidden behind a preference. |
-| `files`                                                                                                                   | **Returns/accepts** a {{domxref("FileList")}} object, which contains a list of {{domxref("File")}} objects representing the files selected for upload.                                                     |
-| {{domxref("HTMLInputElement.webkitdirectory", "webkitdirectory")}} {{Non-standard_inline}} | boolean: **Returns** the {{htmlattrxref("webkitdirectory", "input")}} 属性; if true, the file system picker interface only accepts directories instead of files.                                         |
-| {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} {{Non-standard_inline}}     | Array of {{domxref("FileSystemEntry")}} objects **describing** the currently-selected files or directories.                                                                                                    |
+- {{domxref("HTMLInputElement.form", "form")}} {{ReadOnlyInline}}
+  - : 返回一个父表单（{{HtmlElement("form")}}）元素的引用。
+- {{domxref("HTMLInputElement.formAction", "formAction")}}
+  - : 一个表示元素的 [`formaction`](/zh-CN/docs/Web/HTML/Element/input#formaction) 属性的字符串，包含处理元素提交信息程序的 URI。这会覆盖父表单的 [`action`](/zh-CN/docs/Web/HTML/Element/form#action) 属性。
+- {{domxref("HTMLInputElement.formEnctype", "formEnctype")}}
+  - : 一个表示元素的 [`formenctype`](/zh-CN/docs/Web/HTML/Element/input#formenctype) 属性的字符串，包含将表单提交到服务器的内容类型。这会覆盖父表单的 [`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype) 属性。
+- {{domxref("HTMLInputElement.formMethod", "formMethod")}}
+  - : 一个表示元素的 [`formmethod`](/zh-CN/docs/Web/HTML/Element/input#formmethod) 属性的字符串，包含浏览器用于提交表单的 HTTP 方法。这会覆盖父表单的 [`method`](/zh-CN/docs/Web/HTML/Element/form#method) 属性。
+- {{domxref("HTMLInputElement.formNoValidate", "formNoValidate")}}
+  - : 一个表示元素的 [`formnovalidate`](/zh-CN/docs/Web/HTML/Element/input#formnovalidate) 属性的布尔值，表示在提交表单时不对其进行验证。这会覆盖父表单的 [`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate) 属性。
+- {{domxref("HTMLInputElement.formTarget", "formTarget")}}
+  - : 一个表示元素的 [`formtarget`](/zh-CN/docs/Web/HTML/Element/input#formtarget) 属性的字符串，包含一个名称或关键字，表示在提交表单后接收响应的显示位置。这会覆盖父表单的 [`target`](/zh-CN/docs/Web/HTML/Element/form#target) 属性。
 
-| `autocomplete`       | _`string`:_ **返回/ 设置** 元素的 {{htmlattrxref("autocomplete", "input")}} 属性，indicating whether the value of the control can be automatically completed by the browser. Ignored if the value of the {{htmlattrxref("type","input")}} 属性 is `hidden`, `checkbox`, `radio`, `file`, or a button type (`button`, `submit`, `reset`, `image`). Possible values are: "on": the browser can autocomplete the value using previously stored value "off": the user must explicity enter a value |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `maxLength`          | _`long`:_ **返回/ 设置** 元素的 {{ htmlattrxref("maxlength", "input") }} 属性，包含 the **maximum length of characters** (in Unicode code points) that the value can have. (If you set this to a negative number, an exception will be thrown.)                                                                                                                                                                                                                                                   |
-| `size`               | _`unsigned long`:_ **返回/ 设置** 元素的 {{ htmlattrxref("size", "input") }} 属性，包含 **size of the control**. This value is in pixels unless the value of {{htmlattrxref("type","input")}} is `text` or `password`, in which case, it is an integer number of characters. Applies only when {{htmlattrxref("type","input")}} is set to `text`, `search`, `tel`, `url`, `email`, or `password`; otherwise it is ignored.                                                   |
-| `pattern`            | _`string`:_ **返回/ 设置** 元素的 {{ htmlattrxref("pattern", "input") }} 属性，包含 a **regular expression** that the control's value is checked against. Use the {{htmlattrxref("title","input")}} 属性 to describe the pattern to help the user. This 属性 applies when the value of the {{htmlattrxref("type","input")}} 属性 is `text`, `search`, `tel`, `url` or `email`; otherwise it is ignored.                                                                      |
-| `placeholder`        | _`string`:_ **返回/ 设置** 元素的 {{ htmlattrxref("placeholder", "input") }} 属性，包含 a hint to the user of what can be entered in the control. The placeholder text must not contain carriage returns or line-feeds. This 属性 applies when the value of the {{htmlattrxref("type","input")}} 属性 is `text`, `search`, `tel`, `url` or `email`; otherwise it is ignored.                                                                                                                    |
-| `readOnly`           | _`boolean`:_ **返回/ 设置** 元素的 {{ htmlattrxref("readonly", "input") }} 属性，indicating that the user cannot modify the value of the control. This is ignored if the value of the {{htmlattrxref("type","input")}} 属性 is `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, or a button type.                                                                                                                                                                                        |
-| `min`                | _`string`:_ **返回/ 设置** 元素的 {{ htmlattrxref("min", "input") }} 属性，包含 the minimum (numeric or date-time) value for this item, which must not be greater than its maximum ({{htmlattrxref("max","input")}} 属性) value.                                                                                                                                                                                                                                                                       |
-| `max`                | _`string`:_ **返回/ 设置** 元素的 {{ htmlattrxref("max", "input") }} 属性，包含 the maximum (numeric or date-time) value for this item, which must not be less than its minimum (**min** 属性) value.                                                                                                                                                                                                                                                                                                           |
-| `selectionStart`     | _`unsigned long`:_ **返回/ 设置** the beginning index of the selected text. When nothing is selected, this returns the position of the text input cursor (caret) inside of the {{HTMLElement("input")}} element.                                                                                                                                                                                                                                                                                                  |
-| `selectionEnd`       | _`unsigned long`:_ **返回/ 设置** the end index of the selected text. When there's no selection, this returns the offset of the character immediately following the current text input cursor position.                                                                                                                                                                                                                                                                                                                   |
-| `selectionDirection` | _`string`:_ **返回/ 设置** the direction in which selection occurred. Possible values are: `"forward"` if selection was performed in the start-to-end direction of the current locale, `"backward"` for the opposite direction, `"none"` if the direction is unknown."                                                                                                                                                                                                                                                    |
+### 适用于任何类型的非隐藏输入元素的实例属性
 
-<table>
-  <caption>
-    未分类的属性
-  </caption>
-  <tbody>
-    <tr>
-      <td><code>defaultValue</code></td>
-      <td>
-        <em><code>string:</code></em> <strong>返回/ 设置</strong> the default
-        value as originally specified in the HTML that created this object.
-      </td>
-    </tr>
-    <tr>
-      <td><code>dirName</code></td>
-      <td>
-        <em><code>string:</code></em> <strong>返回/ 设置 </strong>the
-        directionality of the element.
-      </td>
-    </tr>
-    <tr>
-      <td><code>accessKey</code></td>
-      <td>
-        <em><code>string</code>: <strong>返回</strong></em> a string 包含 a
-        single character that switches input focus to the control when pressed.
-      </td>
-    </tr>
-    <tr>
-      <td><code>list</code> {{readonlyInline}}</td>
-      <td>
-        <em><code>{{domxref("HTMLElement")}} object:</code></em>
-        <strong>返回</strong> the element pointed by the
-        {{ htmlattrxref("list", "input") }} 属性。The property may
-        be <code>null</code> if no HTML element found in the same tree.
-      </td>
-    </tr>
-    <tr>
-      <td><code>multiple</code></td>
-      <td>
-        <em><code>boolean</code>:</em> <strong>返回/ 设置</strong> 元素的
-        {{ htmlattrxref("multiple", "input") }} 属性，indicating
-        whether more than one value is possible (e.g., multiple files).
-      </td>
-    </tr>
-    <tr>
-      <td><code>files</code></td>
-      <td>
-        <em><code>{{domxref("FileList")}} array:</code></em>
-        <strong>返回</strong>the list of selected files.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLInputElement.labels")}}
-        {{readonlyInline}}
-      </td>
-      <td>
-        <code><em>{{domxref("NodeList")}} array:</em></code>
-        <strong>返回</strong>a list of {{ HTMLElement("label") }}
-        elements that are labels for this element.
-      </td>
-    </tr>
-    <tr>
-      <td><code>step</code></td>
-      <td>
-        <code><em>string:</em></code> <strong>返回/ 设置</strong> 元素的
-        {{ htmlattrxref("step", "input") }} 属性，which works
-        with<strong> </strong>{{htmlattrxref("min","input")}} and
-        {{htmlattrxref("max","input")}} to limit the increments at
-        which a numeric or date-time value can be set. It can be the string
-        <code>any</code> or a positive floating point number. If this is not set
-        to <code>any</code>, the control accepts only values at multiples of the
-        step value greater than the minimum.
-      </td>
-    </tr>
-    <tr>
-      <td><code>valueAsDate</code></td>
-      <td>
-        <code><em>{{jsxref("Date")}} object:</em></code> Returns / Sets
-        the value of the element, interpreted as a date, or <code>null</code> if
-        conversion is not possible.
-      </td>
-    </tr>
-    <tr>
-      <td><code>valueAsNumber</code></td>
-      <td>
-        <code>double</code>: <strong>返回</strong>the value of the element,
-        interpreted as one of the following, in order:
-        <ul>
-          <li>a time value</li>
-          <li>a number</li>
-          <li>NaN if conversion is impossible</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><code>autocapitalize</code> {{experimental_inline}}</td>
-      <td>
-        <code><em>string:</em></code> <strong>定义</strong> the capitalization
-        behavior for user input. Valid values are <code>none</code>,
-        <code>off</code>, <code>characters</code>, <code>words</code>, or
-        <code>sentences</code>.
-      </td>
-    </tr>
-  </tbody>
-</table>
+- {{domxref("HTMLInputElement.disabled", "disabled")}}
+  - : 一个表示元素的 [`disabled`](/zh-CN/docs/Web/HTML/Element/input#disabled) 属性的布尔值，表示该控件不可用于交互。输入值将不会与表单一起提交。参见 [`readonly`](/zh-CN/docs/Web/HTML/Element/input#readonly)。
+- {{domxref("HTMLInputElement.required", "required")}}
+  - : 一个表示元素的 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性的布尔值，表示用户必须在提交表单之前填写值。
+- {{domxref("HTMLInputElement.validationMessage", "validationMessage")}} {{ReadOnlyInline}}
+  - : 返回一条描述控件不满足时的验证约束的本地化消息。如果控件不是约束验证的候选项（[`willValidate`](/zh-CN/docs/Web/API/HTMLObjectElement/willValidate) 为 `false`），或者它满足其约束，则为空字符串。此值可以通过 {{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}} 方法设置。
+- {{domxref("HTMLInputElement.validity", "validity")}} {{ReadOnlyInline}}
+  - : 返回元素当前的有效状态。
+- {{domxref("HTMLInputElement.willValidate", "willValidate")}} {{ReadOnlyInline}}
+  - : 返回元素是否是约束验证的候选项。如果任何条件阻止它进行约束验证，则为 `false`，包括：它的 `type` 是 `hidden`、`reset` 或 `button` 之一，它的祖先中有 {{HTMLElement("datalist")}} 或者它的 `disabled` 属性为 `true`。
 
-- {{domxref("HTMLInputElement.align")}} {{Deprecated_Inline}}
-  - : `string:` **represents** the alignment of the element. _Use CSS instead._
-- {{domxref("HTMLInputElement.useMap")}} {{Deprecated_Inline}}
-  - : `string:` **represents** a client-side image map.
+### 仅适用于复选框和单选按钮元素的实例属性
 
-## 方法
+- {{domxref("HTMLInputElement.checked", "checked")}}
+  - : 一个表示元素当前状态的布尔值。
+- {{domxref("HTMLInputElement.defaultChecked", "defaultChecked")}}
+  - : 一个表示单选按钮或复选框的默认状态的布尔值，该值最初是在创建此对象的 HTML 中指定的。
+- {{domxref("HTMLInputElement.indeterminate", "indeterminate")}}
+  - : 一个表示复选框或单选按钮是否处于不确定状态的布尔值。对于复选框，效果是复选框的外观被某种方式遮挡/变灰，以表示其状态是不确定的（既不选中也不未选中）。不会影响 `checked` 属性的值，单击复选框将其值设置为假。
 
-<table>
-  <tbody>
-    <tr>
-      <td><code>focus()</code></td>
-      <td>
-        Focus on the input element; keystrokes will subsequently go to this
-        element.
-      </td>
-    </tr>
-    <tr>
-      <td><code>blur()</code></td>
-      <td>
-        Removes focus from input; keystrokes will subsequently go nowhere.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a
-            href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select"
-            >select()</a
-          ></code
-        >
-      </td>
-      <td>
-        Selects the input text in the element, and focuses it so the user can
-        subsequently replace the whole entry.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a
-            href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/click"
-            >click()</a
-          ></code
-        >
-      </td>
-      <td>Simulates a click on the element.</td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a href="/zh-CN/docs/Web/API/HTMLInputElement/setSelectionRange"
-            >setSelectionRange()</a
-          ></code
-        >
-      </td>
-      <td>
-        Selects a range of text in the element (but does not focus it). The
-        optional selectionDirection parameter may be "forward" or "backward" to
-        establish the direction in which selection was set, or "none" if the
-        direction is unknown or not relevant. The default is "none". Specifying
-        a selectionDirection parameter sets the value of the selectionDirection
-        property.
-      </td>
-    </tr>
-    <tr>
-      <td><code>setRangeText()</code></td>
-      <td>
-        <p>
-          Replaces a range of text with the new text. If the
-          <var>start</var> and <var>end</var> arguments are not provided, the
-          range is assumed to be the selection.The final argument determines how
-          the selection should be set after the text has been replaced. The
-          possible values are:
-        </p>
-        <dl>
-          <dt>"<code>select</code>"</dt>
-          <dd>Selects the newly inserted text.</dd>
-          <dt>"<code>start</code>"</dt>
-          <dd>Moves the selection to just before the inserted text.</dd>
-          <dt>"<code>end</code>"</dt>
-          <dd>Moves the selection to just after the selected text.</dd>
-          <dt>"<code>preserve</code>"</dt>
-          <dd>Attempts to preserve the selection. This is the default.</dd>
-        </dl>
-      </td>
-    </tr>
-    <tr>
-      <td><code>setCustomValidity()</code></td>
-      <td>
-        Sets a custom validity message for the element. If this message is not
-        the empty string, then the element is suffering from a custom validity
-        error, and does not validate.
-      </td>
-    </tr>
-    <tr>
-      <td><code>checkValidity()</code></td>
-      <td>
-        Returns a {{jsxref("Boolean")}} that is <code>false</code> if the
-        element is a candidate for constraint validation, and it does not
-        satisfy its constraints. In this case, it also fires an
-        [`invalid`](/zh-CN/docs/Web/API/HTMLInputElement/invalid_event) event at the element. It returns
-        <code>true</code> if the element is not a candidate for constraint
-        validation, or if it satisfies its constraints.
-      </td>
-    </tr>
-  </tbody>
-</table>
+### 仅适用于图像类型的元素的实例属性
 
-- {{domxref("HTMLInputElement.stepDown()")}}
+- {{domxref("HTMLInputElement.alt", "alt")}}
+  - : 一个表示元素的 [`alt`](/zh-CN/docs/Web/HTML/Element/input#alt) 属性的字符串，包含要使用的替代文本。
+- {{domxref("HTMLInputElement.height", "height")}}
+  - : 一个表示元素的 [`height`](/zh-CN/docs/Web/HTML/Element/input#height) 属性的字符串，包含要显示为按钮的图像的高度。
+- {{domxref("HTMLInputElement.src", "src")}}
+  - : 一个表示元素的 [`src`](/zh-CN/docs/Web/HTML/Element/input#src) 属性的字符串，包含要显示为图形提交按钮上的图像的位置的 URI。
+- {{domxref("HTMLInputElement.width", "width")}}
+  - : 一个表示元素的 [`width`](/zh-CN/docs/Web/HTML/Element/input#width) 属性的字符串，包含要显示为按钮的图像的宽度。
 
-  - : Decrements the {{htmlattrxref("value","input")}} by ({{htmlattrxref("step","input")}} \* n), where n defaults to 1 if not specified. Throws an INVALID_STATE_ERR exception:
+### 仅适用于文件类型的元素的实例属性
 
-    - if the method is not applicable to for the current {{htmlattrxref("type","input")}} value,
-    - if the element has no {{htmlattrxref("step","input")}} value,
-    - if the {{htmlattrxref("value","input")}} cannot be converted to a number,
-    - if the resulting value is above the {{htmlattrxref("max","input")}} or below the {{htmlattrxref("min","input")}}.
+- {{domxref("HTMLInputElement.accept", "accept")}}
+  - : 一个表示元素的 [`accept`](/zh-CN/docs/Web/HTML/Element/input#accept) 属性的字符串，包含可以选择的文件类型的以逗号分隔的列表。
+- {{domxref("HTMLInputElement.files", "files")}}
+  - : 一个 {{domxref("FileList")}}，表示选择的要上传的文件。
+- {{domxref("HTMLInputElement.webkitdirectory", "webkitdirectory")}}
+  - : 一个表示 [`webkitdirectory`](/zh-CN/docs/Web/HTML/Element/input#webkitdirectory) 属性的布尔值。如果为 `true`，则文件系统选择器接口仅接受目录而不是文件。
+- {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} {{ReadOnlyInline}}
+  - : 描述当前选择的文件或目录。
 
-- {{domxref("HTMLInputElement.stepUp()")}}
+### 仅适用于包含文本或数字的可见元素的实例属性
 
-  - : Increments the {{htmlattrxref("value","input")}} by ({{htmlattrxref("step","input")}} \* n), where n defaults to 1 if not specified. Throws an INVALID_STATE_ERR exception:
+- {{domxref("HTMLInputElement.autocomplete", "autocomplete")}}
+  - : 一个表示元素的 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/input#autocomplete) 属性的字符串，表示控件的值是否可以由浏览器自动填充。
+- {{domxref("HTMLInputElement.capture", "capture")}}
+  - : 一个表示元素的 [`capture`](/zh-CN/docs/Web/HTML/Element/input#capture) 属性的字符串，指示文件上传控件中的媒体捕获输入方法。
+- {{domxref("HTMLInputElement.max", "max")}}
+  - : 一个表示元素的 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性的字符串，包含此项的最大（数字或日期时间）值，该值不能小于其最小（[`min`](/zh-CN/docs/Web/HTML/Element/input#min) 属性）值。
+- {{domxref("HTMLInputElement.maxLength", "maxLength")}}
+  - : 一个表示元素的 [`maxlength`](/zh-CN/docs/Web/HTML/Element/input#maxlength) 属性的数字，包含值可以具有的最大字符数（以 Unicode 码点表示）。
+- {{domxref("HTMLInputElement.min", "min")}}
+  - : 一个表示元素的 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 属性的字符串，包含此项的最小（数字或日期时间）值，该值不能大于其最大（[`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性）值。
+- {{domxref("HTMLInputElement.minLength", "minLength")}}
+  - : 一个表示元素的 [`minlength`](/zh-CN/docs/Web/HTML/Element/input#minlength) 属性的数字，包含值可以具有的最小字符数（以 Unicode 码点表示）。
+- {{domxref("HTMLInputElement.pattern", "pattern")}}
+  - : 一个表示元素的 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性的字符串，包含要检查控件值的正则表达式。使用 [`title`](/zh-CN/docs/Web/HTML/Element/input#title) 属性来描述模式以帮助用户。此属性仅适用于 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性的值为 `text`、`search`、`tel`、`url` 或 `email` 的情况。
+- {{domxref("HTMLInputElement.placeholder", "placeholder")}}
+  - : 一个表示元素的 [`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder) 属性的字符串，包含一个提示，告诉用户可以在控件中输入什么。占位符文本不能包含回车或换行符。此属性仅适用于 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性的值为 `text`、`search`、`tel`、`url` 或 `email` 的情况。
+- {{domxref("HTMLInputElement.readOnly", "readOnly")}}
+  - : 一个表示元素的 [`readonly`](/zh-CN/docs/Web/HTML/Element/input#readonly) 属性的布尔值，指示用户无法修改控件的值。如果 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 为 `hidden`、`range`、`color`、`checkbox`、`radio`、`file` 或按钮类型，则忽略此属性。
+- {{domxref("HTMLInputElement.selectionDirection", "selectionDirection")}}
+  - : 一个表示选择发生的方向的字符串。可能的值为：`forward`（选择是从当前区域设置的起始到结束方向上执行的）、`backward`（相反的方向）或 `none`（方向未知）。
+- {{domxref("HTMLInputElement.selectionEnd", "selectionEnd")}}
+  - : 一个表示选择文本的结束索引的数字。当没有选择时，它返回当前文本输入光标位置后面的字符的偏移量。
+- {{domxref("HTMLInputElement.selectionStart", "selectionStart")}}
+  - : 一个表示选择文本的开始索引的数字。当没有选择时，它返回当前文本输入光标位置的偏移量。
+- {{domxref("HTMLInputElement.size", "size")}}
+  - : 一个表示元素的 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 属性的数字，包含控件的可视大小。此值以像素为单位，除非 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 的值为 `text` 或 `password`，在这种情况下，它是一个整数字符数。仅当 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 设置为 `text`、`search`、`tel`、`url`、`email` 或 `password` 时才适用。
 
-    - if the method is not applicable to for the current {{htmlattrxref("type","input")}} value.,
-    - if the element has no {{htmlattrxref("step","input")}} value,
-    - if the {{htmlattrxref("value","input")}} cannot be converted to a number,
-    - if the resulting value is above the {{htmlattrxref("max","input")}} or below the {{htmlattrxref("min","input")}}.
+## 实例方法
 
-- {{domxref("HTMLInputElement.mozSetFileArray()")}}{{non-standard_inline}}
-  - : Sets the files selected on the input to the given array of {{domxref("File")}} objects. This is an alternative to `mozSetFileNameArray()` which can be used in frame scripts: a chrome script can [open files as File objects](/zh-CN/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) and send them via [message manager](/zh-CN/Firefox/Multiprocess_Firefox/The_message_manager).
-- {{domxref("HTMLInputElement.mozGetFileNameArray()")}}{{non-standard_inline}}
-  - : Returns an array of all the file names from the input.
-- {{domxref("HTMLInputElement.mozSetFileNameArray()")}}{{non-standard_inline}}
-  - : Sets the filenames for the files selected on the input. Not for use in [frame scripts](/zh-CN/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts), because it accesses the file system.
+_也从其父接口 {{domxref("HTMLElement")}} 继承方法。_
+
+- {{domxref("HTMLInputElement.checkValidity()", "checkValidity()")}}
+  - : 返回一个布尔值，如果元素是约束验证的候选项，并且它不满足其约束，则为 `false`。在这种情况下，它还会在元素上触发 {{domxref("HTMLInputElement/invalid_event", "invalid")}} 事件。如果元素不是约束验证的候选项，或者它满足其约束，则返回 `true`。
+- {{domxref("HTMLInputElement.reportValidity()", "reportValidity()")}}
+  - : 运行 `checkValidity()` 方法，如果它返回 false（对于无效输入或未提供模式属性），则以与提交表单相同的方式向用户报告输入无效。
+- {{domxref("HTMLInputElement.select()", "select()")}}
+  - : 选择输入元素中的所有文本，并将其聚焦，以便用户随后可以替换其所有内容。
+- {{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}}
+  - : 设置元素的自定义有效性消息。如果此消息不是空字符串，则元素存在自定义有效性错误，且其值无效。
+- {{domxref("HTMLInputElement.setRangeText()", "setRangeText()")}}
+  - : 替换输入元素中的一段文本为新文本。
+- {{domxref("HTMLInputElement.setSelectionRange()", "setSelectionRange()")}}
+  - : 选择输入元素中的一段文本（但不聚焦）。
+- {{domxref("HTMLInputElement.showPicker()", "showPicker()")}}
+  - : 显示浏览器的日期、时间、颜色和文件选择器。
+- {{domxref("HTMLInputElement.stepDown()", "stepDown()")}}
+  - : 按 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) \* n 递减 [`value`](/zh-CN/docs/Web/HTML/Element/input#value)，其中 n 默认为 1（如果未指定）。
+- {{domxref("HTMLInputElement.stepUp()", "stepUp()")}}
+  - : 按 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) \* n 递增 [`value`](/zh-CN/docs/Web/HTML/Element/input#value)，其中 n 默认为 1（如果未指定）。
+
+## 事件
+
+_也从其父接口 {{domxref("HTMLElement")}} 继承事件。_
+
+使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 或通过将事件监听器赋值给此接口的 `oneventname` 属性来监听这些事件：
+
+- {{domxref("HTMLInputElement/invalid_event", "invalid")}} 事件
+  - : 当元素在约束验证期间不满足其约束时触发。
+- {{domxref("HTMLInputElement/search_event", "search")}} 事件 {{Non-standard_Inline}}
+  - : 当在 `type="search"` 的 {{HTMLElement("input")}} 上开始搜索时触发。
+- {{domxref("HTMLInputElement/select_event", "select")}} 事件
+  - : 当选中了一些文本时触发。
+- {{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} 事件 {{Experimental_Inline}}
+  - : 在 {{HTMLElement("input")}} 元素中的文本选择发生更改后触发。
 
 ## 规范
 
@@ -310,4 +186,4 @@ slug: Web/API/HTMLInputElement
 
 ## 参见
 
-- HTML element implementing this interface: {{ HTMLElement("input") }}.
+- 实现了该接口的 HTML 元素：{{HTMLElement("input")}}

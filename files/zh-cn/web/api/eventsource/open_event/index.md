@@ -9,19 +9,24 @@ slug: Web/API/EventSource/open_event
 
 ## 语法
 
-```
-eventSource.onopen = function
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+
+```js
+addEventListener("open", (event) => {});
+
+onopen = (event) => {};
 ```
 
 ## 示例
 
 ```js
-evtSource.onopen = function() {
+evtSource.onopen = function () {
   console.log("Connection to server opened.");
 };
 ```
 
-> **备注：** 你可以在 GitHub 上看到一个完整的示例— 请看 [使用 php 的 SSE(服务器发送事件)demo。](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!NOTE]
+> 你可以在 GitHub 上看到一个完整的示例— 请看 [使用 php 的 SSE(服务器发送事件)demo。](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
 ## 规范
 
@@ -31,6 +36,6 @@ evtSource.onopen = function() {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("EventSource")}}

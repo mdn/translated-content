@@ -1,18 +1,62 @@
 ---
 title: box-sizing
 slug: Web/CSS/box-sizing
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/box-sizing
 ---
 
 {{CSSRef}}
 
 **`box-sizing`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 너비와 높이를 계산하는 방법을 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/box-sizing.html")}}
+{{InteractiveExample("CSS Demo: box-sizing")}}
+
+```css interactive-example-choice
+box-sizing: content-box;
+width: 100%;
+```
+
+```css interactive-example-choice
+box-sizing: content-box;
+width: 100%;
+border: solid #5b6dcd 10px;
+padding: 5px;
+```
+
+```css interactive-example-choice
+box-sizing: border-box;
+width: 100%;
+border: solid #5b6dcd 10px;
+padding: 5px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element-parent">
+    <p>Parent container</p>
+    <div class="transition-all" id="example-element">
+      <p>Child container</p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element-parent {
+  width: 220px;
+  height: 200px;
+  border: solid 10px #ffc129;
+  margin: 0.8em;
+}
+
+#example-element {
+  height: 60px;
+  margin: 2em auto;
+  background-color: rgba(81, 81, 81, 0.6);
+}
+
+#example-element > p {
+  margin: 0;
+}
+```
 
 CSS 박스 모델의 기본값에서, 지정한 너비와 높이는 요소의 콘텐츠 박스 크기에만 적용됩니다. 요소에 테두리나 안쪽 여백이 있으면 너비와 높이에 더해서 화면에 그립니다. 따라서 크기를 설정할 때, 원하는 크기를 얻으려면 테두리나 안쪽 여백을 고려해야 합니다.
 
@@ -29,12 +73,13 @@ CSS 박스 모델의 기본값에서, 지정한 너비와 높이는 요소의 �
 
 - `content-box`
   - : CSS 표준이 정의한 초기 기본값. {{Cssxref("width")}}와 {{Cssxref("height")}} 속성이 콘텐츠 영역만 포함하고 안팎 여백과 테두리는 포함하지 않습니다. 즉 `.box {width: 350px; border: 10px solid black;}`을 적용한 요소의 너비는 `370px`입니다.
-  
+
 요소의 크기는 너비 = 콘텐츠 너비, 높이 = 콘텐츠 높이로 계산하고 테두리와 안쪽 여백은 식에 넣지 않습니다.
 
 - `border-box`
+
   - : {{Cssxref("width")}} 와 {{Cssxref("height")}} 속성이 안쪽 여백과 테두리는 포함하고, 바깥 여백은 포함하지 않습니다. 안쪽 여백과 테두리가 요소 상자 안에 위치함을 유의하세요. 즉 `.box {width: 350px; border: 10px solid black;}`을 적용한 요소의 너비는 `350px`입니다. 콘텐츠 영역의 크기는 음수일 수 없으므로 `border-box`를 사용해 요소를 사라지게 할 수는 없습니다.
-  
+
   요소의 크기는 너비 = 테두리 + 안쪽 여백 + 콘텐츠 너비, 높이 = 테두리 + 안쪽 여백 + 콘텐츠 높이로 계산합니다.
 
 ### 형식 구문
@@ -49,7 +94,7 @@ CSS 박스 모델의 기본값에서, 지정한 너비와 높이는 요소의 �
 
 ```html
 <div class="content-box">Content box</div>
-<br>
+<br />
 <div class="border-box">Border box</div>
 ```
 
@@ -97,4 +142,4 @@ div {
 
 ## 같이 보기
 
-- [CSS 기본 박스 모델](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [CSS 기본 박스 모델](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

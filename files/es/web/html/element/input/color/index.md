@@ -1,17 +1,6 @@
 ---
 title: <input type="color">
 slug: Web/HTML/Element/input/color
-tags:
-  - Elemento
-  - Entrada
-  - Formulários HTML
-  - HTML
-  - Referencia
-  - Selector de colores
-  - color
-  - formulários
-translation_of: Web/HTML/Element/input/color
-original_slug: Web/HTML/Elemento/input/color
 ---
 
 {{HTMLSidebar}}
@@ -20,26 +9,48 @@ Los elementos {{HTMLElement("input")}} del tipo «**`color`**» proporciona un e
 
 La presentación del elemento puede variar considerablamente entre navegadores y plataformas: podría ser un campo de entrada sencillo que valida automáticamente que la entrada esté en el formato adecuado, o podría lanzar un selector de colores estándar de la plataforma, o incluso podría abrir una ventana de colores personalizada.
 
-## Ejemplo
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;color&quot;&gt;", "tabbed-standard")}}
 
-```html
-<input type="color">
+```html interactive-example
+<p>Choose your monster's colors:</p>
+
+<div>
+  <input type="color" id="head" name="head" value="#e66465" />
+  <label for="head">Head</label>
+</div>
+
+<div>
+  <input type="color" id="body" name="body" value="#f6b73c" />
+  <label for="body">Body</label>
+</div>
 ```
 
-{{EmbedLiveSample("summary_example1", 700, 30)}}
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 | **[Value](#value)**             | Una {{domxref("DOMString")}} de siete caracteres que especifica un {{cssxref("&lt;color&gt;")}} en notación hexadecimal en minúsculas |
-| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Sucesos**                     | [`change`](/es/docs/Web/Reference/Events/change) e [`input`](/es/docs/Web/Reference/Events/input)                                                                                                   |
-| **Atributos comunes admitidos** | {{htmlattrxref("autocomplete", "input")}} y {{htmlattrxref("list", "input")}}                                               |
-| **Atributos IDL**               | `list` y `value`                                                                                                                                      |
-| **Métodos**                     | {{domxref("HTMLInputElement.select", "select()")}}                                                                                  |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| **Sucesos**                     | [`change`](/es/docs/Web/API/HTMLElement/change_event) e [`input`](/es/docs/Web/API/Element/input_event)                               |
+| **Atributos comunes admitidos** | [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete) y [`list`](/es/docs/Web/HTML/Element/input#list)                       |
+| **Atributos IDL**               | `list` y `value`                                                                                                                      |
+| **Métodos**                     | {{domxref("HTMLInputElement.select", "select()")}}                                                                                    |
 
 ## Valor
 
-El {{htmlattrxref("value", "input")}} de un elemento {{HTMLElement("input")}} del tipo «`color`» es siempre una {{domxref("DOMString")}} que contiene una cadena de siete caracteres en la que se especifica un color RGB de manera hexadecimal. Aunque es posible introducir el color tanto en mayúsculas como en minúsculas, este se almacena en minúsculas. El valor nunca presenta otra forma y nunca está vacío.
+El [`value`](/es/docs/Web/HTML/Element/input#value) de un elemento {{HTMLElement("input")}} del tipo «`color`» es siempre una {{domxref("DOMString")}} que contiene una cadena de siete caracteres en la que se especifica un color RGB de manera hexadecimal. Aunque es posible introducir el color tanto en mayúsculas como en minúsculas, este se almacena en minúsculas. El valor nunca presenta otra forma y nunca está vacío.
 
-> **Nota:** definir el valor a cualquier cosa que no sea un color válido, totalmente opaco y contenido dentro del espacio RGB _en notación hexadecimal_ causará que el valor se establezca a «`#000000`». En particular, no es posible utilizar los nombres de colores estandarizados de CSS ni cualquier sintaxis de función CSS para definir el valor. Esto tiene sentido si se tiene en cuenta que HTML y CSS son lenguajes y especificaciones independientes. Por otra parte, no se admiten los colores que incluyan un canal alfa; definir un color en la notación hexadecimal de nueve caracteres (p. ej., `#009900aa`) también provocará que el valor se establezca a «`#000000`».
+> [!NOTE]
+> Definir el valor a cualquier cosa que no sea un color válido, totalmente opaco y contenido dentro del espacio RGB _en notación hexadecimal_ causará que el valor se establezca a «`#000000`». En particular, no es posible utilizar los nombres de colores estandarizados de CSS ni cualquier sintaxis de función CSS para definir el valor. Esto tiene sentido si se tiene en cuenta que HTML y CSS son lenguajes y especificaciones independientes. Por otra parte, no se admiten los colores que incluyan un canal alfa; definir un color en la notación hexadecimal de nueve caracteres (p. ej., `#009900aa`) también provocará que el valor se establezca a «`#000000`».
 
 ## Uso de las entradas de color
 
@@ -50,16 +61,16 @@ Las entradas del tipo «`color`» son sencillas debido al número limitado de at
 Puede actualizar el ejemplo simple anterior para definir un valor predeterminado, de manera que el botón muestrario de colores tenga precargado ese color y el selector de colores (si lo hay) se abra con ese color preseleccionado también:
 
 ```html
-<input type="color" value="#ff0000">
+<input type="color" value="#ff0000" />
 ```
 
-{{EmbedLiveSample("Providing_a_default_color", 700, 30)}}
+{{EmbedLiveSample("Proporcionar un color predeterminado", 700, 30)}}
 
 Si no especifica un valor, se utilizará «`#000000`», negro, de manera predeterminada. El valor debe especificarse en la notación hexadecimal de siete caracteres; esto es, el carácter «#» seguido de dos dígitos para representar el rojo, el verde y el azul: «`#rrggbb`». Si utiliza colores especificados en cualquier otro formato (como los nombres de colores CSS o las funciones cromáticas de CSS como `rgb()` o `rgba()`), deberá convertirlos en valores hexadecimales antes de definir `value`.
 
 ### Llevar un seguimiento de los cambios de color
 
-Como sucede con otros tipos de {{HTMLElement("input")}}, existen dos sucesos que pueden emplearse para detectar cambios en el valor de color: [`input`](/es/docs/Web/Reference/Events/input) y [`change`](/es/docs/Web/Reference/Events/change). El suceso `input` se desencadena en el elemento `<input>` siempre que cambia el color. El suceso `change` se desencadena cuando el usuario cierra el selector de colores. En ambos casos, puede determinar el valor nuevo del elemento al examinar su {{domxref("HTMLInputElement.value", "value")}}.
+Como sucede con otros tipos de {{HTMLElement("input")}}, existen dos sucesos que pueden emplearse para detectar cambios en el valor de color: [`input`](/es/docs/Web/API/Element/input_event) y [`change`](/es/docs/Web/API/HTMLElement/change_event). El suceso `input` se desencadena en el elemento `<input>` siempre que cambia el color. El suceso `change` se desencadena cuando el usuario cierra el selector de colores. En ambos casos, puede determinar el valor nuevo del elemento al examinar su {{domxref("HTMLInputElement.value", "value")}}.
 
 Este ejemplo vigila los cambios del valor de color en el tiempo:
 
@@ -68,7 +79,7 @@ colorPicker.addEventListener("input", actualizarPrimero, false);
 colorPicker.addEventListener("change", watchColorPicker, false);
 
 function watchColorPicker(event) {
-  document.querySelectorAll("p").forEach(function(p) {
+  document.querySelectorAll("p").forEach(function (p) {
     p.style.color = event.target.value;
   });
 }
@@ -82,48 +93,40 @@ Si la implementación del elemento {{HTMLElement("input")}} del tipo «`color`»
 muestrario.select();
 ```
 
-### Variaciones de apariencia
-
-Como se mencionó anteriormente, cuando un navegador no admite una interfaz de selección de colores, su implementación de las entradas de color viene en forma de un cuadro de texto que valida su contenido automáticamente para garantizar que el valor esté en el formato adecuado. Por ejemplo, en Safari 10.1 verá algo como esto:
-
-![Screenshot of the example taken in Safari.](https://mdn.mozillademos.org/files/14899/input-color-safari.png)
-
-El mismo contenido luce así en Firefox 55:
-
-![Screenshot of the example taken in Firefox 55 for macOS](https://mdn.mozillademos.org/files/14901/input-color-firefox.png)
-
-En este caso, al pulsar en el muestrario de colores aparecerá el selector de la plataforma desde el cual elegir un color (en el ejemplo, el selector de macOS):
-
-![Screenshot of the element with the color picker open in Firefox Mac.](https://mdn.mozillademos.org/files/14903/input-with-picker-firefox-mac.png)
-
 ## Validación
 
 El valor de una entrada de colores se considera no válido si el {{Glossary("user agent")}} no es capaz de convertir la entrada del usuario en la notación hexadecimal de siete caracteres minúsculos. Cuando se da esta situación, se aplica la pseudoclase {{cssxref(":invalid")}} al elemento.
 
 ## Ejemplo
 
-Creemos un ejemplo que realice algo más con la entrada de color a través de la monitorización de los sucesos [`change`](/es/docs/Web/Reference/Events/change) y [`input`](/es/docs/Web/Reference/Events/input) para tomar el color nuevo y aplicarlo a cada uno de los elementos {{HTMLElement("p")}} del documento.
+Creemos un ejemplo que realice algo más con la entrada de color a través de la monitorización de los sucesos [`change`](/es/docs/Web/API/HTMLElement/change_event) y [`input`](/es/docs/Web/API/Element/input_event) para tomar el color nuevo y aplicarlo a cada uno de los elementos {{HTMLElement("p")}} del documento.
 
 ### HTML
 
 El código HTML es bastante sencillo: un par de párrafos de material descriptivo con un {{HTMLElement("input")}} del tipo «`color`» con el identificador «`muestrario`», el cual utilizaremos para modificar el color del texto de los párrafos.
 
 ```html
-<p>Este ejemplo demuestra la utilización del control <code>&lt;input type="color"&gt;</code>.</p>
+<p>
+  Este ejemplo demuestra la utilización del control
+  <code>&lt;input type="color"&gt;</code>.
+</p>
 
 <label for="muestrario">Color:</label>
-<input type="color" value="#ff0000" id="muestrario">
+<input type="color" value="#ff0000" id="muestrario" />
 
-<p>Observe cómo el color de los párrafos cambia cuando manipula el selector de colores.
-   A medida que realiza cambios en el selector, el color del primer párrafo cambia,
-   a manera de previsualización (esto usa el suceso <code>input</code>).
-   Cuando cierra el selector, se desencadena el suceso <code>change</code>
-   y podemos detectarlo para cambiar todos los párrafos al color elegido.</p>
+<p>
+  Observe cómo el color de los párrafos cambia cuando manipula el selector de
+  colores. A medida que realiza cambios en el selector, el color del primer
+  párrafo cambia, a manera de previsualización (esto usa el suceso
+  <code>input</code>). Cuando cierra el selector, se desencadena el suceso
+  <code>change</code> y podemos detectarlo para cambiar todos los párrafos al
+  color elegido.
+</p>
 ```
 
 ### JavaScript
 
-Primero hay que realizar un poco de configuración. Aquí estableceremos algunas variables, una de las cuales contendrá el color que definiremos en el botón muestrario durante la primera carga y, a continuación, configurará un manejador para [`load`](/es/docs/Web/Reference/Events/load) para realizar el trabajo de inicialización cuando termine de cargarse la página.
+Primero hay que realizar un poco de configuración. Aquí estableceremos algunas variables, una de las cuales contendrá el color que definiremos en el botón muestrario durante la primera carga y, a continuación, configurará un manejador para [`load`](/es/docs/Web/API/Window/load_event) para realizar el trabajo de inicialización cuando termine de cargarse la página.
 
 ```js
 var muestrario;
@@ -146,7 +149,7 @@ function startup() {
 }
 ```
 
-Esto obtiene una referencia al elemento de color `<input>` en una variable denominada `muestrario` y, acto seguido, define el valor de la entrada de color al valor de `colorPredeterminado`. Después, el suceso [`input`](/es/docs/Web/Reference/Events/input) de la entrada de color se configura para llamar a nuestra función `actualizarPrimero()` y el suceso [`change`](/es/docs/Web/Reference/Events/change) se configura para llamar `actualizarTodo()`. Ambos pueden apreciarse a continuación.
+Esto obtiene una referencia al elemento de color `<input>` en una variable denominada `muestrario` y, acto seguido, define el valor de la entrada de color al valor de `colorPredeterminado`. Después, el suceso [`input`](/es/docs/Web/API/Element/input_event) de la entrada de color se configura para llamar a nuestra función `actualizarPrimero()` y el suceso [`change`](/es/docs/Web/API/HTMLElement/change_event) se configura para llamar `actualizarTodo()`. Ambos pueden apreciarse a continuación.
 
 Por último, llamamos {{domxref("HTMLInputElement.select", "select()")}} para seleccionar el contenido de texto de la entrada de color input en caso de que el control se haya implementado como un cuadro de texto (lo cual no producirá ningún efecto si se ha brindado una interfaz de selección de colores en su lugar).
 
@@ -168,7 +171,7 @@ Cuando se cierre el selector de colores, señalando que el valor dejará de camb
 
 ```js
 function actualizarTodo(event) {
-  document.querySelectorAll("p").forEach(function(p) {
+  document.querySelectorAll("p").forEach(function (p) {
     p.style.color = event.target.value;
   });
 }
@@ -180,7 +183,7 @@ Esto define el color de cada uno de los bloques {{HTMLElement("p")}} de manera q
 
 El resultado final es el siguiente:
 
-{{EmbedLiveSample("Example", 700, 200)}}
+{{EmbedLiveSample("Ejemplo", 700, 200)}}
 
 ## Especificaciones
 

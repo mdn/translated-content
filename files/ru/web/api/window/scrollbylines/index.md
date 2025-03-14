@@ -1,10 +1,9 @@
 ---
 title: Window.scrollByLines()
 slug: Web/API/Window/scrollByLines
-translation_of: Web/API/Window/scrollByLines
 ---
 
-{{ ApiRef() }}
+{{APIRef}} {{Non-standard_header}}
 
 {{Non-standard_header}}
 
@@ -39,6 +38,6 @@ window.scrollByLines(lines)
 
 Не является частью спецификации
 
-## See also
+## Смотрите также
 
 - {{domxref("window.scrollBy")}}, {{domxref("window.scrollByPages")}}

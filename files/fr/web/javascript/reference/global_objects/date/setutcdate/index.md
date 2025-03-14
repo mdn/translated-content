@@ -1,26 +1,30 @@
 ---
 title: Date.prototype.setUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setUTCDate
 ---
 
 {{JSRef}}
 
 La méthode **`setUTCDate()`** définit le jour du mois pour la date, selon UTC.
 
-{{EmbedInteractiveExample("pages/js/date-setutcdate.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCDate()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30 GMT-3:00");
+
+console.log(event.getUTCDate());
+// Expected output: 20
+
+event.setUTCDate(19);
+
+console.log(event.getUTCDate());
+// Expected output: 19
+```
 
 ## Syntaxe
 
 ```js
-dateObj.setUTCDate(valeurJour)
+dateObj.setUTCDate(valeurJour);
 ```
 
 ### Paramètres

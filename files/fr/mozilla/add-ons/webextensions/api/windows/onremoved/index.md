@@ -1,29 +1,18 @@
 ---
 title: windows.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/windows/onRemoved
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Référence(2)
-  - WebExtensions
-  - Windows
-  - onRemoved
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/onRemoved
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancer quand une fenêtre est fermée.
 
 ## Syntaxe
 
 ```js
-browser.windows.onRemoved.addListener(listener)
-browser.windows.onRemoved.removeListener(listener)
-browser.windows.onRemoved.hasListener(listener)
+browser.windows.onRemoved.addListener(listener);
+browser.windows.onRemoved.removeListener(listener);
+browser.windows.onRemoved.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -46,9 +35,9 @@ Les événements ont trois fonctions :
     - `windowId`
       - : `integer`. ID de la fenêtre fermée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.onRemoved")}}
+{{Compat}}
 
 ## Exemples
 
@@ -62,9 +51,9 @@ browser.windows.onRemoved.addListener((windowId) => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/extensions/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
 >
 > Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 

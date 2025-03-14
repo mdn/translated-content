@@ -1,13 +1,6 @@
 ---
 title: Math.tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
-tags:
-  - ECMAScript 2015
-  - 레퍼런스
-  - 메서드
-  - 수학
-  - 자바스크립트
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/tanh
 ---
 
 {{JSRef}}
@@ -16,12 +9,26 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/tanh
 
 <math display="block"><semantics><mrow><mo lspace="0em" rspace="0em">tanh</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mo lspace="0em" rspace="0em">sinh</mo><mi>x</mi></mrow><mrow><mo lspace="0em" rspace="0em">cosh</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>-</mo><mn>1</mn></mrow><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="TeX">\tanh x = \frac{\sinh x}{\cosh x} = \frac {e^x - e^{-x}} {e^x + e^{-x}} = \frac{e^{2x} - 1}{e^{2x}+1}</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-tanh.html")}}
+{{InteractiveExample("JavaScript Demo: Math.tanh()")}}
+
+```js interactive-example
+console.log(Math.tanh(-1));
+// Expected output: -0.7615941559557649
+
+console.log(Math.tanh(0));
+// Expected output: 0
+
+console.log(Math.tanh(Infinity));
+// Expected output: 1
+
+console.log(Math.tanh(1));
+// Expected output: 0.7615941559557649
+```
 
 ## Syntax
 
 ```js
-    Math.tanh(x)
+Math.tanh(x);
 ```
 
 ### 파라미터
@@ -42,9 +49,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/tanh
 ### Using `Math.tanh()`
 
 ```js
-Math.tanh(0);        // 0
+Math.tanh(0); // 0
 Math.tanh(Infinity); // 1
-Math.tanh(1);        // 0.7615941559557649
+Math.tanh(1); // 0.7615941559557649
 ```
 
 ## Polyfill
@@ -52,13 +59,16 @@ Math.tanh(1);        // 0.7615941559557649
 This can be emulated with the help of the {{jsxref("Math.exp()")}} function:
 
 ```js
-Math.tanh = Math.tanh || function(x){
-    var a = Math.exp(+x), b = Math.exp(-x);
+Math.tanh =
+  Math.tanh ||
+  function (x) {
+    var a = Math.exp(+x),
+      b = Math.exp(-x);
     return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
-}
+  };
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

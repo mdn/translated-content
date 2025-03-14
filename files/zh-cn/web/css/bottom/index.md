@@ -67,7 +67,9 @@ bottom: unset;
 ### HTML
 
 ```html
-<p>This<br>is<br>some<br>tall,<br>tall,<br>tall,<br>tall,<br>tall<br>content.</p>
+<p>
+  This<br />is<br />some<br />tall,<br />tall,<br />tall,<br />tall,<br />tall<br />content.
+</p>
 <div class="fixed"><p>Fixed</p></div>
 <div class="absolute"><p>Absolute</p></div>
 ```
@@ -83,7 +85,7 @@ p {
 div {
   width: 48%;
   text-align: center;
-  background: rgba(55,55,55,.2);
+  background: rgba(55, 55, 55, 0.2);
   border: 1px solid blue;
 }
 

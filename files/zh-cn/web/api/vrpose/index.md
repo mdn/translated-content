@@ -30,23 +30,20 @@ This interface is accessible through the {{domxref("VRDisplay.getPose()")}} and 
 - {{domxref("VRPose.angularAcceleration")}} {{readonlyInline}}
   - : 返回当前时间戳 {{domxref("VRPose.timestamp")}} 时 {{domxref("VRDisplay")}} 的角加速度，单位为弧度/平方秒。
 
-## Examples
+## 示例
 
-```
-TBD.
-```
+参见 [`VRDisplay.getFrameData()`](/zh-CN/docs/Web/API/VRDisplay/getFrameData#示例) 以获取示例代码。
 
-## Specifications
+## 规范
 
 该 API 在旧的 [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/)（已被 [WebXR Device API](https://immersive-web.github.io/webxr/) 取代）中定义。它不再有望成为标准。
 
 在所有浏览器都实现新的 [WebXR API](/zh-CN/docs/Web/API/WebXR_Device_API/Fundamentals) 之前，建议使用框架（如：[A-Frame](https://aframe.io/)、[Babylon.js](https://www.babylonjs.com/) 或 [Three.js](https://threejs.org/)）或 [polyfill](https://github.com/immersive-web/webxr-polyfill) 来开发适用于所有浏览器的 WebXR 应用程序。[\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [WebVR API homepage](/zh-CN/docs/Web/API/WebVR_API).
-- [MozVr.com](http://mozvr.com/) — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/zh-CN/docs/Web/API/WebVR_API)

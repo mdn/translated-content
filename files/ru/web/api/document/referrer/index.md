@@ -1,16 +1,11 @@
 ---
 title: Document.referrer
 slug: Web/API/Document/referrer
-tags:
-  - API
-  - Document
-  - Property
-translation_of: Web/API/Document/referrer
 ---
 
 {{APIRef("DOM")}}
 
-Возвращает [URI](http://www.w3.org/Addressing/#background) страницы, с которой был совершён переход на текущую.
+Возвращает [URI](https://www.w3.org/Addressing/#background) страницы, с которой был совершён переход на текущую.
 
 ## Синтаксис
 
@@ -24,10 +19,10 @@ var referrer = document.referrer;
 
 Внутри элемента {{HTMLElement("iframe")}}, `Document.referrer` первоначально будет установлен в тоже значение, что и {{domxref("HTMLHyperlinkElementUtils/href", "href")}} объекта {{domxref("Window/location", "Window.location")}} родительского окна.
 
-## Спецификация
+## Спецификации
 
-- [DOM Level 2: referrer](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95229140)
+- [DOM Level 2: referrer](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95229140)
 
-## Браузерная поддержка
+## Совместимость с браузерами
 
 {{Compat}}

@@ -3,7 +3,7 @@ title: class
 slug: Web/SVG/Attribute/class
 ---
 
-« [Página inicial da referência de atributos do SVG](/pt-BR/SVG/Attribute)
+« [Página inicial da referência de atributos do SVG](/pt-BR/docs/SVG/Attribute)
 
 Atribui um nome de classe ou um conjunto de nomes de classe a um elemento. Você pode atribuir o mesmo nome ou nomes de classe para qualquer número de elementos. Se você especificar vários nomes de classe, estes devem ser separados por caracteres de espaço em branco.
 
@@ -16,42 +16,45 @@ A classe pode ser utilizada pra estilizar o conteúdo do SVG com CSS.
 
 ## Utilização
 
-| Categorias          | Nenhuma                                                                                       |
-| ------------------- | --------------------------------------------------------------------------------------------- |
-| Valor               | [\<list-of-class-names>](/pt-BR/SVG/Content_type#List-of-Ts)    |
-| Animável            | Sim                                                                                           |
+| Categorias          | Nenhuma                                                                                        |
+| ------------------- | ---------------------------------------------------------------------------------------------- |
+| Valor               | [\<list-of-class-names>](/pt-BR/docs/SVG/Content_type#list-of-ts)                              |
+| Animável            | Sim                                                                                            |
 | Documento normativo | [SVG 1.1 (2ª Edição): O atributo class](https://www.w3.org/TR/SVG/styling.html#ClassAttribute) |
 
-{{ page("/pt-BR/SVG/Content_type","List-of-Ts") }}
+<!-- TODO: page macro not supported:  page("/pt-BR/SVG/Content_type","List-of-Ts")  -->
 
 ## Exemplo
 
 ```html
 <html>
-    <body>
-  <svg width="120" height="220"
-     viewPort="0 0 120 120" version="1.1"
-     xmlns="https://www.w3.org/2000/svg">
+  <body>
+    <svg
+      width="120"
+      height="220"
+      viewPort="0 0 120 120"
+      version="1.1"
+      xmlns="https://www.w3.org/2000/svg">
+      <style type="text/css">
+          <![CDATA[
 
-    <style type="text/css" >
-      <![CDATA[
-
-        rect.rectClass {
-           stroke: #000066;
-           fill:   #00cc00;
+            rect.rectClass {
+               stroke: #000066;
+               fill:   #00cc00;
+            }
+           circle.circleClass {
+           stroke: #006600;
+           fill:   #cc0000;
         }
-       circle.circleClass {
-       stroke: #006600;
-       fill:   #cc0000;
-    }
 
-      ]]>
-    </style>
+          ]]>
+      </style>
 
-      <rect class="rectClass" x="10" y="10" width="100" height="100"/>
-     <circle  class="circleClass"   cx="40" cy="50" r="26"/>
-</svg>
-</body></html>
+      <rect class="rectClass" x="10" y="10" width="100" height="100" />
+      <circle class="circleClass" cx="40" cy="50" r="26" />
+    </svg>
+  </body>
+</html>
 ```
 
 ## Elementos
@@ -112,4 +115,4 @@ Os seguintes elementos podem utilizar o atributo `class`:
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.attributes.style.class")}}
+{{Compat}}

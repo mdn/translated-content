@@ -1,14 +1,8 @@
 ---
 title: function* expression
 slug: Web/JavaScript/Reference/Operators/function*
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Итератор
-  - Оператор
-  - Функция
-translation_of: Web/JavaScript/Reference/Operators/function*
 ---
+
 {{jsSidebar("Operators")}}
 
 Ключевое слово **`function*`** может использоваться для объявления функции-генератора внутри выражения.
@@ -39,8 +33,8 @@ function* [имя]([параметр1[, параметр2[, ..., парамет�
 В следующем примере определяется безымянная функция-генератор и присваивается переменной `x`. Функция возвращает квадрат своего аргумента:
 
 ```js
-var x = function*(y) {
-   yield y * y;
+var x = function* (y) {
+  yield y * y;
 };
 ```
 
@@ -56,7 +50,7 @@ var x = function*(y) {
 
 - {{jsxref("Statements/function*", "function* statement")}}
 - Объект {{jsxref("GeneratorFunction")}}
-- [Протоколы перебора: Итератор](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#Протокол_Итератор)
+- [Протоколы перебора: Итератор](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#протокол_итератор)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
 - Объект {{jsxref("Function")}}

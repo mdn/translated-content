@@ -1,8 +1,9 @@
 ---
 title: Parse (análisis sintáctico)
 slug: Glossary/Parse
-translation_of: Glossary/Parse
 ---
+
+{{GlossarySidebar}}
 
 "Parsing" significa analizar y convertir un programa en un formato interno que un entorno de ejecución pueda realmente ejecutar, por ejemplo el motor {{glossary("JavaScript")}} dentro de los navegadores.
 

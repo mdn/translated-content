@@ -1,17 +1,19 @@
 ---
-title: 'Reason: CORS preflight channel did not succeed'
+title: "Reason: CORS preflight channel did not succeed"
 slug: Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
 ## 理由
 
-```
+```plain
 Reason: CORS preflight channel did not succeed
 ```
 
-## 何に失敗したか
+## エラーの原因
 
 {{Glossary("CORS")}} の要求がプリフライトを必要としていますが、プリフライトが実行できませんでした。プロフライトが失敗したと理由として考えられることは複数あります。
 

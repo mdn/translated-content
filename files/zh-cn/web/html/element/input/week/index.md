@@ -1,15 +1,41 @@
 ---
 title: <input type="week">
-slug: Web/HTML/Element/Input/week
+slug: Web/HTML/Element/input/week
 ---
 
 {{HTMLSidebar("Input_types")}}
 
 {{HTMLElement("input")}} 类型为 **`week`** 的元素会创建输入字段，以便轻松输入年份以及该年（即第 1 周到第 [52 或 53](https://zh.wikipedia.org/zh-cn/ISO_8601#日历星期表示法) 周）的 [ISO 8601 星期数](https://zh.wikipedia.org/zh-cn/ISO_8601#日历星期表示法)
 
-{{EmbedInteractiveExample("pages/tabbed/input-week.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;week&quot;&gt;", "tabbed-shorter")}}
 
-控件的用户界面因浏览器而异；跨浏览器的支持目前受到限制，目前只有 Chrome/Opera 和 Microsoft Edge 支持。在不支持的浏览器中，该控件会优雅降级至与 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/Input/text) 相同的功能。
+```html interactive-example
+<label for="camp-week">Choose a week in May or June:</label>
+
+<input
+  type="week"
+  name="week"
+  id="camp-week"
+  min="2018-W18"
+  max="2018-W26"
+  required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
+
+控件的用户界面因浏览器而异；跨浏览器的支持目前受到限制，目前只有 Chrome/Opera 和 Microsoft Edge 支持。在不支持的浏览器中，该控件会优雅降级至与 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text) 相同的功能。
 
 在 Chrome/Opera 中，`week` 控件提供了用于填写星期和年的插槽，弹出式日历界面（可以更直观地选择它们）以及“X”按钮以清除控件的值。
 
@@ -27,11 +53,11 @@ Edge 的 `week` 控制更加精细，使用滚动的滚轮打开星期和年的�
   </tr>
   <tr>
    <td><strong>事件</strong></td>
-   <td>{{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("HTMLElement/input_event", "input")}}</td>
+   <td>{{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("Element/input_event", "input")}}</td>
   </tr>
   <tr>
    <td><strong>支持的常用属性</strong></td>
-   <td>{{htmlattrxref("autocomplete", "input")}}、{{htmlattrxref("list", "input")}}、{{htmlattrxref("readonly", "input")}} 和 {{htmlattrxref("step", "input")}}</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/input#step"><code>step</code></a></td>
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>
@@ -50,13 +76,13 @@ Edge 的 `week` 控制更加精细，使用滚动的滚轮打开星期和年的�
 
 ## 值
 
-一个字符串代表所输入的星期/年的值。{{SectionOnPage("/zh-CN/docs/Web/HTML/Date_and_time_formats", "合法的星期字符串")}}中描述了此输入类型使用的日期和时间值的格式。
+一个字符串代表所输入的星期/年的值。[星期字符串](/zh-CN/docs/Web/HTML/Date_and_time_formats#星期字符串)中描述了此输入类型使用的日期和时间值的格式。
 
-你可以通过在 {{htmlattrxref("value", "input")}} 属性中包含一个值来为输入设置默认值，如下所示：
+你可以通过在 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性中包含一个值来为输入设置默认值，如下所示：
 
 ```html
 <label for="week">What week would you like to start?</label>
-<input id="week" type="week" name="week" value="2017-W01">
+<input id="week" type="week" name="week" value="2017-W01" />
 ```
 
 {{EmbedLiveSample('值', 600, 60)}}
@@ -67,7 +93,7 @@ Edge 的 `week` 控制更加精细，使用滚动的滚轮打开星期和年的�
 
 ```js
 const weekControl = document.querySelector('input[type="week"]');
-weekControl.value = '2017-W45';
+weekControl.value = "2017-W45";
 ```
 
 ## 其他属性
@@ -76,13 +102,13 @@ weekControl.value = '2017-W45';
 
 ### max
 
-接受以上[值](#值)部分中讨论的字符串格式的按时间最新年份和星期数。如果输入到该元素中的 {{htmlattrxref("value", "input")}} 超过此值，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `max` 属性的值不是有效的星期字符串，则该元素没有最大值。
+接受以上[值](#值)部分中讨论的字符串格式的按时间最新年份和星期数。如果输入到该元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 超过此值，则元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `max` 属性的值不是有效的星期字符串，则该元素没有最大值。
 
 此值必须大于或等于 `min` 属性指定的年和星期。
 
 ### min
 
-最早接受的年和星期数。如果输入到该元素中的 {{htmlattrxref("value", "input")}} 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `min` 属性的值不是有效的星期字符串，则输入没有最小值。
+最早接受的年和星期数。如果输入到该元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `min` 属性的值不是有效的星期字符串，则输入没有最小值。
 
 该值必须小于或等于 `max` 属性的值。
 
@@ -90,15 +116,17 @@ weekControl.value = '2017-W45';
 
 布尔属性值，如果存在，说明此字段不能由用户编辑。然而，其 `value` 值仍然可以通过 JavaScript 代码直接设置 {{domxref("HTMLInputElement")}} 的 `value` 属性来改变。
 
-> **备注：** 由于只读字段不可以拥有值，`required` 不会对指定了 `readonly` 属性的字段起作用。
+> [!NOTE]
+> 由于只读字段不可以拥有值，`required` 不会对指定了 `readonly` 属性的字段起作用。
 
 ### step
 
-`step` 属性指定了值必须满足的粒度，或者是下文描述的特殊值 `any`。值必须满足基础的步进值，才有效。如果指定了 [`min`](#min) 属性，则由 `min` 属性决定，否则，使用 {{htmlattrxref("value", "input")}} 属性的值，如果上述两个值都不存在，则提供适当的默认值。
+`step` 属性指定了值必须满足的粒度，或者是下文描述的特殊值 `any`。值必须满足基础的步进值，才有效。如果指定了 [`min`](#min) 属性，则由 `min` 属性决定，否则，使用 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性的值，如果上述两个值都不存在，则提供适当的默认值。
 
 字符串值 `any` 意味着不使用步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#max) 之外）。
 
-> **备注：** 当用户输入的数据不符合步进配置时，{{Glossary("user agent", "用户代理")}}可能会四舍五入到最近的有效值，当有两个同样接近的选项时，更倾向于正方向的数字。
+> [!NOTE]
+> 当用户输入的数据不符合步进配置时，{{Glossary("user agent", "用户代理")}}可能会四舍五入到最近的有效值，当有两个同样接近的选项时，更倾向于正方向的数字。
 
 对于 `week` 输入，`step` 的值以周为单位，比例因子为 604,800,000（因为基础数值以毫秒为单位）。`step` 的默认值为 1，表示 1 周。默认的步进基数是 -259,200,000，这是 1970 年第一周的开始（`"1970-W01"`）。
 
@@ -125,11 +153,11 @@ _目前，尚不清楚当与 `week` 输入一起使用时，`"any"` 的值对 `s
 
 ### 控制输入框大小
 
-`<input type="week">` 不支持诸如 {{htmlattrxref("size", "input")}} 的表单大小属性。您必须依靠 [CSS](/zh-CN/docs/Web/CSS) 来确定大小。
+`<input type="week">` 不支持诸如 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 的表单大小属性。你必须依靠 [CSS](/zh-CN/docs/Web/CSS) 来确定大小。
 
 ### 使用 step 属性
 
-你应该能够使用 {{htmlattrxref("step", "input")}} 属性来更改每次递增或递减的跳转周数，但是这似乎对支持浏览器没有任何影响。
+你应该能够使用 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) 属性来更改每次递增或递减的跳转周数，但是这似乎对支持浏览器没有任何影响。
 
 ## 验证方式
 
@@ -137,7 +165,7 @@ _目前，尚不清楚当与 `week` 输入一起使用时，`"any"` 的值对 `s
 
 ### 设置最大和最小星期
 
-您可以使用 {{htmlattrxref("min", "input")}} 和 {{htmlattrxref("max", "input")}} 属性来限制用户可以选择的有效周数。在以下示例中，我们设置了可供选择的最小值 `Week 01, 2017` 和最大值 `Week 52, 2017`：
+你可以使用 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性来限制用户可以选择的有效周数。在以下示例中，我们设置了可供选择的最小值 `Week 01, 2017` 和最大值 `Week 52, 2017`：
 
 ```html
 <form>
@@ -182,7 +210,7 @@ input:valid + span::after {
 
 ### 使星期值成为必需值
 
-另外，您可以使用 {{htmlattrxref("required", "input")}} 属性来强制填写星期。因此，如果您尝试提交空白的星期字段，则支持的浏览器将显示错误。
+另外，你可以使用 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性来强制填写星期。因此，如果你尝试提交空白的星期字段，则支持的浏览器将显示错误。
 
 让我们看一个例子；在这里，我们设置了最小和最大星期，并令该字段必填：
 
@@ -205,7 +233,7 @@ input:valid + span::after {
 </form>
 ```
 
-如果您尝试提交不带任何值的表单，浏览器将显示错误。现在尝试使用示例：
+如果你尝试提交不带任何值的表单，浏览器将显示错误。现在尝试使用示例：
 
 {{EmbedLiveSample('使星期值成为必需值', 600, 120)}}
 
@@ -213,7 +241,8 @@ input:valid + span::after {
 
 ![The week form control has two dashes where the week number should be. A popup with a yellow warning symbol and a 'Please fill out this field' is emanating from the two dashes, which are highlighted in blue, the same blue as the input's focus ring.](week-validation-chrome.png)
 
-> **警告：** HTML 表单验证*不能*代替脚本来确保输入的数据采用正确的格式。对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了，甚至也可以完全绕开 HTML 并将数据直接提交到服务器。如果服务器端代码无法验证其接收到的数据，则在提交格式不正确的（或太大，类型错误……）的数据时，灾难可能会发生。
+> [!WARNING]
+> HTML 表单验证*不能*代替脚本来确保输入的数据采用正确的格式。对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了，甚至也可以完全绕开 HTML 并将数据直接提交到服务器。如果服务器端代码无法验证其接收到的数据，则在提交格式不正确的（或太大，类型错误……）的数据时，灾难可能会发生。
 
 ## 处理浏览器支持
 
@@ -307,32 +336,32 @@ input:valid + span::after {
 
 ```js
 // 获取 UI 元素
-const nativePicker = document.querySelector('.nativeWeekPicker');
-const fallbackPicker = document.querySelector('.fallbackWeekPicker');
-const fallbackLabel = document.querySelector('.fallbackLabel');
+const nativePicker = document.querySelector(".nativeWeekPicker");
+const fallbackPicker = document.querySelector(".fallbackWeekPicker");
+const fallbackLabel = document.querySelector(".fallbackLabel");
 
-const yearSelect = document.querySelector('#year');
-const weekSelect = document.querySelector('#fallbackWeek');
+const yearSelect = document.querySelector("#year");
+const weekSelect = document.querySelector("#fallbackWeek");
 
 // 最初，隐藏回退元素
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // 测试一个新的 date 输入框是否会回退至 text 输入框
-const test = document.createElement('input');
+const test = document.createElement("input");
 
 try {
-  test.type = 'week';
+  test.type = "week";
 } catch (e) {
   console.log(e.description);
 }
 
 // 如果回退了，运行 if 代码块中的代码
-if ( test.type === 'text') {
+if (test.type === "text") {
   // 隐藏原生选择器，显示回退元素
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // 动态生成星期数
   populateWeeks();
@@ -341,14 +370,15 @@ if ( test.type === 'text') {
 function populateWeeks() {
   // 生成含有 52 个选择的星期数
   for (let i = 1; i <= 52; i++) {
-    const option = document.createElement('option');
-    option.textContent = (i < 10) ? `0${i}` : i;
+    const option = document.createElement("option");
+    option.textContent = i < 10 ? `0${i}` : i;
     weekSelect.appendChild(option);
   }
 }
 ```
 
-> **备注：** 请记住，有些年份有 53 周（请参阅[每年的周数](https://zh.wikipedia.org/wiki/ISO週日曆#每年的星期))！在开发生产应用程序时，需要考虑到这一点。
+> [!NOTE]
+> 请记住，有些年份有 53 周（请参阅[每年的周数](https://zh.wikipedia.org/wiki/ISO週日曆#每年的星期))！在开发生产应用程序时，需要考虑到这一点。
 
 ## 规范
 
@@ -362,5 +392,5 @@ function populateWeeks() {
 
 - 通用 {{HTMLElement("input")}} 元素和用于操作该元素的接口 {{domxref("HTMLInputElement")}}
 - [HTML 中使用的日期和时间格式](/zh-CN/docs/Web/HTML/Date_and_time_formats)
-- [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/Input/datetime-local)、[`<input type="date">`](/zh-CN/docs/Web/HTML/Element/Input/date)、[`<input type="time">`](/zh-CN/docs/Web/HTML/Element/Input/time) 和 [`<input type="month">`](/zh-CN/docs/Web/HTML/Element/Input/month)
-- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)、[`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date)、[`<input type="time">`](/zh-CN/docs/Web/HTML/Element/input/time) 和 [`<input type="month">`](/zh-CN/docs/Web/HTML/Element/input/month)
+- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

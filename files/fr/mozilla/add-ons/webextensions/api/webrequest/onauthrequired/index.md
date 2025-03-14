@@ -1,20 +1,9 @@
 ---
 title: webRequest.onAuthRequired
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired
-tags:
-  - API
-  - Addons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onAuthRequired
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Mise en place quand le serveur envoie un code status 401 ou 407 : c'est-à-dire lorsque le serveur demande au client de fournir des informations d'authentification telles qu'un nom d'utilisateur et un mot de passe.
 
@@ -38,9 +27,9 @@ L'auditeur peut fournir des informations d'identification de manière synchrone 
 - dans addListener, passez `"blocking"` dans le paramère `extraInfoSpec`
 - dans l'auditeur, retourner une `Promise` qui est résolue avec un objet contenant une propriété `authCredentials`, définie sur les credentials à fournir.
 
-Voir [Exemples](/fr/Add-ons/WebExtensions/API/webRequest/onAuthRequired#Examples).
+Voir [Exemples](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired#examples).
 
-Si vous utilisez le `"blockage"` vous devez avoir la [permission de l'API "webRequestBlocking"](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) dans votre manifest.json.
+Si vous utilisez le `"blockage"` vous devez avoir la [permission de l'API "webRequestBlocking"](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) dans votre manifest.json.
 
 Si votre poste fournit de mauvaises informations d'identification, l'auditeur sera rappelé. Pour cette raison, veillez à ne pas entrer dans une boucle infinie en fournissant à plusieurs reprises de mauvaises informations d'identification.
 
@@ -54,12 +43,12 @@ Si une extension a les permissions "webRequest", "webRequestBlocking", "proxy", 
 
 ```js
 browser.webRequest.onAuthRequired.addListener(
-  listener,                    // function
-  filter,                      //  object
-  extraInfoSpec                //  optional array of strings
-)
-browser.webRequest.onAuthRequired.removeListener(listener)
-browser.webRequest.onAuthRequired.hasListener(listener)
+  listener, // function
+  filter, //  object
+  extraInfoSpec, //  optional array of strings
+);
+browser.webRequest.onAuthRequired.removeListener(listener);
+browser.webRequest.onAuthRequired.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -82,7 +71,7 @@ Les événements ont trois fonctions :
     - `details`
       - : [`object`](#details). Détails sur la demande. Voir les [`détails`](#details) ci-dessous.
 
-    Retourne : {{WebExtAPIRef('webRequest.BlockingResponse')}} ou une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+    Retourne : {{WebExtAPIRef('webRequest.BlockingResponse')}} ou une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
     - Pour traiter la requête de manière synchrone, inclure`"blocking"` dans le paramètre `extraInfoSpec` et retourner un objet `BlockingResponse`, avec son `cancel` ou ses propriétés `authCredentials`.
     - Pour traiter la requête de manière asynchrone, inclure `"blocking"` dans le paramètre `extraInfoSpec` et retourner une `Promise` qui est résolue avec un objet `BlockingResponse`, avec son `cancel` ou ses propriétés `authCredentials`.
@@ -165,9 +154,9 @@ Les événements ont trois fonctions :
 - `url`
   - : `string`. Cible de la demande.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.onAuthRequired", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -180,10 +169,7 @@ function observe(requestDetails) {
   console.log("observing: " + requestDetails.requestId);
 }
 
-browser.webRequest.onAuthRequired.addListener(
-  observe,
-  {urls: [target]}
-);
+browser.webRequest.onAuthRequired.addListener(observe, { urls: [target] });
 ```
 
 Ce code annule les demandes d'authentification pour l'URL cible :
@@ -193,14 +179,12 @@ var target = "https://intranet.company.com/";
 
 function cancel(requestDetails) {
   console.log("canceling: " + requestDetails.requestId);
-  return {cancel: true};
+  return { cancel: true };
 }
 
-browser.webRequest.onAuthRequired.addListener(
-  cancel,
-  {urls: [target]},
-  ["blocking"]
-);
+browser.webRequest.onAuthRequired.addListener(cancel, { urls: [target] }, [
+  "blocking",
+]);
 ```
 
 Ce code fournit les informations d'identification de manière synchrone. Il doit garder une trace des demandes en suspens, pour s'assurer qu'il n'essaie pas à plusieurs reprises de soumettre de mauvaises références :
@@ -210,8 +194,8 @@ var target = "https://intranet.company.com/";
 
 var myCredentials = {
   username: "me@company.com",
-  password: "zDR$ERHGDFy"
-}
+  password: "zDR$ERHGDFy",
+};
 
 var pendingRequests = [];
 
@@ -230,28 +214,22 @@ function provideCredentialsSync(requestDetails) {
   // assume our credentials were bad, and give up.
   if (pendingRequests.indexOf(requestDetails.requestId) != -1) {
     console.log("bad credentials for: " + requestDetails.requestId);
-    return {cancel:true};
+    return { cancel: true };
   }
   pendingRequests.push(requestDetails.requestId);
   console.log("providing credentials for: " + requestDetails.requestId);
-  return {authCredentials: myCredentials};
+  return { authCredentials: myCredentials };
 }
 
 browser.webRequest.onAuthRequired.addListener(
-    provideCredentialsSync,
-    {urls: [target]},
-    ["blocking"]
-  );
-
-browser.webRequest.onCompleted.addListener(
-  completed,
-  {urls: [target]}
+  provideCredentialsSync,
+  { urls: [target] },
+  ["blocking"],
 );
 
-browser.webRequest.onErrorOccurred.addListener(
-  completed,
-  {urls: [target]}
-);
+browser.webRequest.onCompleted.addListener(completed, { urls: [target] });
+
+browser.webRequest.onErrorOccurred.addListener(completed, { urls: [target] });
 ```
 
 Ce code fournit les informations d'identification de manière asynchrone, en les récupérant à partir du stockage. Il doit également assurer le suivi des demandes en suspens, afin de s'assurer qu'il n'essaie pas à plusieurs reprises de soumettre de mauvaises références :
@@ -278,8 +256,7 @@ function provideCredentialsAsync(requestDetails) {
   // and give up.
   if (pendingRequests.indexOf(requestDetails.requestId) != -1) {
     console.log("bad credentials for: " + requestDetails.requestId);
-    return {cancel: true};
-
+    return { cancel: true };
   } else {
     pendingRequests.push(requestDetails.requestId);
     console.log("providing credentials for: " + requestDetails.requestId);
@@ -290,27 +267,21 @@ function provideCredentialsAsync(requestDetails) {
 }
 
 browser.webRequest.onAuthRequired.addListener(
-    provideCredentialsAsync,
-    {urls: [target]},
-    ["blocking"]
-  );
-
-browser.webRequest.onCompleted.addListener(
-  completed,
-  {urls: [target]}
+  provideCredentialsAsync,
+  { urls: [target] },
+  ["blocking"],
 );
 
-browser.webRequest.onErrorOccurred.addListener(
-  completed,
-  {urls: [target]}
-);
+browser.webRequest.onCompleted.addListener(completed, { urls: [target] });
+
+browser.webRequest.onErrorOccurred.addListener(completed, { urls: [target] });
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

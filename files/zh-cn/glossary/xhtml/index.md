@@ -1,14 +1,55 @@
 ---
 title: XHTML
 slug: Glossary/XHTML
-original_slug: XHTML
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-### W3C 标准 XHTML
+{{GlossarySidebar}}
 
-### XHTML(eXtensible HyperText Markup Language，可扩展超文本标记语言)
+**XHTML**（可扩展超文本标记语言）是曾经被用来描述按照 {{Glossary("XML")}} 语法规则编写的 [HTML](/zh-CN/docs/Web/HTML) 文档的术语。
 
-2000 年底，国际 W3C(World Wide Web Consortium) 组织公布发行了 XHTML 1.0 版本。XHTML 1.0 是一种在 HTML 4.0 基础上优化和改进的的新语言，目的是基于 XML 应用。XHTML 是一种增强了的 HTML，它的可扩展性和灵活性将适应未来网络应用更多的需求。
+下面的例子显示了一个 HTML 文档和相应的“XHTML”文档，以及应当搭配使用的 {{Glossary("HTTP")}} {{HTTPHeader("Content-Type")}} 标头。
 
-XHTML 是在 2000 年 1 月 26 日被国际标准组织机构 W3C(World Wide web Consortium) 定为一个标准的，认为是 HTML 的一个最新版本，并且将逐渐替换 HTML。现在所有的浏览器都支持 XHTML，XHTML 兼容 HTML 4.0。也有人认为 XHTML 就是 HTML4.01。如果你在学习过程中自己编写了一个符合标准的站，你可以通过 W3C 的验证，验证通过后你将会得到一个标志，通常是 XHTML1.0 认证和 CSS 验证。大家可以去[www.w3.org](https://www.w3.org) 这个站点去验证你的站点，如果符合那两个规则则会分别给我们两段代码加到你的网页上向别人展示说明你采用了标准建站。
-**请认真阅读 XHTML 相关知识和基础教程，以便您能准确的了解 XHTML 的新特性，以及应用技巧，还可以得到 w3c 的有力支持。**
+### HTML 文档
+
+```html
+<!-- Content-Type: text/html -->
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+  </head>
+  <body>
+    <p>我是 HTML 文档</p>
+  </body>
+</html>
+```
+
+### XHTML 文档
+
+```xml
+<!-- Content-Type: application/xhtml+xml -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN">
+  <head>
+    <title>XHTML</title>
+  </head>
+  <body>
+    <p>我是 XHTML 文档</p>
+  </body>
+</html>
+```
+
+在实践中，很少有“XHTML”文档在网络上以 `Content-Type: application/xhtml+xml` 标头提供。即使这些文件是按照 XML 语法规则编写的，它们也是以 `Content-Type: text/html` 标头提供的——因此浏览器使用 HTML 解析器而不是 XML 解析器来解析这些文件。
+
+## 参见
+
+- [HTML](/zh-CN/docs/Glossary/HTML)
+- [HTML5](/zh-CN/docs/Glossary/HTML5)
+- [SVG](/zh-CN/docs/Glossary/SVG)
+- [MathML](/zh-CN/docs/Glossary/MathML)
+- [XML](/zh-CN/docs/Glossary/XML)

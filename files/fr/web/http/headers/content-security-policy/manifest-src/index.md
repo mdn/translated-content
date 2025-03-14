@@ -1,8 +1,6 @@
 ---
-title: 'CSP : manifest-src'
+title: "CSP : manifest-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/manifest-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/manifest-src
-browser-compat: http.headers.csp.Content-Security-Policy.manifest-src
 ---
 
 {{HTTPSidebar}}
@@ -39,9 +37,9 @@ Content-Security-Policy: manifest-src <source> <source>;
 
 ### Sources
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#directives_associées)).
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
 
 ## Exemples
 
@@ -56,7 +54,7 @@ Content-Security-Policy: manifest-src https://example.com/
 Cet élément [`<link>`](/fr/docs/Web/HTML/Element/link) sera bloqué et ne se chargera pas&nbsp;:
 
 ```html
-<link rel="manifest" href="https://not-example.com/manifest">
+<link rel="manifest" href="https://not-example.com/manifest" />
 ```
 
 ## Spécifications

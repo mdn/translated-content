@@ -1,13 +1,6 @@
 ---
 title: Document.styleSheetSets
 slug: Web/API/Document/styleSheetSets
-tags:
-  - API
-  - DOM
-  - Document
-  - Feuilles de styles
-  - Propriétés
-translation_of: Web/API/Document/styleSheetSets
 ---
 
 {{APIRef("DOM")}}
@@ -17,7 +10,7 @@ Renvoie une liste active de tous les jeux de feuilles de styles actuellement dis
 ## Syntaxe
 
 ```js
-sets = document.styleSheetSets
+sets = document.styleSheetSets;
 ```
 
 En retour, `sets` est une liste de jeux de feuilles de styles disponibles.
@@ -46,7 +39,7 @@ La liste des jeux de feuilles de styles disponibles est construite par énuméra
 
 ## Spécifications
 
-- [HTML5 : Alternate Style Sheets](http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
+- [HTML5 : Alternate Style Sheets](https://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
 
 ## Voir aussi
 

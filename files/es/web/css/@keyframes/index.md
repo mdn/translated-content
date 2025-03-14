@@ -1,5 +1,5 @@
 ---
-title: '@keyframes'
+title: "@keyframes"
 slug: Web/CSS/@keyframes
 ---
 
@@ -28,10 +28,21 @@ Cualquier propiedad que no se especifican en cualquier keyframes son interpolada
 
 ```css
 @keyframes identifier {
-  0% { top: 0; left: 0; }
-  30% { top: 50px; }
-  68%, 72% { left: 50px; }
-  100% { top: 100px; left: 100%; }
+  0% {
+    top: 0;
+    left: 0;
+  }
+  30% {
+    top: 50px;
+  }
+  68%,
+  72% {
+    left: 50px;
+  }
+  100% {
+    top: 100px;
+    left: 100%;
+  }
 }
 ```
 
@@ -43,10 +54,19 @@ La especificación define que si un keyframe se define varias veces, pero no tod
 
 ```css
 @keyframes identifier {
-  0% { top: 0; }
-  50% { top: 30px; left: 20px; }
-  50% { top: 10px; }
-  100% { top: 0; }
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 30px;
+    left: 20px;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0;
+  }
 }
 ```
 
@@ -75,17 +95,17 @@ En este ejemplo, en el 50% del keyframe, el valor utilizado es `top: 10px` y tod
 
 ## Ejemplos
 
-Mira los ejemplos del [CSS animations](/en/CSS/CSS_animations).
+Mira los ejemplos del [CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations).
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.keyframes")}}
+{{Compat}}
 
 ## Vease también
 
-- [Using CSS animations](/es/docs/CSS/Using_CSS_animations)
+- [Using CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

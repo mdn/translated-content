@@ -1,13 +1,17 @@
 ---
 title: CSS 选择器
 slug: Glossary/CSS_Selector
+l10n:
+  sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
 ---
+
+{{GlossarySidebar}}
 
 **CSS 选择器**是 CSS 规则的一部分，用于匹配文档中的元素。匹配的元素将会应用规则指定的样式。
 
 ## 示例
 
-看下面的 CSS：
+考虑如下 CSS：
 
 ```css
 p {
@@ -23,7 +27,11 @@ div.warning {
 }
 
 #customized {
-  font: 16px Lucida Grande, Arial, Helvetica, sans-serif;
+  font:
+    16px Lucida Grande,
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 ```
 
@@ -32,18 +40,14 @@ div.warning {
 我们可以把上面的 CSS 应用到 HTML 中，如下：
 
 ```html
-<p>This is happy text.</p>
+<p>这是个开心的文本</p>
 
-<div class="warning">
-  Be careful! There are wizards present, and they are quick to anger!
-</div>
+<div class="warning">小心，有巫师！他们很容易被激怒！</div>
 
 <div id="customized">
-  <p>This is happy text.</p>
+  <p>这是个开心的文本</p>
 
-  <div class="warning">
-    Be careful! There are wizards present, and they are quick to anger!
-  </div>
+  <div class="warning">小心，有巫师！他们很容易被激怒！</div>
 </div>
 ```
 
@@ -53,7 +57,7 @@ div.warning {
 
 ## 参见
 
-- 查看我们的关于选择器的介绍 [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
+- 在 CSS 介绍中[学习更多 CSS 选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 - 基础选择器
 
   - [标签选择器](/zh-CN/docs/Web/CSS/Type_selectors) `elementname`
@@ -63,14 +67,14 @@ div.warning {
   - [属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors) `[attr=value]`
   - [状态选择器](/zh-CN/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
 
-- 组选择器
+- 分组选择器
 
   - [选择器列表](/zh-CN/docs/Web/CSS/Selector_list) `A, B`
 
 - 关系选择器
 
-  - [邻近兄弟元素选择器](/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
-  - [兄弟元素选择器](/zh-CN/docs/Web/CSS/General_sibling_combinator) `A ~ B`
+  - [接续兄弟选择器](/zh-CN/docs/Web/CSS/Next-sibling_combinator) `A + B`
+  - [后续兄弟选择器](/zh-CN/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - [直接子元素选择器](/zh-CN/docs/Web/CSS/Child_combinator) `A > B`
   - [后代元素选择器](/zh-CN/docs/Web/CSS/Descendant_combinator) `A B`
 

@@ -1,25 +1,63 @@
 ---
 title: letter-spacing
 slug: Web/CSS/letter-spacing
-translation_of: Web/CSS/letter-spacing
 ---
 
 {{CSSRef}}
 
 Свойство **`letter-spacing`** определяет межбуквенное расстояние в тексте.
 
-{{EmbedInteractiveExample("pages/css/letter-spacing.html")}}
+{{InteractiveExample("CSS Demo: letter-spacing")}}
+
+```css interactive-example-choice
+letter-spacing: normal;
+```
+
+```css interactive-example-choice
+letter-spacing: 0.2rem;
+```
+
+```css interactive-example-choice
+letter-spacing: 1px;
+```
+
+```css interactive-example-choice
+letter-spacing: -1px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    As much mud in the streets as if the waters had but newly retired from the
+    face of the earth, and it would not be wonderful to meet a Megalosaurus,
+    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  font-family: Amstelvar;
+  font-style: normal;
+}
+
+section {
+  font-size: 1.2em;
+  font-family: Amstelvar;
+}
+```
 
 ## Синтаксис
 
 ```css
-/* Значения - ключевые слова */
+/* Ключевые слова */
 letter-spacing: normal;
 
 /* Значения <length> */
 letter-spacing: 0.3em;
 letter-spacing: 3px;
-letter-spacing: .3px;
+letter-spacing: 0.3px;
 
 /* Глобальные значения */
 letter-spacing: inherit;
@@ -53,18 +91,28 @@ letter-spacing: unset;
 ### CSS
 
 ```css
-.normal   { letter-spacing: normal; }
-.em-wide  { letter-spacing: 0.4em; }
-.em-wider { letter-spacing: 1em; }
-.em-tight { letter-spacing: -0.05em; }
-.px-wide  { letter-spacing: 6px; }
+.normal {
+  letter-spacing: normal;
+}
+.em-wide {
+  letter-spacing: 0.4em;
+}
+.em-wider {
+  letter-spacing: 1em;
+}
+.em-tight {
+  letter-spacing: -0.05em;
+}
+.px-wide {
+  letter-spacing: 6px;
+}
 ```
 
 ### Результат
 
 {{ EmbedLiveSample('Примеры', 440, 185) }}
 
-## Проблемы доступности
+## Доступность
 
 Большие положительные или отрицательные значения свойства `letter-spacing` могут сделать текст, к которому применяется форматирование, нечитаемым. При очень больших положительных значениях этого свойства, буквы в тексте будут настолько далеко друг от друга, что не будут восприниматься как цельные слова. При очень больших отрицательных значениях буквы будут перекрываться друг другом до такой степени, что слова могут стать неразличимы.
 
@@ -79,7 +127,7 @@ letter-spacing: unset;
 
 {{cssinfo}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

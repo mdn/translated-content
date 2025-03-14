@@ -1,20 +1,51 @@
 ---
 title: border
 slug: Web/CSS/border
-tags:
-  - CSS Границы
-  - CSS-свойства
-  - Разметка
-  - Совместимость Мобильных Браузеров
-  - Справка
-translation_of: Web/CSS/border
 ---
 
-{{CSSRef("CSS Borders")}}
+{{CSSRef}}
 
-Свойство [CSS](/ru/docs/CSS) **`border`** это [универсальное свойство](/ru/docs/Web/CSS/Shorthand_properties) для указания всех персональных свойств границ за раз: {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, и {{Cssxref("border-color")}}.
+Свойство [CSS](/ru/docs/Web/CSS) **`border`** это [универсальное свойство](/ru/docs/Web/CSS/Shorthand_properties) для указания всех персональных свойств границ за раз: {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, и {{Cssxref("border-color")}}.
 
-{{EmbedInteractiveExample("pages/css/border.html")}}
+{{InteractiveExample("CSS Demo: border")}}
+
+```css interactive-example-choice
+border: solid;
+```
+
+```css interactive-example-choice
+border: dashed red;
+```
+
+```css interactive-example-choice
+border: 1rem solid;
+```
+
+```css interactive-example-choice
+border: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border: 4mm ridge rgba(211, 220, 50, 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 Как и во всех универсальных свойствах, любое персональное значение, которое не указанно, устанавливается в начальное значение. Обратите внимание, `border` не может быть использован для указания пользовательского значения {{cssxref("border-image")}}, но вместо этого устанавливает его в начальное значение, т.е. `none`.
 
@@ -24,7 +55,8 @@ border: 2px dotted;
 border: medium dashed green;
 ```
 
-> **Примечание:** **Замечание:** Рекомендуется использовать `border`, когда вы хотите установить все свойства границ одновременно. Тогда как универсальные свойства {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, и {{Cssxref("border-color")}} принимают до четырёх значений, позволяя установить различные значения для каждого ребра, `border` принимает единственное значение для каждого свойства. И этот стиль применяется для всех четырёх границ.
+> [!NOTE]
+> Рекомендуется использовать `border`, когда вы хотите установить все свойства границ одновременно. Тогда как универсальные свойства {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, и {{Cssxref("border-color")}} принимают до четырёх значений, позволяя установить различные значения для каждого ребра, `border` принимает единственное значение для каждого свойства. И этот стиль применяется для всех четырёх границ.
 
 ## Синтаксис
 
@@ -70,16 +102,16 @@ style {
 
 {{EmbedLiveSample('Examples')}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
 {{cssinfo}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 
-## Также смотрите
+## Смотрите также
 
 - {{ Cssxref("border-radius") }}-related CSS properties: {{ Cssxref("border-top-left-radius") }}, {{ Cssxref("border-top-right-radius") }}, {{ Cssxref("border-bottom-right-radius") }}, {{ Cssxref("border-bottom-left-radius") }}

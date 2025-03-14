@@ -1,21 +1,25 @@
 ---
 title: WebRTC
 slug: Glossary/WebRTC
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-**WebRTC** (_Web Real-Time Communication_) 是一个可以用在视频聊天，音频聊天或 P2P 文件分享等 Web App 中的 {{Glossary("API")}}。
+{{GlossarySidebar}}
+
+**WebRTC**（_Web 实时通信_）是一个可以用在视频聊天、音频聊天或 P2P 文件分享等 Web 应用中的 {{Glossary("API")}}。
 
 WebRTC 主要由以下几个部分组成：
 
-- [`getUserMedia`](/zh-CN/docs/Web/API/Navigator/getUserMedia)
-  - : 为一个 RTC 连接获取设备的摄像头与 (或) 麦克风权限，并为此 RTC 连接接入设备的摄像头与 (或) 麦克风的信号。
-- [`RTCPeerConnection`](/zh-CN/docs/Web/API/RTCPeerConnection)
-  - : 用于配置音频或视频聊天。
-- [`RTCDataChannel`](/zh-CN/docs/Web/API/RTCDataChannel)
-  - : 用于设置两个浏览器之间的{{Glossary("P2P", "端到端")}} 数据连接。
+- {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}
+  - : 获取设备的摄像头与（或）麦克风权限，并将这些信号接入 RTC 连接。
+- {{domxref("RTCPeerConnection")}}
+  - : 用于配置音频或视频聊天的接口。
+- {{domxref("RTCDataChannel")}}
+  - : 用于设置两个浏览器之间的{{Glossary("P2P", "端到端")}}数据连接。
 
-## 了解更多
+## 参见
 
-- [WebRTC](https://zh.wikipedia.org/wiki/WebRTC) on Wikipedia
-- [Guide to WebRTC on MDN](/zh-CN/docs/Web/API/WebRTC_API)
-- [Browser support of WebRTC](https://caniuse.com/rtcpeerconnection)
+- 维基百科上的 [WebRTC](https://zh.wikipedia.org/wiki/WebRTC)
+- [MDN 上的 WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
+- [WebRTC 的浏览器支持](https://caniuse.com/rtcpeerconnection)

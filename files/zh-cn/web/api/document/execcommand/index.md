@@ -11,15 +11,16 @@ slug: Web/API/Document/execCommand
 
 ## 语法
 
-```
-bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
+```js-nolint
+execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 ```
 
 ### 返回值
 
 一个 {{jsxref('Boolean')}} ，如果是 `false` 则表示操作不被支持或未被启用。
 
-> **备注：** 在调用一个命令前，不要尝试使用返回值去校验浏览器的兼容性
+> [!NOTE]
+> 在调用一个命令前，不要尝试使用返回值去校验浏览器的兼容性
 
 ### 参数
 
@@ -49,11 +50,11 @@ bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 - `decreaseFontSize`
   - : 给选中文字加上 {{HTMLElement("small")}} 标签，或在选中点插入该标签。(IE 浏览器不支持)
 - `defaultParagraphSeparator`
-  - : 更改在可编辑文本区域中创建新段落时使用的段落分隔符。有关更多详细信息，请参阅[标记生成的差异](/zh-CN/docs/Web/Guide/HTML/Content_Editable#Differences_in_markup_generation)。
+  - : 更改在可编辑文本区域中创建新段落时使用的段落分隔符。有关更多详细信息，请参阅[标记生成的差异](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation)。
 - `delete`
   - : 删除选中部分。
 - `enableAbsolutePositionEditor`
-  - : 启用或禁用允许移动绝对定位元素的抓取器。Firefox 63 Beta/Dev Edition 默认禁用此功能 ({{bug(1449564)}})。
+  - : 启用或禁用允许移动绝对定位元素的抓取器。Firefox 63 Beta/Dev Edition 默认禁用此功能 ([Firefox bug 1449564](https://bugzil.la/1449564))。
 - `enableInlineTableEditing`
   - : 启用或禁用表格行和列插入和删除控件。(IE 浏览器不支持)
 - `enableObjectResizing`
@@ -134,7 +135,7 @@ bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
 ## 示例
 
-CodePen 中关于 [如何使用](http://codepen.io/netsi1964/full/QbLLGW/) 如何使用的一个例子。
+CodePen 中关于 [如何使用](https://codepen.io/netsi1964/full/QbLLGW/) 如何使用的一个例子。
 
 ## 规范
 

@@ -26,7 +26,7 @@ gl.linkProgram(program);
 
 if (!gl.getProgramParameter(program, gl.LINK_STATUS) && !gl.isContextLost()) {
   var info = gl.getProgramInfoLog(program);
-  console.log('Error linking program:\n' + info);
+  console.log("Error linking program:\n" + info);
 }
 ```
 
@@ -38,6 +38,6 @@ if (!gl.getProgramParameter(program, gl.LINK_STATUS) && !gl.isContextLost()) {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - The {{domxref("WebGLContextEvent")}} signals changes in the context state.

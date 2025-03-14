@@ -2,6 +2,7 @@
 title: Element.scrollLeft
 slug: Web/API/Element/scrollLeft
 ---
+
 {{ APIRef("DOM") }}
 
 A propriedade **Element.scrollLeft** obtem, ou define o número de pixels do contéudo de um elemento que é rolado para a esquerda.
@@ -31,42 +32,48 @@ element.scrollLeft = 10;
 ## Exemplo
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <style>
-        #container {
-            border: 1px solid #ccc; height: 100px; overflow: scroll; width: 100px;
-        }
-        #content {
-            background-color: #ccc; width: 250px;
-        }
+      #container {
+        border: 1px solid #ccc;
+        height: 100px;
+        overflow: scroll;
+        width: 100px;
+      }
+      #content {
+        background-color: #ccc;
+        width: 250px;
+      }
     </style>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var button = document.getElementById('slide');
-            button.onclick = function () {
-                document.getElementById('container').scrollLeft += 20;
-            };
-        }, false);
+      document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+          var button = document.getElementById("slide");
+          button.onclick = function () {
+            document.getElementById("container").scrollLeft += 20;
+          };
+        },
+        false,
+      );
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="container">
-        <div id="content">Lorem ipsum dolor sit amet.</div>
+      <div id="content">Lorem ipsum dolor sit amet.</div>
     </div>
     <button id="slide" type="button">Slide</button>
-</body>
+  </body>
 </html>
 ```
 
 ## Especificações
 
-| Especificações                                                                           | Status                           | Comentário |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('CSSOM View', '#dom-element-scrollleft', 'scrollLeft')}} | {{Spec2("CSSOM View")}} |            |
+{{Specifications}}
 
-## Referências
+## Compatibilidade com navegadores
 
-{{Compat("api.Element.scrollLeft")}}
+{{Compat}}

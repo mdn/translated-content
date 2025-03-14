@@ -1,15 +1,9 @@
 ---
 title: Function.length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
-tags:
-  - JavaScript
-  - Propiedad
-  - función
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/length
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/length
 ---
 
-{{JSRef("Global_Objects", "Function")}}
+{{JSRef}}
 
 ## Sumario
 
@@ -34,11 +28,15 @@ La propiedad length del {{jsxref("Global_Objects/Function", "Function")}} objeto
 ```js
 console.log(Function.length); /* 1 */
 
-console.log((function()        {}).length); /* 0 */
-console.log((function(a)       {}).length); /* 1 */
-console.log((function(a, b)    {}).length); /* 2 etc. */
-console.log((function(...args) {}).length); /* 0, resto de parámetros no se contemplan */
-console.log((function(a, b = 1, c) {}).length); /* 1, solo parámetros antes del primero con un valor por defecto son contados */
+console.log(function () {}.length); /* 0 */
+console.log(function (a) {}.length); /* 1 */
+console.log(function (a, b) {}.length); /* 2 etc. */
+console.log(
+  function (...args) {}.length,
+); /* 0, resto de parámetros no se contemplan */
+console.log(
+  function (a, b = 1, c) {}.length,
+); /* 1, solo parámetros antes del primero con un valor por defecto son contados */
 ```
 
 ## Especificaciones
@@ -47,7 +45,7 @@ console.log((function(a, b = 1, c) {}).length); /* 1, solo parámetros antes del
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function.length")}}
+{{Compat}}
 
 ## Ver también
 

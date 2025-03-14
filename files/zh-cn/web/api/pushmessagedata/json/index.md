@@ -1,44 +1,42 @@
 ---
-title: PushMessageData.json()
+title: PushMessageData：json() 方法
 slug: Web/API/PushMessageData/json
+l10n:
+  sourceCommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
 ---
 
-{{APIRef("Push API")}}{{SeeCompatTable()}}
+{{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
-{{domxref("PushMessageData")}} 接口的 **`json()`**方法将推送消息数据提取为 一个 [JSON](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON) 对象。
+{{domxref("PushMessageData")}} 接口的 **`json()`** 方法通过将推送消息数据解析为 [JSON](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON) 字符串并返回结果来提取推送消息数据。
 
-## Syntax
+## 语法
 
-```js
-let massage_Json = PushEvent.data.json();
+```js-nolint
+json()
 ```
 
-### Parameters
+### 参数
 
-None.
+无。
 
-### Returns
+### 返回值
 
-A [JSON](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON) object.
+将推送事件数据解析为 JSON 后的结果。这可以是任何可以用 JSON 表示的内容，例如对象、数组、字符串、数字等。
 
-## Examples
+## 示例
 
 ```js
-self.addEventListener('push', function(event) {
-  var jsonObj = event.data.json();
+self.addEventListener("push", (event) => {
+  const myData = event.data.json();
 
-  // do something with your JSON
+  // 对你的数据进行处理
 });
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser Compatibility
+## 浏览器兼容性
 
 {{Compat}}
-
-## See also
-
-- [Using the Push API](/zh-CN/docs/Web/API/Push_API/Using_the_Push_API)

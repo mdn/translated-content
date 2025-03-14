@@ -1,17 +1,9 @@
 ---
 title: time
 slug: Web/HTML/Element/time
-tags:
-  - Elemento
-  - Fecha
-  - HTML
-  - HTML5
-  - Hora
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/time
-original_slug: Web/HTML/Elemento/time
 ---
+
+{{HTMLSidebar}}
 
 El **elemento HTML `<time>`** representa un periodo específico en el tiempo. Puede incluir el atributo `datetime` para convertir las fechas en un formato interno legible por un ordenador, permitiendo mejores resultados en los motores de búsqueda o características personalizadas como recordatorios.
 
@@ -21,7 +13,25 @@ Puede representar uno de los contenidos siguientes:
 - Una fecha precisa en el [Calendario Gregoriano](https://es.wikipedia.org/wiki/Calendario_gregoriano) (con hora y zona horaria opcionales)
 - [Un periodo de tiempo válido](https://www.w3.org/TR/2014/REC-html5-20141028/infrastructure.html#valid-duration-string)
 
-{{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;time&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>
+  The Cure will be celebrating their 40th anniversary on
+  <time datetime="2018-07-07">July 7</time> in London's Hyde Park.
+</p>
+
+<p>
+  The concert starts at <time datetime="20:00">20:00</time> and you'll be able
+  to enjoy the band for at least <time datetime="PT2H30M">2h 30m</time>.
+</p>
+```
+
+```css interactive-example
+time {
+  font-weight: bold;
+}
+```
 
 La fuente de este ejemplo interactivo está almacenada en un repositorio de GitHub. Si desea contribuir al projecto, por favor clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples)y envíe su solicitud de extracción (pull request).
 
@@ -29,15 +39,15 @@ La fuente de este ejemplo interactivo está almacenada en un repositorio de GitH
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/es/docs/Web/HTML/Content_categories"
           >Categorías de contenido</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
           >Contenido de flujo</a
         >,
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
           >contenido de fraseo</a
         >, contenido palpable.
       </td>
@@ -45,7 +55,7 @@ La fuente de este ejemplo interactivo está almacenada en un repositorio de GitH
     <tr>
       <th scope="row">Contenido permitido</th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
           >Contenido de fraseo</a
         >.
       </td>
@@ -60,7 +70,7 @@ La fuente de este ejemplo interactivo está almacenada en un repositorio de GitH
       <th scope="row">Padres permitidos</th>
       <td>
         Cualquier elemento que acepte
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
           >contenido de fraseo</a
         >.
       </td>
@@ -78,9 +88,9 @@ La fuente de este ejemplo interactivo está almacenada en un repositorio de GitH
 
 ## Atributos
 
-Como todos los elementos de HTML, este elemento soporta los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
+Como todos los elementos de HTML, este elemento soporta los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : Este atributo indica la hora y/o fecha del elemento y debe estar escrito en uno de los formatos que se muestran posteriomente.
 
 ## Notas de uso
@@ -94,9 +104,11 @@ El valor de fecha y hora (el valor legible por el equipo) es el valor del atribu
 ### Valores datetime válidos
 
 - una cadena válida de año
+
   - : `2011`
-  
+
     `0001`
+
 - una cadena válida de mes
   - : `2011-11`
 - una cadena válida de fecha
@@ -106,18 +118,23 @@ El valor de fecha y hora (el valor legible por el equipo) es el valor del atribu
 - una cadena de semana válida
   - : `2011-W47`
 - una cadena de hora válida
+
   - : `14:54`
-  
+
     `14:54:39`
 
     `14:54:39.929`
+
 - una cadena de fecha y hora local válida
+
   - : `2011-11-18T14:54:39.929`
-  
+
     `2011-11-18 14:54:39.929`
+
 - una cadena de fecha y hora global válida
+
   - : `2011-11-18T14:54:39.929Z`
-  
+
     `2011-11-18T14:54:39.929-0400`
 
     `2011-11-18T14:54:39.929-04:00`
@@ -127,6 +144,7 @@ El valor de fecha y hora (el valor legible por el equipo) es el valor del atribu
     `2011-11-18 14:54:39.929-0400`
 
     `2011-11-18 14:54:39.929-04:00`
+
 - una cadena valida de duración
   - : `PT4H18M3S`
 
@@ -149,8 +167,7 @@ El valor de fecha y hora (el valor legible por el equipo) es el valor del atribu
 #### HTML
 
 ```html
-<p>El concierto fué el <time
-  datetime="2001-05-15T19:00">15 de Mayo</time>.</p>
+<p>El concierto fué el <time datetime="2001-05-15T19:00">15 de Mayo</time>.</p>
 ```
 
 #### Output
@@ -161,9 +178,9 @@ El valor de fecha y hora (el valor legible por el equipo) es el valor del atribu
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.time")}}
+{{Compat}}
 
 ## Ver también
 

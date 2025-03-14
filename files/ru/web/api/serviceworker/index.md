@@ -1,12 +1,11 @@
 ---
 title: ServiceWorker
 slug: Web/API/ServiceWorker
-translation_of: Web/API/ServiceWorker
 ---
 
 {{APIRef("Service Workers API")}}
 
-Интерфейс `ServiceWorker`, являющийся частью [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API), позволяет взаимодействовать с Service Worker. К одному Service Worker могут быть привязаны несколько контекстов (например страниц, Web Workers, и т.д.), каждый с использованием собственного объекта `ServiceWorker`.
+Интерфейс `ServiceWorker`, являющийся частью [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API), позволяет взаимодействовать с Service Worker. К одному Service Worker могут быть привязаны несколько контекстов (например страниц, Web Workers, и т.д.), каждый с использованием собственного объекта `ServiceWorker`.
 
 Объект `ServiceWorker` можно получить через свойства {{domxref("ServiceWorkerRegistration.active")}} и {{domxref("ServiceWorkerContainer.controller")}} — это Service Worker, который активировал и контролирует текущую страницу (в случае, если Service Worker был успешно зарегистрирован и страница была обновлена)
 
@@ -35,43 +34,44 @@ _Интерфейс `ServiceWorker` наследует все методы ин�
 Этот фрагмент кода из [примера событий Service Worker](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([демо](https://googlechrome.github.io/samples/service-worker/registration-events/)). Данный код возвращает значение {{domxref("ServiceWorker.state")}} при каждом изменении состояния.
 
 ```js
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js', {
-        scope: './'
-    }).then(function (registration) {
-        var serviceWorker;
-        if (registration.installing) {
-            serviceWorker = registration.installing;
-            document.querySelector('#kind').textContent = 'installing';
-        } else if (registration.waiting) {
-            serviceWorker = registration.waiting;
-            document.querySelector('#kind').textContent = 'waiting';
-        } else if (registration.active) {
-            serviceWorker = registration.active;
-            document.querySelector('#kind').textContent = 'active';
-        }
-        if (serviceWorker) {
-            // logState(serviceWorker.state);
-            serviceWorker.addEventListener('statechange', function (e) {
-                // logState(e.target.state);
-            });
-        }
-    }).catch (function (error) {
-        // Произошла ошибка при регистрации Service Worker.
-        // Файл service-worker.js может быть недоступным или содержать ошибки синтаксиса.
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("service-worker.js", {
+      scope: "./",
+    })
+    .then(function (registration) {
+      var serviceWorker;
+      if (registration.installing) {
+        serviceWorker = registration.installing;
+        document.querySelector("#kind").textContent = "installing";
+      } else if (registration.waiting) {
+        serviceWorker = registration.waiting;
+        document.querySelector("#kind").textContent = "waiting";
+      } else if (registration.active) {
+        serviceWorker = registration.active;
+        document.querySelector("#kind").textContent = "active";
+      }
+      if (serviceWorker) {
+        // logState(serviceWorker.state);
+        serviceWorker.addEventListener("statechange", function (e) {
+          // logState(e.target.state);
+        });
+      }
+    })
+    .catch(function (error) {
+      // Произошла ошибка при регистрации Service Worker.
+      // Файл service-worker.js может быть недоступным или содержать ошибки синтаксиса.
     });
 } else {
-    // Данный браузер не поддерживает Service Worker.
+  // Данный браузер не поддерживает Service Worker.
 }
 ```
 
 ## Спецификации
 
-| Спецификация                                                                             | Статус                               | Комментарии              |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------ |
-| {{SpecName('Service Workers', '#serviceworker', 'ServiceWorker')}} | {{Spec2('Service Workers')}} | Изначальное определение. |
+{{Specifications}}
 
-## Поддержка
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -82,4 +82,4 @@ if ('serviceWorker' in navigator) {
 - [Базовый пример для Service Worker](https://github.com/mdn/sw-test)
 - [Поддержка ServiceWorker браузерами](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise", "Promises")}}
-- [Использование Web Workers](/ru/docs/DOM/Using_web_workers)
+- [Использование Web Workers](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)

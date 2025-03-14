@@ -1,64 +1,74 @@
 ---
-title: vrdisplaydisconnected
+title: "Window: vrdisplaydisconnect イベント"
 slug: Web/API/Window/vrdisplaydisconnect_event
+l10n:
+  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("Window")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-[WebVR API](/ja/docs/Web/API/WebVR_API) の **`vrdisplaydisconnected`** イベントは，互換性のある VR デバイスがコンピュータから接続解除された時に発火します．
+**`vrdisplaydisconnect`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のイベントで、互換性のある VR 機器がこのコンピューターから取り外されたときに発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td>Bubbles</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td>Cancelable</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td>Target objects</td>
-      <td>{{domxref("Window")}}</td>
-    </tr>
-    <tr>
-      <td>Interface</td>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("vrdisplaydisconnect", (event) => {});
+
+onvrdisplaydisconnect = (event) => {};
+```
+
+## イベント型
+
+{{domxref("VRDisplayEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("VRDisplayEvent")}}
+
+## イベントプロパティ
+
+_`VRDisplayEvent` は親オブジェクトである {{domxref("Event")}} からプロパティを継承しています。_
+
+- {{domxref("VRDisplayEvent.display")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
+  - : このイベントに関連付けられた {{domxref("VRDisplay")}} です。
+- {{domxref("VRDisplayEvent.reason")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
+  - : このイベントが発生した理由を人間可読な形で示します。
 
 ## 例
 
-You can use the `vrdisplaydisconnect` event in an [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) method:
+`vrdisplaydisconnect` イベントは [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドで使用することができます。
+
+> [!NOTE]
+> このイベントは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 ```js
-window.addEventListener('vrdisplaydisconnect', function() {
-  info.textContent = 'Display disconnected.';
+window.addEventListener("vrdisplaydisconnect", () => {
+  info.textContent = "Display disconnected.";
   reportDisplays();
 });
 ```
 
-Or use the [`onvrdisplaydisconnect`](/ja/docs/Web/API/Window/onvrdisplaydisconnect) event handler property:
+または、 `onvrdisplaydisconnect` イベントハンドラープロパティを使用してください。
 
 ```js
-window.onvrdisplaydisconnect = function() {
-  info.textContent = 'Display disconnected.';
+window.onvrdisplaydisconnect = () => {
+  info.textContent = "Display disconnected.";
   reportDisplays();
-);
+};
 ```
 
-## 仕様
+## 仕様書
 
-| Specification                                                                                                            | Status                       | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('WebVR 1.1', '#dom-window-onvrdisplaydisconnected', 'vrdisplaydisconnected')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
+このイベントは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部であり、これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) で置き枯れられました。標準規格になる見込みはありません。
 
-## ブラウザの互換性
+すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、 [A-Frame](https://aframe.io/)、[Babylon.js](https://www.babylonjs.com/)、[Three.js](https://threejs.org/) などのフレームワークを使用するか、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を使用することが、すべてのブラウザーで動作する WebXR アプリを開発する上で推奨されます。[\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)
 
-{{Compat("api.Window.vrdisplaydisconnect_event")}}
+## ブラウザーの互換性
 
-## 参照
+{{Compat}}
 
-- [WebVR API homepage](/ja/docs/Web/API/WebVR_API).
-- [MozVr.com](http://mozvr.com/) — Mozilla VR チームのデモ，ダウンロード，その他のリソース．
+## 関連情報
+
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

@@ -1,6 +1,6 @@
 ---
 title: CSS Selectors
-slug: Web/CSS/CSS_Selectors
+slug: Web/CSS/CSS_selectors
 ---
 
 {{CSSRef}}
@@ -47,11 +47,11 @@ slug: Web/CSS/CSS_Selectors
   - : `>` 用以選擇某個元素後代的元素。
     **語法:** `A > B`（B 元素不可在 A 元素的其他元素裡）
     **範例:** `ul > li` 套用所有 [`<li>`](/zh-TW/docs/Web/HTML/Element/li) 元素內部的 [`<ul>`](/zh-TW/docs/Web/HTML/Element/ul) 子元素。
-- [一般兄弟選擇器](/zh-TW/docs/Web/CSS/General_sibling_combinator)（[General sibling combinator](/zh-TW/docs/Web/CSS/General_sibling_combinator)）
+- [一般兄弟選擇器](/zh-TW/docs/Web/CSS/Subsequent-sibling_combinator)（[General sibling combinator](/zh-TW/docs/Web/CSS/Subsequent-sibling_combinator)）
   - : `~` combinator selects siblings. This means that the second element follows the first (though not necessarily immediately), and both share the same parent.
     **語法:** `A ~ B`
     **範例:** `p ~ span` will match all {{HTMLElement("span")}} elements that follow a {{HTMLElement("p")}}, immediately or not.
-- [相鄰兄弟選擇器](/zh-TW/docs/Web/CSS/Adjacent_sibling_combinator)（[Adjacent sibling combinator](/zh-TW/docs/Web/CSS/Adjacent_sibling_combinator)）
+- [相鄰兄弟選擇器](/zh-TW/docs/Web/CSS/Next-sibling_combinator)（[Adjacent sibling combinator](/zh-TW/docs/Web/CSS/Next-sibling_combinator)）
   - : `+` 選擇緊接在後的元素，並共享父元素。
     **語法:** `A + B`
     **範例:** `h2 + p` 套用所有 緊接在 [`<h2>`](/zh-TW/docs/Web/HTML/Element/Heading_Elements) 元素後的 [\<p>](/zh-TW/docs/Web/HTML/Element/p) 元素，並擁有 [`<h2>`](/zh-TW/docs/Web/HTML/Element/Heading_Elements) 的父元素。
@@ -73,7 +73,7 @@ slug: Web/CSS/CSS_Selectors
 
 {{Specifications}}
 
-See the [pseudo-class](/zh-TW/docs/Web/CSS/Pseudo-classes#Specifications) and [pseudo-element](/zh-TW/docs/Web/CSS/Pseudo-elements#Specifications) specification tables for details on those.
+See the [pseudo-class](/zh-TW/docs/Web/CSS/Pseudo-classes#specifications) and [pseudo-element](/zh-TW/docs/Web/CSS/Pseudo-elements#Specifications) specification tables for details on those.
 
 ## 參見
 

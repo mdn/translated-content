@@ -1,71 +1,61 @@
 ---
 title: CSSRule
 slug: Web/API/CSSRule
-translation_of: Web/API/CSSRule
+l10n:
+  sourceCommit: 7eff4df25ad857f65577930903797127ebabf991
 ---
 
 {{APIRef("CSSOM")}}
 
-Интерфейс **CSSRule** представляет собой одно правило CSS. Есть несколько типов правил, перечисленных в разделе [Type constants](#type_constants) ниже.
+Интерфейс **`CSSRule`** представляет одно CSS-правило. Существует несколько типов правил, которые наследуют свойства от `CSSRule`.
 
-Интерфейс CSSRule определяет общие свойства для всех правил, в то время как свойства характерные только для определённых типов правил указаны в более специализированных интерфейсах для соответствующих типов этих правил.
+- {{DOMXRef("CSSGroupingRule")}}
+- {{DOMXRef("CSSStyleRule")}}
+- {{DOMXRef("CSSImportRule")}}
+- {{DOMXRef("CSSMediaRule")}}
+- {{DOMXRef("CSSFontFaceRule")}}
+- {{DOMXRef("CSSPageRule")}}
+- {{DOMXRef("CSSNamespaceRule")}}
+- {{DOMXRef("CSSKeyframesRule")}}
+- {{DOMXRef("CSSKeyframeRule")}}
+- {{DOMXRef("CSSCounterStyleRule")}}
+- {{DOMXRef("CSSSupportsRule")}}
+- {{DOMXRef("CSSFontFeatureValuesRule")}}
+- {{DOMXRef("CSSFontPaletteValuesRule")}}
+- {{DOMXRef("CSSLayerBlockRule")}}
+- {{DOMXRef("CSSLayerStatementRule")}}
+- {{DOMXRef("CSSPropertyRule")}}
 
-Ссылки на CSSRule вы можете получить на странице {{domxref ("CSSStyleSheet")}} список cssRules.
+## Свойства экземпляра
 
-## Общие свойства для всех экземпляров CSSRule
+Интерфейс `CSSRule` определяет общие свойства, общие для всех правил. Свойства, уникальные для определенных типов правил, указываются в более специализированных интерфейсах для соответствующих типов этих правил.
 
 - {{domxref("CSSRule.cssText")}}
-  - : Represents the textual representation of the rule, e.g. "`h1,h2 { font-size: 16pt }`" or "`@import 'url'`". To access or modify parts of the rule (e.g. the value of "font-size" in the example) use the properties on the [specialized interface for the rule's type](#type_constants).
-- {{domxref("CSSRule.parentRule")}} {{readonlyinline}}
-  - : Returns the containing rule, otherwise `null`. E.g. if this rule is a style rule inside an {{cssxref("@media")}} block, the parent rule would be that {{domxref("CSSMediaRule")}}.
-- {{domxref("CSSRule.parentStyleSheet")}} {{readonlyinline}}
-  - : Returns the {{domxref("CSSStyleSheet")}} object for the style sheet that contains this rule
-- {{domxref("CSSRule.type")}} {{readonlyinline}}
-  - : One of the [Type constants](#type_constants) indicating the type of CSS rule.
+  - : Текстовое представление правила (например, «`h1,h2 { font-size: 16pt }`» или «`@import 'url'`»). Для доступа или изменения части правила (например, значения «font-size» из примера выше) следует использовать свойства специализированных интерфейсов.
+- {{domxref("CSSRule.parentRule")}} {{ReadOnlyInline}}
+  - : Возвращает содержащее правило или `null`. Например, если это правило стиля внутри блока {{cssxref("@media")}}, то родительским правилом будет {{domxref("CSSMediaRule")}}.
+- {{domxref("CSSRule.parentStyleSheet")}} {{ReadOnlyInline}}
+  - : Возвращает объект {{domxref("CSSStyleSheet")}} таблицы стилей, содержащей это правило.
+- {{domxref("CSSRule.type")}} {{ReadOnlyInline}} {{deprecated_inline}}
+  - : Возвращает тип правила.
 
-## Константы
+## Примеры
 
-### Типы констант
+Ссылки на `CSSRule` можно получить из списка `cssRules` в {{domxref("CSSStyleSheet")}}.
 
-The `CSSRule` interface specifies integer constants that can be used in conjunction with a `CSSRule`'s {{domxref("cssRule/type","type")}} property to discern the rule type (and therefore, which specialized interface it implements). The relationships between these constants and the interfaces are:
+```js
+let myRules = document.styleSheets[0].cssRules; // Вернёт CSSRuleList
+console.log(myRules);
+```
 
-| Type                               | Value | Rule-specific interface                                                       | Comments and examples                                                                                                                                                                                                                                     |
-| ---------------------------------- | ----- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CSSRule.STYLE_RULE`               | `1`   | {{domxref("CSSStyleRule")}}                                          | The most common kind of rule: `selector { prop1: val1; prop2: val2; }`                                                                                                                                                                                    |
-| `CSSRule.IMPORT_RULE`              | `3`   | {{domxref("CSSImportRule")}}                                          | An {{cssxref("@import")}} rule. (Until the documentation is completed, see the interface definition in the Mozilla source code: [nsIDOMCSSImportRule](http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/css/nsIDOMCSSImportRule.idl#9).) |
-| `CSSRule.MEDIA_RULE`               | `4`   | {{domxref("CSSMediaRule")}}                                          |                                                                                                                                                                                                                                                           |
-| `CSSRule.FONT_FACE_RULE`           | `5`   | {{domxref("CSSFontFaceRule")}}                                      |                                                                                                                                                                                                                                                           |
-| `CSSRule.PAGE_RULE`                | `6`   | {{domxref("CSSPageRule")}}                                          |                                                                                                                                                                                                                                                           |
-| `CSSRule.KEYFRAMES_RULE`           | `7`   | {{domxref("CSSKeyframesRule")}} {{experimental_inline}}     |                                                                                                                                                                                                                                                           |
-| `CSSRule.KEYFRAME_RULE`            | `8`   | {{domxref("CSSKeyframeRule")}} {{experimental_inline}}     |                                                                                                                                                                                                                                                           |
-| _Reserved for future use_          | `9`   |                                                                               | Should be used to define color profiles in the future                                                                                                                                                                                                     |
-| `CSSRule.NAMESPACE_RULE`           | `10`  | {{domxref("CSSNamespaceRule")}} {{experimental_inline}}     |                                                                                                                                                                                                                                                           |
-| `CSSRule.COUNTER_STYLE_RULE`       | `11`  | {{domxref("CSSCounterStyleRule")}} {{experimental_inline}} |                                                                                                                                                                                                                                                           |
-| `CSSRule.SUPPORTS_RULE`            | `12`  | {{domxref("CSSSupportsRule")}}                                      |                                                                                                                                                                                                                                                           |
-| `CSSRule.DOCUMENT_RULE`            | `13`  | {{domxref("CSSDocumentRule")}} {{experimental_inline}}     |                                                                                                                                                                                                                                                           |
-| `CSSRule.FONT_FEATURE_VALUES_RULE` | `14`  | {{domxref("CSSFontFeatureValuesRule")}}                          |                                                                                                                                                                                                                                                           |
-| `CSSRule.VIEWPORT_RULE`            | `15`  | {{domxref("CSSViewportRule")}} {{experimental_inline}}     |                                                                                                                                                                                                                                                           |
-| `CSSRule.REGION_STYLE_RULE`        | `16`  | {{domxref("CSSRegionStyleRule")}} {{experimental_inline}} |                                                                                                                                                                                                                                                           |
-| `CSSRule.UNKNOWN_RULE`             | `0`   | {{domxref("CSSUnknownRule")}} {{obsolete_inline}}             |                                                                                                                                                                                                                                                           |
-| `CSSRule.CHARSET_RULE`             | `2`   | `CSSCharsetRule` {{obsolete_inline}}                                     | (Removed in most browsers.)                                                                                                                                                                                                                               |
+## Спецификации
 
-An up-to-date informal list of constants can be found on the [CSSWG Wiki](http://wiki.csswg.org/spec/cssom-constants).
+{{Specifications}}
 
-## Specifications
-
-| Specification                                                                                                | Status                                       | Comment                                                                                         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| {{SpecName('CSSOM', '#css-rules', 'CSSRule')}}                                                 | {{Spec2('CSSOM')}}                     | Obsoleted values `CHARSET_RULE` and `UNKNOWN_RULE`. Added value `NAMESPACE_RULE`.               |
-| {{SpecName("CSS3 Animations",'#interface-cssrule', 'CSSRule')}}                         | {{Spec2('CSS3 Animations')}}         | Added values `KEYFRAMES_RULE` and `KEYFRAME_RULE`.                                              |
-| {{SpecName('CSS3 Fonts', '#om-fontfeaturevalues', 'CSSRule')}}                         | {{Spec2('CSS3 Fonts')}}             | Added value `FONT_FEATURE_VALUES_RULE`.                                                         |
-| {{SpecName("CSS3 Counter Styles", "#extentions-to-cssrule-interface", 'CSSRule')}} | {{Spec2("CSS3 Counter Styles")}} | Added value `COUNTER_STYLE_RULE`.                                                               |
-| {{SpecName("CSS3 Conditional", '#extentions-to-cssrule-interface', 'CSSRule')}}     | {{Spec2('CSS3 Conditional')}}     | Added value `SUPPORTS_RULE`. (`DOCUMENT_RULE` has been pushed to CSS Conditional Rules Level 4) |
-| {{SpecName('DOM2 Style', 'css.html#CSS-CSSRule', 'CSSRule')}}                             | {{Spec2('DOM2 Style')}}             | Initial definition.                                                                             |
-
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [Using dynamic styling information](/ru/docs/Web/Guide/DOM/Using_dynamic_styling_information)
+- [Использование динамической информации о стилях](/ru/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

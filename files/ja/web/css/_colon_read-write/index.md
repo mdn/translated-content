@@ -1,5 +1,5 @@
 ---
-title: ':read-write'
+title: :read-write
 slug: Web/CSS/:read-write
 ---
 
@@ -8,13 +8,47 @@ slug: Web/CSS/:read-write
 **`:read-write`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、ユーザーが編集できる要素 (`input` や `textarea` など) を表します。
 
 ```css
-input:read-write, textarea:read-write {
+input:read-write,
+textarea:read-write {
   background-color: #bbf;
 }
 
 p:read-write {
   background-color: #bbf;
 }
+```
+
+{{InteractiveExample("CSS Demo: :read-write", "tabbed-shorter")}}
+
+```css interactive-example
+label,
+input[type="submit"] {
+  display: block;
+  margin-top: 1em;
+}
+
+*:read-write {
+  background-color: ivory;
+  border: 2px solid darkorange;
+  border-radius: 5px;
+}
+```
+
+```html interactive-example
+<p>Please fill in your details:</p>
+
+<form>
+  <label for="email">Email Address:</label>
+  <input id="email" name="email" type="email" value="test@example.com" />
+
+  <label for="note">Short note about yourself:</label>
+  <textarea id="note" name="note">Don't be shy</textarea>
+
+  <label for="pic">Your picture:</label>
+  <input id="pic" name="pic" type="file" />
+
+  <input type="submit" value="Submit form" />
+</form>
 ```
 
 ## 構文
@@ -32,8 +66,10 @@ p:read-write {
 `:read-only` 擬似クラスは、入力欄をクリック可能なフィールドのように見せるスタイル付けをすべて削除するために使用されており、読み取り専用の段落のように見えます。一方、 `:read-write` 擬似クラスは、編集可能な `<textarea>` により良いスタイル付けを行うために使用されています。
 
 ```css
-input:-moz-read-only, textarea:-moz-read-only,
-input:read-only, textarea:read-only {
+input:-moz-read-only,
+textarea:-moz-read-only,
+input:read-only,
+textarea:read-only {
   border: 0;
   box-shadow: none;
   background-color: white;
@@ -52,7 +88,7 @@ textarea:read-write {
 
 ### フォーム以外の読み書き用コントロールのスタイル付け
 
-このセレクターは {{htmlElement("input")}}/{{htmlElement("textarea")}} 要素に {{htmlattrxref("readonly", "input")}} が設定されているものだけを選択するのではありません。ユーザーが編集できる*あらゆる*要素、例えば {{htmlelement("p")}} 要素に {{htmlattrxref("contenteditable")}} が設定されたものを選択します。
+このセレクターは {{htmlElement("input")}}/{{htmlElement("textarea")}} 要素に [`readonly`](/ja/docs/Web/HTML/Element/input#readonly) が設定されているものだけを選択するのではありません。ユーザーが編集できる*あらゆる*要素、例えば {{htmlelement("p")}} 要素に [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) が設定されたものを選択します。
 
 ```html
 <p contenteditable>この段落は編集可能です。読み書き可です。</p>
@@ -90,4 +126,4 @@ p:read-write {
 ## 関連情報
 
 - {{cssxref(":read-only")}}
-- HTML の {{htmlattrxref("contenteditable")}} 属性
+- HTML の [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) 属性

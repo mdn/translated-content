@@ -1,14 +1,6 @@
 ---
 title: DOMRectReadOnly.width
 slug: Web/API/DOMRectReadOnly/width
-tags:
-  - API
-  - DOM
-  - Géométrie
-  - Largeur
-  - Propriétés
-  - Rectangle
-translation_of: Web/API/DOMRectReadOnly/width
 ---
 
 {{APIRef("DOM")}}{{ SeeCompatTable() }}

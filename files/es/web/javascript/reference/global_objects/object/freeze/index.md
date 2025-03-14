@@ -1,15 +1,27 @@
 ---
 title: Object.freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/freeze
 ---
 
 {{JSRef}}
 
 El método **`Object.freeze()`** _congela_ un objeto, es decir: impide que se le agreguen nuevas propiedades; impide que se puedan eliminar las propiedades ya existentes; impide que dichas propiedades, o su capacidad de enumeración, configuración, o escritura, puedan ser modificadas; impide también que se pueda modificar su prototipo. El método devuelve el objeto recibido.
 
-{{EmbedInteractiveExample("pages/js/object-freeze.html")}}
+{{InteractiveExample("JavaScript Demo: Object.freeze()")}}
+
+```js interactive-example
+const obj = {
+  prop: 42,
+};
+
+Object.freeze(obj);
+
+obj.prop = 33;
+// Throws an error in strict mode
+
+console.log(obj.prop);
+// Expected output: 42
+```
 
 El código de este ejemplo interactivo está almacenado en un repositorio de GitHub. Si quieres contribuir al proyecto de ejemplos interactivos, puedes clonar <https://github.com/mdn/interactive-examples> y enviarnos un _pull request_.
 
@@ -42,14 +54,14 @@ La función retorna el mismo objeto pasado en ella, no crea una copia _congelada
 
 ```js
 var obj = {
-  prop: function() {},
-  foo: 'bar'
+  prop: function () {},
+  foo: "bar",
 };
 
 // Nuevas propiedades pueden ser agregadas,
 // propiedades existentes pueden cambiar o removerse
-obj.foo = 'baz';
-obj.lumpy = 'woof';
+obj.foo = "baz";
+obj.lumpy = "woof";
 delete obj.prop;
 
 // Ambos, el objeto pasado como argumento tanto como el que se regresa
@@ -61,54 +73,53 @@ var o = Object.freeze(obj);
 assert(Object.isFrozen(obj) === true);
 
 // Ahora cualquier cambio fallará
-obj.foo = 'quux'; // No hace nada de manera silenciosa
-obj.quaxxor = 'the friendly duck'; // No agrega una nueva propiedad, de manera silenciosa
+obj.foo = "quux"; // No hace nada de manera silenciosa
+obj.quaxxor = "the friendly duck"; // No agrega una nueva propiedad, de manera silenciosa
 
-// ...y en modo estrico tal intento arrojará TypeErrors
-function fail(){
-  'use strict';
-  obj.foo = 'sparky'; // arroja un TypeError
+// ...y en modo estricto tal intento arrojará TypeErrors
+function fail() {
+  "use strict";
+  obj.foo = "sparky"; // arroja un TypeError
   delete obj.quaxxor; // arroja un TypeError
-  obj.sparky = 'arf'; // arroja un TypeError
+  obj.sparky = "arf"; // arroja un TypeError
 }
 
 fail();
 
 // Los intentos utilizando Object.defineProperty tambien arrojarán una excepción...
-Object.defineProperty(obj, 'ohai', { value: 17 }); // arroja un TypeError
-Object.defineProperty(obj, 'foo', { value: 'eit' }); // arroja un TypeError
+Object.defineProperty(obj, "ohai", { value: 17 }); // arroja un TypeError
+Object.defineProperty(obj, "foo", { value: "eit" }); // arroja un TypeError
 
 // Es imposible cambiar un prototipo
 // Estos ejemplos retornan un error TypeError
-Object.setPrototype(obj,{x:20})
-obj.__proto__ = {x:20}
+Object.setPrototype(obj, { x: 20 });
+obj.__proto__ = { x: 20 };
 ```
 
 El siguiente ejemplo muestra que los valores de objetos en un objeto congelado pueden ser mutados (la congelación es superficial).
 
 ```js
 obj1 = {
-  internal: {}
+  internal: {},
 };
 
 Object.freeze(obj1);
-obj1.internal.a = 'aValue';
+obj1.internal.a = "aValue";
 
-obj1.internal.a // 'aValue'
+obj1.internal.a; // 'aValue'
 
 // Para hacer obj completamente inmutable, congelamos cada objeto en obj.
 // Para hacerlo, usamos esta función.
 function deepFreeze(obj) {
-
   // Recuperamos el nombre de las propiedades en obj
   var propNames = Object.getOwnPropertyNames(obj);
 
   // Congelamos las propiedades antes de congelar a obj
-  propNames.forEach(function(name) {
+  propNames.forEach(function (name) {
     var prop = obj[name];
 
     // Si la propiedad es un objeto, llamaremos a deepFreezze para que congele las propiedades de ese objeto
-    if (typeof prop == 'object' && prop !== null && !Object.isFrozen(prop))
+    if (typeof prop == "object" && prop !== null && !Object.isFrozen(prop))
       deepFreeze(prop);
   });
 
@@ -117,11 +128,11 @@ function deepFreeze(obj) {
 }
 
 obj2 = {
-  internal: {}
+  internal: {},
 };
 
 deepFreeze(obj2);
-obj2.internal.a = 'anotherValue';
+obj2.internal.a = "anotherValue";
 obj2.internal.a; // undefined
 ```
 
@@ -141,9 +152,9 @@ TypeError: 1 is not an object // Código ES5
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.freeze")}}
+{{Compat}}
 
 ## Mira también
 

@@ -1,14 +1,6 @@
 ---
 title: GeolocationPosition
 slug: Web/API/GeolocationPosition
-tags:
-  - API
-  - Geolocation API
-  - GeolocationPosition
-  - Interface
-  - Secure context
-  - TopicStub
-translation_of: Web/API/GeolocationPosition
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
@@ -38,5 +30,5 @@ _L'interface `GeolocationPosition` n'hérite d'aucune propriété._
 
 ## Voir aussi
 
-- [Utilisation de l'API de Géolocalisation](/fr/docs/Web/API/Geolocation_API/Using)
+- [Utilisation de l'API de Géolocalisation](/fr/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - {{domxref("Geolocation")}}

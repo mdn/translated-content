@@ -1,29 +1,27 @@
 ---
 title: WebAssembly.Exception.prototype.getArg()
 slug: WebAssembly/JavaScript_interface/Exception/getArg
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/getArg
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/getArg
-browser-compat: javascript.builtins.WebAssembly.Exception.getArg
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
-La méthode **`getArg()`**, rattachée au prototype d'un objet [`Exception`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception), permet d'obtenir la valeur d'un élément spécifique parmi les arguments de donnée d'une exception.
+La méthode **`getArg()`**, rattachée au prototype d'un objet [`Exception`](/fr/docs/WebAssembly/JavaScript_interface/Exception), permet d'obtenir la valeur d'un élément spécifique parmi les arguments de donnée d'une exception.
 
-Cette méthode prend comme argument une balise [`WebAssembly.Tag`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag) et fonctionnera uniquement si l'exception levée a été créée avec cette même balise. Dans le cas contraire, la méthode déclenchera une exception `TypeError`. On s'assure ainsi que l'exception puisse être lue seulement si le code appelant a accès à la balise. Les balies qui ne sont ni importées ni exportées dans/depuis le code WebAssembly sont internes et les exceptions correspondantes ne peuvent pas être inspectées avec cette méthode&nbsp;!
+Cette méthode prend comme argument une balise [`WebAssembly.Tag`](/fr/docs/WebAssembly/JavaScript_interface/Tag) et fonctionnera uniquement si l'exception levée a été créée avec cette même balise. Dans le cas contraire, la méthode déclenchera une exception `TypeError`. On s'assure ainsi que l'exception puisse être lue seulement si le code appelant a accès à la balise. Les balies qui ne sont ni importées ni exportées dans/depuis le code WebAssembly sont internes et les exceptions correspondantes ne peuvent pas être inspectées avec cette méthode&nbsp;!
 
-> **Note :** Avoir la même séquence des mêmes types de données ne suffit pas. Il faut que la balise ait la même _identité_ (que ce soit la même balise) que celle utilisée pour créer l'exception.
+> [!NOTE]
+> Avoir la même séquence des mêmes types de données ne suffit pas. Il faut que la balise ait la même _identité_ (que ce soit la même balise) que celle utilisée pour créer l'exception.
 
 ## Syntaxe
 
 ```js
-getArg(exceptionTag, index)
+getArg(exceptionTag, index);
 ```
 
 ### Paramètres
 
 - `exceptionTag`
-  - : Un objet [`WebAssembly.Tag`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag) qui doit correspondre à la balise associée à l'exception. Si les balises ne correspondent pas, une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera levée.
+  - : Un objet [`WebAssembly.Tag`](/fr/docs/WebAssembly/JavaScript_interface/Tag) qui doit correspondre à la balise associée à l'exception. Si les balises ne correspondent pas, une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera levée.
 - `index`
   - : L'indice de la valeur, parmi les arguments de données, à renvoyer (l'indexation commence à 0). Si l'indice dépasse le nombre d'éléments disponibles, la méthode lèvera une exception [`RangeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError).
 
@@ -65,23 +63,23 @@ Prenons le fragment de code WebAssembly qui suit en supposant qu'il soit compil�
 )
 ```
 
-Le fragment de code JavaScript qui suit appelle [`WebAssembly.instantiateStreaming`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming) afin d'importer le fichier 'exemple.wasm' et lui passe un objet d'import (`importObject`) contenant une nouvelle balise [`WebAssembly.Tag`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag) intitulée `tag_to_import`. L'objet d'import définit un objet dont les propriétés correspondent à celles de l'instruction `import` présente dans le code WebAssembly (un entier `i32`).
+Le fragment de code JavaScript qui suit appelle [`WebAssembly.instantiateStreaming`](/fr/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) afin d'importer le fichier 'exemple.wasm' et lui passe un objet d'import (`importObject`) contenant une nouvelle balise [`WebAssembly.Tag`](/fr/docs/WebAssembly/JavaScript_interface/Tag) intitulée `tag_to_import`. L'objet d'import définit un objet dont les propriétés correspondent à celles de l'instruction `import` présente dans le code WebAssembly (un entier `i32`).
 
 Une fois le fichier instancié, le code invoque la méthode WebAssembly exportée `run1()`, qui déclenche immédiatement une exception.
 
 ```js
-const tag_to_import = new WebAssembly.Tag( { parameters: ['i32']} );
+const tag_to_import = new WebAssembly.Tag({ parameters: ["i32"] });
 
 // Note : les propriétés de l'objet d'import correspondent à la
 // structure décrite par l'instruction import dans le code WebAssembly !
-const importObject = { "extmod": {"exttag": tag_to_import} }
-WebAssembly.instantiateStreaming(fetch('exemple.wasm'), importObject )
-  .then(obj => {
+const importObject = { extmod: { exttag: tag_to_import } };
+WebAssembly.instantiateStreaming(fetch("exemple.wasm"), importObject)
+  .then((obj) => {
     console.log(obj.instance.exports.run1());
   })
   .catch((e) => {
-    console.log(`${ e }`);
-    console.log(`getArg 0 : ${ e.getArg(tag_to_import, 0) }`);
+    console.log(`${e}`);
+    console.log(`getArg 0 : ${e.getArg(tag_to_import, 0)}`);
   });
 
 // Affichage dans la console
@@ -111,22 +109,22 @@ Lorsqu'il s'agit plutôt d'une balise exportée, le procédé est semblable à c
 )
 ```
 
-Le code JavaScript est aussi semblable. Dans ce cas, on n'a pas d'import, on récupère à la place la balise exportée et on l'utilise pour obtenir l'argument. Pour assurer l'ensemble, on teste également qu'il s'agit de la bonne balise en utilisant la méthode [`is()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/is).
+Le code JavaScript est aussi semblable. Dans ce cas, on n'a pas d'import, on récupère à la place la balise exportée et on l'utilise pour obtenir l'argument. Pour assurer l'ensemble, on teste également qu'il s'agit de la bonne balise en utilisant la méthode [`is()`](/fr/docs/WebAssembly/JavaScript_interface/Exception/is).
 
 ```js
 let tag_exported_from_wasm;
-WebAssembly.instantiateStreaming(fetch('exemple.wasm') )
-  .then(obj => {
+WebAssembly.instantiateStreaming(fetch("exemple.wasm"))
+  .then((obj) => {
     // On importe la balise avec le nom exporté depuis WebAssembly
-    tag_exported_from_wasm=obj.instance.exports.exptag;
+    tag_exported_from_wasm = obj.instance.exports.exptag;
 
     console.log(obj.instance.exports.run1());
   })
   .catch((e) => {
-    console.log(`${ e }`);
+    console.log(`${e}`);
     // Si la balise correspond, on récupère la valeur
-    if ( e.is(tag_exported_from_wasm) ) {
-      console.log(`getArg 0 : ${ e.getArg(tag_exported_from_wasm, 0) }`);
+    if (e.is(tag_exported_from_wasm)) {
+      console.log(`getArg 0 : ${e.getArg(tag_exported_from_wasm, 0)}`);
     }
   });
 ```

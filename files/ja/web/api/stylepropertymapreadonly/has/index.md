@@ -10,7 +10,7 @@ slug: Web/API/StylePropertyMapReadOnly/has
 ## 構文
 
 ```js
-var boolean = StylePropertyMapReadOnly.has(property)
+var boolean = StylePropertyMapReadOnly.has(property);
 ```
 
 ### 引数

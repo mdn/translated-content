@@ -45,7 +45,7 @@ import "module-name";
 本例在當前作用域插入了 `myModule` 變數，並把所有來自 `/modules/my-module.js` 檔案的模塊導出。
 
 ```js
-import * as myModule from '/modules/my-module.js';
+import * as myModule from "/modules/my-module.js";
 ```
 
 這裡會用到指定的模塊名（在此為 myModule）訪問導出來的命名空間。例如說引入模塊有 `doAllTheAmazingThings()` 的話，就可以這麼寫：
@@ -59,7 +59,7 @@ myModule.doAllTheAmazingThings();
 給定由 `my-module` 導出的模塊，稱作 `myExport` 物件與數值，無論是顯性（因為整個模塊被導出了）與隱性（使用 {{jsxref("Statements/export", "export")}} 宣告），這裡就在當前的作用域插入 `myExport`。
 
 ```js
-import {myExport} from '/modules/my-module.js';
+import { myExport } from "/modules/my-module.js";
 ```
 
 ### 從模塊引入數個導出
@@ -67,7 +67,7 @@ import {myExport} from '/modules/my-module.js';
 例在當前作用域插入了 `foo` 與 `bar`。
 
 ```js
-import {foo, bar} from '/modules/my-module.js';
+import { foo, bar } from "/modules/my-module.js";
 ```
 
 ### 使用便利的 alias 引入或導出
@@ -75,8 +75,7 @@ import {foo, bar} from '/modules/my-module.js';
 在引入時，可以重新命名導出的模塊。例如說，這裡就就在目前作用域插入 `shortName` 變數。
 
 ```js
-import {reallyReallyLongModuleExportName as shortName}
-  from '/modules/my-module.js';
+import { reallyReallyLongModuleExportName as shortName } from "/modules/my-module.js";
 ```
 
 ### 引入時重命名數個導出
@@ -86,8 +85,8 @@ import {reallyReallyLongModuleExportName as shortName}
 ```js
 import {
   reallyReallyLongModuleExportName as shortName,
-  anotherLongModuleName as short
-} from '/modules/my-module.js';
+  anotherLongModuleName as short,
+} from "/modules/my-module.js";
 ```
 
 ### 僅作為副作用引入模塊
@@ -95,7 +94,7 @@ import {
 僅作為副作用（side effect）引入整個模塊，而不直接引入任何東西。這樣會在不引入實際數值的情況下，執行整個模塊的程式。
 
 ```js
-import '/modules/my-module.js';
+import "/modules/my-module.js";
 ```
 
 ### 引入預設
@@ -105,20 +104,20 @@ import '/modules/my-module.js';
 最簡單的預設引入：
 
 ```js
-import myDefault from '/modules/my-module.js';
+import myDefault from "/modules/my-module.js";
 ```
 
 It is also possible to use the default syntax with the ones seen above (namespace imports or named imports). In such cases, the default import will have to be declared first. For instance:
 
 ```js
-import myDefault, * as myModule from '/modules/my-module.js';
+import myDefault, * as myModule from "/modules/my-module.js";
 // myModule used as a namespace
 ```
 
 或是：
 
 ```js
-import myDefault, {foo, bar} from '/modules/my-module.js';
+import myDefault, { foo, bar } from "/modules/my-module.js";
 // specific, named imports
 ```
 
@@ -127,16 +126,15 @@ import myDefault, {foo, bar} from '/modules/my-module.js';
 `import` 關鍵字也能透過函式呼叫引入之。在這種情況下，該函式回傳 promise。
 
 ```js
-import('/modules/my-module.js')
-  .then((module) => {
-    // 在模塊內作點事情
-  });
+import("/modules/my-module.js").then((module) => {
+  // 在模塊內作點事情
+});
 ```
 
 這方法也支援關鍵字 await。
 
 ```js
-let module = await import('/modules/my-module.js');
+let module = await import("/modules/my-module.js");
 ```
 
 ## 示例
@@ -149,24 +147,25 @@ let module = await import('/modules/my-module.js');
 function getJSON(url, callback) {
   let xhr = new XMLHttpRequest();
   xhr.onload = function () {
-    callback(this.responseText)
+    callback(this.responseText);
   };
-  xhr.open('GET', url, true);
+  xhr.open("GET", url, true);
   xhr.send();
 }
 
 export function getUsefulContents(url, callback) {
-  getJSON(url, data => callback(JSON.parse(data)));
+  getJSON(url, (data) => callback(JSON.parse(data)));
 }
 ```
 
 ### 主要程式：main.js
 
 ```js
-import { getUsefulContents } from '/modules/file.js';
+import { getUsefulContents } from "/modules/file.js";
 
-getUsefulContents('http://www.example.com',
-    data => { doSomethingUseful(data); });
+getUsefulContents("http://www.example.com", (data) => {
+  doSomethingUseful(data);
+});
 ```
 
 ### 動態引入
@@ -176,14 +175,14 @@ This example shows how to load functionality on to a page based on a user action
 ```js
 const main = document.querySelector("main");
 for (const link of document.querySelectorAll("nav > a")) {
-  link.addEventListener("click", e => {
+  link.addEventListener("click", (e) => {
     e.preventDefault();
 
-    import('/modules/my-module.js')
-      .then(module => {
+    import("/modules/my-module.js")
+      .then((module) => {
         module.loadPageInto(main);
       })
-      .catch(err => {
+      .catch((err) => {
         main.textContent = err.message;
       });
   });
@@ -204,4 +203,4 @@ for (const link of document.querySelectorAll("nav > a")) {
 - [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
 - [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
-- [Axel Rauschmayer's book: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+- [Axel Rauschmayer's book: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)

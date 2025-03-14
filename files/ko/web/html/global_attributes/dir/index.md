@@ -1,20 +1,27 @@
 ---
 title: dir
 slug: Web/HTML/Global_attributes/dir
-tags:
-  - BiDi
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/dir
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`dir`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 요소의 쓰기 방향을 나타내는 열거형 특성입니다.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-dir.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: dir", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
+```html interactive-example
+<p dir="rtl">
+  This paragraph is in English but incorrectly goes right to left.
+</p>
+<p dir="ltr">This paragraph is in English and correctly goes left to right.</p>
+
+<hr />
+
+<p>هذه الفقرة باللغة العربية ولكن بشكل خاطئ من اليسار إلى اليمين.</p>
+<p dir="auto">
+  هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين إلى اليسار.
+</p>
+```
 
 가능한 값은 다음과 같습니다.
 
@@ -35,7 +42,7 @@ translation_of: Web/HTML/Global_attributes/dir
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.dir")}}
+{{Compat}}
 
 ## 같이 보기
 

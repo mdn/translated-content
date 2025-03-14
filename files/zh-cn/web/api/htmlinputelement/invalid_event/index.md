@@ -1,5 +1,5 @@
 ---
-title: 'HTMLInputElement: invalid event'
+title: "HTMLInputElement: invalid event"
 slug: Web/API/HTMLInputElement/invalid_event
 ---
 
@@ -28,7 +28,7 @@ slug: Web/API/HTMLInputElement/invalid_event
   </tbody>
 </table>
 
-这个事件可用于展示提交表单时所出现的问题的概览。当表单提交时，若任一表单控件无效，则会触发 `invalid` 事件。对可提交元素有效性的检查是在提交父元素 {{HtmlElement("form")}} 之前或调用父元素 `<form>` 或元素自己的 [`checkValidity()`](/zh-CN/docs/Learn/Forms#constraint_validation_api) 方法之后。
+这个事件可用于展示提交表单时所出现的问题的概览。当表单提交时，若任一表单控件无效，则会触发 `invalid` 事件。对可提交元素有效性的检查是在提交父元素 {{HtmlElement("form")}} 之前或调用父元素 `<form>` 或元素自己的 [`checkValidity()`](/zh-CN/docs/Learn_web_development/Extensions/Forms#constraint_validation_api) 方法之后。
 
 这个事件不会在 [`blur`](/zh-CN/docs/Web/API/Element/blur_event) 事件中触发。
 
@@ -41,28 +41,34 @@ slug: Web/API/HTMLInputElement/invalid_event
 ```html
 <form action="#">
   <ul>
-    <li><label>Enter an integer between 1 and 10: <input type="number" min="1" max="10" required></label></li>
-    <li><input type="submit" value="submit"></li>
+    <li>
+      <label
+        >Enter an integer between 1 and 10:
+        <input type="number" min="1" max="10" required
+      /></label>
+    </li>
+    <li><input type="submit" value="submit" /></li>
   </ul>
-</form><p id="log"></p>
+</form>
+<p id="log"></p>
 ```
 
 ### JavaScript
 
 ```js
-const input = document.querySelector('input')
-const log = document.getElementById('log')
+const input = document.querySelector("input");
+const log = document.getElementById("log");
 
-input.addEventListener('invalid', logValue)
+input.addEventListener("invalid", logValue);
 
 function logValue(e) {
-  log.textContent += e.target.value
+  log.textContent += e.target.value;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 

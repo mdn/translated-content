@@ -20,7 +20,8 @@ hwb(194 0% 0% / .5) /* #00c3ff avec 50% d'opacité */
 
 ### Valeurs
 
-> **Note :** La fonction `hwb()` **n'utilise pas** de virgule pour séparer les valeurs des arguments, et la valeur alpha optionnelle doit être précédée d'une barre oblique (`/`) si elle est fournie.
+> [!NOTE]
+> La fonction `hwb()` **n'utilise pas** de virgule pour séparer les valeurs des arguments, et la valeur alpha optionnelle doit être précédée d'une barre oblique (`/`) si elle est fournie.
 
 - `hwb(H W B[ / A])`
 

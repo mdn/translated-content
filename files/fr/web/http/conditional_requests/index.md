@@ -1,12 +1,6 @@
 ---
-title: 'HTTP : Requêtes conditionnelles'
+title: "HTTP : Requêtes conditionnelles"
 slug: Web/HTTP/Conditional_requests
-tags:
-  - Conditional Requests
-  - Guide
-  - HTTP
-translation_of: Web/HTTP/Conditional_requests
-original_slug: Web/HTTP/Requêtes_conditionnelles
 ---
 
 {{HTTPSidebar}}
@@ -19,8 +13,8 @@ Les requêtes conditionnelles HTTP s'exécutent différemment en fonction de la 
 
 Les comportements différents sont définis par la méthode qu'utilise la requête et par un ensemble d'en-têtes propres aux préconditions :
 
-- Pour une méthode [safe](/fr/docs/Glossary/safe) comme [`GET`](/fr/docs/Web/HTTP/Methods/GET), qui est généralement utilisée pour récupérer un document, la requête conditionnelle peut être utilisée afin de renvoyer le document uniquement si c'est pertinent. Cela économise de la bande passante.
-- Pour les méthodes [unsafe](/fr/docs/Glossary/safe) comme [`PUT`](/fr/docs/Web/HTTP/Methods/PUT), qui permet généralement d'uploader un document, la requête conditionnelle peut servir à charger le document, uniquement si l'original sur lequel la requête est basée est le même que celui stocké sur le serveur.
+- Pour une méthode [safe](/fr/docs/Glossary/Safe) comme [`GET`](/fr/docs/Web/HTTP/Methods/GET), qui est généralement utilisée pour récupérer un document, la requête conditionnelle peut être utilisée afin de renvoyer le document uniquement si c'est pertinent. Cela économise de la bande passante.
+- Pour les méthodes [unsafe](/fr/docs/Glossary/Safe) comme [`PUT`](/fr/docs/Web/HTTP/Methods/PUT), qui permet généralement d'uploader un document, la requête conditionnelle peut servir à charger le document, uniquement si l'original sur lequel la requête est basée est le même que celui stocké sur le serveur.
 
 ## Validateurs
 
@@ -89,7 +83,7 @@ Un téléchargement partiel de fichiers est une fonctionnalité de HTTP qui perm
 
 ![Un téléchargement a été stoppé et seule une partie du contenu a été récupérée.](httpresume1.png)
 
-Un serveur qui supporte le téléchargement partiel le diffuse en envoyant un en-tête [`Accept-Ranges`](/fr/docs/Web/HTTP/Headers/Accept-Ranges). Quand il la reçoit, le client peut reprendre le téléchargement en envoyant un en-tête de requête [`Ranges`](/fr/docs/Web/HTTP/Headers/Ranges) avec les données manquantes :
+Un serveur qui supporte le téléchargement partiel le diffuse en envoyant un en-tête [`Accept-Ranges`](/fr/docs/Web/HTTP/Headers/Accept-Ranges). Quand il la reçoit, le client peut reprendre le téléchargement en envoyant un en-tête de requête [`Ranges`](/fr/docs/Web/HTTP/Headers/Range) avec les données manquantes :
 
 ![Le client reprend la requête en indiquant l'intervalle dont il a besoin et les préconditions en vérifiant les validateurs de la requêtes obtenues partiellement.](httpresume2.png)
 

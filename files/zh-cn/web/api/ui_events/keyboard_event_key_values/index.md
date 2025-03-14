@@ -3,11 +3,13 @@ title: Key Values
 slug: Web/API/UI_Events/Keyboard_event_key_values
 ---
 
+{{DefaultAPISidebar("UI Events")}}
+
 下列表格列出了不同范畴的键的标准键值，以及这些键的一般作用。对应的，通用平台上可用的虚拟键码也包含其中。
 
 Learn how to use these key values in JavaScript using [KeyboardEvent.key](/zh-CN/docs/Web/API/KeyboardEvent/key)
 
-[Special Values](#Special_values) | [Modifier Keys](#Modifier_keys) | [Whitespace Keys](#Whitespace_keys) | [Navigation Keys](#Navigation_keys) | [Editing Keys](#Editing_keys) | [UI Keys](#UI_keys) | [Device Keys](#Device_keys) | [IME and Composition Keys](#IME_and_composition_keys) | [Function Keys](#Function_keys) | [Phone Keys](#Phone_keys) | [Multimedia Keys](#Multimedia_keys) | [Audio Control Keys](#Audio_control_keys) | [TV Control Keys](#TV_control_keys) | [Media Controller Keys](#Media_controller_keys) | [Speech Recognition Keys](#Speech_recognition_keys) | [Document Keys](#Document_keys) | [Application Selector Keys](#Application_selector_keys) | [Browser Control Keys](#Browser_control_keys) | [Numeric Keypad Keys](#Numeric_keypad_keys)
+[Special Values](#special_values) | [Modifier Keys](#modifier_keys) | [Whitespace Keys](#whitespace_keys) | [Navigation Keys](#navigation_keys) | [Editing Keys](#editing_keys) | [UI Keys](#ui_keys) | [Device Keys](#device_keys) | [IME and Composition Keys](#ime_and_composition_keys) | [Function Keys](#function_keys) | [Phone Keys](#phone_keys) | [Multimedia Keys](#multimedia_keys) | [Audio Control Keys](#audio_control_keys) | [TV Control Keys](#tv_control_keys) | [Media Controller Keys](#media_controller_keys) | [Speech Recognition Keys](#speech_recognition_keys) | [Document Keys](#document_keys) | [Application Selector Keys](#application_selector_keys) | [Browser Control Keys](#browser_control_keys) | [Numeric Keypad Keys](#numeric_keypad_keys)
 
 ## Special values
 
@@ -91,7 +93,7 @@ Learn how to use these key values in JavaScript using [KeyboardEvent.key](/zh-CN
     <tr>
       <td><code>"AltGraph"</code> [5]</td>
       <td>
-        <kbd>AltGr</kbd>或<kbd>AltGraph</kbd>（Alternate Graphics）键。 启用 ISO
+        <kbd>AltGr</kbd>或<kbd>AltGraph</kbd>（Alternate Graphics）键。启用 ISO
         Level 3 移位修改器（其中<kbd>Shift</kbd>是 2 级修改器）。
       </td>
       <td></td>
@@ -115,7 +117,7 @@ Learn how to use these key values in JavaScript using [KeyboardEvent.key](/zh-CN
     </tr>
     <tr>
       <td><code>"CapsLock"</code></td>
-      <td>大写锁定键。 打开和关闭大写字符锁以进行后续输入。</td>
+      <td>大写锁定键。打开和关闭大写字符锁以进行后续输入。</td>
       <td><code>VK_CAPITAL</code> (0x14)</td>
       <td><code>kVK_CapsLock</code> (0x39)</td>
       <td>
@@ -194,7 +196,7 @@ Learn how to use these key values in JavaScript using [KeyboardEvent.key](/zh-CN
     <tr>
       <td><code>"Meta"</code> [1]</td>
       <td>
-        <kbd>Meta</kbd>键。 允许发出特殊命令输入。
+        <kbd>Meta</kbd>键。允许发出特殊命令输入。
         这是<kbd>Windows</kbd>徽标键，或<kbd>Mac</kbd>键盘上的<kbd>Command</kbd>或⌘键。
       </td>
       <td><code>VK_LWIN</code> (0x5B)<br /><code>VK_RWIN</code> (0x5C)</td>
@@ -303,7 +305,7 @@ Learn how to use these key values in JavaScript using [KeyboardEvent.key](/zh-CN
   </thead>
 </table>
 
-\[1] In Internet Explorer 9, as well as in all versions of Firefox, the <kbd>Windows</kbd> key is reported as `"OS"` instead of as `"Meta"`. This will be changed in Firefox per {{bug(1232918)}}. Until that's fixed, these keys are returned as `"OS"` by Firefox: `VK_LWIN` (0x5B) and `VK_RWIN` (0x5C) on Windows, and `GDK_KEY_Super_L (0xFFEB)`, `GDK_KEY_Super_R (0xFFEC)`, `GDK_KEY_Hyper_L (0xFFED)`, and `GDK_KEY_Hyper_R (0xFFEE)` on Linux.
+\[1] In Internet Explorer 9, as well as in all versions of Firefox, the <kbd>Windows</kbd> key is reported as `"OS"` instead of as `"Meta"`. This will be changed in Firefox per [Firefox bug 1232918](https://bugzil.la/1232918). Until that's fixed, these keys are returned as `"OS"` by Firefox: `VK_LWIN` (0x5B) and `VK_RWIN` (0x5C) on Windows, and `GDK_KEY_Super_L (0xFFEB)`, `GDK_KEY_Super_R (0xFFEC)`, `GDK_KEY_Hyper_L (0xFFED)`, and `GDK_KEY_Hyper_R (0xFFEE)` on Linux.
 
 \[2] Internet Explorer 9 reports `"Scroll"` instead of `"ScrollLock"` for the <kbd>Scroll Lock</kbd> key.
 
@@ -311,7 +313,7 @@ Learn how to use these key values in JavaScript using [KeyboardEvent.key](/zh-CN
 
 \[4] Firefox generates the key value `"OS`" for the <kbd>Super</kbd> and <kbd>Hyper</kbd> keys, instead of `"Super"` and `"Hyper"`.
 
-\[5] Chrome 67 and Firefox 63 now correctly interpret the right <kbd>Alt</kbd> key for keyboard layouts which map that key to <kbd>AltGr</kbd>. See Firefox bug {{bug(900750)}} and [Chrome bug 25503](https://bugs.chromium.org/p/chromium/issues/detail?id=25503) for further details.
+\[5] Chrome 67 and Firefox 63 now correctly interpret the right <kbd>Alt</kbd> key for keyboard layouts which map that key to <kbd>AltGr</kbd>. See Firefox bug [Firefox bug 900750](https://bugzil.la/900750) and [Chrome bug 25503](https://bugs.chromium.org/p/chromium/issues/detail?id=25503) for further details.
 
 ## Whitespace keys
 
@@ -3074,11 +3076,12 @@ Because modern remote controls for media devices often include buttons beyond th
 The values below are derived in part form a number of consumer electronics technical specifications:
 
 - [DTV Application Software Environment](http://atsc.org/standard/a100-dtv-application-software-environment-level-1-dase-1/) (part of the [ATSC](https://zh.wikipedia.org/wiki/ATSC) specification)
-- [Open Cable Application Platform 1.1.3](http://www.cablelabs.com/specifications/OC-SP-OCAP1.1.3-100603.pdf)
+- [Open Cable Application Platform 1.1.3](https://www.cablelabs.com/specifications/OC-SP-OCAP1.1.3-100603.pdf)
 - [ANSI/CEA-2014-B](https://shop.cta.tech/products/web-based-protocol-and-framework-for-remote-user-interface-on-upnp-networks-and-the-internet): Web-based Protocol and Framework for Remote User Interface on UPnP™ Networks and the Internet
-- [Android KeyEvent key code values](http://developer.android.com/reference/android/view/KeyEvent.html)
+- [Android KeyEvent key code values](https://developer.android.com/reference/android/view/KeyEvent.html)
 
-> **备注：** Remote controls typically include keys whose values are already defined elsewhere, such as under [Multimedia keys](#multimedia_keys) or [Audio control keys](#audio_control_keys). Those keys' values will match what's documented in those tables.
+> [!NOTE]
+> Remote controls typically include keys whose values are already defined elsewhere, such as under [Multimedia keys](#multimedia_keys) or [Audio control keys](#audio_control_keys). Those keys' values will match what's documented in those tables.
 
 <table class="no-markdown">
   <thead>
@@ -4572,7 +4575,8 @@ Some keyboards include special keys for controlling Web browsers. Those keys fol
 
 These keys are found on the keyboard's numeric keypad. However, not all are present on every keyboard. Although typical numeric keypads have numeric keys from <kbd>0</kbd> to <kbd>9</kbd> (encoded as `"0"` through `"9"`), some multimedia keyboards include additional number keys for higher numbers.
 
-> **备注：** The <kbd>10</kbd> key, if present, generates events with the `key` value of `"0"`.
+> [!NOTE]
+> The <kbd>10</kbd> key, if present, generates events with the `key` value of `"0"`.
 
 <table class="no-markdown">
   <thead>

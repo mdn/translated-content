@@ -1,7 +1,6 @@
 ---
-title: ':not()'
+title: :not()
 slug: Web/CSS/:not
-original_slug: Web/CSS/:not()
 ---
 
 {{CSSRef}}
@@ -15,7 +14,7 @@ La [pseudoclase](/es/docs/Web/CSS/Pseudo-classes) **`:not()`** de [CSS](/es/docs
 }
 ```
 
-> **Nota:**
+> [!NOTE]
 >
 > - Se pueden escribir selectores inútiles usando esta pseudoclase. Por ejemplo, `:not(*)` coincide con cualquier elemento que no sea un elemento, por lo que la regla nunca se aplicará.
 > - Esta pseudoclase puede aumentar la [especificidad](/es/docs/Web/CSS/Specificity) de una regla. Por ejemplo, `#foo:not(#bar)` coincidirá con el mismo elemento que el `#foo` más simple, pero tiene una especificidad más alta.
@@ -26,7 +25,8 @@ La [pseudoclase](/es/docs/Web/CSS/Pseudo-classes) **`:not()`** de [CSS](/es/docs
 
 La pseudoclase `:not()` requiere una lista separada por comas de uno o más selectores como argumento. La lista no debe contener otro selector de negación o un [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements).
 
-> **Advertencia:** La capacidad de enumerar más de un selector es experimental y aún no es ampliamente compatible.
+> [!WARNING]
+> La capacidad de enumerar más de un selector es experimental y aún no es ampliamente compatible.
 
 {{csssyntax}}
 
@@ -79,4 +79,4 @@ body :not(.crazy, .fancy) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.not")}}
+{{Compat}}

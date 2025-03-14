@@ -1,28 +1,36 @@
 ---
 title: Cuantificadores
-slug: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
-tags:
-  - Expresiones Regulares
-  - Guía
-  - JavaScript
-  - Referencia
-  - cuantificadores
-  - regex
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
-original_slug: Web/JavaScript/Guide/Regular_Expressions/Cuantificadores
+slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
 ---
 
 {{jsSidebar("JavaScript Guide")}}
 
 Los cuantificadores indican el número de caracteres o expresiones que deben coincidir.
 
-{{EmbedInteractiveExample("pages/js/regexp-quantifiers.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp quantifiers", "taller")}}
+
+```js interactive-example
+const ghostSpeak = "booh boooooooh";
+const regexpSpooky = /bo{3,}h/;
+console.log(ghostSpeak.match(regexpSpooky));
+// Expected output: Array ["boooooooh"]
+
+const modifiedQuote = "[He] ha[s] to go read this novel [Alice in Wonderland].";
+const regexpModifications = /\[.*?\]/g;
+console.log(modifiedQuote.match(regexpModifications));
+// Expected output: Array ["[He]", "[s]", "[Alice in Wonderland]"]
+
+const regexpTooGreedy = /\[.*\]/g;
+console.log(modifiedQuote.match(regexpTooGreedy));
+// Expected output: Array ["[He] ha[s] to go read this novel [Alice in Wonderland]"]
+```
 
 ## Tipos
 
 La siguiente tabla también está duplicada en {{JSxRef("../Guide/Regular_Expressions/Cheatsheet", "esta hoja de referencia")}}. No olvides editarla también, ¡gracias!
 
-> **Nota:** A continuación, _elemento_ se refiere no solo a caracteres individuales, sino que también incluye {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "clases de caracteres")}}, {{JSxRef("../Guide/Regular_Expressions/Unicode_Property_Escapes", "escapes de propiedades Unicode")}}, {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "grupos y rangos")}}.
+> [!NOTE]
+> A continuación, _elemento_ se refiere no solo a caracteres individuales, sino que también incluye {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "clases de caracteres")}}, {{JSxRef("../Guide/Regular_Expressions/Unicode_Property_Escapes", "escapes de propiedades Unicode")}}, {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "grupos y rangos")}}.
 
 <table class="standard-table">
     <thead>
@@ -107,11 +115,12 @@ var palabraDeUnaLetra = /\b\w\b/g;
 var palabraNoTanLarga = /\b\w{1,6}\b/g;
 var palabraLaaaaarga = /\b\w{10,}\b/g;
 
-var frase = "¿Por qué me tengo que sentar a estudiar las tablas de multiplicar?";
+var frase =
+  "¿Por qué me tengo que sentar a estudiar las tablas de multiplicar?";
 
 console.table(frase.match(palabraDeUnaLetra)); // ["a"]
-console.table(frase.match(palabraNoTanLarga));    // ["Por", "qu", "me", "tengo", "que", "sentar", "a", "las", "tablas", "de"]
-console.table(frase.match(palabraLaaaaarga));      // ["multiplicar"]
+console.table(frase.match(palabraNoTanLarga)); // ["Por", "qu", "me", "tengo", "que", "sentar", "a", "las", "tablas", "de"]
+console.table(frase.match(palabraLaaaaarga)); // ["multiplicar"]
 ```
 
 ### Caracter opcional
@@ -153,9 +162,7 @@ console.log(texto.match(regexpNoCodiciosa));
 
 ## Especificaciones
 
-| Especificación                                                                           |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-quantifier', 'RegExp: Quantifiers')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

@@ -1,14 +1,22 @@
 ---
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
-original_slug: Web/JavaScript/Reference/Global_Objects/Array/filtro
 ---
 
 {{JSRef}}
 
 O método **`filter()`** cria um novo array com todos os elementos que passaram no teste implementado pela função fornecida.
 
-{{EmbedInteractiveExample("pages/js/array-filter.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.filter()", "shorter")}}
+
+```js interactive-example
+const words = ["spray", "elite", "exuberant", "destruction", "present"];
+
+const result = words.filter((word) => word.length > 6);
+
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+```
 
 ## Sintaxe
 
@@ -77,16 +85,16 @@ var arr = [
   { id: 0 },
   { id: 3 },
   { id: 12.2 },
-  { },
+  {},
   { id: null },
   { id: NaN },
-  { id: 'undefined' }
+  { id: "undefined" },
 ];
 
 var invalidEntries = 0;
 
 function filterByID(obj) {
-  if ('id' in obj && typeof(obj.id) === 'number' && !isNaN(obj.id)) {
+  if ("id" in obj && typeof obj.id === "number" && !isNaN(obj.id)) {
     return true;
   } else {
     invalidEntries++;
@@ -96,10 +104,10 @@ function filterByID(obj) {
 
 var arrByID = arr.filter(filterByID);
 
-console.log('Filtered Array\n', arrByID);
+console.log("Filtered Array\n", arrByID);
 // [{ id: 15 }, { id: -1 }, { id: 0 }, { id: 3 }, { id: 12.2 }]
 
-console.log('Number of Invalid Entries = ', invalidEntries);
+console.log("Number of Invalid Entries = ", invalidEntries);
 // Number of Invalid Entries = 4
 ```
 
@@ -108,35 +116,37 @@ console.log('Number of Invalid Entries = ', invalidEntries);
 O exemplo a seguir usa `filter()` para filtrar o conteúdo de um array baseado em um critério de busca
 
 ```js
-var fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+var fruits = ["apple", "banana", "grapes", "mango", "orange"];
 
 /**
  * Array filters items based on search criteria (query)
  */
 function filterItems(query) {
-  return fruits.filter(function(el) {
-      return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
-  })
+  return fruits.filter(function (el) {
+    return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
+  });
 }
 
-console.log(filterItems('ap')); // ['apple', 'grapes']
-console.log(filterItems('an')); // ['banana', 'mango', 'orange']
+console.log(filterItems("ap")); // ['apple', 'grapes']
+console.log(filterItems("an")); // ['banana', 'mango', 'orange']
 ```
 
 ### Implementação ES2015
 
 ```js
-const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+const fruits = ["apple", "banana", "grapes", "mango", "orange"];
 
 /**
  * Array filters items based on search criteria (query)
  */
 const filterItems = (query) => {
-  return fruits.filter(el => el.toLowerCase().indexOf(query.toLowerCase()) > -1);
+  return fruits.filter(
+    (el) => el.toLowerCase().indexOf(query.toLowerCase()) > -1,
+  );
 };
 
-console.log(filterItems('ap')); // ['apple', 'grapes']
-console.log(filterItems('an')); // ['banana', 'mango', 'orange']
+console.log(filterItems("ap")); // ['apple', 'grapes']
+console.log(filterItems("an")); // ['banana', 'mango', 'orange']
 ```
 
 ## Polyfill
@@ -145,8 +155,8 @@ console.log(filterItems('an')); // ['banana', 'mango', 'orange']
 
 ```js
 if (!Array.prototype.filter) {
-  Array.prototype.filter = function(fun/*, thisArg*/) {
-    'use strict';
+  Array.prototype.filter = function (fun /*, thisArg*/) {
+    "use strict";
 
     if (this === void 0 || this === null) {
       throw new TypeError();
@@ -154,7 +164,7 @@ if (!Array.prototype.filter) {
 
     var t = Object(this);
     var len = t.length >>> 0;
-    if (typeof fun !== 'function') {
+    if (typeof fun !== "function") {
       throw new TypeError();
     }
 
@@ -182,14 +192,11 @@ if (!Array.prototype.filter) {
 
 ## Especificações
 
-| Especificação                                                                                        | Status                   | Comentário                                         |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.20', 'Array.prototype.filter')}}             | {{Spec2('ES5.1')}} | Definição inicial. Implementada no JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.filter', 'Array.prototype.filter')}} | {{Spec2('ES6')}}     |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.filter")}}
+{{Compat}}
 
 ## Veja também
 

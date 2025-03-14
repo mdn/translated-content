@@ -1,96 +1,128 @@
 ---
-title: Navigator.registerProtocolHandler()
+title: Navigator：registerProtocolHandler() 方法
 slug: Web/API/Navigator/registerProtocolHandler
+l10n:
+  sourceCommit: f98675af9d0a80f33d7875c48cfdb41f71ed1de9
 ---
 
 {{APIRef("HTML DOM")}}{{securecontext_header}}
 
-**{{domxref("Navigator")}}** 的方法 **`registerProtocolHandler()`** 让 web 站点为自身注册用于打开或处理特定 URL 方案（又名协议）的能力。
+**{{domxref("Navigator")}}** 的 **`registerProtocolHandler()`** 方法让 web 站点为自身注册用于打开或处理特定 URL 方案（又名协议）的能力。
 
 举个例子，此 API 允许 Web 邮件站点打开 `mailto:` URL，或让 VoIP 站点打开 `tel:` URL。
 
+要注册协议处理器，网站在调用 `registerProtocolHandler()` 时传入要注册的协议和模板 URL。
+
+在用户激活使用来注册的协议的链接时，浏览器会将激活链接的 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 插入到处理器注册时提供的 URL 模板中，并将当前页面导航到生成的 URL。
+
+浏览器可能会要求用户确认是否允许页面处理该协议，无论是在注册协议时还是在用户激活链接时。
+
 ## 语法
 
+```js-nolint
+registerProtocolHandler(scheme, url)
 ```
-navigator.registerProtocolHandler(scheme, url, title);
-```
-
-> **备注：** 最近更新为 `navigator.registerProtocolHandler(scheme, url)`, 但目前没有浏览器支持该版本。
 
 ### 参数
 
 - `scheme`
-  - : 一个包含站点希望处理的协议的字符串。例如，你可以通过传入 `"sms"` 来注册处理 SMS 文本信息链接。
+
+  - : 一个包含站点希望处理的协议的方案字符串。
+
+    其可能是一个自定义方案，此时方案的名称：
+
+    - 以 `web+` 开始
+    - 在 `web+` 前缀之后至少包含一个字母
+    - 仅包含小写的 {{Glossary("ASCII")}} 字母。
+
+    否则，方案必须是以下值之一：
+
+    - `bitcoin`
+    - `ftp`
+    - `ftps`
+    - `geo`
+    - `im`
+    - `irc`
+    - `ircs`
+    - `magnet`
+    - `mailto`
+    - `matrix`
+    - `mms`
+    - `news`
+    - `nntp`
+    - `openpgp4fpr`
+    - `sftp`
+    - `sip`
+    - `sms`
+    - `smsto`
+    - `ssh`
+    - `tel`
+    - `urn`
+    - `webcal`
+    - `wtai`
+    - `xmpp`
+
 - `url`
 
-  - : 处理器的 URL，string 类型。这个字符串应该包含一个"%s"的占位符，其会被将要受理的文档的 [escaped](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) 链接所替换。这个链接（译者按：指将要受理的文档的 escaped 链接，也就是替换占位符的字符串）可能是一个真实的 URL，或者是一个电话号码，邮件地址之类的。
+  - : 一个包含处理器 URL 的字符串。该 URL 必须包含 `%s`（作为占位符），其会被将要处理且[经过转义的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) URL 所替换。
 
-    > **备注：** 这个处理器的 URL 必须以 `http` 或者 `https` 协议标记作为开头，最好是 `https` ，以满足一些浏览器出于安全考虑的要求。
+    处理器 URL 必须使用 `https` 方案，并且必须与尝试注册处理器的网页具有相同的{{glossary("origin", "来源")}}。
 
-- `title` {{Deprecated_Inline}}
+### 返回值
 
-  - : 一个用户可理解的处理器标题。标题会展示给用户，例如弹出对话框“允许这个站点处理 \[scheme] 链接吗？”或者在浏览器设置中列出注册的处理器时。
-
-    > **备注：** 出于欺骗的考虑，标题已从规范中删除，但当前所有的浏览器仍要求使用该标题。建议始终设置标题，因为支持更新规范的浏览器很可能会向后兼容，并且仍接受标题（但不使用它）。
+无（{{jsxref("undefined")}}）。
 
 ### 异常
 
-- 指定了一个非法的协议标记，例如一个浏览器自身的标记（`https:`, `about:` 等）。
-- 处理器 URL 的 [origin](/zh-CN/docs/Glossary/Origin) 与调用这个 API 的页面的 origin 不匹配。
-- 浏览器要求这个函数由安全的上下文调用。
-- 浏览器要求处理器的 URL 使用 HTTPS 协议。
+- `SecurityError` {{domxref("DOMException")}}
 
-- `SecurityError`
-  - : 用户代理阻止了处理器的注册。这可能是由于：
-- `SyntaxError`
-  - : 在指定的协议处理地址的字符串中缺失了 `%s` 占位符。
+  - : 用户代理阻止了注册。这可能是由于：
 
-## 允许的协议标记
+    - 注册方案（协议）无效，例如是浏览器自身所处理的方案（`https:`、`about:` 等）。
+    - 处理器 URL 的{{Glossary("origin", "来源")}}与调用该 API 的页面的来源不匹配。
+    - 处理器 URL 的方案不是 `https`。
 
-出于安全考虑，`registerProtocolHandler()` 严格限制了允许注册的协议标记。以 `web+` 作为前缀的方式可以注册一个自定义的标记协议，至少要有 5 个字符的长度 (包括 `web+` 前缀)，而且只能使用小写的 ASCII 字母作为名称。例如 `web+burger` ，如下面的[示例](#示例)所示。
-
-除此之外，还可以使用下文所列的白名单中的协议标记：
-
-- `bitcoin`
-- `geo`
-- `im`
-- `irc`
-- `ircs`
-- `magnet`
-- `mailto`
-- `mms`
-- `news`
-- `nntp`
-- `openpgp4fpr`
-- `sip`
-- `sms`
-- `smsto`
-- `ssh`
-- `tel`
-- `urn`
-- `webcal`
-- `wtai`
-- `xmpp`
+- `SyntaxError` {{domxref("DOMException")}}
+  - : 处理器 URL 中缺失占位符 `%s`。
 
 ## 示例
 
-如果您的网站是 `https://www.google.com/`，则可以为其注册一个协议处理程序来处理 `web+burger:`链接，如下所示：
+### 为 mailto 协议注册处理器
 
-```js
-navigator.registerProtocolHandler("web+burger",
-                                  "https://www.google.com/?uri=%s",
-                                  "Burger handler");
+网页使用非 `https` 协议来链接资源是非常常见的。例如，`mailto:` 协议。当 Web 作者想要为用户提供一个直接通过网页发送电子邮件的便捷方式时，可以使用 `mailto` 链接：
+
+```html
+<a href="mailto:webmaster@example.com">Web 管理员</a>
 ```
 
-这将创建一个处理程序，该处理程序允许使用 `web+burger:` 链接将用户发送到您的网站，并将访问的 Burger URL 插入`%s`占位符。
+当链接被激活时，浏览器应该启动默认的桌面应用程序来处理电子邮件。你可以认为这是一个*基于桌面平台*协议处理器。
 
-该脚本必须从与处理程序 URL 相同的源运行（因此， `https://www.google.com/`上的任何页面），并且处理程序 URL 必须为 `http`或 `https`。
+基于 Web 的协议处理器允许基于 Web 的应用程序参与这一过程。例如，`mail.example.org` 上的电子邮件 Web 应用程序可以使用以下代码注册来处理 `mailto` 链接：
 
-将通知用户您的代码要求注册协议处理程序，以便他们可以决定是否允许它。有关 `https://www.google.com/`上的示例，请参见以下屏幕截图：
+```js
+navigator.registerProtocolHandler("mailto", "https://mail.example.org/?to=%s");
+```
 
-![](protocolregister.png)
+此后，当用户点击网站上的 `mailto` 链接时，浏览器将（可能要求浏览器进行确认）导航到 `https://mail.example.org/?to=mailto:webmaster@example.com`。此页面可以解析 URL 参数来提取地址，并使用此地址来初始化电子邮件。
 
-> **备注：** "[Register a webmail service as mailto handler](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebContentHandlerRegistrar#Getting_most_recent_window)" 展示了如何从跨平台组件对象模块 (XPCOM) 中做到这一切。
+### 为自定义协议注册处理器
+
+在这个示例中，页面使用以下代码来注册 `web+burger` 协议的处理器：
+
+```js
+navigator.registerProtocolHandler(
+  "web+burger",
+  "https://burgers.example.org/?burger=%s",
+);
+```
+
+随后，用户访问包含如下链接的页面：
+
+```html
+<a href="web+burger:cheeseburger">芝士汉堡</a>
+```
+
+如果用户激活了 `web+burger` 链接，浏览器将（可能要求浏览器进行确认）导航到 `https://burgers.example.org/?burger=web+burger:cheeseburger`。
 
 ## 规范
 
@@ -99,11 +131,3 @@ navigator.registerProtocolHandler("web+burger",
 ## 浏览器兼容性
 
 {{Compat}}
-
-## 参见
-
-- [Web-based protocol handlers](/zh-CN/docs/Web-based_protocol_handlers)
-- [RegisterProtocolHandler Enhancing the Federated Web](http://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) at Mozilla Webdev
-- [Web Application APIs - Custom scheme and content handlers - Whitelisted schemes](http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#whitelisted-scheme)
-- [Register a webmail service as mailto handler](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebContentHandlerRegistrar#Getting_most_recent_window) shows how to do `registerProtocolHandler` from XPCOM scope.
-- [XPCOM Interface Reference > nsIWebContentHandlerRegistrar > registerContentHandler](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebContentHandlerRegistrar#registerProtocolHandler) - This shows how to use this function XPCOM scope

@@ -1,83 +1,72 @@
 ---
 title: Clients
 slug: Web/API/Clients
-tags:
-  - API
-  - Clients
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - TopicStub
-  - Workers
-translation_of: Web/API/Clients
+l10n:
+  sourceCommit: 2ef36a6d6f380e79c88bc3a80033e1d3c4629994
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
-The `Clients` interface provides access to {{domxref("Client")}} objects. Access it via `{{domxref("ServiceWorkerGlobalScope", "self")}}.clients` within a [service worker](/ko/docs/Web/API/ServiceWorker_API).
+`Clients` 인터페이스는 {{domxref("Client")}} 객체에 대한 접근을 제공합니다. [서비스 워커](/ko/docs/Web/API/Service_Worker_API) 내의 `{{domxref("ServiceWorkerGlobalScope", "self")}}.clients`를 통해 접근할 수 있습니다.
 
-## Methods
+## 인스턴스 메서드
 
 - {{domxref("Clients.get()")}}
-  - : Returns a {{jsxref("Promise")}} for a {{domxref("Client")}} matching a given {{domxref("Client.id", "id")}}.
+  - : 주어진 {{domxref("Client.id", "id")}}와 일치하는 {{domxref("Client")}}의 {{jsxref("Promise")}}를 반환합니다.
 - {{domxref("Clients.matchAll()")}}
-  - : Returns a {{jsxref("Promise")}} for an array of {{domxref("Client")}} objects. An options argument allows you to control the types of clients returned.
+  - : {{domxref("Client")}} 객체 배열의 {{jsxref("Promise")}}를 반환합니다. 옵션 인수를 사용하면 반환되는 클라이언트의 유형을 제어할 수 있습니다.
 - {{domxref("Clients.openWindow()")}}
-  - : Opens a new browser window for a given url and returns a {{jsxref("Promise")}} for the new {{domxref("WindowClient")}}.
+  - : 주어진 URL의 새 브라우저 창을 열고 새로운 {{domxref("WindowClient")}}의 {{jsxref("Promise")}}를 반환합니다.
 - {{domxref("Clients.claim()")}}
-  - : Allows an active service worker to set itself as the {{domxref("ServiceWorkerContainer.controller", "controller")}} for all clients within its {{domxref("ServiceWorkerRegistration.scope", "scope")}}.
+  - : 활성화된 서비스 워커가 자신의 {{domxref("ServiceWorkerRegistration.scope", "scope")}} 내 모든 클라이언트의 {{domxref("ServiceWorkerContainer.controller", "controller")}}로 설정될 수 있습니다.
 
-## Examples
+## 예제
 
-The following example shows an existing chat window or creates a new one when the user clicks a notification.
+다음 예제는 사용자가 알림을 클릭했을 때 기존 채팅 창을 보여주거나 새로운 채팅 창을 생성하는 것을 보여줍니다.
 
 ```js
-addEventListener('notificationclick', event => {
-  event.waitUntil(async function() {
-    const allClients = await clients.matchAll({
-      includeUncontrolled: true
-    });
+addEventListener("notificationclick", (event) => {
+  event.waitUntil(
+    (async () => {
+      const allClients = await clients.matchAll({
+        includeUncontrolled: true,
+      });
 
-    let chatClient;
+      let chatClient;
 
-    // Let's see if we already have a chat window open:
-    for (const client of allClients) {
-      const url = new URL(client.url);
+      // 채팅 창이 이미 열려 있는지 확인해 봅시다.
+      for (const client of allClients) {
+        const url = new URL(client.url);
 
-      if (url.pathname == '/chat/') {
-        // Excellent, let's use it!
-        client.focus();
-        chatClient = client;
-        break;
+        if (url.pathname === "/chat/") {
+          // 좋습니다, 이 창을 사용합시다!
+          client.focus();
+          chatClient = client;
+          break;
+        }
       }
-    }
 
-    // If we didn't find an existing chat window,
-    // open a new one:
-    if (!chatClient) {
-      chatClient = await clients.openWindow('/chat/');
-    }
+      // 기존 채팅 창을 찾지 못했다면,
+      // 새 창을 엽니다.
+      if (!chatClient) {
+        chatClient = await clients.openWindow("/chat/");
+      }
 
-    // Message the client:
-    chatClient.postMessage("New chat messages!");
-  }());
+      // 클라이언트에게 메시지를 보냅니다.
+      chatClient.postMessage("New chat messages!");
+    })(),
+  );
 });
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
-- [Using Service Workers](/ko/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
+- [서비스 워커 사용하기](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers)

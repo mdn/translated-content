@@ -1,42 +1,32 @@
 ---
 title: pkcs11.getModuleSlots()
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/getModuleSlots
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getModuleSlots
-  - pkcs11
-translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11/getModuleSlots
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Enumérer les emplacements d'un module. Cette fonction renvoie un tableau contenant une entrée pour chaque emplacement. Chaque entrée contient le nom de l'emplacement et, si l'emplacement contient un jeton, des informations sur le jeton.
 
 Vous ne pouvez appeler cela que pour un module installé dans Firefox
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var getting = browser.pkcs11.getModuleSlots(
-  name              // string
-)
+  name, // string
+);
 ```
 
 ### Paramètres
 
 - `name`
-  - : `string`. Nom du module. Cela doit correspondre à la propriété `name` dans le [manifest PKCS #11](/fr/Add-ons/WebExtensions/Native_manifests#PKCS_11_manifests) pour le module.
+  - : `string`. Nom du module. Cela doit correspondre à la propriété `name` dans le [manifest PKCS #11](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#pkcs_11_manifests) pour le module.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un tableau d'objets, un pour chaque emplacement auquel le module donne accès. Chaque objet a deux propriétés :
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un tableau d'objets, un pour chaque emplacement auquel le module donne accès. Chaque objet a deux propriétés :
 
 - `name`: le nom de l'emplacement
 - `token`: si un jeton est présent dans cet emplacement, un objet `Token`. Si aucun le jeton n'est présent dans l'emplacement, la propriété est `null`.
@@ -58,9 +48,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 Si le module n'a pas pu être trouvé ou qu'une autre erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pkcs11.getModuleSlots")}}
+{{Compat}}
 
 ## Exemples
 
@@ -77,14 +67,12 @@ function onGotSlots(slots) {
     if (slot.token) {
       console.log(`Contains token: ${slot.token.name}`);
     } else {
-      console.log('Is empty');
+      console.log("Is empty");
     }
   }
 }
 
-browser.pkcs11.installModule("my_module")
-.then(onInstalled)
-.then(onGotSlots);
+browser.pkcs11.installModule("my_module").then(onInstalled).then(onGotSlots);
 ```
 
 {{WebExtExamples}}

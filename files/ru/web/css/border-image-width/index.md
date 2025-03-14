@@ -1,7 +1,6 @@
 ---
 title: border-image-width
 slug: Web/CSS/border-image-width
-translation_of: Web/CSS/border-image-width
 ---
 
 {{CSSRef}}
@@ -72,16 +71,19 @@ border-image-width: unset;
 ### HTML Content
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
-   <head></head>
-   <body>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-      At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-      no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-   </body>
+  <head></head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+      voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+      clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+      amet.
+    </p>
+  </body>
 </html>
 ```
 
@@ -89,21 +91,19 @@ border-image-width: unset;
 
 ```css
 p {
-   border-image-source: url("https://mdn.mozillademos.org/files/10470/border.png");
-   border-image-slice: 30;
-   border-image-width: 20px;
-   border-image-repeat: round;
-   padding: 40px;
+  border-image-source: url("border.png");
+  border-image-slice: 30;
+  border-image-width: 20px;
+  border-image-repeat: round;
+  padding: 40px;
 }
 ```
 
-{{ EmbedLiveSample('Примеры', '480', '320', '', 'Web/CSS/border-image-width') }}
+{{ EmbedLiveSample('Примеры', '100%', '200') }}
 
 ## Спецификации
 
-| Specification                                                                                            | Status                                   | Comment            |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Backgrounds', '#border-image-width', 'border-image-width')}} | {{Spec2('CSS3 Backgrounds')}} | Initial definition |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

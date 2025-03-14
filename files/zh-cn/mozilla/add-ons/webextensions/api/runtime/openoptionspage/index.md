@@ -3,12 +3,14 @@ title: runtime.openOptionsPage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
 ---
 
-假如你的页面有[options page](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages)（设置页面）的定义，使用此方法打开它。这是一个异步方法，返回一个 `Promise` 对象。
+{{AddonSidebar}}
+
+假如你的页面有[options page](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages)（设置页面）的定义，使用此方法打开它。这是一个异步方法，返回一个 `Promise` 对象。
 
 ## 语法
 
 ```js
-var openingPage = browser.runtime.openOptionsPage()
+var openingPage = browser.runtime.openOptionsPage();
 ```
 
 ### 参数
@@ -42,9 +44,8 @@ opening.then(onOpened, onError);
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-openOptionsPage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.google.cn/docs/extensions/reference/api/runtime#method-openOptionsPage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

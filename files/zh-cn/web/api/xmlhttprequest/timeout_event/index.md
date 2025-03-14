@@ -3,6 +3,8 @@ title: timeout
 slug: Web/API/XMLHttpRequest/timeout_event
 ---
 
+{{APIRef("XMLHttpRequest API")}}
+
 当进度由于预定时间到期而终止时，会触发 `timeout` 事件。
 
 <table class="properties">
@@ -29,12 +31,12 @@ slug: Web/API/XMLHttpRequest/timeout_event
 ## 示例
 
 ```js
-var client = new XMLHttpRequest()
-  client.open("GET", "http://www.example.org/example.txt")
-  client.ontimeout = function(e) {
-    console.error("Timeout!!")
-  }
-  client.send()
+var client = new XMLHttpRequest();
+client.open("GET", "http://www.example.org/example.txt");
+client.ontimeout = function (e) {
+  console.error("Timeout!!");
+};
+client.send();
 ```
 
 ## 继承
@@ -49,6 +51,6 @@ var client = new XMLHttpRequest()
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)

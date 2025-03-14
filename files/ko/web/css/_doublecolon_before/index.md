@@ -1,43 +1,74 @@
 ---
-title: '::before (:before)'
+title: ::before
 slug: Web/CSS/::before
-tags:
-  - CSS
-  - Layout
-  - Pseudo-element
-  - Reference
-  - Web
-translation_of: Web/CSS/::before
+l10n:
+  sourceCommit: 632289fcc10e926d166e1b49e5ba3505de182856
 ---
+
 {{CSSRef}}
 
-CSS에서, **`::before`**는 선택한 요소의 첫 자식으로 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 하나 생성합니다. 보통 {{cssxref("content")}} 속성과 함께 짝지어, 요소에 장식용 콘텐츠를 추가할 때 사용합니다. 기본값은 인라인입니다.
+CSS에서, **`::before`** 는 선택된 요소의 첫번째 자식인 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 생성합니다. 이는 종종 {{cssxref("content")}} 속성을 활용하여 요소에 장식 콘텐츠를 추가하는 데에 사용됩니다. 기본적으로 인라인 형식입니다.
 
-```css
-/* 링크 앞에 하트 추가 */
-a::after {
-  content: "♥";
+{{InteractiveExample("CSS Demo: ::before", "tabbed-standard")}}
+
+```css interactive-example
+a {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+a::before {
+  content: "🔗";
+}
+
+.local-link::before {
+  content: url("/shared-assets/images/examples/firefox-logo.svg");
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
 }
 ```
 
-> **참고:** `::before`와 `::after`로 생성한 의사 요소는 [원본 요소의 서식 박스에 포함되므로](https://www.w3.org/TR/CSS2/generate.html#before-after-content), {{HTMLElement("img")}}나 {{HTMLElement("br")}} 등 [대체 요소](/ko/docs/Web/CSS/Replaced_element)에 적용할 수 없습니다.
+```html interactive-example
+<p>
+  Learning resources for web developers can be found all over the internet. Try
+  out
+  <a href="https://web.dev/">web.dev</a>,
+  <a href="https://www.w3schools.com/">w3schools.com</a> or our
+  <a href="https://developer.mozilla.org/" class="local-link">MDN web docs</a>.
+</p>
+```
+
+> [!NOTE] > `::before` 와 `::after` 로 생성된 의사 요소들은 마치 해당 요소가 적용된 요소의 직속 자식인 것처럼 생성된 박스입니다. 즉, 원본 요소의 직계 자식이기 때문에 {{htmlelement("img")}} 처럼 콘텐츠가 CSS 서식 모델의 범위를 벗어나는 [대체 요소](/ko/docs/Web/CSS/Replaced_element) 에는 적용할 수 없습니다.
 
 ## 구문
 
-{{csssyntax}}
+```css-nolint
+::before {
+  content: /* value */;
+  /* properties */
+}
+```
 
-> **참고:** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)와 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 구분하기 위해 CSS3부터`::before` 구문을 도입했습니다. 그러나 브라우저는 CSS2 구문인 `:before`도 허용합니다.
+[`content`](/ko/docs/Web/CSS/content) 속성이 정의되지 않았거나 유효하지 않은 값을 가지거나, 값으로 `normal` 이나 `none` 을 가지고 있다면 `::before` 가상 요소는 렌더되지 않고 `display: none` 이 설정된 것처럼 동작합니다.
+
+> **Note:** [선택자 레벨 3](https://drafts.csswg.org/selectors-3/#gen-content) 에서는 콜론 표기법인 `::before` 를 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements) 의 [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes) 의 하나로 소개합니다. 브라우저는 세미콜론 표기인 `:before` 도 수용하며, 이는 CSS2에서 소개되어 있습니다.
+
+## 접근성
+
+스크린 리더에서는 원활히 접근되지 않기 때문에 콘텐츠를 추가하기 위해 `::before` 의사 요소를 사용하는 것은 권장되지 않습니다.
 
 ## 예제
 
-### 인용 표시 추가
+### 인용 표시 추가하기
 
-One simple example of using `::before` pseudo-elements is to provide quotation marks. Here we use both `::before` and `{{Cssxref("::after")}}` to insert quotation characters.
+아래는 `::before` 의사 요소를 사용하여 인용 표시를 추가하는 예제입니다. 인용 문자를 추가하기 위해 `::before` 와 {{Cssxref("::after")}} 를 모두 사용합니다.
 
 #### HTML
 
 ```html
-<q>Some quotes,</q> he said, <q>are better than none.</q>
+<q>Some quotes</q>, he said, <q>are better than none.</q>
 ```
 
 #### CSS
@@ -54,42 +85,42 @@ q::after {
 }
 ```
 
-#### Result
+#### 결과
 
-{{EmbedLiveSample('인용_표시_추가', '500', '50', '')}}
+{{EmbedLiveSample('Adding_quotation_marks', '500', '50')}}
 
 ### 장식 예제
 
-We can style text or images in the {{cssxref("content")}} property almost any way we want.
+{{cssxref("content")}} 속성 내의 텍스트나 이미지 또한 원하는대로 수정할 수 있습니다.
 
 #### HTML
 
 ```html
-<span class="ribbon">Notice where the orange box is.</span>
+<span class="ribbon">오렌지색 박스가 어디에 있는지 보세요.</span>
 ```
 
 #### CSS
 
 ```css
 .ribbon {
-  background-color: #5BC8F7;
+  background-color: #5bc8f7;
 }
 
 .ribbon::before {
-  content: "Look at this orange box.";
-  background-color: #FFBA10;
+  content: "여기 오렌지색 박스가 있습니다.";
+  background-color: #ffba10;
   border-color: black;
   border-style: dotted;
 }
 ```
 
-#### Result
+#### 결과
 
-{{EmbedLiveSample('장식_예제', 450, 60)}}
+{{EmbedLiveSample('Decorative_example', 450, 60)}}
 
-### 할 일 목록
+### 투두 리스트
 
-In this example we will create a simple to-do list using pseudo-elements. This method can often be used to add small touches to the UI and improve user experience.
+이번 예제에서는 의사 요소를 활용하여 투두 리스트를 만듭니다. 여기서는 적은 공수를 들여 UI 와 사용자 경험을 향상시켰습니다.
 
 #### HTML
 
@@ -117,11 +148,11 @@ li {
 }
 
 li.done {
-  background: #CCFF99;
+  background: #ccff99;
 }
 
 li.done::before {
-  content: '';
+  content: "";
   position: absolute;
   border-color: #009933;
   border-style: solid;
@@ -138,23 +169,27 @@ li.done::before {
 #### JavaScript
 
 ```js
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-     ev.target.classList.toggle('done');
-  }
-}, false);
+const list = document.querySelector("ul");
+list.addEventListener(
+  "click",
+  (ev) => {
+    if (ev.target.tagName === "LI") {
+      ev.target.classList.toggle("done");
+    }
+  },
+  false,
+);
 ```
 
-Here is the above code example running live. Note that there are no icons used, and the check-mark is actually the `::before` that has been styled in CSS. Go ahead and get some stuff done.
+위 코드가 실행된 이후의 결과를 확인할 수 있습니다. 아무런 아이콘도 사용되지 않았고, 체크 표시는 보이는 바와 같이 CSS 내의 스타일에서 `::before` 에 설정된 것입니다. 몇 가지 일을 완료로 처리해 보세요.
 
-#### Result
+#### 결과
 
-{{EmbedLiveSample('할_일_목록', 400, 300)}}
+{{EmbedLiveSample('To-do_list', 400, 300)}}
 
-### 특수문자
+### 특수 문자
 
-As this is CSS; not HTML, you can **not** use markup entities in content values. If you need to use a special character, and can not enter it literally into your CSS content string, use a unicodeescape sequence, consistingof a backslash followed by the hexadecimal unicode value.
+HTML이 아니라 CSS라는 특성 때문에 마크업 요소들을 콘텐츠 값에 사용할 수 없습니다. 만일 특수 문자를 사용해야 하는데 CSS 콘텐츠 문자열에 직접 입력할 수 없는 경우, 백슬래시와 16진수 유니코드 값으로 구성된 유니코드 이스케이프 시퀀스를 사용하십시오.
 
 #### HTML
 
@@ -163,7 +198,7 @@ As this is CSS; not HTML, you can **not** use markup entities in content values.
   <li>Crack Eggs into bowl</li>
   <li>Add Milk</li>
   <li>Add Flour</li>
-  <li aria-current='step'>Mix thoroughly into a smooth batter</li>
+  <li aria-current="step">Mix thoroughly into a smooth batter</li>
   <li>Pour a ladleful of batter onto a hot, greased, flat frying pan</li>
   <li>Fry until the top of the pancake loses its gloss</li>
   <li>Flip it over and fry for a couple more minutes</li>
@@ -174,26 +209,25 @@ As this is CSS; not HTML, you can **not** use markup entities in content values.
 #### CSS
 
 ```css
-
 li {
-  padding:0.5em;
+  padding: 0.5em;
 }
 
-li[aria-current='step'] {
-  font-weight:bold;
+li[aria-current="step"] {
+  font-weight: bold;
 }
 
-li[aria-current='step']::after {
+li[aria-current="step"]::after {
   content: " \21E6"; /* Hexadecimal for Unicode Leftwards white arrow*/
   display: inline;
 }
 ```
 
-#### Result
+#### 결과
 
-{{EmbedLiveSample('특수문자', 400, 200)}}
+{{EmbedLiveSample('Special_characters', 400, 200)}}
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

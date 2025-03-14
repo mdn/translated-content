@@ -1,48 +1,68 @@
 ---
 title: TypedArray.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
+l10n:
+  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
 {{JSRef}}
 
-**`entries()`** メソッドは、配列内の各インデックスのキーと値のペアを含む新しい配列イテレーターオブジェクトを返します。
+**`entries()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の各インデックスのキーと値を含む新しい[配列のイテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。このメソッドは {{jsxref("Array.prototype.entries()")}} と同じアルゴリズムです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-entries.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.entries()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+const eArr = uint8.entries();
+
+eArr.next();
+eArr.next();
+
+console.log(eArr.next().value);
+// Expected output: Array [2, 30]
+```
 
 ## 構文
 
+```js-nolint
+entries()
 ```
-arr.entries()
-```
+
+### 引数
+
+なし。
 
 ### 返値
 
-新しい配列イテレーターオブジェクトです。
+新しい[配列イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)です。
+
+## 解説
+
+詳細については、 {{jsxref("Array.prototype.entries()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
 
 ## 例
 
-### for...of ループを使用した反復
+### for...of ループを使用した反復処理
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArray = arr.entries();
-// your browser must support for..of loop
-// and let-scoped variables in for loops
-for (let n of eArray) {
-  console.log(n);
+const array = new Uint8Array([10, 20, 30, 40, 50]);
+const arrayEntries = arr.entries();
+for (const element of arrayEntries) {
+  console.log(element);
 }
 ```
 
-### 代替の反復
+### 他の反復処理
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArr = arr.entries();
-console.log(eArr.next().value); // [0, 10]
-console.log(eArr.next().value); // [1, 20]
-console.log(eArr.next().value); // [2, 30]
-console.log(eArr.next().value); // [3, 40]
-console.log(eArr.next().value); // [4, 50]
+const array = new Uint8Array([10, 20, 30, 40, 50]);
+const arrayEntries = arr.entries();
+
+console.log(arrayEntries.next().value); // [0, 10]
+console.log(arrayEntries.next().value); // [1, 20]
+console.log(arrayEntries.next().value); // [2, 30]
+console.log(arrayEntries.next().value); // [3, 40]
+console.log(arrayEntries.next().value); // [4, 50]
 ```
 
 ## 仕様書
@@ -51,12 +71,15 @@ console.log(eArr.next().value); // [4, 50]
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.TypedArray.entries")}}
+{{Compat}}
 
 ## 関連情報
 
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [`TypedArray.prototype.entries` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.keys()")}}
 - {{jsxref("TypedArray.prototype.values()")}}
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- [`TypedArray.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
+- {{jsxref("Array.prototype.entries()")}}
+- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)

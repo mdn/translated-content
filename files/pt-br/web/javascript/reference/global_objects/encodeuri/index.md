@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/encodeURI
 
 A função **`encodeURI()`** codifica a [URI](/pt-BR/docs/Glossary/URI) substituindo cada instância de certos caracteres por um, dois, três ou quatro sequências de escape representando a codificação [UTF-8](/pt-BR/docs/Glossary/UTF-8) do caracter (será somente quatro sequências de escape para caracteres compostos de dois caracteres substitutos).
 
-{{EmbedInteractiveExample("pages/js/globalprops-encodeuri.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - encodeURI()")}}
+
+```js interactive-example
+const uri = "https://mozilla.org/?x=шеллы";
+const encoded = encodeURI(uri);
+console.log(encoded);
+// Expected output: "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+
+try {
+  console.log(decodeURI(encoded));
+  // Expected output: "https://mozilla.org/?x=шеллы"
+} catch (e) {
+  // Catches a malformed URI
+  console.error(e);
+}
+```
 
 ## Sintaxe
 
@@ -50,7 +65,7 @@ Não escapado:
 
 ```js
 var set1 = ";,/?:@&=+$#"; // Caracteres reservados
-var set2 = "-_.!~*'()";   // Marcas não reservadas
+var set2 = "-_.!~*'()"; // Marcas não reservadas
 var set3 = "ABC abc 123"; // Caracteres alfanuméricos + Espaço
 
 console.log(encodeURI(set1)); // ;,/?:@&=+$#
@@ -70,34 +85,32 @@ Um {{jsxref("URIError")}} será jogado se uma tentativa de codificar um substitu
 
 ```js
 // par alto-baixo ok
-console.log(encodeURI('\uD800\uDFFF'));
+console.log(encodeURI("\uD800\uDFFF"));
 
 // substituto alto solitário joga "URIError: malformed URI sequence"
-console.log(encodeURI('\uD800'));
+console.log(encodeURI("\uD800"));
 
 // substituto baixo solitário joga "URIError: malformed URI sequence"
-console.log(encodeURI('\uDFFF'));
+console.log(encodeURI("\uDFFF"));
 ```
 
 ### Codificando para IPv6
 
-Se você deseja seguir a [RFC3986](http://tools.ietf.org/html/rfc3986) mais recente para URLs, que faz colchetes ser reservado (para [IPv6](/pt-BR/docs/Glossary/IPv6)) e então não será codificado quando formando algo que possa ser parte da URL (como o host), o seguinte código pode ajudar:
+Se você deseja seguir a [RFC3986](https://tools.ietf.org/html/rfc3986) mais recente para URLs, que faz colchetes ser reservado (para [IPv6](/pt-BR/docs/Glossary/IPv6)) e então não será codificado quando formando algo que possa ser parte da URL (como o host), o seguinte código pode ajudar:
 
 ```js
 function fixedEncodeURI(str) {
-    return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']');
+  return encodeURI(str).replace(/%5B/g, "[").replace(/%5D/g, "]");
 }
 ```
 
 ## Especificações
 
-| Especificação                                                                |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-encodeuri-uri', 'encodeURI')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.encodeURI")}}
+{{Compat}}
 
 ## Veja também
 

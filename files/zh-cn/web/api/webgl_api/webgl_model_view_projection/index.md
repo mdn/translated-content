@@ -3,11 +3,12 @@ title: WebGL model view projection
 slug: Web/API/WebGL_API/WebGL_model_view_projection
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 本文探讨如何在 WebGL 项目中获取数据，并将其投影到适当的空间以在屏幕上显示。它假定了你具备用于平移，缩放和旋转的基本矩阵数学知识。它解释了组成 3D 场景时通常使用的三个核心矩阵：模型，视图和投影矩阵。
 
-> **备注：** 本文还可作为 [MDN 内容套件](https://github.com/TatumCreative/mdn-model-view-projection) 提供。它还使用 `MDN`全局对象下可用的 [实用函数](https://github.com/TatumCreative/mdn-webgl) 集合。
+> [!NOTE]
+> 本文还可作为 [MDN 内容套件](https://github.com/TatumCreative/mdn-model-view-projection) 提供。它还使用 `MDN`全局对象下可用的 [实用函数](https://github.com/TatumCreative/mdn-webgl) 集合。
 
 ## 模型、视图、投影矩阵
 
@@ -21,7 +22,7 @@ WebGL 空间中的点和多边形的个体转化由基本的转换矩阵（例�
 
 在 WebGL 程序中，数据通常上传到具有自己的坐标系统的 GPU 上，然后顶点着色器将这些点转换到一个称为**裁剪空间**的特殊坐标系上。延展到裁剪空间之外的任何数据都会被剪裁并且不会被渲染。如果一个三角形超出了该空间的边界，则将其裁切成新的三角形，并且仅保留新三角形在裁剪空间中的部分。
 
-![A 3d graph showing clip space in WebGL.](clip-space-graph.svg)
+![A 3d graph showing clip space in WebGL.](clip_space_graph.svg)
 
 上面的图像裁剪空间的可视化，所有点都必须被包含在其中。它是一个角在 (-1, -1, -1)，对角在 (1, 1, 1)，中心点在 (0, 0, 0) 的每边 2 个单位的立方体。裁剪空间使用的这个两个立方米坐标系称为归一化设备坐标（NDC）。在研究和使用 WebGL 代码时，你可能时不时的会使用这个术语。
 
@@ -31,7 +32,8 @@ WebGL 空间中的点和多边形的个体转化由基本的转换矩阵（例�
 
 本示例将创建一个自定义 WebGL 对象，该对象将在屏幕上绘制一个 2D 框。
 
-> **备注：** 每一个 WebGL 示例代码在此 [github repo](https://github.com/TatumCreative/mdn-model-view-projection/tree/master/lessons) 中可找到，并按章节组织。此外，每个章节底部都有一个 JSFiddle 链接。
+> [!NOTE]
+> 每一个 WebGL 示例代码在此 [github repo](https://github.com/TatumCreative/mdn-model-view-projection/tree/master/lessons) 中可找到，并按章节组织。此外，每个章节底部都有一个 JSFiddle 链接。
 
 #### WebGLBox Constructor
 
@@ -39,9 +41,8 @@ WebGL 空间中的点和多边形的个体转化由基本的转换矩阵（例�
 
 ```js
 function WebGLBox() {
-
   // 设置 canvas 和 WebGL 上下文
-  this.canvas = document.getElementById('canvas');
+  this.canvas = document.getElementById("canvas");
   this.canvas.width = window.innerWidth;
   this.canvas.height = window.innerHeight;
   this.gl = MDN.createContext(canvas);
@@ -49,17 +50,20 @@ function WebGLBox() {
   var gl = this.gl;
 
   // 设置一个 WebGL 程序，任何 MDN 对象相关的部分在本文之外定义
-  this.webglProgram = MDN.createWebGLProgramFromIds(gl, 'vertex-shader', 'fragment-shader');
+  this.webglProgram = MDN.createWebGLProgramFromIds(
+    gl,
+    "vertex-shader",
+    "fragment-shader",
+  );
   gl.useProgram(this.webglProgram);
 
   // 保存 attribute 和 uniform 位置
-  this.positionLocation = gl.getAttribLocation(this.webglProgram, 'position');
-  this.colorLocation = gl.getUniformLocation(this.webglProgram, 'color');
+  this.positionLocation = gl.getAttribLocation(this.webglProgram, "position");
+  this.colorLocation = gl.getUniformLocation(this.webglProgram, "color");
 
   // 告诉 WebGL 在绘制时测试深度，所以如果一个正方形后面有另一个正方形
   // 另一个正方形不会被绘制
   gl.enable(gl.DEPTH_TEST);
-
 }
 ```
 
@@ -68,22 +72,32 @@ function WebGLBox() {
 现在，我们将创建一个在屏幕上绘制框的方法。
 
 ```js
-WebGLBox.prototype.draw = function(settings) {
-
+WebGLBox.prototype.draw = function (settings) {
   // 创建一下 attribute 数据; 这些是最终绘制到屏幕上的三角形
   // 有两个形成一个正方形
 
   var data = new Float32Array([
-
     //Triangle 1
-    settings.left,  settings.bottom, settings.depth,
-    settings.right, settings.bottom, settings.depth,
-    settings.left,  settings.top,    settings.depth,
+    settings.left,
+    settings.bottom,
+    settings.depth,
+    settings.right,
+    settings.bottom,
+    settings.depth,
+    settings.left,
+    settings.top,
+    settings.depth,
 
     //Triangle 2
-    settings.left,  settings.top,    settings.depth,
-    settings.right, settings.bottom, settings.depth,
-    settings.right, settings.top,    settings.depth
+    settings.left,
+    settings.top,
+    settings.depth,
+    settings.right,
+    settings.bottom,
+    settings.depth,
+    settings.right,
+    settings.top,
+    settings.depth,
   ]);
 
   // 使用 WebGL 将其绘制到屏幕上
@@ -107,7 +121,7 @@ WebGLBox.prototype.draw = function(settings) {
 
   // 在屏幕上绘制该三角形
   gl.drawArrays(gl.TRIANGLES, 0, 6);
-}
+};
 ```
 
 着色器是用 GLSL 编写的代码片段，它接收我们的点数据并最终将它们渲染到屏幕上。为了方便起见，这些着色器存储在 {{htmlelement("script")}} 元素之中，该元素通过自定义函数 `MDN.createWebGLProgramFromIds()` 引入程序中。这个方法是为这些教程编写的 [实用函数](https://github.com/TatumCreative/mdn-webgl) 集合的一部分，此处不再赘述。此函数用于处理获取一些 GLSL 源代码并将其编译为 WebGL 程序的基础操作。该函数具有三个参数 - 用于渲染程序的上下文，包含顶点着色器的 {{htmlelement("script")}} 元素的 ID 和包含片段着色器的 {{htmlelement("script")}} 元素的 ID。顶点着色器放置顶点，片段着色器为每个像素着色。
@@ -146,14 +160,13 @@ var box = new WebGLBox();
 
 ```js
 box.draw({
+  top: 0.5, // x
+  bottom: -0.5, // x
+  left: -0.5, // y
+  right: 0.5, // y
 
-  top    : 0.5,             // x
-  bottom : -0.5,            // x
-  left   : -0.5,            // y
-  right  : 0.5,             // y
-
-  depth  : 0,               // z
-  color  : [1, 0.4, 0.4, 1] // red
+  depth: 0, // z
+  color: [1, 0.4, 0.4, 1], // red
 });
 ```
 
@@ -161,14 +174,13 @@ box.draw({
 
 ```js
 box.draw({
+  top: 0.9, // x
+  bottom: 0, // x
+  left: -0.9, // y
+  right: 0.9, // y
 
-  top    : 0.9,             // x
-  bottom : 0,               // x
-  left   : -0.9,            // y
-  right  : 0.9,             // y
-
-  depth  : 0.5,             // z
-  color  : [0.4, 1, 0.4, 1] // green
+  depth: 0.5, // z
+  color: [0.4, 1, 0.4, 1], // green
 });
 ```
 
@@ -176,14 +188,13 @@ box.draw({
 
 ```js
 box.draw({
+  top: 1, // x
+  bottom: -1, // x
+  left: -1, // y
+  right: 1, // y
 
-  top    : 1,               // x
-  bottom : -1,              // x
-  left   : -1,              // y
-  right  : 1,               // y
-
-  depth  : -1.5,            // z
-  color  : [0.4, 0.4, 1, 1] // blue
+  depth: -1.5, // z
+  color: [0.4, 0.4, 1, 1], // blue
 });
 ```
 
@@ -209,11 +220,10 @@ gl_Position = vec4(position, 1.0);
 
 显而易见的问题是：“为什么要增加维度？”。事实证明，这种增加允许使用许多不错的技术来处理 3D 数据。这个增加的维度将透视的概念引入坐标系中。将其放置在适当的位置后，我们可以将 3D 坐标映射到 2D 空间中，从而允许两条平行线当它们延伸到远方时相交。 `w` 的值被用作该坐标的其他分量放除数，因此 `x`, `y` 和 `z` 的真实值被计算为 `x/w` , `y/w` 和 `z/w`（然后 `w` 也 `w/w` , 变成 1）。
 
-三维点定义在典型的笛卡尔坐标系中。增加的第四维将这一点变为 [齐次坐标](https://zh.wikipedia.org/wiki/homogeneous_coordinates) 。它仍然代表 3D 空间中的一个点，并且可以通过一对简单的函数轻松地演示如何构造这种类型的坐标。
+三维点定义在典型的笛卡尔坐标系中。增加的第四维将这一点变为[齐次坐标](https://zh.wikipedia.org/wiki/齐次坐标)。它仍然代表 3D 空间中的一个点，并且可以通过一对简单的函数轻松地演示如何构造这种类型的坐标。
 
 ```js
 function cartesianToHomogeneous(point) {
-
   var x = point[0];
   var y = point[1];
   var z = point[2];
@@ -222,13 +232,12 @@ function cartesianToHomogeneous(point) {
 }
 
 function homogeneousToCartesian(point) {
-
   var x = point[0];
   var y = point[1];
   var z = point[2];
   var w = point[3];
 
-  return [x/w, y/w, z/w];
+  return [x / w, y / w, z / w];
 }
 ```
 
@@ -253,16 +262,33 @@ homogeneousToCartesian([10, 4, 5, 0]);
 ```js
 // 重新定义三角形以使用 W 分量
 var data = new Float32Array([
-
   //Triangle 1
-  settings.left,  settings.bottom, settings.depth, settings.w,
-  settings.right, settings.bottom, settings.depth, settings.w,
-  settings.left,  settings.top,    settings.depth, settings.w,
+  settings.left,
+  settings.bottom,
+  settings.depth,
+  settings.w,
+  settings.right,
+  settings.bottom,
+  settings.depth,
+  settings.w,
+  settings.left,
+  settings.top,
+  settings.depth,
+  settings.w,
 
   //Triangle 2
-  settings.left,  settings.top,    settings.depth, settings.w,
-  settings.right, settings.bottom, settings.depth, settings.w,
-  settings.right, settings.top,    settings.depth, settings.w
+  settings.left,
+  settings.top,
+  settings.depth,
+  settings.w,
+  settings.right,
+  settings.bottom,
+  settings.depth,
+  settings.w,
+  settings.right,
+  settings.top,
+  settings.depth,
+  settings.w,
 ]);
 ```
 
@@ -280,15 +306,14 @@ void main() {
 
 ```js
 box.draw({
+  top: 0.5, // x
+  bottom: -0.5, // x
+  left: -0.5, // y
+  right: 0.5, // y
+  w: 0.7, // w - 放大这个盒子
 
-  top    : 0.5,             // x
-  bottom : -0.5,            // x
-  left   : -0.5,            // y
-  right  : 0.5,             // y
-  w      : 0.7,             // w - 放大这个盒子
-
-  depth  : 0,               // z
-  color  : [1, 0.4, 0.4, 1] // red
+  depth: 0, // z
+  color: [1, 0.4, 0.4, 1], // red
 });
 ```
 
@@ -296,15 +321,14 @@ box.draw({
 
 ```js
 box.draw({
+  top: 0.9, // x
+  bottom: 0, // x
+  left: -0.9, // y
+  right: 0.9, // y
+  w: 1.1, // w - 缩小这个盒子
 
-  top    : 0.9,             // x
-  bottom : 0,               // x
-  left   : -0.9,            // y
-  right  : 0.9,             // y
-  w      : 1.1,             // w - 缩小这个盒子
-
-  depth  : 0.5,             // z
-  color  : [0.4, 1, 0.4, 1] // green
+  depth: 0.5, // z
+  color: [0.4, 1, 0.4, 1], // green
 });
 ```
 
@@ -312,15 +336,14 @@ box.draw({
 
 ```js
 box.draw({
+  top: 1, // x
+  bottom: -1, // x
+  left: -1, // y
+  right: 1, // y
+  w: 1.5, // w - 把这个盒子带回范围内
 
-  top    : 1,               // x
-  bottom : -1,              // x
-  left   : -1,              // y
-  right  : 1,               // y
-  w      : 1.5,             // w - 把这个盒子带回范围内
-
-  depth  : -1.5,             // z
-  color  : [0.4, 0.4, 1, 1] // blue
+  depth: -1.5, // z
+  color: [0.4, 0.4, 1, 1], // blue
 });
 ```
 
@@ -346,8 +369,7 @@ box.draw({
 以下代码示例在 `CubeDemo` 对象上定义了一个创建模型矩阵的方法。它使用了自定义函数来创建和乘以 [MDN WebGL](https://github.com/TatumCreative/mdn-webgl) 共享代码中定义的矩阵。新的函数如下：
 
 ```js
-CubeDemo.prototype.computeModelMatrix = function(now) {
-
+CubeDemo.prototype.computeModelMatrix = function (now) {
   // 缩小 50%
   var scale = MDN.scaleMatrix(0.5, 0.5, 0.5);
 
@@ -363,9 +385,9 @@ CubeDemo.prototype.computeModelMatrix = function(now) {
   // 相乘，确定以相反的顺序读取它们
   this.transforms.model = MDN.multiplyArrayOfMatrices([
     position, // step 4
-    rotateY,  // step 3
-    rotateX,  // step 2
-    scale     // step 1
+    rotateY, // step 3
+    rotateX, // step 2
+    scale, // step 1
   ]);
 };
 ```
@@ -373,13 +395,17 @@ CubeDemo.prototype.computeModelMatrix = function(now) {
 为了在着色器中使用它，必须将其设置在 uniforms 的位置。uniforms 的位置保存在 `locations` 对象中，如下所示：
 
 ```js
-this.locations.model = gl.getUniformLocation(webglProgram, 'model');
+this.locations.model = gl.getUniformLocation(webglProgram, "model");
 ```
 
 最后，将 uniforms 设置在那个位置，这就把矩阵交给了 GPU。
 
 ```js
-gl.uniformMatrix4fv(this.locations.model, false, new Float32Array(this.transforms.model));
+gl.uniformMatrix4fv(
+  this.locations.model,
+  false,
+  new Float32Array(this.transforms.model),
+);
 ```
 
 在着色器中，每个位置顶点首先被转换为齐次坐标（vec4 对象），然后与模型矩阵相乘。
@@ -388,7 +414,8 @@ gl.uniformMatrix4fv(this.locations.model, false, new Float32Array(this.transform
 gl_Position = model * vec4(position, 1.0);
 ```
 
-> **备注：** 在 JavaScript 中，矩阵乘法需要自定义函数，而在着色器中，它使用了内置在语言中的简单的 \* 运算。
+> [!NOTE]
+> 在 JavaScript 中，矩阵乘法需要自定义函数，而在着色器中，它使用了内置在语言中的简单的 \* 运算。
 
 ### 结果
 
@@ -445,12 +472,7 @@ gl_Position = vec4(transformedPosition.xyz, w);
 填充 w 分量的最后一步实际上可以用一个简单的矩阵完成。从 identity 矩阵开始：
 
 ```js
-var identity = [
-  1, 0, 0, 0,
-  0, 1, 0, 0,
-  0, 0, 1, 0,
-  0, 0, 0, 1,
-];
+var identity = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
 
 MDN.multiplyPoint(identity, [2, 3, 4, 1]);
 //> [2, 3, 4, 1]
@@ -459,12 +481,7 @@ MDN.multiplyPoint(identity, [2, 3, 4, 1]);
 然后将最后一列的 1 向上移动一个空格。
 
 ```js
-var copyZ = [
-  1, 0, 0, 0,
-  0, 1, 0, 0,
-  0, 0, 1, 1,
-  0, 0, 0, 0,
-];
+var copyZ = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0];
 
 MDN.multiplyPoint(copyZ, [2, 3, 4, 1]);
 //> [2, 3, 4, 4]
@@ -472,14 +489,26 @@ MDN.multiplyPoint(copyZ, [2, 3, 4, 1]);
 
 但是，在最后一个示例中，我们执行了 `(z + 1) * scaleFactor`:
 
-```
+```js
 var scaleFactor = 0.5;
 
 var simpleProjection = [
-  1, 0, 0, 0,
-  0, 1, 0, 0,
-  0, 0, 1, scaleFactor,
-  0, 0, 0, scaleFactor,
+  1,
+  0,
+  0,
+  0,
+  0,
+  1,
+  0,
+  0,
+  0,
+  0,
+  1,
+  scaleFactor,
+  0,
+  0,
+  0,
+  scaleFactor,
 ];
 
 MDN.multiplyPoint(simpleProjection, [2, 3, 4, 1]);
@@ -489,22 +518,22 @@ MDN.multiplyPoint(simpleProjection, [2, 3, 4, 1]);
 进一步展开我们可以看到它是如何工作的：
 
 ```js
-var x = (2 * 1) + (3 * 0) + (4 * 0) + (1 * 0)
-var y = (2 * 0) + (3 * 1) + (4 * 0) + (1 * 0)
-var z = (2 * 0) + (3 * 0) + (4 * 1) + (1 * 0)
-var w = (2 * 0) + (3 * 0) + (4 * scaleFactor) + (1 * scaleFactor)
+var x = 2 * 1 + 3 * 0 + 4 * 0 + 1 * 0;
+var y = 2 * 0 + 3 * 1 + 4 * 0 + 1 * 0;
+var z = 2 * 0 + 3 * 0 + 4 * 1 + 1 * 0;
+var w = 2 * 0 + 3 * 0 + 4 * scaleFactor + 1 * scaleFactor;
 ```
 
 最后一行可以简化为：
 
 ```js
-w = (4 * scaleFactor) + (1 * scaleFactor)
+w = 4 * scaleFactor + 1 * scaleFactor;
 ```
 
 然后将 scaleFactor 提取出来，我们得到：
 
 ```js
-w = (4 + 1) * scaleFactor
+w = (4 + 1) * scaleFactor;
 ```
 
 这与我们在前面示例中使用的 `(z + 1) * scaleFactor` 完全相同。
@@ -512,15 +541,25 @@ w = (4 + 1) * scaleFactor
 在 box demo 中，添加了一个额外的 `.computeSimpleProjectionMatrix()` 方法。在 `.draw()` 方法中调用，并将比例因子传递给它。结果应该与上一个示例相同：
 
 ```js
-CubeDemo.prototype.computeSimpleProjectionMatrix = function(scaleFactor) {
-
+CubeDemo.prototype.computeSimpleProjectionMatrix = function (scaleFactor) {
   this.transforms.projection = [
-    1, 0, 0, 0,
-    0, 1, 0, 0,
-    0, 0, 1, scaleFactor,
-    0, 0, 0, scaleFactor
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    scaleFactor,
+    0,
+    0,
+    0,
+    scaleFactor,
   ];
-
 };
 ```
 
@@ -543,9 +582,9 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 透视矩阵是一种可以满足这些要求的投影矩阵。也开始涉及数学更多的内容，这些示例中将不做充分解释。简而言之，它结合了除以 w（与前面的例子相同）和基于 [相似三角形](https://en.wikipedia.org/wiki/Similarity_%28geometry%29) 相似三角形的一些巧妙操作。如果你想阅读有关其背后数学的完整说明，请查看以下一些链接：
 
-- [OpenGL 投影矩阵](http://www.songho.ca/opengl/gl_projectionmatrix.html)
+- [OpenGL 投影矩阵](https://www.songho.ca/opengl/gl_projectionmatrix.html)
 - [透视投影](http://ogldev.atspace.co.uk/www/tutorial12/tutorial12.html)
-- [尝试了解 WebGL 中透视矩阵背后的数学](http://stackoverflow.com/questions/28286057/trying-to-understand-the-math-behind-the-perspective-matrix-in-webgl/28301213#28301213)
+- [尝试了解 WebGL 中透视矩阵背后的数学](https://stackoverflow.com/questions/28286057/trying-to-understand-the-math-behind-the-perspective-matrix-in-webgl/28301213#28301213)
 
 关于下面使用的透视矩阵，需要注意的一件重要的事是它会翻转 z 轴。在裁剪空间中，z+ 原理观察者，而使用此矩阵，它朝向观察者。
 
@@ -554,18 +593,34 @@ gl_Position = projection * model * vec4(position, 1.0);
 让我们看一下 `perspectiveMatrix()` 函数，该函数计算了透视矩阵。
 
 ```js
-MDN.perspectiveMatrix = function(fieldOfViewInRadians, aspectRatio, near, far) {
-
+MDN.perspectiveMatrix = function (
+  fieldOfViewInRadians,
+  aspectRatio,
+  near,
+  far,
+) {
   var f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
   var rangeInv = 1 / (near - far);
 
   return [
-    f / aspectRatio, 0,                          0,   0,
-    0,               f,                          0,   0,
-    0,               0,    (near + far) * rangeInv,  -1,
-    0,               0,  near * far * rangeInv * 2,   0
+    f / aspectRatio,
+    0,
+    0,
+    0,
+    0,
+    f,
+    0,
+    0,
+    0,
+    0,
+    (near + far) * rangeInv,
+    -1,
+    0,
+    0,
+    near * far * rangeInv * 2,
+    0,
   ];
-}
+};
 ```
 
 此函数的四个参数是：
@@ -581,8 +636,7 @@ MDN.perspectiveMatrix = function(fieldOfViewInRadians, aspectRatio, near, far) {
     在最新版本的盒子 demo 中， `computeSimpleProjectionMatrix()` 函数已替换为 `computePerspectiveMatrix()` 函数。
 
 ```js
-CubeDemo.prototype.computePerspectiveMatrix = function() {
-
+CubeDemo.prototype.computePerspectiveMatrix = function () {
   var fieldOfViewInRadians = Math.PI * 0.5;
   var aspectRatio = window.innerWidth / window.innerHeight;
   var nearClippingPlaneDistance = 1;
@@ -592,7 +646,7 @@ CubeDemo.prototype.computePerspectiveMatrix = function() {
     fieldOfViewInRadians,
     aspectRatio,
     nearClippingPlaneDistance,
-    farClippingPlaneDistance
+    farClippingPlaneDistance,
   );
 };
 ```
@@ -630,8 +684,6 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 我们没有向后和向左移动相机，而是对盒子应用了逆变换：我们将盒子向后移动 1 米，然后向右移动 10 厘米。从两个物体的角度来看，结果是一样的。
 
-**<<< insert image(s) here >>>**
-
 最后一步是创建**视图矩阵**，该矩阵将转换场景中的对象，以便对它们进行定位以模拟相机当前位置与方向。目前的代码可以在世界空间中移动立方体并投影所有内容以获得透视图，但我们仍然无法移动相机。
 
 想象一下使用物理摄像机拍摄电影。你可以自由地将相机放到任何你想放置的位置，并对准任何你选择的方向。为了在 3D 图形中对此进行仿真，我们使用视图矩阵来模拟物理相机的位置和旋转。
@@ -641,19 +693,17 @@ gl_Position = projection * model * vec4(position, 1.0);
 以下的 `computeViewMatrix()` 函数通过向内和向外，向左和向右移动的视图矩阵来激活视图矩阵。
 
 ```js
-CubeDemo.prototype.computeViewMatrix = function(now) {
-
+CubeDemo.prototype.computeViewMatrix = function (now) {
   var moveInAndOut = 20 * Math.sin(now * 0.002);
   var moveLeftAndRight = 15 * Math.sin(now * 0.0017);
 
   // 各个方向移动相机
-  var position = MDN.translateMatrix(moveLeftAndRight, 0, 50 + moveInAndOut );
+  var position = MDN.translateMatrix(moveLeftAndRight, 0, 50 + moveInAndOut);
 
   // 相乘，确保以相反的顺序读取它们
   var matrix = MDN.multiplyArrayOfMatrices([
-
     // 练习：旋转相机的视角
-    position
+    position,
   ]);
 
   // 翻转相机的运动操作，因为我们实际上是
@@ -696,7 +746,7 @@ gl_Position = projection * view * model * vec4(position, 1.0);
 - 向视图矩阵中添加一些旋转矩阵以四处看看。
 - 最后，跟踪鼠标的位置。使用 2 个旋转矩阵可以根据用户鼠标在屏幕上的位置上下移动相机。
 
-**参见**
+## 参见
 
 - [WebGL](/zh-CN/docs/Web/API/WebGL_API)
-- [3D projection](https://zh.wikipedia.org/wiki/3D_projection)
+- [三维投影](https://zh.wikipedia.org/wiki/三维投影)

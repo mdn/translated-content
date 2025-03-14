@@ -1,22 +1,33 @@
 ---
 title: Constructeur Intl.Segmenter()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
-browser-compat: javascript.builtins.Intl.Segmenter.constructor
 ---
 
 {{JSRef}}
 
 Le constructeur **`Intl.Segmenter()`** crée un objet [`Intl.Segmenter`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) permettant la segmentation d'un texte selon la locale.
 
-{{EmbedInteractiveExample("pages/js/intl-segmenter.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Segmenter")}}
+
+```js interactive-example
+const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
+const string1 = "Que ma joie demeure";
+
+const iterator1 = segmenterFr.segment(string1)[Symbol.iterator]();
+
+console.log(iterator1.next().value.segment);
+// Expected output: 'Que'
+
+console.log(iterator1.next().value.segment);
+// Expected output: ' '
+```
 
 ## Syntaxe
 
 ```js
-new Intl.Segmenter()
-new Intl.Segmenter(locales)
-new Intl.Segmenter(locales, options)
+new Intl.Segmenter();
+new Intl.Segmenter(locales);
+new Intl.Segmenter(locales, options);
 ```
 
 ### Paramètres
@@ -42,7 +53,7 @@ new Intl.Segmenter(locales, options)
 
 ### Valeur de retour
 
-Une nouvelle instance de [`Intl.Segments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments).
+Une nouvelle instance de [`Intl.Segments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments).
 
 ## Exemples
 
@@ -52,8 +63,11 @@ Dans l'exemple suivant, on compte les mots d'une chaîne en japonais (où le dé
 
 ```js
 const text = "吾輩は猫である。名前はたぬき。";
-const japaneseSegmenter = new Intl.Segmenter('ja-JP', {granularity: 'word'});
-console.log([...japaneseSegmenter.segment(text)].filter(segment => segment.isWordLike).length);
+const japaneseSegmenter = new Intl.Segmenter("ja-JP", { granularity: "word" });
+console.log(
+  [...japaneseSegmenter.segment(text)].filter((segment) => segment.isWordLike)
+    .length,
+);
 // affiche 8 car le texte est segmenté en '吾輩'|'は'|'猫'|'で'|'ある'|'。'|'名前'|'は'|'たぬき'|'。'
 ```
 

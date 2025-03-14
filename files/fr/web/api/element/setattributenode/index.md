@@ -1,49 +1,71 @@
 ---
-title: element.setAttributeNode
+title: "Element : méthode setAttributeNode()"
 slug: Web/API/Element/setAttributeNode
-tags:
-  - API
-  - DOM
-  - Element
-  - Méthode
-  - Reference
-translation_of: Web/API/Element/setAttributeNode
+l10n:
+  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}
 
-`setAttributeNode()` ajoute un nouveau nœud `Attr` à l'élément courant.
+La méthode **`setAttributeNode()`**, rattachée à l'interface [`Element`](/fr/docs/Web/API/Element), ajoute un nouveau nœud [`Attr`](/fr/docs/Web/API/Attr) à l'élément courant.
+
+S'il n'est pas nécessaire de travailler sur le nœud [`Attr`](/fr/docs/Web/API/Attr) avant de l'ajouter (par exemple en le clonant depuis un autre élément), on pourra utiliser la méthode [`setAttribute()`](/fr/docs/Web/API/Element/setAttribute) à la place.
 
 ## Syntaxe
 
-```js
-var replacedAttr = element.setAttributeNode(attribute);
+```js-nolint
+setAttributeNode(attribute)
 ```
 
-- `attribute` est le nœud `Attr` à définir sur l'élément.
-- `replacedAttr` est le nœud d'attribut remplacé, renvoyé par la fonction, s'il y en avait un.
+### Paramètres
 
-## Exemple
+- `attribute`
+  - : Le nœud `Attr` à définir sur l'élément.
+
+### Valeur de retour
+
+L'éventuel nœud [`Attr`](/fr/docs/Web/API/Attr) remplacé.
+
+## Exemples
+
+Cet exemple copie l'attribut `class` d'un élément à l'autre.
+
+### HTML
+
+```html
+<div id="un" class="coucou">un</div>
+<div id="deux">deux</div>
+```
+
+### JavaScript
 
 ```js
-// <div id="one" align="left">one</div>
-// <div id="two">two</div>
-var d1 = document.getElementById("one");
-var d2 = document.getElementById("two");
-var a = d1.getAttributeNode("align");
-d2.setAttributeNode(a);
-alert(d2.attributes[1].value)
-// retourne: `left'
+let d1 = document.getElementById("un");
+let d2 = document.getElementById("deux");
+let a = d1.getAttributeNode("class");
+
+d2.setAttributeNode(a.cloneNode(true));
+
+// Affiche "coucou" dans la console
+console.log(d2.attributes[1].value);
 ```
 
 ## Notes
 
 Si l'attribut nommé existe déjà sur l'élément, cet attribut est remplacé par le nouveau et le nœud remplacé est renvoyé.
 
-Cette méthode est peu utilisée. On lui préfère souvent {{domxref("Element.setAttribute()")}} pour modifier la valeur d'un attribut d'élément.
+## Spécifications
 
-{{DOMAttributeMethods()}}
+{{Specifications}}
 
-## Spécification
+## Compatibilité des navigateurs
 
-- [DOM Level 2 Core&nbsp;: setAttributeNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-887236154) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-887236154) (non normative (Introduit dans [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttributeNode))
+{{Compat}}
+
+## Voir aussi
+
+- [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute)
+- [`Document.createAttribute()`](/fr/docs/Web/API/Document/createAttribute)
+- [`Element.getAttributeNode()`](/fr/docs/Web/API/Element/getAttributeNode)
+- [`Element.removeAttributeNode()`](/fr/docs/Web/API/Element/removeAttributeNode)
+- [`Element.setAttributeNS()`](/fr/docs/Web/API/Element/setAttributeNS)

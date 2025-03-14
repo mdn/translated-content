@@ -1,13 +1,6 @@
 ---
 title: <polygon>
 slug: Web/SVG/Element/polygon
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphique
-translation_of: Web/SVG/Element/polygon
-browser-compat: svg.elements.polygon
 ---
 
 {{SVGRef}}
@@ -17,7 +10,11 @@ L'élément **`<polygon>`** délimite une forme close composée d'un groupe de p
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -43,14 +40,14 @@ html,body,svg { height:100% }
 
 ### Attributs Globaux
 
-- [Attribut de base](/fr/docs/Web/SVG/Attribute/Core)
+- [Attribut de base](/fr/docs/Web/SVG/Attribute)
   - : Principalement: {{SVGAttr('id')}} et {{SVGAttr('tabindex')}}
-- [Attribut de style](/fr/docs/Web/SVG/Attribute/Styling)
+- [Attribut de style](/fr/docs/Web/SVG/Attribute)
   - : {{SVGAttr('class')}} et {{SVGAttr('style')}}
-- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute/Conditional_Processing)
+- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute)
   - : Principalement: {{SVGAttr('requiredExtensions')}} et {{SVGAttr('systemLanguage')}}
 - Attributs d'évènements
-  - : [Attribut d'évènement global](/fr/docs/Web/SVG/Attribute/Events#global_event_attributes), [Attribut d'évènement graphique](/fr/docs/Web/SVG/Attribute/Events#graphical_event_attributes)
+  - : [Attribut d'évènement global](/fr/docs/Web/SVG/Attribute#global_event_attributes), [Attribut d'évènement graphique](/fr/docs/Web/SVG/Attribute#graphical_event_attributes)
 - [Attributs de présentation](h/fr/docs/Web/SVG/Attribute/Presentation)
   - : Principalement: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}} et {{SVGAttr('visibility')}}
 - Attributs ARIA

@@ -17,7 +17,7 @@ element = document.querySelector(selectors);
 
 其中
 
-- `element` 是[元素](/zh-TW/docs/DOM/element)物件。
+- `element` 是[元素](/zh-TW/docs/Web/API/Element)物件。
 - `selectors` 是以逗號分隔，包含一個或多個 CSS 選擇器的字串。
 
 ## 範例
@@ -45,10 +45,10 @@ var el = document.querySelector(".myclass");
 <div id="foo:bar"></div>
 
 <script>
-document.querySelector('#foo\bar')    // 甚麼都沒選到
-document.querySelector('#foo\\\\bar') // 選到第一個 div
-document.querySelector('#foo:bar')     // 甚麼都沒選到
-document.querySelector('#foo\\:bar')   // 選到第二個 div
+  document.querySelector("#foo\bar"); // 甚麼都沒選到
+  document.querySelector("#foo\\\\bar"); // 選到第一個 div
+  document.querySelector("#foo:bar"); // 甚麼都沒選到
+  document.querySelector("#foo\\:bar"); // 選到第二個 div
 </script>
 ```
 
@@ -56,9 +56,9 @@ document.querySelector('#foo\\:bar')   // 選到第二個 div
 
 {{Compat}}
 
-## 規格文件
+## 規範
 
-- [Selectors API](http://www.w3.org/TR/selectors-api/)
+{{Specifications}}
 
 ## 詳見
 

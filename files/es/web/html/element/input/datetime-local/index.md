@@ -1,17 +1,13 @@
 ---
 title: <input type="datetime">
 slug: Web/HTML/Element/input/datetime-local
-tags:
-  - Elemento
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Element/input/datetime
-original_slug: Web/HTML/Element/input/datetime
 ---
 
-_El HTML_` <input type="datetime"> `es un control para ingresar tiempo y fecha (hora, minuto, segundo y fracción de segundo) basado en la zona horaria UTC .
+{{HTMLSidebar}}
 
-- [Categorías de contenido](/es/docs/Web/Guide/HTML/categorias_de_contenido) : Contenido dinámico , listed , submittable , resettable , contenido asociado a un formulario , contenido estático o de texto . Si `type` no tiene el valor `hidden`, elemenento labelable , contenido palpable .
+_El HTML_ `<input type="datetime">` es un control para ingresar tiempo y fecha (hora, minuto, segundo y fracción de segundo) basado en la zona horaria UTC .
+
+- [Categorías de contenido](/es/docs/Web/HTML/Content_categories) : Contenido dinámico , listed , submittable , resettable , contenido asociado a un formulario , contenido estático o de texto . Si `type` no tiene el valor `hidden`, elemenento labelable , contenido palpable .
 
 <table class="properties">
   <tbody>
@@ -34,7 +30,7 @@ _El HTML_` <input type="datetime"> `es un control para ingresar tiempo y fecha (
       <th scope="row">Interfaz DOM</th>
       <td>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement"
+          href="/es/docs/Web/API/HTMLInputElement"
           title="The HTMLInputElement interface provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of input elements."
           ><code>HTMLInputElement</code></a
         >
@@ -45,7 +41,7 @@ _El HTML_` <input type="datetime"> `es un control para ingresar tiempo y fecha (
 
 ## Atributos
 
-El siguiente elemento tiene los siguientes[atributos globales](/es/docs/Web/HTML/Atributos_Globales) .
+El siguiente elemento tiene los siguientes[atributos globales](/es/docs/Web/HTML/Global_attributes) .
 
 ## Ejemplos
 

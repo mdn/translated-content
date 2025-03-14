@@ -3,11 +3,11 @@ title: StorageArea.get()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 저장소에서 하나 이상의 항목을 가져온다.
 
-비동기 함수로 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)를 돌려준다.
+비동기 함수로 [`Promise`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)를 돌려준다.
 
 ## 문법
 
@@ -26,13 +26,14 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 
 ### 반환값
 
-반환된 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)는 저장소에서 찾은 모든 항목을 담은 객체를 인수로 완료를 수행한다. 실패하면 에러 문장으로 거부가 수행된다. managed 저장소가 설정되어 있지 않으면 `undefined`가 반환된다.
+반환된 [`Promise`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)는 저장소에서 찾은 모든 항목을 담은 객체를 인수로 완료를 수행한다. 실패하면 에러 문장으로 거부가 수행된다. managed 저장소가 설정되어 있지 않으면 `undefined`가 반환된다.
 
-> **경고:** When used within a content script in Firefox versions prior to 52, the Promise returned by `browser.storage.local.get()` is fulfilled with an Array containing one Object. The Object in the Array contains the `keys` found in the storage area, as described above. The Promise is correctly fulfilled with an Object when used in the background context (background scripts, popups, options pages, etc.). When this API is used as `chrome.storage.local.get()`, it correctly passes an Object to the callback function.
+> [!WARNING]
+> When used within a content script in Firefox versions prior to 52, the Promise returned by `browser.storage.local.get()` is fulfilled with an Array containing one Object. The Object in the Array contains the `keys` found in the storage area, as described above. The Promise is correctly fulfilled with an Object when used in the background context (background scripts, popups, options pages, etc.). When this API is used as `chrome.storage.local.get()`, it correctly passes an Object to the callback function.
 
 ## 브라우저 호환성
 
-{{Compat("webextensions.api.storage.StorageArea.get")}}
+{{Compat}}
 
 ## 예제
 
@@ -42,8 +43,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 // storage contains two items,
 // "kitten" and "monster"
 browser.storage.local.set({
-  kitten:  {name:"Mog", eats:"mice"},
-  monster: {name:"Kraken", eats:"people"}
+  kitten: { name: "Mog", eats: "mice" },
+  monster: { name: "Kraken", eats: "people" },
 });
 ```
 
@@ -90,7 +91,11 @@ gettingItem.then(onGot, onError);
 이름들을 인수로 하면 전체 일치 항목을 모두 담은 객체를 반환한다:
 
 ```js
-let gettingItem = browser.storage.local.get(["kitten", "monster", "grapefruit"]);
+let gettingItem = browser.storage.local.get([
+  "kitten",
+  "monster",
+  "grapefruit",
+]);
 gettingItem.then(onGot, onError);
 
 // -> Object { kitten: Object, monster: Object }
@@ -104,8 +109,8 @@ let gettingItem = browser.storage.local.get({
   monster: "no monster",
   grapefruit: {
     name: "Grape Fruit",
-    eats: "Water"
-  }
+    eats: "Water",
+  },
 });
 
 // -> Object { kitten: Object, monster: Object, grapefruit: Object }
@@ -115,20 +120,20 @@ let gettingItem = browser.storage.local.get({
 
 ### 크롬 예제
 
-크롬에서는 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)가 아니라 콜백 형태로 해야 한다.
+크롬에서는 [`Promise`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)가 아니라 콜백 형태로 해야 한다.
 
 ```js
-chrome.storage.local.get("kitten", function(items){
-  console.log(items.kitten);  // -> {name:"Mog", eats:"mice"}
+chrome.storage.local.get("kitten", function (items) {
+  console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
 });
 ```
 
 또는 화살표 함수로 할 수 있다.
 
 ```js
-chrome.storage.local.get("kitten", items=>{
+chrome.storage.local.get("kitten", (items) => {
   console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
 });
 ```
 
-> **참고:** **Acknowledgements**This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **참고:** **Acknowledgements**This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

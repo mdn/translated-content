@@ -3,7 +3,7 @@ title: Math.LOG10E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## 概述
 
@@ -19,16 +19,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
 
 ## 示例
 
-### 例子：使用 `Math.LOG10E`
+### 示例：使用 `Math.LOG10E`
 
 下面的函数返回以 10 为底数，E 的对数：
 
 ```js
 function getLog10e() {
-   return Math.LOG10E
+  return Math.LOG10E;
 }
 
-getLog10e() // 0.4342944819032518
+getLog10e(); // 0.4342944819032518
 ```
 
 ## 规范
@@ -39,6 +39,8 @@ getLog10e() // 0.4342944819032518
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log10()")}}

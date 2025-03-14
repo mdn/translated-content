@@ -1,7 +1,6 @@
 ---
 title: element.normalize
 slug: Web/API/Node/normalize
-translation_of: Web/API/Node/normalize
 ---
 
 {{ ApiRef("DOM") }}
@@ -20,8 +19,8 @@ Place le nœud spécifié et tout son sous-arbre dans une forme «&nbsp;normale&
 
 ```js
 var conteneur = document.createElement("div");
-conteneur.appendChild( document.createTextNode("Partie 1 ") );
-conteneu.appendChild( document.createTextNode("Partie 2 ") );
+conteneur.appendChild(document.createTextNode("Partie 1 "));
+conteneur.appendChild(document.createTextNode("Partie 2 "));
 
 // Ici, conteneur.childNodes.length === 2
 // conteneur.childNodes[0].textContent === "Partie 1 "
@@ -37,4 +36,4 @@ conteneur.normalize();
 
 ## Spécification
 
-- [DOM Level 2 Core: Node.normalize (en)](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-normalize) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-normalize) (non normative)
+- [DOM Level 2 Core: Node.normalize (en)](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-normalize) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-normalize) (non normative)

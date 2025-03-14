@@ -1,37 +1,31 @@
 ---
-title: Event.cancelBubble
+title: Event：cancelBubble 属性
 slug: Web/API/Event/cancelBubble
+l10n:
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("DOM")}}{{Deprecated_Header}}{{AvailableInWorkers}}
 
-**`Event.cancelBubble`** 属性是 {{domxref("Event.stopPropagation()")}}的一个曾用名。在从事件处理程序返回之前将其值设置为 true 可阻止事件的传播。
+{{domxref("Event")}} 接口的 **`cancelBubble`** 属性已被弃用。请使用 {{domxref("Event.stopPropagation()")}} 代替。在事件处理器返回之前将其值设置为 `true` 可以阻止事件的传播。在后续的实现中，将其设置为 `false` 不会产生任何效果。请参阅[浏览器兼容性](#浏览器兼容性)了解详细信息。
 
-## 语法
+## 值
 
-```
-event.cancelBubble = bool;
-let bool = event.cancelBubble;
-```
+布尔值。值为 `true` 表示事件不得继续传播。
 
-## 用例
+## 示例
 
 ```js
-ele.onclick = function(e) {
-  // 在这儿可以做点儿有趣的事情
-  e.cancelBubble = true;
-}
+elem.onclick = (event) => {
+  // 在这里做一些很酷的事情
+  event.cancelBubble = true;
+};
 ```
 
 ## 规范
 
-_这个属性的规范并未统一。_ 因为他还有其他标准 W3C 版： [an old Working Draft of W3C DOM Level 2](http://www.w3.org/TR/1999/WD-DOM-Level-2-19990304/events.html#attribute-cancelBubble). 微软版： [description of it on MSDN](<https://msdn.microsoft.com/en-us/library/ms533545(v=vs.85).aspx>).
+{{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
-
-## 参考
-
-- {{domxref("UIEvent.cancelBubble")}}
-- translated by cnvoid

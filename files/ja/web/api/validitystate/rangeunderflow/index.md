@@ -1,7 +1,11 @@
 ---
 title: ValidityState.rangeUnderflow
 slug: Web/API/ValidityState/rangeUnderflow
+l10n:
+  sourceCommit: cfcbb39cc595bd536b107f6771bfb3f8e13bacca
 ---
+
+{{APIRef("HTML DOM")}}
 
 **`rangeUnderflow`** は **[`ValidityState`](/ja/docs/Web/API/ValidityState)** オブジェクトの読み取り専用プロパティで、 {{HTMLElement("input")}} の値がユーザーに変更された後、その要素の [`min`](/ja/docs/Web/HTML/Attributes/min) 属性に設定された制約に適合しないことを示します。
 
@@ -10,7 +14,7 @@ slug: Web/API/ValidityState/rangeUnderflow
 次のようになっていたとします。
 
 ```html
-<input type="number" min="20" max="40" step="2"/>
+<input type="number" min="20" max="40" step="2" />
 ```
 
 `value < 20` であれば、 `rangeUnderflow` は true になります。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} 擬似クラスに一致します。
@@ -26,7 +30,7 @@ slug: Web/API/ValidityState/rangeUnderflow
 ## 関連情報
 
 - {{domxref("ValidityState.rangeOverflow")}}
-- [制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)
+- [制約検証](/ja/docs/Web/HTML/Constraint_validation)
 - [フォーム: データフォームの検証](/ja/docs/Learn/Forms/Form_validation)
 - [`step` 属性](/ja/docs/Web/HTML/Attributes/step)
 - [`max` 属性](/ja/docs/Web/HTML/Attributes/max)

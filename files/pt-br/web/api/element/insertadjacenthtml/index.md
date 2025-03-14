@@ -33,14 +33,15 @@ element.insertAdjacentHTML(posição, texto);
 ```html
 <!-- beforebegin -->
 <p>
-<!-- afterbegin -->
-foo
-<!-- beforeend -->
+  <!-- afterbegin -->
+  foo
+  <!-- beforeend -->
 </p>
 <!-- afterend -->
 ```
 
-> **Nota:** As posições beforeBegin e afterEnd funcionam apenas se o nó está em uma árvore DOM e tem um elemento pai.
+> [!NOTE]
+> As posições beforeBegin e afterEnd funcionam apenas se o nó está em uma árvore DOM e tem um elemento pai.
 
 ## Exemplo
 
@@ -48,26 +49,24 @@ foo
 // Estrutura inicial:
 // <div id="one">one</div>
 
-var d1 = document.getElementById('one');
-d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
+var d1 = document.getElementById("one");
+d1.insertAdjacentHTML("afterend", '<div id="two">two</div>');
 
 // Neste ponto, a nova estrutura é:
 // <div id="one">one</div>
 // <div id="two">two</div>
 ```
 
-## Especificação
+## Especificações
 
-| Specification                                                                                                    | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('DOM Parsing', '#insertadjacenthtml()', 'Element.insertAdjacentHTML()')}} | {{ Spec2('DOM Parsing') }} |         |
+{{Specifications}}
 
-## Compatibilidade de Navegadores
+## Compatibilidade com navegadores
 
-{{Compat("api.Element.insertAdjacentHTML")}}
+{{Compat}}
 
 ## Veja também
 
 - {{domxref("Node.insertBefore()")}}
 - {{domxref("Node.appendChild()")}} (mesmo efeito de `beforeend`)
-- [hacks.mozilla.org guest post](http://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) por Henri Sivonen incluem benchmarks que demonstram que insertAdjacentHTML pode ser bem rápido em alguns casos.
+- [hacks.mozilla.org guest post](https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) por Henri Sivonen incluem benchmarks que demonstram que insertAdjacentHTML pode ser bem rápido em alguns casos.

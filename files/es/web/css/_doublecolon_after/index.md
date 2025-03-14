@@ -1,5 +1,5 @@
 ---
-title: '::after (:after)'
+title: ::after (:after)
 slug: Web/CSS/::after
 ---
 
@@ -14,13 +14,15 @@ a::after {
 }
 ```
 
-> **Nota:** Los pseudo-elementos generados por `::before` y `::after` son [contenidos por la caja de formato del elemento](https://www.w3.org/TR/CSS2/generate.html#before-after-content), y por lo tanto no aplica a _[elementos reemplazados](/es/docs/Web/CSS/Replaced_element)_ como los elementos {{HTMLElement("img")}}, o {{HTMLElement("br")}}.
+> [!NOTE]
+> Los pseudo-elementos generados por `::before` y `::after` son [contenidos por la caja de formato del elemento](https://www.w3.org/TR/CSS2/generate.html#before-after-content), y por lo tanto no aplica a _[elementos reemplazados](/es/docs/Web/CSS/Replaced_element)_ como los elementos {{HTMLElement("img")}}, o {{HTMLElement("br")}}.
 
 ## Sintaxis
 
 {{CSSSyntax}}
 
-> **Nota:** CSS3 introdujo la notación `::after` (con doble dos puntos) para distinguir [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) de [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores también aceptan `:after`, añadido en CSS2.
+> [!NOTE]
+> CSS3 introdujo la notación `::after` (con doble dos puntos) para distinguir [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) de [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores también aceptan `:after`, añadido en CSS2.
 
 ## Ejemplos
 
@@ -68,12 +70,12 @@ Podemos estilizar el texto o imágenes de la propiedad {{cssxref("content")}} de
 
 ```css
 .ribbon {
-  background-color: #5BC8F7;
+  background-color: #5bc8f7;
 }
 
 .ribbon::after {
   content: "This is a fancy orange box.";
-  background-color: #FFBA10;
+  background-color: #ffba10;
   border-color: black;
   border-style: dotted;
 }
@@ -90,9 +92,15 @@ El siguiente ejemplo muestra el uso del [pseudo-elemento](/es/docs/Web/CSS/Pseud
 #### HTML
 
 ```html
-<p>Here we have some
-  <span tabindex="0" data-descr="collection of words and punctuation">text</span> with a few
-  <span tabindex="0" data-descr="small popups that appear when hovering">tooltips</span>.
+<p>
+  Here we have some
+  <span tabindex="0" data-descr="collection of words and punctuation"
+    >text</span
+  >
+  with a few
+  <span tabindex="0" data-descr="small popups that appear when hovering"
+    >tooltips</span
+  >.
 </p>
 ```
 
@@ -102,7 +110,7 @@ El siguiente ejemplo muestra el uso del [pseudo-elemento](/es/docs/Web/CSS/Pseud
 span[data-descr] {
   position: relative;
   text-decoration: underline;
-  color: #00F;
+  color: #00f;
   cursor: help;
 }
 
@@ -131,9 +139,9 @@ span[data-descr]:focus::after {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.after")}}
+{{Compat}}
 
 ## Véase también
 

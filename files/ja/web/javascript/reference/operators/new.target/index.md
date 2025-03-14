@@ -7,12 +7,27 @@ slug: Web/JavaScript/Reference/Operators/new.target
 
 **`new.target`** は擬似プロパティで、関数やコンストラクターが [new](/ja/docs/Web/JavaScript/Reference/Operators/new) 演算子を使用して呼び出されたかどうかを検出することができます。 [new](/ja/docs/Web/JavaScript/Reference/Operators/new) 演算子を使用して呼び出されたコンストラクターや関数の中では、 `new.target` はコンストラクターや関数への参照を返します。通常の関数呼び出しの場合、 `new.target` は {{jsxref("undefined")}} になります。
 
-{{EmbedInteractiveExample("pages/js/expressions-newtarget.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - new.target")}}
+
+```js interactive-example
+function Foo() {
+  if (!new.target) {
+    throw new TypeError("calling Foo constructor without new is invalid");
+  }
+}
+
+try {
+  Foo();
+} catch (e) {
+  console.log(e);
+  // Expected output: TypeError: calling Foo constructor without new is invalid
+}
+```
 
 ## 構文
 
 ```js
-new.target
+new.target;
 ```
 
 ## 解説
@@ -35,12 +50,14 @@ new.target
 
 ```js
 function Foo() {
-  if (!new.target) { throw 'Foo() must be called with new' }
-  console.log('Foo instantiated with new')
+  if (!new.target) {
+    throw "Foo() must be called with new";
+  }
+  console.log("Foo instantiated with new");
 }
 
-new Foo()  // "Foo instantiated with new" を出力
-Foo()      // "Foo() must be called with new" 例外が発生
+new Foo(); // "Foo instantiated with new" を出力
+Foo(); // "Foo() must be called with new" 例外が発生
 ```
 
 ### コンストラクターにおける new\.target
@@ -50,20 +67,32 @@ Foo()      // "Foo() must be called with new" 例外が発生
 ```js
 class A {
   constructor() {
-    console.log(new.target.name)
+    console.log(new.target.name);
   }
 }
 
-class B extends A { constructor() { super() } }
+class B extends A {
+  constructor() {
+    super();
+  }
+}
 
-let a = new A()  // logs "A"
-let b = new B()  // logs "B"
+let a = new A(); // logs "A"
+let b = new B(); // logs "B"
 
-class C { constructor() { console.log(new.target)  } }
-class D extends C { constructor() { super()  } }
+class C {
+  constructor() {
+    console.log(new.target);
+  }
+}
+class D extends C {
+  constructor() {
+    super();
+  }
+}
 
-let c = new C()  // logs class C{constructor(){console.log(new.target);}}
-let d = new D()  // logs class D extends C{constructor(){super();}}
+let c = new C(); // logs class C{constructor(){console.log(new.target);}}
+let d = new D(); // logs class D extends C{constructor(){super();}}
 ```
 
 上記の `C` および `D` クラスの例から、 `new.target` は初期化されたクラスのクラス定義を指しているように見えます。たとえば、`d` を `new D()` で初期化した場合は、 `D` のクラス定義が出力され、同様に `c` の場合は `C` のクラスが出力されます。

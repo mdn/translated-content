@@ -1,31 +1,65 @@
 ---
 title: min-width
 slug: Web/CSS/min-width
-translation_of: Web/CSS/min-width
 ---
 
 {{CSSRef}}
 
-Свойство [CSS](ru/docs/Web/CSS) **`min-width`** устанавливает минимальную ширину элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("width") }} от становления меньше, чем значение, указанное для `min-width`.
+Свойство [CSS](/ru/docs/Web/CSS) **`min-width`** устанавливает минимальную ширину элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("width") }} от становления меньше, чем значение, указанное для `min-width`.
 
-{{EmbedInteractiveExample("pages/css/min-width.html")}}
+{{InteractiveExample("CSS Demo: min-width")}}
+
+```css interactive-example-choice
+min-width: 150px;
+```
+
+```css interactive-example-choice
+min-width: 20em;
+```
+
+```css interactive-example-choice
+min-width: 75%;
+```
+
+```css interactive-example-choice
+min-width: 40ch;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Change the minimum width.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 Ширина элемента принимает значение `min-width` когда `min-width` больше чем {{ Cssxref("max-width") }} или {{Cssxref("width")}}.
 
 ## Синтаксис
 
 ```css
+/* Ключевые слова */
+min-width: max-content;
+min-width: min-content;
+min-width: fit-content;
+min-width: fill-available;
+
 /* <length> значение */
 min-width: 3.5em;
 
 /* <percentage> значение */
 min-width: 10%;
-
-/* Значения-ключевые слова */
-min-width: max-content;
-min-width: min-content;
-min-width: fit-content;
-min-width: fill-available;
 
 /* Глобальные значения */
 min-width: inherit;
@@ -60,9 +94,13 @@ min-width: unset;
 ## Примеры
 
 ```css
-table { min-width: 75%; }
+table {
+  min-width: 75%;
+}
 
-form { min-width: 0; }
+form {
+  min-width: 0;
+}
 ```
 
 ## Спецификации
@@ -71,11 +109,11 @@ form { min-width: 0; }
 
 {{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{ Cssxref("width") }}, {{ Cssxref("max-width") }}
-- [Блочная модель](/ru/docs/CSS/box_model), {{ Cssxref("box-sizing") }}
+- [Блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{ Cssxref("box-sizing") }}

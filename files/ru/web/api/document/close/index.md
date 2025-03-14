@@ -1,18 +1,11 @@
 ---
 title: Document.close()
 slug: Web/API/Document/close
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Справка
-  - метод
-translation_of: Web/API/Document/close
 ---
 
 {{APIRef("DOM")}}
 
-Метод `document.close()` завершает запись в документ, открытый с помощью [document.open()](/en/DOM/document.open).
+Метод `document.close()` завершает запись в документ, открытый с помощью [document.open()](/en-US/DOM/document.open).
 
 ## Синтаксис
 
@@ -35,6 +28,6 @@ document.close();
 
 {{Specifications}}
 
-## Браузерная поддержка
+## Совместимость с браузерами
 
 {{Compat}}

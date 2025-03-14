@@ -1,15 +1,6 @@
 ---
-title: 'CSS: Cascading Style Sheets'
+title: "CSS: Cascading Style Sheets"
 slug: Web/CSS
-tags:
-  - CSS
-  - Design
-  - Landing
-  - Layout
-  - Reference
-  - l10n:priority
-  - 스타일시트
-translation_of: Web/CSS
 ---
 
 {{CSSRef}}
@@ -41,7 +32,9 @@ CSS3 이후, CSS 명세의 범위가 엄청나게 넓어짐에 따라 여러 CSS
   - : MDN의 [CSS 전체 참고서](/ko/docs/Web/CSS/Reference)는 숙련된 개발자를 위해 CSS의 모든 속성과 개념의
     설명을 제공합니다.
 
-> **알림:** #### 프런트엔드 웹 개발자가 되고자 하시나요?목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.[**시작하기**](/ko/docs/Learn/Front-end_web_developer)
+> [!CALLOUT]
+>
+> 프런트엔드 웹 개발자가 되고자 하시나요?목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.[**시작하기**](/ko/docs/orphaned/Learn/Front-end_web_developer)
 
 ## 자습서
 
@@ -54,6 +47,7 @@ MDN [CSS 학습지](/ko/docs/Learn/CSS)는 CSS를 처음부터 알려주는 모�
     있습니다. 이 모듈에서는 CSS의 기본적인 작동 원리와 구문의 생김새, HTML에 실제로 적용하는 법을 배우면서 다음 과정으로
     가는 길을 닦습니다.
 - [CSS의 구성 블록](/ko/docs/Learn/CSS/Building_blocks)
+
   - : 이 모듈은 [CSS 첫걸음](/ko/docs/Learn/CSS/First_steps)이 끝난 곳부터 시작합니다. 이제 언어와 구문에
     익숙해졌고, 기본적인 사용법도 익혀봤으니 약간 더 깊게 들어갈 차례입니다. 이 모듈에서는 종속과 상속, 사용할 수 있는
     모든 선택자 유형, 단위와 크기, 배경과 테두리 스타일, 디버깅 등등 많은 것을 알아봅니다.
@@ -62,6 +56,7 @@ MDN [CSS 학습지](/ko/docs/Learn/CSS)는 CSS를 처음부터 알려주는 모�
     [텍스트 스타일링](/ko/docs/Learn/CSS/Styling_text)나
     [CSS 레이아웃](/ko/docs/Learn/CSS/CSS_layout)처럼 더 상세한 주제로 들어가기 전에 알고 있어야 할 필수
     이론을 익히는 것입니다.
+
 - [텍스트 스타일링](/ko/docs/Learn/CSS/Styling_text)
   - : CSS 언어 기초를 다뤘으니, 다음 주제는 대표적인 CSS의 영역인 텍스트 스타일링에 집중합니다. 여기서는 글꼴 설정, 굵기,
     기울임꼴, 행간과 자간, 그림자 등 다양한 텍스트 기능을 배웁니다. 그 후 사용자 지정 글꼴을 페이지에 적용하는 법,
@@ -81,22 +76,22 @@ MDN [CSS 학습지](/ko/docs/Learn/CSS)는 CSS를 처음부터 알려주는 모�
 - CSS 핵심 개념
 
   - [언어 구문과 형태](/ko/docs/Web/CSS/Syntax)
-  - [명시도](/ko/docs/Web/CSS/Specificity), [상속](/ko/docs/Web/CSS/inheritance),
+  - [명시도](/ko/docs/Web/CSS/Specificity), [상속](/ko/docs/Web/CSS/Inheritance),
     [종속](/ko/docs/Web/CSS/Cascade)
   - [CSS 단위와 값](/ko/docs/Web/CSS/CSS_Values_and_Units),
     [CSS 함수 표기법](/ko/docs/Web/CSS/CSS_Functions)
-  - [박스 모델](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)과
-    [여백 상쇄](/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [박스 모델](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)과
+    [여백 상쇄](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block)
-  - [쌓임 맥락](/ko/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)과
-    [블록 서식 맥락](/ko/docs/Web/Guide/CSS/Block_formatting_context)
+  - [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)과
+    [블록 서식 맥락](/ko/docs/Web/CSS/CSS_display/Block_formatting_context)
   - [초기 값](/ko/docs/Web/CSS/initial_value), [계산 값](/ko/docs/Web/CSS/computed_value),
     [사용 값](/ko/docs/Web/CSS/used_value), [실제 값](/ko/docs/Web/CSS/actual_value)
   - [CSS 단축 속성](/ko/docs/Web/CSS/Shorthand_properties)
-  - [CSS 플렉스박스 레이아웃](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout)
-  - [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout)
-  - [CSS 선택자](/ko/docs/Web/CSS/CSS_Selectors)
-  - [미디어 쿼리](/ko/docs/Web/CSS/Media_Queries)
+  - [CSS 플렉스박스 레이아웃](/ko/docs/Web/CSS/CSS_flexible_box_layout)
+  - [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout)
+  - [CSS 선택자](/ko/docs/Web/CSS/CSS_selectors)
+  - [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries)
   - [애니메이션](/ko/docs/Web/CSS/animation)
 
 ## 쿡북
@@ -109,12 +104,12 @@ MDN [CSS 학습지](/ko/docs/Learn/CSS)는 CSS를 처음부터 알려주는 모�
 
 - CSS가 유효한지 검사하는
   [W3C CSS Validation 서비스](http://jigsaw.w3.org/css-validator/). 매우 유용한 디버깅 도구입니다.
-- [Firefox 개발자 도구](/ko/docs/Tools)를 사용하면 [검사기](/ko/docs/Tools/Page_Inspector)와
-  [스타일 편집기](/ko/docs/Tools/Style_Editor)를 통해 페이지의 CSS를 살펴보고, 실시간으로 편집할 수
+- [Firefox 개발자 도구](https://firefox-source-docs.mozilla.org/devtools-user/index.html)를 사용하면 [검사기](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)와
+  [스타일 편집기](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html)를 통해 페이지의 CSS를 살펴보고, 실시간으로 편집할 수
   있습니다.
 - Firefox의 [Web Developer 확장](https://addons.mozilla.org/ko/firefox/addon/web-developer/)을 사용해서
   주시하는 사이트의 CSS를 추적하고 실시간으로 편집할 수 있습니다.
-- 웹 커뮤니티에서는 [다른 여러 가지 CSS 도구](/ko/docs/Web/CSS/Tools)도 만들었습니다.
+- 웹 커뮤니티에서는 [다른 여러 가지 CSS 도구](/ko/docs/Web/CSS)도 만들었습니다.
 
 ## 같이 보기
 

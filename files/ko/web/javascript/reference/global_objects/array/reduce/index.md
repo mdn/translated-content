@@ -1,20 +1,27 @@
 ---
 title: Array.prototype.reduce()
-slug: Web/JavaScript/Reference/Global_Objects/Array/Reduce
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
+slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 ---
+
 {{JSRef}}
 
 **`reduce()`** 메서드는 배열의 각 요소에 대해 주어진 리듀서 (reducer) 함수를 실행하고, 하나의 결과값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/array-reduce.html")}}
+{{InteractiveExample("JavaScript Demo: Array.reduce()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+console.log(sumWithInitial);
+// Expected output: 10
+```
 
 **리듀서** 함수는 네 개의 인자를 가집니다.
 
@@ -69,17 +76,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 다음의 예제처럼 `initialValue`을 제공하지 않으면 출력 가능한 형식이 세 가지이므로, 보통 초기값을 주는 것이 더 안전합니다.
 
 ```js
-var maxCallback = ( acc, cur ) => Math.max( acc.x, cur.x );
-var maxCallback2 = ( max, cur ) => Math.max( max, cur );
+var maxCallback = (acc, cur) => Math.max(acc.x, cur.x);
+var maxCallback2 = (max, cur) => Math.max(max, cur);
 
 // initialValue 없이 reduce()
-[ { x: 22 }, { x: 42 } ].reduce( maxCallback ); // 42
-[ { x: 22 }            ].reduce( maxCallback ); // { x: 22 }
-[                      ].reduce( maxCallback ); // TypeError
+[{ x: 22 }, { x: 42 }].reduce(maxCallback); // 42
+[{ x: 22 }].reduce(maxCallback); // { x: 22 }
+[].reduce(maxCallback); // TypeError
 
 // map/reduce로 개선 - 비었거나 더 큰 배열에서도 동작함
-[ { x: 22 }, { x: 42 } ].map( el => el.x )
-                        .reduce( maxCallback2, -Infinity );
+[{ x: 22 }, { x: 42 }].map((el) => el.x).reduce(maxCallback2, -Infinity);
 ```
 
 ### `reduce()` 작동 방식
@@ -87,9 +93,11 @@ var maxCallback2 = ( max, cur ) => Math.max( max, cur );
 다음의 예제를 생각해 봅시다.
 
 ```js
-[0, 1, 2, 3, 4].reduce(function(accumulator, currentValue, currentIndex, array) {
-  return accumulator + currentValue;
-});
+[0, 1, 2, 3, 4].reduce(
+  function (accumulator, currentValue, currentIndex, array) {
+    return accumulator + currentValue;
+  },
+);
 ```
 
 콜백은 4번 호출됩니다. 각 호출의 인수와 반환값은 다음과 같습니다.
@@ -106,13 +114,18 @@ var maxCallback2 = ( max, cur ) => Math.max( max, cur );
 완전한 함수 대신에 {{jsxref("Functions/애로우_펑션", "화살표 함수","",1)}}를 제공할 수도 있습니다. 아래 코드는 위의 코드와 같은 결과를 반환합니다.
 
 ```js
-[0, 1, 2, 3, 4].reduce( (prev, curr) => prev + curr );
+[0, 1, 2, 3, 4].reduce((prev, curr) => prev + curr);
 ```
 
 `reduce()`의 두 번째 인수로 초기값을 제공하는 경우, 결과는 다음과 같습니다:
 
 ```js
-[0, 1, 2, 3, 4].reduce(function(accumulator, currentValue, currentIndex, array) {
+[0, 1, 2, 3, 4].reduce(function (
+  accumulator,
+  currentValue,
+  currentIndex,
+  array,
+) {
   return accumulator + currentValue;
 }, 10);
 ```
@@ -141,9 +154,9 @@ var sum = [0, 1, 2, 3].reduce(function (accumulator, currentValue) {
 화살표 함수로도 작성할 수 있습니다.
 
 ```js
-var total = [ 0, 1, 2, 3 ].reduce(
-  ( accumulator, currentValue ) => accumulator + currentValue,
-  0
+var total = [0, 1, 2, 3].reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  0,
 );
 ```
 
@@ -153,56 +166,60 @@ var total = [ 0, 1, 2, 3 ].reduce(
 
 ```js
 var initialValue = 0;
-var sum = [{x: 1}, {x:2}, {x:3}].reduce(function (accumulator, currentValue) {
-    return accumulator + currentValue.x;
-},initialValue)
+var sum = [{ x: 1 }, { x: 2 }, { x: 3 }].reduce(function (
+  accumulator,
+  currentValue,
+) {
+  return accumulator + currentValue.x;
+}, initialValue);
 
-console.log(sum) // logs 6
+console.log(sum); // logs 6
 ```
 
 화살표 함수(arrow function)로도 작성할 수 있습니다:
 
 ```js
 var initialValue = 0;
-var sum = [{x: 1}, {x:2}, {x:3}].reduce(
-    (accumulator, currentValue) => accumulator + currentValue.x
-    ,initialValue
+var sum = [{ x: 1 }, { x: 2 }, { x: 3 }].reduce(
+  (accumulator, currentValue) => accumulator + currentValue.x,
+  initialValue,
 );
 
-console.log(sum) // logs 6
+console.log(sum); // logs 6
 ```
 
 ### 중첩 배열 펼치기
 
 ```js
-var flattened = [[0, 1], [2, 3], [4, 5]].reduce(
-  function(accumulator, currentValue) {
-    return accumulator.concat(currentValue);
-  },
-  []
-);
+var flattened = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+].reduce(function (accumulator, currentValue) {
+  return accumulator.concat(currentValue);
+}, []);
 // 펼친 결과: [0, 1, 2, 3, 4, 5]
 ```
 
 화살표 함수로도 작성할 수 있습니다:
 
 ```js
-var flattened = [[0, 1], [2, 3], [4, 5]].reduce(
-  ( accumulator, currentValue ) => accumulator.concat(currentValue),
-  []
-);
+var flattened = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+].reduce((accumulator, currentValue) => accumulator.concat(currentValue), []);
 ```
 
 ### 객체 내의 값 인스턴스 개수 세기
 
 ```js
-var names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+var names = ["Alice", "Bob", "Tiff", "Bruce", "Alice"];
 
 var countedNames = names.reduce(function (allNames, name) {
   if (name in allNames) {
     allNames[name]++;
-  }
-  else {
+  } else {
     allNames[name] = 1;
   }
   return allNames;
@@ -215,9 +232,9 @@ var countedNames = names.reduce(function (allNames, name) {
 
 ```js
 var people = [
-  { name: 'Alice', age: 21 },
-  { name: 'Max', age: 20 },
-  { name: 'Jane', age: 20 }
+  { name: "Alice", age: 21 },
+  { name: "Max", age: 20 },
+  { name: "Jane", age: 20 },
 ];
 
 function groupBy(objectArray, property) {
@@ -231,7 +248,7 @@ function groupBy(objectArray, property) {
   }, {});
 }
 
-var groupedPeople = groupBy(people, 'age');
+var groupedPeople = groupBy(people, "age");
 // groupedPeople is:
 // {
 //   20: [
@@ -247,25 +264,32 @@ var groupedPeople = groupBy(people, 'age');
 ```js
 // friends - an array of objects
 // where object field "books" - list of favorite books
-var friends = [{
-  name: 'Anna',
-  books: ['Bible', 'Harry Potter'],
-  age: 21
-}, {
-  name: 'Bob',
-  books: ['War and peace', 'Romeo and Juliet'],
-  age: 26
-}, {
-  name: 'Alice',
-  books: ['The Lord of the Rings', 'The Shining'],
-  age: 18
-}];
+var friends = [
+  {
+    name: "Anna",
+    books: ["Bible", "Harry Potter"],
+    age: 21,
+  },
+  {
+    name: "Bob",
+    books: ["War and peace", "Romeo and Juliet"],
+    age: 26,
+  },
+  {
+    name: "Alice",
+    books: ["The Lord of the Rings", "The Shining"],
+    age: 18,
+  },
+];
 
 // allbooks - list which will contain all friends' books +
 // additional list contained in initialValue
-var allbooks = friends.reduce(function(accumulator, currentValue) {
-  return [...accumulator, ...currentValue.books];
-}, ['Alphabet']);
+var allbooks = friends.reduce(
+  function (accumulator, currentValue) {
+    return [...accumulator, ...currentValue.books];
+  },
+  ["Alphabet"],
+);
 
 // allbooks = [
 //   'Alphabet', 'Bible', 'Harry Potter', 'War and peace',
@@ -276,16 +300,17 @@ var allbooks = friends.reduce(function(accumulator, currentValue) {
 
 ### 배열의 중복 항목 제거
 
-> **참고:** 참고: {{jsxref("Set")}}과 {{jsxref("Array.from()")}}을 사용할 수 있는 환경이라면, `let orderedArray = Array.from(new Set(myArray));`를 사용해 중복 요소를 제거할 수도 있습니다.
+> [!NOTE]
+> 참고: {{jsxref("Set")}}과 {{jsxref("Array.from()")}}을 사용할 수 있는 환경이라면, `let orderedArray = Array.from(new Set(myArray));`를 사용해 중복 요소를 제거할 수도 있습니다.
 
 ```js
 let arr = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];
 let result = arr.sort().reduce((accumulator, current) => {
-    const length = accumulator.length
-    if (length === 0 || accumulator[length - 1] !== current) {
-        accumulator.push(current);
-    }
-    return accumulator;
+  const length = accumulator.length;
+  if (length === 0 || accumulator[length - 1] !== current) {
+    accumulator.push(current);
+  }
+  return accumulator;
 }, []);
 console.log(result); //[1,2,3,4,5]
 ```
@@ -303,7 +328,7 @@ console.log(result); //[1,2,3,4,5]
 function runPromiseInSequence(arr, input) {
   return arr.reduce(
     (promiseChain, currentFunction) => promiseChain.then(currentFunction),
-    Promise.resolve(input)
+    Promise.resolve(input),
   );
 }
 
@@ -323,7 +348,7 @@ function p2(a) {
 
 // function 3  - will be wrapped in a resolved promise by .then()
 function f3(a) {
- return a * 3;
+  return a * 3;
 }
 
 // promise function 4
@@ -334,23 +359,22 @@ function p4(a) {
 }
 
 const promiseArr = [p1, p2, f3, p4];
-runPromiseInSequence(promiseArr, 10)
-  .then(console.log);   // 1200
+runPromiseInSequence(promiseArr, 10).then(console.log); // 1200
 ```
 
 ### 함수 구성을 위한 파이프 함수
 
 ```js
 // Building-blocks to use for composition
-const double = x => x + x;
-const triple = x => 3 * x;
-const quadruple = x => 4 * x;
+const double = (x) => x + x;
+const triple = (x) => 3 * x;
+const quadruple = (x) => 4 * x;
 
 // Function composition enabling pipe functionality
-const pipe = (...functions) => input => functions.reduce(
-    (acc, fn) => fn(acc),
-    input
-);
+const pipe =
+  (...functions) =>
+  (input) =>
+    functions.reduce((acc, fn) => fn(acc), input);
 
 // Composed functions for multiplication of specific values
 const multiply6 = pipe(double, triple);
@@ -369,8 +393,8 @@ multiply24(10); // 240
 
 ```js
 if (!Array.prototype.mapUsingReduce) {
-  Array.prototype.mapUsingReduce = function(callback, thisArg) {
-    return this.reduce(function(mappedArray, currentValue, index, array) {
+  Array.prototype.mapUsingReduce = function (callback, thisArg) {
+    return this.reduce(function (mappedArray, currentValue, index, array) {
       mappedArray[index] = callback.call(thisArg, currentValue, index, array);
       return mappedArray;
     }, []);
@@ -378,7 +402,7 @@ if (!Array.prototype.mapUsingReduce) {
 }
 
 [1, 2, , 3].mapUsingReduce(
-  (currentValue, index, array) => currentValue + index + array.length
+  (currentValue, index, array) => currentValue + index + array.length,
 ); // [5, 7, , 10]
 ```
 
@@ -389,15 +413,15 @@ if (!Array.prototype.mapUsingReduce) {
 // 참조: http://es5.github.io/#x15.4.4.21
 // https://tc39.github.io/ecma262/#sec-array.prototype.reduce
 if (!Array.prototype.reduce) {
-  Object.defineProperty(Array.prototype, 'reduce', {
-    value: function(callback /*, initialValue*/) {
+  Object.defineProperty(Array.prototype, "reduce", {
+    value: function (callback /*, initialValue*/) {
       if (this === null) {
-        throw new TypeError( 'Array.prototype.reduce ' +
-          'called on null or undefined' );
+        throw new TypeError(
+          "Array.prototype.reduce " + "called on null or undefined",
+        );
       }
-      if (typeof callback !== 'function') {
-        throw new TypeError( callback +
-          ' is not a function');
+      if (typeof callback !== "function") {
+        throw new TypeError(callback + " is not a function");
       }
 
       // 1. Let O be ? ToObject(this value).
@@ -420,8 +444,9 @@ if (!Array.prototype.reduce) {
         // 3. If len is 0 and initialValue is not present,
         //    throw a TypeError exception.
         if (k >= len) {
-          throw new TypeError( 'Reduce of empty array ' +
-            'with no initial value' );
+          throw new TypeError(
+            "Reduce of empty array " + "with no initial value",
+          );
         }
         value = o[k++];
       }
@@ -445,7 +470,7 @@ if (!Array.prototype.reduce) {
 
       // 9. Return accumulator.
       return value;
-    }
+    },
   });
 }
 ```

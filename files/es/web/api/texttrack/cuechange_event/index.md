@@ -1,20 +1,6 @@
 ---
-title: 'TextTrack: evento cuechange'
+title: "TextTrack: evento cuechange"
 slug: Web/API/TextTrack/cuechange_event
-tags:
-  - API
-  - Audio
-  - Event
-  - Media
-  - Reference
-  - TextTrack
-  - Video
-  - WebVTT
-  - cuechange
-  - events
-  - oncuechange
-  - track
-translation_of: Web/API/TextTrack/cuechange_event
 ---
 
 {{APIRef}}
@@ -49,8 +35,8 @@ El evento **`cuechange`** se activa cuando un {{domxref("TextTrack")}} ha cambia
 Tu puedes preparar una escucha para el evento `cuechange` en un `TextTrack` usando el método {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-track.addEventListener('cuechange', function () {
-  let cues = track.activeCues;  // array de las anotaciones actuales
+track.addEventListener("cuechange", function () {
+  let cues = track.activeCues; // array de las anotaciones actuales
 });
 ```
 
@@ -59,7 +45,7 @@ O puedes solo preparar la propiedad del controlador de eventos {{domxref("Global
 ```js
 track.oncuechange = function () {
   let cues = track.activeCues; // array of current cues
-}
+};
 ```
 
 ### En el elemento track
@@ -90,9 +76,9 @@ textTrackElem.oncuechange = (event) => {
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.TextTrack.cuechange_event")}}
+{{Compat}}
 
 ## Ver también
 

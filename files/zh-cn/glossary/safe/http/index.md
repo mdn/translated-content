@@ -1,7 +1,11 @@
 ---
 title: 安全（HTTP 方法）
 slug: Glossary/Safe/HTTP
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
+
+{{GlossarySidebar}}
 
 如果说一个 HTTP 方法是`安全`的，是指这是个不会修改服务器的数据的方法。也就是说，这是一个对服务器只读操作的方法。这些方法是安全的：{{HTTPMethod("GET")}}，{{HTTPMethod("HEAD")}} 和 {{HTTPMethod("OPTIONS")}}。所有安全的方法都是{{glossary("idempotent", "幂等")}}的，但并非所有幂等方法都是安全的，例如，{{HTTPMethod("PUT")}} 和 {{HTTPMethod("DELETE")}} 都是幂等的，但不是安全的。
 
@@ -13,29 +17,24 @@ slug: Glossary/Safe/HTTP
 
 安全的请求，不会改变服务端的状态（数据）：
 
-```
+```http
 GET /pageX.html HTTP/1.1
 ```
 
 非安全的请求方式，可能会引起服务端状态的改变：
 
-```
+```http
 POST /pageX.html HTTP/1.1
 ```
 
 一个幂等（idempotent）但是不安全的方法：
 
-```
+```http
 DELETE /idX/delete HTTP/1.1
 ```
 
-## 更多
+## 参见
 
-### 一般了解
-
-- HTTP 规范中的 [安全](https://tools.ietf.org/html/rfc7231#section-4.2.1) 定义。
-
-### 技术规范
-
-- 安全方法的详细解释：{{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("OPTIONS")}}
-- 非安全方法的详细解释：{{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, {{HTTPMethod("POST")}}
+- HTTP 规范中的[安全](https://httpwg.org/specs/rfc9110.html#safe.methods)定义。
+- 安全方法的详细解释：{{HTTPMethod("GET")}}、{{HTTPMethod("HEAD")}}、{{HTTPMethod("OPTIONS")}}
+- 非安全方法的详细解释：{{HTTPMethod("PUT")}}、{{HTTPMethod("DELETE")}}、{{HTTPMethod("POST")}}

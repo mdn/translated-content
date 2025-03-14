@@ -2,43 +2,44 @@
 title: PaymentAddress
 slug: Web/API/PaymentAddress
 l10n:
-  sourceCommit: da3e8fe86e7ae4bb7342c6ccb56188b25f9be55c
+  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}} {{Deprecated_header}}{{Non-standard_header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-**`PaymentAddress`** は[支払いリクエスト API](/ja/docs/Web/API/Payment_Request_API) のインターフェイスで、配送先または支払い先住所情報を保存するために使用されます。
+**`PaymentAddress`** は[決済リクエスト API](/ja/docs/Web/API/Payment_Request_API) のインターフェイスで、配送先または支払い先住所情報を保存するために使用されます。
 
 万国郵便連合のウェブページにある [Addressing S42 standard](https://www.upu.int/en/Postal-Solutions/Programmes-Services/Addressing-Solutions#addressing-s42-standard) という、郵便宛名の国際標準に関する資料を参照すると便利かもしれません。
 
 ## プロパティ
 
-- {{domxref('PaymentAddress.addressLine')}} {{readonlyinline}} {{deprecated_inline}}
+- {{domxref('PaymentAddress.addressLine')}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 他のプロパティに含まれていない住所の各行を提供する文字列の配列。正確なサイズと内容は国や場所によって異なります。例: 通り名、住居番号、アパートの番号、地方の配達ルート、説明の説明、私書箱の番号など。
-- {{domxref('PaymentAddress.country')}} {{readonlyinline}} {{deprecated_inline}}
+- {{domxref('PaymentAddress.country')}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 文字列で、 [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 標準を使用して、住所が配置されている国を指定します。この文字列は常に正規の大文字形式で指定されます。有効な `country` の値の例: `"US"`, `"GB"`, `"CN"`, `"JP"`
-- {{domxref('PaymentAddress.city')}} {{readonlyinline}} {{deprecated_inline}}
+- {{domxref('PaymentAddress.city')}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 文字列で、住所の都市名または町名の部分を持ちます。
-- {{domxref('PaymentAddress.dependentLocality')}} {{readonlyinline}} {{deprecated_inline}}
+- {{domxref('PaymentAddress.dependentLocality')}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 文字列で、都市に従属する地区またはサブ地区を示します。例: neighborhood, borough, district, イギリスの dependent locality
-- {{domxref('PaymentAddress.organization')}} {{readonlyinline}} {{deprecated_inline}}
+- {{domxref('PaymentAddress.organization')}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 文字列で、支払い先住所にある組織、事業所、会社、機関などの名前を指定します。
-- {{domxref('PaymentAddress.phone')}} {{readonlyinline}} {{deprecated_inline}}
+- {{domxref('PaymentAddress.phone')}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 文字列で、受領者または連絡担当者の電話番号を指定します。
-- {{domxref('PaymentAddress.postalCode')}} {{readonlyinline}} {{deprecated_inline}}
+- {{domxref('PaymentAddress.postalCode')}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 文字列で、郵便物の配送経路として管轄の国が使用するコードを指定する文字列です。例: 米国の ZIP コード、インドの PIN コード、日本の郵便番号など。
-- {{domxref('PaymentAddress.recipient')}} {{readonlyinline}} {{deprecated_inline}}
+- {{domxref('PaymentAddress.recipient')}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 文字列で、支払い先住所の受取人、購入者、または連絡先の名前を示します。
-- {{domxref('PaymentAddress.region')}} {{readonlyinline}} {{deprecated_inline}}
+- {{domxref('PaymentAddress.region')}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 文字列で、国の最上位の行政区画 (州、都道府県など) を含みます。
-- {{domxref('PaymentAddress.sortingCode')}} {{readonlyinline}} {{deprecated_inline}}
+- {{domxref('PaymentAddress.sortingCode')}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 文字列で、フランスで使用されているような郵便ソートコードを提供します。
 
-> **メモ:** 値が指定されていないプロパティには、空の文字列が含まれています。
+> [!NOTE]
+> 値が指定されていないプロパティには、空の文字列が含まれています。
 
-## メソッド
+## インスタンスメソッド
 
-- {{domxref('PaymentAddress.toJSON()')}} {{deprecated_inline}}
+- {{domxref('PaymentAddress.toJSON()')}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : `PaymentAddress` オブジェクトのプロパティの JSON 表現を返す標準のシリアライザー。
 
 ## 例

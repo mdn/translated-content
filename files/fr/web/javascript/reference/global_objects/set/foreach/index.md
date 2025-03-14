@@ -1,22 +1,25 @@
 ---
 title: Set.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/forEach
-original_slug: Web/JavaScript/Reference/Objets_globaux/Set/forEach
 ---
 
 {{JSRef}}
 
 La méthode **`forEach()`** permet d'exécuter une fonction donnée, une fois pour chaque valeur de l'ensemble `Set`. L'ordre appliqué est celui dans lequel les valeurs ont été ajoutées à l'ensemble.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.forEach()")}}
+
+```js interactive-example
+function logSetElements(value1, value2, set) {
+  console.log(`s[${value1}] = ${value2}`);
+}
+
+new Set(["foo", "bar", undefined]).forEach(logSetElements);
+
+// Expected output: "s[foo] = foo"
+// Expected output: "s[bar] = bar"
+// Expected output: "s[undefined] = undefined"
+```
 
 ## Syntaxe
 
@@ -54,7 +57,7 @@ La méthode `forEach()` exécute la fonction `callback` fournie pour chaque vale
 
 Les objets `Set` n'ont pas de clé (_key_). Cependant les deux premiers arguments correspondent à la **valeur** contenue dans l'objet {{jsxref("Set")}}. Cela permet d'utiliser les fonctions callback de façon cohérente avec les méthodes `forEach()` de {{jsxref("Map.foreach", "Map")}} et {{jsxref("Array.forEach","Array")}}.
 
-Si un paramètre `thisArg` est fourni, il sera passé à la fonction `callback` lors de l'appel comme valeur `this`. Par défaut, la valeur {{jsxref("undefined")}} sera passée comme argument `this`. La valeur `this` effectivement reçue par la fonction `callback` est déterminée selon [les règles usuelles de détermination de `this` par une fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this).
+Si un paramètre `thisArg` est fourni, il sera passé à la fonction `callback` lors de l'appel comme valeur `this`. Par défaut, la valeur {{jsxref("undefined")}} sera passée comme argument `this`. La valeur `this` effectivement reçue par la fonction `callback` est déterminée selon [les règles usuelles de détermination de `this` par une fonction](/fr/docs/Web/JavaScript/Reference/Operators/this).
 
 Chacune des valeurs sera traitée une fois sauf si celle-ci a été supprimée puis réajoutée avant la fin de `forEach`. `callback` n'est pas appelé pour les valeurs qui sont supprimés avant le passage de la fonction. Les valeurs qui sont ajoutées avant que `forEach` ait parcouru l'ensemble seront traitées
 
@@ -66,7 +69,7 @@ Le code qui suit permet d'enregistrer une ligne pour chaque élément contenu da
 
 ```js
 function logSetElements(valeur1, valeur2, set) {
-    console.log("s[" + valeur1 + "] = " + valeur2);
+  console.log("s[" + valeur1 + "] = " + valeur2);
 }
 
 new Set(["toto", "truc", undefined]).forEach(logSetElements);

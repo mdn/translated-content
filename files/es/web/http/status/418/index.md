@@ -3,6 +3,8 @@ title: 418 Soy una tetera
 slug: Web/HTTP/Status/418
 ---
 
+{{HTTPSidebar}}
+
 El código de error HTTP **`418 Soy una tetera`** indica que el servidor se rehusa a preparar café porque es una tetera. Este error es una referencia al Hyper Text Coffee Pot Control Protocol, creado como parte de una broma del April Fools' de 1998.
 
 ## Estado
@@ -13,13 +15,11 @@ El código de error HTTP **`418 Soy una tetera`** indica que el servidor se rehu
 
 ## Especificaciones
 
-| Especificación                                               | Título                                                                     |
-| ------------------------------------------------------------ | -------------------------------------------------------------------------- |
-| {{RFC("2324", "418 I'm a teapot" , "2.3.2")}} | Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0): Semantics and Content |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("http.status.418")}}
+{{Compat}}
 
 ## Ver también
 

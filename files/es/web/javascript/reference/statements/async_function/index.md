@@ -1,13 +1,6 @@
 ---
 title: Función async
 slug: Web/JavaScript/Reference/Statements/async_function
-tags:
-  - Declaración
-  - Ejemplo
-  - JavaScript
-  - función
-translation_of: Web/JavaScript/Reference/Statements/async_function
-original_slug: Web/JavaScript/Referencia/Sentencias/funcion_asincrona
 ---
 
 {{jsSidebar("Statements")}}
@@ -16,7 +9,26 @@ La declaración de función **`async`** define una _función asíncrona_, la cua
 
 Es posible definir también funciones asíncronas a través de una {{jsxref("Operators/async_function", "expresión de función async", "", 1)}}.
 
-{{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Statement - Async", "taller")}}
+
+```js interactive-example
+function resolveAfter2Seconds() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("resolved");
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log("calling");
+  const result = await resolveAfter2Seconds();
+  console.log(result);
+  // Expected output: "resolved"
+}
+
+asyncCall();
+```
 
 The source for this interactive demo is stored in a GitHub repository. If you'd like to contribute to the interactive demo project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
 
@@ -53,7 +65,8 @@ Cuando se llama a una función `async`, esta devuelve un elemento {{jsxref("Prom
 
 Una función `async` puede contener una expresión {{jsxref("Operators/await", "await")}}, la cual pausa la ejecución de la función asíncrona y espera la resolución de la `Promise` pasada y, a continuación, reanuda la ejecución de la función `async` y devuelve el valor resuelto.
 
-> **Nota:** La finalidad de las funciones `async`/`await` es simplificar el comportamiento del uso síncrono de promesas y realizar algún comportamiento específico en un grupo de `Promises`. Del mismo modo que las `Promises` son semejantes a las devoluciones de llamadas estructuradas, `async`/`await` se asemejan a una combinación de generadores y promesas.
+> [!NOTE]
+> La finalidad de las funciones `async`/`await` es simplificar el comportamiento del uso síncrono de promesas y realizar algún comportamiento específico en un grupo de `Promises`. Del mismo modo que las `Promises` son semejantes a las devoluciones de llamadas estructuradas, `async`/`await` se asemejan a una combinación de generadores y promesas.
 
 ## Ejemplos
 
@@ -61,13 +74,12 @@ Una función `async` puede contener una expresión {{jsxref("Operators/await", "
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
   });
 }
-
 
 async function add1(x) {
   const a = await resolveAfter2Seconds(20);
@@ -75,19 +87,18 @@ async function add1(x) {
   return x + a + b;
 }
 
-add1(10).then(v => {
-  console.log(v);  // prints 60 after 4 seconds.
+add1(10).then((v) => {
+  console.log(v); // prints 60 after 4 seconds.
 });
-
 
 async function add2(x) {
   const p_a = resolveAfter2Seconds(20);
   const p_b = resolveAfter2Seconds(30);
-  return x + await p_a + await p_b;
+  return x + (await p_a) + (await p_b);
 }
 
-add2(10).then(v => {
-  console.log(v);  // prints 60 after 2 seconds.
+add2(10).then((v) => {
+  console.log(v); // prints 60 after 2 seconds.
 });
 ```
 
@@ -100,10 +111,10 @@ Una API que devuelva una {{jsxref("Promise")}} tendrá como resultado una cadena
 ```js
 function getProcessedData(url) {
   return downloadData(url) // returns a promise
-    .catch(e => {
-      return downloadFallbackData(url)  // returns a promise
+    .catch((e) => {
+      return downloadFallbackData(url); // returns a promise
     })
-    .then(v => {
+    .then((v) => {
       return processDataInWorker(v); // returns a promise
     });
 }
@@ -116,7 +127,7 @@ async function getProcessedData(url) {
   let v;
   try {
     v = await downloadData(url);
-  } catch(e) {
+  } catch (e) {
     v = await downloadFallbackData(url);
   }
   return processDataInWorker(v);
@@ -129,13 +140,13 @@ Observe que, en el ejemplo anterior, no hay ninguna instrucción `await` dentro 
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.async_function")}}
+{{Compat}}
 
 ## Véase también
 
 - {{jsxref("Operators/async_function", "Expresión de función async")}}
 - Objeto {{jsxref("AsyncFunction")}}
 - {{jsxref("Operators/await", "await")}}
-- [«Decorar funciones async de JavaScript» en innolitics.com](http://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) (en inglés)
+- [«Decorar funciones async de JavaScript» en innolitics.com](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) (en inglés)

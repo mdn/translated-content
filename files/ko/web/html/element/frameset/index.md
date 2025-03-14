@@ -1,8 +1,8 @@
 ---
 title: <frameset>
 slug: Web/HTML/Element/frameset
-translation_of: Web/HTML/Element/frameset
 ---
+
 {{Deprecated_header}}
 
 ## 요약
@@ -13,11 +13,11 @@ translation_of: Web/HTML/Element/frameset
 
 ## 속성(=Attributes)
 
-다른 모든 HTML elments와 마찬가지로, \<frameset> element는 전역속성([global attributes](/en-US/HTML/Global_attributes))이 적용된다.
+다른 모든 HTML elments와 마찬가지로, `<frameset>` element는 전역속성([global attributes](/ko/docs/Web/HTML/Global_attributes))이 적용된다.
 
-- {{htmlattrdef("cols")}}
+- `cols`
   - : 이 속성은 프레임셋안의 가로공간의 갯수와 크기를 정합니다.
-- {{htmlattrdef("rows")}}
+- `rows`
   - : 이 속성은 프레임셋안의 세로공간의 갯수와 크기를 정합니다.
 
 ## 예시

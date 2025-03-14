@@ -1,53 +1,54 @@
 ---
 title: TypedArray.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
+l10n:
+  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
 ---
 
 {{JSRef}}
 
-**`findIndex()`** メソッドは、型付き配列内の要素が与えられたテスト関数を満たす場合、型付き配列内の**位置**を返します。さもなければ、 -1 が返されます。
+**`findIndex()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、指定されたテスト関数を満たす型付き配列の最初の要素のインデックスを返します。テスト関数を満たす要素がない場合、 -1 を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.findIndex()")}} と同じです。
 
-{{jsxref("TypedArray.find", "find()")}} メソッドも参照してください。これは型付き配列内の見つかった要素の添字の代わりに**値**を返します。
+{{InteractiveExample("JavaScript Demo: TypedArray.findIndex()")}}
 
-{{EmbedInteractiveExample("pages/js/typedarray-findindex.html")}}
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([10, -20, 30, -40, 50]);
+
+console.log(int8.findIndex(isNegative));
+// Expected output: 1
+```
 
 ## 構文
 
-```
-typedarray.findIndex(callback[, thisArg])
+```js-nolint
+findIndex(callbackFn)
+findIndex(callbackFn, thisArg)
 ```
 
 ### 引数
 
-- `callback`
-
-  - : 型付き配列の各要素で実行する関数。3 つの引数を取ります。
-
+- `callbackFn`
+  - : 配列のそれぞれの要素に対して実行する関数です。要素がテストに合格した場合は[真値](/ja/docs/Glossary/Truthy)を返し、そうでなければ[偽値](/ja/docs/Glossary/Falsy)を返す必要があります。この関数は以下の引数で呼び出されます。
     - `element`
-      - : 型付き配列内で現在処理されている要素。
+      - : 現在処理されている型付き配列の要素です。
     - `index`
-      - : 型付き配列内で現在処理されている要素の位置。
+      - : 現在処理されている型付き配列の要素のインデックスです。
     - `array`
-      - : `findIndex()` を呼び出した元の配列。
-
+      - : `findIndex()` が実行されている型付き配列です。
 - `thisArg` {{optional_inline}}
-  - : `callback` を実行するときに `this` として使用するオブジェクト。
+  - : `callbackFn` を実行する際に `this` として使用する値。[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)を参照してください。
 
 ### 返値
 
-テストを満たした配列の要素の位置を返します。それ以外の場合は、 `-1` を返します。
+テストを通った配列の要素の位置を返します。それ以外の場合は、 `-1` を返します。
 
 ## 解説
 
-`findIndex()` メソッドは、 `callback` 関数が true 値を返す要素を見つけるまで、型付き配列内に存在している各要素に対して一度ずつ `callback` 関数を実行します。そのような要素が見つかったら、 `findIndex()` はすぐに要素の添字を返します。さもなければ、 `findIndex()` メソッドは -1 を返します。 `callback` は型付き配列の値を割り当てた位置に対してのみ呼び出されます。つまり、削除されたり、値が割り当てられて位置に対しては呼び出されません。
-
-`callback` は、要素の値、要素の位置、走査中の型付き配列の 3 つの引数とともに呼び出されます。
-
-`thisArg` 引数が `findIndex()` に与えられた場合、 `callback` の各呼び出しで `this` として使用されます。`thisArg` 引数が与えられなかった場合は、 {{jsxref("undefined")}} が使用されます。
-
-`findIndex()` メソッドは呼び出される型付き配列を変更しません。
-
-`findIndex()` によって処理される要素の範囲は、最初に `callback` が呼び出される前に設定されます。 `findIndex()` の呼び出しが始まったあとで型付き配列に追加された要素は、 `callback` メソッドによって処理されません。存在していて、処理されていない型付き配列の要素が `callback` によって変更された場合、処理している `callback` 関数に渡される値は、 `findIndex()` が要素の位置を処理する直前の値です。削除された要素は処理されません。
+詳細については、 {{jsxref("Array.prototype.findIndex()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
 
 ## 例
 
@@ -57,7 +58,7 @@ typedarray.findIndex(callback[, thisArg])
 
 ```js
 function isPrime(element, index, array) {
-  var start = 2;
+  let start = 2;
   while (start <= Math.sqrt(element)) {
     if (element % start++ < 1) {
       return false;
@@ -66,49 +67,11 @@ function isPrime(element, index, array) {
   return element > 1;
 }
 
-var uint8 = new Uint8Array([4, 6, 8, 12]);
-var uint16 = new Uint16Array([4, 6, 7, 12]);
+const uint8 = new Uint8Array([4, 6, 8, 12]);
+const uint16 = new Uint16Array([4, 6, 7, 12]);
 
 console.log(uint8.findIndex(isPrime)); // -1, not found
 console.log(uint16.findIndex(isPrime)); // 2
-```
-
-## ポリフィル
-
-```js
-TypedArray.prototype.findIndex = Array.prototype.findIndex = Array.prototype.findIndex || function(evaluator, thisArg) {
-        'use strict';
-        if (!this) {
-          throw new TypeError('Array.prototype.some called on null or undefined');
-        }
-
-        if (typeof(evaluator) !== 'function') {
-            if (typeof(evaluator) === 'string') {
-                // Attempt to convert it to a function
-                if ( ! (evaluator = eval(evaluator)) ){
-                    throw new TypeError();
-                }
-            } else {
-                throw new TypeError();
-            }
-        }
-
-        var i;
-        if (thisArg === undefined) {  // Optimize for thisArg
-            for (i in this) {
-                if (evaluator(this[i], i, this)) {
-                    return i;
-                }
-            }
-            return -1;
-        }
-        for (i in this) {
-            if (evaluator.call(thisArg, this[i], i, this)) {
-                return i;
-            }
-        }
-        return -1;
-};
 ```
 
 ## 仕様書
@@ -117,9 +80,16 @@ TypedArray.prototype.findIndex = Array.prototype.findIndex = Array.prototype.fin
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.TypedArray.findIndex")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`TypedArray.prototype.findIndex` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
+- {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.find()")}}
+- {{jsxref("TypedArray.prototype.findLast()")}}
+- {{jsxref("TypedArray.prototype.findLastIndex()")}}
 - {{jsxref("TypedArray.prototype.indexOf()")}}
+- {{jsxref("TypedArray.prototype.lastIndexOf()")}}
+- {{jsxref("Array.prototype.findIndex()")}}

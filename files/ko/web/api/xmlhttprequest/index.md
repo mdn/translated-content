@@ -1,25 +1,13 @@
 ---
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
-tags:
-  - AJAX
-  - API
-  - Communication
-  - HTTP
-  - Interface
-  - Reference
-  - Web
-  - XHR
-  - XMLHttpRequest
-browser-compat: api.XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest
 ---
 
 {{DefaultAPISidebar("XMLHttpRequest")}}
 
 `XMLHttpRequest` (XHR) 객체는 서버와 상호작용할 때 사용합니다. XHR을 사용하면 페이지의 새로고침 없이도 URL에서 데이터를 가져올 수 있습니다. 이를 활용하면 사용자의 작업을 방해하지 않고 페이지의 일부를 업데이트할 수 있습니다.
 
-`XMLHttpRequest`는 [AJAX](/ko/docs/Web/Guide/AJAX) 프로그래밍에 많이 사용됩니다.
+`XMLHttpRequest`는 [AJAX](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) 프로그래밍에 많이 사용됩니다.
 
 {{InheritanceDiagram}}
 
@@ -53,9 +41,11 @@ translation_of: Web/API/XMLHttpRequest
 - {{domxref("XMLHttpRequest.status")}} {{readonlyinline}}
   - : 응답의 [HTTP 상태 코드](/ko/docs/Web/HTTP/Status)를 반환합니다.
 - {{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}
+
   - : HTTP 서버가 반환한 응답 문자열을 담은 `string`을 반환합니다. {{domxref("XMLHttpRequest.status")}}와 달리, `statusText`는 "`OK`"와 같은 응답 상태 메시지의 전문을 반환합니다
 
-    > **참고:** HTTP/1.1의 상태 텍스트와 같이 프로토콜 버전과 응답의 이유를 알릴 방법이 HTTP/2 명세에는 없습니다. ({{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}})
+    > [!NOTE]
+    > HTTP/1.1의 상태 텍스트와 같이 프로토콜 버전과 응답의 이유를 알릴 방법이 HTTP/2 명세에는 없습니다. ({{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}})
 
 - {{domxref("XMLHttpRequest.timeout")}}
   - : 요청을 자동으로 종료하기 전에 대기할 시간을 나타내는 밀리초 단위 값입니다.
@@ -124,9 +114,9 @@ translation_of: Web/API/XMLHttpRequest
 - {{domxref("XMLSerializer")}}: DOM 트리를 XML로 직렬화
 - `XMLHttpRequest`를 다루는 MDN 자습서:
 
-  - [Ajax 시작하기](/ko/docs/Web/Guide/AJAX/Getting_Started)
-  - [XMLHttpRequest 사용하기](/ko/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-  - [XMLHttpRequest에서의 HTML](/ko/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+  - [Ajax 시작하기](/ko/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e)
+  - [XMLHttpRequest 사용하기](/ko/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+  - [XMLHttpRequest에서의 HTML](/ko/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
   - [Fetch API](/ko/docs/Web/API/Fetch_API)
 
 - [HTML5 Rocks — New Tricks in XMLHttpRequest2](https://www.html5rocks.com/en/tutorials/file/xhr2/)

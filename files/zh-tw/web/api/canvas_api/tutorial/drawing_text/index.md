@@ -3,13 +3,11 @@ title: 使用canvas繪製文字
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
-[`canvas`](/zh-TW/HTML/Canvas)元素支援在[標準 HTML 5 特色](http://www.whatwg.org/specs/web-apps/current-work/#text-0)以及少許實驗性的 Mozilla 方法和功能上繪製文字。
+[`canvas`](/zh-TW/docs/Web/HTML/Element/canvas)元素支援在[標準 HTML 5 特色](https://html.spec.whatwg.org/#text-0)以及少許實驗性的 Mozilla 方法和功能上繪製文字。
 
-文字可以包括任何 Unicode 字元，即使用那些超出“基本多文種平面”的字元也可以。
-
-{{ fx_minversion_note("3.5", '在Firefox 3.5或之後的版本，當繪圖時，任何對於 <a href="/en/Canvas_tutorial/Applying_styles_and_colors#Shadows">shadow effects</a>（陰影效果）的處理可以使用在文字上。') }}
+文字可以包括任何 Unicode 字元，即使用那些超出「基本多文種平面」的字元也可以。
 
 ## 方法概述
 
@@ -136,9 +134,9 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_text
   </tbody>
 </table>
 
-下圖展示了 textBaseline 屬性所支援的各種基線，感謝 [WHATWG](http://www.whatwg.org/).
+下圖展示了 textBaseline 屬性所支援的各種基線，感謝 [WHATWG](https://whatwg.org/)。
 
-![top of em squre（字元區塊頂部）大致在字型中所有字母的最頂部位置，hanging basline（懸掛基線）則是在一些特殊（較小的,像是“आ”）字母頂部，middle則是在top of em squre（字元區塊頂部和bottom of em squre（字元區塊底部）的中間，alphabetic（拼音文字）的基線位置則是在一般拼音字母如Á，ÿ，f，Ω的底線位置。ideographic（表意文字）的基線在字元的底部位置，bottom of em squre（字元區塊底部）則大致是字型中所有字母的最底部位置。而top and bottom of the bounding box（上下的區域範圍線）則比這些基線都來得更遠，基於字母的高度可能超過字元區塊頂部和底部的範圍。](http://www.whatwg.org/specs/web-apps/current-work/images/baselines.png)
+![top of em squre（字元區塊頂部）大致在字型中所有字母的最頂部位置，hanging basline（懸掛基線）則是在一些特殊（較小的,像是「आ」）字母頂部，middle則是在top of em squre（字元區塊頂部和bottom of em squre（字元區塊底部）的中間，alphabetic（拼音文字）的基線位置則是在一般拼音字母如Á，ÿ，f，Ω的底線位置。ideographic（表意文字）的基線在字元的底部位置，bottom of em squre（字元區塊底部）則大致是字型中所有字母的最底部位置。而top and bottom of the bounding box（上下的區域範圍線）則比這些基線都來得更遠，基於字母的高度可能超過字元區塊頂部和底部的範圍。](https://html.spec.whatwg.org/images/baselines.png)
 
 ## 方法
 
@@ -146,7 +144,8 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_text
 
 繪製文字使用`font`屬性指定的文字樣式，對齊則使用`textAlign`屬性，而指定基線則使用`textBaseline`. 填充文字當前使用`fillStyle`，而`strokeStyle`則被忽略
 
-> **備註：** 這個方法在 Gecko 1.9.1 (Firefox 3.5)時引進，且是 HTML 5 標準的一部分.
+> [!NOTE]
+> 這個方法在 Gecko 1.9.1 (Firefox 3.5)時引進，且是 HTML 5 標準的一部分.
 
 ```plain
 void fillText(
@@ -178,7 +177,8 @@ ctx.fillText("Sample String", 10, 50);
 
 測量文字。返回一個物件包含了寬度，像素值，所指定的文字會以當前的文字樣式繪製。
 
-> **備註：** 這個方法在 Gecko 1.9.1 (Firefox 3.5) 引進，且是 HTML 5 標準的一部分。
+> [!NOTE]
+> 這個方法在 Gecko 1.9.1 (Firefox 3.5) 引進，且是 HTML 5 標準的一部分。
 
 ```plain
 nsIDOMTextMetrics measureText(
@@ -201,7 +201,8 @@ nsIDOMTextMetrics measureText(
 
 繪製文字使用由`mozTextStyle`屬性的文字樣式。文本當前的填充顏色被用來當做文字顏色。
 
-> **備註：** 這個方法已經不被建議使用,請使用正式的 HTML 5 方法 `fillText()` and `strokeText()`.
+> [!NOTE]
+> 這個方法已經不被建議使用,請使用正式的 HTML 5 方法 `fillText()` and `strokeText()`.
 
 ```plain
 void mozDrawText(
@@ -222,7 +223,7 @@ ctx.fillStyle = "Red";
 ctx.mozDrawText("Sample String");
 ```
 
-這個範例將文字“Sample String”繪製到畫布（canvas）上。
+這個範例將文字「Sample String」繪製到畫布（canvas）上。
 
 ### mozMeasureText()
 
@@ -230,7 +231,8 @@ ctx.mozDrawText("Sample String");
 
 返回寬度，像素值，指定文字
 
-> **備註：** 這個方法已經已宣告棄用，請使用正式的 HTML 5 方法`measureText()`.
+> [!NOTE]
+> 這個方法已經已宣告棄用，請使用正式的 HTML 5 方法`measureText()`.
 
 ```plain
 float mozMeasureText(
@@ -253,7 +255,7 @@ float mozMeasureText(
 var text = "Sample String";
 var width = ctx.canvas.width;
 var len = ctx.mozMeasureText(text);
-ctx.translate((width - len)/2, 0);
+ctx.translate((width - len) / 2, 0);
 ctx.mozDrawText(text);
 ```
 
@@ -280,11 +282,11 @@ void mozPathText(
 ctx.fillStyle = "green";
 ctx.strokeStyle = "black";
 ctx.mozPathText("Sample String");
-ctx.fill()
-ctx.stroke()
+ctx.fill();
+ctx.stroke();
 ```
 
-這個範例繪出文字“Sample String”，填充顏色是綠色，外框顏色是黑色。
+這個範例繪出文字「Sample String」，填充顏色是綠色，外框顏色是黑色。
 
 ### mozTextAlongPath()
 
@@ -312,7 +314,8 @@ void mozTextAlongPath(
 
 繪製文字使用`font`屬性指定的文字樣式，對齊則使用`textAlign`屬性，而指定基線則使用`textBaseline`. 當前使用`strokeStyle`來建立文字外框。
 
-> **備註：** 這個方法在 Gecko 1.9.1 (Firefox 3.5)時引進，且是 HTML 5 標準的一部分。
+> [!NOTE]
+> 這個方法在 Gecko 1.9.1 (Firefox 3.5)時引進，且是 HTML 5 標準的一部分。
 
 ```plain
 void strokeText(
@@ -342,6 +345,6 @@ ctx.strokeText("Sample String", 10, 50);
 
 ## 備註
 
-- 請見 [WHATWG specification](http://www.whatwg.org/specs/web-apps/current-work/#text) 關於 HTML 5 canvas text 的說明。
+- 請見 [WHATWG 規範](https://html.spec.whatwg.org/#text)關於 HTML 5 canvas text 的說明。
 - 你不需要特別的文本來使用這些功能；2D 的文本就可以執行得很好。
 - 所有的繪圖都使用即時變化來完成。

@@ -14,7 +14,7 @@ slug: Web/API/Geolocation_API/Using_the_Geolocation_API
 如果该对象存在，那么地理位置服务可用。你可以测试 `geolocation` 是否存在：
 
 ```js
-if ('geolocation' in navigator) {
+if ("geolocation" in navigator) {
   /* geolocation 存在 */
 } else {
   /* geolocation 不存在 */
@@ -25,7 +25,8 @@ if ('geolocation' in navigator) {
 
 你可以调用 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 函数获取用户当前定位位置。这会异步地请求获取用户位置，并查询定位硬件来获取最新信息。当定位被确定后，定义的回调函数就会被执行。你可以选择性地提供第二个回调函数，当有错误时会被执行。第三个参数也是可选的，你可以通过该对象参数设定最长可接受的定位返回时间、等待请求的时间和是否获取高精度定位。
 
-> **备注：** 默认情况下，{{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 会尽快返回一个低精度结果，这在你不关心准确度只关心快速获取结果的情况下很有用。有 GPS 的设备可能需要一分钟或更久来获取 GPS 定位，在这种情况下 `getCurrentPosition()` 会返回低精度数据（基于 IP 的定位或 Wi-Fi 定位）。
+> [!NOTE]
+> 默认情况下，{{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 会尽快返回一个低精度结果，这在你不关心准确度只关心快速获取结果的情况下很有用。有 GPS 的设备可能需要一分钟或更久来获取 GPS 定位，在这种情况下 `getCurrentPosition()` 会返回低精度数据（基于 IP 的定位或 Wi-Fi 定位）。
 
 ```js
 navigator.geolocation.getCurrentPosition((position) => {
@@ -39,7 +40,8 @@ navigator.geolocation.getCurrentPosition((position) => {
 
 你可以设定一个回调函数来响应定位数据发生的变更（设备发生了移动，或获取到了更高精度的地理位置信息）。你可以通过 {{domxref("Geolocation.watchPosition","watchPosition()")}} 函数实现该功能。它与 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 接受相同的参数，但回调函数会被调用多次。错误回调函数与 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 中一样是可选的，也会被多次调用。
 
-> **备注：** 你可以直接调用 {{domxref("Geolocation.watchPosition","watchPosition()")}} 函数，不需要先调用 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 函数。
+> [!NOTE]
+> 你可以直接调用 {{domxref("Geolocation.watchPosition","watchPosition()")}} 函数，不需要先调用 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 函数。
 
 ```js
 const watchID = navigator.geolocation.watchPosition((position) => {
@@ -67,13 +69,13 @@ function success(position) {
 }
 
 function error() {
-  alert('Sorry, no position available.');
+  alert("Sorry, no position available.");
 }
 
 const options = {
   enableHighAccuracy: true,
   maximumAge: 30000,
-  timeout: 27000
+  timeout: 27000,
 };
 
 const watchID = navigator.geolocation.watchPosition(success, error, options);
@@ -89,14 +91,14 @@ const watchID = navigator.geolocation.watchPosition(success, error, options);
 
 ```js
 function success(position) {
-  const latitude  = position.coords.latitude;
+  const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
 
   // 使用 latitude 和 longitude 做些什么
 }
 ```
 
-你也可以从 `GeolocationCoordinates` 对象中获取许多其它的信息，包括高度、速度、设备面朝的方向，以及对高度、经纬度数据的精准测量值。
+你也可以从 `GeolocationCoordinates` 对象中获取许多其他的信息，包括高度、速度、设备面朝的方向，以及对高度、经纬度数据的精准测量值。
 
 ## 错误处理
 
@@ -107,7 +109,7 @@ function success(position) {
 ```js
 function errorCallback(error) {
   alert(`ERROR(${error.code}): ${error.message}`);
-};
+}
 ```
 
 ## 示例
@@ -117,56 +119,54 @@ function errorCallback(error) {
 ```css hidden
 body {
   padding: 20px;
-  background-color:#ffffc9
+  background-color: #ffffc9;
 }
 
 button {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 ```
 
 ### HTML
 
 ```html
-<button id = "find-me">显示我的位置</button><br/>
-<p id = "status"></p>
-<a id = "map-link" target="_blank"></a>
+<button id="find-me">显示我的位置</button><br />
+<p id="status"></p>
+<a id="map-link" target="_blank"></a>
 ```
 
 ### JavaScript
 
 ```js
 function geoFindMe() {
+  const status = document.querySelector("#status");
+  const mapLink = document.querySelector("#map-link");
 
-  const status = document.querySelector('#status');
-  const mapLink = document.querySelector('#map-link');
-
-  mapLink.href = '';
-  mapLink.textContent = '';
+  mapLink.href = "";
+  mapLink.textContent = "";
 
   function success(position) {
-    const latitude  = position.coords.latitude;
+    const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
 
-    status.textContent = '';
+    status.textContent = "";
     mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
     mapLink.textContent = `纬度：${latitude} °，经度：${longitude} °`;
   }
 
   function error() {
-    status.textContent = '无法获取你的位置';
+    status.textContent = "无法获取你的位置";
   }
 
   if (!navigator.geolocation) {
-    status.textContent = '你的浏览器不支持地理位置';
+    status.textContent = "你的浏览器不支持地理位置";
   } else {
-    status.textContent = '定位中……';
+    status.textContent = "定位中……";
     navigator.geolocation.getCurrentPosition(success, error);
   }
-
 }
 
-document.querySelector('#find-me').addEventListener('click', geoFindMe);
+document.querySelector("#find-me").addEventListener("click", geoFindMe);
 ```
 
 ### 结果

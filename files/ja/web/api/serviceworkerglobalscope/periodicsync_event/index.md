@@ -1,11 +1,12 @@
 ---
-title: 'ServiceWorkerGlobalScope: periodicsync イベント'
+title: "ServiceWorkerGlobalScope: periodicsync イベント"
+short-title: periodicsync
 slug: Web/API/ServiceWorkerGlobalScope/periodicsync_event
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: b74d47ab6e99d2bd43ef9638367d9c69fca04402
 ---
 
-{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
 **`periodicsync`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスのイベントで、 {{domxref('PeriodicSyncManager')}}を登録したときに指定された時間間隔で発行されます。
 
@@ -16,9 +17,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('periodicsync', (event) => { });
+addEventListener("periodicsync", (event) => {});
 
-onperiodicsync = (event) => { };
+onperiodicsync = (event) => {};
 ```
 
 ## イベント型
@@ -39,8 +40,8 @@ _祖先である {{domxref("Event")}} からプロパティを継承していま
 以下の例は、サービスワーカーで定期的な同期イベントに応答する方法を示しています。
 
 ```js
-self.addEventListener('periodicsync', (event) => {
-  if (event.tag === 'get-latest-news') {
+self.addEventListener("periodicsync", (event) => {
+  if (event.tag === "get-latest-news") {
     event.waitUntil(fetchAndCacheLatestNews());
   }
 });
@@ -50,7 +51,7 @@ self.addEventListener('periodicsync', (event) => {
 
 ```js
 self.onperiodicsync = (event) => {
- // ...
+  // ...
 };
 ```
 
@@ -64,5 +65,5 @@ self.onperiodicsync = (event) => {
 
 ## 関連情報
 
-- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/docs/capabilities/periodic-background-sync)
 - [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

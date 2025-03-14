@@ -1,20 +1,13 @@
 ---
 title: GitHub para iniciantes
 slug: conflicting/MDN/Community/Contributing/Getting_started
-tags:
-  - Boas práticas
-  - Comunidade
-  - GitHub
-  - MDN
-  - Iniciantes
-original_slug: MDN/Contribute/GitHub_beginners
 ---
 
 {{MDNSidebar}}
 
 [Git](https://git-scm.com/) e [GitHub](https://github.com/) são ferramentas desafiadoras para aprender e dominar, mas com alguns poucos comandos simples e alguns bons conselhos, você deve ser capaz de fazer o suficiente para contribuir para o MDN sem muitos problemas. O intuito deste artigo não é te ajudar a dominar Git ou GitHub, mas te dar o bastante para ser produtivo com eles em um nível básico e contribuir para o MDN.
 
-Se você já está familiarizado com o básico de Git/GitHub, você provavelmente não vai aprender nada novo aqui, mas você ainda pode achar este artigo útil como uma referência. Existe uma [folha de dicas de GitHub](/pt-BR/docs/MDN/Contribute/GitHub_cheatsheet) disponível também, apenas com os comandos e sem as longas explicações.
+Se você já está familiarizado com o básico de Git/GitHub, você provavelmente não vai aprender nada novo aqui, mas você ainda pode achar este artigo útil como uma referência. Existe uma [folha de dicas de GitHub](/pt-BR/docs/MDN/Community/Issues) disponível também, apenas com os comandos e sem as longas explicações.
 
 ## Conceitos essenciais
 
@@ -59,7 +52,7 @@ Se você não fizer isto, você ainda vai ser capaz de contribuir para o MDN, ma
 
 ## Preparando-se para trabalhar em um repo específico
 
-Existem inúmeros repos diferentes que você pode ter que atualizar conforme você trabalha em tarefas diferentes do MDN (veja [Onde está tudo no MDN? Um guia para nossos repositórios](/pt-BR/docs/MDN/Contribute/Where_is_everything)), mas existem alguns passos que você deve seguir em todos os repos que você trabalhar, para fazer as coisas serem mais fáceis e consistentes.
+Existem inúmeros repos diferentes que você pode ter que atualizar conforme você trabalha em tarefas diferentes do MDN (veja [Onde está tudo no MDN? Um guia para nossos repositórios](/pt-BR/docs/MDN/Community/Contributing/Our_repositories)), mas existem alguns passos que você deve seguir em todos os repos que você trabalhar, para fazer as coisas serem mais fáceis e consistentes.
 
 ### Bifurcando e clonando
 
@@ -166,7 +159,8 @@ Tenha certeza de rodar o comando a seguir para mudar para a branch main antes de
 git switch main
 ```
 
-> **Nota:** Em outros tutoriais você pode ter visto `git checkout` sendo usado para mudar de branches no repo. Isto funciona na maior parte do tempo, mas pode ter efeitos colaterais indesejados, por isso neste tutorial nós estamos recomendando o novo comando `git switch`, que é projetado puramente para trocar de branches e tem menos chance de dar problema. Se você estiver interessado em como estes comandos estão relacionados, e as diferenças entre eles [Destaques do Git 2.23 > Alternativas experimentais para o git checkout](https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout) tem um bom resumo.
+> [!NOTE]
+> Em outros tutoriais você pode ter visto `git checkout` sendo usado para mudar de branches no repo. Isto funciona na maior parte do tempo, mas pode ter efeitos colaterais indesejados, por isso neste tutorial nós estamos recomendando o novo comando `git switch`, que é projetado puramente para trocar de branches e tem menos chance de dar problema. Se você estiver interessado em como estes comandos estão relacionados, e as diferenças entre eles [Destaques do Git 2.23 > Alternativas experimentais para o git checkout](https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout) tem um bom resumo.
 
 ### Atualize a sua branch main
 
@@ -265,7 +259,7 @@ Isto parece certo. Nós estamos na branch "test-branch", e nós ainda não fizem
 
 ## Adicionando, commitando e subindo
 
-Neste ponto você já está preparado para fazer alterações no repo que você está trabalhando — para corrigir um bug no MDN ou qualquer coisa que você esteja fazendo. No geral, vamos pular esta parte, já que esse não é o objetivo do tutorial. Se você quiser corrigir um problema real no MDN, vá e escolha um bug para corrigir da nossa [lista de issues de conteúdo](https://github.com/mdn/content/issues/), ou leia [Contribuindo para o MDN](/pt-BR/docs/MDN/Contribute) para mais orientações.
+Neste ponto você já está preparado para fazer alterações no repo que você está trabalhando — para corrigir um bug no MDN ou qualquer coisa que você esteja fazendo. No geral, vamos pular esta parte, já que esse não é o objetivo do tutorial. Se você quiser corrigir um problema real no MDN, vá e escolha um bug para corrigir da nossa [lista de issues de conteúdo](https://github.com/mdn/content/issues/), ou leia [Contribuindo para o MDN](/pt-BR/docs/MDN/Community/Contributing) para mais orientações.
 
 Se você só quer seguir este tutorial com o propósito de ter um exemplo, vamos fazer algo simples.
 
@@ -355,7 +349,8 @@ Neste momento, volte para a página do fork remoto em github.com. Você deve ver
 
     ![Formulário para abrir um pull request, que inclui os campos de texto para título e descrição](open-pull-request.png)
 
-    > **Aviso:** Sigo os próximos passos apenas se você tiver uma alteração real para ser feito no repo! Por favor, não faça PRs de teste em nossos repos.
+    > [!WARNING]
+    > Sigo os próximos passos apenas se você tiver uma alteração real para ser feito no repo! Por favor, não faça PRs de teste em nossos repos.
 
 2. Neste momento, coloque um título e uma descrição úteis para o seu PR, dizendo exatamente o que você mudou, o porquê disto ser uma coisa boa, e qual a issue que é corrigida, se necessário. Especificamente, inclua uma linha dizendo `Corrige url-issue`. O GitHub automaticamente renderiza isto como um link para o número da issue, e.g. `Corrige #1234` e, além disso, automaticamente fecha a issue relacionada uma vez que o pull request for mesclado.
 3. Uma vez que você esteja pronto para enviar o seu pull request, clique no botão "Criar pull request". Isto fará com que seu pull request apareça na [Lista de pull requests](https://github.com/mdn/content/pulls) do repo na qual ele será revisado pela equipe de revisão, e, com sorte, mesclado na base principal de código.
@@ -417,7 +412,8 @@ Neste ponto, não existe nenhum retorno real, ou forma de rebobinar. Ao invés d
 
 Se você olhar na página do github.com do seu fork remoto novamente, você verá o commit que você queria reverter, juntamente com o commit que reverte ele.
 
-> **Nota:** Outra forma de conseguir se livrar dos arquivos que acabaram entrando no seu pull request e que você não quer que estejam lá é usar a interface do Github. Vá para a página do seu pull request em github.com, vá até a aba "Arquivos alterados", e encontre o arquivo que você quer remover do seu pull request. No canto superior direito do da caixa do arquivo na página, você verá um menu "três pontos" (`...`). Pressione o botão e escolha "Deletar o arquivo". Na página de confirmação, insira um título para o novo commit, tenha certeza de que a caixa de seleção "Fazer commit diretamente..." esteja selecionada, e pressione o botão "Fazer o commit das mudanças".
+> [!NOTE]
+> Outra forma de conseguir se livrar dos arquivos que acabaram entrando no seu pull request e que você não quer que estejam lá é usar a interface do Github. Vá para a página do seu pull request em github.com, vá até a aba "Arquivos alterados", e encontre o arquivo que você quer remover do seu pull request. No canto superior direito do da caixa do arquivo na página, você verá um menu "três pontos" (`...`). Pressione o botão e escolha "Deletar o arquivo". Na página de confirmação, insira um título para o novo commit, tenha certeza de que a caixa de seleção "Fazer commit diretamente..." esteja selecionada, e pressione o botão "Fazer o commit das mudanças".
 >
 > Geralmente é uma boa ideia deixar o resto do pull request exatamente da forma que você deseja antes de fazer as mudanças pela interface do GitHub. Se você fizer algo assim e acabar tendo que fazer mais mudanças, você vai precisar lembrar de puxar as mudanças que você fez para a sua branch remota para a sua branch local (e.g. com `git pull`) antes que você consiga subir mais commits.
 

@@ -1,17 +1,16 @@
 ---
 title: 画面外に不要な空白が発生する
 slug: orphaned/Web/Compatibility_FAQ/No_Wrap.html
-original_slug: Web/Compatibility_FAQ/No_Wrap.html
 ---
 
 ## 概要
 
 一部のコンテンツが画面の右側にはみ出して表示されることにより、はみ出していないコンテンツの右側に空白が出来てしまう場合があります。
-　その場合、横スクロールが行えない想定のモバイル向け web ページで横スクロールが可能となってしまいます。
+　その場合、横スクロールが行えない想定のモバイル向けウェブページで横スクロールが可能となってしまいます。
 
 表示画面
 
-![](https://mdn.mozillademos.org/files/9991/0101.jpg)
+![](0101.jpg)
 
 ## 要因
 
@@ -22,14 +21,14 @@ original_slug: Web/Compatibility_FAQ/No_Wrap.html
     よって、画面に表示されていない部分を表示するため、横スクロールが可能となり、要素が流れ出していない部分に空白ができています。
 
     なお、要素が流れ出さないため、テーブルの列幅は画面サイズに合わせて指定する必要があります。
-    指定されていない理由としては、そもそも指定を行っていないか、もしくは表示するブラウザに対応していないタグを使用している可能性があります。
+    指定されていない理由としては、そもそも指定を行っていないか、もしくは表示するブラウザーに対応していないタグを使用している可能性があります。
 
 2. **アイテムの横幅指定が誤っている**
     アイテムの横幅指定が画面横幅を超えて指定されているため、その他の要素の右側に空白ができています。
     アイテムの横幅指定は、[width](/ja/docs/Web/CSS/width)プロパティの指定方法または値の誤り、アイテムを表示しているブロックの指定の誤り等があります。
 
     下記の指定方法は、[max-width](/ja/docs/Web/CSS/max-width)プロパティ等で、横画面切替表示時の横幅で指定されてしまうため、縦画面に対応されなくなってしまう例になります。
-    その他に、テーブル同様そもそも指定を行っていないか、もしくは表示するブラウザに対応していないタグを使用している可能性もあります。
+    その他に、テーブル同様そもそも指定を行っていないか、もしくは表示するブラウザーに対応していないタグを使用している可能性もあります。
 
     ```css
     img {
@@ -62,7 +61,7 @@ original_slug: Web/Compatibility_FAQ/No_Wrap.html
     ```
 
     また、テーブルの幅指定を [display](/ja/docs/Web/CSS/display): table; で行っている場合、Firefox では認識できません。
-    他ブラウザ互換のために [display](/ja/docs/Web/CSS/display): inline-block; を追記することで、画面幅に指定することができます。
+    他ブラウザー互換のために [display](/ja/docs/Web/CSS/display): inline-block; を追記することで、画面幅に指定することができます。
 
     ```css
     #navigation ul {
@@ -84,7 +83,7 @@ original_slug: Web/Compatibility_FAQ/No_Wrap.html
     }
     ```
 
-    [display](/ja/docs/Web/CSS/display):-moz-box; 等、mobile 版ブラウザで対応されていないタグを使用している場合や、そもそも指定がない場合は、[display](/ja/docs/Web/CSS/display): inline-block; に修正することで指定できます。
+    [display](/ja/docs/Web/CSS/display):-moz-box; 等、mobile 版ブラウザーで対応されていないタグを使用している場合や、そもそも指定がない場合は、[display](/ja/docs/Web/CSS/display): inline-block; に修正することで指定できます。
 
     ```css
     box li {
@@ -99,4 +98,4 @@ original_slug: Web/Compatibility_FAQ/No_Wrap.html
 - 画面サイズに列幅を合わせることにより、様々な画面サイズのデバイスに対応可能となります。
   - また、アイテム一つ一つの幅を正しく指定することで、他のコンテンツの表示崩れ等の併発を防ぐことができます。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

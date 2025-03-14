@@ -1,12 +1,11 @@
 ---
 title: Dibujando formas con canvas
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
-original_slug: Web/API/Canvas_API/Tutorial/Dibujando_formas
 l10n:
   sourceCommit: 411e3bb536f858a9d58600b4017979c79b2a4408
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
 Ahora que hemos preparado nuestro [entorno canvas](/es/docs/Web/API/Canvas_API/Tutorial/Basic_usage), podemos entrar en detalles de cómo dibujar en el canvas. Al final de este artículo, habrás aprendido cómo dibujar rectángulos, triángulos, líneas, arcos y curvas, familiarizándote con algunas de las formas básicas. Trabajar con trazados es esencial a la hora de dibujar objetos en el canvas y veremos cómo hacerlo.
 
@@ -48,9 +47,9 @@ A continuación se muestra la función `draw()` de la página anterior, pero aho
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     ctx.fillRect(25, 25, 100, 100);
     ctx.clearRect(45, 45, 60, 60);
@@ -92,13 +91,15 @@ Aquí están las funciones utilizadas para realizar estos pasos:
 
 El primer paso para crear un trazado es llamar a `beginPath()`. Internamente, los trazados se almacenan como una lista de sub-trazados (líneas, arcos, etc.) que juntos forman una forma. Cada vez que se llama a este método, la lista se restablece y podemos empezar a dibujar nuevas formas.
 
-> **Nota:** Cuando el trazado actual está vacío, como por ejemplo inmediatamente después de llamar a `beginPath()`, o en un canvas recién creado, el primer comando de construcción del trazado siempre se trata como un `moveTo()`, independientemente de lo que realmente sea. Por esta razón, casi siempre querrá establecer específicamente su posición inicial después de reiniciar un trazado.
+> [!NOTE]
+> Cuando el trazado actual está vacío, como por ejemplo inmediatamente después de llamar a `beginPath()`, o en un canvas recién creado, el primer comando de construcción del trazado siempre se trata como un `moveTo()`, independientemente de lo que realmente sea. Por esta razón, casi siempre querrá establecer específicamente su posición inicial después de reiniciar un trazado.
 
 El segundo paso es llamar a los métodos que realmente especifican los trazados a dibujar. Los veremos en breve.
 
 El tercer paso, y opcional, es llamar a `closePath()`. Este método intenta cerrar la forma dibujando una línea recta desde el punto actual hasta el inicio. Si la forma ya ha sido cerrada o sólo hay un punto en la lista, esta función no hace nada.
 
-> **Nota:** Cuando se llama a `fill()`, cualquier forma abierta se cierra automáticamente, por lo que no es necesario llamar a `closePath()`. Este **no** es el caso cuando se llama a `stroke()`.
+> [!NOTE]
+> Cuando se llama a `fill()`, cualquier forma abierta se cierra automáticamente, por lo que no es necesario llamar a `closePath()`. Este **no** es el caso cuando se llama a `stroke()`.
 
 ### Dibujar un triángulo
 
@@ -114,9 +115,9 @@ Por ejemplo, el código para dibujar un triángulo sería algo así:
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     ctx.beginPath();
     ctx.moveTo(75, 50);
@@ -144,26 +145,26 @@ Para probarlo por ti mismo, puedes utilizar el siguiente fragmento de código. S
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-     const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     ctx.beginPath();
     ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Círculo externo
     ctx.moveTo(110, 75);
-    ctx.arc(75, 75, 35, 0, Math.PI, false);  // Boca (en el sentido de las agujas del reloj)
+    ctx.arc(75, 75, 35, 0, Math.PI, false); // Boca (en el sentido de las agujas del reloj)
     ctx.moveTo(65, 65);
-    ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Ojo izquierdo
+    ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Ojo izquierdo
     ctx.moveTo(95, 65);
-    ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Ojo derecho
+    ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Ojo derecho
     ctx.stroke();
   }
 }
@@ -175,7 +176,8 @@ El resultado se ve así:
 
 Si quisieras ver las líneas conectadas, puedes eliminar las líneas que llaman a `moveTo()`.
 
-> **Nota:** Para saber más sobre la función `arc()`, consulte la sección [Arcos](#arcos) más abajo.
+> [!NOTE]
+> Para saber más sobre la función `arc()`, consulte la sección [Arcos](#arcos) más abajo.
 
 ### Líneas
 
@@ -198,9 +200,9 @@ El ejemplo siguiente dibuja dos triángulos, uno relleno y otro contorneado.
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     // Triángulo relleno
     ctx.beginPath();
@@ -237,7 +239,8 @@ Para dibujar arcos o círculos, utilizamos los métodos `arc()` o `arcTo()`.
 
 Veamos con más detalle el método `arc`, que toma seis parámetros: `x` e `y` son las coordenadas del centro del círculo sobre el que se dibujará el arco. El parámetro `radio` se explica por sí mismo. Los parámetros `startAngle` y `endAngle` definen los puntos inicial y final del arco en radianes, a lo largo de la curva del círculo. Se miden desde el eje x. El parámetro `counterclockwise` es un valor Booleano que, cuando es `true`, dibuja el arco en sentido contrario a las agujas del reloj; en caso contrario, el arco se dibuja en sentido de las agujas del reloj.
 
-> **Nota:** Los ángulos en la función `arc` se miden en radianes, no en grados. Para convertir los grados en radianes puedes utilizar la siguiente expresión de JavaScript: `radianes = (Math.PI/180)*grados`.
+> [!NOTE]
+> Los ángulos en la función `arc` se miden en radianes, no en grados. Para convertir los grados en radianes puedes utilizar la siguiente expresión de JavaScript: `radianes = (Math.PI/180)*grados`.
 
 El siguiente ejemplo es un poco más complejo que los que hemos visto anteriormente. Dibuja 12 arcos diferentes, todos con diferentes ángulos y rellenos.
 
@@ -247,7 +250,8 @@ Las coordenadas `x` e `y` deberían ser lo suficientemente claras. `radius` y `s
 
 La sentencia para el parámetro `clockwise` hace que la primera y tercera fila se dibujen como arcos en el sentido de las agujas del reloj y la segunda y cuarta fila como arcos en sentido contrario. Por último, la sentencia `if` hace que la mitad superior tenga arcos trazados y la mitad inferior arcos rellenos.
 
-> **Nota:** Este ejemplo requiere un canvas ligeramente más grande que los otros de esta página: 150 x 200 píxeles.
+> [!NOTE]
+> Este ejemplo requiere un canvas ligeramente más grande que los otros de esta página: 150 x 200 píxeles.
 
 ```html hidden
 <html>
@@ -259,9 +263,9 @@ La sentencia para el parámetro `clockwise` hace que la primera y tercera fila s
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     for (let i = 0; i < 4; i++) {
       for (let j = 0; j < 3; j++) {
@@ -312,17 +316,17 @@ Este ejemplo utiliza múltiples curvas cuadráticas de Bézier para representar 
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     // Ejemplo de curvas cuadráticas
     ctx.beginPath();
@@ -346,17 +350,17 @@ Este ejemplo dibuja un corazón utilizando curvas cúbicas de Bézier.
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     // Ejemplo de curvas cúbicas
     ctx.beginPath();
@@ -397,9 +401,9 @@ Hasta ahora, cada ejemplo de esta página ha utilizado sólo un tipo de función
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     roundedRect(ctx, 12, 12, 150, 150, 15);
     roundedRect(ctx, 19, 19, 150, 150, 9);
@@ -439,7 +443,7 @@ function draw() {
     ctx.lineTo(83, 116);
     ctx.fill();
 
-    ctx.fillStyle = 'white';
+    ctx.fillStyle = "white";
     ctx.beginPath();
     ctx.moveTo(91, 96);
     ctx.bezierCurveTo(88, 96, 87, 99, 87, 101);
@@ -453,7 +457,7 @@ function draw() {
     ctx.bezierCurveTo(107, 99, 106, 96, 103, 96);
     ctx.fill();
 
-    ctx.fillStyle = 'black';
+    ctx.fillStyle = "black";
     ctx.beginPath();
     ctx.arc(101, 102, 2, 0, Math.PI * 2, true);
     ctx.fill();
@@ -494,9 +498,9 @@ Veamos cómo podemos construir un objeto `Path2D`:
   - : El constructor **`Path2D()`** devuelve un objeto `Path2D` recién instanciado, opcionalmente con otra ruta como argumento (crea una copia), u opcionalmente con una cadena de caracteres formada por datos de un trazado [SVG path](/es/docs/Web/SVG/Tutorial/Paths).
 
 ```js
-new Path2D();     // Objeto Path2D vacío
+new Path2D(); // Objeto Path2D vacío
 new Path2D(path); // Copia de otro objecto Path2D
-new Path2D(d);    // Path2D a partir de datos de un trazado (SVG path)
+new Path2D(d); // Path2D a partir de datos de un trazado (SVG path)
 ```
 
 Todos los [Métodos de trazado](/es/docs/Web/API/CanvasRenderingContext2D#paths) como `moveTo`, `rect`, `arc` o `quadraticCurveTo`, etc., que hemos conocido anteriormente, están disponibles en los objetos `Path2D`.
@@ -512,17 +516,17 @@ En este ejemplo, estamos creando un rectángulo y un círculo. Ambos se almacena
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="130" height="100"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="130" height="100"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     const rectangle = new Path2D();
     rectangle.rect(10, 10, 50, 50);
@@ -545,7 +549,7 @@ Otra poderosa característica de la nueva API `Path2D` del canvas es el uso de d
 El trazado se moverá al punto (`M10 10`) y luego se moverá horizontalmente 80 puntos a la derecha (`h 80`), luego 80 puntos hacia abajo (`v 80`), luego 80 puntos a la izquierda (`h -80`), y luego de vuelta al inicio (`z`). Puedes ver este ejemplo en el [`constructor Path2D`](/es/docs/Web/API/Path2D/Path2D#using_svg_paths).
 
 ```js
-const p = new Path2D('M10 10 h 80 v 80 h -80 Z');
+const p = new Path2D("M10 10 h 80 v 80 h -80 Z");
 ```
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}

@@ -1,9 +1,12 @@
 ---
-title: XMLHttpRequest.overrideMimeType()
+title: "XMLHttpRequest: overrideMimeType() メソッド"
+short-title: overrideMimeType()
 slug: Web/API/XMLHttpRequest/overrideMimeType
+l10n:
+  sourceCommit: e561fa67af347b9770b359ba93e8579d2a540682
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 {{domxref("XMLHttpRequest")}} の **`overrideMimeType()`** メソッドは、リクエストで転送されるデータを解釈するときに、 サーバーが提供されたもの以外の MIME タイプを代わりに使用するように指定します。
 
@@ -11,24 +14,25 @@ slug: Web/API/XMLHttpRequest/overrideMimeType
 
 ## 構文
 
-```js
-XMLHttpRequest.overrideMimeType(mimeType)
+```js-nolint
+overrideMimeType(mimeType)
 ```
 
 ### 引数
 
 - `mimeType`
-  - : {{domxref("DOMString")}} で、サーバーが指定した MIME タイプの代わりに使用する MIME タイプを指定します。サーバーがタイプを指定しなかった場合、 `XMLHttpRequest` は `"text/xml"` と仮定されます。
+  - : 文字列で、サーバーが指定した MIME タイプの代わりに使用する MIME タイプを指定します。サーバーがタイプを指定しなかった場合、 `XMLHttpRequest` は `"text/xml"` と仮定されます。
 
 ### 返値
 
-`undefined`.
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
 この例では、 MIME タイプとして `"text/plain"` を指定し、受信するデータに対してサーバーが指定するタイプを上書きしています。
 
-> **メモ:** サーバーが [`Content-Type`](/ja/docs/Web/HTTP/Headers/Content-Type) ヘッダを提供ていない場合、 {{domxref("XMLHttpRequest")}} は MIME タイプが `"text/xml"` であると見なします。もし、内容が妥当な XML でなければ、"XML Parsing Error: not well-formed" というエラーが発生します。これを避けるには、 `overrideMimeType()` を呼び出して別のタイプを指定してください。
+> [!NOTE]
+> サーバーが [`Content-Type`](/ja/docs/Web/HTTP/Headers/Content-Type) ヘッダーを提供ていない場合、 {{domxref("XMLHttpRequest")}} は MIME タイプが `"text/xml"` であると見なします。もし、内容が妥当な XML でなければ、"XML Parsing Error: not well-formed" というエラーが発生します。これを避けるには、 `overrideMimeType()` を呼び出して別のタイプを指定してください。
 
 ```js
 // 受信したデータをプレーンテキストとして解釈
@@ -50,5 +54,5 @@ req.send();
 
 ## 関連情報
 
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - {{domxref("XMLHttpRequest.responseType")}}

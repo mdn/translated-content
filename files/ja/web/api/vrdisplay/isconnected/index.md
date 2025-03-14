@@ -1,14 +1,14 @@
 ---
 title: VRDisplay.isConnected
 slug: Web/API/VRDisplay/isConnected
-original_slug: Web/API/VRDevice/isConnected
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`isConnected`** は {{domxref("VRDisplay")}} インターフェイスの読み取り専用プロパティで、この `VRDisplay` がコンピューターに接続されているかどうかを示す論理値を返します。
 
-> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!NOTE]
+> このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ### 値
 
@@ -17,20 +17,20 @@ original_slug: Web/API/VRDevice/isConnected
 ## 例
 
 ```js
-navigator.getVRDisplays().then(function(displays) {
+navigator.getVRDisplays().then(function (displays) {
   // ディスプレイがある場合は、それを使ってシーンを表示する
-  if(displays.length > 0) {
+  if (displays.length > 0) {
     vrDisplay = displays[0];
 
     // ボタンがクリックされたときに表示を開始。ユーザーのジェスチャーに応答してのみ呼び出すことができます。
-    btn.addEventListener('click', function() {
+    btn.addEventListener("click", function () {
       // ディスプレイが接続されている場合のみ、表示を要求します。
-      if(vrDisplay.isConnected) {
-        vrDisplay.requestPresent([{ source: canvas }]).then(function() {
+      if (vrDisplay.isConnected) {
+        vrDisplay.requestPresent([{ source: canvas }]).then(function () {
           // アプリの描画を開始するなど。
         });
       } else {
-        console.log('Connection to display lost');
+        console.log("Connection to display lost");
       }
     });
   }
@@ -49,5 +49,4 @@ navigator.getVRDisplays().then(function(displays) {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

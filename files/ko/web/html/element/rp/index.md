@@ -1,20 +1,25 @@
 ---
-title: '<rp>: 루비 대체 괄호 요소'
+title: "<rp>: 루비 대체 괄호 요소"
 slug: Web/HTML/Element/rp
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Ruby
-  - Web
-translation_of: Web/HTML/Element/rp
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<rp>` 요소**는 {{htmlelement("ruby")}} 요소를 사용한 루비 주석을 지원하지 않는 경우 보여줄 괄호를 제공할 때 사용합니다. {{htmlelement("rt")}} 요소를 감싸는 여는 괄호와 닫는 괄호를 각각의 `<rp>` 요소로 나타내야 합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/rp.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;rp&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<ruby>
+  漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
+
+```css interactive-example
+ruby {
+  font-size: 2em;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -69,9 +74,8 @@ translation_of: Web/HTML/Element/rp
 
 ```html
 <ruby>
-  景 <rp>(</rp><rt>경</rt><rp>)</rp>
-  福 <rp>(</rp><rt>복</rt><rp>)</rp>
-  宮 <rp>(</rp><rt>궁</rt><rp>)</rp>
+  景 <rp>(</rp><rt>경</rt><rp>)</rp> 福 <rp>(</rp><rt>복</rt><rp>)</rp> 宮
+  <rp>(</rp><rt>궁</rt><rp>)</rp>
 </ruby>
 ```
 
@@ -105,7 +109,7 @@ body {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.rp")}}
+{{Compat}}
 
 ## 같이 보기
 

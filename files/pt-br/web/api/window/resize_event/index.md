@@ -28,105 +28,101 @@ Existe uma nova proposta (2017) para permitir que todos os elementos sejam notif
 
 ## Properties
 
-| Property                              | Type                                                                                                                                                            | Description                                                                                                                                                                                                        |
-| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `target` {{readonlyInline}}     | [`EventTarget`](/pt-BR/docs/Web/API/EventTarget)  | O evento alto (o primeiro alvo na árvore DOM).                                                                                                                                                                     |
-| `type` {{readonlyInline}}       | [`DOMString`](/pt-BR/docs/Web/API/DOMString) | O tipo de evento.                                                                                                                                                                                                  |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/pt-BR/docs/Web/API/Boolean)                                                         | Se o evento normalmente bubbles ou não.                                                                                                                                                                            |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/pt-BR/docs/Web/API/Boolean)                                                         | Se o evento é cancelado ou não.                                                                                                                                                                                    |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/pt-BR/docs/Web/API/WindowProxy)                         | [`document.defaultView`](/pt-BR/docs/Web/API/Document/defaultView) (`window` do documento) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                                                                                                                                                | 0.                                                                                                                                                                                                                 |
+| Property                        | Type                                                                                  | Description                                                                                |
+| ------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `target` {{readonlyInline}}     | [`EventTarget`](/pt-BR/docs/Web/API/EventTarget)                                      | O evento alto (o primeiro alvo na árvore DOM).                                             |
+| `type` {{readonlyInline}}       | [`DOMString`](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String) | O tipo de evento.                                                                          |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean)              | Se o evento normalmente bubbles ou não.                                                    |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean)              | Se o evento é cancelado ou não.                                                            |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/pt-BR/docs/Web/API/WindowProxy)                                      | [`document.defaultView`](/pt-BR/docs/Web/API/Document/defaultView) (`window` do documento) |
+| `detail` {{readonlyInline}}     | `long` (`float`)                                                                      | 0.                                                                                         |
 
 ## Examples
 
-Como os eventos `resize` podem ser altamente executados, o evento manipulador não deve executar operações computacionais caras como modificações DOM. Em vez disso, recomenda-se diminuir o impacto do evento usando [requestAnimationFrame](/pt-BR/docs/DOM/window.requestAnimationFrame), [setTimeout](/pt-BR/docs/Web/API/WindowTimers/setTimeout) ou [customEvent](/pt-BR/docs/Web/API/CustomEvent)\*, como a seguir:
+Como os eventos `resize` podem ser altamente executados, o evento manipulador não deve executar operações computacionais caras como modificações DOM. Em vez disso, recomenda-se diminuir o impacto do evento usando [requestAnimationFrame](/pt-BR/docs/Web/API/Window/requestAnimationFrame), [setTimeout](/pt-BR/docs/Web/API/Window/setTimeout) ou [customEvent](/pt-BR/docs/Web/API/CustomEvent)\*, como a seguir:
 
 **\* IMPORTANT:** Por favor note que IE11 precisa do [customEvent](/pt-BR/docs/Web/API/CustomEvent/CustomEvent#Polyfill) polyfill para funcionar corretamente.
 
 ### requestAnimationFrame + customEvent
 
 ```js
-(function() {
-    var throttle = function(type, name, obj) {
-        obj = obj || window;
-        var running = false;
-        var func = function() {
-            if (running) { return; }
-            running = true;
-             requestAnimationFrame(function() {
-                obj.dispatchEvent(new CustomEvent(name));
-                running = false;
-            });
-        };
-        obj.addEventListener(type, func);
+(function () {
+  var throttle = function (type, name, obj) {
+    obj = obj || window;
+    var running = false;
+    var func = function () {
+      if (running) {
+        return;
+      }
+      running = true;
+      requestAnimationFrame(function () {
+        obj.dispatchEvent(new CustomEvent(name));
+        running = false;
+      });
     };
+    obj.addEventListener(type, func);
+  };
 
-    /* init - you can init any event */
-    throttle("resize", "optimizedResize");
+  /* init - you can init any event */
+  throttle("resize", "optimizedResize");
 })();
 
 // handle event
-window.addEventListener("optimizedResize", function() {
-    console.log("Resource conscious resize callback!");
+window.addEventListener("optimizedResize", function () {
+  console.log("Resource conscious resize callback!");
 });
 ```
 
 ### requestAnimationFrame
 
 ```js
-var optimizedResize = (function() {
+var optimizedResize = (function () {
+  var callbacks = [],
+    running = false;
 
-    var callbacks = [],
-        running = false;
+  // fired on resize event
+  function resize() {
+    if (!running) {
+      running = true;
 
-    // fired on resize event
-    function resize() {
-
-        if (!running) {
-            running = true;
-
-            if (window.requestAnimationFrame) {
-                window.requestAnimationFrame(runCallbacks);
-            } else {
-                setTimeout(runCallbacks, 66);
-            }
-        }
-
+      if (window.requestAnimationFrame) {
+        window.requestAnimationFrame(runCallbacks);
+      } else {
+        setTimeout(runCallbacks, 66);
+      }
     }
+  }
 
-    // run the actual callbacks
-    function runCallbacks() {
+  // run the actual callbacks
+  function runCallbacks() {
+    callbacks.forEach(function (callback) {
+      callback();
+    });
 
-        callbacks.forEach(function(callback) {
-            callback();
-        });
+    running = false;
+  }
 
-        running = false;
+  // adds callback to loop
+  function addCallback(callback) {
+    if (callback) {
+      callbacks.push(callback);
     }
+  }
 
-    // adds callback to loop
-    function addCallback(callback) {
-
-        if (callback) {
-            callbacks.push(callback);
-        }
-
-    }
-
-    return {
-        // public method to add additional callback
-        add: function(callback) {
-            if (!callbacks.length) {
-                window.addEventListener('resize', resize);
-            }
-            addCallback(callback);
-        }
-    }
-}());
+  return {
+    // public method to add additional callback
+    add: function (callback) {
+      if (!callbacks.length) {
+        window.addEventListener("resize", resize);
+      }
+      addCallback(callback);
+    },
+  };
+})();
 
 // start process
-optimizedResize.add(function() {
-    console.log('Resource conscious resize callback!')
+optimizedResize.add(function () {
+  console.log("Resource conscious resize callback!");
 });
 ```
 

@@ -1,14 +1,61 @@
 ---
 title: data-*
 slug: Web/HTML/Global_attributes/data-*
-translation_of: Web/HTML/Global_attributes/data-*
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
 The **data-\*** Глобальные атрибуты образуют класс атрибутов, называемых пользовательскими атрибутами данных, которые позволяют обмениваться проприетарной информацией между HTML и его представлением DOM посредством сценариев.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-data.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: data-*", "tabbed-standard")}}
+
+```html interactive-example
+<h1>Secret agents</h1>
+
+<ul>
+  <li data-id="10784">Jason Walters, 003: Found dead in "A View to a Kill".</li>
+  <li data-id="97865">
+    Alex Trevelyan, 006: Agent turned terrorist leader; James' nemesis in
+    "Goldeneye".
+  </li>
+  <li data-id="45732">
+    James Bond, 007: The main man; shaken but not stirred.
+  </li>
+</ul>
+```
+
+```css interactive-example
+h1 {
+  margin: 0;
+}
+
+ul {
+  margin: 10px 0 0;
+}
+
+li {
+  position: relative;
+  width: 200px;
+  padding-bottom: 10px;
+}
+
+li:after {
+  content: "Data ID: " attr(data-id);
+  position: absolute;
+  top: -22px;
+  left: 10px;
+  background: black;
+  color: white;
+  padding: 2px;
+  border: 1px solid #eee;
+  opacity: 0;
+  transition: 0.5s opacity;
+}
+
+li:hover:after {
+  opacity: 1;
+}
+```
 
 Все такие пользовательские данные доступны через интерфейс {{domxref ("HTMLElement")}} элемента, для которого установлен атрибут. Свойство {{domxref ("HTMLElement.dataset")}} предоставляет к ним доступ.
 Символ \* может быть заменён любым именем, соответствующим производственному правилу имён xml, со следующими ограничениями:
@@ -33,19 +80,15 @@ The **data-\*** Глобальные атрибуты образуют клас�
 
 Более подробное руководство по использованию атрибутов данных HTML см. В разделе [Using data attributes](/ru/docs/Learn/HTML/Howto/Use_data_attributes).
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                                                        | Status                           | Comment                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes", "data-*")}} | {{Spec2('HTML WHATWG')}} | No change from latest snapshot, {{SpecName('HTML5.1')}}                                  |
-| {{SpecName('HTML5.1', "dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes", "data-*")}}         | {{Spec2('HTML5.1')}}     | Snapshot of {{SpecName('HTML WHATWG')}}, no change from {{SpecName('HTML5 W3C')}} |
-| {{SpecName('HTML5 W3C', "dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes", "data-*")}}     | {{Spec2('HTML5 W3C')}}     | Snapshot of {{SpecName('HTML WHATWG')}}, initial definition.                             |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - All [global attributes](/ru/docs/Web/HTML/Global_attributes).
 - The {{domxref("HTMLElement.dataset")}} property that allows to access and modify these values.

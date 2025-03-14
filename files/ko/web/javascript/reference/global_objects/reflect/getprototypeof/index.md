@@ -1,25 +1,32 @@
 ---
 title: Reflect.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
 ---
 
 {{JSRef}}
 
 **`Reflect.getPrototypeOf()`** 정적 메서드는 주어진 객체의 프로토타입을 반환합니다. {{jsxref("Object.getPrototypeOf()")}}와 거의 동일합니다.
 
-{{EmbedInteractiveExample("pages/js/reflect-getprototypeof.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.getPrototypeOf()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+const proto1 = Reflect.getPrototypeOf(object1);
+
+console.log(proto1);
+// Expected output: Object {  }
+
+console.log(Reflect.getPrototypeOf(proto1));
+// Expected output: null
+```
 
 ## 구문
 
 ```js
-Reflect.getPrototypeOf(target)
+Reflect.getPrototypeOf(target);
 ```
 
 ### 매개변수
@@ -53,19 +60,19 @@ Reflect.getPrototypeOf(Object.create(null)); // null
 
 ```js
 // 객체에는 동일한 결과
-Object.getPrototypeOf({});  // Object.prototype
+Object.getPrototypeOf({}); // Object.prototype
 Reflect.getPrototypeOf({}); // Object.prototype
 
 // ES5에서는 비객체 대상에서 모두 오류
-Object.getPrototypeOf('foo');  // Throws TypeError
-Reflect.getPrototypeOf('foo'); // Throws TypeError
+Object.getPrototypeOf("foo"); // Throws TypeError
+Reflect.getPrototypeOf("foo"); // Throws TypeError
 
 // ES2015에서는 Reflect만 오류, Object는 객체로 변환
-Object.getPrototypeOf('foo');  // String.prototype
-Reflect.getPrototypeOf('foo'); // Throws TypeError
+Object.getPrototypeOf("foo"); // String.prototype
+Reflect.getPrototypeOf("foo"); // Throws TypeError
 
 // ES2015 Object 동작을 따라하려면 객체 변환과정 필요
-Reflect.getPrototypeOf(Object('foo')); // String.prototype
+Reflect.getPrototypeOf(Object("foo")); // String.prototype
 ```
 
 ## 명세

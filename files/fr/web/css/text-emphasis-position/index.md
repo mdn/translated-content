@@ -1,11 +1,6 @@
 ---
 title: text-emphasis-position
 slug: Web/CSS/text-emphasis-position
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-emphasis-position
 ---
 
 {{CSSRef}}
@@ -20,7 +15,6 @@ text-emphasis-position: over right;
 text-emphasis-position: over left;
 text-emphasis-position: under right;
 text-emphasis-position: under left;
-
 
 text-emphasis-position: left over;
 text-emphasis-position: right under;
@@ -89,7 +83,8 @@ La position des marques d'emphase varie en fonction du langage. Par exemple, en 
   </tbody>
 </table>
 
-> **Note :** La propriété `text-emphasis-position` ne peut pas être définie (et donc ne peut pas être redéfinie) avec la propriété raccourcie {{cssxref("text-emphasis")}}.
+> [!NOTE]
+> La propriété `text-emphasis-position` ne peut pas être définie (et donc ne peut pas être redéfinie) avec la propriété raccourcie {{cssxref("text-emphasis")}}.
 
 ## Syntaxe
 
@@ -128,12 +123,12 @@ D'autres préfèrent masquer le contenu ruby et privilégier les marques d'empha
 
 ```css
 em {
- /* On utilise text-emphasis pour les <em> */
+  /* On utilise text-emphasis pour les <em> */
   text-emphasis: dot;
 }
 
 em rt {
- /* On masque le ruby dans les éléments <em> */
+  /* On masque le ruby dans les éléments <em> */
   display: none;
 }
 ```

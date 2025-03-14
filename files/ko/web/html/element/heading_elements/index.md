@@ -1,21 +1,52 @@
 ---
-title: '<h1>–<h6>: HTML 구획 제목 요소'
+title: "<h1>–<h6>: HTML 구획 제목 요소"
 slug: Web/HTML/Element/Heading_Elements
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/Heading_Elements
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<h1>`–`<h6>` 요소**는 6단계의 구획 제목을 나타냅니다. 구획 단계는 `<h1>`이 가장 높고 `<h6>`은 가장 낮습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;h1-h6&gt;", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
+```html interactive-example
+<h1>Beetles</h1>
+<h2>External morphology</h2>
+<h3>Head</h3>
+<h4>Mouthparts</h4>
+<h3>Thorax</h3>
+<h4>Prothorax</h4>
+<h4>Pterothorax</h4>
+```
+
+```css interactive-example
+h1,
+h2,
+h3,
+h4 {
+  margin: 0.1rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding-left: 20px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  padding-left: 40px;
+}
+
+h4 {
+  font-size: 1rem;
+  font-style: italic;
+  padding-left: 60px;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -42,7 +73,7 @@ translation_of: Web/HTML/Element/Heading_Elements
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -55,7 +86,7 @@ translation_of: Web/HTML/Element/Heading_Elements
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
-      <td>{{ARIARole("tab")}}, {{ARIARole("presentation")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/tab_role'><code>tab</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 인터페이스</th>
@@ -142,29 +173,29 @@ translation_of: Web/HTML/Element/Heading_Elements
 
 1. `h1` Beetles
 
-    1. `h2` Etymology
-    2. `h2` Distribution and Diversity
-    3. `h2` Evolution
+   1. `h2` Etymology
+   2. `h2` Distribution and Diversity
+   3. `h2` Evolution
 
-        1. `h3` Late Paleozoic
-        2. `h3` Jurassic
-        3. `h3` Cretaceous
-        4. `h3` Cenozoic
+      1. `h3` Late Paleozoic
+      2. `h3` Jurassic
+      3. `h3` Cretaceous
+      4. `h3` Cenozoic
 
-    4. `h2` External Morphology
+   4. `h2` External Morphology
 
-        1. `h3` Head
+      1. `h3` Head
 
-            1. `h4` Mouthparts
+         1. `h4` Mouthparts
 
-        2. `h3` Thorax
+      2. `h3` Thorax
 
-            1. `h4` Prothorax
-            2. `h4` Pterothorax
+         1. `h4` Prothorax
+         2. `h4` Pterothorax
 
-        3. `h3` Legs
-        4. `h3` Wings
-        5. `h3` Abdomen
+      3. `h3` Legs
+      4. `h3` Wings
+      5. `h3` Abdomen
 
 중첩 제목에서, 하위 구획을 닫을 땐 제목 단계를 위로 "건너뛸" 수 있습니다.
 
@@ -180,7 +211,7 @@ translation_of: Web/HTML/Element/Heading_Elements
 
 스크린 리더 사용자가 자주 사용하는 다른 기술은 [콘텐츠 구획](/ko/docs/Web/HTML/Element#콘텐츠_구획)의 목록을 생성한 후, 이를 통해 페이지 레이아웃을 파악하는 것입니다.
 
-콘텐츠 구획에는 [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)와 {{htmlattrxref("id")}} 특성을 함께 사용해 이름, 즉 레이블을 붙일 수 있습니다. 레이블은 현재 구획의 목적을 간결하게 설명해야 합니다. 레이블 기법은 한 페이지에 다수의 구획이 있을 때 유용하게 사용할 수 있습니다.
+콘텐츠 구획에는 [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)와 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성을 함께 사용해 이름, 즉 레이블을 붙일 수 있습니다. 레이블은 현재 구획의 목적을 간결하게 설명해야 합니다. 레이블 기법은 한 페이지에 다수의 구획이 있을 때 유용하게 사용할 수 있습니다.
 
 #### 예제
 
@@ -213,7 +244,7 @@ translation_of: Web/HTML/Element/Heading_Elements
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.h1")}}
+{{Compat}}
 
 ## 같이 보기
 

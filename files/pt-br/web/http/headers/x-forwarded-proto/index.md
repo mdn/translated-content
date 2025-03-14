@@ -56,7 +56,7 @@ Não pertence a nenhuma especificação atualmente. A versão padronizada do cab
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.X-Forwarded-Proto")}}
+{{Compat}}
 
 ## Veja também
 

@@ -3,27 +3,28 @@ title: CacheStorage.match()
 slug: Web/API/CacheStorage/match
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-{{domxref("CacheStorage")}} 接口 (可适用于全局性`caches`) 的 **`match()`** 方法检查给定的{{domxref("Request")}} 对象或 url 字符串是否是一个已存储的 {{domxref("Response")}} 对象的 key. 这个方法针对 {{domxref("Response")}} 返回一个 {{jsxref("Promise")}} ，如果没有匹配则返回 `undefined` 。
+{{domxref("CacheStorage")}} 接口的 **`match()`** 方法检查给定的 {{domxref("Request")}} 对象或 URL 字符串是否是一个已存储的 {{domxref("Response")}} 对象的键。这个方法针对 {{domxref("Response")}} 返回一个 {{jsxref("Promise")}}，如果没有匹配则兑现为 `undefined`。
 
-cache 对象按创建顺序查询。
+你可以通过窗口的 {{domxref("Window.caches")}} 属性或 worker 的 {{domxref("WorkerGlobalScope.caches")}} 属性访问 `CacheStorage`。
 
-> **备注：** {{domxref("CacheStorage.match()", "caches.match()")}} 是一个便捷方法。其作用等同于在每个缓存上调用 {{domxref("cache.match()")}} 方法（按照{{domxref("CacheStorage.keys()", "caches.keys()")}}返回的顺序) 直到返回{{domxref("Response")}} 对象。
+会按 `Cache` 对象的创建顺序进行查询。
+
+> **备注：** {{domxref("CacheStorage.match()", "caches.match()")}} 是一个便捷方法。其作用等同于在每个缓存上调用 {{domxref("cache.match()")}} 方法（按照{{domxref("CacheStorage.keys()", "caches.keys()")}}返回的顺序）直到返回{{domxref("Response")}} 对象。
 
 ## 语法
 
-```
-caches.match(request, options).then(function(response) {
-  // Do something with the response
-});
+```js-nolint
+match(request)
+match(request, options)
 ```
 
 ### 参数
 
-- request
+- `request`
   - : 想要匹配的 {{domxref("Request")}}。这个参数可以是 {{domxref("Request")}} 对象或 URL 字符串。
-- options {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : 这个对象中的属性控制在匹配操作中如何进行匹配选择。可选择参数如下：
 
@@ -36,7 +37,7 @@ caches.match(request, options).then(function(response) {
 
 返回 resolve 为匹配 {{domxref("Response")}} 的 {{jsxref("Promise")}} 对象。如果没有与指定 request 相匹配 response，promise 将使用 `undefined` resolve.
 
-## 例子
+## 示例
 
 此示例来自于 MDN [sw-test example](https://github.com/mdn/sw-test/) （请参阅 [sw-test running live](https://mdn.github.io/sw-test/)）。这里，等待 {{domxref("FetchEvent")}} 事件触发。我们构建自定义响应，像这样：
 
@@ -45,16 +46,22 @@ caches.match(request, options).then(function(response) {
 3. 如果此操作失败（例如，因为网络已关闭），则返回备用响应。
 
 ```js
-caches.match(event.request).then(function(response) {
-  return response || fetch(event.request).then(function(r) {
-    caches.open('v1').then(function(cache) {
-      cache.put(event.request, r);
-    });
-    return r.clone();
+caches
+  .match(event.request)
+  .then(function (response) {
+    return (
+      response ||
+      fetch(event.request).then(function (r) {
+        caches.open("v1").then(function (cache) {
+          cache.put(event.request, r);
+        });
+        return r.clone();
+      })
+    );
+  })
+  .catch(function () {
+    return caches.match("/sw-test/gallery/myLittleVader.jpg");
   });
-}).catch(function() {
-  return caches.match('/sw-test/gallery/myLittleVader.jpg');
-});
 ```
 
 ## 规范
@@ -65,8 +72,8 @@ caches.match(event.request).then(function(response) {
 
 {{Compat}}
 
-## 亦可参考
+## 参见
 
-- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("WorkerGlobalScope.caches", "self.caches")}}
+- {{domxref("Window.caches")}} 和 {{domxref("WorkerGlobalScope.caches")}}

@@ -1,6 +1,6 @@
 ---
 title: CSS スクロールスナップの基本概念
-slug: Web/CSS/CSS_Scroll_Snap/Basic_concepts
+slug: Web/CSS/CSS_scroll_snap/Basic_concepts
 ---
 
 {{CSSRef}}
@@ -61,4 +61,4 @@ slug: Web/CSS/CSS_Scroll_Snap/Basic_concepts
 
 ## ブラウザーの互換性
 
-個々のプロパティページでは、スクロールスナップについてブラウザーの互換性の状況を詳しく説明しています。なお、Firefox 68 以前の Firefox は、古いバージョンの仕様を実装していました。新旧両方の仕様をサポートするクロスブラウザー対応のコードを書く方法の概要については、[次のガイドをお読みください](/ja/docs/Web/CSS/CSS_Scroll_Snap/Browser_compat)。
+個々のプロパティページでは、スクロールスナップについてブラウザーの互換性の状況を詳しく説明しています。なお、Firefox 68 以前の Firefox は、古いバージョンの仕様を実装していました。新旧両方の仕様をサポートするクロスブラウザー対応のコードを書く方法の概要については、[次のガイドをお読みください](/ja/docs/Web/CSS/CSS_scroll_snap)。

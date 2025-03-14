@@ -9,7 +9,18 @@ l10n:
 
 **`toDateString()`** メソッドは、 {{jsxref("Date")}} オブジェクトの日付部分をローカルタイムゾーンで英語で返します。
 
-{{EmbedInteractiveExample("pages/js/date-todatestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toDateString()")}}
+
+```js interactive-example
+const event = new Date(1993, 6, 28, 14, 39, 7);
+
+console.log(event.toString());
+// Expected output: "Wed Jul 28 1993 14:39:07 GMT+0200 (CEST)"
+// Note: your timezone may vary
+
+console.log(event.toDateString());
+// Expected output: "Wed Jul 28 1993"
+```
 
 ## 構文
 
@@ -44,7 +55,7 @@ dateObj.toDateString()
 ```js
 var d = new Date(1993, 5, 28, 14, 39, 7);
 
-console.log(d.toString());     // logs Mon Jun 28 1993 14:39:07 GMT-0600 (PDT)
+console.log(d.toString()); // logs Mon Jun 28 1993 14:39:07 GMT-0600 (PDT)
 console.log(d.toDateString()); // logs Mon Jun 28 1993
 ```
 

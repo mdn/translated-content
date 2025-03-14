@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-meter-suboptimum-value'
+title: ::-webkit-meter-suboptimum-value
 slug: Web/CSS/::-webkit-meter-suboptimum-value
 ---
 
@@ -8,10 +8,6 @@ slug: Web/CSS/::-webkit-meter-suboptimum-value
 ## Resumen
 
 El pseudo-elemento CSS `::-webkit-meter-suboptimum-value` da color amarillo al elemento meter cuando su valor cae fuera del rango mix-max.
-
-## Especificaciones
-
-No es parte de ninguna especificación. Es un pseudo-elemento propietario y específico de WebKit/Blink.
 
 ## Ejemplos
 
@@ -29,11 +25,16 @@ meter::-webkit-meter-suboptimum-value {
 
 {{ EmbedLiveSample('Ejemplos', '100%', 50) }}
 
-> **Nota:** Sólo funciona en navegadores basados en Webkit/Blink
+> [!NOTE]
+> Sólo funciona en navegadores basados en Webkit/Blink
 
-## Compatibilidad con los distintos navegadores
+## Especificaciones
 
-{{Compat("css.selectors.-webkit-meter-suboptimum-value")}}
+No es parte de ninguna especificación. Es un pseudo-elemento propietario y específico de WebKit/Blink.
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver además
 

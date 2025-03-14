@@ -1,13 +1,6 @@
 ---
 title: HTMLCanvasElement.getContext()
 slug: Web/API/HTMLCanvasElement/getContext
-tags:
-  - API
-  - Canevas
-  - HTMLCanvasElement
-  - Méthode
-  - Reference
-translation_of: Web/API/HTMLCanvasElement/getContext
 ---
 
 {{APIRef("Canvas API")}}
@@ -27,8 +20,8 @@ canvas.getContext(typeDeContexte, attributsDeContexte);
   - : Est un {{domxref("DOMString")}} contenant l'identifcateur de contexte définissant le contexte de dessin associé au canevas. Les valeurs possibles sont :
 
     - `"2d`", conduisant à la création d'un objet {{domxref("CanvasRenderingContext2D")}} représentant un contexte de représentation bi-dimensionnel.
-    - `"webgl"` (ou `"experimental-webgl"`) pour créer un objet {{domxref("WebGLRenderingContext")}} représentant un contexte de représentation tri-dimensionnel. Ce contexte est seulement disponible sur les navigateurs implémentant la version 1 de [WebGL](/fr/docs/Web/WebGL) (OpenGL ES 2.0).
-    - "`webgl2`" pour créer un objet {{domxref("WebGL2RenderingContext")}} représentant un contexte de représentation tri-dimensionnel. Ce contexte est seulement disponible sur les navigateurs implémentant la version 2 de [WebGL](/fr/docs/Web/WebGL) (OpenGL ES 3.0). {{experimental_inline}}.
+    - `"webgl"` (ou `"experimental-webgl"`) pour créer un objet {{domxref("WebGLRenderingContext")}} représentant un contexte de représentation tri-dimensionnel. Ce contexte est seulement disponible sur les navigateurs implémentant la version 1 de [WebGL](/fr/docs/Web/API/WebGL_API) (OpenGL ES 2.0).
+    - "`webgl2`" pour créer un objet {{domxref("WebGL2RenderingContext")}} représentant un contexte de représentation tri-dimensionnel. Ce contexte est seulement disponible sur les navigateurs implémentant la version 2 de [WebGL](/fr/docs/Web/API/WebGL_API) (OpenGL ES 3.0). {{experimental_inline}}.
     - `"bitmaprenderer"` pour créer un {{domxref("ImageBitmapRenderingContext")}} ne fournissant que la fonctionnalité de remplacement du contenu du canevas par une {{domxref("ImageBitmap")}} donnée.
 
     Note : l'identificateur "`experimental-webgl`" est utilisé dans les nouvelles implémentations de WebGL. Ces implémentations n'ont pas encore obtenu la conformité à la suite de test, ou l'emploi des pilotes graphiques sur la plateforme n'est pas encore stable. Le [Khronos Group](https://www.khronos.org/) certifie les implémentations WebGL sous certaines [règles de conformité](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
@@ -38,9 +31,7 @@ canvas.getContext(typeDeContexte, attributsDeContexte);
   - : Vous pouvez utiliser plusieurs attributs de contexte quand vous créez votre contexte de représentation, par exemple :
 
     ```js
-    canvas.getContext('webgl',
-                     { antialias: false,
-                       depth: false });
+    canvas.getContext("webgl", { antialias: false, depth: false });
     ```
 
     attributs de contexte 2d :
@@ -59,7 +50,7 @@ canvas.getContext(typeDeContexte, attributsDeContexte);
     - **`preserveDrawingBuffer`**&nbsp;: si la valeur est `true`, les tampons ne seront pas effacés et conserveront leurs valeurs jusqu'à ce qu'elles soient effacées ou réécrites par l'auteur.
     - **`failIfMajorPerformanceCaveat`** : booléen indiquant qu'un contexte sera créé si la performance du système est faible.
 
-### Valeur retournée :
+### Valeur retournée
 
 Un {{domxref("RenderingContext")}}, qui est soit un
 
@@ -68,7 +59,7 @@ Un {{domxref("RenderingContext")}}, qui est soit un
 - {{domxref("WebGL2RenderingContext")}} pour `"webgl2"` ou
 - {{domxref("ImageBitmapRenderingContext")}} pour `"bitmaprenderer"`.
 
-Si le *typeDeContexte* ne correspond pas à un contexte de dessin possible, `null` est retourné.
+Si le _typeDeContexte_ ne correspond pas à un contexte de dessin possible, `null` est retourné.
 
 ## Exemples
 
@@ -81,8 +72,8 @@ Si le *typeDeContexte* ne correspond pas à un contexte de dessin possible, `nul
 vous pouvez obtenir un contexte 2d du canevas grâce au code suivant :
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 console.log(ctx); // CanvasRenderingContext2D { ... }
 ```
 

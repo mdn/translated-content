@@ -15,7 +15,8 @@ slug: Web/API/EventTarget/addEventListener
 
 `addEventListener()` 的工作原理是将实现 {{domxref("EventListener")}} 的函数或对象添加到调用它的 {{domxref("EventTarget")}} 上的指定事件类型的事件侦听器列表中。如果要绑定的函数或对象已经被添加到列表中，该函数或对象不会被再次添加。
 
-> **备注：** 如果先前向事件侦听器列表中添加过一个匿名函数，并且在之后的代码中调用 `addEventListener` 来添加一个功能完全相同的匿名函数，那么之后的这个匿名函数*也会*被添加到列表中。
+> [!NOTE]
+> 如果先前向事件侦听器列表中添加过一个匿名函数，并且在之后的代码中调用 `addEventListener` 来添加一个功能完全相同的匿名函数，那么之后的这个匿名函数*也会*被添加到列表中。
 >
 > 实际上，即使使用*完全相同*的代码来定义一个匿名函数，这两个函数仍然存在区别，**在循环中也是如此**。在使用该方法的情况下，匿名函数的重复定义会带来许多麻烦，详见下文中的[内存问题](#内存问题)一节。
 
@@ -36,6 +37,7 @@ addEventListener(type, listener, useCapture);
 - `listener`
   - : 当所监听的事件类型触发时，会接收到一个事件通知（实现了 {{domxref("Event")}} 接口的对象）对象。`listener` 必须是一个实现了 {{domxref("EventListener")}} 接口的对象，或者是一个[函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)。有关回调本身的详细信息，请参阅[事件监听回调](#事件监听回调)
 - `options` {{optional_inline}}
+
   - : 一个指定有关 `listener` 属性的可选参数对象。可用的选项如下：
 
     - `capture` {{optional_inline}}
@@ -48,18 +50,20 @@ addEventListener(type, listener, useCapture);
       - : {{domxref("AbortSignal")}}，该 `AbortSignal` 的 {{domxref("AbortController/abort()", "abort()")}} 方法被调用时，监听器会被移除。
 
 - `useCapture` {{optional_inline}}
+
   - : 一个布尔值，表示在 DOM 树中注册了 `listener` 的元素，是否要先于它下面的 `EventTarget` 调用该 `listener`。当 useCapture（设为 true）时，沿着 DOM 树向上冒泡的事件不会触发 listener。当一个元素嵌套了另一个元素，并且两个元素都对同一事件注册了一个处理函数时，所发生的事件冒泡和事件捕获是两种不同的事件传播方式。事件传播模式决定了元素以哪个顺序接收事件。进一步的解释可以查看 [DOM Level 3 事件](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow)及 [JavaScript 事件顺序](https://www.quirksmode.org/js/events_order.html#link4)文档。如果没有指定，`useCapture` 默认为 `false`。
 
-  > **备注：** 对于事件目标上的事件监听器来说，事件会处于“目标阶段”，而不是冒泡阶段或者捕获阶段。捕获阶段的事件监听器会在任何非捕获阶段的事件监听器之前被调用。
+    > [!NOTE]
+    > 对于事件目标上的事件监听器来说，事件会处于“目标阶段”，而不是冒泡阶段或者捕获阶段。捕获阶段的事件监听器会在任何非捕获阶段的事件监听器之前被调用。
 
 - `wantsUntrusted` {{optional_inline}} {{Non-standard_inline}}
-  - : 如果为 `true`，则事件处理程序会接收网页自定义的事件。此参数只适用于 Gecko（{{glossary("chrome")}} 的默认值为 `false`，其它常规网页的默认值为 `true`），主要用于附加组件的代码和浏览器本身。
+  - : 如果为 `true`，则事件处理程序会接收网页自定义的事件。此参数只适用于 Gecko（{{glossary("chrome")}} 的默认值为 `false`，其他常规网页的默认值为 `true`），主要用于附加组件的代码和浏览器本身。
 
 ### 返回值
 
 无（{{jsxref("undefined")}}）。
 
-## 用法说明
+## 使用说明
 
 ### 事件监听回调
 
@@ -71,9 +75,9 @@ addEventListener(type, listener, useCapture);
 
 ```js
 function eventHandler(event) {
-  if (event.type == fullscreenchange) {
+  if (event.type === "fullscreenchange") {
     /* 处理 fullscreenchange 事件 */
-  } else /* fullscreenerror */ {
+  } else {
     /* 处理 fullscreenerror 事件 */
   }
 }
@@ -92,10 +96,11 @@ let passiveSupported = false;
 
 try {
   const options = {
-    get passive() { // 该函数会在浏览器尝试访问 passive 值时被调用。
+    get passive() {
+      // 该函数会在浏览器尝试访问 passive 值时被调用。
       passiveSupported = true;
       return false;
-    }
+    },
   };
 
   window.addEventListener("test", null, options);
@@ -115,7 +120,7 @@ try {
 someElement.addEventListener(
   "mouseup",
   handleMouseUp,
-  passiveSupported ? { passive: true } : false
+  passiveSupported ? { passive: true } : false,
 );
 ```
 
@@ -133,8 +138,12 @@ someElement.addEventListener(
 
 ```html
 <table id="outside">
-  <tr><td id="t1">one</td></tr>
-  <tr><td id="t2">two</td></tr>
+  <tr>
+    <td id="t1">one</td>
+  </tr>
+  <tr>
+    <td id="t2">two</td>
+  </tr>
 </table>
 ```
 
@@ -165,8 +174,12 @@ el.addEventListener("click", modifyText, false);
 
 ```html
 <table id="outside">
-  <tr><td id="t1">one</td></tr>
-  <tr><td id="t2">two</td></tr>
+  <tr>
+    <td id="t1">one</td>
+  </tr>
+  <tr>
+    <td id="t2">two</td>
+  </tr>
 </table>
 ```
 
@@ -176,7 +189,7 @@ el.addEventListener("click", modifyText, false);
 // 为 table 添加可被移除的事件监听器
 const controller = new AbortController();
 const el = document.getElementById("outside");
-el.addEventListener("click", modifyText, { signal: controller.signal } );
+el.addEventListener("click", modifyText, { signal: controller.signal });
 
 // 改变 t2 内容的函数
 function modifyText() {
@@ -204,8 +217,12 @@ function modifyText() {
 
 ```html
 <table id="outside">
-  <tr><td id="t1">one</td></tr>
-  <tr><td id="t2">two</td></tr>
+  <tr>
+    <td id="t1">one</td>
+  </tr>
+  <tr>
+    <td id="t2">two</td>
+  </tr>
 </table>
 ```
 
@@ -220,7 +237,13 @@ function modifyText(new_text) {
 
 // 用匿名函数为 table 添加事件监听器
 const el = document.getElementById("outside");
-el.addEventListener("click", function () { modifyText("four"); }, false);
+el.addEventListener(
+  "click",
+  function () {
+    modifyText("four");
+  },
+  false,
+);
 ```
 
 请注意，侦听器是一个匿名函数，它封装了代码，然后代码可以将参数发送到 `modifyText()` 函数，该函数负责实际响应事件。
@@ -237,8 +260,12 @@ el.addEventListener("click", function () { modifyText("four"); }, false);
 
 ```html
 <table id="outside">
-  <tr><td id="t1">one</td></tr>
-  <tr><td id="t2">two</td></tr>
+  <tr>
+    <td id="t1">one</td>
+  </tr>
+  <tr>
+    <td id="t2">two</td>
+  </tr>
 </table>
 ```
 
@@ -253,7 +280,13 @@ function modifyText(new_text) {
 
 // 用箭头函数为 table 添加事件监听器
 const el = document.getElementById("outside");
-el.addEventListener("click", () => { modifyText("four"); }, false);
+el.addEventListener(
+  "click",
+  () => {
+    modifyText("four");
+  },
+  false,
+);
 ```
 
 #### 结果
@@ -286,85 +319,89 @@ el.addEventListener("click", () => { modifyText("four"); }, false);
 #### CSS
 
 ```css
-.outer, .middle, .inner1, .inner2 {
+.outer,
+.middle,
+.inner1,
+.inner2 {
   display: block;
-  width:   520px;
+  width: 520px;
   padding: 15px;
-  margin:  15px;
+  margin: 15px;
   text-decoration: none;
 }
 .outer {
   border: 1px solid red;
-  color:  red;
+  color: red;
 }
 .middle {
   border: 1px solid green;
-  color:  green;
-  width:  460px;
+  color: green;
+  width: 460px;
 }
-.inner1, .inner2 {
+.inner1,
+.inner2 {
   border: 1px solid purple;
-  color:  purple;
-  width:  400px;
+  color: purple;
+  width: 400px;
 }
 ```
 
 #### JavaScript
 
 ```js
-const outer  = document.querySelector('.outer');
-const middle = document.querySelector('.middle');
-const inner1 = document.querySelector('.inner1');
-const inner2 = document.querySelector('.inner2');
+const outer = document.querySelector(".outer");
+const middle = document.querySelector(".middle");
+const inner1 = document.querySelector(".inner1");
+const inner2 = document.querySelector(".inner2");
 
 const capture = {
-  capture : true
+  capture: true,
 };
 const noneCapture = {
-  capture : false
+  capture: false,
 };
 const once = {
-  once : true
+  once: true,
 };
 const noneOnce = {
-  once : false
+  once: false,
 };
 const passive = {
-  passive : true
+  passive: true,
 };
 const nonePassive = {
-  passive : false
+  passive: false,
 };
 
-outer.addEventListener('click', onceHandler, once);
-outer.addEventListener('click', noneOnceHandler, noneOnce);
-middle.addEventListener('click', captureHandler, capture);
-middle.addEventListener('click', noneCaptureHandler, noneCapture);
-inner1.addEventListener('click', passiveHandler, passive);
-inner2.addEventListener('click', nonePassiveHandler, nonePassive);
+outer.addEventListener("click", onceHandler, once);
+outer.addEventListener("click", noneOnceHandler, noneOnce);
+middle.addEventListener("click", captureHandler, capture);
+middle.addEventListener("click", noneCaptureHandler, noneCapture);
+inner1.addEventListener("click", passiveHandler, passive);
+inner2.addEventListener("click", nonePassiveHandler, nonePassive);
 
 function onceHandler(event) {
-  alert('outer, once');
+  alert("outer, once");
 }
 function noneOnceHandler(event) {
-  alert('outer, none-once, default');
+  alert("outer, none-once, default");
 }
 function captureHandler(event) {
   //event.stopImmediatePropagation();
-  alert('middle, capture');
+  alert("middle, capture");
 }
 function noneCaptureHandler(event) {
-  alert('middle, none-capture, default');
+  alert("middle, none-capture, default");
 }
 function passiveHandler(event) {
   // 在 passive 事件调用中不支持 preventDefault。
   event.preventDefault();
-  alert('inner1, passive, open new page');
+  alert("inner1, passive, open new page");
 }
 function nonePassiveHandler(event) {
   event.preventDefault();
   //event.stopPropagation();
-  alert('inner2, none-passive, default, not open new page');
+  alert("inner2, none-passive, default, not open new page");
 }
 ```
 
@@ -372,7 +409,7 @@ function nonePassiveHandler(event) {
 
 分别点击 outer、middle 和 inner 以查看选项的工作方式。
 
-{{ EmbedLiveSample('options 用法示例', 600, 310, '', 'Web/API/EventTarget/addEventListener') }}
+{{ EmbedLiveSample('options 用法示例', 600, 310, '') }}
 
 在使用 `options` 对象中具体的值前，最好确保用户的浏览器支持它，因为这些是历史上并非所有浏览器都支持的附加功能。你可以查看 [option 支持的安全检测](#option_支持的安全检测)以了解更多
 
@@ -409,24 +446,17 @@ function eventListener() {
 }
 
 function addListener() {
-  buttonToBeClicked.addEventListener(
-    "click",
-    eventListener,
-    {
-      passive: true,
-      once: true
-    }
-  );
+  buttonToBeClicked.addEventListener("click", eventListener, {
+    passive: true,
+    once: true,
+  });
 }
 
 // 当点击重置按钮后，示例按钮将被重置，并可以再次更新它自身的状态
-resetButton.addEventListener(
-  "click",
-  () => {
-    buttonToBeClicked.textContent = initialText;
-    addListener();
-  }
-);
+resetButton.addEventListener("click", () => {
+  buttonToBeClicked.textContent = initialText;
+  addListener();
+});
 
 addListener();
 ```
@@ -444,25 +474,26 @@ addListener();
 当使用 `addEventListener()` 为一个元素注册事件的时候，事件处理器里的 {{jsxref("Operators/this","this")}} 值是该元素的引用。其与传递给句柄的 event 参数的 `currentTarget` 属性的值一样。
 
 ```js
-my_element.addEventListener('click', function (e) {
-  console.log(this.className)           // 输出 my_element 的 className
-  console.log(e.currentTarget === this) // 输出 `true`
-})
+my_element.addEventListener("click", function (e) {
+  console.log(this.className); // 输出 my_element 的 className
+  console.log(e.currentTarget === this); // 输出 `true`
+});
 ```
 
 需要注意的是，[箭头函数没有它自己的 `this` 上下文](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions#没有单独的this)。
 
 ```js
-my_element.addEventListener('click', (e) => {
-  console.log(this.className)           // 警告：`this` 并不指向 `my_element`
-  console.log(e.currentTarget === this) // 输出 `false`
-})
+my_element.addEventListener("click", (e) => {
+  console.log(this.className); // 警告：`this` 并不指向 `my_element`
+  console.log(e.currentTarget === this); // 输出 `false`
+});
 ```
 
 如果一个事件的属性（例如 {{domxref("Element.click_event", "onclick")}}）是在 HTML 代码中指定的，则这个属性中的 JavaScript 语句实际上会被包裹在一个处理函数中，在这个处理函数中使用 `this` 的效果和使用 `addEventListener()` 来绑定事件的效果是一样的；`this` 的出现代表了元素的引用。
 
 ```html
-<table id="my_table" onclick="console.log(this.id);"><!-- `this` 指向 table 元素；输出 'my_table' -->
+<table id="my_table" onclick="console.log(this.id);">
+  <!-- `this` 指向 table 元素；输出 'my_table' -->
   …
 </table>
 ```
@@ -471,9 +502,12 @@ my_element.addEventListener('click', (e) => {
 
 ```html
 <script>
-  function logID() { console.log(this.id); }
+  function logID() {
+    console.log(this.id);
+  }
 </script>
-<table id="my_table" onclick="logID();"><!-- 被调用时，`this` 指向全局（window）对象 -->
+<table id="my_table" onclick="logID();">
+  <!-- 被调用时，`this` 指向全局（window）对象 -->
   …
 </table>
 ```
@@ -489,7 +523,7 @@ my_element.addEventListener('click', (e) => {
 ```js
 const Something = function (element) {
   // |this| is a newly created object
-  this.name = 'Something Good';
+  this.name = "Something Good";
   this.onclick1 = function (event) {
     console.log(this.name); // undefined, as |this| is the element
   };
@@ -501,9 +535,9 @@ const Something = function (element) {
   // bind causes a fixed `this` context to be assigned to onclick2
   this.onclick2 = this.onclick2.bind(this);
 
-  element.addEventListener('click', this.onclick1, false);
-  element.addEventListener('click', this.onclick2, false); // Trick
-}
+  element.addEventListener("click", this.onclick1, false);
+  element.addEventListener("click", this.onclick2, false); // Trick
+};
 const s = new Something(document.body);
 ```
 
@@ -512,27 +546,27 @@ const s = new Something(document.body);
 ```js
 const Something = function (element) {
   // |this| is a newly created object
-  this.name = 'Something Good';
+  this.name = "Something Good";
   this.handleEvent = function (event) {
     console.log(this.name); // 'Something Good', as this is bound to newly created object
-    switch(event.type) {
-      case 'click':
+    switch (event.type) {
+      case "click":
         // some code here…
         break;
-      case 'dblclick':
+      case "dblclick":
         // some code here…
         break;
     }
   };
 
   // Note that the listeners in this case are |this|, not this.handleEvent
-  element.addEventListener('click', this, false);
-  element.addEventListener('dblclick', this, false);
+  element.addEventListener("click", this, false);
+  element.addEventListener("dblclick", this, false);
 
   // You can properly remove the listeners
-  element.removeEventListener('click', this, false);
-  element.removeEventListener('dblclick', this, false);
-}
+  element.removeEventListener("click", this, false);
+  element.removeEventListener("dblclick", this, false);
+};
 const s = new Something(document.body);
 ```
 
@@ -540,19 +574,20 @@ const s = new Something(document.body);
 
 ```js
 class SomeClass {
-
   constructor() {
-    this.name = 'Something Good';
+    this.name = "Something Good";
   }
 
   register() {
     const that = this;
-    window.addEventListener('keydown', (e) => { that.someMethod(e); });
+    window.addEventListener("keydown", (e) => {
+      that.someMethod(e);
+    });
   }
 
   someMethod(e) {
     console.log(this.name);
-    switch(e.keyCode) {
+    switch (e.keyCode) {
       case 5:
         // some code here…
         break;
@@ -561,7 +596,6 @@ class SomeClass {
         break;
     }
   }
-
 }
 
 const myObject = new SomeClass();
@@ -570,19 +604,22 @@ myObject.register();
 
 ### 在使用监听器时进行数据交换
 
-事件监听器看起来就像一个“孤岛”，要向它传入数据非常困难，更别说是要在它被调用后获取任何数据了。事件监听器仅仅接受[事件对象](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#事件对象)这一个自动传入的参数，并且它的返回值还会被忽略。那怎样才能与事件监听器交换数据呢？其实有很多种方法可以做到。
+事件监听器看起来就像一个“孤岛”，要向它传入数据非常困难，更别说是要在它被调用后获取任何数据了。事件监听器仅仅接受[事件对象](/zh-CN/docs/Learn_web_development/Core/Scripting/Events#事件对象)这一个自动传入的参数，并且它的返回值还会被忽略。那怎样才能与事件监听器交换数据呢？其实有很多种方法可以做到。
 
 #### 使用 `this` 传入数据
 
 [上文](#使用_bind_指定_this_的值)提到，你可以使用 `Function.prototype.bind()` 来以 `this` 作为媒介向监听器传值。
 
 ```js
-const myButton = document.getElementById('my-button-id');
-const someString = 'Data';
+const myButton = document.getElementById("my-button-id");
+const someString = "Data";
 
-myButton.addEventListener('click', function () {
-  console.log(this); // 预期输出：'Data'
-}.bind(someString));
+myButton.addEventListener(
+  "click",
+  function () {
+    console.log(this); // 预期输出：'Data'
+  }.bind(someString),
+);
 ```
 
 这个方法适合在你无需关心监听器是在哪个 HTML 元素上触发的时候使用，好处是这样传值就好像是你在使用参数列表向监听器传值一样。
@@ -592,68 +629,78 @@ myButton.addEventListener('click', function () {
 当外部作用域包含一个（使用 `const`、`let` 的）变量声明时，所有该作用域内声明的函数都可以访问该变量（查看[此链接](/zh-CN/docs/Glossary/Function#不同类型的函数)以了解外部/内部函数，以及[此链接](/zh-CN/docs/Web/JavaScript/Reference/Statements/var#隐式全局变量和外部函数作用域)以了解变量作用域）。因此，最简单的传入数据的方法就是使监听器所在的作用域可以访问到你所声明的变量。
 
 ```js
-const myButton = document.getElementById('my-button-id');
-let someString = 'Data';
+const myButton = document.getElementById("my-button-id");
+let someString = "Data";
 
-myButton.addEventListener('click', () => {
-  console.log(someString);  // 预期输出：'Data'
+myButton.addEventListener("click", () => {
+  console.log(someString); // 预期输出：'Data'
 
-  someString = 'Data Again';
+  someString = "Data Again";
 });
 
-console.log(someString);  // 预期输出：'Data'（不可能是 'Data Again'）
+console.log(someString); // 预期输出：'Data'（不可能是 'Data Again'）
 ```
 
-> **备注：** 虽然内部作用域可以访问到外部 `const` 和 `let` 所声明的变量，但你在事件监听器内对变量所做的任何修改都不能在外部作用域内体现。为什么呢？因为在事件监听器被执行时，其外部作用域已经执行完毕了。
+> [!NOTE]
+> 虽然内部作用域可以访问到外部 `const` 和 `let` 所声明的变量，但你在事件监听器内对变量所做的任何修改都不能在外部作用域内体现。为什么呢？因为在事件监听器被执行时，其外部作用域已经执行完毕了。
 
 #### 使用对象进行数据交换
 
 与 JavaScript 中的大部分函数不同，一个对象只要有被引用计数，它就会一直存在于内存之中。并且，对象可以拥有自己的属性，属性又可以被引用形式传递，使得它有潜力成为在作用域间传值的候选。让我们来试试。
 
-> **备注：** 实际上，在 JavaScript 中，函数也是对象的一种。（因此，函数也可以有自己的对象，甚至可以在其执行结束后依旧存在于内存中，只要将其分配到一个永久存在于内存中的变量即可。）
+> [!NOTE]
+> 实际上，在 JavaScript 中，函数也是对象的一种。（因此，函数也可以有自己的对象，甚至可以在其执行结束后依旧存在于内存中，只要将其分配到一个永久存在于内存中的变量即可。）
 
 因为只需一个变量引用就可以使对象的属性将数据存储在内存之中，你可以使用它与事件监听器进行数据交换，并且更改后的数据会被保留。请看下面这个例子：
 
 ```js
-const myButton = document.getElementById('my-button-id');
-const someObject = {aProperty: 'Data'};
+const myButton = document.getElementById("my-button-id");
+const someObject = { aProperty: "Data" };
 
-myButton.addEventListener('click', () => {
-  console.log(someObject.aProperty);  // 预期输出：'Data'
+myButton.addEventListener("click", () => {
+  console.log(someObject.aProperty); // 预期输出：'Data'
 
-  someObject.aProperty = 'Data Again';  // 更改值
+  someObject.aProperty = "Data Again"; // 更改值
 });
 
 setInterval(() => {
-  if (someObject.aProperty === 'Data Again') {
-    console.log('Data Again: True');
-    someObject.aProperty = 'Data';  // 将值重置以等待下次事件调用
+  if (someObject.aProperty === "Data Again") {
+    console.log("Data Again: True");
+    someObject.aProperty = "Data"; // 将值重置以等待下次事件调用
   }
 }, 5000);
 ```
 
 在这一例子中，虽然事件监听器和定时函数的作用域都在 `someObject.aProperty` 的值变更前执行完毕，但 `someObject` 仍被事件监听器和定时函数所*引用*而存在于内存中，这两个函数依然能访问到同样的数据（也就是说，当其中一方改变了数据，另一方可以对这一改变做出响应）。
 
-> **备注：** 对象的是以引用方式存储于变量中的，也即变量中存储的只是对象的内存地址而已。在其他方面上，这也意味着“存储”这个对象的变量可以对其它引用（或“存储”）同一个对象的变量产生影响。当两个变量引用同一对象时（比如 `let a = b = {aProperty: 'Yeah'};`），仅对其中一个变量进行更改仍然会影响到另一个变量。
+> [!NOTE]
+> 对象的是以引用方式存储于变量中的，也即变量中存储的只是对象的内存地址而已。在其他方面上，这也意味着“存储”这个对象的变量可以对其他引用（或“存储”）同一个对象的变量产生影响。当两个变量引用同一对象时（比如 `let a = b = {aProperty: 'Yeah'};`），仅对其中一个变量进行更改仍然会影响到另一个变量。
 
-> **备注：** 基于对象存储于变量中的“引用”逻辑，你可以在一个函数执行完毕后返回一个对象以使其“保活”（使其保留在内存中且不丢失数据）。
+> [!NOTE]
+> 基于对象存储于变量中的“引用”逻辑，你可以在一个函数执行完毕后返回一个对象以使其“保活”（使其保留在内存中且不丢失数据）。
 
 ### 内存问题
 
 ```js
-const els = document.getElementsByTagName('*');
+const els = document.getElementsByTagName("*");
 
 // 例一
-for (let i = 0; i < els.length; i++){
-  els[i].addEventListener("click", (e) => {/* 处理点击事件 */}, false);
+for (let i = 0; i < els.length; i++) {
+  els[i].addEventListener(
+    "click",
+    (e) => {
+      /* 处理点击事件 */
+    },
+    false,
+  );
 }
 
 // 例二
-function processEvent(e){
+function processEvent(e) {
   /* 处理同样的点击事件 */
 }
 
-for (let i = 0 ; i < els.length; i++){
+for (let i = 0; i < els.length; i++) {
   els[i].addEventListener("click", processEvent, false);
 }
 ```
@@ -671,28 +718,33 @@ for (let i = 0 ; i < els.length; i++){
 let passiveIfSupported = false;
 
 try {
-  window.addEventListener("test", null,
-    Object.defineProperty(
-      {},
-      "passive",
-      {
-        get() { passiveIfSupported = { passive: true }; }
-      }
-    )
+  window.addEventListener(
+    "test",
+    null,
+    Object.defineProperty({}, "passive", {
+      get() {
+        passiveIfSupported = { passive: true };
+      },
+    }),
   );
 } catch (err) {}
 
-window.addEventListener('scroll', (event) => {
-  /* do something */
-  // 不能使用 event.preventDefault();
-}, passiveIfSupported );
+window.addEventListener(
+  "scroll",
+  (event) => {
+    /* do something */
+    // 不能使用 event.preventDefault();
+  },
+  passiveIfSupported,
+);
 ```
 
 根据规范，`addEventListener()` 的 `passive` 默认值始终为 `false`。然而，这引入了触摸事件和滚轮事件的事件监听器在浏览器尝试滚动页面时阻塞浏览器主线程的可能性——这可能会大大降低浏览器处理页面滚动时的性能。
 
 为了避免这一问题，大部分浏览器（Safari 和 Internet Explorer 除外）将文档级节点 {{domxref("Window")}}、{{domxref("Document")}} 和 {{domxref("Document.body")}} 上的 {{domxref("Element/wheel_event", "wheel")}}、{{domxref("Element/mousewheel_event", "mousewheel")}}、{{domxref("Element/touchstart_event", "touchstart")}} 和 {{domxref("Element/touchmove_event", "touchmove")}} 事件的 `passive` 默认值更改为 `true`。如此，事件监听器便不能[取消事件](/zh-CN/docs/Web/API/Event/preventDefault)，也不会在用户滚动页面时阻止页面呈现。
 
-> **备注：** 若你想要了解哪些浏览器（或特定浏览器的哪一个版本）具体实现了上述功能，请参见下方的浏览器兼容性表。
+> [!NOTE]
+> 若你想要了解哪些浏览器（或特定浏览器的哪一个版本）具体实现了上述功能，请参见下方的浏览器兼容性表。
 
 因此，当你想要覆盖这一行为并确认 `passive` 在所有浏览器中都被设为 `false`，你必须显式地将其设为 `false`，而不是依赖浏览器的默认设置。
 

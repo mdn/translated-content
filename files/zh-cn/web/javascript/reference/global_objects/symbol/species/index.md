@@ -7,7 +7,26 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
 
 知名的 **`Symbol.species`** 是个函数值属性，其被构造函数用以创建派生对象。
 
-{{EmbedInteractiveExample("pages/js/symbol-species.html")}}{{js_property_attributes(0,0,0)}}
+{{InteractiveExample("JavaScript Demo: Symbol.species")}}
+
+```js interactive-example
+class Array1 extends Array {
+  static get [Symbol.species]() {
+    return Array;
+  }
+}
+
+const a = new Array1(1, 2, 3);
+const mapped = a.map((x) => x * x);
+
+console.log(mapped instanceof Array1);
+// Expected output: false
+
+console.log(mapped instanceof Array);
+// Expected output: true
+```
+
+{{js_property_attributes(0,0,0)}}
 
 ## 描述
 
@@ -20,13 +39,15 @@ species 访问器属性允许子类覆盖对象的默认构造函数。
 ```js
 class MyArray extends Array {
   // 覆盖 species 到父级的 Array 构造函数上
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
-var a = new MyArray(1,2,3);
-var mapped = a.map(x => x * x);
+var a = new MyArray(1, 2, 3);
+var mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true
+console.log(mapped instanceof Array); // true
 ```
 
 ## 规范
@@ -37,7 +58,12 @@ console.log(mapped instanceof Array);   // true
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Map.@@species", "Map[@@species]")}}
-- {{jsxref("Set.@@species", "Set[@@species]")}}
+- [`Array[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
+- [`ArrayBuffer[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species)
+- [`Map[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species)
+- [`Promise[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species)
+- [`RegExp[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species)
+- [`Set[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species)
+- [`TypedArray[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species)

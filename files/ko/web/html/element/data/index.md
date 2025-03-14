@@ -1,19 +1,29 @@
 ---
 title: <data>
 slug: Web/HTML/Element/data
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/data
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<data>` 요소**는 주어진 콘텐츠를 기계가 읽을 수 있는 해석본과 연결합니다. 콘텐츠가 시간 혹은 날짜 관련 정보라면 대신 {{htmlelement("time")}} 요소를 사용하세요.
 
-{{EmbedInteractiveExample("pages/tabbed/data.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;data&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>New Products:</p>
+<ul>
+  <li><data value="398">Mini Ketchup</data></li>
+  <li><data value="399">Jumbo Ketchup</data></li>
+  <li><data value="400">Mega Jumbo Ketchup</data></li>
+</ul>
+```
+
+```css interactive-example
+data:hover::after {
+  content: " (ID " attr(value) ")";
+  font-size: 0.7em;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -40,7 +50,7 @@ translation_of: Web/HTML/Element/data
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -65,7 +75,7 @@ translation_of: Web/HTML/Element/data
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다
 
-- {{htmlattrdef("value")}}
+- `value`
   - : 기계가 읽을 수 있는 형태의 콘텐츠 해석본.
 
 ## 예제
@@ -75,9 +85,9 @@ translation_of: Web/HTML/Element/data
 ```html
 <p>새로운 상품들</p>
 <ul>
- <li><data value="398">미니 케찹</data></li>
- <li><data value="399">점보 케찹</data></li>
- <li><data value="400">메가 점보 케찹</data></li>
+  <li><data value="398">미니 케찹</data></li>
+  <li><data value="399">점보 케찹</data></li>
+  <li><data value="400">메가 점보 케찹</data></li>
 </ul>
 ```
 
@@ -87,7 +97,7 @@ translation_of: Web/HTML/Element/data
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.data")}}
+{{Compat}}
 
 ## 같이 보기
 

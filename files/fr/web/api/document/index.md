@@ -1,13 +1,11 @@
 ---
 title: Document
 slug: Web/API/Document
-translation_of: Web/API/Document
-browser-compat: api.Document
 ---
 
 {{APIRef("DOM")}}
 
-L'interface **`Document`** représente n'importe quelle page web chargée dans le navigateur et sert de point d'entrée pour accéder au contenu de la page qui est formé par [l'arbre du DOM](/fr/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core).
+L'interface **`Document`** représente n'importe quelle page web chargée dans le navigateur et sert de point d'entrée pour accéder au contenu de la page qui est formé par [l'arbre du DOM](/fr/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model).
 
 L'arbre du DOM inclut les éléments tels que [`<body>`](/fr/docs/Web/HTML/Element/body), [`<table>`](/fr/docs/Web/HTML/Element/table) et [tous les autres](/fr/docs/Web/HTML/Element) présents dans la page. Il fournit des fonctionnalités à l'ensemble du document et permet, par exemple, d'obtenir l'URL de la page et de créer de nouveaux éléments dans le document.
 
@@ -53,7 +51,7 @@ _Cette interface hérite également des interfaces [`Node`](/fr/docs/Web/API/Nod
 - [`Document.fonts`](/fr/docs/Web/API/Document/fonts)
   - : Renvoie l'interface [`FontFaceSet`](/fr/docs/Web/API/FontFaceSet) pour le document courant.
 - [`Document.forms`](/fr/docs/Web/API/Document/forms) {{ReadOnlyInline}}
-  - : Renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) des éléments [`<form>`](/fr/docs/Web/HTML/Element/Form) du document.
+  - : Renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) des éléments [`<form>`](/fr/docs/Web/HTML/Element/form) du document.
 - [`Document.fullscreenElement`](/fr/docs/Web/API/Document/fullscreenElement) {{ReadOnlyInline}}
   - : Renvoie l'élément actuellement en mode plein écran pour ce document.
 - [`Document.head`](/fr/docs/Web/API/Document/head) {{ReadOnlyInline}}
@@ -68,7 +66,7 @@ _Cette interface hérite également des interfaces [`Node`](/fr/docs/Web/API/Nod
   - : Renvoie le dernier élément enfant du document courant.
 - [`Document.links`](/fr/docs/Web/API/Document/links) {{ReadOnlyInline}}
   - : Renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) contenant l'ensemble des hyperliens du document.
-- [`Document.mozSyntheticDocument`](/fr/docs/Web/API/Document/mozSyntheticDocument) {{Non-standard_Inline}}
+- [`Document.mozSyntheticDocument`](/fr/docs/Web/API/Document) {{Non-standard_Inline}}
   - : Renvoie `true` uniquement si le document est synthétique (par exemple une page indépendante, un fichier audio ou vidéo).
 - [`Document.pictureInPictureElement`](/fr/docs/Web/API/Document/pictureInPictureElement) {{ReadOnlyInline}}
   - : Renvoie l'objet [`Element`](/fr/docs/Web/API/Element) pour l'élément affiché en mode d'incrustation vidéo (<i lang="en">picture-in-picture</i>) pour ce document.
@@ -122,7 +120,7 @@ _L'interface `Document` pour les documents HTML hérite de l'interface [`HTMLDoc
 
 _L'interface `Document` est étendue avec des gestionnaires d'évènement supplémentaires définis dans l'interface [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers#gestionnaires_dévènement)._
 
-- [`GlobalEventHandlers.onselectionchange`](/fr/docs/Web/API/GlobalEventHandlers/onselectionchange) {{Experimental_Inline}}
+- [`GlobalEventHandlers.onselectionchange`](/fr/docs/Web/API/HTMLInputElement/selectionchange_event) {{Experimental_Inline}}
   - : Un [gestionnaire d'évènement](/fr/docs/Web/Events/Event_handlers) qui représente le code à appeler lorsque l'évènement [`selectionchange`](/fr/docs/Web/API/Document/selectionchange_event) est déclenché.
 
 ### Propriétés dépréciées
@@ -143,7 +141,7 @@ _L'interface `Document` est étendue avec des gestionnaires d'évènement suppl�
   - : Permet d'accéder ou de définir la couleur de premier plan ou la couleur du texte du document courant.
 - [`Document.fullscreen`](/fr/docs/Web/API/Document/fullscreen) {{deprecated_inline}}
   - : `true` lorsque le document est en [mode plein écran](/fr/docs/Web/API/Fullscreen_API).
-- [`Document.height`](/fr/docs/Web/API/Document/height) {{Non-standard_Inline}} {{deprecated_inline}}
+- [`Document.height`](/fr/docs/Web/API/Element/clientHeight) {{Non-standard_Inline}} {{deprecated_inline}}
   - : Permet d'accéder ou de définir la hauteur du document courant.
 - [`Document.inputEncoding`](/fr/docs/Web/API/Document/characterSet) {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Un synonyme de [`Document.characterSet`](/fr/docs/Web/API/Document/characterSet), cette dernière devrait être utilisée à la place.
@@ -161,7 +159,7 @@ _L'interface `Document` est étendue avec des gestionnaires d'évènement suppl�
   - : Renvoie une liste des ensembles de feuilles de styles disponibles sur le document.
 - [`Document.vlinkColor`](/fr/docs/Web/API/Document/vlinkColor) {{Deprecated_Inline}}
   - : Permet d'accéder ou de définir la couleur des hyperliens visités.
-- [`Document.width`](/fr/docs/Web/API/Document/width) {{Non-standard_Inline}} {{deprecated_inline}}
+- [`Document.width`](/fr/docs/Web/API/Element/clientWidth) {{Non-standard_Inline}} {{deprecated_inline}}
   - : Renvoie la largeur du document courant.
 - [`Document.xmlEncoding`](/fr/docs/Web/API/Document/xmlEncoding) {{Deprecated_Inline}}
   - : Renvoie l'encodage tel que déterminé par la déclaration XML.
@@ -177,7 +175,7 @@ _Cette interface hérite également des méthodes des interfaces [`Node`](/fr/do
 - [`Document.adoptNode()`](/fr/docs/Web/API/Document/adoptNode)
   - : Adopte un nœud d'un document externe.
 - [`Document.append()`](/fr/docs/Web/API/Document/append)
-  - : Insère un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou d'objets [`DOMString`](/fr/docs/Web/API/DOMString) après le dernier enfant du document.
+  - : Insère un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou d'objets [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) après le dernier enfant du document.
 - [`Document.captureEvents()`](/fr/docs/Web/API/Document/captureEvents) {{Deprecated_Inline}}
   - : Voir [`Window.captureEvents`](/fr/docs/Web/API/Window/captureEvents).
 - [`Document.caretPositionFromPoint()`](/fr/docs/Web/API/Document/caretPositionFromPoint)
@@ -198,7 +196,7 @@ _Cette interface hérite également des méthodes des interfaces [`Node`](/fr/do
   - : Crée un nouvel élément avec le nom de balise indiqué.
 - [`Document.createElementNS()`](/fr/docs/Web/API/Document/createElementNS)
   - : Crée un nouvel élément avec le nom de balise indiqué et l'espace de noms passé via un URI.
-- [`Document.createEntityReference()`](/fr/docs/Web/API/Document/createEntityReference) {{deprecated_inline}}
+- [`Document.createEntityReference()`](/fr/docs/Web/API/Document) {{deprecated_inline}}
   - : Crée un nouvel objet de référence d'entité et le renvoie.
 - [`Document.createEvent()`](/fr/docs/Web/API/Document/createEvent)
   - : Crée un objet d'évènement.
@@ -247,7 +245,7 @@ _Cette interface hérite également des méthodes des interfaces [`Node`](/fr/do
 - [`Document.normalizeDocument()`](/fr/docs/Web/API/Document/normalizeDocument) {{deprecated_inline}}
   - : Remplace les entités et normalise les nœuds textuels, etc.
 - [`Document.prepend()`](/fr/docs/Web/API/Document/prepend)
-  - : Insère un ensemble d'objet [`Node`](/fr/docs/Web/API/Node) ou [`DOMString`](/fr/docs/Web/API/DOMString) avant le premier enfant du document.
+  - : Insère un ensemble d'objet [`Node`](/fr/docs/Web/API/Node) ou [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) avant le premier enfant du document.
 - [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector)
   - : Renvoie le premier nœud `Element` au sein du document, selon l'ordre du document, qui correspond aux sélecteurs indiqués.
 - [`Document.querySelectorAll()`](/fr/docs/Web/API/Document/querySelectorAll)
@@ -268,7 +266,7 @@ L'interface `Document` est étendue avec l'interface [`XPathEvaluator`](/fr/docs
 - [`Document.createExpression()`](/fr/docs/Web/API/Document/createExpression)
   - : Compile une expression [`XPathExpression`](/fr/docs/Web/API/XPathExpression) qui peut ensuite être utilisée pour des évaluations (répétées).
 - [`Document.createNSResolver()`](/fr/docs/Web/API/Document/createNSResolver)
-  - : Crée un objet [`XPathNSResolver`](/fr/docs/Web/API/XPathNSResolver).
+  - : Crée un objet [`XPathNSResolver`](/fr/docs/Web/API/Node/lookupNamespaceURI).
 - [`Document.evaluate()`](/fr/docs/Web/API/Document/evaluate)
   - : Évalue une expression XPath.
 
@@ -312,22 +310,22 @@ L'écoute de ces évènements peut être effectuée avec `addEventListener()` ou
 - [`beforescriptexecute`](/fr/docs/Web/API/Document/beforescriptexecute_event) {{Non-standard_Inline}}
   - : Déclenché lorsqu'un élément statique [`<script>`](/fr/docs/Web/HTML/Element/script) est sur le point de commencer son exécution.
 - [`scroll`](/fr/docs/Web/API/Document/scroll_event)
-  - : Déclenché lorsque la vue du document ou d'un élément a défilé. Également disponible avec la propriété [`onscroll`](/fr/docs/Web/API/GlobalEventHandlers/onscroll).
+  - : Déclenché lorsque la vue du document ou d'un élément a défilé. Également disponible avec la propriété [`onscroll`](/fr/docs/Web/API/Element/scroll_event).
 - [`visibilitychange`](/fr/docs/Web/API/Document/visibilitychange_event)
   - : Déclenché lorsque le contenu d'un onglet est devenu visible ou lorsqu'il a été masqué.
-- [`wheel`](/fr/docs/Web/API/Document/wheel_event)
-  - : Déclenché lorsque la personne utilise la roulette d'un appareil de pointage (généralement une souris). Également disponible avec la propriété [`onwheel`](/fr/docs/Web/API/GlobalEventHandlers/onwheel).
+- [`wheel`](/fr/docs/Web/API/Element/wheel_event)
+  - : Déclenché lorsque la personne utilise la roulette d'un appareil de pointage (généralement une souris). Également disponible avec la propriété [`onwheel`](/fr/docs/Web/API/Element/wheel_event).
 
 ### Évènements liés aux animations
 
-- [`animationcancel`](/fr/docs/Web/API/Document/animationcancel_event)
-  - : Déclenché lorsqu'une animation est interrompue de façon inattendue. Également disponible avec la propriété [`onanimationcancel`](/fr/docs/Web/API/GlobalEventHandlers/onanimationcancel).
-- [`animationend`](/fr/docs/Web/API/Document/animationend_event)
-  - : Déclenché lorsqu'une animation s'est terminée normalement. Également disponible avec la propriété [`onanimationend`](/fr/docs/Web/API/GlobalEventHandlers/onanimationend).
-- [`animationiteration`](/fr/docs/Web/API/Document/animationiteration_event)
-  - : Déclenché lorsqu'une itération d'une animation est terminée. Également disponible avec la propriété [`onanimationiteration`](/fr/docs/Web/API/GlobalEventHandlers/onanimationiteration).
-- [`animationstart`](/fr/docs/Web/API/Document/animationstart_event)
-  - : Déclenché au démarrage d'une animation. Également disponible avec la propriété [`onanimationstart`](/fr/docs/Web/API/GlobalEventHandlers/onanimationstart).
+- [`animationcancel`](/fr/docs/Web/API/Element/animationcancel_event)
+  - : Déclenché lorsqu'une animation est interrompue de façon inattendue. Également disponible avec la propriété [`onanimationcancel`](/fr/docs/Web/API/Element/animationcancel_event).
+- [`animationend`](/fr/docs/Web/API/Element/animationend_event)
+  - : Déclenché lorsqu'une animation s'est terminée normalement. Également disponible avec la propriété [`onanimationend`](/fr/docs/Web/API/Element/animationend_event).
+- [`animationiteration`](/fr/docs/Web/API/Element/animationiteration_event)
+  - : Déclenché lorsqu'une itération d'une animation est terminée. Également disponible avec la propriété [`onanimationiteration`](/fr/docs/Web/API/Element/animationiteration_event).
+- [`animationstart`](/fr/docs/Web/API/Element/animationstart_event)
+  - : Déclenché au démarrage d'une animation. Également disponible avec la propriété [`onanimationstart`](/fr/docs/Web/API/Element/animationstart_event).
 
 ### Évènements liés au presse-papier
 
@@ -340,20 +338,20 @@ L'écoute de ces évènements peut être effectuée avec `addEventListener()` ou
 
 ### Évènements pour le glisser-déposer
 
-- [`drag`](/fr/docs/Web/API/Document/drag_event)
-  - : Déclenché toutes les quelques centaines de millisecondes lorsqu'un élément ou une sélection de texte est glissée par l'utilisatrice ou l'utilisateur. Également disponible avec la propriété [`ondrag`](/fr/docs/Web/API/GlobalEventHandlers/ondrag).
-- [`dragend`](/fr/docs/Web/API/Document/dragend_event)
-  - : Déclenché lorsqu'une opération de glisser-déposer se termine (en relâchant un bouton de la souris ou en appuyant sur la touche <kbd>Echap</kbd>). Également disponible avec la propriété [`ondragend`](/fr/docs/Web/API/GlobalEventHandlers/ondragend).
-- [`dragenter`](/fr/docs/Web/API/Document/dragenter_event)
-  - : Déclenché lorsqu'un élément ou une sélection de texte que l'on fait glisser rentre sur une zone de dépôt valide. Également disponible avec la propriété [`ondragenter`](/fr/docs/Web/API/GlobalEventHandlers/ondragenter).
-- [`dragleave`](/fr/docs/Web/API/Document/dragleave_event)
-  - : Déclenché lorsqu'un élément ou une sélection de texte que l'on fait glisser quitte une zone de dépôt valide. Également disponible avec la propriété [`ondragleave`](/fr/docs/Web/API/GlobalEventHandlers/ondragleave).
-- [`dragover`](/fr/docs/Web/API/Document/dragover_event)
-  - : Déclenché lorsqu'un élément ou une sélection de texte que l'on fait glisser survole une zone de dépôt valide. Également disponible avec la propriété [`ondragover`](/fr/docs/Web/API/GlobalEventHandlers/ondragover).
-- [`dragstart`](/fr/docs/Web/API/Document/dragstart_event)
-  - : Déclenché lorsqu'une personne commence à glisser un élément ou une sélection de texte. Également disponible avec la propriété [`ondragstart`](/fr/docs/Web/API/GlobalEventHandlers/ondragstart).
-- [`drop`](/fr/docs/Web/API/Document/drop_event)
-  - : Déclenché lorsqu'un élément ou une sélection de texte est déposée sur une zone de dépôt valide. Également disponible avec la propriété [`ondrop`](/fr/docs/Web/API/GlobalEventHandlers/ondrop).
+- [`drag`](/fr/docs/Web/API/HTMLElement/drag_event)
+  - : Déclenché toutes les quelques centaines de millisecondes lorsqu'un élément ou une sélection de texte est glissée par l'utilisatrice ou l'utilisateur. Également disponible avec la propriété [`ondrag`](/fr/docs/Web/API/HTMLElement/drag_event).
+- [`dragend`](/fr/docs/Web/API/HTMLElement/dragend_event)
+  - : Déclenché lorsqu'une opération de glisser-déposer se termine (en relâchant un bouton de la souris ou en appuyant sur la touche <kbd>Echap</kbd>). Également disponible avec la propriété [`ondragend`](/fr/docs/Web/API/HTMLElement/dragend_event).
+- [`dragenter`](/fr/docs/Web/API/HTMLElement/dragenter_event)
+  - : Déclenché lorsqu'un élément ou une sélection de texte que l'on fait glisser rentre sur une zone de dépôt valide. Également disponible avec la propriété [`ondragenter`](/fr/docs/Web/API/HTMLElement/dragenter_event).
+- [`dragleave`](/fr/docs/Web/API/HTMLElement/dragleave_event)
+  - : Déclenché lorsqu'un élément ou une sélection de texte que l'on fait glisser quitte une zone de dépôt valide. Également disponible avec la propriété [`ondragleave`](/fr/docs/Web/API/HTMLElement/dragleave_event).
+- [`dragover`](/fr/docs/Web/API/HTMLElement/dragover_event)
+  - : Déclenché lorsqu'un élément ou une sélection de texte que l'on fait glisser survole une zone de dépôt valide. Également disponible avec la propriété [`ondragover`](/fr/docs/Web/API/HTMLElement/dragover_event).
+- [`dragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event)
+  - : Déclenché lorsqu'une personne commence à glisser un élément ou une sélection de texte. Également disponible avec la propriété [`ondragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event).
+- [`drop`](/fr/docs/Web/API/HTMLElement/drop_event)
+  - : Déclenché lorsqu'un élément ou une sélection de texte est déposée sur une zone de dépôt valide. Également disponible avec la propriété [`ondrop`](/fr/docs/Web/API/HTMLElement/drop_event).
 
 ### Évènements liés au mode plein écran
 
@@ -364,12 +362,12 @@ L'écoute de ces évènements peut être effectuée avec `addEventListener()` ou
 
 ### Évènements clavier
 
-- [`keydown`](/fr/docs/Web/API/Document/keydown_event)
-  - : Déclenché lors de l'appui sur une touche. Également disponible avec la propriété [`onkeydown`](/fr/docs/Web/API/GlobalEventHandlers/onkeydown).
-- [`keypress`](/fr/docs/Web/API/Document/keypress_event) {{Deprecated_Inline}}
-  - : Déclenché lors de l'appui sur une touche qui produit un caractère. Également disponible avec la propriété [`onkeypress`](/fr/docs/Web/API/GlobalEventHandlers/onkeypress).
-- [`keyup`](/fr/docs/Web/API/Document/keyup_event)
-  - : Déclenché lors du relâchement d'une touche. Également disponible avec la propriété [`onkeyup`](/fr/docs/Web/API/GlobalEventHandlers/onkeyup).
+- [`keydown`](/fr/docs/Web/API/Element/keydown_event)
+  - : Déclenché lors de l'appui sur une touche. Également disponible avec la propriété [`onkeydown`](/fr/docs/Web/API/Element/keydown_event).
+- [`keypress`](/fr/docs/Web/API/Element/keypress_event) {{Deprecated_Inline}}
+  - : Déclenché lors de l'appui sur une touche qui produit un caractère. Également disponible avec la propriété [`onkeypress`](/fr/docs/Web/API/Element/keypress_event).
+- [`keyup`](/fr/docs/Web/API/Element/keyup_event)
+  - : Déclenché lors du relâchement d'une touche. Également disponible avec la propriété [`onkeyup`](/fr/docs/Web/API/Element/keyup_event).
 
 ### Évènements de chargement et de déchargement
 
@@ -380,59 +378,59 @@ L'écoute de ces évènements peut être effectuée avec `addEventListener()` ou
 
 ### Évènements de pointeurs
 
-- [`gotpointercapture`](/fr/docs/Web/API/Document/gotpointercapture_event)
-  - : Déclenché lorsqu'un élément capture un pointeur avec [`setPointerCapture()`](/fr/docs/Web/API/Element/setPointerCapture). Également disponible avec la propriété [`ongotpointercapture`](/fr/docs/Web/API/GlobalEventHandlers/ongotpointercapture).
-- [`lostpointercapture`](/fr/docs/Web/API/Document/lostpointercapture_event)
-  - : Déclenché lorsqu'un [pointeur capturé](/fr/docs/Web/API/Pointer_events#pointer_capture) est libéré. Également disponible avec la propriété [`onlostpointercapture`](/fr/docs/Web/API/GlobalEventHandlers/onlostpointercapture).
-- [`pointercancel`](/fr/docs/Web/API/Document/pointercancel_event)
-  - : Déclenché lorsqu'un évènement de pointeur est annulé. Également disponible avec la propriété [`onpointercancel`](/fr/docs/Web/API/GlobalEventHandlers/onpointercancel).
-- [`pointerdown`](/fr/docs/Web/API/Document/pointerdown_event)
-  - : Déclenché lorsqu'un pointeur devient actif. Également disponible avec la propriété [`onpointerdown`](/fr/docs/Web/API/GlobalEventHandlers/onpointerdown).
-- [`pointerenter`](/fr/docs/Web/API/Document/pointerenter_event)
-  - : Déclenché lorsqu'un pointeur est déplacé au sein des frontières de la zone interactive d'un élément ou d'un de ses descendants. Également disponible avec la propriété [`onpointerenter`](/fr/docs/Web/API/GlobalEventHandlers/onpointerenter).
-- [`pointerleave`](/fr/docs/Web/API/Document/pointerleave_event)
-  - : Déclenché lorsqu'un pointeur quitte les limites de la zone interactive d'un élément. Également disponible avec la propriété [`onpointerleave`](/fr/docs/Web/API/GlobalEventHandlers/onpointerleave).
+- [`gotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event)
+  - : Déclenché lorsqu'un élément capture un pointeur avec [`setPointerCapture()`](/fr/docs/Web/API/Element/setPointerCapture). Également disponible avec la propriété [`ongotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event).
+- [`lostpointercapture`](/fr/docs/Web/API/Element/lostpointercapture_event)
+  - : Déclenché lorsqu'un [pointeur capturé](/fr/docs/Web/API/Pointer_events#pointer_capture) est libéré. Également disponible avec la propriété [`onlostpointercapture`](/fr/docs/Web/API/Element/lostpointercapture_event).
+- [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event)
+  - : Déclenché lorsqu'un évènement de pointeur est annulé. Également disponible avec la propriété [`onpointercancel`](/fr/docs/Web/API/Element/pointercancel_event).
+- [`pointerdown`](/fr/docs/Web/API/Element/pointerdown_event)
+  - : Déclenché lorsqu'un pointeur devient actif. Également disponible avec la propriété [`onpointerdown`](/fr/docs/Web/API/Element/pointerdown_event).
+- [`pointerenter`](/fr/docs/Web/API/Element/pointerenter_event)
+  - : Déclenché lorsqu'un pointeur est déplacé au sein des frontières de la zone interactive d'un élément ou d'un de ses descendants. Également disponible avec la propriété [`onpointerenter`](/fr/docs/Web/API/Element/pointerenter_event).
+- [`pointerleave`](/fr/docs/Web/API/Element/pointerleave_event)
+  - : Déclenché lorsqu'un pointeur quitte les limites de la zone interactive d'un élément. Également disponible avec la propriété [`onpointerleave`](/fr/docs/Web/API/Element/pointerleave_event).
 - [`pointerlockchange`](/fr/docs/Web/API/Document/pointerlockchange_event)
   - : Déclenché lorsque le pointeur est verrouillé/déverrouillé. Également disponible avec la propriété [`onpointerlockchange`](/fr/docs/Web/API/GlobalEventHandlers/onpointerlockchange).
 - [`pointerlockerror`](/fr/docs/Web/API/Document/pointerlockerror_event)
   - : Déclenché lorsque le verrouillage du pointeur échoue. Également disponible avec la propriété [`onpointerlockerror`](/fr/docs/Web/API/GlobalEventHandlers/onpointerlockerror).
-- [`pointermove`](/fr/docs/Web/API/Document/pointermove_event)
-  - : Déclenché lorsqu'un pointeur change de coordonnées. Également disponible avec la propriété [`onpointermove`](/fr/docs/Web/API/GlobalEventHandlers/onpointermove).
-- [`pointerout`](/fr/docs/Web/API/Document/pointerout_event)
-  - : Déclenché lorsqu'un pointeur est déplacé en dehors des limites de la zone interactive d'un élément (entre autres). Également disponible avec la propriété [`onpointerout`](/fr/docs/Web/API/GlobalEventHandlers/onpointerout).
-- [`pointerover`](/fr/docs/Web/API/Document/pointerover_event)
-  - : Déclenché lorsqu'un pointeur est déplacé à l'intérieur des limites de la zone interactive d'un élément. Également disponible avec la propriété [`onpointerover`](/fr/docs/Web/API/GlobalEventHandlers/onpointerover).
-- [`pointerup`](/fr/docs/Web/API/Document/pointerup_event)
-  - : Déclenché lorsqu'un pointeur n'est plus actif. Également disponible avec la propriété [`onpointerup`](/fr/docs/Web/API/GlobalEventHandlers/onpointerup).
+- [`pointermove`](/fr/docs/Web/API/Element/pointermove_event)
+  - : Déclenché lorsqu'un pointeur change de coordonnées. Également disponible avec la propriété [`onpointermove`](/fr/docs/Web/API/Element/pointermove_event).
+- [`pointerout`](/fr/docs/Web/API/Element/pointerout_event)
+  - : Déclenché lorsqu'un pointeur est déplacé en dehors des limites de la zone interactive d'un élément (entre autres). Également disponible avec la propriété [`onpointerout`](/fr/docs/Web/API/Element/pointerout_event).
+- [`pointerover`](/fr/docs/Web/API/Element/pointerover_event)
+  - : Déclenché lorsqu'un pointeur est déplacé à l'intérieur des limites de la zone interactive d'un élément. Également disponible avec la propriété [`onpointerover`](/fr/docs/Web/API/Element/pointerover_event).
+- [`pointerup`](/fr/docs/Web/API/Element/pointerup_event)
+  - : Déclenché lorsqu'un pointeur n'est plus actif. Également disponible avec la propriété [`onpointerup`](/fr/docs/Web/API/Element/pointerup_event).
 
 ### Évènements de sélection
 
 - [`selectionchange`](/fr/docs/Web/API/Document/selectionchange_event)
-  - : Déclenché lorsque la sélection textuelle courante d'un document a changé. Également disponible avec la propriété [`onselectionchange`](/fr/docs/Web/API/GlobalEventHandlers/onselectionchange).
-- [`selectstart`](/fr/docs/Web/API/Document/selectstart_event)
-  - : Déclenché lorsque l'utilisateur commence une nouvelle sélection. Également disponible avec la propriété [`onselectstart`](/fr/docs/Web/API/GlobalEventHandlers/onselectstart).
+  - : Déclenché lorsque la sélection textuelle courante d'un document a changé. Également disponible avec la propriété [`onselectionchange`](/fr/docs/Web/API/HTMLInputElement/selectionchange_event).
+- [`selectstart`](/fr/docs/Web/API/Node/selectstart_event)
+  - : Déclenché lorsque l'utilisateur commence une nouvelle sélection. Également disponible avec la propriété [`onselectstart`](/fr/docs/Web/API/Node/selectstart_event).
 
 ### Évènements tactiles
 
-- [`touchcancel`](/fr/docs/Web/API/Document/touchcancel_event)
-  - : Déclenché lorsqu'un ou plusieurs points de toucher ont été perturbés d'une façon propre à l'implémentation (par exemple lorsque de trop nombreux points de toucher ont été créés). Également disponible avec la propriété [`ontouchcancel`](/fr/docs/Web/API/GlobalEventHandlers/ontouchcancel).
-- [`touchend`](/fr/docs/Web/API/Document/touchend_event)
-  - : Déclenché lorsqu'un ou plusieurs points de toucher ont été retirés de la surface tactile. Également disponible avec la propriété [`ontouchend`](/fr/docs/Web/API/GlobalEventHandlers/ontouchend).
-- [`touchmove`](/fr/docs/Web/API/Document/touchmove_event)
-  - : Déclenché lorsqu'un ou plusieurs points de toucher ont été déplacés sur la surface tactile. Également disponible avec la propriété [`ontouchmove`](/fr/docs/Web/API/GlobalEventHandlers/ontouchmove).
-- [`touchstart`](/fr/docs/Web/API/Document/touchstart_event)
-  - : Déclenché lorsqu'un ou plusieurs points de toucher ont été placés sur la surface tactile. Également disponible avec la propriété [`ontouchstart`](/fr/docs/Web/API/GlobalEventHandlers/ontouchstart).
+- [`touchcancel`](/fr/docs/Web/API/Element/touchcancel_event)
+  - : Déclenché lorsqu'un ou plusieurs points de toucher ont été perturbés d'une façon propre à l'implémentation (par exemple lorsque de trop nombreux points de toucher ont été créés). Également disponible avec la propriété [`ontouchcancel`](/fr/docs/Web/API/Element/touchcancel_event).
+- [`touchend`](/fr/docs/Web/API/Element/touchend_event)
+  - : Déclenché lorsqu'un ou plusieurs points de toucher ont été retirés de la surface tactile. Également disponible avec la propriété [`ontouchend`](/fr/docs/Web/API/Element/touchend_event).
+- [`touchmove`](/fr/docs/Web/API/Element/touchmove_event)
+  - : Déclenché lorsqu'un ou plusieurs points de toucher ont été déplacés sur la surface tactile. Également disponible avec la propriété [`ontouchmove`](/fr/docs/Web/API/Element/touchmove_event).
+- [`touchstart`](/fr/docs/Web/API/Element/touchstart_event)
+  - : Déclenché lorsqu'un ou plusieurs points de toucher ont été placés sur la surface tactile. Également disponible avec la propriété [`ontouchstart`](/fr/docs/Web/API/Element/touchstart_event).
 
 ### Évènements de transition
 
-- [`transitioncancel`](/fr/docs/Web/API/Document/transitioncancel_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) est annulée. Également disponible avec la propriété [`ontransitioncancel`](/fr/docs/Web/API/GlobalEventHandlers/ontransitioncancel).
-- [`transitionend`](/fr/docs/Web/API/Document/transitionend_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) est terminée. Également disponible avec la propriété [`ontransitionend`](/fr/docs/Web/API/GlobalEventHandlers/ontransitionend).
-- [`transitionrun`](/fr/docs/Web/API/Document/transitionrun_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) est créée. Également disponible avec la propriété [`ontransitionrun`](/fr/docs/Web/API/GlobalEventHandlers/ontransitionrun).
-- [`transitionstart`](/fr/docs/Web/API/Document/transitionstart_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) a effectivement démarré. Également disponible avec la propriété [`ontransitionstart`](/fr/docs/Web/API/GlobalEventHandlers/ontransitionstart).
+- [`transitioncancel`](/fr/docs/Web/API/Element/transitioncancel_event)
+  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) est annulée. Également disponible avec la propriété [`ontransitioncancel`](/fr/docs/Web/API/Element/transitioncancel_event).
+- [`transitionend`](/fr/docs/Web/API/Element/transitionend_event)
+  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) est terminée. Également disponible avec la propriété [`ontransitionend`](/fr/docs/Web/API/Element/transitionend_event).
+- [`transitionrun`](/fr/docs/Web/API/Element/transitionrun_event)
+  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) est créée. Également disponible avec la propriété [`ontransitionrun`](/fr/docs/Web/API/GlobalEventHandlers/ontransitionrun).
+- [`transitionstart`](/fr/docs/Web/API/Element/transitionstart_event)
+  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) a effectivement démarré. Également disponible avec la propriété [`ontransitionstart`](/fr/docs/Web/API/GlobalEventHandlers/ontransitionstart).
 
 ## Extensions non-standard {{Non-standard_Inline}}
 
@@ -444,7 +442,7 @@ Firefox définit certaines méthodes non-standard&nbsp;:
 
 - [`Document.execCommandShowHelp()`](/fr/docs/Web/API/Document/execCommandShowHelp) {{deprecated_inline}}
   - : Cette méthode n'a jamais rien fait et a toujours levé une exception. Elle a été retirée avec Gecko 14.0.
-- [`Document.getBoxObjectFor()`](/fr/docs/Web/API/Document/getBoxObjectFor) {{deprecated_inline}}
+- [`Document.getBoxObjectFor()`](/fr/docs/Web/API/Element/getBoundingClientRect) {{deprecated_inline}}
   - : On utilisera la méthode [`Element.getBoundingClientRect()`](/fr/docs/Web/API/Element/getBoundingClientRect) à la place.
 - [`Document.loadOverlay()`](/fr/docs/Web/API/Document/loadOverlay) {{deprecated_inline}}
   - : Charge [un overlay XUL](/fr/docs/XUL_Overlays) de façon dynamique. Cette méthode fonctionne uniquement pour les documents XUL.

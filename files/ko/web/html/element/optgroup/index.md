@@ -1,23 +1,36 @@
 ---
 title: <optgroup>
 slug: Web/HTML/Element/optgroup
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/optgroup
 ---
 
 {{HTMLSidebar}}
 
 **HTML `<optgroup>` 요소**는 {{HTMLElement("select")}} 요소의 옵션을 묶을 수 있습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/optgroup.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;optgroup&gt;", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
+```html interactive-example
+<label for="dino-select">Choose a dinosaur:</label>
+<select id="dino-select">
+  <optgroup label="Theropods">
+    <option>Tyrannosaurus</option>
+    <option>Velociraptor</option>
+    <option>Deinonychus</option>
+  </optgroup>
+  <optgroup label="Sauropods">
+    <option>Diplodocus</option>
+    <option>Saltasaurus</option>
+    <option>Apatosaurus</option>
+  </optgroup>
+</select>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -60,9 +73,9 @@ translation_of: Web/HTML/Element/optgroup
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : 지정한 경우 모든 하위 옵션을 선택할 수 없습니다. 브라우저에서, 비활성화 옵션은 주로 회색으로 보이며, 클릭과 포커스 등 모든 이벤트를 받지 않습니다.
-- {{htmlattrdef("label")}}
+- `label`
   - : 옵션 그룹의 이름. 브라우저가 그룹의 이름을 표시할 때 사용할 수 있습니다. 필수로 지정해야 합니다.
 
 ## 예제
@@ -94,4 +107,4 @@ translation_of: Web/HTML/Element/optgroup
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.optgroup")}}
+{{Compat}}

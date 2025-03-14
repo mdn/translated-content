@@ -1,13 +1,6 @@
 ---
 title: Document.onafterscriptexecute
 slug: Web/API/Document/afterscriptexecute_event
-tags:
-  - API
-  - DOM
-  - Propriétés
-  - scripts
-translation_of: Web/API/Document/onafterscriptexecute
-original_slug: Web/API/Document/onafterscriptexecute
 ---
 
 {{ ApiRef("DOM") }} {{non-standard_header}}
@@ -34,11 +27,11 @@ function finished(e) {
 document.addEventListener("afterscriptexecute", finished, true);
 ```
 
-[Voir l'exemple sur une page](/samples/html/currentScript.html)
+[Voir l'exemple sur une page](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
 ## Spécification
 
-- [HTML5](http://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
+- [HTML5](https://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
 
 ## Voir aussi
 

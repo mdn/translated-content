@@ -1,15 +1,15 @@
 ---
 title: 캔버스 생성과 그리기
-slug: >-
-  Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
-original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/캔버스_생성과_그리기
+slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/공_움직이기")}}
 
-이 강의는 [게임 개발 캔버스 튜토리얼](/ko/docs/Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임)의 10단계 중 첫 번째 과정입니다. [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html)에서 이 강의의 완성된 코드를 볼 수 있습니다.
+이 강의는 [게임 개발 캔버스 튜토리얼](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)의 10단계 중 첫 번째 과정입니다. [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html)에서 이 강의의 완성된 코드를 볼 수 있습니다.
 
 게임의 기능들을 작성하기 전에, 게임 내부에 렌더링 하기 위한 기본 구조들을 HTML과 {{htmlelement("canvas")}} 엘리먼트를 사용하여 만들어야 합니다.
 
@@ -18,25 +18,30 @@ original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽�
 HTML문서 구조는 꽤 간단합니다. 게임은 {{htmlelement("canvas")}} 엘리먼트에 렌더링됩니다. 여러분이 좋아하는 텍스트 에디터로 새로운 HTML 문서를 생성하여 index.html로 저장하고, 아래 코드를 추가하세요.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-      * { padding: 0; margin: 0; }
-      canvas { background: #eee; display: block; margin: 0 auto; }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      canvas {
+        background: #eee;
+        display: block;
+        margin: 0 auto;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="480" height="320"></canvas>
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
-
-<script>
-  // JavaScript 코드가 여기에 들어갈 것입니다.
-</script>
-
-</body>
+    <script>
+      // JavaScript 코드가 여기에 들어갈 것입니다.
+    </script>
+  </body>
 </html>
 ```
 
@@ -47,8 +52,8 @@ HTML문서 구조는 꽤 간단합니다. 게임은 {{htmlelement("canvas")}} �
 실제로 {{htmlelement("canvas")}}엘리먼트 위에 그래픽을 렌더링하기 위해서는 JavaScript로 참조할 수 있게 만들어야 합니다. 다음 코드를 여러분의 `<script>` 태그 다음에 추가하세요..
 
 ```js
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
 ```
 
 {{htmlelement("canvas")}} 엘리먼트에 대한 참조를 `canvas` 변수에 저장하였습니다. 그러고 나서는 캔버스에 그리기 위해 실질적으로 사용되는 도구인 2D rendering context를 `ctx` 변수에 저장하고 있습니다.
@@ -69,7 +74,7 @@ ctx.closePath();
 
 ```js
 ctx.beginPath();
-ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
 ctx.fillStyle = "green";
 ctx.fill();
 ctx.closePath();
@@ -100,7 +105,7 @@ ctx.closePath();
 
 JSFiddle에서 라이브로 실행되는 전체 코드입니다.
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","370")}}
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","395")}}
 
 > **참고:** **연습해보기**: 주어진 모양들의 크기와 색상을 변경해보세요.
 

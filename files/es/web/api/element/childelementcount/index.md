@@ -1,14 +1,14 @@
 ---
 title: ParentNode.childElementCount
 slug: Web/API/Element/childElementCount
-original_slug: Web/API/ParentNode/childElementCount
 ---
 
 {{ APIRef }}
 
 La propiedad de sólo lectura `ParentNode.childElementCount` devuelve un número del tipo `unsigned long` que representa la cantidad de elementos hijo que penden del elemento padre (ParentNode).
 
-> **Nota:** Esta propiedad fue inicialmente definida en la interfaz pura {{domxref("ElementTraversal")}}. Como esta interfaz contenía dos conjuntos distintos de propiedades: una apuntaba al {{domxref("Node")}} con hijos y otra a los hijos, fueron trasladados a dos interfaces puras separadas: {{domxref("ParentNode")}} y {{domxref("ChildNode")}}. En este caso, `childElementCount` se mudó a {{domxref("ParentNode")}}. Este es un cambio bastante técnico que no debería afectar a la compatibilidad.
+> [!NOTE]
+> Esta propiedad fue inicialmente definida en la interfaz pura {{domxref("ElementTraversal")}}. Como esta interfaz contenía dos conjuntos distintos de propiedades: una apuntaba al {{domxref("Node")}} con hijos y otra a los hijos, fueron trasladados a dos interfaces puras separadas: {{domxref("ParentNode")}} y {{domxref("ChildNode")}}. En este caso, `childElementCount` se mudó a {{domxref("ParentNode")}}. Este es un cambio bastante técnico que no debería afectar a la compatibilidad.
 
 ## Sintaxis
 

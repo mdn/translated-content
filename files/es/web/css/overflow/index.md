@@ -9,7 +9,7 @@ slug: Web/CSS/overflow
 
 La propiedad CSS `overflow` especifica: si recortar contenido, dibujar barras de desplazamiento o mostrar el contenido excedente en un elemento a nivel de bloque.
 
-Usando la propiedad `overflow` con un valor distinto a `visible`, valor por defecto, creará un nuevo [contexto de formatos de bloques](/es/docs/CSS/block_formatting_context). Esto es técnicamente necesario debido a que si un elemento flotante interceptara con otros forzaría a reajustar el contenido alrededor de los elementos que se interceden. El reajuste sucedería luego de cada desplazamiento, y llevaría a un desplazamiento demasiado lento.
+Usando la propiedad `overflow` con un valor distinto a `visible`, valor por defecto, creará un nuevo [contexto de formatos de bloques](/es/docs/Web/CSS/CSS_display/Block_formatting_context). Esto es técnicamente necesario debido a que si un elemento flotante interceptara con otros forzaría a reajustar el contenido alrededor de los elementos que se interceden. El reajuste sucedería luego de cada desplazamiento, y llevaría a un desplazamiento demasiado lento.
 
 Nótese que, cambiando programáticamente el valor de `scrollTop` al elemento HTML relevante, incluso cuando `overflow` tenga el valor `hidden` un elemento podría necesitar ser desplazado.
 
@@ -58,16 +58,18 @@ overflow: inherit
 
 ```css
 p {
-     width: 12em;
-     border: dotted;
-     overflow: visible;   /* dibuja barras si es necesario */
+  width: 12em;
+  border: dotted;
+  overflow: visible; /* dibuja barras si es necesario */
 }
 ```
 
 ```html hidden
-<p style="overflow: visible; display: inline-block; width: 12em; height: 6em; border: dotted;">
-  <code>visible</code> (por defecto)<br>
-  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+<p
+  style="overflow: visible; display: inline-block; width: 12em; height: 6em; border: dotted;">
+  <code>visible</code> (por defecto)<br />
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium.
 </p>
 ```
 
@@ -76,13 +78,17 @@ p {
 #### `hidden`
 
 ```css
-p { overflow: hidden; /* no se dibujan barras */ }
+p {
+  overflow: hidden; /* no se dibujan barras */
+}
 ```
 
 ```html hidden
-<p style="overflow: hidden; display: inline-block; width: 12em; height: 6em; border: dotted;">
-  <code>overflow: hidden</code><br>
-  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+<p
+  style="overflow: hidden; display: inline-block; width: 12em; height: 6em; border: dotted;">
+  <code>overflow: hidden</code><br />
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium.
 </p>
 ```
 
@@ -91,13 +97,17 @@ p { overflow: hidden; /* no se dibujan barras */ }
 #### `scroll`
 
 ```css
-p { overflow: scroll; /* se dibujan ambas barras */ }
+p {
+  overflow: scroll; /* se dibujan ambas barras */
+}
 ```
 
 ```html hidden
-<p style="overflow: scroll; display: inline-block; width: 12em; height: 6em; border: dotted;">
-  <code>overflow: scroll</code><br>
-  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+<p
+  style="overflow: scroll; display: inline-block; width: 12em; height: 6em; border: dotted;">
+  <code>overflow: scroll</code><br />
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium.
 </p>
 ```
 
@@ -106,13 +116,17 @@ p { overflow: scroll; /* se dibujan ambas barras */ }
 #### `auto`
 
 ```css
-p { overflow: auto; /* se dibujan barras según se necesite */ }
+p {
+  overflow: auto; /* se dibujan barras según se necesite */
+}
 ```
 
 ```html hidden
-<p style="overflow: auto; display: inline-block; width: 12em; height: 6em; border: dotted;">
-  <code>overflow: auto</code><br>
-  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+<p
+  style="overflow: auto; display: inline-block; width: 12em; height: 6em; border: dotted;">
+  <code>overflow: auto</code><br />
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium.
 </p>
 ```
 
@@ -122,9 +136,9 @@ p { overflow: auto; /* se dibujan barras según se necesite */ }
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.overflow")}}
+{{Compat}}
 
 ## Véase también
 

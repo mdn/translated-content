@@ -1,12 +1,6 @@
 ---
 title: top
 slug: Web/CSS/top
-tags:
-  - CSS
-  - Positionnement
-  - Propriété
-  - Reference
-translation_of: Web/CSS/top
 ---
 
 {{CSSRef}}
@@ -96,7 +90,7 @@ div {
 p.relatif {
   position: relative;
   top: 5em;
-  border: 2px black solid
+  border: 2px black solid;
 }
 ```
 
@@ -149,4 +143,4 @@ p.absolu {
 - {{cssxref("height")}}
 - {{cssxref("left")}}
 - {{cssxref("right")}}
-- [Les bases de CSS : la disposition et le positionnement](/fr/Apprendre/CSS/Les_bases/La_disposition#Le_positionnement)
+- [Les bases de CSS : la disposition et le positionnement](/fr/docs/Learn/CSS/CSS_layout/Introduction#le_positionnement)

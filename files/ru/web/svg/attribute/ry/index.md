@@ -1,33 +1,37 @@
 ---
 title: ry
 slug: Web/SVG/Attribute/ry
-tags:
-  - SVG атрибуты
-translation_of: Web/SVG/Attribute/ry
 ---
+
 {{SVGRef}}
 
 Атрибут **`ry`** определяет радиус круга по оси y.
 
 Два элемента используют этот атрибут: [`<ellipse>`](/ru/docs/Web/SVG/Element/ellipse) и [`<rect>`](/ru/docs/Web/SVG/Element/rect)
 
+## Пример
+
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="50"  cy="50" ry="0"  rx="25" />
+  <ellipse cx="50" cy="50" ry="0" rx="25" />
   <ellipse cx="150" cy="50" ry="25" rx="25" />
   <ellipse cx="250" cy="50" ry="50" rx="25" />
 
-  <rect x="20"  y="120" width="60" height="60" ry="0"   rx="15"/>
-  <rect x="120" y="120" width="60" height="60" ry="15"  rx="15"/>
-  <rect x="220" y="120" width="60" height="60" ry="150" rx="15"/>
+  <rect x="20" y="120" width="60" height="60" ry="0" rx="15" />
+  <rect x="120" y="120" width="60" height="60" ry="15" rx="15" />
+  <rect x="220" y="120" width="60" height="60" ry="150" rx="15" />
 </svg>
 ```
 
-{{EmbedLiveSample('topExample', '100%', 200)}}
+{{EmbedLiveSample("Пример", '100%', 200)}}
 
 ## ellipse
 
@@ -38,7 +42,8 @@ html,body,svg { height:100% }
 | Значение по умолчанию | `auto`                                                                                                                     |
 | Анимируемый           | Да                                                                                                                         |
 
-> **Примечание:** **Примечание.** Начиная с **SVG2**, **ry** - _свойство геометрии(Geometry Property)._ Это означает, что атрибут также можно использовать как свойство CSS для эллипсов.
+> [!NOTE]
+> Начиная с **SVG2**, **ry** - _свойство геометрии(Geometry Property)._ Это означает, что атрибут также можно использовать как свойство CSS для эллипсов.
 
 ## rect
 
@@ -55,12 +60,9 @@ html,body,svg { height:100% }
 | Значение по умолчанию | `auto`                                                                                                                     |
 | Анимируемый           | Да                                                                                                                         |
 
-> **Примечание:** **Примечание.** Начиная с **SVG2**, **ry** - _свойство геометрии(Geometry Property)._ Это означает, что атрибут также можно использовать как свойство CSS для rect.
+> [!NOTE]
+> Начиная с **SVG2**, **ry** - _свойство геометрии(Geometry Property)._ Это означает, что атрибут также можно использовать как свойство CSS для rect.
 
-## Specifications
+## Спецификации
 
-| Спецификация                                                                                 | Статус                   | Комментарий                           |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------- |
-| {{SpecName("SVG2", "geometry.html#RY", "ry")}}                                 | {{Spec2("SVG2")}} | Определяется как свойство геометрии   |
-| {{SpecName("SVG1.1", "shapes.html#EllipseElementRYAttribute", "ry")}} | {{Spec2("SVG1.1")}} | Начальное определение для `<ellipse>` |
-| {{SpecName("SVG1.1", "shapes.html#RectElementRYAttribute", "ry")}}     | {{Spec2("SVG1.1")}} | Начальное определение для `<rect>`    |
+{{Specifications}}

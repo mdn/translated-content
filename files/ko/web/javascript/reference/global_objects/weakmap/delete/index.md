@@ -1,26 +1,31 @@
 ---
 title: WeakMap.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 ---
 
 {{JSRef}}
 
 **`delete()`** 메서드는 {{jsxref("WeakMap")}} 객체에서 특정 요소를 제거합니다.
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-delete.html")}}
+{{InteractiveExample("JavaScript Demo: WeakMap.prototype.delete()")}}
+
+```js interactive-example
+const weakmap1 = new WeakMap();
+const object1 = {};
+
+weakmap1.set(object1, 42);
+
+console.log(weakmap1.delete(object1));
+// Expected output: true
+
+console.log(weakmap1.has(object1));
+// Expected output: false
+```
 
 ## 구문
 
 ```js
-delete(key)
+delete key;
 ```
 
 ### 매개변수
@@ -38,11 +43,11 @@ delete(key)
 
 ```js
 const wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.delete(window); // true 반환. 성공적으로 제거됨.
 
-wm.has(window);    // false 반환. window 객체는 더이상 WeakMap에 있지않음.
+wm.has(window); // false 반환. window 객체는 더이상 WeakMap에 있지않음.
 ```
 
 ## 명세

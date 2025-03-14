@@ -1,11 +1,11 @@
 ---
-title: '::first-line (:first-line)'
+title: ::first-line (:first-line)
 slug: Web/CSS/::first-line
 ---
 
 {{CSSRef}}
 
-El [Pseudoelemento](/es/docs/Web/CSS/Pseudoelementos) **`::first-line`** aplica estilos a la primera línea de un [elemento de bloque](/es/docs/Web/HTML/Block-level_elements). Nótese que la longitud de la primera línea depende de muchos factores, incluyendo el ancho del elemento, el ancho del documento y el tamaño de fuente del texto.
+El [Pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) **`::first-line`** aplica estilos a la primera línea de un [elemento de bloque](/es/docs/Glossary/Block-level_content). Nótese que la longitud de la primera línea depende de muchos factores, incluyendo el ancho del elemento, el ancho del documento y el tamaño de fuente del texto.
 
 ```css
 /* Selecciona la primera línea de un <p> */
@@ -14,7 +14,8 @@ p::first-line {
 }
 ```
 
-> **Nota:** CSS3 introdujo la notación `::first-line` (con doble dos puntos) para distinguir [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) de [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores también aceptan `:first-line`, añadido en CSS2.
+> [!NOTE]
+> CSS3 introdujo la notación `::first-line` (con doble dos puntos) para distinguir [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) de [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores también aceptan `:first-line`, añadido en CSS2.
 
 ## Propiedades permitidas
 
@@ -35,12 +36,15 @@ Sólo unas pocas propiedades de CSS se pueden usar con el pseudoelemento `::firs
 ### HTML
 
 ```html
-<p>Los estilos sólo se aplicarán en la primera línea de este párrafo.
-Posteriormente, todo el texto tendrá el estilo normal.
-¿Ves?</p>
+<p>
+  Los estilos sólo se aplicarán en la primera línea de este párrafo.
+  Posteriormente, todo el texto tendrá el estilo normal. ¿Ves?
+</p>
 
-<span>La primera línea de este elemento no recibe ningún estilo
-especial, porque no es un elemento de bloque.</span>
+<span
+  >La primera línea de este elemento no recibe ningún estilo especial, porque no
+  es un elemento de bloque.</span
+>
 ```
 
 ### CSS
@@ -49,7 +53,6 @@ especial, porque no es un elemento de bloque.</span>
 ::first-line {
   color: blue;
   text-transform: uppercase;
-
 
   /* ADVERTENCIA: NO USES ESTOS*/
   /* Muchas propiedades son inválidas en pseudoelementos ::first-line */

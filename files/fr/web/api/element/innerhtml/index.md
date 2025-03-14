@@ -1,21 +1,14 @@
 ---
 title: element.innerHTML
 slug: Web/API/Element/innerHTML
-tags:
-  - API
-  - DOM
-  - Elements
-  - HTML
-  - Propriétés
-translation_of: Web/API/Element/innerHTML
-original_slug: Web/API/Element/innertHTML
 ---
 
 {{APIRef("DOM")}}
 
 La propriété **`Element.innerHTML`** de {{domxref("Element")}} récupère ou définit la syntaxe HTML décrivant les descendants de l'élément.
 
-> **Note :** Si un nœud {{HTMLElement("div")}}, {{HTMLElement("span")}}, ou {{HTMLElement("noembed")}} a un sous-nœud de type texte contenant les caractères `(&), (<),` ou `(>)`, `innerHTML` renverra à la place les chaînes suivantes : `"&amp;"`, `"&lt;"` et `"&gt;"` respectivement. Utilisez {{domxref("Node.textContent")}} pour obtenir une copie exacte du contenu de ces nœuds.
+> [!NOTE]
+> Si un nœud {{HTMLElement("div")}}, {{HTMLElement("span")}}, ou {{HTMLElement("noembed")}} a un sous-nœud de type texte contenant les caractères `(&), (<),` ou `(>)`, `innerHTML` renverra à la place les chaînes suivantes : `"&amp;"`, `"&lt;"` et `"&gt;"` respectivement. Utilisez {{domxref("Node.textContent")}} pour obtenir une copie exacte du contenu de ces nœuds.
 
 Pour insérer le HTML dans le document, plutôt que de remplacer le contenu d'un élément, utilisez la méthode {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
 
@@ -52,7 +45,8 @@ let contents = myElement.innerHTML;
 
 Cela vous permet de regarder le balisage HTML des nœuds de contenu de l'élément.
 
-> **Note :** Le fragment HTML ou XML renvoyé est généré en fonction du contenu actuel de l'élément. Il est donc probable que le balisage et la mise en forme du fragment renvoyé ne correspondent pas au balisage de la page d'origine.
+> [!NOTE]
+> Le fragment HTML ou XML renvoyé est généré en fonction du contenu actuel de l'élément. Il est donc probable que le balisage et la mise en forme du fragment renvoyé ne correspondent pas au balisage de la page d'origine.
 
 ### Remplacement du contenu d'un élément
 
@@ -67,9 +61,8 @@ document.body.innerHTML = "";
 Cet exemple récupère le balisage HTML actuel du document et remplace les caractères `"<"` par l'entité HTML `"& lt;"`, convertissant ainsi essentiellement le code HTML en texte brut. Ceci est ensuite inclus dans un élément {{HTMLElement ("pre")}}. Puis, la valeur de `innerHTML` est modifiée dans cette nouvelle chaîne. Par conséquent, le contenu du document est remplacé par un affichage du code source entier de la page.
 
 ```js
-document.documentElement.innerHTML = "<pre>" +
-         document.documentElement.innerHTML.replace(/</g,"&lt;") +
-            "</pre>";
+document.documentElement.innerHTML =
+  "<pre>" + document.documentElement.innerHTML.replace(/</g, "&lt;") + "</pre>";
 ```
 
 #### Détails opérationnels
@@ -106,7 +99,8 @@ el.innerHTML = name; // affiche l'alerte
 
 Pour cette raison, il est recommandé de ne pas utiliser `innerHTML` pour insérer du texte brut ; à la place, utilisez {{domxref("Node.textContent")}}. Cela n'analyse pas le contenu passé en HTML, mais l'insère à la place en tant que texte brut.
 
-> **Attention :** Si votre projet est soumis à une vérification de sécurité, l'utilisation de `innerHTML` entraînera probablement le rejet de votre code. Par exemple, si vous utilisez `innerHTML` dans une extension de navigateur et soumettez l'extension à addons.mozilla.org, elle ne passera pas le processus de révision automatique.
+> [!WARNING]
+> Si votre projet est soumis à une vérification de sécurité, l'utilisation de `innerHTML` entraînera probablement le rejet de votre code. Par exemple, si vous utilisez `innerHTML` dans une extension de navigateur et soumettez l'extension à addons.mozilla.org, elle ne passera pas le processus de révision automatique.
 
 ## Exemple
 
@@ -132,8 +126,14 @@ Nous ajoutons une seconde méthode qui enregistre des informations sur les évé
 
 ```js
 function logEvent(event) {
-  var msg = "Event <strong>" + event.type + "</strong> at <em>" +
-            event.clientX + ", " + event.clientY + "</em>";
+  var msg =
+    "Event <strong>" +
+    event.type +
+    "</strong> at <em>" +
+    event.clientX +
+    ", " +
+    event.clientY +
+    "</em>";
   log(msg);
 }
 ```

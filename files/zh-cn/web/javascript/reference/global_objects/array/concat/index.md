@@ -1,17 +1,28 @@
 ---
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
+l10n:
+  sourceCommit: 6e93ec8fc9e1f3bd83bf2f77e84e1a39637734f8
 ---
 
 {{JSRef}}
 
-**`concat()`** 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。
+{{jsxref("Array")}} 实例的 **`concat()`** 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。
 
-{{EmbedInteractiveExample("pages/js/array-concat.html")}}
+{{InteractiveExample("JavaScript Demo: Array.concat()", "shorter")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const array2 = ["d", "e", "f"];
+const array3 = array1.concat(array2);
+
+console.log(array3);
+// Expected output: Array ["a", "b", "c", "d", "e", "f"]
+```
 
 ## 语法
 
-```js
+```js-nolint
 concat()
 concat(value0)
 concat(value0, value1)
@@ -20,8 +31,8 @@ concat(value0, value1, /* … ,*/ valueN)
 
 ### 参数
 
-- `valueN` {{optional_inline}}
-  - : 数组和/或值，将被合并到一个新的数组中。如果省略了所有 `valueN` 参数，则 `concat` 会返回调用此方法的现存数组的一个浅拷贝。详情请参阅下文描述。
+- `value1`、……、`valueN` {{optional_inline}}
+  - : 数组和/或值，将被合并到一个新的数组中。如果省略了所有 `valueN` 参数，则 `concat` 会返回调用此方法的现存数组的一个[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)。详情请参阅下文描述。
 
 ### 返回值
 
@@ -29,15 +40,13 @@ concat(value0, value1, /* … ,*/ valueN)
 
 ## 描述
 
-`concat` 方法创建一个新的数组，它由被调用的对象中的元素组成，每个参数的顺序依次是该参数的元素（如果参数是数组）或参数本身（如果参数不是数组）。它不会递归到嵌套数组参数中。
+`concat` 方法创建一个新数组。该数组将首先由调用它的对象中的元素填充。然后，对于每个参数，它的值将被连接到数组中——对于普通对象或基元，参数本身将成为最终数组的一个元素；对于属性 [`Symbol.isConcatSpreadable`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable) 设置为真的数组或类数组对象，参数的每个元素都将是独立地添加到最终数组中。`concat` 方法不会递归到嵌套数组参数中。
 
-`concat` 方法不会改变 `this` 或任何作为参数提供的数组，而是返回一个浅拷贝，它包含与原始数组相结合的相同元素的副本。原始数组的元素将复制到新数组中，如下所示：
+`concat()` 方法是一种[复制方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它不会更改 `this` 或作为参数提供的任何数组，而是返回包含与原始数组中的元素相同的元素的[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)。
 
-- 对象引用（而不是实际对象）：`concat` 将对象引用复制到新数组中。原始数组和新数组都引用相同的对象。也就是说，如果引用的对象被修改，则更改对于新数组和原始数组都是可见的。这包括也是数组的数组参数的元素。
+如果任何源数组是[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，`concat()` 方法会保留空槽。
 
-- 数据类型如字符串，数字和布尔（不是 {{jsxref("Global_Objects/String", "String")}}，{{jsxref("Global_Objects/Number", "Number")}} 和 {{jsxref("Global_Objects/Boolean", "Boolean")}} 对象）：`concat` 将字符串和数字的值复制到新数组中。
-
-> **备注：** 数组/值在连接时保持不变。此外，对于新数组的任何操作（仅当元素不是对象引用时）都不会对原始数组产生影响，反之亦然。
+`concat()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。`this` 值的处理方式与其他参数相同（除了它会先转换为对象），这意味着普通对象将直接添加到结果数组中，而 `[Symbol.isConcatSpreadable]` 属性为真值的类数组对象将展开并添加到数组中。
 
 ## 示例
 
@@ -46,12 +55,12 @@ concat(value0, value1, /* … ,*/ valueN)
 以下代码将两个数组合并为一个新数组：
 
 ```js
-const letters = ['a', 'b', 'c'];
+const letters = ["a", "b", "c"];
 const numbers = [1, 2, 3];
 
 const alphaNumeric = letters.concat(numbers);
 console.log(alphaNumeric);
-// results in ['a', 'b', 'c', 1, 2, 3]
+// 输出 ['a', 'b', 'c', 1, 2, 3]
 ```
 
 ### 连接三个数组
@@ -66,7 +75,7 @@ const num3 = [7, 8, 9];
 const numbers = num1.concat(num2, num3);
 
 console.log(numbers);
-// results in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// 输出 [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
 ### 将值连接到数组
@@ -74,12 +83,12 @@ console.log(numbers);
 以下代码将三个值连接到数组：
 
 ```js
-const letters = ['a', 'b', 'c'];
+const letters = ["a", "b", "c"];
 
 const alphaNumeric = letters.concat(1, [2, 3]);
 
 console.log(alphaNumeric);
-// results in ['a', 'b', 'c', 1, 2, 3]
+// 输出 ['a', 'b', 'c', 1, 2, 3]
 ```
 
 ### 合并嵌套数组
@@ -93,13 +102,13 @@ const num2 = [2, [3]];
 const numbers = num1.concat(num2);
 
 console.log(numbers);
-// results in [[1], 2, [3]]
+// [[1], 2, [3]]
 
 // 修改 num1 的第一个元素
 num1[0].push(4);
 
 console.log(numbers);
-// results in [[1, 4], 2, [3]]
+// [[1, 4], 2, [3]]
 ```
 
 ### 使用 Symbol.isConcatSpreadable 合并类数组对象
@@ -113,6 +122,32 @@ console.log([0].concat(obj1, obj2));
 // [ 0, { '0': 1, '1': 2, '2': 3, length: 3 }, 1, 2, 3 ]
 ```
 
+### 在稀疏数组上使用 concat()
+
+如果任何源数组是稀疏的，则结果数组也将是稀疏的：
+
+```js
+console.log([1, , 3].concat([4, 5])); // [1, empty, 3, 4, 5]
+console.log([1, 2].concat([3, , 5])); // [1, 2, 3, empty, 5]
+```
+
+### 在非数组对象上调用 concat()
+
+如果 `this` 值不是数组，它会被转换为一个对象，然后以与 `concat()` 的参数相同的方式处理。在这种情况下，返回值始终是一个普通的新数组。
+
+```js
+console.log(Array.prototype.concat.call({}, 1, 2, 3)); // [{}, 1, 2, 3]
+console.log(Array.prototype.concat.call(1, 2, 3)); // [ [Number: 1], 2, 3 ]
+const arrayLike = {
+  [Symbol.isConcatSpreadable]: true,
+  length: 2,
+  0: 1,
+  1: 2,
+  2: 99, // 会被 concat() 所忽略，因为长度（length）为 2
+};
+console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]
+```
+
 ## 规范
 
 {{Specifications}}
@@ -123,12 +158,11 @@ console.log([0].concat(obj1, obj2));
 
 ## 参见
 
-- [Polyfill of `Array.prototype.concat` in `core-js` with fixes and implementation of modern behavior like `Symbol.isConcatSpreadable` support](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array.push", "push")}} / {{jsxref("Array.pop", "pop")}} — add/remove
-  elements from the end of the array
-- {{jsxref("Array.unshift", "unshift")}} / {{jsxref("Array.shift", "shift")}} —
-  add/remove elements from the beginning of the array
-- {{jsxref("Array.splice", "splice")}} — add/remove elements from the specified
-  location of the array
+- [在 `core-js` 中实现 `Array.prototype.concat` 的 Polyfill，修复其中的问题并实现新特性，例如支持 `Symbol.isConcatSpreadable`](https://github.com/zloirock/core-js#ecmascript-array)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.push()")}}
+- {{jsxref("Array.prototype.unshift()")}}
+- {{jsxref("Array.prototype.splice()")}}
 - {{jsxref("String.prototype.concat()")}}
-- {{jsxref("Symbol.isConcatSpreadable")}} — control flattening.
+- {{jsxref("Symbol.isConcatSpreadable")}}

@@ -9,7 +9,26 @@ l10n:
 
 **`toLocaleDateString()`** メソッドは、この Date オブジェクトの「日付」部を表す言語に依存した文字列を返します。新しい `locales` 引数と `options` 引数により、アプリケーションは、使用される書式変換の言語の指定や、関数の振る舞いのカスタマイズができます。古い実装のアプリケーションは、`locales` 引数と `options` 引数を無視します。使用されるロケールや返される文字列の書式は、完全に実装依存です。
 
-{{EmbedInteractiveExample("pages/js/date-tolocaledatestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toLocaleDateString()")}}
+
+```js interactive-example
+const event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+
+console.log(event.toLocaleDateString("de-DE", options));
+// Expected output (varies according to local timezone): Donnerstag, 20. Dezember 2012
+
+console.log(event.toLocaleDateString("ar-EG", options));
+// Expected output (varies according to local timezone): الخميس، ٢٠ ديسمبر، ٢٠١٢
+
+console.log(event.toLocaleDateString(undefined, options));
+// Expected output (varies according to local timezone and default locale): Thursday, December 20, 2012
+```
 
 ## 構文
 
@@ -71,9 +90,9 @@ console.log(date.toLocaleDateString());
 ```js
 function toLocaleDateStringSupportsLocales() {
   try {
-    new Date().toLocaleDateString('i');
+    new Date().toLocaleDateString("i");
   } catch (e) {
-    return e.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
@@ -90,33 +109,33 @@ const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // 米国のアメリカ大陸/ロサンゼルス
 
 // 米国英語は月-日-年の順
-console.log(date.toLocaleDateString('en-US'));
+console.log(date.toLocaleDateString("en-US"));
 // → "12/20/2012"
 
 // 英国英語は日-月-年の順
-console.log(date.toLocaleDateString('en-GB'));
+console.log(date.toLocaleDateString("en-GB"));
 // → "20/12/2012"
 
 // 韓国は年-月-日の順
-console.log(date.toLocaleDateString('ko-KR'));
+console.log(date.toLocaleDateString("ko-KR"));
 // → "2012. 12. 20."
 
 // Event for Persian, It's hard to manually convert date to Solar Hijri
-console.log(date.toLocaleDateString('fa-IR'));
+console.log(date.toLocaleDateString("fa-IR"));
 // → "۱۳۹۱/۹/۳۰"
 
 // 多くのアラビア語圏ではアラビア数字
-console.log(date.toLocaleDateString('ar-EG'));
+console.log(date.toLocaleDateString("ar-EG"));
 // → "٢٠‏/١٢‏/٢٠١٢"
 
 // 日本語では、アプリケーションは元号を用いることがある
 // 2012 年は平成 24 年
-console.log(date.toLocaleDateString('ja-JP-u-ca-japanese'));
+console.log(date.toLocaleDateString("ja-JP-u-ca-japanese"));
 // → "24/12/20"
 
 // 対応していない可能性のある言語を要求した場合、例えば
 // バリ語とし、フォールバック言語にインドネシア語を指定した場合
-console.log(date.toLocaleDateString(['ban', 'id']));
+console.log(date.toLocaleDateString(["ban", "id"]));
 // → "20/12/2012"
 ```
 
@@ -128,14 +147,19 @@ console.log(date.toLocaleDateString(['ban', 'id']));
 const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // 曜日を加えて月とともに長い書式で表す
-const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-console.log(date.toLocaleDateString('de-DE', options));
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+console.log(date.toLocaleDateString("de-DE", options));
 // → "Donnerstag, 20. Dezember 2012"
 
 // アプリケーションで UTC を用いてそれを示したい場合
-options.timeZone = 'UTC';
-options.timeZoneName = 'short';
-console.log(date.toLocaleDateString('en-US', options));
+options.timeZone = "UTC";
+options.timeZoneName = "short";
+console.log(date.toLocaleDateString("en-US", options));
 // → "Thursday, December 20, 2012, UTC"
 ```
 

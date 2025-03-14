@@ -1,11 +1,6 @@
 ---
 title: short_name
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/short_name
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/short_name
 ---
 
 {{AddonSidebar}}
@@ -27,9 +22,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/short_name
   </tbody>
 </table>
 
-Nom abrégé de l'extension. S'il est donné, il sera utilisé dans des contextes où le champ [name](/fr/Add-ons/WebExtensions/manifest.json/name) est trop long. Il est recommandé que le nom court ne dépasse pas 12 caractères. Si le champ du nom court n'est pas inclus dans manifest.json, le nom sera utilisé à la place et peut être tronqué.
+Nom abrégé de l'extension. S'il est donné, il sera utilisé dans des contextes où le champ [name](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) est trop long. Il est recommandé que le nom court ne dépasse pas 12 caractères. Si le champ du nom court n'est pas inclus dans manifest.json, le nom sera utilisé à la place et peut être tronqué.
 
-C'est une [propriété localisable](/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
+C'est une [propriété localisable](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
 ## Exemple
 
@@ -37,6 +32,6 @@ C'est une [propriété localisable](/fr/Add-ons/WebExtensions/Internationalizati
 "short_name": "MonExtension"
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.short_name")}}
+{{Compat}}

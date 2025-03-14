@@ -1,18 +1,55 @@
 ---
 title: font-weight
 slug: Web/CSS/font-weight
-tags:
-  - CSS
-  - Свойства
-  - Справка
-  - Шрифты
-translation_of: Web/CSS/font-weight
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`font-weight`** устанавливает начертание шрифта. Некоторые шрифты доступны только в нормальном или полужирном начертании.
 
-{{EmbedInteractiveExample("pages/css/font-weight.html")}}
+{{InteractiveExample("CSS Demo: font-weight")}}
+
+```css interactive-example-choice
+font-weight: normal;
+```
+
+```css interactive-example-choice
+font-weight: bold;
+```
+
+```css interactive-example-choice
+font-weight: lighter;
+```
+
+```css interactive-example-choice
+font-weight: bolder;
+```
+
+```css interactive-example-choice
+font-weight: 100;
+```
+
+```css interactive-example-choice
+font-weight: 900;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+section {
+  font-size: 1.2em;
+}
+```
 
 ## Синтаксис
 
@@ -110,14 +147,14 @@ font-weight: unset;
 
 ```html
 <p>
-  Alice was beginning to get very tired of sitting by her sister on the
-  bank, and of having nothing to do: once or twice she had peeped into the
-  book her sister was reading, but it had no pictures or conversations in
-  it, 'and what is the use of a book,' thought Alice 'without pictures or
-  conversations?'
+  Alice was beginning to get very tired of sitting by her sister on the bank,
+  and of having nothing to do: once or twice she had peeped into the book her
+  sister was reading, but it had no pictures or conversations in it, 'and what
+  is the use of a book,' thought Alice 'without pictures or conversations?'
 </p>
 
-<div>I'm heavy<br/>
+<div>
+  I'm heavy<br />
   <span>I'm lighter</span>
 </div>
 ```
@@ -133,7 +170,7 @@ p {
 /* Назначение тексту элемента <div> жирности, которая больше на два уровня,
 чем normal, но все ещё меньше, чем стандартный bold. */
 div {
- font-weight: 600;
+  font-weight: 600;
 }
 
 /* Назначение тексту элемента <span> жирности,
@@ -153,6 +190,6 @@ span {
 
 {{cssinfo}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}

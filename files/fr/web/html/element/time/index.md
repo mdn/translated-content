@@ -1,12 +1,6 @@
 ---
 title: <time>
 slug: Web/HTML/Element/time
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/time
 ---
 
 {{HTMLSidebar}}
@@ -16,16 +10,34 @@ L'élément HTML **`<time>`** permet de représenter une période donnée. Cet �
 Cet élément permet de représenter :
 
 - une heure
-- une date du [calendrier grégorien](https://fr.wikipedia.org/wiki/Calendrier_gr%C3%A9gorien) (en précisant éventuellement l'heure et les informations de fuseau horaire).
+- une date du [calendrier grégorien](https://fr.wikipedia.org/wiki/Calendrier_grégorien) (en précisant éventuellement l'heure et les informations de fuseau horaire).
 - [une durée valide](https://www.w3.org/TR/2014/REC-html5-20141028/infrastructure.html#valid-duration-string).
 
-{{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;time&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The Cure will be celebrating their 40th anniversary on
+  <time datetime="2018-07-07">July 7</time> in London's Hyde Park.
+</p>
+
+<p>
+  The concert starts at <time datetime="20:00">20:00</time> and you'll be able
+  to enjoy the band for at least <time datetime="PT2H30M">2h 30m</time>.
+</p>
+```
+
+```css interactive-example
+time {
+  font-weight: bold;
+}
+```
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : Cet attribut indique l'heure et la date associées à l'élément. La valeur de cet attribut doit être une chaîne de caractères décrivant [une date valide avec un fragment optionnel pour décrire l'heure](https://www.w3.org/TR/html51/infrastructure.html#dates-and-times) (cf. ci-après). Si la valeur ne peut pas être analysée comme une date/heure, le contenu de l'élément n'aura pas d'indication temporelle associée.
 
 ## Notes d'utilisation
@@ -76,8 +88,7 @@ La valeur exploitable informatiquement est la valeur de l'attribut `datetime` de
 #### HTML
 
 ```html
-<p>Le concert a lieu <time
-  datetime="2001-05-15T19:00">le 15 mai</time>.</p>
+<p>Le concert a lieu <time datetime="2001-05-15T19:00">le 15 mai</time>.</p>
 ```
 
 #### Résultat
@@ -116,7 +127,7 @@ La valeur exploitable informatiquement est la valeur de l'attribut `datetime` de
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>

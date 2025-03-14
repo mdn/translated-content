@@ -5,7 +5,46 @@ slug: Web/HTML/Element/Heading_Elements
 
 **HTML `<h1>`–`<h6>` 标题 (Heading) 元素**呈现了六个不同的级别的标题，`<h1>` 级别最高，而 `<h6>` 级别最低。
 
-{{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;h1-h6&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>Beetles</h1>
+<h2>External morphology</h2>
+<h3>Head</h3>
+<h4>Mouthparts</h4>
+<h3>Thorax</h3>
+<h4>Prothorax</h4>
+<h4>Pterothorax</h4>
+```
+
+```css interactive-example
+h1,
+h2,
+h3,
+h4 {
+  margin: 0.1rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding-left: 20px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  padding-left: 40px;
+}
+
+h4 {
+  font-size: 1rem;
+  font-style: italic;
+  padding-left: 60px;
+}
+```
 
 <table class="properties">
  <tbody>
@@ -19,7 +58,7 @@ slug: Web/HTML/Element/Heading_Elements
   </tr>
   <tr>
    <th scope="row">标签省略</th>
-   <td>{{no_tag_omission}}</td>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
@@ -27,7 +66,7 @@ slug: Web/HTML/Element/Heading_Elements
   </tr>
   <tr>
    <th scope="row">允许的 ARIA roles</th>
-   <td>{{ARIARole("tab")}}, {{ARIARole("presentation")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"><code>tab</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a></td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -40,14 +79,14 @@ slug: Web/HTML/Element/Heading_Elements
 
 该元素包含所有[全局特性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-> **备注：** align 属性已废弃；不要继续使用它。
+> [!NOTE]
+> align 属性已废弃；不要继续使用它。
 
 ## 使用要点
 
 - 用户代理可以使用标题信息，例如自动构建文档的目录。
 - 不要为了减小标题的字体而使用低级别的标题，而是使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref("font-size")}} 属性。
 - 避免跳过某级标题：始终要从 `<h1>` 开始，接下来依次使用 `<h2>` 等等。
-- 使用 {{HTMLElement("section")}} 元素时，为了方便起见，你应该考虑避免在同一个页面上重复使用 \<h1>，\<h1> 应被用于表示页面的标题，其他的标题当从 \<h2> 开始。在使用 section 时，应当为每个 section 都使用一个 `<h2>`。详情请参考 {{SectionOnPage("/zh-CN/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines", "Defining sections")}}。
 
 ## 示例
 
@@ -66,7 +105,7 @@ slug: Web/HTML/Element/Heading_Elements
 
 下面是这些代码的结果：
 
-{{ EmbedLiveSample('All_headings', '280', '300', '') }}
+{{ EmbedLiveSample('所有标题', '280', '300', '') }}
 
 ### 示例页面
 
@@ -90,7 +129,7 @@ slug: Web/HTML/Element/Heading_Elements
 
 下面是代码的运行结果：
 
-{{ EmbedLiveSample('Example_page', '280', '480', '') }}
+{{ EmbedLiveSample('示例页面', '280', '480', '') }}
 
 ## 无障碍问题
 
@@ -120,36 +159,36 @@ slug: Web/HTML/Element/Heading_Elements
 
 1. `h1` Beetles
 
-    1. `h2` Etymology
-    2. `h2` Distribution and Diversity
-    3. `h2` Evolution
+   1. `h2` Etymology
+   2. `h2` Distribution and Diversity
+   3. `h2` Evolution
 
-        1. `h3` Late Paleozoic
-        2. `h3` Jurassic
-        3. `h3` Cretaceous
-        4. `h3` Cenozoic
+      1. `h3` Late Paleozoic
+      2. `h3` Jurassic
+      3. `h3` Cretaceous
+      4. `h3` Cenozoic
 
-    4. `h2` External Morphology
+   4. `h2` External Morphology
 
-        1. `h3` Head
+      1. `h3` Head
 
-            1. `h4` Mouthparts
+         1. `h4` Mouthparts
 
-        2. `h3` Thorax
+      2. `h3` Thorax
 
-            1. `h4` Prothorax
-            2. `h4` Pterothorax
+         1. `h4` Prothorax
+         2. `h4` Pterothorax
 
-        3. `h3` Legs
-        4. `h3` Wings
-        5. `h3` Abdomen
+      3. `h3` Legs
+      4. `h3` Wings
+      5. `h3` Abdomen
 
 当小节中嵌套子标题时，若关闭了某个小节，则其中的嵌套的子标题可能会被“跳过”。
 
 - [Headings • Page Structure • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/headings/)
-- [MDN Understanding WCAG, Guideline 1.3 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_—_Create_content_that_can_be_presented_in_different_ways)
+- [MDN Understanding WCAG, Guideline 1.3 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.3_—_Create_content_that_can_be_presented_in_different_ways)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
-- [MDN Understanding WCAG, Guideline 2.4 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_—_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN Understanding WCAG, Guideline 2.4 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#Guideline_2.4_—_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 - [Understanding Success Criterion 2.4.6 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html)
 - [Understanding Success Criterion 2.4.10 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html)
@@ -158,7 +197,7 @@ slug: Web/HTML/Element/Heading_Elements
 
 屏幕阅读软件用户的另一种常用导航技术是生成[内容分区](/zh-CN/docs/Web/HTML/Element#内容分区)的列表，并使用其确定页面布局
 
-Sectioning content can be labeled using a combination of the [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) and {{htmlattrxref("id")}} attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
+Sectioning content can be labeled using a combination of the [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) and [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
 
 #### 示例
 
@@ -182,7 +221,7 @@ Sectioning content can be labeled using a combination of the [`aria-labelledby`]
 
 In this example, screen reading technology would announce that there are two {{HTMLElement("nav")}} sections, one called "Primary navigation" and one called "Footer navigation". If labels were not provided, the person using screen reading software may have to investigate each `nav` element's contents to determine their purpose.
 
-- [Using the aria-labelledby attribute](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
+- [Using the aria-labelledby attribute](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
 - [Labeling Regions • Page Structure • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
 
 ## 规范

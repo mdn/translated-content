@@ -1,12 +1,6 @@
 ---
-title: '-moz-image-region'
+title: -moz-image-region
 slug: Web/CSS/-moz-image-region
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Référence(2)
-translation_of: Web/CSS/-moz-image-region
 ---
 
 {{Non-standard_header}}{{CSSRef}}
@@ -28,7 +22,8 @@ Pour certains éléments XUL et les pseudo-éléments qui utilisent une image gr
 
 La syntaxe de cette propriété est semblable à la syntaxe de la propriété {{cssxref("clip")}}. Les quatre valeurs sont relatives au coin en haut à gauche de l'image.
 
-> **Note :** Pour un système qui fonctionne pour n'importe quel arrière-plan, on pourra utiliser la propriété {{cssxref("-moz-image-rect")}}.
+> [!NOTE]
+> Pour un système qui fonctionne pour n'importe quel arrière-plan, on pourra utiliser la propriété {{cssxref("-moz-image-rect")}}.
 
 ## Syntaxe
 
@@ -65,7 +60,7 @@ Cette propriété est une propriété propriétaire liée à Mozilla/Gecko et ne
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-moz-image-region")}}
+{{Compat}}
 
 ## Voir aussi
 

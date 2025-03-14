@@ -1,21 +1,14 @@
 ---
 title: PerformanceObserverEntryList.getEntries()
 slug: Web/API/PerformanceObserverEntryList/getEntries
-tags:
-  - API
-  - Method
-  - Méthode
-  - PerformanceObserverEntryList
-  - Reference
-  - Performance Web
-translation_of: Web/API/PerformanceObserverEntryList/getEntries
 ---
 
 {{APIRef("Performance Timeline API")}}
 
 La méthode **`getEntries()`** de l'interface [`PerformanceObserverEntryList`](/fr/docs/Web/API/PerformanceObserverEntryList) retourne une liste d'objets explicitement _observés_ d'[entrées de performance](/fr/docs/Web/API/PerformanceEntry) pour un filtre donné. Les membres de la liste sont déterminés par l'ensemble des [types d'entrée](/fr/docs/Web/API/PerformanceEntry/entryType) spécifiés dans l'appel à la méthode [`observe()`](/fr/docs/Web/API/PerformanceObserver/observe). La liste est disponible dans la fonction de rappel de l'observateur (en tant que premier paramètre de la fonction de rappel).
 
-> **Note :** Cette interface est exposée à [`Window`](/fr/docs/Web/API/Window) et [`Worker`](/fr/docs/Web/API/Worker).
+> [!NOTE]
+> Cette interface est exposée à [`Window`](/fr/docs/Web/API/Window) et [`Worker`](/fr/docs/Web/API/Worker).
 
 ## Syntaxe
 
@@ -27,7 +20,7 @@ entries = list.getEntries(PerformanceEntryFilterOptions);
 Utilisation spécifique :
 
 ```js
-entries = list.getEntries({name: "entry_name", entryType: "mark"});
+entries = list.getEntries({ name: "entry_name", entryType: "mark" });
 ```
 
 ### Paramètres
@@ -50,14 +43,20 @@ Une liste d'objets [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) expli
 
 ```js
 function print_perf_entry(pe) {
-  console.log("name: " + pe.name +
-              "; entryType: " + pe.entryType +
-              "; startTime: " + pe.startTime +
-              "; duration: " + pe.duration);
+  console.log(
+    "name: " +
+      pe.name +
+      "; entryType: " +
+      pe.entryType +
+      "; startTime: " +
+      pe.startTime +
+      "; duration: " +
+      pe.duration,
+  );
 }
 
 // Crée un observateur pour tous les types d'événements de performance
-const observe_all = new PerformanceObserver(function(list, obs) {
+const observe_all = new PerformanceObserver(function (list, obs) {
   let perfEntries;
 
   // Imprime toutes les entrées
@@ -79,9 +78,11 @@ const observe_all = new PerformanceObserver(function(list, obs) {
   }
 });
 // inscrire tous les types d'événements de performance
-observe_all.observe({entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server']});
+observe_all.observe({
+  entryTypes: ["frame", "mark", "measure", "navigation", "resource", "server"],
+});
 
-const observe_frame = new PerformanceObserver(function(list, obs) {
+const observe_frame = new PerformanceObserver(function (list, obs) {
   let perfEntries = list.getEntries();
   // Ne devrait avoir que des entrées "frame"
   for (let i = 0; i < perfEntries.length; i++) {
@@ -89,7 +90,7 @@ const observe_frame = new PerformanceObserver(function(list, obs) {
   }
 });
 // inscrire à l'événement "frame" uniquement
-observe_frame.observe({entryTypes: ['frame']});
+observe_frame.observe({ entryTypes: ["frame"] });
 ```
 
 ## Spécifications

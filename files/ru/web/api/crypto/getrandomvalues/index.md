@@ -1,14 +1,8 @@
 ---
 title: RandomSource.getRandomValues()
 slug: Web/API/Crypto/getRandomValues
-tags:
-  - API
-  - Криптография
-  - Справка
-  - метод
-translation_of: Web/API/Crypto/getRandomValues
-original_slug: Web/API/RandomSource/getRandomValues
 ---
+
 {{APIRef("Web Crypto API")}}
 
 Метод **`RandomSource.getRandomValues()`** позволяет вам получать криптографически стойкие числа. Массив, переданный как параметр, заполняется случайными числами (случайными в криптографическом смысле).
@@ -40,15 +34,13 @@ window.crypto.getRandomValues(array);
 
 console.log("Ваше счастливое число:");
 for (var i = 0; i < array.length; i++) {
-    console.log(array[i]);
+  console.log(array[i]);
 }
 ```
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                 | Статус                               | Комментарий             |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------- |
-| {{SpecName('Web Crypto API', '#RandomSource-method-getRandomValues')}} | {{Spec2('Web Crypto API')}} | Изначальное определение |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

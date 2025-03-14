@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/String/includes
 
 **`includes()`** 메서드는 하나의 문자열이 다른 문자열에 포함되어 있는지를 판별하고, 결과를 `true` 또는 `false` 로 반환합니다. 검색 시 대소문자를 구분합니다.
 
-{{EmbedInteractiveExample("pages/js/string-includes.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.includes()", "shorter")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const word = "fox";
+
+console.log(
+  `The word "${word}" ${
+    sentence.includes(word) ? "is" : "is not"
+  } in the sentence`,
+);
+// Expected output: "The word "fox" is in the sentence"
+```
 
 ## 구문
 
@@ -41,7 +54,7 @@ includes(searchString, position)
 `includes()` 메서드는 대소문자를 구별합니다. 예를 들어 아래 코드는 `false`를 반환합니다.
 
 ```js
-'Blue Whale'.includes('blue'); // returns false
+"Blue Whale".includes("blue"); // returns false
 ```
 
 아래와 같이 원본 문자열과 검색 문자열을 모두 소문자로 변환하여 이 제약 조건을 해결할 수 있습니다.
@@ -55,7 +68,7 @@ includes(searchString, position)
 ### `includes()` 사용하기
 
 ```js
-const str = 'To be, or not to be, that is the question.';
+const str = "To be, or not to be, that is the question.";
 
 console.log(str.includes("To be")); // true
 console.log(str.includes("question")); // true

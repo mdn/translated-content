@@ -1,10 +1,6 @@
 ---
 title: Range
 slug: Web/API/Range
-tags:
-  - API
-  - DOM
-translation_of: Web/API/Range
 ---
 
 {{ APIRef("DOM") }}
@@ -78,7 +74,7 @@ _Не имеют унаследованных свойств._
   - : `Освобождает Range` от использования для улучшения производительности .
 - {{ domxref("Range.toString()")}}
   - : Возвращает текст в `Range`.
-- {{ domxref("Range.compareNode()")}} {{ Obsolete_inline }}{{non-standard_inline}}
+- {{ domxref("Range.compareNode()")}} {{non-standard_inline}}
   - : Возвращает константу, представляющую, находится ли {{domxref("Node")}} до, после, внутри или вокруг range.
 - {{ domxref("Range.comparePoint()")}} {{experimental_inline}}
   - : Возвращает -1, 0, или 1 в зависимости от того, находиться ли referenceNode перед, внутри, или после `Range`.
@@ -93,19 +89,14 @@ _Не имеют унаследованных свойств._
 - {{ domxref("Range.isPointInRange()")}} {{experimental_inline}}
   - : Returns a `boolean` indicating whether the given point is in the `Range`.
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                        | Status                                       | Comment                                                                                                                                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#interface-range', 'Range')}}                                             | {{Spec2('DOM WHATWG')}}             | Do not use `RangeException` anymore, use `DOMException` instead. Made the second parameter of `collapse()` optional. Added the methods `isPointInRange()`, `comparePoint()`, and `intersectsNode()`. Added the constructor `Range()`. |
-| {{SpecName('DOM Parsing', '#extensions-to-the-range-interface', 'Extensions to Range')}} | {{Spec2('DOM Parsing')}}             | Added the method `createContextualFragment()`.                                                                                                                                                                                        |
-| {{SpecName('CSSOM View', '#extensions-to-the-range-interface', 'Extensions to Range')}} | {{Spec2('CSSOM View')}}             | Added the methods `getClientRects()` and `getBoundingClientRect()`.                                                                                                                                                                   |
-| {{SpecName('DOM2 Traversal_Range', 'ranges.html#Level-2-Range-Interface', 'Range')}}     | {{Spec2('DOM2 Traversal_Range')}} | Initial specification.                                                                                                                                                                                                                |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [The DOM interfaces index](/ru/docs/DOM/DOM_Reference)
+- [The DOM interfaces index](/ru/docs/Web/API/Document_Object_Model)

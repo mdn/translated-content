@@ -1,12 +1,6 @@
 ---
 title: text-rendering
 slug: Web/CSS/text-rendering
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - SVG
-translation_of: Web/CSS/text-rendering
 ---
 
 {{CSSRef}}
@@ -28,7 +22,8 @@ text-rendering: initial;
 text-rendering: unset;
 ```
 
-> **Note :** La propriété `text-rendering` est une propriété SVG qui n'est définie dans aucun standard CSS. Toutefois, les navigateurs utilisant Gecko et WebKit permettent d'appliquer cette propriété à du contenu HTML ou XML sur Windows, Mac OS X et Linux.
+> [!NOTE]
+> La propriété `text-rendering` est une propriété SVG qui n'est définie dans aucun standard CSS. Toutefois, les navigateurs utilisant Gecko et WebKit permettent d'appliquer cette propriété à du contenu HTML ou XML sur Windows, Mac OS X et Linux.
 
 Un effet très visible est : `text-rendering : optimizeLegibility;` qui active les ligatures (ff, fi, fl etc.) dans les textes en dessous de 20px pour certains polices (par exemple, _Calibri, Candara, Constantia_ et _Corbel_ de Microsoft, ou la famille _DejaVu_).
 
@@ -69,8 +64,20 @@ Cet exemple illustre comment `optimizeLegibility` est automatiquement utilisé p
 #### CSS
 
 ```css
-.small { font: 19.9px "Times New Roman", "Georgia", "Palatino", serif; }
-.big   { font: 20px "Times New Roman", "Georgia", "Palatino", serif; }
+.small {
+  font:
+    19.9px "Times New Roman",
+    "Georgia",
+    "Palatino",
+    serif;
+}
+.big {
+  font:
+    20px "Times New Roman",
+    "Georgia",
+    "Palatino",
+    serif;
+}
 ```
 
 #### HTML
@@ -91,10 +98,20 @@ Cet exemple illustre la différence d'apparence entre `optimizeSpeed` et `optimi
 #### CSS
 
 ```css
-p { font: 1.5em "Times New Roman", "Georgia", "Palatino", serif }
+p {
+  font:
+    1.5em "Times New Roman",
+    "Georgia",
+    "Palatino",
+    serif;
+}
 
-.speed       { text-rendering: optimizeSpeed; }
-.legibility  { text-rendering: optimizeLegibility; }
+.speed {
+  text-rendering: optimizeSpeed;
+}
+.legibility {
+  text-rendering: optimizeLegibility;
+}
 ```
 
 #### HTML

@@ -7,9 +7,9 @@ slug: Web/HTTP/Headers/Strict-Transport-Security
 
 **HTTP `Strict-Transport-Security`** (a menudo abreviado como {{Glossary("HSTS")}}) es una característica de seguridad que permite a un sitio web indicar a los navegadores que sólo se debe comunicar con HTTPS en lugar de usar HTTP.
 
-| Tipo de Encabezado                                           | {{Glossary("Encabezado de Respuesta")}} |
-| ------------------------------------------------------------ | ---------------------------------------------------- |
-| {{Glossary("Nombre de Encabezado Prohibido")}} | no                                                   |
+| Tipo de Encabezado                             | {{Glossary("Encabezado de Respuesta")}} |
+| ---------------------------------------------- | --------------------------------------- |
+| {{Glossary("Nombre de Encabezado Prohibido")}} | no                                      |
 
 ## Sintaxis
 
@@ -36,7 +36,8 @@ Esto habilita el potencial ataque man-in-the-middle, donde el redireccionamiento
 
 El encabezado HTTP Strict Transport Security permite a un sitio web informar al navegador que nunca cargue el sitio usando HTTP y que debe automáticamente convertir todos los intentos de acceso HTTP a HTTPS.
 
-> **Nota:** El encabezado `Strict-Transport-Security` es **ignorado** por el navegador cuando el sitio es accedido usando HTTP; esto es porque un atacante podría interceptar las conexines HTTP e inyectar el encabezado o removerlo. Cuando el sitio es accedido a través de HTTPS con un certificado sin errores, el navegador sabe que el sitio es capaz de usar HTTPS y cumple con lo indicado en el encabezado `Strict-Transport-Security`.
+> [!NOTE]
+> El encabezado `Strict-Transport-Security` es **ignorado** por el navegador cuando el sitio es accedido usando HTTP; esto es porque un atacante podría interceptar las conexiones HTTP e inyectar el encabezado o removerlo. Cuando el sitio es accedido a través de HTTPS con un certificado sin errores, el navegador sabe que el sitio es capaz de usar HTTPS y cumple con lo indicado en el encabezado `Strict-Transport-Security`.
 
 ### Un escenario de ejemplo
 
@@ -80,6 +81,6 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 ## Ver también
 
 - Blog post: [HTTP Strict Transport Security has landed!](http://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
-- Blog post: [HTTP Strict Transport Security (force HTTPS)](http://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
+- Blog post: [HTTP Strict Transport Security (force HTTPS)](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
 - OWASP Article: [HTTP Strict Transport Security](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security)
 - Wikipedia: [HTTP Strict Transport Security](http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)

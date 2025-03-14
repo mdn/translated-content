@@ -1,18 +1,20 @@
 ---
 title: webNavigation.onDOMContentLoaded
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded
+l10n:
+  sourceCommit: 5ff95690a38837afa6a80d00c31adc3ea0217a6e
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-在页面中触发[DOMContentLoaded](/zh-CN/docs/Web/Events/DOMContentLoaded) 事件时触发。此时，文档被加载和解析，并且 DOM 被完全构造，但链接的资源（例如图像，样式表和子框架（subframes））可能尚未被加载。
+在页面中触发 [DOMContentLoaded](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event) 事件时触发。此时，文档被加载和解析，并且 DOM 被完全构造，但链接的资源（例如图像、样式表和子框架）可能尚未被加载。
 
-## Syntax
+## 语法
 
-```js
+```js-nolint
 browser.webNavigation.onDOMContentLoaded.addListener(
-  listener,                   // function
-  filter                      // optional object
+  listener,                   // 函数
+  filter                      // 可选对象
 )
 browser.webNavigation.onDOMContentLoaded.removeListener(listener)
 browser.webNavigation.onDOMContentLoaded.hasListener(listener)
@@ -23,68 +25,66 @@ browser.webNavigation.onDOMContentLoaded.hasListener(listener)
 - `addListener(callback)`
   - : 为此事件添加监听方法。
 - `removeListener(listener)`
-  - : 停止监听此事件。`listener` 参数为需要移出的监听方法。
+  - : 停止监听此事件。`listener` 参数为需要移除的监听器。
 - `hasListener(listener)`
-  - : 检测是否有 `listener` 被注册在事件上。如果有返回 `true` , 否则返回`false` .
+  - : 检测是否有 `listener` 被注册在事件上。如有则返回 `true`，否则返回`false`。
 
-## addListener syntax
+## addListener 语法
 
 ### 参数
 
 - `callback`
 
-  - : 为当此事件发生是需要被调用的函数。该函数将传递以下参数：
+  - : 为当此事件发生时需要被调用的函数。该函数将传递以下参数：
 
     - `details`
-      - : [`object`](#details). 有关导航（navigation）事件的详细信息。
+      - : `object`。有关导航事件的详细信息。参见 [details](#details_2) 小节以获取更多信息。
 
 - `filter`{{optional_inline}}
-  - : `object`. 包含单个属性 `url` 的对象，这是一个 {{WebExtAPIRef("events.UrlFilter")}} 数组对象。如果包含此参数，则该事件将仅触发转换为与数组中至少一个`UrlFilter`匹配的 URL。在数组中。如果您省略此参数，则该事件将触发所有转换。
+  - : `object`。包含单个属性 `url` 的对象，这是一个 {{WebExtAPIRef("events.UrlFilter")}} {{jsxref("Array")}} 对象。如果包含此参数，则该事件将仅触发转换为与数组中至少一个 `UrlFilter` 匹配的 URL。如果省略此参数，则该事件将触发所有转换。
 
-## Additional objects
+## 额外对象
 
 ### details
 
 - `tabId`
-  - : `integer`. The ID of the tab in which the navigation has occurred.
+  - : `integer`。发生导航事件的标签页 ID。
 - `url`
-  - : `string`. The URL to which the given frame has navigated.
+  - : `string`。指定框架导航到的 URL。
 - `processId`
-  - : `integer`. The ID of the process in which this tab is being rendered.
+  - : `integer`。渲染此选项卡的进程的 ID。
 - `frameId`
-  - : `integer`. Frame in which the navigation is occurring. 0 indicates that navigation happens in the tab's top-level browsing context, not in a nested [iframe](/zh-CN/docs/Web/HTML/Element/iframe). A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.
+  - : `integer`。发生导航的框架。0 表示导航发生在标签页的顶级浏览上下文中，而不是嵌套的 [iframe](/zh-CN/docs/Web/HTML/Element/iframe) 中。正值表示导航发生在嵌套的 iframe 中。对于给定的标签页和进程，框架 ID 是唯一的。
 - `timeStamp`
-  - : `number`. The time at which `DOMContentLoaded` was fired, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
+  - : `number`。启动 `DOMContentLoaded` 的时间，单位为[自纪元起的毫秒数](https://zh.wikipedia.org/wiki/UNIX时间)。
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## Examples
+## 示例
 
-Logs the target URLs for `onDOMContentLoaded`, if the target URL's hostname contains "example.com" or starts with "developer".
+如果目标 URL 的主机名包含“example.com”或以“developer”开头，则记录“onDOMContentLoaded”的目标 URL。
 
 ```js
-var filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+const filter = {
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnDOMContentLoaded(details) {
-  console.log("onDOMContentLoaded: " + details.url);
+  console.log(`onDOMContentLoaded: ${details.url}`);
 }
 
-browser.webNavigation.onDOMContentLoaded.addListener(logOnDOMContentLoaded, filter);
+browser.webNavigation.onDOMContentLoaded.addListener(
+  logOnDOMContentLoaded,
+  filter,
+);
 ```
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> 本 API 基于 Chromium 的 [`chrome.webNavigation`](https://developer.chrome.google.cn/docs/extensions/reference/api/webNavigation#event-onBeforeNavigate) API。本文档源自 Chromium 代码中的 [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

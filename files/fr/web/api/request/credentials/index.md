@@ -1,12 +1,6 @@
 ---
 title: Request.credentials
 slug: Web/API/Request/credentials
-tags:
-  - API
-  - Propriété
-  - Reference
-  - request
-translation_of: Web/API/Request/credentials
 ---
 
 {{APIRef("Fetch")}}
@@ -32,7 +26,7 @@ Une valeur {{domxref("RequestCredentials")}} qui représente les informations d'
 Dans le morceau de code suivant, on crée une nouvelle requête en utilisant le constructeur {{domxref("Request.Request()")}} (pour un fichier image dans le même dossier que le script), puis on enregistre les identifiants de la requête dans une variable:
 
 ```js
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 var myCred = myRequest.credentials; // renvoie "same-origin" par défaut
 ```
 
@@ -46,6 +40,6 @@ var myCred = myRequest.credentials; // renvoie "same-origin" par défaut
 
 ## Voir aussi
 
-- [L'API ServiceWorker](/fr/docs/Web/API/ServiceWorker_API)
-- [Contrôle d'accès HTTP avec les origines (CORS)](/fr/docs/Web/HTTP/Access_control_CORS)
+- [L'API ServiceWorker](/fr/docs/Web/API/Service_Worker_API)
+- [Contrôle d'accès HTTP avec les origines (CORS)](/fr/docs/Web/HTTP/CORS)
 - [HTTP](/fr/docs/Web/HTTP)

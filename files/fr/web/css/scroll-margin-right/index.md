@@ -1,11 +1,6 @@
 ---
 title: scroll-margin-right
 slug: Web/CSS/scroll-margin-right
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/scroll-margin-right
 ---
 
 {{CSSRef}}

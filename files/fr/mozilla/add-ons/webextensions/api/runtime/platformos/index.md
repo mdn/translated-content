@@ -1,20 +1,9 @@
 ---
 title: runtime.PlatformOs
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - PlatformOs
-  - Reference
-  - Type
-  - WebExtensions
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le système d'exploitation sur lequel le navigateur fonctionne.
 
@@ -29,21 +18,21 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont:
 - `"android"`
   - : Le système d'exploitation est sous Android.
 - `"cros"`
-  - : Le système d'exploitation est sous Chrome OS.
+  - : Le système d'exploitation est sous ChromeOS.
 - `"linux"`
   - : Le système d'exploitation est sous Linux.
 - `"openbsd"`
   - : Le système d'exploitation est sous Open/FreeBSD.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.PlatformOs")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

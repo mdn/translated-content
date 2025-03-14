@@ -1,21 +1,11 @@
 ---
 title: Headers
 slug: Web/API/Headers
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Fetch API
-  - Headers
-  - Headers API
-  - Interface
-  - Reference
-translation_of: Web/API/Headers
 ---
 
 {{APIRef("Fetch API")}}
 
-L'interface `Headers` de l'API Fetch vous permet d'effectuer diverses actions sur les en-têtes de requête et de réponse HTTP. Ces actions incluent la récupération, la configuration, l’ajout et la suppression. Un objet `Headers` a une liste `Headers` associée qui est vide lors de l'initialisation et qui est constituée de zéro ou plusieurs paires de noms et de valeurs. Vous pouvez en ajouter via les méthodes comme{{domxref("Headers.append","append()")}} (voir la section [Exemples](#exemples).) Dans toutes les méthodes de cette interface, les noms des `Headers` sont reliés à une séquence d'octets sensible à la case.
+L'interface `Headers` de l'API Fetch vous permet d'effectuer diverses actions sur les en-têtes de requête et de réponse HTTP. Ces actions incluent la récupération, la configuration, l'ajout et la suppression. Un objet `Headers` a une liste `Headers` associée qui est vide lors de l'initialisation et qui est constituée de zéro ou plusieurs paires de noms et de valeurs. Vous pouvez en ajouter via les méthodes comme{{domxref("Headers.append","append()")}} (voir la section [Exemples](#exemples).) Dans toutes les méthodes de cette interface, les noms des `Headers` sont reliés à une séquence d'octets sensible à la case.
 
 Pour des raisons de sécurité, les `Headers` ci-dessous peuvent être controlés uniquement par l'User Agent : {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} et {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
 
@@ -25,7 +15,8 @@ Vous pouvez récuperer un objet `Header` via les propriétés {{domxref("Request
 
 Un objet implémentant `Headers` peut directement être utilisé dans une structure {{jsxref("Statements/for...of", "for...of")}}, au lieu de{{domxref('Headers.entries()', 'entries()')}}: `for (var p of myHeaders)` est équivalent à `for (var p of myHeaders.entries())`.
 
-> **Note :** Vous pouvez trouver plus d'informations à propos des Headers disponibles en lisant la page suivante : [HTTP headers](/fr/docs/Web/HTTP/Headers).
+> [!NOTE]
+> Vous pouvez trouver plus d'informations à propos des Headers disponibles en lisant la page suivante : [HTTP headers](/fr/docs/Web/HTTP/Headers).
 
 ## Constructeur
 
@@ -53,11 +44,14 @@ Un objet implémentant `Headers` peut directement être utilisé dans une struct
 - {{domxref("Headers.values()")}}
   - : Retourne un {{jsxref("Iteration_protocols", "iterator")}} permettant de parcourir toutes les valeurs des paires clefs/valeur contenues dans cet objet.
 
-> **Note :** Pour être clair, la différence entre {{domxref("Headers.set()")}} et {{domxref("Headers.append()")}} est que si le header spécifié existe et accepte plusieurs valeurs, {{domxref("Headers.set()")}} va remplacer la valeur existante par la nouvelle, tandis que {{domxref("Headers.append()")}} va ajouter la nouvelle valeur à la fin des autres valeurs. Voir leurs pages dédiées pour des exemples de code.
+> [!NOTE]
+> Pour être clair, la différence entre {{domxref("Headers.set()")}} et {{domxref("Headers.append()")}} est que si le header spécifié existe et accepte plusieurs valeurs, {{domxref("Headers.set()")}} va remplacer la valeur existante par la nouvelle, tandis que {{domxref("Headers.append()")}} va ajouter la nouvelle valeur à la fin des autres valeurs. Voir leurs pages dédiées pour des exemples de code.
 
-> **Note :** Toutes les méthodes Headers vont retourner `TypeError` si vous essayez de passer dans une réfférenceun nom qui n'est pas un [nom de Header HTTP valide](https://fetch.spec.whatwg.org/#concept-header-name). Les opérations de mutation vont retourner `TypeError` si le header a un {{Glossary("Guard")}} immuable. Dans tous les autres cas, les erreurs sont silencieuses.
+> [!NOTE]
+> Toutes les méthodes Headers vont retourner `TypeError` si vous essayez de passer dans une réfférenceun nom qui n'est pas un [nom de Header HTTP valide](https://fetch.spec.whatwg.org/#concept-header-name). Les opérations de mutation vont retourner `TypeError` si le header a un {{Glossary("Guard")}} immuable. Dans tous les autres cas, les erreurs sont silencieuses.
 
-> **Note :** Lorsque les valeurs d'en-tête sont itérées, elles sont automatiquement triées par ordre lexicographique et les valeurs des noms d'en-tête en double sont combinées.
+> [!NOTE]
+> Lorsque les valeurs d'en-tête sont itérées, elles sont automatiquement triées par ordre lexicographique et les valeurs des noms d'en-tête en double sont combinées.
 
 ### Méthodes obsolètes
 
@@ -71,23 +65,21 @@ Dans le fragment de code suivant, nous créons un nouvel Header en utilisant le 
 ```js
 var monHeader = new Headers();
 
-monHeader.append('Content-Type', 'text/xml');
-monHeader.get('Content-Type') // doit retourner 'text/xml'
+monHeader.append("Content-Type", "text/xml");
+monHeader.get("Content-Type"); // doit retourner 'text/xml'
 ```
 
 La même chose peut être accomplie en passant par un array d'array un littéral d'objet au constructeur.
 
 ```js
 var mesHeaders = new Headers({
-    'Content-Type': 'text/xml'
+  "Content-Type": "text/xml",
 });
 
 // ou, en utilisant un array d'array
-mesHeaders = new Headers([
-    ['Content-Type', 'text/xml']
-]);
+mesHeaders = new Headers([["Content-Type", "text/xml"]]);
 
-mesHeaders.get('Content-Type') // doit retourner 'text/xml'
+mesHeaders.get("Content-Type"); // doit retourner 'text/xml'
 ```
 
 ## Spécifications
@@ -100,6 +92,6 @@ mesHeaders.get('Content-Type') // doit retourner 'text/xml'
 
 ## Voir aussi
 
-- [API ServiceWorker](/fr/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/fr/docs/Web/HTTP/Access_control_CORS)
+- [API ServiceWorker](/fr/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/fr/docs/Web/HTTP/CORS)
 - [HTTP](/fr/docs/Web/HTTP)

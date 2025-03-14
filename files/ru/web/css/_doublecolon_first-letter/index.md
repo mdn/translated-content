@@ -1,17 +1,11 @@
 ---
-title: '::first-letter (:first-letter)'
+title: ::first-letter
 slug: Web/CSS/::first-letter
-tags:
-  - CSS
-  - Layout
-  - Reference
-  - Псевдоэлементы
-translation_of: Web/CSS/::first-letter
 ---
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) **`::first-letter`** применяет стили к первой букве первой строки [блочного элемента](/ru/docs/Web/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes), но только если нету другого предшествующего содержимого (такого как изображения или инлайн таблицы).
+[CSS](/ru/docs/Web/CSS) [псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) **`::first-letter`** применяет стили к первой букве первой строки [блочного элемента](/ru/docs/Web/CSS/Visual_formatting_model#block-level_elements_and_block_boxes), но только если нету другого предшествующего содержимого (такого как изображения или инлайн таблицы).
 
 ```css
 /* Стили для первой буквы элемента <p> */
@@ -23,10 +17,11 @@ p::first-letter {
 Может быть непросто определить первую букву элемента:
 
 - Пунктуация, которая предшествует или следует сразу за первой буквой, включается в селектор. Пунктуация включает любой символ Юникода, определённый в классах _open_ (Ps), _close_ (Pe), _initial quote_ (Pi), _final quote_ (Pf), and _other punctuation_ (Po).
-- В некоторых языках существуют диграфы, которые должны преобразовываться в верхний регистр вместе, например `IJ` в Нидерландском. В этих случаях обе буквы диграфа должны соответствовать псевдоэлементу `::first-letter` (это слабо поддерживается браузерами, смотрите [таблицу совместимости](/En/CSS/::first-letter#Browser_compatibility) ниже).
+- В некоторых языках существуют диграфы, которые должны преобразовываться в верхний регистр вместе, например `IJ` в Нидерландском. В этих случаях обе буквы диграфа должны соответствовать псевдоэлементу `::first-letter` (это слабо поддерживается браузерами, смотрите [таблицу совместимости](/en-US/CSS/::first-letter#browser_compatibility) ниже).
 - Комбинация псевдоэлемента {{ cssxref("::before") }} и свойства {{ cssxref("content") }} может привести к добавлению некоторого текста в начало элемента. В этом случае псевдоэлементу `::first-letter` будет соответствовать первая буква добавленного содержимого.
 
-> **Примечание:** В CSS3 появилась запись `::first-letter` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Pseudo-classes) и [псевдоэлементов](/ru/docs/Web/CSS/Pseudo-elements). Браузеры также поддерживают запись `:first-letter`, введённую в CSS2.
+> [!NOTE]
+> В CSS3 появилась запись `::first-letter` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Pseudo-classes) и [псевдоэлементов](/ru/docs/Web/CSS/Pseudo-elements). Браузеры также поддерживают запись `:first-letter`, введённую в CSS2.
 
 ## Разрешённые свойства
 
@@ -51,13 +46,21 @@ p::first-letter {
 ### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-  ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-  dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
-<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-  aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit
-  esse molestie consequat.</p>
+<p>
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+  kasd gubergren, no sea takimata sanctus est.
+</p>
+<p>
+  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+  consequat.
+</p>
+<p>
+  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat.
+</p>
 <p>-Начало специального знака препинания.</p>
 <p>_Начало специального знака препинания.</p>
 <p>"Начало специального знака препинания.</p>
@@ -86,7 +89,7 @@ p::first-letter {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

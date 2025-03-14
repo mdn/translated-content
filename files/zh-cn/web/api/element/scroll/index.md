@@ -7,26 +7,39 @@ slug: Web/API/Element/scroll
 
 **`scroll()`** 方法是用于在给定的元素中滚动到某个特定坐标的 {{domxref("Element")}} 接口。
 
-## Syntax
+## 语法
 
-```plain
-element.scroll(x-coord, y-coord)
-element.scroll(options)
+```js-nolint
+scroll(x-coord, y-coord)
+scroll(options)
 ```
 
-### Parameters
+### 参数
 
-- `x-coord` 是指在元素左上方区域横轴方向上想要显示的像素。
-- `y-coord` 是指在元素左上方区域纵轴方向上想要显示的像素。
+- `x-coord`
+  - : 你想要显示在左上角的元素沿水平轴的像素。
+- `y-coord`
+  - : 你想要显示在左上角的元素沿垂直轴的像素。
 
-\- or -
+\- 或者 -
 
-- `options` 是一个 {{domxref("ScrollToOptions")}} 的字典。
+- `options`
+  - : 包含以下参数的对象：
+    - `top`
+      - : 指定沿 Y 轴滚动窗口或元素的像素数。
+    - `left`
+      - : 指定沿 X 轴滚动窗口或元素的像素数。
+    - `behavior`
+      - : `smooth` 表示平滑滚动并产生过渡效果，`auto` 或缺省值会直接跳转到目标位置，没有过渡效果。
 
-## 例子
+### 返回值
+
+无 ({{jsxref("undefined")}})。
+
+## 示例
 
 ```js
-// 在元素上方显示 1000 像素
+// 将元素沿垂直方向向下滚动 1000 个像素
 element.scroll(0, 1000);
 ```
 
@@ -36,7 +49,7 @@ element.scroll(0, 1000);
 element.scroll({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 

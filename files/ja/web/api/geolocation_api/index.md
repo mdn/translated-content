@@ -1,6 +1,8 @@
 ---
 title: 位置情報 API
 slug: Web/API/Geolocation_API
+l10n:
+  sourceCommit: 049b078b0fff80875027b89802b0399138df63a6
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
@@ -38,27 +40,30 @@ WebExtension で `Geolocation` オブジェクトを使用するには、マニ�
   - : ユーザーの位置の座標を表します。 `GeolocationCoordinates` のインスタンスには、緯度、経度、その他の重要な関連情報が含まれています。
 - {{domxref("GeolocationPositionError")}}
   - : `GeolocationPositionError` は、 {{domxref("Geolocation")}} に含まれるメソッドのいずれかの呼び出しに失敗した場合、エラーコールバック内で返され、エラーコードとメッセージが含まれています。
+
+### 他のインターフェイスへの拡張
+
 - {{domxref("Navigator.geolocation")}}
   - : API のエントリーポイント。 {{domxref("Geolocation")}} オブジェクトのインスタンスを返し、そこから他のすべての機能にアクセスすることができます。
 
 ## 例
 
-例については[位置情報 API の使用](/ja/docs/Web/API/Geolocation_API/Using_the_Geolocation_API#examples)を参照してください。
+例については[位置情報 API の使用](/ja/docs/Web/API/Geolocation_API/Using_the_Geolocation_API#例)を参照してください。
 
 ## 仕様書
 
-{{Specifications("api.Geolocation")}}
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Geolocation")}}
+{{Compat}}
 
 ### 可用性
 
-Wi-Fi ベースの測位は Google が提供することが多いため、中国ではバニラの位置情報 API が利用できない場合があります。 [Baidu](https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation), [Tencent](https://lbs.qq.com/tool/component-geolocation.html) などの地域ののサードパーティプロバイダを使用することができます。これらのサービスは、ユーザーの IP アドレスおよび/またはローカルアプリを使用して、より高度な位置情報を提供します。
+Wi-Fi ベースの測位は Google が提供することが多いため、中国ではバニラの位置情報 API が利用できない場合があります。 [Baidu](https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation), [Tencent](https://lbs.qq.com/tool/component-geolocation.html) などの地域ののサードパーティプロバイダーを使用することができます。これらのサービスは、ユーザーの IP アドレスおよび/またはローカルアプリを使用して、より高度な位置情報を提供します。
 
 ## 関連情報
 
 - [位置情報 API の使用](/ja/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- [Geolocation API on w3.org](https://www.w3.org/TR/geolocation-API/)
+- [Geolocation API on w3.org](https://www.w3.org/TR/geolocation/)
 - [Who moved my geolocation?](https://hacks.mozilla.org/2013/10/who-moved-my-geolocation/) (Hacks blog)

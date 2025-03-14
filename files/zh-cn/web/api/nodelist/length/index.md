@@ -12,7 +12,7 @@ slug: Web/API/NodeList/length
 ## 语法
 
 ```js
-numItems =nodeList.length
+numItems = nodeList.length;
 ```
 
 - `numItems` 是一个整数，表示 `NodeList` 子节点的数量。
@@ -40,4 +40,4 @@ length 是在 DOM 操作中非常常见的属性。最常见的是用 length 属
 
 ## 规范
 
-[length](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-203510337)
+[length](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-203510337)

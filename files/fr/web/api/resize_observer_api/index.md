@@ -1,17 +1,6 @@
 ---
 title: Resize Observer API
 slug: Web/API/Resize_Observer_API
-tags:
-  - API
-  - Draft
-  - Element
-  - Monitor
-  - Overview
-  - Reference
-  - Resize Observer
-  - Resize Observer API
-  - observe
-translation_of: Web/API/Resize_Observer_API
 ---
 
 {{DefaultAPISidebar("Resize Observer API")}}
@@ -22,7 +11,7 @@ L'API Resize Observer fournit un mécanisme performant par lequel du code peut s
 
 Il y a une multitude de cas d'utilisation pour des techniques de _responsive design_ (et d'autres par ailleurs) qui répondent à des changements de dimensions d'un élément mais, avant, leur implantation était souvent amateures et parfois imparfaites.
 
-Par exemple, les [media queries](/fr/docs/Web/CSS/Media_Queries) / {{domxref("window.matchMedia")}} sont un bon outil pour mettre à jour une mise en page à des points spécifiques quand la zone d'affichage change de dimensions, mais qu'en est-il si vous désirez changer la mise en page en réponse à un changement spécifique des dimensions d'un élément qui n'est pas le conteneur principal ?
+Par exemple, les [media queries](/fr/docs/Web/CSS/CSS_media_queries) / {{domxref("window.matchMedia")}} sont un bon outil pour mettre à jour une mise en page à des points spécifiques quand la zone d'affichage change de dimensions, mais qu'en est-il si vous désirez changer la mise en page en réponse à un changement spécifique des dimensions d'un élément qui n'est pas le conteneur principal ?
 
 Pour réaliser ceci, une solution limitée serait d'écouter les changements sur un type d'événement qui convienne à résoudre le problème et qui corresponde à l'élément dont les changements de dimensions vous intéresse (c'est-à-dire l'[événement resize](/fr/docs/Web/API/Window/resize_event) sur window), puis de calculer les nouvelles dimensions ou autres propriétés de l'élément après un redimensionnement au moyen de {{domxref("Element.getBoundingClientRect")}} ou de {{domxref("Window.getComputedStyle")}}, par exemple.
 
@@ -49,19 +38,26 @@ Vous trouverez plusieurs exemples basiques sur notre dépôt GitHub :
 Le code suivra usuellement ce genre de modèle (tiré de resize-observer-border-radius.html):
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
+const resizeObserver = new ResizeObserver((entries) => {
   for (let entry of entries) {
-    if(entry.contentBoxSize) {
-      entry.target.style.borderRadius = Math.min(100, (entry.contentBoxSize.inlineSize/10) +
-                                                      (entry.contentBoxSize.blockSize/10)) + 'px';
+    if (entry.contentBoxSize) {
+      entry.target.style.borderRadius =
+        Math.min(
+          100,
+          entry.contentBoxSize.inlineSize / 10 +
+            entry.contentBoxSize.blockSize / 10,
+        ) + "px";
     } else {
-      entry.target.style.borderRadius = Math.min(100, (entry.contentRect.width/10) +
-                                                      (entry.contentRect.height/10)) + 'px';
+      entry.target.style.borderRadius =
+        Math.min(
+          100,
+          entry.contentRect.width / 10 + entry.contentRect.height / 10,
+        ) + "px";
     }
   }
 });
 
-resizeObserver.observe(document.querySelector('div'));
+resizeObserver.observe(document.querySelector("div"));
 ```
 
 ## Spécifications
@@ -74,4 +70,4 @@ resizeObserver.observe(document.querySelector('div'));
 
 ## Voir aussi
 
-- [ResizeObserver: It’s Like document.onresize for Elements](https://developers.google.com/web/updates/2016/10/resizeobserver)
+- [ResizeObserver: It's Like document.onresize for Elements](https://developers.google.com/web/updates/2016/10/resizeobserver)

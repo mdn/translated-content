@@ -1,10 +1,8 @@
 ---
 title: VRDisplayEvent
 slug: Web/API/VRDisplayEvent
-tags:
-  - Виртуальная реальность
-translation_of: Web/API/VRDisplayEvent
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 Интерфейс VRDisplayEvent API WebVR представляет объект событий, связанных с WebVR (Подробнее - см. Список расширений окна WebVR)
@@ -26,22 +24,25 @@ _`VRDisplayEvent` также наследует свойства от своег
 ## Examples
 
 ```js
-window.addEventListener('vrdisplaypresentchange', function(e) {
-  console.log('Display ' + e.display.displayId + ' presentation has changed. Reason given: ' + e.reason + '.');
-})
+window.addEventListener("vrdisplaypresentchange", function (e) {
+  console.log(
+    "Display " +
+      e.display.displayId +
+      " presentation has changed. Reason given: " +
+      e.reason +
+      ".",
+  );
+});
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                    | Status                       | Comment            |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('WebVR 1.1', '#interface-vrdisplayevent', 'VRDisplayEvent')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — демонстрации, загружаемые материалы и другие ресурсы команды the Mozilla VR team.
+- [WebVR API](/ru/docs/Web/API/WebVR_API)

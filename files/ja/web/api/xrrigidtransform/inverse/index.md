@@ -33,8 +33,11 @@ for (let view of pose.view) {
   /* ... */
 
   mat4.multiply(modelViewMatrix, view.transform.inverse.matrix, objectMatrix);
-  gl.uniformMatrix4fv(programInfo.uniformLocations.modelViewMatrix,
-                      false, modelViewMatrix);
+  gl.uniformMatrix4fv(
+    programInfo.uniformLocations.modelViewMatrix,
+    false,
+    modelViewMatrix,
+  );
 
   /* ... */
 }
@@ -42,10 +45,10 @@ for (let view of pose.view) {
 
 このレンダラーのコアコードのあらましは、ビューアーの位置と向きに基づいてオブジェクトを変換するために使用するモデルビュー行列として、その変換の逆の行列をを取ることによって、ポーズのビューがどのように表されるかを示しています。 逆の行列にオブジェクトの行列を掛けてモデルビュー行列を取得し、その情報を含むようにユニフォームを設定することで、シェーダープログラムに渡します。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRRigidTransform.inverse")}}
+{{Compat}}

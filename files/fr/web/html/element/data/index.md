@@ -1,21 +1,29 @@
 ---
-title: '<data> : l''élément de données'
+title: "<data> : l'élément de données"
 slug: Web/HTML/Element/data
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/data
-browser-compat: html.elements.data
 ---
 
 {{HTMLSidebar}}
 
 L'élément HTML **`<data>`** relie un contenu à une version de ce contenu interprétable par un ordinateur. Si le contenu possède une composante temporelle, l'élément [`<time>`](/fr/docs/Web/HTML/Element/time) doit être utilisé.
 
-{{EmbedInteractiveExample("pages/tabbed/data.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;data&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>New Products:</p>
+<ul>
+  <li><data value="398">Mini Ketchup</data></li>
+  <li><data value="399">Jumbo Ketchup</data></li>
+  <li><data value="400">Mega Jumbo Ketchup</data></li>
+</ul>
+```
+
+```css interactive-example
+data:hover::after {
+  content: " (ID " attr(value) ")";
+  font-size: 0.7em;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -103,6 +111,10 @@ Dans l'exemple suivant, on affiche des noms de produits avec des codes correspon
   <li><data value="9887635">Énorme voiture</data></li>
 </ul>
 ```
+
+### Résultat
+
+{{EmbedLiveSample('',640,160)}}
 
 ## Spécifications
 

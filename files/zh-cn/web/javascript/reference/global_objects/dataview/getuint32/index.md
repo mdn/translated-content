@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint32
 
 **`getUint32()`** 方法从 [`DataView`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView) 相对于起始位置偏移 n 个字节处开始，获取一个 32-bit 数 (无符号长整型，4 个字节)。
 
-{{EmbedInteractiveExample("pages/js/dataview-getuint32.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.getUint32()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setUint32(1, 4294967295); // Max unsigned 32-bit integer
+
+console.log(view.getUint32(1));
+// Expected output: 4294967295
+```
 
 ## 语法
 
@@ -35,7 +46,7 @@ dataview.getUint32(byteOffset [, littleEndian])
 
 没有对齐约束; 多字节值可以从任何偏移量获取。
 
-## 例子
+## 示例
 
 ```js
 var buffer = new ArrayBuffer(8);
@@ -51,7 +62,7 @@ dataview.getUint32(1); // 0
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}

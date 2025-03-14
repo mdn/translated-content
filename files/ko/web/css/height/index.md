@@ -1,18 +1,47 @@
 ---
 title: height
 slug: Web/CSS/height
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/height
 ---
 
 {{CSSRef}}
 
 **`height`** CSS 속성은 요소의 높이를 지정합니다. 기본값은 콘텐츠 영역의 높이지만, {{cssxref("box-sizing")}}이 `border-box`라면 테두리 영역의 높이를 설정합니다.
 
-{{EmbedInteractiveExample("pages/css/height.html")}}
+{{InteractiveExample("CSS Demo: height")}}
+
+```css interactive-example-choice
+height: 150px;
+```
+
+```css interactive-example-choice
+height: 6em;
+```
+
+```css interactive-example-choice
+height: 75%;
+```
+
+```css interactive-example-choice
+height: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the height.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 {{cssxref("min-height")}}와 {{cssxref("max-height")}} 속성은 `height`를 덮어씁니다.
 
@@ -40,7 +69,7 @@ height: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 높이의 절대값.
 - {{cssxref("&lt;percentage&gt;")}}
-  - [: 컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 높이의 백분율.
+  - [: 컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 높이의 백분율.
 - `border-box` {{experimental_inline}}
   - : 앞선 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}가 요소의 보더 박스에 적용.
 - `content-box` {{experimental_inline}}
@@ -74,9 +103,7 @@ height: unset;
 <div id="taller">제 키는 50픽셀입니다.</div>
 <div id="shorter">제 키는 25픽셀입니다.</div>
 <div id="parent">
-  <div id="child">
-    제 키는 부모의 절반입니다.
-  </div>
+  <div id="child">제 키는 부모의 절반입니다.</div>
 </div>
 ```
 
@@ -130,4 +157,4 @@ div {
 
 ## 같이 보기
 
-- [box model](/ko/docs/CSS/box_model), {{cssxref("width")}}, {{cssxref("box-sizing")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}}
+- [box model](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("width")}}, {{cssxref("box-sizing")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}}

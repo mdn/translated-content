@@ -1,11 +1,6 @@
 ---
-title: ':read-only'
+title: :read-only
 slug: Web/CSS/:read-only
-tags:
-  - CSS
-  - Pseudo-classe
-  - Refrence
-translation_of: Web/CSS/:read-only
 ---
 
 {{CSSRef}}
@@ -27,7 +22,8 @@ input:read-only {
 }
 ```
 
-> **Note :** Ce sélecteur ne permet pas de cibler que les éléments {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} avec {{htmlattrxref("readonly", "input")}}. Il permet de sélectionner n'importe quel élément qui ne peut pas être édité par l'utilisateur.
+> [!NOTE]
+> Ce sélecteur ne permet pas de cibler que les éléments {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} avec [`readonly`](/fr/docs/Web/HTML/Element/input#readonly). Il permet de sélectionner n'importe quel élément qui ne peut pas être édité par l'utilisateur.
 
 ## Syntaxe
 
@@ -38,25 +34,33 @@ input:read-only {
 ### CSS
 
 ```css
-input { min-width: 25em; }
-input:-moz-read-only { background: cyan; }
-input:read-only { background: cyan; }
+input {
+  min-width: 25em;
+}
+input:-moz-read-only {
+  background: cyan;
+}
+input:read-only {
+  background: cyan;
+}
 
-p:-moz-read-only { background: lightgray; }
-p:read-only { background: lightgray; }
-p[contenteditable="true"] { color: blue; }
+p:-moz-read-only {
+  background: lightgray;
+}
+p:read-only {
+  background: lightgray;
+}
+p[contenteditable="true"] {
+  color: blue;
+}
 ```
 
 ### HTML
 
 ```html
 <input type="text" value="Un champ en lecture seule" readonly />
-<p contenteditable="true">
-  Essayez un peu d'éditer ce paragraphe.
-</p>
-<p>
-  Bonne chance pour celui-là !
-</p>
+<p contenteditable="true">Essayez un peu d'éditer ce paragraphe.</p>
+<p>Bonne chance pour celui-là !</p>
 ```
 
 ### Résultat
@@ -74,4 +78,4 @@ p[contenteditable="true"] { color: blue; }
 ## Voir aussi
 
 - {{cssxref(":read-write")}}
-- L'attribut HTML {{htmlattrxref("contenteditable")}}
+- L'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#contenteditable)

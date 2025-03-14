@@ -1,13 +1,9 @@
 ---
 title: Programmation informatique
 slug: Glossary/Computer_Programming
-tags:
-  - Langage de programmation
-  - Programmation
-  - Programmation informatique
-translation_of: Glossary/Computer_Programming
-original_slug: Glossaire/Computer_Programming
 ---
+
+{{GlossarySidebar}}
 
 La programmation informatique est un processus de composition et d'organisation d'un ensemble d'instructions. Celles-ci indiquent à un ordinateur / logiciel ce qu'il faut faire dans une langue que l'ordinateur comprend. Elles sont réalisées sous la forme de plusieurs langages différents tels que C ++, Java, JavaScript, HTML, Python, Ruby et Rust.
 

@@ -1,7 +1,6 @@
 ---
 title: Introduction au JavaScript asynchrone
 slug: Learn/JavaScript/Asynchronous/Introducing
-translation_of: Learn/JavaScript/Asynchronous/Introducing
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
@@ -25,7 +24,7 @@ La programmation asynchrone est une technique qui permet à un programme de dém
 
 De nombreuses fonctions fournies par les navigateurs, dont les plus intéressantes, peuvent prendre un certain temps et sont donc asynchrone. On y trouve par exemple&nbsp;:
 
-- L'envoi de requêtes [`fetch()`](/fr/docs/Web/API/fetch)
+- L'envoi de requêtes [`fetch()`](/fr/docs/Web/API/Window/fetch)
 - L'accès à la caméra ou au micro de la personne avec [`getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia)
 - La sélection de fichiers avec [`showOpenFilePicker()`](/fr/docs/Web/API/Window/showOpenFilePicker)
 
@@ -38,7 +37,7 @@ Dans cet article, nous commencerons par aborder les problèmes liés aux fonctio
 Prenons le code qui suit&nbsp;:
 
 ```js
-const nom = 'Miriam';
+const nom = "Miriam";
 const salutation = `Bonjour, je m'appelle ${nom} !`;
 console.log(salutation);
 // "Bonjour, je m'appelle Miriam !"
@@ -59,7 +58,7 @@ function creerSalutation(nom) {
   return `Bonjour, je m'appelle ${nom} !`;
 }
 
-const nom = 'Miriam';
+const nom = "Miriam";
 const salutation = creerSalutation(nom);
 console.log(salutation);
 // "Bonjour, je m'appelle Miriam !"
@@ -75,7 +74,7 @@ Lorsqu'une personne clique sur le bouton «&nbsp;Générer des nombres premiers&
 
 ```html
 <label for="quota">Quantité de nombres premiers :</label>
-<input type="text" id="quota" name="quota" value="1000000">
+<input type="text" id="quota" name="quota" value="1000000" />
 
 <button id="generer">Générer des nombres premiers</button>
 <button id="recharger">Recharger</button>
@@ -85,12 +84,11 @@ Lorsqu'une personne clique sur le bouton «&nbsp;Générer des nombres premiers&
 
 ```js
 function genererNbPremiers(quota) {
-
   function estPremier(n) {
     for (let c = 2; c <= Math.sqrt(n); ++c) {
       if (n % c === 0) {
-          return false;
-       }
+        return false;
+      }
     }
     return true;
   }
@@ -108,13 +106,14 @@ function genererNbPremiers(quota) {
   return nbPremiers;
 }
 
-document.querySelector('#generer').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
+document.querySelector("#generer").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
   const nbPremiers = genererNbPremiers(quota);
-  document.querySelector('#output').textContent = `Génération de ${quota} nombres premiers terminée !`;
+  document.querySelector("#output").textContent =
+    `Génération de ${quota} nombres premiers terminée !`;
 });
 
-document.querySelector('#recharger').addEventListener('click', () => {
+document.querySelector("#recharger").addEventListener("click", () => {
   document.location.reload();
 });
 ```
@@ -131,7 +130,7 @@ Vous pourrez alors observer que, pendant l'exécution de la fonction `genererNbP
 
 ```html hidden
 <label for="quota">Quantité de nombres premiers :</label>
-<input type="text" id="quota" name="quota" value="1000000">
+<input type="text" id="quota" name="quota" value="1000000" />
 
 <button id="generer">Générer des nombres premiers</button>
 <button id="recharger">Recharger</button>
@@ -152,12 +151,11 @@ textarea {
 
 ```js hidden
 function genererNbPremiers(quota) {
-
   function estPremier(n) {
     for (let c = 2; c <= Math.sqrt(n); ++c) {
       if (n % c === 0) {
-          return false;
-       }
+        return false;
+      }
     }
     return true;
   }
@@ -175,14 +173,16 @@ function genererNbPremiers(quota) {
   return nbPremiers;
 }
 
-document.querySelector('#generer').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
+document.querySelector("#generer").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
   const nbPremiers = genererNbPremiers(quota);
-  document.querySelector('#output').textContent = `Génération de ${quota} nombres premiers terminée !`;
+  document.querySelector("#output").textContent =
+    `Génération de ${quota} nombres premiers terminée !`;
 });
 
-document.querySelector('#recharger').addEventListener('click', () => {
-  document.querySelector('#user-input').value = 'Essayez de saisir du texte ici juste après avoir appuyé sur « Générer des nombres premiers »';
+document.querySelector("#recharger").addEventListener("click", () => {
+  document.querySelector("#user-input").value =
+    "Essayez de saisir du texte ici juste après avoir appuyé sur « Générer des nombres premiers »";
   document.location.reload();
 });
 ```
@@ -222,24 +222,27 @@ pre {
 ```
 
 ```js
-const log = document.querySelector('.event-log');
+const log = document.querySelector(".event-log");
 
-document.querySelector('#xhr').addEventListener('click', () => {
-  log.textContent = '';
+document.querySelector("#xhr").addEventListener("click", () => {
+  log.textContent = "";
 
   const xhr = new XMLHttpRequest();
 
-  xhr.addEventListener('loadend', () => {
+  xhr.addEventListener("loadend", () => {
     log.textContent = `${log.textContent}Terminé avec le statut : ${xhr.status}`;
   });
 
-  xhr.open('GET', 'https://raw.githubusercontent.com/mdn/translated-content/main/files/fr/_wikihistory.json');
+  xhr.open(
+    "GET",
+    "https://raw.githubusercontent.com/mdn/translated-content/main/files/fr/_wikihistory.json",
+  );
   xhr.send();
   log.textContent = `${log.textContent}Requête XHR initiée\n`;
 });
 
-document.querySelector('#recharger').addEventListener('click', () => {
-  log.textContent = '';
+document.querySelector("#recharger").addEventListener("click", () => {
+  log.textContent = "";
   document.location.reload();
 });
 ```
@@ -297,14 +300,13 @@ function faireEtape3(init, callback) {
 }
 
 function faireOperation() {
-  faireEtape1(0, resultat1 => {
-    faireEtape2(resultat1, resultat2 => {
-      faireEtape3(resultat2, resultat3 => {
+  faireEtape1(0, (resultat1) => {
+    faireEtape2(resultat1, (resultat2) => {
+      faireEtape3(resultat2, (resultat3) => {
         console.log(`Résultat : ${resultat3}`);
       });
     });
   });
-
 }
 
 faireOperation();
@@ -317,11 +319,3 @@ Lorsqu'on imbrique les fonctions de rappel ainsi, il devient très difficile de 
 C'est pour ces raisons que la plupart des API asynchrones modernes n'utilisent plus les <i lang="en">callbacks</i>. À la place, la programmation asynchrone en JavaScript utilise [les promesses](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise), et c'est ce que nous verrons dans le prochain article.
 
 {{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
-
-## Dans ce module
-
-- **Introduction au JavaScript asynchrone**
-- [Comment utiliser les promesses](/fr/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Implémenter une API utilisant les promesses](/fr/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [Introduction aux <i lang="en">workers</i>](/fr/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [Évaluation&nbsp;: ordonnancer des animations](/fr/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

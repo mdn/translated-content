@@ -1,20 +1,25 @@
 ---
 title: Parámetros predeterminados
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-tags:
-  - Característica del lenguaje
-  - ECMAScript 2015
-  - Funciones
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Functions/Default_parameters
-original_slug: Web/JavaScript/Referencia/Funciones/Parametros_por_defecto
 ---
 
 {{jsSidebar("Functions", "Funciones")}}
 
 **Parámetros predeterminados de función** permiten que los parámetros con nombre se inicien con valores predeterminados si no se pasa ningún valor o `undefined`.
 
-{{EmbedInteractiveExample("pages/js/functions-default.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Default")}}
+
+```js interactive-example
+function multiply(a, b = 1) {
+  return a * b;
+}
+
+console.log(multiply(5, 2));
+// Expected output: 10
+
+console.log(multiply(5));
+// Expected output: 5
+```
 
 La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
 
@@ -36,35 +41,35 @@ En el siguiente ejemplo, si no se proporciona ningún valor para `b` cuando se l
 
 ```js
 function multiply(a, b) {
-  return a * b
+  return a * b;
 }
 
-multiply(5, 2)  // 10
-multiply(5)     // NaN !
+multiply(5, 2); // 10
+multiply(5); // NaN !
 ```
 
 Para protegerte contra esto, usarías algo como la segunda línea, donde `b` se establece en `1` si llamas a `multiply` con un solo argumento:
 
 ```js
 function multiply(a, b) {
-  b = (typeof b !== 'undefined') ?  b : 1
-  return a * b
+  b = typeof b !== "undefined" ? b : 1;
+  return a * b;
 }
 
-multiply(5, 2)  // 10
-multiply(5)     // 5
+multiply(5, 2); // 10
+multiply(5); // 5
 ```
 
 Con los parámetros predeterminados en ES2015, las comprobaciones en el cuerpo de la función ya no son necesarias. Ahora, puedes asignar `1` como valor predeterminado para `b` en el encabezado de la función:
 
 ```js
 function multiply(a, b = 1) {
-  return a * b
+  return a * b;
 }
 
-multiply(5, 2)          // 10
-multiply(5)             // 5
-multiply(5, undefined)  // 5
+multiply(5, 2); // 10
+multiply(5); // 5
+multiply(5, undefined); // 5
 ```
 
 ## Ejemplos
@@ -75,15 +80,15 @@ En la segunda llamada de este ejemplo, incluso si el primer argumento se estable
 
 ```js
 function test(num = 1) {
-  console.log(typeof num)
+  console.log(typeof num);
 }
 
-test()           // 'number' (num se establece en 1)
-test(undefined)  // 'number' (num se establece en 1 también)
+test(); // 'number' (num se establece en 1)
+test(undefined); // 'number' (num se establece en 1 también)
 
 // prueba con otros valores falsos:
-test('')         // 'string' (num se establece en '')
-test(null)       // 'object' (num se establece en null)
+test(""); // 'string' (num se establece en '')
+test(null); // 'object' (num se establece en null)
 ```
 
 ### Evaluado en el momento de la llamada
@@ -92,29 +97,29 @@ El argumento predeterminado se evalúa en el _momento de la llamada_. Entonces, 
 
 ```js
 function append(value, array = []) {
-  array.push(value)
-  return array
+  array.push(value);
+  return array;
 }
 
-append(1)  // [1]
-append(2)  // [2], no [1, 2]
+append(1); // [1]
+append(2); // [2], no [1, 2]
 ```
 
 Esto incluso se aplica a funciones y variables:
 
 ```js
 function callSomething(thing = something()) {
-  return thing
+  return thing;
 }
 
-let numberOfTimesCalled = 0
+let numberOfTimesCalled = 0;
 function something() {
-  numberOfTimesCalled += 1
-  return numberOfTimesCalled
+  numberOfTimesCalled += 1;
+  return numberOfTimesCalled;
 }
 
-callSomething()  // 1
-callSomething()  // 2
+callSomething(); // 1
+callSomething(); // 2
 ```
 
 ### Los parámetros anteriores están disponibles para los parámetros predeterminados posteriores
@@ -122,24 +127,31 @@ callSomething()  // 2
 Los parámetros definidos anteriormente (a la izquierda) están disponibles para los parámetros predeterminados posteriores:
 
 ```js
-function greet(name, greeting, message = greeting + ' ' + name) {
-  return [name, greeting, message]
+function greet(name, greeting, message = greeting + " " + name) {
+  return [name, greeting, message];
 }
 
-greet('David', 'Hi')                     // ["David", "Hi", "Hi David"]
-greet('David', 'Hi', 'Happy Birthday!')  // ["David", "Hi", "Happy Birthday!"]
+greet("David", "Hi"); // ["David", "Hi", "Hi David"]
+greet("David", "Hi", "Happy Birthday!"); // ["David", "Hi", "Happy Birthday!"]
 ```
 
 Esta funcionalidad se puede aproximar de esta manera, lo que demuestra cuántos casos extremos se manejan:
 
 ```js
 function go() {
-  return ':P'
+  return ":P";
 }
 
-function withDefaults(a, b = 5, c = b, d = go(), e = this,
-                      f = arguments, g = this.value) {
-  return [a, b, c, d, e, f, g]
+function withDefaults(
+  a,
+  b = 5,
+  c = b,
+  d = go(),
+  e = this,
+  f = arguments,
+  g = this.value,
+) {
+  return [a, b, c, d, e, f, g];
 }
 
 function withoutDefaults(a, b, c, d, e, f, g) {
@@ -163,10 +175,10 @@ function withoutDefaults(a, b, c, d, e, f, g) {
   return [a, b, c, d, e, f, g];
 }
 
-withDefaults.call({value: '=^_^='});
+withDefaults.call({ value: "=^_^=" });
 // [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
 
-withoutDefaults.call({value: '=^_^='});
+withoutDefaults.call({ value: "=^_^=" });
 // [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
 ```
 
@@ -181,8 +193,11 @@ También significa que las variables declaradas dentro del cuerpo de la función
 La siguiente función arrojará un `ReferenceError` cuando se invoca, porque el valor del parámetro predeterminado no tiene acceso al ámbito secundario del cuerpo de la función:
 
 ```js example-bad
-function f(a = go()) { // Lanza un `ReferenceError` cuando se invoca a `f`.
-  function go() { return ':P' }
+function f(a = go()) {
+  // Lanza un `ReferenceError` cuando se invoca a `f`.
+  function go() {
+    return ":P";
+  }
 }
 ```
 
@@ -190,8 +205,8 @@ function f(a = go()) { // Lanza un `ReferenceError` cuando se invoca a `f`.
 
 ```js example-bad
 function f(a, b = () => console.log(a)) {
-  var a = 1
-  b() // Imprime `undefined`, porque los valores de los parámetros predeterminados existen en su propio ámbito
+  var a = 1;
+  b(); // Imprime `undefined`, porque los valores de los parámetros predeterminados existen en su propio ámbito
 }
 ```
 
@@ -201,11 +216,11 @@ Los parámetros aún se establecen de izquierda a derecha, sobrescribiendo los p
 
 ```js
 function f(x = 1, y) {
-  return [x, y]
+  return [x, y];
 }
 
-f()   // [1, undefined]
-f(2)  // [2, undefined]
+f(); // [1, undefined]
+f(2); // [2, undefined]
 ```
 
 ### Parámetro desestructurado con asignación de valor predeterminado
@@ -213,22 +228,20 @@ f(2)  // [2, undefined]
 Puedes usar la asignación de valor predeterminado con la notación {{jsxref("Operators/Destructuring_assignment", "la desestructuración", "", 1)}}:
 
 ```js
-function f([x, y] = [1, 2], {z: z} = {z: 3}) {
-  return x + y + z
+function f([x, y] = [1, 2], { z: z } = { z: 3 }) {
+  return x + y + z;
 }
 
-f()  // 6
+f(); // 6
 ```
 
 ## Especificaciones
 
-| Especificación                                                                                               |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-function-definitions', 'Definición de Funciones')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.functions.default_parameters")}}
+{{Compat}}
 
 ## Ve también
 

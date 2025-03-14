@@ -5,29 +5,42 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
 
 {{JSRef}}
 
-这个 **`some()`** 方法检测 _TypedArray_ 的一些元素是否通过所提供函数的测试。这个方法和 {{jsxref("Array.prototype.some()")}} _相同。_ _TypedArray_ 是 [typed array types](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
+这个 **`some()`** 方法检测 _TypedArray_ 的一些元素是否通过所提供函数的测试。这个方法和 {{jsxref("Array.prototype.some()")}} _相同。_ _TypedArray_ 是 [typed array types](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) 之一。
 
-{{EmbedInteractiveExample("pages/js/typedarray-some.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.some()")}}
+
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([-10, 20, -30, 40, -50]);
+const positives = new Int8Array([10, 20, 30, 40, 50]);
+
+console.log(int8.some(isNegative));
+// Expected output: true
+
+console.log(positives.some(isNegative));
+// Expected output: false
+```
 
 ## 语法
 
-```plain
-typedarray.some(callback[, thisArg])
+```js-nolint
+some(callbackFn)
+some(callbackFn, thisArg)
 ```
 
 ### 参数
 
 - `callback`
-
   - : 一个测试每个元素的函数，有 3 个参数：
-
     - `currentValue`
       - : 在 typed array 中，正在被测试的元素。
     - `index`
       - : 在 typed array 中，正在被测试元素的索引。
     - `array`
       - : 正在被调用的 typed array 本身。
-
 - `thisArg`
   - : 可选的。`callback` 回调函数的 `this` 值 .
 
@@ -47,7 +60,7 @@ typedarray.some(callback[, thisArg])
 
 ### 示例
 
-### Testing size of all typed array elements
+### 测试类型化数组所有元素的大小
 
 以下示例测试 typed array 中的所有元素都大于 10.
 
@@ -59,39 +72,21 @@ new Uint8Array([2, 5, 8, 1, 4]).some(isBiggerThan10); // false
 new Uint8Array([12, 5, 8, 1, 4]).some(isBiggerThan10); // true
 ```
 
-### Testing typed array elements using arrow functions
-
-[Arrow functions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 提供更段的语法做相同的测试。
-
-```js
-new Uint8Array([2, 5, 8, 1, 4]).some(elem => elem > 10); // false
-new Uint8Array([12, 5, 8, 1, 4]).some(elem => elem > 10); // true
-```
-
-## Polyfill
-
-由于没有名为 _TypedArray 的全局对象_, 必须在“as needed”的基础上进行填充。
-
-```js
-// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.some
-if (!Uint8Array.prototype.some) {
-  Object.defineProperty(Uint8Array.prototype, 'some', {
-    value: Array.prototype.some
-  });
-}
-```
-
-假如你需要支持的过时 JavaScript 引擎不支持[`Object.defineProperty`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)，最好不要使用`Array.prototype`方法填充，因为你不能让它们不可枚举。
-
-## 标准
+## 规范
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 
-## 参阅
+## 参见
 
+- [`core-js` 中 `TypedArray.prototype.some` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
+- {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.every()")}}
+- {{jsxref("TypedArray.prototype.forEach()")}}
+- {{jsxref("TypedArray.prototype.find()")}}
+- {{jsxref("TypedArray.prototype.includes()")}}
 - {{jsxref("Array.prototype.some()")}}

@@ -1,13 +1,9 @@
 ---
 title: document.createElement
 slug: Web/API/Document/createElement
-tags:
-  - DOM
-  - Gecko
-translation_of: Web/API/Document/createElement
-original_slug: DOM/document.createElement
 ---
-{{ ApiRef() }}
+
+{{APIRef("DOM")}}
 
 ### Общая информация
 
@@ -23,9 +19,9 @@ original_slug: DOM/document.createElement
 var element = document.createElement(tagName, [options]);
 ```
 
-- `element` — созданный объект [элемента](../Web/API/Element).
-- `tagName` — строка, указывающая элемент какого типа должен быть создан. [nodeName](ru/DOM/element.nodeName) создаётся и инициализируется со значением `tagName`.
-- `options` — необязательный параметр, объект `ElementCreationOptions`, который может содержать только поле `is`, указывающее имя пользовательского элемента, созданного с помощью `customElements.define()` (см. [Веб-компоненты](/ru/docs/Web/Web_Components)).
+- `element` — созданный объект [элемента](/ru/docs/Web/API/Element).
+- `tagName` — строка, указывающая элемент какого типа должен быть создан. [nodeName](/ru/docs/DOM/element.nodeName) создаётся и инициализируется со значением `tagName`.
+- `options` — необязательный параметр, объект `ElementCreationOptions`, который может содержать только поле `is`, указывающее имя пользовательского элемента, созданного с помощью `customElements.define()` (см. [Веб-компоненты](/ru/docs/Web/API/Web_components)).
 
 ### Пример
 
@@ -33,38 +29,50 @@ var element = document.createElement(tagName, [options]);
 
 ```html
 <div><h1>Привет!</h1></div>
-<div id='org_div1'>Текст выше сгенерирован автоматически.</div>
+<div id="org_div1">Текст выше сгенерирован автоматически.</div>
 ```
 
 ```js
-  document.body.onload = addElement;
-var my_div = newDiv = null;
+document.body.onload = addElement;
+var my_div = (newDiv = null);
 
-  function addElement() {
+function addElement() {
+  // Создаём новый элемент div
+  // и добавляем в него немного контента
 
-    // Создаём новый элемент div
-    // и добавляем в него немного контента
+  var newDiv = document.createElement("div");
+  newDiv.innerHTML = "<h1>Привет!</h1>";
 
-    var newDiv = document.createElement("div");
-        newDiv.innerHTML = "<h1>Привет!</h1>";
+  // Добавляем только что созданный элемент в дерево DOM
 
-    // Добавляем только что созданный элемент в дерево DOM
-
-    my_div = document.getElementById("org_div1");
-    document.body.insertBefore(newDiv, my_div);
-  }
+  my_div = document.getElementById("org_div1");
+  document.body.insertBefore(newDiv, my_div);
+}
 ```
 
 ### Примечания
 
 Если существуют атрибуты со значениями по умолчанию, атрибуты узлов предоставляющие их создаются автоматически и применяются к элементу.
 
-Для создания элементов с заданным пространством имён используйте метод [createElementNS](ru/DOM/document.createElementNS).
+Для создания элементов с заданным пространством имён используйте метод [createElementNS](/ru/docs/DOM/document.createElementNS).
 
-Реализация `createElement` в Gecko не соответствует DOM спецификации для XUL и XHTML документов: `localName` и `namespaceURI` не устанавливаются в `null` в созданном документе. Смотрите {{ Bug(280692) }} для подробностей.
+Реализация `createElement` в Gecko не соответствует DOM спецификации для XUL и XHTML документов: `localName` и `namespaceURI` не устанавливаются в `null` в созданном документе. Смотрите [Firefox bug 280692](https://bugzil.la/280692) для подробностей.
 
 Для обратной совместимости с предыдущими версиями спецификации пользовательских элементов некоторые браузеры позволяют передавать здесь строку вместо объекта, где значением строки является имя тега пользовательского элемента.
 
-### Спецификации
+## Спецификации
 
-[DOM 2 Модуль: createElement](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-2141741547)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{domxref("Node.removeChild()")}}
+- {{domxref("Node.replaceChild()")}}
+- {{domxref("Node.appendChild()")}}
+- {{domxref("Node.insertBefore()")}}
+- {{domxref("Node.hasChildNodes()")}}
+- {{domxref("document.createElementNS()")}}

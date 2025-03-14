@@ -1,23 +1,34 @@
 ---
 title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
-tags:
-  - Experimental
-  - Function
-  - Instruction
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Statements/async_function
-original_slug: Web/JavaScript/Reference/Instructions/async_function
 ---
 
 {{jsSidebar("Statements")}}
 
 Une fonction asynchrone est une fonction précédée par le mot-clé `async`, et qui peut contenir le mot-clé `await`. `async` et `await` permettent un comportement asynchrone, basé sur une promesse ([`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)), écrite de façon simple, et évitant de configurer explicitement les chaînes de promesse.
-  
+
 Les fonctions asynchrones peuvent également être définies comme des [expressions](/fr/docs/Web/JavaScript/Reference/Operators/async_function).
 
-{{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Statement - Async", "taller")}}
+
+```js interactive-example
+function resolveAfter2Seconds() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("resolved");
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log("calling");
+  const result = await resolveAfter2Seconds();
+  console.log(result);
+  // Expected output: "resolved"
+}
+
+asyncCall();
+```
 
 ## Syntaxe
 
@@ -46,37 +57,39 @@ Une fonction `async` peut contenir une expression {{jsxref("Opérateurs/await", 
 
 Le mot-clé `await` est uniquement valide au sein des fonctions asynchrones. Si ce mot-clé est utilisé en dehors du corps d'une fonction asynchrone, cela provoquera une exception {{jsxref("SyntaxError")}}.
 
-> **Note :** Lorsqu'une fonction asynchrone est mise en pause, la fonction appelante continue son exécution (car elle a reçu la promesse implicite renvoyée par la fonction `async`).
+> [!NOTE]
+> Lorsqu'une fonction asynchrone est mise en pause, la fonction appelante continue son exécution (car elle a reçu la promesse implicite renvoyée par la fonction `async`).
 
-> **Note :** Le but des fonctions `async`/`await` est de simplifier l'utilisation synchrone des promesses et d'opérer sur des groupes de promesses. De la même façon que les promesses sont semblables à des _callbacks_ structurés, `async`/`await` est semblable à la combinaison des générateurs et des promesses.
+> [!NOTE]
+> Le but des fonctions `async`/`await` est de simplifier l'utilisation synchrone des promesses et d'opérer sur des groupes de promesses. De la même façon que les promesses sont semblables à des _callbacks_ structurés, `async`/`await` est semblable à la combinaison des générateurs et des promesses.
 
 ## Exemples
 
 ### Exemple simple
 
 ```js
-var resolveAfter2Seconds = function() {
+var resolveAfter2Seconds = function () {
   console.log("Initialisation de la promesse lente");
-  return new Promise(resolve => {
-    setTimeout(function() {
+  return new Promise((resolve) => {
+    setTimeout(function () {
       resolve("lente");
       console.log("La promesse lente est terminée");
     }, 2000);
   });
 };
 
-var resolveAfter1Second = function() {
+var resolveAfter1Second = function () {
   console.log("Initialisation de la promesse rapide");
-  return new Promise(resolve => {
-    setTimeout(function() {
+  return new Promise((resolve) => {
+    setTimeout(function () {
       resolve("rapide");
       console.log("La promesse rapide est terminée");
     }, 1000);
   });
 };
 
-var sequentialStart = async function() {
-  console.log('==Début séquentiel==');
+var sequentialStart = async function () {
+  console.log("==Début séquentiel==");
 
   // 1. L'exécution atteint ce point quasi-instantanément
   const lente = await resolveAfter2Seconds();
@@ -84,47 +97,49 @@ var sequentialStart = async function() {
 
   const rapide = await resolveAfter1Second();
   console.log(rapide); // 3. cela s'exécute 3s après 1.
-}
+};
 
-var concurrentStart = async function() {
-  console.log('==Début concurrentiel avec await==');
+var concurrentStart = async function () {
+  console.log("==Début concurrentiel avec await==");
   const lente = resolveAfter2Seconds(); // le minuteur démarre immédiatement
-  const rapide = resolveAfter1Second();  // le minuteur démarre immédiatement
+  const rapide = resolveAfter1Second(); // le minuteur démarre immédiatement
 
   // 1. L'exécution atteint ce point quasi-instantanément
   console.log(await lente); // 2. s'exécute 2s après 1.
   console.log(await rapide); // 3. s'exécute 2s après 1., immédiatement après 2.,
-                             // car "rapide" est déjà résolue
-}
+  // car "rapide" est déjà résolue
+};
 
-var concurrentPromise = function() {
-  console.log('==Début concurrentiel avec Promise.all==');
-  return Promise.all([resolveAfter2Seconds(), resolveAfter1Second()]).then((messages) => {
-    console.log(messages[0]); // lente
-    console.log(messages[1]); // rapide
-  });
-}
+var concurrentPromise = function () {
+  console.log("==Début concurrentiel avec Promise.all==");
+  return Promise.all([resolveAfter2Seconds(), resolveAfter1Second()]).then(
+    (messages) => {
+      console.log(messages[0]); // lente
+      console.log(messages[1]); // rapide
+    },
+  );
+};
 
-var parallel = async function() {
-  console.log('==Exécution parallèle avec await Promise.all==');
+var parallel = async function () {
+  console.log("==Exécution parallèle avec await Promise.all==");
 
   // Démarre 2 tâches en parallèle et on attend que les deux soient finies
   await Promise.all([
-      (async()=>console.log(await resolveAfter2Seconds()))(),
-      (async()=>console.log(await resolveAfter1Second()))()
+    (async () => console.log(await resolveAfter2Seconds()))(),
+    (async () => console.log(await resolveAfter1Second()))(),
   ]);
-}
+};
 
 // Cette fonction ne gère pas les erreurs
 // voir les avertissement ci-après !
-var parallelPromise = function() {
-  console.log('==Exécution parallèle avec Promise.then==');
-  resolveAfter2Seconds().then((message)=>console.log(message));
-  resolveAfter1Second().then((message)=>console.log(message));
-}
+var parallelPromise = function () {
+  console.log("==Exécution parallèle avec Promise.then==");
+  resolveAfter2Seconds().then((message) => console.log(message));
+  resolveAfter1Second().then((message) => console.log(message));
+};
 
 sequentialStart(); // après 2 secondes, "lente" est affichée, après une
-                   // autre seconde, c'est "rapide" qui est affichée
+// autre seconde, c'est "rapide" qui est affichée
 
 // on attend que l'étape précédente soit terminée
 setTimeout(concurrentStart, 4000); // 2s avant d'afficher "lente" puis "rapide"
@@ -134,8 +149,8 @@ setTimeout(concurrentPromise, 7000); // identique à concurrentStart
 
 // on attend à nouveau
 setTimeout(parallel, 10000); // réellement parallele : après 1 seconde,
-                             // affiche "rapide" et après une autre seconde
-                             // affiche "lente"
+// affiche "rapide" et après une autre seconde
+// affiche "lente"
 
 // on attend à nouveau
 setTimeout(parallelPromise, 13000); // identique à parallel
@@ -168,10 +183,10 @@ Lorsqu'on utilise une API qui renvoie des promesses ({{jsxref("Promise")}}), on 
 ```js
 function getProcessedData(url) {
   return downloadData(url) // renvoie une promesse
-    .catch(e => {
-      return downloadFallbackData(url);  // renvoie une promesse
+    .catch((e) => {
+      return downloadFallbackData(url); // renvoie une promesse
     })
-    .then(v => {
+    .then((v) => {
       return processDataInWorker(v); // renvoie une promesse
     });
 }
@@ -184,7 +199,7 @@ async function getProcessedData(url) {
   let v;
   try {
     v = await downloadData(url);
-  } catch(e) {
+  } catch (e) {
     v = await downloadFallbackData(url);
   }
   return processDataInWorker(v);
@@ -203,13 +218,13 @@ Si on reprend l'exemple précédent et qu'on le réécrit avec `return await` et
 async function getProcessedData(url) {
   let v;
   try {
-     v = await downloadData(url);
-  } catch(e) {
+    v = await downloadData(url);
+  } catch (e) {
     v = await downloadFallbackData(url);
   }
   try {
     return await processDataInWorker(v); // et non plus simplement return
-  } catch(e) {
+  } catch (e) {
     return null;
   }
 }
@@ -232,4 +247,4 @@ Lorsqu'on utilise `return toto;`, la valeur `toto` sera immédiatement renvoyée
 - {{jsxref("Operators/async_function", "async function expression")}}
 - {{jsxref("AsyncFunction")}} object
 - {{jsxref("Operators/await", "await")}}
-- [Créer des décorateurs asynchrones en JavaScript (billet en anglais sur innolitics.com)](http://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/)
+- [Créer des décorateurs asynchrones en JavaScript (billet en anglais sur innolitics.com)](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/)

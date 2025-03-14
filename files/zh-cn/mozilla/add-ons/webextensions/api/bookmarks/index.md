@@ -1,86 +1,79 @@
 ---
 title: bookmarks
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
+l10n:
+  sourceCommit: eec174a08a5003da32f53e694c45eda3377b4d18
 ---
 
 {{AddonSidebar}}
 
-此[WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} API 允许一个附加组件和浏览器的书签系统交互和操作。您可以用它给页面加书签，获取已有的书签，以及编辑，移除和管理书签。
+[WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} API 允许扩展与浏览器的书签系统交互并对其进行操作。你可以用它给页面加书签、获取已有的书签，以及编辑、移除和管理书签。
 
-欲使用此 API，一个附件组件必须请求"bookmarks" [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)在它的[`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)文件当中。
+欲使用此 API，扩展必须在它的 [`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件当中请求“bookmarks”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
+
+扩展无法在书签树的根节点中创建、修改或删除书签。这样做会导致错误，错误消息为：“_The bookmark root cannot be modified_”。
 
 ## 类型
 
 - {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}
   - : 表示在书签树中的一个书签或者文件夹。
 - {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}}
-  - : 一个描述在树中的一个节点是否是一个书签，一个文件夹或是一个分割符的 {{jsxref("String")}} 枚举类型。
+  - : 一个描述树中的某个节点是否是书签、文件夹或是分割符的{{jsxref("String", "字符串", "", 1)}}枚举类型。
 - {{WebExtAPIRef("bookmarks.BookmarkTreeNodeUnmodifiable")}}
-  - : 一个说明了为什么一个书签或者文件夹是不可修改的 {{jsxref("String")}} 枚举类型。
+  - : 一个说明了为什么一个书签或者文件夹是不可修改的{{jsxref("String", "字符串", "", 1)}}枚举类型。
 - {{WebExtAPIRef("bookmarks.CreateDetails")}}
-  - : 当创建一个新书签时，包含被传递给这个 {{WebExtAPIRef("bookmarks.create()")}} 函数的信息。
+  - : 当创建一个新书签时，包含被传递给 {{WebExtAPIRef("bookmarks.create()")}} 函数的信息。
 
 ## 方法
 
 - {{WebExtAPIRef("bookmarks.create()")}}
   - : 创建一个书签或文件夹。
 - {{WebExtAPIRef("bookmarks.get()")}}
-  - : 获得一个或者多个{{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}，提供一个书签的编号或者一个书签编号的数组。
+  - : 给定一个书签的编号或者一个书签编号的数组，获取对应的一个或者多个 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}。
 - {{WebExtAPIRef("bookmarks.getChildren()")}}
-  - : 获取指定{{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}节点的所有子节点。
+  - : 获取指定 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} 节点的子节点。
 - {{WebExtAPIRef("bookmarks.getRecent()")}}
   - : 获取最近添加的几个书签。
 - {{WebExtAPIRef("bookmarks.getSubTree()")}}
   - : 获取从指定节点开始的部分书签树。
 - {{WebExtAPIRef("bookmarks.getTree()")}}
-  - : 获取整个书签树。
-- {{WebExtAPIRef("bookmarks.search()")}}
-  - : 搜索书签树节点，找出匹配的结果。如果以对象方式指定查询，得到的 BookmarkTreeNodes 匹配所有指定的属性。
-- {{WebExtAPIRef("bookmarks.create()")}}
-  - : 在指定的上一级文件夹下创建新的书签或文件夹。如果 url 为 null 或者省略，则创建文件夹。
+  - : 以 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} 对象数组的形式获取整个书签树。
 - {{WebExtAPIRef("bookmarks.move()")}}
-  - : 将指定的书签树节点移到指定位置
-- {{WebExtAPIRef("bookmarks.update()")}}
-  - : 更新书签或文件夹的属性。只需要指定您需要更改的属性，未指定的属性不会更改。注意：目前只支持“title”和“url”属性。
+  - : 将指定的 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} 移到书签树中的新位置。
 - {{WebExtAPIRef("bookmarks.remove()")}}
-  - : 删除书签或者空文件夹。
+  - : 给定节点 ID，删除对应的书签或者空书签文件夹。
 - {{WebExtAPIRef("bookmarks.removeTree()")}}
-  - : 删除整个书签文件夹。
-- {{WebExtAPIRef("bookmarks.import()")}}
-  - : 从一个 html 书签文件导入书签
-- {{WebExtAPIRef("bookmarks.export()")}}
-  - : 导出书签为一个 html 书签文件
+  - : 递归删除书签文件夹，即给定文件夹节点的 ID，删除该节点及其所有子节点。
+- {{WebExtAPIRef("bookmarks.search()")}}
+  - : 搜索匹配一组指定条件的 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}。
+- {{WebExtAPIRef("bookmarks.update()")}}
+  - : 给定书签 ID，更新对应的书签的标题和 URL，或书签文件夹的名称。
 
 ## 事件
 
 - {{WebExtAPIRef("bookmarks.onCreated")}}
-  - : 当书签或文件夹创建时产生。
+  - : 当书签或文件夹被创建时触发。
 - {{WebExtAPIRef("bookmarks.onRemoved")}}
-  - : 当删除书签或文件夹时产生。当删除整个文件夹（包括其中所有内容）时，仅为该文件夹发送通知，不为其中任何内容发送通知。
+  - : 当书签或文件夹被删除时触发。当递归删除文件夹时，只会为文件夹触发一次通知，其内容不会触发通知。
 - {{WebExtAPIRef("bookmarks.onChanged")}}
-  - : 一个书签或文件夹更改时发生。注意：目前只有标题和 URL 更改时会触发这一事件。
+  - : 当书签或文件夹发生更改时触发。目前，只有 `title` 和 `url` 的更改会触发此事件。
 - {{WebExtAPIRef("bookmarks.onMoved")}}
-  - : 当书签或文件夹移动到另一个父文件夹中时产生。
+  - : 当书签或文件夹被移动到不同的父文件夹或在其文件夹中发生偏移时触发。
 - {{WebExtAPIRef("bookmarks.onChildrenReordered")}}
-  - : 文件夹中的子节点在用户界面中调整顺序时产生。调用 move() 不会触发该事件。
+  - : 当用户在浏览器的 UI 中对文件夹的子项进行排序时触发。这不是由 {{WebExtAPIRef("bookmarks.move", "move()")}} 调用的结果。
 - {{WebExtAPIRef("bookmarks.onImportBegan")}}
-  - : 开始导入书签时产生。复杂的事件处理函数在这一事件产生后不应该再处理 onCreated 事件，直到 onImportEnded 事件产生，在此过程中其他事件仍然应该立即处理。
+  - : 当开始书签导入会话时触发。消耗性的观察者应该忽略 {{WebExtAPIRef("bookmarks.onCreated")}} 更新，直到 {{WebExtAPIRef("bookmarks.onImportEnded")}} 被触发。观察者仍应立即处理其他通知。
 - {{WebExtAPIRef("bookmarks.onImportEnded")}}
-  - : 书签导入结束时产生。
+  - : 当书签导入会话结束时触发。
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-> **备注：** The "Chrome incompatibilities" section is included from [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) using the [WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat) macro.
->
-> If you need to update this content, edit [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities), then shift-refresh this page to see your changes.
-
 {{WebExtExamples("h2")}}
 
-> **备注：** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.bookmarks`](https://developer.chrome.google.cn/docs/extensions/reference/api/bookmarks) API。该文档衍生自 Chromium 代码中的 [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

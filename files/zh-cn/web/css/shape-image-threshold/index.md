@@ -7,7 +7,73 @@ slug: Web/CSS/shape-image-threshold
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`shape-image-threshold`** 通过设定一个 alpha 通道的界限值来提取{{cssxref("shape-outside")}} 值为图像的形状。
 
-{{EmbedInteractiveExample("pages/css/shape-image-threshold.html")}}
+{{InteractiveExample("CSS Demo: shape-image-threshold")}}
+
+```css interactive-example-choice
+shape-outside: linear-gradient(
+  50deg,
+  rgb(77, 26, 103),
+  transparent 80%,
+  transparent
+);
+shape-image-threshold: 0.2;
+```
+
+```css interactive-example-choice
+shape-outside: linear-gradient(
+  50deg,
+  rgb(77, 26, 103),
+  transparent 80%,
+  transparent
+);
+shape-image-threshold: 0.4;
+```
+
+```css interactive-example-choice
+shape-outside: linear-gradient(
+  50deg,
+  rgb(77, 26, 103),
+  transparent 80%,
+  transparent
+);
+shape-image-threshold: 0.6;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element"></div>
+    We had agreed, my companion and I, that I should call for him at his house,
+    after dinner, not later than eleven o’clock. This athletic young Frenchman
+    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
+    as a pastime. After having exhausted all the sensations that are to be found
+    in ordinary sports, even those of “automobiling” at a breakneck speed, the
+    members of the “Aéro Club” now seek in the air, where they indulge in all
+    kinds of daring feats, the nerve-racking excitement that they have ceased to
+    find on earth.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  text-align: left;
+  padding: 20px;
+}
+
+#example-element {
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  background-image: linear-gradient(
+    50deg,
+    rgb(77, 26, 103),
+    transparent 80%,
+    transparent
+  );
+}
+```
 
 所有 alpha 值比这个界限值大的像素都会被当做形状的一部分，以此确定形状的边界。举个例子，界限值为`0.5`时，形状会包含所有不透明度超过 50% 的像素。
 
@@ -48,14 +114,14 @@ shape-image-threshold: unset;
 <p>
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel at commodi
   voluptates enim, distinctio officia. Saepe optio accusamus doloribus sint
-  facilis itaque ab nulla, dolor molestiae assumenda cum sit placeat
-  adipisci, libero quae nihil porro debitis laboriosam inventore animi
-  impedit nostrum nesciunt quisquam expedita! Dolores consectetur iure atque
-  a mollitia dicta repudiandae illum exercitationem aliquam repellendus
-  ipsum porro modi, id nemo eligendi, architecto ratione quibusdam iusto
-  nisi soluta? Totam inventore ea eum sed velit et eligendi suscipit
-  accusamus iusto dolore, at provident eius alias maxime pariatur non
-  deleniti ipsum sequi rem eveniet laboriosam magni expedita?
+  facilis itaque ab nulla, dolor molestiae assumenda cum sit placeat adipisci,
+  libero quae nihil porro debitis laboriosam inventore animi impedit nostrum
+  nesciunt quisquam expedita! Dolores consectetur iure atque a mollitia dicta
+  repudiandae illum exercitationem aliquam repellendus ipsum porro modi, id nemo
+  eligendi, architecto ratione quibusdam iusto nisi soluta? Totam inventore ea
+  eum sed velit et eligendi suscipit accusamus iusto dolore, at provident eius
+  alias maxime pariatur non deleniti ipsum sequi rem eveniet laboriosam magni
+  expedita?
 </p>
 ```
 
@@ -66,10 +132,8 @@ shape-image-threshold: unset;
   width: 150px;
   height: 150px;
   float: left;
-  background-image: linear-gradient(30deg, black, transparent 80%,
-      transparent);
-  shape-outside: linear-gradient(30deg, black, transparent 80%,
-      transparent);
+  background-image: linear-gradient(30deg, black, transparent 80%, transparent);
+  shape-outside: linear-gradient(30deg, black, transparent 80%, transparent);
   shape-image-threshold: 0.2;
 }
 ```
@@ -92,8 +156,8 @@ shape-image-threshold: unset;
 
 ## 参见
 
-- [CSS Shapes](/zh-CN/docs/Web/CSS/CSS_Shapes)
-- [Overview of CSS Shapes](/zh-CN/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
+- [CSS Shapes](/zh-CN/docs/Web/CSS/CSS_shapes)
+- [Overview of CSS Shapes](/zh-CN/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
 - {{cssxref("&lt;basic-shape&gt;")}}
 - {{cssxref("shape-outside")}}
 - {{cssxref("shape-margin")}}

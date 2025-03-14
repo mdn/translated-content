@@ -1,8 +1,6 @@
 ---
 title: Math.log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/log
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/log
 ---
 
 {{JSRef}}
@@ -13,7 +11,21 @@ La función **`Math.log()`** devuelve la base neutral de un número (base {{jsxr
 
 La función en JavaScrcrip **`Math.log()`** es equivalente a _ln(x)_ en matematicas.
 
-{{EmbedInteractiveExample("pages/js/math-log.html")}}
+{{InteractiveExample("JavaScript Demo: Math.log()")}}
+
+```js interactive-example
+function getBaseLog(x, y) {
+  return Math.log(y) / Math.log(x);
+}
+
+// 2 x 2 x 2 = 8
+console.log(getBaseLog(2, 8));
+// Expected output: 3
+
+// 5 x 5 x 5 x 5 = 625
+console.log(getBaseLog(5, 625));
+// Expected output: 4
+```
 
 ## Sintaxis
 
@@ -44,8 +56,8 @@ If you need the natural log of 2 or 10, use the constants {{jsxref("Math.LN2")}}
 
 ```js
 Math.log(-1); // NaN, out of range
-Math.log(0);  // -Infinity
-Math.log(1);  // 0
+Math.log(0); // -Infinity
+Math.log(1); // 0
 Math.log(10); // 2.302585092994046
 ```
 
@@ -65,9 +77,9 @@ If you run `getBaseLog(10, 1000)` it returns `2.9999999999999996` due to floatin
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.log")}}
+{{Compat}}
 
 ## See also
 

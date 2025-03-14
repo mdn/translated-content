@@ -18,8 +18,8 @@ HTML 键盘输入元素 (**\<kbd>**) 用于表示用户输入，它将产生一�
    <td><a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
   </tr>
   <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
+   <th scope="row">标签省略</th>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">Permitted parent elements</th>
@@ -34,12 +34,15 @@ HTML 键盘输入元素 (**\<kbd>**) 用于表示用户输入，它将产生一�
 
 ## 属性
 
-该元素仅支持[全局属性](/zh-CN/docs/HTML/Global_attributes).
+该元素仅支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes).
 
 ## 示例
 
 ```html
-<p>Type the following in the Run dialog: <kbd>cmd</kbd><br />Then click the OK button.</p>
+<p>
+  Type the following in the Run dialog: <kbd>cmd</kbd><br />Then click the OK
+  button.
+</p>
 
 <p>Save the document by pressing <kbd>Ctrl</kbd> + <kbd>S</kbd></p>
 ```

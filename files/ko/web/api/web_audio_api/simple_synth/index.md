@@ -1,17 +1,8 @@
 ---
-title: '예제와 튜토리얼: 간단한 신시사이저 키보드'
+title: "예제와 튜토리얼: 간단한 신시사이저 키보드"
 slug: Web/API/Web_Audio_API/Simple_synth
-tags:
-  - Audio
-  - Example
-  - Guide
-  - Media
-  - Oscillator
-  - Piano
-  - Synthesizer
-  - Tutorial
-  - Web Audio API
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 이 문서는 마우스를 사용해 플레이할 수 있는 비디오 키보드의 데모와 코드를 보여줍니다. 이 키보드는 표준 파형들과 사용자 정의 파형 중에서 선택할 수 있는 기능을 제공하고, 키보드 아래에 있는 볼륨 슬라이더를 사용하여 메인 gain을 제어할 수 있습니다. 이 예제는 다음의 Web API 인터페이스를 사용합니다: {{domxref("AudioContext")}}, {{domxref("OscillatorNode")}}, {{domxref("PeriodicWave")}}, 그리고 {{domxref("GainNode")}}.
@@ -48,16 +39,23 @@ tags:
 <div class="settingsBar">
   <div class="left">
     <span>Volume: </span>
-    <input type="range" min="0.0" max="1.0" step="0.01"
-        value="0.5" list="volumes" name="volume">
+    <input
+      type="range"
+      min="0.0"
+      max="1.0"
+      step="0.01"
+      value="0.5"
+      list="volumes"
+      name="volume" />
     <datalist id="volumes">
-      <option value="0.0" label="Mute">
-      <option value="1.0" label="100%">
+      <option value="0.0" label="Mute"></option>
+      <option value="1.0" label="100%"></option>
     </datalist>
   </div>
+</div>
 ```
 
-우리는 기본값을 0.5로 명시하고, ID가 맞는 옵션 목록을 찾기 위해 {{htmlattrxref("name")}} 특성을 사용하여 range에 연결된 {{HTMLElement("datalist")}} 요소를 제공합니다; 이 경우, 데이터셋은 `"volume"`이라는 이름입니다. 이는 우리로 하여금 브라우저가 옵션적으로 어떤 방식으로 디스플레이하기를 선택할지도 모르는 특별한 문자열과 일반적인 값의 집합을 제공하게 합니다; 우리는 값 0.0 ("무음")과 1.0 ("100%")에 대해 이름을 제공합니다.
+우리는 기본값을 0.5로 명시하고, ID가 맞는 옵션 목록을 찾기 위해 [`name`](/ko/docs/Web/HTML/Global_attributes#name) 특성을 사용하여 range에 연결된 {{HTMLElement("datalist")}} 요소를 제공합니다; 이 경우, 데이터셋은 `"volume"`이라는 이름입니다. 이는 우리로 하여금 브라우저가 옵션적으로 어떤 방식으로 디스플레이하기를 선택할지도 모르는 특별한 문자열과 일반적인 값의 집합을 제공하게 합니다; 우리는 값 0.0 ("무음")과 1.0 ("100%")에 대해 이름을 제공합니다.
 
 ##### 파형 선택기
 
@@ -95,7 +93,11 @@ tags:
 
 .key {
   cursor: pointer;
-  font: 16px "Open Sans", "Lucida Grande", "Arial", sans-serif;
+  font:
+    16px "Open Sans",
+    "Lucida Grande",
+    "Arial",
+    sans-serif;
   border: 1px solid black;
   border-radius: 5px;
   width: 20px;
@@ -140,7 +142,11 @@ tags:
 
 .settingsBar {
   padding-top: 8px;
-  font: 14px "Open Sans", "Lucida Grande", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Lucida Grande",
+    "Arial",
+    sans-serif;
   position: relative;
   vertical-align: middle;
   width: 100%;
@@ -155,7 +161,8 @@ tags:
   vertical-align: middle;
 }
 
-.left span, .left input {
+.left span,
+.left input {
   vertical-align: middle;
 }
 
@@ -247,70 +254,70 @@ function createNoteTable() {
 ... 간결성을 위해 몇몇 옥타브는 생략되었습니다 ...
 
 ```js hidden
-  noteFreq[2]["C"] = 65.406391325149658;
-  noteFreq[2]["C#"] = 69.295657744218024;
-  noteFreq[2]["D"] = 73.416191979351890;
-  noteFreq[2]["D#"] = 77.781745930520227;
-  noteFreq[2]["E"] = 82.406889228217482;
-  noteFreq[2]["F"] = 87.307057858250971;
-  noteFreq[2]["F#"] = 92.498605677908599;
-  noteFreq[2]["G"] = 97.998858995437323;
-  noteFreq[2]["G#"] = 103.826174394986284;
-  noteFreq[2]["A"] = 110.000000000000000;
-  noteFreq[2]["A#"] = 116.540940379522479;
-  noteFreq[2]["B"] = 123.470825314031027;
+noteFreq[2]["C"] = 65.406391325149658;
+noteFreq[2]["C#"] = 69.295657744218024;
+noteFreq[2]["D"] = 73.41619197935189;
+noteFreq[2]["D#"] = 77.781745930520227;
+noteFreq[2]["E"] = 82.406889228217482;
+noteFreq[2]["F"] = 87.307057858250971;
+noteFreq[2]["F#"] = 92.498605677908599;
+noteFreq[2]["G"] = 97.998858995437323;
+noteFreq[2]["G#"] = 103.826174394986284;
+noteFreq[2]["A"] = 110.0;
+noteFreq[2]["A#"] = 116.540940379522479;
+noteFreq[2]["B"] = 123.470825314031027;
 
-  noteFreq[3]["C"] = 130.812782650299317;
-  noteFreq[3]["C#"] = 138.591315488436048;
-  noteFreq[3]["D"] = 146.832383958703780;
-  noteFreq[3]["D#"] = 155.563491861040455;
-  noteFreq[3]["E"] = 164.813778456434964;
-  noteFreq[3]["F"] = 174.614115716501942;
-  noteFreq[3]["F#"] = 184.997211355817199;
-  noteFreq[3]["G"] = 195.997717990874647;
-  noteFreq[3]["G#"] = 207.652348789972569;
-  noteFreq[3]["A"] = 220.000000000000000;
-  noteFreq[3]["A#"] = 233.081880759044958;
-  noteFreq[3]["B"] = 246.941650628062055;
+noteFreq[3]["C"] = 130.812782650299317;
+noteFreq[3]["C#"] = 138.591315488436048;
+noteFreq[3]["D"] = 146.83238395870378;
+noteFreq[3]["D#"] = 155.563491861040455;
+noteFreq[3]["E"] = 164.813778456434964;
+noteFreq[3]["F"] = 174.614115716501942;
+noteFreq[3]["F#"] = 184.997211355817199;
+noteFreq[3]["G"] = 195.997717990874647;
+noteFreq[3]["G#"] = 207.652348789972569;
+noteFreq[3]["A"] = 220.0;
+noteFreq[3]["A#"] = 233.081880759044958;
+noteFreq[3]["B"] = 246.941650628062055;
 
-  noteFreq[4]["C"] = 261.625565300598634;
-  noteFreq[4]["C#"] = 277.182630976872096;
-  noteFreq[4]["D"] = 293.664767917407560;
-  noteFreq[4]["D#"] = 311.126983722080910;
-  noteFreq[4]["E"] = 329.627556912869929;
-  noteFreq[4]["F"] = 349.228231433003884;
-  noteFreq[4]["F#"] = 369.994422711634398;
-  noteFreq[4]["G"] = 391.995435981749294;
-  noteFreq[4]["G#"] = 415.304697579945138;
-  noteFreq[4]["A"] = 440.000000000000000;
-  noteFreq[4]["A#"] = 466.163761518089916;
-  noteFreq[4]["B"] = 493.883301256124111;
+noteFreq[4]["C"] = 261.625565300598634;
+noteFreq[4]["C#"] = 277.182630976872096;
+noteFreq[4]["D"] = 293.66476791740756;
+noteFreq[4]["D#"] = 311.12698372208091;
+noteFreq[4]["E"] = 329.627556912869929;
+noteFreq[4]["F"] = 349.228231433003884;
+noteFreq[4]["F#"] = 369.994422711634398;
+noteFreq[4]["G"] = 391.995435981749294;
+noteFreq[4]["G#"] = 415.304697579945138;
+noteFreq[4]["A"] = 440.0;
+noteFreq[4]["A#"] = 466.163761518089916;
+noteFreq[4]["B"] = 493.883301256124111;
 
-  noteFreq[5]["C"] = 523.251130601197269;
-  noteFreq[5]["C#"] = 554.365261953744192;
-  noteFreq[5]["D"] = 587.329535834815120;
-  noteFreq[5]["D#"] = 622.253967444161821;
-  noteFreq[5]["E"] = 659.255113825739859;
-  noteFreq[5]["F"] = 698.456462866007768;
-  noteFreq[5]["F#"] = 739.988845423268797;
-  noteFreq[5]["G"] = 783.990871963498588;
-  noteFreq[5]["G#"] = 830.609395159890277;
-  noteFreq[5]["A"] = 880.000000000000000;
-  noteFreq[5]["A#"] = 932.327523036179832;
-  noteFreq[5]["B"] = 987.766602512248223;
+noteFreq[5]["C"] = 523.251130601197269;
+noteFreq[5]["C#"] = 554.365261953744192;
+noteFreq[5]["D"] = 587.32953583481512;
+noteFreq[5]["D#"] = 622.253967444161821;
+noteFreq[5]["E"] = 659.255113825739859;
+noteFreq[5]["F"] = 698.456462866007768;
+noteFreq[5]["F#"] = 739.988845423268797;
+noteFreq[5]["G"] = 783.990871963498588;
+noteFreq[5]["G#"] = 830.609395159890277;
+noteFreq[5]["A"] = 880.0;
+noteFreq[5]["A#"] = 932.327523036179832;
+noteFreq[5]["B"] = 987.766602512248223;
 
-  noteFreq[6]["C"] = 1046.502261202394538;
-  noteFreq[6]["C#"] = 1108.730523907488384;
-  noteFreq[6]["D"] = 1174.659071669630241;
-  noteFreq[6]["D#"] = 1244.507934888323642;
-  noteFreq[6]["E"] = 1318.510227651479718;
-  noteFreq[6]["F"] = 1396.912925732015537;
-  noteFreq[6]["F#"] = 1479.977690846537595;
-  noteFreq[6]["G"] = 1567.981743926997176;
-  noteFreq[6]["G#"] = 1661.218790319780554;
-  noteFreq[6]["A"] = 1760.000000000000000;
-  noteFreq[6]["A#"] = 1864.655046072359665;
-  noteFreq[6]["B"] = 1975.533205024496447;
+noteFreq[6]["C"] = 1046.502261202394538;
+noteFreq[6]["C#"] = 1108.730523907488384;
+noteFreq[6]["D"] = 1174.659071669630241;
+noteFreq[6]["D#"] = 1244.507934888323642;
+noteFreq[6]["E"] = 1318.510227651479718;
+noteFreq[6]["F"] = 1396.912925732015537;
+noteFreq[6]["F#"] = 1479.977690846537595;
+noteFreq[6]["G"] = 1567.981743926997176;
+noteFreq[6]["G#"] = 1661.218790319780554;
+noteFreq[6]["A"] = 1760.0;
+noteFreq[6]["A#"] = 1864.655046072359665;
+noteFreq[6]["B"] = 1975.533205024496447;
 ```
 
 ```js
@@ -383,14 +390,8 @@ function createNoteTable() {
 
 준비된 이 표를 가지고, 우리는 특정한 옥타브에 있는 주어진 음에 대한 주파수를 꽤 쉽게 찾을 수 있습니다. 만약 우리가 옥타브 1의 G# 음의 주파수를 원한다면, 우리는 `noteFreq[1]["G#"]`을 사용하여 결과로 51.9의 값을 얻습니다.
 
-> **참고:** 위의 예시 표의 값들은 소숫점 둘째 자리까지 반올림되었습니다.
-
-<div class="hidden"><p>This polyfill stands in when <code>Object.entries()</code> doesn't exist.</p><pre class="brush: js">if (!Object.entries) {
-    Object.entries = function entries(O) {
-        return reduce(keys(O), (e, k) => concat(e, typeof k === 'string' &#x26;&#x26; isEnumerable(O, k) ? [[k, O[k]]] : []), []);
-    };
-}
-</pre></div>
+> [!NOTE]
+> 위의 예시 표의 값들은 소숫점 둘째 자리까지 반올림되었습니다.
 
 ### 키보드 만들기
 
@@ -410,12 +411,12 @@ function setup() {
   // our purposes we don't need them. Each octave is inserted
   // into a <div> of class "octave".
 
-  noteFreq.forEach(function(keys, idx) {
+  noteFreq.forEach(function (keys, idx) {
     let keyList = Object.entries(keys);
     let octaveElem = document.createElement("div");
     octaveElem.className = "octave";
 
-    keyList.forEach(function(key) {
+    keyList.forEach(function (key) {
       if (key[0].length == 1) {
         octaveElem.appendChild(createKey(key[0], idx, key[1]));
       }
@@ -424,14 +425,16 @@ function setup() {
     keyboard.appendChild(octaveElem);
   });
 
-  document.querySelector("div[data-note='B'][data-octave='5']").scrollIntoView(false);
+  document
+    .querySelector("div[data-note='B'][data-octave='5']")
+    .scrollIntoView(false);
 
   sineTerms = new Float32Array([0, 0, 1, 0, 1]);
   cosineTerms = new Float32Array(sineTerms.length);
   customWaveform = audioContext.createPeriodicWave(cosineTerms, sineTerms);
 
-  for (i=0; i<9; i++) {
-      oscList[i] = {};
+  for (i = 0; i < 9; i++) {
+    oscList[i] = {};
   }
 }
 
@@ -439,7 +442,7 @@ setup();
 ```
 
 1. 음의 이름과 옥타브를 주파수에 대응(map)시키는 표는 `createNoteTable()`를 호출함으로써 생성됩니다.
-2. 메인 gain 제어에서 {{event("change")}} 이벤트를 다루기 위해 {{domxref("EventTarget.addEventListener", "addEventListener()")}}를 호출함으로써 이벤트 핸들러가 생성되었습니다. 이것은 메인 gain 노드의 음량을 제어의 새 값으로 업데이트 합니다.
+2. 메인 gain 제어에서 {{domxref("HTMLElement/change_event", "change")}} 이벤트를 다루기 위해 {{domxref("EventTarget.addEventListener", "addEventListener()")}}를 호출함으로써 이벤트 핸들러가 생성되었습니다. 이것은 메인 gain 노드의 음량을 제어의 새 값으로 업데이트 합니다.
 3. 다음으로, 음 주파수 표에 있는 각 옥타브에 대해 순회합니다. 각 옥타브에 대해, 우리는 그 옥타브에 있는 음들의 목록을 얻기 위해 {{jsxref("Object.entries()")}}를 사용합니다.
 4. 그 옥타브의 음들을 포함하는 {{HTMLElement("div")}}를 생성하고 (이렇게 함으로써 우리는 옥타브들 사이에 약간의 공간을 가질 수 있습니다), 이것의 클래스명을 "octave"로 설정합니다.
 5. 옥타브에 있는 각 건반에 대해, 우리는 음의 이름이 한 문자보다 많은지 검사합니다. 우리는 이것을 생략하는데, 왜냐하면 우리는 이 예제에서 샤프(#) 음들을 무시하기 때문입니다. 만약 음의 이름이 단지 한 문자라면, 우리는 `createKey()`를 호출하는데, 이는 음의 문자열, 옥타브, 그리고 주파수를 명시합니다. 이 반환된 요소는 단계 4에서 생성된 옥타브 요소에 추가됩니다.
@@ -474,11 +477,11 @@ function createKey(note, octave, freq) {
 }
 ```
 
-건반과 건반의 라벨을 표현할 요소를 생성한 이후, 건반의 클래스를 (외양을 설정하는) "key"로 설정함으로써 건반의 요소를 설정합니다. 그리고 나서 건반의 옥타브(`data-octave` 특성), 재생할 음을 표현하는 문자열(`data-note` 특성), 헤르츠로 표현되는 주파수(`data-frequency` 특성)를 포함하는 {{htmlattrxref("data-*")}} 특성을 추가합니다. 이것은 우리로 하여금 이벤트를 다룰 때 필요한 경우 쉽게 이 정보를 가져올 수 있도록 할 것입니다.
+건반과 건반의 라벨을 표현할 요소를 생성한 이후, 건반의 클래스를 (외양을 설정하는) "key"로 설정함으로써 건반의 요소를 설정합니다. 그리고 나서 건반의 옥타브(`data-octave` 특성), 재생할 음을 표현하는 문자열(`data-note` 특성), 헤르츠로 표현되는 주파수(`data-frequency` 특성)를 포함하는 [`data-*`](/ko/docs/Web/HTML/Global_attributes#data-*) 특성을 추가합니다. 이것은 우리로 하여금 이벤트를 다룰 때 필요한 경우 쉽게 이 정보를 가져올 수 있도록 할 것입니다.
 
 ### 음악 만들기
 
-#### 음 재생하기
+#### 음색 재생하기
 
 `playTone()` 함수의 역할은 주어진 주파수의 음을 재생하는 것입니다. 이것은 적절한 음을 재생하는 키보드 건반의 이벤트 핸들러에 의해 사용될 것입니다.
 
@@ -510,7 +513,7 @@ oscillator의 주파수는 {{domxref("Oscillator.frequency")}} {{domxref("AudioP
 
 #### 음 재생하기
 
-{{event("mousedown")}} 이나 {{domxref("mouseover")}} 이벤트가 건반에서 발생했을 때, 우리는 대응하는 음을 재생하기를 원합니다. `notePressed()` 함수는 이 이벤트들에 대한 이벤트 핸들러로 사용됩니다.
+{{domxref("Element/mousedown_event", "mousedown")}} 이나 {{domxref("Element/mouseover_event", "mouseover")}} 이벤트가 건반에서 발생했을 때, 우리는 대응하는 음을 재생하기를 원합니다. `notePressed()` 함수는 이 이벤트들에 대한 이벤트 핸들러로 사용됩니다.
 
 ```js
 function notePressed(event) {
@@ -526,9 +529,9 @@ function notePressed(event) {
 }
 ```
 
-두 가지 이유로, 우리는 주요 마우스 버튼이 눌러졌는지를 확인함으로써 시작합니다. 첫째로, 우리는 오직 주요 마우스 버튼이 노트 재생을 할 수 있게 허용하기를 원합니다. 둘째로, 그리고 더욱 중요하게, 우리는 유저가 음에서 음으로 드래그하는 경우에 대해 {{event("mouseover")}}를 다루기 위해 이것을 사용하고, 우리는 오직 마우스가 요소에 들어왔을 때 눌러졌다면 노트를 재생하기를 원합니다.
+두 가지 이유로, 우리는 주요 마우스 버튼이 눌러졌는지를 확인함으로써 시작합니다. 첫째로, 우리는 오직 주요 마우스 버튼이 노트 재생을 할 수 있게 허용하기를 원합니다. 둘째로, 그리고 더욱 중요하게, 우리는 유저가 음에서 음으로 드래그하는 경우에 대해 {{domxref("Element/mouseover_event", "mouseover")}}를 다루기 위해 이것을 사용하고, 우리는 오직 마우스가 요소에 들어왔을 때 눌러졌다면 노트를 재생하기를 원합니다.
 
-만약 마우스 버튼이 실제로 눌러졌다면, 우리는 눌러진 건반의 {{htmlattrxref("dataset")}} 특성을 얻습니다; 이는 요소의 사용자 정의 데이터 특성에 접근하는 것을 쉽게 해 줍니다. 우리는 `data-pressed` 특성을 찾습니다; 만약 (음이 이미 재생되고 있지 않다는 것을 나타내는) 그것이 없다면, 요소의 `data-frequency` 특성 값을 전달하며, 우리는 음을 재생하기 위해 `playTone()`을 호출합니다. 반환된 oscillator는 `oscList`에 미래의 참조를 위해 저장되고, `data-pressed`는 음이 재생되고 있다는 것을 나타내기 위해 `yes`로 설정되어 다음 번에 이것이 호출되었을 때 이것을 다시 시작하지 않습니다.
+만약 마우스 버튼이 실제로 눌러졌다면, 우리는 눌러진 건반의 [`dataset`](/ko/docs/Web/HTML/Global_attributes#dataset) 특성을 얻습니다; 이는 요소의 사용자 정의 데이터 특성에 접근하는 것을 쉽게 해 줍니다. 우리는 `data-pressed` 특성을 찾습니다; 만약 (음이 이미 재생되고 있지 않다는 것을 나타내는) 그것이 없다면, 요소의 `data-frequency` 특성 값을 전달하며, 우리는 음을 재생하기 위해 `playTone()`을 호출합니다. 반환된 oscillator는 `oscList`에 미래의 참조를 위해 저장되고, `data-pressed`는 음이 재생되고 있다는 것을 나타내기 위해 `yes`로 설정되어 다음 번에 이것이 호출되었을 때 이것을 다시 시작하지 않습니다.
 
 #### 음 멈추기
 
@@ -551,11 +554,11 @@ function noteReleased(event) {
 
 #### 메인 볼륨 변경하기
 
-세팅 바의 볼륨 슬라이더는 메인 gain 노드의 gain 값을 변경하기 위한 간단한 인터페이스를 제공하는데, 이로써 재생되는 모든 음의 세기를 변경합니다. `changeVolume()` 메서드는 슬라이더의 {{event("change")}} 이벤트에 대한 핸들러입니다.
+세팅 바의 볼륨 슬라이더는 메인 gain 노드의 gain 값을 변경하기 위한 간단한 인터페이스를 제공하는데, 이로써 재생되는 모든 음의 세기를 변경합니다. `changeVolume()` 메서드는 슬라이더의 {{domxref("HTMLElement/change_event", "change")}} 이벤트에 대한 핸들러입니다.
 
 ```js
 function changeVolume(event) {
-  mainGainNode.gain.value = volumeControl.value
+  mainGainNode.gain.value = volumeControl.value;
 }
 ```
 

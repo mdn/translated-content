@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.getReceivers()
 slug: Web/API/RTCPeerConnection/getReceivers
-translation_of: Web/API/RTCPeerConnection/getReceivers
 ---
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}

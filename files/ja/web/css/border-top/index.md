@@ -1,29 +1,69 @@
 ---
 title: border-top
 slug: Web/CSS/border-top
+l10n:
+  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
 {{CSSRef}}
 
 **`border-top`** は[一括指定](/ja/docs/Web/CSS/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の[境界](/ja/docs/Web/CSS/border)のプロパティをすべて設定します。</span>
 
-{{EmbedInteractiveExample("pages/css/border-top.html")}}
+{{InteractiveExample("CSS Demo: border-top")}}
 
-他の一括指定プロパティと同様に、 `border-top` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。つまり・・・
+```css interactive-example-choice
+border-top: solid;
+```
+
+```css interactive-example-choice
+border-top: dashed red;
+```
+
+```css interactive-example-choice
+border-top: 1rem solid;
+```
+
+```css interactive-example-choice
+border-top: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border-top: 4mm ridge rgba(211, 220, 50, 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
+
+他の一括指定プロパティと同様に、 `border-top` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。次のコードを考えてください。
 
 ```css
 border-top-style: dotted;
 border-top: thick green;
 ```
 
-・・・は、実際には以下と同じです・・・
+これは、実際には以下と同じです。
 
 ```css
 border-top-style: dotted;
 border-top: none thick green;
 ```
 
-・・・そして、 `border-top` の前で設定された {{cssxref("border-top-style")}} の値は無視されます。 {{cssxref("border-top-style")}} の既定値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
+`border-top` の前で設定された {{cssxref("border-top-style")}} の値は無視されます。 {{cssxref("border-top-style")}} の既定値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
 
 ## 構成要素のプロパティ
 
@@ -44,6 +84,7 @@ border-top: medium dashed green;
 border-top: inherit;
 border-top: initial;
 border-top: revert;
+border-top: revert-layer;
 border-top: unset;
 ```
 
@@ -68,14 +109,12 @@ border-top: unset;
 
 ## 例
 
-<h3 id="Applying_a_top_border">上側の境界の適用</h3>
+### 上側の境界の適用
 
 #### HTML
 
 ```html
-<div>
-  このボックスには上側に境界線があります。
-</div>
+<div>このボックスには上側に境界線があります。</div>
 ```
 
 #### CSS

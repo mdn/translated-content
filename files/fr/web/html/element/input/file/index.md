@@ -5,17 +5,37 @@ slug: Web/HTML/Element/input/file
 
 {{HTMLSidebar}}
 
-Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"file"`** permettent à un utilisateur de sélectionner un ou plusieurs fichiers depuis leur appareil et de les _uploader_ vers un serveur via [un formulaire](/fr/docs/Web/Guide/HTML/Formulaires) ou grâce à du code JavaScript [via l'API _File_](/fr/docs/Using_files_from_web_applications).
+Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"file"`** permettent à un utilisateur de sélectionner un ou plusieurs fichiers depuis leur appareil et de les _uploader_ vers un serveur via [un formulaire](/fr/docs/Learn/Forms) ou grâce à du code JavaScript [via l'API _File_](/fr/docs/Web/API/File_API/Using_files_from_web_applications).
 
-{{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;file&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="avatar">Choose a profile picture:</label>
+
+<input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## Valeur
 
-L'attribut {{htmlattrxref("value", "input")}} contient une chaîne de caractères ({{domxref("DOMString")}}) qui représente le chemin du/des fichier(s) sélectionné(s). Les autres fichiers peuvent être identifiés grâce à la propriété `HTMLInputElement.files`.
+L'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) contient une chaîne de caractères ({{domxref("DOMString")}}) qui représente le chemin du/des fichier(s) sélectionné(s). Les autres fichiers peuvent être identifiés grâce à la propriété `HTMLInputElement.files`.
 
-> **Note :**
+> [!NOTE]
 >
-> 1. Si plusieurs fichiers sont sélectionnés, la chaîne de caractères représente le chemin du premier fichier sélectionné. Il est possible d'accéder aux autres fichiers en JavaScript [grâce à la propriété `FileList`](/fr/docs/Using_files_from_web_applications#getting_information_about_selected_files).
+> 1. Si plusieurs fichiers sont sélectionnés, la chaîne de caractères représente le chemin du premier fichier sélectionné. Il est possible d'accéder aux autres fichiers en JavaScript [grâce à la propriété `FileList`](/fr/docs/Web/API/File_API/Using_files_from_web_applications#getting_information_about_selected_files).
 > 2. Si aucun fichier n'est sélectionné, la chaîne de caractères sera vide (`""`).
 > 3. La chaîne de caractères [est préfixée avec `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly) afin d'éviter la fuite d'informations sensibles concernant la structure des fichiers de l'utilisateur.
 
@@ -23,35 +43,37 @@ L'attribut {{htmlattrxref("value", "input")}} contient une chaîne de caractère
 
 En complément des attributs partagés par l'ensemble des éléments {{HTMLElement("input")}}, les champs de type `file` peuvent également utiliser les attributs suivants :
 
-| Attribut                       | Description                                                                                               |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| Attribut                | Description                                                                                               |
+| ----------------------- | --------------------------------------------------------------------------------------------------------- |
 | [`accept`](#accept)     | Un ou plusieurs identifiants de type de fichier décrivants les types de fichier autorisés.                |
-| [`capture`](#capture)     | La source à utiliser pour capturer des images ou des vidéos.                                              |
-| [`files`](#files)     | Un objet {{domxref("FileList")}} qui liste les fichiers choisis                                  |
+| [`capture`](#capture)   | La source à utiliser pour capturer des images ou des vidéos.                                              |
+| [`files`](#files)       | Un objet {{domxref("FileList")}} qui liste les fichiers choisis                                           |
 | [`multiple`](#multiple) | Un attribut booléen qui, lorsqu'il est présent, indique que plusieurs fichiers peuvent être sélectionnés. |
 
-### {{htmlattrdef("accept")}}
+### `accept`
 
 Une chaîne de caractères qui définit les types de fichier qui devraient être acceptés. Cette chaîne est une liste d'identifiants de type de fichier (cf. ci-après) séparés par des virgules. Un fichier pouvant avoir un format selon différentes extensions et types MIME, il est souvent utile de cibler plusieurs identifiants pour la bonne sélection du fichier.
 
 Les fichiers Microsoft Word, par exemple, peuvent être identifiés de différentes façons et, dans un site avec un champ qui accepte les fichiers Word, on pourra écrire :
 
 ```html
-<input type="file" id="docpicker"
-  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+<input
+  type="file"
+  id="docpicker"
+  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 ```
 
-### {{htmlattrdef("capture")}}
+### `capture`
 
 Une chaîne de caractères qui indique la caméra à utiliser pour capturer des photos et des vidéos si l'attribut `accept` indique que le fichier est de ce type. Lorsque `capture` vaut `"user"`, cela indique que la caméra qui fait face à l'utilisateur devrait être utilisée. Si l'attribut vaut `"environment"`, c'est la caméra qui est tournée vers l'extérieur devrait être utilisée. Si l'attribut est absent, l'agent utilisateur pourra décider de laquelle utiliser. Si la caméra souhaitée par l'attribut n'est pas disponible, l'agent utilisateur pourra utiliser une autre caméra de l'appareil.
 
 > **Note :** `capture` était auparavant un attribut booléen qui, lorsqu'il était présent, indiquait que les capteurs de l'appareil (caméra/micro) devaient être utilisés plutôt qu'un fichier.
 
-### {{htmlattrdef("files")}}
+### `files`
 
-Un objet {{domxref("FileList")}} qui liste chaque fichier sélectionné. Cette liste n'a qu'un seul élément, sauf si {{htmlattrxref("multiple", "input/file")}} est indiqué.
+Un objet {{domxref("FileList")}} qui liste chaque fichier sélectionné. Cette liste n'a qu'un seul élément, sauf si [`multiple`](#multiple) est indiqué.
 
-### {{htmlattrdef("multiple")}}
+### `multiple`
 
 Lorsque cet attribut booléen est indiqué, le champ peut être utilisé afin de sélectionner plus d'un fichier.
 
@@ -59,15 +81,16 @@ Lorsque cet attribut booléen est indiqué, le champ peut être utilisé afin de
 
 En complément des attributs précédents, les éléments `<input type="file">` peuvent utiliser les attributs spécifiques suivants. Ces attributs ne sont pas standard et ne devraient donc pas être utilisés.
 
-| Attribut                               | Description                                                                                                                               |
-| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Attribut                              | Description                                                                                                                        |
+| ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | [`webkitdirectory`](#webkitdirectory) | Un attribut booléen qui indique si l'utilisateur peut choisir un répertoire (ou plusieurs si [`multiple`](#multiple) est présent). |
 
-### {{htmlattrdef("webkitdirectory")}} {{non-standard_inline}}
+### `webkitdirectory` {{non-standard_inline}}
 
 L'attribut booléen `webkitdirectory`, lorsqu'il est présent, indique que le contrôle permet de sélectionner un/des répertoires plutôt qu'un/des fichiers. Voir {{domxref("HTMLInputElement.webkitdirectory")}} pour plus de détails et d'exemples.
 
-> **Note :** Bien que cet attribut ait initialement été implémenté pour les navigateurs WebKit, `webkitdirectory` est utilisable avec Microsoft Edge et pour Firefox 50 et supérieurs. Toutefois, bien que la prise en charge soit assez vaste, cet attribut reste non-standard et ne doit pas être utilisé.
+> [!NOTE]
+> Bien que cet attribut ait initialement été implémenté pour les navigateurs WebKit, `webkitdirectory` est utilisable avec Microsoft Edge et pour Firefox 50 et supérieurs. Toutefois, bien que la prise en charge soit assez vaste, cet attribut reste non-standard et ne doit pas être utilisé.
 
 ## Identifiants de type de fichier
 
@@ -82,7 +105,7 @@ Un identifiant de type de fichier est une chaîne de caractères qui décrit le 
 L'attribut `accept` prend comme valeur une chaîne de caractères composée d'un ou plusieurs identifiants de type, séparés par des virgules. Ainsi, si un sélecteur de fichier doit permettre de sélectionner des images ou des documents PDF, on pourra écrire :
 
 ```html
-<input type="file" accept="image/*,.pdf">
+<input type="file" accept="image/*,.pdf" />
 ```
 
 ## Utiliser `<input type="file">`
@@ -91,13 +114,13 @@ L'attribut `accept` prend comme valeur une chaîne de caractères composée d'un
 
 ```html
 <form method="post" enctype="multipart/form-data">
- <div>
-   <label for="file">Sélectionner le fichier à envoyer</label>
-   <input type="file" id="file" name="file" multiple>
- </div>
- <div>
-   <button>Envoyer</button>
- </div>
+  <div>
+    <label for="file">Sélectionner le fichier à envoyer</label>
+    <input type="file" id="file" name="file" multiple />
+  </div>
+  <div>
+    <button>Envoyer</button>
+  </div>
 </form>
 ```
 
@@ -111,11 +134,12 @@ Ce fragment de code HTML produira le résultat suivant :
 
 {{EmbedLiveSample('Un_exemple_simple', 650, 60)}}
 
-> **Note :** Vous pouvez également trouver cet exemple sur GitHub — [avec le code source](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html) et [la démonstration](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
+> [!NOTE]
+> Vous pouvez également trouver cet exemple sur GitHub — [avec le code source](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html) et [la démonstration](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
 
 Quel que soit l'appareil ou le système d'exploitation de l'utilisateur, l'élément `<input type="file">` fournit un bouton qui ouvre un sélecteur de fichier permettant de choisir un fichier.
 
-Lorsque l'attribut {{htmlattrxref("multiple", "input")}} est utilisé (comme dans l'exemple précédent), cela signifie que plusieurs fichiers peuvent être sélectionnés de façon simultanée. L'utilisateur doit alors pouvoir choisir plusieurs fichiers depuis le sélecteur de fichier (par exemple en maintenant la touche <kbd>Shift</kbd> ou <kbd>Control</kbd> puis en cliquant). Si on souhaite qu'un seul fichier puisse être envoyé, il suffit de ne pas utiliser l'attribut `multiple`.
+Lorsque l'attribut [`multiple`](/fr/docs/Web/HTML/Element/input#multiple) est utilisé (comme dans l'exemple précédent), cela signifie que plusieurs fichiers peuvent être sélectionnés de façon simultanée. L'utilisateur doit alors pouvoir choisir plusieurs fichiers depuis le sélecteur de fichier (par exemple en maintenant la touche <kbd>Shift</kbd> ou <kbd>Control</kbd> puis en cliquant). Si on souhaite qu'un seul fichier puisse être envoyé, il suffit de ne pas utiliser l'attribut `multiple`.
 
 Lorsqu'on envoie le formulaire de l'exemple, le nom de chaque fichier sera ajouté aux paramètres de l'URL de la façon suivante : `?file=fichier1.txt&file=fichier2.txt`
 
@@ -129,16 +153,17 @@ Chaque objet `File` contient les informations suivantes :
 - `lastModified` : un nombre représentant la date à laquelle le fichier a été modifié pour la dernière fois (sous la forme d'un horodatage UNIX).
 - `lastModifiedDate` : un objet {{domxref("Date")}} qui représente la date et l'heure à laquelle le fichier a été modifié pour la dernière fois.
 - `size` : un nombre qui représente la taille du fichier en octets.
-- `type` : une chaîne de caractères ({{domxref("DOMString")}}) qui représente [le type MIME](/fr/docs/Glossaire/Type_MIME) du fichier.
-- `webkitRelativePath`{{non-standard_inline}} : une chaîne de caractères qui indique l'emplacement relatif du fichier par rapport au dossier de base indiqué par l'attribut {{htmlattrxref("webkitdirectory", "input")}}. _Attention, cette fonctionnalité est non-standard et doit être utilisée avec précaution._
+- `type` : une chaîne de caractères ({{domxref("DOMString")}}) qui représente [le type MIME](/fr/docs/Glossary/MIME_type) du fichier.
+- `webkitRelativePath`{{non-standard_inline}} : une chaîne de caractères qui indique l'emplacement relatif du fichier par rapport au dossier de base indiqué par l'attribut [`webkitdirectory`](/fr/docs/Web/HTML/Element/input#webkitdirectory). _Attention, cette fonctionnalité est non-standard et doit être utilisée avec précaution._
 
-> **Note :** Dans la plupart des navigateurs récents, il est possible de récupérer et de modifier l'attribut IDL `HTMLInputElement.files`. Pour Firefox, cela a été ajouté avec la version 57 (cf. {{bug(1384030)}}).
+> [!NOTE]
+> Dans la plupart des navigateurs récents, il est possible de récupérer et de modifier l'attribut IDL `HTMLInputElement.files`. Pour Firefox, cela a été ajouté avec la version 57 (cf. [bug Firefox 1384030](https://bugzil.la/1384030)).
 
 ### Restreindre les types de fichiers acceptés
 
-Il arrive souvent qu'on souhaite sélectionner certains types de fichiers. Par exemple, si on souhaite fournir une image de profil, on restreindra probablemnt les formats à ceux des formats d'image compatibles pour le Web comme [JPEG](/fr/docs/Glossaire/jpeg) ou [PNG](/fr/docs/Glossaire/PNG).
+Il arrive souvent qu'on souhaite sélectionner certains types de fichiers. Par exemple, si on souhaite fournir une image de profil, on restreindra probablemnt les formats à ceux des formats d'image compatibles pour le Web comme [JPEG](/fr/docs/Glossary/JPEG) ou [PNG](/fr/docs/Glossary/PNG).
 
-Pour cela, on peut utiliser l'attribut {{htmlattrxref("accept","input")}} afin d'indiquer les formats de fichier acceptés (sous la forme d'une liste d'extensions de fichier ou de types MIME séparés par des virgules). Par exemple :
+Pour cela, on peut utiliser l'attribut [`accept`](/fr/docs/Web/HTML/Element/input#accept) afin d'indiquer les formats de fichier acceptés (sous la forme d'une liste d'extensions de fichier ou de types MIME séparés par des virgules). Par exemple :
 
 - `accept="image/png"` ou `accept=".png"` permettra de n'accepter que les fichiers PNG.
 - `accept="image/png, image/jpeg"` ou `accept=".png, .jpg, .jpeg"` permettra de n'accepter que les fichiers PNG ou JPEG.
@@ -151,8 +176,11 @@ Prenons un exemple :
 <form method="post" enctype="multipart/form-data">
   <div>
     <label for="profile_pic">Sélectionnez le fichier à utiliser</label>
-    <input type="file" id="profile_pic" name="profile_pic"
-          accept=".jpg, .jpeg, .png">
+    <input
+      type="file"
+      id="profile_pic"
+      name="profile_pic"
+      accept=".jpg, .jpeg, .png" />
   </div>
   <div>
     <button>Envoyer</button>
@@ -170,7 +198,8 @@ Voici le résultat produit :
 
 {{EmbedLiveSample('Restreindre_les_types_de_fichiers_acceptés', 650, 60)}}
 
-> **Note :** Vous pouvez également consulter cet exemple sur GitHub — [voir le code source](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-with-accept.html) et [la démonstration _live_](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
+> [!NOTE]
+> Vous pouvez également consulter cet exemple sur GitHub — [voir le code source](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-with-accept.html) et [la démonstration _live_](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
 
 Le résultat peut sembler similaire à l'exemple précédent mais lorsque vous essayer de sélectionner un fichier, vous verrez que le sélecteur ne permet de sélectionner que les fichiers du/des type(s) indiqué(s) (il peut y avoir certaines différences selons les navigateurs et les systèmes d'exploitation).
 
@@ -180,13 +209,13 @@ Dans tous les cas (et comme pour les autres éléments envoyés au serveur), il 
 
 ### Notes
 
-1. À partir de {{Gecko("2.0")}}, appeler la méthode `click()` sur un élément de type `file` ouvre le sélecteur de fichier et permet à un utilisateur de sélectionner les fichiers sur son système d'opération. Pour plus d'exemples, voir Utiliser des fichiers avec des applications web.
+1. À partir de Gecko 2.0, appeler la méthode `click()` sur un élément de type `file` ouvre le sélecteur de fichier et permet à un utilisateur de sélectionner les fichiers sur son système d'opération. Pour plus d'exemples, voir Utiliser des fichiers avec des applications web.
 2. Il n'est pas possible de définir la valeur du sélecteur de fichier via un script. Le code suivant n'aura aucun effet :
 
-    ```js
-    const input = document.querySelector("input[type=file]");
-    input.value = "toto";
-    ```
+   ```js
+   const input = document.querySelector("input[type=file]");
+   input.value = "toto";
+   ```
 
 3. Lorsqu'on choisit un fichier via `<input type="file">`, le chemin réel du fichier source n'est pas transmis dans la valeur de l'attribut `value` pour des raisons de sécurité. À la place, on a le nom du fichier précédé du chemin `C:\fakepath\`. Cela provient de raisons historiques, est pris en charge par la plupart des navigateurs modernes. Cela a même été [inscrit dans la spécification](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
 
@@ -194,15 +223,23 @@ Dans tous les cas (et comme pour les autres éléments envoyés au serveur), il 
 
 Dans l'exemple qui suit, on présente sélecteur de fichiers plus avancé, qui tire parti des informations disponibles grâce à la propriété `HTMLInputElement.files`. On montre aussi quelques astuces.
 
-> **Note :** Le code source complet de cet exemple est disponible sur GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html) ([voir la démonstration _live_ associée](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). Nous n'expliquerons pas ici la feuille de style CSS mais plutôt le code JavaScript qui contient la logique.
+> [!NOTE]
+> Le code source complet de cet exemple est disponible sur GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html) ([voir la démonstration _live_ associée](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). Nous n'expliquerons pas ici la feuille de style CSS mais plutôt le code JavaScript qui contient la logique.
 
 Tout d'abord, voici le fragment de code HTML utilisé :
 
 ```html
 <form method="post" enctype="multipart/form-data">
   <div>
-    <label for="image_uploads">Sélectionner des images à uploader (PNG, JPG)</label>
-    <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple>
+    <label for="image_uploads"
+      >Sélectionner des images à uploader (PNG, JPG)</label
+    >
+    <input
+      type="file"
+      id="image_uploads"
+      name="image_uploads"
+      accept=".jpg, .jpeg, .png"
+      multiple />
   </div>
   <div class="preview">
     <p>Aucun fichier sélectionné pour le moment</p>
@@ -230,7 +267,8 @@ form ol {
   padding-left: 0;
 }
 
-form li, div > p {
+form li,
+div > p {
   background: #eee;
   display: flex;
   justify-content: space-between;
@@ -249,8 +287,9 @@ form p {
   padding-left: 10px;
 }
 
-form label, form button {
-  background-color: #7F9CCB;
+form label,
+form button {
+  background-color: #7f9ccb;
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px ridge black;
@@ -258,13 +297,15 @@ form label, form button {
   height: auto;
 }
 
-form label:hover, form button:hover {
-  background-color: #2D5BA3;
+form label:hover,
+form button:hover {
+  background-color: #2d5ba3;
   color: white;
 }
 
-form label:active, form button:active {
-  background-color: #0D3F8F;
+form label:active,
+form button:active {
+  background-color: #0d3f8f;
   color: white;
 }
 ```
@@ -276,18 +317,19 @@ Voyons maintenant le code JavaScript utilisé :
 Pour les premières lignes du script, on récupère des références au formulaire et à l'élément {{htmlelement("div")}} qui possède la classe `.preview`. Ensuite, on masque l'élément {{htmlelement("input")}} car leur apparence peut être incohérente entre les navigateurs et qu'il est difficile de les mettre en forme. Cliquer sur l'élément {{htmlelement("label")}} suffit à ouvrir le sélecteur et nous mettons donc en forme cet élément à la façon d'un bouton. Ainsi, l'utilisateur saura comment interagir avec le document pour _uploader_ des fichiers.
 
 ```js
-var input = document.querySelector('input');
-var preview = document.querySelector('.preview');
+var input = document.querySelector("input");
+var preview = document.querySelector(".preview");
 
 input.style.opacity = 0;
 ```
 
-> **Note :** La propriété [`opacity`](/fr/docs/Web/CSS/opacity) est utilisée pour masquer l'élément `<input>` plutôt que [`visibility: hidden`](/fr/docs/Web/CSS/visibility) ou [`display: none`](/fr/docs/Web/CSS/display). En effet, avec ces derniers les technologies d'assistance (lecteurs d'écran par exemple) comprendraient que l'élément n'est pas interactif et ne peut pas être utilisé.
+> [!NOTE]
+> La propriété [`opacity`](/fr/docs/Web/CSS/opacity) est utilisée pour masquer l'élément `<input>` plutôt que [`visibility: hidden`](/fr/docs/Web/CSS/visibility) ou [`display: none`](/fr/docs/Web/CSS/display). En effet, avec ces derniers les technologies d'assistance (lecteurs d'écran par exemple) comprendraient que l'élément n'est pas interactif et ne peut pas être utilisé.
 
 Ensuite, on ajoute [un gestionnaire d'évènement](/fr/docs/Web/API/EventTarget/addEventListener) à l'élément `<input>` afin de réaliser certaines actions lorsque sa valeur (c'est-à-dire les fichiers sélectionnés) change. Ici, le gestionnaire d'évènement appelle la fonction `updateImageDisplay()` que nous décrirons juste après.
 
 ```js
-input.addEventListener('change', updateImageDisplay);
+input.addEventListener("change", updateImageDisplay);
 ```
 
 À chaque fois que la fonction `updateImageDisplay()` est appelée :
@@ -308,31 +350,38 @@ input.addEventListener('change', updateImageDisplay);
 
 ```js
 function updateImageDisplay() {
-  while(preview.firstChild) {
+  while (preview.firstChild) {
     preview.removeChild(preview.firstChild);
   }
 
   var curFiles = input.files;
-  if(curFiles.length === 0) {
-    var para = document.createElement('p');
-    para.textContent = 'No files currently selected for upload';
+  if (curFiles.length === 0) {
+    var para = document.createElement("p");
+    para.textContent = "No files currently selected for upload";
     preview.appendChild(para);
   } else {
-    var list = document.createElement('ol');
+    var list = document.createElement("ol");
     preview.appendChild(list);
-    for(var i = 0; i < curFiles.length; i++) {
-      var listItem = document.createElement('li');
-      var para = document.createElement('p');
-      if(validFileType(curFiles[i])) {
-        para.textContent = 'File name ' + curFiles[i].name + ', file size ' + returnFileSize(curFiles[i].size) + '.';
-        var image = document.createElement('img');
+    for (var i = 0; i < curFiles.length; i++) {
+      var listItem = document.createElement("li");
+      var para = document.createElement("p");
+      if (validFileType(curFiles[i])) {
+        para.textContent =
+          "File name " +
+          curFiles[i].name +
+          ", file size " +
+          returnFileSize(curFiles[i].size) +
+          ".";
+        var image = document.createElement("img");
         image.src = window.URL.createObjectURL(curFiles[i]);
 
         listItem.appendChild(image);
         listItem.appendChild(para);
-
       } else {
-        para.textContent = 'File name ' + curFiles[i].name + ': Not a valid file type. Update your selection.';
+        para.textContent =
+          "File name " +
+          curFiles[i].name +
+          ": Not a valid file type. Update your selection.";
         listItem.appendChild(para);
       }
 
@@ -345,15 +394,11 @@ function updateImageDisplay() {
 La fonction `validFileType()` prend un objet {{domxref("File")}} en entrée puis parcourt la liste des types de fichier autorisés pour les comparer à la propriété `type` du fichier. Si on trouve une correspondance (ce qui signifie que le type est bien autorisé), la fonction renvoie `true`, sinon, elle renvoie `false`.
 
 ```js
-var fileTypes = [
-  'image/jpeg',
-  'image/pjpeg',
-  'image/png'
-]
+var fileTypes = ["image/jpeg", "image/pjpeg", "image/png"];
 
 function validFileType(file) {
-  for(var i = 0; i < fileTypes.length; i++) {
-    if(file.type === fileTypes[i]) {
+  for (var i = 0; i < fileTypes.length; i++) {
+    if (file.type === fileTypes[i]) {
       return true;
     }
   }
@@ -366,12 +411,12 @@ La fonction `returnFileSize()` prend en entrée un nombre d'octets (dans notre e
 
 ```js
 function returnFileSize(number) {
-  if(number < 1024) {
-    return number + ' octets';
-  } else if(number >= 1024 && number < 1048576) {
-    return (number/1024).toFixed(1) + ' Ko';
-  } else if(number >= 1048576) {
-    return (number/1048576).toFixed(1) + ' Mo';
+  if (number < 1024) {
+    return number + " octets";
+  } else if (number >= 1024 && number < 1048576) {
+    return (number / 1024).toFixed(1) + " Ko";
+  } else if (number >= 1048576) {
+    return (number / 1048576).toFixed(1) + " Mo";
   }
 }
 ```
@@ -401,10 +446,10 @@ Et voici le résultat :
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
       <td>
-        {{htmlattrxref("accept", "input/file")}},
-        {{htmlattrxref("capture", "input/file")}},
-        {{htmlattrxref("files", "input/file")}},
-        {{htmlattrxref("multiple", "input/file")}}
+        <a href="/fr/docs/Web/HTML/Element/input/file#accept"><code>accept</code></a>,
+        <a href="/fr/docs/Web/HTML/Element/input/file#capture"><code>capture</code></a>,
+        <a href="/fr/docs/Web/HTML/Element/input/file#files"><code>files</code></a>,
+        <a href="/fr/docs/Web/HTML/Element/input/file#multiple"><code>multiple</code></a>
       </td>
     </tr>
     <tr>
@@ -443,5 +488,5 @@ Et voici le résultat :
 
 ## Voir aussi
 
-- [Manipuler des fichiers à partir d'applications web](/fr/docs/Using_files_from_web_applications) contient différents exemples d'applications relatifs à `<input type="file">`
+- [Manipuler des fichiers à partir d'applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications) contient différents exemples d'applications relatifs à `<input type="file">`
 - [L'API _File_](/fr/docs/Web/API/File).

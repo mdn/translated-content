@@ -9,8 +9,9 @@ The **`DeviceMotionEvent`** constructor 会创建一个新的 {{DOMxRef("DeviceM
 
 ## 语法
 
-```
-var deviceMotionEvent = new DeviceMotionEvent(type[, options])
+```js-nolint
+new DeviceMotionEvent(type)
+new DeviceMotionEvent(type, options)
 ```
 
 ### 参数
@@ -30,6 +31,6 @@ var deviceMotionEvent = new DeviceMotionEvent(type[, options])
 
 无特别说明。
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}

@@ -1,8 +1,9 @@
 ---
 title: window.getComputedStyle()
 slug: Web/API/Window/getComputedStyle
-translation_of: Web/API/Window/getComputedStyle
 ---
+
+{{APIRef("CSSOM")}}
 
 Метод **`Window.getComputedStyle()`** возвращает объект, содержащий значения всех CSS-свойств элемента, полученных после применения всех активных таблиц стилей, и завершения базовых вычислений значений, которые они могут содержать. Некоторые CSS-свойства доступны через API, предоставляемые объектом, или индексацию по именам CSS-свойств.
 
@@ -57,20 +58,17 @@ var style = window.getComputedStyle(elem1, null);
 ```
 
 ```js
-function dumpComputedStyles(elem,prop) {
-
-  var cs = window.getComputedStyle(elem,null);
+function dumpComputedStyles(elem, prop) {
+  var cs = window.getComputedStyle(elem, null);
   if (prop) {
-    console.log(prop+" : "+cs.getPropertyValue(prop));
+    console.log(prop + " : " + cs.getPropertyValue(prop));
     return;
   }
   var len = cs.length;
-  for (var i=0;i<len;i++) {
-
+  for (var i = 0; i < len; i++) {
     var style = cs[i];
-    console.log(style+" : "+cs.getPropertyValue(style));
+    console.log(style + " : " + cs.getPropertyValue(style));
   }
-
 }
 ```
 
@@ -90,18 +88,18 @@ function dumpComputedStyles(elem,prop) {
 
 ```html
 <style>
- h3::after {
-   content: 'rocks!';
- }
+  h3::after {
+    content: "rocks!";
+  }
 </style>
 
 <h3>generated content</h3>
 
 <script>
-  var h3 = document.querySelector('h3');
-  var result = getComputedStyle(h3, ':after').content;
+  var h3 = document.querySelector("h3");
+  var result = getComputedStyle(h3, ":after").content;
 
-  console.log('the generated content is: ', result); // возвратит 'rocks!'
+  console.log("the generated content is: ", result); // возвратит 'rocks!'
 </script>
 ```
 
@@ -115,16 +113,16 @@ During a CSS transition, `getComputedStyle` returns the original property value 
 
 In Firefox, properties with the value `auto` return the used value, not the value `auto`. So if you apply `top:auto;` and `bottom:0`; on an element with `height:30px` and its containing block is `height:100px;`, upon requesting the computed style for `top`, Firefox will return `top:70px`, as `100px-30px=70px`.
 
-## Браузерная поддержка
-
-{{Compat}}
-
 ## Спецификации
 
 - [DOM Level 2 Style: getComputedStyle](https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSview-getComputedStyle)
 - [CSS Object Model specification](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle)
 
-## Смотреть также
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
 
 - {{domxref("window.getDefaultComputedStyle")}}
 - {{cssxref("resolved_value", "Resolved Value")}}

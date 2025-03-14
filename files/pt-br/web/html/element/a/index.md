@@ -7,13 +7,29 @@ slug: Web/HTML/Element/a
 
 O **elemento** **`<a>`** em **HTML** (ou elemento âncora), com o atributo [`href`](#href) cria-se um hiperligação nas páginas web, arquivos, endereços de emails, ligações na mesma página ou endereços na URL. O conteúdo dentro de cada `<a>` **precisará** indicar o destino do link.
 
-{{EmbedInteractiveExample("pages/tabbed/a.html")}}
+{{InteractiveExample("HTML Demo: &lt;a&gt;")}}
+
+```html interactive-example
+<p>You can reach Michael at:</p>
+
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul>
+```
+
+```css interactive-example
+li {
+  margin-bottom: 0.5rem;
+}
+```
 
 ## Atributos
 
 Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-- {{HTMLAttrDef("download")}}{{HTMLVersionInline(5)}}
+- `download`
 
   - : Leva o usuário a salvar a URL em vez de navegar até ela. Pode ser usado com ou sem um valor:
 
@@ -21,7 +37,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 
       - O cabeçalho HTTP {{HTTPHeader("Content-Disposition")}}
       - O segmento final no [path](/pt-BR/docs/Web/API/URL/pathname) (caminho) da URL
-      - The {{Glossary("MIME_type", "media type")}} (from the ({{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/Data_URIs), or {{domxref("Blob.type")}} for a [`blob:` URL](/pt-BR/docs/Web/API/URL/createObjectURL))
+      - The {{Glossary("MIME_type", "media type")}} (from the ({{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/pt-BR/docs/Web/URI/Schemes/data), or {{domxref("Blob.type")}} for a [`blob:` URL](/pt-BR/docs/Web/API/URL/createObjectURL_static))
 
     - A definição de um valor o sugere como o nome do arquivo. Caracteres `/` e `\` são convertidos para _underscores_ (`_`).Arquivos de sistema talvez proibam alguns caracteres em nomes de arquivos, então o navegador irá ajustar o nome sugerido caso necessário.
 
@@ -29,7 +45,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
     >
     > - Se `Content-Disposition` tiver um diferente `filename` (nome do arquivo) que `download`, o cabeçalho tem prioridade. (Se `Content-Disposition: inline`, Firefox prioriza o cabeçalho enquanto o Chrome escolhe `download`.)
 
-- {{HTMLAttrDef("href")}}
+- `href`
 
   - : A URL para a qual o hiperlink aponta. Links não se restrigem a URLs baseadas no protocolo HTTP — eles podem utilizar qualquer tipo de URL suportado pelos browsers:
 
@@ -39,53 +55,57 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
     - Email addresses with(Endereço de email com) `mailto:` URLs
     - Alguns navegadores talvez não aguentem certos arranjos em URL, para isso os websites fazem uso do [`registerProtocolHandler()`](/pt-BR/docs/Web/API/Navigator/registerProtocolHandler)
 
-- {{HTMLAttrDef("hreflang")}}
+- `hreflang`
   - : Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as [the global `lang` attribute](/pt-BR/docs/Web/HTML/Global_attributes/lang).
-- {{HTMLAttrDef("ping")}}
+- `ping`
   - : Uma lista de URLs separadas por espaços. Quando o link é seguido, o brrowser enviará requisições {{HTTPMethod("POST")}} com o corpo `PING` para as URLs. Typically for tracking.
-- {{HTMLAttrDef("referrerpolicy")}}{{Experimental_Inline}}
+- `referrerpolicy`{{Experimental_Inline}}
   - : Quanto do [referrer](/pt-BR/docs/Web/HTTP/Headers/Referer) para ser enviado quando acessar o link. Acesse [`Referrer-Policy`](/pt-BR/docs/Web/HTTP/Headers/Referrer-Policy) para possíveis valores e seus efeitos.
-- {{HTMLAttrDef("rel")}}
-  - : The relationship of the linked URL as space-separated [link types](/pt-BR/docs/Web/HTML/Link_types).
-- {{HTMLAttrDef("target")}}
+- `rel`
+  - : The relationship of the linked URL as space-separated [link types](/pt-BR/docs/Web/HTML/Attributes/rel).
+- `target`
 
   - : Where to display the linked URL, as the name for a _browsing context_ (a tab, window, or `<iframe>`). The following keywords have special meanings for where to load the URL:
 
     - `_self`: No atual contexto de pesquisa. (Default)
     - `_blank`: Normalmente uma nova aba, porém usuários podem configurar seus navegadores para abrir em uma nova janela.
     - `_parent`: the parent browsing context of the current one. If no parent, behaves as `_self`.
-    - `_top`: the topmost browsing context (the "highest" context that’s an ancestor of the current one). If no ancestors, behaves as `_self`.
+    - `_top`: the topmost browsing context (the "highest" context that's an ancestor of the current one). If no ancestors, behaves as `_self`.
 
-    > **Note:** Quando usando `target`, adicione `rel="noreferrer noopener"` para evitar "exploit" para `window.opener` API;
+    > [!NOTE]
+    > Quando usando `target`, adicione `rel="noreferrer noopener"` para evitar "exploit" para `window.opener` API;
 
     > **Warning:** **Note:** Linking to another page with `target="_blank"` will run the new page in the same process as your page. If the new page executes JavaScript, your page's performance may suffer. This can also be avoided by using `rel="noreferrer noopener"`.
 
-- {{HTMLAttrDef("type")}}
-  - : Hints at the linked URL’s format with a {{Glossary("MIME type")}}. No built-in functionality.
+- `type`
+  - : Hints at the linked URL's format with a {{Glossary("MIME type")}}. No built-in functionality.
 
 ### Obsolete attributes
 
-- {{HTMLAttrDef("charset")}}{{Obsolete_Inline("HTML5")}}
+- `charset`
 
   - : Hinted at the {{Glossary("character encoding")}} of the linked URL.
 
-    > **Note:** This attribute is obsolete and **should not be used by authors**. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.
+    > [!NOTE]
+    > This attribute is obsolete and **should not be used by authors**. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.
 
-- {{HTMLAttrDef("coords")}}{{Obsolete_Inline("HTML5")}}
+- `coords`
   - : Used with [the `shape` attribute](#shape). A comma-separated list of coordinates.
-- {{HTMLAttrDef("name")}}{{Obsolete_Inline("HTML5")}}
+- `name`
 
   - : Was required to define a possible target location in a page. In HTML 4.01, `id` and `name` could both be used on `<a>`, as long as they had identical values.
 
-    > **Note:** Use the global attribute {{HTMLAttrxRef("id")}} instead.
+    > [!NOTE]
+    > Use the global attribute [`id`](/pt-BR/docs/Web/HTML/Global_attributes#id) instead.
 
-- {{HTMLAttrDef("rev")}}{{Obsolete_Inline("HTML5")}}
+- `rev`
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
-- {{HTMLAttrDef("shape")}}{{Obsolete_Inline("HTML5")}}
+- `shape`
 
-  - : The shape of the hyperlink’s region in an image map.
+  - : The shape of the hyperlink's region in an image map.
 
-    > **Note:** Use the {{HTMLElement("area")}} element for image maps instead.
+    > [!NOTE]
+    > Use the {{HTMLElement("area")}} element for image maps instead.
 
 ## Properties
 
@@ -128,7 +148,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -145,7 +165,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        {{ARIARole("link")}} when <code>href</code> attribute is
+        <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></code> when <code>href</code> attribute is
         present, otherwise
         <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
           >no corresponding role</a
@@ -157,16 +177,16 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
       <td>
         <p>When <code>href</code> attribute is present:</p>
         <ul>
-          <li>{{ARIARole("button")}}</li>
-          <li>{{ARIARole("checkbox")}}</li>
-          <li>{{ARIARole("menuitem")}}</li>
-          <li>{{ARIARole("menuitemcheckbox")}}</li>
-          <li>{{ARIARole("menuitemradio")}}</li>
-          <li>{{ARIARole("option")}}</li>
-          <li>{{ARIARole("radio")}}</li>
-          <li>{{ARIARole("switch")}}</li>
-          <li>{{ARIARole("tab")}}</li>
-          <li>{{ARIARole("treeitem")}}</li>
+          <li><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code></li>
+          <li><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/checkbox_role">checkbox</a></code></li>
+          <li><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/menuitem_role">menuitem</a></code></li>
+          <li><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a></code></li>
+          <li><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a></code></li>
+          <li><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></code></li>
+          <li><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code></li>
+          <li><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/switch_role">switch</a></code></li>
+          <li><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code></li>
+          <li><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/treeitem_role">treeitem</a></code></li>
         </ul>
         <p>When <code>href</code> attribute is not present:</p>
         <ul>
@@ -188,9 +208,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 #### HTML
 
 ```html
-<a href="https://www.mozilla.com">
-  Mozilla
-</a>
+<a href="https://www.mozilla.com"> Mozilla </a>
 ```
 
 #### Result
@@ -208,7 +226,10 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 ```
 
 ```css hidden
-a { display: block; margin-bottom: 0.5em }
+a {
+  display: block;
+  margin-bottom: 0.5em;
+}
 ```
 
 #### Result
@@ -219,15 +240,14 @@ a { display: block; margin-bottom: 0.5em }
 
 ```html
 <!-- <a> element links to the section below -->
-<p><a href="#Section_further_down">
-  Jump to the heading below
-</a></p>
+<p><a href="#Section_further_down"> Jump to the heading below </a></p>
 
 <!-- Heading to link to -->
 <h2 id="Section_further_down">Section further down</h2>
 ```
 
-> **Note:** You can use `href="#top"` or the empty fragment (`href="#"`) to link to the top of the current page, [as defined in the HTML specification](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
+> [!NOTE]
+> You can use `href="#top"` or the empty fragment (`href="#"`) to link to the top of the current page, [as defined in the HTML specification](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
 
 ### Linking to an email address
 
@@ -237,7 +257,7 @@ To create links that open in the user's email program to let them send a new mes
 <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
 ```
 
-For details about `mailto:` URLs, such as including a subject or body, see [Email links](/pt-BR/docs/Web/Guide/HTML/Email_links) or {{RFC(6068)}}.
+For details about `mailto:` URLs, such as including a subject or body, see [Email links](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links) or {{RFC(6068)}}.
 
 ### Linking to telephone numbers
 
@@ -257,14 +277,15 @@ See {{RFC(3966)}} for syntax, additional features, and other details about the `
 
 ### Using the download attribute to save a \<canvas> as a PNG
 
-To save a {{HTMLElement("canvas")}} element’s contents as an image, you can create a link with a `download` attribute and the canvas data as a `data:` URL:
+To save a {{HTMLElement("canvas")}} element's contents as an image, you can create a link with a `download` attribute and the canvas data as a `data:` URL:
 
 #### Example painting app with save link
 
 ##### HTML
 
 ```html
-<p>Paint by holding down the mouse button and moving it.
+<p>
+  Paint by holding down the mouse button and moving it.
   <a href="" download="my_painting.png">Download my painting</a>
 </p>
 
@@ -292,28 +313,31 @@ a {
 ##### JavaScript
 
 ```js
-var canvas = document.querySelector('canvas'),
-    c = canvas.getContext('2d');
-c.fillStyle = 'hotpink';
+var canvas = document.querySelector("canvas"),
+  c = canvas.getContext("2d");
+c.fillStyle = "hotpink";
 
 function draw(x, y) {
   if (isDrawing) {
     c.beginPath();
-    c.arc(x, y, 10, 0, Math.PI*2);
+    c.arc(x, y, 10, 0, Math.PI * 2);
     c.closePath();
     c.fill();
   }
 }
 
-canvas.addEventListener('mousemove', event =>
-  draw(event.offsetX, event.offsetY)
+canvas.addEventListener("mousemove", (event) =>
+  draw(event.offsetX, event.offsetY),
 );
-canvas.addEventListener('mousedown', () => isDrawing = true);
-canvas.addEventListener('mouseup', () => isDrawing = false);
+canvas.addEventListener("mousedown", () => (isDrawing = true));
+canvas.addEventListener("mouseup", () => (isDrawing = false));
 
-document.querySelector('a').addEventListener('click', event =>
-  event.target.href = canvas.toDataURL()
-);
+document
+  .querySelector("a")
+  .addEventListener(
+    "click",
+    (event) => (event.target.href = canvas.toDataURL()),
+  );
 ```
 
 ##### Result
@@ -322,7 +346,7 @@ document.querySelector('a').addEventListener('click', event =>
 
 ## Security and privacy
 
-`<a>` elements can have consequences for users’ security and privacy. See [`Referer` header: privacy and security concerns](/pt-BR/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for information.
+`<a>` elements can have consequences for users' security and privacy. See [`Referer` header: privacy and security concerns](/pt-BR/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for information.
 
 Using `target="_blank"` without `rel="noreferrer"` and `rel="noopener"` makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks ([vulnerability description](https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/)).
 
@@ -334,25 +358,21 @@ Using `target="_blank"` without `rel="noreferrer"` and `rel="noopener"` makes th
 
 #### Inaccessible, weak link text
 
-A sadly common mistake is to only link the words “click here” or “here”:
+A sadly common mistake is to only link the words "click here" or "here":
 
 ```html example-bad
-<p>
-  Learn more about our products <a href="/products">here</a>.
-</p>
+<p>Learn more about our products <a href="/products">here</a>.</p>
 ```
 
 #### Strong link text
 
-Luckily, this is an easy fix, and it’s actually shorter than the inaccessible version!
+Luckily, this is an easy fix, and it's actually shorter than the inaccessible version!
 
 ```html example-good
-<p>
-  Learn more <a href="/products">about our products</a>.
-</p>
+<p>Learn more <a href="/products">about our products</a>.</p>
 ```
 
-Assistive software have shortcuts to list all links on a page. However, strong link text benefits all users — the “list all links” shortcut emulates how sighted users quickly scan pages.
+Assistive software have shortcuts to list all links on a page. However, strong link text benefits all users — the "list all links" shortcut emulates how sighted users quickly scan pages.
 
 ### onclick events
 
@@ -379,22 +399,20 @@ People experiencing low vision conditions, navigating with the aid of screen rea
 #### Link to a non-HTML resource
 
 ```html
-<a href="2017-annual-report.ppt">
-  2017 Annual Report (PowerPoint)
-</a>
+<a href="2017-annual-report.ppt"> 2017 Annual Report (PowerPoint) </a>
 ```
 
-If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("alt", "img", "alt text", "true")}}:
+If an icon is used to signify link behavior, make sure it has [alt text](/pt-BR/docs/Web/HTML/Element/img#alt):
 
 ```html
-<a  target="_blank" href="https://www.wikipedia.org">
+<a target="_blank" href="https://www.wikipedia.org">
   Wikipedia
-  <img alt="(opens in new tab)" src="newtab.svg">
+  <img alt="(opens in new tab)" src="newtab.svg" />
 </a>
 
 <a href="2017-annual-report.ppt">
   2017 Annual Report
-  <img alt="(PowerPoint file)" src="ppt-icon.svg">
+  <img alt="(PowerPoint file)" src="ppt-icon.svg" />
 </a>
 ```
 
@@ -444,10 +462,10 @@ Skip links are especially useful for people who navigate with the aid of assisti
 
 Interactive elements, like links, should provide an area large enough that it is easy to activate them. This helps a variety of people, including those with motor control issues and those using imprecise inputs such as a touchscreen. A minimum size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
 
-Text-only links in prose content are exempt from this requirement, but it’s still a good idea to make sure enough text is hyperlinked to be easily activated.
+Text-only links in prose content are exempt from this requirement, but it's still a good idea to make sure enough text is hyperlinked to be easily activated.
 
 - [Understanding Success Criterion 2.5.5: Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
-- [Target Size and 2.5.5](http://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
+- [Target Size and 2.5.5](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
 - [Quick test: Large touch targets](https://a11yproject.com/posts/large-touch-targets/)
 
 #### Proximity
@@ -460,16 +478,11 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
 
 ## Specifications
 
-| Specification                                                                                                                            | Status                               | Comment                               |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------- |
-| {{SpecName("Referrer Policy", "#referrer-policy-delivery-referrer-attribute", "referrer attribute")}} | {{Spec2("Referrer Policy")}} | Added the `referrerpolicy` attribute. |
-| {{SpecName("HTML WHATWG", "textlevel-semantics.html#the-a-element", "&lt;a&gt;")}}                             | {{Spec2("HTML WHATWG")}}     |                                       |
-| {{SpecName("HTML5 W3C", "textlevel-semantics.html#the-a-element", "&lt;a&gt;")}}                             | {{Spec2("HTML5 W3C")}}         |                                       |
-| {{SpecName("HTML4.01", "struct/links.html#h-12.2", "&lt;a&gt;")}}                                                 | {{Spec2("HTML4.01")}}         |                                       |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.a")}}
+{{Compat}}
 
 ## See also
 

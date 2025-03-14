@@ -3,7 +3,7 @@ title: StorageArea.set()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 1 つ以上のアイテムをストレージ領域に保存または上書きします。
 
@@ -21,7 +21,7 @@ let settingItem = browser.storage.<storageType>.set(
 
 `<storageType>` は [`storage.sync`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) または [`storage.local`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) の書き込み可能なストレージタイプです。
 
-### Parameters
+### 引数
 
 - `keys`
 
@@ -29,7 +29,7 @@ let settingItem = browser.storage.<storageType>.set(
 
     値は [primitive 型](/ja/docs/Glossary/Primitive) (整数型・ブール型・文字列) または[`配列`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) を指定でできます。
 
-    通常は他の型 (`Function`, `Date`, `RegExp`, `Set`, `Map`, `ArrayBuffer` など)は格納できません。これらのサポートされていない型の中には空のオブジェクトとして復元されたり、 `set()` がエラーをスローする場合があります。この場合の挙動はブラウザに依存します。
+    通常は他の型 (`Function`, `Date`, `RegExp`, `Set`, `Map`, `ArrayBuffer` など)は格納できません。これらのサポートされていない型の中には空のオブジェクトとして復元されたり、 `set()` がエラーをスローする場合があります。この場合の挙動はブラウザーに依存します。
 
 ### 返り値
 
@@ -37,7 +37,7 @@ let settingItem = browser.storage.<storageType>.set(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.storage.StorageArea.set")}}
+{{Compat}}
 
 ## 例
 
@@ -55,32 +55,30 @@ function gotMonster(item) {
 }
 
 function onError(error) {
-  console.log(error)
+  console.log(error);
 }
 
 // オブジェクトを2つ定義
 var monster = {
   name: "Kraken",
   tentacles: true,
-  eyeCount: 10
-}
+  eyeCount: 10,
+};
 
 var kitten = {
   name: "Moggy",
   tentacles: false,
-  eyeCount: 2
-}
+  eyeCount: 2,
+};
 
 // オブジェクト2つを格納
-browser.storage.local.set({kitten, monster})
-  .then(setItem, onError);
+browser.storage.local.set({ kitten, monster }).then(setItem, onError);
 
-browser.storage.local.get("kitten")
-  .then(gotKitten, onError);
-browser.storage.local.get("monster")
-  .then(gotMonster, onError);
+browser.storage.local.get("kitten").then(gotKitten, onError);
+browser.storage.local.get("monster").then(gotMonster, onError);
 ```
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.storage`](https://developer.chrome.com/extensions/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。
+> [!NOTE]
+> この API は Chromium の [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。

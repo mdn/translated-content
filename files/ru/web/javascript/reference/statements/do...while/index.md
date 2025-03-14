@@ -1,14 +1,26 @@
 ---
 title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
-translation_of: Web/JavaScript/Reference/Statements/do...while
 ---
 
 {{jsSidebar("Statements")}}
 
 Выражение **`do...while`** создаёт цикл, который выполняет указанное выражение до тех пор, пока условие не станет ложным. Условие проверяется после выполнения выражения, то есть выражение выполнится как минимум один раз.
 
-{{EmbedInteractiveExample("pages/js/statement-dowhile.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Do...While")}}
+
+```js interactive-example
+let result = "";
+let i = 0;
+
+do {
+  i = i + 1;
+  result = result + i;
+} while (i < 5);
+
+console.log(result);
+// Expected output: "12345"
+```
 
 ## Синтаксис
 
@@ -41,13 +53,13 @@ while (условие);
 ### JavaScript
 
 ```js
-var result = '';
+var result = "";
 var i = 0;
 do {
-   i += 1;
-   result += i + ' ';
-} while (i > 0 && i < 5); // Немотря на то, что i == 0, цикл всё равно продолжится, так как начинается без теста
-document.getElementById('example').innerHTML = result;
+  i += 1;
+  result += i + " ";
+} while (i > 0 && i < 5); // Несмотря на то, что i == 0, цикл всё равно продолжится, так как начинается без теста
+document.getElementById("example").innerHTML = result;
 ```
 
 ### Результат
@@ -58,7 +70,7 @@ document.getElementById('example').innerHTML = result;
 
 {{Specifications}}
 
-## Поддержка в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -1,8 +1,6 @@
 ---
 title: AudioBufferSourceNode.buffer
 slug: Web/API/AudioBufferSourceNode/buffer
-translation_of: Web/API/AudioBufferSourceNode/buffer
-browser-compat: api.AudioBufferSourceNode.buffer
 ---
 
 {{APIRef("Web Audio API")}}
@@ -23,7 +21,8 @@ Un objet [`AudioBuffer`](/fr/docs/Web/API/AudioBuffer) qui contient les données
 
 ## Exemple
 
-> **Note :** Pour un exemple complet, voir [cette démonstration](https://mdn.github.io/webaudio-examples/audio-buffer/), ou [le code source correspondant](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
+> [!NOTE]
+> Pour un exemple complet, voir [cette démonstration](https://mdn.github.io/webaudio-examples/audio-buffer/), ou [le code source correspondant](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
 
 ```js
 let AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -36,8 +35,8 @@ function init() {
   audioCtx = new AudioContext();
 }
 
-button.onclick = function() {
-  if(!audioCtx) {
+button.onclick = function () {
+  if (!audioCtx) {
     init();
   }
 
@@ -45,19 +44,23 @@ button.onclick = function() {
   // qui utilise l'échantillonage de AudioContext
   let frameCount = audioCtx.sampleRate * 2.0;
 
-  let myArrayBuffer = audioCtx.createBuffer(channels, frameCount, audioCtx.sampleRate);
+  let myArrayBuffer = audioCtx.createBuffer(
+    channels,
+    frameCount,
+    audioCtx.sampleRate,
+  );
 
   // On remplit le buffer avec du bruit blanc ;
   // soit des valeurs entre -1.0 et 1.0
   for (let channel = 0; channel < channels; channel++) {
-   // Voici le calcul du tableau réel qui contient
-   // les données
-   let nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (let i = 0; i < frameCount; i++) {
-     // Math.random() donne une valeur sur [0; 1.0]
-     // audio doit être sur [-1.0; 1.0]
-     nowBuffering[i] = Math.random() * 2 - 1;
-   }
+    // Voici le calcul du tableau réel qui contient
+    // les données
+    let nowBuffering = myArrayBuffer.getChannelData(channel);
+    for (let i = 0; i < frameCount; i++) {
+      // Math.random() donne une valeur sur [0; 1.0]
+      // audio doit être sur [-1.0; 1.0]
+      nowBuffering[i] = Math.random() * 2 - 1;
+    }
   }
 
   // On récupère un AudioBufferSourceNode.
@@ -73,9 +76,9 @@ button.onclick = function() {
   source.start();
 
   source.onended = () => {
-    console.log('Bruit blanc terminé');
-  }
-}
+    console.log("Bruit blanc terminé");
+  };
+};
 ```
 
 ## Spécifications

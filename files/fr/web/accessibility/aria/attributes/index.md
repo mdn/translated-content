@@ -1,14 +1,14 @@
 ---
 title: États et propriétés ARIA
 slug: Web/Accessibility/ARIA/Attributes
-translation_of: Web/Accessibility/ARIA/Attributes
 ---
 
 Cette page constitue un index des pages de référence couvrant l'ensemble des attributs WAI-ARIA sur MDN.
 
 Les attributs ARIA permettent de modifier les états et les propriétés d'un élément dans l'arbre d'accessibilité.
 
-> **Note :** ARIA modifie uniquement l'arbre d'accessibilité, modifiant ainsi la façon dont les outils d'assistance présentent le contenu aux personnes qui les utilisent. ARIA ne modifie en rien les fonctionnalités ou le comportement d'un élément. Lorsqu'on utilise des éléments HTML en dehors de leur sémantique et de leurs fonctionnalités prévues, il faudra utiliser JavaScript pour gérer le comportement, le focus et les états ARIA.
+> [!NOTE]
+> ARIA modifie uniquement l'arbre d'accessibilité, modifiant ainsi la façon dont les outils d'assistance présentent le contenu aux personnes qui les utilisent. ARIA ne modifie en rien les fonctionnalités ou le comportement d'un élément. Lorsqu'on utilise des éléments HTML en dehors de leur sémantique et de leurs fonctionnalités prévues, il faudra utiliser JavaScript pour gérer le comportement, le focus et les états ARIA.
 
 ## Types d'attribut ARIA
 
@@ -55,23 +55,23 @@ Il existe 4 catégories d'états et de propriétés ARIA&nbsp;:
 
 4. ### Attributs de relation
 
-    - [`aria-activedescendant`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
-    - [`aria-colcount`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
-    - [`aria-colindex`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
-    - [`aria-colspan`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-colspan)
-    - [`aria-controls`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
-    - [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
-    - [`aria-description`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-description)
-    - [`aria-details`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-details)
-    - [`aria-errormessage`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
-    - [`aria-flowto`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-flowto)
-    - [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-    - [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
-    - [`aria-posinset`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
-    - [`aria-rowcount`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount)
-    - [`aria-rowindex`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex)
-    - [`aria-rowspan`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan)
-    - [`aria-setsize`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
+   - [`aria-activedescendant`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
+   - [`aria-colcount`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
+   - [`aria-colindex`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
+   - [`aria-colspan`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-colspan)
+   - [`aria-controls`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
+   - [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
+   - [`aria-description`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-description)
+   - [`aria-details`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-details)
+   - [`aria-errormessage`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
+   - [`aria-flowto`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-flowto)
+   - [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+   - [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
+   - [`aria-posinset`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
+   - [`aria-rowcount`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount)
+   - [`aria-rowindex`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex)
+   - [`aria-rowspan`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan)
+   - [`aria-setsize`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
 
 ## Attributs ARIA universels
 
@@ -118,6 +118,6 @@ Les pages suivantes sont les pages de référence qui couvrent les états et pro
 
 1. [**Attributs WAI-ARIA**](/fr/docs/Web/Accessibility/ARIA/Attributes)
 
-    {{ListSubpagesForSidebar("/fr/docs/Web/Accessibility/ARIA/Attributes")}}
+   {{ListSubpagesForSidebar("/fr/docs/Web/Accessibility/ARIA/Attributes")}}
 
 </section>

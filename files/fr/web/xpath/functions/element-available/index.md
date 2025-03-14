@@ -1,13 +1,9 @@
 ---
 title: element-available
 slug: Web/XPath/Functions/element-available
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/element-available
-original_slug: Web/XPath/Fonctions/element-available
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `element-available` détermine si un élément est disponible et retourne la valeur booléenne `true` ou `false`.
 
@@ -28,7 +24,7 @@ Retourne `true` si et seulement si le nom étendu est un nom d'instruction. Si l
 
 ### Définition
 
-[XSLT 1.0, section 15](http://www.w3.org/TR/xslt#function-element-available).
+[XSLT 1.0, section 15](https://www.w3.org/TR/xslt#function-element-available).
 
 ### Support Gecko
 

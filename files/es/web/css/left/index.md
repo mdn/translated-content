@@ -9,7 +9,57 @@ La propiedad `left` especifica parte de la posición de un elemento (posicionado
 
 Para los elementos con una posición absoluta (aquellos que tienen la propiedad {{ Cssxref("position") }}`: absolute` ó `position: fixed`), la propiedad left determina la distancia entre el margen izquierdo del elemento y el borde izquierdo de su bloque contenedor.
 
-{{EmbedInteractiveExample("pages/css/left.html")}}
+{{InteractiveExample("CSS Demo: left")}}
+
+```css interactive-example-choice
+left: 0;
+```
+
+```css interactive-example-choice
+left: 4em;
+```
+
+```css interactive-example-choice
+left: 10%;
+```
+
+```css interactive-example-choice
+left: 20px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <div id="example-element">I am absolutely positioned.</div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 0.75em solid;
+  padding: 0.75em;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+#example-element {
+  background-color: #264653;
+  border: 4px solid #ffb500;
+  color: white;
+  position: absolute;
+  width: 140px;
+  height: 60px;
+}
+```
 
 {{cssinfo}}
 
@@ -34,7 +84,7 @@ left: <length> | <percentage> | auto | inherit ;
 #wrap {
   width: 700px;
   margin: 0 auto;
-  background: #5C5C5C;
+  background: #5c5c5c;
 }
 
 pre {
@@ -50,7 +100,7 @@ pre {
   position: absolute;
   left: 20px;
   top: 20px;
-  background-color: #D8F5FF;
+  background-color: #d8f5ff;
 }
 
 #example_2 {
@@ -59,8 +109,7 @@ pre {
   position: relative;
   top: 0;
   right: 0;
-  background-color: #C1FFDB;
-
+  background-color: #c1ffdb;
 }
 #example_3 {
   width: 600px;
@@ -68,16 +117,16 @@ pre {
   position: relative;
   top: 20px;
   left: 20px;
-  background-color: #FFD7C2;
+  background-color: #ffd7c2;
 }
 
 #example_4 {
-  width:200px;
-  height:200px;
-  position:absolute;
-  bottom:10px;
-  right:20px;
-  background-color:#FFC7E4;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  background-color: #ffc7e4;
 }
 ```
 
@@ -91,7 +140,10 @@ pre {
       left: 20px;
       top: 20px;
     </pre>
-    <p>The only containing element for this div is the main window, so it positions itself in relation to it.</p>
+    <p>
+      The only containing element for this div is the main window, so it
+      positions itself in relation to it.
+    </p>
   </div>
 
   <div id="example_2">
@@ -128,12 +180,11 @@ pre {
 
 ## Especificaciones
 
-- [CSS 2.1](http://www.w3.org/TR/CSS21/visuren.html#propdef-left)
-- [CSS 3](http://www.w3.org/Style/CSS/current-work#positioning)
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.left")}}
+{{Compat}}
 
 ## Ver también
 

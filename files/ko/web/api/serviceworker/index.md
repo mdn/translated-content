@@ -1,17 +1,6 @@
 ---
 title: ServiceWorker
 slug: Web/API/ServiceWorker
-tags:
-  - API
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - Workers
-  - 서비스 워커
-  - 워커
-translation_of: Web/API/ServiceWorker
 ---
 
 {{APIRef("Service Workers API")}}
@@ -45,33 +34,36 @@ translation_of: Web/API/ServiceWorker
 This code snippet is from the [service worker registration-events sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([live demo](https://googlechrome.github.io/samples/service-worker/registration-events/)). The code listens for any change in the {{domxref("ServiceWorker.state")}} and returns its value.
 
 ```js
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js', {
-        scope: './'
-    }).then(function (registration) {
-        var serviceWorker;
-        if (registration.installing) {
-            serviceWorker = registration.installing;
-            document.querySelector('#kind').textContent = 'installing';
-        } else if (registration.waiting) {
-            serviceWorker = registration.waiting;
-            document.querySelector('#kind').textContent = 'waiting';
-        } else if (registration.active) {
-            serviceWorker = registration.active;
-            document.querySelector('#kind').textContent = 'active';
-        }
-        if (serviceWorker) {
-            // logState(serviceWorker.state);
-            serviceWorker.addEventListener('statechange', function (e) {
-                // logState(e.target.state);
-            });
-        }
-    }).catch (function (error) {
-        // Something went wrong during registration. The service-worker.js file
-        // might be unavailable or contain a syntax error.
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("service-worker.js", {
+      scope: "./",
+    })
+    .then(function (registration) {
+      var serviceWorker;
+      if (registration.installing) {
+        serviceWorker = registration.installing;
+        document.querySelector("#kind").textContent = "installing";
+      } else if (registration.waiting) {
+        serviceWorker = registration.waiting;
+        document.querySelector("#kind").textContent = "waiting";
+      } else if (registration.active) {
+        serviceWorker = registration.active;
+        document.querySelector("#kind").textContent = "active";
+      }
+      if (serviceWorker) {
+        // logState(serviceWorker.state);
+        serviceWorker.addEventListener("statechange", function (e) {
+          // logState(e.target.state);
+        });
+      }
+    })
+    .catch(function (error) {
+      // Something went wrong during registration. The service-worker.js file
+      // might be unavailable or contain a syntax error.
     });
 } else {
-    // The current browser doesn't support service workers.
+  // The current browser doesn't support service workers.
 }
 ```
 
@@ -86,7 +78,7 @@ if ('serviceWorker' in navigator) {
 ## 같이 보기
 
 - [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook)
-- [Using Service Workers](/ko/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service worker basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}

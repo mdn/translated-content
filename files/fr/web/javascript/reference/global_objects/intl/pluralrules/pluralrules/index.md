@@ -1,7 +1,6 @@
 ---
 title: Constructeur Intl.PluralRules()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules
-browser-compat: javascript.builtins.Intl.PluralRules.PluralRules
 ---
 
 {{JSRef}}
@@ -11,9 +10,9 @@ Le constructeur **`Intl.PluralRules()`** permet de créer des objets [`Intl.Plur
 ## Syntaxe
 
 ```js
-new Intl.PluralRules()
-new Intl.PluralRules(locales)
-new Intl.PluralRules(locales, options)
+new Intl.PluralRules();
+new Intl.PluralRules(locales);
+new Intl.PluralRules(locales, options);
 ```
 
 ### Parameters
@@ -67,13 +66,13 @@ pr.select(2);
 Les résultats peuvent être personnalisés avec l'argument `options` qui possède une propriété `type` qu'on peut fixer à `ordinal`. Cela s'avère utile pour déterminer l'indicateur ordinal (par exemple en anglais où il y a des variations entre "1st", "2nd", "3rd", "4th", "42nd" et ainsi de suite).
 
 ```js
-var pr = new Intl.PluralRules('en-US', { type: 'ordinal' });
+var pr = new Intl.PluralRules("en-US", { type: "ordinal" });
 
 const suffixes = new Map([
-  ['one',   'st'],
-  ['two',   'nd'],
-  ['few',   'rd'],
-  ['other', 'th'],
+  ["one", "st"],
+  ["two", "nd"],
+  ["few", "rd"],
+  ["other", "th"],
 ]);
 const formatOrdinals = (n) => {
   const rule = pr.select(n);
@@ -81,14 +80,14 @@ const formatOrdinals = (n) => {
   return `${n}${suffix}`;
 };
 
-formatOrdinals(0);   // '0th'
-formatOrdinals(1);   // '1st'
-formatOrdinals(2);   // '2nd'
-formatOrdinals(3);   // '3rd'
-formatOrdinals(4);   // '4th'
-formatOrdinals(11);  // '11th'
-formatOrdinals(21);  // '21st'
-formatOrdinals(42);  // '42nd'
+formatOrdinals(0); // '0th'
+formatOrdinals(1); // '1st'
+formatOrdinals(2); // '2nd'
+formatOrdinals(3); // '3rd'
+formatOrdinals(4); // '4th'
+formatOrdinals(11); // '11th'
+formatOrdinals(21); // '21st'
+formatOrdinals(42); // '42nd'
 formatOrdinals(103); // '103rd'
 ```
 

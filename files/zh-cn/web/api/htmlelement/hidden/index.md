@@ -13,26 +13,18 @@ slug: Web/API/HTMLElement/hidden
 
 - 目前还不相关但将来可能会被用到的内容
 - 之前还需要但现在不再被需要用到的内容
-- 以类似于模板的方式被页面的其它部分所重复使用的内容
+- 以类似于模板的方式被页面的其他部分所重复使用的内容
 - 创建一个屏幕上不可见的画布来作为绘制的缓冲区
 
 不适用的情况，包括
 
 - 隐藏选项卡的对话框中的面板
-- 隐藏一个演示文稿中的内容，同时又希望这个内容在其它演示文稿中是可见的
+- 隐藏一个演示文稿中的内容，同时又希望这个内容在其他演示文稿中是可见的
 
-> **备注：** Elements that are not `hidden` must not link to elements which are.
+> [!NOTE]
+> Elements that are not `hidden` must not link to elements which are.
 
-## 语法
-
-```
-isHidden = HTMLElement.hidden;
-
-
-HTMLElement.hidden = true | false;
-```
-
-### 值
+## 值
 
 {{jsxref("Boolean")}} 类型的值，如果想要隐藏元素，则设置为 `true`，否则设置为 `false`。
 
@@ -43,11 +35,14 @@ HTMLElement.hidden = true | false;
 ### JavaScript
 
 ```js
-document.getElementById("okButton")
-        .addEventListener("click", function() {
-  document.getElementById("welcome").hidden = true;
-  document.getElementById("awesome").hidden = false;
-}, false);
+document.getElementById("okButton").addEventListener(
+  "click",
+  function () {
+    document.getElementById("welcome").hidden = true;
+    document.getElementById("awesome").hidden = false;
+  },
+  false,
+);
 ```
 
 这段代码用来为 welcome 面板中的按钮绑定一个事件监听器，这个事件监听器会隐藏 welcome 面板并在其原位置显示出 follow-up 面板。
@@ -75,9 +70,10 @@ welcome 面板和 follow-up 面板的 HTML 代码。
 ```html
 <div id="awesome" class="panel" hidden>
   <h1>Thanks!</h1>
-  <p>Thank you <strong>so</strong> much for agreeing to be
-  awesome today! Now get out there and do awesome things
-  awesomely to make the world more awesome!</p>
+  <p>
+    Thank you <strong>so</strong> much for agreeing to be awesome today! Now get
+    out there and do awesome things awesomely to make the world more awesome!
+  </p>
 </div>
 ```
 
@@ -87,7 +83,11 @@ welcome 面板和 follow-up 面板的 HTML 代码。
 
 ```css
 .panel {
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border: 1px solid #22d;
   padding: 12px;
   width: 500px;
@@ -95,7 +95,11 @@ welcome 面板和 follow-up 面板的 HTML 代码。
 }
 
 .button {
-  font: 22px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    22px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   padding: 5px 36px;
 }
 
@@ -105,19 +109,19 @@ h1 {
 }
 ```
 
-### Result
+### 结果
 
-{{ EmbedLiveSample('Example', 560, 200) }}
+{{ EmbedLiveSample('示例', 560, 200) }}
 
 ## 规范
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 
 ## 参见
 
-- {{htmlattrxref("hidden")}} 属性
+- [`hidden`](/zh-CN/docs/Web/HTML/Global_attributes#hidden) 属性
 - {{cssxref("display")}}

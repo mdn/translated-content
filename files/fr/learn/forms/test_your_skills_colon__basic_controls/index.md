@@ -1,14 +1,14 @@
 ---
-title: 'Testez vos compétences : les contrôles de base'
+title: "Testez vos compétences : les contrôles de base"
 slug: Learn/Forms/Test_your_skills:_Basic_controls
-translation_of: Learn/Forms/Test_your_skills:_Basic_controls
 ---
 
 {{LearnSidebar}}
 
 Le but de cette évaluation est de vérifier que vous avez compris [l'article sur les contrôles de formulaire natifs de base](/fr/docs/Learn/Forms/Basic_native_form_controls).
 
-> **Note :** Vous pouvez tester des solutions dans les éditeurs interactifs présents sur cette page. Toutefois il peut être plus utile de télécharger le code et de passer par un éditeur en ligne comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour travailler sur les exercices.
+> [!NOTE]
+> Vous pouvez tester des solutions dans les éditeurs interactifs présents sur cette page. Toutefois il peut être plus utile de télécharger le code et de passer par un éditeur en ligne comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour travailler sur les exercices.
 >
 > Si vous bloquez, demandez-nous de l'aide&nbsp;: voir la section [Évaluation et aide](#évaluation_et_aide) en bas de cette page.
 

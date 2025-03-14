@@ -7,7 +7,34 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 
 **`Intl.NumberFormat`** オブジェクトは、言語に依存した数値書式を可能にするオブジェクトのコンストラクターです。
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat")}}
+
+```js interactive-example
+const number = 123456.789;
+
+console.log(
+  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
+    number,
+  ),
+);
+// Expected output: "123.456,79 €"
+
+// The Japanese yen doesn't use a minor unit
+console.log(
+  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
+    number,
+  ),
+);
+// Expected output: "￥123,457"
+
+// Limit to three significant digits
+console.log(
+  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
+    number,
+  ),
+);
+// Expected output: "1,23,000"
+```
 
 ## コンストラクター
 
@@ -22,17 +49,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 ## インスタンスメソッド
 
 - {{jsxref("NumberFormat.format", "Intl.NumberFormat.prototype.format")}}
-  - : ゲッター関数で、ローケルに応じて、この {{jsxref("NumberFormat")}} オブジェクトのオプションを持つ数値を書式化する関数を返します。
+  - : ゲッター関数で、ロケールに応じて、この {{jsxref("NumberFormat")}} オブジェクトのオプションを持つ数値を書式化する関数を返します。
 - {{jsxref("NumberFormat.formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}
   - : オブジェクトの {{jsxref("Array")}} を返し、これは専用のロケールを意識した書式で使用することができる部品内の数値文字列を表します。
 - {{jsxref("NumberFormat.resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
-  - : ローケルを反映しているプロパティとオブジェクトの初期化中に計算された照合オプションをもった新しいオブジェクトを返します。
+  - : ロケールを反映しているプロパティとオブジェクトの初期化中に計算された照合オプションをもった新しいオブジェクトを返します。
 
 ## 例
 
 ### 基本的な使用
 
-ローケルを指定しない基本的な使い方では、既定のローケルとオプションで書式化された文字列が返されます。
+ロケールを指定しない基本的な使い方では、既定のロケールとオプションで書式化された文字列が返されます。
 
 ```js
 var number = 3500;
@@ -49,24 +76,24 @@ console.log(new Intl.NumberFormat().format(number));
 var number = 123456.789;
 
 // ドイツではカンマを小数、ピリオドを千単位の区切りに用います
-console.log(new Intl.NumberFormat('de-DE').format(number));
+console.log(new Intl.NumberFormat("de-DE").format(number));
 // → 123.456,789
 
 // ほとんどのアラビア語圏ではアラビア数字を用います
-console.log(new Intl.NumberFormat('ar-EG').format(number));
+console.log(new Intl.NumberFormat("ar-EG").format(number));
 // → ١٢٣٤٥٦٫٧٨٩
 
 // インドでは thousands/lakh/crore 区切りが用いられます
-console.log(new Intl.NumberFormat('en-IN').format(number));
+console.log(new Intl.NumberFormat("en-IN").format(number));
 // → 1,23,456.789
 
 // nu 拡張キーにより漢数字などの番号方式が使えます
-console.log(new Intl.NumberFormat('zh-Hans-CN-u-nu-hanidec').format(number));
+console.log(new Intl.NumberFormat("zh-Hans-CN-u-nu-hanidec").format(number));
 // → 一二三,四五六.七八九
 
 // バリ語のようにサポートされないかもしれない言語を用いる場合は
 // フォールバック言語を含めます。次の例ではインドネシア語です。
-console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
+console.log(new Intl.NumberFormat(["ban", "id"]).format(number));
 // → 123.456,789
 ```
 
@@ -78,32 +105,48 @@ console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
 var number = 123456.789;
 
 // 通貨フォーマットを用います
-console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(number));
+console.log(
+  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
+    number,
+  ),
+);
 // → 123.456,79 €
 
 // 日本円には小数点以下がありません
-console.log(new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(number));
+console.log(
+  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
+    number,
+  ),
+);
 // → ￥123,457
 
 // 有効数字を3桁に狭めます
-console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(number));
+console.log(
+  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
+    number,
+  ),
+);
 // → 1,23,000
 ```
 
 ### style と unit の使用
 
 ```js
-console.log(new Intl.NumberFormat("pt-PT",  {
-    style: 'unit',
-    unit: "mile-per-hour"
-}).format(50));
+console.log(
+  new Intl.NumberFormat("pt-PT", {
+    style: "unit",
+    unit: "mile-per-hour",
+  }).format(50),
+);
 // → 50 mi/h
 
-console.log((16).toLocaleString('en-GB', {
+console.log(
+  (16).toLocaleString("en-GB", {
     style: "unit",
     unit: "liter",
-    unitDisplay: "long"
-}));
+    unitDisplay: "long",
+  }),
+);
 // → 16 litres
 ```
 
@@ -113,7 +156,7 @@ console.log((16).toLocaleString('en-GB', {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Intl.NumberFormat")}}
+{{Compat}}
 
 ## 関連情報
 

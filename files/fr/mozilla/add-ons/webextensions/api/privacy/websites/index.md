@@ -1,16 +1,6 @@
 ---
 title: privacy.websites
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/websites
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Privacy
-  - Property
-  - Reference
-  - WebExtensions
-  - websites
-translation_of: Mozilla/Add-ons/WebExtensions/API/privacy/websites
 ---
 
 {{AddonSidebar}}
@@ -62,7 +52,7 @@ Les valeurs par défaut de ces propriétés ont tendance à varier selon les nav
     Par défaut à `false`.
 
 - `thirdPartyCookiesAllowed`
-  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen. Si `false`, le navigateur bloque les [cookies tiers](/fr/docs/Web/HTTP/Cookies#Third-party_cookies).
+  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen. Si `false`, le navigateur bloque les [cookies tiers](/fr/docs/Web/HTTP/Cookies#third-party_cookies).
 - `trackingProtectionMode`
 
   - : La "protection de suivi" est une fonctionnalité de navigateur qui bloque les requêtes faites sur des domaines qui sont connus pour s'engager dans le suivi multi-sites des utilisateurs. Les sites qui suivent les utilisateurs sont généralement des sites publicitaires et analytiques tiers. Ce paramètre est un objet {{WebExtAPIRef("types.BrowserSetting")}} qui détermine si le navigateur doit activer la protection de suivi. Sa valeur sous-jacente est une chaîne qui peut prendre l'une des trois valeurs :
@@ -71,9 +61,9 @@ Les valeurs par défaut de ces propriétés ont tendance à varier selon les nav
     - `"never"`: La protection de suivi est désactivée.
     - `"private_browsing"`: La protection de suivi est activée uniquement dans les fenêtres de navigation privée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.privacy.websites")}}
+{{Compat}}
 
 ## Exemples
 
@@ -89,29 +79,29 @@ function onSet(result) {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-
   var getting = browser.privacy.websites.hyperlinkAuditingEnabled.get({});
   getting.then((got) => {
     console.log(got.value);
-    if ((got.levelOfControl === "controlled_by_this_extension") ||
-        (got.levelOfControl === "controllable_by_this_extension")) {
+    if (
+      got.levelOfControl === "controlled_by_this_extension" ||
+      got.levelOfControl === "controllable_by_this_extension"
+    ) {
       var setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
-        value: true
+        value: true,
       });
       setting.then(onSet);
     } else {
       console.log("Not able to set hyperlinkAuditingEnabled");
     }
   });
-
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.privacy`](https://developer.chrome.com/extensions/privacy). Cette documentation est dérivée de [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) dans le code de Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/api/privacy). Cette documentation est dérivée de [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) dans le code de Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

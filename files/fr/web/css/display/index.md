@@ -1,19 +1,13 @@
 ---
 title: display
 slug: Web/CSS/display
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - display
-translation_of: Web/CSS/display
 ---
 
 {{CSSRef}}
 
-La propriété **`display`** définit le type d'affichage utilisée pour le rendu d'un élément ([de bloc ou en ligne](/fr/docs/Web/CSS/CSS_Flow_Layout)) et la disposition utilisée pour ses éléments fils : [grille](/fr/docs/Web/CSS/CSS_Grid_Layout) ou [boîtes flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout).
+La propriété **`display`** définit le type d'affichage utilisée pour le rendu d'un élément ([de bloc ou en ligne](/fr/docs/Web/CSS/CSS_flow_layout)) et la disposition utilisée pour ses éléments fils : [grille](/fr/docs/Web/CSS/CSS_grid_layout) ou [boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout).
 
-Le type d'affichage donné par `display` possède deux composantes : le type d'affichage extérieur qui définit comment la boîte participe au [flux](/fr/docs/Web/CSS/CSS_Flow_Layout) et le type d'affichage intérieur qui définit l'organisation des éléments enfants.
+Le type d'affichage donné par `display` possède deux composantes : le type d'affichage extérieur qui définit comment la boîte participe au [flux](/fr/docs/Web/CSS/CSS_flow_layout) et le type d'affichage intérieur qui définit l'organisation des éléments enfants.
 
 Certaines valeurs de `display` sont définies dans des spécifications séparées. Pour plus d'informations, voir la section Spécifications ci-après.
 
@@ -126,19 +120,15 @@ On pourra obtenir un comportement équivalent en écrivant cela avec une seule v
 
 En plus de l'exemple qui suit, vous pouvez voir d'autres exemples sur les sections dédiées aux différents modes de disposition :
 
-- [Grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout)
-- [Boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout)
-- [Apprendre la disposition en CSS](/fr/docs/Apprendre/CSS/CSS_layout)
+- [Grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)
+- [Boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout)
+- [Apprendre la disposition en CSS](/fr/docs/Learn/CSS/CSS_layout)
 
 ### HTML
 
 ```html
-<p>
-  Texte visible
-</p>
-<p class="secret">
-  Texte invisible
-</p>
+<p>Texte visible</p>
+<p class="secret">Texte invisible</p>
 ```
 
 ### CSS
@@ -157,7 +147,7 @@ p.secret {
 
 ### `display: none;`
 
-Utiliser la propriété `display` avec la valeur `none` sur un élément entraînera son retrait de l'[arbre d'accessibilité](/fr/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs). Cet élément ainsi que ses descendants ne seront plus annoncés par les lecteurs d'écrans.
+Utiliser la propriété `display` avec la valeur `none` sur un élément entraînera son retrait de l'[arbre d'accessibilité](/fr/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). Cet élément ainsi que ses descendants ne seront plus annoncés par les lecteurs d'écrans.
 
 Si vous souhaitez masquer un élément visuellement, une alternative plus accessible consiste à utiliser [une combinaison de propriétés](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) afin de le retirer de l'écran mais de le conserver lisible pour les technologies d'assistance.
 
@@ -170,11 +160,11 @@ Tout élément ciblé avec `display: contents` sera retiré de l'arbre d'accessi
 
 ### Les tableaux
 
-Modifier la valeur de `display` pour un élément de [tableau](/fr/docs/Web/HTML/Element/table) afin d'utiliser la valeur `block`, `grid` ou `flex` modifiera sa représentation au sein de l'[arbre d'accessibilité](/fr/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs). Aussi, le tableau ne sera plus correctement annoncé par les technologies d'assistance.
+Modifier la valeur de `display` pour un élément de [tableau](/fr/docs/Web/HTML/Element/table) afin d'utiliser la valeur `block`, `grid` ou `flex` modifiera sa représentation au sein de l'[arbre d'accessibilité](/fr/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). Aussi, le tableau ne sera plus correctement annoncé par les technologies d'assistance.
 
 - [Une rapide note sur l'impact de la propriété CSS `display` sur la sémantique des tableaux — The Paciello Group (en anglais)](https://developer.paciellogroup.com/blog/2018/03/short-note-on-what-css-display-properties-do-to-table-semantics/)
 - [Du contenu masqué avec une meilleure accessibilité - Go Make Things (en anglais)](https://gomakethings.com/hidden-content-for-better-a11y/)
-- [Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- [Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
 - [_Understanding Success Criterion 1.3.1, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
 ## Spécifications
@@ -192,5 +182,5 @@ Modifier la valeur de `display` pour un élément de [tableau](/fr/docs/Web/HTML
 - {{cssxref("position")}}
 - {{cssxref("flex")}}
 - {{cssxref("grid")}}
-- [Explications sur les contextes de formatage](/fr/docs/Web/CSS/CSS_Flow_Layout/Explications_contextes_formatage)
-- [Les dispositions de bloc et en ligne dans un flux normal](/fr/docs/Web/CSS/CSS_Flow_Layout/Disposition_de_bloc_en_ligne_avec_flux_normal)
+- [Explications sur les contextes de formatage](/fr/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
+- [Les dispositions de bloc et en ligne dans un flux normal](/fr/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)

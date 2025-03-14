@@ -7,7 +7,8 @@ A propriedade **`grid`** do CSS é uma [abreviação](/pt-BR/docs/Web/CSS/Shorth
 
 {{EmbedInteractiveExample("pages/css/grid.html")}}
 
-> **Note:** **Nota:** Você pode especificar apenas as propriedades explícitas _ou_ implícitas da grade em uma única declaração `grid`. As subpropriedades que você não especifica são definidas como seu valor inicial, como é normal para abreviações. Além disso, as propriedades da medianiz NÃO são redefinidas por essa abreviação.
+> [!NOTE]
+> Você pode especificar apenas as propriedades explícitas _ou_ implícitas da grade em uma única declaração `grid`. As subpropriedades que você não especifica são definidas como seu valor inicial, como é normal para abreviações. Além disso, as propriedades da medianiz NÃO são redefinidas por essa abreviação.
 
 ## Sintaxe
 
@@ -99,66 +100,64 @@ grid: unset;
 
 ## Especificações
 
-| Especificação                                                        | Status                       | Comment           |
-| -------------------------------------------------------------------- | ---------------------------- | ----------------- |
-| {{SpecName("CSS3 Grid", "#propdef-grid", "grid")}} | {{Spec2("CSS3 Grid")}} | Definição inicial |
+{{Specifications}}
 
 {{cssinfo}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.grid")}}
+{{Compat}}
 
 ## Veja também
 
 - Propriedades CSS relacionadas: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}
-- Guia de Layout de Grade: _[Line-based placement with CSS Grid](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
+- Guia de Layout de Grade: _[Line-based placement with CSS Grid](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
 - Guia de Layout de Grade: _[Grid template areas - Grid definition shorthands](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#Grid_definition_shorthands)_
 
 1. [**CSS**](/pt-BR/docs/Web/CSS)
 2. [**CSS Reference**](/pt-BR/docs/Web/CSS/Reference)
-3. [CSS Grid Layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout)
+3. [CSS Grid Layout](/pt-BR/docs/Web/CSS/CSS_grid_layout)
 4. **Guias**
 
-    1. [Basics concepts of grid layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-    2. [Relationship to other layout methods](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-    3. [Line-based placement](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-    4. [Grid template areas](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-    5. [Layout using named grid lines](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-    6. [Auto-placement in grid layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7. [Box alignment in grid layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8. [Grids, logical values and writing modes](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9. [CSS Grid Layout and Accessibility](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-    10. [CSS Grid Layout and Progressive Enhancement](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-    11. [Realizing common layouts using grids](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+   1. [Basics concepts of grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+   2. [Relationship to other layout methods](/pt-BR/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+   3. [Line-based placement](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+   4. [Grid template areas](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+   5. [Layout using named grid lines](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+   6. [Auto-placement in grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+   7. [Box alignment in grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+   8. [Grids, logical values and writing modes](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+   9. [CSS Grid Layout and Accessibility](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+   10. [CSS Grid Layout and Progressive Enhancement](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+   11. [Realizing common layouts using grids](/pt-BR/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 5. **Propriedades**
 
-    1. [grid](/pt-BR/docs/Web/CSS/grid)
-    2. [grid-area](/pt-BR/docs/Web/CSS/grid-area)
-    3. [grid-auto-columns](/pt-BR/docs/Web/CSS/grid-auto-columns)
-    4. [grid-auto-flow](/pt-BR/docs/Web/CSS/grid-auto-flow)
-    5. [grid-auto-rows](/pt-BR/docs/Web/CSS/grid-auto-rows)
-    6. [grid-column](/pt-BR/docs/Web/CSS/grid-column)
-    7. [grid-column-end](/pt-BR/docs/Web/CSS/grid-column-end)
-    8. [grid-column-gap](/pt-BR/docs/Web/CSS/grid-column-gap)
-    9. [grid-column-start](/pt-BR/docs/Web/CSS/grid-column-start)
-    10. [grid-gap](/pt-BR/docs/Web/CSS/grid-gap)
-    11. [grid-row](/pt-BR/docs/Web/CSS/grid-row)
-    12. [grid-row-end](/pt-BR/docs/Web/CSS/grid-row-end)
-    13. [grid-row-gap](/pt-BR/docs/Web/CSS/grid-row-gap)
-    14. [grid-row-start](/pt-BR/docs/Web/CSS/grid-row-start)
-    15. [grid-template](/pt-BR/docs/Web/CSS/grid-template)
-    16. [grid-template-areas](/pt-BR/docs/Web/CSS/grid-template-areas)
-    17. [grid-template-columns](/pt-BR/docs/Web/CSS/grid-template-columns)
-    18. [grid-template-rows](/pt-BR/docs/Web/CSS/grid-template-rows)
+   1. [grid](/pt-BR/docs/Web/CSS/grid)
+   2. [grid-area](/pt-BR/docs/Web/CSS/grid-area)
+   3. [grid-auto-columns](/pt-BR/docs/Web/CSS/grid-auto-columns)
+   4. [grid-auto-flow](/pt-BR/docs/Web/CSS/grid-auto-flow)
+   5. [grid-auto-rows](/pt-BR/docs/Web/CSS/grid-auto-rows)
+   6. [grid-column](/pt-BR/docs/Web/CSS/grid-column)
+   7. [grid-column-end](/pt-BR/docs/Web/CSS/grid-column-end)
+   8. [grid-column-gap](/pt-BR/docs/Web/CSS/column-gap)
+   9. [grid-column-start](/pt-BR/docs/Web/CSS/grid-column-start)
+   10. [grid-gap](/pt-BR/docs/Web/CSS/gap)
+   11. [grid-row](/pt-BR/docs/Web/CSS/grid-row)
+   12. [grid-row-end](/pt-BR/docs/Web/CSS/grid-row-end)
+   13. [grid-row-gap](/pt-BR/docs/Web/CSS/row-gap)
+   14. [grid-row-start](/pt-BR/docs/Web/CSS/grid-row-start)
+   15. [grid-template](/pt-BR/docs/Web/CSS/grid-template)
+   16. [grid-template-areas](/pt-BR/docs/Web/CSS/grid-template-areas)
+   17. [grid-template-columns](/pt-BR/docs/Web/CSS/grid-template-columns)
+   18. [grid-template-rows](/pt-BR/docs/Web/CSS/grid-template-rows)
 
 6. **Glossário**
 
-    1. [Grid lines](/pt-BR/docs/Glossary/Grid_lines)
-    2. [Grid tracks](/pt-BR/docs/Glossary/Grid_tracks)
-    3. [Grid cell](/pt-BR/docs/Glossary/Grid_cell)
-    4. [Grid areas](/pt-BR/docs/Glossary/Grid_areas)
-    5. [Gutters](/pt-BR/docs/Glossary/Gutters)
-    6. [Grid row](/pt-BR/docs/Glossary/Grid_rows)
-    7. [Grid column](/pt-BR/docs/Glossary/Grid_column)
+   1. [Grid lines](/pt-BR/docs/Glossary/Grid_lines)
+   2. [Grid tracks](/pt-BR/docs/Glossary/Grid_tracks)
+   3. [Grid cell](/pt-BR/docs/Glossary/Grid_cell)
+   4. [Grid areas](/pt-BR/docs/Glossary/Grid_Areas)
+   5. [Gutters](/pt-BR/docs/Glossary/Gutters)
+   6. [Grid row](/pt-BR/docs/Glossary/Grid_Row)
+   7. [Grid column](/pt-BR/docs/Glossary/Grid_column)

@@ -1,25 +1,40 @@
 ---
-title: Function.name
+title: "Function: name"
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
-tags:
-  - ECMAScript6
-  - Function
-  - JavaScript
-  - Property
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/name
-browser-compat: javascript.builtins.Function.name
 ---
+
 {{JSRef}}
 
-**`function.name`** 속성(property)은 함수 이름을 반환합니다.
+{{jsxref("Function")}} 인스턴스의 **`name`** 속성은 함수가 생성될 때 지정된 대로 함수의 이름을 나타내거나 익명으로 생성된 함수의 경우 `anonymous` 또는 `''`(빈 문자열)일 수 있습니다.
 
-{{js_property_attributes(0,0,1)}}
+{{InteractiveExample("JavaScript Demo: Function.name")}}
 
-비표준, ES6 이전 구현에서는 설정가능(`configurable`) attribute도 `false`였음을 주의하세요.
+```js interactive-example
+const func1 = function () {};
+
+const object = {
+  func2: function () {},
+};
+
+console.log(func1.name);
+// Expected output: "func1"
+
+console.log(object.func2.name);
+// Expected output: "func2"
+```
+
+## 값
+
+문자열.
+
+{{js_property_attributes(0, 0, 1)}}
+
+> [!NOTE]
+> 비표준, ES6 이전 구현에서는 `configurable` 속성 또한 `false` 였습니다.
 
 ## 설명
 
-`name` 속성은 함수 이름 또는 (ES6 구현 이전) 익명(anonymous) 함수에 대해서는 빈 문자열을 반환합니다:
+`name` 속성은 함수 이름 또는 (ES6 구현 이전) 익명(anonymous) 함수에 대해서는 빈 문자열을 반환합니다.
 
 ```js
 function doSomething() {}
@@ -30,19 +45,19 @@ console.log(doSomething.name); // logs "doSomething"
 `new Function(...)` 또는 그냥 `Function(...)` 구문으로 생성된 함수는 `name` 속성을 빈 문자열로 설정합니다. 다음 예에서는 익명 함수가 생성되므로 `name`은 빈 문자열을 반환합니다:
 
 ```js
-var f = function() {};
+var f = function () {};
 var object = {
-  someMethod: function() {}
+  someMethod: function () {},
 };
 
-console.log(f.name == ''); // true
-console.log(object.someMethod.name == ''); // 역시 true
+console.log(f.name == ""); // true
+console.log(object.someMethod.name == ""); // 역시 true
 ```
 
 ES6 함수를 구현한 브라우저는 익명 함수 이름을 그 구문상 위치로부터 추측할 수 있습니다. 예를 들어:
 
 ```js
-var f = function() {};
+var f = function () {};
 console.log(f.name); // "f"
 ```
 
@@ -50,11 +65,15 @@ console.log(f.name); // "f"
 
 ```js
 var object = {
-  someMethod: function object_someMethod() {}
+  someMethod: function object_someMethod() {},
 };
 console.log(object.someMethod.name); // logs "object_someMethod"
 
-try { object_someMethod } catch(e) { console.log(e); }
+try {
+  object_someMethod;
+} catch (e) {
+  console.log(e);
+}
 // ReferenceError: object_someMethod가 정의되지 않음
 ```
 
@@ -63,10 +82,10 @@ try { object_someMethod } catch(e) { console.log(e); }
 ```js
 var object = {
   // 익명
-  someMethod: function() {}
+  someMethod: function () {},
 };
 
-object.someMethod.name = 'someMethod';
+object.someMethod.name = "someMethod";
 console.log(object.someMethod.name); // 빈 문자열, someMethod는 익명
 ```
 
@@ -84,10 +103,15 @@ var b = new a();
 console.log(b.constructor.name); // logs "a"
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
 ## 브라우저 호환성
 
 {{Compat}}
+
+## 같이 보기
+
+- A polyfill for functions' `.name` property is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-function)
+- {{jsxref("Function")}}

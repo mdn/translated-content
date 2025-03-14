@@ -1,9 +1,9 @@
 ---
-title: ':defined'
+title: :defined
 slug: Web/CSS/:defined
 ---
 
-{{ CSSRef }}
+{{CSSRef}}
 
 **`:defined`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 表示任何已定义的元素。这包括任何浏览器内置的标准元素以及已成功定义的自定义元素 (例如通过 {{domxref("CustomElementRegistry.define()")}} 方法)。
 
@@ -30,18 +30,19 @@ simple-custom:defined {
 在这个 demo 中我们定义了一个非常简单的自定义元素：
 
 ```js
-customElements.define('simple-custom',
+customElements.define(
+  "simple-custom",
   class extends HTMLElement {
     constructor() {
       super();
 
-      let divElem = document.createElement('div');
-      divElem.textContent = this.getAttribute('text');
+      let divElem = document.createElement("div");
+      divElem.textContent = this.getAttribute("text");
 
-      let shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(divElem);
-  }
-})
+      let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
+    }
+  },
+);
 ```
 
 然后在文档中插入一个该元素的副本，以及一个标准的 `<p>` 标签：
@@ -82,7 +83,7 @@ simple-custom:defined {
 }
 ```
 
-这在你有一个复杂的自定义元素需要一段时间才能加载到页面中时非常有用 —— 你可能想要隐藏元素的实例直到定义完成为止，这样你就不会在页面上出现一些难看的元素。
+这在你有一个复杂的自定义元素需要一段时间才能加载到页面中时非常有用——你可能想要隐藏元素的实例直到定义完成为止，这样你就不会在页面上出现一些难看的元素。
 
 ## 规范
 
@@ -94,4 +95,4 @@ simple-custom:defined {
 
 ## 参见
 
-- [Web components](/zh-CN/docs/Web/Web_Components)
+- [Web component](/zh-CN/docs/Web/API/Web_components)

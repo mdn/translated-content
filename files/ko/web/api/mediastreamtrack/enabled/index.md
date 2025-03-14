@@ -1,15 +1,8 @@
 ---
 title: MediaStreamTrack.enabled
 slug: Web/API/MediaStreamTrack/enabled
-tags:
-  - Media
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Property
-  - Reference
-  - WebRTC
-translation_of: Web/API/MediaStreamTrack/enabled
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 {{domxref("MediaStreamTrack")}} 인터페이스의 **`enabled`** 속성은 트랙이 소스 스트림을 렌더링 할 수 있으면 `true`, 아니면 `false`를 반환합니다. `enabled` 속성을 사용해 음소거 기능을 구현할 수 있습니다. 활성화된 경우 트랙의 데이터는 입력에서 목적지로 출력됩니다. 비활성 상태에서는 빈 프레임만 출력합니다.
@@ -18,13 +11,14 @@ translation_of: Web/API/MediaStreamTrack/enabled
 
 사실, `enabled`의 값은 사용자가 트랙의 "음소거" 상태로 취급할 상태를 나타내며, {{domxref("MediaStreamTrack.muted", "muted")}} 속성은 전송 중 프레임 유실 등으로 인해 데이터를 출력할 수 없는 상태를 뜻합니다.
 
-> **참고:** 트랙의 연결이 끊긴 후에도 `enabled` 값을 바꿀 수는 있지만 아무런 효과도 없습니다.
+> [!NOTE]
+> 트랙의 연결이 끊긴 후에도 `enabled` 값을 바꿀 수는 있지만 아무런 효과도 없습니다.
 
 ## 구문
 
 ```js
-const enabledFlag = track.enabled
-track.enabled = [true | false]
+const enabledFlag = track.enabled;
+track.enabled = [true | false];
 ```
 
 ### 값
@@ -39,15 +33,15 @@ track.enabled = [true | false]
 
 ## 예제
 
-다음 코드는 {{event("click")}} 이벤트 처리기를 사용해 일시정지를 구현합니다.
+다음 코드는 [`click`](/ko/docs/Web/API/Element/click_event) 이벤트 처리기를 사용해 일시정지를 구현합니다.
 
 ```js
-pauseButton.onclick = function(evt) {
+pauseButton.onclick = function (evt) {
   const newState = !myAudioTrack.enabled;
 
   pauseButton.innerHTML = newState ? "&#x25B6;&#xFE0F;" : "&#x23F8;&#xFE0F;";
   myAudioTrack.enabled = newState;
-}
+};
 ```
 
 ## 명세
@@ -58,7 +52,7 @@ pauseButton.onclick = function(evt) {
 
 ## 같이 보기
 
-- [MediaStream API](/ko/docs/Web/API/Media_Streams_API)
+- [MediaStream API](/ko/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaStream")}}
 - {{domxref("MediaStreamTrack")}}
 - [WebRTC](/ko/docs/Web/API/WebRTC_API)

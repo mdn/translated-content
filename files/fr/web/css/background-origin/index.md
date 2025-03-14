@@ -1,8 +1,6 @@
 ---
 title: background-origin
 slug: Web/CSS/background-origin
-browser-compat: css.properties.background-image
-translation_of: Web/CSS/background-origin
 ---
 
 {{CSSRef}}
@@ -13,7 +11,8 @@ La propriété **`background-origin`** détermine l'origine de l'arrière-plan [
 
 Attention, `background-origin` est ignorée lorsque [`background-attachment`](/fr/docs/Web/CSS/background-attachment) vaut `fixed`.
 
-> **Note :** Cette propriété est rattachée à la propriété raccourcie [`background`](/fr/docs/Web/CSS/background). Aussi, si on a une déclaration `background-origin` avant la propriété raccourcie et que cette dernière ne définit pas la valeur de l'origine, ce sera la valeur initiale par défaut qui sera prise en compte pour `background-origin`.
+> [!NOTE]
+> Cette propriété est rattachée à la propriété raccourcie [`background`](/fr/docs/Web/CSS/background). Aussi, si on a une déclaration `background-origin` avant la propriété raccourcie et que cette dernière ne définit pas la valeur de l'origine, ce sera la valeur initiale par défaut qui sera prise en compte pour `background-origin`.
 
 ## Syntaxe
 
@@ -55,7 +54,7 @@ background-origin: unset;
 .example {
   border: 10px double;
   padding: 10px;
-  background: url('image.jpg');
+  background: url("image.jpg");
   background-position: center left;
   background-origin: content-box;
 }
@@ -65,7 +64,7 @@ background-origin: unset;
 #example2 {
   border: 4px solid black;
   padding: 10px;
-  background: url('image.gif');
+  background: url("image.gif");
   background-repeat: no-repeat;
   background-origin: border-box;
 }
@@ -73,8 +72,11 @@ background-origin: unset;
 
 ```css
 div {
-  background-image: url('logo.jpg'), url('mainback.png'); /* Applique deux images en arrière-plan */
-  background-position: top right, 0px 0px;
+  background-image:
+    url("logo.jpg"), url("mainback.png"); /* Applique deux images en arrière-plan */
+  background-position:
+    top right,
+    0px 0px;
   background-origin: content-box, padding-box;
 }
 ```
@@ -95,8 +97,14 @@ Dans cet exemple, la boîte possède une bordure épaisse en pointillés. Le pre
 .box {
   margin: 10px 0;
   color: #fff;
-  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,0.6) 60%, rgba(252,176,69,1) 100%),
-              radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 28%);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(131, 58, 180, 1) 0%,
+      rgba(253, 29, 29, 0.6) 60%,
+      rgba(252, 176, 69, 1) 100%
+    ),
+    radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 28%);
   border: 20px dashed black;
   padding: 20px;
   width: 400px;

@@ -1,23 +1,32 @@
 ---
 title: <address>
 slug: Web/HTML/Element/address
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/address
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<address>` 요소**는 가까운 HTML 요소의 사람, 단체, 조직 등에 대한 연락처 정보를 나타냅니다.
 
-{{EmbedInteractiveExample("pages/tabbed/address.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;address&gt;", "tabbed-standard")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</div>
+```html interactive-example
+<p>Contact the author of this page:</p>
+
+<address>
+  <a href="mailto:jim@example.com">jim@example.com</a><br />
+  <a href="tel:+14155550132">+1 (415) 555‑0132</a>
+</address>
+```
+
+```css interactive-example
+a[href^="mailto"]::before {
+  content: "📧 ";
+}
+
+a[href^="tel"]::before {
+  content: "📞 ";
+}
+```
 
 `<address>` 요소의 콘텐츠가 제공하는 연락처 정보는 현재 맥락에 적절한 아무 형태나 취할 수 있으며, 물리적 주소, URL, 이메일 주소, 전화번호, SNS 식별자, 좌표 등 어떠한 정보라도 포함할 수 있습니다. 반드시 포함해야 하는 정보는 연락처가 가리키는 개인, 조직, 단체의 이름입니다.
 
@@ -53,7 +62,7 @@ translation_of: Web/HTML/Element/address
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -98,14 +107,14 @@ translation_of: Web/HTML/Element/address
 
 ```html
 <address>
-  You can contact author at <a href="http://www.somedomain.com/contact">
-  www.somedomain.com</a>.<br>
-  If you see any bugs, please <a href="mailto:webmaster@somedomain.com">
-  contact webmaster</a>.<br>
-  You may also want to visit us:<br>
-  Mozilla Foundation<br>
-  331 E Evelyn Ave<br>
-  Mountain View, CA 94041<br>
+  You can contact author at
+  <a href="http://www.somedomain.com/contact"> www.somedomain.com</a>.<br />
+  If you see any bugs, please
+  <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.<br />
+  You may also want to visit us:<br />
+  Mozilla Foundation<br />
+  331 E Evelyn Ave<br />
+  Mountain View, CA 94041<br />
   USA
 </address>
 ```
@@ -122,4 +131,4 @@ translation_of: Web/HTML/Element/address
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.address")}}
+{{Compat}}

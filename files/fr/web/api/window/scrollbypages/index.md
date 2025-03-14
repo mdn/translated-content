@@ -1,12 +1,6 @@
 ---
 title: Window.scrollByPages()
 slug: Web/API/Window/scrollByPages
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Méthode
-translation_of: Web/API/Window/scrollByPages
 ---
 
 {{ ApiRef() }}{{Non-standard_header}}
@@ -16,7 +10,7 @@ Fait défiler le document du nombre de pages spécifié.
 ### Syntaxe
 
 ```js
-window.scrollByPages(pages)
+window.scrollByPages(pages);
 ```
 
 ### Paramètres

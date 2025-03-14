@@ -1,9 +1,6 @@
 ---
 title: Date.prototype.toLocaleDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toLocaleDateString
-browser-compat: javascript.builtins.Date.toLocaleDateString
 ---
 
 {{JSRef}}
@@ -12,14 +9,33 @@ La méthode **`toLocaleDateString()`** renvoie une chaine de caractères corresp
 
 Les arguments `locales` et `options` permettent aux applications de définir le langage utilisé pour les conventions de format et permettent de personnaliser le comportement de la fonction. Les anciennes implémentations ignoraient ces arguments, la locale utilisée et le format de la chaine dépendaient uniquement de l'implémentation.
 
-{{EmbedInteractiveExample("pages/js/date-tolocaledatestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toLocaleDateString()")}}
+
+```js interactive-example
+const event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+
+console.log(event.toLocaleDateString("de-DE", options));
+// Expected output (varies according to local timezone): Donnerstag, 20. Dezember 2012
+
+console.log(event.toLocaleDateString("ar-EG", options));
+// Expected output (varies according to local timezone): الخميس، ٢٠ ديسمبر، ٢٠١٢
+
+console.log(event.toLocaleDateString(undefined, options));
+// Expected output (varies according to local timezone and default locale): Thursday, December 20, 2012
+```
 
 ## Syntaxe
 
 ```js
-toLocaleDateString()
-toLocaleDateString(locales)
-toLocaleDateString(locales, options)
+toLocaleDateString();
+toLocaleDateString(locales);
+toLocaleDateString(locales, options);
 ```
 
 ### Paramètres
@@ -121,7 +137,12 @@ Les résultats fournis par `toLocaleDateString()` peuvent être personnalisés g
 let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // fournir le jour de la semaine avec une date longue
-let options = {weekday: "long", year: "numeric", month: "long", day: "numeric"};
+let options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
 console.log(date.toLocaleDateString("de-DE", options));
 // → "Donnerstag, 20. Dezember 2012"
 

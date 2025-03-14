@@ -1,40 +1,49 @@
 ---
-title: document.body
+title: Document：body 属性
 slug: Web/API/Document/body
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef}}
+{{APIRef("DOM")}}
 
-## 概述
+**`Document.body`** 属性表示当前文档的 {{HTMLElement("body")}} 或 {{HTMLElement("frameset")}} 节点，如果不存在此类元素，则为 `null`。
 
-返回当前文档中的`<body>元素`或者`<frameset>元素`.
+## 值
 
-## 语法
+以下其中一项：
 
-```plain
-var objRef = document.body;
-document.body = objRef;
-```
+- {{HTMLElement("body")}}
+- {{HTMLElement("frameset")}}
+- `null`
 
 ## 示例
 
 ```js
-// 如果 HTML 结构为<body id="oldBodyElement"></body>,则：
-alert(document.body.id); // "oldBodyElement"
+// 给定以下 HTML：<body id="oldBodyElement"></body>
+alert(document.body.id); // “oldBodyElement”
 
-var aNewBodyElement = document.createElement("body");
+const aNewBodyElement = document.createElement("body");
 
 aNewBodyElement.id = "newBodyElement";
 document.body = aNewBodyElement;
-alert(document.body.id); // "newBodyElement"
+alert(document.body.id); // “newBodyElement”
 ```
 
-## 介绍
+## 备注
 
-`document.body` 是包含当前页面内容的元素，对于拥有 `<body>` 元素的文档来说，返回的是 `<body>` 元素，对于一个拥有 `<frameset>` 元素的文档来说，返回的是最外层的 `<frameset>` 元素 .
+`document.body` 是包含文档内容的元素。在具有 `<body>` 内容的文档中，返回 `<body>` 元素，在框架集文档中，返回最外层的 `<frameset>` 元素。
 
-`该属性是可写的`,且为该属性赋的值必须是一个 `<body>` 元素。
+虽然 `body` 属性是可设置的，但在文档中设置一个新的 body 会有效地移除现有 `<body>` 元素的所有当前子元素。
 
 ## 规范
 
-- [DOM Level 2 HTML: HTMLDocument.body](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-56360201)
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{domxref("document.head")}}

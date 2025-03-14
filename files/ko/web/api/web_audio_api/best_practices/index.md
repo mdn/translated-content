@@ -1,12 +1,8 @@
 ---
 title: Web Audio API 잘 사용하기
 slug: Web/API/Web_Audio_API/Best_practices
-tags:
-  - Audio
-  - Best practices
-  - Guide
-  - Web Audio API
 ---
+
 {{apiref("Web Audio API")}}
 
 창의적인 코드를 작성할 때 엄격하게 옳거나 틀린 길은 없습니다. 여러분이 보안, 성능, 접근성을 고려하는 한, 여러분은 여러분만의 스타일에 적응할 수 있습니다. 이 문서에서, 우리는 몇 가지의 _좋은 습관들_ — Web Audio API를 가지고 작업하는 데 있어서의 가이드라인, 팁, 그리고 트릭들 — 을 공유하고자 합니다.
@@ -21,7 +17,7 @@ Web Audio API를 가지고 사운드를 로딩하는 4가지의 주요한 방법
 
 그러나, 만약 버퍼 노드를 사용한다면 여러분은 더 많은 제어를 할 수 있습니다. 여러분은 파일을 요청하고 이것이 로딩되기를 기다려야 하지만 ([이 글의 이 섹션은](/ko/docs/Web/API/Web_Audio_API/Advanced_techniques#Dial_up_%E2%80%94_loading_a_sound_sample) 이것을 하는 좋은 방법을 보여줍니다), 그 다음에 여러분은 데이터에 직접 접근할 수 있는데, 이는 더욱 정밀한 조작이 가능함을 의미합니다.
 
-만약 여러분이 유저의 카메라나 마이크로부터의 오디오로 작업하는 방법을 찾고 있다면 여러분은 [Media Stream API](/ko/docs/Web/API/Media_Streams_API)와 {{domxref("MediaStreamAudioSourceNode")}} 인터페이스를 통해 그것에 접근할 수 있습니다. 이것은 WebRTC와 녹음이나 오디오 분석을 원하는 상황에 알맞습니다.
+만약 여러분이 유저의 카메라나 마이크로부터의 오디오로 작업하는 방법을 찾고 있다면 여러분은 [Media Stream API](/ko/docs/Web/API/Media_Capture_and_Streams_API)와 {{domxref("MediaStreamAudioSourceNode")}} 인터페이스를 통해 그것에 접근할 수 있습니다. 이것은 WebRTC와 녹음이나 오디오 분석을 원하는 상황에 알맞습니다.
 
 마지막 방법은 여러분만의 사운드를 생성하는 것인데, 이는 {{domxref("OscillatorNode")}}나 버퍼를 만들고 데이터를 채워넣는 방법으로 이루어질 수 있습니다. 오실레이터와 버퍼로 사운드를 생성하기 위해 [이 자습서에서 여러분만의 악기를 만드는 방법에 대해서](/ko/docs/Web/API/Web_Audio_API/Advanced_techniques) 알아보세요.
 
@@ -52,24 +48,32 @@ Web Audio API 명세는 끊임없이 진화하고 있으며 웹에 있는 대부
 {{domxref("AudioContext")}}를 가지고 작업할 때, 만약 여러분이 오디오 컨텍스트를 `click` 이벤트 내부에서 생성했다면 상태는 자동적으로 `running`으로 설정될 것입니다. 여기 `click` 이벤트 내부로부터 컨텍스트를 생성하는 간단한 예제가 있습니다:
 
 ```js
-const button = document.querySelector('button');
-button.addEventListener('click', function() {
+const button = document.querySelector("button");
+button.addEventListener(
+  "click",
+  function () {
     const audioCtx = new AudioContext();
-}, false);
+  },
+  false,
+);
 ```
 
 그러나 만약, 여러분이 유저 제스처 바깥에서 컨텍스트를 생성했다면, 이것의 상태는 `suspended`로 설정될 것이고 유저 상호 작용 이후에 시작될 필요가 있을 것입니다. 우리는 같은 클릭 이벤트 예제를 여기서 사용하고, 컨텍스트의 상태를 시험하고, 만약 이것이 연기되었다면(suspended), [`resume()`](/ko/docs/Web/API/AudioContext/resume) 메서드를 사용하여 시작합니다.
 
 ```js
 const audioCtx = new AudioContext();
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', function() {
-      // 컨텍스트가 연기된 상태에 있는지 검사합니다 (자동 재생 정책)
-    if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
+button.addEventListener(
+  "click",
+  function () {
+    // 컨텍스트가 연기된 상태에 있는지 검사합니다 (자동 재생 정책)
+    if (audioCtx.state === "suspended") {
+      audioCtx.resume();
     }
-}, false);
+  },
+  false,
+);
 ```
 
 여러분은 대신 {{domxref("OfflineAudioContext")}}을 가지고 작업할 수 있는데, 이 경우 여러분은 연기된 오디오 컨텍스트를 [`startRendering()`](/ko/docs/Web/API/OfflineAudioContext/startRendering) 메서드로 재개할 수 있습니다.
@@ -80,7 +84,7 @@ button.addEventListener('click', function() {
 
 만약 여러분이 오디오를 켜고 끄는 버튼을 가지고 있다면, ARIA [`role="switch"`](/ko/docs/Web/Accessibility/ARIA/Roles/Switch_role) 특성을 그것에 사용하는 것은 보조 기술에 그 버튼의 정확한 목적이 무엇인지에 대한 신호를 보내고, 그럼으로써 앱을 더욱 접근 가능하게 만들기 위한 좋은 옵션입니다. [여기 어떻게 이것을 사용하는지에 대한 데모](https://codepen.io/Wilto/pen/ZoGoQm?editors=1100)가 있습니다.
 
-여러분은 Web Audio API 내에서 많은 변화하는 값들을 가지고 작업하고 유저에게 이것들에 대한 제어를 제공하기를 원할 것이므로, [`range input`](/ko/docs/Web/HTML/Element/input/range)은 종종 사용할 제어의 좋은 선택입니다. 이것은 여러분이 최소와 최대값 뿐만 아니라 [`step`](/ko/docs/Web/HTML/Element/input#attr-step) 특성으로 증가량 또한 설정할 수 있으므로 좋은 옵션입니다.
+여러분은 Web Audio API 내에서 많은 변화하는 값들을 가지고 작업하고 유저에게 이것들에 대한 제어를 제공하기를 원할 것이므로, [`range input`](/ko/docs/Web/HTML/Element/input/range)은 종종 사용할 제어의 좋은 선택입니다. 이것은 여러분이 최소와 최대값 뿐만 아니라 [`step`](/ko/docs/Web/HTML/Element/input#step) 특성으로 증가량 또한 설정할 수 있으므로 좋은 옵션입니다.
 
 ## AudioParam 값 설정하기
 

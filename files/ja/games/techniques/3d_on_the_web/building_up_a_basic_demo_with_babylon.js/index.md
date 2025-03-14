@@ -23,27 +23,35 @@ Babylon.js で開発を始めるにあたっては、そんなに多くのもの
 ここに使う HTML の構造を示します。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>MDN Games: Babylon.js demo</title>
     <style>
-        html,body,canvas { margin: 0; padding: 0; width: 100%; height: 100%; font-size: 0; }
+      html,
+      body,
+      canvas {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 0;
+      }
     </style>
-</head>
-<body>
-<script src="babylon.js"></script>
-<canvas id="render-canvas"></canvas>
-<script>
-    var canvas = document.getElementById("render-canvas");
-    /* all our JavaScript code goes here */
-</script>
-</body>
+  </head>
+  <body>
+    <script src="babylon.js"></script>
+    <canvas id="render-canvas"></canvas>
+    <script>
+      var canvas = document.getElementById("render-canvas");
+      /* all our JavaScript code goes here */
+    </script>
+  </body>
 </html>
 ```
 
-ここには文書のタイトル ({{htmlelement("title")}}) や、Babylon.js がその内容を描画するための {{htmlelement("canvas")}} 要素の幅や高さが利用可能なビューポート領域全体を占めるようにする CSS など、文書の基本的な情報が含まれています。 初めの {{htmlelement("script")}} 要素は Babylon.js に含みます。次に例となるコードを書いていきます。すでに 1 つのヘルパー変数が取り込まれており、 `<canvas>` 要素への参照が格納されます。
+ここには文書のタイトル ({{htmlelement("title")}}) や、Babylon.js がその内容を描画するための {{htmlelement("canvas")}} 要素の幅や高さが利用可能なビューポート領域全体を占めるようにする CSS など、文書の基本的な情報が含まれています。初めの {{htmlelement("script")}} 要素は Babylon.js に含みます。次に例となるコードを書いていきます。すでに 1 つのヘルパー変数が取り込まれており、 `<canvas>` 要素への参照が格納されます。
 
 読み進める前に、このコードを新しいテキストファイルにコピーし、作業ディレクトリーに `index.html` という名前で保存してください。
 
@@ -74,7 +82,7 @@ scene.clearColor = new BABYLON.Color3(0.8, 0.8, 0.8);
 
 ```js
 var renderLoop = function () {
-    scene.render();
+  scene.render();
 };
 engine.runRenderLoop(renderLoop);
 ```
@@ -86,19 +94,28 @@ engine.runRenderLoop(renderLoop);
 さて、セットアップコードができたところで、標準的なシーンコンポーネントであるカメラ、ライト、オブジェクトの実装について考える必要があります。まず、カメラから始めましょう。シーンの作成と `clearColor` を定義した行の下に、次の行を追加してください。
 
 ```js
-var camera = new BABYLON.FreeCamera("camera", new BABYLON.Vector3(0, 0, -10), scene);
+var camera = new BABYLON.FreeCamera(
+  "camera",
+  new BABYLON.Vector3(0, 0, -10),
+  scene,
+);
 ```
 
 Babylon.js では多くの[カメラ](https://doc.babylonjs.com/divingDeeper/cameras)が利用可能です。 `FreeCamera` は最も基本的で汎用的なカメラです。初期化するためには、 3 つの引数を渡す必要があります。使用したい名前、三次元空間での位置の座標、そして追加したいシーンです。
 
-> **メモ:** ここで、`BABYLON.Vector3()` メソッドが使用されていることにお気づきでしょう。これはシーン上の 3D 位置を定義するものです。 Babylon.js には、ベクトル、色、行列などを扱うための完全な数学ライブラリーがバンドルされています。
+> [!NOTE]
+> ここで、`BABYLON.Vector3()` メソッドが使用されていることにお気づきでしょう。これはシーン上の 3D 位置を定義するものです。 Babylon.js には、ベクトル、色、行列などを扱うための完全な数学ライブラリーがバンドルされています。
 
 ## 光あれ
 
 Babylon.js では、様々な[光源](https://doc.babylonjs.com/divingDeeper/lights/lights_introduction#types-of-lights)が利用可能です。最も基本的なものは `PointLight` で、これは懐中電灯のように動作し、指定された方向にスポットライトを照らします。カメラ定義の下に、次の行を追加してください。
 
 ```js
-var light = new BABYLON.PointLight("light", new BABYLON.Vector3(10, 10, 0), scene);
+var light = new BABYLON.PointLight(
+  "light",
+  new BABYLON.Vector3(10, 10, 0),
+  scene,
+);
 ```
 
 引数は、先に定義したカメラと非常によく似ています。ライトの名前、三次元空間での位置、ライトを追加するシーンです。
@@ -113,7 +130,8 @@ var box = BABYLON.Mesh.CreateBox("box", 2, scene);
 
 メッシュはエンジンが幾何学的な図形を作成する方法なので、後で簡単に素材を適用することができます。この例では、 `Mesh.CreateBox` メソッドを使用して、独自の名前とサイズとして 2、そしてどのシーンに追加するかを宣言してボックスを作成します。
 
-> **メモ:** サイズや位置の値（ボックスのサイズなど）は単位がなく、基本的にミリメートル、メートル、フィート、マイルなど、シーンに適した値を設定することができます。
+> [!NOTE]
+> サイズや位置の値（ボックスのサイズなど）は単位がなく、基本的にミリメートル、メートル、フィート、マイルなど、シーンに適した値を設定することができます。
 
 今、保存して更新すると、オブジェクトは正方形のように見えます。なぜなら、カメラに面しているからです。オブジェクトの良いところは、シーン上で好きなように動かせることです。例えば、回転させたり、拡大縮小したりできます。複数の面が見えるように、ボックスに少し回転を加えてみましょう。もう一度、これらの線を前の線の下に追加してください。
 
@@ -198,9 +216,9 @@ cylinder.material = cylinderMaterial;
 ```js
 var t = 0;
 var renderLoop = function () {
-    scene.render();
-    t -= 0.01;
-    // animation code goes here
+  scene.render();
+  t -= 0.01;
+  // animation code goes here
 };
 engine.runRenderLoop(renderLoop);
 ```
@@ -212,7 +230,7 @@ engine.runRenderLoop(renderLoop);
 回転を適用するのは、 `renderLoop` 関数の最後にこの行を追加するだけと簡単です。
 
 ```js
-box.rotation.y = t*2;
+box.rotation.y = t * 2;
 ```
 
 これは、 `y` 軸に沿ってボックスを回転させます。
@@ -222,7 +240,7 @@ box.rotation.y = t*2;
 この行を前の行の下に追加して、トーラスを拡大縮小します。
 
 ```js
-torus.scaling.z = Math.abs(Math.sin(t*2))+0.5;
+torus.scaling.z = Math.abs(Math.sin(t * 2)) + 0.5;
 ```
 
 アニメーションの見た目を良くするために、少し調整が加えられています。値を変えてみて、アニメーションにどのような影響が出るか試してみてください。
@@ -232,7 +250,7 @@ torus.scaling.z = Math.abs(Math.sin(t*2))+0.5;
 円柱の位置を直接変更することで、シーン上で円柱を動かすことができます。この行を前の行の下に追加してください。
 
 ```js
-cylinder.position.y = Math.sin(t*3);
+cylinder.position.y = Math.sin(t * 3);
 ```
 
 円柱は `Math.sin()` 関数のおかげで `y` 軸上で上下に浮き沈みします。

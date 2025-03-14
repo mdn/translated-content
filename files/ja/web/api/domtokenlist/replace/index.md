@@ -1,6 +1,9 @@
 ---
-title: DOMTokenList.replace()
+title: "DOMTokenList: replace() メソッド"
+short-title: replace()
 slug: Web/API/DOMTokenList/replace
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}
@@ -9,8 +12,8 @@ slug: Web/API/DOMTokenList/replace
 
 ## 構文
 
-```js
-replace(oldToken, newToken);
+```js-nolint
+replace(oldToken, newToken)
 ```
 
 ## 引数
@@ -42,11 +45,7 @@ const classes = span.classList;
 
 const result = classes.replace("c", "z");
 
-if (result) {
-  span.textContent = classes;
-} else {
-  span.textContent = 'token not replaced successfully';
-}
+span.textContent = result ? classes : "token not replaced successfully";
 ```
 
 出力結果は以下のようになります。

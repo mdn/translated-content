@@ -3,13 +3,13 @@ title: Iteration protocols
 slug: Web/JavaScript/Reference/Iteration_protocols
 ---
 
-{{jsSidebar("More")}}Algumas adições do ECMAScript 2015 não são novos _built-ins_ ou uma nova sintaxe, mas protocolos. Estes protocolos podem ser implementados por qualquer objeto desde que respeitando algumas convenções.Existem dois protocolos: O _protocolo iterável_ ([iterable protocol](#The_iterable_protocol)) e o _protocolo iterador_ ([iterator protocol](#The_iterator_protocol)).
+{{jsSidebar("More")}}Algumas adições do ECMAScript 2015 não são novos _built-ins_ ou uma nova sintaxe, mas protocolos. Estes protocolos podem ser implementados por qualquer objeto desde que respeitando algumas convenções.Existem dois protocolos: O _protocolo iterável_ ([iterable protocol](#the_iterable_protocol)) e o _protocolo iterador_ ([iterator protocol](#the_iterator_protocol)).
 
 ## O protocolo iterável (iterable protocol)
 
-O protocolo **iterável** permite que objetos JavaScript definam ou personalizem seu comportamento de iteração, como valores em um loop do construtor {{jsxref("Statements/for...of", "for..of")}}. Alguns tipos _built-in_ são _[built-in iterables](#Built-in_iterables)_ com um comportamento de iteração padrão, tal como {{jsxref("Array")}} ou {{jsxref("Map")}}, enquanto outros tipos (como {{jsxref("Object")}}) não são assim.
+O protocolo **iterável** permite que objetos JavaScript definam ou personalizem seu comportamento de iteração, como valores em um loop do construtor {{jsxref("Statements/for...of", "for..of")}}. Alguns tipos _built-in_ são _[built-in iterables](#built-in_iterables)_ com um comportamento de iteração padrão, tal como {{jsxref("Array")}} ou {{jsxref("Map")}}, enquanto outros tipos (como {{jsxref("Object")}}) não são assim.
 
-Para ser **iterável**, um objeto deve implementar o método **@@iterator**, o que significa que o objeto (ou um dos objetos acima de sua [cadeia de protótipos](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)) deve ter uma propriedade com uma chave **@@iterator** que está disponível via constante `{{jsxref("Symbol.iterator")}}`:
+Para ser **iterável**, um objeto deve implementar o método **@@iterator**, o que significa que o objeto (ou um dos objetos acima de sua [cadeia de protótipos](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)) deve ter uma propriedade com uma chave **@@iterator** que está disponível via constante `{{jsxref("Symbol.iterator")}}`:
 
 | Property            | Value                                                                                                                                                      |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -71,14 +71,17 @@ Um objeto é um iterador quando implementa um método **`next()`** com a semânt
   </tbody>
 </table>
 
-> **Nota:** Não é possível saber de forma reflexiva se um determinado objeto implementa o protocolo do iterador, no entanto, é fácil criar um objeto que satisfaça tanto o iterador quanto os protocolos iteráveis (como mostrado no exemplo abaixo). Fazer isso permite que um iterador seja consumido pelas várias sintaxes que iteráveis esperam. Assim, raramente é desejável implementar o protocolo do iterador sem também implementar iteráveis.
+> [!NOTE]
+> Não é possível saber de forma reflexiva se um determinado objeto implementa o protocolo do iterador, no entanto, é fácil criar um objeto que satisfaça tanto o iterador quanto os protocolos iteráveis (como mostrado no exemplo abaixo). Fazer isso permite que um iterador seja consumido pelas várias sintaxes que iteráveis esperam. Assim, raramente é desejável implementar o protocolo do iterador sem também implementar iteráveis.
 >
 > ```js
 > var myIterator = {
->     next: function() {
->         // ...
->     },
->     [Symbol.iterator]: function() { return this }
+>   next: function () {
+>     // ...
+>   },
+>   [Symbol.iterator]: function () {
+>     return this;
+>   },
 > };
 > ```
 
@@ -87,25 +90,25 @@ Um objeto é um iterador quando implementa um método **`next()`** com a semânt
 Uma {{jsxref("String")}} é um exemplo de um objeto iterable built-in:
 
 ```js
-var someString = 'hi';
-typeof someString[Symbol.iterator];          // "function"
+var someString = "hi";
+typeof someString[Symbol.iterator]; // "function"
 ```
 
-[O iterador padrão](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) de uma string retorna as posições dos caracteres de uma string um por um:
+[O iterador padrão](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator) de uma string retorna as posições dos caracteres de uma string um por um:
 
 ```js
 var iterator = someString[Symbol.iterator]();
-iterator + '';                               // "[object String Iterator]"
+iterator + ""; // "[object String Iterator]"
 
-iterator.next();                             // { value: "h", done: false }
-iterator.next();                             // { value: "i", done: false }
-iterator.next();                             // { value: undefined, done: true }
+iterator.next(); // { value: "h", done: false }
+iterator.next(); // { value: "i", done: false }
+iterator.next(); // { value: undefined, done: true }
 ```
 
 Alguns construtores built-in, como _[spread syntax](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax)_, usam o mesmo protocolo de iteração interiormente:
 
 ```js
-[...someString]                              // ["h", "i"]
+[...someString]; // ["h", "i"]
 ```
 
 Podemos redefinir o comportamento de iteração fornecendo nosso próprio `@@iterator`:
@@ -131,8 +134,8 @@ someString[Symbol.iterator] = function() {
 Observe como redefinir `@@iterator` afeta o comportamento built-in que faz uso do protocolo de iteração:
 
 ```js
-[...someString];                             // ["bye"]
-someString + '';                             // "hi"
+[...someString]; // ["bye"]
+someString + ""; // "hi"
 ```
 
 ## Exemplos de Iteráveis
@@ -176,7 +179,7 @@ Veja também {{jsxref("Promise.all", "Promise.all(iterable)")}}, {{jsxref("Promi
 
 ### Sintaxe que espera iteráveis
 
-Some statements and expressions expect iterables, for example the [`for-of`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) loops, [spread operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator), [`yield*`](/pt-BR/docs/Web/JavaScript/Reference/Operators/yield*), and [destructuring assignment](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+Some statements and expressions expect iterables, for example the [`for-of`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) loops, [spread operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`yield*`](/pt-BR/docs/Web/JavaScript/Reference/Operators/yield*), and [destructuring assignment](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
 
 ```
 for(let value of ['a', 'b', 'c']){
@@ -338,10 +341,7 @@ aGeneratorObject[Symbol.iterator]() === aGeneratorObject;
 
 ## Especificações
 
-| Especificação                                                            | Status                       | Comentário         |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-iteration', 'Iteration')}} | {{Spec2('ES2015')}}     | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-iteration', 'Iteration')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Veja também
 

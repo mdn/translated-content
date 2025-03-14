@@ -5,19 +5,11 @@ slug: Web/API/Element/className
 
 {{APIRef("DOM")}}
 
-## 概述
-
 **className** 获取或设置指定元素的 class 属性的值。
 
-## 语法
+## 值
 
-```
-let cName = elementNodeReference.className;
-
-elementNodeReference.className = cName;
-```
-
-- *cName*是一个字符串变量，表示当前元素的`class`属性的值，可以是由空格分隔的多个`class`属性值。
+一个表示当前元素的 class 或以空格分隔的多个 class 的字符串变量。
 
 ## 示例
 
@@ -32,7 +24,8 @@ if (elm.className == "fixed") {
 
 ## 注释
 
-> **备注：** 使用名称`className`而不是`class`作为属性名，是因为"class" 在 JavaScript 中是个保留字。
+> [!NOTE]
+> 使用名称`className`而不是`class`作为属性名，是因为"class" 在 JavaScript 中是个保留字。
 
 ## 规范
 
@@ -42,6 +35,6 @@ if (elm.className == "fixed") {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("element.classList")}}

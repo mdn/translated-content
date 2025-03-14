@@ -1,14 +1,9 @@
 ---
 title: Palabra clave
 slug: Glossary/Keyword
-tags:
-  - Buscar
-  - Buscar palabra clave
-  - Glosario
-  - Palabra clave
-  - busqueda
-translation_of: Glossary/Keyword
 ---
+
+{{GlossarySidebar}}
 
 Una **palabra clave** es una palabra o frase que describe contenido. Las palabras clave en línea se utilizan como consultas para los motores de búsqueda o como palabras que identifican el contenido de los sitios web.
 

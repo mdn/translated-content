@@ -1,8 +1,8 @@
 ---
 title: WeakMap.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 ---
+
 {{JSRef}}
 
 Метод **`has()`** возвращает булевое значение, которое указывает на то существует элемент с таким ключом в объекте WeakMap или нет.
@@ -32,10 +32,10 @@ var wm = new WeakMap();
 wm.set(window, "foo");
 
 wm.has(window); // возвращает true
-wm.has("baz");  // возвращает false
+wm.has("baz"); // возвращает false
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
@@ -45,9 +45,9 @@ wm.has("baz");  // возвращает false
 
 ## Firefox-specific notes
 
-- Prior to SpiderMonkey 38 {{geckoRelease(38)}}, this method threw a {{jsxref("TypeError")}} when the `key` parameter was not an object. This has been fixed in version 38 and later to return `false` as per latest ES6 standard ({{bug(1127827)}}).
+- Prior to SpiderMonkey 38, this method threw a {{jsxref("TypeError")}} when the `key` parameter was not an object. This has been fixed in version 38 and later to return `false` as per latest ES6 standard ([Firefox bug 1127827](https://bugzil.la/1127827)).
 
-## See also
+## Смотрите также
 
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakMap.prototype.set()")}}

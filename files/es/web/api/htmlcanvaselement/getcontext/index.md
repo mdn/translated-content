@@ -20,8 +20,8 @@ canvas.getContext(contextType, contextAttributes);
   - : Es una {{domxref("DOMString")}} que contiene el identificador del contexto que define el contexto de dibujo asociado a el lienzo. Los posibles valores son:
 
     - `"2d`", dando lugar a la creación de un objeto {{domxref("CanvasRenderingContext2D")}} que representa un contexto de renderizado de dos dimensiones.
-    - `"webgl"` (o `"experimental-webgl"`) el cual creará un objeto {{domxref("WebGLRenderingContext")}} que representa un contexto de renderizado de tres dimensiones. Este contexto sólo está disponible en navegadores que implementan [WebGL](/es/docs/Web/WebGL) version 1 (OpenGL ES 2.0).
-    - "`webgl2`" (o "`experimental-webgl2`") el cual creará un objeto {{domxref("WebGL2RenderingContext")}} que representa un contexto de renderizado de tres dimensiones. Este contexto sólo está disponible en navegadores que implementan [WebGL](/es/docs/Web/WebGL) version 2 (OpenGL ES 3.0). {{experimental_inline}}
+    - `"webgl"` (o `"experimental-webgl"`) el cual creará un objeto {{domxref("WebGLRenderingContext")}} que representa un contexto de renderizado de tres dimensiones. Este contexto sólo está disponible en navegadores que implementan [WebGL](/es/docs/Web/API/WebGL_API) version 1 (OpenGL ES 2.0).
+    - "`webgl2`" (o "`experimental-webgl2`") el cual creará un objeto {{domxref("WebGL2RenderingContext")}} que representa un contexto de renderizado de tres dimensiones. Este contexto sólo está disponible en navegadores que implementan [WebGL](/es/docs/Web/API/WebGL_API) version 2 (OpenGL ES 3.0). {{experimental_inline}}
     - `"bitmaprenderer"` el cuál creará un {{domxref("ImageBitmapRenderingContext")}} que únicamente provee funcionalidad para remplazar el contenido del lienzo con un {{domxref("ImageBitmap")}} dado.
 
     Nota: Los identificadores "`experimental-webgl`" o "`experimental-webgl2`" son usados en nuevas implementaciones de WebGL. Estas implementaciones no han logrado aprobar el conjunto de pruebas de conformidad o la situación de los controladores gráficos en la plataforma no es estable aun. [Khronos Group](https://www.khronos.org/) certifica las implementaciones de WebGL bajo ciertas [reglas de conformidad](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
@@ -31,9 +31,7 @@ canvas.getContext(contextType, contextAttributes);
   - : Puedes usar varios atributos al momento de crear tu contexto de renderizado. Por ejemplo:
 
     ```js
-    canvas.getContext('webgl',
-                     { antialias: false,
-                       depth: false });
+    canvas.getContext("webgl", { antialias: false, depth: false });
     ```
 
     Atributos del contexto 2d:
@@ -74,8 +72,8 @@ Dado este elemento {{HTMLElement("canvas")}}:
 Puedes obtener un contexto 2d del canvas con el código siguiente:
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 console.log(ctx); // CanvasRenderingContext2D { ... }
 ```
 
@@ -87,7 +85,7 @@ Ahora tienes el [contexto de renderizado 2D](/es/docs/Web/API/CanvasRenderingCon
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.HTMLCanvasElement.getContext")}}
+{{Compat}}
 
 ## See also
 

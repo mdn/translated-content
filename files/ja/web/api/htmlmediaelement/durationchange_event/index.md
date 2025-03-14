@@ -1,6 +1,9 @@
 ---
-title: 'HTMLMediaElement: durationchange イベント'
+title: "HTMLMediaElement: durationchange イベント"
+short-title: durationchange
 slug: Web/API/HTMLMediaElement/durationchange_event
+l10n:
+  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
 {{APIRef("HTMLMediaElement")}}
@@ -12,9 +15,9 @@ slug: Web/API/HTMLMediaElement/durationchange_event
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('durationchange', event => { });
+addEventListener("durationchange", (event) => {});
 
-ondurationchange = event => { };
+ondurationchange = (event) => {};
 ```
 
 ## イベント型
@@ -23,25 +26,25 @@ ondurationchange = event => { };
 
 ## 例
 
-これらの例では、`HTMLMediaElement` の `durationchange` イベントのイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。
+これらの例では、`HTMLMediaElement` の `durationchange` イベントのイベントリスナーを追加し、そのイベントハンドラーがイベントの発生に反応したときにメッセージを投稿します。
 
-`addEventListener()` を使用する場合
+`addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('durationchange', (event) => {
-  console.log('理由はわかりませんが、動画の再生時間が変わりました。');
+video.addEventListener("durationchange", (event) => {
+  console.log("理由はわかりませんが、動画の再生時間が変わりました。");
 });
 ```
 
-`ondurationchange` イベントハンドラープロパティを使用する場合
+`ondurationchange` イベントハンドラープロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.ondurationchange = (event) => {
-  console.log('理由はわかりませんが、動画の再生時間が変わりました。');
+  console.log("理由はわかりませんが、動画の再生時間が変わりました。");
 };
 ```
 
@@ -64,7 +67,6 @@ video.ondurationchange = (event) => {
 - HTMLMediaElement {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.canplay_event", 'canplay')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.play_event", 'play')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.pause_event", 'pause')}} イベント

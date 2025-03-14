@@ -1,8 +1,6 @@
 ---
 title: AudioListener
 slug: Web/API/AudioListener
-translation_of: Web/API/AudioListener
-browser-compat: api.AudioListener
 ---
 
 {{APIRef("Web Audio API")}}
@@ -15,7 +13,8 @@ Il est important de noter qu'il n'y a qu'un seul auditeur par contexte, et qu'il
 
 ## Propriétés
 
-> **Note :** Les valeurs de position, d'orientation, et du haut de la tête peuvent être définies et lues à l'aide de différentes syntaxes. Par exemple, l'accès se fait à l'aide de la propriété, `AudioListener.positionX`, tandis que la même propriété est définie à l'aide de `AudioListener.positionX.value`. C'est pourquoi ces valeurs ne sont pas marquées en lecture seule, bien qu'elles apparaissent comme telle dans la spécification IDL.
+> [!NOTE]
+> Les valeurs de position, d'orientation, et du haut de la tête peuvent être définies et lues à l'aide de différentes syntaxes. Par exemple, l'accès se fait à l'aide de la propriété, `AudioListener.positionX`, tandis que la même propriété est définie à l'aide de `AudioListener.positionX.value`. C'est pourquoi ces valeurs ne sont pas marquées en lecture seule, bien qu'elles apparaissent comme telle dans la spécification IDL.
 
 - [`AudioListener.positionX`](/fr/docs/Web/API/AudioListener/positionX)
   - : La position horizontale de la personne qui écoute avec des coordonnées cartésiennes selon la règle de la main droite. La valeur par défaut est `0`.
@@ -43,7 +42,8 @@ Il est important de noter qu'il n'y a qu'un seul auditeur par contexte, et qu'il
 - [`AudioListener.setPosition()`](/fr/docs/Web/API/AudioListener/setPosition) {{deprecated_inline}}
   - : Définit la position de la personne qui écoute.
 
-> **Note :** Bien que ces méthodes soient dépréciées, il s'agit de l'unique façon de définir l'orientation et la position pour Firefox, Internet Explorer et Safari.
+> [!NOTE]
+> Bien que ces méthodes soient dépréciées, il s'agit de l'unique façon de définir l'orientation et la position pour Firefox, Internet Explorer et Safari.
 
 ## Fonctionnalités dépréciées
 

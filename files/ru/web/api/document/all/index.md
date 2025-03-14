@@ -1,7 +1,6 @@
 ---
 title: Document.all
 slug: Web/API/Document/all
-translation_of: Web/API/Document/all
 ---
 
 {{APIRef("DOM")}}{{Deprecated_Header("HTML5")}}

@@ -1,128 +1,62 @@
 ---
-title: ':fullscreen'
+title: :fullscreen
 slug: Web/CSS/:fullscreen
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-## 总结
-
-`css 伪类 :fullscreen 应用于当前处于全屏显示模式的元素。` 它不仅仅选择顶级元素，还包括所有已显示的栈内元素。
-
-> **备注：** W3C 标准使用不带破折号的单词 `:fullscreen`，但 Webkit 和 Gecko 应用接口各自使用前缀带有破折号的变量：`:-webkit-full-screen` 和`:-moz-full-screen`。微软的 Edge 和 Internet Explorer 各自使用标准语法：`:fullscreen` 和 `:-ms-fullscreen`。
+**`:fullscreen`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)匹配当前处于全屏模式的所有元素。如果有多个元素被放置在全屏模式下，则此选择器将匹配所有这些元素。
 
 ## 语法
 
-{{csssyntax}}
+```css
+:fullscreen {
+  /* ... */
+}
+```
 
-## 例子
+## 使用说明
+
+当元素在全屏模式和正常模式之间切换时，`:fullscreen` 伪类允许你配置样式表以自动调整内容的大小、样式或布局。
+
+## 示例
+
+在这个示例中，按钮的颜色根据文档是否处于全屏模式而改变。这是在不需要使用 JavaScript 显式应用样式更改的情况下完成的。
 
 ### HTML
 
+该页面的 HTML 如下所示：
+
 ```html
-<div id="fullscreen">
-  <h1>:fullscreen Demo</h1>
-  <p> This will become a big red text when on fullscreen.</p>
-  <button id="fullscreen-button">Enter Fullscreen</button>
-</div>
+<h1>MDN Web 文档演示：:fullscreen 伪类</h1>
+
+<p>
+  此演示使用 <code>:fullscreen</code> 伪类完全使用 CSS
+  来实现自动更改用于开启和关闭全屏模式的按钮的样式。
+</p>
+
+<button id="fs-toggle">切换全屏</button>
 ```
 
-```js hidden
-var fullscreenButton = document.getElementById("fullscreen-button");
-var fullscreenDiv    = document.getElementById("fullscreen");
-var fullscreenFunc   = fullscreenDiv.requestFullscreen;
-if (!fullscreenFunc) {
-  ['mozRequestFullScreen',
-   'msRequestFullscreen',
-   'webkitRequestFullScreen'].forEach(function (req) {
-     fullscreenFunc = fullscreenFunc || fullscreenDiv[req];
-   });
-}
-function enterFullscreen() {
-  fullscreenFunc.call(fullscreenDiv);
-}
-fullscreenButton.addEventListener('click', enterFullscreen);
-```
-
-```css hidden
-#fullscreen:-moz-full-screen {
-  padding: 42px;
-  background-color: pink;
-  border:2px solid #f00;
-  font-size: 200%;
-}
-#fullscreen:-ms-fullscreen {
-  padding: 42px;
-  background-color: pink;
-  border:2px solid #f00;
-  font-size: 200%;
-}
-#fullscreen:-webkit-full-screen {
-  padding: 42px;
-  background-color: pink;
-  border:2px solid #f00;
-  font-size: 200%;
-}
-
-#fullscreen:-moz-full-screen > h1 {
-  color: red;
-}
-#fullscreen:-ms-fullscreen > h1 {
-  color: red;
-}
-#fullscreen:-webkit-full-screen > h1 {
-  color: red;
-}
-
-#fullscreen:-moz-full-screen > p {
-  color: DarkRed;
-}
-#fullscreen:-ms-fullscreen > p {
-  color: DarkRed;
-}
-#fullscreen:-webkit-full-screen > p {
-  color: DarkRed;
-}
-
-#fullscreen:-moz-full-screen > button {
-  display: none;
-}
-#fullscreen:-ms-fullscreen > button {
-  display: none;
-}
-#fullscreen:-webkit-full-screen > button {
-  display: none;
-}
-```
+ID 为 `"fs-toggle"` 的 {{HTMLElement("button")}} 将根据文档是否处于全屏模式而在淡红色和淡绿色之间切换。
 
 ### CSS
 
+CSS 中实现这一功能的关键在于两条规则。第一条规则用于在元素不处于全屏状态时设置“切换全屏模式”按钮的背景颜色。这里使用了 `:not(:fullscreen)` 伪类，以查找未应用 `:fullscreen` 伪类的元素。
+
 ```css
-#fullscreen:fullscreen {
-  padding: 42px;
-  background-color: pink;
-  border:2px solid #f00;
-  font-size: 200%;
-}
-
-#fullscreen:fullscreen > h1 {
-  color: red;
-}
-
-#fullscreen:fullscreen > p {
-  color: DarkRed;
-}
-
-#fullscreen:fullscreen > button {
-  display: none;
+#fs-toggle:not(:fullscreen) {
+  background-color: #afa;
 }
 ```
 
-### 结果
+当文档*处于*全屏模式时，将应用以下 CSS，将背景颜色设置为淡红色。
 
-{{ LiveSampleLink('Example', "(If the 'Enter Fullscreen' button doesn't work, try here)") }}
-
-{{ EmbedLiveSample('Example','80%','200px') }}
+```css
+#fs-toggle:fullscreen {
+  background-color: #faa;
+}
+```
 
 ## 规范
 
@@ -134,11 +68,9 @@ fullscreenButton.addEventListener('click', enterFullscreen);
 
 ## 参见
 
+- [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API)
+- [Fullscreen API 指南](/zh-CN/docs/Web/API/Fullscreen_API/Guide)
+- {{cssxref(":not")}}
 - {{cssxref("::backdrop")}}
-- [Using full-screen mode](/zh-CN/docs/Web/API/Fullscreen_API)
-- {{ domxref("Element.requestFullscreen()") }}
-- {{ domxref("Document.exitFullscreen()") }}
-- {{ domxref("Document.fullscreen") }}
-- {{ domxref("Document.fullscreenElement") }}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}}
-- {{cssxref(":-moz-full-screen-ancestor")}}
+- DOM API：{{ domxref("Element.requestFullscreen()") }}、{{ domxref("Document.exitFullscreen()") }} 和 {{ domxref("Document.fullscreenElement") }}
+- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen) 属性

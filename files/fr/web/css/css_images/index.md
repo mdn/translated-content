@@ -1,12 +1,6 @@
 ---
 title: CSS Images
-slug: Web/CSS/CSS_Images
-tags:
-  - Aperçu
-  - CSS
-  - CSS Images
-  - Reference
-translation_of: Web/CSS/CSS_Images
+slug: Web/CSS/CSS_images
 ---
 
 {{CSSRef}}
@@ -43,9 +37,9 @@ translation_of: Web/CSS/CSS_Images
 
 ## Guides
 
-- [Utilisation de dégradés CSS](/fr/docs/Web/CSS/Utilisation_de_dégradés_CSS)
+- [Utilisation de dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
   - : Présente un type spécifique d'images CSS, les _dégradés_, et comment les créer et les utiliser.
-- [Les _sprites_ CSS](/fr/docs/Web/CSS/CSS_Images/Sprites_CSS)
+- [Les _sprites_ CSS](/fr/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
   - : Décrit la technique classique consistant à regrouper plusieurs images en un seul document pour économiser des requêtes de téléchargement et rendre une page disponible plus rapidement.
 
 ## Spécifications

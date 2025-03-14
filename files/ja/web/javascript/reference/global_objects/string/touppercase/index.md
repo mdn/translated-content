@@ -1,30 +1,34 @@
 ---
 title: String.prototype.toUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+l10n:
+  sourceCommit: a92a2bb31cf5d79808878701f0344a4eabf12963
 ---
 
 {{JSRef}}
 
 **`toUpperCase()`** メソッドは、呼び出す文字列の値を（文字列でない場合、文字列に変換して）大文字に変換して返します。
 
-{{EmbedInteractiveExample("pages/js/string-touppercase.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: String.toUpperCase()", "shorter")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+console.log(sentence.toUpperCase());
+// Expected output: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG."
+```
 
 ## 構文
 
-```
-str.toUpperCase()
+```js-nolint
+toUpperCase()
 ```
 
-### 戻り値
+### 返値
 
 呼び出す文字列の値を大文字に変換した新しい文字列です。
 
-### 例外
-
-- {{jsxref("TypeError")}}
-  - : {{jsxref("null")}} か {{jsxref("undefined")}} で呼ばれた場合（例えば、`String.prototype.toUpperCase.call(undefined)`）。
-
-## 詳細
+## 解説
 
 `toUpperCase()` メソッドは、大文字に変換された文字列の値を返します。このメソッドは、文字列自身の値に影響を与えません（JavaScript の文字列は不変です）。
 
@@ -33,23 +37,23 @@ str.toUpperCase()
 ### 基本的な使用
 
 ```js
-console.log('alphabet'.toUpperCase()); // 'ALPHABET'
+console.log("alphabet".toUpperCase()); // 'ALPHABET'
 ```
 
 ### 文字列でない `this` 値を文字列に変換する
 
-このメソッドは `this` に文字列でない値を設定した場合、文字列に変換します。:
+このメソッドは `this` に文字列でない値を設定した場合、文字列に変換します。
 
 ```js
 const a = String.prototype.toUpperCase.call({
-  toString: function toString() {
-    return 'abcdef';
-  }
+  toString() {
+    return "abcdef";
+  },
 });
 
 const b = String.prototype.toUpperCase.call(true);
 
-// prints out 'ABCDEF TRUE'.
+// 'ABCDEF TRUE' と表示
 console.log(a, b);
 ```
 
@@ -59,7 +63,7 @@ console.log(a, b);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.String.toUpperCase")}}
+{{Compat}}
 
 ## 関連情報
 

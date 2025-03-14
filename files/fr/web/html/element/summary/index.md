@@ -1,29 +1,56 @@
 ---
-title: '<summary> : l''élément de révélation d''un résumé'
+title: "<summary> : l'élément de révélation d'un résumé"
 slug: Web/HTML/Element/summary
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/summary
 ---
 
 {{HTMLSidebar}}
 
 L'élément HTML **`<summary>`** représente une boîte permettant de révéler le contenu d'un résumé ou d'une légende pour le contenu d'un élément {{HTMLElement("details")}}. En cliquant sur l'élément `<summary>`, on passe de l'état affiché à l'état masqué (et vice versa) de l'élément `<details>` parent.
 
-{{EmbedInteractiveExample("pages/tabbed/summary.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;summary&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<details>
+  <summary>
+    I have keys but no doors. I have space but no room. You can enter but can’t
+    leave. What am I?
+  </summary>
+  A keyboard.
+</details>
+```
+
+```css interactive-example
+details {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+```
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes d'utilisation
 
 Un élément `<summary>` peut contenir des éléments de titre, du texte simple ou tout contenu HTML pouvant être placé au sein d'un paragraphe.
 
-Un élément `<summary>` peut uniquement être utilisé comme le premier élément fils d'un élément `<details>`. Lorsque l'utilisateur clique sur le résumé, l'élément `<details>` parent change d'état (affiché ou masqué) et un évènement [`toggle`](/fr/docs/Web/API/HTMLDetailsElement/toggle_event) est envoyé à l'élément `<details>` (ce qui permet de détecter un changement d'état via un script).
+Un élément `<summary>` peut uniquement être utilisé comme le premier élément fils d'un élément `<details>`. Lorsque l'utilisateur clique sur le résumé, l'élément `<details>` parent change d'état (affiché ou masqué) et un évènement [`toggle`](/fr/docs/Web/API/HTMLElement/toggle_event) est envoyé à l'élément `<details>` (ce qui permet de détecter un changement d'état via un script).
 
 ### Libellé par défaut
 
@@ -46,14 +73,13 @@ Voir la section ci-après sur la compatibilité des navigateurs à ce sujet car 
 ```html
 <details open>
   <summary>Détails produit</summary>
-  <p>Ce produit a été fabriqué par
-  ACME et respecte les pandas.</p>
+  <p>Ce produit a été fabriqué par ACME et respecte les pandas.</p>
 </details>
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Exemple_simple","100%","160")}}
+{{EmbedLiveSample("","100%","160")}}
 
 ### Utilisation de titres
 
@@ -74,7 +100,7 @@ Il est possible d'utiliser des titres au sein d'un résumé.
 
 #### Résultat
 
-{{EmbedLiveSample("Utilisation_de_titres", 650, 120)}}
+{{EmbedLiveSample("", 650, 120)}}
 
 ### Utiliser avec divers éléments HTML
 
@@ -93,7 +119,7 @@ Il est possible d'utiliser des titres au sein d'un résumé.
 
 #### Résultat
 
-{{EmbedLiveSample("Utiliser_avec_divers_éléments_HTML", 650, 120)}}
+{{EmbedLiveSample("", 650, 120)}}
 
 ## Résumé technique
 
@@ -123,7 +149,7 @@ Il est possible d'utiliser des titres au sein d'un résumé.
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>{{ARIARole("button")}}</td>
+      <td><code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code></td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>

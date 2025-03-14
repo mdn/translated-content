@@ -1,14 +1,56 @@
 ---
 title: minmax()
 slug: Web/CSS/minmax
-original_slug: Web/CSS/minmax()
+l10n:
+  sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
 ---
 
 {{CSSRef}}
 
-**`minmax()`** は [CSS](/ja/docs/Web/CSS) の関数で、寸法の範囲を _min_ 以上、 _max_ 以下で定義します。 [CSS グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)で使用されます。
+**`minmax()`** は [CSS の関数](/ja/docs/Web/CSS/CSS_Functions)で、寸法の範囲を _min_ 以上、 _max_ 以下で定義します。 [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)で使用されます。
 
-{{EmbedInteractiveExample("pages/css/function-minmax.html")}}
+{{InteractiveExample("CSS Demo: minmax()")}}
+
+```css interactive-example-choice
+grid-template-columns: minmax(20px, auto) 1fr 1fr;
+```
+
+```css interactive-example-choice
+grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+```
+
+```css interactive-example-choice
+grid-template-columns: minmax(2ch, 10ch) 1fr 1fr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One. This column has more text in it.</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-gap: 10px;
+  width: 250px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  text-align: left;
+}
+```
 
 ## 構文
 
@@ -31,7 +73,7 @@ minmax(50%, min-content)
 minmax(300px, max-content)
 minmax(200px, auto)
 
-/* <fixed-breadth>, <track-breadth> 値 */
+/* <inflexible-breadth>, <fixed-breadth> 値 */
 minmax(400px, 50%)
 minmax(30%, 300px)
 minmax(min-content, 200px)
@@ -58,20 +100,21 @@ _min_ および _max_ の 2 つの引数を取る関数です。
 - `min-content`
   - : グリッドトラックを占めるグリッドアイテムの min-content の貢献度の最大値を表します。
 - `auto`
-  - : 最大値としては、 `max-content` と同じです。最小値としては、グリッドトラックを占めるグリッドアイテムの ({{cssxref("min-width")}}/{{cssxref("min-height")}} で決定する) 最大の最小値を表します。
+  - : `min` として使用した場合、グリッドトラックを占めるグリッドアイテムの最大最小サイズ（{{cssxref("min-width")}}/{{cssxref("min-height")}} で指定）を表します。
+    `max` として使用した場合は、 `max-content` と同じです。ただし、 `max-content` とは異なり、 `normal` や `stretch` のように {{cssxref("align-content")}} や {{cssxref("justify-content")}} プロパティ値によるトラックの拡張が可能です。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+### 形式文法
 
 {{csssyntax}}
 
-<h3 id="CSS_properties" name="CSS_properties">CSS プロパティ</h3>
+### CSS プロパティ
 
 `minmax()` 関数は次の中で使用することができます。
 
-- [grid-template-columns](/ja/docs/Web/CSS/grid-template-columns)
-- [grid-template-rows](/ja/docs/Web/CSS/grid-template-rows)
-- [grid-auto-columns](/ja/docs/Web/CSS/grid-auto-columns)
-- [grid-auto-rows](/ja/docs/Web/CSS/grid-auto-rows)
+- {{CSSxRef("grid-template-columns")}}
+- {{CSSxRef("grid-template-rows")}}
+- {{CSSxRef("grid-auto-columns")}}
+- {{CSSxRef("grid-auto-rows")}}
 
 ## 例
 
@@ -99,15 +142,9 @@ _min_ および _max_ の 2 つの引数を取る関数です。
 
 ```html
 <div id="container">
-  <div>
-    Item as wide as the content, but at most 300 pixels.
-  </div>
-  <div>
-    Item with flexible width but a minimum of 200 pixels.
-  </div>
-  <div>
-    Inflexible item of 150 pixels width.
-  </div>
+  <div>コンテンツと同じ幅で、最大 300 ピクセルのアイテムです。</div>
+  <div>幅は自由ですが、最小 200 ピクセルが必要なアイテムです。</div>
+  <div>幅 150 ピクセルの柔軟性のないアイテムです。</div>
 </div>
 ```
 
@@ -125,6 +162,6 @@ _min_ および _max_ の 2 つの引数を取る関数です。
 
 ## 関連情報
 
-- グリッドレイアウトガイド: [グリッドレイアウトの基本概念 - minmax() によるトラックの寸法制御](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#トラックのサイズ指定と_minmax())
-- [CSS グリッドと論理的な値と書字方向](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)
-- 動画チュートリアル: _[Introducing minmax()](https://gridbyexample.com/video/series-minmax/)_
+- [グリッドレイアウトの基本概念: minmax() によるトラックの寸法制御](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#トラックのサイズ指定と_minmax)
+- [グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+- 動画: [Introducing minmax()](https://gridbyexample.com/video/series-minmax/)

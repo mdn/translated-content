@@ -1,15 +1,6 @@
 ---
 title: Centrer un élément
 slug: Web/CSS/Layout_cookbook/Center_an_element
-tags:
-  - Alignement
-  - CSS
-  - Layout
-  - centrer
-  - flexbox
-  - recettes
-translation_of: Web/CSS/Layout_cookbook/Center_an_element
-original_slug: Web/CSS/Layout_cookbook/Centrer_un_element
 ---
 
 {{CSSRef}}
@@ -39,17 +30,9 @@ Cependant, sa prise en charge dans ce cas (disposition en bloc) est actuellement
 
 ## Compatibilité des navigateurs
 
-Les différentes méthodes de layout ont chacune leur compatibilité avec les navigateurs. Les tableaux ci-dessous détaillent le support de base pour chaque propriété.
-
-### `align-items`
-
-{{Compat("css.properties.align-items")}}
-
-### `justify-content`
-
-{{Compat("css.properties.justify-content")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [L'alignement des boîtes avec Flexbox](/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
-- [CSS Box alignment guide](/fr/docs/Web/CSS/CSS_Box_Alignment)
+- [L'alignement des boîtes avec Flexbox](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [CSS Box alignment guide](/fr/docs/Web/CSS/CSS_box_alignment)

@@ -1,10 +1,11 @@
 ---
 title: text-anchor
 slug: Web/SVG/Attribute/text-anchor
-translation_of: Web/SVG/Attribute/text-anchor
 ---
 
-« [Справочник SVG Атрибутов](/en/SVG/Attribute)
+{{SVGRef}}
+
+« [Справочник SVG Атрибутов](/en-US/SVG/Attribute)
 
 Атрибут `text-anchor` используется для выравнивания
 _(start-, middle- или end-выравнивание)_ текстовой строки относительно заданной точки.
@@ -15,11 +16,11 @@ _(start-, middle- или end-выравнивание)_ текстовой ст�
 
 ## Контекст использования
 
-| Категория | Атрибут представления                                                          |
-| --------- | ------------------------------------------------------------------------------ |
-| Значение  | start \| middle \| end \| **inherit**                                          |
-| Анимация  | Да                                                                             |
-| Документ  | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/text.html#TextAnchorProperty) |
+| Категория | Атрибут представления                                                           |
+| --------- | ------------------------------------------------------------------------------- |
+| Значение  | start \| middle \| end \| **inherit**                                           |
+| Анимация  | Да                                                                              |
+| Документ  | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/text.html#TextAnchorProperty) |
 
 - start
   - : Отрисованные символы выравниваются так, что начало текстовой строки находится в исходной текстовой позиции. Для латиницы в обычной ориентации это эквивалентно выравниванию по левому краю. Для шрифтов, которые по своей сути имеют выравнивание справа налево такие как Иврит и Арабский это эквивалентно правому выравниваю. Для азиатского текста с вертикальным направлением текста это сопоставимо с выравниванием по верхнему краю.
@@ -38,37 +39,43 @@ _(start-, middle- или end-выравнивание)_ текстовой ст�
 
 ```html
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>текст в якорях</title>
-</head>
-<body>
-<div style="background-color:burlywood; width:866px;height:444px;display:flex;">
-    <div style="background-color:greenyellow; width:333px;height:333px;margin:22px;overflow: visible;">
-        <svg viewBox="-50 0 100 100" style="overflow: visible;" xmlns="http://www.w3.org/2000/svg" version="1.1">
-            <!-- Материализация якорей -->
-            <path d="M50, 5 L50,95
+  </head>
+  <body>
+    <div
+      style="background-color:burlywood; width:866px;height:444px;display:flex;">
+      <div
+        style="background-color:greenyellow; width:333px;height:333px;margin:22px;overflow: visible;">
+        <svg
+          viewBox="-50 0 100 100"
+          style="overflow: visible;"
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1">
+          <!-- Материализация якорей -->
+          <path
+            d="M50, 5 L50,95
              M20,20 L80,20
              M20,50 L80,50
-             M20,80 L80,80" stroke="grey"/>
+             M20,80 L80,80"
+            stroke="grey" />
 
-            <!-- Якоря в действии -->
-            <text text-anchor="start"   x="50" y="20">some start</text>
-            <text text-anchor="start"   x="50" y="35">start</text>
+          <!-- Якоря в действии -->
+          <text text-anchor="start" x="50" y="20">some start</text>
+          <text text-anchor="start" x="50" y="35">start</text>
 
-            <text text-anchor="middle"  x="50" y="55">some middle</text>
-            <text text-anchor="middle"  x="50" y="70">middle</text>
+          <text text-anchor="middle" x="50" y="55">some middle</text>
+          <text text-anchor="middle" x="50" y="70">middle</text>
 
-            <text text-anchor="end"     x="50" y="85">some end</text>
-            <text text-anchor="end"     x="50" y="100">end</text>
+          <text text-anchor="end" x="50" y="85">some end</text>
+          <text text-anchor="end" x="50" y="100">end</text>
         </svg>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>
 ```
-
-**Песочницы**
 
 {{ EmbedLiveSample('Пример','400','400') }}
 
@@ -76,8 +83,8 @@ _(start-, middle- или end-выравнивание)_ текстовой ст�
 
 Следующие элементы могут использовать `text-anchor` атрибут
 
-- [Text content elements](/en/SVG/Element#Text_content_elements)
+- [Text content elements](/en-US/SVG/Element#text_content_elements)
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}

@@ -1,15 +1,112 @@
 ---
 title: animation-iteration-count
 slug: Web/CSS/animation-iteration-count
+l10n:
+  sourceCommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
 ---
 
 {{CSSRef}}
 
 **`animation-iteration-count`** は [CSS](/ja/docs/Web/CSS) のプロパティで、停止するまでにアニメーション周期が再生される回数を指定します。
 
-複数の値が指定された場合、アニメーションが再生されるたびにリスト中の次の値が使用され、最後の 1 つが使用されたら最初に戻ります。
+{{InteractiveExample("CSS Demo: animation-iteration-count")}}
 
-{{EmbedInteractiveExample("pages/css/animation-iteration-count.html")}}
+```css interactive-example-choice
+animation-iteration-count: 0;
+```
+
+```css interactive-example-choice
+animation-iteration-count: 2;
+```
+
+```css interactive-example-choice
+animation-iteration-count: 1.5;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div>Animation <span id="playstatus"></span></div>
+  <div id="example-element">Select a count to start!</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  align-items: center;
+  background-color: #1766aa;
+  border-radius: 50%;
+  border: 5px solid #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  justify-content: center;
+  margin: auto;
+  margin-left: 0;
+  width: 150px;
+}
+
+#playstatus {
+  font-weight: bold;
+}
+
+.animating {
+  animation-name: slide;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes slide {
+  from {
+    background-color: orange;
+    color: black;
+    margin-left: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-left: 80%;
+  }
+}
+```
+
+```js interactive-example
+"use strict";
+
+window.addEventListener("load", () => {
+  const el = document.getElementById("example-element");
+  const status = document.getElementById("playstatus");
+
+  function update() {
+    status.textContent = "delaying";
+    el.className = "";
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        el.className = "animating";
+      });
+    });
+  }
+
+  el.addEventListener("animationstart", () => {
+    status.textContent = "playing";
+  });
+
+  el.addEventListener("animationend", () => {
+    status.textContent = "finished";
+  });
+
+  const observer = new MutationObserver(() => {
+    update();
+  });
+
+  observer.observe(el, {
+    attributes: true,
+    attributeFilter: ["style"],
+  });
+
+  update();
+});
+```
 
 アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。
 
@@ -30,6 +127,7 @@ animation-iteration-count: 2, 0, infinite;
 animation-iteration-count: inherit;
 animation-iteration-count: initial;
 animation-iteration-count: revert;
+animation-iteration-count: revert-layer;
 animation-iteration-count: unset;
 ```
 
@@ -42,7 +140,9 @@ animation-iteration-count: unset;
 - `{{cssxref("&lt;number&gt;")}}`
   - : アニメーションが繰り返される回数です。既定値は `1` です。アニメーション周期の一部を再生したい場合は、非整数の値を指定できます。例えば、 `0.5` はアニメーション周期の半分を再生します。負の数は無効です。
 
-> **メモ:** `animation-*` プロパティにコンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} プロパティで指定したアニメーションに割り当てられますが、いくつあるかによって異なる方法で割り当てられます。詳しくは、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values) を参照してください。
+> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
+
+> **メモ:** [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成するとき、 `animation-iteration-count` を指定すると、進行タイムラインの進行に伴ってその回数だけアニメーションが繰り返されます。もし `animation-iteration-count` が指定されなかった場合、アニメーションは一度しか発生しません。 `infinite` はスクロール駆動のアニメーションには有効な値ですが、アニメーションはうまく動作しません。
 
 ## 公式定義
 
@@ -54,7 +154,9 @@ animation-iteration-count: unset;
 
 ## 例
 
-### 10 回実行されるアニメーション
+### 繰り返し回数を設定
+
+10 回実行されるアニメーション
 
 #### HTML
 
@@ -70,6 +172,9 @@ animation-iteration-count: unset;
   border-radius: 10px;
   width: 100px;
   height: 100px;
+}
+
+.box:hover {
   animation-name: rotate;
   animation-duration: 0.7s;
   animation-iteration-count: 10;
@@ -87,9 +192,11 @@ animation-iteration-count: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Examples","100%","250")}}
+矩形にポインターを当てるとアニメーションが始まります。
 
-[CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)を参照してください。
+{{EmbedLiveSample("Setting iteration count","100%","250")}}
+
+[CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
 
 ## 仕様書
 
@@ -101,5 +208,6 @@ animation-iteration-count: unset;
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - JavaScript の {{domxref("AnimationEvent")}} API
+- その他のアニメーション関連プロパティ: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}

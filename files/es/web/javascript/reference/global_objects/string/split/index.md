@@ -1,17 +1,9 @@
 ---
 title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Regular Expressions
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/split
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/split
 ---
 
-{{JSRef("Objetos_globales", "String")}}
+{{JSRef}}
 
 El método **`split()`** divide un objeto de tipo `String` en un array (vector) de cadenas mediante la separación de la cadena en subcadenas.
 
@@ -24,7 +16,7 @@ cadena.split([separador][,limite])
 ### Parámetros
 
 - `separador`
-  - : Especifica el carácter a usar para la separación de la cadena. El `separador` es tratado como una cadena o como una [](/es/docs/Web/JavaScript/Referencia/Objetos_globales/RegExp){{jsxref("Objetos_globales/RegExp", "expresión regular", "", 1)}}. Si se omite el `separador`, el array devuelto contendrá un sólo elemento con la cadena completa.
+  - : Especifica el carácter a usar para la separación de la cadena. El `separador` es tratado como una cadena o como una [](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp){{jsxref("Objetos_globales/RegExp", "expresión regular", "", 1)}}. Si se omite el `separador`, el array devuelto contendrá un sólo elemento con la cadena completa.
 
 <!---->
 
@@ -39,7 +31,8 @@ Cuando se encuentra, el `separador` es eliminado de la cadena y las subcadenas o
 
 Si el `separador` es una expresión regular que contiene paréntesis de captura, entonces cada vez que el `separador` concuerda, los resultados (incluído cualquier resultado indefinido) de los paréntesis de captura son divididos en el array resultante. Sin embargo no todos los navegadores soportan esta característica.
 
-> **Nota:** Cuando la cadena está vacía, `split()` devuelve un array que contiene una cadena vacía, en lugar de un array vacío.
+> [!NOTE]
+> Cuando la cadena está vacía, `split()` devuelve un array que contiene una cadena vacía, en lugar de un array vacío.
 
 ## Ejemplos
 
@@ -48,15 +41,17 @@ Si el `separador` es una expresión regular que contiene paréntesis de captura,
 El siguiente ejemplo define una función que divide una cadena en un array de cadenas usando el separador especificado. Después de la división de la cadena, la función muestra mensajes indicando la cadena original (antes de la división), el separador usado, el número de elementos del array y los elementos individuales del array.
 
 ```js
-function dividirCadena(cadenaADividir,separador) {
-   var arrayDeCadenas = cadenaADividir.split(separador);
-   document.write('<p>La cadena original es: "' + cadenaADividir + '"');
-   document.write('<br>El separador es: "' + separador + '"');
-   document.write("<br>El array tiene " + arrayDeCadenas.length + " elementos: ");
+function dividirCadena(cadenaADividir, separador) {
+  var arrayDeCadenas = cadenaADividir.split(separador);
+  document.write('<p>La cadena original es: "' + cadenaADividir + '"');
+  document.write('<br>El separador es: "' + separador + '"');
+  document.write(
+    "<br>El array tiene " + arrayDeCadenas.length + " elementos: ",
+  );
 
-   for (var i=0; i < arrayDeCadenas.length; i++) {
-      document.write(arrayDeCadenas[i] + " / ");
-   }
+  for (var i = 0; i < arrayDeCadenas.length; i++) {
+    document.write(arrayDeCadenas[i] + " / ");
+  }
 }
 
 var cadenaVerso = "Oh brave new world that has such people in it.";
@@ -127,7 +122,7 @@ Hola,Mundo.,Cómo
 Si el separador contiene paréntesis de capturaI los resultados que concuerden son devueltos en el array.
 
 ```js
-var miCadena = 'Hola 1 mundo. Oración número 2.';
+var miCadena = "Hola 1 mundo. Oración número 2.";
 var division = miCadena.split(/(\d)/);
 
 console.log(division);
@@ -142,8 +137,8 @@ Hola ,1, mundo. Oración número ,2,.
 ### Dar la vuelta a una cadena usando `split()`
 
 ```js
-var str = 'asdfghjkl';
-var strReverse = str.split('').reverse().join(''); // 'lkjhgfdsa'
+var str = "asdfghjkl";
+var strReverse = str.split("").reverse().join(""); // 'lkjhgfdsa'
 // split() retorna un array en el cual reverse() y join() pueden ser aplicados
 ```
 
@@ -153,9 +148,9 @@ var strReverse = str.split('').reverse().join(''); // 'lkjhgfdsa'
 
 {{Specifications}}
 
-## Compatibilidad con los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.split")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,20 +1,16 @@
 ---
 title: counter-increment
 slug: Web/CSS/counter-increment
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/counter-increment
 ---
 
 {{CSSRef}}
 
-La propriété **`counter-increment`** est utilisée afin d'augmenter la valeur d'un [compteur CSS](/fr/docs/Web/CSS/Compteurs_CSS) d'une valeur donnée.
+La propriété **`counter-increment`** est utilisée afin d'augmenter la valeur d'un [compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) d'une valeur donnée.
 
 {{EmbedInteractiveExample("pages/css/counter-increment.html")}}
 
-> **Note :** La valeur du compteur peut être réinitialisée avec une valeur arbitraire grâce à la propriété {{cssxref("counter-reset")}}.
+> [!NOTE]
+> La valeur du compteur peut être réinitialisée avec une valeur arbitraire grâce à la propriété {{cssxref("counter-reset")}}.
 
 ## Syntaxe
 
@@ -100,7 +96,7 @@ li::before {
 
 ## Voir aussi
 
-- [Utiliser les compteurs CSS](/fr/docs/Web/CSS/Compteurs_CSS)
+- [Utiliser les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
 - {{cssxref("counter-reset")}}
 - {{cssxref("counter-set")}}
 - {{cssxref("@counter-style")}}

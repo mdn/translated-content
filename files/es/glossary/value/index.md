@@ -1,12 +1,9 @@
 ---
 title: Valor
 slug: Glossary/Value
-tags:
-  - CodingScripting
-  - Glosario
-translation_of: Glossary/Value
-original_slug: Glossary/Valor
 ---
+
+{{GlossarySidebar}}
 
 {{jsSidebar}}
 

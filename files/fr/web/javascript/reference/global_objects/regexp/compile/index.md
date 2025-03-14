@@ -1,15 +1,6 @@
 ---
 title: RegExp.prototype.compile()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
-tags:
-  - Deprecated
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/compile
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/compile
 ---
 
 {{JSRef}} {{deprecated_header}}
@@ -19,7 +10,7 @@ La méthode dépréciée **`compile()`** est utilisée afin de (re)compiler une 
 ## Syntaxe
 
 ```js
-regexObj.compile(motif, flags)
+regexObj.compile(motif, flags);
 ```
 
 ### Paramètres

@@ -16,9 +16,9 @@ slug: Web/API/Element/click_event
 在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener('click', (event) => {});
+addEventListener("click", (event) => {});
 
-onclick = (event) => { };
+onclick = (event) => {};
 ```
 
 ## 事件类型
@@ -69,8 +69,6 @@ _该接口同样继承了其父级（{{domxref("UIEvent")}} 和 {{domxref("Event
   - : 返回鼠标指针在全局（屏幕）坐标系中的 Y 坐标。
 - {{domxref("MouseEvent.shiftKey")}} {{readonlyinline}}
   - : 若在按下 <kbd>shift</kbd> 键的情况下触发鼠标事件，则返回 `true`。
-- {{domxref("MouseEvent.mozPressure")}} {{non-standard_inline}} {{deprecated_inline}} {{readonlyinline}}
-  - : 触发事件时，施加到触摸或平板设备的压力；其值介于 `0.0`（最小压力）和 `1.0`（最大压力）之间。该（非标准的）属性已被弃用，你应该使用 {{domxref("PointerEvent")}} 代替，其具有 {{domxref("PointerEvent.pressure", "pressure")}} 属性。
 - {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline}} {{readonlyinline}}
   - : 触发事件的设备类型（一个 `MOZ_SOURCE_*` 常量）。这可以让你确定鼠标事件是由实际的鼠标还是由触摸事件生成（这可能会影响解析与事件相关联的坐标的准确度）。
 - {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline}} {{readonlyinline}}
@@ -86,7 +84,7 @@ _该接口同样继承了其父级（{{domxref("UIEvent")}} 和 {{domxref("Event
 
 ### Internet Explorer
 
-IE 8 和 9 中存在一个错误，在将 {{cssxref("background-color")}} 的计算值为 [`transparent`](/zh-CN/docs/Web/CSS/color_value#transparent_关键字) 的元素覆盖在其它元素之上时，该元素不会收到 `click` 事件。`click` 事件将只会在底层元素上触发。参见[在线演示](https://jsfiddle.net/YUKma/show/)。
+IE 8 和 9 中存在一个错误，在将 {{cssxref("background-color")}} 的计算值为 [`transparent`](/zh-CN/docs/Web/CSS/color_value#transparent_关键字) 的元素覆盖在其他元素之上时，该元素不会收到 `click` 事件。`click` 事件将只会在底层元素上触发。参见[在线演示](https://jsfiddle.net/YUKma/show/)。
 
 该错误的解决方案：
 
@@ -132,9 +130,9 @@ Safari 手机版里，以下元素是交互式的（因此不会受到上述错�
 ### JavaScript
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', (event) => {
+button.addEventListener("click", (event) => {
   button.textContent = `Click count: ${event.detail}`;
 });
 ```
@@ -155,7 +153,7 @@ button.addEventListener('click', (event) => {
 
 ## 参见
 
-- [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
+- [事件介绍](/zh-CN/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/auxclick_event", "auxclick")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
 - {{domxref("Element/dblclick_event", "dblclick")}}

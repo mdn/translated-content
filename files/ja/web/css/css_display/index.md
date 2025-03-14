@@ -1,19 +1,23 @@
 ---
 title: CSS 表示方法
-slug: Web/CSS/CSS_Display
+slug: Web/CSS/CSS_display
+l10n:
+  sourceCommit: b8f45350a203be9e6e83c6fcb83c93576d8d5d9c
 ---
 
 {{CSSRef}}
 
-**CSS 表示方法** (CSS Display) は CSS のモジュールの一つで、 CSS の整形ボックスツリーがどのように文書の要素ツリーから生成されるかを定義し、制御するプロパティを定義します。
+**CSS 表示方法** (CSS display) モジュールは、 CSS の整形ボックスツリーがどのように文書の要素ツリーから生成されるかを定義し、制御するプロパティを定義します。
 
 ## リファレンス
 
-### CSS プロパティ
+### プロパティ
 
 - {{CSSxRef("display")}}
+- {{CSSxRef("order")}}
+- {{CSSxRef("visibility")}}
 
-### CSS データ型
+### データ型
 
 - {{CSSxRef("&lt;display-outside&gt;")}}
 - {{CSSxRef("&lt;display-inside&gt;")}}
@@ -22,47 +26,73 @@ slug: Web/CSS/CSS_Display
 - {{CSSxRef("&lt;display-internal&gt;")}}
 - {{CSSxRef("&lt;display-legacy&gt;")}}
 
+### 用語集
+
+- {{glossary("Block/CSS", "ブロック")}}
+- [ブロック整形コンテキスト (BFC)](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
+- {{glossary("Block-level content", "ブロックレベルコンテンツ")}}
+- [包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)
+- {{glossary("Flex", "フレックス")}}
+- [フローレイアウト](/ja/docs/Web/CSS/CSS_display/Flow_layout)
+- {{glossary("Grid", "グリッド")}}
+- [インライン整形コンテキスト](/ja/docs/Web/CSS/Inline_formatting_context)
+- {{glossary("Inline-level content", "インラインレベルコンテンツ")}}
+- [置換要素](/ja/docs/Web/CSS/Replaced_element)
+- {{glossary("Ruby", "ルビ")}}
+
 ## ガイド
 
-- [display の新しい 2 値構文への対応](/ja/docs/Web/CSS/display/two-value_syntax_of_display)
+- [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)
+  - : 複数キーワード構文を説明し、この構文と古い単一キーワード値とを比較します。
+- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
+  - : 通常フローの一部である場合のブロック要素とインライン要素の基本的な動作です。
+- [フローレイアウトとオーバーフロー](/ja/docs/Web/CSS/CSS_display/Flow_layout_and_overflow)
+  - : 通常のフローにおけるオーバーフローの動作です。
+- [フローレイアウトと書字方向](/ja/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
+  - : フローレイアウトが、文書内でさまざまな書字方向で使用されている場合の動作について説明します。
+- [整形コンテキストの紹介](/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
+  - : ブロック、インライン、フレックスなどの整形コンテキスト、それらの動作、使用について説明します。
+- [フロー内とフローの外](/ja/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)
+  - : 何がフローから要素を切り離すのか、そして新しいブロック整形コンテキストを作成する効果について。
 
-### CSS フローレイアウト (`display: block`, `display: inline`)
+## 関連概念
 
-- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [フローレイアウトとオーバーフロー](/ja/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow)
-- [フローレイアウトと書字方向](/ja/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)
-- [整形コンテキストの紹介](/ja/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)
-- [フロー内とフローの外](/ja/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)
+### プロパティ
 
-### `display: flex`
+- {{cssxref("transition-behavior")}}
+- {{cssxref("overflow")}}
 
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
-- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
-- [主軸に沿ったフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)
-- [フレックスアイテムの折り返しのマスター](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
-- [フレックスアイテムの並べ替え](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
-- [フレックスボックスと他のレイアウト方法の関係](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)
-- [フレックスボックスの後方互換性](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
-- [フレックスボックスの典型的な用途](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)
+### ガイド
 
-### `display: grid`
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
 
-- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-- [グリッドレイアウトと他のレイアウト方法との関係](/ja/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-- [線に基づく配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-- [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-- [名前付きグリッド線を使用したレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-- [グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-- [グリッドと論理的な値と書字方向](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)
-- [CSS グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-- [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-- [グリッドを使用したよくあるレイアウトの実現](/ja/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+  - [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+  - [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+  - [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
+  - [フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+  - [フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
+  - [フレックスボックスと他のレイアウト方法の関係](/ja/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
+  - [フレックスボックスの典型的な用途](/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
+
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)モジュール
+  - [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+  - [グリッドレイアウトと他のレイアウト方法との関係](/ja/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+  - [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+  - [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+  - [名前付きグリッド線を使用したレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+  - [グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+  - [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+  - [グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+  - [グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+  - [グリッドを使用したよくあるレイアウトの実現](/ja/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 ## 仕様書
 
 {{Specifications}}
 
-## ブラウザーの互換性
+## 関連情報
 
-{{Compat("css.properties.display", 10)}}
+- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
+- [CSS ルビレイアウト](/ja/docs/Web/CSS/CSS_ruby_layout)モジュール
+- [CSS 表](/ja/docs/Web/CSS/CSS_table)モジュール
+- [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)

@@ -1,8 +1,6 @@
 ---
 title: Date.prototype.getDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDate
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getDate
 ---
 
 {{JSRef}}
@@ -30,7 +28,7 @@ El valor devuelto por `getDate()` es un número entero, entre 1 y 31, que repres
 La segunda instrucción asigna el valor 25 a la variable `day`, en función del valor del objeto {{jsxref("Date")}} `Xmas95`.
 
 ```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
+var Xmas95 = new Date("December 25, 1995 23:15:30");
 var day = Xmas95.getDate();
 
 console.log(day); // 25
@@ -42,7 +40,7 @@ console.log(day); // 25
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.getDate")}}
+{{Compat}}
 
 ## Véase también
 

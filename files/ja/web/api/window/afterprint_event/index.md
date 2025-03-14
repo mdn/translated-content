@@ -1,5 +1,5 @@
 ---
-title: 'Window: afterprint イベント'
+title: "Window: afterprint イベント"
 slug: Web/API/Window/afterprint_event
 ---
 
@@ -35,8 +35,8 @@ slug: Web/API/Window/afterprint_event
 `addEventListener()` の使用例:
 
 ```js
-window.addEventListener('afterprint', (event) => {
-  console.log('After print');
+window.addEventListener("afterprint", (event) => {
+  console.log("After print");
 });
 ```
 
@@ -44,20 +44,17 @@ window.addEventListener('afterprint', (event) => {
 
 ```js
 window.onafterprint = (event) => {
-  console.log('After print');
+  console.log("After print");
 };
 ```
 
 ## 仕様書
 
-| 仕様書                                                           | 状態                             |
-| ---------------------------------------------------------------- | -------------------------------- |
-|                                                                  |                                  |
-| {{SpecName('HTML WHATWG', '#event-afterprint')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.afterprint_event")}}
+{{Compat}}
 
 ## 関連情報
 

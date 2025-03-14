@@ -1,7 +1,6 @@
 ---
 title: NamedNodeMap.getNamedItem()
 slug: Web/API/NamedNodeMap/getNamedItem
-translation_of: Web/API/NamedNodeMap/getNamedItem
 ---
 
 {{APIRef("DOM")}}
@@ -18,6 +17,6 @@ myAttr = attrs.getNamedItem(name)
 
 - `name` имя нужного атрибута
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

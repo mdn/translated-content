@@ -1,27 +1,32 @@
 ---
 title: Math.sign()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sign
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sign
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/sign
 ---
 
 {{JSRef}}
 
 La fonction **`Math.sign()`** renvoie le signe d'un nombre et permet de savoir si un nombre est positif, négatif ou nul.
 
-{{EmbedInteractiveExample("pages/js/math-sign.html")}}
+{{InteractiveExample("JavaScript Demo: Math.sign()")}}
+
+```js interactive-example
+console.log(Math.sign(3));
+// Expected output: 1
+
+console.log(Math.sign(-3));
+// Expected output: -1
+
+console.log(Math.sign(0));
+// Expected output: 0
+
+console.log(Math.sign("-3"));
+// Expected output: -1
+```
 
 ## Syntaxe
 
 ```js
-Math.sign(x)
+Math.sign(x);
 ```
 
 ### Paramètres
@@ -44,14 +49,14 @@ L'argument passé à cette fonction sera implicitement converti au type `number`
 ## Exemples
 
 ```js
-Math.sign(3)     //  1
-Math.sign(-3)    // -1
-Math.sign("-3")  // -1
-Math.sign(0)     //  0
-Math.sign(-0)    // -0
-Math.sign(NaN)   // NaN
-Math.sign("foo") // NaN
-Math.sign()      // NaN
+Math.sign(3); //  1
+Math.sign(-3); // -1
+Math.sign("-3"); // -1
+Math.sign(0); //  0
+Math.sign(-0); // -0
+Math.sign(NaN); // NaN
+Math.sign("foo"); // NaN
+Math.sign(); // NaN
 ```
 
 ## Spécifications

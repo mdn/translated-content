@@ -1,16 +1,6 @@
 ---
 title: BaseAudioContext
 slug: Web/API/BaseAudioContext
-tags:
-  - API
-  - Audio
-  - BaseAudioContext
-  - Context
-  - Interface
-  - Reference
-  - Web Audio API
-  - sound
-browser-compat: api.BaseAudioContext
 ---
 
 {{APIRef("Web Audio API")}}
@@ -38,8 +28,8 @@ browser-compat: api.BaseAudioContext
 
 ### 이벤트 처리기
 
-- {{domxref("BaseAudioContext.onstatechange")}}
-  - : {{event("statechange")}} 유형의 이벤트가 발생되었을 때 실행되는 이벤트 처리기입니다. 이것은 상태 변화 메서드({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, 또는 {{domxref("AudioContext.close")}}) 중 하나의 호출에 기인해 `AudioContext`의 상태가 변경되었을 때 발생됩니다.
+- {{domxref("BaseAudioContext.statechange_event", "statechange")}}
+  - : statechange 유형의 이벤트가 발생되었을 때 실행되는 이벤트 처리기입니다. 이것은 상태 변화 메서드({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, 또는 {{domxref("AudioContext.close")}}) 중 하나의 호출에 기인해 `AudioContext`의 상태가 변경되었을 때 발생됩니다.
 
 ## 메서드
 

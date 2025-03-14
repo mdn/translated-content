@@ -1,53 +1,177 @@
 ---
 title: cx
 slug: Web/SVG/Attribute/cx
-tags:
-  - SVG
-  - SVG атрибуты
-translation_of: Web/SVG/Attribute/cx
+l10n:
+  sourceCommit: 0c3c2bd5feaedbe0ffa7fd3530c625e5b1200670
 ---
 
-« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
+{{SVGRef}}
 
-Для элементов {{ SVGElement("circle") }} и {{ SVGElement("ellipse") }} этот атрибут определяет координату центра элемента по оси x. Если атрибут не определён, то эффект такой, как если бы было указано значение "0".
+Атрибут **`cx`** определяет координату центральной точки по оси x.
 
-Для элемента {{ SVGElement("radialGradient") }} этот атрибут определяет координату x небольшого(т.е. внешнего) круга в радиальном градиенте. Градиент будет нарисован так, чтобы значение градиента **100%** соответствовало периметру этого наибольшего(внешнего) круга. Если атрибут не определён, то эффект такой, как если бы было указано значение **50%**.
+Этот атрибут можно использовать для следующих SVG-элементов:
 
-## Контекст использования
-
-| Категории                  | Нет                                                                                                                                                                                                                                                                                                                                                  |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Значение                   | [\<coordinate>](/en/SVG/Content_type#Coordinate)                                                                                                                                                                                                                                      |
-| Анимируемый                | Да                                                                                                                                                                                                                                                                                                                                                   |
-| Нормативные документы (en) | [SVG 1.1 (2nd Edition): The circle element](http://www.w3.org/TR/SVG/shapes.html#CircleElementCXAttribute) [SVG 1.1 (2nd Edition): The ellipse element](http://www.w3.org/TR/SVG/shapes.html#EllipseElementCXAttribute) [SVG 1.1 (2nd Edition): The radialGradient element](http://www.w3.org/TR/SVG/pservers.html#RadialGradientElementCXAttribute) |
-
-{{ page("/ru/docs/Web/SVG/Content_type","Coordinate") }}
+- {{SVGElement("circle")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("radialGradient")}}
 
 ## Пример
 
-```xml
-  <svg width="120" height="220"
-     viewBox="0 0 120 120" version="1.1"
-     xmlns="http://www.w3.org/2000/svg">
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
 
-    <style type="text/css" >
+```html
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <radialGradient cx="25%" id="myGradient">
+    <stop offset="0" stop-color="white" />
+    <stop offset="100%" stop-color="black" />
+  </radialGradient>
 
-      <![CDATA[
-       circle.circleClass {
-       stroke: #006600;
-       fill:   #cc0000;
-    }
-
-      ]]>
-    </style>
-     <circle  class="circleClass"   cx="40" cy="50" r="26"/>
+  <circle cx="50" cy="50" r="45" />
+  <ellipse cx="150" cy="50" rx="45" ry="25" />
+  <rect x="205" y="5" width="90" height="90" fill="url(#myGradient)" />
 </svg>
 ```
 
-## Элементы
+{{EmbedLiveSample("Пример", 100, 100)}}
 
-Следующие элементы могут использовать атрибут `cx`
+## circle
 
-- {{ SVGElement("circle") }}
-- {{ SVGElement("ellipse") }}
-- {{ SVGElement("radialGradient") }}
+Для элемента {{SVGElement('circle')}} атрибут `cx` определяет координату центра фигуры по оси x.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Значение</th>
+      <td>{{cssxref("length-percentage")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Значение по умолчанию</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Анимируемый</th>
+      <td>Да</td>
+    </tr>
+  </tbody>
+</table>
+
+> [!NOTE]
+> Начиная с SVG2, `cx` является _Геометрическим свойством_, это означает, что этот атрибут также может быть использован в качестве CSS-свойства для окружностей.
+
+## ellipse
+
+Для элемента {{SVGElement('ellipse')}} атрибут `cx` определяет координату центра фигуры по оси x.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Значение</th>
+      <td>{{cssxref("length-percentage")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Значение по умолчанию</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Анимируемый</th>
+      <td>Да</td>
+    </tr>
+  </tbody>
+</table>
+
+> [!NOTE]
+> Начиная с SVG2, `cx` является _Геометрическим свойством_, это означает, что этот атрибут также может быть использован в качестве CSS-свойства для для эллипсов.
+
+## radialGradient
+
+Для элемента {{SVGElement('radialGradient')}} атрибут `cx` определяет координату конечной окружности радиального градиента по оси x.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Значение</th>
+      <td>{{cssxref("length-percentage")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Значение по умолчанию</th>
+      <td><code>50%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Анимируемый</th>
+      <td>Да</td>
+    </tr>
+  </tbody>
+</table>
+
+### Пример
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 34 10" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient cx="0" id="myGradient000">
+      <stop offset="0%" stop-color="gold" />
+      <stop offset="50%" stop-color="green" />
+      <stop offset="100%" stop-color="white" />
+    </radialGradient>
+
+    <radialGradient cx="50%" id="myGradient050">
+      <stop offset="0%" stop-color="gold" />
+      <stop offset="50%" stop-color="green" />
+      <stop offset="100%" stop-color="white" />
+    </radialGradient>
+
+    <radialGradient cx="100%" id="myGradient100">
+      <stop offset="0%" stop-color="gold" />
+      <stop offset="50%" stop-color="green" />
+      <stop offset="100%" stop-color="white" />
+    </radialGradient>
+  </defs>
+
+  <rect
+    x="1"
+    y="1"
+    width="8"
+    height="8"
+    fill="url(#myGradient000)"
+    stroke="black" />
+  <rect
+    x="13"
+    y="1"
+    width="8"
+    height="8"
+    fill="url(#myGradient050)"
+    stroke="black" />
+  <rect
+    x="25"
+    y="1"
+    width="8"
+    height="8"
+    fill="url(#myGradient100)"
+    stroke="black" />
+</svg>
+```
+
+{{EmbedLiveSample('radialGradient', 150, '100%')}}
+
+## Спецификации
+
+{{Specifications}}
+
+## Смотрите также
+
+- {{SVGAttr("cy")}}
+- {{SVGAttr("r")}}

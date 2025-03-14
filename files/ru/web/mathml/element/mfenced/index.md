@@ -1,8 +1,8 @@
 ---
 title: <mfenced>
 slug: Web/MathML/Element/mfenced
-translation_of: Web/MathML/Element/mfenced
 ---
+
 {{MathMLRef}}
 
 Элемент MathML `<mfenced>` обеспечивает возможность добавить по выбору открывающие и закрывающие скобки (например, квадратные) и разделители (например, запятую или точку с запятой)
@@ -10,15 +10,15 @@ translation_of: Web/MathML/Element/mfenced
 ## Атрибуты
 
 - class, id, style
-  - : Предполагается использование с [таблицами стилей](/ru/docs/CSS).
+  - : Предполагается использование с [таблицами стилей](/ru/docs/Web/CSS).
 - close
   - : Строка для закрывающего разделителя. Значением по умолчанию является `")"` и все пробелы обрезаются.
 - href
   - : Используется для установки гиперссылки на указанный URI.
 - mathbackground
-  - : Цвет фона. Вы можете использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/CSS/color_value#Color_Keywords).
+  - : Цвет фона. Вы можете использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/Web/CSS/color_value#color_keywords).
 - mathcolor
-  - : Цвет текста и также цвет линии дроби. Вы можете использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/CSS/color_value#Color_Keywords).
+  - : Цвет текста и также цвет линии дроби. Вы можете использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/Web/CSS/color_value#color_keywords).
 - open
   - : Строка для открывающего разделителя. Значением по умолчанию является `"("` и все пробелы обрезаются.
 - separators
@@ -62,13 +62,10 @@ Rendering in your browser: <math><mfenced close="]" open separators="||||,"><mi>
 </math>
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                            | Status                       | Comment               |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | --------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.mfenced', 'mfenced') }} | {{ Spec2('MathML3') }} | Current specification |
-| {{ SpecName('MathML2', 'chapter3.html#presm.mfenced', 'mfenced') }} | {{ Spec2('MathML2') }} | Initial specification |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

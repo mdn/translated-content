@@ -1,11 +1,11 @@
 ---
-title: ':invalid'
+title: :invalid
 slug: Web/CSS/:invalid
 ---
 
 {{CSSRef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:invalid`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{HTMLElement("input")}} u otro elemento {{HTMLElement("form")}} cuyos contenidos no se puedan [validar](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation).
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:invalid`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{HTMLElement("input")}} u otro elemento {{HTMLElement("form")}} cuyos contenidos no se puedan [validar](/es/docs/Web/HTML/Constraint_validation).
 
 ```css
 /* Selecciona cualquier <input> no válido */
@@ -32,8 +32,10 @@ Este ejemplo presenta una forma simple que colorea los elementos en verde cuando
   <input type="url" id="url_input" />
   <br />
   <br />
-  <label for="email_input">Introduzca una dirección de correo electrónico:</label>
-  <input type="email" id="email_input" required/>
+  <label for="email_input"
+    >Introduzca una dirección de correo electrónico:</label
+  >
+  <input type="email" id="email_input" required />
 </form>
 ```
 
@@ -62,7 +64,7 @@ input:required {
 }
 
 input:required:invalid {
-  border-color: #C00000;
+  border-color: #c00000;
 }
 ```
 
@@ -74,7 +76,7 @@ input:required:invalid {
 
 El color rojo se usa comúnmente para indicar una entrada no válida. Las personas que tienen ciertos tipos de daltonismo no podrán determinar el estado de la entrada a menos que vaya acompañado de un indicador adicional que no dependa del color para transmitir el significado. Normalmente, se utilizan texto descriptivo y / o un icono.
 
-- [MDN Comprensión de las WCAG, explicaciones de la Guía 1.4](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Comprensión de las WCAG, explicaciones de la Guía 1.4](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Comprender el Criterio de Conformidad 1.4.1 | W3C Comprender WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
 
 ## Notas
@@ -109,10 +111,10 @@ Puede inhabilitar el brillo con el siguiente CSS o anularlo por completo para mo
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.invalid")}}
+{{Compat}}
 
 ## Ver también
 
 - Otras pseudo-clases relacionadas con la validación: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":valid") }}
 - Pseudo-clases relacionadas de Mozilla: {{cssxref(":-moz-ui-invalid")}}, {{cssxref(":-moz-submit-invalid")}}
-- [Validación de datos de formulario](/es/docs/Learn/HTML/Forms/Form_validation)
+- [Validación de datos de formulario](/es/docs/Learn/Forms/Form_validation)

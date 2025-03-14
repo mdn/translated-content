@@ -1,16 +1,11 @@
 ---
 title: grid-column
 slug: Web/CSS/grid-column
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/grid-column
 ---
 
 {{CSSRef}}
 
-La propriété **`grid-column`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) pour {{cssxref("grid-column-start")}} et {{cssxref("grid-column-end")}}. Elle permet de définir la taille et l'emplacement d'un élément sur la grille en indiquant l'emplacement du début, de la fin et/ou sa taille.
+La propriété **`grid-column`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) pour {{cssxref("grid-column-start")}} et {{cssxref("grid-column-end")}}. Elle permet de définir la taille et l'emplacement d'un élément sur la grille en indiquant l'emplacement du début, de la fin et/ou sa taille.
 
 {{EmbedInteractiveExample("pages/css/grid-column.html")}}
 
@@ -63,7 +58,8 @@ Une valeur `<grid-line>` peut être définie avec :
 
   - : S'il existe une ligne nommée avec '\<custom-ident>-start'/'\<custom-ident>-end', la première colonne correspondante contribue au placement de l'élément sur la grille.
 
-    > **Note :** Les noms des zones de grille sont générés implicitement. Ainsi, en utilisant `grid-column-start: foo;` cela sélectionnera le début de la grille nommée correspondante (sauf si une autre colonne `foo-start`/`foo-end` a été explicitement déclarée).
+    > [!NOTE]
+    > Les noms des zones de grille sont générés implicitement. Ainsi, en utilisant `grid-column-start: foo;` cela sélectionnera le début de la grille nommée correspondante (sauf si une autre colonne `foo-start`/`foo-end` a été explicitement déclarée).
 
     Sinon, la valeur est traitée comme si on avait utilisé `<custom-ident>` et la valeur `1`.
 
@@ -151,5 +147,5 @@ IE11 ne prend pas en charge le placement automatique des objets sur la grille.To
 - {{cssxref("grid-row-end")}}
 - {{cssxref("grid-column-start")}}
 - {{cssxref("grid-column-end")}}
-- [Guide : le placement sur les lignes d'une grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+- [Guide : le placement sur les lignes d'une grille CSS](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
 - Tutoriel vidéo : [le placement sur les lignes (en anglais)](https://gridbyexample.com/video/series-line-based-placement/)

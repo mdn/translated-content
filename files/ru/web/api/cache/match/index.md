@@ -1,7 +1,6 @@
 ---
 title: Cache.match()
 slug: Web/API/Cache/match
-translation_of: Web/API/Cache/match
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
@@ -11,7 +10,7 @@ translation_of: Web/API/Cache/match
 ## Синтаксис
 
 ```js
-cache.match(request,{options}).then(function(response) {
+cache.match(request, { options }).then(function (response) {
   //сделать что-нибудь с ответом
 });
 ```
@@ -20,7 +19,7 @@ cache.match(request,{options}).then(function(response) {
 
 {{jsxref("Promise")}}, который разрешается в первый {{domxref("Response")}}, который совпадает с запросом или в {{jsxref("undefined")}}, если совпадений не найдено.
 
-> **Примечание:** **Замечание**: `Cache.match()` в основном идентичен {{domxref("Cache.matchAll()")}}, за исключением того, что `Cache.match()` разрешается в `response[0]` (первый совпадающий ответ) вместо `response[]` (массив со всеми совпадающими ответами).
+> **Примечание:** `Cache.match()` в основном идентичен {{domxref("Cache.matchAll()")}}, за исключением того, что `Cache.match()` разрешается в `response[0]` (первый совпадающий ответ) вместо `response[]` (массив со всеми совпадающими ответами).
 
 ### Параметры
 
@@ -46,18 +45,20 @@ cache.match(request,{options}).then(function(response) {
 В этом примере, мы решили что кешироваться будут лишь HTML-документы полученные с помощью GET-запроса. Если условие `if()` равно false, то обработчик не будет вмешиваться в ответ. Если зарегистрированы другие обработчики получения данных, то у них будет шанс вызвать `event.respondWith()`. Если ни один из обработчиков не вызовет `event.respondWith()`, запрос будет обработан браузером, как это было бы сделано без участия сервис воркера. Если `fetch()` возвращает валидный HTTP ответ к кодом из диапазона 4xx или 5xx, то метод `catch()` не будет вызван.
 
 ```js
-self.addEventListener('fetch', function(event) {
+self.addEventListener("fetch", function (event) {
   // Мы хотим выполнить лишь event.respondWith() если это GET-запрос HTML-документа.
-  if (event.request.method === 'GET' &&
-      event.request.headers.get('accept').indexOf('text/html') !== -1) {
-    console.log('Handling fetch event for', event.request.url);
+  if (
+    event.request.method === "GET" &&
+    event.request.headers.get("accept").indexOf("text/html") !== -1
+  ) {
+    console.log("Handling fetch event for", event.request.url);
     event.respondWith(
-      fetch(event.request).catch(function(e) {
-        console.error('Fetch failed; returning offline page instead.', e);
-        return caches.open(OFFLINE_CACHE).then(function(cache) {
+      fetch(event.request).catch(function (e) {
+        console.error("Fetch failed; returning offline page instead.", e);
+        return caches.open(OFFLINE_CACHE).then(function (cache) {
           return cache.match(OFFLINE_URL);
         });
-      })
+      }),
     );
   }
 });
@@ -73,6 +74,6 @@ self.addEventListener('fetch', function(event) {
 
 ## Смотрите также
 
-- [Использование сервис воркеров](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Использование сервис воркеров](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("WorkerGlobalScope.caches")}}

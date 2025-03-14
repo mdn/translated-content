@@ -1,15 +1,13 @@
 ---
 title: Control de la pala y el teclado
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
-original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado
 ---
 
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off_the_walls", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Fin_del_juego")}}
 
-Este es el **cuarto** de los 10 pasos del [Tutorial de Canvas para el desarrollo de juegos](/es/docs/Games/Workflows/Breakout_game_from_scratch). Puedes encontrar el código fuente como debería quedar después de completar la lección en [Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html).
+Este es el **cuarto** de los 10 pasos del [Tutorial de Canvas para el desarrollo de juegos](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente como debería quedar después de completar la lección en [Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html).
 
 La bola está rebotando en las paredes libremente y puedes estar mirándola toda la vida, pero, ahora mismo, no hay interactividad. ¡No es un juego si no puedes controlarlo! Vamos a añadirle la interacción del usuario: una paleta.
 
@@ -20,18 +18,18 @@ Necesitamos una paleta para golpear la bola. Empezamos por definir variables par
 ```js
 var paddleHeight = 10;
 var paddleWidth = 75;
-var paddleX = (canvas.width-paddleWidth)/2;
+var paddleX = (canvas.width - paddleWidth) / 2;
 ```
 
 paddleHeight servirá para definir la altura de la paleta, paddleWidth la anchura y paddleX la posición en el eje X en la que empieza a dibujarse. Definimos una función que dibujará la paleta en la pantalla. Añade este código justo después de la función `drawBall()`:
 
 ```js
 function drawPaddle() {
-    ctx.beginPath();
-    ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+  ctx.beginPath();
+  ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
 }
 ```
 
@@ -62,21 +60,19 @@ Cuando ocurra el evento `keydown` al pulsar cualquier tecla del teclado, la func
 
 ```js
 function keyDownHandler(e) {
-    if(e.keyCode == 39) {
-        rightPressed = true;
-    }
-    else if(e.keyCode == 37) {
-        leftPressed = true;
-    }
+  if (e.keyCode == 39) {
+    rightPressed = true;
+  } else if (e.keyCode == 37) {
+    leftPressed = true;
+  }
 }
 
 function keyUpHandler(e) {
-    if(e.keyCode == 39) {
-        rightPressed = false;
-    }
-    else if(e.keyCode == 37) {
-        leftPressed = false;
-    }
+  if (e.keyCode == 39) {
+    rightPressed = false;
+  } else if (e.keyCode == 37) {
+    leftPressed = false;
+  }
 }
 ```
 
@@ -93,22 +89,20 @@ De igual forma procederá el programa con la "flecha derecha", detectando el có
 Ya tenemos las variables que contienen la información sobre las teclas pulsadas, los escuchadores de eventos y las funciones relevantes. Ahora vamos a ocuparnos del código que utilizará todo eso y moverá la paleta en la pantalla. Dentro de la función `draw()` comprobaremos si está pulsada la flecha izquierda o la derecha cada vez que se dibuje un fotograma. Nuestro código podría tener este aspecto:
 
 ```js
-if(rightPressed) {
-    paddleX += 7;
-}
-else if(leftPressed) {
-    paddleX -= 7;
+if (rightPressed) {
+  paddleX += 7;
+} else if (leftPressed) {
+  paddleX -= 7;
 }
 ```
 
 Si se pulsa la flecha izquierda, la paleta se moverá 7 píxeles a la izquierda. Si se pulsa la flecha derecha, se moverá 7 píxeles a la derecha. Aunque esto funciona bien, la paleta desaparece en los laterales del terreno de juego si mantenemos pulsada una tecla demasiado tiempo. Podemos mejorar esto para que se mueva dentro de los límites del canvas, cambiando el código así:
 
 ```js
-if(rightPressed && paddleX < canvas.width-paddleWidth) {
-    paddleX += 7;
-}
-else if(leftPressed && paddleX > 0) {
-    paddleX -= 7;
+if (rightPressed && paddleX < canvas.width - paddleWidth) {
+  paddleX += 7;
+} else if (leftPressed && paddleX > 0) {
+  paddleX -= 7;
 }
 ```
 
@@ -128,10 +122,11 @@ Aquí está el código que funciona, para que lo compares con el tuyo:
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/tgn3zscj/","","320")}}
 
-> **Nota:** haz que la paleta se mueva más deprisa o más despacio, o cambia su tamaño.
+> [!NOTE]
+> Haz que la paleta se mueva más deprisa o más despacio, o cambia su tamaño.
 
 ## Pasos siguientes
 
-Ahora mismo tenemos algo que parece un juego. El único problema es que todo lo que puedes hacer es golpear la bola con la paleta toda la vida (en realidad, ni siquiera la golpeas). Todo esto cambiará en el quinto capítulo, [Fin del juego](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Fin_del_juego), cuando añadiremos un estado de "Game Over".
+Ahora mismo tenemos algo que parece un juego. El único problema es que todo lo que puedes hacer es golpear la bola con la paleta toda la vida (en realidad, ni siquiera la golpeas). Todo esto cambiará en el quinto capítulo, [Fin del juego](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over), cuando añadiremos un estado de "Game Over".
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off_the_walls", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Fin_del_juego")}}

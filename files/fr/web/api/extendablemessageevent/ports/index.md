@@ -1,15 +1,6 @@
 ---
 title: ExtendableMessageEvent.ports
 slug: Web/API/ExtendableMessageEvent/ports
-tags:
-  - API
-  - Experimental
-  - ExtendableMessageEvent
-  - Property
-  - Reference
-  - Service Workers
-  - ports
-translation_of: Web/API/ExtendableMessageEvent/ports
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
@@ -33,19 +24,19 @@ Le code suivant est utilisé, dans un service worker, pour répondre à un messa
 ```js
 var port;
 
-self.addEventListener('push', function(e) {
+self.addEventListener("push", function (e) {
   var obj = e.data.json();
 
-  if(obj.action === 'subscribe' || obj.action === 'unsubscribe') {
+  if (obj.action === "subscribe" || obj.action === "unsubscribe") {
     port.postMessage(obj);
-  } else if(obj.action === 'init' || obj.action === 'chatMsg') {
+  } else if (obj.action === "init" || obj.action === "chatMsg") {
     port.postMessage(obj);
   }
 });
 
-self.onmessage = function(e) {
+self.onmessage = function (e) {
   port = e.ports[0];
-}
+};
 ```
 
 ## Spécifications
@@ -58,7 +49,7 @@ self.onmessage = function(e) {
 
 ## Voir aussi
 
-- [Utilisation des Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Utilisation des Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Exemple simple des service workers](https://github.com/mdn/sw-test)
 - [Est-ce que les service workers sont prêts&nbsp;?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Canal de messages](/fr/docs/Web/API/Channel_Messaging_API)

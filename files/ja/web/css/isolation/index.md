@@ -7,7 +7,43 @@ slug: Web/CSS/isolation
 
 [CSS](/ja/docs/Web/CSS) の **`isolation`** プロパティは、要素が新しい{{glossary("stacking context", "重ね合わせコンテキスト")}}を生成する必要があるかどうかを定義します。
 
-{{EmbedInteractiveExample("pages/css/isolation.html")}}
+{{InteractiveExample("CSS Demo: isolation")}}
+
+```css interactive-example-choice
+isolation: auto;
+```
+
+```css interactive-example-choice
+isolation: isolate;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="background-container">
+    <div id="example-element">
+      <img src="/shared-assets/images/examples/firefox-logo.svg" />
+      <p><code>mix-blend-mode: multiply;</code></p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.background-container {
+  background-color: #f4f460;
+  width: 250px;
+}
+
+#example-element {
+  border: 1px solid black;
+  margin: 2em;
+}
+
+#example-element * {
+  mix-blend-mode: multiply;
+  color: #8245a3;
+}
+```
 
 このプロパティは {{cssxref("mix-blend-mode")}} との組み合わせで使用すると特に有用です。
 
@@ -34,11 +70,11 @@ isolation: unset;
 - `isolate`
   - : 新しい重ね合わせコンテキストが必ず作成されます。
 
-## Formal definition
+## 公式定義
 
 {{cssinfo}}
 
-## Formal syntax
+## 形式文法
 
 {{csssyntax}}
 
@@ -63,7 +99,7 @@ isolation: unset;
 
 ```css
 .a {
-  background-color: rgb(0,255,0);
+  background-color: rgb(0, 255, 0);
 }
 #b {
   width: 200px;

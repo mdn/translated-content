@@ -1,11 +1,6 @@
 ---
 title: aspect-ratio
 slug: Web/CSS/@media/aspect-ratio
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
-translation_of: Web/CSS/@media/aspect-ratio
 ---
 
 {{CSSRef}}
@@ -32,7 +27,14 @@ Les navigateurs ont ajouté une propriété `aspect-ratio` interne qui s'appliqu
 Pour Firefox, la feuille de style interne ressemble à :
 
 ```css
-img, input[type="image"], video, embed, iframe, marquee, object, table {
+img,
+input[type="image"],
+video,
+embed,
+iframe,
+marquee,
+object,
+table {
   aspect-ratio: attr(width) / attr(height);
 }
 ```

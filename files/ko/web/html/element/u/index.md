@@ -1,24 +1,32 @@
 ---
 title: <u>
 slug: Web/HTML/Element/u
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/u
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<u>` 요소**는 글자로 표현하지 않는 주석을 가진 것으로 렌더링 해야 하는 텍스트를 나타냅니다. 기본값에서는 단순한 밑줄로 표시하지만 CSS를 사용해 바꿀 수 있습니다.
 
 > **경고:** `<u>` 요소는 과거 HTML에서 밑줄(Underline) 요소로 불렸으며 지금도 밑줄을 추가할 목적으로 남용하는 경우가 있습니다. 그러나 밑줄을 위해서는 CSS {{cssxref("text-decoration")}} 속성을 `underline`으로 지정하는 방법을 대신 사용해야 합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;u&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  You could use this element to highlight <u>speling</u> mistakes, so the writer
+  can <u>corect</u> them.
+</p>
+```
+
+```css interactive-example
+p {
+  margin: 0;
+}
+
+u {
+  text-decoration: #f00 wavy underline;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -45,7 +53,7 @@ translation_of: Web/HTML/Element/u
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -139,7 +147,7 @@ CSS는 `spelling` 클래스를 가진 `<u>` 요소에 빨간 물결 밑줄을 �
 
 ```html
 <span class="underline">Today's Special</span>
-<br>
+<br />
 Chicken Noodle Soup With Carrots
 ```
 
@@ -188,7 +196,7 @@ cite {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.u")}}
+{{Compat}}
 
 ## 같이 보기
 

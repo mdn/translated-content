@@ -1,11 +1,6 @@
 ---
 title: text-anchor
 slug: Web/SVG/Attribute/text-anchor
-tags:
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/text-anchor
-browser-compat: svg.attributes.presentation.text-anchor
 ---
 
 {{SVGRef}}
@@ -14,7 +9,8 @@ L'attribut **`text-anchor`** est utilisé pour aligner (alignement de début, de
 
 L'attribut `text-anchor` est appliqué à chaque bloc de texte individuel dans un élément [`<text>`](/fr/docs/Web/SVG/Element/text) donné. Chaque fragment de texte a une position de texte actuelle initiale, qui représente le point du système de coordonnées de l'utilisateur résultant (selon le contexte) de l'application des attributs [`x`](/fr/docs/Web/SVG/Attribute/x) et [`y`](/fr/docs/Web/SVG/Attribute/y) sur l'élément `<text>`, toute valeur d'attribut `x` ou `y` sur un élément [`<tspan>`](/fr/docs/Web/SVG/Element/tspan), [`<tref>`](/fr/docs/Web/SVG/Element/tref) ou [`<altGlyph>`](/fr/docs/Web/SVG/Element/altGlyph) assigné explicitement au premier caractère rendu dans un fragment de texte, ou la détermination de la position initiale du texte actuel pour un élément [`<textPath>`](/fr/docs/Web/SVG/Element/textPath).
 
-> **Note :** En tant qu'attribut de présentation, `text-anchor` peut être utilisé comme une propriété CSS.
+> [!NOTE]
+> En tant qu'attribut de présentation, `text-anchor` peut être utilisé comme une propriété CSS.
 
 Cet attribut peut être utilisé pour les éléments SVG suivants :
 
@@ -27,7 +23,9 @@ Cet attribut peut être utilisé pour les éléments SVG suivants :
 ## Exemple
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -35,7 +33,9 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
   <!-- Matérialisation des ancrages -->
-  <path d="M60,15 L60,110 M30,40 L90,40 M30,75 L90,75 M30,110 L90,110" stroke="grey" />
+  <path
+    d="M60,15 L60,110 M30,40 L90,40 M30,75 L90,75 M30,110 L90,110"
+    stroke="grey" />
 
   <!-- Ancres en action -->
   <text text-anchor="start" x="60" y="40">A</text>
@@ -47,11 +47,13 @@ html, body, svg {
   <circle cx="60" cy="75" r="3" fill="red" />
   <circle cx="60" cy="110" r="3" fill="red" />
 
-  <style><![CDATA[
-  text {
-    font: bold 36px Verdana, Helvetica, Arial, sans-serif;
-  }
-  ]]></style>
+  <style>
+    <![CDATA[
+      text {
+        font: bold 36px Verdana, Helvetica, Arial, sans-serif;
+      }
+      ]]>
+  </style>
 </svg>
 ```
 

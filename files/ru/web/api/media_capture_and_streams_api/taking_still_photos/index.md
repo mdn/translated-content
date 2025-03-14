@@ -1,18 +1,13 @@
 ---
-title: Захват кадров с WebRTC
+title: Захват кадров с помощью getUserMedia()
 slug: Web/API/Media_Capture_and_Streams_API/Taking_still_photos
-tags:
-  - Захват WebRTC
-translation_of: Web/API/WebRTC_API/Taking_still_photos
-original_slug: Web/API/Media_Streams_API/Taking_still_photos
 ---
-{{WebRTCSidebar}}
 
-В этой статье объясняется как использовать WebRTC для получения доступа к камере компьютера или мобильного устройства, и захвата кадров с их помощью. [Ознакомьтесь с примером,](https://mdn-samples.mozilla.org/s/webrtc-capturestill) а затем узнайте как это работает.
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
-![Uz WebRTC balstīta attēla uztveršanas lietotne - kreisajā pusē un bez tīmekļa kameras uzņemšanas video straumē un poga](https://mdn.mozillademos.org/files/10281/web-rtc-demo.png)
+В этой статье объясняется как использовать [`navigator.mediaDevices.getUserMedia()`](/ru/docs/Web/API/MediaDevices/getUserMedia) для получения доступа к камере компьютера или мобильного устройства с поддержкой `getUserMedia()` и создания изображений.
 
-Перейдите непосредственно [к коду на Github](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill) , при желании.
+![Приложение для захвата изображений на основе getUserMedia: слева видеопоток с веб-камеры и кнопка «Take photo», а справа неподвижное изображение после съёмки фотографии.](web-rtc-demo.png)
 
 ## Разметка HTML
 
@@ -29,7 +24,7 @@ original_slug: Web/API/Media_Streams_API/Taking_still_photos
 
 Все это просто, и мы увидим как они связаны между собой, когда обратимся к коду JavaScript .
 
-В разметке имеется элемент {{HTMLElement("canvas")}} , который сохраняет захваченный кадр, который может быть дополнительно обработан и конвертируется в выходной файл изображения. Элемент` canvas `является скрытым, в его стиле свойство {{cssxref("display")}}`:none`, во избежании поломки интерфейса, где пользователю совершенно не обязательно видеть служебные элементы.
+В разметке имеется элемент {{HTMLElement("canvas")}} , который сохраняет захваченный кадр, который может быть дополнительно обработан и конвертируется в выходной файл изображения. Элемент`canvas`является скрытым, в его стиле свойство {{cssxref("display")}}`:none`, во избежании поломки интерфейса, где пользователю совершенно не обязательно видеть служебные элементы.
 
 Для отображения пользователю результата захвата кадра, в интерфейсе расположен элемент {{HTMLElement("img")}}.
 
@@ -116,13 +111,13 @@ original_slug: Web/API/Media_Streams_API/Taking_still_photos
 
 Успешное выполнение промиса передаёт объект потока( `stream` ) в качестве параметра функции метода `then()`., который присваивается свойству `srcObject` элемента {{HTMLElement("video")}}, направляя поток в него.
 
-Как только поток связан с элементом `<video>` , запускаем его воспроизведение, вызовом метода [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement#play).
+Как только поток связан с элементом `<video>` , запускаем его воспроизведение, вызовом метода [`HTMLMediaElement.play()`](/ru/docs/Web/API/HTMLMediaElement#play).
 
 Метод обработки ошибки промиса вызывается в случае, если получение потока окажется неудачным, к примеру, когда к устройству подключена несовместимая камера, или пользователь запретил к ней доступ.
 
 #### Обработка события начала воспроизведения
 
-После момента вызова метода [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement#play) на элементе {{HTMLElement("video")}}, возникает промежуток времени до начала воспроизведения видеопотока. Для недопущения блокирования интерфейса пользователя в это промежуток, нужно установить обработчик события {{event("canplay")}} элемента `video` , который сработает, когда элемент начнёт воспроизведение видеопотока. В этот момент все свойства элемента `video` конфигурируются на основе формата потока.
+После момента вызова метода [`HTMLMediaElement.play()`](/ru/docs/Web/API/HTMLMediaElement#play) на элементе {{HTMLElement("video")}}, возникает промежуток времени до начала воспроизведения видеопотока. Для недопущения блокирования интерфейса пользователя в это промежуток, нужно установить обработчик события элемента `video` , который сработает, когда элемент начнёт воспроизведение видеопотока. В этот момент все свойства элемента `video` конфигурируются на основе формата потока.
 
 ```
     video.addEventListener('canplay', function(ev){
@@ -146,7 +141,7 @@ original_slug: Web/API/Media_Streams_API/Taking_still_photos
 
 #### Обработка нажатий кнопки
 
-Для захвата кадра, пользователь каждый раз нажимает кнопку `startbutton`, нужно добавить обработчик события кнопки, для его вызова при возникновении события {{event("click")}} :
+Для захвата кадра, пользователь каждый раз нажимает кнопку `startbutton`, нужно добавить обработчик события кнопки, для его вызова при возникновении события :
 
 ```
     startbutton.addEventListener('click', function(ev){
@@ -211,7 +206,8 @@ original_slug: Web/API/Media_Streams_API/Taking_still_photos
 
 Затем, если ширина и высота не равны нулю (имеется в виду, что есть, по крайней мере, потенциально допустимые данные изображения), мы устанавливаем ширину и высоту `canvas`, чтобы они соответствовали ширине захваченного кадра, затем вызываем метод {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} , что бы отрисовать текущий кадр видео в контексте `canvas`, заполнив весь холст изображением кадра.
 
-> **Примечание:** **Примечание :** Используется факт того, что интерфейс {{domxref("HTMLVideoElement")}} похож на интерфейс {{domxref("HTMLImageElement")}} для любых API , которые принимают `HTMLImageElement` в качестве параметра, с текущим кадром видео, представленным как содержимое изображения.
+> [!NOTE]
+> Используется факт того, что интерфейс {{domxref("HTMLVideoElement")}} похож на интерфейс {{domxref("HTMLImageElement")}} для любых API , которые принимают `HTMLImageElement` в качестве параметра, с текущим кадром видео, представленным как содержимое изображения.
 
 Как только `canvas` будет содержать захваченное видео, конвертируем его в PNG формат, вызывая метод {{domxref("HTMLCanvasElement.toDataURL()")}} на нем; наконец вызываем метод {{domxref("Element.setAttribute", "photo.setAttribute()")}} отображая захваченное изображение в элементе изображения (бокса фотографии).
 
@@ -221,7 +217,7 @@ original_slug: Web/API/Media_Streams_API/Taking_still_photos
 
 Поскольку мы снимаем изображения с веб-камеры пользователя, захватывая кадры из элемента {{HTMLElement("video")}} , можно легко применить фильтры и забавные эффекты к элементу video. Оказывается, любые CSS-фильтры, которые вы применяете к элементу с помощью свойства {{cssxref ("filter")}}, влияют на захваченную фотографию.Эти фильтры могут варьироваться от простых (делая изображение черно-белым) до экстремальных (размытие по Гауссу и вращение оттенка).
 
-Вы можете экспериментировать с этими эффектами, используя, например, инструмент разработчика FirefoxYou [редактор стилей](/ru/docs/Tools/Style_Editor); смотрим [Редактирование с CSS фильтрами](/ru/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters) о подробностях выполнения.
+Вы можете экспериментировать с этими эффектами, используя, например, инструмент разработчика FirefoxYou [редактор стилей](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html); смотрим [Редактирование с CSS фильтрами](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_filters/index.html) о подробностях выполнения.
 
 ## Использование определённых устройств
 
@@ -229,8 +225,7 @@ original_slug: Web/API/Media_Streams_API/Taking_still_photos
 
 ## Смотрите также
 
-- [Пробуем пример](https://mdn-samples.mozilla.org/s/webrtc-capturestill)
-- [Примеры на Github](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill)
-- {{domxref("Navigator.mediaDevices.getUserMedia()")}}
-- {{SectionOnPage("/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images","Использование изображений")}}
+- [Пример на Github](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill)
+- {{domxref("MediaDevices.getUserMedia")}}
+- [Использование кадров из видео](/ru/docs/Web/API/Canvas_API/Tutorial/Using_images#использование_кадров_из_видео) в руководстве по Canvas
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}

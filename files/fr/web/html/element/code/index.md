@@ -1,23 +1,29 @@
 ---
-title: '<code> : l''élément de code en ligne'
+title: "<code> : l'élément de code en ligne"
 slug: Web/HTML/Element/code
-tags:
-  - Code
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Inline Code
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/code
-browser-compat: html.elements.code
 ---
 
 {{HTMLSidebar}}
 
 L'élément HTML **`<code>`** représente un court fragment de code machine. Par défaut, l'agent utilisateur utilise une police à chasse fixe (_monospace_) afin d'afficher le texte contenu dans cet élément.
 
-{{EmbedInteractiveExample("pages/tabbed/code.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;code&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The <code>push()</code> method adds one or more elements to the end of an
+  array and returns the new length of the array.
+</p>
+```
+
+```css interactive-example
+code {
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 3px;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -100,15 +106,14 @@ Un paragraphe de texte qui contient `<code>` :
 
 ```html
 <p>
-  La fonction <code>selectAll()</code> met en évidence tout le texte
-  du champ de saisie afin que l'utilisateur puisse, par exemple, le
-  copier ou le supprimer.
+  La fonction <code>selectAll()</code> met en évidence tout le texte du champ de
+  saisie afin que l'utilisateur puisse, par exemple, le copier ou le supprimer.
 </p>
 ```
 
-La sortie générée par ce HTML ressemble à ceci :
+### Résultat
 
-{{EmbedLiveSample('Exemples', '', 100)}}
+{{EmbedLiveSample('', '', 100)}}
 
 ## Notes
 

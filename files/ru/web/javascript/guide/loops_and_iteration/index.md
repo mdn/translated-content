@@ -1,12 +1,6 @@
 ---
 title: Циклы и итерации
 slug: Web/JavaScript/Guide/Loops_and_iteration
-tags:
-  - for
-  - операторы цикла
-  - циклы
-translation_of: Web/JavaScript/Guide/Loops_and_iteration
-original_slug: Web/JavaScript/Guide/Циклы_и_итерации
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
@@ -19,7 +13,7 @@ original_slug: Web/JavaScript/Guide/Циклы_и_итерации
 var step;
 for (step = 0; step < 5; step++) {
   // Запускается 5 раз, с шагом от 0 до 4.
-  console.log('Идём 1 шаг на восток');
+  console.log("Идём 1 шаг на восток");
 }
 ```
 
@@ -58,7 +52,9 @@ for ([начало]; [условие]; [шаг]) выражения
 ```html
 <form name="selectForm">
   <p>
-    <label for="musicTypes">Выберите некоторые жанры музыки, а затем нажмите на кнопку ниже:</label>
+    <label for="musicTypes"
+      >Выберите некоторые жанры музыки, а затем нажмите на кнопку ниже:</label
+    >
     <select id="musicTypes" name="musicTypes" multiple="multiple">
       <option selected="selected">R&B</option>
       <option>Jazz</option>
@@ -72,20 +68,20 @@ for ([начало]; [условие]; [шаг]) выражения
 </form>
 
 <script>
-function howMany(selectObject) {
-  var numberSelected = 0;
-  for (var i = 0; i < selectObject.options.length; i++) {
-    if (selectObject.options[i].selected) {
-      numberSelected++;
+  function howMany(selectObject) {
+    var numberSelected = 0;
+    for (var i = 0; i < selectObject.options.length; i++) {
+      if (selectObject.options[i].selected) {
+        numberSelected++;
+      }
     }
+    return numberSelected;
   }
-  return numberSelected;
-}
 
-var btn = document.getElementById("btn");
-btn.addEventListener("click", function(){
-  alert('Выбрано элементов: ' + howMany(document.selectForm.musicTypes))
-});
+  var btn = document.getElementById("btn");
+  btn.addEventListener("click", function () {
+    alert("Выбрано элементов: " + howMany(document.selectForm.musicTypes));
+  });
 </script>
 ```
 
@@ -176,9 +172,8 @@ while (true) {
 В этом примере, метка `markLoop` обозначает цикл `while`.
 
 ```js
-markLoop:
-while (theMark == true) {
-   doSomething();
+markLoop: while (theMark == true) {
+  doSomething();
 }
 ```
 
@@ -212,7 +207,7 @@ for (i = 0; i < a.length; i++) {
 
 ```js
 var x = 0;
-var z = 0
+var z = 0;
 labelCancelLoops: while (true) {
   console.log("Внешний цикл: " + x);
   x += 1;
@@ -264,22 +259,20 @@ while (i < 5) {
 Если у `continue` проставлена метка `checkiandj`, программа может продолжиться с начала метки `checkiandj`.
 
 ```js
-checkiandj:
-  while (i < 4) {
-    console.log(i);
-    i += 1;
-    checkj:
-      while (j > 4) {
-        console.log(j);
-        j -= 1;
-        if ((j % 2) != 0) {
-          continue checkj;
-        }
-        console.log(j + " чётное.");
-      }
-      console.log("i = " + i);
-      console.log("j = " + j);
+checkiandj: while (i < 4) {
+  console.log(i);
+  i += 1;
+  checkj: while (j > 4) {
+    console.log(j);
+    j -= 1;
+    if (j % 2 != 0) {
+      continue checkj;
+    }
+    console.log(j + " чётное.");
   }
+  console.log("i = " + i);
+  console.log("j = " + j);
+}
 ```
 
 ## `for...in`
@@ -310,8 +303,8 @@ function dump_props(obj, obj_name) {
 Для объекта `car` со свойствами `make` и `model`, _результатом_ будет:
 
 ```js
-car.make = Ford
-car.model = Mustang
+car.make = Ford;
+car.model = Mustang;
 ```
 
 ### Пример №2
@@ -333,11 +326,9 @@ for (key in obj) {
 
 Хотя, очень заманчиво использовать **for...in** как способ пройтись по всем элементам {{jsxref("Array")}}, этот оператор возвращает имя свойств определённых пользователем помимо числовых индексов. Таким образом лучше использовать стандартный [`for`](/ru/docs/Web/JavaScript/Reference/Statements/for) для числовых индексов при взаимодействии с массивами, поскольку оператор **for...in** проходит по определённым пользователем свойствам в дополнение к элементам массива, если вы изменяете массив, например, добавляете свойства и методы.
 
-### Пример
-
-```
-let arr = ['AUDI A8', '2019', 'brown'];
-arr.cost = '$100.000';
+```js
+let arr = ["AUDI A8", "2019", "brown"];
+arr.cost = "$100.000";
 
 for (key in arr) {
   console.log(`${key} = ${arr[key]}`);
@@ -351,7 +342,7 @@ for (key in arr) {
 
 ## `for...of`
 
-Оператор [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of) создаёт цикл, проходящий по [перечислимым объектам](/ru/docs/Web/JavaScript/Guide/iterable) (включая {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, объект [arguments](/ru/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) и так далее), вызывая на каждой итерации функцию с выражениями, которые надо выполнить для получения значения каждого отдельного свойства.
+Оператор [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of) создаёт цикл, проходящий по [перечислимым объектам](/ru/docs/Web/JavaScript/Reference/Iteration_protocols) (включая {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, объект [arguments](/ru/docs/Web/JavaScript/Reference/Functions/arguments) и так далее), вызывая на каждой итерации функцию с выражениями, которые надо выполнить для получения значения каждого отдельного свойства.
 
 ```
 for (variable of object) {
@@ -366,11 +357,11 @@ let arr = [3, 5, 7];
 arr.foo = "hello";
 
 for (let i in arr) {
-   console.log(i); // выводит "0", "1", "2", "foo"
+  console.log(i); // выводит "0", "1", "2", "foo"
 }
 
 for (let i of arr) {
-   console.log(i); // выводит "3", "5", "7"
+  console.log(i); // выводит "3", "5", "7"
 }
 ```
 

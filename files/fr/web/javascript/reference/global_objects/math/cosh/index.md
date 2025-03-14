@@ -1,15 +1,6 @@
 ---
 title: Math.cosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/cosh
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/cosh
 ---
 
 {{JSRef}}
@@ -18,14 +9,28 @@ La fonction **`Math.cosh()`** renvoie le cosinus hyperbolique d'un nombre, défi
 
 <math><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.cosh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.cosh(x)}} = \frac{e^x + e^{-x}}{2}</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-cosh.html")}}
+{{InteractiveExample("JavaScript Demo: Math.cosh()")}}
+
+```js interactive-example
+console.log(Math.cosh(0));
+// Expected output: 1
+
+console.log(Math.cosh(1));
+// Expected output: 1.543080634815244 (approximately)
+
+console.log(Math.cosh(-1));
+// Expected output: 1.543080634815244 (approximately)
+
+console.log(Math.cosh(2));
+// Expected output: 3.7621956910836314
+```
 
 (Voir la page sur {{jsxref("Objets_globaux/Math/E","e","",1)}})
 
 ## Syntaxe
 
 ```js
-Math.cosh(x)
+Math.cosh(x);
 ```
 
 ### Paramètres
@@ -46,8 +51,8 @@ Le cosinus hyperbolique du nombre passé en argument.
 ### Utiliser `Math.cosh()`
 
 ```js
-Math.cosh(0);  // 1
-Math.cosh(1);  // 1.5430806348152437
+Math.cosh(0); // 1
+Math.cosh(1); // 1.5430806348152437
 Math.cosh(-1); // 1.5430806348152437
 ```
 
@@ -56,18 +61,22 @@ Math.cosh(-1); // 1.5430806348152437
 Cette fonction peut être émulée grâce à la fonction {{jsxref("Objets_globaux/Math/exp", "Math.exp()")}} :
 
 ```js
-Math.cosh = Math.cosh || function(x) {
+Math.cosh =
+  Math.cosh ||
+  function (x) {
     return (Math.exp(x) + Math.exp(-x)) / 2;
-}
+  };
 ```
 
 On peut également utiliser un unique appel à {{jsxref("Objets_globaux/Math/exp", "exp()")}} :
 
 ```js
-Math.cosh = Math.cosh || function(x) {
+Math.cosh =
+  Math.cosh ||
+  function (x) {
     var y = Math.exp(x);
     return (y + 1 / y) / 2;
-}
+  };
 ```
 
 ## Spécifications

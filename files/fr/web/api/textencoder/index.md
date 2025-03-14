@@ -1,23 +1,17 @@
 ---
 title: TextEncoder
 slug: Web/API/TextEncoder
-tags:
-  - API
-  - Encoding
-  - Experimental
-  - Interface
-  - Reference
-  - TextEncoder
-translation_of: Web/API/TextEncoder
 ---
 
 {{APIRef("Encoding API")}}{{SeeCompatTable}}
 
-**`TextEncoder`** prend un flux de points de code en entrée et émet un flux d'octets. Pour une bibliothèque non native plus extensible, voir [`StringView` – une représentation des chaînes de caractères proche de celle de C basée sur les tableaux typés](/fr/Add-ons/Code_snippets/StringView).
+**`TextEncoder`** prend un flux de points de code en entrée et émet un flux d'octets. Pour une bibliothèque non native plus extensible, voir [`StringView` – une représentation des chaînes de caractères proche de celle de C basée sur les tableaux typés](/fr/docs/Mozilla/Add-ons/Code_snippets/StringView).
 
-> **Note :** Firefox, Chrome et Opera ont pour habitude de supporter les types d'encodage autres que `utf-8` (tels que `utf-16`, `iso-8859-2`, `koi8`, `cp1261`, et `gbk`). À partir de Firefox 48 ({{bug(1257877)}}), Chrome 54 ([ticket](https://www.chromestatus.com/feature/5630760492990464)) et Opera 41, aucun type d'encodage autre que `utf-8` n'est disponible, de manière à être en accord avec la [spécification](https://www.w3.org/TR/encoding/#dom-textencoder). Dans tous les cas, passer un type d'encodage au constructeur sera ignoré et un TextEncoder utf-8 sera créé (le {{DOMxRef("TextDecoder")}} permet toujours d'autres types pour le décodage).
+> [!NOTE]
+> Firefox, Chrome et Opera ont pour habitude de supporter les types d'encodage autres que `utf-8` (tels que `utf-16`, `iso-8859-2`, `koi8`, `cp1261`, et `gbk`). À partir de Firefox 48 ([bug Firefox 1257877](https://bugzil.la/1257877)), Chrome 54 ([ticket](https://www.chromestatus.com/feature/5630760492990464)) et Opera 41, aucun type d'encodage autre que `utf-8` n'est disponible, de manière à être en accord avec la [spécification](https://www.w3.org/TR/encoding/#dom-textencoder). Dans tous les cas, passer un type d'encodage au constructeur sera ignoré et un TextEncoder utf-8 sera créé (le {{DOMxRef("TextDecoder")}} permet toujours d'autres types pour le décodage).
 
-> **Note :** Il y a une prothèse d'émulation d'implantation pour supporter tous les encodages hérités dans [GitHub](https://github.com/inexorabletash/text-encoding).
+> [!NOTE]
+> Il y a une prothèse d'émulation d'implantation pour supporter tous les encodages hérités dans [GitHub](https://github.com/inexorabletash/text-encoding).
 
 ## Constructeur
 
@@ -36,7 +30,7 @@ _L'interface `TextEncoder` n'hérite d'aucune propriété._
 **L'interface `TextEncoder` n'hérite d'aucune propriété**.
 
 - {{DOMxRef("TextEncoder.encode()")}}
-  - : Retourne un [`Uint8Array`](/fr/docs/Web/JavaScript/Typed_arrays/Uint8Array) conternant un texte encodé en utf-8.
+  - : Retourne un [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) conternant un texte encodé en utf-8.
 
 ## Prothèse d'émulation
 
@@ -114,6 +108,6 @@ if (typeof TextEncoder === "undefined") {
 ## Voir aussi
 
 - The {{DOMxRef("TextDecoder")}} interface describing the inverse operation.
-- [`StringView`](/fr/Add-ons/Code_snippets/StringView) – a C-like representation of strings based on typed arrays
+- [`StringView`](/fr/docs/Mozilla/Add-ons/Code_snippets/StringView) – a C-like representation of strings based on typed arrays
 - A [shim](https://github.com/inexorabletash/text-encoding) allowing to use this interface in browsers that don't support it.
 - [`Components.utils.importGlobalProperties`](/fr/docs/Components.utils.importGlobalProperties)

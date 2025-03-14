@@ -17,43 +17,43 @@ type 属性是一个类属性，他在不同的使用语境下有不同的意思
 
 ### For the {{SVGElement("animateTransform")}} elements
 
-| Categories         | _None_                                                                                                |
-| ------------------ | ----------------------------------------------------------------------------------------------------- |
-| Value              | **`translate`** \| `scale` \| `rotate` \| `skewX` \| `skewY`                                          |
-| Animatable         | No                                                                                                    |
-| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/animate.html#AnimateTransformElementTypeAttribute) |
+| Categories         | _None_                                                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------------------------ |
+| Value              | **`translate`** \| `scale` \| `rotate` \| `skewX` \| `skewY`                                           |
+| Animatable         | No                                                                                                     |
+| Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/animate.html#AnimateTransformElementTypeAttribute) |
 
 ### For the {{ SVGElement("feColorMatrix") }} element
 
-| Categories         | _None_                                                                                      |
-| ------------------ | ------------------------------------------------------------------------------------------- |
-| Value              | **`matrix`** \| `saturate` \| `hueRotate` \| `luminanceToAlpha`                             |
-| Animatable         | Yes                                                                                         |
-| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/filters.html#feColorMatrixTypeAttribute) |
+| Categories         | _None_                                                                                       |
+| ------------------ | -------------------------------------------------------------------------------------------- |
+| Value              | **`matrix`** \| `saturate` \| `hueRotate` \| `luminanceToAlpha`                              |
+| Animatable         | Yes                                                                                          |
+| Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/filters.html#feColorMatrixTypeAttribute) |
 
 ### For the {{ SVGElement("feFuncR") }}, {{ SVGElement("feFuncG") }}, {{ SVGElement("feFuncB") }}, and {{ SVGElement("feFuncA") }} elements
 
-| Categories         | _None_                                                                                            |
-| ------------------ | ------------------------------------------------------------------------------------------------- |
-| Value              | `identity` \| `table` \| `discrete` \| `linear` \| `gamma`                                        |
-| Animatable         | Yes                                                                                               |
-| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/filters.html#feComponentTransferTypeAttribute) |
+| Categories         | _None_                                                                                             |
+| ------------------ | -------------------------------------------------------------------------------------------------- |
+| Value              | `identity` \| `table` \| `discrete` \| `linear` \| `gamma`                                         |
+| Animatable         | Yes                                                                                                |
+| Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/filters.html#feComponentTransferTypeAttribute) |
 
 ### For the {{ SVGElement("feTurbulence") }} element
 
-| Categories         | _None_                                                                                     |
-| ------------------ | ------------------------------------------------------------------------------------------ |
-| Value              | `fractalNoise` \| **`turbulence`**                                                         |
-| Animatable         | Yes                                                                                        |
-| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/filters.html#feTurbulenceTypeAttribute) |
+| Categories         | _None_                                                                                      |
+| ------------------ | ------------------------------------------------------------------------------------------- |
+| Value              | `fractalNoise` \| **`turbulence`**                                                          |
+| Animatable         | Yes                                                                                         |
+| Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/filters.html#feTurbulenceTypeAttribute) |
 
 ### For the {{ SVGElement("style") }} and {{SVGElement("script")}} elements
 
-| Categories         | _None_                                                                                                                                                                                                 |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Value              | \<content-type>                                                                                                                                                                                         |
-| Animatable         | No                                                                                                                                                                                                     |
-| Normative document | [SVG 1.1 (2nd Edition) : script](http://www.w3.org/TR/SVG11/script.html#ScriptElementTypeAttribute) [SVG 1.1 (2nd Edition) : style](http://www.w3.org/TR/SVG11/styling.html#StyleElementTypeAttribute) |
+| Categories         | _None_                                                                                                                                                                                                   |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Value              | \<content-type>                                                                                                                                                                                          |
+| Animatable         | No                                                                                                                                                                                                       |
+| Normative document | [SVG 1.1 (2nd Edition) : script](https://www.w3.org/TR/SVG11/script.html#ScriptElementTypeAttribute) [SVG 1.1 (2nd Edition) : style](https://www.w3.org/TR/SVG11/styling.html#StyleElementTypeAttribute) |
 
 ## Example
 

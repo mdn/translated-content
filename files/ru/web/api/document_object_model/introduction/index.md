@@ -1,11 +1,9 @@
 ---
 title: Введение
 slug: Web/API/Document_Object_Model/Introduction
-tags:
-  - DOM
-translation_of: Web/API/Document_Object_Model/Introduction
-original_slug: DOM/DOM_Reference/Введение
 ---
+
+{{DefaultAPISidebar("DOM")}}
 
 Этот раздел представляет краткое знакомство с Объектной Моделью Документа (DOM) - что такое DOM, каким образом предоставляются структуры HTML и XML документов, и как взаимодействовать с ними. Данный раздел содержит справочную информацию и примеры.
 
@@ -15,7 +13,7 @@ original_slug: DOM/DOM_Reference/Введение
 
 Веб-страница – это документ. Документ может быть представлен как в окне браузера, так и в самом HTML-коде. В любом случае, это один и тот же документ. DOM предоставляет другой способ представления, хранения и управления этого документа. DOM полностью поддерживает объектно-ориентированное представление веб-страницы, делая возможным её изменение при помощи языка описания сценариев наподобие JavaScript.
 
-Стандарты [W3C DOM](http://www.w3.org/DOM/) и [WHATWG DOM](https://dom.spec.whatwg.org/) формируют основы DOM, реализованные в большинстве современных браузеров. Многие браузеры предлагают расширения за пределами данного стандарта, поэтому необходимо проверять работоспособность тех или иных возможностей DOM для каждого конкретного браузера.
+Стандарты [W3C DOM](https://www.w3.org/DOM/) и [WHATWG DOM](https://dom.spec.whatwg.org/) формируют основы DOM, реализованные в большинстве современных браузеров. Многие браузеры предлагают расширения за пределами данного стандарта, поэтому необходимо проверять работоспособность тех или иных возможностей DOM для каждого конкретного браузера.
 
 Например: стандарт DOM описывает, что метод `getElementsByTagName` в коде, указанном ниже, должен возвращать список всех элементов \<p> в документе.
 
@@ -52,10 +50,11 @@ p_list = doc.getElementsByTagName("para");
 
 Вы не должны делать ничего особенного для работы с DOM. Различные браузеры имеют различную реализацию DOM, эти реализации показывают различную степень соответствия с действительным стандартом DOM (это тема, которую мы пытались не затрагивать в данной документации), но каждый браузер использует свой DOM, чтобы сделать веб страницы доступными для взаимодействия с языками сценариев.
 
-При создании сценария с использованием элемента `<script>`, либо включая в веб страницу инструкцию для загрузки скрипта, вы можете немедленно приступить к использованию программного интерфейса (API), используя элементы `document` или [`window`](/en-US/docs/DOM/window) для взаимодействия с самим документом, либо для получения потомков этого документа, т.е. различных элементов на странице. Ваше программирование DOM может быть чем-то простым, например, вывод сообщения с использованием функции [`alert()`](/en-US/docs/DOM/window.alert) объекта [`window`](/en-US/docs/DOM/window), или использовать более сложные методы DOM, которые создают новое содержимое, как показано в следующем примере:
+При создании сценария с использованием элемента `<script>`, либо включая в веб страницу инструкцию для загрузки скрипта, вы можете немедленно приступить к использованию программного интерфейса (API), используя элементы `document` или [`window`](/ru/docs/Web/API/Window) для взаимодействия с самим документом, либо для получения потомков этого документа, т.е. различных элементов на странице. Ваше программирование DOM может быть чем-то простым, например, вывод сообщения с использованием функции [`alert()`](/ru/docs/Web/API/Window/alert) объекта [`window`](/ru/docs/Web/API/Window), или использовать более сложные методы DOM, которые создают новое содержимое, как показано в следующем примере:
 
 ```html
-<body onload="window.alert('добро пожаловать на мою домашнюю страницу!');">
+<body
+  onload="window.alert('добро пожаловать на мою домашнюю страницу!');"></body>
 ```
 
 В следующем примере внутри элемента `<script>` определён код JavaScript, данный код устанавливает функцию при загрузке документа (когда весь DOM доступен для использования). Эта функция создаёт новый элемент H1, добавляет текст в данный элемент, а затем добавляет H1 в дерево документа:
@@ -64,19 +63,18 @@ p_list = doc.getElementsByTagName("para");
 <html>
   <head>
     <script>
-    // запуск данной функции при загрузке документа
-       window.onload = function() {
-    // создание нескольких элементов
-    // в пустой HTML странице
-       heading = document.createElement("h1");
-       heading_text = document.createTextNode("Big Head!");
-       heading.appendChild(heading_text);
-       document.body.appendChild(heading);
-      }
+      // запуск данной функции при загрузке документа
+      window.onload = function () {
+        // создание нескольких элементов
+        // в пустой HTML странице
+        heading = document.createElement("h1");
+        heading_text = document.createTextNode("Big Head!");
+        heading.appendChild(heading_text);
+        document.body.appendChild(heading);
+      };
     </script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -100,7 +98,7 @@ p_list = doc.getElementsByTagName("para");
     <tr>
       <td>element</td>
       <td>
-        обозначает элемент или узел типа element, возвращаемый членом DOM API.
+        Обозначает элемент или узел типа element, возвращаемый членом DOM API.
         Вместо того, чтобы говорить, что метод document.createElement()
         возвращает ссылку на node, мы просто скажем, что этот элемент возвращает
         element, который просто был создан в DOM. Объекты element реализуют DOM
@@ -112,7 +110,7 @@ p_list = doc.getElementsByTagName("para");
       <td>NodeList</td>
       <td>
         <p>
-          массив элементов, как тот, что возвращается методом
+          Массив элементов, как тот, что возвращается методом
           Document.getElementsByTagName(). Конкретные элементы в массиве
           доступны по индексу двумя способами:
         </p>
@@ -167,8 +165,7 @@ var table = document.getElementById("table");
 var tableAttrs = table.attributes; // Node/Element interface
 for (var i = 0; i < tableAttrs.length; i++) {
   // HTMLTableElement interface: border attribute
-  if(tableAttrs[i].nodeName.toLowerCase() == "border")
-    table.border = "1";
+  if (tableAttrs[i].nodeName.toLowerCase() == "border") table.border = "1";
 }
 // HTMLTableElement interface: summary attribute
 table.summary = "note: increased border";
@@ -191,9 +188,9 @@ table.summary = "note: increased border";
 - `element.setAttribute`
 - `element.getAttribute`
 - `element.addEventListener`
-- [`window.content`](/en-US/docs/DOM/window.content)
-- [`window.onload`](/en-US/docs/DOM/window.onload)
-- [`window.dump`](/en-US/docs/DOM/window.dump)
+- [`window.content`](/ru/docs/Web/API/Window)
+- [`window.onload`](/ru/docs/Web/API/Window/load_event)
+- [`window.dump`](/ru/docs/Web/API/Window/dump)
 - [`window.scrollTo`](/ru/docs/Web/API/Window/scrollTo)
 
 ## Тестирование DOM API
@@ -209,35 +206,47 @@ table.summary = "note: increased border";
   <head>
     <title>DOM Tests</title>
     <script type="application/javascript">
-    function setBodyAttr(attr, value){
-      if (document.body) eval('document.body.'+attr+'="'+value+'"');
-      else notSupported();
-    }
+      function setBodyAttr(attr, value) {
+        if (document.body) eval("document.body." + attr + '="' + value + '"');
+        else notSupported();
+      }
     </script>
   </head>
   <body>
     <div style="margin: .5in; height: 400;">
-      <p><b><tt>text</tt></b></p>
+      <p>
+        <b><tt>text</tt></b>
+      </p>
       <form>
-        <select onChange="setBodyAttr('text',
+        <select
+          onChange="setBodyAttr('text',
         this.options[this.selectedIndex].value);">
-          <option value="black">black
-          <option value="darkblue">darkblue
+          <option value="black">black</option>
+          <option value="darkblue">darkblue</option>
         </select>
-        <p><b><tt>bgColor</tt></b></p>
-        <select onChange="setBodyAttr('bgColor',
+        <p>
+          <b><tt>bgColor</tt></b>
+        </p>
+        <select
+          onChange="setBodyAttr('bgColor',
         this.options[this.selectedIndex].value);">
-          <option value="white">white
-          <option value="lightgrey">gray
+          <option value="white">white</option>
+          <option value="lightgrey">gray</option>
         </select>
-        <p><b><tt>link</tt></b></p>
-        <select onChange="setBodyAttr('link',
+        <p>
+          <b><tt>link</tt></b>
+        </p>
+        <select
+          onChange="setBodyAttr('link',
         this.options[this.selectedIndex].value);">
-          <option value="blue">blue
-          <option value="green">green
-        </select>  <small>
-        <a href="http://www.brownhen.com/dom_api_top.html" id="sample">
-        (sample link)</a></small><br>
+          <option value="blue">blue</option>
+          <option value="green">green</option>
+        </select>
+        <small>
+          <a href="http://www.brownhen.com/dom_api_top.html" id="sample">
+            (sample link)</a
+          ></small
+        ><br />
       </form>
       <form>
         <input type="button" value="version" onclick="ver()" />
@@ -247,15 +256,9 @@ table.summary = "note: increased border";
 </html>
 ```
 
-Чтобы протестировать много интерфейсов на одной странице, набор свойств, которые изменяют цвета веб-страницы, можно создать похожую веб-страницу с целой "консолью" кнопок, текстовых полей и других элементов. Следующий скриншот даёт идею, как интерфейсы могут быть сгруппированы вместе для тестирования
-
-![](/@api/deki/files/173/=DOM_Ref_Introduction_to_the_DOM.gif)
-
-В этом примере выпадающее меню динамически обновляет доступные из DOM части веб-страницы (например, фоновый цвет, цвет ссылок и цвет текста). Однако при разработке тестовых страниц, тестирование интерфейсов, как вы об этом прочитали, важная часть изучения эффективной работы с DOM.
-
 ## Другие статьи
 
-- [DOM Reference](/ru/docs/DOM/DOM_Reference)
-- [Введение в DOM](/ru/docs/DOM/DOM_Reference/Введение)
+- [DOM Reference](/ru/docs/Web/API/Document_Object_Model)
+- [Введение в DOM](/ru/docs/Web/API/Document_Object_Model/Introduction)
 - [События и DOM (Events and the DOM)](/ru/docs/DOM/DOM_Reference/Events)
 - [Примеры (Examples)](/ru/docs/Web/API/Document_Object_Model/Examples)

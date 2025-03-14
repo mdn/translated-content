@@ -19,7 +19,7 @@ var fragment = document.createDocumentFragment();
 
 `DocumentFragment`s 是 DOM 節點(Nodes)。他們不會成為 DOM 主幹的一部份。最常見的作法是先建立文本片段 (document fragment)，然後將元素 (element) 加入文本片段中，最後再將文本片段加入 DOM 樹中。在 DOM 樹中，文本片段將會被他所有的子元素取代。
 
-正因為文本片段是存在**記憶體**中，並且不是 DOM 主幹的一部分，增加子元素並不會導致網頁重刷 ([reflow](https://developers.google.com/speed/articles/reflow?csw=1))(重新計算元素的位置和幾何)。因此採用文本片段通常會有比較好的效能表現 ([better performance](http://ejohn.org/blog/dom-documentfragments/))。
+正因為文本片段是存在**記憶體**中，並且不是 DOM 主幹的一部分，增加子元素並不會導致網頁[重刷](https://developers.google.com/speed/docs/insights/browser-reflow)（重新計算元素的位置和幾何）。因此採用文本片段通常會有[比較好的效能表現](https://johnresig.com/blog/dom-documentfragments/)。
 
 ## 舉例
 
@@ -28,22 +28,20 @@ var fragment = document.createDocumentFragment();
 ### HTML
 
 ```html
-<ul id="ul">
-</ul>
+<ul id="ul"></ul>
 ```
 
 ### JavaScript
 
 ```js
-var element  = document.getElementById('ul'); // assuming ul exists
+var element = document.getElementById("ul"); // assuming ul exists
 var fragment = document.createDocumentFragment();
-var browsers = ['Firefox', 'Chrome', 'Opera',
-    'Safari', 'Internet Explorer'];
+var browsers = ["Firefox", "Chrome", "Opera", "Safari", "Internet Explorer"];
 
-browsers.forEach(function(browser) {
-    var li = document.createElement('li');
-    li.textContent = browser;
-    fragment.appendChild(li);
+browsers.forEach(function (browser) {
+  var li = document.createElement("li");
+  li.textContent = browser;
+  fragment.appendChild(li);
 });
 
 element.appendChild(fragment);

@@ -1,11 +1,9 @@
 ---
 title: system-property
 slug: Web/XPath/Functions/system-property
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/system-property
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 `system-property` 함수는 인수로 준 시스템 속성을 나타내는 개체를 반환합니다.
 
@@ -33,7 +31,7 @@ system-property(name )
 
 ### 정의
 
-[XSLT 1.0 12.4](http://www.w3.org/TR/xslt#function-system-property)
+[XSLT 1.0 12.4](https://www.w3.org/TR/xslt#function-system-property)
 
 ### Gecko 지원
 

@@ -1,19 +1,26 @@
 ---
 title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 ---
+
 {{JSRef}}
 
 **`splice()`** 메서드는 배열의 기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여 배열의 내용을 변경합니다.
 
-{{EmbedInteractiveExample("pages/js/array-splice.html")}}
+{{InteractiveExample("JavaScript Demo: Array.splice()")}}
+
+```js interactive-example
+const months = ["Jan", "March", "April", "June"];
+months.splice(1, 0, "Feb");
+// Inserts at index 1
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+months.splice(4, 1, "May");
+// Replaces 1 element at index 4
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+```
 
 ## 구문
 
@@ -46,8 +53,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 ### 하나도 제거하지 않고, 2번 인덱스에 "drum" 추가
 
 ```js
-var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
-var removed = myFish.splice(2, 0, 'drum');
+var myFish = ["angel", "clown", "mandarin", "sturgeon"];
+var removed = myFish.splice(2, 0, "drum");
 
 // myFish is ["angel", "clown", "drum", "mandarin", "sturgeon"]
 // removed is [], no elements removed
@@ -56,8 +63,8 @@ var removed = myFish.splice(2, 0, 'drum');
 ### 하나도 제거하지 않고, 2번 인덱스에 "drum"과 "guitar" 추가
 
 ```js
-var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
-var removed = myFish.splice(2, 0, 'drum', 'guitar');
+var myFish = ["angel", "clown", "mandarin", "sturgeon"];
+var removed = myFish.splice(2, 0, "drum", "guitar");
 
 // myFish is ["angel", "clown", "drum", "guitar", "mandarin", "sturgeon"]
 // removed is [], no elements removed
@@ -66,7 +73,7 @@ var removed = myFish.splice(2, 0, 'drum', 'guitar');
 ### 3번 인덱스에서 한 개 요소 제거
 
 ```js
-var myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
+var myFish = ["angel", "clown", "drum", "mandarin", "sturgeon"];
 var removed = myFish.splice(3, 1);
 
 // removed is ["mandarin"]
@@ -76,8 +83,8 @@ var removed = myFish.splice(3, 1);
 ### 2번 인덱스에서 한 개 요소 제거하고 "trumpet" 추가
 
 ```js
-var myFish = ['angel', 'clown', 'drum', 'sturgeon'];
-var removed = myFish.splice(2, 1, 'trumpet');
+var myFish = ["angel", "clown", "drum", "sturgeon"];
+var removed = myFish.splice(2, 1, "trumpet");
 
 // myFish is ["angel", "clown", "trumpet", "sturgeon"]
 // removed is ["drum"]
@@ -86,8 +93,8 @@ var removed = myFish.splice(2, 1, 'trumpet');
 ### 0번 인덱스에서 두 개 요소 제거하고 "parrot", "anemone", "blue" 추가
 
 ```js
-var myFish = ['angel', 'clown', 'trumpet', 'sturgeon'];
-var removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
+var myFish = ["angel", "clown", "trumpet", "sturgeon"];
+var removed = myFish.splice(0, 2, "parrot", "anemone", "blue");
 
 // myFish is ["parrot", "anemone", "blue", "trumpet", "sturgeon"]
 // removed is ["angel", "clown"]
@@ -96,7 +103,7 @@ var removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
 ### 2번 인덱스에서 두 개 요소 제거
 
 ```js
-var myFish = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon'];
+var myFish = ["parrot", "anemone", "blue", "trumpet", "sturgeon"];
 var removed = myFish.splice(myFish.length - 3, 2);
 
 // myFish is ["parrot", "anemone", "sturgeon"]
@@ -106,7 +113,7 @@ var removed = myFish.splice(myFish.length - 3, 2);
 ### -2번 인덱스에서 한 개 요소 제거
 
 ```js
-var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+var myFish = ["angel", "clown", "mandarin", "sturgeon"];
 var removed = myFish.splice(-2, 1);
 
 // myFish is ["angel", "clown", "sturgeon"]
@@ -116,7 +123,7 @@ var removed = myFish.splice(-2, 1);
 ### 2번 인덱스를 포함해서 이후의 모든 요소 제거
 
 ```js
-var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+var myFish = ["angel", "clown", "mandarin", "sturgeon"];
 var removed = myFish.splice(2);
 
 // myFish is ["angel", "clown"]

@@ -1,14 +1,13 @@
 ---
 title: Работа с History API
 slug: Web/API/History_API/Working_with_the_History_API
-translation_of: Web/API/History_API/Working_with_the_History_API
 ---
+
+{{DefaultAPISidebar("History API")}}
 
 В HTML5 стали доступны методы {{DOMxRef("History.pushState","pushState()")}} и {{DOMxRef("History.replaceState","replaceState()")}} для добавления и изменения записей в истории. Эти методы работают в сочетании с событием {{domxref("Window.onpopstate","onpopstate")}}
 
 ## Добавление и изменение записей в истории
-
-{{ gecko_minversion_header("2") }}
 
 {{DOMxRef("History.pushState","pushState()")}} позволяет изменить referrer, который используется в HTTP-заголовке для {{domxref("XMLHttpRequest")}} объектов, созданных после изменения состояния. Значением referrer будет URL документа, окно которого является `this` на момент создания {{domxref("XMLHttpRequest")}} объекта.
 
@@ -18,10 +17,10 @@ translation_of: Web/API/History_API/Working_with_the_History_API
 
 ```js
 let stateObj = {
-    foo: "bar",
-}
+  foo: "bar",
+};
 
-history.pushState(stateObj, "page 2", "bar.html")
+history.pushState(stateObj, "page 2", "bar.html");
 ```
 
 В результате этого в URL-строке отобразится адрес `http://mozilla.org/bar.html`, но браузер не будет загружать страницу `bar.html` и даже не будет проверять, существует ли она..
@@ -29,10 +28,6 @@ history.pushState(stateObj, "page 2", "bar.html")
 Теперь предположим, что пользователь перешёл по адресу `http://google.com` и затем нажал на кнопку "**Назад**". В результате этого в URL будет отображаться `http://mozilla.org/bar.html`, а `history.state` будет содержать `stateObj`. Событие popstate не будет вызвано, поскольку страница была перезагружена. Сама страница будет выглядеть как `bar.html`.
 
 Если пользователь ещё раз нажимает кнопку **"Назад"**, URL изменится на `http://mozilla.org/foo.html`, а в документе снова произойдёт событие `popstate`, на этот раз с объектом состояния, имеющим значение `null`. В этом случае возврат назад также не меняет содержимое документа, как и на предыдущем шаге, хотя документ может сам обновить своё содержимое после получения события `popstate`.
-
-> **Примечание:** Вызов `history.back()` обычно ведёт себя так же, как нажатие на кнопку **"Назад"**. Но есть одно важное исключение:
->
-> _После использования_ `history.pushState()`, вызов `history.back()` _не вызывает событие_ `popstate`. Нажатие в браузере на кнопку "Назад" (всё ещё) делает это.
 
 ### Метод pushState()
 
@@ -50,8 +45,6 @@ history.pushState(stateObj, "page 2", "bar.html")
   - : Заголовок - [все браузеры, кроме Safari, на данный момент игнорируют этот параметр](https://github.com/whatwg/html/issues/2174), но могут начать использовать в будущем. Ввиду будущих изменений метода, безопасным решением является передача пустой строки. В качестве альтернативы вы можете передать короткий заголовок для состоянии, в которое переходите.
 - **URL**
   - : Через этот параметр передаётся URL-адрес новой новый записи в истории. Обратите внимание, что браузер не будет пытаться загрузить данный URL сразу после вызова `pushState()`, но может попытаться сделать это позже, например, после того, как пользователь перезапустит браузер. Новый URL-адрес не обязан быть абсолютным; если он относительный, то определяется относительно текущего URL. Новый URL должен вести на тот же домен, протокол и порт, иначе `pushState()` выдаст исключение. Данный параметр не является обязательным; если он не указан, будет использоваться URL текущего документа.
-
-> **Примечание:** Начиная с Gecko 2.0 {{ geckoRelease("2.0") }} и до Gecko 5.0 {{ geckoRelease("5.0") }}, переданный объект сериализуется с помощью JSON. Начиная с Gecko 6.0 {{ geckoRelease("6.0") }}, объект сериализуется с помощью [алгоритма структурированного клонирования](/en/DOM/The_structured_clone_algorithm). Это позволяет безопасно передавать более широкий спектр объектов.
 
 Вызов `pushState()` в некоторой степени похож на установку `window.location = "#foo"`, поскольку они оба также создают и активируют ещё одну запись в истории, связанную с текущим документом.
 
@@ -74,23 +67,21 @@ history.pushState(stateObj, "page 2", "bar.html")
 
 `replaceState()` особенно полезен, когда вы хотите обновить объект состояния или URL текущей записи в истории в ответ на какое-то действие пользователя.
 
-> **Примечание:** Начиная с Gecko 2.0 {{ geckoRelease("2.0") }} и до Gecko 5.0 {{ geckoRelease("5.0") }}, переданный объект сериализуется с помощью JSON. Начиная с Gecko 6.0 {{ geckoRelease("6.0") }}, объект сериализуется с помощью [алгоритма структурированного клонирования](/en/DOM/The_structured_clone_algorithm). Это позволяет безопасно передавать более широкий спектр объектов.
-
 ### Пример метода replaceState()
 
 Предположим, на странице `http://mozilla.org/foo.html` выполняется следующий JavaScript-код:
 
 ```js
-let stateObj = { foo: "bar" }
-history.pushState(stateObj, "page 2", "bar.html")
+let stateObj = { foo: "bar" };
+history.pushState(stateObj, "page 2", "bar.html");
 ```
 
-Объяснение этих двух строк можно найти в приведённом выше разделе _[пример метода pushState()](#Example_of_pushState_method)_.
+Объяснение этих двух строк можно найти в приведённом выше разделе _[пример метода pushState()](#example_of_pushstate_method)_.
 
 Далее, предположим, на странице `http://mozilla.org/bar.html` выполняется JavaScript-код:
 
 ```js
-history.replaceState(stateObj, "page 3", "bar2.html")
+history.replaceState(stateObj, "page 3", "bar2.html");
 ```
 
 Это приведёт к тому, что в URL-строке отобразится адрес `http://mozilla.org/bar2.html`, но браузер не станет сразу загружать `bar2.html` и даже не станет проверять наличие этой страницы `bar2.html`.
@@ -110,11 +101,11 @@ history.replaceState(stateObj, "page 3", "bar2.html")
 С помощью свойства {{DOMxRef("History.state","history.state")}} можно прочитать состояние текущей записи в истории, не дожидаясь события `popstate`, например:
 
 ```js
-let currentState = history.state
+let currentState = history.state;
 ```
 
 ## Смотрите также
 
 - [History API](/ru/docs/Web/API/History_API)
-- [Ajax navigation example](/ru/docs/Web/API/History_API/Example)
+- [Ajax navigation example](/ru/docs/Web/API/History_API/Working_with_the_History_API)
 - {{ domxref("window.history") }}

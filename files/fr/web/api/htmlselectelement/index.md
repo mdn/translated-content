@@ -1,7 +1,6 @@
 ---
 title: HTMLSelectElement
 slug: Web/API/HTMLSelectElement
-translation_of: Web/API/HTMLSelectElement
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -15,9 +14,9 @@ L'interface **`HTMLSelectElement`** représente un élément HTML {{HTMLElement(
 _Cette interface hérite des propriétés de {{domxref("HTMLElement")}}, de {{domxref("Element")}} et de {{domxref("Node")}}._
 
 - {{domxref("HTMLSelectElement.autofocus")}}
-  - : Un {{jsxref("Boolean")}} reflétant l'attribut HTML {{htmlattrxref("autofocus", "select")}} qui indique si le contrôle doit bénéficier d'une priorité d'entrée au chargement de la page, à moins que l'utilisateur ne passe outre, par exemple en saisissant un autre contrôle. Cet attribut ne peut être spécifié que pour un seul élément associé à un formulaire dans un document.
+  - : Un {{jsxref("Boolean")}} reflétant l'attribut HTML [`autofocus`](/fr/docs/Web/HTML/Element/select#autofocus) qui indique si le contrôle doit bénéficier d'une priorité d'entrée au chargement de la page, à moins que l'utilisateur ne passe outre, par exemple en saisissant un autre contrôle. Cet attribut ne peut être spécifié que pour un seul élément associé à un formulaire dans un document.
 - {{domxref("HTMLSelectElement.disabled")}}
-  - : Un {{jsxref("Boolean")}} reflétant l'attribut {{htmlattrxref("disabled", "select")}} qui indique si le contrôle est désactivé. S'il est désactivé, il n'accepte pas les clics.
+  - : Un {{jsxref("Boolean")}} reflétant l'attribut [`disabled`](/fr/docs/Web/HTML/Element/select#disabled) qui indique si le contrôle est désactivé. S'il est désactivé, il n'accepte pas les clics.
 - {{domxref("HTMLSelectElement.form")}} {{ReadOnlyInline}}
   - : Un {{domxref("HTMLFormElement")}} référençant le formulaire auquel cet élément est associé. Si l'élément n'est pas associé à un élément {{HTMLElement("form")}}, il retourne `null`.
 - {{domxref("HTMLSelectElement.labels")}} {{ReadOnlyInline}}
@@ -25,19 +24,19 @@ _Cette interface hérite des propriétés de {{domxref("HTMLElement")}}, de {{do
 - {{domxref("HTMLSelectElement.length")}}
   - : Un `unsigned long`, le nombre d'éléments {{HTMLElement("option")}} dans cet élément `select`.
 - {{domxref("HTMLSelectElement.multiple")}}
-  - : Un {{jsxref("Boolean")}} reflétant l'attribut {{htmlattrxref("multiple", "select")}} qui indique si plusieurs éléments peuvent être sélectionnés.
+  - : Un {{jsxref("Boolean")}} reflétant l'attribut [`multiple`](/fr/docs/Web/HTML/Element/select#multiple) qui indique si plusieurs éléments peuvent être sélectionnés.
 - {{domxref("HTMLSelectElement.name")}}
-  - : Une chaîne de caratères {{domxref("DOMString")}} reflétant l'attribut HTML {{htmlattrxref("name", "select")}} contenant le nom de ce contrôle utilisé par les serveurs et les fonctions de recherche DOM.
+  - : Une chaîne de caratères {{domxref("DOMString")}} reflétant l'attribut HTML [`name`](/fr/docs/Web/HTML/Element/select#name) contenant le nom de ce contrôle utilisé par les serveurs et les fonctions de recherche DOM.
 - {{domxref("HTMLSelectElement.options")}} {{ReadOnlyInline}}
   - : Une {{domxref("HTMLOptionsCollection")}} représentant l'ensemble des {{HTMLElement("option")}} ({{domxref("HTMLOptionElement")}}) contenus par cet élément.
 - {{domxref("HTMLSelectElement.required")}}
-  - : Un {{jsxref("Boolean")}} reflétant l'attribut {{htmlattrxref("required", "select")}} qui indique si l'utilisateur doit sélectionner une valeur avant de soumettre le formulaire.
+  - : Un {{jsxref("Boolean")}} reflétant l'attribut [`required`](/fr/docs/Web/HTML/Element/select#required) qui indique si l'utilisateur doit sélectionner une valeur avant de soumettre le formulaire.
 - {{domxref("HTMLSelectElement.selectedIndex")}}
   - : Un `long` reflétant l'indice du premier élément {{HTMLElement("option")}} sélectionné. La valeur `-1` indique qu'aucun élément n'est sélectionné.
 - {{domxref("HTMLSelectElement.selectedOptions")}} {{ReadOnlyInline}}
   - : Une {{domxref("HTMLCollection")}} représentant l'ensemble des éléments {{HTMLElement("option")}} qui sont sélectionnés.
 - {{domxref("HTMLSelectElement.size")}}
-  - : Un `long` reflétant l'attribut {{htmlattrxref("size", "select")}} attribut HTML, qui contient le nombre d'éléments visibles dans le contrôle. La valeur par défaut est 1, sauf si `multiple` est `true`, auquel cas elle est de 4.
+  - : Un `long` reflétant l'attribut [`size`](/fr/docs/Web/HTML/Element/select#size) attribut HTML, qui contient le nombre d'éléments visibles dans le contrôle. La valeur par défaut est 1, sauf si `multiple` est `true`, auquel cas elle est de 4.
 - {{domxref("HTMLSelectElement.type")}} {{ReadOnlyInline}}
   - : Une chaîne de caractères {{domxref("DOMString")}} représentant le type du contrôle de formulaire. Lorsque `multiple` est `true`, il renvoie `"select-multiple"` ; sinon, il renvoie `"select-one"`.
 - {{domxref("HTMLSelectElement.validationMessage")}} {{ReadOnlyInline}}
@@ -92,13 +91,13 @@ _Cette interface hérite des méthodes de {{domxref("HTMLElement")}}, et de {{do
 </select>
 */
 
-const select = document.getElementById('s');
+const select = document.getElementById("s");
 
 // renvoie l'index de l'option sélectionnée
 console.log(select.selectedIndex); // 1
 
 // retourne la valeur de l'option sélectionnée
-console.log(select.options[select.selectedIndex].value) // Deuxième
+console.log(select.options[select.selectedIndex].value); // Deuxième
 ```
 
 Une meilleure façon de suivre les modifications apportées à la sélection de l'utilisateur consiste à surveiller l'événement {{domxref("HTMLElement/change_event", "change")}} qui se produit sur le `<select>`. Cela vous indiquera quand la valeur change, et vous pourrez alors mettre à jour ce dont vous avez besoin. Voir [l'exemple fourni](/fr/docs/Web/API/HTMLElement/change_event#select_element) dans la documentation de l'événement `change` pour plus de détails.

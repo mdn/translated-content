@@ -1,64 +1,56 @@
 ---
-title: 'HTMLMedia​Element: play イベント'
+title: "HTMLMediaElement: play イベント"
+short-title: play
 slug: Web/API/HTMLMediaElement/play_event
+l10n:
+  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
 {{APIRef("HTMLMediaElement")}}
 
 `play` メソッドは `autoplay` 属性の結果として、`paused` プロパティが `true` から `false` に変更されたときに発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">対象</th>
-      <td>要素</td>
-    </tr>
-    <tr>
-      <th scope="row">既定のアクション</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>{{domxref("GlobalEventHandlers.onplay")}}</td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("play", (event) => {});
+
+onplay = (event) => {};
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
-これらの例では、`HTMLMediaElement` の `play` イベントのイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。
+これらの例では、`HTMLMediaElement` の `play` イベントのイベントリスナーを追加し、そのイベントハンドラーがイベントの発生に反応したときにメッセージを投稿します。
 
-`addEventListener()` を使用する場合
+`addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('play', (event) => {
-  console.log('Boolean の paused プロパティは false になりました。 ' +
-  'play() メソッドが呼び出されたか、autoplay 属性が切り替えられました。');
+video.addEventListener("play", (event) => {
+  console.log(
+    "論理値の paused プロパティは false になりました。play() メソッドが呼び出されたか、autoplay 属性が切り替えられました。",
+  );
 });
 ```
 
-`onplay` イベントハンドラープロパティを使用する場合
+`onplay` イベントハンドラープロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onplay = (event) => {
-  console.log('Boolean の paused プロパティは false になりました。 ' +
-  'play() メソッドが呼び出されたか、autoplay 属性が切り替えられました。');
+  console.log(
+    "論理値の paused プロパティは false になりました。play() メソッドが呼び出されたか、autoplay 属性が切り替えられました。",
+  );
 };
 ```
 
@@ -83,7 +75,6 @@ video.onplay = (event) => {
 - HTMLMediaElement {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.play_event", 'play')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.pause_event", 'pause')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}} イベント

@@ -1,12 +1,6 @@
 ---
 title: Concepts de bases pour CSS Scroll Snap
-slug: Web/CSS/CSS_Scroll_Snap/Basic_concepts
-tags:
-  - CSS
-  - CSS Scroll Snap
-  - Guide
-translation_of: Web/CSS/CSS_Scroll_Snap/Basic_concepts
-original_slug: Web/CSS/CSS_Scroll_Snap/Concepts_de_base
+slug: Web/CSS/CSS_scroll_snap/Basic_concepts
 ---
 
 {{CSSRef}}
@@ -63,8 +57,9 @@ La propriété {{CSSxRef("scroll-snap-stop")}} indique au navigateur qu'il devra
 
 Cela peut être utile pour s'assurer que les utilisateurs consultent chaque section sans louper du contenu par inadvertence. En revanche, cela peut rendre le défilement plus lent et ralentir considérablement un utilisateur qui chercherait une section donnée.
 
-> **Note :** La propriété `scroll-snap-stop` est actuellement mise en question dans la version _Candidate Recommendation_ de la spécification et pourrait être retirée.
+> [!NOTE]
+> La propriété `scroll-snap-stop` est actuellement mise en question dans la version _Candidate Recommendation_ de la spécification et pourrait être retirée.
 
 ## Compatibilité des navigateurs
 
-Les pages de chaque propriété détaillent la compatibilité des différents navigateurs. On notera qu'avant Firefox 68, une ancienne version de la spécification était implémentée. Vous pouvez [poursuivre avec le guide suivant](/fr/docs/Web/CSS/CSS_Scroll_Snap/Browser_compat) pour en savoir plus sur l'écriture de code compatible entre les différents navigateurs qui implémentent différentes versions de la spécification.
+Les pages de chaque propriété détaillent la compatibilité des différents navigateurs. On notera qu'avant Firefox 68, une ancienne version de la spécification était implémentée. Vous pouvez [poursuivre avec le guide suivant](/fr/docs/Web/CSS/CSS_scroll_snap) pour en savoir plus sur l'écriture de code compatible entre les différents navigateurs qui implémentent différentes versions de la spécification.

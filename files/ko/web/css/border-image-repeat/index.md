@@ -1,19 +1,56 @@
 ---
 title: border-image-repeat
 slug: Web/CSS/border-image-repeat
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/border-image-repeat
 ---
 
 {{CSSRef}}
 
 **`border-image-repeat`** [CSS](/ko/docs/Web/CSS) 속성은 원본 이미지의 [모서리 영역](/ko/docs/Web/CSS/border-image-slice#edge_region)을 요소의 [테두리 이미지](/ko/docs/Web/CSS/border-image) 크기에 맞춰 조절할 때 사용할 방법을 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/border-image-repeat.html")}}
+{{InteractiveExample("CSS Demo: border-image-repeat")}}
+
+```css interactive-example-choice
+border-image-repeat: stretch;
+```
+
+```css interactive-example-choice
+border-image-repeat: repeat;
+```
+
+```css interactive-example-choice
+border-image-repeat: round;
+```
+
+```css interactive-example-choice
+border-image-repeat: space;
+```
+
+```css interactive-example-choice
+border-image-repeat: round stretch;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 ## 구문
 
@@ -63,8 +100,8 @@ border-image-repeat: unset;
   margin-bottom: 1rem;
   padding: 1rem;
   border: 40px solid;
-  border-image: url("https://mdn.mozillademos.org/files/4127/border.png") 27;
-  border-image-repeat: stretch;  /* 라이브 샘플에서 바꿀 수 있습니다 */
+  border-image: url("border.png") 27;
+  border-image-repeat: stretch; /* 라이브 샘플에서 바꿀 수 있습니다 */
 }
 ```
 
@@ -84,7 +121,8 @@ border-image-repeat: unset;
 ```js hidden
 var repetition = document.getElementById("repetition");
 repetition.addEventListener("change", function (evt) {
-  document.getElementById("bordered").style.borderImageRepeat = evt.target.value;
+  document.getElementById("bordered").style.borderImageRepeat =
+    evt.target.value;
 });
 ```
 

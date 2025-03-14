@@ -40,7 +40,7 @@ _以下方法是未标准化的，请勿使用._
 你可以完全使用 JavaScript 的 {{domxref("HTMLAudioElement.Audio", "Audio()")}} 构造函数来创建一个 `HTMLAudioElement` ：
 
 ```js
-var audioElement = new Audio('car_horn.wav');
+var audioElement = new Audio("car_horn.wav");
 ```
 
 然后你可以在这个元素上调用 `play()` 方法
@@ -49,16 +49,17 @@ var audioElement = new Audio('car_horn.wav');
 audioElement.play();
 ```
 
-> **备注：** 一个常见的需求是在页面加载后马上去播放音频，现代浏览器的默认自动播放策略会阻止这一行为，参见 [firefox](https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/) 和 [chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes) 寻找最佳实践和解决方案。
+> [!NOTE]
+> 一个常见的需求是在页面加载后马上去播放音频，现代浏览器的默认自动播放策略会阻止这一行为，参见 [firefox](https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/) 和 [chrome](https://developer.chrome.google.cn/blog/autoplay) 寻找最佳实践和解决方案。
 
 一些经常被使用的属性，包括 {{domxref("HTMLMediaElement.src", "src")}}、{{domxref("HTMLMediaElement.currentTime", "currentTime")}}、{{domxref("HTMLMediaElement.duration", "duration")}}、{{domxref("HTMLMediaElement.paused", "paused")}}、{{domxref("HTMLMediaElement.muted", "muted")}} 和 {{domxref("HTMLMediaElement.volume", "volume")}}。以下这段代码赋值音频文件的播放时长给一个变量：
 
 ```js
-var audioElement = new Audio('car_horn.wav');
-audioElement.addEventListener('loadeddata', () => {
+var audioElement = new Audio("car_horn.wav");
+audioElement.addEventListener("loadeddata", () => {
   let duration = audioElement.duration;
   // duration 变量现在存放音频的播放时长（单位秒）
-})
+});
 ```
 
 ## 事件
@@ -75,6 +76,6 @@ _从父类 {{domxref("HTMLMediaElement")}} 和祖先 {{domxref("HTMLElement")}} 
 
 ## 参见
 
-- [Web media technologies](/zh-CN/docs/Web/Media)
-- [Using audio and video in HTML](/zh-CN/docs/Web/Media/HTML_media)
-- HTML element implementing this interface: {{HTMLElement("audio")}}.
+- [Web 媒体技术](/zh-CN/docs/Web/Media)
+- [在 HTML 中使用音视频](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery)
+- 实现此接口的 HTML 元素：{{HTMLElement("audio")}}。

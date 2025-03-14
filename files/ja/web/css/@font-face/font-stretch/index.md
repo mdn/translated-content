@@ -1,13 +1,15 @@
 ---
 title: font-stretch
 slug: Web/CSS/@font-face/font-stretch
+l10n:
+  sourceCommit: 46a2eda1ce316d5c2c789104c28bc4fdaee5ab8b
 ---
 
 {{CSSRef}}
 
-**`font-stretch`** は CSS の記述子で、ウェブページ作成者が {{cssxref("@font-face")}} ルールで定義されているフォントが通常か、幅狭か、幅広かを指定できるようにします。
+**`font-stretch`** は CSS の記述子で、ウェブページ作成者が {{cssxref("@font-face")}} アットルールで定義されているフォントが通常か、幅狭か、幅広かを指定できるようにします。
 
-ある特定のフォントについて、作成者は同じフォントの異なるスタイルに対応するさまざまなフォントフェイスをダウンロードでき、`font-stretch` 記述子を用いることでフォントフェイスのストレッチを明示的に指定します。CSS 記述子の値は、対応するフォントプロパティの値と同じです。
+ある特定のフォントについて、作成者は同じフォントの異なるスタイルに対応するさまざまなフォントフェイスをダウンロードでき、`font-stretch` 記述子を用いることでフォントフェイスのストレッチを明示的に指定します。この CSS 記述子の値は、対応するフォントプロパティの値と同じです。
 
 ## 構文
 
@@ -28,10 +30,10 @@ font-stretch: 200%;
 
 /* 複数値 */
 font-stretch: 75% 125%;
-font-stretch: condensed ultra-condensed;;
+font-stretch: condensed ultra-condensed;
 ```
 
-`font-weight` プロパティは以下にリストとして示されている値のいずれかを使用して記述されます。
+`font-stretch` プロパティは以下にリストとして示されている値のいずれかを使用して記述されます。
 
 ### 値
 
@@ -99,17 +101,17 @@ font-stretch: condensed ultra-condensed;;
   </tbody>
 </table>
 
-### バリアブル（可変）フォント
+### 可変フォント
 
-ほとんどのフォントはキーワードの 1 つに対応する特定の幅を持ちます。しかしながら、バリアブル（可変）フォントと呼ばれる一部のフォントはきめ細かい精度で一連の伸縮が可能になっています。これにより、デザイナーは選択したウェイトをより厳密に制御できます。 これにはパーセント値の範囲が役立ちます。
+ほとんどのフォントはキーワードの 1 つに対応する特定の幅を持ちます。しかしながら、可変フォント（バリアブルフォント）と呼ばれる一部のフォントはきめ細かい精度で一連の伸縮が可能になっています。これにより、デザイナーは選択したウェイトをより厳密に制御できます。 これにはパーセント値の範囲が役立ちます。
 
 TrueType または OpenType 可変フォントの場合、 "wdth" バリエーションを使用して、さまざまな字幅を実装します。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
-特にフォントの[コントラストカラー比が低い](/ja/docs/Web/CSS/color#accessibility_concerns)場合、識字障害をはじめとする認知症状のある人は凝縮しすぎたフォントを読むのが困難になる場合があります。詳細は以下をご覧ください。
+特にフォントの[コントラストカラー比が低い](/ja/docs/Web/CSS/color#アクセシビリティ)場合、識字障害をはじめとする認知症状のある人は凝縮しすぎたフォントを読むのが困難になる場合があります。詳細は以下をご覧ください。
 
-- [MDN 「知覚可能」、ガイドライン 1.4 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN 「知覚可能」、ガイドライン 1.4 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html) (英語)
 
 ## 公式定義
@@ -129,8 +131,9 @@ TrueType または OpenType 可変フォントの場合、 "wdth" バリエー�
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: local("Open Sans") format("woff2"),
-       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src:
+    local("Open Sans") format("woff2"),
+    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
   font-stretch: 87.5% 112.5%;
 }
 ```
@@ -149,8 +152,7 @@ TrueType または OpenType 可変フォントの場合、 "wdth" バリエー�
 - {{cssxref("@font-face/font-family", "font-family")}}
 - {{cssxref("@font-face/font-weight", "font-weight")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/src", "src")}}
-- {{cssxref("@font-face/unicode-range", "unicode-range descriptor")}}
+- {{cssxref("@font-face/unicode-range", "unicode-range")}} 記述子

@@ -1,30 +1,65 @@
 ---
 title: overflow
 slug: Web/CSS/overflow
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - Layout
-  - Reference
-translation_of: Web/CSS/overflow
 ---
 
 {{CSSRef}}
 
-**`overflow`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소의 콘텐츠가 너무 커서 요소의 [블록 서식 맥락](/ko/docs/Web/Guide/CSS/Block_formatting_context)에 맞출 수 없을 때의 처리법을 지정합니다. {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}의 값을 설정합니다.
+**`overflow`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소의 콘텐츠가 너무 커서 요소의 [블록 서식 맥락](/ko/docs/Web/CSS/CSS_display/Block_formatting_context)에 맞출 수 없을 때의 처리법을 지정합니다. {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}의 값을 설정합니다.
 
-{{EmbedInteractiveExample("pages/css/overflow.html")}}
+{{InteractiveExample("CSS Demo: overflow")}}
+
+```css interactive-example-choice
+overflow: visible;
+```
+
+```css interactive-example-choice
+overflow: hidden;
+```
+
+```css interactive-example-choice
+overflow: clip;
+```
+
+```css interactive-example-choice
+overflow: scroll;
+```
+
+```css interactive-example-choice
+overflow: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p id="example-element">
+    Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln's
+    Inn Hall. Implacable November weather. As much mud in the streets as if the
+    waters had but newly retired from the face of the earth.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 15em;
+  height: 9em;
+  border: medium dotted;
+  padding: 0.75em;
+  text-align: left;
+}
+```
 
 적용 가능한 방법은 잘라내기, 스크롤바 노출, 넘친 콘텐츠 그대로 노출 등이 있습니다.
 
-`visible`(기본값)이 아닌 다른 값으로 `overflow` 속성을 사용할 경우 새로운 [블록 서식 문맥](/ko/docs/Web/Guide/CSS/Block_formatting_context)을 생성합니다. 이는 기술적인 요구사항으로, 만약 스크롤하는 요소와 float이 교차한다면, 각 스크롤 단계마다 내용물을 강제적으로 다시 감싸게 될 것입니다. 이는 결국 스크롤 속도를 느리게 할 것입니다.
+`visible`(기본값)이 아닌 다른 값으로 `overflow` 속성을 사용할 경우 새로운 [블록 서식 문맥](/ko/docs/Web/CSS/CSS_display/Block_formatting_context)을 생성합니다. 이는 기술적인 요구사항으로, 만약 스크롤하는 요소와 float이 교차한다면, 각 스크롤 단계마다 내용물을 강제적으로 다시 감싸게 될 것입니다. 이는 결국 스크롤 속도를 느리게 할 것입니다.
 
 `overflow` 속성이 효력을 갖기 위해선 반드시 블록 레벨 컨테이너의 높이(`height` 또는 `max-height`)를 설정하거나, `white-space`를 `nowrap`으로 설정해야 합니다.
 
-> **참고:** 하나의 축을 `visible`(기본값)로 하고, 다른 축에는 다른 값을 지정할 경우 `visible`이 `auto`처럼 동작합니다.
+> [!NOTE]
+> 하나의 축을 `visible`(기본값)로 하고, 다른 축에는 다른 값을 지정할 경우 `visible`이 `auto`처럼 동작합니다.
 
-> **참고:** JavaScript {{domxref("Element.scrollTop")}} 속성을 사용하면 요소의 `overflow`가 `hidden`일 때도 스크롤할 수 있습니다.
+> [!NOTE]
+> JavaScript {{domxref("Element.scrollTop")}} 속성을 사용하면 요소의 `overflow`가 `hidden`일 때도 스크롤할 수 있습니다.
 
 ## 구문
 
@@ -71,10 +106,10 @@ overflow: unset;
 
 ```css
 p {
-     width: 12em;
-     height: 6em;
-     border: dotted;
-     overflow: visible; /* content is not clipped */
+  width: 12em;
+  height: 6em;
+  border: dotted;
+  overflow: visible; /* content is not clipped */
 }
 ```
 
@@ -82,21 +117,27 @@ p {
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
 ```css
-p { overflow: hidden; /* no scrollbars are provided */ }
+p {
+  overflow: hidden; /* no scrollbars are provided */
+}
 ```
 
 `overflow: hidden`
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
 ```css
-p { overflow: scroll; /* always show scrollbars */ }
+p {
+  overflow: scroll; /* always show scrollbars */
+}
 ```
 
 `overflow: scroll`
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
 ```css
-p { overflow: auto; /* append scrollbars if necessary */ }
+p {
+  overflow: auto; /* append scrollbars if necessary */
+}
 ```
 
 `overflow: auto`

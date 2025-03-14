@@ -1,61 +1,83 @@
 ---
-title: Logical OR assignment (||=)
+title: 逻辑或赋值（||=）
 slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
 ---
 
 {{jsSidebar("Operators")}}
 
-逻辑或赋值（`x ||= y`）运算仅在 `x` 为{{Glossary("falsy", "虚")}}值时赋值。
+逻辑或赋值（`x ||= y`）运算仅在 `x` 为{{Glossary("falsy", "假")}}值时为其赋值。
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-or-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical OR assignment")}}
+
+```js interactive-example
+const a = { duration: 50, title: "" };
+
+a.duration ||= 10;
+console.log(a.duration);
+// Expected output: 50
+
+a.title ||= "title is empty.";
+console.log(a.title);
+// Expected output: "title is empty."
+```
 
 ## 语法
 
-```js
+```js-nolint
 expr1 ||= expr2
 ```
 
 ## 描述
 
-### 短路运算
-
-[逻辑或](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR)的运算方法如下所示：
-
-```js
-x || y;
-// 当 x 为真值时，返回 x
-// 当 y 为真值时，返回 y
-```
-
-逻辑或运算的短路逻辑：当且仅当第一个操作数尚未确定结果（不是真值）时，才会评估第二个操作数。
-
-逻辑或赋值运算有短路逻辑，这意味着，它仅在左侧为虚值时执行赋值。换句话说，`x ||= y` 等同于：
+逻辑或的[_短路运算_](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence#短路运算)意味着 `x ||= y` 与下式等价：
 
 ```js
 x || (x = y);
 ```
 
-但不等同于以下总是执行赋值的语句：
+如果左操作数不为假值，则由于[逻辑或](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR)运算符的短路运算，不进行赋值操作。例如，由于 `x` 为 `const`（常量），以下式子不会抛出错误：
 
-```js example-bad
-x = x || y;
+```js
+const x = 1;
+x ||= 2;
 ```
 
-请注意，这与数学逻辑和按位赋值运算不同。
+也不会触发 setter 函数：
+
+```js
+const x = {
+  get value() {
+    return 1;
+  },
+  set value(v) {
+    console.log("调用了 setter");
+  },
+};
+
+x.value ||= 2;
+```
+
+实际上，如果 `x` 为真值，则根本不会对 `y` 求值。
+
+```js
+const x = 1;
+x ||= console.log("y 进行了求值");
+// 什么都不会输出
+```
 
 ## 示例
 
-### 设定默认值
+### 设定默认内容
 
 当“lyrics”元素为空时，则显示默认值：
 
 ```js
-document.getElementById('lyrics').textContent ||= 'No lyrics.'
+document.getElementById("lyrics").textContent ||= "没有歌词。";
 ```
 
 在这里，短路运算特别有用，因为元素不会产生不必要的更新，也不会引起诸如额外的解析、渲染、失去焦点等副作用。
 
-注意：请注意检查 API 返回的值。如果返回的是空字符串（是{{Glossary("falsy", "虚")}}值），则必须使用 `||=`。在其他情况下（返回值是 {{jsxref("null")}} 或 {{jsxref("undefined")}}），你可以使用 `??=` 运算符。
+注意：请注意检查 API 返回的值。如果返回的是空字符串（是{{Glossary("falsy", "假")}}值），则必须使用 `||=`，以显示“没有歌词。”而不是空内容。然而，如果接口返回 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 或 {{jsxref("undefined")}}，则应该使用 [`??=`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)（空值合并赋值）运算符代替空白内容。
 
 ## 规范
 
@@ -68,7 +90,7 @@ document.getElementById('lyrics').textContent ||= 'No lyrics.'
 ## 参见
 
 - [逻辑或（||）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-- [空值合并运算符（`??`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [空值合并运算符（`??`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [按位或赋值（`|=`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
-- {{Glossary("Truthy")}}
-- {{Glossary("Falsy")}}
+- {{Glossary("Truthy","真值")}}
+- {{Glossary("Falsy","假值")}}

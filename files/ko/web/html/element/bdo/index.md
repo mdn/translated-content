@@ -1,21 +1,39 @@
 ---
-title: '<bdo>: 양방향 텍스트 재정의 요소'
+title: "<bdo>: 양방향 텍스트 재정의 요소"
 slug: Web/HTML/Element/bdo
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-  - 쓰기 방향
-translation_of: Web/HTML/Element/bdo
 ---
 
 {{HTMLSidebar}}
 
 **HTML `<bdo>` 요소**는 현재 텍스트의 쓰기 방향을 덮어쓰고 다른 방향으로 렌더링 할 때 사용합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/bdo.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;bdo&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>Famous seaside songs</h1>
+
+<p>The English song "Oh I do like to be beside the seaside"</p>
+
+<p>
+  Looks like this in Hebrew:
+  <span dir="rtl">אה, אני אוהב להיות ליד חוף הים</span>
+</p>
+
+<p>
+  In the computer's memory, this is stored as
+  <bdo dir="ltr">אה, אני אוהב להיות ליד חוף הים</bdo>
+</p>
+```
+
+```css interactive-example
+html {
+  font-family: sans-serif;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+bdo {
+}
+```
 
 <table class="properties">
   <tbody>
@@ -45,7 +63,7 @@ translation_of: Web/HTML/Element/bdo
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -78,7 +96,7 @@ translation_of: Web/HTML/Element/bdo
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("dir")}}
+- `dir`
 
   - : 요소 콘텐츠의 텍스트 쓰기 방향. 가능한 값은 다음과 같습니다.
 
@@ -103,4 +121,4 @@ translation_of: Web/HTML/Element/bdo
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.bdo")}}
+{{Compat}}

@@ -1,15 +1,14 @@
 ---
-title: 'Element : évènement mousedown'
+title: "Element : évènement mousedown"
 slug: Web/API/Element/mousedown_event
-translation_of: Web/API/Element/mousedown_event
-browser-compat: api.Element.mousedown_event
 ---
 
 {{APIRef}}
 
 L'évènement **`mousedown`** est déclenché à partir d'un [`Element`](/fr/docs/Web/API/Element) lorsqu'on appuie sur le bouton d'un dispositif de pointage (une souris par exemple) pendant que le curseur est sur l'élément.
 
-> **Note :** Cet évènement est différent de [`click`](/fr/docs/Web/API/Element/click_event). `click` est déclenché après qu'un clic «&nbsp;entier&nbsp;» a eu lieu (c'est-à-dire quand le bouton a été pressé puis relâché tandis que le pointeur était sur le même élément). `mousedown` est déclenché dès qu'on appuie sur le bouton.
+> [!NOTE]
+> Cet évènement est différent de [`click`](/fr/docs/Web/API/Element/click_event). `click` est déclenché après qu'un clic «&nbsp;entier&nbsp;» a eu lieu (c'est-à-dire quand le bouton a été pressé puis relâché tandis que le pointeur était sur le même élément). `mousedown` est déclenché dès qu'on appuie sur le bouton.
 
 <table class="properties">
   <tbody>

@@ -18,16 +18,16 @@ label = element.accessKeyLabel
 ### JavaScript
 
 ```js
-var node = document.getElementById('btn1');
+var node = document.getElementById("btn1");
 if (node.accessKeyLabel) {
-  node.title += ' [' + node.accessKeyLabel + ']';
+  node.title += " [" + node.accessKeyLabel + "]";
 } else {
-  node.title += ' [' + node.accessKey + ']';
+  node.title += " [" + node.accessKey + "]";
 }
 
 node.onclick = function () {
-  var p = document.createElement('p');
-  p.textContent = 'Clicked!';
+  var p = document.createElement("p");
+  p.textContent = "Clicked!";
   node.parentNode.appendChild(p);
 };
 ```
@@ -38,19 +38,19 @@ node.onclick = function () {
 <button accesskey="h" title="Caption" id="btn1">Hover me</button>
 ```
 
-### Result
+### 结果
 
-{{ EmbedLiveSample('Example') }}
+{{ EmbedLiveSample('示例') }}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{domxref("element.accessKey")}}
 - The [accesskey](/zh-CN/docs/Web/HTML/Global_attributes/accesskey) global attribute.

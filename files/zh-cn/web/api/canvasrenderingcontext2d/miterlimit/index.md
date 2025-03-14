@@ -1,82 +1,28 @@
 ---
-title: CanvasRenderingContext2D.miterLimit
+title: CanvasRenderingContext2D：miterLimit 属性
 slug: Web/API/CanvasRenderingContext2D/miterLimit
+l10n:
+  sourceCommit: c7edf2734fccb185c5e93ee114ea3d5edc0177b5
 ---
 
 {{APIRef}}
 
-The **`CanvasRenderingContext2D.miterLimit`** 是 Canvas 2D API 设置斜接面限制比例的属性。当获取属性值时，会返回当前的值（默认值是`10.0` ）。当给属性赋值时，0、负数、 {{jsxref("Infinity")}} 和 {{jsxref("NaN")}} 都会被忽略；除此之外都会被赋予一个新值。
+Canvas 2D API 的 **`CanvasRenderingContext2D.miterLimit`** 属性用于设置斜接限制比例。
 
-参见 [Canvas Tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial) 中的 [Applying styles and color](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) 章节。
+> [!NOTE]
+> 关于更多些斜接信息，参见 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)中的[应用样式和色彩](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)。
 
-## 语法
+## 值
 
-```
-ctx.miterLimit = value;
-```
-
-### 选项
-
-- `value`
-  - : 斜接面限制比例的的数字。0、负数、{{jsxref("Infinity")}} 和 {{jsxref("NaN")}} 都会被忽略。
-
-## 简释
-
-```
-ctx.lineJoin = "miter"  // "miter" >   "round" )   "bevel" ]
-```
-
-只有当 lineJoin 显示为 ">" 时，miterLimit 才有效。边角的角度越小，斜接长度就会越大。为了避免斜接长度过长，我们可以使用 miterLimit 属性。如果斜接长度超过 miterLimit 的值，边角会以 lineJoin 的 " ] " 类型来显示
+一个数字，指定斜接限制比例，于坐标空间单位中。零、负数、{{jsxref("Infinity")}} 和 {{jsxref("NaN")}} 值将被忽略。默认值为 `10.0`。
 
 ## 示例
 
 ### 使用 `miterLimit` 属性
 
-查看 [Canvas Tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial) 中的 [Applying styles and color](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#A_demo_of_the_miterLimit_property) 章节，获取更多信息。
+参见 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)的[应用样式和色彩](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#miterlimit_属性的演示示例)章节获取更多信息。
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.beginPath();
-ctx.moveTo(0,0);
-ctx.lineWidth = 15;
-ctx.lineTo(100, 100);
-ctx.stroke();</textarea>
-```
-
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 
@@ -86,6 +32,6 @@ window.addEventListener("load", drawCanvas);
 
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}
+- 定义该属性的接口：{{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.lineCap")}}
 - {{domxref("CanvasRenderingContext2D.lineJoin")}}

@@ -1,14 +1,13 @@
 ---
 title: RTCPeerConnection.iceGatheringState
 slug: Web/API/RTCPeerConnection/iceGatheringState
-translation_of: Web/API/RTCPeerConnection/iceGatheringState
 ---
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-읽기 속성인 **`RTCPeerConnection.iceGatheringState`**는 연결 인터페이스의 ICE 수집 상태를 알려주는 `RTCIceGatheringState`타입의 Enum을 반환합니다. 이 속성을 활용하면, ICE candidate 수집 과정이 언제 종료되는지 감지 할 수 있습니다.
+읽기 속성인 **`RTCPeerConnection.iceGatheringState`** 는 연결 인터페이스의 ICE 수집 상태를 알려주는 `RTCIceGatheringState`타입의 Enum을 반환합니다. 이 속성을 활용하면, ICE candidate 수집 과정이 언제 종료되는지 감지 할 수 있습니다.
 
-[`icegatheringstatechange`](/en-US/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event)타입의 이벤트 감시를 통해 이 속성 값이 언제 변하는지를 확인 할 수 있습니다.
+{{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}}타입의 이벤트 감시를 통해 이 속성 값이 언제 변하는지를 확인 할 수 있습니다.
 
 ## Syntax
 
@@ -22,7 +21,7 @@ var state = RTCPeerConnection.iceGatheringState;
 
 ### RTCIceGatheringState enum[섹션](/ko/docs/Web/API/RTCPeerConnection#RTCIceGatheringState_enum)
 
-[`RTCPeerConnection.iceGatheringState`](/ko/docs/Web/API/RTCPeerConnection/iceGatheringState) 속성을 사용하게되면 반환되는 `RTCIceGatheringState` enum은 현재의 ICE 수집 상태를 반영하여 알려주는 문자열 상수입니다. [`icegatheringstatechange`](/ko/docs/Web/Reference/Events/icegatheringstatechange) 타입의 이벤트를 감시해서 이 값이 언제 변하는지 확인 할 수 있습니다.
+[`RTCPeerConnection.iceGatheringState`](/ko/docs/Web/API/RTCPeerConnection/iceGatheringState) 속성을 사용하게되면 반환되는 `RTCIceGatheringState` enum은 현재의 ICE 수집 상태를 반영하여 알려주는 문자열 상수입니다. {{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}} 타입의 이벤트를 감시해서 이 값이 언제 변하는지 확인 할 수 있습니다.
 
 | 상수명        | 설명                                                                                                                                                                                                         |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -47,5 +46,5 @@ var state = pc.iceGatheringState;
 
 ## 참조
 
-- {{event("icegatheringstatechange")}}
-- [WebRTC](/ko/docs/Web/Guide/API/WebRTC)
+- {{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}}
+- [WebRTC](/ko/docs/Web/API/WebRTC_API)

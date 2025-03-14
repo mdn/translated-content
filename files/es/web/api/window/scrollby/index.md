@@ -1,14 +1,6 @@
 ---
 title: Window.scrollBy()
 slug: Web/API/Window/scrollBy
-tags:
-  - API
-  - CSSOM View
-  - Método(2)
-  - NeedsCompatTable
-  - NeedsSpecTable
-  - Referencia
-translation_of: Web/API/Window/scrollBy
 ---
 
 {{ APIRef() }}
@@ -21,7 +13,7 @@ Desplaza el documento el número de pixels proporcionados.
 
 ```js
 window.scrollBy(X, Y);
-window.scrollBy(opciones)
+window.scrollBy(opciones);
 ```
 
 ### Parámetros
@@ -58,13 +50,13 @@ Utilizando opciones:
 window.scrollBy({
   top: 100,
   left: 100,
-  behaviour: 'smooth'
-})
+  behaviour: "smooth",
+});
 ```
 
 ## Notas
 
-[window.scrollBy](/es/docs/DOM/Window.scrollBy) desplaza el documento una cantidad determinada, mientras que [window.scroll](/es/docs/DOM/Window.scroll) lo hace hacia una posición absoluta en el documento. Vea también [window.scrollByLines](/es/docs/DOM/Window.scrollByLines), [window.scrollByPages](/es/docs/DOM/Window.scrollByPages)
+[window.scrollBy](/es/docs/Web/API/Window/scrollBy) desplaza el documento una cantidad determinada, mientras que [window.scroll](/es/docs/Web/API/Window/scroll) lo hace hacia una posición absoluta en el documento. Vea también [window.scrollByLines](/es/docs/Web/API/Window/scrollByLines), [window.scrollByPages](/es/docs/Web/API/Window/scrollByPages)
 
 ## Especificaciones
 

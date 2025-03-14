@@ -1,40 +1,30 @@
 ---
-title: 'HTMLMediaElement: playing イベント'
+title: "HTMLMediaElement: playing イベント"
+short-title: playing
 slug: Web/API/HTMLMediaElement/playing_event
+l10n:
+  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
 {{APIRef("HTMLMediaElement")}}
 
 `playing` イベントは再生が最初に開始されたときと、再生が再開されたときに発行されます。例えば、データ不足で一時停止や遅延していた再生が再開されたときに発行されます。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">対象</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">既定のアクション</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>{{domxref("GlobalEventHandlers.onplaying")}}</td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("playing", (event) => {});
+
+onplaying = (event) => {};
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
@@ -43,20 +33,20 @@ slug: Web/API/HTMLMediaElement/playing_event
 `addEventListener()` を使用した例:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('playing', (event) => {
-  console.log('Video is no longer paused');
+video.addEventListener("playing", (event) => {
+  console.log("Video is no longer paused");
 });
 ```
 
 `onplaying` イベントハンドラープロパティを使用した例:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onplaying = (event) => {
-  console.log('Video is no longer paused.');
+  console.log("Video is no longer paused.");
 };
 ```
 
@@ -70,7 +60,6 @@ video.onplaying = (event) => {
 
 ## 関連イベント
 
-- HTMLMediaElement {{domxref("HTMLMediaElement.playing_event", 'playing')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.waiting_event", 'waiting')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.seeking_event", 'seeking')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.seeked_event", 'seeked')}} イベント

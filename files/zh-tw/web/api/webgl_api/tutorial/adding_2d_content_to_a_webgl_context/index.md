@@ -3,7 +3,7 @@ title: 增加一個 2D 物件到 WebGL 環境
 slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
 
 當你[建立了 WebGL 的 context](/zh-TW/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL)後，便可開始渲染。最簡單的例子就是加入一個普通的正方形。接下來，我們會介紹如何畫一個正方形。
 
@@ -19,10 +19,10 @@ WebGL Shader 使用 [OpenGL ES Shading Language](https://www.khronos.org/files/o
 
 Vertex shader 是用來定義一個變數 gl_Position 的值來控制畫布空間的值(-1 到+1)，下面的範例，我們設了一個變數`aVertexPosition`用來記錄 vertex 的位置。接下來我們將該位置乘上兩個 4x4 的矩陣(`uProjectionMatrix`和`uModelMatrix`)，並將結果設定為 gl_Position 的值。如果想要了解更多關於 Projection 和其他矩陣可以參閱這篇[文件](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html)。
 
-```html
-  // Vertex shader program
+```js
+// Vertex shader program
 
-  const vsSource = `
+const vsSource = `
     attribute vec4 aVertexPosition;
 
     uniform mat4 uModelViewMatrix;
@@ -40,8 +40,8 @@ Vertex shader 是用來定義一個變數 gl_Position 的值來控制畫布空�
 
 `gl_FragColor` 是 GL 預設的變數用來定義每個 fragment 的顏色，透過設定該變數的值來定義每個 pixel 的顏色，如下：
 
-```html
-  const fsSource = `
+```js
+const fsSource = `
     void main() {
       gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
     }
@@ -70,7 +70,10 @@ function initShaderProgram(gl, vsSource, fsSource) {
   // 錯誤處理
 
   if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
-    alert('Unable to initialize the shader program: ' + gl.getProgramInfoLog(shaderProgram));
+    alert(
+      "Unable to initialize the shader program: " +
+        gl.getProgramInfoLog(shaderProgram),
+    );
     return null;
   }
 
@@ -95,7 +98,9 @@ function loadShader(gl, type, source) {
   // See if it compiled successfully
 
   if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-    alert('An error occurred compiling the shaders: ' + gl.getShaderInfoLog(shader));
+    alert(
+      "An error occurred compiling the shaders: " + gl.getShaderInfoLog(shader),
+    );
     gl.deleteShader(shader);
     return null;
   }
@@ -107,22 +112,22 @@ function loadShader(gl, type, source) {
 我們可以透過呼叫 initShaderProgram 來建立 shader 程式
 
 ```js
-  const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
+const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
 ```
 
 接下來我們需要找到 WebGL 生成出的位置。這個例子中我們有一個 attribute、兩個 uniform。 Attributes 從 buffer 獲得值。每次迭代時，vertex shader 從 buffer 得到下一個值並傳入到 attribute。 Uniform 則像是 Javascript 的全域變數。每次迭代，他們的值不會改變。為了之後方便，我們將 shader 程式與 attribute 和 uniform 存放在同一個物件中。
 
 ```js
-  const programInfo = {
-    program: shaderProgram,
-    attribLocations: {
-      vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
-    },
-    uniformLocations: {
-      projectionMatrix: gl.getUniformLocation(shaderProgram, 'uProjectionMatrix'),
-      modelViewMatrix: gl.getUniformLocation(shaderProgram, 'uModelViewMatrix'),
-    },
-  };
+const programInfo = {
+  program: shaderProgram,
+  attribLocations: {
+    vertexPosition: gl.getAttribLocation(shaderProgram, "aVertexPosition"),
+  },
+  uniformLocations: {
+    projectionMatrix: gl.getUniformLocation(shaderProgram, "uProjectionMatrix"),
+    modelViewMatrix: gl.getUniformLocation(shaderProgram, "uModelViewMatrix"),
+  },
+};
 ```
 
 ## 建立正方形平面
@@ -131,7 +136,6 @@ function loadShader(gl, type, source) {
 
 ```js
 function initBuffers(gl) {
-
   // 建立一個 buffer 來儲存正方形的座標
 
   const positionBuffer = gl.createBuffer();
@@ -143,20 +147,13 @@ function initBuffers(gl) {
 
   // Now create an array of positions for the square.
 
-  const positions = [
-     1.0,  1.0,
-    -1.0,  1.0,
-     1.0, -1.0,
-    -1.0, -1.0,
-  ];
+  const positions = [1.0, 1.0, -1.0, 1.0, 1.0, -1.0, -1.0, -1.0];
 
   // Now pass the list of positions into WebGL to build the
   // shape. We do this by creating a Float32Array from the
   // JavaScript array, then use it to fill the current buffer.
 
-  gl.bufferData(gl.ARRAY_BUFFER,
-                new Float32Array(positions),
-                gl.STATIC_DRAW);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
 
   return {
     position: positionBuffer,
@@ -174,10 +171,10 @@ Shader 建立好了、位置也確定好了、正方形平面頂點的位置也�
 
 ```js
 function drawScene(gl, programInfo, buffers) {
-  gl.clearColor(0.0, 0.0, 0.0, 1.0);  // 設定為全黑
-  gl.clearDepth(1.0);                 // 清除所有東西
-  gl.enable(gl.DEPTH_TEST);           // Enable 深度測試
-  gl.depthFunc(gl.LEQUAL);            // Near things obscure far things
+  gl.clearColor(0.0, 0.0, 0.0, 1.0); // 設定為全黑
+  gl.clearDepth(1.0); // 清除所有東西
+  gl.enable(gl.DEPTH_TEST); // Enable 深度測試
+  gl.depthFunc(gl.LEQUAL); // Near things obscure far things
 
   // 開始前先初始化畫布
 
@@ -190,7 +187,7 @@ function drawScene(gl, programInfo, buffers) {
   // and we only want to see objects between 0.1 units
   // and 100 units away from the camera.
 
-  const fieldOfView = 45 * Math.PI / 180;   // in radians
+  const fieldOfView = (45 * Math.PI) / 180; // in radians
   const aspect = gl.canvas.clientWidth / gl.canvas.clientHeight;
   const zNear = 0.1;
   const zFar = 100.0;
@@ -198,11 +195,7 @@ function drawScene(gl, programInfo, buffers) {
 
   // note: glmatrix.js always has the first argument
   // as the destination to receive the result.
-  mat4.perspective(projectionMatrix,
-                   fieldOfView,
-                   aspect,
-                   zNear,
-                   zFar);
+  mat4.perspective(projectionMatrix, fieldOfView, aspect, zNear, zFar);
 
   // Set the drawing position to the "identity" point, which is
   // the center of the scene.
@@ -211,29 +204,31 @@ function drawScene(gl, programInfo, buffers) {
   // Now move the drawing position a bit to where we want to
   // start drawing the square.
 
-  mat4.translate(modelViewMatrix,     // destination matrix
-                 modelViewMatrix,     // matrix to translate
-                 [-0.0, 0.0, -6.0]);  // amount to translate
+  mat4.translate(
+    modelViewMatrix, // destination matrix
+    modelViewMatrix, // matrix to translate
+    [-0.0, 0.0, -6.0],
+  ); // amount to translate
 
   // Tell WebGL how to pull out the positions from the position
   // buffer into the vertexPosition attribute.
   {
-    const numComponents = 2;  // pull out 2 values per iteration
-    const type = gl.FLOAT;    // the data in the buffer is 32bit floats
-    const normalize = false;  // don't normalize
-    const stride = 0;         // how many bytes to get from one set of values to the next
-                              // 0 = use type and numComponents above
-    const offset = 0;         // how many bytes inside the buffer to start from
+    const numComponents = 2; // pull out 2 values per iteration
+    const type = gl.FLOAT; // the data in the buffer is 32bit floats
+    const normalize = false; // don't normalize
+    const stride = 0; // how many bytes to get from one set of values to the next
+    // 0 = use type and numComponents above
+    const offset = 0; // how many bytes inside the buffer to start from
     gl.bindBuffer(gl.ARRAY_BUFFER, buffers.position);
     gl.vertexAttribPointer(
-        programInfo.attribLocations.vertexPosition,
-        numComponents,
-        type,
-        normalize,
-        stride,
-        offset);
-    gl.enableVertexAttribArray(
-        programInfo.attribLocations.vertexPosition);
+      programInfo.attribLocations.vertexPosition,
+      numComponents,
+      type,
+      normalize,
+      stride,
+      offset,
+    );
+    gl.enableVertexAttribArray(programInfo.attribLocations.vertexPosition);
   }
 
   // Tell WebGL to use our program when drawing
@@ -243,13 +238,15 @@ function drawScene(gl, programInfo, buffers) {
   // Set the shader uniforms
 
   gl.uniformMatrix4fv(
-      programInfo.uniformLocations.projectionMatrix,
-      false,
-      projectionMatrix);
+    programInfo.uniformLocations.projectionMatrix,
+    false,
+    projectionMatrix,
+  );
   gl.uniformMatrix4fv(
-      programInfo.uniformLocations.modelViewMatrix,
-      false,
-      modelViewMatrix);
+    programInfo.uniformLocations.modelViewMatrix,
+    false,
+    modelViewMatrix,
+  );
 
   {
     const offset = 0;
@@ -263,18 +260,18 @@ function drawScene(gl, programInfo, buffers) {
 
 接下來，我們讀入正方形的位置，並把它擺在離相機 6 單位遠的位置。然後我們將正方形頂點的 buffer 綁定到 gl 上。最後我們呼叫{{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}}函數來渲染物件。
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
-[檢視完整程式碼](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2) | [開啟新頁面來檢視結果](http://mdn.github.io/webgl-examples/tutorial/sample2/)
+[檢視完整程式碼](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2) | [開啟新頁面來檢視結果](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)
 
 ## 矩陣運算
 
-矩陣的運算看起來很複雜，但其實[一步一步運算其實不會那麼困難](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html)。大部分使用者不會寫自己的運算函數，多半是使用現成的矩陣函數庫，這個例子中我們用的是 [glMatrix library](http://glmatrix.net/) 。
+矩陣的運算看起來很複雜，但其實[一步一步運算其實不會那麼困難](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html)。大部分使用者不會寫自己的運算函數，多半是使用現成的矩陣函數庫，這個例子中我們用的是 [glMatrix library](https://glmatrix.net/) 。
 
 可參考以下資料
 
 - [Matrices](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html) on WebGLFundamentals
-- [Matrices](http://mathworld.wolfram.com/Matrix.html) on Wolfram MathWorld
-- [Matrix](<http://en.wikipedia.org/wiki/Matrix_(mathematics)>) on Wikipedia
+- [Matrices](https://mathworld.wolfram.com/Matrix.html) on Wolfram MathWorld
+- [Matrix](https://zh.wikipedia.org/wiki/矩阵) on Wikipedia
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

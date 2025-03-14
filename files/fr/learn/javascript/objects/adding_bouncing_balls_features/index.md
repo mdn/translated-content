@@ -1,18 +1,6 @@
 ---
 title: Ajouter des fonctionnalités à notre exercice des balles rebondissantes
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-tags:
-  - Apprentissage
-  - CodingScripting
-  - Débutant
-  - Evaluation
-  - JavaScript
-  - OOJS
-  - Objet
-  - Orienté objet
-translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-original_slug: >-
-  Learn/JavaScript/Objects/Ajouter_des_fonctionnalités_à_notre_démo_de_balles_rebondissantes
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
@@ -42,7 +30,7 @@ Dans cet exercice, vous devrez utiliser le jeu des balles rebondissantes de l'ar
 
 Pour commencer, faite une copie locale de [index-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index-finished.html), [style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), et [main-finished.js](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) de l'article précédent, dans un nouveau dossier.
 
-> **Note :** Vous pouvez utiliser un site comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/). Vous pouvez copier vos codes HTML, CSS et JavaScript dans l'un d'entre eux. Si celui que vous utilisez ne possède pas de fenêtres séparées pour les différents langages, ajoutez les dans des balises `<script>`/`<style>` dans votre code HTML.
+Vous pouvez utiliser un site comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/). Vous pouvez copier vos codes HTML, CSS et JavaScript dans l'un d'entre eux. Si celui que vous utilisez ne possède pas de fenêtres séparées pour les différents langages, ajoutez les dans des balises `<script>`/`<style>` dans votre code HTML.
 
 ## Le projet en bref
 
@@ -52,7 +40,7 @@ Ce screenshot vous donne une idée du résultat final :
 
 ![](bouncing-evil-circle.png)
 
-Si vous voulez en savoir plus, regardez [l'exemple fini](http://mdn.github.io/learning-area/javascript/oojs/assessment/) (n'en profitez pas pour récupérer le code source !).
+Si vous voulez en savoir plus, regardez [l'exemple fini](https://mdn.github.io/learning-area/javascript/oojs/assessment/) (n'en profitez pas pour récupérer le code source !).
 
 ## Vos objectifs
 
@@ -113,17 +101,17 @@ Cette méthode ajoute un écouteur d'évènement `onkeydown` à l'objet `window`
 
 ```js
 var _this = this;
-window.onkeydown = function(e) {
-    if (e.keyCode === 65) {
-      _this.x -= _this.velX;
-    } else if (e.keyCode === 68) {
-      _this.x += _this.velX;
-    } else if (e.keyCode === 87) {
-      _this.y -= _this.velY;
-    } else if (e.keyCode === 83) {
-      _this.y += _this.velY;
-    }
+window.onkeydown = function (e) {
+  if (e.keyCode === 65) {
+    _this.x -= _this.velX;
+  } else if (e.keyCode === 68) {
+    _this.x += _this.velX;
+  } else if (e.keyCode === 87) {
+    _this.y -= _this.velY;
+  } else if (e.keyCode === 83) {
+    _this.y += _this.velY;
   }
+};
 ```
 
 Quand une touche est enfoncée, la propriété [keyCode](/fr/docs/Web/API/KeyboardEvent/keyCode) de l'objet event est consultée pour savoir quelle touche est enfoncée. Si c'est une des touches spécifiée, alors le viseur ce déplacera à gauche, à droite, en haut ou en bas.
@@ -153,22 +141,22 @@ Pour implémenter le compteur de score, suivez les étapes suivantes:
 1. Dans votre fichier HTML, ajoutez un élement {{HTMLElement("p")}} qui contiendra le texte suivant "Ball count: ", juste en dessous de l'élément {{HTMLElement("h1")}} .
 2. Dans votre fichier CSS, ajouter les règlesz suivantes:
 
-    ```css
-    p {
-      position: absolute;
-      margin: 0;
-      top: 35px;
-      right: 5px;
-      color: #aaa;
-    }
-    ```
+   ```css
+   p {
+     position: absolute;
+     margin: 0;
+     top: 35px;
+     right: 5px;
+     color: #aaa;
+   }
+   ```
 
 3. Dans votre JavaScript, effectuez les modifications suivante :
 
-    - Créez une variable qui contiendra la référence vers le paragraphe.
-    - Stocker et afficher le nombre de balle présentent à l'écran.
-    - Incrémentez le compteur de balle à chaque fois qu'une balle apparait à l'écran.
-    - Décrementez le compteur à chaque fois qu'une balle est détruite par le viseur.
+   - Créez une variable qui contiendra la référence vers le paragraphe.
+   - Stocker et afficher le nombre de balle présentent à l'écran.
+   - Incrémentez le compteur de balle à chaque fois qu'une balle apparait à l'écran.
+   - Décrementez le compteur à chaque fois qu'une balle est détruite par le viseur.
 
 ## Conseils et astuces
 
@@ -180,13 +168,3 @@ Pour implémenter le compteur de score, suivez les étapes suivantes:
 Si vous effectuez cette évalutation dans le cadre d'un cours, vous devriez pouvoir fournir votre travail à votre professeur/mentor pour correction. Si vous apprenez par vous même, vous pouvez obtenir la correction sur [discussion thread for this exercise](https://discourse.mozilla.org/t/adding-features-to-our-bouncing-balls-demo-assessment/24689), ou sur [#mdn](irc://irc.mozilla.org/mdn) IRC channel sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Tout d'abord effectuez cet exercice — vous n'obtiendrez jamais rien en trichant !
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
-
-## Dans ce Module
-
-- [Object basics](/fr/docs/Learn/JavaScript/Objects/Basics)
-- [Object-oriented JavaScript for beginners](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Object prototypes](/fr/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Inheritance in JavaScript](/fr/docs/Learn/JavaScript/Objects/Inheritance)
-- [Working with JSON data](/fr/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/fr/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/fr/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

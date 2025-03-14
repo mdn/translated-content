@@ -1,24 +1,30 @@
 ---
 title: Reflect.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
 ---
+
 {{JSRef}}
 
 **`Reflect.preventExtensions()`** 정적 메서드는 새로운 속성을 객체에 추가하지 못하도록 완전히 막습니다. 즉, 미래의 객체 확장을 막습니다. {{jsxref("Object.preventExtensions()")}}와 유사하지만 [차이점](#object.preventextensions_와의_차이점)도 있습니다.
 
-{{EmbedInteractiveExample("pages/js/reflect-preventextensions.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.preventExtensions()")}}
+
+```js interactive-example
+const object1 = {};
+
+console.log(Reflect.isExtensible(object1));
+// Expected output: true
+
+Reflect.preventExtensions(object1);
+
+console.log(Reflect.isExtensible(object1));
+// Expected output: false
+```
 
 ## 구문
 
 ```js
-Reflect.preventExtensions(target)
+Reflect.preventExtensions(target);
 ```
 
 ### 매개변수

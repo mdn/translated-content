@@ -1,15 +1,14 @@
 ---
 title: String.prototype.fontsize()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fontsize
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/fontsize
 ---
 
 {{JSRef}} {{deprecated_header}}
 
 El método **`fontsize()`** crea {{HTMLElement("font")}} elemento HTML que muestra una cadena con el tamaño especificado.
 
-> **Nota:** **Usage note:** El elemento \<font> ha sido eliminado [HTML5](/es/docs/Web/Guide/HTML/HTML5) y no se debe usar. Los desarrolladores web deben usar propiedades [CSS](/es/docs/Web/CSS).
+> [!NOTE]
+> El elemento \<font> ha sido eliminado [HTML5](/es/docs/Glossary/HTML5) y no se debe usar. Los desarrolladores web deben usar propiedades [CSS](/es/docs/Web/CSS).
 
 ## Sintaxis
 
@@ -35,26 +34,26 @@ When you specify size as an integer, you set the font size of `str` to one of th
 The following example uses string methods to change the size of a string:
 
 ```js
-var worldString = 'Hello, world';
+var worldString = "Hello, world";
 
-console.log(worldString.small());     // <small>Hello, world</small>
-console.log(worldString.big());       // <big>Hello, world</big>
+console.log(worldString.small()); // <small>Hello, world</small>
+console.log(worldString.big()); // <big>Hello, world</big>
 console.log(worldString.fontsize(7)); // <font size="7">Hello, world</fontsize>
 ```
 
 With the {{domxref("HTMLElement.style", "element.style")}} object you can get the element's `style` attribute and manipulate it more generically, for example:
 
 ```js
-document.getElementById('yourElemId').style.fontSize = '0.7em';
+document.getElementById("yourElemId").style.fontSize = "0.7em";
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.fontsize")}}
+{{Compat}}
 
 ## See also
 

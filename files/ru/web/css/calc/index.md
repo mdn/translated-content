@@ -1,17 +1,46 @@
 ---
 title: Функция calc()
 slug: Web/CSS/calc
-tags:
-  - css calc
-translation_of: Web/CSS/calc()
-original_slug: Web/CSS/calc()
 ---
 
 {{CSSRef}}
 
 `calc()` - это функция CSS, которая даёт возможность рассчитать значения свойств CSS во время их определения. Она может быть использована везде, где применимы {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;number&gt;")}}, или {{cssxref("&lt;integer&gt;")}}.
 
-{{EmbedInteractiveExample("pages/css/function-calc.html")}}
+{{InteractiveExample("CSS Demo: calc()")}}
+
+```css interactive-example-choice
+width: calc(10px + 100px);
+```
+
+```css interactive-example-choice
+width: calc(100% - 30px);
+```
+
+```css interactive-example-choice
+width: calc(2em * 5);
+```
+
+```css interactive-example-choice
+width: calc(var(--variable-width) + 20px);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Change my width.</div>
+</section>
+```
+
+```css interactive-example
+:root {
+  --variable-width: 100px;
+}
+
+#example-element {
+  border: 10px solid #000;
+  padding: 10px;
+}
+```
 
 ## Синтаксис
 
@@ -28,11 +57,6 @@ original_slug: Web/CSS/calc()
 
 Операнды в expression могут быть различными выражениями {{cssxref("&lt;length&gt;")}}. Если пожелаете, то можете использовать разные единицы измерения для каждого из операндов. Вы также можете использовать скобки, чтобы указать порядок вычисления.
 
-> **Примечание:** **Внимание:** Деление на ноль выдаст ошибку при парсинге HTML.
-
-> **Примечание:** Операторы + и - всегда должны быть по обеим сторонам отделены пробелом. Выражение `calc(50% -8px)` будет интерпретировано как величина в процентах и следующее за ним отрицательное число в пикселях (не верное выражение), в то время как `calc(50% - 8px)` - правильное выражение, будет интерпретировано как вычитание из процентов длины в пикселях.
-> Операторы \* и / не требуют отделения от операндов знаком пробела, но это не запрещено и даже приветствуется.
-
 ### Формальный синтаксис
 
 ```
@@ -48,9 +72,9 @@ calc(expression)
 ```css
 .banner {
   position: absolute;
-  left: 5%;                 /* для браузеров не поддерживающих calc() */
+  left: 5%; /* для браузеров не поддерживающих calc() */
   left: calc(40px);
-  width: 90%;               /* для браузеров не поддерживающих calc() */
+  width: 90%; /* для браузеров не поддерживающих calc() */
   width: calc(100% - 80px);
   border: solid black 1px;
   box-shadow: 1px 2px;
@@ -76,12 +100,12 @@ calc(expression)
 input {
   padding: 2px;
   display: block;
-  width: 98%;               /* для браузеров, не поддерживающих calc() */
+  width: 98%; /* для браузеров, не поддерживающих calc() */
   width: calc(100% - 1em);
 }
 
 #formbox {
-  width: 130px;             /* для браузеров, не поддерживающих calc() */
+  width: 130px; /* для браузеров, не поддерживающих calc() */
   width: calc(100% / 6);
   border: 1px solid black;
   padding: 4px;
@@ -93,8 +117,8 @@ input {
 ```html
 <form>
   <div id="formbox">
-  <label>Type something:</label>
-  <input type="text">
+    <label>Type something:</label>
+    <input type="text" />
   </div>
 </form>
 ```
@@ -118,7 +142,7 @@ input {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -1,14 +1,6 @@
 ---
 title: HTMLHyperlinkElementUtils.username
 slug: Web/API/HTMLAnchorElement/username
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/username
-original_slug: Web/API/HTMLHyperlinkElementUtils/username
 ---
 
 {{ApiRef("URL API")}}
@@ -25,7 +17,7 @@ object.username = string;
 ## Примеры
 
 ```js
-// Допустим, что документ содержит элемент <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.username">
+// Допустим, что документ содержит элемент <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/ru/docs/HTMLHyperlinkElementUtils.username">
 var anchor = document.getElementByID("myAnchor");
 var result = anchor.username; // Вернёт: 'anonymous'
 ```

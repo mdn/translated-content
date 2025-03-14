@@ -1,13 +1,15 @@
 ---
-title: 'CSP: connect-src'
+title: "CSP: connect-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
+l10n:
+  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
 {{HTTPSidebar}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`connect-src`** ディレクティブは、スクリプトインターフェイスを使用して読み込むことができる URL を制限します。以下の API が制限の対象となります。
+HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`connect-src`** ディレクティブは、スクリプトインターフェイスを使用して読み込むことができる URL を制限します。以下の API が制限の対象となります。
 
-- {{HTMLElement("a")}} の {{htmlattrxref("ping", "a")}} 属性
+- {{HTMLElement("a")}} の [`ping`](/ja/docs/Web/HTML/Element/a#ping) 属性
 - {{domxref("fetch()")}}
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("WebSocket")}}
@@ -46,9 +48,9 @@ Content-Security-Policy: connect-src <source> <source>;
 
 ### ソース
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#ソース)にあるいずれかの値を取ることができます。
+`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#関連ディレクティブ)）で使用できます
+なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます
 
 ## 例
 
@@ -64,18 +66,20 @@ Content-Security-Policy: connect-src https://example.com/
 
 ```html
 <a ping="https://not-example.com">
+  <script>
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://not-example.com/");
+    xhr.send();
 
-<script>
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://not-example.com/');
-  xhr.send();
+    const ws = new WebSocket("https://not-example.com/");
 
-  var ws = new WebSocket("https://not-example.com/");
+    const es = new EventSource("https://not-example.com/");
 
-  var es = new EventSource("https://not-example.com/");
-
-  navigator.sendBeacon("https://not-example.com/", { /* … */ });
-</script>
+    navigator.sendBeacon("https://not-example.com/", {
+      /* … */
+    });
+  </script></a
+>
 ```
 
 ## 仕様書
@@ -93,7 +97,7 @@ Content-Security-Policy: connect-src https://example.com/
 ## 関連情報
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- {{HTMLElement("a")}} の {{htmlattrxref("ping", "a")}} 属性
+- {{HTMLElement("a")}} の [`ping`](/ja/docs/Web/HTML/Element/a#ping)ement/a#ping) 属性
 - {{domxref("fetch()")}}
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("WebSocket")}}

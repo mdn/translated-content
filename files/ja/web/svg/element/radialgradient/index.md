@@ -9,17 +9,24 @@ l10n:
 
 **`<radialGradient>`** 要素は、グラフィック要素の塗りつぶしや線の描画に適用できる放射状のグラデーションを定義することができます。
 
-> **メモ:** CSS の {{cssxref('gradient/radial-gradient', 'gradient()')}} と混同しないでください。 CSS のグラデーションは HTML 要素に対してのみ適用することができるのに対し、 SVG のグラデーションは SVG 要素にのみ適用できます。
+> [!NOTE]
+> CSS の {{cssxref('gradient/radial-gradient', 'gradient()')}} と混同しないでください。 CSS のグラデーションは HTML 要素に対してのみ適用することができるのに対し、 SVG のグラデーションは SVG 要素にのみ適用できます。
 
 ## 例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  viewBox="0 0 10 10"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <radialGradient id="myGradient">
       <stop offset="10%" stop-color="gold" />
@@ -72,13 +79,13 @@ html,body,svg { height:100% }
 
 ### グローバル属性
 
-- [コア属性](/ja/docs/Web/SVG/Attribute/Core)
+- [コア属性](/ja/docs/Web/SVG/Attribute)
   - : 特に: {{SVGAttr('id')}}
-- [スタイル属性](/ja/docs/Web/SVG/Attribute/Styling)
+- [スタイル属性](/ja/docs/Web/SVG/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
 - イベント属性
-  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#グローバルイベント属性), [文書要素イベント属性](/ja/docs/Web/SVG/Attribute/Events#文書要素イベント属性)
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute/Presentation)
+  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute#グローバルイベント属性), [文書要素イベント属性](/ja/docs/Web/SVG/Attribute#文書要素イベント属性)
+- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute)
   - : 特に: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 - XLink 属性
   - : {{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:title")}}

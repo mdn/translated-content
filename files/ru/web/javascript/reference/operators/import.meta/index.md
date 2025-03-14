@@ -1,10 +1,6 @@
 ---
 title: import.meta
 slug: Web/JavaScript/Reference/Operators/import.meta
-tags:
-  - Модули
-translation_of: Web/JavaScript/Reference/Statements/import.meta
-original_slug: Web/JavaScript/Reference/Statements/import.meta
 ---
 
 {{JSSidebar("Statements")}}
@@ -43,7 +39,7 @@ console.log(import.meta); // { url: "file:///home/user/my-module.js" }
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

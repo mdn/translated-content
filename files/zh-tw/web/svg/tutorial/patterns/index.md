@@ -3,11 +3,11 @@ title: 图案
 slug: Web/SVG/Tutorial/Patterns
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("SVG/Tutorial/Gradients", "SVG/Tutorial/Texts") }}
 
-pattern（图案）是一个比较难理解的填充类型。同时，pattern 的作用很强大，所以在这里需要进行一些讨论，以便对填充模式有一个大致的了解。和渐变一样，[`<pattern>`](/zh-TW/SVG/Element/pattern)元素也需要放在 SVG 文件的`&ltldefs>`段落里。
-
-![](/@api/deki/files/350/=SVG_Pattern_Example.png)
+pattern（图案）是一个比较难理解的填充类型。同时，pattern 的作用很强大，所以在这里需要进行一些讨论，以便对填充模式有一个大致的了解。和渐变一样，[`<pattern>`](/zh-TW/docs/Web/SVG/Element/pattern) 元素也需要放在 SVG 文件的 `<ldefs>` 段落里。
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -68,6 +68,6 @@ pattern 最难理解的是定义尺寸和单位。在上面的例子里，我们
 
 当然，这意味着当你改变图形的尺寸后，pattern 不会缩放。上面提到的三种情况都会被放在下面的例子里，将图形绘制在一个拉长到 300px 高度的画布上。图示可能并不详尽，你可以在你的应用里改变更多设置项。
 
-![Image:SVG_Pattern_Comparison_of_Units.png](/@api/deki/files/349/=SVG_Pattern_Comparison_of_Units.png)o
+![Image:SVG_Pattern_Comparison_of_Units.png](svg_pattern_comparison_of_units.png)o
 
 {{ PreviousNext("SVG/Tutorial/Gradients", "SVG/Tutorial/Texts") }}

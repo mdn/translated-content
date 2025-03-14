@@ -1,29 +1,29 @@
 ---
-title: Range.startOffset
+title: Range：startOffset 属性
 slug: Web/API/Range/startOffset
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ ApiRef("Range") }}
+{{ApiRef("DOM")}}
 
-**`Range.startOffset`** 是一个只读属性，用于返回一个表示 `Range` 在 `startContainer` 中的起始位置的数字。
+**`Range.startOffset`** 只读属性返回一个数字，表示 `Range` 在 `startContainer` 中的起始位置。
 
-如果 `startContainer` 是一个文本（{{domxref("Text")}}）、注释（{{domxref("Comment")}}）或者 CDATA 区块（{{domxref("CDATASection")}}）节点，那么返回的偏移量是从 `startContainer` 开始到 {{domxref("Range")}} 的边界点的字符数量。对于其他的节点类型， `startOffset` 返回 `startContainer` 到边界点的子节点数量。
+如果 `startContainer` 是 {{domxref("Text")}}、{{domxref("Comment")}} 或 {{domxref("CDATASection")}} 类型的 {{domxref("Node")}}，那么偏移量是从 `startContainer` 的起始位置到 {{domxref("Range")}} 边界点的字符数。对于其他 {{domxref("Node")}} 类型，`startOffset` 是从 `startContainer` 的起始位置到 {{domxref("Range")}} 边界点之间的子节点数量。
 
-可使用{{domxref("Range.setStart")}} 方法改变 `Range` 的 `startOffset` 位置。
+要更改 {{domxref("Range")}} 的 `startOffset`，请使用 {{domxref("Range.setStart")}} 方法。
 
-## 语法
+## 值
 
-```
-startRangeOffset = range.startOffset;
-```
+数字。
 
 ## 示例
 
 ```js
-range = document.createRange();
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
-startRangeOffset = range.startOffset;
+const range = document.createRange();
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
+const startRangeOffset = range.startOffset;
 ```
 
 ## 规范
@@ -36,4 +36,4 @@ startRangeOffset = range.startOffset;
 
 ## 参见
 
-- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference)
+- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model)

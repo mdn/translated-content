@@ -1,12 +1,6 @@
 ---
 title: var
 slug: Web/HTML/Element/var
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/var
-original_slug: Web/HTML/Elemento/var
 ---
 
 {{HTMLSidebar}}
@@ -14,13 +8,14 @@ original_slug: Web/HTML/Elemento/var
 ### Definición
 
 - Marca variables de programas y similares.
+
   - : **Sus etiquetas son**: \<var> y \</var> (ambas obligatorias)
-  
-    **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
-    **Está definido como**: [Elemento de frase](/es/HTML/Elemento/Tipos_de_elementos#de_frase).
+    **Crea una caja**: [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea).
 
-    **Puede contener**: cero o más elementos[en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **Está definido como**: [Elemento de frase](/es/docs/HTML/Elemento/Tipos_de_elementos#de_frase).
+
+    **Puede contener**: cero o más elementos[en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 ##### Atributos Genéricos
 
@@ -33,9 +28,9 @@ original_slug: Web/HTML/Elemento/var
 
 **Eventos**: onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.
 
-##### Atributos Específicos - No tiene.
+##### Atributos Específicos - No tiene
 
-##### Atributos Transicionales - No tiene.
+##### Atributos Transicionales - No tiene
 
 ### Ejemplos
 

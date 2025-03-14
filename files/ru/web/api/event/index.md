@@ -1,19 +1,11 @@
 ---
 title: Event
 slug: Web/API/Event
-tags:
-  - API
-  - DOM
-  - Event
-  - Interface
-  - Reference
-  - Событие
-translation_of: Web/API/Event
 ---
 
 {{APIRef("DOM")}}
 
-Интерфейс **`Event`** представляет собой любое событие, которое происходит в [DOM](/ru/docs/DOM/DOM_Reference); некоторые из них генерируемые пользователем (клик мышью или нажатие клавиши на клавиатуре), а некоторые - генерируемые API (события, обозначающие завершение процесса анимации, приостановка видео и т.д.). Существует много типов событий, некоторые из них используют интерфейсы, базирующиеся на главном интерфейсе `Event`. `Event` содержит общие свойства и методы для всех событий.
+Интерфейс **`Event`** представляет собой любое событие, которое происходит в [DOM](/ru/docs/Web/API/Document_Object_Model); некоторые из них генерируемые пользователем (клик мышью или нажатие клавиши на клавиатуре), а некоторые - генерируемые API (события, обозначающие завершение процесса анимации, приостановка видео и т.д.). Существует много типов событий, некоторые из них используют интерфейсы, базирующиеся на главном интерфейсе `Event`. `Event` содержит общие свойства и методы для всех событий.
 
 ## Интерфейсы, основанные на `Event`
 
@@ -100,7 +92,7 @@ translation_of: Web/API/Event
   - : Первоначальный целевой объект события до перенаправлений (Mozilla-специфичный). Может быть из [анонимного контента](/ru/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content).
 - {{domxref("Event.returnValue")}} {{non-standard_inline}}
   - : Нестандартная альтернатива (оставшаяся от старых версий Microsoft Internet Explorer) для {{domxref("Event.preventDefault()")}} и {{domxref("Event.defaultPrevented")}}.
-- {{domxref("Event.scoped")}} {{readonlyinline}} {{obsolete_inline}}
+- {{domxref("Event.scoped")}} {{readonlyinline}}
   - : {{jsxref("Boolean", "Логическое значение")}}, показывающее всплывает ли данное событие через shadow root (внутренний DOM-элемента). Это свойство было переименовано в {{domxref("Event.composed", "composed")}}.
 - {{domxref("Event.srcElement")}} {{non-standard_inline}}
   - : Нестандартный синоним (остался от старых версий Microsoft Internet Explorer) для {{domxref("Event.target")}}.
@@ -111,7 +103,7 @@ translation_of: Web/API/Event
 - {{domxref("Event.type")}} {{readonlyinline}}
   - : Название события (без учёта регистра символов).
 - {{domxref("Event.isTrusted")}} {{readonlyinline}}
-  - : Показывает было или нет событие инициировано браузером (например, по клику мышью) или из скрипта (например, через функцию создания события, такую как [event.initEvent](/ru/docs/DOM/event.initEvent))
+  - : Показывает было или нет событие инициировано браузером (например, по клику мышью) или из скрипта (например, через функцию создания события, такую как [event.initEvent](/ru/docs/Web/API/Event/initEvent))
 
 ## Методы
 
@@ -121,9 +113,9 @@ translation_of: Web/API/Event
 
 - {{domxref("Event.initEvent()")}} {{deprecated_inline}}
   - : Инициализация значений созданного с помощью [Document.createEvent()](/ru/docs/Web/API/Document/createEvent) события. Если событие уже отправлено, то эта функция ничего не делает.
-- {{domxref("Event.preventBubble()")}} {{non-standard_inline}} {{Obsolete_inline(24)}}
+- {{domxref("Event.preventBubble()")}} {{non-standard_inline}}
   - : Предотвращает всплытие события. Устаревшая, используйте вместо неё {{domxref("event.stopPropagation")}}.
-- {{domxref("Event.preventCapture()")}} {{non-standard_inline}} {{Obsolete_inline(24)}}
+- {{domxref("Event.preventCapture()")}} {{non-standard_inline}}
   - : Устаревшая, используйте вместо неё {{domxref("event.stopPropagation")}}.
 - {{domxref("Event.preventDefault()")}}
   - : Отменяет событие (если его возможно отменить).
@@ -138,15 +130,15 @@ translation_of: Web/API/Event
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- Типы событий: [Event reference](/ru/docs/Web/Reference/Events)
-- [Сравнение Event Targets](/ru/docs/Web/API/Event/Comparison_of_Event_Targets) (target и currentTarget и relatedTarget и originalTarget)
-- [Creating and triggering custom events](/ru/docs/Web/Guide/DOM/Events/Creating_and_triggering_events)
+- Типы событий: [Event reference](/ru/docs/Web/Events)
+- [Сравнение Event Targets](/ru/docs/Learn/JavaScript/Building_blocks/Event_bubbling) (target и currentTarget и relatedTarget и originalTarget)
+- [Creating and triggering custom events](/ru/docs/Web/Events/Creating_and_triggering_events)
 - Для разработчиков дополнений Firefox:
 
   - [Listening to events in Firefox extensions](/ru/docs/Listening_to_events_in_Firefox_extensions)

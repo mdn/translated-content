@@ -11,15 +11,15 @@ slug: Web/API/CustomEvent/initCustomEvent
 
 > **备注：** **该方法已经作废，不要在新项目中继续使用该方法。**
 >
-> Instead use specific event constructors, like {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}. The page on [Creating and triggering events](/zh-CN/docs/Web/Guide/Events/Creating_and_triggering_events) gives more information about the way to use these.
+> Instead use specific event constructors, like {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}. The page on [Creating and triggering events](/zh-CN/docs/Web/Events/Creating_and_triggering_events) gives more information about the way to use these.
 
-## Syntax
+## 语法
 
+```js-nolint
+event.initCustomEvent(type, canBubble, cancelable, detail)
 ```
-event.initCustomEvent(type, canBubble, cancelable, detail);
-```
 
-### Parameters
+### 参数
 
 - `type`
   - : 类型{{domxref("DOMString")}}，事件名称。
@@ -30,15 +30,15 @@ event.initCustomEvent(type, canBubble, cancelable, detail);
 - _`detail`_
   - : 事件初始化时传入的数据。
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{domxref("CustomEvent")}}
 - The constructor to use instead of this deprecated method: {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}.

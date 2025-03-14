@@ -1,11 +1,8 @@
 ---
 title: 계산값
 slug: Web/CSS/computed_value
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/computed_value
 ---
+
 {{cssref}}
 
 [CSS](/ko/docs/Web/CSS) 속성의 **계산값**은 상속 과정에서 부모가 자식에게 물려주는 값을 말합니다. 계산값은 [지정값](/ko/docs/Web/CSS/specified_value)으로부터 다음 방법을 통해 구합니다.
@@ -25,18 +22,18 @@ translation_of: Web/CSS/computed_value
 
 ## 같이 보기
 
-- [CSS Reference](/ko/docs/Web/CSS/CSS_Reference)
+- [CSS Reference](/ko/docs/Web/CSS/Reference)
 - CSS 주요 개념
 
   - [CSS 문법](/ko/docs/Web/CSS/Syntax)
   - [@규칙](/ko/docs/Web/CSS/At-rule)
   - [주석](/ko/docs/Web/CSS/Comments)
   - [명시도](/ko/docs/Web/CSS/Specificity)
-  - [상속](/ko/docs/Web/CSS/inheritance)
-  - [박스 모델](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [상속](/ko/docs/Web/CSS/Inheritance)
+  - [박스 모델](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [레이아웃 모드](/ko/docs/Web/CSS/Layout_mode)
   - [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)
-  - [마진 중첩](/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [마진 중첩](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 값
 
     - [초깃값](/ko/docs/Web/CSS/initial_value)

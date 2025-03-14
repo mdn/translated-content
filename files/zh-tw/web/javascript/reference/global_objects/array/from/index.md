@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/from
 
 **`Array.from()`** 方法會從類陣列（array-like）或是可迭代（iterable）物件建立一個新的 `Array` 實體。
 
-{{EmbedInteractiveExample("pages/js/array-from.html")}}
+{{InteractiveExample("JavaScript Demo: Array.from()")}}
+
+```js interactive-example
+console.log(Array.from("foo"));
+// Expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], (x) => x + x));
+// Expected output: Array [2, 4, 6]
+```
 
 ### 參數
 
@@ -27,9 +35,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/from
 `Array.from()` 讓你從這些物件建立陣列：
 
 - 類陣列（array-like）物件（物件具有 `length` 屬性以及索引化（indexed）的元素）或
-- [可迭代物件](/zh-TW/docs/Web/JavaScript/Guide/iterable)（物件具有可以讓你利用迭代的方式取得它自己本身的元素，像是 {{jsxref("Map")}} 和 {{jsxref("Set")}}）。
+- [可迭代物件](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols)（物件具有可以讓你利用迭代的方式取得它自己本身的元素，像是 {{jsxref("Map")}} 和 {{jsxref("Set")}}）。
 
-`Array.from()` 有個可選用的參數 `mapFn`，它允許你在建立出新的陣列實體之後，可以接著對陣列（或是其子類別物件）中的每一個元素執行 {{jsxref("Array.prototype.map", "map")}} 函式。更清楚地說，`Array.from(obj, mapFn, thisArg)` 跟 `Array.from(obj).map(mapFn, thisArg)` 的結果是一樣的，除非所建立的不是一個可用的中介陣列（intermediate array）。這對於某些陣列的子類別來說就很重要，例如[型別陣列](/zh-TW/docs/Web/JavaScript/Typed_arrays)，因為中介陣列必須要把內容值做一番截頭去尾的操作來讓它們變成適合的物件型態。
+`Array.from()` 有個可選用的參數 `mapFn`，它允許你在建立出新的陣列實體之後，可以接著對陣列（或是其子類別物件）中的每一個元素執行 {{jsxref("Array.prototype.map", "map")}} 函式。更清楚地說，`Array.from(obj, mapFn, thisArg)` 跟 `Array.from(obj).map(mapFn, thisArg)` 的結果是一樣的，除非所建立的不是一個可用的中介陣列（intermediate array）。這對於某些陣列的子類別來說就很重要，例如[型別陣列](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)，因為中介陣列必須要把內容值做一番截頭去尾的操作來讓它們變成適合的物件型態。
 
 `from()` 方法的 `length` 屬性值為 1。
 
@@ -40,14 +48,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/from
 ### 從字串產生陣列
 
 ```js
-Array.from('foo');
+Array.from("foo");
 // ["f", "o", "o"]
 ```
 
 ### 從集合產生陣列
 
 ```js
-var s = new Set(['foo', window]);
+var s = new Set(["foo", window]);
 Array.from(s);
 // ["foo", window]
 ```
@@ -55,7 +63,11 @@ Array.from(s);
 ### 從映射產生陣列
 
 ```js
-var m = new Map([[1, 2], [2, 4], [4, 8]]);
+var m = new Map([
+  [1, 2],
+  [2, 4],
+  [4, 8],
+]);
 Array.from(m);
 // [[1, 2], [2, 4], [4, 8]]
 ```
@@ -77,13 +89,13 @@ f(1, 2, 3);
 ```js
 // 使用箭頭函式作為 map 函式來
 // 操作元素
-Array.from([1, 2, 3], x => x + x);
+Array.from([1, 2, 3], (x) => x + x);
 // [2, 4, 6]
 
 // 產生數值序列
 // 因為陣列中的每個位置都會被初始化為 `undefined`，
 // 下方 `v` 會是 `undefined`
-Array.from({length: 5}, (v, i) => i);
+Array.from({ length: 5 }, (v, i) => i);
 // [0, 1, 2, 3, 4]
 ```
 
@@ -97,12 +109,16 @@ if (!Array.from) {
   Array.from = (function () {
     var toStr = Object.prototype.toString;
     var isCallable = function (fn) {
-      return typeof fn === 'function' || toStr.call(fn) === '[object Function]';
+      return typeof fn === "function" || toStr.call(fn) === "[object Function]";
     };
     var toInteger = function (value) {
       var number = Number(value);
-      if (isNaN(number)) { return 0; }
-      if (number === 0 || !isFinite(number)) { return number; }
+      if (isNaN(number)) {
+        return 0;
+      }
+      if (number === 0 || !isFinite(number)) {
+        return number;
+      }
       return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));
     };
     var maxSafeInteger = Math.pow(2, 53) - 1;
@@ -112,7 +128,7 @@ if (!Array.from) {
     };
 
     // The length property of the from method is 1.
-    return function from(arrayLike/*, mapFn, thisArg */) {
+    return function from(arrayLike /*, mapFn, thisArg */) {
       // 1. Let C be the this value.
       var C = this;
 
@@ -121,17 +137,21 @@ if (!Array.from) {
 
       // 3. ReturnIfAbrupt(items).
       if (arrayLike == null) {
-        throw new TypeError('Array.from requires an array-like object - not null or undefined');
+        throw new TypeError(
+          "Array.from requires an array-like object - not null or undefined",
+        );
       }
 
       // 4. If mapfn is undefined, then let mapping be false.
       var mapFn = arguments.length > 1 ? arguments[1] : void undefined;
       var T;
-      if (typeof mapFn !== 'undefined') {
+      if (typeof mapFn !== "undefined") {
         // 5. else
         // 5. a If IsCallable(mapfn) is false, throw a TypeError exception.
         if (!isCallable(mapFn)) {
-          throw new TypeError('Array.from: when provided, the second argument must be a function');
+          throw new TypeError(
+            "Array.from: when provided, the second argument must be a function",
+          );
         }
 
         // 5. b. If thisArg was supplied, let T be thisArg; else let T be undefined.
@@ -157,7 +177,10 @@ if (!Array.from) {
       while (k < len) {
         kValue = items[k];
         if (mapFn) {
-          A[k] = typeof T === 'undefined' ? mapFn(kValue, k) : mapFn.call(T, kValue, k);
+          A[k] =
+            typeof T === "undefined"
+              ? mapFn(kValue, k)
+              : mapFn.call(T, kValue, k);
         } else {
           A[k] = kValue;
         }
@@ -168,7 +191,7 @@ if (!Array.from) {
       // 20. Return A.
       return A;
     };
-  }());
+  })();
 }
 ```
 

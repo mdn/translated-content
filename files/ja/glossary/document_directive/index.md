@@ -3,6 +3,8 @@ title: Document directive (文書ディレクティブ)
 slug: Glossary/Document_directive
 ---
 
+{{GlossarySidebar}}
+
 **{{Glossary("CSP")}} の文書ディレクティブ**は {{HTTPHeader("Content-Security-Policy")}} ヘッダーで使用され、ポリシーが適用される文書または[ワーカー](/ja/docs/Web/API/Web_Workers_API)環境のプロパティを管理します。
 
 文書ディレクティブは {{CSP("default-src")}} ディレクティブで代替されることはありません。
@@ -11,7 +13,7 @@ slug: Glossary/Document_directive
 
 ## 関連情報
 
-- [用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("CSP")}}
   - {{Glossary("Reporting directive", "報告ディレクティブ")}}

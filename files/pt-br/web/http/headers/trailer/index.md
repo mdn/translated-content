@@ -7,7 +7,8 @@ slug: Web/HTTP/Headers/Trailer
 
 O cabeçalho de resposta **Trailer** permite o remetente incluir campos adicionais ao final de mensagens fragmentadas visando prover metadados que podem ser dinamicamente gerados enquanto o corpo da mensagem é enviado, como a mensagem de checagem de integridade, assinatura digital, ou status de pós-processamento.
 
-> **Nota:** O cabeçalho de requisição {{HTTPHeader("TE")}} precisa ser colocado como "trailers" para permitir campos de reboque (_trailers_).
+> [!NOTE]
+> O cabeçalho de requisição {{HTTPHeader("TE")}} precisa ser colocado como "trailers" para permitir campos de reboque (_trailers_).
 
 <table class="properties">
   <tbody>
@@ -65,14 +66,14 @@ Expires: Wed, 21 Oct 2015 07:28:00 GMT\r\n
 
 ## Especificações
 
-| Especificação                                                    | Título                                                             |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------ |
-| {{RFC("7230", "Trailer", "4.4")}}                     | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+| Especificação                                    | Título                                                             |
+| ------------------------------------------------ | ------------------------------------------------------------------ |
+| {{RFC("7230", "Trailer", "4.4")}}                | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
 | {{RFC("7230", "Chunked trailer part", "4.1.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Trailer")}}
+{{Compat}}
 
 ## Veja também
 

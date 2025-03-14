@@ -1,14 +1,9 @@
 ---
 title: JSON
 slug: Glossary/JSON
-tags:
-  - JSON
-  - Введение
-  - Глоссарий
-  - Написание скриптов
-translation_of: Glossary/JSON
-original_slug: Глоссарий/JSON
 ---
+
+{{GlossarySidebar}}
 
 _JavaScript Object Notation_ (**JSON**) это формат обмена данными. Несмотря на то, что JSON не является строгим подмножеством, он напоминает синтаксис {{Glossary("JavaScript")}}. Хотя много языков программирования поддерживают JSON, он особенно полезен для JavaScript-приложений, таких как веб-сайты и расширения для браузера.
 
@@ -20,7 +15,7 @@ JSON может представлять числа, булевы значени
 
 ### Общие знания
 
-- [JSON](https://ru.wikipedia.org/wiki/JSON) на Википедии
+- [JSON](https://ru.wikipedia.org/wiki/JSON) в Википедии
 
 ### Техническая информация
 

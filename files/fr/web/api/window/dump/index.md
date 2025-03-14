@@ -1,20 +1,18 @@
 ---
 title: Window.dump()
 slug: Web/API/Window/dump
-translation_of: Web/API/Window/dump
-browser-compat: api.Window.dump
 ---
 
 {{ApiRef}} {{Non-standard_header}}
 
 La méthode **`Window.dump()`** permet d'afficher des messages sur la sortie standard (`stdout`) du navigateur. Si le navigateur a été démarré depuis un terminal, la sortie produite par `dump()` apparaîtra dans le terminal.
 
-La sortie produite par `dump()` n'est _pas_ envoyée vers la console des outils de développement du navigateur. Pour afficher des messages dans la console des outils de développement, il faudra utiliser [`console.log()`](/fr/docs/Web/API/Console/log).
+La sortie produite par `dump()` n'est _pas_ envoyée vers la console des outils de développement du navigateur. Pour afficher des messages dans la console des outils de développement, il faudra utiliser [`console.log()`](/fr/docs/Web/API/console/log_static).
 
 ## Syntaxe
 
 ```js
-dump(message)
+dump(message);
 ```
 
 ### Paramètres

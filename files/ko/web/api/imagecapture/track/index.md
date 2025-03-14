@@ -1,15 +1,6 @@
 ---
 title: ImageCapture.track
 slug: Web/API/ImageCapture/track
-tags:
-  - API
-  - Experimental
-  - ImageCapture
-  - MediaStream Image Capture
-  - Property
-  - Read-only
-  - Reference
-translation_of: Web/API/ImageCapture/track
 ---
 
 {{APIRef("MediaStream Image")}}
@@ -19,7 +10,7 @@ translation_of: Web/API/ImageCapture/track
 ## 구문
 
 ```js
-const mediaStreamTrack = imageCaptureObj.track
+const mediaStreamTrack = imageCaptureObj.track;
 ```
 
 ### 값

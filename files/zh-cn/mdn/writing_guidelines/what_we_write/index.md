@@ -1,29 +1,48 @@
 ---
 title: MDN 收录规则
 slug: MDN/Writing_guidelines/What_we_write
-original_slug: MDN/Guidelines/Does_this_belong_on_MDN
 ---
 
-{{MDNSidebar}}
+MDN Web 文档的内容是通用的，并不偏向某一个浏览器。这使得 Web 开发人员可以编写与任何浏览器都兼容的代码。本文介绍了在 MDN Web 文档上应该包含哪些主题或类型的内容的有关信息。
 
-在本文中，你将找到 MDN Web 文档收录规则的有关信息，我们将从主题和类型两方面告诉你什么样的内容是合适的。有些内容如果不适合放置在这里，我们将和你讨论它应该被放置在什么地方，尽管我们的讨论不会很深入。
+## 编辑准则
 
-## 问题
+本节描述了 Mozilla MDN 员工为管理 MDN Web 文档上的内容而设置的准则。MDN Web 文档的所有贡献者都应遵守这些政策。
 
-如果你正准备记录什么信息，你可能想知道是否要将这些信息放入 MDN。更进一步地，你可能想在你的源代码中维护文档，并将文档写入 [Mozilla wiki](https://wiki.mozilla.org/Main_Page)，或者写入某 Git 仓库的 readme 文件中。本文的目的是帮助你确认你的内容是否适合 MDN。
+### 关联性
 
-文档是否应放入 MDN 主要取决于两点：
+MDN Web 文档上的所有内容都必须与其出现的技术相关。网站绝不会接受垃圾信息（商业广告）和其他不相关的内容。继续尝试提交垃圾信息的贡献者可能会被 Mozilla MDN 工作人员酌情禁止访问 MDN。
 
-- 文档的主题（它是讲什么内容的？）
-- 文档的性质（它是什么类型的文档？）
+与主题相关的商业网站的站外链接将根据具体情况进行判断。它们在帮助 Web 开发人员方面的价值必须超过其商业利益价值。
 
-请注意，对 MDN 的所有贡献都基于特定的开源许可证。这些在我们的[关于 MDN](/zh-CN/docs/MDN/About) 页面中有[详细介绍](/zh-CN/docs/MDN/About#版权和许可)。
+### 中立性
 
-> **备注：** Mozilla 的 [Websites & Communications Terms of Use](https://www.mozilla.org/zh-CN/about/legal/terms/mozilla/) 所声明的条例在你使用 MDN 或对其做贡献时是生效的。仔细阅读这个文档，确保你知道在 Mozilla 的网站上什么是能发表的，什么是不能发表的。
+MDN Web 文档上的文章必须保持[中立的观点](https://zh.wikipedia.org/wiki/Wikipedia:中立的观点)，在没有编辑偏见的情况下报告浏览器的变化。不接受对任何浏览器或用户代理的贬损评论。
 
-## 哪些话题在 MDN 的范畴内？
+### 开放性
 
-一般来说，如果它是一种开放的、面向 web 的技术，我们会在 MDN 上对其进行记录。这意味着我们的内容涵盖 Web 开发人员在创建站点和应用程序时可以使用的任何技术。如果多个浏览器实现了该功能，并且它是一项标准，或者正在朝着标准化发展，那么我们肯定可以收录它。如果它仍然处在实验阶段，没有在多个浏览器中实现，可能会发生一些变化，那么它仍然适合被收录，但可能不会被视为文档的写作团队优先事项。
+MDN Web 文档上记录的 Web 技术应该朝着标准方向发展，并且必须至少有一个渲染引擎实现了它。浏览器支持的变化会记录在文章的[浏览器兼容性](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)部分。
+
+## 内容建议
+
+如果你想为 MDN Web 文档提供内容建议，请务必在提交之前阅读此页面以确保你的建议是合适的。
+
+对于新的参考页面或指南，请在我们的社区存储库上进行[讨论](https://github.com/mdn/mdn-community/discussions/categories/content-suggestions)，概述你建议的内容和原因（请尽可能明确）。
+
+如建议涉及新内容的大型项目，请参阅[包含页面的标准](/zh-CN/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)，该页面简述了申请流程。
+
+## 哪些话题在 MDN 的范畴内
+
+一般来说，如果它是一种开放的 Web 技术，我们会在 MDN Web 文档上对其进行记录。这意味着我们的内容涵盖 Web 开发人员在创建站点和应用程序时可以使用的任何技术。
+
+如果多个浏览器实现了该功能，并且它是一项标准，或者正在朝着标准化发展，那么我们肯定可以收录它。如果它仍然处在实验阶段，没有在多个浏览器中实现，可能会发生一些变化，那么它仍然适合被收录，但可能不会被视为文档的写作团队优先事项。
+
+换句话说，要在 MDN Web 文档上记录的 Web 技术应该满足以下条件：
+
+- 朝着标准的方向发展。
+- 在可靠的标准机构发布的规范中。
+- 至少有一个渲染引擎实现。
+- 在稳定的浏览器版本里发布。
 
 我们主要关注前端 Web 技术：
 
@@ -31,47 +50,74 @@ original_slug: MDN/Guidelines/Does_this_belong_on_MDN
 - [CSS](/zh-CN/docs/Web/CSS)
 - [JavaScript](/zh-CN/docs/Web/JavaScript)
 - [SVG](/zh-CN/docs/Web/SVG)
-- [Web APIs](/zh-CN/docs/Web/API)
-- [WebGL](/zh-CN/docs/Web/API/WebGL_API)
-- 等等。
+- [Web API](/zh-CN/docs/Web/API)
+- [HTTP](/zh-CN/docs/Web/HTTP)
 
-> **备注：** 后端技术通常在其他地方有自己的文档，MDN 不会试图取代这些文档，尽管我们确实有一些[例外](/zh-CN/docs/learn/Server-side)。
+我们还记录了一些更广泛的主题，例如 [SVG](/zh-CN/docs/Web/SVG)、[XML](/zh-CN/docs/Web/XML)、[WebAssembly](/zh-CN/docs/WebAssembly) 和[无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility)。此外，我们还为这些技术提供了广泛的[学习指南](/zh-CN/docs/Learn_web_development/Core/Accessibility)，还有相关的[术语表](/zh-CN/docs/Glossary)。
 
-我们还欢迎一些跨端技术但与 Web 开发相关的主题，例如：
+> [!NOTE]
+> 后端技术通常在其他地方有自己的文档，MDN 不会试图取代这些文档，尽管我们确实有一些[例外](/zh-CN/docs/Learn_web_development/Extensions/Server-side)。
 
-- [Accessibility](/zh-CN/docs/Web/Accessibility)
-- [AJAX](/zh-CN/docs/Web/Guide/AJAX)
-- [Web graphics](/zh-CN/docs/Web/Guide/Graphics)
-- [Progressive web apps](/zh-CN/docs/Web/Progressive_web_apps)
-- [Web-based games](/zh-CN/docs/Games)
+MDN Web 文档上的所有内容都必须与其出现的技术部分相关。贡献者应遵循这些 MDN 的编写风格、代码示例以及一些其他主题的[撰写指南](/zh-CN/docs/MDN/Writing_guidelines)。
 
-> **备注：** MDN 涵盖了一些在网络上公开的非标准功能，特别是它们很常用的时候。例如，我们有 WebKit 特定的 CSS 属性的文档。MDN 还涵盖了一些非 Web 标准技术，如果这些技术被认为对 Web 开发人员很有用——参阅我们的 [Web 相关技术](/zh-CN/docs/Related)部分。
+有关技术是否可以记录在 MDN Web 文档上的标准的更多详细信息，请参阅[包含页面的标准](/zh-CN/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)。
 
-## 哪些主题不属于 MDN Web 文档？
+### 我们何时记录一项新技术
 
-一般来说，任何不是开放的 Web 标准的东西都不属于 MDN。以下各节提供了更多的详细信息。
+在 MDN Web 文档上，我们一直在努力寻找合适的文档记录新的 Web 标准技术。我们力求在尽早发布文档以便开发人员可以及时了解新功能，同时也需要在足够晚的时间发布文档以取得平衡，使技术成熟稳定，从而文档不需要频繁更新或快速地被移除。
 
-### Mozilla 产品
+一般来说，我们通常将记录新技术的最早时间定义为：当该技术功能已被确定并已在某处实施，被视为在朝着标准化方向发展的时候。
 
-MDN Web Docs 不再托管 Mozilla 产品的文档。
+我们考虑记录一项新技术，如果它是：
 
-特别地，以下产品有自己的文档站点：
+- 文档规范必须由可靠的标准组织（例如 W3C、WHATWG、Khronos、IETF 等）发布，并且已经达到了合理的稳定水平（例如 W3C 的工作草案或候选推荐阶段，或者根据针对该规范提出的问题的流动情况来判断规范已经相对稳定）。
+- 至少一个浏览器中已经始终如一地实现了该规范，并且其他浏览器开发者也表现出了兴趣（例如，已经存在一个有效的工单或“意图实现”流程正在进行中）。
 
-- [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
-- [Building and configuring Firefox](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html)
-- [SpiderMonkey](https://firefox-source-docs.mozilla.org/js/)
+如果出现以下情况，我们不会记录新技术：
 
-### 还有什么不属于 MDN Web 文档？
+- 它没有规范，或者规范只是一个粗略的说明，看起来很容易改变。
+- 目前仅有一个甚至没有浏览器已经实现该规范，且其他未支持该规范的浏览器没有表现出有意实现的迹象。你可以通过询问那些负责开发浏览器的工程师，并查看浏览器的错误跟踪器和邮件列表等方式来评估这一情况。
+- 这项技术在 Web 上不是公开的，或是完全专有的。
+- 已经显示出被弃用或被类似特性替代的迹象。
 
-举一些不适合 MDN 的主题：
+## 哪些主题不属于 MDN Web 文档
 
-- 仅适用于某一非 Mozilla 浏览器的不开放的 Web 技术。
-- 与 Web 或 Mozilla 产品无关的技术。
-- 面向用户的文档；对于 Mozilla 产品来说，这些文档应属于 [Mozilla 技术支持](https://support.mozilla.org)。
+一般来说，任何不是开放的 Web 标准的东西都不属于 MDN。网站绝不会接受垃圾信息（商业广告）和其他不相关的内容。继续尝试提交垃圾信息的贡献者可能会被 Mozilla MDN 工作人员酌情禁止访问 MDN。
 
-## 哪些类型在 MDN 的范畴内？
+MDN Web 文档的不当主题示例包括：
 
-一般情况下，MDN 是*产品*文档，而不是*项目*或记录过程的文档（除了 [MDN 本身](/zh-CN/docs/MDN)）。因此，如果文档是关于“如何使用一项技术”或“一项技术是如何工作的”（这项技术在上面提到的一个主题类别中）那么它可以被放在 MDN 上但如果它是关于“谁在开发一项技术”或“开发一项技术的计划”，那么它就不应该出现在 MDN 上。在这种情况下，如果这个东西是在 Mozilla 支持下开发的，那么 [Mozilla project wiki](https://wiki.mozilla.org/Main_Page) 可能是一个好地方。
+- 不在 Web 上公开且特定于某一个浏览器的技术
+- 和 Web 不相关的技术
+- 终端用户文档。例如，对于 Mozilla 产品，此类文档属于 [Mozilla 支持站点](https://support.mozilla.org)。
+- 自链接或自推广外部链接。在添加外部链接之前，请查看我们的[撰写指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide#外部链接)中的相关信息。
+
+### 我们何时删除文档
+
+如果页面不再包含任何有用的信息、已经过时或可能不正确以至于保留他们可能会产生误导，则页面将从 MDN Web 文档中删除。
+
+以下示例描述了页面或内容可能被删除的情况：
+
+- 文章包含有关未在所有浏览器中实现且后来被撤回的功能的信息（通常是实验性功能，例如前置功能）。
+- 参考页面描述了在任何浏览器中实现之前从规范中删除的功能。
+- 文章涵盖了后来被证明是不良做法并被更好的技术所取代的技术。
+- 文章包含的信息后来被其他质量更高的文章所取代。
+- 文章包含不适合 MDN Web 文档的内容。
+- MDN Web 文档的这部分内容并不聚焦于开放式 Web 技术，并且是一种维护负担。
+
+有关如何删除文档的更多信息，请参阅[创建、移动和删除页面指南](/zh-CN/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)。
+
+## 哪些类型在 MDN Web 文档的范畴内
+
+一般来说，我们的文档分为以下几类：
+
+- 参考
+- 指南
+- 术语表
+- 教程
+
+一般情况下，MDN Web 文档是*产品*文档，而不是*项目*或记录过程的文档。因此，如果文档是关于“如何使用一项技术”或“一项技术是如何工作的”（这项技术在上面提到的一个主题类别中）那么它可以被放在 MDN 上。
+
+但如果它是关于“谁在开发一项技术”或“开发一项技术的计划”，那么它就不应该出现在 MDN 上。
 
 以下是不应该放置在 MDN 上的文档类型的一些示例：
 

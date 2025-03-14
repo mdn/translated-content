@@ -1,44 +1,144 @@
 ---
-title: '::backdrop'
+title: ::backdrop
 slug: Web/CSS/::backdrop
+l10n:
+  sourceCommit: 7dae0a08ea89d28b9360c666291a3d86a593da37
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{CSSRef}}
 
-**`::backdrop`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 是在任何处于[全屏模式](/zh-CN/docs/Web/API/Fullscreen_API)的元素下的即刻渲染的盒子（并且在所有其他在堆中的层级更低的元素之上）。
+**`::backdrop`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是一个与{{Glossary("viewport", "视口")}}大小相同的盒子，它会被渲染在任何{{Glossary("top layer", "顶层")}}展示元素的下方。
 
-```css
-/* Backdrop 只有通过 dialog.showModal() 打开对话框时会被显示 */
+{{InteractiveExample("CSS Demo: ::backdrop", "tabbed-shorter")}}
+
+```css interactive-example
+button {
+  font-size: 1.2rem;
+  padding: 5px 15px;
+}
+
 dialog::backdrop {
-  background: rgba(255,0,0,.25);
+  background-color: salmon;
 }
 ```
 
-所有处于全屏模式下的元素都被放在顶级渲染层中的一个后进先出（LIFO）栈里。在视区内容被绘制在屏幕上之前，这一特殊的渲染层总是最后被渲染（因此是最上层）。当一个元素在这个栈的栈顶时，`::backdrop` 伪元素允许我们遮盖，装饰或完全隐藏该元素的下层文档。
+```html interactive-example
+<button id="showDialogBtn">Show a dialog</button>
 
-`::backdrop` 不继承任何元素，同时也不被任何元素继承。没有规定什么属性不能应用于该伪元素。
+<dialog id="favDialog">
+  <form method="dialog">
+    <p>The background shown outside of this dialog is a backdrop.</p>
+    <button id="confirmBtn">Close the dialog</button>
+  </form>
+</dialog>
+```
+
+```js interactive-example
+const showDialogBtn = document.getElementById("showDialogBtn");
+const favDialog = document.getElementById("favDialog");
+
+showDialogBtn.addEventListener("click", () => favDialog.showModal());
+```
 
 ## 语法
 
-{{CSSSyntax}}
-
-## 示例
-
-在示例中，backdrop 样式用于将视频全屏显示时的背景颜色改为蓝灰色而不是大多数浏览器默认的黑色。
-
 ```css
-video::backdrop {
-  background-color: #448;
+::backdrop {
+  /* ... */
 }
 ```
 
-效果如下：
+## 描述
 
-![](bbb-backdrop.png)
+背景遮罩（backdrop）在以下情况下会出现：
 
-注意当 backdrop 可见时，上下两部分的暗蓝灰色的信箱效果。这个区域一般是黑色的，但上面的 CSS 语句修改了它的外观。
+- 使用[全屏 API](/zh-CN/docs/Web/API/Fullscreen_API) 的 {{domxref("Element.requestFullscreen()")}} 方法将元素置于全屏模式时。
+- 通过 {{domxref("HTMLDialogElement.showModal()")}} 调用在顶层显示 {{HTMLElement("dialog")}} 元素。
+- 通过 {{domxref("HTMLElement.showPopover()")}} 调用在顶层显示{{domxref("Popover API", "弹出框", "", "nocode")}}元素。
 
-You can [see this example in action](https://fullscreen-requestfullscreen-demo.glitch.me/) or [view or remix the code](https://glitch.com/edit/#!/fullscreen-requestfullscreen-demo) on [Glitch](http://glitch.com/).
+当多个元素被置于顶层时，每个元素都有自己的 `::backdrop` 伪元素。
+
+```css
+/* 背景遮罩只有通过 dialog.showModal() 打开对话框时会被显示 */
+dialog::backdrop {
+  background: rgb(255 0 0 / 25%);
+}
+```
+
+元素被置于顶层的一个后进先出（LIFO）栈里。`::backdrop` 伪元素使得可以遮挡、样式化或完全隐藏位于顶层元素下方的所有内容。
+
+`::backdrop` 既不继承自任何其他元素，也不会被任何其他元素继承。对于此伪元素可以应用哪些属性，没有限制。
+
+## 示例
+
+### 为模态对话框的背景遮罩添加样式
+
+在此示例中，我们使用 `::backdrop` 伪元素来为模态 {{htmlelement("dialog")}} 打开时使用的背景遮罩添加样式。
+
+#### HTML
+
+我们包含一个 {{htmlelement("button")}}，点击该按钮将打开包含的 `<dialog>`。当 `<dialog>` 打开后，我们将焦点给到关闭对话框的按钮上：
+
+```html
+<dialog>
+  <button autofocus>关闭</button>
+  <p>这个模态对话框有一个漂亮的背景遮罩！</p>
+</dialog>
+<button>显示对话框</button>
+```
+
+#### CSS
+
+我们为背景遮罩添加了背景，使用 [CSS 渐变](/zh-CN/docs/Web/CSS/gradient)创建了一个色彩斑斓的甜甜圈效果：
+
+```css
+::backdrop {
+  background-image:
+    radial-gradient(
+      circle,
+      #fff 0 5vw,
+      transparent 5vw 20vw,
+      #fff 20vw 22.5vw,
+      #eee 22.5vw
+    ),
+    conic-gradient(
+      #272b66 0 50grad,
+      #2d559f 50grad 100grad,
+      #9ac147 100grad 150grad,
+      #639b47 150grad 200grad,
+      #e1e23b 200grad 250grad,
+      #f7941e 250grad 300grad,
+      #662a6c 300grad 350grad,
+      #9a1d34 350grad 400grad,
+      #43a1cd 100grad 150grad,
+      #ba3e2e
+    );
+}
+```
+
+#### JavaScript
+
+对话框会使用 [`.showModal()`](/zh-CN/docs/Web/API/HTMLDialogElement/showModal) 方法以模态形式打开，并使用 [`.close()`](/zh-CN/docs/Web/API/HTMLDialogElement/close) 方法关闭。
+
+```js
+const dialog = document.querySelector("dialog");
+const showButton = document.querySelector("dialog + button");
+const closeButton = document.querySelector("dialog button");
+
+// “显示对话框”按钮会以模态打开对话框
+showButton.addEventListener("click", () => {
+  dialog.showModal();
+});
+
+// “关闭”按钮会关闭对话框
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
+```
+
+#### 结果
+
+{{EmbedLiveSample("为模态对话框的背景遮罩添加样式", 450, 300)}}
 
 ## 规范
 
@@ -50,6 +150,8 @@ You can [see this example in action](https://fullscreen-requestfullscreen-demo.g
 
 ## 参见
 
-- {{cssxref(":fullscreen")}} pseudo-class
-- {{HTMLElement("dialog")}} HTML element
-- [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API)
+- {{cssxref(":fullscreen")}} 伪类
+- {{HTMLElement("dialog")}} HTML 元素
+- [全屏 API](/zh-CN/docs/Web/API/Fullscreen_API)
+- [`popover`](/zh-CN/docs/Web/HTML/Global_attributes/popover) HTML 全局属性
+- [弹出框 API](/zh-CN/docs/Web/API/Popover_API)

@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Operators/new
 
 O **operador `new`** cria uma instancia de um tipo de objeto definido pelo usuário ou de um dos tipos nativos (_built-in_) que possuem uma função construtora.
 
-{{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}} A fonte deste exemplo interativo é armazenada em um repositório do GitHub. Se você gostaria de contribuir para o projeto de exemplos interativos, clone <https://github.com/mdn/interactive-examples> e nos envie uma requisição de comando pull.
+{{InteractiveExample("JavaScript Demo: Expressions - new operator")}}
+
+```js interactive-example
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+const car1 = new Car("Eagle", "Talon TSi", 1993);
+
+console.log(car1.make);
+// Expected output: "Eagle"
+```
 
 ## Sintaxe
 
@@ -45,13 +58,13 @@ Você pode adicionar uma propriedade compartilhada à um tipo de objeto definido
 function Carro() {}
 carro1 = new Carro();
 
-console.log(carro1.cor);    // undefined
+console.log(carro1.cor); // undefined
 
 Carro.prototype.cor = null;
-console.log(carro1.cor);    // null
+console.log(carro1.cor); // null
 
 carro1.cor = "preta";
-console.log(carro1.cor);   // preta
+console.log(carro1.cor); // preta
 ```
 
 ## Exemplos
@@ -122,22 +135,16 @@ var carro2 = new Carro("Nissan", "300ZX", 1992, ken);
 Ao invés de passar uma string ou valor inteiro quando criar os novos objetos, as definições acima passam objetos `rand` e `ken` como os parâmetros para os donos. Para descobrir o nome do dono do `carro2`, você pode acessar a seguinte propriedade:
 
 ```js
-carro2.dono.nome
+carro2.dono.nome;
 ```
 
 ## Especificações
 
-| Specification                                                                        | Status                       | Comment                                            |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-new-operator', 'The new Operator')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-new-operator', 'The new Operator')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ES5.1', '#sec-11.2.2', 'The new Operator')}}         | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES3', '#sec-11.2.2', 'The new Operator')}}             | {{Spec2('ES3')}}         |                                                    |
-| {{SpecName('ES1', '#sec-11.2.2', 'The new Operator')}}             | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.0. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.new")}}
+{{Compat}}
 
 ## Veja também
 

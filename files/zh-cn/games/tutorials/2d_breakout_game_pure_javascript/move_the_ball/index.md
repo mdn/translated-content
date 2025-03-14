@@ -5,17 +5,17 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 
 {{GamesSidebar}}{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
 
-本篇是 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch) 10 节教程中的第二节。如果你完成了本篇教程之后，你可以从 [Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html) 看到源码。
+本篇是 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) 10 节教程中的第二节。如果你完成了本篇教程之后，你可以从 [Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html) 看到源码。
 
 从上一节中你已经知道如何去绘制一个球。现在让我们使它动起来。从技术上讲，我们将在画布上绘制一个球，之后让它消失，然后在一个稍微不用的位置上再绘制一个一样的球。就想电影里的每一帧动起来的感觉。
 
-我们需要定义一个绘图函数，每次使用一组不同的变量改变球体的位置；循环调用以保持画布上每一帧不断更新。你可以使用 JavaScript 时间函数 {{domxref("WindowTimers.setInterval()", "setInterval()")}} 或者 {{domxref("window.requestAnimationFrame()")}}。
+我们需要定义一个绘图函数，每次使用一组不同的变量改变球体的位置；循环调用以保持画布上每一帧不断更新。你可以使用 JavaScript 时间函数 {{domxref("Window.setInterval", "setInterval()")}} 或者 {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}。
 
 在你的 HTML 文件只保留前两行，删除其他所有的 JavaScript 代码并在 draw() 函数中添加以下内容保证每 10 毫秒执行一次 draw() 函数：
 
 ```js
 function draw() {
-    // drawing code
+  // drawing code
 }
 setInterval(draw, 10);
 ```
@@ -24,7 +24,7 @@ setInterval(draw, 10);
 
 ```js
 ctx.beginPath();
-ctx.arc(50, 50, 10, 0, Math.PI*2);
+ctx.arc(50, 50, 10, 0, Math.PI * 2);
 ctx.fillStyle = "#0095DD";
 ctx.fill();
 ctx.closePath();
@@ -39,19 +39,19 @@ ctx.closePath();
 首先，在`draw()`函数上方添加以下两行，以定义`x`和`y`：
 
 ```js
-var x = canvas.width/2;
-var y = canvas.height-30;
+var x = canvas.width / 2;
+var y = canvas.height - 30;
 ```
 
 接下来更新 `draw()` 函数，在 `arc()` 方法中使用 `x` 和 `y` 变量，如下面高亮行所示：
 
 ```js
 function draw() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
 }
 ```
 
@@ -66,13 +66,13 @@ var dy = -2;
 
 ```js
 function draw() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
-    x += dx;
-    y += dy;
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+  x += dx;
+  y += dy;
 }
 ```
 
@@ -88,18 +88,18 @@ function draw() {
 
 ```js
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
-    x += dx;
-    y += dy;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+  x += dx;
+  y += dy;
 }
 ```
 
-保存您的代码并再次尝试，这次你将看到球移动后没有留下轨迹。每隔 10 毫秒，画布就会被清除，蓝色的圆圈 (我们的球) 将被绘制在一个给定的位置上，而 `x` 和 `y` 的值将在下一个帧被更新。
+保存你的代码并再次尝试，这次你将看到球移动后没有留下轨迹。每隔 10 毫秒，画布就会被清除，蓝色的圆圈 (我们的球) 将被绘制在一个给定的位置上，而 `x` 和 `y` 的值将在下一个帧被更新。
 
 ## 保持代码整洁
 
@@ -109,24 +109,24 @@ function draw() {
 
 ```js
 function drawBall() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
 }
 
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawBall();
-    x += dx;
-    y += dy;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBall();
+  x += dx;
+  y += dy;
 }
 ```
 
 ## 比较你的代码
 
-您可以在下面的实时演示中查看本文的代码，并使用它来更好地了解其工作原理：
+你可以在下面的实时演示中查看本文的代码，并使用它来更好地了解其工作原理：
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/3x5foxb1/","","415")}}
 
@@ -134,6 +134,6 @@ function draw() {
 
 ## 下一步
 
-我们已经画了我们的球，并将其移动，但它仍然消失在画布的边缘。在第三章中，我们将探讨如何使其 [从墙壁上反弹](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch/Bounce_off_the_walls).
+我们已经画了我们的球，并将其移动，但它仍然消失在画布的边缘。在第三章中，我们将探讨如何使其 [从墙壁上反弹](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}

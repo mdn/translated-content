@@ -9,7 +9,8 @@ slug: Web/HTTP/Headers/Expires
 
 値 0 のような無効な日付は過去の日付を表し、リソースがすでに有効期限切れであることを意味します。
 
-> **メモ:** レスポンスに `max-age` または `s-maxage` ディレクティブを持つ {{HTTPHeader("Cache-Control")}} ヘッダーがある場合、`Expires` ヘッダーは無視されます。
+> [!NOTE]
+> レスポンスに `max-age` または `s-maxage` ディレクティブを持つ {{HTTPHeader("Cache-Control")}} ヘッダーがある場合、`Expires` ヘッダーは無視されます。
 
 <table class="properties">
   <tbody>
@@ -53,13 +54,13 @@ Expires: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## 仕様書
 
-| 仕様書                                       | 題名                                            |
-| -------------------------------------------- | ----------------------------------------------- |
+| 仕様書                            | 題名                                            |
+| --------------------------------- | ----------------------------------------------- |
 | {{RFC("7234", "Expires", "5.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Expires")}}
+{{Compat}}
 
 ## 関連情報
 

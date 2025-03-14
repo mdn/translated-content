@@ -1,7 +1,6 @@
 ---
 title: SpeechSynthesisUtterance
 slug: Web/API/SpeechSynthesisUtterance
-translation_of: Web/API/SpeechSynthesisUtterance
 ---
 
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
@@ -49,52 +48,50 @@ _`SpeechSynthesisUtterance` ещё наследует свойства из ег
 
 ## Examples
 
-В нашей базовой [Демо-версия синтезатора речи](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis), мы сначала получаем ссылку на контроллер SpeechSynthesis, используя `window.speechSynthesis`. После определения некоторых необходимых переменных мы получаем список доступных голосов, используя {{domxref("SpeechSynthesis.getVoices()")}}, и заполнить меню выбора с ними, чтобы пользователь мог выбрать, какой голос он хочет.
+В нашей базовой [Демо-версия синтезатора речи](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis), мы сначала получаем ссылку на контроллер SpeechSynthesis, используя `window.speechSynthesis`. После определения некоторых необходимых переменных мы получаем список доступных голосов, используя {{domxref("SpeechSynthesis.getVoices()")}}, и заполнить меню выбора с ними, чтобы пользователь мог выбрать, какой голос он хочет.
 
 Внутри обработчика `inputForm.onsubmit` мы останавливаем отправку формы с помощью [preventDefault()](/ru/docs/Web/API/Event/preventDefault), используйте {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "constructor")}} для создания нового экземпляра высказывания, содержащего текст из текста {{htmlelement("input")}}, установите {{domxref("SpeechSynthesisUtterance.voice","voice")}}на голос, выбранный в элементе {{htmlelement("select")}} и начните высказывание через {{domxref("SpeechSynthesis.speak()")}} метод.
 
 ```js
 var synth = window.speechSynthesis;
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('input');
-var voiceSelect = document.querySelector('select');
+var inputForm = document.querySelector("form");
+var inputTxt = document.querySelector("input");
+var voiceSelect = document.querySelector("select");
 
 var voices = synth.getVoices();
 
-for(i = 0; i < voices.length ; i++) {
-  var option = document.createElement('option');
-  option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
-  option.setAttribute('data-lang', voices[i].lang);
-  option.setAttribute('data-name', voices[i].name);
+for (i = 0; i < voices.length; i++) {
+  var option = document.createElement("option");
+  option.textContent = voices[i].name + " (" + voices[i].lang + ")";
+  option.setAttribute("data-lang", voices[i].lang);
+  option.setAttribute("data-name", voices[i].name);
   voiceSelect.appendChild(option);
 }
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = function (event) {
   event.preventDefault();
 
   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
+  var selectedOption = voiceSelect.selectedOptions[0].getAttribute("data-name");
+  for (i = 0; i < voices.length; i++) {
+    if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }
   synth.speak(utterThis);
   inputTxt.blur();
-}
+};
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                    | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Speech API', '#utterance-attributes', 'SpeechSynthesisUtterance')}} | {{Spec2('Web Speech API')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Web Speech API](/ru/docs/Web/API/Web_Speech_API)

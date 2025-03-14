@@ -1,11 +1,6 @@
 ---
 title: letter-spacing
 slug: Web/CSS/letter-spacing
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/letter-spacing
 ---
 
 {{CSSRef}}
@@ -21,7 +16,7 @@ La propriété **`letter-spacing`** définit [l'interlettre](https://fr.wikipedi
 /* Type <length>       */
 letter-spacing: 0.3em;
 letter-spacing: 3px;
-letter-spacing: .3px;
+letter-spacing: 0.3px;
 
 /* Valeur avec mot-clé */
 letter-spacing: normal;
@@ -52,10 +47,18 @@ letter-spacing: unset;
 ### CSS
 
 ```css
-.premier    { letter-spacing: 0.4em; }
-.deuxieme   { letter-spacing: 1em; }
-.troisieme  { letter-spacing: -0.05em; }
-.quatrieme  { letter-spacing: 6px; }
+.premier {
+  letter-spacing: 0.4em;
+}
+.deuxieme {
+  letter-spacing: 1em;
+}
+.troisieme {
+  letter-spacing: -0.05em;
+}
+.quatrieme {
+  letter-spacing: 6px;
+}
 ```
 
 ### HTML
@@ -77,7 +80,7 @@ Utiliser une valeur trop grande (positive ou négative) pour `letter-spacing` re
 
 L'espacement doit être déterminé au cas par cas car chaque famille de polices utilise des caractères de largeurs différentes. Il n'existe pas de valeur unique qui permette de s'assurer que, quelle que soit la police utilisée, le texte soit lisible.
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [_Understanding Success Criterion 1.4.8, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## Spécifications

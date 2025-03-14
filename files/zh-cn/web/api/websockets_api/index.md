@@ -1,41 +1,57 @@
 ---
-title: WebSockets
+title: WebSocket API
 slug: Web/API/WebSockets_API
+l10n:
+  sourceCommit: a67b9956163a6a3bace6bea8d223d048f089675f
 ---
 
-{{DefaultAPISidebar("Websockets API")}}
+{{DefaultAPISidebar("WebSockets API")}}
 
-**WebSockets** 是一种先进的技术。它可以在用户的浏览器和服务器之间打开交互式通信会话。使用此 API，您可以向服务器发送消息并接收事件驱动的响应，而无需通过轮询服务器的方式以获得响应。
+**WebSocket API** 是一种先进的技术，可在用户浏览器和服务器之间开启双向交互式通信会话。利用该 API，可以向服务器发送信息，并接收事件驱动的响应，而无需轮询服务器以获得回复。
+
+> [!NOTE]
+> 虽然 WebSocket 连接在功能上与标准 Unix 风格的 socket 有些类似，但两者并无关联。
 
 ## 接口
 
 - [`WebSocket`](/zh-CN/docs/Web/API/WebSocket)
-  - : 用于连接 WebSocket 服务器的主要接口，之后可以在这个连接上发送 和接受数据。
+  - : 用于连接 WebSocket 服务器的主要接口，之后可以在这个连接上发送和接收数据。
 - [`CloseEvent`](/zh-CN/docs/Web/API/CloseEvent)
-  - : 连接关闭时 WebSocket 对象发送的事件。
+  - : 连接关闭时 WebSocket 对象触发的事件。
 - [`MessageEvent`](/zh-CN/docs/Web/API/MessageEvent)
   - : 当从服务器获取到消息的时候 WebSocket 对象触发的事件。
 
+## 指南
+
+- [编写 WebSocket 客户端应用程序](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [编写 WebSocket 服务器](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
+- [用 C# 编写 WebSocket 服务器](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_server)
+- [用 Java 编写 WebSocket 服务器](/zh-CN/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java)
+- [用 JavaScript（Deno）编写 WebSocket 服务器](/zh-CN/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno)
+
 ## 工具
 
-- [HumbleNet](https://hacks.mozilla.org/2017/06/introducing-humblenet-a-cross-platform-networking-library-that-works-in-the-browser/): 一个在浏览器中工作的跨平台网络库。它由一个围绕 websocket 和 WebRTC 的 C 包装器组成，抽象了跨浏览器的差异，方便了为游戏和其它应用程序创建多用户网络功能。
-- [µWebSockets](https://github.com/uWebSockets/uWebSockets):由 [C++11](https://isocpp.org/) 和 [Node.js](https://nodejs.org/) 实现的高度可扩展的 WebSocket 服务器和客户端.。
-- [ClusterWS](https://github.com/ClusterWS/ClusterWS): 轻量级、快速和强大的框架，用于在 [Node.js](https://nodejs.org/) 中构建可伸缩的 WebSocket 应用程序。
-- [Socket.IO](https://socket.io): 一个基于长轮询/WebSocket 的 [Node.js](https://nodejs.org) 第三方传输协议。
-- [SocketCluster](https://socketcluster.io/): 一个用于[Node.js](https://nodejs.org)的 pub/sub 专注于可伸缩 WebSocket 框架。
-- [WebSocket-Node](https://github.com/Worlize/WebSocket-Node): 一个用 [Node.js](https://nodejs.org/)实现 WebSocket 服务器 API。
-- [Total.js](https://www.totaljs.com/):一个用[Node.js](http://www.nodejs.org/) 实现的的 Web 应用程序框架（例如:WebSocket 聊天）。
-- [Faye](https://www.npmjs.com/package/faye-websocket): 一个 [Node.js](https://nodejs.org/) 的 [WebSocket](/zh-CN/docs/Web/API/WebSockets_API)（双向连接）和 [EventSource](/zh-CN/docs/Web/API/EventSource)（单向连接）的服务器和客户端。
-- [SignalR](https://dotnet.microsoft.com/zh-cn/apps/aspnet/signalr): SignalR 在可用时将隐藏使用 WebSockets，在不可用时将优雅地使用其他技术和技术，而应用程序代码保持不变。
-- [Caddy](https://caddyserver.com/docs/websocket): 能够将任意命令（stdin/stdout）代理为 websocket 的 web 服务器。
-- [ws](https://github.com/websockets/ws): 一个流行的 WebSocket 客户端和服务器 [Node.js](https://nodejs.org/)库。
-- [jsonrpc-bidirectional](https://github.com/bigstepinc/jsonrpc-bidirectional): 易于使用异步 RPC 库，通过单个 WebSocket 或 RTCDataChannel (WebRTC) 连接支持双向调用。TCP / SCTP /等。客户端和服务器可以各自承载自己的 JSONRPC 和服务器端点。
-- [rpc-websockets](https://github.com/elpheria/rpc-websockets): JSON-RPC 2.0 在 websocket 上实现 Node.js 和 JavaScript。
-
-## 相关话题
-
-- [AJAX](/zh-CN/docs/Web/Guide/AJAX)
-- [JavaScript](/zh-CN/docs/Web/JavaScript)
+- [AsyncAPI](https://www.asyncapi.com/)：用于描述基于 WebSocket 等协议的事件驱动架构的规范。可以使用它来描述基于 WebSocket 的 API，就像使用 OpenAPI 规范描述 REST API 一样。了解[为什么要考虑将 AsyncAPI 与 WebSocket 结合使用](https://www.asyncapi.com/blog/websocket-part1)和[如何使用](https://www.asyncapi.com/blog/websocket-part2)。
+- [HumbleNet](https://hacks.mozilla.org/2017/06/introducing-humblenet-a-cross-platform-networking-library-that-works-in-the-browser/)：一个在浏览器中工作的跨平台网络库。它由 WebSocket 和 WebRTC 的 C 语言封装器组成，可抽象出跨浏览器的差异，便于为游戏和其他应用程序创建多用户网络功能。
+- [µWebSockets](https://github.com/uNetworking/uWebSockets)：由 [C++11](https://isocpp.org/) 和 [Node.js](https://nodejs.org/) 实现的高度可扩展的 WebSocket 服务器和客户端。
+- [Socket.IO](https://socket.io)：基于长轮询和 WebSocket 的 [Node.js](https://nodejs.org) 第三方传输协议。
+- [SocketCluster](https://socketcluster.io/)：适用于 [Node.js](https://nodejs.org) 的 pub/sub WebSocket 框架，注重可扩展性。
+- [WebSocket-Node](https://github.com/theturtle32/WebSocket-Node)：用 [Node.js](https://nodejs.org/) 实现的 WebSocket 服务器 API。
+- [Total.js](https://www.totaljs.com/)：用 [Node.js](https://nodejs.org/) 实现的 Web 应用程序框架（例如：[WebSocket 聊天](https://github.com/totaljs/examples/tree/master/websocket)）。
+- [Faye](https://www.npmjs.com/package/faye-websocket)：用于 [Node.js](https://nodejs.org) 服务器和客户端的 {{DOMxRef("WebSocket")}}（双向连接）和 [EventSource](/zh-CN/docs/Web/API/EventSource)（单向连接）。
+- [SignalR](https://dotnet.microsoft.com/zh-cn/apps/aspnet/signalr)：当 WebSocket 可用时，SignalR 将在覆盖范围内使用 WebSocket；当 WebSocket 不可用时，SignalR 将优雅地回退到其他技术，而应用程序代码保持不变。
+- [Caddy](https://caddyserver.com/)：能够将任意命令（stdin/stdout）代理为 websocket 的 web 服务器。
+- [ws](https://github.com/websockets/ws)：流行的 WebSocket 客户端和服务器 [Node.js](https://nodejs.org/) 库。
+- [jsonrpc-bidirectional](https://github.com/bigstepinc/jsonrpc-bidirectional)：异步 RPC，在一个连接上，服务器和客户端可以同时导出函数（客户端可以调用服务器，服务器也可以调用客户端）。
+- [cowboy](https://github.com/ninenines/cowboy)：Cowboy 是一款小型、快速、现代的 Erlang/OTP HTTP 服务器，支持 WebSocket。
+- [ZeroMQ](https://zeromq.org)：ZeroMQ 是一个可嵌入的网络库，可通过进程内、IPC、TCP、UDP、TIPC、组播和 WebSocket 传输消息。
+- [WebSocket King](https://websocketking.com)：帮助开发、测试和使用 WebSocket 服务器的客户端工具。
+- [PHP WebSocket Server](https://github.com/napengam/phpWebSocketServer)：用 PHP 编写的服务器，用于处理通过 websocket wss\:// 或 ws\:// 以及通过 ssl:// 和 tcp\:// 的普通套接字进行的连接。
+- [Channels](https://channels.readthedocs.io/en/stable/index.html)：增加了对 WebSocket（以及其他需要长时间运行异步连接的协议）的支持的 Django 库。
+- [Channels](https://hexdocs.pm/phoenix/channels.html)：在 Elixir Phoenix 框架中使用 WebSocket 进行可扩展的实时通信。
+- [LiveView](https://github.com/phoenixframework/phoenix_live_view)：在 Elixir Phoenix 框架中通过 WebSocket 实现实时交互式网络体验。
+- [Flask-SocketIO](https://flask-socketio.readthedocs.io/en/latest/)：让 Flask 应用程序可以在客户端和服务器之间进行低延迟的双向通信。
+- [Gorilla WebSocket](https://pkg.go.dev/github.com/gorilla/websocket)：Gorilla WebSocket 是 WebSocket 协议的 [Go](https://go.dev/) 实现。
 
 ## 规范
 
@@ -47,6 +63,6 @@ slug: Web/API/WebSockets_API
 
 ## 参见
 
-- [RFC 6455 — The WebSocket Protocol](https://tools.ietf.org/html/rfc6455)
-- [WebSocket API Specification](https://www.w3.org/TR/websockets/)
-- [Server-Sent Events](/zh-CN/docs/Web/API/Server-sent_events)
+- [RFC 6455——WebSocket 协议](https://tools.ietf.org/html/rfc6455)
+- [WebSocket API 规范](https://websockets.spec.whatwg.org/)
+- [服务器发送事件](/zh-CN/docs/Web/API/Server-sent_events)

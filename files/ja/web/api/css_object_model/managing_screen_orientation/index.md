@@ -9,7 +9,7 @@ l10n:
 
 画面の向きとは、ブラウザーの[ビューポート](/ja/docs/Glossary/Viewport)がランドスケープモード（つまり、ビューポートの幅がその高さよりも大きい）か、そうでなければポートレートモード（ビューポートの高さがその幅よりも大きい）であるかを参照するものです。
 
-CSS は [`orientation`](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#orientation) というメディア特性を提供し、画面の向きに応じてレイアウトを調整できるようにしています。
+CSS は [`orientation`](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation) というメディア特性を提供し、画面の向きに応じてレイアウトを調整できるようにしています。
 
 [画面方向 API](/ja/docs/Web/API/Screen_Orientation_API) は、画面の内側へ作業するためのプログラム的な JavaScript API を提供します。これには、ビューポートを特定の方向に固定する機能が含まれます。
 
@@ -39,8 +39,9 @@ CSS は [`orientation`](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#orien
 ```css
 /* 始めに、共通のスタイルを定義しましょう */
 
-html, body {
-  width : 100%;
+html,
+body {
+  width: 100%;
   height: 100%;
 }
 
@@ -52,17 +53,17 @@ body {
 }
 
 p {
-  font   : 1em sans-serif;
-  margin : 0;
-  padding: .5em;
+  font: 1em sans-serif;
+  margin: 0;
+  padding: 0.5em;
 }
 
 ul {
   list-style: none;
 
-  font   : 1em monospace;
-  margin : 0;
-  padding: .5em;
+  font: 1em monospace;
+  margin: 0;
+  padding: 0.5em;
 
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -72,7 +73,7 @@ ul {
 
 li {
   display: inline-block;
-  margin : 0;
+  margin: 0;
   padding: 0.5em;
   background: white;
 }
@@ -103,7 +104,7 @@ li {
   }
 
   li + li {
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 }
 ```
@@ -133,7 +134,8 @@ li {
   </tbody>
 </table>
 
-> **メモ:** orientation メディアクエリーは、実際は端末の向きではなくブラウザーウィンドウ (または iframe) の向きに応じて適用されます。
+> [!NOTE]
+> orientation メディアクエリーは、実際は端末の向きではなくブラウザーウィンドウ (または iframe) の向きに応じて適用されます。
 
 ## 画面の向きを固定する
 
@@ -158,12 +160,13 @@ screen.addEventListener("orientationchange", () => {
 {{domxref("ScreenOrientation.lock()", "screen.orientation.lock()")}} は、適用するロック方式を定義する文字列として、`any`、`natural`、`portrait-primary`、`portrait-secondary`、`landscape-primary`、`landscape-secondary`、`portrait`、`landscape` のいずれかを受け入れます。
 
 ```js
-{{domxref("ScreenOrientation.lock()", "screen.orientation.lock()")}} ;
+screen.orientation.lock();
 ```
 
 ロックに成功した後に解決される[プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)を返します。
 
-> **メモ:** 画面のロックはウェブアプリケーションに依存します。アプリケーション A が `landscape` に固定し、アプリケーション B が `portrait` に固定した場合は、アプリケーション A から B に、または B から A に切り替えても {{domxref("Window.orientationchange_event", "orientationchange")}} イベントは発生しません。これは、双方のアプリケーションが自身の向きを維持しているためです。
+> [!NOTE]
+> 画面のロックはウェブアプリケーションに依存します。アプリケーション A が `landscape` に固定し、アプリケーション B が `portrait` に固定した場合は、アプリケーション A から B に、または B から A に切り替えても {{domxref("Window.orientationchange_event", "orientationchange")}} イベントは発生しません。これは、双方のアプリケーションが自身の向きを維持しているためです。
 >
 > ただし、ロックの要求を満たすために向きを変更しなければならない場合は、向きをロックすることでで {{domxref("Window.orientationchange_event", "orientationchange")}} イベントが発生する可能性があります。
 
@@ -172,4 +175,4 @@ screen.addEventListener("orientationchange", () => {
 - {{domxref("Screen.orientation", "screen.orientation")}}
 - {{domxref("ScreenOrientation")}}
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} イベント
-- [orientation メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#orientation)
+- [orientation メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation)

@@ -1,48 +1,43 @@
 ---
-title: 'HTMLMediaElement: abort event'
+title: HTMLMediaElement：abort 事件
 slug: Web/API/HTMLMediaElement/abort_event
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef}}
 
-资源没有被完全加载时就会触发 **`abort`** 事件，但错误不会触发该事件。
+**`abort`** 事件会在资源没有被完全加载时触发，但错误不会触发该事件。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onabort", "onabort")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+此事件无法被取消也不会冒泡。
+
+## 语法
+
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 的方法中使用此事件名，或者设置事件处理器属性。
+
+```js
+addEventListener("abort", (event) => {});
+
+onabort = (event) => {};
+```
+
+## 事件类型
+
+通用 {{domxref("Event")}}。
 
 ## 示例
 
 ```js
-const video = document.querySelector('video');
-const videoSrc = 'https://path/to/video.webm';
+const video = document.querySelector("video");
+const videoSrc = "https://example.org/path/to/video.webm";
 
-video.addEventListener('abort', () => {
-  console.log(`Abort loading: ${videoSrc}`);
+video.addEventListener("abort", () => {
+  console.log(`加载中止：${videoSrc}`);
 });
 
-const source = document.createElement('source');
-source.setAttribute('src', videoSrc);
-source.setAttribute('type', 'video/webm');
+const source = document.createElement("source");
+source.setAttribute("src", videoSrc);
+source.setAttribute("type", "video/webm");
 
 video.appendChild(source);
 ```
@@ -55,7 +50,7 @@ video.appendChild(source);
 
 {{Compat}}
 
-## 参阅
+## 参见
 
 - {{domxref("HTMLAudioElement")}}
 - {{domxref("HTMLVideoElement")}}

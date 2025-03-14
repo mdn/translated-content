@@ -1,6 +1,6 @@
 ---
 title: 使用 CSS 计数器
-slug: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
+slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
 ---
 
 {{CSSRef}}
@@ -51,14 +51,14 @@ h3::before {
 
 ```css
 h3::before {
-  counter-increment: section;                 /* Increment the value of section counter by 1 */
-  content: "Section " counter(section) ": ";  /* Display counter value in default style (decimal) */
+  counter-increment: section; /* Increment the value of section counter by 1 */
+  content: "Section " counter(section) ": "; /* Display counter value in default style (decimal) */
 }
 ```
 
 当不需要包含父级上下文的编号，而仅需要嵌套内容的编号时，应使用 {{cssxref("counter", "counter()")}} 函数。例如，以下示例的每一个嵌套内容的计数都从 1 开始：
 
-```
+```plain
 1 One
   1 Nested one
   2 Nested two
@@ -71,7 +71,7 @@ h3::before {
 
 当需要同时包含父级上下文和嵌套内容的编号时，应使用 {{cssxref("counters", "counters()")}} 函数。例如，以下示例的每一个嵌套内容会包含父级编号：
 
-```
+```plain
 1 One
   1.1 Nested one
   1.2 Nested two
@@ -87,7 +87,7 @@ h3::before {
 {{cssxref("counters", "counters()")}} 函数也同样有两种形式：`counters(<counter-name>, <separator>)` 和 `counters(<counter-name>, <separator>, <counter-style>)`。生成的文本由在伪元素范围内所有指定名称的计数器的值组成。这些值从最外层到最内层，使用指定的字符串（`<separator>`）分隔。
 
 以上两个函数均可以使用指定的 `<counter-style>` 来渲染其值（默认值为 `decimal`）。你也可以使用
- {{cssxref("list-style-type")}} 属性其它可选的值，或[自定义样式](/zh-CN/docs/Web/CSS/CSS_Counter_Styles)。
+{{cssxref("list-style-type")}} 属性其他可选的值，或[自定义样式](/zh-CN/docs/Web/CSS/CSS_counter_styles)。
 
 [基础示例](#基础示例)和[计数器嵌套示例](#计数器嵌套示例)这两个示例分别展示了 `counter()` 和 `counters()` 的使用方法。
 
@@ -107,13 +107,14 @@ counter-reset: reversed(section);
 
 计数器的值会随着通过 {{cssxref("counter-increment")}} 属性指定的负数递减。
 
-> **备注：** 对于非反向计数器，你也仍然可以使用 {{cssxref("counter-increment")}} 属性实现递减。使用反向计数器的优点在于：其默认初始值可以自动根据元素数量生成，自动应用于有序列表的 `list-item` 计数器也可以借此反转编号。
+> [!NOTE]
+> 对于非反向计数器，你也仍然可以使用 {{cssxref("counter-increment")}} 属性实现递减。使用反向计数器的优点在于：其默认初始值可以自动根据元素数量生成，自动应用于有序列表的 `list-item` 计数器也可以借此反转编号。
 
 ### 有序列表（list item）计数器
 
 使用 {{HTMLElement("ol")}} 元素创建的有序列表，会自动应用名为 `list-item` 的计数器。
 
-和其它的计数器一样，其也是一个默认自增（+1）且初始值为 0 的计数器，对于反向计数器，则以元素数量为初始值，且默认自减（-1）。与自定义的计数器不同，`list-item` 是根据其是否为反向计数器而*自动*自增或自减的。
+和其他的计数器一样，其也是一个默认自增（+1）且初始值为 0 的计数器，对于反向计数器，则以元素数量为初始值，且默认自减（-1）。与自定义的计数器不同，`list-item` 是根据其是否为反向计数器而*自动*自增或自减的。
 
 可以通过 CSS 修改 `list-item` 计数器应用在有序列表上的默认行为。例如，你可以改变默认初始值，或使用 {{cssxref("counter-increment")}} 改变递增或递减的方式。
 
@@ -127,12 +128,12 @@ counter-reset: reversed(section);
 
 ```css
 body {
-  counter-reset: section;                      /* Set a counter named 'section', and its initial value is 0. */
+  counter-reset: section; /* Set a counter named 'section', and its initial value is 0. */
 }
 
 h3::before {
-  counter-increment: section;                  /* Increment the value of section counter by 1 */
-  content: "Section " counter(section) ": ";   /* Display the word 'Section ', the value of
+  counter-increment: section; /* Increment the value of section counter by 1 */
+  content: "Section " counter(section) ": "; /* Display the word 'Section ', the value of
                                                   section counter, and a colon before the content
                                                   of each h3 */
 }
@@ -160,12 +161,14 @@ h3::before {
 
 ```css
 body {
-  counter-reset: reversed(section);           /* Set a counter named 'section', and its initial value is 0. */
+  counter-reset: reversed(
+    section
+  ); /* Set a counter named 'section', and its initial value is 0. */
 }
 
 h3::before {
-  counter-increment: section -1;              /* Decrement the value of section counter by 1 */
-  content: "Section " counter(section) ": ";  /* Display the word 'Section ', the value of
+  counter-increment: section -1; /* Decrement the value of section counter by 1 */
+  content: "Section " counter(section) ": "; /* Display the word 'Section ', the value of
                                                  section counter, and a colon before the content
                                                  of each h3 */
 }
@@ -221,16 +224,16 @@ CSS 计数器对创建目录（多级有序列表）特别有用，因为其会�
 
 ```css
 ol {
-  counter-reset: section;                /* Creates a new instance of the
+  counter-reset: section; /* Creates a new instance of the
                                             section counter with each ol
                                             element */
   list-style-type: none;
 }
 
 li::before {
-  counter-increment: section;            /* Increments only this instance
+  counter-increment: section; /* Increments only this instance
                                             of the section counter */
-  content: counters(section, ".") " ";   /* Combines the values of all instances
+  content: counters(section, ".") " "; /* Combines the values of all instances
                                             of the section counter, separated
                                             by a period */
 }
@@ -238,7 +241,7 @@ li::before {
 
 #### HTML
 
-```html
+```html-nolint
 <ol>
   <li>item</li>          <!-- 1     -->
   <li>item               <!-- 2     -->

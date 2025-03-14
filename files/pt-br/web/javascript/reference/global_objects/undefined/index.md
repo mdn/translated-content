@@ -25,14 +25,19 @@ Nos browsers modernos (JavaScript 1.8.5 / Firefox 4+), a especificação ECMAScr
 
 Uma variável que não teve um valor atribuído é do tipo `undefined`. Um método ou sentença também retorna `undefined` se a variável que está sendo avaliada não tem um valor atribuído. Uma função retorna `undefined` se um valor não for {{jsxref("Statements/return", "retornado")}}.
 
-Uma vez que undefined não é uma {{jsxref("Reserved_Words", "palavra reservada")}}, ele pode ser usado como um [identificador](/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Variables) (nome de variável) em qualquer escopo que não seja o escopo global.
+Uma vez que undefined não é uma {{jsxref("Reserved_Words", "palavra reservada")}}, ele pode ser usado como um [identificador](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#variables) (nome de variável) em qualquer escopo que não seja o escopo global.
 
 ```js
 // escreve no console "foo string"
-(function(){ var undefined = 'foo'; console.log(undefined, typeof undefined); })();
+(function () {
+  var undefined = "foo";
+  console.log(undefined, typeof undefined);
+})();
 
 // escreve no console "foo string"
-(function(undefined){ console.log(undefined, typeof undefined); })('foo');
+(function (undefined) {
+  console.log(undefined, typeof undefined);
+})("foo");
 ```
 
 ## Exemplos
@@ -44,14 +49,14 @@ Voce pode utilizar `undefined` com os operadores de igualdade e desigualdade est
 ```js
 var x;
 if (x === undefined) {
-   // sentenças aqui são executadas
-}
-else {
-   // o código aqui não é executado
+  // sentenças aqui são executadas
+} else {
+  // o código aqui não é executado
 }
 ```
 
-> **Nota:** Observação: O operador de igualdade estrita (`===`) tem que ser utilizado aqui uma vez que `x == undefined` também checa se `x` é nulo, enquanto o operador não o faz. `null` não é equivalente à `undefined`. Veja {{jsxref("Operators/Comparison_Operators", "operadores de comparação")}} (em inglês) para maiores detalhes.
+> [!NOTE]
+> O operador de igualdade estrita (`===`) tem que ser utilizado aqui uma vez que `x == undefined` também checa se `x` é nulo, enquanto o operador não o faz. `null` não é equivalente à `undefined`. Veja {{jsxref("Operators/Comparison_Operators", "operadores de comparação")}} (em inglês) para maiores detalhes.
 
 ### `Operador Typeof` e `undefined`
 
@@ -59,8 +64,8 @@ Alternativamente, {{jsxref("Operators/typeof", "typeof")}} pode ser usado:
 
 ```js
 var x;
-if (typeof x === 'undefined') {
-   // esse código é executado
+if (typeof x === "undefined") {
+  // esse código é executado
 }
 ```
 
@@ -68,12 +73,13 @@ Uma das principais razões para usar o {{jsxref("Operators/typeof", "typeof")}} 
 
 ```js
 // x não foi atribuída anteriormente
-if (typeof x === 'undefined') { // retorna verdadeiro sem lançar erros
-   // esse código executa
+if (typeof x === "undefined") {
+  // retorna verdadeiro sem lançar erros
+  // esse código executa
 }
 
-if(x === undefined){ // lança um ReferenceError para x
-
+if (x === undefined) {
+  // lança um ReferenceError para x
 }
 ```
 
@@ -86,23 +92,19 @@ O operador {{jsxref("Operators/void", "void")}} é a terceira alternativa.
 ```js
 var x;
 if (x === void 0) {
-   // esse código executa
+  // esse código executa
 }
 
 // y não foi definido antes
 if (y === void 0) {
-   // lança uma ReferenceError (ao contrário de `typeof`)
+  // lança uma ReferenceError (ao contrário de `typeof`)
 }
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                        | Status                   | Comentários                                       |
-| -------------------------------------------------------------------- | ------------------------ | ------------------------------------------------- |
-| ECMAScript 1st Edition.                                              | Standard                 | Definição inicial. Implementado no JavaScript 1.3 |
-| {{SpecName('ES5.1', '#sec-15.1.1.3', 'undefined')}} | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-undefined', 'undefined')}} | {{Spec2('ES6')}}     |                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.undefined")}}
+{{Compat}}

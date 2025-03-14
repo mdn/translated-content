@@ -1,23 +1,46 @@
 ---
-title: '<blockquote>: 인용 블록 요소'
+title: "<blockquote>: 인용 블록 요소"
 slug: Web/HTML/Element/blockquote
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Reference
-  - Web
-  - 인용
-translation_of: Web/HTML/Element/blockquote
 ---
+
 {{HTMLSidebar}}
 
-**HTML `<blockquote>` 요소**는 안쪽의 텍스트가 긴 인용문임을 나타냅니다. 주로 들여쓰기를 한 것으로 그려집니다. (외형을 바꾸는 법은 [사용 일람](#사용_일람)을 참고하세요) 인용문의 출처 URL은 {{htmlattrxref("cite", "blockquote")}} 특성으로, 출처 텍스트는 {{htmlelement("cite")}} 요소로 제공할 수 있습니다.
+**HTML `<blockquote>` 요소**는 안쪽의 텍스트가 긴 인용문임을 나타냅니다. 주로 들여쓰기를 한 것으로 그려집니다. (외형을 바꾸는 법은 [사용 일람](#사용_일람)을 참고하세요) 인용문의 출처 URL은 [`cite`](#cite) 특성으로, 출처 텍스트는 {{htmlelement("cite")}} 요소로 제공할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/blockquote.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;blockquote&gt;", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
+```html interactive-example
+<div>
+  <blockquote cite="https://www.huxley.net/bnw/four.html">
+    <p>
+      Words can be like X-rays, if you use them properly—they’ll go through
+      anything. You read and you’re pierced.
+    </p>
+  </blockquote>
+  <p>—Aldous Huxley, <cite>Brave New World</cite></p>
+</div>
+```
+
+```css interactive-example
+div:has(> blockquote) {
+  background-color: #ededed;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+
+blockquote + p {
+  text-align: right;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -44,7 +67,7 @@ translation_of: Web/HTML/Element/blockquote
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -77,7 +100,7 @@ translation_of: Web/HTML/Element/blockquote
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : 인용문의 출처 문서나 메시지를 가리키는 URL. 인용문의 맥락 혹은 출처 정보를 가리킬 용도입니다.
 
 ## 사용 일람
@@ -92,17 +115,15 @@ translation_of: Web/HTML/Element/blockquote
 
 ```html
 <blockquote cite="https://tools.ietf.org/html/rfc1149">
-  <p>Avian carriers can provide high delay, low
-  throughput, and low altitude service.  The
-  connection topology is limited to a single
-  point-to-point path for each carrier, used with
-  standard carriers, but many carriers can be used
-  without significant interference with each other,
-  outside of early spring.  This is because of the 3D
-  ether space available to the carriers, in contrast
-  to the 1D ether used by IEEE802.3.  The carriers
-  have an intrinsic collision avoidance system, which
-  increases availability.</p>
+  <p>
+    Avian carriers can provide high delay, low throughput, and low altitude
+    service. The connection topology is limited to a single point-to-point path
+    for each carrier, used with standard carriers, but many carriers can be used
+    without significant interference with each other, outside of early spring.
+    This is because of the 3D ether space available to the carriers, in contrast
+    to the 1D ether used by IEEE802.3. The carriers have an intrinsic collision
+    avoidance system, which increases availability.
+  </p>
 </blockquote>
 ```
 
@@ -114,7 +135,7 @@ translation_of: Web/HTML/Element/blockquote
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.blockquote")}}
+{{Compat}}
 
 ## 같이 보기
 

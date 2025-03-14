@@ -1,11 +1,6 @@
 ---
 title: <rect>
 slug: Web/SVG/Element/rect
-tags:
-  - SVG
-  - SVG Element
-  - SVG Reference
-translation_of: Web/SVG/Element/rect
 ---
 
 {{SVGRef}}
@@ -19,7 +14,11 @@ L'élément `rect` est un élément de Formes basiques, utilisé pour dessiner d
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -38,10 +37,10 @@ html,body,svg { height:100% }
 
 ### Attributs Globaux
 
-- [Attributs conditionnels](/fr/SVG/Attribute#ConditionalProccessing) »
-- [Attributs centraux](/fr/SVG/Attribute#Core) »
-- [Attributs d'événements graphiques](/fr/SVG/Attribute#GraphicalEvent) »
-- [Attributs de présentation](/fr/SVG/Attribute#Presentation) »
+- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [Attributs centraux](/fr/docs/Web/SVG/Attribute#core) »
+- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#graphicalevent) »
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -58,11 +57,11 @@ html,body,svg { height:100% }
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGRectElement`](/fr/DOM/SVGRectElement) .
+Cet élément implémente l'interface [`SVGRectElement`](/fr/docs/DOM/SVGRectElement) .
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("svg.elements.rect")}}
+{{Compat}}
 
 ## Voir aussi
 

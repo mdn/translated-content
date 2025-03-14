@@ -1,17 +1,11 @@
 ---
 title: justify-content
 slug: Web/CSS/justify-content
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - flexbox
-translation_of: Web/CSS/justify-content
 ---
 
 {{CSSRef}}
 
-La propriété CSS **`justify-content`** indique la façon dont l'espace doit être réparti entre et autour des éléments selon [l'axe principal](/fr/docs/Web/CSS/CSS_Box_Alignment#Concepts_majeurs_et_terminologie) d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.
+La propriété CSS **`justify-content`** indique la façon dont l'espace doit être réparti entre et autour des éléments selon [l'axe principal](/fr/docs/Web/CSS/CSS_box_alignment#concepts_majeurs_et_terminologie) d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.
 
 L'exemple suivant illustre le fonctionnement des valeurs de cette propriété au sein d'une grille CSS.
 
@@ -23,13 +17,13 @@ L'alignement est appliqué après que les longueurs et les marges automatiques o
 
 ```css
 /* Alignement « géométrique » */
-justify-content: center;     /* Éléments groupés au centre */
-justify-content: start;      /* Éléments groupés au début */
-justify-content: end;        /* Éléments groupés à la fin */
+justify-content: center; /* Éléments groupés au centre */
+justify-content: start; /* Éléments groupés au début */
+justify-content: end; /* Éléments groupés à la fin */
 justify-content: flex-start; /* Éléments flexibles groupés au début */
-justify-content: flex-end;   /* Éléments flexibles groupés à la fin */
-justify-content: left;       /* Éléments groupés à gauche */
-justify-content: right;      /* Éléments groupés à droite */
+justify-content: flex-end; /* Éléments flexibles groupés à la fin */
+justify-content: left; /* Éléments groupés à gauche */
+justify-content: right; /* Éléments groupés à droite */
 
 /* Alignement par rapport à la ligne de base */
 /* justify-content ne prend pas de valeurs relatives à la ligne de base */
@@ -42,15 +36,15 @@ justify-content: space-between; /* Les éléments sont répartis équitablement
                                    Le bord du premier est aligné sur le
                                    début du conteneur et la fin du dernier
                                    est alignée sur la fin du conteneur */
-justify-content: space-around;  /* Les éléments sont répartis équitablement
+justify-content: space-around; /* Les éléments sont répartis équitablement
                                    À chaque extrémité, entre le bord du
                                    conteneur et le premier/dernier élément
                                    on a la moitié de l'espace appliqué entre
                                    chaque élément */
-justify-content: space-evenly;  /* Les éléments sont répartis équitablement
+justify-content: space-evenly; /* Les éléments sont répartis équitablement
                                    Tous les éléments sont séparés par le même
                                    espace */
-justify-content: stretch;       /* Les éléments sont répartis équitablement et
+justify-content: stretch; /* Les éléments sont répartis équitablement et
                                    les éléments dimensionnés avec 'auto' sont
                                    étirés afin de remplir le conteneur */
 
@@ -151,8 +145,7 @@ justify-content: unset;
 ```js hidden
 var justifyContent = document.getElementById("justifyContent");
 justifyContent.addEventListener("change", function (evt) {
-  document.getElementById("container").style.justifyContent =
-      evt.target.value;
+  document.getElementById("container").style.justifyContent = evt.target.value;
 });
 ```
 
@@ -170,7 +163,7 @@ justifyContent.addEventListener("change", function (evt) {
 
 ## Voir aussi
 
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox)_
-- Guide sur les boîtes flexibles : _[Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_éléments_dans_un_conteneur_flexible)_
-- Guide sur les grilles : _[Aligner des objets dans une grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_CSS)_
-- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)
+- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- Guide sur les boîtes flexibles : _[Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- Guide sur les grilles : _[Aligner des objets dans une grille](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/CSS_box_alignment)

@@ -34,8 +34,8 @@ Considere o exemplo abaixo:
 // Encontra combinações "quick brown" seguido de "jumps", ignorando caracteres entre eles
 // Relembra "brown" e "jumps"
 // Ignora caixa (maiúsculo e minúsculo)
-var re = /quick\s(brown).+?(jumps)/ig;
-var result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
+var re = /quick\s(brown).+?(jumps)/gi;
+var result = re.exec("The Quick Brown Fox Jumps Over The Lazy Dog");
 ```
 
 A tabela a seguir provê os resultados do script:
@@ -125,11 +125,11 @@ If your regular expression uses the "`g`" flag, you can use the `exec()` method 
 
 ```js
 var myRe = /ab*/g;
-var str = 'abbcdefabh';
+var str = "abbcdefabh";
 var myArray;
 while ((myArray = myRe.exec(str)) !== null) {
-  var msg = 'Found ' + myArray[0] + '. ';
-  msg += 'Next match starts at ' + myRe.lastIndex;
+  var msg = "Found " + myArray[0] + ". ";
+  msg += "Next match starts at " + myRe.lastIndex;
   console.log(msg);
 }
 ```
@@ -141,14 +141,14 @@ Found abb. Next match starts at 3
 Found ab. Next match starts at 9
 ```
 
-Note: Do not place the regular expression literal (or {{jsxref("RegExp")}} constructor) within the `while` condition or it will create an infinite loop if there is a match due to the {{jsxref("RegExp.lastIndex", "lastIndex")}} property being reset upon each iteration. Also be sure that the global flag is set or a loop will occur here also.
+Nota: Do not place the regular expression literal (or {{jsxref("RegExp")}} constructor) within the `while` condition or it will create an infinite loop if there is a match due to the {{jsxref("RegExp.lastIndex", "lastIndex")}} property being reset upon each iteration. Also be sure that the global flag is set or a loop will occur here also.
 
 ### Usando `exec()` com `RegExp` literais
 
 You can also use `exec()` without creating a {{jsxref("RegExp")}} object:
 
 ```js
-var matches = /(hello \S+)/.exec('This is a hello world!');
+var matches = /(hello \S+)/.exec("This is a hello world!");
 console.log(matches[1]);
 ```
 
@@ -156,18 +156,13 @@ This will log a message containing 'hello world!'.
 
 ## Especificações
 
-| Especificação                                                                                | Status                       | Comentário                                         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                     | {{Spec2('ES3')}}         | Initial definition. Implemented in JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.10.6.21', 'RegExp.exec')}}                     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-regexp.prototype.exec', 'RegExp.exec')}}         | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-regexp.prototype.exec', 'RegExp.exec')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.RegExp.exec")}}
+{{Compat}}
 
 ## Veja também
 
-- O capítulo de [Expressões Regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions) no [Guia de Javascript](/pt-BR/docs/Web/JavaScript/Guide).
+- O capítulo de [Expressões Regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions) no [Guia de Javascript](/pt-BR/docs/Web/JavaScript/Guide).
 - {{jsxref("RegExp")}}

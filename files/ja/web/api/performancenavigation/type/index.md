@@ -1,37 +1,68 @@
 ---
 title: PerformanceNavigation.type
 slug: Web/API/PerformanceNavigation/type
+l10n:
+  sourceCommit: 66c9543af6a0cf1baf89d5b0c972ee7dd08663b0
 ---
 
-{{APIRef("Navigation Timing")}}
+{{APIRef("Performance API")}}{{Deprecated_Header}}
 
-> **警告:** このインターフェイスは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
+古い **`PerformanceNavigation.type`** プロパティは読み取り専用で、このページへの移動方法を表す定数を含む `unsigned short` を返します。
 
-従来の **`PerformanceNavigation.type`** 読み取り専用プロパティは、このページへの移動方法を説明する定数を含む `unsigned short` を返します。可能な値は次のとおりです:
+> [!WARNING]
+> このインターフェイスは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
 
-| 値    | 定数名              | 意味                                                                                                                                  |
-| ----- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `0`   | `TYPE_NAVIGATE`     | リンク、ブックマーク、フォーム送信、スクリプト、またはアドレスバーに URL を入力してページにアクセスしました。                         |
-| `1`   | `TYPE_RELOAD`       | このページには、\[再読み込み] ボタンをクリックするか、{{domxref("Location.reload()")}} メソッドを介してアクセスしました。 |
-| `2`   | `TYPE_BACK_FORWARD` | このページには履歴をたどってアクセスしました。                                                                                        |
-| `255` | `TYPE_RESERVED`     | その他の方法。                                                                                                                        |
+## 値
 
-## 構文
+`unsigned short` の値です。
 
-```
-type = performanceNavigation.type;
-```
+取りうる値は次の通りです。
+
+<table class="no-markdown">
+  <thead>
+    <tr>
+      <th scope="col">値</th>
+      <th scope="col">定数名</th>
+      <th scope="col">意味</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>0</code></td>
+      <td><code>TYPE_NAVIGATE</code></td>
+      <td>
+        リンク、ブックマーク、フォーム送信、スクリプト、またはアドレスバーに URL を入力してページにアクセスしました。
+      </td>
+    </tr>
+    <tr>
+      <td><code>1</code></td>
+      <td><code>TYPE_RELOAD</code></td>
+      <td>
+        このページには、 [再読み込み] ボタンをクリックするか、{{domxref("Location.reload()")}} メソッドを介してアクセスしました。
+      </td>
+    </tr>
+    <tr>
+      <td><code>2</code></td>
+      <td><code>TYPE_BACK_FORWARD</code></td>
+      <td>このページには履歴をたどってアクセスしました。</td>
+    </tr>
+    <tr>
+      <td><code>255</code></td>
+      <td><code>TYPE_RESERVED</code></td>
+      <td>その他の方法。</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 
-| 仕様書                                                                                                                               | ステータス                               | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName('Navigation Timing', '#dom-performancenavigation-type', 'PerformanceNavigation.type')}} | {{Spec2('Navigation Timing')}} | 初期定義 |
+この機能は標準化の予定がなくなりました。 [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)で非推奨になったためです。
+代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformanceNavigation.type")}}
+{{Compat}}
 
-## あわせて参照
+## 関連情報
 
 - 所属する {{domxref("PerformanceNavigation")}} インターフェイス

@@ -1,8 +1,6 @@
 ---
 title: aspect-ratio
 slug: Web/CSS/aspect-ratio
-translation_of: Web/CSS/aspect-ratio
-browser-compat: css.properties.aspect-ratio
 ---
 
 {{CSSRef}}
@@ -50,7 +48,14 @@ Les navigateurs ont ajouté une propriété `aspect-ratio` interne qui s'appliqu
 Sur Firefox, la règle de la feuille de styles interne ressemble à cela&nbsp;:
 
 ```css
-img, input[type="image"], video, embed, iframe, marquee, object, table {
+img,
+input[type="image"],
+video,
+embed,
+iframe,
+marquee,
+object,
+table {
   aspect-ratio: attr(width) / attr(height);
 }
 ```
@@ -67,5 +72,5 @@ Vous pouvez en savoir plus sur cette fonctionnalité dans l'article [Setting Hei
 
 ## Voir aussi
 
-- [Faire la correspondance des attributs width et height du conteneur des éléments média avec aspect-ratio](/fr/docs/Web/Media/images/aspect_ratio_mapping)
+- [Faire la correspondance des attributs width et height du conteneur des éléments média avec aspect-ratio](/fr/docs/Learn/Performance/Multimedia)
 - [Designing an aspect ratio unit for CSS (en anglais)](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)

@@ -1,15 +1,6 @@
 ---
 title: Les bases des CSS
 slug: Learn/Getting_started_with_the_web/CSS_basics
-tags:
-  - Apprendre
-  - CSS
-  - Code CSS
-  - Débutant
-  - Styles
-  - Web
-translation_of: Learn/Getting_started_with_the_web/CSS_basics
-original_slug: Apprendre/Commencer_avec_le_web/Les_bases_CSS
 ---
 
 {{LearnSidebar}}
@@ -29,13 +20,13 @@ p {
 
 Faisons un essai : copiez ces trois lignes de code CSS dans un nouveau fichier dans votre éditeur de texte, puis sauvegardez le fichier sous le nom `style.css` dans votre répertoire `styles`.
 
-Pour que cela fonctionne, il faut appliquer le CSS au document HTML, sinon la mise en forme décrite dans le fichier CSS n'affectera pas l'affichage de la page HTML dans la navigateur (si vous n'avez pas suivi toutes les étapes pour arriver ici, vous pouvez lire l'article [Gérer les fichiers](/fr/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers) et [Les bases du HTML](/fr/Apprendre/Commencer_avec_le_web/Les_bases_HTML) pour savoir par où commencer).
+Pour que cela fonctionne, il faut appliquer le CSS au document HTML, sinon la mise en forme décrite dans le fichier CSS n'affectera pas l'affichage de la page HTML dans la navigateur (si vous n'avez pas suivi toutes les étapes pour arriver ici, vous pouvez lire l'article [Gérer les fichiers](/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files) et [Les bases du HTML](/fr/docs/Learn/Getting_started_with_the_web/HTML_basics) pour savoir par où commencer).
 
 1. Ouvrez votre fichier `index.html` et copiez la ligne suivante quelque part au sein de l'élément `head` (c'est-à-dire entre les balises `<head>` et `</head>`) :
 
-    ```html
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-    ```
+   ```html
+   <link href="styles/style.css" rel="stylesheet" type="text/css" />
+   ```
 
 2. Sauvegardez `index.html` puis chargez-le dans votre navigateur. Vous devriez obtenir quelque chose comme :
 
@@ -79,7 +70,9 @@ p {
 Il est aussi possible de sélectionner plusieurs types d'éléments pour appliquer à tous une même règle. Il suffit de placer plusieurs sélecteurs, séparés par des virgules. Par exemple :
 
 ```css
-p,li,h1 {
+p,
+li,
+h1 {
   color: red;
 }
 ```
@@ -96,44 +89,50 @@ Il y a différents types de sélecteurs. Dans les exemples précédents, nous n'
 | Sélecteur d'attribut                                                                  | Les éléments de la page qui possèdent l'attribut donné.                                                                                                | `img[src]` sélectionne `<img src="monimage.png">` mais pas `<img>`                                |
 | Sélecteur de pseudo-classe                                                            | Les éléments donnés mais uniquement dans un certain état (par exemple quand on passe la souris dessus).                                                | `a:hover` sélectionne `<a>` mais uniquement quand le pointeur de la souris est au-dessus du lien. |
 
-Il existe plein d'autres sélecteurs, pour tous les découvrir, vous pouvez lire notre [guide sur les sélecteurs](/fr/docs/CSS/Premiers_pas/Les_sélecteurs).
+Il existe plein d'autres sélecteurs, pour tous les découvrir, vous pouvez lire notre [guide sur les sélecteurs](/fr/docs/Learn/CSS/Building_blocks/Selectors).
 
 ## Les polices (fontes) et le texte
 
 Maintenant que nous avons vu quelques bases de CSS, ajoutons quelques règles et informations à notre fichier `style.css` pour que notre exemple soit réussi. Tout d'abord, améliorons les polices et le texte.
 
-1. Pour commencer, revenez quelques étapes en arrière et récupérez le [résultat de Google Fonts](/fr/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Font) enregistré quelque part. Ensuite, ajoutez l'élément `<link ... >` quelque part au sein de `head` dans le fichier `index.html` (c'est-à-dire quelque part entre les balises `<head>` et `</head>`). Ça devrait ressembler à :
+1. Pour commencer, revenez quelques étapes en arrière et récupérez le [résultat de Google Fonts](/fr/docs/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#font) enregistré quelque part. Ensuite, ajoutez l'élément `<link ... >` quelque part au sein de `head` dans le fichier `index.html` (c'est-à-dire quelque part entre les balises `<head>` et `</head>`). Ça devrait ressembler à :
 
-    ```html
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    ```
+   ```html
+   <link
+     href="http://fonts.googleapis.com/css?family=Open+Sans"
+     rel="stylesheet"
+     type="text/css" />
+   ```
 
 2. Ensuite, supprimez la règle existante dans votre fichier `style.css`. Cette règle était pratique pour tester mais afficher du texte en rouge n'est pas la meilleure des mises en forme.
 3. Ajoutez les lignes suivantes à leur place, en remplaçant la ligne avec `modèle` avec la ligne fournie par Google Fonts qui contient `font-family` (`font-family` représente la (ou les) police(s) qu'on veut utiliser pour le texte). Ce premier ensemble de règles définit une police de base et sa taille pour toute la page (`<html>` est l'élément parent de tous les éléments de la page, tous les éléments contenus dans la page hériteront donc de la même `font-size` et `font-family`) :
 
-    ```css
-    html {
-      font-size: 10px; /* px signifie 'pixels': la taille de base pour la police est désormais 10 pixels de haut  */
-      font-family: 'Open Sans', sans-serif; /* cela devrait être le reste du résultat obtenu à partir de Google fonts */
-    }
-    ```
+   ```css
+   html {
+     font-size: 10px; /* px signifie 'pixels': la taille de base pour la police est désormais 10 pixels de haut  */
+     font-family:
+       "Open Sans", sans-serif; /* cela devrait être le reste du résultat obtenu à partir de Google fonts */
+   }
+   ```
 
-    > **Note :** Tout ce qui est entre `/*` et `*/` dans un document CSS est un **commentaire** **de CSS.** Le navigateur l'ignorera dans le rendu du code. C'est un endroit commode pour écrire des notes à propos de ce que vous faites.
+   > [!NOTE]
+   > Tout ce qui est entre `/*` et `*/` dans un document CSS est un **commentaire** **de CSS.** Le navigateur l'ignorera dans le rendu du code. C'est un endroit commode pour écrire des notes à propos de ce que vous faites.
 
 4. Ensuite, fixons les tailles des différents textes contenus dans le corps du HTML ({{htmlelement("h1")}}, {{htmlelement("li")}}, et {{htmlelement("p")}}). Nous allons également centrer le texte du titre et donner une taille de ligne et un espacement de caractère entre les lettres pour que le contenu du corps (_body_) du document soit plus lisible :
 
-    ```css
-    h1 {
-      font-size: 60px;
-      text-align: center;
-    }
+   ```css
+   h1 {
+     font-size: 60px;
+     text-align: center;
+   }
 
-    p, li {
-      font-size: 16px;
-      line-height: 2;
-      letter-spacing: 1px;
-    }
-    ```
+   p,
+   li {
+     font-size: 16px;
+     line-height: 2;
+     letter-spacing: 1px;
+   }
+   ```
 
 Vous pouvez ajuster ces valeurs en `px` comme vous voulez pour que le style obtenu soit celui que vous souhaitez. Vous devriez obtenir quelque chose comme ça :
 
@@ -167,11 +166,11 @@ Allons-y : ajoutons un peu plus de CSS à notre page ! Continuez d'ajouter ces n
 
 ```css
 html {
-  background-color: #00539F;
+  background-color: #00539f;
 }
 ```
 
-Cette règle permet de définir la couleur utilisée en arrière-plan pour toute la page. Vous pouvez ici utiliser la valeur que vous aviez choisie [lors de la conception de votre site](/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site#Couleur_du_th%C3%A8me).
+Cette règle permet de définir la couleur utilisée en arrière-plan pour toute la page. Vous pouvez ici utiliser la valeur que vous aviez choisie [lors de la conception de votre site](/fr/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#couleur_du_thème).
 
 ### Mettre en forme le corps de page
 
@@ -179,7 +178,7 @@ Cette règle permet de définir la couleur utilisée en arrière-plan pour toute
 body {
   width: 600px;
   margin: 0 auto;
-  background-color: #FF9500;
+  background-color: #ff9500;
   padding: 0 20px 20px 20px;
   border: 5px solid black;
 }
@@ -188,7 +187,7 @@ body {
 Occupons-nous de l'élément `body`. Cet ensemble de règles contient plusieurs déclarations, étudions les, une par une :
 
 - `width: 600px;` — cette déclaration impose une largeur de 600 pixels pour le corps de la page.
-- `margin: 0 auto;` — Ici on a deux valeurs pour la propriété. Lorsqu'on utilise deux valeurs sur une propriété comme `margin` ou `padding`, la première valeur est utilisée pour le haut **et** le bas de l'élément (dans ce cas : `0`) et la seconde valeur est utilisée pour les côtés gauche **et** droit (la valeur `auto` qu'on utilise ici est une valeur spéciale qui divise l'espace horizontal disponible en parts égales entre la gauche et la droite. Il est aussi possible d'utiliser une, trois ou quatre valeurs, pour plus d'informations, voir [cet article](/fr/docs/Web/CSS/margin#Valeurs) qui explique comment cela fonctionne.
+- `margin: 0 auto;` — Ici on a deux valeurs pour la propriété. Lorsqu'on utilise deux valeurs sur une propriété comme `margin` ou `padding`, la première valeur est utilisée pour le haut **et** le bas de l'élément (dans ce cas : `0`) et la seconde valeur est utilisée pour les côtés gauche **et** droit (la valeur `auto` qu'on utilise ici est une valeur spéciale qui divise l'espace horizontal disponible en parts égales entre la gauche et la droite. Il est aussi possible d'utiliser une, trois ou quatre valeurs, pour plus d'informations, voir [cet article](/fr/docs/Web/CSS/margin#valeurs) qui explique comment cela fonctionne.
 - `background-color: #FF9500;` — comme on l'a vu auparavant, cela permet de définir la couleur utilisée en arrière-plan. Ce code couleur correspond à un rouge orangé qui sera utilisé pour le corps de la page, cela permettra d'avoir un contraste avec le bleu foncé utilisé pour l'élément `html`. N'hésitez pas à modifier cette valeur pour voir ce que ça donne, vous pouvez utiliser `white` ou une autre valeur si vous préférez.
 - `padding: 0 20px 20px 20px;` — ici on a quatre valeurs pour le _padding_ afin de créer un peu d'espace autour du contenu. On n'a donc aucun espace pour le _padding_ en haut du corps de la page, on a 20 pixels à gauche, en bas et à droite. Dans l'ordre, les valeurs correspondent au haut, à la droite, au bas et à la gauche.
 - `border: 5px solid black;` — cette déclaration permet d'utiliser une bordure pleine, large de 5 pixels pour entourer tout le corps de la page.
@@ -199,7 +198,7 @@ Occupons-nous de l'élément `body`. Cet ensemble de règles contient plusieurs 
 h1 {
   margin: 0;
   padding: 20px 0;
-  color: #00539F;
+  color: #00539f;
   text-shadow: 3px 3px 1px black;
 }
 ```
@@ -228,27 +227,17 @@ img {
 
 Dernière chose : on va centrer l'image pour que ce soit plus joli. On pourrait utiliser `margin: 0 auto`, comme on l'a fait avant, mais on a besoin d'autre chose. L'élément `body` est un **élément de bloc**, cela signifie qu'il prend de l'espace et qu'on peut lui appliquer des marges et d'autres valeur pour l'espacement. En revanche, les images sont des éléments **_inline_** (ce qu'on pourrait traduire par « en ligne »), ce qui signifie qu'on ne peut pas leur appliquer ces valeurs d'espacement. Pour pouvoir appliquer des marges sur l'image comme pour un bloc, on utilise `display: block;` pour que l'image se comporte comme un élément de bloc.
 
-> **Note :** C'est tout à fait normal si vous ne comprenez pas complètement `display: block;` et les différences entre bloc et inline. Ça viendra plus tard, une fois que vous aurez plus utilisé CSS. Les différentes valeurs qu'on peut utiliser pour `display` sont expliquées sur [la page de référence de la propriété `display`](/fr/docs/Web/CSS/display).
+> [!NOTE]
+> C'est tout à fait normal si vous ne comprenez pas complètement `display: block;` et les différences entre bloc et inline. Ça viendra plus tard, une fois que vous aurez plus utilisé CSS. Les différentes valeurs qu'on peut utiliser pour `display` sont expliquées sur [la page de référence de la propriété `display`](/fr/docs/Web/CSS/display).
 
 ## Conclusion
 
-Si vous avez suivi les différentes étapes de cet article, vous devriez obtenir une page qui ressemble à celle-ci (vous pouvez aussi voir [notre version finale ici](http://mdn.github.io/beginner-html-site-styled/)) :
+Si vous avez suivi les différentes étapes de cet article, vous devriez obtenir une page qui ressemble à celle-ci (vous pouvez aussi voir [notre version finale ici](https://mdn.github.io/beginner-html-site-styled/)) :
 
 ![a mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip.](website-screenshot-final.png)
 
 Si vous êtes bloqué·e quelque part, vous pouvez toujours comparer votre travail avec [le code final de cet exemple disponible sur GitHub](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css).
 
-Dans cet article, nous n'avons fait qu'effleurer les bases de CSS. Pour continuer et en apprendre plus, vous pouvez vous rendre sur la page [Apprendre CSS](/fr/Apprendre/CSS).
+Dans cet article, nous n'avons fait qu'effleurer les bases de CSS. Pour continuer et en apprendre plus, vous pouvez vous rendre sur la page [Apprendre CSS](/fr/docs/Learn/CSS).
 
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Les_bases_HTML", "Apprendre/Commencer_avec_le_web/Les_bases_JavaScript","Apprendre/Commencer_avec_le_web")}}
-
-## Dans ce module
-
-- [Installer les logiciels de base](/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base)
-- [Quel aspect pour votre site Web&nbsp;?](/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site)
-- [Gérer les fichiers](/fr/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers)
-- [Bases du HTML](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_HTML)
-- [Bases des CSS](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_CSS)
-- [Bases du JavaScript](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_JavaScript)
-- [Publier votre site Web](/fr/Apprendre/Commencer_avec_le_web/Publier_votre_site_web)
-- [Comment fonctionne le Web](/fr/Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web)

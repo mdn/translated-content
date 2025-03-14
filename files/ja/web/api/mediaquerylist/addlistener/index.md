@@ -1,0 +1,65 @@
+---
+title: "MediaQueryList: addListener() メソッド"
+short-title: addListener()
+slug: Web/API/MediaQueryList/addListener
+l10n:
+  sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
+---
+
+{{APIRef("CSSOM")}}{{Deprecated_Header}}
+
+**`addListener()`** は {{DOMxRef("MediaQueryList")}} インターフェイスの非推奨のメソッドで、メディアクエリー状態の変化に応答して独自のコールバック関数を実行するリスナーを `MediaQueryListener` に追加します。
+
+古いブラウザーでは、 `MediaQueryList` はまだ {{DOMxRef("EventTarget")}} を継承していなかったため、このメソッドは {{DOMxRef("EventTarget.addEventListener()")}} の別名として提供されました。対応する必要があるブラウザーで利用できる場合は、 `addListener()` の代わりに `addEventListener()` を使用してください。
+
+## 構文
+
+```js-nolint
+addListener(func)
+```
+
+### 引数
+
+- `func`
+  - : メディアクエリーの状態が変化したときに実行したいコールバック関数を表す関数または関数への参照。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
+
+## 例
+
+```js
+const paragraph = document.querySelector("p");
+const mediaQueryList = window.matchMedia("(max-width: 600px)");
+
+function screenTest(e) {
+  if (e.matches) {
+    /* the viewport is 600 pixels wide or less */
+    paragraph.textContent = "This is a narrow screen — 600px wide or less.";
+    document.body.style.backgroundColor = "pink";
+  } else {
+    /* the viewport is more than 600 pixels wide */
+    paragraph.textContent = "This is a wide screen — more than 600px wide.";
+    document.body.style.backgroundColor = "aquamarine";
+  }
+}
+
+mediaQueryList.addListener(screenTest);
+```
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [プログラムによるメディアクエリーの評価](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- {{DOMxRef("window.matchMedia()")}}
+- {{DOMxRef("MediaQueryList")}}
+- {{DOMxRef("MediaQueryListEvent")}}

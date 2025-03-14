@@ -1,11 +1,6 @@
 ---
 title: math
 slug: Web/MathML/Element/math
-tags:
-  - MathML
-  - MathML:Element
-  - Référence MathML
-translation_of: Web/MathML/Element/math
 ---
 
 {{MathMLRef}}
@@ -17,15 +12,15 @@ L'élément racine de MathML est `<math>`. Tout objet représenté en MathML doi
 En plus des attributs qui suivent, l'élément `<math>` accepte tous les attributs de l'élément {{ MathMLElement("mstyle") }}.
 
 - class, id, style
-  - : Afin d'être utilisés avec les [feuilles de style](/fr/docs/CSS).
+  - : Afin d'être utilisés avec les [feuilles de style](/fr/docs/Web/CSS).
 - dir
   - : Le sens global de lecture des formules. Les valeurs possibles sont `ltr` (gauche à droite) ou `rtl` (droite à gauche).
 - href
   - : Un hyperlien pointant vers un URI donné.
 - mathbackground
-  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/CSS/valeur_de_couleur#Mots-cl.C3.A9s).
+  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
 - mathcolor
-  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/CSS/valeur_de_couleur#Mots-cl.C3.A9s).
+  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
 - display
 
   - : Cet attribut à valeur donnée définit la façon dont le balisage MathML doit être rendu. Il peut avoir l'une des valeurs suivantes :
@@ -48,34 +43,32 @@ En plus des attributs qui suivent, l'élément `<math>` accepte tous les attribu
 ### Notation HTML5
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>MathML en HTML5</title>
   </head>
   <body>
-
-  <math>
-    <mrow>
+    <math>
       <mrow>
+        <mrow>
+          <msup>
+            <mi>a</mi>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <msup>
+            <mi>b</mi>
+            <mn>2</mn>
+          </msup>
+        </mrow>
+        <mo>=</mo>
         <msup>
-          <mi>a</mi>
-          <mn>2</mn>
-        </msup>
-        <mo>+</mo>
-        <msup>
-          <mi>b</mi>
+          <mi>c</mi>
           <mn>2</mn>
         </msup>
       </mrow>
-      <mo>=</mo>
-      <msup>
-        <mi>c</mi>
-        <mn>2</mn>
-      </msup>
-    </mrow>
-  </math>
-
+    </math>
   </body>
 </html>
 ```
@@ -116,7 +109,7 @@ En plus des attributs qui suivent, l'élément `<math>` accepte tous les attribu
 </html>
 ```
 
-**Note** : Les documents XHTML avec du MathML doivent être servis en tant que `application/xhtml+xml`. Ceci est facilement réalisable en ajoutant l'extension `.xhtml` aux fichiers locaux. Pour les serveurs Apache, il est possible de [configurer le fichier `.htaccess`](http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype) afin que les extensions correspondent au type MIME correct. Étant donné qu'ici le MathML est utilisé au sein d'un document XML, il faut s'assurer que celui-ci est bien formé.
+**Note** : Les documents XHTML avec du MathML doivent être servis en tant que `application/xhtml+xml`. Ceci est facilement réalisable en ajoutant l'extension `.xhtml` aux fichiers locaux. Pour les serveurs Apache, il est possible de [configurer le fichier `.htaccess`](https://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype) afin que les extensions correspondent au type MIME correct. Étant donné qu'ici le MathML est utilisé au sein d'un document XML, il faut s'assurer que celui-ci est bien formé.
 
 ## Spécifications
 

@@ -1,20 +1,29 @@
 ---
 title: 구조 분해 할당
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
-tags:
-  - Destructuring
-  - ECMAScript 2015
-  - JavaScript
-  - Operator
-  - Reference
-  - 구조 분해
-translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 **구조 분해 할당** 구문은 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 JavaScript 표현식입니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-destructuringassignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Destructuring assignment")}}
+
+```js interactive-example
+let a, b, rest;
+[a, b] = [10, 20];
+
+console.log(a);
+// Expected output: 10
+
+console.log(b);
+// Expected output: 20
+
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+
+console.log(rest);
+// Expected output: Array [30, 40, 50]
+```
 
 ## 구문
 
@@ -33,9 +42,8 @@ console.log(rest); // [30, 40, 50]
 console.log(a); // 10
 console.log(b); // 20
 
-
 // Stage 4(finished) proposal
-({a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40});
+({ a, b, ...rest } = { a: 10, b: 20, c: 30, d: 40 });
 console.log(a); // 10
 console.log(b); // 20
 console.log(rest); // {c: 30, d: 40}
@@ -92,7 +100,7 @@ console.log(b); // 2
 ```js
 var a, b;
 
-[a=5, b=7] = [1];
+[a = 5, b = 7] = [1];
 console.log(a); // 1
 console.log(b); // 7
 ```
@@ -146,7 +154,7 @@ console.log(b); // 3
 반환 값을 모두 무시할 수도 있습니다.
 
 ```js
-[,,] = f();
+[, ,] = f();
 ```
 
 ### 변수에 배열의 나머지를 할당하기
@@ -161,7 +169,7 @@ console.log(b); // [2, 3]
 
 나머지 요소의 오른쪽 뒤에 쉼표가 있으면 {{jsxref("SyntaxError")}}가 발생합니다.
 
-```js example-bad
+```js-nolint example-bad
 var [a, ...b,] = [1, 2, 3];
 // SyntaxError: rest element may not have a trailing comma
 ```
@@ -182,7 +190,9 @@ function parseProtocol(url) {
   return protocol;
 }
 
-console.log(parseProtocol('https://developer.mozilla.org/en-US/Web/JavaScript')); // "https"
+console.log(
+  parseProtocol("https://developer.mozilla.org/en-US/Web/JavaScript"),
+); // "https"
 ```
 
 ## 객체 구조 분해
@@ -190,8 +200,8 @@ console.log(parseProtocol('https://developer.mozilla.org/en-US/Web/JavaScript'))
 ### 기본 할당
 
 ```js
-var o = {p: 42, q: true};
-var {p, q} = o;
+var o = { p: 42, q: true };
+var { p, q } = o;
 
 console.log(p); // 42
 console.log(q); // true
@@ -204,7 +214,7 @@ console.log(q); // true
 ```js
 var a, b;
 
-({a, b} = {a: 1, b: 2});
+({ a, b } = { a: 1, b: 2 });
 ```
 
 <div class="note"><p><strong>참고</strong>: 할당 문을 둘러싼 <code>( .. )</code>는 선언 없이 객체 리터럴(object literal) 비구조화 할당을 사용할 때 필요한 구문입니다.</p><p><code>{a, b} = {a:1, b:2}</code>는 유효한 독립 구문이 아닙니다. 좌변의 <code>{a, b}</code>이 객체 리터럴이 아닌 블록으로 간주되기 때문입니다.</p><p>하지만, <code>({a, b} = {a:1, b:2})</code>는 유효한데, <code>var {a, b} = {a:1, b:2}</code>와 같습니다.</p><p><code>( .. )</code> 표현식 앞에는 세미콜론이 있어야 합니다. 그렇지 않을 경우 이전 줄과 연결되어 함수를 실행하는데 이용될 수 있습니다.</p></div>
@@ -214,8 +224,8 @@ var a, b;
 객체로부터 속성을 해체하여 객체의 원래 속성명과는 다른 이름의 변수에 할당할 수 있습니다.
 
 ```js
-var o = {p: 42, q: true};
-var {p: foo, q: bar} = o;
+var o = { p: 42, q: true };
+var { p: foo, q: bar } = o;
 
 console.log(foo); // 42
 console.log(bar); // true
@@ -226,7 +236,7 @@ console.log(bar); // true
 객체로부터 해체된 값이 `undefined`인 경우, 변수에 기본값을 할당할 수 있습니다.
 
 ```js
-var {a = 10, b = 5} = {a: 3};
+var { a = 10, b = 5 } = { a: 3 };
 
 console.log(a); // 3
 console.log(b); // 5
@@ -237,7 +247,7 @@ console.log(b); // 5
 새로운 변수명 할당과 기본값 할당을 한번에 할 수 있습니다.
 
 ```js
-var {a: aa = 10, b: bb = 5} = {a: 3};
+var { a: aa = 10, b: bb = 5 } = { a: 3 };
 
 console.log(aa); // 3
 console.log(bb); // 5
@@ -250,7 +260,7 @@ console.log(bb); // 5
 ```js
 function drawES5Chart(options) {
   options = options === undefined ? {} : options;
-  var size = options.size === undefined ? 'big' : options.size;
+  var size = options.size === undefined ? "big" : options.size;
   var cords = options.cords === undefined ? { x: 0, y: 0 } : options.cords;
   var radius = options.radius === undefined ? 25 : options.radius;
   console.log(size, cords, radius);
@@ -259,21 +269,25 @@ function drawES5Chart(options) {
 
 drawES5Chart({
   cords: { x: 18, y: 30 },
-  radius: 30
+  radius: 30,
 });
 ```
 
 #### ES2015 버전
 
 ```js
-function drawES2015Chart({size = 'big', cords = { x: 0, y: 0 }, radius = 25} = {}) {
+function drawES2015Chart({
+  size = "big",
+  cords = { x: 0, y: 0 },
+  radius = 25,
+} = {}) {
   console.log(size, cords, radius);
   // 차트 그리기 수행
 }
 
 drawES2015Chart({
   cords: { x: 18, y: 30 },
-  radius: 30
+  radius: 30,
 });
 ```
 
@@ -283,23 +297,26 @@ drawES2015Chart({
 
 ```js
 var metadata = {
-    title: "Scratchpad",
-    translations: [
-       {
-        locale: "de",
-        localization_tags: [ ],
-        last_edit: "2014-04-14T08:43:37",
-        url: "/de/docs/Tools/Scratchpad",
-        title: "JavaScript-Umgebung"
-       }
-    ],
-    url: "/en-US/docs/Tools/Scratchpad"
+  title: "Scratchpad",
+  translations: [
+    {
+      locale: "de",
+      localization_tags: [],
+      last_edit: "2014-04-14T08:43:37",
+      url: "/de/docs/Tools/Scratchpad",
+      title: "JavaScript-Umgebung",
+    },
+  ],
+  url: "/ko/docs/Tools/Scratchpad",
 };
 
-var { title: englishTitle, translations: [{ title: localeTitle }] } = metadata;
+var {
+  title: englishTitle,
+  translations: [{ title: localeTitle }],
+} = metadata;
 
 console.log(englishTitle); // "Scratchpad"
-console.log(localeTitle);  // "JavaScript-Umgebung"
+console.log(localeTitle); // "JavaScript-Umgebung"
 ```
 
 ### for of 반복문과 구조 분해
@@ -311,22 +328,25 @@ var people = [
     family: {
       mother: "Jane Smith",
       father: "Harry Smith",
-      sister: "Samantha Smith"
+      sister: "Samantha Smith",
     },
-    age: 35
+    age: 35,
   },
   {
     name: "Tom Jones",
     family: {
       mother: "Norah Jones",
       father: "Richard Jones",
-      brother: "Howard Jones"
+      brother: "Howard Jones",
     },
-    age: 25
-  }
+    age: 25,
+  },
 ];
 
-for (var {name: n, family: { father: f } } of people) {
+for (var {
+  name: n,
+  family: { father: f },
+} of people) {
   console.log("Name: " + n + ", Father: " + f);
 }
 
@@ -337,11 +357,11 @@ for (var {name: n, family: { father: f } } of people) {
 ### 함수 매개변수로 전달된 객체에서 필드 해체하기
 
 ```js
-function userId({id}) {
+function userId({ id }) {
   return id;
 }
 
-function whois({displayName: displayName, fullName: {firstName: name}}){
+function whois({ displayName: displayName, fullName: { firstName: name } }) {
   console.log(displayName + " is " + name);
 }
 
@@ -349,9 +369,9 @@ var user = {
   id: 42,
   displayName: "jdoe",
   fullName: {
-      firstName: "John",
-      lastName: "Doe"
-  }
+    firstName: "John",
+    lastName: "Doe",
+  },
 };
 
 console.log("userId: " + userId(user)); // "userId: 42"
@@ -362,7 +382,7 @@ whois(user); // "jdoe is John"
 
 ### 계산된 속성 이름과 구조 분해
 
-계산된 속성 이름(computed property name)은, [객체 리터럴](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names)과 비슷하게 구조 분해에도 사용될 수 있습니다.
+계산된 속성 이름(computed property name)은, [객체 리터럴](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names)과 비슷하게 구조 분해에도 사용될 수 있습니다.
 
 ```js
 let key = "z";
@@ -373,10 +393,10 @@ console.log(foo); // "bar"
 
 ### 객체 구조 분해에서 Rest
 
-[Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) 제안(stage 3)에서는 구조 분해에 [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) 구문을 추가하고 있습니다. rest 속성은 구조 분해 패턴으로 걸러지지 않은 열거형 속성의 키를 가진 나머지 항목들을 모읍니다.
+[Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) 제안(stage 3)에서는 구조 분해에 [rest](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters) 구문을 추가하고 있습니다. rest 속성은 구조 분해 패턴으로 걸러지지 않은 열거형 속성의 키를 가진 나머지 항목들을 모읍니다.
 
 ```js
-let {a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40}
+let { a, b, ...rest } = { a: 10, b: 20, c: 30, d: 40 };
 a; // 10
 b; // 20
 rest; // { c: 30, d: 40 }
@@ -387,8 +407,8 @@ rest; // { c: 30, d: 40 }
 구조 분해는 JavaScript {{glossary("Identifier", "식별자")}} 이름으로 적합하지 않은 속성명이 제공된 경우에도 이용할 수 있습니다. 이 때는 대체할 유효한 식별자명을 제공해야 합니다.
 
 ```js
-const foo = { 'fizz-buzz': true };
-const { 'fizz-buzz': fizzBuzz } = foo;
+const foo = { "fizz-buzz": true };
+const { "fizz-buzz": fizzBuzz } = foo;
 
 console.log(fizzBuzz); // "true"
 ```
@@ -403,5 +423,5 @@ console.log(fizzBuzz); // "true"
 
 ## 같이 보기
 
-- [할당 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
+- [할당 연산자](/ko/docs/Web/JavaScript/Reference/Operators#Assignment_operators)
 - ["ES6 in Depth: Destructuring" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/)

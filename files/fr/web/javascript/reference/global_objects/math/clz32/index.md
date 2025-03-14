@@ -1,27 +1,32 @@
 ---
 title: Math.clz32()
 slug: Web/JavaScript/Reference/Global_Objects/Math/clz32
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/clz32
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/clz32
 ---
 
 {{JSRef}}
 
 La fonction **`Math.clz32()`** renvoie le nombre de zéros de tête dans la représentation binaire sur 32 bits d'un nombre.
 
-{{EmbedInteractiveExample("pages/js/math-clz32.html")}}
+{{InteractiveExample("JavaScript Demo: Math.clz32()")}}
+
+```js interactive-example
+// 00000000000000000000000000000001
+console.log(Math.clz32(1));
+// Expected output: 31
+
+// 00000000000000000000000000000100
+console.log(Math.clz32(4));
+// Expected output: 29
+
+// 00000000000000000000001111101000
+console.log(Math.clz32(1000));
+// Expected output: 22
+```
 
 ## Syntaxe
 
 ```js
-Math.clz32(x)
+Math.clz32(x);
 ```
 
 ### Paramètres
@@ -46,15 +51,26 @@ Cette fonction est particulièrement utile aux systèmes qui compilent du code J
 ## Exemples
 
 ```js
-Math.clz32(1)                // 31
-Math.clz32(1000)             // 22
-Math.clz32()                 // 32
+Math.clz32(1); // 31
+Math.clz32(1000); // 22
+Math.clz32(); // 32
 
-var liste = [NaN, Infinity, -Infinity, 0, -0, null, undefined, 'machin', {}, []];
-liste.every(n => Math.clz32(n) == 32); // true
+var liste = [
+  NaN,
+  Infinity,
+  -Infinity,
+  0,
+  -0,
+  null,
+  undefined,
+  "machin",
+  {},
+  [],
+];
+liste.every((n) => Math.clz32(n) == 32); // true
 
-Math.clz32(true)             // 31
-Math.clz32(3.5)              // 30
+Math.clz32(true); // 31
+Math.clz32(3.5); // 30
 ```
 
 ## Spécifications

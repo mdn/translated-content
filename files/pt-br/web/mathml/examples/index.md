@@ -1,7 +1,6 @@
 ---
 title: Exemplos
 slug: Web/MathML/Examples
-original_slug: Web/MathML/Exemplos
 ---
 
 Abaixo você irá encontrar alguns exemplos que irá ajudá-lo a entender como utilizar MathML para apresentar conceitos matemáticos complexos na Web.

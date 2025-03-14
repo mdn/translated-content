@@ -1,21 +1,31 @@
 ---
 title: decodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
-tags:
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 ---
+
 {{jsSidebar("Objects")}}
 
 **`decodeURIComponent()`** 함수는 {{jsxref("encodeURIComponent")}} 나 비슷한 방법으로 생성된 Uniform Resource Identifier(URI) 컴포넌트를 해독합니다.
 
-{{EmbedInteractiveExample("pages/js/globalprops-decodeuricomponent.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - decodeURIComponent()")}}
+
+```js interactive-example
+function containsEncodedComponents(x) {
+  // ie ?,=,&,/ etc
+  return decodeURI(x) !== decodeURIComponent(x);
+}
+
+console.log(containsEncodedComponents("%3Fx%3Dtest")); // ?x=test
+// Expected output: true
+
+console.log(containsEncodedComponents("%D1%88%D0%B5%D0%BB%D0%BB%D1%8B")); // шеллы
+// Expected output: false
+```
 
 ## 구문
 
 ```js
-    decodeURIComponent(encodedURI)
+decodeURIComponent(encodedURI);
 ```
 
 ### 매개변수

@@ -1,14 +1,9 @@
 ---
 title: Utilisation des textures en WebGL
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
-tags:
-  - Tutoriel
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
-original_slug: Web/API/WebGL_API/Tutorial/Utiliser_les_textures_avec_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 Maintenant que notre programme peut faire tourner un cube 3D, appliquons lui une texture, au lieu d'avoir des couleurs unies pour ses faces.
 
@@ -16,7 +11,8 @@ Maintenant que notre programme peut faire tourner un cube 3D, appliquons lui une
 
 La première chose à faire est d'ajouter le code pour charger les textures. Dans notre cas, nous utiliserons une texture unique, appliquée à chacune des six faces de notre cube en rotation ; mais la même technique peut être utilisée un nombre quelconque de textures.
 
-> **Note :** il est important de noter que le chargement des textures suit les [règles inter-domaines](/fr-FR/docs/Web/HTTP/CORS)&nbsp;; donc vous pouvez seulement charger des textures depuis les sites pour lesquels votre contenu a l'approbation CORS. Voir les textures inter-domaines ci-dessous pour plus de détails.
+> [!NOTE]
+> Il est important de noter que le chargement des textures suit les [règles inter-domaines](/fr/docs/Web/HTTP/CORS) donc vous pouvez seulement charger des textures depuis les sites pour lesquels votre contenu a l'approbation CORS. Voir les textures inter-domaines ci-dessous pour plus de détails.
 
 Le code qui charge la texture ressemble à ce qui suit&nbsp;:
 
@@ -41,29 +37,43 @@ function loadTexture(gl, url) {
   const border = 0;
   const srcFormat = gl.RGBA;
   const srcType = gl.UNSIGNED_BYTE;
-  const pixel = new Uint8Array([0, 0, 255, 255]);  // bleu opaque
-  gl.texImage2D(gl.TEXTURE_2D, level, internalFormat,
-                width, height, border, srcFormat, srcType,
-                pixel);
+  const pixel = new Uint8Array([0, 0, 255, 255]); // bleu opaque
+  gl.texImage2D(
+    gl.TEXTURE_2D,
+    level,
+    internalFormat,
+    width,
+    height,
+    border,
+    srcFormat,
+    srcType,
+    pixel,
+  );
 
   const image = new Image();
-  image.onload = function() {
+  image.onload = function () {
     gl.bindTexture(gl.TEXTURE_2D, texture);
-    gl.texImage2D(gl.TEXTURE_2D, level, internalFormat,
-                  srcFormat, srcType, image);
+    gl.texImage2D(
+      gl.TEXTURE_2D,
+      level,
+      internalFormat,
+      srcFormat,
+      srcType,
+      image,
+    );
 
     // WebGL1 a des spécifications différentes pour les images puissances de 2
     // par rapport aux images non puissances de 2 ; aussi vérifier si l'image est une
     // puissance de 2 sur chacune de ses dimensions.
     if (isPowerOf2(image.width) && isPowerOf2(image.height)) {
-        // Oui, c'est une puissance de 2. Générer les mips.
-        gl.generateMipmap(gl.TEXTURE_2D);
+      // Oui, c'est une puissance de 2. Générer les mips.
+      gl.generateMipmap(gl.TEXTURE_2D);
     } else {
-        // Non, ce n'est pas une puissance de 2. Désactiver les mips et définir l'habillage
-        // comme "accrocher au bord"
-        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+      // Non, ce n'est pas une puissance de 2. Désactiver les mips et définir l'habillage
+      // comme "accrocher au bord"
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
     }
   };
   image.src = url;
@@ -215,13 +225,13 @@ Du fait que nous avons changé un attribut et ajouté un uniforme, nous devons r
 const programInfo = {
   program: shaderProgram,
   attribLocations: {
-    vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
-    textureCoord: gl.getAttribLocation(shaderProgram, 'aTextureCoord'),
+    vertexPosition: gl.getAttribLocation(shaderProgram, "aVertexPosition"),
+    textureCoord: gl.getAttribLocation(shaderProgram, "aTextureCoord"),
   },
   uniformLocations: {
-    projectionMatrix: gl.getUniformLocation(shaderProgram, 'uProjectionMatrix'),
-    modelViewMatrix: gl.getUniformLocation(shaderProgram, 'uModelViewMatrix'),
-    uSampler: gl.getUniformLocation(shaderProgram, 'uSampler'),
+    projectionMatrix: gl.getUniformLocation(shaderProgram, "uProjectionMatrix"),
+    modelViewMatrix: gl.getUniformLocation(shaderProgram, "uModelViewMatrix"),
+    uSampler: gl.getUniformLocation(shaderProgram, "uSampler"),
   },
 };
 ```
@@ -241,7 +251,14 @@ Tout d'abord, le code pour spécifier le tampon de couleurs a disparu, remplacé
   const stride = 0; // combien d'octets à récupérer entre un jeu et le suivant
   const offset = 0; // à combien d'octets du début faut-il commencer
   gl.bindBuffer(gl.ARRAY_BUFFER, buffers.textureCoord);
-  gl.vertexAttribPointer(programInfo.attributeLocations.textureCoord, num, type, normalize, stride, offset);
+  gl.vertexAttribPointer(
+    programInfo.attributeLocations.textureCoord,
+    num,
+    type,
+    normalize,
+    stride,
+    offset,
+  );
   gl.enableVertexAttribArray(programInfo.attributeLocations.textureCoord);
 }
 ```
@@ -271,22 +288,25 @@ function drawScene(gl, programInfo, buffers, texture, deltaTime) {
 
 Arrivés ce point, le cube en rotation devrait être prêt à fonctionner.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample6/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample6/index.html', 670, 510) }}
 
-[Voir le code complet](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample6) | [Ouvrir cette démo dans une nouvelle page](http://mdn.github.io/webgl-examples/tutorial/sample6/)
+[Voir le code complet](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample6) | [Ouvrir cette démo dans une nouvelle page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample6/)
 
 ## Textures inter-domaines
 
-Le chargement des textures WebGL est soumis aux contrôles d'accès inter-domaines. Pour que votre contenu puisse charger une texture d'un autre domaine, une approbation CORS doit être obtenue. Voir le [Contrôle d'accès HTTP](/fr/docs/HTTP/Access_control_CORS) pour plus de détails sur CORS.
+Le chargement des textures WebGL est soumis aux contrôles d'accès inter-domaines. Pour que votre contenu puisse charger une texture d'un autre domaine, une approbation CORS doit être obtenue. Voir le [Contrôle d'accès HTTP](/fr/docs/Web/HTTP/CORS) pour plus de détails sur CORS.
 
-Voir cet [article sur hacks.mozilla.org](http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) pour une explication de l'utilisation des images approuvées CORS comme textures WebGL, avec [un exemple complet](http://people.mozilla.org/~bjacob/webgltexture-cors-js.html).
+Voir cet [article sur hacks.mozilla.org](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) pour une explication de l'utilisation des images approuvées CORS comme textures WebGL, avec [un exemple complet](https://people.mozilla.org/~bjacob/webgltexture-cors-js.html).
 
-> **Note :** le support CORS pour les texture WebGL et l'attribut `crossOrigin` pour les éléments image est implémenté dans {{Gecko("8.0")}}.
+> [!NOTE]
+> Le support CORS pour les texture WebGL et l'attribut `crossOrigin` pour les éléments image est implémenté dans Gecko 8.0.
 
 Les canevas 2D dégradés (en écriture seule) ne peuvent pas être utilisés comme des textures WebGL. Un {{HTMLElement ("canvas")}} 2D devient dégradé par exemple lorsqu'il est utilisé pour dessiner une image inter-domaine.
 
-> **Note :** le support CORS pour `drawImage` de Canvas 2D est implémenté dans {{Gecko ("9.0")}}. Cela signifie que l'utilisation d'une image inter-domaine ayant l'approbation CORS ne dégrade plus le canevas 2D, de sorte que le canevas 2D reste utilisable comme source d'une texture WebGL.
+> [!NOTE]
+> Le support CORS pour `drawImage` de Canvas 2D est implémenté dans Gecko 9.0. Cela signifie que l'utilisation d'une image inter-domaine ayant l'approbation CORS ne dégrade plus le canevas 2D, de sorte que le canevas 2D reste utilisable comme source d'une texture WebGL.
 
-> **Note :** le support CORS pour les vidéos inter-domaines et l'attribut `crossorigin` pour les éléments {{HTMLElement ("video")}} est implémenté dans {{Gecko ("12.0")}}.
+> [!NOTE]
+> Le support CORS pour les vidéos inter-domaines et l'attribut `crossorigin` pour les éléments {{HTMLElement ("video")}} est implémenté dans Gecko 12.0.
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

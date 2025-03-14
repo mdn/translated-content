@@ -1,66 +1,76 @@
 ---
 title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
 
 {{JSRef}}
 
 Метод **`has()`** возвращает логическое значение, показывающее, существует ли элемент с указанным значением в объекте `Set` или нет.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.has()")}}
 
-## Syntax
+```js interactive-example
+const set1 = new Set([1, 2, 3, 4, 5]);
+
+console.log(set1.has(1));
+// Expected output: true
+
+console.log(set1.has(5));
+// Expected output: true
+
+console.log(set1.has(6));
+// Expected output: false
+```
+
+## Синтаксис
 
 ```
 mySet.has(value);
 ```
 
-### Parameters
+### Параметры
 
 - value
-  - : Required. The value to test for presence in the `Set` object.
+  - : Обязательный. Значение, которое необходимо проверить на наличие в коллекции `Set`.
 
-### Return value
+### Возвращаемое значение
 
 - Boolean
 
-  - : Returns `true` if an element with the specified value exists in the `Set` object; otherwise `false`.
+  - : Возвращает `true`, если в коллекции `Set` существует элемент с указанным значением; в противном случае `false`.
 
-    > **Примечание:** Technically speaking, `has()` uses the [`sameValueZero`](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality) algorithm to determine whether the given element is found.
+    > [!NOTE]
+    > С технической точки зрения, `has()` использует алгоритм [`sameValueZero`](/ru/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) для определения наличия указанного элемента.
 
-## Examples
+## Примеры
 
-### Using the `has` method
+### Использование метода `has`
 
 ```js
 var mySet = new Set();
-mySet.add('foo');
+mySet.add("foo");
 
-mySet.has('foo');  // returns true
-mySet.has('bar');  // returns false
+mySet.has("foo"); // возвращает true
+mySet.has("bar"); // возвращает false
 
 var set1 = new Set();
-var obj1 = {'key1': 1};
+var obj1 = { key1: 1 };
 set1.add(obj1);
 
-set1.has(obj1);        // returns true
-set1.has({'key1': 1}); // returns false because they are different object references
-set1.add({'key1': 1}); // now set1 contains 2 entries
+set1.has(obj1); // возвращает true
+set1.has({ key1: 1 }); // возвращает false, поскольку это разные ссылки на объекты
+set1.add({ key1: 1 }); // сейчас set1 содержит 2 объекта
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                | Status                       | Comment             |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-set.prototype.has', 'Set.prototype.has')}} | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-set.prototype.has', 'Set.prototype.has')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("Set")}}
 - {{jsxref("Set.prototype.add()")}}

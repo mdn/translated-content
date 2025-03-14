@@ -14,11 +14,11 @@ slug: Web/API/HTMLCanvasElement
 _从其父项{{domxref("HTMLElement")}}继承属性。_
 
 - {{domxref("HTMLCanvasElement.height")}}
-  - : 是一个正整数，反映了{{HTMLElement("canvas")}} 元素的{{htmlattrxref("height", "canvas")}} HTML 属性，以 CSS 像素表示。如果未指定属性，或者将其设置为无效值（例如负数），则使用默认值 150。
+  - : 是一个正整数，反映了{{HTMLElement("canvas")}} 元素的[`height`](/zh-CN/docs/Web/HTML/Element/canvas#height) HTML 属性，以 CSS 像素表示。如果未指定属性，或者将其设置为无效值（例如负数），则使用默认值 150。
 - {{domxref("HTMLCanvasElement.width")}}
-  - : 是一个正整数，反映了{{HTMLElement("canvas")}} 元素的{{htmlattrxref("width", "canvas")}} HTML 属性，以 CSS 像素表示。如果未指定属性，或者将其设置为无效值（例如负数），则使用默认值 300。
+  - : 是一个正整数，反映了{{HTMLElement("canvas")}} 元素的[`width`](/zh-CN/docs/Web/HTML/Element/canvas#width) HTML 属性，以 CSS 像素表示。如果未指定属性，或者将其设置为无效值（例如负数），则使用默认值 300。
 - {{domxref("HTMLCanvasElement.mozOpaque")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : 是反映 {{HTMLElement("canvas")}}元素的{{htmlattrxref("moz-opaque", "canvas")}} 属性的{{jsxref("Boolean")}}。它让画布知道半透明性是否会成为一个因素。如果画布知道没有透明感，则可以优化绘画性能。仅基于 Mozilla 的浏览器支持此功能，可以使用标准化的{{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} 代替。
+  - : 是反映 {{HTMLElement("canvas")}}元素的[`moz-opaque`](/zh-CN/docs/Web/HTML/Element/canvas#moz-opaque) 属性的{{jsxref("Boolean")}}。它让画布知道半透明性是否会成为一个因素。如果画布知道没有透明感，则可以优化绘画性能。仅基于 Mozilla 的浏览器支持此功能，可以使用标准化的{{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} 代替。
 - {{domxref("HTMLCanvasElement.mozPrintCallback")}}{{non-standard_inline}}
   - : 是最初为空的函数。Web 内容可以将其设置为 JavaScript 函数，该函数将在打印页面时重新绘制画布时调用。调用时，回调将传递一个实现了[MozCanvasPrintState](https://searchfox.org/mozilla-central/search?q=interface%20MozCanvasPrintState&path=HTMLCanvasElement.webidl)接口的“printState”对象。回调可以从 printState 对象获取要绘制的上下文，然后必须在完成时在其上调用 done() 。 `mozPrintCallback` 的目的是在所使用打印机的分辨率下获得较高分辨率的画布渲染。 [请参阅此博客文章](https://blog.mozilla.org/labs/2012/09/a-new-way-to-control-printing-output/)。
 
@@ -29,7 +29,7 @@ _从其父项{{domxref("HTMLElement")}}继承方法。_
 - {{domxref("HTMLCanvasElement.captureStream()")}} {{experimental_inline}}
   - : 返回{{domxref("CanvasCaptureMediaStream")}} ，它是对画布表面的实时视频捕获。
 - {{domxref("HTMLCanvasElement.getContext()")}}
-  - : 返回画布上的绘图上下文；如果不支持上下文 ID，则返回 null。绘图上下文可让您在画布上绘图。调用 getContext 传入`"2d"` 可以返回一个{{domxref("CanvasRenderingContext2D")}}对象，也可以传入`"webgl"`（或`"experimental-webgl"`）返回一个{{domxref("WebGLRenderingContext")}} 对象。此上下文仅在实现[WebGL](/zh-CN/docs/Web/WebGL)的浏览器上可用。
+  - : 返回画布上的绘图上下文；如果不支持上下文 ID，则返回 null。绘图上下文可让你在画布上绘图。调用 getContext 传入`"2d"` 可以返回一个{{domxref("CanvasRenderingContext2D")}}对象，也可以传入`"webgl"`（或`"experimental-webgl"`）返回一个{{domxref("WebGLRenderingContext")}} 对象。此上下文仅在实现[WebGL](/zh-CN/docs/Web/API/WebGL_API)的浏览器上可用。
 - {{domxref("HTMLCanvasElement.toDataURL()")}}
   - : 返回一个数据 URL，该 URL 包含由类型参数指定的格式的图像（默认为`png`）。返回的图像分辨率为 96dpi。
 - {{domxref("HTMLCanvasElement.toBlob()")}}

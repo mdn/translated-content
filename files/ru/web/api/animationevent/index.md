@@ -1,7 +1,6 @@
 ---
 title: AnimationEvent
 slug: Web/API/AnimationEvent
-translation_of: Web/API/AnimationEvent
 ---
 
 {{SeeCompatTable}}{{APIRef("Web Animations API")}}
@@ -33,17 +32,15 @@ _Также наследуют методы от родителя {{domxref("Eve
 - {{domxref("AnimationEvent.initAnimationEvent()")}} {{non-standard_inline}}{{deprecated_inline}}
   - : Инициализирует AnimationEvent созданную используя резко суждённый метод {{domxref("Document.createEvent()", "Document.createEvent(\"AnimationEvent\")")}}.
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                                 | Статус                                   | Комментарий              |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------ |
-| {{ SpecName('CSS3 Animations', '#AnimationEvent-interface', 'AnimationEvent') }} | {{ Spec2('CSS3 Animations') }} | Определяет инициализацию |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Использование CSS-анимации](/ru/docs/CSS/Using_CSS_animations)
+- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - Анимация связанных CSS-свойств и по правилам: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.

@@ -1,71 +1,40 @@
 ---
-title: '<cite>: 引用元要素'
+title: "<cite>: 引用元要素"
 slug: Web/HTML/Element/cite
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
 
-**HTML の引用元要素** (**`<cite>`**) は、引用された創作物の参照を表し、作品のタイトルを含む必要があります。参照は、引用メタデータに関する利用場面に合わせた慣習に応じて省略形が用いられることがあります。
+**`<cite>`** は [HTML](/ja/docs/Web/HTML) の要素で、引用された創作物のタイトルをマークアップするために使用します。この参照は、引用メタデータに関する利用場面に合わせた慣習に応じて省略形が用いられることがあります。
 
-{{EmbedInteractiveExample("pages/tabbed/cite.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;cite&gt;", "tabbed-standard")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
-      </th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
-          >フローコンテンツ</a
-        >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
-          >記述コンテンツ</a
-        >, 知覚可能コンテンツ
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
-          >記述コンテンツ</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
-          >記述コンテンツ</a
-        >を受け入れるすべての要素
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>
-        {{domxref("HTMLElement")}}。Gecko 1.9.2 (Firefox 4)
-        以前では、この要素には {{domxref("HTMLSpanElement")}}
-        インターフェイスが実装されています。
-      </td>
-    </tr>
-  </tbody>
-</table>
+```html interactive-example
+<figure>
+  <blockquote>
+    <p>
+      It was a bright cold day in April, and the clocks were striking thirteen.
+    </p>
+  </blockquote>
+  <figcaption>
+    First sentence in
+    <cite
+      ><a href="http://www.george-orwell.org/1984/0.html"
+        >Nineteen Eighty-Four</a
+      ></cite
+    >
+    by George Orwell (Part 1, Chapter 1).
+  </figcaption>
+</figure>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+cite {
+}
+```
 
 ## 属性
 
@@ -103,21 +72,81 @@ slug: Web/HTML/Element/cite
 - 記述された、または口頭の声明
 - その他
 
-注目すべきこととして、 W3C の仕様書では、 `<cite>` 要素に含められる創作物の参照には、作者名を含めてよいとしています。しかし、 WHATWG における `<cite>` の仕様では逆に、どのような場合でも人名を含めてはならないとしています。
+{{HTMLElement("blockquote")}} 要素や {{HTMLElement("q")}} 要素によって引用された素材の情報源の出典を記述するには、これらの要素の [`cite`](/ja/docs/Web/HTML/Element/blockquote#cite) 属性を使用してください。
 
-{{HTMLElement("blockquote")}} 要素や {{HTMLElement("q")}} 要素によって引用された素材の情報源の出典を記述するには、これらの要素の {{htmlattrxref("cite", "blockquote")}} 属性を使用してください。
-
-通常、ブラウザーは既定で `<cite>` に斜体を適用します。これを防ぐには、要素で既定のイタリックスタイルが使用されるのを避けるには、 `<cite>` 要素に CSS の {{cssxref("font-style")}} プロパティを適用してください。
+通常、ブラウザーは既定で `<cite>` にイタリック体を適用します。これを防ぐには、CSS の {{cssxref("font-style")}} プロパティを `<cite>` 要素に適用してください。
 
 ## 例
 
 ```html
-より詳しい情報については <cite>[ISO-0000]</cite> に記載されています。
+<p>より詳しい情報については <cite>[ISO-0000]</cite> に記載されています。</p>
 ```
 
-以下のように出力されます。
+### 結果
 
-{{EmbedLiveSample("Example", 640, 60)}}
+{{EmbedLiveSample("Example", 640, 80)}}
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories"
+          >コンテンツカテゴリー</a
+        >
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >, 知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>すべて</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>
+        {{domxref("HTMLElement")}}。Gecko 1.9.2 (Firefox 4)
+        以前では、この要素には {{domxref("HTMLSpanElement")}}
+        インターフェイスが実装されています。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 
@@ -125,9 +154,9 @@ slug: Web/HTML/Element/cite
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.cite")}}
+{{Compat}}
 
 ## 関連情報
 
 - {{HTMLElement("blockquote")}} 要素は長い引用に使用します。
-- {{HTMLElement("q")}} 要素は行内の引用に使用します。
+- {{HTMLElement("q")}} 要素と [`cite`](/ja/docs/Web/HTML/Element/q#cite) 属性はインラインの引用に使用します。

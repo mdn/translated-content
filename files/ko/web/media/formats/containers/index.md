@@ -1,9 +1,9 @@
 ---
 title: 미디어 컨테이너 포맷 (파일 타입)
 slug: Web/Media/Formats/Containers
-translation_of: Web/Media/Formats/Containers
-original_slug: Web/Media/Formats/컨테이너
 ---
+
+{{QuickLinksWithSubpages("/ko/docs/Web/Media")}}
 
 오디오와 비디오 파일 포맷은 두 파트에서 정의할 수 있습니다.(오디오 비디오가 한 파일에 있으면 물론 3 파트지요): 오디오/비디오 코덱와 미디어 컨테이너 포맷(도는 파일 타입)입니다. 이 가이드 문서는 웹에서 널리 쓰이는 컨테이너 포맷에 대해 알아보고 기본적인 스펙와 장단점 그리고 적절한 사용법을 설명하고 있습니다.
 
@@ -19,15 +19,26 @@ original_slug: Web/Media/Formats/컨테이너
 
 특정 컨테이너 포맷에 대해 더 알아보려면 아래 목록에서 찾아 클릭하세요. 컨테이너 사용법과 지원하는 코덱, 지원하는 브라우저 등을 알 수 있습니다.
 
-- [3GP](#3gp)
-- [ADTS](#adts)
-- [FLAC](#flac)
-- [MPEG / MPEG-2](#mpeg)
-- [MPEG-4 (MP4)](#mp4)
-- [Ogg](#ogg)
-- [QuickTime](#quicktime)
-- [WAVE](#wave)
-- [WebM](#webm)
+- [일반적인 컨테이너 포맷](#일반적인-컨테이너-포맷)
+- [컨테이너 포맷(파일 타입) 인덱스](#컨테이너-포맷파일-타입-인덱스)
+  - [3GP](#3gp)
+  - [ADTS](#adts)
+  - [FLAC](#flac)
+  - [MPEG/MPEG-2](#mpegmpeg-2)
+  - [MPEG-4 (MP4)](#mpeg-4-mp4)
+  - [Ogg](#ogg)
+  - [QuickTime](#quicktime)
+  - [WAVE (WAV)](#wave-wav)
+  - [WebM](#webm)
+- [알맞은 컨테이너 선택하기](#알맞은-컨테이너-선택하기)
+  - [가이드라인](#가이드라인)
+  - [컨테이너 선택 가이드](#컨테이너-선택-가이드)
+    - [오디오 전용 파일](#오디오-전용-파일)
+    - [비디오 파일](#비디오-파일)
+- [다양한 컨테이너간 호환성 극대화](#다양한-컨테이너간-호환성-극대화)
+- [명세서](#명세서)
+- [브라우저 호환성](#브라우저-호환성)
+- [더 보기](#더-보기)
 
 ### 3GP
 
@@ -41,7 +52,7 @@ original_slug: Web/Media/Formats/컨테이너
 | `audio/3gpp2` | `video/3gpp2` |
 | `audio/3gp2`  | `video/3gp2`  |
 
-위는 3GP 컨테이너의 기본 MIME 타입입니다; 사용하는 코덱에 따라 다른 타입을 사용할 수도 있습니다; 또한 MIME 타입 문자열에 [`codecs` 파라미터를 추가하여](/ko/docs/Web/Media/Formats/codecs_parameter#ISO-BMFF) 어떠한 오디오/비디오 코덱을 사용했는지 표시할 수 있으며 profile, level, 코덱 설정 값도 추가하여 전달할 수 있습니다.
+위는 3GP 컨테이너의 기본 MIME 타입입니다; 사용하는 코덱에 따라 다른 타입을 사용할 수도 있습니다; 또한 MIME 타입 문자열에 [`codecs` 파라미터를 추가하여](/ko/docs/Web/Media/Formats/codecs_parameter#iso-bmff) 어떠한 오디오/비디오 코덱을 사용했는지 표시할 수 있으며 profile, level, 코덱 설정 값도 추가하여 전달할 수 있습니다.
 
 <table class="standard-table">
   <caption>
@@ -300,7 +311,7 @@ original_slug: Web/Media/Formats/컨테이너
 
 ### MPEG/MPEG-2
 
-**[MPEG-1](https://ko.wikipedia.org/wiki/MPEG-1)과** **[MPEG-2](https://ko.wikipedia.org/wiki/MPEG-2)**은 근본적으로 동일합니다. the Moving Picture Experts Group (MPEG)에서 만들었으며 DVD 등의 물리적 매체에서 널리 쓰이고 있습니다.
+[**MPEG-1**](https://ko.wikipedia.org/wiki/MPEG-1)과 [**MPEG-2**](https://ko.wikipedia.org/wiki/MPEG-2)은 근본적으로 동일합니다. the Moving Picture Experts Group (MPEG)에서 만들었으며 DVD 등의 물리적 매체에서 널리 쓰이고 있습니다.
 
 인터넷에서 아마 가장 많이 사용되는 MPEG 파일 포맷은 [Layer_III/MP3](https://ko.wikipedia.org/wiki/MPEG-1) 일 겁니다; MP3 파일은 전 세계의 디지털 오디오 장치에서 널리 재생되고 있습니다. 반대로 MPEG-1, MPEG-2는 웹에서 별로 사용하고 있지 않죠.
 
@@ -395,13 +406,13 @@ MPEG-1과 MPEG-2 간의 차이점은 컨테이너 포맷이 아니라 미디어 
 
 최초의 MPEG-4 Part 1 포맷은 1999년 발표되었습니다; Part 14에서 정의된 버전 2 포맷은 2003년 추가되었습니다. MP4 파일 포맷은 [Apple](https://www.apple.com/)이 개발한 [QuickTime file format](https://en.wikipedia.org/wiki/QuickTime_File_Format)에서 파생된 [ISO base media file format](https://en.wikipedia.org/wiki/ISO_base_media_file_format)에서 다시 파생되었습니다.
 
-MPEG-4 미디어 타입을 표기할 때 (`audio/mp4` or `video/mp4`), MIME 타입에 [`codecs` 파라미터를 추가하여](/ko/docs/Web/Media/Formats/codecs_parameter#ISO-BMFF) 사용하는 오디오/비디오 코덱을 명시할 수 있으며 추가적으로 profile, level, 코덱 설정 등을 명기할 수 있습니다.
+MPEG-4 미디어 타입을 표기할 때 (`audio/mp4` or `video/mp4`), MIME 타입에 [`codecs` 파라미터를 추가하여](/ko/docs/Web/Media/Formats/codecs_parameter#iso-bmff) 사용하는 오디오/비디오 코덱을 명시할 수 있으며 추가적으로 profile, level, 코덱 설정 등을 명기할 수 있습니다.
 
 | Audio       | Video       |
 | ----------- | ----------- |
 | `audio/mp4` | `video/mp4` |
 
-위는 MPEG-4 미디어 컨테이너의 기본 타입입니다; 어떤 코덱을 쓰느냐에 따라 MIME 타입도 달라질 수 있습니다. 또한 MIME 타입에 [`codecs` 파라미터를 추가하여](/ko/docs/Web/Media/Formats/codecs_parameter#ISO-BMFF) 사용하는 오디오/비디오 코덱을 명시할 수 있으며 추가적으로 profile, level, 코덱 설정 등을 명기할 수 있습니다.
+위는 MPEG-4 미디어 컨테이너의 기본 타입입니다; 어떤 코덱을 쓰느냐에 따라 MIME 타입도 달라질 수 있습니다. 또한 MIME 타입에 [`codecs` 파라미터를 추가하여](/ko/docs/Web/Media/Formats/codecs_parameter#iso-bmff) 사용하는 오디오/비디오 코덱을 명시할 수 있으며 추가적으로 profile, level, 코덱 설정 등을 명기할 수 있습니다.
 
 <table class="standard-table">
   <caption>
@@ -530,7 +541,7 @@ MPEG-4 미디어 타입을 표기할 때 (`audio/mp4` or `video/mp4`), MIME 타�
 | ----------- | ----------- |
 | `audio/ogg` | `video/ogg` |
 
-MIME 타입에 [`codecs` 파라미터를 추가하여](/ko/docs/Web/Media/Formats/codecs_parameter#Ogg) 사용하는 오디오/비디오 코덱을 명시할 수 있으며 트랙의 미디어 포맷에 대한 추가 정보도 기입할 수 있습니다.
+MIME 타입에 [`codecs` 파라미터를 추가하여](/ko/docs/Web/Media/Formats/codecs_parameter#ogg) 사용하는 오디오/비디오 코덱을 명시할 수 있으며 트랙의 미디어 포맷에 대한 추가 정보도 기입할 수 있습니다.
 
 <table class="standard-table">
   <caption>
@@ -636,7 +647,7 @@ QuickTime은 처음부터 지금까지 근본적으로 애플 디바이스에서
 
 `video/quicktime` 은 QuickTime 미디어 컨테이너의 기본 MIME 타입입니다. QuickTime (Mac OS의 미디어 프레임워크)이 다양한 컨테이너와 코덱을 지원하므로 다른 많은 MIME 타입 역시 지원합니다.
 
-MIME 타입에 [`codecs` 파라미터를 추가하여](/ko/docs/Web/Media/Formats/codecs_parameter#ISO-BMFF) 사용하는 오디오/비디오 코덱을 명시할 수 있으며 추가적으로 profile, level, 코덱 설정 등을 명기할 수 있습니다.
+MIME 타입에 [`codecs` 파라미터를 추가하여](/ko/docs/Web/Media/Formats/codecs_parameter#iso-bmff) 사용하는 오디오/비디오 코덱을 명시할 수 있으며 추가적으로 profile, level, 코덱 설정 등을 명기할 수 있습니다.
 
 <table class="standard-table">
   <caption>
@@ -1029,19 +1040,45 @@ WebM은 2010년 처음 소개되었습니다..
 
 호환성을 높이려면 한가지 버전 이상의 미디어 파일 제공을 고려해 볼 수 있습니다. {{HTMLElement("audio")}}, {{HTMLElement("video")}} 엘리먼트 아래에 {{HTMLElement("source")}} 엘리먼트를 추가하여 구현할 수 있죠. 예를 들어 Ogg, WebM 비디오를 우선하되 호환성을 위해 MP4 포맷을 추가할 수 있습니다. 레트로하게 QuickTime이나 AVI 호환을 추가하는 것도 좋은 방법입니다.
 
-구현하려면 우선 {{htmlattrxref("src", "video")}} 어트리뷰트 없이 `<video>` (또는 `<audio>`) 엘리먼트를 생성합니다. 그 후 `<video>` 엘리먼트 아래에 {{HTMLElement("source")}} 엘리먼트를 제공하려는 미디어 포맷별로 추가합니다. 이 방식은 대역폭 상황에 따라 소스를 선택하는 방식으로도 사용할 수 있지만 여기서는 포맷 옵션을 제공하기로 하죠.
+구현하려면 우선 [`src`](/ko/docs/Web/HTML/Element/video#src) 어트리뷰트 없이 `<video>` (또는 `<audio>`) 엘리먼트를 생성합니다. 그 후 `<video>` 엘리먼트 아래에 {{HTMLElement("source")}} 엘리먼트를 제공하려는 미디어 포맷별로 추가합니다. 이 방식은 대역폭 상황에 따라 소스를 선택하는 방식으로도 사용할 수 있지만 여기서는 포맷 옵션을 제공하기로 하죠.
 
 아래 예제에서는 두 포맷 타입의 비디오를 제공합니다: WebM and MP4.
 
-{{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;source&gt;", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
+```html interactive-example
+<video controls width="250" height="200" muted>
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+```
 
-첫번째 비디오는 WebM 포맷입니다({{htmlattrxref("type", "video")}} 어트리뷰트가 `video/webm`). {{Glossary("user agent")}}는 재생이 불가능 한 경우 `type` 이 `video/mp4` 인 다음 옵션으로넘어갑니다. 둘 다 재생이 불가능 할 경우 "This browser does not support the HTML5 video element." 문구가 표시됩니다.
+첫번째 비디오는 WebM 포맷입니다([`type`](/ko/docs/Web/HTML/Element/video#type) 어트리뷰트가 `video/webm`). {{Glossary("user agent")}}는 재생이 불가능 한 경우 `type` 이 `video/mp4` 인 다음 옵션으로넘어갑니다. 둘 다 재생이 불가능 할 경우 "This browser does not support the HTML5 video element." 문구가 표시됩니다.
 
 ## 명세서
 
-{{Specifications}}
+| 명세서                                                                                                                                                       | 설명                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| [ETSI 3GPP](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=1441)                                            | 컨테이너 포멧을 정의                                                                                            |
+| [ISO/IEC 14496-3](https://www.iso.org/standard/53943.html) (MPEG-4 Part 3 오디오)                                                                            | ADTS를 포함한 MP4 오디오를 정의                                                                                 |
+| [FLAC Format](https://xiph.org/flac/format.html)                                                                                                             | FLAC 포멧 명세서                                                                                                |
+| [ISO/IEC 11172-1](https://www.iso.org/standard/19180.html) (MPEG-1 Part 1 시스템)                                                                            | MPEG-1 컨테이너 포멧을 정의                                                                                     |
+| [ISO/IEC 13818-1](https://www.iso.org/standard/74427.html) (MPEG-2 Part 1 시스템)                                                                            | MPEG-2 컨테이너 포멧을 정의                                                                                     |
+| [ISO/IEC 14496-14](https://www.iso.org/standard/75929.html) (MPEG-4 Part 14: MP4 파일 포멧)                                                                  | MPEG-4 (MP4) version 2 컨테이너 포멧을 정의                                                                     |
+| [ISO/IEC 14496-1](https://www.iso.org/standard/55688.html) (MPEG-4 Part 1 시스템)                                                                            | original MPEG-4 (MP4) 컨테이너 포멧을 정의                                                                      |
+| {{RFC(3533)}}                                                                                                                                                | Ogg 컨테이너 포멧                                                                                               |
+| {{RFC(5334)}}                                                                                                                                                | Ogg 미디어 형식과 파일 확장자                                                                                   |
+| [QuickTime File Format Specification](https://developer.apple.com/library/archive/documentation/QuickTime/QTFF/QTFFPreface/qtffPreface.html)                 | QuickTime movie (MOV) 포멧                                                                                      |
+| [Multimedia Programming Interface and Data Specifications 1.0](https://web.archive.org/web/20090417165828/http://www.kk.iij4u.or.jp/~kondo/wave/mpidata.txt) | 공식 WAVE 사양에 가장 가까운 것                                                                                 |
+| [Resource Interchange File Format](https://docs.microsoft.com/windows/win32/xaudio2/resource-interchange-file-format--riff-) (WAV가 씀)                      | RIFF 포멧을 정의. WAVE 파일은 RIFF의 형식                                                                       |
+| [WebM Container Guidelines](https://www.webmproject.org/docs/container/)                                                                                     | WebM을 위한 Matroska 적용 안내서                                                                                |
+| [Matroska Specifications](https://matroska.org/index.html)                                                                                                   | WebM을 기반으로 하는 Matroska 컨테이너 포멧에 대한 명세서                                                       |
+| [WebM Byte Stream Format](https://w3c.github.io/media-source/webm-byte-stream-format.html)                                                                   | [미디어 소스 확장자](/ko/docs/Web/API/Media_Source_Extensions_API)와 함께 사용하기 위한 WebM 바이트 스트림 포멧 |
 
 ## 브라우저 호환성
 
@@ -1049,36 +1086,33 @@ WebM은 2010년 처음 소개되었습니다..
   <thead>
     <tr>
       <th rowspan="2" scope="row" style="vertical-align: bottom">
-        컨테이너 포맷 이름
+        컨테이너 형식 이름
       </th>
       <th
         colspan="3"
-        rowspan="1"
         scope="col"
         style="text-align: center; border-right: 2px solid #d4dde4"
       >
         오디오
       </th>
-      <th colspan="3" rowspan="1" scope="col" style="text-align: center">
-        비디오
-      </th>
+      <th colspan="3" scope="col" style="text-align: center">비디오</th>
     </tr>
     <tr>
-      <th scope="col" style="vertical-align: bottom">MIME type</th>
-      <th scope="col" style="vertical-align: bottom">Extension(s)</th>
+      <th scope="col" style="vertical-align: bottom">MIME 형식</th>
+      <th scope="col" style="vertical-align: bottom">확장자</th>
       <th
         scope="col"
         style="vertical-align: bottom; border-right: 2px solid #d4dde4"
       >
-        Browser support
+        브라우저 지원
       </th>
-      <th scope="col" style="vertical-align: bottom">MIME type</th>
-      <th scope="col" style="vertical-align: bottom">Extension(s)</th>
+      <th scope="col" style="vertical-align: bottom">MIME 형식</th>
+      <th scope="col" style="vertical-align: bottom">확장자</th>
       <th
         scope="col"
         style="vertical-align: bottom; border-right: 2px solid #d4dde4"
       >
-        Browser support
+        브라우저 지원
       </th>
     </tr>
   </thead>
@@ -1179,7 +1213,7 @@ WebM은 2010년 처음 소개되었습니다..
       <td style="vertical-align: top; border-right: 2px solid #d4dde4">—</td>
       <td style="vertical-align: top"><code>video/quicktime</code></td>
       <td style="vertical-align: top"><code>.mov</code></td>
-      <td style="vertical-align: top"></td>
+      <td style="vertical-align: top">Safari</td>
     </tr>
     <tr>
       <th scope="row" style="vertical-align: top">WAV (Waveform Audiofile)</th>

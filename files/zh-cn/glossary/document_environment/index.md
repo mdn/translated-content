@@ -1,12 +1,14 @@
 ---
-title: document environment
-slug: Glossary/document_environment
+title: 文档环境
+slug: Glossary/Document_environment
+l10n:
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-当 JavaScript 所处的全局环境为 window 或 iframe 时，这种环境被称为*全局文档环境*。全局的文档环境处于所有环境的顶层，即没有更外层的环境。
+{{GlossarySidebar}}
 
-## 学习更多
+JavaScript 的全局环境是**文档环境**，如果它是一个窗口或一个 iframe。全局环境是指没有外部环境的环境。
 
-### 技术参考
+## 参见
 
-- [document environment](https://html.spec.whatwg.org/multipage/webappapis.html#document-environment) 的 HTML 规范
+- [文档环境](https://html.spec.whatwg.org/multipage/webappapis.html#document-environment)的 HTML 规范

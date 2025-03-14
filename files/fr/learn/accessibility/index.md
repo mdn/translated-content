@@ -1,27 +1,18 @@
 ---
 title: Accessibilité
 slug: Learn/Accessibility
-tags:
-  - ARIA
-  - Accessibilité
-  - Apprendre
-  - CSS
-  - Débutant
-  - HTML
-  - JavaScript
-translation_of: Learn/Accessibility
-original_slug: Apprendre/a11y
 ---
 
 {{LearnSidebar}}
 
-Apprendre le HTML, le CSS et le JavaScript est utile si vous voulez devenir développeur web, mais vos connaissances devront aller au delà de la simple utilisation des technologies — vous devrez les utiliser de manière responsable, de la bonne manière, de façon à maximiser l'audience de vos sites web et ne priver personne de leur usage. Pour y parvenir, vous devrez respecter les bonnes pratiques (lesquelles sont démontrées à travers les sujets du [HTML](/fr/Apprendre/HTML), du [CSS](/fr/Apprendre/CSS) et du [JavaScript](/fr/Apprendre/JavaScript)), effectuer [des tests sur les différents navigateurs](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing) et prendre l'accessibilité en considération dès le départ. Dans ce module, nous allons traiter de cette dernière en détail.
+Apprendre le HTML, le CSS et le JavaScript est utile si vous voulez devenir développeur web, mais vos connaissances devront aller au delà de la simple utilisation des technologies — vous devrez les utiliser de manière responsable, de la bonne manière, de façon à maximiser l'audience de vos sites web et ne priver personne de leur usage. Pour y parvenir, vous devrez respecter les bonnes pratiques (lesquelles sont démontrées à travers les sujets du [HTML](/fr/docs/Learn/HTML), du [CSS](/fr/docs/Learn/CSS) et du [JavaScript](/fr/docs/Learn/JavaScript)), effectuer [des tests sur les différents navigateurs](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing) et prendre l'accessibilité en considération dès le départ. Dans ce module, nous allons traiter de cette dernière en détail.
 
 ## Prérequis
 
-Pour tirer le meilleur parti de ce module, il serait judicieux de parcourir les sections relatives à [HTML](/fr/Apprendre/HTML), [CSS](/fr/Apprendre/CSS) et [JavaScript](/fr/Apprendre/JavaScript) en premier (au moins les deux premiers modules de chacune de ces sections) ou, peut-être encore mieux, de travailler les parties pertinentes du module d'accessibilité au fur et à mesure que vous travaillez les sujets technologiques connexes.
+Pour tirer le meilleur parti de ce module, il serait judicieux de parcourir les sections relatives à [HTML](/fr/docs/Learn/HTML), [CSS](/fr/docs/Learn/CSS) et [JavaScript](/fr/docs/Learn/JavaScript) en premier (au moins les deux premiers modules de chacune de ces sections) ou, peut-être encore mieux, de travailler les parties pertinentes du module d'accessibilité au fur et à mesure que vous travaillez les sujets technologiques connexes.
 
-> **Note :** Si vous travaillez sur un ordinateur, une tablette ou un autre appareil sur lequel vous n'avez pas la possibilité de créer vos propres fichiers, vous pouvez essayer la plupart des exemples de code dans un programme de code en ligne tel que [JSBin](https://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
+> [!NOTE]
+> Si vous travaillez sur un ordinateur, une tablette ou un autre appareil sur lequel vous n'avez pas la possibilité de créer vos propres fichiers, vous pouvez essayer la plupart des exemples de code dans un programme de code en ligne tel que [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guides
 

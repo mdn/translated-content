@@ -2,17 +2,19 @@
 title: Abstraction
 slug: Glossary/Abstraction
 l10n:
-  sourceCommit: 69df5ac5749504dee7b92d825e913c1a9d0956f1
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-L'_abstraction_ dans le domaine de la [programmation informatique](/fr/docs/Glossary/Computer_programming) permet de réduire la complexité et d'obtenir une conception et une implémentation plus efficaces dans les systèmes logiciels complexes. Elle dissimule les complexités techniques des systèmes derrière des [API](/fr/docs/Glossary/API) plus simples à manipuler.
+{{GlossarySidebar}}
+
+L'**abstraction** dans le domaine de la [programmation informatique](/fr/docs/Glossary/Computer_Programming) permet de réduire la complexité et d'obtenir une conception et une implémentation plus efficaces dans les systèmes logiciels complexes. Elle dissimule les complexités techniques des systèmes derrière des [API](/fr/docs/Glossary/API) plus simples à manipuler.
 
 ## Avantages de l'abstraction de données
 
-- Aider l'utilisatrice ou l'utilisateur à éviter d'écrire du code de bas niveau.
+- Éviter d'écrire du code de bas niveau.
 - Éviter la duplication de code et augmenter la réutilisabilité.
-- Pouvoir modifier l'implémentation interne de la classe indépendamment sans affecter l'utilisatrice ou l'utilisateur.
-- Aider à augmenter la sécurité d'une application ou d'un programme car seuls les détails importants sont fournis à l'utilisatrice ou l'utilisateur.
+- Pouvoir modifier l'implémentation interne d'une classe objet, sans affecter les personnes ou codes qui l'utilisent.
+- Améliorer la sécurité d'une application ou d'un programme en exposant uniquement les détails importants pour l'usage.
 
 ## Exemple
 
@@ -39,4 +41,4 @@ obj.display();
 
 ## Voir aussi
 
-- [Abstraction](https://fr.wikipedia.org/wiki/Abstraction_(informatique)) sur Wikipédia.
+- [Abstraction](<https://fr.wikipedia.org/wiki/Abstraction_(informatique)>) sur Wikipédia

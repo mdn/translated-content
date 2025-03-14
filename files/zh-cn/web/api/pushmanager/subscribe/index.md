@@ -11,8 +11,8 @@ slug: Web/API/PushManager/subscribe
 
 ## 语法
 
-```
-​PushManager.subscribe(options).then(function(pushSubscription) { ... } );
+```js-nolint
+subscribe(options)
 ```
 
 ### 参数
@@ -30,26 +30,28 @@ slug: Web/API/PushManager/subscribe
 
 ## 示例
 
-```
-this.onpush = function(event) {
+```js
+this.onpush = function (event) {
   console.log(event.data);
   // 这里可以向 IndexDB 写入数据，向任何打开的窗口发送数据以及显示通知等
-}
+};
 
-navigator.serviceWorker.register('serviceworker.js').then(
-  function(serviceWorkerRegistration) {
+navigator.serviceWorker
+  .register("serviceworker.js")
+  .then(function (serviceWorkerRegistration) {
     var options = {
       userVisibleOnly: true,
-      applicationServerKey: applicationServerKey
+      applicationServerKey: applicationServerKey,
     };
     serviceWorkerRegistration.pushManager.subscribe(options).then(
-      function(pushSubscription) {
+      function (pushSubscription) {
         console.log(pushSubscription.endpoint);
         // 应用服务器所需的推送订阅详情现在可用，并且可以通过如 XMLHttpRequest 的方式发送
-      }, function(error) {
+      },
+      function (error) {
         // 开发过程中将错误打印到控制台通常很有帮助。同样，生产环境下将错误信息发送至应用服务器后台也一样。
         console.log(error);
-      }
+      },
     );
   });
 ```
@@ -62,6 +64,6 @@ navigator.serviceWorker.register('serviceworker.js').then(
 
 {{Compat}}
 
-## 另见
+## 参见
 
-- [使用 Push API](/zh-CN/docs/Web/API/Push_API/Using_the_Push_API)
+- [使用 Push API](/zh-CN/docs/Web/API/Push_API)

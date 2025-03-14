@@ -1,5 +1,5 @@
 ---
-title: 'RangeError: invalid array length'
+title: "RangeError: invalid array length"
 slug: Web/JavaScript/Reference/Errors/Invalid_array_length
 ---
 
@@ -35,25 +35,25 @@ Ao contrário, você poderia querer travar o comprimento antes de ajustar a prop
 ### Casos inválidos
 
 ```js example-bad
-new Array(Math.pow(2, 40))
-new Array(-1)
-new ArrayBuffer(Math.pow(2, 32))
-new ArrayBuffer(-1)
+new Array(Math.pow(2, 40));
+new Array(-1);
+new ArrayBuffer(Math.pow(2, 32));
+new ArrayBuffer(-1);
 
 let a = [];
-a.length = a.length - 1;         // define -1 à propriedade length
+a.length = a.length - 1; // define -1 à propriedade length
 
 let b = new Array(Math.pow(2, 32) - 1);
-b.length = b.length + 1;         // define 2^32 à propriedade length
+b.length = b.length + 1; // define 2^32 à propriedade length
 ```
 
 ### Casos válidos
 
 ```js example-good
-[ Math.pow(2, 40) ]                     // [ 1099511627776 ]
-[ -1 ]                                  // [ -1 ]
-new ArrayBuffer(Math.pow(2, 32) - 1)
-new ArrayBuffer(0)
+[Math.pow(2, 40)]; // [ 1099511627776 ]
+[-1]; // [ -1 ]
+new ArrayBuffer(Math.pow(2, 32) - 1);
+new ArrayBuffer(0);
 
 let a = [];
 a.length = Math.max(0, a.length - 1);

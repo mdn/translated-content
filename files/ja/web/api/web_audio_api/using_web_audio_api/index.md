@@ -46,7 +46,8 @@ const audioContext = new AudioContext();
 
 これを実行するとどうなるのでしょうか。 {{domxref("BaseAudioContext")}} が自動的に生成され、オンライン音声コンテキストに拡張されます。これを行うのは、ライブサウンドを再生しようとしているからです。
 
-> **メモ:** 音声データを処理したいだけ、例えば、バッファリングとストリーミングのみを行い再生するのでなければ、 {{domxref("OfflineAudioContext")}} を作成するようにしたほうが良いかもしれません。
+> [!NOTE]
+> 音声データを処理したいだけ、例えば、バッファリングとストリーミングのみを行い再生するのでなければ、 {{domxref("OfflineAudioContext")}} を作成するようにしたほうが良いかもしれません。
 
 ## 音声の読み込み
 
@@ -56,19 +57,21 @@ const audioContext = new AudioContext();
 <audio src="myCoolTrack.mp3" type="audio/mpeg"></audio>
 ```
 
-> **メモ:** 読み込もうとしている音声ファイルが別なドメインにある場合は、 `crossorigin` 属性を使用する必要があるでしょう。詳しくは[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS) を参照してください。
+> [!NOTE]
+> 読み込もうとしている音声ファイルが別なドメインにある場合は、 `crossorigin` 属性を使用する必要があるでしょう。詳しくは[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS) を参照してください。
 
 Web Audio API を使用してできるすばらしいことをすべて利用するためには、この要素で入力元をつかみ、作成したコンテキストに*送り込む*ことが必要です。幸いにもちょうどこれを行うメソッド — {{domxref("AudioContext.createMediaElementSource")}} が存在します。
 
 ```js
 // get the audio element
-const audioElement = document.querySelector('audio');
+const audioElement = document.querySelector("audio");
 
 // pass it into the audio context
 const track = audioContext.createMediaElementSource(audioElement);
 ```
 
-> **メモ:** 上記の `<audio>` 要素は DOM 内では {{domxref("HTMLMediaElement")}} 型のオブジェクトで表され、これは独自の機能のセットを持っています。これらはすべてそのままです。 Web Audio API で音声を利用できるようにするだけです。
+> [!NOTE]
+> 上記の `<audio>` 要素は DOM 内では {{domxref("HTMLMediaElement")}} 型のオブジェクトで表され、これは独自の機能のセットを持っています。これらはすべてそのままです。 Web Audio API で音声を利用できるようにするだけです。
 
 ## 音声の制御
 
@@ -82,7 +85,7 @@ JavaScript コードからプログラム的に音声を制御することは、
 
 ```html
 <button data-playing="false" role="switch" aria-checked="false">
-    <span>Play/Pause</span>
+  <span>Play/Pause</span>
 </button>
 ```
 
@@ -102,33 +105,39 @@ track.connect(audioContext.destination);
 
 ```js
 // select our play button
-const playButton = document.querySelector('button');
+const playButton = document.querySelector("button");
 
-playButton.addEventListener('click', function() {
-
+playButton.addEventListener(
+  "click",
+  function () {
     // check if context is in suspended state (autoplay policy)
-    if (audioContext.state === 'suspended') {
-        audioContext.resume();
+    if (audioContext.state === "suspended") {
+      audioContext.resume();
     }
 
     // play or pause track depending on state
-    if (this.dataset.playing === 'false') {
-        audioElement.play();
-        this.dataset.playing = 'true';
-    } else if (this.dataset.playing === 'true') {
-        audioElement.pause();
-        this.dataset.playing = 'false';
+    if (this.dataset.playing === "false") {
+      audioElement.play();
+      this.dataset.playing = "true";
+    } else if (this.dataset.playing === "true") {
+      audioElement.pause();
+      this.dataset.playing = "false";
     }
-
-}, false);
+  },
+  false,
+);
 ```
 
 また、トラックの再生が終了したらどうするかを考慮しておく必要があります。 `HTMLMediaElement` は `ended` イベントを再生終了時に一度発生させるので、これを待ち受けして関連するコードを実行します。
 
 ```js
-audioElement.addEventListener('ended', () => {
-    playButton.dataset.playing = 'false';
-}, false);
+audioElement.addEventListener(
+  "ended",
+  () => {
+    playButton.dataset.playing = "false";
+  },
+  false,
+);
 ```
 
 ## 音の加工
@@ -156,22 +165,28 @@ gain の既定値は 1 です。これは現在の音量を同じに維持しま
 ユーザーがこれを制御できるようにしましょう。 — [range 入力](/ja/docs/Web/HTML/Element/input/range)を使用します。
 
 ```html
-<input type="range" id="volume" min="0" max="2" value="1" step="0.01">
+<input type="range" id="volume" min="0" max="2" value="1" step="0.01" />
 ```
 
-> **メモ:** range 入力は、音声ノードの値を更新するのに実に手軽な入力型です。 range の値を音声ノードの引数に直接設定したり、使用したりすることができます。
+> [!NOTE]
+> range 入力は、音声ノードの値を更新するのに実に手軽な入力型です。 range の値を音声ノードの引数に直接設定したり、使用したりすることができます。
 
 それでは、ユーザーが値を変更したときに入力された値を取得して gain の値を更新するようにしましょう。
 
 ```js
-const volumeControl = document.querySelector('#volume');
+const volumeControl = document.querySelector("#volume");
 
-volumeControl.addEventListener('input', function() {
+volumeControl.addEventListener(
+  "input",
+  function () {
     gainNode.gain.value = this.value;
-}, false);
+  },
+  false,
+);
 ```
 
-> **メモ:** ノードオブジェクトの値 (例えば `GainNode.gain`) は単純な値ではなく、実際には {{domxref("AudioParam")}} 型のオブジェクト — これが引数と呼ばれています。なぜかといえば、 `GainNode.gain` の `value` プロパティを設定しなければならず、 `gain` を直接設定するだけではないからです。これによってはるかに柔軟になり、例えば特定の値のセットを引数で渡して、一定の期間にわたって変化させたりすることができます。
+> [!NOTE]
+> ノードオブジェクトの値 (例えば `GainNode.gain`) は単純な値ではなく、実際には {{domxref("AudioParam")}} 型のオブジェクト — これが引数と呼ばれています。なぜかといえば、 `GainNode.gain` の `value` プロパティを設定しなければならず、 `gain` を直接設定するだけではないからです。これによってはるかに柔軟になり、例えば特定の値のセットを引数で渡して、一定の期間にわたって変化させたりすることができます。
 
 素晴らしい、ユーザーがトラックの音量を追更新できるようになりました。ミュート機能を追加したい場合も gain ノードは完全なノードです。
 
@@ -194,22 +209,27 @@ const pannerOptions = { pan: 0 };
 const panner = new StereoPannerNode(audioContext, pannerOptions);
 ```
 
-> **メモ:** ノードを作成するコンストラクターメソッドは、いまのところすべてのブラウザーで対応されている訳ではありません。古いファクトリメソッドの方がより広く対応されています。
+> [!NOTE]
+> ノードを作成するコンストラクターメソッドは、いまのところすべてのブラウザーで対応されている訳ではありません。古いファクトリメソッドの方がより広く対応されています。
 
 個々の値の範囲は -1 (はるか左) と 1 (はるか右) の間です。今回も range 型の入力でこの引数を変更できるようにしましょう。
 
 ```html
-<input type="range" id="panner" min="-1" max="1" value="0" step="0.01">
+<input type="range" id="panner" min="-1" max="1" value="0" step="0.01" />
 ```
 
 以前行ったのと同じ方法で、この入力から得た値を使ってパンの値を調整します。
 
 ```js
-const pannerControl = document.querySelector('#panner');
+const pannerControl = document.querySelector("#panner");
 
-pannerControl.addEventListener('input', function() {
+pannerControl.addEventListener(
+  "input",
+  function () {
     panner.pan.value = this.value;
-}, false);
+  },
+  false,
+);
 ```
 
 また音声グラフを調整して、すべてのノードを互いに接続しましょう。
@@ -230,11 +250,11 @@ track.connect(gainNode).connect(panner).connect(audioContext.destination);
 
 Web Audio API についてもっと学ぶことができる他の例があります。
 
-[Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic) は、楽しい音声加工および音の視覚化を行うウェブアプリで、様々な効果や視覚化を選択することができます。このアプリケーションはかなり初歩的ですが、 Web Audio API の複数の機能を同時に使用する例を示しています。 ([Voice-change-O-matic をライブで実行](https://mdn.github.io/voice-change-o-matic/))
+[Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic) は、楽しい音声加工および音の視覚化を行うウェブアプリで、様々な効果や視覚化を選択することができます。このアプリケーションはかなり初歩的ですが、 Web Audio API の複数の機能を同時に使用する例を示しています。 ([Voice-change-O-matic をライブで実行](https://mdn.github.io/webaudio-examples/voice-change-o-matic/))
 
 ![音の波が表示され、音声効果や視覚化を選択することができるユーザーインターフェイス。](voice-change-o-matic.png)
 
-他にも特に Web Audio API を紹介するために開発されたアプリケーションとして [Violent Theremin](http://mdn.github.io/violent-theremin/) があり、これはマウスポインターを動かすことで音高や音量を変更することができるシンプルなウェブアプリケーションです。これはサイケデリックなライトショーも提供します。 ([Violent Theremin のソースコードを見る](https://github.com/mdn/violent-theremin))
+他にも特に Web Audio API を紹介するために開発されたアプリケーションとして [Violent Theremin](https://mdn.github.io/violent-theremin/) があり、これはマウスポインターを動かすことで音高や音量を変更することができるシンプルなウェブアプリケーションです。これはサイケデリックなライトショーも提供します。 ([Violent Theremin のソースコードを見る](https://github.com/mdn/violent-theremin))
 
 ![虹色に埋め尽くされたページで、 Clear screen と mute と書かれた2つのボタンがあります。](violent-theremin.png)
 

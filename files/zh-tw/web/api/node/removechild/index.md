@@ -21,7 +21,7 @@ node.removeChild(child);
 
 被刪除的子節點仍然存於記憶體之中，只是不在 DOM 了。從上述的第一種語法形式中，我們知道，透過引用 `oldChild` 還是可以在程式中重新使用已經被移除的子節點。
 
-而第二種語法形式，因為沒有保留 `oldChild` 引用，因此假設你並沒有在其他地方保留節點引用，則它會立即無法使用且不可挽回，而且通常會在短時間內從[內存管理](/zh-TW/docs/Web/JavaScript/Memory_Management)中被自動刪除。
+而第二種語法形式，因為沒有保留 `oldChild` 引用，因此假設你並沒有在其他地方保留節點引用，則它會立即無法使用且不可挽回，而且通常會在短時間內從[內存管理](/zh-TW/docs/Web/JavaScript/Guide/Memory_management)中被自動刪除。
 
 如果 `child` 並非某 `element` 節點的子元素，則此方法會拋出異常。而如果調用此方法時，`child` 雖是某 `element` 的子元素，但在嘗試刪除它的過程中已被其他事件處理程序刪除，也會拋出異常（例如 [`blur`](/zh-TW/docs/Web/API/Element/blur_event)）。
 
@@ -31,11 +31,11 @@ node.removeChild(child);
 
 1. 如果 `child` 確實是 `element` 的子元素且確實存在於 DOM，但已被刪除，則會丟出以下異常：
 
-    `Uncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node`.
+   `Uncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node`.
 
 2. 如果 `child` 不存在於頁面的 DOM，則會拋出下列的異常：
 
-    `Uncaught TypeError: Failed to execute 'removeChild' on 'Node': parameter 1 is not of type 'Node'.`
+   `Uncaught TypeError: Failed to execute 'removeChild' on 'Node': parameter 1 is not of type 'Node'.`
 
 ## 例子
 
@@ -79,7 +79,7 @@ while (element.firstChild) {
 
 ```html
 <!--Sample HTML code-->
-<div id="top"> </div>
+<div id="top"></div>
 
 <script type="text/javascript">
   let top = document.getElementById("top");
@@ -112,9 +112,9 @@ while (element.firstChild) {
 
 ## 規範
 
-- [DOM Level 1 Core: removeChild](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild)
-- [DOM Level 2 Core: removeChild](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1734834066)
-- [DOM Level 3 Core: removeChild](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066)
+- [DOM Level 1 Core: removeChild](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild)
+- [DOM Level 2 Core: removeChild](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1734834066)
+- [DOM Level 3 Core: removeChild](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066)
 
 ## 瀏覽器相容性
 

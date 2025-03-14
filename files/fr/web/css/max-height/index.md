@@ -1,11 +1,6 @@
 ---
 title: max-height
 slug: Web/CSS/max-height
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/max-height
 ---
 
 {{CSSRef}}
@@ -70,10 +65,11 @@ max-height: unset;
 ### HTML
 
 ```html
-<div> Lorem ipsum tralala sit amet, consectetur adipisicing
+<div>
+  Lorem ipsum tralala sit amet, consectetur adipisicing
   <p>
-     Ut enim ad minim veniam, quis nostrud exercitation
-     ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    aliquip ex ea commodo consequat.
   </p>
 </div>
 ```
@@ -100,7 +96,7 @@ p {
 
 Veiller à s'assurer que les éléments ciblés avec une règle utilisant `max-height` ne sont pas tronqués ou ne masquent pas d'autre contenu sur la page lorsqu'on zoome pour augmenter la taille du texte.
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [_Understanding Success Criterion 1.4.4, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## Spécifications
@@ -116,4 +112,4 @@ Veiller à s'assurer que les éléments ciblés avec une règle utilisant `max-h
 - {{cssxref("height")}}
 - {{cssxref("min-height")}}
 - {{cssxref("box-sizing")}}
-- [Le modèle de boîtes](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte)
+- [Le modèle de boîtes](/fr/docs/Learn/CSS/Building_blocks/The_box_model)

@@ -1,15 +1,65 @@
 ---
 title: border-bottom-style
 slug: Web/CSS/border-bottom-style
+l10n:
+  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
 {{CSSRef}}
 
-**`border-bottom-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の境界 ({{cssxref("border")}}) における線の形状を設定します。
+**`border-bottom-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の境界線 ({{cssxref("border")}}) のスタイルを設定します。
 
-{{EmbedInteractiveExample("pages/css/border-bottom-style.html")}}
+{{InteractiveExample("CSS Demo: border-bottom-style")}}
 
-> **メモ:** 仕様書では、異なる形状の境界線を角でどの様に接続するかを定義していません。
+```css interactive-example-choice
+border-bottom-style: none;
+```
+
+```css interactive-example-choice
+border-bottom-style: dotted;
+```
+
+```css interactive-example-choice
+border-bottom-style: dashed;
+```
+
+```css interactive-example-choice
+border-bottom-style: solid;
+```
+
+```css interactive-example-choice
+border-bottom-style: groove;
+```
+
+```css interactive-example-choice
+border-bottom-style: inset;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+
+body {
+  background-color: #fff;
+}
+```
+
+> [!NOTE]
+> 仕様書では、異なるスタイルの境界線を角でどの様に接続するかを定義していません。
 
 ## 構文
 
@@ -30,10 +80,11 @@ border-bottom-style: outset;
 border-bottom-style: inherit;
 border-bottom-style: initial;
 border-bottom-style: revert;
+border-bottom-style: revert-layer;
 border-bottom-style: unset;
 ```
 
-`border-bottom-style` プロパティは、 {{cssxref("border-style")}} プロパティで利用できるキーワードのうちの一つで指定します。
+`border-bottom-style` プロパティは、単一の {{cssxref("line-style")}} キーワード値で指定します。
 
 ## 公式定義
 
@@ -45,11 +96,11 @@ border-bottom-style: unset;
 
 ## 例
 
-<h3 id="Demonstrating_all_border_styles">すべての境界の形状のデモ</h3>
+### すべての境界線のスタイルのデモ
 
 #### HTML
 
-```html
+```html live-sample___demonstrating_all_border_styles
 <table>
   <tr>
     <td class="b1">none</td>
@@ -72,27 +123,48 @@ border-bottom-style: unset;
 
 #### CSS
 
-```css
+```css live-sample___demonstrating_all_border_styles
 /* 表の外見を定義 */
 table {
   border-width: 3px;
-  background-color: #52E385;
+  background-color: #52e385;
 }
-tr, td {
+tr,
+td {
   padding: 3px;
 }
 
 /* border-bottom-style の例のクラス */
-.b1 {border-bottom-style: none;}
-.b2 {border-bottom-style: hidden;}
-.b3 {border-bottom-style: dotted;}
-.b4 {border-bottom-style: dashed;}
-.b5 {border-bottom-style: solid;}
-.b6 {border-bottom-style: double;}
-.b7 {border-bottom-style: groove;}
-.b8 {border-bottom-style: ridge;}
-.b9 {border-bottom-style: inset;}
-.b10 {border-bottom-style: outset;}
+.b1 {
+  border-bottom-style: none;
+}
+.b2 {
+  border-bottom-style: hidden;
+}
+.b3 {
+  border-bottom-style: dotted;
+}
+.b4 {
+  border-bottom-style: dashed;
+}
+.b5 {
+  border-bottom-style: solid;
+}
+.b6 {
+  border-bottom-style: double;
+}
+.b7 {
+  border-bottom-style: groove;
+}
+.b8 {
+  border-bottom-style: ridge;
+}
+.b9 {
+  border-bottom-style: inset;
+}
+.b10 {
+  border-bottom-style: outset;
+}
 ```
 
 #### 結果
@@ -109,5 +181,5 @@ tr, td {
 
 ## 関連情報
 
-- その他の形状に関する境界のプロパティ: {{ Cssxref("border-left-style") }}, {{ Cssxref("border-right-style") }}, {{ Cssxref("border-top-style") }}, {{ Cssxref("border-style") }}
+- その他のスタイルに関する境界のプロパティ: {{ Cssxref("border-left-style") }}, {{ Cssxref("border-right-style") }}, {{ Cssxref("border-top-style") }}, {{ Cssxref("border-style") }}
 - その他の下境界に関するプロパティ: {{ Cssxref("border-bottom") }}, {{ Cssxref("border-bottom-color") }}, {{ Cssxref("border-bottom-width") }}

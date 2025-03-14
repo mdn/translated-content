@@ -1,19 +1,19 @@
 ---
 title: Event.timeStamp
 slug: Web/API/Event/timeStamp
-translation_of: Web/API/Event/timeStamp
 ---
 
 {{ApiRef("DOM")}}
 
 Retourne le temps (en millisecondes) à partir duquel l'événement a été créé.
 
-> **Note :** Cette propriété fonctionne seulement si le système d'évènements le prend en charge pour des évènements particuliers.
+> [!NOTE]
+> Cette propriété fonctionne seulement si le système d'évènements le prend en charge pour des évènements particuliers.
 
 ## Syntaxe
 
 ```js
-event.timeStamp
+event.timeStamp;
 ```
 
 ### Valeur
@@ -28,8 +28,8 @@ Dans les nouvelles implémentations, la valeur est un {{domxref("DOMHighResTimeS
 
 ```html
 <p>
-  Focus this iframe and press any key to get the
-  current timestamp for the keypress event.
+  Focus this iframe and press any key to get the current timestamp for the
+  keypress event.
 </p>
 <p>timeStamp: <span id="time">-</span></p>
 ```
@@ -60,7 +60,6 @@ event.timeStamp;
 // 1519211810362
 // 1519211811670
 // ...
-
 
 // Précision du temps réduite avec `privacy.resistFingerprinting` activé
 event.timeStamp;

@@ -1,16 +1,6 @@
 ---
 title: Publier des jeux
 slug: Games/Publishing_games
-tags:
-  - HTML5
-  - JavaScript
-  - Jeux
-  - Monétisation
-  - Promotion
-  - distribution
-  - publication
-translation_of: Games/Publishing_games
-original_slug: Jeux/Publier_jeux
 ---
 
 {{GamesSidebar}}
@@ -19,7 +9,7 @@ Les jeux en HTML5 ont un avantage certain face à ceux écrits dans un langage n
 
 ## Distribuer votre jeu
 
-Vous avez déjà suivi un [tutoriel](/fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript) ou [deux](/fr/docs/Games/Workflows/2D_Breakout_game_Phaser) et vous avez créé un jeu en HTML5 ? Génial ! L'article [Distribuer votre jeu](/fr/docs/Games/Publishing_games/Game_distribution) vous indique tout ce que vous devez savoir sur les moyens de partager votre toute dernière création — y compris comment vous pouvez l'héberger en ligne, le proposer sur les boutiques en ligne ouvertes, et le soumettre aux stores propriétaires comme Google Play ou Apple Store.
+Vous avez déjà suivi un [tutoriel](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) ou [deux](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser) et vous avez créé un jeu en HTML5 ? Génial ! L'article [Distribuer votre jeu](/fr/docs/Games/Publishing_games/Game_distribution) vous indique tout ce que vous devez savoir sur les moyens de partager votre toute dernière création — y compris comment vous pouvez l'héberger en ligne, le proposer sur les boutiques en ligne ouvertes, et le soumettre aux stores propriétaires comme Google Play ou Apple Store.
 
 ## Promouvoir votre jeu
 

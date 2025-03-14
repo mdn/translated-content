@@ -7,7 +7,46 @@ slug: Web/CSS/border-image-width
 
 [CSS](/zh-CN/docs/Web/CSS)属性 **`border-image-width`** 指定了 [边界图像 (border image](/zh-CN/docs/Web/CSS/border-image)) 的宽度
 
-{{EmbedInteractiveExample("pages/css/border-image-width.html")}}
+{{InteractiveExample("CSS Demo: border-image-width")}}
+
+```css interactive-example-choice
+border-image-width: 30px;
+```
+
+```css interactive-example-choice
+border-image-width: 15px 40px;
+```
+
+```css interactive-example-choice
+border-image-width: 2.6rem;
+```
+
+```css interactive-example-choice
+border-image-width: 20% 8%;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 如果本属性值大于元素的 {{cssxref("border-width")}}，边界图像将会向 padding 边缘延展
 
@@ -78,10 +117,12 @@ border-image-width: unset;
 #### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-   eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-   At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-   no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+<p>
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</p>
 ```
 
 #### CSS
@@ -89,7 +130,7 @@ border-image-width: unset;
 ```css
 p {
   border: 20px solid;
-  border-image: url("https://mdn.mozillademos.org/files/10470/border.png") 30 round;
+  border-image: url("border.png") 30 round;
   border-image-width: 16px;
   padding: 40px;
 }

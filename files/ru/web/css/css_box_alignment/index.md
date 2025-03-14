@@ -1,23 +1,24 @@
 ---
 title: Выравнивание полей CSS
-slug: Web/CSS/CSS_Box_Alignment
-translation_of: Web/CSS/CSS_Box_Alignment
+slug: Web/CSS/CSS_box_alignment
 ---
+
 {{CSSRef}}
 
 Модуль CSS Box Alignment определяет CSS-функции, которые относятся к выравниванию ящиков в различных моделях макета CSS: макет блока, макет таблицы, гибкая макет и макет сетки. Модуль нацелен на создание согласованного метода выравнивания по всем CSS. В этом документе описываются общие понятия, содержащиеся в спецификации.
 
-> **Примечание:** Документация для каждого метода макета будет подробно описана, как там применяется шкала выравнивания.
+> [!NOTE]
+> Документация для каждого метода макета будет подробно описана, как там применяется шкала выравнивания.
 
 ## Старые методы выравнивания
 
 У CSS традиционно были очень ограниченные возможности выравнивания. Мы могли выровнять текст, используя {{cssxref("text-align")}}, центральные блоки, используя auto {{cssxref("margin")}}s, а в макетах таблицы или встроенного блока, используя {{cssxref("vertical-align")}} свойство. Выравнивание текста теперь покрывается модулями [Inline Layout](https://www.w3.org/TR/css-inline-3/) и [CSS Text](https://www.w3.org/TR/css-text-3/), и впервые в Box Alignment мы имеем полные возможности горизонтального и вертикального выравнивания.
 
-Если вы изначально узнали [Flexbox](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout), вы можете считать эти свойства частью спецификации Flexbox и некоторые из свойств действительно перечислены в Level 1 Flexbox. Однако в спецификации отмечается, что спецификация Box Alignment должна рассматриваться, поскольку она может добавить дополнительные возможности по сравнению с тем, что в настоящее время находится в Flexbox.
+Если вы изначально узнали [Flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout), вы можете считать эти свойства частью спецификации Flexbox и некоторые из свойств действительно перечислены в Level 1 Flexbox. Однако в спецификации отмечается, что спецификация Box Alignment должна рассматриваться, поскольку она может добавить дополнительные возможности по сравнению с тем, что в настоящее время находится в Flexbox.
 
 ## Основные примеры
 
-Следующие примеры демонстрируют, как некоторые из Box Alignment Properties применяются в [Grid](/ru/docs/Web/CSS/CSS_Grid_Layout) and [Flexbox](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout).
+Следующие примеры демонстрируют, как некоторые из Box Alignment Properties применяются в [Grid](/ru/docs/Web/CSS/CSS_grid_layout) and [Flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout).
 
 ### Пример выравнивания раскладки сетки CSS
 
@@ -43,7 +44,7 @@ translation_of: Web/CSS/CSS_Box_Alignment
 
 При использовании свойств выравнивания ячеек вы выровняете содержимое по одной из двух осей - inline (или main) оси и block (или cross) оси. Внутренняя ось - это ось, по которой используются слова в потоке предложения в режиме записи - для английского языка, например, встроенная ось горизонтальна. Ось блока - это ось, вдоль которой выложены блоки, такие как элементы абзаца, и проходит по оси Inline.
 
-![](https://mdn.mozillademos.org/files/15952/two-axes.png)![](https://mdn.mozillademos.org/files/15952/two-axes.png)
+![](two-axes.png)![](two-axes.png)
 
 При выравнивании элементов на встроенной оси вы будете использовать свойства, начинающиеся с `justify-`:
 
@@ -69,7 +70,7 @@ Flexbox добавляет дополнительное усложнение в 
 
 На приведённом ниже рисунке показан контейнер выравнивания с двумя объектами выравнивания внутри.
 
-![](https://mdn.mozillademos.org/files/15953/align-container-subjects.png)
+![](align-container-subjects.png)
 
 ### Fallback alignment
 
@@ -103,7 +104,7 @@ Flexbox добавляет дополнительное усложнение в 
 
 Оба этих примера имеют `justify-content: start`, однако местоположение начала изменяется в соответствии с режимом записи.
 
-![](https://mdn.mozillademos.org/files/15956/writing-mode-start.png)
+![](writing-mode-start.png)
 
 ### Исходное выравнивание
 
@@ -128,11 +129,11 @@ Flexbox добавляет дополнительное усложнение в 
 
 Например, элементы Flex Layout сначала выровнены с использованием `flex-start.` Работая в горизонтальном верхнем и нижнем режимах записи, таком как русский, с `flex-direction` в виде `row` элементы начинаются в крайнем левом углу и любое свободное место после отображения элементов помещается после элементов.
 
-![](https://mdn.mozillademos.org/files/15954/justify-content-start.png)
+![](justify-content-start.png)
 
 Если вы устанавливаете `justify-content: space-between` в контейнере flex, доступное пространство теперь разделяется и помещается между элементами.
 
-![](https://mdn.mozillademos.org/files/15955/justify-content-space-between.png)
+![](justify-content-space-between.png)
 
 Для того, чтобы эти ключевые слова вступили в силу, должно быть доступно пространство в измерении, для которого вы хотите выровнять элементы. Без места, нечего распространять.
 
@@ -170,7 +171,7 @@ Flexbox добавляет дополнительное усложнение в 
 
 Поскольку свойства выравнивания полей CSS реализованы по-разному в зависимости от спецификации, с которой они взаимодействуют, обратитесь к следующим страницам для каждого типа макета для получения подробных сведений о том, как использовать с ним свойства выравнивания:
 
-- [Box alignment in Flexbox](/ru/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
+- [Box alignment in Flexbox](/ru/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
 - [Box alignment in CSS Grid Layout](/ru/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout)
 - [Box alignment in multiple-column layout](/ru/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout)
 - [Box alignment for block, absolutely positioned and table layout](/ru/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables)
@@ -202,9 +203,9 @@ Flexbox добавляет дополнительное усложнение в 
 
 ## Guides
 
-- CSS Flexbox guide: _[Basic concepts of Flexbox](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox guide: _[Aligning items in a flex container](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS Grid guide: _[Box alignment in CSS Grid layouts](/ru/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS Flexbox guide: _[Basic concepts of Flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox guide: _[Aligning items in a flex container](/ru/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS Grid guide: _[Box alignment in CSS Grid layouts](/ru/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 
 ## External Resources
 

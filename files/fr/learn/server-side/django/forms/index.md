@@ -1,7 +1,6 @@
 ---
-title: 'Django didactique - Section 9 : Travailler avec des formulaires'
+title: "Django didactique - Section 9 : Travailler avec des formulaires"
 slug: Learn/Server-side/Django/Forms
-translation_of: Learn/Server-side/Django/Forms
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
@@ -35,7 +34,7 @@ Bien que nous n'ayons pas encore créé de formulaire au cours de cette formatio
 
 Travailler avec des formulaires peut s'avérer compliqué&nbsp;! Les développeuses et développeurs doivent non seulement écrire le code HTML pour le formulaire, mais aussi vérifier et corriger sur le serveur les données saisies (et éventuellement aussi dans le navigateur), renvoyer le formulaire avec des messages d'erreur pour informer les usagers de tout champ invalide, prendre en charge les données quand elles passent l'étape de vérification, et finalement renvoyer une information à l'utilisateur d'une manière ou d'une autre pour indiquer ce succès. Les formulaires sous Django enlèvent beaucoup de travail à chacune de ces étapes, grâce à un cadriciel qui permet de déclarer des formulaires et leurs champs à travers un langage de programmation, puis d'utiliser ces objets non seulement pour générer le code HTML, mais aussi une grosse partie de la vérification des données et du retour d'information à l'utilisateur.
 
-Dans cette formation, nous allons vous montrer quelques-unes des manières de créer et de travailler avec les formulaires, et en particulier, comment les vues sur les formulaires génériques d'édition peuvent réduire significativement la quantité de travail à fournir pour créer les formulaires de manipulation de vos modèles. En chemin, nous allons étendre notre application *LocalLibrary* en ajoutant un formulaire permettant aux bibliothécaires de prolonger le prêt de livres, et nous allons créer des pages pour créer, modifier et supprimer des livres et des auteurs (reproduisant une version basique du formulaire ci-dessus pour éditer des livres).
+Dans cette formation, nous allons vous montrer quelques-unes des manières de créer et de travailler avec les formulaires, et en particulier, comment les vues sur les formulaires génériques d'édition peuvent réduire significativement la quantité de travail à fournir pour créer les formulaires de manipulation de vos modèles. En chemin, nous allons étendre notre application _LocalLibrary_ en ajoutant un formulaire permettant aux bibliothécaires de prolonger le prêt de livres, et nous allons créer des pages pour créer, modifier et supprimer des livres et des auteurs (reproduisant une version basique du formulaire ci-dessus pour éditer des livres).
 
 ## Formulaires HTML
 
@@ -48,8 +47,12 @@ Le formulaire est défini en HTML comme une collection d'éléments enfermés en
 ```html
 <form action="/team_name_url/" method="post">
   <label for="team_name">Enter name: </label>
-  <input id="team_name" type="text" name="name_field" value="Default name for team.">
-  <input type="submit" value="OK">
+  <input
+    id="team_name"
+    type="text"
+    name="name_field"
+    value="Default name for team." />
+  <input type="submit" value="OK" />
 </form>
 ```
 
@@ -58,7 +61,7 @@ Bien qu'ici nous n'ayons qu'un champ de saisie de texte destiné à recevoir le 
 La balise `<input>` dont l'attribut `type` vaut `submit` sera affichée (par défaut) comme un bouton qui peut être cliqué par l'utilisatrice ou l'utilisateur pour envoyer vers le serveur les données figurant dans tous les autres éléments de formulaire `<input>` (dans le cas présent, la valeur actuelle de `team_name`). Les attributs de formulaire déterminent d'une part la méthode HTTP (attribut `method`) utilisée pour envoyer les données et d'autre part la destination des données sur le serveur (attribut `action`)&nbsp;:
 
 - `action`&nbsp;: Il s'agit de la destination (ressource ou URL) où sont envoyées les données lorsque le formulaire est soumis. Si la valeur de cet attribut n'est pas initialisée (ou la chaîne vide est affectée à cet attribut), alors le formulaire sera renvoyé à l'URL de la page courante.
-- `method`&nbsp;: La méthode HTTP utilisée pour envoyer les données&nbsp;: *post* ou *get*.
+- `method`&nbsp;: La méthode HTTP utilisée pour envoyer les données&nbsp;: _post_ ou _get_.
 
   - La méthode `POST` devrait toujours être utilisée si l'envoi de la donnée va provoquer un changement dans la base de données du serveur, car il peut être rendu plus résistant aux attaques par falsification de requête inter-site (CSRF).
   - La méthode `GET` ne devrait être utilisée que pour les formulaires ne changeant pas les données utilisateur (par exemple, un formulaire de recherche). Elle est recommandée lorsque vous souhaitez pouvoir partager l'URL ou la conserver dans vos favoris.
@@ -79,17 +82,17 @@ En se basant sur la lecture du diagramme ci-dessus, les tâches principales dont
 
 1. Afficher le formulaire sous sa forme par défaut la première fois où il est demandé par l'utilisateur.
 
-    - Le formulaire peut contenir des champs vides (par exemple, si vous créez un nouvel enregistrement), ou il peut être prérempli de valeurs initiales (par exemple, si vous modifiez les valeurs d'un enregistrement existant, ou que ces champs ont des valeurs initiales utiles).
-    - Le formulaire est qualifié à cette étape de _formulaire libre_, parce qu'il n'est associé à aucune donnée entrée par l'utilisateur (bien qu'il puisse avoir des valeurs initiales).
+   - Le formulaire peut contenir des champs vides (par exemple, si vous créez un nouvel enregistrement), ou il peut être prérempli de valeurs initiales (par exemple, si vous modifiez les valeurs d'un enregistrement existant, ou que ces champs ont des valeurs initiales utiles).
+   - Le formulaire est qualifié à cette étape de _formulaire libre_, parce qu'il n'est associé à aucune donnée entrée par l'utilisateur (bien qu'il puisse avoir des valeurs initiales).
 
 2. Recevoir des données d'une requête d'envoi de données et les lier au formulaire.
 
-    - Lier les données au formulaire signifie que les données entrées par l'utilisateur, ainsi que les erreurs éventuelles, sont accessibles lorsque nous avons besoin de réafficher le formulaire.
+   - Lier les données au formulaire signifie que les données entrées par l'utilisateur, ainsi que les erreurs éventuelles, sont accessibles lorsque nous avons besoin de réafficher le formulaire.
 
 3. Nettoyer et valider les données.
 
-    - Le nettoyage de données consiste à désinfecter la saisie (par exemple, en supprimant les caractères non valides, et qui pourraient être utilisés pour envoyer du contenu malveillant au serveur) et à convertir ces données en types Python cohérents.
-    - La validation vérifie que les valeurs envoyées sont appropriées au champ (par exemple, dans le bon intervalle de dates, ni trop long ni trop court, etc.)
+   - Le nettoyage de données consiste à désinfecter la saisie (par exemple, en supprimant les caractères non valides, et qui pourraient être utilisés pour envoyer du contenu malveillant au serveur) et à convertir ces données en types Python cohérents.
+   - La validation vérifie que les valeurs envoyées sont appropriées au champ (par exemple, dans le bon intervalle de dates, ni trop long ni trop court, etc.)
 
 4. Si une donnée n'est pas valide, réafficher le formulaire, cette fois-ci avec les données déjà saisies par l'utilisateur et les messages d'erreur pour les champs en erreur.
 5. Si toutes les données sont conformes, effectuer les actions demandées (par exemple, sauvegarder les données, envoyer un e-mail, renvoyer le résultat d'une recherche, télécharger un fichier, etc.)
@@ -97,7 +100,8 @@ En se basant sur la lecture du diagramme ci-dessus, les tâches principales dont
 
 Django fournit une multitude d'outils et de méthodes pour vous assister dans les tâches mentionnées ci-dessus. Parmi eux, la plus importante est la classe `Form`, qui simplifie à la fois la production de formulaire HTML mais aussi la validation des données. Dans la section suivante, nous décrivons comment les formulaires fonctionnent en prenant l'exemple d'une page qui permet aux bibliothécaires de renouveler des livres.
 
-> **Note :** Comprendre l'utilisation de `Form` vous aidera quand nous parlerons des classes de formulaires de Django plus complexes.
+> [!NOTE]
+> Comprendre l'utilisation de `Form` vous aidera quand nous parlerons des classes de formulaires de Django plus complexes.
 
 ## Formulaire de renouvellement de livre par l'utilisation de Form et d'une vue fonctionnelle
 
@@ -177,7 +181,8 @@ Il y a deux choses importantes à noter. La première est que nous accédons à 
 
 Le deuxième point est que, si une valeur tombe en dehors de l'intervalle que nous avons autorisé, nous levons une `ValidationError`, en spécifiant le texte d'erreur que nous voulons afficher dans la zone du formulaire prévue pour le cas où l'utilisateur entre une valeur non valide. L'exemple ci-dessus enveloppe aussi ce texte dans `ugettext_lazy()` (importée comme `_()`), une des [fonctions de traduction Django](https://docs.djangoproject.com/fr/3.1/topics/i18n/translation/), ce qui est une bonne pratique si vous voulez traduire votre site plus tard.
 
-> **Note :** Il y a un grand nombre d'autres méthodes et exemples au sujet de la validation des formulaires dans [La validation de formulaires et de champs](https://docs.djangoproject.com/fr/3.1/ref/forms/validation/) (Documentation de Django). Par exemple, au cas où vous avez plusieurs champs dépendants les uns des autres, vous pouvez réécrire la fonction [Form.clean()](https://docs.djangoproject.com/fr/3.1/ref/forms/api/#django.forms.Form.clean), et lever de nouveau une `ValidationError`.
+> [!NOTE]
+> Il y a un grand nombre d'autres méthodes et exemples au sujet de la validation des formulaires dans [La validation de formulaires et de champs](https://docs.djangoproject.com/fr/3.1/ref/forms/validation/) (Documentation de Django). Par exemple, au cas où vous avez plusieurs champs dépendants les uns des autres, vous pouvez réécrire la fonction [Form.clean()](https://docs.djangoproject.com/fr/3.1/ref/forms/api/#django.forms.Form.clean), et lever de nouveau une `ValidationError`.
 
 C'est tout ce dont nous avons besoin pour notre formulaire dans cet exemple.
 
@@ -193,7 +198,8 @@ urlpatterns += [
 
 La configuration d'URL va rediriger les URLs ayant le format **/catalog/book/_\<bookinstance\_id>_/renew/** vers la fonction appelée `renew_book_librarian()` dans **views.py**, et envoyer l'`id` de `BookInstance` comme paramètre sous le nom `pk`. Le motif ne fonctionnera que si `pk` est un `uuid` correctement formaté.
 
-> **Note :** Nous pouvons appeler comme bon nous semble la donnée d'URL "`pk`" que nous avons capturée, car nous contrôlons complètement la fonction de notre vue (nous n'utilisons pas une vue générique "détail", laquelle attendrait des paramètres avec un certain nom). Cependant, le raccourci `pk`, pour "primary key", est une convention qu'il est raisonnable d'utiliser&nbsp;!
+> [!NOTE]
+> Nous pouvons appeler comme bon nous semble la donnée d'URL "`pk`" que nous avons capturée, car nous contrôlons complètement la fonction de notre vue (nous n'utilisons pas une vue générique "détail", laquelle attendrait des paramètres avec un certain nom). Cependant, le raccourci `pk`, pour "primary key", est une convention qu'il est raisonnable d'utiliser&nbsp;!
 
 ### Vue
 
@@ -304,7 +310,8 @@ Si le formulaire n'est pas valide, nous appelons à nouveau la fonction `render(
 
 Si le formulaire est valide, alors nous pouvons commencer à utiliser les données, en y accédant à travers l'attribut `form.cleaned_data` (par exemple, `data = form.cleaned_data['renewal_date']`). Ici, nous ne faisons que sauvegarder les données reçues dans la valeur `due_back` de l'objet `BookInstance` associé.
 
-> **Attention :** Alors que vous pouvez accéder aussi aux données de formulaire directement à travers la requête (par exemple, `request.POST['renewal_date']`, ou `request.GET['renewal_date']` si vous utilisez une requête GET), ce n'est PAS recommandé. Les données nettoyées sont assainies, validées et converties en types standard Python.
+> [!WARNING]
+> Alors que vous pouvez accéder aussi aux données de formulaire directement à travers la requête (par exemple, `request.POST['renewal_date']`, ou `request.GET['renewal_date']` si vous utilisez une requête GET), ce n'est PAS recommandé. Les données nettoyées sont assainies, validées et converties en types standard Python.
 
 L'étape finale dans la partie "gestion de formulaire" de la vue est de rediriger vers une autre page, habituellement une page "success". Dans ce cas, nous utilisons `HttpResponseRedirect` et `reverse()` pour rediriger vers la vue appelée `'all-borrowed'` (qui a été créée dans la partie "challenge" de [Django didactique section 8&nbsp;: Authentification des utilisateurs et permissions](/fr/docs/Learn/Server-side/Django/Authentication#challenge_yourself). Si vous n'avez pas créé cette page, vous pouvez rediriger vers la page d'accueil à l'URL '`/`').
 
@@ -347,7 +354,7 @@ def renew_book_librarian(request, pk):
   else:
     proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
     form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
-  
+
   context = {
     'form': form,
     'book_instance': book_instance,
@@ -360,7 +367,7 @@ def renew_book_librarian(request, pk):
 
 Créez le template référencé dans la vue (**/catalog/templates/catalog/book_renew_librarian.html**) et copiez-y le code suivant&nbsp;:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -384,7 +391,8 @@ Nous étendons le template de base et ensuite redéfinissons le block "content".
 
 Le code du formulaire est relativement simple. Nous déclarons d'abord les balises `form`, en précisant où le formulaire doit être adressé (`action`) et la `method` utilisée pour soumettre les données (ici un "HTTP `POST`"). Si vous vous rappelez ce qui a été dit en haut de cette page (aperçu sur les [Formulaires HTML](#formulaires_html)), une `action` vide comme ici signifie que les données de formulaire seront postées à nouveau à l'URL actuelle (ce qui est le comportement que nous voulons !). À l'intérieur des balises, nous définissons le bouton `submit` sur lequel l'utilisateur peut appuyer pour envoyer les données. Le `{% csrf_token %}` ajouté juste à l'intérieur des balises `form` est un des éléments de protection utilisés par Django contre les "_cross-site forgery_" (falsification de requête inter-site).
 
-> **Note :** Ajoutez le `{% csrf_token %}` à tout template Django que vous créez et qui utilise `POST` pour soumettre les données. Cela réduira les risques qu'un utilisateur mal intentionné pirate vos formulaires.
+> [!NOTE]
+> Ajoutez le `{% csrf_token %}` à tout template Django que vous créez et qui utilise `POST` pour soumettre les données. Cela réduira les risques qu'un utilisateur mal intentionné pirate vos formulaires.
 
 Tout ce qui reste est la variable de template `\{{ form }}`, que nous avons passée au template dans le dictionnaire de contexte. Peut-être sans surprise, quand il est utilisé comme indiqué, il fournit le rendu par défaut de tous les champs de formulaire, y compris leurs labels, widgets et textes d'aide. Voici le rendu&nbsp;:
 
@@ -392,28 +400,43 @@ Tout ce qui reste est la variable de template `\{{ form }}`, que nous avons pass
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
   <td>
-    <input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required>
-    <br>
-    <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2016-11-08"
+      required />
+    <br />
+    <span class="helptext"
+      >Enter date between now and 4 weeks (default 3 weeks).</span
+    >
   </td>
 </tr>
 ```
 
-> **Note :** Ce n'est peut-être pas évident, car nous n'avons qu'un seul champ, mais, par défaut, chaque champ est défini dans sa propre ligne de tableau. Ce même rendu est fourni si vous référencez la variable de template `\{{ form.as_table }}`.
+> [!NOTE]
+> Ce n'est peut-être pas évident, car nous n'avons qu'un seul champ, mais, par défaut, chaque champ est défini dans sa propre ligne de tableau. Ce même rendu est fourni si vous référencez la variable de template `\{{ form.as_table }}`.
 
 Si vous aviez entré une date invalide, vous obtiendriez en plus sur la page une liste des erreurs (voir `errorlist` ci-dessous).
 
 ```html
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
-    <td>
-      <ul class="errorlist">
-        <li>Invalid date - renewal in past</li>
-      </ul>
-      <input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required>
-      <br>
-      <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
-    </td>
+  <td>
+    <ul class="errorlist">
+      <li>Invalid date - renewal in past</li>
+    </ul>
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2015-11-08"
+      required />
+    <br />
+    <span class="helptext"
+      >Enter date between now and 4 weeks (default 3 weeks).</span
+    >
+  </td>
 </tr>
 ```
 
@@ -423,7 +446,7 @@ Si vous utilisez `\{{ form.as_table }}` comme indiqué ci-dessus, chaque champ e
 
 Il est également possible d'avoir un contrôle complet sur le rendu de chaque partie du formulaire, en indexant ses propriétés grâce à la notation pointée. Ainsi, par exemple, nous pouvons accéder à un certain nombre d'éléments distincts pour notre champ `renewal_date` :
 
-- `\{{ form.renewal_date }}`  : Le champ complet.
+- `\{{ form.renewal_date }}` : Le champ complet.
 - `\{{ form.renewal_date.errors }}` : La liste des erreurs.
 - `\{{ form.renewal_date.id_for_label }}` : L'`id` du label.
 - `\{{ form.renewal_date.help_text }}` : Le texte d'aide du champ.
@@ -434,11 +457,14 @@ Pour plus d'exemples sur la manière de rendre manuellement des formulaires dans
 
 Si vous avez accepté le "challenge" dans [Django didactique - section 8&nbsp;: Authentification des utilisateurs et permissions](/fr/docs/Learn/Server-side/Django/Authentication#challenge_yourself), vous avez une liste de tous les livres empruntés dans la bibliothèque, ce qui n'est visible que pour le staff de la bibliothèque. Nous pouvons ajouter un lien vers notre page de renouvellement après chaque élément, en utilisant le code de template suivant.
 
-```html
-{% if perms.catalog.can_mark_returned %} <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a> {% endif %}  
+```django
+{% if perms.catalog.can_mark_returned %}
+  <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>
+{% endif %}
 ```
 
-> **Note :** Souvenez-vous que votre login de test devra avoir la permission "`catalog.can_mark_returned`" pour pouvoir accéder à la page de renouvellement de livre (utilisez peut-être votre compte superuser).
+> [!NOTE]
+> Souvenez-vous que votre login de test devra avoir la permission "`catalog.can_mark_returned`" pour pouvoir accéder à la page de renouvellement de livre (utilisez peut-être votre compte superuser).
 
 Vous pouvez aussi construire manuellement une URL de test comme ceci&nbsp;: `http://127.0.0.1:8000/catalog/book/<bookinstance_id>/renew/` (un `bookinstance_id` valide peut être obtenu en naviguant vers une page de détail de livre dans votre bibliothèque, et en copiant le champ `id`).
 
@@ -475,11 +501,13 @@ class RenewBookModelForm(ModelForm):
     fields = ['due_back']
 ```
 
-> **Note :** Vous pouvez inclure tous les champs en utilisant `fields = '__all__'`, ou bien utiliser `exclude` (au lieu de `fields`) pour préciser les champs à ne _pas_ importer du modèle.
+> [!NOTE]
+> Vous pouvez inclure tous les champs en utilisant `fields = '__all__'`, ou bien utiliser `exclude` (au lieu de `fields`) pour préciser les champs à ne _pas_ importer du modèle.
 >
 > Aucune approche n'est recommandée, car tout nouveau champ ajouté au modèle est automatiquement inclus dans le formulaire (sans considération du développeur de répercussions sécuritaires éventuelles).
 
-> **Note :** Cela peut ne pas sembler beaucoup plus simple que d'utiliser un simple `Form`, et ça ne l'est effectivement pas dans ce cas, parce que nous n'avons qu'un seul champ. Cependant, si vous avez beaucoup de champs, cela peut réduire notablement la quantité de code&nbsp;!
+> [!NOTE]
+> Cela peut ne pas sembler beaucoup plus simple que d'utiliser un simple `Form`, et ça ne l'est effectivement pas dans ce cas, parce que nous n'avons qu'un seul champ. Cependant, si vous avez beaucoup de champs, cela peut réduire notablement la quantité de code&nbsp;!
 
 Le reste de l'information vient des définitions de champ données par le modèle (par exemple, les labels, les widgets, le texte d'aide, les messages d'erreur). S'ils ne sont pas suffisamment satisfaisants, nous pouvons les réécrire dans notre `class Meta`, en précisant un dictionnaire contenant le champ à modifier et sa nouvelle valeur. Par exemple, dans ce formulaire, nous pourrions souhaiter, pour notre champ, un label tel que "_Renewal date_" (plutôt que celui par défaut, basé sur le nom du champ : _Due Back_), et nous voulons aussi que notre texte d'aide soit spécifique à ce cas d'utilisation. La classe `Meta` ci-dessous vous montre comment réécrire ces champs, et vous pouvez pareillement définir `widgets` et `error_messages` si les valeurs par défaut ne sont pas suffisantes.
 
@@ -526,7 +554,8 @@ La classe `RenewBookModelForm` ci-dessus est maintenant fonctionnellement équiv
 
 L'algorithme de gestion des formulaires que nous avons utilisé ci-dessus, dans notre exemple de vue fonctionnelle, représente un processus extrêmement commun dans les vues destinées à éditer un formulaire. Django abstrait pour vous la plus grande partie de ce processus répétitif (<i lang="en">boilerplate</i>) en proposant des [vues génériques d'édition](https://docs.djangoproject.com/fr/3.1/ref/class-based-views/generic-editing/) pour les vues de création, édition et suppression basées sur des modèles. Ces vues génériques non seulement assument le comportement d'une vue, mais elles créent automatiquement la classe de formulaire (un `ModelForm`) pour vous à partir du modèle.
 
-> **Note :** En plus des vues d'édition décrites ici, il existe aussi une classe [FormView](https://docs.djangoproject.com/fr/3.1/ref/class-based-views/generic-editing/#formview), qui se tient, en termes de rapport "flexibilité"/"effort codage", à mi-chemin entre notre vue basée sur une fonction et les autres vues génériques. En utilisant `FormView`, vous avez encore besoin de créer votre `Form`, mais vous n'avez pas besoin d'implémenter tous les éléments d'une gestion standard de formulaire. À la place, vous n'avez qu'à fournir une implémentation de la fonction qui sera appelée une fois que les données envoyées sont reconnues valides.
+> [!NOTE]
+> En plus des vues d'édition décrites ici, il existe aussi une classe [FormView](https://docs.djangoproject.com/fr/3.1/ref/class-based-views/generic-editing/#formview), qui se tient, en termes de rapport "flexibilité"/"effort codage", à mi-chemin entre notre vue basée sur une fonction et les autres vues génériques. En utilisant `FormView`, vous avez encore besoin de créer votre `Form`, mais vous n'avez pas besoin d'implémenter tous les éléments d'une gestion standard de formulaire. À la place, vous n'avez qu'à fournir une implémentation de la fonction qui sera appelée une fois que les données envoyées sont reconnues valides.
 
 Dans cette section, nous allons utiliser des vues génériques d'édition pour créer des pages afin de pouvoir ajouter les fonctionnalités de création, d'édition et de suppression des enregistrements de type `Author` de notre bibliothèque, fournissant efficacement une réimplémentation basique de certaines parties du site Admin (cela peut être intéressant si vous avez besoin d'offrir une fonctionnalité admin d'une manière plus flexible que ce qui peut être présenté par le site admin).
 
@@ -562,11 +591,11 @@ La classe `AuthorDelete` ne requiert pas l'affichage d'aucun champ, aussi n'ont-
 
 ### Templates
 
-Les vues "créer" et "modifier" utilisent le même template par défaut, lequel sera nommé d'après votre modèle : *model_name*\_**form.html** (vous pouvez changer le suffixe en autre chose que **\_form** en utilisant le champ `template_name_suffix` dans votre vue, par exemple, `template_name_suffix = '_other_suffix'`).
+Les vues "créer" et "modifier" utilisent le même template par défaut, lequel sera nommé d'après votre modèle : _model_name_\_**form.html** (vous pouvez changer le suffixe en autre chose que **\_form** en utilisant le champ `template_name_suffix` dans votre vue, par exemple, `template_name_suffix = '_other_suffix'`).
 
 Créez le fichier de template **locallibrary/catalog/templates/catalog/author_form.html** et copiez-y le texte suivant.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -582,9 +611,9 @@ Créez le fichier de template **locallibrary/catalog/templates/catalog/author_fo
 
 Ce formulaire est semblable à nos formulaires précédents et affiche les champs en utilisant un tableau. Notez aussi comment nous déclarons à nouveau le `{% csrf_token %}` pour nous assurer que nos formulaires résisteront à d'éventuelles attaques par CSRF (_Cross-Site Request Forgery_).
 
-La vue "supprimer" s'attend à trouver un template avec un nom au format *model_name*\_**confirm_delete.html** (de nouveau, vous pouvez changer le suffixe en utilisant `template_name_suffix` dans votre vue). Créez le fichier de template **locallibrary/catalog/templates/catalog/author_confirm_delete.html** et copiez-y le texte suivant.
+La vue "supprimer" s'attend à trouver un template avec un nom au format _model_name_\_**confirm_delete.html** (de nouveau, vous pouvez changer le suffixe en utilisant `template_name_suffix` dans votre vue). Créez le fichier de template **locallibrary/catalog/templates/catalog/author_confirm_delete.html** et copiez-y le texte suivant.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -595,7 +624,7 @@ La vue "supprimer" s'attend à trouver un template avec un nom au format *model_
 
 <form action="" method="POST">
   {% csrf_token %}
-  <input type="submit" value="Yes, delete.">
+  <input type="submit" value="Yes, delete." />
 </form>
 
 {% endblock %}
@@ -617,7 +646,8 @@ Il n'y a rien de particulièrement nouveau ici ! Vous pouvez voir que les vues s
 
 Les pages de création, modification et suppression d'auteur sont maintenant prêtes à être testées (nous ne nous mettons pas en peine pour cette fois, bien que vous puissiez le faire si vous le souhaiter, de les accrocher dans la barre latérale du site).
 
-> **Note :** Les utilisateurs observateurs auront remarqué que nous n'avons rien fait pour empêcher les utilisateurs non autorisés d'accéder à ces pages&nbsp;! Nous laissons cela comme exercice pour vous (suggestion&nbsp;: vous pourriez utiliser le `PermissionRequiredMixin`, et soit créer une nouvelle permission, soit réutiliser notre permission `can_mark_returned`).
+> [!NOTE]
+> Les utilisateurs observateurs auront remarqué que nous n'avons rien fait pour empêcher les utilisateurs non autorisés d'accéder à ces pages&nbsp;! Nous laissons cela comme exercice pour vous (suggestion&nbsp;: vous pourriez utiliser le `PermissionRequiredMixin`, et soit créer une nouvelle permission, soit réutiliser notre permission `can_mark_returned`).
 
 ### Test de la page
 
@@ -625,11 +655,11 @@ Tout d'abord, connectez-vous au site avec un compte ayant les permissions que vo
 
 Ensuite, naviguez à la page de création d'auteur, _<http://127.0.0.1:8000/catalog/author/create/>_, ce qui devrait ressembler à la capture d'écran ci-dessous.
 
-![Exemple de formulaire&nbsp;: création d'un auteur](forms_example_create_author.png)
+![Exemple de formulaire : création d'un auteur](forms_example_create_author.png)
 
 Entrez des valeurs pour les champs et ensuite cliquez sur **Submit** pour sauvegarder l'enregistrement de cet auteur. Vous devriez maintenant être conduit à une vue "détail" pour votre nouvel auteur, avec une URL du genre `http://127.0.0.1:8000/catalog/author/10`.
 
-Vous pouvez tester l'édition d'un enregistrement en ajoutant */update/* à la fin de l'URL "détail" (par exemple, `http://127.0.0.1:8000/catalog/author/10/update/`). Nous ne mettons pas de capture d'écran, car c'est à peu près la même chose que la page "create".
+Vous pouvez tester l'édition d'un enregistrement en ajoutant _/update/_ à la fin de l'URL "détail" (par exemple, `http://127.0.0.1:8000/catalog/author/10/update/`). Nous ne mettons pas de capture d'écran, car c'est à peu près la même chose que la page "create".
 
 Enfin, nous pouvons effacer l'enregistrement en ajoutant "delete" à la fin de l'URL de détail (par exemple, `http://127.0.0.1:8000/catalog/author/10/delete/`). Django devrait vous afficher la page de suppression montrée ci-dessous. Cliquez sur "**Yes, delete**" pour supprimer l'enregistrement et être reconduit à la liste des auteurs.
 
@@ -659,21 +689,3 @@ Il y a bien d'autres choses qui peuvent être faites avec les formulaires (regar
 - [Vues génériques d'édition](https://docs.djangoproject.com/fr/3.1/ref/class-based-views/generic-editing/) (Documentation de Django)
 
 {{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
-
-## Dans ce module
-
-- [Introduction à Django](/fr/docs/Learn/Server-side/Django/Introduction)
-- [Mettre en place un environnement de développement Django](/fr/docs/Learn/Server-side/Django/development_environment)
-- [Django didactique&nbsp;: Site web "Bibliothèque locale"](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django didactique Section 2&nbsp;: Créer le squelette du site web](/fr/docs/Learn/Server-side/Django/skeleton_website)
-- [Django didactique Section 3&nbsp;: Utilisation des modèles de données](/fr/docs/Learn/Server-side/Django/Models)
-- [Django didactique Section 4&nbsp;: Site d'administration de Django](/fr/docs/Learn/Server-side/Django/Admin_site)
-- [Django didactique Section 5&nbsp;: Créer la page d'accueil](/fr/docs/Learn/Server-side/Django/Home_page)
-- [Django didactique Section 6&nbsp;: Vues génériques pour les listes et les détails](/fr/docs/Learn/Server-side/Django/Generic_views)
-- [Django didactique Section 7&nbsp;: Framework pour les sessions](/fr/docs/Learn/Server-side/Django/Sessions)
-- [Django didactique Section 8&nbsp;: Authentification des utilisateurs et permission](/fr/docs/Learn/Server-side/Django/Authentication)
-- [Django didactique Section 9&nbsp;: Travailler avec des formulaires](/fr/docs/Learn/Server-side/Django/Forms)
-- [Django didactique Section 10&nbsp;: Tester une application web Django](/fr/docs/Learn/Server-side/Django/Testing)
-- [Django didactique Section 11&nbsp;: Déployer une application Django en production](/fr/docs/Learn/Server-side/Django/Deployment)
-- [La sécurité des applications web Django](/fr/docs/Learn/Server-side/Django/web_application_security)
-- [Mise en pratique&nbsp;: construisez votre mini blog avec Django](/fr/docs/Learn/Server-side/Django/django_assessment_blog)

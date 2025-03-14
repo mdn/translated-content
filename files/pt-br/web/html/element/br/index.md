@@ -7,7 +7,7 @@ slug: Web/HTML/Element/br
 
 O elemento HTML _quebra-de-linha_ \<br> produz uma quebra de linha em um texto (carriage-return).É útil para escrever poemas ou um endereço, onde a divisão de linha é significante.
 
-Não use \<br> para aumentar o espaço entre as linhas de texto; para isso use a propiedade [CSS](/pt-BR/docs/CSS) {{cssxref('margin')}} ou o elemento {{HTMLElement("p")}}.
+Não use \<br> para aumentar o espaço entre as linhas de texto; para isso use a propiedade [CSS](/pt-BR/docs/Web/CSS) {{cssxref('margin')}} ou o elemento {{HTMLElement("p")}}.
 
 <table class="properties">
   <tbody>
@@ -59,43 +59,40 @@ Não use \<br> para aumentar o espaço entre as linhas de texto; para isso use a
 
 ## Atributos
 
-Este elemento inclue os [Atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclue os [Atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("clear")}} {{deprecatedGeneric('inline','HTML4.01')}} {{obsoleteGeneric('inline','HTML5')}}
+- `clear` {{Deprecated_Inline}}
 
   - : Indica onde começar a próxima linha depois da quebra.
 
-    > **Nota:** Este atributo está obsoleto em {{HTMLVersionInline(5)}} e **Não deve ser usado por autores**. Use a propriedade CSS {{CSSxref('clear')}} em vez disso.
+    > [!NOTE]
+    > Este atributo está obsoleto em HTML 5 e **Não deve ser usado por autores**. Use a propriedade CSS {{CSSxref('clear')}} em vez disso.
 
 ## Exemplo
 
 ```html
-Mozilla Foundation<br>
-1981 Landings Drive<br>
-Building K<br>
-Mountain View, CA 94043-0801<br>
+Mozilla Foundation<br />
+1981 Landings Drive<br />
+Building K<br />
+Mountain View, CA 94043-0801<br />
 USA
 ```
 
 Saída do HTML acima:
 
-Mozilla Foundation
-1981 Landings Drive
-Building K
-Mountain View, CA 94043-0801
+Mozilla Foundation<br>
+1981 Landings Drive<br>
+Building K<br>
+Mountain View, CA 94043-0801<br>
 USA
 
 ## Especificações
 
-| Especificação                                                                                                    | Status                           | Comentário |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-br-element', '&lt;br&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-br-element', '&lt;br&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.2.1', '&lt;br&gt;')}}                     | {{Spec2('HTML4.01')}}     |            |
+{{Specifications}}
 
 ## Compatibilidade com o browser
 
-{{Compat("html.elements.br")}}
+{{Compat}}
 
 ## Veja também
 

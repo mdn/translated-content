@@ -1,16 +1,17 @@
 ---
 title: SharedWorker
 slug: Web/API/SharedWorker
-translation_of: Web/API/SharedWorker
 ---
 
 {{APIRef("Web Workers API")}}
 
 `Интерфейс SharedWorker (разделяемый воркер)` является особым видом воркеров к которому можно получить доступ из нескольких контекстов браузера, например, из нескольких окон, iframe, или других воркеров. Этот интерфейс реализован иначе, чем dedicated воркеры и имеют иной глобальный контекст, {{domxref("SharedWorkerGlobalScope")}}.
 
-> **Примечание:** **Замечание:** Если SharedWorker может быть доступен из нескольких контекстов браузера, все они должны разделять одинаковое расположение (идентичные протокол, хост и порт).
+> [!NOTE]
+> Если SharedWorker может быть доступен из нескольких контекстов браузера, все они должны разделять одинаковое расположение (идентичные протокол, хост и порт).
 
-> **Примечание:** **Замечание**: В Firefox, разделяемые воркеры не могут взаимодействовать между private (например, просматриваемыми в приватном режиме) и non-private документами (см. {{bug(1177621)}}.)
+> [!NOTE]
+> В Firefox, разделяемые воркеры не могут взаимодействовать между private (например, просматриваемыми в приватном режиме) и non-private документами (см. [Firefox bug 1177621](https://bugzil.la/1177621).)
 
 ## Свойства
 
@@ -32,7 +33,7 @@ _Наследует методы родительского класса, {{domx
 
 ## Пример
 
-В нашем [Базовом примере разделяемого воркера](https://github.com/mdn/simple-shared-worker) ([запустить](http://mdn.github.io/simple-shared-worker/)), имеются две HTML страницы, каждая из которых использует JavaScript для простых вычислений. Разные скрипты используют один и тот же воркер, чтобы выполнить умножение двух чисел - они оба имеют доступ к нему, даже если их страницы запущены в разных окнах.
+В нашем [Базовом примере разделяемого воркера](https://github.com/mdn/simple-shared-worker) ([запустить](https://mdn.github.io/simple-shared-worker/)), имеются две HTML страницы, каждая из которых использует JavaScript для простых вычислений. Разные скрипты используют один и тот же воркер, чтобы выполнить умножение двух чисел - они оба имеют доступ к нему, даже если их страницы запущены в разных окнах.
 
 Следующий пример кода демонстрирует создание объекта `SharedWorker` с использованием конструктора {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}. Оба скрипта содержат:
 
@@ -49,36 +50,36 @@ myWorker.port.start();
 После того, как порт запущен, оба скрипта отправляют сообщения воркеру и принимают их от него, используя `port.postMessage()` и `port.onmessage`, соответственно:
 
 ```js
-first.onchange = function() {
-    myWorker.port.postMessage([first.value,second.value]);
-    console.log('Message posted to worker');
-  }
+first.onchange = function () {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 
-  second.onchange = function() {
-    myWorker.port.postMessage([first.value,second.value]);
-    console.log('Message posted to worker');
-  }
+second.onchange = function () {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 
-  myWorker.port.onmessage = function(e) {
-    result1.textContent = e.data;
-    console.log('Message received from worker');
-  }
+myWorker.port.onmessage = function (e) {
+  result1.textContent = e.data;
+  console.log("Message received from worker");
+};
 ```
 
-Внутри воркера используется хэндлер {{domxref("SharedWorkerGlobalScope.onconnect")}} для соединения к тому же порту, как обсуждалось ранее. Порты, связанные с данным воркером доступны в свойстве ports события {{event("connect")}}. Далее вызывается метод {{domxref("MessagePort")}} `start()` для запуска порта, и устанавливается хэндлер `onmessage` для обработки сообщений, присылаемых от обоих потоков.
+Внутри воркера используется хэндлер {{domxref("SharedWorkerGlobalScope.onconnect")}} для соединения к тому же порту, как обсуждалось ранее. Порты, связанные с данным воркером доступны в свойстве ports события [`connect`](/ru/docs/Web/API/SharedWorkerGlobalScope/connect_event). Далее вызывается метод {{domxref("MessagePort")}} `start()` для запуска порта, и устанавливается хэндлер `onmessage` для обработки сообщений, присылаемых от обоих потоков.
 
 ```js
-onconnect = function(e) {
-    var port = e.ports[0];
-    // or port = e.source
+onconnect = function (e) {
+  var port = e.ports[0];
+  // or port = e.source
 
-    port.addEventListener('message', function(e) {
-      var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
-      port.postMessage(workerResult);
-    });
+  port.addEventListener("message", function (e) {
+    var workerResult = "Result: " + e.data[0] * e.data[1];
+    port.postMessage(workerResult);
+  });
 
-    port.start(); // необходимо при добавлении обработчиков с помощью addEventListener. При использовании сеттера port.onmessage, данный метод вызывается автоматически, неявно
-}
+  port.start(); // необходимо при добавлении обработчиков с помощью addEventListener. При использовании сеттера port.onmessage, данный метод вызывается автоматически, неявно
+};
 ```
 
 ### Пример с несколькими страницами
@@ -87,19 +88,27 @@ test.js
 
 ```js
 let connected = false;
-self.addEventListener("connect", e => {
-  e.source.addEventListener("message", ev => {
-    if (ev.data === "start") {
-      if (connected === false) {
-        e.source.postMessage('worker init');
-        connected = true;
-      } else {
-        e.source.postMessage('worker already inited');
-      }
-    }
-  }, false);
-  e.source.start();
-}, false);
+self.addEventListener(
+  "connect",
+  (e) => {
+    e.source.addEventListener(
+      "message",
+      (ev) => {
+        if (ev.data === "start") {
+          if (connected === false) {
+            e.source.postMessage("worker init");
+            connected = true;
+          } else {
+            e.source.postMessage("worker already inited");
+          }
+        }
+      },
+      false,
+    );
+    e.source.start();
+  },
+  false,
+);
 ```
 
 На странице 1 получаем сообщение 'worker init' в консоли.
@@ -108,12 +117,16 @@ index1.html
 
 ```html
 <script>
-    let worker = new SharedWorker('test.js');
-    worker.port.addEventListener("message", e => {
+  let worker = new SharedWorker("test.js");
+  worker.port.addEventListener(
+    "message",
+    (e) => {
       console.log(e.data);
-    }, false);
-    worker.port.start();
-    worker.port.postMessage("start");
+    },
+    false,
+  );
+  worker.port.start();
+  worker.port.postMessage("start");
 </script>
 ```
 
@@ -123,12 +136,16 @@ index2.html
 
 ```html
 <script>
-    let worker = new SharedWorker('test.js');
-    worker.port.addEventListener("message", e => {
+  let worker = new SharedWorker("test.js");
+  worker.port.addEventListener(
+    "message",
+    (e) => {
       console.log(e.data);
-    }, false);
-    worker.port.start();
-    worker.port.postMessage("start");
+    },
+    false,
+  );
+  worker.port.start();
+  worker.port.postMessage("start");
 </script>
 ```
 
@@ -136,11 +153,11 @@ index2.html
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("Worker")}}
-- [Использование веб воркеров](/ru/docs/Web/Guide/Performance/Using_web_workers)
+- [Использование веб воркеров](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)

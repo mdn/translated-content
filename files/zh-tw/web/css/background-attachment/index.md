@@ -1,55 +1,124 @@
 ---
 title: background-attachment
 slug: Web/CSS/background-attachment
+l10n:
+  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
 
 {{CSSRef}}
 
-**`background-attachment`** 這個 [CSS](/zh-TW/docs/CSS) 屬性能夠設定，背景圖片的位置是否要固定在 {{glossary("viewport")}}（視圖）上，還是背景圖片會隨著它的 containing block（外層容器）一起滾動。
+**`background-attachment`** [CSS](/zh-TW/docs/Web/CSS) 屬性設定背景圖片的位置是否固定在{{glossary("viewport", "視區")}}內，或者跟隨其包含區塊一起滑動。
 
-{{EmbedInteractiveExample("pages/css/background-attachment.html")}}
+{{InteractiveExample("CSS Demo: background-attachment")}}
+
+```css interactive-example-choice
+background-attachment: scroll;
+```
+
+```css interactive-example-choice
+background-attachment: fixed;
+```
+
+```css interactive-example-choice
+background-attachment: local;
+```
+
+```css interactive-example-choice
+background-attachment: local, scroll;
+```
+
+```css interactive-example-choice
+background-attachment: scroll, local;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill. London. Michaelmas term
+    lately over, and the Lord Chancellor sitting in Lincoln's Inn Hall.
+    Implacable November weather. As much mud in the streets as if the waters had
+    but newly retired from the face of the earth, and it would not be wonderful
+    to meet a Megalosaurus, forty feet long or so, waddling like an elephantine
+    lizard up Holborn Hill.
+  </div>
+</section>
+```
+
+```css interactive-example
+body {
+  overflow: scroll;
+}
+
+#default-example {
+  height: 600px;
+}
+
+#example-element {
+  max-width: 20rem;
+  height: 100%;
+  background:
+    url("/shared-assets/images/examples/lizard.png") right 3rem top 1rem / 15rem
+      no-repeat,
+    url("/shared-assets/images/examples/moon.jpg") center / 10rem;
+  color: #ff5454;
+  font-size: 1.5em;
+  font-weight: bold;
+  overflow: auto;
+  padding: 20px;
+  text-shadow:
+    0 0 0.6rem #000,
+    0 0 0.6rem #000;
+}
+```
 
 ## 語法
 
 ```css
-/* Keyword values */
+/* 關鍵字值 */
 background-attachment: scroll;
 background-attachment: fixed;
 background-attachment: local;
 
-/* Global values */
+/* 全域值 */
 background-attachment: inherit;
 background-attachment: initial;
+background-attachment: revert;
+background-attachment: revert-layer;
 background-attachment: unset;
 ```
 
-`background-attachment` 屬性的值，可以是下方清單中的其中之一。
+`background-attachment` 屬性可設定為以下列舉的關鍵字值之一。
 
-### Values
+### 值
 
 - `fixed`
-  - : 讓背景相對於 viewport（視圖）的移動是固定的。即便元素中的內容是可滾動的，背景也不會在滾動元素內容時跟著移動。(這個屬性與 {{cssxref("background-clip", "background-clip: text", "#text")}} 不相容。)
+  - : 背景相對於視區固定。即使元素有滑動機制，背景也不會跟著元素移動。
 - `local`
-  - : 讓背景相對於元素的內容是固定的，且背景在滾動元素的內容時會跟著移動。另外，背景的繪製與定位區域是相對於元素的可滾動區域，而不是包裹著它們的邊框。
+  - : 背景相對於元素內容固定。如果元素有滑動機制，背景會跟隨元素內容一起滑動，且背景的繪製區域與定位區域是相對於元素的可滑動區域，而不是邊框。
 - `scroll`
-  - : 讓背景相對於元素本身是固定的，使背景在滾動元素的內容時不會跟著移動。（It is effectively attached to the element's border.）
+  - : 背景相對於元素本身固定，並且不會隨內容滑動。（它實際上是附加於元素邊框的。）
 
-### Formal syntax
+## 形式定義
+
+{{cssinfo}}
+
+## 形式語法
 
 {{csssyntax}}
 
-## 例子
+## 範例
 
-### Simple example
+### 簡單範例
 
 #### HTML
 
 ```html
 <p>
-  There were doors all round the hall, but they were all locked; and when
-  Alice had been all the way down one side and up the other, trying every
-  door, she walked sadly down the middle, wondering how she was ever to
-  get out again.
+  大廳四周都有門，但它們都被鎖住了；當愛麗絲走到一邊又走到另一邊，試著每一扇門時，她悲傷地走到中間，想知道她該如何再次出去。
 </p>
 ```
 
@@ -57,36 +126,24 @@ background-attachment: unset;
 
 ```css
 p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif");
+  background-image: url("star-solid.gif");
   background-attachment: fixed;
 }
 ```
 
-#### Result
+#### 結果
 
-{{EmbedLiveSample("Simple_example")}}
+{{EmbedLiveSample("簡單範例")}}
 
-### Multiple background images
+### 多重背景圖片
 
-這個屬性支援多個背景圖片。你可以對每個背景設定不同的 `<attachment>`。每個背景圖片會依序對應在 `<attachment>` 設定的類型。
+此屬性支援多個背景圖片。可以為每個背景指定不同的 `<attachment>`，以逗號分隔。每張圖片會與對應的 `<attachment>` 類型匹配，順序由先指定到後。
 
 #### HTML
 
 ```html
 <p>
-  There were doors all round the hall, but they were all locked; and when
-  Alice had been all the way down one side and up the other, trying every
-  door, she walked sadly down the middle, wondering how she was ever to
-  get out again.
-
-  Suddenly she came upon a little three-legged table, all made of solid
-  glass; there was nothing on it except a tiny golden key, and Alice's
-  first thought was that it might belong to one of the doors of the hall;
-  but, alas! either the locks were too large, or the key was too small,
-  but at any rate it would not open any of them. However, on the second
-  time round, she came upon a low curtain she had not noticed before, and
-  behind it was a little door about fifteen inches high: she tried the
-  little golden key in the lock, and to her great delight it fitted!
+  大廳四周都有門，但它們都被鎖住了；當愛麗絲走到一邊又走到另一邊，試著每一扇門時，她悲傷地走到中間，想知道她該如何再次出去。突然，她看到一張三條腿的小桌子，全是由實心玻璃製成的；桌上除了有一把小小的金鑰匙外，什麼也沒有。愛麗絲的第一個想法是這把鑰匙可能屬於大廳的某扇門，但可惜的是，不是鎖太大，就是鑰匙太小，總之它無法打開任何一扇門。然而，在第二次繞過大廳時，她發現了一個之前沒注意到的低矮窗簾，窗簾後面是一扇大約十五英寸高的小門。她試著將小金鑰匙插入鎖孔，令她非常高興的是，鑰匙正好合適！
 </p>
 ```
 
@@ -94,27 +151,24 @@ p {
 
 ```css
 p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"),
-      url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
+  background-image: url("star-solid.gif"), url("star-transparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }
 ```
 
-#### Result
+#### 結果
 
-{{EmbedLiveSample("Multiple_background_images")}}
+{{EmbedLiveSample("多重背景圖片")}}
 
-## Specifications
+## 規範
 
 {{Specifications}}
 
-{{cssinfo}}
-
-## Browser compatibility
+## 瀏覽器相容性
 
 {{Compat}}
 
-## See also
+## 參見
 
-- [Using multiple backgrounds](/zh-TW/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [使用多重背景](/zh-TW/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

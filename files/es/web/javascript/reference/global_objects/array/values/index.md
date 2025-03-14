@@ -1,15 +1,6 @@
 ---
 title: Array.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterador
-  - JavaScript
-  - Prototipo
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/values
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/values
 ---
 
 {{JSRef}}
@@ -17,7 +8,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/values
 El método **`values()`** devuelve un nuevo objeto **`Array Iterator`** que contiene los valores para cada índice del array.
 
 ```js
-var a = ['w', 'y', 'k', 'o', 'p'];
+var a = ["w", "y", "k", "o", "p"];
 var iterator = a.values();
 
 console.log(iterator.next().value); // w
@@ -42,7 +33,7 @@ Un nuevo objeto {{jsxref("Array")}} iterator.
 ### Iteración usando un bucle `for...of`
 
 ```js
-var arr = ['w', 'y', 'k', 'o', 'p'];
+var arr = ["w", "y", "k", "o", "p"];
 var iterador = arr.values();
 
 for (let letra of iterador) {
@@ -56,7 +47,7 @@ for (let letra of iterador) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.values")}}
+{{Compat}}
 
 ## Vea también
 

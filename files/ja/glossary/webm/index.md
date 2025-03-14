@@ -1,7 +1,9 @@
 ---
 title: WebM
-slug: Glossary/webm
+slug: Glossary/WebM
 ---
+
+{{GlossarySidebar}}
 
 **WebM** はロイヤリティフリーでオープンな動画フォーマットです。Mozilla Firefox でも標準でサポートされています。
 

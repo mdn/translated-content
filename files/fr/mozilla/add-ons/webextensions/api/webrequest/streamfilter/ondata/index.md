@@ -1,20 +1,9 @@
 ---
 title: webRequest.StreamFilter.ondata
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/ondata
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StreamFilter.ondata
-  - TextDecoder
-  - TextEncoder
-  - WebExtensions
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/ondata
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un gestionnaire d'événements qui sera appelé à plusieurs reprises lorsque les données de réponse sont disponibles. Le gestionnaire est passé un objet `event` qui contient une propriété de `data`, qui contient un morceau des données de réponse sous la forme d'un {{domxref("ArrayBuffer")}}.
 
@@ -30,29 +19,29 @@ function listener(details) {
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();
 
-  filter.ondata = event => {
-    let str = decoder.decode(event.data, {stream: true});
+  filter.ondata = (event) => {
+    let str = decoder.decode(event.data, { stream: true });
     // Just change any instance of Example in the HTTP response
     // to WebExtension Example.
-    str = str.replace(/Example/g, 'WebExtension Example');
+    str = str.replace(/Example/g, "WebExtension Example");
     filter.write(encoder.encode(str));
     // Doing filter.disconnect(); here would make us process only
     // the first chunk, and let the rest through unchanged. Note
     // that this would break multi-byte characters that occur on
     // the chunk boundary!
-  }
+  };
 
-  filter.onstop = event => {
+  filter.onstop = (event) => {
     filter.close();
-  }
+  };
 
   //return {}; // not needed
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.com/*"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.com/*"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 
@@ -65,24 +54,23 @@ function listener(details) {
   let encoder = new TextEncoder();
 
   let data = [];
-  filter.ondata = event => {
+  filter.ondata = (event) => {
     data.push(event.data);
   };
 
-  filter.onstop = event => {
+  filter.onstop = (event) => {
     let str = "";
     if (data.length == 1) {
       str = decoder.decode(data[0]);
-    }
-    else {
+    } else {
       for (let i = 0; i < data.length; i++) {
-        let stream = (i == data.length - 1) ? false : true;
-        str += decoder.decode(data[i], {stream});
+        let stream = i == data.length - 1 ? false : true;
+        str += decoder.decode(data[i], { stream });
       }
     }
     // Just change any instance of Example in the HTTP response
     // to WebExtension Example.
-    str = str.replace(/Example/g, 'WebExtension $&');
+    str = str.replace(/Example/g, "WebExtension $&");
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -90,8 +78,8 @@ function listener(details) {
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.com/"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.com/"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 
@@ -104,17 +92,17 @@ function listener(details) {
   let encoder = new TextEncoder();
 
   let data = [];
-  filter.ondata = event => {
-    data.push(decoder.decode(event.data, {stream: true}));
+  filter.ondata = (event) => {
+    data.push(decoder.decode(event.data, { stream: true }));
   };
 
-  filter.onstop = event => {
+  filter.onstop = (event) => {
     data.push(decoder.decode());
 
     let str = data.join("");
     // Just change any instance of Example in the HTTP response
     // to WebExtension Example.
-    str = str.replace(/Example/g, 'WebExtension $&');
+    str = str.replace(/Example/g, "WebExtension $&");
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -122,8 +110,8 @@ function listener(details) {
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.com/"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.com/"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 
@@ -135,17 +123,17 @@ function listener(details) {
   let encoder = new TextEncoder();
 
   let data = [];
-  filter.ondata = event => {
+  filter.ondata = (event) => {
     data.push(event.data);
   };
 
-  filter.onstop = async event => {
-    let blob = new Blob(data, {type: 'text/html'});
+  filter.onstop = async (event) => {
+    let blob = new Blob(data, { type: "text/html" });
     let str = await blob.text();
 
     // Just change any instance of Example in the HTTP response
     // to WebExtension Example.
-    str = str.replace(/Example/g, 'WebExtension $&');
+    str = str.replace(/Example/g, "WebExtension $&");
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -153,8 +141,8 @@ function listener(details) {
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.com/"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.com/"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 
@@ -167,11 +155,11 @@ function listener(details) {
   let encoder = new TextEncoder();
 
   let data = [];
-  filter.ondata = event => {
+  filter.ondata = (event) => {
     data.push(new Uint8Array(event.data));
   };
 
-  filter.onstop = event => {
+  filter.onstop = (event) => {
     let combinedLength = 0;
     for (let buffer of data) {
       combinedLength += buffer.length;
@@ -186,7 +174,7 @@ function listener(details) {
     let str = decoder.decode(combinedArray);
     // Just change any instance of Example in the HTTP response
     // to WebExtension Example.
-    str = str.replace(/Example/g, 'WebExtension $&');
+    str = str.replace(/Example/g, "WebExtension $&");
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -194,13 +182,13 @@ function listener(details) {
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.com/"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.com/"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.StreamFilter.ondata", 10)}}
+{{Compat}}

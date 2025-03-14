@@ -17,7 +17,7 @@ domRect = element.getBoundingClientRect();
 
 El valor devuelto es un objeto {{domxref("DOMRect")}} que es la unión de los rectángulos devueltos por {{domxref("Element.getClientRects", "getClientRects()")}}para el elemento, es decir, las _CSS border-boxes_ asociadas con el elemento. El resultado es el rectángulo más pequeño que contiene al elemento completo, con las propiedades de solo lectura `left`, `top`, `right`, `bottom`, `x`, `y`, `width`, and `height` describiendo la _border-box_ total en pixels. Excepto `width` and `height` las propiedades son relativas a la esquina superior izquierda (_top-left_) de la ventana.
 
-![Explicación de los valores DOMRect](https://mdn.mozillademos.org/files/15087/rect.png)
+![Explicación de los valores DOMRect](element-box-diagram.png)
 
 Las _border-boxes_ vacías son ignoradas. Si todas las _border-boxes_ del elemento estan vacías, entonces se devuelve un rectángulo con `width` and `height` iguales a cero donde el `top` y el `left` son el top-left de la _border-box_ de la primera _CSS box_ (en onden de contenido) para el elemento.
 
@@ -29,11 +29,17 @@ Los scripts que requieran una alta compatibilidad _cross-browser_ pueden usar {{
 
 ```js
 // Para scrollX
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.scrollLeft == 'number' ? t : document.body).scrollLeft
-// Para scrollY
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.scrollTop == 'number' ? t : document.body).scrollTop
+(((t = document.documentElement) || (t = document.body.parentNode)) &&
+typeof t.scrollLeft == "number"
+  ? t
+  : document.body
+).scrollLeft(
+  // Para scrollY
+  ((t = document.documentElement) || (t = document.body.parentNode)) &&
+    typeof t.scrollTop == "number"
+    ? t
+    : document.body,
+).scrollTop;
 ```
 
 ## Ejemplo

@@ -1,31 +1,84 @@
 ---
 title: repeatCount
 slug: Web/SVG/Attribute/repeatCount
-translation_of: Web/SVG/Attribute/repeatCount
+l10n:
+  sourceCommit: 54eb3a678b4d4cbc94588d2234103e74dfa063a0
 ---
 
-« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
+{{SVGRef}}
 
-Данный атрибут задаёт, сколько раз должна выполняться анимация.
+Атрибут **`repeatCount`** указывает, сколько раз будет воспроизводиться анимация.
 
-Значение атрибута определяет количество итераций. Принимаются числа с плавающей точкой, которые интерпретируются как доля итерации. Значение должно быть больше нуля.
+Этот атрибут можно использовать для следующих SVG-элементов:
 
-Возможно также определить бесконечную зацикленную анимацию с помощью ключевого слова "indefinite".
-
-## Контекст использования
-
-| Категория          | Атрибут времени анимации                                                                                            |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------- |
-| Значение           | [\<number>](/en/SVG/Content_type#Number) \| "indefinite" |
-| Анимируемый        | Нет                                                                                                                 |
-| Ссылка на стандарт | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#RepeatCountAttribute)                                 |
-
-{{ page("/en/SVG/Content_type","Number") }}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("animateTransform")}}
+- {{SVGElement("set")}}
 
 ## Пример
 
-## Элементы
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
 
-Данные элементы могут использовать атрибут repeatCount
+```html
+<svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="100" height="100">
+    <animate
+      attributeType="XML"
+      attributeName="y"
+      from="0"
+      to="50"
+      dur="1s"
+      repeatCount="5" />
+  </rect>
+  <rect x="120" y="0" width="100" height="100">
+    <animate
+      attributeType="XML"
+      attributeName="y"
+      from="0"
+      to="50"
+      dur="1s"
+      repeatCount="indefinite" />
+  </rect>
+</svg>
+```
 
-- [Animation elements](/en/SVG/Element#Animation)
+{{EmbedLiveSample("Пример", "220", "150")}}
+
+## Примечания по использованию
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Значение</th>
+      <td>{{cssxref("number")}} | <code>indefinite</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Значение по умолчанию</th>
+      <td><em>Отсутствует</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Анимируемый</th>
+      <td>Нет</td>
+    </tr>
+  </tbody>
+</table>
+
+- `<number>`
+  - : Это значение определяет количество повторений. Оно может включать частичные итерации, выраженные в виде дробных значений. Дробное значение описывает часть простой анимации. Значение должно быть больше `0`.
+- `indefinite`
+  - : Это значение указывает, что анимация будет повторяться бесконечно (то есть пока документ открыт).
+
+## Спецификации
+
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}

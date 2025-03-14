@@ -1,14 +1,8 @@
 ---
 title: Storage.key()
 slug: Web/API/Storage/key
-tags:
-  - API
-  - Method
-  - Reference
-  - Storage
-  - Web Storage
-browser-compat: api.Storage.key
 ---
+
 {{APIRef("Web Storage API")}}
 
 Метод **`key()`** интерфейса {{domxref("Storage")}} получает числовое значение n и возвращает имя n-ого ключа из данного объекта `Storage`. Порядок ключей зависит от реализации браузера, поэтому лучше не полагаться на него.
@@ -48,13 +42,14 @@ for (var i = 0; i < localStorage.length; i++) {
 }
 ```
 
-> **Примечание:** более реалистичный пример использования функции показан на странице [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> [!NOTE]
+> Более реалистичный пример использования функции показан на странице [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

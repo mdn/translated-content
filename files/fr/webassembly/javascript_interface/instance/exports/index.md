@@ -1,24 +1,14 @@
 ---
 title: WebAssembly.Instance.prototype.exports
 slug: WebAssembly/JavaScript_interface/Instance/exports
-tags:
-  - API
-  - Experimental
-  - JavaScript
-  - Propriété
-  - Reference
-  - WebAssembly
-  - instance
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 La propriété **`exports`** du prototype de {{jsxref("WebAssembly.Instance")}} est une propriété en lecture seul qui renvoie un objet dont les propriétés sont les différentes fonctions exportées depuis l'instance du module WebAssembly. Cela permet d'y accéder et de les manipuler en JavaScript.
 
 ```js
-instance.exports
+instance.exports;
 ```
 
 ## Exemples
@@ -28,16 +18,18 @@ Après avoir récupéré le _bytecode_ WebAssembly grâce à la méthode `fetch(
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj => obj.instance.exports.exported_func());
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (obj) => obj.instance.exports.exported_func(),
+);
 ```
 
-> **Note :** Voir le fichier [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) sur GitHub (ainsi que [la démonstration](https://mdn.github.io/webassembly-examples/js-api-examples/)) pour un exemple.
+> [!NOTE]
+> Voir le fichier [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) sur GitHub (ainsi que [la démonstration](https://mdn.github.io/webassembly-examples/js-api-examples/)) pour un exemple.
 
 ## Spécifications
 

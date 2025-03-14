@@ -1,7 +1,9 @@
 ---
 title: 可緩存
-slug: Glossary/cacheable
+slug: Glossary/Cacheable
 ---
+
+{{GlossarySidebar}}
 
 **可緩存**的響應是可被緩存的 HTTP 響應，它被存儲以供稍後檢索和使用，從而將新的請求保存在伺服器。不是所有的 HTTP 響應都可以被緩存，可以被緩存的 HTTP 響應需滿足如下列條件:
 

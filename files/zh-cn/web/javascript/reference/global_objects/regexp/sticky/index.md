@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 
 **`sticky`** 属性反映了搜索是否具有粘性（仅从正则表达式的 {{jsxref("RegExp.lastIndex", "lastIndex")}} 属性表示的索引处搜索）。`sticky` 是正则表达式对象的只读属性。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-sticky.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.sticky", "taller")}}
+
+```js interactive-example
+const str1 = "table football";
+const regex1 = new RegExp("foo", "y");
+
+regex1.lastIndex = 6;
+
+console.log(regex1.sticky);
+// Expected output: true
+
+console.log(regex1.test(str1));
+// Expected output: true
+
+console.log(regex1.test(str1));
+// Expected output: false
+```
 
 {{js_property_attributes(0, 0, 1)}}
 
@@ -17,12 +33,12 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 
 你不能直接更改这个属性，它是只读的。
 
-## 例子
+## 示例
 
 ### 使用带 sticky 标志的正则表达式
 
 ```js
-var str = '#foo#';
+var str = "#foo#";
 var regex = /foo/y;
 
 regex.lastIndex = 1;
@@ -34,7 +50,7 @@ regex.lastIndex; // 0（匹配失败后重置）
 
 ### 锚定的 sticky 标志
 
-火狐的 SpiderMonkey 引擎的几个版本有一个 [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=773687)，处理 `^` 断言和 sticky 标志时，会允许使用了 sticky 标志的表达式从 `^` 断言开始匹配，这是不对的。这个 bug 是在 Firefox 3.6 之后的某个版本引入的（which had the sticky flag but not the bug）并于 2015 年修复。可能正因为这个 bug，ES2015 规范 [特别指出](http://www.ecma-international.org/ecma-262/7.0/index.html#sec-assertion)：
+火狐的 SpiderMonkey 引擎的几个版本有一个 [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=773687)，处理 `^` 断言和 sticky 标志时，会允许使用了 sticky 标志的表达式从 `^` 断言开始匹配，这是不对的。这个 bug 是在 Firefox 3.6 之后的某个版本引入的（which had the sticky flag but not the bug）并于 2015 年修复。可能正因为这个 bug，ES2015 规范 [特别指出](https://www.ecma-international.org/ecma-262/7.0/index.html#sec-assertion)：
 
 > 当使用带有 `y` 标识的匹配模式时，^ 断言总是会匹配输入的开始位置或者（如果是多行模式）每一行的开始位置。
 
@@ -43,11 +59,11 @@ regex.lastIndex; // 0（匹配失败后重置）
 ```js
 var regex = /^foo/y;
 regex.lastIndex = 2;
-regex.test("..foo");   // false - 索引 2 不是字符串的开始
+regex.test("..foo"); // false - 索引 2 不是字符串的开始
 
 var regex2 = /^foo/my;
 regex2.lastIndex = 2;
-regex2.test("..foo");  // false - 索引 2 不是字符串或行的开始
+regex2.test("..foo"); // false - 索引 2 不是字符串或行的开始
 regex2.lastIndex = 2;
 regex2.test(".\nfoo"); // true - 索引 2 是行的开始
 ```
@@ -60,7 +76,7 @@ regex2.test(".\nfoo"); // true - 索引 2 是行的开始
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("RegExp.lastIndex")}}
 - {{jsxref("RegExp.prototype.global")}}

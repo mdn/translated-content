@@ -1,7 +1,6 @@
 ---
 title: CSS
 slug: Web/API/CSS
-translation_of: Web/API/CSS
 ---
 
 {{APIRef("CSSOM")}}

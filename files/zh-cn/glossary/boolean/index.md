@@ -1,43 +1,42 @@
 ---
-title: Boolean
+title: 布尔
 slug: Glossary/Boolean
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-在计算机科学中，**布尔值**是一种取值仅能为 _真_ 或 _假_ 的数据类型，它赋予了编程语言在逻辑上表达*真* 或 _假_ 的能力。如果没有这种能力，很多功能将无法被实现。举个例子，JavaScript 中的 _if 语句_ 需要一些判断条件来决定接下来的代码会否被执行，而这些条件，本质上会被解释成一个布尔值。又如 JavaScript 中的 _for 循环_，如果没有一个能够解释成布尔值的判断条件，循环将无法知道自己什么时候该结束。
+{{GlossarySidebar}}
 
-***JavaScript if 语句***
+在计算机科学中，**布尔**（boolean）是一种取值仅能为 `true` 或 `false` 的逻辑数据类型。
+
+例如，在 JavaScript 中，布尔条件经常用于决定要执行的代码段（例如在 [if 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else)中）或重复执行的代码段（例如在 [for 循环](/zh-CN/docs/Web/JavaScript/Reference/Statements/for)中）。
+
+以下是一些 JavaScript 伪代码（它不是真正可执行的代码），演示了这个概念。
 
 ```js
-if(boolean conditional) {
-  //代码
+/* JavaScript if 语句 */
+if (boolean conditional) {
+  // 条件为真时执行的代码
 }
 
-if(true) {
-  console.log("布尔值判断条件被解释为 真");
+if (boolean conditional) {
+  console.log("布尔条件被解析为真");
 } else {
-  console.log("布尔值判断条件被解释为 假");
+  console.log("布尔条件被解析为假");
+}
+
+/* JavaScript for 循环 */
+for (control variable; boolean conditional; counter) {
+  // 条件为真时循环执行的代码
 }
 ```
 
-***JavaScript for 循环***
+布尔值是以英国数学家[乔治·布尔](https://zh.wikipedia.org/wiki/乔治·布尔)命名的，他开创了数理逻辑领域。
 
-```js
-for(control variable; boolean conditional; counter) {
-  //代码
-}
+上面是一个通用介绍。术语布尔在不同的语境下可能有更具体的含义。它可能指：
 
-for(var i=0; i<4; i++) {
-  console.log("只有当布尔值判断条件为 真 的时候才，这段文字才会被打印");
-}
-```
+{{GlossaryDisambiguation}}
 
-## 了解更多
+## 参见
 
-### 通用知识
-
-- 维基百科上的布尔值 [Boolean](https://zh.wikipedia.org/wiki/Boolean_data_type)
-
-### 技术参考文档
-
-- 标准全局对象：{{jsxref("Boolean")}}
-- [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)
+- 维基百科上的[布尔值](<https://zh.wikipedia.org/wiki/布林_(資料類型)>)

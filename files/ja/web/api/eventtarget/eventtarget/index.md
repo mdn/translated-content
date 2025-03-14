@@ -1,18 +1,22 @@
 ---
-title: EventTarget()
+title: "EventTarget: EventTarget() コンストラクター"
+short-title: EventTarget()
 slug: Web/API/EventTarget/EventTarget
+l10n:
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 **`EventTarget()`** コンストラクターは、新しい {{domxref("EventTarget")}} オブジェクトのインスタンスを作成します。
 
-> **メモ:** このコンストラクターを明示的に呼び出すことは、非常にまれです。ほとんどの場合、このコンストラクターは {{domxref("EventTarget")}} から派生したオブジェクトのコンストラクターの中で、 [`super`](/ja/docs/Web/JavaScript/Reference/Operators/super) キーワードによって使用されます。
+> [!NOTE]
+> このコンストラクターを明示的に呼び出すことは、非常にまれです。ほとんどの場合、このコンストラクターは {{domxref("EventTarget")}} から派生したオブジェクトのコンストラクターの中で、 [`super`](/ja/docs/Web/JavaScript/Reference/Operators/super) キーワードによって使用されます。
 
 ## 構文
 
-```js
-new EventTarget();
+```js-nolint
+new EventTarget()
 ```
 
 ### 引数
@@ -25,26 +29,62 @@ new EventTarget();
 
 ## 例
 
+### カウンターの実装
+
+この例では、 `increment()` メソッドと `decrement()` メソッドを持つ `Counter` クラスを実装します。これらのメソッドが呼び出されると、カスタムイベント `"valuechange"` が発生します。
+
+#### HTML
+
+```html
+<button id="dec" aria-label="Decrement">-</button>
+<span id="currentValue">0</span>
+<button id="inc" aria-label="Increment">+</button>
+```
+
+#### JavaScript
+
 ```js
-class MyEventTarget extends EventTarget {
-  constructor(mySecret) {
+class Counter extends EventTarget {
+  constructor(initialValue = 0) {
     super();
-    this._secret = mySecret;
+    this.value = initialValue;
   }
 
-  get secret() { return this._secret; }
-};
+  #emitChangeEvent() {
+    this.dispatchEvent(new CustomEvent("valuechange", { detail: this.value }));
+  }
 
-let myEventTarget = new MyEventTarget(5);
-let value = myEventTarget.secret;  // == 5
-myEventTarget.addEventListener("foo", function(e) {
-  this._secret = e.detail;
+  increment() {
+    this.value++;
+    this.#emitChangeEvent();
+  }
+
+  decrement() {
+    this.value--;
+    this.#emitChangeEvent();
+  }
+}
+
+const initialValue = 0;
+const counter = new Counter(initialValue);
+document.querySelector("#currentValue").innerText = initialValue;
+
+counter.addEventListener("valuechange", (event) => {
+  document.querySelector("#currentValue").innerText = event.detail;
 });
 
-let event = new CustomEvent("foo", { detail: 7 });
-myEventTarget.dispatchEvent(event);
-let newValue = myEventTarget.secret; // == 7
+document.querySelector("#inc").addEventListener("click", () => {
+  counter.increment();
+});
+
+document.querySelector("#dec").addEventListener("click", () => {
+  counter.decrement();
+});
 ```
+
+#### 結果
+
+{{EmbedLiveSample("Implementing a counter")}}
 
 ## 仕様書
 

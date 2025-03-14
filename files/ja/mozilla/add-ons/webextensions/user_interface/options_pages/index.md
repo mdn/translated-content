@@ -20,17 +20,17 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
 オプションページを作成するには、ページを定義する HTML を書きます。このページは通常のページと同様に、 CSS と JavaScript ファイルを入れることができます。このページは、 [favourite-color](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour) の例から取ってきていて、 JavaScript ファイルが含まれています。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
   </head>
 
   <body>
     <form>
       <label>Favorite color</label>
-      <input type="text" id="color"/>
+      <input type="text" id="color" />
       <button type="submit">Save</button>
     </form>
     <script src="options.js"></script>
@@ -38,7 +38,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
 </html>
 ```
 
-このページ内で動く JavaScript は、すべての [WebExtension API](/ja/Add-ons/WebExtensions/API) のうち、アドオンが[権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)を持っているものを使用することができます。特に、設定を保管する [`storage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage) API が利用できます。
+このページ内で動く JavaScript は、すべての [WebExtension API](/ja/docs/Mozilla/Add-ons/WebExtensions/API) のうち、アドオンが[権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)を持っているものを使用することができます。特に、設定を保管する [`storage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage) API が利用できます。
 
 ページファイルを拡張機能の中にパッケージします。
 

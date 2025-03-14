@@ -1,37 +1,53 @@
 ---
-title: Element.removeAttribute()
+title: "Element: метод removeAttribute()"
 slug: Web/API/Element/removeAttribute
-translation_of: Web/API/Element/removeAttribute
+l10n:
+  sourceCommit: 990ab6637bb4d44f059597262cbf3c51abae79eb
 ---
 
 {{ APIRef("DOM") }}
 
-`removeAttribute` удаляет атрибут с элемента.
+Метод **`removeAttribute()`** интерфейса {{domxref("Element")}} удаляет у элемента атрибут с указанным именем.
 
 ## Синтаксис
 
-```
-element.removeAttribute(attrName);
-```
-
-- `attrName` строка, имя атрибута который должен быть удалён с _element_.
-
-## Пример
-
-```
-// <div id="div1" align="left" width="200px">
-document.getElementById("div1").removeAttribute("align");
-// now: <div id="div1" width="200px">
+```js-nolint
+removeAttribute(attrName)
 ```
 
-## Примечания
+### Параметры
 
-Вы должны использовать removeAttribute вместо того, чтобы устанавливать значение атрибута в null, используя [setAttribute](/en/DOM/element.setAttribute).
+- `attrName`
+  - : Строка с именем атрибута для удаления. Если указанный атрибут не существует, метод `removeAttribute()` отработает без ошибки.
 
-Попытка удаления атрибута, которого нет на элементе не вызывает ошибки.
+### Возвращаемое значение
 
-{{ DOMAttributeMethods() }}
+Нет ({{jsxref("undefined")}}).
 
-## Спецификация
+## Примечания по использованию
 
-[DOM Level 2 Core: removeAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6D6AC0F9) (introduced in [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttribute))
+Следует использовать `removeAttribute()` вместо установки атрибуту значения `null`.
+Многие атрибуты будут вести себя не так, как ожидается, если задать им значение `null`.
+
+## Примеры
+
+```js
+// До: <div id="div1" disabled width="200px">
+document.getElementById("div1").removeAttribute("disabled");
+// После: <div id="div1" width="200px">
+```
+
+## Спецификации
+
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{domxref("Element.hasAttribute()")}}
+- {{domxref("Element.getAttribute()")}}
+- {{domxref("Element.setAttribute()")}}
+- {{domxref("Element.toggleAttribute()")}}

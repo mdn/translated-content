@@ -1,31 +1,6 @@
 ---
 title: Guide des types et formats de fichiers d'images
 slug: Web/Media/Formats/Image_types
-tags:
-  - APNG
-  - BMP
-  - Bitmap
-  - Diagrams
-  - File
-  - File Types
-  - Filetype
-  - Graphics
-  - Guide
-  - ICO
-  - Icons
-  - Image
-  - Images
-  - JPEG
-  - JPG
-  - Media
-  - PNG
-  - Photos
-  - SVG
-  - WebP
-  - gif
-  - icon
-translation_of: Web/Media/Formats/Image_types
-original_slug: Web/Media/Formats/Types_des_images
 ---
 
 {{QuickLinksWithSubpages("/fr/docs/Web/Media")}}
@@ -198,7 +173,7 @@ Dans les tableaux ci-dessous, le terme **bits par composante** fait référence 
 
 L'APNG est un format de fichier introduit pour la première fois par Mozilla qui étend le [PNG](#png) pour ajouter le support des images animées. Conceptuellement similaire au format GIF animé qui est utilisé depuis des décennies, l'APNG est plus performant dans la mesure où il prend en charge une variété de [profondeur de couleur](<https://fr.wikipedia.org/wiki/Profondeur_de_couleur_(informatique)>), alors que le GIF animé ne supporte que des [couleurs indexées](https://en.wikipedia.org/wiki/Indexed_color) sur 8 bits.
 
-L'APNG est idéal pour les animations de base qui n'ont pas besoin d'être synchronisées avec d'autres activités ou avec une bande son, comme les indicateurs de progrès, [indicateur d'activité](https://fr.wikipedia.org/wiki/Indicateur_d%27activit%C3%A9), et autres séquences animées. Par exemple, l'APNG est [l'un des formats pris en charge lors de la création d'autocollants animés](https://developer.apple.com/stickers/) pour l'application iMessage d'Apple (et l'application Messages sur iOS). Ils sont également couramment utilisés pour les parties animées des interfaces utilisateur des navigateurs web.
+L'APNG est idéal pour les animations de base qui n'ont pas besoin d'être synchronisées avec d'autres activités ou avec une bande son, comme les indicateurs de progrès, [indicateur d'activité](https://fr.wikipedia.org/wiki/Indicateur_d%27activité), et autres séquences animées. Par exemple, l'APNG est [l'un des formats pris en charge lors de la création d'autocollants animés](https://developer.apple.com/stickers/) pour l'application iMessage d'Apple (et l'application Messages sur iOS). Ils sont également couramment utilisés pour les parties animées des interfaces utilisateur des navigateurs web.
 
 <table class="standard-table">
   <tbody>
@@ -417,7 +392,8 @@ La prise en charge navigateur n'étant pas aussi large que pour les autres forma
 
 Le type de fichier BMP **(image Bitmap)** est le plus répandu sur les ordinateurs Windows, et n'est généralement utilisé que dans des cas particuliers pour les applications et contenus web.
 
-> **Attention :** Vous devriez généralement éviter d'utiliser le BMP pour le contenu des sites web, car ce n'est pas une utilisation généralement acceptée du format.
+> [!WARNING]
+> Vous devriez généralement éviter d'utiliser le BMP pour le contenu des sites web, car ce n'est pas une utilisation généralement acceptée du format.
 
 BMP soutient théoriquement une variété de représentations de données internes. La forme la plus simple, et la plus couramment utilisée, de fichier BMP est une image tramée non compressée, chaque pixel occupant 3 octets représentant ses composantes rouge, verte et bleue, et chaque ligne étant rembourrée avec des `0x00` octets à un multiple de 4 octets de large.
 
@@ -652,11 +628,12 @@ Le format GIF est un bon choix pour les images et les animations simples, bien q
 
 ### ICO (Microsoft Windows icon)
 
-Le format de fichier ICO (Microsoft Windows icon) a été conçu par Microsoft pour les icônes de bureau des systèmes Windows. Cependant, les premières versions d'Internet Explorer ont introduit la possibilité pour un site web de fournir un fichier ICO nommé `favicon.ico` dans le répertoire racine d'un site web pour spécifier un **[favicon](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#ajouter_des_ic%c3%b4nes_personnalis%c3%a9es_%c3%a0_un_site)** — une icône à afficher dans le menu Favoris, et d'autres endroits où une représentation iconique du site serait utile.
+Le format de fichier ICO (Microsoft Windows icon) a été conçu par Microsoft pour les icônes de bureau des systèmes Windows. Cependant, les premières versions d'Internet Explorer ont introduit la possibilité pour un site web de fournir un fichier ICO nommé `favicon.ico` dans le répertoire racine d'un site web pour spécifier un **[favicon](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#ajouter_des_icônes_personnalisées_à_un_site)** — une icône à afficher dans le menu Favoris, et d'autres endroits où une représentation iconique du site serait utile.
 
 Un fichier ICO peut contenir plusieurs icônes, et commence par un répertoire contenant des détails sur chacune d'entre elles. Ce répertoire est suivi des données relatives aux icônes. Les données de chaque icône peuvent être soit une image [BMP](#bmp) sans l'en-tête du fichier, soit une image [PNG](#png) complète (y compris l'en-tête du fichier). Si vous utilisez des fichiers ICO, vous devez utiliser le format BMP, car la prise en charge du format PNG dans les fichiers ICO n'a été ajoutée qu'à partir de Windows Vista et pourrait ne pas être bien prise en charge.
 
-> **Attention :** Les fichiers ICO ne doivent pas être utilisés dans le contenu Web. En outre, leur utilisation pour les favicons a diminué au profit de l'utilisation d'un fichier PNG et de l'élément [`<link>`](/fr/docs/Web/HTML/Element/link), comme décrit dans [cette section](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#ajouter_des_ic%C3%B4nes_personnalis%C3%A9es_%C3%A0_un_site).
+> [!WARNING]
+> Les fichiers ICO ne doivent pas être utilisés dans le contenu Web. En outre, leur utilisation pour les favicons a diminué au profit de l'utilisation d'un fichier PNG et de l'élément [`<link>`](/fr/docs/Web/HTML/Element/link), comme décrit dans [cette section](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#ajouter_des_icônes_personnalisées_à_un_site).
 
 <table class="standard-table">
   <tbody>
@@ -819,7 +796,7 @@ Un fichier ICO peut contenir plusieurs icônes, et commence par un répertoire c
 
 ### JPEG (Joint Photographic Experts Group image)
 
-Le [JPEG](/fr/docs/Glossary/jpeg) (typiquement prononcé "**j-peg**") est actuellement le format de compression avec perte le plus utilisé pour les images fixes. Il est particulièrement utile pour les photographies ; l'application de la compression avec perte au contenu nécessitant de la netteté, comme les diagrammes ou les graphiques, peut produire des résultats insatisfaisants.
+Le [JPEG](/fr/docs/Glossary/JPEG) (typiquement prononcé "**j-peg**") est actuellement le format de compression avec perte le plus utilisé pour les images fixes. Il est particulièrement utile pour les photographies ; l'application de la compression avec perte au contenu nécessitant de la netteté, comme les diagrammes ou les graphiques, peut produire des résultats insatisfaisants.
 
 Le JPEG est en fait un format de données pour les photos compressées, plutôt qu'un type de fichier. La spécification JFIF (JPEG **F**ile **I**nterchange **F**ormat) décrit le format des fichiers que nous considérons comme des images "JPEG".
 
@@ -898,9 +875,9 @@ Le JPEG est en fait un format de données pour les photos compressées, plutôt 
     <tr>
       <th scope="row">Compression</th>
       <td>
-        Sans perte; sur la base de la
+        Avec perte; sur la base de la
         <a
-          href="https://fr.wikipedia.org/wiki/Transform%C3%A9e_en_cosinus_discr%C3%A8te"
+          href="https://fr.wikipedia.org/wiki/Transformée_en_cosinus_discrète"
           >transformée en cosinus discrète</a
         >
       </td>
@@ -916,7 +893,7 @@ Le JPEG est en fait un format de données pour les photos compressées, plutôt 
 
 ### PNG (Portable Network Graphics)
 
-Le [PNG](/fr/docs/Glossary/PNG) (prononcé "**png**") utilise une compression sans perte ou avec perte afin de fournir une compression plus efficace, et prend en charge des profondeurs de couleurs plus élevées que [GIF](#gif), ainsi qu'une transparence alpha complète.
+Le format d'image [PNG](/fr/docs/Glossary/PNG) utilise une compression sans perte, prend en charge des profondeurs de couleurs plus élevées que le [GIF](#gif), est plus efficace, et prend complètement en charge la transparence alpha.
 
 Le format PNG est largement soutenu, tous les principaux navigateurs offrant une prise en charge complète de ses fonctionnalités. Internet Explorer, qui a introduit le support PNG dans les versions 4-5, ne l'a pas entièrement pris en charge avant IE 9, et a connu de nombreux bogues tristement célèbres pendant de nombreuses années, y compris dans l'Internet Explorer 6, autrefois omniprésent. Cela a ralenti l'adoption de la PNG, mais elle est maintenant couramment utilisée, surtout lorsqu'il faut reproduire avec précision l'image source.
 
@@ -1114,7 +1091,7 @@ Les fichiers SVG sont des fichiers texte contenant le code source qui, une fois 
 Le SVG peut être utilisé dans le contenu du web de deux façons :
 
 1. Vous pouvez directement écrire l'élément [`<svg>`](/fr/docs/Web/HTML/Element/svg) dans le HTML, contenant des [éléments SVG](/fr/docs/Web/SVG/Element) pour dessiner l'image.
-2. Vous pouvez afficher une image SVG partout où vous pouvez utiliser les autres types d'images, y compris avec les éléments [`<img>`](/fr/docs/Web/HTML/Element/Img) et [`<image>`](/fr/docs/Web/HTML/Element/image), les propriétés [`background-image`](/fr/docs/Web/CSS/background-image) du CSS, etc.
+2. Vous pouvez afficher une image SVG partout où vous pouvez utiliser les autres types d'images, y compris avec les éléments [`<img>`](/fr/docs/Web/HTML/Element/img) et [`<image>`](/fr/docs/Web/HTML/Element/img), les propriétés [`background-image`](/fr/docs/Web/CSS/background-image) du CSS, etc.
 
 Le SVG est un choix idéal pour les images qui peuvent être représentées à l'aide d'une série de commandes de dessin, en particulier si la taille à laquelle l'image sera rendue est inconnue ou peut varier, puisque le SVG s'adaptera en douceur à la taille souhaitée. Il n'est généralement pas utile pour les images strictement bitmap ou photographiques, bien qu'il soit possible d'inclure des images bitmap dans un SVG.
 
@@ -1613,16 +1590,19 @@ Pour toute image pouvant être représentée par des graphiques vectoriels, le S
 
 ## Fournir des solutions de repli en matière d'image
 
-Alors que l'élément HTML standard [`<img>`](/fr/docs/Web/HTML/Element/Img) ne supporte pas les retours de compatibilité pour les images, l'élément [`<picture>`](/fr/docs/Web/HTML/Element/picture) le fait. `<picture>` est utilisé comme enveloppe pour un certain nombre d'éléments [`<source>`](/fr/docs/Web/HTML/Element/Source), chacun spécifiant une version de l'image dans un format différent ou sous des [conditions @media](/fr/docs/Web/CSS/@media), ainsi qu'un élément `<img>` qui définit où afficher l'image et le retour à la version par défaut ou "la plus compatible".
+Alors que l'élément HTML standard [`<img>`](/fr/docs/Web/HTML/Element/img) ne supporte pas les retours de compatibilité pour les images, l'élément [`<picture>`](/fr/docs/Web/HTML/Element/picture) le fait. `<picture>` est utilisé comme enveloppe pour un certain nombre d'éléments [`<source>`](/fr/docs/Web/HTML/Element/source), chacun spécifiant une version de l'image dans un format différent ou sous des [conditions @media](/fr/docs/Web/CSS/@media), ainsi qu'un élément `<img>` qui définit où afficher l'image et le retour à la version par défaut ou "la plus compatible".
 
 Par exemple, si vous affichez un diagramme mieux affiché avec SVG, mais que vous souhaitez offrir une solution de rechange à un PNG ou GIF du diagramme, vous feriez quelque chose comme ceci :
 
 ```html
 <picture>
-  <source srcset="diagram.svg" type="image/svg+xml">
-  <source srcset="diagram.png" type="image/png">
-  <img src="diagram.gif" width="620" height="540"
-       alt="Diagramme montrant les canaux de données">
+  <source srcset="diagram.svg" type="image/svg+xml" />
+  <source srcset="diagram.png" type="image/png" />
+  <img
+    src="diagram.gif"
+    width="620"
+    height="540"
+    alt="Diagramme montrant les canaux de données" />
 </picture>
 ```
 
@@ -1633,6 +1613,6 @@ Vous pouvez spécifier autant de `<source>`s que vous le souhaitez, bien qu'il v
 - [Guide des types et formats de médias](/fr/docs/Web/Media/Formats)
 - [Technologies media Web](/fr/docs/Web/Media)
 - [Guide des codecs vidéo du Web](/fr/docs/Web/Media/Formats/Video_codecs)
-- Les éléments [HTML](/fr/docs/Glossary/HTML) [`<img>`](/fr/docs/Web/HTML/Element/Img) et [`<picture>`](/fr/docs/Web/HTML/Element/picture)
+- Les éléments [HTML](/fr/docs/Glossary/HTML) [`<img>`](/fr/docs/Web/HTML/Element/img) et [`<picture>`](/fr/docs/Web/HTML/Element/picture)
 - La propriété CSS [`background-image`](/fr/docs/Web/CSS/background-image)
-- Le constructeur [`Image()`](/fr/docs/Web/API/Image) et l'interface [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement)
+- Le constructeur [`Image()`](/fr/docs/Web/API/HTMLImageElement/Image) et l'interface [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement)

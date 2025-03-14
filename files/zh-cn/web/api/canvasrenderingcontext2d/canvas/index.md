@@ -1,17 +1,17 @@
 ---
-title: CanvasRenderingContext2D.canvas
+title: CanvasRenderingContext2D：canvas 属性
 slug: Web/API/CanvasRenderingContext2D/canvas
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.canvas`** 属性是 [Canvas API](/zh-CN/docs/Web/API/Canvas_API) 的一部分，是对与给定上下文关联的{{domxref("HTMLCanvasElement")}}对象的只读引用。如果没有 {{HTMLElement("canvas")}} 元素与之对应，对象值为{{jsxref("null")}} 。
+[Canvas API](/zh-CN/docs/Web/API/Canvas_API) 的 **`CanvasRenderingContext2D.canvas`** 属性是对与给定上下文关联的 {{domxref("HTMLCanvasElement")}} 对象的只读引用。如果没有与之关联的 {{HTMLElement("canvas")}} 元素，对象值为 {{jsxref("null")}}。
 
-## 语法
+## 值
 
-```plain
-ctx.canvas;
-```
+一个 {{domxref("HTMLCanvasElement")}} 对象。
 
 ## 示例
 
@@ -21,15 +21,15 @@ ctx.canvas;
 <canvas id="canvas"></canvas>
 ```
 
-你可以通过 CanvasRenderingContext2D 调用内部的 canvas 属性，获取 canvas 的一个反向引用：
+你可以通过 `CanvasRenderingContext2D` 调用内部的 `canvas` 属性，获取 canvas 元素的引用：
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-ctx.canvas // HTMLCanvasElement
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+ctx.canvas; // HTMLCanvasElement
 ```
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 

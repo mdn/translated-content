@@ -1,14 +1,6 @@
 ---
 title: Le web et ses normes
 slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
-tags:
-  - Beginner
-  - Front-end
-  - Learn
-  - Web
-  - Web Standards
-translation_of: Learn/Getting_started_with_the_web/The_web_and_web_standards
-original_slug: Apprendre/Commencer_avec_le_web/The_web_and_web_standards
 ---
 
 {{learnsidebar}}
@@ -73,7 +65,7 @@ Vous êtes probablement en train de lire ces mots à l'aide d'un navigateur web 
 
 ### HTTP
 
-Hypertext Transfer Protocol, ou [HTTP](/fr/docs/Web/HTTP/Basics_of_HTTP), est un protocole de communication permettant aux navigateurs web de communiquer avec des serveurs web (qui hébergent les sites web). Une conversation type ressemble à quelque chose comme
+Hypertext Transfer Protocol, ou [HTTP](/fr/docs/conflicting/Web/HTTP), est un protocole de communication permettant aux navigateurs web de communiquer avec des serveurs web (qui hébergent les sites web). Une conversation type ressemble à quelque chose comme
 
 ```
 "Bonjour Serveur Web. Peux-tu me fournir les fichiers requis pour afficher bbc.co.uk"?
@@ -96,7 +88,7 @@ La véritable syntaxe des messages HTTP (appelés requêtes et réponses) ne res
 
   <p>Voilà un paragraphe de texte</p>
 
-  <img src="chat.jpg" alt="Une image de mon chat">
+  <img src="chat.jpg" alt="Une image de mon chat" />
   ```
 
   Si nous faisions une analogie avec la construction d'une maison, le HTML serait les fondations et les murs de la maison, qui lui fournissent une architecture et maintien l'ensemble d'un bloc.
@@ -104,7 +96,7 @@ La véritable syntaxe des messages HTTP (appelés requêtes et réponses) ne res
 - Les Feuilles de Style en cascade (**CSS** - Cascading Style Sheets) est un langage basé sur un ensemble de règles et utilisé pour appliquer des styles à votre HTML, par exemple pour définir la couleur du texte et de l'arrière-plan, ajouter des bordures, animer des éléments, ou agencer les différentes parties d'une page. Par exemple, le code suivant rendrait notre paragraphe HTML rouge:
 
   ```css
-  p  {
+  p {
     color: red;
   }
   ```
@@ -124,7 +116,7 @@ La véritable syntaxe des messages HTTP (appelés requêtes et réponses) ne res
 
 Une fois que vous maîtriserez les technologies "brutes" qui permettent de construire des pages web (comme HTML, CSS, et JavaScript), vous rencontrerez rapidement divers outils permettant de faciliter ou d'accélerer votre travail. On peut citer comme exemples :
 
-- Les [outils de développement](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) des navigateurs modernes qui permettent de déboguer votre code.
+- Les [outils de développement](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) des navigateurs modernes qui permettent de déboguer votre code.
 - [Des outils de test](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing) pouvant être utilisés afin de vérifier si votre code se comporte comme vous l'aviez prévu.
 - Des bibliothèques et des cadres de travail (frameworks) basés sur JavaScript qui permettent de créer certains types de sites web beaucoup plus rapidement et efficacement .
 - Ce qu'on appelle les "Linters", des outils d'analyse qui prennent une liste de règles, parcourent votre code et listent les endroits où vous n'avez pas parfaitement suivi les règles.
@@ -163,4 +155,4 @@ Vous rencontrerez les concepts suivants à un moment donné de vos études.
 ## Voir aussi
 
 - [Histoire du World Wide Web](https://fr.wikipedia.org/wiki/World_Wide_Web#Histoire)
-- [Le fonctionnement de l'Internet](/fr/docs/Learn/Common_questions/How_does_the_Internet_work)
+- [Le fonctionnement de l'Internet](/fr/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)

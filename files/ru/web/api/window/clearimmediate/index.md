@@ -1,45 +1,52 @@
 ---
-title: Window.clearImmediate()
+title: "Window: метод clearImmediate()"
 slug: Web/API/Window/clearImmediate
-tags:
-  - API
-  - DOM
-  - метод
-translation_of: Web/API/Window/clearImmediate
+l10n:
+  sourceCommit: 44cf523714745d626317192bfbe849b47144f3ab
 ---
 
-{{ Apiref() }}
+{{APIRef("HTML DOM")}} {{deprecated_header}}{{non-standard_header}}
 
-Данный метод очищает действие, определённое {{ domxref("window.setImmediate") }}.
-
-> **Примечание:** На текущий момент данный метод находится на стадии предложения на внедрение, не является стандартом и имплементирован только в последних сборках Internet Explorer.
+Данный метод очищает действие, определённое методом {{DOMxRef("window.setImmediate")}}.
 
 ## Синтаксис
 
-```
-window.clearImmediate(immediateID)
+```js-nolint
+clearImmediate(immediateID)
 ```
 
-где immediateID это идентификатор, возвращаемый из {{ domxref("window.setImmediate") }}.
+### Параметры
+
+- `immediateID`
+
+  - : ID, возвращаемый {{DOMxRef("window.setImmediate")}}.
+
+### Возвращаемое значение
+
+Нет ({{jsxref("undefined")}}).
 
 ## Примеры
 
-```
-var immediateID = setImmediate(function () {
-  // Выполнение некоего кода
-}
+```js
+let immediateID = setImmediate(() => {
+  // Выполнение необходимого кода
+});
 
-document.getElementById("button").addEventListener(function () {
+document.getElementById("button").addEventListener(() => {
   clearImmediate(immediateID);
-}, false);
+});
 ```
 
-## Поддержка браузерами
+## Спецификации
+
+Не является частью какой-либо спецификации.
+Спецификация [Efficient Script Yielding](https://w3c.github.io/setImmediate/#si-setImmediate) больше не разрабатывается.
+
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-{{ domxref("window.setImmediate") }}
-
-{{ spec("https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/setImmediate/Overview.html", "Specification: Efficient Script Yielding") }}
+- [Полифил `clearImmediate` в `core-js`](https://github.com/zloirock/core-js#setimmediate)
+- {{DOMxRef("Window.setImmediate()")}}

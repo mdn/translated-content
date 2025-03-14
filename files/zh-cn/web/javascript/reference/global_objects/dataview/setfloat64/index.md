@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat64
 
 **`setFloat64()`** 从 [`DataView`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView) 起始位置以 byte 为计数的指定偏移量 (byteOffset) 处储存一个 64-bit 数 (双精度浮点型)。
 
-{{EmbedInteractiveExample("pages/js/dataview-setfloat64.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.setFloat64()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setFloat64(1, Math.PI);
+
+console.log(view.getFloat64(1));
+// Expected output: 3.141592653589793
+```
 
 ## 语法
 
@@ -33,7 +44,7 @@ dataview.setFloat64(byteOffset, value [, littleEndian])
 - {{jsxref("RangeError")}}
   - : 如果 byteOffset 超出了视图能储存的值，就会抛出错误。
 
-## 例子
+## 示例
 
 ```js
 var buffer = new ArrayBuffer(8);

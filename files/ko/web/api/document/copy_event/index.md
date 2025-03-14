@@ -1,17 +1,8 @@
 ---
-title: 'Document: copy 이벤트'
+title: "Document: copy 이벤트"
 slug: Web/API/Document/copy_event
-tags:
-  - API
-  - Clipboard API
-  - Document
-  - Event
-  - Reference
-  - Web
-  - copy
-browser-compat: api.Document.copy_event
-translation_of: Web/API/Document/copy_event
 ---
+
 {{APIRef}}
 
 **`copy`** 이벤트는 사용자가 브라우저의 사용자 인터페이스를 통해 복사했을 때 발생합니다.
@@ -42,8 +33,8 @@ translation_of: Web/API/Document/copy_event
 ## 예제
 
 ```js
-document.addEventListener('copy', (event) => {
-    console.log('복사 동작 실행')
+document.addEventListener("copy", (event) => {
+  console.log("복사 동작 실행");
 });
 ```
 

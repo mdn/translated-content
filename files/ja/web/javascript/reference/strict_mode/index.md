@@ -2,12 +2,13 @@
 title: 厳格モード
 slug: Web/JavaScript/Reference/Strict_mode
 l10n:
-  sourceCommit: b251bec337a8059d2241b0cb8b2648986c55f1f7
+  sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{JsSidebar("More")}}
+{{jsSidebar("More")}}
 
-> **メモ:** 既定の厳格でないモードを _[Sloppy モード](/ja/docs/Glossary/Sloppy_mode)_ と呼ぶのを目にすることがあるかもしれません。これは公式な用語ではありません、念のため注意してください。
+> [!NOTE]
+> 既定の厳格でないモードを _[Sloppy モード](/ja/docs/Glossary/Sloppy_mode)_ と呼ぶのを目にすることがあるかもしれません。これは公式な用語ではありません、念のため注意してください。
 
 JavaScript の厳格モード (Strict mode) は、 JavaScript の自由度を制限することに**オプトイン**することによって、暗黙のうちに [Sloppy モード](/ja/docs/Glossary/Sloppy_mode)からオプトアウトする方法です。厳格モードは単なるサブセットではなく、通常のコードとは**意図的に**異なる意味を持っています。厳格モードに対応していないブラウザーは、厳格モードに対応しているブラウザーとは異なる動作をする可能性がありますので、厳格モードに関する側面に対応しているかどうかの機能テストを行わずに厳格モードを頼らないでください。厳格モードのコードと非厳格モードのコードは共存できますので、スクリプトを順次厳格モードにオプトインすることができます。
 
@@ -19,7 +20,7 @@ JavaScript の厳格モード (Strict mode) は、 JavaScript の自由度を制
 
 ## 厳格モードの呼び出し
 
-厳格モードは**スクリプト全体**または**個別の関数**に適用できます。中括弧 `{}` で括られる[ブロック構文](/ja/docs/Web/JavaScript/Reference/Statements/block)には適用できません。そのような場所に適用しようとしても何も起きません。[`eval`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) のコード、 [`Function`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) のコード、[イベントハンドラー](/ja/docs/Web/HTML/Attributes#event_handler_attributes)属性、[`setTimeout()`](/ja/docs/Web/API/setTimeout) などの関数に渡す文字列は、関数の本体またはスクリプト全体であり、厳格モードを呼び出すと期待どおりに動作します。
+厳格モードは**スクリプト全体**または**個別の関数**に適用できます。中括弧 `{}` で括られる[ブロック構文](/ja/docs/Web/JavaScript/Reference/Statements/block)には適用できません。そのような場所に適用しようとしても何も起きません。[`eval`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) のコード、 [`Function`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) のコード、[イベントハンドラー](/ja/docs/Web/HTML/Attributes#event_handler_attributes)属性、[`setTimeout()`](/ja/docs/Web/API/Window/setTimeout) などの関数に渡す文字列は、関数の本体またはスクリプト全体であり、厳格モードを呼び出すと期待どおりに動作します。
 
 ### スクリプトでの厳格モード
 
@@ -49,9 +50,9 @@ function myNotStrictFunction() {
 }
 ```
 
-`"use strict"` ディレクティブは、単純な引数を持つ関数の本体にのみ使用することができます。 `"use strict"` を[残余](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[分割](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)引数のある関数で使用すると、[構文エラー](/ja/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params)となります。
+`"use strict"` ディレクティブは、単純な引数を持つ関数の本体にのみ使用することができます。 `"use strict"` を[残余](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[分割](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)引数のある関数で使用すると、[構文エラー](/ja/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params)となります。
 
-```js example-bad
+```js-nolint example-bad
 function sum(a = 1, b = 2) {
   // SyntaxError: "use strict" not allowed in function with default parameter
   "use strict";
@@ -65,14 +66,14 @@ function sum(a = 1, b = 2) {
 
 ```js
 function myStrictFunction() {
-    // これはモジュールなので、既定で厳格モードです
+  // これはモジュールなので、既定で厳格モードです
 }
 export default myStrictFunction;
 ```
 
 ### クラスでの厳格モード
 
-[クラス](/ja/docs/Web/JavaScript/Reference/Classes)本体のすべての部分は、[クラス定義](/ja/docs/Web/JavaScript/Reference/Classes#class_declarations)でも[クラス式](/ja/docs/Web/JavaScript/Reference/Classes#class_expressions)でも、厳格モードのコードになります。
+[クラス](/ja/docs/Web/JavaScript/Reference/Classes)本体のすべての部分は、[クラス宣言](/ja/docs/Web/JavaScript/Reference/Statements/class)でも[クラス式](/ja/docs/Web/JavaScript/Reference/Operators/class)でも、厳格モードのコードになります。
 
 ```js
 class C1 {
@@ -133,8 +134,8 @@ mistypeVarible = 17;
 "use strict";
 
 // 書き換え不可能なグローバルへの代入
-var undefined = 5; // TypeError が発生
-var Infinity = 5; // TypeError が発生
+undefined = 5; // TypeError
+Infinity = 5; // TypeError
 
 // 書き換え不可能なプロパティへの代入
 const obj1 = {};
@@ -167,7 +168,7 @@ delete [].length; // TypeError
 
 厳格モードでは、素の名前を削除することも禁じられています。 `delete name` は厳格モードでは構文エラーになります。
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 
 var x;
@@ -186,7 +187,7 @@ delete globalThis.x;
 
 厳格モードでは、関数の引数名が一意であることが要求されます。厳格モードでない場合は、引数の名前が重複していると、同じ名前の前の引数が見えなくなります。こうした前の引数は [`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments) を通せば利用可能なので、完全にアクセスできないわけではありません。しかし、この隠蔽はほとんど意味がなく、おそらく望ましくないものです（例えば、タイプミスを隠してしまうかもしれません）。したがって、厳格モードでは引数名が重複すると構文エラーになります。
 
-```js example-bad
+```js-nolint example-bad
 function sum(a, a, c) {
   // 構文エラー
   "use strict";
@@ -196,9 +197,9 @@ function sum(a, a, c) {
 
 #### 古い 8 進数リテラル
 
-厳格モードでは、[`0` を先頭とした 8 進数表記や 8 進数エスケープシーケンスを禁止](/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_octal)します。厳格モード以外では、 `0644` のような `0` で始まる数値は、すべての桁が 8 より小さい場合、 8 進数 (`0644 === 420`) として解釈されます。初心者の開発者は、接頭辞に何の意味もないと信じて、配置用の器具として使用することがありますが、これは数字の意味を変えてしまいます。 8 進数の先頭ゼロの構文はほとんど有益なものではなく、間違って使用される可能性があるため、厳格モードでは構文エラーとなります。
+厳格モードでは、[`0` を先頭とした 8 進数表記や 8 進数エスケープシーケンスを禁止](/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal)します。厳格モード以外では、 `0644` のような `0` で始まる数値は、すべての桁が 8 より小さい場合、 8 進数 (`0644 === 420`) として解釈されます。初心者の開発者は、接頭辞に何の意味もないと信じて、配置用の器具として使用することがありますが、これは数字の意味を変えてしまいます。 8 進数の先頭ゼロの構文はほとんど有益なものではなく、間違って使用される可能性があるため、厳格モードでは構文エラーとなります。
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 const sum =
   015 + // 構文エラー
@@ -213,7 +214,7 @@ const sumWithOctal = 0o10 + 8;
 console.log(sumWithOctal); // 16
 ```
 
-8 進数の拡張 ASCII 文字コード番号で文字を表わすために、 `"%"` と等しい `"\45"` のような 8 進数のエスケープシーケンスが使用できます。厳格モードでは、これは構文エラーになります。より正式には、 `\` に続いて `0` 以外の数字を続けたり `\0` に数字を続けたりすることは許されていません。例えば `\9` や `\07` の形は許されません。
+8 進数の拡張 {{Glossary("ASCII")}} 文字コード番号で文字を表わすために、 `"%"` と等しい `"\45"` のような 8 進数のエスケープシーケンスが使用できます。厳格モードでは、これは構文エラーになります。より正式には、 `\` に続いて `0` 以外の数字を続けたり `\0` に数字を続けたりすることは許されていません。例えば `\9` や `\07` の形は許されません。
 
 #### プリミティブ値へのプロパティの設定
 
@@ -236,7 +237,8 @@ false.true = ""; // TypeError
 const o = { p: 1, p: 2 }; // ECMAScript 2015 以前では構文エラー
 ```
 
-> **メモ:** これまでエラーとされていたコードをエラーでなくすこと、常に後方互換性があるものと見なされます。これは、言語がエラーを発生させることに厳格であることの良い部分であり、将来の意味づけの変更のための余地を残しています。
+> [!NOTE]
+> これまでエラーとされていたコードをエラーでなくすこと、常に後方互換性があるものと見なされます。これは、言語がエラーを発生させることに厳格であることの良い部分であり、将来の意味づけの変更のための余地を残しています。
 
 ### スコープ管理の単純化
 
@@ -246,7 +248,7 @@ const o = { p: 1, p: 2 }; // ECMAScript 2015 以前では構文エラー
 
 厳格モードでは [`with`](/ja/docs/Web/JavaScript/Reference/Statements/with) を禁止しています。`with` の問題点は、ブロック内にある名前を、渡されたオブジェクトのプロパティまたはブロックの周囲（あるいはグローバル）のスコープへ実行時に対応づけることです。これは事前に行うことができません。厳格モードでは `with` をエラーとすることで、 `with` 内にある名前の指す場所が実行時に不明になる可能性をなくします。
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 const x = 17;
 with (obj) {
@@ -272,7 +274,7 @@ console.assert(x === 17);
 console.assert(evalX === 42);
 ```
 
-`eval()` に渡された文字列が厳格なモードで評価されるかどうかは、 `eval()` の起動方法（直接 eval か間接 eval か）に依存します。詳細は [`eval`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) のリファレンスページを参照してください。
+`eval()` に渡された文字列が厳格なモードで評価されるかどうかは、 `eval()` の起動方法（[直接 eval か間接 eval か](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval#直接的または間接的な_eval)）に依存します。
 
 #### ブロックスコープ付き関数宣言
 
@@ -282,11 +284,11 @@ JavaScript の言語仕様では、当初からブロック文の中に関数宣
 
 厳格モードでは [`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments) および [`eval`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) の奇妙さを低減します。通常のコードではどちらも不思議な動作がかなりあります。 `eval` でバインドを追加や削除したり、バインドする値を変更したり、 `arguments` の添字つきプロパティが名前付き引数の別名になることです。厳格モードでは、 `eval` と `arguments` をキーワードとして扱うことに大きく舵を切りました。
 
-#### eval や arguments にバインドしたり代入したりしないようにする。
+#### eval や arguments にバインドしたり代入したりしないようにする
 
 `eval` および `arguments` という名前に対して言語構文でのバインドや代入を不可にしています。以下のような試みはすべて構文エラーになります。
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 eval = 17;
 arguments++;
@@ -333,7 +335,7 @@ console.assert(fun() === undefined);
 console.assert(fun.call(2) === 2);
 console.assert(fun.apply(null) === null);
 console.assert(fun.call(undefined) === undefined);
-console.assert(fun.bind(true)());
+console.assert(fun.bind(true)() === true);
 ```
 
 #### 積み重ねプロパティの削除
@@ -394,7 +396,7 @@ f(); // TypeError が発生
 - [`eval`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) や [`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments) を変数名や関数の引数名に使用
 - 新しい[予約語](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#予約語)の使用（将来的な言語機能を見据えて): `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`, `yield`
 - 関数の 2 つの引数を同じ名前で定義 `function f(a, b, b) {}`
-- オブジェクトリテラルで、同じプロパティ名を二重に宣言 `{a: 1, b: 3, a: 7}`。この制限は後に取り除かれました（[バグ 1041128](https://bugzilla.mozilla.org/show_bug.cgi?id=1041128)）。
+- オブジェクトリテラルで、同じプロパティ名を二重に宣言 `{a: 1, b: 3, a: 7}`。この制限は後に取り除かれました（[バグ 1041128](https://bugzil.la/1041128)）。
 
 これらのエラーは、明白な誤りや悪しき習慣を明らかにするものであり、良いものです。これらのエラーはコードが実行される前に発生するので、コードがランタイムによって解釈される限り、容易に発見することができます。
 
@@ -420,7 +422,11 @@ JavaScript で使用される場合、これまでエラーとされるべき状
 - ブロックスコープ付き関数宣言
   - : 厳格モードでない場合、ブロック内の関数宣言はブロックの外側でも見ることができ、呼び出しも可能です。厳格モードでは、ブロック内の関数宣言はブロックの内部でしか見ることができません。
 
+## 仕様書
+
+{{Specifications}}
+
 ## 関連情報
 
-- [Strict Mode Code in the ECMAScript specification](https://tc39.es/ecma262/#sec-strict-mode-code)
-- [Strict mode compatibility table](https://kangax.github.io/compat-table/es5/#Strict_mode)
+- [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)ガイド
+- [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar)

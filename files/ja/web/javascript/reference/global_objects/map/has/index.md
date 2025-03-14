@@ -1,24 +1,37 @@
 ---
 title: Map.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Map/has
+l10n:
+  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
 ---
 
 {{JSRef}}
 
 **`has()`** メソッドは、指定されたキーに対する要素が存在するかどうかを示す論理値を返します。
 
-{{EmbedInteractiveExample("pages/js/map-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.has()")}}
+
+```js interactive-example
+const map1 = new Map();
+map1.set("bar", "foo");
+
+console.log(map1.has("bar"));
+// Expected output: true
+
+console.log(map1.has("baz"));
+// Expected output: false
+```
 
 ## 構文
 
-```
-myMap.has(key)
+```js-nolint
+has(key)
 ```
 
 ### 引数
 
 - `key`
-  - : `Map` オブジェクト内に存在するかテストするための要素のキーです。
+  - : `Map` オブジェクト内に存在するかテストする要素のキーです。
 
 ### 返値
 
@@ -29,11 +42,11 @@ myMap.has(key)
 ### has() の使用
 
 ```js
-let myMap = new Map()
-myMap.set('bar', "foo")
+const myMap = new Map();
+myMap.set("bar", "foo");
 
-myMap.has('bar')   // returns true
-myMap.has('baz')   // returns false
+console.log(myMap.has("bar")); // true
+console.log(myMap.has("baz")); // false
 ```
 
 ## 仕様書
@@ -42,7 +55,7 @@ myMap.has('baz')   // returns false
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Map.has")}}
+{{Compat}}
 
 ## 関連情報
 

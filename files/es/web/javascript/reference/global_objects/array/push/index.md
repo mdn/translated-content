@@ -1,21 +1,27 @@
 ---
 title: Array.prototype.push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
-tags:
-  - Array
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/push
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/push
 ---
 
 {{JSRef}}
 
 El método **`push()`** añade uno o más elementos al final de un array y devuelve la nueva longitud del array.
 
-{{EmbedInteractiveExample("pages/js/array-push.html")}}
+{{InteractiveExample("JavaScript Demo: Array.push()")}}
+
+```js interactive-example
+const animals = ["pigs", "goats", "sheep"];
+
+const count = animals.push("cows");
+console.log(count);
+// Expected output: 4
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows"]
+
+animals.push("chickens", "cats", "dogs");
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+```
 
 ## Sintaxis
 
@@ -47,11 +53,11 @@ Los únicos objetos nativos que se asemejen al array son {{jsxref("Global_Object
 El siguiente código crea el array `sports` que contiene dos elementos, luego añade 2 elementos más. Tras ejecutar el código, `sports` contiene 4 elementos: "soccer", "baseball", "football" and "swimming".
 
 ```js
-var sports = ['soccer', 'baseball'];
-var total = sports.push('football', 'swimming');
+var sports = ["soccer", "baseball"];
+var total = sports.push("football", "swimming");
 
 console.log(sports); // ['soccer', 'baseball', 'football', 'swimming']
-console.log(total);  // 4
+console.log(total); // 4
 ```
 
 ### Uniendo dos arrays
@@ -61,8 +67,8 @@ This example uses {{jsxref("Function.apply", "apply()")}} to push all elements f
 Do _not_ use this method if the second array (`moreVegs` in the example) is very large, because the maximum number of parameters that one function can take is limited in practice. See {{jsxref("Function.apply", "apply()")}} for more details.
 
 ```js
-var vegetables = ['parsnip', 'potato'];
-var moreVegs = ['celery', 'beetroot'];
+var vegetables = ["parsnip", "potato"];
+var moreVegs = ["celery", "beetroot"];
 
 // Merge the second array into the first one
 // Equivalent to vegetables.push('celery', 'beetroot');
@@ -77,13 +83,13 @@ Como se menciona anteriormente, `push` es intencionadamente genérico, y podemos
 
 ```js
 var obj = {
-    length: 0,
+  length: 0,
 
-    addElem: function addElem(elem) {
-        // obj.length is automatically incremented
-        // every time an element is added.
-        [].push.call(this, elem);
-    }
+  addElem: function addElem(elem) {
+    // obj.length is automatically incremented
+    // every time an element is added.
+    [].push.call(this, elem);
+  },
 };
 
 // Let's add some empty objects just to illustrate.
@@ -99,9 +105,9 @@ Tenga en cuenta que aunque `obj` no es un array, el método `push` ha incrementa
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.push")}}
+{{Compat}}
 
 ## Ver también
 

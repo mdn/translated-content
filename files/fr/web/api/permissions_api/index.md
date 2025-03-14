@@ -1,14 +1,14 @@
 ---
 title: Permissions API
 slug: Web/API/Permissions_API
-translation_of: Web/API/Permissions_API
 ---
 
 {{DefaultAPISidebar("Permissions API")}}
 
 L'API Permissions fournit une manière cohérente pour connaître, dans un programme, le statut des permissions dans le contexte courant. On pourra par exemple utiliser cette API afin de déterminer si la permission d'accéder à une API donnée a été accordée ou refusée.
 
-> **Note :** Cette fonctionnalité est disponible via [les Web Workers](/fr/docs/Web/API/Web_Workers_API) bien que les versions actuelles de Firefox n'implémentent pas [WorkerNavigator.permissions](/fr/docs/Web/API/WorkerNavigator/permissions).
+> [!NOTE]
+> Cette fonctionnalité est disponible via [les Web Workers](/fr/docs/Web/API/Web_Workers_API) bien que les versions actuelles de Firefox n'implémentent pas [WorkerNavigator.permissions](/fr/docs/Web/API/WorkerNavigator/permissions).
 
 ## Concepts et usages
 
@@ -48,7 +48,7 @@ Vous pouvez également en lire plus sur le fonctionnement de cet exemple dans l'
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Permissions")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -57,5 +57,5 @@ Vous pouvez également en lire plus sur le fonctionnement de cet exemple dans l'
 
   [<i lang="en">Using the Permissions API to Detect How Often Users Allow or Deny Camera Access</i> (en anglais)](https://blog.addpipe.com/using-permissions-api-to-detect-getusermedia-responses/)
 
-- [`Notification.permission`](/fr/docs/Web/API/notification/permission)
+- [`Notification.permission`](/fr/docs/Web/API/Notification/permission_static)
 - [Confidentialité, permissions et sécurité de l'information](/fr/docs/Web/Privacy)

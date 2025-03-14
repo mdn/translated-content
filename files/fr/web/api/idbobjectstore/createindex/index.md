@@ -1,14 +1,14 @@
 ---
 title: IDBObjectStore.createIndex()
 slug: Web/API/IDBObjectStore/createIndex
-translation_of: Web/API/IDBObjectStore/createIndex
 ---
 
 {{ APIRef("IndexedDB") }}
 
 La méthode **`createIndex()`** de l'interface {{domxref("IDBObjectStore")}} met en place sur le magasin d'objet {{domxref("IDBObjectStore","relié")}} un nouvel index et en renvoie l'{{domxref("IDBIndex","accès")}}.
 
-> **Note :** Cette méthode ne peut être appelé que si la transaction de l'accès au magasin d'objet est en mode VersionChange.
+> [!NOTE]
+> Cette méthode ne peut être appelé que si la transaction de l'accès au magasin d'objet est en mode VersionChange.
 
 {{AvailableInWorkers}}
 
@@ -57,7 +57,7 @@ objectStore.createIndex(nomIndex, nomCle, parametresIndexOptionnel);
               opérations de tri effectuées sur les données via des intervalle de clé
               obéirons aux règles locales de tri (voir
               <a
-                href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#Locale-aware_sorting"
+                href="/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB#Locale-aware_sorting"
                 >trie dans localisation courante</a
               >, en). Vous pouvez spécifier sa valeur de trois façons différentes:
             </p>
@@ -89,7 +89,7 @@ L'{{domxref("IDBIndex","accès")}} au nouvel index.
 - `InvalidStateError`
   - : Cette {{domxref("DOMException","exeption")}} si la {{domxref("IDBTransaction","transaction")}} dont dépend cet {{domxref("IDBObjectStore","accès")}} au magasin d'objet n'est pas en {{domxref("IDBTransaction.mode","mode")}} `versionchange`.
 - `TransactionInactiveError`
-  - : Cette {{domxref("DOMException","exeption")}} si la {{domxref("IDBTransaction","transaction")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d’objet est inactive.
+  - : Cette {{domxref("DOMException","exeption")}} si la {{domxref("IDBTransaction","transaction")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d'objet est inactive.
     [bug 1176165](https://bugzilla.mozilla.org/show_bug.cgi?id=1176165) ).
 - `ConstraintError`
   - : Cette {{domxref("DOMException","exeption")}} si un index avec le même nom (case sensible) existe déjà sur le magasin d'objet.
@@ -107,13 +107,13 @@ var db;
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // Gère l'échec de l'ouverture de la base
-DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '<li>La base de donnée n\'as pas peut être ouverte.</li>';
+DBOpenRequest.onerror = function (event) {
+  note.innerHTML += "<li>La base de donnée n'as pas peut être ouverte.</li>";
 };
 
 // Gère le succès de l'ouverture de la base
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>La base de données est ouverte.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>La base de données est ouverte.</li>";
 
   //La connexion est affcté à la variable db.
   db = request.result;
@@ -125,11 +125,11 @@ DBOpenRequest.onsuccess = function(event) {
 // Ce gestionnaire d'événement nécessite un nouveau numéro de version de la basse de données.
 // Si la base n'existe pas un nouveau numéro de version est généré par la méthode d'ouverture de connexion window.indexDB.open .
 
-DBOpenRequest.onupgradeneeded = function(event) {
+DBOpenRequest.onupgradeneeded = function (event) {
   var db = event.target.result;
 
-  db.onerror = function(event) {
-    note.innerHTML += '<li>Erreur de chargement de la base de données.</li>';
+  db.onerror = function (event) {
+    note.innerHTML += "<li>Erreur de chargement de la base de données.</li>";
   };
 
   // L'Accès au magasin d'objet "toDoList" de la base de donnée
@@ -145,7 +145,8 @@ DBOpenRequest.onupgradeneeded = function(event) {
 };
 ```
 
-> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
+> [!NOTE]
+> Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 
@@ -163,4 +164,4 @@ DBOpenRequest.onupgradeneeded = function(event) {
 - {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
 - {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
 - {{domxref("IDBCursor","Utiliser les curseur")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

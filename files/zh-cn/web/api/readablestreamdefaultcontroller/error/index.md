@@ -11,14 +11,14 @@ slug: Web/API/ReadableStreamDefaultController/error
 
 ## 语法
 
-```js
+```js-nolint
 error(e)
 ```
 
 ### 参数
 
 - `e`
-  - : 您需要在后面使用的错误信息。
+  - : 你需要在后面使用的错误信息。
 
 ### 返回值
 
@@ -40,3 +40,8 @@ error(e)
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStreamDefaultController")}}

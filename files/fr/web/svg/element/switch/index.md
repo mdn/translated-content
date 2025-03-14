@@ -1,11 +1,6 @@
 ---
 title: <switch>
 slug: Web/SVG/Element/switch
-tags:
-  - Element
-  - SVG
-  - SVG Conteneur
-translation_of: Web/SVG/Element/switch
 ---
 
 {{SVGRef}}
@@ -22,10 +17,10 @@ Notez que la valeur des propriétés `display` et `visibility` n'ont aucun effet
 
 ### Attributs globaux
 
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel)
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
-- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#Événement_graphiques)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation)
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#attributs_de_traitement_conditionnel)
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
+- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#événement_graphiques)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -33,7 +28,7 @@ Notez que la valeur des propriétés `display` et `visibility` n'ont aucun effet
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGSwitchElement`](/fr/docs/DOM/SVGSwitchElement).
+Cet élément implémente l'interface [`SVGSwitchElement`](/fr/docs/Web/API/SVGSwitchElement).
 
 ## Exemple
 
@@ -43,19 +38,19 @@ Cet exemple montre comment afficher un texte différent selon les paramètres de
 
 ```html
 <svg width="100%" viewBox="0 -20 100 50">
-   <switch>
-      <text systemLanguage="ar">مرحبا</text>
-      <text systemLanguage="de,nl">Hallo!</text>
-      <text systemLanguage="en">Hello!</text>
-      <text systemLanguage="en-us">Howdy!</text>
-      <text systemLanguage="en-gb">Wotcha!</text>
-      <text systemLanguage="en-au">G'day!</text>
-      <text systemLanguage="es">Hola!</text>
-      <text systemLanguage="fr">Bonjour!</text>
-      <text systemLanguage="ja">こんにちは</text>
-      <text systemLanguage="ru">Привет!</text>
-      <text>☺</text>
-   </switch>
+  <switch>
+    <text systemLanguage="ar">مرحبا</text>
+    <text systemLanguage="de,nl">Hallo!</text>
+    <text systemLanguage="en">Hello!</text>
+    <text systemLanguage="en-us">Howdy!</text>
+    <text systemLanguage="en-gb">Wotcha!</text>
+    <text systemLanguage="en-au">G'day!</text>
+    <text systemLanguage="es">Hola!</text>
+    <text systemLanguage="fr">Bonjour!</text>
+    <text systemLanguage="ja">こんにちは</text>
+    <text systemLanguage="ru">Привет!</text>
+    <text>☺</text>
+  </switch>
 </svg>
 ```
 

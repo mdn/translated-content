@@ -9,7 +9,7 @@ slug: Web/API/CSSStyleRule
 
 ## Sintaxis
 
-La sintaxis es descrita usando el formato [WebIDL](http://dev.w3.org/2006/webapi/WebIDL/).
+La sintaxis es descrita usando el formato [WebIDL](https://dev.w3.org/2006/webapi/WebIDL/).
 
 ```
 interface CSSStyleRule : CSSRule {
@@ -29,8 +29,6 @@ interface CSSStyleRule : CSSRule {
 
 {{Specifications}}
 
-## Compatibilidad entre Navegadores
+## Compatibilidad con navegadores
 
-Para obtener informacion de compatibilidad en los distintos navegadores, por favor consulta la tabla de compatibilidad de la interfaz asociada.
-
-{{Compat("api.CSSStyleRule")}}
+{{Compat}}

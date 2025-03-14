@@ -5,7 +5,7 @@ slug: Web/CSS/quotes
 
 {{CSSRef}}
 
-**`quotes`** [CSS](/zh-CN/docs/CSS) 属性用于设置引号的样式。{{EmbedInteractiveExample("pages/css/quotes.html")}}
+**`quotes`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置引号的样式。{{EmbedInteractiveExample("pages/css/quotes.html")}}
 
 ## 语法
 
@@ -14,8 +14,8 @@ slug: Web/CSS/quotes
 quotes: none;
 
 /* <string> values */
-quotes: "«" "»";           /* Set open-quote and close-quote to the French quotation marks */
-quotes: "«" "»" "‹" "›";   /* Set two levels of quotation marks */
+quotes: "«" "»"; /* Set open-quote and close-quote to the French quotation marks */
+quotes: "«" "»" "‹" "›"; /* Set two levels of quotation marks */
 
 /* Global values */
 quotes: inherit;
@@ -28,11 +28,11 @@ quotes: unset;
 - `none`
   - : {{cssxref("content")}} 属性的值 `open-quote` 和 `close-quote` 将不会展示引号。
 - `auto`
-  - : 用适当的引号，基于在所选元素上设置的任何语言值（例如，通过 {{htmlattrxref("lang")}} 属性）。
+  - : 用适当的引号，基于在所选元素上设置的任何语言值（例如，通过 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性）。
 - `[<string> <string>]+`
   - : 一组或者多组 {{cssxref("&lt;string&gt;")}} 的值对应 `open-quote` and `close-quote`. 第一对表示引号的外层，第二对表示第一个嵌套层，下一对表示第三层，依此类推。
 
-### 语法格式
+### 形式语法
 
 {{csssyntax}}
 
@@ -62,33 +62,40 @@ q:after {
 
 #### 结果
 
-{{EmbedLiveSample('Basic_quote_marks', "100%", 60)}}
+{{EmbedLiveSample('基本用法', "100%", 60)}}
 
 ### 自动选择引号
 
 #### HTML
 
-```plain
+```html
 <div lang="fr">
   <q>Ceci est une citation française.</q>
-<div>
-<hr>
-<div lang="ru">
-  <q>Это русская цитата</q>
-<div>
-<hr>
-<div lang="de">
-  <q>Dies ist ein deutsches Zitat</q>
-<div>
-<hr>
-<div lang="en">
-  <q>This is an English quote.</q>
-<div>
+  <div>
+    <hr />
+    <div lang="ru">
+      <q>Это русская цитата</q>
+      <div>
+        <hr />
+        <div lang="de">
+          <q>Dies ist ein deutsches Zitat</q>
+          <div>
+            <hr />
+            <div lang="en">
+              <q>This is an English quote.</q>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 ```
 
 #### CSS
 
-```plain
+```css
 /*q {
   quotes: auto;
 }*/
@@ -96,7 +103,7 @@ q:after {
 
 #### 结果
 
-{{EmbedLiveSample('Auto_quotes', "100%", 200)}}
+{{EmbedLiveSample('自动选择引号', "100%", 200)}}
 
 ## 备注
 
@@ -113,6 +120,6 @@ q:after {
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - {{ Cssxref("content") }}

@@ -1,12 +1,14 @@
 ---
-title: HTMLIFrameElement.referrerPolicy
+title: "HTMLIFrameElement: referrerPolicy プロパティ"
+short-title: referrerPolicy
 slug: Web/API/HTMLIFrameElement/referrerPolicy
+l10n:
+  sourceCommit: e9e2ec643ac69c132f31427a0b586ab2cf83ed58
 ---
 
 {{APIRef}}
 
-**`HTMLIFrameElement.referrerPolicy`** プロパティは HTML の
-{{HTMLElement("iframe")}} 要素の {{htmlattrxref("referrerpolicy","iframe")}} 属性を反映し、リソースの取得時にどのリファラーを送信するかを定義します。
+**`HTMLIFrameElement.referrerPolicy`** プロパティは HTML の {{HTMLElement("iframe")}} 要素の [`referrerpolicy`](/ja/docs/Web/HTML/Element/iframe#referrerpolicy) 属性を反映し、リソースの取得時にどのリファラーを送信するかを定義します。
 
 ## 値
 
@@ -26,18 +28,20 @@ slug: Web/API/HTMLIFrameElement/referrerPolicy
 - `strict-origin-when-cross-origin` (default)
   - : これは、ポリシーが指定されていない場合のユーザーエージェントの既定の動作です。同一オリジンリクエストを行う場合は完全な URL を送信し、プロトコルのセキュリティレベルが変わらない場合はオリジンのみを送信し（例: HTTPS→HTTPS）、セキュリティレベルの低い宛先にはヘッダーを送信しません（例: HTTPS→HTTP）。
 - `unsafe-url`
+
   - : 同一オリジンまたはオリジン間リクエストを実行するときに、完全な URL を送信します。
-  
-  > **メモ:** このポリシーは、 TLS で保護されたリソースから安全でないオリジンへのオリジンとパスを漏洩します
-    この設定の影響を慎重に検討してください。
+
+    > [!NOTE]
+    > このポリシーは、 TLS で保護されたリソースから安全でないオリジンへのオリジンとパスを漏洩します。
+    > この設定の影響を慎重に検討してください。
 
 ## 例
 
 ```js
-var iframe = document.createElement("iframe");
+const iframe = document.createElement("iframe");
 iframe.src = "/";
 iframe.referrerPolicy = "unsafe-url";
-var body = document.getElementsByTagName("body")[0];
+const body = document.querySelector("body");
 body.appendChild(iframe); // 完全な URL をリファラーとして使用して画像を取得
 ```
 

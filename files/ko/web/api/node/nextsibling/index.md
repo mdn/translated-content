@@ -1,14 +1,8 @@
 ---
 title: Node.nextSibling
 slug: Web/API/Node/nextSibling
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Node
-  - Property
-translation_of: Web/API/Node/nextSibling
 ---
+
 {{APIRef("DOM")}}
 
 읽기 전용 속성인 **`Node.nextSibling`** 은 부모의 {{domxref("Node.childNodes","childNodes")}} 목록에서 지정된 노드 바로 다음에 있는 노드를 반환하거나 지정된 노드가 해당 목록의 마지막 노드이면 `null` 값을 반환합니다.
@@ -16,7 +10,7 @@ translation_of: Web/API/Node/nextSibling
 ## Syntax
 
 ```js
-nextNode = node.nextSibling
+nextNode = node.nextSibling;
 ```
 
 ## Notes
@@ -25,8 +19,8 @@ Gecko 기반 브라우저는 소스 마크업에서 공백을 나타내기 위�
 그러므로 예를 들어 [`Node.firstChild`](/ko/docs/Web/API/Node/firstChild)나 [`Node.previousSibling`](/ko/docs/Web/API/Node/previousSibling)을 통해서 얻은 노드는 작성자가 얻으려 한 실제 요소와는
 달리 공백 텍스트 노드를 참조할 지도 모릅니다.
 
-더 많은 정보는 [Whitespace in the DOM](/ko/docs/Whitespace_in_the_DOM)과
-[W3C DOM 3 FAQ: Why are some Text nodes empty?](http://www.w3.org/DOM/faq.html#emptytext)를 보세요.
+더 많은 정보는 [Whitespace in the DOM](/ko/docs/Web/API/Document_Object_Model/Whitespace)과
+[W3C DOM 3 FAQ: Why are some Text nodes empty?](https://www.w3.org/DOM/faq.html#emptytext)를 보세요.
 
 ## Example
 
@@ -35,29 +29,20 @@ Gecko 기반 브라우저는 소스 마크업에서 공백을 나타내기 위�
 <div id="div-02">Here is div-02</div>
 
 <script type="text/javascript">
-var el = document.getElementById('div-01').nextSibling,
+  var el = document.getElementById("div-01").nextSibling,
     i = 1;
 
-console.log('Siblings of div-01:');
+  console.log("Siblings of div-01:");
 
-while (el) {
-  console.log(i + '. ' + el.nodeName);
-  el = el.nextSibling;
-  i++;
-}
-
+  while (el) {
+    console.log(i + ". " + el.nodeName);
+    el = el.nextSibling;
+    i++;
+  }
 </script>
 
-/**************************************************
-   로드될 때 다음과 같이 콘솔에 기록됩니다. :
-
-     Siblings of div-01
-
-      1. #text
-      2. DIV
-      3. #text
-      4. SCRIPT
-
+/************************************************** 로드될 때 다음과 같이 콘솔에
+기록됩니다. : Siblings of div-01 1. #text 2. DIV 3. #text 4. SCRIPT
 **************************************************/
 ```
 
@@ -67,8 +52,8 @@ while (el) {
 
 ## Specification
 
-- [DOM Level 1 Core: nextSibling](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling)
-- [DOM Level 2 Core: nextSibling](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6AC54C2F)
+- [DOM Level 1 Core: nextSibling](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling)
+- [DOM Level 2 Core: nextSibling](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6AC54C2F)
 
 ## See also
 

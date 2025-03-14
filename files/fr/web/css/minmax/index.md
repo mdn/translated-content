@@ -1,13 +1,11 @@
 ---
 title: minmax()
 slug: Web/CSS/minmax
-translation_of: Web/CSS/minmax()
-original_slug: Web/CSS/minmax()
 ---
 
 {{CSSRef}}
 
-La [fonction CSS](/fr/docs/Web/CSS/CSS_Functions) **`minmax()`** définit un intervalle de taille supérieure ou égale à _min_ et inférieure ou égale à _max_. Elle est utilisée avec [les grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout).
+La [fonction CSS](/fr/docs/Web/CSS/CSS_Functions) **`minmax()`** définit un intervalle de taille supérieure ou égale à _min_ et inférieure ou égale à _max_. Elle est utilisée avec [les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout).
 
 {{EmbedInteractiveExample("pages/css/function-minmax.html")}}
 
@@ -100,15 +98,9 @@ Si _max_ est inférieur à _min_, alors _max_ sera ignoré et `minmax(min,max)` 
 
 ```html
 <div id="container">
-  <div>
-    Aussi large que le contenu, large d'au plus 300 pixels.
-  </div>
-  <div>
-    Item flexible mais dont la largeur vaut au moins 200 pixels.
-  </div>
-  <div>
-    Item avec une largeur de 150 pixels.
-  </div>
+  <div>Aussi large que le contenu, large d'au plus 300 pixels.</div>
+  <div>Item flexible mais dont la largeur vaut au moins 200 pixels.</div>
+  <div>Item avec une largeur de 150 pixels.</div>
 </div>
 ```
 
@@ -127,5 +119,5 @@ Si _max_ est inférieur à _min_, alors _max_ sera ignoré et `minmax(min,max)` 
 ## Voir aussi
 
 - Guide sur les grilles CSS : _[Concepts de bases pour le dimensionnement des pistes avec minmax()](</fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#track_sizing_and_minmax()>)_
-- [Valeurs logiques, modes d'écriture et grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-- Tutoriel vidéo (en anglais) : [Introduction à minmax()](http://gridbyexample.com/video/series-minmax/)
+- [Valeurs logiques, modes d'écriture et grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+- Tutoriel vidéo (en anglais) : [Introduction à minmax()](https://gridbyexample.com/video/series-minmax/)

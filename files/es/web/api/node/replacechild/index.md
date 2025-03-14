@@ -32,7 +32,9 @@ var sp1 = document.createElement("span");
 sp1.setAttribute("id", "newSpan");
 
 // crear algún contenido para el nuevo elemento
-var sp1_content = document.createTextNode("Nuevo elemento span para reemplazo.");
+var sp1_content = document.createTextNode(
+  "Nuevo elemento span para reemplazo.",
+);
 
 // aplicar dicho contenido al nuevo elemento
 sp1.appendChild(sp1_content);
@@ -52,9 +54,9 @@ parentDiv.replaceChild(sp1, sp2);
 
 ## Especificación
 
-- [DOM Level 1 Core: replaceChild](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-replaceChild)
-- [DOM Level 2 Core: replaceChild](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-785887307)
-- [DOM Level 3 Core: replaceChild](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-785887307)
+- [DOM Level 1 Core: replaceChild](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-replaceChild)
+- [DOM Level 2 Core: replaceChild](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-785887307)
+- [DOM Level 3 Core: replaceChild](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-785887307)
 
 ## Ver también
 

@@ -1,8 +1,6 @@
 ---
 title: WeakRef
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef
-browser-compat: javascript.builtins.WeakRef
 ---
 
 {{JSRef}}
@@ -13,7 +11,8 @@ Un objet **`WeakRef`** permet de tenir une référence faible vers un autre obje
 
 Un objet `WeakRef` contient une référence faible vers un objet, appelé _cible_ ou _référent_. Une _référence faible_ vers un objet est une référence qui n'empêche pas l'objet d'être récupéré par le ramasse-miettes. À l'inverse, une référence normale (aussi qualifiée de _forte_) implique de conserver un objet en mémoire. Lorsqu'un objet n'a plus de référence forte envers lui, le ramasse-miettes du moteur JavaScript peut détruire l'objet et récupérer la mémoire correspondante. Une fois que cela est fait, on ne peut plus accéder à l'objet depuis une référence faible.
 
-> **Note :** Voir la section [À éviter si possible](#à_éviter_si_possible) ci-après. Une utilisation correcte et pertinente de `WeakRef` nécessite une réflexion appuyée. C'est un objet qu'il conviendra d'éviter si possible.
+> [!NOTE]
+> Voir la section [À éviter si possible](#à_éviter_si_possible) ci-après. Une utilisation correcte et pertinente de `WeakRef` nécessite une réflexion appuyée. C'est un objet qu'il conviendra d'éviter si possible.
 
 ## Constructeur
 
@@ -31,7 +30,7 @@ Une utilisation correcte de `WeakRef` nécessite une réflexion suffisante et il
 
 Voici quelques sujets spécifiques inclus dans [le document explicatif de la proposition correspondante](https://github.com/tc39/proposal-weakrefs/blob/master/reference.md)&nbsp;:
 
-> [Les ramasses-miettes](https://fr.wikipedia.org/wiki/Ramasse-miettes_(informatique)) sont compliqués. Si une application ou une bibliothèque dépend d'un ramasse-miettes nettoyant un registre FinalizationRegistry ou appelant un finaliseur de façon précise et prédictible, qu'elle se prépare à être déçue&nbsp;: le nettoyage pourra avoir lieu bien plus tard que prévu voire pas du tout. Ce comportement grandement variable est dû&nbsp;:
+> [Les ramasses-miettes](<https://fr.wikipedia.org/wiki/Ramasse-miettes_(informatique)>) sont compliqués. Si une application ou une bibliothèque dépend d'un ramasse-miettes nettoyant un registre FinalizationRegistry ou appelant un finaliseur de façon précise et prédictible, qu'elle se prépare à être déçue&nbsp;: le nettoyage pourra avoir lieu bien plus tard que prévu voire pas du tout. Ce comportement grandement variable est dû&nbsp;:
 >
 > - Au fait qu'un objet peut être récupéré par le ramasse-miettes bien plus tôt qu'un autre, même s'il devient inaccessible au même temps, par exemple en raison du ramassage générationnel.
 > - À l'action du ramasse-miettes qui peut être divisée dans le temps en utilisant des techniques incrémentales et concurrentes.

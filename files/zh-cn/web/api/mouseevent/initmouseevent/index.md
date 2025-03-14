@@ -3,7 +3,7 @@ title: MouseEvent.initMouseEvent()
 slug: Web/API/MouseEvent/initMouseEvent
 ---
 
-{{APIRef("DOM Events")}}{{deprecated_header}}
+{{APIRef("UI Events")}}{{deprecated_header}}
 
 **`MouseEvent.initMouseEvent()`** 方法用以在鼠标事件创建时 (一般用 {{domxref("Document.createEvent()")}}方法创建) 初始化其属性的值。
 
@@ -11,18 +11,18 @@ slug: Web/API/MouseEvent/initMouseEvent
 
 > **备注：** **不要再用此方法，已过时。**
 >
-> 使用特定的事件构造器来替代它，像 {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}。[创建并发送事件](/zh-CN/docs/Web/Guide/Events/Creating_and_triggering_events) 页面里有更多的使用信息。
+> 使用特定的事件构造器来替代它，像 {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}。[创建并发送事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events) 页面里有更多的使用信息。
 
 ## 语法
 
-```
-event.initMouseEvent(type, canBubble, cancelable, view,
+```js-nolint
+initMouseEvent(type, canBubble, cancelable, view,
                      detail, screenX, screenY, clientX, clientY,
                      ctrlKey, altKey, shiftKey, metaKey,
-                     button, relatedTarget);
+                     button, relatedTarget)
 ```
 
-### 形参
+### 参数
 
 - _`type`_
   - : 设置事件类型{{domxref("Event.type", "type")}} 的字符串，包含以下几种鼠标事件：`click`，`mousedown`，`mouseup`，`mouseover`，`mousemove`，`mouseout`。
@@ -77,7 +77,7 @@ event.initMouseEvent(type, canBubble, cancelable, view,
 - _`button`_
   - : 鼠标按键值 {{domxref("MouseEvent.button", "button")}}。
 - _`relatedTarget`_
-  - : 事件的[相关对象](/zh-CN/DOM/event.relatedTarget)。只在某些事件类型有用 (例如 `mouseover` ?和 `mouseout`)。其它的传 null。
+  - : 事件的[相关对象](/zh-CN/docs/DOM/event.relatedTarget)。只在某些事件类型有用 (例如 `mouseover` ?和 `mouseout`)。其他的传 null。
 
 ## 示例
 
@@ -85,32 +85,47 @@ event.initMouseEvent(type, canBubble, cancelable, view,
 
 ```html
 <div style="background:red;width:180px;padding:10px;">
- <div id="out"></div>
- <input type="text">
+  <div id="out"></div>
+  <input type="text" />
 </div>
 ```
 
 ### JavaScript
 
 ```js
-document.body.onclick = function(){
- e = arguments[0];
- var dt = e.target,stag = dt.tagName.toLowerCase();
- document.getElementById("out").innerHTML = stag;
+document.body.onclick = function () {
+  e = arguments[0];
+  var dt = e.target,
+    stag = dt.tagName.toLowerCase();
+  document.getElementById("out").innerHTML = stag;
 };
-var simulateClick = function(){
- var evt = document.createEvent("MouseEvents");
- evt.initMouseEvent("click", true, true, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null);
- document.body.dispatchEvent(evt);
-}
-simulateClick();//Why it can not show "input" ?
+var simulateClick = function () {
+  var evt = document.createEvent("MouseEvents");
+  evt.initMouseEvent(
+    "click",
+    true,
+    true,
+    window,
+    0,
+    0,
+    0,
+    80,
+    20,
+    false,
+    false,
+    false,
+    false,
+    0,
+    null,
+  );
+  document.body.dispatchEvent(evt);
+};
+simulateClick(); //Why it can not show "input" ?
 ```
 
 这里有个在线演示
 
-{{EmbedLiveSample('Example', 200, 36)}}
-
-{{ LiveSampleLink('Example', 'Link to live demo') }}
+{{EmbedLiveSample('示例', 200, 36)}}
 
 ## 规范
 

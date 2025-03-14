@@ -1,23 +1,23 @@
 ---
 title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
-tags:
-  - Array
-  - ECMAScript5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 ---
 
 {{JSRef}}
 
 Метод **`lastIndexOf()`** возвращает последний индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет. Массив просматривается от конца к началу, начиная с индекса `fromIndex`.
 
-{{EmbedInteractiveExample("pages/js/array-lastindexof.html")}}
+{{InteractiveExample("JavaScript Demo: Array.lastIndexOf()")}}
+
+```js interactive-example
+const animals = ["Dodo", "Tiger", "Penguin", "Dodo"];
+
+console.log(animals.lastIndexOf("Dodo"));
+// Expected output: 3
+
+console.log(animals.lastIndexOf("Tiger"));
+// Expected output: 1
+```
 
 ## Синтаксис
 
@@ -34,7 +34,7 @@ arr.lastIndexOf(searchElement[, fromIndex = arr.length])
 
 ## Описание
 
-Метод `lastIndexOf()` сравнивает искомый элемент `searchElement` с элементами в массиве, используя [строгое сравнение](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) (тот же метод используется оператором `===`, тройное равно).
+Метод `lastIndexOf()` сравнивает искомый элемент `searchElement` с элементами в массиве, используя [строгое сравнение](/ru/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators) (тот же метод используется оператором `===`, тройное равно).
 
 ## Примеры
 
@@ -44,10 +44,10 @@ arr.lastIndexOf(searchElement[, fromIndex = arr.length])
 
 ```js
 var array = [2, 5, 9, 2];
-array.lastIndexOf(2);     // 3
-array.lastIndexOf(7);     // -1
-array.lastIndexOf(2, 3);  // 3
-array.lastIndexOf(2, 2);  // 0
+array.lastIndexOf(2); // 3
+array.lastIndexOf(7); // -1
+array.lastIndexOf(2, 3); // 3
+array.lastIndexOf(2, 2); // 0
 array.lastIndexOf(2, -2); // 0
 array.lastIndexOf(2, -1); // 3
 ```
@@ -58,12 +58,12 @@ array.lastIndexOf(2, -1); // 3
 
 ```js
 var indices = [];
-var array = ['a', 'b', 'a', 'c', 'a', 'd'];
-var element = 'a';
+var array = ["a", "b", "a", "c", "a", "d"];
+var element = "a";
 var idx = array.lastIndexOf(element);
 while (idx != -1) {
   indices.push(idx);
-  idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);
+  idx = idx > 0 ? array.lastIndexOf(element, idx - 1) : -1;
 }
 
 console.log(indices);
@@ -81,16 +81,17 @@ console.log(indices);
 // Ссылка (en): http://es5.github.io/#x15.4.4.15
 // Ссылка (ru): http://es5.javascript.ru/x15.4.html#x15.4.4.15
 if (!Array.prototype.lastIndexOf) {
-  Array.prototype.lastIndexOf = function(searchElement/*, fromIndex*/) {
-    'use strict';
+  Array.prototype.lastIndexOf = function (searchElement /*, fromIndex*/) {
+    "use strict";
 
     if (this === void 0 || this === null) {
       throw new TypeError();
     }
 
-    var n, k,
-        t = Object(this),
-        len = t.length >>> 0;
+    var n,
+      k,
+      t = Object(this),
+      len = t.length >>> 0;
     if (len === 0) {
       return -1;
     }
@@ -100,8 +101,7 @@ if (!Array.prototype.lastIndexOf) {
       n = Number(arguments[1]);
       if (n != n) {
         n = 0;
-      }
-      else if (n != 0 && n != (1 / 0) && n != -(1 / 0)) {
+      } else if (n != 0 && n != 1 / 0 && n != -(1 / 0)) {
         n = (n > 0 || -1) * Math.floor(Math.abs(n));
       }
     }
@@ -128,7 +128,7 @@ if (!Array.prototype.lastIndexOf) {
 
 ## Замечания по совместимости
 
-- Начиная с Firefox 47 {{geckoRelease (47)}}, метод больше не будет возвращать `-0`. Например, `[0].lastIndexOf(0, -0)` теперь всегда будет возвращать `+0` ({{bug (1242043)}}).
+- Начиная с Firefox 47, метод больше не будет возвращать `-0`. Например, `[0].lastIndexOf(0, -0)` теперь всегда будет возвращать `+0` ([Firefox bug 1242043](https://bugzil.la/1242043)).
 
 ## Смотрите также
 

@@ -1,7 +1,6 @@
 ---
-title: 'RangeError: repeat count must be non-negative'
+title: "RangeError: repeat count must be non-negative"
 slug: Web/JavaScript/Reference/Errors/Negative_repetition_count
-translation_of: Web/JavaScript/Reference/Errors/Negative_repetition_count
 ---
 
 {{jsSidebar("Errors")}}
@@ -26,16 +25,16 @@ translation_of: Web/JavaScript/Reference/Errors/Negative_repetition_count
 ### 허용되지 않는 경우
 
 ```js example-bad
-'abc'.repeat(-1); // RangeError
+"abc".repeat(-1); // RangeError
 ```
 
 ### 허용되는 경우
 
 ```js example-good
-'abc'.repeat(0);    // ''
-'abc'.repeat(1);    // 'abc'
-'abc'.repeat(2);    // 'abcabc'
-'abc'.repeat(3.5);  // 'abcabcabc' (수는 정수로 변환될 것입니다.)
+"abc".repeat(0); // ''
+"abc".repeat(1); // 'abc'
+"abc".repeat(2); // 'abcabc'
+"abc".repeat(3.5); // 'abcabcabc' (수는 정수로 변환될 것입니다.)
 ```
 
 ## 참조

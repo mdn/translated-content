@@ -3,7 +3,9 @@ title: <string>
 slug: Web/CSS/string
 ---
 
-{{CSSRef}}在 CSS 中，**`<string>`** 是用来表示一串字符的数据类型，它被用在众多 CSS 属性中，例如{{cssxref("content")}}、{{cssxref("font-family")}}、和{{cssxref("quotes")}}。
+{{CSSRef}}
+
+在 CSS 中，**`<string>`** 是用来表示一串字符的数据类型，它被用在众多 CSS 属性中，例如{{cssxref("content")}}、{{cssxref("font-family")}}、和{{cssxref("quotes")}}。
 
 ## 使用规则
 
@@ -15,29 +17,30 @@ slug: Web/CSS/string
 
 当你想换行的时候，必须使用像 **`\A`** 或者 **`\00000A`** 这样的换行符。不过在你的代码中，可以通过在每行末尾增加一个反斜线（**`\`**）的方式来创建一个多行的字符串。
 
-> **备注：** CSS **`<string>`** 中不能使用像 **`&nbsp;`** 或者 **`&#8212;`** 这样的实体。
+> [!NOTE]
+> CSS **`<string>`** 中不能使用像 **`&nbsp;`** 或者 **`&#8212;`** 这样的实体。
 
 ## 例子
 
-```
-/* Simple strings */
-"This string is demarkated by double quotes."
-'This string is demarkated by single quotes.'
+```css
+/* 简单字符串 */
+"该字符串用双引号括起来。"
+'该字符串用单引号括起来。'
 
-/* Character escaping */
-"This is a string with \" an escaped double quote."
-"This string also has \22 an escaped double quote."
-'This is a string with \' an escaped single quote.'
-'This string also has \27 an escaped single quote.'
-"This is a string with \\ an escaped backslash."
+/* 字符转义 */
+"这是一个包含转义的双引号（\"）的字符串。"
+"这也是一个具有转义双引号（\22）的字符串。"
+'这是一个具有转义单引号（\'）的字符串。'
+'这也是一个具有转义单引号（\27）的字符串。'
+"这是一个具有转义反斜杠（\\）的字符串。"
 
-/* New line in a string */
-"This string has a \Aline break in it."
+/* 字符串中的换行 */
+"该字符串具有\A断行。"
 
-/* String spanning two lines of code (these two strings will have identical output) */
-"A really long \
-awesome string"
-"A really long awesome string"
+/* 跨越两行代码的字符串（这两个字符串具有相同的输出） */
+"一个非常长\
+的字符串"
+"一个非常长的字符串"
 ```
 
 ## 规范

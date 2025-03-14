@@ -7,12 +7,13 @@ slug: Web/API/VRDisplay/exitPresent
 
 **`exitPresent()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、この `VRDisplay` がシーンを表示するのを停止します。
 
-> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!NOTE]
+> このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ## 構文
 
 ```js
-exitPresent()
+exitPresent();
 ```
 
 ### 引数
@@ -26,39 +27,43 @@ exitPresent()
 ## 例
 
 ```js
-if(navigator.getVRDisplays) {
-  console.log('WebVR 1.1 supported');
+if (navigator.getVRDisplays) {
+  console.log("WebVR 1.1 supported");
   // Then get the displays attached to the computer
-  navigator.getVRDisplays().then(function(displays) {
+  navigator.getVRDisplays().then(function (displays) {
     // If a display is available, use it to present the scene
-    if(displays.length > 0) {
+    if (displays.length > 0) {
       vrDisplay = displays[0];
-      console.log('Display found');
+      console.log("Display found");
       // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-      btn.addEventListener('click', function() {
-        if(btn.textContent === 'Start VR display') {
-          vrDisplay.requestPresent([{ source: canvas }]).then(function() {
-            console.log('Presenting to WebVR display');
+      btn.addEventListener("click", function () {
+        if (btn.textContent === "Start VR display") {
+          vrDisplay.requestPresent([{ source: canvas }]).then(function () {
+            console.log("Presenting to WebVR display");
 
             // Set the canvas size to the size of the vrDisplay viewport
 
-            var leftEye = vrDisplay.getEyeParameters('left');
-            var rightEye = vrDisplay.getEyeParameters('right');
+            var leftEye = vrDisplay.getEyeParameters("left");
+            var rightEye = vrDisplay.getEyeParameters("right");
 
-            canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
-            canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);
+            canvas.width =
+              Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
+            canvas.height = Math.max(
+              leftEye.renderHeight,
+              rightEye.renderHeight,
+            );
 
             // stop the normal presentation, and start the vr presentation
             window.cancelAnimationFrame(normalSceneFrame);
             drawVRScene();
 
-            btn.textContent = 'Exit VR display';
+            btn.textContent = "Exit VR display";
           });
         } else {
           vrDisplay.exitPresent();
-          console.log('Stopped presenting to WebVR display');
+          console.log("Stopped presenting to WebVR display");
 
-          btn.textContent = 'Start VR display';
+          btn.textContent = "Start VR display";
 
           // Stop the VR presentation, and start the normal presentation
           vrDisplay.cancelAnimationFrame(vrSceneFrame);
@@ -70,7 +75,8 @@ if(navigator.getVRDisplays) {
 }
 ```
 
-> **メモ:** この完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で見ることができます。
+> [!NOTE]
+> この完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で見ることができます。
 
 ## 仕様書
 
@@ -84,5 +90,4 @@ if(navigator.getVRDisplays) {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

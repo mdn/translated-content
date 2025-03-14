@@ -1,7 +1,6 @@
 ---
 title: Notifications API
 slug: Web/API/Notifications_API
-translation_of: Web/API/Notifications_API
 ---
 
 {{DefaultAPISidebar("Web Notifications")}}
@@ -12,19 +11,21 @@ Notifications API позволяют web-страницам контролиро
 
 На поддерживаемых платформах, отображение системных уведомлений обычно включает две вещи. Во-первых, пользователь должен разрешить текущему источнику отображать уведомления, что, как правило, происходит, при первичной загрузке приложения или сайта, используя метод {{domxref("Notification.requestPermission()")}}. Далее будет вызван диалог со следующим текстом:
 
-![](https://mdn.mozillademos.org/files/10819/notification-bubble.png)
+![](notification-bubble.png)
 
 Здесь пользователь может выбрать разрешить уведомления от источника, заблокировать их или решить позже. Как только выбор будет сделан, для текущей сессии будут установлены настройки.
 
-> **Примечание:** Для Firefox 44, разрешения для Notifications и [Push](/ru/docs/Web/API/Push_API) объединяются. Если было установлено разрешение для уведомлений, push так же будут разрешены .
+> [!NOTE]
+> Для Firefox 44, разрешения для Notifications и [Push](/ru/docs/Web/API/Push_API) объединяются. Если было установлено разрешение для уведомлений, push так же будут разрешены .
 
 Затем создаётся новое уведомление с помощью конструктора {{domxref("Notification.Notification","Notification()")}}. В функцию должен быть передан аргумент заголовка и, по желанию, объект настроек, чтобы определить опции, такие как направление и тело текста, иконка, звук уведомления и т.д.
 
 {{AvailableInWorkers}}
 
-В дополнение, спецификация Notifications API определить несколько дополнений для [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API), чтобы позволить им отправлять уведомления.
+В дополнение, спецификация Notifications API определить несколько дополнений для [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API), чтобы позволить им отправлять уведомления.
 
-> **Примечание:** Чтобы найти больше об использовании уведомлений в вашем приложении, читайте [Использование Notifications API](/ru/docs/Web/API/Notifications_API/Using_the_Notifications_API).
+> [!NOTE]
+> Чтобы найти больше об использовании уведомлений в вашем приложении, читайте [Использование Notifications API](/ru/docs/Web/API/Notifications_API/Using_the_Notifications_API).
 
 ## Интерфейс уведомлений
 
@@ -46,9 +47,9 @@ Notifications API позволяют web-страницам контролиро
 | --------------------------------------------------------------------------- |
 | [Notifications API Living Standard](https://notifications.spec.whatwg.org/) |
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## Firefox OS разрешения
 
@@ -60,6 +61,6 @@ Notifications API позволяют web-страницам контролиро
 }
 ```
 
-## See also
+## Смотрите также
 
 - [Использование Notifications API](/ru/docs/Web/API/Notifications_API/Using_the_Notifications_API)

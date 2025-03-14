@@ -3,7 +3,7 @@ title: windows.create()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 创建一个新的窗口。
 
@@ -21,8 +21,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows/create
 
 ```js
 var creating = browser.windows.create(
-  createData            // optional object
-)
+  createData, // optional object
+);
 ```
 
 ### 参数
@@ -69,8 +69,7 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener((tab) => {
   var creating = browser.windows.create({
-    url: ["https://developer.mozilla.org",
-          "https://addons.mozilla.org"]
+    url: ["https://developer.mozilla.org", "https://addons.mozilla.org"],
   });
   creating.then(onCreated, onError);
 });
@@ -89,7 +88,7 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener((tab) => {
   var creating = browser.windows.create({
-    tabId: tab.id
+    tabId: tab.id,
   });
   creating.then(onCreated, onError);
 });
@@ -107,17 +106,15 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-
   var popupURL = browser.extension.getURL("popup/popup.html");
 
   var creating = browser.windows.create({
     url: popupURL,
     type: "popup",
     height: 200,
-    width: 200
+    width: 200,
   });
   creating.then(onCreated, onError);
-
 });
 ```
 
@@ -127,9 +124,8 @@ browser.browserAction.onClicked.addListener((tab) => {
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#method-create) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#method-create) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

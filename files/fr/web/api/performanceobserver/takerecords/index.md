@@ -1,16 +1,6 @@
 ---
 title: PerformanceObserver.takeRecords()
 slug: Web/API/PerformanceObserver/takeRecords
-tags:
-  - API
-  - Method
-  - Méthode
-  - Performance Observer API
-  - PerformanceObserver
-  - Reference
-  - observers
-  - takeRecords()
-translation_of: Web/API/PerformanceObserver/disconnect
 ---
 
 {{APIRef("Performance Timeline API")}}
@@ -34,13 +24,13 @@ Une liste d'objets [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry).
 ## Exemple
 
 ```js
-const observer = new PerformanceObserver(function(list, obj) {
+const observer = new PerformanceObserver(function (list, obj) {
   let entries = list.getEntries();
-  for (let i= 0; i < entries.length; i++) {
+  for (let i = 0; i < entries.length; i++) {
     // Traiter les événements "mark" et "frame"
   }
 });
-observer.observe({entryTypes: ["mark", "frame"]});
+observer.observe({ entryTypes: ["mark", "frame"] });
 let records = observer.takeRecords();
 console.log(records[0].name);
 console.log(records[0].startTime);

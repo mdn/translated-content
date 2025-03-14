@@ -1,24 +1,21 @@
 ---
 title: colgroup
 slug: Web/HTML/Element/colgroup
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/colgroup
-original_slug: Web/HTML/Elemento/colgroup
 ---
+
+{{HTMLSidebar}}
 
 ### Definición
 
 - **colgroup** de column group = Grupo de columnas. Permite crear [grupos de columnas](http://html.conclase.net/w3c/html401-es/struct/tables.html#h-11.2.4).
+
   - : **Sus etiquetas son**: `<colgroup>` y `</colgroup>` (la de cierre es opcional).
-  
+
     **Crea una caja**: No.
 
-    **Está definido como**: Elemento [para tablas](/es/HTML/Elemento/Tipos_de_elementos#para_tablas).
+    **Está definido como**: Elemento [para tablas](/es/docs/HTML/Elemento/Tipos_de_elementos#para_tablas).
 
-    **Puede contener**: Cero o más elementos [col](/es/HTML/Elemento/col).
+    **Puede contener**: Cero o más elementos [col](/es/docs/Web/HTML/Element/col).
 
 #### Atributos
 
@@ -302,7 +299,8 @@ Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html
 
 ---
 
-> **Nota:** Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!NOTE]
+> Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
 >
 > ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.
 

@@ -1,13 +1,16 @@
 ---
-title: HTMLLinkElement.relList
+title: "HTMLLinkElement: relList プロパティ"
+short-title: relList
 slug: Web/API/HTMLLinkElement/relList
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLAnchorElement.relList`** 読み取り専用プロパティは、{{htmlattrxref("rel", "link")}} 属性を反映しています。 これは生きた {{domxref("DOMTokenList")}} で、{{HTMLElement("link")}} 要素で表されるリソースと現在のドキュメントの間の関係を示す[リンク種別](/ja/docs/Web/HTML/Link_types)のセットが入ります。
+**`HTMLLinkElement.relList`** は読み取り専用プロパティで、[`rel`](/ja/docs/Web/HTML/Attributes/rel) 属性を反映します。 これは生きた {{domxref("DOMTokenList")}} で、{{HTMLElement("link")}} 要素で表されるリソースと現在のドキュメントの間の関係を示すリンク種別のセットが入ります。
 
-このプロパティ自体は読み取り専用です。 つまり、 {{domxref("DOMTokenList")}} を別のものに置き換えることはできませんが、その内容は変更できます。
+このプロパティ自体は読み取り専用です。つまり、{{domxref("DOMTokenList")}} を別のものに置き換えることはできませんが、その内容は変更できます。
 
 ## 値
 
@@ -16,15 +19,14 @@ slug: Web/API/HTMLLinkElement/relList
 ## 例
 
 ```js
-var links = document.getElementsByTagName("link");
-var length = links.length;
-for (var i = 0; i < length; i++) {
-  var list = links[i].relList;
-  var listLength = list.length;
+const links = document.getElementsByTagName("link");
+const length = links.length;
+for (const link of links) {
+  const listLength = list.length;
   console.log("New link found.");
-  for (var j = 0; j < listLength; j++) {
-    console.log(list[j]);
-  }
+  relList.forEach((relEntry) => {
+    console.log(relEntry);
+  });
 }
 ```
 

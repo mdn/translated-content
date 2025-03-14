@@ -1,68 +1,74 @@
 ---
 title: Math.log1p()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log1p
+l10n:
+  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
 {{JSRef}}
 
-**`Math.log1p()`** 関数は、 1 + 数値の ({{jsxref("Math.E", "e")}} を底とする) 自然対数を返します。
+**`Math.log1p()`** は静的メソッドで、 `1 + x` の（[e](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/E) を底とした）自然対数を返します。ここで `x` は引数です。
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mo>-</mo><mn>1</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log1p</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">\forall x > -1, \mathtt{\operatorname{Math.log1p}(x)} = \ln(1 + x)</annotation></semantics></math>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mo>−</mo><mn>1</mn><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚕𝚘𝚐𝟷𝚙</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">\forall x > -1,\;\mathtt{\operatorname{Math.log1p}(x)} = \ln(1 + x)</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-log1p.html")}}
+{{InteractiveExample("JavaScript Demo: Math.log1p()")}}
+
+```js interactive-example
+console.log(Math.log1p(1));
+// Expected output: 0.6931471805599453
+
+console.log(Math.log1p(0));
+// Expected output: 0
+
+console.log(Math.log1p(-1));
+// Expected output: -Infinity
+
+console.log(Math.log1p(-2));
+// Expected output: NaN
+```
 
 ## 構文
 
-```
+```js-nolint
 Math.log1p(x)
 ```
 
 ### 引数
 
 - `x`
-  - : 数値です。
+  - : -1 以上の数値です。
 
 ### 返値
 
-1 + 与えられた数値の ({{jsxref("Math.E", "e")}} を底とした) 自然対数です。数値が **-1** よりも小さかった場合は {{jsxref("NaN")}} が返されます。
+`1 + x` の（[e](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/E) を底とした）自然対数です。 `x` が -1 の場合は、 [`-Infinity`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY) を返します。 `x < -1` の場合は、 {{jsxref("NaN")}} が返されます。
 
 ## 解説
 
 `x` の値が非常に小さかった場合、 1 を加えると有効精度が減少します。 JS で使用する倍精度浮動小数点型の精度は 15 桁です。 1 + 1e-15 = 1.000000000000001 ですが、 1 + 1e-16 = 1.000000000000000 となり、 15 桁を超えた桁は四捨五入されるため、正確に 1.0 となります。
 
-log(1 + x) を計算すると、 x が小さければ、 x にとても近い答えになるはずです (これが「自然」対数と呼ばれる所以です)。 Math.log(1 + 1.1111111111e-15) を計算すると、 1.1111111111e-15 に近い答えが得られるはずです。しかし、 1.00000000000000111022 の対数を取ることになります (四捨五入は二進数なので、時に醜い結果になることがあります) ので、答えは 1.11022...e-15 となり、正しい数字は 3 桁だけです。もし、代わりに Math.log1p(1.1111111111e-15) を計算した場合は、もっとずっと正確な答えである 1.1111111110999995e-15 が得られ、 15 桁の正しい数字が得られます (この場合は実際には 16 桁です)。
+<!-- prettier-ignore-start -->
+log(1 + _x_) を計算すると、 _x_ が小さければ、 _x_ にとても近い答えになるはずです。 <math><semantics><mrow><munder><mo movablelimits="true" form="prefix">lim</mo><mrow ><mi>x</mi><mo stretchy="false">→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mi>log</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mi>x</mi></mfrac><mo>=</mo><mn>1</mn></mrow><annotation encoding="TeX">\lim_{x \to 0} \frac{\log(1+x)}{x} = 1</annotation></semantics></math> だからです。 `Math.log(1 + 1.1111111111e-15)` を計算すると、 `1.1111111111e-15` に近い答えが得られるはずです。しかし、 `1.00000000000000111022` の対数を取ることになります (四捨五入は二進数なので、時に醜い結果になることがあります) ので、答えは 1.11022…e-15 となり、正しい数字は 3 桁だけです。もし、代わりに `Math.log1p(1.1111111111e-15)` を計算した場合は、もっとずっと正確な答えである `1.1111111110999995e-15` が得られ、 15 桁の正しい数字が得られます (この場合は実際には 16 桁です)。
+<!-- prettier-ignore-end -->
 
 `x` の値が -1 未満であった場合、返値は常に {{jsxref("NaN")}} です。
 
 `log1p()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.log1p()` として使用するようにしてください (`Math` はコンストラクターではありません)。
-
-## ポリフィル
-
-これは次の関数でエミュレートできます。
-
-```js
-Math.log1p = Math.log1p || function(x) {
-  x = Number(x);
-  if (x < -1 || x !== x)
-    return NaN;
-  if (x === 0 || x === Infinity)
-    return x;
-
-  var nearX = (x + 1) - 1;
-
-  return nearX === 0 ? x : x * (Math.log(x + 1) / nearX);
-};
-```
 
 ## 例
 
 ### Math.log1p() の使用
 
 ```js
-Math.log1p(1);  // 0.6931471805599453
-Math.log1p(0);  // 0
-Math.log1p(-1); // -Infinity
 Math.log1p(-2); // NaN
+Math.log1p(-1); // -Infinity
+Math.log1p(-0); // -0
+Math.log1p(0); // 0
+Math.log1p(1); // 0.6931471805599453
+Math.log1p(Infinity); // Infinity
 ```
 
 ## 仕様書
@@ -71,10 +77,11 @@ Math.log1p(-2); // NaN
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.log1p")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`Math.log1p` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.expm1()")}}

@@ -1,18 +1,14 @@
 ---
 title: Document.characterSet
 slug: Web/API/Document/characterSet
-tags:
-  - API
-  - DOM
-  - Document
-  - Read-only
-translation_of: Web/API/Document/characterSet
 ---
-{{ ApiRef("DOM") }}
+
+{{APIRef("DOM")}}
 
 **`Document.characterSet`** доступное только для чтения свойство, возвращает кодировку текущей страницы. Кодировка это набор символов, используемый для отрисовки документа, которая может отличаться от кодировки, заданной на странице (пользователь может переназначить кодировку)
 
-> **Примечание:** Свойства `document.charset` и `document.inputEncoding` это устаревшие алиасы `document.characterSet`. Не используйте их больше.
+> [!NOTE]
+> Свойства `document.charset` и `document.inputEncoding` это устаревшие алиасы `document.characterSet`. Не используйте их больше.
 
 ## Синтаксис
 
@@ -29,9 +25,7 @@ var string = document.characterSet
 
 ## Спецификации
 
-| Спецификация                                                                                     | Статус                           | Комментарий           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------- |
-| {{SpecName('DOM WHATWG', '#dom-document-characterset', 'characterSet')}} | {{Spec2('DOM WHATWG')}} | Исходное определение. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

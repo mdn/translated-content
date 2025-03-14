@@ -5,22 +5,22 @@ slug: Web/API/DataTransfer
 
 {{APIRef("HTML DOM")}}
 
-O objeto `DataTransfer` é usado para guardar os dados que estão sendo arrastados durante uma operação de Drag e Drop (arrastar e soltar). Ele pode guardar um ou mais itens de dados, cada um de um ou mais tipos de dados. Para mais informações sobre drag e drop (arrastar e soltar), veja [Drag and Drop](/En/DragDrop/Drag_and_Drop).
+O objeto `DataTransfer` é usado para guardar os dados que estão sendo arrastados durante uma operação de Drag e Drop (arrastar e soltar). Ele pode guardar um ou mais itens de dados, cada um de um ou mais tipos de dados. Para mais informações sobre drag e drop (arrastar e soltar), veja [Drag and Drop](/en-US/DragDrop/Drag_and_Drop).
 
 Esse objeto está disponível pela propriedade `dataTransfer` de todos os eventos de drag. Ele não pode ser criado separadamente.
 
 ## Visão geral das propriedades
 
-| Propriedades                                                                                                                                                 | Tipo                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| [`dropEffect`](#dropEffect.28.29)                                                                                      | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
-| [`effectAllowed`](#effectAllowed.28.29)                                                                             | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
-| [`files`](#files.28.29)                                                 | {{ domxref("FileList") }}                                                                                       |
-| [`mozCursor`](#mozCursor) {{ non-standard_inline() }}      | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
-| [`mozItemCount`](#mozItemCount.28.29) {{ non-standard_inline() }}                                           | `unsigned long`                                                                                                        |
-| [`mozSourceNode`](#mozSourceNode) {{ non-standard_inline() }} | {{ domxref("Node") }}                                                                                           |
-| [`mozUserCancelled`](#mozUserCancelled)                                                                          | [`Boolean`](/pt-BR/JavaScript/Reference/Global_Objects/Boolean) |
-| [`types`](#types.28.29)                                                                                                     | [`DOMStringList`](/en-US/docs/Web/API/DOMStringList)                                |
+| Propriedades                                                      | Tipo                                                                   |
+| ----------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [`dropEffect`](#dropeffect.28.29)                                 | [`String`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String) |
+| [`effectAllowed`](#effectallowed.28.29)                           | [`String`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String) |
+| [`files`](#files.28.29)                                           | {{ domxref("FileList") }}                                              |
+| [`mozCursor`](#mozcursor) {{ non-standard_inline() }}             | [`String`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String) |
+| [`mozItemCount`](#mozitemcount.28.29) {{ non-standard_inline() }} | `unsigned long`                                                        |
+| [`mozSourceNode`](#mozsourcenode) {{ non-standard_inline() }}     | {{ domxref("Node") }}                                                  |
+| [`mozUserCancelled`](#mozusercancelled)                           | [`Boolean`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Boolean)   |
+| [`types`](#types.28.29)                                           | [`DOMStringList`](/pt-BR/docs/Web/API/DOMStringList)                   |
 
 ## Visão geral dos métodos
 
@@ -82,7 +82,7 @@ Contains a list of all the local files available on the data transfer. If the dr
 
 These examples dump the list of files dragged into the browser window.
 
-- (Firefox only): <http://jsfiddle.net/9C2EF/>
+- (Firefox only): <https://jsfiddle.net/9C2EF/>
 - (All browsers): [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
 
 ### types
@@ -93,7 +93,8 @@ Guarda uma lista dos tipos de formato dos dados que estão armazenados para o pr
 
 O estado do cursor de drag. Isto é usado principalmente para controlar o cursor durante a guia de drag.
 
-> **Nota:** Esse método está atualmente implementado somento no Windows.
+> [!NOTE]
+> Esse método está atualmente implementado somento no Windows.
 
 #### Valores possíveis
 
@@ -102,25 +103,29 @@ O estado do cursor de drag. Isto é usado principalmente para controlar o cursor
 - `default`
   - : Utiliza o comportamento padrão Gecko, que é definir o cursor para uma seta durante a operação de arrastar.
 
-> **Nota:** Se você especificar qualquer valor diferente de "default", "auto" é assumido.
+> [!NOTE]
+> Se você especificar qualquer valor diferente de "default", "auto" é assumido.
 
 ### mozItemCount
 
 O número de ítens sendo arrastados.
 
-> **Nota:** Essa propriedade é específica Gecko.
+> [!NOTE]
+> Essa propriedade é específica Gecko.
 
 ### mozSourceNode
 
 O {{ domxref("Node") }} sobre o qual o cursor do mouse estava localizado quando o botão foi pressionado para iniciar a operação de arrastar. O valor é `null` para drags externos ou se o elmento não pode acessar o node.
 
-> **Nota:** Essa propriedade é específica Gecko.
+> [!NOTE]
+> Essa propriedade é específica Gecko.
 
 ### mozUserCancelled
 
 Essa propriedade é aplicada apenas no evento `dragend`, e é `true` se o usuário cancelar a operação de arrastar pressionando escape (esc). Será `false` em qualquer outro caso, incluindo se a operação de arrastar falhar por algum motivo, por exemplo devido a ação de soltar em um local inválido.
 
-> **Nota:** Essa propriedade é específica Gecko.
+> [!NOTE]
+> Essa propriedade é específica Gecko.
 
 ## Methods
 
@@ -222,7 +227,8 @@ If the last format for the item is removed, the entire item is removed, reducing
 
 If the `format` list is empty, then the data associated with all formats is removed. If the format is not found, then this method has no effect.
 
-> **Nota:** This method is Gecko-specific.
+> [!NOTE]
+> This method is Gecko-specific.
 
 ```
  void mozClearDataAt(
@@ -242,7 +248,8 @@ If the `format` list is empty, then the data associated with all formats is remo
 
 Retrieves the data associated with the given format for an item at the specified index, or null if it does not exist. The index should be in the range from zero to the number of items minus one.
 
-> **Nota:** This method is Gecko-specific.
+> [!NOTE]
+> This method is Gecko-specific.
 
 ```
  nsIVariant mozGetDataAt(
@@ -266,7 +273,8 @@ Data should be added in order of preference, with the most specific format added
 
 The data should be either a string, a primitive boolean or number type (which will be converted into a string) or an `nsISupports`.
 
-> **Nota:** This method is Gecko-specific.
+> [!NOTE]
+> This method is Gecko-specific.
 
 ```
  void mozSetDataAt(
@@ -289,7 +297,8 @@ The data should be either a string, a primitive boolean or number type (which wi
 
 Holds a list of the format types of the data that is stored for an item at the specified index. If the index is not in the range from 0 to the number of items minus one, an empty string list is returned.
 
-> **Nota:** This method is Gecko-specific.
+> [!NOTE]
+> This method is Gecko-specific.
 
 ```
  nsIVariant mozTypesAt(
@@ -304,4 +313,4 @@ Holds a list of the format types of the data that is stored for an item at the s
 
 ## See also
 
-[Drag and Drop](/En/DragDrop/Drag_and_Drop)
+[Drag and Drop](/en-US/DragDrop/Drag_and_Drop)

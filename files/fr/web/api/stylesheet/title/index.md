@@ -1,7 +1,6 @@
 ---
 title: StyleSheet.title
 slug: Web/API/StyleSheet/title
-translation_of: Web/API/StyleSheet/title
 ---
 
 {{APIRef ("CSSOM")}}
@@ -14,4 +13,4 @@ Le titre est souvent spécifié dans {{domxref ("StyleSheet / OwnerNode", "owner
 
 ## Spécification
 
-- [Titre](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-title)
+- [Titre](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-title)

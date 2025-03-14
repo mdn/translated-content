@@ -1,5 +1,5 @@
 ---
-title: '::grammar-error'
+title: ::grammar-error
 slug: Web/CSS/::grammar-error
 ---
 
@@ -22,8 +22,8 @@ slug: Web/CSS/::grammar-error
 
 ## 構文
 
-```css
-::grammar-error
+```css-nolint
+::grammar-error {}
 ```
 
 ## 例
@@ -41,7 +41,7 @@ slug: Web/CSS/::grammar-error
 #### CSS
 
 ```css
-::grammar-error  {
+::grammar-error {
   text-decoration: underline red;
   color: red;
 }

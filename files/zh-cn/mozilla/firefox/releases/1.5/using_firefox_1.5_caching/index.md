@@ -7,7 +7,7 @@ slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 
 ## 介绍
 
-[Firefox 1.5](/zh-CN/docs/Firefox_1.5_for_developers) 对整个 web 页面的一个浏览器会话进行了内存缓存，包括他们对 JavaScript 状态。在访问过的页面间后退和前进不需要页面加载同时保存 JavaScript 状态。这个特性，被称为 bfcache（“后退前进缓存”），使得页面导航（切换）非常快。这个状态缓存被保存直到用户关闭浏览器。
+[Firefox 1.5](/zh-CN/docs/Mozilla/Firefox/Releases/1.5) 对整个 web 页面的一个浏览器会话进行了内存缓存，包括他们对 JavaScript 状态。在访问过的页面间后退和前进不需要页面加载同时保存 JavaScript 状态。这个特性，被称为 bfcache（“后退前进缓存”），使得页面导航（切换）非常快。这个状态缓存被保存直到用户关闭浏览器。
 
 有时候，Firefox 不缓存页面。下面是一些页面不被缓存的常见的编程的原因：
 
@@ -83,58 +83,73 @@ slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 - 第一次加载页面，光标放置在表单的 Name 字段。在 Firefox 1.5, 当用户导航回该页面，光标依然在页面导航离开时的位置。在其他浏览器，光标移回到 Name 字段。
 
 ```html
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
-<HTML>
-<head>
-<title>Order query Firefox 1.5 Example</title>
-<style type="text/css">
-body, p {
-    font-family: Verdana, sans-serif;
-    font-size: 12px;
-}
-</style>
-<script type="text/javascript">
-function onLoad() {
-    loadOnlyFirst();
-    onPageShow();
-}
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>Order query Firefox 1.5 Example</title>
+    <style type="text/css">
+      body,
+      p {
+        font-family: Verdana, sans-serif;
+        font-size: 12px;
+      }
+    </style>
+    <script type="text/javascript">
+      function onLoad() {
+        loadOnlyFirst();
+        onPageShow();
+      }
 
-function onPageShow() {
-//calculate current time
-    var currentTime= new Date();
-    var year=currentTime.getFullYear();
-    var month=currentTime.getMonth()+1;
-    var day=currentTime.getDate();
-    var hour=currentTime.getHours();
-    var min=currentTime.getMinutes();
-    var sec=currentTime.getSeconds();
-    var mil=currentTime.getMilliseconds();
-    var displayTime = (month + "/" + day + "/" + year + " " +
-        hour + ":" + min + ":" + sec + ":" + mil);
-    document.getElementById("timefield").value=displayTime;
-}
+      function onPageShow() {
+        //calculate current time
+        var currentTime = new Date();
+        var year = currentTime.getFullYear();
+        var month = currentTime.getMonth() + 1;
+        var day = currentTime.getDate();
+        var hour = currentTime.getHours();
+        var min = currentTime.getMinutes();
+        var sec = currentTime.getSeconds();
+        var mil = currentTime.getMilliseconds();
+        var displayTime =
+          month +
+          "/" +
+          day +
+          "/" +
+          year +
+          " " +
+          hour +
+          ":" +
+          min +
+          ":" +
+          sec +
+          ":" +
+          mil;
+        document.getElementById("timefield").value = displayTime;
+      }
 
-function loadOnlyFirst() {
-    document.zipForm.name.focus();
-}
-</script>
-</head>
-<body onload="onLoad();" onpageshow="if (event.persisted) onPageShow();">
-<h2>Order query</h2>
+      function loadOnlyFirst() {
+        document.zipForm.name.focus();
+      }
+    </script>
+  </head>
+  <body onload="onLoad();" onpageshow="if (event.persisted) onPageShow();">
+    <h2>Order query</h2>
 
-<form name="zipForm" action="http://www.example.com/formresult.html" method="get">
-<label for="timefield">Date and time:</label>
-<input type="text" id="timefield"><br>
-<label for="name">Name:</label>
-<input type="text" id="name"><br>
-<label for="address">Email address:</label>
-<input type="text" id="address"><br>
-<label for="order">Order number:</label>
-<input type="text" id="order"><br>
-<input type="submit" name="submit" value="Submit Query">
-</form>
-</body>
+    <form
+      name="zipForm"
+      action="http://www.example.com/formresult.html"
+      method="get">
+      <label for="timefield">Date and time:</label>
+      <input type="text" id="timefield" /><br />
+      <label for="name">Name:</label>
+      <input type="text" id="name" /><br />
+      <label for="address">Email address:</label>
+      <input type="text" id="address" /><br />
+      <label for="order">Order number:</label>
+      <input type="text" id="order" /><br />
+      <input type="submit" name="submit" value="Submit Query" />
+    </form>
+  </body>
 </html>
 ```
 
@@ -170,6 +185,6 @@ function loadOnlyFirst() {
 
 ## 开发 Firefox 扩展
 
-Firefox 1.5 [extensions](/zh-CN/docs/Building_an_Extension) 需要允许缓存功能。如果你在开发一个兼容 1.5 及以前版本的 Firefox 扩展，确保它监听事件触发 `load` 可被缓存，监听的 `pageshow` 事件触发不应该被缓存。
+Firefox 1.5 [extensions](/zh-CN/docs/Mozilla/Add-ons) 需要允许缓存功能。如果你在开发一个兼容 1.5 及以前版本的 Firefox 扩展，确保它监听事件触发 `load` 可被缓存，监听的 `pageshow` 事件触发不应该被缓存。
 
 例如，Firefox 的 Google 工具栏为了兼容 1.5 和更早的版本，应该为 autolink 监听 `load` 事件函数，为 PageRank 监听 `pageshow` 事件函数。

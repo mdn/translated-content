@@ -12,8 +12,8 @@ slug: Web/API/Window/history
 ## 例
 
 ```js
-history.back();     // 戻るボタンを押すのと同等
-history.go(-1);     // history.back(); と同等
+history.back(); // 戻るボタンを押すのと同等
+history.go(-1); // history.back(); と同等
 ```
 
 ## 注
@@ -26,11 +26,8 @@ history.go(-1);     // history.back(); と同等
 
 ## 仕様書
 
-| 仕様                                                                                                                     | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'browsers.html#the-history-interface', 'The History interface')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'browsers.html#the-history-interface', 'The History interface')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.history")}}
+{{Compat}}

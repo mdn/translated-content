@@ -1,11 +1,6 @@
 ---
-title: ':visited'
+title: :visited
 slug: Web/CSS/:visited
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:visited
 ---
 
 {{CSSRef}}
@@ -29,7 +24,7 @@ Pour des raisons de vie privée, les navigateurs limitent les propriétés qui p
 - La composante alpha sera ignorée : la composante alpha d'un lien non-visité est utilisé à la place (sauf quand l'opacité est `0`, dans ce cas, toute la couleur est ignorée, ainsi que celle de la règle non-visité).
 - Bien qu'on puisse modifier la couleur d'un lien, la méthode {{domxref("window.getComputedStyle")}} mentira et indiquera toujours la valeur de la couleur de la règle pour les liens non-visités.
 
-Pour d'autres informations sur ces limitations et leurs raisons d'être, se référer à l 'article [Vie privée et le sélecteur `:visited`](/fr/docs/Web/CSS/:visited_et_la_vie_privée).
+Pour d'autres informations sur ces limitations et leurs raisons d'être, se référer à l 'article [Vie privée et le sélecteur `:visited`](/fr/docs/Web/CSS/Privacy_and_the_:visited_selector).
 
 ## Syntaxe
 
@@ -40,18 +35,24 @@ Pour d'autres informations sur ces limitations et leurs raisons d'être, se réf
 ### CSS
 
 ```css
-a:visited { color: #00ff00; }
+a:visited {
+  color: #00ff00;
+}
 ```
 
 ### HTML
 
 ```html
-<p><a href="https://developer.mozilla.org/fr/docs/Web/CSS/:visited">
-  Cette page est visitée
-</a></p>
-<p><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/">
-  Essayez celle-ci peut-être ?
-</a></p>
+<p>
+  <a href="https://developer.mozilla.org/fr/docs/Web/CSS/:visited">
+    Cette page est visitée
+  </a>
+</p>
+<p>
+  <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/">
+    Essayez celle-ci peut-être ?
+  </a>
+</p>
 ```
 
 ### Résultat

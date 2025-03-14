@@ -1,68 +1,71 @@
 ---
 title: clipboard.setImageData()
 slug: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
+l10n:
+  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-イメージをクリップボードにコピーします。イメージはクリップボードに書き込まれる前に再エンコードされます。イメージが無効な場合、クリップボードは修正されません。
+画像をクリップボードにコピーします。イメージはクリップボードに書き込まれる前に再エンコードされます。画像が無効な場合、クリップボードは修正されません。
 
-The image is provided as an [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) containing the encoded image. JPEG and PNG formats are supported.
+画像はエンコードされた画像を格納した [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) として指定されます。 JPEG と PNG 形式に対応しています。
 
-Although this API is based on Chrome's [`clipboard.setImageData()`](https://developer.chrome.com/apps/clipboard) API, there are some differences:
+この API は Chrome の [`clipboard.setImageData()`](https://developer.chrome.com/docs/apps/reference/clipboard) API をベースにしていますが、いくつかの違いがあります。
 
-- The Chrome API is only for apps, not extensions.
-- This API requires only the `"clipboardWrite"` permission, while the Chrome version also requires the `"clipboard"` permission.
-- Chrome's API uses callbacks, and this API only supports promises.
-- This API does not support the `additionalItems` parameter.
+- Chrome API はアプリ専用で、拡張機能用ではありません。
+- この API では `"clipboardWrite"` 権限のみが要求されますが、 Chrome 版では `"clipboard"` 権限も要求されます。
+- Chrome の API はコールバックを使用しており、この API はプロミスのみに対応しています。
+- この API は `additionalItems` 引数には対応していません。
 
-これは[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)を返す非同期関数です。
+これは [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
 
 ## 書式
 
-```js
+```js-nolint
 browser.clipboard.setImageData(imageData, imageType)
 ```
 
-### パラメータ
+### 引数
 
 - `imageData`
-  - : An [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) containing the encoded image data to copy to the clipboard.
+  - : クリップボードにコピーするエンコードされた画像データを格納した [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) です。
 - `imageType`
-  - : A {{domxref("DOMString")}} indicating the type of image contained in `imageData`: `"png"` or `"jpeg"`.
+  - : `imageData` に格納した画像の型を示す文字列、 `"png"` または `"jpeg"` です。
 
-### 返り値
+### 返値
 
-A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be resolved with no arguments if the operation succeeded, or rejected if there was an error (for example, because the data did not represent a valid image).
+[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) で、操作が成功した場合は引数なしで解決され、エラー（例えば、データが有効な画像を表していないなど）があった場合は拒否されます。
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.clipboard.setImageData", 10)}}
+{{Compat}}
 
 ## 例
 
-Copy a remote image:
+リモートの画像をコピーします。
 
 ```js
 // requires:
 // * the host permission for "https://cdn.mdn.mozilla.net/*"
 // * the API permission "clipboardWrite"
 
-fetch('https://cdn.mdn.mozilla.net/static/img/favicon144.png')
-.then(response => response.arrayBuffer())
-.then(buffer => browser.clipboard.setImageData(buffer, 'png'));
+fetch("https://cdn.mdn.mozilla.net/static/img/favicon144.png")
+  .then((response) => response.arrayBuffer())
+  .then((buffer) => browser.clipboard.setImageData(buffer, "png"));
 ```
 
-Copy an image that was bundled with the extension:
+拡張機能にバンドルされている画像をコピーします。
 
 ```js
 // requires the API permission "clipboardWrite"
 
-fetch(browser.runtime.getURL('image.png'))
-.then(response => response.arrayBuffer())
-.then(buffer => browser.clipboard.setImageData(buffer, 'png'));
+fetch(browser.runtime.getURL("image.png"))
+  .then((response) => response.arrayBuffer())
+  .then((buffer) => browser.clipboard.setImageData(buffer, "png"));
 ```
 
 {{WebExtExamples}}
 
-> **メモ:** This API is based on Chromium's [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API.
+> [!NOTE]
+> この API は Chromium の [`chrome.clipboard`](https://developer.chrome.com/docs/apps/reference/clipboard) API をベースにしています。

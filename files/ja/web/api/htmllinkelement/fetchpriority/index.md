@@ -1,6 +1,9 @@
 ---
-title: HTMLLinkElement.fetchPriority
+title: "HTMLLinkElement: fetchPriority プロパティ"
+short-title: fetchPriority
 slug: Web/API/HTMLLinkElement/fetchPriority
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}
@@ -27,7 +30,7 @@ slug: Web/API/HTMLLinkElement/fetchPriority
 ## 例
 
 ```js
-var preloadLink = document.createElement("link");
+const preloadLink = document.createElement("link");
 preloadLink.href = "myimage.jpg";
 preloadLink.rel = "preload";
 preloadLink.as = "image";

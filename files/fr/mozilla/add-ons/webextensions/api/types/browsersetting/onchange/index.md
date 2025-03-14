@@ -1,29 +1,18 @@
 ---
 title: onChange
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange
-tags:
-  - API
-  - Add-ons
-  - BrowserSetting
-  - Event
-  - Extensions
-  - Privacy
-  - Reference
-  - WebExtensions
-  - onchange
-translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 L'événement `BrowserSetting.onChanged` est déclenché lorsque le paramètre est modifié.
 
 ## Syntaxe
 
 ```js
-BrowserSetting.onChanged.addListener(listener)
-BrowserSetting.onChanged.removeListener(listener)
-BrowserSetting.onChanged.hasListener(listener)
+BrowserSetting.onChanged.addListener(listener);
+BrowserSetting.onChanged.removeListener(listener);
+BrowserSetting.onChanged.hasListener(listener);
 ```
 
 Les événement ont trois fonctions :
@@ -50,7 +39,7 @@ Les événement ont trois fonctions :
         - `value`
           - : La nouvelle valeur du paramètre. Le type de cette propriété est déterminé par le paramètre particulier.
         - `levelOfControl`
-          - : `string`. Cela représente la façon dont le paramètre est actuellement controlé. Vous pouvez l'utiliser pour vérifier si vous pouvez modifier le réglage. Voir [`BrowserSetting.set()`](/fr/Add-ons/WebExtensions/API/privacy/BrowserSetting/set) pour plus détails. Sa valeur peut-être l'une des suivantes :<table class="standard-table">
+          - : `string`. Cela représente la façon dont le paramètre est actuellement controlé. Vous pouvez l'utiliser pour vérifier si vous pouvez modifier le réglage. Voir [`BrowserSetting.set()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/privacy/BrowserSetting/set) pour plus détails. Sa valeur peut-être l'une des suivantes :<table class="standard-table">
               <tbody>
                 <tr>
                   <td><code>"not_controllable"</code></td>
@@ -74,17 +63,17 @@ Les événement ont trois fonctions :
               </tbody>
             </table>
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.types.BrowserSetting.onChange")}}
+{{Compat}}
 
 ## Exemples
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/extensions/types).
+> Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

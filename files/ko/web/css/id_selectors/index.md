@@ -1,16 +1,11 @@
 ---
 title: ID 선택자
 slug: Web/CSS/ID_selectors
-tags:
-  - CSS
-  - Reference
-  - Selectors
-  - 선택자
-translation_of: Web/CSS/ID_selectors
 ---
+
 {{CSSRef}}
 
-[CSS](/ko/docs/Web/CSS) **ID 선택자**는 요소의 {{htmlattrxref("id")}} 특성 값을 비교하여, 완전히 동일한 `id`를 가진 요소를 선택합니다.
+[CSS](/ko/docs/Web/CSS) **ID 선택자**는 요소의 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성 값을 비교하여, 완전히 동일한 `id`를 가진 요소를 선택합니다.
 
 ```css
 /* id="demo" 요소 선택 */

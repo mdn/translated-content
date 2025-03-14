@@ -1,7 +1,9 @@
 ---
-title: HTMLAnchorElement.password
+title: "HTMLAnchorElement: password プロパティ"
+short-title: password
 slug: Web/API/HTMLAnchorElement/password
-original_slug: Web/API/HTMLHyperlinkElementUtils/password
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -17,7 +19,7 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/password
 ## 例
 
 ```js
-// <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/HTMLAnchorElement"> 要素が文書にあったとします
+// <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/ja/HTMLAnchorElement"> 要素が文書にあったとします
 const anchor = document.getElementByID("myAnchor");
 anchor.password; // 'flabada' を返す
 ```

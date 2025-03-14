@@ -17,7 +17,7 @@ slug: Web/HTML/Element/rp
   </tr>
   <tr>
    <th scope="row">标签省略</th>
-   <td>{{no_tag_omission}}</td>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
@@ -36,9 +36,9 @@ slug: Web/HTML/Element/rp
 
 ## 属性
 
-这个元素仅仅支持 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
+这个元素仅仅支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-## 用法注解
+## 使用说明
 
 - Ruby 注解用于展示东亚文字的发音，例如使用日语罗马音和汉语拼音的文字。 `<rp>` 元素用于不支持 {{ HTMLElement("ruby") }} 元素的情况。 `<rp>` 的内容提供了应该展示的东西，通常是圆括号，以便表示 ruby 注解的存在。
 
@@ -46,8 +46,7 @@ slug: Web/HTML/Element/rp
 
 ```html
 <ruby>
-  漢 <rp>(</rp><rt>han</rt><rp>)</rp>
-  字 <rp>(</rp><rt>zi</rt><rp>)</rp>
+  漢 <rp>(</rp><rt>han</rt><rp>)</rp> 字 <rp>(</rp><rt>zi</rt><rp>)</rp>
 </ruby>
 ```
 
@@ -59,7 +58,7 @@ slug: Web/HTML/Element/rp
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{HTMLElement("ruby")}}
 - {{HTMLElement("rt")}}

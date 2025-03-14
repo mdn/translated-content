@@ -1,22 +1,26 @@
 ---
 title: Set.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Set/size
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/size
-original_slug: Web/JavaScript/Reference/Objets_globaux/Set/size
 ---
 
 {{JSRef}}
 
 L'accesseur **`size`** est une propriété qui renvoie le nombre d'éléments contenus dans un objet {{jsxref("Set")}}. Un objet `Set` correspondant à un ensemble, chaque élément qu'il contient y est unique.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-size.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.size")}}
+
+```js interactive-example
+const set1 = new Set();
+const object1 = {};
+
+set1.add(42);
+set1.add("forty two");
+set1.add("forty two");
+set1.add(object1);
+
+console.log(set1.size);
+// Expected output: 3
+```
 
 ## Description
 
@@ -28,7 +32,7 @@ La valeur de `size` est un entier représentant le nombre d'éléments contenus 
 var monSet = new Set();
 monSet.add(1);
 monSet.add(5);
-monSet.add("du texte")
+monSet.add("du texte");
 
 monSet.size; // 3
 ```

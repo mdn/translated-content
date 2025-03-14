@@ -1,12 +1,9 @@
 ---
 title: string-length
 slug: Web/XPath/Functions/string-length
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/string-length
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `string-length` 함수는 인수로 준 문자열의 문자수를 반환합니다.
 
@@ -28,7 +25,7 @@ string-length( [string] )
 
 ### 정의
 
-[XPath 1.0 4.2](http://www.w3.org/TR/xpath#function-string-length)
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-string-length)
 
 ### Gecko 지원
 

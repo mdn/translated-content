@@ -1,26 +1,33 @@
 ---
 title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
-tags:
-  - JavaScript
-  - Operator
-  - Prototype
-  - Reference
-  - instanceof
-translation_of: Web/JavaScript/Reference/Operators/instanceof
-original_slug: Web/JavaScript/Reference/Opérateurs/instanceof
 ---
 
 {{jsSidebar("Operators")}}
 
 L'**opérateur `instanceof`** permet de tester si un objet possède, dans sa chaîne de prototype, la propriété `prototype` d'un certain constructeur.
 
-{{EmbedInteractiveExample("pages/js/expressions-instanceof.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - instanceof")}}
+
+```js interactive-example
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+const auto = new Car("Honda", "Accord", 1998);
+
+console.log(auto instanceof Car);
+// Expected output: true
+
+console.log(auto instanceof Object);
+// Expected output: true
+```
 
 ## Syntaxe
 
 ```js
-objet instanceof constructeur
+objet instanceof constructeur;
 ```
 
 ### Paramètres
@@ -35,8 +42,8 @@ objet instanceof constructeur
 L'opérateur `instanceof` teste la présence de `constructeur.prototype` dans la chaîne de prototypes d'`objet`.
 
 ```js
-function C(){} // Définition du constructeur
-function D(){} // Définition d'un autre constructeur
+function C() {} // Définition du constructeur
+function D() {} // Définition d'un autre constructeur
 
 var o = new C();
 
@@ -47,7 +54,7 @@ o instanceof C;
 o instanceof D;
 
 o instanceof Object; // true, car:
-C.prototype instanceof Object // true
+C.prototype instanceof Object; // true
 
 C.prototype = {};
 var o2 = new C();
@@ -117,7 +124,7 @@ function Voiture(fabricant, modele, annee) {
 }
 var mavoiture = new Voiture("Citroën", "C3", 2006);
 var a = mavoiture instanceof Voiture; // retourne true
-var b = mavoiture instanceof Object;  // retourne true
+var b = mavoiture instanceof Object; // retourne true
 ```
 
 ### Attention à la précédence des opérateurs

@@ -1,29 +1,18 @@
 ---
 title: notifications.onButtonClicked
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Notifications
-  - Reference
-  - WebExtensions
-  - onButtonClicked
-translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsque l'utilisateur clique sur l'un des boutons de la notification.
 
 ## Syntaxe
 
 ```js
-browser.notifications.onButtonClicked.addListener(listener)
-browser.notifications.onButtonClicked.removeListener(listener)
-browser.notifications.onButtonClicked.hasListener(listener)
+browser.notifications.onButtonClicked.addListener(listener);
+browser.notifications.onButtonClicked.removeListener(listener);
+browser.notifications.onButtonClicked.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -48,14 +37,14 @@ Les événements ont trois fonctions :
     - `buttonIndex`
       - : `integer`. L'index [zero-based](https://en.wikipedia.org/wiki/Zero-based_numbering) du bouton sur lequel vous avez cliqué.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.onButtonClicked")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).
+> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

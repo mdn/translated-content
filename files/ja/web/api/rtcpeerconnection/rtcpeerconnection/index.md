@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection()
 slug: Web/API/RTCPeerConnection/RTCPeerConnection
-original_slug: Web/API/RTCConfiguration
 ---
 
 {{APIRef("WebRTC")}}
@@ -11,13 +10,14 @@ original_slug: Web/API/RTCConfiguration
 ## 構文
 
 ```js
-new RTCPeerConnection()
-new RTCPeerConnection(configuration)
+new RTCPeerConnection();
+new RTCPeerConnection(configuration);
 ```
 
 ### 引数
 
 - `configuration` {{optional_inline}}
+
   - : 新しい接続を構成するためのオプションを提供するオブジェクトです。
 
     - `bundlePolicy` {{optional_inline}}
@@ -47,7 +47,8 @@ new RTCPeerConnection(configuration)
         1 つの接続で使用される資格情報は 1 つだけですが、複数のアルゴリズムに資格情報を提供することで、状況によっては接続に成功する確率が向上する場合があります。
         詳しくは、[資格情報の使用](#資格情報の使用)を参照してください。
 
-        > **メモ:** この構成オプションは、最初に指定した後は変更できません。いったん資格情報が設定されると、今後 {{domxref("RTCPeerConnection.setConfiguration()")}} を呼び出す際には、このプロパティは無視されます。
+        > [!NOTE]
+        > この構成オプションは、最初に指定した後は変更できません。いったん資格情報が設定されると、今後 {{domxref("RTCPeerConnection.setConfiguration()")}} を呼び出す際には、このプロパティは無視されます。
 
     - `iceCandidatePoolSize` {{optional_inline}}
 
@@ -55,7 +56,8 @@ new RTCPeerConnection(configuration)
         既定値は 0 （候補の先読みをしない）です。
         接続を試みる前に ICE エージェントに ICE 候補のフェッチを開始させ、 {{domxref("RTCPeerConnection.setLocalDescription()")}} が呼ばれたときにすでに検査できるようにすると、よりすばやく接続できるようになる場合があります。
 
-        > **メモ:** ICE 候補者プールのサイズを変更すると、ICE の収集が開始されるきっかけとなる場合があります。
+        > [!NOTE]
+        > ICE 候補者プールのサイズを変更すると、ICE の収集が開始されるきっかけとなる場合があります。
 
     - `iceServers` {{optional_inline}}
       - : ICE エージェントが使用するサーバーを記述した {{domxref("RTCIceServer")}} オブジェクトの配列です。
@@ -103,8 +105,6 @@ new RTCPeerConnection(configuration)
 この属性は複数の資格情報の提供に対応しています。それは、与えられた DTLS 接続が 1 つの資格情報のみを使用したとしても、複数の資格情報を提供することで複数の暗号化アルゴリズムに対応することができるからです。 `RTCPeerConnection` の実装は、DTLS ハンドシェイク中に決定された、自身とリモートピアーが対応するアルゴリズムに基づいて、使用する資格情報を選択することになります。
 
 資格情報を提供しない場合、新しい資格情報が自動的に生成されます。自分で資格情報を用意することの明らかな利点は、 ID キーの継続性です。次回以降の呼び出しに同じ資格情報を使用すると、リモートピアーは同じ呼び出し元であることを指示することができます。また、新しい鍵を生成するコストもかかりません。
-
-**<<<--- add link to information about identity --->>>**
 
 ## 仕様書
 

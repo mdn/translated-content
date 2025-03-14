@@ -1,8 +1,9 @@
 ---
 title: text-emphasis
 slug: Web/CSS/text-emphasis
-translation_of: Web/CSS/text-emphasis
 ---
+
+{{CSSRef}}
 
 La **propiedad** **[CSS](/es/docs/Web/CSS)** de **text-emphasis**, es una propiedad _abreviada_ para establecer los valores de [text-empahasis-style](/es/docs/Web/CSS/text-emphasis-style) y [text-emphasis-color](/es/docs/Web/CSS/text-emphasis-color), en una sola declaración.
 
@@ -13,11 +14,11 @@ Esta **propiedad** aplicara el énfasis a cada carácter especificado en el text
 text-emphasis: none; /* No emphasis marks */
 
 /* <string> valor */
-text-emphasis: 'x';
-text-emphasis: '点';
-text-emphasis: '\25B2';
-text-emphasis: '*' #555;
-text-emphasis: 'foo'; /* Should NOT use. It may be computed to or rendered as 'f' only */
+text-emphasis: "x";
+text-emphasis: "点";
+text-emphasis: "\25B2";
+text-emphasis: "*" #555;
+text-emphasis: "foo"; /* Should NOT use. It may be computed to or rendered as 'f' only */
 
 /* Valor de la Palabra Clave */
 text-emphasis: filled;
@@ -83,7 +84,7 @@ This example draws a heading with triangles used to emphasize each character.
 
 ```css
 h2 {
-  text-emphasis: triangle #D55;
+  text-emphasis: triangle #d55;
 }
 ```
 
@@ -101,9 +102,9 @@ h2 {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-emphasis")}}
+{{Compat}}
 
 ## Ver también
 

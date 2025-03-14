@@ -1,6 +1,9 @@
 ---
-title: HTMLMediaElement.duration
+title: "HTMLMediaElement: duration プロパティ"
+short-title: duration
 slug: Web/API/HTMLMediaElement/duration
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -14,7 +17,7 @@ slug: Web/API/HTMLMediaElement/duration
 ## 例
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.duration); // NaN
 ```
 

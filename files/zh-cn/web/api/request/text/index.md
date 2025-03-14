@@ -9,7 +9,7 @@ slug: Web/API/Request/text
 
 ## 语法
 
-```js
+```js-nolint
 text()
 ```
 
@@ -26,12 +26,12 @@ text()
 ```js
 const text = "Hello world";
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: text
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: text,
 });
 
-request.text().then(function(text) {
+request.text().then(function (text) {
   // do something with the text sent in the request
 });
 ```

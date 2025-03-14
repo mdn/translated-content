@@ -1,8 +1,8 @@
 ---
 title: HTMLTrackElement
 slug: Web/API/HTMLTrackElement
-translation_of: Web/API/HTMLTrackElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLTrackElement`**
@@ -14,15 +14,15 @@ translation_of: Web/API/HTMLTrackElement
 _Наследует свойства своего родителя, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLTrackElement.kind")}}
-  - : Тип данных {{domxref("DOMString")}}, так как отображает значение HTML-атрибута {{htmlattrxref("kind", "track")}}. Показывает, как будет использоваться текстовый трек. Возможные значения: `subtitles`, `captions`, `descriptions`, `chapters`, `metadata` (субтитры, подписи, описания, главы или метаданные).
+  - : Тип данных {{domxref("DOMString")}}, так как отображает значение HTML-атрибута [`kind`](/ru/docs/Web/HTML/Element/track#kind). Показывает, как будет использоваться текстовый трек. Возможные значения: `subtitles`, `captions`, `descriptions`, `chapters`, `metadata` (субтитры, подписи, описания, главы или метаданные).
 - {{domxref("HTMLTrackElement.src")}}
-  - : Тип данных {{domxref("DOMString")}}, так как отображает значение HTML-атрибута {{htmlattrxref("src", "track")}}. Указывает адрес файла текстового трека.
+  - : Тип данных {{domxref("DOMString")}}, так как отображает значение HTML-атрибута [`src`](/ru/docs/Web/HTML/Element/track#src). Указывает адрес файла текстового трека.
 - {{domxref("HTMLTrackElement.srclang")}}
-  - : Тип данных {{domxref("DOMString")}}, так как отображает значение HTML-атрибута {{htmlattrxref("srclang", "track")}}. Указывает язык текстового трека.
+  - : Тип данных {{domxref("DOMString")}}, так как отображает значение HTML-атрибута [`srclang`](/ru/docs/Web/HTML/Element/track#srclang). Указывает язык текстового трека.
 - {{domxref("HTMLTrackElement.label")}}
-  - : Тип данных {{domxref("DOMString")}} , так как отображает значение HTML-атрибута {{htmlattrxref("label", "track")}}. Определяет видимый пользователю заголовок трека.
+  - : Тип данных {{domxref("DOMString")}} , так как отображает значение HTML-атрибута [`label`](/ru/docs/Web/HTML/Element/track#label). Определяет видимый пользователю заголовок трека.
 - {{domxref("HTMLTrackElement.default")}}
-  - : Тип данных {{domxref("Boolean")}}, отображает значение HTML-атрибута {{htmlattrxref("default", "track")}}. Указывает, что это текстовый трек по умолчанию, если пользовательские настройки не определят другой трек, как более уместный.
+  - : Тип данных {{domxref("Boolean")}}, отображает значение HTML-атрибута [`default`](/ru/docs/Web/HTML/Element/track#default). Указывает, что это текстовый трек по умолчанию, если пользовательские настройки не определят другой трек, как более уместный.
 - {{domxref("HTMLTrackElement.readyState")}} {{ReadOnlyInline}}
 
   - : Возвращает значение типа `unsigned short`, которое показывает доступность трека для чтения:
@@ -38,23 +38,20 @@ _Наследует свойства своего родителя, {{domxref("H
   - : Возвращает {{Domxref("TextTrack")}} is the track element's text track data.
 
 | `track` {{ReadOnlyInline}} | {{Domxref("TextTrack")}} | The track element's text track data. |
-| -------------------------------- | -------------------------------- | ------------------------------------ |
+| -------------------------- | ------------------------ | ------------------------------------ |
 
 ## Методы
 
 _Нет специфичных методов; наследует методы из родительского элемента, {{domxref("HTMLElement")}}._
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                            | Status                           | Comment                                          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "the-video-element.html#the-track-element", "HTMLTrackElement")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#the-track-element", "HTMLTrackElement")}} | {{Spec2('HTML5 W3C')}}     | Initial definition.                              |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - The HTML element implementing this interface: {{ HTMLElement("track") }}.

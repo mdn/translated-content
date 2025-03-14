@@ -1,7 +1,6 @@
 ---
 title: Controle de Fluxo e Manipulação de Erro
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-original_slug: Web/JavaScript/Guide/Declarações
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
@@ -10,7 +9,7 @@ O JavaScript suporta um conjunto compacto de declarações, especificamente de f
 
 Veja a [Referência do JavaScript](/pt-BR/docs/Web/JavaScript/Reference/Statements) para detalhes sobre as declarações mostradas neste capítulo. No código em JavaScript, o caractere ponto e vírgula (`;`) é utilizado para separar declarações.
 
-Toda expressão também é uma declaração. Veja [Expressões e Operadores](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators) para informações completas sobre expressões.
+Toda expressão também é uma declaração. Veja [Expressões e Operadores](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators) para informações completas sobre expressões.
 
 ## Declaração em bloco
 
@@ -67,7 +66,7 @@ if (condicao) {
 }
 ```
 
-onde `condicao` pode ser qualquer expressão que seja avaliada como verdadeira ou falsa. Veja [Boolean](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean#Description) para uma explicação sobre o que é avaliado como `true` e `false`. Se `condicao` for avaliada como verdadeira, declaracao`_1` é executada; caso contrário, `declaracao_2` é executada. `declaracao_1` e `declaracao_2` podem ser qualquer declaração, incluindo declarações `if` aninhadas.
+onde `condicao` pode ser qualquer expressão que seja avaliada como verdadeira ou falsa. Veja [Boolean](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean#description) para uma explicação sobre o que é avaliado como `true` e `false`. Se `condicao` for avaliada como verdadeira, declaracao`_1` é executada; caso contrário, `declaracao_2` é executada. `declaracao_1` e `declaracao_2` podem ser qualquer declaração, incluindo declarações `if` aninhadas.
 
 Você pode também combinar declarações utilizando `else if` para obter várias condições testadas em sequência, como o seguinte:
 
@@ -97,7 +96,7 @@ if (condicao) {
 
 Recomenda-se não utilizar atribuições simples em uma expressão condicional porque o símbolo de atribuição poderia ser confundido com o de igualdade ao dar uma olhada no código. Por exemplo, não utilize o seguinte código:
 
-```js example-bad
+```js-nolint example-bad
 if (x = y) {
   /* faça a coisa certa */
 }
@@ -124,7 +123,7 @@ Os seguintes valores são avaliados como falsos:
 
 Todos os outros valores, incluindo todos os objetos, são avaliados como verdadeiros quando passados para uma declaração condicional.
 
-Não confunda os valores booleanos primitivos `true` e `false` com os valores de `true` e `false` do objeto [Boolean](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean#Description). Por exemplo:
+Não confunda os valores booleanos primitivos `true` e `false` com os valores de `true` e `false` do objeto [Boolean](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean#description). Por exemplo:
 
 ```
 var b = new Boolean(false);
@@ -141,8 +140,11 @@ function verifiqueDados() {
   if (document.form1.tresCaracteres.value.length == 3) {
     return true;
   } else {
-    alert("Informe exatamente três caracteres. " +
-      document.form1.tresCaracteres.value + " não é válido.");
+    alert(
+      "Informe exatamente três caracteres. " +
+        document.form1.tresCaracteres.value +
+        " não é válido.",
+    );
     return false;
   }
 }
@@ -177,26 +179,26 @@ No exemplo a seguir, se `tipofruta` for avaliada como `"Banana"`, o programa faz
 
 ```js
 switch (tipofruta) {
-   case "Laranja":
-      console.log("O quilo da laranja está R$0,59.<br>");
-      break;
-   case "Maçã":
-      console.log("O quilo da maçã está R$0,32.<br>");
-      break;
-   case "Banana":
-      console.log("O quilo da banana está R$0,48.<br>");
-      break;
-   case "Cereja":
-      console.log("O quilo da cereja está R$3,00.<br>");
-      break;
-   case "Manga":
-      console.log("O quilo da manga está R$0,56.<br>");
-       break;
-   case "Mamão":
-      console.log("O quilo do mamão está R$2,23.<br>");
-      break;
-   default:
-      console.log("Desculpe, não temos " + tipofruta + ".<br>");
+  case "Laranja":
+    console.log("O quilo da laranja está R$0,59.<br>");
+    break;
+  case "Maçã":
+    console.log("O quilo da maçã está R$0,32.<br>");
+    break;
+  case "Banana":
+    console.log("O quilo da banana está R$0,48.<br>");
+    break;
+  case "Cereja":
+    console.log("O quilo da cereja está R$3,00.<br>");
+    break;
+  case "Manga":
+    console.log("O quilo da manga está R$0,56.<br>");
+    break;
+  case "Mamão":
+    console.log("O quilo do mamão está R$2,23.<br>");
+    break;
+  default:
+    console.log("Desculpe, não temos " + tipofruta + ".<br>");
 }
 console.log("Gostaria de mais alguma coisa?<br>");
 ```
@@ -212,7 +214,7 @@ Você pode chamar uma exceção usando a declaração `throw` e manipulá-la usa
 
 Praticamente pode-se utilizar `throw` em qualquer objeto de JavaScript. Todavia, nem todos os objetos ativados por `throw` são igualmente criados. Embora seja bastante comum tratar números ou strings como erros usando `throw`, é frequentemente mais eficiente usar alguns tipos de exceções especificamente criadas para esses propósitos:
 
-- [ECMAScript exceptions](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects#Fundamental_objects)
+- [ECMAScript exceptions](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects#fundamental_objects)
 - {{domxref("DOMException")}} and {{domxref("DOMError")}}
 
 ### `Declaração throw`
@@ -226,10 +228,14 @@ throw expressão;
 Você pode lançar qualquer expressão, não apenas expressões de um tipo específico. O código a seguir lança várias exceções de diferentes tipos:
 
 ```js
-throw "Error2";   // tipo string
-throw 42;         // tipo numérico
-throw true;       // tipo booleano
-throw {toString: function() { return "Eu sou um objeto!"; } };
+throw "Error2"; // tipo string
+throw 42; // tipo numérico
+throw true; // tipo booleano
+throw {
+  toString: function () {
+    return "Eu sou um objeto!";
+  },
+};
 ```
 
 > **Nota:**Você pode especificar um objeto quando você lança uma exceção. Você pode então, referenciar as propriedades de um objeto no bloco catch. O exemplo a seguir cria um objeto myUserException do tipo userException e o usa em uma declaração throw.
@@ -243,9 +249,9 @@ function UserException(mensagem) {
 
 // Realiza a conversão da exceção para uma string adequada quando usada como uma string.
 // (ex. pelo console de erro)
-UserException.prototype.toString = function() {
+UserException.prototype.toString = function () {
   return this.name + ': "' + this.message + '"';
-}
+};
 
 // Cria uma instância de um tipo de objeto e lança ela
 throw new UserException("Valor muito alto");
@@ -262,8 +268,20 @@ O exemplo a seguir usa a declaração `try...catch`. O exemplo chama uma funçã
 ```js
 function getMonthName(mo) {
   mo = mo - 1; // Ajusta o número do mês para o índice do array (1 = Jan, 12 = Dec)
-  var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul",
-                "Aug","Sep","Oct","Nov","Dec"];
+  var months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
   if (months[mo]) {
     return months[mo];
   } else {
@@ -271,10 +289,10 @@ function getMonthName(mo) {
   }
 }
 
-try { // statements to try
+try {
+  // statements to try
   monthName = getMonthName(myMonth); // função poderia lançar uma exceção
-}
-catch (e) {
+} catch (e) {
   monthName = "unknown";
   logMyErrors(e); // passa a exceção para o manipulador de erro -> sua função local.
 }
@@ -297,8 +315,7 @@ Por exemplo, o seguinte código lança uma exceção. Quando a exceção ocorre,
 ```js
 try {
   throw "myException"; // lança  uma exceção
-}
-catch (e) {
+} catch (e) {
   // declarações de lidar com as exceções
   logMyErrors(e); // passar a exceção para o manipulador de erro
 }
@@ -314,7 +331,7 @@ Você pode usar bloco `finally` para deixar a falha de seu script agradável qua
 openMyFile();
 try {
   writeMyFile(theData); //Isso pode lançar um erro
-} catch(e) {
+} catch (e) {
   handleError(e); // Se temos um erro temos que lidar com ele
 } finally {
   closeMyFile(); // Sempre feche o recurso
@@ -328,10 +345,10 @@ function f() {
   try {
     console.log(0);
     throw "bogus";
-  } catch(e) {
+  } catch (e) {
     console.log(1);
     return true; // essa declaração de retorno é suspensa
-                 // até que o bloco finally seja concluído
+    // até que o bloco finally seja concluído
     console.log(2); // não executa
   } finally {
     console.log(3);
@@ -350,10 +367,10 @@ Substituições de valores de retorno pelo bloco `finally` também se aplica a e
 function f() {
   try {
     throw "bogus";
-  } catch(e) {
+  } catch (e) {
     console.log('captura interior "falso"');
     throw e; // essa instrução throw é suspensa até
-             // que o bloco finally seja concluído
+    // que o bloco finally seja concluído
   } finally {
     return false; // substitui "throw" anterior
   }
@@ -362,7 +379,7 @@ function f() {
 
 try {
   f();
-} catch(e) {
+} catch (e) {
   // isto nunca é executado porque o throw dentro
   // do catch é substituído
   // pelo return no finally
@@ -412,28 +429,31 @@ Uma Promise assume um destes estados:
 - _rejected_: operação falha.
 - _settled_: A Promise é fulfilled ou rejected, mas não pending.
 
-![](https://mdn.mozillademos.org/files/8633/promises.png)
+![](promises.png)
 
 ### Carregando uma imagem com XHR
 
-Um exemplo simples usando Promise e `XMLHttpRequest` para carregar uma imagem disponível no repositório MDN GitHub [promise-test](https://github.com/mdn/promises-test/blob/gh-pages/index.html). Você também pode [vê-lo executando](http://mdn.github.io/promises-test/). Cada etapa está comentada o que lhe permite seguir de perto a arquitetura Promise e arquitetura XHR. Aqui está a versão não comentada, mostrando o fluxo `Promise` para que você possa ter uma ideia:
+Um exemplo simples usando Promise e `XMLHttpRequest` para carregar uma imagem disponível no repositório MDN GitHub [promise-test](https://github.com/mdn/promises-test/blob/gh-pages/index.html). Você também pode [vê-lo executando](https://mdn.github.io/promises-test/). Cada etapa está comentada o que lhe permite seguir de perto a arquitetura Promise e arquitetura XHR. Aqui está a versão não comentada, mostrando o fluxo `Promise` para que você possa ter uma ideia:
 
 ```js
 function imgLoad(url) {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
     var request = new XMLHttpRequest();
-    request.open('GET', url);
-    request.responseType = 'blob';
-    request.onload = function() {
+    request.open("GET", url);
+    request.responseType = "blob";
+    request.onload = function () {
       if (request.status === 200) {
         resolve(request.response);
       } else {
-        reject(Error('Image didn\'t load successfully; error code:'
-                     + request.statusText));
+        reject(
+          Error(
+            "Image didn't load successfully; error code:" + request.statusText,
+          ),
+        );
       }
     };
-    request.onerror = function() {
-      reject(Error('There was a network error.'));
+    request.onerror = function () {
+      reject(Error("There was a network error."));
     };
     request.send();
   });

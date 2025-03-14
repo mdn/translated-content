@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Workers API")}}
 
-**`close()`** は {{domxref("SharedWorkerGlobalScope")}} インターフェイスのメソッドで、  `SharedWorkerGlobalScope` のイベントループにキューイングされているタスクを破棄し、この具体的なスコープを効果的に閉じます。
+**`close()`** は {{domxref("SharedWorkerGlobalScope")}} インターフェイスのメソッドで、 `SharedWorkerGlobalScope` のイベントループにキューイングされているタスクを破棄し、この具体的なスコープを効果的に閉じます。
 
 ## 構文
 
@@ -33,7 +33,8 @@ close();
 
 `close()` と `self.close()` は事実上同じです。どちらもワーカーの内部スコープから `close()` が呼び出されることを表しています。
 
-> **メモ:** メインスレッドからワーカーを停止する方法もあります。{{domxref("Worker.terminate")}} メソッドです。
+> [!NOTE]
+> メインスレッドからワーカーを停止する方法もあります。{{domxref("Worker.terminate")}} メソッドです。
 
 ## 仕様書
 

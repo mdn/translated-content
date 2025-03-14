@@ -1,20 +1,13 @@
 ---
 title: HTTP 헤더
 slug: Web/HTTP/Headers
-tags:
-  - HTTP
-  - HTTP 헤더
-  - 개요
-  - 네트워킹
-  - 레퍼런스
-translation_of: Web/HTTP/Headers
 ---
 
 {{HTTPSidebar}}
 
 HTTP 헤더는 클라이언트와 서버가 요청 또는 응답으로 부가적인 정보를 전송할 수 있도록 해줍니다. HTTP 헤더는 대소문자를 구분하지 않는 이름과 콜론 '`:`' 다음에 오는 값(줄 바꿈 없이)으로 이루어져있습니다. 값 앞에 붙은 빈 문자열은 무시됩니다.
 
-커스텀 등록 헤더는 'X-'를 앞에 붙여 추가될 수 있지만, 이 관례는 [RFC 6648](https://tools.ietf.org/html/rfc6648)에서 비표준 필드가 표준이 되었을때 불편함을 유발하는 이유로 2012년 6월에 폐기되었습니다. 다른것들은 [IANA 레지스트리](http://www.iana.org/assignments/message-headers/perm-headers.html)에 나열되어 있으며, 원본 컨텐츠는 [RFC 4229](http://tools.ietf.org/html/rfc4229)에서 정의되었습니다. IANA는 또한 [제안된 새로운 메시지 헤더의 레지스트리](http://www.iana.org/assignments/message-headers/prov-headers.html)도 관리합니다.
+커스텀 등록 헤더는 'X-'를 앞에 붙여 추가될 수 있지만, 이 관례는 [RFC 6648](https://tools.ietf.org/html/rfc6648)에서 비표준 필드가 표준이 되었을때 불편함을 유발하는 이유로 2012년 6월에 폐기되었습니다. 다른것들은 [IANA 레지스트리](https://www.iana.org/assignments/message-headers/perm-headers.html)에 나열되어 있으며, 원본 컨텐츠는 [RFC 4229](https://tools.ietf.org/html/rfc4229)에서 정의되었습니다. IANA는 또한 [제안된 새로운 메시지 헤더의 레지스트리](https://www.iana.org/assignments/message-headers/prov-headers.html)도 관리합니다.
 
 헤더는 컨텍스트에 따라 그룹핑될 수 있습니다:
 
@@ -172,7 +165,7 @@ _[여기](CORS)에서 CORS에 대해 더 알아보세요._
 - {{HTTPHeader("Origin")}}
   - : 페치가 시작된 위치를 나타냅니다.
 - {{HTTPHeader("Timing-Allow-Origin")}}
-  - : [Resource Timing API](/ko/docs/Web/API/Resource_Timing_API)의 기능을 통해 반환되는 속성을 확인할 수 있게해주는 오리진을 명시합니다. 교차-오리진 제한으로인해 0으로 기록될 수도 있습니다.
+  - : [Resource Timing API](/ko/docs/Web/API/Performance_API/Resource_timing)의 기능을 통해 반환되는 속성을 확인할 수 있게해주는 오리진을 명시합니다. 교차-오리진 제한으로인해 0으로 기록될 수도 있습니다.
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}
   - : 교차-도메인 정책 파일(XML)이 허용되었는지를 명시합니다. 해당 파일은 Adobe Flash Player 또는 Adobe Acrobat(예, PDF)과 같은 웹 클라이언트가 도메인을 넘어 데이터를 다룰 수 있도록 허용하는 정책을 정의할수도 있습니다.
 
@@ -337,7 +330,7 @@ _[여기](CORS)에서 CORS에 대해 더 알아보세요._
 - {{HTTPHeader("Server-Timing")}}
   - : 주어진 요청-응답 주기에 대한 하나 이상의 메트릭 및 설명을 전달합니다.
 - {{HTTPHeader("SourceMap")}}
-  - : 생성된 코드를 [source map](/ko/docs/Tools/Debugger/How_to/Use_a_source_map)에 링크합니다.
+  - : 생성된 코드를 [source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)에 링크합니다.
 - {{HTTPHeader("Upgrade")}}
   - : [Upgrade 헤더 필드](https://tools.ietf.org/html/rfc7230#section-6.7)에 관련된 RFC 문서는 RFC 7230, section 6.7입니다. 이 표준은 현재 클라이언트, 서버, 전송 프로토콜 연결에서 다른 프로토콜로 업그레이드 또는 변경하기위한 규칙을 정하였습니다. 예를 들면, 이 헤더 표준은 서버가 Upgrade 헤더 필드를 인식하고 구현하도록 결정했다고 가정하여 클라이언트가 HTTP 1.1에서 HTTP 2.0으로 변경하는것을 허용합니다. 어떠한 집단에서도 Upgrade 헤더 필드에서 명시된 용어를 수락할 필요는 없습니다. 이는 클라이언트 및 서버 헤더 모두에서 사용될 수 있습니다. Upgrade 헤더 필드가 명시되었을 경우, 전송자는 반드시 업그레이드 옵션을 지정한 Connection 헤더 필드도 전송해야합니다. Connection 헤더 필드에 대한 자세한 내용은 [앞서 언급한 RFC의 section 6.1](https://tools.ietf.org/html/rfc7230#section-6.1)을 확인하시기 바랍니다..
 - {{HTTPHeader("X-DNS-Prefetch-Control")}}
@@ -355,7 +348,7 @@ _[여기](CORS)에서 CORS에 대해 더 알아보세요._
 
 ## 기여
 
-[새로운 항목을 작성](/ko/docs/MDN/Contribute/Howto/Document_an_HTTP_header)하거나 존재하는 항목을 향상하여 도움을 주실 수 있습니다.
+[새로운 항목을 작성](/ko/docs/MDN/Writing_guidelines/Howto/Document_an_HTTP_header)하거나 존재하는 항목을 향상하여 도움을 주실 수 있습니다.
 
 ## 함께 보기
 

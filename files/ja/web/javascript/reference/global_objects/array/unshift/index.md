@@ -2,26 +2,37 @@
 title: Array.prototype.unshift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
 l10n:
-  sourceCommit: 968e6f1f3b6f977a09e116a0ac552459b741eac3
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
 
-**`unshift()`** メソッドは、配列の最初に 1 つ以上の要素を追加し、新しい配列の長さを返します。
+**`unshift()`** は {{jsxref("Array")}} インスタンスのメソッドで、指定された要素を配列の先頭に追加し、新しい配列の長さを返します。
 
-{{EmbedInteractiveExample("pages/js/array-unshift.html")}}
+{{InteractiveExample("JavaScript Demo: Array.unshift()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.unshift(4, 5));
+// Expected output: 5
+
+console.log(array1);
+// Expected output: Array [4, 5, 1, 2, 3]
+```
 
 ## 構文
 
-```js
-unshift(element0)
-unshift(element0, element1)
-unshift(element0, element1, /* … ,*/ elementN)
+```js-nolint
+unshift()
+unshift(element1)
+unshift(element1, element2)
+unshift(element1, element2, /* …, */ elementN)
 ```
 
 ### 引数
 
-- `elementN`
+- `element1`, …, `elementN`
   - : `arr` の先頭に追加する要素。
 
 ### 返値
@@ -34,9 +45,7 @@ unshift(element0, element1, /* … ,*/ elementN)
 
 {{jsxref("Array.prototype.push()")}} は `unshift()` と似た動作をしますが、配列の末尾に対して行う点が異なります。
 
-`Array.prototype.unshift()` は意図的に汎用化されています。このメソッドは，配列に類似したオブジェクトに対して呼び出すことができます。  `length` プロパティ、すなわち連続の最後を示すゼロベースの数値プロパティがないオブジェクトでは、意味のある動作ができない可能性があります。
-
-複数の要素が引数として渡された場合、引数として渡されたものと全く同じ順番で、オブジェクトの最初のチャンクに挿入されることに注意してください。したがって、 `unshift` を `n` 個の引数で 1 回呼び出すのと、1 個の引数で `n` 回（例えばループを使って）呼び出すのとでは同じ結果にはなりません。
+複数の要素が引数として渡された場合、引数として渡されたものと全く同じ順番で、オブジェクトの最初のチャンクに挿入されることに注意してください。したがって、 `unshift` を `n` 個の引数で **1 回**呼び出すのと、**1 個**の引数で `n` 回（例えばループを使って）呼び出すのとでは同じ結果にはなりません。
 
 例をご覧ください。
 
@@ -57,6 +66,8 @@ console.log(arr);
 // [3, 2, 1, 4, 5, 6]
 ```
 
+`unshift()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。このメソッドは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。文字列も配列風ですが、文字列は不変なので、このメソッドを適用するのには適していません。
+
 ## 例
 
 ### unshift の使用
@@ -64,17 +75,38 @@ console.log(arr);
 ```js
 const arr = [1, 2];
 
-arr.unshift(0);               // 呼び出しの返値は 3、新しい配列の長さ
+arr.unshift(0); // 呼び出しの返値は 3、新しい配列の長さ
 // arr is [0, 1, 2]
 
-arr.unshift(-2, -1);          // 新しい配列の長さは 5
+arr.unshift(-2, -1); // 新しい配列の長さは 5
 // arr is [-2, -1, 0, 1, 2]
 
-arr.unshift([-4, -3]);        // 新しい配列の長さは 6
+arr.unshift([-4, -3]); // 新しい配列の長さは 6
 // arr is [[-4, -3], -2, -1, 0, 1, 2]
 
-arr.unshift([-7, -6], [-5]);  // 新しい配列の長さは 8
+arr.unshift([-7, -6], [-5]); // 新しい配列の長さは 8
 // arr is [ [-7, -6], [-5], [-4, -3], -2, -1, 0, 1, 2 ]
+```
+
+### 配列以外のオブジェクトに対する unshift() の呼び出し
+
+`unshift()` メソッドは `this` の `length` プロパティを読み込みます。 `0` から `length - 1` までの範囲にあるすべてのインデックスを、引数の数だけ右にシフトします（この数だけ値を増加します）。次に、 `0` から始めるには、各インデックスを `unshift()` に渡した引数で設定します。最後に、`length` を前回の長さに、前に追加した要素の数を加えた値に設定します。
+
+```js
+const arrayLike = {
+  length: 3,
+  unrelated: "foo",
+  2: 4,
+};
+Array.prototype.unshift.call(arrayLike, 1, 2);
+console.log(arrayLike);
+// { '0': 1, '1': 2, '4': 4, length: 5, unrelated: 'foo' }
+
+const plainObj = {};
+// length プロパティがないため、 length は 0
+Array.prototype.unshift.call(plainObj, 1, 2);
+console.log(plainObj);
+// { '0': 1, '1': 2, length: 2 }
 ```
 
 ## 仕様書
@@ -88,7 +120,10 @@ arr.unshift([-7, -6], [-5]);  // 新しい配列の長さは 8
 ## 関連情報
 
 - [`Array.prototype.unshift` の修正を含むポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.pop()")}}
 - {{jsxref("Array.prototype.shift()")}}
 - {{jsxref("Array.prototype.concat()")}}
+- {{jsxref("Array.prototype.splice()")}}

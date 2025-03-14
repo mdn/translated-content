@@ -3,32 +3,32 @@ title: bookmarks.move()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-**`bookmarks.move()`** は、指定した {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} をブックマークツリー内の所望の位置に移すメソッドです。このメソッドにより、ブックマークを新しいフォルダの中や、同じフォルダ内の別の場所に移動させることができます。
+**`bookmarks.move()`** は、指定した {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} をブックマークツリー内の所望の位置に移すメソッドです。このメソッドにより、ブックマークを新しいフォルダーの中や、同じフォルダー内の別の場所に移動させることができます。
 
 ## 構文
 
 ```js
 browser.bookmarks.move(
-  id,          // 文字列
+  id, // 文字列
   destination, // オブジェクト
-  callback     // 関数（省略可）
-)
+  callback, // 関数（省略可）
+);
 ```
 
 ### 引数
 
 - `id`
-  - : 移動させるブックマーク / フォルダの ID を表す {{jsxref("string")}} です。
+  - : 移動させるブックマーク / フォルダーの ID を表す {{jsxref("string")}} です。
 - `destination`
 
   - : ブックマークの移動先を表す {{jsxref("object")}} です。このオブジェクトには以下のプロパティが必ず 1 つ以上含まれます。
 
     - `parentId` {{optional_inline}}
-      - : 移動先フォルダの ID を指定する {{jsxref("string")}} です。この値が省略された場合、現在と同じフォルダ内の新しい場所へ移動されます。
+      - : 移動先フォルダーの ID を指定する {{jsxref("string")}} です。この値が省略された場合、現在と同じフォルダー内の新しい場所へ移動されます。
     - `index` {{optional_inline}}
-      - : 移動先フォルダ内における位置を指定する 0 起点のインデックスです。値が 0 の場合、そのフォルダの先頭に移動されます。値が省略された場合、新しい親フォルダ内の最後に移動されます。
+      - : 移動先フォルダー内における位置を指定する 0 起点のインデックスです。値が 0 の場合、そのフォルダーの先頭に移動されます。値が省略された場合、新しい親フォルダー内の最後に移動されます。
 
 - `callback` {{optional_inline}}
 
@@ -39,36 +39,41 @@ browser.bookmarks.move(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.move")}}
+{{Compat}}
 
 ## 使用例
 
-### ブックマークを現在のフォルダの先頭へ移動
+### ブックマークを現在のフォルダーの先頭へ移動
 
-次の例は、既存のブックマークを現在のフォルダの先頭へ移動させるものです。移動後に必要な処理は特にないため、ここではコールバック無しで呼び出しています。
+次の例は、既存のブックマークを現在のフォルダーの先頭へ移動させるものです。移動後に必要な処理は特にないため、ここではコールバック無しで呼び出しています。
 
 ```js
 browser.bookmarks.move(bookmarkID, { index: 0 });
 ```
 
-### ブックマークを異なるフォルダへ移動
+### ブックマークを異なるフォルダーへ移動
 
-以下の例は、ID で指定したブックマークを、別の ID で指定したフォルダへ移動させる関数です。今回は、移動後に実行されるコールバック関数も指定しています。
+以下の例は、ID で指定したブックマークを、別の ID で指定したフォルダーへ移動させる関数です。今回は、移動後に実行されるコールバック関数も指定しています。
 
 ```js
 function moveToFolder(bookmarkId, destinationId) {
-  browser.bookmarks.move(bookmarkId, { parentId: destinationId },
-                         function(updatedNode) {
-    /* ブックマークの移動後に行う処理 */
-  });
+  browser.bookmarks.move(
+    bookmarkId,
+    { parentId: destinationId },
+    function (updatedNode) {
+      /* ブックマークの移動後に行う処理 */
+    },
+  );
 }
 ```
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium `の`[`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-move) API に基づいています。また、このドキュメント は [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> [!NOTE]
+> この API は Chromium `の`[`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-move) API に基づいています。また、このドキュメント は [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -95,4 +100,4 @@ function moveToFolder(bookmarkId, destinationId) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

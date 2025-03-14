@@ -7,7 +7,29 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
 
 **`test()`** 方法执行一个检索，用来查看正则表达式与指定的字符串是否匹配。返回 `true` 或 `false`。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-test.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.test", "taller")}}
+
+```js interactive-example
+const str = "table football";
+
+const regex = new RegExp("foo*");
+const globalRegex = new RegExp("foo*", "g");
+
+console.log(regex.test(str));
+// Expected output: true
+
+console.log(globalRegex.lastIndex);
+// Expected output: 0
+
+console.log(globalRegex.test(str));
+// Expected output: true
+
+console.log(globalRegex.lastIndex);
+// Expected output: 9
+
+console.log(globalRegex.test(str));
+// Expected output: false
+```
 
 ## 语法
 
@@ -35,7 +57,7 @@ regexObj.test(str)
 一个简单的例子，测试 "hello" 是否包含在字符串的最开始，返回布尔值。
 
 ```js
-let str = 'hello world!';
+let str = "hello world!";
 let result = /^hello/.test(str);
 console.log(result);
 // true
@@ -44,14 +66,14 @@ console.log(result);
 下例打印一条信息，该信息内容取决于是否成功通过指定测试：
 
 ```js
-function testinput(re, str){
-    var midstring;
-    if (re.test(str)) {
-        midstring = " contains ";
-    } else {
-        midstring = " does not contain ";
-    }
-    console.log(str + midstring + re.source);
+function testinput(re, str) {
+  var midstring;
+  if (re.test(str)) {
+    midstring = " contains ";
+  } else {
+    midstring = " does not contain ";
+  }
+  console.log(str + midstring + re.source);
 }
 ```
 
@@ -65,10 +87,10 @@ function testinput(re, str){
 var regex = /foo/g;
 
 // regex.lastIndex is at 0
-regex.test('foo'); // true
+regex.test("foo"); // true
 
 // regex.lastIndex is now at 3
-regex.test('foo'); // false
+regex.test("foo"); // false
 ```
 
 ## 规范
@@ -79,7 +101,7 @@ regex.test('foo'); // false
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- 在[JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)章节
+- [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)章节
 - {{jsxref("RegExp")}}

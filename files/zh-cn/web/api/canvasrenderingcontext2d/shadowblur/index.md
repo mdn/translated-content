@@ -1,26 +1,26 @@
 ---
-title: CanvasRenderingContext2D.shadowBlur
+title: CanvasRenderingContext2D：shadowBlur 属性
 slug: Web/API/CanvasRenderingContext2D/shadowBlur
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.shadowBlur`** 是 Canvas 2D API 描述模糊效果程度的属性；它既不对应像素值也不受当前转换矩阵的影响。默认值是 0。
+Canvas 2D API 的 **`CanvasRenderingContext2D.shadowBlur`** 属性用于描述模糊效果程度。默认值是 `0`（没有模糊）。
 
-## 语法
+> [!NOTE]
+> 只有当 {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} 属性设置为非透明值时，阴影才会被绘制。其中的 `shadowBlur`、{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}} 或 {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} 属性中至少有一个必须是非零的。
 
-```
-ctx.shadowBlur = level;
-```
+## 值
 
-- `level`
-  - : 描述模糊效果程度的，float 类型的值。默认值是 0。负数、 {{jsxref("Infinity")}} 或者 {{jsxref("NaN")}} 都会被忽略。
+一个非负浮点数，指定阴影模糊的级别，其中 `0` 表示没有模糊，数字越大表示模糊程度越高。这个值不对应于像素数量，并且不受当前变换矩阵的影响。默认值为 `0`。负数、{{jsxref("Infinity")}} 和 {{jsxref("NaN")}} 将被忽略。
 
 ## 示例
 
-### 使用 `shadowBlur` 属性
+### 为形状添加阴影
 
-这是一段简单的代码片段，使用 `shadowblur 属性设置模糊阴影。` 注意：只有设置 shadowColor 属性值为不透明，阴影才会被绘制。
+这个例子向一个矩形添加了模糊的阴影。`shadowColor` 属性设置阴影的颜色，而 `shadowBlur` 设置阴影的模糊程度。
 
 #### HTML
 
@@ -31,60 +31,23 @@ ctx.shadowBlur = level;
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.shadowColor = "black";
-ctx.shadowBlur = 10;
+// 阴影
+ctx.shadowColor = "red";
+ctx.shadowBlur = 15;
 
-ctx.fillStyle = "white";
-ctx.fillRect(10, 10, 100, 100);
+// 矩形
+ctx.fillStyle = "blue";
+ctx.fillRect(20, 20, 150, 100);
 ```
 
-修改下面的代码并在线查看 canvas 的变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.shadowColor = "black";
-ctx.shadowBlur = 10;
-ctx.fillStyle = "white";
-ctx.fillRect(10, 10, 100, 100);</textarea>
-```
+{{ EmbedLiveSample('为形状添加阴影', 700, 180) }}
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 
@@ -92,6 +55,18 @@ window.addEventListener("load", drawCanvas);
 
 {{Compat}}
 
+### WebKit/Blink 特定注意事项
+
+在基于 WebKit 和 Blink 的浏览器中，除了这个属性外，还实现了一个非标准且已弃用的方法 `ctx.setShadow()`。
+
+```js
+setShadow(width, height, blur, color, alpha);
+setShadow(width, height, blur, graylevel, alpha);
+setShadow(width, height, blur, r, g, b, a);
+setShadow(width, height, blur, c, m, y, k, a);
+```
+
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}.
+- 定义该属性的接口：{{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.shadowColor")}}

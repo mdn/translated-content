@@ -1,20 +1,9 @@
 ---
 title: sessions.Session
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/Session
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Session
-  - Type
-  - WebExtensions
-  - sessions
-translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/Session
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 L'objet de `Session` représente un onglet ou une fenêtre que l'utilisateur a fermé dans la session de navigation actuelle.
 
@@ -34,17 +23,17 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `lastModified`
   - : `number`. L'heure où l'onglet ou la fenêtre a été fermé, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
 - `tab`{{optional_inline}}
-  - : `object`. Si l'objet représente un onglet fermé, cette propriété est présente et sera un objet {{WebExtAPIRef("tabs.Tab")}}. Cela contiendra `url`, `titre`, et `favIconUrl` uniquement si l'extension possède la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "tabs".
+  - : `object`. Si l'objet représente un onglet fermé, cette propriété est présente et sera un objet {{WebExtAPIRef("tabs.Tab")}}. Cela contiendra `url`, `titre`, et `favIconUrl` uniquement si l'extension possède la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "tabs".
 - `window`{{optional_inline}}
   - : `object`. Si l'objet représente une fenêtre fermée, cette propriété est présente et sera un objet {{WebExtAPIRef("windows.Window")}}.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sessions.Session")}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/extensions/sessions).
+> Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

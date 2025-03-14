@@ -1,5 +1,5 @@
 ---
-title: ':last-child'
+title: :last-child
 slug: Web/CSS/:last-child
 ---
 
@@ -15,7 +15,44 @@ p:last-child {
 }
 ```
 
-> **メモ:** 当初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。
+{{InteractiveExample("CSS Demo: :last-child", "tabbed-shorter")}}
+
+```css interactive-example
+p {
+  font-weight: bold;
+}
+
+li:last-child {
+  border: 2px solid orange;
+}
+```
+
+```html interactive-example
+<p>Track &amp; field champions:</p>
+<ul>
+  <li>Adhemar da Silva</li>
+  <li>Wang Junxia</li>
+  <li>Wilma Rudolph</li>
+  <li>Babe Didrikson-Zaharias</li>
+  <li>Betty Cuthbert</li>
+  <li>Fanny Blankers-Koen</li>
+  <li>Florence Griffith-Joyner</li>
+  <li>Irena Szewinska</li>
+  <li>Jackie Joyner-Kersee</li>
+  <li>Shirley Strickland</li>
+  <li>Carl Lewis</li>
+  <li>Emil Zatopek</li>
+  <li>Haile Gebrselassie</li>
+  <li>Jesse Owens</li>
+  <li>Jim Thorpe</li>
+  <li>Paavo Nurmi</li>
+  <li>Sergei Bubka</li>
+  <li>Usain Bolt</li>
+</ul>
+```
+
+> [!NOTE]
+> 当初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。
 
 ## 構文
 
@@ -53,7 +90,7 @@ p:last-child {
 
 #### 結果
 
-{{EmbedLiveSample('Basic_example', 500, 200)}}
+{{EmbedLiveSample('基本的な例', 500, 200)}}
 
 ### リストのスタイル付け
 
@@ -63,7 +100,8 @@ p:last-child {
 <ul>
   <li>Item 1</li>
   <li>Item 2</li>
-  <li>Item 3
+  <li>
+    Item 3
     <ul>
       <li>Item 3.1</li>
       <li>Item 3.2</li>
@@ -88,7 +126,7 @@ ul li:last-child {
 
 #### 結果
 
-{{EmbedLiveSample('Styling_a_list')}}
+{{EmbedLiveSample('リストのスタイル付け')}}
 
 ## 仕様書
 

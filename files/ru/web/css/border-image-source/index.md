@@ -1,7 +1,6 @@
 ---
 title: border-image-source
 slug: Web/CSS/border-image-source
-translation_of: Web/CSS/border-image-source
 ---
 
 {{CSSRef}}
@@ -10,7 +9,8 @@ translation_of: Web/CSS/border-image-source
 
 The **`border-image-source`** CSS property defines the {{cssxref("&lt;image&gt;")}} to use instead of the style of the border. If this property is set to `none`, the style defined by {{cssxref("border-style")}} is used instead.
 
-> **Примечание:** **Предупреждение:** Though any {{cssxref("&lt;image&gt;")}} can be used with this CSS property, browser support is still limited and some browsers support only images defined using the `url()` functional notation.
+> [!NOTE]
+> Though any {{cssxref("&lt;image&gt;")}} can be used with this CSS property, browser support is still limited and some browsers support only images defined using the `url()` functional notation.
 
 {{cssinfo}}
 

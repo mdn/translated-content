@@ -1,6 +1,6 @@
 ---
 title: CSS アニメーション
-slug: Web/CSS/CSS_Animations
+slug: Web/CSS/CSS_animations
 ---
 
 {{CSSRef}}
@@ -27,11 +27,11 @@ slug: Web/CSS/CSS_Animations
 
 ## ガイド
 
-- [CSS アニメーション対応の検出](/ja/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
+- [CSS アニメーション対応の検出](/ja/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
   - : ブラウザーが CSS アニメーションに対応しているかを検出するテクニックを説明します。
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : CSS を使用してアニメーションを作成する方法についての一歩一歩進むチュートリアルです。この記事では、関連する CSS プロパティとアットルール、それに互いにどのように関係するのかを説明します。
-- [CSS アニメーションのコツとトリック](/ja/docs/Web/CSS/CSS_Animations/Tips)
+- [CSS アニメーションのコツとトリック](/ja/docs/Web/API/Web_Animations_API/Tips)
   - : CSS アニメーションを引き出すのに役立つコツやトリックです。現在、 API に対応が備わっていない、すでに完了に向けて実行されているアニメーションを再び再生するテクニックを紹介しています。
 
 ## 仕様書
@@ -42,8 +42,8 @@ slug: Web/CSS/CSS_Animations
 
 ### `animation` プロパティ
 
-{{Compat("css.properties.animation")}}
+{{Compat}}
 
 ## 関連情報
 
-- CSS アニメーションに関連して、 [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions)は、ユーザーの操作に基づいてアニメーションを起動することができます。
+- CSS アニメーションに関連して、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)は、ユーザーの操作に基づいてアニメーションを起動することができます。

@@ -1,7 +1,6 @@
 ---
 title: Gamepad.timestamp
 slug: Web/API/Gamepad/timestamp
-translation_of: Web/API/Gamepad/timestamp
 ---
 
 {{APIRef("Gamepad API")}}
@@ -10,7 +9,8 @@ translation_of: Web/API/Gamepad/timestamp
 
 Идея состоит в том, чтобы позволить разработчику определить, были ли изменены данные для `axes` и `button` на аппаратном обеспечении. Значение должно быть установлено относительно атрибута `navigationStart` интерфейса `{{domxref("PerformanceTiming")}}`. Значения монотонно увеличиваются, поэтому их можно сравнивать, чтобы определить порядок изменений, т.к. новые значения всегда будут больше или равны старым.
 
-> **Примечание:** В данный момент, это свойство нигде не поддерживается.
+> [!NOTE]
+> В данный момент, это свойство нигде не поддерживается.
 
 ## Синтаксис
 
@@ -39,4 +39,4 @@ console.log(gp.timestamp);
 
 ## Смотрите также
 
-[Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)
+[Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

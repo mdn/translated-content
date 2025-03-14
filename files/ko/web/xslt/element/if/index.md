@@ -1,13 +1,9 @@
 ---
 title: if
 slug: Web/XSLT/Element/if
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/if
-original_slug: Web/XSLT/if
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:if>` 요소는 test 속성과 템플릿을 포함합니다. test 속성을 참으로 평가하면, 템플릿을 처리합니다. 이것은 다른 언어의 if 문과 비슷합니다. 그러나, `<tt>if-then-else</tt>` 문의 기능을 다하기 위해 `<xsl:when>`과 `<xsl:otherwise>` 자식이 하나씩 있는 `<xsl:choose>` 요소를 씁니다.
 
@@ -34,7 +30,7 @@ original_slug: Web/XSLT/if
 
 ### 정의
 
-[XSLT section 9.1, Conditional Processing with xsl:if](http://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:if)
+[XSLT section 9.1, Conditional Processing with xsl:if](https://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:if)
 
 ### Gecko 지원
 

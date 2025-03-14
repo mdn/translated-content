@@ -1,8 +1,9 @@
 ---
-title: HTMLSlotElement.assignedElements()
+title: "HTMLSlotElement: assignedElements() メソッド"
+short-title: assignedElements()
 slug: Web/API/HTMLSlotElement/assignedElements
 l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("Shadow DOM API")}}
@@ -34,8 +35,8 @@ assignedElements(options)
 ## 例
 
 ```js
-let slots = this.shadowRoot.querySelector('slot');
-let elements = slots.assignedElements({flatten: true});
+let slots = this.shadowRoot.querySelector("slot");
+let elements = slots.assignedElements({ flatten: true });
 ```
 
 ## 仕様書

@@ -1,6 +1,8 @@
 ---
-title: Node.hasChildNodes()
+title: "Node: hasChildNodes() メソッド"
 slug: Web/API/Node/hasChildNodes
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
@@ -9,8 +11,8 @@ slug: Web/API/Node/hasChildNodes
 
 ## 構文
 
-```js
-hasChildNodes();
+```js-nolint
+hasChildNodes()
 ```
 
 ### 引数
@@ -24,7 +26,7 @@ hasChildNodes();
 ## 例
 
 ```js
-let foo = document.getElementById('foo');
+let foo = document.getElementById("foo");
 
 if (foo.hasChildNodes()) {
   // 'foo.childNodes' で何かを行う

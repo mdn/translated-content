@@ -1,44 +1,38 @@
 ---
-title: CanvasRenderingContext2D.textAlign
+title: CanvasRenderingContext2D：textAlign 属性
 slug: Web/API/CanvasRenderingContext2D/textAlign
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.textAlign`** 是 Canvas 2D API 描述绘制文本时，文本的对齐方式的属性。注意，该对齐是基于 CanvasRenderingContext2D.fillText 方法的 x 的值。所以如果 textAlign="center"，那么该文本将画在 x-50%\*width。
+Canvas 2D API 的 **`CanvasRenderingContext2D.textAlign`** 属性用于描述绘制文本时文本的对齐方式。
 
-> 译者注：这里的 textAlign="center"比较特殊。textAlign 的值为 center 时候文本的居中是基于你在 fillText 的时候所给的 x 的值，也就是说文本一半在 x 的左边，一半在 x 的右边（可以理解为计算 x 的位置时从默认文字的左端，改为文字的中心，因此你只需要考虑 x 的位置即可）。所以，如果你想让文本在整个 canvas 居中，就需要将 fillText 的 x 值设置成 canvas 的宽度的一半。
+对齐是相对于 {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}} 方法的 `x` 值的。例如，如果 `textAlign` 是 `"center"`，那么该文本的左侧边界会是 `x - (textWidth / 2)`。
 
-## 语法
+## 值
 
-```
-ctx.textAlign = "left" || "right" || "center" || "start" || "end";
-```
+可能的值：
 
-### 选项
-
-有效值：
-
-- left
+- `"left"`
   - : 文本左对齐。
-- right
+- `"right"`
   - : 文本右对齐。
-- center
+- `"center"`
   - : 文本居中对齐。
-- start
+- `"start"`
   - : 文本对齐界线开始的地方（左对齐指本地从左向右，右对齐指本地从右向左）。
-- end
+- `"end"`
   - : 文本对齐界线结束的地方（左对齐指本地从左向右，右对齐指本地从右向左）。
 
-默认值是 `start`。
-
-> 译者注：`direction` 属性会对此属性产生影响。如果 `direction` 属性设置为 `ltr`，则 left 和 `start` 的效果相同，`right` 和 end 的效果相同；如果 direction 属性设置为 `rtl`，则 `left` 和 `end` 的效果相同，`right` 和 `start` 的效果相同。
+默认值是 `"start"`。
 
 ## 示例
 
-### 使用 `textAlign` 属性
+### 一般文本对齐
 
-这是一段简单的代码片段，使用 `textAlign` 属性设置文本的不同对齐方式。
+这个例子演示了 `textAlign` 属性的三种“物理”值：`"left"`、`"center"` 和 `"right"`。
 
 #### HTML
 
@@ -49,57 +43,63 @@ ctx.textAlign = "left" || "right" || "center" || "start" || "end";
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+canvas.width = 350;
+const ctx = canvas.getContext("2d");
+const x = canvas.width / 2;
 
-ctx.font = "48px serif";
+ctx.beginPath();
+ctx.moveTo(x, 0);
+ctx.lineTo(x, canvas.height);
+ctx.stroke();
+
+ctx.font = "30px serif";
+
 ctx.textAlign = "left";
-ctx.strokeText("Hello world", 0, 100);
+ctx.fillText("left-aligned", x, 40);
+
+ctx.textAlign = "center";
+ctx.fillText("center-aligned", x, 85);
+
+ctx.textAlign = "right";
+ctx.fillText("right-aligned", x, 130);
 ```
 
-修改下面的代码并在线查看 canvas 的变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.font = "48px serif";
-ctx.textAlign = "left";
-ctx.strokeText("Hello world", 0, 100);</textarea>
+{{ EmbedLiveSample('一般文本对齐', 700, 180) }}
+
+### 依赖方向的文本对齐
+
+这个例子演示了 `textAlign` 属性的两个依赖方向的值：`"start"` 和 `"end"`。注意，虽然英语文本的默认方向是 `"ltr"`，但我们在这里手动指定了 {{domxref("CanvasRenderingContext2D.direction", "direction")}} 属性为 `"ltr"`。
+
+#### HTML
+
+```html
+<canvas id="canvas"></canvas>
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+#### JavaScript
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
+```js
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
+ctx.font = "30px serif";
+ctx.direction = "ltr";
 
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
+ctx.textAlign = "start";
+ctx.fillText("Start-aligned", 0, 50);
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+ctx.textAlign = "end";
+ctx.fillText("End-aligned", canvas.width, 120);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+#### 结果
 
-## 规范描述
+{{ EmbedLiveSample('依赖方向的文本对齐', 700, 180) }}
+
+## 规范
 
 {{Specifications}}
 
@@ -109,4 +109,4 @@ window.addEventListener("load", drawCanvas);
 
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}.
+- 定义该属性的接口：{{domxref("CanvasRenderingContext2D")}}

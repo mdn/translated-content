@@ -1,13 +1,6 @@
 ---
-title: 'Element : évènement click'
+title: "Element : évènement click"
 slug: Web/API/Element/click_event
-tags:
-  - API
-  - DOM
-  - Element
-  - Reference
-  - click
-translation_of: Web/API/Element/click_event
 ---
 
 {{APIRef}}
@@ -47,7 +40,7 @@ L'objet {{domxref("MouseEvent")}}, passé au gestionnaire d'évènement (lorsque
 
 ### Internet Explorer
 
-Internet Explorer 8 & 9 souffrent d'un bug où les élméents avec une {{cssxref("background-color")}} calculée qui vaut [`transparent`](/fr/docs/Web/CSS/color_value#transparent_keyword) qui recouvrent d'autres éléments ne recevront pas d'évènements `click`. Les évènements `click` toucheront les éléments en dessous à la place.
+Internet Explorer 8 & 9 souffrent d'un bug où les éléments avec une {{cssxref("background-color")}} calculée qui vaut [`transparent`](/fr/docs/Web/CSS/color_value#transparent_keyword) qui recouvrent d'autres éléments ne recevront pas d'évènements `click`. Les évènements `click` toucheront les éléments en dessous à la place.
 
 Quelques méthodes de contournement pour ce bug :
 
@@ -93,9 +86,9 @@ Dans cet exemple, on affiche le nombre de clics consécutifs sur un bouton HTML 
 ### JavaScript
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', event => {
+button.addEventListener("click", (event) => {
   button.innerHTML = `Nombre de clics : ${event.detail}`;
 });
 ```
@@ -116,7 +109,7 @@ Essayez de cliquer rapidement sur le bouton pour augmenter le nombre de clic. Ap
 
 ## Voir aussi
 
-- [Une introduction aux évènements](/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements)
+- [Une introduction aux évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events)
 - D'autres évènements connexes
 
   - [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)

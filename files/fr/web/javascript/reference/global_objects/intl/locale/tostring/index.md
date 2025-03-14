@@ -1,26 +1,35 @@
 ---
 title: Intl.Locale.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
-tags:
-  - Intl
-  - JavaScript
-  - Locale
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/toString
 ---
 
 {{JSRef}}
 
 La méthode **`Intl.Locale.prototype.toString()`** renvoie [l'identifiant de locale complet](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier) pour la locale courante.
 
-{{EmbedInteractiveExample("pages/js/intl-locale-prototype-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Locale.prototype.toString()")}}
+
+```js interactive-example
+const french = new Intl.Locale("fr-Latn-FR", {
+  calendar: "gregory",
+  hourCycle: "h12",
+});
+const korean = new Intl.Locale("ko-Kore-KR", {
+  numeric: true,
+  caseFirst: "upper",
+});
+
+console.log(french.toString());
+// Expected output: "fr-Latn-FR-u-ca-gregory-hc-h12"
+
+console.log(korean.toString());
+// Expected output: "ko-Kore-KR-u-kf-upper-kn"
+```
 
 ## Syntaxe
 
 ```js
-locale.toString()
+locale.toString();
 ```
 
 ### Valeur de retour
@@ -34,20 +43,21 @@ Une instance de `Locale` est une représentation JavaScript d'une locale au sens
 ## Exemples
 
 ```js
-let maLocale = new Intl.Locale("fr-Latn-FR", {hourCycle: "h24", calendar: "gregory"});
+let maLocale = new Intl.Locale("fr-Latn-FR", {
+  hourCycle: "h24",
+  calendar: "gregory",
+});
 console.log(maLocale.baseName); // Affiche "fr-Latn-FR"
 console.log(maLocale.toString()); // Affiche "fr-Latn-FR-u-ca-gregory-hc-h24"
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                          | État                    | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale.prototype.toString()`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.toString) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.toString")}}
+{{Compat}}
 
 ## Voir aussi
 

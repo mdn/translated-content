@@ -13,7 +13,7 @@ slug: Web/API/Navigator/cookieEnabled
 var cookieEnabled = navigator.cookieEnabled;
 ```
 
-- `cookieEnabled` é um [Booleano](/pt-BR/docs/Glossario/Booleano): `true` ou `false`.
+- `cookieEnabled` é um [Booleano](/pt-BR/docs/Glossary/Boolean): `true` ou `false`.
 
 ## Exemplo
 
@@ -25,10 +25,8 @@ if (!navigator.cookieEnabled) {
 
 ## Especificações
 
-| Especificação                                                                                                                            | Status                           | Comentário         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("HTML WHATWG", "webappapis.html#dom-navigator-cookieenabled", "Navigator.cookieEnabled")}} | {{Spec2("HTML WHATWG")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Navigator.cookieEnabled")}}
+{{Compat}}

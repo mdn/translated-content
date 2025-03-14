@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 
 **`has()`** メソッドは、特定の値をもつ要素が `WeakSet` オブジェクト内に存在するかどうかを示す真偽値を返します。
 
-{{EmbedInteractiveExample("pages/js/weakset-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.has()")}}
+
+```js interactive-example
+const weakset1 = new WeakSet();
+const object1 = {};
+const object2 = {};
+
+weakset1.add(object1);
+
+console.log(weakset1.has(object1));
+// Expected output: true
+
+console.log(weakset1.has(object2));
+// Expected output: false
+```
 
 ## 構文
 
@@ -34,8 +48,8 @@ var ws = new WeakSet();
 var obj = {};
 ws.add(window);
 
-mySet.has(window);  // returns true
-mySet.has(obj);     // returns false
+mySet.has(window); // returns true
+mySet.has(obj); // returns false
 ```
 
 ## 仕様書
@@ -44,7 +58,7 @@ mySet.has(obj);     // returns false
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakSet.has")}}
+{{Compat}}
 
 ## 関連情報
 

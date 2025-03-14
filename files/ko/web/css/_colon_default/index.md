@@ -1,15 +1,8 @@
 ---
-title: ':default'
+title: :default
 slug: Web/CSS/:default
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
-translation_of: Web/CSS/:default
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`:default`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 연관 요소 내에서의 기본값인 요소를 선택합니다.
@@ -32,16 +25,16 @@ translation_of: Web/CSS/:default
 <fieldset>
   <legend>Favorite season</legend>
 
-  <input type="radio" name="season" id="spring">
+  <input type="radio" name="season" id="spring" />
   <label for="spring">Spring</label>
 
-  <input type="radio" name="season" id="summer" checked>
+  <input type="radio" name="season" id="summer" checked />
   <label for="summer">Summer</label>
 
-  <input type="radio" name="season" id="fall">
+  <input type="radio" name="season" id="fall" />
   <label for="fall">Fall</label>
 
-  <input type="radio" name="season" id="winter">
+  <input type="radio" name="season" id="winter" />
   <label for="winter">Winter</label>
 </fieldset>
 ```

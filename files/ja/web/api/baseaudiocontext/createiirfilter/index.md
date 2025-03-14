@@ -1,19 +1,21 @@
 ---
-title: BaseAudioContext.createIIRFilter()
+title: "BaseAudioContext: createIIRFilter() メソッド"
+short-title: createIIRFilter()
 slug: Web/API/BaseAudioContext/createIIRFilter
+l10n:
+  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
 {{ APIRef("Web Audio API") }}
 
-**`createIIRFilter()`** は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、 {{ domxref("IIRFilterNode") }} を生成します。
+**`createIIRFilter()`** は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、 {{ domxref("IIRFilterNode") }} を生成します。
 これは一般的な**[無限インパルス応答](https://ja.wikipedia.org/wiki/無限インパルス応答)** (IIR) フィルターを生成し、これはよって様々な種類のフィルターとして提供できるように構成することができます。
-of filter.
 
-> **メモ:** {{domxref("IIRFilterNode.IIRFilterNode", "IIRFilterNode()")}} コンストラクターは {{domxref("IIRFilterNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
+> **メモ:** {{domxref("IIRFilterNode.IIRFilterNode", "IIRFilterNode()")}} コンストラクターは {{domxref("IIRFilterNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
 
 ## 構文
 
-```js
+```js-nolint
 createIIRFilter(feedforward, feedback)
 ```
 

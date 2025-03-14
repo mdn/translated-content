@@ -1,9 +1,9 @@
 ---
 title: Same-origin policy
 slug: Web/Security/Same-origin_policy
-translation_of: Web/Security/Same-origin_policy
-original_slug: Web/Security/Same_origin_policy_for_JavaScript
 ---
+
+{{QuickLinksWithSubpages("/fr/docs/Web/Security")}}
 
 La same-origin policy restreint la manière dont un document ou un script chargé depuis une origine peut interagir avec une autre ressource chargée depuis une autre origine.
 
@@ -37,25 +37,25 @@ Le numéro de port est stocké par le navigateur séparément. Tout appel aux se
 
 ## Accès réseau cross-origin
 
-La same-origin policy contrôle les interactions entre deux origines différentes, quand vous utilisez [`XMLHttpRequest`](/fr/docs/DOM/XMLHttpRequest) par exemple. Ces interactions sont généralement rangées dans trois catégories :
+La same-origin policy contrôle les interactions entre deux origines différentes, quand vous utilisez [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) par exemple. Ces interactions sont généralement rangées dans trois catégories :
 
-- _Écritures_ cross-origin généralement autorisées. Par exemple, les liens, les redirections ou les envois de formulaires. Quelques rares requêtes HTTP nécessitent [preflight](/fr/docs/HTTP/Access_control_CORS#Preflighted_requests).
+- _Écritures_ cross-origin généralement autorisées. Par exemple, les liens, les redirections ou les envois de formulaires. Quelques rares requêtes HTTP nécessitent [preflight](/fr/docs/Web/HTTP/CORS#preflighted_requests).
 - _Embarqué_ cross-origin généralement autorisé. Les exemples sont listés ci-après.
 - _Lectures_ cross-origin généralement non autorisées.
 
 Voici quelques exemples de ressources qui peuvent être embarqués malgré leur origine incompatible avec la same-origin policy :
 
 - JavaScript avec `<script src="..."></script>`. Les messages d'erreur de syntaxe ne sont disponibles que pour les scripts ayant la même origine.
-- CSS avec `<link rel="stylesheet" href="...">`. Étant donnée la [souplesse des règles de syntaxe](http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html) du CSS, les CSS d'origine différentes nécessitent une entête `Content-Type` correcte. Les restrictions varient selon les navigateurs : [IE](http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx), [Firefox](http://www.mozilla.org/security/announce/2010/mfsa2010-46.html), [Chrome](http://code.google.com/p/chromium/issues/detail?id=9877), [Safari](http://support.apple.com/kb/HT4070) et [Opera](http://www.opera.com/support/kb/view/943/).
-- Images avec [`<img>`](/fr/docs/HTML/Element/Img). Les formats d'image supportés, comprenant PNG, JPEG, GIF, BMP, SVG...
-- Fichiers média avec [`<video>`](/fr/docs/HTML/Element/video) et [`<audio>`](/fr/docs/HTML/Element/audio).
-- Objets avec [`<object>`](/fr/docs/HTML/Element/object), [`<embed>`](/fr/docs/HTML/Element/embed) et [`<applet>`](/fr/docs/HTML/Element/applet).
-- Fontes de polices avec [`@font-face`](/fr/docs/CSS/@font-face). Certain navigateurs autorisent les fontes cross-origin, d'autres appliquent la same-origin policy.
-- N'importe quoi avec [`<frame>`](/fr/docs/HTML/Element/frame) et [`<iframe>`](/fr/docs/HTML/Element/iframe). Un site peut utiliser l'entête [`X-Frame-Options`](/fr/docs/HTTP/X-Frame-Options) pour interdire cela depuis une page n'ayant pas la même origine.
+- CSS avec `<link rel="stylesheet" href="...">`. Étant donnée la [souplesse des règles de syntaxe](http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html) du CSS, les CSS d'origine différentes nécessitent une entête `Content-Type` correcte. Les restrictions varient selon les navigateurs : [IE](http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx), [Firefox](https://www.mozilla.org/security/announce/2010/mfsa2010-46.html), [Chrome](https://code.google.com/p/chromium/issues/detail?id=9877), [Safari](https://support.apple.com/kb/HT4070) et [Opera](https://www.opera.com/support/kb/view/943/).
+- Images avec [`<img>`](/fr/docs/Web/HTML/Element/img). Les formats d'image supportés, comprenant PNG, JPEG, GIF, BMP, SVG...
+- Fichiers média avec [`<video>`](/fr/docs/Web/HTML/Element/Video) et [`<audio>`](/fr/docs/Web/HTML/Element/audio).
+- Objets avec [`<object>`](/fr/docs/Web/HTML/Element/object), [`<embed>`](/fr/docs/Web/HTML/Element/embed) et [`<applet>`](/fr/docs/HTML/Element/applet).
+- Fontes de polices avec [`@font-face`](/fr/docs/Web/CSS/@font-face). Certain navigateurs autorisent les fontes cross-origin, d'autres appliquent la same-origin policy.
+- N'importe quoi avec [`<frame>`](/fr/docs/Web/HTML/Element/frame) et [`<iframe>`](/fr/docs/Web/HTML/Element/iframe). Un site peut utiliser l'entête [`X-Frame-Options`](/fr/docs/Web/HTTP/Headers/X-Frame-Options) pour interdire cela depuis une page n'ayant pas la même origine.
 
 ### Autoriser l'accès cross-origin
 
-Utiliser [CORS](/fr/docs/HTTP/Access_control_CORS) pour autoriser l'accès cross-origin.
+Utiliser [CORS](/fr/docs/Web/HTTP/CORS) pour autoriser l'accès cross-origin.
 
 ### Comment bloquer l'accès cross-origin access
 
@@ -65,7 +65,7 @@ Utiliser [CORS](/fr/docs/HTTP/Access_control_CORS) pour autoriser l'accès cross
 
 ## Accès script cross-origin
 
-Les APIs JavaScript comme [`iframe.contentWindow`](/fr/docs/DOM/HTMLIFrameElement), [`window.parent`](/fr/docs/DOM/window.parent), [`window.open`](/fr/docs/DOM/window.open) et [`window.opener`](/fr/docs/DOM/window.opener) autorisent les documents à se référencer directement entre eux. Quand deux documents n'ont pas la même origine, ces références fournissent des accès limités aux objets [Window](http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window) et [Location](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#security-location). Certains navigateurs [permettent l'accès à plus de propriétés](https://bugzilla.mozilla.org/show_bug.cgi?id=839867) que ce que les spécifications permettent. À la place, vous pouvez utiliser [`window.postMessage`](/fr/docs/DOM/window.postMessage) pour communiquer entre deux documents.
+Les APIs JavaScript comme [`iframe.contentWindow`](/fr/docs/Web/API/HTMLIFrameElement), [`window.parent`](/fr/docs/Web/API/Window/parent), [`window.open`](/fr/docs/Web/API/Window/open) et [`window.opener`](/fr/docs/Web/API/Window/opener) autorisent les documents à se référencer directement entre eux. Quand deux documents n'ont pas la même origine, ces références fournissent des accès limités aux objets [Window](https://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window) et [Location](https://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#security-location). Certains navigateurs [permettent l'accès à plus de propriétés](https://bugzilla.mozilla.org/show_bug.cgi?id=839867) que ce que les spécifications permettent. À la place, vous pouvez utiliser [`window.postMessage`](/fr/docs/Web/API/Window/postMessage) pour communiquer entre deux documents.
 
 ## Voir aussi
 

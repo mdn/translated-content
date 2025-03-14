@@ -1,105 +1,272 @@
 ---
-title: <colgroup>
+title: <colgroup>：表格列组元素
 slug: Web/HTML/Element/colgroup
+l10n:
+  sourceCommit: aa55b6b6768e0250b52703f26d44ea3291f725f3
 ---
 
 {{HTMLSidebar}}
 
-HTML 中的 表格列组（_Column Group_ **\<colgroup>**）标签用来定义表中的一组列表。
+**`<colgroup>`** [HTML](/zh-CN/docs/Web/HTML) 元素定义了表格中的一组列。
 
-{{EmbedInteractiveExample("pages/tabbed/colgroup.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;colgroup&gt;", "tabbed-taller")}}
 
-<table class="properties">
- <tbody>
+```html interactive-example
+<table>
+  <caption>
+    Superheros and sidekicks
+  </caption>
+  <colgroup>
+    <col />
+    <col span="2" class="batman" />
+    <col span="2" class="flash" />
+  </colgroup>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容类别</a></th>
-   <td>无。</td>
+    <td></td>
+    <th scope="col">Batman</th>
+    <th scope="col">Robin</th>
+    <th scope="col">The Flash</th>
+    <th scope="col">Kid Flash</th>
   </tr>
   <tr>
-   <th scope="row">允许的内容</th>
-   <td>If the {{htmlattrxref("span", "colgroup")}} attribute is present: none, it is an {{Glossary("empty element")}}.<br>
-    If the attribute is not present: zero or more {{HTMLElement("col")}} element</td>
+    <th scope="row">Skill</th>
+    <td>Smarts, strong</td>
+    <td>Dex, acrobat</td>
+    <td>Super speed</td>
+    <td>Super speed</td>
   </tr>
-  <tr>
-   <th scope="row">标签省略</th>
-   <td>如果元素的第一个子元素存在且是一个 {{HTMLElement("col")}} 元素，而且在它之前没有省略了结束标签的 {{HTMLElement("colgroup")}} 元素，元素的开始标签可以被省略。<br>
-    如果之后没有紧跟一个空格或注释，元素的结束标签可以被省略。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的父元素</th>
-   <td>一个 {{HTMLElement("table")}} 元素。The {{HTMLElement("colgroup")}} must appear after any optional {{HTMLElement("caption")}} element but before any {{HTMLElement("thead")}}, {{HTMLElement("th")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}} and {{HTMLElement("tr")}} element.</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的 ARIA roles</th>
-   <td>无</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLTableColElement")}}</td>
-  </tr>
- </tbody>
 </table>
+```
+
+```css interactive-example
+.batman {
+  background-color: #d7d9f2;
+}
+
+.flash {
+  background-color: #ffe8d4;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 6px;
+}
+
+td {
+  text-align: center;
+}
+```
 
 ## 属性
 
-此标签支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{htmlattrdef("align")}} {{Deprecated_inline("html4.01")}}
-  - : 这个可枚举的属性定义每一列的元素内容的水平对齐方式，支持的值有：
+- `span`
 
-    - `left`，元素中的内容左对齐
-    - `center`，元素中的内容居中对齐
-    - `right`，元素中的内容右对齐
-    - `justify`，插入空格，使元素中内容两端对齐
-    - `char`，针对确定的字符，设置一个最小偏移量，来进行布局，通过 {{htmlattrxref("char", "col")}} 和 {{htmlattrxref("charoff", "col")}} 属性进行定义 {{unimplemented_inline(2212)}}。此属性的默认值为 `left`。后代 {{HTMLElement("col")}} 元素可以用它们自己的 {{htmlattrxref("align", "col")}} 属性值来重写该属性。
+  - : 指定 `<col>` 元素跨列的连续列数。该值必须是大于 0 的正整数。如果不存在，其默认值为 `1`。
 
-    > **备注：** 不要使用这个属性，它在最新的标准中已经不被支持。
+    > [!NOTE]
+    > 如果 `<colgroup>` 中存在一个或多个 {{HTMLElement("col")}} 元素，则不允许使用 `span` 属性。
+
+### 弃用的属性
+
+以下属性已被弃用，不应再使用。下文记录了这些属性，供更新现有代码时参考，也仅供参考。
+
+- `align` {{deprecated_inline}}
+
+  - : 指定每个列组单元格的水平对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有 `left`、`center`、`right`、`justify` 和 `char`。如果支持，`char` 值将根据 [`char`](#char) 属性中定义的字符和 [`charoff`](#charoff) 属性定义的偏移量对文本内容进行对齐。请注意，后代 {{HTMLElement("col")}} 元素可以使用自己的 [`align`](/zh-CN/docs/Web/HTML/Element/col#align) 属性覆盖该值。使用 {{cssxref("text-align")}} 和 {{htmlelement("th")}} 元素上的 CSS 属性，因为该属性已被弃用。
+
+    > [!NOTE]
+    > 在 `<colgroup>` 元素上设置 `text-align` 没有任何作用，因为 {{HTMLElement("td")}} 和 {{HTMLElement("th")}} 元素不是 `<colgroup>` 元素的后代，因此它们不能从该元素继承。
     >
-    > - 若要实现与 `left`, `center`, `right` 或 `justify` 相同的效果：
-    > - 不要为一个 {{HTMLElement("colgroup")}} 元素选择器设置 {{cssxref("text-align")}} 属性.，因为{{HTMLElement("td")}} 元素并不是 {{HTMLElement("colgroup")}} 元素的后代，不继承于它。
-    > - 如果表格不使用 {{htmlattrxref("colspan", "td")}} 属性，每列用一个 `td:nth-child(an+b)` 的 CSS 选择器，a 是表格中列的总数，b 是当前列在表格中的位列次序号。只有在这个选择器之后， {{cssxref("text-align")}} 属性可以使用。
-    > - 如果表格使用了 {{htmlattrxref("colspan", "td")}} 属性，可以通过合并足够多的属性选择器来实现同样的效果，比如 `[colspan=n]`，但这不常用。
-    > - 若要实现与 `char` 相同的效果：在 CSS3 中，你可以使用 {{htmlattrxref("char", "colgroup")}} 作为 {{cssxref("text-align")}} 的属性值。 {{unimplemented_inline}}
-
-- {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
-  - : 这个属性用于定义列组中的每一个列成员的背景颜色。在 [sRGB](http://www.w3.org/Graphics/Color/sRGB) 的定义中，它是一个以 '#' 开头的 6 位 16 进制值，有 16 个预定义的表示颜色的字符串可以使用
-
-    > **备注：** 不要使用这个并未标准化的属性，它只在 IE 的某些版本中生效，{{HTMLElement("colgroup")}} 标签应该使用 CSS 来定义样式。要实现和 **bgcolor** 属性相似的效果，可以在相关的 {{HTMLElement("td")}} 标签上使用 {{cssxref("background-color")}} 属性。 |
-
-- {{htmlattrdef("char")}} {{Deprecated_inline("html4.01")}}
-  - : This attribute specifies the alignment of the content in a column group to a character. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "colgroup")}} is not set to `char`, this attribute is ignored, though it will still be used as the default value for the {{htmlattrxref("align", "col")}} of the {{HTMLElement("col")}} which are members of this column group.
-
-    > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the {{htmlattrxref("char", "colgroup")}}, in CSS3, you can use the character set using the {{htmlattrxref("char", "colgroup")}} attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
-- {{htmlattrdef("charoff")}} {{Deprecated_inline("html4.01")}}
-  - : This attribute is used to indicate the number of characters to offset the column data from the alignment character specified by the **char** attribute.
-
-    > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard.
-
-- {{htmlattrdef("span")}}
-  - : This attribute contains a positive integer indicating the number of consecutive columns the `<colgroup>` element spans. If not present, its default value is `1`.
-
-    > **备注：** This attribute is applied on the attributes of the column group, it has no effect on the CSS styling rules associated with it or, even more, to the cells of the column's members of the group. The `span` attribute is not permitted if there are one or more `<col>` elements within the `<colgroup>`.
-
-- {{htmlattrdef("valign")}} {{Deprecated_inline("html4.01")}}
-  - : This attribute specifies the vertical alignment of the text within each cell of the column. Possible values for this attribute are:
-
-    - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
-    - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
-    - `middle`, which will center the text in the cell;
-    - and `top`, which will put the text as close to the top of the cell as it is possible.
-
-    > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard:
+    > 如果表格没有使用 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，则在每列使用 `td:nth-of-type(an+b)` CSS 选择器，其中 `a` 为表格中列的总数，`b` 为列在表格中的序号位置，例如 `td:nth-of-type(7n+2) { text-align: right; }` 可右对齐第二列单元格。
     >
-    > - Do not try to set the {{cssxref("vertical-align")}} property on a selector giving a {{HTMLElement("colgroup")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("colgroup")}} element, they won't inherit it.
-    > - If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector per column, where a is the total number of the columns in the table and b is the ordinal position of the column in the table. Only after this selector the {{cssxref("vertical-align")}} property can be used.
-    > - If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
+    > 如果表格使用了 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，则可以通过组合适当的 CSS 属性选择器（如 `[colspan=n]`）来达到效果，不过这并非易事。
 
-- {{htmlattrdef("width")}}
-  - : This attribute specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute might take the special form `0*`, which means that the width of each column in the group should be the minimum width necessary to hold the column's contents. Relative widths such as `0.5*` also can be used.
+- `bgcolor` {{deprecated_inline}}
+
+  - : 定义每列单元格的背景颜色。该值是 HTML 颜色；可以是以“`#`”为前缀的 [6 位十六进制 RGB 代码](/zh-CN/docs/Web/CSS/hex-color)，也可以是[颜色关键字](/zh-CN/docs/Web/CSS/named-color)。不支持其他 CSS {{cssxref("color_value", "&lt;color&gt")}} 值。请使用 {{cssxref("background-color")}} CSS 属性代替，因为该属性已被弃用。
+
+- `char` {{deprecated_inline}}
+
+  - : 没有任何作用。其最初目的是指定内容与每列单元格中的一个字符对齐。当试图对齐数字或货币值时，其典型值包括句号（`.`）。如果 [`align`](#align) 未设置为 `char`，该属性将被忽略，但它仍将作为默认值用于属于该列组的 {{HTMLElement("col")}} 元素的 [`align`](/zh-CN/docs/Web/HTML/Element/col#align)。
+
+- `charoff` {{deprecated_inline}}
+
+  - : 没有任何作用。它最初用于指定列单元格内容从 [`char`](#char) 属性指定的对齐字符偏移的字符数。
+
+- `valign` {{deprecated_inline}}
+
+  - : 指定每个列组单元格的垂直对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有 `baseline`、`bottom`、`middle` 和 `top`。请注意，后代 {{HTMLElement("col")}} 元素可以使用自己的 [`valign`](/zh-CN/docs/Web/HTML/Element/col#valign) 属性覆盖此值。使用 {{cssxref("vertical-align")}} 和 {{htmlelement("th")}} 元素上的 CSS 属性，因为该属性已被弃用。
+
+    > [!NOTE]
+    > 在 `<colgroup>` 元素上设置 `vertical-align` 没有任何作用，因为 {{HTMLElement("td")}} 和 {{HTMLElement("th")}} 元素不是 `<colgroup>` 元素的后代，因此它们不能从该元素继承。
+    >
+    > 如果表格没有使用 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，请在每列使用 [`td:nth-of-type()`](/zh-CN/docs/Web/CSS/:nth-of-type) CSS 选择器，例如，`td:nth-of-type(2) { vertical-align: middle; }` 使第二列单元格垂直居中。
+    >
+    > 如果表格使用了 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，则可以通过组合适当的 CSS 属性选择器（如 `[colspan=n]`）来达到效果，不过这并非易事。
+
+- `width` {{deprecated_inline}}
+
+  - : 该属性为当前列组中的每一列指定默认宽度。除标准像素值和百分比值外，该属性还可以使用特殊形式 `0*`，这意味着组中每一列的宽度应为容纳该列内容所需的最小宽度。也可以使用相对宽度，如 `0.5*`。请注意，后代 {{HTMLElement("col")}} 元素可以使用自己的 [`width`](/zh-CN/docs/Web/HTML/Element/col#width) 属性覆盖此值。请使用 {{cssxref("width")}} CSS 属性代替，因为该属性已被弃用。
+
+## 使用说明
+
+- `<colgroup>` 应出现在 {{HTMLElement("table")}} 内，任何 {{HTMLElement("caption")}} 元素（如果使用）之后，但在任何 {{HTMLElement("thead")}}、{{HTMLElement("tbody")}}、{{HTMLElement("tfoot")}} 和 {{HTMLElement("tr")}} 元素之前。
+- 只有数量有限的 CSS 属性会影响 `<colgroup>`：
+  - {{cssxref("background")}}：各种 `background` 属性将为列组中的单元格设置背景。由于列组的背景色绘制在表格顶部，而背景色绘制在列（{{htmlelement("col")}}）和行组（{{htmlelement("thead")}}、{{htmlelement("tbody")}} 和 {{htmlelement("tfoot")}}）上。只有在表格列组上绘制的每个图层都具有透明背景时，应用于表格列组的背景才会可见。
+  - {{cssxref("border")}}：适用各种 `border` 属性，但前提是 `<table>` 已设置 {{cssxref("border-collapse", "border-collapse: collapse")}}。
+  - {{cssxref("visibility")}}：如果为列组设置 `collapse` 值，则该列组中列的所有单元格都不会被渲染，而跨入其他列的单元格则会被剪切。列组中的这些列原本占据的空间会被移除。但是，其他列的大小仍然按照列组中被折叠列的单元格计算。`visibility` 的其他值没有影响。
+  - {{cssxref("width")}}：`width` 属性定义了列组中的列的最小宽度，如同设置了 {{cssxref("min-width")}}。
 
 ## 示例
 
-请参考 {{HTMLElement("table")}} 页面以查看 `<colgroup>` 的示例。
+请参阅 {{HTMLElement("table")}} 获取介绍通用标准和最佳实践的完整表格示例。
+
+本示例演示了一个七列表格，分为两个跨多列的 `<colgroup>` 元素。
+
+### HTML
+
+两个 `<colgroup>` 元素用于通过创建列组来构建基本表格。每个列组中的列数由 [`span`](#span) 属性指定。
+
+```html
+<table>
+  <caption>
+    个人每周活动
+  </caption>
+  <colgroup span="5" class="weekdays"></colgroup>
+  <colgroup span="2" class="weekend"></colgroup>
+  <tr>
+    <th>周一</th>
+    <th>周二</th>
+    <th>周三</th>
+    <th>周四</th>
+    <th>周五</th>
+    <th>周六</th>
+    <th>周日</th>
+  </tr>
+  <tr>
+    <td>打扫房间</td>
+    <td>足球训练</td>
+    <td>舞蹈课</td>
+    <td>历史课</td>
+    <td>买饮料</td>
+    <td>自习</td>
+    <td>自由时间</td>
+  </tr>
+  <tr>
+    <td>瑜伽</td>
+    <td>棋类俱乐部</td>
+    <td>见朋友</td>
+    <td>体操</td>
+    <td>生日派对</td>
+    <td>钓鱼之旅</td>
+    <td>自由时间</td>
+  </tr>
+</table>
+```
+
+### CSS
+
+分组列可用于使用 CSS 直观地突出显示结构：
+
+```css
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 6px;
+  text-align: center;
+}
+
+.weekdays {
+  background-color: #d7d9f2;
+}
+
+.weekend {
+  background-color: #ffe8d4;
+}
+```
+
+```css hidden
+table {
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample('示例', 650, 170)}}
+
+## 技术概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+          >内容分类</a
+        >
+      </th>
+      <td>无。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>如果存在 <a href="#span"><code>span</code></a> 元素：无。<br />如果不存在属性：零个或多个 {{HTMLElement("col")}} 元素。</td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>如果 {{HTMLElement("col")}} 元素的第一个子元素是 {{HTMLElement("col")}}，并且其前面没有省略结束标签的 {{HTMLElement("colgroup")}}，则可以省略开始标签。<br />如果结束标签后面没有空格或注释，则可以省略结束标签。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>
+        {{HTMLElement("table")}} 元素。{{HTMLElement("colgroup")}} 必须出现在任何 {{HTMLElement("caption")}} 元素之后，而在任何 {{HTMLElement("thead")}}、{{HTMLElement("tbody")}}、{{HTMLElement("tfoot")}} 和 {{HTMLElement("tr")}} 元素之前。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隐式 ARIA 角色</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >没有对应的角色</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>没有允许的 <code>role</code></td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLTableColElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 规范
 
@@ -111,9 +278,12 @@ HTML 中的 表格列组（_Column Group_ **\<colgroup>**）标签用来定义�
 
 ## 参见
 
-- 其他与表格有关的 HTML 元素：{{HTMLElement("caption")}}，{{HTMLElement("col")}}，{{HTMLElement("table")}}，{{HTMLElement("tbody")}}，{{HTMLElement("td")}}，{{HTMLElement("tfoot")}}，{{HTMLElement("th")}}，{{HTMLElement("thead")}}，{{HTMLElement("tr")}}；
-- 对 `<col>` 元素编写样式时特别有用的 CSS 属性和伪类：
-
-  - {{cssxref("width")}} 属性可用于控制列宽；
-  - {{cssxref(":nth-child")}} 伪类可用于针对特定单元格设置对齐方式；
-  - {{cssxref("text-align")}} 属性可用于按照某一个字符对齐所有单元格的内容，例如 '.'。
+- [学习区：HTML 表格](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
+- {{HTMLElement("caption")}}、{{HTMLElement("col")}}、{{HTMLElement("table")}}、{{HTMLElement("tbody")}}、{{HTMLElement("td")}}、{{HTMLElement("tfoot")}}、{{HTMLElement("th")}}、{{HTMLElement("thead")}}、{{HTMLElement("tr")}}：其他与表格相关的元素。
+- {{cssxref("background-color")}}：用于设置每个列组单元格背景颜色的 CSS 属性
+- {{cssxref("border")}}：用于控制列组单元格边框的 CSS 属性
+- {{cssxref("text-align")}}：用于水平对齐各列组单元格内容的 CSS 属性
+- {{cssxref("vertical-align")}}：用于垂直对齐各列组单元格内容的 CSS 属性
+- {{cssxref("visibility")}}：用于隐藏（或显示）列组单元格的 CSS 属性
+- {{cssxref("width")}}：用于控制列组中每一列默认宽度的 CSS 属性
+- {{cssxref(":nth-of-type")}}、{{cssxref(":first-of-type")}}、{{cssxref(":last-of-type")}}：用于选择所需列单元格的 CSS 伪类

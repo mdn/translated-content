@@ -1,12 +1,11 @@
 ---
 title: URLSearchParams
 slug: Web/API/URLSearchParams
-translation_of: Web/API/URLSearchParams
 ---
 
 {{ApiRef("URL API")}}
 
-L’interface **`URLSearchParams`** définit des méthodes utilitaires pour travailler avec la _chaîne de requête_ (les paramètres `GET`) d’une URL.
+L'interface **`URLSearchParams`** définit des méthodes utilitaires pour travailler avec la _chaîne de requête_ (les paramètres `GET`) d'une URL.
 
 Un objet implémentant `URLSearchParams` peut être directement utilisé dans une structure {{jsxref("Statements/for...of", "for...of")}}, au lieu de {{domxref('URLSearchParams.entries()', 'entries()')}}&nbsp;: `for (var p of mySearchParams)` ou son équivalent `for (var p of mySearchParams.entries())`.
 
@@ -17,11 +16,11 @@ Un objet implémentant `URLSearchParams` peut être directement utilisé dans un
 
 ## Propriétés
 
-_Cette interface n’hérite d’aucune propriété._
+_Cette interface n'hérite d'aucune propriété._
 
 ## Méthodes
 
-_Cette interface n’hérite d’aucune méthode._
+_Cette interface n'hérite d'aucune méthode._
 
 - {{domxref("URLSearchParams.append()")}}
   - : Ajoute une paire clé / valeur spécifiée en tant que nouveau paramètre de recherche.
@@ -38,9 +37,9 @@ _Cette interface n’hérite d’aucune méthode._
 - {{domxref("URLSearchParams.keys()")}}
   - : Retourne un {{jsxref("Iteration_protocols", "iterator")}} permettant de parcourir toutes les **clés** des paires clé / valeur contenues dans cet objet.
 - {{domxref("URLSearchParams.set()")}}
-  - : Définit la valeur associée à un paramètre de recherche donné à la valeur donnée. S’il y avait plusieurs valeurs, les autres sont supprimées.
+  - : Définit la valeur associée à un paramètre de recherche donné à la valeur donnée. S'il y avait plusieurs valeurs, les autres sont supprimées.
 - {{domxref("URLSearchParams.sort()")}}
-  - : Trie toutes les paires clé / valeur, s’il y en a, par leurs clés.
+  - : Trie toutes les paires clé / valeur, s'il y en a, par leurs clés.
 - {{domxref("URLSearchParams.toString()")}}
   - : Retourne une chaîne contenant une chaîne de requête pouvant être utilisée dans une URL.
 - {{domxref("URLSearchParams.values()")}}

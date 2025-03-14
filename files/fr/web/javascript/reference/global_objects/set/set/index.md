@@ -1,21 +1,32 @@
 ---
 title: Constructeur Set()
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/Set
-browser-compat: javascript.builtins.Set.Set
 ---
 
 {{JSRef}}
 
 Le **constructeur `Set()`** permet de créer des objets `Set` qui sont des ensembles de valeurs uniques de n'importe quel type ([des valeurs primitives](/fr/docs/Glossary/Primitive) ou des objets).
 
-{{EmbedInteractiveExample("pages/js/set-prototype-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype Constructor")}}
+
+```js interactive-example
+const set1 = new Set([1, 2, 3, 4, 5]);
+
+console.log(set1.has(1));
+// Expected output: true
+
+console.log(set1.has(5));
+// Expected output: true
+
+console.log(set1.has(6));
+// Expected output: false
+```
 
 ## Syntaxe
 
 ```js
-new Set()
-new Set(iterable)
+new Set();
+new Set(iterable);
 ```
 
 ### Paramètres
@@ -35,13 +46,13 @@ Un nouvel objet `Set`.
 ### Utiliser `Set()`
 
 ```js
-let monSet = new Set()
+let monSet = new Set();
 
-monSet.add(1);           // Set [ 1 ]
-monSet.add(5);           // Set [ 1, 5 ]
-monSet.add(5);           // Set [ 1, 5 ]
-monSet.add('du texte');  // Set [ 1, 5, 'du texte' ]
-let o = {a: 1, b: 2};
+monSet.add(1); // Set [ 1 ]
+monSet.add(5); // Set [ 1, 5 ]
+monSet.add(5); // Set [ 1, 5 ]
+monSet.add("du texte"); // Set [ 1, 5, 'du texte' ]
+let o = { a: 1, b: 2 };
 monSet.add(o);
 ```
 

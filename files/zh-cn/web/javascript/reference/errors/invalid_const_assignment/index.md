@@ -77,14 +77,14 @@ function setupBigScreenEnvironment() {
 const 声明语句创建了一个对值的只读引用。这并**不**意味着它指向的值是不可变的，而是说这个变量标记符不能被再次分配。例如，在值是对象的情况下，引用的对象自身内容依然是可以改变的。不能改变该变量的引用：
 
 ```js example-bad
-const obj = {foo: 'bar'};
-obj = {foo: 'baz'}; // TypeError: invalid assignment to const `obj'
+const obj = { foo: "bar" };
+obj = { foo: "baz" }; // TypeError: invalid assignment to const `obj'
 ```
 
 但是可以改变它引用的值的属性：
 
 ```js example-good
-obj.foo = 'baz';
+obj.foo = "baz";
 obj; // Object { foo: "baz" }
 ```
 

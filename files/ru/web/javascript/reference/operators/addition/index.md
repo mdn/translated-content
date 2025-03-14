@@ -1,22 +1,32 @@
 ---
 title: Сложение (+)
 slug: Web/JavaScript/Reference/Operators/Addition
-tags:
-  - JavaScript
-  - Оператор
-translation_of: Web/JavaScript/Reference/Operators/Addition
 ---
 
 {{jsSidebar("Operators")}}
 
 Оператор сложения (+) создаёт сумму числовых операндов или конкатенацию строк.
 
-{{EmbedInteractiveExample("pages/js/expressions-addition.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Addition operator")}}
+
+```js interactive-example
+console.log(2 + 2);
+// Expected output: 4
+
+console.log(2 + true);
+// Expected output: 3
+
+console.log("hello " + "everyone");
+// Expected output: "hello everyone"
+
+console.log(2001 + ": A Space Odyssey");
+// Expected output: "2001: A Space Odyssey"
+```
 
 ## Синтаксис
 
 ```js
-x + y
+x + y;
 ```
 
 ## Примеры
@@ -25,26 +35,26 @@ x + y
 
 ```js
 // Number + Number -> addition
-1 + 2 // 3
+1 + 2; // 3
 
 // Boolean + Number -> addition
-true + 1 // 2
+true + 1; // 2
 
 // Boolean + Boolean -> addition
-false + false // 0
+false + false; // 0
 ```
 
 ### Сложение строк
 
 ```js
 // String + String -> concatenation
-'foo' + 'bar' // "foobar"
+"foo" + "bar"; // "foobar"
 
 // Number + String -> concatenation
-5 + 'foo' // "5foo"
+5 + "foo"; // "5foo"
 
 // String + Boolean -> concatenation
-'foo' + false // "foofalse"
+"foo" + false; // "foofalse"
 ```
 
 ## Спецификации

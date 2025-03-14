@@ -1,9 +1,6 @@
 ---
 title: document.images
 slug: Web/API/Document/images
-tags:
-  - Référence_du_DOM_Gecko
-translation_of: Web/API/Document/images
 ---
 
 {{ ApiRef() }}
@@ -13,25 +10,25 @@ translation_of: Web/API/Document/images
 ## Syntaxe
 
 ```js
-HTMLCollection =document.images
+HTMLCollection = document.images;
 ```
 
 ## Exemple
 
 ```js
 var listeimg = document.images;
-for(var i = 0; i < listeimg.length; i++) {
-    if(listeimg[i] == "banner.gif") {
-         // l'image banner a été trouvée
-    }
+for (var i = 0; i < listeimg.length; i++) {
+  if (listeimg[i] == "banner.gif") {
+    // l'image banner a été trouvée
+  }
 }
 ```
 
 ## Notes
 
-[`document.images`](/fr/DOM/document.images) fait partie du DOM HTML, et fonctionne uniquement pour les document HTML.
+[`document.images`](/fr/docs/Web/API/Document/images) fait partie du DOM HTML, et fonctionne uniquement pour les document HTML.
 
 ## Spécification
 
-- Spécification DOM Level 2 HTML&nbsp;: [HTMLDocument.images](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-90379117)
+- Spécification DOM Level 2 HTML&nbsp;: [HTMLDocument.images](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-90379117)
 - Traduction en français (non normative)&nbsp;: [HTMLDocument.images](http://www.yoyodesign.org/doc/w3c/dom2/html/html.html#ID-90379117)

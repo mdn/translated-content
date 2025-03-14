@@ -11,9 +11,48 @@ El tamaño máximo de la otra dimensión se especifica usando la propiedad {{css
 
 Esto es útil porque `max-width` se usa siempre para tamaños horizontales y `max-height` para tamaños verticales, y si necesita establecer longitudes basadas en el tamaño de su contenido de texto, debe ser capaz de hacerlo con la dirección de escritura en cuenta.
 
-En los momentos que normalmente utilizaría `max-height` o `max-width`, debería usar `max-block-size` para establecer el "alto" máximo del contenido (incluso si esto no es un valor vertical) y `max-inline-size` para establecer el "ancho" máximo del contenido (aunque esto puede ser vertical en lugar de horizontal). Vea el {{SectionOnPage("/es/docs/Web/CSS/writing-mode", "Ejemplo")}}, que muestra los diferentes modos de escritura en acción.
+En los momentos que normalmente utilizaría `max-height` o `max-width`, debería usar `max-block-size` para establecer el "alto" máximo del contenido (incluso si esto no es un valor vertical) y `max-inline-size` para establecer el "ancho" máximo del contenido (aunque esto puede ser vertical en lugar de horizontal). Vea el [Ejemplo](/es/docs/Web/CSS/writing-mode#ejemplo), que muestra los diferentes modos de escritura en acción.
 
-{{EmbedInteractiveExample("pages/css/max-block-size.html")}}
+{{InteractiveExample("CSS Demo: max-block-size")}}
+
+```css interactive-example-choice
+max-block-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-block-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+max-block-size: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-block-size: 75%;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the maximum block size. <br />This will
+    limit the size in the block dimension, potentially causing an overflow.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## Sintaxis
 
@@ -60,14 +99,16 @@ El valor de la propiedad `max-block-size` puede ser cualquier valor que sea lega
 
 Los valores de `writing-mode` afectan al mapeo de `max-block-size` a `max-width` o `max-height` como a continuación:
 
-| Valores de `writing-mode`                                                                                                                                              | `max-block-size` es equivalente a |
+| Valores de `writing-mode`                                                                                                                                             | `max-block-size` es equivalente a |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
 | `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}     | {{cssxref("max-height")}}         |
 | `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | {{cssxref("max-width")}}          |
 
-> **Nota:** Los valores de `writing-mode`: `sideways-lr` y `sideways-rl`, fueron eliminados de la especificación de escritura de nivel 3 de CSS en el proceso de diseño de sucesión. Pueden ser restaurados en el nivel 4.
+> [!NOTE]
+> Los valores de `writing-mode`: `sideways-lr` y `sideways-rl`, fueron eliminados de la especificación de escritura de nivel 3 de CSS en el proceso de diseño de sucesión. Pueden ser restaurados en el nivel 4.
 
-> **Nota:** Los modos de escritura `lr`, `lr-tb`, `rl`, `rb`, y `rb-tl` ya no están permitidos en contextos {{Glossary("HTML")}}; sólo se pueden usar en contextos 1.x {{Glossary("SVG")}}.
+> [!NOTE]
+> Los modos de escritura `lr`, `lr-tb`, `rl`, `rb`, y `rb-tl` ya no están permitidos en contextos {{Glossary("HTML")}}; sólo se pueden usar en contextos 1.x {{Glossary("SVG")}}.
 
 ## Definición formal
 
@@ -90,18 +131,18 @@ El HTML establece dos bloques {{HTMLElement("div")}} que se presentarán con su 
 ```html
 <p>Modo de escritura <code>horizontal-tb</code> (el valor predeterminado):</p>
 <div class="standard-box horizontal">
-  Llámame Ishmael. Hace algunos años, no importa cuántos años exactamente,
-  sin dinero en mi bolsillo ni nada de interés particular, Pensé en navegar
-  un poco y ver la parte acuosa del mundo. Eso es una forma que tengo de 
-  expulsar el bazo y regular la circulación.
+  Llámame Ishmael. Hace algunos años, no importa cuántos años exactamente, sin
+  dinero en mi bolsillo ni nada de interés particular, Pensé en navegar un poco
+  y ver la parte acuosa del mundo. Eso es una forma que tengo de expulsar el
+  bazo y regular la circulación.
 </div>
 
 <p>Modo de escritura <code>vertical-rl</code>:</p>
 <div class="standard-box vertical">
-  Llámame Ishmael. Hace algunos años, no importa cuántos años exactamente,
-  sin dinero en mi bolsillo ni nada de interés particular, Pensé en navegar
-  un poco y ver la parte acuosa del mundo. Eso es una forma que tengo de 
-  expulsar el bazo y regular la circulación.
+  Llámame Ishmael. Hace algunos años, no importa cuántos años exactamente, sin
+  dinero en mi bolsillo ni nada de interés particular, Pensé en navegar un poco
+  y ver la parte acuosa del mundo. Eso es una forma que tengo de expulsar el
+  bazo y regular la circulación.
 </div>
 ```
 
@@ -116,7 +157,11 @@ Después de eso vienen las clases `horizontal` y `vertical`, que añaden la prop
   padding: 4px;
   background-color: #abcdef;
   color: #000;
-  font: 16px "Open Sans", "Helvetica", "Arial", sans-serif;
+  font:
+    16px "Open Sans",
+    "Helvetica",
+    "Arial",
+    sans-serif;
   max-block-size: 160px;
   min-block-size: 100px;
 }

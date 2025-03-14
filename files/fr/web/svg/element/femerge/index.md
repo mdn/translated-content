@@ -1,10 +1,6 @@
 ---
 title: <feMerge>
 slug: Web/SVG/Element/feMerge
-tags:
-  - Element
-  - SVG Filter
-translation_of: Web/SVG/Element/feMerge
 ---
 
 {{SVGRef}}
@@ -20,9 +16,7 @@ La primitive de filtre SVG **`<feMerge>`** permet d'empiler les résultats de di
 ### SVG
 
 ```html
-<svg width="200" height="200"
-  xmlns="http://www.w3.org/2000/svg">
-
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <filter id="feOffset" x="-40" y="-20" width="100" height="200">
     <feOffset in="SourceGraphic" dx="60" dy="60" />
     <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur2" />
@@ -32,7 +26,11 @@ La primitive de filtre SVG **`<feMerge>`** permet d'empiler les résultats de di
     </feMerge>
   </filter>
 
-  <rect x="40" y="40" width="100" height="100"
+  <rect
+    x="40"
+    y="40"
+    width="100"
+    height="100"
     style="stroke: #000000; fill: green; filter: url(#feOffset);" />
 </svg>
 ```
@@ -45,15 +43,15 @@ La primitive de filtre SVG **`<feMerge>`** permet d'empiler les résultats de di
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation)
-- [Attributs de primitives de filtres](/fr/docs/Web/SVG/Attribute#Attributs_de_primitives_de_filtre)
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
+- [Attributs de primitives de filtres](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 
 ### Attributs spécifiques
 
-_Aucun_
+_Aucun._
 
 ## Interface DOM
 
@@ -86,4 +84,4 @@ Cet élément implémente l'interface {{domxref("SVGFEMergeElement")}}.
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres)
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)

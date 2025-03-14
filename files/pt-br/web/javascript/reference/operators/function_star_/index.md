@@ -31,27 +31,24 @@ Uma expressão `function*` é muito similar e tem quase a mesma sintaxe que a {{
 O exemplo a seguir define uma função generator e atribui à variável `x`. A função faz um yield do quadrado do seu argumento:
 
 ```js
-var x = function*(y) {
-   yield y * y;
+var x = function* (y) {
+  yield y * y;
 };
 ```
 
 ## Especificações
 
-| Especificação                                            | Situação                     | Comentário         |
-| -------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#', 'function*')}}     | {{Spec2('ES2015')}}     | Definição inicial. |
-| {{SpecName('ESDraft', '#', 'function*')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.generator_function")}}
+{{Compat}}
 
 ## Veja também
 
 - {{jsxref("Statements/function*", "function* statement")}}
 - {{jsxref("GeneratorFunction")}} object
-- [The Iterator protocol](/pt-BR/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
 - {{jsxref("Function")}} object

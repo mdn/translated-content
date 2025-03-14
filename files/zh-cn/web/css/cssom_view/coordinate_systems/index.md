@@ -1,156 +1,116 @@
 ---
 title: 坐标系
-slug: Web/CSS/CSSOM_View/Coordinate_systems
-original_slug: Web/CSS/CSSOM_View/坐标系
+slug: Web/CSS/CSSOM_view/Coordinate_systems
+l10n:
+  sourceCommit: 91cc9e7f8ae21665b40ad4c3fa5152cebad119ce
 ---
 
-{{cssref}}
+{{CSSRef}}
 
-当我们需要在图形上指定一点的坐标[algebra](https://zh.wikipedia.org/wiki/algebra))，这个坐标需要先对于某一个固定点。这个固定点我们称为原点[origin](<https://zh.wikipedia.org/wiki/Origin_(mathematics)>). 这个指定点的坐标即为包含在各个维度上相对于远点的距离值。
+在图形上下文中指定像素的位置时（就像[代数](https://zh.wikipedia.org/wiki/代数)中指定坐标系一样），像素的位置是相对于上下文中的一个固定点定义的，这个固定点称为[原点](https://zh.wikipedia.org/wiki/原點)。位置指定为沿上下文每个维度从原点偏移的像素数。
 
-下面我将谈谈基于 CSS 对象模型的坐标系系统。大体上来讲这些坐标系唯一的不同就是坐标原点不一样。
+本指南介绍了 CSS 对象模型使用的标准坐标系。这些坐标系通常只是在原点位置上有所不同。
 
-## Dimensions 坐标维度
+## 维度
 
-在网页技术里，通常来讲，相对于坐标原点，x 轴指向右为正值，向左为负值；y 轴向下为正值，向上为负值。
+在 Web 技术使用的坐标系中，按照惯例，水平偏移量称为 _x 坐标_，负值表示在原点左侧，正值表示在原点右侧。*y 坐标*指定垂直偏移，负值表示在原点之上，正值表示在原点之下。
 
-On the web, the default origin is the _top_-left corner of a given context (with positive y-coordinate values being below the origin). Note that this is unlike most mathematical models, where the origin is at the _bottom_-left corner, with positive y-coordinate values being above the origin.
+在 web 中，默认的原点是给定上下文的左*上*角（Y 坐标正值位于原点下方）。请注意，这与大多数数学模型不同，在大多数数学模型中，原点位于左*下*角，Y 坐标的正值位于原点之上。
 
-When drawing 3D graphics, or using a third dimension to layer objects from front to back, the _z-coordinate_ is also used. This specifies the distance away from the viewer if positive and toward the viewer if negative.
+在使用第三维度将物体从前向后分层时，我们使用 z 轴。z 轴从查看器一直延伸到屏幕表面。CSS z-index 属性会影响定位元素在此轴线上的位置，从而产生远离或朝向观众的效果。
 
-> **备注：** It's actually possible to change the definitions and orientations of these coordinate systems using CSS properties such as {{cssxref("transform")}}. However, we'll only talk about the standard coordinate system for now.
+> [!NOTE]
+> 实际上，使用 CSS 属性（如 {{cssxref("transform")}}）可以改变这些坐标系的定义和方向。不过，我们现在只讨论标准坐标系。
 
-## Standard CSSOM coordinate systems
+## 标准 CSS 对象模型坐标系
 
-There are four standard coordinate systems used by the CSS object model, as described below.
+CSS 对象模型使用四种标准坐标系。为了帮助直观地理解这些主要坐标系，下图显示了一台显示器，显示器上有一个浏览器窗口，窗口中的内容滚动到了视口之外。在视口外滚动的页面内容在浏览器窗口上方显示为半透明，以指示“页面”坐标的原点在哪里。“客户端”、“页面”和“视口”坐标系的原点已突出显示。
 
-### Offset
+![电脑显示器与浏览器窗口的示意图，浏览器窗口包含视口以外的内容。标签显示了页面、屏幕和视口坐标的原点。](css-coords.svg)
 
-Coordinates specified using the "offset" model use the top-left corner of the element being examined, or on which an event has occurred.
+### 偏移
 
-For example, when a {{domxref("MouseEvent", "mouse event", "", 1)}} occurs, the position of the mouse as specified in the event's {{domxref("MouseEvent.offsetX", "offsetX")}} and {{domxref("MouseEvent.offsetY", "offsetY")}} properties are given relative to the top-left corner of the node to which the event has been delivered. The origin is inset by the distances specified by {{cssxref("padding-left")}} and {{cssxref("padding-top")}}.
+使用“偏移”模型指定的坐标使用的是被检查元素或发生事件的元素的左上角。
 
-### Client
+例如，当发生{{domxref("MouseEvent", "鼠标事件", "", 1)}}时，事件的 {{domxref("MouseEvent.offsetX", "offsetX")}} 和 {{domxref("MouseEvent.offsetY", "offsetY")}} 属性中指定的鼠标位置相对于事件发生节点的左上角。原点的嵌入距离由 {{cssxref("padding-left")}} 和 {{cssxref("padding-top")}} 指定。
 
-The "client" coordinate system uses as its origin the top-left corner of the viewport or browsing context in which the event occurred. This is the entire viewing area in which the document is presented. Scrolling is not a factor.
+### 视口
 
-On a desktop computer, for example, the {{domxref("MouseEvent.clientX")}} and {{domxref("MouseEvent.clientY")}} properties indicate the position of the mouse cursor at the moment the event occurred, relative to the top-left corner of the browser window. The top-left corner of the window is always (0, 0), regardless of the content of the document or any scrolling that may have been done. In other words, scrolling the document will change the client coordinates of a given position within the document.
+“视口”（或“客户端”）坐标系以发生事件的视口或浏览上下文的左上角为原点。这就是呈现文档的整个视图区域。
 
-### Page
+例如，在台式电脑上，{{domxref("MouseEvent.clientX")}} 和 {{domxref("MouseEvent.clientY")}} 属性表示事件发生时鼠标光标相对于 {{domxref("window")}} 左上角的位置。使用触控笔或指针时，{{domxref("TouchEvent", "触摸事件", "", 1)}}中的 {{domxref("Touch.clientX")}} 和 {{domxref("Touch.clientY")}} 坐标相对于同一原点。
 
-The "page" coordinate system gives the position of a pixel relative to the top-left corner of the entire {{domxref("Document")}} in which the pixel is located. That means that a given point in an element within the document will keep the same coordinates in the page model unless the element moves (either directly by changing its position or indirectly by adding or resizing other content).
+窗口的左上角始终是 `(0，0)`，与文档内容或任何滚动无关。换句话说，滚动文档会改变文档中给定位置的视口坐标。
 
-Mouse events' {{domxref("MouseEvent.pageX", "pageX")}} and {{domxref("MouseEvent.pageY", "pageY")}} properties provide the position of the mouse at the time the event was generated, given relative to the top-left corner of the document.
+### 页面
 
-### Screen
+“页面”坐标系给出了一个像素相对于整个渲染{{domxref("Document", "文档", "", 1)}}左上角的位置。这意味着用户在文档中横向或纵向滚动元素后，除非元素通过布局变化移动，否则文档中元素的某一点将保持相同的坐标。
 
-Finally, we come to the "screen" model. It's probably fairly obvious what this is: it's the coordinate system where the origin is located at the top-left corner of the user's entire screen space. This means that the position of a given point within a document will change if the containing window is moved, for example, or if the user's screen geometry changes (by changing display resolution or by adding or removing monitors to their system).
+鼠标事件的 {{domxref("MouseEvent.pageX", "pageX")}} 和 {{domxref("MouseEvent.pageY", "pageY")}} 属性提供了事件发生时鼠标相对于文档左上角的位置。{{domxref("TouchEvent", "触摸事件", "", 1)}}中的 {{domxref("Touch.pageX")}} 和 {{domxref("Touch.pageY")}} 坐标相对于同一原点。
 
-The {{domxref("MouseEvent.screenX")}} and {{domxref("MouseEvent.screenY")}} properties give the coordinates of a mouse event's position relative to the screen's origin.
+### 屏幕
 
-## Example
+最后，来介绍“屏幕”模型，原点是用户屏幕空间的左上角。该坐标系中的每个点都代表一个逻辑像素，因此每个坐标轴上的值都以整数递增或递减。如果文档中包含的窗口被移动，或者用户的屏幕几何形状发生变化（通过改变显示分辨率或在系统中添加或删除显示器），文档中给定点的位置就会发生变化。
 
-Let's take a look at an example. This simple example creates a set of nested boxes. Whenever the mouse enters, moves around inside, or exits the inner box, the corresponding event is handled by updating a set of informational messages within the box, listing out the current mouse coordinates in each of the four available [coordinate systems](/zh-CN/docs/Web/CSS/CSSOM_View/Coordinate_systems).
+{{domxref("MouseEvent.screenX")}} 和 {{domxref("MouseEvent.screenY")}} 属性给出了鼠标事件相对于屏幕原点的位置坐标。{{domxref("TouchEvent", "触摸事件", "", 1)}}中的 {{domxref("Touch.screenX")}} 和 {{domxref("Touch.screenY")}} 坐标相对于同一原点。
+
+## 示例
+
+让我们来看一个在元素中记录鼠标坐标的示例。每当鼠标进入内部盒子、在内部盒子中移动或退出内部盒子时，都会在四个可用系统中的每个系统中记录当前鼠标坐标来处理事件。
 
 ### JavaScript
 
-Let's look at the script in two sections. First, the code that logs the coordinates to the screen. This code will be called by the event handler for the various mouse events we watch.
-
-#### Displaying the coordinates
-
-As we'll see in the HTML, the inner box (the one we're watching for events on) contains several paragraphs; one for each of the four coordinate systems we'll be reporting on.
+在 JavaScript 中，代码通过调用 {{domxref("EventTarget.addEventListener", "addEventListener()")}}、{{domxref("Element/mouseenter_event", "mouseenter")}}、{{domxref("Element/mousemove_event", "mousemove")}} 和 {{domxref("Element/mouseleave_event", "mouseleave")}} 设置事件处理器。对于每个事件，我们都会调用 `setCoords()` 函数，该函数会将每个系统的坐标设置到 `<p>` 元素的内部文本中。
 
 ```js
-let inner = document.querySelector(".inner");
-let log = document.querySelector(".log");
+const log = document.querySelector(".log");
+const inner = document.querySelector(".inner");
 
-function setCoords(e, type) {
-  let idX = type + "X";
-  let idY = type + "Y";
-
-  document.getElementById(idX).innerText = e[idX];
-  document.getElementById(idY).innerText = e[idY];
-}
-```
-
-A reference to the {{HTMLElement("div")}} inside the inner box which contains the paragraphs that will show the coordinate information is fetched into `log`.
-
-The `setCoords()` function is designed to accept as input a {{domxref("MouseEvent")}} and the name of the origin to use when obtaining the coordinates. The implementation is then quite simple. The variables `idX` and `idY` are set to strings with the names of the properties corresponding to the coordinates in the given coordinate system. For example, if the value of `type` is `"page"`, then `idX` is `"pageX"` and `idY` is `"pageY"`.
-
-#### Handling the mouse events
-
-`setCoords()` is called by the event handler for the various mouse events, named `update()`; this is shown below.
-
-```js
-function update(e) {
-  setCoords(e, "offset");
-  setCoords(e, "client");
-  setCoords(e, "page");
-  setCoords(e, "screen");
+function setCoords(e) {
+  log.innerText = `
+    偏移 X/Y：${e.offsetX}, ${e.offsetY}
+    视口 X/Y：${e.clientX}, ${e.clientY}
+    页面 X/Y：${e.pageX}, ${e.pageY}
+    屏幕 X/Y：${e.screenX}, ${e.screenY}`;
 }
 
-inner.addEventListener("mouseenter", update, false);
-inner.addEventListener("mousemove", update, false);
-inner.addEventListener("mouseleave", update, false);
+inner.addEventListener("mousemove", setCoords);
+inner.addEventListener("mouseenter", setCoords);
+inner.addEventListener("mouseleave", setCoords);
 ```
-
-The event handler is in the `update()` method. It simply calls `setCoords()` once for each coordinate system, passing in the event that occurred.
-
-Our main code sets up the event handlers on the inner box by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}} for each of the types [`mouseenter`](/zh-CN/docs/Web/API/Element/mouseenter_event), [`mousemove`](/zh-CN/docs/Web/API/Element/mousemove_event), and [`mouseleave`](/zh-CN/docs/Web/API/Element/mouseleave_event).
 
 ### HTML
 
-The HTML for our example is below. Note that within the `<div>` with the ID `"log"`, we have a paragraph for each coordinate system, with {{domxref("span")}} used for each of the elements to receive and display the coordinates in each model.
+HTML 中包含一个 `"log"` 类的 `<p>` 元素，用于显示鼠标事件的数据。
 
 ```html
 <div class="outer">
   <div class="inner">
-    <div class="log">
-      <p>
-        Offset-relative: <span id="offsetX">0</span>,
-        <span id="offsetY">0</span>
-      </p>
-      <p>
-        Client-relative: <span id="clientX">0</span>,
-        <span id="clientY">0</span>
-      </p>
-      <p>
-        Page-relative: <span id="pageX">0</span>,
-        <span id="pageY">0</span>
-      </p>
-      <p>
-        Screen-relative: <span id="screenX">0</span>,
-        <span id="screenY">0</span>
-      </p>
-    </div>
+    <p class="log">在这里移动鼠标以查看坐标</p>
   </div>
 </div>
 ```
 
 ### CSS
 
-The CSS is pretty much just for appearances here. The class `"outer"` is used for the containing box, which is intentionally too wide to show in the MDN window, to allow you to scroll it horizontally. The `"inner"` box is the one that we track events in and in which we show the mouse coordinates.
+用于包含盒子的 `"outer"` 类特意设置得很宽，以便在滚动内容时查看鼠标坐标的效果。`"inner"` 段落用于跟踪和记录鼠标事件。
 
 ```css
 .outer {
   width: 1000px;
-  height: 200px;
-  background-color: red;
 }
 
 .inner {
+  font-family: monospace;
   position: relative;
   width: 500px;
   height: 150px;
   top: 25px;
   left: 100px;
-  background-color: blue;
+  background-color: darkblue;
   color: white;
   cursor: crosshair;
   user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
 }
 
 .log {
@@ -160,18 +120,24 @@ The CSS is pretty much just for appearances here. The class `"outer"` is used fo
 }
 ```
 
-### Result
+### 结果
 
-Here you can see the results in action. As you mouse in and around the blue box, watch the values of the mouse's X and Y coordinates change in the various coordinate systems in which you can obtain the values. Note also the effect of scrolling the example horizontally upon the values returned and how the value of `clientX` doesn't change.
+在这里，你可以看到实际效果。当鼠标在蓝色盒子内移动时，观察鼠标的 X 和 Y 坐标值在不同坐标系中的变化。
 
-{{EmbedLiveSample("Example", 600, 250)}}
+{{EmbedLiveSample("示例", 600, 250)}}
 
-## See also
+## 参见
 
-- [Using CSS transforms](/zh-CN/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms): how to alter a coordinate system
-- Coordinates of a mouse event:
+- [使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)：如何改变坐标系
+- {{domxref("MouseEvent", "鼠标事件", "", 1)}}的坐标：
 
-  - {{domxref("MouseEvent.offsetX")}} and {{domxref("MouseEvent.offsetY")}}
-  - {{domxref("MouseEvent.clientX")}} and {{domxref("MouseEvent.clientY")}}
-  - {{domxref("MouseEvent.pageX")}} and {{domxref("MouseEvent.pageY")}}
-  - {{domxref("MouseEvent.screenX")}} and {{domxref("MouseEvent.screenY")}}
+  - {{domxref("MouseEvent.offsetX")}} 和 {{domxref("MouseEvent.offsetY")}}
+  - {{domxref("MouseEvent.clientX")}} 和 {{domxref("MouseEvent.clientY")}}
+  - {{domxref("MouseEvent.pageX")}} 和 {{domxref("MouseEvent.pageY")}}
+  - {{domxref("MouseEvent.screenX")}} 和 {{domxref("MouseEvent.screenY")}}
+
+- {{domxref("Touch", "触摸事件", "", 1)}}的坐标：
+
+  - {{domxref("Touch.clientX")}} 和 {{domxref("Touch.clientY")}}
+  - {{domxref("Touch.pageX")}} 和 {{domxref("Touch.pageY")}}
+  - {{domxref("Touch.screenX")}} 和 {{domxref("Touch.screenY")}}

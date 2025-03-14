@@ -1,33 +1,22 @@
 ---
 title: windows.getCurrent()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/getCurrent
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - Windows
-  - getCurrent
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/getCurrent
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient la fenêtre actuelle du navigateur, en passant ses détails dans un rappel.
 
 La fenêtre "actuelle" n'est pas nécessairement la même que la fenêtre ayant actuellement le focus. Si cette fonction est appelée à partir d'un script en arrière-plan, elle renvoie la fenêtre ayant actuellement le focus. Mais s'il est appelé à partir d'un script dont le document est associé à une fenêtre de navigateur particulière, il retourne la fenêtre de ce navigateur. Par exemple, si le navigateur affiche une barre latérale, chaque fenêtre de navigateur possède sa propre instance du document de la barre latérale. Si un script exécuté dans le document de la barre latérale appelle `getCurrent()`, il renverra la fenêtre de ce document de la barre latérale.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var gettingCurrent = browser.windows.getCurrent(
-  getInfo               // optional object
-)
+  getInfo, // optional object
+);
 ```
 
 ### Paramètres
@@ -41,17 +30,17 @@ var gettingCurrent = browser.windows.getCurrent(
     - `windowTypes`{{optional_inline}}
       - : Un ensemble d'objets `{{WebExtAPIRef('windows.WindowType')}}`. Si défini, le {{WebExtAPIRef('windows.Window')}} retourné sera filtré en fonction de son type. Si désactivé, le filtre par défaut est réglé sur `['normal', 'panel', 'popup']`, avec des types de fenêtres `'panneau'` qui sont limités aux propres fenêtres de l'extension.
 
-> **Note :**
+> [!NOTE]
 >
 > Si fourni, le composant `windowTypes` de `getInfo` est ignoré. L'utilisation de `windowTypes` a été dépréciée à partir de Firefox 62.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet [`windows.Window`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window) object contenant les détails de la fenêtre. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet [`windows.Window`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window) object contenant les détails de la fenêtre. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.getCurrent",2)}}
+{{Compat}}
 
 ## Exemples
 
@@ -69,16 +58,16 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  var getting = browser.windows.getCurrent({populate: true});
+  var getting = browser.windows.getCurrent({ populate: true });
   getting.then(logTabs, onError);
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/extensions/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
 >
 > Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 

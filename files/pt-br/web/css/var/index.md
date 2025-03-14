@@ -1,7 +1,6 @@
 ---
 title: var()
 slug: Web/CSS/var
-original_slug: Web/CSS/var()
 ---
 
 {{CSSRef}}
@@ -20,7 +19,8 @@ O primeiro argumento da função é o nome da propriedade personalizada a ser su
 
 {{csssyntax}}
 
-> **Note:** Nota: A sintaxe do argumento alternativo, assim como as propriedades personalizadas, permite o uso de vírgulas. Por exemplo, `var(--foo, red, blue)` define como argumento alternativo `red, blue`; isto é, qualquer coisa entre a primeira vírgula e o fim da função é considerado como valor do como argumento alternativo.
+> [!NOTE]
+> A sintaxe do argumento alternativo, assim como as propriedades personalizadas, permite o uso de vírgulas. Por exemplo, `var(--foo, red, blue)` define como argumento alternativo `red, blue`; isto é, qualquer coisa entre a primeira vírgula e o fim da função é considerado como valor do como argumento alternativo.
 
 ### Valores
 
@@ -60,14 +60,12 @@ body {
 
 ## Especificações
 
-| Especificação                                                                    | Status                               | Comentário        |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ----------------- |
-| {{SpecName('CSS3 Variables', '#using-variables', 'var()')}} | {{Spec2('CSS3 Variables')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.custom-property.var")}}
+{{Compat}}
 
 ## Veja também
 
-- [Utilizando variáveis CSS](/pt-BR/docs/Web/CSS/Using_CSS_variables)
+- [Utilizando variáveis CSS](/pt-BR/docs/Web/CSS/Using_CSS_custom_properties)

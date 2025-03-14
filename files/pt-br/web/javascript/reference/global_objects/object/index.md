@@ -42,7 +42,7 @@ Veja também [object initializer / literal syntax](/pt-BR/docs/Web/JavaScript/Re
 ## Métodos do construtor `Object`
 
 - {{jsxref("Object.assign()")}}
-  - : Copia os valores de todas as propriedades próprias enumeráveis ​​de um ou mais objetos de origem para um objeto de destino.
+  - : Copia os valores de todas as propriedades próprias enumeráveis de um ou mais objetos de origem para um objeto de destino.
 - {{jsxref("Object.create()")}}
   - : Cria um novo objeto com o objeto e as propriedades do protótipo especificado.
 - {{jsxref("Object.defineProperty()")}}
@@ -50,7 +50,7 @@ Veja também [object initializer / literal syntax](/pt-BR/docs/Web/JavaScript/Re
 - {{jsxref("Object.defineProperties()")}}
   - : Adiciona as propriedades nomeadas descritas pelos descritores fornecidos a um objeto.
 - {{jsxref("Object.entries()")}}
-  - : Retorna uma matriz contendo todos os pares `[key, value]` das próprias propriedades de string enumeráveis ​​de um determinado objeto.
+  - : Retorna uma matriz contendo todos os pares `[key, value]` das próprias propriedades de string enumeráveis de um determinado objeto.
 - {{jsxref("Object.freeze()")}}
   - : Congela um objeto: outro código não pode excluir ou alterar nenhuma propriedade.
 - {{jsxref("Object.fromEntries()")}}
@@ -60,7 +60,7 @@ Veja também [object initializer / literal syntax](/pt-BR/docs/Web/JavaScript/Re
 - {{jsxref("Object.getOwnPropertyDescriptors()")}}
   - : Retorna um objeto contendo todos os descritores de propriedade para um objeto.
 - {{jsxref("Object.getOwnPropertyNames()")}}
-  - : Retorna uma matriz contendo os nomes de todas as propriedades enumeráveis ​​e não enumeráveis ​​do próprio objeto fornecido.
+  - : Retorna uma matriz contendo os nomes de todas as propriedades enumeráveis e não enumeráveis do próprio objeto fornecido.
 - {{jsxref("Object.getOwnPropertySymbols()")}}
   - : Retorna uma matriz de todas as propriedades de símbolo encontradas diretamente sobre um determinado objeto.
 - {{jsxref("Object.getPrototypeOf()")}}
@@ -74,7 +74,7 @@ Veja também [object initializer / literal syntax](/pt-BR/docs/Web/JavaScript/Re
 - {{jsxref("Object.isSealed()")}}
   - : Determina se um objeto está selado.
 - {{jsxref("Object.keys()")}}
-  - : Retorna uma matriz contendo os nomes de todas as propriedades de string enumeráveis ​​do objeto fornecido.
+  - : Retorna uma matriz contendo os nomes de todas as propriedades de string enumeráveis do objeto fornecido.
 - {{jsxref("Object.preventExtensions()")}}
   - : Impede qualquer extensão de um objeto.
 - {{jsxref("Object.seal()")}}
@@ -82,7 +82,7 @@ Veja também [object initializer / literal syntax](/pt-BR/docs/Web/JavaScript/Re
 - {{jsxref("Object.setPrototypeOf()")}}
   - : Define o protótipo (isto é, a propriedade interna `[[Prototype]]`).
 - {{jsxref("Object.values()")}}
-  - : Retorna uma matriz contendo os valores que correspondem a todas as propriedades de string enumeráveis ​​do próprio objeto.
+  - : Retorna uma matriz contendo os valores que correspondem a todas as propriedades de string enumeráveis do próprio objeto.
 
 ## Instâncias de `Object` e `Object` de protótipo de objeto
 
@@ -90,11 +90,11 @@ Todos os objetos em JavaScript são descendentes do `Object`; todos os objetos h
 
 ### Propriedades (enUS)
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Properties')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Properties') -->
 
 ### Métodos (enUS)
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Methods')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Methods') -->
 
 ## Excluindo uma propriedade de um objeto
 
@@ -134,16 +134,11 @@ var o = new Object(Boolean());
 
 ## Especificações
 
-| Especificações                                                               | Status                       | Comentário                                                                                        |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.0.                                                |
-| {{SpecName('ES5.1', '#sec-15.2', 'Object')}}                 | {{Spec2('ES5.1')}}     | ------------------------------------------------                                                  |
-| {{SpecName('ES6', '#sec-object-objects', 'Object')}}         | {{Spec2('ES6')}}         | Adicionado `Object.assign`, `Object.getOwnPropertySymbols`, `Object.setPrototypeOf` e `Object.is` |
-| {{SpecName('ESDraft', '#sec-object-objects', 'Object')}} | {{Spec2('ESDraft')}} | Adicionado `Object.entries`, `Object.values` e `Object.getOwnPropertyDescriptors`.                |
+{{Specifications}}
 
 ## Compatibilidade
 
-{{Compat("javascript.builtins.Object")}}
+{{Compat}}
 
 ## Veja também
 

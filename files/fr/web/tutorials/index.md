@@ -1,22 +1,6 @@
 ---
 title: Tutoriels
 slug: Web/Tutorials
-tags:
-  - Beginner
-  - Browser
-  - CSS
-  - Code
-  - Coding
-  - GitHub
-  - Guide
-  - HTML
-  - JavaScript
-  - MDN
-  - Tutorial
-  - Web Article
-  - Web Development
-translation_of: Web/Tutorials
-original_slug: Web/Tutoriels
 ---
 
 Les liens de cette page mènent à une variété de tutoriels et de matériel de formation. Que vous soyez débutante ou débutant, que vous appreniez les bases ou que vous soyez habitué⋅e au développement web, vous trouverez ici des ressources utiles pour les meilleures pratiques.
@@ -102,9 +86,9 @@ Ces ressources sont créées par des entreprises et des développeuses et dével
 
 ### Niveau avancé
 
-- [Utilisation des transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Utilisation des transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : Appliquer une rotation, une inclinaison, une mise à l'échelle et un déplacement à l'aide de CSS.
-- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
   - : Les transitions CSS, qui font partie du projet de spécification CSS3, permettent d'animer les changements apportés aux propriétés CSS, plutôt que de leur donner un effet immédiat.
 
 <!---->
@@ -148,7 +132,7 @@ Ces ressources sont créées par des entreprises et des développeuses et dével
 
 <!---->
 
-- [Réintroduction à JavaScript](/fr/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+- [Réintroduction à JavaScript](/fr/docs/Web/JavaScript/Language_overview)
   - : Une récapitulation du langage de programmation JavaScript destinée aux développeuses et développeurs de niveau intermédiaire.
 - [Eloquent JavaScript](https://eloquentjavascript.net/) (en anglais)
   - : Un guide complet des méthodologies JavaScript intermédiaires et avancées.
@@ -180,4 +164,4 @@ Ces ressources sont créées par des entreprises et des développeuses et dével
 ### Développement d'extension
 
 - [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions)
-  - : WebExtensions est un système inter-navigateurs pour le développement d'extensions de navigateur. Dans une large mesure, le système est compatible avec l'API [extension API](https://developer.chrome.com/extensions) prise en charge par Google Chrome et Opera. Les extensions écrites pour ces navigateurs fonctionneront dans la plupart des cas dans Firefox ou [Microsoft Edge](https://developer.microsoft.com/fr/microsoft-edge/platform/documentation/extensions/) avec [juste quelques modifications](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/).
+  - : WebExtensions est un système inter-navigateurs pour le développement d'extensions de navigateur. Dans une large mesure, le système est compatible avec l'API [extension API](https://developer.chrome.com/docs/extensions) prise en charge par Google Chrome et Opera. Les extensions écrites pour ces navigateurs fonctionneront dans la plupart des cas dans Firefox ou [Microsoft Edge](https://developer.microsoft.com/fr/microsoft-edge/platform/documentation/extensions/) avec [juste quelques modifications](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/).

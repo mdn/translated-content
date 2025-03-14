@@ -1,26 +1,18 @@
 ---
 title: History.back()
 slug: Web/API/History/back
-tags:
-  - API
-  - HTML DOM
-  - History
-  - History API
-  - Method
-  - Reference
-  - Web
-translation_of: Web/API/History/back
 ---
+
 {{APIRef("DOM")}}
 
 **`History.back()`** 메서드는 브라우저가 세션 기록의 바로 뒤 페이지로 이동하도록 지시합니다. {{domxref("History.go", "history.go(-1)")}}와 같습니다. 이전 페이지가 없는 경우 아무것도 하지 않습니다.
 
-이 메서드는 비동기적입니다. {{event("popstate")}} 이벤트 처리기를 통해 탐색 완료 시점을 알 수 있습니다.
+이 메서드는 비동기적입니다. {{domxref("Window/popstate_event", "popstate")}} 이벤트 처리기를 통해 탐색 완료 시점을 알 수 있습니다.
 
 ## 구문
 
 ```js
-history.back()
+history.back();
 ```
 
 ## 예제
@@ -36,7 +28,7 @@ history.back()
 ### JavaScript
 
 ```js
-document.getElementById('go-back').addEventListener('click', () => {
+document.getElementById("go-back").addEventListener("click", () => {
   window.history.back();
 });
 ```

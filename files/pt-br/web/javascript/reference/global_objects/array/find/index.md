@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/find
 
 O método **`find()`** retorna o **valor** do **primeiro elemento** do array que satisfizer a função de teste provida. Caso contrario, {{jsxref("undefined")}} é retornado.
 
-{{EmbedInteractiveExample("pages/js/array-find.html")}}
+{{InteractiveExample("JavaScript Demo: Array.find()")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find((element) => element > 10);
+
+console.log(found);
+// Expected output: 12
+```
 
 Veja também o método {{jsxref("Array.findIndex", "findIndex()")}}, que retorna o **índice** do elemento encontrado no array ao invés do seu valor.
 
@@ -57,13 +66,13 @@ O conjunto dos elementos processados por `find` é definido antes do primeiro ac
 
 ```js
 const inventory = [
-    {name: 'apples', quantity: 2},
-    {name: 'bananas', quantity: 0},
-    {name: 'cerejas', quantity: 5}
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "cerejas", quantity: 5 },
 ];
 
 function isCherries(fruit) {
-    return fruit.name === 'cerejas';
+  return fruit.name === "cerejas";
 }
 
 console.log(inventory.find(isCherries));
@@ -74,14 +83,14 @@ console.log(inventory.find(isCherries));
 
 ```js
 const inventory = [
-    {name: 'maças', quantity: 2},
-    {name: 'bananas', quantity: 0},
-    {name: 'cherries', quantity: 5}
+  { name: "maças", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "cherries", quantity: 5 },
 ];
 
-const result = inventory.find( fruit => fruit.name === 'cherries' );
+const result = inventory.find((fruit) => fruit.name === "cherries");
 
-console.log(result) // { name: 'cherries', quantity: 5 }
+console.log(result); // { name: 'cherries', quantity: 5 }
 ```
 
 ### Encontrar um número primo em um array
@@ -109,12 +118,12 @@ Este método foi adicionado à especificação do ECMAScript 2015 e pode não es
 
 ```js
 if (!Array.prototype.find) {
-  Array.prototype.find = function(predicate) {
+  Array.prototype.find = function (predicate) {
     if (this === null) {
-      throw new TypeError('Array.prototype.find called on null or undefined');
+      throw new TypeError("Array.prototype.find called on null or undefined");
     }
-    if (typeof predicate !== 'function') {
-      throw new TypeError('predicate must be a function');
+    if (typeof predicate !== "function") {
+      throw new TypeError("predicate must be a function");
     }
     var list = Object(this);
     var length = list.length >>> 0;
@@ -134,13 +143,11 @@ if (!Array.prototype.find) {
 
 ## Especificações
 
-| Especificação                                                                                    | Status               | Comentário         |
-| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-array.prototype.find', 'Array.prototype.find')}} | {{Spec2('ES6')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.find")}}
+{{Compat}}
 
 ## Veja também
 

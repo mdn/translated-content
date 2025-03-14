@@ -1,7 +1,6 @@
 ---
 title: キャンバスを作ってその上に描画する
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 ---
 
 {{GamesSidebar}}
@@ -17,29 +16,34 @@ original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canva
 ゲームはすべて {{htmlelement("canvas")}} 要素に描画されるため、 HTML 文書構造は極めて簡潔です。好きなテキストエディターを使って新しい HTML 文書を作成し、適当な場所に `index.html` として保存してください。そして、その HTML 文書に次のコードを追加してください。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
-<head>
-  <meta charset="utf-8" />
-  <title>Gamedev Canvas Workshop</title>
-  <style>
-    * { padding: 0; margin: 0; }
-    canvas { background: #eee; display: block; margin: 0 auto; }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Gamedev Canvas Workshop</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      canvas {
+        background: #eee;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="480" height="320"></canvas>
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
-
-<script>
-  // JavaScript のコードはここ
-</script>
-
-</body>
+    <script>
+      // JavaScript のコードはここ
+    </script>
+  </body>
 </html>
 ```
 
-`charset` を定義し、 {{htmlelement("title")}} と簡単なな CSS をヘッダーに記述しました。本体には {{htmlelement("canvas")}} と {{htmlelement("script")}} 要素があり、前者にはゲームを描画し、後者にはそれを制御する JavaScript のコードを記述します。 {{htmlelement("canvas")}} 要素は簡単に参照を取得できるように `id` を `myCanvas` とし、幅は 480 ピクセル、高さは 320 ピクセルとしています。このチュートリアルで書くすべての JavaScript のコードは開始の `<script>` と終了の `</script>` タグの間に配置されます。
+`charset` を定義し、 {{htmlelement("title")}} と簡単な CSS をヘッダーに記述しました。本体には {{htmlelement("canvas")}} と {{htmlelement("script")}} 要素があり、前者にはゲームを描画し、後者にはそれを制御する JavaScript のコードを記述します。 {{htmlelement("canvas")}} 要素は簡単に参照を取得できるように `id` を `myCanvas` とし、幅は 480 ピクセル、高さは 320 ピクセルとしています。このチュートリアルで書くすべての JavaScript のコードは開始の `<script>` と終了の `</script>` タグの間に配置されます。
 
 ## キャンバスの基本
 
@@ -52,7 +56,7 @@ const ctx = canvas.getContext("2d");
 
 ここでは {{htmlelement("canvas")}} 要素への参照を `canvas` に保存しています。それから 2D 描画コンテキストを保存するために `ctx` 変数を作成しています。 2D 描画コンテキストは実際にキャンバスに描画するために使うツールとなります。
 
-赤い四角形をキャンバスの上に表示するコード例を見てみましょう。下記のコードを先程記述した JavaScript のあとに追記して、 `index.html` をブラウザーで読み込んでみてください。
+赤い四角形をキャンバスの上に表示するサンプルコードを見てみましょう。下記のコードを先程記述した JavaScript のあとに追記して、 `index.html` をブラウザーで読み込んでみてください。
 
 ```js
 ctx.beginPath();
@@ -68,7 +72,7 @@ ctx.closePath();
 
 ```js
 ctx.beginPath();
-ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
 ctx.fillStyle = "green";
 ctx.fill();
 ctx.closePath();
@@ -101,7 +105,8 @@ ctx.closePath();
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","395")}}
 
-> **メモ:** 与えられた図形の大きさや色を変えてみましょう。
+> [!NOTE]
+> 与えられた図形の大きさや色を変えてみましょう。
 
 ## 次のステップ
 

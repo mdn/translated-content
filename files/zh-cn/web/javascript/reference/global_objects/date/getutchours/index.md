@@ -3,11 +3,22 @@ title: Date.prototype.getUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`getUTCHours()`** 方法以世界时为标准，返回一个指定的日期对象的小时数。
 
-{{EmbedInteractiveExample("pages/js/date-getutchours.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getUTCHours()")}}
+
+```js interactive-example
+const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+const date2 = new Date("December 31, 1975, 23:15:30 GMT-11:00");
+
+console.log(date1.getUTCHours());
+// Expected output: 12
+
+console.log(date2.getUTCHours());
+// Expected output: 10
+```
 
 ## 语法
 
@@ -23,9 +34,9 @@ dateObj.getUTCHours()
 
 `getUTCHours()` 返回一个 0 到 23 的整数。
 
-## 例子
+## 示例
 
-### 例子：使用 `getUTCHours()` 方法
+### 示例：使用 `getUTCHours()` 方法
 
 下例将当前时间的小时部分赋值给变量 `hours`。
 
@@ -42,7 +53,7 @@ var hours = today.getUTCHours();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getHours()")}}
 - {{jsxref("Date.prototype.setUTCHours()")}}

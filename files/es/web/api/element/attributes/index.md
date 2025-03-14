@@ -29,42 +29,43 @@ La indexación numérica es útil para recorrer de todos los atributos de un ele
 El siguiente ejemplo corre a través de los atributors del elemento con id "p1" en el documento, e imprime el valor de cada atributo.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
+  <head>
+    <title>Attributes example</title>
+    <script type="text/javascript">
+      function listAttributes() {
+        var paragraph = document.getElementById("paragraph");
+        var result = document.getElementById("result");
 
- <head>
-  <title>Attributes example</title>
-  <script type="text/javascript">
-   function listAttributes() {
-     var paragraph = document.getElementById("paragraph");
-     var result = document.getElementById("result");
+        // Primero, verifiquenmos que el párrafo tiene algún atributo
+        if (paragraph.hasAttributes()) {
+          var attrs = paragraph.attributes;
+          var output = "";
+          for (var i = attrs.length - 1; i >= 0; i--) {
+            output += attrs[i].name + "->" + attrs[i].value;
+          }
+          result.value = output;
+        } else {
+          result.value = "No hay atributos que mostrar";
+        }
+      }
+    </script>
+  </head>
 
-     // Primero, verifiquenmos que el párrafo tiene algún atributo
-     if (paragraph.hasAttributes()) {
-       var attrs = paragraph.attributes;
-       var output = "";
-       for(var i = attrs.length - 1; i >= 0; i--) {
-         output += attrs[i].name + "->" + attrs[i].value;
-       }
-       result.value = output;
-     } else {
-       result.value = "No hay atributos que mostrar";
-     }
-   }
-  </script>
- </head>
-
-<body>
- <p id="paragraph" style="color: green;">Párrafo de ejemplo</p>
- <form action="">
-  <p>
-    <input type="button" value="Muestra el nombre cada atributo y su valor"
-      onclick="listAttributes();">
-    <input id="result" type="text" value="">
-  </p>
- </form>
-</body>
+  <body>
+    <p id="paragraph" style="color: green;">Párrafo de ejemplo</p>
+    <form action="">
+      <p>
+        <input
+          type="button"
+          value="Muestra el nombre cada atributo y su valor"
+          onclick="listAttributes();" />
+        <input id="result" type="text" value="" />
+      </p>
+    </form>
+  </body>
 </html>
 ```
 

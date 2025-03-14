@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt16
 
 **`getInt16()`** 方法从 {{jsxref("DataView")}} 相对于起始位置偏移 n 个字节处开始，获取一个 16-bit 数 (短整型，2 个字节)。
 
-{{EmbedInteractiveExample("pages/js/dataview-getint16.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.getInt16()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setInt16(1, 32767); // Max signed 16-bit integer
+
+console.log(view.getInt16(1));
+// Expected output: 32767
+```
 
 ## 语法
 
@@ -35,7 +46,7 @@ dataview.getInt16(byteOffset [, littleEndian])
 
 没有对齐约束; 多字节值可以从任何偏移量获取。
 
-## 例子
+## 示例
 
 ```js
 var buffer = new ArrayBuffer(8);
@@ -51,7 +62,7 @@ dataview.getInt16(1); // 0
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}

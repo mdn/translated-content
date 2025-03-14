@@ -1,28 +1,92 @@
 ---
-title: <hgroup>
+title: "<hgroup>: 見出しグループ要素"
 slug: Web/HTML/Element/hgroup
+l10n:
+  sourceCommit: ca65963b93e69591b9362bb2bfde56f93128e2cb
 ---
 
 {{HTMLSidebar}}
 
-> **警告:** `<hgroup>` は支援技術にサポートされていないため、使用すべきではありません。使用すると、中にある見出し要素の認識に悪影響を与えます。
->
-> 詳細については、以下の[使用上の注意](#usage_notes)を参照してください。
+**`<hgroup>`** は [HTML](/ja/docs/Web/HTML) の要素で、見出しとそれに関連する内容を表します。これは 1 つの [`<h1>–<h6>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素と、1 つ以上の [`<p>`](/ja/docs/Web/HTML/Element/p) 要素をグループ化します。
 
-**HTML の `<hgroup>` 要素**は、文書のセクションの、複数レベルの見出しを表します。これは [`<h1>–<h6>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素のセットをグループ化します。
+{{InteractiveExample("HTML Demo: &lt;hgroup&gt;", "tabbed-standard")}}
 
-{{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
+```html interactive-example
+<hgroup>
+  <h1>Frankenstein</h1>
+  <p>Or: The Modern Prometheus</p>
+</hgroup>
+<p>
+  Victor Frankenstein, a Swiss scientist, has a great ambition: to create
+  intelligent life. But when his creature first stirs, he realizes he has made a
+  monster. A monster which, abandoned by his master and shunned by everyone who
+  sees it, follows Dr Frankenstein to the very ends of the earth.
+</p>
+```
+
+```css interactive-example
+hgroup {
+  text-align: right;
+  padding-right: 16px;
+  border-right: 10px solid #00c8d7;
+}
+
+hgroup h1 {
+  margin-bottom: 0;
+}
+
+hgroup p {
+  margin: 0;
+  font-weight: bold;
+}
+```
+
+## 属性
+
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+
+## 使用上の注意
+
+`<hgroup>` 要素は、見出しと副次的な内容（副題や代替タイトル、キャッチフレーズなど）をグループ化することが可能です。これらのコンテンツは、 `<hgroup>` 要素内の `<p>` 要素として表現されます。
+
+`<hgroup>` 要素自体は、ウェブページの文書のアウトラインに影響を与えません。むしろ、 `<hgroup>` 内で許可されている単一の見出しが文書のアウトラインに寄与します。
+
+## 例
+
+```html
+<!doctype html>
+<title>HTML Standard</title>
+<body>
+  <hgroup id="document-title">
+    <h1>HTML: Living Standard</h1>
+    <p>Last Updated 12 July 2022</p>
+  </hgroup>
+  <p>Some intro to the document.</p>
+  <h2>Table of contents</h2>
+  <ol id="toc">
+    …
+  </ol>
+  <h2>First section</h2>
+  <p>Some intro to the first section.</p>
+</body>
+```
+
+### 結果
+
+{{EmbedLiveSample('Examples')}}
+
+## 技術的概要
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
-          >コンテンツカテゴリ</a
+        <a href="/ja/docs/Web/HTML/Content_categories"
+          >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >, 見出しコンテンツ, 知覚可能コンテンツ
       </td>
@@ -30,19 +94,19 @@ slug: Web/HTML/Element/hgroup
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        1個以上の {{HTMLElement("h1")}}, {{HTMLElement("h2")}},
-        {{HTMLElement("h3")}},{{HTMLElement("h4")}},
-        {{HTMLElement("h5")}},{{HTMLElement("h6")}}
+      0 個以上の {{HTMLElement("p")}} と、それに続く 1 個の {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}},
+        {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}},
+        {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}} と、それに続く 0 個以上の {{HTMLElement("p")}}
       </td>
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素
       </td>
@@ -50,8 +114,10 @@ slug: Web/HTML/Element/hgroup
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role"
+            >group</a
+          ></code
         >
       </td>
     </tr>
@@ -66,79 +132,15 @@ slug: Web/HTML/Element/hgroup
   </tbody>
 </table>
 
-## 属性
-
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
-
-## 使用上の注意
-
-> **メモ:** `<hgroup>` 要素は HTML5 (W3C) 仕様から削除されましたが、 WHATWG 版の HTML には依然として含まれています。ほとんどのブラウザーで部分的に実装されており、実装が削除される可能性は低くなっています。
-> ただし、`<hgroup>` 要素の主要な目的は [HTML 仕様書で定義されたアウトラインのアルゴリズム](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#the_html5_outline_algorithm)によって見出しをどのように表示するかに作用することですが、**どのブラウザーでもアウトラインのアルゴリズムは実装されていないため**、 `<hgroup>` のセマンティクスは実際のところ、理論上のものになっています。
-> HTML5 (W3C) 仕様書では、`<hgroup>`を使用せずに[副見出し、サブタイトル、代替タイトル、スローガン](https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements)をマークアップする方法についてアドバイスを提供しています。
-
-`<hgroup>` 要素は、*複数レベル*の見出しを構成するために文書のセクションの主見出しと副次的な見出し（副見出しや副題など）をグループ化することが可能です。
-
-言い換えると、 `<hgroup>` 要素は副次的な子の [`<h1>–<h6>`](/ja/docs/Web/HTML/Element/Heading_Elements) がアウトライン内で独自のセクションを生成することを妨げます。これらの [`<h1>–<h6>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素は `<hgroup>` の子でなければ通常どおりです。
-
-よって [HTML 仕様書で定義されているアウトラインのアルゴリズム](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#the_html5_outline_algorithm)で生成される理論的なアウトラインでは、`<hgroup>` は全体としてひとつの論理的な見出しを構成します。そして `<hgroup>` の子である [`<h1>–<h6>`](/ja/docs/Web/HTML/Element/Heading_Elements) とともに、理論的なアウトライン内でひとつの論理的な見出しを構成するために*複数レベル*のユニットとしてのアウトラインになります。
-
-このようなアウトラインの (理論的ではない) *描画*ビューを生成するために、マルチレベルの性質を伝えるため `<hgroup>` の見出しをどのように描画するかについて、レンダリングツールのデザインでいくつかの選択が必要です。例えば以下のように、描画されたアウトラインで `<hgroup>` を表示するさまざまな方法が考えられます:
-
-- 主見出しの後および最初の副次的な見出しの前にコロンと空白 (": ") または同様の句読点を置く形で (および同じまたは同様の句読点を、他の副次的な見出しの前に置いて) `<hgroup>` を描画されたアウトラインで表示する
-- 主見出しの後に、括弧でくくった副次的な見出しを置く形で、`<hgroup>` を描画されたアウトラインで表示する
-
-以下の HTML 文書で考えてみましょう。
-
-```html
-<!DOCTYPE html>
-<title>HTML Standard</title>
-<body>
-  <hgroup id="document-title">
-    <h1>HTML</h1>
-    <h2>Living Standard — Last Updated 12 August 2016</h2>
-  </hgroup>
-  <p>Some intro to the document.</p>
-  <h2>Table of contents</h2>
-  <ol id=toc>...</ol>
-  <h2>First section</h2>
-  <p>Some intro to the first section.</p>
-</body>
-```
-
-この文書のアウトラインを描画すると、以下のようになるでしょう。
-
-![](outline-colon.png)
-
-ここでは主見出し「_HTML_」の後にコロンと空白を置いて、副次的な見出し「_Living Standard — Last Updated 12 August 2016_」が続きます。
-
-あるいは、以下のようにアウトラインを描画することもできるでしょう。
-
-![\<hgroup> 要素を含む描画されたアウトライン、第二の見出しの周りに括弧がある](outline-paren.png)
-
-ここでは主見出し「_HTML_」の後に、括弧でくくった副次的な見出し「 _(Living Standard — Last Updated 12 August 2016)_」があります。
-
-## 例
-
-```html
-<hgroup id="document-title">
-  <h1>HTML</h1>
-  <h2>Living Standard — Last Updated 12 August 2016</h2>
-</hgroup>
-```
-
 ## 仕様書
 
 {{Specifications}}
 
-## アクセシビリティの考慮
-
-`hgroup` が存在すると、見出しグループの小見出し部分について支援技術に報告された情報を削除する可能性があります。
-
 ## ブラウザーの互換性
 
-{{Compat("html.elements.hgroup")}}
+{{Compat}}
 
 ## 関連情報
 
-- 他のセクション関連要素: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
-- [HTML5 文書のセクションとアウトライン](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)
+- 他のセクション関連要素: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
+- [HTML5 文書のセクションとアウトライン](/ja/docs/Web/HTML/Element/Heading_Elements)

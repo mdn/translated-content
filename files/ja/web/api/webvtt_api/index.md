@@ -1,835 +1,385 @@
 ---
-title: Web ビデオテキストトラックフォーマット (WebVTT)
+title: WebVTT API
 slug: Web/API/WebVTT_API
+l10n:
+  sourceCommit: c99afd3cafe73c93831bd73ad1dac285c3c713b1
 ---
 
 {{DefaultAPISidebar("WebVTT")}}
 
-**Web ビデオテキストトラックフォーマット (WebVTT)** は、{{HTMLElement("track")}} 要素を使用して時間指定のテキストトラック（字幕やキャプションなど）を表示するためのフォーマットです。 WebVTT ファイルの主な目的は、テキストオーバーレイを {{HTMLElement("video")}} に追加することです。WebVTT はテキストベースのフォーマットであり、{{Glossary("UTF-8")}} を使用してエンコードする必要があります。スペースを使用できる場所では、タブも使用できます。これらのトラックと、正しい時間にテキストの再生を実行するために必要なデータを表現および管理するために使用できる小さな API もあります。
+**ウェブ動画テキストトラック** (**WebVTT**) 動画や音声トラックなどの他のメディアと時間軸を合わせて配置された特定のテキスト「キュー」を提供するテキストトラックです。**WebVTT API** は、これらのテキストトラックを定義し、操作するための機能を提供します。
+WebVTT API は主に、動画コンテンツに重ねて表示される字幕やキャプションの表示に使用されますが、他にも、ナビゲーションを容易にするためのチャプター情報の提供や、音声や動画コンテンツと時間軸を合わせて配置する必要がある一般的なメタデータの提供など、他にも用途があります。
 
-## WebVTT ファイル
+## 概念と使用方法
 
-WebVTT の MIME タイプは `text/vtt` です。
+テキストトラックとは、時間軸に沿って配置されたテキストデータを格納するコンテナーで、映像や音声トラックと並行して再生することで、コンテンツの翻訳、文字起こし、概要を提供することができます。
+動画や音声のメディア要素は、異なる種類や言語のトラックを定義することができ、ユーザーは好みやニーズに応じて適切なトラックを表示することができます。
 
-WebVTT ファイル（`.vtt`）にはキューが含まれています。キューは、次のように単一行または複数行になります。
+指定できるテキストデータの種類は以下の一覧に掲載されています。
+ブラウザーがテキストトラックのすべてに対応しているとは限らないことに注意してください。
 
-```
-WEBVTT
+- `subtitles` は、音声のダイアログにテキスト翻訳を提供します。
+  これは既定のテキストトラックの型であり、使用する場合はソース言語を指定する必要があります。
+- `captions` は、話されたテキストの文字起こしを提供し、音楽や背景の音など、の音声に関する情報を記載することができます。
+  これらは聴覚障害のあるユーザーのためのものです。
+- `chapters` は、高レベルなナビゲーション情報を提供し、ユーザーが関連するコンテンツに簡単に切り替えられるようにします。
+- `metadata` は、他にもあらゆる時系列情報に用いられます。
 
-00:01.000 --> 00:04.000
-液体窒素を絶対に飲まないでください。
+トラック内の時間軸に沿って配置された個々のテキストデータの単位は「キュー」と呼ばれます。
+各キューには開始時刻、終了時刻、テキスト本文が含まれます。
+また、表示領域、位置指定、配置、サイズに影響を与える「キュー設定」を持つこともできます。
+最後に、キューにはラベルを付けることができ、CSS スタイル指定のためにキューを選択する際に使用することができます。
 
-00:05.000 --> 00:09.000
-- それはあなたの胃に穴をあけます。
-- あなたは死ぬ可能性があります。
-```
+テキストトラックとキューは、[WebVTT ファイル形式](/ja/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format)を使用してファイル内で定義し、その後、特定の {{HTMLElement("video")}} 要素に {{HTMLElement("track")}} 要素を使用して関連付けられます。
 
-## WebVTT の本体
+あるいは、{{domxref("TextTrack")}} を JavaScript で [`HTMLMediaElement.addTextTrack()`](/ja/docs/Web/API/HTMLMediaElement/addTextTrack) を使用してメディア要素にテキストトラックを追加し、個々の {{domxref("VTTCue")}} オブジェクトを {{domxref("TextTrack.addCue()")}} によってトラックに追加することができます。
 
-WebVTT の構造は、以下のコンポーネントで構成されています。一部のコンポーネントはオプションです。
+{{cssxref("::cue")}} は [CSS](/ja/docs/Web/CSS) [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、HTML と WebVTT ファイルのどちらでも使用することができ、特定の要素、キュー内の特定のタグ、VTT クラス、または特定のラベルを持つキューのスタイルを設定することができます。
+`::cue-region` 擬似要素は、特定の領域のキューをスタイル設定するためのものですが、どのブラウザーも対応していません。
 
-- オプションのバイトオーダーマーク（BOM）。
-- 文字列 "`WEBVTT`"。
-- `WEBVTT` の右側にあるオプションのテキストヘッダー。
-
-  - `WEBVTT` の後には少なくとも 1 つのスペースが必要です。
-  - これを使用してファイルに説明を追加できます。
-  - 改行または文字列 "`-->`" を除いて、テキストヘッダーには何でも使用できます。
-
-- 空白行。2 つの連続した改行に相当します。
-- ゼロ個以上のキューまたはコメント。（訳注：これらのブロックは 1 つ以上の空白行で互いに区切られています。）
-- ゼロ行以上の空白行。（訳注：ファイルの終りも空白行という扱いです。）
-
-##### 例 1 - 最も単純な WebVTT ファイル
-
-```
-WEBVTT
-```
-
-##### 例 2 - テキストヘッダーを持つ非常に単純な WebVTT ファイル
-
-```
-WEBVTT - このファイルにはキューがありません。
-```
-
-##### 例 3 - ヘッダーとキューを使用した一般的な WebVTT の例
-
-```
-WEBVTT - このファイルにはキューがあります。
-
-14
-00:01:14.815 --> 00:01:18.114
-- What?
-- Where are we now?
-
-15
-00:01:18.171 --> 00:01:20.991
-- This is big bat country.
-
-16
-00:01:21.058 --> 00:01:23.868
-- [ Bats Screeching ]
-- They won't get in your hair. They're after the bugs.
-```
-
-### WebVTT ファイルの内部構造
-
-前の例の 1 つを再検討し、キューの構造をもう少し詳しく見てみましょう。
-
-```
-WEBVTT
-
-00:01.000 --> 00:04.000
-- 液体窒素を絶対に飲まないでください。
-
-00:05.000 --> 00:09.000
-- それはあなたの胃に穴をあけます。
-- あなたは死ぬ可能性があります。
-
-NOTE これはファイルの最後の行です
-```
-
-各キューは、
-
-- 最初の行は時間で始まります。これは、下にあるテキストを表示するための開始時間です。
-- 同じ行に、`-->` という文字列があります。
-- 最初の行を 2 つ目の時間で終了します。これは、関連するテキストを表示するための終了時間です。
-- ハイフン（`-`）で始まる 1 行以上の行を表示できます。各行には表示するテキストトラックの一部が含まれています。（訳注：ハイフンは関係なく、空白行が現れるまでです。）
-
-ファイルの一部に関する重要な情報を思い出すのに役立つように、`.vtt` ファイルにコメントを入れることもできます。これらは、文字列 `NOTE` で始まる別々の行にあるべきです。以下のセクションでこれらについての詳細を見つけるでしょう。
-
-タイミング行とキューペイロードの間など、キュー内で「余分な」空白行を使用しないことが重要です。WebVTT は行ベースで、空白行がキューを閉じます。（訳注：空白行は、キュー以外のブロックも閉じます。`-->` があるべき場所にあるのが、キューブロックということです。ファイル内のそれ以外の場所での `-->` の存在は許されていません。）
-
-## WebVTT のコメント
-
-コメントは、WebVTT ファイルに情報を追加するために使用できるオプションのコンポーネントです。コメントはファイルを読む人のためのものであり、ユーザーには見えません。コメントには改行を含めることができますが、空白行を含めることはできません。これは、連続する 2 行の改行と同じです。空白行はコメントの終わりを表します。
-
-コメントには、文字列 "`-->`"、アンパサンド文字（`&`）、小なり記号（`<`）を含めることはできません。このような文字を使用したい場合は、アンパサンドには `&amp;`、小なりには `&lt;` を使用してエスケープする必要があります。タグとの混同を避けるために、大なり記号（`>`）の代わりに大なりエスケープシーケンス（`&gt;`）を使用することをお勧めします。
-
-コメントは次の 3 つの部分で構成されています。
-
-- 文字列 `NOTE`。
-- スペースまたは改行。
-- 上記以外のゼロ個以上の文字。
-
-##### 例 4 - 一般的な WebVTT の例
-
-```
-NOTE これはコメントです
-```
-
-##### 例 5 - 複数行のコメント
-
-```
-NOTE
-複数行に
-またがる別のコメント。
-
-NOTE このように複数行にまたがって
-コメントすることもできます。
-```
-
-##### 例 6 - 一般的なコメントの使い方
-
-```
-WEBVTT - 好きな映画の翻訳
-
-NOTE
-何人かの友人が彼らの両親と一緒にそれを見ることができるように、
-この翻訳は Kyle によってされました。
-
-1
-00:02:15.000 --> 00:02:20.000
-- Ta en kopp varmt te.
-- Det är inte varmt.
-
-2
-00:02:20.000 --> 00:02:25.000
-- Har en kopp te.
-- Det smakar som te.
-
-NOTE この最後の行はうまく翻訳されていないかもしれません。
-
-3
-00:02:25.000 --> 00:02:30.000
-- Ta en kopp
-```
-
-## WebTT キューのスタイリング
-
-{{cssxref("::cue")}} 疑似要素に一致する要素を探すことで WebTT キューをスタイルすることができます。
-
-### サイトの CSS の中
-
-```css
-video::cue {
-  background-image: linear-gradient(to bottom, dimgray, lightgray);
-  color: papayawhip;
-}
-
-video::cue(b) {
-  color: peachpuff;
-}
-```
-
-ここでは、すべての動画要素は背景として灰色の線形グラデーションを使用するようにスタイル設定しており、前景色は `"papayawhip"` です。また、{{HTMLElement("b")}} 要素を使用して太字になっているテキストは、`"peachpuff"` で色づけしています。
-
-以下の HTML スニペットは実際にメディア自体の表示を処理します。
-
-```html
-<video controls autoplay src="video.webm">
- <track default src="track.vtt">
-</video>
-```
-
-### WebVTT ファイル自体の中
-
-WebVTT ファイルで直接スタイルを定義することもできます。この場合、CSS 規則をファイルに挿入します。次に示すように、各規則の前には、すべてに一行のテキストで文字列 "`STYLE`" が付いています。
-
-```
-WEBVTT
-
-STYLE
-::cue {
-  background-image: linear-gradient(to bottom, dimgray, lightgray);
-  color: papayawhip;
-}
-/* スタイルブロックは空白行も  "ハイフンハイフン大なり" も使用できません */
-
-NOTE コメントブロックはスタイルブロックの間で使用できます。
-
-STYLE
-::cue(b) {
-  color: peachpuff;
-}
-
-00:00:00.000 --> 00:00:10.000
-- Hello <b>world</b>.
-
-NOTE スタイルブロックは、最初のキューの後には出現できません。
-```
-
-WebVTT ファイル内で識別子を使用することもできます。これは、ファイル内の特定のキューに対する新しいスタイルを定義するために使用できます。転記テキスト（transcription text）を赤で強調表示し、他の部分を通常のままにしたい例は、CSS を使用して次のように定義できます。CSS が HTML のページで使用しているのと同じ方法でエスケープシーケンスを使用していることに注意する必要があります。
-
-```
-WEBVTT
-
-1
-00:00.000 --> 00:02.000
-That’s an, an, that’s an L!
-
-crédit de transcription
-00:04.000 --> 00:05.000
-Transcrit par Célestes™
-```
-
-```css
-::cue(#\31) { color: lime; }
-::cue(#crédit\ de\ transcription) { color: red; }
-```
-
-以下に示すように、キュー内のタイミングの後に位置情報を含めることで、テキストトラックの位置もサポートします（詳細については、[キュー設定](#cue_settings)を参照してください）。
-
-```
-WEBVTT
-
-00:00:00.000 --> 00:00:04.000 position:10%,line-left align:left size:35%
-Where did he go?
-
-00:00:03.000 --> 00:00:06.500 position:90% align:right size:35%
-I think he went down this lane.
-
-00:00:04.000 --> 00:00:06.500 position:45%,line-right align:center size:35%
-What are you waiting for?
-```
-
-## WebTT キュー
-
-キューは、単一の開始時間、終了時間、およびテキストペイロードを持つ単一の字幕ブロックです。例 6 は、ヘッダー、空白行、および空白行で区切られた 5 つのキューから構成されています。キューは次の 5 つの要素で構成されています。
-
-- オプションのキュー識別子とそれに続く改行。
-- キューのタイミング。
-- 最初の設定の前と各設定の間に少なくとも 1 つのスペースを持つオプションのキュー設定。
-- 1 つ以上の改行。（訳注：1 つの改行。）
-- キューペイロードのテキスト。
-
-##### 例 7 - キューの例
-
-```
-1 - Title Crawl
-00:00:05.000 --> 00:00:10.000 line:0 position:20% size:60% align:start
-Some time ago in a place rather distant....
-```
-
-### キュー識別子
-
-識別子は、キューを識別する名前です。スクリプトからキューを参照するために使用できます。改行を含んではならず、文字列 "`-->`" を含むことはできません。それは単一の改行で終わらなければなりません。番号をつけるのが一般的ですが（例えば、1、2、3、...）、それらは一意である必要はありません。
-
-##### 例 8 - 例 7 のキュー識別子
-
-```
-1 - Title Crawl
-```
-
-##### 例 9 - 識別子の一般的な使い方
-
-```
-WEBVTT
-
-1
-00:00:22.230 --> 00:00:24.606
-This is the first subtitle.
-
-2
-00:00:30.739 --> 00:00:34.074
-This is the second.
-
-3
-00:00:34.159 --> 00:00:35.743
-Third
-```
-
-### キューのタイミング
-
-キューのタイミングは、キューがいつ表示されるかを示します。タイムスタンプで表される開始時間と終了時間があります。終了時間は開始時間より長くなければならず、開始時間は前のすべての開始時間より長くなければなりません。キューは、タイミングが重複するかもしれません。
-
-WebVTT ファイルをチャプターに使用している場合（{{HTMLElement("track")}} の {{htmlattrxref("kind","track")}} は `chapters` です）、ファイルは重複するタイミングを持つことはできません。
-
-各キューのタイミングには次の 5 つのコンポーネントがあります。
-
-- 開始時間のタイムスタンプ。
-- 少なくとも 1 つのスペース。
-- 文字列 "`-->`"。
-- 少なくとも 1 つのスペース。
-- 終了時間のタイムスタンプ。
-
-  - 開始時間より長くなければなりません。
-
-タイムスタンプは、次の 2 つの形式のいずれかになります。
-
-- `mm:ss.ttt`
-- `hh:mm:ss.ttt`
-
-そのコンポーネントは次のように定義されています。
-
-- `hh` は時間です。
-
-  - 2 桁以上でなければなりません。
-  - 時間は 2 桁を超えることがあります（例えば、9999:00:00.00）。
-
-- `mm` は分です。
-
-  - 00 以上 59 以下でなければなりません。
-
-- `ss` は秒です。
-
-  - 00 以上 59 以下でなければなりません。
-
-- `ttt` はミリ秒です。
-
-  - 000 以上 999 以下でなければなりません。
-
-##### 例 10 - 基本的なキューのタイミングの例
-
-```
-00:22.230 --> 00:24.606
-00:30.739 --> 00:00:34.074
-00:00:34.159 --> 00:35.743
-00:00:35.827 --> 00:00:40.122
-```
-
-##### 例 11 - 重複したキューのタイミングの例
-
-```
-00:00:00.000 --> 00:00:10.000
-00:00:05.000 --> 00:01:00.000
-00:00:30.000 --> 00:00:50.000
-```
-
-##### 例 12 - 重複しないキューのタイミングの例
-
-```
-00:00:00.000 --> 00:00:10.000
-00:00:10.000 --> 00:01:00.581
-00:01:00.581 --> 00:02:00.100
-00:02:01.000 --> 00:02:01.000
-```
-
-### キュー設定
-
-キュー設定は、動画上にキューペイロードのテキストを表示する位置を決めるために使用するオプションのコンポーネントです。これには、テキストを水平に表示するか垂直に表示するかが含まれます。それらは 0 個以上存在することができ、各設定が 2 回以上使用されない限り、それらは任意の順序で使用できます。
-
-キュー設定は、キューのタイミングの右側に追加します。キューのタイミングと最初の設定の間、および各設定の間には 1 つ以上のスペースが必要です。設定の名前と値はコロンで区切ります。設定では大文字と小文字が区別されるため、次のように小文字を使用してください。次の 5 つのキュー設定があります。
-
-- **vertical**
-
-  - アジア言語のように、テキストを水平ではなく垂直に表示することを示します。
-
-  <table>
-    <thead>
-      <tr>
-        <th colspan="2">表 1 - vertical の値</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th><code>vertical:rl</code></th>
-        <td>書き込み方向は右から左です</td>
-      </tr>
-      <tr>
-        <th><code>vertical:lr</code></th>
-        <td>書き込み方向は左から右です</td>
-      </tr>
-    </tbody>
-  </table>
-
-- **line**
-
-  - テキストを垂直方向に表示する場所を指定します。vertical を設定している場合、line はテキストを水平方向に表示する場所を指定します。
-  - 値は行番号です。
-
-    - 行の高さは、動画に表示されるキューの最初の行の高さです。
-    - 正の数はトップダウンを示します。
-    - 負の数はボトムアップを示します。
-
-  - 値はパーセントでもかまいません。
-
-    - 0 から 100 までの整数（つまり、小数点なし）でなければなりません。（訳注：仕様ではパーセントは小数点ありも可です。）
-    - その後にパーセント記号（`%`）を付ける必要があります。
-
-  <table>
-    <thead>
-      <tr>
-        <th colspan="4">表 2 - line の例</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th></th>
-        <th><code>vertical</code> の省略</th>
-        <th><code>vertical:rl</code></th>
-        <th><code>vertical:lr</code></th>
-      </tr>
-      <tr>
-        <th><code>line:0</code></th>
-        <td>上</td>
-        <td>右</td>
-        <td>左</td>
-      </tr>
-      <tr>
-        <th><code>line:-1</code></th>
-        <td>下</td>
-        <td>左</td>
-        <td>右</td>
-      </tr>
-      <tr>
-        <th><code>line:0%</code></th>
-        <td>上</td>
-        <td>右</td>
-        <td>左</td>
-      </tr>
-      <tr>
-        <th><code>line:100%</code></th>
-        <td>下</td>
-        <td>左</td>
-        <td>右</td>
-      </tr>
-    </tbody>
-  </table>
-
-- **position**
-
-  - テキストを水平方向に表示する場所を指定します。vertical を設定している場合、position はテキストを垂直方向に表示する場所を指定します。
-  - 値はパーセントです。
-  - 0 から 100 までの整数（小数点なし）でなければなりません。
-  - その後にパーセント記号（`%`）を付ける必要があります。
-
-  <table>
-    <thead>
-      <tr>
-        <th colspan="4">表 3 - position の例</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th></th>
-        <th><code>vertical</code> の省略</th>
-        <th><code>vertical:rl</code></th>
-        <th><code>vertical:lr</code></th>
-      </tr>
-      <tr>
-        <th><code>position:0%</code></th>
-        <td>左</td>
-        <td>上</td>
-        <td>上</td>
-      </tr>
-      <tr>
-        <th><code>position:100%</code></th>
-        <td>右</td>
-        <td>下</td>
-        <td>下</td>
-      </tr>
-    </tbody>
-  </table>
-
-- **size**
-
-  - テキスト領域の幅を指定します。vertical を設定している場合、size はテキスト領域の高さを指定します。
-  - 値はパーセントです。
-  - 0 から 100 までの整数（つまり、小数点なし）でなければなりません。
-  - その後にパーセント記号（`%`）を付ける必要があります。
-
-  <table>
-    <thead>
-      <tr>
-        <th colspan="4">表 4 - size の例</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th></th>
-        <th><code>vertical</code> の省略</th>
-        <th><code>vertical:rl</code></th>
-        <th><code>vertical:lr</code></th>
-      </tr>
-      <tr>
-        <th><code>size:100%</code></th>
-        <td>全幅</td>
-        <td>全高</td>
-        <td>全高</td>
-      </tr>
-      <tr>
-        <th><code>size:50%</code></th>
-        <td>半幅</td>
-        <td>半高</td>
-        <td>半高</td>
-      </tr>
-    </tbody>
-  </table>
-
-- **align**
-
-  - テキストの配置を指定します。設定している場合、テキストは size キュー設定で指定したスペース内に配置されます。
-
-  <table>
-    <thead>
-      <tr>
-        <th colspan="4">表 5 - align の値</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th></th>
-        <th><code>vertical</code> の省略</th>
-        <th><code>vertical:rl</code></th>
-        <th><code>vertical:lr</code></th>
-      </tr>
-      <tr>
-        <th><code>align:start</code></th>
-        <td>左</td>
-        <td>上</td>
-        <td>上</td>
-      </tr>
-      <tr>
-        <th><code>align:middle</code></th>
-        <td>水平中央</td>
-        <td>垂直中央</td>
-        <td>垂直中央</td>
-      </tr>
-      <tr>
-        <th><code>align:end</code></th>
-        <td>右</td>
-        <td>下</td>
-        <td>下</td>
-      </tr>
-    </tbody>
-  </table>
-
-##### 例 13 - キュー設定の例
-
-最初の行は設定がないことを示しています。2 行目は、サインやラベルの上にテキストを重ねるために使用します。3 行目はタイトルに使用できます。最後の行はアジアの言語に使われるかもしれません。
-
-```
-00:00:05.000 --> 00:00:10.000
-00:00:05.000 --> 00:00:10.000 line:63% position:72% align:start
-00:00:05.000 --> 00:00:10.000 line:0 position:20% size:60% align:start
-00:00:05.000 --> 00:00:10.000 vertical:rt line:-1 align:end
-```
-
-### キューペイロード
-
-ペイロードは、主な情報またはコンテンツを配置する場所です。通常の使用法では、ペイロードには表示する字幕が含まれています。ペイロードのテキストには改行を含めることができますが、空白行を含めることはできません。これは、2 つの連続する改行に相当します。空白行はキューの終わりを表します。
-
-キューペイロードのテキストには、文字列 "`-->`"、アンパサンド文字（`&`）、小なり記号（`<`）を含めることはできません。代わりに、アンパサンドにはエスケープシーケンス "`&amp;`" を使用し、小なりには "`&lt;`" を使用します。タグとの混同を避けるために、大なり記号（`>`）の代わりに大なりエスケープシーケンス "`&gt;`" を使用することをお勧めします。メタデータに WebVTT ファイルを使用している場合、これらの制限は適用されません。
-
-上記の 3 つのエスケープシーケンスに加えて、他にも 4 つあります。それらは以下の表にリストされています。
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3">表 6 - エスケープシーケンス</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>名前</th>
-      <th>文字</th>
-      <th>エスケープシーケンス</th>
-    </tr>
-    <tr>
-      <td>アンパサンド</td>
-      <td>&#x26;</td>
-      <td><code>&#x26;amp;</code></td>
-    </tr>
-    <tr>
-      <td>小なり</td>
-      <td>&#x3C;</td>
-      <td><code>&#x26;lt;</code></td>
-    </tr>
-    <tr>
-      <td>大なり</td>
-      <td>></td>
-      <td><code>&#x26;gt;</code></td>
-    </tr>
-    <tr>
-      <td>左から右へのマーク</td>
-      <td></td>
-      <td><code>&#x26;lrm;</code></td>
-    </tr>
-    <tr>
-      <td>右から左へのマーク</td>
-      <td></td>
-      <td><code>&#x26;rlm;</code></td>
-    </tr>
-    <tr>
-      <td>改行なしスペース</td>
-      <td></td>
-      <td><code>&#x26;nbsp;</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### キューペイロードのテキストタグ
-
-`<bold>` のような、使用できるタグがいくつかあります。ただし、WebVTT ファイルを {{htmlattrxref("kind","track")}} 属性が `chapters` である {{HTMLElement("track")}} 要素で使用している場合は、タグを使用できません。
-
-- タイムスタンプタグ
-
-  - タイムスタンプは、キューの開始タイムスタンプより大きく、キューペイロード内の前のタイムスタンプより大きく、キューの終了タイムスタンプより小さくなければなりません。*アクティブテキスト*は、タイムスタンプと次のタイムスタンプの間、またはペイロードに別のタイムスタンプがない場合はペイロードの最後までのテキストです。ペイロード内の*アクティブテキスト*より前のテキストはすべて*過去のテキスト*です。*アクティブテキスト*より後のテキストはすべて*将来のテキスト*です。これによりカラオケスタイルのキャプションが有効になります。
-
-  ```
-  1
-  00:16.500 --> 00:18.500
-  When the moon <00:17.500>hits your eye
-
-  1
-  00:00:18.500 --> 00:00:20.500
-  Like a <00:19.000>big-a <00:19.500>pizza <00:20.000>pie
-
-  1
-  00:00:20.500 --> 00:00:21.500
-  That's <00:00:21.000>amore
-  ```
-
-次のタグは、キューで使用できる HTML タグで、開始タグと終了タグ（例えば、`<b>テキスト</b>`）が必要です。
-
-- **クラスタグ** (`<c></c>`)
-
-  - CSS クラスを使用して含まれているテキストをスタイルします。
-
-  ```
-  <c.classname>text</c>
-  ```
-
-- **イタリック体タグ** (`<i></i>`)
-
-  - 含まれているテキストをイタリック体にします。
-
-  ```
-  <i>text</i>
-  ```
-
-- **太字タグ** (`<b></b>`)
-
-  - 含まれているテキストを太字にします。
-
-  ```
-  <b>text</b>
-  ```
-
-- **下線タグ** (`<u></u>`)
-
-  - 含まれているテキストに下線を引きます。
-
-  ```
-  <u>text</u>
-  ```
-
-- **ルビタグ** (`<ruby></ruby>`)
-
-  - [ルビ文字](https://ja.wikipedia.org/wiki/%E3%83%AB%E3%83%93)（すなわち、他の文字の上にある小さな注釈文字）を表示するためにルビテキストタグと共に使用します。
-
-  ```
-  <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
-  ```
-
-- **ルビテキストタグ** (`<rt></rt>`)
-
-  - [ルビ文字](https://ja.wikipedia.org/wiki/%E3%83%AB%E3%83%93)（つまり、他の文字の上にある小さな注釈文字）を表示するためにルビタグとともに使用します。
-
-  ```
-  <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
-  ```
-
-- **ボイスタグ** (`<v></v>`)
-
-  - クラスタグと同様に、CSS を使用して含まれているテキストをスタイルするためにも使用します。
-
-  ```
-  <v Bob>text</v>
-  ```
+WebVTTの最も重要な機能は、ファイル形式またはウェブ API を使用してアクセスすることができます。
 
 ## インターフェイス
 
-WebVTT で使用するインターフェイスまたは API は次の 2 つがあります。
+- {{domxref("VTTCue")}}
+  - : メディア要素に関連付けられたテキストトラックの特定の時間枠に表示されるテキスト、つまりキューを表します。
+- {{domxref("VTTRegion")}}
+  - : 動画要素の一部を表し、{{domxref("VTTCue")}} がレンダリングされることがあります。
+- {{domxref("TextTrack")}}
+  - : テキストトラックを表し、再生中にさまざまなポイントで関連するメディア要素とともに表示するキューのリストを保持します。
+- {{domxref("TextTrackCue")}}
+  - : {{domxref("VTTCue")}} などのさまざまなキュー型用の抽象ベースクラスです。
+- {{domxref("TextTrackCueList")}}
+  - : 配列風オブジェクトで、{{domxref("TextTrackCue")}} オブジェクトの動的に更新されるリストを表します。
+    この型のインスタンスは {{domxref('TextTrack.cues')}} から、{{domxref("TextTrack")}} オブジェクト内のすべてのキューを取得するために取得します。
+- {{domxref("TextTrackList")}}
+  - : メディア要素に対して定義されたテキストトラックの一覧を表し、各トラックは、一覧に別個の {{domxref("TextTrack")}} インスタンスとして表されます。
 
-### VTTCue インターフェイス
+### 関連するインターフェイス
 
-これは、Document Object Model API でインターフェイスを提供するために使用し、そこでサポートしているさまざまな属性を使用して、さまざまな方法でキューを準備および変更できます。
+- {{domxref("TrackEvent")}}
+  - : HTML DOM API の一部で、{{domxref("TextTrackList")}} にトラックが追加されたり削除されたりしたとき（より一般的には、HTML のメディア要素にトラックが追加されたり削除されたりしたとき）に発生する `addtrack` イベントと `removetrack` イベントのインターフェイスです。
 
-コンストラクタは、キューの開始時間、終了時間、およびテキストを調整できるデフォルトのコンストラクタ `VTTCue(startTime, endTime, text)` を使用して定義された、キューを開始する最初のポイントです。その後、`cue.region` を使って、このキューが属する特定のキューの領域を設定できます。CSS を使用して HTML でオブジェクトのフォーム、シェイプ、および表示を変更するのと同じように、`vertical`、`horizontal`、`line`、`lineAlign`、`position`、`positionAlign`、`text`、`size`、および `align` を使用して、キューとそのフォーメーションを変更できます。しかし、`VTTCue` インターフェイスは WebVTT 内にあり、キューを変更するために直接使用できる幅広い調整変数を提供します。以下のインターフェイスは、DOM API で WebVTT キューを公開するために使用できます。
+### 関連する CSS の拡張
 
-```idl
-enum AutoKeyword { "auto" };
-enum DirectionSetting { "" /* horizontal */, "rl", "lr" };
-enum LineAlignSetting { "start", "center", "end" };
-enum PositionAlignSetting { "line-left", "center", "line-right", "auto" };
-enum AlignSetting { "start", "center", "end", "left", "right" };
-[Constructor(double startTime, double endTime, DOMString text)]
-interface VTTCue : TextTrackCue {
-  attribute VTTRegion? region;
-  attribute DirectionSetting vertical;
-  attribute boolean snapToLines;
-  attribute (double or AutoKeyword) line;
-  attribute LineAlignSetting lineAlign;
-  attribute (double or AutoKeyword) position;
-  attribute PositionAlignSetting positionAlign;
-  attribute double size;
-  attribute AlignSetting align;
-  attribute DOMString text;
-  DocumentFragment getCueAsHTML();
-};
+これらの [CSS](/ja/docs/Web/CSS) [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)は、VTT トラックを持つメディアのキューをスタイルするために使用されます。
+
+- {{CSSxRef("::cue")}}
+  - : メディアの中で選択された要素内のキューを VTT トラックと照合します。
+
+> [!NOTE]
+> この仕様では、もう一つの擬似要素である `::cue-region` を定義していますが、これはどのブラウザーも対応していません。
+
+## 例
+
+### WebVTT API を使用してキャプションを追加
+
+#### HTML
+
+次の例では、新しい {{domxref("TextTrack")}} を動画に追加し、{{domxref("TextTrack.addCue()")}} メソッドを使用して、作成した `VTTCue` オブジェクトを引数としてキューを追加しています。
+
+```html
+<video
+  controls
+  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
 ```
 
-### VTT Region インターフェイス
+#### CSS
 
-これは WebVTT API の 2 番目のインターフェイスです。
-
-`new` キーワードは、複数のキューを含めるために使用できる新しい `VTTRegion` オブジェクトを定義するために使用できます。この VTT 領域の外観を指定するために使用できる `width`、`lines`、`regionAnchorX`、`regionAnchorY`、`viewportAnchorX`、`viewportAnchorY`、および `scroll` という `VTTRegion` のいくつかのプロパティがあります。DOM API で WebVTT 領域を公開するために使用できるインターフェイスコードを以下に示します。
-
-```idl
-enum ScrollSetting { "" /* none */, "up" };
-[Constructor]
-interface VTTRegion {
-  attribute double width;
-  attribute long lines;
-  attribute double regionAnchorX;
-  attribute double regionAnchorY;
-  attribute double viewportAnchorX;
-  attribute double viewportAnchorY;
-  attribute ScrollSetting scroll;
-};
+```css
+video {
+  width: 420px;
+  height: 300px;
+}
 ```
 
-## メソッドとプロパティ
+#### JavaScript
 
-WebVTT で使用するメソッドは、両方のインターフェイスの属性が異なるため、キューまたは領域を変更するために使用するものです。WebVTT の各インターフェイスに関する理解を深めるために、それらを分類することができます。
-
-### VTTCue
-
-- このインターフェイスで利用できるメソッドは次のとおりです。
-
-  - そのキューの HTML を取得するための getCueAsHTML。
-  - キューの新しいオブジェクトを作成するための VTT コンストラクタ。
-  - Autokeyword。
-  - DirectionSetting: ファイル内のキャプションまたはテキストの方向を設定します。
-  - LineAlignment: 行の配置を調整します。
-  - PositionAlignSetting: テキストの位置を調整します。
-
-### VTTRegion
-
-- 領域に使用するメソッドは、それらの機能の説明とともに以下にリストされています。
-
-  - ScrollSetting: 特定の領域に存在するすべてのノードのスクロール設定を調整します。
-  - VTT Region コンストラクタ: 新しい VTT Region の構築用。
-
-## WebVTT ファイルの書き方に関するチュートリアル
-
-簡単な WebVTT ファイルを書くために従うことができるいくつかのステップがあります。開始する前に、メモ帳を使用してからファイルを「.vtt」ファイルとして保存できることに注意する必要があります。手順は以下のとおりです。
-
-1. メモ帳を開きます。
-2. WebVTT の最初の行は、ファイルがファイルの種類を示し始めるときに他の言語ではヘッダーを配置するように要求されるのと同様に標準化されています。最初の 1 行は次のように書く必要があります。
-
-    ```
-    WEBVTT
-    ```
-
-3. 2 行目を空白のままにして、3 行目で最初のキューの時間を指定します。例えば、時間が 1 秒で始まり 5 秒で終わる最初のキューでは、次のようになります。
-
-    ```
-    00:01.000 --> 00:05.000
-    ```
-
-4. 次の行に、このキューのキャプションを書くことができます。キャプションは 1 秒から 5 秒までです。
-5. 同様の手順に従って、特定の動画または音声ファイル用の完全な WebVTT ファイルを作成できます。
-
-## CSS 疑似クラス
-
-CSS 疑似クラスを使用すると、他の種類のオブジェクトと区別したいオブジェクトの種類を分類できます。WebVTT ファイルでも HTML ファイルと同じように機能します。
-
-WebVTT がサポートしている優れた機能の 1 つは、特定のタイプのオブジェクトのスタイルを分類するために HTML や CSS で使用しているのと同じ方法で使用できるクラス要素のローカライズと使用です。しかし、ここでは、次のようにキューのスタイルと分類に使用します。
-
+```js
+let video = document.querySelector("video");
+let track = video.addTextTrack("captions", "Captions", "en");
+track.mode = "showing";
+track.addCue(new VTTCue(0, 0.9, "Hildy!"));
+track.addCue(new VTTCue(1, 1.4, "How are you?"));
+track.addCue(new VTTCue(1.5, 2.9, "Tell me, is the lord of the universe in?"));
+track.addCue(new VTTCue(3, 4.2, "Yes, he's in - in a bad humor"));
+track.addCue(new VTTCue(4.3, 6, "Somebody must've stolen the crown jewels"));
+console.log(track.cues);
 ```
+
+#### 結果
+
+{{EmbedLiveSample('Using the WebVTT API to add captions','400','330')}}
+
+### ファイルで定義された VTT コンテンツの表示
+
+この例では、上記の [WebVTT API を使用してキャプションを追加](#webvtt_api_を使用してキャプションを追加)の例で見たのと同じテロップを、動画に設定する方法を示します。ただし今回は、{{htmlelement("track")}} 要素を使用して宣言的に行います。
+
+まず、"captions.vtt" ファイルでキャプションを定義します。
+
+```plain
 WEBVTT
 
-04:02.500 --> 04:05.000
-J’ai commencé le basket à l'âge de 13, 14 ans
+00:00.000 --> 00:00.900
+Hildy!
 
-04:05.001 --> 04:07.800
-Sur les <i.foreignphrase><lang en>playground</lang></i>, ici à Montpellier
+00:01.000 --> 00:01.400
+How are you?
+
+00:01.500 --> 00:02.900
+Tell me, is the lord of the universe in?
+
+00:03.000 --> 00:04.200
+Yes, he's in - in a bad humor
+
+00:04.300 --> 00:06.000
+Somebody must've stolen the crown jewels
 ```
 
-上記の例では、キャプションの言語を定義するために識別子と疑似クラス名を使用できることがわかります。`<i>` タグはイタリック体用です。
+これを {{HTMLElement("video")}} 要素に {{HTMLElement("track")}} 要素を用いて追加することができます。
+次の HTML は前回と同じテキストトラックになります。
 
-疑似クラスのタイプはそれを使用しているセレクターによって決定し、それは HTML で機能するのと同じように機能します。以下の CSS 疑似クラスを使用することができます。
+```html
+<video controls src="video.webm">
+  <track default kind="captions" src="captions.vtt" srclang="en" />
+</video>
+```
 
-- Lang (Lanugage): 例えば、`p:lang(it)`。
-- Link: 例えば、`a:link`。
-- Nth-last-child: 例えば、`p:nth-last-child(2)`。
-- Nth-child(n): 例えば、`p:nth-child(2)`。
+複数の {{HTMLElement("track")}} 要素を追加して、`kind` 属性と `srclang` 属性を用いると、複数の言語で異なる種類のトラックを指定することができます。`kind` を指定する場合は、`srclang` も設定しなければならないことに注意してください。
+`default` 属性は 1 つの `<track>` だけに追加することができます。これはユーザーの環境設定で具体的な言語や種類を指定しない場合に再生されるものです。
 
-ここで、`p` と `a` は、それぞれ HTML で段落とリンクに使用するタグであり、WebVTT ファイルのキューに使用する識別子に置き換えることができます。
+```html
+<video controls src="video.webm">
+  <track default kind="captions" src="captions.vtt" srclang="en" />
+  <track kind="subtitles" src="subtitles.vtt" srclang="en" />
+  <track kind="descriptions" src="descriptions.vtt" srclang="en" />
+  <track kind="chapters" src="chapters_de.vtt" srclang="de" />
+  <track kind="subtitles" src="subtitles_en.vtt" srclang="en" />
+</video>
+```
 
-## 仕様
+### HTML またはスタイルシートは WebVTT のスタイル設定
 
-| 仕様                         | 状態                     | コメント |
-| ---------------------------- | ------------------------ | -------- |
-| {{SpecName("WebVTT")}} | {{Spec2("WebVTT")}} | 初期定義 |
+WebVTT キューは、{{cssxref("::cue")}} 擬似要素を使用して要素と照合することで、スタイル設定することができます。
+これにより、すべてのキューテキストの外観を変更することも、特定の要素だけを変更することもできます。この例では、[上記の最初の例](#webvtt_api_を使用してキャプションを追加)にスタイル設定を追加します。
+
+> [!NOTE]
+> また、[WebVTT ファイル形式](/ja/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format)でスタイルを定義することも可能です。
+
+#### HTML
+
+動画自体の HTML は前回と同じです。
+
+```css hidden
+video {
+  width: 420px;
+  height: 300px;
+}
+```
+
+```html
+<video
+  controls
+  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+```
+
+#### CSS
+
+まず、{{cssxref("::cue")}} 擬似要素を使用して動画のすべてのテキストキューを選択し、赤を大きくして背景をグラデーションにします。
+
+```css
+video::cue {
+  font-size: 1.5rem;
+  background-image: linear-gradient(to bottom, yellow, lightyellow);
+  color: red;
+}
+```
+
+次に、{{cssxref("::cue")}} を使用して、`u` 要素と `b` 要素を使用してマークアップされたテキストを選択し、それぞれ緑と黄色のスタイル設定を行います。
+
+```css
+video::cue(u) {
+  color: green;
+}
+
+video::cue(b) {
+  color: purple;
+}
+```
+
+#### JavaScript
+
+JavaScriptは最初の例と同じですが、`<b>` タグ（太字）と `<u>` タグ（下線）を用いてキューテキストの一部をマークアップしています。
+既定では、マークされたテキストは太字または下線（タグによって異なる）として表示されますが、前のセクションで {{cssxref("::cue")}} を使用して、テキストをそれぞれ緑色と紫色にスタイル設定しています。
+
+```js
+let video = document.querySelector("video");
+let track = video.addTextTrack("captions", "Captions", "en");
+track.mode = "showing";
+track.addCue(new VTTCue(0, 0.9, "Hildy!"));
+track.addCue(new VTTCue(1, 1.4, "How are you?"));
+track.addCue(
+  new VTTCue(1.5, 2.9, "Tell me, is the <u>lord of the universe</u> in?"),
+);
+track.addCue(new VTTCue(3, 4.2, "Yes, he's in - in a bad humor"));
+track.addCue(
+  new VTTCue(4.3, 6, "Somebody must've <b>stolen</b> the crown jewels"),
+);
+console.log(track.cues);
+```
+
+#### 結果
+
+{{EmbedLiveSample('Styling WebVTT in HTML or a stylesheet','400','330')}}
+
+### もっとスタイル設定をしたキューの例
+
+この例では、キューテキストをタグでマークアップし、スタイル設定する方法を詳しく示します。
+同じマークアップとスタイル設定を [WebVTT ファイル形式](/ja/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format)で使用することができます。
+
+動画自体を表示するための HTML と CSS は上記の[最初の例](#webvtt_api_を使用してキャプションを追加)と同じなので、ここではテキストのマークアップとスタイル設定のための特定のコードのみを示します。
+
+```css hidden
+video {
+  width: 420px;
+  height: 300px;
+}
+```
+
+```html hidden
+<video
+  controls
+  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+```
+
+#### タグ種別によるスタイル設定
+
+最初に作成するキューは、動画の 6 秒間すべて表示され、`b`、`u`、`i`、`c` タグでマークアップされたテキストが表示されます。
+
+```js
+let video = document.querySelector("video");
+
+let track = video.addTextTrack("captions", "Captions", "en");
+track.mode = "showing";
+
+track.addCue(
+  new VTTCue(
+    0,
+    6,
+    "スタイル: 標準 <b>太字</b> <u>下線</u> <i>斜体</i> <c>クラス</c>",
+  ),
+);
+```
+
+まず、すべてのキューを通常の 1.2 倍の大きさにするルールを追加します。
+
+```css
+video::cue {
+  font-size: 1.2rem;
+}
+```
+
+次に、上記のタグをそれぞれ違う色でスタイル設定します。
+
+```css
+video::cue(u) {
+  color: green;
+}
+
+video::cue(b) {
+  color: purple;
+}
+
+video::cue(i) {
+  color: red;
+}
+
+video::cue(c) {
+  color: lightpurple;
+}
+```
+
+#### クラスによるスタイル設定
+
+2 つ目のキューは、最初のキューの直後に表示され、同じタグがあります。しかし、すべて `myclass` クラスが適用されています。
+
+```js
+track.addCue(
+  new VTTCue(
+    1,
+    6,
+    "スタイル: クラスマークアップ: <b.myclass>太字</b> <u.myclass>下線</u> <i.myclass>斜体</i> <c.myclass>クラス</c>",
+  ),
+);
+```
+
+`c.myclass`の特定の仕様を除いて、`.myclass` クラスを持つすべてのアイテムを水色の文字色でスタイル設定します。
+
+```css
+video::cue(.myclass) {
+  color: lightblue;
+}
+
+video::cue(c.myclass) {
+  color: blue;
+}
+```
+
+#### 属性を使用したスタイル設定
+
+次の 2 つのキューは 2 秒後と 3 秒後に表示されます。
+最初のキューは `lang` タグでマークアップされた英語の 3 つのロケールのテキストを表示し、2 つ目は "Bob" 属性を持つ `<v>`（音声）タグを表示します。
+
+```js
+track.addCue(
+  new VTTCue(
+    2,
+    6,
+    "<lang en>言語マークアップ: 'en'</lang>  <lang en-GB>テキスト: 'en-GB'</lang> <lang en-US>テキスト: 'en-US'</lang>",
+  ),
+);
+
+track.addCue(new VTTCue(3, 6, "<v Bob>ボブの声</v>"));
+```
+
+`lang` 属性セレクターを使用して、各言語に異なる文字色を与えています。
+
+```css
+video::cue([lang="en"]) {
+  color: lightgreen;
+}
+
+video::cue([lang="en-GB"]) {
+  color: darkgreen;
+}
+
+video::cue(:lang(en-US)) {
+  color: #6082b6;
+}
+```
+
+次に、`v` タグと `voice` の属性セレクターを使用して、"ボブの声" のテキストをオレンジ色にします。
+
+```css
+video::cue(v[voice="Bob"]) {
+  color: orange;
+}
+```
+
+#### 結果
+
+例では、上記のスタイル設定に一致する色でキューを表示する必要があります（テキストに色が付いていない場合は、ブラウザーが `::cue` に対応していません）。
+
+{{EmbedLiveSample('More cue styling examples','400','330')}}
+
+## 仕様書
+
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-### `VTTCue` インターフェイス
+{{Compat}}
 
-{{Compat("api.VTTCue", 0)}}
+## 関連情報
 
-### `TextTrack` インターフェイス
-
-{{Compat("api.TextTrack", 0)}}
-
-### 注
-
-Firefox 50 より前のバージョンでは、`AlignSetting` 列挙体（{{domxref("VTTCue.align")}} に指定可能な値を表す）に、`"center"` ではなく `"middle"` という値が誤って含まれていました。これは修正されました。
-
-WebVTT は Firefox 24 ではデフォルトの `media.webvtt.enabled` の背後に実装されていましたが、デフォルトでは無効になっています。この設定を `true` に設定することで有効にできます。WebVTT は Firefox 31 以降ではデフォルトで有効になっていますが、設定を `false` に設定することで無効にすることができます。
-
-Firefox 58 より前のバージョンでは、`REGION` キーワードは {{domxref("VTTRegion")}} オブジェクトを作成していましたが、使用していませんでした。Firefox 58 は現在 `VTTRegion` とその使用を完全にサポートしています。ただし、この機能は設定 `media.webvtt.regions.enabled` の背後でデフォルトで無効になっています。Firefox 58 で領域のサポートを有効にするには、`true` に設定します。領域は Firefox 59 以降でデフォルトで有効になっています（{{bug(1338030)}} および {{bug(1415805)}} のバグを参照）。
+- CSS の [`::cue` および `::cue()`](/ja/docs/Web/CSS/::cue) 擬似要素

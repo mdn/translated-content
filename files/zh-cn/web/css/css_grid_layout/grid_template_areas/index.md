@@ -1,11 +1,11 @@
 ---
 title: 网格模板区域
-slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
+slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 ---
 
 {{CSSRef}}
 
-在[上一篇指南](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)中我们着眼于网格线以及如何依赖网格线定位项目。在使用 CSS 网格布局时，因为离不开网格线，所以最直接的方式就是使用网格线来定位项目。不过，还有另一种替代方法用于定位项目，你可以独立使用它，也可把它和基于网格线的定位结合起来。这个方法采用对模板区域命名的方式来定位项目，接下来我们就来弄清如何使用它。很快你就会知道为什么我们有时把这种方法称为网格布局的 ASCII 艺术方法！
+在[上一篇指南](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)中我们着眼于网格线以及如何依赖网格线定位项目。在使用 CSS 网格布局时，因为离不开网格线，所以最直接的方式就是使用网格线来定位项目。不过，还有另一种替代方法用于定位项目，你可以独立使用它，也可把它和基于网格线的定位结合起来。这个方法采用对模板区域命名的方式来定位项目，接下来我们就来弄清如何使用它。很快你就会知道为什么我们有时把这种方法称为网格布局的 ASCII 艺术方法！
 
 ## 命名网格区域
 
@@ -13,7 +13,7 @@ slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 ```css
 .box1 {
-   grid-area: 1 / 1 / 4 / 2;
+  grid-area: 1 / 1 / 4 / 2;
 }
 ```
 
@@ -34,16 +34,16 @@ slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 ```css
 .header {
-    grid-area: hd;
+  grid-area: hd;
 }
 .footer {
-    grid-area: ft;
+  grid-area: ft;
 }
 .content {
-    grid-area: main;
+  grid-area: main;
 }
 .sidebar {
-    grid-area: sd;
+  grid-area: sd;
 }
 ```
 
@@ -51,46 +51,48 @@ slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    grid-template-areas:
-      "hd hd hd hd   hd   hd   hd   hd   hd"
-      "sd sd sd main main main main main main"
-      "ft ft ft ft   ft   ft   ft   ft   ft";
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    "hd hd hd hd   hd   hd   hd   hd   hd"
+    "sd sd sd main main main main main main"
+    "ft ft ft ft   ft   ft   ft   ft   ft";
 }
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 940px;
-    margin: 0 auto;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 940px;
+  margin: 0 auto;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-    <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Content</div>
+  <div class="footer">Footer</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Grid_Area_1', '300', '330') }}
+{{ EmbedLiveSample('命名网格区域', '300', '330') }}
 
 用这种方法，我们不需要为任何网格项目单独指定属性，所有的定义都在网格容器中。请仔细观察在 {{cssxref("grid-template-areas")}} 属性中是怎样描述布局的。
 
@@ -100,61 +102,63 @@ slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 ```css
 .header {
-    grid-area: hd;
+  grid-area: hd;
 }
 .footer {
-    grid-area: ft;
+  grid-area: ft;
 }
 .content {
-    grid-area: main;
+  grid-area: main;
 }
 .sidebar {
-    grid-area: sd;
+  grid-area: sd;
 }
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 940px;
-    margin: 0 auto;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 940px;
+  margin: 0 auto;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    grid-template-areas:
-      "hd hd hd hd   hd   hd   hd   hd   hd"
-      "sd sd sd main main main main main main"
-      ".  .  .  ft   ft   ft   ft   ft   ft";
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    "hd hd hd hd   hd   hd   hd   hd   hd"
+    "sd sd sd main main main main main main"
+    ".  .  .  ft   ft   ft   ft   ft   ft";
 }
 ```
 
 ```html
 <div class="wrapper">
-    <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Content</div>
+  <div class="footer">Footer</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Leaving_1', '300', '330') }}
+{{ EmbedLiveSample('留出空白的网格单元', '300', '330') }}
 
 为了让布局更整齐，可以使用多个“`.`”符号，如果在多个句点符号之间没有空格，那它们就会被计为一个单元格。用多个句点表示一个单元格的好处是对于复杂的布局来说很容易让行列对齐，这意味着你在 CSS 中看到的，就像是实际布局看起来那样。
 
@@ -166,61 +170,63 @@ slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 ```css
 .header {
-    grid-area: hd;
+  grid-area: hd;
 }
 .footer {
-    grid-area: ft;
+  grid-area: ft;
 }
 .content {
-    grid-area: main;
+  grid-area: main;
 }
 .sidebar {
-    grid-area: sd;
+  grid-area: sd;
 }
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 940px;
-    margin: 0 auto;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 940px;
+  margin: 0 auto;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    grid-template-areas:
-      "hd hd hd hd   hd   hd   hd   hd   hd"
-      "sd sd sd main main main main main main"
-      "sd sd sd  ft  ft   ft   ft   ft   ft";
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    "hd hd hd hd   hd   hd   hd   hd   hd"
+    "sd sd sd main main main main main main"
+    "sd sd sd  ft  ft   ft   ft   ft   ft";
 }
 ```
 
 ```html hidden
 <div class="wrapper">
-    <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Content</div>
+  <div class="footer">Footer</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Spanning_1', '300', '330') }}
+{{ EmbedLiveSample('跨越多个网格单元', '300', '330') }}
 
 {{cssxref("grid-template-areas")}} 的值必须是一个完整的网格，否则无效（即这个属性会被忽略掉），这意味着你应该让每一行都有相同数量的单元格，如果出现句点符就表示这个单元格将被留空。如果创建的区域不是矩形，也是无效的网格。
 
@@ -233,48 +239,50 @@ slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 对于上面的例子，我们可能希望在较窄的宽度下使用非常简单的布局，网格只定义一个列，所有的项目从上到下排列。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 940px;
-    margin: 0 auto;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 940px;
+  margin: 0 auto;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .header {
-    grid-area: hd;
+  grid-area: hd;
 }
 .footer {
-    grid-area: ft;
+  grid-area: ft;
 }
 .content {
-    grid-area: main;
+  grid-area: main;
 }
 .sidebar {
-    grid-area: sd;
+  grid-area: sd;
 }
 
 .wrapper {
-    display: grid;
-    grid-auto-rows: minmax(100px, auto);
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "hd"
-      "main"
-      "sd"
-      "ft";
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "hd"
+    "main"
+    "sd"
+    "ft";
 }
 ```
 
@@ -282,37 +290,39 @@ slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 ```css
 @media (min-width: 500px) {
-    .wrapper {
-        grid-template-columns: repeat(9, 1fr);
-        grid-template-areas:
-          "hd hd hd hd   hd   hd   hd   hd   hd"
-          "sd sd sd main main main main main main"
-          "sd sd sd  ft  ft   ft   ft   ft   ft";
-    }
+  .wrapper {
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas:
+      "hd hd hd hd   hd   hd   hd   hd   hd"
+      "sd sd sd main main main main main main"
+      "sd sd sd  ft  ft   ft   ft   ft   ft";
+  }
 }
 @media (min-width: 700px) {
-    .wrapper {
-        grid-template-areas:
-          "hd hd hd   hd   hd   hd   hd   hd hd"
-          "sd sd main main main main main ft ft";
-    }
+  .wrapper {
+    grid-template-areas:
+      "hd hd hd   hd   hd   hd   hd   hd hd"
+      "sd sd main main main main main ft ft";
+  }
 }
 ```
 
 ```html hidden
 <div class="wrapper">
-    <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Content</div>
+  <div class="footer">Footer</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Redefining_1', '550', '330') }}
+{{ EmbedLiveSample('用媒体查询重新定义网格', '550', '330') }}
 
 ## 在 UI 元素上使用 `grid-template-areas`
 
 许多网上流传的网格例子都假定使用网格来做页面的整体布局，实际上网格对于小元素一样有用。使用 {{cssxref("grid-template-areas")}} 能令人特别愉快，因为你在代码里就能直观地看到的这些元素的布局效果。
+
+### 媒体对象示例
 
 下面我们举一个非常简单的例子，来创建一个“媒体对象”。这个组件由一侧的图片或其他媒体以及另一侧的内容组成，图片将显示在盒子的右边或左边。
 
@@ -323,91 +333,95 @@ slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 把图片区域命名为 `img`，把文本区域命名为 `content`，然后把它们摆放在 `grid-template-areas` 属性中。
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .media {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 400px;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 400px;
 }
 .media {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-areas: "img content";
-    margin-bottom: 1em;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "img content";
+  margin-bottom: 1em;
 }
 
 .media .image {
-    grid-area: img;
-    background-color: #ffd8a8;
+  grid-area: img;
+  background-color: #ffd8a8;
 }
 
 .media .text {
-    grid-area: content;
-    padding: 10px;
-
+  grid-area: content;
+  padding: 10px;
 }
 ```
 
 ```html
 <div class="media">
-    <div class="image"></div>
-    <div class="text">This is a media object example.
-      We can use grid-template-areas to switch around the image and text part of the media object.
-    </div>
+  <div class="image"></div>
+  <div class="text">
+    This is a media object example. We can use grid-template-areas to switch
+    around the image and text part of the media object.
+  </div>
 </div>
 ```
 
-{{ EmbedLiveSample('Media_1', '300', '200') }}
+{{ EmbedLiveSample('媒体对象示例', '300', '200') }}
 
 ### 把图片显示在盒子的另一侧
 
 你也许习惯于把图片显示在盒子的另一侧，为了实现这个效果，只需要把网格的 `1fr` 轨道放到后边，把 {{cssxref("grid-template-areas")}} 里的值简单地调换个位置即可。
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .media {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 400px;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 400px;
 }
 .media {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-areas: "img content";
-    margin-bottom: 1em;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "img content";
+  margin-bottom: 1em;
 }
 
 .media.flipped {
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas: "content img";
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "content img";
 }
 
 .media .image {
-    grid-area: img;
-    background-color: #ffd8a8;
+  grid-area: img;
+  background-color: #ffd8a8;
 }
 
 .media .text {
-    grid-area: content;
-    padding: 10px;
-
+  grid-area: content;
+  padding: 10px;
 }
 ```
 
 ```html
 <div class="media flipped">
-    <div class="image"></div>
-    <div class="text">This is a media object example.
-      We can use grid-template-areas to switch around the image and text part of the media object.
-    </div>
+  <div class="image"></div>
+  <div class="text">
+    This is a media object example. We can use grid-template-areas to switch
+    around the image and text part of the media object.
+  </div>
 </div>
 ```
 
-{{ EmbedLiveSample('Media_2', '300', '200') }}
+{{ EmbedLiveSample('把图片显示在盒子的另一侧', '300', '200') }}
 
 ## 网格定义的简写规则
 
@@ -433,12 +447,12 @@ slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template:
-      "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
-      "sd sd sd main main main main main main" minmax(100px, auto)
-      "ft ft ft ft   ft   ft   ft   ft   ft" minmax(100px, auto)
-             / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+  display: grid;
+  grid-template:
+    "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
+    "sd sd sd main main main main main main" minmax(100px, auto)
+    "ft ft ft ft   ft   ft   ft   ft   ft" minmax(100px, auto)
+    / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 ```
 
@@ -463,14 +477,15 @@ slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 ```css
 .wrapper {
-    display: grid;
-    grid: "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
+  display: grid;
+  grid:
+    "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
     "sd sd sd main main main main main main" minmax(100px, auto)
     "ft ft ft ft   ft   ft   ft   ft   ft" minmax(100px, auto)
-    / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 ```
 
 在读过本指南后面的自动定位和 grid-auto-flow 属性之后，我们会回过头来再看看这个属性提供的其他功能。
 
-如果你通过阅读本指南前面的几篇文章已经开始上手了，那么你应该是用基于线的定位方式或用命名区域的方式来创建网格布局的。花费一些时间用网格去创建常见的布局模式，虽然还有很多的术语要学习，不过语法是非常一目了然的。在你练习开发的过程中可能会遭遇到一些问题，并且用我们没有讲过的方法去解决它们。在本指南后面的文章中，我们将着眼于更多规范中的细节 —— 目标是让你能用它创建出更加复杂的布局。
+如果你通过阅读本指南前面的几篇文章已经开始上手了，那么你应该是用基于线的定位方式或用命名区域的方式来创建网格布局的。花费一些时间用网格去创建常见的布局模式，虽然还有很多的术语要学习，不过语法是非常一目了然的。在你练习开发的过程中可能会遭遇到一些问题，并且用我们没有讲过的方法去解决它们。在本指南后面的文章中，我们将着眼于更多规范中的细节——目标是让你能用它创建出更加复杂的布局。

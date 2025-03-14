@@ -1,140 +1,190 @@
 ---
 title: tabs.executeScript()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
+l10n:
+  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-将 JavaScript 代码注入页面。
+向页面注入 JavaScript 代码。
 
-You can inject code into pages whose URL can be expressed using a [match pattern](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns): meaning, its scheme must be one of "http", "https", "file", "ftp". To do this you must have the permission for the page's URL, either explicitly as a [host permission](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions), or via the [activeTab permission](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
+> [!NOTE]
+> 当使用 Manifest V3 或更高版本时，请使用 {{WebExtAPIRef("scripting.executeScript()")}} 来执行脚本。
 
-You can also inject code into pages packaged with your own extension:
+你可以将代码注入到其 URL 可以用[匹配模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)表示的页面中。为此，其协议必须是以下之一：`http`、`https` 或 `file`。
+
+你必须拥有页面 URL 的权限。无论是明确的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)，还是通过 [activeTab 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_权限)。请注意，一些特殊页面不允许此权限，包括阅读器视图、view-source 以及 PDF 查看器页面。
+
+你还可以将代码注入到你自己扩展中打包的页面：
 
 ```js
-browser.tabs.create({url: "/my-page.html"}).then(() => {
+browser.tabs.create({ url: "/my-page.html" }).then(() => {
   browser.tabs.executeScript({
-    code: `console.log('location:', window.location.href);`
+    code: `console.log('location:', window.location.href);`,
   });
 });
 ```
 
-You don't need any special permissions to do this.
+此操作不需要任何特殊权限。
 
-You _can't_ inject code into any of the browser's built-in pages, such as about:debugging, about:addons, or the page that opens when you open a new empty tab.
+你*不能*将代码注入浏览器的任何内置页面，例如：`about:debugging`、`about:addons` 或打开新空白标签页时打开的页面。
 
-The scripts you inject are called content scripts. [Learn more about content scripts](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts).
+你注入的脚本称为[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)。
 
-This is an asynchronous function that returns a [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
-## Syntax
+## 语法
 
-```js
-var executing = browser.tabs.executeScript(
-  tabId,                 // optional integer
-  details                // object
+```js-nolint
+let executing = browser.tabs.executeScript(
+  tabId,                 // 可选整数
+  details                // 对象
 )
 ```
 
-### Parameters
+### 参数
 
 - `tabId` {{optional_inline}}
-  - : `integer`. The ID of the tab in which to run the script. Defaults to the active tab of the current window.
+
+  - : `integer`。要运行脚本的标签页的 ID。
+
+    默认为当前窗口的活动标签页。
+
 - `details`
 
-  - : An object describing the script to run. It contains the following properties:
+  - : 描述要运行的脚本的对象。
+
+    它包含以下属性：
 
     - `allFrames` {{optional_inline}}
-      - : `boolean`. If `true`, the code will be injected into all frames of the current page. If `true` and `frameId` is set, then it will raise an error, frameId and allFrames are mutually exclusive. If it is `false`, code is only injected into the top frame. Defaults to `false`.
+
+      - : `boolean`。如果为 `true`，代码将注入到当前页面的所有框架中。
+
+        如果为 `true` 并且设置了 `frameId`，则会引发错误。（`frameId` 和 `allFrames` 是互斥的。）
+
+        如果为 `false`，代码仅注入到顶层框架中。
+
+        默认为 `false`。
+
     - `code` {{optional_inline}}
-      - : `string`. Code to inject, as a text string. **Warning:** Don’t use this property to interpolate untrusted data into JavaScript, as this could lead to a security issue.
+
+      - : `string`。要注入的代码，作为文本字符串。
+
+        > [!WARNING]
+        > 不要使用此属性将不受信任的数据插入 JavaScript，因为这可能会导致安全问题。
+
     - `file` {{optional_inline}}
-      - : `string`. Path to a file containing the code to inject. In Firefox, relative URLs not starting at the extension root are resolved relative to the current page URL. In Chrome, these URLs are resolved relative to the extension's base URL. To work cross-browser, you can specify the path as a relative URL, starting at the extension's root, like this: `"/path/to/script.js"`.
+
+      - : `string`。包含要注入代码的文件的路径。
+
+        - 在 Firefox 中，不从扩展根目录开始的相对 URL 相对于当前页面 URL 解析。
+        - 在 Chrome 中，这些 URL 相对于扩展的根 URL 解析。
+
+        为了跨浏览器工作，可以指定从扩展根目录开始的相对 URL，如：`"/path/to/script.js"`。
+
     - `frameId` {{optional_inline}}
-      - : `integer`. The frame where the code should be injected. Defaults to `0` (the top-level frame).
+
+      - : `integer`。应注入代码的框架。
+
+        默认为 `0`（顶层框架）。
+
     - `matchAboutBlank` {{optional_inline}}
-      - : `boolean`. If `true`, the code will be injected into embedded "about:blank" and "about:srcdoc" frames if your extension has access to their parent document. The code cannot be inserted in top-level about: frames. Defaults to `false`.
+
+      - : `boolean`。如果为 `true`，且你的扩展具有访问其父文档的权限，代码将注入到内嵌的 `about:blank` 和 `about:srcdoc` 框架中。代码不能注入到顶层 `about:` 框架中。
+
+        默认为 `false`。
+
     - `runAt` {{optional_inline}}
-      - : {{WebExtAPIRef('extensionTypes.RunAt')}}. The soonest that the code will be injected into the tab. Defaults to "document_idle".
 
-### Return value
+      - : {{WebExtAPIRef('extensionTypes.RunAt')}}。代码将在标签页中注入的最早时间。
 
-A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of objects, representing the result of the script in every injected frame.
+        默认为 `"document_idle"`。
 
-The result of the script is the last evaluated statement, which is similar to what would be output (the results, not any `console.log()` output) if you executed the script in the [Web Console](/zh-CN/docs/Tools/Web_Console). For example, consider a script like this:
+### 返回值
+
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个对象数组。数组的值表示脚本在每个注入框架中的结果。
+
+脚本的结果是最后评估的语句，这类似于如果在 [Web 控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)中执行脚本时输出的结果（不是任何 `console.log()` 的输出）。例如，考虑这样的脚本：
 
 ```js
-var foo='my result';foo;
+let foo = "my result";
+foo;
 ```
 
-Here the results array will contain the the string "`my result`" as an element. The result values must be [structured clonable](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+在这里，结果数组将包含字符串 `"my result"` 作为元素。
 
-If any error occurs the promise will be rejected with an error message.
+结果值必须是[可结构化克隆](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)的（请参见[数据克隆算法](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#数据克隆算法)）。
 
-## Browser compatibility
+> [!NOTE]
+> 最后一个语句也可能是一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，但 [webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript) 库不支持此功能。
 
-{{Compat}}
+如果发生任何错误，则该 promise 将被拒绝并带有错误消息。
 
-## Examples
+## 示例
 
-This example executes a one-line code snippet in the currently active tab:
+此示例在当前活动标签页中执行一行代码片段：
 
 ```js
 function onExecuted(result) {
-  console.log(`We made it green`);
+  console.log(`我们把它变绿了`);
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.log(`发生错误：${error}`);
 }
 
-var makeItGreen = 'document.body.style.border = "5px solid green"';
+const makeItGreen = 'document.body.style.border = "5px solid green"';
 
-var executing = browser.tabs.executeScript({
-  code: makeItGreen
+const executing = browser.tabs.executeScript({
+  code: makeItGreen,
 });
 executing.then(onExecuted, onError);
 ```
 
-This example executes a script from a file, packaged with the extension, called "content-script.js". The script is executed in the currently active tab. The script is executed in subframes as well as the main document:
+此示例执行一个文件（随扩展打包）的脚本，名为 `"content-script.js"`。脚本在当前活动标签页中执行。脚本在子框架和主文档中执行：
 
 ```js
 function onExecuted(result) {
-  console.log(`We executed in all subframes`);
+  console.log(`我们在所有子框架中执行了`);
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.log(`发生错误：${error}`);
 }
 
-var executing = browser.tabs.executeScript({
+const executing = browser.tabs.executeScript({
   file: "/content-script.js",
-  allFrames: true
+  allFrames: true,
 });
 executing.then(onExecuted, onError);
 ```
 
-This example executes a script from a file, packaged with the extension, called "content-script.js". The script is executed in the tab with an ID of 2:
+此示例执行一个文件（随扩展打包）的脚本，名为 `"content-script.js"`。脚本在 ID 为 `2` 的标签页中执行：
 
 ```js
 function onExecuted(result) {
-  console.log(`We executed in tab 2`);
+  console.log(`我们在标签页 2 中执行了`);
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.log(`发生错误：${error}`);
 }
 
-var executing = browser.tabs.executeScript(
-  2, {
-    file: "/content-script.js"
+const executing = browser.tabs.executeScript(2, {
+  file: "/content-script.js",
 });
 executing.then(onExecuted, onError);
 ```
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+## 浏览器兼容性
+
+{{Compat}}
+
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-executeScript) API。此文档源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

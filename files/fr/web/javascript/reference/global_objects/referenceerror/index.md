@@ -1,8 +1,6 @@
 ---
 title: ReferenceError
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
-translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
-original_slug: Web/JavaScript/Reference/Objets_globaux/ReferenceError
 ---
 
 {{JSRef}}
@@ -26,7 +24,7 @@ L'objet **`ReferenceError`** représente une erreur qui se produit lorsqu'il fai
   - : Le numéro de la ligne du fichier qui a déclenché cette erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
 - [`ReferenceError.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber)
   - : Le numéro de colonne dans la ligne du fichier qui a déclenché cette erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`ReferenceError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack)
+- [`ReferenceError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/stack)
   - : La pile d'appels. Héritée depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
 
 ## Exemples
@@ -38,12 +36,12 @@ try {
   let a = variableNonDefinie;
 } catch (e) {
   console.log(e instanceof ReferenceError); // true
-  console.log(e.message);                   // "variableNonDefinie is not defined"
-  console.log(e.name);                      // "ReferenceError"
-  console.log(e.fileName);                  // "Scratchpad/1"
-  console.log(e.lineNumber);                // 2
-  console.log(e.columnNumber);              // 6
-  console.log(e.stack);                     // "@Scratchpad/2:2:7\n"
+  console.log(e.message); // "variableNonDefinie is not defined"
+  console.log(e.name); // "ReferenceError"
+  console.log(e.fileName); // "Scratchpad/1"
+  console.log(e.lineNumber); // 2
+  console.log(e.columnNumber); // 6
+  console.log(e.stack); // "@Scratchpad/2:2:7\n"
 }
 ```
 
@@ -51,15 +49,15 @@ try {
 
 ```js
 try {
-  throw new ReferenceError('Bonjour', 'unFichier.js', 10);
+  throw new ReferenceError("Bonjour", "unFichier.js", 10);
 } catch (e) {
   console.log(e instanceof ReferenceError); // true
-  console.log(e.message);                   // "Bonjour"
-  console.log(e.name);                      // "ReferenceError"
-  console.log(e.fileName);                  // "unFichier.js"
-  console.log(e.lineNumber);                // 10
-  console.log(e.columnNumber);              // 0
-  console.log(e.stack);                     // "@Scratchpad/2:2:9\n"
+  console.log(e.message); // "Bonjour"
+  console.log(e.name); // "ReferenceError"
+  console.log(e.fileName); // "unFichier.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 

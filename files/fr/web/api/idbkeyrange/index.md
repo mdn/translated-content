@@ -1,35 +1,25 @@
 ---
 title: IDBKeyRange
 slug: Web/API/IDBKeyRange
-tags:
-  - API
-  - Database
-  - IDBKeyRange
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
-  - TopicStub
-translation_of: Web/API/IDBKeyRange
 ---
 
 {{APIRef("IndexedDB")}}
 
-L'interface **`IDBKeyRange`** de l'API [IndexedDB](/fr/docs/Web/API/API_IndexedDB) représente un intervalle continue sur un type de donnée utilisé pour représenter des clés. Les enregistrements peuvent être récupérés depuis des objets {{domxref("IDBObjectStore")}} et {{domxref("IDBIndex")}} grâce à des clés ou à des intervalles de clé. Il est possible de préciser les bornes inférieure et supérieure de l'intervalle. Si les clés sont des chaînes de caractères, on pourrait ainsi parcourir l'ensemble des valeurs pour l'intervalle A–Z.
+L'interface **`IDBKeyRange`** de l'API [IndexedDB](/fr/docs/Web/API/IndexedDB_API) représente un intervalle continue sur un type de donnée utilisé pour représenter des clés. Les enregistrements peuvent être récupérés depuis des objets {{domxref("IDBObjectStore")}} et {{domxref("IDBIndex")}} grâce à des clés ou à des intervalles de clé. Il est possible de préciser les bornes inférieure et supérieure de l'intervalle. Si les clés sont des chaînes de caractères, on pourrait ainsi parcourir l'ensemble des valeurs pour l'intervalle A–Z.
 
 Un intervalle de clé peut être une seule valeur ou un intervalle avec des bornes inférieure et supérieure. Si l'intervalle possède ces deux bornes, il est dit borné. S'il n'a aucune borne, il est non-borné. Un intervalle de clé borné peut être ouvert (les bornes sont exclues) ou fermé (les bornes sont inclues). Pour récupérer les différentes clés d'un intervalle donné, on peut utiliser les fragments de code suivants :
 
-| Intervalle                         | Code                                                              |
-| ---------------------------------- | ----------------------------------------------------------------- |
-| Toutes les clés ≥ **x**            | [`IDBKeyRange.lowerBound(x)`](/fr/docs/Web/API/IDBKeyRange/lowerBound)             |
-| Toutes les clés > **x**            | [`IDBKeyRangelowerBound(x, true)`](/fr/docs/Web/API/IDBKeyRange/lowerBound)       |
-| Toutes les clés ≤ **y**            | [`IDBKeyRange.upperBound(y)`](/fr/docs/Web/API/IDBKeyRange/upperBound)             |
-| Toutes les clés < **y**            | [`IDBKeyRange.upperBound(y, true)`](/fr/docs/Web/API/IDBKeyRange/upperBound)       |
-| Toutes les clés ≥ **x** && ≤ **y** | [`IDBKeyRange.bound(x, y)`](/fr/docs/Web/API/IDBKeyRange/bound)              |
-| Toutes les clés > **x** &&< **y**  | [`IDBKeyRange.bound(x, y, true, true)`](/fr/docs/Web/API/IDBKeyRange/bound)  |
-| Toutes les clés > **x** && ≤ **y** | [`IDBKeyRange.bound(x, y, true, false)`](/fr/docs/Web/API/IDBKeyRange/bound) |
-| Toutes les clés ≥ **x** &&< **y**  | [`IDBKeyRange.bound(x, y, false, true)`](/fr/docs/Web/API/IDBKeyRange/bound) |
-| La clé = **z**                     | [`IDBKeyRange.only(z)`](/fr/docs/Web/API/IDBKeyRange/only)                     |
+| Intervalle                         | Code                                                                                |
+| ---------------------------------- | ----------------------------------------------------------------------------------- |
+| Toutes les clés ≥ **x**            | [`IDBKeyRange.lowerBound(x)`](/fr/docs/Web/API/IDBKeyRange/lowerBound_static)       |
+| Toutes les clés > **x**            | [`IDBKeyRangelowerBound(x, true)`](/fr/docs/Web/API/IDBKeyRange/lowerBound_static)  |
+| Toutes les clés ≤ **y**            | [`IDBKeyRange.upperBound(y)`](/fr/docs/Web/API/IDBKeyRange/upperBound_static)       |
+| Toutes les clés < **y**            | [`IDBKeyRange.upperBound(y, true)`](/fr/docs/Web/API/IDBKeyRange/upperBound_static) |
+| Toutes les clés ≥ **x** && ≤ **y** | [`IDBKeyRange.bound(x, y)`](/fr/docs/Web/API/IDBKeyRange/bound_static)              |
+| Toutes les clés > **x** &&< **y**  | [`IDBKeyRange.bound(x, y, true, true)`](/fr/docs/Web/API/IDBKeyRange/bound_static)  |
+| Toutes les clés > **x** && ≤ **y** | [`IDBKeyRange.bound(x, y, true, false)`](/fr/docs/Web/API/IDBKeyRange/bound_static) |
+| Toutes les clés ≥ **x** &&< **y**  | [`IDBKeyRange.bound(x, y, false, true)`](/fr/docs/Web/API/IDBKeyRange/bound_static) |
+| La clé = **z**                     | [`IDBKeyRange.only(z)`](/fr/docs/Web/API/IDBKeyRange/only_static)                   |
 
 Une clé est contenue dans un intervalle de clé lorsque les conditions suivantes sont réunies :
 
@@ -86,25 +76,27 @@ Dans l'exemple qui suit, on montre comment utiliser un intervalle de clé. Ici, 
 function displayData() {
   var keyRangeValue = IDBKeyRange.bound("A", "F");
 
-  var transaction = db.transaction(['fThings'], 'readonly');
-  var objectStore = transaction.objectStore('fThings');
+  var transaction = db.transaction(["fThings"], "readonly");
+  var objectStore = transaction.objectStore("fThings");
 
-  objectStore.openCursor(keyRangeValue).onsuccess = function(event) {
+  objectStore.openCursor(keyRangeValue).onsuccess = function (event) {
     var cursor = event.target.result;
-      if(cursor) {
-        var listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
-        list.appendChild(listItem);
+    if (cursor) {
+      var listItem = document.createElement("li");
+      listItem.innerHTML =
+        "<strong>" + cursor.value.fThing + "</strong>, " + cursor.value.fRating;
+      list.appendChild(listItem);
 
-        cursor.continue();
-      } else {
-        console.log('Les éléments ont été affichés.');
-      }
-    };
+      cursor.continue();
+    } else {
+      console.log("Les éléments ont été affichés.");
+    }
   };
+}
 ```
 
-> **Note :** Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) ([ainsi que la démonstration associée](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/)).
+> [!NOTE]
+> Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) ([ainsi que la démonstration associée](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/)).
 
 ## Spécifications
 
@@ -116,10 +108,10 @@ function displayData() {
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Initier une connexion : {{domxref("IDBDatabase")}}
 - Utiliser les transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

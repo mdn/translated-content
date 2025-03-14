@@ -1,19 +1,9 @@
 ---
 title: browsingData.removePasswords()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removePasswords
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removePasswords
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removePasswords
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Efface les mots de passes enregistrés
 
@@ -22,14 +12,14 @@ Vous pouvez utiliser le paremètre `removalOptions`, qui est un objet {{WebExtAP
 - Effacer uniquement les mots de passe enregistrés après un certain temp
 - Contrôlez si vous souhaitez supprimer les mots de passe enregistrés sur les pages Web normales ou effacer les mots de passe enregistrés sur les applications et les extensions hébergées.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var removing = browser.browsingData.removePasswords(
-  removalOptions            // RemovalOptions object
-)
+  removalOptions, // RemovalOptions object
+);
 ```
 
 ### Paramètres
@@ -39,11 +29,11 @@ var removing = browser.browsingData.removePasswords(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData.removePasswords")}}
+{{Compat}}
 
 ## Exemples
 
@@ -62,10 +52,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+var oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.removePasswords({since: oneWeekAgo}).
-then(onRemoved, onError);
+browser.browsingData
+  .removePasswords({ since: oneWeekAgo })
+  .then(onRemoved, onError);
 ```
 
 Supprime tous les mots de passe enregistrés :
@@ -84,9 +75,9 @@ browser.browsingData.removePasswords({}).then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

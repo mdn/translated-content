@@ -1,39 +1,60 @@
 ---
 title: break
 slug: Web/JavaScript/Reference/Statements/break
+l10n:
+  sourceCommit: 4c26e8a3fb50d06963b06017f51ce19364350564
 ---
 
 {{jsSidebar("Statements")}}
 
-**break 语句**中止当前循环，{{jsxref("Statements/switch", "switch")}}语句或{{jsxref("Statements/label", "label")}} 语句，并把程序控制流转到紧接着被中止语句后面的语句。
+**`break`** 语句终止当前循环或 {{jsxref("Statements/switch", "switch")}} 语句，并将程序控制权转移到终止语句后的语句。当在带有标签的语句内部使用时，它还可以用于跳过该[标记语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)。
+
+{{InteractiveExample("JavaScript Demo: Statement - Break")}}
+
+```js interactive-example
+let i = 0;
+
+while (i < 6) {
+  if (i === 3) {
+    break;
+  }
+  i = i + 1;
+}
+
+console.log(i);
+// Expected output: 3
+```
 
 ## 语法
 
-```plain
-break [label];
+```js-nolint
+break;
+break label;
 ```
 
 - `label` {{optional_inline}}
-  - : 与语句标签相关联的标识符。如果 break 语句不在一个循环或 {{jsxref("Statements/switch", "switch")}} 语句中，则该项是必须的。
+  - : 与要中断的语句的标签关联的标识符。如果 `break` 语句未嵌套在循环或 {{jsxref("Statements/switch", "switch")}} 中，则需要标签标识符。
 
 ## 描述
 
-`break`语句包含一个可选的标签，可允许程序摆脱一个被标记的语句。`break`语句需要内嵌在引用的标签中。被标记的语句可以是任何 {{jsxref("Statements/block", "块")}}语句；不一定是循环语句。
+执行到 `break;` 时，程序会跳出最内层的 `switch` 或[循环](/zh-CN/docs/Web/JavaScript/Reference/Statements#迭代)语句，并继续执行其后的下一条语句。
 
-break 语句不能在 function 函数体中直接使用，break 语句应嵌套在要中断的当前循环、switch 或 label 语句中。
+执行到 `break label;` 时，程序会跳出标记为 `label` 的语句，并继续执行其后的下一条语句。`break` 语句需要嵌套在引用的标签内。标记语句可以是任何语句（通常是{{jsxref("Statements/block", "块", "", 1)}}语句），它不一定是另一个循环语句。
+
+即使函数或类进一步嵌套在循环中，`break` 语句（无论是否带有标签）也不能在脚本、模块、函数体或[静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)的顶层使用。
 
 ## 示例
 
-### break in while loop
+### 中断 while 循环
 
-下面的函数里有个 `break` 语句，当 `i` 为 3 时，会中止 {{jsxref("Statements/while", "while")}} 循环，然后返回 3 \* `x` 的值。
+以下函数有一个 `break` 语句，当 `i` 等于 3 时终止 {{jsxref("Statements/while", "while")}} 循环，然后返回值 `3 * x`。
 
 ```js
 function testBreak(x) {
-  var i = 0;
+  let i = 0;
 
   while (i < 6) {
-    if (i == 3) {
+    if (i === 3) {
       break;
     }
     i += 1;
@@ -43,86 +64,82 @@ function testBreak(x) {
 }
 ```
 
-### break in switch statements
+### switch 语句中的 break
 
-在下面的代码中， `break` 使用在 {{jsxref("Statements/switch", "switch")}} 语句中，当遇到匹配到 case 后，就会执行相应的代码并中断循环体。
+以下代码有一个 `break` 语句，当匹配到一个 `case` 并执行完相应的代码后，会终止 {{jsxref("Statements/switch", "switch")}} 语句。
 
-```plain
-const food = "sushi";
+```js
+const food = "寿司";
 
 switch (food) {
-  case "sushi":
-    console.log("Sushi is originally from Japan.");
+  case "寿司":
+    console.log("寿司原产于日本。");
     break;
-  case "pizza":
-    console.log("Pizza is originally from Italy.");
+  case "披萨":
+    console.log("披萨原产于意大利。");
     break;
   default:
-    console.log("I have never heard of that dish.");
+    console.log("我从未听说过这道菜。");
     break;
 }
 ```
 
-### break in labeled blocks
+### 带标签的 break 语句
 
-下面的代码中一起使用 `break` 语句和被标记的块语句。一个 `break` 语句必须内嵌在它引用的标记中。注意，`inner_block` 内嵌在 `outer_block` 中。
+以下代码展示了如何使用带标签的 `break` 语句。通过使用 `break outerBlock` 语句，可以跳出标记为 `outerBlock` 的嵌套循环或块语句。
 
 ```js
-outer_block:{
-
-  inner_block:{
-    console.log ('1');
-    break outer_block;      // breaks out of both inner_block and outer_block
-    console.log (':-(');    // skipped
+outerBlock: {
+  innerBlock: {
+    console.log("1");
+    break outerBlock; // 同时跳出 innerBlock 和 outerBlock
+    console.log(":-("); // 跳过这一行
   }
-
-  console.log ('2');        // skipped
+  console.log("2"); // 跳过这一行
 }
 ```
 
-### break in labeled blocks that throw
+### 非法 break 语句
 
-下面的代码同样使用了 `break` 语句和被标记的块语句，但是产生了一个语法错误，因为它的 `break` 语句在 `block_1` 中，但是引用了 `block_2`。`break` 语句必须内嵌在它引用的标签中。
+一个 `break` 语句必须嵌套在它引用的任何标签内部。以下代码也使用了带 `break` 语句的标签，但是会产生语法错误，因为其 `break` 语句引用了 `block2`，但它并未嵌套在 `block2` 内。
 
-```js
-block_1:{
-  console.log ('1');
-  break block_2;            // SyntaxError: label not found
+```js-nolint example-bad
+block1: {
+  console.log("1");
+  break block2; // SyntaxError: label not found
 }
 
-block_2:{
-  console.log ('2');
+block2: {
+  console.log("2");
 }
 ```
 
-### break within functions
+以下代码示例中，在嵌套在循环或带标签块中的函数内使用 `break` 语句也会产生语法错误，而 `break` 语句旨在跳出这些循环或带标签块。
 
-在下面的代码同样会产生 SyntaxError，因为它并没被正确的使用在循环、switch 或 label 语句中。
-
-```plain
+```js-nolint example-bad
 function testBreak(x) {
-  var i = 0;
+  let i = 0;
 
   while (i < 6) {
-    if (i == 3) {
-      (function() {
+    if (i === 3) {
+      (() => {
         break;
       })();
     }
     i += 1;
   }
 
-return i * x;
+  return i * x;
 }
 
 testBreak(1); // SyntaxError: Illegal break statement
 ```
 
-```plain
-block_1: {
-  console.log('1');
-  ( function() {
-    break block_1; // SyntaxError: Undefined label 'block_1'
+```js-nolint example-bad
+block1: {
+  console.log("1");
+  (() => {
+    break block1; // SyntaxError: Undefined label 'block1'
   })();
 }
 ```
@@ -135,8 +152,8 @@ block_1: {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Statements/continue", "continue")}}
-- {{jsxref("Statements/label", "label")}}
+- {{jsxref("Statements/label", "label", "", 1)}}
 - {{jsxref("Statements/switch", "switch")}}

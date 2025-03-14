@@ -1,21 +1,38 @@
 ---
 title: <li>
 slug: Web/HTML/Element/li
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-translation_of: Web/HTML/Element/li
 ---
 
 {{HTMLSidebar}}
 
 **HTML `<li>` 요소**는 목록의 항목을 나타냅니다. 반드시 정렬 목록({{htmlelement("ol")}}), 비정렬 목록({{htmlelement("ul")}}, 혹은 메뉴({{htmlelement("menu")}}) 안에 위치해야 합니다. 메뉴와 비정렬 목록에서는 보통 불릿으로 항목을 나타내고, 정렬 목록에서는 숫자나 문자를 사용한 오름차순 카운터로 나타냅니다.
 
-{{EmbedInteractiveExample("pages/tabbed/li.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;li&gt;", "tabbed-shorter")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
+```html interactive-example
+<p>Apollo astronauts:</p>
+
+<ul>
+  <li>Neil Armstrong</li>
+  <li>Alan Bean</li>
+  <li>Peter Conrad</li>
+  <li>Edgar Mitchell</li>
+  <li>Alan Shepard</li>
+</ul>
+```
+
+```css interactive-example
+p,
+li {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+p {
+  font-weight: bold;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -50,12 +67,12 @@ translation_of: Web/HTML/Element/li
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("menuitem")}},
-        {{ARIARole("menuitemcheckbox")}},
-        {{ARIARole("menuitemradio")}}, {{ARIARole("option")}},
-        {{ARIARole("presentation")}}, {{ARIARole("radio")}},
-        {{ARIARole("separator")}}, {{ARIARole("tab")}},
-        {{ARIARole("treeitem")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/menuitem_role'><code>menuitem</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role'><code>menuitemcheckbox</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role'><code>menuitemradio</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/option_role'><code>option</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/radio_role'><code>radio</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/separator_role'><code>separator</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/tab_role'><code>tab</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/treeitem_role'><code>treeitem</code></a>
       </td>
     </tr>
     <tr>
@@ -69,13 +86,14 @@ translation_of: Web/HTML/Element/li
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("value")}}
+- `value`
 
   - : {{HTMLElement("ol")}} 요소 내부에서 항목의 현재 서수 값을 나타내는 정수. 리스트가 로마 숫자나 문자로 표시되더라도 이 특성에는 숫자만 넣을수 있습니다. `value`를 지정한 항목을 뒤따르는 다른 항목은 이 값에서부터 번호를 매깁니다. `value` 속성은 비정렬 목록({{HTMLElement("ul")}})과 메뉴({{HTMLElement("menu")}})에서는 아무 의미가 없습니다.
 
-    > **참고:** HTML4에서는 `value`의 사용을 중단했지만 HTML5에서 다시 도입했습니다.
+    > [!NOTE]
+    > HTML4에서는 `value`의 사용을 중단했지만 HTML5에서 다시 도입했습니다.
 
-- {{htmlattrdef("type")}} {{Deprecated_inline}}
+- `type` {{Deprecated_inline}}
 
   - : 넘버링 타입을 나타내는 문자.
 
@@ -87,7 +105,8 @@ translation_of: Web/HTML/Element/li
 
     부모 {{HTMLElement("ol")}} 요소에서 지정하는 유형을 덮어씁니다.
 
-    > **참고:** 이 속성은 사용 중단됐습니다. 대신 CSS {{cssxref("list-style-type")}} 속성을 사용하세요.
+    > [!NOTE]
+    > 이 속성은 사용 중단됐습니다. 대신 CSS {{cssxref("list-style-type")}} 속성을 사용하세요.
 
 ## 예제
 
@@ -97,9 +116,9 @@ translation_of: Web/HTML/Element/li
 
 ```html
 <ol>
-    <li>first item</li>
-    <li>second item</li>
-    <li>third item</li>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
 </ol>
 ```
 
@@ -109,9 +128,9 @@ translation_of: Web/HTML/Element/li
 
 ```html
 <ol type="I">
-    <li value="3">third item</li>
-    <li>fourth item</li>
-    <li>fifth item</li>
+  <li value="3">third item</li>
+  <li>fourth item</li>
+  <li>fifth item</li>
 </ol>
 ```
 
@@ -121,9 +140,9 @@ translation_of: Web/HTML/Element/li
 
 ```html
 <ul>
-    <li>first item</li>
-    <li>second item</li>
-    <li>third item</li>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
 </ul>
 ```
 
@@ -135,7 +154,7 @@ translation_of: Web/HTML/Element/li
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.li")}}
+{{Compat}}
 
 ## 같이 보기
 
@@ -143,5 +162,5 @@ translation_of: Web/HTML/Element/li
 - `<li>` 요소와 유용하게 사용할 수 있는 CSS 속성
 
   - 서수를 표현할 방식을 지정하는 {{cssxref("list-style")}} 속성.
-  - 복잡한 중첩 목록을 처리하기 위한 [CSS 카운터](/ko/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+  - 복잡한 중첩 목록을 처리하기 위한 [CSS 카운터](/ko/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
   - 항목의 들여쓰기를 조정하기 위한 {{cssxref("margin")}} 속성.

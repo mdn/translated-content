@@ -1,6 +1,6 @@
 ---
 title: CSS 彈性盒子排版
-slug: Web/CSS/CSS_Flexible_Box_Layout
+slug: Web/CSS/CSS_flexible_box_layout
 ---
 
 {{CSSRef}}
@@ -51,21 +51,21 @@ The properties `align-content`, `align-self`, `align-items` and `justify-content
 
 ## 教學
 
-- [彈性盒子的基本概念](/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+- [彈性盒子的基本概念](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
   - : 彈性盒子的概述
-- [彈性盒子與其他排版的關係](/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)
+- [彈性盒子與其他排版的關係](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_Flexbox_to_Other_Layout_Methods)
   - : 彈性盒子如何與其他排版和 CSS 規範相關連
-- [在彈性容器內對齊](/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
+- [在彈性容器內對齊](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Aligning_Items_in_a_Flex_Container)
   - : 彈性盒子的 Box Alignment 屬性如何做動。
-- [給彈性項目排序](/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
+- [給彈性項目排序](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Ordering_Flex_Items)
   - : 解釋改變彈性項目順序和方向的不同方法，並講到潛在的問題。
-- [控制彈性項目與主軸的比例](/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)
+- [控制彈性項目與主軸的比例](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
   - : 將解釋 flex-grow、flex-shrink、flex-basis 屬性。
-- [掌握彈性項目 wrapping](/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
+- [掌握彈性項目 wrapping](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Mastering_Wrapping_of_Flex_Items)
   - : 如何使用多行建立彈性容器，並控制這些行中項目的顯示。
-- [彈性盒子的典型用例](/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)
+- [彈性盒子的典型用例](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Typical_Use_Cases_of_Flexbox)
   - : 彈性盒子常見的設計範式。
-- [彈性盒子的向下相容](/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
+- [彈性盒子的向下相容](/zh-TW/docs/Glossary/Flexbox)
   - : 彈性盒子的瀏覽器相容性、互操作性問題、支持舊版瀏覽器和規範的版本
 
 ## 規範
@@ -76,5 +76,5 @@ The properties `align-content`, `align-self`, `align-items` and `justify-content
 
 - [Flexbugs](https://github.com/philipwalton/flexbugs)
   - : a community-curated list of flexbox browser bugs and workarounds
-- [Cross-browser Flexbox mixins](/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins)
+- [Cross-browser Flexbox mixins](/zh-TW/docs/Glossary/Flexbox)
   - : This article provides a set of mixins for those who want to create cross-browser flexbox experiences that even work in older browser that don't support the modern flexbox syntax

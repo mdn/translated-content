@@ -1,20 +1,50 @@
 ---
 title: handler.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/isExtensible
 ---
 
 {{JSRef}}
 **handler.isExtensible()** 方法用于拦截对对象的 Object.isExtensible()。
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-isextensible.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.isExtensible()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  canEvolve: true,
+};
+
+const handler1 = {
+  isExtensible(target) {
+    return Reflect.isExtensible(target);
+  },
+  preventExtensions(target) {
+    target.canEvolve = false;
+    return Reflect.preventExtensions(target);
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+console.log(Object.isExtensible(proxy1));
+// Expected output: true
+
+console.log(monster1.canEvolve);
+// Expected output: true
+
+Object.preventExtensions(proxy1);
+
+console.log(Object.isExtensible(proxy1));
+// Expected output: false
+
+console.log(monster1.canEvolve);
+// Expected output: false
+```
 
 ## 语法
 
 ```js
 var p = new Proxy(target, {
-  isExtensible: function(target) {
-  }
+  isExtensible: function (target) {},
 });
 ```
 
@@ -51,25 +81,30 @@ handler.isExtensible() 用于拦截对对象的 Object.isExtensible()。
 以下代码演示{{jsxref("Object.isExtensible()")}}.
 
 ```js
-var p = new Proxy({}, {
-  isExtensible: function(target) {
-    console.log('called');
-    return true; // 也可以 return 1; 等表示为 true 的值
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    isExtensible: function (target) {
+      console.log("called");
+      return true; // 也可以 return 1; 等表示为 true 的值
+    },
+  },
+);
 
-console.log(Object.isExtensible(p)); // "called"
-                                     // true
+console.log(Object.isExtensible(p)); // "called"; outputs true
 ```
 
 以下代码演示违反约束的情况。
 
 ```js
-var p = new Proxy({}, {
-  isExtensible: function(target) {
-    return false; // return 0; return NaN 等都会报错
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    isExtensible: function (target) {
+      return false; // return 0; return NaN 等都会报错
+    },
+  },
+);
 
 Object.isExtensible(p); // TypeError is thrown
 ```
@@ -82,7 +117,7 @@ Object.isExtensible(p); // TypeError is thrown
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("Proxy")}}
 - {{jsxref("Proxy.handler", "handler")}}

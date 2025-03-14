@@ -1,24 +1,38 @@
 ---
 title: <cite>
 slug: Web/HTML/Element/cite
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-  - 인용
-  - 출처
-translation_of: Web/HTML/Element/cite
 ---
 
 {{HTMLSidebar}}
 
 **HTML `<cite>` 요소**는 저작물의 출처를 표기할 때 사용하며, 제목을 반드시 포함해야 합니다. 적절한 맥락 아래에서는 출처를 축약해서 표기할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/cite.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;cite&gt;", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
+```html interactive-example
+<figure>
+  <blockquote>
+    <p>
+      It was a bright cold day in April, and the clocks were striking thirteen.
+    </p>
+  </blockquote>
+  <figcaption>
+    First sentence in
+    <cite
+      ><a href="http://www.george-orwell.org/1984/0.html"
+        >Nineteen Eighty-Four</a
+      ></cite
+    >
+    by George Orwell (Part 1, Chapter 1).
+  </figcaption>
+</figure>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+cite {
+}
+```
 
 <table class="properties">
   <tbody>
@@ -48,7 +62,7 @@ translation_of: Web/HTML/Element/cite
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -107,7 +121,7 @@ translation_of: Web/HTML/Element/cite
 
 W3C 명세는 `<cite>` 요소로 저작물의 출처를 표기할 때 저작자도 표기할 수 있음을 명시하고 있습니다. 그러나 정반대로, WHATWG 명세는 사람 이름을 어떤 상황에서도 **절대** 포함하지 말아야 한다고 적혀있다는 점을 알아두는 것이 좋습니다.
 
-{{htmlelement("blockquote")}}, {{htmlelement("q")}} 요소가 가진 인용문의 출처를 나타내려면 {{htmlattrxref("cite", "blockquote")}} 특성을 사용하세요.
+{{htmlelement("blockquote")}}, {{htmlelement("q")}} 요소가 가진 인용문의 출처를 나타내려면 [`cite`](/ko/docs/Web/HTML/Element/blockquote#cite) 특성을 사용하세요.
 
 보통 브라우저는 `<cite>` 요소를 그릴 때 기울임꼴로 표현합니다. 기울임꼴을 제거하려면 CSS {{cssxref("font-style")}} 속성을 `<cite>`에 적용하세요.
 
@@ -127,7 +141,7 @@ W3C 명세는 `<cite>` 요소로 저작물의 출처를 표기할 때 저작자�
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.cite")}}
+{{Compat}}
 
 ## 같이 보기
 

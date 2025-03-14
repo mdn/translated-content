@@ -1,8 +1,6 @@
 ---
 title: TypedArray.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/at
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/at
-browser-compat: javascript.builtins.TypedArray.at
 ---
 
 {{JSRef}}
@@ -11,12 +9,26 @@ La méthode **`at()`** prend comme argument un entier et renvoie l'élément du 
 
 L'accès aux éléments d'un tableau typé en utilisant les crochets ne permet que d'utiliser des indices positifs&nbsp;: `typedarray[0]` renverra le premier élément, `typedarray[typedarray.length-1]` renverra le dernier. Avec `typedarray.at(-1)`, on peut avoir une écriture plus concise pour accéder au dernier élément. Voir les exemples ci-après.
 
-{{EmbedInteractiveExample("pages/js/typedarray-at.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.at()")}}
+
+```js interactive-example
+const int8 = new Int8Array([0, 10, -10, 20, -30, 40, -50]);
+
+let index = 1;
+
+console.log(`An index of ${index} returns the item ${int8.at(index)}`);
+// Expected output: "An index of 1 returns the item 10"
+
+index = -2;
+
+console.log(`An index of ${index} returns the item ${int8.at(index)}`);
+// Expected output: "An index of -2 returns the item 40"
+```
 
 ## Syntaxe
 
 ```js
-at(indice)
+at(indice);
 ```
 
 ### Paramètres
@@ -55,7 +67,7 @@ On compare ici différentes façons d'accéder à l'avant-dernier élément d'un
 const uint8 = new Uint8Array([1, 2, 4, 7, 11, 18]);
 
 // En utilisant la propriété length
-const avecLength = uint8[uint8.length-2];
+const avecLength = uint8[uint8.length - 2];
 console.log(avecLength); // Affiche 11 dans la console
 
 // En utilisant la méthode slice()

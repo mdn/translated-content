@@ -1,13 +1,6 @@
 ---
 title: DocumentFragment.querySelectorAll()
 slug: Web/API/DocumentFragment/querySelectorAll
-tags:
-  - API
-  - DOM
-  - Document
-  - Méthodes
-  - fragment
-translation_of: Web/API/DocumentFragment/querySelectorAll
 ---
 
 {{ApiRef("DOM")}}
@@ -16,7 +9,8 @@ La méthode **`DocumentFragment.querySelectorAll()`** renvoie une {{domxref("Nod
 
 Si les sélecteurs spécifiés dans paramètre sont invalides une {{domxref("DOMException")}} avec une valeur `SYNTAX_ERR` est lancée.
 
-> **Note :** La définition de cet API a été déplacé vers l'interface {{domxref("ParentNode")}}.
+> [!NOTE]
+> La définition de cet API a été déplacé vers l'interface {{domxref("ParentNode")}}.
 
 ## Syntaxe
 

@@ -1,46 +1,66 @@
 ---
-title: Element.clientLeft
+title: Element：clientLeft 属性
 slug: Web/API/Element/clientLeft
+l10n:
+  sourceCommit: d0b23f3f26637aa405ee9ee0a0892fc6e9b742ef
 ---
 
-{{ APIRef() }}
+{{ APIRef("DOM") }}
 
-表示一个元素的左边框的宽度，以像素表示。如果元素的文本方向是从右向左（RTL, right-to-left），并且由于内容溢出导致左边出现了一个垂直滚动条，则该属性包括滚动条的宽度。`clientLeft` 不包括左外边距和左内边距。`clientLeft` 是只读的。
+元素左侧边框的宽度（像素）。如果元素的文本方向为从右到左，并且内容溢出导致渲染了左侧的垂直滚动条，则该值包含垂直滚动条的宽度。`clientLeft` 不包含左外边距或左内边距的值。`clientLeft` 是只读属性。
 
-从 [Gecko](zh-CN/Gecko) 1.9（[Firefox 3](zh-CN/Firefox_3) {{ Bug(111207) }}）开始，基于 Gecko 的应用支持 `clientLeft` 属性。该属性在 Firefox 2 及更早的版本中不被支持。
+> [!NOTE]
+> 此属性将会对值取整。如果需要小数值，请使用 {{ domxref("element.getBoundingClientRect()") }}。
 
-当 [_layout.scrollbar.side_ preference](http://kb.mozillazine.org/Layout.scrollbar.side) （译注：这个属性好像是只在火狐浏览器中才有）被设为 1 或 3，且文本方向被设为从右到左（RTL），则垂直滚动条位于左边，这会影响到 `clientLeft` 属性值的计算。
+> [!NOTE]
+> 当元素的属性为 `display: inline` 时，无论元素是否有边框，`clientLeft` 都会返回 `0`。
 
-## 语法
+## 值
 
-```
-var left = element.clientLeft;
-```
+数字。
 
 ## 示例
 
-padding-top
+在以下示例中，视口区域具有白色背景和一个 24 像素宽的黑色 `border-left`。`clientLeft` 的值是从外边距（黄色）区域结束到内边距和内容区域（白色）开始的距离：即 24 像素。
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+### HTML
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+```html
+<div id="container">
+  <div id="contained">
+    <p>
+      对大多数人来说，生活的变化是缓慢的。今天和昨天似乎没有什么不同；明天也可能和今天一样。也许人一生仅仅有那么一两个辉煌的瞬间，甚至一生都可能在平淡无奇中度过。——路遥
+    </p>
+  </div>
+</div>
+```
 
-padding-bottom
+### CSS
 
-**Left** **Top** **Right** **Bottom** _margin-top_ _margin-bottom_ _border-top_ _border-bottom_
+```css
+#container {
+  margin: 3rem;
+  background-color: rgb(255 255 204);
+  border: 4px dashed black;
+}
 
-## Specifications
+#contained {
+  margin: 1rem;
+  border-left: 24px black solid;
+  padding: 0px 28px;
+  overflow: auto;
+  background-color: white;
+}
+```
+
+### 结果
+
+{{EmbedLiveSample("示例", 400, 350)}}
+
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
-
-## 备注
-
-`clientLeft` 首次出现于 MS IE DHTML 对象模型中。
-
-元素的文本方向被设为从右到左后，其垂直滚动条的位置取决于 [_layout.scrollbar.side_ preference](http://kb.mozillazine.org/Layout.scrollbar.side)
-
-当元素设置 `display: inline` 后，无论是否有边框，`clientLeft` 始终返回 `0` 。

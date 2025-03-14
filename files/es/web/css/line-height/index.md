@@ -3,13 +3,7 @@ title: line-height
 slug: Web/CSS/line-height
 ---
 
-```
-https://developer.mozilla.org/en-US/docs/Web/CSS{{ CSSRef() }}
-/*Keyword value*/
-line-height: normal;
-
-/
-```
+{{ CSSRef() }}
 
 ### Resumen
 
@@ -19,7 +13,7 @@ La propiedad [CSS](/es/docs/Web/CSS) `line-height` establece la altura de una ca
 - Aplicable a: todos los elementos.
 - {{ Cssxref("inheritance", "Valor heredado") }}: sí
 - Porcentajes: se refieren a tamaño de la fuente del elemento mismo.
-- Medio: {{ Xref_cssvisual() }}
+- Medio: {{cssxref("Media/Visual", "visual")}}
 - {{ Cssxref("computed value", "Valor calculado") }}: para los valores \<length> y \<percentage>, el valor absoluto, en otro caso, como se especifica.
 
 ## Syntax
@@ -49,11 +43,11 @@ line-height: unset;
 - `normal`
   - : Depende del agente del usuario. Los navegadores de escritorio (incluido Firefox) usan un valor por defecto de apenas **1.2,** dependiendo del `font-family` del elemento.
 - `<número>`
-  - : El valor utilizado es este `<número>` sin unidades multiplicado por el propio tamaño de fuente del elemento. El valor calculado es el mismo que el [`<número>`](/en-US/docs/Web/CSS/number) especificado. En la mayoría de los casos, esta es la forma preferida de establecer `line-height` y evitar resultados inesperados debido a la herencia.
+  - : El valor utilizado es este `<número>` sin unidades multiplicado por el propio tamaño de fuente del elemento. El valor calculado es el mismo que el [`<número>`](/es/docs/Web/CSS/number) especificado. En la mayoría de los casos, esta es la forma preferida de establecer `line-height` y evitar resultados inesperados debido a la herencia.
 - `<longitud>`
   - : La [`<longitud>`](/es/docs/Web/CSS/length) especificada se utiliza en el cálculo de la altura de la casilla encuadrada por líneas. Los valores dados en unidades `em` pueden producir resultados inesperados (ver ejemplo más abajo).
 - `<porcentaje>`
-  - : En relación con el tamaño de fuente del elemento en sí. El valor calculado es este [\<porcentaje>](/es/docs/Web/CSS/porcentaje) multiplicado por el tamaño de letra del elemento calculado. Los valores porcentuales pueden producir resultados inesperados (ver el segundo ejemplo a continuación).
+  - : En relación con el tamaño de fuente del elemento en sí. El valor calculado es este [\<porcentaje>](/es/docs/Web/CSS/percentage) multiplicado por el tamaño de letra del elemento calculado. Los valores porcentuales pueden producir resultados inesperados (ver el segundo ejemplo a continuación).
 
 ### Ejemplos
 
@@ -68,21 +62,13 @@ div { font: 10pt/1.2  Georgia,"Bitstream Charter",serif; } /* font shorthand */
 
 A menudo es más conveniente establecer el `line-height` usando {{cssxref("font")}} abreviadamente, como se muestra arriba, pero esto también requiere especificar la propiedad `font-family`.
 
-### Notas
-
 ### Especificaciones
 
-- [CSS 2.1](http://www.w3.org/TR/CSS21/visudet.html#propdef-line-height)
+{{Specifications}}
 
 ### Compatibilidad de navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | ?              |
-| Firefox           | 1              |
-| Netscape          | ?              |
-| Opera             | ?              |
-| Safari            | ?              |
+{{Compat}}
 
 ### Ver también
 

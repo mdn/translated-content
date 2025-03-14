@@ -1,7 +1,6 @@
 ---
 title: RTCIceCandidate
 slug: Web/API/RTCIceCandidate
-translation_of: Web/API/RTCIceCandidate
 ---
 
 {{APIRef("WebRTC")}}
@@ -15,7 +14,9 @@ ICE 과정이 어떻게 동작하는지 자세히 알고 싶다면, [Lifetime of
 ## 생성자
 
 - {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate()")}}
-  - : 단일 ICE candidate를 나타내기 위해 RTCIceCandidate 객체를 생성합니다. 옵션으로 {{domxref("RTCIceCandidateInit")}} 딕셔너리에 존재하는 객체를 이용해 설정이 가능합니다.> **참고:** 이전 버전의 호환성을 위해서는, 생성자가 {{domxref("RTCIceCandidate.candidate", "candidate")}} 속성의 값을 가진 문자열을 {{domxref("RTCIceCandidateInit")}} 객체 대신에 입력 인자로 받습니다. 이는 `candidate`가 `RTCIceCandidateInit`보다 더 많은 정보를 가지고 있기 때문입니다.
+  - : 단일 ICE candidate를 나타내기 위해 RTCIceCandidate 객체를 생성합니다. 옵션으로 {{domxref("RTCIceCandidateInit")}} 딕셔너리에 존재하는 객체를 이용해 설정이 가능합니다.
+    > [!NOTE]
+    > 이전 버전의 호환성을 위해서는, 생성자가 {{domxref("RTCIceCandidate.candidate", "candidate")}} 속성의 값을 가진 문자열을 {{domxref("RTCIceCandidateInit")}} 객체 대신에 입력 인자로 받습니다. 이는 `candidate`가 `RTCIceCandidateInit`보다 더 많은 정보를 가지고 있기 때문입니다.
 
 ## 속성
 

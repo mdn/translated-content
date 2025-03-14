@@ -1,7 +1,6 @@
 ---
 title: Stylesheet.ownerNode
 slug: Web/API/StyleSheet/ownerNode
-translation_of: Web/API/StyleSheet/ownerNode
 ---
 
 {{ ApiRef() }}
@@ -42,7 +41,7 @@ Thunder
 
 ### Notas
 
-Para el HTML, **ownerNode** correspondería a un elemento [LINK](/es/LINK) o [STYLE](/Es/DOM/Element.style). Para XML, serían las instrucciones del proceso de enlace. Para las hojas de estilo que están incluidas en otras hojas de estilo, este valor es NULL.
+Para el HTML, **ownerNode** correspondería a un elemento [LINK](/es/LINK) o [STYLE](/es/docs/Web/API/HTMLElement/style). Para XML, serían las instrucciones del proceso de enlace. Para las hojas de estilo que están incluidas en otras hojas de estilo, este valor es NULL.
 
 ### Especificación
 

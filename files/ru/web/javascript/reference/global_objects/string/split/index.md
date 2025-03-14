@@ -1,18 +1,9 @@
 ---
 title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-  - String
-  - регулярные выражения
-translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 ---
 
-{{JSRef("Global_Objects", "String")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -39,7 +30,8 @@ str.split([separator[, limit]])
 
 Если разделитель является регулярным выражением, содержащим подгруппы, то каждый раз при сопоставлении с разделителем, результаты (включая те, что не определены) захвата подгруппы будут помещаться внутрь выходного массива. Однако, не все браузеры поддерживают эту возможность.
 
-{{Note("Если строка является пустой строкой, метод <code>split()</code> вернёт массив, состоящий из одной пустой строки, а не пустой массив.")}}
+> [!NOTE]
+> Если строка является пустой строкой, метод `split()` вернёт массив, состоящий из одной пустой строки, а не пустой массив.
 
 ## Примеры
 
@@ -53,15 +45,20 @@ function splitString(stringToSplit, separator) {
 
   console.log('Оригинальная строка: "' + stringToSplit + '"');
   console.log('Разделитель: "' + separator + '"');
-  console.log('Массив содержит ' + arrayOfStrings.length + ' элементов: ' + arrayOfStrings.join(' / '));
+  console.log(
+    "Массив содержит " +
+      arrayOfStrings.length +
+      " элементов: " +
+      arrayOfStrings.join(" / "),
+  );
 }
 
 // Строчка из «Бури» Шекспира. Перевод Михаила Донского.
-var tempestString = 'И как хорош тот новый мир, где есть такие люди!';
-var monthString = 'Янв,Фев,Мар,Апр,Май,Июн,Июл,Авг,Сен,Окт,Ноя,Дек';
+var tempestString = "И как хорош тот новый мир, где есть такие люди!";
+var monthString = "Янв,Фев,Мар,Апр,Май,Июн,Июл,Авг,Сен,Окт,Ноя,Дек";
 
-var space = ' ';
-var comma = ',';
+var space = " ";
+var comma = ",";
 
 splitString(tempestString, space);
 splitString(tempestString);
@@ -89,7 +86,7 @@ splitString(monthString, comma);
 В следующем примере метод `split()` ищет 0 или более пробелов, за которыми следует точка с запятой, за которой снова следуют 0 или более пробелов, и, если этот шаблон найден, удаляет пробелы из строки. Переменная `nameList` является массивом, возвращённым в результате работы метода `split()`.
 
 ```js
-var names = 'Гарри Трамп ;Фрэд Барни; Хелен Ригби ; Билл Абель ;Крис Ханд ';
+var names = "Гарри Трамп ;Фрэд Барни; Хелен Ригби ; Билл Абель ;Крис Ханд ";
 
 console.log(names);
 
@@ -111,8 +108,8 @@ console.log(nameList);
 В следующем примере метод `split()` ищет 0 или более пробелов в строке и возвращает первые три найденных подстроки.
 
 ```js
-var myString = 'Привет, мир. Как дела?';
-var splits = myString.split(' ', 3);
+var myString = "Привет, мир. Как дела?";
+var splits = myString.split(" ", 3);
 
 console.log(splits);
 ```
@@ -128,7 +125,7 @@ console.log(splits);
 Если параметр `separator` содержит подгруппы, сопоставившиеся результаты также будут присутствовать в возвращённом массиве.
 
 ```js
-var myString = 'Привет 1 мир. Предложение номер 2.';
+var myString = "Привет 1 мир. Предложение номер 2.";
 var splits = myString.split(/(\d)/);
 
 console.log(splits);
@@ -143,8 +140,8 @@ console.log(splits);
 ### Пример: обращение строки при помощи метода `split()`
 
 ```js
-var str = 'фывапролд';
-var strReverse = str.split('').reverse().join(''); // 'длорпавыф'
+var str = "фывапролд";
+var strReverse = str.split("").reverse().join(""); // 'длорпавыф'
 // split() возвращает массив, к которому применяются методы reverse() и join()
 ```
 

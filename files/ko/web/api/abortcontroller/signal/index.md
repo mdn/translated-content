@@ -1,16 +1,8 @@
 ---
 title: AbortController.signal
 slug: Web/API/AbortController/signal
-tags:
-  - API
-  - AbortController
-  - Fetch
-  - 레퍼런스
-  - 신호
-  - 실험적
-  - 프로퍼티
-translation_of: Web/API/AbortController/signal
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 {{domxref("AbortController")}} 인터페이스의 **`signal`** 읽기 전용 프로퍼티는 DOM 요청과 통신하거나 취소하는데 사용하는 {{domxref("AbortSignal")}} 객체 인터페이스를 반환한다.
@@ -31,7 +23,7 @@ var signal = abortController.signal;
 
 먼저 {{domxref("AbortController.AbortController","AbortController()")}} 생성자를 사용해 컨트롤러를 {{domxref("AbortController.signal")}} 프로퍼티를 사용해 {{domxref("AbortSignal")}} 객체와 관계된 참조를 얻는다.
 
-[Fetch 요청](/ko/docs/Web/API/WindowOrWorkerGlobalScope/fetch)을 시작할 때, 요청의 옵션 객체 내부에 `AbortSignal` 옵션을 전달한다(아래의 `{signal}` 참고). 이것은 신호와 컨트롤러를 fetch 요청과 관계짓고, 아래의 두 번째 이벤트 리스너에서 보여주듯이 {{domxref("AbortController.abort()")}}를 호출하여 이를 취소할 수 있게한다.
+[Fetch 요청](/ko/docs/Web/API/Window/fetch)을 시작할 때, 요청의 옵션 객체 내부에 `AbortSignal` 옵션을 전달한다(아래의 `{signal}` 참고). 이것은 신호와 컨트롤러를 fetch 요청과 관계짓고, 아래의 두 번째 이벤트 리스너에서 보여주듯이 {{domxref("AbortController.abort()")}}를 호출하여 이를 취소할 수 있게한다.
 
 ```js
 var controller = new AbortController();

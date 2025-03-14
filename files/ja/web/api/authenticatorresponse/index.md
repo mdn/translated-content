@@ -29,17 +29,21 @@ slug: Web/API/AuthenticatorResponse
 
 ```js
 var options = {
-  challenge: new Uint8Array([/* bytes sent from the server */])
+  challenge: new Uint8Array([
+    /* bytes sent from the server */
+  ]),
 };
 
-navigator.credentials.get({ "publicKey": options })
-    .then(function (credentialInfoAssertion) {
+navigator.credentials
+  .get({ publicKey: options })
+  .then(function (credentialInfoAssertion) {
     var assertionResponse = credentialInfoAssertion.response;
     // send assertion response back to the server
     // to proceed with the control of the credential
-}).catch(function (err) {
-     console.error(err);
-});
+  })
+  .catch(function (err) {
+    console.error(err);
+  });
 ```
 
 ### AuthenticatorAttestationResponse の取得

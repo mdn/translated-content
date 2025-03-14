@@ -3,16 +3,24 @@ title: Date.prototype.getMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
-getMilliseconds() 方法，根据本地时间，返回一个指定的日期对象的毫秒数。
+**`getMilliseconds()`** 方法根据本地时间，返回一个指定的日期对象的毫秒数。
 
-{{EmbedInteractiveExample("pages/js/date-getmilliseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getMilliseconds()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+moonLanding.setMilliseconds(123);
+
+console.log(moonLanding.getMilliseconds());
+// Expected output: 123
+```
 
 ## 语法
 
-```js
-dateObj.getMilliseconds()
+```js-nolint
+getMilliseconds()
 ```
 
 ### 参数
@@ -23,9 +31,9 @@ dateObj.getMilliseconds()
 
 `getMilliseconds()` 方法返回一个 0 到 999 的整数。
 
-## 例子
+## 示例
 
-### 例子：使用`getMilliseconds`方法
+### 示例：使用`getMilliseconds`方法
 
 下例中，将当前时间的毫秒数赋值给变量 `ms`。
 
@@ -43,7 +51,7 @@ ms = Today.getMilliseconds();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCMilliseconds()")}}
 - {{jsxref("Date.prototype.setMilliseconds()")}}

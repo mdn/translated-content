@@ -1,11 +1,6 @@
 ---
 title: <style>
 slug: Web/SVG/Element/style
-tags:
-  - Element
-  - Reference
-  - SVG
-translation_of: Web/SVG/Element/style
 ---
 
 {{SVGRef}}
@@ -19,8 +14,11 @@ L'élément `style` permet d'intégrer directement des feuilles de style dans un
 ## Exemple
 
 ```html
-<svg width="100%" height="100%" viewBox="0 0 100 100"
-     xmlns="http://www.w3.org/2000/svg">
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg">
   <style>
     /* <![CDATA[ */
     circle {
@@ -43,7 +41,7 @@ Résultat en direct:
 
 ### Attributs Globaux
 
-- [Core attributes](/fr/SVG/Attribute#Core)&nbsp;»
+- [Core attributes](/fr/docs/Web/SVG/Attribute#core)&nbsp;»
 
 ### Attributs Specifiques
 
@@ -53,7 +51,7 @@ Résultat en direct:
 
 ## Interface DOM
 
-Cet élément implemente l'interface [`SVGStyleElement`](/fr/DOM/SVGStyleElement).
+Cet élément implemente l'interface [`SVGStyleElement`](/fr/docs/DOM/SVGStyleElement).
 
 ## Spécifications
 
@@ -65,4 +63,4 @@ Cet élément implemente l'interface [`SVGStyleElement`](/fr/DOM/SVGStyleElement
 
 ## Voir aussi
 
-- [\<style> element in HTML](/fr/HTML/Element/style)
+- [\<style> element in HTML](/fr/docs/Web/HTML/Element/style)

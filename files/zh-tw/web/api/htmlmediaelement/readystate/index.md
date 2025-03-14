@@ -31,19 +31,17 @@ var readyState = audioOrVideo.readyState;
 
 ```html
 <audio id="example" preload="auto">
- <source src="sound.ogg" type="audio/ogg" />
+  <source src="sound.ogg" type="audio/ogg" />
 </audio>
 ```
 
 ```js
-var obj = document.getElementById('example');
+var obj = document.getElementById("example");
 
-obj.addEventListener('loadeddata', function() {
-
-  if(obj.readyState >= 2) {
+obj.addEventListener("loadeddata", function () {
+  if (obj.readyState >= 2) {
     obj.play();
   }
-
 });
 ```
 

@@ -1,8 +1,6 @@
 ---
 title: Gérer la directionnalité du texte
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
-translation_of: Learn/CSS/Building_blocks/Handling_different_text_directions
-original_slug: Apprendre/CSS/Building_blocks/Handling_different_text_directions
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
@@ -111,7 +109,7 @@ Vous pouvez voir une comparaison entre les propriétés physiques et logiques ci
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
 
-Il existe de nombreuses propriétés détaillées pour gérer les différents aspects des bordures, vous pouvez voir l'ensemble des correspondances sur la page MDN des [propriétés et valeurs logiques](/fr/docs/Web/CSS/CSS_Logical_Properties).
+Il existe de nombreuses propriétés détaillées pour gérer les différents aspects des bordures, vous pouvez voir l'ensemble des correspondances sur la page MDN des [propriétés et valeurs logiques](/fr/docs/Web/CSS/CSS_logical_properties_and_values).
 
 ### Valeurs logiques
 
@@ -125,7 +123,8 @@ Ainsi, on peut faire flotter une image à gauche pour que le texte soit écrit a
 
 Ici, on utilise aussi les valeurs logiques pour les marges afin de s'assurer que les marges sont correctement positionnées, quel que soit le mode d'écriture.
 
-> **Note :** Actuellement, seul Firefox prend en charge les valeurs relatives de flux pour `float`. Si vous utilisez **Google Chrome** ou **Microsoft Edge**, vous obtiendrez vraisemblablement un résultat où l'image ne flotte pas.
+> [!NOTE]
+> Actuellement, seul Firefox prend en charge les valeurs relatives de flux pour `float`. Si vous utilisez **Google Chrome** ou **Microsoft Edge**, vous obtiendrez vraisemblablement un résultat où l'image ne flotte pas.
 
 ### Faut-il utiliser les propriétés physiques ou logiques&nbsp;?
 
@@ -142,24 +141,3 @@ Les concepts expliqués ici revêtent une importance croissante en CSS. Comprend
 Dans le prochain module, nous verrons comment les dépassements sont gérés en CSS.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
-
-## Dans ce module
-
-1. [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Sélecteurs de type, de classe et d'ID](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Sélecteurs d'attributs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [Le modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Arrière-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Gestion de différentes directions de texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Débordements de contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Définir la taille des éléments en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, médias et éléments de formulaire](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Mise en page de tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Débogage de CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organiser votre CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)

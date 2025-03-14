@@ -9,7 +9,7 @@ slug: Web/API/Window/devicePixelRatio
 
 当处理标准显示器与 HiDPI 或 Retina 显示器之间的差异时，这很有用，后者使用更多的屏幕像素绘制相同的对象，从而获得更清晰的图像。
 
-您可以使用{{domxref("Window.matchMedia", "window.matchMedia()")}} 检查`devicePixelRatio`的值是否发生更改（例如，如果用户将窗口拖动到带有 不同的像素密度）。请参阅[下面的例子](#监视屏幕分辨率或缩放级别的更改)。
+你可以使用{{domxref("Window.matchMedia", "window.matchMedia()")}} 检查`devicePixelRatio`的值是否发生更改（例如，如果用户将窗口拖动到带有 不同的像素密度）。请参阅[下面的例子](#监视屏幕分辨率或缩放级别的更改)。
 
 ## 语法
 
@@ -17,11 +17,11 @@ slug: Web/API/Window/devicePixelRatio
 value = window.devicePixelRatio;
 ```
 
-### 值 Value
+### 值
 
 一个双精度浮点值，指示显示器的物理像素分辨率与 CSS 像素分辨率之比。值 1 表示经典 96 DPI（在某些平台上为 76 DPI）显示，而对于 HiDPI / Retina 显示屏则期望值为 2。在异常低分辨率的显示器中，或更常见的是，当屏幕的像素深度比简单地将 96 或 76 DPI 的标准分辨率提高一倍时，可能还会返回其他值。
 
-## 例子
+## 示例
 
 ### 在 `<canvas>` 中更正分辨率
 
@@ -36,8 +36,8 @@ value = window.devicePixelRatio;
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 // Set display size (css pixels).
 var size = 200;
@@ -55,9 +55,9 @@ ctx.scale(scale, scale);
 ctx.fillStyle = "#bada55";
 ctx.fillRect(10, 10, 300, 300);
 ctx.fillStyle = "#ffffff";
-ctx.font = '18px Arial';
-ctx.textAlign = 'center';
-ctx.textBaseline = 'middle';
+ctx.font = "18px Arial";
+ctx.textAlign = "center";
+ctx.textBaseline = "middle";
 
 var x = size / 2;
 var y = size / 2;
@@ -66,7 +66,7 @@ var textString = "I love MDN";
 ctx.fillText(textString, x, y);
 ```
 
-![This image describe the impact of different value on retina display. ](https://mdn.mozillademos.org/files/15023/devicePixelRation%20Diff..png)
+![This image describe the impact of different value on retina display. ](devicepixelration_diff..png)
 
 ### 监视屏幕分辨率或缩放级别的更改
 
@@ -84,11 +84,11 @@ const updatePixelRatio = () => {
   let pr = window.devicePixelRatio;
   let prString = (pr * 100).toFixed(0);
   pixelRatioBox.innerText = `${prString}% (${pr.toFixed(2)})`;
-}
+};
 
 updatePixelRatio();
 
-matchMedia(mqString).addListener(updatePixelRatio);
+matchMedia(mqString).addEventListener("change", updatePixelRatio);
 ```
 
 字符串`mqString`设置为媒体查询本身。媒体查询以`(resolution: 1dppx)`（对于标准显示）或`(resolution: 2dppx)`（对于 Retina / HiDPI 显示）开始，检查当前显示分辨率是否与每个像素`px`的实际设备像素点匹配。
@@ -104,12 +104,14 @@ HTML 将创建包含说明的框和将显示当前像素比率信息的`pixel-ra
 ```html
 <div class="container">
   <div class="inner-container">
-    <p>This example demonstrates the effect of zooming the page in
-       and out (or moving it to a screen with a different scaling
-       factor) on the value of the property <code>Window.devicePixelRatio</code>.
-       Try it and watch what happens!</p>
+    <p>
+      This example demonstrates the effect of zooming the page in and out (or
+      moving it to a screen with a different scaling factor) on the value of the
+      property <code>Window.devicePixelRatio</code>. Try it and watch what
+      happens!
+    </p>
   </div>
-    <div class="pixel-ratio"></div>
+  <div class="pixel-ratio"></div>
 </div>
 ```
 
@@ -117,7 +119,9 @@ HTML 将创建包含说明的框和将显示当前像素比率信息的`pixel-ra
 
 ```css
 body {
-  font: 22px arial, sans-serif;
+  font:
+    22px arial,
+    sans-serif;
 }
 
 .container {
@@ -147,9 +151,9 @@ body {
 }
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample("Monitoring_screen_resolution_or_zoom_level_changes", "100%", 500)}}
+{{EmbedLiveSample("监视屏幕分辨率或缩放级别的更改", "100%", 500)}}
 
 ## 规范
 
@@ -161,7 +165,6 @@ body {
 
 ## 参见
 
-- [Media queries](/zh-CN/docs/Web/CSS/Media_Queries)
-- [Using media queries](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Media queries](/zh-CN/docs/Web/CSS/CSS_media_queries)
+- [Using media queries](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [CSS `resolution` media query](/zh-CN/docs/Web/CSS/@media/resolution)
--

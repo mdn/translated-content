@@ -1,25 +1,50 @@
 ---
-title: ':first-of-type'
+title: :first-of-type
 slug: Web/CSS/:first-of-type
+l10n:
+  sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---
 
 {{CSSRef}}
 
 **`:first-of-type`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中でその種類の最初の要素を表します。
 
-```
-/* 兄弟要素の中で最初の <p> 要素をすべて選択 */
-p:first-of-type {
-  color: red;
+{{InteractiveExample("CSS Demo: :first-of-type", "tabbed-shorter")}}
+
+```css interactive-example
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 3px;
+}
+
+dd:first-of-type {
+  border: 2px solid orange;
 }
 ```
 
-> **メモ:** 当初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。
+```html interactive-example
+<dl>
+  <dt>Vegetables:</dt>
+  <dd>1. Tomatoes</dd>
+  <dd>2. Cucumbers</dd>
+  <dd>3. Mushrooms</dd>
+  <dt>Fruits:</dt>
+  <dd>4. Apples</dd>
+  <dd>5. Mangos</dd>
+  <dd>6. Pears</dd>
+  <dd>7. Oranges</dd>
+</dl>
+```
 
 ## 構文
 
-```
-:first-of-type
+```css
+:first-of-type {
+  /* ... */
+}
 ```
 
 ## 例
@@ -29,9 +54,9 @@ p:first-of-type {
 #### HTML
 
 ```html
-<h2>Heading</h2>
-<p>Paragraph 1</p>
-<p>Paragraph 2</p>
+<h2>見出し</h2>
+<p>段落 1</p>
+<p>段落 2</p>
 ```
 
 #### CSS
@@ -45,22 +70,24 @@ p:first-of-type {
 
 #### 結果
 
-{{EmbedLiveSample('Styling_the_first_paragraph')}}
+{{EmbedLiveSample('最初の段落の整形')}}
 
 ### 入れ子になった要素
 
-この例は、どうやった入れ子になった要素を対象にするかを示します。なお、単純セレクターが書かれていない場合は、[ユニバーサルセレクター](/ja/docs/Web/CSS/Universal_selectors) (`*`) が暗黙に含まれています。
+この例は、入れ子になった要素を対象に含める方法を示します。なお、要素型セレクターが書かれていない場合は、[全称セレクター](/ja/docs/Web/CSS/Universal_selectors) (`*`) が暗黙に含まれます。
 
 #### HTML
 
 ```html
 <article>
-  <div>This `div` is first!</div>
-  <div>This <span>nested `span` is first</span>!</div>
-  <div>This <em>nested `em` is first</em>, but this <em>nested `em` is last</em>!</div>
-  <div>This <span>nested `span` gets styled</span>!</div>
-  <b>This `b` qualifies!</b>
-  <div>This is the final `div`.</div>
+  <div>これは最初の `div` です。</div>
+  <div>これは<span>内側で最初の `span`</span> です。</div>
+  <div>
+    これは<em>内側で最初の `em`</em>で、一方これは<em>最後の `em` </em>です。
+  </div>
+  <div>これは<span>スタイル付けされた内側の `span`</span>です</div>
+  <p>これは `p` で修飾しています。</p>
+  <div>これは最後の `div` です。</div>
 </article>
 ```
 

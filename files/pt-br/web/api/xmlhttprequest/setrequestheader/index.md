@@ -34,15 +34,13 @@ XMLHttpRequest.setRequestHeader(header, value)
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                               | Comentário             |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-setRequestHeader()-method', 'setRequestHeader()')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.XMLHttpRequest.setRequestHeader")}}
+{{Compat}}
 
 ## Veja também
 
-- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML em XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [HTML em XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)

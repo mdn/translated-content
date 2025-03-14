@@ -1,8 +1,9 @@
 ---
 title: Primitivo
 slug: Glossary/Primitive
-original_slug: Glossario/Primitivo
 ---
+
+{{GlossarySidebar}}
 
 ## Resumo
 
@@ -30,7 +31,7 @@ Todos os primitivos são **imutáveis** (não podem ter o seu valor modificado).
 À exceção do `null` e do `undefined`, todos os primitivos tem um objeto wrapper equivalente:
 
 - {{jsxref("String")}} para o primitivo string.
-- {{jsxref("Number")}} para o primitivo .
+- {{jsxref("Number")}} para o primitivo Number.
 - {{jsxref("Boolean")}} para o primitivo Boolean.
 - {{jsxref("Symbol")}} para o primitivo Symbol.
 

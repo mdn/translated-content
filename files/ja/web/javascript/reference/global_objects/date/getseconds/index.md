@@ -9,7 +9,14 @@ l10n:
 
 **`getSeconds()`** メソッドは、地方時に基づき、指定した日時の「秒」を返します。
 
-{{EmbedInteractiveExample("pages/js/date-getseconds.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.getSeconds()", "shorter")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+
+console.log(moonLanding.getSeconds());
+// Expected output: 18
+```
 
 ## 構文
 
@@ -28,7 +35,7 @@ getSeconds()
 以下の 2 行目の文は、{{jsxref("Global_Objects/Date", "Date")}} オブジェクトである `xmas95` の値に基づき、変数 `seconds` に 30 という値を代入します。
 
 ```js
-const xmas95 = new Date('December 25, 1995 23:15:30');
+const xmas95 = new Date("December 25, 1995 23:15:30");
 const seconds = xmas95.getSeconds();
 
 console.log(seconds); // 30

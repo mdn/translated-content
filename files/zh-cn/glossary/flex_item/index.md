@@ -1,13 +1,17 @@
 ---
-title: Flex Item
+title: 弹性项目
 slug: Glossary/Flex_Item
+l10n:
+  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
-{{glossary("Flex Container")}}(弹性容器) 的一级子元素 (设置`display: flex` 或 `display: inline-flex`的子元素) 将成为弹性元素。
+{{GlossarySidebar}}
 
-弹性容器内的连续文本，也将成为弹性元素。
+{{glossary("Flex Container", "弹性容器")}}的一级子项目（设置 `display: flex` 或 `display: inline-flex` 的子项目）是**弹性项目**。
 
-## 了解更多
+弹性容器内的连续文本，也将是弹性项目。
+
+## 参见
 
 ### 属性参考
 
@@ -19,6 +23,6 @@ slug: Glossary/Flex_Item
 
 ### 延伸阅读
 
-- CSS 弹性布局指南：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS 弹性布局指南：_[Ordering flex items](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
-- CSS 弹性布局指南：_[Controlling Ratios of flex items along the main axis](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS 弹性布局指南：_[弹性盒子的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS 弹性布局指南：_[弹性项目排序](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_
+- CSS 弹性布局指南：_[控制弹性项目在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_

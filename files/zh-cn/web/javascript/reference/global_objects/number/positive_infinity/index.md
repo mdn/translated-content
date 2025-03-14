@@ -3,41 +3,63 @@ title: Number.POSITIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 ---
 
-{{JSRef("Global_Objects", "Number")}}
+{{JSRef}}
 
-## 概述
+**`Number.POSITIVE_INFINITY`** 静态数据属性表示正无穷大值。
 
-**`Number.POSITIVE_INFINITY`** 属性表示正无穷大。
+{{InteractiveExample("JavaScript Demo: Number.POSITIVE_INFINITY")}}
 
-不必创建一个 {{jsxref("Global_Objects/Number", "Number")}} 实例，可使用 `Number.POSITIVE_INFINITY` 来访问该静态属性。
+```js interactive-example
+function checkNumber(bigNumber) {
+  if (bigNumber === Number.POSITIVE_INFINITY) {
+    return "Process number as Infinity";
+  }
+  return bigNumber;
+}
 
-{{js_property_attributes(0,0,0)}}
+console.log(checkNumber(Number.MAX_VALUE));
+// Expected output: 1.7976931348623157e+308
+
+console.log(checkNumber(Number.MAX_VALUE * 2));
+// Expected output: "Process number as Infinity"
+```
+
+## 值
+
+与全局属性 {{jsxref("Infinity")}} 的值相同。
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## 描述
 
-`Number.POSITIVE_INFINITY` 的值同全局对象 {{jsxref("Global_Objects/Infinity", "Infinity")}} 属性的值相同。
+`Number.POSITIVE_INFINITY` 的表现同数学上的无穷大略有不同：
 
-该值的表现同数学上的无穷大有点儿不同：
+- 任何正值，包括 `POSITIVE_INFINITY`，乘以 `POSITIVE_INFINITY` 等于 `POSITIVE_INFINITY`。
+- 任何负值，包括 {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}，除以 `POSITIVE_INFINITY` 等于 {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}。
+- 任何正数除以 `POSITIVE_INFINITY` 都是[正零](https://zh.wikipedia.org/wiki/0)（正如 [IEEE 754](https://zh.wikipedia.org/wiki/IEEE_754) 中所定义的）。
+- 任何负数除以 `POSITIVE_INFINITY` 都是[负零](https://zh.wikipedia.org/wiki/−0)（正如 [IEEE 754](https://zh.wikipedia.org/wiki/IEEE_754) 中所定义的）。
+- 零乘以 `POSITIVE_INFINITY` 等于 {{jsxref("NaN")}}。
+- {{jsxref("Global_Objects/NaN", "NaN")}} 乘以 `POSITIVE_INFINITY` 等于 {{jsxref("NaN")}}。
+- `POSITIVE_INFINITY`，除以任何负值（除了 {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}）都等于 {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}。
+- `POSITIVE_INFINITY`，除以任何正值（除了 `POSITIVE_INFINITY`）都等于 `POSITIVE_INFINITY`。
+- `POSITIVE_INFINITY`，除以 {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} 或 `POSITIVE_INFINITY`，都等于 {{jsxref("NaN")}}。
+- `Number.POSITIVE_INFINITY > x` 对于任何不是 `POSITIVE_INFINITY` 的数字 _x_ 都为真。
 
-- 任何正值，包括 `POSITIVE_INFINITY`，乘以 `POSITIVE_INFINITY` 为 `POSITIVE_INFINITY`。
-- 任何负值，包括 `NEGATIVE_INFINITY`，乘以 `POSITIVE_INFINITY` 为 `NEGATIVE_INFINITY`。
-- 0 乘以 `POSITIVE_INFINITY` 为 NaN。
-- NaN 乘以 `POSITIVE_INFINITY` 为 NaN。
-- `POSITIVE_INFINITY` 除以 `NEGATIVE_INFINITY` 以外的任何负值为 `NEGATIVE_INFINITY`。
-- `POSITIVE_INFINITY` 除以 `POSITIVE_INFINITY` 以外的任何正值为 `POSITIVE_INFINITY`。
-- `POSITIVE_INFINITY` 除以 `NEGATIVE_INFINITY` 或 `POSITIVE_INFINITY` 为 NaN。
-- 任何数除以 `POSITIVE_INFINITY` 为 0。
+你可以使用 `Number.POSITIVE_INFINITY` 属性来表示成功时返回有限数值的错误条件。不过，{{jsxref("NaN")}} 更适合于这种情况。
 
-You might use the `Number.POSITIVE_INFINITY` property to indicate an error condition that returns a finite number in case of success. Note, however, that {{jsxref("Global_Objects/isFinite", "isFinite")}} would be more appropriate in such a case.
+由于 `POSITIVE_INFINITY` 是 {{jsxref("Number")}} 的静态属性，你应该始终将其用作 `Number.POSITIVE_INFINITY`，而不是作为一个数字值的属性。
 
 ## 示例
 
-下例中，赋值给变量 `bigNumber` 一个大于 JavaScript 中最大值的值。当 `if` 语句执行时，变量 `bigNumber` 值为 "`Infinity`"，因此在继续执行代码前，为变量 `bigNumber` 设置一个容易管理的值。
+### 使用 POSITIVE_INFINITY
+
+在下面的例子中，变量 `bigNumber` 被赋值为比最大值更大的数值。当 {{jsxref("Statements/if...else", "if")}} 语句执行时，`bigNumber` 的值为 `Infinity`，所以在继续之前，`bigNumber` 被设置为一个更易于管理的值。
 
 ```js
-var bigNumber = Number.MAX_VALUE * 2
-if (bigNumber == Number.POSITIVE_INFINITY) {
- bigNumber = returnFinite();
+let bigNumber = Number.MAX_VALUE * 2;
+
+if (bigNumber === Number.POSITIVE_INFINITY) {
+  bigNumber = returnFinite();
 }
 ```
 
@@ -49,8 +71,9 @@ if (bigNumber == Number.POSITIVE_INFINITY) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Number.NEGATIVE_INFINITY")}}
-- {{jsxref("Global_Objects/Infinity", "Infinity")}}
-- {{jsxref("Global_Objects/isFinite", "isFinite")}}
+- {{jsxref("Number.isFinite()")}}
+- {{jsxref("Infinity")}}
+- {{jsxref("isFinite", "isFinite()")}}

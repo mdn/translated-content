@@ -1,20 +1,9 @@
 ---
 title: pageAction.hide()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/hide
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - hide
-  - pageAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/hide
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Masque l'action de page pour un onglet donné.
 
@@ -24,8 +13,8 @@ Masque l'action de page pour un onglet donné.
 
 ```js
 browser.pageAction.hide(
-  tabId // integer
-)
+  tabId, // integer
+);
 ```
 
 ### Paramètres
@@ -33,9 +22,9 @@ browser.pageAction.hide(
 - `tabId`
   - : `integer`. L'ID de l'onglet pour lequel vous souhaitez masquer l'action de la page.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pageAction.hide")}}
+{{Compat}}
 
 ## Exemples
 
@@ -49,7 +38,7 @@ browser.pageAction.onClicked.addListener((tab) => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
 >

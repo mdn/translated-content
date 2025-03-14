@@ -1,7 +1,6 @@
 ---
 title: Crypto
 slug: Web/API/Crypto
-translation_of: Web/API/Crypto
 ---
 
 {{APIRef("Web Crypto API")}}
@@ -26,4 +25,4 @@ _이 인터페이스는 {{domxref("RandomSource")}}에 정의된 속성을 구�
 
 ## 더보기
 
-- [Components.utils.importGlobalProperties](/en-US/docs/Components.utils.importGlobalProperties)
+- [Components.utils.importGlobalProperties](/ko/docs/Components.utils.importGlobalProperties)

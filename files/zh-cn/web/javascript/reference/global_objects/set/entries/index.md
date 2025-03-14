@@ -5,9 +5,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/entries
 
 {{JSRef}}
 
-**`entries()`** 方法返回一个新的[迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)对象，这个对象包含的元素是类似 **`[value, value]` 形式的数组**，`value` 是集合对象中的每个元素，迭代器对象元素的顺序即集合对象中元素插入的顺序。由于集合对象不像 `Map` 对象那样拥有 `key`，然而，为了与 `Map` 对象的 API 形式保持一致，故使得每一个*条目*的 _key_ 和 _value_ 都拥有相同的值，因而最终返回一个 `[value, value]` 形式的数组。
+{{jsxref("Set")}} 实例的 **`entries()`** 方法返回一个新的[_集合迭代器_](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)对象，该对象包含了此集合中每个元素的 **`[value, value]` 数组**，按插入顺序排列。`Set` 对象没有类似于 `Map` 对象中的 `key`。因此，为了保持 API 与 `Map` 对象类似，这里每个 _entry_ 的 _key_ 和 _value_ 都相同，所以返回的数组为 `[value, value]`。
 
-{{EmbedInteractiveExample("pages/js/set-prototype-entries.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.entries()")}}
+
+```js interactive-example
+const set1 = new Set();
+set1.add(42);
+set1.add("forty two");
+
+const iterator1 = set1.entries();
+
+for (const entry of iterator1) {
+  console.log(entry);
+  // Expected output: Array [42, 42]
+  // Expected output: Array ["forty two", "forty two"]
+}
+```
 
 ## 语法
 
@@ -15,9 +29,13 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/entries
 entries()
 ```
 
+### 参数
+
+无。
+
 ### 返回值
 
-一个新的迭代器对象，它包含给定 `Set` 中的每个元素的 `[value, value]` 数组，按插入顺序排列。
+一个新的[可迭代迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)。
 
 ## 示例
 
@@ -25,9 +43,9 @@ entries()
 
 ```js
 const mySet = new Set();
-mySet.add('foobar');
+mySet.add("foobar");
 mySet.add(1);
-mySet.add('baz');
+mySet.add("baz");
 
 const setIter = mySet.entries();
 

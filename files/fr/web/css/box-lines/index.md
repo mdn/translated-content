@@ -1,13 +1,12 @@
 ---
 title: box-lines
 slug: Web/CSS/box-lines
-translation_of: Web/CSS/box-lines
-browser-compat: css.properties.box-lines
 ---
 
 {{CSSRef}}{{Non-standard_header}}
 
-> **Attention :** Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<i lang="en">flexbox</i>) et a été remplacée dans une version plus récente de la spécification. Voir la page [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) pour plus d'informations.
+> [!WARNING]
+> Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<i lang="en">flexbox</i>) et a été remplacée dans une version plus récente de la spécification. Voir la page [Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) pour plus d'informations.
 
 La propriété [CSS](/fr/docs/Web/CSS) **`box-lines`** détermine si la boîte se compose d'une ou plusieurs rangées (des lignes pour les boîtes orientées horizontalement et des colonnes pour les boîtes orientées verticalement).
 

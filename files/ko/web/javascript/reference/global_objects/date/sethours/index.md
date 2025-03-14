@@ -1,8 +1,6 @@
 ---
 title: Date.prototype.setHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setHours
-browser-compat: javascript.builtins.Date.setHours
 ---
 
 {{JSRef}}
@@ -18,7 +16,7 @@ setHours () 메서드는 현지 시간에 따라 지정된 날짜의 시간을 �
 ### Versions prior to JavaScript 1.3
 
 ```js
-    dateObj.setHours(hoursValue)
+dateObj.setHours(hoursValue);
 ```
 
 ### Parameters

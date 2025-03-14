@@ -3,11 +3,15 @@ title: HTMLMediaElement
 slug: Web/API/HTMLMediaElement
 ---
 
-{{APIRef("HTML DOM")}}HTML 媒体元素接口在属性和方法中添加了 {{domxref("HTMLElement", "HTML 元素")}}来支持基础的媒体相关的能力，就像 audio 和 video 一样。{{domxref("HTMLVideoElement", "HTML 视频元素")}}和 {{domxref("HTMLAudioElement", "HTML 音频元素")}}元素都继承自此接口。{{InheritanceDiagram(600, 180)}}
+{{APIRef("HTML DOM")}}
+
+HTML 媒体元素接口在属性和方法中添加了 {{domxref("HTMLElement", "HTML 元素", "", 1)}}来支持基础的媒体相关的能力，就像音频和视频一样。{{domxref("HTMLVideoElement", "HTML 视频元素", "", 1)}}和{{domxref("HTMLAudioElement", "HTML 音频元素", "", 1)}}元素都继承自此接口。
+
+{{InheritanceDiagram(600, 180)}}
 
 ## 特性
 
-_从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")}}, 和 {{domxref("EventTarget")}} 继承属性_
+_从父级 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node")}} 和 {{domxref("EventTarget")}} 继承属性。_
 
 <table>
   <thead>
@@ -30,8 +34,8 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td>{{domxref("Boolean")}}</td>
       <td>
         <p>
-          表示{{ htmlattrxref("autoplay", "video") }}的 HTML
-          属性，表明在视频加载可用时是否不中断地自动播放资源
+          表示 <a href="/zh-CN/docs/Web/HTML/Element/video#autoplay"><code>autoplay</code></a>
+          的 HTML 属性，表明在视频加载可用时是否不中断地自动播放资源
         </p>
       </td>
     </tr>
@@ -57,8 +61,8 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td>{{domxref("Boolean")}}</td>
       <td>
         映射在 HTML
-        标签。{{ htmlattrxref("controls", "video") }}属性控制是否显示用户播放界面的控制
-        HTML
+        标签。<a href="/zh-CN/docs/Web/HTML/Element/video#controls"><code>controls</code></a>
+        属性控制是否显示用户播放界面的控制 HTML
       </td>
     </tr>
     <tr>
@@ -95,7 +99,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td><code>defaultMuted</code></td>
       <td>{{domxref("Boolean")}}</td>
       <td>
-        映射在 HTML 标签上。 {{ htmlattrxref("muted", "video") }}
+        映射在 HTML 标签上。<a href="/zh-CN/docs/Web/HTML/Element/video#muted"><code>muted</code></a>
         属性表示媒体声音被播放时是否应该被静音。这个属性不能动态设置静音/不静音，如果希望设置静音/不静音，请使用
         <code>muted</code> 属性
       </td>
@@ -144,7 +148,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td><code>loop</code></td>
       <td>{{domxref("Boolean")}}</td>
       <td>
-        会映射在 HTML 标签 {{ htmlattrxref("loop", "video") }} 属性
+        会映射在 HTML 标签 <a href="/zh-CN/docs/Web/HTML/Element/video#loop"><code>loop</code></a> 属性
         , 决定该媒体是否循环播放。
       </td>
     </tr>
@@ -152,7 +156,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td><code>mediaGroup</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        反映在 HTML {{ htmlattrxref("mediagroup", "video")}}
+        反映在 HTML <a href="/zh-CN/docs/Web/HTML/Element/video#mediagroup"><code>mediagroup</code></a>
         标签上。
         表示元素所归属的分组，同一组的媒体元素会共享同一个控制器（<code>controller</code>）。
       </td>
@@ -217,7 +221,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
     </tr>
     <tr>
       <td>
-        <code>mozSampleRate </code>{{readonlyinline}}
+        <code>mozSampleRate</code>{{readonlyinline}}
         {{ non-standard_inline() }}
       </td>
       <td><code>long</code></td>
@@ -226,7 +230,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       </td>
     </tr>
     <tr>
-      <td><code>mozSrcObject </code>{{ non-standard_inline() }}</td>
+      <td><code>mozSrcObject</code>{{ non-standard_inline() }}</td>
       <td>{{domxref("MediaStream")}}</td>
       <td>
         Lets you set or get the
@@ -315,10 +319,10 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td><code>preload</code></td>
       <td>{{ domxref("DOMString") }}</td>
       <td>
-        Reflects the {{ htmlattrxref("preload", "video") }} HTML
+        Reflects the <a href="/zh-CN/docs/Web/HTML/Element/video#preload"><code>preload</code></a> HTML
         attribute, indicating what data should be preloaded, if any. Possible
         values are: <code>none</code>, <code>metadata</code>, <code>auto</code>.
-        See {{ htmlattrxref("preload", "video") }} attribute
+        See <a href="/zh-CN/docs/Web/HTML/Element/video#preload"><code>preload</code></a> attribute
         documentation for details.
       </td>
     </tr>
@@ -413,7 +417,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td><code>src</code></td>
       <td>{{ domxref("DOMString") }}</td>
       <td>
-        Reflects the {{ htmlattrxref("src", "video") }} HTML
+        Reflects the <a href="/zh-CN/docs/Web/HTML/Element/video#src"><code>src</code></a> HTML
         attribute, containing the URL of a media resource to use. Gecko
         implements a similar functionality for streams:
         <code>mozSrcObject</code>.
@@ -493,7 +497,7 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
             <code>canPlayType('video/webm')</code> returned
             <code>'probably'</code>. Starting with Gecko 28,
             it returns <code>'maybe'</code>.
-            ({{ bug(884275) }})
+            (<a href="https://bugzil.la/884275">Firefox bug 884275</a>)
           </p>
         </div>
       </td>
@@ -578,7 +582,7 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
 
 ## Events
 
-Audio and Video elements can fire quite a few different [events](/zh-CN/docs/Web/Guide/Events/Media_events).
+Audio and Video elements can fire quite a few different [events](/zh-CN/docs/Web/Events#media).
 
 ## Specifications
 
@@ -597,6 +601,6 @@ Audio and Video elements can fire quite a few different [events](/zh-CN/docs/Web
 
 - Articles
 
-  - [Using HTML5 audio and video](/zh-CN/docs/Using_HTML5_audio_and_video)
-  - [Media formats supported by the audio and video elements](/zh-CN/docs/Media_formats_supported_by_the_audio_and_video_elements)
-  - [Web Audio API](/zh-CN/docs/Web_Audio_API)
+  - [Using HTML5 audio and video](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
+  - [Media formats supported by the audio and video elements](/zh-CN/docs/Web/Media/Guides/Formats)
+  - [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)

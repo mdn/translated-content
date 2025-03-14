@@ -1,21 +1,27 @@
 ---
 title: Comparación (==)
 slug: Web/JavaScript/Reference/Operators/Equality
-tags:
-  - JS
-  - JavaScript
-  - Operador de comparacion
-  - Operadores
-  - Referências
-translation_of: Web/JavaScript/Reference/Operators/Equality
-original_slug: Web/JavaScript/Referencia/Operadores/Comparacion
 ---
 
 {{jsSidebar("Operators")}}
 
 El operador de comparacion (`==`) comprueba si sus dos operandos son iguales y devuelve un resultado booleano. A diferencia del operador de igualdad estricta (`===`), es que este convierte y compara operandos que son de diferentes tipos.
 
-{{EmbedInteractiveExample("pages/js/expressions-equality.html")}}The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
+{{InteractiveExample("JavaScript Demo: Expressions - Equality operator")}}
+
+```js interactive-example
+console.log(1 == 1);
+// Expected output: true
+
+console.log("hello" == "hello");
+// Expected output: true
+
+console.log("1" == 1);
+// Expected output: true
+
+console.log(0 == false);
+// Expected output: true
+```
 
 ## Sintaxis
 
@@ -48,36 +54,36 @@ La diferencia más notable entre este operador y el operador de igualdad estrict
 ### Comparación sin conversión de tipo
 
 ```js
-1 == 1;              // true
-"Hola" == "Hola";  // true
+1 == 1; // true
+"Hola" == "Hola"; // true
 ```
 
 ### Comparación con conversión de tipos
 
 ```js
-"1" ==  1;            // true
-1 == "1";             // true
-0 == false;           // true
-0 == null;            // false
-0 == undefined;       // false
-0 == !!null;          // true, Operador Logico NOT
-0 == !!undefined;     // true, Operador Logico NOT
-null == undefined;    // true
+"1" == 1; // true
+1 == "1"; // true
+0 == false; // true
+0 == null; // false
+0 == undefined; // false
+0 == !!null; // true, Operador Logico NOT
+0 == !!undefined; // true, Operador Logico NOT
+null == undefined; // true
 
 const number1 = new Number(3);
 const number2 = new Number(3);
-number1 == 3;         // true
-number1 == number2;   // false
+number1 == 3; // true
+number1 == number2; // false
 ```
 
 ### Comparación de objetos
 
 ```js
-const object1 = {"key": "value"}
-const object2 = {"key": "value"};
+const object1 = { key: "value" };
+const object2 = { key: "value" };
 
-object1 == object2 // false
-object2 == object2 // true
+object1 == object2; // false
+object2 == object2; // true
 ```
 
 ### Comparar String y objetos String
@@ -100,20 +106,18 @@ console.log(string4 == string4); // true
 ### Comparación de fechas y cadenas
 
 ```js
-const d = new Date('December 17, 1995 03:24:00');
+const d = new Date("December 17, 1995 03:24:00");
 const s = d.toString(); // Por ejemplo: "Sun Dec 17 1995 03:24:00 GMT-0800 (Hora estándar del Pacífico)"
-console.log(d == s);    //true
+console.log(d == s); //true
 ```
 
 ## Especificaciones
 
-| Especificaciones                                                                                 |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-equality-operators', 'Equality operators')}} |
+{{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.equality")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,7 +1,6 @@
 ---
 title: Уведомление
-slug: Web/API/notification
-translation_of: Web/API/Notification
+slug: Web/API/Notification
 ---
 
 {{APIRef("Web Notifications")}}
@@ -81,18 +80,18 @@ translation_of: Web/API/Notification
 #### Обработчики событий
 
 - {{domxref("Notification.onclick")}}
-  - : Обработчик события {{event("click")}}. Срабатывает каждый раз, когда пользователь кликает по уведомлению.
+  - : Обработчик события [`click`](/ru/docs/Web/API/Element/click_event). Срабатывает каждый раз, когда пользователь кликает по уведомлению.
 - {{domxref("Notification.onerror")}}
-  - : Обработчик события {{event("error")}}. Срабатывает каждый раз, когда уведомление сталкивается с ошибкой.
+  - : Обработчик события [`error`](/ru/docs/Web/API/HTMLElement/error_event). Срабатывает каждый раз, когда уведомление сталкивается с ошибкой.
 
 #### Устаревшие обработчики событий
 
 Следующие обработчики событий все ещё поддерживаются, как указано в разделе [browser compatibility](#browser_compatibility) ниже, но более не входят в актуальную спецификацию. Небезосновательно можно предположить, что они устарели и могут перестать работать в будущих версиях браузеров.
 
 - {{domxref("Notification.onclose")}}
-  - : Обработчик события {{event("close")}}. Срабатывает при закрытии уведомления пользователем.
+  - : Обработчик события [`close`](/ru/docs/Web/API/HTMLDialogElement/close_event). Срабатывает при закрытии уведомления пользователем.
 - {{domxref("Notification.onshow")}}
-  - : Обработчик события {{event("show")}}. Срабатывает при отображении уведомления.
+  - : Обработчик события [`show`](/ru/docs/Web/Events/show). Срабатывает при отображении уведомления.
 - {{domxref("Notification.sound")}} {{readonlyinline}}
   - : Определяет звуковой файл для воспроизведения при уведомлении, по умолчанию установлен системный звук.
 
@@ -136,7 +135,7 @@ function notifyMe() {
   }
 
   // В противном случае, запрашиваем разрешение
-  else if (Notification.permission !== 'denied') {
+  else if (Notification.permission !== "denied") {
     Notification.requestPermission(function (permission) {
       // Если пользователь разрешил, то создаём уведомление
       if (permission === "granted") {
@@ -153,10 +152,10 @@ function notifyMe() {
 
 {{EmbedLiveSample('Пример', '100%', 30)}}
 
-В большинстве случаев вам не надо быть столь многословными. Например в нашем [демо Emogotchi](http://mdn.github.io/emogotchi/) ([исходный код](https://github.com/mdn/emogotchi)), мы просто запускаем {{domxref("Notification.requestPermission")}} несмотря ни на что, чтобы быть уверенными, что мы сможем получить разрешение на отправку уведомлений (тут используется синтаксис новейшего promise-based метода):
+В большинстве случаев вам не надо быть столь многословными. Например в нашем [демо Emogotchi](https://mdn.github.io/emogotchi/) ([исходный код](https://github.com/mdn/emogotchi)), мы просто запускаем {{domxref("Notification.requestPermission")}} несмотря ни на что, чтобы быть уверенными, что мы сможем получить разрешение на отправку уведомлений (тут используется синтаксис новейшего promise-based метода):
 
 ```js
-Notification.requestPermission().then(function(result) {
+Notification.requestPermission().then(function (result) {
   console.log(result);
 });
 ```
@@ -166,8 +165,8 @@ Notification.requestPermission().then(function(result) {
 ```js
 function spawnNotification(body, icon, title) {
   var options = {
-      body: body,
-      icon: icon
+    body: body,
+    icon: icon,
   };
   var n = new Notification(title, options);
 }
@@ -184,5 +183,3 @@ function spawnNotification(body, icon, title) {
 ## Смотрите также
 
 - [Using the Notifications API](/ru/docs/Web/API/Notifications_API/Using_the_Notifications_API)
-
--

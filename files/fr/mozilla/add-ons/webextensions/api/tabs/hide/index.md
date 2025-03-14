@@ -1,25 +1,15 @@
 ---
 title: tabs.hide()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/hide
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - hide
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/hide
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Masque un ou plusieurs onglets.
 
-Les onglets cachés ne sont plus visibles dans l'onglet du navigateur. Les onglets cachés ne sont pas automatiquement [supprimés](/fr/Add-ons/WebExtensions/API/tabs/discard) : le code qui s'y trouve continue à s'exécuter. Vous pouvez explicitement supprimer les onglets à chaque fois que vous les masquez : bien que cela ne soit pas approprié dans toutes les situations, cela aidera à réduire les ressources utilisées par le navigateur.
+Les onglets cachés ne sont plus visibles dans l'onglet du navigateur. Les onglets cachés ne sont pas automatiquement [supprimés](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/discard) : le code qui s'y trouve continue à s'exécuter. Vous pouvez explicitement supprimer les onglets à chaque fois que vous les masquez : bien que cela ne soit pas approprié dans toutes les situations, cela aidera à réduire les ressources utilisées par le navigateur.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 Tous les onglets ne peuvent pas être masqués :
 
@@ -30,14 +20,14 @@ Tous les onglets ne peuvent pas être masqués :
 
 La première fois qu'une extension cache un onglet, le navigateur indiquera à l'utilisateur que l'onglet est caché, leur montrera comment ils peuvent accéder à l'onglet caché et leur donnera l'option de désactiver l'extension à la place.
 
-Pour utiliser cette API, vous devez disposer de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "tabHide".
+Pour utiliser cette API, vous devez disposer de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "tabHide".
 
 ## Syntaxe
 
 ```js
 var hiding = browser.tabs.hide(
-  tabIds          // integer or integer array
-)
+  tabIds, // integer or integer array
+);
 ```
 
 ### Paramètres
@@ -52,7 +42,7 @@ var hiding = browser.tabs.hide(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un tableau contenant les ID des onglets qui ont été cachés. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un tableau contenant les ID des onglets qui ont été cachés. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
 ## Exemples
 
@@ -86,6 +76,6 @@ browser.tabs.hide([15, 14, 1]).then(onHidden, onError);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.hide")}}
+{{Compat}}

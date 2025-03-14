@@ -1,36 +1,39 @@
 ---
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/concat
+l10n:
+  sourceCommit: b7ca46c94631967ecd9ce0fe36579be334a01275
 ---
+
 {{JSRef}}
 
-**`concat()`** 메서드는 인자로 주어진 배열이나 값들을 기존 배열에 합쳐서 새 배열을 반환합니다.
+{{jsxref("Array")}} 인스턴스의 **`concat()`** 메서드는 두 개 이상의 배열을 병합하는 데 사용됩니다. 이 메서드는 기존 배열을 변경하지 않고, 새 배열을 반환합니다.
 
-- 기존배열을 변경하지 않습니다.
-- 추가된 새로운 배열을 반환합니다.
+{{InteractiveExample("JavaScript Demo: Array.concat()", "shorter")}}
 
-{{EmbedInteractiveExample("pages/js/array-concat.html")}}
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const array2 = ["d", "e", "f"];
+const array3 = array1.concat(array2);
+
+console.log(array3);
+// Expected output: Array ["a", "b", "c", "d", "e", "f"]
+```
 
 ## 구문
 
-```js
-    array.concat([value1[, value2[, ...[, valueN]]]])
+```js-nolint
+concat()
+concat(value0)
+concat(value0, value1)
+concat(value0, value1, /* …, */ valueN)
 ```
 
 ### 매개변수
 
-- 배열 또는 값
-- 만약 value1 \~ valueN 인자를 생략하면 기존배열의 얕은 복사본을 반환.
-
 - `valueN` {{optional_inline}}
-  - : 자세한 내용은 아래 설명을 참고하세요.
+  - : 새 배열로 연결할 배열 및/또는 값입니다. 모든 `valueN` 매개변수가 생략된 경우,
+    `concat`은 호출된 기존 배열의 [얕은 복사본](/ko/docs/Glossary/Shallow_copy)을 반환합니다. 자세한 내용은 아래 설명을 참조하세요.
 
 ### 반환값
 
@@ -38,54 +41,115 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/concat
 
 ## 설명
 
-`concat`은 메서드를 호출한 배열 뒤에 각 인수를 순서대로 붙여 새로운 배열을 만듭니다. 인수가 배열이면 그 구성요소가 순서대로 붙고, 배열이 아니면 인수 자체가 붙습니다. 중첩 배열 내부로 재귀하지 않습니다.
+`concat` 메서드는 새 배열을 만듭니다. 먼저 배열은 호출된 객체의 요소로 채워집니다. 그런 다음, 각 인자의 값이 배열에 연결됩니다. 일반 객체나 원시 값의 경우, 인자 자체가 최종 배열의 요소가 되고, [`Symbol.isConcatSpreadable`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable) 속성이 참 값으로 설정된 배열 또는 유사 배열 객체인 경우, 인자의 각 요소가 최종 배열에 독립적으로 추가됩니다. `concat` 메서드는 중첩된 배열 인자로 재귀하지 않습니다.
 
-`concat`은 `this`나 인수로 넘겨진 배열의 내용을 바꾸지 않고, 대신 주어진 배열을 합친 뒤 그 얕은 사본을 반환합니다. 새 배열에는 원본 배열의 요소를 다음과 같은 방법으로 복사합니다.
+`concat()` 메서드는 [복사 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#메서드_복사_및_메서드_변경)입니다. 이 메서드는 이 배열 또는 인자로 제공된 배열을 변경하지 않는 대신, 원래 배열의 요소와 동일한 요소를 포함하는 [얕은 복사본](/ko/docs/Glossary/Shallow_copy)을 반환합니다.
 
-- 실제 객체가 아닌 객체 참조: `concat`은 새 배열에 참조를 복사합니다. 원본 배열과 새 배열에서 같은 객체를 가리키게 됩니다. 즉, 참조하는 객체를 수정하면 그 내용이 새 배열과 원본 배열 둘 다에서 나타납니다.
-- 문자열, 숫자, 불리언 등 자료형({{jsxref("String")}}, {{jsxref("Number")}}, {{jsxref("Boolean")}} 객체 아님): `concat`은 새 배열에 문자열과 수의 값을 복사합니다.
+`concat()` 메서드는 소스 배열 중 하나라도 [희소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#희소_배열)이 있다면 배열의 빈 슬롯을 보존합니다.
 
-> **참고:** 배열이나 값을 이어붙여도 원본은 변하지 않으며, 새로운 배열이나 원본 배열을 조작해도 서로 영향을 받지 않습니다.
+`concat()` 메서드는 [범용 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#범용_배열_메서드)입니다. `this` 값은 다른 인자와 동일한 방식으로 처리됩니다(객체로 먼저 변환된다는 점을 제외하면). 즉, 일반 객체는 결과 배열 바로 앞에 붙고, `@@isConcatSpreadable`이 참인 유사 배열 객체는 결과 배열에 전개됩니다.
 
 ## 예제
 
-### 배열 두 개 이어붙이기
+### 두 배열 연결
 
-다음 예제는 두 개의 배열을 이어붙입니다.
+다음 예제는 두 배열을 연결합니다.
 
 ```js
-const alpha = ['a', 'b', 'c'];
-const numeric = [1, 2, 3];
+const letters = ["a", "b", "c"];
+const numbers = [1, 2, 3];
 
-alpha.concat(numeric);
-// 결과: ['a', 'b', 'c', 1, 2, 3]
+const alphaNumeric = letters.concat(numbers);
+console.log(alphaNumeric);
+// 결과는 ['a', 'b', 'c', 1, 2, 3]
 ```
 
-### 배열 세 개 이어붙이기
+### 세 배열 연결
 
-다음 예제는 세 개의 배열을 이어붙입니다.
+다음 예제는 세 배열을 연결합니다.
 
 ```js
 const num1 = [1, 2, 3];
 const num2 = [4, 5, 6];
 const num3 = [7, 8, 9];
 
-num1.concat(num2, num3);
-// 결과: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+const numbers = num1.concat(num2, num3);
+
+console.log(numbers);
+// 결과는 [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-### 배열에 값 이어붙이기
+### 값을 배열에 연결
 
-다음 코드는 배열에 세 개의 값을 이어붙입니다.
+다음 코드는 세 개의 값을 배열에 연결합니다.
 
 ```js
-const alpha = ['a', 'b', 'c'];
+const letters = ["a", "b", "c"];
 
-alpha.concat(1, [2, 3]);
-// 결과: ['a', 'b', 'c', 1, 2, 3]
+const alphaNumeric = letters.concat(1, [2, 3]);
+
+console.log(alphaNumeric);
+// 결과는 ['a', 'b', 'c', 1, 2, 3]
 ```
 
-## 명세
+### 중첩된 배열 연결
+
+다음 코드는 중첩된 배열을 연결하고 참조 유지를 설명합니다.
+
+```js
+const num1 = [[1]];
+const num2 = [2, [3]];
+
+const numbers = num1.concat(num2);
+
+console.log(numbers);
+// 결과는 [[1], 2, [3]]
+
+// num1의 첫 번째 요소를 수정합니다.
+num1[0].push(4);
+
+console.log(numbers);
+// 결과는 [[1, 4], 2, [3]]
+```
+
+### Symbol.isConcatSpreadable을 이용하여 유사 배열 객체 연결
+
+`concat`은 기본적으로 모든 유사 배열 객체를 배열로 취급하지 않으며, `Symbol.isConcatSpreadable`이 참인 값(예: `true`)으로 설정된 경우에만 배열로 취급합니다.
+
+```js
+const obj1 = { 0: 1, 1: 2, 2: 3, length: 3 };
+const obj2 = { 0: 1, 1: 2, 2: 3, length: 3, [Symbol.isConcatSpreadable]: true };
+console.log([0].concat(obj1, obj2));
+// [ 0, { '0': 1, '1': 2, '2': 3, length: 3 }, 1, 2, 3 ]
+```
+
+### 희소 배열에 concat() 사용
+
+소스 배열 중 하나라도 희소 배열이 있으면, 결과 배열도 희소 배열이 됩니다.
+
+```js
+console.log([1, , 3].concat([4, 5])); // [1, empty, 3, 4, 5]
+console.log([1, 2].concat([3, , 5])); // [1, 2, 3, empty, 5]
+```
+
+### 배열이 아닌 객체에 concat() 사용
+
+`this` 값이 배열이 아닌 경우, `this`를 객체로 변환된 다음 `concat()`의 인자와 동일한 방식으로 처리합니다. 이 경우 반환 값은 항상 중첩이 없는 새 배열입니다.
+
+```js
+console.log(Array.prototype.concat.call({}, 1, 2, 3)); // [{}, 1, 2, 3]
+console.log(Array.prototype.concat.call(1, 2, 3)); // [ [Number: 1], 2, 3 ]
+const arrayLike = {
+  [Symbol.isConcatSpreadable]: true,
+  length: 2,
+  0: 1,
+  1: 2,
+  2: 99, // length가 2이므로 concat()에서 무시됨
+};
+console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]
+```
+
+## 명세서
 
 {{Specifications}}
 
@@ -95,7 +159,11 @@ alpha.concat(1, [2, 3]);
 
 ## 같이 보기
 
-- {{jsxref("Array.push", "push")}} / {{jsxref("Array.pop", "pop")}} — 배열의 뒤에 요소 추가/제거
-- {{jsxref("Array.unshift", "unshift")}} / {{jsxref("Array.shift", "shift")}} — 배열의 앞에 요소 추가/제거
-- {{jsxref("Array.splice", "splice")}} — 배열의 특정 위치에 요소 추가/제거
+- [`Symbol.isConcatSpreadable` 지원과 같은 최신 동작을 수정하고 구현한 `core-js`의 `Array.prototype.concat` 폴리필](https://github.com/zloirock/core-js#ecmascript-array)
+- [인덱스된 컬렉션](/ko/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.push()")}}
+- {{jsxref("Array.prototype.unshift()")}}
+- {{jsxref("Array.prototype.splice()")}}
 - {{jsxref("String.prototype.concat()")}}
+- {{jsxref("Symbol.isConcatSpreadable")}}

@@ -1,15 +1,17 @@
 ---
-title: 'HTMLSlotElement: slotchange イベント'
+title: "HTMLSlotElement: slotchange イベント"
+short-title: slotchange
 slug: Web/API/HTMLSlotElement/slotchange_event
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef}}
 
 **`slotchange`** イベントは、 {{DOMxRef("HTMLSlotElement")}} インスタンス({{HTMLElement("slot")}} 要素) において、そのスロットに含まれるノードが変更された場合に発行されます。
 
-> **メモ:** スロットに入っているノードの子ノードが変更された場合、 `slotchange` イベントは発生しません。実際のノード自体を変更（例えば、追加または削除）した場合に限ります。
+> [!NOTE]
+> スロットに入っているノードの子ノードが変更された場合、 `slotchange` イベントは発生しません。実際のノード自体を変更（例えば、追加または削除）した場合に限ります。
 
 **slotchange** イベントを発行させるには、 `slot` 属性を設定または削除しなければなりません。
 
@@ -20,9 +22,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティに設定するかしてください。
 
 ```js
-addEventListener('slotchange', (event) => {});
+addEventListener("slotchange", (event) => {});
 
-onslotchange = (event) => { };
+onslotchange = (event) => {};
 ```
 
 ## イベント型
@@ -32,19 +34,21 @@ onslotchange = (event) => { };
 ## 例
 
 ```js
-element.setAttribute('slot', slotName);
+element.setAttribute("slot", slotName);
 // element.assignedSlot = $slot
-element.removeAttribute('slot');
+element.removeAttribute("slot");
 // element.assignedSlot = null
 ```
 
 次のスニペットは、 [slotchange の例](https://github.com/mdn/web-components-examples/tree/main/slotchange)から取りました ([ライブでも確認できます](https://mdn.github.io/web-components-examples/slotchange/))。
 
 ```js
-let slots = this.shadowRoot.querySelectorAll('slot');
-slots[1].addEventListener('slotchange', (e) => {
+let slots = this.shadowRoot.querySelectorAll("slot");
+slots[1].addEventListener("slotchange", (e) => {
   let nodes = slots[1].assignedNodes();
-  console.log(`Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`);
+  console.log(
+    `Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`,
+  );
 });
 ```
 

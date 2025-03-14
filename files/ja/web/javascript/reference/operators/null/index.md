@@ -1,19 +1,31 @@
 ---
-title: 'null'
+title: "null"
 slug: Web/JavaScript/Reference/Operators/null
-original_slug: Web/JavaScript/Reference/Global_Objects/null
 ---
 
 {{jsSidebar("Objects")}}
 
 `null` という値は、意図的にオブジェクトの値が存在しないことを表します。これは JavaScript の[プリミティブ値](/ja/docs/Glossary/Primitive)の 1 つであり、論理演算では[偽値](/ja/docs/Glossary/Falsy)として扱われます。
 
-{{EmbedInteractiveExample("pages/js/globalprops-null.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - Null")}}
+
+```js interactive-example
+function getVowels(str) {
+  const m = str.match(/[aeiou]/gi);
+  if (m === null) {
+    return 0;
+  }
+  return m.length;
+}
+
+console.log(getVowels("sky"));
+// Expected output: 0
+```
 
 ## 構文
 
 ```js
-null
+null;
 ```
 
 ## 解説
@@ -38,15 +50,15 @@ foo; //null
 `null` や `undefined` をチェックする際は、[等価 (==) と 厳密等価 (===) 演算子の違い](/ja/docs/Web/JavaScript/Reference/Operators) に注意してください（前者では型変換が行われます）。
 
 ```js
-typeof null          // "object" (歴史的な理由で "null" ではありません)
-typeof undefined     // "undefined"
-null === undefined   // false
-null  == undefined   // true
-null === null        // true
-null  == null        // true
-!null                // true
-isNaN(1 + null)      // false
-isNaN(1 + undefined) // true
+typeof null; // "object" (歴史的な理由で "null" ではありません)
+typeof undefined; // "undefined"
+null === undefined; // false
+null == undefined; // true
+null === null; // true
+null == null; // true
+!null; // true
+isNaN(1 + null); // false
+isNaN(1 + undefined); // true
 ```
 
 ## 仕様書

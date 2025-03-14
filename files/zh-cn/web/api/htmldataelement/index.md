@@ -1,33 +1,35 @@
 ---
 title: HTMLDataElement
 slug: Web/API/HTMLDataElement
+l10n:
+  sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
 ---
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLDataElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("data")}} elements.
+**`HTMLDataElement`** 接口提供特定的属性（除了常规的 {{domxref("HTMLElement")}} 接口以外，它还可以通过继承来使用），用于操作 {{HTMLElement("data")}} 元素。
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
-## Properties
+## 实例属性
 
-_Inherits properties from its parent, {{domxref("HTMLElement")}}._
+_从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 - {{domxref("HTMLDataElement.value")}}
-  - : Is a {{domxref("DOMString")}} reflecting the {{htmlattrxref("value", "data")}} HTML attribute, containing a machine-readable form of the element's value.
+  - : 一个反映 [`value`](/zh-CN/docs/Web/HTML/Element/data#value) HTML 属性的字符串，包含元素值的机器可读形式。
 
-## Methods
+## 实例方法
 
-_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
+_没有特定的方法，从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- The HTML element implementing this interface: {{HTMLElement("data")}}.
+- 实现此接口的 HTML 元素：{{HTMLElement("data")}}。

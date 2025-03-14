@@ -1,5 +1,5 @@
 ---
-title: ':nth-last-of-type()'
+title: :nth-last-of-type()
 slug: Web/CSS/:nth-last-of-type
 ---
 
@@ -16,7 +16,8 @@ p:nth-last-of-type(4n) {
 }
 ```
 
-> **Nota:** Esta pseudo-clase es esencialmente la misma que {{Cssxref(":nth-of-type")}}, excepto que cuenta los elementos hacia atrás desde el final, no hacia adelante desde el principio.
+> [!NOTE]
+> Esta pseudo-clase es esencialmente la misma que {{Cssxref(":nth-of-type")}}, excepto que cuenta los elementos hacia atrás desde el final, no hacia adelante desde el principio.
 
 ## Sintaxis
 
@@ -61,7 +62,7 @@ span:nth-last-of-type(2) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.nth-last-of-type")}}
+{{Compat}}
 
 ## Ver también
 

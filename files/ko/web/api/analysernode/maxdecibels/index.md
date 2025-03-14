@@ -1,15 +1,8 @@
 ---
 title: AnalyserNode.maxDecibels
 slug: Web/API/AnalyserNode/maxDecibels
-tags:
-  - API
-  - AnalyserNode
-  - Property
-  - Reference
-  - Web Audio API
-  - maxDecibels
-browser-compat: api.AnalyserNode.maxDecibels
 ---
+
 {{APIRef("Web Audio API")}}
 
 {{domxref("AnalyserNode")}} 인터페이스의 **`maxDecibels`** 속성은 unsigned byte 값으로의 전환에 대해서, FFT 분석 데이터의 스케일링 범위에서의 최대 power 값을 나타내는 double 값입니다 — 기본적으로, 이것은 `getByteFrequencyData()`를 사용할 때 결과의 범위에 대한 최대 값을 명시합니다.
@@ -27,7 +20,8 @@ FFT 분석 데이터를 스케일링하는 것에 대한 최대 [데시벨](http
 
 `getByteFrequencyData()`로부터 데이터를 얻을 때, `maxDecibels` 또는 더 높은 진폭을 가진 모든 주파수는 `255`로 반환됩니다.
 
-> **참고:** 만약 `AnalyserNode.minDecibels`보다 더 작거나 같은 값이 설정된다면, `IndexSizeError` 예외가 발생합니다.
+> [!NOTE]
+> 만약 `AnalyserNode.minDecibels`보다 더 작거나 같은 값이 설정된다면, `IndexSizeError` 예외가 발생합니다.
 
 ## 예제
 

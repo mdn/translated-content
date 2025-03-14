@@ -21,11 +21,11 @@ node = document.adoptNode(externalNode);
 ## Ejemplo
 
 ```js
-var iframe = document.querySelector('iframe');
-var iframeImages = iframe.contentDocument.querySelectorAll('img');
-var newParent = document.getElementById('images');
+var iframe = document.querySelector("iframe");
+var iframeImages = iframe.contentDocument.querySelectorAll("img");
+var newParent = document.getElementById("images");
 
-iframeImages.forEach(function(imgEl) {
+iframeImages.forEach(function (imgEl) {
   newParent.appendChild(document.adoptNode(imgEl));
 });
 ```

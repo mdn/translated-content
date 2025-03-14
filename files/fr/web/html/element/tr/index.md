@@ -1,15 +1,79 @@
 ---
-title: '<tr> : l''élément de ligne d''un tableau'
+title: "<tr> : l'élément de ligne d'un tableau"
 slug: Web/HTML/Element/tr
-translation_of: Web/HTML/Element/tr
-browser-compat: html.elements.tr
 ---
 
 {{HTMLSidebar}}
 
 L'élément HTML **`<tr>`** définit une ligne de cellules dans un tableau. Une ligne peut être constituée d'éléments [`<td>`](/fr/docs/Web/HTML/Element/td) (les données des cellules) et [`<th>`](/fr/docs/Web/HTML/Element/th) (les cellules d'en-têtes).
 
-{{EmbedInteractiveExample("pages/tabbed/tr.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;tr&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Alien football stars
+  </caption>
+  <tr>
+    <th scope="col">Player</th>
+    <th scope="col">Gloobles</th>
+    <th scope="col">Za'taak</th>
+  </tr>
+  <tr>
+    <th scope="row">TR-7</th>
+    <td>7</td>
+    <td>4,569</td>
+  </tr>
+  <tr>
+    <th scope="row">Khiresh Odo</th>
+    <td>7</td>
+    <td>7,223</td>
+  </tr>
+  <tr>
+    <th scope="row">Mia Oolong</th>
+    <td>9</td>
+    <td>6,219</td>
+  </tr>
+</table>
+```
+
+```css interactive-example
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+th[scope="col"] {
+  background-color: #505050;
+  color: #fff;
+}
+
+th[scope="row"] {
+  background-color: #d6ecd4;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-of-type(even) {
+  background-color: #eee;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+```
 
 Si on veut qu'une cellule s'étende sur plusieurs lignes/colonnes, on pourra utiliser l'attribut [`colspan`](/fr/docs/Web/HTML/Element/td#attr-colspan) ou [`rowspan`](/fr/docs/Web/HTML/Element/td#attr-rowspan) qui indiquent respectivement le nombre de colonnes / lignes sur lequel s'étendre (la valeur par défaut étant 1).
 
@@ -38,7 +102,8 @@ La construction de tableau peut parfois demander un peu de pratique. Au-delà de
 
     Si cet attribut n'est pas renseigné, la valeur est héritée du nœud parent.
 
-    > **Note :** Cet attribut est devenu obsolète dans le dernier standard et ne doit donc plus être utilisé.
+    > [!NOTE]
+    > Cet attribut est devenu obsolète dans le dernier standard et ne doit donc plus être utilisé.
     >
     > - Pour réaliser les mêmes effets que les valeurs `left`, `center`, `right` ou `justify`, il faut utiliser la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align) sur l'élément
     > - Pour réaliser le même effet qu'avec la valeur `char`. Il est possible d'utiliser la valeur de l'attribut [`char`](#attr-char) comme valeur de la propriété [`text-align`](/fr/docs/Web/CSS/text-align).
@@ -47,19 +112,22 @@ La construction de tableau peut parfois demander un peu de pratique. Au-delà de
 
   - : Une chaîne de caractères qui définit la couleur d'arrière-plan de toutes les cellules de la colonne. Il peut s'agit d'une [notation hexadécimale #RRGGGBB ou #RGB](</fr/docs/Web/CSS/color_value#rgb()>) ou bien d'un [mot-clé](/fr/docs/Web/CSS/color_value#color_keywords) pour une couleur. L'absence de cet attribut (ou sa déclaration à `null` en JavaScript) fera que la couleur des cellules de la ligne sera héritée de la couleur d'arrière-plan de l'élément parent.
 
-    > **Note :** L'élément `<tr>` doit être mis en forme grâce au [CSS](/fr/docs/Web/CSS). Pour fournir un effet semblable à celui achevé par l'attribut `bgcolor`, il est possible d'utiliser la propriété CSS [`background-color`](/fr/docs/Web/CSS/background-color).
+    > [!NOTE]
+    > L'élément `<tr>` doit être mis en forme grâce au [CSS](/fr/docs/Web/CSS). Pour fournir un effet semblable à celui achevé par l'attribut `bgcolor`, il est possible d'utiliser la propriété CSS [`background-color`](/fr/docs/Web/CSS/background-color).
 
 - **`char`**{{deprecated_inline}}
 
   - : Une chaîne de caractère qui définit le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point ou une virgule pour aligner des nombres ou des valeurs monétaires. Si l'attribut [`align`](#attr-align) ne vaut pas `char`, l'attribut est ignoré.
 
-    > **Note :** Cet attribut est obsolète et peu implémenté : il est donc fortement déconseillé de l'utiliser. Pour réaliser le même effet qu'avec [`char`](#attr-char), il faut utiliser la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align).
+    > [!NOTE]
+    > Cet attribut est obsolète et peu implémenté : il est donc fortement déconseillé de l'utiliser. Pour réaliser le même effet qu'avec [`char`](#attr-char), il faut utiliser la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align).
 
 - **`charoff`** {{deprecated_inline}}
 
   - : Une chaîne de caractères utilisée pour indiquer le nombre de caractères à afficher après le caractère défini par l'attribut `char`. Cela peut par exemple servir à indiquer qu'on souhaite afficher deux chiffres après la virgule pour les valeurs monétaires afin d'indiquer les centimes.
 
-    > **Note :** Cet attribut ne doit plus être utilisé, car il est maintenant obsolète et que sa compatibilité n'était pas répandue.
+    > [!NOTE]
+    > Cet attribut ne doit plus être utilisé, car il est maintenant obsolète et que sa compatibilité n'était pas répandue.
 
 - **`valign`** {{deprecated_inline}}
 
@@ -74,7 +142,8 @@ La construction de tableau peut parfois demander un peu de pratique. Au-delà de
     - `top`
       - : Place le texte au plus haut de la cellule.
 
-    > **Note :** Cet attribut est obsolète dans le dernier standard, la propriété CSS [`vertical-align`](/fr/docs/Web/CSS/vertical-align) doit être utilisée à la place.
+    > [!NOTE]
+    > Cet attribut est obsolète dans le dernier standard, la propriété CSS [`vertical-align`](/fr/docs/Web/CSS/vertical-align) doit être utilisée à la place.
 
 ## Exemples
 
@@ -87,13 +156,16 @@ Voir [la page sur `<table>`](/fr/docs/Web/HTML/Element/table) pour d'autres exem
 ```html
 <table>
   <tr>
-    <th>Prénom</th><th>Nom</th>
+    <th>Prénom</th>
+    <th>Nom</th>
   </tr>
   <tr>
-    <td>Jean</td> <td>Biche</td>
+    <td>Jean</td>
+    <td>Biche</td>
   </tr>
   <tr>
-    <td>Marcel</td> <td>Patulacci</td>
+    <td>Marcel</td>
+    <td>Patulacci</td>
   </tr>
 </table>
 ```
@@ -107,7 +179,8 @@ table {
   border: 1px solid black;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
 }
 ```
@@ -177,7 +250,8 @@ table {
   border: 1px solid black;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
 }
 ```
@@ -235,7 +309,8 @@ table {
   border: 1px solid black;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
 }
 ```
@@ -305,16 +380,21 @@ Là encore, regardons le résultat pour commencer.
 ```css
 table {
   border: 1px solid black;
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
 }
 
 thead > tr {
   background-color: rgb(228, 240, 245);
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
-  padding:4px 6px;
+  padding: 4px 6px;
 }
 ```
 
@@ -385,7 +465,11 @@ Ici, CSS est utilisé de façon plus marquée. Sans que ce soit compliqué, il y
 ```css
 table {
   border: 1px solid black;
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border-spacing: 0;
   border-collapse: collapse;
 }
@@ -394,9 +478,10 @@ table {
 Ici, on ajoute les propriétés [`border-spacing`](/fr/docs/Web/CSS/border-spacing) et [`border-collapse`](/fr/docs/Web/CSS/border-collapse) afin d'éliminer l'espace entre les cellules et afin de fusionner les bordures qui se touchent afin d'obtenir une seule bordure plutôt que des bordures doubles.
 
 ```css
-th, td {
+th,
+td {
   border: 1px solid black;
-  padding:4px 6px;
+  padding: 4px 6px;
 }
 
 th {
@@ -467,7 +552,7 @@ Enfin, lorsqu'on affiche des valeurs monétaires, on les représente alignées �
 
 ```css
 tbody > tr > td:last-of-type {
-  text-align:right;
+  text-align: right;
 }
 ```
 

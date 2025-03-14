@@ -11,9 +11,9 @@ En un cuerpo `multipart/form-data`, el encabezado general **`Content-Disposition
 
 El encabezado `Content-Disposition` está definido en el contexto de mensajes MIME para correos electrónicos, pero sólo un subconjuto de los parámetros posibles aplican a formularios HTTP y peticiones {{HTTPMethod("POST")}}. Sólo el valor `form-data`, como las directivas opcionales `name` and `filename`, pueden ser utilizadas en el contexto HTTP.
 
-| Tipo de encabezado                               | {{Glossary("Response header")}} (para el cuerpo principal) {{Glossary("General header")}} (para una subparte de un cuerpo multipartes) |
-| ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                                                                                                                                        |
+| Tipo de encabezado                    | {{Glossary("Response header")}} (para el cuerpo principal) {{Glossary("General header")}} (para una subparte de un cuerpo multipartes) |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                                                                                                                     |
 
 ## Sintaxis
 
@@ -40,7 +40,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 ### Directivas
 
 - `name`
-  - : Es seguida de un texto que contiene el nombre del campo de HTML en el formulario a la que el contenido de la subparte refiere. Cuando se usan múltiples archivos en el mismo campo (por ejemplo, el atributo {{htmlattrxref("multiple", "input")}} de un elemento `{{HTMLElement("input","&lt;input type=file&gt;")}}`), puede haber varias subpartes con el mismo nombre.
+  - : Es seguida de un texto que contiene el nombre del campo de HTML en el formulario a la que el contenido de la subparte refiere. Cuando se usan múltiples archivos en el mismo campo (por ejemplo, el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple) de un elemento `{{HTMLElement("input","&lt;input type=file&gt;")}}`), puede haber varias subpartes con el mismo nombre.
     Un `name` con valor de `'_charset_'` indica que la parte no es un campo HTML, sino el conjunto de caracteres predeterminado para partes sin información explícita sobre su conjunto de caracteres.
 - `filename`
   - : Es seguida de un texto que contiene el nombre original del archivo transmitido. Siempre es opcional y no debe ser utilizado a ciegas por la aplicación: información sobre la ruta debe ser despojada, y se debe realizar una conversión a las reglas del sistema de archivos del servidor. Este parámetro provee mayormente información indicativa. Cuando se usa en combinación con `Content-Disposition: attachment`, es utilizado como el nombre de archivo predeterminado en caso de que se presente al usuario un diálogo de 'Guardar como'.
@@ -82,22 +82,18 @@ valor2
 
 ## Especificaciones
 
-| Especificación       | Título                                                                                                                                                                                                          |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{RFC("7578")}} | Returning Values from Forms: multipart/form-data (Retornando Valores desde Formularios: multipart/form-data)                                                                                                    |
-| {{RFC("6266")}} | Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP) (Uso del campo de encabezado Content-Disposition en HTML)                                                                 |
-| {{RFC("2183")}} | Communicating Presentation Information in Internet Messages: The Content-Disposition Header Field (Comunicando Información de Presentación en Mensajes de Internet: el Campo de Encabezado Content-Disposition) |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("http.headers.Content-Disposition")}}
+{{Compat}}
 
 ## Notas de compatibilidad
 
-- Firefox 5 maneja el encabezado de respuesta HTTP `Content-Disposition` más efectivamente si ambos parámetros `filename` y `filename*` están presentes; observa todos los nombres presentes, usando el parámetro `filename*` si uno está disponible, incluso si el parámetro `filename` está incluido antes. Previamente, el primer parámetro en encontrarse sería usado, de este modo se previene el uso de un nombre más apropiado. Mira {{bug(588781)}}.
+- Firefox 5 maneja el encabezado de respuesta HTTP `Content-Disposition` más efectivamente si ambos parámetros `filename` y `filename*` están presentes; observa todos los nombres presentes, usando el parámetro `filename*` si uno está disponible, incluso si el parámetro `filename` está incluido antes. Previamente, el primer parámetro en encontrarse sería usado, de este modo se previene el uso de un nombre más apropiado. Mira [Error 588781 en Firefox](https://bugzil.la/588781).
 
 ## Ver también
 
-- [Formularios HTML](/es/docs/Web/Guide/HTML/Forms)
+- [Formularios HTML](/es/docs/Learn/Forms)
 - El {{HTTPHeader("Content-Type")}} definiendo el límite de un cuerpo multipartes.
 - La interfaz {{domxref("FormData")}} usada para manipular datos de formulario para uso en la API {{domxref("XMLHttpRequest")}}.

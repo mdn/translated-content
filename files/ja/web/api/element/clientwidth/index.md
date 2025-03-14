@@ -1,6 +1,9 @@
 ---
-title: Element.clientWidth
+title: "Element: clientWidth プロパティ"
+short-title: clientWidth
 slug: Web/API/Element/clientWidth
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}
@@ -9,27 +12,24 @@ slug: Web/API/Element/clientWidth
 
 `clientWidth` がルート要素（`<html>` 要素）（または文書が後方互換モードである場合は `<body>`）に使用された場合、（スクロールバーを除いた）ビューポートの高さが返されます。[これは `clientWidth` の特例です](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-clientwidth)。
 
-> **メモ:** このプロパティは値を整数に丸めます。小数の値が必要な場合は、 {{ domxref("element.getBoundingClientRect()") }} を使用してください。
+> [!NOTE]
+> このプロパティは値を整数に丸めます。小数の値が必要な場合は、 {{ domxref("element.getBoundingClientRect()") }} を使用してください。
 
-## 構文
+## 値
 
-```js
-var intElemClientWidth = element.clientWidth;
-```
-
-`intElemClientWidth` は `element` の `clientWidth` をピクセル数で表す整数値です。 `clientWidth` プロパティは読み取り専用です。
+数値です。
 
 ## 例
 
-![](dimensions-client.png)
+![大きなパディング、境界、マージンを持つ要素の例。clientWidth は、パディングを含めるために、マージン、境界、および垂直スクロールバーを除いた要素内の幅です。](dimensions-client.png)
 
 ## 仕様書
 
 {{Specifications}}
 
-## メモ
+### メモ
 
-`clientTop` は MS IE DHTML オブジェクトモデルで最初に導入されました。
+`clientWidth` は MS IE DHTML オブジェクトモデルで最初に導入されたものです。
 
 ## ブラウザーの互換性
 

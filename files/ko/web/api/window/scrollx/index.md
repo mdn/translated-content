@@ -1,13 +1,6 @@
 ---
 title: Window.scrollX
 slug: Web/API/Window/scrollX
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Reference
-  - 스크롤
-translation_of: Web/API/Window/scrollX
 ---
 
 {{APIRef("CSSOM View")}}
@@ -17,14 +10,15 @@ translation_of: Web/API/Window/scrollX
 ## 구문
 
 ```js
-var x = window.scrollX
+var x = window.scrollX;
 ```
 
 ### 값
 
 반환하는 값은 문서가 원점으로부터 수평방향으로 스크롤한 픽셀의 수를 나타내는 배정밀도 부동소수점 값입니다. 양의 값이 왼쪽 스크롤을 의미합니다. 문서를 픽셀보다 작은 정밀도의 장치에서 렌더링한 경우 반환값의 정밀도도 높아져 소숫값을 반환할 수 있습니다. 문서가 좌우로 전혀 움직이지 않은 상태면 `0`을 반환합니다.
 
-> **참고:** 정숫값이 필요하면 {{jsxref("Math.round()")}}를 사용해 반올림할 수 있습니다.
+> [!NOTE]
+> 정숫값이 필요하면 {{jsxref("Math.round()")}}를 사용해 반올림할 수 있습니다.
 
 더 기술적인 용어로, `scrollX`는 현재 {{Glossary("viewport", "뷰포트")}} 왼쪽 모서리의 X좌표를 반환하고, 뷰포트가 없으면 0을 반환합니다.
 
@@ -34,7 +28,7 @@ var x = window.scrollX
 
 ```js
 if (window.scrollX > 400) {
-  window.scroll(0,0);
+  window.scroll(0, 0);
 }
 ```
 
@@ -50,10 +44,18 @@ window.pageXOffset === window.scrollX; // 항상 true
 
 ```js
 var supportPageOffset = window.pageXOffset !== undefined;
-var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+var isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
 
-var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
-var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+var x = supportPageOffset
+  ? window.pageXOffset
+  : isCSS1Compat
+    ? document.documentElement.scrollLeft
+    : document.body.scrollLeft;
+var y = supportPageOffset
+  ? window.pageYOffset
+  : isCSS1Compat
+    ? document.documentElement.scrollTop
+    : document.body.scrollTop;
 ```
 
 ## 명세

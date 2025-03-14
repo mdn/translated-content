@@ -1,18 +1,48 @@
 ---
 title: width
 slug: Web/CSS/width
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/width
 ---
 
 {{CSSRef}}
 
 CSS **`width`** 속성은 요소의 너비를 설정합니다. 기본값은 콘텐츠 영역의 너비이지만, {{cssxref("box-sizing")}}이 `border-box`라면 테두리 영역의 너비를 설정합니다.
 
-{{EmbedInteractiveExample("pages/css/width.html")}}
+{{InteractiveExample("CSS Demo: width")}}
+
+```css interactive-example-choice
+width: 150px;
+```
+
+```css interactive-example-choice
+width: 20em;
+```
+
+```css interactive-example-choice
+width: 75%;
+```
+
+```css interactive-example-choice
+width: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the width.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 {{cssxref("min-width")}}와 {{cssxref("max-width")}} 속성은 `width`를 덮어씁니다.
 
@@ -51,7 +81,7 @@ width: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 너비의 절댓값.
 - {{cssxref("&lt;percentage&gt;")}}
-  - [: 컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 너비의 백분율. 컨테이닝 블록이 요소 너비에 영향을 받는 경우의 결과 레이아웃은 정해지지 않습니다.
+  - [: 컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 너비의 백분율. 컨테이닝 블록이 요소 너비에 영향을 받는 경우의 결과 레이아웃은 정해지지 않습니다.
 - `auto`
   - : 요소의 너비를 브라우저가 계산해 지정합니다.
 - `max-content`
@@ -76,7 +106,9 @@ p.goldie {
 ```
 
 ```html
-<p class="goldie">모질라 커뮤니티는 많은 수의 대단한 소프트웨어를 제작합니다.</p>
+<p class="goldie">
+  Mozilla 커뮤니티는 많은 수의 대단한 소프트웨어를 제작합니다.
+</p>
 ```
 
 {{EmbedLiveSample('기본_너비', '500px', '64px')}}
@@ -127,15 +159,17 @@ p.goldie {
 ```css
 p.maxgreen {
   background: lightgreen;
-  width: intrinsic;           /* Safari/WebKit uses a non-standard name */
-  width: -moz-max-content;    /* Firefox/Gecko */
+  width: intrinsic; /* Safari/WebKit uses a non-standard name */
+  width: -moz-max-content; /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
   width: max-content;
 }
 ```
 
 ```html
-<p class="maxgreen">Mozilla 커뮤니티는 많은 수의 대단한 소프트웨어를 제작합니다.</p>
+<p class="maxgreen">
+  Mozilla 커뮤니티는 많은 수의 대단한 소프트웨어를 제작합니다.
+</p>
 ```
 
 {{EmbedLiveSample('max-content_2', '500px', '64px')}}
@@ -145,14 +179,16 @@ p.maxgreen {
 ```css
 p.minblue {
   background: lightblue;
-  width: -moz-min-content;    /* Firefox */
+  width: -moz-min-content; /* Firefox */
   width: -webkit-min-content; /* Chrome */
   width: min-content;
 }
 ```
 
 ```html
-<p class="minblue">Mozilla 커뮤니티는 많은 수의 대단한 소프트웨어를 제작합니다.</p>
+<p class="minblue">
+  Mozilla 커뮤니티는 많은 수의 대단한 소프트웨어를 제작합니다.
+</p>
 ```
 
 {{EmbedLiveSample('min-content_2', '500px', '155px')}}
@@ -174,4 +210,4 @@ p.minblue {
 
 ## 같이 보기
 
-- [박스 모델](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}
+- [박스 모델](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}

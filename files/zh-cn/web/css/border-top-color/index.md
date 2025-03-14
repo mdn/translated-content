@@ -7,7 +7,46 @@ slug: Web/CSS/border-top-color
 
 **`border-top-color`** 属性用以设置某元素顶部 {{cssxref("border")}}的颜色。通常，用{{cssxref("border-color")}} 或 {{cssxref("border-top")}} 设置该颜色更为便捷可取。
 
-{{EmbedInteractiveExample("pages/css/border-top-color.html")}}
+{{InteractiveExample("CSS Demo: border-top-color")}}
+
+```css interactive-example-choice
+border-top-color: red;
+```
+
+```css interactive-example-choice
+border-top-color: #32a1ce;
+```
+
+```css interactive-example-choice
+border-top-color: rgb(170, 50, 220, 0.6);
+```
+
+```css interactive-example-choice
+border-top-color: hsl(60, 90%, 50%, 0.8);
+```
+
+```css interactive-example-choice
+border-top-color: transparent;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 语法
 
@@ -33,7 +72,7 @@ border-top-color: unset;
 - {{cssxref("&lt;color&gt;")}}
   - : 上边框的颜色。
 
-### 规范语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -45,9 +84,10 @@ border-top-color: unset;
 
 ```html
 <div class="mybox">
-  <p>This is a box with a border around it.
-     Note which side of the box is
-     <span class="redtext">red</span>.</p>
+  <p>
+    This is a box with a border around it. Note which side of the box is
+    <span class="redtext">red</span>.
+  </p>
 </div>
 ```
 
@@ -67,9 +107,9 @@ border-top-color: unset;
 
 #### 结果
 
-{{EmbedLiveSample('A_simple_div_with_a_border')}}
+{{EmbedLiveSample('一个简单的带边框容器')}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
@@ -79,7 +119,7 @@ border-top-color: unset;
 
 {{Compat}}
 
-## See also
+## 参见
 
 - The border-related CSS shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-top")}}, and {{Cssxref("border-color")}}.
 - The color-related CSS properties for the other borders: {{Cssxref("border-right-color")}}, {{Cssxref("border-bottom-color")}}, and {{Cssxref("border-left-color")}}.

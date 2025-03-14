@@ -1,23 +1,36 @@
 ---
 title: 속성 접근자
-slug: Web/JavaScript/Reference/Operators/Property_Accessors
-tags:
-  - JavaScript
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
+slug: Web/JavaScript/Reference/Operators/Property_accessors
 ---
+
 {{jsSidebar("Operators")}}
 
 **속성 접근자**는 점 또는 괄호 표기법으로 객체의 속성에 접근할 수 있도록 해줍니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-propertyaccessors.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Property accessors")}}
+
+```js interactive-example
+const person1 = {};
+person1["firstname"] = "Mario";
+person1["lastname"] = "Rossi";
+
+console.log(person1.firstname);
+// Expected output: "Mario"
+
+const person2 = {
+  firstname: "John",
+  lastname: "Doe",
+};
+
+console.log(person2["lastname"]);
+// Expected output: "Doe"
+```
 
 ## 구문
 
 ```js
-    object.property
-    object['property']
+object.property;
+object["property"];
 ```
 
 ## 설명
@@ -36,7 +49,7 @@ object.property = set;
 이 코드에서, `property`는 유효한 JavaScript {{glossary("identifier", "식별자")}}여야합니다. 따라서 `object.$1`은 유효하지만 `object.1`은 아닙니다.
 
 ```js
-document.createElement('pre');
+document.createElement("pre");
 ```
 
 여기서는 "createElement"라는 이름을 가진 메서드를 `document`에서 찾아 호출하고 있습니다.
@@ -44,17 +57,16 @@ document.createElement('pre');
 소숫점 없는 숫자 리터럴의 메서드를 호출하고 싶으면, 메서드의 접근자 앞에 공백을 한 칸 추가해 점이 소숫점으로 인식되지 않도록 해야 합니다.
 
 ```js
-    77 .toExponential();
-    // or
-    77
-    .toExponential();
-    // or
-    (77).toExponential();
-    // or
-    77..toExponential();
-    // or
-    77.0.toExponential();
-    // because 77. === 77.0, no ambiguity
+(77).toExponential();
+// or
+(77).toExponential();
+// or
+(77).toExponential();
+// or
+(77).toExponential();
+// or
+(77.0).toExponential();
+// because 77. === 77.0, no ambiguity
 ```
 
 ### 괄호 표기법
@@ -67,7 +79,7 @@ object[property_name] = set;
 괄호 표기법에서는 `property_name` 으로 문자열이나 {{jsxref("Symbol")}}을 사용할 수 있습니다. 문자열은 유효한 식별자가 아니어도 괜찮습니다. "`1foo`", "`!bar!`", 심지어 " "(공백)도 가능합니다.
 
 ```js
-document['createElement']('pre');
+document["createElement"]("pre");
 ```
 
 이 코드는 점 표기법의 예시와 동일합니다.
@@ -75,7 +87,7 @@ document['createElement']('pre');
 괄호 앞에 공백이 올 수도 있습니다.
 
 ```js
-    document ['createElement']('pre');
+document["createElement"]("pre");
 ```
 
 ### 속성 이름
@@ -84,15 +96,17 @@ document['createElement']('pre');
 
 ```js
 var object = {};
-object['1'] = 'value';
+object["1"] = "value";
 console.log(object[1]);
 ```
 
 위 코드의 `1`은 `'1'`로 변환되므로, 출력 결과는 "value"입니다.
 
 ```js
-var foo = {unique_prop: 1}, bar = {unique_prop: 2}, object = {};
-object[foo] = 'value';
+var foo = { unique_prop: 1 },
+  bar = { unique_prop: 2 },
+  object = {};
+object[foo] = "value";
 console.log(object[bar]);
 ```
 
@@ -107,7 +121,7 @@ console.log(object[bar]);
 JavaScript 초심자로써는 괄호 표기법을 사용할 수 있는 장소에 {{jsxref("eval", "eval()")}}을 남용하기 쉽습니다. 간혹 스크립트에서 다음과 같은 구문을 찾아볼 수 있습니다.
 
 ```js
-x = eval('document.forms.form_name.elements.' + strFormControl + '.value');
+x = eval("document.forms.form_name.elements." + strFormControl + ".value");
 ```
 
 `eval()`은 느리고, 가능하다면 최대한 피해야 합니다. 또한, `strFormControl`은 유효한 식별자여야 하지만, 폼 컨트롤의 ID나 이름은 식별자가 아닐 수도 있습니다. 따라서 괄호 표기법을 대신 사용하는 것이 좋습니다.

@@ -1,15 +1,6 @@
 ---
 title: RegExp.rightContext ($')
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/rightContext
-tags:
-  - JavaScript
-  - Non-standard
-  - Propriété
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/rightContext
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/rightContext
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -19,8 +10,8 @@ La propriété non-standard **`rightContext`** est une propriété statique, acc
 ## Syntaxe
 
 ```js
-RegExp.rightContext
-RegExp["$'"]
+RegExp.rightContext;
+RegExp["$'"];
 ```
 
 ## Description
@@ -29,7 +20,7 @@ La propriété `rightContext` est une propriété statique et n'est pas liée à
 
 La valeur de la propriété `rightContext` n'est accessible qu'en lecture. Le moteur la modifie à chaque fois qu'une nouvelle correspondance est trouvée.
 
-L'alias ne peut pas être utilisé avec la syntaxe utilisant le point (`RegExp.$'`). En effet, l'analyseur (_parser_) attend un début de chaîne du fait de la simple quote, ce qui provoquerait une exception {{jsxref("SyntaxError")}}. Il faut donc utiliser [la notation à base de crochets](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres#Notation_avec_crochets).
+L'alias ne peut pas être utilisé avec la syntaxe utilisant le point (`RegExp.$'`). En effet, l'analyseur (_parser_) attend un début de chaîne du fait de la simple quote, ce qui provoquerait une exception {{jsxref("SyntaxError")}}. Il faut donc utiliser [la notation à base de crochets](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors#notation_avec_crochets).
 
 ## Exemples
 
@@ -37,7 +28,7 @@ L'alias ne peut pas être utilisé avec la syntaxe utilisant le point (`RegExp.$
 var re = /coucou/g;
 re.test("coucou monde !");
 RegExp.rightContext; // " monde !"
-RegExp["$'"];       // " monde !"
+RegExp["$'"]; // " monde !"
 ```
 
 ## Spécifications
@@ -46,7 +37,7 @@ Cette propriété n'est pas standard, elle ne fait partie d'aucune spécificatio
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.rightContext")}}
+{{Compat}}
 
 ## Voir aussi
 

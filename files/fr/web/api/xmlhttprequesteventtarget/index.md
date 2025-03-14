@@ -1,18 +1,11 @@
 ---
 title: XMLHttpRequestEventTarget
 slug: Web/API/XMLHttpRequestEventTarget
-tags:
-  - AJAX
-  - API
-  - NeedsBrowserCompatibility
-  - NeedsContent
-  - Reference
-  - TopicStub
-  - XMLHttpRequest
-translation_of: Web/API/XMLHttpRequestEventTarget
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers("window_and_worker_except_service")}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 `XMLHttpRequestEventTarget` est l'interface qui décrit les gestionnaires d'événements que vous pouvez implémenter dans un objet qui gérera les événements pour un {{ domxref("XMLHttpRequest") }}.
 
@@ -46,4 +39,4 @@ translation_of: Web/API/XMLHttpRequestEventTarget
 ## Voir aussi
 
 - {{ domxref("XMLHttpRequest") }}
-- [Using XMLHttpRequest](/fr/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

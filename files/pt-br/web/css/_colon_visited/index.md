@@ -1,5 +1,5 @@
 ---
-title: ':visited'
+title: :visited
 slug: Web/CSS/:visited
 ---
 
@@ -36,18 +36,21 @@ Por razões de privacidade, navegadores limitam estritamente quais estilos você
 - Os componentes alpha permitidos de estilos seram ignorados. Ao invés disso, o componente alpha do elemento de estado non-`:visited` será usado, exceto quando o componente é `0`, no qual o estilo definido em `:visited` será inteiramente ignorado.
 - Embora esses estilos podem mudar como as cores serão mostradas ao usuário, o método {{domxref("window.getComputedStyle")}} vai mentir e sempre retornar o valor da cor em non-`:visited.`
 
-> **Note:** **Nota:** Para mais informações quanto a essas limitações e as razões por trás delas, veja [Privacy and the :visited selector](/pt-BR/docs/CSS/Privacy_and_the_:visited_selector). Obs: No momento estará apenas disponível em inglês.
+> [!NOTE]
+> Para mais informações quanto a essas limitações e as razões por trás delas, veja [Privacy and the :visited selector](/pt-BR/docs/Web/CSS/Privacy_and_the_:visited_selector). Obs: No momento estará apenas disponível em inglês.
 
 ## Syntaxe
 
 ```css
 a {
-    background-color: white;
-    border: 1px solid white; }
+  background-color: white;
+  border: 1px solid white;
+}
 a:visited {
-    background-color: lightblue;
-    border-color: cyan;
-    color: darkblue; }
+  background-color: lightblue;
+  border-color: cyan;
+  color: darkblue;
+}
 ```
 
 ## Exemplo
@@ -58,7 +61,7 @@ Propriedades que de alguma forma não tenha cor ("color") definida, ou seja tran
 
 ```html
 <a href="#">Você já visitou este link?</a>
-<br>
+<br />
 <a href="">Você já visitou este link.</a>
 ```
 
@@ -86,19 +89,13 @@ a:visited {
 
 ## Especificações
 
-| Especificações                                                                                       | Status                                   | Comentário                                                                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', 'scripting.html#selector-visited', ':visited') }} | {{ Spec2('HTML WHATWG') }}     |                                                                                                                                                                              |
-| {{ SpecName('CSS4 Selectors', '#link', ':visited') }}                             | {{ Spec2('CSS4 Selectors') }} | Sem mudança.                                                                                                                                                                 |
-| {{ SpecName('CSS3 Selectors', '#link', ':visited') }}                             | {{ Spec2('CSS3 Selectors') }} | Sem mudança.                                                                                                                                                                 |
-| {{ SpecName('CSS2.1', 'selector.html#link-pseudo-classes', ':visited') }}     | {{ Spec2('CSS2.1') }}             | Eleva a restrição para aplicar apenas :visited ao elemento {{HTMLElement ("a")}}. Permite que os navegadores restrinjam seu comportamento por motivos de privacidade. |
-| {{ SpecName('CSS1', '#anchor-pseudo-classes', ':visited') }}                     | {{ Spec2('CSS1') }}                 | Definição inicial.                                                                                                                                                           |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.visited")}}
+{{Compat}}
 
 ## Veja também (inglês)
 
-- [Privacy and the :visited selector](/pt-BR/docs/CSS/Privacy_and_the_:visited_selector)
+- [Privacy and the :visited selector](/pt-BR/docs/Web/CSS/Privacy_and_the_:visited_selector)
 - Link-related pseudo-classes: {{cssxref(":link")}}, {{cssxref(":active")}}, {{cssxref(":hover")}}

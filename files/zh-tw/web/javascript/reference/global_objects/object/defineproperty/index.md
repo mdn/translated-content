@@ -7,13 +7,29 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 
 靜態方法 **`Object.defineProperty()`** 會直接對一個物件定義、或是修改現有的屬性。執行後會回傳定義完的物件。
 
-> **備註：** 這個方法會直接針對 {{jsxref("Object")}} 呼叫建構子（constructor），而不是 `Object` 型別的實例。
+> [!NOTE]
+> 這個方法會直接針對 {{jsxref("Object")}} 呼叫建構子（constructor），而不是 `Object` 型別的實例。
 
-{{EmbedInteractiveExample("pages/js/object-defineproperty.html")}}
+{{InteractiveExample("JavaScript Demo: Object.defineProperty()")}}
+
+```js interactive-example
+const object1 = {};
+
+Object.defineProperty(object1, "property1", {
+  value: 42,
+  writable: false,
+});
+
+object1.property1 = 77;
+// Throws an error in strict mode
+
+console.log(object1.property1);
+// Expected output: 42
+```
 
 ## 語法
 
-```plain
+```js-nolint
 Object.defineProperty(obj, prop, descriptor)
 ```
 
@@ -68,37 +84,37 @@ data 和 accessor descriptors 皆為物件，兩者共享下面提及的 key：
 ```js
 // using __proto__
 var obj = {};
-Object.defineProperty(obj, 'key', {
+Object.defineProperty(obj, "key", {
   __proto__: null, // no inherited properties
-  value: 'static'  // not enumerable
-                   // not configurable
-                   // not writable
-                   // as defaults
+  value: "static", // not enumerable
+  // not configurable
+  // not writable
+  // as defaults
 });
 
 // being explicit
-Object.defineProperty(obj, 'key', {
+Object.defineProperty(obj, "key", {
   enumerable: false,
   configurable: false,
   writable: false,
-  value: 'static'
+  value: "static",
 });
 
 // recycling same object
 function withValue(value) {
-  var d = withValue.d || (
-    withValue.d = {
+  var d =
+    withValue.d ||
+    (withValue.d = {
       enumerable: false,
       writable: false,
       configurable: false,
-      value: null
-    }
-  );
+      value: null,
+    });
   d.value = value;
   return d;
 }
 // ... and ...
-Object.defineProperty(obj, 'key', withValue('static'));
+Object.defineProperty(obj, "key", withValue("static"));
 
 // if freeze is available, prevents adding or
 // removing the object prototype properties
@@ -112,43 +128,49 @@ If you want to see how to use the `Object.defineProperty` method with a _binary-
 
 ### 建立屬性
 
-When the property specified doesn't exist in the object, `Object.defineProperty()` creates a new property as described. Fields may be omitted from the descriptor, and default values for those fields are imputed. All of the Boolean-valued fields default to `false`. The `value`, `get`, and `set` fields default to {{jsxref("undefined")}}. A property which is defined without `get`/`set`/`value`/`writable` is called “generic” and is “typed” as a data descriptor.
+When the property specified doesn't exist in the object, `Object.defineProperty()` creates a new property as described. Fields may be omitted from the descriptor, and default values for those fields are imputed. All of the Boolean-valued fields default to `false`. The `value`, `get`, and `set` fields default to {{jsxref("undefined")}}. A property which is defined without `get`/`set`/`value`/`writable` is called 「generic」 and is 「typed」 as a data descriptor.
 
 ```js
 var o = {}; // Creates a new object
 
 // Example of an object property added with defineProperty with a data property descriptor
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 37,
   writable: true,
   enumerable: true,
-  configurable: true
+  configurable: true,
 });
 // 'a' property exists in the o object and its value is 37
 
 // Example of an object property added with defineProperty with an accessor property descriptor
 var bValue = 38;
-Object.defineProperty(o, 'b', {
-  get: function() { return bValue; },
-  set: function(newValue) { bValue = newValue; },
+Object.defineProperty(o, "b", {
+  get: function () {
+    return bValue;
+  },
+  set: function (newValue) {
+    bValue = newValue;
+  },
   enumerable: true,
-  configurable: true
+  configurable: true,
 });
 o.b; // 38
 // 'b' property exists in the o object and its value is 38
 // The value of o.b is now always identical to bValue, unless o.b is redefined
 
 // You cannot try to mix both:
-Object.defineProperty(o, 'conflict', {
+Object.defineProperty(o, "conflict", {
   value: 0x9f91102,
-  get: function() { return 0xdeadbeef; }
+  get: function () {
+    return 0xdeadbeef;
+  },
 });
 // throws a TypeError: value appears only in data descriptors, get appears only in accessor descriptors
 ```
 
 ### 修改屬性
 
-如果該屬性已經存在, `Object.defineProperty()` 將會根據描述符內的值和物件當前的 configuration 來修改屬性。 如果舊的描述符之 `configurable` 的特徵為 false (屬性為 “non-configurable”), 那除了 `writable` 之外的特徵都將無法修改。 在這個情況，也不可能在 data 和 accessor 屬性類型中來回切換。
+如果該屬性已經存在, `Object.defineProperty()` 將會根據描述符內的值和物件當前的 configuration 來修改屬性。 如果舊的描述符之 `configurable` 的特徵為 false (屬性為 「non-configurable」), 那除了 `writable` 之外的特徵都將無法修改。 在這個情況，也不可能在 data 和 accessor 屬性類型中來回切換。
 
 如果有一個屬性是 non-configurable, 那它的 `writable` 特徵只能被改變為 `false`.
 
@@ -156,14 +178,14 @@ Object.defineProperty(o, 'conflict', {
 
 #### Writable attribute
 
-當 `writable` 屬性特徵被設為 `false`, 此屬性為 “non-writable”. 它將無法被重新賦值。
+當 `writable` 屬性特徵被設為 `false`, 此屬性為 「non-writable」. 它將無法被重新賦值。
 
 ```js
 var o = {}; // Creates a new object
 
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 37,
-  writable: false
+  writable: false,
 });
 
 console.log(o.a); // logs 37
@@ -179,9 +201,9 @@ The `enumerable` property attribute defines whether the property shows up in a {
 
 ```js
 var o = {};
-Object.defineProperty(o, 'a', { value: 1, enumerable: true });
-Object.defineProperty(o, 'b', { value: 2, enumerable: false });
-Object.defineProperty(o, 'c', { value: 3 }); // enumerable defaults to false
+Object.defineProperty(o, "a", { value: 1, enumerable: true });
+Object.defineProperty(o, "b", { value: 2, enumerable: false });
+Object.defineProperty(o, "c", { value: 3 }); // enumerable defaults to false
 o.d = 4; // enumerable defaults to true when creating a property by setting it
 
 for (var i in o) {
@@ -191,9 +213,9 @@ for (var i in o) {
 
 Object.keys(o); // ['a', 'd']
 
-o.propertyIsEnumerable('a'); // true
-o.propertyIsEnumerable('b'); // false
-o.propertyIsEnumerable('c'); // false
+o.propertyIsEnumerable("a"); // true
+o.propertyIsEnumerable("b"); // false
+o.propertyIsEnumerable("c"); // false
 ```
 
 #### 可設定 attribute
@@ -202,16 +224,22 @@ The `configurable` attribute controls at the same time whether the property can 
 
 ```js
 var o = {};
-Object.defineProperty(o, 'a', {
-  get: function() { return 1; },
-  configurable: false
+Object.defineProperty(o, "a", {
+  get: function () {
+    return 1;
+  },
+  configurable: false,
 });
 
-Object.defineProperty(o, 'a', { configurable: true }); // throws a TypeError
-Object.defineProperty(o, 'a', { enumerable: true }); // throws a TypeError
-Object.defineProperty(o, 'a', { set: function() {} }); // throws a TypeError (set was undefined previously)
-Object.defineProperty(o, 'a', { get: function() { return 1; } }); // throws a TypeError (even though the new get does exactly the same thing)
-Object.defineProperty(o, 'a', { value: 12 }); // throws a TypeError
+Object.defineProperty(o, "a", { configurable: true }); // throws a TypeError
+Object.defineProperty(o, "a", { enumerable: true }); // throws a TypeError
+Object.defineProperty(o, "a", { set: function () {} }); // throws a TypeError (set was undefined previously)
+Object.defineProperty(o, "a", {
+  get: function () {
+    return 1;
+  },
+}); // throws a TypeError (even though the new get does exactly the same thing)
+Object.defineProperty(o, "a", { value: 12 }); // throws a TypeError
 
 console.log(o.a); // logs 1
 delete o.a; // Nothing happens
@@ -229,22 +257,21 @@ var o = {};
 
 o.a = 1;
 // is equivalent to:
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 1,
   writable: true,
   configurable: true,
-  enumerable: true
+  enumerable: true,
 });
 
-
 // On the other hand,
-Object.defineProperty(o, 'a', { value: 1 });
+Object.defineProperty(o, "a", { value: 1 });
 // is equivalent to:
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 1,
   writable: false,
   configurable: false,
-  enumerable: false
+  enumerable: false,
 });
 ```
 
@@ -257,18 +284,20 @@ function Archiver() {
   var temperature = null;
   var archive = [];
 
-  Object.defineProperty(this, 'temperature', {
-    get: function() {
-      console.log('get!');
+  Object.defineProperty(this, "temperature", {
+    get: function () {
+      console.log("get!");
       return temperature;
     },
-    set: function(value) {
+    set: function (value) {
       temperature = value;
       archive.push({ val: temperature });
-    }
+    },
   });
 
-  this.getArchive = function() { return archive; };
+  this.getArchive = function () {
+    return archive;
+  };
 }
 
 var arc = new Archiver();
@@ -282,22 +311,20 @@ or
 
 ```js
 var pattern = {
-    get: function () {
-        return 'I always return this string, whatever you have assigned';
-    },
-    set: function () {
-        this.myname = 'this is my name string';
-    }
+  get: function () {
+    return "I always return this string, whatever you have assigned";
+  },
+  set: function () {
+    this.myname = "this is my name string";
+  },
 };
 
-
 function TestDefineSetAndGet() {
-    Object.defineProperty(this, 'myproperty', pattern);
+  Object.defineProperty(this, "myproperty", pattern);
 }
 
-
 var instance = new TestDefineSetAndGet();
-instance.myproperty = 'test';
+instance.myproperty = "test";
 console.log(instance.myproperty); // I always return this string, whatever you have assigned
 
 console.log(instance.myname); // this is my name string
@@ -323,11 +350,11 @@ Versions of Chrome which implement `Object.defineProperty()` in some circumstanc
 
 Versions of Safari which implement `Object.defineProperty()` ignore a `length` value different from the array's current {{jsxref("Array.length", "length")}} property, and attempts to change writability execute without error but do not actually change the property's writability.
 
-Only Internet Explorer 9 and later, and Firefox 23 and later, appear to fully and correctly implement redefinition of the {{jsxref("Array.length", "length")}} property of arrays. For now, don't rely on redefining the {{jsxref("Array.length", "length")}} property of an array to either work, or to work in a particular manner. And even when you _can_ rely on it, [there's really no good reason to do so](http://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/).
+Only Internet Explorer 9 and later, and Firefox 23 and later, appear to fully and correctly implement redefinition of the {{jsxref("Array.length", "length")}} property of arrays. For now, don't rely on redefining the {{jsxref("Array.length", "length")}} property of an array to either work, or to work in a particular manner. And even when you _can_ rely on it, [there's really no good reason to do so](https://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/).
 
 ### Internet Explorer 8 specific notes
 
-Internet Explorer 8 implemented a `Object.defineProperty()` method that could [only be used on DOM objects](https://msdn.microsoft.com/en-us/library/dd229916%28VS.85%29.aspx). A few things need to be noted:
+Internet Explorer 8 implemented a `Object.defineProperty()` method that could [only be used on DOM objects](https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/). A few things need to be noted:
 
 - Trying to use `Object.defineProperty()` on native objects throws an error.
 - Property attributes must be set to some values. The `configurable`, `enumerable` and `writable` attributes should all be set to `true` for data descriptor and `true` for `configurable`, `false` for `enumerable` for accessor descriptor.(?) Any attempt to provide other value(?) will result in an error being thrown.
@@ -335,7 +362,7 @@ Internet Explorer 8 implemented a `Object.defineProperty()` method that could [o
 
 ## 參閱
 
-- [Enumerability and ownership of properties](/zh-TW/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/zh-TW/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}

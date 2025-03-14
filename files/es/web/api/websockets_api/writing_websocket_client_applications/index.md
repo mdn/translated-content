@@ -1,20 +1,21 @@
 ---
 title: Escribiendo aplicaciones con WebSockets
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
-tags:
-  - Guía WebSocket WebSockets
-translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 ---
+
+{{DefaultAPISidebar("WebSockets API")}}
 
 WebSockets es una tecnología basada en el protocolo ws, este hace posible establecer una conexión continua full-duplex, entre un cliente y servidor. Un cliente websocket podría ser el navegador del usuario, pero el protocolo es una plataforma independiente.
 
-> **Nota:** Tenemos un ejemplo funcional de un sistema de chat/servidor usado para ejemplos de código que estará disponible una vez nuestra infraestructura esté en posición de hospedar ejemplos de WebSocket apropiadamente.
+> [!NOTE]
+> Tenemos un ejemplo funcional de un sistema de chat/servidor usado para ejemplos de código que estará disponible una vez nuestra infraestructura esté en posición de hospedar ejemplos de WebSocket apropiadamente.
 
 ## Disponibilidad de WebSockets
 
 La API de WebSocket esta disponible para el código JavaScript cuyo alcance DOM sea un objeto {{ domxref("Window") }} o cualquier objeto implementando {{ domxref("WorkerUtils") }}; si es así, puedes usarlos desde los Web Workers.
 
-> **Nota:** La API de WebSockets (y el protocolo subyacente) continúan en activo desarrollo, y existen muchos problemas de compatibilidad entre los navegadores en este momento (e inclusive entre los diferentes lanzamientos del mismo navegador).
+> [!NOTE]
+> La API de WebSockets (y el protocolo subyacente) continúan en activo desarrollo, y existen muchos problemas de compatibilidad entre los navegadores en este momento (e inclusive entre los diferentes lanzamientos del mismo navegador).
 
 ## Creando un Objeto WebSocket
 
@@ -48,16 +49,19 @@ El constructor puede lanzar excepciones:
 
 ### Errores de conexión
 
-Si ocurre un error al intentar conectar, lo primero que recibiremos será un evento con el nombre de "error" en el objeto `WebSocket` (de este modo se invoca el manejador `onerror`), y luego [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent) es enviado al objeto `WebSocket` (de este modo se invoca el manejador `onclose`), para indicar la razón del cierre de la conexión.
+Si ocurre un error al intentar conectar, lo primero que recibiremos será un evento con el nombre de "error" en el objeto `WebSocket` (de este modo se invoca el manejador `onerror`), y luego [`CloseEvent`](/en-US/WebSockets/WebSockets_reference/CloseEvent) es enviado al objeto `WebSocket` (de este modo se invoca el manejador `onclose`), para indicar la razón del cierre de la conexión.
 
-A partir de Firefox 11, es normal recibir un mensaje de error descriptivo en la consola de la plataforma Mozilla, y un código de cierre como está definido en el [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4) a través de un [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent).
+A partir de Firefox 11, es normal recibir un mensaje de error descriptivo en la consola de la plataforma Mozilla, y un código de cierre como está definido en el [RFC 6455, Section 7.4](https://tools.ietf.org/html/rfc6455#section-7.4) a través de un [`CloseEvent`](/en-US/WebSockets/WebSockets_reference/CloseEvent).
 
 ### Ejemplos
 
 En este ejemplo de crea un nuevo WebSocket, conectandose al servidor `ws://www.example.com/socketserver`. El nombre del protocolo "protocolOne" es el utilizado para la consulta del socket, aunque puede ser omitido.
 
 ```js
-var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
+var exampleSocket = new WebSocket(
+  "ws://www.example.com/socketserver",
+  "protocolOne",
+);
 ```
 
 Como respuesta, `exampleSocket.readyState` es `CONNECTING`. El `readyState` será `OPEN` una vez que la conexión este lista para transferir información.
@@ -65,7 +69,10 @@ Como respuesta, `exampleSocket.readyState` es `CONNECTING`. El `readyState` ser�
 Si se quiere establecer una conexión que soporte varios protocolos, se puede establecer un array de protocolos:
 
 ```js
-var exampleSocket = new WebSocket("ws://www.example.com/socketserver", ["protocolOne", "protocolTwo"]);
+var exampleSocket = new WebSocket("ws://www.example.com/socketserver", [
+  "protocolOne",
+  "protocolTwo",
+]);
 ```
 
 Una vez que la conexión este establecida (`readyState` estará `OPEN`), `exampleSocket.protocol` te dirá qué protocolo ha seleccionado el servidor.
@@ -80,9 +87,10 @@ Una vez la conexión esta abierta, se puede comenzar a enviar datos al servidor.
 exampleSocket.send("Here's some text that the server is urgently awaiting!");
 ```
 
-Puedes enviar información como un string, {{ domxref("Blob") }}, o en un [`ArrayBuffer`](/en/JavaScript_typed_arrays/ArrayBuffer).
+Puedes enviar información como un string, {{ domxref("Blob") }}, o en un [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
 
-> **Nota:** Antes de la version 11, Firefox sólo soportaba el envío de datos como una cadena.
+> [!NOTE]
+> Antes de la version 11, Firefox sólo soportaba el envío de datos como una cadena.
 
 Como la conexión es asincronica y es propensa a fallar, no hay garantia de poder llamar al metodo `send()` inmediatamente despúes de haber creado el objeto WebSocket de manera exitosa. Para enviar información se debe estar seguro de que almenos una conexión ya esta abierta, usando el manejador `onopen`:
 
@@ -94,7 +102,7 @@ exampleSocket.onopen = function (event) {
 
 ### Usando JSON para transferir Objetos
 
-Una forma de enviar información compleja al servidor es utilizar [JSON](/en/JSON). Por ejemplo, un programa para chatear puede interactuar con el servidor usando un protocolo que implementa el uso de paquetes de JSON:
+Una forma de enviar información compleja al servidor es utilizar [JSON](/en-US/JSON). Por ejemplo, un programa para chatear puede interactuar con el servidor usando un protocolo que implementa el uso de paquetes de JSON:
 
 ```js
 // Envia texto a todos los usuarios através del servidor
@@ -103,8 +111,8 @@ function sendText() {
   var msg = {
     type: "message",
     text: document.getElementById("text").value,
-    id:   clientID,
-    date: Date.now()
+    id: clientID,
+    date: Date.now(),
   };
 
   // Send the msg object as a JSON-formatted string.
@@ -122,7 +130,7 @@ WebSockets API es un manejador de eventos; cuando el mensaje es recibido, un "me
 ```js
 exampleSocket.onmessage = function (event) {
   console.log(event.data);
-}
+};
 ```
 
 ### Recibiendo e interpretando objetos JSON
@@ -136,30 +144,38 @@ Vamos a imaginar una aplicación de chat, donde el cliente usa JSON para transmi
 El código que interpretará los mensajes entrantes será así:
 
 ```js
-exampleSocket.onmessage = function(event) {
+exampleSocket.onmessage = function (event) {
   var f = document.getElementById("chatbox").contentDocument;
   var text = "";
   var msg = JSON.parse(event.data);
   var time = new Date(msg.date);
   var timeStr = time.toLocaleTimeString();
 
-  switch(msg.type) {
+  switch (msg.type) {
     case "id":
       clientID = msg.id;
       setUsername();
       break;
     case "username":
-      text = "<b>User <em>" + msg.name + "</em> signed in at " + timeStr + "</b><br>";
+      text =
+        "<b>User <em>" +
+        msg.name +
+        "</em> signed in at " +
+        timeStr +
+        "</b><br>";
       break;
     case "message":
       text = "(" + timeStr + ") <b>" + msg.name + "</b>: " + msg.text + "<br>";
       break;
     case "rejectusername":
-      text = "<b>Your username has been set to <em>" + msg.name + "</em> because the name you chose is in use.</b><br>"
+      text =
+        "<b>Your username has been set to <em>" +
+        msg.name +
+        "</em> because the name you chose is in use.</b><br>";
       break;
     case "userlist":
       var ul = "";
-      for (i=0; i < msg.users.length; i++) {
+      for (i = 0; i < msg.users.length; i++) {
         ul += msg.users[i] + "<br>";
       }
       document.getElementById("userlistbox").innerHTML = ul;
@@ -173,7 +189,7 @@ exampleSocket.onmessage = function(event) {
 };
 ```
 
-Se usa [`JSON.parse()`](/en/JavaScript/Reference/Global_Objects/JSON/parse) para convertir el objeto JSON de vuelta al original, luego se examina y se realiza la acción pertinente.
+Se usa [`JSON.parse()`](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) para convertir el objeto JSON de vuelta al original, luego se examina y se realiza la acción pertinente.
 
 ### Formato de texto de los datos
 

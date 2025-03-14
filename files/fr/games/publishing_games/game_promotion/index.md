@@ -1,14 +1,6 @@
 ---
 title: Promouvoir un jeu
 slug: Games/Publishing_games/Game_promotion
-tags:
-  - Community
-  - Games
-  - JavaScript
-  - Online Games
-  - Promotion
-  - blog
-  - competitions
 ---
 
 {{GamesSidebar}}
@@ -25,9 +17,9 @@ Beaucoup de grands jeux naissent d'une petite démo rapide créée pendant une c
 
 Vous avez tout intérêt à créer votre propre site internet comprenant toutes les informations relatives à vos jeux, de façon à montrer aux gens ce sur quoi vous avez travaillé. Plus vous pouvez intégrer d'informations, mieux c'est : captures d'écrans, descriptions, bande-annonce, dossier de presse, configurations nécessaires, plateformes disponibles, détails sur l'assistance, etc. Vous marquerez des points en autorisant vos utilisateurs à jouer directement à vos jeux en ligne, a minima à une démo. Vous devriez également travailler un peu votre référencement sur les moteurs de recherche (SEO - _Search Engine Optimization_) pour permettre aux gens de trouver vos jeux plus facilement.
 
-Vous pouvez également tenir un blog dédié à tout ce qui concerne vos activités de développeur⋅se de jeux. Décrivez votre processus de développement, discutez des bugs les plus affreux que vous rencontrez, partagez des anecdotes marrantes ou ce que vous avez appris, les hauts et les bas d'une vie de développeur de jeu. La publication régulière d'informations à propos de vos jeux aidera à éduquer d'autres personnes, à améliorer votre réputation au sein de la communauté, et améliorera également votre référencement. Une possibilité plus avancée consiste à publier un [rapport mensuel](https://dev.end3r.com/?s=monthly+report) qui synthétise vos progrès : il vous permet de voir ce que vous avez accompli au cours du mois passé, ce qu'il reste à faire, et il rappelle aux gens que votre jeu sera bientôt publié. C'est toujours une bonne chose de générer du buzz.
+Vous pouvez également tenir un blog dédié à tout ce qui concerne vos activités de développeur⋅se de jeux. Décrivez votre processus de développement, discutez des bugs les plus affreux que vous rencontrez, partagez des anecdotes marrantes ou ce que vous avez appris, les hauts et les bas d'une vie de développeur de jeu. La publication régulière d'informations à propos de vos jeux aidera à éduquer d'autres personnes, à améliorer votre réputation au sein de la communauté, et améliorera également votre référencement. Une possibilité plus avancée consiste à publier un [rapport mensuel](https://end3r.com/blog/?s=monthly+report) qui synthétise vos progrès : il vous permet de voir ce que vous avez accompli au cours du mois passé, ce qu'il reste à faire, et il rappelle aux gens que votre jeu sera bientôt publié. C'est toujours une bonne chose de générer du buzz.
 
-Bien que vous puissiez créer votre site web de zéro, il existe également des outils pour rendre le processus plus facile. [ManaKeep](https://manakeep.com) par exemple est un constructeur de sites internet conçu spécifiquement pour les développeurs de jeux indépendants, et représente un super point de départ pour créer votre site. [Presskit()](https://dopresskit.com/) quant à lui peut vous aider à monter une page dédiée à la presse que vous pouvez partager avec les médias.
+Bien que vous puissiez créer votre site web de zéro, il existe également des outils pour rendre le processus plus facile. [ManaKeep](https://manakeep.com/) par exemple est un constructeur de sites internet conçu spécifiquement pour les développeurs de jeux indépendants, et représente un super point de départ pour créer votre site. [Presskit()](https://dopresskit.com/) quant à lui peut vous aider à monter une page dédiée à la presse que vous pouvez partager avec les médias.
 
 ## Médias sociaux
 
@@ -41,7 +33,7 @@ Faites grandir votre groupe de fans en discutant avec eux, en partageant des ast
 
 L'utilisation de portails de jeux est principalement liée à la [monétisation](/fr/docs/Games/Publishing_games/Game_monetization). Cependant, si vous n'avez pas prévu de [vendre des licences](/fr/docs/Games/Publishing_games/Game_monetization#licensing) d'achat à vos utilisateurs mais que vous prévoyez à la place [d'intégrer des publicités](/fr/docs/Games/Publishing_games/Game_monetization#advertisements) ou de passer par des achats dans l'application même, la promotion de votre jeu sur des portails gratuits peut être efficace.
 
-Plusieurs options s'offrent à vous en termes de publication, grâce à des portails comme [CrazyGames.com](https://crazygames.com), [GameDistribution.com](https://gamedistribution.com/), [Pffg.online](https://www.pffg.online), [Lagged.com](https://lagged.com), [PacoGames.com](https://www.pacogames.com) ,[games4html5.com](https://www.games4html5.com/), [HTML5Games.com](https://html5games.com/), [BestGamo.com](https://www.bestgamo.com) ou encore [Crazy Games](https://www.crazygames4u.com/), et au moins 20 ou 30 autres portails connus, avec ou sans API.
+Plusieurs options s'offrent à vous en termes de publication, grâce à des portails comme [CrazyGames.com](https://www.crazygames.com), [GameDistribution.com](https://gamedistribution.com/), [HahaGames.com](https://www.hahagames.com/), [Lagged.com](https://lagged.com/), [PacoGames.com](https://www.pacogames.com/) ,[games4html5.com](https://www.games4html5.com/), [HTML5Games.com](https://html5games.com/) ou encore [Crazy Games](https://www.crazygames4u.com/), et au moins 20 ou 30 autres portails connus, avec ou sans API.
 
 Les portails qui possèdent leur propre API vous permettront d'autoriser des accès pour vos utilisateurs, de sauvegarder leurs progrès ou de suivre leurs achats au sein de l'application. Vous pouvez également vendre une version complète de votre jeu depuis la version démo sur navigateur, ce qui peut être une excellente tactique au vu de la forte concurrence qui existe ; certains développeurs parviennent même à proposer des versions intégrales sur navigateur. La plupart des portails proposent soit des contrats de partage des revenus de votre jeu, soit vous achèteront des licences non exclusives.
 
@@ -49,9 +41,9 @@ Les portails gratuits quant à eux vous amènent du trafic, mais seuls les meill
 
 ## Presse
 
-Vous pouvez essayer de contacter la [presse](https://indiegames.com/) spécialisée à propos de votre jeu ; gardez toutefois à l'esprit que les journalistes reçoivent déjà des tonnes de demandes chaque jour qui passe : restez humble et patient si vous ne recevez pas de réponse tout de suite, et restez poli⋅e quand vous leur parlez. Assurez-vous au préalable qu'ils traitent bien du genre de jeu ou de plateformes dont vous souhaitez leur parler : vous éviterez ainsi de leur envoyer des demandes qui ne relèvent pas de leur domaine d'intérêt. Du moment que vous gardez une approche honnête et que votre jeu est bon, vous aurez de bien meilleures chances de réussite.
+Vous pouvez essayer de contacter la [presse](https://indiegamesplus.com/) spécialisée à propos de votre jeu ; gardez toutefois à l'esprit que les journalistes reçoivent déjà des tonnes de demandes chaque jour qui passe : restez humble et patient si vous ne recevez pas de réponse tout de suite, et restez poli⋅e quand vous leur parlez. Assurez-vous au préalable qu'ils traitent bien du genre de jeu ou de plateformes dont vous souhaitez leur parler : vous éviterez ainsi de leur envoyer des demandes qui ne relèvent pas de leur domaine d'intérêt. Du moment que vous gardez une approche honnête et que votre jeu est bon, vous aurez de bien meilleures chances de réussite.
 
-Si vous souhaitez en savoir plus sur la déontologie et la façon de s'adresser à la presse, vous devriez absolument consulter ces deux ressources : un guide génial traduit par Game Sphere intitulé ["Comment contacter la presse"](http://www.game-sphere.fr/comment-contacter-la-presse/) (en français) (tiré du guide ["How To Contact Press"](https://app.box.com/s/p0ft5zdolpi0ydkrykab) en anglais), et des [listes de YouTubers et de sites](https://pixelprospector.com/videogamejournaliser.html) (y compris français) à contacter que PixelProspector propose.
+Si vous souhaitez en savoir plus sur la déontologie et la façon de s'adresser à la presse, vous devriez absolument consulter ces deux ressources : un guide génial traduit par Game Sphere intitulé ["Comment contacter la presse"](https://www.game-sphere.fr/comment-contacter-la-presse/) (en français) (tiré du guide ["How To Contact Press"](https://app.box.com/s/p0ft5zdolpi0ydkrykab) en anglais), et des [listes de YouTubers et de sites](https://pixelprospector.com/videogamejournaliser.html) (y compris français) à contacter que PixelProspector propose.
 
 ## Tutoriels
 

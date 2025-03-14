@@ -1,7 +1,6 @@
 ---
 title: URLSearchParams
 slug: Web/API/URLSearchParams
-translation_of: Web/API/URLSearchParams
 ---
 
 {{ApiRef("URL API")}}
@@ -49,7 +48,7 @@ _Esta interfaz no hereda ningún método._
 ## Ejemplo
 
 ```js
-var paramsString = "q=URLUtils.searchParams&topic=api"
+var paramsString = "q=URLUtils.searchParams&topic=api";
 var searchParams = new URLSearchParams(paramsString);
 
 //Itera los parámetros de búsqueda.
@@ -75,11 +74,9 @@ searchParams.toString(); // "q=URLUtils.searchParams"
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.URLSearchParams")}}
+{{Compat}}
 
 ## Vea también
 
 - Otras interfaces relacionadas con URL: {{domxref("URL")}}, {{domxref("URLUtils")}}.
 - [Google Developers: Fácil manipulación de una URL con URLSearchParams](https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en)
-
-<!---->

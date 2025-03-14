@@ -28,7 +28,7 @@ registry.register(target, heldValue, [unregisterToken]);
 
 ## 注
 
-重要な注意点については、 {{jsxref("FinalizationRegistry")}} ページの[可能な限り避ける](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#Avoid_where_possible)と[クリーンアップコールバックに関する注意事項](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#Notes_on_cleanup_callbacks)の部分を参照してください。
+重要な注意点については、 {{jsxref("FinalizationRegistry")}} ページの[可能な限り避ける](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#avoid_where_possible)と[クリーンアップコールバックに関する注意事項](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#notes_on_cleanup_callbacks)の部分を参照してください。
 
 ## 例
 
@@ -43,7 +43,7 @@ registry.register(target, "some value", target);
 次の例は `target` で参照される対象オブジェクトを他のオブジェクトを保持値として登録し、登録解除トークンを渡していません (すなわち `target` は登録解除できません)。
 
 ```js
-registry.register(target, {"useful": "info about target"});
+registry.register(target, { useful: "info about target" });
 ```
 
 ## 仕様書
@@ -52,7 +52,7 @@ registry.register(target, {"useful": "info about target"});
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.FinalizationRegistry.register")}}
+{{Compat}}
 
 ## 関連情報
 

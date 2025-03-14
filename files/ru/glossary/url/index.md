@@ -1,28 +1,20 @@
 ---
-title: URL (Единый указатель ресурса)
+title: URL
 slug: Glossary/URL
-tags:
-  - URL
-  - Глоссарий
-  - Ссылки
-  - веб-адреса
-  - урлы
-translation_of: Glossary/URL
-original_slug: Глоссарий/URL
+l10n:
+  sourceCommit: 731e5ba6630a220c24b22288b58af70495063555
 ---
 
-_Единый указатель ресурса (Uniform Resource Locator,_ **URL**) — строка, однозначно определяющая, где в интернете находится ресурс.
+{{GlossarySidebar}}
 
-В контексте {{Glossary("HTTP")}}, URL называют "адрес" (web address)" или "ссылку" (link). В браузере URL отображается в адресной строке , например, `https://developer.mozilla.org`.
+**URL** (англ. _Uniform Resource Locator_) — это строка, определяющая расположение ресурса (например, веб-страницы, изображения или видео) в Интернете.
 
-Кроме того, URL используют при передаче файлов через {{Glossary("FTP")}} , в электронной почте через ({{Glossary("SMTP")}}) и других местах.
+В контексте протокола {{Glossary("HTTP")}}, URL называют «веб-адресом» или «ссылкой». {{glossary("browser", "Браузер")}} отображает URL в адресной строке, например: `https://developer.mozilla.org`. Некоторые браузеры отображают только часть URL, которая находится после «//», то есть {{Glossary("Domain name", "доменное имя")}}.
+
+URL также могут быть использованы при передаче файлов ({{Glossary("FTP")}}), в электронной почте ({{Glossary("SMTP")}}) и в других протоколах.
 
 ## Смотрите также
 
-### Основная информация
-
-- {{Interwiki("wikipedia", "URL")}} в Википедии
-
-### Узнайте об этом
-
-- [Понимание структуры URL](/ru/docs/Learn/Understanding_URLs) на сайте MDN
+- [Что такое URL-адрес?](/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL) на сайте MDN
+- Синтаксис URL-адресов определён в [URL Living Standard](https://url.spec.whatwg.org/)
+- [URL](https://ru.wikipedia.org/wiki/URL) в Википедии

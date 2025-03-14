@@ -1,25 +1,32 @@
 ---
 title: Object.isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 ---
 
 {{JSRef}}
 
 **`Object.isSealed()`** 메서드는 객체가 봉인됐는지 판별합니다.
 
-{{EmbedInteractiveExample("pages/js/object-issealed.html")}}
+{{InteractiveExample("JavaScript Demo: Object.isSealed()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+console.log(Object.isSealed(object1));
+// Expected output: false
+
+Object.seal(object1);
+
+console.log(Object.isSealed(object1));
+// Expected output: true
+```
 
 ## 구문
 
 ```js
-Object.isSealed(obj)
+Object.isSealed(obj);
 ```
 
 ### 매개변수
@@ -47,12 +54,12 @@ Object.preventExtensions(empty);
 Object.isSealed(empty); // === true
 
 // 비어 있지 않은 객체는 다릅니다, 그 속성이 모두 설정 불가가 아닌 한.
-var hasProp = { fee: 'fie foe fum' };
+var hasProp = { fee: "fie foe fum" };
 Object.preventExtensions(hasProp);
 Object.isSealed(hasProp); // === false
 
 // 그러나 모두 설정 불가하게 하면 객체는 봉인됩니다.
-Object.defineProperty(hasProp, 'fee', { configurable: false });
+Object.defineProperty(hasProp, "fee", { configurable: false });
 Object.isSealed(hasProp); // === true
 
 // 객체를 봉인하는 가장 쉬운 방법은 물론 Object.seal 입니다.
@@ -69,7 +76,11 @@ Object.isFrozen(sealed); // === true (모든 속성도 쓰기 불가)
 var s2 = Object.seal({ p: 3 });
 Object.isFrozen(s2); // === false ('p'는 여전히 쓰기 가능)
 
-var s3 = Object.seal({ get p() { return 0; } });
+var s3 = Object.seal({
+  get p() {
+    return 0;
+  },
+});
 Object.isFrozen(s3); // === true (설정 가능성만이 접근자 속성에게 중요함)
 ```
 

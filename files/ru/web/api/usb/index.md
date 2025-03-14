@@ -1,14 +1,6 @@
 ---
 title: USB
 slug: Web/API/USB
-tags:
-  - API
-  - Interface
-  - Reference
-  - USB
-  - WebUSB
-  - WebUSB API
-translation_of: Web/API/USB
 ---
 
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
@@ -33,7 +25,7 @@ translation_of: Web/API/USB
 - {{domxref("USB.requestDevice()")}}
   - : Возвращает {{jsxref("Promise")}}, который разрешается экземпляром {{domxref("USBDevice")}}, если указанное устройство найдено. Вызов этой функции запускает поток сопряжения агента пользователя.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

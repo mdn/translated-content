@@ -1,29 +1,25 @@
 ---
-title: Event.isTrusted
+title: Event：isTrusted 属性
 slug: Web/API/Event/isTrusted
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("DOM")}}
 
-{{domxref("Event")}} 接口的 **`isTrusted`** 属性是一个只读属性，它是一个布尔值（{{domxref("Boolean")}}）。当事件是由用户行为生成的时候，这个属性的值为 `true` ，而当事件是由脚本创建、修改、通过 {{domxref("EventTarget.dispatchEvent()")}} 派发的时候，这个属性的值为 `false` 。
+{{domxref("Event")}} 接口的 **`isTrusted`** 只读属性是一个表示事件是否由用户行为生成的布尔值。当事件由用户行为触发时，为 `true`；当事件由脚本创建或修改，或通过 {{domxref("EventTarget.dispatchEvent()")}} 派发时，为 `false`。
 
-## 语法
+## 值
 
-```plain
-var eventIsTrusted = event.isTrusted;
-```
-
-### 值
-
-{{domxref("Boolean")}}（布尔值）
+一个布尔值。
 
 ## 示例
 
 ```js
 if (e.isTrusted) {
-  /* Event 事件可信 */
+  /* 事件可信 */
 } else {
-  /* Event 事件不可信 */
+  /* 事件不可信 */
 }
 ```
 
@@ -31,6 +27,6 @@ if (e.isTrusted) {
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}

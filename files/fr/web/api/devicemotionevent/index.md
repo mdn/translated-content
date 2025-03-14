@@ -1,16 +1,6 @@
 ---
 title: DeviceMotionEvent
 slug: Web/API/DeviceMotionEvent
-tags:
-  - API
-  - Device Orientation
-  - Experimental
-  - Firefox OS
-  - Mobile
-  - Motion
-  - Orientation
-  - TopicStub
-translation_of: Web/API/DeviceMotionEvent
 ---
 
 {{apiref("Device Orientation Events")}}{{SeeCompatTable}}
@@ -19,7 +9,8 @@ translation_of: Web/API/DeviceMotionEvent
 
 `DeviceMotionEvent` fournit aux développeurs Web des informations sur la vitesse des changements de position et d'orientation de l'appareil.
 
-> **Attention :** Actuellement, Firefox et Chrome ne gèrent pas les coordonnées de la même manière. Faites attention à cela lorsque vous les utilisez.
+> [!WARNING]
+> Actuellement, Firefox et Chrome ne gèrent pas les coordonnées de la même manière. Faites attention à cela lorsque vous les utilisez.
 
 ## Constructeur
 
@@ -40,8 +31,8 @@ translation_of: Web/API/DeviceMotionEvent
 ## Exemple
 
 ```js
-window.addEventListener('devicemotion', function(event) {
-  console.log(event.acceleration.x + ' m/s2');
+window.addEventListener("devicemotion", function (event) {
+  console.log(event.acceleration.x + " m/s2");
 });
 ```
 
@@ -60,5 +51,5 @@ window.addEventListener('devicemotion', function(event) {
 - L'évènement [`devicemotion`](/fr/docs/Web/API/Window/devicemotion_event)
 - [`Accelerometer`](/fr/docs/Web/API/Accelerometer)
 - [`LinearAccelerationSensor`](/fr/docs/Web/API/LinearAccelerationSensor)
-- [Détection de l'orientation de l'appareil](/fr/docs/Web/Events/Detecting_device_orientation)
-- [Explication des données d'orientation et de mouvement](/fr/docs/Web/Events/Orientation_and_motion_data_explained)
+- [Détection de l'orientation de l'appareil](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- [Explication des données d'orientation et de mouvement](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)

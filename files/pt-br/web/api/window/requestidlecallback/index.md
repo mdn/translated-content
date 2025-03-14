@@ -9,7 +9,8 @@ O método **`window.requestIdleCallback()`** enfileira uma função para ser exe
 
 Você pode chamar `requestIdleCallback()` com uma função callback ociosa para agendar outro callback para ter lugar não antes da próxima passagem pelo event loop.
 
-> **Nota:** Um `timeout` é altamento recomendado, caso contrário, é possível que vários segundos passem antes que a função callback seja chamada.
+> [!NOTE]
+> Um `timeout` é altamento recomendado, caso contrário, é possível que vários segundos passem antes que a função callback seja chamada.
 
 ## Syntax
 
@@ -35,15 +36,13 @@ An ID which can be used to cancel the callback by passing it into the {{domxref(
 
 See our [complete example](/pt-BR/docs/Web/API/Background_Tasks_API#Example) in the article [Cooperative Scheduling of Background Tasks API](/pt-BR/docs/Web/API/Background_Tasks_API).
 
-## Specifications
+## Especificações
 
-| Specification                                | Status                                   | Comment             |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('Background Tasks')}} | {{Spec2('Background Tasks')}} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidade com navegadores
 
-{{Compat("api.Window.requestIdleCallback")}}
+{{Compat}}
 
 ## See also
 

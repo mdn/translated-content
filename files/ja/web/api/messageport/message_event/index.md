@@ -1,54 +1,103 @@
 ---
-title: MessagePort.onmessage
+title: "MessagePort: message イベント"
+short-title: message
 slug: Web/API/MessagePort/message_event
-original_slug: Web/API/MessagePort/onmessage
+l10n:
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
 
-{{domxref("MessagePort")}} インターフェイスの **`onmessage`** イベントハンドラは、{{domxref("EventListener")}} であり、ポート上で `message` 型の {{domxref("MessageEvent")}} が発動した時に呼び出されます。つまり、ポートがメッセージを受信した時に呼び出されます。
+**`message`** イベントは {{domxref('MessagePort')}} オブジェクトで、チャンネル上でメッセージが届いたときに発生します。
 
-{{AvailableInWorkers}}
+このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("message", (event) => {});
+
+onmessage = (event) => {};
 ```
-channel.onmessage = function() { ... };
-```
+
+## イベント型
+
+{{domxref("MessageEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("MessageEvent")}}
+
+## イベントプロパティ
+
+_このインターフェイスは親である {{domxref("Event")}} からプロパティを継承しています。_
+
+- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
+  - : メッセージ送信元によって送信されたデータです。
+- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
+  - : 文字列で、メッセージ送信元のオリジンを表します。
+- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
+  - : 文字列で、このイベントの一意の ID を表します。
+- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
+  - : メッセージイベントソース、すなわち {{glossary("WindowProxy")}}、{{domxref("MessagePort")}}、{{domxref("ServiceWorker")}} の何れかのオブジェクトで、メッセージの送信元を表します。
+- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
+  - : {{domxref("MessagePort")}} オブジェクトの配列で、メッセージが送信されるチャンネルに関連するポートを表します（チャンネルメッセージングや、共有ワーカーにメッセージを送信する場合など、適切な場合）。
 
 ## 例
 
-次のコードブロックには、{{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} コンストラクタで作成された新しいチャンネルがあります。IFrame が読み込まれた時、{{domxref("MessagePort.postMessage")}} を使用してメッセージと {{domxref("MessageChannel.port2")}} が IFrame へ渡されます。すると、`handleMessage` ハンドラが `onmessage` によって IFrame から返されたメッセージに応答し、そのメッセージを段落に出力します。ここで、{{domxref("MessageChannel.port1")}} は、メッセージが到着したときに確認するための待機状態にあります。
+[`MessageChannel`](/ja/docs/Web/API/MessageChannel) を作成し、そのポートの 1 つを別の閲覧コンテキスト（別の [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) など）に送信するスクリプトを、次のようなコードで作成するとします。
 
 ```js
-var channel = new MessageChannel();
-var para = document.querySelector('p');
+const channel = new MessageChannel();
+const myPort = channel.port1;
+const targetFrame = window.top.frames[1];
+const targetOrigin = "https://example.org";
 
-var ifr = document.querySelector('iframe');
-var otherWindow = ifr.contentWindow;
+const messageControl = document.querySelector("#message");
+const channelMessageButton = document.querySelector("#channel-message");
 
-ifr.addEventListener("load", iframeLoaded, false);
+channelMessageButton.addEventListener("click", () => {
+  myPort.postMessage(messageControl.value);
+});
 
-function iframeLoaded() {
-  otherWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
-}
-
-channel.port1.onmessage = handleMessage;
-function handleMessage(e) {
-  para.innerHTML = e.data;
-}
+targetFrame.postMessage("init", targetOrigin, [channel.port2]);
 ```
 
-完全に動作する例は、Github 上の [チャンネルメッセージ送信の基本デモ](https://github.com/mdn/channel-messaging-basic-demo) を見てください ([実際の動作も確認できます](http://mdn.github.io/channel-messaging-basic-demo/))。
+対象とするポートを受信し、そのポートでメッセージの待ち受けを開始するには、次のようなコードを使用することができます。
 
-## 仕様
+```js
+window.addEventListener("message", (event) => {
+  const myPort = event.ports[0];
+
+  myPort.addEventListener("message", (event) => {
+    received.textContent = event.data;
+  });
+
+  myPort.start();
+});
+```
+
+リスナーが [`MessagePort.start()`](/ja/docs/Web/API/MessagePort/start) を呼び出さなければ、このポートにメッセージが配信されないことに注意してください。これは、[`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドを使用する場合のみ必要です。受信者が `onmessage` を使用する場合は、`start()` が暗黙的に呼び出されます。
+
+```js
+window.addEventListener("message", (event) => {
+  const myPort = event.ports[0];
+
+  myPort.onmessage = (event) => {
+    received.textContent = event.data;
+  };
+});
+```
+
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザの実装状況
+## ブラウザーの互換性
 
 {{Compat}}
 
 ## 関連情報
 
-- [Using channel messaging](/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- 関連イベント: [`messageerror`](/ja/docs/Web/API/MessagePort/messageerror_event)
+- [チャンネルメッセージングの使用](/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

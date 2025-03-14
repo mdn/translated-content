@@ -1,23 +1,35 @@
 ---
 title: Intl.ListFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - ListFormat
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/ListFormat/format
 ---
 
 {{JSRef}}
 
 La méthode **`format()`** renvoie une chaîne de caractères représentant la liste passée en argument, mise en forme selon la langue choisie (lors de la construction de l'objet `Intl.ListFormat`).
 
-{{EmbedInteractiveExample("pages/js/intl-listformat.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.ListFormat")}}
+
+```js interactive-example
+const vehicles = ["Motorcycle", "Bus", "Car"];
+
+const formatter = new Intl.ListFormat("en", {
+  style: "long",
+  type: "conjunction",
+});
+console.log(formatter.format(vehicles));
+// Expected output: "Motorcycle, Bus, and Car"
+
+const formatter2 = new Intl.ListFormat("de", {
+  style: "short",
+  type: "disjunction",
+});
+console.log(formatter2.format(vehicles));
+// Expected output: "Motorcycle, Bus oder Car"
+
+const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
+console.log(formatter3.format(vehicles));
+// Expected output: "Motorcycle Bus Car"
+```
 
 ## Description
 
@@ -40,13 +52,11 @@ Une chaîne de caractères représentant les éléments de la liste et mise en f
 
 ## Spécifications
 
-| Spécification                                                                                                                                 | État                    | Commentaires |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.ListFormat.prototype.format`](https://tc39.github.io/proposal-intl-list-format/#sec-Intl.ListFormat.prototype.format) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.ListFormat.format")}}
+{{Compat}}
 
 ## Voir aussi
 

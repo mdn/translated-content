@@ -1,28 +1,43 @@
 ---
 title: handler.get()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Proxy
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/get
 ---
 
 {{JSRef}}
 
 La méthode **`handler.get()`** est une trappe pour intercepter l'accès à la valeur d'une propriété.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-get.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.get()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  secret: "easily scared",
+  eyeCount: 4,
+};
+
+const handler1 = {
+  get: function (target, prop, receiver) {
+    if (prop === "secret") {
+      return `${target.secret.substring(0, 4)} ... shhhh!`;
+    }
+    return Reflect.get(...arguments);
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+console.log(proxy1.eyeCount);
+// Expected output: 4
+
+console.log(proxy1.secret);
+// Expected output: "easi ... shhhh!"
+```
 
 ## Syntaxe
 
 ```js
 var p = new Proxy(cible, {
-  get: function(cible, propriété, récepteur) {
-  }
+  get: function (cible, propriété, récepteur) {},
 });
 ```
 
@@ -65,15 +80,18 @@ Si les invariants suivants ne sont pas respectés, le proxy renverra une excepti
 Dans l'exemple suivant, on intercepte les accès aux propriétés :
 
 ```js
-var p = new Proxy({}, {
-  get: function(cible, propriété, récepteur) {
-    console.log("appelée : " + propriété);
-    return 10;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    get: function (cible, propriété, récepteur) {
+      console.log("appelée : " + propriété);
+      return 10;
+    },
+  },
+);
 
 console.log(p.a); // "appelée : a"
-                  // 10
+// 10
 ```
 
 Le code suivant ne respecte pas l'invariant :
@@ -84,13 +102,13 @@ Object.defineProperty(obj, "a", {
   configurable: false,
   enumerable: false,
   value: 10,
-  writable: false
+  writable: false,
 });
 
 var p = new Proxy(obj, {
-  get: function(cible, propriété) {
+  get: function (cible, propriété) {
     return 20;
-  }
+  },
 });
 
 p.a; // exception TypeError levée

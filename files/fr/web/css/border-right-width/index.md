@@ -1,11 +1,6 @@
 ---
 title: border-right-width
 slug: Web/CSS/border-right-width
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-right-width
 ---
 
 {{CSSRef}}
@@ -59,13 +54,13 @@ border-right-width: unset;
 ### CSS
 
 ```css
-.element1{
+.element1 {
   border-right: thick solid red;
 }
-.element2{
+.element2 {
   border-right: medium solid orange;
 }
-.element3{
+.element3 {
   border-right: thin solid green;
 }
 ```
@@ -73,17 +68,11 @@ border-right-width: unset;
 ### HTML
 
 ```html
-<p class="element1">
-  Une bordure épaisse rouge.
-</p>
+<p class="element1">Une bordure épaisse rouge.</p>
 
-<p class="element2">
-  Une bordure moyenne orange.
-</p>
+<p class="element2">Une bordure moyenne orange.</p>
 
-<p class="element3">
-  Et une bordure fine verte.
-</p>
+<p class="element3">Et une bordure fine verte.</p>
 ```
 
 ### Résultat

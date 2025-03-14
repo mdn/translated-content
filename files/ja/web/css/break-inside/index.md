@@ -22,6 +22,85 @@ break-inside: revert;
 break-inside: unset;
 ```
 
+{{InteractiveExample("CSS Demo: break-inside")}}
+
+```css interactive-example-choice
+break-inside: auto;
+```
+
+```css interactive-example-choice
+break-inside: avoid;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div>
+    <p>
+      The effect of this property can be noticed when the document is being
+      printed or a preview of a print is displayed.
+    </p>
+    <button id="print-btn">Show Print Preview</button>
+    <div class="box-container">
+      <div class="box">Content before the property</div>
+      <div class="box" id="example-element">Content with 'break-inside'</div>
+      <div class="box">Content after the property</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.box {
+  border: solid #5b6dcd 5px;
+  background-color: #5b6dcd;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+#example-element {
+  border: solid 5px #ffc129;
+  background-color: #ffc129;
+  color: black;
+}
+
+.hide-element {
+  display: none;
+}
+
+@media print {
+  #example-element {
+    height: 25cm;
+  }
+}
+```
+
+```js interactive-example
+const btn = document.getElementById("print-btn");
+const editorContainer = document.getElementsByClassName(
+  "css-editor-container",
+)[0];
+const exampleHTMLElement = document.getElementById("default-example");
+
+const printableSection = document.createElement("div");
+printableSection.setAttribute("id", "printable-section");
+printableSection.classList.add("hide-element");
+document.body.appendChild(printableSection);
+
+btn.addEventListener("click", () => {
+  const exampleContent = exampleHTMLElement.innerHTML;
+
+  editorContainer.classList.add("hide-element");
+  printableSection.innerHTML = exampleContent;
+  printableSection.classList.remove("hide-element");
+
+  window.print();
+
+  printableSection.classList.add("hide-element");
+  printableSection.innerHTML = "";
+  editorContainer.classList.remove("hide-element");
+});
+```
+
 区切り位置になる可能性のある場所 (言い換えれば、要素の境界) は、3 つのプロパティに影響されます。前の要素の {{cssxref("break-after")}} の値、次の要素の {{cssxref("break-before")}} の値、包含要素の `break-inside` の値です。
 
 区切られるかどうかを判断するために、以下の規則が適用されます。
@@ -79,16 +158,34 @@ break-inside: unset;
 <article>
   <h1>大見出し</h1>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae fringilla mauris. Quisque commodo eget nisi sed pretium. Mauris luctus nec lacus in ultricies. Mauris vitae hendrerit arcu, ac scelerisque lacus. Aliquam lobortis in lacus sit amet posuere. Fusce iaculis urna id neque dapibus, eu lacinia lectus dictum.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae
+    fringilla mauris. Quisque commodo eget nisi sed pretium. Mauris luctus nec
+    lacus in ultricies. Mauris vitae hendrerit arcu, ac scelerisque lacus.
+    Aliquam lobortis in lacus sit amet posuere. Fusce iaculis urna id neque
+    dapibus, eu lacinia lectus dictum.
+  </p>
 
   <figure>
-    <img src="https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png">
+    <img
+      src="https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png" />
     <figcaption>The Firefox logo — fox wrapped around the world</figcaption>
   </figure>
 
-  <p>Praesent condimentum dui dui, sit amet rutrum diam tincidunt eu. Cras suscipit porta leo sit amet rutrum. Sed vehicula ornare tincidunt. Curabitur a ipsum ac diam mattis volutpat ac ut elit. Nullam luctus justo non vestibulum gravida. Morbi metus libero, pharetra non porttitor a, molestie nec nisi.</p>
+  <p>
+    Praesent condimentum dui dui, sit amet rutrum diam tincidunt eu. Cras
+    suscipit porta leo sit amet rutrum. Sed vehicula ornare tincidunt. Curabitur
+    a ipsum ac diam mattis volutpat ac ut elit. Nullam luctus justo non
+    vestibulum gravida. Morbi metus libero, pharetra non porttitor a, molestie
+    nec nisi.
+  </p>
 
-  <p>In finibus viverra enim vel suscipit. Quisque consequat velit eu orci malesuada, ut interdum tortor molestie. Proin sed pellentesque augue. Nam risus justo, faucibus non porta a, congue vel massa. Cras luctus lacus nisl, sed tincidunt velit pharetra ac. Duis suscipit faucibus dui sed ultricies.</p>
+  <p>
+    In finibus viverra enim vel suscipit. Quisque consequat velit eu orci
+    malesuada, ut interdum tortor molestie. Proin sed pellentesque augue. Nam
+    risus justo, faucibus non porta a, congue vel massa. Cras luctus lacus nisl,
+    sed tincidunt velit pharetra ac. Duis suscipit faucibus dui sed ultricies.
+  </p>
 </article>
 ```
 

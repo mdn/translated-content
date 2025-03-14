@@ -1,12 +1,6 @@
 ---
-title: '-moz-float-edge'
+title: -moz-float-edge
 slug: Web/CSS/-moz-float-edge
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/-moz-float-edge
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -41,7 +35,10 @@ La propriété **`-moz-float-edge`** définit si les propriétés de hauteur et 
 
 ### Syntaxe formelle
 
-{{csssyntax}}
+```plain
+-moz-float-edge =
+  border-box | content-box | margin-box | padding-box
+```
 
 ## Exemples
 
@@ -62,10 +59,7 @@ La propriété **`-moz-float-edge`** définit si les propriétés de hauteur et 
 
 ```html
 <div class="box">
-   <p>
-      Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit.
-   </p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 </div>
 ```
 
@@ -81,4 +75,4 @@ Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla e
 
 ## Voir aussi
 
-- {{bug(432891)}}
+- [bug Firefox 432891](https://bugzil.la/432891)

@@ -1,11 +1,13 @@
 ---
-title: AbortController.signal
+title: AbortController：signal 属性
 slug: Web/API/AbortController/signal
+l10n:
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-{{domxref("AbortController")}} 接口的只读属性 **`signal`** 返回一个 {{domxref("AbortSignal")}} 实例对象，该对象可以根据需要处理 DOM 请求通信，既可以建立通信，也可以终止通信。
+{{domxref("AbortController")}} 接口的只读属性 **`signal`** 返回一个 {{domxref("AbortSignal")}} 实例对象，该对象可以根据需要与异步操作通信或终止异步操作。
 
 ## 值
 
@@ -17,27 +19,27 @@ slug: Web/API/AbortController/signal
 
 首先通过 {{domxref("AbortController.AbortController","AbortController()")}} 构造函数来创建一个 controller 实例，然后通过 {{domxref("AbortController.signal")}} 属性获取到它的关联对象 {{domxref("AbortSignal")}} 的引用。
 
-当 [fetch 请求](/zh-CN/docs/Web/API/fetch)初始化时，我们将 `AbortSignal` 作为一个选项传递进入请求的选项对象中（下面的 `{signal}`）。这将 signal 和 controller 与 fetch 请求相关联，并且允许我们通过调用 {{domxref("AbortController.abort()")}} 去中止它，如下面的第二个事件监听器。
+当 [fetch 请求](/zh-CN/docs/Web/API/Window/fetch)初始化时，我们将 `AbortSignal` 作为一个选项传递进入请求的选项对象中（下面的 `{signal}`）。这将 signal 和 controller 与 fetch 请求相关联，并且允许我们通过调用 {{domxref("AbortController.abort()")}} 去中止它，如下面的第二个事件监听器。
 
 ```js
 const controller = new AbortController();
 const signal = controller.signal;
 
-const url = 'video.mp4';
-const downloadBtn = document.querySelector('.download');
-const abortBtn = document.querySelector('.abort');
+const url = "video.mp4";
+const downloadBtn = document.querySelector(".download");
+const abortBtn = document.querySelector(".abort");
 
-downloadBtn.addEventListener('click', fetchVideo);
+downloadBtn.addEventListener("click", fetchVideo);
 
-abortBtn.addEventListener('click', () => {
+abortBtn.addEventListener("click", () => {
   controller.abort();
-  console.log('Download aborted');
+  console.log("Download aborted");
 });
 
 function fetchVideo() {
   fetch(url, { signal })
     .then((response) => {
-      console.log('Download complete', response);
+      console.log("Download complete", response);
     })
     .catch((err) => {
       console.error(`Download error: ${err.message}`);
@@ -45,9 +47,10 @@ function fetchVideo() {
 }
 ```
 
-> **备注：** 当 `abort()` 被调用，`fetch()` promise 将会抛出一个 `AbortError`.
+> [!NOTE]
+> 当 `abort()` 被调用，`fetch()` promise 将会抛出一个 `AbortError`.
 
-你可以在 github 上找到[完整的可以运行的示例](https://github.com/mdn/dom-examples/tree/master/abort-api)；你还可以看它的[在线演示](https://mdn.github.io/dom-examples/abort-api/)。
+你可以在 GitHub 上找到[完整的可以运行的示例](https://github.com/mdn/dom-examples/tree/main/abort-api)；你还可以看它的[在线演示](https://mdn.github.io/dom-examples/abort-api/)。
 
 ## 规范
 

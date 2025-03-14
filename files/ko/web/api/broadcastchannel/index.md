@@ -1,68 +1,55 @@
 ---
 title: BroadcastChannel
 slug: Web/API/BroadcastChannel
-tags:
-  - API
-  - Broadcast Channel API
-  - Experimental
-  - HTML API
-  - Interface
-  - Reference
-translation_of: Web/API/BroadcastChannel
+l10n:
+  sourceCommit: 15d7838061736509d08d642611bd26c1251c0500
 ---
 
 {{APIRef("Broadcast Channel API")}}
 
-The **`BroadcastChannel`** interface represents a named channel that any {{glossary("browsing context")}} of a given {{glossary("origin")}} can subscribe to. It allows communication between different documents (in different windows, tabs, frames or iframes) of the same origin. Messages are broadcasted via a {{event("message")}} event fired at all `BroadcastChannel` objects listening to the channel.
+**`BroadcastChannel`** 인터페이스는 지정된 {{glossary("origin", "출처")}}의 모든 {{glossary("browsing context", "브라우징 맥락들")}}이 구독할 수 있는 명명된 채널을 나타냅니다. 이 인터페이스를 사용해 동일한 출처의 서로 다른 문서(창, 탭, 프레임 또는 iframe)간에 통신할 수 있습니다. 메시지는 메시지를 전송한 객체를 제외하고, 채널을 수신하는 모든 `BroadcastChannel` 객체에서 실행되는 {{domxref("BroadcastChannel/message_event", "message")}} 이벤트를 통해 전달됩니다.
 
 {{AvailableInWorkers}}
 
-## Constructor
+{{InheritanceDiagram}}
+
+## 생성자
 
 - {{domxref("BroadcastChannel.BroadcastChannel", "BroadcastChannel()")}}
-  - : Creates an object linking to the named channel.
+  - : 명명된 채널에 연결되는 객체를 생성합니다.
 
-## Properties
+## 인스턴스 속성
 
-_This interface also inherits properties from its parent, {{domxref("EventTarget")}}._
+이 인터페이스는 부모인 {{domxref("EventTarget")}}의 속성도 상속합니다.
 
-- {{domxref("BroadcastChannel.name")}}
-  - : Returns a {{domxref("DOMString")}}, the name of the channel.
+- {{domxref("BroadcastChannel.name")}} {{ReadOnlyInline}}
+  - : 채널 이름 문자열을 반환합니다.
 
-### Event handlers
+## 인스턴스 메서드
 
-- {{domxref("BroadcastChannel.onmessage")}}
-  - : An {{event("Event_handlers", "event handler")}} property that specifies the function to execute when a {{event("message")}} event is fired on this object.
-- {{domxref("BroadcastChannel.onmessageerror")}}
-  - : An {{event("Event_handlers", "event handler")}} called when a {{domxref("MessageEvent")}} of type {{domxref("MessageError")}} is fired—that is, when it receives a message that cannot be deserialized.
-
-## Methods
-
-_This interface also inherits methods from its parent, {{domxref("EventTarget")}}._
+이 인터페이스는 부모인 {{domxref("EventTarget")}}의 속성도 상속합니다.
 
 - {{domxref("BroadcastChannel.postMessage()")}}
-  - : Sends the message, of any type of object, to each `BroadcastChannel` object listening to the same channel.
+  - : 모든 유형의 객체 메시지를 동일한 채널을 수신하는 각 `BroadcastChannel` 객체에 전송합니다.
 - {{domxref("BroadcastChannel.close()")}}
-  - : Closes the channel object, indicating it won't get any new messages, and allowing it to be, eventually, garbage collected.
+  - : 채널 객체를 닫아, 더 이상 새 메시지를 받지 않음을 표시하고 가비지 컬렉션으로 처리되도록 합니다.
 
-## Events
+## 이벤트
 
-- [`message`](/en-US/docs/Web/API/BroadcastChannel/message_event)
-  - : Fired when when a message arrives on the channel.
-    Also available via the [`onmessage`](/en-US/docs/Web/API/BroadcastChannel/onmessage) property.
-- [`messageerror`](/en-US/docs/Web/API/BroadcastChannel/messageerror_event)
-  - : Fired when a message arrives that can't be deserialized.
-    Also available via the [`onmessageerror`](/en-US/docs/Web/API/BroadcastChannel/onmessageerror) property.
+- [`message`](/ko/docs/Web/API/BroadcastChannel/message_event)
+  - : 채널에 메세지가 도착 시 발생합니다. `onmessage` 속성을 통해서도 사용할 수 있습니다.
+- [`messageerror`](/ko/docs/Web/API/BroadcastChannel/messageerror_event)
+  - : 역직렬화할 수 없는 메시지가 도착하면 발생합니다. `onmessageerror` 속성을 통해서도 사용할 수 있습니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
-- Another, more heavyweight, way of communicating between browser contexts: {{domxref("ServiceWorker")}}.
-- [Broadcast Channel API overview](/ko/docs/Web/API/Broadcast_Channel_API)
+- 브라우저 맥락 간에 통신하는 다른, 더 무거운 방법, {{domxref("ServiceWorker")}}
+- [Broadcast Channel API 개요](/ko/docs/Web/API/Broadcast_Channel_API)

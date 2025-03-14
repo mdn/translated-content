@@ -19,7 +19,7 @@ parentElement = node.parentElement
 
 ```js
 if (node.parentElement) {
-    node.parentElement.style.color = "red";
+  node.parentElement.style.color = "red";
 }
 ```
 

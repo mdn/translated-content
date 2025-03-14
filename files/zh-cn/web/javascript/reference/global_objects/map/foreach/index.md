@@ -5,51 +5,53 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
 
 {{JSRef}}
 
-**`forEach()`** 方法按照插入顺序依次对 `Map` 中每个键/值对执行一次给定的函数。
+{{jsxref("Map")}} 实例的 **`forEach()`** 方法按插入顺序对该 map 中的每个键/值对执行一次提供的函数。
 
-{{EmbedInteractiveExample("pages/js/map-prototype-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.forEach()")}}
+
+```js interactive-example
+function logMapElements(value, key, map) {
+  console.log(`m[${key}] = ${value}`);
+}
+
+new Map([
+  ["foo", 3],
+  ["bar", {}],
+  ["baz", undefined],
+]).forEach(logMapElements);
+
+// Expected output: "m[foo] = 3"
+// Expected output: "m[bar] = [object Object]"
+// Expected output: "m[baz] = undefined"
+```
 
 ## 语法
 
 ```js-nolint
-// 箭头函数
-forEach(() => { /* … */ } )
-forEach((value) => { /* … */ } )
-forEach((value, key) => { /* … */ } )
-forEach((value, key, map) => { /* … */ } )
-
-// 回调函数
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
-
-// 内联回调函数
-forEach(function() { /* … */ })
-forEach(function(value) { /* … */ })
-forEach(function(value, key) { /* … */ })
-forEach(function(value, key, map) { /* … */ })
-forEach(function(value, key, map) { /* … */ }, thisArg)
 ```
 
 ### 参数
 
 - `callbackFn`
-  - : Map 中每个元素所要执行的函数。它具有如下的参数：
-    - `value` {{Optional_Inline}}
+  - : 为 map 中每个元素执行的函数。使用以下参数调用该函数：
+    - `value`
       - : 每个迭代的值。
-    - `key` {{Optional_Inline}}
+    - `key`
       - : 每个迭代的键。
-    - `map` {{Optional_Inline}}
-      - : 正在迭代的 Map。
-- `thisArg` {{Optional_Inline}}
-  - : 在 `callbackFn` 执行中使用的 `this` 的值。
+    - `map`
+      - : 正在迭代的 map。
+- `thisArg` {{optional_inline}}
+  - : 执行 `callbackFn` 时用作 `this` 的值。
 
 ### 返回值
 
-{{jsxref("undefined")}}。
+无，{{jsxref("undefined")}}。
 
 ## 描述
 
-`forEach` 方法会对 map 中每个真实存在的键执行一次给定的 `callbackFn` 函数。它不会对被删除的键执行函数。然而，它会对每个值为 `undefined` 的键执行函数。
+`forEach` 方法会对 map 中每个真实存在的键执行一次提供的 `callback`。它不会为被删除的键执行函数。然而，它会为存在但值为 `undefined` 的值执行函数。
 
 `callbackFn` 接收**三个参数**：
 
@@ -57,9 +59,9 @@ forEach(function(value, key, map) { /* … */ }, thisArg)
 - 当前的 `key`
 - 正在被遍历的 **`Map` 对象**
 
-如果 `forEach` 中含有 `thisArg` 参数，那么每次 `callbackFn` 被调用时，都会被用作 `this` 的值。否则，`undefined` 将会被用作 `this` 的值。按照[函数观察到 `this` 的常用规则](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)，`callbackFn` 函数最终可观察到 `this` 值。
+如果向 `forEach` 提供了 `thisArg` 参数，那么每次 `callback` 被调用时，其都会被传入以用作 `this` 的值。否则，`undefined` 将会被传入以用作 `this` 的值。最终 `callback` 可观察到的 `this` 值将会根据[确定函数所观察到 `this` 的常用规则](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)来确定。
 
-每个值只被访问一次，除非它在 `forEach` 结束前被删除并被重新添加。`callbackFn` 不会对在被访问前就删除的元素执行。在 `forEach` 结束前被添加的元素都将会被访问。
+每个值只被访问一次，除非它在 `forEach` 结束前被删除并被重新添加。对于被访问前就删除的值，`callback` 不会为其调用。在 `forEach` 结束前被新添加的值都将会被访问。
 
 ## 示例
 
@@ -71,8 +73,12 @@ forEach(function(value, key, map) { /* … */ }, thisArg)
 function logMapElements(value, key, map) {
   console.log(`map.get('${key}') = ${value}`);
 }
-new Map([['foo', 3], ['bar', {}], ['baz', undefined]]).forEach(logMapElements);
-// logs:
+new Map([
+  ["foo", 3],
+  ["bar", {}],
+  ["baz", undefined],
+]).forEach(logMapElements);
+// 打印：
 // "map.get('foo') = 3"
 // "map.get('bar') = [object Object]"
 // "map.get('baz') = undefined"

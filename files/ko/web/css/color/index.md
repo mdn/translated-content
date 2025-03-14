@@ -1,25 +1,61 @@
 ---
 title: color
 slug: Web/CSS/color
-tags:
-  - CSS
-  - CSS Colors
-  - CSS Property
-  - CSS Text
-  - Layout
-  - Reference
-  - Web
-  - 색
-translation_of: Web/CSS/color
 ---
 
 {{CSSRef}}
 
 **`color`** [CSS](/ko/docs/Web/API/CSS) 속성은 요소의 글씨 및 [글씨 장식](/ko/docs/Web/CSS/text-decoration)의 전경색과 {{cssxref("currentcolor")}}의 값을 설정합니다. `currentcolor`는 다른 속성에서 사용할 수 있는 간접적인 값이며, {{cssxref("border-color")}} 등 일부 속성의 기본값입니다.
 
-{{EmbedInteractiveExample("pages/css/color.html")}}
+{{InteractiveExample("CSS Demo: color")}}
 
-HTML에서 색을 사용하는 법은 [CSS로 HTML 요소에 색입히기](/ko/docs/Web/HTML/Applying_color) 문서에서 정리한 내용으로 읽을 수 있습니다.
+```css interactive-example-choice
+color: rebeccapurple;
+```
+
+```css interactive-example-choice
+color: #00a400;
+```
+
+```css interactive-example-choice
+color: rgb(214, 122, 127);
+```
+
+```css interactive-example-choice
+color: hsl(30deg 82% 43%);
+```
+
+```css interactive-example-choice
+color: hsla(237deg 74% 33% / 61%);
+```
+
+```css interactive-example-choice
+color: hwb(152deg 0% 58% / 70%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <p id="example-element">
+      London. Michaelmas term lately over, and the Lord Chancellor sitting in
+      Lincoln's Inn Hall. Implacable November weather.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 1.5em;
+}
+
+.example-container {
+  background-color: white;
+  padding: 10px;
+}
+```
+
+HTML에서 색을 사용하는 법은 [CSS로 HTML 요소에 색입히기](/ko/docs/Web/CSS/CSS_colors/Applying_color) 문서에서 정리한 내용으로 읽을 수 있습니다.
 
 ## 구문
 
@@ -44,7 +80,7 @@ color: rgb(34, 12, 64, 0.6);
 color: rgba(34, 12, 64, 0.6);
 color: rgb(34 12 64 / 0.6);
 color: rgba(34 12 64 / 0.3);
-color: rgb(34.0 12 64 / 60%);
+color: rgb(34 12 64 / 60%);
 color: rgba(34.6 12 64 / 30%);
 
 /* <hsl()> 값 */
@@ -52,7 +88,7 @@ color: hsl(30, 100%, 50%, 0.6);
 color: hsla(30, 100%, 50%, 0.6);
 color: hsl(30 100% 50% / 0.6);
 color: hsla(30 100% 50% / 0.6);
-color: hsl(30.0 100% 50% / 60%);
+color: hsl(30 100% 50% / 60%);
 color: hsla(30.2 100% 50% / 60%);
 
 /* 전역 값 */
@@ -79,16 +115,32 @@ color: unset;
 아래 예제 모두 글씨를 빨갛게 만듭니다.
 
 ```css
-p { color: red; }
-p { color: #f00; }
-p { color: #ff0000; }
-p { color: rgb(255,0,0); }
-p { color: rgb(100%, 0%, 0%); }
-p { color: hsl(0, 100%, 50%); }
+p {
+  color: red;
+}
+p {
+  color: #f00;
+}
+p {
+  color: #ff0000;
+}
+p {
+  color: rgb(255, 0, 0);
+}
+p {
+  color: rgb(100%, 0%, 0%);
+}
+p {
+  color: hsl(0, 100%, 50%);
+}
 
 /* 50% 투명 */
-p { color: rgba(255, 0, 0, 0.5); }
-p { color: hsla(0, 100%, 50%, 0.5); }
+p {
+  color: rgba(255, 0, 0, 0.5);
+}
+p {
+  color: hsla(0, 100%, 50%, 0.5);
+}
 ```
 
 ## 접근성 고려사항
@@ -113,4 +165,4 @@ p { color: hsla(0, 100%, 50%, 0.5); }
 
 - {{cssxref("&lt;color&gt;")}} 자료형
 - 다른 색상 관련 속성: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("color-adjust")}}
-- [CSS로 HTML 요소에 색입히기](/ko/docs/Web/HTML/Applying_color)
+- [CSS로 HTML 요소에 색입히기](/ko/docs/Web/CSS/CSS_colors/Applying_color)

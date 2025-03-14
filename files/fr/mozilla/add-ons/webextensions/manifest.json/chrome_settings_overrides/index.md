@@ -1,13 +1,6 @@
 ---
 title: chrome_settings_overrides
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-  - chrome_settings_overrides
-  - manifest.json
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides
 ---
 
 {{AddonSidebar}}
@@ -143,7 +136,7 @@ La clé `chrome_settings_overrides` est un objet qui peut avoir les propriétés
           </dd>
           <dt><code>is_default</code></dt>
           <dd>
-            Booléen: "True" si le moteur de recherch doit être le choix par
+            Booléen: "True" si le moteur de recherche doit être le choix par
             défaut.
           </dd>
           <dt><code>alternate_urls {{optional_inline}}</code></dt>
@@ -211,6 +204,6 @@ La clé `chrome_settings_overrides` est un objet qui peut avoir les propriétés
   </tbody>
 </table>
 
-## Compatibilité de navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.chrome_settings_overrides", 10)}}
+{{Compat}}

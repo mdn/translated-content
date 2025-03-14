@@ -1,15 +1,8 @@
 ---
-title: ':fullscreen'
+title: :fullscreen
 slug: Web/CSS/:fullscreen
-tags:
-  - CSS
-  - Fullscreen API
-  - Pseudo-class
-  - Reference
-  - Selector
-  - 전체화면
-translation_of: Web/CSS/:fullscreen
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`:fullscreen`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 전체 화면 모드에 진입한 모든 요소와 일치합니다. 다수의 요소가 전체 화면 중이라면 그 요소 모두 선택합니다.
@@ -33,9 +26,11 @@ translation_of: Web/CSS/:fullscreen
 ```html
 <h1>MDN Web Docs Demo: :fullscreen pseudo-class</h1>
 
-<p>This demo uses the <code>:fullscreen</code> pseudo-class to automatically
+<p>
+  This demo uses the <code>:fullscreen</code> pseudo-class to automatically
   change the style of a button used to toggle full-screen mode on and off,
-  entirely using CSS.</p>
+  entirely using CSS.
+</p>
 
 <button id="fs-toggle">Toggle Fullscreen</button>
 ```
@@ -75,4 +70,4 @@ ID가 `"fs-toggle"`인 {{htmlelement("button")}}은 문서가 전체 화면이�
 - {{cssxref(":not")}}
 - {{cssxref("::backdrop")}}
 - DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreenElement") }}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}} 특성
+- [`allowfullscreen`](/ko/docs/Web/HTML/Element/iframe#allowfullscreen) 특성

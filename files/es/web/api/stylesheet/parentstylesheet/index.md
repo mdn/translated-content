@@ -1,7 +1,6 @@
 ---
 title: Stylesheet.parentStyleSheet
 slug: Web/API/StyleSheet/parentStyleSheet
-translation_of: Web/API/StyleSheet/parentStyleSheet
 ---
 
 {{ ApiRef() }}
@@ -33,4 +32,4 @@ Esta propiedad devuelve NULL si la hoja de estilo actual es una hoja de estilo d
 
 ### Specification
 
-[parentStyleSheet](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-parentStyleSheet)
+[parentStyleSheet](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-parentStyleSheet)

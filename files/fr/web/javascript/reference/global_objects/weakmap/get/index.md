@@ -1,22 +1,27 @@
 ---
 title: WeakMap.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/get
-original_slug: Web/JavaScript/Reference/Objets_globaux/WeakMap/get
 ---
 
 {{JSRef}}
 
 La méthode **`get()`** permet de renvoyer un élément donné d'un objet `WeakMap`.
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-get.html")}}
+{{InteractiveExample("JavaScript Demo: WeakMap.prototype.get()")}}
+
+```js interactive-example
+const weakmap1 = new WeakMap();
+const object1 = {};
+const object2 = {};
+
+weakmap1.set(object1, 42);
+
+console.log(weakmap1.get(object1));
+// Expected output: 42
+
+console.log(weakmap1.get(object2));
+// Expected output: undefined
+```
 
 ## Syntaxe
 
@@ -40,7 +45,7 @@ var wm = new WeakMap();
 wm.set(window, "toto");
 
 wm.get(window); // Renvoie "toto"
-wm.get("machin");  // Renvoie undefined.
+wm.get("machin"); // Renvoie undefined.
 ```
 
 ## Spécifications

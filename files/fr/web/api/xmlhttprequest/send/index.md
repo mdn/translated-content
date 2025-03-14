@@ -1,19 +1,6 @@
 ---
 title: XMLHttpRequest.send()
 slug: Web/API/XMLHttpRequest/send
-tags:
-  - AJAX
-  - API
-  - Besoin d'exemples
-  - Besoin de Contenu
-  - Method
-  - References
-  - Requête XMLHttp
-  - XHR
-  - requête HTTP
-  - requête XHR
-  - send
-translation_of: Web/API/XMLHttpRequest/send
 ---
 
 {{APIRef('XMLHttpRequest')}}
@@ -27,7 +14,7 @@ Si aucun "header"{{HTTPHeader("Accept")}} n'a été paramétré dans {{domxref("
 ## Syntaxe
 
 ```js
-XMLHttpRequest.send(body)
+XMLHttpRequest.send(body);
 ```
 
 ### Paramètres
@@ -37,7 +24,7 @@ XMLHttpRequest.send(body)
   - : Le corps des données à envoyer dans la requête XHR. Cela peut être :
 
     - Un {{domxref("Document")}}, dans quel cas il est sérialisé avant d'être envoyé.
-    - Un `XMLHttpRequestBodyInit` qui, selon [la spécification `Fetch` (en anglais)](https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit), peut être un [`Blob`](/fr/docs/Web/API/Blob), [`BufferSource`](/fr/docs/Web/API/BufferSource), [`FormData`](/fr/docs/Web/API/FormData), [`URLSearchParams`](/fr/docs/Web/API/URLSearchParams) ou un objet [`USVString`](/fr/docs/Web/API/USVString).
+    - Un `XMLHttpRequestBodyInit` qui, selon [la spécification `Fetch` (en anglais)](https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit), peut être un [`Blob`](/fr/docs/Web/API/Blob), [`BufferSource`](/fr/docs/Web/API/BufferSource), [`FormData`](/fr/docs/Web/API/FormData), [`URLSearchParams`](/fr/docs/Web/API/URLSearchParams) ou un objet [`USVString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String).
     - `null`
 
     Si la valeur du corps n'est pas spécifiée, la valeur par défaut `null` est employée.
@@ -59,7 +46,7 @@ La meilleure manière d'envoyer du contenu binaire (par exemple dans l'upload de
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 xhr.onload = function () {
   // Requête finie, traitement ici.
@@ -76,16 +63,17 @@ xhr.send(null);
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open("POST", '/server', true);
+xhr.open("POST", "/server", true);
 
 //Envoie les informations du header adaptées avec la requête
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-xhr.onreadystatechange = function() { //Appelle une fonction au changement d'état.
-    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-// Requête finie, traitement ici.
-    }
-}
+xhr.onreadystatechange = function () {
+  //Appelle une fonction au changement d'état.
+  if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+    // Requête finie, traitement ici.
+  }
+};
 xhr.send("foo=bar&lorem=ipsum");
 // xhr.send(new Int8Array());
 // xhr.send(document);
@@ -101,5 +89,5 @@ xhr.send("foo=bar&lorem=ipsum");
 
 ## Voir aussi
 
-- [L'utilisation de XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest)
-- [HTML dans XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [L'utilisation de XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [HTML dans XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)

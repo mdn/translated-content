@@ -18,7 +18,7 @@ slug: Games/Techniques/Audio_for_Web_Games
 音声付きの自動再生が許可されるのは、次のような場合であることは特筆すべきです。
 
 - ユーザーがドメインと対話したことがあること。
-- モバイルでは、ユーザーが[サイトを画面の内側へ追加した](/ja/docs/Web/Progressive_web_apps/Add_to_home_screen)場合に許可されます。
+- モバイルでは、ユーザーが[サイトを画面の内側へ追加した](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)場合に許可されます。
 
 多くのモバイルブラウザーは、ゲームが音声再生するように要求しても単に無視します。つまり音声の再生にはユーザーが開始するイベントが必要です。これは音声再生の構成を考慮する必要があるということです。これは通常、事前に音声を読み込んでユーザーが開始するイベントに準備しておくことで守られます。
 
@@ -26,9 +26,11 @@ slug: Games/Techniques/Audio_for_Web_Games
 
 このように音声を再生するには、その一部を再生する必要があります。そのためには、音声サンプルの最後に一瞬の無音を入れるのが効果的です。この無音部分にジャンプして再生し、一時停止することで、JavaScript を使用して任意の時点でそのファイルを再生できるようになります。[自動再生ポリシーの最善の手法はこちら](/ja/docs/Web/API/Web_Audio_API/Best_practices#autoplay_policy)で詳しく説明されています。
 
-> **メモ:** もしブラウザーがあなたに音量を変更することを許可するならば、ファイルを音量ゼロで再生することも可能でしょう（後述）。また、音声を再生後に即時停止することは、音声の小さな断片が再生されないことを保証しない、ということにも注意してください。
+> [!NOTE]
+> もしブラウザーがあなたに音量を変更することを許可するならば、ファイルを音量ゼロで再生することも可能でしょう（後述）。また、音声を再生後に即時停止することは、音声の小さな断片が再生されないことを保証しない、ということにも注意してください。
 
-> **メモ:** モバイルのホーム画面にウェブアプリを追加することで特性が変化してしまうかもしれません。今のところ、 iOS 上の自動再生がこのケースに当てはまるようです。可能であれば、いくつかのデバイスとプラットフォームでコードがどう動くか試すべきです。
+> [!NOTE]
+> モバイルのホーム画面にウェブアプリを追加することで特性が変化してしまうかもしれません。今のところ、 iOS 上の自動再生がこのケースに当てはまるようです。可能であれば、いくつかのデバイスとプラットフォームでコードがどう動くか試すべきです。
 
 ### 音量
 
@@ -40,7 +42,8 @@ slug: Games/Techniques/Audio_for_Web_Games
 
 {{domxref("HTMLMediaElement")}} インターフェイスが備える [多くのプロパティ](/ja/docs/Web/API/HTMLMediaElement#properties) はトラックが再生可能な状態にあるかどうかを決定する助けになります。
 
-> **メモ:** 色々な意味でバッファリングの概念は時代遅れです。バイトレンジリクエストが許容される限り（これが既定の振る舞いです）、先行する内容のダウンロードの必要なしに音声の任意の点に飛ぶことができるべきです。しかしながら、先読みは依然として便利です。それなしでは、再生が始められるようになる前に、常にいくらかのクライアント・サーバー間通信が必要になるでしょう。
+> [!NOTE]
+> 色々な意味でバッファリングの概念は時代遅れです。バイトレンジリクエストが許容される限り（これが既定の振る舞いです）、先行する内容のダウンロードの必要なしに音声の任意の点に飛ぶことができるべきです。しかしながら、先読みは依然として便利です。それなしでは、再生が始められるようになる前に、常にいくらかのクライアント・サーバー間通信が必要になるでしょう。
 
 ### 並行した音声再生
 
@@ -118,11 +121,14 @@ slug: Games/Techniques/Audio_for_Web_Games
 
 [モバイルとデスクトップの HTMLMediaElement に対応している完全な互換性表](/ja/docs/Web/API/HTMLMediaElement#ブラウザーの互換性)があります。
 
-> **メモ:** 音声の同時再生は私たちの[同時音声テストの例](https://jsfiddle.net/dmkyaq0r/)を使ってテストされますが、そこでは標準の音声 API を使って 3 つの音声の同時再生を試しています。
+> [!NOTE]
+> 音声の同時再生は私たちの[同時音声テストの例](https://jsfiddle.net/dmkyaq0r/)を使ってテストされますが、そこでは標準の音声 API を使って 3 つの音声の同時再生を試しています。
 
-> **メモ:** 単純な自動再生機能は私たちの[自動再生テストの例](https://jsfiddle.net/vpdspp2b/)でテストされます。
+> [!NOTE]
+> 単純な自動再生機能は私たちの[自動再生テストの例](https://jsfiddle.net/vpdspp2b/)でテストされます。
 
-> **メモ:** 音量の可変性は私たちの[音量テストの例](https://jsfiddle.net/7ta12vw4/)でテストされます。
+> [!NOTE]
+> 音量の可変性は私たちの[音量テストの例](https://jsfiddle.net/7ta12vw4/)でテストされます。
 
 ## モバイルの回避処理
 
@@ -130,7 +136,7 @@ slug: Games/Techniques/Audio_for_Web_Games
 
 ### 音声スプライト
 
-音声スプライトは [CSS スプライト](/ja/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS)から名前をとったもので、 CSS スプライトとは単一グラフィックリソースを連続したスプライトに分解して使う CSS のための視覚的なテクニックです。同じ原理を音声に適用することで、読み込みと再生に時間のかかる小さな音声ファイルの束ではなく、必要とする音声すべてを含む大きな音声ファイル一つを用いることができます。そのファイルから特定の音を再生するには、各音声スプライトの既知の開始・停止時間を指定するだけです。
+音声スプライトは [CSS スプライト](/ja/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)から名前をとったもので、 CSS スプライトとは単一グラフィックリソースを連続したスプライトに分解して使う CSS のための視覚的なテクニックです。同じ原理を音声に適用することで、読み込みと再生に時間のかかる小さな音声ファイルの束ではなく、必要とする音声すべてを含む大きな音声ファイル一つを用いることができます。そのファイルから特定の音を再生するには、各音声スプライトの既知の開始・停止時間を指定するだけです。
 
 利点は、一つの音声を前もって提供しておき、スプライトをすぐ使える状態にできることです。こうすることで、大きな一つの音声の再生と即時停止をするだけですみます。また、サーバーリクエスト数を減らすことと、帯域幅を節約することもできます。
 
@@ -152,11 +158,11 @@ myAudio.pause();
 <button data-start="14" data-stop="15">2</button>
 <button data-start="12" data-stop="13">3</button>
 <button data-start="10" data-stop="11">4</button>
-<button data-start="8"  data-stop="9">5</button>
-<button data-start="6"  data-stop="7">6</button>
-<button data-start="4"  data-stop="5">7</button>
-<button data-start="2"  data-stop="3">8</button>
-<button data-start="0"  data-stop="1">9</button>
+<button data-start="8" data-stop="9">5</button>
+<button data-start="6" data-stop="7">6</button>
+<button data-start="4" data-stop="5">7</button>
+<button data-start="2" data-stop="3">8</button>
+<button data-start="0" data-stop="1">9</button>
 ```
 
 今、開始・停止時間を秒単位で指定したボタンがあります。"countdown.mp3" という MP3 ファイルは 2 秒ごとに声に出された数字から成り、ここで意図していることは、対応するボタンが押された時にその数が再生されるということです。
@@ -164,30 +170,41 @@ myAudio.pause();
 このように動作する JavaScript を追加しましょう。
 
 ```js
-const myAudio = document.getElementById('myAudio');
-const buttons = document.getElementsByTagName('button');
+const myAudio = document.getElementById("myAudio");
+const buttons = document.getElementsByTagName("button");
 let stopTime = 0;
 
 for (const button of buttons) {
-  button.addEventListener('click', () => {  
-    myAudio.currentTime = button.getAttribute("data-start");
-    stopTime = button.getAttribute("data-stop");
-    myAudio.play();
-  }, false);
+  button.addEventListener(
+    "click",
+    () => {
+      myAudio.currentTime = button.getAttribute("data-start");
+      stopTime = button.getAttribute("data-stop");
+      myAudio.play();
+    },
+    false,
+  );
 }
 
-myAudio.addEventListener('timeupdate', () => {
-  if (myAudio.currentTime > stopTime) {
-    myAudio.pause();
-  }
-}, false);
+myAudio.addEventListener(
+  "timeupdate",
+  () => {
+    if (myAudio.currentTime > stopTime) {
+      myAudio.pause();
+    }
+  },
+  false,
+);
 ```
 
-> **メモ:** JSFiddle　上で[私たちの音声スプライトプレイヤーライブ](https://jsfiddle.net/59vwaame/)を試すことができます。
+> [!NOTE]
+> JSFiddle　上で[私たちの音声スプライトプレイヤーライブ](https://jsfiddle.net/59vwaame/)を試すことができます。
 
-> **メモ:** 上に詳述したように、モバイルでは、スタートボタンが押されるといったようなユーザー開始イベントからコードを発動させる必要があるかもしれません。
+> [!NOTE]
+> 上に詳述したように、モバイルでは、スタートボタンが押されるといったようなユーザー開始イベントからコードを発動させる必要があるかもしれません。
 
-> **メモ:** ビットレートに気をつけてください。低ビットレートのエンコードではファイルサイズは小さくなりますが、シーク精度も低くなります。
+> [!NOTE]
+> ビットレートに気をつけてください。低ビットレートのエンコードではファイルサイズは小さくなりますが、シーク精度も低くなります。
 
 ### バックグラウンドミュージック (BGM)
 
@@ -201,7 +218,8 @@ myAudio.addEventListener('timeupdate', () => {
 
 実現可能なクロスブラウザー戦略は、標準の `<audio>` 要素を使用して基本的な音声を提供し、対応している場合はウェブオーディオ API を使用して体験を拡張することでしょう。
 
-> **メモ:** 重要なのは、 iOS Safari がウェブオーディオ API に対応していることです。つまり、iOS 向けのネイティブ品質の音声で、ウェブベースのゲームを書くことが可能になりました。
+> [!NOTE]
+> 重要なのは、 iOS Safari がウェブオーディオ API に対応していることです。つまり、iOS 向けのネイティブ品質の音声で、ウェブベースのゲームを書くことが可能になりました。
 
 ウェブオーディオ API は音声再生の正確な時刻と制御を可能にするので、ゲームの没入感を高める重要な要素である、特定の瞬間にサンプルを再生するために使用することができます。ゲームの没入感を高めるには、爆発の後に轟音が続くのではなく、轟音と一緒に爆発してほしいものです。
 
@@ -262,7 +280,9 @@ myAudio.addEventListener('timeupdate', () => {
       </button>
     </li>
   </ul>
-  <p class="sourced">All tracks sourced from <a href="https://jplayer.org/">jplayer.org</a></p>
+  <p class="sourced">
+    All tracks sourced from <a href="https://jplayer.org/">jplayer.org</a>
+  </p>
 </section>
 ```
 
@@ -279,7 +299,7 @@ const audioCtx = new AudioContext();
 ここで、{{htmlelement("li")}}要素をすべて選択してみましょう。後で、これらの要素を利用して、トラックのファイルパスや個々の再生ボタンにアクセスすることができます。
 
 ```js
-const trackEls = document.querySelectorAll('li');
+const trackEls = document.querySelectorAll("li");
 ```
 
 使用する前に、各ファイルが読み込まれてバッファーにデコードされたことを確認したいので、これを可能にする `async` 関数を作成しましょう。
@@ -314,7 +334,7 @@ let offset = 0;
 function playTrack(audioBuffer) {
   const trackSource = audioCtx.createBufferSource();
   trackSource.buffer = audioBuffer;
-  trackSource.connect(audioCtx.destination)
+  trackSource.connect(audioCtx.destination);
 
   if (offset === 0) {
     trackSource.start();
@@ -331,50 +351,48 @@ function playTrack(audioBuffer) {
 
 ```js
 trackEls.forEach((el, i) => {
-
   // Get children
-  const anchor = el.querySelector('a');
-  const loadText = el.querySelector('p');
-  const playButton = el.querySelector('button');
+  const anchor = el.querySelector("a");
+  const loadText = el.querySelector("p");
+  const playButton = el.querySelector("button");
 
   // Load file
   loadFile(anchor.href).then((track) => {
     // Set loading to false
-    el.dataset.loading = 'false';
+    el.dataset.loading = "false";
 
     // Hide loading text
-    loadText.style.display = 'none';
+    loadText.style.display = "none";
 
     // Show button
-    playButton.style.display = 'inline-block';
+    playButton.style.display = "inline-block";
 
     // Allow play on click
-    playButton.addEventListener('click', () => {
-
+    playButton.addEventListener("click", () => {
       // Check if context is in suspended state (autoplay policy)
-      if (audioCtx.state === 'suspended') {
+      if (audioCtx.state === "suspended") {
         audioCtx.resume();
       }
 
       playTrack(track);
       playButton.dataset.playing = true;
-    })
-  })
-
-})
+    });
+  });
+});
 ```
 
-> **メモ:** [デモの実際の動きを見る](https://mdn.github.io/webaudio-examples/multi-track/)ことや、[ソースコードを見る](https://github.com/mdn/webaudio-examples/tree/master/multi-track)ことができます。
+> **メモ:** [デモの実際の動きを見る](https://mdn.github.io/webaudio-examples/multi-track/)ことや、[ソースコードを見る](https://github.com/mdn/webaudio-examples/tree/main/multi-track)ことができます。
 
 ゲーム世界の文脈では、異なる状況で使用されるループやサンプルがあるかもしれません。よりシームレスな体験のために、他のトラックと同期させることができると便利です。
 
-> **メモ:** この例では、次の曲を導入する前にビートが終了するのを待ちません。トラックの BPM (Beats Per Minute) がわかっていれば、このようにすることができます。
+> [!NOTE]
+> この例では、次の曲を導入する前にビートが終了するのを待ちません。トラックの BPM (Beats Per Minute) がわかっていれば、このようにすることができます。
 
 新しい曲の導入は、ビート／バー／フレーズなど、 BGM を分割したい単位で行うと、より自然に聞こえることがあります。
 
 これを行うには、同期させたいトラックを再生する前に、次のビート／バーなどの開始までの時間を計算する必要があります。
 
-以下は、テンポ（ビート／バーの秒単位の時間）が与えられたときに、次のパートを再生するまでの時間を計算するコードの一部です。結果の値を最初のパラメータとして `start()` 関数に渡すと、その関数は再生を開始する絶対時刻を受け取ります。2つ目の引数（新しいトラックのどこから再生を開始するか）は、関連のあるものであることに注意してください。
+以下は、テンポ（ビート／バーの秒単位の時間）が与えられたときに、次のパートを再生するまでの時間を計算するコードの一部です。結果の値を最初のパラメーターとして `start()` 関数に渡すと、その関数は再生を開始する絶対時刻を受け取ります。2つ目の引数（新しいトラックのどこから再生を開始するか）は、関連のあるものであることに注意してください。
 
 ```js
 if (offset === 0) {
@@ -389,9 +407,11 @@ if (offset === 0) {
 }
 ```
 
-> **メモ:** こちらの JSFiddle で、私たちの[待ち時間計算機のコードを試す](https://jsfiddle.net/c87z11jj/2/)ことができます（今回はバーに同期しています）。
+> [!NOTE]
+> こちらの JSFiddle で、私たちの[待ち時間計算機のコードを試す](https://jsfiddle.net/c87z11jj/2/)ことができます（今回はバーに同期しています）。
 
-> **メモ:** 最初の引数が 0 またはコンテキスト `currentTime` よりも小さい場合、再生は直ちに開始されます。
+> [!NOTE]
+> 最初の引数が 0 またはコンテキスト `currentTime` よりも小さい場合、再生は直ちに開始されます。
 
 ### 場所つきの音声
 

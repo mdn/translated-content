@@ -1,20 +1,30 @@
 ---
 title: static
 slug: Web/JavaScript/Reference/Classes/static
-tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - 자바스크립트
-  - 클래스
-translation_of: Web/JavaScript/Reference/Classes/static
 ---
 
 {{jsSidebar("Classes")}}
 
 **static** 키워드는 클래스의 정적 메서드를 정의합니다.
 
-{{EmbedInteractiveExample("pages/js/classes-static.html")}}
+{{InteractiveExample("JavaScript Demo: Classes Static")}}
+
+```js interactive-example
+class ClassWithStaticMethod {
+  static staticProperty = "someValue";
+  static staticMethod() {
+    return "static method has been called.";
+  }
+  static {
+    console.log("Class static initialization block called");
+  }
+}
+
+console.log(ClassWithStaticMethod.staticProperty);
+// Expected output: "someValue"
+console.log(ClassWithStaticMethod.staticMethod());
+// Expected output: "static method has been called."
+```
 
 ## 문법
 
@@ -30,15 +40,15 @@ translation_of: Web/JavaScript/Reference/Classes/static
 
 #### 다른 정적 메서드에서의 호출
 
-동일한 클래스 내의 다른 정적 메서드 내에서 정적 메서드를 호출하는 경우 키워드 [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)를 사용할 수 있다.
+동일한 클래스 내의 다른 정적 메서드 내에서 정적 메서드를 호출하는 경우 키워드 [`this`](/ko/docs/Web/JavaScript/Reference/Operators/this)를 사용할 수 있다.
 
 ```js
 class StaticMethodCall {
   static staticMethod() {
-    return 'Static method has been called';
+    return "Static method has been called";
   }
   static anotherStaticMethod() {
-    return this.staticMethod() + ' from another static method';
+    return this.staticMethod() + " from another static method";
   }
 }
 StaticMethodCall.staticMethod();
@@ -50,7 +60,7 @@ StaticMethodCall.anotherStaticMethod();
 
 ### 클래스 생성자 및 다른 메서드에서의 호출
 
-정적 메서드가 비정적 메서드에서 키워드[`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) 를 써서는 직접적인 접근을 할 수 없다. 바른 호출 방법은 클래스 명칭을 쓰거나, 즉 `CLASSNAME.STATIC_METHOD_NAME()` 을 이용하거나 혹은 그 메서드를 생성자의 한 속성으로 부르는 것으로, 즉 `constructor` : `this.constructor.STATIC_METHOD_NAME()`를 이용한다.
+정적 메서드가 비정적 메서드에서 키워드[`this`](/ko/docs/Web/JavaScript/Reference/Operators/this) 를 써서는 직접적인 접근을 할 수 없다. 바른 호출 방법은 클래스 명칭을 쓰거나, 즉 `CLASSNAME.STATIC_METHOD_NAME()` 을 이용하거나 혹은 그 메서드를 생성자의 한 속성으로 부르는 것으로, 즉 `constructor` : `this.constructor.STATIC_METHOD_NAME()`를 이용한다.
 
 ```js
 class StaticMethodCall {
@@ -63,7 +73,7 @@ class StaticMethodCall {
   }
 
   static staticMethod() {
-    return 'static method has been called.';
+    return "static method has been called.";
   }
 }
 ```
@@ -90,8 +100,8 @@ class BiggerTriple extends Triple {
   }
 }
 
-console.log(Triple.triple());        // 3
-console.log(Triple.triple(6));       // 18
+console.log(Triple.triple()); // 3
+console.log(Triple.triple(6)); // 18
 console.log(BiggerTriple.triple(3)); // 81
 var tp = new Triple();
 console.log(BiggerTriple.triple(3)); // 81 (부모의 인스턴스에 영향을 받지 않습니다.)
@@ -109,6 +119,6 @@ console.log(tp.constructor.triple(4)); // 12
 
 ## 참고
 
-- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
-- [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class)
-- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [`class` expression](/ko/docs/Web/JavaScript/Reference/Operators/class)
+- [`class` declaration](/ko/docs/Web/JavaScript/Reference/Statements/class)
+- [Classes](/ko/docs/Web/JavaScript/Reference/Classes)

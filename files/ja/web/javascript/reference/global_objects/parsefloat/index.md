@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/parseFloat
 
 **`parseFloat()`** 関数は、引数を (必要に応じてまず文字列に変換してから) 解釈し、浮動小数点値を返します。
 
-{{EmbedInteractiveExample("pages/js/globalprops-parsefloat.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseFloat()")}}
+
+```js interactive-example
+function circumference(r) {
+  return parseFloat(r) * 2.0 * Math.PI;
+}
+
+console.log(circumference(4.567));
+// Expected output: 28.695307297889173
+
+console.log(circumference("4.567abcdefgh"));
+// Expected output: 28.695307297889173
+
+console.log(circumference("abcdefgh"));
+// Expected output: NaN
+```
 
 ## 構文
 
@@ -49,12 +64,16 @@ parseFloat(string)
 
 ```js
 parseFloat(3.14);
-parseFloat('3.14');
-parseFloat('  3.14  ');
-parseFloat('314e-2');
-parseFloat('0.0314E+2');
-parseFloat('3.14some non-digit characters');
-parseFloat({ toString: function() { return "3.14" } });
+parseFloat("3.14");
+parseFloat("  3.14  ");
+parseFloat("314e-2");
+parseFloat("0.0314E+2");
+parseFloat("3.14some non-digit characters");
+parseFloat({
+  toString: function () {
+    return "3.14";
+  },
+});
 ```
 
 ### `NaN` を返す `parseFloat`
@@ -62,7 +81,7 @@ parseFloat({ toString: function() { return "3.14" } });
 以下の例は `NaN` を返します。
 
 ```js
-parseFloat('FF2');
+parseFloat("FF2");
 ```
 
 ### `parseFloat` と `BigInt`
@@ -71,7 +90,7 @@ parseFloat('FF2');
 
 ```js
 parseFloat(900719925474099267n);
-parseFloat('900719925474099267n');
+parseFloat("900719925474099267n");
 ```
 
 ## 仕様書
@@ -80,7 +99,7 @@ parseFloat('900719925474099267n');
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.parseFloat")}}
+{{Compat}}
 
 ## 関連情報
 

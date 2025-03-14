@@ -3,7 +3,7 @@ title: paint-order
 slug: Web/CSS/paint-order
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) **`paint-order`** 属性可以让你控制文本区域和图形绘制的填充和绘制（和 markers）的顺序
 
@@ -26,7 +26,8 @@ paint-order: markers stroke fill; /* 先 markers, 然后 stroke, 然后 fill */
 
 当只指定一个值的时候，这个值将会被首先渲染，然后剩下的两个值将会以默认顺序渲染，当只指定两个值的时候，这两个值会以指定的顺序渲染，接着渲染剩下的未指定的那个。
 
-> **备注：** 在这个属性的值当中，markers 只有当在绘制 SVG 图形时引用了 `marker-*`属性（例如 [`marker-start`](/zh-CN/docs/Web/SVG/Attribute/marker-start)）和 [`<marker>`](/zh-CN/docs/Web/SVG/Element/marker) 元素才能进行控制。他们不适用于 HTML 文本，所以，这样的话，你只能决定 `stroke` 和 `fill` 的顺序。
+> [!NOTE]
+> 在这个属性的值当中，markers 只有当在绘制 SVG 图形时引用了 `marker-*`属性（例如 [`marker-start`](/zh-CN/docs/Web/SVG/Attribute/marker-start)）和 [`<marker>`](/zh-CN/docs/Web/SVG/Element/marker) 元素才能进行控制。他们不适用于 HTML 文本，所以，这样的话，你只能决定 `stroke` 和 `fill` 的顺序。
 
 ### 属性值
 
@@ -39,11 +40,11 @@ paint-order: markers stroke fill; /* 先 markers, 然后 stroke, 然后 fill */
 
   - : 指定一部分或者全部这些属性的渲染顺序
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
-## 使用示例
+## 示例
 
 ### HTML
 
@@ -69,9 +70,9 @@ p {
 }
 ```
 
-### 效果
+### 结果
 
-{{EmbedLiveSample('Examples', '100%', 165)}}
+{{EmbedLiveSample('示例', '100%', 165)}}
 
 ## 规范
 

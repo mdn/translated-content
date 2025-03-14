@@ -1,24 +1,23 @@
 ---
-title: undefined
-slug: Glossary/undefined
+title: Undefined
+slug: Glossary/Undefined
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-一个声明未定义的变量的初始值，或没有实际参数的形式参数。
+{{GlossarySidebar}}
+
+**`undefined`** 是一个{{Glossary("primitive", "原始值")}}，自动赋给刚刚声明的{{glossary("variable", "变量")}}，或那些没有提供实际{{Glossary("Argument", "参数")}}的形参。
 
 ## 示例
 
 ```js
-var x; //创建一个变量，但并没有赋值
+let x; //声明变量但不赋值
 
-console.log("X 的值是", x)  //返回 X 的值是 undefined
+console.log(`x 的值是 ${x}`); //输出“x 的值是 undefined”
 ```
 
-## 更多
+## 参见
 
-### 基本知识
-
-- [Undefined value](https://zh.wikipedia.org/wiki/Undefined_value) on Wikipedia
-
-### 技术参考
-
-- [JavaScript data types and data structures](/zh-CN/docs/Web/JavaScript/Data_structures)
+- 维基百科上的 [Undefined 值](https://en.wikipedia.org/wiki/Undefined_value)
+- [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)

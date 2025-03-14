@@ -46,7 +46,7 @@ CSS 型付きオブジェクトモデルは、 CSS のプロパティに割り�
 - {{domxref('CSSUnparsedValue.forEach()')}}
   - : CSSUnparsedValue の各要素に対して、提供された関数を一回ずつ実行するメソッドです。
 - {{domxref('CSSUnparsedValue.keys()')}}
-  - : 配列のそれぞれのインデックスのキーを含む、新しい配列反復子オブジェクトを返すメソッドです。
+  - : 配列のそれぞれのインデックスのキーを含む、新しい配列イテレーターオブジェクトを返すメソッドです。
 
 ### `CSSKeywordValue` シリアライズ
 
@@ -113,4 +113,4 @@ CSSStyleValue は、すべての CSS 値が表現される基本クラスです�
 
 - [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
 - [CSS 型付きオブジェクトモデルの使用](/ja/docs/Web/API/CSS_Typed_OM_API/Guide)
-- [CSS Houdini](/ja/docs/Web/Guide/Houdini)
+- [CSS Houdini](/ja/docs/Web/API/Houdini_APIs)

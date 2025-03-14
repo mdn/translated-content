@@ -1,22 +1,32 @@
 ---
 title: <ol>
 slug: Web/HTML/Element/ol
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Reference
-translation_of: Web/HTML/Element/ol
 ---
 
 {{HTMLSidebar}}
 
 **HTML `<ol>` 요소**는 정렬된 목록을 나타냅니다. 보통 숫자 목록으로 표현합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/ol.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;ol&gt;", "tabbed-shorter")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
+```html interactive-example
+<ol>
+  <li>Mix flour, baking powder, sugar, and salt.</li>
+  <li>In another bowl, mix eggs, milk, and oil.</li>
+  <li>Stir both mixtures together.</li>
+  <li>Fill muffin tray 3/4 full.</li>
+  <li>Bake for 20 minutes.</li>
+</ol>
+```
+
+```css interactive-example
+li {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+  margin-bottom: 0.5rem;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -43,7 +53,7 @@ translation_of: Web/HTML/Element/ol
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -56,11 +66,11 @@ translation_of: Web/HTML/Element/ol
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("directory")}}, {{ARIARole("group")}},
-        {{ARIARole("listbox")}}, {{ARIARole("menu")}},
-        {{ARIARole("menubar")}}, {{ARIARole("radiogroup")}},
-        {{ARIARole("tablist")}}, {{ARIARole("toolbar")}},
-        {{ARIARole("tree")}}, {{ARIARole("presentation")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/directory_role'><code>directory</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/listbox_role'><code>listbox</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/menu_role'><code>menu</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/menubar_role'><code>menubar</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/radiogroup_role'><code>radiogroup</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/tablist_role'><code>tablist</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/toolbar_role'><code>toolbar</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/tree_role'><code>tree</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -74,11 +84,11 @@ translation_of: Web/HTML/Element/ol
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("reversed")}}
+- `reversed`
   - : 목록의 순서 역전 여부. 즉, 내부에 지정한 항목이 역순으로 배열된 것인지 나타냅니다.
-- {{htmlattrdef("start")}}
+- `start`
   - : 항목을 셀 때 시작할 수. `type`이 로마 숫자나 영어 문자인 경우에도 아라비아 숫자로 나타낸 정수(1, 2, 3...)만 가능합니다. 그러므로 영어 문자 "d"나 로마 숫자 "iv"부터 세려고 한다면 `start="4"`를 사용하세요.
-- {{htmlattrdef("type")}}
+- `type`
 
   - : 항목을 셀 때 사용할 카운터 유형.
 
@@ -88,9 +98,10 @@ translation_of: Web/HTML/Element/ol
     - `'I'`는 대문자 로마 숫자,
     - `'1'` 는 숫자(기본값)을 나타냅니다.
 
-    `type`은 아래의 모든 {{htmlelement("li")}}에 적용되지만, {{htmlattrxref("type", "li")}} 특성을 가진 `<li>`는 그 값을 대신 사용합니다.
+    `type`은 아래의 모든 {{htmlelement("li")}}에 적용되지만, [`type`](/ko/docs/Web/HTML/Element/li#type) 특성을 가진 `<li>`는 그 값을 대신 사용합니다.
 
-    > **참고:** 항목을 각각의 숫자/문자로 참조하는 기술적 또는 법률적 문서가 아니라면 CSS {{cssxref("list-style-type")}} 속성을 대신 사용하세요.
+    > [!NOTE]
+    > 항목을 각각의 숫자/문자로 참조하는 기술적 또는 법률적 문서가 아니라면 CSS {{cssxref("list-style-type")}} 속성을 대신 사용하세요.
 
 ## 사용 일람
 
@@ -151,13 +162,16 @@ translation_of: Web/HTML/Element/ol
 ```html
 <ol>
   <li>first item</li>
-  <li>second item  <!-- closing </li> tag not here! -->
+  <li>
+    second item
+    <!-- closing </li> tag not here! -->
     <ol>
       <li>second item first subitem</li>
       <li>second item second subitem</li>
       <li>second item third subitem</li>
     </ol>
-  </li>            <!-- Here's the closing </li> tag -->
+  </li>
+  <!-- Here's the closing </li> tag -->
   <li>third item</li>
 </ol>
 ```
@@ -169,13 +183,16 @@ translation_of: Web/HTML/Element/ol
 ```html
 <ol>
   <li>first item</li>
-  <li>second item      <!-- Look, the closing </li> tag is not placed here! -->
+  <li>
+    second item
+    <!-- Look, the closing </li> tag is not placed here! -->
     <ul>
       <li>second item first subitem</li>
       <li>second item second subitem</li>
       <li>second item third subitem</li>
     </ul>
-  </li>                <!-- Here is the closing </li> tag -->
+  </li>
+  <!-- Here is the closing </li> tag -->
   <li>third item</li>
 </ol>
 ```
@@ -188,7 +205,7 @@ translation_of: Web/HTML/Element/ol
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.ol")}}
+{{Compat}}
 
 ## 같이 보기
 
@@ -196,6 +213,6 @@ translation_of: Web/HTML/Element/ol
 - `<ol>` 요소와 유용하게 사용할 수 있는 CSS 속성
 
   - 서수를 표현할 방식을 지정하는 {{cssxref("list-style")}} 속성.
-  - 복잡한 중첩 목록을 처리하기 위한 [CSS 카운터](/ko/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+  - 복잡한 중첩 목록을 처리하기 위한 [CSS 카운터](/ko/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
   - 더 이상 사용하지 않는 `compact` 특성을 대체할 수 있는 {{cssxref("line-height")}}
   - 항목의 들여쓰기를 조정하기 위한 {{cssxref("margin")}} 속성.

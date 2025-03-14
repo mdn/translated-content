@@ -1,82 +1,81 @@
 ---
-title: AudioBuffer.getChannelData()
+title: AudioBuffer：getChannelData() 方法
 slug: Web/API/AudioBuffer/getChannelData
+l10n:
+  sourceCommit: ca3afa7533ac5bc2d552b0c7926d672fe79d71de
 ---
 
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AudioBuffer") }} 接口的 getChannelData() 方法返回一{{domxref("Float32Array")}} ，其中包含与通道关联的 PCM 数据，通道参数定义 (0 表示第一个通道)。
+{{ domxref("AudioBuffer") }} 接口的 **`getChannelData()`** 方法返回一个 {{domxref("Float32Array")}}，其中包含与通道（由通道参数定义，0 表示第一个通道）关联的 PCM 数据。
 
 ## 语法
 
-```js
-var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-var nowBuffering = myArrayBuffer.getChannelData(channel);
+```js-nolint
+getChannelData(channel)
 ```
 
 ### 参数
 
-- channel
-  - : channel 属性是要获取特定通道数据的索引。0 代表第一个通道。如果索引值大于或等于{{domxref("AudioBuffer.numberOfChannels")}}, 会抛出一个索引大小异常（`INDEX_SIZE_ERR` ）的错误。
+- `channel`
+  - : channel 属性是要获取特定通道数据的索引。索引值 0 代表第一个通道。如果 `channel` 索引值大于等于{{domxref("AudioBuffer.numberOfChannels")}}，则会抛出 `INDEX_SIZE_ERR` 异常。
 
 ### 返回值
 
-{{domxref("Float32Array")}}.
+一个 {{domxref("Float32Array")}}。
 
-## 例子
+## 示例
 
-在下例中，我们创建一个 2 秒钟的缓冲区，用白噪声填充它，然后通过{{domxref("AudioBufferSourceNode") }}来播放它。评论应该会清楚的解释发生的事情。你也可以[实时运行代码](https://mdn.github.io/webaudio-examples/audio-buffer/)，或者[查看源代码](https://github.com/mdn/webaudio-examples)。
+在下例中，我们创建一个 2 秒钟的缓冲区，用白噪声填充它，然后通过{{domxref("AudioBufferSourceNode") }}来播放它。注释应该清楚地解释了正在做的事情。你也可以[实时运行代码](https://mdn.github.io/webaudio-examples/audio-buffer/)，或者[查看源代码](https://github.com/mdn/webaudio-examples)。
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var button = document.querySelector('button');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+const audioCtx = new AudioContext();
+const button = document.querySelector("button");
+const pre = document.querySelector("pre");
+const myScript = document.querySelector("script");
 
-pre.innerHTML = myScript.innerHTML;
+pre.textContent = myScript.textContent;
 
-// Stereo
-var channels = 2;
-// Create an empty two second stereo buffer at the
-// sample rate of the AudioContext
-var frameCount = audioCtx.sampleRate * 2.0;
+// 立体声
+const channels = 2;
+// 按照 AudioContext 的采样率创建一个空的两秒立体声缓冲区
+const frameCount = audioCtx.sampleRate * 2.0;
 
-var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
-button.onclick = function() {
-  // Fill the buffer with white noise;
-  //just random values between -1.0 and 1.0
-  for (var channel = 0; channel < channels; channel++) {
-   // This gives us the actual ArrayBuffer that contains the data
-   var nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (var i = 0; i < frameCount; i++) {
-     // Math.random() is in [0; 1.0]
-     // audio needs to be in [-1.0; 1.0]
-     nowBuffering[i] = Math.random() * 2 - 1;
-   }
+button.onclick = () => {
+  // 用白噪声填充缓冲区；
+  // 仅使用 -1.0 至 1.0 之间的随机值
+  for (let channel = 0; channel < channels; channel++) {
+    // 这给了我们包含数据的实际 ArrayBuffer
+    const nowBuffering = myArrayBuffer.getChannelData(channel);
+    for (let i = 0; i < frameCount; i++) {
+      // Math.random() 是在 [0; 1.0] 之间的
+      // 音频需要在 [-1.0; 1.0] 之间
+      nowBuffering[i] = Math.random() * 2 - 1;
+    }
   }
 
-  // Get an AudioBufferSourceNode.
-  // This is the AudioNode to use when we want to play an AudioBuffer
-  var source = audioCtx.createBufferSource();
-  // set the buffer in the AudioBufferSourceNode
+  // 获取 AudioBufferSourceNode。
+  // 这是当我们想要播放 AudioBuffer 时要使用的 AudioNode
+  const source = audioCtx.createBufferSource();
+  // 在 AudioBufferSourceNode 中设置缓冲区
   source.buffer = myArrayBuffer;
-  // connect the AudioBufferSourceNode to the
-  // destination so we can hear the sound
+  // 将 AudioBufferSourceNode 连接到目标，以便我们可以听到声音
   source.connect(audioCtx.destination);
-  // start the source playing
+  // 开始播放 source
   source.start();
-}
+};
 ```
 
-## Specification
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web 音频 API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

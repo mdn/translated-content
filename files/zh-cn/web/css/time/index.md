@@ -5,13 +5,14 @@ slug: Web/CSS/time
 
 {{CSSRef}}
 
-**`<time>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) 表达了以秒（s）或毫秒（ms）为单位的时间的值。于{{cssxref("animation")}}、{{cssxref("transition")}}及相关属性中使用。
+**`<time>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) 表达了以秒（s）或毫秒（ms）为单位的时间的值。于{{cssxref("animation")}}、{{cssxref("transition")}}及相关属性中使用。
 
 ## 语法
 
-`<time>` 数据类型由 ​​​​​​{{cssxref("&lt;number&gt;")}}后加下方列出的单位之一组成。前方也可选择添加一个`+` 或 `-`。单位与数字之间无空格。
+`<time>` 数据类型由 {{cssxref("&lt;number&gt;")}}后加下方列出的单位之一组成。前方也可选择添加一个`+` 或 `-`。单位与数字之间无空格。
 
-> **备注：** 尽管数字 `0` 不管在何种单位下均相等，但其单位不可去除。换句话说， `0` 是无效的，并不代表 `0s` 或 `0ms`。
+> [!NOTE]
+> 尽管数字 `0` 不管在何种单位下均相等，但其单位不可去除。换句话说， `0` 是无效的，并不代表 `0s` 或 `0ms`。
 
 ### 单位
 
@@ -20,13 +21,14 @@ slug: Web/CSS/time
 - **`ms`**
   - : 以毫秒为单位的时间。例： `0ms`, `150.25ms`, `-60000ms`。
 
-> **备注：** 秒 `s` 与毫秒 `ms` 间的转换为： `1s` = `1000ms`。
+> [!NOTE]
+> 秒 `s` 与毫秒 `ms` 间的转换为： `1s` = `1000ms`。
 
 ## 示例
 
 ### 有效时间
 
-```
+```plain example-good
 12s         正整数
 -456ms      负整数
 4.3ms       非整数

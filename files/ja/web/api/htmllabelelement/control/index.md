@@ -1,6 +1,9 @@
 ---
-title: HTMLLabelElement.control
+title: "HTMLLabelElement: control プロパティ"
+short-title: control
 slug: Web/API/HTMLLabelElement/control
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -11,7 +14,8 @@ slug: Web/API/HTMLLabelElement/control
 
 {{domxref("HTMLElement")}} の派生オブジェクトで、この {{HTMLElement("label")}} が関連付けられているコントロールを表します。ラベルが孤立している場合は `null` になります。
 
-> **メモ:** このプロパティに値があり、 {{domxref("HTMLLabelElement.htmlFor")}} に値がある場合、 {{domxref("HTMLLabelElement.htmlFor")}} プロパティは必ず同じコントロールを参照します。
+> [!NOTE]
+> このプロパティに値があり、 {{domxref("HTMLLabelElement.htmlFor")}} に値がある場合、 {{domxref("HTMLLabelElement.htmlFor")}} プロパティは必ず同じコントロールを参照します。
 
 ## 仕様書
 

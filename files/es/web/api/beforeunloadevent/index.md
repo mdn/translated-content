@@ -33,12 +33,12 @@ Cuando una cadena no vacía es asignada a la propiedad `returnValue` del Evento,
 ## Ejemplos
 
 ```js
-window.addEventListener("beforeunload", function( event ) {
-  event.returnValue = "\o/";
+window.addEventListener("beforeunload", function (event) {
+  event.returnValue = "\\o/";
 });
 
 //is equivalent to
-window.addEventListener("beforeunload", function( event ) {
+window.addEventListener("beforeunload", function (event) {
   event.preventDefault();
 });
 ```
@@ -47,22 +47,26 @@ Los navegadores basado en Webkit no se basan en las especificaciones del cuadro 
 
 ```js
 window.addEventListener("beforeunload", function (e) {
-  var confirmationMessage = "\o/";
+  var confirmationMessage = "\\o/";
 
-  (e || window.event).returnValue = confirmationMessage;     //Gecko + IE
-  return confirmationMessage;                                //Webkit, Safari, Chrome etc.
+  (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+  return confirmationMessage; //Webkit, Safari, Chrome etc.
 });
 ```
 
-## Compatibilidad del navegador
+## Especificaciones
 
-{{Compat("api.BeforeUnloadEvent")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 
-- [`DOMContentLoaded`](/es/docs/Web/Reference/Events/DOMContentLoaded)
-- [`readystatechange`](/es/docs/Web/Reference/Events/readystatechange)
-- [`load`](/es/docs/Web/Reference/Events/load)
-- [`beforeunload`](/es/docs/Web/Reference/Events/beforeunload)
-- [`unload`](/es/docs/Web/Reference/Events/unload)
+- [`DOMContentLoaded`](/es/docs/Web/API/Document/DOMContentLoaded_event)
+- [`readystatechange`](/es/docs/Web/API/Document/readystatechange_event)
+- [`load`](/es/docs/Web/API/Window/load_event)
+- [`beforeunload`](/es/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/es/docs/Web/API/Window/unload_event)
 - [Descargas de documentos — Solicitud para descargar un documento](https://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)

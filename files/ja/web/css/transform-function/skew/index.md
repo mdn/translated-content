@@ -1,14 +1,41 @@
 ---
 title: skew()
 slug: Web/CSS/transform-function/skew
-original_slug: Web/CSS/transform-function/skew()
+l10n:
+  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
 {{CSSRef}}
 
-**`skew()`** は [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を二次元平面上でゆがめる変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+**`skew()`** は [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を 2D 平面上でゆがめる変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-{{EmbedInteractiveExample("pages/css/function-skew.html")}}
+{{InteractiveExample("CSS Demo: skew()")}}
+
+```css interactive-example-choice
+transform: skew(0);
+```
+
+```css interactive-example-choice
+transform: skew(15deg, 15deg);
+```
+
+```css interactive-example-choice
+transform: skew(-0.06turn, 18deg);
+```
+
+```css interactive-example-choice
+transform: skew(0.312rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 この変換はシアー変形 ([せん断写像](https://ja.wikipedia.org/wiki/せん断写像)) で、要素内のそれぞれの点を水平および垂直方向に指定された角度でゆがませます。要素のそれぞれの角を掴んで、一定の角度に沿って引っ張ったような効果があります。
 
@@ -34,17 +61,17 @@ skew(ax, ay)
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">ℝ^2 のデカルト座標</th>
-      <th scope="col">ℝℙ^2 の同次座標</th>
-      <th scope="col">ℝ^3 のデカルト座標</th>
-      <th scope="col">ℝℙ^3 の同次座標</th>
+      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
+      <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
+      <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mn>1</mn> </mtd
@@ -62,13 +89,13 @@ skew(ax, ay)
                   <mo>)</mo> </mtd
                 ><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td>
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mn>1</mn> </mtd
@@ -88,12 +115,12 @@ skew(ax, ay)
               ><mtr
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>1</mn></mtd></mtr
-              ><mtr></mtr></mtable></mfenced
+              ><mtr></mtr></mtable><mo>)</mo></mrow
         ></math>
       </td>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mn>1</mn> </mtd
@@ -114,13 +141,13 @@ skew(ax, ay)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mn>1</mn> </mtd
@@ -145,7 +172,7 @@ skew(ax, ay)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
@@ -158,7 +185,7 @@ skew(ax, ay)
 
 ## 例
 
-<h3 id="Skewing_on_the_x-axis_only">X 軸のみの変形</h3>
+### X 軸のみの変形
 
 #### HTML
 
@@ -188,9 +215,9 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Skewing_on_the_x-axis_only", 200, 200)}}
+{{EmbedLiveSample("x_軸のみの変形", 200, 200)}}
 
-<h3 id="Skewing_on_both_axes">両方の軸の変形</h3>
+### 両方の軸の変形
 
 #### HTML
 
@@ -220,7 +247,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Skewing_on_both_axes", 200, 200)}}
+{{EmbedLiveSample("両方の軸の変形", 200, 200)}}
 
 ## 仕様書
 
@@ -234,5 +261,10 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [skewX()](/ja/docs/Web/CSS/transform-function/skewX())
-- [skewY()](/ja/docs/Web/CSS/transform-function/skewY())
+- [skewX()](/ja/docs/Web/CSS/transform-function/skewX)
+- [skewY()](/ja/docs/Web/CSS/transform-function/skewY)
+- 独立した座標変換プロパティ:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}
+  - 注: `skew` プロパティはありません

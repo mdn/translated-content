@@ -3,6 +3,8 @@ title: Referer ヘッダーのプライバシーとセキュリティの考慮�
 slug: Web/Security/Referer_header:_privacy_and_security_concerns
 ---
 
+{{QuickLinksWithSubpages("/ja/docs/Web/Security")}}
+
 [HTTP の Referer ヘッダー](/ja/docs/Web/HTTP/Headers/Referer)にまつわるプライバシーとセキュリティのリスクがあります。この記事ではこれらを説明し、これらのリスクを回避するためのアドバイスを提案します。
 
 ## リファラー問題
@@ -27,7 +29,7 @@ URL 経由で他の場所に機密データを渡すことを避けるために�
 
 - サーバ上の {{httpheader("Referrer-Policy")}} ヘッダで、`Referer` ヘッダを通してどのような情報を送るかを制御します。繰り返しになりますが、`no-referrer` ディレクティブは Referer ヘッダを完全に省略します
 - そのような情報が漏れる危険性のある HTML 要素 ({{HTMLElement("img")}} や {{HTMLElement("a")}} など) 上の `referrerpolicy` 属性。これは、例えば、`Referer` ヘッダーが完全に送信されないようにするために、`no-referrer` に設定することができます
-- そのような情報が漏れる危険性のある HTML 要素 ({{HTMLElement("img")}} や {{HTMLElement("a")}} など) で `no-referrer` に設定されている `rel` 属性。詳細については、[リンク種別](/ja/docs/Web/HTML/Link_types)と `no-referrer` の検索を参照してください
+- そのような情報が漏れる危険性のある HTML 要素 ({{HTMLElement("img")}} や {{HTMLElement("a")}} など) で `no-referrer` に設定されている `rel` 属性。詳細については、[リンク種別](/ja/docs/Web/HTML/Attributes/rel)と `no-referrer` の検索を参照してください
 - 技術的な[終了ページ](https://geekthis.net/post/hide-http-referer-headers/#exit-page-redirect)
 
 セキュリティを意識したサーバーサイドのフレームワークは、例えば、このような問題を緩和するための機能が組み込まれていることが多いです。

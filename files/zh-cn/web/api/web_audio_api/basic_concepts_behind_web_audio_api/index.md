@@ -3,6 +3,8 @@ title: 网页音频接口的基本概念
 slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 ---
 
+{{DefaultAPISidebar("Web Audio API")}}
+
 这篇文章解释了 网页音频接口 (Web Audio API) 运作过程中的部分音频处理概念。本文并不会将你变为一名音频处理大师，但它可以给你足够的背景知识来理解 网页音频接口 的运行原理，并能让你在使用它时做出更好的决策。
 
 ## 音频节点：模块化连接
@@ -17,43 +19,44 @@ slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 4. 选择音频的终点——例如系统的扬声器
 5. 连接声源和特效，以及特效和终点。
 
-![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](webaudioapi_en.svg)
+![一个简单的框图，外框标有音频环境，内部有三个框，分别标有声源、特效和终点。三个内部框之间有箭头，从左到右指向，表示音频信息的流动。](webaudioapi_en.svg)
 
 每个输入和输出都可以包括几个声道，声道代表了一个特定的音效通道。各种声道分离结构都可以使用，包括*单声道*，_立体声_，_四声道_，*5.1*等等。
 
-![Show the ability of AudioNodes to connect via their inputs and outputs and the channels inside these inputs/outputs.](https://mdn.mozillademos.org/files/12239/audionodes_en.svg)
+![显示音频节点（AudioNode）通过它们的输入和输出以及这些输入/输出中的通道之间的连接能力。](mdn.png)
 
 声源可以来自不同的地方：
 
 - 直接通过 Javascript 生成声音节点产生（例如一个振动发声器）
 - 由脉冲编码调制产生的原始数据（音频环境中可以调用一些方法来解码部分支持的格式）
 - 从 HTML 元素中（例如 {{HTMLElement("video")}} 或者 {{HTMLElement("audio")}} 标签）
-- 直接通过一个 [WebRTC](/zh-CN/docs/WebRTC) {{domxref("MediaStream")}} 获取流媒体（例如一个摄像头或麦克风）
+- 直接通过一个 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} 获取流媒体（例如一个摄像头或麦克风）
 
 ## 音频数据：什么是样本
 
 当一个音频信号被处理时，取样意味着从一个[连续的信号](http://wikipedia.org/wiki/Continuous_signal)转化为[离散的信号](http://wikipedia.org/wiki/Discrete_signal)；更具体地说，一个连续的声波（例如一个正在演奏的乐队发出的声音）会被转化成一系列的样本点（一个时间上离散的信号），计算机只可以处理这些离散的样本块。
 
-更多的细节可以查看维基百科的[采样](http://wikipedia.org/wiki/Sampling_%28signal_processing%29)页面。
+更多的细节可以查看维基百科的[采样](https://zh.wikipedia.org/wiki/取樣)页面。
 
-## 音频片段：帧，样本和声道
+## 音频片段：帧、样本和声道
 
-一个 音频片段 ({{ domxref("AudioBuffer") }}) 会包含几个组成参数：一个或几个声道（1 代表*单声道*，2 代表*立体声*等等），一个长度（代表片段中采样帧的数目）和一个采样率（是每秒钟采样帧的个数）。
+一个音频片段（{{domxref("AudioBuffer")}}）会包含几个组成参数：一个或几个声道（1 代表*单声道*，2 代表*立体声*等等），一个长度（代表片段中采样帧的数目）和一个采样率（是每秒钟采样帧的个数）。
 
 每个样本点都是一个 代表着该音频流在特定时间特定声道上的数值的 单精度浮点数。一个帧，或者一个采样帧是由一组在特定时间上的所有声道的样本点组成的——即所有声道在同一时间的样本点（*立体声*有 2 个，*5.1*有 6 个，等等，每个帧包含的样本点个数和声道数相同）。
 
-采样率就是一秒钟内获取帧的个数，单位是赫兹 (Hz)。采样率越高，音频效果越好。
+采样率就是一秒钟内获取帧的个数，单位是赫兹（Hz）。采样率越高，音频效果越好。
 
 现在让我们来看一下通道，一个单声道和一个立体声的音频片段，每个都是 1 秒钟，播放频率（采样率）为 44100 赫兹：
 
 - 单声道片段会有 44100 个样本点和 44100 个帧。长度属性为 44100。
 - 立体声片段会有 88200 个样本点和 44100 个帧。长度属性依旧为 44100，因为长度总和帧的个数相同。
 
-![A diagram showing several frames in an audio buffer in a long line, each one containing two samples, as the buffer has two channels, it is stereo.](https://mdn.mozillademos.org/files/12519/sampleframe.svg)
+![以长线形式展示的音频缓冲区中的几个帧，每个帧包含两个样本点，因为缓冲区有两个声道，所以是立体声。](sampleframe-english.png)
 
 当一个音频片段开始播放时，你将会听到最左侧的样本帧，之后是他右侧相邻的一帧，以此类推。在立体声中，你将会同时听到两个声道。样本帧的概念在此时非常有用，因为每个样本帧代表特定的播放时间，而和声道个数无关，这种方式很有利于精确的多声道同步处理。
 
-> **备注：** 只需用帧的数目除以采样率即可得到播放时间（单位为秒）。用样本点数目除以声道个数即可得到帧的数目。
+> [!NOTE]
+> 只需用帧的数目除以采样率即可得到播放时间（单位为秒）。用样本点数目除以声道个数即可得到帧的数目。
 
 下面我们将展示几个浅显易懂的示例：
 
@@ -64,7 +67,8 @@ var buffer = context.createBuffer(2, 22050, 44100);
 
 如果你使用上面的方法调用，你将会得到一个立体声（两个声道）的音频片段 (Buffer)，当它在一个频率为 44100 赫兹（这是目前大部分声卡处理声音的频率）的音频环境中播放的时候，会持续 0.5 秒：22050 帧 / 44100 赫兹 = 0.5 秒。
 
-> **备注：** 在 [数字音频](https://zh.wikipedia.org/zh-cn/數位音訊) 中，**44,100 [赫兹](https://wikipedia.org/wiki/Hertz)** （有时也写作 **44.1 kHz**）是一个常见的 [取样频率](https://wikipedia.org/wiki/Sampling_frequency)。为什么选取 44.1kHz 呢？首先，因为 [人耳的接收频率](https://wikipedia.org/wiki/Hearing_range) 大约在 20 Hz 到 20,000 Hz 之间，根据 [采样定理](https://zh.wikipedia.org/wiki/采样定理)，采样频率一定要大于最终生成数据最大频率的二倍，因此就一定要大于 40,000 Hz（即 40kHz）。不仅如此，在采样之前信号还必须通过 [低通滤波器](https://zh.wikipedia.org/zh-cn/低通滤波器) ，否则 会发生[混叠](https://zh.wikipedia.org/zh-cn/混疊)现象，一个理想低通滤波器会完全留下低于 20kHz 的信号（且没有使它衰减）并完美阻拦一切高于 20kHz 的信号，而事实上 [过度频带（英文）](https://wikipedia.org/wiki/Transition_band)总是存在，在这个区域内信号会被部分衰减。这个频带越宽，建立一个 [抗混叠滤波器](https://zh.wikipedia.org/zh-cn/抗混疊濾波器) 才越容易。因此我们选取 44.1kHz 允许我们有 2.05kHz 的空间预留给过度频带。
+> [!NOTE]
+> 在[数字音频](https://zh.wikipedia.org/wiki/數位音訊)中，**44,100 [赫兹](https://zh.wikipedia.org/wiki/赫兹)**（有时也写作 **44.1 kHz**）是一个常见的[采样频率](https://zh.wikipedia.org/wiki/取樣)。为什么选取 44.1kHz 呢？首先，因为[人耳的接收频率](https://zh.wikipedia.org/wiki/聽力範圍)大约在 20 Hz 到 20,000 Hz 之间，根据[采样定理](https://zh.wikipedia.org/wiki/采样定理)，采样频率一定要大于最终生成数据最大频率的二倍，因此就一定要大于 40,000 Hz（即 40kHz）。不仅如此，在采样之前信号还必须通过[低通滤波器](https://zh.wikipedia.org/wiki/低通滤波器)，否则 会发生[混叠](https://zh.wikipedia.org/wiki/混疊)现象，一个理想低通滤波器会完全留下低于 20kHz 的信号（且没有使它衰减）并完美阻拦一切高于 20kHz 的信号，而事实上[过度频带](https://wikipedia.org/wiki/Transition_band)总是存在，在这个区域内信号会被部分衰减。这个频带越宽，建立一个[抗混叠滤波器](https://zh.wikipedia.org/wiki/抗混疊濾波器)才越容易。因此我们选取 44.1kHz 允许我们有 2.05kHz 的空间预留给过度频带。
 
 ```js
 var context = new AudioContext();
@@ -73,13 +77,14 @@ var buffer = context.createBuffer(1, 22050, 22050);
 
 如果你这样调用，你将会得到一个单声道的音频片段 (Buffer)，当它在一个频率为 44100 赫兹的音频环境中播放的时候，将会被自动按照 44100 赫兹*重采样*（因此也会转化为 44100 赫兹的片段），并持续 1 秒：44100 帧 / 44100 赫兹 = 1 秒。
 
-> **备注：** 音频重采样与图片的缩放非常类似：比如你有一个 16 x 16 的图像，但是你想把它填充到一个 32 x 32 大小的区域，你就要对它进行缩放（重采样）。得到的结果会是一个较低品质的（图像会模糊或者有锯齿形的边缘，这取决于缩放采用的算法），但它却是能将原图形缩放，并且缩放后的图像占用空间比相同大小的普通图像要小。重新采样的音频道理相同——你会节约一些空间，但事实上你无法产出高频率的声音（高音区）。
+> [!NOTE]
+> 音频重采样与图片的缩放非常类似：比如你有一个 16 x 16 的图像，但是你想把它填充到一个 32 x 32 大小的区域，你就要对它进行缩放（重采样）。得到的结果会是一个较低品质的（图像会模糊或者有锯齿形的边缘，这取决于缩放采用的算法），但它却是能将原图形缩放，并且缩放后的图像占用空间比相同大小的普通图像要小。重新采样的音频道理相同——你会节约一些空间，但事实上你无法产出高频率的声音（高音区）。
 
 ### 分离式与交错式音频片段
 
 网页音频接口使用了分离式的片段储存方式：左 (L) 右 (R) 声道像这样存储：
 
-```
+```plain
 LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR（对于一个有 16 帧的音频片段）
 ```
 
@@ -87,7 +92,7 @@ LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR（对于一个有 16 帧的音频片段）
 
 另一种储存方式是使用交错式的片段储存方式：
 
-```
+```plain
 LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR（对于一个有 16 帧的音频片段）
 ```
 
@@ -105,7 +110,8 @@ LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR（对于一个有 16 帧的音频片段）
 | _四声道_ | `0: L: 左 1: R: 右 2: SL: 环绕左 3: SR: 环绕右`                           | _Quad_   | `0: L: left 1: R: right 2: SL: surround left 3: SR: surround right`                                |
 | _5.1_    | `0: L: 左 1: R: 右 2: C: 中央 3: LFE: 低音炮 4: SL: 环绕左 5: SR: 环绕右` | _5.1_    | `0: L: left 1: R: right 2: C: center 3: LFE: subwoofer 4: SL: surround left 5: SR: surround right` |
 
-> **备注：** 由于缩写来自英文，因此保留英文作对照。
+> [!NOTE]
+> 由于缩写来自英文，因此保留英文作对照。
 
 ### 向上和向下混频
 
@@ -320,7 +326,7 @@ LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR（对于一个有 16 帧的音频片段）
 
 一般来说，可视化是通过获取各个时间上的音频数据（通常是振幅或频率），之后运用图像技术将其处理为视觉输出（例如一个图像）来实现的。网页音频接口提供了一个不会改变输入信号的音频节点 {{domxref("AnalyserNode")}}，通过它可以获取声音数据并传递到像 {{htmlelement("canvas")}} 等等一样的可视化工具。
 
-![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](fttaudiodata_en.svg)
+![无需修改音频流，节点就可以使用 FFT 获取与之相关的频率和时域数据。](fttaudiodata_en.svg)
 
 你可以通过如下方法获取需要的音频数据：
 
@@ -333,7 +339,8 @@ LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR（对于一个有 16 帧的音频片段）
 - {{domxref("AnalyserNode.getByteTimeDomainData()")}}
   - : 返回一个{{domxref("Uint8Array")}} 无符号字节数组 (unsigned byte array)，其中包含传递到此音频节点声音的实时波形，时间数据。
 
-> **备注：** 更多信息可以参考我们的这篇文章：[基于 Web Audio API 实现音频可视化效果](/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) 。
+> [!NOTE]
+> 更多信息可以参考我们的这篇文章：[基于 Web Audio API 实现音频可视化效果](/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)。
 
 ## 空间位置化
 
@@ -341,20 +348,21 @@ LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR（对于一个有 16 帧的音频片段）
 
 声相控制器的位置可以通过笛卡尔坐标系进行描述，控制器的运动可以由速度向量来表示，这会引起多普勒效应，它的传播方向可以用一个方向圆锥来表示，当它是一个全方向声源时，圆锥会变得非常大。
 
-![The PannerNode brings a spatial position and velocity and a directionality for a given signal.](pannernode_en.svg)
+![PannerNode 为给定信号提供了空间位置、速度和方向。](pannernode_en.svg)
 
 接听者的位置可以用笛卡尔坐标系来表示；他的运动可以用方向向量表示；头部姿态可以用两个向量表示：一个向上向量表示头顶正对的方向，一个向前向量表示鼻子所指向的方向（面向的方向），这两个向量应该互相垂直。
 
-![The PannerNode brings a spatial position and velocity and a directionality for a given signal.](https://mdn.mozillademos.org/files/12513/listener.svg)
+![我们可以看到 AudioListener 的位置、向上和向前的向量（两者彼此成 90° 角）。](webaudiolistenerreduced.png)
 
-> **备注：** 更多信息可以参考我们的这篇文章：[网络音频位置空间化入门（英文）](/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)。
+> [!NOTE]
+> 更多信息可以参考我们的这篇文章：[网络音频位置空间化入门](/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)。
 
 ## 扇入与扇出
 
 对于音频来说，**扇入**是指 {{domxref("ChannelMergerNode")}} 节点接收一系列单声道输入声源，并将它们整合输出为一个多声道音频信号的过程：
 
-![](fanin.svg)
+![扇入过程图。多个单输入源的无指向箭头组合成单个多声道信号的有指向箭头](fanin.svg)
 
 **扇出**恰恰相反，是指一个{{domxref("ChannelSplitterNode")}} 节点接收一个多声道输入声源并将它分离成多个单声道音频信号的过程：
 
-![](fanout.svg)
+![扇出过程图。一个多声道信号的有指向箭头分裂成多个单声道信号的无指向箭头](fanout.svg)

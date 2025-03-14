@@ -1,39 +1,45 @@
 ---
 title: Generator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
+l10n:
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
 
-**`next()`** 方法返回一个包含属性 `done` 和 `value` 的对象。该方法也可以通过接受一个参数用以向生成器传值。
+{{jsxref("Generator")}} 实例的 **`next()`** 方法返回一个包含属性 `done` 和 `value` 的对象。你也可以通过向 `next` 方法传入一个参数来向生成器传一个值。
 
 ## 语法
 
-```plain
-gen.next(value)
+```js-nolint
+next()
+next(value)
 ```
 
 ### 参数
 
-- `value`
-  - : 向生成器传递的值。
+- `value` {{optional_inline}}
+
+  - : 要传给生成器的值。
+
+    该值将作为 `yield` 表达式的结果。例如，在 `variable = yield expression` 中，传入给 `.next()` 函数的值将被分配给 `variable`。
 
 ### 返回值
 
-返回的[对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)包含两个属性：
+一个 {{jsxref("Object")}}，包含以下两个属性：
 
-- `done` (布尔类型)
-
-  - 如果迭代器超过迭代序列的末尾，则值为 `true`。在这种情况下，`value` 可选地指定迭代器的返回值。
-  - 如果迭代器能够生成序列中的下一个值，则值为 `false`。这相当于没有完全指定 `done` 属性。
-
-- `value` - 迭代器返回的任意的 JavaScript 值。当 `done` 的值为 `true` 时可以忽略该值。
+- `done`
+  - : 一个布尔值：
+    - 如果生成器的控制流程已经结束，则为 `true`。在这种情况下，`value` 指定生成器的*返回值*（可能是 undefined）。
+    - 如果生成器还是产生更多的值，则为 `false`。
+- `value`
+  - : 生成器产生或返回的任何 JavaScript 值。
 
 ## 示例
 
-### 使用 `next()` 方法
+### 使用 next()
 
-下面的例子展示了一个简单的生成器，以及调用 `next` 后方法的返回值：
+下面的例子展示了一个简单的生成器，以及调用 `next` 方法后的返回值：
 
 ```js
 function* gen() {
@@ -42,31 +48,53 @@ function* gen() {
   yield 3;
 }
 
-var g = gen(); // "Generator { }"
-g.next();      // "Object { value: 1, done: false }"
-g.next();      // "Object { value: 2, done: false }"
-g.next();      // "Object { value: 3, done: false }"
-g.next();      // "Object { value: undefined, done: true }"
+const g = gen(); // Generator { }
+g.next(); // { value: 1, done: false }
+g.next(); // { value: 2, done: false }
+g.next(); // { value: 3, done: false }
+g.next(); // { value: undefined, done: true }
+```
+
+### 将 next() 与列表一起使用
+
+在这个示例中，`getPage` 获取一个列表并将其按 `pageSize` 大小“分页”成块。每次调用 `next` 都会产生一个这样的块。
+
+```js
+function* getPage(list, pageSize = 1) {
+  for (let index = 0; index < list.length; index += pageSize) {
+    yield list.slice(index, index + pageSize);
+  }
+}
+
+const list = [1, 2, 3, 4, 5, 6, 7, 8];
+const page = getPage(list, 3); // Generator { }
+
+page.next(); // { value: [1, 2, 3], done: false }
+page.next(); // { value: [4, 5, 6], done: false }
+page.next(); // { value: [7, 8], done: false }
+page.next(); // { value: undefined, done: true }
 ```
 
 ### 向生成器传值
 
-在此示例中，使用值调用 `next`。请注意，第一次调用没有记录任何内容，因为生成器最初没有产生任何结果。
+在此示例中，调用 `next` 时传入值。
 
-```plain
+> [!NOTE]
+> 第一次调用不会打印任何内容，因为生成器最初没有产生任何内容。
+
+```js
 function* gen() {
-  while(true) {
-    var value = yield null;
+  while (true) {
+    const value = yield;
     console.log(value);
   }
 }
 
-var g = gen();
-g.next(1);
-// "{ value: null, done: false }"
-g.next(2);
-// 2
-// "{ value: null, done: false }"
+const g = gen();
+g.next(1); // 返回 { value: undefined, done: false }
+// 这一步不会有输出：通过 `next` 发送的第一个值会被丢弃
+g.next(2); // 返回 { value: undefined, done: false }
+// 打印 2
 ```
 
 ## 规范
@@ -77,7 +105,7 @@ g.next(2);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)
-- [Iterators and generators](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- {{jsxref("Statements/function*", "function*")}}
+- [迭代器和生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)指南

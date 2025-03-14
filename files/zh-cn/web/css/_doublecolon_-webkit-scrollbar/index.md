@@ -1,15 +1,16 @@
 ---
-title: '::-webkit-scrollbar'
-slug: 'Web/CSS/::-webkit-scrollbar'
+title: ::-webkit-scrollbar
+slug: Web/CSS/::-webkit-scrollbar
 ---
 
 {{CSSRef}}{{Non-standard_Header}}
 
 `::-webkit-scrollbar` CSS 伪类元素会影响设置了 `overflow:scroll;` 的元素的滚动条样式。
 
-> **备注：** 如果没有设置 `overflow:scroll;`，元素的滚动条将不会显示。
+> [!NOTE]
+> 如果没有设置 `overflow:scroll;`，元素的滚动条将不会显示。
 
-> **备注：** `::-webkit-scrollbar` 仅在基于 [Blink](https://www.chromium.org/blink) 或 [WebKit](https://webkit.org) 的浏览器（例如，Chrome、Edge、Opera、Safari、iOS 上所有的浏览器，以及[其它基于 WebKit 的浏览器](https://zh.wikipedia.org/wiki/网页浏览器列表#基於WebKit排版引擎)）上可用。滚动条样式的标准方法可用于 {{cssxref("scrollbar-color")}} 和 {{cssxref("scrollbar-width")}}。
+> **备注：** `::-webkit-scrollbar` 仅在基于 [Blink](https://www.chromium.org/blink) 或 [WebKit](https://webkit.org) 的浏览器（例如，Chrome、Edge、Opera、Safari、iOS 上所有的浏览器，以及[其他基于 WebKit 的浏览器](https://zh.wikipedia.org/wiki/网页浏览器列表#基於WebKit排版引擎)）上可用。滚动条样式的标准方法可用于 {{cssxref("scrollbar-color")}} 和 {{cssxref("scrollbar-width")}}。
 
 ## CSS 滚动条选择器
 
@@ -28,7 +29,9 @@ slug: 'Web/CSS/::-webkit-scrollbar'
 ### CSS
 
 ```css
-.visible-scrollbar, .invisible-scrollbar, .mostly-customized-scrollbar {
+.visible-scrollbar,
+.invisible-scrollbar,
+.mostly-customized-scrollbar {
   display: block;
   width: 10em;
   overflow: auto;
@@ -57,28 +60,27 @@ slug: 'Web/CSS/::-webkit-scrollbar'
 
 ```html
 <div class="visible-scrollbar">
-  Etiam sagittis sem sed lacus laoreet, eu fermentum eros auctor.
-  Proin at nulla elementum, consectetur ex eget, commodo ante.
-  Sed eros mi, bibendum ut dignissim et, maximus eget nibh. Phasellus
-  blandit quam turpis, at mollis velit pretium ut. Nunc consequat
-  efficitur ultrices. Nullam hendrerit posuere est. Nulla libero
-  sapien, egestas ac felis porta, cursus ultricies quam. Vestibulum
-  tincidunt accumsan sapien, a fringilla dui semper in. Vivamus
-  consectetur ipsum a ornare blandit. Aenean tempus at lorem sit
-  amet faucibus. Curabitur nibh justo, faucibus sed velit cursus,
-  mattis cursus dolor. Pellentesque id pretium est. Quisque
-  convallis nisi a diam malesuada mollis. Aliquam at enim ligula.
+  Etiam sagittis sem sed lacus laoreet, eu fermentum eros auctor. Proin at nulla
+  elementum, consectetur ex eget, commodo ante. Sed eros mi, bibendum ut
+  dignissim et, maximus eget nibh. Phasellus blandit quam turpis, at mollis
+  velit pretium ut. Nunc consequat efficitur ultrices. Nullam hendrerit posuere
+  est. Nulla libero sapien, egestas ac felis porta, cursus ultricies quam.
+  Vestibulum tincidunt accumsan sapien, a fringilla dui semper in. Vivamus
+  consectetur ipsum a ornare blandit. Aenean tempus at lorem sit amet faucibus.
+  Curabitur nibh justo, faucibus sed velit cursus, mattis cursus dolor.
+  Pellentesque id pretium est. Quisque convallis nisi a diam malesuada mollis.
+  Aliquam at enim ligula.
 </div>
 
 <div class="invisible-scrollbar">
-Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword
+  Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword
 </div>
 
 <div class="mostly-customized-scrollbar">
-Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword<br>
-And pretty tall<br>
-thing with weird scrollbars.<br>
-Who thought scrollbars could be made weeeeird?
+  Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword<br />
+  And pretty tall<br />
+  thing with weird scrollbars.<br />
+  Who thought scrollbars could be made weeeeird?
 </div>
 ```
 

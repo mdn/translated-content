@@ -1,23 +1,40 @@
 ---
 title: <legend>
 slug: Web/HTML/Element/legend
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/legend
 ---
 
 {{HTMLSidebar}}
 
 **HTML `<legend>` 요소**는 부모 {{HTMLElement("fieldset")}} 콘텐츠의 설명을 나타냅니다.
 
-{{EmbedInteractiveExample("pages/tabbed/legend.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;legend&gt;", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
+```html interactive-example
+<fieldset>
+  <legend>Choose your favorite monster</legend>
+
+  <input type="radio" id="kraken" name="monster" value="K" />
+  <label for="kraken">Kraken</label><br />
+
+  <input type="radio" id="sasquatch" name="monster" value="S" />
+  <label for="sasquatch">Sasquatch</label><br />
+
+  <input type="radio" id="mothman" name="monster" value="M" />
+  <label for="mothman">Mothman</label>
+</fieldset>
+```
+
+```css interactive-example
+legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -37,7 +54,7 @@ translation_of: Web/HTML/Element/legend
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -71,4 +88,4 @@ translation_of: Web/HTML/Element/legend
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.legend")}}
+{{Compat}}

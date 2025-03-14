@@ -1,16 +1,6 @@
 ---
 title: PaymentRequest
 slug: Web/API/PaymentRequest
-tags:
-  - API
-  - Payment Request API
-  - PaymentRequest
-  - Деньги
-  - Интерфейс
-  - Коммерция
-  - Оплата
-  - Платежи
-translation_of: Web/API/PaymentRequest
 ---
 
 {{securecontext_header}}{{APIRef("Payment Request API")}}
@@ -50,7 +40,7 @@ The [Payment Request API's](/ru/docs/Web/API/Payment_Request_API) **`PaymentRequ
 ## События
 
 - {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} {{securecontext_inline}}
-  - : With some payment handlers (e.g., Apple Pay), this event handler is called to handle the {{event("merchantvalidation")}} event, which is dispatched when the user agent requires that the merchant validate that the merchant or vendor requesting payment is legitimate.
+  - : With some payment handlers (e.g., Apple Pay), this event handler is called to handle the [`merchantvalidation`](/ru/docs/Web/API/PaymentRequest/merchantvalidation_event) event, which is dispatched when the user agent requires that the merchant validate that the merchant or vendor requesting payment is legitimate.
     Also available using the {{domxref("PaymentRequest.onmerchantvalidation", "onmerchantvalidation")}} event handler property.
 - {{domxref("PaymentRequest.paymentmethodchange_event", "paymentmethodchange")}} {{securecontext_inline}}
   - : With some payment handlers (e.g., Apple Pay), dispatched whenever the user changes payment instrument, like switching from a credit card to a debit card.
@@ -62,11 +52,9 @@ The [Payment Request API's](/ru/docs/Web/API/Payment_Request_API) **`PaymentRequ
   - : Срабатывает каждый раз, когда пользователь меняет вариант доставки.
     Также доступно с использованием HTML атрибута {{domxref("PaymentRequest.onshippingoptionchange", "onshippingoptionchange")}}.
 
-## Характеристики
+## Спецификации
 
-| Specification                                                                                | Status                       | Comment             |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Payment','#paymentrequest-interface','PaymentRequest')}} | {{Spec2('Payment')}} | Initial definition. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

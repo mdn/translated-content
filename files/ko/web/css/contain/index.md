@@ -1,15 +1,8 @@
 ---
 title: contain
 slug: Web/CSS/contain
-tags:
-  - CSS
-  - CSS Containment
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-property
-translation_of: Web/CSS/contain
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`contain`** 속성은 특정 요소와 콘텐츠가 문서 트리의 다른 부위와 독립되어있음을 나타낼 때 사용합니다. 브라우저는 이 정보를 사용해 레이아웃, 스타일, 페인트, 크기, 또는 그 조합의 계산을 전체 페이지 DOM 대신 일부에서만 수행할 수 있으므로 뚜렷한 성능 상 이점을 얻을 수 있습니다.
@@ -18,9 +11,9 @@ translation_of: Web/CSS/contain
 
 > **참고:** `paint`, `strict`, `content` 값을 설정할 경우 다음을 생성합니다.
 >
-> 1. 새로운 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) ({{cssxref("position")}} 속성이 `absolute` 또는 `fixed`인 자손을 위함).
-> 2. 새로운 [쌓임 맥락](/ko/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
-> 3. 새로운 [블록 서식 맥락](/ko/docs/Web/Guide/CSS/Block_formatting_context).
+> 1. 새로운 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) ({{cssxref("position")}} 속성이 `absolute` 또는 `fixed`인 자손을 위함).
+> 2. 새로운 [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
+> 3. 새로운 [블록 서식 맥락](/ko/docs/Web/CSS/CSS_display/Block_formatting_context).
 
 ## 구문
 
@@ -88,7 +81,7 @@ contain: unset;
 </article>
 <article>
   <h2>Another heading of another article</h2>
-  <img src="graphic.jpg" alt="photo">
+  <img src="graphic.jpg" alt="photo" />
   <p>More content here.</p>
 </article>
 ```
@@ -117,11 +110,11 @@ article {
 <article>
   <h2>Heading of a nice article</h2>
   <p>Content here.</p>
-  <img src="i-just-showed-up.jpg" alt="social">
+  <img src="i-just-showed-up.jpg" alt="social" />
 </article>
 <article>
   <h2>Another heading of another article</h2>
-  <img src="graphic.jpg" alt="photo">
+  <img src="graphic.jpg" alt="photo" />
   <p>More content here.</p>
 </article>
 ```
@@ -150,11 +143,11 @@ article {
 <article>
   <h2>Heading of a nice article</h2>
   <p>Content here.</p>
-  <img src="i-just-showed-up.jpg" alt="social">
+  <img src="i-just-showed-up.jpg" alt="social" />
 </article>
 <article>
   <h2>Another heading of another article</h2>
-  <img src="graphic.jpg" alt="photo">
+  <img src="graphic.jpg" alt="photo" />
   <p>More content here.</p>
 </article>
 ```
@@ -185,5 +178,5 @@ article {
 
 ## 같이 보기
 
-- [CSS Containment](/ko/docs/Web/CSS/CSS_Containment)
+- [CSS Containment](/ko/docs/Web/CSS/CSS_containment)
 - CSS {{cssxref("position")}} 속성

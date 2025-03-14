@@ -1,14 +1,14 @@
 ---
 title: VRDisplay.displayId
 slug: Web/API/VRDisplay/displayId
-original_slug: Web/API/VRDevice/displayId
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`displayId`** は {{domxref("VRDisplay")}} インターフェイスの読み取り専用プロパティで、この特定の `VRDisplay` の識別子を返します。これは、 [Gamepad API](/ja/docs/Web/API/Gamepad_API) の関連付けポイントとしても使用されます( {{domxref("Gamepad.displayId")}} を参照)。
 
-> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!NOTE]
+> このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ### 値
 
@@ -30,5 +30,4 @@ original_slug: Web/API/VRDevice/displayId
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

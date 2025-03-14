@@ -1,7 +1,6 @@
 ---
 title: Map.prototype[@@toStringTag]
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Map
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag
 ---
 
 {{JSRef}}

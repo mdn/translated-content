@@ -1,20 +1,9 @@
 ---
 title: downloads.FilenameConflictAction
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/FilenameConflictAction
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - FilenameConflitAction
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/FilenameConflictAction
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type `FilenameConflictAction` de l'API {{WebExtAPIRef("downloads")}} spécifie que faire si le nom d'un fichier téléchargé est en conflit avec un fichier existant.
 
@@ -31,15 +20,15 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - `"prompt"`
   - : Le navigateur invitera l'utilisateur, lui demandant de choisir s'il souhaite l'uniquifier ou l'écraser.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.FilenameConflictAction")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

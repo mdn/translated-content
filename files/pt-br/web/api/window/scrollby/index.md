@@ -31,10 +31,12 @@ window.scrollBy(0, window.innerHeight);
 
 ## Notas
 
-[window.scrollBy](/pt-BR/docs/DOM/Window.scrollBy) desloca uma quantidade específical enquanto [window.scroll](/pt-BR/docs/DOM/Window.scroll) desloca para uma posição absoluta no documento. Veja Também [window.scrollByLines](/pt-BR/docs/DOM/Window.scrollByLines), [window.scrollByPages](/pt-BR/docs/DOM/Window.scrollByPages)
+[window.scrollBy](/pt-BR/docs/Web/API/Window/scrollBy) desloca uma quantidade específical enquanto [window.scroll](/pt-BR/docs/Web/API/Window/scroll) desloca para uma posição absoluta no documento. Veja Também [window.scrollByLines](/pt-BR/docs/Web/API/Window/scrollByLines), [window.scrollByPages](/pt-BR/docs/Web/API/Window/scrollByPages)
 
 ## Especificações
 
-| Specification                                                                                    | Status                           | Comment             |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-scrollby', 'window.scrollBy()') }} | {{ Spec2('CSSOM View') }} | Initial definition. |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

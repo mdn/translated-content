@@ -1,21 +1,13 @@
 ---
 title: Approvisionnement PKCS
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - pkcs11
-translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11
 ---
 
 {{AddonSidebar}}
 
 L'API `pkcs11` permet à une extension d'énumérer les modules de sécurité [PKCS #11](https://en.wikipedia.org/wiki/PKCS_11), et de rendre accessibles au navigateur en tant que sources clés et de certificats.
 
-Pour utiliser cette API, vous devez avoir la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "pkcs11".
+Pour utiliser cette API, vous devez avoir la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "pkcs11".
 
 ## Utilisation de la boîte de dialogue Préférences Firefox pour installer les modules PKCS #11
 
@@ -25,12 +17,13 @@ Effectuez les étapes suivantes :
 2. Sélectonnez **Outils > Options** ou sélectionnez le **menu Firefox** puis **Options**
 3. Une fois la page Options ouverte, sélectionnez **Vie privée & Sécurité**
 4. Faites défiler vers le bas de la page et sous **Certificats** ou tapez sur **Dispositifs de sécurité...
-    ![](device_manager.png)**
+   ![](device_manager.png)**
 5. Cliquez ou appuyez sur le bouton **Charger**
-    ![](load_device_driver.png)
+   ![](load_device_driver.png)
 6. Entrez un nom pour le module de sécurité, tel que "_Ma Base de données Client_"
 
-    > **Attention :** il y a actuellement un bogue dans Firefox où les caractères internationaux peuvent causer des problèmes.
+   > [!WARNING]
+   > Il y a actuellement un bogue dans Firefox où les caractères internationaux peuvent causer des problèmes.
 
 7. Choisir **Parcourir...** pour trouver l'emplacement du module PKCS #11 sur votre ordinateur local, puis cliquez ou appuyez sur **OK** pour confirmer.
 
@@ -38,18 +31,19 @@ Effectuez les étapes suivantes :
 
 ## Provisionnement des modules PKCS #11
 
-> **Note :** A partir de Firefox 58, les extensions peuvent utiliser l'API [pkcs11](/fr/Add-ons/WebExtensions/API/pkcs11) pour énumérer les modules PKCS #11 et les rendre accessibles au navigateur comme sources de clés et certificats.
+> [!NOTE]
+> A partir de Firefox 58, les extensions peuvent utiliser l'API [pkcs11](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11) pour énumérer les modules PKCS #11 et les rendre accessibles au navigateur comme sources de clés et certificats.
 
 Il y a 2 pré-requis pour pouvoir utiliser cette API:
 
 - un ou plusieurs modules PKCS # 11 doivent être installés sur l'ordinateur de l'utilisateur
-- pour chaque module PKCS # 11 installé, il doit y avoir un fichier [manifest natif](/fr/Add-ons/WebExtensions/manifests_native) qui permet au navigateur de localiser le module.
+- pour chaque module PKCS # 11 installé, il doit y avoir un fichier [manifest natif](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) qui permet au navigateur de localiser le module.
 
 Très probablement, l'utilisateur ou l'administrateur du périphérique installerait le module `PKCS #11`, et son installateur installerait le fichier de manifeste natif en même temps.
 
 Cependant, le module et le manifeste ne peuvent pas être installés dans le cadre du processus d'installation de l'extension.
 
-Pour plus de détails sur le contenu et l'emplacement du fichier de manifeste, voir [Manifest natifs](/fr/Add-ons/WebExtensions/Native_manifests).
+Pour plus de détails sur le contenu et l'emplacement du fichier de manifeste, voir [Manifest natifs](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_manifests).
 
 ## Fonctions
 
@@ -62,6 +56,6 @@ Pour plus de détails sur le contenu et l'emplacement du fichier de manifeste, v
 - {{WebExtAPIRef("pkcs11.uninstallModule()")}}
   - : Désinstalle le module PKCS # 11 nommé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pkcs11", 1, 1)}} {{WebExtExamples("h2")}}
+{{Compat}} {{WebExtExamples("h2")}}

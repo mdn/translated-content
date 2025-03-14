@@ -1,12 +1,6 @@
 ---
 title: Storage.setItem()
 slug: Web/API/Storage/setItem
-tags:
-  - API
-  - Méthode
-  - Stockage
-  - Stockage Web
-translation_of: Web/API/Storage/setItem
 ---
 
 {{APIRef("Web Storage API")}}
@@ -41,13 +35,14 @@ La fonction suivante crée trois éléments à l'intérieur du stockage local.
 
 ```js
 function remplissageStockage() {
-  localStorage.setItem('bgcolor', 'red');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'myCat.png');
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "myCat.png");
 }
 ```
 
-> **Note :** Pour voir ceci utilisé dans un exemple concret, regardez notre [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> [!NOTE]
+> Pour voir ceci utilisé dans un exemple concret, regardez notre [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Spécifications
 

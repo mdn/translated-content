@@ -1,6 +1,9 @@
 ---
-title: Element.getAttributeNS()
+title: "Element: getAttributeNS() メソッド"
+short-title: getAttributeNS()
 slug: Web/API/Element/getAttributeNS
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}
@@ -9,8 +12,8 @@ slug: Web/API/Element/getAttributeNS
 
 ## 構文
 
-```js
-attrVal = element.getAttributeNS(namespace, name)
+```js-nolint
+getAttributeNS(namespace, name)
 ```
 
 ### 引数
@@ -24,7 +27,8 @@ attrVal = element.getAttributeNS(namespace, name)
 
 指定された属性の文字列値です。その属性が存在しない場合、結果は `null` になります。
 
-> **メモ:** 古いバージョンの DOM 仕様書では、このメソッドが存在しない属性に対しては空文字列を返すと説明していました。しかし、 null の方が分かりやすいので、そのような実装はあまり行われませんでした。 DOM4 仕様書ではこのメソッドは存在しない属性に対して null を返すと書くようになりました。
+> [!NOTE]
+> 古いバージョンの DOM 仕様書では、このメソッドが存在しない属性に対しては空文字列を返すと説明していました。しかし、 null の方が分かりやすいので、そのような実装はあまり行われませんでした。 DOM4 仕様書ではこのメソッドは存在しない属性に対して null を返すと書くようになりました。
 
 ## 例
 
@@ -37,48 +41,57 @@ attrVal = element.getAttributeNS(namespace, name)
   <circle id="target" cx="12" cy="12" r="10" stroke="#444"
       stroke-width="2" fill="none" test:foo="Hello namespaced attribute!"/>
 
-  <script type="text/javascript">
-    var ns = 'http://www.example.com/2014/test';
-    var circle = document.getElementById( 'target' );
+  <script>
+    const ns = 'http://www.example.com/2014/test';
+    const circle = document.getElementById('target');
 
-    console.log( 'attribute test:foo: "' + circle.getAttributeNS( ns, 'foo' ) + '"' );
+    console.log(`attribute test:foo: "${circle.getAttributeNS(ns, 'foo')}"`);
   </script>
 </svg>
 ```
 
-HTML5 文書では名前空間に対応していないため、この属性は `test:foo` でアクセスする必要があります。
+HTML 文書では名前空間に対応していないため、この属性は `test:foo` でアクセスする必要があります。
 
 ```html
-<!DOCTYPE html>
-<html>
-<body>
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>getAttributeNS() test page</title>
+  </head>
+  <body>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:test="http://www.example.com/2014/test"
+      width="40"
+      height="40">
+      <circle
+        id="target"
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="#444"
+        stroke-width="2"
+        fill="none"
+        test:foo="Foo value" />
+    </svg>
 
-<svg xmlns="http://www.w3.org/2000/svg"
-    xmlns:test="http://www.example.com/2014/test" width="40" height="40">
-  <circle id="target" cx="12" cy="12" r="10" stroke="#444" stroke-width="2"
-      fill="none" test:foo="Foo value"/>
-</svg>
-
-<script type="text/javascript">
-  var ns = 'http://www.example.com/2014/test';
-  var circle = document.getElementById( 'target' );
-  console.log('Attribute value: ' + circle.getAttribute('test:foo'));
-</script>
-
-</body>
+    <script>
+      const ns = "http://www.example.com/2014/test";
+      const circle = document.getElementById("target");
+      console.log(`Attribute value: ${circle.getAttribute("test:foo")}`);
+    </script>
+  </body>
 </html>
 ```
 
 ## メモ
 
-名前空間は XML 文書でのみ対応しています。 HTML5 文書では、代わりに `getAttribute()` を使用する必要があります。
+名前空間は XML 文書でのみ対応しています。 HTML 文書では、代わりに `getAttribute()` を使用する必要があります。
 
-`getAttributeNS()` は {{domxref("element.getAttribute()",
-  "getAttribute()")}} とは異なり、特定の名前空間に属している要求された属性をより深く特定することができます。上記の例では、属性は Mozilla の架空の "specialspace" 名前空間に属しています。
+`getAttributeNS()` は {{domxref("element.getAttribute()", "getAttribute()")}} とは異なり、特定の名前空間に属している要求された属性をより深く特定することができます。上記の例では、属性は Mozilla の架空の "specialspace" 名前空間に属しています。
 
 DOM4 より前の仕様では、このメソッドは属性が存在しない場合に null ではなく空文字列を返すように指定されていました。しかし、ほとんどのウェブブラウザーは null を返していました。 DOM4 以降は、仕様でも null を返すように指定されました。しかし、一部の古いウェブブラウザーは空文字列を返します。そのため、指定の要素に指定の属性が存在しない可能性があるなら、 `getAttributeNS` を呼ぶ前に {{domxref("element.hasAttributeNS()", "hasAttributeNS()")}} を使用して属性の存在を確かめる必要があります。
-
-{{DOMAttributeMethods}}
 
 ## 仕様書
 

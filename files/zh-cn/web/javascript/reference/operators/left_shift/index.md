@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Operators/Left_shift
 
 **左移操作符 (`<<`)** 将第一个操作数向左移动指定位数，左边超出的位数将会被清除，右边将会补零。
 
-{{EmbedInteractiveExample("pages/js/expressions-left-shift.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Left shift operator")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = 2; // 00000000000000000000000000000010
+
+console.log(a << b); // 00000000000000000000000000010100
+// Expected output: 20
+```
 
 ## 语法
 
@@ -31,7 +39,7 @@ a << b
 移动任意数字 `x` 至左边 `y` 位，得出 `x * 2 ** y`。
 所以例如：`9 << 3` 等价于 `9 * 2³ = 9 * 8 = 72`。
 
-## 例子
+## 示例
 
 ### 使用左移
 
@@ -51,5 +59,5 @@ a << b
 
 ## 参见
 
-- [Bitwise operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
+- [Bitwise operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#位运算符)
 - [Left shift assignment operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)

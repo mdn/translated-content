@@ -1,21 +1,25 @@
 ---
-title: EventTarget.dispatchEvent()
+title: "EventTarget: dispatchEvent() メソッド"
+short-title: dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
+l10n:
+  sourceCommit: 8ac73df2fbe2c88d8649fcb006dcde098616c723
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-**`dispatchEvent()`** は {{domxref("EventTarget")}} のメソッドで、 {{domxref("Event")}} をそのオブジェクトへ送り、関連する {{domxref("EventListener")}} を（同期的に）適切に起動させます。通常のイベント処理ルール（キャプチャとオプションのバブリングフェーズを含む）は `dispatchEvent()` で手動で配信されたイベントにも適用されます。
+**`dispatchEvent()`** は {{domxref("EventTarget")}} のメソッドで、 {{domxref("Event")}} をそのオブジェクトへ送り、関連するイベントリスナーを（同期的に）適切に起動させます。通常のイベント処理ルール（キャプチャとオプションのバブリングフェーズを含む）は `dispatchEvent()` で手動で配信されたイベントにも適用されます。
 
 `dispatchEvent()` の呼び出しは、イベントを発行させるための最後のステップです。イベントは既に {{domxref("Event/Event", "Event()")}} コンストラクターを使って作成され、初期化されているはずです。
 
-> **メモ:** このメソッドを呼び出すとき、 {{domxref("Event.target")}} プロパティは現在の `EventTarget` に初期化されます。
+> [!NOTE]
+> このメソッドを呼び出すとき、 {{domxref("Event.target")}} プロパティは現在の `EventTarget` に初期化されます。
 
-「ネイティブ」イベントがブラウザーによって発生し、[イベントループ](/ja/docs/Web/JavaScript/EventLoop)を介して非同期にイベントハンドラーを呼び出すのとは異なり、 `dispatchEvent()` はイベントハンドラーを*同期的に*呼び出します。適用可能なすべてのイベントハンドラが呼び出され、 `dispatchEvent()` から戻る前に返されます。
+「ネイティブ」イベントがブラウザーによって発生し、[イベントループ](/ja/docs/Web/JavaScript/Event_loop)を介して非同期にイベントハンドラーを呼び出すのとは異なり、 `dispatchEvent()` はイベントハンドラーを*同期的に*呼び出します。適用可能なすべてのイベントハンドラーが呼び出され、 `dispatchEvent()` から戻る前に返されます。
 
 ## 構文
 
-```js
+```js-nolint
 dispatchEvent(event)
 ```
 
@@ -33,11 +37,12 @@ dispatchEvent(event)
 - `InvalidStateError` {{domxref("DomException")}}
   - : イベントの初期化時に、イベントの種類が指定されなかった場合に発生します。
 
-> **警告:** イベントハンドラーで発生した例外は、捕捉されない例外として報告されます。イベントハンドラーはネストされたコールスタック上で実行されます。イベントハンドラーが完了するまで呼び出し元はブロックされますが、例外は呼び出し元まで伝搬しません。
+> [!WARNING]
+> イベントハンドラーで発生した例外は、捕捉されない例外として報告されます。イベントハンドラーはネストされたコールスタック上で実行されます。イベントハンドラーが完了するまで呼び出し元はブロックされますが、例外は呼び出し元まで伝搬しません。
 
 ## 例
 
-[イベントの作成と起動](/ja/docs/Web/Guide/DOM/Events/Creating_and_triggering_events) を参照してください。
+[イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events) を参照してください。
 
 ## 仕様書
 

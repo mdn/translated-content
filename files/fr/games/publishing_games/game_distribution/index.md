@@ -1,18 +1,6 @@
 ---
 title: Distribution de jeux
 slug: Games/Publishing_games/Game_distribution
-tags:
-  - CocoonIO
-  - Game
-  - Game publishing
-  - Games
-  - Gaming
-  - HTML5
-  - JavaScript
-  - Mobile Game Distribution
-  - Phonegap
-  - Web Stores
-  - distribution
 ---
 
 {{GamesSidebar}}
@@ -61,7 +49,7 @@ En tant que développeur.se front-end, vous savez sans doute déjà quoi faire :
 
 Si vous voulez gagner un peu d'argent avec le développement de jeux, prenez soin de sécuriser votre code source d'une façon ou d'une autre afin d'éviter que d'autres personnes ne vous le piquent et ne le vendent comme si c'était le leur. Vous pouvez par exemple concaténer et le réduire pour le rendre plus petit, ou encore le rendre beaucoup plus moche afin qu'il soit beaucoup plus difficile de déconstruire votre jeu. Une autre bonne mesure à prendre est de mettre à disposition une démo en ligne si vous prévoyez de le packager et de le vendre sur une boutique fermée du type iTunes ou Steam.
 
-Si vous travaillez sur un projet annexe juste pour le plaisir, garder le code source ouvert bénéficiera à celles et ceux qui voudraient apprendre à partir de vos créations. Dans ce cas vous n'avez même pas besoin de vous soucier de trouver un fournisseur d'hébergement, puisqu'il est possible d'[héberger vos jeux sur GitHub Pages](https://dev.end3r.com/2014/02/host-your-html5-games-on-github-pages/). Vous bénéficiez d'un hébergement gratuit, d'un contrôle de versions et de contributeurs potentiels si votre projet est suffisamment intéressant.
+Si vous travaillez sur un projet annexe juste pour le plaisir, garder le code source ouvert bénéficiera à celles et ceux qui voudraient apprendre à partir de vos créations. Dans ce cas vous n'avez même pas besoin de vous soucier de trouver un fournisseur d'hébergement, puisqu'il est possible d'[héberger vos jeux sur GitHub Pages](https://end3r.com/blog/2014/02/host-your-html5-games-on-github-pages/). Vous bénéficiez d'un hébergement gratuit, d'un contrôle de versions et de contributeurs potentiels si votre projet est suffisamment intéressant.
 
 ### Éditeurs et portails
 
@@ -77,14 +65,14 @@ Vous pouvez aussi uploader et publier votre jeu directement sur différentes bou
 
 Voyons quelles options sont à notre disposition en matière de marketplaces/magasins d'applications disponibles pour chaque plateforme et système d'exploitation.
 
-> **Note :** Ces plateformes de distribution sont les plus populaires, mais cela ne signifie pas qu'elles sont les seules. Plutôt que d'essayer d'ajouter votre jeu à des milliers d'autres dans l'app store iOS par exemple, vous pouvez également tenter de trouver une niche et faire la promotion de votre jeu directement auprès d'une audience qui sera intéressée par vos jeux. Il est essentiel de faire preuve de créativité ici.
+> [!NOTE]
+> Ces plateformes de distribution sont les plus populaires, mais cela ne signifie pas qu'elles sont les seules. Plutôt que d'essayer d'ajouter votre jeu à des milliers d'autres dans l'app store iOS par exemple, vous pouvez également tenter de trouver une niche et faire la promotion de votre jeu directement auprès d'une audience qui sera intéressée par vos jeux. Il est essentiel de faire preuve de créativité ici.
 
 ### Boutiques en ligne
 
-Les meilleures plateformes de jeux HTML5 sont des boutiques Web. Il est facile de [préparer un jeu pour ces plateformes](https://code.tutsplus.com/tutorials/preparing-for-firefox-os--mobile-18515), puisque cela ne demande que très peu voire aucune modification au jeu lui-même : il suffit en général d'ajouter une simple notice explicative ("manifeste") avec toutes les informations nécessaires dans un dossier zip contenant l'ensemble des ressources.
+Les meilleures plateformes de jeux HTML5 sont des boutiques Web. Il est facile de préparer un jeu pour ces plateformes, puisque cela ne demande que très peu voire aucune modification au jeu lui-même : il suffit en général d'ajouter une simple notice explicative ("manifeste") avec toutes les informations nécessaires dans un dossier zip contenant l'ensemble des ressources.
 
 - Le magasin d'applications [Chrome Web Store](https://chrome.google.com/webstore/) représente également une option intéressante : une notice explicative, votre jeu dans un dossier zip et un formulaire de soumission à remplir en ligne, c'est tout ce dont vous avez besoin pour mettre votre jeu à disposition.
-- [Tizen](https://www.tizenstore.com/) accorde beaucoup d'importance au soutien des applications écrites en JavaScript : leur boutique fait partie des options disponibles.
 
 ### Les App Store natifs
 
@@ -110,16 +98,14 @@ Le Web est le choix le plus évident et le plus intéressant pour des jeux HTML5
 
 Il existe toute une variété d'outils, à choisir en fonction de vos compétences, de vos frameworks favoris ou des plateformes que vous visez. Tout l'enjeu consiste à choisir le meilleur outil pour réaliser la tâche que vous souhaitez réaliser.
 
-- [Phonegap](https://phonegap.com/) — basé sur Cordova, c'est l'outil le plus populaire pour construire et packager des applications JavaScript à destination des plateformes natives.
-- [CocoonIO](http://cocoon.io/) — le plus populaire des outils dédiés à la conception de jeux HTML5 pour de multiples boutiques natives. CocoonIO propose ses propres optimisations de performance pour les jeux utilisant Canvas, et fonctionne avec beaucoup de frameworks de jeu.
 - [Ejecta](https://impactjs.com/ejecta) — un outil conçu spécifiquement pour packager les jeux créés avec le framework [ImpactJS](https://impactjs.com/) pour iOS, par ailleurs développé par le créateur d'ImpactJS. L'outil propose une intégration fluide avec ImpactJS, mais ne supporte qu'un framework et app store.
 - [NW.js](https://nwjs.io/) — anciennement connu sous le nom de Node-Webkit, c'est la solution à privilégier lorsqu'on souhaite construire des jeux d'ordinateur qui fonctionnent sur Windows, Mac et Linux. Les distributions sont packagés grâce au moteur WebKit afin d'offrir un rendu sur n'importe quelle plateforme.
 
 Parmi les autres outils existants, on peut citer :
 
-- [Intel XDK](https://software.intel.com/fr/intel-xdk) — une alternative très intéressante, similaire à CocoonIO.
-- [Electron](https://electron.atom.io/) — connu sous Atom Shell — est un outil open-source et multi-plateformes de GitHub.
-- [Manifold.js](http://manifoldjs.com/) — cet outil de l'équipe Microsoft peut créer des distributions natives de jeux HTML5 depuis iOS, Android et Windows.
+- [Intel XDK (en anglais)](https://www.intel.com/content/www/us/en/developer/tools/overview.html) — une alternative très intéressante, similaire à CocoonIO.
+- [Electron](https://www.electronjs.org/) — connu sous Atom Shell — est un outil open-source et multi-plateformes de GitHub.
+- [Manifold.js](https://manifoldjs.com/) — cet outil de l'équipe Microsoft peut créer des distributions natives de jeux HTML5 depuis iOS, Android et Windows.
 
 ## Résumé
 

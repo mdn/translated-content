@@ -1,23 +1,14 @@
 ---
 title: XMLHttpRequest.responseXML
 slug: Web/API/XMLHttpRequest/responseXML
-tags:
-  - AJAX
-  - API
-  - XMLHttpRequest
-  - Отправка
-  - Свойство
-  - Справка
-  - Только для чтения
-  - загрузка
-translation_of: Web/API/XMLHttpRequest/responseXML
 ---
 
 {{APIRef('XMLHttpRequest')}}
 
-`Свойство XMLHttpRequest.responseXML` это доступное только для чтения значение, которое содержит {{domxref("Document")}} содержащий HTML или XML полученный запросом, или `null` в случае, если запрос не был успешен, ещё не был отправлен или полученные данные не могут быть корректно обработаны как XML или HTML. Ответ обрабатывается так, как если бы это был `"text/xml"`. В случае, если {{domxref("XMLHttpRequest.responseType", "responseType")}} установлен как `"document"` и запрос был осуществлён асинхронно, ответ обрабатывается как `"text/html"`. `responseXML` содержит `null` для любых других типов данных так же, как и для [`data:` URLs](/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
+`Свойство XMLHttpRequest.responseXML` это доступное только для чтения значение, которое содержит {{domxref("Document")}} содержащий HTML или XML полученный запросом, или `null` в случае, если запрос не был успешен, ещё не был отправлен или полученные данные не могут быть корректно обработаны как XML или HTML. Ответ обрабатывается так, как если бы это был `"text/xml"`. В случае, если {{domxref("XMLHttpRequest.responseType", "responseType")}} установлен как `"document"` и запрос был осуществлён асинхронно, ответ обрабатывается как `"text/html"`. `responseXML` содержит `null` для любых других типов данных так же, как и для [`data:` URLs](/ru/docs/Web/URI/Schemes/data).
 
-> **Примечание:** Название `responseXML` это наследие истории этого свойства, на самом деле оно работает как для HTML, так и для XML.
+> [!NOTE]
+> Название `responseXML` это наследие истории этого свойства, на самом деле оно работает как для HTML, так и для XML.
 
 Если сервер не определяет заголовок {{HTTPHeader("Content-Type")}} как `"text/xml"` или `"application/xml"`, вы в любом случае можете использовать {{domxref("XMLHttpRequest.overrideMimeType()")}} чтобы заставить `XMLHttpRequest` обрабатывать ответ как XML.
 
@@ -40,13 +31,13 @@ var data = XMLHttpRequest.responseXML;
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 // Значение responseType, если указано, должно быть пустой строкой или "document"
-xhr.responseType = 'document';
+xhr.responseType = "document";
 
 // overrideMimeType() может быть использован, чтобы заставить ответ обрабатываться как XML
-xhr.overrideMimeType('text/xml');
+xhr.overrideMimeType("text/xml");
 
 xhr.onload = function () {
   if (xhr.readyState === xhr.DONE) {
@@ -64,7 +55,7 @@ xhr.send(null);
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

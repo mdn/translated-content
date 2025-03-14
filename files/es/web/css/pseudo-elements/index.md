@@ -1,7 +1,6 @@
 ---
 title: Pseudoelementos
 slug: Web/CSS/Pseudo-elements
-original_slug: Web/CSS/Pseudoelementos
 ---
 
 {{ CSSRef() }}
@@ -35,7 +34,8 @@ De vez en cuando se utilizan dos puntos dobles (::) en vez de solo uno (:). Esto
 
 > **Nota:** `::selection` siempre se escribe con dos puntos dobles (::).
 
-> **Nota:** Solo se puede usar un pseudo-elemento por selector. Debe aparecer después del selector simple.
+> [!NOTE]
+> Solo se puede usar un pseudo-elemento por selector. Debe aparecer después del selector simple.
 
 <table class="standard-table">
   <tbody>

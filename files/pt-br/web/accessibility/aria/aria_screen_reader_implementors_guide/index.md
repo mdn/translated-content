@@ -1,7 +1,6 @@
 ---
 title: Guia para implementar o leitor de tela ARIA
 slug: Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
-original_slug: Web/Accessibility/ARIA/Guia_para_implementar_o_leitor_de_tela_ARIA
 ---
 
 ## Regiões Ativas
@@ -26,4 +25,4 @@ Este é apenas um guia. Uma marcação de região ativa é uma área complexa qu
 
 ### Detalhes para Processamento via APIs Platform Acessibility
 
-Esperamos que o desenvolvedor do navegador irá trabalhar para fornecer implementações consistentes. A imlementação mais completa das regiões ativas atualmente está no Firefox 3. Aqui está como [regiões ativas WAI-ARIA são expostas no Firefox 3](/pt-BR/AJAX/WAI_ARIA_Live_Regions//API_Support).
+Esperamos que o desenvolvedor do navegador irá trabalhar para fornecer implementações consistentes. A imlementação mais completa das regiões ativas atualmente está no Firefox 3. Aqui está como [regiões ativas WAI-ARIA são expostas no Firefox 3](/pt-BR/AJAX/WAI_ARIA_Live_Regions_API_Support).

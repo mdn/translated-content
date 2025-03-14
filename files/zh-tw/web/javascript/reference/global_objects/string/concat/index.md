@@ -7,11 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/String/concat
 
 **`concat()`** 會將呼叫此方法的字串以及作為參數傳遞進此方法的字串串接在一起，並將串接結果作為一個新的字串回傳。
 
-{{EmbedInteractiveExample("pages/js/string-concat.html")}}
+{{InteractiveExample("JavaScript Demo: String.concat()")}}
+
+```js interactive-example
+const str1 = "Hello";
+const str2 = "World";
+
+console.log(str1.concat(" ", str2));
+// Expected output: "Hello World"
+
+console.log(str2.concat(", ", str1));
+// Expected output: "World, Hello"
+```
 
 ## 語法
 
-```js
+```js-nolint
 concat(str1)
 concat(str1, str2)
 concat(str1, str2, ... , strN)
@@ -45,21 +56,21 @@ concat(str1, str2, ... , strN)
 以下的例子示範如何將那些給定的字串組合成新的字串。
 
 ```js
-let hello = 'Hello, '
-console.log(hello.concat('Kevin', '. Have a nice day.'))
+let hello = "Hello, ";
+console.log(hello.concat("Kevin", ". Have a nice day."));
 // Hello, Kevin. Have a nice day.
 
-let greetList = ['Hello', ' ', 'Venkat', '!']
-"".concat(...greetList)  // "Hello Venkat!"
+let greetList = ["Hello", " ", "Venkat", "!"];
+"".concat(...greetList); // "Hello Venkat!"
 
-"".concat({})    // [object Object]
-"".concat([])    // ""
-"".concat(null)  // "null"
-"".concat(true)  // "true"
-"".concat(4, 5)  // "45"
+"".concat({}); // [object Object]
+"".concat([]); // ""
+"".concat(null); // "null"
+"".concat(true); // "true"
+"".concat(4, 5); // "45"
 ```
 
-## 規格
+## 規範
 
 {{Specifications}}
 

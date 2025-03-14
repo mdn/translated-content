@@ -9,21 +9,10 @@ slug: Web/API/Element/scrollLeft
 
 注意如果这个元素的内容排列方向（{{cssxref("direction")}}）是`rtl` (right-to-left) ，那么滚动条会位于最右侧（内容开始处），并且`scrollLeft`值为 0。此时，当你从右到左拖动滚动条时，scrollLeft 会从 0 变为负数。
 
-> **警告：** 在使用显示比例缩放的系统上，`scrollLeft` 可能会是一个小数。
+> [!WARNING]
+> 在使用显示比例缩放的系统上，`scrollLeft` 可能会是一个小数。
 
-## 语法
-
-```
-//获取滚动条到元素左边的距离
-var sLeft = element.scrollLeft;
-```
-
-`sLeft`是一个整数，代表元素滚动条距离元素左边多少像素。
-
-```
-//设置滚动条滚动了多少像素
-element.scrollLeft = 10;
-```
+## 值
 
 `scrollLeft` 可以是任意整数，然而：
 
@@ -62,10 +51,10 @@ element.scrollLeft = 10;
 ### JavaScript
 
 ```js
-const button = document.getElementById('slide');
+const button = document.getElementById("slide");
 
 button.onclick = function () {
-  document.getElementById('container').scrollLeft += 20;
+  document.getElementById("container").scrollLeft += 20;
 };
 ```
 
@@ -77,7 +66,7 @@ button.onclick = function () {
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

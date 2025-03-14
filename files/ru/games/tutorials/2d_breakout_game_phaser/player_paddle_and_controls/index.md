@@ -1,13 +1,9 @@
 ---
 title: Платформа и управление
 slug: Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls
-original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Платформа_и_управление
 ---
 
-{{GamesSidebar}}{{IncludeSubnav("/ru/docs/")}}
-
-{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Bounce_off_the_walls", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Game_over")}}
+{{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Bounce_off_the_walls", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Game_over")}}
 
 Это **7** из 16 уроков [руководства разработки игры с помощью Phaser](/ru/docs/Games/Tutorials/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_2D_Breakout_%D0%B8%D0%B3%D1%80%D1%8B_%D0%BD%D0%B0_Phaser). Исходный код этого урока вы можете найти здесь: [Gamedev-Phaser-Content-Kit/demos/lesson07.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson07.html).
 
@@ -29,9 +25,9 @@ var paddle;
 
 ```js
 function preload() {
-    // ...
-    game.load.image('ball', 'img/ball.png');
-    game.load.image('paddle', 'img/paddle.png');
+  // ...
+  game.load.image("ball", "img/ball.png");
+  game.load.image("paddle", "img/paddle.png");
 }
 ```
 
@@ -44,7 +40,11 @@ function preload() {
 Далее, мы инициализируем спрайт нашей платформы при помощи функции `add.sprite()` — добавьте следующую строку кода в самый конец функции `create()`:
 
 ```js
-paddle = game.add.sprite(game.world.width*0.5, game.world.height-5, 'paddle');
+paddle = game.add.sprite(
+  game.world.width * 0.5,
+  game.world.height - 5,
+  "paddle",
+);
 ```
 
 Мы можем использовать `world.width` и `world.height` для позиционирования платформы в том месте, где мы хотим: `game.world.width*0.5` расположит платформу прямо по середине экрана. В данном случае, нам повезло, что наш игровой мир совпадает с `<canvas>`, однако, в других играх мир может быть гораздо больше экрана.
@@ -52,7 +52,7 @@ paddle = game.add.sprite(game.world.width*0.5, game.world.height-5, 'paddle');
 Как вы могли заметить, перезагрузив, на данном этапе, страницу `index.html`, платформа находится не совсем по середине экрана. Почему? Всё дело в том, что, по умолчанию, точка, из которой начинается позиционирование объекта (якорь), находится в левом верхнем углу. Но мы можем это изменить и переместить якорь в середину платформы по ширине и в самый низ по высоте, чтобы проще было позиционировать платформу, относительно нижней грани экрана. Добавьте следующую строку кода:
 
 ```js
-paddle.anchor.set(0.5,1);
+paddle.anchor.set(0.5, 1);
 ```
 
 Платформу расположили там, где и хотели. Теперь, чтобы платформа могла взаимодействовать с мячиком, добавим ей физику. Добавьте следующую строку кода в самый низ функции `create()`:
@@ -65,7 +65,7 @@ game.physics.enable(paddle, Phaser.Physics.ARCADE);
 
 ```js
 function update() {
-    game.physics.arcade.collide(ball, paddle);
+  game.physics.arcade.collide(ball, paddle);
 }
 ```
 
@@ -83,15 +83,15 @@ paddle.body.immovable = true;
 
 ```js
 function update() {
-    game.physics.arcade.collide(ball, paddle);
-    paddle.x = game.input.x;
+  game.physics.arcade.collide(ball, paddle);
+  paddle.x = game.input.x;
 }
 ```
 
 Теперь, каждый кадр координата `x` платформы будет соответствовать координате `x` курсора. Однако, при старте игры, положение нашей платформы не по центру экрана, из-за того, что положение курсора не определено. Чтобы это исправить, давайте добавим платформе координату `x` по умолчанию, на случай, если положение курсора не определено. Обновите предыдущую строку кода:
 
 ```js
-paddle.x = game.input.x || game.world.width*0.5;
+paddle.x = game.input.x || game.world.width * 0.5;
 ```
 
 Если вы этого ещё не сделали, то обновите страницу `index.html` и попробуйте то, что у нас получилось!
@@ -101,7 +101,7 @@ paddle.x = game.input.x || game.world.width*0.5;
 Теперь давайте разместим мячик на платформе. Так же, как и платформу, расположим мячик по середине экрана по горизонтали, с небольшим отступом от нижней грани экрана по вертикали. Для этого переместим якорь мячика в его середину. Найдите строку `ball = game.add.sprite( ... )` и заметите её на следующие две:
 
 ```js
-ball = game.add.sprite(game.world.width*0.5, game.world.height-25, 'ball');
+ball = game.add.sprite(game.world.width * 0.5, game.world.height - 25, "ball");
 ball.anchor.set(0.5);
 ```
 
@@ -121,6 +121,6 @@ ball.body.velocity.set(150, -150);
 
 ## Следующий шаг
 
-Мы можем управлять платформой и сделали так, чтобы мячик отскакивал от неё. Но какой от этого толк, если мячик отскакивает и от нижней грани экрана? В следующей главе мы добавим [логику проигрыша и экран "Game over"](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Game_over).
+Мы можем управлять платформой и сделали так, чтобы мячик отскакивал от неё. Но какой от этого толк, если мячик отскакивает и от нижней грани экрана? В следующей главе мы добавим [логику проигрыша и экран "Game over"](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over).
 
 {{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Bounce_off_the_walls", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Game_over")}}

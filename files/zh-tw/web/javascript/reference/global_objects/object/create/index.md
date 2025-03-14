@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/create
 
 ## 語法
 
-```plain
+```js-nolint
 Object.create(proto[, propertiesObject])
 ```
 
@@ -42,10 +42,10 @@ function Shape() {
 }
 
 // 父類別的方法
-Shape.prototype.move = function(x, y) {
+Shape.prototype.move = function (x, y) {
   this.x += x;
   this.y += y;
-  console.info('Shape moved.');
+  console.info("Shape moved.");
 };
 
 // Rectangle - 子類別
@@ -59,8 +59,8 @@ Rectangle.prototype.constructor = Rectangle;
 
 var rect = new Rectangle();
 
-console.log('Is rect an instance of Rectangle?', rect instanceof Rectangle);// true
-console.log('Is rect an instance of Shape?', rect instanceof Shape);// true
+console.log("Is rect an instance of Rectangle?", rect instanceof Rectangle); // true
+console.log("Is rect an instance of Shape?", rect instanceof Shape); // true
 rect.move(1, 1); // Outputs, 'Shape moved.'
 ```
 
@@ -79,12 +79,12 @@ Object.assign(MyClass.prototype, OtherSuperClass.prototype);
 // 重新指定建構式
 MyClass.prototype.constructor = MyClass;
 
-MyClass.prototype.myMethod = function() {
+MyClass.prototype.myMethod = function () {
   // do a thing
 };
 ```
 
-[Object.assign](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) 複製 OtherSuperClass 原型上的所有屬性到 MyClass 的原型上，使所有 MyClass 的實例都能使用。Object.assign 為 ES2015 標準且[有 polyfill](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill)。如需支援較舊的瀏覽器，可使用第三方套件實現如 [jQuery.extend()](https://api.jquery.com/jQuery.extend/) 或 [.assign()](https://lodash.com/docs/#assign) 。
+[Object.assign](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) 複製 OtherSuperClass 原型上的所有屬性到 MyClass 的原型上，使所有 MyClass 的實例都能使用。Object.assign 為 ES2015 標準且[有 polyfill](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#polyfill)。如需支援較舊的瀏覽器，可使用第三方套件實現如 [jQuery.extend()](https://api.jquery.com/jQuery.extend/) 或 [.assign()](https://lodash.com/docs/#assign) 。
 
 ### `propertiesObject` 參數的使用
 
@@ -94,28 +94,29 @@ var o;
 // 建立以null為原型的物件
 o = Object.create(null);
 
-
 o = {};
 // 等同於:
 o = Object.create(Object.prototype);
-
 
 // Example where we create an object with a couple of sample properties.
 // (Note that the second parameter maps keys to *property descriptors*.)
 o = Object.create(Object.prototype, {
   // foo 為數值屬性
-  foo: { writable: true, configurable: true, value: 'hello' },
+  foo: { writable: true, configurable: true, value: "hello" },
   // bar 為 getter-and-setter 訪問屬性
   bar: {
     configurable: false,
-    get: function() { return 10; },
-    set: function(value) { console.log('Setting `o.bar` to', value); }
-/* with ES5 Accessors our code can look like this
+    get: function () {
+      return 10;
+    },
+    set: function (value) {
+      console.log("Setting `o.bar` to", value);
+    },
+    /* with ES5 Accessors our code can look like this
     get function() { return 10; },
     set function(value) { console.log('setting `o.bar` to', value); } */
-  }
+  },
 });
-
 
 function Constructor() {}
 o = new Constructor();
@@ -123,7 +124,6 @@ o = new Constructor();
 o = Object.create(Constructor.prototype);
 // Of course, if there is actual initialization code in the
 // Constructor function, the Object.create() cannot reflect it
-
 
 // 創建一個新物件，指定原型是全新的空物件，並加入值為 42 的屬性'p'
 o = Object.create({}, { p: { value: 42 } });
@@ -143,34 +143,43 @@ delete o.p;
 // false
 
 // to specify an ES3 property
-o2 = Object.create({}, {
-  p: {
-    value: 42,
-    writable: true,
-    enumerable: true,
-    configurable: true
-  }
-});
+o2 = Object.create(
+  {},
+  {
+    p: {
+      value: 42,
+      writable: true,
+      enumerable: true,
+      configurable: true,
+    },
+  },
+);
 ```
 
 ## Polyfill
 
 此 polyfill 涵蓋了主要的使用情境：指定一個原型創建一個新的物件，第二個參數為選用。
 
-要注意的是在 ES5 的`Object.create`中， `[[Prototype]]` 可以為 `null`，但在 ECMAScript 5 以前的版本，polyfill 會因為繼承限制( limitation inherent )而不支援此情形。
+要注意的是在 ES5 的 `Object.create` 中，`[[Prototype]]` 可以為 `null`，但在 ECMAScript 5 以前的版本，polyfill 會因為繼承限制（limitation inherent）而不支援此情形。
 
-```plain
+```js
 if (typeof Object.create !== "function") {
-    Object.create = function (proto, propertiesObject) {
-        if (!(proto === null || typeof proto === "object" || typeof proto === "function")) {
-            throw TypeError('Argument must be an object, or null');
-        }
-        var temp = new Object();
-        temp.__proto__ = proto;
-        if(typeof propertiesObject === "object")
-            Object.defineProperties(temp, propertiesObject);
-        return temp;
-    };
+  Object.create = function (proto, propertiesObject) {
+    if (
+      !(
+        proto === null ||
+        typeof proto === "object" ||
+        typeof proto === "function"
+      )
+    ) {
+      throw TypeError("Argument must be an object, or null");
+    }
+    var temp = new Object();
+    temp.__proto__ = proto;
+    if (typeof propertiesObject === "object")
+      Object.defineProperties(temp, propertiesObject);
+    return temp;
+  };
 }
 ```
 
@@ -187,4 +196,4 @@ if (typeof Object.create !== "function") {
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
-- John Resig's post on [getPrototypeOf()](http://ejohn.org/blog/objectgetprototypeof/)
+- John Resig's post on [getPrototypeOf()](https://johnresig.com/blog/objectgetprototypeof/)

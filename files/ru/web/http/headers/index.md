@@ -1,20 +1,15 @@
 ---
 title: Заголовки HTTP
 slug: Web/HTTP/Headers
-tags:
-  - HTTP
-  - Заголовки
-translation_of: Web/HTTP/Headers
-original_slug: Web/HTTP/Заголовки
 ---
 
 {{ HTTPSidebar }}
 
 **Заголовки HTTP** позволяют клиенту и серверу отправлять дополнительную информацию с HTTP запросом или ответом. В HTTP-заголовке содержится не чувствительное к регистру название, а затем после (`:`) непосредственно значение. [Пробелы](/ru/docs/Glossary/Whitespace) перед значением игнорируются.
 
-Пользовательские собственные заголовки исторически использовались с префиксом X, но это соглашение было объявлено устаревшим в июне 2012 года из-за неудобств, вызванных тем, что нестандартные поля стали стандартом в [RFC 6648](https://tools.ietf.org/html/rfc6648); другие перечислены в реестре [IANA](http://www.iana.org/assignments/message-headers/perm-headers.html), исходное содержимое которого было определено в [RFC 4229](http://tools.ietf.org/html/rfc4229). IANA также поддерживает [реестр предлагаемых новых заголовков HTTP](https://www.iana.org/assignments/message-headers/message-headers.xhtml).
+Пользовательские собственные заголовки исторически использовались с префиксом X, но это соглашение было объявлено устаревшим в июне 2012 года из-за неудобств, вызванных тем, что нестандартные поля стали стандартом в [RFC 6648](https://tools.ietf.org/html/rfc6648); другие перечислены в реестре [IANA](https://www.iana.org/assignments/message-headers/perm-headers.html), исходное содержимое которого было определено в [RFC 4229](https://tools.ietf.org/html/rfc4229). IANA также поддерживает [реестр предлагаемых новых заголовков HTTP](https://www.iana.org/assignments/message-headers/message-headers.xhtml).
 
-HTTP-заголовки сопровождают обмен данными по протоколу HTTP. Они могут содержать описание данных и информацию, необходимую для взаимодействия между клиентом и сервером. Заголовки и их статусы перечислены в [реестре IANA](http://www.iana.org/assignments/message-headers/perm-headers.html), который постоянно обновляется.
+HTTP-заголовки сопровождают обмен данными по протоколу HTTP. Они могут содержать описание данных и информацию, необходимую для взаимодействия между клиентом и сервером. Заголовки и их статусы перечислены в [реестре IANA](https://www.iana.org/assignments/message-headers/perm-headers.html), который постоянно обновляется.
 
 Заголовки могут быть сгруппированы по следующим контекстам:
 
@@ -65,7 +60,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Content_negotiation#The_Accept.3a_header"
+            href="/ru/docs/Web/HTTP/Content_negotiation#The_Accept.3a_header"
             title="https://developer.mozilla.org/en/HTTP/Content_negotiation#The_Accept.3a_header"
             >Accept</a
           ></code
@@ -85,7 +80,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Content_negotiation#The_Accept-CH_header"
+            href="/ru/docs/Web/HTTP/Content_negotiation#The_Accept-CH_header"
             >Accept-CH</a
           ></code
         >
@@ -103,26 +98,6 @@ HTTP-заголовки сопровождают обмен данными по 
       <td></td>
     </tr>
     <tr>
-      <td>
-        <code
-          ><a
-            href="/en-US/docs/Web/HTTP/Content_negotiation#The_Accept-Charset.3a_header"
-            title="https://developer.mozilla.org/en/HTTP/Content_negotiation#The_Accept-Charset.3a_header"
-            >Accept-Charset</a
-          ></code
-        >
-      </td>
-      <td>Список кодировок, которые ожидает клиент.</td>
-      <td>
-        <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
-          title="ru/HTTP/Content negotiation"
-          >HTTP Content Negotiation</a
-        >
-      </td>
-      <td>HTTP/1.1</td>
-    </tr>
-    <tr>
       <td><code>Accept-Features</code></td>
       <td></td>
       <td>
@@ -138,7 +113,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Content_negotiation#The_Accept-Encoding.3a_header"
+            href="/ru/docs/Web/HTTP/Content_negotiation#The_Accept-Encoding.3a_header"
             title="https://developer.mozilla.org/en/HTTP/Content_negotiation#The_Accept-Encoding.3a_header"
             >Accept-Encoding</a
           ></code
@@ -158,7 +133,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Content_negotiation#The_Accept-Language.3a_header"
+            href="/ru/docs/Web/HTTP/Content_negotiation#The_Accept-Language.3a_header"
             title="https://developer.mozilla.org/en/HTTP/Content_negotiation#The_Accept-Language.3a_header"
             >Accept-Language</a
           ></code
@@ -192,7 +167,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/HTTP_access_control#Access-Control-Allow-Credentials"
+            href="/ru/docs/HTTP_access_control#Access-Control-Allow-Credentials"
             title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Allow-Credentials"
             >Access-Control-Allow-Credentials</a
           ></code
@@ -200,15 +175,15 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/en-US/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/en-US/docs/Server-Side_Access_Control"
+          href="/ru/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -220,7 +195,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/HTTP_access_control#Access-Control-Allow-Origin"
+            href="/ru/docs/HTTP_access_control#Access-Control-Allow-Origin"
             title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Allow-Origin"
             >Access-Control-Allow-Origin</a
           ></code
@@ -228,15 +203,15 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/en-US/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/en-US/docs/Server-Side_Access_Control"
+          href="/ru/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -248,7 +223,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/HTTP_access_control#Access-Control-Allow-Methods"
+            href="/ru/docs/HTTP_access_control#Access-Control-Allow-Methods"
             title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Allow-Methods"
             >Access-Control-Allow-Methods</a
           ></code
@@ -256,15 +231,15 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/en-US/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/en-US/docs/Server-Side_Access_Control"
+          href="/ru/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -276,7 +251,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/HTTP_access_control#Access-Control-Allow-Headers"
+            href="/ru/docs/HTTP_access_control#Access-Control-Allow-Headers"
             title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Allow-Headers"
             >Access-Control-Allow-Headers</a
           ></code
@@ -284,15 +259,15 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/en-US/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/en-US/docs/Server-Side_Access_Control"
+          href="/ru/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -304,7 +279,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/HTTP_access_control#Access-Control-Max-Age"
+            href="/ru/docs/HTTP_access_control#Access-Control-Max-Age"
             title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Max-Age"
             >Access-Control-Max-Age</a
           ></code
@@ -312,15 +287,15 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/en-US/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/en-US/docs/Server-Side_Access_Control"
+          href="/ru/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -332,7 +307,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/HTTP_access_control#Access-Control-Expose-Header"
+            href="/ru/docs/HTTP_access_control#Access-Control-Expose-Header"
             title="en/HTTP access control#Access-Control-Expose-Header"
             >Access-Control-Expose-Headers</a
           ></code
@@ -340,15 +315,15 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/en-US/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/en-US/docs/Server-Side_Access_Control"
+          href="/ru/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("2") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -360,7 +335,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/HTTP_access_control#Access-Control-Request-Method"
+            href="/ru/docs/HTTP_access_control#Access-Control-Request-Method"
             title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Request-Method"
             >Access-Control-Request-Method</a
           ></code
@@ -368,15 +343,15 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/en-US/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/en-US/docs/Server-Side_Access_Control"
+          href="/ru/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -388,7 +363,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/HTTP_access_control#Access-Control-Request-Headers"
+            href="/ru/docs/HTTP_access_control#Access-Control-Request-Headers"
             title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Request-Headers"
             >Access-Control-Request-Headers</a
           ></code
@@ -396,15 +371,15 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/en-US/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/en-US/docs/Server-Side_Access_Control"
+          href="/ru/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -415,7 +390,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTTP/Headers/Age" title="en/Age"
+          ><a href="/ru/docs/Web/HTTP/Headers/Age" title="en/Age"
             >Age</a
           ></code
         >
@@ -427,7 +402,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTTP/Headers/Allow" title="en/Allow"
+          ><a href="/ru/docs/Web/HTTP/Headers/Allow" title="en/Allow"
             >Allow</a
           ></code
         >
@@ -452,7 +427,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/Authorization"
+            href="/ru/docs/Web/HTTP/Headers/Authorization"
             title="en/Authorization"
             >Authorization</a
           ></code
@@ -466,7 +441,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/Cache-Control"
+            href="/ru/docs/Web/HTTP/Headers/Cache-Control"
             title="en/Cache-Control"
             >Cache-Control</a
           ></code
@@ -474,7 +449,7 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -501,7 +476,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/Content-Encoding"
+            href="/ru/docs/Web/HTTP/Headers/Content-Encoding"
             title="en/Content-Encoding"
             >Content-Encoding</a
           ></code
@@ -515,7 +490,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/Content-Language"
+            href="/ru/docs/Web/HTTP/Headers/Content-Language"
             title="en/Content-Language"
             >Content-Language</a
           ></code
@@ -529,7 +504,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/Content-Length"
+            href="/ru/docs/Web/HTTP/Headers/Content-Length"
             title="en/Content-Length"
             >Content-Length</a
           ></code
@@ -543,7 +518,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/Content-Location"
+            href="/ru/docs/Web/HTTP/Headers/Content-Location"
             title="en/Content-Location"
             >Content-Location</a
           ></code
@@ -557,21 +532,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/Content-MD5"
-            title="en/Content-MD5"
-            >Content-MD5</a
-          ></code
-        >
-      </td>
-      <td></td>
-      <td>{{ unimplemented_inline("232030") }}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a
-            href="/en-US/docs/Web/HTTP/Headers/Content-Range"
+            href="/ru/docs/Web/HTTP/Headers/Content-Range"
             title="en/Content-Range"
             >Content-Range</a
           ></code
@@ -585,7 +546,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy"
+            href="/ru/docs/Web/HTTP/Headers/Content-Security-Policy"
             title="en/Content-Security-Policy"
             >Content-Security-Policy</a
           ></code
@@ -603,7 +564,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/Content-Type"
+            href="/ru/docs/Web/HTTP/Headers/Content-Type"
             title="en/Content-Type"
             >Content-Type</a
           ></code
@@ -616,7 +577,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTTP/Headers/Cookie" title="en/Cookie"
+          ><a href="/ru/docs/Web/HTTP/Headers/Cookie" title="en/Cookie"
             >Cookie</a
           ></code
         >
@@ -639,12 +600,12 @@ HTTP-заголовки сопровождают обмен данными по 
         Supported by Firefox 4, Firefox 5 for mobile, IE9, and a few major
         companies.
       </td>
-      <td>{{SpecName("Tracking")}}</td>
+      <td><a href="https://www.w3.org/TR/tracking-dnt/">Tracking Preference Expression (DNT)</a></td>
     </tr>
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTTP/Headers/Date" title="en/Date"
+          ><a href="/ru/docs/Web/HTTP/Headers/Date" title="en/Date"
             >Date</a
           ></code
         >
@@ -656,14 +617,14 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTTP/Headers/ETag" title="en/ETag"
+          ><a href="/ru/docs/Web/HTTP/Headers/ETag" title="en/ETag"
             >ETag</a
           ></code
         >
       </td>
       <td></td>
       <td>
-        <a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -672,7 +633,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTTP/Headers/Expect" title="en/Expect"
+          ><a href="/ru/docs/Web/HTTP/Headers/Expect" title="en/Expect"
             >Expect</a
           ></code
         >
@@ -684,14 +645,14 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTTP/Headers/Expires" title="en/Expires"
+          ><a href="/ru/docs/Web/HTTP/Headers/Expires" title="en/Expires"
             >Expires</a
           ></code
         >
       </td>
       <td></td>
       <td>
-        <a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -700,7 +661,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTTP/Headers/From" title="en/From"
+          ><a href="/ru/docs/Web/HTTP/Headers/From" title="en/From"
             >From</a
           ></code
         >
@@ -712,7 +673,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTTP/Headers/Host" title="en/Host"
+          ><a href="/ru/docs/Web/HTTP/Headers/Host" title="en/Host"
             >Host</a
           ></code
         >
@@ -724,7 +685,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTTP/Headers/If-Match" title="en/If-Match"
+          ><a href="/ru/docs/Web/HTTP/Headers/If-Match" title="en/If-Match"
             >If-Match</a
           ></code
         >
@@ -737,7 +698,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/If-Modified-Since"
+            href="/ru/docs/Web/HTTP/Headers/If-Modified-Since"
             title="en/If-Modified-Since"
             >If-Modified-Since</a
           ></code
@@ -745,7 +706,7 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -755,7 +716,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/If-None-Match"
+            href="/ru/docs/Web/HTTP/Headers/If-None-Match"
             title="en/If-None-Match"
             >If-None-Match</a
           ></code
@@ -763,7 +724,7 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -772,7 +733,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTTP/Headers/If-Range" title="en/If-Range"
+          ><a href="/ru/docs/Web/HTTP/Headers/If-Range" title="en/If-Range"
             >If-Range</a
           ></code
         >
@@ -785,7 +746,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since"
+            href="/ru/docs/Web/HTTP/Headers/If-Unmodified-Since"
             title="en/If-Unmodified-Since"
             >If-Unmodified-Since</a
           ></code
@@ -799,33 +760,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/Last-Event-ID"
-            title="en/Last-Event-ID"
-            >Last-Event-ID</a
-          ></code
-        >
-      </td>
-      <td>
-        Содержит идентификатор последнего события полученного клиентом от
-        сервера в предыдущем HTTP запросе. Используется для восстановления
-        синхронизации потока <code>text/event-stream</code>.
-      </td>
-      <td>
-        <a href="/en-US/docs/Server-sent_events" title="en/Server-Sent Events"
-          >Server-Sent Events</a
-        >
-      </td>
-      <td>
-        <a class="external" href="http://dev.w3.org/html5/eventsource/"
-          >Server-Sent Events spec</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a
-            href="/en-US/docs/Web/HTTP/Headers/Last-Modified"
+            href="/ru/docs/Web/HTTP/Headers/Last-Modified"
             title="en/Last-Modified"
             >Last-Modified</a
           ></code
@@ -833,7 +768,7 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -843,7 +778,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/Link"
+            href="/ru/docs/Web/HTTP/Headers/Link"
             title="en/HTTP/Headers/Link"
             >Link</a
           ></code
@@ -857,7 +792,7 @@ HTTP-заголовки сопровождают обмен данными по 
         <p>
           For the <code>rel=prefetch</code> case, see
           <a
-            href="/en-US/docs/Link_prefetching_FAQ"
+            href="/ru/docs/Link_prefetching_FAQ"
             title="en/Link prefetching FAQ"
             >Link Prefetching FAQ</a
           >
@@ -887,7 +822,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTTP/Headers/Location" title="en/Location"
+          ><a href="/ru/docs/Web/HTTP/Headers/Location" title="en/Location"
             >Location</a
           ></code
         >
@@ -900,7 +835,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/Max-Forwards"
+            href="/ru/docs/Web/HTTP/Headers/Max-Forwards"
             title="en/Max-Forwards"
             >Max-Forwards</a
           ></code
@@ -926,7 +861,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/HTTP_access_control#Origin"
+            href="/ru/docs/HTTP_access_control#Origin"
             title="https://developer.mozilla.org/En/HTTP_access_control#Origin"
             >Origin</a
           ></code
@@ -934,20 +869,20 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/en-US/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/en-US/docs/Server-Side_Access_Control"
+          href="/ru/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         More recently defined in the
         <a href="https://fetch.spec.whatwg.org/#http-extensions">Fetch spec</a>
-        (see <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.) Originally
+        (see <a href="/ru/docs/Web/API/Fetch_API">Fetch API</a>.) Originally
         defined in
         <a class="external" href="http://www.w3.org/TR/cors/"
           >W3C Cross-Origin Resource Sharing</a
@@ -957,7 +892,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTTP/Headers/Pragma" title="en/Pragma"
+          ><a href="/ru/docs/Web/HTTP/Headers/Pragma" title="en/Pragma"
             >Pragma</a
           ></code
         >
@@ -965,7 +900,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td></td>
       <td>
         for the pragma: nocache value see
-        <a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -975,7 +910,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/Proxy-Authenticate"
+            href="/ru/docs/Web/HTTP/Headers/Proxy-Authenticate"
             title="en/Proxy-Authenticate"
             >Proxy-Authenticate</a
           ></code
@@ -989,7 +924,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/Proxy-Authorization"
+            href="/ru/docs/Web/HTTP/Headers/Proxy-Authorization"
             title="en/Proxy-Authorization"
             >Proxy-Authorization</a
           ></code
@@ -1002,7 +937,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTTP/Headers/Range" title="en/Range"
+          ><a href="/ru/docs/Web/HTTP/Headers/Range" title="en/Range"
             >Range</a
           ></code
         >
@@ -1042,7 +977,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/Retry-After"
+            href="/ru/docs/Web/HTTP/Headers/Retry-After"
             title="en/Retry-After"
             >Retry-After</a
           ></code
@@ -1115,7 +1050,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTTP/Headers/Server" title="en/Server"
+          ><a href="/ru/docs/Web/HTTP/Headers/Server" title="en/Server"
             >Server</a
           ></code
         >
@@ -1128,7 +1063,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/Set-Cookie"
+            href="/ru/docs/Web/HTTP/Headers/Set-Cookie"
             title="en/Set-Cookie"
             >Set-Cookie</a
           ></code
@@ -1146,7 +1081,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/Set-Cookie2"
+            href="/ru/docs/Web/HTTP/Headers/Set-Cookie2"
             title="en/Set-Cookie2"
             >Set-Cookie2</a
           ></code
@@ -1165,7 +1100,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td></td>
       <td>
         <a
-          href="/en-US/docs/Security/HTTP_Strict_Transport_Security"
+          href="/ru/docs/Security/HTTP_Strict_Transport_Security"
           title="en/Security/HTTP Strict Transport Security"
           >HTTP Strict Transport Security</a
         >
@@ -1193,7 +1128,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTTP/Headers/TE" title="en/TE">TE</a></code
+          ><a href="/ru/docs/Web/HTTP/Headers/TE" title="en/TE">TE</a></code
         >
       </td>
       <td></td>
@@ -1203,7 +1138,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTTP/Headers/Trailer" title="en/Trailer"
+          ><a href="/ru/docs/Web/HTTP/Headers/Trailer" title="en/Trailer"
             >Trailer</a
           ></code
         >
@@ -1229,7 +1164,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/Transfer-Encoding"
+            href="/ru/docs/Web/HTTP/Headers/Transfer-Encoding"
             title="en/Transfer-Encoding"
             >Transfer-Encoding</a
           ></code
@@ -1242,7 +1177,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTTP/Headers/Upgrade" title="en/Upgrade"
+          ><a href="/ru/docs/Web/HTTP/Headers/Upgrade" title="en/Upgrade"
             >Upgrade</a
           ></code
         >
@@ -1255,7 +1190,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Content_negotiation#The_User-Agent.3a_header"
+            href="/ru/docs/Web/HTTP/Content_negotiation#The_User-Agent.3a_header"
             title="https://developer.mozilla.org/en/HTTP/Content_negotiation#The_User-Agent.3a_header"
             >User-Agent</a
           ></code
@@ -1265,7 +1200,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         for Gecko's user agents see the
         <a
-          href="/en-US/docs/User_Agent_Strings_Reference"
+          href="/ru/docs/User_Agent_Strings_Reference"
           title="En/User Agent Strings Reference"
           >User Agents Reference</a
         >
@@ -1288,7 +1223,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Content_negotiation#The_Vary.3a_response_header"
+            href="/ru/docs/Web/HTTP/Content_negotiation#The_Vary.3a_response_header"
             title="https://developer.mozilla.org/en/HTTP/Content_negotiation#The_Vary.3a_response_header"
             >Vary</a
           ></code
@@ -1306,7 +1241,7 @@ HTTP-заголовки сопровождают обмен данными по 
           >HTTP Content Negotiation</a
         >
         &#x26;
-        <a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -1315,7 +1250,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTTP/Headers/Via" title="en/Via"
+          ><a href="/ru/docs/Web/HTTP/Headers/Via" title="en/Via"
             >Via</a
           ></code
         >
@@ -1327,7 +1262,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTTP/Headers/Warning" title="en/Warning"
+          ><a href="/ru/docs/Web/HTTP/Headers/Warning" title="en/Warning"
             >Warning</a
           ></code
         >
@@ -1340,7 +1275,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/en-US/docs/Web/HTTP/Headers/WWW-Authenticate"
+            href="/ru/docs/Web/HTTP/Headers/WWW-Authenticate"
             title="en/WWW-Authenticate"
             >WWW-Authenticate</a
           ></code
@@ -1355,7 +1290,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td></td>
       <td>
         <a
-          href="/en-US/docs/Configuring_servers_for_Ogg_media"
+          href="/ru/docs/Configuring_servers_for_Ogg_media"
           title="https://developer.mozilla.org/en/Configuring_servers_for_Ogg_media"
           >Configuring servers for Ogg media</a
         >
@@ -1368,7 +1303,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         Using
         <a
-          href="/en-US/docs/Security/CSP/Using_Content_Security_Policy"
+          href="/ru/docs/Security/CSP/Using_Content_Security_Policy"
           title="en/Security/CSP/Using Content Security Policy"
           >Content Security Policy</a
         >
@@ -1380,7 +1315,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td></td>
       <td>
         <a
-          href="/en-US/docs/Controlling_DNS_prefetching"
+          href="/ru/docs/Controlling_DNS_prefetching"
           title="En/Controlling DNS prefetching"
           >Controlling DNS prefetching</a
         >
@@ -1392,7 +1327,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td></td>
       <td>
         <a
-          href="/en-US/docs/The_X-FRAME-OPTIONS_response_header"
+          href="/ru/docs/The_X-FRAME-OPTIONS_response_header"
           title="en/The X-FRAME-OPTIONS response header"
           >The XFrame-Option Response Header</a
         >
@@ -1410,7 +1345,8 @@ HTTP-заголовки сопровождают обмен данными по 
 
 ## Примечание
 
-> **Примечание:** The Keep-Alive request header is not sent by {{Gecko ("5.0") }}; previous versions did send it but it was not formatted correctly, so the decision was made to remove it for the time being. The {{ httpheader("Connection") }} or {{ httpheader("Proxy-Connection") }} header is still sent, however, with the value "keep-alive".
+> [!NOTE]
+> The Keep-Alive request header is not sent by Gecko 5.0; previous versions did send it but it was not formatted correctly, so the decision was made to remove it for the time being. The {{ httpheader("Connection") }} or {{ httpheader("Proxy-Connection") }} header is still sent, however, with the value "keep-alive".
 
 ## Смотрите также
 

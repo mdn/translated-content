@@ -1,7 +1,6 @@
 ---
 title: События указателя
 slug: Web/API/Pointer_events
-translation_of: Web/API/Pointer_events
 ---
 
 {{DefaultAPISidebar("Pointer Events")}}
@@ -72,18 +71,18 @@ _[Указывающее устройство](#term_pointer) –_ это уст
 
 Ниже представлено короткое описание для каждого типа события и связанный {{domxref("GlobalEventHandlers","Глобальный обработчик события")}}.
 
-| Событие                                  | Обработчик события                                                                                       | Описание                                                                                                                                                                                                                                                                                                                                                 |
-| ---------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{event('pointerover')}}         | {{domxref('GlobalEventHandlers.onpointerover','onpointerover')}}                     | Вызывается, когда указатель появляется в пределах элемента (его [теста попадания](#term_hit_test)).                                                                                                                                                                                                                                                      |
-| {{event('pointerenter')}}         | {{domxref('GlobalEventHandlers.onpointerenter','onpointerenter')}}                 | Вызывается, когда указатель перемещается в пределы элемента (его [теста попадания](#term_hit_test)) или одного из его потомков, в том числе в результате события `pointerdown` с устройства, которе не поддерживает наведение "hover" (смотрите `pointerdown`).                                                                                          |
-| {{event('pointerdown')}}         | {{domxref('GlobalEventHandlers.onpointerdown','onpointerdown')}}                     | Вызывается, когда указатель принимает состояние активных кнопок.                                                                                                                                                                                                                                                                                         |
-| {{event('pointermove')}}         | {{domxref('GlobalEventHandlers.onpointermove','onpointermove')}}                     | Вызывается, когда изменяются координаты указателя. Это событие также используется, если изменение состояния указателя нельзя сообщить с помощью других событий.                                                                                                                                                                                          |
-| {{event('pointerup')}}             | {{domxref('GlobalEventHandlers.onpointerup','onpointerup')}}                         | Вызывается, когда указатель теряет состояние _активных кнопок_.                                                                                                                                                                                                                                                                                          |
-| {{event('pointercancel')}}     | {{domxref('GlobalEventHandlers.onpointercancel','onpointercancel')}}             | Браузер вызывает это событие, если приходит к выводу, что указывающее устройство больше не сможет генерировать события (например, если устройство деактивировано).                                                                                                                                                                                       |
-| {{event('pointerout')}}         | {{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}                     | Вызывается по нескольким причинам, в том числе: когда указывающее устройство перемещается за пределы элемента (его [теста попадания](#term_hit_test)); запуск события pointerup для устройства, которое не поддерживает наведение "hover"; после запуска события `pointercancel`; когда перо покидает область обнаружения планшетом наведения указателя. |
-| {{event('pointerleave')}}         | {{domxref('GlobalEventHandlers.onpointerleave','onpointerleave')}}                 | Вызывается, когда указывающее устройство перемещается за пределы элемента (его [теста попадания](#term_hit_test)). Для устройств, подобных перу, это событие вызывается, когда перо покидает область обнаружения планшетом наведения указателя.                                                                                                          |
-| {{event('gotpointercapture')}} | {{domxref('GlobalEventHandlers.ongotpointercapture','ongotpointercapture')}}     | Вызывается, когда элемент получает захват указывающего устройства.                                                                                                                                                                                                                                                                                       |
-| {{event('lostpointercapture')}} | {{domxref('GlobalEventHandlers.onlostpointercapture','onlostpointercapture')}} | Запускается после того, как указывающее устройство потеряло захват.                                                                                                                                                                                                                                                                                      |
+| Событие                                                                   | Обработчик события                                                             | Описание                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`pointerover`](/ru/docs/Web/API/Element/pointerover_event)               | {{domxref('GlobalEventHandlers.onpointerover','onpointerover')}}               | Вызывается, когда указатель появляется в пределах элемента (его [теста попадания](#term_hit_test)).                                                                                                                                                                                                                                                      |
+| [`pointerenter`](/ru/docs/Web/API/Element/pointerenter_event)             | {{domxref('GlobalEventHandlers.onpointerenter','onpointerenter')}}             | Вызывается, когда указатель перемещается в пределы элемента (его [теста попадания](#term_hit_test)) или одного из его потомков, в том числе в результате события `pointerdown` с устройства, которе не поддерживает наведение "hover" (смотрите `pointerdown`).                                                                                          |
+| [`pointerdown`](/ru/docs/Web/API/Element/pointerdown_event)               | {{domxref('GlobalEventHandlers.onpointerdown','onpointerdown')}}               | Вызывается, когда указатель принимает состояние активных кнопок.                                                                                                                                                                                                                                                                                         |
+| [`pointermove`](/ru/docs/Web/API/Element/pointermove_event)               | {{domxref('GlobalEventHandlers.onpointermove','onpointermove')}}               | Вызывается, когда изменяются координаты указателя. Это событие также используется, если изменение состояния указателя нельзя сообщить с помощью других событий.                                                                                                                                                                                          |
+| [`pointerup`](/ru/docs/Web/API/Element/pointerup_event)                   | {{domxref('GlobalEventHandlers.onpointerup','onpointerup')}}                   | Вызывается, когда указатель теряет состояние _активных кнопок_.                                                                                                                                                                                                                                                                                          |
+| [`pointercancel`](/ru/docs/Web/API/Element/pointercancel_event)           | {{domxref('GlobalEventHandlers.onpointercancel','onpointercancel')}}           | Браузер вызывает это событие, если приходит к выводу, что указывающее устройство больше не сможет генерировать события (например, если устройство деактивировано).                                                                                                                                                                                       |
+| [`pointerout`](/ru/docs/Web/API/Element/pointerout_event)                 | {{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}                 | Вызывается по нескольким причинам, в том числе: когда указывающее устройство перемещается за пределы элемента (его [теста попадания](#term_hit_test)); запуск события pointerup для устройства, которое не поддерживает наведение "hover"; после запуска события `pointercancel`; когда перо покидает область обнаружения планшетом наведения указателя. |
+| [`pointerleave`](/ru/docs/Web/API/Element/pointerleave_event)             | {{domxref('GlobalEventHandlers.onpointerleave','onpointerleave')}}             | Вызывается, когда указывающее устройство перемещается за пределы элемента (его [теста попадания](#term_hit_test)). Для устройств, подобных перу, это событие вызывается, когда перо покидает область обнаружения планшетом наведения указателя.                                                                                                          |
+| [`gotpointercapture`](/ru/docs/Web/API/Element/gotpointercapture_event)   | {{domxref('GlobalEventHandlers.ongotpointercapture','ongotpointercapture')}}   | Вызывается, когда элемент получает захват указывающего устройства.                                                                                                                                                                                                                                                                                       |
+| [`lostpointercapture`](/ru/docs/Web/API/Element/lostpointercapture_event) | {{domxref('GlobalEventHandlers.onlostpointercapture','onlostpointercapture')}} | Запускается после того, как указывающее устройство потеряло захват.                                                                                                                                                                                                                                                                                      |
 
 ### Расширения элемента
 
@@ -109,19 +108,19 @@ _[Указывающее устройство](#term_pointer) –_ это уст
 ```html
 <html>
   <script>
-    function over_handler(event) { }
-    function enter_handler(event) { }
-    function down_handler(event) { }
-    function move_handler(event) { }
-    function up_handler(event) { }
-    function cancel_handler(event) { }
-    function out_handler(event) { }
-    function leave_handler(event) { }
-    function gotcapture_handler(event) { }
-    function lostcapture_handler(event) { }
+    function over_handler(event) {}
+    function enter_handler(event) {}
+    function down_handler(event) {}
+    function move_handler(event) {}
+    function up_handler(event) {}
+    function cancel_handler(event) {}
+    function out_handler(event) {}
+    function leave_handler(event) {}
+    function gotcapture_handler(event) {}
+    function lostcapture_handler(event) {}
 
     function init() {
-      var el=document.getElementById("target");
+      var el = document.getElementById("target");
       // Register pointer event handlers
       el.onpointerover = over_handler;
       el.onpointerenter = enter_handler;
@@ -136,7 +135,7 @@ _[Указывающее устройство](#term_pointer) –_ это уст
     }
   </script>
   <body onload="init();">
-    <div id="target"> Touch me ... </div>
+    <div id="target">Touch me ...</div>
   </body>
 </html>
 ```
@@ -205,13 +204,13 @@ _[Указывающее устройство](#term_pointer) –_ это уст
     }
 
     function init() {
-      var el=document.getElementById("target");
+      var el = document.getElementById("target");
       // Назначение обработчика события "pointerdown"
       el.onpointerdown = down_handler;
     }
   </script>
   <body onload="init();">
-    <div id="target"> Touch me ... </div>
+    <div id="target">Touch me ...</div>
   </body>
 </html>
 ```
@@ -241,7 +240,8 @@ _[Указывающее устройство](#term_pointer) –_ это уст
 | Кнопка мыши X2 (вперёд)                                                                                   | `4`    | `16`    |
 | Кнопка пера "ластик"                                                                                      | `5`    | `32`    |
 
-> **Примечание:** Свойство `button` указывает на изменение состояния кнопки. Однако, как и в случае с касанием, когда одно событие влечёт за собой ещё несколько событий, все они имеют одинаковое значение.
+> [!NOTE]
+> Свойство `button` указывает на изменение состояния кнопки. Однако, как и в случае с касанием, когда одно событие влечёт за собой ещё несколько событий, все они имеют одинаковое значение.
 
 ## Pointer capture
 
@@ -251,25 +251,25 @@ The following example shows pointer capture being set on an element.
 
 ```html
 <html>
-<script>
-  function downHandler(ev) {
-    let el = document.getElementById("target");
-    // Element 'target' will receive/capture further events
-    el.setPointerCapture(ev.pointerId);
-  }
+  <script>
+    function downHandler(ev) {
+      let el = document.getElementById("target");
+      // Element 'target' will receive/capture further events
+      el.setPointerCapture(ev.pointerId);
+    }
 
-  function init() {
-    let el = document.getElementById("target");
-    el.onpointerdown = downHandler;
-  }
-</script>
-<body onload="init();">
-  <div id="target"> Touch me ... </div>
-</body>
+    function init() {
+      let el = document.getElementById("target");
+      el.onpointerdown = downHandler;
+    }
+  </script>
+  <body onload="init();">
+    <div id="target">Touch me ...</div>
+  </body>
 </html>
 ```
 
-The following example shows a pointer capture being released (when a {{event("pointercancel")}} event occurs. The browser does this automatically when a {{event("pointerup")}} or {{event("pointercancel")}} event occurs.
+The following example shows a pointer capture being released (when a [`pointercancel`](/ru/docs/Web/API/Element/pointercancel_event) event occurs. The browser does this automatically when a [`pointerup`](/ru/docs/Web/API/Element/pointerup_event) or [`pointercancel`](/ru/docs/Web/API/Element/pointercancel_event) event occurs.
 
 ```html
 <html>
@@ -294,7 +294,7 @@ The following example shows a pointer capture being released (when a {{event("po
     }
   </script>
   <body onload="init();">
-    <div id="target"> Touch me ... </div>
+    <div id="target">Touch me ...</div>
   </body>
 </html>
 ```
@@ -310,7 +310,7 @@ In the following example, the browser's default touch behavior is disabled for t
 ```html
 <html>
   <body>
-    <div style="touch-action:none;">Can't touch this ... </div>
+    <div style="touch-action:none;">Can't touch this ...</div>
   </body>
 </html>
 ```
@@ -349,19 +349,13 @@ Here are some _best practices_ to consider when using pointer events:
 - Add the event handlers to a specific target element (rather than the entire document or nodes higher up in the document tree).
 - The target element (node) should be large enough to accommodate the largest contact surface area (typically a finger touch). If the target area is too small, touching it could result in firing other events for adjacent elements.
 
-## Specifications
+## Спецификации
 
-| Specification                                | Status                                   | Comment                                                                                                                                                                                 |
-| -------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Pointer Events 3')}} | {{Spec2('Pointer Events 3')}} | Added new APIs for `getCoalescedEvent` and `getPredictedEvents`, new `pointerrawupdate` event, additional `touch-action` property values `pan-left`, `pan-right`, `pan-up`, `pan-down`. |
-| {{SpecName('Pointer Events 2')}} | {{Spec2('Pointer Events 2')}} | Adds `hasPointerCapture` method and clarifies more edge cases and dynamic scenarios.                                                                                                    |
-| {{SpecName('Pointer Events')}}     | {{Spec2('Pointer Events')}}     | Initial definition.                                                                                                                                                                     |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
-{{Compat("api.PointerEvent")}}
-
-Some new values have been defined for the {{cssxref("touch-action", "CSS touch-action")}} property as part of the {{SpecName('Pointer Events 3')}} specification but currently those new values have limited implementation support.
+{{Compat}}
 
 ## Demos and examples
 
@@ -370,9 +364,9 @@ Some new values have been defined for the {{cssxref("touch-action", "CSS touch-a
 ## Community
 
 - [Pointer Events Working Group](https://github.com/w3c/pointerevents)
-- [Mail list](http://lists.w3.org/Archives/Public/public-pointer-events/)
+- [Mail list](https://lists.w3.org/Archives/Public/public-pointer-events/)
 - [W3C #pointerevents IRC channel](irc://irc.w3.org:6667/)
 
 ## Related topics and resources
 
-- [Touch Events Standard](http://www.w3.org/TR/touch-events/)
+- [Touch Events Standard](https://www.w3.org/TR/touch-events/)

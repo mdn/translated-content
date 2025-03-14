@@ -1,29 +1,22 @@
 ---
-title: 'Attribut HTML : pattern'
+title: "Attribut HTML : pattern"
 slug: Web/HTML/Attributes/pattern
-tags:
-  - Attribute
-  - Attributes
-  - Constraint Validation API
-  - HTML
-  - Reference
-translation_of: Web/HTML/Attributes/pattern
-original_slug: Web/HTML/Attributs/pattern
 ---
 
 {{HTMLSidebar}}
 
-L'attribut **`pattern`** indique une [expression rationnelle](/fr/docs/Web/JavaScript/Guide/Regular_Expressions) que doit respecter la valeur du contrôle du formulaire. Si une valeur non nulle (qui n'est pas `null`) ne respecte pas les contraintes portées par `pattern`, la propriété [`patternMismatch`](/fr/docs/Web/API/ValidityState/patternMismatch) en lecture seule, rattachée à l'objet [`ValidityState`](/fr/docs/Web/API/ValidityState), vaudra `true`.
+L'attribut **`pattern`** indique une [expression rationnelle](/fr/docs/Web/JavaScript/Guide/Regular_expressions) que doit respecter la valeur du contrôle du formulaire. Si une valeur non nulle (qui n'est pas `null`) ne respecte pas les contraintes portées par `pattern`, la propriété [`patternMismatch`](/fr/docs/Web/API/ValidityState/patternMismatch) en lecture seule, rattachée à l'objet [`ValidityState`](/fr/docs/Web/API/ValidityState), vaudra `true`.
 
-L'attribut `pattern` peut être utilisé pour les champs de type [`text`](/fr/docs/Web/HTML/Element/Input/text), [`tel`](/fr/docs/Web/HTML/Element/Input/tel), [`email`](/fr/docs/Web/HTML/Element/Input/email), [`url`](/fr/docs/Web/HTML/Element/Input/url), [`password`](/fr/docs/Web/HTML/Element/Input/password), [`search`](/fr/docs/Web/HTML/Element/Input/search).
+L'attribut `pattern` peut être utilisé pour les champs de type [`text`](/fr/docs/Web/HTML/Element/input/text), [`tel`](/fr/docs/Web/HTML/Element/input/tel), [`email`](/fr/docs/Web/HTML/Element/input/email), [`url`](/fr/docs/Web/HTML/Element/input/url), [`password`](/fr/docs/Web/HTML/Element/input/password), [`search`](/fr/docs/Web/HTML/Element/input/search).
 
-La valeur de cet attribut doit être une expression rationnelle JavaScript valide (voir la documentation de [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) et [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions)). Le marqueur (_flag_) `'u'` pour être utilisé afin d'indiquer que l'expression rationnelle est une séquence de codets Unicode et non ASCII. On n'utilisera pas de barres obliques (_slashes_) autour du texte du motif de l'expression rationnelle.
+La valeur de cet attribut doit être une expression rationnelle JavaScript valide (voir la documentation de [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) et [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)). Le marqueur (_flag_) `'u'` pour être utilisé afin d'indiquer que l'expression rationnelle est une séquence de codets Unicode et non ASCII. On n'utilisera pas de barres obliques (_slashes_) autour du texte du motif de l'expression rationnelle.
 
 Si le motif n'est pas indiqué ou est invalide, aucune expression rationnelle ne sera appliquée et l'attribut sera ignoré.
 
-> **Note :** On pourra utiliser l'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) afin de fournir aux utilisateurs des explications quant aux règles à respecter pour que la valeur soit valide. Attention, on ne doit pas utiliser uniquement cet attribut pour fournir ces explications. Voir ci-après quant à l'utilisabilité.
+> [!NOTE]
+> On pourra utiliser l'attribut [`title`](/fr/docs/Web/HTML/Element/input#attr-title) afin de fournir aux utilisateurs des explications quant aux règles à respecter pour que la valeur soit valide. Attention, on ne doit pas utiliser uniquement cet attribut pour fournir ces explications. Voir ci-après quant à l'utilisabilité.
 
-Certains types d'`<input>` qui prennent en charge l'attribut `pattern` (notamment [`email`](/fr/docs/Web/HTML/Element/Input/email) et [`url`](/fr/docs/Web/HTML/Element/Input/url)) ont des contraintes particulières qui doivent également être respectées. Si l'attribut `pattern` n'est pas présent et que la valeur saisie ne respecte pas la syntaxe attendue pour ce type de champ, la propriété en lecture seule [`typeMismatch`](/fr/docs/Web/API/ValidityState/typeMismatch) vaudra `true`.
+Certains types d'`<input>` qui prennent en charge l'attribut `pattern` (notamment [`email`](/fr/docs/Web/HTML/Element/input/email) et [`url`](/fr/docs/Web/HTML/Element/input/url)) ont des contraintes particulières qui doivent également être respectées. Si l'attribut `pattern` n'est pas présent et que la valeur saisie ne respecte pas la syntaxe attendue pour ce type de champ, la propriété en lecture seule [`typeMismatch`](/fr/docs/Web/API/ValidityState/typeMismatch) vaudra `true`.
 
 ### Utilisabilité
 
@@ -42,11 +35,30 @@ Avec le fragment de code HTML suivant :
 
 ```html
 <p>
- <label>Veuillez saisir votre numéro de téléphone au format (123)456-7890
-  (<input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit area code" size="2"/>)-
-   <input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit prefix" size="2"/> -
-   <input name="tel3" type="tel" pattern="[0-9]{4}" placeholder="####" aria-label="4-digit number" size="3"/>
- </label>
+  <label
+    >Veuillez saisir votre numéro de téléphone au format (123)456-7890 (<input
+      name="tel1"
+      type="tel"
+      pattern="[0-9]{3}"
+      placeholder="###"
+      aria-label="3-digit area code"
+      size="2" />)-
+    <input
+      name="tel2"
+      type="tel"
+      pattern="[0-9]{3}"
+      placeholder="###"
+      aria-label="3-digit prefix"
+      size="2" />
+    -
+    <input
+      name="tel3"
+      type="tel"
+      pattern="[0-9]{4}"
+      placeholder="####"
+      aria-label="4-digit number"
+      size="3" />
+  </label>
 </p>
 ```
 
@@ -66,7 +78,7 @@ En utilisant les attributs [`minlength`](/fr/docs/Web/HTML/Attributes/minlength)
 
 ### Indiquer un motif
 
-On pourra utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Element/Input#attr-pattern) afin d'indiquer une expression rationnelle qui devra être respectée par la valeur saisie pour que celle-ci soit considérée comme valide (voir [ce guide sur la validation avec les expressions rationnelles](/fr/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression) pour une introduction).
+On pourra utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Element/input#attr-pattern) afin d'indiquer une expression rationnelle qui devra être respectée par la valeur saisie pour que celle-ci soit considérée comme valide (voir [ce guide sur la validation avec les expressions rationnelles](/fr/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression) pour une introduction).
 
 L'exemple qui suit permet de restreindre les valeurs saisies entre 4 et 8 caractères qui doivent également être des lettres minuscules.
 
@@ -74,10 +86,19 @@ L'exemple qui suit permet de restreindre les valeurs saisies entre 4 et 8 caract
 <form>
   <div>
     <label for="uname">Veuillez choisir un nom d'utilisateur : </label>
-    <input type="text" id="uname" name="name" required size="45"
-           pattern="[a-z]{4,8}" title="4 à 8 lettres en minuscules">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      required
+      size="45"
+      pattern="[a-z]{4,8}"
+      title="4 à 8 lettres en minuscules" />
     <span class="validity"></span>
-    <p>Les noms d'utilisateurs doivent être en minuscules et contenir 4 à 8 caractères.</p>
+    <p>
+      Les noms d'utilisateurs doivent être en minuscules et contenir 4 à 8
+      caractères.
+    </p>
   </div>
   <div>
     <button>Envoyer</button>
@@ -100,15 +121,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -133,6 +154,6 @@ L'attribut `title` est utilisé par certains navigateurs pour écrire les messag
 
 ## Voir aussi
 
-- [Les contraintes de validation](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Les contraintes de validation](/fr/docs/Web/HTML/Constraint_validation)
 - [La validation des données de formulaires](/fr/docs/Learn/Forms/Form_validation)
-- [Les expressions rationnelles (ou expressions régulières / _regexp_)](/fr/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Les expressions rationnelles (ou expressions régulières / _regexp_)](/fr/docs/Web/JavaScript/Guide/Regular_expressions)

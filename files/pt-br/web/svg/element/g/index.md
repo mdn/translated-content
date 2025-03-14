@@ -14,8 +14,11 @@ O elemento `g` é um recipiente utilizado para agrupar objetos. Transformações
 ## Exemplo
 
 ```html
-<svg width="100%" height="100%" viewBox="0 0 95 50"
-     xmlns="https://www.w3.org/2000/svg">
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 95 50"
+  xmlns="https://www.w3.org/2000/svg">
   <g stroke="green" fill="white" stroke-width="5">
     <circle cx="25" cy="25" r="15" />
     <circle cx="40" cy="25" r="15" />
@@ -31,10 +34,10 @@ O elemento `g` é um recipiente utilizado para agrupar objetos. Transformações
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#ConditionalProccessing) »
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#Core) »
-- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#GraphicalEvent) »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#Presentation) »
+- [Atributos de processamento condicional](/pt-BR/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [Atributos principais](/pt-BR/docs/Web/SVG/Attribute#core) »
+- [Atributos de eventos gráficos](/pt-BR/docs/Web/SVG/Attribute#graphicalevent) »
+- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Attribute#presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}
@@ -42,12 +45,12 @@ O elemento `g` é um recipiente utilizado para agrupar objetos. Transformações
 
 ### Atributos específicos
 
-_There is no specific attributes_
+_There is no specific attributes._
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGGElement`](/pt-BR/docs/DOM/SVGGElement).
+Este elemento implementa a interface do [`SVGGElement`](/pt-BR/docs/Web/API/SVGGElement).
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.g")}}
+{{Compat}}

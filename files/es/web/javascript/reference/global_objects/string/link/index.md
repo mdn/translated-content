@@ -1,17 +1,9 @@
 ---
 title: String.prototype.link()
 slug: Web/JavaScript/Reference/Global_Objects/String/link
-tags:
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/link
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/link
 ---
 
-{{JSRef("Objetos_globales", "String")}}
+{{JSRef}}
 
 ## Resumen
 
@@ -26,7 +18,7 @@ cadena.link(atributoHref)
 ### Parámetros
 
 - `atributoHref`
-  - : Cualquier cadena que especifique el atributo {{htmlattrxref("href", "a")}} de la etiqueta {{HTMLElement("a")}}; debería ser una URL válida (relativa o absoluta).
+  - : Cualquier cadena que especifique el atributo [`href`](/es/docs/Web/HTML/Element/a#href) de la etiqueta {{HTMLElement("a")}}; debería ser una URL válida (relativa o absoluta).
 
 ## Descripción
 
@@ -41,10 +33,10 @@ Los enlaces creados con el método `link` serán elementos del array `links` del
 El siguiente ejemplo muestra la palabra "Netscape" como un enlace de hipertexto que devuelve al usuario a la página inicial de Netscape:
 
 ```js
-var textoActivo="MDN"
-var URL="https://developer.mozilla.org/"
+var textoActivo = "MDN";
+var URL = "https://developer.mozilla.org/";
 
-console.log("Haga click para volver a " + textoActivo.link(URL))
+console.log("Haga click para volver a " + textoActivo.link(URL));
 ```
 
 Este ejemplo produce el mismo resultado que el siguiente código HTML:

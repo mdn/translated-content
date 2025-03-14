@@ -1,14 +1,9 @@
 ---
 title: CompositionEvent
 slug: Web/API/CompositionEvent
-tags:
-  - API
-  - DOM
-  - Evènement
-translation_of: Web/API/CompositionEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 Le `CompositionEvent DOM` représente les évènements qui se produisent en raison de l'utilisateur entrant indirectement le texte.
 

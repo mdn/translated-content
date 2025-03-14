@@ -1,16 +1,57 @@
 ---
 title: animation
 slug: Web/CSS/animation
-translation_of: Web/CSS/animation
 ---
 
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`animation`** это [короткая запись](/ru/docs/Web/CSS/Shorthand_properties) для {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}} и {{cssxref("animation-play-state")}}.
 
-{{EmbedInteractiveExample("pages/css/animation.html")}}
+{{InteractiveExample("CSS Demo: animation")}}
 
-[Описание того, какие свойства являются анимируемые](/ru/docs/Web/Guide/CSS/Using_CSS_transitions#Which_CSS_properties_are_animatable) доступно; стоит отметить, что это описание также подходит для [CSS переходов](/ru/docs/Web/Guide/CSS/Using_CSS_transitions).
+```css interactive-example-choice
+animation: 3s ease-in 1s infinite reverse both running slidein;
+```
+
+```css interactive-example-choice
+animation: 3s linear 1s infinite running slidein;
+```
+
+```css interactive-example-choice
+animation: 3s linear 1s infinite alternate slidein;
+```
+
+```css interactive-example-choice
+animation: 0.5s linear 1s infinite alternate slidein;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #1766aa;
+  margin: 20px;
+  border: 5px solid #333;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+```
+
+[Описание того, какие свойства являются анимируемые](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#which_css_properties_are_animatable) доступно; стоит отметить, что это описание также подходит для [CSS переходов](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
 
 {{cssinfo}}
 
@@ -19,13 +60,13 @@ translation_of: Web/CSS/animation
 ```css
 /* @keyframes duration | timing-function | delay |
    iteration-count | direction | fill-mode | play-state | name */
-  animation: 3s ease-in 1s 2 reverse both paused slidein;
+animation: 3s ease-in 1s 2 reverse both paused slidein;
 
 /* @keyframes duration | timing-function | delay | name */
-  animation: 3s linear 1s slidein;
+animation: 3s linear 1s slidein;
 
 /* @keyframes duration | name */
-  animation: 3s slidein;
+animation: 3s slidein;
 ```
 
 Порядок важен в каждом определении анимации: первое значение, которое может быть проанализировано как {{cssxref("&lt;time&gt;")}} присваивается {{cssxref("animation-duration")}}, и второй назначен {{cssxref("animation-delay")}}.
@@ -38,7 +79,7 @@ Note that order is also important within each animation definition for distingui
 
 ## Примеры
 
-Посмотрите примеры [CSS-анимаций.](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+Посмотрите примеры [CSS-анимаций.](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 
 ### Cylon Eye
 
@@ -46,9 +87,7 @@ Note that order is also important within each animation definition for distingui
 
 ```html
 <div class="view_port">
-  <div class="polling_message">
-    Listening for dispatches
-  </div>
+  <div class="polling_message">Listening for dispatches</div>
   <div class="cylon_eye"></div>
 </div>
 ```
@@ -69,24 +108,72 @@ Note that order is also important within each animation definition for distingui
 
 .cylon_eye {
   background-color: red;
-  background-image: -webkit-linear-gradient(    left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
-  background-image:    -moz-linear-gradient(    left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
-  background-image:      -o-linear-gradient(    left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
-  background-image:         linear-gradient(to right, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+  background-image: -webkit-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.9) 25%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.9) 75%
+  );
+  background-image: -moz-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.9) 25%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.9) 75%
+  );
+  background-image: -o-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.9) 25%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.9) 75%
+  );
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 25%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.9) 75%
+  );
   color: white;
   height: 100%;
   width: 20%;
 
   -webkit-animation: 4s linear 0s infinite alternate move_eye;
-     -moz-animation: 4s linear 0s infinite alternate move_eye;
-       -o-animation: 4s linear 0s infinite alternate move_eye;
-          animation: 4s linear 0s infinite alternate move_eye;
+  -moz-animation: 4s linear 0s infinite alternate move_eye;
+  -o-animation: 4s linear 0s infinite alternate move_eye;
+  animation: 4s linear 0s infinite alternate move_eye;
 }
 
-@-webkit-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
-   @-moz-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
-     @-o-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
-        @keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+@-webkit-keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+@-moz-keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+@-o-keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+@keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
 ```
 
 {{EmbedLiveSample('Cylon_Eye')}}
@@ -101,5 +188,5 @@ Note that order is also important within each animation definition for distingui
 
 ## Смотрите также
 
-- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API

@@ -1,17 +1,15 @@
 ---
 title: Introduction à XML
 slug: Web/XML/XML_introduction
-tags:
-  - XML
-translation_of: Web/XML/XML_introduction
-original_slug: Web/XML/Introduction_à_XML
 ---
+
+{{QuickLinksWithSubpages("/fr/docs/Web/XML")}}
 
 ### Définition
 
-XML, pour _e**X**tensible **M**arkup **L**anguage_ (langage de balisage extensible), est un langage de balisage généraliste [recommandé par le W3C](http://www.w3.org/) comme l'est HTML. XML est un sous-ensemble du langage SGML. Cela signifie que contrairement aux autres langages de balisages, XML n'est pas prédéfini, vous devez définir vos propres balises. Le but principal de ce langage est le partage de données entre différents systèmes, tel qu'Internet.
+XML, pour _e**X**tensible **M**arkup **L**anguage_ (langage de balisage extensible), est un langage de balisage généraliste [recommandé par le W3C](https://www.w3.org/) comme l'est HTML. XML est un sous-ensemble du langage SGML. Cela signifie que contrairement aux autres langages de balisages, XML n'est pas prédéfini, vous devez définir vos propres balises. Le but principal de ce langage est le partage de données entre différents systèmes, tel qu'Internet.
 
-De nombreux autres langages sont basés sur XML, comme par exemple [XHTML](/fr/XHTML), [MathML](/fr/MathML), [SVG](/fr/SVG), [XUL](/fr/XUL), [XBL](/fr/XBL), [RSS](/fr/RSS) et [RDF](/fr/RDF). Vous pouvez créer votre propre langage basé sur XML.
+De nombreux autres langages sont basés sur XML, comme par exemple [XHTML](/fr/XHTML), [MathML](/fr/MathML), [SVG](/fr/docs/Web/SVG), [XUL](/fr/XUL), [XBL](/fr/XBL), [RSS](/fr/RSS) et [RDF](/fr/RDF). Vous pouvez créer votre propre langage basé sur XML.
 
 ### Du XML «&nbsp;correct&nbsp;» (valide et «&nbsp;bien formé&nbsp;»)
 
@@ -48,7 +46,7 @@ Pour être valide, un document doit se conformer à des règles sémantiques qui
 
 ### Entités
 
-Comme le [HTML](/fr/HTML), le **XML** fournit des méthodes (appelées entités) pour se référer à certains caractères spéciaux réservés (tel que le signe «&nbsp;plus grand que&nbsp;» utilisé pour les balises). Il faut connaître 5 de ces caractères spéciaux&nbsp;:
+Comme le [HTML](/fr/docs/Web/HTML), le **XML** fournit des méthodes (appelées entités) pour se référer à certains caractères spéciaux réservés (tel que le signe «&nbsp;plus grand que&nbsp;» utilisé pour les balises). Il faut connaître 5 de ces caractères spéciaux&nbsp;:
 
 <table class="standard-table">
   <tbody>
@@ -104,7 +102,7 @@ Vous pouvez également utiliser les références numériques de caractères pour
 
 Il y a deux manières différentes d'utiliser le XML pour la présentation, et cela peut aller d'une transformation en HTML à la génération d'un document PDF ou d'images.
 
-Une manière d'appliquer un style sur une page XML est d'utiliser une feuille de style [CSS](/fr/CSS) avec la déclaration `xml-stylesheet`.
+Une manière d'appliquer un style sur une page XML est d'utiliser une feuille de style [CSS](/fr/docs/Web/CSS) avec la déclaration `xml-stylesheet`.
 
 ```xml
 <?xml-stylesheet type="text/css" href="stylesheet.css"?>
@@ -126,12 +124,12 @@ Voici une liste d'articles de référence sur le Web&nbsp;:
 
 - [W3Schools: DTD Tutorial (en)](http://www.w3schools.com/dtd/)
 - [W3Schools: XML Tutorial (en)](http://www.w3schools.com/xml/default.asp)
-- [XML.com (en)](http://www.xml.com/)
-- [Extensible Markup Language (XML) @ W3.org (en)](http://www.w3.org/XML/)
-- [XML Example @ A List Apart (en)](http://www.alistapart.com/d/usingxml/xml_uses_a.html)
-- [Using XML @ A List Apart (en)](http://www.alistapart.com/articles/usingxml/)
+- [XML.com (en)](https://www.xml.com/)
+- [Extensible Markup Language (XML) @ W3.org (en)](https://www.w3.org/XML/)
+- [XML Example @ A List Apart (en)](https://www.alistapart.com/d/usingxml/xml_uses_a.html)
+- [Using XML @ A List Apart (en)](https://www.alistapart.com/articles/usingxml/)
 
-L'article [Using XML (en)](http://www.alistapart.com/articles/usingxml/) est une ressource particulièrement intéressante sur la transformation et la création de votre propre langage XML.
+L'article [Using XML (en)](https://www.alistapart.com/articles/usingxml/) est une ressource particulièrement intéressante sur la transformation et la création de votre propre langage XML.
 
 ### Informations sur le document
 

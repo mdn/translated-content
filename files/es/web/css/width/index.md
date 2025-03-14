@@ -1,18 +1,51 @@
 ---
 title: width
 slug: Web/CSS/width
-translation_of: Web/CSS/width
-browser-compat: css.properties.width
 ---
 
 {{CSSRef}}
 
-La propiedad [CSS](/es/docs/Web/CSS) **`width`** especifica la anchura del area de contenido de un elemento.
-De forma predeterminada, establece el ancho del [área de contenido](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area),
+La propiedad [CSS](/es/docs/Web/CSS) **`width`** establece el ancho de un elemento.
+Por defecto, establece el ancho del [área de contenido](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content_area),
 pero si el {{cssxref("box-sizing")}} se establece en `border-box`,
-establece el ancho del [área del borde](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border_area).
+establece el ancho del [área del borde](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area).
 
-{{EmbedInteractiveExample("pages/css/width.html")}}
+{{InteractiveExample("CSS Demo: width")}}
+
+```css interactive-example-choice
+width: 150px;
+```
+
+```css interactive-example-choice
+width: 20em;
+```
+
+```css interactive-example-choice
+width: 75%;
+```
+
+```css interactive-example-choice
+width: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the width.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 Las propiedades {{cssxref("min-width")}} y {{cssxref("max-width")}} sobreescriben el `width`.
 
@@ -26,7 +59,7 @@ width: 25em;
 /* Valores en <percentage> */
 width: 75%;
 
-/* Valores clave */
+/* Valores en palabras clave */
 width: max-content;
 width: min-content;
 width: fit-content(20em);
@@ -42,22 +75,22 @@ width: unset;
 
 ### Valores
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxref("length")}}
   - : Define el ancho como un valor absoluto.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Especifica el `width` como porcentaje de la anchura del bloque contenedor.
+- {{cssxref("percentage")}}
+  - : Especifica el ancho como porcentaje de la anchura del bloque contenedor.
 - `auto`
-  - : El navegador calculará y seleccionará la anchura para el elemento especificado.
+  - : El navegador calculará y seleccionará el ancho para el elemento especificado.
 - `max-content`
-  - : La anchura preferida intrínseca.
+  - : El ancho preferido intrínseco.
 - `min-content`
-  - : La anchura mínima intrínseca.
+  - : EL ancho mínimo intrínseco.
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Utiliza la fórmula de `fit-content` con el espacio disponible reemplazado por el argumento especificado, ejemplo, `min(max-content, max(min-content, <longitud-porcentaje>))`.
 
 ## Problemas de accesibilidad
 
-Asegúrese de que los elementos establecidos con un `width` no se trunquen y/o no oscurezcan otro contenido cuando se amplía la página para aumentar el tamaño del texto.
+Asegúrese de que los elementos establecidos con un `width` no trunquen y/o oculten otros contenidos cuando se amplía la página para aumentar el tamaño del texto.
 
 - [MDN Entendiendo WCAG, Pauta 1.4](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Comprender el criterio de éxito 1.4.4 | W3C Entendiendo WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
@@ -81,7 +114,9 @@ p.goldie {
 ```
 
 ```html
-<p class="goldie">La comunidad de Mozilla produce una gran cantidad de software excelente.</p>
+<p class="goldie">
+  La comunidad de Mozilla produce una gran cantidad de software excelente.
+</p>
 ```
 
 {{EmbedLiveSample('Default_width', '500px', '64px')}}
@@ -109,9 +144,9 @@ p.goldie {
 <div class="em_length">Ancho medido en em</div>
 ```
 
-{{EmbedLiveSample('Ejemplo usando píxeles y ems', '500px', '64px')}}
+{{EmbedLiveSample('', '500px', '64px')}}
 
-### Ejemplo usando Porcentaje
+### Ejemplo usando porcentaje
 
 ```css
 .percent {
@@ -125,25 +160,27 @@ p.goldie {
 <div class="percent">Ancho en porcentaje</div>
 ```
 
-{{EmbedLiveSample('Ejemplo usando porcentaje', '500px', '64px')}}
+{{EmbedLiveSample('', '500px', '64px')}}
 
 ### Ejemplo usando "max-content"
 
 ```css
 p.maxgreen {
   background: lightgreen;
-  width: intrinsic;           /* Safari/WebKit usa un nombre no estándar */
-  width: -moz-max-content;    /* Firefox/Gecko */
+  width: intrinsic; /* Safari/WebKit usa un nombre no estándar */
+  width: -moz-max-content; /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
   width: max-content;
 }
 ```
 
 ```html
-<p class="maxgreen">La comunidad de Mozilla produce una gran cantidad de software excelente.</p>
+<p class="maxgreen">
+  La comunidad de Mozilla produce una gran cantidad de software excelente.
+</p>
 ```
 
-{{EmbedLiveSample('Ejemplo usando "max-content"', '500px', '64px')}}
+{{EmbedLiveSample('', '500px', '64px')}}
 
 ### Ejemplo usando "min-content"
 
@@ -157,10 +194,12 @@ p.minblue {
 ```
 
 ```html
-<p class="minblue">La comunidad de Mozilla produce una gran cantidad de software excelente.</p>
+<p class="minblue">
+  La comunidad de Mozilla produce una gran cantidad de software excelente.
+</p>
 ```
 
-{{EmbedLiveSample('Ejemplo usando "min-content"', '500px', '155px')}}
+{{EmbedLiveSample('', '500px', '155px')}}
 
 ## Especificaciones
 
@@ -172,7 +211,7 @@ p.minblue {
 
 ## Véase también
 
-- [El modelo de caja](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [El modelo de caja](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - {{cssxref("height")}}
 - {{cssxref("box-sizing")}}
 - {{cssxref("min-width")}}, {{cssxref("max-width")}}

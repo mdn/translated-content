@@ -1,33 +1,34 @@
 ---
-title: HTMLCanvasElement.height
+title: HTMLCanvasElement：height 属性
 slug: Web/API/HTMLCanvasElement/height
+l10n:
+  sourceCommit: 4aa077d26c6b1f7168af634082b6e6f71e11bb99
 ---
 
 {{APIRef("Canvas API")}}
 
-**`HTMLCanvasElement.height`** 属性是一个正`整数` ，使用了{{HTMLElement("canvas")}} 元素的 HTML 属性{{htmlattrxref("height", "canvas")}}来反映该元素高度的 CSS 像素值。当该属性没有被定义，或被定义为一个无效值（如负值）时，将使用`150`作为它的默认值。
+**`HTMLCanvasElement.height`** 属性是一个正整数（`integer`），表示以 CSS 像素为单位解析的 {{HTMLElement("canvas")}} 元素的 [`height`](/zh-CN/docs/Web/HTML/Element/canvas#height) HTML 属性。当未指定该属性，或者设置为无效值（例如负数）时，将使用默认值 `150`。
 
-控制 canvas 元素大小的属性有两个，这是其中一个，还有一个是{{domxref("HTMLCanvasElement.width")}}。
+当设置 `height` 属性时，绘图缓冲区总是会被重置为空白状态——这对于所有上下文类型都适用，即使高度被设置为相同的值也是如此。如果需要恢复之前的内容，可以通过 {{domxref("CanvasRenderingContext2D.getImageData()")}} 保存，并通过 {{domxref("CanvasRenderingContext2D.putImageData()")}} 进行恢复。
 
-## 语法
+这是控制画布大小的两个属性之一，另一个属性是 {{domxref("HTMLCanvasElement.width")}}。
 
-```plain
-var pxl = canvas.height;
-canvas.height = pxl;
-```
+## 值
+
+一个数字。
 
 ## 示例
 
-给出这样一个{{HTMLElement("canvas")}} 元素：
+给定以下 {{HTMLElement("canvas")}} 元素：
 
 ```html
 <canvas id="canvas" width="300" height="300"></canvas>
 ```
 
-可以通过以下代码获得这个 canvas 元素的高度：
+你可以通过以下代码获取画布的高度：
 
 ```js
-var canvas = document.getElementById('canvas');
+const canvas = document.getElementById("canvas");
 console.log(canvas.height); // 300
 ```
 
@@ -39,7 +40,13 @@ console.log(canvas.height); // 300
 
 {{Compat}}
 
-## 其他
+## 参见
 
-- 定义的接口，{{domxref("HTMLCanvasElement")}}.
-- 另一个控制 canvas 大小的属性，{{domxref("HTMLCanvasElement.width")}}.
+- {{domxref("HTMLCanvasElement")}}：用于定义 `HTMLCanvasElement.height` 属性的接口
+- {{domxref("HTMLCanvasElement.width")}}：用于控制画布大小的另一个属性
+- {{domxref("HTMLEmbedElement.height")}}
+- {{domxref("HTMLIFrameElement.height")}}
+- {{domxref("HTMLImageElement.height")}}
+- {{domxref("HTMLObjectElement.height")}}
+- {{domxref("HTMLSourceElement.height")}}
+- {{domxref("HTMLVideoElement.height")}}

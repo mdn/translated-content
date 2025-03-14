@@ -1,17 +1,14 @@
 ---
-title: Document.anchors
+title: "Document: anchors プロパティ"
+short-title: anchors
 slug: Web/API/Document/anchors
+l10n:
+  sourceCommit: 10609d35e92f68f2dacbb1be07d31e736a2b487a
 ---
 
 {{APIRef("DOM")}} {{Deprecated_Header}}
 
 **`anchors`** は {{domxref("Document")}} インターフェイスの読み取り専用のプロパティで、文書中のすべてのアンカーのリストを返します。
-
-## 構文
-
-```js
-nodeList = document.anchors;
-```
 
 ### 値
 
@@ -21,54 +18,51 @@ nodeList = document.anchors;
 
 ```js
 if (document.anchors.length >= 5) {
-  dump("found too many anchors");
+  console.log("found too many anchors");
 }
 ```
 
 文書中のアンカーを基に目次を作成して文書に挿入する例を以下に示します。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>Test</title>
-<script>
-function init() {
-  var toc = document.getElementById("toc");
-  var i, li, newAnchor;
-  for (i = 0; i < document.anchors.length; i++) {
-    li = document.createElement("li");
-    newAnchor = document.createElement('a');
-    newAnchor.href = "#" + document.anchors[i].name;
-    newAnchor.textContent = document.anchors[i].text;
-    li.appendChild(newAnchor);
-    toc.appendChild(li);
-  }
-}
-</script>
-</head>
-<body onload="init()">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test</title>
+    <script>
+      function init() {
+        const toc = document.getElementById("toc");
+        for (const anchor of document.anchors) {
+          const li = document.createElement("li");
+          const newAnchor = document.createElement("a");
+          newAnchor.href = "#" + anchor.name;
+          newAnchor.textContent = anchor.text;
+          li.appendChild(newAnchor);
+          toc.appendChild(li);
+        }
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <h1>Title</h1>
+    <h2><a name="contents">Contents</a></h2>
+    <ul id="toc"></ul>
 
-<h1>Title</h1>
-<h2><a name="contents">Contents</a></h2>
-<ul id="toc"></ul>
+    <h2><a name="plants">Plants</a></h2>
+    <ol>
+      <li>Apples</li>
+      <li>Oranges</li>
+      <li>Pears</li>
+    </ol>
 
-<h2><a name="plants">Plants</a></h2>
-<ol>
-  <li>Apples</li>
-  <li>Oranges</li>
-  <li>Pears</li>
-</ol>
-
-<h2><a name="veggies">Veggies</a></h2>
-<ol>
-  <li>Carrots</li>
-  <li>Celery</li>
-  <li>Beats</li>
-</ol>
-
-</body>
+    <h2><a name="veggies">Veggies</a></h2>
+    <ol>
+      <li>Carrots</li>
+      <li>Celery</li>
+      <li>Beats</li>
+    </ol>
+  </body>
 </html>
 ```
 

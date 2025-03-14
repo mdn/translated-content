@@ -1,11 +1,13 @@
 ---
 title: CloseEvent
 slug: Web/API/CloseEvent
+l10n:
+  sourceCommit: e811fc31b67e145c5882e8e3f128d1938c627a51
 ---
 
 {{APIRef("Websockets API")}}
 
-`CloseEvent` は、接続が閉じられたときに {{Glossary("WebSockets")}} を使用してクライアントに送信されます。これは `WebSocket` オブジェクトの `onclose` 属性で指定されたリスナーに配信されます。
+`CloseEvent` は、接続が閉じられたときに {{Glossary("WebSockets", "WebSocket")}} を使用してクライアントに送信されます。これは `WebSocket` オブジェクトの `onclose` 属性で指定されたリスナーに配信されます。
 
 {{InheritanceDiagram}}
 
@@ -16,21 +18,18 @@ slug: Web/API/CloseEvent
 
 ## プロパティ
 
-_このインタフェースは親である {{domxref("Event")}} からプロパティを継承しています。_
+_このインターフェイスは親である {{domxref("Event")}} からプロパティを継承しています。_
 
-- {{domxref("CloseEvent.code")}}{{readOnlyInline}}
+- {{domxref("CloseEvent.code")}} {{ReadOnlyInline}}
   - : サーバーが送信したクローズコードが入った `unsigned short` を返します。
-- {{domxref("CloseEvent.reason")}}{{readOnlyInline}}
-  - : サーバーが接続を終了した理由を示す {{domxref("DOMString")}} を返します。これは特定のサーバーとサブプロトコルに固有です。
-- {{domxref("CloseEvent.wasClean")}}{{readOnlyInline}}
+- {{domxref("CloseEvent.reason")}} {{ReadOnlyInline}}
+  - : サーバーが接続を終了した理由を示す文字列を返します。これはそれぞれのサーバーとサブプロトコルで固有です。
+- {{domxref("CloseEvent.wasClean")}} {{ReadOnlyInline}}
   - : 接続がきれいに閉じられたかどうかを示す論理値を返します。
 
-## メソッド
+## インスタンスメソッド
 
-_このインターフェースは親である {{domxref("Event")}} からメソッドを継承しています。_
-
-- {{domxref("CloseEvent.initCloseEvent()")}} {{Non-standard_inline}} {{deprecated_inline}}
-  - : 作成された `CloseEvent` の値を初期化します。イベントがすでに配信されている場合、このメソッドは何も行いません。このメソッドはもう使用しないでください。代わりに、{{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} コンストラクターを使用してください。
+_このインターフェイスは親である {{domxref("Event")}} からメソッドを継承しています。_
 
 ## 仕様書
 

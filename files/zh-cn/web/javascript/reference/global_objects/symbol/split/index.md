@@ -5,32 +5,49 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 
 {{JSRef}}
 
-**`Symbol.split`** 指向 一个正则表达式的索引处分割字符串的方法。这个方法通过 {{jsxref("String.prototype.split()")}} 调用。
+**`Symbol.split`** 指向一个正则表达式的索引处分割字符串的方法。这个方法通过 {{jsxref("String.prototype.split()")}} 调用。
 
-详情请参阅{{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} 和{{jsxref("String.prototype.split()")}}.
+详情请参阅 [`RegExp.prototype[Symbol.split]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split) 和 {{jsxref("String.prototype.split()")}}。
 
-{{EmbedInteractiveExample("pages/js/symbol-split.html")}}{{js_property_attributes(0,0,0)}}
+{{InteractiveExample("JavaScript Demo: Symbol.split", "taller")}}
+
+```js interactive-example
+class Split1 {
+  constructor(value) {
+    this.value = value;
+  }
+  [Symbol.split](string) {
+    const index = string.indexOf(this.value);
+    return `${this.value}${string.substring(0, index)}/${string.substring(
+      index + this.value.length,
+    )}`;
+  }
+}
+
+console.log("foobar".split(new Split1("foo")));
+// Expected output: "foo/bar"
+```
+
+## 值
+
+内置通用符号 `Symbol.split`。
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## 示例
 
-\[Symbol.split] 指向‘aba’.split(/a/)
+### 自定义反向分割
 
 ```js
-/a/[Symbol.split]('aba',3)
-```
+class ReverseSplit {
+  [Symbol.split](string) {
+    const array = string.split(" ");
+    return array.reverse();
+  }
+}
 
-"dayinlove".split(exp) 调用 \[Symbol.split]\(str) 处理，并把实参"dayinlove"传给形参 str
-
-```js
-var exp =  {
-        pat:'in',
-        [Symbol.split](str) {
-          return str.split(this.pat);
-          }
-    }
-
-    "dayinlove".split(exp);
-//["day", "love"]
+console.log("Another one bites the dust".split(new ReverseSplit()));
+// [ "dust", "the", "bites", "one", "Another" ]
 ```
 
 ## 规范
@@ -43,7 +60,10 @@ var exp =  {
 
 ## 参阅
 
+- [`core-js` 中 `Symbol.split` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Symbol.match")}}
+- {{jsxref("Symbol.matchAll")}}
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.search")}}
-- {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}
+- {{jsxref("String.prototype.split()")}}
+- [`RegExp.prototype[Symbol.split]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split)

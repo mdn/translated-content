@@ -1,19 +1,18 @@
 ---
 title: History.state
 slug: Web/API/History/state
-translation_of: Web/API/History/state
 ---
 
 {{APIRef("History API")}}
 
 **`History.state`** 속성은 현 history에 해당하는 state값을 나타냅니다.
 
-{{event("popstate")}} 이벤트가 트리거될때가 아닌 상태에서 state값을 볼 수 있는 방법입니다.
+{{domxref("Window/popstate_event", "popstate")}} 이벤트가 트리거될때가 아닌 상태에서 state값을 볼 수 있는 방법입니다.
 
 ## 구문
 
 ```js
-const currentState = history.state
+const currentState = history.state;
 ```
 
 ### 값
@@ -31,7 +30,7 @@ const currentState = history.state
 console.log(`History.state before pushState: ${history.state}`);
 
 // Now push something on the stack
-history.pushState({name: 'Example'}, "pushState example", 'page3.html');
+history.pushState({ name: "Example" }, "pushState example", "page3.html");
 
 // Now state has a value.
 console.log(`History.state after pushState: ${history.state}`);

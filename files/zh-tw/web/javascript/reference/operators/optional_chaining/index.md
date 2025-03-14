@@ -9,7 +9,23 @@ slug: Web/JavaScript/Reference/Operators/Optional_chaining
 
 當有機會存在參照不存在的時候，可選串連可以提供更簡短的表述式來進行串連性的屬性存取。這有助於在無法保證物件屬性為必要存在的狀況下，進行物件內容的探索。
 
-{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Optional chaining operator", "taller")}}
+
+```js interactive-example
+const adventurer = {
+  name: "Alice",
+  cat: {
+    name: "Dinah",
+  },
+};
+
+const dogName = adventurer.dog?.name;
+console.log(dogName);
+// Expected output: undefined
+
+console.log(adventurer.someNonExistentMethod?.());
+// Expected output: undefined
+```
 
 ## 語法
 
@@ -44,7 +60,7 @@ let nestedProp = obj.first?.second;
 
 ```js
 let temp = obj.first;
-let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.second);
+let nestedProp = temp === null || temp === undefined ? undefined : temp.second;
 ```
 
 ### 可選串連呼叫函數
@@ -57,20 +73,21 @@ let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.secon
 let result = someInterface.customMethod?.();
 ```
 
-> **備註：** 假如物件有同樣的屬性名稱，而不是一個方法，使用 `?.` 將會抛出 {{JSxRef("TypeError")}} 錯誤（`x.y 不是一個函數`）。
+> [!NOTE]
+> 假如物件有同樣的屬性名稱，而不是一個方法，使用 `?.` 將會抛出 {{JSxRef("TypeError")}} 錯誤（`x.y 不是一個函數`）。
 
 #### 處理回呼函式或事件處理器
 
-如果你使用回呼函式，或是透過[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring)來擷取物件中的方法，你可能會因為這些方法沒有存在，而無法進行呼叫，除非你事先驗證其存在性。所以，你可以利用 `?.` 來避免這樣的測試：
+如果你使用回呼函式，或是透過[解構](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring#object_destructuring)來擷取物件中的方法，你可能會因為這些方法沒有存在，而無法進行呼叫，除非你事先驗證其存在性。所以，你可以利用 `?.` 來避免這樣的測試：
 
 ```js
 // 在 ES2019 下撰寫
 function doSomething(onContent, onError) {
   try {
     // ... 對資料進行一些處理
-  }
-  catch (err) {
-    if (onError) { // 測試 onError 是否真的存在
+  } catch (err) {
+    if (onError) {
+      // 測試 onError 是否真的存在
       onError(err.message);
     }
   }
@@ -81,9 +98,8 @@ function doSomething(onContent, onError) {
 // 使用可選串連進行函式呼叫
 function doSomething(onContent, onError) {
   try {
-   // ... 對資料進行一些處理
-  }
-  catch (err) {
+    // ... 對資料進行一些處理
+  } catch (err) {
     onError?.(err.message); // 就算 onError 是 undefined 也不會抛出錯誤
   }
 }
@@ -94,7 +110,7 @@ function doSomething(onContent, onError) {
 你也可以在[方括號屬性存取](/zh-TW/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation)表達式中使用可選串連：
 
 ```js
-let nestedProp = obj?.['prop' + 'Name'];
+let nestedProp = obj?.["prop" + "Name"];
 ```
 
 ### 矩陣項目的可選串連
@@ -111,7 +127,7 @@ let arrayItem = arr?.[42];
 
 ```js
 let myMap = new Map();
-myMap.set("foo", {name: "baz", desc: "inga"});
+myMap.set("foo", { name: "baz", desc: "inga" });
 
 let nameBar = myMap.get("bar")?.name;
 ```
@@ -137,8 +153,8 @@ let customer = {
   name: "Carl",
   details: {
     age: 82,
-    location: "Paradise Falls" // 詳細地址 address 並不知道
-  }
+    location: "Paradise Falls", // 詳細地址 address 並不知道
+  },
 };
 let customerCity = customer.details?.address?.city;
 
@@ -153,7 +169,7 @@ let duration = vacations.trip?.getTime?.();
 ```js
 let customer = {
   name: "Carl",
-  details: { age: 82 }
+  details: { age: 82 },
 };
 const customerCity = customer?.city ?? "Unknown city";
 console.log(customerCity); // Unknown city

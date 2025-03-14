@@ -1,10 +1,11 @@
 ---
 title: Fragmenteur
 slug: Glossary/Fragmentainer
-translation_of: Glossary/Fragmentainer
 l10n:
   sourceCommit: 541357c50283942128c2f5c0335418bc2b90e751
 ---
+
+{{GlossarySidebar}}
 
 Un fragmenteur (ou <i lang="en">fragmentainer</i> en anglais) est défini dans la [spécification de fragmentation CSS](https://www.w3.org/TR/css-break-3/) (en anglais) comme suit&nbsp;:
 

@@ -1,13 +1,6 @@
 ---
 title: Access-Control-Allow-Headers
 slug: Web/HTTP/Headers/Access-Control-Allow-Headers
-tags:
-  - CORS
-  - HTTP
-  - Заголовок
-  - Справка
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Headers
-original_slug: Web/HTTP/Заголовки/Access-Control-Allow-Headers
 ---
 
 {{HTTPSidebar}}
@@ -50,9 +43,7 @@ Access-Control-Allow-Headers: X-Custom-Header
 
 ## Спецификации
 
-| Спецификация                                                                                                             | Статус                   | Комментарий            |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ---------------------- |
-| {{SpecName('Fetch','#http-access-control-allow-headers', 'Access-Control-Allow-Headers')}} | {{Spec2("Fetch")}} | Начальное определение. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
@@ -63,7 +54,7 @@ Access-Control-Allow-Headers: X-Custom-Header
 - Подстановочное значение (\*), указанное в последней спецификации, ещё не реализовано в браузерах:
 
   - Chromium: [Issue 615313](https://bugs.chromium.org/p/chromium/issues/detail?id=615313)
-  - Firefox: {{bug(1309358)}}
+  - Firefox: [Firefox bug 1309358](https://bugzil.la/1309358)
   - Servo: [Issue 13283](https://github.com/servo/servo/issues/13283)
   - WebKit: [Issue 165508](https://bugs.webkit.org/show_bug.cgi?id=165508)
 

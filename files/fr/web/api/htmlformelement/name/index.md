@@ -1,20 +1,19 @@
 ---
 title: HTMLFormElement.name
 slug: Web/API/HTMLFormElement/name
-translation_of: Web/API/HTMLFormElement/name
 ---
 
 {{APIRef("HTML DOM")}}
 
 La propriété `HTMLFormElement.name` représente le nom de l'élément `form` sous la forme d'une chaîne de caratères.
 
-Si votre {{HTMLElement("Form")}} contient un élément appelé *name*, alors ce dernier redéfinit la propriété `form.name`, afin que vous ne puissiez y accéder. Internet Explorer (IE) bloque la définition ou la modification du nom d'un élément créé avec `createElement()` à partir de la propriété `name`.
+Si votre {{HTMLElement("Form")}} contient un élément appelé _name_, alors ce dernier redéfinit la propriété `form.name`, afin que vous ne puissiez y accéder. Internet Explorer (IE) bloque la définition ou la modification du nom d'un élément créé avec `createElement()` à partir de la propriété `name`.
 
 ## Syntaxe
 
 ```js
-string = form.name
-form.name = string
+string = form.name;
+form.name = string;
 ```
 
 ## Exemple
@@ -29,5 +28,5 @@ if (form1name&nbsp;!= document.form.form1) {
 
 ## Spécification
 
-- [HTML 5, Section 4.10.3, The form Element](http://www.w3.org/TR/html5/forms.html#dom-form-name)
-- [DOM Level 2 HTML: name](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-22051454)
+- [HTML 5, Section 4.10.3, The form Element](https://www.w3.org/TR/html5/forms.html#dom-form-name)
+- [DOM Level 2 HTML: name](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-22051454)

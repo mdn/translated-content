@@ -1,18 +1,14 @@
 ---
 title: any-pointer
 slug: Web/CSS/@media/any-pointer
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
-translation_of: Web/CSS/@media/any-pointer
 ---
 
 {{CSSRef}}
 
 **`any-pointer`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui peut être utilisée afin de déterminer si un des mécanismes de saisie/d'entrée disponibles est un dispositif de pointage et sa précision le cas échéant.
 
-> **Note :** Si on souhaite tester la précision du mécanisme de pointage _principal_, on pourra utiliser la caractéristique [`pointer`](/fr/docs/Web/CSS/@media/pointer) à la place.
+> [!NOTE]
+> Si on souhaite tester la précision du mécanisme de pointage _principal_, on pourra utiliser la caractéristique [`pointer`](/fr/docs/Web/CSS/@media/pointer) à la place.
 
 ## Syntaxe
 
@@ -25,7 +21,8 @@ La caractéristique `any-pointer` est définie comme un mot-clé parmi ceux de l
 - `fine`
   - : Il existe au moins un mécanisme d'entrée qui est un dispositif de pointage et pour lequel la précision est fine.
 
-> **Note :** Plusieurs valeurs peuvent correspondre si l'appareil dispose de dispositifs de pointage différents. Toutefois, la valeur `none` ne sera utilisée que lorsqu'aucun dispositif de pointage ne sera détecté.
+> [!NOTE]
+> Plusieurs valeurs peuvent correspondre si l'appareil dispose de dispositifs de pointage différents. Toutefois, la valeur `none` ne sera utilisée que lorsqu'aucun dispositif de pointage ne sera détecté.
 
 ## Exemples
 
@@ -34,8 +31,7 @@ Dans cet exemple, on crée une petite case à cocher pour les utilisateurs qui d
 ### HTML
 
 ```html
-<input id="test" type="checkbox" />
-<label for="test">Coucou !</label>
+<input id="test" type="checkbox" /> <label for="test">Coucou !</label>
 ```
 
 ### CSS

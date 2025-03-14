@@ -48,10 +48,10 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 
 現在、4 つの文字列属性を含む `gecko` キーのみが存在します。
 
-- `id` は [拡張機能 ID](/ja/Add-ons/Install_Manifests#id) です。Firefox 48 からオプションですが、Firefox 48 より前では必須です。いつ特定の add-on ID が必要になるかについては、[拡張機能と Add-on ID](/ja/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID) を見てください。
+- `id` は [拡張機能 ID](/ja/docs/Mozilla/Add-ons/Install_Manifests#id) です。Firefox 48 からオプションですが、Firefox 48 より前では必須です。いつ特定の add-on ID が必要になるかについては、[拡張機能と Add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/) を見てください。
 - `strict_min_version`: サポートする Gecko の最小バージョンです。"\*" を含むバージョンは、このフィールドでは無効です。既定は "42a1" です。
 - `strict_max_version`: サポートする Gecko の最大バージョンです。拡張機能がこのバージョンを超えた Firefox のバージョンにインストールや実行された場合、拡張機能は無効または、インストールが許可されません。既定は "\*" で、最大バージョンのチェックは無効です。
-- `update_url` は [add-on update manifest](/ja/Add-ons/Updates) へのリンクです。リンクは "https" で始まっている必要があることに注意してください。このキーは拡張機能が自分自身で更新を管理するためのものです(つまり AMO 以外で)。
+- `update_url` は [add-on update manifest](/ja/docs/Mozilla/Add-ons/Updates) へのリンクです。リンクは "https" で始まっている必要があることに注意してください。このキーは拡張機能が自分自身で更新を管理するためのものです(つまり AMO 以外で)。
 
 [有効な Gecko バージョン](https://addons.mozilla.org/en-US/firefox/pages/appversions/)のリストを見てください。
 
@@ -77,7 +77,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 使用可能なキーをすべて使用した例です。たいていの拡張機能では `strict_max_version` と `update_url` は省略するのに注意してください。
 
 ```json
-"applications": {
+"browser_specific_settings": {
   "gecko": {
     "id": "addon@example.com",
     "strict_min_version": "42.0",
@@ -89,4 +89,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.browser_specific_settings")}}
+{{Compat}}

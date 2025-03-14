@@ -1,9 +1,6 @@
 ---
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise
-original_slug: Web/JavaScript/Reference/Objets_globaux/Promise
-browser-compat: javascript.builtins.Promise
 ---
 
 {{JSRef}}
@@ -16,11 +13,11 @@ Pour apprendre comment fonctionnent les promesses et comment les utiliser, nous 
 
 ## Description
 
-L'interface **`Promise`** représente un intermédiaire (_proxy_) vers une valeur qui n'est pas nécessairement connue au moment de sa création. Cela permet d'associer des gestionnaires au succès éventuel d'une action asynchrone et à la raison d'une erreur. Ainsi, des méthodes asynchrones renvoient des valeurs comme les méthodes synchrones, la seule différence est que la valeur retournée par la méthode asynchrone est une promesse (d'avoir une valeur plus tard).
+L'interface **`Promise`** représente un intermédiaire (_proxy_) vers une valeur qui n'est pas nécessairement connue au moment de la création de la promesse. Cela permet d'associer des gestionnaires au succès éventuel d'une action asynchrone et à la raison d'une erreur. Ainsi, les méthodes asynchrones peuvent renvoyer des valeurs de manière similaire aux méthodes synchrones, la seule différence est que la valeur retournée par la méthode asynchrone est une promesse (d'avoir une valeur plus tard).
 
 Une `Promise` est dans un de ces états :
 
-- _pending (en attente)_ : état initial, la promesse n'est ni remplie, ni rompue ;
+- _pending (en attente)_ : état initial, la promesse n'est ni tenue, ni rompue ;
 - _fulfilled (tenue_) : l'opération a réussi ;
 - _rejected (rompue)_ : l'opération a échoué.
 
@@ -30,9 +27,11 @@ Les méthodes [`Promise.prototype.then()`](/fr/docs/Web/JavaScript/Reference/Glo
 
 ![Schéma illustrant l'enchaînement des différents états possibles d'une promesse et les méthodes associées](promises.png)
 
-> **Note :** D'autres langages utilisent des mécanismes d'évaluation à la volée (<i lang="en">lazy evaluation</i>) et de déport des calculs (<i lang="en">deferring computations</i>). Ces mécanismes sont également intitulés promesses (<i lang="en">promises</i>). En JavaScript, les promesses correspondent à des processus déjà lancés et qui peuvent être chaînés avec des fonctions de retour. Si vous cherchez à retarder l'évaluation, vous pouvez utiliser les fonctions fléchées sans arguments (ex. `f = () => expression`) afin de créer une expression à évaluer plus tard et utiliser `f()` pour l'évaluer au moment voulu.
+> [!NOTE]
+> D'autres langages utilisent des mécanismes d'évaluation à la volée (<i lang="en">lazy evaluation</i>) et de déport des calculs (<i lang="en">deferring computations</i>). Ces mécanismes sont également intitulés promesses (<i lang="en">promises</i>). En JavaScript, les promesses correspondent à des processus déjà lancés et qui peuvent être chaînés avec des fonctions de retour. Si vous cherchez à retarder l'évaluation, vous pouvez utiliser les fonctions fléchées sans arguments (ex. `f = () => expression`) afin de créer une expression à évaluer plus tard et utiliser `f()` pour l'évaluer au moment voulu.
 
-> **Note :** On dit qu'une promesse est dans l'état <i lang="en">settled</i> (acquittée) qu'elle soit tenue ou rompue mais plus en attente. Le terme <i lang="en">resolved</i> (résolue) est aussi utilisé concernant les promesses — cela signifie que la promesse est acquittée ou bien enfermée dans une chaine de promesse. Le billet de Domenic Denicola, [<i lang="en">States and fates</i> (en anglais)](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md), contient de plus amples détails sur la terminologie utilisée.
+> [!NOTE]
+> On dit qu'une promesse est dans l'état <i lang="en">settled</i> (acquittée) qu'elle soit tenue ou rompue mais plus en attente. Le terme <i lang="en">resolved</i> (résolue) est aussi utilisé concernant les promesses — cela signifie que la promesse est acquittée ou bien enfermée dans une chaine de promesse. Le billet de Domenic Denicola, [<i lang="en">States and fates</i> (en anglais)](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md), contient de plus amples détails sur la terminologie utilisée.
 
 ### Enchaînement de promesses
 
@@ -43,7 +42,7 @@ La méthode `.then()` prend deux arguments&nbsp;: le premier est une fonction de
 ```js
 const maPromesse = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve('toto');
+    resolve("toto");
   }, 300);
 });
 
@@ -59,22 +58,34 @@ La gestion d'une promesse rompue dans chaque `.then()` a des conséquences plus 
 
 ```js
 maPromesse
-.then(gestionnaireSuccesA)
-.then(gestionnaireSuccesB)
-.then(gestionnaireSuccesC)
-.catch(gestionnaireToutEchec);
+  .then(gestionnaireSuccesA)
+  .then(gestionnaireSuccesB)
+  .then(gestionnaireSuccesC)
+  .catch(gestionnaireToutEchec);
 ```
 
 On peut utiliser les [expressions de fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) pour les fonctions de rappel. Un enchaînement avec cette forme pourra alors ressembler à&nbsp;:
 
 ```js
 promesse1
-.then(valeur => { return valeur + ' et truc'; })
-.then(valeur => { return valeur + ' et truc bla'; })
-.then(valeur => { return valeur + ' et blabla'; })
-.then(valeur => { return valeur + ' et blabla'; })
-.then(valeur => { console.log(valeur) })
-.catch(err => { console.log(err) });
+  .then((valeur) => {
+    return valeur + " et truc";
+  })
+  .then((valeur) => {
+    return valeur + " et truc bla";
+  })
+  .then((valeur) => {
+    return valeur + " et blabla";
+  })
+  .then((valeur) => {
+    return valeur + " et blabla";
+  })
+  .then((valeur) => {
+    console.log(valeur);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 ```
 
 La condition de terminaison d'une promesse détermine son état d'acquittement pour la prochaine promesse de la chaîne. Une promesse tenue indique un succès tandis qu'une promesse rompue indique un échec. La valeur de retour pour chaque promesse résolue de la chaîne est passée à la suivante avec `.then()`, alors que la raison de l'échec est passée au prochain gestionnaire d'échec dans la chaîne.
@@ -102,11 +113,13 @@ const promesseC = promesseA.then(gestionSucces2, gestionEchec2);
 Il est possible d'affecter une action à une promesse qui est déjà acquittée. Dans ce cas, l'action (le cas échéant), sera réalisé à la première opportunité asynchrone, c'est-à-dire lorsque la pile d'appel aura été nettoyée et qu'un battement d'horloge se sera écoulé. On aura autrement dit un effet similaire à celui d'un `setTimeout(action,10)`.
 
 ```js
-const promesseA = new Promise( (resolutionFunc,rejectionFunc) => {
-    resolutionFunc(777);
+const promesseA = new Promise((resolutionFunc, rejectionFunc) => {
+  resolutionFunc(777);
 });
 // Ici, "promesseA" est déjà acquittée.
-promesseA.then( (val) => console.log("journalisation asynchrone / val vaut :",val) );
+promesseA.then((val) =>
+  console.log("journalisation asynchrone / val vaut :", val),
+);
 console.log("journalisation immédiate");
 
 // On aura alors, dans la console, la suite de messages suivante :
@@ -143,7 +156,8 @@ console.log("journalisation immédiate");
 - [`Promise.prototype.finally()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally)
   - : Ajoute un gestionnaire à la promesse et renvoie une nouvelle promesse qui est résolue lors de la résolution de la première promesse. Le gestionnaire est appelé quand la première promesse est acquittée, qu'elle ait réussi ou non.
 
->**Note :** Voir [le guide sur les micro-tâches](/fr/docs/Web/API/HTML_DOM_API/Microtask_guide) pour en savoir plus sur la façon dont ces méthodes utilisent la queue et les services de micro-tâches.
+> [!NOTE]
+> Voir [le guide sur les micro-tâches](/fr/docs/Web/API/HTML_DOM_API/Microtask_guide) pour en savoir plus sur la façon dont ces méthodes utilisent la queue et les services de micro-tâches.
 
 ## Exemples
 
@@ -156,15 +170,15 @@ let maPremierePromesse = new Promise((resolve, reject) => {
   // Dans cet exemple, on utilise setTimeout(...) pour simuler
   // du code asynchrone. En situation réelle, on utiliserait
   // plutôt XHR ou une API Web asynchrone.
-  setTimeout( function() {
-    resolve("Succès !")  // Tout s'est bien passé !
-  }, 250)
-})
+  setTimeout(function () {
+    resolve("Succès !"); // Tout s'est bien passé !
+  }, 250);
+});
 
 maPremierePromesse.then((messageReussite) => {
-  // messageReussite correspond à ce qui a été passé à 
+  // messageReussite correspond à ce qui a été passé à
   // la fonction resolve(...) ci-avant.
-  console.log("Youpi ! " + messageReussite)
+  console.log("Youpi ! " + messageReussite);
 });
 ```
 
@@ -189,30 +203,29 @@ const SEUIL_A = 8; // Abaissez ce seuil à 0 pour forcer les erreurs
 
 function tetheredGetNumber(resolve, reject) {
   try {
-    setTimeout(
-      function() {
-        const randomInt = Date.now();
-        const value = randomInt % 10;
-        try {
-          if(value >= SEUIL_A) {
-            throw new Error(`Trop grand : ${value}`);
-          }
-        } catch(msg) {
-            reject(`Erreur dans le callback ${msg}`);
+    setTimeout(function () {
+      const randomInt = Date.now();
+      const value = randomInt % 10;
+      try {
+        if (value >= SEUIL_A) {
+          throw new Error(`Trop grand : ${value}`);
         }
+      } catch (msg) {
+        reject(`Erreur dans le callback ${msg}`);
+      }
       resolve(value);
       return;
     }, 500);
     // Vous pouvez expérimenter en décommentant le 'throw'
     // qui suit
-  } catch(err) {
+  } catch (err) {
     reject(`Erreur à l'initialisation : ${err}`);
   }
   return;
 }
 
 function determineParity(value) {
-  const isOdd = value % 2 ? true : false ;
+  const isOdd = value % 2 ? true : false;
   const parityInfo = { theNumber: value, isOdd: isOdd };
   return parityInfo;
 }
@@ -223,42 +236,40 @@ function troubleWithGetNumber(reason) {
 }
 
 function promiseGetWord(parityInfo) {
-
-  const tetheredGetWord = function(resolve,reject) {
+  const tetheredGetWord = function (resolve, reject) {
     const theNumber = parityInfo.theNumber;
     const seuil_B = SEUIL_A - 1;
-    if(theNumber >= seuil_B) {
+    if (theNumber >= seuil_B) {
       reject(`Toujours trop grand : ${theNumber}`);
     } else {
-      parityInfo.wordEvenOdd = parityInfo.isOdd ? 'impair' : 'pair';
+      parityInfo.wordEvenOdd = parityInfo.isOdd ? "impair" : "pair";
       resolve(parityInfo);
     }
     return;
-  }
+  };
   return new Promise(tetheredGetWord);
 }
 
-(new Promise(tetheredGetNumber))
-  .then(determineParity,troubleWithGetNumber)
+new Promise(tetheredGetNumber)
+  .then(determineParity, troubleWithGetNumber)
   .then(promiseGetWord)
   .then((info) => {
-    console.log("On a eu : ",info.theNumber," , ", info.wordEvenOdd);
+    console.log("On a eu : ", info.theNumber, " , ", info.wordEvenOdd);
     return info;
   })
   .catch((reason) => {
-    if(reason === -999) {
+    if (reason === -999) {
       console.error("Erreur précédemment gérée");
-    }
-    else {
+    } else {
       console.error(`Problème avec promiseGetWord(): ${reason}`);
     }
-   })
+  })
   .finally((info) => console.log("C'est fini."));
 ```
 
 ### Exemple interactif
 
-Dans le court exemple qui suit, on illustre le mécanisme d'une `Promise`. La méthode `testPromise()` est appelée chaque fois qu'on clique sur l'élément [`<button>`](/fr/docs/Web/HTML/Element/Button). Cette méthode crée une promesse qui sera tenue grâce à la fonction [`setTimeout()`](/fr/docs/Web/API/setTimeout), et avec la valeur comptePromesse (nombre commençant à 1) après `1s` à `3s` (aléatoire). Le constructeur Promise() est utilisé pour créer la promesse.
+Dans le court exemple qui suit, on illustre le mécanisme d'une `Promise`. La méthode `testPromise()` est appelée chaque fois qu'on clique sur l'élément [`<button>`](/fr/docs/Web/HTML/Element/button). Cette méthode crée une promesse qui sera tenue grâce à la fonction [`setTimeout()`](/fr/docs/Web/API/Window/setTimeout), et avec la valeur comptePromesse (nombre commençant à 1) après `1s` à `3s` (aléatoire). Le constructeur Promise() est utilisé pour créer la promesse.
 
 Le fait que la promesse soit tenue est simplement enregistré via un _callback_ sur `p1.then()`. Quelques indicateurs illustrent la manière dont la partie synchrone est découplée de la partie asynchrone.
 
@@ -272,31 +283,40 @@ Le fait que la promesse soit tenue est simplement enregistré via un _callback_ 
 #### JavaScript
 
 ```js
-'use strict';
+"use strict";
 let comptePromesse = 0;
 
 function testPromise() {
   let thisComptePromesse = ++comptePromesse;
 
-  let log = document.getElementById('log');
-  log.insertAdjacentHTML('beforeend', thisComptePromesse +
-      ') Started (<small>Début du code synchrone</small>)<br/>');
+  let log = document.getElementById("log");
+  log.insertAdjacentHTML(
+    "beforeend",
+    thisComptePromesse +
+      ") Started (<small>Début du code synchrone</small>)<br/>",
+  );
 
   // on crée une nouvelle promesse :
   let p1 = new Promise(
     // La fonction de résolution est appelée avec la capacité de
     // tenir ou de rompre la promesse
-    function(resolve, reject) {
-      log.insertAdjacentHTML('beforeend', thisComptePromesse +
-          ') Promise started (<small>Début du code asynchrone</small>)<br/>');
+    function (resolve, reject) {
+      log.insertAdjacentHTML(
+        "beforeend",
+        thisComptePromesse +
+          ") Promise started (<small>Début du code asynchrone</small>)<br/>",
+      );
 
       // Voici un exemple simple pour créer un code asynchrone
       window.setTimeout(
-        function() {
+        function () {
           // On tient la promesse !
           resolve(thisComptePromesse);
-        }, Math.random() * 2000 + 1000);
-    });
+        },
+        Math.random() * 2000 + 1000,
+      );
+    },
+  );
 
   // On définit ce qui se passe quand la promesse est tenue
   // et ce qu'on appelle (uniquement) dans ce cas
@@ -304,25 +324,34 @@ function testPromise() {
   // quand la promesse est rompue.
   p1.then(
     // On affiche un message avec la valeur
-    function(val) {
-      log.insertAdjacentHTML('beforeend', val +
-          ') Promise fulfilled (<small>Fin du code asynchrone</small>)<br/>');
-    }).catch(
-      // Promesse rejetée
-      function() {
-        console.log("promesse rompue");
-      });
+    function (val) {
+      log.insertAdjacentHTML(
+        "beforeend",
+        val +
+          ") Promise fulfilled (<small>Fin du code asynchrone</small>)<br/>",
+      );
+    },
+  ).catch(
+    // Promesse rejetée
+    function () {
+      console.log("promesse rompue");
+    },
+  );
 
-  log.insertAdjacentHTML('beforeend', thisComptePromesse +
-      ') Promise made (<small>Fin du code synchrone</small>)<br/>');
+  log.insertAdjacentHTML(
+    "beforeend",
+    thisComptePromesse +
+      ") Promise made (<small>Fin du code synchrone</small>)<br/>",
+  );
 }
 
 if ("Promise" in window) {
   let btn = document.getElementById("btn");
   btn.addEventListener("click", testPromise);
- } else {
-  log = document.getElementById('log');
-  log.innerHTML = "L'exemple live n'est pas disponible pour votre navigateur car celui-ci ne supporte pas l'interface <code>Promise<code>.";
+} else {
+  log = document.getElementById("log");
+  log.innerHTML =
+    "L'exemple live n'est pas disponible pour votre navigateur car celui-ci ne supporte pas l'interface <code>Promise<code>.";
 }
 ```
 

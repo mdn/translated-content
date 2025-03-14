@@ -12,7 +12,7 @@ A função **`eval()`** computa um código JavaScript representado como uma stri
 ## Sintaxe
 
 ```js
-eval(string)
+eval(string);
 ```
 
 ### Parâmetros
@@ -36,7 +36,7 @@ Se o argumento de `eval()` não é uma string, `eval()` retorna o argumento inal
 
 ```js
 eval(new String("2 + 2")); // retorna um objeto String contendo "2 + 2"
-eval("2 + 2");             // retorna 4
+eval("2 + 2"); // retorna 4
 ```
 
 Você pode contornar esta limitação de forma genérica usando `toString()`.
@@ -46,15 +46,16 @@ var expression = new String("2 + 2");
 eval(expression.toString()); // retorna 4
 ```
 
-Se você usar a função `eval` _indiretamente_, invocando-a por outra referência além de `eval`, [a partir do ECMAScript 5](http://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2) funciona no escopo global ao invés do escopo local. Significa que, por exemplo, aquelas declarações de funções criam funções globais e que o código que está sendo avaliado não tem acesso às variáveis locais dentro do escopo onde está sendo chamada.
+Se você usar a função `eval` _indiretamente_, invocando-a por outra referência além de `eval`, [a partir do ECMAScript 5](https://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2) funciona no escopo global ao invés do escopo local. Significa que, por exemplo, aquelas declarações de funções criam funções globais e que o código que está sendo avaliado não tem acesso às variáveis locais dentro do escopo onde está sendo chamada.
 
 ```js
 function test() {
-  var x = 2, y = 4;
-  console.log(eval('x + y'));  // Chamada direta, usa o escopo local, resulta em 6
+  var x = 2,
+    y = 4;
+  console.log(eval("x + y")); // Chamada direta, usa o escopo local, resulta em 6
   var geval = eval; // equivalente a chamar eval no escopo global
-  console.log(geval('x + y')); // Chamada indireta, usa o escopo global, lança uma exceção ReferenceError porque `x` não foi declarado
-  (0, eval)('x + y'); // outro exemplo de chamada indireta
+  console.log(geval("x + y")); // Chamada indireta, usa o escopo global, lança uma exceção ReferenceError porque `x` não foi declarado
+  (0, eval)("x + y"); // outro exemplo de chamada indireta
 }
 ```
 
@@ -72,17 +73,17 @@ Você não deve utilizar `eval()` para converter nomes de propriedades em propri
 
 ```js
 var obj = { a: 20, b: 30 };
-var propname = getPropName();  //retorna "a" ou "b"
+var propname = getPropName(); //retorna "a" ou "b"
 
-eval( "var result = obj." + propname );
+eval("var result = obj." + propname);
 ```
 
-No entanto, `eval()` não é necessário aqui. De fato, sua utilização não é recomendada. Ao invés disso, utilize os [operadores de acesso](/pt-BR/docs/Web/JavaScript/Reference/Operators/Member_Operators), que são mais rápidos e seguros:
+No entanto, `eval()` não é necessário aqui. De fato, sua utilização não é recomendada. Ao invés disso, utilize os [operadores de acesso](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_accessors), que são mais rápidos e seguros:
 
 ```js
 var obj = { a: 20, b: 30 };
-var propname = getPropName();  //retorna "a" ou "b"
-var result = obj[ propname ];  //  obj[ "a" ] é o mesmo como obj.a
+var propname = getPropName(); //retorna "a" ou "b"
+var result = obj[propname]; //  obj[ "a" ] é o mesmo como obj.a
 ```
 
 ### Utilize funções ao invés de avaliar snippets de código
@@ -97,17 +98,17 @@ setTimeout(function() { ... }, 1000);
 elt.addEventListener("click", function() { ... } , false);
 ```
 
-[Closures](/pt-BR/docs/Web/JavaScript/Guide/Closures) são úteis como forma de criar funcções parametrizáveis sem concatenar strings.
+[Closures](/pt-BR/docs/Web/JavaScript/Closures) são úteis como forma de criar funcções parametrizáveis sem concatenar strings.
 
 ### Analisando JSON (convertendo string para objetos JavaScript)
 
-Se a string para a qual você está chamando o `eval()` contém dados (por exemplo, um array: `"[1, 2, 3]"`), ao invés de código, você deve considerar mudar para [JSON](/pt-BR/docs/JSON), que permite a string usar um subconjunto de sintaxe Javascript para representar dados. Veja também [Downloading JSON and JavaScript in extensions](/pt-BR/docs/Downloading_JSON_and_JavaScript_in_extensions).
+Se a string para a qual você está chamando o `eval()` contém dados (por exemplo, um array: `"[1, 2, 3]"`), ao invés de código, você deve considerar mudar para [JSON](/pt-BR/docs/Glossary/JSON), que permite a string usar um subconjunto de sintaxe Javascript para representar dados. Veja também [Downloading JSON and JavaScript in extensions](/pt-BR/docs/Downloading_JSON_and_JavaScript_in_extensions).
 
 Perceba que como a sintaxe JSON é limitada comparada com a sintaxe JavaScript, muitos literais JavaScript válidos não serão analisados como JSON. Por exemplo, trailing commas não são permitidas em JSON, e nomes de propriedades (keys) em literais de objetos devem ser colocados entre aspas. Certifique-se de usar um serializados JSON para gerar strings que serão analisadas como JSON mais tarde.
 
 ### Passar dados em vez de códigos
 
-Por exemplo, uma extensão concebida para raspar conteúdos de páginas web pode ter as regras de raspagem definidas no [XPath](/pt-BR/docs/XPath) em vez de código JavaScript.
+Por exemplo, uma extensão concebida para raspar conteúdos de páginas web pode ter as regras de raspagem definidas no [XPath](/pt-BR/docs/Web/XPath) em vez de código JavaScript.
 
 ### Rodando o código com privilégios limitados
 
@@ -115,7 +116,7 @@ Se você precisa executar o código, considere executá-lo com privilégios limi
 
 ## Exemplos
 
-Os exemplos a seguir mostram o retorno do [`document.write`](/pt-BR/docs/Web/API/document.write). No JavaScript rodando no server-side, você pode obter o mesmo resultado chamando o método `write()ao invés` de usar o `document.write()`.
+Os exemplos a seguir mostram o retorno do [`document.write`](/pt-BR/docs/Web/API/Document/write). No JavaScript rodando no server-side, você pode obter o mesmo resultado chamando o método `write()ao invés` de usar o `document.write()`.
 
 ### Exemplo: Usando `eval`
 
@@ -126,7 +127,7 @@ var x = 2;
 var y = 39;
 var z = "42";
 eval("x + y + 1"); // returns 42
-eval(z);           // returns 42
+eval(z); // returns 42
 ```
 
 ### Exemplo: Using `eval` to evaluate a string of JavaScript statements
@@ -147,12 +148,12 @@ document.write("<P>z is ", eval(str));
 ```js
 var str = "if ( a ) { 1+1; } else { 1+2; }";
 var a = true;
-var b = eval(str);  // returns 2
+var b = eval(str); // returns 2
 
 alert("b is : " + b);
 
 a = false;
-b = eval(str);  // returns 3
+b = eval(str); // returns 3
 
 alert("b is : " + b);
 ```
@@ -160,25 +161,21 @@ alert("b is : " + b);
 ### Exemplo: avaliar uma string definindo a função necessária "(" and ")" como prefixo e sufixo
 
 ```js
-var fctStr1 = "function a() {}"
-var fctStr2 = "(function a() {})"
-var fct1 = eval(fctStr1)  // return undefined
-var fct2 = eval(fctStr2)  // return a function
+var fctStr1 = "function a() {}";
+var fctStr2 = "(function a() {})";
+var fct1 = eval(fctStr1); // return undefined
+var fct2 = eval(fctStr2); // return a function
 ```
 
 ## Especificações
 
-| Especificação                                                | Status                   | Comentário        |
-| ------------------------------------------------------------ | ------------------------ | ----------------- |
-| ECMAScript 1st Edition.                                      | Standard                 | Definição inicial |
-| {{SpecName('ES5.1', '#sec-15.1.2.1', 'eval')}} | {{Spec2('ES5.1')}} |                   |
-| {{SpecName('ES6', '#sec-eval-x', 'eval')}}     | {{Spec2('ES6')}}     |                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.eval")}}
+{{Compat}}
 
 ## Veja também
 
 - {{jsxref("Global_Objects/uneval", "uneval()")}}
-- [Member operators](/pt-BR/docs/Web/JavaScript/Reference/Operators/Member_Operators)
+- [Member operators](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_accessors)

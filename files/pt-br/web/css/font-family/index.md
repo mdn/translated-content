@@ -13,7 +13,8 @@ Programadores WEB devem sempre adicionar pelo menos uma família genérica para 
 
 É também conveniente usar de antemão a propriedade {{cssxref("font")}} para definir a `font-size` e outras propriedades relacionadas a fonte todas de uma só vez.
 
-> **Note:** **Nota:** A propriedade `font-family` especifica a lista de fontes, da prioridade mais alta para a mais baixa.```
+> [!NOTE]
+> A propriedade `font-family` especifica a lista de fontes, da prioridade mais alta para a mais baixa.```
 > A seleção de fontes não para simplesmente na primeira fonte nomeada na lista que está no sistema do usuário. Em vez disso, a seleção de fontes é feita um caractere de cada vez, para que, se uma fonte disponível não tiver um glifo que possa exibir um caracter necessário, as fontes disponíveis mais tarde sejam tentadas. No entanto, isso não funciona no Internet Explorer 6 ou anterior.
 >
 > Quando uma fonte está disponível apenas em alguns estilos, variantes ou tamanhos, essas propriedades também podem influenciar qual família de fontes é escolhida.
@@ -148,46 +149,36 @@ body {
 
 ```css
 .exampleserif {
-    font-family: Times, "Times New Roman", Georgia, serif;
+  font-family: Times, "Times New Roman", Georgia, serif;
 }
 
 .examplesansserif {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
 .examplemonospace {
-    font-family: "Lucida Console", Courier, monospace;
+  font-family: "Lucida Console", Courier, monospace;
 }
 
 .examplecursive {
-    font-family: cursive;
+  font-family: cursive;
 }
 
 .examplefantasy {
-    font-family: fantasy;
+  font-family: fantasy;
 }
 ```
 
 ```html
-<div class="exampleserif">
-This is an example of a serif font.
-</div>
+<div class="exampleserif">This is an example of a serif font.</div>
 
-<div class="examplesansserif">
-This is an example of a sans-serif font.
-</div>
+<div class="examplesansserif">This is an example of a sans-serif font.</div>
 
-<div class="examplemonospace">
-This is an example of a monospace font.
-</div>
+<div class="examplemonospace">This is an example of a monospace font.</div>
 
-<div class="examplecursive">
-This is an example of a cursive font.
-</div>
+<div class="examplecursive">This is an example of a cursive font.</div>
 
-<div class="examplefantasy">
-This is an example of a fantasy font.
-</div>
+<div class="examplefantasy">This is an example of a fantasy font.</div>
 ```
 
 #### Live Sample
@@ -196,12 +187,8 @@ This is an example of a fantasy font.
 
 ## Specifications
 
-| Specification                                                                                    | Status                           | Comment               |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------- |
-| {{SpecName('CSS3 Fonts', '#font-family-prop', 'font-family')}}             | {{Spec2('CSS3 Fonts')}} | No significant change |
-| {{SpecName('CSS2.1', 'fonts.html#propdef-font-family', 'font-family')}} | {{Spec2('CSS2.1')}}         | No significant change |
-| {{SpecName('CSS1', '#font-family', 'font-familiy')}}                             | {{Spec2('CSS1')}}         | Initial definition    |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("css.properties.font-family")}}
+{{Compat}}

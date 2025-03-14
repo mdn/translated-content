@@ -1,21 +1,22 @@
 ---
 title: Array.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
-tags:
-  - Array
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/flatMap
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
-El método **`flatMap()`** primero mapea cada elemento usando una función de mapeo, luego aplana el resultado en una nueva matriz. Es idéntico a un [map](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido de un [flatten](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten)de profundidad 1, pero `flatMap` es a menudo útil y la fusión de ambos en un método es ligeramente más eficiente.
+El método **`flatMap()`** primero mapea cada elemento usando una función de mapeo, luego aplana el resultado en una nueva matriz. Es idéntico a un [map](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido de un [flatten](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)de profundidad 1, pero `flatMap` es a menudo útil y la fusión de ambos en un método es ligeramente más eficiente.
 
-{{EmbedInteractiveExample("pages/js/array-flatmap.html")}}
+{{InteractiveExample("JavaScript Demo: Array.flatMap()")}}
+
+```js interactive-example
+const arr1 = [1, 2, 1];
+
+const result = arr1.flatMap((num) => (num === 2 ? [2, 2] : 1));
+
+console.log(result);
+// Expected output: Array [1, 2, 2, 1]
+```
 
 La fuente de este ejemplo interactivo, se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone <https://github.com/mdn/interactive-examples> y envíenos una solicitud de extracción.
 
@@ -51,7 +52,7 @@ Una nueva matriz con cada elemento es el resultado de la función de devolución
 
 ## Descripción
 
-Ver {{jsxref("Array.prototype.map()")}} para una descripción detallada de la función de devolución de llamada. El método `flatMap` es idéntico a [`map`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido de una llamada a [`flatten`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten) de profundidad 1.
+Ver {{jsxref("Array.prototype.map()")}} para una descripción detallada de la función de devolución de llamada. El método `flatMap` es idéntico a [`map`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido de una llamada a [`flatten`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) de profundidad 1.
 
 ## Ejemplos
 
@@ -60,14 +61,14 @@ Ver {{jsxref("Array.prototype.map()")}} para una descripción detallada de la fu
 ```js
 var arr1 = [1, 2, 3, 4];
 
-arr1.map(x => [x * 2]);
+arr1.map((x) => [x * 2]);
 // [[2], [4], [6], [8]]
 
-arr1.flatMap(x => [x * 2]);
+arr1.flatMap((x) => [x * 2]);
 // [2, 4, 6, 8]
 
 // solo un nivel es aplanado
-arr1.flatMap(x => [[x * 2]]);
+arr1.flatMap((x) => [[x * 2]]);
 // [[2], [4], [6], [8]]
 ```
 
@@ -80,7 +81,7 @@ arr1.flatMap(x => [[x * 2]]);
 ```js
 var arr1 = [1, 2, 3, 4];
 
-arr1.flatMap(x => [x * 2]);
+arr1.flatMap((x) => [x * 2]);
 // es equivalente a
 arr1.reduce((acc, x) => acc.concat([x * 2]), []);
 // [2, 4, 6, 8]
@@ -94,7 +95,7 @@ Este polyfill necesita [Array.prototype.flat polyfill](/es/docs/Web/JavaScript/R
 
 ```js
 if (!Array.prototype.flatMap) {
-  Array.prototype.flatMap = function() {
+  Array.prototype.flatMap = function () {
     return Array.prototype.map.apply(this, arguments).flat(1);
   };
 }
@@ -102,13 +103,11 @@ if (!Array.prototype.flatMap) {
 
 ## Especificaciones
 
-| Especificación                                                                                    | Estado         | Comentario |
-| ------------------------------------------------------------------------------------------------- | -------------- | ---------- |
-| [`Array.prototype.flatMap`](https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flatMap) | Finalizado (4) |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.flatMap")}}
+{{Compat}}
 
 ## Ver también
 

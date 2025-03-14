@@ -1,10 +1,6 @@
 ---
 title: <feBlend>
 slug: Web/SVG/Element/feBlend
-tags:
-  - фильтры
-translation_of: Web/SVG/Element/feBlend
-original_slug: Web/SVG/Элемент/feBlend
 ---
 
 {{SVGRef}}
@@ -16,16 +12,6 @@ original_slug: Web/SVG/Элемент/feBlend
 {{svginfo}}
 
 ## Атрибуты
-
-### Глобальные атрибуты
-
-- [Core attributes](/ru/docs/Web/SVG/Attribute#Core_attributes)
-- [Presentation attributes](/ru/docs/Web/SVG/Attribute#Presentation_attributes)
-- [Filter primitive attributes](/ru/docs/Web/SVG/Attribute#Filter_primitive_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### Специальные атрибуты
 
 - {{SVGAttr("in")}}
 - {{SVGAttr("in2")}}
@@ -40,19 +26,32 @@ original_slug: Web/SVG/Элемент/feBlend
 ### SVG
 
 ```html
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="200"
+  height="200"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <filter id="spotlight">
-      <feFlood result="floodFill" x="0" y="0" width="100%" height="100%"
-          flood-color="green" flood-opacity="1"/>
-      <feBlend in="SourceGraphic" in2="floodFill" mode="multiply"/>
+      <feFlood
+        result="floodFill"
+        x="0"
+        y="0"
+        width="100%"
+        height="100%"
+        flood-color="green"
+        flood-opacity="1" />
+      <feBlend in="SourceGraphic" in2="floodFill" mode="multiply" />
     </filter>
   </defs>
 
-  <image xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png"
-      x="10%" y="10%" width="80%" height="80%"
-      style="filter:url(#spotlight);"/>
+  <image
+    xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png"
+    x="10%"
+    y="10%"
+    width="80%"
+    height="80%"
+    style="filter:url(#spotlight);" />
 </svg>
 ```
 
@@ -64,7 +63,7 @@ original_slug: Web/SVG/Элемент/feBlend
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

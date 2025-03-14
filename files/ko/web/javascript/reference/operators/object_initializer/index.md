@@ -1,40 +1,49 @@
 ---
 title: 객체 초기자
 slug: Web/JavaScript/Reference/Operators/Object_initializer
-tags:
-  - ECMAScript 2015
-  - JSON
-  - JavaScript
-  - Language feature
-  - Literal
-  - Methods
-  - Object
-  - Primary Expression
-  - computed
-  - mutation
-  - properties
-browser-compat: javascript.operators.object_initializer
 ---
 
 {{JsSidebar("Operators")}}
 
 객체는 [`new Object()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/Object), [`Object.create()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 또는 _literal_ 표기법(_initializer_ 표기법)을 사용해 초기화될 수 있습니다. 객체 초기자는 중괄호(`{}`)로 묶인 0개 이상의 객체의 프로퍼티명과 관련 값의 쌍을 콤마로 구분한 목록입니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-objectinitializer.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Object initializer", "taller")}}
+
+```js interactive-example
+const object1 = { a: "foo", b: 42, c: {} };
+
+console.log(object1.a);
+// Expected output: "foo"
+
+const a = "foo";
+const b = 42;
+const c = {};
+const object2 = { a: a, b: b, c: c };
+
+console.log(object2.b);
+// Expected output: 42
+
+const object3 = { a, b, c };
+
+console.log(object3.a);
+// Expected output: "foo"
+```
 
 ## 구문
 
 ```js
-let o = {}
-let o = {a: 'foo', b: 42, c: {}}
+let o = {};
+let o = { a: "foo", b: 42, c: {} };
 
-let a = 'foo', b = 42, c = {}
-let o = {a: a, b: b, c: c}
+let a = "foo",
+  b = 42,
+  c = {};
+let o = { a: a, b: b, c: c };
 
 let o = {
   property: function (parameters) {},
   get property() {},
-  set property(value) {}
+  set property(value) {},
 };
 ```
 
@@ -44,25 +53,27 @@ let o = {
 
 ```js
 // 프로퍼티명 약식 (ES2015)
-let a = 'foo', b = 42, c = {};
-let o = {a, b, c}
+let a = "foo",
+  b = 42,
+  c = {};
+let o = { a, b, c };
 
 // 메서드명 약식 (ES2015)
 let o = {
-  property(parameters) {}
-}
+  property(parameters) {},
+};
 
 // 계산된 프로퍼티명 (ES2015)
-let prop = 'foo';
+let prop = "foo";
 let o = {
-  [prop]: 'hey',
-  ['b' + 'ar']: 'there'
-}
+  [prop]: "hey",
+  ["b" + "ar"]: "there",
+};
 ```
 
 ## 설명
 
-객체 초기자는 {{jsxref("Object")}}의 초기화를 나타내는 표현입니다. 객체는 객체를 나타내는 데 사용되는 _properties_로 구성됩니다. 객체 프로퍼티의 값은 [원시 값](/ko/docs/Glossary/Primitive) 데이터 타입 또는 다른 객체를 포함할 수 있습니다.
+객체 초기자는 {{jsxref("Object")}}의 초기화를 나타내는 표현입니다. 객체는 객체를 나타내는 데 사용되는 _properties_ 로 구성됩니다. 객체 프로퍼티의 값은 [원시 값](/ko/docs/Glossary/Primitive) 데이터 타입 또는 다른 객체를 포함할 수 있습니다.
 
 ### 객체 리터럴 표기법 vs JSON
 
@@ -81,7 +92,7 @@ let o = {
 프로퍼티가 없는 빈 객체는 다음과 같이 생성합니다.
 
 ```js
-let object = {}
+let object = {};
 ```
 
 _literal_ 또는 _initializer_ 표기법의 장점은 중괄호 안에 프로퍼티를 갖는 객체를 빠르게 생성할 수 있다는 것입니다. 콤마로 구분하여 `key: value` 상의 목록을 작성하면 됩니다.
@@ -90,21 +101,21 @@ _literal_ 또는 _initializer_ 표기법의 장점은 중괄호 안에 프로퍼
 
 ```js
 let object = {
-  foo: 'bar',
+  foo: "bar",
   age: 42,
-  baz: {myProp: 12}
-}
+  baz: { myProp: 12 },
+};
 ```
 
 ### 프로퍼티에 접근하기
 
-객체를 생성한 후에는 이를 읽거나 변경할 수 있습니다. 객체 프로퍼티는 점 표기법 또는 대괄호 표기법을 사용해 접근할 수 있습니다(자세한 정보는 [프로퍼티 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors)를 보세요).
+객체를 생성한 후에는 이를 읽거나 변경할 수 있습니다. 객체 프로퍼티는 점 표기법 또는 대괄호 표기법을 사용해 접근할 수 있습니다(자세한 정보는 [프로퍼티 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)를 보세요).
 
 ```js
-object.foo // "bar"
-object['age'] // 42
-object.baz          // {myProp: 12}
-object.baz.myProp   //12
+object.foo; // "bar"
+object["age"]; // 42
+object.baz; // {myProp: 12}
+object.baz.myProp; //12
 ```
 
 ### 프로퍼티 정의
@@ -112,29 +123,29 @@ object.baz.myProp   //12
 우리는 초기자 구문을 사용해 프로퍼티를 작성하는 방법을 이미 배웠습니다. 때때로 코드의 변수를 객체로 넣고 싶은 경우가 있습니다. 다음과 같은 코드를 보게 될 수 있습니다.
 
 ```js
-let a = 'foo',
-    b = 42,
-    c = {};
+let a = "foo",
+  b = 42,
+  c = {};
 
 let o = {
   a: a,
   b: b,
-  c: c
-}
+  c: c,
+};
 ```
 
 ECMAScript 2015를 사용하면 더 짧은 표기법을 사용해 동일한 결과를 얻을 수 있습니다.
 
 ```js
-let a = 'foo',
-    b = 42,
-    c = {};
+let a = "foo",
+  b = 42,
+  c = {};
 
 // 프로퍼티명 약식 (ES2015)
-let o = {a, b, c}
+let o = { a, b, c };
 
 // 다르게 작성하면,
-console.log((o.a === {a}.a)) // true
+console.log(o.a === { a }.a); // true
 ```
 
 #### 중복된 프로퍼티명
@@ -142,21 +153,21 @@ console.log((o.a === {a}.a)) // true
 동일한 프로퍼티명을 사용하면 두 번째 프로퍼티가 첫 번째 프로퍼티를 덮어씁니다.
 
 ```js
-let a = {x: 1, x: 2}
-console.log(a) // {x: 2}
+let a = { x: 1, x: 2 };
+console.log(a); // {x: 2}
 ```
 
 ECMAScript 5 엄격 모드 코드에서는 중복된 프로퍼티명을 {{jsxref("SyntaxError")}}로 간주합니다. 런타임 시 복제를 가능하게 한 계산된 프로퍼티 명의 도입으로 ECMScript 2015는 이 제한을 제거했습니다.
 
 ```js
 function haveES2015DuplicatePropertySemantics() {
-  'use strict';
+  "use strict";
   try {
-    ({prop: 1, prop: 2});
+    ({ prop: 1, prop: 2 });
 
     // 에러가 발생하지 않음, 중복된 프로퍼티명이 엄격 모드에서 허용됨
     return true;
-  } catch(e) {
+  } catch (e) {
     // 에러가 발생함, 엄격 모드에서 중복이 금지됨
     return false;
   }
@@ -171,8 +182,8 @@ function haveES2015DuplicatePropertySemantics() {
 let o = {
   property: function (parameters) {},
   get property() {},
-  set property(value) {}
-}
+  set property(value) {},
+};
 ```
 
 ECMAScript 2015에서는 약식 표기법을 사용할 수 있으므로 "`function`" 키워드는 필요하지 않습니다.
@@ -181,7 +192,7 @@ ECMAScript 2015에서는 약식 표기법을 사용할 수 있으므로 "`functi
 // 약식 메서드명(ES2015)
 let o = {
   property(parameters) {},
-}
+};
 ```
 
 ECMAScript 2015에서는 값이 generator 함수인 프로퍼티를 간결하게 정의하는 방법이 있습니다.
@@ -208,37 +219,37 @@ let o = {
 
 ### 계산된 프로퍼티명
 
-ECMAScript 2015부터 객체 초기자 구문은 계산된 프로퍼티 명도 지원합니다. 대괄호 `[]` 안에서 표현식을 허용하며, 표현식은 프로퍼티명으로 계산되어 사용됩니다. 이는 이미 프로퍼티를 읽고 설정하는 데 사용하는 [프로퍼티 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors) 구문의 대괄호 표기법을 연상시킵니다.
+ECMAScript 2015부터 객체 초기자 구문은 계산된 프로퍼티 명도 지원합니다. 대괄호 `[]` 안에서 표현식을 허용하며, 표현식은 프로퍼티명으로 계산되어 사용됩니다. 이는 이미 프로퍼티를 읽고 설정하는 데 사용하는 [프로퍼티 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors) 구문의 대괄호 표기법을 연상시킵니다.
 
 이제 객체 리터럴에서도 유사한 구문을 사용할 수 있습니다.
 
 ```js
 // 계산된 프로퍼티명(ES2015)
-let i = 0
+let i = 0;
 let a = {
-  ['foo' + ++i]: i,
-  ['foo' + ++i]: i,
-  ['foo' + ++i]: i
-}
+  ["foo" + ++i]: i,
+  ["foo" + ++i]: i,
+  ["foo" + ++i]: i,
+};
 
-console.log(a.foo1) // 1
-console.log(a.foo2) // 2
-console.log(a.foo3) // 3
+console.log(a.foo1); // 1
+console.log(a.foo2); // 2
+console.log(a.foo3); // 3
 
-const items = ["A","B","C"];
+const items = ["A", "B", "C"];
 const obj = {
-[items]: "Hello"
-}
+  [items]: "Hello",
+};
 console.log(obj); // A,B,C: "Hello"
-console.log(obj["A,B,C"]) // "Hello"
+console.log(obj["A,B,C"]); // "Hello"
 
-let param = 'size'
+let param = "size";
 let config = {
   [param]: 12,
-  ['mobile' + param.charAt(0).toUpperCase() + param.slice(1)]: 4
-}
+  ["mobile" + param.charAt(0).toUpperCase() + param.slice(1)]: 4,
+};
 
-console.log(config) // {size: 12, mobileSize: 4}
+console.log(config); // {size: 12, mobileSize: 4}
 ```
 
 ### 전개 프로퍼티
@@ -248,13 +259,13 @@ console.log(config) // {size: 12, mobileSize: 4}
 이제 {{jsxref("Object.assign()")}} 보다 더 짧은 구문을 사용해 얕은 복제(`prototype` 제외) 또는 객체 병합이 가능합니다.
 
 ```js
-let obj1 = { foo: 'bar', x: 42 }
-let obj2 = { foo: 'baz', y: 13 }
+let obj1 = { foo: "bar", x: 42 };
+let obj2 = { foo: "baz", y: 13 };
 
-let clonedObj = { ...obj1 }
+let clonedObj = { ...obj1 };
 // Object { foo: "bar", x: 42 }
 
-let mergedObj = { ...obj1, ...obj2 }
+let mergedObj = { ...obj1, ...obj2 };
 // Object { foo: "baz", x: 42, y: 13 }
 ```
 
@@ -262,22 +273,22 @@ let mergedObj = { ...obj1, ...obj2 }
 
 ### 프로토타입 변형
 
-`__proto__: value` 또는 `"__proto__": value` 형태의 프로토타입 정의는 `__proto__` 이름을 갖는 프로퍼티를 생성하지 않습니다. 대신에, 제공된 값이 객체 또는 [`null`](/ko/docs/Web/JavaScript/Reference/Global_Objects/null)인 경우, 생성된 객체의 `[[Prototype]]`을 해당 값으로 변경합니다(값이 객체 또는 `null`이 아닌 경우, 객체는 변경되지 않습니다).
+`__proto__: value` 또는 `"__proto__": value` 형태의 프로토타입 정의는 `__proto__` 이름을 갖는 프로퍼티를 생성하지 않습니다. 대신에, 제공된 값이 객체 또는 [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null)인 경우, 생성된 객체의 `[[Prototype]]`을 해당 값으로 변경합니다(값이 객체 또는 `null`이 아닌 경우, 객체는 변경되지 않습니다).
 
 ```js
-let obj1 = {}
-assert(Object.getPrototypeOf(obj1) === Object.prototype)
+let obj1 = {};
+assert(Object.getPrototypeOf(obj1) === Object.prototype);
 
-let obj2 = {__proto__: null}
-assert(Object.getPrototypeOf(obj2) === null)
+let obj2 = { __proto__: null };
+assert(Object.getPrototypeOf(obj2) === null);
 
-let protoObj = {}
-let obj3 = {'__proto__': protoObj}
-assert(Object.getPrototypeOf(obj3) === protoObj)
+let protoObj = {};
+let obj3 = { __proto__: protoObj };
+assert(Object.getPrototypeOf(obj3) === protoObj);
 
-let obj4 = {__proto__: 'not an object or null'}
-assert(Object.getPrototypeOf(obj4) === Object.prototype)
-assert(!obj4.hasOwnProperty('__proto__'))
+let obj4 = { __proto__: "not an object or null" };
+assert(Object.getPrototypeOf(obj4) === Object.prototype);
+assert(!obj4.hasOwnProperty("__proto__"));
 ```
 
 객체 리터럴에서는 단일 프로토타입 변형만 허용됩니다. 다중 프로토타입 변형은 구문 에러입니다.
@@ -285,18 +296,22 @@ assert(!obj4.hasOwnProperty('__proto__'))
 "콜론" 표기법을 사용하지 않는 프로퍼티 정의는 프로토타입 변형이 아닙니다. 이는 다른 이름을 사용하여 유사한 정의와 동일하게 동작하는 프로퍼티 정의입니다.
 
 ```js
-let __proto__ = 'variable'
+let __proto__ = "variable";
 
-let obj1 = {__proto__}
-assert(Object.getPrototypeOf(obj1) === Object.prototype)
-assert(obj1.hasOwnProperty('__proto__'))
-assert(obj1.__proto__ === 'variable')
+let obj1 = { __proto__ };
+assert(Object.getPrototypeOf(obj1) === Object.prototype);
+assert(obj1.hasOwnProperty("__proto__"));
+assert(obj1.__proto__ === "variable");
 
-let obj2 = {__proto__() { return 'hello'; }}
-assert(obj2.__proto__() === 'hello')
+let obj2 = {
+  __proto__() {
+    return "hello";
+  },
+};
+assert(obj2.__proto__() === "hello");
 
-let obj3 = {['__prot' + 'o__']: 17}
-assert(obj3.__proto__ === 17)
+let obj3 = { ["__prot" + "o__"]: 17 };
+assert(obj3.__proto__ === 17);
 ```
 
 ## 명세
@@ -309,7 +324,7 @@ assert(obj3.__proto__ === 17)
 
 ## 같이 보기
 
-- [프로퍼티 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [프로퍼티 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)
 - [`get`](/ko/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/ko/docs/Web/JavaScript/Reference/Functions/set)
 - [메서드 정의](/ko/docs/Web/JavaScript/Reference/Functions/Method_definitions)
 - [Lexical grammar](/ko/docs/Web/JavaScript/Reference/Lexical_grammar)

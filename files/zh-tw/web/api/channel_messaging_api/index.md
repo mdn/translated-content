@@ -3,6 +3,8 @@ title: Channel Messaging API
 slug: Web/API/Channel_Messaging_API
 ---
 
+{{DefaultAPISidebar("Channel Messaging API")}}
+
 Channel Messaging API 讓同屬一份文件不同瀏覽環境的兩份程式腳本 (如兩個 IFrame、或主頁面和 IFrame、文件和 {{domxref("SharedWorker")}}、或兩個 worker)，也能夠經由雙向 channel (通道) 兩端的 port (連接阜) 直接傳遞訊息互相溝通。
 
 {{AvailableInWorkers}}
@@ -30,8 +32,8 @@ Channel Messaging API 讓同屬一份文件不同瀏覽環境的兩份程式腳�
 
 ## 範例
 
-- Github 上有 [channel messaging basic demo](https://github.com/mdn/channel-messaging-basic-demo) ([run it live too](http://mdn.github.io/channel-messaging-basic-demo/))，一個簡單示範主頁和 {{htmlelement("iframe")}} 間的訊息溝通。
-- 還有 [multimessaging demo](https://github.com/mdn/channel-messaging-multimessage) ([run this live](http://mdn.github.io/channel-messaging-multimessage/))，較為複雜的例子。
+- Github 上有 [channel messaging basic demo](https://github.com/mdn/channel-messaging-basic-demo) ([run it live too](https://mdn.github.io/channel-messaging-basic-demo/))，一個簡單示範主頁和 {{htmlelement("iframe")}} 間的訊息溝通。
+- 還有 [multimessaging demo](https://github.com/mdn/channel-messaging-multimessage) ([run this live](https://mdn.github.io/channel-messaging-multimessage/))，較為複雜的例子。
 
 ## 規範
 

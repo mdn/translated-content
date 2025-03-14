@@ -5,7 +5,7 @@ slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 
 {{DefaultAPISidebar("MediaStream Recording")}}
 
-[媒体流 (音/视频) 录制 API](/zh-CN/docs/Web/API/MediaStream_Recording_API)让记录音频流或视频流信息更加容易。当使用[navigator.mediaDevices.getUserMedia()"](/zh-CN/docs/Web/API/Navigator/mediaDevices/getUserMedia)时，它提供了一种简单的方式从用户的输入设备中记录信息，并且可以马上在 web apps 中查看记录的信息。音/视频信息都可以被录制，可以分开也可以一块儿。本文针对于提供一个基础引导去让大家了解提供了这个 API 的 MediaRecorder 的界面。
+[媒体流 (音/视频) 录制 API](/zh-CN/docs/Web/API/MediaStream_Recording_API)让记录音频流或视频流信息更加容易。当使用[navigator.mediaDevices.getUserMedia()"](/zh-CN/docs/Web/API/MediaDevices/getUserMedia)时，它提供了一种简单的方式从用户的输入设备中记录信息，并且可以马上在 web apps 中查看记录的信息。音/视频信息都可以被录制，可以分开也可以一块儿。本文针对于提供一个基础引导去让大家了解提供了这个 API 的 MediaRecorder 的界面。
 
 ## 示例应用：Web 录音机
 
@@ -17,7 +17,7 @@ slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 
 ## CSS goodies
 
-在这个 app 应用中的网页是相当简单的，所以我们不会在这里大费周章；但有几个有点意思的 CSS 样式还是有必要提一下，所以接下来我们会讨论一下。如果你对 CSS 没有半毛钱兴趣并且想对 JavaSdcript 单刀直入，请跳转到下面的[应用基础设置](/zh-CN/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API#Basic_app_setup)章节。
+在这个 app 应用中的网页是相当简单的，所以我们不会在这里大费周章；但有几个有点意思的 CSS 样式还是有必要提一下，所以接下来我们会讨论一下。如果你对 CSS 没有半毛钱兴趣并且想对 JavaSdcript 单刀直入，请跳转到下面的[应用基础设置](#Basic_app_setup)章节。
 
 ### 保持主界面对显示区域的约束，用 calc() 来忽略设备的尺寸
 
@@ -40,14 +40,15 @@ header {
 
 ```css
 .sound-clips {
-  box-shadow: inset 0 3px 4px rgba(0,0,0,0.7);
-  background-color: rgba(0,0,0,0.1);
+  box-shadow: inset 0 3px 4px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.1);
   height: calc(100% - 240px - 0.7rem);
   overflow: scroll;
 }
 ```
 
-> **备注：** 现在的浏览器对[calc()](/zh-CN/docs/Web/CSS/calc)有着良好的支持，即使是像 IE9 那样的浏览器也可以。
+> [!NOTE]
+> 现在的浏览器对[calc()](/zh-CN/docs/Web/CSS/calc)有着良好的支持，即使是像 IE9 那样的浏览器也可以。
 
 ### 用于显示/隐藏的复选框
 
@@ -55,22 +56,22 @@ header {
 
 ```css
 label {
-    font-family: 'NotoColorEmoji';
-    font-size: 3rem;
-    position: absolute;
-    top: 2px;
-    right: 3px;
-    z-index: 5;
-    cursor: pointer;
+  font-family: "NotoColorEmoji";
+  font-size: 3rem;
+  position: absolute;
+  top: 2px;
+  right: 3px;
+  z-index: 5;
+  cursor: pointer;
 }
 ```
 
 然后，我们隐藏实际的复选框，因为我们不希望它在我们的 UI 上乱七八糟：
 
 ```css
-input[type=checkbox] {
-   position: absolute;
-   top: -100px;
+input[type="checkbox"] {
+  position: absolute;
+  top: -100px;
 }
 ```
 
@@ -78,23 +79,27 @@ input[type=checkbox] {
 
 ```css
 aside {
-   position: fixed;
-   top: 0;
-   left: 0;
-   text-shadow: 1px 1px 1px black;
-   width: 100%;
-   height: 100%;
-   transform: translateX(100%);
-   transition: 0.6s all;
-   background-color: #999;
-   background-image: linear-gradient(to top right, rgba(0,0,0,0), rgba(0,0,0,0.5));
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-shadow: 1px 1px 1px black;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: 0.6s all;
+  background-color: #999;
+  background-image: linear-gradient(
+    to top right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.5)
+  );
 }
 ```
 
 最后，我们编写一个规则，当选中复选框（当我们点击/聚焦标签）时，相邻的\<aside >元素将使它的水平平移值发生变化，并平滑地转换成视图：
 
 ```css
-input[type=checkbox]:checked ~ aside {
+input[type="checkbox"]:checked ~ aside {
   transform: translateX(0);
 }
 ```
@@ -106,35 +111,33 @@ input[type=checkbox]:checked ~ aside {
 我们将声明记录和停止按钮变量，[\<article>元素](/zh-CN/docs/Web/HTML/Element/article)将包含生成的音频播放器：
 
 ```js
-var record = document.querySelector('.record');
-var stop = document.querySelector('.stop');
-var soundClips = document.querySelector('.sound-clips');
+var record = document.querySelector(".record");
+var stop = document.querySelector(".stop");
+var soundClips = document.querySelector(".sound-clips");
 ```
 
 最后，在本节中，我们建立了基本的 getUserMedia 结构：
 
 ```js
 if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-   console.log('getUserMedia supported.');
-   navigator.mediaDevices.getUserMedia (
+  console.log("getUserMedia supported.");
+  navigator.mediaDevices
+    .getUserMedia(
       // constraints - only audio needed for this app
       {
-         audio: true
-      })
+        audio: true,
+      },
+    )
 
-      // Success callback
-      .then(function(stream) {
+    // Success callback
+    .then(function (stream) {})
 
-
-      })
-
-      // Error callback
-      .catch(function(err) {
-         console.log('The following getUserMedia error occured: ' + err);
-      }
-   );
+    // Error callback
+    .catch(function (err) {
+      console.log("The following getUserMedia error occured: " + err);
+    });
 } else {
-   console.log('getUserMedia not supported on your browser!');
+  console.log("getUserMedia not supported on your browser!");
 }
 ```
 
@@ -144,11 +147,12 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 - 成功回调：一旦成功完成`getUserMedia`调用，此代码就会运行。
 - 错误/失败回调：如果`getUserMedia`调用由于任何原因而失败，则代码将运行。
 
-> **备注：** 下面的所有代码都放在`getUserMedia`成功回调中。
+> [!NOTE]
+> 下面的所有代码都放在`getUserMedia`成功回调中。
 
 ## 捕获媒体流
 
-一旦`getUserMedia`成功创建了媒体流，您可以使用 MediaRecorder() 构造函数创建一个新的媒体记录器实例，并直接传递该媒体流流。这是使用 MediaRecorder API 的入口点。现在，可以使用浏览器的默认编码格式将流捕获到[Blob](/zh-CN/docs/Web/API/Blob)。
+一旦`getUserMedia`成功创建了媒体流，你可以使用 MediaRecorder() 构造函数创建一个新的媒体记录器实例，并直接传递该媒体流流。这是使用 MediaRecorder API 的入口点。现在，可以使用浏览器的默认编码格式将流捕获到[Blob](/zh-CN/docs/Web/API/Blob)。
 
 ```js
 var mediaRecorder = new MediaRecorder(stream);
@@ -157,13 +161,13 @@ var mediaRecorder = new MediaRecorder(stream);
 为了能够方便的控制音频的录制，{{domxref("MediaRecorder")}}的实例提供了一系列有用的方法和事件，在 Web Dictaphone 这个简单的项目中我们只需使用其中的 2 个方法和一些事件。首先，为了能在点击 Record 按钮的时候开始录音，需要调用{{domxref("MediaRecorder.start()")}}：
 
 ```js
-record.onclick = function() {
+record.onclick = function () {
   mediaRecorder.start();
   console.log(mediaRecorder.state);
   console.log("recorder started");
   record.style.background = "red";
   record.style.color = "black";
-}
+};
 ```
 
 当{{domxref("MediaRecorder")}}正在记录时，调用{{domxref("MediaRecorder.state")}}会返回"recording"。
@@ -173,9 +177,9 @@ record.onclick = function() {
 ```js
 var chunks = [];
 
-mediaRecorder.ondataavailable = function(e) {
+mediaRecorder.ondataavailable = function (e) {
   chunks.push(e.data);
-}
+};
 ```
 
 浏览器会在需要的时候触发这个事件，我们也可以通过为{{domxref("MediaRecorder.start()")}}传递一个时间（毫秒）来周期性的触发这个事件或者调用{{domxref("MediaRecorder.requestData()")}}来直接触发。
@@ -183,13 +187,13 @@ mediaRecorder.ondataavailable = function(e) {
 最后在点击 Stop 按钮时我们调用{{domxref("MediaRecorder.stop()")}}方法结束录制，录制所产生的{{domxref("Blob")}}数据会在后面使用。
 
 ```js
-stop.onclick = function() {
+stop.onclick = function () {
   mediaRecorder.stop();
   console.log(mediaRecorder.state);
   console.log("recorder stopped");
   record.style.background = "";
   record.style.color = "";
-}
+};
 ```
 
 注意，当媒体流结束时会导致录音终止。例如歌曲播放结束，或者用户停止共享他们的麦克风。
@@ -199,18 +203,18 @@ stop.onclick = function() {
 在停止录制后，实例的 state 属性会返回"inactive"，stop 事件也被触发。我们需要监听这个事件去处理我们收到的所有录制数据：
 
 ```js
-mediaRecorder.onstop = function(e) {
+mediaRecorder.onstop = function (e) {
   console.log("recorder stopped");
 
-  var clipName = prompt('Enter a name for your sound clip');
+  var clipName = prompt("Enter a name for your sound clip");
 
-  var clipContainer = document.createElement('article');
-  var clipLabel = document.createElement('p');
-  var audio = document.createElement('audio');
-  var deleteButton = document.createElement('button');
+  var clipContainer = document.createElement("article");
+  var clipLabel = document.createElement("p");
+  var audio = document.createElement("audio");
+  var deleteButton = document.createElement("button");
 
-  clipContainer.classList.add('clip');
-  audio.setAttribute('controls', '');
+  clipContainer.classList.add("clip");
+  audio.setAttribute("controls", "");
   deleteButton.innerHTML = "Delete";
   clipLabel.innerHTML = clipName;
 
@@ -219,16 +223,16 @@ mediaRecorder.onstop = function(e) {
   clipContainer.appendChild(deleteButton);
   soundClips.appendChild(clipContainer);
 
-  var blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
+  var blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
   chunks = [];
   var audioURL = window.URL.createObjectURL(blob);
   audio.src = audioURL;
 
-  deleteButton.onclick = function(e) {
+  deleteButton.onclick = function (e) {
     var evtTgt = e.target;
     evtTgt.parentNode.parentNode.removeChild(evtTgt.parentNode);
-  }
-}
+  };
+};
 ```
 
 我们来看一下上面的代码干了什么：
@@ -245,7 +249,7 @@ mediaRecorder.onstop = function(e) {
 </article>
 ```
 
-之后，我们从录制的音频块中创建组合{{domxref("Blob")}}，并使用 window\.URL.createObjectURL(blob) 创建指向它的对象 URL。然后我们将 {{HTMLElement("audio")}}元素的{{htmlattrxref("src", "audio")}}属性的值设置为对象 URL，以便在音频播放器上按下播放按钮时，它会播放音频。
+之后，我们从录制的音频块中创建组合{{domxref("Blob")}}，并使用 window\.URL.createObjectURL(blob) 创建指向它的对象 URL。然后我们将 {{HTMLElement("audio")}}元素的[`src`](/zh-CN/docs/Web/HTML/Element/audio#src)属性的值设置为对象 URL，以便在音频播放器上按下播放按钮时，它会播放音频。
 
 最后，我们监听删除按钮的 onclick 事件，以便能够删除整个剪辑 HTML 结构。
 
@@ -259,6 +263,6 @@ mediaRecorder.onstop = function(e) {
 
 ## See also
 
-- [MediaRecorder API](/zh-CN/docs/Web/API/MediaRecorder_API) landing page
-- `{{domxref("Navigator.getUserMedia()")}}`
+- [MediaRecorder API](/zh-CN/docs/Web/API/MediaStream_Recording_API) landing page
+- {{domxref("Navigator.getUserMedia()")}}
 - [MediaRecorder API now supported by 65% of your website users](https://addpipe.com/blog/media-recorder-api-is-now-supported-by-65-of-all-desktop-internet-users/)

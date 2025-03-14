@@ -18,8 +18,8 @@ _HTML 引用标签_ (**\<q>**) 表示一个封闭的并且是短的行内引用�
    <td><a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
   </tr>
   <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
+   <th scope="row">标签省略</th>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">Permitted parent elements</th>
@@ -32,13 +32,14 @@ _HTML 引用标签_ (**\<q>**) 表示一个封闭的并且是短的行内引用�
  </tbody>
 </table>
 
-> **备注：** 大多数现代浏览器，会为 \<q> 文本添加引号。旧浏览器可能需要使用 CSS 添加引号。IE、Edge 与 Firefox、Chrome 引号样式略有不同。
+> [!NOTE]
+> 大多数现代浏览器，会为 \<q> 文本添加引号。旧浏览器可能需要使用 CSS 添加引号。IE、Edge 与 Firefox、Chrome 引号样式略有不同。
 
 ## 属性
 
-\<q>标签拥有 [全局属性](/zh-CN/docs/HTML/Global_attributes).
+\<q>标签拥有 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : 这个属性的值是 URL，意在指出被引用的文本的源文档或者源信息。这个属性重在解释这个引用的参考或者是上下文。
 
 ## 示例
@@ -46,10 +47,11 @@ _HTML 引用标签_ (**\<q>**) 表示一个封闭的并且是短的行内引用�
 ### HTML 内容
 
 ```html
-<p>Everytime Kenny is killed, Stan will announce
-   <q cite="http://en.wikipedia.org/wiki/Kenny_McCormick#Cultural_impact">
-     Oh my God, you/they killed Kenny!
-   </q>.
+<p>
+  Everytime Kenny is killed, Stan will announce
+  <q cite="http://en.wikipedia.org/wiki/Kenny_McCormick#Cultural_impact">
+    Oh my God, you/they killed Kenny! </q
+  >.
 </p>
 ```
 
@@ -63,7 +65,7 @@ _HTML 引用标签_ (**\<q>**) 表示一个封闭的并且是短的行内引用�
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - The {{HTMLElement("blockquote")}} element for long quotations.
 - The {{HTMLElement("cite")}} element for source citations.

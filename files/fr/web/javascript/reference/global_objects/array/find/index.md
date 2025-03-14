@@ -1,23 +1,22 @@
 ---
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/find
 ---
 
 {{JSRef}}
 
 La méthode **`find()`** renvoie la **valeur** du **premier élément trouvé** dans le tableau qui respecte la condition donnée par la fonction de test passée en argument. Sinon, la valeur {{jsxref("undefined")}} est renvoyée.
 
-{{EmbedInteractiveExample("pages/js/array-find.html")}}
+{{InteractiveExample("JavaScript Demo: Array.find()")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find((element) => element > 10);
+
+console.log(found);
+// Expected output: 12
+```
 
 Voir aussi la méthode {{jsxref("Array.findIndex", "findIndex()")}} qui renvoie l'**index** de l'élément trouvé et non sa valeur. Si on souhaite repérer la position d'un élément donné dans le tableau, on pourra utiliser {{jsxref("Array.prototype.indexOf()")}}. Si on souhaite déterminer si un tableau contient un élément donné, on pourra utiliser la méthode {{jsxref("Array.prototype.includes()")}}.
 
@@ -65,13 +64,13 @@ L'intervalle des éléments inspectés par `find` est défini avant la première
 
 ```js
 const inventaire = [
-  {nom: 'pommes', quantité: 2},
-  {nom: 'bananes', quantité: 0},
-  {nom: 'cerises', quantité: 5}
+  { nom: "pommes", quantité: 2 },
+  { nom: "bananes", quantité: 0 },
+  { nom: "cerises", quantité: 5 },
 ];
 
 function estCerises(fruit) {
-  return fruit.nom === 'cerises';
+  return fruit.nom === "cerises";
 }
 
 console.log(inventaire.find(estCerises));
@@ -82,12 +81,12 @@ console.log(inventaire.find(estCerises));
 
 ```js
 const inventaire = [
-                     {nom: 'pommes', quantité: 2},
-                     {nom: 'bananes', quantité: 0},
-                     {nom: 'cerises', quantité: 5}
-                   ];
+  { nom: "pommes", quantité: 2 },
+  { nom: "bananes", quantité: 0 },
+  { nom: "cerises", quantité: 5 },
+];
 
-const resultat = inventaire.find( fruit => fruit.nom === 'cerises');
+const resultat = inventaire.find((fruit) => fruit.nom === "cerises");
 console.log(resultat);
 // { nom: 'cerises', quantité: 5}
 ```
@@ -98,15 +97,15 @@ Dans l'exemple suivant, on cherche un nombre premier parmi les éléments d'un t
 
 ```js
 function estPremier(element, index, array) {
-    let début = 2;
-    while (début <= Math.sqrt(element)) {
-        if (element % début ++ < 1) return false;
-    }
-    return (element > 1);
+  let début = 2;
+  while (début <= Math.sqrt(element)) {
+    if (element % début++ < 1) return false;
+  }
+  return element > 1;
 }
 
-console.log( [4, 6, 8, 12].find(estPremier) ); // undefined, rien trouvé
-console.log( [4, 5, 8, 12].find(estPremier) ); // 5
+console.log([4, 6, 8, 12].find(estPremier)); // undefined, rien trouvé
+console.log([4, 5, 8, 12].find(estPremier)); // 5
 ```
 
 ## Spécifications

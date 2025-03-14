@@ -1,11 +1,6 @@
 ---
 title: ErrorEvent
 slug: Web/API/ErrorEvent
-tags:
-  - API
-  - Evènement
-  - Worker API
-translation_of: Web/API/ErrorEvent
 ---
 
 {{APIRef("HTML DOM")}}
@@ -46,4 +41,4 @@ _Hérite des méthodes de son parent {{domxref("Event")}}_.
 
 ## Voir aussi
 
-- [Utilisation des web workers](/fr/docs/Web/API/Web_Workers_API/Utilisation_des_web_workers), notamment les objets susceptibles de déclencher un tel événement.
+- [Utilisation des web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers), notamment les objets susceptibles de déclencher un tel événement.

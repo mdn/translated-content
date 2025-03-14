@@ -1,14 +1,6 @@
 ---
 title: DOMRectReadOnly.left
 slug: Web/API/DOMRectReadOnly/left
-tags:
-  - API
-  - DOM
-  - Gauche
-  - Géométrie
-  - Propriétés
-  - Rectangle
-translation_of: Web/API/DOMRectReadOnly/left
 ---
 
 {{APIRef("DOM")}}{{ SeeCompatTable() }}

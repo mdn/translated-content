@@ -1,17 +1,65 @@
 ---
-title: '<rb>: ルビベース要素'
+title: "<rb>: ルビベース要素"
 slug: Web/HTML/Element/rb
+l10n:
+  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
 
-{{HTMLSidebar}}{{Non-standard_Header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
-**HTML ルビベース (`<rb>`) 要素**は、 {{HTMLElement("ruby") }} 表記のベースとなるテキストの部分を区切るために使用されます。つまり、修飾される文字列です。一つの `<rb>` 要素がベーステキストの不可分な区間を隔てるように囲みます。
+**`<rb>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("ruby") }} 表記のベースとなるテキストの部分、すなわち修飾される文字列を区切るために使用されます。一つの `<rb>` 要素がベーステキストの不可分な区間を区切るように囲みます。
+
+## 属性
+
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+
+## 使用上のメモ
+
+- ルビ表記は、日本語の振り仮名や台湾語の注音符号のように、東アジアの文字の発音を示すためのものです。 `<rb>` 要素はルビベース文字の区間を区切るために使用されます。
+- `<rb>` 要素は{{glossary("void element", "空要素")}}ではありませんが、ソースコード上ではそれぞれの要素の開始タグだけを含めるのが一般的で、その方がマークアップが複雑でなくなり読みやすくなります。ブラウザーは表示する際に完全な要素に補完します。
+- 修飾をしたいそれぞれのベース区間/`<rb>` 要素ごとに 1 つずつ {{htmlelement("rt")}} 要素を置く必要があります。
+
+## 例
+
+### rb の使用
+
+この例では、元の文字に対して "Kanji" が等価であるという注釈を提供します。
+
+```html
+<ruby>
+  <rb>漢</rb><rb>字 </rb><rp>(</rp><rt>kan</rt><rt>ji</rt><rp>)</rp>
+</ruby>
+```
+
+ルビのベーステキストを 2 つの部分に区切るために 2 つの `<rb>` 要素を含めています。一方で、注釈も 2 つの {{htmlelement("rt")}} 要素で区切っています。
+
+#### 結果
+
+{{EmbedLiveSample("Using_rb", "100%", 60)}}
+
+### 注釈の分割
+
+なお、この例を完全に分割して注釈された 2 つのベーステキストの部分で書くこともできます。この場合は `<rb>` 要素を含める必要はありません。
+
+```html
+<ruby>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
+
+#### 結果
+
+{{EmbedLiveSample('Separate annotations')}}
+
+それ以外の例は、 {{HTMLElement("ruby")}} 要素についての記事を参照してください。
+
+## 技術的概要
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>なし</td>
     </tr>
@@ -44,75 +92,13 @@ slug: Web/HTML/Element/rb
   </tbody>
 </table>
 
-## 属性
-
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
-
-## 使用上のメモ
-
-- ルビ表記は、日本語の振り仮名や台湾語の注音符号のように、東アジアの文字の発音を示すためのものです。 `<rb>` 要素はルビベース文字の区間を区切るために使用されます。
-- `<rb>` 要素は空要素ではありませんが、ソースコード上ではそれぞれの要素の開始タグだけを含めるのが一般的で、その方がマークアップが複雑ではなく読みやすくなります。ブラウザーは表示する際に完全な要素に補完します。
-- 修飾をしたいそれぞれのベース区間/`<rb>` 要素ごとに一つずつ {{htmlelement("rt")}} 要素を置く必要があります。
-
-## 例
-
-この例では、元の文字に対して "Kanji" が等価であるという注釈を提供します。
-
-```html
-<ruby>
-  <rb>漢<rb>字
-  <rp>(</rp><rt>kan<rt>ji<rp>)</rp>
-</ruby>
-```
-
-ルビのベーステキストを二つの部分に区切るために二つの `<rb>` 要素を含めています。一方で、注釈も二つの {{htmlelement("rt")}} 要素で区切っています。
-
-なお、この例を完全に分割して注釈された二つのベーステキストの部分で書くこともできます。この場合は `<rb>` 要素を含める必要はありません。
-
-```html
-<ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
-  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
-</ruby>
-```
-
-```html hidden
-<ruby> <rb>漢<rb>字 <rp>(</rp><rt>kan<rt>ji<rp>)</rp> </ruby>
-```
-
-```css
-body {
-  font-size: 22px;
-}
-```
-
-出力は以下のようになります。
-
-{{EmbedLiveSample("with-ruby", "100%", 60)}}
-
-上記の HTML はルビに対応して*いない*ブラウザーでは次のように表示されます。
-
-```html hidden
-漢字 (kan ji)
-```
-
-```css hidden
-body {
-  font-size: 22px;
-}
-```
-
-{{EmbedLiveSample("without-ruby", "100%", 60)}}
-
-> **メモ:** それ以外の例は、 {{HTMLElement("ruby")}} 要素についての記事を参照してください。
-
 ## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.rb")}}
+{{Compat}}
 
 ## 関連情報
 

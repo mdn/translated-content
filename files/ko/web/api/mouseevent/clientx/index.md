@@ -1,17 +1,18 @@
 ---
 title: MouseEvent.clientX
 slug: Web/API/MouseEvent/clientX
-translation_of: Web/API/MouseEvent/clientX
 ---
-{{{APIRef("DOM 이벤트")}}
-{{domxref("MouseEvent")}}} 인터페이스의 clientX 읽기 전용 속성은 이벤트가 발생한 애플리케이션 {{glossary("viewport")}}}} 내에 수평 좌표를 제공한다(페이지 내의 좌표와는 반대).
+
+{{APIRef("UI Events")}}
+
+{{domxref("MouseEvent")}} 인터페이스의 clientX 읽기 전용 속성은 이벤트가 발생한 애플리케이션 {{glossary("viewport")}} 내에 수평 좌표를 제공한다(페이지 내의 좌표와는 반대).
 
 예를 들어 뷰포트의 왼쪽 가장자리를 클릭하면 페이지가 수평으로 스크롤되는지 여부에 관계없이 항상 clientX 값이 0인 마우스 이벤트가 발생한다.
 
 ## Syntax
 
 ```js
-var x = instanceOfMouseEvent.clientX
+var x = instanceOfMouseEvent.clientX;
 ```
 
 ### Return value
@@ -20,7 +21,7 @@ CSSOM 뷰 모듈에 의해 재정의된 이중 부동 소수점 값. 원래 이 
 
 ## Example
 
-이 예에서는 {{Event("mousemove")}}} 이벤트를 트리거할 때마다 마우스 좌표를 표시한다.
+이 예에서는 {{domxref("Element/mousemove_event", "mousemove")}} 이벤트를 트리거할 때마다 마우스 좌표를 표시한다.
 
 ### HTML
 
@@ -32,8 +33,8 @@ CSSOM 뷰 모듈에 의해 재정의된 이중 부동 소수점 값. 원래 이 
 ### JavaScript
 
 ```js
-let screenLog = document.querySelector('#screen-log');
-document.addEventListener('mousemove', logKey);
+let screenLog = document.querySelector("#screen-log");
+document.addEventListener("mousemove", logKey);
 
 function logKey(e) {
   screenLog.innerText = `
@@ -46,7 +47,7 @@ function logKey(e) {
 
 {{EmbedLiveSample("Example")}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

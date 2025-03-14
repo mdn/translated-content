@@ -1,36 +1,32 @@
 ---
-title: 'HTMLInputElement: invalid イベント'
+title: "HTMLInputElement: invalid イベント"
+short-title: invalid
 slug: Web/API/HTMLInputElement/invalid_event
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef}}
 
-**`invalid`** イベントは、送信可能な要素が制約の検証を受け、制約を満たしていない場合に発行されます。
+**`invalid`** イベントは、送信可能な要素が制約検証を受け、制約を満たしていない場合に発行されます。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>{{domxref("GlobalEventHandlers.oninvalid")}}</td>
-    </tr>
-  </tbody>
-</table>
-
-このイベントは、送信時にフォームの問題の概要を表示するのに便利です。フォームが送信されると、 `invalid` イベントがそれぞれの妥当ではない状態にあるフォームコントロールで発生します。送信可能な要素が妥当であるかどうかは、その所有者である {{HtmlElement("form")}} を送信する前、または [`checkValidity()`](/ja/docs/Learn/Forms#constraint_validation_api) メソッドがその要素またはその所有者である `<form>` に呼び出された後にチェックされます。
+このイベントは、送信時にフォームの問題の概要を表示するのに便利です。フォームが送信されると、 `invalid` イベントがそれぞれの妥当ではない状態にあるフォームコントロールで発生します。送信可能な要素が妥当であるかどうかは、その所有者である {{HtmlElement("form")}} を送信する前、または [`checkValidity()`](/ja/docs/Web/API/HTMLInputElement/checkValidity) メソッドがその要素またはその所有者である `<form>` に呼び出された後にチェックされます。
 
 {{domxref("Element/blur_event", "blur")}} ではチェックが行われません。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("invalid", (event) => {});
+
+oninvalid = (event) => {};
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
@@ -40,24 +36,32 @@ slug: Web/API/HTMLInputElement/invalid_event
 
 ```html
 <form action="#">
-  <ul>
-    <li><label>1 から 10 までの整数を入力してください: <input type="number" min="1" max="10" required></label></li>
-    <li><input type="submit" value="送信"></li>
-  </ul>
-</form><p id="log"></p>
+  <div>
+    <label>
+      1 から 10 までの整数を入力してください:
+      <input type="number" min="1" max="10" required />
+    </label>
+  </div>
+  <div><input type="submit" value="送信" /></div>
+</form>
+<hr />
+Invalid values:
+<ul id="log"></ul>
 ```
 
 ### JavaScript
 
 ```js
-const input = document.querySelector('input')
-const log = document.getElementById('log')
+const input = document.querySelector("input");
+const log = document.getElementById("log");
 
-input.addEventListener('invalid', logValue)
-
-function logValue(e) {
-  log.textContent += e.target.value
-}
+input.addEventListener("invalid", (e) => {
+  log.appendChild(
+    Object.assign(document.createElement("li"), {
+      textContent: JSON.stringify(e.target.value),
+    }),
+  );
+});
 ```
 
 ### 結果

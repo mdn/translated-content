@@ -1,19 +1,59 @@
 ---
 title: cursor
 slug: Web/CSS/cursor
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Web
-translation_of: Web/CSS/cursor
-browser-compat: css.properties.cursor
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`cursor`** 속성은 요소 위에 마우스 커서가 올라갔을 때 보여줄 모양을 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/cursor.html")}}
+{{InteractiveExample("CSS Demo: cursor")}}
+
+```css interactive-example-choice
+cursor: help;
+```
+
+```css interactive-example-choice
+cursor: wait;
+```
+
+```css interactive-example-choice
+cursor: crosshair;
+```
+
+```css interactive-example-choice
+cursor: not-allowed;
+```
+
+```css interactive-example-choice
+cursor: zoom-in;
+```
+
+```css interactive-example-choice
+cursor: grab;
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <div id="example-element">
+    Move over this element to see the cursor style.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  background-color: #1766aa;
+  color: white;
+  height: 180px;
+  width: 360px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14pt;
+  padding: 5px;
+}
+```
 
 ## 구문
 
@@ -42,14 +82,18 @@ cursor: unset;
 아래 예제는 `<url>` 값으로 이미지 두 개를 지정했고, 두 번째 이미지는 `<x><y>` 좌표도 설정했으며 모두 불러올 수 없으면 `progress` 키워드를 사용합니다.
 
 ```css
-cursor: url(one.svg), url(two.svg) 5 5, progress;
+cursor:
+  url(one.svg),
+  url(two.svg) 5 5,
+  progress;
 ```
 
 ### 값
 
 - `<url>`
-  - : 이미지 파일을 가리키는 `url(…)`, 또는 쉼표로 구분한 `url(…), url(…), …` 목록. 일부 커서 이미지를 사용할 수 없을 때를 대비해 여러 이미지를 지정할 수 있습니다. 이미지를 사용할 경우 URL이 아닌 값(하나 이상의 키워드 값)을 목록의 맨 뒤에 붙여야 합니다. [`cursor` 속성값으로 URL 사용하기](/ko/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property)를 참고하세요.
+  - : 이미지 파일을 가리키는 `url(…)`, 또는 쉼표로 구분한 `url(…), url(…), …` 목록. 일부 커서 이미지를 사용할 수 없을 때를 대비해 여러 이미지를 지정할 수 있습니다. 이미지를 사용할 경우 URL이 아닌 값(하나 이상의 키워드 값)을 목록의 맨 뒤에 붙여야 합니다. [`cursor` 속성값으로 URL 사용하기](/ko/docs/Web/CSS/cursor)를 참고하세요.
 - `<x>` `<y>` {{experimental_inline}}
+
   - : xy 좌표. 32 미만의 {{cssxref("&lt;number&gt;")}}여야 합니다.
 
 - 키워드 값
@@ -159,7 +203,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
           <td><code>no-drop</code></td>
           <td><img alt="no-drop.gif" class="lwrap" src="no-drop.gif" /></td>
           <td>
-            현재 위치에 놓을 수 없음.<br />{{bug("275173")}}: Windows와 Mac
+            현재 위치에 놓을 수 없음.<br />[Firefox bug 275173](https://bugzil.la/275173): Windows와 Mac
             OS X에서 <code>no-drop</code>은 <code>not-allowed</code>와 같습니다.
           </td>
         </tr>
@@ -183,7 +227,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
           <td><code>all-scroll</code></td>
           <td><img alt="all-scroll.gif" src="all-scroll.gif" /></td>
           <td>
-            모든 방향으로 이동 가능. (패닝)<br />{{bug("275174")}}:
+            모든 방향으로 이동 가능. (패닝)<br />[Firefox bug 275174](https://bugzil.la/275174):
             Windows에서 <code>all-scroll</code>은 <code>move</code>와 같습니다.
           </td>
         </tr>
@@ -351,5 +395,5 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
 
 ## 같이 보기
 
-- [`cursor` 속성값으로 URL 사용하기](/ko/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property)
+- [`cursor` 속성값으로 URL 사용하기](/ko/docs/Web/CSS/cursor)
 - {{cssxref("pointer-events")}}

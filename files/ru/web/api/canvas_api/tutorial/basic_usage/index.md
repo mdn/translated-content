@@ -1,12 +1,9 @@
 ---
 title: Базовое использование Canvas
 slug: Web/API/Canvas_API/Tutorial/Basic_usage
-tags:
-  - Canvas
-translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
 
 Давайте начнём этот урок с изучения элемента {{HTMLElement("canvas")}} как такового. В конце этой страницы вы узнаете как устанавливать canvas 2D context и нарисуете первый пример в вашем браузере.
 
@@ -16,9 +13,10 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 <canvas id="tutorial" width="150" height="150"></canvas>
 ```
 
-Он выглядит как элемент `<img>`, но его отличие в том, что он не имеет атрибутов `src` и `alt`. Элемент `<canvas>` имеет только два атрибута - **ширину** и **высоту**. Оба они не обязательны и могут быть выставлены с использованием свойств [DOM](/ru/docs/DOM). Если атрибуты высоты и ширины не установлены, canvas будет по умолчанию шириной **300 пикселей** и в высоту **150 пикселей**. Вы так же можете выставить размеры произвольно в [CSS](/ru/docs/Web/CSS), но во время рендеринга изображение будет масштабироваться в соответствии с его размером и ориентацией.
+Он выглядит как элемент `<img>`, но его отличие в том, что он не имеет атрибутов `src` и `alt`. Элемент `<canvas>` имеет только два атрибута - **ширину** и **высоту**. Оба они не обязательны и могут быть выставлены с использованием свойств [DOM](/ru/docs/Web/API/Document_Object_Model). Если атрибуты высоты и ширины не установлены, canvas будет по умолчанию шириной **300 пикселей** и в высоту **150 пикселей**. Вы так же можете выставить размеры произвольно в [CSS](/ru/docs/Web/CSS), но во время рендеринга изображение будет масштабироваться в соответствии с его размером и ориентацией.
 
-> **Примечание:** Если вид вашего изображения кажется вам искажённым, попробуйте указать атрибуты ширины и высоты в явном виде в атрибутах \<canvas> , а не с помощью CSS.
+> [!NOTE]
+> Если вид вашего изображения кажется вам искажённым, попробуйте указать атрибуты ширины и высоты в явном виде в атрибутах \<canvas> , а не с помощью CSS.
 
 Атрибут id не специфичен для элемента `<canvas>,` но он может быть применён по умолчанию в атрибутах HTML, так как он может быть использован (почти) для любого элемента HTML (так же как класс). Это всегда отличная идея использовать `id`, так как это позволяет намного проще идентифицировать наш элемент в сценарии.
 
@@ -38,7 +36,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 </canvas>
 
 <canvas id="clock" width="150" height="150">
-  <img src="images/clock.png" width="150" height="150" alt=""/>
+  <img src="images/clock.png" width="150" height="150" alt="" />
 </canvas>
 ```
 
@@ -52,13 +50,13 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 
 ## Рендеринг содержимого (контекста)
 
-Элемент {{HTMLElement("canvas")}} в документе создаётся с фиксированным размером элемента для рисования, который может иметь один или несколько контекстов для рендеринга, создавая и манипулируя содержимым для показа. В данном руководстве мы сфокусируемся на 2D рендеринге. Другие контексты могут предоставлять разные типы рендеринга, к примеру WebGl использует 3D контекст основанный на [OpenGL ES](http://www.khronos.org/opengles/).
+Элемент {{HTMLElement("canvas")}} в документе создаётся с фиксированным размером элемента для рисования, который может иметь один или несколько контекстов для рендеринга, создавая и манипулируя содержимым для показа. В данном руководстве мы сфокусируемся на 2D рендеринге. Другие контексты могут предоставлять разные типы рендеринга, к примеру WebGl использует 3D контекст основанный на [OpenGL ES](https://www.khronos.org/opengles/).
 
-Холст изначально пустой и прозрачный. Первым делом скрипт получает доступ к контексту и отрисовывает его. Элемент {{HTMLElement("canvas")}} имеет [метод](/ru/docs/Web/API/HTMLCanvasElement#Method) `getContext()`, используется для получения контекста визуализации и её функции рисования. `getContext()` принимает один параметр, тип контекста. Для 2D графики, которая охвачена этим руководством будем использовать метку "2d".
+Холст изначально пустой и прозрачный. Первым делом скрипт получает доступ к контексту и отрисовывает его. Элемент {{HTMLElement("canvas")}} имеет [метод](/ru/docs/Web/API/HTMLCanvasElement#method) `getContext()`, используется для получения контекста визуализации и её функции рисования. `getContext()` принимает один параметр, тип контекста. Для 2D графики, которая охвачена этим руководством будем использовать метку "2d".
 
 ```js
-var canvas = document.getElementById('tutorial');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById("tutorial");
+const ctx = canvas.getContext("2d");
 ```
 
 В первой строке скрипта мы получаем узел нашего холста {{HTMLElement("canvas")}}, далее с помощью {{domxref("document.getContext()")}} метода мы присваиваем ему контекст. Имея узел элемента , вы всегда можете получить для рисования контекст при помощи метода `getContext()`.
@@ -68,10 +66,10 @@ var ctx = canvas.getContext('2d');
 Ранее уже упоминалось, что в браузерах, которые не поддерживают {{HTMLElement("canvas")}} отображается запасное содержимое. Но помимо этого, определить, поддерживает ли браузер `canvas`, можно прямо из кода, проверив наличие метода `getContext()`. Код с запасным содержимым, который мы приводили Выше, становится следующим:
 
 ```js
-var canvas = document.getElementById('tutorial');
+const canvas = document.getElementById("tutorial");
 
-if (canvas.getContext){
-  var ctx = canvas.getContext('2d');
+if (canvas.getContext) {
+  const ctx = canvas.getContext("2d");
   // drawing code here
 } else {
   // canvas-unsupported code here
@@ -82,23 +80,26 @@ if (canvas.getContext){
 
 Здесь минимальный шаблон, который мы будем использовать как начальную точку для дальнейших примеров.
 
-> **Примечание:** вставка скрипта внутрь HTML не является хорошей практикой. Мы делаем это здесь, чтобы сделать пример короче.
+> [!NOTE]
+> Bставка скрипта внутрь HTML не является хорошей практикой. Мы делаем это здесь, чтобы сделать пример короче.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Canvas tutorial</title>
     <script type="text/javascript">
-      function draw(){
-        var canvas = document.getElementById('tutorial');
-        if (canvas.getContext){
-          var ctx = canvas.getContext('2d');
+      function draw() {
+        const canvas = document.getElementById("tutorial");
+        if (canvas.getContext) {
+          const ctx = canvas.getContext("2d");
         }
       }
     </script>
     <style type="text/css">
-      canvas { border: 1px solid black; }
+      canvas {
+        border: 1px solid black;
+      }
     </style>
   </head>
   <body onload="draw();">
@@ -107,7 +108,7 @@ if (canvas.getContext){
 </html>
 ```
 
-Скрипт вызывает функцию draw(), которая выполнится, когда страница закончит загрузку. Это делается путём события {{event("load")}} в документе. Эта функция может быть вызвана как единожды, так и с помощью данных методов {{domxref("window.setTimeout()")}}, {{domxref("window.setInterval()")}}, или любым другим обработчиком события, когда страница будет загружена.
+Скрипт вызывает функцию draw(), которая выполнится, когда страница закончит загрузку. Это делается с помощью события [`load`](/ru/docs/Web/API/Window/load_event) в документе. Эта функция может быть вызвана как единожды, так и с помощью данных методов {{domxref("window.setTimeout()")}}, {{domxref("window.setInterval()")}}, или любым другим обработчиком события, когда страница будет загружена.
 
 Вот как шаблон будет выглядеть в действии.
 
@@ -118,32 +119,32 @@ if (canvas.getContext){
 Для начала, давайте посмотрим на простой пример, который рисует два пересекающихся прямоугольника, один из которых имеет прозрачность alpha. Мы изучим, как это работает более детально в последующих примерах.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
- <head>
-  <script type="application/javascript">
-    function draw() {
-      var canvas = document.getElementById("canvas");
-      if (canvas.getContext) {
-        var ctx = canvas.getContext("2d");
+  <head>
+    <script type="application/javascript">
+      function draw() {
+        const canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+          const ctx = canvas.getContext("2d");
 
-        ctx.fillStyle = "rgb(200,0,0)";
-        ctx.fillRect (10, 10, 55, 50);
+          ctx.fillStyle = "rgb(200,0,0)";
+          ctx.fillRect(10, 10, 55, 50);
 
-        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-        ctx.fillRect (30, 30, 55, 50);
+          ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+          ctx.fillRect(30, 30, 55, 50);
+        }
       }
-    }
-  </script>
- </head>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+    </script>
+  </head>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 Этот пример выглядит так:
 
-{{EmbedLiveSample("Простой_пример", 160, 160, "https://mdn.mozillademos.org/files/228/canvas_ex1.png")}}
+{{EmbedLiveSample("Простой_пример", 160, 160, "canvas_ex1.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}

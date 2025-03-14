@@ -19,7 +19,8 @@ visibility: initial;
 visibility: unset;
 ```
 
-> **Note:** **Nota:** Para ocultar um elemento ou removê-lo do layout do documento, defina a propriedade {{cssxref("display")}} como `none` em vez de usar `visibility`.
+> [!NOTE]
+> Para ocultar um elemento ou removê-lo do layout do documento, defina a propriedade {{cssxref("display")}} como `none` em vez de usar `visibility`.
 
 {{cssinfo}}
 
@@ -58,7 +59,10 @@ Visibility values are interpolable between _visible_ and _not-visible_. One of t
 ```html
 <p class="visible">The first paragraph is visible.</p>
 <p class="not-visible">The second paragraph is NOT visible.</p>
-<p class="visible">The third paragraph is visible. Notice the second paragraph is still occupying space.</p>
+<p class="visible">
+  The third paragraph is visible. Notice the second paragraph is still occupying
+  space.
+</p>
 ```
 
 #### CSS
@@ -124,13 +128,8 @@ td {
 
 ## Especificações
 
-| Especificações                                                                           | Status                                   | Comentários                                               |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------- |
-| {{SpecName('CSS3 Flexbox', '#visibility-collapse', 'visibility')}} | {{Spec2('CSS3 Flexbox')}}         | Defines the `collapse` value as it applies to flex items. |
-| {{SpecName('CSS3 Box', '#visibility-prop', 'visibility')}}             | {{Spec2('CSS3 Box')}}             | Nenhuma alteração.                                        |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'visibility')}} | {{Spec2('CSS3 Transitions')}} | Defines `visibility` as animatable.                       |
-| {{SpecName('CSS2.1', 'visufx.html#visibility', 'visibility')}}     | {{Spec2('CSS2.1')}}                 | Definição inicial.                                        |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.visibility")}}
+{{Compat}}

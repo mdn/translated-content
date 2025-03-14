@@ -1,27 +1,29 @@
 ---
 title: DataView.prototype.getInt8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt8
-tags:
-  - DataView
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getInt8
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getInt8
 ---
 
 {{JSRef}}
 
 La méthode **`getInt8()`** permet de lire un entier signé sur 8 bits à l'octet donné par rapport au début de {{jsxref("DataView")}}.
 
-{{EmbedInteractiveExample("pages/js/dataview-getint8.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.getInt8()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setInt8(1, 127); // Max signed 8-bit integer
+
+console.log(view.getInt8(1));
+// Expected output: 127
+```
 
 ## Syntaxe
 
 ```js
-dataview.getInt8(positionOctet)
+dataview.getInt8(positionOctet);
 ```
 
 ### Paramètres

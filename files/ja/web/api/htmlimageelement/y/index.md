@@ -1,6 +1,9 @@
 ---
-title: HTMLImageElement.y
+title: "HTMLImageElement: y プロパティ"
+short-title: y
 slug: Web/API/HTMLImageElement/y
+l10n:
+  sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
 ---
 
 {{APIRef("HTML DOM")}}

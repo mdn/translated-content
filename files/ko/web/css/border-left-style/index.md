@@ -1,21 +1,63 @@
 ---
 title: border-left-style
 slug: Web/CSS/border-left-style
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/border-left-style
 ---
 
 {{CSSRef}}
 
 **`border-left-style`** [CSS](/ko/docs/Web/CSS) 속성은 요소 테두리의 왼쪽 스타일을 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/border-left-style.html")}}
+{{InteractiveExample("CSS Demo: border-left-style")}}
 
-> **참고:** 명세는 서로 다른 스타일의 테두리가 꼭지점에서 만날 때 어떻게 그려야 할지는 정의하고 있지 않습니다.
+```css interactive-example-choice
+border-left-style: none;
+```
+
+```css interactive-example-choice
+border-left-style: dotted;
+```
+
+```css interactive-example-choice
+border-left-style: dashed;
+```
+
+```css interactive-example-choice
+border-left-style: solid;
+```
+
+```css interactive-example-choice
+border-left-style: groove;
+```
+
+```css interactive-example-choice
+border-left-style: inset;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+
+body {
+  background-color: #fff;
+}
+```
+
+> [!NOTE]
+> 명세는 서로 다른 스타일의 테두리가 꼭지점에서 만날 때 어떻게 그려야 할지는 정의하고 있지 않습니다.
 
 ## 구문
 
@@ -75,23 +117,44 @@ border-left-style: unset;
 /* Define look of the table */
 table {
   border-width: 2px;
-  background-color: #52E385;
+  background-color: #52e385;
 }
-tr, td {
+tr,
+td {
   padding: 3px;
 }
 
 /* border-left-style example classes */
-.b1 {border-left-style: none;}
-.b2 {border-left-style: hidden;}
-.b3 {border-left-style: dotted;}
-.b4 {border-left-style: dashed;}
-.b5 {border-left-style: solid;}
-.b6 {border-left-style: double;}
-.b7 {border-left-style: groove;}
-.b8 {border-left-style: ridge;}
-.b9 {border-left-style: inset;}
-.b10 {border-left-style: outset;}
+.b1 {
+  border-left-style: none;
+}
+.b2 {
+  border-left-style: hidden;
+}
+.b3 {
+  border-left-style: dotted;
+}
+.b4 {
+  border-left-style: dashed;
+}
+.b5 {
+  border-left-style: solid;
+}
+.b6 {
+  border-left-style: double;
+}
+.b7 {
+  border-left-style: groove;
+}
+.b8 {
+  border-left-style: ridge;
+}
+.b9 {
+  border-left-style: inset;
+}
+.b10 {
+  border-left-style: outset;
+}
 ```
 
 #### 결과

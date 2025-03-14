@@ -1,31 +1,20 @@
 ---
 title: history.deleteRange()
 slug: Mozilla/Add-ons/WebExtensions/API/history/deleteRange
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - deleteRange
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/deleteRange
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Supprime toutes les visites aux pages que l'utilisateur a effectuées pendant la période donnée. Si cela supprime toutes les visites effectuées sur une page donnée, alors la page n'apparaîtra plus dans l'historique du navigateur et {{WebExtAPIRef("history.onVisitRemoved")}} se déclenchera pour cela.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var deletingRange = browser.history.deleteRange(
-  range           // object
-)
+  range, // object
+);
 ```
 
 ### Paramètres
@@ -41,11 +30,11 @@ var deletingRange = browser.history.deleteRange(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie sans paramètre lorsque la plage a été supprimée.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera remplie sans paramètre lorsque la plage a été supprimée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.deleteRange")}}
+{{Compat}}
 
 ## Exemples
 
@@ -60,15 +49,15 @@ function oneMinuteAgo() {
 
 browser.history.deleteRange({
   startTime: oneMinuteAgo(),
-  endTime: Date.now()
+  endTime: Date.now(),
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/extensions/history#method-deleteRange) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+> This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#method-deleteRange) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

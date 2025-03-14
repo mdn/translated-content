@@ -1,13 +1,6 @@
 ---
 title: 거듭제곱 (**)
 slug: Web/JavaScript/Reference/Operators/Exponentiation
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Exponentiation
-browser-compat: javascript.operators.exponentiation
 ---
 
 {{jsSidebar("Operators")}}
@@ -15,12 +8,26 @@ browser-compat: javascript.operators.exponentiation
 거듭제곱 연산자(`**`)는 왼쪽 피연산자를 밑, 오른쪽 피연산자를 지수로 한 값을 구합니다.
 {{jsxref("BigInt")}}도 피연산자로 받을 수 있다는 점을 제외하면 {{jsxref("Math.pow()")}}와 같습니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation operator")}}
+
+```js interactive-example
+console.log(3 ** 4);
+// Expected output: 81
+
+console.log(10 ** -2);
+// Expected output: 0.01
+
+console.log(2 ** (3 ** 2));
+// Expected output: 512
+
+console.log((2 ** 3) ** 2);
+// Expected output: 64
+```
 
 ## 구문
 
 ```js
-x ** y
+x ** y;
 ```
 
 ## 설명
@@ -53,19 +60,19 @@ PHP, Python 등 거듭제곱 연산자(`**`)를 포함하는 언어의 대부분
 ### 기본 거듭제곱
 
 ```js
-2 ** 3   // 8
-3 ** 2   // 9
-3 ** 2.5 // 15.588457268119896
-10 ** -1 // 0.1
-NaN ** 2 // NaN
+2 ** 3; // 8
+3 ** 2; // 9
+3 ** 2.5; // 15.588457268119896
+10 ** -1; // 0.1
+NaN ** 2; // NaN
 ```
 
 ### 연관성
 
-```js
-2 ** 3 ** 2   // 512
-2 ** (3 ** 2) // 512
-(2 ** 3) ** 2 // 64
+```js-nolint
+2 ** 3 ** 2; // 512
+2 ** (3 ** 2); // 512
+(2 ** 3) ** 2; // 64
 ```
 
 ### 단항 연산자와 사용하기
@@ -73,13 +80,13 @@ NaN ** 2 // NaN
 거듭제곱 결과의 부호를 반전하려면,
 
 ```js
--(2 ** 2) // -4
+-(2 ** 2); // -4
 ```
 
 거듭제곱 표현식의 밑에 음수를 제공하려면,
 
 ```js
-(-2) ** 2 // 4
+(-2) ** 2; // 4
 ```
 
 ## 명세

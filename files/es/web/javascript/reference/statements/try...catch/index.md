@@ -1,20 +1,23 @@
 ---
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
-tags:
-  - Error
-  - Excepción
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/try...catch
-original_slug: Web/JavaScript/Referencia/Sentencias/try...catch
 ---
 
 {{jsSidebar("Statements")}}
 
 La declaración **`try...catch`** señala un bloque de instrucciones a intentar (**`try`**), y especifica una respuesta si se produce una excepción (**`catch`**).
 
-{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Try...Catch")}}
+
+```js interactive-example
+try {
+  nonExistentFunction();
+} catch (error) {
+  console.error(error);
+  // Expected output: ReferenceError: nonExistentFunction is not defined
+  // (Note: the exact output may be browser-dependent)
+}
+```
 
 ## Sintaxis
 
@@ -35,15 +38,19 @@ try {
 ```
 
 - `try_statements`
+
   - : Las sentencias que serán ejecutadas.
 
 - `catch_statements_1`, `catch_statements_2`
+
   - : Sentencias que se ejecutan si una excepción es lanzada en el bloque `try`.
 
 - `exception_var_1`, `exception_var_2`
+
   - : Identificador que contiene un objeto de excepcion asociado a la cláusula `catch`.
 
 - `condition_1`
+
   - : Una expresión condicional.
 
 - `finally_statements`
@@ -71,11 +78,10 @@ Cuando solo se utiliza un bloque `catch`, el bloque `catch` es ejecutado cuando 
 
 ```js
 try {
-   throw "myException"; // genera una excepción
-}
-catch (e) {
-   // sentencias para manejar cualquier excepción
-   logMyErrors(e); // pasa el objeto de la excepción al manejador de errores
+  throw "myException"; // genera una excepción
+} catch (e) {
+  // sentencias para manejar cualquier excepción
+  logMyErrors(e); // pasa el objeto de la excepción al manejador de errores
 }
 ```
 
@@ -133,13 +139,12 @@ Ahora, si esa rutina de limpieza debiera ser hecha ya sea que el código del `tr
 El siguiente ejemplo abre un archivo y despues ejecuta sentencias que usan el archivo (JavaScript del lado del servidor permite acceder a archivos). Si una excepción es lanzada mientras el archivo está abierto, la cláusula `finally` cierra el archivo antes de que el script falle. El código en `finally` también se ejecuta después de un retorno explícito de los bloques `try` o `catch`.
 
 ```js
-openMyFile()
+openMyFile();
 try {
-   // retiene un recurso
-   writeMyFile(theData);
-}
-finally {
-   closeMyFile(); // siempre cierra el recurso
+  // retiene un recurso
+  writeMyFile(theData);
+} finally {
+  closeMyFile(); // siempre cierra el recurso
 }
 ```
 
@@ -152,14 +157,12 @@ Primero, veamos que pasa con esto:
 ```js
 try {
   try {
-    throw new Error('oops');
+    throw new Error("oops");
+  } finally {
+    console.log("finally");
   }
-  finally {
-    console.log('finally');
-  }
-}
-catch (ex) {
-  console.error('outer', ex.message);
+} catch (ex) {
+  console.error("outer", ex.message);
 }
 
 // Output:
@@ -172,17 +175,14 @@ Ahora, si nosotros ya capturamos la excepción en una declaración try interna a
 ```js
 try {
   try {
-    throw new Error('oops');
+    throw new Error("oops");
+  } catch (ex) {
+    console.error("inner", ex.message);
+  } finally {
+    console.log("finally");
   }
-  catch (ex) {
-    console.error('inner', ex.message);
-  }
-  finally {
-    console.log('finally');
-  }
-}
-catch (ex) {
-  console.error('outer', ex.message);
+} catch (ex) {
+  console.error("outer", ex.message);
 }
 
 // Output:
@@ -195,18 +195,15 @@ Y ahora vamos a relanzar el error.
 ```js
 try {
   try {
-    throw new Error('oops');
-  }
-  catch (ex) {
-    console.error('inner', ex.message);
+    throw new Error("oops");
+  } catch (ex) {
+    console.error("inner", ex.message);
     throw ex;
+  } finally {
+    console.log("finally");
   }
-  finally {
-    console.log('finally');
-  }
-}
-catch (ex) {
-  console.error('outer', ex.message);
+} catch (ex) {
+  console.error("outer", ex.message);
 }
 
 // Output:
@@ -222,22 +219,19 @@ Cualquier excepción dada será capturada solo una vez por el bloque catch más 
 Si el bloque `finally` retorna un valor, este valor se convierte en el valor de retorno de toda la producción `try-catch-finally`, a pesar de cualquier sentencia `return` en los bloques `try` y `catch`. Esto incluye excepciones lanzadas dentro del bloque catch.
 
 ```js
-(function() {
+(function () {
   try {
     try {
-      throw new Error('oops');
-    }
-    catch (ex) {
-      console.error('inner', ex.message);
+      throw new Error("oops");
+    } catch (ex) {
+      console.error("inner", ex.message);
       throw ex;
-    }
-    finally {
-      console.log('finally');
+    } finally {
+      console.log("finally");
       return;
     }
-  }
-  catch (ex) {
-    console.error('outer', ex.message);
+  } catch (ex) {
+    console.error("outer", ex.message);
   }
 })();
 

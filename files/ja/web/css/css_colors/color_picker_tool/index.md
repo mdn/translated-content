@@ -1,26 +1,33 @@
 ---
 title: 色選択ツール
-slug: Web/CSS/CSS_Colors/Color_picker_tool
+slug: Web/CSS/CSS_colors/Color_picker_tool
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
 
-このツールは、ウェブの独自の色を簡単に作成、調整、実験することができます。 HEXA 色, RGB (Red/Green/Blue), HSL (Hue/Saturation/Lightness) RGB など、 [CSS](/ja/docs/Web/CSS) で対応している様々な[色形式](/ja/docs/Web/CSS/color_value)に変換することもできます。アルファチャネルの制御も、 RGB (rgba) および HSL (hsla) 形式で対応しています。
+このツールは、 sRGB {{glossary("color space","色空間")}}で色を選択し、それをさまざまな CSS [色形式](/ja/docs/Web/CSS/color_value)に変換することで、次の sRGB 色記法の構文を理解するのに役立ちます。
 
-色を定義するパラメーターを調整すると、3 つの標準ウェブ CSS 形式すべてが表示されます。さらに、現在選択されている色に基づいて、 HSL および HSV のパレット、およびアルファが生成されます。「スポイト」スタイルのカラーピッカーボックスは、 HSL または HSV 形式の間で切り替えることができます。また、ツールの下部にあるボックスに色をドラッグし、色を重ね合わせることで、色とその重なり具合をテストすることもできます。 相対 Z インデックス値を調整して、前後に移動させることができます。
+- {{cssxref("hex-color")}} は [sRGB](/ja/docs/Glossary/RGB) 色の 16 進色表現であり、三原色（赤、緑、青）と透明度を 16 進数で記述します。
+- {{CSSxRef("color_value/rgb", "rgb()")}} は、赤、緑、青とアルファ（透明度）の成分によって指定される色を定義します。
+- {{CSSxRef("color_value/hsl", "hsl()")}} は、色相、彩度、明度とアルファ（透明度）の成分によって指定される色を定義します。
+- {{CSSxRef("color_value/hwb", "hwb()")}} は、色相、白色度、黒色度とアルファ（透明度）の成分によって指定される色を定義します。
+- {{CSSxRef("color_value/color", "color()")}} は、指定された色空間で色を定義します。
 
-このツールは [HTML](/ja/docs/Web/HTML) に適用する完全な CSS 色を識別するのに役立ちます。
+色を定義するパラメーターを調整すると、3 つの標準ウェブ CSS 形式すべてが表示されます。アルファチャンネルの制御にも対応しています。
 
-{{EmbedGHLiveSample("css-examples/tools/color-picker/", '100%', 900)}}
+{{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
-上記で作成した色は、特に注意書きがない限り、 CSS や HTML のどこの色でも使用することができます。
+作成した色は、 CSS において {{cssxref("color_value", "&lt;color&gt")}} データ型ならどこでも使用することができます。
 
 ## 関連情報
 
-色の使用について詳しくは、以下を参照してください。
-
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/HTML/Applying_color)
-- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
-- [CSS を使用した境界のスタイル付け](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-- [CSS を使用した背景スタイルの変更](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-- [色とそのコントラスト](/ja/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast)
+- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
+- [CSS 色の値](/ja/docs/Web/CSS/CSS_colors/Color_values)
+- [賢い色の使用](/ja/docs/Web/CSS/CSS_colors/Using_color_wisely)
+- [相対色の使用](/ja/docs/Web/CSS/CSS_colors/Relative_colors)
+- [色と明るさの理解](/ja/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
+- [WCAG 1.4.1: 色のコントラスト](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
+- [学習: CSS を使用した背景と境界のスタイル設定](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+- [アクセシビリティの学習: 色とそのコントラスト](/ja/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#色とそのコントラスト)

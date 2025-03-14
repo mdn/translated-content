@@ -1,19 +1,27 @@
 ---
-title: '<em>: 강세 요소'
+title: "<em>: 강세 요소"
 slug: Web/HTML/Element/em
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/em
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<em>` 요소**는 텍스트의 강세를 나타냅니다. `<em>` 요소를 중첩하면 더 큰 강세를 뜻하게 됩니다.
 
-{{EmbedInteractiveExample("pages/tabbed/em.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;em&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>Get out of bed <em>now</em>!</p>
+
+<p>We <em>had</em> to do something about it.</p>
+
+<p>This is <em>not</em> a drill!</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+em {
+}
+```
 
 <table class="properties">
   <tbody>
@@ -40,7 +48,7 @@ translation_of: Web/HTML/Element/em
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -89,9 +97,8 @@ translation_of: Web/HTML/Element/em
 
 ```html
 <p>
-  과거에 <em>block-level</em>이라 불렸던
-  콘텐츠는 HTML 5부터 <em>flow</em> 콘텐츠라고
-  말합니다.
+  과거에 <em>block-level</em>이라 불렸던 콘텐츠는 HTML 5부터
+  <em>flow</em> 콘텐츠라고 말합니다.
 </p>
 ```
 
@@ -105,7 +112,7 @@ translation_of: Web/HTML/Element/em
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.em")}}
+{{Compat}}
 
 ## 같이 보기
 

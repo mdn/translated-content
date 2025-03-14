@@ -1,14 +1,9 @@
 ---
 title: Définir des termes avec HTML
 slug: Learn/HTML/Howto/Define_terms_with_HTML
-tags:
-  - Beginner
-  - Guide
-  - HTML
-  - Learn
-translation_of: Learn/HTML/Howto/Define_terms_with_HTML
-original_slug: Apprendre/HTML/Comment/Définir_des_termes_avec_HTML
 ---
+
+{{QuickLinksWithSubpages("/fr/docs/Learn/HTML/Howto")}}
 
 HTML fournit plusieurs méthodes pour décrire la sémantique du contenu qu'on emploie (que ce soit intégré dans le texte ou dans un glossaire à part). Dans cet article, nous verrons comment correctement définir les termes utilisés au sein d'un document.
 
@@ -52,23 +47,29 @@ Dans certains manuels, à la première occurence d'un terme, celui-ci est placé
 On peut procéder de cette façon avec HTML. En revanche, HTML ne gère pas l'aspect visuel d'un document, uniquement son contenu. On utilisera l'élément {{htmlelement("dfn")}} qui permet d'identifier la première occurence d'un terme. Attention, `<dfn>` enveloppe le terme à définir et pas sa définition (qui elle s'étend sur le paragraphe courant) :
 
 ```html
-<p><dfn>Firefox</dfn> est le navigateur créé et développé par la Fondation Mozilla.</p>
+<p>
+  <dfn>Firefox</dfn> est le navigateur créé et développé par la Fondation
+  Mozilla.
+</p>
 ```
 
-> **Note :** On utilise également parfois le gras pour mettre en avant du contenu. Le gras, en tant que tel, est un concept qui n'appartient pas à HTML mais à la mise en forme. En revanche, pour mettre en avant (utiliser une emphase), il existe [des éléments HTML tout indiqués](/fr/Apprendre/HTML/Howto/Emphasize_content_or_indicate_that_text_is_important).
+> [!NOTE]
+> On utilise également parfois le gras pour mettre en avant du contenu. Le gras, en tant que tel, est un concept qui n'appartient pas à HTML mais à la mise en forme. En revanche, pour mettre en avant (utiliser une emphase), il existe [des éléments HTML tout indiqués](/fr/docs/Apprendre/HTML/Howto/Emphasize_content_or_indicate_that_text_is_important).
 
 ### Cas spécifique : les abréviations
 
-En ce qui concerne les abréviations, il est préférable [de les identifier séparement](/fr/Apprendre/HTML/Howto/Mark_abbreviations_and_make_them_understandable) grâce à l'élément {{htmlelement("abbr")}} afin que les lecteurs d'écrans puissent les utiliser correctement. Comme pour la définition d'un nouveau terme, une abréviation doit être définie lors de sa première apparition.
+En ce qui concerne les abréviations, il est préférable [de les identifier séparement](/fr/docs/Apprendre/HTML/Howto/Mark_abbreviations_and_make_them_understandable) grâce à l'élément {{htmlelement("abbr")}} afin que les lecteurs d'écrans puissent les utiliser correctement. Comme pour la définition d'un nouveau terme, une abréviation doit être définie lors de sa première apparition.
 
 ```html
 <p>
   <dfn><abbr>HTML</abbr> (hypertext markup language)</dfn>
-   est un langage de description utilisé pour structurer des documents sur le Web.
+  est un langage de description utilisé pour structurer des documents sur le
+  Web.
 </p>
 ```
 
-> **Note :** La spécification HTML [met en avant l'attribut `title`](http://www.w3.org/TR/html/text-level-semantics.html#the-abbr-element) pour expliciter les termes de l'abréviation. Cependant, il reste nécessaire d'utiliser le texte classique pour fournir une explication car le contenu de l'attribut `title` ne sera pas montré aux utilisateurs, sauf si ceux-ci passent la souris au-dessus de l'abréviation. C'est également [ce qui est noté dans les spécifications](http://www.w3.org/TR/html/dom.html#attr-title).
+> [!NOTE]
+> La spécification HTML [met en avant l'attribut `title`](https://www.w3.org/TR/html/text-level-semantics.html#the-abbr-element) pour expliciter les termes de l'abréviation. Cependant, il reste nécessaire d'utiliser le texte classique pour fournir une explication car le contenu de l'attribut `title` ne sera pas montré aux utilisateurs, sauf si ceux-ci passent la souris au-dessus de l'abréviation. C'est également [ce qui est noté dans les spécifications](https://www.w3.org/TR/html/dom.html#attr-title).
 
 ### Améliorer l'accessibilité
 
@@ -80,17 +81,19 @@ En ce qui concerne les abréviations, il est préférable [de les identifier sé
     <dfn aria-describedby="ff">Firefox</dfn>
     est le navigateur web créé et développé par la Fondation Mozilla.
   </span>
-  Vous pouvez le télécharger sur <a href="http://www.mozilla.org">mozilla.org</a>
+  Vous pouvez le télécharger sur
+  <a href="http://www.mozilla.org">mozilla.org</a>
 </p>
 ```
 
-Les technologies d'assistance à la navigation pourront tirer parti de cet attribut pour fournir un texte alternatif pour un terme donné. `aria-describedby` peut être utilisé pour n'importe quelle balise contenant un mot-clé à définir (il n'est pas nécessaire que ce soit `<dfn>`). `aria-describedby` utilise un référence à l'{{htmlattrxref('id')}} de l'élément qui contient la description.
+Les technologies d'assistance à la navigation pourront tirer parti de cet attribut pour fournir un texte alternatif pour un terme donné. `aria-describedby` peut être utilisé pour n'importe quelle balise contenant un mot-clé à définir (il n'est pas nécessaire que ce soit `<dfn>`). `aria-describedby` utilise un référence à l'[`id`](/fr/docs/Web/HTML/Global_attributes#id) de l'élément qui contient la description.
 
 ## Comment construire une liste de descriptions
 
 Les listes de descriptions sont des listes de termes associés à leur description (par exemple une liste de définition, des entrées d'un dictionnaire, une FAQ, des paires de clés-valeurs, etc.).
 
-> **Note :** Les listes de descriptions [ne doivent pas être utilisées pour retranscrire des dialogues](http://www.w3.org/TR/html5/grouping-content.html#the-dl-element). En effet, la conversation ne décrit pas les différents interlocuteurs. Voici [quelques recommandations pour retranscrire un dialogue dans un document web](http://www.w3.org/TR/html5/common-idioms.html#conversations).
+> [!NOTE]
+> Les listes de descriptions [ne doivent pas être utilisées pour retranscrire des dialogues](https://www.w3.org/TR/html5/grouping-content.html#the-dl-element). En effet, la conversation ne décrit pas les différents interlocuteurs. Voici [quelques recommandations pour retranscrire un dialogue dans un document web](https://www.w3.org/TR/html5/common-idioms.html#conversations).
 
 Les termes à décrire sont placés dans des éléments {{htmlelement("dt")}} et la description, qui suit immédiatement, est placée dans un ou plusieurs éléments {{htmlelement("dd")}}. Enfin, l'ensemble de la liste est placé au sein d'un élément {{htmlelement("dl")}}.
 
@@ -101,27 +104,24 @@ Voici un exemple simple qui dresse une liste de descriptions de plats :
 ```html
 <dl>
   <dt>jambalaya</dt>
-    <dd>
-      une entrée à base de riz qui contient généralement
-      du poulet, des saucisses, des fruits de mer et des
-      épices
-    </dd>
+  <dd>
+    une entrée à base de riz qui contient généralement du poulet, des saucisses,
+    des fruits de mer et des épices
+  </dd>
 
   <dt>sukiyaki</dt>
-    <dd>
-      une spécialité japonaise à base de fines tranches de
-      viande, de légumes, de nouilles et qui est cuite dans
-      un sauce soja et du saké
-    </dd>
+  <dd>
+    une spécialité japonaise à base de fines tranches de viande, de légumes, de
+    nouilles et qui est cuite dans un sauce soja et du saké
+  </dd>
 
   <dt>chianti</dt>
-    <dd>
-      un vin italien, sec, originaire de Toscane
-    </dd>
+  <dd>un vin italien, sec, originaire de Toscane</dd>
 </dl>
 ```
 
-> **Note :** La structure de base qu'on voit dans cet exemple alterne les termes (`<dt>`) et leurs descriptions (`<dd>`). Si deux (ou plusieurs) termes apparaissent les uns à la suite des autres, la description qui suit s'appliquera à tout ces termes. Si deux (ou plusieurs) descriptions se suivent, elles s'appliqueront au dernier terme.
+> [!NOTE]
+> La structure de base qu'on voit dans cet exemple alterne les termes (`<dt>`) et leurs descriptions (`<dd>`). Si deux (ou plusieurs) termes apparaissent les uns à la suite des autres, la description qui suit s'appliquera à tout ces termes. Si deux (ou plusieurs) descriptions se suivent, elles s'appliqueront au dernier terme.
 
 ### Améliorer l'aspect visuel
 

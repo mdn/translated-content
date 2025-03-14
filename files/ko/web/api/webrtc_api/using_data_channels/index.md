@@ -1,20 +1,20 @@
 ---
 title: WebRTC data channel 사용하기
 slug: Web/API/WebRTC_API/Using_data_channels
-translation_of: Web/API/WebRTC_API/Using_data_channels
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar('WebRTC')}}
 
 {{domxref("RTCPeerConnection")}} 인터페이스를 사용하여 WebRTC Peerconnction을 연결하면 이제 두 Peer간의 커넥션을 통하여 미디어 데이터를 주고 받을수 있게됩니다. 그뿐아니라 WebRTC로 할수 있는 일은 더 있습니다. 이 가이드에서 우리는 peer connection에 데이터 채널을 추가하는 방법과 임의의 데이터, 즉 우리가 원하는 어떠한 포멧의 데이터들을 안전하게 주고 받는 방법을 배우게 될 것 입니다.
 
-> **참고:** 모든 WebRTC 컴포넌트들은 암호화를 사용하게 되어 있기 때문에 `RTCDataChannel`을 이용하는 어떤 데이터 전송도 자동적으로 Datagram Transport Layer Security (**DTLS**)을 사용하여 암호화 됩니다. 자세한 내용은 [Security](#security) 를 참고하십시오.
+> [!NOTE]
+> 모든 WebRTC 컴포넌트들은 암호화를 사용하게 되어 있기 때문에 `RTCDataChannel`을 이용하는 어떤 데이터 전송도 자동적으로 Datagram Transport Layer Security (**DTLS**)을 사용하여 암호화 됩니다. 자세한 내용은 [Security](#security) 를 참고하십시오.
 
 ## 데이터 채널 만들기
 
 {{domxref("RTCDataChannel")}}를 이용한 기초적인 데이터 전송은 아래의 두 방법중 하나를 이용하여 만들수 있습니다.
 
-- WebRTC가 전송수단을 만들게 하고 {{event("datachannel")}} 이벤트를 수신 받게 하여 remote peer에 알립니다. 참 쉽죠? 이 단순한 로직을 바탕으로 수많은 활용법을 만들어 낼 수 있습니다. 하지만 단순하기 때문에 구현하고자하는 모든 요구를 만족해주지는 못합니다.
+- WebRTC가 전송수단을 만들게 하고 {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}} 이벤트를 수신 받게 하여 remote peer에 알립니다. 참 쉽죠? 이 단순한 로직을 바탕으로 수많은 활용법을 만들어 낼 수 있습니다. 하지만 단순하기 때문에 구현하고자하는 모든 요구를 만족해주지는 못합니다.
 - 데이터 전송을 할 수 있는 코드를 스스로 작성하고 새로운 채널이 연결되었다는 것을 알려줄수 있는 코드를 작성해주십시오.
 
 위에서 언급한 두가지 방법을 각각 살펴보겠습니다. 우선은 가장 일반적으로 사용되는 첫번째 방법부터 살펴보겠습니다.
@@ -41,7 +41,7 @@ Data channel의 수동협상을 위해서 우선 {{domxref("RTCPeerConnection")}
 
 ```js
 let dataChannel = pc.createDataChannel("MyApp Channel", {
-  negotiated: true
+  negotiated: true,
 });
 
 dataChannel.addEventListener("open", (event) => {
@@ -59,17 +59,13 @@ requestRemoteChannel(dataChannel.id);
 
 WebRTC 데이터채널은 아웃바운드 데이터에 대해 버퍼링을 제공합니다. 이것은 자동적으로 처리가됩니다. buffer의 사이즈를 컨트롤 할 수 없는 동안 당신은 얼마나 많은 데이터가 현재 버퍼 되어 있는지 배울 수 있고 큐 데이터의 버퍼가 고갈되기 시작할 때 알림을 받도록 선택할 수 도 있습니다. 이것은 메모리 과다사용이나 채널을 완전히 밀어내버리는 것을 없애고 언제나 데이터를 보낼수 있도록 효과적인 루틴을 만들기 쉽게 해줍니다.
 
-**<<\<write more about using bufferedAmount, bufferedAmountLowThreshold, onbufferedamountlow, and bufferedamountlow here>>>**
-
-...
-
 ## 메세지 크기 제한에 대해 이해하기
 
 네트워크를 통하여 전송되는 데이터라면 그 데이터는 반드시 사이즈가 제한됩니다. 기초적인 레벨의 이야기를 하자면, 각각의 네트워크 패킷은 어떠한 값보다 클 수 없습니다. (정확한 숫자는 네트워크와 전송 계층이 사용하고 있는 것에 따라 다릅니다.) 어플리케이션 계층에서는 — 즉 당신의 코드가 돌아가고 있는 WebRTC {{Glossary("user agent", "user agent's")}} — WebRTC가 네트워크의 전송계층위의 최대 패킷사이즈보다 메시지가 더 큰지 확인하는 것을 구현할 수 있습니다.
 
 만약 당신이 사이즈 제한 크기가 궁금하지 않다거나 대용량 메세지를 보내거나 받는 것이 필요하지 않다면 이 이야기는 복잡한 이야기가 될 수 있습니다. Even when user agents share the same underlying library for handling Stream Control Transmission Protocol (SCTP) data, there can still be variations due to how the library is used. 예를들어 Firefox와 구글 크롬은 SCTP를 구현하기 위해 [`usrsctp`](https://github.com/sctplab/usrsctp) 라이브러리를 사용합니다. 이때 그 두 브라우저가 어떻게 라이브러리에 요청하고 이벤트에 반응하는지에 따라 `RTCDataChannel` 을 이용한 데이터 전송이 실패하는 경우가 있습니다.
 
-두 유저가 파이어폭스에 있는 데이터채널을 사용하여 통실할 때 메세지 사이즈의 제한은 파이어폭스와 크롬을 각각 사용할 때보다 큽니다. 왜냐하면 파이어폭스의 구현 방법은 현재 다중 SCTP메세지를 전송하는 기술을 deprecated하여 놓았습니다. 하지만 크롬은 여전히 가능합니다. 크롬은 완성 될것이라 확신하는 메시지 시리즈를 보는 대신 RTCDataChannel을 다중 메시지로서 수신하는 것으로 대채할 것입니다.
+두 유저가 Firefox에 있는 데이터채널을 사용하여 통실할 때 메세지 사이즈의 제한은 Firefox와 크롬을 각각 사용할 때보다 큽니다. 왜냐하면 Firefox의 구현 방법은 현재 다중 SCTP메세지를 전송하는 기술을 deprecated하여 놓았습니다. 하지만 크롬은 여전히 가능합니다. 크롬은 완성 될것이라 확신하는 메시지 시리즈를 보는 대신 RTCDataChannel을 다중 메시지로서 수신하는 것으로 대채할 것입니다.
 
 메세지가 16kiB 작다면 별다른 무리 없이 보낼 수 있을 것 입니다. 대부분의 메이저 user agents도 동일하게 다룹니다.
 
@@ -81,9 +77,9 @@ WebRTC 데이터채널은 아웃바운드 데이터에 대해 버퍼링을 제�
 
 이것은 브라우저가 현재의 대용량 메시지를 처리하는 표준인 end-of-record(EOR) 플레그 (메시지가 여러 시리즈에서 마지막일때 하나의 페이로드로서 취급하게하는 플레그)를 제공할때 문제가 됩니다. 이 플레그는 Firefox 57에서는 구현이 되어있습니다. 그러나 Chrome 에서는 아직 구현이 되어있지 않습니다.([Chromium Bug 7774](https://bugs.chromium.org/p/webrtc/issues/detail?id=7774) 참조). EOR를 제공하는 RTCDataChannel 페이로드는 더욱 커질 수 있습니다. (공식적으로 256kiB까지이며 Firfox의 구현으로는 1GiB까지가능). 256kiB에서 조차 긴급한 트래픽을 처리하기에는 유의미한 지연을 야기시키에 충분히 큰 용량입니다. 만약 여기서 더 커진다면 지연은 당신이 특정한 조작을 하더라도 줄일수 없을 것입니다.
 
-이러한 문제점을 해결하기 위해 **스트림 스케쥴러(stream schedulers)**라고하는 이름지어져 있으며 SCTP ndata specification이라고도 불리우는 새로운 시스템을 디자인하였습니다. 이 스케쥴러는 WebRTC 데이터 채널에 구현되어 있는 스트림을 포함한 각기 다른 스트림에 메시지를 상호배치하여 전송가능합니다. 이 [제안](https://tools.ietf.org/html/draft-ietf-tsvwg-sctp-ndata)은 IETF 제안(draft form) 상태에 있지만 한번 구현된다면 SCTP 계층은 자동적으로 서브메시지들에게 모든 데이터 채널을 통과할수 있는 기회를 보장하는 상호배치를 하기때문에 기본적으로 사이즈에 제한이 없는 메시지를 보낼수 있게될것입니다.
+이러한 문제점을 해결하기 위해 **스트림 스케쥴러**(**stream schedulers**)라고하는 이름지어져 있으며 SCTP ndata specification이라고도 불리우는 새로운 시스템을 디자인하였습니다. 이 스케쥴러는 WebRTC 데이터 채널에 구현되어 있는 스트림을 포함한 각기 다른 스트림에 메시지를 상호배치하여 전송가능합니다. 이 [제안](https://tools.ietf.org/html/draft-ietf-tsvwg-sctp-ndata)은 IETF 제안(draft form) 상태에 있지만 한번 구현된다면 SCTP 계층은 자동적으로 서브메시지들에게 모든 데이터 채널을 통과할수 있는 기회를 보장하는 상호배치를 하기때문에 기본적으로 사이즈에 제한이 없는 메시지를 보낼수 있게될것입니다.
 
-Firefox는 ndata를 지원하기 위해 현재 구현단계에 있습니다. 일반적인 사용이 언제쯤 가능할지에 대해 궁금하시다면 {{bug(1381145)}} 을 관심있게 보고 계십시요. Chrome 팀은 [Chrome Bug 5696](https://bugs.chromium.org/p/webrtc/issues/detail?id=5696) 를 통해 ndata 지원을 위한 구현을 트래킹하고 있습니다.
+Firefox는 ndata를 지원하기 위해 현재 구현단계에 있습니다. 일반적인 사용이 언제쯤 가능할지에 대해 궁금하시다면 [Firefox bug 1381145](https://bugzil.la/1381145) 을 관심있게 보고 계십시요. Chrome 팀은 [Chrome Bug 5696](https://bugs.chromium.org/p/webrtc/issues/detail?id=5696) 를 통해 ndata 지원을 위한 구현을 트래킹하고 있습니다.
 
 <div class="originaldocinfo"><p>이 섹션에 있는 대부분의 정보는 다음 블로그 포스트를 기반으로 작성되었습니다. <a href="https://lgrahl.de/articles/demystifying-webrtc-dc-size-limit.html">Demystifyijng WebRTC's Data Channel Message Size Limitations</a>, written by Lennart Grahl. 이 블로그를 보시면 더욱 자세한 내용이 나와 있습니다. 그러나 브라우져들은 당시보다 업데이트 되었기때문에 그 정보들은 현재와 맞지 않을 수 도 있습니다. 또한 현재는 시간이 많이 흘러 대부분의 메이저 브라우저에서는 EOR이 구현되어 있습니다.</p></div>
 

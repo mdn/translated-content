@@ -1,42 +1,82 @@
 ---
-title: Event.currentTarget
+title: Event：currentTarget 属性
 slug: Web/API/Event/currentTarget
+l10n:
+  sourceCommit: e2db3e53b257e07b5c469f8af5a68bd0d9db08d7
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-{{domxref("Event")}} 接口的只读属性 **`currentTarget`** 表示的，标识是当事件沿着 DOM 触发时事件的当前目标。它总是指向事件绑定的元素，而 {{domxref("Event.target")}} 则是事件触发的元素。
+{{domxref("Event")}} 接口的 **`currentTarget`** 只读属性用于标识事件处理器所附加的元素。
 
-## 语法
+这并不总是与触发事件的元素相同，因为事件可能在具有处理器的元素的后代上触发，然后通过事件[冒泡](/zh-CN/docs/Learn_web_development/Core/Scripting/Event_bubbling)到具有处理器的元素。事件的触发元素由 {{domxref("Event.target")}} 给出。
 
-```plain
-var currentEventTarget = event.currentTarget;
+请注意，`currentTarget` 的值仅在事件处理器中可用。在事件处理器外部，它将为 `null`。这意味着，例如，如果在事件处理器内部获得 `Event` 对象的引用然后在事件处理器外部访问其 `currentTarget` 属性，则其值将为 `null`。
+
+## 值
+
+一个 {{domxref("EventTarget")}}，表示当前事件处理器所附加的对象。
+
+## 示例
+
+### currentTarget 与 target 的区别
+
+此示例说明了 `currentTarget` 和 `target` 之间的区别。
+
+#### HTML
+
+页面包含一个包含“子元素” `<div>` 的“父元素” {{htmlelement("div")}}。
+
+```html
+<div id="parent">
+  点击父元素
+  <div id="child">点击子元素</div>
+</div>
+
+<button id="reset">重置</button>
+<pre id="output"></pre>
 ```
 
-### Value
+```css hidden
+button,
+div,
+pre {
+  margin: 0.5rem;
+}
 
-{{domxref("EventTarget")}}
+div {
+  padding: 1rem;
+  border: 1px solid black;
+}
+```
 
-## 例子
+#### JavaScript
 
-当将相同的事件处理程序附加到多个元素时 `event.currentTarget` 就很有用。
+事件处理器被附加到父元素。它记录 `event.currentTarget` 和 `event.target` 的值。
+
+我们还有一个用于重新加载示例的“重置”按钮。
 
 ```js
-function hide(e){
-  e.currentTarget.style.visibility = "hidden";
-  console.log(e.currentTarget);
-  // 该函数用作事件处理器时：this === e.currentTarget
-}
+const output = document.querySelector("#output");
+const parent = document.querySelector("#parent");
+parent.addEventListener("click", (event) => {
+  const currentTarget = event.currentTarget.getAttribute("id");
+  const target = event.target.getAttribute("id");
+  output.textContent = `当前目标：${currentTarget}\n`;
+  output.textContent += `目标：${target}`;
+});
 
-var ps = document.getElementsByTagName('p');
-
-for(var i = 0; i < ps.length; i++){
-  // console: 打印被点击的 p 元素
-  ps[i].addEventListener('click', hide, false);
-}
-// console: 打印 body 元素
-document.body.addEventListener('click', hide, false);
+const reset = document.querySelector("#reset");
+reset.addEventListener("click", () => document.location.reload());
 ```
+
+#### 结果
+
+如果你在子 `<div>` 中点击，则 `target` 将标识子元素。如果你在父 `<div>` 中点击，则 `target` 将标识父元素。
+
+在这两种情况下，`currentTarget` 都标识父元素，因为那是处理器附加到的元素。
+
+{{EmbedLiveSample("currentTarget 与 target 的区别", 100, 250)}}
 
 ## 规范
 
@@ -46,6 +86,6 @@ document.body.addEventListener('click', hide, false);
 
 {{Compat}}
 
-## 参考
+## 参见
 
-- [Comparison of Event Targets](/zh-CN/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [事件冒泡](/zh-CN/docs/Learn_web_development/Core/Scripting/Event_bubbling)

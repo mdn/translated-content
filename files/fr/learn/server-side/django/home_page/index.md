@@ -1,18 +1,6 @@
 ---
-title: 'Django didactique Section 5: Créer la page d''accueil'
+title: "Django didactique Section 5: Créer la page d'accueil"
 slug: Learn/Server-side/Django/Home_page
-tags:
-  - Article
-  - Cadriciel
-  - Code
-  - Didactique
-  - Django (Vues)
-  - Django (gabarits)
-  - Débutant
-  - Programmation
-  - Python
-  - django
-translation_of: Learn/Server-side/Django/Home_page
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
@@ -76,7 +64,8 @@ Bien que les données dépendent du contenu de la base de données, les trois pr
 
 En revanche, les pages concernant le détail d'un livre ou d'un auteur nécessiteront de traiter l'identifiant d'un objet. Il sera nécessaire d'extraire de la requête HTTP l'information encodée de cet identifiant pour obtenir ensuite le détail depuis la base de données. Pour cela nous utiliserons un seul jeu de vue et de gabarit pour publier les informations sur les livres (et auteurs).
 
-> **Note :** Avec le cadriciel Django, vous pouvez élaborer vos URLs comme bon vous semble — Vous pouvez avoir une approche comme celle présentée ci-dessus, ou de faire un appel de la méthode `GET` avec un passage de paramètres (`/book/?id=6`). Cependant, quelle que soit l'approche pour laquelle vous opterez, garder en mémoire d'avoir des URLs claires, logique et compréhensibles comme cela est [recommandé par le W3C](https://www.w3.org/Provider/Style/URI).
+> [!NOTE]
+> Avec le cadriciel Django, vous pouvez élaborer vos URLs comme bon vous semble — Vous pouvez avoir une approche comme celle présentée ci-dessus, ou de faire un appel de la méthode `GET` avec un passage de paramètres (`/book/?id=6`). Cependant, quelle que soit l'approche pour laquelle vous opterez, garder en mémoire d'avoir des URLs claires, logique et compréhensibles comme cela est [recommandé par le W3C](https://www.w3.org/Provider/Style/URI).
 >
 > La documentation de Django recommande aussi de coder les informations dans le corps des URLs pour avoir une meilleure conception de ces URLs.
 
@@ -86,7 +75,8 @@ La suite de cette section s'intéresse à la conception de la page d'accueil.
 
 La toute première page à créer est la page d'accueil (`catalog/`). Cette page d'index est globalement une page statique contenant le décompte des différents enregistrements de la base de données. Pour faire cela, il sera nécessaire de créer un routage d'URL, une vue et un gabarit.
 
-> **Note :** Cette section est essentielle, et cela vaut vraiment la peine d'être attentif aux concepts déployés dans celle-ci. La plupart des éléments abordé ici seront ré-utilisés par la suite.
+> [!NOTE]
+> Cette section est essentielle, et cela vaut vraiment la peine d'être attentif aux concepts déployés dans celle-ci. La plupart des éléments abordé ici seront ré-utilisés par la suite.
 
 ### Routage d'URL
 
@@ -119,7 +109,8 @@ Le paramètre `name` utilisé dans la fonction `path()` permet aussi de définir
 <a href="{% url 'index' %}">Home</a>.
 ```
 
-> **Note :** Vous pourriez bien évidemment coder en dur l'accès à la page d'accueil de cette manière `<a href="/catalog/">Home</a>`), mais si nous changions le modèle d'URL, par exemple en `/catalog/index`, alors le gabarit ne fonctionnerait plus correctement et présenterait un lien mort. L'utilisation des noms et des routages inversés est plus robuste et adapté aux évolutions de l'application.
+> [!NOTE]
+> Vous pourriez bien évidemment coder en dur l'accès à la page d'accueil de cette manière `<a href="/catalog/">Home</a>`), mais si nous changions le modèle d'URL, par exemple en `/catalog/index`, alors le gabarit ne fonctionnerait plus correctement et présenterait un lien mort. L'utilisation des noms et des routages inversés est plus robuste et adapté aux évolutions de l'application.
 
 ### Vue (_View function-based_)
 
@@ -164,7 +155,7 @@ def index(request):
 
 La première ligne de code permet d'importer les modèles de données du catalogue décrites dans le module `catalog`.
 
-La première section de la fonction index() permet à l'aide de requêtes, par l'intermédiaire des objets de modèle de données, d'obtenir les nombres d'enregistrements. Pour cela, nous utilisons la méthode d'objet _models_ `objects.all()` sur les objets `Book` et `BookInstance`. Ensuite, nous recherchons les ouvrages disponibles, ce qui revient à faire une requête avec un filtre sur l'attribut status de l'objet `BookInstance` ayant la valeur 'a' (Available). Si vous avez un oubli, vous pouvez consulter [La section 3 de Django didactique : utilisation du modèle de données > Chercher des enregistrements](/fr/docs/Learn/Server-side/Django/Models#Rechercher_des_enregistrements).
+La première section de la fonction index() permet à l'aide de requêtes, par l'intermédiaire des objets de modèle de données, d'obtenir les nombres d'enregistrements. Pour cela, nous utilisons la méthode d'objet _models_ `objects.all()` sur les objets `Book` et `BookInstance`. Ensuite, nous recherchons les ouvrages disponibles, ce qui revient à faire une requête avec un filtre sur l'attribut status de l'objet `BookInstance` ayant la valeur 'a' (Available). Si vous avez un oubli, vous pouvez consulter [La section 3 de Django didactique : utilisation du modèle de données > Chercher des enregistrements](/fr/docs/Learn/Server-side/Django/Models#rechercher_des_enregistrements).
 
 La dernière ligne de cette fonction est l'appel de la fonction `render()` dont l'objet est de constituer une page HTML et la transmettre comme une réponse. Cette fonction encapsule plusieurs autres fonctions du cadriciel ce qui permet de simplifier le processus de restitution des informations. La fonction `render()` utilise les paramètres :
 
@@ -182,7 +173,8 @@ Le cadriciel Django va rechercher automatiquement ces gabarits dans un répertoi
 
 Vous pouvez en faire l'expérience dès à présent, après avoir redémarré votre serveur local, en accédant à l'URL `127.0.0.1:8000` de votre navigateur. Une page d'erreur explicite s'affiche en indiquant un message du type : "`TemplateDoesNotExist at /catalog/`", ainsi que de nombreux détails sur l'enchaînement des fonctions aboutissant à cette erreur.
 
-> **Note :** En fonction du paramétrage de votre projet - le fichier settings.py de votre projet - Django va chercher pour des gabarits dans différents répertoires et dans ceux de votre application par défaut. Si vous souhaitez approfondir ce sujet vous pouvez consulter la [documentation Django relative aux gabarits](https://docs.djangoproject.com/fr/2.2/topics/templates/).
+> [!NOTE]
+> En fonction du paramétrage de votre projet - le fichier settings.py de votre projet - Django va chercher pour des gabarits dans différents répertoires et dans ceux de votre application par défaut. Si vous souhaitez approfondir ce sujet vous pouvez consulter la [documentation Django relative aux gabarits](https://docs.djangoproject.com/fr/2.2/topics/templates/).
 
 #### Concevoir les gabarits
 
@@ -190,7 +182,8 @@ Django utilise un langage pour les gabarits qui permet de résoudre certains suj
 
 Le langage de gabarit de Django permet de définir un modèle de base puis de l'étendre ensuite. L'extrait de code ci-dessous vient du fichier de gabarit **base_generic.html**, vous constaterez qu'il s'y mélange du code HTML et des sections nommées contenu dans entre des marqueurs `block` et `endblock` qui peut contenir ou non des données.
 
-> **Note :** Les marqueurs de gabarits sont des fonctions que vous pouvez utiliser dans un modèle pour parcourir des listes, effectuer des opérations conditionnelles en fonction de la valeur d'une variable, etc. Outre les balises de modèle, la syntaxe de gabarit vous permet de référencer les variables qui sont transmises au modèle à partir de la vue et d'utiliser des filtres de gabarit pour mettre en forme les variables (par exemple, pour convertir une chaîne en minuscule).
+> [!NOTE]
+> Les marqueurs de gabarits sont des fonctions que vous pouvez utiliser dans un modèle pour parcourir des listes, effectuer des opérations conditionnelles en fonction de la valeur d'une variable, etc. Outre les balises de modèle, la syntaxe de gabarit vous permet de référencer les variables qui sont transmises au modèle à partir de la vue et d'utiliser des filtres de gabarit pour mettre en forme les variables (par exemple, pour convertir une chaîne en minuscule).
 
 Dans l'extrait ci-dessous vous avec trois sections nommées qui pourront être remplacés par la suite :
 
@@ -198,16 +191,22 @@ Dans l'extrait ci-dessous vous avec trois sections nommées qui pourront être r
 - sidebar : une barre de navigation latérale à gauche
 - content : le contenu de la page
 
-```html
-<!DOCTYPE html>
+```django
+<!doctype html>
 <html lang="fr">
-<head>
-  {% block title %}<title>Bibliothèque locale</title>{% endblock %}
-</head>
-<body>
-  {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
-  {% block content %}<!-- default content text (typically empty) -->{% endblock %}
-</body>
+  <head>
+    {% block title %}
+      <title>Bibliothèque locale</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block sidebar %}
+      <!-- insert default navigation text for every page -->
+    {% endblock %}
+    {% block content %}
+      <!-- default content text (typically empty) -->
+    {% endblock %}
+  </body>
 </html>
 ```
 
@@ -215,12 +214,15 @@ Lorsque l'on définit un gabarit pour une vue particulière, il convient de déf
 
 À titre indicatif, l'extrait ci-dessous présente la manière d'activer à l'aide de la balise `extends` le remplacement de la section `content`. La page HTML générée inclura la structure de la page définie plus haut et le code généré à la fois pour la section `title`, mais avec les éléments nouveaux, ci-dessous, pour la section `content`.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1>Accueil de la bibliothèque locale</h1>
-  <p>Bienvenue sur la bibliothèque locale, un site web développé par <em>Mozilla Developer Network</em>!</p>
+<h1>Accueil de la bibliothèque locale</h1>
+<p>
+  Bienvenue sur la bibliothèque locale, un site web développé par
+  <em>Mozilla Developer Network</em>!
+</p>
 {% endblock %}
 ```
 
@@ -228,41 +230,45 @@ Lorsque l'on définit un gabarit pour une vue particulière, il convient de déf
 
 Nous allons nous appuyer sur le gabarit ci-dessous pour construire la page de base de la bibliothèque locale. Vous le constatez, il contient des éléments HTML et des blocs dédiés Django pour spécifier trois sections `title`, `sidebar`, et `content`. La section `title` contient un titre par défaut. De même la section `sidebar` contient un lien vers la liste des livres et des auteurs qui pourra être modifié ensuite.
 
-> **Note :** Il y a aussi deux balises supplémentaires : `url` et `load static`. Elles seront étudiées dans le chapitre suivant.
+> [!NOTE]
+> Il y a aussi deux balises supplémentaires : `url` et `load static`. Elles seront étudiées dans le chapitre suivant.
 
 Créez un nouveau fichier nommé **_base_generic.html_** dans le dossier **/locallibrary/catalog/templates/** (à créer aussi) et copiez-y le texte ci-dessous :
 
-```html
-<!DOCTYPE html>
+```django
+<!doctype html>
 <html lang="en">
-<head>
-  {% block title %}<title>Bibliothèque locale</title>{% endblock %}
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <!-- Add additional CSS in static file -->
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-</head>
-<body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-2">
+  <head>
+    {% block title %}
+      <title>Bibliothèque locale</title>
+    {% endblock %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous" />
+    <!-- Add additional CSS in static file -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-2">
           {% block sidebar %}
-           <ul class="sidebar-nav">
-               <li><a href="{% url 'index' %}">Home</a></li>
-               <li><a href="">Tous les livres</a></li>
-               <li><a href="">Tous les auteurs</a></li>
-           </ul>
+          <ul class="sidebar-nav">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="">Tous les livres</a></li>
+            <li><a href="">Tous les auteurs</a></li>
+          </ul>
           {% endblock %}
+        </div>
+        <div class="col-sm-10">{% block content %} {% endblock %}</div>
       </div>
-         <div class="col-sm-10 ">
-             {% block content %}
-             {% endblock %}
-         </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
 ```
 
@@ -272,9 +278,9 @@ De même, ce gabarit fait appel à une feuille de style - _en ligne 10_ - locale
 
 ```css
 .sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 }
 ```
 
@@ -282,26 +288,30 @@ De même, ce gabarit fait appel à une feuille de style - _en ligne 10_ - locale
 
 Maintenant créez le fichier HTML **_index.html_** dans le dossier **/locallibrary/catalog/templates/** et copiez-y le code ci-dessous. Ce code étend le template de base sur la première ligne et remplace le bloc par défaut `content` pour le template.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1>Accueil de la bibliothèque locale</h1>
-  <p>Bienvenue à la bibliothèque locale, un site web développé par <em>Mozilla Developer Network</em>!</p>
-  <h2>Contenu dynamique</h2>
-  <p>La bibliothèque dispose des enregistrements suivants:</p>
-  <ul>
-    <li><strong>Livres:</strong> \{{ num_books }}</li>
-    <li><strong>Copies:</strong> \{{ num_instances }}</li>
-    <li><strong>Copies disponibles:</strong> \{{ num_instances_available }}</li>
-    <li><strong>Auteurs:</strong> \{{ num_authors }}</li>
-  </ul>
+<h1>Accueil de la bibliothèque locale</h1>
+<p>
+  Bienvenue à la bibliothèque locale, un site web développé par
+  <em>Mozilla Developer Network</em>!
+</p>
+<h2>Contenu dynamique</h2>
+<p>La bibliothèque dispose des enregistrements suivants:</p>
+<ul>
+  <li><strong>Livres:</strong> \{{ num_books }}</li>
+  <li><strong>Copies:</strong> \{{ num_instances }}</li>
+  <li><strong>Copies disponibles:</strong> \{{ num_instances_available }}</li>
+  <li><strong>Auteurs:</strong> \{{ num_authors }}</li>
+</ul>
 {% endblock %}
 ```
 
 Dans la section contenu dynamique, des emplacements réservés sont définis pour pouvoir y insérer le contenu de variable qui sont identifiées à l'intérieur de doubles accolades (ouvrantes et fermantes). Pour une meilleure visibilité ces emplacements et les variables nommées sont identifiées en caractères gras dans l'extrait de code ci-dessus.
 
-> **Note :** Vous pouvez constater simplement que les balises de gabarit (fonctions) et les balises de variables sont entre accolades ; double accolades pour une variable (`\{{ num_books }}`), et simple accolade avec le pourcentage (`{% extends "base_generic.html" %}`) pour les balises.
+> [!NOTE]
+> Vous pouvez constater simplement que les balises de gabarit (fonctions) et les balises de variables sont entre accolades ; double accolades pour une variable (`\{{ num_books }}`), et simple accolade avec le pourcentage (`{% extends "base_generic.html" %}`) pour les balises.
 
 Gardez en mémoire que les variables utilisées dans les gabarits sont des clés d'un dictionnaire `context` transmis à la fonction `render()` de la vue (revenez à l'exemple plus haut, ou l'extrait ci-dessous). La fonction `render()` traitera le dictionnaire pour restituer une page HTML où les variables nommées auront été remplacées par leur valeur dans le dictionnaire.
 
@@ -322,20 +332,24 @@ Vos projets utiliseront probablement de fichiers statiques, par exemple des imag
 
 Au sein du gabarit, vous faites appel à la balise `load` en précisant "static" pour faire votre ajout, comme décrits dans l'extrait ci-dessous. Vous utilisez la balise `static` et vous spécifiez ensuite l'URL pour accéder au fichier nécessaire.
 
-```html
+```django
 <!-- Add additional CSS in static file -->
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 ```
 
 De la même manière, vous pouvez par exemple :
 
-```html
+```django
 {% load static %}
-<img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="UML diagram" style="width:555px;height:540px;">
+<img
+  src="{% static 'catalog/images/local_library_model_uml.png' %}"
+  alt="UML diagram"
+  style="width:555px;height:540px;" />
 ```
 
-> **Note :** Les exemples ci-dessus indiquent où se trouvent les fichiers, mais le cadriciel ne travaille pas ainsi par défaut. Nous avons configuré le serveur web de développement en modifiant le routage des URL (**/locallibrary/locallibrary/urls.py**) à [la création du squelette du site](/fr/docs/Learn/Server-side/Django/skeleton_website). Cependant nous devrons travailler plus tard la mise en production.
+> [!NOTE]
+> Les exemples ci-dessus indiquent où se trouvent les fichiers, mais le cadriciel ne travaille pas ainsi par défaut. Nous avons configuré le serveur web de développement en modifiant le routage des URL (**/locallibrary/locallibrary/urls.py**) à [la création du squelette du site](/fr/docs/Learn/Server-side/Django/skeleton_website). Cependant nous devrons travailler plus tard la mise en production.
 
 Pour plus de détails sur les fichiers statiques vous pouvez consulter la documentation Django sur [la gestion des fichiers statiques](https://docs.djangoproject.com/fr/2.2/howto/static-files/).
 
@@ -349,7 +363,7 @@ L'exemple ci-dessous introduit l'utilisation de la balise de gabarit `url`.
 
 Cette balise accepte des références enregistrées par la fonction `path()` appelée dans les fichiers **urls.py** ainsi que les valeurs pour chacun des arguments associés à une vue. Elle retourne une URL qui peut être utilisée pour lier une ressource.
 
-#### Où trouver les gabarits...
+#### Où trouver les gabarits
 
 Par défaut Django ne sait pas où sont vos gabarits, vous devez lui indiquer où les trouver. Pour ce faire, vous allez ajouter le répertoire des gabarits (templates) à la variable d'environnement du projet TEMPLATES en éditant le fichier **settings.py** comme indiqué en gras ci-dessous :
 
@@ -379,7 +393,8 @@ A ce niveau, nous avons créé l'ensemble des ressources nécessaires à l'affic
 
 ![Page d'accueil en Français](index_fr_page_ok.png)
 
-> **Note :** Toutes les ressources n'ayant pas été encore créées les liens vers Tous les livres et Tous les auteurs ne fonctionnent pas encore.
+> [!NOTE]
+> Toutes les ressources n'ayant pas été encore créées les liens vers Tous les livres et Tous les auteurs ne fonctionnent pas encore.
 
 ## Défi
 
@@ -387,7 +402,8 @@ Voici deux suggestions pour tester votre connaissance de Django et des requêtes
 
 1. La bibliothèque locale dispose d'un gabarit d'origine qui inclut une section `title`. Surchargez cette section dans le gabarit index et créer un nouveau titre.
 
-    > **Note :** La section Concevoir un gabarit détaille la manière de modifier une section.
+   > [!NOTE]
+   > La section Concevoir un gabarit détaille la manière de modifier une section.
 
 2. Modifiez la vue pour disposer de décomptes pour les genres et les titres de livre qui contiennent un mot (en repectant la casse) et transmettez cela via le `context.` Pour faire cela utilisez les variables `num_books` et `num_instances_available`. Ensuite vous pourrez mettre à jour le gabarit de la page d'accueil.
 
@@ -407,21 +423,3 @@ Nous allons nous appuyer sur ces éléments pour concevoir dans le prochain chap
 - [Fonctions raccourcis de Django](https://docs.djangoproject.com/fr/2.2/topics/http/shortcuts/#django.shortcuts.render) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
-
-## Dans ce module
-
-- [Django introduction](/fr/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/fr/docs/Learn/Server-side/Django/development_environment)
-- [Django Didactique: Site web "Bibliothèque locale"](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django didactique Section 2: Créer le squelette du site web](/fr/docs/Learn/Server-side/Django/skeleton_website)
-- [Django didactique Section 3: Utilisation des modèles de données](/fr/docs/Learn/Server-side/Django/Models)
-- [Django didactique Section 4 : Site d'administration de Django](/fr/docs/Learn/Server-side/Django/Admin_site)
-- [Django didactique Section 5: Créer la page d'accueil](/fr/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/fr/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/fr/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/fr/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/fr/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/fr/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/fr/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/fr/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/fr/docs/Learn/Server-side/Django/django_assessment_blog)

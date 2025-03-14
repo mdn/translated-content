@@ -1,14 +1,6 @@
 ---
 title: Juego breakout en 2D usando Phaser
 slug: Games/Tutorials/2D_breakout_game_Phaser
-tags:
-  - 2D
-  - Principiante
-  - Canvas
-  - Juegos
-  - JavaScript
-  - Phaser
-  - Tutorial
 l10n:
   sourceCommit: e4783c03e39807e0060a2f4df3bf3962d25d8388
 ---
@@ -50,7 +42,8 @@ Como nota sobre las vías de aprendizaje - comenzar con JavaScript puro es la me
 
 Después de eso, puedes elegir cualquier framework que te guste y usarlo para tus proyectos; nosotros hemos elegido Phaser porque es un buen framework sólido, con un buen soporte y comunidad disponible, y un buen conjunto de plugins. Los frameworks aceleran el tiempo de desarrollo y ayudan a ocuparse de las partes aburridas, permitiéndote concentrarte en las cosas divertidas. Sin embargo, los frameworks no siempre son perfectos, así que si sucede algo inesperado o quieres escribir alguna funcionalidad que el framework no proporciona, necesitarás algunos conocimientos de JavaScript puro.
 
-> **Nota:** Esta serie de artículos puede utilizarse como material para talleres prácticos de desarrollo de juegos. También puedes hacer uso del [Gamedev Phaser Content Kit](https://github.com/end3r/Gamedev-Phaser-Content-Kit) basado en este tutorial si quieres dar una charla sobre desarrollo de juegos con Phaser.
+> [!NOTE]
+> Esta serie de artículos puede utilizarse como material para talleres prácticos de desarrollo de juegos. También puedes hacer uso del [Gamedev Phaser Content Kit](https://github.com/end3r/Gamedev-Phaser-Content-Kit) basado en este tutorial si quieres dar una charla sobre desarrollo de juegos con Phaser.
 
 ## Próximos pasos
 

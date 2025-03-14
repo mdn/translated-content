@@ -1,9 +1,6 @@
 ---
 title: InternalError
 slug: Web/JavaScript/Reference/Global_Objects/InternalError
-translation_of: Web/JavaScript/Reference/Global_Objects/InternalError
-original_slug: Web/JavaScript/Reference/Objets_globaux/InternalError
-browser-compat: javascript.builtins.InternalError
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -33,7 +30,7 @@ De telles erreurs se produisent généralement au dépassement d'un seuil, par e
   - : Le numéro de la ligne du fichier qui a déclenché cette erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
 - [`InternalError.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber)
   - : Le numéro de colonne de la ligne du fichier qui a déclenché cette erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`InternalError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack)
+- [`InternalError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/stack)
   - : La pile d'appels, héritée depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
 
 ## Exemples
@@ -47,7 +44,7 @@ function boucle(x) {
   if (x >= 10) {
     // "x >= 10" représente la condition d'arrêt
     return;
-  } 
+  }
   // faire des trucs
   boucle(x + 1); // l'appel récursif
 }

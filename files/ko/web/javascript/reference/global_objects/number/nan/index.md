@@ -1,18 +1,29 @@
 ---
 title: Number.NaN
 slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
-tags:
-  - JavaScript
-  - Number
-  - Property
-browser-compat: javascript.builtins.Number.NaN
 ---
 
 {{JSRef}}
 
 **`Number.NaN`** 속성은 Not-A-Number(숫자가 아님)를 나타냅니다. {{jsxref("NaN")}}과 같습니다.
 
-{{EmbedInteractiveExample("pages/js/number-nan.html")}}
+{{InteractiveExample("JavaScript Demo: Number.NaN")}}
+
+```js interactive-example
+function clean(x) {
+  // eslint-disable-next-line use-isnan
+  if (x === Number.NaN) {
+    // Can never be true
+    return null;
+  }
+  if (isNaN(x)) {
+    return 0;
+  }
+}
+
+console.log(clean(Number.NaN));
+// Expected output: 0
+```
 
 정적 속성이므로 접근하기 위해 {{jsxref("Number")}} 객체를 생성할 필요는 없습니다. (`Number.NaN` 사용)
 

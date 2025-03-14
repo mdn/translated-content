@@ -1,64 +1,54 @@
 ---
-title: 'HTMLMediaElement: timeupdate イベント'
+title: "HTMLMediaElement: timeupdate イベント"
+short-title: timeupdate
 slug: Web/API/HTMLMediaElement/timeupdate_event
+l10n:
+  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
 {{APIRef("HTMLMediaElement")}}
 
 `timeupdate` イベントは、`currentTime` 属性で示される時刻が更新されたときに発生します。
 
-イベントの頻度はシステムの負荷に依存しますが、およそ 4Hz と 66Hz との間で発生します（イベントハンドラーが実行するのに 250 ms 以上かかることはないと仮定します）。ユーザーエージェントはシステム負荷とその都度イベントを処理する平均コストに基づいて、イベントの頻度を変えることが推奨されているため、ユーザーエージェントがビデオのデコード中に快適に処理できるよりも頻繁に UI 更新が行われることはありません。
+イベントの頻度はシステムの負荷に依存しますが、およそ 4Hz と 66Hz との間で発生します（イベントハンドラーが実行するのに 250ms 以上かかることはないと仮定します）。ユーザーエージェントはシステム負荷とその都度イベントを処理する平均コストに基づいて、イベントの頻度を変えることが推奨されているため、ユーザーエージェントがビデオのデコード中に快適に処理できるよりも頻繁に UI 更新が行われることはありません。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル可能</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">対象</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">既定のアクション</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>{{domxref("GlobalEventHandlers.ontimeupdate")}}</td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("timeupdate", (event) => {});
+
+ontimeupdate = (event) => {};
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
 これらの例は、 HTMLMediaElement の `timeupdate` イベントのイベントリスナーを追加し、イベントが発生してイベントハンドラーが動作するときにメッセージを投稿します。なお、イベントの頻度はシステムの稼働状況に依存します。
 
-`addEventListener()` を使用する場合
+`addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('timeupdate', (event) => {
-  console.log('The currentTime attribute has been updated. Again.');
+video.addEventListener("timeupdate", (event) => {
+  console.log("The currentTime attribute has been updated. Again.");
 });
 ```
 
-`ontimeupdate` イベントハンドラープロパティを使用する場合
+`ontimeupdate` イベントハンドラープロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.ontimeupdate = (event) => {
-  console.log('The currentTime attribute has been updated. Again.');
+  console.log("The currentTime attribute has been updated. Again.");
 };
 ```
 
@@ -82,7 +72,6 @@ video.ontimeupdate = (event) => {
 - HTMLMediaElement {{domxref("HTMLMediaElement.canplay_event", 'canplay')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.play_event", 'play')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.pause_event", 'pause')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}} イベント

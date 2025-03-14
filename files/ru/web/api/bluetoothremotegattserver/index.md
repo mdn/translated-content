@@ -1,22 +1,14 @@
 ---
 title: BluetoothRemoteGATTServer
 slug: Web/API/BluetoothRemoteGATTServer
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTServer
-  - Web Bluetooth API
-  - Интерфейс
-  - Определение
-  - Экспериментальное
-translation_of: Web/API/BluetoothRemoteGATTServer
 ---
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 Интерфейс **`BluetoothRemoteGATTServer`**, относящийся к [Web Bluetooth API](/ru/docs/Web/API/Web_Bluetooth_API), представляет сервер GATT на удалённом устройстве.
 
-> **Примечание:** Данная страница описывает Web Bluetooth API от W3C Community Group. [`BluetoothGattServer` (Firefox OS)](/ru/docs/Archive/B2G_OS/API/BluetoothGattServer) - Bluetooth API в Firefox OS.
+> [!NOTE]
+> Данная страница описывает Web Bluetooth API от W3C Community Group. [`BluetoothGattServer` (Firefox OS)](/ru/docs/Archive/B2G_OS/API/BluetoothGattServer) - Bluetooth API в Firefox OS.
 
 ## Интерфейс
 
@@ -54,7 +46,7 @@ interface BluetoothRemoteGATTServer {
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -47,7 +47,8 @@ Web 存储标准，the Storage Standard，定义了一个通用的、共享的�
 
 如果站点或应用程序具有“**永久存储（`persistent-storage`）**”功能权限，则可以使用 {{domxref("StorageManager.persist()")}} 方法来请求将其 box 设为持久的。由于使用特性或其他度量，用户代理还可以决定使站点的存储单元持久化。“持久存储”功能的与权限相关的标志、算法和类型都设置为权限的标准默认值，只是整个源位置的权限状态必须相同，并且如果未“授予”权限状态（无论出于何种原因，访问持久性存储功能被拒绝），源站点存储单元的 box 模式总是“尽力”。
 
-> **备注：** 请参考 [使用 Permissions API](/zh-CN/docs/Web/API/Permissions_API/Using_the_Permissions_API) 以了解更多关于申请与管理权限的信息。
+> [!NOTE]
+> 请参考 [使用 Permissions API](/zh-CN/docs/Web/API/Permissions_API/Using_the_Permissions_API) 以了解更多关于申请与管理权限的信息。
 
 当清除站点存储单元时，源站的框被视为单个实体；如果用户代理需要清除它并且用户批准，则清除整个数据存储，而不是提供某种仅从单个 api 清除数据的方法。
 
@@ -66,7 +67,7 @@ User agents may use any method they choose to determine the size of origins' quo
 To determine the estimated quota and usage values for a given origin, use the {{domxref("StorageManager.estimate", "navigator.storage.estimate()")}} method, which returns a promise that, when resolved, receives a {{domxref("StorageEstimate")}} that contains these figures. For example:
 
 ```js
-navigator.storage.estimate().then(estimate => {
+navigator.storage.estimate().then((estimate) => {
   // estimate.quota 是估得的配额
   // estimate.usage 是估得的使用量，单位为 byte 比特
 });

@@ -1,7 +1,6 @@
 ---
 title: WebSocket.send()
 slug: Web/API/WebSocket/send
-browser-compat: api.WebSocket.send
 ---
 
 {{APIRef("Web Sockets API")}}
@@ -20,7 +19,7 @@ WebSocket.send("Coucou serveur !");
 
   - : Les données à envoyer au serveur. La valeur peut avoir un des types suivants :
 
-    - [`USVString`](/fr/docs/Web/API/USVString)
+    - [`USVString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)
       - : Une chaîne de caractères. Cette chaîne est ajoutée au tampon au format UTF-8 et la valeur de `bufferedAmount` est augmentée du nombre d'octets nécessaires pour représenter cette chaîne de caractères UTF-8.
     - [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
       - : Les données binaires peuvent aussi être envoyées avec un tableau typé. Son contenu binaire est mis en tampon et la valeur de `bufferedAmount` est augmentée du nombre d'octets nécessaires.
@@ -32,9 +31,9 @@ WebSocket.send("Coucou serveur !");
 
         binaire. La valeur de `bufferedAmount` est augmentée du nombre d'octets utilisés pour représenter ces données brutes.
 
-    - [`ArrayBufferView`](/fr/docs/Web/API/ArrayBufferView)
+    - [`ArrayBufferView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
 
-      - : Il est possible d'envoyer n'importe quel objet étant [un tableau typé JavaScript](/fr/docs/Web/JavaScript/Typed_arrays) sous la forme d'une
+      - : Il est possible d'envoyer n'importe quel objet étant [un tableau typé JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays) sous la forme d'une
 
         <i lang="en">frame</i>
 
@@ -52,7 +51,8 @@ WebSocket.send("Coucou serveur !");
 
     non appairés.
 
-> **Note :** Pour Gecko 6.0, l'implémentation de `send()` varie de la spécification : le moteur renvoie un booléen indiquant si la connexion est toujours ouverte (par extension, cela indique si les données ont été correctement rajoutées à la queue ou transmises). Ce comportement a été corrigé avec Gecko 8.0.
+> [!NOTE]
+> Pour Gecko 6.0, l'implémentation de `send()` varie de la spécification : le moteur renvoie un booléen indiquant si la connexion est toujours ouverte (par extension, cela indique si les données ont été correctement rajoutées à la queue ou transmises). Ce comportement a été corrigé avec Gecko 8.0.
 >
 > Avec Gecko 11.0, la prise en charge des [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) est implémentée mais pas celle pour les objets [`Blob`](/fr/docs/Web/API/Blob).
 

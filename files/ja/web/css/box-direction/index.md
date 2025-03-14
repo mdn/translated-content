@@ -5,7 +5,8 @@ slug: Web/CSS/box-direction
 
 {{CSSRef}}{{Non-standard_header}}
 
-> **警告:** これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。以前の標準であった `box-direction` は `flex-direction` に置き換えられたので、 `-moz-box-direction` は XUL でのみ使用されます。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)を参照してください。
+> [!WARNING]
+> これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。以前の標準であった `box-direction` は `flex-direction` に置き換えられたので、 `-moz-box-direction` は XUL でのみ使用されます。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)を参照してください。
 
 **`box-direction`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックスが内容を通常通りに (上または左から) 配置するか、逆方向に (下または右から) 配置するかを指定します。
 
@@ -58,9 +59,9 @@ start の反対側の端は _end_ となります。
 ```css
 .example {
   /* bottom-to-top layout */
-  -moz-box-direction: reverse;      /* Mozilla */
-  -webkit-box-direction: reverse;   /* WebKit */
-  box-direction: reverse;           /* 仕様書通り */
+  -moz-box-direction: reverse; /* Mozilla */
+  -webkit-box-direction: reverse; /* WebKit */
+  box-direction: reverse; /* 仕様書通り */
 }
 ```
 

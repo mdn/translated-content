@@ -1,12 +1,6 @@
 ---
-title: 'URIError: malformed URI sequence'
+title: "URIError: malformed URI sequence"
 slug: Web/JavaScript/Reference/Errors/Malformed_URI
-tags:
-  - Erreurs
-  - JavaScript
-  - URIError
-translation_of: Web/JavaScript/Reference/Errors/Malformed_URI
-original_slug: Web/JavaScript/Reference/Erreurs/Malformed_URI
 ---
 
 {{jsSidebar("Errors")}}
@@ -34,17 +28,17 @@ Il y a eu une erreur lors de l'encodage ou du décodage de l'URI. Un argument fo
 L'encodage permet de remplacer certains caractères par une, deux, trois voire quatre séquences d'échappement qui représente l'encodage UTF-8 du caractère. Une exception {{jsxref("URIError")}} sera levée si on tente d'encoder un caractère _surrogate_ qui ne fait pas partie d'une paire de codets :
 
 ```js example-bad
-encodeURI('\uD800');
+encodeURI("\uD800");
 // "URIError: malformed URI sequence"
 
-encodeURI('\uDFFF');
+encodeURI("\uDFFF");
 // "URIError: malformed URI sequence"
 ```
 
 En revanche, si on dispose de la paire de codets :
 
 ```js example-good
-encodeURI('\uD800\uDFFF');
+encodeURI("\uD800\uDFFF");
 // "%F0%90%8F%BF"
 ```
 
@@ -53,14 +47,14 @@ encodeURI('\uD800\uDFFF');
 Le décodage permet de remplacer chaque séquence d'échappement dans le composant encodé par le caractère qu'elle représente. S'il n'existe aucun caractère correspondant, une exception sera déclenchée :
 
 ```js example-bad
-decodeURIComponent('%E0%A4%A');
+decodeURIComponent("%E0%A4%A");
 // "URIError: malformed URI sequence"
 ```
 
 Avec la valeur d'entrée correcte, on a généralement quelque chose qui ressemble à :
 
 ```js example-good
-decodeURIComponent('JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
+decodeURIComponent("JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
 // "JavaScript_шеллы"
 ```
 

@@ -1,23 +1,13 @@
 ---
 title: String.raw()
 slug: Web/JavaScript/Reference/Global_Objects/String/raw
-tags:
-  - ECMAScript6
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Method
-  - Reference
-  - Référence(2)
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/raw
 ---
 
-{{JSRef("Global_Objects", "String")}}
+{{JSRef}}
 
 ## Сводка
 
-Статический метод **`String.raw()`** является теговой функцией для [шаблонных строк](/ru/docs/Web/JavaScript/Reference/template_strings); подобно префиксу `r` в Python или префиксу `@` в C# для строковых литералов, эта функция используется для получения необработанной строки из шаблона.
+Статический метод **`String.raw()`** является теговой функцией для [шаблонных строк](/ru/docs/Web/JavaScript/Reference/Template_literals); подобно префиксу `r` в Python или префиксу `@` в C# для строковых литералов, эта функция используется для получения необработанной строки из шаблона.
 
 ## Синтаксис
 
@@ -35,7 +25,7 @@ String.raw`templateString`
 - `...substitutions`
   - : Значения подстановок.
 - `templateString`
-  - : [Шаблонная строка](/ru/docs/Web/JavaScript/Reference/template_strings), возможно с подстановками (`${...}`).
+  - : [Шаблонная строка](/ru/docs/Web/JavaScript/Reference/Template_literals), возможно с подстановками (`${...}`).
 
 ### Выбрасываемые исключения
 
@@ -44,7 +34,7 @@ String.raw`templateString`
 
 ## Описание
 
-В большинстве случаев метод `String.raw()` используется вместе с шаблонными строками. Первый синтаксис, показанный выше, используется редко, поскольку движок JavaScript будет вызывать метод с соответствующими аргументами, подобно другим [теговым функциям](/ru/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings).
+В большинстве случаев метод `String.raw()` используется вместе с шаблонными строками. Первый синтаксис, показанный выше, используется редко, поскольку движок JavaScript будет вызывать метод с соответствующими аргументами, подобно другим [теговым функциям](/ru/docs/Web/JavaScript/Reference/Template_literals#tagged_template_strings).
 
 Метод `String.raw()` является единственной встроенной теговой функцией шаблонных строк, выступающей стандартной функцией по объединению их фрагментов. Вы и сами могли бы реализовать подобную функциональность на JavaScript.
 
@@ -53,7 +43,7 @@ String.raw`templateString`
 ### Пример: использование метода `String.raw()`
 
 ```js
-String.raw`Привет\n${2+3}!`;
+String.raw`Привет\n${2 + 3}!`;
 // 'Привет\n5!', символ после 'Привет' не является символом новой строки,
 // '\' и 'n' - это два символа.
 
@@ -64,13 +54,13 @@ String.raw`Привет\u000A!`;
 // обратные слеши будут присутствовать в выходной строке.
 // Вы можете убедиться в этом, проверив свойство .length строки.
 
-let name = 'Боб';
+let name = "Боб";
 String.raw`Привет\n${name}!`;
 // 'Привет\nБоб!', сработала подстановка.
 
 // Обычно вам не нужно вызывать метод String.raw() как функцию,
 // но никто не запрещает вам делать это:
-String.raw({ raw: 'тест' }, 0, 1, 2);
+String.raw({ raw: "тест" }, 0, 1, 2);
 // 'т0е1с2т'
 ```
 
@@ -84,6 +74,6 @@ String.raw({ raw: 'тест' }, 0, 1, 2);
 
 ## Смотрите также
 
-- [Шаблонные строки](/ru/docs/Web/JavaScript/Reference/template_strings)
+- [Шаблонные строки](/ru/docs/Web/JavaScript/Reference/Template_literals)
 - {{jsxref("Global_Objects/String", "String")}}
 - [Лексическая грамматика](/ru/docs/Web/JavaScript/Reference/Lexical_grammar)

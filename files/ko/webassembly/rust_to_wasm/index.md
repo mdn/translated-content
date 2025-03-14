@@ -1,7 +1,8 @@
 ---
 title: Rust를 WebAssembly로 컴파일하기
-slug: WebAssembly/Rust_to_wasm
+slug: WebAssembly/Rust_to_Wasm
 ---
+
 {{WebAssemblySidebar}}
 
 여러분이 Rust 코드를 가지고 있다면 WebAssembly로 컴파일 할 수 있습니다. 이 튜토리얼은 Rust 프로젝트를 컴파일하여 기존 웹 애플리케이션에서 사용하기 위해 알아야 할 모든 것을 설명합니다.
@@ -25,7 +26,8 @@ Rust와 WebAssembly를 위한 두가지 주요 사용 사례가 있습니다.
 
 [Install Rust](https://www.rust-lang.org/install.html)와 다음 설명에 따라 Rust를 설치합니다. "rustup"이라는 툴을 설치할건데 다양한 버전의 Rust를 관리할 수 있게 해줍니다. 기본적으로 최신 배포버전의 Rust가 설치됩니다. Rustup은 Rust 컴파일러인 `rustc` Rust의 표준 라이브러리 인 `rust-std`, Rust의 패키지 메니저 `cargo`및 `rust-docs` 등 유용한 문서를 설치합니다.
 
-> **참고:** 설치를 완료한 뒤 cargo의 `bin` 디렉토리가 시스템의 `PATH`에 등록되어 있어야 함에 주의하십시오. 보통은 자동으로 등록되지만, 터미널을 재시작해야 할 수도 있습니다.
+> [!NOTE]
+> 설치를 완료한 뒤 cargo의 `bin` 디렉토리가 시스템의 `PATH`에 등록되어 있어야 함에 주의하십시오. 보통은 자동으로 등록되지만, 터미널을 재시작해야 할 수도 있습니다.
 
 ### wasm-pack
 
@@ -97,7 +99,7 @@ npm 계정을 만드려면 [npm 가입 페이지](https://www.npmjs.com/signup) 
 
 `src/lib.rs`에 다음 코드를 적어봅시다.
 
-```rs
+```rust
     use wasm_bindgen::prelude::*;
 
     #[wasm_bindgen]
@@ -117,7 +119,7 @@ npm 계정을 만드려면 [npm 가입 페이지](https://www.npmjs.com/signup) 
 
 첫 부분은 다음과 같습니다.
 
-```rs
+```rust
     use wasm_bindgen::prelude::*;
 ```
 
@@ -137,7 +139,7 @@ Rust에서 라이브러리는 크레이트(crate)라고 합니다.
 
 다음 부분은 이렇게 되어있을 것입니다.
 
-```rs
+```rust
     #[wasm_bindgen]
     extern {
         pub fn alert(s: &str);
@@ -156,7 +158,7 @@ JavaScript 함수를 호출하고 싶을 때면 언제든지 이들을 파일에
 
 마지막 부분은 여기 있습니다.
 
-```rs
+```rust
     #[wasm_bindgen]
     pub fn greet(name: &str) {
         alert(&format!("Hello, {}!", name));
@@ -185,6 +187,7 @@ JavaScript 함수를 호출하고 싶을 때면 언제든지 이들을 파일에
     description = "A sample project with wasm-pack"
     license = "MIT/Apache-2.0"
     repository = "https://github.com/yourgithubusername/hello-wasm"
+    edition = "2018"
 
     [lib]
     crate-type = ["cdylib"]
@@ -247,19 +250,19 @@ npm에 우리의 새 패키지를 배포해봅시다.
 `package.json` 이라는 이름의 새 파일을 만들어, 다음 코드를 작성합니다.
 
 ```json
-    {
-      "scripts": {
-        "serve": "webpack-dev-server"
-      },
-      "dependencies": {
-        "@mynpmusername/hello-wasm": "^0.1.0"
-      },
-      "devDependencies": {
-        "webpack": "^4.25.1",
-        "webpack-cli": "^3.1.2",
-        "webpack-dev-server": "^3.1.10"
-      }
-    }
+{
+  "scripts": {
+    "serve": "webpack-dev-server"
+  },
+  "dependencies": {
+    "@mynpmusername/hello-wasm": "^0.1.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
 ```
 
 `dependencies` 섹션에서 `@` 뒤에 실제 npm 계정명을 넣어주세요.
@@ -267,39 +270,39 @@ npm에 우리의 새 패키지를 배포해봅시다.
 그 다음은 Webpack을 설정해야 합니다. `webpack.config.js` 파일을 만든 뒤, 다음 코드를 작성합니다.
 
 ```js
-    const path = require('path');
-    module.exports = {
-      entry: "./index.js",
-      output: {
-        path: path.resolve(__dirname, "dist"),
-        filename: "index.js",
-      },
-      mode: "development"
-    };
+const path = require("path");
+module.exports = {
+  entry: "./index.js",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "index.js",
+  },
+  mode: "development",
+};
 ```
 
 그리고 HTML 파일도 필요합니다. `index.html`을 만들고, 다음 내용을 작성합니다.
 
 ```html
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>hello-wasm example</title>
-      </head>
-      <body>
-        <script src="./index.js"></script>
-      </body>
-    </html>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>hello-wasm example</title>
+  </head>
+  <body>
+    <script src="./index.js"></script>
+  </body>
+</html>
 ```
 
 마지막으로, HTML에서 참조되는 `index.js`를 만들어 다음 내용을 작성합니다.
 
 ```js
-    const js = import("./node_modules/@yournpmusername/hello-wasm/hello_wasm.js");
-    js.then(js => {
-      js.greet("WebAssembly");
-    });
+const js = import("./node_modules/@yournpmusername/hello-wasm/hello_wasm.js");
+js.then((js) => {
+  js.greet("WebAssembly");
+});
 ```
 
 npm 계정명을 한번 더 입력해야 합니다.
@@ -309,14 +312,14 @@ npm 계정명을 한번 더 입력해야 합니다.
 파일들을 모두 만들었으니, 한번 보도록 합시다.
 
 ```bash
-    npm install
-    npm run serve
+npm install
+npm run serve
 ```
 
-이것은 간단한 웹 서버를 시작합니다. [http://localhost:8080](http://localhost:8080/)을 열면 화면에 `Hello, WebAssembly!` 라고 쓰여진 alert box가 나타납니다. 우리는 성공적으로 JavaScript로부터 Rust를, Rust로부터 JavaScript를 호출하였습니다.
+이것은 간단한 웹 서버를 시작합니다. `http://localhost:8080` 을 열면 화면에 `Hello, WebAssembly!` 라고 쓰여진 alert box가 나타납니다. 우리는 성공적으로 JavaScript로부터 Rust를, Rust로부터 JavaScript를 호출하였습니다.
 
 ## 결론
 
 이것이 튜토리얼의 끝입니다. 우리는 당신이 이것이 쓸모있다는 것을 알게 되었길 기대합니다.
 
-여기에 많은 흥미로운 작업이 진행되고 있습니다. 이것을 좀 더 낫게 만들고 싶다면, [the Rust Webassembly Working Group](http://fitzgeraldnick.com/2018/02/27/wasm-domain-working-group.html)을 확인해보세요.
+여기에 많은 흥미로운 작업이 진행되고 있습니다. 이것을 좀 더 낫게 만들고 싶다면, [the Rust Webassembly Working Group](https://fitzgeraldnick.com/2018/02/27/wasm-domain-working-group.html)을 확인해보세요.

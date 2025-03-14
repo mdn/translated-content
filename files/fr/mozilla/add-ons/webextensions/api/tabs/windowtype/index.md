@@ -1,20 +1,9 @@
 ---
 title: tabs.WindowType
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/WindowType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - WindowType
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/WindowType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type de fenêtre qui héberge cet onglet.
 
@@ -27,15 +16,15 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont:
 - **"panel"**
 - **"devtools"**
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.WindowType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

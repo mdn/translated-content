@@ -1,25 +1,32 @@
 ---
 title: 나머지 (%)
 slug: Web/JavaScript/Reference/Operators/Remainder
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Remainder
-browser-compat: javascript.operators.remainder
 ---
 
 {{jsSidebar("Operators")}}
 
 나머지 연산자(`%`)는 왼쪽 피연산자를 오른쪽 피연산자로 나눴을 때의 나머지를 구합니다. 부호는 항상 왼쪽 피연산자의 부호를 따릅니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-remainder.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Remainder operator")}}
+
+```js interactive-example
+console.log(13 % 5);
+// Expected output: 3
+
+console.log(-13 % 5);
+// Expected output: -3
+
+console.log(4 % 2);
+// Expected output: 0
+
+console.log(-4 % 2);
+// Expected output: -0
+```
 
 ## 구문
 
 ```js
-x % y
+x % y;
 ```
 
 ## 예제
@@ -27,33 +34,33 @@ x % y
 ### 양의 피제수의 나머지
 
 ```js
- 12 % 5  //  2
-  1 % -2 //  1
-  1 % 2  //  1
-  2 % 3  //  2
-5.5 % 2  // 1.5
+12 % 5; //  2
+1 % -2; //  1
+1 % 2; //  1
+2 % 3; //  2
+5.5 % 2; // 1.5
 ```
 
 ### 음의 피제수의 나머지
 
 ```js
--12 % 5 // -2
--1 % 2  // -1
--4 % 2  // -0
+(-12 % 5) - // -2
+  (1 % 2) - // -1
+  (4 % 2); // -0
 ```
 
 ### NaN의 나머지
 
 ```js
-NaN % 2 // NaN
+NaN % 2; // NaN
 ```
 
 ### Infinity의 나머지
 
 ```js
-Infinity % 2 // NaN
-Infinity % 0 // NaN
-Infinity % Infinity // NaN
+Infinity % 2; // NaN
+Infinity % 0; // NaN
+Infinity % Infinity; // NaN
 ```
 
 ## 명세

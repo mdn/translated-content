@@ -3,11 +3,12 @@ title: KeyboardEvent
 slug: Web/API/KeyboardEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 Los objetos **`KeyboardEvent`** describen una interacción del usuario con el teclado. Cada evento describe una tecla; el tipo de evento(`keydown`, `keypress`, o `keyup`) identifica el tipo de acción realizada.
 
-> **Nota:** El `KeyboardEvent` solo indica qué está pasando en una tecla. Cuando necesite manejar la entrada de texto, use el evento [`input`](/es/docs/DOM/DOM_event_reference/input) de HTML5 en su lugar. Por ejemplo, si el usuario introduce texto desde un sistema de tipo manuscrito como una tableta, los eventos para teclas no podrán ser lanzados.
+> [!NOTE]
+> El `KeyboardEvent` solo indica qué está pasando en una tecla. Cuando necesite manejar la entrada de texto, use el evento [`input`](/es/docs/Web/API/Element/input_event) de HTML5 en su lugar. Por ejemplo, si el usuario introduce texto desde un sistema de tipo manuscrito como una tableta, los eventos para teclas no podrán ser lanzados.
 
 ## Constructor
 
@@ -39,15 +40,18 @@ _Esta interfaz también hereda propiedades de sus padres {{domxref("UIEvent")}} 
 
   - : Devuelve un {{domxref("DOMString")}} representando el valor del carácter de la tecla. Si la tecla corresponde con un carácter imprimible, este valor es una cadena Unicode no vacía que contiene este carácter. Si la tecla no tiene una representación imprimible, esta es una cadena vacía.
 
-    > **Nota:** Si la tecla es usada como una macro que inserta múltiples caracteres, If the key is used as a macro that inserts multiple characters, el valor de este atributo es la cadena completa, no solo el primer carácter.
+    > [!NOTE]
+    > Si la tecla es usada como una macro que inserta múltiples caracteres, If the key is used as a macro that inserts multiple characters, el valor de este atributo es la cadena completa, no solo el primer carácter.
 
-    > **Advertencia:** Esta propiedad ha sido eliminada de los eventos del DOM de nivel 3. Esta es únicamente soportada en IE.
+    > [!WARNING]
+    > Esta propiedad ha sido eliminada de los eventos del DOM de nivel 3. Esta es únicamente soportada en IE.
 
 - {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}}{{Readonlyinline}}
 
   - : Returns an `unsigned long` representing the Unicode reference number of the key; this attribute is used only by the `keypress` event. For keys whose `char` attribute contains multiple characters, this is the Unicode value of the first character in that attribute. In Firefox 26 this returns codes for printable characters.
 
-    > **Advertencia:** This attribute is deprecated; you should use `key` instead, if available.
+    > [!WARNING]
+    > This attribute is deprecated; you should use `key` instead, if available.
 
 - {{domxref("KeyboardEvent.code")}} {{Readonlyinline}}
   - : Returns a {{domxref("DOMString")}} with the code value of the key represented by the event.
@@ -63,13 +67,15 @@ _Esta interfaz también hereda propiedades de sus padres {{domxref("UIEvent")}} 
 
   - : Returns an `unsigned long` representing a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
 
-    > **Advertencia:** This attribute is deprecated; you should use `key` instead, if available.
+    > [!WARNING]
+    > This attribute is deprecated; you should use `key` instead, if available.
 
 - {{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}
 
   - : Returns a {{domxref("DOMString")}} representing a locale string indicating the locale the keyboard is configured for. This may be the empty string if the browser or device doesn't know the keyboard's locale.
 
-    > **Nota:** This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.
+    > [!NOTE]
+    > This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.
 
 - {{domxref("KeyboardEvent.location")}} {{Readonlyinline}}
   - : Returns an `unsigned long` representing the location of the key on the keyboard or other input device.
@@ -87,7 +93,8 @@ _Esta interfaz también hereda propiedades de sus padres {{domxref("UIEvent")}} 
 
   - : Returns an `unsigned long` representing a system and implementation dependent numeric code identifying the unmodified value of the pressed key; this is usually the same as `keyCode`.
 
-    > **Advertencia:** This attribute is deprecated; you should use `key` instead, if available.
+    > [!WARNING]
+    > This attribute is deprecated; you should use `key` instead, if available.
 
 ## Notes
 
@@ -101,7 +108,7 @@ There are `keydown`, `keypress`, and `keyup` events. For most keys, Gecko dispat
 
 Certain keys toggle the state of an LED indicator, such as Caps Lock, Num Lock, and Scroll Lock. On Windows and Linux, these keys dispatch only the `keydown` and `keyup` events. Note that on Linux, Firefox 12 and earlier also dispatched the `keypress` event for these keys.
 
-On Mac, however, Caps Lock dispatches only the `keydown` event due to a platform event model limitation. Num Lock had been supported on old MacBook (2007 model and older) but Mac hasn't supported Num Lock feature even on external keyboards in these days. On the old MacBook which has Num Lock key, Num Lock doesn't cause any key events. And Gecko supports Scroll Lock key if an external keyboard which has F14 is connected. However, it generates `keypress` event. This inconsistent behavior is a bug; see {{bug(602812)}}.
+On Mac, however, Caps Lock dispatches only the `keydown` event due to a platform event model limitation. Num Lock had been supported on old MacBook (2007 model and older) but Mac hasn't supported Num Lock feature even on external keyboards in these days. On the old MacBook which has Num Lock key, Num Lock doesn't cause any key events. And Gecko supports Scroll Lock key if an external keyboard which has F14 is connected. However, it generates `keypress` event. This inconsistent behavior is a bug; see [Error 602812 en Firefox](https://bugzil.la/602812).
 
 ### Auto-repeat handling
 
@@ -187,6 +194,6 @@ function metaKeyUp (event) {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.KeyboardEvent")}}
+{{Compat}}

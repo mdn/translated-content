@@ -1,12 +1,17 @@
 ---
-title: First paint
+title: 首次绘制
 slug: Glossary/First_paint
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-**First Paint**，是[Paint Timing API](/zh-CN/docs/)的一部分，是页面导航与浏览器将该网页的第一个像素渲染到屏幕上所用的中间时，渲染是任何与输入网页导航前的屏幕上的内容不同的内容。它回答了“发生了什么？”这个问题。
+{{GlossarySidebar}}
 
-## 另请参看
+**首次绘制**是从导航开始到浏览器首次将像素渲染到屏幕上的时间，渲染任何与 [body](/zh-CN/docs/Web/API/Document/body) 的默认[背景颜色](/zh-CN/docs/Web/CSS/background-color)不同的内容。这是页面加载中的第一个关键时刻，回答了“浏览器是否开始渲染页面？”的问题。
 
-- [First meaningful paint](/zh-CN/docs/Glossary/first_meaningful_paint)
-- [First contentful paint](/zh-CN/docs/Glossary/First_contentful_paint)
-- [Paint Timing API](/zh-CN/docs/)
+## 参见
+
+- [首次内容绘制](/zh-CN/docs/Glossary/First_contentful_paint)
+- [`PerformancePaintTiming`](/zh-CN/docs/Web/API/PerformancePaintTiming)
+- [最大内容绘制](/zh-CN/docs/Glossary/Largest_contentful_paint)
+- [首次有效绘制](/zh-CN/docs/Glossary/First_meaningful_paint)

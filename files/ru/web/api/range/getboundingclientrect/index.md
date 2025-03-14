@@ -1,10 +1,9 @@
 ---
 title: Range.getBoundingClientRect
 slug: Web/API/Range/getBoundingClientRect
-translation_of: Web/API/Range/getBoundingClientRect
 ---
 
-{{ ApiRef("Range") }}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 Метод **`Range.getBoundingClientRect()`** возвращает объект {{ domxref("ClientRect") }}, соответствующий фрагменту документа, на основе которого создан объект Range; это прямоугольник, непосредственно обрамляющий объединение прямоугольников для каждого элемента фрагмента документа.
 
@@ -22,17 +21,14 @@ range.selectNode(document.getElementsByTagName("div").item(0));
 rect = range.getBoundingClientRect();
 ```
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                                                     | Статус                           | Комментарий            |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------- |
-| {{SpecName('CSSOM View', '#dom-range-getboundingclientrect', 'Range.getBoundingClientRect()')}} | {{Spec2('CSSOM View')}} | Initial specification. |
+{{Specifications}}
 
-## Поддержка браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [The DOM interfaces index](/ru/docs/DOM/DOM_Reference)
--
+- [The DOM interfaces index](/ru/docs/Web/API/Document_Object_Model)

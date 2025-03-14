@@ -1,15 +1,9 @@
 ---
 title: Utilizando texturas en WebGL
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
-tags:
-  - Texturas
-  - Tutorial
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
-original_slug: Web/API/WebGL_API/Tutorial/Wtilizando_texturas_en_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 Ahora que nuestro programa de prueba tiene un cubo, asignemos una textura en lugar de tener sus caras de un color solido.
 
@@ -17,7 +11,8 @@ Ahora que nuestro programa de prueba tiene un cubo, asignemos una textura en lug
 
 La primera cosa que debemos hacer es añadir el codigo para cargar nuestra textura. en nuestro caso, estaremos usando una unica textura, asignada en las seis caras de nuestro cubo rotador, pero la misma tecnica puede ser utilizada para cualquier cantidad de texturas.
 
-> **Nota:** Es importante señalar que la carga de texturas sigue [reglas de dominio-cruzado](/es/docs/Web/HTTP/Access_control_CORS); Es decir, sólo puede cargar texturas de sitios para los que su contenido tiene aprobación de CORS. Vea las texturas entre dominios a continuación para más detalles.
+> [!NOTE]
+> Es importante señalar que la carga de texturas sigue [reglas de dominio-cruzado](/es/docs/Web/HTTP/CORS); Es decir, sólo puede cargar texturas de sitios para los que su contenido tiene aprobación de CORS. Vea las texturas entre dominios a continuación para más detalles.
 
 El codigo que carga la textura se ve como esto:
 
@@ -25,15 +20,21 @@ El codigo que carga la textura se ve como esto:
 function initTextures() {
   cubeTexture = gl.createTexture();
   cubeImage = new Image();
-  cubeImage.onload = function() { handleTextureLoaded(cubeImage, cubeTexture); }
-  cubeImage.src = 'cubetexture.png';
+  cubeImage.onload = function () {
+    handleTextureLoaded(cubeImage, cubeTexture);
+  };
+  cubeImage.src = "cubetexture.png";
 }
 
 function handleTextureLoaded(image, texture) {
   gl.bindTexture(gl.TEXTURE_2D, texture);
   gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST);
+  gl.texParameteri(
+    gl.TEXTURE_2D,
+    gl.TEXTURE_MIN_FILTER,
+    gl.LINEAR_MIPMAP_NEAREST,
+  );
   gl.generateMipmap(gl.TEXTURE_2D);
   gl.bindTexture(gl.TEXTURE_2D, null);
 }
@@ -43,7 +44,8 @@ La rutina `initTextures()` comienza por crear el GL texture cubeTexture llamando
 
 Para realmente crear la textura, especificamos que la nueva textura es la textura actual en la que queremos operar vinculándola a gl.TEXTURE_2D. Despues de esto, la imagen cargada es pasada a {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} para escribir la informacion de la imagen en la textura.
 
-> **Nota:** El alto y hancho de las texturas deben, en la mayoría de las circunstancias, ser una potencia de dos píxeles (es decir, 1, 2, 4, 8, 16, etc.) en cada dimensión. Para la excepción, vea la sección: ["Texturas no potencia de dos"](/es/docs/Web/WebGL/Using_textures_in_WebGL#Non_power-of-two_textures), a continuación.
+> [!NOTE]
+> El alto y hancho de las texturas deben, en la mayoría de las circunstancias, ser una potencia de dos píxeles (es decir, 1, 2, 4, 8, 16, etc.) en cada dimensión. Para la excepción, vea la sección: ["Texturas no potencia de dos"](#non_power-of-two_textures), a continuación.
 
 Las siguientes dos líneas setean el filtrado para la textura; Esto controla cómo se filtra la imagen mientras se escala. En este caso estamos usando linear filtering cuando escala la imagen, y mipmap cuando se hace mas pequeña. Entonces el mipmap es generado llamando {{domxref("WebGLRenderingContext.generateMipMap()", "generateMipMap()")}}, Y terminamos diciéndole a WebGL que hemos terminado de manipular la textura vinculando null a gl.TEXTURE_2D.
 
@@ -80,39 +82,24 @@ gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesTextureCoordBuffer);
 
 var textureCoordinates = [
   // Front
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0,
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
   // Back
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0,
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
   // Top
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0,
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
   // Bottom
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0,
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
   // Right
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0,
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
   // Left
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
 ];
 
-gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(textureCoordinates),
-              gl.STATIC_DRAW);
+gl.bufferData(
+  gl.ARRAY_BUFFER,
+  new Float32Array(textureCoordinates),
+  gl.STATIC_DRAW,
+);
 ```
 
 Primeramente, este codigo crea un GL buffer en el cual almacenaremos las coordenadas de la textura para cada cara, luego enlazamos ese buffer como el array en el cual escribiremos.
@@ -123,12 +110,12 @@ Una vez que hemos seteado la matriz de mapeo de textura, pasamos la matriz al b�
 
 ## Actualizando los shaders
 
-El shader -- y el código que inicializa los shaders -- también necesita ser actualizado para utilizar la textura en vez de un color solido.
+El shader — y el código que inicializa los shaders — también necesita ser actualizado para utilizar la textura en vez de un color solido.
 
 Primero, echemos un vistazo a un cambio muy sencillo que se necesita en initShaders():
 
 ```js
-textureCoordAttribute = gl.getAttribLocation(shaderProgram, 'aTextureCoord');
+textureCoordAttribute = gl.getAttribLocation(shaderProgram, "aTextureCoord");
 gl.enableVertexAttribArray(textureCoordAttribute);
 gl.vertexAttribPointer(texCoordAttribute, 2, gl.FLOAT, false, 0, 0);
 ```
@@ -185,29 +172,32 @@ El código para mapear colores a la textura se ha ido, sustituido por esto:
 ```js
 gl.activeTexture(gl.TEXTURE0);
 gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
-gl.uniform1i(gl.getUniformLocation(shaderProgram, 'uSampler'), 0);
+gl.uniform1i(gl.getUniformLocation(shaderProgram, "uSampler"), 0);
 ```
 
 GL proporciona 32 registros de textura; La primera de ellas es gl.TEXTURE0. Vincularemos nuestra textura previamente cargada a ese registro, a continuación, establecremos el shader sampler uSampler (especificado en el shader) para utilizar esa textura.
 
 En este punto, el cubo giratorio debe estar listo.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample6/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample6/index.html', 670, 510) }}
 
-[Ver el código completo](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample6) | [Abrir esta demo en una nueva pestaña](http://mdn.github.io/webgl-examples/tutorial/sample6/)
+[Ver el código completo](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample6) | [Abrir esta demo en una nueva pestaña](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample6/)
 
 ## Texturas entre dominios
 
-La carga de texturas WebGL esta sujeta a controles de acceso entre dominios. Para que su contenido cargue una textura de otro dominio, La aprobacion CORS debe ser obtenida. Ver [control de acceso HTTP](/es/docs/Web/HTTP/Access_control_CORS) para mas detalles sobre CORS.
+La carga de texturas WebGL esta sujeta a controles de acceso entre dominios. Para que su contenido cargue una textura de otro dominio, La aprobacion CORS debe ser obtenida. Ver [control de acceso HTTP](/es/docs/Web/HTTP/CORS) para mas detalles sobre CORS.
 
-Ver este articulo [hacks.mozilla.org](http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) para una explicacion de como usar imágenes CORS-approved como texturas WebGL , con un [ejemplo auto-contenido](http://people.mozilla.org/~bjacob/webgltexture-cors-js.html).
+Ver este articulo [hacks.mozilla.org](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) para una explicacion de como usar imágenes CORS-approved como texturas WebGL , con un [ejemplo auto-contenido](https://people.mozilla.org/~bjacob/webgltexture-cors-js.html).
 
-> **Nota:** El soporte CORS para texturas WebGL y el atributo crossOrigin para elementos de imagen se implementan en {{Gecko ("8.0")}}.
+> [!NOTE]
+> El soporte CORS para texturas WebGL y el atributo crossOrigin para elementos de imagen se implementan en Gecko 8.0.
 
 Canvas 2D contaminados (Solo lectura) no pueden ser utilizados como texturas WebGL. una 2D {{ HTMLElement("canvas") }} se convierte en contaminada, por ejemplo, cuando una imagen de dominio cruzado (cross-domain) es dibujada en el.
 
-> **Nota:** El soporte de CORS para Canvas 2D drawImage se implementa en {{Gecko ("9.0")}}. Esto significa que el uso de una imagen de dominio cruzado con aprobación de CORS ya no pinta el lienzo 2D, por lo que el lienzo 2D sigue siendo utilizable como fuente de una textura WebGL.
+> [!NOTE]
+> El soporte de CORS para Canvas 2D drawImage se implementa en Gecko 9.0. Esto significa que el uso de una imagen de dominio cruzado con aprobación de CORS ya no pinta el lienzo 2D, por lo que el lienzo 2D sigue siendo utilizable como fuente de una textura WebGL.
 
-> **Nota:** El soporte de CORS para videos de dominio cruzado y el atributo de crossorigin para elementos {{HTMLElement("video")}} se implementa en {{Gecko ("12.0")}}.
+> [!NOTE]
+> El soporte de CORS para videos de dominio cruzado y el atributo de crossorigin para elementos {{HTMLElement("video")}} se implementa en Gecko 12.0.
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

@@ -1,19 +1,6 @@
 ---
 title: CORS errors
 slug: Web/HTTP/CORS/Errors
-tags:
-  - CORS
-  - Errors
-  - HTTP
-  - HTTPS
-  - Messages
-  - NeedsTranslation
-  - Same-origin
-  - Security
-  - TopicStub
-  - console
-  - troubleshooting
-translation_of: Web/HTTP/CORS/Errors
 ---
 
 {{HTTPSidebar}}
@@ -33,10 +20,10 @@ origin 정책([same-origin policy](/ko/docs/Web/Security/Same-origin_policy))을
 
 CORS 설정 이슈를 근본적으로 이해하려면 어떤 요청이 문제이고 왜 문제인지를 파악할 필요가 있습니다. 다음 단계들을 따라하면 도움이 될 것입니다.
 
-1. 웹사이트나 웹앱으로 이동하여 [Developer Tools](/ko/docs/Tools)을 여세요.
-2. 실패한 요청을 재현하고 나서 CORS 위반 에러 메시지가 떴다면 [console](/ko/docs/Tools/Web_Console)을 확인하세요. 메시지는 다음과 같을 겁니다:
+1. 웹사이트나 웹앱으로 이동하여 [Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)을 여세요.
+2. 실패한 요청을 재현하고 나서 CORS 위반 에러 메시지가 떴다면 [console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)을 확인하세요. 메시지는 다음과 같을 겁니다:
 
-![Firefox console showing CORS error](https://mdn.mozillademos.org/files/16050/cors-error2.png)
+![Firefox console showing CORS error](cors-error2.png)
 
 에러 메시지 내용은 다음과 비슷할 수 있습니다.
 
@@ -46,7 +33,7 @@ reading the remote resource at https://some-url-here. (Reason:
 additional information here).
 ```
 
-> **참고:** **Note:**보안상의 이유로, CORS 요청에서 정확히 무엇을 위반했는지에 대한 사항은 _자바스크립트 코드상에서 사용할 수 없습니다._ 코드상에서 알 수 있는 것은 에러가 발생했다는 것 뿐입니다.
+> **참고:** **Note:**보안상의 이유로, CORS 요청에서 정확히 무엇을 위반했는지에 대한 사항은 _JavaScript 코드상에서 사용할 수 없습니다._ 코드상에서 알 수 있는 것은 에러가 발생했다는 것 뿐입니다.
 > 정확히 무엇이 잘못됐는지 파악하려면 브라우저 콘솔을 살피는 수밖에 없습니다.
 
 ## CORS 에러 메시지
@@ -56,37 +43,37 @@ Firefox 콘솔은 CORS에 의해 요청이 실패했을 때 메시지를 출력�
 
 - [Reason: CORS disabled](/ko/docs/Web/HTTP/CORS/Errors/CORSDisabled)
 - [Reason: CORS request did not succeed](/ko/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed)
-- [Reason: CORS header ‘Origin’ cannot be
+- [Reason: CORS header 'Origin' cannot be
   added](/ko/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded)
 - [Reason: CORS request external redirect
   not allowed](/ko/docs/Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed)
 - [Reason: CORS request not http](/ko/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp)
 - [Reason: CORS header
-  ‘Access-Control-Allow-Origin’ missing](/ko/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin)
+  'Access-Control-Allow-Origin' missing](/ko/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin)
 - [Reason: CORS header
-  ‘Access-Control-Allow-Origin’ does not match ‘xyz’](/ko/docs/Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin)
+  'Access-Control-Allow-Origin' does not match 'xyz'](/ko/docs/Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin)
 - [Reason: Credential is not supported if the
-  CORS header ‘Access-Control-Allow-Origin’ is ‘\*’](/ko/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials)
+  CORS header 'Access-Control-Allow-Origin' is '\*'](/ko/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials)
 - [Reason: Did not find method in CORS header
-  ‘Access-Control-Allow-Methods’](/ko/docs/Web/HTTP/CORS/Errors/CORSMethodNotFound)
-- [Reason: expected ‘true’ in CORS header
-  ‘Access-Control-Allow-Credentials’](/ko/docs/Web/HTTP/CORS/Errors/CORSMissingAllowCredentials)
+  'Access-Control-Allow-Methods'](/ko/docs/Web/HTTP/CORS/Errors/CORSMethodNotFound)
+- [Reason: expected 'true' in CORS header
+  'Access-Control-Allow-Credentials'](/ko/docs/Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials)
 - [Reason: CORS preflight channel did not
   succeed](/ko/docs/Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed)
-- [Reason: invalid token ‘xyz’ in CORS header
-  ‘Access-Control-Allow-Methods’](/ko/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod)
-- [Reason: invalid token ‘xyz’ in CORS header
-  ‘Access-Control-Allow-Headers’](/ko/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowHeader)
-- [Reason: missing token ‘xyz’ in CORS
-  header ‘Access-Control-Allow-Headers’ from CORS preflight channel](/ko/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight)
+- [Reason: invalid token 'xyz' in CORS header
+  'Access-Control-Allow-Methods'](/ko/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod)
+- [Reason: invalid token 'xyz' in CORS header
+  'Access-Control-Allow-Headers'](/ko/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowHeader)
+- [Reason: missing token 'xyz' in CORS
+  header 'Access-Control-Allow-Headers' from CORS preflight channel](/ko/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight)
 - [Reason: Multiple CORS header
-  ‘Access-Control-Allow-Origin’ not allowed](/ko/docs/Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed)
+  'Access-Control-Allow-Origin' not allowed](/ko/docs/Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed)
 
 ## 더보기
 
 - Glossary: {{Glossary("CORS")}}
 - [CORS introduction](/ko/docs/Web/HTTP/CORS)
-- [Server-side CORS settings](/ko/docs/Web/HTTP/Server-Side_Access_Control)
+- [Server-side CORS settings](/ko/docs/Web/HTTP/CORS)
 - [CORS enabled image](/ko/docs/Web/HTML/CORS_enabled_image)
-- [CORS settings attributes](/ko/docs/Web/HTML/CORS_settings_attributes)
+- [CORS settings attributes](/ko/docs/Web/HTML/Attributes/crossorigin)
 - <https://www.test-cors.org> – page to test CORS requests

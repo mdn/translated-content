@@ -10,7 +10,7 @@ slug: Web/API/DOMPointReadOnly/toJSON
 ## 構文
 
 ```js
-toJSON()
+toJSON();
 ```
 
 ### 引数

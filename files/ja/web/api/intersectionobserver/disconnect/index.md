@@ -1,6 +1,9 @@
 ---
-title: IntersectionObserver.disconnect()
+title: "IntersectionObserver: disconnect() メソッド"
+short-title: disconnect()
 slug: Web/API/IntersectionObserver/disconnect
+l10n:
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{APIRef("Intersection Observer API")}}
@@ -9,8 +12,8 @@ slug: Web/API/IntersectionObserver/disconnect
 
 ## 構文
 
-```
-intersectionObserver.disconnect();
+```js-nolint
+disconnect()
 ```
 
 ### 引数
@@ -19,7 +22,7 @@ intersectionObserver.disconnect();
 
 ### 返値
 
-`undefined`。
+なし ({{jsxref("undefined")}})。
 
 ## 仕様書
 
@@ -27,7 +30,7 @@ intersectionObserver.disconnect();
 
 ## ブラウザーの互換性
 
-{{Compat("api.IntersectionObserver.disconnect")}}
+{{Compat}}
 
 ## 関連情報
 

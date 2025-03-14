@@ -1,11 +1,6 @@
 ---
 title: font-variation-settings
 slug: Web/CSS/font-variation-settings
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/font-variation-settings
 ---
 
 {{CSSRef}}
@@ -16,9 +11,11 @@ La propriété CSS **`font-variation-settings`** permet de contrôler les caract
 
 Cette propriété fonctionne à un niveau plus bas que {{cssxref("font-feature-settings")}} qui permet de définir les valeurs et les étiquettes (_tags_) pour les caractéristiques des polices.
 
-> **Note :** Si possible, les auteurs web devraient utiliser d'autres méthodes pour contrôler l'affichage des polices de caractères et notamment la propriété raccourcie {{cssxref("font-variant")}} ou une des propriétés détaillée associée. Cette propriété est une fonctionnalité de bas niveau destinée à gérer les cas spécifiques pour lesquels il est autrement impossible d'activer ou de paramétrer une caractéristique OpenType existante.
+> [!NOTE]
+> Si possible, les auteurs web devraient utiliser d'autres méthodes pour contrôler l'affichage des polices de caractères et notamment la propriété raccourcie {{cssxref("font-variant")}} ou une des propriétés détaillée associée. Cette propriété est une fonctionnalité de bas niveau destinée à gérer les cas spécifiques pour lesquels il est autrement impossible d'activer ou de paramétrer une caractéristique OpenType existante.
 
-> **Note :** Les caractéristiques définies avec `font-variation-settings` l'emporteront sur celles définies par les autres propriétés relatives aux polices (ex. `font-weight`), où qu'elles soient dans la cascade. Pour certains navigateurs, cela se vérifie uniquement lorsque la déclaration `@font-face` inclut un intervalle `font-weight`.
+> [!NOTE]
+> Les caractéristiques définies avec `font-variation-settings` l'emporteront sur celles définies par les autres propriétés relatives aux polices (ex. `font-weight`), où qu'elles soient dans la cascade. Pour certains navigateurs, cela se vérifie uniquement lorsque la déclaration `@font-face` inclut un intervalle `font-weight`.
 
 ## Syntaxe
 
@@ -97,11 +94,13 @@ Voici la liste des axes enregistrés et les propriétés CSS correspondantes, qu
 
 Les axes spécifiques peuvent correspondre à n'importe quel axe que le concepteur de la police souhaite faire varier (ce peut par exemple être la hauteur des hampes et des jambages, la taille des empattements ou tout autre chose). N'importe quel axe peut être utilisé tant qu'il a une étiquette unique sur quatre caractères. Il est possible que, si des axes spécifiques deviennent majoritairement présents, ils soient intégrés parmi les axes enregistrés.
 
-> **Note :** Les étiquettes des axes enregistrés sont écrits en minuscules et les axes spécifiques doivent être écrits en majuscules. On notera que rien n'oblige à suivre cette règle et qu'il est tout à fait possible que des concepteurs de polices donnent des étiquettes en minuscules à des axes spécifiques. Quoiqu'il en soit, on retiendra que les étiquettes des axes sont sensibles à la casse.
+> [!NOTE]
+> Les étiquettes des axes enregistrés sont écrits en minuscules et les axes spécifiques doivent être écrits en majuscules. On notera que rien n'oblige à suivre cette règle et qu'il est tout à fait possible que des concepteurs de polices donnent des étiquettes en minuscules à des axes spécifiques. Quoiqu'il en soit, on retiendra que les étiquettes des axes sont sensibles à la casse.
 
 ## Exemples
 
-> **Attention :** Afin de pouvoir utiliser les polices variables, votre système d'exploitation doit être à jour et votre navigateur doit prendre en charge ces fonctionnalités. Ainsi, les systèmes basés sur Linux requièrent la dernière version de Linux Freetype et les systèmes macOS antérieurs à 10.13 ne prennent pas en charge les polices variables.
+> [!WARNING]
+> Afin de pouvoir utiliser les polices variables, votre système d'exploitation doit être à jour et votre navigateur doit prendre en charge ces fonctionnalités. Ainsi, les systèmes basés sur Linux requièrent la dernière version de Linux Freetype et les systèmes macOS antérieurs à 10.13 ne prennent pas en charge les polices variables.
 
 ### Graisse (`wght`)
 
@@ -117,7 +116,7 @@ L'exemple suivant peut être édite afin de voir l'effet de la modification des 
 
 ### Autres exemples
 
-- [Guide sur les polices variables](/fr/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
+- [Guide sur les polices variables](/fr/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
 - [v-fonts.com](https://v-fonts.com)
 - [axis-praxis.org](https://axis-praxis.org)
 
@@ -131,7 +130,7 @@ L'exemple suivant peut être édite afin de voir l'effet de la modification des 
 
 ## Voir aussi
 
-- [Guide sur les polices variables](/fr/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
+- [Guide sur les polices variables](/fr/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
 - [OpenType Font Variations Overview](https://www.microsoft.com/typography/otspec180/otvaroverview.htm)
 - [OpenType specification](https://www.microsoft.com/typography/otspec180/default.htm)
 - [OpenType Design-Variation Axis Tag Registry](https://www.microsoft.com/typography/otspec/dvaraxisreg.htm)

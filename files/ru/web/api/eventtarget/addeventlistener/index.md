@@ -1,124 +1,115 @@
 ---
-title: Метод EventTarget.addEventListener()
+title: "EventTarget: метод addEventListener()"
 slug: Web/API/EventTarget/addEventListener
-tags:
-  - DOM
-  - EventTarget
-  - addEventListener
-  - Обработчик
-  - Событие
-  - метод
-translation_of: Web/API/EventTarget/addEventListener
 ---
 
-{{apiref("DOM Events")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-Метод `EventTarget.addEventListener()` регистрирует определённый обработчик события, вызванного на {{domxref("EventTarget")}}.
+Метод **`addEventListener()`** интерфейса {{domxref("EventTarget")}} устанавливает функцию, которая будет вызываться каждый раз, когда указанное событие будет достигать цели.
 
-{{domxref("EventTarget")}} может быть {{domxref("Element")}}, {{domxref("Document")}}, {{domxref("Window")}}, или любым другим объектом, поддерживающим события (таким как [`XMLHttpRequest`](/ru/docs/DOM/XMLHttpRequest)).
+Наиболее распространёнными целями являются {{domxref("Element")}} и его дочерние элементы, {{domxref("Document")}} и {{domxref("Window")}}, но целью может быть любой объект, поддерживающий события (например, {{domxref("IDBRequest")}}).
+
+> [!NOTE]
+> Метод `addEventListener()` является _рекомендованным_ способ регистрации обработчиков событий. Его преимущества состоят в следующем::
+>
+> - Позволяет добавлять более одного обработчика для события. Это очень полезно для использования в библиотеках, модулях JavaScript и тех случаях, когда требуется работать с другими библиотеками или расширениями.
+> - В отличие от использования свойств вида `onXYZ`, позволяет он даёт более точный контроль над фазой активации слушателя (захват или всплытие).
+> - Работает на всех целях событий, а не только на элементах HTML и SVG.
+
+Метод `addEventListener()` работает, добавляя функцию или объект, который реализует функцию `handleEvent()`, в список слушателей события для указанного типа цели {{domxref("EventTarget")}}, на которой он был вызван.
+Если функция или объект уже присутствует в списке слушателей для этой цели, то повторного добавления не будет.
+
+> [!NOTE]
+> Если конкретная анонимная функция находится в списке слушателей событий, зарегистрированных для определённой цели, а далее в коде идентичная анонимная функция указана в вызове `addEventListener`, вторая функция _будет_ добавлена ​​в список слушателей событий для этой цели.
+>
+> Действительно, анонимные функции не идентичны, даже если определены с помощью _одного и того же_ неизменного исходного кода, вызываемого многократно, **даже в цикле**.
+>
+> Повторное определение одной и той же безымянной функции в таких случаях может быть проблематичным. Смотрите раздел [Вопросы памяти](#вопросы_памяти) ниже.
+
+Если слушатель событий добавляется в {{domxref("EventTarget")}} внутри другого слушателя, то есть во время обработки события, то это событие не вызовет срабатывания нового слушателя.
+Однако новый слушатель может быть запущен на более поздней стадии потока событий, например, во время фазы всплытия.
 
 ## Синтаксис
 
-```
-target.addEventListener(type, listener[, options]);
-target.addEventListener(type, listener[, useCapture]);
-target.addEventListener(type, listener[, useCapture,
-wantsUntrusted {{Non-standard_inline}}]); // только Gecko/Mozilla
+```js-nolint
+addEventListener(type, listener)
+addEventListener(type, listener, options)
+addEventListener(type, listener, useCapture)
 ```
 
 ### Параметры
 
 - `type`
-  - : Чувствительная к регистру строка, представляющая [тип обрабатываемого события](/ru/docs/DOM/event.type).
+  - : Чувствительная к регистру строка, представляющая [тип обрабатываемого события](/ru/docs/Web/API/Event).
 - `listener`
-  - : Объект, который принимает уведомление, когда событие указанного типа произошло. Это должен быть объект, реализующий интерфейс {{domxref("EventListener")}} или просто [функция JavaScript](/ru/docs/JavaScript/Guide/Functions).
-
-<!---->
-
+  - : Объект, реализующий интерфейс {{domxref("Event")}}, который принимает уведомление, когда событие указанного типа произошло. Это должен быть `null`, объект с методом `handleEvent()` или [функция](/ru/docs/Web/JavaScript/Guide/Functions). Посмотрите также раздел [Функция обратного вызова для обработчика событий](#функция_обратного_вызова_для_обработчика_событий).
 - `options` {{optional_inline}}
 
-  - : Объект `options`, который определяет характеристики объекта, прослушивающего событие. Доступны следующие варианты:
+  - : Объект, который определяет характеристики слушателя событие:
 
-    - `capture`: {{jsxref("Boolean")}} указывает, что события этого типа будут отправлены зарегистрированному обработчику `listener` перед отправкой на `EventTarget`, расположенный ниже в дереве DOM.
-    - `once`: {{jsxref("Boolean")}} указывает, что обработчик должен быть вызван не более одного раза после добавления. Если `true`, обработчик автоматически удаляется при вызове.
-    - `passive`: {{jsxref("Boolean")}} указывает, что обработчик никогда не вызовет `preventDefault()`. Если всё же вызов будет произведён, браузер должен игнорировать его и генерировать консольное предупреждение. Пример [Улучшение производительности прокрутки с помощью passive true](#улучшение_производительности_прокрутки_с_помощью_passive_true)
-    - {{non-standard_inline}} `mozSystemGroup`: {{jsxref("Boolean")}} указывает, что обработчик должен быть добавлен в системную группу. Доступно только в коде, запущенном в XBL или в [расширении Chrome](https://chrome.google.com/webstore/detail/open-with-firefox/poeacjbaiakjnaepdjgggojcjoajakmd).
+    - `capture` {{optional_inline}}
+      - : Логическое значение, указывающее, что события указанного типа будут отправлены зарегистрированному слушателю `listener` перед отправкой любой `EventTarget` ниже в DOM-дереве. Если не указано, то по умолчанию `false`.
+    - `once` {{optional_inline}}
+      - : Логическое значение, указывающее, что `listener` должен быть вызван только один раз после добавления. Если `true`, то `listener` будет автоматически удалён после вызова. Если не указано, то по умолчанию `false`.
+    - `passive` {{optional_inline}}
+
+      - : Логическое значение, указывающее, что `listener` никогда не вызовет {{domxref("Event.preventDefault", "preventDefault()")}}. Если пассивный слушатель вызывает `preventDefault()`, ничего не произойдет, и может быть сгенерировано предупреждение в консоли.
+
+        Если не указано, то по умолчанию `false` за исключением того, что в браузерах, отличных от Safari, для событий {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} по умолчанию принимается значение `true`. Смотрите также раздел [Использование пассивных слушателей](#использование_пассивных_слушателей).
+
+    - `signal` {{optional_inline}}
+      - : {{domxref("AbortSignal")}}. Слушатель будет удалён при вызове метода {{domxref("AbortController/abort()", "abort()")}} данного объекта `AbortSignal`. Если не указано, то со слушателем не будет связан никакой `AbortSignal`.
 
 - `useCapture` {{optional_inline}}
 
-  - : Если равно `true`, `useCapture` указывает, что пользователь желает начать захват. После инициализации захвата все события указанного типа будут отправлены в зарегистрированный `listener` перед отправкой в какой-либо `EventTarget` под ним в дереве DOM. События, восходящие вверх по дереву, не будут вызывать обработчиков, которым назначено использовать захват. Смотрите [DOM Level 3 Events](http://www.w3.org/TR/DOM-Level-3-Events/#event-flow) для более детального объяснения. Значение `useCapture` по умолчанию равно `false`.
+  - : Логическое значение, указывающее, будут ли события этого типа отправлены зарегистрированному слушателю `listener` _перед_ отправкой в любой `EventTarget` ниже в DOM-дереве. События, которые всплывают вверх по дереву, не вызовут слушателя, настроенного для использования захвата. Всплытие событий и захват — это два способа распространения событий, которые происходят в элементе, который вложен в другой элемент, и обоих элементов зарегистрирован обработчик этого события. Режим распространения событий определяет порядок, в котором элементы получают событие. Подробное объяснение смотрите в [DOM Level 3 Events](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow) и [Порядок событий в JavaScript](https://www.quirksmode.org/js/events_order.html#link4).
+    Если не указано, `useCapture` по умолчанию имеет значение `false`.
 
-    > **Примечание:**Для обработчиков событий прикреплённых к цели события, событие находиться в целевой фазе, а не в фазах захвата или всплытия. События в целевой фазе инициируют все обработчики на элементе в том порядке, в котором они были зарегистрированы независимо от параметра `useCapture`.
+    > [!NOTE]
+    > Для слушателей событий, зарегистрированных на цели события, событие находится в целевой фазе, а не в фазах захвата и всплытия.
+    > Слушатели событий на этапе _захвата_ вызываются раньше слушателей событий на этапах цели и всплытия.
 
-    > **Примечание:** `useCapture` не всегда был опциональным. Лучше указывать данный параметр для повышения совместимости.
-
-- `wantsUntrusted` {{Non-standard_inline}}
-  - : Если равно `true`, обработчик будет получать сгенерированные события, посланные со страницы (по умолчанию равно `false` для chrome и `true` для обычных веб-страниц). Этот параметр доступен только в Gecko и в основном полезен для использования в дополнениях и самом браузере. Смотрите [Взаимодействие между привилегированными и непривилегированными страницами](/ru/docs/Archive/Add-ons/Interaction_between_privileged_and_non-privileged_pages) для примеров использования.
-
-Прежде чем использовать определённое значение в объекте `options`, рекомендуется убедиться, что браузер пользователя поддерживает его, поскольку это дополнение, которое не все браузеры поддерживали исторически.
+- `wantsUntrusted` {{optional_inline}} {{non-standard_inline}}
+  - : Параметр, специфичный для Firefox (Gecko). Если `true`, слушатель получает синтетические события, отправленные веб-контентом. По умолчанию `false` для браузера {{glossary("chrome")}} и `true` для обычных веб-страниц. Этот параметр полезен для кода, обнаруженного в надстройках, а также для самого браузера.
 
 ### Возвращаемое значение
 
-`undefined`
+Нет ({{jsxref("undefined")}}).
 
 ## Примечания по использованию
 
-### Колбэк обработчика событий
+### Функция обратного вызова для обработчика событий
 
-Обработчик событий может быть задан либо как колбэк-функция, либо как объект реализующий {{domxref("EventListener")}}, чей {{domxref("EventListener.handleEvent", "handleEvent()")}} метод служит как колбэк-функция.
+Слушатель события может быть указан как функция обратного вызова или как объект, метод `handleEvent()` которого служит функцией обратного вызова.
 
-Сама колбэк-функция имеет те же параметры и возвращаемое значение что и метод `handleEvent()`; То есть колбэк принимает единственный параметр: объект основанный на {{domxref("Event")}} описывая событие, которое произошло и ничего не возвращая.
+Сама функция обратного вызова имеет те же параметры и возвращаемое значение, что и метод `handleEvent()`, то есть функция обратного вызова принимает один параметр — объект на основе {{domxref("Event")}}, описывающий произошедшее событие, и она ничего не возвращает.
 
-Например, колбэк обработчика событий, который может использоваться для обработки {{event("fullscreenchange")}} и {{event("fullscreenerror")}} может выглядеть так:
+Например, обратный вызов обработчика события, который можно использовать для обработки {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} и {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} может выглядеть следующим образом:
 
 ```js
-function eventHandler(event) {
-  if (event.type == 'fullscreenchange') {
-    /* Переключатель полноэкранного режима */
-  } else /* fullscreenerror */ {
-    /* Ошибка переключателя полноэкранного режима */
+function handleEvent(event) {
+  if (event.type === "fullscreenchange") {
+    /* обработка изменения полноэкранного режима */
+  } else {
+    /* обработка ошибки при изменении полноэкранного режима */
   }
 }
 ```
 
-### Безопасная проверка поддержки `option`
+### Использование пассивных слушателей
 
-В более старых версиях спецификации DOM третьим параметром `addEventListener` было логическое значение, указывающее, следует ли захватывать событие на этапе погружения. Со временем стало ясно, что необходимо больше вариантов. Вместо добавления дополнительных параметров в функцию (усложняя ситуацию при использовании необязательных значений) третий параметр был изменён на объект, который может содержать различные свойства, определяющие значения параметров для настройки обработчика событий.
+Если событие имеет действие по умолчанию (например, событие {{domxref("Element/wheel_event", "wheel")}}, которое по умолчанию прокручивает контейнер), то браузер, как правило, не может запустить его до завершения работы слушателя события, поскольку он не знает заранее, может ли слушатель события отменить действие по умолчанию, вызвав {{domxref("Event.preventDefault()")}}. Если слушатель события выполняется слишком долго, это может привести к заметной задержке, известной также как «{{glossary("jank")}}», прежде чем действие по умолчанию будет выполнено.
 
-Поскольку старые браузеры (а также некоторые не слишком старые браузеры) по-прежнему предполагают, что третий параметр является логическим, возникает необходимость создания своего кода, чтобы разумно обрабатывать этот сценарий. Вы можете сделать это, используя функцию обнаружения для каждого из интересующих вас параметров.
+Устанавливая опцию `passive` в `true`, слушатель событий объявляет, что он не отменит действие по умолчанию, поэтому браузер может немедленно запустить действие по умолчанию, не дожидаясь завершения слушателя. Если слушатель это сделает, а затем вызовет {{domxref("Event.preventDefault()")}}, это не даст никакого эффекта.
 
-Например, если вы хотите проверить параметр `passive`:
+Спецификация `addEventListener()` определяет значение по умолчанию для параметра `passive` как `false`. Однако, чтобы реализовать преимущества производительности прокрутки в устаревшем коде, современные браузеры изменили значение по умолчанию параметра `passive` на `true` для событий {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} и {{domxref("Element/touchmove_event", "touchmove")}} на узлах уровня документа {{domxref("Window")}}, {{domxref("Document")}} и {{domxref("Document.body")}}. Это не позволяет слушателю событий [отменять событие](/ru/docs/Web/API/Event/preventDefault), поэтому он не может блокировать отрисовку, пока пользователь прокручивает страницу.
 
-```js
-var passiveSupported = false;
+По этой причине для переопределения этого поведение и чтобы убедиться, что параметр `passive` имеет значение `false`, необходимо явно задать параметру значение `false` вместо того, чтобы полагаться на значение по умолчанию.
 
-try {
-  var options = Object.defineProperty({}, "passive", {
-    get: function() {
-      passiveSupported = true;
-    }
-  });
+Можно не беспокоиться о значении `passive` для базового события {{domxref("Element/scroll_event", "scroll")}}.
+Поскольку его нельзя отменить, слушатели событий в любом случае не могут блокировать рендеринг страницы.
 
-  window.addEventListener("test", null, options);
-} catch(err) {}
-```
-
-Этот код создаёт объект `options` с геттером для свойства passive, устанавливающим флаг `passiveSupported` в `true`, если он вызван. Это означает, что если браузер проверяет значение свойства `passive` на объекте `options`, значение `passiveSupported` будет установлено в true; в противном случае он останется ложным. Затем мы вызываем `addEventListener`, чтобы настроить фальшивый обработчик событий, указав эти параметры для проверки опций, если браузер распознает объект в качестве третьего параметра.
-
-Для проверки поддержки использования какой-либо опции можно просто добавить геттер для неё, используя код, подобный тому, что показан выше.
-
-Если вы хотите добавить обработчик событий, использующий параметры, о которых идёт речь, вы можете сделать это подобным образом:
-
-```js
-someElement.addEventListener("mouseup", handleMouseUp, passiveSupported
-                               ? { passive: true } : false);
-```
-
-Здесь мы добавляем обработчик события {{event ("mouseup")}} элемента `someElement`. Для третьего параметра, если `passiveSupported` имеет значение `true`, мы указываем объект `options` с `passive: true`; в противном случае мы знаем, что нам нужно передать логическое значение, и мы передаём `false` как значение параметра `useCapture`.
-
-Вы можете использовать стороннюю библиотеку, такую как [Modernizr](https://modernizr.com/docs) или [Detect It](https://github.com/rafrex/detect-it), чтобы проверить поддержку необходимого свойства.
-
-Узнайте больше о [EventListenerOptions](https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection) из [Web Incubator Community Group](https://wicg.github.io/admin/charter.html).
+Смотрите раздел [Улучшение производительности прокрутки с помощью пассивных слушателей](#улучшение_производительности_прокрутки_с_помощью_пассивных_слушателей) с примером использования пассивных слушателей.
 
 ## Примеры
 
@@ -130,8 +121,12 @@ someElement.addEventListener("mouseup", handleMouseUp, passiveSupported
 
 ```html
 <table id="outside">
-    <tr><td id="t1">один</td></tr>
-    <tr><td id="t2">два</td></tr>
+  <tr>
+    <td id="t1">один</td>
+  </tr>
+  <tr>
+    <td id="t2">два</td>
+  </tr>
 </table>
 ```
 
@@ -167,8 +162,12 @@ el.addEventListener("click", modifyText, false);
 
 ```html
 <table id="outside">
-    <tr><td id="t1">один</td></tr>
-    <tr><td id="t2">два</td></tr>
+  <tr>
+    <td id="t1">один</td>
+  </tr>
+  <tr>
+    <td id="t2">два</td>
+  </tr>
 </table>
 ```
 
@@ -183,10 +182,16 @@ function modifyText(new_text) {
 
 // Функция, добавляющая обработчик к таблице
 el = document.getElementById("outside");
-el.addEventListener("click", function(){modifyText("четыре")}, false);
+el.addEventListener(
+  "click",
+  function () {
+    modifyText("четыре");
+  },
+  false,
+);
 ```
 
-Notice that the listener is an anonymous function that encapsulates code that is then, in turn, able to send parameters to the `modifyText()` function, which is responsible for actually responding to the event.
+Обратите внимание, что addEvenListener - это анонимная функция, которая инкапсулирует код, который, в свою очередь, может отправлять параметры функции modifyText(), которая отвечает за фактический ответ на событие.
 
 #### Результат
 
@@ -198,8 +203,12 @@ Notice that the listener is an anonymous function that encapsulates code that is
 
 ```html
 <table id="outside">
-    <tr><td id="t1">one</td></tr>
-    <tr><td id="t2">two</td></tr>
+  <tr>
+    <td id="t1">one</td>
+  </tr>
+  <tr>
+    <td id="t2">two</td>
+  </tr>
 </table>
 ```
 
@@ -214,7 +223,13 @@ function modifyText(new_text) {
 
 // Add event listener to table with an arrow function
 var el = document.getElementById("outside");
-el.addEventListener("click", () => { modifyText("four"); }, false);
+el.addEventListener(
+  "click",
+  () => {
+    modifyText("four");
+  },
+  false,
+);
 ```
 
 #### Результат
@@ -230,10 +245,10 @@ el.addEventListener("click", () => { modifyText("four"); }, false);
 `addEventListener` — это способ зарегистрировать обработчик события, описанный в документации W3C DOM. Вот список преимуществ его использования:
 
 - Позволяет добавлять множество обработчиков для одного события. Это особенно полезно для [DHTML](/ru/docs/DHTML) библиотек или [Mozilla extensions](/ru/docs/Extensions), которые должны работать в условиях использования сторонних библиотек/расширений.
-- Предоставляет точный контроль фазы срабатывания(вызова) обработчика (захват или всплытие)
+- Предоставляет точный контроль фазы срабатывания(вызова) обработчика (захват или всплытие).
 - Срабатывает на любом DOM-элементе, а не только на HTML-элементах.
 
-Ниже описан другой, [более старый способ регистрации обработчиков](#Older_way_to_register_event_listeners).
+Ниже описан другой, [более старый способ регистрации обработчиков](#older_way_to_register_event_listeners).
 
 ### Добавление обработчика во время обработки события
 
@@ -241,7 +256,7 @@ el.addEventListener("click", () => { modifyText("four"); }, false);
 
 ### Несколько одинаковых обработчиков события
 
-Если зарегистрировано несколько одинаковых `EventListener` на одном `EventTarget` с одинаковыми параметрами, дублирующиеся обработчики игнорируются. Так как одинаковые обработчики игнорируются, не требуется удалять их вручную с помощью метода [removeEventListener](/ru/docs/DOM/EventTarget.removeEventListener).
+Если зарегистрировано несколько одинаковых `EventListener` на одном `EventTarget` с одинаковыми параметрами, дублирующиеся обработчики игнорируются. Так как одинаковые обработчики игнорируются, не требуется удалять их вручную с помощью метода [removeEventListener](/ru/docs/Web/API/EventTarget/removeEventListener).
 
 ### Значение `this` в обработчике
 
@@ -252,53 +267,55 @@ el.addEventListener("click", () => { modifyText("four"); }, false);
 ```html
 <table id="t" onclick="modifyText();">
   . . .
+</table>
 ```
 
 Значение переменной `this` внутри `modifyText()` при вызове событием клика будет равно ссылке на глобальный (window) объект (или `undefined` при использовании [strict mode](/ru/docs/Web/JavaScript/Reference/Strict_mode))
 
-> **Примечание:** В JavaScript 1.8.5 введён метод [`Function.prototype.bind()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind), который позволяет указать значение, которое должно быть использовано для всех вызовов данной функции. Он позволяет вам легко обходить ситуации, в которых не ясно, чему будет равно this, в зависимости от того, в каком контексте будет вызвана ваша функция. заметьте, также, что вам будет необходимо иметь внешнюю ссылку на обработчик, чтобы вы могли удалить его позже.
+> [!NOTE]
+> В JavaScript 1.8.5 введён метод [`Function.prototype.bind()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), который позволяет указать значение, которое должно быть использовано для всех вызовов данной функции. Он позволяет вам легко обходить ситуации, в которых не ясно, чему будет равно this, в зависимости от того, в каком контексте будет вызвана ваша функция. заметьте, также, что вам будет необходимо иметь внешнюю ссылку на обработчик, чтобы вы могли удалить его позже.
 
 Пример с использованием `bind` и без него:
 
 ```js
-var Something = function(element) {
-  this.name = 'Something Good';
-  this.onclick1 = function(event) {
+var Something = function (element) {
+  this.name = "Something Good";
+  this.onclick1 = function (event) {
     console.log(this.name); // undefined, так как this является элементом
   };
-  this.onclick2 = function(event) {
+  this.onclick2 = function (event) {
     console.log(this.name); // 'Something Good', так как в this передано значение объекта Something
   };
-  element.addEventListener('click', this.onclick1, false);
-  element.addEventListener('click', this.onclick2.bind(this), false); // Trick
-}
+  element.addEventListener("click", this.onclick1, false);
+  element.addEventListener("click", this.onclick2.bind(this), false); // Trick
+};
 ```
 
 Проблема в примере выше заключается в том, что вы не можете удалить обработчик, вызванный с `bind`. Другое решение использует специальную функцию `handleEvent`, чтобы перехватывать любые события:
 
 ```js
-var Something = function(element) {
-  this.name = 'Something Good';
-  this.handleEvent = function(event) {
+var Something = function (element) {
+  this.name = "Something Good";
+  this.handleEvent = function (event) {
     console.log(this.name); // 'Something Good', так как this является объектом Something
-    switch(event.type) {
-      case 'click':
+    switch (event.type) {
+      case "click":
         // код обработчика...
         break;
-      case 'dblclick':
+      case "dblclick":
         // код обработчика...
         break;
     }
   };
 
   // В этом случае обработчики хранятся в this, а не в this.handleEvent
-  element.addEventListener('click', this, false);
-  element.addEventListener('dblclick', this, false);
+  element.addEventListener("click", this, false);
+  element.addEventListener("dblclick", this, false);
 
   // Вы можете напрямую удалять обработчики
-  element.removeEventListener('click', this, false);
-  element.removeEventListener('dblclick', this, false);
-}
+  element.removeEventListener("click", this, false);
+  element.removeEventListener("dblclick", this, false);
+};
 ```
 
 ### Наследство Internet Explorer и attachEvent
@@ -307,9 +324,9 @@ var Something = function(element) {
 
 ```js
 if (el.addEventListener) {
-  el.addEventListener('click', modifyText, false);
-} else if (el.attachEvent)  {
-  el.attachEvent('onclick', modifyText);
+  el.addEventListener("click", modifyText, false);
+} else if (el.attachEvent) {
+  el.attachEvent("onclick", modifyText);
 }
 ```
 
@@ -319,62 +336,83 @@ if (el.addEventListener) {
 
 Вы можете обойти методы `addEventListener`, `removeEventListener`, `Event.preventDefault` и `Event.stopPropagation` не поддерживаемы в IE 8 используя следующий код в начале вашего скрипта. Этот код поддерживает использование `handleEvent` и события `DOMContentLoaded`.
 
-> **Примечание:**useCapture не поддерживается, так как IE 8 не имеет альтернативного метода для этого. Также заметьте, что следующий код только добавляет поддержку IE 8. Также, он работает только при соблюдении стандартов: объявление DOCTYPE страницы обязательно.
+> [!NOTE]
+> Параметр `useCapture` не поддерживается, так как IE 8 не имеет альтернативного метода для этого. Также заметьте, что следующий код только добавляет поддержку IE 8. Также, он работает только при соблюдении стандартов: объявление DOCTYPE страницы обязательно.
 
 ```js
-(function() {
+(function () {
   if (!Event.prototype.preventDefault) {
-    Event.prototype.preventDefault=function() {
-      this.returnValue=false;
+    Event.prototype.preventDefault = function () {
+      this.returnValue = false;
     };
   }
   if (!Event.prototype.stopPropagation) {
-    Event.prototype.stopPropagation=function() {
-      this.cancelBubble=true;
+    Event.prototype.stopPropagation = function () {
+      this.cancelBubble = true;
     };
   }
   if (!Element.prototype.addEventListener) {
-    var eventListeners=[];
+    var eventListeners = [];
 
-    var addEventListener=function(type,listener /*, useCapture (will be ignored) */) {
-      var self=this;
-      var wrapper=function(e) {
-        e.target=e.srcElement;
-        e.currentTarget=self;
+    var addEventListener = function (
+      type,
+      listener /*, useCapture (will be ignored) */,
+    ) {
+      var self = this;
+      var wrapper = function (e) {
+        e.target = e.srcElement;
+        e.currentTarget = self;
         if (listener.handleEvent) {
           listener.handleEvent(e);
         } else {
-          listener.call(self,e);
+          listener.call(self, e);
         }
       };
-      if (type=="DOMContentLoaded") {
-        var wrapper2=function(e) {
-          if (document.readyState=="complete") {
+      if (type == "DOMContentLoaded") {
+        var wrapper2 = function (e) {
+          if (document.readyState == "complete") {
             wrapper(e);
           }
         };
-        document.attachEvent("onreadystatechange",wrapper2);
-        eventListeners.push({object:this,type:type,listener:listener,wrapper:wrapper2});
+        document.attachEvent("onreadystatechange", wrapper2);
+        eventListeners.push({
+          object: this,
+          type: type,
+          listener: listener,
+          wrapper: wrapper2,
+        });
 
-        if (document.readyState=="complete") {
-          var e=new Event();
-          e.srcElement=window;
+        if (document.readyState == "complete") {
+          var e = new Event();
+          e.srcElement = window;
           wrapper2(e);
         }
       } else {
-        this.attachEvent("on"+type,wrapper);
-        eventListeners.push({object:this,type:type,listener:listener,wrapper:wrapper});
+        this.attachEvent("on" + type, wrapper);
+        eventListeners.push({
+          object: this,
+          type: type,
+          listener: listener,
+          wrapper: wrapper,
+        });
       }
     };
-    var removeEventListener=function(type,listener /*, useCapture (will be ignored) */) {
-      var counter=0;
-      while (counter<eventListeners.length) {
-        var eventListener=eventListeners[counter];
-        if (eventListener.object==this && eventListener.type==type && eventListener.listener==listener) {
-          if (type=="DOMContentLoaded") {
-            this.detachEvent("onreadystatechange",eventListener.wrapper);
+    var removeEventListener = function (
+      type,
+      listener /*, useCapture (will be ignored) */,
+    ) {
+      var counter = 0;
+      while (counter < eventListeners.length) {
+        var eventListener = eventListeners[counter];
+        if (
+          eventListener.object == this &&
+          eventListener.type == type &&
+          eventListener.listener == listener
+        ) {
+          if (type == "DOMContentLoaded") {
+            this.detachEvent("onreadystatechange", eventListener.wrapper);
           } else {
-            this.detachEvent("on"+type,eventListener.wrapper);
+            this.detachEvent("on" + type, eventListener.wrapper);
           }
           eventListeners.splice(counter, 1);
           break;
@@ -382,15 +420,15 @@ if (el.addEventListener) {
         ++counter;
       }
     };
-    Element.prototype.addEventListener=addEventListener;
-    Element.prototype.removeEventListener=removeEventListener;
+    Element.prototype.addEventListener = addEventListener;
+    Element.prototype.removeEventListener = removeEventListener;
     if (HTMLDocument) {
-      HTMLDocument.prototype.addEventListener=addEventListener;
-      HTMLDocument.prototype.removeEventListener=removeEventListener;
+      HTMLDocument.prototype.addEventListener = addEventListener;
+      HTMLDocument.prototype.removeEventListener = removeEventListener;
     }
     if (Window) {
-      Window.prototype.addEventListener=addEventListener;
-      Window.prototype.removeEventListener=removeEventListener;
+      Window.prototype.addEventListener = addEventListener;
+      Window.prototype.removeEventListener = removeEventListener;
     }
   }
 })();
@@ -398,14 +436,14 @@ if (el.addEventListener) {
 
 ### Старый способ регистрации обработчиков событий
 
-`addEventListener()` был добавлен в спецификации DOM 2 [Events](http://www.w3.org/TR/DOM-Level-2-Events). До этого обработчики добавлялись следующим образом:
+`addEventListener()` был добавлен в спецификации DOM 2 [Events](https://www.w3.org/TR/DOM-Level-2-Events). До этого обработчики добавлялись следующим образом:
 
 ```js
 // Передача ссылки на функцию — не добавляйте '()' после него, это вызовет функцию!
 el.onclick = modifyText;
 
 // Использование функционального выражения
-element.onclick = function() {
+element.onclick = function () {
   // ... логика функции ...
 };
 ```
@@ -418,76 +456,73 @@ element.onclick = function() {
 
 ```js
 var i;
-var els = document.getElementsByTagName('*');
+var els = document.getElementsByTagName("*");
 
 // Случай 1
-for(i=0 ; i<els.length ; i++){
-  els[i].addEventListener("click", function(e){/*некоторые действия*/}, false);
+for (i = 0; i < els.length; i++) {
+  els[i].addEventListener(
+    "click",
+    function (e) {
+      /*некоторые действия*/
+    },
+    false,
+  );
 }
 
 // Случай 2
-function processEvent(e){
+function processEvent(e) {
   /*некоторые действия*/
 }
 
-for(i=0 ; i<els.length ; i++){
+for (i = 0; i < els.length; i++) {
   els[i].addEventListener("click", processEvent, false);
 }
 ```
 
 В первом случае новая (анонимная) функция создаётся при каждом шаге цикла. Во втором случае одна заранее объявленная функция используется как обработчик события. Из этого следует меньшее потребление памяти. Более того, в первом случае, вследствие отсутствия ссылок на анонимные функции, невозможно вызвать `element.removeEventListener,` потому что нет ссылки на обработчик, в то время, как во втором случае возможно вызвать `myElement.removeEventListener("click", processEvent, false)`.
 
-### Улучшение производительности прокрутки с помощью `passive: true`
+### Улучшение производительности прокрутки с помощью пассивных слушателей
 
-Значение по умолчанию для параметра `passive` - `false`. Начиная с Chrome 56 (desktop, Chrome for Android, Android webview) значение по умолчанию для {{event("touchstart")}} и {{event("touchmove")}} равно `true`, а вызовы `preventDefault()` не разрешены. Чтобы отменить это поведение, необходимо установить параметр `passive` в `false` (см. пример ниже). Это изменение не позволяет обработчику блокировать показ страницы во время прокрутки пользователя. Демонстрация доступна на [сайте разработчиков Google](https://developers.google.com/web/updates/2016/06/passive-event-listeners). Обратите внимание, что Edge вообще не поддерживает `options`, и добавление его без [проверки поддержки](/ru/docs/Web/API/EventTarget/addEventListener#Safely_detecting_option_support) помешает использовать аргумент `useCapture`.
+Значение по умолчанию для параметра `passive` - `false`. Начиная с Chrome 56 (desktop, Chrome for Android, Android webview) значение по умолчанию для [`touchstart`](/ru/docs/Web/API/Element/touchstart_event) и [`touchmove`](/ru/docs/Web/API/Element/touchmove_event) равно `true`, а вызовы `preventDefault()` не разрешены. Чтобы отменить это поведение, необходимо установить параметр `passive` в `false` (см. пример ниже). Это изменение не позволяет обработчику блокировать показ страницы во время прокрутки пользователя. Демонстрация доступна на [сайте разработчиков Google](https://developers.google.com/web/updates/2016/06/passive-event-listeners). Обратите внимание, что Edge вообще не поддерживает `options`, и добавление его без [проверки поддержки](#safely_detecting_option_support) помешает использовать аргумент `useCapture`.
 
 ```js
-/* Feature detection */
+/* Не позволяем обработчику блокировать показ страницы */
 var passiveSupported = false;
 try {
-    window.addEventListener(
-        "test",
-        null,
-        Object.defineProperty({}, "passive", { get: function() { passiveSupported = true; } }));
-} catch(err) {}
+  window.addEventListener(
+    "test",
+    null,
+    Object.defineProperty({}, "passive", {
+      get: function () {
+        passiveSupported = true;
+      },
+    }),
+  );
+} catch (err) {}
 
-/* Event Listener */
-var elem = document.getElementById('elem');
+/* Добавляем обработчик событий */
+var elem = document.getElementById("elem");
 elem.addEventListener(
-    'touchmove',
-    function listener() {   /* do something */ },
-    passiveSupported ? { passive: true } : false
+  "touchmove",
+  function listener() {
+    /* do something */
+  },
+  passiveSupported ? { passive: true } : false,
 );
 ```
 
-Установка `passive` не имеет значения для основного события {{event ("scroll")}}, поскольку его нельзя отменить, поэтому его обработчик в любом случае не может блокировать показ страницы.
+Установка `passive` не имеет значения для основного события [`scroll`](/ru/docs/Web/API/Document/scroll_event), поскольку его нельзя отменить, поэтому его обработчик в любом случае не может блокировать показ страницы.
 
-## Совместимость
+## Спецификации
+
+{{Specifications}}
+
+## Совместимость с браузерами
 
 {{Compat}}
 
-### Примечания по Gecko
-
-- До Firefox 6, браузер выбросит исключение, если параметр `useCapture` не был точно равен `false`. До Gecko 9.0 {{geckoRelease("9.0")}}, `addEventListener()` выбросит исключение, если параметр `listener` был равен `null`; сейчас метод завершается без ошибки, но ничего не делает.
-
-### Примечания по WebKit
-
-- Несмотря на то, что в WebKit параметр `useCapture` был объявлен необязательным [только в июне 2011 года](http://trac.webkit.org/changeset/89781), это работало и до этого изменения. Новые изменения были добавлены в Safari 5.1 и Chrome 13.
-
-## Specifications
-
-| Specification                                                                                                                            | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("DOM WHATWG", "#dom-eventtarget-addeventlistener", "EventTarget.addEventListener()")}}         | {{Spec2("DOM WHATWG")}} |                    |
-| {{SpecName("DOM4", "#dom-eventtarget-addeventlistener", "EventTarget.addEventListener()")}}                 | {{Spec2("DOM4")}}         |                    |
-| {{SpecName("DOM2 Events", "#Events-EventTarget-addEventListener", "EventTarget.addEventListener()")}} | {{Spec2("DOM2 Events")}} | Initial definition |
-
-## Browser compatibility
-
-{{Compat("api.EventTarget.addEventListener", 3)}}
-
-## See also
+## Дополнительная информация
 
 - {{domxref("EventTarget.removeEventListener()")}}
-- [Creating and triggering custom events](/ru/docs/Web/Guide/Events/Creating_and_triggering_events)
-- [More details on the use of `this` in event handlers](http://www.quirksmode.org/js/this.html)
+- [Creating and triggering custom events](/ru/docs/Web/Events/Creating_and_triggering_events)
+- [More details on the use of `this` in event handlers](https://www.quirksmode.org/js/this.html)

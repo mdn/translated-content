@@ -27,7 +27,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
   - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} はページの [fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) が変更された場合に発火します。
   - {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} はあらゆる場所で発火します。
 
-それぞれのナビゲーションは特定のブラウザーフレーム内の URL の遷移です。ブラウザーフレームはタブ ID とフレーム ID で識別されます。フレームはタブ内の再上位のブラウジングコンテキストである場合や、[iframe](/ja/docs/Web/HTML/Element/iframe) として実装されたネストされたブラウジングコンテキストである場合があります。
+それぞれのナビゲーションは特定のブラウザーフレーム内の URL の遷移です。ブラウザーフレームはタブ ID とフレーム ID で識別されます。フレームはタブ内の再上位の閲覧コンテキストである場合や、[iframe](/ja/docs/Web/HTML/Element/iframe) として実装されたネストされた閲覧コンテキストである場合があります。
 
 それぞれのイベントの `addListener()` の呼び出しはオプションの filter パラメーターを受け入れます。filter は 1 つ以上の URL パターンを指定し、イベントはターゲット URL がパターンにマッチしたナビゲーションの時だけに発火します。
 
@@ -54,11 +54,11 @@ slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
 - {{WebExtAPIRef("webNavigation.onBeforeNavigate")}}
   - : ブラウザーがナビゲーションイベントを開始する直前に発火します。
 - {{WebExtAPIRef("webNavigation.onCommitted")}}
-  - : ナビゲーションがコミットされたときに発火します。少なくともサーバーから新しい document がいくらか取得されてブラウザーが新 document に切り替えると決決めたとき。
+  - : ナビゲーションがコミットされたときに発火します。少なくともサーバーから新しい document がいくらか取得されてブラウザーが新 document に切り替えると決めたとき。
 - {{WebExtAPIRef("webNavigation.onDOMContentLoaded")}}
-  - : ページ内で [DOMContentLoaded](/ja/docs/Web/Events/DOMContentLoaded) イベントが発火したときに発火します。
+  - : ページ内で [DOMContentLoaded](/ja/docs/Web/API/Document/DOMContentLoaded_event) イベントが発火したときに発火します。
 - {{WebExtAPIRef("webNavigation.onCompleted")}}
-  - : document と、それが参照するリソースが完全にロードされて初期化されたときに発火します。これは DOM [`load`](/ja/docs/Web/Events/load) イベントと等価です。
+  - : document と、それが参照するリソースが完全にロードされて初期化されたときに発火します。これは DOM [`load`](/ja/docs/Web/API/Window/load_event) イベントと等価です。
 - {{WebExtAPIRef("webNavigation.onErrorOccurred")}}
   - : エラーが起こってナビゲーションが停止したときに発火します。これはネットワークエラーが起きたときや、ユーザーがナビゲーションを停止したときのいずれかで起こりえます。
 - {{WebExtAPIRef("webNavigation.onCreatedNavigationTarget")}}
@@ -72,13 +72,15 @@ slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.webNavigation")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **メモ:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -105,4 +107,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

@@ -3,9 +3,9 @@ title: bookmarks.search()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/search
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-**`bookmarks.search()`** 関数は、指定したクエリにマッチするブックマークを検索するものです。マッチしたブックマークは、{{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトの配列として、指定されたコールバック関数の引数に渡されます。
+**`bookmarks.search()`** 関数は、指定したクエリーにマッチするブックマークを検索するものです。マッチしたブックマークは、{{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトの配列として、指定されたコールバック関数の引数に渡されます。
 
 入力引数の値や型が不正だった場合、この関数は例外を送出します。エラーメッセージは[コンソール](/ja/Add-ons/WebExtensions/%E3%83%87%E3%83%90%E3%83%83%E3%82%B0)で確認できます。送出された例外はエラー ID を含んでおらず、またメッセージを変更される可能性があるため、これらを解析するようなコードは書かないでください。
 
@@ -13,20 +13,20 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/search
 
 ```js
 browser.bookmarks.search(
-  query,   // 文字列またはオブジェクト
-  callback // 関数
-)
+  query, // 文字列またはオブジェクト
+  callback, // 関数
+);
 ```
 
 ### 引数
 
 - `query`
 
-  - : 実行するクエリを表す {{jsxref("string")}} または {{jsxref("object")}} です。
+  - : 実行するクエリーを表す {{jsxref("string")}} または {{jsxref("object")}} です。
 
-    `query` を文字列で指定する場合、`query` は 0 個以上の検索項から構成されます。検索項はスペースで区切りますが、複数語からなる句を検索したい場合は引用符でくくります。それぞれの検索項はブックマークの URL やタイトルの部分文字列にマッチします（大文字・小文字は区別されません）。あるブックマークがクエリにマッチするには、クエリの検索項すべてがマッチしなければなりません。
+    `query` を文字列で指定する場合、`query` は 0 個以上の検索項から構成されます。検索項はスペースで区切りますが、複数語からなる句を検索したい場合は引用符でくくります。それぞれの検索項はブックマークの URL やタイトルの部分文字列にマッチします（大文字・小文字は区別されません）。あるブックマークがクエリーにマッチするには、クエリーの検索項すべてがマッチしなければなりません。
 
-    `query` をオブジェクトで指定する場合、以下の 3 つのプロパティのうち 0 個以上を指定することになります。あるブックマークがクエリにマッチするには、指定されたプロパティすべてにおいてマッチしなければなりません。
+    `query` をオブジェクトで指定する場合、以下の 3 つのプロパティのうち 0 個以上を指定することになります。あるブックマークがクエリーにマッチするには、指定されたプロパティすべてにおいてマッチしなければなりません。
 
     - `query`{{optional_inline}}
       - : 1 つ以上の検索項を含んだ {{jsxref("string")}} を指定します。このフォーマットは `query` 引数における文字列のフォーマットと同じです。このプロパティ値が {{jsxref("string")}} でなかった場合、 例外が送出されます。
@@ -41,14 +41,14 @@ browser.bookmarks.search(
 
 - `callback`
 
-  - : クエリの結果が得られた場合に呼び出される関数を指定します。この関数には以下の引数が渡ります。
+  - : クエリーの結果が得られた場合に呼び出される関数を指定します。この関数には以下の引数が渡ります。
 
     - `results`
       - : {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトの配列であり、各要素はマッチしたブックマークをそれぞれ表しています。何も見つからなかった場合は空の配列となります。
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.search")}}
+{{Compat}}
 
 ## 使用例
 
@@ -76,7 +76,7 @@ function onGot(bookmarkItems) {
 }
 
 function checkActiveTab(tab) {
-  chrome.bookmarks.search({url: tab.url}, onGot);
+  chrome.bookmarks.search({ url: tab.url }, onGot);
 }
 
 chrome.browserAction.onClicked.addListener(checkActiveTab);
@@ -84,9 +84,11 @@ chrome.browserAction.onClicked.addListener(checkActiveTab);
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-search) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> [!NOTE]
+> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-search) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -113,4 +115,4 @@ chrome.browserAction.onClicked.addListener(checkActiveTab);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

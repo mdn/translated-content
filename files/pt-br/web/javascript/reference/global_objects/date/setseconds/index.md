@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 
 O método **`setSeconds()`** atribui os segundos na data especificada de acordo com o tempo local.
 
-{{EmbedInteractiveExample("pages/js/date-setseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setSeconds()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+event.setSeconds(42);
+
+console.log(event.getSeconds());
+// Expected output: 42
+
+console.log(event);
+// Expected output: "Sat Apr 19 1975 23:15:42 GMT+0100 (CET)"
+// Note: your timezone may vary
+```
 
 ## Sintaxe
 
@@ -49,13 +62,11 @@ theBigDay.setSeconds(30);
 
 ## Especificações
 
-| Especificação                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.setseconds', 'Date.prototype.setSeconds')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.setSeconds")}}
+{{Compat}}
 
 ## Veja também
 

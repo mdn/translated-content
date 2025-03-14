@@ -1,11 +1,9 @@
 ---
 title: XMLSerializer
 slug: Web/API/XMLSerializer
-tags:
-  - XML
-translation_of: Web/API/XMLSerializer
-original_slug: XMLSerializer
 ---
+
+{{APIRef("XMLSerializer")}}
 
 `XMLSerializer` sert à convertir des sous-arborescence DOM ou des documents DOM en texte. `XMLSerializer` est accessible aux scripts sans privilèges.
 
@@ -30,17 +28,13 @@ alert(str);
 ```js
 var s = new XMLSerializer();
 var stream = {
-  close: function()
-  {
+  close: function () {
     alert("Flux fermé");
   },
-  flush: function()
-  {
-  },
-  write: function(string, count)
-  {
+  flush: function () {},
+  write: function (string, count) {
     alert("'" + string + "'\n nb d'octets&nbsp;: " + count + "");
-  }
+  },
 };
 s.serializeToStream(document, stream, "UTF-8");
 ```
@@ -51,5 +45,5 @@ s.serializeToStream(document, stream, "UTF-8");
 - [Parsing and serializing XML](/fr/Parsing_and_serializing_XML)
 - [Parsing and serializing XML (en)](http://xulplanet.com/tutorials/mozsdk/xmlparse.php) (XULPlanet)
 - [Parsing and serializing XML (en)](http://kb.mozillazine.org/Parsing_and_serializing_XML#Parsing_strings_into_DOM_trees) (MozillaZine)
-- [XMLHttpRequest](/fr/XMLHttpRequest)
+- [XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest)
 - [DOMParser](/fr/DOMParser)

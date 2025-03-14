@@ -7,9 +7,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 
 **`indexOf()`** 方法會回傳給定元素於陣列中第一個被找到之索引，若不存在於陣列中則回傳 -1。
 
-> **備註：** 若是調用字串的方法，請參閱 {{jsxref("String.prototype.indexOf()")}}。
+> [!NOTE]
+> 若是調用字串的方法，請參閱 {{jsxref("String.prototype.indexOf()")}}。
 
-{{EmbedInteractiveExample("pages/js/array-indexof.html")}}
+{{InteractiveExample("JavaScript Demo: Array.indexOf()")}}
+
+```js interactive-example
+const beasts = ["ant", "bison", "camel", "duck", "bison"];
+
+console.log(beasts.indexOf("bison"));
+// Expected output: 1
+
+// Start from index 2
+console.log(beasts.indexOf("bison", 2));
+// Expected output: 4
+
+console.log(beasts.indexOf("giraffe"));
+// Expected output: -1
+```
 
 ## 語法
 
@@ -30,7 +45,7 @@ arr.indexOf(searchElement[, fromIndex])
 
 ## 說明
 
-`indexOf()` 用[嚴格相等（strict equality，`===`）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators)的方式比較陣列中的元素與 `searchElement` 是否相等。
+`indexOf()` 用[嚴格相等（strict equality，`===`）](/zh-TW/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators)的方式比較陣列中的元素與 `searchElement` 是否相等。
 
 ## 範例
 
@@ -40,9 +55,9 @@ arr.indexOf(searchElement[, fromIndex])
 
 ```js
 var array = [2, 9, 9];
-array.indexOf(2);     // 0
-array.indexOf(7);     // -1
-array.indexOf(9, 2);  // 2
+array.indexOf(2); // 0
+array.indexOf(7); // -1
+array.indexOf(9, 2); // 2
 array.indexOf(2, -1); // -1
 array.indexOf(2, -3); // 0
 ```
@@ -51,8 +66,8 @@ array.indexOf(2, -3); // 0
 
 ```js
 var indices = [];
-var array = ['a', 'b', 'a', 'c', 'a', 'd'];
-var element = 'a';
+var array = ["a", "b", "a", "c", "a", "d"];
+var element = "a";
 var idx = array.indexOf(element);
 while (idx != -1) {
   indices.push(idx);
@@ -62,23 +77,23 @@ console.log(indices);
 // [0, 2, 4]
 ```
 
-### 尋找元素是否存在於陣列中，若沒有則加入到陣列裡。
+### 尋找元素是否存在於陣列中，若沒有則加入到陣列裡
 
 ```js
-function updateVegetablesCollection (veggies, veggie) {
-    if (veggies.indexOf(veggie) === -1) {
-        veggies.push(veggie);
-        console.log('New veggies collection is : ' + veggies);
-    } else if (veggies.indexOf(veggie) > -1) {
-        console.log(veggie + ' already exists in the veggies collection.');
-    }
+function updateVegetablesCollection(veggies, veggie) {
+  if (veggies.indexOf(veggie) === -1) {
+    veggies.push(veggie);
+    console.log("New veggies collection is : " + veggies);
+  } else if (veggies.indexOf(veggie) > -1) {
+    console.log(veggie + " already exists in the veggies collection.");
+  }
 }
 
-var veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
+var veggies = ["potato", "tomato", "chillies", "green-pepper"];
 
-updateVegetablesCollection(veggies, 'spinach');
+updateVegetablesCollection(veggies, "spinach");
 // New veggies collection is : potato,tomato,chillies,green-pepper,spinach
-updateVegetablesCollection(veggies, 'spinach');
+updateVegetablesCollection(veggies, "spinach");
 // spinach already exists in the veggies collection.
 ```
 
@@ -96,11 +111,12 @@ if (!Array.prototype.indexOf) {
     `TypeError` is thrown.
     */
     if (this == null) {
-      throw new TypeError("Array.prototype.indexOf() - can't convert `" + this + "` to object");
+      throw new TypeError(
+        "Array.prototype.indexOf() - can't convert `" + this + "` to object",
+      );
     }
 
-    var
-      index = isFinite(startFrom) ? Math.floor(startFrom) : 0,
+    var index = isFinite(startFrom) ? Math.floor(startFrom) : 0,
       that = this instanceof Object ? this : new Object(this),
       length = isFinite(that.length) ? Math.floor(that.length) : 0;
 
@@ -141,8 +157,7 @@ However, if you are more interested in all the little technical bits defined by 
 // Production steps of ECMA-262, Edition 5, 15.4.4.14
 // Reference: http://es5.github.io/#x15.4.4.14
 if (!Array.prototype.indexOf) {
-  Array.prototype.indexOf = function(searchElement, fromIndex) {
-
+  Array.prototype.indexOf = function (searchElement, fromIndex) {
     var k;
 
     // 1. Let o be the result of calling ToObject passing
@@ -211,7 +226,7 @@ if (!Array.prototype.indexOf) {
 
 ## 相容性備註
 
-- Starting with Firefox 47, this method will no longer return `-0`. For example, `[0].indexOf(0, -0)` will now always return `+0` ({{bug(1242043)}}).
+- Starting with Firefox 47, this method will no longer return `-0`. For example, `[0].indexOf(0, -0)` will now always return `+0` ([Firefox bug 1242043](https://bugzil.la/1242043)).
 
 ## 參見
 

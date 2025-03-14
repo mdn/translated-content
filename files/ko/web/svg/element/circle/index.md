@@ -1,62 +1,68 @@
 ---
 title: <circle>
 slug: Web/SVG/Element/circle
-translation_of: Web/SVG/Element/circle
+l10n:
+  sourceCommit: c0eef9c5828e919c8128c99e0f95cc7a0bcdbc4e
 ---
+
 {{SVGRef}}
 
-`circle(원)은` 엘리먼트는 중심점과 반지름에 기초하여 원을 생성하는데 사용되는 SVG의 기본 모양이다.
+**`<circle>`** [SVG](/ko/docs/Web/SVG) SVG 요소는 중심점과 반지름을 기준으로 원을 그리는 데 사용되는 SVG 기본 모양입니다.
+
+## 예제
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="50"/>
+  <circle cx="50" cy="50" r="50" />
 </svg>
 ```
 
 {{EmbedLiveSample('Example', 100, 100)}}
 
-## 사용예 컨텍스트
+## 속성
+
+- {{SVGAttr("cx")}}
+  - : 원 중심의 x축 좌표입니다.
+    값 유형: **[\<length>](/ko/docs/Web/SVG/Content_type#length)**|**[\<percentage>](/ko/docs/Web/SVG/Content_type#percentage)** ; 기본 값: `0`; 에니메이션 가능: **예**
+- {{SVGAttr("cy")}}
+  - : 원 중심의 y축 좌표입니다.
+    값 유형: **[\<length>](/ko/docs/Web/SVG/Content_type#length)**|**[\<percentage>](/ko/docs/Web/SVG/Content_type#percentage)** ; 기본 값: `0`; 에니메이션 가능: **예**
+- {{SVGAttr("r")}}
+  - : 원의 반지름입니다. 0 이하의 값은 원의 렌더링을 비활성화합니다.
+    값 유형: **[\<length>](/ko/docs/Web/SVG/Content_type#length)**|**[\<percentage>](/ko/docs/Web/SVG/Content_type#percentage)** ; 기본 값: `0`; 에니메이션 가능: **예**
+- {{SVGAttr("pathLength")}}
+  - : 원주 전체 길이(사용자 단위).
+    값 유형: [**\<number>**](/ko/docs/Web/SVG/Content_type#number) ; 기본 값: 없음; 에니메이션 가능: **예**
+
+> [!NOTE]
+> SVG2부터 시작하여 `cx`, `cy`, 그리고 `r`는 기하학 속성입니다. 즉, 해당 속성을 해당 요소의 CSS 속성으로도 사용할 수 있습니다.
+
+### 전역 속성
+
+- [코어 속성](/ko/docs/Web/SVG/Attribute)
+  - : 특히: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
+- [스타일 속성](/ko/docs/Web/SVG/Attribute)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- [조건부 처리 속성](/ko/docs/Web/SVG/Attribute)
+  - : 특히: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+- 이벤트 속성
+  - : [전역 이벤트 속성](/ko/docs/Web/SVG/Attribute#global_event_attributes), [그래픽 이벤트 속성](/ko/docs/Web/SVG/Attribute#graphical_event_attributes)
+- [프레젠테이션 속성](/ko/docs/Web/SVG/Attribute)
+  - : 특히: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+- ARIA 속성
+  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
+
+## 사용 참고 사항
 
 {{svginfo}}
-
-## 예제
-
-```xml
-<?xml version="1.0"?>
-<svg viewBox="0 0 120 120" version="1.1"
-  xmlns="http://www.w3.org/2000/svg">
-  <circle cx="60" cy="60" r="50"/>
-</svg>
-```
-
-» [circle.svg](https://mdn.mozillademos.org/files/7707/circle2.svg)
-
-## 속성들
-
-### 글로벌 속성들
-
-- [조건부 처리 속성들](/en-US/SVG/Attribute#Conditional_processing_attributes) »
-- [주요 속성들](/en-US/SVG/Attribute#Core_attributes) »
-- [그래픽 이벤트 속성들](/en-US/SVG/Attribute#Graphical_event_attributes) »
-- [표현 속성들](/en-US/SVG/Attribute#Presentation_attributes) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
-
-### 특정 속성들
-
-- {{ SVGAttr("cx") }}
-- {{ SVGAttr("cy") }}
-- {{ SVGAttr("r") }}
-
-## DOM 인터페이스
-
-이 엘리먼트는 {{ domxref("SVGCircleElement") }} 를 구현한다..
 
 ## 명세서
 
@@ -66,6 +72,6 @@ html,body,svg { height:100% }
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
-- {{ SVGElement("ellipse") }}
+- 기타 기본 SVG 모양: **{{ SVGElement('ellipse') }}**, {{ SVGElement('line') }}, {{ SVGElement('polygon') }}, {{ SVGElement('polyline') }}, {{ SVGElement('rect') }}

@@ -5,17 +5,15 @@ slug: Web/API/CSSStyleRule/style
 
 {{ ApiRef() }}
 
-### 概述
+返回 一个 {{ domxref("CSSStyleDeclaration") }}接口对象，它代表了{{ DOMXref("CSSRule") }}的 [declaration block](https://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block)。
 
-返回 一个 {{ domxref("CSSStyleDeclaration") }}接口对象，它代表了{{ DOMXref("CSSRule") }}的 [declaration block](http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block)。
-
-### 语法
+## 语法
 
 ```plain
 styleObj = cssRule.style
 ```
 
-### 例子
+## 示例
 
 ```js
 function stilo() {
@@ -24,18 +22,14 @@ function stilo() {
 // 弹出 "background-color: gray;"
 ```
 
-### 备注
+## 备注
 
 declaration block 是样式规则中花括号内的部分（选择器就在花括号的外部）
 
-### 相关链接
+## 规范
 
-- [DOM CSS Properties](/zh-CN/CSS/CSS_Reference)
+{{Specifications}}
 
-### 规范
-
-[DOM Level 2 CSS: style](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleRule-style)
-
-### 浏览器兼容性
+## 浏览器兼容性
 
 {{Compat}}

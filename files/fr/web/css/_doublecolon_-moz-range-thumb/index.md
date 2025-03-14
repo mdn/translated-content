@@ -1,15 +1,14 @@
 ---
-title: '::-moz-range-thumb'
+title: ::-moz-range-thumb
 slug: Web/CSS/::-moz-range-thumb
-browser-compat: css.selectors.-moz-range-thumb
-translation_of: Web/CSS/::-moz-range-thumb
 ---
 
 {{CSSRef}}{{Non-standard_header}}
 
-Le pseudo-élément **`::-moz-range-thumb`** représente le curseur qui se déplace le long de la piste dans un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) de type `range` et qui permet de modifier la valeur numérique associée.
+Le pseudo-élément **`::-moz-range-thumb`** représente le curseur qui se déplace le long de la piste dans un élément [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range` et qui permet de modifier la valeur numérique associée.
 
-> **Note :** Utiliser `::-moz-range-thumb` avec un autre élément que `<input type="range">` n'aura aucun effet.
+> [!NOTE]
+> Utiliser `::-moz-range-thumb` avec un autre élément que `<input type="range">` n'aura aucun effet.
 
 ## Syntaxe
 
@@ -20,13 +19,13 @@ Le pseudo-élément **`::-moz-range-thumb`** représente le curseur qui se dépl
 ### HTML
 
 ```html
-<input type="range" min="0" max="100" step="5" value="50"/>
+<input type="range" min="0" max="100" step="5" value="50" />
 ```
 
 ### CSS
 
 ```css
-input[type=range]::-moz-range-thumb {
+input[type="range"]::-moz-range-thumb {
   background-color: green;
 }
 ```
@@ -37,7 +36,7 @@ input[type=range]::-moz-range-thumb {
 
 Une barre de progression mise en forme avec ces règles devrait ressembler à&nbsp;:
 
-![Un élément \<input type=range> avec un curseur vert](screen_shot_2015-12-04_at_13.30.08.png)
+![Un élément 'input type=range' avec un curseur vert](screen_shot_2015-12-04_at_13.30.08.png)
 
 ## Spécifications
 
@@ -49,7 +48,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla 
 
 ## Voir aussi
 
-- Les pseudo-éléments de Gecko qui permettent de mettre en forme les autres parties des éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) de type `range`&nbsp;:
+- Les pseudo-éléments de Gecko qui permettent de mettre en forme les autres parties des éléments [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range`&nbsp;:
 
   - [`::-moz-range-track`](/fr/docs/Web/CSS/::-moz-range-track)
   - [`::-moz-range-progress`](/fr/docs/Web/CSS/::-moz-range-progress)

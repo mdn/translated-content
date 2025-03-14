@@ -1,13 +1,81 @@
 ---
 title: backface-visibility
 slug: Web/CSS/backface-visibility
+l10n:
+  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
 {{CSSRef}}
 
 **`backface-visibility`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がユーザーに対して裏側を向いたときに、裏面を可視にするかどうかを設定します。
 
-{{EmbedInteractiveExample("pages/css/backface-visibility.html")}}
+{{InteractiveExample("CSS Demo: backface-visibility")}}
+
+```css interactive-example-choice
+backface-visibility: visible;
+```
+
+```css interactive-example-choice
+backface-visibility: hidden;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  perspective: 550px;
+  perspective-origin: 220% 220%;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgb(230, 0, 0);
+  color: white;
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgba(0, 0, 0, 0.6);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgba(0, 0, 0, 0.6);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+```
 
 要素の裏面は表面の鏡像です。裏面は二次元では可視ではありませんが、三次元空間で要素に回転変換が行われたときに、背面を見ることができます。 (このプロパティは、視点を持たない二次元の座標変換では効果がありません。)
 
@@ -22,6 +90,7 @@ backface-visibility: hidden;
 backface-visibility: inherit;
 backface-visibility: initial;
 backface-visibility: revert;
+backface-visibility: revert-layer;
 backface-visibility: unset;
 ```
 
@@ -44,11 +113,9 @@ backface-visibility: unset;
 
 ## 例
 
-<h3 id="Cube_with_transparent_and_opaque_faces">透明な面と不透明な面を持った立方体</h3>
+### 透明な面と不透明な面を持った立方体
 
 この例は、透明な面と不透明な面を持つ立方体を表示します。
-
-<h4 id="HTML">HTML</h4>
 
 #### HTML
 
@@ -71,8 +138,8 @@ backface-visibility: unset;
         </div>
       </div>
       <p>
-        すべての面が透明であり、
-        裏面 (2, 4, 5) が 表面 (1, 3, 6) を通して表示されます。
+        すべての面が透明であり、裏面 (2, 4, 5) が表面 (1, 3, 6)
+        を通して表示されます。
       </p>
     </td>
     <td>
@@ -86,9 +153,7 @@ backface-visibility: unset;
           <div class="face bottom">6</div>
         </div>
       </div>
-      <p>
-        背後の3面 (2, 4, 5) は非表示です。
-      </p>
+      <p>背後の3面 (2, 4, 5) は非表示です。</p>
     </td>
   </tr>
 </table>
@@ -168,8 +233,10 @@ backface-visibility: unset;
 }
 
 /* テーブルの見栄えをよくする */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   margin: 0px;
   padding: 6px;
   font-family: sans-serif;
@@ -191,4 +258,4 @@ th, p, td {
 
 ## 関連情報
 
-- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

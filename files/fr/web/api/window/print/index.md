@@ -1,9 +1,6 @@
 ---
 title: Window.print()
 slug: Web/API/Window/print
-page-type: web-api-instance-method
-browser-compat: api.Window.print
-translation_of: Web/API/Window/print
 ---
 
 {{APIRef}}
@@ -17,7 +14,7 @@ Cette méthode sera bloquante pour le reste de l'exécution tant que la boîte d
 ## Syntaxe
 
 ```js
-print()
+print();
 ```
 
 ### Paramètres
@@ -38,6 +35,6 @@ Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 
 ## Voir aussi
 
-- [Guide sur l'impression](/fr/docs/Web/Guide/Printing)
+- [Guide sur l'impression](/fr/docs/Web/CSS/CSS_media_queries/Printing)
 - [L'évènement `beforeprint`](/fr/docs/Web/API/Window/beforeprint_event)
 - [L'évènement `afterprint`](/fr/docs/Web/API/Window/afterprint_event)

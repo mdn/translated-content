@@ -1,7 +1,6 @@
 ---
 title: AudioNode
 slug: Web/API/AudioNode
-original_slug: Web/API/AudioNode
 ---
 
 {{APIRef("Web Audio API")}}
@@ -17,7 +16,8 @@ Ejemplos que la incluyen:
 
 {{InheritanceDiagram}}
 
-> **Nota:** un `AudioNode` puede ser objetivo de eventos, por lo que implementa la interfaz {{domxref("EventTarget")}}.
+> [!NOTE]
+> Un `AudioNode` puede ser objetivo de eventos, por lo que implementa la interfaz {{domxref("EventTarget")}}.
 
 ## Descripción
 

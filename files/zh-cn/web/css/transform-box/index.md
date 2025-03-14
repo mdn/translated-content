@@ -3,13 +3,11 @@ title: transform-box
 slug: Web/CSS/transform-box
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 ## 概述
 
-**`transform-box`**属性定义了与 {{cssxref("transform")}}、{{cssxref("transform-origin")}} 这两个属性有关联的布局框。
-
-{{cssinfo}}
+**`transform-box`** 属性定义了与 {{cssxref("transform")}}、{{cssxref("transform-origin")}} 这两个属性有关联的布局框。
 
 ## 语法
 
@@ -36,18 +34,22 @@ transform-box: unset;
 - `view-box`
   - : Uses the nearest {{Glossary("SVG")}} viewport as reference box. If a {{SVGAttr("viewBox")}} attribute is specified for the SVG viewport creating element, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute and the dimension of the reference box is set to the width and height values of the `viewBox` attribute.
 
-### Formal syntax
+## 形式定义
+
+{{cssinfo}}
+
+## 形式语法
 
 {{csssyntax}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Using CSS Transforms](/zh-CN/docs/CSS/Using_CSS_transforms)
+- [使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

@@ -1,15 +1,13 @@
 ---
 title: translateX()
 slug: Web/CSS/transform-function/translateX
-original_slug: Web/CSS/transform-function/translateX()
-browser-compat: css.types.transform-function.translateX
 ---
 
 {{CSSRef}}
 
 La fonction CSS **`translateX()`** permet d'appliquer une translation en 2D. La valeur obtenue sera du type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
 
-![](transform-functions-translatex_2.png)
+{{EmbedInteractiveExample("pages/css/function-translateX.html")}}
 
 > **Note :** `translateX(tx)` est équivalent à `translate(tx, 0)` ou `translate3d(tx, 0, 0)`.
 
@@ -21,7 +19,7 @@ transform: translateX(200px);
 transform: translateX(50%);
 ```
 
-### Values
+### Valeurs
 
 - `<length-percentage>`
   - : Une valeur exprimant une longueur (type [`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) qui représente la composante horizontale du vecteur de translation. Lorsque la valeur est un pourcentage, elle est relative à la largeur de la boîte de référence définie par la propriété [`transform-box`](/fr/docs/Web/CSS/transform-box).
@@ -31,8 +29,8 @@ transform: translateX(50%);
     <tr>
       <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
       <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
+      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
+      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
     </tr>
   </thead>
   <tbody>
@@ -109,7 +107,7 @@ transform: translateX(50%);
 ### Syntaxe formelle
 
 ```css
-translateX([`<length-percentage>`](/fr/docs/Web/CSS/length-percentage))
+translateX(<length-percentage>)
 ```
 
 ## Exemples

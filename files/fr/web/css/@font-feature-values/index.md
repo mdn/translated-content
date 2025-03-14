@@ -1,11 +1,6 @@
 ---
-title: '@font-feature-values'
+title: "@font-feature-values"
 slug: Web/CSS/@font-feature-values
-tags:
-  - CSS
-  - Reference
-  - Règle @
-translation_of: Web/CSS/@font-feature-values
 ---
 
 {{CSSRef}}
@@ -14,7 +9,7 @@ La [règle @](/fr/docs/Web/CSS/At-rule) **`@font-feature-values`** permet aux au
 
 ```css
 @font-feature-values Font One {
-/* On active la caractéristique nice-style
+  /* On active la caractéristique nice-style
    sur Font One */
   @styleset {
     nice-style: 12;
@@ -22,7 +17,7 @@ La [règle @](/fr/docs/Web/CSS/At-rule) **`@font-feature-values`** permet aux au
 }
 
 @font-feature-values Font Two {
-/* On active la caractéristique nice-style
+  /* On active la caractéristique nice-style
    sur Font Two */
   @styleset {
     nice-style: 4;
@@ -53,7 +48,7 @@ La règle @ `@font-feature-values` peut être utilisée au plus haut niveau d'un
 - `@styleset`
   - : Indique le nom d'une caractéristique qui fonctionnera avec la notation fonctionnelle {{cssxref("font-variant-alternates", "styleset()", "#styleset()")}}. Plusieurs valeurs peuvent être utilisées pour cette caractéristique : `ident1: 2 4 12 1` correspondra aux valeurs OpenType `ss02`, `ss04`, `ss12`, `ss01`. Les valeurs supérieures à `99` sont valides mais ne correspondent à aucune valeur OpenType et sont donc ignorées.
 - `@character-variant`
-  - : Indique le nom d'une caractéristique qui fonctionnera avec la notation fonctionnelle {{cssxref("font-variant-alternates", "character-variant()", "#character-variant()")}}. Pour cette définition, on peut utiliser une ou deux valeurs : `ident1: 2`  correspond à `cv02=1` et `ident2: 2 4` correspond à `cv02)4`, en revanche `ident2: 2 4 5` est invalide.
+  - : Indique le nom d'une caractéristique qui fonctionnera avec la notation fonctionnelle {{cssxref("font-variant-alternates", "character-variant()", "#character-variant()")}}. Pour cette définition, on peut utiliser une ou deux valeurs : `ident1: 2` correspond à `cv02=1` et `ident2: 2 4` correspond à `cv02)4`, en revanche `ident2: 2 4 5` est invalide.
 
 ### Syntaxe formelle
 

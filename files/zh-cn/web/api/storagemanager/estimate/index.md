@@ -31,27 +31,29 @@ var estimatePromise = StorageManager.estimate();
 
 在这个示例中，我们使用 estimate() 得到目前所使用的存储空间占全部存储空间的百分比。
 
-### HTML 内容
+### HTML
 
 ```html
 <p>
-  You're currently using about <span id="percent">
-  </span>% of your available storage.
+  You're currently using about <span id="percent"> </span>% of your available
+  storage.
 </p>
 ```
 
-### JavaScript 内容
+### JavaScript
 
 ```js
-navigator.storage.estimate().then(function(estimate) {
-  document.getElementById("percent").innerHTML =
-      (estimate.usage / estimate.quota * 100).toFixed(2);
+navigator.storage.estimate().then(function (estimate) {
+  document.getElementById("percent").innerHTML = (
+    (estimate.usage / estimate.quota) *
+    100
+  ).toFixed(2);
 });
 ```
 
 ### 结果
 
-{{ EmbedLiveSample('Example', 600, 40) }}
+{{ EmbedLiveSample('示例', 600, 40) }}
 
 ## 规范
 

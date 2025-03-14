@@ -43,7 +43,7 @@ Content-Encoding: deflate, gzip
 - `compress`
   - : A format using the [Lempel-Ziv-Welch](http://en.wikipedia.org/wiki/LZW) (LZW) algorithm. The value name was taken from the UNIX _compress_ program, which implemented this algorithm. Like the compress program, which has disappeared from most UNIX distributions, this content-encoding is not used by many browsers today, partly because of a patent issue (it expired in 2003).
 - `deflate`
-  - : Using the [zlib](http://en.wikipedia.org/wiki/Zlib) structure (defined in [RFC 1950](http://tools.ietf.org/html/rfc1950)) with the [_deflate_](http://en.wikipedia.org/wiki/DEFLATE) compression algorithm (defined in [RFC 1951](http://tools.ietf.org/html/rfc1951)).
+  - : Using the [zlib](http://en.wikipedia.org/wiki/Zlib) structure (defined in [RFC 1950](https://tools.ietf.org/html/rfc1950)) with the [_deflate_](http://en.wikipedia.org/wiki/DEFLATE) compression algorithm (defined in [RFC 1951](https://tools.ietf.org/html/rfc1951)).
 - `identity`
   - : Indicates the identity function (i.e., no compression or modification). This token, except if explicitly specified, is always deemed acceptable.
 - `br`
@@ -69,15 +69,15 @@ Note that the server is not obligated to use any compression method. Compression
 
 ## Especificações
 
-| Especificação                                                    | Título                                                        |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                                    | Título                                                        |
+| ------------------------------------------------ | ------------------------------------------------------------- |
 | {{RFC("7932", "Brotli Compressed Data Format")}} | Brotli Compressed Data Format                                 |
-| {{RFC("7231", "Content-Encoding", "3.1.2.2")}}     | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{RFC("7231", "Content-Encoding", "3.1.2.2")}}   | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 | {{RFC("2616", "Content-Encoding", "14.11")}}     | Content-Encoding                                              |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Content-Encoding")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,25 +1,24 @@
 ---
-title: location.port
+title: "location: port プロパティ"
 slug: Web/API/Location/port
+l10n:
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{ApiRef("Location")}}
 
-**`port`** は {{domxref("Location")}} インターフェイスのプロパティで、 {{domxref("USVString")}} で URL のポート番号を表します。 URL に明示的にポート番号が指定されていない場合は、 `''` に設定されます。
+**`port`** は {{domxref("Location")}} インターフェイスのプロパティで、URL のポート番号が入った文字列です。URL に明示的にポート番号が指定されていない場合は、`''` に設定されます。
 
-## 構文
+## 値
 
-```js
-string = object.port;
-object.port = string;
-```
+文字列です。
 
 ## 例
 
 ```js
-// Let's an <a id="myAnchor" href="https://developer.mozilla.org:443/ja/docs/Location.port"> element be in the document
-var anchor = document.getElementByID("myAnchor");
-var result = anchor.port; // Returns:'443'
+// 文書内に <a id="myAnchor" href="/ja/docs/Location.search?q=123"> 要素があるとする
+const anchor = document.getElementByID("myAnchor");
+const result = anchor.port; // Returns:'443'
 ```
 
 ## 仕様書

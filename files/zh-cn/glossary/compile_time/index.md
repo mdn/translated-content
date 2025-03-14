@@ -1,13 +1,14 @@
 ---
 title: 编译时间
 slug: Glossary/Compile_time
-original_slug: Glossary/编译时间
+l10n:
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-编译时间是指程序从被加载到程序被解析完成所用的时间。
+{{GlossarySidebar}}
 
-## 学习更多
+**编译时间**是指程序从被加载到程序被{{glossary("parse", "解析完成")}}所用的时间。
 
-### 基础知识
+## 参见
 
-- [Compile time](https://zh.wikipedia.org/wiki/Compile_time) on Wikipedia
+- 维基百科上的[编译期](https://zh.wikipedia.org/wiki/编译期)

@@ -1,13 +1,6 @@
 ---
 title: URL()
 slug: Web/API/URL/URL
-tags:
-  - API
-  - Constructeur
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/URL
 ---
 
 {{APIRef("URL API")}}
@@ -31,7 +24,8 @@ url = new URL(url, [base])
 - _base_ {{optional_inline}}
   - : Un {{domxref("USVString")}} représentant l'URL de base à utiliser dans le cas où l'URL est une URL relative. Si non spécifié, il est par défaut à `''`.
 
-> **Note :** Vous pouvez toujours utiliser un objet {{domxref ("URL")}} existant pour la base, qui se stringifie en attribut {{domxref ("DOMString.href", "href")}} de l'objet.
+> [!NOTE]
+> Vous pouvez toujours utiliser un objet {{domxref ("URL")}} existant pour la base, qui se stringifie en attribut {{domxref ("DOMString.href", "href")}} de l'objet.
 
 ### Exceptions
 
@@ -43,18 +37,18 @@ url = new URL(url, [base])
 
 ```js
 var a = new URL("/", "https://developer.mozilla.org"); // Crée une URL pointant vers 'https://developer.mozilla.org/'
-var b = new URL("https://developer.mozilla.org");      // Crée une URL pointant vers 'https://developer.mozilla.org/'
-var c = new URL('en-US/docs', b);                      // Crée une URL pointant vers 'https://developer.mozilla.org/en-US/docs'
-var d = new URL('/en-US/docs', b);                     // Crée une URL pointant vers 'https://developer.mozilla.org/en-US/docs'
-var f = new URL('/en-US/docs', d);                     // Crée une URL pointant vers 'https://developer.mozilla.org/en-US/docs'
-var g = new URL('/en-US/docs', "https://developer.mozilla.org/fr-FR/toto");
-                                                       // Crée une URL pointant vers 'https://developer.mozilla.org/en-US/docs'
-var h = new URL('/en-US/docs', a);                     // Crée une URL pointant vers 'https://developer.mozilla.org/en-US/docs'
-var i = new URL('/en-US/docs', '');                    // Déclenche une exception TypeError car '' n'est pas une URL valide
-var j = new URL('/en-US/docs');                        // Déclenche une exception TypeError car '/ fr-US / docs' n'est pas une URL valide
-var k = new URL('http://www.example.com', 'https://developers.mozilla.com');
-                                                       // Crée une URL pointant vers 'http://www.example.com/'
-var l = new URL('http://www.example.com', b);          // Crée une URL pointant vers 'http://www.example.com/'
+var b = new URL("https://developer.mozilla.org"); // Crée une URL pointant vers 'https://developer.mozilla.org/'
+var c = new URL("en-US/docs", b); // Crée une URL pointant vers 'https://developer.mozilla.org/en-US/docs'
+var d = new URL("/en-US/docs", b); // Crée une URL pointant vers 'https://developer.mozilla.org/en-US/docs'
+var f = new URL("/en-US/docs", d); // Crée une URL pointant vers 'https://developer.mozilla.org/en-US/docs'
+var g = new URL("/en-US/docs", "https://developer.mozilla.org/fr-FR/toto");
+// Crée une URL pointant vers 'https://developer.mozilla.org/en-US/docs'
+var h = new URL("/en-US/docs", a); // Crée une URL pointant vers 'https://developer.mozilla.org/en-US/docs'
+var i = new URL("/en-US/docs", ""); // Déclenche une exception TypeError car '' n'est pas une URL valide
+var j = new URL("/en-US/docs"); // Déclenche une exception TypeError car '/ fr-US / docs' n'est pas une URL valide
+var k = new URL("http://www.example.com", "https://developers.mozilla.com");
+// Crée une URL pointant vers 'http://www.example.com/'
+var l = new URL("http://www.example.com", b); // Crée une URL pointant vers 'http://www.example.com/'
 ```
 
 ## Spécifications

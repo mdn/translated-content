@@ -1,22 +1,27 @@
 ---
 title: WeakMap.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/has
-original_slug: Web/JavaScript/Reference/Objets_globaux/WeakMap/has
 ---
 
 {{JSRef}}
 
 La méthode **`has()`** renvoie un booléen qui indique s'il existe (ou non) un élément avec une clé donnée au sein de l'objet `WeakMap`.
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: WeakMap.prototype.has()")}}
+
+```js interactive-example
+const weakmap1 = new WeakMap();
+const object1 = {};
+const object2 = {};
+
+weakmap1.set(object1, "foo");
+
+console.log(weakmap1.has(object1));
+// Expected output: true
+
+console.log(weakmap1.has(object2));
+// Expected output: false
+```
 
 ## Syntaxe
 
@@ -40,7 +45,7 @@ var wm = new WeakMap();
 wm.set(window, "toto");
 
 wm.has(window); // renvoie true
-wm.has("machin");  // renvoie false
+wm.has("machin"); // renvoie false
 ```
 
 ## Spécifications

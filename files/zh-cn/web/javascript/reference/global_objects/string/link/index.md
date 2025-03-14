@@ -5,41 +5,38 @@ slug: Web/JavaScript/Reference/Global_Objects/String/link
 
 {{JSRef}} {{deprecated_header}}
 
-**`link()`** 方法创建一个 HTML 元素 {{HTMLElement("a")}} ，用该字符串作为超链接的显示文本，参数作为指向另一个 URL 的超链接。
+{{jsxref("String")}} 值的 **`link()`** 方法创建一个 {{HTMLElement("a")}} 元素字符串，其中嵌入了调用的字符串（`<a href="...">str</a>`），用作指向另一个 URL 的超文本链接。
+
+> [!NOTE]
+> 所有 [HTML 包装方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法)都已被弃用，并且仅为了兼容性而标准化。请使用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)（例如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)）代替。
 
 ## 语法
 
-```plain
-str.link(url)
+```js-nolint
+link(url)
 ```
 
 ### 参数
 
 - `url`
-  - : 任何能够指定 `a` 标签的 `href` 属性的字符串；它应当是有效的 URL（相对或绝对），任何 `&` 字符将会被转义为 `&amp;`，任何 `"` 字符将会被转义为 `&quot;`。
+  - : 任何能够指定 `<a>` 元素的 `href` 属性的字符串；它应当是有效的 URL（相对或绝对），任何 `&` 字符将会被转义为 `&amp;`。
 
 ### 返回值
 
-一个带有一个 HTML 元素 {{HTMLElement("a")}} 的字符串。
-
-## 描述
-
-使用 `link` 方法创建一个超链接 HTML 片段。返回的字符串可以通过 {{ Domxref("document.write") }} 或 {{ Domxref("element.innerHTML") }} 方法添加到文档中。
-
-使用 `link` 方法创建的链接将会成为 document.links 数组中的元素。查看 {{ Domxref("document.links") }}。
+一个以 `<a href="url">` 开始标签开始（`url` 中的双引号被替换为 `&quot;`），接着是文本 `str`，最后是 `</a>` 结束标签的字符串。
 
 ## 示例
 
-### 例子：使用 `link`
+### 使用 link()
 
-下例显示一个单词 "MDN" 作为超链接，指向 Mozilla Developer Network。
+下面的示例将单词“MDN”显示为一个超文本链接，点击该链接将用户返回到 Mozilla Developer Network。
 
 ```js
-var hotText = 'MDN';
-var URL = 'https://developer.mozilla.org/';
+const hotText = "MDN";
+const url = "https://developer.mozilla.org/";
 
-document.write('Click to return to ' + hotText.link(URL));
-// Click to return to <a href="https://developer.mozilla.org/">MDN</a>
+console.log(`点击返回 ${hotText.link(url)}`);
+// 点击返回 <a href="https://developer.mozilla.org/">MDN</a>
 ```
 
 ## 规范
@@ -52,4 +49,6 @@ document.write('Click to return to ' + hotText.link(URL));
 
 ## 参见
 
+- [`core-js` 中 `String.prototype.link` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.anchor()")}}
+- {{domxref("document.links")}}

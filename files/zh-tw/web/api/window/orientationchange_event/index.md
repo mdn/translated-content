@@ -1,5 +1,5 @@
 ---
-title: 'Window: orientationchange event'
+title: "Window: orientationchange event"
 slug: Web/API/Window/orientationchange_event
 ---
 
@@ -10,7 +10,7 @@ slug: Web/API/Window/orientationchange_event
 | 冒泡       | No                                                                      |
 | ---------- | ----------------------------------------------------------------------- |
 | 可取消     | No                                                                      |
-| 介面       | {{domxref("Event")}}                                            |
+| 介面       | {{domxref("Event")}}                                                    |
 | 事件處理器 | [`onorientationchange`](/zh-TW/docs/Web/API/Window/onorientationchange) |
 
 ## 範例
@@ -18,16 +18,20 @@ slug: Web/API/Window/orientationchange_event
 可於 [`addEventListener`](/zh-TW/docs/Web/API/EventTarget/addEventListener) 方法中使用 `abort` 事件：
 
 ```js
-window.addEventListener("orientationchange", function() {
-  console.log("the orientation of the device is now " + screen.orientation.angle);
+window.addEventListener("orientationchange", function () {
+  console.log(
+    "the orientation of the device is now " + screen.orientation.angle,
+  );
 });
 ```
 
 或使用 [`onorientationchange`](/zh-TW/docs/Web/API/Window/onorientationchange) 事件處理器屬性：
 
 ```js
-window.onorientationchange = function() {
-  console.log("the orientation of the device is now " + screen.orientation.angle);
+window.onorientationchange = function () {
+  console.log(
+    "the orientation of the device is now " + screen.orientation.angle,
+  );
 };
 ```
 

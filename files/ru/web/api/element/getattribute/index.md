@@ -1,48 +1,86 @@
 ---
-title: Element.getAttribute()
+title: "Element: метод getAttribute()"
 slug: Web/API/Element/getAttribute
-tags:
-  - API
-  - DOM
-  - Method
-  - метод
-translation_of: Web/API/Element/getAttribute
+l10n:
+  sourceCommit: 990ab6637bb4d44f059597262cbf3c51abae79eb
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
-## Описание
+Метод **`getAttribute()`** интерфейса {{domxref("Element")}} возвращает значение указанного атрибута.
 
-`getAttribute()` возвращает значение указанного атрибута элемента. Если элемент не содержит данный атрибут, могут быть возвращены `null` или `""` (пустая строка); подробнее [Notes](#notes).
+Если атрибут не существует, то вернётся значение `null` или `""` (пустая строка), подробности смотрите в разделе «[Несуществующие атрибуты](#несуществующие_атрибуты)».
+
+Если необходимо получить {{domxref("Attr", "свойства узла")}}, то можно использовать метод {{domxref("Element.getAttributeNode()", "getAttributeNode()")}}.
 
 ## Синтаксис
 
-```
-var attribute = element.getAttribute(attributeName);
-```
-
-где
-
-- `attribute` - переменная, которой будет присвоено значение `attributeName`.
-- `attributeName` - имя атрибута, значение которого необходимо получить.
-
-## Пример
-
-```
-var div1 = document.getElementById("div1");
-var align = div1.getAttribute("align");
-alert(align); // отобразит значение атрибута align элемента с id="div1"
+```js-nolint
+getAttribute(attributeName)
 ```
 
-## Примечания
+### Параметры
 
-Когда метод `getAttribute` вызывается применительно к HTML-элементу, в DOM HTML-документа, значение аргумента приводится к нижнему регистру.
+- `attributeName`
+  - : имя атрибута, значение которого необходимо получить.
 
-В действительности все браузеры (Firefox, Internet Explorer, последние версии Opera, Safari, Konqueror, iCab и т.д.) возвращают `null`, когда выбранный элемент не содержит атрибута с переданным именем. Спецификация DOM определяет, что корректное возвращаемое значение в данном случае - _пустая строка_ и некоторые реализации DOM придерживаются такого поведения. Реализация getAttribute в XUL (Gecko) в настоящее время следует спецификации и возвращает пустую строку. Следовательно, имеет смысл использовать [hasAttribute](/en/DOM/element.hasAttribute), чтобы проверять наличие атрибутов перед вызовом `getAttribute()`, если может быть такое, что выбранный элемент не будет содержать искомого атрибута.
+### Возвращаемое значение
 
-{{ DOMAttributeMethods() }}
+Строка, содержащая значение `attributeName`.
+
+## Примеры
+
+```html
+<div id="div1">Привет!</div>
+```
+
+```js
+const div1 = document.getElementById("div1");
+// <div id="div1">Привет!</div>
+
+const exampleAttr = div1.getAttribute("id");
+// "div1"
+
+const align = div1.getAttribute("align");
+// null
+```
+
+## Описание
+
+### Приведение к нижнему регистру
+
+При вызове у HTML-элемента в HTML-документе `getAttribute()` приводит аргумент к нижнему регистру.
+
+### Несуществующие атрибуты
+
+Все современные браузеры возвращают `null`, если у элемента нет указанного атрибута.
+
+### Получение значений криптографических одноразовых номеров
+
+По [соображениям безопасности](/ru/docs/Web/HTTP/CSP) получение криптографических одноразовых номеров («nonce») из источников, отличных от скриптов (таких как CSS селекторы и вызовы `.getAttribute("nonce")`), недоступно.
+
+```js example-bad
+let nonce = script.getAttribute("nonce");
+// вернёт пустую строку
+```
+
+Вместо этого следует использовать свойство {{domxref("HTMLElement/nonce", "nonce")}}:
+
+```js
+let nonce = script.nonce;
+```
 
 ## Спецификации
 
-- [DOM Level 2 Core: getAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-666EE0F9) (представлено в [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute))
-- [HTML 5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{domxref("Element.hasAttribute()")}}
+- {{domxref("Element.setAttribute()")}}
+- {{domxref("Element.removeAttribute()")}}
+- {{domxref("Element.toggleAttribute()")}}

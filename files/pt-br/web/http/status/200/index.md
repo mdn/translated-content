@@ -24,13 +24,13 @@ O resultado de sucesso de um {{HTTPMethod("PUT")}} ou {{HTTPMethod("DELETE")}} g
 
 ## Especificações
 
-| Especificação                                    | Título                                                        |
-| ------------------------------------------------ | ------------------------------------------------------------- |
+| Especificação                       | Título                                                        |
+| ----------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "200 OK" , "6.3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.200")}}
+{{Compat}}
 
 ## Veja também
 

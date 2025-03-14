@@ -22,8 +22,8 @@ rangeAncestor = range.commonAncestorContainer;
 ```js
 var range = document.createRange();
 
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
 rangeAncestor = range.commonAncestorContainer;
 ```
 
@@ -37,4 +37,4 @@ rangeAncestor = range.commonAncestorContainer;
 
 ## 更多
 
-- [DOM 接口相关内容](/zh-CN/docs/DOM/DOM_Reference)
+- [DOM 接口相关内容](/zh-CN/docs/Web/API/Document_Object_Model)

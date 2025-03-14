@@ -17,12 +17,10 @@ var visualViewport = Window.visualViewport
 
 {{domxref("VisualViewport")}} はオブジェクトです。
 
-## 仕様
+## 仕様書
 
-| Specification                                                                                            | Status                               | Comment             |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Visual Viewport','#dom-window-visualviewport','visualViewport')}} | {{Spec2('Visual Viewport')}} | Initial definition. |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.visualViewport")}}
+{{Compat}}

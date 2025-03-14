@@ -1,31 +1,20 @@
 ---
 title: windows.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/remove
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Fenêtre
-  - Méthode
-  - Non-standard
-  - Référence(2)
-  - Suppression
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Ferme une fenêtre et tous les onglets à l'intérieur, compte tenu de l'ID de la fenêtre.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var removing = browser.windows.remove(
-  windowId        // integer
-)
+  windowId, // integer
+);
 ```
 
 ### Paramètres
@@ -35,11 +24,11 @@ var removing = browser.windows.remove(
 
 ### Valeur retournée
 
-Une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments lorsque la fenêtre a été fermée. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
+Une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments lorsque la fenêtre a été fermée. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.remove")}}
+{{Compat}}
 
 ## Exemples
 
@@ -55,10 +44,8 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-
   var removing = browser.windows.remove(tab.windowId);
   removing.then(onRemoved, onError);
-
 });
 ```
 
@@ -66,21 +53,25 @@ Fermez la fenêtre en cours, par exemple une fenêtre contextuelle, lorsque l'ut
 
 ```js
 // in a script loaded by the page in the window
-document.querySelector('#close').addEventListener(async ({ button, }) => { try {
-  if (button) return; // not a left click
-  const windowId = (await browser.windows.getCurrent()).id;
-  await browser.windows.remove(windowId);
-  // this point will never be reached, since the window is gone
-} catch (error) { console.error('Closing failed:', error); } });
+document.querySelector("#close").addEventListener(async ({ button }) => {
+  try {
+    if (button) return; // not a left click
+    const windowId = (await browser.windows.getCurrent()).id;
+    await browser.windows.remove(windowId);
+    // this point will never be reached, since the window is gone
+  } catch (error) {
+    console.error("Closing failed:", error);
+  }
+});
 ```
 
 Dans Firefox, la même chose pourrait être réalisée avec la propriété de création de fenêtre `.allowScriptsToClose` et `window.close()`.
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/extensions/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
 >
 > Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 

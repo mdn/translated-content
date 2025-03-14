@@ -1,17 +1,9 @@
 ---
 title: webRequest.StreamFilter.close()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/close
-tags:
-  - Add-ons
-  - Extensions
-  - Method
-  - StreamFilter.close
-  - WebExtensions
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/close
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Ferme la demande. Après cet appel, aucune autre donnée de réponse ne sera transmise au moteur de rendu du navigateur et aucun autre événement de filtrage ne sera donné à l'extension.
 
@@ -24,7 +16,7 @@ Vous ne pouvez pas appeler cette fonction avant que l'événement {{WebExtAPIRef
 ## Syntaxe
 
 ```js
-filter.close()
+filter.close();
 ```
 
 ### Paramètres
@@ -35,9 +27,9 @@ None.
 
 None.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.StreamFilter.close", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -47,18 +39,18 @@ Cet exemple remplacera le contenu de la page par "texte de remplacement" :
 function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
-  filter.onstart = event => {
+  filter.onstart = (event) => {
     console.log("started");
     let encoder = new TextEncoder();
     filter.write(encoder.encode("replacement content"));
     filter.close();
-  }
+  };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.org/"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.org/"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 

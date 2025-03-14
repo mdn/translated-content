@@ -1,12 +1,9 @@
 ---
 title: En-tête d'entité
 slug: Glossary/Entity_header
-tags:
-  - Glossaire
-  - Mécanismes web
-translation_of: Glossary/Entity_header
-original_slug: Glossaire/En-tête_entité
 ---
+
+{{GlossarySidebar}}
 
 Un en-tête d'entité est un {{glossary("header","en-tête HTTP")}} décrivant le contenu du corps du message. Les en-têtes d'entité sont utilisés à la fois dans les requêtes et les réponses HTTP. Des en-têtes tels que {{HTTPHeader("Content length")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Encoding")}} sont des en-têtes d'entité.
 
@@ -25,4 +22,4 @@ Content-Length: 128
 
 ### Connaissance technique
 
-- [Liste de tous les en-têtes HTTP](/fr/docs/HTTP/Headers)
+- [Liste de tous les en-têtes HTTP](/fr/docs/Web/HTTP/Headers)

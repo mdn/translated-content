@@ -1,13 +1,9 @@
 ---
 title: variable
 slug: Web/XSLT/Element/variable
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/variable
-original_slug: Web/XSLT/variable
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:variable>` déclare une variable globale ou locale dans une feuille de style et lui attribue une valeur. Comme XSLT ne permet pas d'effet de bord, une fois que la valeur de la variable est établie, elle reste la même jusqu'à ce que la variable soit hors de portée.
 
@@ -35,7 +31,7 @@ Premier niveau ou instruction. S'il intervient comme élément de premier niveau
 
 ### Définition
 
-[XSLT 1.0, section 11](http://www.w3.org/TR/xslt#variables).
+[XSLT 1.0, section 11](https://www.w3.org/TR/xslt#variables).
 
 ### Support Gecko
 

@@ -1,10 +1,6 @@
 ---
-title: 'ARIA : rôle article'
+title: "ARIA : rôle article"
 slug: Web/Accessibility/ARIA/Roles/article_role
-translation_of: Web/Accessibility/ARIA/Roles/article_role
-spec-urls:
-  - https://w3c.github.io/aria/#article
-  - https://w3c.github.io/aria-practices/#feed
 ---
 
 Le rôle `article` indique qu'une section d'une page pourrait tout à fait être autonome sur sa propre page, sur un document ou un site web donné. Il est généralement associé au contenu relatif comme les commentaires, les messages sur un forum, les articles d'un journal ou plus généralement pour des éléments regroupés à plusieurs sur une même page.
@@ -14,14 +10,15 @@ Le rôle `article` indique qu'une section d'une page pourrait tout à fait être
   <h2>Titre du segment</h2>
   <p>Paragraphe du segment.</p>
   <p>Un autre paragraphe.</p>
-… des contrôles pour interagir avec l'article, le partage, etc.
+  … des contrôles pour interagir avec l'article, le partage, etc.
 </div>
-<div role="article"> ... </div>
+<div role="article">...</div>
 ```
 
 Dans l'exemple qui précède, on a deux articles côte à côte sur une même page qui pourraient partager la même structure et être liés l'un à l'autre.
 
-> **Note :** Plutôt qu'un élément `<div>` avec un rôle `article`, on utilisera plutôt un élément [`<article>`](/fr/docs/Web/HTML/Element/article). **On privilégiera toujours les éléments natifs s'ils sont disponibles.**
+> [!NOTE]
+> Plutôt qu'un élément `<div>` avec un rôle `article`, on utilisera plutôt un élément [`<article>`](/fr/docs/Web/HTML/Element/article). **On privilégiera toujours les éléments natifs s'ils sont disponibles.**
 
 Pour l'exemple qui précède, mieux vaut ne pas utiliser `role="article"` mais privilégier l'élément `<article>`.
 
@@ -30,9 +27,9 @@ Pour l'exemple qui précède, mieux vaut ne pas utiliser `role="article"` mais p
   <h2>Titre du segment</h2>
   <p>Paragraphe du segment.</p>
   <p>Un autre paragraphe.</p>
-… des contrôles pour interagir avec l'article, le partage, etc.
+  … des contrôles pour interagir avec l'article, le partage, etc.
 </article>
-<article> ... </article>
+<article>...</article>
 ```
 
 ## Description
@@ -92,6 +89,6 @@ Ce rôle correspond à l'élément [`<article>`](/fr/docs/Web/HTML/Element/artic
 
 1. [**Rôles WAI-ARIA**](/fr/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/fr/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/fr/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

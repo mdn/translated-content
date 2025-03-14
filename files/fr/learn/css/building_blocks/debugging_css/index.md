@@ -1,118 +1,108 @@
 ---
-title: Debugging CSS
+title: Déboguer du code CSS
 slug: Learn/CSS/Building_blocks/Debugging_CSS
-translation_of: Learn/CSS/Building_blocks/Debugging_CSS
-original_slug: Apprendre/CSS/Building_blocks/Debugging_CSS
+l10n:
+  sourceCommit: 458eb9af74287fd15ef8ba9f4ba9aa3423c4cac3
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
 
-Parfois, quand vous écrirez du CSS, vous rencontrerez un problème où votre CSS semblera ne pas se comporter comme vous vous y attendrez. Peut-être que vous croirez qu'un certain sélecteur devrait être lié à un élément, mais rien ne se passe, ou une box aura une taille différente de ce que vous espérerez. Cet article vous donnera une ligne directrice pour débeuguer un problème CSS, et vous montrera comment les DevTools (outils de développeur) inclus dans tous les navigateurs modernes peuvent vous aider à comprendre ce qui se passe.
+Lorsqu'on écrit du CSS, on peut rencontrer certaines situations où le CSS ne fait pas vraiment ce qu'on attend de lui. Que faire quand rien ne se passe alors qu'un sélecteur devrait cibler un élément&nbsp;? Pourquoi une boîte est-elle d'une taille différente que celle souhaitée&nbsp;? Dans cet article, nous vous guiderons pour le débogage des problèmes CSS et l'utilisation des outils de développement des navigateurs pour le diagnostic.
 
-<table class="standard-table">
+<table>
   <tbody>
     <tr>
-      <th scope="row">Prerequisites:</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Basic computer literacy,
-        <a
-          href="/fr/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
-        >, basic knowledge of
-        <a href="/fr/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >working with files</a
-        >, HTML basics (study
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction to HTML</a
-        >), and an idea of how CSS works (study
-        <a href="/fr/docs/Learn/CSS/First_steps">CSS first steps</a>.)
+        Notions informatiques de base, <a href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software">logiciels de base installés</a>, savoir comment <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files">manipuler les fichiers</a>, notions de base de HTML (voir <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">Introduction à HTML</a>), une idée générale du fonctionnement de CSS (voir <a href="/fr/docs/Learn/CSS/First_steps">Premiers pas en CSS</a>).
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Objectifs&nbsp;:</th>
       <td>
-        To learn the basics of what browser DevTools are, and how to do simple
-        inspection and editing of CSS.
+        Apprendre les bases des outils de développement des navigateurs, les fonctionnalités d'inspection et l'édition de CSS.
       </td>
     </tr>
   </tbody>
 </table>
 
-## Comment accéder aux outils de développement du navigateur
+## Comment accéder aux outils de développements des navigateurs
 
-L'article [Que sont les outils de développement de navigateurs](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) est un guide maintenu à jour qui explique comment accéder aux outils dans différents navigateurs et plateformes. Alors que vous pouvez choisir de développer le plus souvent sur un navigateur en particulier, et donc de devenir plus familier avec les outils inclus dans ce navigateur, il est important de savoir comment accéder à ces outils dans d'autres navigateurs. Cela vous aidera si vous voyez des rendus différents entre plusieurs navigateurs.
+L'article [Que sont les outils de développement des navigateurs&nbsp;?](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) est un guide expliquant comment accéder aux outils de développement (<i lang="en">devtools</i>) des différents navigateurs sur les différentes plateformes. Même si vous pouvez choisir de développer principalement avec un navigateur donné et vous familiariser ainsi avec les outils de ce navigateur, mieux vaut savoir comment accéder à ces outils dans les différents navigateurs. Cela pourra vous aider si vous observez des résultats différents selon les navigateurs.
 
-You will also find that browsers have chosen to focus on different areas when creating their DevTools. For example in Firefox there are some excellent tools for working visually with CSS Layout, allowing you to inspect and edit [Grid Layouts](/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts), [Flexbox](/fr/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts), and [Shapes](/fr/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes). However, all of the different browsers have similar fundamental tools, e.g. for inspecting the properties and values applied to elements on your page, and making changes to them from the editor.
+Vous pourrez également voir que les navigateurs ont chacun mis l'accent sur différentes parties de leurs outils de développement. Ainsi, Firefox dispose d'excellents outils pour travailler les dispositions CSS&nbsp;: l'inspection et l'édition [des grilles CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html), [des boîtes flexibles](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html), et [des formes CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html). Ceci étant, tous les navigateurs disposent des mêmes outils de base, par exemple pour inspecter les propriétés et valeurs appliquées aux éléments d'une page et les modifier depuis l'éditeur.
 
-In this lesson we will look at some useful features of the Firefox DevTools for working with CSS. In order to do so I'll be using [an example file](https://mdn.github.io/css-examples/learn/inspecting/inspecting.html). Load this up in a new tab if you want to follow along, and open up your DevTools as described in the article linked above.
+Dans cet article, nous verrons certaines fonctionnalités utiles des outils de développement de Firefox pour travailler avec CSS. Pour cela, nous utiliserons [un fichier d'exemple](https://mdn.github.io/css-examples/learn/inspecting/inspecting.html). Ouvrez ce fichier dans un nouvel onglet et ouvrez les outils de développement (voir comment dans l'article mentionné ci-avant) pour suivre les exemples de cet article.
 
-## The DOM versus view source
+## Le DOM ou le code source
 
-Something that can trip up newcomers to DevTools is the difference between what you see when you [view the source](/fr/docs/Tools/View_source) of a webpage, or look at the HTML file you put on the server, and what you can see in the [HTML Pane](/fr/docs/Tools/Page_Inspector/UI_Tour#HTML_pane) of the DevTools. While it looks roughly similar to what you can see via View Source there are some differences.
+Un point qui peut troubler les débutantes et les débutants est la différence de ce qu'on voit entre [le code source de la page](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) (ou le fichier HTML stocké sur le serveur) et ce qu'on voit dans [l'onglet HTML](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#html-pane) des outils de développement. Bien qu'ils se ressemblent, vous pouvez voir des différences.
 
-In the rendered DOM the browser may have corrected some badly-written HTML for you. If you incorrectly closed an element, for instance opening an `<h2>` but closing with an `</h3>`, the browser will figure out what you were meaning to do and the HTML in the DOM will correctly close the open `<h2>` with an `</h2>`. The browser will also normalize all of the HTML, and the DOM will also show any changes made by JavaScript.
+Le DOM affiché dans le navigateur pourra avoir été normalisé&nbsp;: le navigateur pourra avoir corrigé du HTML mal écrit. Par exemple, si un élément a été ouvert avec une balise `<h2>` mais fermé avec une balise `</h3>`, le navigateur s'adaptera et le HTML visible dans le DOM contiendra la balise `</h2>` comme balise fermante. Le DOM affichera également les modifications apportées par le code JavaScript.
 
-View Source in comparison, is simply the HTML source code as stored on the server. The [HTML tree](/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#HTML_tree) in your DevTools shows exactly what the browser is rendering at any given time, so it gives you an insight into what is really going on.
+Le code source correspond lui au code source HTML tel que stocké sur le serveur. [L'arborescence HTML](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#html-tree) des outils de développement montre exactement ce qui est rendu par le navigateur, à tout moment et permet de voir ce qui est en train de se passer.
 
-## Inspecting the applied CSS
+## Inspecter le CSS appliqué
 
-Select an element on your page, either by right/ctrl-clicking on it and selecting _Inspect_, or selecting it from the HTML tree on the left of the DevTools display. Try selecting the element with the class of `box1`; this is the first element on the page with a bordered box drawn around it.
+Sélectionnez un élément de votre page en cliquant droit dessus et en sélectionnant «&nbsp;Inspecter&nbsp;» ou en le sélectionnant depuis l'arborescence HTML à gauche dans l'affichage des outils de développement. Avec la page d'exemple, essayez de sélectionner l'élément avec la classe `box1`&nbsp;; il s'agit du premier élément sur la page qui a une boîte avec une bordure autour de lui.
 
-![The example page for this tutorial with DevTools open.](inspecting1.png)
+![La page d'exemple pour ce tutoriel avec les outils de développement ouverts.](inspecting1.png)
 
-If you look at the [Rules view](/fr/docs/Tools/Page_Inspector/UI_Tour#Rules_view) to the right of your HTML, you should be able to see the CSS properties and values applied to that element. You will see the rules directly applied to class `box1` and also the CSS that is being inherited by the box from its ancestors, in this case to `<body>`. This is useful if you are seeing some CSS being applied that you didn't expect. Perhaps it is being inherited from a parent element and you need to add a rule to overwrite it in the context of this element.
+Si vous observez [l'inspecteur de règles](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#rules-view) situé à droite du HTML, vous devriez voir les propriétés et valeurs CSS appliquées à cet élément. Vous verrez ainsi les règles qui sont directement appliquées pour la classe `box1`, mais aussi le CSS hérité via les ancêtres de la boîte (ici `<body>`). Cela s'avère utile pour détecter du CSS appliqué, mais inattendu. Cela peut indiquer que la règle est héritée depuis un élément parent et qu'il faut rajouter une règle dans le contexte de l'élément courant pour surcharger cet héritage.
 
-Also useful is the ability to expand out shorthand properties. In our example the `margin` shorthand is used.
+Dans ce panneau, on peut aussi développer les propriétés raccourcies. Dans notre exemple, on utilise la propriété `margin`.
 
-**Click on the little arrow to expand the view, showing the different longhand properties and their values.**
+**Cliquez sur la petite flèche pour développer la vue et voir les propriétés détaillées avec leur valeur.**
 
-**You can toggle values in the Rules view on and off, when that panel is active — if you hold your mouse over it checkboxes will appear. Uncheck a rule's checkbox, for example `border-radius`, and the CSS will stop applying.**
+**Vous pouvez activer/désactiver des valeurs dans l'inspecteur de règles quand le panneau est actif&nbsp;: si vous survolez les règles à la souris, des cases à cocher apparaîtront. Vous pouvez alors décocher une case pour que la règle associée (par exemple celle portant sur `border-radius`) et le CSS correspondant cessera de s'appliquer.**
 
-You can use this to do an A/B comparison, deciding if something looks better with a rule applied or not, and also to help debug it — for example if a layout is going wrong and you are trying to work out which property is causing the problem.
+Vous pouvez utiliser ceci pour comparer l'effet d'une règle ou celui de son absence pour décider s'il faut conserver la règle. Cela peut aussi vous aider à déboguer, par exemple pour déterminer la propriété qui poserait un problème de disposition.
 
-The following video provides some useful tips on debugging CSS using the Firefox DevTools:
+La vidéo qui suit (en anglais) fournit quelques conseils pour déboguer du CSS avec les outils de développement de Firefox&nbsp;:
 
 {{EmbedYouTube("O3DAm82vIvU")}}
 
-## Editing values
+## Éditer les valeurs
 
-In addition to turning properties on and off, you can edit their values. Perhaps you want to see if another color looks better, or wish to tweak the size of something? DevTools can save you a lot of time editing a stylesheet and reloading the page.
+En plus de permettre l'activation/la désactivation des propriétés, les outils permettent d'éditer leur valeur. Si vous souhaitez voir l'effet d'une autre couleur ou adapter la taille d'un élément, les outils de développement peuvent vous faire gagner du temps plutôt que d'éditer le fichier CSS et de recharger la page.
 
-**With `box1` selected, click on the swatch (the small colored circle) that shows the color applied to the border. A color picker will open up and you can try out some different colors; these will update in real time on the page. In a similar fashion, you could change the width or style of the border.**
+**Lorsque `box1` est sélectionnée, cliquez sur le cercle coloré qui montre la couleur appliquée à la bordure. Un sélecteur de couleur s'ouvrira alors et vous pourrez essayer différentes couleurs qui seront appliquées en temps réel sur la page. De la même façon, vous pouvez modifier la largeur ou le style de la bordure.**
 
-![DevTools Styles Panel with a color picker open.](inspecting2-color-picker.png)
+![Le panneau des styles dans les outils de développement, avec un sélecteur de couleur ouvert.](inspecting2-color-picker.png)
 
-## Adding a new property
+## Ajouter une nouvelle propriété
 
-You can add properties using the DevTools. Perhaps you have realised that you don't want your box to inherit the `<body>` element's font size, and want to set its own specific size? You can try this out in DevTools before adding it to your CSS file.
+Vous pouvez utiliser les outils de développement pour ajouter de nouvelles propriétés. Peut-être avez-vous déterminé qu'il ne fallait pas que la boîte hérite de la taille de caractères de l'élément `<body>` et devait avoir sa taille de police à elle&nbsp;? Vous pouvez essayer et voir ce que ça donne depuis les outils de développement avant d'ajouter cette éventuelle modification à votre fichier CSS.
 
-**You can click the closing curly brace in the rule to start entering a new declaration into it, at which point you can start typing the new property and DevTools will show you an autocomplete list of matching properties. After selecting `font-size`, enter the value you want to try. You can also click the + button to add an additional rule with the same selector, and add your new rules there.**
+**Vous pouvez cliquer sur l'accolade fermante d'une règle pour commencer à saisir une nouvelle déclaration. Vous pourrez alors saisir une nouvelle propriété (les outils de développement aideront avec une auto-complétion listant les propriétés correspondantes). Dans la page d'exemple, après avoir sélectionné `font-size`, saisissez la valeur que vous souhaitez utiliser. Vous pouvez aussi cliquer sur le bouton + pour ajouter une règle supplémentaire avec le même sélecteur et ajouter vos nouvelles règles ici.**
 
-![The DevTools Panel, adding a new property to the rules, with the autocomplete for font- open](inspecting3-font-size.png)
+![Le panneau des outils de développement avec l'ajout d'une nouvelle propriété aux règles, où on voit la liste ouverte des suggestions d'autocomplétion pour font-](inspecting3-font-size.png)
 
-> **Note :** There are other useful features in the Rules view too, for example declarations with invalid values are crossed out. You can find out more at [Examine and edit CSS](/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS).
+> [!NOTE]
+> L'inspecteur de règles contient d'autres fonctionnalités comme la mise en évidence des déclarations avec des valeurs invalides qui sont rayées. Pour en savoir plus, voir [Examiner et éditer le CSS (en anglais)](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html).
 
-## Understanding the box model
+## Comprendre le modèle de boîtes
 
-In previous lessons we have discussed [the Box Model](/fr/docs/Learn/CSS/Building_blocks/The_box_model), and the fact that we have an alternate box model that changes how the size of elements are calculated based on the size you give them, plus the padding and borders. DevTools can really help you to understand how the size of an element is being calculated.
+Dans les articles précédents, nous avons abordé [le modèle de boîtes](/fr/docs/Learn/CSS/Building_blocks/The_box_model) et le fait que le calcul de la taille des éléments dépend de leur taille mais aussi du remplissage (<i lang="en">padding</i>) et des bordures. Les outils de développement permettent de mieux comprendre comment la taille d'un élément est calculée.
 
-The [Layout view](/fr/docs/Tools/Page_Inspector/UI_Tour#Layout_view) shows you a diagram of the box model on the selected element, along with a description of the properties and values that change how the element is laid out. This includes a description of properties that you may not have explicitly used on the element, but which do have initial values set.
+La [vue Disposition](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#layout-view) affiche un diagramme du modèle de boîtes pour l'élément sélectionné, avec une description des propriétés et valeurs qui modifient la disposition de l'élément. Cela inclut une description des propriétés qui pourraient ne pas être explicitement utilisées sur l'élément, mais qui ont des valeurs initiales.
 
-In this panel, one of the detailed properties is the `box-sizing` property, which controls what box model the element uses.
+Dans ce panneau, une des propriétés détaillées est `box-sizing`, qui contrôle le modèle de boîtes utilisé par l'élément.
 
-**Compare the two boxes with classes `box1` and `box2`. They both have the same width applied (400px), however `box1` is visually wider. You can see in the layout panel that it is using `content-box`. This is the value that takes the size you give the element and then adds on the padding and border width.**
+**Comparez les deux boîtes avec les classes `box1` et `box2`. Les deux ont la même largeur appliquée (400px), mais `box1` apparaît avec une largeur visuelle supérieure. Vous pouvez voir dans le panneau Disposition qu'elle utilise `content-box`. Avec cette valeur, la taille visuelle est la taille de l'élément à laquelle on ajoute la largeur du remplissage et des largeurs.**
 
-The element with a class of `box2` is using `border-box`, so here the padding and border is subtracted from the size that you have given the element. This means that the space taken up on the page by the box is the exact size that you specified — in our case `width: 400px`.
+L'élément avec la classe `box2` utilise `border-box`, ce qui signifie que le remplissage et la bordure sont soustraits à la taille donnée à l'élément. Autrement dit, l'espace occupé par l'élément sur la page correspond à la taille indiquée, ici `width: 400px`.
 
-![The Layout section of the DevTools](inspecting4-box-model.png)
+![La section Disposition des outils de développement.](inspecting4-box-model.png)
 
-> **Note :** Find out more in [Examining and Inspecting the Box Model](/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model).
+> [!NOTE]
+> Pour en savoir plus, voir [Examiner et inspecter le modèle de boîtes (en anglais)](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html).
 
-## Solving specificity issues
+## Résoudre des problèmes de spécificité
 
-Sometimes during development, but in particular when you need to edit the CSS on an existing site, you will find yourself having a hard time getting some CSS to apply. No matter what you do, the element just doesn't seem to take the CSS. What is generally happening here is that a more specific selector is overriding your changes, and here DevTools will really help you out.
+Pendant le développement, notamment lors de l'édition du CSS d'un site existant, il peut s'avérer difficile d'appliquer du CSS comme on le voudrait. Quoi qu'il arrive, l'élément ciblé ne semble pas répondre aux changements apportés au CSS. Généralement, cela vient d'un sélecteur plus spécifique, qui prend la priorité sur les changements apportés, et c'est là que les outils de développement peuvent vous aider.
 
-In our example file there are two words that have been wrapped in an `<em>` element. One is displaying as orange and the other hotpink. In the CSS we have applied:
+Dans notre fichier d'exemple, nous avons deux mots placés chacun dans un élément `<em>`. L'un s'affiche en orange et l'autre en rose. Dans la feuille de style, nous avons&nbsp;:
 
 ```css
 em {
@@ -121,7 +111,7 @@ em {
 }
 ```
 
-Above that in the stylesheet however is a rule with a `.special` selector:
+Mais il y a également cette règle pour le sélecteur `.special`&nbsp;:
 
 ```css
 .special {
@@ -129,85 +119,64 @@ Above that in the stylesheet however is a rule with a `.special` selector:
 }
 ```
 
-As you will recall from the lesson on [cascade and inheritance](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) where we discussed specificity, class selectors are more specific than element selectors, and so this is the value that applies. DevTools can help you find such issues, especially if the information is buried somewhere in a huge stylesheet.
+Si vous vous rappelez l'article sur [la cascade et l'héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) où nous avons abordé la spécificité, les sélecteurs de classe sont plus spécifiques que les sélecteurs d'élément. Pour notre exemple, c'est donc la deuxième règle qui décide de la couleur. Les outils de développement peuvent vous aider à identifier de tels problèmes, notamment lorsque l'information est enfouie dans une feuille de style conséquente.
 
-**Inspect the `<em>` with the class of `.special` and DevTools will show you that orange is the color that applies, and also shows you the `color` property applied to the em crossed out. You can now see that the class is overriding the element selector.**
+**Inspectez l'élément `<em>` avec la classe `.special`, les outils de développement montreront que c'est la couleur orange qui s'applique, mais aussi que la propriété `color` appliquée via le sélecteur `<em>` est barrée. Vous pouvez alors voir que le sélecteur de classe surcharge le sélecteur d'élément.**
 
-![Selecting an em and looking at DevTools to see what is over-riding the color.](inspecting5-specificity.png)
+![Sélectionner un élément em et consulter les outils de développement afin de déterminer ce qui surcharge la couleur.](inspecting5-specificity.png)
 
-## Find out more about the Firefox DevTools
+## Déboguer des problèmes CSS
 
-There is a lot of information about the Firefox DevTools here on MDN. Take a look at the main [DevTools section](/fr/docs/Tools), and for more detail on the things we have briefly covered in this lesson see [The How To Guides](/fr/docs/Tools/Page_Inspector#How_to).
+Les outils de développement sont d'une grande aide pour résoudre des problèmes de CSS. Que faire si vous vous trouvez dans une situation où le CSS ne se comporte pas comme vous le souhaitez&nbsp;? Les étapes suivantes devraient vous aider.
 
-## Debugging problems in CSS
+### Prendre du recul
 
-DevTools can be a great help when solving CSS problems, so when you find yourself in a situation where CSS isn't behaving as you expect, how should you go about solving it? The following steps should help.
+Tout problème (de code) peut être frustrant, notamment les problèmes CSS, car il n'y a pas de message d'erreur explicite qu'on pourrait chercher en ligne pour trouver une solution. Si le problème que vous rencontrez vous frustre, n'hésitez pas à laisser de côté le sujet pendant quelques instants (marchez quelques minutes, prenez une boisson, discutez avec quelqu'un, ou travaillez sur un autre sujet). Il arrive parfois que la solution apparaisse lorsqu'on arrête de penser au problème, et même si ça n'est pas toujours le cas, réfléchir à un problème de façon plus sereine sera plus facile.
 
-### Take a step back from the problem
+### Est-ce que le code HTML et le code CSS sont valides&nbsp;?
 
-Any coding problem can be frustrating, especially CSS problems because you often don't get an error message to search for online to help with finding a solution. If you are becoming frustrated, take a step away from the issue for a while — go for a walk, grab a drink, chat to a co-worker, or work on some other thing for a while. Sometimes the solution magically appears when you stop thinking about the problem, and even if not, working on it when feeling refreshed will be much easier.
+Bien que les navigateurs s'attendent à du code CSS et HTML bien écrit, ils s'adaptent pour afficher les pages au mieux s'il y a des erreurs dans le balisage ou la feuille de style. Si vous avez des erreurs dans votre code, le navigateur pourra tenter de deviner ce que vous aviez en tête mais aboutir à une conclusion différente. De plus, deux navigateurs différents pourraient s'adapter de façons différentes. Une bonne première étape consiste donc à valider le document HTML et la feuille CSS avec un validateur qui pourrait détecter des erreurs et proposer des corrections.
 
-### Do you have valid HTML and CSS?
+- [Validateur CSS](https://jigsaw.w3.org/css-validator/)
+- [Validateur HTML](https://validator.w3.org/)
 
-Browsers expect your CSS and HTML to be correctly written, however browsers are also very forgiving and will try their best to display your webpages even if you have errors in the markup or stylesheet. If you have mistakes in your code the browser needs to make a guess at what you meant, and it might make a different decision to what you had in mind. In addition, two different browsers might cope with the problem in two different ways. A good first step therefore is to run your HTML and CSS through a validator, to pick up and fix any errors.
+### Est-ce que la propriété et la valeur sont prises en charge par le navigateur utilisé&nbsp;?
 
-- [CSS Validator](https://jigsaw.w3.org/css-validator/)
-- [HTML validator](https://validator.w3.org/)
+Les navigateurs ignorent le CSS qu'ils ne prennent pas en charge. Si la propriété ou la valeur utilisée n'est pas prise en charge par le navigateur utilisé pour tester, rien ne cassera, mais le CSS ne sera pas appliqué. Les outils de développement mettront généralement en avant les propriétés et valeurs qu'ils ne prennent pas en charge. Dans la capture d'écran qui suit, on voit que le navigateur ne prend pas en charge la valeur `subgrid` pour [`grid-template-columns`](/fr/docs/Web/CSS/grid-template-columns).
 
-### Is the property and value supported by the browser you are testing in?
+![Une image des outils de développement de Firefox où la règle grid-template-columns: subgrid est barrée, car la valeur subgrid n'est pas prise en charge.](no-support.png)
 
-Browsers simply ignore CSS they don't understand. If the property or value you are using is not supported by the browser you are testing in then nothing will break, but that CSS won't be applied. DevTools will generally highlight unsupported properties and values in some way. In the screenshot below the browser does not support the subgrid value of {{cssxref("grid-template-columns")}}.
+Vous pouvez également consulter les tableaux de compatibilité des navigateurs en bas de chaque page MDN des propriétés. Ces tableaux contiennent les informations de prise en charge pour chaque propriété, avec un détail des différents usages et valeurs si la compatibilité est différente. [Voir le tableau de compatibilité pour la propriété `shape-outside`](/fr/docs/Web/CSS/shape-outside#compatibilité_des_navigateurs).
 
-![Image of browser DevTools with the grid-template-columns: subgrid crossed out as the subgrid value is not supported.](no-support.png)
+### Est-ce que quelque chose outrepasse votre CSS&nbsp;?
 
-You can also take a look at the Browser compatibility tables at the bottom of each property page on MDN. These show you browser support for that property, often broken down if there is support for some usage of the property and not others. The below table shows the compat data for the {{cssxref("shape-outside")}} property.
+C'est ici que les informations apprises à propos de la spécificité vous seront utiles. Si quelque chose de plus spécifique outrepassant ce que vous essayez d'appliquer, ça peut devenir frustrant que d'essayer de deviner d'où ça vient. Toutefois, comme nous l'avons vu ci-avant, les outils de développement vous montreront le CSS appliqué et vous permettront de déterminer un nouveau sélecteur suffisamment spécifique.
 
-{{compat("css.shape-outside")}}
+### Construire un cas de test minimal pour le problème
 
-### Is something else overriding your CSS?
+Si votre problème n'est pas résolu après avoir suivi ces étapes, vous devrez poursuivre l'enquête. La meilleure chose à faire à ce niveau est de créer un cas de test minimal. Savoir «&nbsp;réduire un problème&nbsp;» est une compétence très utile. Cela vous aidera à trouver des problèmes dans votre code et celui de vos collègues, et vous permettra également de rapporter des bogues et de demander de l'aide plus efficacement.
 
-This is where the information you have learned about specificity will come in very useful. If you have something more specific overriding what you are trying to do, you can enter into a very frustrating game of trying to work out what. However, as described above, DevTools will show you what CSS is applying and you can work out how to make the new selector specific enough to override it.
+Un cas de test minimal est un exemple de code qui met en évidence le problème de la façon la plus simple possible, et où on a retiré tout le contenu et la mise en forme qui ne sont pas liés au problème. Généralement, cela consistera à prendre le code problématique de votre disposition et à créer un petit exemple, montrant uniquement ce code ou cette fonctionnalité.
 
-### Make a reduced test case of the problem
+Pour créer un cas de test minimal&nbsp;:
 
-If the issue isn't solved by the steps above, then you will need to do some more investigating. The best thing to do at this point is to create something known as a reduced test case. Being able to "reduce an issue" is a really useful skill. It will help you find problems in your own code and that of your colleagues, and will also enable you to report bugs and ask for help more effectively.
+1. Si votre balisage est généré dynamiquement, par exemple avec un système de gestion de contenu (CMS), construisez une version statique du résultat produit et qui montre le problème. Un site de partage de code comme [CodePen](https://codepen.io/) pourra vous être utile pour héberger le cas de test, ces sites sont accessibles en ligne et permettent de partager l'exemple. Vous pouvez commencer en visualisant le code source de la page et en copiant le code HTML dans CodePen, puis récupérer le CSS et JavaScript pertinents pour les y inclure également. Une fois que c'est fait, assurez-vous que le problème est toujours là.
+2. Si vous retirez le code JavaScript et que le problème persiste, retirez le JavaScript de l'exemple partagé. Si retirer le code JavaScript enlève le problème, retirez autant de JavaScript que possible et gardez ce qui participe au problème.
+3. Retirez tout le HTML qui ne participe pas au problème. Vous pouvez retirer les composants et même les éléments principaux de la disposition. Là aussi, essayez d'avoir le moins de code possible, et que le code qui reste permette d'observer le problème.
+4. Retirez tout le CSS qui n'a pas d'effet sur le problème.
 
-A reduced test case is a code example that demonstrates the problem in the simplest possible way, with unrelated surrounding content and styling removed. This will often mean taking the problematic code out of your layout to make a small example which only shows that code or feature.
+En suivant ces étapes, vous pourrez éventuellement découvrir ce qui pose problème, ou au moins activer/désactiver le problème en retirant quelque chose de particulier. N'hésitez pas à ajouter des commentaires dans votre code au fur et à mesure de vos découvertes. Si vous avez besoin d'aide, ces commentaires permettront à la personne qui vous aidera de savoir ce que vous avez déjà essayé. Cela pourrait aussi vous fournir suffisamment d'informations pour rechercher des problèmes semblables et leurs contournements.
 
-To create a reduced test case:
+Si vous continuez de coincer sur le problème, avoir un cas de test minimal vous permettra de demander de l'aide, en le postant sur un forum ou en le montrant à un collègue. Vous aurez plus facilement de l'aide si vous montrez que vous avez déjà isolé le problème et identifié où il se pose précisément. Une développeuse ou un développeur plus expérimenté⋅e pourra peut-être comprendre le problème et vous guider dans la bonne direction. Même si ce n'est pas le cas, votre cas de test minimal permettra à la personne qui vous aide d'intervenir rapidement et de vous assister d'une façon ou d'une autre.
 
-1. If your markup is dynamically generated — for example via a CMS — make a static version of the output that shows the problem. A code sharing site like [CodePen](https://codepen.io/) is useful for hosting reduced test cases, as then they are accessible online and you can easily share them with colleagues. You could start by doing View Source on the page and copying the HTML into CodePen, then grab any relevant CSS and JavaScript and include it too. After that, you can check whether the issue is still evident.
-2. If removing the JavaScript does not make the issue go away, don't include the JavaScript. If removing the JavaScript _does_ make the issue go away, then remove as much JavaScript as you can, leaving in whatever causes the issue.
-3. Remove any HTML that does not contribute to the issue. Remove components or even main elements of the layout. Again, try to get down to the smallest amount of code that still shows the issue.
-4. Remove any CSS that doesn't impact the issue.
+Si le problème que vous rencontrez est un vrai bogue, ce cas de test minimal pourra être utilisé pour renseigner le rapport de bogue avec les informations nécessaires pour l'éditeur du navigateur (par exemple, pour Firefox, c'est [le site Bugzilla](https://bugzilla.mozilla.org) qui permet de rapporter des bogues).
 
-In the process of doing this, you may discover what is causing the problem, or at least be able to turn it on and off by removing something specific. It is worth adding some comments to your code as you discover things. If you need to ask for help, they will show the person helping you what you have already tried. This may well give you enough information to be able to search for likely sounding problems and workarounds.
+En gagnant en expérience avec CSS, vous irez de plus en plus vite pour comprendre les problèmes rencontrés. Toutefois, même les personnes les plus expérimentées peuvent se demander ce qui ne tourne pas rond. Utiliser une approche méthodique, construire un cas de test minimal, et expliquer le problème à quelqu'un d'autre permettra généralement d'aboutir à une solution.
 
-If you are still struggling to fix the problem then having a reduced test case gives you something to ask for help with, by posting to a forum, or showing to a co-worker. You are much more likely to get help if you can show that you have done the work of reducing the problem and identifying exactly where it happens, before asking for help. A more experienced developer might be able to quickly spot the problem and point you in the right direction, and even if not, your reduced test case will enable them to have a quick look and hopefully be able to offer at least some help.
+## Résumé
 
-In the instance that your problem is actually a bug in a browser, then a reduced test case can also be used to file a bug report with the relevant browser vendor (e.g. on Mozilla's [bugzilla site](https://bugzilla.mozilla.org)).
+Et voilà, nous avons vu une introduction au débogage de CSS qui devrait vous doter de compétences utiles pour analyser d'éventuels problèmes CSS (ou d'autres langages) à l'avenir.
 
-As you become more experienced with CSS, you will find that you get faster at figuring out issues. However even the most experienced of us sometimes find ourselves wondering what on earth is going on. Taking a methodical approach, making a reduced test case, and explaining the issue to someone else will usually result in a fix being found.
+Dans le dernier article de ce module, nous verrons comment [organiser votre code CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
-
-## In this module
-
-1. [Cascade and inheritance](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class, and ID selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [The box model](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizing your CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)

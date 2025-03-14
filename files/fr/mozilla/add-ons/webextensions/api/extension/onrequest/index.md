@@ -1,21 +1,12 @@
 ---
 title: extension.onRequest
 slug: Mozilla/Add-ons/WebExtensions/API/extension/onRequest
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extension
-  - Extensions
-  - Reference
-  - WebExtensions
-  - onRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/onRequest
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-> **Attention :** Ceci n'est pas implémenté dans Firefox car il est obsolète depuis Chrome 33. Veuillez utiliser [runtime.onMessageExternal](/fr/Add-ons/WebExtensions/API/runtime/onMessageExternal) à la place.
+> [!WARNING]
+> Ceci n'est pas implémenté dans Firefox car il est obsolète depuis Chrome 33. Veuillez utiliser [runtime.onMessageExternal](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal) à la place.
 
 Lancé lorsqu'une requête est envoyée par un processus d'extension ou un script de contenu.
 
@@ -61,15 +52,15 @@ Les événements ont trois fonctions :
     - `sendResponse`
       - : `function`. Fonction à appeler (au plus une fois) lorsque vous avez une réponse. L'argument doit être n'importe quel objet JSON-ifiable, ou undefined s'il n'y a pas de réponse. Si vous avez plus d'un écouteur `onRequest` dans le même document, un seul peut envoyer une réponse.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.onRequest")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/extensions/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

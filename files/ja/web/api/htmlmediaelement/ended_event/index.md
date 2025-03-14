@@ -1,68 +1,60 @@
 ---
-title: 'HTMLMediaElement: ended イベント'
+title: "HTMLMediaElement: ended イベント"
+short-title: ended
 slug: Web/API/HTMLMediaElement/ended_event
+l10n:
+  sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
 {{APIRef("HTMLMediaElement")}}
 
 `ended` イベントは、メディアの終わりに達したため、またはそれ以上利用できるデータがないために再生またはストリーミングが停止したときに発生します。
 
-このイベントは、メディアの再生がメディアの最後に到達して終了した {{domxref("HTMLMediaElement")}}（{{HTMLElement("audio")}} および {{HTMLElement("video")}}）に基づいて発生します。
+このイベントは、 {{domxref("HTMLMediaElement")}}（{{HTMLElement("audio")}} および {{HTMLElement("video")}}）においてメディアの再生がメディアの最後に到達して終了した時に、 `ended` が発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">対象</th>
-      <td>要素</td>
-    </tr>
-    <tr>
-      <th scope="row">既定のアクション</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>{{domxref("GlobalEventHandlers.onended")}}</td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
 
-> **メモ:** このイベントは、[メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Streams_API) および [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) でも定義されています。
+> **メモ:** `ended` イベントは [`loop`](/ja/docs/Web/API/HTMLMediaElement/loop) プロパティが `true` で [`playbackRate`](/ja/docs/Web/API/HTMLMediaElement/playbackRate) が負の数ではない場合には発生しません。
+
+## 構文
+
+このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("ended", (event) => {});
+
+onended = (event) => {};
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
-これらの例では、`HTMLMediaElement` の `ended` イベントのイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。
+これらの例では、`HTMLMediaElement` の `ended` イベントのイベントリスナーを追加し、そのイベントハンドラーがイベントの発生に反応したときにメッセージを投稿します。
 
-`addEventListener()` を使用する場合
+`addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('ended', (event) => {
-  console.log('1）動画が終了した、または 2）それ以上データがない' +
-      'ため、動画が停止しました。');
+video.addEventListener("ended", (event) => {
+  console.log(
+    "動画は再生が完了したか、それ以上のデータが利用できないために停止しました。",
+  );
 });
 ```
 
-`onended` イベントハンドラープロパティを使用する場合
+`onended` イベントハンドラープロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onended = (event) => {
-  console.log('1）動画が終了した、または 2）それ以上データがない' +
-      'ため、動画が停止しました。');
+  console.log(
+    "動画は再生が完了したか、それ以上のデータが利用できないために停止しました。",
+  );
 };
 ```
 
@@ -80,7 +72,6 @@ video.onended = (event) => {
 - HTMLMediaElement {{domxref("HTMLMediaElement.waiting_event", 'waiting')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.seeking_event", 'seeking')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.seeked_event", 'seeked')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.ended_event", 'ended')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.canplay_event", 'canplay')}} イベント
@@ -101,9 +92,9 @@ video.onended = (event) => {
 - {{domxref("HTMLVideoElement")}}
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
-- [メディアキャプチャとストリーム](/ja/docs/Web/API/Media_Streams_API)
+- [メディアキャプチャとストリーム](/ja/docs/Web/API/Media_Capture_and_Streams_API)
 
-  - [メディアキャプチャとストリーム](/ja/docs/Web/API/Media_Streams_API)[: ended イベント](/ja/docs/Web/API/MediaStreamTrack/ended_event)
+  - [メディアキャプチャとストリーム](/ja/docs/Web/API/Media_Capture_and_Streams_API)[: ended イベント](/ja/docs/Web/API/MediaStreamTrack/ended_event)
 
 - [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
 

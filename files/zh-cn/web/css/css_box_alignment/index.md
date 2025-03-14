@@ -1,23 +1,24 @@
 ---
 title: CSS 盒子对齐
-slug: Web/CSS/CSS_Box_Alignment
+slug: Web/CSS/CSS_box_alignment
 ---
 
 {{CSSRef}}
 
 CSS 盒子对齐 (Box Alignment) 模块指定了在各种 CSS 盒子布局模型，如块布局，表布局，弹性布局和网格布局中，与盒子对齐有关的 CSS 功能。该模块旨在建立一种能一致地在 CSS 中指定对齐的方法。这份文档详述了出现在该规范中的一般概念。
 
-> **备注：** 每种布局方法的文档都将详细说明在其中是如何应用“盒子对齐”的
+> [!NOTE]
+> 每种布局方法的文档都将详细说明在其中是如何应用“盒子对齐”的
 
 ## 较老的对齐方法
 
 传统上，CSS 的对齐功能非常有限。我们可以利用 {{cssxref("text-align")}} 对齐文本，利用 auto {{cssxref("margin")}} 对齐块，并且利用 {{cssxref("vertical-align")}} 属性在表格 (table) 或者行内块 (inline-block) 布局中对齐块。现在 [Inline Layout](https://www.w3.org/TR/css-inline-3/) 与 [CSS Text](https://www.w3.org/TR/css-text-3/) 模块中涵盖了文本对齐的内容，而盒子对齐模块让我们第一次拥有了完整的水平与垂直对齐的能力。
 
-如果你最初学习过[弹性盒子 (Flexbox)](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)，你可能会觉得这些属性是弹性盒子规范的一部分。确实，某些属性是列在弹性盒子的 Level 1 标准中，不过规范指出我们应该提到盒子对齐规范，因为它可能会弹性盒子的基础上增加额外的功能。
+如果你最初学习过[弹性盒子（Flexbox）](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)，你可能会觉得这些属性是弹性盒子规范的一部分。确实，某些属性是列在弹性盒子的 Level 1 标准中，不过规范指出我们应该提到盒子对齐规范，因为它可能会弹性盒子的基础上增加额外的功能。
 
 ## 基本示例
 
-下面的例子演示了部分盒子对齐属性在 [网格](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) 和 [弹性盒子](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout) 中是如何被使用的。
+下面的例子演示了部分盒子对齐属性在[网格](/zh-CN/docs/Web/CSS/CSS_grid_layout)和[弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)中是如何被使用的。
 
 ### CSS 网格布局对齐示例
 
@@ -170,10 +171,10 @@ CSS 盒子对齐 (Box Alignment) 模块指定了在各种 CSS 盒子布局模型
 
 由于 CSS 盒子对齐属性的实现方式取决于与它们相交互的规范，因此请参见以下每种布局类型的页面，以获取关于如何将对齐属性与其一起使用的详细信息：
 
-- [Box alignment in Flexbox](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
-- [Box alignment in CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout)
-- [Box alignment in multiple-column layout](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout)
-- [Box alignment for block, absolutely positioned and table layout](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables)
+- [Box alignment in Flexbox](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [Box alignment in CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Grid_Layout)
+- [Box alignment in multiple-column layout](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_in_Multi-column_Layout)
+- [Box alignment for block, absolutely positioned and table layout](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
 
 ## 参考
 
@@ -202,9 +203,9 @@ CSS 盒子对齐 (Box Alignment) 模块指定了在各种 CSS 盒子布局模型
 
 ## 指南
 
-- CSS 弹性盒子指南：_[Basic concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS 弹性盒子指南：_[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS 网格指南：_[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS 弹性盒子指南：_[Basic concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS 弹性盒子指南：_[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS 网格指南：_[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 
 ## 外部资源
 

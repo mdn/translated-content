@@ -3,7 +3,7 @@ title: UIEvent()
 slug: Web/API/UIEvent/UIEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`UIEvent()`** constructor 是用來建立新的 {{domxref("UIEvent")}}。
 
@@ -18,6 +18,7 @@ slug: Web/API/UIEvent/UIEvent
 - _typeArg_
   - : 一個 {{domxref("DOMString")}} ，用來表示事件名稱
 - _UIEventInit_{{optional_inline}}
+
   - : 一個 `UIEventInit` dictionary ，能接受以下參數：
 
     - `detail`

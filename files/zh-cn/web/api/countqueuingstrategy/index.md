@@ -12,11 +12,12 @@ slug: Web/API/CountQueuingStrategy
 - {{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}}
   - : 创建一个新的 `CountQueuingStrategy` 对象实例。
 
-## 属性
+## 实例属性
 
-无。
+- {{domxref("CountQueuingStrategy.highWaterMark")}} {{ReadOnlyInline}}
+  - : 在应用[背压](/zh-CN/docs/Web/API/Streams_API/Concepts#背压)之前，内部队列可以包含的分块总数。
 
-## 方法
+## 实例方法
 
 - {{domxref("CountQueuingStrategy.size()")}}
   - : 返回 `1`。
@@ -26,18 +27,21 @@ slug: Web/API/CountQueuingStrategy
 ```js
 const queueingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 
-const writableStream = new WritableStream({
-  // Implement the sink
-  write(chunk) {
-    // …
+const writableStream = new WritableStream(
+  {
+    // Implement the sink
+    write(chunk) {
+      // …
+    },
+    close() {
+      // …
+    },
+    abort(err) {
+      console.log("Sink error:", err);
+    },
   },
-  close() {
-    // …
-  },
-  abort(err) {
-    console.log("Sink error:", err);
-  }
-}, queueingStrategy);
+  queueingStrategy,
+);
 
 const size = queueingStrategy.size();
 ```
@@ -49,3 +53,9 @@ const size = queueingStrategy.size();
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("Streams API", "Stream API", "", 1)}}
+- {{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}} 构造函数
+- [内置队列和队列策略](/zh-CN/docs/Web/API/Streams_API/Concepts#内置队列和队列策略)

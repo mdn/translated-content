@@ -1,45 +1,76 @@
 ---
-title: Navigator.registerProtocolHandler()
+title: "Navigator: registerProtocolHandler() メソッド"
+short-title: registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
+l10n:
+  sourceCommit: f98675af9d0a80f33d7875c48cfdb41f71ed1de9
 ---
 
 {{APIRef("HTML DOM")}}{{securecontext_header}}
 
-**{{domxref("Navigator")}}** の **`registerProtocolHandler()`** メソッドで、ウェブサイトが特定の URL スキーム（別名プロトコル）を開いたり処理したりする機能を登録することを可能にします。
+**{{domxref("Navigator")}}** の **`registerProtocolHandler()`** メソッドで、ウェブサイトが特定の URL スキーム（プロトコルとも呼ばれる）を開いたり処理したりする機能を登録することを可能にします。
 
 例えば、この API はウェブメールサイトで `mailto:` の URL を開かせたり、 VoIP サイトで `tel:` の URL を開かせたりします。
 
+プロトコルハンドラーを登録するには、ウェブサイトが `registerProtocolHandler()` を呼び出し、登録するプロトコルとテンプレート URL を渡します。
+
+ユーザーが登録されたプロトコルを使用するリンクを起動すると、ブラウザーはハンドラー登録時に指定された URL テンプレートに起動したリンクの [`href`](/ja/docs/Web/HTML/Element/a#href) を挿入し、現在のページを生成された URL に移動します。
+
+ブラウザーは、プロトコルが登録されたとき、またはユーザーがリンクを起動したときに、ページがプロトコルを処理することを許可するかどうかを確認するようユーザーに要求することがあります。
+
 ## 構文
 
-```js
+```js-nolint
 registerProtocolHandler(scheme, url)
-registerProtocolHandler(scheme, url, title)
 ```
-
-> **メモ:** 非推奨の `title` 引数が付いたものは、互換性のために推奨されます（下記の引数情報を参照してください）。
 
 ### 引数
 
 - `scheme`
 
-  - : サイトが扱いたいプロトコルの[許可されているスキーム](#許可されているスキーム)が入った文字列です。
-    例えば、 `"sms"` スキームを渡すことで、SMS テキストメッセージリンクを扱うように登録することができます。
+  - : サイトが扱いたいプロトコルのスキームが入った文字列です。
+
+    次のようなスキーム名のカスタムスキームにすることができます。
+
+    - `web+` で始まる
+    - `web+` 接頭辞の後に 1 文字以上ある
+    - 小文字の {{Glossary("ASCII")}} 文字のみが含まれている
+
+    それ以外の場合はスキームは以下のいずれかでなければなりません。
+
+    - `bitcoin`
+    - `ftp`
+    - `ftps`
+    - `geo`
+    - `im`
+    - `irc`
+    - `ircs`
+    - `magnet`
+    - `mailto`
+    - `matrix`
+    - `mms`
+    - `news`
+    - `nntp`
+    - `openpgp4fpr`
+    - `sftp`
+    - `sip`
+    - `sms`
+    - `smsto`
+    - `ssh`
+    - `tel`
+    - `urn`
+    - `webcal`
+    - `wtai`
+    - `xmpp`
+
+    <!-- これは https://html.spec.whatwg.org/multipage/system-state.html#safelisted-scheme と同じものです -->
 
 - `url`
 
   - : ハンドラーの URL を指定する文字列。
-    **この URL には `%s` を含める必要があり**、これは取り扱う URL を[エスケープした](/ja/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)もので置き換得られるプレイスホルダーとして扱われます。
+    この URL には `%s` を含める必要があり、これは取り扱う URL を[エスケープした](/ja/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)もので置き換得られるプレイスホルダーとして扱われます。
 
-    > **メモ:** ハンドラーの URL は `https` スキームを使用する必要があります。古いブラウザーは `http` にも対応しています。
-
-- `title` {{deprecated_inline}}
-
-  - : ハンドラーを表す人間が読めるタイトル文字列です。
-    **これはユーザーに表示されます**。例えば、「このサイトで [スキーム] のリンクを扱うことを許可しますか？」と尋ねたり、ブラウザーの設定で登録されたハンドラーの一覧に表示されたりします。
-
-    > **メモ:** タイトルはなりすましの懸念から仕様から削除されました。
-    > しかし `title` は一部のブラウザーが**まだ必要としている**ため、設定する必要があります（[下記の互換性一覧表](#ブラウザーの互換性)をご覧ください）。
-    > 更新された仕様に対応しているブラウザーはほとんどの場合、タイトルを受け付けますが、無視します。
+    ハンドラーの URL は `https` スキームを使用する必要があり、ハンドラーを登録しようとするウェブページと同じ{{glossary("origin", "オリジン")}}でなければなりません。
 
 ### 返値
 
@@ -48,75 +79,56 @@ registerProtocolHandler(scheme, url, title)
 ### 例外
 
 - `SecurityError` {{domxref("DOMException")}}
+
   - : ユーザーエージェントが登録をブロックしました。
     以下のような場合に起こる可能性があります。
 
     - ブラウザーが自身が処理するスキーム（`https:`, `about:`, など）であるなど、登録されているスキーム（プロトコル）が無効である場合。
     - ハンドラーの URL の{{Glossary("origin", "オリジン")}}が、本 API を呼び出すページのオリジンと一致しない場合。
-    - ブラウザーが、この関数を安全なコンテキストから呼び出すことを要求している場合。
+    - ブラウザーが、この関数を保護されたコンテキストから呼び出すことを要求している場合。
     - ブラウザーが、ハンドラーの URL が HTTPS であることを要求している場合。
 
-- `SyntaxError`{{domxref("DOMException")}}
+- `SyntaxError` {{domxref("DOMException")}}
   - : `%s` が指定されたハンドラー URL に含まれていない場合。
-
-## 許可されているスキーム
-
-セキュリティ上の理由により `registerProtocolHandler()` は登録可能なスキームに制限を設けています。
-
-**カスタムスキーム**は次のような場合に登録されます。
-
-- カスタムスキームの名前が `web+` で始まる
-- カスタムスキームの名前が `web+` 接頭辞の後に 1 文字以上ある
-- カスタムスキームの名前に小文字の ASCII 文字のみが含まれている
-
-例えば下の [例](#例) で使われている `web+burger` などが挙げられます。
-
-もしくは、以下のホワイトリストに挙げられているスキームでなければなりません。
-
-- `bitcoin`
-- `ftp`
-- `ftps`
-- `geo`
-- `im`
-- `irc`
-- `ircs`
-- `magnet`
-- `mailto`
-- `matrix`
-- `mms`
-- `news`
-- `nntp`
-- `openpgp4fpr`
-- `sftp`
-- `sip`
-- `sms`
-- `smsto`
-- `ssh`
-- `tel`
-- `urn`
-- `webcal`
-- `wtai`
-- `xmpp`
-
-<!-- これは https://html.spec.whatwg.org/multipage/system-state.html#safelisted-scheme と同じものです -->
 
 ## 例
 
-ウェブアプリケーションが `burgers.example.com` にある場合、次のようにして `web+burger:` リンクを処理するプロトコルハンドラーを登録することができます。
+### mailto プロトコルのハンドラーを登録する
 
-```js
-navigator.registerProtocolHandler("web+burger",
-                                  "https://burgers.example.com/?burger=%s",
-                                  "Burger handler"); // 最後の title 引数は互換性のために入れている
+ウェブページが、`https` 以外のプロトコルを使用してリソースにリンクすることはよくあります。例えば、`mailto:` プロトコルなどです。ウェブ制作者は、ユーザーがウェブページから直接電子メールを送信できる便利な方法を提供したい場合に、`mailto` リンクを使用することができます。
+
+```html
+<a href="mailto:webmaster@example.com">ウェブマスター</a>
 ```
 
-これは、 `web+burger:` リンクがアクセスしたバーガーの URL を `%s` プレースホルダーに挿入し、ユーザーをサイトに誘導するハンドラーを作成します。
+リンクが有効になると、ブラウザーが既定のデスクトップアプリケーションを起動してメールを処理します。この処理を、デスクトップベースのプロトコルハンドラーと考えることができます。
 
-このスクリプトはハンドラーの URL と同じオリジン (すなわち、 `https://burgers.example.com` にあるページのいずれか) から実行する必要があり、ハンドラーの URL は `http` または `https` である必要があります。
+ウェブベースのプロトコルハンドラーを使用すると、ウェブベースのアプリケーションも処理に参加できます。例えば、`mail.example.org` のウェブメールアプリは、次のようなコードで `mailto` リンクを処理するように登録できます。
 
-コードがプロトコルハンドラーを登録しようとしていることはユーザーに通知され、ユーザーは登録を許可するかどうか決めることができます。以下のスクリーンショットは `google.co.uk` での例です。
+```js
+navigator.registerProtocolHandler("mailto", "https://mail.example.org/?to=%s");
+```
 
-![ブラウザーの通知には、 "Add Burger handler (www.google.co.uk) as application for burger links?" と表示され、「アプリケーションの追加」ボタンとハンドラー要求を無視するクローズボタンが提供されます。](protocolregister.png)
+この後、ユーザーが任意のウェブサイト上の `mailto` リンクをクリックすると、ブラウザーは(確認を依頼するメッセージを表示するなどして) `https://mail.example.org/?to=mailto:webmaster@example.com` に移動します。このページでは、URL の引数を解釈してアドレスを抽出し、それをメールの初期化に使用することができます。
+
+### カスタムプロトコルのハンドラーを登録する
+
+この例では、ページが `web+burger` プロトコルのハンドラーを次のようなコードで登録します。
+
+```js
+navigator.registerProtocolHandler(
+  "web+burger",
+  "https://burgers.example.org/?burger=%s",
+);
+```
+
+その後、ユーザーはこのようなリンクが格納されたページにアクセスします。
+
+```html
+<a href="web+burger:cheeseburger">cheeseburger</a>
+```
+
+ユーザーが `web+burger` リンクを起動すると、ブラウザーは（ユーザーに確認を要求した後） `https://burgers.example.org/?burger=web+burger:cheeseburger` に移動します。
 
 ## 仕様書
 
@@ -125,8 +137,3 @@ navigator.registerProtocolHandler("web+burger",
 ## ブラウザーの互換性
 
 {{Compat}}
-
-## 関連情報
-
-- [ウェブベースのプロトコルハンドラー](/ja/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers)
-- [RegisterProtocolHandler Enhancing the Federated Web](https://blog.mozilla.org/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) (Mozilla Webdev)

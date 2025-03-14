@@ -1,88 +1,93 @@
 ---
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
+l10n:
+  sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
 {{jsSidebar("Statements")}}
 
-**`function*`** 这种声明方式 (`function`关键字后跟一个星号）会定义一个**生成器函数** (generator function)，它返回一个 {{jsxref("Global_Objects/Generator","Generator")}} 对象。
+**`function*`** 声明创建一个{{Glossary("binding", "绑定")}}到给定名称的新生成器函数。生成器函数可以退出，并在稍后重新进入，其上下文（变量{{Glossary("binding", "绑定")}}）会在重新进入时保存。
 
-{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}
+你也可以使用 [`function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function*)来定义生成器函数。
 
-你也可以使用构造函数 {{jsxref("GeneratorFunction")}} 或 {{jsxref("Operators/function*", "function* expression")}} 定义**_生成器函数_ **。
+{{InteractiveExample("JavaScript Demo: Statement - Function*")}}
+
+```js interactive-example
+function* generator(i) {
+  yield i;
+  yield i + 10;
+}
+
+const gen = generator(10);
+
+console.log(gen.next().value);
+// Expected output: 10
+
+console.log(gen.next().value);
+// Expected output: 20
+```
 
 ## 语法
 
-```plain
-function* name([param[, param[, ... param]]]) { statements }
+```js-nolint
+function* name(param0) {
+  statements
+}
+function* name(param0, param1) {
+  statements
+}
+function* name(param0, param1, /* …, */ paramN) {
+  statements
+}
 ```
 
+> [!NOTE]
+> 箭头函数不能用来定义生成器函数。
+
+> **备注：** `function` 和 `*` 是两个单独的标记，因此它们可以用[空白或换行符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#空白符)分隔。
+
+### 参数
+
 - `name`
-  - : 函数名
-- `param`
-  - : 要传递给函数的一个参数的名称，一个函数最多可以有 255 个参数。
-- `statements`
-  - : 普通 JS 语句。
+  - : 函数名称。
+- `param` {{optional_inline}}
+  - : 函数的形参名称。有关参数的语法，请参阅[函数参考](/zh-CN/docs/Web/JavaScript/Guide/Functions#函数参数)。
+- `statements` {{optional_inline}}
+  - : 构成函数体的语句。
 
 ## 描述
 
-**生成器函数**在执行时能暂停，后面又能从暂停处继续执行。
+`function*` 声明创建一个 {{jsxref("GeneratorFunction")}} 对象。每次调用生成器函数时，它都会返回一个新的 {{jsxref("Generator")}} 对象，该对象符合[迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议)。当迭代器的 `next()` 方法被调用时，生成器函数的主体会被执行，直到遇到第一个 {{jsxref("Operators/yield", "yield")}} 表达式，该表达式指定了迭代器要返回的值，或者用 {{jsxref("Operators/yield*", "yield*")}} 委托给另一个生成器函数。`next()` 方法返回一个对象，其 `value` 属性包含了 `yield` 表达式的值，`done` 属性是布尔类型，表示生成器是否已经返回了最后一个值。如果 `next()` 方法带有参数，那么它会恢复生成器函数的执行，并用参数替换暂停执行的 `yield` 表达式。
 
-调用一个**生成器函数**并不会马上执行它里面的语句，而是返回一个这个生成器的 **迭代器** **（ [iterator](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#iterator) ）对象**。当这个迭代器的 `next()` 方法被首次（后续）调用时，其内的语句会执行到第一个（后续）出现{{jsxref("Operators/yield", "yield")}}的位置为止，{{jsxref("Operators/yield", "yield")}} 后紧跟迭代器要返回的值。或者如果用的是 {{jsxref("Operators/yield*", "yield*")}}（多了个星号），则表示将执行权移交给另一个生成器函数（当前生成器暂停执行）。
+在 JavaScript 中，生成器——尤其是与 Promises 结合使用时——是一种非常强大的异步编程工具，它们解决了回调函数存在的一些的问题，如[回调地狱](http://callbackhell.com/)和[控制反转](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/)。然而，通过使用{{jsxref("Statements/async_function", "异步函数", "", 1)}}，我们可以更简单地解决这些问题。
 
-`next()`方法返回一个对象，这个对象包含两个属性：value 和 done，value 属性表示本次 `yield` 表达式的返回值，done 属性为布尔类型，表示生成器后续是否还有 `yield` 语句，即生成器函数是否已经执行完毕并返回。
+在生成器中执行 `return` 语句会使生成器结束（即返回的对象的 `done` 属性将被设置为 `true`）。如果返回一个值，它将被设置为生成器返回的对象的 `value` 属性。与 `return` 语句类似，如果生成器内部抛出错误，生成器也会结束，除非在生成器的代码体内捕获该错误。当生成器结束后，后续 `next()` 调用不会执行生成器的任何代码，只会返回一个形如 `{value: undefined, done: true}` 的对象。
 
-调用 `next()`方法时，如果传入了参数，那么这个参数会传给**上一条执行的 yield 语句左边的变量**，例如下面例子中的` x `：
-
-```js
-function *gen(){
-    yield 10;
-    x=yield 'foo';
-    yield x;
-}
-
-var gen_obj=gen();
-console.log(gen_obj.next());// 执行 yield 10，返回 10
-console.log(gen_obj.next());// 执行 yield 'foo'，返回 'foo'
-console.log(gen_obj.next(100));// 将 100 赋给上一条 yield 'foo' 的左值，即执行 x=100，返回 100
-console.log(gen_obj.next());// 执行完毕，value 为 undefined，done 为 true
-```
-
-当在生成器函数中显式 `return` 时，会导致生成器立即变为完成状态，即调用 `next()` 方法返回的对象的 `done` 为 `true`。如果 `return` 后面跟了一个值，那么这个值会作为**当前**调用 `next()` 方法返回的 value 值。
+`function*` 声明的行为与 {{jsxref("Statements/function", "function")}} 声明类似——它们会被[提升](/zh-CN/docs/Glossary/Hoisting)到其作用域的顶部，并且可以在当前作用域的任何位置被调用，且只能在特定的上下文中被重新声明。
 
 ## 示例
 
 ### 简单示例
 
 ```js
-function* idMaker(){
-  var index = 0;
-  while(index<3)
+function* idMaker() {
+  let index = 0;
+  while (true) {
     yield index++;
+  }
 }
 
-var gen = idMaker();
+const gen = idMaker();
+
 console.log(gen.next().value); // 0
 console.log(gen.next().value); // 1
 console.log(gen.next().value); // 2
-console.log(gen.next().value); // undefined
+console.log(gen.next().value); // 3
+// …
 ```
 
-### 生成器也可以接收参数：
-
-```js
-function* idMaker(){
-    var index = arguments[0] || 0;
-    while(true)
-        yield index++;
-}
-
-var gen = idMaker(5);
-console.log(gen.next().value); // 5
-console.log(gen.next().value); // 6
-```
-
-### yield\* 的示例
+### 使用 yield\* 示例
 
 ```js
 function* anotherGenerator(i) {
@@ -91,13 +96,13 @@ function* anotherGenerator(i) {
   yield i + 3;
 }
 
-function* generator(i){
+function* generator(i) {
   yield i;
-  yield* anotherGenerator(i);// 移交执行权
+  yield* anotherGenerator(i);
   yield i + 10;
 }
 
-var gen = generator(10);
+const gen = generator(10);
 
 console.log(gen.next().value); // 10
 console.log(gen.next().value); // 11
@@ -106,67 +111,139 @@ console.log(gen.next().value); // 13
 console.log(gen.next().value); // 20
 ```
 
-### 传递参数
+### 传入参数给生成器
 
 ```js
-function *createIterator() {
-    let first = yield 1;
-    let second = yield first + 2; // 4 + 2
-                                  // first =4 是 next(4) 将参数赋给上一条的
-    yield second + 3;             // 5 + 3
+function* logGenerator() {
+  console.log(0);
+  console.log(1, yield);
+  console.log(2, yield);
+  console.log(3, yield);
 }
 
-let iterator = createIterator();
+const gen = logGenerator();
 
-console.log(iterator.next());    // "{ value: 1, done: false }"
-console.log(iterator.next(4));   // "{ value: 6, done: false }"
-console.log(iterator.next(5));   // "{ value: 8, done: false }"
-console.log(iterator.next());    // "{ value: undefined, done: true }"
+// next 的第一次调用从函数的开头开始执行，直到第一个 yield 语句
+gen.next(); // 0
+gen.next("pretzel"); // 1 pretzel
+gen.next("california"); // 2 california
+gen.next("mayonnaise"); // 3 mayonnaise
 ```
 
-### 显式返回
+### 生成器中的返回语句
 
 ```js
 function* yieldAndReturn() {
-  yield "Y";
-  return "R";//显式返回处，可以观察到 done 也立即变为了 true
-  yield "unreachable";// 不会被执行了
+  yield "产生的值";
+  return "返回的值";
+  yield "不会被访问到的值";
 }
 
-var gen = yieldAndReturn()
-console.log(gen.next()); // { value: "Y", done: false }
-console.log(gen.next()); // { value: "R", done: true }
+const gen = yieldAndReturn();
+console.log(gen.next()); // { value: "产生的值", done: false }
+console.log(gen.next()); // { value: "返回的值", done: true }
 console.log(gen.next()); // { value: undefined, done: true }
 ```
 
-### 生成器函数不能当构造器使用
+### 生成器作为对象属性
+
+```js
+const someObj = {
+  *generator() {
+    yield "a";
+    yield "b";
+  },
+};
+
+const gen = someObj.generator();
+
+console.log(gen.next()); // { value: 'a', done: false }
+console.log(gen.next()); // { value: 'b', done: false }
+console.log(gen.next()); // { value: undefined, done: true }
+```
+
+### 生成器作为对象方法
+
+```js
+class Foo {
+  *generator() {
+    yield 1;
+    yield 2;
+    yield 3;
+  }
+}
+
+const f = new Foo();
+const gen = f.generator();
+
+console.log(gen.next()); // { value: 1, done: false }
+console.log(gen.next()); // { value: 2, done: false }
+console.log(gen.next()); // { value: 3, done: false }
+console.log(gen.next()); // { value: undefined, done: true }
+```
+
+### 生成器作为计算属性
+
+```js
+class Foo {
+  *[Symbol.iterator]() {
+    yield 1;
+    yield 2;
+  }
+}
+
+const SomeObj = {
+  *[Symbol.iterator]() {
+    yield "a";
+    yield "b";
+  },
+};
+
+console.log(Array.from(new Foo())); // [ 1, 2 ]
+console.log(Array.from(SomeObj)); // [ 'a', 'b' ]
+```
+
+### 生成器是不可构造的
 
 ```js
 function* f() {}
-var obj = new f; // throws "TypeError: f is not a constructor"
+const obj = new f(); // throws "TypeError: f is not a constructor
 ```
 
-### 使用迭代器遍历二维数组并转换成一维数组：
+### 使用表达式定义生成器
 
 ```js
-function* iterArr(arr) {            //迭代器返回一个迭代器对象
-  if (Array.isArray(arr)) {         // 内节点
-      for(let i=0; i < arr.length; i++) {
-          yield* iterArr(arr[i]);   // (*) 递归
-      }
-  } else {                          // 离开
-      yield arr;
+const foo = function* () {
+  yield 10;
+  yield 20;
+};
+
+const bar = foo();
+console.log(bar.next()); // {value: 10, done: false}
+```
+
+### 生成器示例
+
+```js
+function* powers(n) {
+  // 无限循环生成
+  for (let current = n; ; current *= n) {
+    yield current;
   }
 }
-// 使用 for-of 遍历：
-var arr = ['a', ['b', 'c'], ['d', 'e']];
-for(var x of iterArr(arr)) {
-  console.log(x);               // a  b  c  d  e
+
+for (const power of powers(2)) {
+  // 控制生成器
+  if (power > 32) {
+    break;
+  }
+  console.log(power);
+  // 2
+  // 4
+  // 8
+  // 16
+  // 32
 }
-// 或者直接将迭代器展开：
-var arr = [ 'a', ['b',[ 'c', ['d', 'e']]]];
-var gen = iterArr(arr);
-arr = [...gen];                        // ["a", "b", "c", "d", "e"]
 ```
 
 ## 规范
@@ -177,20 +254,21 @@ arr = [...gen];                        // ["a", "b", "c", "d", "e"]
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Operators/function*", "function* expression")}}
-- {{jsxref("GeneratorFunction")}} object
-- [迭代器协议](/zh-CN/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)指南
+- [迭代器与生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)指南
+- [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)
+- {{jsxref("GeneratorFunction")}}
+- [`function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function*)
+- {{jsxref("Statements/function", "function")}}
+- {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("Statements/async_function*", "async function*")}}
+- [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
-- {{jsxref("Function")}} object
-- {{jsxref("Statements/function", "function declaration")}}
-- {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
-- 其他网络资源：
-
-  - [Regenerator](http://facebook.github.io/regenerator/) an ES2015 generator compiler to ES5
-  - [Forbes Lindesay: Promises and Generators: control flow utopia -- JSConf EU 2013](http://www.youtube.com/watch?v=qbKWsbJ76-s)
-  - [Hemanth.HM: The New gen of \*gen(){}](https://www.youtube.com/watch?v=ZrgEZykBHVo&list=PLuoyIZT5fPlG44bPq50Wgh0INxykdrYX7&index=1)
-  - [Task.js](http://taskjs.org/)
+- {{jsxref("Generator")}}
+- GitHub 上的 [Regenerator](https://github.com/facebook/regenerator)
+- [Promise 和生成器：控制流的乌托邦](https://youtu.be/qbKWsbJ76-s)——Forbes Lindesay 在 JSConf 上的演讲（2013）
+- GitHub 上的 [Task.js](https://github.com/mozilla/task.js)
+- [你不知道的 JS：异步和性能，第 4 章：生成器](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch4.md)——Kyle Simpson

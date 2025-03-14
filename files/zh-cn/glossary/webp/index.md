@@ -1,12 +1,14 @@
 ---
 title: WebP
-slug: Glossary/webp
+slug: Glossary/WebP
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-**WebP** 是由 Google 公司开发的一种可提供有损和无损压缩的图片格式，支持透明度，目前已支持动图。
+{{GlossarySidebar}}
 
-## Learn more
+**WebP** 是由 Google 开发的一种可提供有损和无损压缩的图片格式。
 
-### General knowledge
+## 参见
 
-- [WebP](https://en.wikipedia.org/wiki/WebP) on Wikipedia
+- 维基百科上的 [WebP](https://zh.wikipedia.org/wiki/WebP)

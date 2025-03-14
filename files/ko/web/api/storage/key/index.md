@@ -1,11 +1,6 @@
 ---
 title: Storage.key()
 slug: Web/API/Storage/key
-tags:
-  - 로컬 스토리지
-  - 세션 스토리지
-  - 웹 스토리지
-translation_of: Web/API/Storage/key
 ---
 
 {{APIRef("Web Storage API")}}
@@ -42,14 +37,15 @@ function forEachKey(callback) {
 다음 함수는 localStorage 의 key들을 반복하고 각 key에 설정된 값들을 가져옵니다.
 
 ```js
-for(var i =0; i < localStorage.length; i++){
-   console.log(localStorage.getItem(localStorage.key(i)));
+for (var i = 0; i < localStorage.length; i++) {
+  console.log(localStorage.getItem(localStorage.key(i)));
 }
 ```
 
-> **참고:** 실제로 쓰이는 예제를 보려면 우리의 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) 를 참조하세요.
+> [!NOTE]
+> 실제로 쓰이는 예제를 보려면 우리의 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) 를 참조하세요.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

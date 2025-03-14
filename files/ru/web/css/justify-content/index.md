@@ -1,32 +1,77 @@
 ---
 title: justify-content
 slug: Web/CSS/justify-content
-tags:
-  - CSS
-  - justify-content
-translation_of: Web/CSS/justify-content
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`justify-content`** определяет, как браузер распределяет пространство между и вокруг элементов контента вдоль {{Glossary("Main Axis", "главной оси")}} flex контейнера, или вдоль строчной оси grid контейнера.
 
 Интерактивный пример ниже демонстрирует некоторые значения, используя Grid размещение.
 
-{{EmbedInteractiveExample("pages/css/justify-content.html")}}
+{{InteractiveExample("CSS Demo: justify-content")}}
 
-Выравнивание выполняется после того, как применяются длины и автоматические поля, что означает, что если во [Flexbox разметке](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout) есть хотя бы один flex-элемент, с {{cssxref("flex-grow")}} отличным от `0`, эффект не будет применён, потому что не останется свободного места.
+```css interactive-example-choice
+justify-content: start;
+```
+
+```css interactive-example-choice
+justify-content: center;
+```
+
+```css interactive-example-choice
+justify-content: space-between;
+```
+
+```css interactive-example-choice
+justify-content: space-around;
+```
+
+```css interactive-example-choice
+justify-content: space-evenly;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+<div class="example-container">
+<div class="transition-all" id="example-element">
+<div>One</div>
+<div>Two</div>
+<div>Three</div>
+</div>
+</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 220px;
+  display: grid;
+  grid-template-columns: 60px 60px;
+  grid-auto-rows: 40px;
+  row-gap: 10px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
+
+Выравнивание выполняется после того, как применяются длины и автоматические поля, что означает, что если во [Flexbox разметке](/ru/docs/Web/CSS/CSS_flexible_box_layout) есть хотя бы один flex-элемент, с {{cssxref("flex-grow")}} отличным от `0`, эффект не будет применён, потому что не останется свободного места.
 
 ## Синтаксис
 
 ```css
 /* Позиционное выравнивание */
-justify-content: center;     /* Выравнивание элементов по центру */
-justify-content: start;      /* Выравнивание элементов в начале */
-justify-content: end;        /* Выравнивание элементов в конце */
+justify-content: center; /* Выравнивание элементов по центру */
+justify-content: start; /* Выравнивание элементов в начале */
+justify-content: end; /* Выравнивание элементов в конце */
 justify-content: flex-start; /* Выравнивание флекс-элементов с начала */
-justify-content: flex-end;   /* Выравнивание флекс-элементов с конца */
-justify-content: left;       /* Выравнивание элементов по левому краю */
-justify-content: right;      /* Выравнивание элементов по правому краю */
+justify-content: flex-end; /* Выравнивание флекс-элементов с конца */
+justify-content: left; /* Выравнивание элементов по левому краю */
+justify-content: right; /* Выравнивание элементов по правому краю */
 
 /* Выравнивание относительно осевой линии */
 justify-content: baseline;
@@ -36,13 +81,13 @@ justify-content: last baseline;
 /* Распределённое выравнивание */
 justify-content: space-between; /* Равномерно распределяет все элементы по ширине flex-блока.
                                    Первый элемент вначале, последний в конце */
-justify-content: space-around;  /* Равномерно распределяет все элементы по ширине flex-блока.
+justify-content: space-around; /* Равномерно распределяет все элементы по ширине flex-блока.
                                    Все элементы имеют полноразмерное пространство
 
                                    с обоих концов */
-justify-content: space-evenly;  /* Равномерно распределяет все элементы по ширине flex-блока.
+justify-content: space-evenly; /* Равномерно распределяет все элементы по ширине flex-блока.
                                    Все элементы имеют равное пространство вокруг */
-justify-content: stretch;       /* Равномерно распределяет все элементы по ширине flex-блока.
+justify-content: stretch; /* Равномерно распределяет все элементы по ширине flex-блока.
                                    Все элементы имеют "авто-размер", чтобы соответствовать
 
                                    контейнеру */
@@ -77,7 +122,7 @@ justify-content: unset;
   - : Элементы располагаются на своих обычных позициях, так как будто свойство `justify-content` не задано. Этот параметр ведёт себя как `stretch` в grid и flex контейнерах.
 - `baseline first baseline`
   `last baseline`
-  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
+  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
     The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
 - `space-between`
   - : Элементы равномерно распределены вдоль главной оси контейнера. Расстояния между каждой парой соседних элементов равны. Первый элемент прижат к началу контейнера по главной оси, а последний - к концу.
@@ -143,8 +188,7 @@ justify-content: unset;
 ```js hidden
 var justifyContent = document.getElementById("justifyContent");
 justifyContent.addEventListener("change", function (evt) {
-  document.getElementById("container").style.justifyContent =
-      evt.target.value;
+  document.getElementById("container").style.justifyContent = evt.target.value;
 });
 ```
 
@@ -160,17 +204,11 @@ justifyContent.addEventListener("change", function (evt) {
 
 ## Совместимость с браузерами
 
-### Поддержка в Flex разметке
-
-{{Compat}}
-
-### Поддержка в Grid разметке
-
 {{Compat}}
 
 ## Смотрите также
 
-- Гид по CSS Flexbox: _[Основные понятия Flexbox](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Выравнивание элементов во Flex контейнере](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элементов_в_Flex_контейнере)_
-- CSS Grid Guide: _[Выравнивание ячейки в CSS Grid layout](/ru/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [Выравнивание полей CSS](/ru/docs/Web/CSS/CSS_Box_Alignment)
+- Гид по CSS Flexbox: _[Основные понятия Flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Выравнивание элементов во Flex контейнере](/ru/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS Grid Guide: _[Выравнивание ячейки в CSS Grid layout](/ru/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- [Выравнивание полей CSS](/ru/docs/Web/CSS/CSS_box_alignment)

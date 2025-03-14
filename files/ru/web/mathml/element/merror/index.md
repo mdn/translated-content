@@ -1,12 +1,6 @@
 ---
 title: <merror>
 slug: Web/MathML/Element/merror
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
-translation_of: Web/MathML/Element/merror
 ---
 
 {{MathMLRef}}
@@ -16,29 +10,27 @@ translation_of: Web/MathML/Element/merror
 ## Атрибуты
 
 - class, id, style
-  - : Предполагается использование с [таблицами стилей](/ru/docs/CSS).
+  - : Предполагается использование с [таблицами стилей](/ru/docs/Web/CSS).
 - href
   - : Используется для установки гиперссылки на указанный URI.
 - mathbackground
-  - : Цвет фона. Ты можешь использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/CSS/color_value#Color_Keywords).
+  - : Цвет фона. Ты можешь использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/Web/CSS/color_value#color_keywords).
 - mathcolor
-  - : Цвет текста, а также цвет линии дроби. Вы можете использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/CSS/color_value#Color_Keywords).
+  - : Цвет текста, а также цвет линии дроби. Вы можете использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/Web/CSS/color_value#color_keywords).
 
 ## Примеры
 
 ```html
 <math>
-
-<merror>
-  <mrow>
-    <mtext> Деление на ноль: </mtext>
-    <mfrac>
-      <mn> 1 </mn>
-      <mn> 0 </mn>
-    </mfrac>
-  </mrow>
-</merror>
-
+  <merror>
+    <mrow>
+      <mtext> Деление на ноль: </mtext>
+      <mfrac>
+        <mn> 1 </mn>
+        <mn> 0 </mn>
+      </mfrac>
+    </mrow>
+  </merror>
 </math>
 ```
 

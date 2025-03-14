@@ -9,16 +9,11 @@ slug: Web/API/WebGL2RenderingContext/texImage3D
 
 ## 语法
 
-```
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, GLintptr offset);
-
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, HTMLCanvasElement source);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, HTMLImageElement source);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, HTMLVideoElement source);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, ImageBitmap source);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, ImageData source);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, ArrayBufferView? srcData);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, ArrayBufferView srcData, srcOffset);
+```js-nolint
+texImage3D(target, level, internalformat, width, height, depth, border, format, type, offset)
+texImage3D(target, level, internalformat, width, height, depth, border, format, type, source)
+texImage3D(target, level, internalformat, width, height, depth, border, format, type, srcData)
+texImage3D(target, level, internalformat, width, height, depth, border, format, type, srcData, srcOffset)
 ```
 
 ### 参数
@@ -117,16 +112,18 @@ void gl.texImage3D(target, level, internalformat, width, height, depth, border, 
 ## 例子
 
 ```js
-gl.texImage3D(gl.TEXTURE_3D,
-              0,                                          // level
-              gl.RGBA,                                    // internalFormat
-              1,                                          // width
-              1,                                          // height
-              1,                                          // depth
-              0,                                          // border
-              gl.RGBA,                                    // format
-              gl.UNSIGNED_BYTE,                           // type
-              new Uint8Array([0xff, 0x00, 0x00, 0x00]));  // data
+gl.texImage3D(
+  gl.TEXTURE_3D,
+  0, // level
+  gl.RGBA, // internalFormat
+  1, // width
+  1, // height
+  1, // depth
+  0, // border
+  gl.RGBA, // format
+  gl.UNSIGNED_BYTE, // type
+  new Uint8Array([0xff, 0x00, 0x00, 0x00]),
+); // data
 ```
 
 ## 规范
@@ -137,7 +134,7 @@ gl.texImage3D(gl.TEXTURE_3D,
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.createTexture()")}}
 - {{domxref("WebGLRenderingContext.bindTexture()")}}

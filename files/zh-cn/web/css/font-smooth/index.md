@@ -1,67 +1,100 @@
 ---
-title: 字体平滑
+title: font-smooth
 slug: Web/CSS/font-smooth
 ---
 
-{{ CSSRef }} {{ Non-standard_header }}
+{{CSSRef}} {{ Non-standard_header }}
 
-**`font-smooth`** [CSS](/zh-CN/CSS) 属性用来控制字体渲染时的平滑效果。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong>{{ Xref_cssinitial() }}</strong></td>
-      <td><code>auto</code></td>
-    </tr>
-    <tr>
-      <td><strong>适用元素</strong></td>
-      <td>所有元素与生成的内容</td>
-    </tr>
-    <tr>
-      <td><strong>{{ Xref_cssinherited() }}</strong></td>
-      <td>是</td>
-    </tr>
-    <tr>
-      <td><strong>Percentages</strong></td>
-      <td>relative to parent element's font size</td>
-    </tr>
-    <tr>
-      <td><strong>Media</strong></td>
-      <td>{{ Xref_cssvisual() }}</td>
-    </tr>
-    <tr>
-      <td><strong>{{ Xref_csscomputed() }}</strong></td>
-      <td>as specified</td>
-    </tr>
-  </tbody>
-</table>
+**`font-smooth`** [CSS](/zh-CN/docs/Web/CSS) 属性控制字体渲染时应用的抗锯齿效果。
 
 ## 语法
 
 ```css
-/* Keyword values */
+/* 关键字值 */
 font-smooth: auto;
 font-smooth: never;
 font-smooth: always;
 
-/* <length> value */
+/* <length> 值 */
 font-smooth: 2em;
+
+/* 全局值 */
+font-smooth: inherit;
+font-smooth: initial;
+font-smooth: revert;
+font-smooth: revert-layer;
+font-smooth: unset;
 ```
 
-> **备注：** **Webkit** 实现了名为`-webkit-font-smoothing`的相似属性。这个属性仅在 Mac OS X/macOS 下生效。- `none` - 关闭字体平滑；展示有锯齿边缘的文字。
+> [!NOTE]
+> Webkit 实现了名为 **`-webkit-font-smoothing`** 的相似属性。该属性仅适用于 macOS。
 >
-> - `antialiased` - 平滑像素级别的字体，而不是子像素。从亚像素渲染切换到黑暗背景上的浅色文本的抗锯齿使其看起来更轻。
-> - `subpixel-antialiased` - 在大多数非视网膜显示器上，这将会提供最清晰的文字。
+> - `auto`——由浏览器决定（如果可用，则使用亚像素抗锯齿；这是默认值）。
+> - `none`——关闭字体平滑；显示带有锯齿边缘的文本。
+> - `antialiased`——在像素（而不是亚像素）级别平滑字体。对于深色背景上的浅色文本，从亚像素渲染切换为抗锯齿渲染可以使其看起来更清晰。
+> - `subpixel-antialiased`——在大多数非视网膜显示器上，这将会提供最清晰的文本。
 
-> **备注：** **Firefox** 实现了名为 -moz-osx-font-smoothing 的相似属性。这个属性仅在 Mac OS X / macOS 下生效。- `auto` - 允许浏览器选择字体平滑的优化方式，通常为`grayscale`。
+> [!NOTE]
+> Firefox 实现了名为 **`-moz-osx-font-smoothing`** 的相似属性。该属性仅适用于 macOS。
 >
-> - `grayscale` - 用灰度抗锯齿渲染文本，而不是子像素。从亚像素渲染切换到黑暗背景上的浅色文本的抗锯齿使其看起来更轻。
-> - {{cssxref("inherit")}}
-> - {{cssxref("unset")}}
+> - `auto`——允许浏览器选择字体平滑的优化方式，通常为 `grayscale`。
+> - `grayscale`——用灰度抗锯齿（而不是亚像素）渲染文本。对于深色背景上的浅色文本，从亚像素渲染切换为抗锯齿渲染可以使其看起来更清晰。
+
+## 形式定义
+
+{{cssinfo}}
+
+## 形式语法
+
+```plain
+font-smooth =
+  auto | never | always | <absolute-size> | <length>
+```
+
+## 示例
+
+### 基础使用示例
+
+以下示例展示了在 macOS 上打开字体平滑的 Safari/Chromium 和 Firefox 的等效结果。对于这两类情况，平滑的字体应该看起来更细一些。
+
+对于那些没有使用 macOS 系统的用户，这里有一张截图（后面会有实时版本）：
+
+![两类文本示例，一个具有 font-smooth 属性，而另一个则不具有](smoothing.png)
+
+#### HTML
+
+```html
+<p>Without font smoothing</p>
+
+<p class="smoothed">With font smoothing</p>
+```
+
+#### CSS
+
+```css
+html {
+  background-color: black;
+  color: white;
+  font-size: 3rem;
+}
+
+p {
+  text-align: center;
+}
+
+.smoothed {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample('基础使用示例', '100%', 260)}}
 
 ## 规范
 
-尽管在早期（2002）的 [CSS3 Fonts](http://www.w3.org/TR/WD-font/#font-smooth) 草稿中就出现了 `font-smooth` ，但是这个属性已经在规范中被移除，而且已经不在标准跟踪之中。
+不属于任何规范。
 
 ## 浏览器兼容性
 
@@ -69,4 +102,5 @@ font-smooth: 2em;
 
 ## 参见
 
-- [Please Stop "Fixing" Font Smoothing – UsabilityPost](http://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/)
+- [请停止“修复”字体平滑——UsabilityPost](https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/)
+- [不干涉字体平滑和抗锯齿](https://www.zachleat.com/web/font-smooth/)

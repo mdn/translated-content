@@ -13,12 +13,12 @@ _`PositionError` 介面沒有繼承任何屬性_。
 
 - {{domxref("PositionError.code")}} {{readonlyInline}}
 
-  - : 回傳一個無符號整數`(unsigned short`)來表示錯誤碼。以下列出可能的值：
+  - : 回傳一個無符號整數（`unsigned short`）來表示錯誤碼。以下列出可能的值：
 
-    | 值  | 相對應的常數           | 描述                                                                                                      |
-    | --- | ---------------------- | --------------------------------------------------------------------------------------------------------- |
-    | `1` | `PERMISSION_DENIED`    | 取得地理資訊失敗，因為此頁面沒有獲取地理位置信息的權限。                                                  |
-    | `2` | `POSITION_UNAVAILABLE` | 取得地理資訊失敗，因為至少有一個地理位置信息內的資訊回傳了錯誤。                                          |
+    | 值  | 相對應的常數           | 描述                                                                                        |
+    | --- | ---------------------- | ------------------------------------------------------------------------------------------- |
+    | `1` | `PERMISSION_DENIED`    | 取得地理資訊失敗，因為此頁面沒有獲取地理位置信息的權限。                                    |
+    | `2` | `POSITION_UNAVAILABLE` | 取得地理資訊失敗，因為至少有一個地理位置信息內的資訊回傳了錯誤。                            |
     | `3` | `TIMEOUT`              | 取得地理資訊超過時限，利用{{domxref("PositionOptions.timeout")}} 來定義取得地理資訊的時限。 |
 
 - {{domxref("PositionError.message")}} {{readonlyInline}}
@@ -38,5 +38,5 @@ _`PositionError` 介面沒有繼承任何屬性_。
 
 ## 請參考
 
-- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-TW/docs/Web/API/Geolocation_API)
 - {{domxref("Geolocation")}} 介面使用此物件。

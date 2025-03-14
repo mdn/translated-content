@@ -1,8 +1,6 @@
 ---
 title: Navigator.language
 slug: Web/API/Navigator/language
-translation_of: Web/API/Navigator/language
-browser-compat: api.Navigator.language
 ---
 
 {{APIRef("HTML DOM")}}
@@ -11,7 +9,7 @@ La propriété en lecture seule **`Navigator.language`** renvoie une chaîne de 
 
 ## Valeur
 
-Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString). Le format de cette chaîne de caractères est défini par [la RFC 5646, aussi connu sous le nom de balise BCP 47](https://datatracker.ietf.org/doc/html/rfc5646). Voici quelques exemples de codes de langue valides&nbsp;: `"en"`, `"en-US"`, `"fr"`, `"fr-FR"`, `"es-ES"`, etc.
+Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String). Le format de cette chaîne de caractères est défini par [la RFC 5646, aussi connu sous le nom de balise BCP 47](https://datatracker.ietf.org/doc/html/rfc5646). Voici quelques exemples de codes de langue valides&nbsp;: `"en"`, `"en-US"`, `"fr"`, `"fr-FR"`, `"es-ES"`, etc.
 
 On notera que Safari pour iOS, avant la version 10.2, renvoyait le code du pays en minuscules&nbsp;: `"en-us"`, `"fr-fr"`, etc.
 

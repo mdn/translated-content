@@ -1,11 +1,16 @@
 ---
-title: 'CSP: frame-src'
+title: "CSP: frame-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/frame-src
+l10n:
+  sourceCommit: 52a9f4580b8ce4eabaed20dd9a4677fc556e1d44
 ---
 
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`frame-src`** ディレクティブは、 {{HTMLElement("frame")}} や {{HTMLElement("iframe")}} のような要素を使用した内部の閲覧コンテキストの読み込みに有効なソースを指定します。
+
+> **メモ:** **`frame-src`** は、ページ内の iframe がどこから読み込まれるかを指定することができます。
+> これは、ページを埋め込むことができる親ソースを指定することができる **`frame-ancestors`** とは異なります。
 
 <table class="properties">
   <tbody>
@@ -37,13 +42,13 @@ Content-Security-Policy: frame-src <source> <source>;
 
 ### ソース
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#ソース)にあるいずれかの値を取ることができます。
+`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#関連ディレクティブ)）で使用できます。
+なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
 
 ## 例
 
-## 違反例
+### 違反する場合
 
 この CSP ヘッダーがある場合、
 
@@ -69,3 +74,4 @@ Content-Security-Policy: frame-src https://example.com/
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTMLElement("frame")}} および {{HTMLElement("iframe")}}
+- {{CSP("frame-ancestors")}}

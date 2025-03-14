@@ -1,19 +1,9 @@
 ---
 title: omnibox.onInputChanged
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - omnibox
-  - onInputChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé chaque fois que l'utilisateur modifie sa saisie, après avoir commencé à interagir avec votre extension en saisissant son mot-clé dans la barre d'adresse, puis en appuyant sur la touche espace.
 
@@ -25,9 +15,9 @@ C'est l'événement que vous utiliserez pour remplir la liste déroulante de la 
 ## Syntaxe
 
 ```js
-browser.omnibox.onInputChanged.addListener(listener)
-browser.omnibox.onInputChanged.removeListener(listener)
-browser.omnibox.onInputChanged.hasListener(listener)
+browser.omnibox.onInputChanged.addListener(listener);
+browser.omnibox.onInputChanged.removeListener(listener);
+browser.omnibox.onInputChanged.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -50,7 +40,7 @@ The listener function will be passed two parameters: a string `text`, and a call
 - `suggest`
   - : `Function`. Une fonction de rappel que l'écouteur d'événement peut appeler pour fournir des suggestions pour la liste déroulante de la barre d'adresse. La fonction de rappel s'attend à recevoir un tableau d'objets {{WebExtAPIRef("omnibox.SuggestResult")}} un pour chaque suggestion. Seules les six premières suggestions seront affichées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
 {{Compat}}
 
@@ -58,11 +48,11 @@ The listener function will be passed two parameters: a string `text`, and a call
 
 Cet exemple interprète l'entrée de l'utilisateur en tant que nom de propriété CSS et remplit la liste déroulante avec un objet {{WebExtAPIRef("omnibox.SuggestResult")}} pour chaque propriété CSS correspondant à l'entrée. La `description SuggestResult` est le nom complet de la propriété et le `contenu` est la page MDN de cette propriété.
 
-L'exemple écoute également {{WebExtAPIRef("omnibox.onInputEntered")}}, et ouvre la page MDN correspondant à la sélection, conformément à l'argument   {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}.
+L'exemple écoute également {{WebExtAPIRef("omnibox.onInputEntered")}}, et ouvre la page MDN correspondant à la sélection, conformément à l'argument {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}.
 
 ```js
 browser.omnibox.setDefaultSuggestion({
-  description: "Type the name of a CSS property"
+  description: "Type the name of a CSS property",
 });
 
 /*
@@ -86,10 +76,10 @@ const props = [
   "padding",
   "position",
   "transform",
-  "transition"
+  "transition",
 ];
 
-const baseURL = "https://developer.mozilla.org/en-US/docs/Web/CSS/";
+const baseURL = "https://developer.mozilla.org/fr/docs/Web/CSS/";
 
 /*
 Return an array of SuggestResult objects,
@@ -102,8 +92,8 @@ function getMatchingProperties(input) {
       console.log(prop);
       let suggestion = {
         content: baseURL + prop,
-        description: prop
-      }
+        description: prop,
+      };
       result.push(suggestion);
     } else {
       if (result.length != 0) {
@@ -121,13 +111,13 @@ browser.omnibox.onInputChanged.addListener((input, suggest) => {
 browser.omnibox.onInputEntered.addListener((url, disposition) => {
   switch (disposition) {
     case "currentTab":
-      browser.tabs.update({url});
+      browser.tabs.update({ url });
       break;
     case "newForegroundTab":
-      browser.tabs.create({url});
+      browser.tabs.create({ url });
       break;
     case "newBackgroundTab":
-      browser.tabs.create({url, active: false});
+      browser.tabs.create({ url, active: false });
       break;
   }
 });
@@ -135,8 +125,8 @@ browser.omnibox.onInputEntered.addListener((url, disposition) => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/extensions/omnibox).
+> Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

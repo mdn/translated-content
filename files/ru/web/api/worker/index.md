@@ -1,18 +1,17 @@
 ---
 title: Worker
 slug: Web/API/Worker
-translation_of: Web/API/Worker
 ---
 
 {{APIRef("Web Workers API")}}
 
 Интерфейс **`Worker`** из [Web Workers API](/ru/docs/Web/API/Web_Workers_API) является представителем фоновой задачи, которая легко может быть создана и может передавать сообщения обратно создателю. Создание worker - это вызов конструктора `Worker()` и задание скрипта, выполняемого в потоке worker.
 
-Workers могут, в свою очередь, порождать новые workers, если эти workers расположены в одном каталоге с родительской страницей (Примечание: вложенные workers в настоящее время [не поддерживаются в Blink](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU)). Кроме того, workers могут использовать [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) для network I/O, при условии, что атрибуты `responseXML` и `channel` `XMLHttpRequest` всегда возвращают `null`.
+Workers могут, в свою очередь, порождать новые workers, если эти workers расположены в одном каталоге с родительской страницей (Примечание: вложенные workers в настоящее время [не поддерживаются в Blink](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU)). Кроме того, workers могут использовать [`XMLHttpRequest`](/en-US/DOM/XMLHttpRequest) для network I/O, при условии, что атрибуты `responseXML` и `channel` `XMLHttpRequest` всегда возвращают `null`.
 
-Не [все интерфейсы и функции могут быть использованы](/En/DOM/Worker/Functions_available_to_workers) в скрипте, ассоциированном с `Worker`.
+Не [все интерфейсы и функции могут быть использованы](/en-US/DOM/Worker/Functions_available_to_workers) в скрипте, ассоциированном с `Worker`.
 
-В Firefox, если вы хотите использовать workers в расширениях и хотели бы иметь доступ к [js-ctypes](/en/js-ctypes), вам нужно использовать объект {{ domxref("ChromeWorker") }}.
+В Firefox, если вы хотите использовать workers в расширениях и хотели бы иметь доступ к [js-ctypes](/en-US/js-ctypes), вам нужно использовать объект {{ domxref("ChromeWorker") }}.
 
 ## Свойства
 
@@ -46,30 +45,25 @@ _Наследует методы своего родителя, {{domxref("Event
 ```js
 var myWorker = new Worker("worker.js");
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+first.onchange = function () {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 ```
 
-For a full example, see our[Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
+For a full example, see our[Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
 
 ## Спецификации
 
-| Specification                                                    | Status                           | Comment                                              |
-| ---------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#worker", "Worker")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("Web Workers")}}. |
-| {{SpecName('Web Workers', "#worker", "Worker")}} | {{Spec2('Web Workers')}} | Изначальное определение.                             |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
-Поддержка варьируется для разных видов воркеров. Для уточнения смотрите статьи по каждому типу воркеров.
-
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [Using web workers](/En/Using_web_workers)
-- [Functions available to workers](/En/DOM/Worker/Functions_available_to_workers)
-- Другие типы воркеров: {{ domxref("SharedWorker") }} и [ServiceWorker](/ru/docs/Web/API/ServiceWorker_API).
+- [Using web workers](/en-US/Using_web_workers)
+- [Functions available to workers](/en-US/DOM/Worker/Functions_available_to_workers)
+- Другие типы воркеров: {{ domxref("SharedWorker") }} и [ServiceWorker](/ru/docs/Web/API/Service_Worker_API).
 - Non-standard, Gecko-specific workers: {{ domxref("ChromeWorker") }}, used by extensions.

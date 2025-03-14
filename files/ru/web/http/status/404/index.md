@@ -1,8 +1,8 @@
 ---
 title: 404 Not Found
 slug: Web/HTTP/Status/404
-translation_of: Web/HTTP/Status/404
 ---
+
 {{HTTPSidebar}}
 
 Код ответа на ошибку HTTP **404 Not Found** указывает, что сервер не может найти запрошенный ресурс. Ссылки, ведущие к коду 404, часто называются сломанными или мёртвыми связями и приводят к [ссылочной гнили](https://en.wikipedia.org/wiki/Link_rot).
@@ -25,19 +25,19 @@ ErrorDocument 404 /notfound.html
 
 Вы можете взять [MDN's 404 page](/en-US/404) в качестве вдохновения.
 
-> **Примечание:** Примечание: дизайн на 404 страницах - [an endless source of inspiration](https://www.google.fr/search?q=awesome+404+pages), но имейте в виду, что в нем также существует [a set of best practices](http://alistapart.com/article/perfect404), которые делают эти страницы полезными для пользователей веб-сайтов.
+> [!NOTE]
+> дизайн на 404 страницах - [an endless source of inspiration](https://www.google.fr/search?q=awesome+404+pages), но имейте в виду, что в нем также существует [a set of best practices](https://alistapart.com/article/perfect404), которые делают эти страницы полезными для пользователей веб-сайтов.
 
 ## Спецификации
 
-| Спецификация                                             | Название                                                      |
-| -------------------------------------------------------- | ------------------------------------------------------------- |
+| Спецификация                               | Название                                                      |
+| ------------------------------------------ | ------------------------------------------------------------- |
 | {{RFC("7231", "404 Not Found" , "6.5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - {{HTTPStatus(410)}}
-- {{interwiki("wikipedia", "HTTP_404", "Wikipedia: HTTP 404")}}

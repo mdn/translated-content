@@ -1,42 +1,37 @@
 ---
-title: VRStageParameters.sizeY
+title: "VRStageParameters: свойство sizeY"
 slug: Web/API/VRStageParameters/sizeY
-tags:
-  - Виртуальная реальность
-translation_of: Web/API/VRStageParameters/sizeY
+l10n:
+  sourceCommit: ccbc5d4100e0a5de844e060b025883ef1611d7b8
 ---
 
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-Свойство (параметр) **sizeY** только для чтения интерфейса {{domxref ("VRStageParameters")}} возвращает глубину границ игровой площадки в метрах.
+Доступное только для чтения свойство **`sizeY`** интерфейса {{domxref("VRStageParameters")}} возвращает глубину границ игровой зоны в метрах.
 
-В целях безопасности границы определяются как прямоугольник, ориентированный по оси на полу.. Контент (содержимое) не должен требовать от пользователя выхода за эти пределы; однако пользователь может игнорировать границы, что приводит к значениям положения вне этого прямоугольника. Центр прямоугольника находится в точке (0,0,0) в координатах замкнутого пространства.
+> [!NOTE]
+> Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
+В целях безопасности границы определяются как прямоугольник на полу. Приложение не должно требовать от пользователя выходить за эти границы, однако пользователь может игнорировать границы, что будет приводит к выходу значений за границы этого прямоугольника. Центр прямоугольника находится в точке с координатами (0,0,0).
 
-```js
-var mySizeY = vrStageParametersInstance.sizeY;
-```
+### Значение
 
-### Value
-
-Параметр типа **float**, представляющий глубину в метрах.
+Число типа float, представляющее глубину в метрах.
 
 ## Examples
 
-{{page("/Web/API/VRStageParameters", "Examples")}}
+Смотрите примеры использования в [`VRStageParameters`](/ru/docs/Web/API/VRStageParameters#examples).
 
-## Specifications
+## Спецификации
 
-| Specification                                                                            | Status                       | Comment            |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('WebVR 1.1', '#dom-vrstageparameters-sizey', 'sizeY')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
+Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/). Больше не планируется сделать его стандартом.
 
-## Browser compatibility
+Пока все браузеры не реализуют новые [WebXR API](/ru/docs/Web/API/WebXR_Device_API/Fundamentals), рекомендуется использовать такие фреймворки как [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), [Three.js](https://threejs.org/) или [полифил](https://github.com/immersive-web/webxr-polyfill) для разработки приложений WebXR, которые будут работать [во всех браузерах](https://developer.oculus.com/documentation/web/port-vr-xr/).
+
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — демонстрационные материалы,загружаемые и другие ресурсы команды Mozilla VR team.
+- [WebVR API](/ru/docs/Web/API/WebVR_API)

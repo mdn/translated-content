@@ -1,8 +1,6 @@
 ---
 title: Qu'est-ce que CSS ?
 slug: Learn/CSS/First_steps/What_is_CSS
-translation_of: Learn/CSS/First_steps/What_is_CSS
-original_slug: Learn/CSS/First_steps/Qu_est_ce_que_CSS
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
@@ -50,9 +48,10 @@ Les **documents** en question sont des fichiers texte structurés avec un langag
 
 **Présenter** un document à l'utilisateur signifie convertir ce document dans une forme utilisable par le public visé. Les [navigateurs](/fr/docs/Glossary/Browser), tels [Firefox](/fr/docs/Glossary/Mozilla_Firefox), [Chrome](/fr/docs/Glossary/Google_Chrome), [Safari](/fr/docs/Glossary/Apple_Safari) ou [Edge](/fr/docs/Glossary/Microsoft_Edge) sont conçus pour présenter visuellement des documents, que ce soit sur l'écran d'un ordinateur, un vidéo-projecteur ou une imprimante.
 
-> **Note :** Un navigateur est parfois appelé [agent utilisateur](/fr/docs/Glossary/User_agent). On entend par là un programme informatique qui agit pour un utilisateur au sein d'un système informatique. Pour CSS, les premiers agents utilisateur qui nous viennent à l'esprit sont les navigateurs. Ce ne sont pourtant pas les seuls. Il existe d'autres agents utilisateurs comme les programmes qui convertissent des documents HTML et CSS en documents PDF imprimables.
+> [!NOTE]
+> Un navigateur est parfois appelé [agent utilisateur](/fr/docs/Glossary/User_agent). On entend par là un programme informatique qui agit pour un utilisateur au sein d'un système informatique. Pour CSS, les premiers agents utilisateur qui nous viennent à l'esprit sont les navigateurs. Ce ne sont pourtant pas les seuls. Il existe d'autres agents utilisateurs comme les programmes qui convertissent des documents HTML et CSS en documents PDF imprimables.
 
-CSS peut être utilisé pour une mise en forme élémentaire des documents — par exemple, changer [la couleur](/fr/docs/Web/CSS/color_value) et [la taille](/fr/docs/Web/CSS/font-size) des titres et des liens. Il peut être utilisé pour concevoir une maquette — par exemple, [transformer un texte affiché sur une colonne en une composition](/fr/docs/Web/CSS/Layout_cookbook/Column_layouts) avec un cadre principal et une barre latérale pour les informations reliées. Avec CSS, on peut aussi produire des [animations](/fr/docs/Web/CSS/CSS_Animations). N'hésitez pas à cliquer sur les liens de ce paragraphe pour observer différents exemples.
+CSS peut être utilisé pour une mise en forme élémentaire des documents — par exemple, changer [la couleur](/fr/docs/Web/CSS/color_value) et [la taille](/fr/docs/Web/CSS/font-size) des titres et des liens. Il peut être utilisé pour concevoir une maquette — par exemple, [transformer un texte affiché sur une colonne en une composition](/fr/docs/Web/CSS/Layout_cookbook/Column_layouts) avec un cadre principal et une barre latérale pour les informations reliées. Avec CSS, on peut aussi produire des [animations](/fr/docs/Web/CSS/CSS_animations). N'hésitez pas à cliquer sur les liens de ce paragraphe pour observer différents exemples.
 
 ## Syntaxe de CSS
 
@@ -69,7 +68,7 @@ h1 {
 
 La règle commence par un [sélecteur](/fr/docs/Glossary/CSS_Selector), l'élément HTML mis en forme. Ici, le style s'applique aux titres de niveau 1 ([`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements)).
 
-Suivent une paire d'accolades `{ }` à l'intérieur desquelles on trouve une ou plusieurs **déclarations**, sous la forme d'une paire **propriété:&nbsp;valeur**. Chaque paire précise une propriété de l'élément sélectionné, suivie de la valeur choisie pour cette propriété ; la propriété et la valeur sont séparées par deux points. Chaque déclaration se termine par un point-virgule. À chaque [propriété](/fr/docs/Glossary/property/CSS) définie par CSS correspondent différentes valeurs possibles. Dans l'exemple, la propriété `color` peut prendre différentes [valeurs de type `<color>`](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#couleur). La propriété `font-size` accepte différentes [tailles](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#nombres_longueurs_et_pourcentages) comme valeurs.
+Suivent une paire d'accolades `{ }` à l'intérieur desquelles on trouve une ou plusieurs **déclarations**, sous la forme d'une paire **propriété:&nbsp;valeur**. Chaque paire précise une propriété de l'élément sélectionné, suivie de la valeur choisie pour cette propriété ; la propriété et la valeur sont séparées par deux points. Chaque déclaration se termine par un point-virgule. À chaque [propriété](/fr/docs/Glossary/Property/CSS) définie par CSS correspondent différentes valeurs possibles. Dans l'exemple, la propriété `color` peut prendre différentes [valeurs de type `<color>`](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#couleur). La propriété `font-size` accepte différentes [tailles](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#nombres_longueurs_et_pourcentages) comme valeurs.
 
 Une feuille de style CSS est constituée d'une succession de telles règles&nbsp;:
 
@@ -86,15 +85,16 @@ p {
 
 On retient facilement certaines valeurs, d'autres sont plus difficiles à mémoriser. Pour s'y retrouver, sur MDN, la page individuelle de chaque propriété donne un aperçu rapide et complet des valeurs applicables.
 
-> **Note :** Sur MDN, dans [la référence CSS](/fr/docs/Web/CSS/Reference), vous trouverez une collection de liens à propos de chaque propriété CSS (ainsi que d'autres aspects de CSS). Par ailleurs, n'hésitez pas à lancer des requêtes «&nbsp;mdn _nom-de-propriété-ou-fonctionnalité-css_&nbsp;» dans votre moteur de recherche préféré dès qu'un aspect de CSS vous interpelle. Vous pouvez, par exemple, tester les requêtes «&nbsp;mdn color&nbsp;» et «&nbsp;mdn font-size&nbsp;»&nbsp;!
+> [!NOTE]
+> Sur MDN, dans [la référence CSS](/fr/docs/Web/CSS/Reference), vous trouverez une collection de liens à propos de chaque propriété CSS (ainsi que d'autres aspects de CSS). Par ailleurs, n'hésitez pas à lancer des requêtes «&nbsp;mdn _nom-de-propriété-ou-fonctionnalité-css_&nbsp;» dans votre moteur de recherche préféré dès qu'un aspect de CSS vous interpelle. Vous pouvez, par exemple, tester les requêtes «&nbsp;mdn color&nbsp;» et «&nbsp;mdn font-size&nbsp;»&nbsp;!
 
 ## Modules CSS
 
-L'ensemble des fonctionnalités CSS est si important que le langage et ses spécifications ont été découpés en _modules_. En naviguant dans le site MDN vous croiserez ces modules&nbsp;: quand des pages de documentation sont regroupées, c'est la plupart du temps qu'elles réfèrent à un même module. Par exemple, jetez un œil à la référence MDN pour le module *[Backgrounds and Borders](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders)*, vous y trouverez ce pour quoi il a été conçu, les différentes propriétés et fonctionnalités qu'il regroupe. Vous trouverez aussi des liens vers la spécification CSS qui définit cette technologie (voir plus bas).
+Il y a beaucoup de choses qu'on peut mettre en forme en utilisant CSS. C'est pour ça que le langage et ses spécifications ont été découpés en _modules_. En naviguant dans le site MDN vous croiserez ces modules&nbsp;: quand des pages de documentation sont regroupées, c'est la plupart du temps qu'elles réfèrent à un même module. Par exemple, jetez un œil à la référence MDN pour le module _[Backgrounds and Borders](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)_, vous y trouverez ce pour quoi il a été conçu, les différentes propriétés et fonctionnalités qu'il regroupe. Vous trouverez aussi des liens vers la spécification CSS qui définit cette technologie (voir plus bas).
 
 À ce stade, inutile de se préoccuper de la structure de CSS (même s'il est parfois plus simple de trouver une information quand on a compris qu'une propriété est reliée à une famille d'autres propriétés au sein d'un même module de spécification).
 
-Prenons un exemple précis et revenons au module *Backgrounds and Borders* — les propriétés [`background-color`](/fr/docs/Web/CSS/background-color) et [`border-color`](/fr/docs/Web/CSS/border-color) qui agissent sur l'arrière-plan et les bordures appartiennent toutes les deux à ce module.
+Prenons un exemple précis et revenons au module _Backgrounds and Borders_ — les propriétés [`background-color`](/fr/docs/Web/CSS/background-color) et [`border-color`](/fr/docs/Web/CSS/border-color) qui agissent sur l'arrière-plan et les bordures appartiennent toutes les deux à ce module.
 
 ### Spécifications CSS
 
@@ -114,18 +114,10 @@ Nous étudierons ce point plus en détail dans l'article sur [le fonctionnement 
 
 Voici, par exemple, le tableau de compatibilité pour la propriété [`font-family`](/fr/docs/Web/CSS/font-family).
 
-{{Compat("css.properties.font-family")}}
+{{Compat}}
 
 ## Où continuer
 
 Maintenant que vous avez compris ce qu'est CSS, vous pourrez commencer à écrire vos premières règles de style dans la leçon [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started).
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
-
-## Dans ce module
-
-1. [Qu'est-ce que CSS&nbsp;?](/fr/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
-3. [Comment CSS est structuré](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS, comment ça marche&nbsp;?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Mettre en œuvre vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

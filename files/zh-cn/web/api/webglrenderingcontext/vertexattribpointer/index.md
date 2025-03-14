@@ -10,13 +10,13 @@ The **`WebGLRenderingContext.vertexAttribPointer()`** method of the [WebGL API](
 
 WebGL API 的 **`WebGLRenderingContext.vertexAttribPointer()`** 方法绑定当前缓冲区范围到`gl.ARRAY_BUFFER`,成为当前顶点缓冲区对象的通用顶点属性并指定它的布局 (缓冲区对象中的偏移量)。
 
-## Syntax
+## 语法
 
-```
-void gl.vertexAttribPointer(index, size, type, normalized, stride, offset);
+```js-nolint
+vertexAttribPointer(index, size, type, normalized, stride, offset)
 ```
 
-### Parameters
+### 参数
 
 - `index`
   - : A {{domxref("GLuint")}} specifying the index of the vertex attribute that is to be modified.
@@ -98,11 +98,11 @@ While the `ArrayBuffer` can be filled with both integers and floats, the attribu
 
 ### Default attribute values
 
-The vertex shader code may include a number of attributes, but we don't need to specify the values for each attribute. Instead, we can supply a default value that will be identical for all vertices. We can call `{{domxref("WebGLRenderingContext.disableVertexAttribArray()", "gl.disableVertexAttribArray()")}}` to tell WebGL to use the default value, while calling {{domxref("WebGLRenderingContext.enableVertexAttribArray()", "gl.enableVertexAttribArray()")}} will read the values from the array buffer as specified with `gl.vertexAttribPointer()`.
+The vertex shader code may include a number of attributes, but we don't need to specify the values for each attribute. Instead, we can supply a default value that will be identical for all vertices. We can call {{domxref("WebGLRenderingContext.disableVertexAttribArray()", "gl.disableVertexAttribArray()")}} to tell WebGL to use the default value, while calling {{domxref("WebGLRenderingContext.enableVertexAttribArray()", "gl.enableVertexAttribArray()")}} will read the values from the array buffer as specified with `gl.vertexAttribPointer()`.
 
 Similarily, if our vertex shader expects e.g. a 4-component attribute with `vec4` but in our `gl.vertexAttribPointer()` call we set the `size` to `2`, then WebGL will set the first two components based on the array buffer, while the third and fourth components are taken from the default value.
 
-The default value is `vec4(0.0, 0.0, 0.0, 1.0)` by default but we can specify a different default value with `{{domxref("WebGLRenderingContext.vertexAttrib()", "gl.vertexAttrib[1234]f[v]()")}}`.
+The default value is `vec4(0.0, 0.0, 0.0, 1.0)` by default but we can specify a different default value with {{domxref("WebGLRenderingContext.vertexAttrib()", "gl.vertexAttrib[1234]f[v]()")}}.
 
 For example, your vertex shader may be using a position and a color attribute. Most meshes have the color specified at a per-vertex level, but some meshes are of a uniform shade. For those meshes, it is not necessary to place the same color for each vertex into the array buffer, so you use `gl.vertexAttrib4fv()` to set a constant color.
 
@@ -139,7 +139,7 @@ First, we dynamically create the array buffer from JSON data using a {{domxref("
 
 ```js
 //load geometry with fetch() and Response.json()
-const response = await fetch('assets/geometry.json');
+const response = await fetch("assets/geometry.json");
 const vertices = await response.json();
 
 //Create array buffer
@@ -150,19 +150,19 @@ for (let i = 0; i < vertices.length; i++) {
   dv.setFloat32(20 * i, vertices[i].position[0], true);
   dv.setFloat32(20 * i + 4, vertices[i].position[1], true);
   dv.setFloat32(20 * i + 8, vertices[i].position[2], true);
-  dv.setInt8(20 * i + 12, vertices[i].normal[0] * 0x7F);
-  dv.setInt8(20 * i + 13, vertices[i].normal[1] * 0x7F);
-  dv.setInt8(20 * i + 14, vertices[i].normal[2] * 0x7F);
+  dv.setInt8(20 * i + 12, vertices[i].normal[0] * 0x7f);
+  dv.setInt8(20 * i + 13, vertices[i].normal[1] * 0x7f);
+  dv.setInt8(20 * i + 14, vertices[i].normal[2] * 0x7f);
   dv.setInt8(20 * i + 15, 0);
-  dv.setUint16(20 * i + 16, vertices[i].texCoord[0] * 0xFFFF, true);
-  dv.setUint16(20 * i + 18, vertices[i].texCoord[1] * 0xFFFF, true);
+  dv.setUint16(20 * i + 16, vertices[i].texCoord[0] * 0xffff, true);
+  dv.setUint16(20 * i + 18, vertices[i].texCoord[1] * 0xffff, true);
 }
 ```
 
 For higher performance, we could also do the previous JSON to ArrayBuffer conversion on the server-side, e.g. with Node.js. Then we could load the binary file and interpret it as an array buffer:
 
 ```js
-const response = await fetch('assets/geometry.bin');
+const response = await fetch("assets/geometry.bin");
 const buffer = await response.arrayBuffer();
 ```
 
@@ -192,9 +192,9 @@ gl.vertexAttribPointer(2, 2, gl.UNSIGNED_SHORT, true, 20, 16);
 gl.enableVertexAttribArray(2);
 
 //Set the attributes in the vertex shader to the same indices
-gl.bindAttribLocation(shaderProgram, 0, 'position');
-gl.bindAttribLocation(shaderProgram, 1, 'normal');
-gl.bindAttribLocation(shaderProgram, 2, 'texUV');
+gl.bindAttribLocation(shaderProgram, 0, "position");
+gl.bindAttribLocation(shaderProgram, 1, "normal");
+gl.bindAttribLocation(shaderProgram, 2, "texUV");
 //Since the attribute indices have changed, we must re-link the shader
 //Note that this will reset all uniforms that were previously set.
 gl.linkProgram(shaderProgram);
@@ -203,15 +203,15 @@ gl.linkProgram(shaderProgram);
 Or we can use the index provided by the graphics card instead of setting the index ourselves; this avoids the re-linking of the shader program.
 
 ```js
-const locPosition = gl.getAttribLocation(shaderProgram, 'position');
+const locPosition = gl.getAttribLocation(shaderProgram, "position");
 gl.vertexAttribPointer(locPosition, 3, gl.FLOAT, false, 20, 0);
 gl.enableVertexAttribArray(locPosition);
 
-const locNormal = gl.getAttribLocation(shaderProgram, 'normal');
+const locNormal = gl.getAttribLocation(shaderProgram, "normal");
 gl.vertexAttribPointer(locNormal, 4, gl.BYTE, true, 20, 12);
 gl.enableVertexAttribArray(locNormal);
 
-const locTexUV = gl.getAttribLocation(shaderProgram, 'texUV');
+const locTexUV = gl.getAttribLocation(shaderProgram, "texUV");
 gl.vertexAttribPointer(locTexUV, 2, gl.UNSIGNED_SHORT, true, 20, 16);
 gl.enableVertexAttribArray(locTexUV);
 ```
